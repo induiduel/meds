@@ -1,4 +1,7 @@
 import React, { useEffect, useMemo, useState } from 'react';
+import { copyQuestion } from '../utils/copyQuestion';
+import { getVoterId } from '../utils/voterId';
+import { disciplineClass, disciplineLabel } from '../utils/discipline';
 import {
   Check,
   X,
@@ -97,9 +100,8 @@ function BildirButonu({ q, ders }: { q: Soru; ders: string }) {
   const [open, setOpen] = useState(false);
   return (
     <>
-      <button type="button" onClick={() => setOpen(true)} title="Soruda hata ya da sorun bildir" aria-label="Soruyu bildir"
-        className="ml-auto h-8 px-2 rounded-lg text-sm font-semibold inline-flex items-center gap-1 text-ink-3 hover:bg-bad-soft hover:text-bad-text cursor-pointer">
-        <Flag className="w-3.5 h-3.5" /><span className="hidden sm:inline">Bildir</span>
+      <button type="button" onClick={() => setOpen(true)} title="Soruda hata ya da sorun bildir" aria-label="Hata bildir" className="qk-ib">
+        <Flag aria-hidden />
       </button>
       {open && (
         <ReportQuestionModal
@@ -158,7 +160,7 @@ function useSoruSocial(id: string): [SoruSocial, { toggleLike: () => void; toggl
         [id]: { ...prev, liked: newLiked, disliked: newDisliked, upvotes: newUp, downvotes: newDown }
       };
       notifySocial();
-      try { ApiService.upvotePastQuestion(id, 'anonim-std'); } catch {}
+      try { ApiService.upvotePastQuestion(id, getVoterId()); } catch {}
     },
     toggleDislike: () => {
       const prev = SOCIAL_STORE[id] || { upvotes: 0, downvotes: 0, liked: false, disliked: false, comments: [] };
@@ -173,7 +175,7 @@ function useSoruSocial(id: string): [SoruSocial, { toggleLike: () => void; toggl
         [id]: { ...prev, liked: newLiked, disliked: newDisliked, upvotes: newUp, downvotes: newDown }
       };
       notifySocial();
-      try { ApiService.downvotePastQuestion(id, 'anonim-std'); } catch {}
+      try { ApiService.downvotePastQuestion(id, getVoterId()); } catch {}
     },
     addComment: (text: string, author: string = 'Tıp Öğrencisi') => {
       if (!text.trim()) return;
@@ -224,12 +226,7 @@ function SoruKarti({
   const [copied, setCopied] = useState(false);
 
   const handleCopy = () => {
-    const seceneklerText = LETTERS
-      .filter((k) => q.secenekler[k])
-      .map((k) => `${k}) ${q.secenekler[k]}`)
-      .join('\n');
-    const fullText = `[Örnek Soru · ${ders} · K${q.kazanim}]\n\n${q.soru}\n\n${seceneklerText}\n\nDoğru Cevap: ${q.dogru}\n\nAçıklama: ${q.aciklama}`;
-    navigator.clipboard.writeText(fullText);
+    void copyQuestion(q.soru, LETTERS.filter((k) => q.secenekler[k]).map((k) => ({ key: k, text: q.secenekler[k] })));
     setCopied(true);
     toast.success('Soru kopyalandı', 'Soru metni ve şıklar panoya kopyalandı.');
     setTimeout(() => setCopied(false), 2000);
@@ -261,117 +258,85 @@ function SoruKarti({
     toast.success('Yorum eklendi');
   };
 
+  const ZORLUK_FLAG: Record<Zorluk, string> = { kolay: 'is-ok', orta: '', zor: 'is-warn' };
+  const why = LETTERS.filter((k) => q.secenekler[k] && q.sik_aciklamalari[k]);
+
   return (
-    <article className={`bg-white border border-line rounded-2xl flex flex-col gap-3 ${buyuk ? 'p-5 sm:p-7' : 'p-4 sm:p-5'}`}>
-      <header className="flex items-center gap-2 text-sm text-ink-3">
-        <span className="font-mono font-semibold text-ink">{n}.</span>
-        <span className={`px-1.5 py-0.5 rounded-md text-xs font-semibold capitalize ${ZORLUK_STIL[q.zorluk]}`}>{q.zorluk}</span>
-        <span className="font-mono text-xs">K{q.kazanim}</span>
+    <article data-auto-reveal className={`qk is-ornek ${buyuk ? 'is-big' : ''}`}>
+      <header className="qk-h">
+        <span className="qk-chip" title={`Kazanım ${q.kazanim}`}>K{q.kazanim}</span>
+        <span className="qk-kunye">{`#${n}`}</span>
+        {konu && <span className="qk-ders" title={konu}>{konu}</span>}
+        <span className="qk-flags"><span className={`cx-flag ${ZORLUK_FLAG[q.zorluk]}`}>{q.zorluk}</span></span>
+        {done && <span className="qk-flags"><span className={`cx-flag ${correct ? 'is-ok' : 'is-bad'}`}>{correct ? 'Doğru' : 'Yanlış'}</span></span>}
+        <span className="qk-sp" />
+        {onOpenAbout && (
+          <button type="button" onClick={() => onOpenAbout(q)} className="qk-ib" aria-label="Soru hakkında" title="Soru hakkında"><Info aria-hidden /></button>
+        )}
+        <button type="button" onClick={handleCopy} className={`qk-ib ${copied ? 'is-done' : ''}`} aria-label={copied ? 'Kopyalandı' : 'Soru kökünü ve şıkları kopyala'} title={copied ? 'Kopyalandı' : 'Soru kökünü ve şıkları kopyala'}>
+          {copied ? <Check aria-hidden /> : <Copy aria-hidden />}
+        </button>
         <BildirButonu q={q} ders={ders} />
       </header>
-      <p className={`m-0 font-medium text-ink leading-[1.55] whitespace-pre-line ${buyuk ? 'text-lg sm:text-xl' : 'text-md'}`}>{q.soru}</p>
-      <ol className="list-none m-0 p-0 flex flex-col gap-1.5" aria-label="Şıklar">
+      <div className={`qk-stem whitespace-pre-line ${buyuk ? 'is-lead' : ''}`}>{q.soru}</div>
+      <ol className="qk-opts" aria-label="Şıklar">
         {LETTERS.filter((k) => q.secenekler[k]).map((k) => {
           const isRight = k === q.dogru;
           const isPicked = k === picked;
-          const tone = !done
-            ? 'bg-white border-line-soft hover:border-accent hover:bg-accent-soft/40 cursor-pointer'
-            : isRight
-            ? 'bg-ok-tint border-ok'
-            : isPicked
-            ? 'bg-bad-soft border-bad'
-            : 'bg-white border-line-soft opacity-80';
+          const st = !done ? '' : isRight ? 'is-correct' : isPicked ? 'is-wrong' : 'is-dim';
           return (
-            <li key={k} className={`rounded-xl border transition-colors ${tone}`}>
-              <button type="button" disabled={done} onClick={() => pick(k)}
-                className="w-full min-h-11 grid grid-cols-[28px_minmax(0,1fr)_auto] items-center gap-2.5 px-3 py-2.5 text-left disabled:cursor-default"
-                aria-pressed={isPicked}>
-                <span className={`w-7 h-7 rounded-lg flex items-center justify-center font-mono text-sm font-semibold ${done && isRight ? 'bg-ok text-white' : done && isPicked ? 'bg-bad text-white' : 'bg-canvas text-ink-2'}`}>{k}</span>
-                <span className={`${buyuk ? 'text-md' : 'text-md'} leading-[1.45] text-ink`}>{q.secenekler[k]}</span>
-                {done && isRight ? <Check className="w-4 h-4 text-ok" aria-label="Doğru şık" /> : done && isPicked ? <X className="w-4 h-4 text-bad" aria-label="Seçtiğiniz yanlış şık" /> : <span />}
+            <li key={k} className="qk-opt-li">
+              <button type="button" disabled={done} onClick={() => !done && pick(k)} className={`qk-opt ${st}`} aria-pressed={isPicked}>
+                <span className="qk-bub" aria-hidden>{done && isRight ? <Check strokeWidth={3} /> : done && isPicked ? <X strokeWidth={3} /> : k}</span>
+                <span className="qk-opt-t">{q.secenekler[k]}</span>
+                {done && (isRight || isPicked) && <span className={`qk-opt-tag ${isRight ? 'is-ok' : 'is-bad'}`}>{isPicked ? 'Senin cevabın' : 'Doğru cevap'}</span>}
               </button>
-              {done && q.sik_aciklamalari[k] && (
-                <p className={`m-0 px-3 pb-2.5 pl-[50px] text-base leading-relaxed ${isRight ? 'text-ok' : 'text-ink-2'}`}>{q.sik_aciklamalari[k]}</p>
-              )}
             </li>
           );
         })}
       </ol>
       {done && (
-        <div className="flex flex-col gap-2.5">
-          <div className={`rounded-xl px-3 py-2.5 text-base leading-relaxed ${correct ? 'bg-ok-tint text-ink' : 'bg-bad-soft text-ink'}`}>
-            <span className={`font-semibold ${correct ? 'text-ok' : 'text-bad-text'}`}>{correct ? 'Doğru. ' : `Yanlış, doğru cevap ${q.dogru}. `}</span>
-            {q.aciklama}
+        <>
+          <p className={`qk-verdict ${correct ? 'is-ok' : 'is-bad'}`} role="status">
+            <b>{correct ? 'Doğru' : `Yanlış · doğru cevap ${q.dogru}`}</b>
+            <span className="qk-sp" />
+            <button type="button" onClick={reset}><RotateCcw aria-hidden /> Tekrar çöz</button>
+          </p>
+          <div className="qk-discs">
+            <div className="qk-disc is-open">
+              <div className="qk-disc-h is-static"><Info aria-hidden /><span>Açıklama ve şık analizi</span>{why.length > 0 && <span className="qk-disc-badge">{why.length} şık</span>}</div>
+              <div className="qk-disc-b"><div className="qk-disc-in">
+                {q.aciklama && <p className="m-0 text-[14px] leading-relaxed text-ink">{q.aciklama}</p>}
+                {why.length > 0 && (
+                  <dl className="qk-analysis">
+                    {why.map((k) => (
+                      <div key={k} className={k === q.dogru ? 'is-correct' : ''}><dt>{k}</dt><dd>{q.sik_aciklamalari[k]}</dd></div>
+                    ))}
+                  </dl>
+                )}
+              </div></div>
+            </div>
           </div>
-          <button type="button" onClick={reset} className="self-start h-9 px-3 rounded-lg border border-line text-sm text-ink-2 inline-flex items-center gap-1.5 cursor-pointer hover:bg-canvas">
-            <RotateCcw className="w-3.5 h-3.5" /> Tekrar çöz
-          </button>
-        </div>
+        </>
       )}
 
-      {/* Aksiyon Butonları (Like, Dislike, Yorum, Hakkında, Kopyala, Paylaş) */}
-      <footer className="ms-qcard-foot pt-2 border-t border-line-soft">
-        <button
-          type="button"
-          onClick={socialActions.toggleLike}
-          aria-pressed={social.liked}
-          title={social.liked ? 'Beğeniyi geri al' : 'Soruyu beğen'}
-          className={`ms-btn is-sm ${social.liked ? 'is-on' : 'is-ghost'}`}
-        >
-          <ThumbsUp className={social.liked ? 'fill-current' : ''} /> {social.upvotes || 0}
+      <footer className="qk-f">
+        <button type="button" onClick={socialActions.toggleLike} aria-pressed={social.liked} title={social.liked ? 'Beğeniyi geri al' : 'Soruyu beğen'} className={`qk-act ${social.liked ? 'is-on' : ''}`}>
+          <ThumbsUp className={social.liked ? 'fill-current' : ''} aria-hidden /><span>{social.upvotes || 0}</span>
         </button>
-        <button
-          type="button"
-          onClick={socialActions.toggleDislike}
-          aria-pressed={social.disliked}
-          title={social.disliked ? 'Beğenmemeyi geri al' : 'Eksik ya da hatalı'}
-          className={`ms-btn is-sm ${social.disliked ? 'is-danger bg-bad-soft!' : 'is-ghost'}`}
-        >
-          <ThumbsDown className={social.disliked ? 'fill-current' : ''} /> {social.downvotes || 0}
+        <button type="button" onClick={socialActions.toggleDislike} aria-pressed={social.disliked} title={social.disliked ? 'Beğenmemeyi geri al' : 'Eksik ya da hatalı'} className={`qk-act ${social.disliked ? 'is-bad' : ''}`}>
+          <ThumbsDown className={social.disliked ? 'fill-current' : ''} aria-hidden /><span>{social.downvotes || 0}</span>
         </button>
-        <button
-          type="button"
-          onClick={() => setShowComments((prev) => !prev)}
-          aria-expanded={showComments}
-          className={`ms-btn is-sm ${showComments ? 'is-on' : 'is-ghost'}`}
-        >
-          <MessageSquare /> {(social.comments || []).length > 0 ? `${social.comments.length} yorum` : 'Yorum'}
+        <button type="button" onClick={() => setShowComments((prev) => !prev)} aria-expanded={showComments} className={`qk-act ${showComments ? 'is-on' : ''}`}>
+          <MessageSquare aria-hidden /><span>{(social.comments || []).length}</span><span className="sr-only"> yorum</span>
         </button>
-        <span className="ms-qcard-foot-sep" aria-hidden />
-        {onOpenAbout && (
-          <button
-            type="button"
-            onClick={() => onOpenAbout(q)}
-            className="ms-btn is-sm is-ghost is-icon text-ink-2 hover:text-ink"
-            aria-label="Soru hakkında"
-            title="Soru hakkında (künye, kazanım, şık analizleri)"
-          >
-            <Info className="w-4 h-4" />
-          </button>
-        )}
-        <button
-          type="button"
-          onClick={handleCopy}
-          className={`ms-btn is-sm is-ghost is-icon ${copied ? 'text-ok!' : ''}`}
-          aria-label={copied ? 'Soru kopyalandı' : 'Soruyu kopyala'}
-          title={copied ? 'Kopyalandı' : 'Soruyu metin olarak kopyala'}
-        >
-          {copied ? <Check /> : <Copy />}
-        </button>
-        <button
-          type="button"
-          onClick={handleShare}
-          className="ms-btn is-sm is-ghost is-icon"
-          aria-label="Soruyu paylaş"
-          title="Soru bağlantısını paylaş"
-        >
-          <Share2 />
-        </button>
+        <span className="qk-sp" />
+        <button type="button" onClick={handleShare} className="qk-act" aria-label="Soruyu paylaş" title="Soru bağlantısını paylaş"><Share2 aria-hidden /></button>
       </footer>
 
       {/* Yorumlar Paneli */}
       {showComments && (
-        <div className="ms-pop-in bg-field rounded-xl p-2.5 flex flex-col gap-2">
+        <div className="ms-pop-in bg-field rounded-xl p-2.5 m-2 mt-0 flex flex-col gap-2">
           <div className="flex flex-col gap-1.5 max-h-56 overflow-y-auto">
             {(social.comments || []).length > 0 ? (
               social.comments.map((c) => (
@@ -552,6 +517,14 @@ function DersGorunumu({ id, initialKazanimNo, onBack }: { id: string; initialKaz
   const [aboutQuestion, setAboutQuestion] = useState<{ q: Soru; ders: string; konu: string } | null>(null);
   const [tam, setTam] = useState<{ sorular: Soru[]; baslik: string } | null>(null);
   const cevaplar = useCevaplar();
+  // Kazanım grupları akordiyon; "Tüm soruları göster" sağda o kazanımın soru listesini açar.
+  const [acik, setAcik] = useState<Set<number>>(() => new Set(initialKazanimNo ? [initialKazanimNo] : []));
+  const [panelK, setPanelK] = useState<number | null>(null);
+  const toggleK = (no: number) => setAcik((s) => { const n = new Set(s); n.has(no) ? n.delete(no) : n.add(no); return n; });
+  const gitSoru = (k: number, qid: string) => {
+    setAcik((s) => new Set(s).add(k));
+    window.setTimeout(() => document.getElementById(`os-${qid}`)?.scrollIntoView({ behavior: 'smooth', block: 'center' }), 120);
+  };
 
   useEffect(() => {
     const load = loaders[`../data/ornek_sorular/k1/${id}.json`];
@@ -577,93 +550,123 @@ function DersGorunumu({ id, initialKazanimNo, onBack }: { id: string; initialKaz
   const yanlis = tumu.filter((q) => cevaplar[q.id] && !cevaplar[q.id].ok);
   let sayac = 0;
 
+  const zSay = (z: Zorluk | '') => (z ? tumu.filter((q) => q.zorluk === z).length : tumu.length);
+  const panel = panelK != null ? ders.kazanimlar.find((k) => k.no === panelK) || null : null;
+  const panelSorular = panel ? panel.sorular.filter((q) => !zorluk || q.zorluk === zorluk) : [];
+
   return (
-    <div className="flex flex-col gap-4">
-      <button type="button" onClick={onBack} className="self-start h-9 px-2.5 -ml-1 rounded-lg text-base text-ink-2 inline-flex items-center gap-1 cursor-pointer hover:bg-canvas">
-        <ChevronLeft className="w-4 h-4" /> Tüm dersler
-      </button>
-      <header className="bg-white border border-line rounded-2xl p-4 sm:p-5 flex flex-col gap-3">
-        <div className="flex flex-col gap-1">
-          <span className="ms-eyebrow">Kurul 1 · {ders.sira}. ders · {ders.ders}</span>
-          <h2 className="m-0 text-2xl sm:text-2xl font-bold text-ink leading-tight">{ders.konu}</h2>
-          <p className="m-0 text-base text-ink-3">{ders.ogretim_uyesi} · {ders.kazanimlar.length} kazanım · {ders.soru_sayisi} soru</p>
+    <div className="os">
+      <div className="os-top">
+        <button type="button" onClick={onBack} className="os-back"><ChevronLeft aria-hidden /> Tüm dersler</button>
+        <div className="os-title">
+          <span className="os-eyebrow">Kurul 1 · {ders.sira}. ders · {ders.ders}</span>
+          <h2>{ders.konu}</h2>
+          <span className="os-meta">{ders.ogretim_uyesi} · {ders.kazanimlar.length} kazanım · {ders.soru_sayisi} soru</span>
         </div>
-        <div className="flex items-center gap-3">
-          <div className="flex-1 h-2 rounded-full bg-line-soft overflow-hidden" aria-hidden>
-            <div className="h-full bg-accent" style={{ width: `${(cozulen / tumu.length) * 100}%` }} />
-          </div>
-          <span className="shrink-0 text-sm text-ink-2 font-mono">{cozulen}/{tumu.length} · {dogru} doğru</span>
+        <div className="os-progress">
+          <span className="os-bar" aria-hidden><span style={{ width: `${(cozulen / Math.max(1, tumu.length)) * 100}%` }} /></span>
+          <span className="os-num">{cozulen}/{tumu.length} · {dogru} doğru</span>
         </div>
-        <div className="flex flex-wrap gap-2">
-          <button type="button" onClick={() => setTam({ sorular: filtreli, baslik: ders.konu })}
-            className="h-11 px-4 rounded-xl bg-ink text-white text-base font-semibold inline-flex items-center gap-2 cursor-pointer">
-            <Maximize2 className="w-4 h-4" /> Tam ekran çöz{zorluk ? ` (${zorluk})` : ''}
+        <div className="os-actions">
+          <button type="button" onClick={() => setTam({ sorular: filtreli, baslik: ders.konu })} className="os-btn is-primary">
+            <Maximize2 aria-hidden /> Tam ekran çöz{zorluk ? ` (${zorluk})` : ''}
           </button>
           {yanlis.length > 0 && (
-            <button type="button" onClick={() => setTam({ sorular: yanlis, baslik: `${ders.konu} · yanlışlarım` })}
-              className="h-11 px-4 rounded-xl border border-line bg-white text-base font-semibold text-ink inline-flex items-center gap-2 cursor-pointer hover:bg-canvas">
-              <RotateCcw className="w-4 h-4" /> Yanlışlarımı çöz ({yanlis.length})
+            <button type="button" onClick={() => setTam({ sorular: yanlis, baslik: `${ders.konu} · yanlışlarım` })} className="os-btn">
+              <RotateCcw aria-hidden /> Yanlışlarım ({yanlis.length})
             </button>
           )}
-          {cozulen > 0 && (
-            <button type="button" onClick={() => tumu.forEach((q) => setCevap(q.id, null))}
-              className="h-11 px-3 rounded-xl text-sm text-ink-3 cursor-pointer hover:bg-canvas">Sıfırla</button>
-          )}
+          {cozulen > 0 && <button type="button" onClick={() => tumu.forEach((q) => setCevap(q.id, null))} className="os-btn is-ghost">Sıfırla</button>}
         </div>
-      </header>
-
-      <div className="sticky top-0 z-10 -mx-1 px-1 py-2 bg-canvas/95 backdrop-blur flex flex-wrap items-center gap-2">
-        <div className="flex gap-1" role="group" aria-label="Zorluk filtresi">
-          {(['', 'kolay', 'orta', 'zor'] as const).map((z) => (
-            <button key={z || 'tum'} type="button" onClick={() => setZorluk(z)} aria-pressed={zorluk === z}
-              className={`h-9 px-3 rounded-lg text-sm font-medium cursor-pointer border ${zorluk === z ? 'bg-ink text-white border-ink' : 'bg-white text-ink-2 border-line hover:bg-canvas'}`}>
-              {z ? z[0].toUpperCase() + z.slice(1) : 'Tümü'}
-            </button>
-          ))}
-        </div>
-        <label className="ml-auto">
-          <span className="sr-only">Kazanıma git</span>
-          <select onChange={(e) => { document.getElementById(`kz-${e.target.value}`)?.scrollIntoView({ behavior: 'smooth', block: 'start' }); e.target.value = ''; }}
-            defaultValue="" className="h-9 max-w-[220px] px-2 rounded-lg border border-line bg-white text-sm text-ink-2 cursor-pointer">
-            <option value="" disabled>Kazanıma git…</option>
-            {ders.kazanimlar.map((k) => <option key={k.no} value={k.no}>K{k.no} · {k.metin.slice(0, 60)}</option>)}
-          </select>
-        </label>
       </div>
 
-      {ders.kazanimlar.map((k) => {
-        const qs = k.sorular.filter((q) => !zorluk || q.zorluk === zorluk);
-        const kc = k.sorular.filter((q) => cevaplar[q.id]).length;
-        return (
-          <section key={k.no} className="flex flex-col gap-3 scroll-mt-16" id={`kz-${k.no}`} aria-labelledby={`kzb-${k.no}`}>
-            <div className="flex items-start gap-2.5 rounded-xl bg-accent-soft px-3.5 py-3">
-              <Target className="w-4 h-4 mt-0.5 shrink-0 text-accent" />
+      <div className="os-cats" data-autohide role="radiogroup" aria-label="Zorluk">
+        <span className="os-cats-l">Zorluk</span>
+        {(['', 'kolay', 'orta', 'zor'] as const).map((z) => (
+          <button key={z || 'tum'} type="button" role="radio" aria-checked={zorluk === z} onClick={() => setZorluk(z)} className={`os-cat ${zorluk === z ? 'is-on' : ''}`}>
+            {z ? z[0].toLocaleUpperCase('tr-TR') + z.slice(1) : 'Tümü'}<span>{zSay(z)}</span>
+          </button>
+        ))}
+      </div>
+
+      <div className={`os-body ${panel ? 'has-panel' : ''}`}>
+        <div className="os-groups">
+          {ders.kazanimlar.map((k) => {
+            const qs = k.sorular.filter((q) => !zorluk || q.zorluk === zorluk);
+            const kc = k.sorular.filter((q) => cevaplar[q.id]).length;
+            const open = acik.has(k.no);
+            const sel = panelK === k.no;
+            const startN = sayac;
+            sayac += qs.length;
+            return (
+              <section key={k.no} className={`os-g ${sel ? 'is-sel' : ''}`} id={`kz-${k.no}`} aria-labelledby={`kzb-${k.no}`}>
+                <div className="os-gh">
+                  <button type="button" className="os-gt" aria-expanded={open} onClick={() => toggleK(k.no)}>
+                    <ChevronDown className={`os-chev ${open ? 'is-open' : ''}`} aria-hidden />
+                    <span className="os-gk">K{k.no}</span>
+                    <span className="os-gm">
+                      <b id={`kzb-${k.no}`}>{k.metin}</b>
+                      <span>{qs.length} soru · {kc} çözüldü</span>
+                    </span>
+                  </button>
+                  <button type="button" className={`os-all ${sel ? 'is-on' : ''}`} aria-pressed={sel} onClick={() => setPanelK(sel ? null : k.no)}>
+                    Tüm soruları göster <ChevronRight aria-hidden />
+                  </button>
+                </div>
+                {open && (
+                  <div className="os-gb">
+                    {qs.map((q, i) => (
+                      <div key={q.id} id={`os-${q.id}`}>
+                        <SoruKarti
+                          q={q}
+                          n={startN + i + 1}
+                          ders={ders.ders}
+                          konu={undefined}
+                          onOpenAbout={(selQ) => setAboutQuestion({ q: selQ, ders: ders.ders, konu: ders.konu })}
+                        />
+                      </div>
+                    ))}
+                    <CikmisListesi items={k.ilgili_cikmis} />
+                  </div>
+                )}
+              </section>
+            );
+          })}
+        </div>
+
+        {panel && (
+          <aside className="os-panel" aria-label={`K${panel.no} · tüm sorular`}>
+            <div className="os-ph">
               <div className="min-w-0 flex-1">
-                <h3 id={`kzb-${k.no}`} className="m-0 text-md font-semibold text-ink leading-snug">
-                  <span className="font-mono text-accent mr-1.5">K{k.no}</span>{k.metin}
-                </h3>
-                <p className="m-0 mt-0.5 text-sm text-ink-3">{k.sorular.length} soru · {kc} çözüldü</p>
+                <span className="os-eyebrow">TÜM SORULAR · K{panel.no}</span>
+                <b>{panel.metin}</b>
+                <span className="os-meta">{panelSorular.length} soru{zorluk ? ` · ${zorluk}` : ''}</span>
               </div>
-              <button type="button" onClick={() => setTam({ sorular: qs, baslik: `K${k.no} · ${k.metin}` })} title="Bu kazanımı tam ekran çöz" aria-label="Bu kazanımı tam ekran çöz"
-                className="shrink-0 h-8 w-8 rounded-lg inline-flex items-center justify-center text-accent hover:bg-white cursor-pointer"><Maximize2 className="w-4 h-4" /></button>
+              <button type="button" className="qk-ib" aria-label="Listeyi kapat" onClick={() => setPanelK(null)}><X aria-hidden /></button>
             </div>
-            {qs.map((q) => {
-              sayac += 1;
-              return (
-                <SoruKarti
-                  key={q.id}
-                  q={q}
-                  n={sayac}
-                  ders={ders.ders}
-                  konu={ders.konu}
-                  onOpenAbout={(selQ) => setAboutQuestion({ q: selQ, ders: ders.ders, konu: ders.konu })}
-                />
-              );
-            })}
-            <CikmisListesi items={k.ilgili_cikmis} />
-          </section>
-        );
-      })}
+            <ol className="os-pl">
+              {panelSorular.map((q, i) => {
+                const c = cevaplar[q.id];
+                return (
+                  <li key={q.id}>
+                    <button type="button" onClick={() => gitSoru(panel.no, q.id)}>
+                      <span className="os-pn">{i + 1}</span>
+                      <span className="os-pt">{q.soru}</span>
+                      <span className={`cx-flag ${c ? (c.ok ? 'is-ok' : 'is-bad') : q.zorluk === 'zor' ? 'is-warn' : q.zorluk === 'kolay' ? 'is-ok' : ''}`}>{c ? (c.ok ? 'Doğru' : 'Yanlış') : q.zorluk}</span>
+                    </button>
+                  </li>
+                );
+              })}
+            </ol>
+            <div className="os-pf">
+              <button type="button" className="os-btn is-primary" onClick={() => setTam({ sorular: panelSorular, baslik: `K${panel.no} · ${panel.metin}` })}>
+                {panelSorular.length} soruyla çalış
+              </button>
+            </div>
+          </aside>
+        )}
+      </div>
+
       {tam && tam.sorular.length > 0 && (
         <TamEkran
           sorular={tam.sorular}
@@ -767,42 +770,48 @@ export const KazanimSorulariView: React.FC<{
 
   return (
     <div className="flex flex-col gap-3">
-      <label className="cx-search">
-        <Search aria-hidden />
-        <span className="sr-only">Ders ara</span>
-        <input type="search" value={ara} onChange={(e) => setAra(e.target.value)} placeholder="Ders, konu veya öğretim üyesi ara" />
-        {ara && <button type="button" className="cx-search-x" onClick={() => setAra('')} aria-label="Aramayı temizle"><X /></button>}
-      </label>
-      <div className="cx-rail">
-        <div className="ms-chipbar" role="radiogroup" aria-label="Branş filtresi">
-          {([['', INDEX.length], ...branslar] as [string, number][]).map(([b, c]) => (
-            <button key={b || 'tum'} type="button" role="radio" onClick={() => setBrans(b)} aria-checked={brans === b} className={`ms-fchip ${brans === b ? 'is-on' : ''}`}>
-              {b || 'Tümü'}<span className="n">{c}</span>
-            </button>
-          ))}
+      <div className="cx-dock">
+        <label className="cx-search">
+          <Search aria-hidden />
+          <span className="sr-only">Ders ara</span>
+          <input type="search" value={ara} onChange={(e) => setAra(e.target.value)} placeholder="Ders, konu veya öğretim üyesi ara" />
+          {ara && <button type="button" className="cx-search-x" onClick={() => setAra('')} aria-label="Aramayı temizle"><X /></button>}
+        </label>
+        <div className="cx-rail">
+          <nav className="cx-tabs" aria-label="Branş">
+            {([['', INDEX.length], ...branslar] as [string, number][]).map(([b, c]) => (
+              <button key={b || 'tum'} type="button" onClick={() => setBrans(b)} aria-pressed={brans === b} className={`cx-tab ${brans === b ? 'is-on' : ''}`}>
+                {b || 'Tümü'}<small>{c}</small>
+              </button>
+            ))}
+          </nav>
+          <span className="cx-count ks-solved" title={`${toplamSoru.toLocaleString('tr-TR')} sorudan`}>{toplamCozulen.toLocaleString('tr-TR')} <small>çözdüğün</small></span>
         </div>
-        <span className="cx-count ks-solved" title={`${toplamSoru.toLocaleString('tr-TR')} sorudan`}>{toplamCozulen.toLocaleString('tr-TR')} <small>çözdüğün</small></span>
       </div>
-      {liste.length === 0 && <p className="m-0 py-8 text-center text-base text-ink-3">Aramanla eşleşen ders yok.</p>}
-      <ul className="m-0 p-0 list-none grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-2">
+      {liste.length === 0 && (
+        <div className="ui-card flex flex-col items-center gap-2 text-center" style={{ paddingBlock: 32 }}>
+          <b>Aramanla eşleşen ders yok</b>
+          <span className="ui-hint">Kelimeyi kısalt ya da branş süzgecini kaldır.</span>
+          <button type="button" className="ui-btn is-tonal is-sm" onClick={() => { setAra(''); setBrans(''); }}>Temizle</button>
+        </div>
+      )}
+      <ul className="ui-grid m-0 p-0 list-none">
         {liste.map((x) => {
           const { n, d } = dersIlerleme(x.id, cevaplar);
           const yuzde = Math.min(100, Math.round((n / x.soru_sayisi) * 100));
           return (
-            <li key={x.id}>
-              <button type="button" onClick={() => sec(x.id)}
-                className="group w-full h-full flex flex-col gap-2 p-3.5 rounded-xl border border-line bg-white text-left cursor-pointer hover:border-accent transition-colors">
-                <span className="flex items-start gap-2.5">
-                  <span className="shrink-0 w-8 h-8 rounded-lg bg-canvas flex items-center justify-center font-mono text-sm font-semibold text-ink-2 group-hover:bg-accent-soft group-hover:text-accent">{String(x.sira).padStart(2, '0')}</span>
-                  <span className="min-w-0 flex-1">
-                    <span className="block text-md font-semibold text-ink leading-snug">{x.konu}</span>
-                    <span className="block mt-0.5 text-sm text-ink-3 truncate">{x.ders} · {x.ogretim_uyesi}</span>
-                  </span>
-                  <ChevronRight className="shrink-0 w-4 h-4 mt-1 text-ink-3 group-hover:text-accent" />
+            <li key={x.id} className={disciplineClass(x.ders)}>
+              <button type="button" onClick={() => sec(x.id)} className="ks-lesson">
+                <span className="ks-lesson-top">
+                  <span className="hk-eyebrow"><i className="hk-dot" aria-hidden /><span>{disciplineLabel(x.ders) || x.ders}</span></span>
+                  <span className="ks-lesson-no hk-num">{String(x.sira).padStart(2, '0')}</span>
                 </span>
-                <span className="flex items-center gap-2.5 pl-[42px]">
-                  <span className="flex-1 h-1.5 rounded-full bg-line-soft overflow-hidden"><span className="block h-full bg-accent" style={{ width: `${yuzde}%` }} /></span>
-                  <span className="shrink-0 text-xs text-ink-3 font-mono">{n ? `${n}/${x.soru_sayisi} · ${d} doğru` : `${x.soru_sayisi} soru · ${x.kazanim} kazanım`}</span>
+                <span className="ks-lesson-t">{x.konu}</span>
+                <span className="ks-lesson-who">{x.ogretim_uyesi}</span>
+                <span className="ks-lesson-bar" aria-hidden><span style={{ width: `${yuzde}%` }} /></span>
+                <span className="ks-lesson-foot">
+                  {n ? <><b className="hk-num">{n}/{x.soru_sayisi}</b> çözüldü · {d} doğru</> : <>{x.soru_sayisi} soru · {x.kazanim} kazanım</>}
+                  <ChevronRight aria-hidden />
                 </span>
               </button>
             </li>

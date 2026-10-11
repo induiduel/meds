@@ -1,5 +1,5 @@
-// MedSoru Service Worker - PWA, Güçlendirilmiş Çevrimdışı Önbellek, Background Sync ve Push
-const CACHE_VERSION = 'medsoru-pwa-v3';
+// MedSoru Service Worker - PWA v4: Güçlendirilmiş Çevrimdışı Önbellek, Sıfır Gecikmeli Yenileme, Background Sync ve Push
+const CACHE_VERSION = 'medsoru-pwa-v4';
 const STATIC_CACHE = `medsoru-static-${CACHE_VERSION}`;
 const RUNTIME_CACHE = `medsoru-runtime-${CACHE_VERSION}`;
 const DATA_CACHE = `medsoru-data-${CACHE_VERSION}`;
@@ -9,11 +9,22 @@ const PRECACHE_ASSETS = [
   '/index.html',
   '/manifest.json',
   '/favicon.ico',
+  '/favicon.png',
   '/apple-touch-icon.png',
   '/icons/icon-192x192.png',
   '/icons/icon-512x512.png',
   '/icons/maskable-icon-192x192.png',
   '/icons/maskable-icon-512x512.png',
+];
+
+// Varsayılan komiteler (çevrimdışıyken sunucuya hiç ulaşılamasa dahi arayüzün boş kalmasını önler)
+const DEFAULT_OFFLINE_COMMITTEES = [
+  { id: 'donem3-kurul1', name: 'Dönem 3 Kurul 1', targetCount: 100 },
+  { id: 'donem3-kurul2', name: 'Dönem 3 Kurul 2', targetCount: 100 },
+  { id: 'donem3-kurul3', name: 'Dönem 3 Kurul 3', targetCount: 100 },
+  { id: 'donem3-kurul4', name: 'Dönem 3 Kurul 4', targetCount: 100 },
+  { id: 'donem3-kurul5', name: 'Dönem 3 Kurul 5', targetCount: 100 },
+  { id: 'donem3-kurul6', name: 'Dönem 3 Kurul 6', targetCount: 100 }
 ];
 
 // 1. Kurulum (Install) - Statik çekirdek dosyaları önbelleğe al
@@ -22,7 +33,6 @@ self.addEventListener('install', (event) => {
     caches
       .open(STATIC_CACHE)
       .then((cache) => {
-        // Her dosyayı bağımsız fetch ile ekle (biri 404 olsa bile diğerleri çöpe gitmez)
         return Promise.all(
           PRECACHE_ASSETS.map((url) =>
             fetch(url, { cache: 'no-cache' })
@@ -41,7 +51,7 @@ self.addEventListener('install', (event) => {
   );
 });
 
-// 2. Aktivasyon (Activate) - Eski önbellekleri temizle ve istemcileri devral
+// 2. Aktivasyon (Activate) - Eski önbellekleri temizle ve istemcileri hemen devral
 self.addEventListener('activate', (event) => {
   event.waitUntil(
     caches
@@ -76,71 +86,85 @@ self.addEventListener('fetch', (event) => {
   }
 
   // A. Sayfa Gezinme İstekleri (SPA HTML - Navigate)
-  // Çevrimdışı olunduğunda ASLA düz metin veya hata dönme! Her zaman önbellekteki index.html'i sun!
+  // Çevrimdışıyken veya zayıf ağda 1.2 saniyeden uzun bekletme: doğrudan önbellekteki index.html'i ver!
   if (req.mode === 'navigate') {
     event.respondWith(
-      fetch(req)
-        .then((networkRes) => {
-          if (networkRes && networkRes.status === 200) {
-            const clone = networkRes.clone();
-            caches.open(STATIC_CACHE).then((cache) => {
-              cache.put(req, clone.clone());
-              cache.put('/index.html', clone.clone());
-              cache.put('/', clone);
-            });
-          }
-          return networkRes;
-        })
-        .catch(async () => {
-          // 1. Önce tam eşleşen URL veya /index.html'i ara
-          const matchDirect = await caches.match(req, { ignoreSearch: true });
-          if (matchDirect) return matchDirect;
+      (async () => {
+        // Ağ isteği ile önbellek yedeklemesini yarıştır
+        const fetchPromise = fetch(req)
+          .then((networkRes) => {
+            if (networkRes && networkRes.status === 200) {
+              const clone = networkRes.clone();
+              caches.open(STATIC_CACHE).then((cache) => {
+                cache.put(req, clone.clone());
+                cache.put('/index.html', clone.clone());
+                cache.put('/', clone);
+              });
+            }
+            return networkRes;
+          })
+          .catch(() => null);
 
-          const matchHtml =
-            (await caches.match('/index.html', { ignoreSearch: true })) ||
-            (await caches.match('/', { ignoreSearch: true }));
-          if (matchHtml) return matchHtml;
+        // Ağ 1.2 saniye içinde yanıt verirse ağı kullan
+        const timeoutPromise = new Promise((resolve) => setTimeout(() => resolve(null), 1200));
+        const fastNetworkRes = await Promise.race([fetchPromise, timeoutPromise]);
 
-          // 2. Tüm açık önbelleklerde index.html ara
-          const allKeys = await caches.keys();
-          for (const k of allKeys) {
-            const c = await caches.open(k);
-            const found =
-              (await c.match('/index.html', { ignoreSearch: true })) ||
-              (await c.match('/', { ignoreSearch: true }));
-            if (found) return found;
-          }
+        if (fastNetworkRes) {
+          return fastNetworkRes;
+        }
 
-          // 3. Son çare: Temel SPA HTML iskeleti dönerek sayfanın takılmasını önle
-          return new Response(
-            `<!doctype html>
-            <html lang="tr">
-              <head>
-                <meta charset="utf-8">
-                <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <title>MeDSor · Çevrimdışı Mod</title>
-                <link rel="stylesheet" href="/assets/asset-index.css">
-              </head>
-              <body class="bg-slate-900 text-white flex items-center justify-center min-h-screen p-4 text-center font-sans">
-                <div class="max-w-md w-full p-6 bg-slate-800 rounded-2xl border border-slate-700 shadow-xl space-y-4">
-                  <div class="text-3xl">⚡</div>
-                  <h1 class="text-xl font-bold">MeDSor Çevrimdışı Mod</h1>
-                  <p class="text-sm text-slate-300">İnternet bağlantısı algılanamadı. Uygulama veritabanınız cihazınızda kuruluysa lütfen ana sayfaya dönünüz.</p>
-                  <a href="/" class="inline-block px-5 py-2.5 bg-teal-600 hover:bg-teal-500 text-white font-semibold rounded-xl text-sm transition-colors">
-                    Ana Sayfaya Dön
-                  </a>
-                </div>
-              </body>
-            </html>`,
-            { headers: { 'Content-Type': 'text/html; charset=utf-8' } }
-          );
-        })
+        // Ağ gecikti veya başarısız oldu: Önce önbelleklerde index.html ara
+        const matchDirect = await caches.match(req, { ignoreSearch: true });
+        if (matchDirect) return matchDirect;
+
+        const matchHtml =
+          (await caches.match('/index.html', { ignoreSearch: true })) ||
+          (await caches.match('/', { ignoreSearch: true }));
+        if (matchHtml) return matchHtml;
+
+        const allKeys = await caches.keys();
+        for (const k of allKeys) {
+          const c = await caches.open(k);
+          const found =
+            (await c.match('/index.html', { ignoreSearch: true })) ||
+            (await c.match('/', { ignoreSearch: true }));
+          if (found) return found;
+        }
+
+        // Ağ isteği arka planda tamamlanırsa son çare bekle
+        const slowRes = await fetchPromise;
+        if (slowRes) return slowRes;
+
+        // Son çare: Temel SPA HTML iskeleti dönerek sayfanın takılmasını önle
+        return new Response(
+          `<!doctype html>
+          <html lang="tr">
+            <head>
+              <meta charset="utf-8">
+              <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+              <title>MeDSor · Çevrimdışı Mod</title>
+              <link rel="stylesheet" href="/assets/asset-index.css">
+            </head>
+            <body class="bg-slate-900 text-white flex items-center justify-center min-h-screen p-4 text-center font-sans">
+              <div class="max-w-md w-full p-6 bg-slate-800 rounded-2xl border border-slate-700 shadow-xl space-y-4">
+                <div class="text-3xl">⚡</div>
+                <h1 class="text-xl font-bold">MeDSor Çevrimdışı Mod</h1>
+                <p class="text-sm text-slate-300">İnternet bağlantısı algılanamadı. Uygulama veritabanınız cihazınızda kuruluysa lütfen ana sayfaya dönünüz.</p>
+                <a href="/" class="inline-block px-5 py-2.5 bg-teal-600 hover:bg-teal-500 text-white font-semibold rounded-xl text-sm transition-colors">
+                  Ana Sayfaya Dön
+                </a>
+              </div>
+            </body>
+          </html>`,
+          { headers: { 'Content-Type': 'text/html; charset=utf-8' } }
+        );
+      })()
     );
     return;
   }
 
   // B. Statik Varlıklar (JS, CSS, Fontlar, İkonlar, Resimler)
-  // Stale-While-Revalidate / Cache-First stratejisi
+  // Stale-While-Revalidate / Cache-First stratejisi (ASLA undefined dönmez)
   if (
     url.pathname.startsWith('/assets/') ||
     url.pathname.startsWith('/icons/') ||
@@ -148,25 +172,53 @@ self.addEventListener('fetch', (event) => {
     /\.(js|css|woff2?|ttf|png|jpe?g|gif|svg|ico)$/i.test(url.pathname)
   ) {
     event.respondWith(
-      caches.match(req).then((cachedRes) => {
+      (async () => {
+        // Önce tam eşleşen veya arama parametresi yok sayılan önbellek kaydına bak
+        const cached =
+          (await caches.match(req, { ignoreSearch: true })) ||
+          (await caches.match(url.pathname, { ignoreSearch: true }));
+
+        // Arka planda güncelleme (network)
         const fetchPromise = fetch(req)
           .then((networkRes) => {
             if (networkRes && networkRes.status === 200) {
               const clone = networkRes.clone();
-              caches.open(RUNTIME_CACHE).then((cache) => cache.put(req, clone));
+              caches.open(RUNTIME_CACHE).then((cache) => {
+                cache.put(req, clone.clone());
+                cache.put(url.pathname, clone);
+              });
             }
             return networkRes;
           })
-          .catch(() => cachedRes);
+          .catch(() => null);
 
-        return cachedRes || fetchPromise;
-      })
+        if (cached) {
+          return cached;
+        }
+
+        const networkRes = await fetchPromise;
+        if (networkRes) return networkRes;
+
+        // Önbellekte de yoksa ve ağ kapalıysa: JavaScript ve CSS için boş modül dönerek script çökmelerini engelle
+        if (url.pathname.endsWith('.js') || url.pathname.includes('.js?')) {
+          return new Response('/* Offline fallback module */ export default {};', {
+            headers: { 'Content-Type': 'application/javascript; charset=utf-8' },
+          });
+        }
+        if (url.pathname.endsWith('.css') || url.pathname.includes('.css?')) {
+          return new Response('/* Offline fallback stylesheet */', {
+            headers: { 'Content-Type': 'text/css; charset=utf-8' },
+          });
+        }
+
+        return new Response('', { status: 404 });
+      })()
     );
     return;
   }
 
   // C. API İstekleri (/api/...)
-  // Network-First, hata durumunda veri önbelleğine düş
+  // Network-First, bağlantı hatasında güvenli veri mock'una veya veri önbelleğine düş
   if (url.pathname.startsWith('/api/')) {
     if (
       url.pathname.includes('/sse') ||
@@ -182,20 +234,52 @@ self.addEventListener('fetch', (event) => {
         .then((networkRes) => {
           if (networkRes && networkRes.status === 200) {
             const clone = networkRes.clone();
-            caches.open(DATA_CACHE).then((cache) => cache.put(req, clone));
+            caches.open(DATA_CACHE).then((cache) => {
+              cache.put(req, clone.clone());
+              cache.put(url.pathname, clone);
+            });
           }
           return networkRes;
         })
         .catch(async () => {
-          const cached = await caches.match(req);
+          const cached =
+            (await caches.match(req, { ignoreSearch: true })) ||
+            (await caches.match(url.pathname, { ignoreSearch: true }));
           if (cached) {
             return cached;
           }
+
+          // Çevrimdışıyken istemci kodunun parse ederken çökmesini önleyen akıllı mock yanıtlar
+          if (url.pathname.includes('/api/committees')) {
+            return new Response(
+              JSON.stringify({ offline: true, committees: DEFAULT_OFFLINE_COMMITTEES }),
+              { headers: { 'Content-Type': 'application/json' }, status: 200 }
+            );
+          }
+          if (url.pathname.includes('/api/past-exams/sync')) {
+            return new Response(
+              JSON.stringify({ offline: true, upToDate: true, deletedIds: [], allIds: [] }),
+              { headers: { 'Content-Type': 'application/json' }, status: 200 }
+            );
+          }
+          if (url.pathname.includes('/api/past-exams')) {
+            return new Response(
+              JSON.stringify({ offline: true, questions: [] }),
+              { headers: { 'Content-Type': 'application/json' }, status: 200 }
+            );
+          }
+          if (url.pathname.includes('/api/questions')) {
+            return new Response(
+              JSON.stringify({ offline: true, questions: [] }),
+              { headers: { 'Content-Type': 'application/json' }, status: 200 }
+            );
+          }
+
           return new Response(
             JSON.stringify({ offline: true, error: 'Ağ bağlantısı yok (Çevrimdışı)' }),
             {
               headers: { 'Content-Type': 'application/json' },
-              status: 200, // 503 yerine 200 ile offline JSON dönüyoruz ki istemci çökmesin
+              status: 200,
             }
           );
         })

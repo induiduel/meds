@@ -8,6 +8,7 @@ import { SupabaseDbService } from './supabaseDb';
 import { FirestoreDbService } from './firestoreDb';
 import { multiDbManager } from './multiDbManager';
 import { ApiService, safeJsonFetch } from './api';
+import { getLocalAdminSession, auth } from './auth';
 import type { QuestionItem, Committee } from '../types';
 
 export interface InboxReport {
@@ -229,6 +230,29 @@ export const resolveInboxReport = async (
   }
 };
 
+/** Çıkmış sorudaki bir yorumu düzenle. */
+export const editPastComment = async (
+  adminEmail: string,
+  questionId: string,
+  commentId: string,
+  text: string
+): Promise<{ ok: boolean; message: string; comment?: any }> => {
+  try {
+    const res = await safeJsonFetch<{ success: boolean; message?: string; comment?: any; error?: string }>(
+      `/api/past-exams/${encodeURIComponent(questionId)}/comments/${encodeURIComponent(commentId)}`,
+      {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json', 'x-admin-email': adminEmail },
+        body: JSON.stringify({ text }),
+      }
+    );
+    if (res.ok && res.data?.success) return { ok: true, message: 'Yorum güncellendi.', comment: res.data.comment };
+    return { ok: false, message: `Yorum güncellenemedi: ${res.data?.error || res.error || 'bilinmeyen hata'}` };
+  } catch (e: unknown) {
+    return { ok: false, message: `Yorum güncellenemedi: ${e instanceof Error ? e.message : 'bağlantı hatası'}` };
+  }
+};
+
 /** Çıkmış sorudaki bir yorumu sil (önce sunucu, her durumda bulut aynası denenir). */
 export const deletePastComment = async (
   adminEmail: string,
@@ -244,6 +268,50 @@ export const deletePastComment = async (
     return { ok: false, message: `Yorum silinemedi: ${res.error || 'bilinmeyen hata'}` };
   } catch (e: unknown) {
     return { ok: false, message: `Yorum silinemedi: ${e instanceof Error ? e.message : 'bağlantı hatası'}` };
+  }
+};
+
+/** Gelen kutusundaki bir hata bildirimini düzenle. */
+export const editInboxReport = async (
+  adminEmail: string,
+  reportId: string,
+  updates: { reason: string; details?: string },
+  questionId?: string
+): Promise<{ ok: boolean; message: string; report?: any }> => {
+  try {
+    const url = questionId
+      ? `/api/past-exams/${encodeURIComponent(questionId)}/reports/${encodeURIComponent(reportId)}`
+      : `/api/reports/${encodeURIComponent(reportId)}`;
+    const res = await safeJsonFetch<{ success: boolean; message?: string; report?: any; error?: string }>(url, {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json', 'x-admin-email': adminEmail },
+      body: JSON.stringify(updates),
+    });
+    if (res.ok && res.data?.success) return { ok: true, message: 'Bildirim güncellendi.', report: res.data.report };
+    return { ok: false, message: `Bildirim güncellenemedi: ${res.data?.error || res.error || 'bilinmeyen hata'}` };
+  } catch (e: unknown) {
+    return { ok: false, message: `Bildirim güncellenemedi: ${e instanceof Error ? e.message : 'bağlantı hatası'}` };
+  }
+};
+
+/** Gelen kutusundaki bir hata bildirimini KALICI olarak tüm veritabanından sil. */
+export const deleteInboxReport = async (
+  adminEmail: string,
+  reportId: string,
+  questionId?: string
+): Promise<{ ok: boolean; message: string }> => {
+  try {
+    const url = questionId
+      ? `/api/past-exams/${encodeURIComponent(questionId)}/reports/${encodeURIComponent(reportId)}`
+      : `/api/reports/${encodeURIComponent(reportId)}`;
+    const res = await safeJsonFetch<{ success: boolean; message?: string; error?: string }>(url, {
+      method: 'DELETE',
+      headers: { 'x-admin-email': adminEmail },
+    });
+    if (res.ok && res.data?.success) return { ok: true, message: 'Hata bildirimi kalıcı olarak silindi.' };
+    return { ok: false, message: `Bildirim silinemedi: ${res.data?.error || res.error || 'bilinmeyen hata'}` };
+  } catch (e: unknown) {
+    return { ok: false, message: `Bildirim silinemedi: ${e instanceof Error ? e.message : 'bağlantı hatası'}` };
   }
 };
 
@@ -552,4 +620,141 @@ export const purgeAuthorContributions = async (
   } catch (e: unknown) {
     return { ok: false, ...stat, message: e instanceof Error ? e.message : 'Temizleme başarısız.' };
   }
+};
+
+// --- Ücretsiz Gemini Hata İnceleme ve Onarım Otomasyonu İstemci Servisleri ---
+export interface AutoRepairStats {
+  total: number;
+  pending: number;
+  processing: number;
+  applied: number;
+  noChange: number;
+  rolledBack: number;
+  error: number;
+  isWorkerActive: boolean;
+}
+
+export interface AutoRepairItemClient {
+  id: string;
+  source: 'past_question' | 'practice_question' | 'interactive_deck' | 'lecture_summary';
+  targetId: string;
+  subTarget?: {
+    slideNumber?: number;
+    targetKey?: string;
+    optionKey?: string;
+    location?: string;
+    label?: string;
+  };
+  userReport: {
+    reason: string;
+    details: string;
+    reportedBy: string;
+    reportedAt: string;
+    email?: string;
+    suggestedAnswer?: string;
+  };
+  status: 'pending' | 'processing' | 'applied' | 'no_change' | 'rolled_back' | 'error';
+  aiAnalysis?: {
+    detectedIssues: string[];
+    medicalReasoning: string;
+    actionTaken: 'corrected' | 'verified_correct' | 'inconclusive';
+    changesSummary: string;
+    processedAt: string;
+    modelUsed: string;
+    releaseQuarantine?: boolean;
+    referencedRedactedId?: string;
+    crossDataAuditApplied?: boolean;
+  };
+  beforeSnapshot?: any;
+  afterSnapshot?: any;
+  crossData?: any;
+  errorDetails?: string;
+  rolledBackAt?: string;
+  retryCount?: number;
+}
+
+const getAdminHeader = () => {
+  const admin = getLocalAdminSession();
+  const email = admin?.email || auth?.currentUser?.email || 'nofrostlife@gmail.com';
+  return { 'x-admin-email': email };
+};
+
+export const loadAutoRepairItems = async (): Promise<AutoRepairItemClient[]> => {
+  const res = await safeJsonFetch<{ success: boolean; items: AutoRepairItemClient[] }>('/api/admin/auto-repair/items', {
+    headers: getAdminHeader(),
+  });
+  return res.ok && res.data?.items ? res.data.items : [];
+};
+
+export const loadAutoRepairStats = async (): Promise<AutoRepairStats | null> => {
+  const res = await safeJsonFetch<{ success: boolean; stats: AutoRepairStats }>('/api/admin/auto-repair/stats', {
+    headers: getAdminHeader(),
+  });
+  return res.ok && res.data?.stats ? res.data.stats : null;
+};
+
+export const runNextAutoRepair = async (): Promise<{ success: boolean; message?: string; item?: AutoRepairItemClient; error?: string }> => {
+  const res = await safeJsonFetch<any>('/api/admin/auto-repair/run-next', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', ...getAdminHeader() },
+  });
+  return res.data || { success: false, error: res.error };
+};
+
+export const runAllAutoRepair = async (): Promise<{ success: boolean; message?: string; count?: number; error?: string }> => {
+  const res = await safeJsonFetch<any>('/api/admin/auto-repair/run-all', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', ...getAdminHeader() },
+  });
+  return res.data || { success: false, error: res.error };
+};
+
+export const rollbackAutoRepair = async (id: string): Promise<{ success: boolean; message?: string; error?: string }> => {
+  const res = await safeJsonFetch<any>(`/api/admin/auto-repair/${encodeURIComponent(id)}/rollback`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', ...getAdminHeader() },
+  });
+  return res.data || { success: false, error: res.error };
+};
+
+export const retryAutoRepair = async (id: string): Promise<{ success: boolean; item?: AutoRepairItemClient; error?: string }> => {
+  const res = await safeJsonFetch<any>(`/api/admin/auto-repair/${encodeURIComponent(id)}/retry`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', ...getAdminHeader() },
+  });
+  return res.data || { success: false, error: res.error };
+};
+
+export const toggleAutoRepairWorker = async (paused: boolean): Promise<{ success: boolean; isWorkerActive?: boolean }> => {
+  const res = await safeJsonFetch<any>('/api/admin/auto-repair/toggle-worker', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', ...getAdminHeader() },
+    body: JSON.stringify({ paused }),
+  });
+  return res.data || { success: false };
+};
+
+export const deleteAutoRepairItem = async (id: string): Promise<boolean> => {
+  const res = await safeJsonFetch<any>(`/api/admin/auto-repair/${encodeURIComponent(id)}`, {
+    method: 'DELETE',
+    headers: getAdminHeader(),
+  });
+  return Boolean(res.ok && res.data?.success);
+};
+
+export const clearProcessedAutoRepair = async (): Promise<{ success: boolean; clearedCount?: number; message?: string }> => {
+  const res = await safeJsonFetch<any>('/api/admin/auto-repair/clear-processed', {
+    method: 'POST',
+    headers: getAdminHeader(),
+  });
+  return res.data || { success: false };
+};
+
+export const bulkDeleteAutoRepair = async (ids: string[]): Promise<{ success: boolean; removedCount?: number; message?: string }> => {
+  const res = await safeJsonFetch<any>('/api/admin/auto-repair/bulk-delete', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', ...getAdminHeader() },
+    body: JSON.stringify({ ids }),
+  });
+  return res.data || { success: false };
 };

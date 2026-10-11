@@ -2,6 +2,7 @@ import React from 'react';
 import { SourceText } from '../ui/SourceText';
 import { parseExplanation } from '../QuestionCard';
 import { OptionKey, StudyQuestion } from '../../services/studyStore';
+import { useUiVersion } from '../../utils/uiVersion';
 
 /** Segmented control (single choice). */
 export function Segmented<T extends string | number>({
@@ -63,6 +64,25 @@ export const OptionButton: React.FC<{
   disabled?: boolean;
   tag?: string;
 }> = ({ opt, state, onClick, disabled, tag }) => {
+  const { isV7 } = useUiVersion();
+  if (isV7) {
+    // v8: ortak şık durumları (.tm-opt) — doğru yaylanır, yanlış sarsılır, kalanlar soluklaşır
+    const st = { idle: '', selected: 'is-selected', correct: 'is-correct', wrong: 'is-wrong', muted: 'is-dim' }[state];
+    return (
+      <button
+        type="button"
+        role="radio"
+        aria-checked={state === 'selected' || state === 'wrong' || (state === 'correct' && tag === 'Senin cevabın')}
+        onClick={onClick}
+        disabled={disabled}
+        className={`tm-opt w-full ${st}`}
+      >
+        <span className="tm-bubble" aria-hidden>{opt.key}</span>
+        <span className="flex-1 min-w-0 break-words">{opt.text}</span>
+        {tag && <span className={`tm-tag ${state === 'correct' ? 'is-ok' : state === 'wrong' ? 'is-bad' : ''}`}>{tag}</span>}
+      </button>
+    );
+  }
   const box = {
     idle: 'border border-line bg-white hover:border-line-2',
     selected: 'border-[1.5px] border-accent bg-accent-soft',
@@ -117,7 +137,7 @@ export const ExplanationBlock: React.FC<{ q: StudyQuestion; compact?: boolean }>
 };
 
 export const EmptyState: React.FC<{ title: string; body?: string; action?: React.ReactNode }> = ({ title, body, action }) => (
-  <div className={`${cardCls} px-6 py-12 text-center flex flex-col items-center gap-3`}>
+  <div className="ui-card text-center flex flex-col items-center gap-3" style={{ paddingBlock: 44 }}>
     <h3 className="m-0 font-display text-xl font-bold tracking-[-0.02em]">{title}</h3>
     {body && <p className="m-0 text-base text-ink-2 max-w-[420px]">{body}</p>}
     {action}

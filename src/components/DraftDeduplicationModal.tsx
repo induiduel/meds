@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useMemo } from 'react';
+import { confirmText } from './ui/ConfirmDialog';
 import { X, Layers, RefreshCw, GitMerge, Check, ChevronDown, Zap, Search, Eye, EyeOff, Undo2, Split, Trash2, Wand2 } from 'lucide-react';
 import { toast } from './ui/Toast';
 import { CapsuleLoader, SuccessCheck } from './ui/Animations';
@@ -250,7 +251,7 @@ export const DraftDeduplicationModal: React.FC<DraftDeduplicationModalProps> = (
 
   // Taslağı Kalıcı Olarak Silme
   const handleDeleteDraft = async (draftId: string, topic: string) => {
-    if (!window.confirm(`"${topic || 'Bu taslağı'}" kalıcı olarak silmek istediğinize emin misiniz?`)) {
+    if (!(await confirmText(`"${topic || 'Bu taslağı'}" kalıcı olarak silmek istediğinize emin misiniz?`))) {
       return;
     }
     try {

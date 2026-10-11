@@ -1,15 +1,25 @@
 import React, { useCallback, useState, useMemo, useEffect, useDeferredValue, useRef } from 'react';
+import { CikmisCard } from '../screens/cikmis/CikmisCard';
+import { logActivity } from '../services/activityLog';
+import { FilterGroup } from './ui/FilterGroup';
+import { CopyQuestionButton } from './ui/CopyQuestionButton';
+import { copyQuestion } from '../utils/copyQuestion';
+import { getVoterId, toggledVote } from '../utils/voterId';
 import { AnswerPoll } from './AnswerPoll';
 import { PageHeader } from './ui/PageHeader';
 import { StemText, Highlight } from './ui/StemText';
 import { Collapsible } from './ui/Collapsible';
 import { Dialog } from './ui/Dialog';
+import { Sheet } from './ui/Sheet';
+import { confirmDialog } from './ui/ConfirmDialog';
 import { foldText, parseQuery, scoreFields, SearchField } from '../services/searchText';
 import { QuestionAboutDialog, normalizeRefList } from './QuestionAboutDialog';
 import { SourceText, Marked } from './ui/SourceText';
 import { buildQuestionFocus, QuestionFocus } from '../services/questionFocus';
 import { toast } from './ui/Toast';
 import { ChangeInfo } from './ui/ChangeInfo';
+import { ErrorReportHistoryModal } from './ErrorReportHistoryModal';
+import { triggerDomHighlightAndScroll, shareDeepLink } from '../services/universalRedirectService';
 import {
   Sparkles,
   Info,
@@ -54,6 +64,7 @@ import {
   History,
   Scale,
   Trash2,
+  Pencil,
 } from 'lucide-react';
 import { ActionMenu, ActionItem } from './ui/ActionMenu';
 import { ReportQuestionModal } from './ReportQuestionModal';
@@ -68,10 +79,12 @@ import { renderHighlightedSnippet } from './QuestionCard';
 import { learnMatcher, QuestionLearnMatch, isReliableLearnMatch } from '../services/learnMatcher';
 import { FlashcardComponent } from './learn/InteractiveDeckView';
 import { pathFor, linkClick, parseLocation, writeLocation } from '../router';
+import { censorProfanity } from '../utils/profanityFilter';
 import {
   OFFICIAL_CURRICULUM_COMMITTEES,
   DONEM3_CURRICULUM_DISCIPLINES,
   normalizeDonem3Discipline,
+  normalizeCommitteeId,
   isDonem3Question,
 } from '../data/curriculumData';
 
@@ -130,7 +143,7 @@ const isNewQ = (q: QuestionItem): boolean =>
       (q.createdAt ? new Date(q.createdAt).getTime() > Date.now() - 30 * 86400000 : false),
   );
 
-type FacetKey = 'pool' | 'committee' | 'year' | 'discipline' | 'topic' | 'answer' | 'explanation' | 'source' | 'p14' | 'denetleyici' | 'newness' | 'manual' | 'repeated';
+type FacetKey = 'pool' | 'committee' | 'year' | 'discipline' | 'topic' | 'answer' | 'explanation' | 'source' | 'p14' | 'denetleyici' | 'newness' | 'manual' | 'repeated' | 'quarantine';
 interface Prep {
   q: QuestionItem;
   disc: string;
@@ -143,6 +156,9 @@ interface Prep {
   hasAnswer: boolean;
   doubtful: boolean;
   hasExpl: boolean;
+  isQuarantined: boolean;
+  isInaccessible: boolean;
+  isDonem3: boolean;
   fields: SearchField[];
 }
 
@@ -269,19 +285,14 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
   const [newnessFilter, setNewnessFilter] = useState<'all' | 'new_only' | 'archived_only'>('all');
   const [manualFilter, setManualFilter] = useState<'all' | 'manual_only' | 'standard_only'>('all');
   const [repeatedFilter, setRepeatedFilter] = useState<'all' | 'repeated_only' | 'unique_only'>('all');
+  const [quarantineFilter, setQuarantineFilter] = useState<'standard' | 'karantina' | 'inaccessible' | 'all'>('standard');
   const [viewMode, setViewMode] = useState<'redacted' | 'raw' | 'split'>('redacted');
   const [filtersOpen, setFiltersOpen] = useState(false);
-  // Filtre çekmecesi kapanırken de kayarak çıkar
-  const [filtersClosing, setFiltersClosing] = useState(false);
-  const closeFilters = () => {
-    if (filtersClosing) return;
-    setFiltersClosing(true);
-    window.setTimeout(() => { setFiltersOpen(false); setFiltersClosing(false); }, 200);
-  };
   const [answerFilter, setAnswerFilter] = useState<'all' | 'with' | 'without' | 'doubtful'>('all');
   const [selectedTopic, setSelectedTopic] = useState<string>('all');
   const [facetQuery, setFacetQuery] = useState('');
   const [suggestOpen, setSuggestOpen] = useState(false);
+  const [advFiltersOpen, setAdvFiltersOpen] = useState(false);
   const searchRef = useRef<HTMLInputElement>(null);
   // Kendini sına: cevaplar gizli, şıkka dokununca doğru cevap görünür (cihazda hatırlanır)
   const [quizMode, setQuizMode] = useState<boolean>(() => {
@@ -305,6 +316,21 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
       return null;
     }
   });
+
+  // Hata bildirimi ve değişim geçmişi penceresi için seçilen soru
+  const [selectedQuestionForReportHistory, setSelectedQuestionForReportHistory] = useState<QuestionItem | null>(null);
+
+  // Cümle/Metin odaklama parametresi (?highlight=...) kontrolü
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const sp = new URLSearchParams(window.location.search);
+      const hl = sp.get('highlight');
+      if (hl) {
+        setTimeout(() => triggerDomHighlightAndScroll(hl), 450);
+      }
+    }
+  }, [sharedId]);
+
   // Cevabı belirsiz sorular sunucudan güncel alınır (cihaz önbelleği eski kalsa bile anket açılır)
   const [doubtInfo, setDoubtInfo] = useState<{ ids: Set<string>; options: Record<string, Record<string, string>>; resolved: Record<string, { answer: string; by: string }> } | null>(null);
   useEffect(() => {
@@ -380,10 +406,10 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
     return () => document.removeEventListener('keydown', onKey);
   }, []);
   const [explanationFilter, setExplanationFilter] = useState<'all' | 'with' | 'without'>('all');
-  const [sortOrder, setSortOrder] = useState<'default' | 'newest' | 'oldest' | 'number' | 'quality_desc' | 'quality_asc'>('default');
+  const [sortOrder, setSortOrder] = useState<'default' | 'newest' | 'oldest' | 'number' | 'quality_desc' | 'quality_asc' | 'popular' | 'discipline' | 'updated'>('default');
   // Faz 14 düzeltmesinin öncesi yalnız istenince gösterilir (rozet ⓘ ya da İşlemler menüsü)
   const [p14Open, setP14Open] = useState<Record<string, boolean>>({});
-  const [ambiguityTab, setAmbiguityTab] = useState<'valid' | 'ambiguous' | 'reported' | 'all'>('valid');
+  const [ambiguityTab, setAmbiguityTab] = useState<'valid' | 'ambiguous' | 'reported' | 'quarantined' | 'all'>('valid');
   
   // Per-question card override: questionId -> 'redacted' | 'raw' | 'split'
   const [cardViewOverrides, setCardViewOverrides] = useState<Record<string, 'redacted' | 'raw' | 'split'>>({});
@@ -418,7 +444,26 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
 
   // Active Comments Drawer State
   const [expandedCommentsQuestionId, setExpandedCommentsQuestionId] = useState<string | null>(null);
+  // Derin bağlantı: /cikmis/<id>?sec=comments yorumları açar. Bildirimden uygulama içinde gelinince (popstate)
+  // paylaşılan soru ve bölüm yeniden okunur; sayfa yenilenmez.
+  useEffect(() => {
+    const apply = () => {
+      try {
+        const r = parseLocation();
+        const id = r.route === 'past_exams' && r.param ? r.param : null;
+        if (id) setSharedId(id);
+        const sec = new URLSearchParams(window.location.search).get('sec');
+        if (id && sec === 'comments') setExpandedCommentsQuestionId(id);
+      } catch { /* yoksay */ }
+    };
+    apply();
+    window.addEventListener('popstate', apply);
+    return () => window.removeEventListener('popstate', apply);
+  }, []);
   const [newCommentText, setNewCommentText] = useState('');
+  // Yanıtlanan yorum (soru + yorum kimliği + yazar); gönderince temizlenir
+  const [replyTo, setReplyTo] = useState<{ qId: string; id: string; author: string } | null>(null);
+  const [openThreads, setOpenThreads] = useState<Record<string, boolean>>({});
   const [isSubmittingComment, setIsSubmittingComment] = useState(false);
 
   // Feedback & Copy state
@@ -428,21 +473,34 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
   // Client-Side Caching & Delta-Sync State
   const [cacheStatus, setCacheStatus] = useState<CacheSyncStatus>(pastQuestionsCache.getStatus());
 
-  // Load questions - Yalnızca Dönem 3 çıkmışları gösterilir, diğer dönemler veritabanında kalır
+  // Load questions - Tüm sorular yüklenir ve etiketlenir; filtreler ile karantina ve erişilemeyen sorulara doğrudan erişilir
   const loadPastQuestions = async () => {
     setIsLoading(true);
     try {
       const data = await ApiService.getPastQuestions();
-      const donem3Data = data
+      const processed = data
         .filter(q => !q.id?.startsWith('civan-') && !q.tags?.some((t: string) => /civan/i.test(t)))
-        .filter(isDonem3Question)
-        // Yöneticinin gizlediği (şikâyet sonrası) sorular yalnızca yöneticiye görünür
-        .filter(q => !((q as any).hidden || (q as any).data?.hidden) || currentUser?.email === ADMIN_EMAIL || !!currentUser?.isAdmin)
         .map(q => {
+          const normComm = normalizeCommitteeId(q.committeeId);
           const normDisc = normalizeDonem3Discipline(q.discipline);
-          return normDisc ? { ...q, discipline: normDisc } : q;
+          const isQuarantined = Boolean(
+            (q as any).isQuarantined ||
+            (q as any).quarantined ||
+            (Array.isArray(q.tags) && q.tags.includes('karantina'))
+          );
+          const isDonem3 = isDonem3Question({ ...q, committeeId: normComm || q.committeeId });
+          const isHidden = Boolean((q as any).hidden || (q as any).data?.hidden);
+          const isInaccessible = isQuarantined || !isDonem3 || isHidden;
+          return {
+            ...q,
+            committeeId: normComm || q.committeeId,
+            discipline: normDisc || q.discipline,
+            isQuarantined,
+            isInaccessible,
+            isDonem3,
+          };
         });
-      setQuestions(donem3Data);
+      setQuestions(processed);
     } catch (e) {
       console.warn('Could not load past questions:', e);
     } finally {
@@ -479,17 +537,69 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
     }
   };
 
+  const [editingCommentId, setEditingCommentId] = useState<string | null>(null);
+  const [editCommentText, setEditCommentText] = useState('');
+  const [isUpdatingComment, setIsUpdatingComment] = useState(false);
+
+  const getMyCommentIds = (): string[] => {
+    try {
+      const raw = localStorage.getItem('my_comment_ids');
+      return raw ? JSON.parse(raw) : [];
+    } catch {
+      return [];
+    }
+  };
+
+  const saveMyCommentId = (id: string) => {
+    try {
+      const cur = getMyCommentIds();
+      if (!cur.includes(id)) {
+        localStorage.setItem('my_comment_ids', JSON.stringify([...cur, id]));
+      }
+    } catch (_) {}
+  };
+
+  const saveMyReportId = (id: string) => {
+    try {
+      const raw = localStorage.getItem('my_report_ids');
+      const cur = raw ? JSON.parse(raw) : [];
+      if (!cur.includes(id)) {
+        localStorage.setItem('my_report_ids', JSON.stringify([...cur, id]));
+      }
+    } catch (_) {}
+  };
+
+  const canManageComment = (c: any) => {
+    if (isAdminUser) return true;
+    if (!c) return false;
+    if (currentUser?.uid && c.authorUid === currentUser.uid) return true;
+    if (currentUser?.email && c.authorEmail && c.authorEmail.toLowerCase() === currentUser.email.toLowerCase()) return true;
+    if (currentUser?.displayName && c.author && c.author.trim().toLowerCase() === currentUser.displayName.trim().toLowerCase()) return true;
+    if (getMyCommentIds().includes(c.id)) return true;
+    return false;
+  };
+
   // Submit Question Comment ("Öneri / Çözüm Yolu Ekle")
   const handleCommentSubmit = async (qId: string) => {
     if (!newCommentText.trim()) return;
+    const sanitizedText = censorProfanity(newCommentText.trim());
     setIsSubmittingComment(true);
     try {
       const res = await ApiService.commentPastQuestion(
         qId,
         currentUser?.displayName || 'Tıp Öğrencisi',
-        newCommentText.trim()
+        sanitizedText,
+        {
+          uid: currentUser?.uid,
+          email: currentUser?.email ?? undefined,
+          parentId: replyTo && replyTo.qId === qId ? replyTo.id : undefined,
+        }
       );
       if (res && res.comment) {
+        logActivity('katki', replyTo && replyTo.qId === qId ? 'Bir yoruma yanıt yazdın' : 'Bir soruya yorum yazdın');
+        if (res.comment.id) saveMyCommentId(res.comment.id);
+        if (replyTo && replyTo.qId === qId && !res.comment.parentId) res.comment.parentId = replyTo.id;
+        setReplyTo(null);
         setQuestions(prev => prev.map(q => {
           if (q.id === qId) {
             const comments = (q as any).comments || [];
@@ -503,6 +613,74 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
       alert('Yorum kaydedilemedi: ' + (e.message || 'Bilinmeyen hata'));
     } finally {
       setIsSubmittingComment(false);
+    }
+  };
+
+  const handleCommentEdit = async (qId: string, commentId: string) => {
+    if (!editCommentText.trim()) return;
+    const sanitizedEdit = censorProfanity(editCommentText.trim());
+    setIsUpdatingComment(true);
+    try {
+      const res = await ApiService.editPastComment(
+        qId,
+        commentId,
+        sanitizedEdit,
+        {
+          uid: currentUser?.uid,
+          email: currentUser?.email ?? undefined,
+          author: currentUser?.displayName ?? undefined,
+          adminEmail: isAdminUser ? (currentUser?.email || ADMIN_EMAIL) : undefined,
+        }
+      );
+      if (res.success) {
+        setQuestions(prev => prev.map(q => {
+          if (q.id === qId) {
+            const comments = ((q as any).comments || []).map((c: any) =>
+              c.id === commentId ? { ...c, text: editCommentText.trim(), isEdited: true, updatedAt: new Date().toISOString() } : c
+            );
+            return { ...q, comments };
+          }
+          return q;
+        }));
+        setEditingCommentId(null);
+      } else {
+        alert(res.message || 'Yorum güncellenemedi.');
+      }
+    } catch (e: any) {
+      alert('Yorum güncellenemedi: ' + (e.message || 'Bağlantı hatası'));
+    } finally {
+      setIsUpdatingComment(false);
+    }
+  };
+
+  const handleCommentDelete = async (qId: string, commentId: string) => {
+    if (!(await confirmDialog({ title: 'Yorum silinsin mi?', message: 'Yorum kalıcı olarak kaldırılır.', confirmLabel: 'Sil', tone: 'danger' }))) {
+      return;
+    }
+    try {
+      const res = await ApiService.deletePastComment(
+        qId,
+        commentId,
+        {
+          uid: currentUser?.uid,
+          email: currentUser?.email ?? undefined,
+          author: currentUser?.displayName ?? undefined,
+          adminEmail: isAdminUser ? (currentUser?.email || ADMIN_EMAIL) : undefined,
+        }
+      );
+      if (res.success) {
+        setQuestions(prev => prev.map(q => {
+          if (q.id === qId) {
+            const comments = ((q as any).comments || []).filter((c: any) => c.id !== commentId);
+            return { ...q, comments };
+          }
+          return q;
+        }));
+      } else {
+        alert(res.message || 'Yorum silinemedi.');
+      }
+    } catch (e: any) {
+      alert('Yorum silinemedi: ' + (e.message || 'Bağlantı hatası'));
     }
   };
 
@@ -533,14 +711,30 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
     const unsubscribe = pastQuestionsCache.subscribe((status, updatedList) => {
       setCacheStatus(status);
       if (updatedList && updatedList.length > 0) {
-        const filteredUpdated = updatedList
-          .filter(isDonem3Question)
+        const processedUpdated = updatedList
+          .filter(q => !q.id?.startsWith('civan-') && !q.tags?.some((t: string) => /civan/i.test(t)))
           .map(q => {
+            const normComm = normalizeCommitteeId(q.committeeId);
             const normDisc = normalizeDonem3Discipline(q.discipline);
-            return normDisc ? { ...q, discipline: normDisc } : q;
+            const isQuarantined = Boolean(
+              (q as any).isQuarantined ||
+              (q as any).quarantined ||
+              (Array.isArray(q.tags) && q.tags.includes('karantina'))
+            );
+            const isDonem3 = isDonem3Question({ ...q, committeeId: normComm || q.committeeId });
+            const isHidden = Boolean((q as any).hidden || (q as any).data?.hidden);
+            const isInaccessible = isQuarantined || !isDonem3 || isHidden;
+            return {
+              ...q,
+              committeeId: normComm || q.committeeId,
+              discipline: normDisc || q.discipline,
+              isQuarantined,
+              isInaccessible,
+              isDonem3,
+            };
           });
-        if (filteredUpdated.length === 0) return;
-        const updateMap = new Map(filteredUpdated.map(q => [q.id, q]));
+        if (processedUpdated.length === 0) return;
+        const updateMap = new Map(processedUpdated.map(q => [q.id, q]));
         setQuestions(prev => {
           let hasChange = false;
           const next = prev.map(existing => {
@@ -550,7 +744,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
             }
             return existing;
           });
-          for (const newQ of filteredUpdated) {
+          for (const newQ of processedUpdated) {
             if (!prev.some(p => p.id === newQ.id)) {
               next.unshift(newQ);
               hasChange = true;
@@ -570,25 +764,14 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
     return () => unsubscribe();
   }, []);
 
-  // Upvote / Like toggle
+  // Upvote / Like toggle — kişi başı tek oy, ikinci basış geri çeker
   const handleToggleLike = async (q: QuestionItem) => {
-    const userUid = currentUser?.uid || currentUser?.email || 'anonim-std';
-    const isLiked = (q.likedBy || []).includes(userUid);
-    const isDisliked = (q.dislikedBy || []).includes(userUid);
-
-    const newLikedBy = isLiked
-      ? (q.likedBy || []).filter(u => u !== userUid)
-      : [...(q.likedBy || []), userUid];
-    const newDislikedBy = isDisliked
-      ? (q.dislikedBy || []).filter(u => u !== userUid)
-      : (q.dislikedBy || []);
-
-    const newUpvotes = isLiked
-      ? Math.max(0, (q.upvotes || 1) - 1)
-      : (q.upvotes || 0) + 1;
-    const newDownvotes = isDisliked
-      ? Math.max(0, (q.downvotes || 1) - 1)
-      : (q.downvotes || 0);
+    const userUid = getVoterId(currentUser);
+    const liked = toggledVote(q, userUid);
+    const undoDislike = liked.likedBy.includes(userUid) && (q.dislikedBy || []).includes(userUid);
+    const dis = undoDislike ? toggledVote({ upvotes: q.downvotes, likedBy: q.dislikedBy }, userUid) : { upvotes: q.downvotes || 0, likedBy: q.dislikedBy || [] };
+    const newUpvotes = liked.upvotes, newLikedBy = liked.likedBy;
+    const newDownvotes = dis.upvotes, newDislikedBy = dis.likedBy;
 
     // Optimistic UI update
     setQuestions(prev =>
@@ -608,23 +791,12 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
 
   // Downvote / Dislike toggle
   const handleToggleDislike = async (q: QuestionItem) => {
-    const userUid = currentUser?.uid || currentUser?.email || 'anonim-std';
-    const isDisliked = (q.dislikedBy || []).includes(userUid);
-    const isLiked = (q.likedBy || []).includes(userUid);
-
-    const newDislikedBy = isDisliked
-      ? (q.dislikedBy || []).filter(u => u !== userUid)
-      : [...(q.dislikedBy || []), userUid];
-    const newLikedBy = isLiked
-      ? (q.likedBy || []).filter(u => u !== userUid)
-      : (q.likedBy || []);
-
-    const newDownvotes = isDisliked
-      ? Math.max(0, (q.downvotes || 1) - 1)
-      : (q.downvotes || 0) + 1;
-    const newUpvotes = isLiked
-      ? Math.max(0, (q.upvotes || 1) - 1)
-      : (q.upvotes || 0);
+    const userUid = getVoterId(currentUser);
+    const dis = toggledVote({ upvotes: q.downvotes, likedBy: q.dislikedBy }, userUid);
+    const undoLike = dis.likedBy.includes(userUid) && (q.likedBy || []).includes(userUid);
+    const liked = undoLike ? toggledVote(q, userUid) : { upvotes: q.upvotes || 0, likedBy: q.likedBy || [] };
+    const newUpvotes = liked.upvotes, newLikedBy = liked.likedBy;
+    const newDownvotes = dis.upvotes, newDislikedBy = dis.likedBy;
 
     // Optimistic UI update
     setQuestions(prev =>
@@ -645,14 +817,8 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
   // Copy question text to clipboard
   const handleCopyQuestion = (q: QuestionItem) => {
     const stem = q.reconstruction?.stem || q.fragments?.[0]?.text || q.topic;
-    const optionsText = (q.reconstruction?.options || q.options || [])
-      .map((o: any) => `${o.key}) ${o.text}`)
-      .join('\n');
-    const answer = q.reconstruction?.correctAnswer || q.claimedAnswer ? `\nDoğru Cevap: ${q.reconstruction?.correctAnswer || q.claimedAnswer}` : '';
-    const explanation = q.reconstruction?.explanation ? `\nAçıklama: ${q.reconstruction.explanation}` : '';
-    
-    const fullText = `[MeDSor Çıkmış Soru - ${q.discipline} #${q.questionNumber}]\n\n${stem}\n\n${optionsText}${answer}${explanation}`;
-    navigator.clipboard.writeText(fullText);
+    const optionsSource = (item: QuestionItem) => (item.reconstruction?.options || item.options || []) as any[];
+    void copyQuestion(stem, optionsSource(q));
     setCopiedId(q.id);
     setTimeout(() => setCopiedId(null), 2000);
   };
@@ -662,23 +828,13 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
     const base = (window.location.pathname.match(/^\/meds(?=\/|$)/) || [''])[0];
     return `${window.location.origin}${base}${pathFor('past_exams', String(q.id))}`;
   };
-  const handleShareQuestion = async (q: QuestionItem) => {
-    const url = questionLink(q);
-    const title = `Çıkmış soru #${q.questionNumber || ''}${q.discipline ? ` · ${q.discipline}` : ''}`;
-    if (navigator.share && window.matchMedia?.('(pointer: coarse)').matches) {
-      try {
-        await navigator.share({ title, url });
-        return;
-      } catch (e: any) {
-        if (e?.name === 'AbortError') return;
-      }
-    }
-    try {
-      await navigator.clipboard.writeText(url);
-      toast.success('Bağlantı kopyalandı', 'Soruyu bu bağlantıyla paylaşabilirsin.');
-    } catch {
-      toast.info('Bağlantı', url);
-    }
+  const handleShareQuestion = async (q: QuestionItem, subTarget?: string) => {
+    await shareDeepLink({
+      type: 'past_question',
+      id: q.id,
+      committeeId: q.committeeId,
+      subTarget,
+    });
   };
 
   // Yönetici: Çıkmış soruyu kalıcı olarak sil
@@ -686,7 +842,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
     if (!isAdminUser) return;
     const label = targetQ.questionNumber ? `Soru #${targetQ.questionNumber}'ı` : 'Bu çıkmış soruyu';
     const confirmMsg = `${label} (${targetQ.discipline || 'Çıkmış soru'})\n\nKalıcı olarak tüm veritabanlarından, sunucudan ve cihaz önbelleğinden silmek istediğinize emin misiniz?\n\nBu işlem geri alınamaz.`;
-    if (!window.confirm(confirmMsg)) return;
+    if (!(await confirmDialog({ title: 'Soru kalıcı olarak silinsin mi?', message: confirmMsg, confirmLabel: 'Kalıcı sil', tone: 'danger' }))) return;
 
     setDeletingQuestionId(targetQ.id);
     try {
@@ -732,7 +888,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
     return () => window.removeEventListener('popstate', onPop);
   }, []);
   // Paylaşılan sorudayken arama ya da süzgeç değişirse normal listeye dönülür
-  const filterSig = `${searchQuery}|${selectedCommittee}|${selectedDiscipline}|${selectedTopic}|${selectedYear}|${answerFilter}|${ambiguityTab}`;
+  const filterSig = `${searchQuery}|${selectedCommittee}|${selectedDiscipline}|${selectedTopic}|${selectedYear}|${answerFilter}|${ambiguityTab}|${quarantineFilter}`;
   const firstSig = useRef(filterSig);
   useEffect(() => {
     if (sharedId && filterSig !== firstSig.current) showAllQuestions();
@@ -841,6 +997,9 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
         hasAnswer: Boolean(q.correctAnswer || q.claimedAnswer || q.reconstruction?.correctAnswer) && !(isPhase14Pending(q) && !anyQ.phase14Original?.correctAnswer),
         doubtful: isDoubtful(q),
         hasExpl: Boolean(expl.trim()),
+        isQuarantined: Boolean(anyQ.isQuarantined || (Array.isArray(q.tags) && q.tags.includes('karantina'))),
+        isInaccessible: Boolean(anyQ.isInaccessible),
+        isDonem3: Boolean(anyQ.isDonem3 !== false),
         fields: [
           { text: foldText(stem), weight: 3 },
           { text: foldText(opts), weight: 2 },
@@ -873,7 +1032,8 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
       ambiguityTab === 'all' ||
       (ambiguityTab === 'valid' && !p.q.isAmbiguous) ||
       (ambiguityTab === 'ambiguous' && !!p.q.isAmbiguous) ||
-      (ambiguityTab === 'reported' && !!p.q.reports?.length),
+      (ambiguityTab === 'reported' && !!p.q.reports?.length) ||
+      (ambiguityTab === 'quarantined' && p.isQuarantined),
     committee: (p) => selectedCommittee === 'all' || p.comms.includes(selectedCommittee),
     year: (p) => selectedYear === 'all' || p.year === selectedYear,
     discipline: (p) => selectedDiscipline === 'all' || p.disc === selectedDiscipline,
@@ -903,9 +1063,24 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
       repeatedFilter === 'all' ||
       (repeatedFilter === 'repeated_only' && p.isRepeated) ||
       (repeatedFilter === 'unique_only' && !p.isRepeated),
+    quarantine: (p) => {
+      if (quarantineFilter === 'standard') {
+        return !p.isQuarantined && p.isDonem3 && (!((p.q as any).hidden || (p.q as any).data?.hidden) || isAdminUser);
+      }
+      if (quarantineFilter === 'karantina') {
+        return p.isQuarantined;
+      }
+      if (quarantineFilter === 'inaccessible') {
+        return p.isInaccessible;
+      }
+      if (quarantineFilter === 'all') {
+        return true;
+      }
+      return true;
+    },
   };
   const facetValues: Record<FacetKey, (p: Prep) => (string | null)[]> = {
-    pool: (p) => [p.q.isAmbiguous ? 'ambiguous' : 'valid', p.q.reports?.length ? 'reported' : null],
+    pool: (p) => [p.q.isAmbiguous ? 'ambiguous' : 'valid', p.q.reports?.length ? 'reported' : null, p.isQuarantined ? 'quarantined' : null],
     committee: (p) => p.comms,
     year: (p) => [p.year],
     discipline: (p) => [p.disc],
@@ -918,6 +1093,12 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
     newness: (p) => [p.isNew ? 'new_only' : 'archived_only'],
     manual: (p) => [p.isManual ? 'manual_only' : 'standard_only'],
     repeated: (p) => [p.isRepeated ? 'repeated_only' : 'unique_only'],
+    quarantine: (p) => [
+      !p.isQuarantined && p.isDonem3 && (!((p.q as any).hidden || (p.q as any).data?.hidden) || isAdminUser) ? 'standard' : null,
+      p.isQuarantined ? 'karantina' : null,
+      p.isInaccessible ? 'inaccessible' : null,
+      'all',
+    ],
   };
 
   const { filteredQuestions, facetCounts } = useMemo(() => {
@@ -955,9 +1136,12 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
     if (sortOrder === 'number') list.sort((a, b) => (a.questionNumber || 9999) - (b.questionNumber || 9999));
     if (sortOrder === 'quality_desc') list.sort((a, b) => getQualityScore(b) - getQualityScore(a));
     if (sortOrder === 'quality_asc') list.sort((a, b) => getQualityScore(a) - getQualityScore(b));
+    if (sortOrder === 'popular') list.sort((a, b) => ((b.upvotes || 0) - (b.downvotes || 0) + (b.comments?.length || 0)) - ((a.upvotes || 0) - (a.downvotes || 0) + (a.comments?.length || 0)));
+    if (sortOrder === 'discipline') list.sort((a, b) => String(a.discipline || '').localeCompare(String(b.discipline || ''), 'tr') || (a.questionNumber || 0) - (b.questionNumber || 0));
+    if (sortOrder === 'updated') list.sort((a, b) => Date.parse(String((b as any).updatedAt || b.createdAt || 0)) - Date.parse(String((a as any).updatedAt || a.createdAt || 0)));
     return { filteredQuestions: list, facetCounts: counts };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [prepared, searchScores, ambiguityTab, selectedCommittee, selectedYear, selectedDiscipline, selectedTopic, answerFilter, explanationFilter, sourceFilter, phase14Filter, denetleyiciFilter, newnessFilter, manualFilter, repeatedFilter, sortOrder]);
+  }, [prepared, searchScores, ambiguityTab, selectedCommittee, selectedYear, selectedDiscipline, selectedTopic, answerFilter, explanationFilter, sourceFilter, phase14Filter, denetleyiciFilter, newnessFilter, manualFilter, repeatedFilter, quarantineFilter, sortOrder]);
   const fc = (k: FacetKey, v = 'all') => facetCounts[k].get(v) || 0;
 
   // Seçili kurul/ders artık sonuç vermiyorsa (başka seçim yüzünden) seçimi düşürme: kullanıcı neyi seçtiyse o kalır,
@@ -1011,7 +1195,13 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
 
   const resetPage = () => setCurrentPage(1);
   const LABELS = {
-    pool: { valid: 'Tam metin', ambiguous: 'İncelemede', reported: 'Hata bildirilen', all: 'Tüm havuz' } as Record<string, string>,
+    pool: { valid: 'Tam metin', ambiguous: 'İncelemede', reported: 'Hata bildirilen', quarantined: 'Karantina', all: 'Tüm havuz' } as Record<string, string>,
+    quarantine: {
+      standard: 'Standart (Yayında)',
+      karantina: 'Karantinaya Alınanlar',
+      inaccessible: 'Tüm Erişilemeyenler',
+      all: 'Tüm Sorular (Karantina Dahil)',
+    } as Record<string, string>,
     answer: { with: 'Cevaplı', without: 'Cevapsız', doubtful: 'Cevap belirsiz' } as Record<string, string>,
     source: { gemini_v3: 'Gemini v3', existing: 'Mevcut veriler' } as Record<string, string>,
     p14: { faz14: 'Faz 14', faz14_onayli: 'Faz 14 · onaylı', faz14_bekleyen: 'Faz 14 · onay bekliyor' } as Record<string, string>,
@@ -1019,11 +1209,12 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
     newness: { new_only: 'Yeni sorular', archived_only: 'Arşiv' } as Record<string, string>,
     manual: { manual_only: 'Manuel Eklenenler', standard_only: 'Otomatik Havuz' } as Record<string, string>,
     repeated: { repeated_only: 'Tekrarlayan Sorular', unique_only: 'Tekil Sorular' } as Record<string, string>,
-    sort: { newest: 'Yeniden eskiye', oldest: 'Eskiden yeniye', number: 'Soru numarası', quality_desc: 'Kalite: en iyi önce', quality_asc: 'Kalite: en sorunlu önce', default: searchQuery.trim() ? 'En ilgili' : 'Varsayılan' } as Record<string, string>,
+    sort: { newest: 'Yeniden eskiye', oldest: 'Eskiden yeniye', number: 'Soru numarası', quality_desc: 'Kalite: en iyi önce', quality_asc: 'Kalite: en sorunlu önce', popular: 'En popüler', discipline: 'Derse göre', updated: 'Son güncellenen', default: searchQuery.trim() ? 'En ilgili' : 'Varsayılan' } as Record<string, string>,
     view: { raw: 'Ham metin', split: 'Karşılaştır' } as Record<string, string>,
   };
   // Şeritte görünmeyen etkin süzgeçler kaldırılabilir çip olarak listelenir
   const activeFilterChips: { label: string; clear: () => void }[] = [
+    ...(quarantineFilter !== 'standard' ? [{ label: LABELS.quarantine[quarantineFilter] || 'Karantina', clear: () => setQuarantineFilter('standard') }] : []),
     ...(ambiguityTab !== 'valid' ? [{ label: LABELS.pool[ambiguityTab], clear: () => setAmbiguityTab('valid') }] : []),
     ...(selectedDiscipline !== 'all' ? [{ label: selectedDiscipline, clear: () => { setSelectedDiscipline('all'); setSelectedTopic('all'); } }] : []),
     ...(selectedTopic !== 'all' ? [{ label: selectedTopic, clear: () => setSelectedTopic('all') }] : []),
@@ -1043,6 +1234,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
   const clearAllFilters = () => {
     setSearchQuery('');
     setAmbiguityTab('valid');
+    setQuarantineFilter('standard');
     setDeepseekFilter('all');
     setSourceFilter('all');
     setDenetleyiciFilter('all');
@@ -1065,9 +1257,9 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
 
   // Bölümlü seçim (filtre çekmecesi): seçenek sayıları canlı
   const segRow = <T extends string>(label: string, value: T, set: (v: T) => void, opts: [T, string, number?][]) => (
-    <div className="ms-facet">
-      <div className="ms-facet-head">{label}</div>
-      <div className="ms-facet-list" role="radiogroup" aria-label={label}>
+    <div className="ui-row ui-row-stack cx-facet">
+      <span className="cx-facet-h">{label}</span>
+      <div className="cx-facet-chips" role="radiogroup" aria-label={label}>
         {opts.map(([id, text, count]) => (
           <button
             key={id}
@@ -1075,7 +1267,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
             role="radio"
             aria-checked={value === id}
             onClick={() => { set(id); resetPage(); }}
-            className={`ms-fchip ${value === id ? 'is-on' : ''} ${count === 0 && value !== id ? 'is-zero' : ''}`}
+            className={`cx-fchip ${count === 0 && value !== id ? 'is-zero' : ''}`}
           >
             {value === id && <Check aria-hidden />}
             {text}
@@ -1111,6 +1303,8 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
         </span>
       </header>
 
+      {/* Kontrol yuvası: arama, kurul sekmeleri ve etkin süzgeçler; kaydırınca üst çubuğun altına yapışır */}
+      <div className="cx-dock">
       {/* Arama ve filtre tek kontrol */}
       <div className="cx-search">
         <Search aria-hidden />
@@ -1217,6 +1411,9 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
             <option value="newest">Yeniden eskiye</option>
             <option value="oldest">Eskiden yeniye</option>
             <option value="number">Soru numarası</option>
+            <option value="discipline">Derse göre</option>
+            <option value="popular">En popüler</option>
+            <option value="updated">Son güncellenen</option>
           </select>
         </label>
         <button
@@ -1244,64 +1441,86 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
         </div>
       )}
 
-      {/* Gelişmiş filtreler: yan çekmece (telefonda alttan) */}
-      {filtersOpen && (
-        <>
-          <div className={`ms-drawer-scrim ${filtersClosing ? 'is-closing' : ''}`} onClick={() => closeFilters()} aria-hidden />
-          <div className={`ms-drawer ${filtersClosing ? 'is-closing' : ''}`} role="dialog" aria-modal="true" aria-labelledby="cikmis-filter-title" onKeyDown={(e) => e.key === 'Escape' && closeFilters()}>
-            <header className="ms-drawer-head">
-              <h2 id="cikmis-filter-title" className="ms-drawer-title">Filtreler</h2>
-              <button type="button" onClick={() => closeFilters()} aria-label="Kapat" className="ms-btn is-ghost is-icon" autoFocus>
-                <X />
-              </button>
-            </header>
-            <div className="ms-drawer-body">
-              <div className="ms-facet">
-                <div className="ms-facet-head">
-                  Ders
-                  {selectedDiscipline !== 'all' && <button type="button" onClick={() => { setSelectedDiscipline('all'); setSelectedTopic('all'); resetPage(); }}>Temizle</button>}
-                </div>
-                {disciplineList.length > 10 && (
-                  <div className="ms-qsearch h-9! rounded-xl!">
-                    <Search aria-hidden />
-                    <input value={facetQuery} onChange={(e) => setFacetQuery(e.target.value)} placeholder="Ders ara" aria-label="Ders ara" />
-                  </div>
-                )}
-                <div className="ms-facet-list ms-facet-scroll">
-                  {disciplineList
-                    .filter((d) => !facetQuery || foldText(d).includes(foldText(facetQuery)))
-                    .map((d) => {
-                      const on = selectedDiscipline === d;
-                      const cnt = fc('discipline', d);
-                      if (!cnt && !on) return null;
-                      return (
-                        <button key={d} type="button" aria-pressed={on} onClick={() => { setSelectedDiscipline(on ? 'all' : d); setSelectedTopic('all'); resetPage(); }} className={`ms-fchip ${on ? 'is-on' : ''}`}>
-                          {on && <Check aria-hidden />} {d} <span className="n">{n(cnt)}</span>
-                        </button>
-                      );
-                    })}
-                </div>
-              </div>
+      </div>
 
-              {(selectedDiscipline !== 'all' || selectedTopic !== 'all') && topicList.length > 0 && (
-                <div className="ms-facet">
-                  <div className="ms-facet-head">
-                    Konu
-                    {selectedTopic !== 'all' && <button type="button" onClick={() => { setSelectedTopic('all'); resetPage(); }}>Temizle</button>}
-                  </div>
-                  <div className="ms-facet-list ms-facet-scroll">
-                    {topicList.map(([t, cnt]) => {
-                      const on = selectedTopic === t;
-                      return (
-                        <button key={t} type="button" aria-pressed={on} onClick={() => { setSelectedTopic(on ? 'all' : t); resetPage(); }} className={`ms-fchip ${on ? 'is-on' : ''}`}>
-                          {on && <Check aria-hidden />} <span className="truncate max-w-[260px]">{t}</span> <span className="n">{n(cnt)}</span>
-                        </button>
-                      );
-                    })}
-                  </div>
+      {/* Süzgeçler: ortak alt sayfa (geniş ekranda pencere). Öğrenci süzgeçleri önde, yönetim süzgeçleri ayrı bölümde */}
+      <Sheet
+        open={filtersOpen}
+        onClose={() => setFiltersOpen(false)}
+        title="Süzgeçler"
+        subtitle={anyFilter ? `${advancedCount} süzgeç etkin` : 'Ders, konu, yıl ve cevap durumuna göre daralt'}
+        size="full"
+        width={560}
+        footer={
+          <>
+            <button type="button" onClick={clearAllFilters} className="ui-btn is-ghost" disabled={!anyFilter}>Sıfırla</button>
+            <button type="button" onClick={() => setFiltersOpen(false)} className="ui-btn is-primary" style={{ flex: 1, maxWidth: 260 }}>
+              {n(filteredQuestions.length)} soruyu göster
+            </button>
+          </>
+        }
+      >
+        <div className="cx-filters">
+          <FilterGroup
+            title="Ders"
+            defaultOpen={false}
+            summary={selectedDiscipline === 'all' ? 'Tümü' : disciplineLabel(selectedDiscipline) || selectedDiscipline}
+            action={selectedDiscipline !== 'all' ? <button type="button" className="ui-btn is-ghost is-sm" onClick={() => { setSelectedDiscipline('all'); setSelectedTopic('all'); resetPage(); }}>Temizle</button> : undefined}
+          >
+            <div className="ui-group">
+              {disciplineList.length > 10 && (
+                <div className="ui-row">
+                  <Search className="w-4 h-4 shrink-0" style={{ color: 'var(--color-ink-3)' }} aria-hidden />
+                  <input className="cx-facet-q" value={facetQuery} onChange={(e) => setFacetQuery(e.target.value)} placeholder="Ders ara" aria-label="Ders ara" />
                 </div>
               )}
+              <div className="cx-facet-list">
+                {disciplineList
+                  .filter((d) => !facetQuery || foldText(d).includes(foldText(facetQuery)))
+                  .map((d) => {
+                    const on = selectedDiscipline === d;
+                    const cnt = fc('discipline', d);
+                    if (!cnt && !on) return null;
+                    return (
+                      <button key={d} type="button" role="checkbox" aria-checked={on} onClick={() => { setSelectedDiscipline(on ? 'all' : d); setSelectedTopic('all'); resetPage(); }} className={`ui-row cx-facet-opt ${disciplineClass(d)}`}>
+                        <span className="hk-dot" aria-hidden />
+                        <span className="ui-row-main"><b>{disciplineLabel(d) || d}</b></span>
+                        <span className="ui-row-end hk-num">{n(cnt)}</span>
+                        <span className="cx-facet-check" aria-hidden>{on && <Check strokeWidth={3} />}</span>
+                      </button>
+                    );
+                  })}
+              </div>
+            </div>
+          </FilterGroup>
 
+          {(selectedDiscipline !== 'all' || selectedTopic !== 'all') && topicList.length > 0 && (
+            <FilterGroup
+              title="Konu"
+              summary={selectedTopic === 'all' ? 'Tümü' : selectedTopic}
+              action={selectedTopic !== 'all' ? <button type="button" className="ui-btn is-ghost is-sm" onClick={() => { setSelectedTopic('all'); resetPage(); }}>Temizle</button> : undefined}
+            >
+              <div className="ui-group cx-facet-list">
+                {topicList.map(([t, cnt]) => {
+                  const on = selectedTopic === t;
+                  return (
+                    <button key={t} type="button" role="checkbox" aria-checked={on} onClick={() => { setSelectedTopic(on ? 'all' : t); resetPage(); }} className="ui-row cx-facet-opt">
+                      <span className="ui-row-main"><b>{t}</b></span>
+                      <span className="ui-row-end hk-num">{n(cnt)}</span>
+                      <span className="cx-facet-check" aria-hidden>{on && <Check strokeWidth={3} />}</span>
+                    </button>
+                  );
+                })}
+              </div>
+            </FilterGroup>
+          )}
+
+          <FilterGroup
+            title="Sınav ve cevap"
+            summary={[selectedYear !== 'all' ? selectedYear : '', answerFilter !== 'all' ? 'cevap süzgeci' : ''].filter(Boolean).join(' · ') || 'Tümü'}
+          >
+            <div className="ui-group">
+              {segRow('Yıl', selectedYear, setSelectedYear, [['all', 'Tümü', fc('year')], ...yearList.map((y) => [y, y, fc('year', y)] as [string, string, number])])}
               {segRow('Cevap', answerFilter, setAnswerFilter, [
                 ['all', 'Tümü', fc('answer')],
                 ['with', 'Cevaplı', fc('answer', 'with')],
@@ -1313,11 +1532,33 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                 ['with', 'Var', fc('explanation', 'with')],
                 ['without', 'Yok', fc('explanation', 'without')],
               ])}
-              {segRow('Yıl', selectedYear, setSelectedYear, [['all', 'Tümü', fc('year')], ...yearList.map((y) => [y, y, fc('year', y)] as [string, string, number])])}
+              {segRow('Tekrar', repeatedFilter, setRepeatedFilter, [
+                ['all', 'Tümü', fc('repeated')],
+                ['repeated_only', 'Birden çok sınavda', fc('repeated', 'repeated_only')],
+                ['unique_only', 'Tek sınavda', fc('repeated', 'unique_only')],
+              ])}
+            </div>
+          </FilterGroup>
+
+          {/* Gelişmiş: sık kullanılmayan süzgeçler varsayılan olarak gizli */}
+          <button
+            type="button"
+            className="rb-adv-toggle"
+            aria-expanded={advFiltersOpen}
+            onClick={() => setAdvFiltersOpen((v) => !v)}
+          >
+            <SlidersHorizontal aria-hidden />
+            {advFiltersOpen ? 'Gelişmiş süzgeçleri gizle' : 'Gelişmiş süzgeçler'}
+            <ChevronDown aria-hidden className={advFiltersOpen ? 'rotate-180' : ''} />
+          </button>
+          {advFiltersOpen && (<>
+          <FilterGroup title="Durum ve görünüm">
+            <div className="ui-group">
               {segRow('Havuz', ambiguityTab, setAmbiguityTab, [
                 ['valid', 'Tam metin', fc('pool', 'valid')],
                 ['ambiguous', 'İncelemede', fc('pool', 'ambiguous')],
                 ['reported', 'Hata bildirilen', fc('pool', 'reported')],
+                ['quarantined', 'Karantina', fc('pool', 'quarantined')],
                 ['all', 'Tümü', fc('pool')],
               ])}
               {segRow('Yenilik', newnessFilter, setNewnessFilter, [
@@ -1325,47 +1566,50 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                 ['new_only', 'Yeni', fc('newness', 'new_only')],
                 ['archived_only', 'Arşiv', fc('newness', 'archived_only')],
               ])}
-              {segRow('Kaynak', sourceFilter, setSourceFilter, [
-                ['all', 'Tümü', fc('source')],
-                ['gemini_v3', 'Gemini v3', fc('source', 'gemini_v3')],
-                ['existing', 'Mevcut', fc('source', 'existing')],
-              ])}
-              {segRow('Denetleyici onayı', denetleyiciFilter, setDenetleyiciFilter, [
-                ['all', 'Tümü', fc('denetleyici')],
-                ['denetleyici_only', 'Onaylı', fc('denetleyici', 'denetleyici_only')],
-                ['standard_only', 'Onaysız', fc('denetleyici', 'standard_only')],
-              ])}
-              {segRow('AI İnceleme ve Denetim', phase14Filter, setPhase14Filter, [
-                ['all', 'Tümü', fc('p14')],
-                ['faz14', 'Faz 14', fc('p14', 'faz14')],
-                ['faz14_onayli', 'Onaylı', fc('p14', 'faz14_onayli')],
-                ['faz14_bekleyen', 'Onay bekliyor', fc('p14', 'faz14_bekleyen')],
-              ])}
-              {segRow('Yükleme Türü', manualFilter, setManualFilter, [
-                ['all', 'Tümü', fc('manual')],
-                ['manual_only', 'Manuel Eklenenler', fc('manual', 'manual_only')],
-                ['standard_only', 'Otomatik Havuz', fc('manual', 'standard_only')],
-              ])}
-              {segRow('Soru Tekrarı', repeatedFilter, setRepeatedFilter, [
-                ['all', 'Tümü', fc('repeated')],
-                ['repeated_only', 'Tekrarlayanlar', fc('repeated', 'repeated_only')],
-                ['unique_only', 'Tekil Sorular', fc('repeated', 'unique_only')],
-              ])}
-              {segRow('Görünüm', viewMode, setViewMode, [
+              {segRow('Metin', viewMode, setViewMode, [
                 ['redacted', 'Düzenlenmiş'],
-                ['raw', 'Ham metin'],
+                ['raw', 'Ham'],
                 ['split', 'Karşılaştır'],
               ])}
             </div>
-            <footer className="ms-drawer-foot">
-              <button type="button" onClick={clearAllFilters} className="ms-btn">Sıfırla</button>
-              <button type="button" onClick={() => closeFilters()} className="ms-btn is-primary">
-                {n(filteredQuestions.length)} soruyu göster
-              </button>
-            </footer>
-          </div>
-        </>
-      )}
+          </FilterGroup>
+
+          {isAdminUser && (
+            <FilterGroup title="Yönetim" defaultOpen={false}>
+              <div className="ui-group">
+                {segRow('Karantina ve erişim', quarantineFilter, setQuarantineFilter, [
+                  ['standard', 'Yayında', fc('quarantine', 'standard')],
+                  ['karantina', 'Karantinada', fc('quarantine', 'karantina')],
+                  ['inaccessible', 'Erişilemeyen', fc('quarantine', 'inaccessible')],
+                  ['all', 'Tümü', fc('quarantine', 'all')],
+                ])}
+                {segRow('Kaynak', sourceFilter, setSourceFilter, [
+                  ['all', 'Tümü', fc('source')],
+                  ['gemini_v3', 'Gemini v3', fc('source', 'gemini_v3')],
+                  ['existing', 'Mevcut', fc('source', 'existing')],
+                ])}
+                {segRow('Denetleyici', denetleyiciFilter, setDenetleyiciFilter, [
+                  ['all', 'Tümü', fc('denetleyici')],
+                  ['denetleyici_only', 'Onaylı', fc('denetleyici', 'denetleyici_only')],
+                  ['standard_only', 'Onaysız', fc('denetleyici', 'standard_only')],
+                ])}
+                {segRow('AI inceleme', phase14Filter, setPhase14Filter, [
+                  ['all', 'Tümü', fc('p14')],
+                  ['faz14', 'Faz 14', fc('p14', 'faz14')],
+                  ['faz14_onayli', 'Onaylı', fc('p14', 'faz14_onayli')],
+                  ['faz14_bekleyen', 'Onay bekliyor', fc('p14', 'faz14_bekleyen')],
+                ])}
+                {segRow('Yükleme', manualFilter, setManualFilter, [
+                  ['all', 'Tümü', fc('manual')],
+                  ['manual_only', 'Elle eklenen', fc('manual', 'manual_only')],
+                  ['standard_only', 'Otomatik', fc('manual', 'standard_only')],
+                ])}
+              </div>
+            </FilterGroup>
+          )}
+          </>)}
+        </div>
+      </Sheet>
 
       {/* Derslere göz at (Apple Sağlık "Göz at" listesi): süzgeç yokken ders renkli kısa yol */}
       {!isLoading && !sharedId && selectedDiscipline === 'all' && !searchQuery.trim() && currentPage === 1 && (() => {
@@ -1431,7 +1675,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
           )}
           {paginatedQuestions.map((q) => {
             const effectiveMode: 'redacted' | 'raw' | 'split' = cardViewOverrides[q.id] || viewMode;
-            const userUid = currentUser?.uid || currentUser?.email || 'anonim-std';
+            const userUid = getVoterId(currentUser);
             const isLiked = (q.likedBy || []).includes(userUid);
             const isDisliked = (q.dislikedBy || []).includes(userUid);
             const isNewQuestion = isNewQ(q);
@@ -1526,6 +1770,9 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
               ...(correctAnswer && options.some((o: any) => String(o.key) === String(correctAnswer))
                 ? [{ label: `Cevaba itiraz et (${correctAnswer})`, icon: ShieldAlert, group: 'Diğer', onClick: () => setObjection({ question: q, option: { key: String(correctAnswer), text: String(options.find((o: any) => String(o.key) === String(correctAnswer))?.text ?? '') } }) }]
                 : []),
+              ...((q.reports || []).length > 0
+                ? [{ label: 'Bildirim geçmişi', icon: History, group: 'Diğer', hint: String((q.reports || []).length), onClick: () => setSelectedQuestionForReportHistory(q) }]
+                : []),
               { label: 'Hata bildir', icon: Flag, group: 'Diğer', tone: 'danger', onClick: () => setReportingQuestion(q) },
               ...(isAdminUser
                 ? [
@@ -1541,107 +1788,38 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                 : []),
             ];
 
-            return (
-              <article key={q.id} className={`cx-q ${disciplineClass(q.discipline)}`}>
-                <header className="cx-q-head">
-                  <span className={`cx-q-no ${q.questionNumber ? '' : 'is-none'}`} title={q.questionNumber ? `Soru ${q.questionNumber}` : 'Soru numarası bilinmiyor'}>{q.questionNumber || '?'}</span>
-                  <span className="cx-q-meta" title={formatCommitteeName(q.committeeId)}>
-                    <b><i className="hk-dot" aria-hidden />{(q as any).committeeUncertain ? 'Kurul belirsiz' : disciplineLabel(q.discipline) || 'Tıp'}</b>
-                    <span>{[(q as any).committeeUncertain ? ((q as any).contentCommitteeId ? committeeShort((q as any).contentCommitteeId) : null) : committeeShort((q as any).contentCommitteeId || q.committeeId), q.examYear].filter(Boolean).join(' · ')}</span>
-                  </span>
-                  <span className="cx-q-flags">
-                    {q.reports && q.reports.length > 0 && (
-                      <span className="cx-flag is-bad" title={`${q.reports.length} hata bildirimi`}><Flag aria-hidden />{q.reports.length}</span>
-                    )}
-                    {pollMode && (
-                      <span className={`cx-flag ${acceptedPoll ? 'is-ok' : 'is-warn'}`} title={acceptedPoll ? 'Cevap kabul edildi; anket açık' : doubtful ? 'Cevap anahtarı tartışmalı' : 'Cevap anahtarı yok'}>
-                        <BarChart3 aria-hidden />{acceptedPoll ? 'Anket' : doubtful ? 'Belirsiz' : 'Cevapsız'}
-                      </span>
-                    )}
-                    {aiQueue[String(q.id)] && (
-                      <span className="cx-flag is-ai" title={aiQueue[String(q.id)].status === 'yonetici_onayi' ? 'Yapay zekâ inceledi; cevap belirsiz olduğu için yönetici onayı bekliyor' : `Yapay zekâ inceleme kuyruğunda (${aiQueue[String(q.id)].requests} istek)`}>
-                        <Sparkles aria-hidden />{aiQueue[String(q.id)].status === 'yonetici_onayi' ? 'Onayda' : `Sırada ${aiQueue[String(q.id)].position}`}
-                      </span>
-                    )}
-                    {q.isAmbiguous && <span className="cx-flag is-warn">Eksik</span>}
-                    {isNewQuestion && <span className="cx-flag is-new">Yeni</span>}
-                    {(() => {
-                      const qs = getQualityScore(q);
-                      const tier = getQualityTier(q);
-                      const cls = tier === 'altin' ? 'is-ok' : tier === 'saglam' ? 'is-new' : tier === 'orta' ? '' : tier === 'zayif' ? 'is-warn' : 'is-bad';
-                      const label = tier === 'altin' ? 'Altın' : tier === 'saglam' ? 'Sağlam' : tier === 'orta' ? 'Orta' : tier === 'zayif' ? 'Zayıf' : 'Kritik';
-                      const iss = ((q as any).qualityIssues || []) as string[];
-                      return (
-                        <span className={`cx-flag ${cls}`} title={`Kalite ${qs}/100 · ${label}${iss.length ? ` · ${iss.join(', ')}` : ''}`}>
-                          Q{qs}
-                        </span>
-                      );
-                    })()}
-                    {((q as any).customRedactedBy === 'muse' || (q.tags || []).includes('redacted_by_muse')) && (
-                      <span className="cx-flag is-ai" title={(q as any).museRedactionNote || 'muse tarafından yazım/biçim yönünden düzenlendi; eski hâli kayıtta saklı'}>
-                        muse
-                      </span>
-                    )}
-                    {(q.is_manual_entry || (q as any).manuel_ekleme) && (
-                      <span className="cx-flag is-new" title="Bu soru resmi geçmiş kurul sınavı PDF'inden elle doğrulanıp eklenmiştir.">Manuel Ekleme</span>
-                    )}
-                    {q.similarPastQuestions && q.similarPastQuestions.length > 0 && (
-                      <span className="cx-flag is-ai" title={`${q.similarPastQuestions.length + 1} farklı sınavda çıkan soru`}>
-                        <Layers aria-hidden className="w-3 h-3 inline mr-0.5" />
-                        {q.similarPastQuestions.length + 1} Sınavda Çıktı
-                      </span>
-                    )}
-                    {isDenetleyici && <span className="cx-flag is-ok is-icon" title="Denetleyici onayı: müfredat ve mekanizma doğrulamalı sürüm" aria-label="Denetleyici onaylı"><ShieldCheck /></span>}
-                    {p14Fixed && (
-                      <button
-                        type="button"
-                        onClick={() => setP14Open((o) => ({ ...o, [q.id]: !o[q.id] }))}
-                        aria-expanded={!!p14Open[q.id]}
-                        className={`cx-flag is-ai ${isPhase14Pending(q) ? '' : 'is-icon'}`}
-                        title={isPhase14Pending(q) ? 'Düzeltme onay bekliyor: değişiklikleri gör' : 'Yapay zekâ incelemesinde düzeltildi: değişiklikleri ve öncesini gör'}
-                        aria-label="Düzeltme ayrıntıları"
-                      >
-                        <Sparkles aria-hidden />{isPhase14Pending(q) ? 'Onay bekliyor' : null}
-                      </button>
-                    )}
-                    {isAdminUser && isGeminiV3Question(q) && <span className="cx-flag is-ai">Gemini v3</span>}
-                  </span>
-                  {isDenetleyici && (
-                    <span role="group" aria-label="Soru sürümü" className="cx-ver">
-                      {([
-                        ['denetleyici', ShieldCheck, 'Denetleyici sürümü (yeni)'],
-                        ['eski', History, 'Eski sürüm (ham çıkmış sınav)'],
-                        ['karsilastir', Layers, 'Sürümleri karşılaştır'],
-                      ] as const).map(([v, Icon, label]) => (
-                        <button key={v} type="button" onClick={() => setVersionViewOverrides((prev) => ({ ...prev, [q.id]: v }))} aria-pressed={activeVersion === v} aria-label={label} title={label}>
-                          <Icon />
-                        </button>
-                      ))}
-                    </span>
-                  )}
-                  {isAdminUser && (
-                    <button
-                      type="button"
-                      className="cx-iconbtn text-bad-text hover:text-bad-text hover:bg-bad-soft dark:hover:bg-red-950/30"
-                      title="Soruyu kalıcı sil (Yönetici)"
-                      aria-label="Soruyu kalıcı sil"
-                      disabled={deletingQuestionId === q.id}
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        handleDeletePastQuestion(q);
-                      }}
-                    >
-                      <Trash2 className="w-4 h-4" />
-                    </button>
-                  )}
-                  <ActionMenu
-                    items={actions}
-                    title={`Soru #${q.questionNumber}`}
-                    highlight={reliableLearn ? { icon: GraduationCap, title: `Öğren slaytı var (slayt ${reliableLearn.slideNumber})` } : undefined}
-                  />
-                </header>
+            const flagNodes: React.ReactNode[] = [];
+            // Yalnız işe yarayan işaretler: açık bildirim, cevap belirsizliği, AI kuyruğu, Yeni/Eksik, çok sınavda çıkma.
+            // (Çözülmüş bildirim, "Onaylı", "Onay bekliyor", kabul edilmiş "Anket" gibi bilgi taşımayan etiketler gösterilmez;
+            //  bildirim geçmişi ⋯ menüsünde.)
+            const openReports = (q.reports || []).filter((r: any) => r.status !== 'resolved' && r.status !== 'verified_correct').length;
+            if (openReports > 0) {
+              flagNodes.push(
+                <button type="button" onClick={() => setSelectedQuestionForReportHistory(q)} className="cx-flag is-warn" title="Açık hata bildirimleri: geçmişi gör">
+                  <Flag aria-hidden />{openReports} bildirim
+                </button>
+              );
+            }
+            if (pollMode && !acceptedPoll) flagNodes.push(<span className="cx-flag is-warn"><BarChart3 aria-hidden />{doubtful ? 'Cevabı belirsiz' : 'Cevapsız'}</span>);
+            if (aiQueue[String(q.id)]) flagNodes.push(<span className="cx-flag is-ai"><Sparkles aria-hidden />{aiQueue[String(q.id)].status === 'yonetici_onayi' ? 'Onayda' : `Sırada ${aiQueue[String(q.id)].position}`}</span>);
+            if (isAdminUser && (q as any).isQuarantined) flagNodes.push(<span className="cx-flag is-bad" title={((q as any).quarantineReasons || []).join(', ')}><ShieldAlert aria-hidden />Karantina</span>);
+            if (isNewQuestion) flagNodes.push(<span className="cx-flag is-new">Yeni</span>);
+            if (q.isAmbiguous) flagNodes.push(<span className="cx-flag is-warn">Eksik</span>);
+            if (q.similarPastQuestions && q.similarPastQuestions.length > 0) flagNodes.push(<span className="cx-flag is-ai" title="Birden çok sınavda çıktı"><Layers aria-hidden />{q.similarPastQuestions.length + 1} sınav</span>);
+            if (isAdminUser && p14Fixed && isPhase14Pending(q)) flagNodes.push(<span className="cx-flag is-ai"><Sparkles aria-hidden />Onay bekliyor</span>);
+            if (isAdminUser) {
+              const tier = getQualityTier(q);
+              flagNodes.push(<span className={`cx-flag ${tier === 'altin' ? 'is-ok' : tier === 'zayif' ? 'is-warn' : tier === 'kritik' ? 'is-bad' : ''}`} title="Kalite puanı">Q{getQualityScore(q)}</span>);
+              if (!(q as any).isDonem3) flagNodes.push(<span className="cx-flag is-warn">{(q as any).committeeId || 'Diğer dönem'}</span>);
+              if ((q as any).hidden || (q as any).data?.hidden) flagNodes.push(<span className="cx-flag is-warn">Gizli</span>);
+              if (q.is_manual_entry || (q as any).manuel_ekleme) flagNodes.push(<span className="cx-flag is-new">Manuel</span>);
+              if (isGeminiV3Question(q)) flagNodes.push(<span className="cx-flag is-ai">Gemini v3</span>);
+            }
 
-                {p14Fixed && p14Open[q.id] && (() => {
+            const kazanimData = (q as any).notebooklm_verisi || q.notebooklm_verisi;
+            const kurulId = (q as any).committeeUncertain ? (q as any).contentCommitteeId : ((q as any).contentCommitteeId || q.committeeId);
+            const kurulChip = kurulId ? committeeShort(kurulId).replace(/^Kurul\s*/i, 'K') : null;
+            const p14History = p14Fixed ? () => {
                   const o: any = (q as any).phase14Original || {};
                   const p14: any = (q as any).phase14 || {};
                   return (
@@ -1674,9 +1852,9 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                       )}
                     </div>
                   );
-                })()}
+                } : null;
 
-                {isCompareView ? (
+            const specialView = isCompareView ? (
                   <DiffSheet
                     oldLabel="Eski"
                     newLabel="Denetleyici"
@@ -1740,20 +1918,8 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                       </ol>
                     )}
                   </div>
-                ) : (
-                  <>
-                    <div className="flex items-start gap-1.5">
-                      <StemText text={stem} terms={terms} className="flex-1 min-w-0" />
-                      {p14Fixed &&
-                        (norm(p14o?.stem) && norm(p14o.stem) !== norm(stem) ? (
-                          <ChangeInfo title="Soru kökü düzeltildi (Faz 14)" before={p14o.stem} after={stem} note={p14Note('soru_koku_duzeltmesi')} />
-                        ) : (
-                          <ChangeInfo title="Soru kökü (Faz 14)" note={p14Note('soru_koku_duzeltmesi') || 'Kök değiştirilmedi; soru Faz 14 incelemesinden geçti.'} />
-                        ))}
-                    </div>
-
-                    {pollMode ? (
-                      <AnswerPoll
+                ) : pollMode ? (
+                  <AnswerPoll
                         questionId={String(q.id)}
                         options={((doubtful || acceptedPoll) && doubtInfo?.options[String(q.id)]) || options}
                         voterUid={currentUser?.uid || null}
@@ -1767,71 +1933,53 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                             : 'Bu sorunun cevap anahtarı yok. Doğru bildiğin şıkkı seç; çoğunluğun cevabı öne çıkar.'
                         }
                       />
-                    ) : (
-                      options.length > 0 && (
-                        <ol className={`cx-opts ${options.every((o: any) => String(o.text ?? '').length <= 42) ? 'is-short' : ''}`}>
-                          {options.map((opt: any) => {
-                            const key = String(opt.key);
-                            const isCorrect = key === correctAnswer;
-                            const showCorrect = isCorrect && !hideAnswer;
-                            const wrongPick = quizMode && picked === key && !isCorrect;
-                            const before = p14Fixed ? oldOpt(key) : '';
-                            const optChanged = p14Fixed && (opt.isAiGenerated || (before && norm(before) !== norm(opt.text)));
-                            const cls = `cx-opt ${showCorrect ? 'is-correct' : ''} ${wrongPick ? 'is-wrong' : ''} ${picked && (showCorrect || wrongPick) ? 'is-reveal' : ''}`;
-                            const body = (
-                              <>
-                                <span className="cx-bubble" aria-hidden>{showCorrect ? <Check strokeWidth={3} /> : wrongPick ? <X strokeWidth={3} /> : key}</span>
-                                <span className="cx-opt-t">
-                                  <Highlight text={String(opt.text ?? '')} terms={terms} />
-                                  {showCorrect && <span className="sr-only"> (doğru cevap)</span>}
-                                </span>
-                              </>
-                            );
-                            return (
-                              <li key={key} className="cx-opt-li">
-                                {quizMode && !picked ? (
-                                  <button type="button" className={cls} onClick={() => setPicks((p) => ({ ...p, [q.id]: key }))} aria-label={`${key} şıkkını işaretle`}>
-                                    {body}
-                                  </button>
-                                ) : (
-                                  <div className={cls}>{body}</div>
-                                )}
-                                {optChanged && (
-                                  <span className="cx-opt-info">
-                                    <ChangeInfo
-                                      title={`${key} şıkkı ${before ? 'düzeltildi' : 'eklendi'} (Faz 14)`}
-                                      before={before}
-                                      after={String(opt.text)}
-                                      note={opt.isAiGenerated ? 'Kaynakta bu şık eksikti; yapay zekâ tamamladı (doğrulanmadı).' : undefined}
-                                    />
-                                  </span>
-                                )}
-                                {!hideAnswer && (
-                                  <button
-                                    type="button"
-                                    className="cx-objection"
-                                    onClick={() => setObjection({ question: q, option: { key, text: String(opt.text ?? '') } })}
-                                    aria-label={`${key} şıkkına itiraz et`}
-                                    title={`${key} şıkkına itiraz et`}
-                                  >
-                                    <ShieldAlert aria-hidden />
-                                  </button>
-                                )}
-                              </li>
-                            );
-                          })}
-                        </ol>
-                      )
-                    )}
-                    {quizMode && picked && !pollMode && (
-                      <p className={`cx-verdict ${picked === correctAnswer ? 'is-ok' : 'is-bad'}`} role="status">
-                        <b>{picked === correctAnswer ? 'Doğru' : `Yanlış · cevap ${correctAnswer}`}</b>
-                        <button type="button" onClick={() => setPicks((p) => { const x = { ...p }; delete x[q.id]; return x; })}>Yeniden dene</button>
-                        {explanation && <button type="button" onClick={() => setAboutQuestion(q)}>Açıklama</button>}
-                      </p>
-                    )}
+                ) : undefined;
 
-                    {!hideAnswer && !pollMode && (q as any).answerStatus === 'dogrulanmadi' && (
+            return (
+              <CikmisCard
+                key={q.id}
+                id={String(q.id)}
+                anchorId={`q-${q.id}`}
+                className={disciplineClass(q.discipline)}
+                kurul={kurulChip}
+                kunye={[q.examYear, q.questionNumber ? `S${q.questionNumber}` : 'S?'].filter(Boolean).join(' · ')}
+                ders={(q as any).committeeUncertain ? 'Kurul belirsiz' : disciplineLabel(q.discipline) || q.discipline || 'Tıp'}
+                numberLabel={q.questionNumber ? `#${q.questionNumber}` : 'işlemleri'}
+                flags={flagNodes}
+                stem={<div className="flex items-start gap-1.5">
+                  <StemText text={stem} terms={terms} className="flex-1 min-w-0" />
+                      {p14Fixed &&
+                        (norm(p14o?.stem) && norm(p14o.stem) !== norm(stem) ? (
+                          <ChangeInfo title="Soru kökü düzeltildi (Faz 14)" before={p14o.stem} after={stem} note={p14Note('soru_koku_duzeltmesi')} />
+                        ) : (
+                          <ChangeInfo title="Soru kökü (Faz 14)" note={p14Note('soru_koku_duzeltmesi') || 'Kök değiştirilmedi; soru Faz 14 incelemesinden geçti.'} />
+                        ))}
+                </div>}
+                kazanim={kazanimData?.kazanim ? { baslik: ['Müfredat kazanımı', kazanimData.ders, kazanimData.konu].filter(Boolean).join(' · '), metin: String(kazanimData.kazanim) } : null}
+                special={specialView}
+                options={options as any[]}
+                correctAnswer={correctAnswer ? String(correctAnswer) : undefined}
+                terms={terms}
+                quiz={{
+                  on: quizMode,
+                  picked,
+                  onPick: (k) => setPicks((pp) => ({ ...pp, [q.id]: k })),
+                  onReset: () => setPicks((pp) => { const x = { ...pp }; delete x[q.id]; return x; }),
+                }}
+                optionInfo={(key) => {
+                  if (!p14Fixed) return null;
+                  const opt: any = options.find((o: any) => String(o.key) === key);
+                  const before = oldOpt(key);
+                  if (!opt || !(opt.isAiGenerated || (before && norm(before) !== norm(opt.text)))) return null;
+                  return (
+                    <span className="cx-opt-info">
+                      <ChangeInfo title={`${key} şıkkı ${before ? 'düzeltildi' : 'eklendi'} (Faz 14)`} before={before} after={String(opt.text)} note={opt.isAiGenerated ? 'Kaynakta bu şık eksikti; yapay zekâ tamamladı (doğrulanmadı).' : undefined} />
+                    </span>
+                  );
+                }}
+                onObject={(key, text) => setObjection({ question: q, option: { key, text } })}
+                notes={<>
+                  {!hideAnswer && !pollMode && (q as any).answerStatus === 'dogrulanmadi' && (
                       <p className="cx-note is-warn">Cevap doğrulanmadı: kaynaktaki işaret bir öğrencinin cevabıydı.</p>
                     )}
                     {!hideAnswer && (q as any).answerStatus === 'dogrulandi' && <p className="cx-note is-ok">Cevap ders slaytı kanıtıyla doğrulandı.</p>}
@@ -1854,70 +2002,143 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                         ))}
                       </div>
                     )}
-
-                    {/* Açıklama, ilgili slayt ve terimler kartta yer kaplamaz: üç nokta → Hakkında */}
-                  </>
-                )}
-
-                <footer className="cx-q-foot">
-                  <button type="button" onClick={() => handleToggleLike(q)} aria-pressed={isLiked} title={isLiked ? 'Beğeniyi geri al' : 'Soruyu beğen'} className={`cx-act ${isLiked ? 'is-on' : ''}`}>
-                    <ThumbsUp className={isLiked ? 'fill-current' : ''} aria-hidden /> <span>{q.upvotes || 0}</span><span className="sr-only"> beğeni</span>
-                  </button>
-                  <button type="button" onClick={() => handleToggleDislike(q)} aria-pressed={isDisliked} title={isDisliked ? 'Beğenmemeyi geri al' : 'Eksik ya da hatalı'} className={`cx-act ${isDisliked ? 'is-bad' : ''}`}>
-                    <ThumbsDown className={isDisliked ? 'fill-current' : ''} aria-hidden /> <span>{q.downvotes || 0}</span><span className="sr-only"> beğenmeme</span>
-                  </button>
-                  <button
-                    type="button"
-                    onClick={() => setExpandedCommentsQuestionId(expandedCommentsQuestionId === q.id ? null : q.id)}
-                    aria-expanded={expandedCommentsQuestionId === q.id}
-                    className={`cx-act ${expandedCommentsQuestionId === q.id ? 'is-on' : ''}`}
-                    title="Yorumlar"
-                  >
-                    <MessageSquare aria-hidden /> <span>{commentsCount}</span><span className="sr-only"> yorum</span>
-                  </button>
-                  <span className="cx-bar-sp" />
-                  <button type="button" onClick={() => setAboutQuestion(q)} className="cx-act is-text" title="Açıklama, ilgili slayt, kanıt ve terimler">
-                    <BookOpen aria-hidden /> <span>{explanation ? 'Açıklama' : 'Hakkında'}</span>
-                  </button>
-                  <button type="button" onClick={() => handleShareQuestion(q)} className="cx-act" aria-label="Soruyu paylaş" title="Soru bağlantısını paylaş">
-                    <Share2 aria-hidden />
-                  </button>
-                </footer>
-
-                {expandedCommentsQuestionId === q.id && (
-                  <div className="ms-pop-in bg-field rounded-xl p-2.5 flex flex-col gap-2">
-                    <div className="flex flex-col gap-1.5 max-h-56 overflow-y-auto">
-                      {commentsCount > 0 ? (
-                        (q as any).comments.map((c: any) => (
-                          <div key={c.id} className="bg-white rounded-[10px] px-3 py-2 flex flex-col gap-0.5">
-                            <div className="flex items-center justify-between gap-2 text-xs text-ink-3">
-                              <span className="font-semibold text-ink">{c.author || 'Tıp öğrencisi'}</span>
-                              <span>{new Date(c.timestamp).toLocaleDateString('tr-TR')}</span>
-                            </div>
-                            <p className="m-0 text-base text-ink-2 leading-relaxed">{c.text}</p>
+                </>}
+                explanation={explanation ? String(explanation) : undefined}
+                analysis={saEntries.map(([k, v]) => [k, typeof v === 'string' ? v : JSON.stringify(v)] as [string, string])}
+                refs={refList}
+                history={p14History ? p14History() : undefined}
+                historyBadge={p14Fixed ? 'Faz 14' : undefined}
+                copy={{ stem: q.reconstruction?.stem || q.fragments?.[0]?.text || q.topic, options: (q.reconstruction?.options || q.options || []) as any[] }}
+                actions={actions}
+                menuHighlight={reliableLearn ? { icon: GraduationCap, title: `Öğren slaytı var (slayt ${reliableLearn.slideNumber})` } : undefined}
+                social={{
+                  liked: isLiked,
+                  disliked: isDisliked,
+                  up: q.upvotes || 0,
+                  down: q.downvotes || 0,
+                  comments: commentsCount,
+                  commentsOpen: expandedCommentsQuestionId === q.id,
+                  onLike: () => handleToggleLike(q),
+                  onDislike: () => handleToggleDislike(q),
+                  onComments: () => setExpandedCommentsQuestionId(expandedCommentsQuestionId === q.id ? null : q.id),
+                  onShare: () => handleShareQuestion(q),
+                }}
+                onReport={() => setReportingQuestion(q)}
+                comments={<>
+                {expandedCommentsQuestionId === q.id && (() => {
+                  const all: any[] = (q as any).comments || [];
+                  const byId = new Map(all.map((c) => [c.id, c]));
+                  // Yanıtın kökü: zincirde en üstteki yorum (görselde tek girinti)
+                  const rootOf = (c: any) => {
+                    let cur = c;
+                    const seen = new Set<string>();
+                    while (cur?.parentId && byId.has(cur.parentId) && !seen.has(cur.id)) {
+                      seen.add(cur.id);
+                      cur = byId.get(cur.parentId);
+                    }
+                    return cur;
+                  };
+                  const roots = all.filter((c) => !c.parentId || !byId.has(c.parentId));
+                  const repliesOf = (r: any) => all.filter((c) => c !== r && c.parentId && rootOf(c)?.id === r.id);
+                    const renderOne = (c: any, isReply: boolean) => {
+                    const canManage = canManageComment(c);
+                    const isEditing = editingCommentId === c.id;
+                    const parent = isReply && c.parentId ? byId.get(c.parentId) : null;
+                    return (
+                      <div key={c.id} id={`comm-${c.id}`} className={`cm ${isReply ? 'is-reply' : ''} ${replyTo?.id === c.id ? 'is-target' : ''}`}>
+                        <span className="ui-avatar cm-av" style={{ '--av': isReply ? '24px' : '28px' } as React.CSSProperties}>
+                          {String(c.author || 'T').trim().charAt(0).toLocaleUpperCase('tr-TR')}
+                        </span>
+                        <div className="cm-main">
+                          <div className="cm-head">
+                            <b>{c.author || 'Tıp öğrencisi'}</b>
+                            {parent && rootOf(c)?.id !== parent.id && <span className="cm-to">↳ {parent.author || 'Tıp öğrencisi'}</span>}
+                            <span className="cm-time">{c.timestamp || c.createdAt ? new Date(c.timestamp || c.createdAt).toLocaleDateString('tr-TR', { day: 'numeric', month: 'short' }) : ''}</span>
+                            {c.isEdited && <span className="cm-time">· düzenlendi</span>}
                           </div>
-                        ))
-                      ) : (
-                        <p className="m-0 px-1 text-base text-ink-3">Henüz yorum yok. Bir ipucu ya da alternatif çözüm ekleyen ilk kişi ol.</p>
+                          {isEditing ? (
+                            <div className="cm-edit">
+                              <textarea value={editCommentText} onChange={(e) => setEditCommentText(e.target.value)} rows={2} className="ui-input" style={{ height: 'auto', paddingBlock: 8 }} aria-label="Yorumu düzenle" />
+                              <div className="flex items-center justify-end gap-1.5">
+                                <button type="button" onClick={() => setEditingCommentId(null)} className="ui-btn is-ghost is-sm">Vazgeç</button>
+                                <button type="button" disabled={isUpdatingComment || !editCommentText.trim()} onClick={() => handleCommentEdit(q.id, c.id)} className={`ui-btn is-primary is-sm ${isUpdatingComment ? 'is-loading' : ''}`}>Kaydet</button>
+                              </div>
+                            </div>
+                          ) : (
+                            <p className="cm-text">{censorProfanity(c.text)}</p>
+                          )}
+                          {!isEditing && (
+                            <div className="cm-acts">
+                              <button type="button" onClick={() => setReplyTo({ qId: q.id, id: c.id, author: c.author || 'Tıp öğrencisi' })}>Yanıtla</button>
+                              {canManage && (
+                                <>
+                                  <button type="button" onClick={() => { setEditingCommentId(c.id); setEditCommentText(c.text || ''); }}>Düzenle</button>
+                                  <button type="button" className="is-bad" onClick={() => handleCommentDelete(q.id, c.id)}>Sil</button>
+                                </>
+                              )}
+                            </div>
+                          )}
+                        </div>
+                      </div>
+                    );
+                  };
+                  return (
+                    <div id={`comments-${q.id}`} className="cm-wrap">
+                      <div className="cm-list">
+                        {roots.length > 0 ? (
+                          roots.map((r) => {
+                            const reps = repliesOf(r);
+                            const open = openThreads[r.id] || reps.length <= 2;
+                            return (
+                              <div key={r.id} className="cm-thread">
+                                {renderOne(r, false)}
+                                {reps.length > 0 && (
+                                  <div className="cm-replies">
+                                    {(open ? reps : reps.slice(-1)).map((c) => renderOne(c, true))}
+                                    {!open && (
+                                      <button type="button" className="cm-more" onClick={() => setOpenThreads((o) => ({ ...o, [r.id]: true }))}>
+                                        {reps.length - 1} yanıtı daha göster
+                                      </button>
+                                    )}
+                                  </div>
+                                )}
+                              </div>
+                            );
+                          })
+                        ) : (
+                          <p className="cm-none">Henüz yorum yok. Bir ipucu ya da alternatif çözüm ekleyen ilk kişi ol.</p>
+                        )}
+                      </div>
+                      {replyTo?.qId === q.id && (
+                        <div className="cm-replying">
+                          <span><b>{replyTo.author}</b> adlı kişiye yanıt</span>
+                          <button type="button" onClick={() => setReplyTo(null)} aria-label="Yanıtı iptal et"><X /></button>
+                        </div>
                       )}
+                      <div className="cm-compose">
+                        <textarea
+                          value={newCommentText}
+                          onChange={(e) => setNewCommentText(e.target.value)}
+                          onKeyDown={(e) => {
+                            if (e.key === 'Enter' && (e.ctrlKey || e.metaKey || !e.shiftKey && window.matchMedia('(pointer: fine)').matches)) {
+                              e.preventDefault();
+                              handleCommentSubmit(q.id);
+                            }
+                          }}
+                          rows={1}
+                          placeholder={replyTo?.qId === q.id ? 'Yanıtını yaz…' : 'Yorum ya da ipucu yaz…'}
+                          aria-label="Yorum"
+                          className="cm-input"
+                        />
+                        <button type="button" onClick={() => handleCommentSubmit(q.id)} disabled={isSubmittingComment || !newCommentText.trim()} aria-label="Gönder" className={`ui-btn is-primary cm-send ${isSubmittingComment ? 'is-loading' : ''}`}>
+                          <Send />
+                        </button>
+                      </div>
                     </div>
-                    <div className="flex items-center gap-2">
-                      <input
-                        type="text"
-                        value={newCommentText}
-                        onChange={(e) => setNewCommentText(e.target.value)}
-                        onKeyDown={(e) => { if (e.key === 'Enter') handleCommentSubmit(q.id); }}
-                        placeholder="Yorum ya da ipucu yaz…"
-                        aria-label="Yorum"
-                        className="flex-1 min-w-0 h-10 bg-white border border-line rounded-full px-4 text-md outline-0 focus:border-accent"
-                      />
-                      <button type="button" onClick={() => handleCommentSubmit(q.id)} disabled={isSubmittingComment || !newCommentText.trim()} aria-label="Gönder" className="ms-btn is-primary is-icon">
-                        <Send />
-                      </button>
-                    </div>
-                  </div>
-                )}
-              </article>
+                  );
+                })()}
+                </>}
+              />
             );
           })}
 
@@ -2164,6 +2385,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
             const res = await ApiService.reportPastQuestion(objection.question.id, reason, details, currentUser?.displayName || 'Tıp Öğrencisi', { email: currentUser?.email, uid: currentUser?.uid });
             loadAiQueue();
             if (res?.report) {
+              if (res.report.id) saveMyReportId(res.report.id);
               setQuestions((prev) =>
                 prev.map((q) => (q.id === objection.question.id && !(q.reports || []).some((r: any) => r.id === res.report.id) ? { ...q, reports: [...(q.reports || []), res.report] } : q)),
               );
@@ -2225,6 +2447,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
             );
             loadAiQueue();
             if (res && res.report) {
+              if (res.report.id) saveMyReportId(res.report.id);
               setQuestions((prev) =>
                 prev.map((q) => {
                   if (q.id === reportingQuestion.id) {
@@ -2259,6 +2482,18 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
           } : null}
         />
       )}
+
+      {/* Hata Bildirimi ve Değişim Geçmişi Modalı (#000001, #000002) */}
+      <ErrorReportHistoryModal
+        isOpen={Boolean(selectedQuestionForReportHistory)}
+        onClose={() => setSelectedQuestionForReportHistory(null)}
+        question={selectedQuestionForReportHistory}
+        currentUser={currentUser}
+        onQuestionUpdated={(updatedQ) => {
+          setSelectedQuestionForReportHistory(updatedQ);
+          setQuestions((prev) => prev.map((q) => (q.id === updatedQ.id ? updatedQ : q)));
+        }}
+      />
     </div>
   );
 };

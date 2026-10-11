@@ -26,6 +26,7 @@ import {
   Search,
   CornerDownLeft,
   Brain,
+  Clock,
 } from 'lucide-react';
 import type { QuestionItem, Committee, AdminNotification } from '../../types';
 import { ApiService } from '../../services/api';
@@ -47,7 +48,12 @@ import { ManageSystemSection } from './ManageSystemSection';
 import { ManageAutomationSection } from './ManageAutomationSection';
 import { ManageDataCoreSection } from './ManageDataCoreSection';
 import { ManageNotebookLMSection } from './ManageNotebookLMSection';
+import { ManagePendingOperationsSection } from './ManagePendingOperationsSection';
 import { consoleLogBuffer } from './ConsoleLogBuffer';
+import { ManageMetrics } from './ManageMetrics';
+import { useAppearance, DENSITY_LABELS, type Density as AppDensity } from '../../utils/appearance';
+import { useUiVersion } from '../../utils/uiVersion';
+import { Segmented } from '../ui/kit';
 import { Drawer, classifyNotice } from './consoleUi';
 import {
   InboxReport,
@@ -57,12 +63,15 @@ import {
   loadManageUsers,
   computeUserActivity,
   resolveInboxReport,
+  editInboxReport,
+  deleteInboxReport,
+  editPastComment,
   deletePastComment,
   publishDraft,
   deleteDraftEverywhere,
 } from '../../services/manageConsoleService';
 
-export type ManageSection = 'inbox' | 'pool' | 'data' | 'phases' | 'merges' | 'drafts' | 'studio' | 'moderation' | 'users' | 'scripts' | 'system' | 'automation' | 'datacore' | 'notebooklm' | 'database';
+export type ManageSection = 'pending' | 'inbox' | 'pool' | 'data' | 'phases' | 'merges' | 'drafts' | 'studio' | 'moderation' | 'users' | 'scripts' | 'system' | 'automation' | 'datacore' | 'notebooklm' | 'database';
 
 interface ManageConsoleProps {
   adminEmail: string;
@@ -81,6 +90,7 @@ interface ManageConsoleProps {
 }
 
 const SECTIONS: { id: ManageSection; slug: string; label: string; hint: string; icon: React.ElementType; group: string; keywords?: string }[] = [
+  { id: 'pending', slug: 'bekleyen-islemler', label: 'Bekleyen İşlemler', hint: 'Kullanıcı hata bildirimleri, Gemini AI inceleme kuyruğu, otomatik düzeltmeler ve geri alma (rollback) takibi.', icon: Clock, group: 'Genel', keywords: 'kuyruk bekleyen hata bildirim yapay zeka düzeltme rollback' },
   { id: 'inbox', slug: 'gelen-kutusu', label: 'Gelen kutusu', hint: 'Bildirim, yorum, taslak ve sistem uyarıları tek kuyrukta; en yenisi üstte.', icon: Inbox, group: 'Genel', keywords: 'bildirim yorum uyarı' },
   { id: 'moderation', slug: 'moderasyon', label: 'Moderasyon', hint: 'Şikâyet edilen soruyu gör, düzelt ya da kaldır.', icon: Wrench, group: 'Genel', keywords: 'şikayet hata bildirimi' },
   { id: 'pool', slug: 'soru-havuzu', label: 'Soru havuzu', hint: 'Kurul sorularını düzenle, sil, içe aktar; taslakları kümele.', icon: Library, group: 'İçerik', keywords: 'kurul soru içe aktar yükle çıkmış' },
@@ -136,7 +146,11 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
   initialSlug,
 }) => {
   const [section, setSectionState] = useState<ManageSection>(() => readSection(entry, initialSlug));
-  const [density, setDensityState] = useState<Density>(readDensity);
+  const [ownDensity, setDensityState] = useState<Density>(readDensity);
+  // v8: konsol uygulamanın tek yoğunluk ayarını kullanır (Profil ve ayarlar ile aynı)
+  const { isV7 } = useUiVersion();
+  const look = useAppearance();
+  const density: Density = isV7 ? (look.density === 'compact' ? 'tight' : 'comfy') : ownDensity;
   const [menuOpen, setMenuOpen] = useState(false);
   const [paletteOpen, setPaletteOpen] = useState(false);
   const [usersTab, setUsersTab] = useState<'activity' | 'accounts'>('activity');
@@ -245,6 +259,44 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
     try {
       const res = await resolveInboxReport(adminEmail, report);
       setResolvedIds((prev) => new Set(prev).add(report.id));
+      notify(res.message);
+    } finally {
+      setBusyAction(null);
+    }
+  };
+
+  const handleEditReport = async (r: InboxReport, updates: { reason: string; details: string }) => {
+    setBusyAction(`editreport-${r.id}`);
+    try {
+      const res = await editInboxReport(adminEmail, r.id, updates, r.questionId);
+      if (res.ok) {
+        setReports((prev) => prev.map((item) => (item.id === r.id ? { ...item, reason: updates.reason, details: updates.details } : item)));
+      }
+      notify(res.message);
+    } finally {
+      setBusyAction(null);
+    }
+  };
+
+  const handleDeleteReport = async (r: InboxReport) => {
+    setReports((prev) => prev.filter((x) => x.id !== r.id));
+    setBusyAction(`delreport-${r.id}`);
+    try {
+      const res = await deleteInboxReport(adminEmail, r.id, r.questionId);
+      if (!res.ok) setReports((prev) => [r, ...prev]);
+      notify(res.message);
+    } finally {
+      setBusyAction(null);
+    }
+  };
+
+  const handleEditComment = async (c: InboxComment, text: string) => {
+    setBusyAction(`editcomment-${c.id}`);
+    try {
+      const res = await editPastComment(adminEmail, c.questionId, c.id, text);
+      if (res.ok) {
+        setComments((prev) => prev.map((item) => (item.id === c.id ? { ...item, text } : item)));
+      }
       notify(res.message);
     } finally {
       setBusyAction(null);
@@ -377,6 +429,15 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
             </select>
             <ChevronDown className="w-3.5 h-3.5 text-ink-3 shrink-0 pointer-events-none" aria-hidden="true" />
           </label>
+          {isV7 ? (
+            <Segmented<AppDensity>
+              className="ms-density shrink-0"
+              label="Yoğunluk"
+              value={look.density}
+              onChange={(d) => look.set({ density: d })}
+              options={(['compact', 'normal', 'wide'] as AppDensity[]).map((d) => ({ value: d, label: DENSITY_LABELS[d] }))}
+            />
+          ) : (
           <div role="radiogroup" aria-label="Yoğunluk" className="ms-seg ms-density shrink-0">
             {(['comfy', 'compact', 'tight'] as Density[]).map((d) => (
               <button key={d} type="button" role="radio" aria-checked={density === d} onClick={() => setDensity(d)}>
@@ -384,6 +445,7 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
               </button>
             ))}
           </div>
+          )}
           <button type="button" onClick={() => void refreshAll()} disabled={loading} className="ms-btn is-ghost is-icon shrink-0" title="Verileri yenile" aria-label="Verileri yenile">
             <RefreshCw className={loading ? 'animate-spin' : ''} />
           </button>
@@ -408,6 +470,23 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
               </div>
             </div>
 
+            {section === 'pending' && (
+              <ManagePendingOperationsSection />
+            )}
+
+            {section === 'inbox' && isV7 && (
+              <ManageMetrics
+                loading={loading && !reports.length}
+                items={[
+                  { id: 'reports', label: 'Bekleyen bildirim', value: pendingReports.length, dates: reports.map((r) => r.createdAt), tone: 'alert', onClick: () => setSection('moderation') },
+                  { id: 'drafts', label: 'Taslak', value: drafts.length, dates: drafts.map((d: any) => d.createdAt || d.updatedAt), upIsGood: true, onClick: () => setSection('drafts') },
+                  { id: 'comments', label: 'Yorum', value: comments.length, dates: comments.map((c) => c.createdAt), upIsGood: true },
+                  { id: 'users', label: 'Kayıtlı kullanıcı', value: registeredUsers.length, dates: registeredUsers.map((u: any) => u.createdAt), upIsGood: true, onClick: () => setSection('users') },
+                  { id: 'pool', label: 'Havuz sorusu', value: questions.length, onClick: () => setSection('pool') },
+                ]}
+              />
+            )}
+
             {section === 'inbox' && (
               <ManageInboxSection
                 reports={reports}
@@ -422,6 +501,9 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
                   setSection('moderation');
                 }}
                 onResolve={(r) => void handleResolve(r)}
+                onEditReport={(r, updates) => void handleEditReport(r, updates)}
+                onDeleteReport={(r) => void handleDeleteReport(r)}
+                onEditComment={(c, text) => void handleEditComment(c, text)}
                 onDeleteComment={(c) => void handleDeleteComment(c)}
                 onEditDraft={setEditingDraft}
                 onPublishDraft={(d) => void handlePublishDraft(d)}

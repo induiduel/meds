@@ -23,6 +23,20 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=Geist:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet" />
     <script>
+      // Görünüm tercihi boyamadan önce uygulanır (tema/palet/yoğunluk yanıp sönmesin) — utils/appearance.ts ile aynı anahtar
+      (function () {
+        try {
+          var d = document.documentElement, a = JSON.parse(localStorage.getItem('medsoru_appearance') || 'null');
+          var legacy = localStorage.getItem('medsoru_theme');
+          var mode = a && a.mode ? a.mode : (legacy || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'));
+          d.dataset.mode = mode;
+          d.dataset.palette = (a && a.palettes && a.palettes[mode]) || 'a';
+          d.dataset.density = (a && a.density) || 'normal';
+          if (mode === 'dark') d.classList.add('theme-dark');
+        } catch (e) {}
+      })();
+    </script>
+    <script>
       // Sürüm güncellemesi sonrası eski chunk önbellek hatasını otomatik yenile
       window.addEventListener('vite:preloadError', function(event) {
         if (!navigator.onLine) {
@@ -77,8 +91,34 @@
         }
       });
     </script>
+    <style>
+      #app-splash {
+        position: fixed; inset: 0; z-index: 99999; display: grid; place-items: center;
+        background: #0f172a; transition: opacity .35s ease, visibility .35s;
+      }
+      #app-splash.is-leaving { opacity: 0; visibility: hidden; pointer-events: none; }
+      .app-splash-mark { display: flex; flex-direction: column; align-items: center; gap: 14px; }
+      .app-splash-box { fill: #3b82f6; }
+      .app-splash-pulse {
+        fill: none; stroke: #fff; stroke-width: 7; stroke-linecap: round; stroke-linejoin: round;
+        stroke-dasharray: 160; stroke-dashoffset: 0;
+      }
+      .app-splash-word { font-family: system-ui, -apple-system, sans-serif; font-weight: 700; font-size: 28px; letter-spacing: -.03em; color: #f8fafc; }
+      .app-splash-word span { color: #3b82f6; }
+    </style>
   </head>
   <body>
+    <div id="app-splash" aria-hidden="true">
+      <div class="app-splash-mark">
+        <svg viewBox="0 0 120 120" width="88" height="88">
+          <rect class="app-splash-box" x="6" y="6" width="108" height="108" rx="30" />
+          <path class="app-splash-pulse" d="M22 64 H44 L52 44 L62 84 L72 54 L78 64 H98" />
+        </svg>
+        <div class="app-splash-word">
+          Me<span>DS</span>or
+        </div>
+      </div>
+    </div>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>

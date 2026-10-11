@@ -13,7 +13,7 @@ import {
   LayoutGrid,
   BookCopy,
   UserRound,
-  IdCard,
+  Settings2,
   ChevronDown,
   House,
   Library,
@@ -432,7 +432,7 @@ export const Header: React.FC<HeaderProps> = ({
             }`}
           >
             {currentUser?.photoURL ? (
-              <img src={currentUser.photoURL} alt="" className="w-8 h-8 rounded-full" />
+              <img src={currentUser.photoURL} alt="" className="w-8 h-8 rounded-full object-cover" />
             ) : (
               <span className="w-8 h-8 rounded-full bg-ink text-white flex items-center justify-center text-xs font-semibold">
                 {currentUser ? initialsOf(currentUser) : <UserRound className="w-4 h-4" />}
@@ -514,9 +514,9 @@ export const Header: React.FC<HeaderProps> = ({
               )}
 
               <MenuLabel>Hesap</MenuLabel>
+              <MenuItem icon={Settings2} label={currentUser ? 'Profil ve ayarlar' : 'Görünüm ayarları'} onClick={() => setActiveTab('settings')} />
               {currentUser ? (
                 <>
-                  {onOpenProfileModal && <MenuItem icon={IdCard} label="Profil ve öğrenci no" onClick={onOpenProfileModal} />}
                   <MenuItem icon={LogOut} label="Çıkış yap" onClick={onLogout} />
                 </>
               ) : (

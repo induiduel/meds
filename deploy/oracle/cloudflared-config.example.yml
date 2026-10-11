@@ -1,0 +1,14 @@
+# /etc/cloudflared/config.yml olarak kopyala ve <TUNNEL_ID> ile
+# /root/.cloudflared/<TUNNEL_ID>.json yolunu gerçek değerlerle değiştir.
+# Kurulum: cloudflared tunnel login  →  cloudflared tunnel create medsoru-oracle
+# DNS:     cloudflared tunnel route dns medsoru-oracle api.nofrostlife.com.tr
+# Servis:  sudo systemctl enable --now cloudflared
+tunnel: <TUNNEL_ID>
+credentials-file: /root/.cloudflared/<TUNNEL_ID>.json
+
+ingress:
+  - hostname: api.nofrostlife.com.tr
+    service: http://localhost:3000
+  - hostname: manage.nofrostlife.com.tr
+    service: http://localhost:3000
+  - service: http_status:404

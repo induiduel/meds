@@ -355,7 +355,7 @@ body {
 
 ::selection {
   background: var(--color-accent);
-  color: #fff;
+  color: var(--color-on-solid, #fff);
 }
 
 .no-scrollbar::-webkit-scrollbar { display: none; }
@@ -1004,7 +1004,7 @@ html.kb-open .ms-fab { opacity: 0; pointer-events: none; }
 }
 .ms-onboard-round:disabled { opacity: 0; pointer-events: none; }
 .ms-onboard-round:active { transform: scale(.94); }
-.ms-onboard-round.is-primary { background: var(--color-accent); border-color: transparent; color: #fff; }
+.ms-onboard-round.is-primary { background: var(--color-accent); border-color: transparent; color: var(--color-on-solid, #fff); }
 .ms-onboard-dots { display: flex; gap: 6px; }
 .ms-onboard-dots button { width: 8px; height: 8px; border-radius: 999px; background: var(--color-line-2); transition: width .3s var(--ease-out-soft), background .3s; cursor: pointer; padding: 0; }
 .ms-onboard-dots button.is-on { width: 24px; background: var(--color-accent); }
@@ -1029,7 +1029,7 @@ html.kb-open .ms-onboard-nav, html.kb-open .ms-onboard-text { display: none; }
 .sc-lens { animation: sc-scan 2.6s .4s ease-in-out infinite; transform: translate(70px, 70px); }
 @keyframes sc-scan { 0%, 100% { transform: translate(70px, 70px); } 50% { transform: translate(130px, 92px); } }
 .sc-opt { animation: ms-pop-in .4s var(--ease-out-soft) both; }
-.sc-check { stroke: #fff; stroke-width: 2.5; stroke-dasharray: 40; stroke-dashoffset: 40; animation: ms-check .4s 1.2s ease-out forwards; }
+.sc-check { stroke: var(--color-on-solid, #fff); stroke-width: 2.5; stroke-dasharray: 40; stroke-dashoffset: 40; animation: ms-check .4s 1.2s ease-out forwards; }
 .sc-dev1, .sc-dev2, .sc-dev3 { animation: ms-float 3s ease-in-out infinite; }
 .sc-dev2 { animation-delay: .4s; } .sc-dev3 { animation-delay: .8s; }
 .sc-arc { stroke-dasharray: 120; stroke-dashoffset: 120; animation: ms-draw 1s .3s ease-out forwards; }
@@ -1062,7 +1062,7 @@ html.kb-open .ms-onboard-nav, html.kb-open .ms-onboard-text { display: none; }
 .ms-fab-wrap { position: fixed; right: max(16px, env(safe-area-inset-right)); bottom: calc(max(16px, env(safe-area-inset-bottom)) + var(--fab-offset, 0px)); z-index: 60; display: flex; flex-direction: column; align-items: flex-end; gap: 10px; }
 .ms-fab {
   width: 56px; height: 56px; border-radius: 18px; display: grid; place-items: center; cursor: pointer;
-  background: var(--color-accent); color: #fff; box-shadow: var(--shadow-lg);
+  background: var(--color-accent); color: var(--color-on-solid, #fff); box-shadow: var(--shadow-lg);
   transition: transform .25s var(--ease-out-soft), opacity .2s, border-radius .25s;
 }
 .ms-fab:active { transform: scale(.94); }
@@ -1118,7 +1118,7 @@ html.kb-open .ms-onboard-nav, html.kb-open .ms-onboard-text { display: none; }
 .ms-search-icon-btn:hover { background: var(--color-canvas); color: var(--color-ink); }
 .ms-search-cancel { height: 36px; padding: 0 10px; border-radius: 10px; font-size: 14px; font-weight: 600; color: var(--color-accent); cursor: pointer; flex-shrink: 0; }
 @media (min-width: 640px) { .ms-search-cancel { display: none; } }
-.ms-search-submit { height: 40px; padding: 0 16px; border-radius: 10px; background: var(--color-accent); color: #fff; font-weight: 600; font-size: 14px; cursor: pointer; flex-shrink: 0; }
+.ms-search-submit { height: 40px; padding: 0 16px; border-radius: 10px; background: var(--color-accent); color: var(--color-on-solid, #fff); font-weight: 600; font-size: 14px; cursor: pointer; flex-shrink: 0; }
 .ms-search-body { overflow-y: auto; overscroll-behavior: contain; min-height: 0; }
 .ms-search-row { width: 100%; min-height: 44px; display: flex; align-items: center; gap: 10px; padding: 0 10px; border-radius: 10px; cursor: pointer; text-align: left; }
 .ms-search-row:hover { background: var(--color-canvas); }
@@ -1193,7 +1193,7 @@ html.kb-open .ms-onboard-nav, html.kb-open .ms-onboard-text { display: none; }
   cursor: pointer; transition: background .2s, color .2s, transform .15s; white-space: nowrap;
 }
 .ms-opt-bubble:active { transform: scale(.96); }
-.ms-opt-bubble.is-on { background: var(--color-accent); color: #fff; }
+.ms-opt-bubble.is-on { background: var(--color-accent); color: var(--color-on-solid, #fff); }
 
 /* --- Filtre popup'ı (çıkmış sorular) --- */
 .ms-filter-panel {
@@ -1389,9 +1389,9 @@ html.theme-dark {
 }
 .ms-btn:hover { background: var(--color-line); }
 .ms-btn > svg { width: 16px; height: 16px; flex-shrink: 0; }
-.ms-btn.is-primary { background: var(--color-accent); color: #fff; }
+.ms-btn.is-primary { background: var(--color-accent); color: var(--color-on-solid, #fff); }
 .ms-btn.is-primary:hover { background: var(--color-accent-hover); }
-.ms-btn.is-ok { background: var(--color-ok); color: #fff; }
+.ms-btn.is-ok { background: var(--color-ok); color: var(--color-on-solid, #fff); }
 .ms-btn.is-ok:hover { background: color-mix(in srgb, var(--color-ok) 88%, #000); }
 html.theme-dark .ms-btn.is-ok { color: #06210f; }
 .ms-btn.is-tonal { background: var(--color-accent-soft); color: var(--color-accent); }
@@ -1410,7 +1410,7 @@ html.theme-dark .ms-btn.is-ok { color: #06210f; }
 .ms-btn.is-icon { width: var(--ms-ctl); padding: 0; }
 .ms-btn.is-icon.is-sm { width: var(--ms-ctl-sm); }
 .ms-btn:disabled { opacity: .5; cursor: not-allowed; }
-.ms-btn-badge { min-width: 18px; height: 18px; padding: 0 5px; border-radius: 999px; background: var(--color-accent); color: #fff; font-size: 11px; font-weight: 700; display: inline-flex; align-items: center; justify-content: center; font-variant-numeric: tabular-nums; }
+.ms-btn-badge { min-width: 18px; height: 18px; padding: 0 5px; border-radius: 999px; background: var(--color-accent); color: var(--color-on-solid, #fff); font-size: 11px; font-weight: 700; display: inline-flex; align-items: center; justify-content: center; font-variant-numeric: tabular-nums; }
 
 /* --- Etiket --- */
 .ms-tag {
@@ -1509,13 +1509,13 @@ html.ui-v3 .ms-opt { background: var(--color-field); }
 }
 .ms-opt-side { display: inline-flex; align-items: center; gap: 6px; }
 .ms-opt.is-correct { background: var(--color-ok-tint); border-color: color-mix(in srgb, var(--color-ok) 38%, transparent); font-weight: 600; }
-.ms-opt.is-correct .ms-opt-key { background: var(--color-ok); color: #fff; }
+.ms-opt.is-correct .ms-opt-key { background: var(--color-ok); color: var(--color-on-solid, #fff); }
 html.theme-dark .ms-opt.is-correct .ms-opt-key { color: #06210f; }
 .ms-opt-correct { display: inline-flex; align-items: center; gap: 4px; font-size: 12px; font-weight: 700; color: var(--color-ok); }
 .ms-opt-correct > svg { width: 14px; height: 14px; }
 .ms-opt.is-claimed { background: var(--color-warn-soft); }
 .ms-opt.is-wrong { background: var(--color-bad-soft); border-color: color-mix(in srgb, var(--color-bad) 35%, transparent); }
-.ms-opt.is-wrong .ms-opt-key { background: var(--color-bad); color: #fff; }
+.ms-opt.is-wrong .ms-opt-key { background: var(--color-bad); color: var(--color-on-solid, #fff); }
 button.ms-opt { cursor: pointer; }
 button.ms-opt:not(:disabled):hover { border-color: var(--color-line-2); }
 button.ms-opt:disabled { cursor: default; }
@@ -1553,19 +1553,19 @@ button.ms-opt:disabled { cursor: default; }
 .ms-poll-text { font-size: 14.5px; line-height: 1.45; color: var(--color-ink); overflow-wrap: anywhere; }
 .ms-poll-meta { display: inline-flex; align-items: center; gap: 6px; }
 .ms-poll-pct { min-width: 3.6ch; text-align: right; font-family: var(--font-mono); font-size: 13px; font-weight: 600; color: var(--color-ink-2); font-variant-numeric: tabular-nums; }
-.ms-poll-tag { height: 20px; padding: 0 7px; border-radius: 999px; display: inline-flex; align-items: center; font-size: 11px; font-weight: 700; background: var(--color-ok); color: #fff; animation: ms-pop-in .3s .6s var(--ms-ease) backwards; }
+.ms-poll-tag { height: 20px; padding: 0 7px; border-radius: 999px; display: inline-flex; align-items: center; font-size: 11px; font-weight: 700; background: var(--color-ok); color: var(--color-on-solid, #fff); animation: ms-pop-in .3s .6s var(--ms-ease) backwards; }
 html.theme-dark .ms-poll-tag { color: #06210f; }
 .ms-poll-row.is-lead .ms-poll-fill { background: color-mix(in srgb, var(--color-ok) 20%, transparent); }
 .ms-poll-row.is-lead .ms-poll-pct { color: var(--color-ok); }
 .ms-poll-row.is-lead .ms-poll-text { font-weight: 600; }
 .ms-poll-row.is-mine { border-color: var(--color-accent); }
-.ms-poll-row.is-mine .ms-poll-key, .ms-poll-row.is-picked .ms-poll-key { background: var(--color-accent); color: #fff; }
+.ms-poll-row.is-mine .ms-poll-key, .ms-poll-row.is-picked .ms-poll-key { background: var(--color-accent); color: var(--color-on-solid, #fff); }
 .ms-poll-row.is-picked { border-color: var(--color-accent); box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-accent) 16%, transparent); }
 .ms-poll-confirm { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; padding: 8px 8px 8px 12px; border-radius: 12px; background: var(--color-accent-soft); }
 @media (prefers-reduced-motion: reduce) { .ms-poll-fill, .ms-poll-tag { transition: none; animation: none; } }
 /* Kabul edilen cevap (anket açık kalır) ve topluluk karşılaştırması */
 .ms-poll-row.is-accepted { border-color: var(--color-ok); }
-.ms-poll-row.is-accepted .ms-poll-key { background: var(--color-ok); color: #fff; }
+.ms-poll-row.is-accepted .ms-poll-key { background: var(--color-ok); color: var(--color-on-solid, #fff); }
 .ms-poll-tag.is-accepted { background: transparent; color: var(--color-ok); box-shadow: inset 0 0 0 1.5px var(--color-ok); animation: none; }
 .ms-poll-compare { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 14px; padding: 8px 12px; border-radius: 12px; background: var(--color-field); font-size: 12.5px; color: var(--color-ink-2); }
 .ms-poll-compare-cell { display: inline-flex; align-items: center; gap: 5px; }
@@ -1873,13 +1873,13 @@ select.ms-input { cursor: pointer; padding-right: 8px; text-overflow: ellipsis; 
 .ms-bulkbar > b { font-size: 13.5px; font-weight: 600; margin-right: auto; }
 .ms-bulkbar .ms-btn { background: color-mix(in srgb, currentColor 12%, transparent); color: inherit; }
 .ms-bulkbar .ms-btn:hover { background: color-mix(in srgb, currentColor 20%, transparent); }
-.ms-bulkbar .ms-btn.is-primary { background: var(--color-accent); color: #fff; }
-.ms-bulkbar .ms-btn.is-armed { background: var(--color-bad); color: #fff; }
+.ms-bulkbar .ms-btn.is-primary { background: var(--color-accent); color: var(--color-on-solid, #fff); }
+.ms-bulkbar .ms-btn.is-armed { background: var(--color-bad); color: var(--color-on-solid, #fff); }
 .ms-bulkbar select { height: var(--ms-ctl); border-radius: 999px; padding: 0 12px; background: color-mix(in srgb, currentColor 12%, transparent); color: inherit; border: 0; font: inherit; font-size: 13px; max-width: 280px; cursor: pointer; }
 .ms-bulkbar select option { color: var(--color-ink); background: var(--color-white); }
 
 /* İki adımlı silme: ilk dokunuşta kırmızı dolar */
-.ms-btn.is-armed { background: var(--color-bad); color: #fff; }
+.ms-btn.is-armed { background: var(--color-bad); color: var(--color-on-solid, #fff); }
 .ms-btn.is-armed:hover { background: color-mix(in srgb, var(--color-bad) 88%, #000); }
 html.theme-dark .ms-btn.is-armed { color: #2B0710; }
 
@@ -1989,14 +1989,14 @@ html.theme-dark .ms-btn.is-armed { color: #2B0710; }
 
 /* Soru hakkında: cevap özeti ve şık analizi */
 .ms-about-answer { flex-shrink: 0; display: flex; align-items: flex-start; gap: 12px; padding: 12px 14px; border-radius: 14px; background: var(--color-ok-soft); }
-.ms-about-answer-key { width: 36px; height: 36px; border-radius: 10px; flex-shrink: 0; display: inline-flex; align-items: center; justify-content: center; background: var(--color-ok); color: #fff; font-family: var(--font-mono); font-size: 16px; font-weight: 700; }
+.ms-about-answer-key { width: 36px; height: 36px; border-radius: 10px; flex-shrink: 0; display: inline-flex; align-items: center; justify-content: center; background: var(--color-ok); color: var(--color-on-solid, #fff); font-family: var(--font-mono); font-size: 16px; font-weight: 700; }
 html.theme-dark .ms-about-answer-key { color: #06210f; }
 .ms-about-analysis { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; border-radius: 14px; border: 1px solid var(--color-line); overflow: hidden; background: var(--color-white); }
 .ms-about-analysis > li { display: flex; align-items: flex-start; gap: 10px; padding: 10px 12px; }
 .ms-about-analysis > li + li { border-top: 1px solid var(--color-line-soft); }
 .ms-about-analysis > li.is-answer { background: color-mix(in srgb, var(--color-ok-soft) 60%, transparent); }
 .ms-about-analysis-key { width: 26px; height: 26px; border-radius: 8px; flex-shrink: 0; display: inline-flex; align-items: center; justify-content: center; background: var(--color-field); color: var(--color-ink-2); font-family: var(--font-mono); font-size: 12.5px; font-weight: 700; }
-.ms-about-analysis > li.is-answer .ms-about-analysis-key { background: var(--color-ok); color: #fff; }
+.ms-about-analysis > li.is-answer .ms-about-analysis-key { background: var(--color-ok); color: var(--color-on-solid, #fff); }
 
 /* Çıkmış soru: sürüm karşılaştırma (değişiklik izleme) */
 .ms-cmp { display: flex; flex-direction: column; gap: 12px; min-width: 0; }
@@ -2012,7 +2012,7 @@ html.theme-dark .ms-about-answer-key { color: #06210f; }
 .ms-cmp-opts > li { display: flex; align-items: flex-start; gap: 10px; padding: 9px 12px; border-radius: 12px; background: var(--color-field); font-size: 14.5px; line-height: 1.5; color: var(--color-ink); }
 .ms-cmp-opts > li.is-answer { background: var(--color-ok-soft); }
 .ms-cmp-key { width: 24px; height: 24px; margin-top: -1px; border-radius: 7px; flex-shrink: 0; display: inline-flex; align-items: center; justify-content: center; background: var(--color-white); color: var(--color-ink-2); font-family: var(--font-mono); font-size: 12px; font-weight: 700; }
-.ms-cmp-opts > li.is-answer .ms-cmp-key { background: var(--color-ok); color: #fff; }
+.ms-cmp-opts > li.is-answer .ms-cmp-key { background: var(--color-ok); color: var(--color-on-solid, #fff); }
 html.theme-dark .ms-cmp-opts > li.is-answer .ms-cmp-key { color: #06210f; }
 .ms-cmp-expl { display: flex; flex-direction: column; gap: 6px; padding-top: 4px; }
 .ms-cmp-label { font-size: 11.5px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--color-ink-3); }
@@ -2051,7 +2051,7 @@ html.theme-dark .ls-root { --ls-mark: #4A3B0B; --ls-mark-ink: #FFE7A0; }
 .ls-btn.is-ghost { background: transparent; }
 .ls-btn.is-ghost:hover:not(:disabled) { background: var(--color-field); }
 .ls-btn.is-icon { width: 36px; padding: 0; }
-.ls-btn.is-primary { background: var(--color-accent); color: #fff; }
+.ls-btn.is-primary { background: var(--color-accent); color: var(--color-on-solid, #fff); }
 .ls-btn.is-primary:hover:not(:disabled) { background: var(--color-accent-hover); color: #fff; }
 .ls-btn.is-on { background: var(--color-accent-soft); color: var(--color-accent); }
 .ls-btn.is-sm { height: 30px; padding: 0 10px; font-size: 12.5px; }
@@ -2246,9 +2246,9 @@ html.theme-dark .ls-root { --ls-mark: #4A3B0B; --ls-mark-ink: #FFE7A0; }
 .ls-opt .k { width: 22px; height: 22px; flex-shrink: 0; border-radius: 7px; display: inline-flex; align-items: center; justify-content: center; background: var(--color-white); font-family: var(--font-mono); font-size: 11.5px; font-weight: 600; color: var(--color-ink-2); }
 .ls-opt .k svg { width: 14px; height: 14px; }
 .ls-opt.is-right { background: var(--color-ok-soft); }
-.ls-opt.is-right .k { background: var(--color-ok); color: #fff; }
+.ls-opt.is-right .k { background: var(--color-ok); color: var(--color-on-solid, #fff); }
 .ls-opt.is-wrong { background: var(--color-bad-soft); animation: ls-shake .35s; }
-.ls-opt.is-wrong .k { background: var(--color-bad); color: #fff; }
+.ls-opt.is-wrong .k { background: var(--color-bad); color: var(--color-on-solid, #fff); }
 .ls-opt.is-dim { opacity: .55; }
 .ls-fb { margin: 0; padding: 10px 12px; border-radius: 11px; font-size: 13.5px; line-height: 1.55; color: var(--color-ink); animation: ls-rise .3s var(--ease-out-soft); }
 .ls-fb.is-ok { background: var(--color-ok-soft); } .ls-fb.is-bad { background: var(--color-bad-soft); } .ls-fb.is-plain { background: var(--color-field); color: var(--color-ink-2); }
@@ -2259,7 +2259,7 @@ html.theme-dark .ls-root { --ls-mark: #4A3B0B; --ls-mark-ink: #FFE7A0; }
 .ls-chain li { position: relative; display: flex; gap: 12px; padding-bottom: 14px; opacity: .32; filter: saturate(.2); transition: opacity .4s var(--ease-out-soft), filter .4s; }
 .ls-chain li.is-on { opacity: 1; filter: none; }
 .ls-chain li:last-child { padding-bottom: 0; }
-.ls-chain .n { position: relative; z-index: 1; width: 26px; height: 26px; flex-shrink: 0; border-radius: 99px; display: inline-flex; align-items: center; justify-content: center; background: var(--color-accent); color: #fff; font-family: var(--font-mono); font-size: 12px; font-weight: 600; }
+.ls-chain .n { position: relative; z-index: 1; width: 26px; height: 26px; flex-shrink: 0; border-radius: 99px; display: inline-flex; align-items: center; justify-content: center; background: var(--color-accent); color: var(--color-on-solid, #fff); font-family: var(--font-mono); font-size: 12px; font-weight: 600; }
 .ls-chain li:not(:last-child)::after { content: ""; position: absolute; left: 12px; top: 26px; bottom: 0; width: 2px; background: var(--color-line); transition: background-color .4s; }
 .ls-chain li.is-on:not(:last-child)::after { background: var(--color-accent); }
 .ls-chain .t { min-width: 0; padding-top: 2px; font-size: 14px; line-height: 1.5; color: var(--color-ink); }
@@ -2273,7 +2273,7 @@ html.theme-dark .ls-root { --ls-mark: #4A3B0B; --ls-mark-ink: #FFE7A0; }
 .ls-vs-head button { border: 0; background: var(--color-field); text-align: left; font: inherit; font-family: var(--font-display); font-size: 13.5px; font-weight: 650; color: var(--color-ink); cursor: pointer; }
 .ls-vs.is-L .L, .ls-vs.is-R .R { background: var(--color-accent-soft); color: var(--color-ink); }
 .ls-vs.is-L .R, .ls-vs.is-R .L { opacity: .5; }
-.ls-vs.is-L .ls-vs-head button:first-child, .ls-vs.is-R .ls-vs-head button:last-child { background: var(--color-accent); color: #fff; }
+.ls-vs.is-L .ls-vs-head button:first-child, .ls-vs.is-R .ls-vs-head button:last-child { background: var(--color-accent); color: var(--color-on-solid, #fff); }
 .ls-recall-a { padding: 12px 14px; border-radius: 12px; background: var(--color-ok-soft); font-size: 14px; line-height: 1.6; color: var(--color-ink); animation: ls-rise .35s var(--ease-out-soft); }
 .ls-rate { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
 .ls-rate .ls-btn.is-on { background: var(--color-ink); color: var(--color-white); }
@@ -2282,7 +2282,7 @@ html.theme-dark .ls-root { --ls-mark: #4A3B0B; --ls-mark-ink: #FFE7A0; }
 .ls-flip.is-turned .ls-flip-in { transform: rotateY(180deg); }
 .ls-flip-face { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: center; gap: 8px; padding: 16px; border-radius: 14px; backface-visibility: hidden; -webkit-backface-visibility: hidden; overflow: auto; }
 .ls-flip-face.is-front { background: var(--color-field); color: var(--color-ink); }
-.ls-flip-face.is-back { background: var(--color-accent); color: #fff; transform: rotateY(180deg); }
+.ls-flip-face.is-back { background: var(--color-accent); color: var(--color-on-solid, #fff); transform: rotateY(180deg); }
 .ls-flip-face small { font-size: 11px; font-weight: 650; letter-spacing: .05em; text-transform: uppercase; opacity: .75; }
 .ls-flip-face .q { font-size: 15.5px; font-weight: 600; line-height: 1.45; }
 .ls-flip-face.is-back .q { font-weight: 500; }
@@ -2330,7 +2330,7 @@ html.theme-dark .ls-root { --ls-mark: #4A3B0B; --ls-mark-ink: #FFE7A0; }
 .ls-stepdots button.is-done { background: color-mix(in srgb, var(--color-ok) 55%, var(--color-line)); }
 .ls-stepdots button.is-on { width: 22px; background: var(--color-accent); }
 .ls-stepdots small { font-family: var(--font-mono); font-size: 12px; color: var(--color-ink-3); }
-.ls-next { display: inline-flex; align-items: center; gap: 8px; max-width: min(320px, 55%); height: 44px; padding: 0 8px 0 16px; border: 0; border-radius: 99px; background: var(--color-accent); color: #fff; font: inherit; cursor: pointer; transition: background-color .15s, transform .2s var(--ease-out-soft); }
+.ls-next { display: inline-flex; align-items: center; gap: 8px; max-width: min(320px, 55%); height: 44px; padding: 0 8px 0 16px; border: 0; border-radius: 99px; background: var(--color-accent); color: var(--color-on-solid, #fff); font: inherit; cursor: pointer; transition: background-color .15s, transform .2s var(--ease-out-soft); }
 .ls-next:hover { background: var(--color-accent-hover); transform: translateX(2px); }
 .ls-next .lbl { min-width: 0; display: flex; flex-direction: column; align-items: flex-start; line-height: 1.2; font-size: 13.5px; font-weight: 600; white-space: nowrap; overflow: hidden; }
 .ls-next .lbl small { font-size: 11px; font-weight: 500; opacity: .8; }
@@ -2542,9 +2542,9 @@ html.theme-dark .ls-avatar { background: hsl(var(--h) 35% 22%); color: hsl(var(-
 .ls-optcard > .ls-opt { background: transparent; border: 0; border-radius: 0; }
 .ls-optcard > .ls-opt:hover:not(:disabled) { background: color-mix(in srgb, var(--color-ink) 4%, transparent); border: 0; }
 .ls-optcard.is-right { background: var(--color-ok-soft); }
-.ls-optcard.is-right .k { background: var(--color-ok); color: #fff; }
+.ls-optcard.is-right .k { background: var(--color-ok); color: var(--color-on-solid, #fff); }
 .ls-optcard.is-wrong { background: var(--color-bad-soft); }
-.ls-optcard.is-wrong .k { background: var(--color-bad); color: #fff; }
+.ls-optcard.is-wrong .k { background: var(--color-bad); color: var(--color-on-solid, #fff); }
 .ls-optcard.is-wrong.is-first > .ls-opt { animation: ls-shake .35s; }
 .ls-optcard.is-idle { opacity: .82; }
 .ls-optcard.is-idle:hover, .ls-optcard.is-idle.is-open { opacity: 1; }
@@ -2628,7 +2628,7 @@ html.theme-dark .ls-avatar { background: hsl(var(--h) 35% 22%); color: hsl(var(-
 .lh-res-body b { font-size: 14.5px; font-weight: 650; color: var(--color-ink); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .lh-res-go { flex-shrink: 0; display: inline-flex; align-items: center; justify-content: center; gap: 6px; height: 34px; min-width: 34px; padding: 0 10px; border-radius: 99px; background: var(--color-field); color: var(--color-ink-2); font-size: 13px; font-weight: 600; }
 .lh-res-go svg { width: 15px; height: 15px; }
-.lh-res.is-main .lh-res-go { background: var(--color-accent); color: #fff; padding: 0 14px; }
+.lh-res.is-main .lh-res-go { background: var(--color-accent); color: var(--color-on-solid, #fff); padding: 0 14px; }
 .lh-res.is-main .lh-res-body b { font-size: 15.5px; }
 
 .lh-ring { --p: 0; flex-shrink: 0; width: 40px; height: 40px; border-radius: 99px; display: grid; place-items: center; background: radial-gradient(closest-side, var(--color-white) 76%, transparent 78%), conic-gradient(var(--color-accent) calc(var(--p) * 1%), var(--color-line-soft) 0); }
@@ -2731,7 +2731,7 @@ html.theme-dark .ls-avatar { background: hsl(var(--h) 35% 22%); color: hsl(var(-
 .cx-filterbtn { height: 36px; padding: 0 10px; border: 0; border-radius: 10px; background: transparent; color: var(--color-ink-2); display: inline-flex; align-items: center; gap: 6px; font: inherit; font-size: 13.5px; font-weight: 600; cursor: pointer; transition: background-color .15s, color .15s; }
 .cx-filterbtn:hover { background: var(--color-field); color: var(--color-ink); }
 .cx-filterbtn svg { width: 16px; height: 16px; }
-.cx-filterbtn b { min-width: 18px; height: 18px; padding: 0 5px; border-radius: 99px; background: var(--color-accent); color: #fff; font-size: 11px; display: inline-grid; place-items: center; font-variant-numeric: tabular-nums; }
+.cx-filterbtn b { min-width: 18px; height: 18px; padding: 0 5px; border-radius: 99px; background: var(--color-accent); color: var(--color-on-solid, #fff); font-size: 11px; display: inline-grid; place-items: center; font-variant-numeric: tabular-nums; }
 .cx-filterbtn.is-on { color: var(--color-accent); }
 
 /* Kurul sekmeleri: altı çizili, sayılar küçük */
@@ -2810,9 +2810,9 @@ button.cx-opt:focus-visible { outline: 2px solid var(--color-accent); outline-of
 .cx-bubble { flex-shrink: 0; width: 26px; height: 26px; margin-top: -2px; border-radius: 99px; border: 1.5px solid var(--color-line-2); display: grid; place-items: center; color: var(--color-ink-2); font-family: var(--font-mono); font-size: 12px; font-weight: 700; transition: background-color .2s, border-color .2s, color .2s, transform .2s; }
 .cx-bubble svg { width: 13px; height: 13px; }
 .cx-opt-t { min-width: 0; flex: 1; }
-.cx-opt.is-correct .cx-bubble { background: var(--color-ok); border-color: var(--color-ok); color: #fff; }
+.cx-opt.is-correct .cx-bubble { background: var(--color-ok); border-color: var(--color-ok); color: var(--color-on-solid, #fff); }
 .cx-opt.is-correct .cx-opt-t { font-weight: 650; color: var(--color-ok); }
-.cx-opt.is-wrong .cx-bubble { background: var(--color-bad); border-color: var(--color-bad); color: #fff; }
+.cx-opt.is-wrong .cx-bubble { background: var(--color-bad); border-color: var(--color-bad); color: var(--color-on-solid, #fff); }
 .cx-opt.is-wrong .cx-opt-t { color: var(--color-bad-text); text-decoration: line-through; text-decoration-thickness: 1px; }
 .cx-opt.is-reveal .cx-bubble { animation: cx-fill .35s var(--ease-out-soft); }
 @keyframes cx-fill { 0% { transform: scale(.6); } 60% { transform: scale(1.12); } 100% { transform: none; } }
@@ -2892,8 +2892,8 @@ button.cx-opt:focus-visible { outline: 2px solid var(--color-accent); outline-of
 .cx-q .ms-poll-fill { inset: auto auto 0 0; height: 2px; border-radius: 2px; z-index: 0; background: color-mix(in srgb, var(--color-accent) 55%, transparent); }
 .cx-q .ms-poll-row.is-lead .ms-poll-fill { background: var(--color-ok); }
 .cx-q .ms-poll-key { width: 26px; height: 26px; border-radius: 99px; border: 1.5px solid var(--color-line-2); background: transparent; font-size: 12px; font-weight: 700; }
-.cx-q .ms-poll-row.is-mine .ms-poll-key, .cx-q .ms-poll-row.is-picked .ms-poll-key { background: var(--color-accent); border-color: var(--color-accent); color: #fff; }
-.cx-q .ms-poll-row.is-accepted .ms-poll-key { background: var(--color-ok); border-color: var(--color-ok); color: #fff; }
+.cx-q .ms-poll-row.is-mine .ms-poll-key, .cx-q .ms-poll-row.is-picked .ms-poll-key { background: var(--color-accent); border-color: var(--color-accent); color: var(--color-on-solid, #fff); }
+.cx-q .ms-poll-row.is-accepted .ms-poll-key { background: var(--color-ok); border-color: var(--color-ok); color: var(--color-on-solid, #fff); }
 .cx-q .ms-poll-row.is-picked, .cx-q .ms-poll-row.is-mine, .cx-q .ms-poll-row.is-accepted { box-shadow: none; border: 0; }
 .cx-q .ms-poll-text { font-size: 14.5px; }
 .ms-poll-status.is-done { display: inline-flex; align-items: center; gap: 6px; }
@@ -2965,7 +2965,7 @@ button.cx-opt:focus-visible { outline: 2px solid var(--color-accent); outline-of
   .ms-composer-close { width: 40px; height: 40px; border: 0; border-radius: 99px; background: var(--color-field); color: var(--color-ink-2); display: grid; place-items: center; cursor: pointer; }
   .ms-composer-close svg { width: 20px; height: 20px; }
   .ms-composer-title { flex: 1; min-width: 0; font-family: var(--font-display); font-size: 17px; font-weight: 700; color: var(--color-ink); }
-  .ms-composer-send { height: 38px; padding: 0 16px; border: 0; border-radius: 99px; background: var(--color-accent); color: #fff; font: inherit; font-size: 14.5px; font-weight: 650; cursor: pointer; transition: opacity .15s; }
+  .ms-composer-send { height: 38px; padding: 0 16px; border: 0; border-radius: 99px; background: var(--color-accent); color: var(--color-on-solid, #fff); font: inherit; font-size: 14.5px; font-weight: 650; cursor: pointer; transition: opacity .15s; }
   .ms-composer-send:disabled { opacity: .45; }
   .ms-composer.is-full > textarea { flex: 1; min-height: 0 !important; padding: 16px 18px !important; font-size: 17.5px !important; line-height: 1.6 !important; resize: none; overflow-y: auto; }
   .ms-composer.is-full > .ms-meta { flex-shrink: 0; padding: 10px 12px max(10px, env(safe-area-inset-bottom)); border-top: 1px solid var(--color-line-soft); background: var(--color-field); }
@@ -3136,7 +3136,7 @@ button.cx-opt:focus-visible { outline: 2px solid var(--color-accent); outline-of
 .wz-kunye { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; }
 .wz-sum { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
 .wz-sum span { height: 26px; padding: 0 10px; border-radius: 99px; background: var(--color-field); font-size: 12px; font-weight: 600; color: var(--color-ink-2); display: inline-flex; align-items: center; }
-.wz-submit { margin-top: auto; height: 52px; border: 0; border-radius: 14px; background: var(--color-accent); color: #fff; font: inherit; font-size: 16px; font-weight: 650; display: inline-flex; align-items: center; justify-content: center; gap: 8px; cursor: pointer; }
+.wz-submit { margin-top: auto; height: 52px; border: 0; border-radius: 14px; background: var(--color-accent); color: var(--color-on-solid, #fff); font: inherit; font-size: 16px; font-weight: 650; display: inline-flex; align-items: center; justify-content: center; gap: 8px; cursor: pointer; }
 .wz-submit svg { width: 18px; height: 18px; }
 .wz-submit:disabled { opacity: .55; }
 @media (prefers-reduced-motion: reduce) { .wz-panel, .wz-prem li { animation: none !important; } }
@@ -3174,7 +3174,7 @@ button.cx-opt:focus-visible { outline: 2px solid var(--color-accent); outline-of
 @keyframes ls-ix-next { from { opacity: 0; transform: translateX(18px); } to { opacity: 1; transform: none; } }
 @keyframes ls-ix-prev { from { opacity: 0; transform: translateX(-18px); } to { opacity: 1; transform: none; } }
 
-.ls-pnext { align-self: flex-end; display: inline-flex; align-items: center; gap: 6px; max-width: 100%; height: 38px; padding: 0 8px 0 14px; border: 0; border-radius: 999px; background: var(--color-accent); color: #fff; font: inherit; font-size: 13px; cursor: pointer; animation: ls-rise .3s var(--ease-out-soft) .12s both; transition: background-color .15s, transform .15s; }
+.ls-pnext { align-self: flex-end; display: inline-flex; align-items: center; gap: 6px; max-width: 100%; height: 38px; padding: 0 8px 0 14px; border: 0; border-radius: 999px; background: var(--color-accent); color: var(--color-on-solid, #fff); font: inherit; font-size: 13px; cursor: pointer; animation: ls-rise .3s var(--ease-out-soft) .12s both; transition: background-color .15s, transform .15s; }
 .ls-pnext span { opacity: .8; }
 .ls-pnext b { font-weight: 650; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .ls-pnext svg { width: 17px; height: 17px; flex-shrink: 0; transition: transform .2s var(--ease-out-soft); }
@@ -3221,7 +3221,7 @@ button.cx-opt:focus-visible { outline: 2px solid var(--color-accent); outline-of
 .ls-res-ico { flex-shrink: 0; width: 22px; height: 22px; margin-top: 1px; border-radius: 99px; display: grid; place-items: center; }
 .ls-res-ico svg { width: 13px; height: 13px; }
 .ls-reslist li.is-ok .ls-res-ico { background: var(--color-ok-soft); color: var(--color-ok); }
-.ls-reslist li.is-bad .ls-res-ico { background: var(--color-bad); color: #fff; }
+.ls-reslist li.is-bad .ls-res-ico { background: var(--color-bad); color: var(--color-on-solid, #fff); }
 .ls-reslist li > div { min-width: 0; display: flex; flex-direction: column; gap: 3px; }
 .ls-res-t { margin: 0; font-size: 13.5px; font-weight: 550; line-height: 1.45; color: var(--color-ink); }
 .ls-res-tag { font-size: 12px; font-weight: 650; color: var(--color-ink-3); }
@@ -3242,9 +3242,9 @@ button.cx-opt:focus-visible { outline: 2px solid var(--color-accent); outline-of
 .ls-stl.is-decided .ls-stl-item.is-fact .ls-stl-badge { background: var(--color-ok-soft); color: var(--color-ok); animation: ls-pop .35s var(--ease-out-soft) both; animation-delay: calc(var(--i) * 60ms); }
 .ls-stl.is-decided .ls-stl-item.is-fact:not(.is-open) { opacity: .8; }
 .ls-stl-item.is-lie { background: var(--color-warn-soft); box-shadow: inset 0 0 0 1.5px var(--color-warn); animation: ls-stamp .45s var(--ease-out-soft); }
-.ls-stl-item.is-lie .ls-stl-badge { background: var(--color-warn); color: #fff; }
+.ls-stl-item.is-lie .ls-stl-badge { background: var(--color-warn); color: var(--color-on-solid, #fff); }
 .ls-stl-item.is-miss { background: var(--color-bad-soft); animation: ls-shake .35s; }
-.ls-stl-item.is-miss .ls-stl-badge { background: var(--color-bad); color: #fff; }
+.ls-stl-item.is-miss .ls-stl-badge { background: var(--color-bad); color: var(--color-on-solid, #fff); }
 @keyframes ls-stamp { 0% { transform: scale(1.025); box-shadow: inset 0 0 0 3px var(--color-warn); } 100% { transform: none; } }
 
 /* 2 · Hızlı eşleme: kart destesi, sürükle-bırak, karar damgası */
@@ -3275,7 +3275,7 @@ button.cx-opt:focus-visible { outline: 2px solid var(--color-accent); outline-of
 .ls-swipe-btn svg { width: 17px; height: 17px; flex-shrink: 0; }
 .ls-swipe-btn.is-left { background: var(--color-accent-soft); color: var(--color-accent); text-align: left; }
 .ls-swipe-btn.is-right { justify-content: flex-end; background: var(--color-field); color: var(--color-ink); text-align: right; }
-.ls-swipe-btn.is-left:hover:not(:disabled) { background: var(--color-accent); color: #fff; }
+.ls-swipe-btn.is-left:hover:not(:disabled) { background: var(--color-accent); color: var(--color-on-solid, #fff); }
 .ls-swipe-btn.is-right:hover:not(:disabled) { background: var(--color-ink); color: var(--color-white); }
 .ls-swipe-btn:active:not(:disabled) { transform: scale(.97); }
 .ls-swipe-btn:disabled { opacity: .5; cursor: default; }
@@ -3307,9 +3307,9 @@ button.cx-opt:focus-visible { outline: 2px solid var(--color-accent); outline-of
 .ls-bid-choice .k svg { width: 14px; height: 14px; }
 .ls-bid-choice .t { min-width: 0; font-size: 13.5px; font-weight: 600; line-height: 1.35; overflow-wrap: anywhere; }
 .ls-bid-choice.is-ok { border-color: var(--color-ok); background: var(--color-ok-soft); animation: ls-pop .35s var(--ease-out-soft); }
-.ls-bid-choice.is-ok .k { background: var(--color-ok); color: #fff; }
+.ls-bid-choice.is-ok .k { background: var(--color-ok); color: var(--color-on-solid, #fff); }
 .ls-bid-choice.is-bad { border-color: var(--color-bad); background: var(--color-bad-soft); animation: ls-shake .35s; }
-.ls-bid-choice.is-bad .k { background: var(--color-bad); color: #fff; }
+.ls-bid-choice.is-bad .k { background: var(--color-bad); color: var(--color-on-solid, #fff); }
 .ls-bid-choice.is-dim { opacity: .55; }
 .ls-bid-verdict { display: flex; flex-direction: column; gap: 8px; }
 
@@ -3324,8 +3324,8 @@ button.cx-opt:focus-visible { outline: 2px solid var(--color-accent); outline-of
 .ls-vg-seg button:hover:not(:disabled) { background: var(--color-white); color: var(--color-ink); }
 .ls-vg-seg button:active:not(:disabled) { transform: scale(.95); }
 .ls-vg-seg button:disabled { cursor: default; }
-.ls-vg-seg button.is-target { background: var(--color-ok); color: #fff; animation: ls-pop .35s var(--ease-out-soft); }
-.ls-vg-seg button.is-miss { background: var(--color-bad); color: #fff; animation: ls-shake .35s; }
+.ls-vg-seg button.is-target { background: var(--color-ok); color: var(--color-on-solid, #fff); animation: ls-pop .35s var(--ease-out-soft); }
+.ls-vg-seg button.is-miss { background: var(--color-bad); color: var(--color-on-solid, #fff); animation: ls-shake .35s; }
 .ls-vg-row.is-bad .ls-vg-text { color: var(--color-bad-text, var(--color-bad)); }
 .ls-vg-why-toggle { margin-top: 6px; display: inline-flex; align-items: center; gap: 4px; padding: 0; border: 0; background: none; font: inherit; font-size: 11.5px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; color: var(--color-ok); cursor: pointer; }
 .ls-vg-row.is-bad .ls-vg-why-toggle { color: var(--color-bad-text, var(--color-bad)); }
@@ -3360,7 +3360,7 @@ button.cx-opt:focus-visible { outline: 2px solid var(--color-accent); outline-of
  * Çevrimdışı · öğrenci (sade durum + tek eylem) / yönetici (depo, sistem, kuyruk)
  * components/pwa/*
  * ============================================================= */
-.ms-btn.is-danger.is-armed { background: var(--color-bad); color: #fff; animation: ls-pop .3s var(--ease-out-soft); }
+.ms-btn.is-danger.is-armed { background: var(--color-bad); color: var(--color-on-solid, #fff); animation: ls-pop .3s var(--ease-out-soft); }
 .of { display: flex; flex-direction: column; gap: 14px; min-width: 0; }
 .of-lead { margin: 0; font-size: 14.5px; line-height: 1.55; color: var(--color-ink-2); text-wrap: pretty; }
 .of-state { display: flex; align-items: center; gap: 12px; min-width: 0; }
@@ -3444,7 +3444,7 @@ button.cx-opt:focus-visible { outline: 2px solid var(--color-accent); outline-of
 .of-badge.is-admin { background: var(--color-field); color: var(--color-ink-2); }
 .of-badge.is-admin.is-ready svg { color: var(--color-ok); }
 .of-badge.is-admin span { font-family: var(--font-mono); font-variant-numeric: tabular-nums; }
-.of-q { min-width: 18px; height: 18px; padding: 0 5px; border-radius: 99px; background: var(--color-warn); color: #fff; font-size: 11px; display: inline-grid; place-items: center; }
+.of-q { min-width: 18px; height: 18px; padding: 0 5px; border-radius: 99px; background: var(--color-warn); color: var(--color-on-solid, #fff); font-size: 11px; display: inline-grid; place-items: center; }
 @keyframes of-breathe { 50% { opacity: .45; } }
 @media (prefers-reduced-motion: reduce) { .of-badge.is-offline svg, .of-state.is-busy .of-orb svg, .of-perks li, .of-list.is-ready li > svg { animation: none; } }
 
@@ -3725,698 +3725,698 @@ html.ui-v3 .cx-q { animation: ms-clinic-in .26s var(--ease-out-soft) both; }
 }
 
 /* v6 · Kompakt yoğunluk: Tailwind boşlukları main ve pencerelerde ~%40–50 kısılır (simge boyutları değişmez) */
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .p-2\.5 { padding: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .p-3 { padding: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .p-3\.5 { padding: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .p-4 { padding: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .p-5 { padding: 12px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .p-6 { padding: 14px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .p-7 { padding: 16px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .p-8 { padding: 18px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .p-10 { padding: 22px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .p-12 { padding: 26px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .p-16 { padding: 32px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .px-2\.5 { padding-inline: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .px-3 { padding-inline: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .px-3\.5 { padding-inline: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .px-4 { padding-inline: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .px-5 { padding-inline: 12px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .px-6 { padding-inline: 14px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .px-7 { padding-inline: 16px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .px-8 { padding-inline: 18px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .px-10 { padding-inline: 22px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .px-12 { padding-inline: 26px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .px-16 { padding-inline: 32px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .py-2\.5 { padding-block: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .py-3 { padding-block: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .py-3\.5 { padding-block: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .py-4 { padding-block: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .py-5 { padding-block: 12px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .py-6 { padding-block: 14px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .py-7 { padding-block: 16px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .py-8 { padding-block: 18px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .py-10 { padding-block: 22px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .py-12 { padding-block: 26px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .py-16 { padding-block: 32px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pt-2\.5 { padding-top: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pt-3 { padding-top: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pt-3\.5 { padding-top: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pt-4 { padding-top: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pt-5 { padding-top: 12px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pt-6 { padding-top: 14px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pt-7 { padding-top: 16px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pt-8 { padding-top: 18px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pt-10 { padding-top: 22px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pt-12 { padding-top: 26px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pt-16 { padding-top: 32px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pb-2\.5 { padding-bottom: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pb-3 { padding-bottom: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pb-3\.5 { padding-bottom: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pb-4 { padding-bottom: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pb-5 { padding-bottom: 12px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pb-6 { padding-bottom: 14px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pb-7 { padding-bottom: 16px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pb-8 { padding-bottom: 18px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pb-10 { padding-bottom: 22px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pb-12 { padding-bottom: 26px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pb-16 { padding-bottom: 32px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pl-2\.5 { padding-left: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pl-3 { padding-left: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pl-3\.5 { padding-left: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pl-4 { padding-left: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pl-5 { padding-left: 12px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pl-6 { padding-left: 14px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pl-7 { padding-left: 16px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pl-8 { padding-left: 18px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pl-10 { padding-left: 22px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pl-12 { padding-left: 26px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pl-16 { padding-left: 32px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pr-2\.5 { padding-right: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pr-3 { padding-right: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pr-3\.5 { padding-right: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pr-4 { padding-right: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pr-5 { padding-right: 12px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pr-6 { padding-right: 14px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pr-7 { padding-right: 16px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pr-8 { padding-right: 18px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pr-10 { padding-right: 22px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pr-12 { padding-right: 26px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pr-16 { padding-right: 32px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .mt-3 { margin-top: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .mt-4 { margin-top: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .mt-5 { margin-top: 12px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .mt-6 { margin-top: 14px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .mt-8 { margin-top: 18px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .mt-10 { margin-top: 22px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .mt-12 { margin-top: 26px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .mt-16 { margin-top: 32px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .mb-3 { margin-bottom: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .mb-4 { margin-bottom: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .mb-5 { margin-bottom: 12px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .mb-6 { margin-bottom: 14px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .mb-8 { margin-bottom: 18px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .mb-10 { margin-bottom: 22px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .mb-12 { margin-bottom: 26px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .mb-16 { margin-bottom: 32px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .my-3 { margin-block: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .my-4 { margin-block: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .my-5 { margin-block: 12px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .my-6 { margin-block: 14px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .my-8 { margin-block: 18px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .my-10 { margin-block: 22px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .my-12 { margin-block: 26px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .my-16 { margin-block: 32px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .gap-2\.5 { gap: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .gap-3 { gap: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .gap-3\.5 { gap: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .gap-4 { gap: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .gap-5 { gap: 12px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .gap-6 { gap: 14px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .gap-8 { gap: 18px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .gap-10 { gap: 22px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .gap-12 { gap: 26px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .gap-x-2\.5 { column-gap: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .gap-x-3 { column-gap: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .gap-x-3\.5 { column-gap: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .gap-x-4 { column-gap: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .gap-x-5 { column-gap: 12px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .gap-x-6 { column-gap: 14px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .gap-x-8 { column-gap: 18px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .gap-x-10 { column-gap: 22px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .gap-x-12 { column-gap: 26px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .gap-y-2\.5 { row-gap: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .gap-y-3 { row-gap: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .gap-y-3\.5 { row-gap: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .gap-y-4 { row-gap: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .gap-y-5 { row-gap: 12px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .gap-y-6 { row-gap: 14px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .gap-y-8 { row-gap: 18px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .gap-y-10 { row-gap: 22px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .gap-y-12 { row-gap: 26px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .space-y-2\.5 > :not(:last-child) { margin-block-end: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .space-y-3 > :not(:last-child) { margin-block-end: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .space-y-3\.5 > :not(:last-child) { margin-block-end: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .space-y-4 > :not(:last-child) { margin-block-end: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .space-y-5 > :not(:last-child) { margin-block-end: 12px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .space-y-6 > :not(:last-child) { margin-block-end: 14px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .space-y-8 > :not(:last-child) { margin-block-end: 18px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .space-y-10 > :not(:last-child) { margin-block-end: 22px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .space-y-12 > :not(:last-child) { margin-block-end: 26px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .p-2\.5 { padding: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .p-3 { padding: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .p-3\.5 { padding: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .p-4 { padding: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .p-5 { padding: calc(12px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .p-6 { padding: calc(14px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .p-7 { padding: calc(16px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .p-8 { padding: calc(18px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .p-10 { padding: calc(22px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .p-12 { padding: calc(26px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .p-16 { padding: calc(32px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .px-2\.5 { padding-inline: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .px-3 { padding-inline: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .px-3\.5 { padding-inline: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .px-4 { padding-inline: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .px-5 { padding-inline: calc(12px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .px-6 { padding-inline: calc(14px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .px-7 { padding-inline: calc(16px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .px-8 { padding-inline: calc(18px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .px-10 { padding-inline: calc(22px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .px-12 { padding-inline: calc(26px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .px-16 { padding-inline: calc(32px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .py-2\.5 { padding-block: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .py-3 { padding-block: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .py-3\.5 { padding-block: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .py-4 { padding-block: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .py-5 { padding-block: calc(12px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .py-6 { padding-block: calc(14px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .py-7 { padding-block: calc(16px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .py-8 { padding-block: calc(18px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .py-10 { padding-block: calc(22px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .py-12 { padding-block: calc(26px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .py-16 { padding-block: calc(32px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pt-2\.5 { padding-top: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pt-3 { padding-top: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pt-3\.5 { padding-top: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pt-4 { padding-top: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pt-5 { padding-top: calc(12px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pt-6 { padding-top: calc(14px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pt-7 { padding-top: calc(16px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pt-8 { padding-top: calc(18px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pt-10 { padding-top: calc(22px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pt-12 { padding-top: calc(26px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pt-16 { padding-top: calc(32px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pb-2\.5 { padding-bottom: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pb-3 { padding-bottom: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pb-3\.5 { padding-bottom: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pb-4 { padding-bottom: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pb-5 { padding-bottom: calc(12px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pb-6 { padding-bottom: calc(14px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pb-7 { padding-bottom: calc(16px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pb-8 { padding-bottom: calc(18px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pb-10 { padding-bottom: calc(22px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pb-12 { padding-bottom: calc(26px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pb-16 { padding-bottom: calc(32px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pl-2\.5 { padding-left: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pl-3 { padding-left: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pl-3\.5 { padding-left: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pl-4 { padding-left: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pl-5 { padding-left: calc(12px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pl-6 { padding-left: calc(14px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pl-7 { padding-left: calc(16px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pl-8 { padding-left: calc(18px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pl-10 { padding-left: calc(22px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pl-12 { padding-left: calc(26px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pl-16 { padding-left: calc(32px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pr-2\.5 { padding-right: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pr-3 { padding-right: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pr-3\.5 { padding-right: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pr-4 { padding-right: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pr-5 { padding-right: calc(12px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pr-6 { padding-right: calc(14px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pr-7 { padding-right: calc(16px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pr-8 { padding-right: calc(18px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pr-10 { padding-right: calc(22px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pr-12 { padding-right: calc(26px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .pr-16 { padding-right: calc(32px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .mt-3 { margin-top: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .mt-4 { margin-top: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .mt-5 { margin-top: calc(12px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .mt-6 { margin-top: calc(14px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .mt-8 { margin-top: calc(18px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .mt-10 { margin-top: calc(22px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .mt-12 { margin-top: calc(26px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .mt-16 { margin-top: calc(32px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .mb-3 { margin-bottom: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .mb-4 { margin-bottom: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .mb-5 { margin-bottom: calc(12px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .mb-6 { margin-bottom: calc(14px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .mb-8 { margin-bottom: calc(18px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .mb-10 { margin-bottom: calc(22px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .mb-12 { margin-bottom: calc(26px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .mb-16 { margin-bottom: calc(32px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .my-3 { margin-block: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .my-4 { margin-block: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .my-5 { margin-block: calc(12px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .my-6 { margin-block: calc(14px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .my-8 { margin-block: calc(18px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .my-10 { margin-block: calc(22px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .my-12 { margin-block: calc(26px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .my-16 { margin-block: calc(32px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .gap-2\.5 { gap: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .gap-3 { gap: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .gap-3\.5 { gap: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .gap-4 { gap: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .gap-5 { gap: calc(12px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .gap-6 { gap: calc(14px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .gap-8 { gap: calc(18px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .gap-10 { gap: calc(22px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .gap-12 { gap: calc(26px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .gap-x-2\.5 { column-gap: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .gap-x-3 { column-gap: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .gap-x-3\.5 { column-gap: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .gap-x-4 { column-gap: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .gap-x-5 { column-gap: calc(12px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .gap-x-6 { column-gap: calc(14px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .gap-x-8 { column-gap: calc(18px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .gap-x-10 { column-gap: calc(22px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .gap-x-12 { column-gap: calc(26px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .gap-y-2\.5 { row-gap: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .gap-y-3 { row-gap: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .gap-y-3\.5 { row-gap: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .gap-y-4 { row-gap: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .gap-y-5 { row-gap: calc(12px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .gap-y-6 { row-gap: calc(14px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .gap-y-8 { row-gap: calc(18px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .gap-y-10 { row-gap: calc(22px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .gap-y-12 { row-gap: calc(26px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .space-y-2\.5 > :not(:last-child) { margin-block-end: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .space-y-3 > :not(:last-child) { margin-block-end: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .space-y-3\.5 > :not(:last-child) { margin-block-end: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .space-y-4 > :not(:last-child) { margin-block-end: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .space-y-5 > :not(:last-child) { margin-block-end: calc(12px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .space-y-6 > :not(:last-child) { margin-block-end: calc(14px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .space-y-8 > :not(:last-child) { margin-block-end: calc(18px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .space-y-10 > :not(:last-child) { margin-block-end: calc(22px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .space-y-12 > :not(:last-child) { margin-block-end: calc(26px * var(--dn-space, 1)); }
 @media (min-width: 40rem) {
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:p-2\.5 { padding: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:p-3 { padding: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:p-3\.5 { padding: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:p-4 { padding: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:p-5 { padding: 12px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:p-6 { padding: 14px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:p-7 { padding: 16px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:p-8 { padding: 18px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:p-10 { padding: 22px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:p-12 { padding: 26px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:p-16 { padding: 32px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:px-2\.5 { padding-inline: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:px-3 { padding-inline: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:px-3\.5 { padding-inline: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:px-4 { padding-inline: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:px-5 { padding-inline: 12px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:px-6 { padding-inline: 14px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:px-7 { padding-inline: 16px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:px-8 { padding-inline: 18px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:px-10 { padding-inline: 22px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:px-12 { padding-inline: 26px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:px-16 { padding-inline: 32px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:py-2\.5 { padding-block: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:py-3 { padding-block: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:py-3\.5 { padding-block: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:py-4 { padding-block: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:py-5 { padding-block: 12px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:py-6 { padding-block: 14px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:py-7 { padding-block: 16px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:py-8 { padding-block: 18px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:py-10 { padding-block: 22px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:py-12 { padding-block: 26px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:py-16 { padding-block: 32px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pt-2\.5 { padding-top: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pt-3 { padding-top: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pt-3\.5 { padding-top: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pt-4 { padding-top: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pt-5 { padding-top: 12px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pt-6 { padding-top: 14px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pt-7 { padding-top: 16px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pt-8 { padding-top: 18px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pt-10 { padding-top: 22px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pt-12 { padding-top: 26px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pt-16 { padding-top: 32px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pb-2\.5 { padding-bottom: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pb-3 { padding-bottom: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pb-3\.5 { padding-bottom: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pb-4 { padding-bottom: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pb-5 { padding-bottom: 12px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pb-6 { padding-bottom: 14px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pb-7 { padding-bottom: 16px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pb-8 { padding-bottom: 18px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pb-10 { padding-bottom: 22px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pb-12 { padding-bottom: 26px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pb-16 { padding-bottom: 32px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pl-2\.5 { padding-left: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pl-3 { padding-left: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pl-3\.5 { padding-left: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pl-4 { padding-left: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pl-5 { padding-left: 12px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pl-6 { padding-left: 14px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pl-7 { padding-left: 16px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pl-8 { padding-left: 18px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pl-10 { padding-left: 22px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pl-12 { padding-left: 26px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pl-16 { padding-left: 32px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pr-2\.5 { padding-right: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pr-3 { padding-right: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pr-3\.5 { padding-right: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pr-4 { padding-right: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pr-5 { padding-right: 12px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pr-6 { padding-right: 14px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pr-7 { padding-right: 16px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pr-8 { padding-right: 18px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pr-10 { padding-right: 22px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pr-12 { padding-right: 26px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pr-16 { padding-right: 32px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:mt-3 { margin-top: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:mt-4 { margin-top: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:mt-5 { margin-top: 12px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:mt-6 { margin-top: 14px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:mt-8 { margin-top: 18px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:mt-10 { margin-top: 22px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:mt-12 { margin-top: 26px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:mt-16 { margin-top: 32px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:mb-3 { margin-bottom: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:mb-4 { margin-bottom: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:mb-5 { margin-bottom: 12px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:mb-6 { margin-bottom: 14px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:mb-8 { margin-bottom: 18px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:mb-10 { margin-bottom: 22px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:mb-12 { margin-bottom: 26px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:mb-16 { margin-bottom: 32px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:my-3 { margin-block: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:my-4 { margin-block: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:my-5 { margin-block: 12px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:my-6 { margin-block: 14px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:my-8 { margin-block: 18px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:my-10 { margin-block: 22px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:my-12 { margin-block: 26px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:my-16 { margin-block: 32px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:gap-2\.5 { gap: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:gap-3 { gap: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:gap-3\.5 { gap: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:gap-4 { gap: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:gap-5 { gap: 12px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:gap-6 { gap: 14px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:gap-8 { gap: 18px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:gap-10 { gap: 22px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:gap-12 { gap: 26px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:gap-x-2\.5 { column-gap: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:gap-x-3 { column-gap: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:gap-x-3\.5 { column-gap: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:gap-x-4 { column-gap: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:gap-x-5 { column-gap: 12px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:gap-x-6 { column-gap: 14px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:gap-x-8 { column-gap: 18px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:gap-x-10 { column-gap: 22px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:gap-x-12 { column-gap: 26px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:gap-y-2\.5 { row-gap: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:gap-y-3 { row-gap: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:gap-y-3\.5 { row-gap: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:gap-y-4 { row-gap: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:gap-y-5 { row-gap: 12px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:gap-y-6 { row-gap: 14px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:gap-y-8 { row-gap: 18px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:gap-y-10 { row-gap: 22px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:gap-y-12 { row-gap: 26px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:space-y-2\.5 > :not(:last-child) { margin-block-end: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:space-y-3 > :not(:last-child) { margin-block-end: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:space-y-3\.5 > :not(:last-child) { margin-block-end: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:space-y-4 > :not(:last-child) { margin-block-end: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:space-y-5 > :not(:last-child) { margin-block-end: 12px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:space-y-6 > :not(:last-child) { margin-block-end: 14px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:space-y-8 > :not(:last-child) { margin-block-end: 18px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:space-y-10 > :not(:last-child) { margin-block-end: 22px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:space-y-12 > :not(:last-child) { margin-block-end: 26px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:p-2\.5 { padding: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:p-3 { padding: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:p-3\.5 { padding: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:p-4 { padding: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:p-5 { padding: calc(12px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:p-6 { padding: calc(14px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:p-7 { padding: calc(16px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:p-8 { padding: calc(18px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:p-10 { padding: calc(22px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:p-12 { padding: calc(26px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:p-16 { padding: calc(32px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:px-2\.5 { padding-inline: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:px-3 { padding-inline: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:px-3\.5 { padding-inline: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:px-4 { padding-inline: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:px-5 { padding-inline: calc(12px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:px-6 { padding-inline: calc(14px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:px-7 { padding-inline: calc(16px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:px-8 { padding-inline: calc(18px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:px-10 { padding-inline: calc(22px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:px-12 { padding-inline: calc(26px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:px-16 { padding-inline: calc(32px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:py-2\.5 { padding-block: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:py-3 { padding-block: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:py-3\.5 { padding-block: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:py-4 { padding-block: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:py-5 { padding-block: calc(12px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:py-6 { padding-block: calc(14px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:py-7 { padding-block: calc(16px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:py-8 { padding-block: calc(18px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:py-10 { padding-block: calc(22px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:py-12 { padding-block: calc(26px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:py-16 { padding-block: calc(32px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pt-2\.5 { padding-top: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pt-3 { padding-top: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pt-3\.5 { padding-top: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pt-4 { padding-top: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pt-5 { padding-top: calc(12px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pt-6 { padding-top: calc(14px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pt-7 { padding-top: calc(16px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pt-8 { padding-top: calc(18px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pt-10 { padding-top: calc(22px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pt-12 { padding-top: calc(26px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pt-16 { padding-top: calc(32px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pb-2\.5 { padding-bottom: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pb-3 { padding-bottom: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pb-3\.5 { padding-bottom: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pb-4 { padding-bottom: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pb-5 { padding-bottom: calc(12px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pb-6 { padding-bottom: calc(14px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pb-7 { padding-bottom: calc(16px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pb-8 { padding-bottom: calc(18px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pb-10 { padding-bottom: calc(22px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pb-12 { padding-bottom: calc(26px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pb-16 { padding-bottom: calc(32px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pl-2\.5 { padding-left: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pl-3 { padding-left: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pl-3\.5 { padding-left: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pl-4 { padding-left: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pl-5 { padding-left: calc(12px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pl-6 { padding-left: calc(14px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pl-7 { padding-left: calc(16px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pl-8 { padding-left: calc(18px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pl-10 { padding-left: calc(22px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pl-12 { padding-left: calc(26px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pl-16 { padding-left: calc(32px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pr-2\.5 { padding-right: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pr-3 { padding-right: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pr-3\.5 { padding-right: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pr-4 { padding-right: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pr-5 { padding-right: calc(12px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pr-6 { padding-right: calc(14px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pr-7 { padding-right: calc(16px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pr-8 { padding-right: calc(18px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pr-10 { padding-right: calc(22px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pr-12 { padding-right: calc(26px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:pr-16 { padding-right: calc(32px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:mt-3 { margin-top: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:mt-4 { margin-top: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:mt-5 { margin-top: calc(12px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:mt-6 { margin-top: calc(14px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:mt-8 { margin-top: calc(18px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:mt-10 { margin-top: calc(22px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:mt-12 { margin-top: calc(26px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:mt-16 { margin-top: calc(32px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:mb-3 { margin-bottom: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:mb-4 { margin-bottom: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:mb-5 { margin-bottom: calc(12px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:mb-6 { margin-bottom: calc(14px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:mb-8 { margin-bottom: calc(18px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:mb-10 { margin-bottom: calc(22px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:mb-12 { margin-bottom: calc(26px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:mb-16 { margin-bottom: calc(32px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:my-3 { margin-block: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:my-4 { margin-block: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:my-5 { margin-block: calc(12px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:my-6 { margin-block: calc(14px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:my-8 { margin-block: calc(18px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:my-10 { margin-block: calc(22px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:my-12 { margin-block: calc(26px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:my-16 { margin-block: calc(32px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:gap-2\.5 { gap: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:gap-3 { gap: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:gap-3\.5 { gap: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:gap-4 { gap: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:gap-5 { gap: calc(12px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:gap-6 { gap: calc(14px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:gap-8 { gap: calc(18px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:gap-10 { gap: calc(22px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:gap-12 { gap: calc(26px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:gap-x-2\.5 { column-gap: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:gap-x-3 { column-gap: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:gap-x-3\.5 { column-gap: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:gap-x-4 { column-gap: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:gap-x-5 { column-gap: calc(12px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:gap-x-6 { column-gap: calc(14px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:gap-x-8 { column-gap: calc(18px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:gap-x-10 { column-gap: calc(22px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:gap-x-12 { column-gap: calc(26px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:gap-y-2\.5 { row-gap: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:gap-y-3 { row-gap: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:gap-y-3\.5 { row-gap: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:gap-y-4 { row-gap: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:gap-y-5 { row-gap: calc(12px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:gap-y-6 { row-gap: calc(14px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:gap-y-8 { row-gap: calc(18px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:gap-y-10 { row-gap: calc(22px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:gap-y-12 { row-gap: calc(26px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:space-y-2\.5 > :not(:last-child) { margin-block-end: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:space-y-3 > :not(:last-child) { margin-block-end: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:space-y-3\.5 > :not(:last-child) { margin-block-end: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:space-y-4 > :not(:last-child) { margin-block-end: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:space-y-5 > :not(:last-child) { margin-block-end: calc(12px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:space-y-6 > :not(:last-child) { margin-block-end: calc(14px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:space-y-8 > :not(:last-child) { margin-block-end: calc(18px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:space-y-10 > :not(:last-child) { margin-block-end: calc(22px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .sm\:space-y-12 > :not(:last-child) { margin-block-end: calc(26px * var(--dn-space, 1)); }
 }
 @media (min-width: 48rem) {
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:p-2\.5 { padding: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:p-3 { padding: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:p-3\.5 { padding: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:p-4 { padding: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:p-5 { padding: 12px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:p-6 { padding: 14px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:p-7 { padding: 16px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:p-8 { padding: 18px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:p-10 { padding: 22px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:p-12 { padding: 26px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:p-16 { padding: 32px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:px-2\.5 { padding-inline: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:px-3 { padding-inline: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:px-3\.5 { padding-inline: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:px-4 { padding-inline: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:px-5 { padding-inline: 12px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:px-6 { padding-inline: 14px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:px-7 { padding-inline: 16px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:px-8 { padding-inline: 18px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:px-10 { padding-inline: 22px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:px-12 { padding-inline: 26px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:px-16 { padding-inline: 32px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:py-2\.5 { padding-block: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:py-3 { padding-block: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:py-3\.5 { padding-block: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:py-4 { padding-block: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:py-5 { padding-block: 12px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:py-6 { padding-block: 14px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:py-7 { padding-block: 16px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:py-8 { padding-block: 18px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:py-10 { padding-block: 22px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:py-12 { padding-block: 26px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:py-16 { padding-block: 32px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pt-2\.5 { padding-top: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pt-3 { padding-top: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pt-3\.5 { padding-top: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pt-4 { padding-top: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pt-5 { padding-top: 12px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pt-6 { padding-top: 14px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pt-7 { padding-top: 16px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pt-8 { padding-top: 18px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pt-10 { padding-top: 22px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pt-12 { padding-top: 26px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pt-16 { padding-top: 32px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pb-2\.5 { padding-bottom: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pb-3 { padding-bottom: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pb-3\.5 { padding-bottom: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pb-4 { padding-bottom: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pb-5 { padding-bottom: 12px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pb-6 { padding-bottom: 14px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pb-7 { padding-bottom: 16px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pb-8 { padding-bottom: 18px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pb-10 { padding-bottom: 22px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pb-12 { padding-bottom: 26px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pb-16 { padding-bottom: 32px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pl-2\.5 { padding-left: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pl-3 { padding-left: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pl-3\.5 { padding-left: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pl-4 { padding-left: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pl-5 { padding-left: 12px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pl-6 { padding-left: 14px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pl-7 { padding-left: 16px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pl-8 { padding-left: 18px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pl-10 { padding-left: 22px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pl-12 { padding-left: 26px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pl-16 { padding-left: 32px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pr-2\.5 { padding-right: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pr-3 { padding-right: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pr-3\.5 { padding-right: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pr-4 { padding-right: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pr-5 { padding-right: 12px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pr-6 { padding-right: 14px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pr-7 { padding-right: 16px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pr-8 { padding-right: 18px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pr-10 { padding-right: 22px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pr-12 { padding-right: 26px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pr-16 { padding-right: 32px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:mt-3 { margin-top: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:mt-4 { margin-top: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:mt-5 { margin-top: 12px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:mt-6 { margin-top: 14px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:mt-8 { margin-top: 18px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:mt-10 { margin-top: 22px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:mt-12 { margin-top: 26px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:mt-16 { margin-top: 32px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:mb-3 { margin-bottom: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:mb-4 { margin-bottom: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:mb-5 { margin-bottom: 12px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:mb-6 { margin-bottom: 14px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:mb-8 { margin-bottom: 18px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:mb-10 { margin-bottom: 22px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:mb-12 { margin-bottom: 26px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:mb-16 { margin-bottom: 32px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:my-3 { margin-block: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:my-4 { margin-block: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:my-5 { margin-block: 12px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:my-6 { margin-block: 14px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:my-8 { margin-block: 18px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:my-10 { margin-block: 22px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:my-12 { margin-block: 26px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:my-16 { margin-block: 32px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:gap-2\.5 { gap: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:gap-3 { gap: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:gap-3\.5 { gap: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:gap-4 { gap: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:gap-5 { gap: 12px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:gap-6 { gap: 14px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:gap-8 { gap: 18px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:gap-10 { gap: 22px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:gap-12 { gap: 26px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:gap-x-2\.5 { column-gap: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:gap-x-3 { column-gap: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:gap-x-3\.5 { column-gap: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:gap-x-4 { column-gap: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:gap-x-5 { column-gap: 12px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:gap-x-6 { column-gap: 14px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:gap-x-8 { column-gap: 18px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:gap-x-10 { column-gap: 22px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:gap-x-12 { column-gap: 26px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:gap-y-2\.5 { row-gap: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:gap-y-3 { row-gap: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:gap-y-3\.5 { row-gap: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:gap-y-4 { row-gap: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:gap-y-5 { row-gap: 12px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:gap-y-6 { row-gap: 14px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:gap-y-8 { row-gap: 18px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:gap-y-10 { row-gap: 22px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:gap-y-12 { row-gap: 26px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:space-y-2\.5 > :not(:last-child) { margin-block-end: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:space-y-3 > :not(:last-child) { margin-block-end: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:space-y-3\.5 > :not(:last-child) { margin-block-end: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:space-y-4 > :not(:last-child) { margin-block-end: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:space-y-5 > :not(:last-child) { margin-block-end: 12px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:space-y-6 > :not(:last-child) { margin-block-end: 14px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:space-y-8 > :not(:last-child) { margin-block-end: 18px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:space-y-10 > :not(:last-child) { margin-block-end: 22px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:space-y-12 > :not(:last-child) { margin-block-end: 26px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:p-2\.5 { padding: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:p-3 { padding: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:p-3\.5 { padding: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:p-4 { padding: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:p-5 { padding: calc(12px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:p-6 { padding: calc(14px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:p-7 { padding: calc(16px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:p-8 { padding: calc(18px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:p-10 { padding: calc(22px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:p-12 { padding: calc(26px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:p-16 { padding: calc(32px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:px-2\.5 { padding-inline: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:px-3 { padding-inline: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:px-3\.5 { padding-inline: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:px-4 { padding-inline: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:px-5 { padding-inline: calc(12px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:px-6 { padding-inline: calc(14px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:px-7 { padding-inline: calc(16px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:px-8 { padding-inline: calc(18px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:px-10 { padding-inline: calc(22px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:px-12 { padding-inline: calc(26px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:px-16 { padding-inline: calc(32px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:py-2\.5 { padding-block: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:py-3 { padding-block: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:py-3\.5 { padding-block: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:py-4 { padding-block: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:py-5 { padding-block: calc(12px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:py-6 { padding-block: calc(14px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:py-7 { padding-block: calc(16px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:py-8 { padding-block: calc(18px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:py-10 { padding-block: calc(22px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:py-12 { padding-block: calc(26px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:py-16 { padding-block: calc(32px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pt-2\.5 { padding-top: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pt-3 { padding-top: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pt-3\.5 { padding-top: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pt-4 { padding-top: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pt-5 { padding-top: calc(12px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pt-6 { padding-top: calc(14px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pt-7 { padding-top: calc(16px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pt-8 { padding-top: calc(18px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pt-10 { padding-top: calc(22px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pt-12 { padding-top: calc(26px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pt-16 { padding-top: calc(32px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pb-2\.5 { padding-bottom: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pb-3 { padding-bottom: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pb-3\.5 { padding-bottom: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pb-4 { padding-bottom: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pb-5 { padding-bottom: calc(12px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pb-6 { padding-bottom: calc(14px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pb-7 { padding-bottom: calc(16px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pb-8 { padding-bottom: calc(18px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pb-10 { padding-bottom: calc(22px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pb-12 { padding-bottom: calc(26px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pb-16 { padding-bottom: calc(32px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pl-2\.5 { padding-left: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pl-3 { padding-left: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pl-3\.5 { padding-left: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pl-4 { padding-left: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pl-5 { padding-left: calc(12px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pl-6 { padding-left: calc(14px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pl-7 { padding-left: calc(16px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pl-8 { padding-left: calc(18px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pl-10 { padding-left: calc(22px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pl-12 { padding-left: calc(26px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pl-16 { padding-left: calc(32px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pr-2\.5 { padding-right: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pr-3 { padding-right: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pr-3\.5 { padding-right: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pr-4 { padding-right: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pr-5 { padding-right: calc(12px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pr-6 { padding-right: calc(14px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pr-7 { padding-right: calc(16px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pr-8 { padding-right: calc(18px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pr-10 { padding-right: calc(22px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pr-12 { padding-right: calc(26px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:pr-16 { padding-right: calc(32px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:mt-3 { margin-top: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:mt-4 { margin-top: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:mt-5 { margin-top: calc(12px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:mt-6 { margin-top: calc(14px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:mt-8 { margin-top: calc(18px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:mt-10 { margin-top: calc(22px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:mt-12 { margin-top: calc(26px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:mt-16 { margin-top: calc(32px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:mb-3 { margin-bottom: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:mb-4 { margin-bottom: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:mb-5 { margin-bottom: calc(12px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:mb-6 { margin-bottom: calc(14px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:mb-8 { margin-bottom: calc(18px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:mb-10 { margin-bottom: calc(22px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:mb-12 { margin-bottom: calc(26px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:mb-16 { margin-bottom: calc(32px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:my-3 { margin-block: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:my-4 { margin-block: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:my-5 { margin-block: calc(12px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:my-6 { margin-block: calc(14px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:my-8 { margin-block: calc(18px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:my-10 { margin-block: calc(22px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:my-12 { margin-block: calc(26px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:my-16 { margin-block: calc(32px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:gap-2\.5 { gap: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:gap-3 { gap: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:gap-3\.5 { gap: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:gap-4 { gap: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:gap-5 { gap: calc(12px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:gap-6 { gap: calc(14px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:gap-8 { gap: calc(18px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:gap-10 { gap: calc(22px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:gap-12 { gap: calc(26px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:gap-x-2\.5 { column-gap: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:gap-x-3 { column-gap: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:gap-x-3\.5 { column-gap: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:gap-x-4 { column-gap: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:gap-x-5 { column-gap: calc(12px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:gap-x-6 { column-gap: calc(14px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:gap-x-8 { column-gap: calc(18px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:gap-x-10 { column-gap: calc(22px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:gap-x-12 { column-gap: calc(26px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:gap-y-2\.5 { row-gap: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:gap-y-3 { row-gap: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:gap-y-3\.5 { row-gap: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:gap-y-4 { row-gap: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:gap-y-5 { row-gap: calc(12px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:gap-y-6 { row-gap: calc(14px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:gap-y-8 { row-gap: calc(18px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:gap-y-10 { row-gap: calc(22px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:gap-y-12 { row-gap: calc(26px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:space-y-2\.5 > :not(:last-child) { margin-block-end: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:space-y-3 > :not(:last-child) { margin-block-end: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:space-y-3\.5 > :not(:last-child) { margin-block-end: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:space-y-4 > :not(:last-child) { margin-block-end: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:space-y-5 > :not(:last-child) { margin-block-end: calc(12px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:space-y-6 > :not(:last-child) { margin-block-end: calc(14px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:space-y-8 > :not(:last-child) { margin-block-end: calc(18px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:space-y-10 > :not(:last-child) { margin-block-end: calc(22px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .md\:space-y-12 > :not(:last-child) { margin-block-end: calc(26px * var(--dn-space, 1)); }
 }
 @media (min-width: 64rem) {
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:p-2\.5 { padding: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:p-3 { padding: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:p-3\.5 { padding: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:p-4 { padding: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:p-5 { padding: 12px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:p-6 { padding: 14px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:p-7 { padding: 16px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:p-8 { padding: 18px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:p-10 { padding: 22px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:p-12 { padding: 26px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:p-16 { padding: 32px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:px-2\.5 { padding-inline: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:px-3 { padding-inline: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:px-3\.5 { padding-inline: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:px-4 { padding-inline: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:px-5 { padding-inline: 12px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:px-6 { padding-inline: 14px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:px-7 { padding-inline: 16px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:px-8 { padding-inline: 18px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:px-10 { padding-inline: 22px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:px-12 { padding-inline: 26px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:px-16 { padding-inline: 32px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:py-2\.5 { padding-block: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:py-3 { padding-block: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:py-3\.5 { padding-block: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:py-4 { padding-block: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:py-5 { padding-block: 12px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:py-6 { padding-block: 14px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:py-7 { padding-block: 16px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:py-8 { padding-block: 18px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:py-10 { padding-block: 22px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:py-12 { padding-block: 26px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:py-16 { padding-block: 32px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pt-2\.5 { padding-top: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pt-3 { padding-top: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pt-3\.5 { padding-top: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pt-4 { padding-top: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pt-5 { padding-top: 12px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pt-6 { padding-top: 14px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pt-7 { padding-top: 16px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pt-8 { padding-top: 18px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pt-10 { padding-top: 22px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pt-12 { padding-top: 26px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pt-16 { padding-top: 32px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pb-2\.5 { padding-bottom: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pb-3 { padding-bottom: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pb-3\.5 { padding-bottom: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pb-4 { padding-bottom: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pb-5 { padding-bottom: 12px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pb-6 { padding-bottom: 14px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pb-7 { padding-bottom: 16px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pb-8 { padding-bottom: 18px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pb-10 { padding-bottom: 22px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pb-12 { padding-bottom: 26px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pb-16 { padding-bottom: 32px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pl-2\.5 { padding-left: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pl-3 { padding-left: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pl-3\.5 { padding-left: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pl-4 { padding-left: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pl-5 { padding-left: 12px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pl-6 { padding-left: 14px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pl-7 { padding-left: 16px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pl-8 { padding-left: 18px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pl-10 { padding-left: 22px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pl-12 { padding-left: 26px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pl-16 { padding-left: 32px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pr-2\.5 { padding-right: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pr-3 { padding-right: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pr-3\.5 { padding-right: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pr-4 { padding-right: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pr-5 { padding-right: 12px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pr-6 { padding-right: 14px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pr-7 { padding-right: 16px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pr-8 { padding-right: 18px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pr-10 { padding-right: 22px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pr-12 { padding-right: 26px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pr-16 { padding-right: 32px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:mt-3 { margin-top: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:mt-4 { margin-top: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:mt-5 { margin-top: 12px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:mt-6 { margin-top: 14px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:mt-8 { margin-top: 18px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:mt-10 { margin-top: 22px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:mt-12 { margin-top: 26px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:mt-16 { margin-top: 32px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:mb-3 { margin-bottom: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:mb-4 { margin-bottom: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:mb-5 { margin-bottom: 12px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:mb-6 { margin-bottom: 14px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:mb-8 { margin-bottom: 18px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:mb-10 { margin-bottom: 22px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:mb-12 { margin-bottom: 26px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:mb-16 { margin-bottom: 32px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:my-3 { margin-block: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:my-4 { margin-block: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:my-5 { margin-block: 12px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:my-6 { margin-block: 14px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:my-8 { margin-block: 18px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:my-10 { margin-block: 22px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:my-12 { margin-block: 26px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:my-16 { margin-block: 32px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:gap-2\.5 { gap: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:gap-3 { gap: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:gap-3\.5 { gap: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:gap-4 { gap: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:gap-5 { gap: 12px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:gap-6 { gap: 14px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:gap-8 { gap: 18px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:gap-10 { gap: 22px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:gap-12 { gap: 26px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:gap-x-2\.5 { column-gap: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:gap-x-3 { column-gap: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:gap-x-3\.5 { column-gap: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:gap-x-4 { column-gap: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:gap-x-5 { column-gap: 12px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:gap-x-6 { column-gap: 14px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:gap-x-8 { column-gap: 18px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:gap-x-10 { column-gap: 22px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:gap-x-12 { column-gap: 26px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:gap-y-2\.5 { row-gap: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:gap-y-3 { row-gap: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:gap-y-3\.5 { row-gap: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:gap-y-4 { row-gap: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:gap-y-5 { row-gap: 12px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:gap-y-6 { row-gap: 14px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:gap-y-8 { row-gap: 18px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:gap-y-10 { row-gap: 22px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:gap-y-12 { row-gap: 26px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:space-y-2\.5 > :not(:last-child) { margin-block-end: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:space-y-3 > :not(:last-child) { margin-block-end: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:space-y-3\.5 > :not(:last-child) { margin-block-end: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:space-y-4 > :not(:last-child) { margin-block-end: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:space-y-5 > :not(:last-child) { margin-block-end: 12px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:space-y-6 > :not(:last-child) { margin-block-end: 14px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:space-y-8 > :not(:last-child) { margin-block-end: 18px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:space-y-10 > :not(:last-child) { margin-block-end: 22px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:space-y-12 > :not(:last-child) { margin-block-end: 26px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:p-2\.5 { padding: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:p-3 { padding: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:p-3\.5 { padding: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:p-4 { padding: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:p-5 { padding: calc(12px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:p-6 { padding: calc(14px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:p-7 { padding: calc(16px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:p-8 { padding: calc(18px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:p-10 { padding: calc(22px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:p-12 { padding: calc(26px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:p-16 { padding: calc(32px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:px-2\.5 { padding-inline: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:px-3 { padding-inline: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:px-3\.5 { padding-inline: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:px-4 { padding-inline: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:px-5 { padding-inline: calc(12px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:px-6 { padding-inline: calc(14px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:px-7 { padding-inline: calc(16px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:px-8 { padding-inline: calc(18px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:px-10 { padding-inline: calc(22px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:px-12 { padding-inline: calc(26px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:px-16 { padding-inline: calc(32px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:py-2\.5 { padding-block: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:py-3 { padding-block: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:py-3\.5 { padding-block: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:py-4 { padding-block: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:py-5 { padding-block: calc(12px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:py-6 { padding-block: calc(14px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:py-7 { padding-block: calc(16px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:py-8 { padding-block: calc(18px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:py-10 { padding-block: calc(22px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:py-12 { padding-block: calc(26px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:py-16 { padding-block: calc(32px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pt-2\.5 { padding-top: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pt-3 { padding-top: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pt-3\.5 { padding-top: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pt-4 { padding-top: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pt-5 { padding-top: calc(12px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pt-6 { padding-top: calc(14px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pt-7 { padding-top: calc(16px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pt-8 { padding-top: calc(18px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pt-10 { padding-top: calc(22px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pt-12 { padding-top: calc(26px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pt-16 { padding-top: calc(32px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pb-2\.5 { padding-bottom: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pb-3 { padding-bottom: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pb-3\.5 { padding-bottom: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pb-4 { padding-bottom: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pb-5 { padding-bottom: calc(12px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pb-6 { padding-bottom: calc(14px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pb-7 { padding-bottom: calc(16px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pb-8 { padding-bottom: calc(18px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pb-10 { padding-bottom: calc(22px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pb-12 { padding-bottom: calc(26px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pb-16 { padding-bottom: calc(32px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pl-2\.5 { padding-left: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pl-3 { padding-left: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pl-3\.5 { padding-left: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pl-4 { padding-left: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pl-5 { padding-left: calc(12px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pl-6 { padding-left: calc(14px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pl-7 { padding-left: calc(16px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pl-8 { padding-left: calc(18px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pl-10 { padding-left: calc(22px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pl-12 { padding-left: calc(26px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pl-16 { padding-left: calc(32px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pr-2\.5 { padding-right: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pr-3 { padding-right: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pr-3\.5 { padding-right: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pr-4 { padding-right: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pr-5 { padding-right: calc(12px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pr-6 { padding-right: calc(14px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pr-7 { padding-right: calc(16px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pr-8 { padding-right: calc(18px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pr-10 { padding-right: calc(22px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pr-12 { padding-right: calc(26px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:pr-16 { padding-right: calc(32px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:mt-3 { margin-top: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:mt-4 { margin-top: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:mt-5 { margin-top: calc(12px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:mt-6 { margin-top: calc(14px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:mt-8 { margin-top: calc(18px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:mt-10 { margin-top: calc(22px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:mt-12 { margin-top: calc(26px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:mt-16 { margin-top: calc(32px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:mb-3 { margin-bottom: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:mb-4 { margin-bottom: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:mb-5 { margin-bottom: calc(12px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:mb-6 { margin-bottom: calc(14px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:mb-8 { margin-bottom: calc(18px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:mb-10 { margin-bottom: calc(22px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:mb-12 { margin-bottom: calc(26px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:mb-16 { margin-bottom: calc(32px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:my-3 { margin-block: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:my-4 { margin-block: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:my-5 { margin-block: calc(12px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:my-6 { margin-block: calc(14px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:my-8 { margin-block: calc(18px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:my-10 { margin-block: calc(22px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:my-12 { margin-block: calc(26px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:my-16 { margin-block: calc(32px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:gap-2\.5 { gap: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:gap-3 { gap: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:gap-3\.5 { gap: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:gap-4 { gap: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:gap-5 { gap: calc(12px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:gap-6 { gap: calc(14px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:gap-8 { gap: calc(18px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:gap-10 { gap: calc(22px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:gap-12 { gap: calc(26px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:gap-x-2\.5 { column-gap: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:gap-x-3 { column-gap: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:gap-x-3\.5 { column-gap: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:gap-x-4 { column-gap: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:gap-x-5 { column-gap: calc(12px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:gap-x-6 { column-gap: calc(14px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:gap-x-8 { column-gap: calc(18px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:gap-x-10 { column-gap: calc(22px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:gap-x-12 { column-gap: calc(26px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:gap-y-2\.5 { row-gap: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:gap-y-3 { row-gap: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:gap-y-3\.5 { row-gap: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:gap-y-4 { row-gap: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:gap-y-5 { row-gap: calc(12px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:gap-y-6 { row-gap: calc(14px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:gap-y-8 { row-gap: calc(18px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:gap-y-10 { row-gap: calc(22px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:gap-y-12 { row-gap: calc(26px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:space-y-2\.5 > :not(:last-child) { margin-block-end: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:space-y-3 > :not(:last-child) { margin-block-end: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:space-y-3\.5 > :not(:last-child) { margin-block-end: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:space-y-4 > :not(:last-child) { margin-block-end: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:space-y-5 > :not(:last-child) { margin-block-end: calc(12px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:space-y-6 > :not(:last-child) { margin-block-end: calc(14px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:space-y-8 > :not(:last-child) { margin-block-end: calc(18px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:space-y-10 > :not(:last-child) { margin-block-end: calc(22px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .lg\:space-y-12 > :not(:last-child) { margin-block-end: calc(26px * var(--dn-space, 1)); }
 }
 @media (min-width: 80rem) {
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:p-2\.5 { padding: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:p-3 { padding: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:p-3\.5 { padding: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:p-4 { padding: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:p-5 { padding: 12px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:p-6 { padding: 14px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:p-7 { padding: 16px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:p-8 { padding: 18px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:p-10 { padding: 22px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:p-12 { padding: 26px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:p-16 { padding: 32px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:px-2\.5 { padding-inline: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:px-3 { padding-inline: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:px-3\.5 { padding-inline: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:px-4 { padding-inline: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:px-5 { padding-inline: 12px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:px-6 { padding-inline: 14px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:px-7 { padding-inline: 16px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:px-8 { padding-inline: 18px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:px-10 { padding-inline: 22px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:px-12 { padding-inline: 26px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:px-16 { padding-inline: 32px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:py-2\.5 { padding-block: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:py-3 { padding-block: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:py-3\.5 { padding-block: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:py-4 { padding-block: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:py-5 { padding-block: 12px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:py-6 { padding-block: 14px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:py-7 { padding-block: 16px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:py-8 { padding-block: 18px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:py-10 { padding-block: 22px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:py-12 { padding-block: 26px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:py-16 { padding-block: 32px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pt-2\.5 { padding-top: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pt-3 { padding-top: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pt-3\.5 { padding-top: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pt-4 { padding-top: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pt-5 { padding-top: 12px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pt-6 { padding-top: 14px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pt-7 { padding-top: 16px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pt-8 { padding-top: 18px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pt-10 { padding-top: 22px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pt-12 { padding-top: 26px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pt-16 { padding-top: 32px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pb-2\.5 { padding-bottom: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pb-3 { padding-bottom: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pb-3\.5 { padding-bottom: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pb-4 { padding-bottom: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pb-5 { padding-bottom: 12px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pb-6 { padding-bottom: 14px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pb-7 { padding-bottom: 16px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pb-8 { padding-bottom: 18px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pb-10 { padding-bottom: 22px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pb-12 { padding-bottom: 26px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pb-16 { padding-bottom: 32px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pl-2\.5 { padding-left: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pl-3 { padding-left: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pl-3\.5 { padding-left: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pl-4 { padding-left: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pl-5 { padding-left: 12px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pl-6 { padding-left: 14px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pl-7 { padding-left: 16px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pl-8 { padding-left: 18px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pl-10 { padding-left: 22px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pl-12 { padding-left: 26px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pl-16 { padding-left: 32px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pr-2\.5 { padding-right: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pr-3 { padding-right: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pr-3\.5 { padding-right: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pr-4 { padding-right: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pr-5 { padding-right: 12px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pr-6 { padding-right: 14px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pr-7 { padding-right: 16px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pr-8 { padding-right: 18px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pr-10 { padding-right: 22px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pr-12 { padding-right: 26px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pr-16 { padding-right: 32px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:mt-3 { margin-top: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:mt-4 { margin-top: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:mt-5 { margin-top: 12px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:mt-6 { margin-top: 14px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:mt-8 { margin-top: 18px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:mt-10 { margin-top: 22px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:mt-12 { margin-top: 26px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:mt-16 { margin-top: 32px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:mb-3 { margin-bottom: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:mb-4 { margin-bottom: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:mb-5 { margin-bottom: 12px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:mb-6 { margin-bottom: 14px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:mb-8 { margin-bottom: 18px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:mb-10 { margin-bottom: 22px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:mb-12 { margin-bottom: 26px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:mb-16 { margin-bottom: 32px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:my-3 { margin-block: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:my-4 { margin-block: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:my-5 { margin-block: 12px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:my-6 { margin-block: 14px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:my-8 { margin-block: 18px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:my-10 { margin-block: 22px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:my-12 { margin-block: 26px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:my-16 { margin-block: 32px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:gap-2\.5 { gap: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:gap-3 { gap: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:gap-3\.5 { gap: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:gap-4 { gap: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:gap-5 { gap: 12px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:gap-6 { gap: 14px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:gap-8 { gap: 18px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:gap-10 { gap: 22px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:gap-12 { gap: 26px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:gap-x-2\.5 { column-gap: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:gap-x-3 { column-gap: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:gap-x-3\.5 { column-gap: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:gap-x-4 { column-gap: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:gap-x-5 { column-gap: 12px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:gap-x-6 { column-gap: 14px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:gap-x-8 { column-gap: 18px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:gap-x-10 { column-gap: 22px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:gap-x-12 { column-gap: 26px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:gap-y-2\.5 { row-gap: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:gap-y-3 { row-gap: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:gap-y-3\.5 { row-gap: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:gap-y-4 { row-gap: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:gap-y-5 { row-gap: 12px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:gap-y-6 { row-gap: 14px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:gap-y-8 { row-gap: 18px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:gap-y-10 { row-gap: 22px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:gap-y-12 { row-gap: 26px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:space-y-2\.5 > :not(:last-child) { margin-block-end: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:space-y-3 > :not(:last-child) { margin-block-end: 8px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:space-y-3\.5 > :not(:last-child) { margin-block-end: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:space-y-4 > :not(:last-child) { margin-block-end: 10px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:space-y-5 > :not(:last-child) { margin-block-end: 12px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:space-y-6 > :not(:last-child) { margin-block-end: 14px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:space-y-8 > :not(:last-child) { margin-block-end: 18px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:space-y-10 > :not(:last-child) { margin-block-end: 22px; }
-html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:space-y-12 > :not(:last-child) { margin-block-end: 26px; }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:p-2\.5 { padding: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:p-3 { padding: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:p-3\.5 { padding: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:p-4 { padding: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:p-5 { padding: calc(12px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:p-6 { padding: calc(14px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:p-7 { padding: calc(16px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:p-8 { padding: calc(18px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:p-10 { padding: calc(22px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:p-12 { padding: calc(26px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:p-16 { padding: calc(32px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:px-2\.5 { padding-inline: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:px-3 { padding-inline: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:px-3\.5 { padding-inline: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:px-4 { padding-inline: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:px-5 { padding-inline: calc(12px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:px-6 { padding-inline: calc(14px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:px-7 { padding-inline: calc(16px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:px-8 { padding-inline: calc(18px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:px-10 { padding-inline: calc(22px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:px-12 { padding-inline: calc(26px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:px-16 { padding-inline: calc(32px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:py-2\.5 { padding-block: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:py-3 { padding-block: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:py-3\.5 { padding-block: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:py-4 { padding-block: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:py-5 { padding-block: calc(12px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:py-6 { padding-block: calc(14px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:py-7 { padding-block: calc(16px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:py-8 { padding-block: calc(18px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:py-10 { padding-block: calc(22px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:py-12 { padding-block: calc(26px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:py-16 { padding-block: calc(32px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pt-2\.5 { padding-top: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pt-3 { padding-top: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pt-3\.5 { padding-top: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pt-4 { padding-top: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pt-5 { padding-top: calc(12px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pt-6 { padding-top: calc(14px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pt-7 { padding-top: calc(16px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pt-8 { padding-top: calc(18px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pt-10 { padding-top: calc(22px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pt-12 { padding-top: calc(26px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pt-16 { padding-top: calc(32px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pb-2\.5 { padding-bottom: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pb-3 { padding-bottom: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pb-3\.5 { padding-bottom: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pb-4 { padding-bottom: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pb-5 { padding-bottom: calc(12px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pb-6 { padding-bottom: calc(14px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pb-7 { padding-bottom: calc(16px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pb-8 { padding-bottom: calc(18px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pb-10 { padding-bottom: calc(22px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pb-12 { padding-bottom: calc(26px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pb-16 { padding-bottom: calc(32px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pl-2\.5 { padding-left: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pl-3 { padding-left: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pl-3\.5 { padding-left: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pl-4 { padding-left: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pl-5 { padding-left: calc(12px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pl-6 { padding-left: calc(14px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pl-7 { padding-left: calc(16px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pl-8 { padding-left: calc(18px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pl-10 { padding-left: calc(22px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pl-12 { padding-left: calc(26px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pl-16 { padding-left: calc(32px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pr-2\.5 { padding-right: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pr-3 { padding-right: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pr-3\.5 { padding-right: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pr-4 { padding-right: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pr-5 { padding-right: calc(12px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pr-6 { padding-right: calc(14px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pr-7 { padding-right: calc(16px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pr-8 { padding-right: calc(18px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pr-10 { padding-right: calc(22px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pr-12 { padding-right: calc(26px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:pr-16 { padding-right: calc(32px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:mt-3 { margin-top: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:mt-4 { margin-top: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:mt-5 { margin-top: calc(12px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:mt-6 { margin-top: calc(14px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:mt-8 { margin-top: calc(18px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:mt-10 { margin-top: calc(22px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:mt-12 { margin-top: calc(26px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:mt-16 { margin-top: calc(32px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:mb-3 { margin-bottom: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:mb-4 { margin-bottom: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:mb-5 { margin-bottom: calc(12px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:mb-6 { margin-bottom: calc(14px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:mb-8 { margin-bottom: calc(18px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:mb-10 { margin-bottom: calc(22px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:mb-12 { margin-bottom: calc(26px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:mb-16 { margin-bottom: calc(32px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:my-3 { margin-block: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:my-4 { margin-block: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:my-5 { margin-block: calc(12px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:my-6 { margin-block: calc(14px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:my-8 { margin-block: calc(18px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:my-10 { margin-block: calc(22px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:my-12 { margin-block: calc(26px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:my-16 { margin-block: calc(32px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:gap-2\.5 { gap: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:gap-3 { gap: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:gap-3\.5 { gap: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:gap-4 { gap: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:gap-5 { gap: calc(12px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:gap-6 { gap: calc(14px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:gap-8 { gap: calc(18px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:gap-10 { gap: calc(22px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:gap-12 { gap: calc(26px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:gap-x-2\.5 { column-gap: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:gap-x-3 { column-gap: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:gap-x-3\.5 { column-gap: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:gap-x-4 { column-gap: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:gap-x-5 { column-gap: calc(12px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:gap-x-6 { column-gap: calc(14px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:gap-x-8 { column-gap: calc(18px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:gap-x-10 { column-gap: calc(22px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:gap-x-12 { column-gap: calc(26px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:gap-y-2\.5 { row-gap: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:gap-y-3 { row-gap: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:gap-y-3\.5 { row-gap: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:gap-y-4 { row-gap: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:gap-y-5 { row-gap: calc(12px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:gap-y-6 { row-gap: calc(14px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:gap-y-8 { row-gap: calc(18px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:gap-y-10 { row-gap: calc(22px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:gap-y-12 { row-gap: calc(26px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:space-y-2\.5 > :not(:last-child) { margin-block-end: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:space-y-3 > :not(:last-child) { margin-block-end: calc(8px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:space-y-3\.5 > :not(:last-child) { margin-block-end: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:space-y-4 > :not(:last-child) { margin-block-end: calc(10px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:space-y-5 > :not(:last-child) { margin-block-end: calc(12px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:space-y-6 > :not(:last-child) { margin-block-end: calc(14px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:space-y-8 > :not(:last-child) { margin-block-end: calc(18px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:space-y-10 > :not(:last-child) { margin-block-end: calc(22px * var(--dn-space, 1)); }
+html.ui-v3 :is(main, [role="dialog"], .ms-overlay) .xl\:space-y-12 > :not(:last-child) { margin-block-end: calc(26px * var(--dn-space, 1)); }
 }
 
 /* v6 · Çıkmış hizalama: bilgi (ⓘ) ve itiraz düğmeleri tek sağ sütunda, ilk satırla ortalı */

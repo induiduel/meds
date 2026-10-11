@@ -1,4 +1,6 @@
 import React, { useState, useMemo, useEffect } from 'react';
+import { Sheet } from '../ui/Sheet';
+import { useUiVersion } from '../../utils/uiVersion';
 import { PageHeader } from '../ui/PageHeader';
 import { EmptySearch } from '../ui/Animations';
 import {
@@ -13,6 +15,10 @@ import {
   Pill,
   Activity,
   Dna,
+  FlaskConical,
+  Tag,
+  LayoutGrid,
+  List as ListIcon,
   Bug,
   ArrowRight,
   ExternalLink,
@@ -28,12 +34,15 @@ import {
   BrainCircuit,
   HelpCircle,
   Hash,
-  Copy
+  Copy,
+  AlertCircle,
+  Send,
 } from 'lucide-react';
 import rawEncyclopediaData from '../../data/medical_encyclopedia.json';
-import { callClientResilientAi } from '../../services/api';
+import * as api from '../../services/api';
+import { triggerDomHighlightAndScroll, shareDeepLink } from '../../services/universalRedirectService';
 
-export type EncyclopediaCategory = 'all' | 'hastalik' | 'ilac' | 'patoloji' | 'patojen' | 'genetik';
+export type EncyclopediaCategory = 'all' | 'hastalik' | 'ilac' | 'patoloji' | 'patojen' | 'genetik' | 'terim' | 'protein';
 
 export interface EncyclopediaEntry {
   id: string;
@@ -76,7 +85,11 @@ const CATEGORY_TABS: { id: EncyclopediaCategory; label: string; icon: React.Elem
   { id: 'patoloji', label: 'Patoloji & Morfoloji', icon: Stethoscope, color: 'text-ok' },
   { id: 'patojen', label: 'Patojenler (Bakteri/Virüs)', icon: Bug, color: 'text-warn' },
   { id: 'genetik', label: 'Genetik & Gelişim', icon: Dna, color: 'text-ai' },
+  { id: 'protein', label: 'Protein & Molekül', icon: FlaskConical, color: 'text-ink-2' },
+  { id: 'terim', label: 'Terimler', icon: Tag, color: 'text-ink-2' },
 ];
+/** Veride İngilizce ya da eşanlamlı gelen kategori adları tek kimliğe indirilir */
+const CAT_ALIAS: Record<string, string> = { pathology: 'patoloji', genetic: 'genetik' };
 
 const ALPHABET = 'ABCÇDEFGĞHIİJKLMNOÖPRSŞTUÜVYZ'.split('');
 
@@ -87,6 +100,8 @@ const CAT_TONE: Record<string, { cls: string; icon: React.ElementType; label: st
   patoloji: { cls: 'd-kardi', icon: Stethoscope, label: 'Patoloji' },
   patojen: { cls: 'd-enf', icon: Bug, label: 'Patojen' },
   genetik: { cls: 'd-gen', icon: Dna, label: 'Genetik' },
+  protein: { cls: 'd-bio', icon: FlaskConical, label: 'Protein' },
+  terim: { cls: 'd-ic', icon: Tag, label: 'Terim' },
 };
 const catTone = (c?: string) => CAT_TONE[c || ''] || { cls: 'd-ic', icon: BookOpenText, label: 'Tıbbi kavram' };
 const firstLetterOf = (t?: string) => {
@@ -122,7 +137,9 @@ const readEntries = (): EncyclopediaEntry[] => {
 };
 /** Adı boş gelen maddelere kimlikten okunur ad verir: "venoz-tromboz" → "Venöz tromboz" değil, "Venoz tromboz" (veri düzeltilene kadar) */
 const withNames = (list: EncyclopediaEntry[]): EncyclopediaEntry[] =>
-  list.map((e) => {
+  list.map((e0) => {
+    const c = String(e0.category || '').toLowerCase();
+    const e = CAT_ALIAS[c] ? { ...e0, category: CAT_ALIAS[c] as EncyclopediaEntry['category'] } : e0;
     if (String(e.term || '').trim()) return e;
     const raw = String(e.id || '').replace(/[-_]+/g, ' ').trim();
     return { ...e, term: raw ? raw.charAt(0).toLocaleUpperCase('tr-TR') + raw.slice(1) : 'Adsız madde' };
@@ -178,6 +195,7 @@ export const MedicalEncyclopediaView: React.FC<MedicalEncyclopediaViewProps> = (
   const [sortMode, setSortMode] = useState<'default' | 'az' | 'za' | 'kurul'>('default');
 
   // Detail Modal State
+  const { isV7 } = useUiVersion();
   const [activeEntry, setActiveEntry] = useState<EncyclopediaEntry | null>(() => {
     if (initialTermId) {
       return ((rawEncyclopediaData as EncyclopediaEntry[]) || []).find((e) => e.id === initialTermId) || null;
@@ -189,6 +207,50 @@ export const MedicalEncyclopediaView: React.FC<MedicalEncyclopediaViewProps> = (
   const [isAiAuditing, setIsAiAuditing] = useState(false);
   const [auditMessage, setAuditMessage] = useState<string | null>(null);
   const [copiedLink, setCopiedLink] = useState(false);
+  const [showReportModal, setShowReportModal] = useState(false);
+  const [reportingEntry, setReportingEntry] = useState<EncyclopediaEntry | null>(null);
+  const [reportReason, setReportReason] = useState('Tanım / Bilgi hatalı');
+  const [reportDetails, setReportDetails] = useState('');
+  const [reportSuggestedAnswer, setReportSuggestedAnswer] = useState('');
+  const [isSubmittingReport, setIsSubmittingReport] = useState(false);
+
+  const handleOpenReport = (entry: EncyclopediaEntry, e?: React.MouseEvent) => {
+    e?.stopPropagation();
+    setReportingEntry(entry);
+    setShowReportModal(true);
+  };
+
+  const handleReportSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!reportingEntry) return;
+    if (!reportDetails.trim() && !reportSuggestedAnswer.trim()) {
+      alert('Lütfen hata veya düzeltme önerinizi açıklayın.');
+      return;
+    }
+    setIsSubmittingReport(true);
+    try {
+      const detailsWithAnswer = reportSuggestedAnswer.trim()
+        ? `${reportDetails.trim()}\n[Önerilen Doğru Bilgi]: ${reportSuggestedAnswer.trim()}`
+        : reportDetails.trim();
+
+      await api.ApiService.reportTerm(
+        reportingEntry.id,
+        reportReason,
+        detailsWithAnswer,
+        'Öğrenci'
+      );
+      alert('Hata bildiriminiz yapay zeka denetim kuyruğuna alındı.');
+      setShowReportModal(false);
+      setReportDetails('');
+      setReportSuggestedAnswer('');
+      setReportingEntry(null);
+    } catch (err: any) {
+      alert(`Bildirim gönderilemedi: ${err.message || 'Bilinmeyen hata'}`);
+    } finally {
+      setIsSubmittingReport(false);
+    }
+  };
+
   const [bookmarkedIds, setBookmarkedIds] = useState<string[]>(() => {
     try {
       return JSON.parse(localStorage.getItem('medsoru_bookmarked_encyclopedia') || '[]');
@@ -206,11 +268,27 @@ export const MedicalEncyclopediaView: React.FC<MedicalEncyclopediaViewProps> = (
     return Array.from(set).sort();
   }, [entries]);
 
-  // Handle URL Param change
+  // Handle URL Param change & Universal Highlight
   useEffect(() => {
-    if (initialTermId) {
-      const found = (entries || []).find((e) => e.id === initialTermId);
-      if (found) setActiveEntry(found);
+    if (typeof window === 'undefined') return;
+    const urlParams = new URLSearchParams(window.location.search);
+    const targetId = initialTermId || urlParams.get('id') || urlParams.get('term');
+    const highlight = urlParams.get('highlight');
+
+    if (targetId) {
+      const found = (entries || []).find(
+        (e) => e.id === targetId || e.term.toLowerCase() === targetId.toLowerCase()
+      );
+      if (found) {
+        setActiveEntry(found);
+        // Izgara görünümünde ayrıntı paneli ayrıca açılmalı (derin bağlantı yalnız kartı seçiyordu).
+        setGridSheet(true);
+        if (highlight) {
+          setTimeout(() => triggerDomHighlightAndScroll(highlight), 600);
+        }
+      }
+    } else if (highlight) {
+      setTimeout(() => triggerDomHighlightAndScroll(highlight), 400);
     }
   }, [initialTermId, entries]);
 
@@ -282,6 +360,18 @@ export const MedicalEncyclopediaView: React.FC<MedicalEncyclopediaViewProps> = (
 
   const wide = useWide();
   const [filtersOpen, setFiltersOpen] = useState(false);
+  // Görünüm: kart ızgarası (canvas "Glossary") ya da liste + ayrıntı; cihazda hatırlanır.
+  const [view, setView] = useState<'grid' | 'list'>(() => {
+    try { return localStorage.getItem('medsoru_glossary_view') === 'list' ? 'list' : 'grid'; } catch { return 'grid'; }
+  });
+  const pickView = (v: 'grid' | 'list') => { setView(v); try { localStorage.setItem('medsoru_glossary_view', v); } catch { /* yoksay */ } };
+  const [gridLimit, setGridLimit] = useState(60);
+  const [gridSheet, setGridSheet] = useState(false);
+  const catCount = useMemo(() => {
+    const m = new Map<string, number>();
+    entries.forEach((e) => m.set(String(e.category), (m.get(String(e.category)) || 0) + 1));
+    return m;
+  }, [entries]);
   const activeFilterCount = [selectedKurul !== 'Tümü', selectedDiscipline !== 'Tümü', sortMode !== 'default', onlyAiVerified, onlySaved].filter(Boolean).length;
   const listRef = React.useRef<HTMLDivElement>(null);
   const grouped = !searchQuery.trim() && (sortMode === 'default' || sortMode === 'az' || sortMode === 'za');
@@ -352,7 +442,7 @@ Lütfen bu kavramı fakülte sınavları ve TUS açısından en yüksek verimle 
 }
 `;
 
-      const res = await callClientResilientAi({
+      const res = await api.callClientResilientAi({
         prompt,
         responseFormat: 'json',
         preferredProvider: 'auto',
@@ -401,12 +491,14 @@ Lütfen bu kavramı fakülte sınavları ve TUS açısından en yüksek verimle 
     }
   };
 
-  const copyShareLink = (entry: EncyclopediaEntry) => {
-    const url = `${window.location.origin}/sozluk?id=${entry.id}`;
-    navigator.clipboard?.writeText(url).then(() => {
-      setCopiedLink(true);
-      setTimeout(() => setCopiedLink(false), 2000);
+  const copyShareLink = async (entry: EncyclopediaEntry, subTarget?: string) => {
+    await shareDeepLink({
+      type: 'term',
+      id: entry.id,
+      subTarget,
     });
+    setCopiedLink(true);
+    setTimeout(() => setCopiedLink(false), 2000);
   };
 
   const getCategoryBadge = (cat: string) => {
@@ -427,7 +519,7 @@ Lütfen bu kavramı fakülte sınavları ve TUS açısından en yüksek verimle 
   };
 
   const detailPanel = activeEntry ? (
-          <div className={wide ? 'gx-pane flex flex-col overflow-hidden' : 'ds-modal w-full max-w-[720px] flex flex-col max-h-[92dvh] overflow-hidden'}>
+          <div className={wide || isV7 ? 'gx-pane flex flex-col overflow-hidden' : 'ds-modal w-full max-w-[720px] flex flex-col max-h-[92dvh] overflow-hidden'}>
             {/* Modal Header */}
             <div className="ds-modal-head">
               <div className="min-w-0 flex-1">
@@ -441,7 +533,7 @@ Lütfen bu kavramı fakülte sınavları ve TUS açısından en yüksek verimle 
                   {activeEntry.aiAudit?.verified && (
                     <span className="ms-tag is-ok">
                       <ShieldCheck aria-hidden />
-                      <span>{activeEntry.uretici === 's13_study' ? 'Ders notuyla doğrulandı' : 'AI Onaylı'} (%{activeEntry.aiAudit.accuracyScore})</span>
+                      <span>{activeEntry.uretici === 's13_study' ? 'Ders notuyla doğrulandı' : 'AI Onaylı'} {typeof activeEntry.aiAudit.accuracyScore === 'number' ? ` (%${activeEntry.aiAudit.accuracyScore})` : ''}</span>
                     </span>
                   )}
                 </div>
@@ -472,9 +564,17 @@ Lütfen bu kavramı fakülte sınavları ve TUS açısından en yüksek verimle 
                   type="button"
                   onClick={() => copyShareLink(activeEntry)}
                   className="ms-btn is-icon is-ghost"
-                  title="Bağlantıyı Kopyala"
+                  title="Bağlantıyı Kopyala / Paylaş"
                 >
                   {copiedLink ? <Check className="text-ok" /> : <Share2 />}
+                </button>
+                <button
+                  type="button"
+                  onClick={(e) => handleOpenReport(activeEntry, e)}
+                  className="ms-btn is-icon is-ghost text-warn hover:text-warn"
+                  title="Bu terim için hata bildir"
+                >
+                  <AlertCircle />
                 </button>
                 {!wide && (
                 <button
@@ -501,7 +601,7 @@ Lütfen bu kavramı fakülte sınavları ve TUS açısından en yüksek verimle 
 
               {/* 1. Orijinal Ders Notu Bağlamı (Prof/Slayt Notu) */}
               {activeEntry.lectureContextNotes && (
-                <div className="ds-callout is-clinic">
+                <div id={`term-${activeEntry.id}-lecture`} className="ds-callout is-clinic">
                   <div className="flex flex-col gap-0.5 min-w-0">
                     <span className="ds-callout-t">
                       <GraduationCap aria-hidden />
@@ -520,7 +620,7 @@ Lütfen bu kavramı fakülte sınavları ve TUS açısından en yüksek verimle 
               )}
 
               {/* 2. Tanım */}
-              <div className="flex flex-col gap-1">
+              <div id={`term-${activeEntry.id}-def`} className="flex flex-col gap-1">
                 <span className="ds-label">Tanım</span>
                 <div className="m-0 text-md text-ink leading-[1.6]">
                   <RichField value={activeEntry.definition as unknown} />
@@ -529,7 +629,7 @@ Lütfen bu kavramı fakülte sınavları ve TUS açısından en yüksek verimle 
 
               {/* 3. Patoloji, Morfoloji ve Etki Mekanizması */}
               {activeEntry.morphologyOrMechanism && (
-                <div className="ds-callout">
+                <div id={`term-${activeEntry.id}-mech`} className="ds-callout">
                   <span className="ds-callout-t">
                     <Stethoscope aria-hidden />
                     <span>Patoloji, morfoloji ve mekanizma</span>
@@ -542,7 +642,7 @@ Lütfen bu kavramı fakülte sınavları ve TUS açısından en yüksek verimle 
 
               {/* 4. Ayırıcı Tanı Kriterleri */}
               {activeEntry.differentialDiagnosis && (
-                <div className="ds-callout is-note">
+                <div id={`term-${activeEntry.id}-diff`} className="ds-callout is-note">
                   <span className="ds-callout-t">
                     <Filter aria-hidden />
                     <span>Ayırıcı tanı</span>
@@ -555,7 +655,7 @@ Lütfen bu kavramı fakülte sınavları ve TUS açısından en yüksek verimle 
 
               {/* 5. Sınav Tuzağı & Dikkat Edilmesi Gerekenler */}
               {activeEntry.pitfallsAndWarnings && (
-                <div className="ds-callout is-bad">
+                <div id={`term-${activeEntry.id}-pitfalls`} className="ds-callout is-bad">
                   <span className="ds-callout-t">
                     <AlertTriangle aria-hidden />
                     <span>Sınav tuzağı</span>
@@ -568,7 +668,7 @@ Lütfen bu kavramı fakülte sınavları ve TUS açısından en yüksek verimle 
 
               {/* 6. Hoca İncisi & Sınav Spotları */}
               {activeEntry.examSpotPearls && (
-                <div className="ds-callout is-important">
+                <div id={`term-${activeEntry.id}-pearls`} className="ds-callout is-important">
                   <span className="ds-callout-t">
                     <Lightbulb aria-hidden />
                     <span>Sınav spotu</span>
@@ -625,7 +725,7 @@ Lütfen bu kavramı fakülte sınavları ve TUS açısından en yüksek verimle 
                 <span>
                   Doğrulama:{' '}
                   <strong className="text-ink">
-                    {activeEntry.aiAudit?.verified ? `Doğrulandı (%${activeEntry.aiAudit.accuracyScore})` : 'Beklemede'}
+                    {activeEntry.aiAudit?.verified ? `Doğrulandı${typeof activeEntry.aiAudit.accuracyScore === 'number' ? ` (%${activeEntry.aiAudit.accuracyScore})` : ''}` : 'Beklemede'}
                   </strong>
                 </span>
               </div>
@@ -649,12 +749,9 @@ Lütfen bu kavramı fakülte sınavları ve TUS açısından en yüksek verimle 
     <div className="ds-page">
       <PageHeader
         eyebrow="Müfredat kütüphanesi"
-        title="Sözlük & Ansiklopedi"
-        description="Ders notlarından derlenen hastalıklar, patoloji bulguları, ilaçlar ve patojenler. Her madde amfi notu bağlamında korunur."
-        stats={[
-          { label: 'Toplam madde', value: stats.total },
-          { label: 'Denetlenmiş', value: `%${stats.total ? Math.round((stats.verified / stats.total) * 100) : 0}`, tone: 'ok' },
-        ]}
+        title="Sözlük"
+        description="Ders notlarından derlenen hastalıklar, bulgular, ilaçlar ve patojenler."
+        stats={[{ label: 'madde', value: stats.total }]}
       />
 
       {/* Arama + hızlı süzgeçler */}
@@ -729,23 +826,23 @@ Lütfen bu kavramı fakülte sınavları ve TUS açısından en yüksek verimle 
           </button>
         </div>
 
-        {/* Kategori sekmeleri */}
-        <div className="cx-tabs" role="tablist" aria-label="Kategori">
-          {CATEGORY_TABS.map((tab) => {
+        {/* Kategoriler: ikonlu, sayılı (canvas "Glossary") */}
+        <div className="gl-cats" role="radiogroup" aria-label="Kategori">
+          {CATEGORY_TABS.filter((tab) => tab.id === 'all' || catCount.get(tab.id)).map((tab) => {
             const isSelected = selectedCategory === tab.id;
+            const Icon = tab.icon;
             return (
               <button
                 key={tab.id}
                 type="button"
-                role="tab"
-                aria-selected={isSelected}
-                onClick={() => {
-                  setSelectedCategory(tab.id);
-                  setSelectedLetter(null);
-                }}
-                className={`cx-tab ${isSelected ? 'is-on' : ''}`}
+                role="radio"
+                aria-checked={isSelected}
+                onClick={() => { setSelectedCategory(tab.id); setSelectedLetter(null); setGridLimit(60); }}
+                className={`gl-cat ${isSelected ? 'is-on' : ''}`}
               >
+                <span className="gl-ci" aria-hidden><Icon /></span>
                 {tab.label}
+                <span className="gl-n">{tab.id === 'all' ? entries.length : catCount.get(tab.id) || 0}</span>
               </button>
             );
           })}
@@ -763,6 +860,10 @@ Lütfen bu kavramı fakülte sınavları ve TUS açısından en yüksek verimle 
 
       {/* Sonuç satırı */}
       <div className="ds-resultbar">
+        <span className="rb-viewseg gl-view" role="radiogroup" aria-label="Görünüm">
+          <button type="button" role="radio" aria-checked={view === 'grid'} aria-label="Kart görünümü" title="Kartlar" onClick={() => pickView('grid')}><LayoutGrid /></button>
+          <button type="button" role="radio" aria-checked={view === 'list'} aria-label="Liste görünümü" title="Liste" onClick={() => pickView('list')}><ListIcon /></button>
+        </span>
         <span>
           <b>{filteredEntries.length}</b> madde
           {searchQuery && <> · “{searchQuery}”</>}
@@ -805,6 +906,39 @@ Lütfen bu kavramı fakülte sınavları ve TUS açısından en yüksek verimle 
             Tüm maddeleri göster
           </button>
         </div>
+      ) : view === 'grid' ? (
+        <div className="gl-grid-wrap">
+          <ul className="gl-grid">
+            {filteredEntries.slice(0, gridLimit).map((entry) => {
+              const tone = catTone(entry.category);
+              const Icon = tone.icon;
+              const saved = bookmarkedIds.includes(entry.id);
+              return (
+                <li key={entry.id} id={`term-${entry.id}`} className={tone.cls}>
+                  <button type="button" className="gl-card" onClick={() => { setActiveEntry(entry); setGridSheet(true); }}>
+                    <span className="gl-card-h">
+                      <b>{entry.term}</b>
+                      {entry.aiAudit?.verified && <ShieldCheck className="gl-ok" aria-label="Doğrulanmış" />}
+                      {saved && <Bookmark className="gl-saved" fill="currentColor" aria-label="Kaydedildi" />}
+                    </span>
+                    {entry.latinName && <i className="gl-latin">{entry.latinName}</i>}
+                    <span className="gl-def">{entry.definition}</span>
+                    <span className="gl-tags">
+                      <span className="gl-type"><Icon aria-hidden />{tone.label}</span>
+                      {entry.kurul && <span className="gl-tag">{String(entry.kurul).replace('Kurul ', 'K')}</span>}
+                      {entry.discipline && <span className="gl-tag">{entry.discipline}</span>}
+                    </span>
+                  </button>
+                </li>
+              );
+            })}
+          </ul>
+          {filteredEntries.length > gridLimit && (
+            <button type="button" className="os-btn gl-more" onClick={() => setGridLimit((n) => n + 60)}>
+              {Math.min(60, filteredEntries.length - gridLimit)} madde daha göster
+            </button>
+          )}
+        </div>
       ) : (
         <div className="gx">
           <div className="gx-list" ref={listRef}>
@@ -818,19 +952,44 @@ Lütfen bu kavramı fakülte sınavları ve TUS açısından en yüksek verimle 
                     const on = activeEntry?.id === entry.id;
                     const saved = bookmarkedIds.includes(entry.id);
                     return (
-                      <li key={entry.id} className={tone.cls}>
-                        <button type="button" onClick={() => setActiveEntry(entry)} aria-current={on ? 'true' : undefined} className={`gx-row ${on ? 'is-on' : ''}`}>
-                          <span className="hk-tile is-sm"><Icon aria-hidden /></span>
-                          <span className="gx-row-t">
-                            <b>
-                              {entry.term}
-                              {entry.aiAudit?.verified && <ShieldCheck className="gx-ok" aria-label="Doğrulanmış" />}
-                            </b>
-                            <span>{entry.latinName || entry.definition}</span>
-                          </span>
-                          {saved && <Bookmark className="gx-saved" fill="currentColor" aria-label="Kaydedildi" />}
-                          <span className="gx-kurul">{String(entry.kurul || '').replace('Kurul ', 'K')}</span>
-                        </button>
+                      <li key={entry.id} id={`term-${entry.id}`} className={tone.cls}>
+                        <div className="flex items-center w-full">
+                          <button type="button" onClick={() => setActiveEntry(entry)} aria-current={on ? 'true' : undefined} className={`gx-row flex-1 ${on ? 'is-on' : ''}`}>
+                            <span className="hk-tile is-sm"><Icon aria-hidden /></span>
+                            <span className="gx-row-t">
+                              <b>
+                                {entry.term}
+                                {entry.aiAudit?.verified && <ShieldCheck className="gx-ok" aria-label="Doğrulanmış" />}
+                              </b>
+                              <span>{entry.latinName || entry.definition}</span>
+                            </span>
+                            {saved && <Bookmark className="gx-saved" fill="currentColor" aria-label="Kaydedildi" />}
+                            <span className="gx-kurul">{String(entry.kurul || '').replace('Kurul ', 'K')}</span>
+                          </button>
+                          <div className="flex items-center gap-1 shrink-0 px-2">
+                            <button
+                              type="button"
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                copyShareLink(entry);
+                              }}
+                              className="p-1.5 rounded-lg text-ink-3 hover:text-accent hover:bg-canvas-subtle transition-colors cursor-pointer"
+                              title="Bağlantıyı Paylaş"
+                              aria-label="Paylaş"
+                            >
+                              <Share2 className="w-3.5 h-3.5" />
+                            </button>
+                            <button
+                              type="button"
+                              onClick={(e) => handleOpenReport(entry, e)}
+                              className="p-1.5 rounded-lg text-ink-3 hover:text-warn hover:bg-canvas-subtle transition-colors cursor-pointer"
+                              title="Hata Bildir"
+                              aria-label="Hata bildir"
+                            >
+                              <AlertCircle className="w-3.5 h-3.5" />
+                            </button>
+                          </div>
+                        </div>
                       </li>
                     );
                   })}
@@ -855,13 +1014,98 @@ Lütfen bu kavramı fakülte sınavları ve TUS açısından en yüksek verimle 
       {/* ========================================================= */}
       {/* DETAYLI ANSİKLOPEDİ MODAL / SLIDE-OVER                    */}
       {/* ========================================================= */}
-      {activeEntry && !wide && (
+      {(!wide || view === 'grid') && isV7 && (
+        <Sheet open={!!activeEntry && (view === 'list' || gridSheet)} onClose={() => { setActiveEntry(null); setGridSheet(false); }} label={activeEntry?.term || 'Madde'} size="full" width={720} bare>
+          {detailPanel}
+        </Sheet>
+      )}
+      {activeEntry && !wide && !isV7 && (
         <div
           className="ms-overlay ds-modal-wrap fixed inset-0 z-[70] flex items-end sm:items-center justify-center sm:p-4"
           role="dialog"
           aria-modal="true"
         >
           {detailPanel}
+        </div>
+      )}
+
+      {showReportModal && reportingEntry && (
+        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/50 backdrop-blur-xs animate-in fade-in duration-200">
+          <div className="bg-white dark:bg-[#12161f] border border-line rounded-2xl w-full max-w-lg shadow-xl overflow-hidden flex flex-col max-h-[90vh]">
+            <div className="flex items-center justify-between px-6 py-4 border-b border-line bg-canvas">
+              <div className="flex items-center gap-2">
+                <AlertCircle className="w-5 h-5 text-warn" />
+                <h3 className="font-semibold text-lg text-ink">Terim / Sözlük Hata Bildirimi</h3>
+              </div>
+              <button
+                type="button"
+                onClick={() => setShowReportModal(false)}
+                className="p-1 rounded-lg hover:bg-canvas text-ink-3 hover:text-ink cursor-pointer transition-colors"
+                aria-label="Kapat"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+            <form onSubmit={handleReportSubmit} className="p-6 flex flex-col gap-4 overflow-y-auto">
+              <div className="p-3 bg-canvas rounded-xl border border-line flex flex-col gap-1">
+                <span className="text-xs font-semibold text-ink-2">Bildirilen Terim:</span>
+                <span className="font-bold text-ink">{reportingEntry.term}</span>
+                {reportingEntry.kurul && <span className="text-xs text-ink-3">{reportingEntry.kurul} · {reportingEntry.discipline}</span>}
+              </div>
+              <div className="flex flex-col gap-1.5">
+                <label className="text-xs font-semibold text-ink-2 uppercase tracking-wider">Hata Türü</label>
+                <select
+                  value={reportReason}
+                  onChange={(e) => setReportReason(e.target.value)}
+                  className="w-full px-3 py-2 text-sm rounded-xl border border-line bg-canvas text-ink focus:border-accent outline-hidden"
+                >
+                  <option value="Tanım / Bilgi hatalı">Tanım / Bilgi hatalı</option>
+                  <option value="Mekanizma veya patoloji yanlış">Mekanizma veya patoloji yanlış</option>
+                  <option value="Sınav tuzağı / spot bilgisi eksik veya hatalı">Sınav tuzağı / spot bilgisi eksik veya hatalı</option>
+                  <option value="Ders notu / slayt uyumsuz">Ders notu / slayt uyumsuz</option>
+                  <option value="Diğer">Diğer</option>
+                </select>
+              </div>
+              <div className="flex flex-col gap-1.5">
+                <label className="text-xs font-semibold text-ink-2 uppercase tracking-wider">Açıklama *</label>
+                <textarea
+                  rows={3}
+                  value={reportDetails}
+                  onChange={(e) => setReportDetails(e.target.value)}
+                  placeholder="Tespit ettiğiniz eksik veya hatalı kısmı belirtin..."
+                  required
+                  className="w-full px-3 py-2 text-sm rounded-xl border border-line bg-canvas text-ink focus:border-accent outline-hidden resize-none"
+                />
+              </div>
+              <div className="flex flex-col gap-1.5">
+                <label className="text-xs font-semibold text-ink-2 uppercase tracking-wider">Önerilen Doğru Bilgi / Metin (İsteğe Bağlı)</label>
+                <input
+                  type="text"
+                  value={reportSuggestedAnswer}
+                  onChange={(e) => setReportSuggestedAnswer(e.target.value)}
+                  placeholder="Doğru ifade veya eklenmesini önerdiğiniz bilgi..."
+                  className="w-full px-3 py-2 text-sm rounded-xl border border-line bg-canvas text-ink focus:border-accent outline-hidden"
+                />
+              </div>
+              <div className="flex items-center justify-end gap-3 pt-3 border-t border-line">
+                <button
+                  type="button"
+                  onClick={() => setShowReportModal(false)}
+                  className="px-4 py-2 text-sm font-semibold rounded-xl text-ink-2 hover:bg-canvas cursor-pointer transition-colors"
+                >
+                  Vazgeç
+                </button>
+                <button
+                  type="submit"
+                  disabled={isSubmittingReport}
+                  className="px-5 py-2 text-sm font-semibold rounded-xl bg-accent text-white hover:bg-accent-hover disabled:opacity-50 cursor-pointer flex items-center gap-2 transition-colors"
+                >
+                  <Send className="w-4 h-4" />
+                  {isSubmittingReport ? 'Gönderiliyor...' : 'Bildirimi Gönder'}
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
       )}
     </div>

@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useMemo, useRef } from 'react';
+import { getCustomApiUrl } from '../../services/api';
 import {
   FileText,
   ExternalLink,
@@ -93,7 +94,7 @@ export const DeckPdfViewer: React.FC<DeckPdfViewerProps> = ({
       if (!pdfMeta?.fileName && !pdfMeta?.localFileName) return;
       const targetName = pdfMeta.localFileName || pdfMeta.fileName;
       try {
-        const resp = await fetch(`/api/lecture-pdf/${encodeURIComponent(targetName)}`, {
+        const resp = await fetch(`${getCustomApiUrl() || ''}/api/lecture-pdf/${encodeURIComponent(targetName)}`, {
           method: 'HEAD',
         });
         if (active) {
@@ -134,7 +135,7 @@ export const DeckPdfViewer: React.FC<DeckPdfViewerProps> = ({
     }
     if (sourceType === 'local' && (pdfMeta?.localFileName || pdfMeta?.fileName)) {
       const fn = pdfMeta.localFileName || pdfMeta.fileName;
-      return `/api/lecture-pdf/${encodeURIComponent(fn)}#page=${activePage}&zoom=${zoom}`;
+      return `${getCustomApiUrl() || ''}/api/lecture-pdf/${encodeURIComponent(fn)}#page=${activePage}&zoom=${zoom}`;
     }
     // Default: Google Drive Preview Embed
     if (pdfMeta?.fileId) {
@@ -147,7 +148,7 @@ export const DeckPdfViewer: React.FC<DeckPdfViewerProps> = ({
   const directLink = useMemo(() => {
     if (sourceType === 'custom' && customFileUrl) return customFileUrl;
     if (sourceType === 'local' && (pdfMeta?.localFileName || pdfMeta?.fileName)) {
-      return `/api/lecture-pdf/${encodeURIComponent(pdfMeta.localFileName || pdfMeta.fileName)}#page=${activePage}`;
+      return `${getCustomApiUrl() || ''}/api/lecture-pdf/${encodeURIComponent(pdfMeta.localFileName || pdfMeta.fileName)}#page=${activePage}`;
     }
     if (pdfMeta?.driveUrl) return pdfMeta.driveUrl;
     if (pdfMeta?.fileId) return `https://drive.google.com/file/d/${pdfMeta.fileId}/view`;

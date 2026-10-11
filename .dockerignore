@@ -1,0 +1,23 @@
+# .dockerignore — Oracle imajını küçük tutar. data/ ve veri klasörleri
+# imaja GÖMÜLMEZ; çalışırken volume ile bağlanır (rsync ile eşitlenir).
+node_modules
+dist
+dist-gh
+data
+.git
+.vscode
+.venv*
+__pycache__
+*.log
+*.backup*
+*.bak*
+.env*
+!deploy/oracle/.env.oracle.example
+supabase-server/volumes
+supabase-server/backups
+linux
+models
+training_data
+.medds_ds
+.tmp*
+cloudflared.exe

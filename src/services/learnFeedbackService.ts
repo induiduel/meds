@@ -121,5 +121,28 @@ export function createLearnFeedbackStore(dataDir: string) {
       save();
       return true;
     },
+
+    delete(id: string): boolean {
+      const list = load();
+      const idx = list.findIndex((x) => x.id === id);
+      if (idx === -1) return false;
+      list.splice(idx, 1);
+      save();
+      return true;
+    },
+
+    update(id: string, updates: { field?: string; reason?: string }): LearnFeedback | null {
+      const f = load().find((x) => x.id === id);
+      if (!f) return null;
+      if (updates.field && updates.field.trim()) f.field = clip(updates.field, 600);
+      if (updates.reason && updates.reason.trim()) f.reason = clip(updates.reason, 1500);
+      save();
+      return f;
+    },
+
+    get(id: string): LearnFeedback | undefined {
+      return load().find((x) => x.id === id);
+    },
   };
 }
+

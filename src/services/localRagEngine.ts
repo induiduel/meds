@@ -51,7 +51,11 @@ export type RagDocumentType =
   | 'deepseek_contribution'
   | 'gemini_v3_question'
   | 'gemini_v3_lecture'
-  | 'gemini_v3_term';
+  | 'gemini_v3_term'
+  | 'ornek_question'
+  | 'deck_slide'
+  | 'glossary_term'
+  | 'disease';
 
 export interface RagChunk {
   id: string;
@@ -148,8 +152,9 @@ function cleanTextForTokens(text: string): string[] {
 let supabaseClient: SupabaseClient | null = null;
 function getSupabase(): SupabaseClient | null {
   if (supabaseClient) return supabaseClient;
-  const url = process.env.SUPABASE_URL || 'https://kgutsltgmqbnlxcnzrtl.supabase.co';
-  const key = process.env.SUPABASE_SECRET_KEY || process.env.SUPABASE_PUBLISHABLE_KEY || 'sb_publishable_EVdXdIi_2mxVr3HZKYabwQ_li5KuE1Q';
+  // Büyük veri Oracle-local'den (LOCAL_*), yoksa klasik SUPABASE_* (cihazda localhost:8000).
+  const url = process.env.LOCAL_SUPABASE_URL || process.env.SUPABASE_URL || 'https://kgutsltgmqbnlxcnzrtl.supabase.co';
+  const key = process.env.LOCAL_SUPABASE_KEY || process.env.SUPABASE_SECRET_KEY || process.env.SUPABASE_PUBLISHABLE_KEY || 'sb_publishable_EVdXdIi_2mxVr3HZKYabwQ_li5KuE1Q';
   if (url && key) {
     try {
       supabaseClient = createClient(url, key);
@@ -435,7 +440,7 @@ export function chunkPastQuestions(): RagChunk[] {
     const isDenetleyici = Boolean(q.denetleyiciOnayi || q.denetleyici_onayi || q.surum === 'denetleyici');
     const denetleyiciData = q.denetleyiciSurumu || {};
 
-    const stem = (isDenetleyici ? (denetleyiciData.stem || q.stem) : (q.stem || q.reconstruction?.stem || q.rawQuestion?.stem || '')).trim();
+    const stem = ((isDenetleyici ? (denetleyiciData.stem || q.stem) : (q.stem || q.reconstruction?.stem || q.rawQuestion?.stem || '')) || '').trim();
     if (!stem) continue;
 
     const opts = (isDenetleyici && denetleyiciData.options) ? denetleyiciData.options : (q.options || q.reconstruction?.options || q.rawQuestion?.options || []);
@@ -1015,6 +1020,180 @@ export function chunkDeepSeekData(): RagChunk[] {
 }
 
 // ==============================================================================
+// Örnek sorular (ornek_sorular/k1/*.json: ders → kazanım → sorular)
+// ==============================================================================
+export function chunkOrnekSorular(): RagChunk[] {
+  const base = path.resolve(PROJECT_ROOT, 'src', 'data', 'ornek_sorular', 'k1');
+  const chunks: RagChunk[] = [];
+  const now = new Date().toISOString();
+  let files: string[] = [];
+  try {
+    files = fs.readdirSync(base).filter((f) => f.endsWith('.json') && f !== 'index.json');
+  } catch { return []; }
+  for (const f of files) {
+    let ders: any;
+    try { ders = JSON.parse(fs.readFileSync(path.join(base, f), 'utf-8')); } catch { continue; }
+    const dersAd = ders.ders || 'Tıp';
+    const konu = ders.konu || '';
+    for (const kaz of ders.kazanimlar || []) {
+      for (const s of kaz.sorular || []) {
+        const kok = String(s.soru || '').trim();
+        if (!kok) continue;
+        const sec = Array.isArray(s.secenekler)
+          ? s.secenekler.map((o: any) => typeof o === 'string' ? o : `${o.label || o.key || ''}) ${o.text || o.metin || ''}`).join('\n')
+          : '';
+        const content = `[ÖRNEK SORU]\nDers: ${dersAd}\nKonu: ${konu}\nKazanım: ${kaz.metin || s.kazanim || ''}\nZorluk: ${s.zorluk || ''}\nSoru:\n${kok}\n\nSeçenekler:\n${sec}\n\nDoğru: ${s.dogru || ''}\nAçıklama: ${s.aciklama || ''}`.slice(0, 2000);
+        if (content.length < 20) continue;
+        const h = hashContent(content);
+        chunks.push({
+          id: `chunk-ornek-${s.id || h.slice(0, 12)}`,
+          documentId: String(s.id || ders.id || f),
+          documentType: 'ornek_question',
+          committeeId: 'donem3-kurul1',
+          discipline: dersAd,
+          title: `Örnek Soru: ${konu || dersAd}`,
+          pageNumber: undefined,
+          content,
+          metadata: { source: 'ornek_sorular', kurul: ders.kurul, ogretimUyesi: ders.ogretim_uyesi, zorluk: s.zorluk },
+          hash: h,
+          createdAt: now,
+          updatedAt: now,
+        });
+      }
+    }
+  }
+  return chunks;
+}
+
+// ==============================================================================
+// İnteraktif öğrenme desteleri (114 deste, slayt başına 1 chunk: anlatım + ögeler)
+// ==============================================================================
+export function chunkInteractiveDecks(): RagChunk[] {
+  const p = path.resolve(PROJECT_ROOT, 'src', 'data', 'interactive_learning_decks.json');
+  if (!fs.existsSync(p)) return [];
+  const raw = JSON.parse(fs.readFileSync(p, 'utf-8'));
+  const decks = Array.isArray(raw) ? raw : raw.decks || [];
+  const chunks: RagChunk[] = [];
+  const now = new Date().toISOString();
+  const str = (v: any): string => (typeof v === 'string' ? v : v == null ? '' : JSON.stringify(v)).trim();
+  for (const d of decks) {
+    const deckId = d.deckId || d.id || '';
+    const deckTitle = d.title || d.shortTitle || deckId;
+    const disc = d.discipline || 'Tıp';
+    for (const sl of d.slides || []) {
+      const parts = [
+        str(sl.synthesisNarrative), str(sl.content), str(sl.coreContent),
+        (sl.spots || []).map(str).join('\n'),
+        (sl.spotPearls || []).map(str).join('\n'),
+        (sl.flashcards || []).map((f: any) => `${str(f.front || f.soru)} → ${str(f.back || f.cevap)}`).join('\n'),
+        str(sl.microQuiz), str(sl.practiceQuestion),
+        (sl.interactiveElements || []).map((e: any) => str(e.type || e.baslik || e.title)).join(', '),
+        (sl.medicalTerms || []).map(str).join(', '),
+      ].filter(Boolean).join('\n\n').slice(0, 2000);
+      if (parts.length < 20) continue;
+      const content = `[İNTERAKTİF DERS SLAYTI]\nDeste: ${deckTitle}\nDers: ${disc}\nSlayt ${sl.slideNumber || ''}: ${str(sl.title)}\n\n${parts}`;
+      const h = hashContent(content);
+      chunks.push({
+        id: `chunk-deck-${deckId}-s${sl.slideNumber || '0'}`,
+        documentId: String(deckId),
+        documentType: 'deck_slide',
+        committeeId: d.committee || 'donem3-kurul1',
+        discipline: disc,
+        title: `${deckTitle} — ${str(sl.title).slice(0, 80)}`,
+        pageNumber: typeof sl.slideNumber === 'number' ? sl.slideNumber : undefined,
+        content,
+        metadata: { source: 'interactive_deck', deckId, slideNumber: sl.slideNumber, instructor: d.instructor },
+        hash: h,
+        createdAt: now,
+        updatedAt: now,
+      });
+    }
+  }
+  return chunks;
+}
+
+// ==============================================================================
+// Sözlük + tıbbi terimler (medical_glossary.json + tibbi_terimler_sozlugu.json)
+// ==============================================================================
+export function chunkGlossaryTerms(): RagChunk[] {
+  const chunks: RagChunk[] = [];
+  const now = new Date().toISOString();
+  const push = (term: string, body: string, extra: Record<string, any>) => {
+    const content = `[SÖZLÜK TERİMİ]\nTerim: ${term}\n${body}`.slice(0, 1500);
+    if (!term || content.length < 20) return;
+    const h = hashContent(content);
+    chunks.push({
+      id: `chunk-gloss-${h.slice(0, 12)}`,
+      documentId: term,
+      documentType: 'glossary_term',
+      committeeId: extra.committee || 'donem3-kurul1',
+      discipline: extra.discipline || 'Tıp',
+      title: `Sözlük: ${term}`,
+      pageNumber: undefined,
+      content,
+      metadata: { source: 'sozluk', ...extra },
+      hash: h,
+      createdAt: now,
+      updatedAt: now,
+    });
+  };
+  try {
+    const g = JSON.parse(fs.readFileSync(path.resolve(PROJECT_ROOT, 'src', 'data', 'medical_glossary.json'), 'utf-8'));
+    for (const [k, v] of Object.entries<any>(g)) {
+      const body = [`Tanım: ${v.definition || v.description || ''}`, `Kategori: ${v.category || ''}`,
+        `Klinik inci: ${v.clinicalPearl || ''}`, `Eşanlamlı: ${(v.aliases || []).join(', ')}`].filter((l) => l.split(': ')[1]?.trim()).join('\n');
+      push(v.term || k, body, { discipline: v.discipline, committee: v.committee, category: v.category });
+    }
+  } catch { /* yoksa atla */ }
+  try {
+    const t = JSON.parse(fs.readFileSync(path.resolve(PROJECT_ROOT, '..', 'meds_database_v2', 'tibbi_terimler_sozlugu', 'tibbi_terimler_sozlugu.json'), 'utf-8'));
+    for (const [k, v] of Object.entries<any>(t.terimler || {})) {
+      const body = [`Türkçe: ${v.turkce || k}`, `Latin: ${v.latin || ''}`, `İngilizce: ${v.english || ''}`,
+        `Anlam: ${v.kisa_anlam || ''}`, `Kategori: ${v.kategori || ''}`, `ICD-10: ${v['icd10/qid'] || ''}`].filter((l) => l.split(': ')[1]?.trim()).join('\n');
+      push(v.turkce || k, body, { discipline: 'Tıp', category: v.kategori, terimId: v.id });
+    }
+  } catch { /* yoksa atla */ }
+  return chunks;
+}
+
+// ==============================================================================
+// Hastalıklar (diseases.json: tanı, belirti, tedavi)
+// ==============================================================================
+export function chunkDiseases(): RagChunk[] {
+  const p = path.resolve(PROJECT_ROOT, 'src', 'data', 'diseases.json');
+  if (!fs.existsSync(p)) return [];
+  const list = JSON.parse(fs.readFileSync(p, 'utf-8'));
+  const chunks: RagChunk[] = [];
+  const now = new Date().toISOString();
+  for (const d of Array.isArray(list) ? list : []) {
+    const body = [`Latince: ${d.latinName || ''}`, `Kategori: ${d.category || ''}`, `ICD: ${d.icd_code || ''}`,
+      `Etiyoloji: ${d.etiology || ''}`, `Belirtiler: ${d.symptoms_clinical || ''}`,
+      `Patognomonik: ${d.patognomonik_features || d.pathognomonic_features || ''}`,
+      `Tanı: ${d.diagnostic_methods || ''}`, `Tedavi: ${d.treatment || ''}`,
+      `Patofizyoloji: ${d.physiology_pathophysiology || d.morphology_pathology || ''}`]
+      .filter((l) => l.split(': ')[1]?.trim()).join('\n');
+    const content = `[HASTALIK]\nHastalık: ${d.name}\n${body}`.slice(0, 1500);
+    if (!d.name || content.length < 20) continue;
+    const h = hashContent(content);
+    chunks.push({
+      id: `chunk-dis-${d.id || h.slice(0, 12)}`,
+      documentId: String(d.id || d.name),
+      documentType: 'disease',
+      committeeId: 'donem3-kurul1',
+      discipline: 'Tıp',
+      title: `Hastalık: ${d.name}`,
+      pageNumber: undefined,
+      content,
+      metadata: { source: 'hastaliklar', icd: d.icd_code, category: d.category, latin: d.latinName },
+      hash: h,
+      createdAt: now,
+      updatedAt: now,
+    });
+  }
+  return chunks;
+}
+
+// ==============================================================================
 // Ingest Single AI Interaction in Real-time (Chat Drawer, Optimizer, Redact)
 // ==============================================================================
 export async function recordAiInteraction(params: {
@@ -1262,6 +1441,24 @@ export async function runAutoChunking(options: { limit?: number; syncToCloud?: b
     const dsc = chunkDeepSeekData();
     console.log(`✓ 9/9 DeepSeek Katkıları: ${dsc.length} parça`);
     allChunks.push(...dsc);
+
+    // 10. Örnek sorular (k1 ders dosyaları)
+    const os = chunkOrnekSorular();
+    console.log(`✓ 10/12 Örnek Sorular: ${os.length} parça`);
+    allChunks.push(...os);
+
+    // 11. İnteraktif öğrenme desteleri (slayt başına 1 chunk)
+    const dk = chunkInteractiveDecks();
+    console.log(`✓ 11/12 İnteraktif Deste Slaytları: ${dk.length} parça`);
+    allChunks.push(...dk);
+
+    // 12. Sözlük terimleri + hastalıklar
+    const gl = chunkGlossaryTerms();
+    console.log(`✓ 12/12 Sözlük Terimleri: ${gl.length} parça`);
+    allChunks.push(...gl);
+    const dz = chunkDiseases();
+    console.log(`✓ 12/12 Hastalıklar: ${dz.length} parça`);
+    allChunks.push(...dz);
 
     let newlyIndexed = 0;
     for (const chunk of allChunks) {

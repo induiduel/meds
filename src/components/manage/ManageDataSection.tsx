@@ -11,7 +11,7 @@ import { AdminEditQuestionModal } from '../AdminEditQuestionModal';
  * Pick a dataset, search, sort by any column, hide columns, select rows for bulk actions,
  * open a row for its details, export CSV. Destructive actions ask once, inline.
  */
-type DatasetId = 'questions' | 'past' | 'users' | 'decks' | 'glossary' | 'summaries';
+type DatasetId = 'questions' | 'past' | 'users' | 'decks' | 'glossary' | 'summaries' | 'ornek' | 'cards' | 'interactions' | 'comments' | 'reports';
 type Row = Record<string, any>;
 
 interface Column {
@@ -49,6 +49,22 @@ const STATUS_TONE: Record<string, string> = { completed: 'is-ok', gathering: 'is
 const STATUS_LABEL: Record<string, string> = { completed: 'Doğrulandı', gathering: 'Taslak', empty: 'Boş' };
 const fmtDate = (s?: string) => (s ? new Date(s).toLocaleDateString('tr-TR', { day: '2-digit', month: '2-digit', year: '2-digit' }) : '—');
 const stemOf = (q: Row) => q?.reconstruction?.stem || q?.stem || q?.rawQuestion?.stem || q?.fragments?.[0]?.text || q?.topic || '';
+
+/* Yeniden kurulum (2026-10-11): platformdaki her veri tipi aynı masada. Ağır kaynaklar yalnız seçilince yüklenir. */
+const ornekLoaders = import.meta.glob('../../data/ornek_sorular/k1/k1-*.json', { import: 'default' }) as Record<string, () => Promise<any>>;
+const IX_LABEL: Record<string, string> = {
+  micro_quiz: 'Mini soru', cloze_masking: 'Boşluk doldurma', interactive_table: 'Gizli tablo', before_after_slider: 'Karşılaştırma',
+  branching_logic: 'Klinik karar', causal_chain: 'Mekanizma zinciri', active_recall: 'Aktif hatırlama', spot_the_lie: 'Tuzak avı',
+  swipe_matching: 'Hızlı eşleme', feature_bidding: 'Özellik eşleme', venn_grid: 'Çapraz tablo',
+};
+const ixSummary = (e: any): string =>
+  String(e?.question || e?.prompt || e?.stem || e?.title || e?.sentence || e?.scenario || e?.statement || e?.front || e?.instruction || '').replace(/\s+/g, ' ').trim();
+const collectIx = (slide: any): any[] => {
+  const out: any[] = [];
+  const push = (v: any) => { if (Array.isArray(v)) v.forEach(push); else if (v && typeof v === 'object' && typeof (v.type || v.kind) === 'string') out.push(v); };
+  ['interactiveElements', 'elements', 'interaction', 'interactiveElement', 'microQuiz'].forEach((k) => push(slide?.[k]));
+  return out;
+};
 const Pill: React.FC<{ cls: string; children: React.ReactNode }> = ({ cls, children }) => <span className={`ms-tag ${cls}`}>{children}</span>;
 
 export const ManageDataSection: React.FC<Props> = ({
@@ -179,6 +195,113 @@ export const ManageDataSection: React.FC<Props> = ({
           { key: 'discipline', label: 'Ders', width: '170px', value: (r) => r.discipline || '' },
           { key: 'points', label: 'Başlık sayısı', width: '100px', mono: true, value: (r) => r.keyPoints?.length || 0 },
           { key: 'file', label: 'Dosya', width: '200px', value: (r) => r.fileName || '' },
+        ],
+      },
+      {
+        id: 'ornek',
+        label: 'Örnek sorular',
+        load: async () => {
+          const files = await Promise.all(Object.values(ornekLoaders).map((l) => l().catch(() => null)));
+          const rows: Row[] = [];
+          files.forEach((d: any) => (d?.kazanimlar || []).forEach((k: any) => (k.sorular || []).forEach((q: any) =>
+            rows.push({ ...q, ders: d.ders, dersId: d.id, kazanimMetin: k.metin }))));
+          return rows;
+        },
+        idOf: (r) => String(r.id),
+        defaultSort: { key: 'ders', dir: 1 },
+        columns: [
+          { key: 'id', label: 'Kimlik', width: '120px', mono: true, value: (r) => r.id || '' },
+          { key: 'soru', label: 'Soru', width: 'minmax(0,1fr)', value: (r) => r.soru || '' },
+          { key: 'ders', label: 'Ders', width: '170px', value: (r) => r.ders || '' },
+          { key: 'kazanim', label: 'Kazanım', width: '80px', mono: true, value: (r) => r.kazanim || 0 },
+          { key: 'zorluk', label: 'Zorluk', width: '80px', value: (r) => r.zorluk || '', render: (r) => <Pill cls={r.zorluk === 'zor' ? 'is-warn' : r.zorluk === 'kolay' ? 'is-ok' : 'is-accent'}>{r.zorluk || '—'}</Pill> },
+          { key: 'dogru', label: 'Cevap', width: '60px', mono: true, value: (r) => r.dogru || '' },
+        ],
+      },
+      {
+        id: 'cards',
+        label: 'Kartlar',
+        load: async () => {
+          const { loadAllDecks } = await import('../../data/deckStore');
+          const decks: any[] = await loadAllDecks();
+          const rows: Row[] = [];
+          decks.forEach((d) => (d.slides || []).forEach((s: any) => (s.flashcards || []).forEach((c: any, i: number) =>
+            rows.push({ id: `${d.id}:${s.slideNumber}:${c.id || i}`, front: c.front || c.question || '', back: c.back || c.answer || '', deck: d.shortTitle || d.title, slide: s.slideNumber, category: c.category || '' }))));
+          return rows;
+        },
+        idOf: (r) => r.id,
+        defaultSort: { key: 'deck', dir: 1 },
+        columns: [
+          { key: 'front', label: 'Ön yüz', width: 'minmax(0,1fr)', value: (r) => r.front },
+          { key: 'back', label: 'Arka yüz', width: 'minmax(0,1fr)', value: (r) => r.back },
+          { key: 'deck', label: 'Deste', width: '180px', value: (r) => r.deck || '' },
+          { key: 'slide', label: 'Slayt', width: '60px', mono: true, value: (r) => r.slide || 0 },
+          { key: 'category', label: 'Tür', width: '110px', value: (r) => r.category || '' },
+        ],
+      },
+      {
+        id: 'interactions',
+        label: 'Öğren etkileşimleri',
+        load: async () => {
+          const { loadAllDecks } = await import('../../data/deckStore');
+          const decks: any[] = await loadAllDecks();
+          const rows: Row[] = [];
+          decks.forEach((d) => (d.slides || []).forEach((s: any) => collectIx(s).forEach((e: any, i: number) => {
+            const kind = String(e.type || e.kind);
+            rows.push({ id: `${d.id}:${s.slideNumber}:${i}`, kind, kindLabel: IX_LABEL[kind] || kind, summary: ixSummary(e), deck: d.shortTitle || d.title, slide: s.slideNumber });
+          })));
+          return rows;
+        },
+        idOf: (r) => r.id,
+        defaultSort: { key: 'deck', dir: 1 },
+        columns: [
+          { key: 'kind', label: 'Tür', width: '150px', value: (r) => r.kindLabel, render: (r) => <Pill cls="is-accent">{r.kindLabel}</Pill> },
+          { key: 'summary', label: 'İçerik', width: 'minmax(0,1fr)', value: (r) => r.summary || '' },
+          { key: 'deck', label: 'Deste', width: '180px', value: (r) => r.deck || '' },
+          { key: 'slide', label: 'Slayt', width: '60px', mono: true, value: (r) => r.slide || 0 },
+        ],
+      },
+      {
+        id: 'comments',
+        label: 'Yorumlar',
+        load: async () => {
+          const past: any[] = (await ApiService.getPastQuestions({ includeAmbiguous: true })) || [];
+          const rows: Row[] = [];
+          [...past, ...(questions as any[])].forEach((q) => (q.comments || []).forEach((c: any, i: number) =>
+            rows.push({ id: `${q.id}:${c.id || i}`, text: c.text || '', author: c.author || '', at: c.createdAt || c.timestamp || '', question: stemOf(q), qid: q.id, parent: c.parentId ? 'Yanıt' : 'Yorum' })));
+          return rows;
+        },
+        idOf: (r) => r.id,
+        defaultSort: { key: 'at', dir: -1 },
+        columns: [
+          { key: 'text', label: 'Yorum', width: 'minmax(0,1fr)', value: (r) => r.text },
+          { key: 'author', label: 'Yazan', width: '140px', value: (r) => r.author },
+          { key: 'parent', label: 'Tür', width: '80px', value: (r) => r.parent, render: (r) => <Pill cls={r.parent === 'Yanıt' ? '' : 'is-accent'}>{r.parent}</Pill> },
+          { key: 'question', label: 'Soru', width: '260px', value: (r) => r.question },
+          { key: 'at', label: 'Tarih', width: '84px', value: (r) => r.at, render: (r) => fmtDate(r.at) },
+        ],
+      },
+      {
+        id: 'reports',
+        label: 'Hata bildirimleri',
+        load: async () => {
+          const past: any[] = (await ApiService.getPastQuestions({ includeAmbiguous: true })) || [];
+          const rows: Row[] = [];
+          const add = (src: string) => (q: any) => (q.reports || []).forEach((r: any, i: number) =>
+            rows.push({ id: r.id || `${q.id}:${i}`, reason: r.reason || '', details: r.details || '', status: r.status || 'pending', by: r.reportedBy || '', at: r.reportedAt || '', question: stemOf(q), qid: q.id, src }));
+          past.forEach(add('Çıkmış'));
+          (questions as any[]).forEach(add('Havuz'));
+          return rows;
+        },
+        idOf: (r) => String(r.id),
+        defaultSort: { key: 'at', dir: -1 },
+        columns: [
+          { key: 'reason', label: 'Sebep', width: '170px', value: (r) => r.reason },
+          { key: 'details', label: 'Ayrıntı', width: 'minmax(0,1fr)', value: (r) => r.details },
+          { key: 'status', label: 'Durum', width: '110px', value: (r) => r.status, render: (r) => <Pill cls={r.status === 'pending' ? 'is-warn' : r.status === 'rejected' ? '' : 'is-ok'}>{r.status === 'pending' ? 'Bekliyor' : r.status === 'rejected' ? 'Reddedildi' : 'Çözüldü'}</Pill> },
+          { key: 'src', label: 'Kaynak', width: '80px', value: (r) => r.src },
+          { key: 'question', label: 'Soru', width: '240px', value: (r) => r.question },
+          { key: 'at', label: 'Tarih', width: '84px', value: (r) => r.at, render: (r) => fmtDate(r.at) },
         ],
       },
     ],
@@ -505,7 +628,9 @@ export const ManageDataSection: React.FC<Props> = ({
 
   return (
     <div className="flex flex-col gap-3 min-w-0">
-      <Seg label="Veri kümesi" value={dsId} onChange={setDsId} options={DATASETS.map((d) => ({ id: d.id, label: d.label }))} className="self-start" />
+      <div className="rb-ds-scroll" role="region" aria-label="Veri kümeleri">
+        <Seg label="Veri kümesi" value={dsId} onChange={setDsId} options={DATASETS.map((d) => ({ id: d.id, label: d.label }))} className="self-start" />
+      </div>
 
       <div className="flex flex-wrap items-center gap-2">
         <SearchBox value={query} onChange={setQuery} placeholder={`${ds.label} içinde ara`} count={`${visible.length.toLocaleString('tr-TR')} kayıt`} className="flex-1 min-w-[220px]" />

@@ -1,5 +1,6 @@
 import React, { useEffect, useMemo, useState } from 'react';
-import { ArrowLeft, ArrowRight, Bookmark, BookmarkCheck, Star, NotebookPen, RotateCcw, Shuffle, Check, X as XIcon, SlidersHorizontal, ChevronDown, ChevronUp, Sparkles } from 'lucide-react';
+import { CopyQuestionButton } from '../ui/CopyQuestionButton';
+import { ArrowLeft, ArrowRight, Bookmark, BookmarkCheck, Star, NotebookPen, RotateCcw, Shuffle, Check, X as XIcon, SlidersHorizontal, ChevronDown, ChevronUp, Sparkles, PanelLeftClose, PanelLeftOpen } from 'lucide-react';
 import { Committee } from '../../types';
 import {
   StudyQuestion,
@@ -49,6 +50,15 @@ export const SolveView: React.FC<SolveViewProps> = ({ bank, committees, loading,
   const [noteText, setNoteText] = useState('');
   const [noteSaved, setNoteSaved] = useState(false);
   const [filtersOpen, setFiltersOpen] = useState(false);
+  // Masaüstü filtre çekmecesi: tek tıkla kapanır, tercih cihazda saklanır.
+  const [drawer, setDrawerState] = useState(() => {
+    try { return localStorage.getItem('medsoru_solve_drawer') !== '0'; } catch { return true; }
+  });
+  const setDrawer = (open: boolean) => {
+    setDrawerState(open);
+    try { localStorage.setItem('medsoru_solve_drawer', open ? '1' : '0'); } catch { /* yoksay */ }
+  };
+  const [dersOpen, setDersOpen] = useState(true);
   const [aiChatOpen, setAiChatOpen] = useState(false);
 
   const committeeName = (id: string) => {
@@ -171,9 +181,17 @@ export const SolveView: React.FC<SolveViewProps> = ({ bank, committees, loading,
   const correctInScope = scoped.filter((q2) => progress[q2.id]?.correct).length;
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-[260px_minmax(0,1fr)] gap-3 sm:gap-5 items-start">
+    <div className={`grid grid-cols-1 ${drawer ? 'lg:grid-cols-[260px_minmax(0,1fr)]' : ''} gap-3 sm:gap-5 items-start`}>
       {/* ---------- Filters ---------- */}
-      <aside aria-label="Filtreler" className={`${cardCls} p-2 lg:p-4 flex flex-col gap-3 lg:sticky lg:top-[88px]`}>
+      <aside aria-label="Filtreler" className={`${cardCls} p-2 lg:p-4 flex flex-col gap-3 lg:sticky lg:top-[88px] ${drawer ? '' : 'lg:hidden'} rb-anim`}>
+        <div className="hidden lg:flex items-center gap-2 -mt-1 -mr-1">
+          <span className="text-[15px] font-semibold">Filtreler</span>
+          <span className="font-mono text-xs text-ink-3">{list.length}</span>
+          <span className="flex-1" />
+          <button type="button" onClick={() => setDrawer(false)} aria-label="Filtre panelini kapat" title="Filtre panelini kapat" className="w-8 h-8 rounded-lg inline-flex items-center justify-center text-ink-2 hover:bg-canvas cursor-pointer">
+            <PanelLeftClose className="w-4 h-4" />
+          </button>
+        </div>
         <button
           type="button"
           onClick={() => setFiltersOpen((v) => !v)}
@@ -226,7 +244,19 @@ export const SolveView: React.FC<SolveViewProps> = ({ bank, committees, loading,
         </Field>
 
         <div className="hidden lg:flex flex-col gap-1">
-          <span className="text-sm font-semibold text-ink-2 mb-0.5">Dersler</span>
+          <button
+            type="button"
+            onClick={() => setDersOpen((v) => !v)}
+            aria-expanded={dersOpen}
+            className="flex items-center gap-2 min-h-8 -mx-1 px-1 rounded-md text-left cursor-pointer hover:bg-canvas"
+          >
+            <span className="text-xs font-semibold uppercase tracking-[0.06em] text-ink-3">Dersler</span>
+            <span className="flex-1" />
+            {!dersOpen && <span className="text-xs font-semibold text-accent truncate max-w-[120px]">{discipline === 'all' ? 'Tümü' : discipline}</span>}
+            <ChevronDown className={`w-4 h-4 text-ink-3 transition-transform duration-200 ${dersOpen ? 'rotate-180' : ''}`} />
+          </button>
+          <div className={`grid transition-[grid-template-rows] duration-200 ease-out ${dersOpen ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'}`}>
+          <div className="overflow-hidden flex flex-col gap-1">
           <button
             type="button"
             aria-pressed={discipline === 'all'}
@@ -260,6 +290,8 @@ export const SolveView: React.FC<SolveViewProps> = ({ bank, committees, loading,
                 </button>
               );
             })}
+          </div>
+          </div>
           </div>
         </div>
 
@@ -303,6 +335,17 @@ export const SolveView: React.FC<SolveViewProps> = ({ bank, committees, loading,
 
       {/* ---------- Question ---------- */}
       <section aria-live="polite" className="min-w-0">
+        {!drawer && (
+          <button
+            type="button"
+            onClick={() => setDrawer(true)}
+            className="hidden lg:inline-flex items-center gap-2 h-8 px-2.5 mb-2 rounded-lg bg-accent-soft text-accent text-sm font-semibold cursor-pointer"
+          >
+            <PanelLeftOpen className="w-4 h-4" />
+            Filtreler
+            <span className="font-mono text-xs">{committeeId === 'all' ? 'Tüm kurullar' : committeeName(committeeId)} · {discipline === 'all' ? 'Tüm dersler' : discipline} · {list.length}</span>
+          </button>
+        )}
         {loading && bank.length === 0 ? (
           <EmptyState title="Soru bankası yükleniyor…" body="Çıkmış sorular ve kurulan havuz soruları hazırlanıyor." />
         ) : !q ? (
@@ -316,128 +359,80 @@ export const SolveView: React.FC<SolveViewProps> = ({ bank, committees, loading,
             }
           />
         ) : (
-          <article className={`${cardCls} p-4 sm:p-6 flex flex-col gap-4`}>
-            <header className="flex flex-wrap items-center gap-2">
-              <span className="font-mono text-sm text-ink-2">
-                {index + 1} / {list.length}
-              </span>
-              <span className="h-6 px-2 rounded-full bg-canvas text-ink-2 text-xs font-semibold inline-flex items-center">{q.discipline}</span>
-              <span className="h-6 px-2 rounded-full bg-canvas text-ink-2 text-xs font-semibold inline-flex items-center">
-                {committeeName(q.committeeId)}
-                {q.year ? ` · ${q.year}` : ''}
-                {q.number ? ` · S.${q.number}` : ''}
-              </span>
+          <article data-auto-reveal className="qk is-solve">
+            <header className="qk-h">
+              {q.committeeId && <span className="qk-chip" title={committeeName(q.committeeId)}>{committeeName(q.committeeId).replace(/^Kurul\s*/i, 'K')}</span>}
+              <span className="qk-kunye">{[q.year, q.number ? `S${q.number}` : null].filter(Boolean).join(' · ') || q.source}</span>
+              {q.discipline && <span className="qk-ders">{q.discipline}</span>}
               {answered && (
-                <span
-                  className={`h-6 px-2 rounded-full text-xs font-semibold inline-flex items-center gap-1 ${
-                    attempt!.correct ? 'bg-ok-soft text-ok' : 'bg-bad-soft text-bad-text'
-                  }`}
-                >
-                  {attempt!.correct ? <Check className="w-3 h-3" strokeWidth={3} /> : <XIcon className="w-3 h-3" strokeWidth={3} />}
-                  {attempt!.correct ? 'Doğru' : 'Yanlış'}
+                <span className="qk-flags">
+                  <span className={`cx-flag ${attempt!.correct ? 'is-ok' : 'is-bad'}`}>
+                    {attempt!.correct ? <Check aria-hidden /> : <XIcon aria-hidden />}{attempt!.correct ? 'Doğru' : 'Yanlış'}
+                  </span>
                 </span>
               )}
-              <span className="flex-1" />
-              <button
-                type="button"
-                onClick={() => setAiChatOpen(true)}
-                className="h-9 px-2.5 sm:px-3 rounded-lg text-sm font-semibold inline-flex items-center gap-1.5 bg-accent hover:bg-accent-hover text-white shadow-xs cursor-pointer transition-all shrink-0"
-                title="Yapay zeka ile bu soru hakkında canlı sohbet et"
-              >
-                <Sparkles className="w-3.5 h-3.5" />
-                <span className="hidden sm:inline">Yapay Zekaya Sor</span>
-                <span className="sm:hidden">AI Sor</span>
+              <span className="qk-sp" />
+              <span className="qk-pos">{index + 1}<small>/{list.length}</small></span>
+              <button type="button" onClick={() => setAiChatOpen(true)} className="qk-ib" aria-label="Yapay zekâya sor" title="Yapay zekâya sor"><Sparkles aria-hidden /></button>
+              <button type="button" onClick={toggleReview} aria-pressed={review.has(q.id)} className={`qk-ib ${review.has(q.id) ? 'is-on' : ''}`} aria-label={review.has(q.id) ? 'Tekrar listesinden çıkar' : 'Tekrar listesine ekle'} title={review.has(q.id) ? 'Tekrar listesinde' : 'Tekrar listesine ekle'}>
+                {review.has(q.id) ? <BookmarkCheck aria-hidden /> : <Bookmark aria-hidden />}
               </button>
-              <button
-                type="button"
-                onClick={toggleReview}
-                aria-pressed={review.has(q.id)}
-                className={`h-9 px-2.5 rounded-lg text-sm font-semibold inline-flex items-center gap-1.5 cursor-pointer ${
-                  review.has(q.id) ? 'bg-accent-soft text-accent' : 'text-ink-2 hover:bg-canvas'
-                }`}
-              >
-                {review.has(q.id) ? <BookmarkCheck className="w-4 h-4" /> : <Bookmark className="w-4 h-4" />}
-                <span className="hidden sm:inline">{review.has(q.id) ? 'Tekrar listesinde' : 'Tekrar listesine ekle'}</span>
+              <button type="button" onClick={() => setFavorites(new Set(setFavorite(q.id, !favorites.has(q.id))))} aria-pressed={favorites.has(q.id)} className={`qk-ib ${favorites.has(q.id) ? 'is-fav' : ''}`} aria-label={favorites.has(q.id) ? 'Favorilerden çıkar' : 'Favorilere ekle'} title="Favori">
+                <Star fill={favorites.has(q.id) ? 'currentColor' : 'none'} aria-hidden />
               </button>
-              <button
-                type="button"
-                onClick={() => setFavorites(new Set(setFavorite(q.id, !favorites.has(q.id))))}
-                aria-pressed={favorites.has(q.id)}
-                aria-label={favorites.has(q.id) ? 'Favorilerden çıkar' : 'Favorilere ekle'}
-                className={`h-9 px-2.5 rounded-lg text-sm font-semibold inline-flex items-center gap-1.5 cursor-pointer ${
-                  favorites.has(q.id) ? 'text-warn' : 'text-ink-2 hover:bg-canvas'
-                }`}
-              >
-                <Star className="w-4 h-4" fill={favorites.has(q.id) ? 'currentColor' : 'none'} />
-                <span className="hidden sm:inline">{favorites.has(q.id) ? 'Favoride' : 'Favori'}</span>
-              </button>
-              <button
-                type="button"
-                onClick={() => setNoteOpen((v) => !v)}
-                aria-expanded={noteOpen}
-                className="h-9 px-2.5 rounded-lg text-sm font-semibold inline-flex items-center gap-1.5 text-ink-2 hover:bg-canvas cursor-pointer"
-              >
-                <NotebookPen className="w-4 h-4" />
-                <span className="hidden sm:inline">Not al</span>
-              </button>
-              <StudyReportButton q={q} />
+              <button type="button" onClick={() => setNoteOpen((v) => !v)} aria-expanded={noteOpen} className={`qk-ib ${noteOpen ? 'is-on' : ''}`} aria-label="Not al" title="Not al"><NotebookPen aria-hidden /></button>
+              <CopyQuestionButton stem={q.stem} options={q.options} className="qk-ib" />
+              <StudyReportButton q={q} compact className="qk-ib" />
             </header>
 
-            <h2 className={`m-0 font-display font-medium tracking-[-0.01em] leading-[1.35] ${q.stem.length > 220 ? 'text-lg sm:text-xl' : 'text-xl sm:text-2xl'}`}>{q.stem}</h2>
+            <div className="qk-stem is-lead">{q.stem}</div>
 
-            <div role="radiogroup" aria-label="Şıklar" className="flex flex-col gap-2">
+            <ol role="radiogroup" aria-label="Şıklar" className="qk-opts">
               {q.options.map((o) => {
-                let state: 'idle' | 'correct' | 'wrong' | 'muted' = 'idle';
-                let tag: string | undefined;
-                if (answered) {
-                  if (o.key === q.answer) {
-                    state = 'correct';
-                    tag = attempt!.picked === o.key ? 'Senin cevabın' : 'Doğru cevap';
-                  } else if (o.key === attempt!.picked) {
-                    state = 'wrong';
-                    tag = 'Senin cevabın';
-                  } else state = 'muted';
-                }
-                return <OptionButton key={o.key} opt={o} state={state} tag={tag} disabled={answered} onClick={() => pick(o.key)} />;
+                const isAns = o.key === q.answer;
+                const isPick = attempt?.picked === o.key;
+                const cls = answered ? (isAns ? 'is-correct' : isPick ? 'is-wrong' : 'is-dim') : '';
+                const tag = answered && (isAns || isPick) ? (isPick ? 'Senin cevabın' : 'Doğru cevap') : null;
+                return (
+                  <li key={o.key} className="qk-opt-li">
+                    <button type="button" role="radio" aria-checked={isPick} disabled={answered} onClick={() => pick(o.key)} className={`qk-opt ${cls}`}>
+                      <span className="qk-bub" aria-hidden>{answered && isAns ? <Check strokeWidth={3} /> : answered && isPick ? <XIcon strokeWidth={3} /> : o.key}</span>
+                      <span className="qk-opt-t">{o.text}</span>
+                      {tag && <span className={`qk-opt-tag ${isAns ? 'is-ok' : 'is-bad'}`}>{tag}</span>}
+                    </button>
+                  </li>
+                );
               })}
-            </div>
+            </ol>
 
-            {!answered && <p className="m-0 text-xs text-ink-3 hidden sm:block">Kısayol: A–E ile cevapla, ← → ile gez.</p>}
+            {!answered && <p className="qk-hint">Kısayol: A–E ile cevapla, ← → ile gez.</p>}
 
             {answered && (
-              <section className={`rounded-xl px-4 py-3.5 flex flex-col gap-2.5 ${attempt!.correct ? 'bg-ok-soft' : 'bg-bad-soft'}`}>
-                <div className="flex items-center justify-between gap-2">
-                  <span className={`font-semibold text-md ${attempt!.correct ? 'text-ok' : 'text-bad-text'}`}>
-                    {attempt!.correct ? 'Doğru.' : `Doğru cevap ${q.answer}.`}
-                    {!attempt!.correct && <span className="font-normal text-ink"> Soru tekrar listene eklendi.</span>}
-                  </span>
-                  <button type="button" onClick={retry} className="h-8 px-2 rounded-lg text-sm font-semibold text-ink-2 hover:bg-white/60 inline-flex items-center gap-1 cursor-pointer shrink-0">
-                    <RotateCcw className="w-3.5 h-3.5" /> Yeniden çöz
-                  </button>
-                </div>
-                <div className="bg-white/70 rounded-lg p-3">
-                  <ExplanationBlock q={q} compact />
-                  <div className="pt-2.5 mt-2.5 border-t border-line/25 flex items-center justify-between">
-                    <button
-                      type="button"
-                      onClick={() => setAiChatOpen(true)}
-                      className="text-sm font-semibold text-accent hover:text-accent-hover inline-flex items-center gap-1.5 cursor-pointer"
-                    >
-                      <Sparkles className="w-3.5 h-3.5" />
-                      {attempt!.correct
-                        ? 'Mekanizmayı ve klinik incelikleri AI ile derinleştir'
-                        : 'Neden yanlış yaptım? Şıkları AI ile tartış'}
-                    </button>
+              <>
+                <p className={`qk-verdict ${attempt!.correct ? 'is-ok' : 'is-bad'}`} role="status">
+                  <b>{attempt!.correct ? 'Doğru' : `Yanlış · doğru cevap ${q.answer}`}</b>
+                  {!attempt!.correct && <span>Soru tekrar listene eklendi.</span>}
+                  <span className="qk-sp" />
+                  <button type="button" onClick={retry}><RotateCcw aria-hidden /> Yeniden çöz</button>
+                </p>
+                <div className="qk-discs">
+                  <div className="qk-disc is-open">
+                    <div className="qk-disc-h is-static"><NotebookPen aria-hidden /><span>Açıklama</span></div>
+                    <div className="qk-disc-b"><div className="qk-disc-in">
+                      <ExplanationBlock q={q} compact />
+                      <button type="button" onClick={() => setAiChatOpen(true)} className="qk-link">
+                        <Sparkles aria-hidden />
+                        {attempt!.correct ? 'Mekanizmayı ve klinik incelikleri yapay zekâyla derinleştir' : 'Neden yanlış yaptım? Şıkları yapay zekâyla tartış'}
+                      </button>
+                    </div></div>
                   </div>
                 </div>
-              </section>
+              </>
             )}
 
             {noteOpen && (
-              <div className="flex flex-col gap-2 bg-canvas rounded-xl p-3">
-                <label htmlFor="solve-note" className="text-sm font-semibold text-ink-2">
-                  Bu soruya not
-                </label>
+              <div className="qk-note">
+                <label htmlFor="solve-note">Bu soruya not</label>
                 <textarea
                   id="solve-note"
                   rows={3}
@@ -445,27 +440,20 @@ export const SolveView: React.FC<SolveViewProps> = ({ bank, committees, loading,
                   value={noteText}
                   onChange={(e) => setNoteText(e.target.value)}
                   placeholder="İlk satır notun başlığı olur. Örn. Kurşun → kemikte birikir, FEP ve δ-ALA artar"
-                  className="resize-y border border-line-2 rounded-[10px] px-3 py-2.5 text-md bg-white outline-0 focus:border-accent"
                 />
                 <div className="flex justify-end gap-2">
-                  <button type="button" onClick={() => setNoteOpen(false)} className={btnGhost}>
-                    Vazgeç
-                  </button>
-                  <button type="button" onClick={saveNote} disabled={!noteText.trim()} className={btnPrimary}>
-                    Notlarıma kaydet
-                  </button>
+                  <button type="button" onClick={() => setNoteOpen(false)} className={btnGhost}>Vazgeç</button>
+                  <button type="button" onClick={saveNote} disabled={!noteText.trim()} className={btnPrimary}>Notlarıma kaydet</button>
                 </div>
               </div>
             )}
-            {noteSaved && <p role="status" className="m-0 text-sm text-ok font-semibold">Not kaydedildi. Notlarım sekmesinde bulabilirsin.</p>}
+            {noteSaved && <p role="status" className="qk-hint is-ok">Not kaydedildi. Notlarım sekmesinde bulabilirsin.</p>}
 
-            <footer className="flex items-center justify-between gap-2 border-t border-line-soft pt-3">
+            <footer className="qk-nav">
               <button type="button" onClick={() => go(-1)} disabled={index === 0} className={btnSecondary}>
                 <ArrowLeft className="w-4 h-4" /> Önceki
               </button>
-              <div className="flex-1 mx-2 hidden sm:block h-1.5 rounded-full bg-line-soft">
-                <div className="h-1.5 rounded-full bg-accent" style={{ width: `${((index + 1) / list.length) * 100}%` }} />
-              </div>
+              <div className="qk-progress" aria-hidden><span style={{ width: `${((index + 1) / list.length) * 100}%` }} /></div>
               <button type="button" onClick={() => go(1)} disabled={index >= list.length - 1} className={btnPrimary}>
                 Sonraki <ArrowRight className="w-4 h-4" />
               </button>

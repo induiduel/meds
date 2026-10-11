@@ -17,6 +17,7 @@ from __future__ import annotations
 import argparse
 import json
 import os
+import re
 import sys
 import time
 import urllib.error
@@ -35,6 +36,8 @@ REPORT = OUT / "rapor.json"
 LOG = ROOT.parent / "meds_temp" / "logs" / "rag_vektor.log"
 MODEL = "intfloat/multilingual-e5-small"
 DIM = 384
+CTRL_RE = re.compile(r'[\x00-\x08\x0b\x0c\x0e-\x1f\x7f]')  # PostgREST PGRST102'yi bozan kontrol karakterleri
+SURR_RE = re.compile(r'[\ud800-\udfff]')  # yarım emoji (lone surrogate): Postgres JSON reddeder
 
 
 def log(m: str):
@@ -65,7 +68,7 @@ def load_chunks() -> list[dict]:
     rows = d if isinstance(d, list) else d.get("chunks", [])
     out = []
     for c in rows:
-        txt = (c.get("content") or "").replace("\x00", "").strip()
+        txt = SURR_RE.sub('', CTRL_RE.sub('', (c.get("content") or ""))).strip()
         if len(txt) < 20 or not c.get("id"):
             continue
         out.append({"id": str(c["id"]), "hash": str(c.get("hash") or hash(txt)), "content": txt,

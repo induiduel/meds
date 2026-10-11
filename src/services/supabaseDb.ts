@@ -623,6 +623,170 @@ export const SupabaseDbService = {
     }
   },
 
+  async deletePastQuestionReport(questionId: string, reportId: string): Promise<{ success: boolean; error?: string }> {
+    const client = getSupabaseClient();
+    if (!client || !questionId || !reportId) return { success: false, error: 'Eksik parametre' };
+
+    try {
+      // 1. past_questions tablosundaki reports jsonb alanından sil
+      const { data: row } = await client
+        .from('past_questions')
+        .select('id, reports, data')
+        .eq('id', questionId)
+        .maybeSingle();
+
+      if (row) {
+        const curReports = Array.isArray(row.reports)
+          ? row.reports
+          : Array.isArray(row.data?.reports)
+          ? row.data.reports
+          : [];
+        const filtered = curReports.filter((r: any) => r.id !== reportId);
+        const updatePayload: Record<string, any> = {
+          reports: cleanForPostgres(filtered),
+          updated_at: new Date().toISOString(),
+        };
+        if (row.data) {
+          updatePayload.data = cleanForPostgres({ ...row.data, reports: filtered, updatedAt: updatePayload.updated_at });
+        }
+        await client.from('past_questions').update(updatePayload).eq('id', questionId);
+      }
+
+      // 2. past_question_reports tablosundan da sil
+      try {
+        await client.from('past_question_reports').delete().eq('id', reportId);
+      } catch (_) {}
+
+      return { success: true };
+    } catch (e: any) {
+      return { success: false, error: e?.message };
+    }
+  },
+
+  async updatePastQuestionReport(
+    questionId: string,
+    reportId: string,
+    updates: { reason: string; details?: string }
+  ): Promise<{ success: boolean; error?: string }> {
+    const client = getSupabaseClient();
+    if (!client || !questionId || !reportId) return { success: false, error: 'Eksik parametre' };
+
+    try {
+      const nowIso = new Date().toISOString();
+      const { data: row } = await client
+        .from('past_questions')
+        .select('id, reports, data')
+        .eq('id', questionId)
+        .maybeSingle();
+
+      if (row) {
+        const curReports = Array.isArray(row.reports)
+          ? row.reports
+          : Array.isArray(row.data?.reports)
+          ? row.data.reports
+          : [];
+        const updated = curReports.map((r: any) => {
+          if (r.id === reportId) {
+            return { ...r, reason: updates.reason, details: updates.details || '', updatedAt: nowIso, isEdited: true };
+          }
+          return r;
+        });
+        const updatePayload: Record<string, any> = {
+          reports: cleanForPostgres(updated),
+          updated_at: nowIso,
+        };
+        if (row.data) {
+          updatePayload.data = cleanForPostgres({ ...row.data, reports: updated, updatedAt: nowIso });
+        }
+        await client.from('past_questions').update(updatePayload).eq('id', questionId);
+      }
+
+      try {
+        await client.from('past_question_reports').update(cleanForPostgres({
+          reason: updates.reason,
+          details: updates.details || '',
+          updated_at: nowIso,
+        })).eq('id', reportId);
+      } catch (_) {}
+
+      return { success: true };
+    } catch (e: any) {
+      return { success: false, error: e?.message };
+    }
+  },
+
+  async deletePastQuestionComment(questionId: string, commentId: string): Promise<{ success: boolean; error?: string }> {
+    const client = getSupabaseClient();
+    if (!client || !questionId || !commentId) return { success: false, error: 'Eksik parametre' };
+
+    try {
+      const { data: row } = await client
+        .from('past_questions')
+        .select('id, comments, data')
+        .eq('id', questionId)
+        .maybeSingle();
+
+      if (row) {
+        const curComments = Array.isArray(row.comments)
+          ? row.comments
+          : Array.isArray(row.data?.comments)
+          ? row.data.comments
+          : [];
+        const filtered = curComments.filter((c: any) => c.id !== commentId);
+        const updatePayload: Record<string, any> = {
+          comments: cleanForPostgres(filtered),
+          updated_at: new Date().toISOString(),
+        };
+        if (row.data) {
+          updatePayload.data = cleanForPostgres({ ...row.data, comments: filtered, updatedAt: updatePayload.updated_at });
+        }
+        await client.from('past_questions').update(updatePayload).eq('id', questionId);
+      }
+      return { success: true };
+    } catch (e: any) {
+      return { success: false, error: e?.message };
+    }
+  },
+
+  async updatePastQuestionComment(questionId: string, commentId: string, newText: string): Promise<{ success: boolean; error?: string }> {
+    const client = getSupabaseClient();
+    if (!client || !questionId || !commentId) return { success: false, error: 'Eksik parametre' };
+
+    try {
+      const nowIso = new Date().toISOString();
+      const { data: row } = await client
+        .from('past_questions')
+        .select('id, comments, data')
+        .eq('id', questionId)
+        .maybeSingle();
+
+      if (row) {
+        const curComments = Array.isArray(row.comments)
+          ? row.comments
+          : Array.isArray(row.data?.comments)
+          ? row.data.comments
+          : [];
+        const updated = curComments.map((c: any) => {
+          if (c.id === commentId) {
+            return { ...c, text: newText.trim(), updatedAt: nowIso, isEdited: true };
+          }
+          return c;
+        });
+        const updatePayload: Record<string, any> = {
+          comments: cleanForPostgres(updated),
+          updated_at: nowIso,
+        };
+        if (row.data) {
+          updatePayload.data = cleanForPostgres({ ...row.data, comments: updated, updatedAt: nowIso });
+        }
+        await client.from('past_questions').update(updatePayload).eq('id', questionId);
+      }
+      return { success: true };
+    } catch (e: any) {
+      return { success: false, error: e?.message };
+    }
+  },
+
   async getPastQuestionReports(limit: number = 100): Promise<any[]> {
     const client = getSupabaseClient();
     if (!client) return [];

@@ -1,0 +1,34 @@
+name: Deploy code to Oracle VM
+
+# Cihaz pushlar -> Oracle çeker (kod senkronu). Veri senkronu HARİÇ
+# (veri için deploy/oracle/sync-data.sh kullanılır).
+# Gerekli Secrets: ORACLE_HOST, ORACLE_USER, ORACLE_SSH_KEY
+on:
+  push:
+    branches: [main, master]
+    paths:
+      - 'meds/**'
+      - '!meds/data/**'
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Pull + build + restart on Oracle
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.ORACLE_HOST }}
+          username: ${{ secrets.ORACLE_USER }}
+          key: ${{ secrets.ORACLE_SSH_KEY }}
+          script: |
+            set -e
+            cd ~/meds
+            git pull --ff-only
+            cd meds
+            npm ci --no-audit --no-fund || npm install --no-audit --no-fund
+            npm run build
+            npx tsc --noEmit
+            docker compose --env-file /home/ubuntu/medsor/meds/.env -f deploy/oracle/docker-compose.oracle.yml up -d --build
+            sleep 20
+            curl -sf http://127.0.0.1:3000/api/health

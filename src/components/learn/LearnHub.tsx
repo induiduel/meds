@@ -7,6 +7,8 @@ import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { ArrowRight, BookOpen, Check, FileText, HelpCircle, Layers, Lock, Play, Search, X } from 'lucide-react';
 import { deckName, type DeckCatalogEntry } from '../../data/deckStore';
 import { getDeckOriginalPdf } from '../../data/deckPdfCatalog';
+import { disciplineClass } from '../../utils/discipline';
+import { Segmented } from '../ui/kit';
 
 type Progress = Record<string, { last?: number; seen?: number[] } | undefined>;
 type Status = 'all' | 'active' | 'new' | 'done';
@@ -165,10 +167,10 @@ export const LearnHub: React.FC<{
             const s = stateOf(d, progress);
             const g = disciplineGroup(d.discipline);
             return (
-              <button key={d.id} type="button" className={`lh-res ${i === 0 ? 'is-main' : ''}`} onClick={() => onOpen(d.id)}>
+              <button key={d.id} type="button" className={`lh-res ${i === 0 ? 'is-main' : ''} ${disciplineClass(g)}`} onClick={() => onOpen(d.id)}>
                 <Ring pct={s.pct} />
                 <span className="lh-res-body">
-                  <small><i style={{ background: groupDot(g) }} />{i === 0 ? 'Kaldığın yer' : g} · Adım {s.last}/{d.slideCount}</small>
+                  <small><i className="hk-dot" />{i === 0 ? 'Kaldığın yer' : g} · Adım {s.last}/{d.slideCount}</small>
                   <b>{deckName(d)}</b>
                 </span>
                 <span className="lh-res-go">{i === 0 ? <>Devam et <ArrowRight /></> : <ArrowRight />}</span>
@@ -178,92 +180,111 @@ export const LearnHub: React.FC<{
         </section>
       )}
 
-      <div className="lh-tools">
-        <label className="lh-search">
-          <Search aria-hidden />
-          <span className="sr-only">Derslerde ara</span>
-          <input ref={searchRef} type="search" value={query} onChange={(e) => setQuery(e.target.value)} placeholder="Ders, konu ya da kavram ara" />
-          {query ? (
-            <button type="button" onClick={() => setQuery('')} aria-label="Aramayı temizle"><X /></button>
-          ) : (
-            <kbd className="ms-kbd lh-kbd">/</kbd>
-          )}
-        </label>
-        <div className="ms-seg" role="radiogroup" aria-label="Durum">
-          {([['all', 'Tümü'], ['active', 'Devam eden'], ['new', 'Başlanmadı'], ['done', 'Biten']] as [Status, string][]).map(([k, l]) => (
-            <button key={k} type="button" role="radio" aria-checked={status === k} onClick={() => setStatus(k)} disabled={k !== 'all' && statusCount[k] === 0 && status !== k}>
-              {l} <span className="n">{statusCount[k]}</span>
-            </button>
-          ))}
-        </div>
-        {isAdmin && (
-          <div className="lh-admin" title="Yalnız yöneticiler görür">
-            <Lock aria-hidden />
-            <div className="ms-seg" role="radiogroup" aria-label="Yönetici: deste kümesi">
-              {([['new_only', 'Yayında', counts.published], ['legacy_only', 'Arşiv', counts.legacy], ['all', 'Tümü', all.length]] as [ArchiveFilter, string, number][]).map(([k, l, n]) => (
-                <button key={k} type="button" role="radio" aria-checked={archive === k} onClick={() => onArchive(k)}>
-                  {l} <span className="n">{n}</span>
-                </button>
-              ))}
+      <div className="cx-dock lh-dock">
+        <div className="lh-tools">
+          <label className="lh-search">
+            <Search aria-hidden />
+            <span className="sr-only">Derslerde ara</span>
+            <input ref={searchRef} type="search" value={query} onChange={(e) => setQuery(e.target.value)} placeholder="Ders, konu ya da kavram ara" />
+            {query ? (
+              <button type="button" onClick={() => setQuery('')} aria-label="Aramayı temizle"><X /></button>
+            ) : (
+              <kbd className="ms-kbd lh-kbd">/</kbd>
+            )}
+          </label>
+          <Segmented<Status>
+            className="lh-status"
+            label="Durum"
+            value={status}
+            onChange={setStatus}
+            options={([['all', 'Tümü'], ['active', 'Sürüyor'], ['new', 'Yeni'], ['done', 'Biten']] as [Status, string][]).map(([k, l]) => ({
+              value: k,
+              label: <>{l} <span className="lh-n">{statusCount[k]}</span></>,
+            }))}
+          />
+          {isAdmin && (
+            <div className="lh-admin" title="Yalnız yöneticiler görür">
+              <Lock aria-hidden />
+              <Segmented<ArchiveFilter>
+                label="Yönetici: deste kümesi"
+                value={archive}
+                onChange={onArchive}
+                options={([['new_only', 'Yayında', counts.published], ['legacy_only', 'Arşiv', counts.legacy], ['all', 'Tümü', all.length]] as [ArchiveFilter, string, number][]).map(([k, l, n]) => ({
+                  value: k,
+                  label: <>{l} <span className="lh-n">{n}</span></>,
+                }))}
+              />
             </div>
-          </div>
+          )}
+        </div>
+
+        {groups.length > 1 && (
+          <nav className="cx-tabs" aria-label="Ders dalı">
+            {[['all', scoped.length] as [string, number], ...groups].map(([g, n]) => (
+              <button key={g} type="button" aria-pressed={group === g} className={`cx-tab ${group === g ? 'is-on' : ''} ${g !== 'all' ? disciplineClass(g) : ''}`} onClick={() => setGroup(g)}>
+                {g !== 'all' && <i className="hk-dot" aria-hidden />}
+                {g === 'all' ? 'Tüm dallar' : g}
+                <small>{n}</small>
+              </button>
+            ))}
+          </nav>
         )}
       </div>
 
-      {groups.length > 1 && (
-        <div className="ms-chipbar" role="radiogroup" aria-label="Ders dalı">
-          {[['all', scoped.length] as [string, number], ...groups].map(([g, n]) => (
-            <button key={g} type="button" role="radio" aria-checked={group === g} className={`ms-chip ${group === g ? 'is-on' : ''}`} onClick={() => setGroup(g)}>
-              {g !== 'all' && <span className="lh-dot" style={{ background: groupDot(g) }} aria-hidden />}
-              {g === 'all' ? 'Tüm dallar' : g}
-              <span className="ms-chip-count">{n}</span>
-            </button>
-          ))}
-        </div>
-      )}
-
       {visible.length === 0 ? (
-        <div className="ms-empty lh-empty">
+        <div className="ui-card lh-empty">
           <Search aria-hidden />
           <b>{q ? `“${query.trim()}” için ders yok` : 'Bu filtrede ders yok'}</b>
           <p>Filtreleri temizleyip tüm derslere dönebilirsin.</p>
-          <button type="button" className="ms-btn is-tonal" onClick={reset}>Filtreleri temizle</button>
+          <button type="button" className="ui-btn is-tonal" onClick={reset}>Süzgeçleri temizle</button>
         </div>
       ) : (
-        <ul className="lh-grid">
-          {visible.map((d, i) => {
-            const s = stateOf(d, progress);
-            const g = disciplineGroup(d.discipline);
-            const pdf = !!getDeckOriginalPdf(d.id);
-            const no = orderOf(d);
-            return (
-              <li key={d.id} className="lh-card" style={{ animationDelay: `${Math.min(i, 14) * 22}ms` }}>
-                <button type="button" className="lh-card-main" onClick={() => onOpen(d.id)} aria-label={`${deckName(d, false)} — ${s.status === 'done' ? 'tamamlandı' : s.status === 'active' ? `%${s.pct}, devam et` : 'başla'}`}>
-                  <span className="lh-card-top">
-                    <span className="lh-card-g"><i style={{ background: groupDot(g) }} />{g}</span>
-                    {no < 999 && <span className="lh-card-no">{String(no).padStart(2, '0')}</span>}
-                  </span>
-                  <b className="lh-card-t" title={deckName(d, false)}>{deckName(d, false)}</b>
-                  <span className="lh-card-meta">
-                    <span><Layers aria-hidden />{d.slideCount} adım</span>
-                    {d.cardCount > 0 && <span><BookOpen aria-hidden />{d.cardCount} kart</span>}
-                  </span>
-                  <span className="lh-card-foot">
-                    <span className={`lh-bar ${s.status === 'done' ? 'is-done' : ''}`} aria-hidden><i style={{ width: `${s.pct}%` }} /></span>
-                    <span className={`lh-state is-${s.status}`}>
-                      {s.status === 'done' ? <><Check aria-hidden />Bitti</> : s.status === 'active' ? `%${s.pct}` : <><Play aria-hidden />Başla</>}
-                    </span>
-                  </span>
-                </button>
-                {pdf && (
-                  <button type="button" className="lh-card-pdf" onClick={() => onOpen(d.id, true)} title="Ders slaytını (PDF) aç" aria-label={`${deckName(d)} slayt PDF'ini aç`}>
-                    <FileText />
-                  </button>
-                )}
-              </li>
-            );
-          })}
-        </ul>
+        <div className="lcx">
+          {(() => {
+            // Ders dalına göre gruplu, tek satırlı liste (canvas "LearnCatalog")
+            const byGroup = new Map<string, typeof visible>();
+            visible.forEach((d) => {
+              const g = disciplineGroup(d.discipline);
+              byGroup.set(g, [...(byGroup.get(g) || []), d]);
+            });
+            return [...byGroup.entries()].map(([g, decks]) => (
+              <section key={g} className={`lcx-g ${disciplineClass(g)}`} aria-label={g}>
+                <header className="lcx-gh"><i className="hk-dot" aria-hidden /><b>{g}</b><span>{decks.length} deste</span></header>
+                <ul>
+                  {decks.map((d) => {
+                    const s = stateOf(d, progress);
+                    const pdf = !!getDeckOriginalPdf(d.id);
+                    const no = orderOf(d);
+                    return (
+                      <li key={d.id} className="lcx-row">
+                        <button type="button" className="lcx-main" onClick={() => onOpen(d.id)} aria-label={`${deckName(d, false)} — ${s.status === 'done' ? 'tamamlandı' : s.status === 'active' ? `%${s.pct}, devam et` : 'başla'}`}>
+                          {no < 999 && <span className="lcx-no">{String(no).padStart(2, '0')}</span>}
+                          <span className="lcx-t">
+                            <b title={deckName(d, false)}>{deckName(d, false)}</b>
+                            <span>{d.slideCount} adım{d.cardCount > 0 ? ` · ${d.cardCount} kart` : ''}{s.status === 'active' ? ` · %${s.pct}` : ''}</span>
+                          </span>
+                          {s.status === 'done' ? (
+                            <span className="cx-flag is-ok"><Check aria-hidden />Bitti</span>
+                          ) : s.status === 'active' ? (
+                            <span className="lcx-bar" aria-hidden><i style={{ width: `${s.pct}%` }} /></span>
+                          ) : (
+                            <span className="lcx-start"><Play aria-hidden />Başla</span>
+                          )}
+                          <ArrowRight className="lcx-go" aria-hidden />
+                        </button>
+                        {pdf && (
+                          <button type="button" className="qk-ib" onClick={() => onOpen(d.id, true)} title="Ders slaytını (PDF) aç" aria-label={`${deckName(d)} slayt PDF'ini aç`}>
+                            <FileText aria-hidden />
+                          </button>
+                        )}
+                      </li>
+                    );
+                  })}
+                </ul>
+              </section>
+            ));
+          })()}
+        </div>
       )}
     </div>
   );

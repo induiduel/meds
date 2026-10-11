@@ -11,9 +11,9 @@ import { generateResilientMedicalAi, getTieredGeminiKeys } from './aiProvider.ts
 import { getCachedLectureNotes } from '../serverLectureNotes.ts';
 
 /** Human-authored material that may be used as evidence. */
-export const GROUNDING_DOC_TYPES: RagDocumentType[] = ['past_question', 'lecture_slide', 'summary', 'transcript'];
+export const GROUNDING_DOC_TYPES: RagDocumentType[] = ['past_question', 'lecture_slide', 'summary', 'transcript', 'ornek_question', 'deck_slide', 'glossary_term', 'disease'];
 /** Course material only (no exam questions). */
-export const MATERIAL_DOC_TYPES: RagDocumentType[] = ['lecture_slide', 'summary', 'transcript'];
+export const MATERIAL_DOC_TYPES: RagDocumentType[] = ['lecture_slide', 'summary', 'transcript', 'deck_slide', 'glossary_term', 'disease'];
 
 export interface RagChunkResult {
   id: string;
@@ -146,6 +146,14 @@ async function searchCloud(
  * Find the most relevant human-authored chunks for a query.
  * `documentType` narrows to a single type; otherwise all GROUNDING_DOC_TYPES are searched.
  */
+
+/** Başlıksız ortak chunk ("8 (Sayfa 49)", "Sayfa 12" vb.) tespiti — gösterim cezası için. */
+function isGenericTitle(t: unknown): boolean {
+  if (typeof t !== 'string') return true;
+  const s = t.trim();
+  return s.length === 0 || /^\d+\s*\(sayfa[^)]*\)$/i.test(s) || /^sayfa\s*\d+$/i.test(s) || /^\d+$/.test(s);
+}
+
 export async function searchRagChunks(
   query: string,
   apiKey?: string,
@@ -171,15 +179,23 @@ export async function searchRagChunks(
       documentTypes,
       limit: limit * 8,
     });
-    // Karma arama: BM25 + anlamsal (e5, yerel Supabase) RRF birleşimi; vektör servisi yoksa yalnız BM25
+    // Karma arama: BM25 + anlamsal (yerel vektör servisi + Supabase rpc) RRF birleşimi; vektör servisi yoksa yalnız BM25
     const vec = await semanticSearch(query, { documentTypes, committeeId: options.committeeId, limit: limit * 8 });
-    const fused = vec.length
+    let fused = vec.length
       ? fuseRRF(local as any[], vec, (r: any) => ({
           id: r.id, documentId: r.document_id, documentType: r.document_type, committeeId: r.committee_id,
           discipline: r.discipline, title: r.title, pageNumber: r.page_number, content: r.content, metadata: r.metadata,
           similarity: r.similarity, matchScore: r.similarity,
         }) as any, limit * 8)
       : local;
+    // Başlıksız ("Sayfa N" gibi) ortak chunk cezası: RRF sırası korunur, yalnızca
+    // en az 3 başlıklı alternatif varsa başlıksızlar alta taşınır (içerik gizlenmez).
+    if (vec.length && Array.isArray(fused)) {
+      const good: any[] = [];
+      const bad: any[] = [];
+      for (const it of fused as any[]) (isGenericTitle(it?.title) ? bad : good).push(it);
+      if (good.length >= 3) fused = [...good, ...bad] as any;
+    }
     results = (fused as typeof local).map((item) => ({
       id: item.id,
       documentId: item.documentId,
@@ -482,13 +498,39 @@ export async function searchEverything(
   // önce sorgu köklerinin kaçının geçtiğine (kapsama), sonra başlıkta geçmesine, en son BM25'e bakılır.
   // Uzun tıbbi terimlerde 5 harf kök fazla geniş (tromboksan ≠ trombosit): 8+ harfte 7 harf kullanılır
   const stems = Array.from(new Set(foldTurkish(q).split(/[^a-z0-9]+/).filter((w) => w.length >= 3).map((w) => w.slice(0, w.length >= 8 ? 7 : 5))));
+  const fullWords = Array.from(new Set(foldTurkish(q).split(/[^a-z0-9]+/).filter((w) => w.length >= 4)));
+  // Vektör bonusu: dense aramanın ilk 30'undaki belge küçük bonus alır.
+  // BM25'i ezmez, ters-ilişkiyi (hipotiroidizm→Abortus nedeni vs Abortus'un nedeni) düzeltir.
+  // Vektör servisi yavaşsa/ölüyse site araması beklemez (2.5sn koruma).
+  const denseRank = new Map<string, number>();
+  try {
+    const vec = await Promise.race([
+      semanticSearch(q, { committeeId: options.committeeId, limit: 30 }),
+      new Promise<never>((_, rej) => setTimeout(() => rej(new Error('vec-zamanasimi')), 2500)),
+    ]);
+    (vec as any[]).forEach((r: any, i: number) => {
+      if (r?.id && !denseRank.has(r.id)) denseRank.set(r.id, i);
+    });
+  } catch { /* vektör yoksa BM25 düzeni korunur */ }
   const rank = (r: (typeof pooled)[number]) => {
     if (stems.length === 0) return r.matchScore;
     const body = foldTurkish(r.content);
     const title = foldTurkish(r.title);
     const cover = stems.filter((st) => body.includes(st) || title.includes(st)).length / stems.length;
     const inTitle = stems.filter((st) => title.includes(st)).length / stems.length;
-    return cover * 100 + inTitle * 30 + Math.min(r.matchScore, 120) * 0.25;
+    // Tam kelime başlıkta geçiyorsa güçlü sinyal ("Hipotiroidi" başlığı > "hipotir" kök geçişi).
+    const inTitleFull = fullWords.filter((w) => title.includes(w)).length / Math.max(1, fullWords.length);
+    // Yoğunluk: konuyla ilgili belge terimi sık geçirir (tekil etiyoloji listesinden ayrışır).
+    let hits = 0;
+    for (const st of stems) {
+      let p = body.indexOf(st);
+      while (p >= 0 && hits < 40) { hits++; p = body.indexOf(st, p + st.length); }
+    }
+    const words = Math.max(50, body.split(/\s+/).length);
+    const dens = Math.min(10, (hits / words) * 100);
+    const d = denseRank.get(r.id);
+    const vecBonus = d === undefined ? 0 : (1 - d / 30) * 40;
+    return cover * 100 + inTitle * 30 + inTitleFull * 60 + dens * 4 + vecBonus + Math.min(r.matchScore, 120) * 0.25;
   };
   const ranked = pooled
     .map((r) => ({ r, k: rank(r) }))

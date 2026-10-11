@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BookOpen, Check, Copy, Eye, FileText, GraduationCap, Presentation, ShieldCheck, History, Sparkles, AlertCircle, Code2 } from 'lucide-react';
+import { BookOpen, Check, Copy, Eye, FileText, GraduationCap, Presentation, ShieldCheck, ShieldAlert, History, Sparkles, AlertCircle, Code2 } from 'lucide-react';
 import { Dialog } from './ui/Dialog';
 import { SourceText } from './ui/SourceText';
 import { QuestionInsightsPanel } from './QuestionInsightsPanel';
@@ -35,7 +35,7 @@ interface Props {
   answerHidden?: boolean;
   /** Açıklamada işaretlenecek doğru şık ifadeleri */
   answerTerms?: string[];
-  sikAnalizi?: Record<string, string>;
+  sikAnalizi?: Record<string, string> | string;
   referanslar?: any;
   denetleyiciOnayi?: boolean;
   learnMatch?: QuestionLearnMatch | null;
@@ -96,6 +96,25 @@ export const QuestionAboutDialog: React.FC<Props> = ({
   const answerOptionText = options?.find((o) => String(o.key).toUpperCase() === String(answerKey || '').toUpperCase())?.text;
   const optionText = (k: string) => options?.find((o) => String(o.key).toUpperCase() === k.toUpperCase())?.text;
 
+  const normalizedSikAnalizi = React.useMemo<Record<string, string> | null>(() => {
+    if (!sikAnalizi) return null;
+    if (typeof sikAnalizi === 'object' && !Array.isArray(sikAnalizi)) {
+      return sikAnalizi as Record<string, string>;
+    }
+    if (typeof sikAnalizi === 'string') {
+      try {
+        const parsed = JSON.parse(sikAnalizi);
+        if (typeof parsed === 'object' && parsed !== null && !Array.isArray(parsed)) {
+          return parsed as Record<string, string>;
+        }
+      } catch {
+        // Not a JSON object
+      }
+      return { 'Detaylı Analiz': sikAnalizi };
+    }
+    return null;
+  }, [sikAnalizi]);
+
   const copyId = () => {
     navigator.clipboard?.writeText(questionId).then(() => {
       setCopied(true);
@@ -146,7 +165,25 @@ export const QuestionAboutDialog: React.FC<Props> = ({
         </>
       }
     >
-      {/* Durum Bildirimleri (Eski sürüm, Faz 14 vb.) */}
+      {/* Durum Bildirimleri (Karantina, Eski sürüm, Faz 14 vb.) */}
+      {question?.isQuarantined && (
+        <div className="p-3 bg-bad/10 border border-bad/30 rounded-xl text-sm text-bad-text dark:text-red-400 flex items-start gap-2.5 mb-1">
+          <ShieldAlert className="w-4 h-4 shrink-0 text-bad-text mt-0.5" />
+          <div className="flex-1 min-w-0">
+            <b>Karantina Kaydı:</b> Bu soru sistem tarafından karantinaya alınmıştır.
+            {question.quarantineReasons && question.quarantineReasons.length > 0 && (
+              <span className="block mt-1 text-xs opacity-90">
+                Nedenler: {question.quarantineReasons.join(', ')}
+              </span>
+            )}
+            {question.quarantineSource && (
+              <span className="block text-xs opacity-75">
+                Kaynak: {question.quarantineSource}
+              </span>
+            )}
+          </div>
+        </div>
+      )}
       {isEskiView && (
         <div className="p-3 bg-warn/10 border border-warn/20 rounded-xl text-sm text-warn flex items-start gap-2.5 mb-1">
           <History className="w-4 h-4 shrink-0 text-warn mt-0.5" />
@@ -176,6 +213,61 @@ export const QuestionAboutDialog: React.FC<Props> = ({
             )}
           </div>
         </div>
+      )}
+
+      {/* NotebookLM / Fakülte Resmi Müfredat Verisi */}
+      {(question?.notebooklm_verisi || question?.batch !== undefined || question?.questionRange) && (
+        <section className="flex flex-col gap-2.5 p-3.5 bg-gradient-to-br from-ai/10 via-accent/5 to-transparent border border-ai/20 rounded-xl">
+          <div className="flex items-center justify-between">
+            <H>
+              <GraduationCap className="w-3.5 h-3.5 text-ai" />
+              Resmi Fakülte Müfredatı & Öğrenim Kazanımı
+            </H>
+            {(question.batch !== undefined || question.questionRange) && (
+              <span className="text-2xs font-semibold text-ai bg-ai-soft dark:bg-purple-900/40 px-2 py-0.5 rounded-full border border-ai/40">
+                {[question.batch !== undefined ? `Batch ${question.batch}` : null, question.questionRange ? `Sıra: ${question.questionRange}` : null].filter(Boolean).join(' · ')}
+              </span>
+            )}
+          </div>
+
+          {question.notebooklm_verisi?.kazanim && (
+            <div className="flex flex-col gap-1">
+              <span className="text-2xs font-bold uppercase tracking-wider text-ai">Ders Hedefi & Öğrenim Kazanımı</span>
+              <p className="m-0 text-sm font-medium text-ink leading-relaxed bg-white/70 dark:bg-card/70 p-2.5 rounded-lg border border-ai/50">
+                {question.notebooklm_verisi.kazanim}
+              </p>
+            </div>
+          )}
+
+          {question.notebooklm_verisi && (
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
+              {question.notebooklm_verisi.mufredat && (
+                <div className="flex items-center gap-1.5 p-2 rounded-lg bg-white/50 dark:bg-card/50 border border-border/60">
+                  <span className="text-ink-3">Müfredat:</span>
+                  <span className="font-semibold text-ink">{question.notebooklm_verisi.mufredat}</span>
+                </div>
+              )}
+              {question.notebooklm_verisi.kurul && (
+                <div className="flex items-center gap-1.5 p-2 rounded-lg bg-white/50 dark:bg-card/50 border border-border/60">
+                  <span className="text-ink-3">Kurul:</span>
+                  <span className="font-semibold text-ink">{question.notebooklm_verisi.kurul}</span>
+                </div>
+              )}
+              {question.notebooklm_verisi.ders && (
+                <div className="flex items-center gap-1.5 p-2 rounded-lg bg-white/50 dark:bg-card/50 border border-border/60">
+                  <span className="text-ink-3">Ders:</span>
+                  <span className="font-semibold text-ink">{question.notebooklm_verisi.ders}</span>
+                </div>
+              )}
+              {question.notebooklm_verisi.konu && (
+                <div className="flex items-center gap-1.5 p-2 rounded-lg bg-white/50 dark:bg-card/50 border border-border/60">
+                  <span className="text-ink-3">Konu:</span>
+                  <span className="font-semibold text-ink">{question.notebooklm_verisi.konu}</span>
+                </div>
+              )}
+            </div>
+          )}
+        </section>
       )}
 
       {/* İlgili slayt */}
@@ -225,11 +317,11 @@ export const QuestionAboutDialog: React.FC<Props> = ({
       )}
 
       {/* Şık Analizleri & Çürütmeler */}
-      {sikAnalizi && Object.keys(sikAnalizi).length > 0 && !hidden && (
+      {normalizedSikAnalizi && Object.keys(normalizedSikAnalizi).length > 0 && !hidden && (
         <section className="flex flex-col gap-2">
           <H><ShieldCheck className="w-3.5 h-3.5 text-ok" /> Şık analizi</H>
           <ol className="ms-about-analysis">
-            {Object.entries(sikAnalizi).sort(([a], [b]) => a.localeCompare(b)).map(([k, raw]) => {
+            {Object.entries(normalizedSikAnalizi).sort(([a], [b]) => a.localeCompare(b)).map(([k, raw]) => {
               const m = String(raw).match(/^\s*(DOĞRU|YANLIŞ|TARTIŞMALI)(?:\s*\/\s*(TARTIŞMALI|YANLIŞ|DOĞRU))?\s*[:\-–]\s*/i);
               const verdict = m ? m[1].toLocaleUpperCase('tr-TR') : '';
               const disputed = m && /TARTIŞMALI/i.test(m[0]);

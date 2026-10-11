@@ -175373,27 +175373,27 @@
           },
           {
             "type": "branching_logic",
-            "scenario": "Elf yüz görünümü, supravalvüler aort darlığı ve idiyopatik hiperkalsemi saptanan bir çocukta genetik doğrulama testi nasıl planlanmalıdır?",
+            "scenario": "İlk çocuklarında izole ventriküler septal defekt (VSD - intrensek kardiyak malformasyon) saptanan ve aile öyküsünde başka kimsede anomali bulunmayan bir çift, ikinci gebelik öncesi genetik danışmanlığa başvuruyor. Aileye rekürrens riski ve prenatal izlem hakkında nasıl bilgi verilmelidir?",
             "options": [
               {
-                "text": "7q11.23 bölgesindeki ELN gen delesyonunu göstermek için FISH veya CMA analizi planlamak",
+                "text": "İzole kardiyak malformasyonlar genellikle multifaktöriyel eşik kalıtımı gösterir; sonraki gebelikte benzer anomali tekrarlama riski yaklaşık %3-5'tir ve fetal ekokardiyografi ile izlem önerilir.",
                 "isCorrect": true,
-                "feedback": "Doğru genetik test! Williams-Beuren sendromu 7q11.23 mikrodelesyonundan kaynaklanır; elastomiyopati supravalvüler aort darlığına neden olur."
+                "feedback": "Doğru klinik yaklaşım! İzole malformasyonlar (VSD, nöral tüp defektleri vb.) multifaktöriyel model sergiler; rekürrens riski yaklaşık %3-5 civarındadır ve hedefe yönelik ultrason/fetal EKO önerilir."
               },
               {
-                "text": "Standart rutin G-bantlama karyotip analizi ile delesyonu aramak",
+                "text": "Bu defekt dış mekanik basıya bağlı bir deformasyon olduğundan rekürrens riski genel toplum riskini aşmaz (<%1) ve ek takibe gerek yoktur.",
                 "isCorrect": false,
-                "feedback": "Yetersiz çözünürlük! Williams mikrodelesyonu (~1.5 Mb) standart bantlamanın (5 Mb) altındadır."
+                "feedback": "Yanlış! VSD ekstrinsik bir deformasyon değil, ilk 8 haftada oluşan intrensek bir malformasyondur; bu nedenle rekürrens riski deformasyonlara göre belirgin olarak daha yüksektir."
               },
               {
-                "text": "FBN1 gen dizilemesi yapmak",
+                "text": "Kardiyak malformasyonlar tek gen otozomal dominant kalıtıldığı için sonraki her çocukta tekrarlama olasılığı net %50'dir.",
                 "isCorrect": false,
-                "feedback": "FBN1 Marfan sendromu genidir; Williams sendromu ile ilişkisi yoktur."
+                "feedback": "Yanlış! İzole malformasyonların büyük kısmı Mendelyen tek gen değil, multifaktöriyel eşik modeli sergiler. Dolayısıyla risk %50 değil, %3-5 aralığındadır."
               },
               {
-                "text": "Yalnızca klinik izlem önerip genetik test yapmamak",
+                "text": "Bu durum disrupsiyon grubunda yer alır; amniyotik membran hasarı tekrarlamayacağı için risk sıfırdır.",
                 "isCorrect": false,
-                "feedback": "Kardiyovasküler risk ve hiperkalsemi komplikasyonları açısından genetik teyit ve multidisipliner takip şarttır."
+                "feedback": "Yanlış! Kardiyak septal defektler disrupsiyon (dışsal yıkım) değil, embriyogenezdeki primer biçimlenme hatası (malformasyon) sonucudur."
               }
             ]
           }

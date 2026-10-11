@@ -57,6 +57,15 @@ import { applyCleanOverlay } from './src/services/lectureCleanOverlay.ts';
 import { applyQuarantine, quarantineMtime } from './src/services/questionQuarantine.ts';
 import { ServerNotificationService } from './src/services/serverNotificationService.ts';
 import { CloudNotificationBridge } from './src/services/cloudNotificationBridge.ts';
+import {
+  autoRepairStore,
+  rollbackRepair,
+  processQueueItem,
+  startAutoRepairWorker,
+  isAutoRepairWorkerActive,
+  setAutoRepairWorkerPaused,
+  enrichAndFetchContext,
+} from './src/services/autoErrorRepairEngine.ts';
 
 import {
   getAllTranscriptionsMeta,
@@ -94,6 +103,9 @@ import { createLearnFeedbackStore } from './src/services/learnFeedbackService.ts
 import { createPhase14UserQueue, type QueueItem } from './src/services/phase14UserQueue.ts';
 import { questionUpdatedEmail } from './src/services/phase14Mail.ts';
 import { renderHtmlToPdf, findChrome } from './src/services/pdfRenderService.ts';
+import { voterIdFrom, toggleVote, normalizeVotes, normalizeQuestionVotes } from './src/services/voteService.ts';
+import { findLecturePdf } from './src/services/lecturePdfLocator.ts';
+import { getPlaylist, savePlaylist, sanitizeTracks } from './src/services/musicStore.ts';
 import {
   exportPastExamsToMarkdown,
   exportSummariesToMarkdown,
@@ -117,6 +129,7 @@ import {
   updateNotebookLMContribution,
   deleteNotebookLMContribution,
 } from './src/services/notebooklmManageService.ts';
+import { censorProfanity } from './src/utils/profanityFilter.ts';
 
 // @ts-ignore - dynamic ES module runner
 import {
@@ -838,6 +851,8 @@ function initializeDatabase(): DatabaseSchema {
 }
 
 let db = initializeDatabase();
+// Oy sayıları likedBy'dan türer; varsayılan "1" oylar ve tekrarlı oylar ayıklanır.
+(db.questions || []).forEach((q: any) => normalizeQuestionVotes(q));
 
 function saveDatabase() {
   try {
@@ -849,23 +864,61 @@ function saveDatabase() {
 
 // Admin Middleware: Ensures caller is nofrostlife@gmail.com
 const ADMIN_EMAIL = 'nofrostlife@gmail.com';
-function requireAdmin(req: express.Request, res: express.Response, next: express.NextFunction) {
+
+function isRequestAdmin(req: express.Request): boolean {
   const adminEmail = (req.headers['x-admin-email'] || req.body?.adminEmail || req.body?.requestedBy || req.query?.adminEmail) as string;
   const ip = req.ip || req.socket?.remoteAddress || '';
   const isLoopback = ip.includes('127.0.0.1') || ip.includes('::1') || ip.includes('localhost') || ip.includes('::ffff:127.0.0.1');
 
   if (adminEmail && adminEmail.toLowerCase() === ADMIN_EMAIL.toLowerCase()) {
-    return next();
+    return true;
   }
   if (isLoopback && (!adminEmail || adminEmail.toLowerCase() === ADMIN_EMAIL.toLowerCase())) {
+    return true;
+  }
+  return false;
+}
+
+function canUserManageComment(comment: any, req: express.Request): boolean {
+  if (isRequestAdmin(req)) return true;
+  if (!comment) return false;
+  const uid = req.body?.authorUid || req.query?.authorUid || req.headers['x-user-uid'];
+  const email = req.body?.authorEmail || req.query?.authorEmail || req.headers['x-user-email'];
+  const author = req.body?.author || req.query?.author || req.headers['x-user-name'];
+  const token = req.body?.ownershipToken || req.query?.ownershipToken || req.headers['x-ownership-token'];
+
+  if (uid && comment.authorUid && String(uid) === String(comment.authorUid)) return true;
+  if (email && comment.authorEmail && String(email).toLowerCase() === String(comment.authorEmail).toLowerCase()) return true;
+  if (author && comment.author && String(author).trim().toLowerCase() === String(comment.author).trim().toLowerCase()) return true;
+  if (token && comment.ownershipToken && String(token) === String(comment.ownershipToken)) return true;
+  return false;
+}
+
+function canUserManageReport(report: any, req: express.Request): boolean {
+  if (isRequestAdmin(req)) return true;
+  if (!report) return false;
+  const uid = req.body?.reporterUid || req.query?.reporterUid || req.headers['x-user-uid'];
+  const email = req.body?.reporterEmail || req.query?.reporterEmail || req.headers['x-user-email'];
+  const reportedBy = req.body?.reportedBy || req.query?.reportedBy || req.headers['x-user-name'];
+  const token = req.body?.ownershipToken || req.query?.ownershipToken || req.headers['x-ownership-token'];
+
+  if (uid && report.reporterUid && String(uid) === String(report.reporterUid)) return true;
+  if (email && report.reporterEmail && String(email).toLowerCase() === String(report.reporterEmail).toLowerCase()) return true;
+  if (reportedBy && report.reportedBy && String(reportedBy).trim().toLowerCase() === String(report.reportedBy).trim().toLowerCase()) return true;
+  if (token && report.ownershipToken && String(token) === String(report.ownershipToken)) return true;
+  return false;
+}
+
+function requireAdmin(req: express.Request, res: express.Response, next: express.NextFunction) {
+  if (isRequestAdmin(req)) {
     return next();
   }
-
   return res.status(403).json({ 
     success: false, 
     error: 'Bu işlem için yetkiniz yok. Sadece sistem yöneticisi (nofrostlife@gmail.com) işlem yapabilir.' 
   });
 }
+
 
 // API Routes
 app.get('/api/committees', (req, res) => {
@@ -928,6 +981,89 @@ app.get('/api/questions', (req, res) => {
   // Sort by questionNumber ascending
   result.sort((a, b) => a.questionNumber - b.questionNumber);
   res.json({ questions: result });
+});
+
+// Soru Havuzu Kümeleme & Öneri Taslak API
+const POOL_CLUSTERS_FILE = path.join(__dirname, 'src', 'data', 'pool_question_clusters.json');
+
+app.get('/api/pool-clusters', (_req, res) => {
+  try {
+    if (!fs.existsSync(POOL_CLUSTERS_FILE)) {
+      return res.json({ clusters: [] });
+    }
+    const raw = fs.readFileSync(POOL_CLUSTERS_FILE, 'utf-8');
+    const clusters = JSON.parse(raw);
+    res.json({ clusters });
+  } catch (err: any) {
+    res.status(500).json({ error: 'Kümeler okunamadı: ' + err.message });
+  }
+});
+
+// Öğrencinin öneriye yalnızca katkı / ekleme yapabilmesi (Asla silemez veya kabul edemez)
+app.post('/api/pool-clusters/:id/contribute', (req, res) => {
+  try {
+    const { studentName, text, studentUid } = req.body;
+    if (!text || !text.trim()) {
+      return res.status(400).json({ error: 'Katkı metni boş olamaz.' });
+    }
+    if (!fs.existsSync(POOL_CLUSTERS_FILE)) {
+      return res.status(404).json({ error: 'Küme dosyası bulunamadı.' });
+    }
+
+    const clusters = JSON.parse(fs.readFileSync(POOL_CLUSTERS_FILE, 'utf-8'));
+    const targetCluster = clusters.find((c: any) => c.id === req.params.id);
+    if (!targetCluster) {
+      return res.status(404).json({ error: 'Hedef soru kümesi bulunamadı.' });
+    }
+
+    if (!targetCluster.studentContributions) {
+      targetCluster.studentContributions = [];
+    }
+
+    const newContrib = {
+      id: `contrib-${Date.now()}-${Math.random().toString(36).substring(2, 6)}`,
+      studentName: (studentName || 'Tıp Öğrencisi').trim(),
+      studentUid: studentUid || undefined,
+      text: censorProfanity(text.trim()),
+      createdAt: new Date().toISOString()
+    };
+
+    targetCluster.studentContributions.push(newContrib);
+    targetCluster.updatedAt = new Date().toISOString();
+
+    fs.writeFileSync(POOL_CLUSTERS_FILE, JSON.stringify(clusters, null, 2), 'utf-8');
+    res.json({ success: true, contribution: newContrib, cluster: targetCluster });
+  } catch (err: any) {
+    res.status(500).json({ error: 'Katkı eklenemedi: ' + err.message });
+  }
+});
+
+// Öğrencilerin öneriyi silmesi veya kabul etmesi kesinlikle engellenmiştir
+app.delete('/api/pool-clusters/:id', (_req, res) => {
+  return res.status(403).json({
+    error: 'Kural İhlali: Öğrenciler birleştirilen soru önerilerini silemez; öneri taslak olarak kalmalıdır.'
+  });
+});
+
+app.post('/api/pool-clusters/:id/accept', (_req, res) => {
+  return res.status(403).json({
+    error: 'Kural İhlali: Bu soru taslağı kolektif birleştirme önerisidir; kabul veya onay yapılamaz, taslak olarak kalmalıdır.'
+  });
+});
+
+// Otomasyonu arka planda yeniden tetikleme
+app.post('/api/pool-clusters/run-pipeline', (_req, res) => {
+  try {
+    const scriptPath = path.join(__dirname, 'scripts', 'cluster_pool_questions.py');
+    const child = spawn('python3', [scriptPath], {
+      detached: true,
+      stdio: 'ignore'
+    });
+    child.unref();
+    res.json({ success: true, message: 'Soru havuzu eşleme ve kümeleme otomasyonu arka planda başlatıldı.' });
+  } catch (err: any) {
+    res.status(500).json({ error: 'Otomasyon başlatılamadı: ' + err.message });
+  }
 });
 
 // Faz 5/6/6.5/8 analizleri (müfredat kazanımı, slayt kanıtı, terimler). Faz 6 doğrulanmamış AI çıktısıdır.
@@ -1524,6 +1660,7 @@ function getPastQuestionsDb(): any[] {
       if (!cachedPastQuestionsDb || stat.mtimeMs !== lastPastQuestionsMtime) {
         const data = JSON.parse(fs.readFileSync(PAST_QUESTIONS_FILE, 'utf-8'));
         const list = Array.isArray(data) ? data : [];
+        list.forEach((q: any) => normalizeQuestionVotes(q));
         cachedPastQuestionsDb = deletedSet.size > 0 ? list.filter((q: any) => !deletedSet.has(q.id)) : list;
         lastPastQuestionsMtime = stat.mtimeMs;
       }
@@ -1587,8 +1724,8 @@ app.get('/api/past-exams/sync', (req, res) => {
       });
     }
 
-    // 2. If client provided 'since' and only some questions changed
-    if (since) {
+    // 2. If client provided 'since' and count matches, only send questions modified since then
+    if (since && clientCount === list.length) {
       const sinceDate = new Date(since).getTime();
       const updated = list.filter(q => {
         if (!q.updatedAt) return false;
@@ -1597,12 +1734,12 @@ app.get('/api/past-exams/sync', (req, res) => {
 
       return res.json({
         success: true,
-        upToDate: updated.length === 0 && clientCount === list.length,
+        upToDate: updated.length === 0,
         count: list.length,
         lastModified: maxUpdatedAt,
         updatedQuestions: updated,
         deletedIds: deletedIds.length > 0 ? deletedIds : undefined,
-        allIds: clientCount !== undefined && clientCount !== list.length ? list.map(q => q.id) : undefined
+        allIds: list.map(q => q.id)
       });
     }
 
@@ -1677,7 +1814,7 @@ app.get('/api/past-exams', (req, res) => {
 // Student comment / suggestion on a past question
 app.post('/api/past-exams/:id/comment', (req, res) => {
   try {
-    const { author, text } = req.body;
+    const { author, text, authorUid, authorEmail, ownershipToken, parentId } = req.body;
     if (!text || !text.trim()) {
       return res.status(400).json({ error: 'Yorum metni zorunludur.' });
     }
@@ -1689,11 +1826,18 @@ app.post('/api/past-exams/:id/comment', (req, res) => {
     }
 
     if (!q.comments) q.comments = [];
+    // Yanıt: yalnız var olan bir yoruma bağlanır (yoksa üst düzey yorum olur)
+    const parent = typeof parentId === 'string' ? q.comments.find((c: any) => c?.id === parentId) : undefined;
     const newComment = {
       id: `c-${Date.now()}-${Math.random().toString(36).substring(2, 6)}`,
+      ...(parent ? { parentId: parent.id } : {}),
       author: author?.trim() || 'Tıp Öğrencisi',
-      text: text.trim(),
-      timestamp: new Date().toISOString()
+      authorUid: authorUid || undefined,
+      authorEmail: authorEmail || undefined,
+      ownershipToken: ownershipToken || undefined,
+      text: censorProfanity(text.trim()),
+      timestamp: new Date().toISOString(),
+      createdAt: new Date().toISOString()
     };
     q.comments.push(newComment);
 
@@ -1740,32 +1884,98 @@ app.post('/api/past-exams/:id/comment', (req, res) => {
   }
 });
 
-// Yönetim konsolu: çıkmış sorudaki bir yorumu sil (moderasyon)
-app.delete('/api/past-exams/:id/comments/:commentId', requireAdmin, (req, res) => {
+// Yorum sahibinin veya yöneticinin yorumu düzenlemesi (PUT)
+app.put('/api/past-exams/:id/comments/:commentId', (req, res) => {
+  try {
+    const { text } = req.body;
+    if (!text || !text.trim()) {
+      return res.status(400).json({ error: 'Yorum metni boş olamaz.' });
+    }
+
+    const list = getPastQuestionsDb();
+    const q = list.find(item => item.id === req.params.id);
+    if (!q) {
+      return res.status(404).json({ error: 'Çıkmış soru bulunamadı.' });
+    }
+
+    const comment = (q.comments || []).find((c: any) => c?.id === req.params.commentId);
+    if (!comment) {
+      return res.status(404).json({ error: 'Yorum bulunamadı.' });
+    }
+
+    if (!canUserManageComment(comment, req)) {
+      return res.status(403).json({ error: 'Bu yorumu düzenleme yetkiniz yok.' });
+    }
+
+    const oldText = comment.text;
+    comment.text = censorProfanity(text.trim());
+    comment.updatedAt = new Date().toISOString();
+    comment.isEdited = true;
+
+    // Rekonstrüksiyondaki açıklamayı da güncelle
+    if (q.reconstruction && q.reconstruction.explanation && oldText) {
+      if (q.reconstruction.explanation.includes(oldText)) {
+        q.reconstruction.explanation = q.reconstruction.explanation.replace(oldText, comment.text);
+      }
+    }
+
+    q.updatedAt = new Date().toISOString();
+    savePastQuestionsDb(list);
+    mirrorPastQuestionToSupabase(q);
+
+    res.json({ success: true, message: 'Yorum başarıyla güncellendi.', comment });
+  } catch (err: any) {
+    res.status(500).json({ error: 'Yorum güncellenemedi: ' + err.message });
+  }
+});
+
+// Yorum sahibinin veya yöneticinin çıkmış sorudaki bir yorumu kalıcı olarak silmesi (DELETE)
+app.delete('/api/past-exams/:id/comments/:commentId', (req, res) => {
   try {
     const list = getPastQuestionsDb();
     const q = list.find(item => item.id === req.params.id);
     if (!q) {
       return res.status(404).json({ error: 'Çıkmış soru bulunamadı.' });
     }
-    const before = Array.isArray(q.comments) ? q.comments.length : 0;
-    q.comments = (q.comments || []).filter((c: any) => c?.id !== req.params.commentId);
-    if (q.comments.length === before) {
+
+    const targetComment = (q.comments || []).find((c: any) => c?.id === req.params.commentId);
+    if (!targetComment) {
       return res.status(404).json({ error: 'Yorum bulunamadı.' });
     }
+
+    if (!canUserManageComment(targetComment, req)) {
+      return res.status(403).json({ error: 'Bu yorumu silme yetkiniz yok.' });
+    }
+
+    // Yorumu listeden temizle
+    q.comments = (q.comments || []).filter((c: any) => c?.id !== req.params.commentId);
+
+    // Eğer rekonstrüksiyon açıklamasına bu yorum enjekte edilmişse temizle
+    if (q.reconstruction && q.reconstruction.explanation && targetComment.text) {
+      const exp = q.reconstruction.explanation;
+      // Öğrenci katkısı bloklarını temizle
+      const cleaned = exp
+        .split('\n\n')
+        .filter((block: string) => !block.includes(targetComment.text))
+        .join('\n\n');
+      q.reconstruction.explanation = cleaned;
+    }
+
     q.updatedAt = new Date().toISOString();
     savePastQuestionsDb(list);
     mirrorPastQuestionToSupabase(q);
-    res.json({ success: true, message: 'Yorum silindi.' });
+
+    res.json({ success: true, message: 'Yorum tüm veritabanından kalıcı olarak silindi.' });
   } catch (err: any) {
     res.status(500).json({ error: 'Yorum silinemedi: ' + err.message });
   }
 });
 
+
 // Student report / complaint ("Şikayet Et / Hata Bildir") on a past question
 app.post('/api/past-exams/:id/report', async (req, res) => {
   try {
-    const { reason, details, reportedBy, id: incomingId, reporterEmail, reporterUid } = req.body;
+    const { reason, details, reportedBy, id: incomingId, reporterEmail, reporterUid, ownershipToken } = req.body;
     if (!reason || !reason.trim()) {
       return res.status(400).json({ error: 'Şikayet sebebi belirtilmelidir.' });
     }
@@ -1783,6 +1993,9 @@ app.post('/api/past-exams/:id/report', async (req, res) => {
       reason: reason.trim(),
       details: (details || '').trim(),
       reportedBy: reportedBy || 'Anonim Öğrenci',
+      reporterEmail: reporterEmail || undefined,
+      reporterUid: reporterUid || undefined,
+      ownershipToken: ownershipToken || undefined,
       timestamp: new Date().toISOString()
     };
     if (!q.reports.some((r: any) => r.id === reportId)) {
@@ -1829,6 +2042,27 @@ app.post('/api/past-exams/:id/report', async (req, res) => {
       console.warn('[Faz14 kullanıcı] bildirim kuyruğa eklenemedi:', qErr?.message || qErr);
     }
 
+    // Ücretsiz Gemini Otomatik Hata İnceleme ve Onarım Kuyruğuna ekle ve ANINDA çalıştır
+    try {
+      const enq = autoRepairStore.enqueue({
+        source: 'past_question',
+        targetId: String(q.id),
+        userReport: {
+          reason: newReport.reason,
+          details: newReport.details,
+          reportedBy: newReport.reportedBy,
+          reportedAt: newReport.timestamp,
+          email: reporterEmail,
+        },
+        fullContext: q,
+      });
+      if (enq) {
+        processQueueItem(enq.id).catch((e) => console.warn('[AutoRepairEngine] Anlık inceleme hatası:', e.message));
+      }
+    } catch (arErr: any) {
+      console.warn('[AutoRepairEngine] Kuyruğa eklenemedi:', arErr.message);
+    }
+
     // Yalnızca yöneticiye anında e-posta ve telefon push bildirimi gönder
     triggerAdminNotification({
       type: 'report',
@@ -1851,6 +2085,234 @@ app.post('/api/past-exams/:id/report', async (req, res) => {
   }
 });
 
+// Bildirim sahibi veya yöneticinin çıkmış sorudaki hata bildirimini düzenlemesi (PUT)
+app.put('/api/past-exams/:id/reports/:reportId', async (req, res) => {
+  try {
+    const { reason, details } = req.body;
+    if (!reason || !reason.trim()) {
+      return res.status(400).json({ error: 'Bildirim sebebi belirtilmelidir.' });
+    }
+
+    const list = getPastQuestionsDb();
+    const q = list.find(item => item.id === req.params.id);
+    if (!q) {
+      return res.status(404).json({ error: 'Çıkmış soru bulunamadı.' });
+    }
+
+    const report = (q.reports || []).find((r: any) => r.id === req.params.reportId);
+    if (!report) {
+      return res.status(404).json({ error: 'Hata bildirimi bulunamadı.' });
+    }
+
+    if (!canUserManageReport(report, req)) {
+      return res.status(403).json({ error: 'Bu bildirimi düzenleme yetkiniz yok.' });
+    }
+
+    report.reason = reason.trim();
+    if (details !== undefined) report.details = String(details || '').trim();
+    report.updatedAt = new Date().toISOString();
+    report.isEdited = true;
+
+    q.updatedAt = new Date().toISOString();
+    savePastQuestionsDb(list);
+    await mirrorPastQuestionToSupabase(q);
+
+    // Supabase past_question_reports tablosunda da güncelle
+    if (supabase) {
+      try {
+        await supabase
+          .from('past_question_reports')
+          .update(cleanForPostgres({
+            reason: report.reason,
+            details: report.details,
+            updated_at: report.updatedAt,
+          }))
+          .eq('id', report.id);
+      } catch (_) {}
+    }
+
+    // Auto repair kuyruğunda bekleyen varsa orayı da güncelle
+    try {
+      const qItem = autoRepairStore.getById(report.id);
+      if (qItem && qItem.userReport) {
+        autoRepairStore.update(report.id, {
+          userReport: {
+            ...qItem.userReport,
+            reason: report.reason,
+            details: report.details,
+          }
+        });
+      }
+    } catch (_) {}
+
+    res.json({ success: true, message: 'Hata bildirimi güncellendi.', report });
+  } catch (err: any) {
+    res.status(500).json({ error: 'Bildirim güncellenemedi: ' + err.message });
+  }
+});
+
+// Bildirim sahibi veya yöneticinin çıkmış sorudaki hata bildirimini KALICI olarak silmesi (DELETE)
+app.delete('/api/past-exams/:id/reports/:reportId', async (req, res) => {
+  try {
+    const list = getPastQuestionsDb();
+    const q = list.find(item => item.id === req.params.id);
+    if (!q) {
+      return res.status(404).json({ error: 'Çıkmış soru bulunamadı.' });
+    }
+
+    const report = (q.reports || []).find((r: any) => r.id === req.params.reportId);
+    if (!report) {
+      return res.status(404).json({ error: 'Hata bildirimi bulunamadı.' });
+    }
+
+    if (!canUserManageReport(report, req)) {
+      return res.status(403).json({ error: 'Bu bildirimi silme yetkiniz yok.' });
+    }
+
+    // 1. Soru objesinden kalıcı olarak çıkar
+    q.reports = (q.reports || []).filter((r: any) => r.id !== req.params.reportId);
+    q.updatedAt = new Date().toISOString();
+    savePastQuestionsDb(list);
+    await mirrorPastQuestionToSupabase(q);
+
+    // 2. Auto repair kuyruğundan sil ve kalıcı ban listesine ekle (asla geri gelmez)
+    try {
+      autoRepairStore.banAndRemove(req.params.reportId);
+    } catch (_) {}
+
+    // 3. Supabase past_question_reports tablosundan sil
+    if (supabase) {
+      try {
+        await supabase.from('past_question_reports').delete().eq('id', req.params.reportId);
+      } catch (_) {}
+    }
+
+    res.json({ success: true, message: 'Hata bildirimi tüm veritabanından kalıcı olarak silindi.' });
+  } catch (err: any) {
+    res.status(500).json({ error: 'Bildirim silinemedi: ' + err.message });
+  }
+});
+
+// Genel / Evrensel Hata Bildirimi Düzenleme (Soru ID'sinden bağımsız - PUT /api/reports/:reportId)
+app.put('/api/reports/:reportId', async (req, res) => {
+  try {
+    const { reason, details } = req.body;
+    if (!reason || !reason.trim()) {
+      return res.status(400).json({ error: 'Bildirim sebebi belirtilmelidir.' });
+    }
+
+    // 1. Önce past questions havuzunu ara
+    const pastList = getPastQuestionsDb();
+    for (const q of pastList) {
+      const rep = (q.reports || []).find((r: any) => r.id === req.params.reportId);
+      if (rep) {
+        if (!canUserManageReport(rep, req)) {
+          return res.status(403).json({ error: 'Bu bildirimi düzenleme yetkiniz yok.' });
+        }
+        rep.reason = reason.trim();
+        if (details !== undefined) rep.details = String(details || '').trim();
+        rep.updatedAt = new Date().toISOString();
+        rep.isEdited = true;
+        q.updatedAt = new Date().toISOString();
+        savePastQuestionsDb(pastList);
+        await mirrorPastQuestionToSupabase(q);
+
+        if (supabase) {
+          try {
+            await supabase.from('past_question_reports').update(cleanForPostgres({
+              reason: rep.reason,
+              details: rep.details,
+              updated_at: rep.updatedAt,
+            })).eq('id', rep.id);
+          } catch (_) {}
+        }
+        return res.json({ success: true, message: 'Hata bildirimi güncellendi.', report: rep });
+      }
+    }
+
+    // 2. Normal sorular havuzunu ara
+    for (const q of (db.questions || [])) {
+      const qAny = q as any;
+      const rep = (qAny.reports || []).find((r: any) => r.id === req.params.reportId);
+      if (rep) {
+        if (!canUserManageReport(rep, req)) {
+          return res.status(403).json({ error: 'Bu bildirimi düzenleme yetkiniz yok.' });
+        }
+        rep.reason = reason.trim();
+        if (details !== undefined) rep.details = String(details || '').trim();
+        rep.updatedAt = new Date().toISOString();
+        rep.isEdited = true;
+        q.updatedAt = new Date().toISOString();
+        saveDatabase();
+        return res.json({ success: true, message: 'Hata bildirimi güncellendi.', report: rep });
+      }
+    }
+
+    return res.status(404).json({ error: 'Hata bildirimi bulunamadı.' });
+  } catch (err: any) {
+    res.status(500).json({ error: 'Bildirim güncellenemedi: ' + err.message });
+  }
+});
+
+// Genel / Evrensel Hata Bildirimi KALICI Silme (Soru ID'sinden bağımsız - DELETE /api/reports/:reportId)
+app.delete('/api/reports/:reportId', async (req, res) => {
+  try {
+    let found = false;
+
+    // 1. Önce past questions havuzunu ara
+    const pastList = getPastQuestionsDb();
+    for (const q of pastList) {
+      const rep = (q.reports || []).find((r: any) => r.id === req.params.reportId);
+      if (rep) {
+        if (!canUserManageReport(rep, req)) {
+          return res.status(403).json({ error: 'Bu bildirimi silme yetkiniz yok.' });
+        }
+        q.reports = (q.reports || []).filter((r: any) => r.id !== req.params.reportId);
+        q.updatedAt = new Date().toISOString();
+        savePastQuestionsDb(pastList);
+        await mirrorPastQuestionToSupabase(q);
+        found = true;
+        break;
+      }
+    }
+
+    // 2. Normal sorular havuzunu ara
+    if (!found) {
+      for (const q of (db.questions || [])) {
+        const qAny = q as any;
+        const rep = (qAny.reports || []).find((r: any) => r.id === req.params.reportId);
+        if (rep) {
+          if (!canUserManageReport(rep, req)) {
+            return res.status(403).json({ error: 'Bu bildirimi silme yetkiniz yok.' });
+          }
+          qAny.reports = (qAny.reports || []).filter((r: any) => r.id !== req.params.reportId);
+          q.updatedAt = new Date().toISOString();
+          saveDatabase();
+          found = true;
+          break;
+        }
+      }
+    }
+
+    // 3. Auto repair kuyruğundan banla ve sil
+    try {
+      autoRepairStore.banAndRemove(req.params.reportId);
+    } catch (_) {}
+
+    // 4. Supabase'den sil
+    if (supabase) {
+      try {
+        await supabase.from('past_question_reports').delete().eq('id', req.params.reportId);
+      } catch (_) {}
+    }
+
+    res.json({ success: true, message: 'Hata bildirimi tüm veritabanından kalıcı olarak silindi.' });
+  } catch (err: any) {
+    res.status(500).json({ error: 'Bildirim silinemedi: ' + err.message });
+  }
+});
+
+
 // Upvote / Like a past question
 app.post('/api/past-exams/:id/upvote', (req, res) => {
   try {
@@ -1860,23 +2322,14 @@ app.post('/api/past-exams/:id/upvote', (req, res) => {
       return res.status(404).json({ error: 'Çıkmış soru bulunamadı.' });
     }
 
-    const userId = String(req.body?.userId || req.query.userId || 'anonim-user');
-    q.likedBy = Array.isArray(q.likedBy) ? q.likedBy : [];
-    q.dislikedBy = Array.isArray(q.dislikedBy) ? q.dislikedBy : [];
-
-    const isLiked = q.likedBy.includes(userId);
-    if (isLiked) {
-      q.likedBy = q.likedBy.filter((u: string) => u !== userId);
-      q.upvotes = Math.max(0, (q.upvotes || 1) - 1);
-    } else {
-      q.likedBy.push(userId);
-      q.upvotes = (q.upvotes || 0) + 1;
-      // If user previously disliked, remove dislike
-      if (q.dislikedBy.includes(userId)) {
-        q.dislikedBy = q.dislikedBy.filter((u: string) => u !== userId);
-        q.downvotes = Math.max(0, (q.downvotes || 1) - 1);
-      }
-    }
+    const userId = voterIdFrom(req);
+    if (!userId) return res.status(400).json({ error: 'Oy vermek için kullanıcı kimliği gerekli.' });
+    const dislike = { upvotes: q.downvotes, likedBy: q.dislikedBy };
+    const liked = toggleVote(q, userId);
+    // Beğeni verildiyse aynı kullanıcının olumsuz oyu kalkar.
+    if (liked && normalizeVotes(dislike).likedBy!.includes(userId)) toggleVote(dislike, userId);
+    q.downvotes = dislike.upvotes;
+    q.dislikedBy = dislike.likedBy;
 
     q.updatedAt = new Date().toISOString();
     savePastQuestionsDb(list);
@@ -1897,23 +2350,14 @@ app.post('/api/past-exams/:id/downvote', (req, res) => {
       return res.status(404).json({ error: 'Çıkmış soru bulunamadı.' });
     }
 
-    const userId = String(req.body?.userId || req.query.userId || 'anonim-user');
-    q.likedBy = Array.isArray(q.likedBy) ? q.likedBy : [];
-    q.dislikedBy = Array.isArray(q.dislikedBy) ? q.dislikedBy : [];
-
-    const isDisliked = q.dislikedBy.includes(userId);
-    if (isDisliked) {
-      q.dislikedBy = q.dislikedBy.filter((u: string) => u !== userId);
-      q.downvotes = Math.max(0, (q.downvotes || 1) - 1);
-    } else {
-      q.dislikedBy.push(userId);
-      q.downvotes = (q.downvotes || 0) + 1;
-      // If user previously liked, remove like
-      if (q.likedBy.includes(userId)) {
-        q.likedBy = q.likedBy.filter((u: string) => u !== userId);
-        q.upvotes = Math.max(0, (q.upvotes || 1) - 1);
-      }
-    }
+    const userId = voterIdFrom(req);
+    if (!userId) return res.status(400).json({ error: 'Oy vermek için kullanıcı kimliği gerekli.' });
+    const dislike = { upvotes: q.downvotes, likedBy: q.dislikedBy };
+    const disliked = toggleVote(dislike, userId);
+    q.downvotes = dislike.upvotes;
+    q.dislikedBy = dislike.likedBy;
+    // Olumsuz oy verildiyse aynı kullanıcının beğenisi kalkar.
+    if (disliked && normalizeVotes(q).likedBy!.includes(userId)) toggleVote(q, userId);
 
     q.updatedAt = new Date().toISOString();
     savePastQuestionsDb(list);
@@ -2307,7 +2751,8 @@ function applyPhase14Review(targetQId: string, approvedBy: string): Phase14Apply
           key: upperK as any,
           text: String(v),
           isCorrect: upperK === String(proposal.dogru_secenek || targetQ.claimedAnswer || targetQ.correctAnswer).toUpperCase(),
-          upvotes: 1,
+          upvotes: 0,
+          likedBy: [],
           ...(isCompletedByAi ? {
             isAiGenerated: true,
             isAiFilled: true,
@@ -2547,6 +2992,24 @@ app.post('/api/past-exams/:id/ai-review', (req, res) => {
       message: b.message,
     }, q.questionNumber);
     kickPhase14UserQueue(true);
+
+    try {
+      autoRepairStore.enqueue({
+        source: 'past_question',
+        targetId: qId,
+        userReport: {
+          reason: 'Yapay Zekâ İnceleme Talebi',
+          details: String(b.message || '').trim(),
+          reportedBy: String(b.name || 'Tıp öğrencisi'),
+          reportedAt: new Date().toISOString(),
+          email: b.email,
+        },
+        fullContext: q,
+      });
+    } catch (arErr: any) {
+      console.warn('[AutoRepairEngine] Kuyruğa eklenemedi:', arErr.message);
+    }
+
     res.json({ success: true, joined: r.joined, position: r.position, waiting: r.waiting });
   } catch (err: any) {
     res.status(500).json({ error: 'İstek kuyruğa eklenemedi: ' + err.message });
@@ -3603,22 +4066,9 @@ app.post('/api/questions/:id/upvote', (req, res) => {
   const question = db.questions.find((q) => q.id === req.params.id);
   if (!question) return res.status(404).json({ error: 'Soru bulunamadı.' });
 
-  const userId = req.body?.userId || req.headers['x-user-id'] || 'anon';
-  question.likedBy = question.likedBy || [];
-  const idx = question.likedBy.indexOf(userId);
-
-  let liked = false;
-  if (idx >= 0) {
-    // Already liked -> Toggle off (cancel like)
-    question.likedBy.splice(idx, 1);
-    question.upvotes = Math.max(0, (question.upvotes || 1) - 1);
-    liked = false;
-  } else {
-    // First time -> Add like
-    question.likedBy.push(userId);
-    question.upvotes = (question.upvotes || 0) + 1;
-    liked = true;
-  }
+  const userId = voterIdFrom(req);
+  if (!userId) return res.status(400).json({ error: 'Oy vermek için kullanıcı kimliği gerekli.' });
+  const liked = toggleVote(question, userId);
 
   question.updatedAt = new Date().toISOString();
   saveDatabase();
@@ -3677,6 +4127,32 @@ app.post('/api/learn/feedback', (req, res) => {
     topic: r.item.location,
     link: r.item.link,
   });
+
+  try {
+    const enq = autoRepairStore.enqueue({
+      source: 'interactive_deck',
+      targetId: r.item.deckId,
+      subTarget: {
+        slideNumber: r.item.slideNumber,
+        targetKey: r.item.targetKey,
+        location: r.item.location,
+        label: r.item.targetLabel,
+      },
+      userReport: {
+        reason: r.item.field || 'İçerik Hatası',
+        details: r.item.reason || '',
+        reportedBy: r.item.author?.name || 'Anonim Öğrenci',
+        reportedAt: r.item.createdAt || new Date().toISOString(),
+      },
+      fullContext: enrichAndFetchContext('interactive_deck', r.item.deckId, { slideNumber: r.item.slideNumber, targetKey: r.item.targetKey }),
+    });
+      if (enq) {
+        processQueueItem(enq.id).catch((e) => console.warn('[AutoRepairEngine] Anlık öğrenme inceleme hatası:', e.message));
+      }
+  } catch (arErr: any) {
+    console.warn('[AutoRepairEngine] Öğrenme bildirimi kuyruğa eklenemedi:', arErr.message);
+  }
+
   res.json({ success: true, item: r.item });
 });
 app.post('/api/learn/feedback/:id/vote', (req, res) => {
@@ -3689,6 +4165,53 @@ app.post('/api/admin/learn-feedback/:id/resolve', requireAdmin, (req, res) => {
   res.json({ success: true });
 });
 
+// Öğren geri bildirimini düzenle (PUT)
+app.put('/api/learn/feedback/:id', (req, res) => {
+  try {
+    const item = learnFeedback.get(String(req.params.id));
+    if (!item) return res.status(404).json({ error: 'Bildirim bulunamadı.' });
+
+    const voterId = String(req.body?.voterId || req.query?.voterId || req.headers['x-user-uid'] || '');
+    const isAdmin = isRequestAdmin(req);
+    if (!isAdmin && item.author.id !== voterId) {
+      return res.status(403).json({ error: 'Bu bildirimi düzenleme yetkiniz yok.' });
+    }
+
+    const updated = learnFeedback.update(String(req.params.id), {
+      field: req.body?.field,
+      reason: req.body?.reason,
+    });
+    if (!updated) return res.status(400).json({ error: 'Güncelleme başarısız.' });
+
+    res.json({ success: true, item: updated });
+  } catch (err: any) {
+    res.status(500).json({ error: 'Güncellenemedi: ' + err.message });
+  }
+});
+
+// Öğren geri bildirimini KALICI olarak sil (DELETE)
+app.delete('/api/learn/feedback/:id', (req, res) => {
+  try {
+    const item = learnFeedback.get(String(req.params.id));
+    if (!item) return res.status(404).json({ error: 'Bildirim bulunamadı.' });
+
+    const voterId = String(req.body?.voterId || req.query?.voterId || req.headers['x-user-uid'] || '');
+    const isAdmin = isRequestAdmin(req);
+    if (!isAdmin && item.author.id !== voterId) {
+      return res.status(403).json({ error: 'Bu bildirimi silme yetkiniz yok.' });
+    }
+
+    learnFeedback.delete(String(req.params.id));
+    try {
+      autoRepairStore.banAndRemove(String(req.params.id));
+    } catch (_) {}
+
+    res.json({ success: true, message: 'Öğrenme bildirimi kalıcı olarak silindi.' });
+  } catch (err: any) {
+    res.status(500).json({ error: 'Silinemedi: ' + err.message });
+  }
+});
+
 app.post('/api/questions/:id/report', (req, res) => {
   const question: any = db.questions.find((q) => q.id === req.params.id);
   if (!question) return res.status(404).json({ error: 'Soru bulunamadı.' });
@@ -3699,6 +4222,9 @@ app.post('/api/questions/:id/report', (req, res) => {
     reason: reason.slice(0, 120),
     details: String(req.body?.details || '').trim().slice(0, 1200),
     reportedBy: String(req.body?.reportedBy || 'Anonim Öğrenci').slice(0, 80),
+    reporterEmail: req.body?.reporterEmail || undefined,
+    reporterUid: req.body?.reporterUid || undefined,
+    ownershipToken: req.body?.ownershipToken || undefined,
     timestamp: new Date().toISOString(),
   };
   question.reports = Array.isArray(question.reports) ? question.reports : [];
@@ -3717,7 +4243,214 @@ app.post('/api/questions/:id/report', (req, res) => {
     topic: question.topic,
   });
 
+  try {
+    const enq = autoRepairStore.enqueue({
+      source: 'practice_question',
+      targetId: String(req.params.id),
+      userReport: {
+        reason: report.reason,
+        details: report.details,
+        reportedBy: report.reportedBy,
+        reportedAt: report.timestamp,
+        email: report.reporterEmail,
+      },
+      fullContext: question,
+    });
+    if (enq) {
+      processQueueItem(enq.id).catch((e) => console.warn('[AutoRepairEngine] Anlık soru inceleme hatası:', e.message));
+    }
+  } catch (arErr: any) {
+    console.warn('[AutoRepairEngine] Örnek soru bildirimi kuyruğa eklenemedi:', arErr.message);
+  }
+
   res.json({ success: true, report });
+});
+
+// Tıbbi Sözlük ve Ansiklopedi Terimi Hata Bildirimi
+app.post('/api/terms/:id/report', (req, res) => {
+  const termId = String(req.params.id);
+  const reason = String(req.body?.reason || 'Terim Hata Bildirimi').trim();
+  const details = String(req.body?.details || '').trim();
+  const reportedBy = String(req.body?.reportedBy || 'Tıp Öğrencisi').slice(0, 80);
+  const timestamp = new Date().toISOString();
+
+  const report = {
+    id: `rep-term-${Date.now()}-${Math.random().toString(36).substring(2, 6)}`,
+    termId,
+    reason,
+    details,
+    reportedBy,
+    timestamp,
+    status: 'pending'
+  };
+
+  triggerAdminNotification({
+    type: 'report',
+    questionId: `Tıbbi Terim: ${termId}`,
+    reason,
+    details,
+    author: reportedBy,
+    discipline: 'Tıbbi Sözlük',
+    topic: termId,
+  });
+
+  try {
+    const enq = autoRepairStore.enqueue({
+      source: 'term',
+      targetId: termId,
+      userReport: {
+        reason,
+        details,
+        reportedBy,
+        reportedAt: timestamp,
+      },
+      fullContext: { term: termId, details } as any,
+    });
+    if (enq) {
+      processQueueItem(enq.id).catch((e) => console.warn('[AutoRepairEngine] Anlık terim inceleme hatası:', e.message));
+    }
+  } catch (arErr: any) {
+    console.warn('[AutoRepairEngine] Terim bildirimi kuyruğa eklenemedi:', arErr.message);
+  }
+
+  res.json({ success: true, report });
+});
+
+// Akıl Kartları (Flashcards) Hata Bildirimi
+app.post('/api/cards/:id/report', (req, res) => {
+  const cardId = String(req.params.id);
+  const reason = String(req.body?.reason || 'Kart Hata Bildirimi').trim();
+  const details = String(req.body?.details || '').trim();
+  const reportedBy = String(req.body?.reportedBy || 'Tıp Öğrencisi').slice(0, 80);
+  const timestamp = new Date().toISOString();
+
+  const report = {
+    id: `rep-card-${Date.now()}-${Math.random().toString(36).substring(2, 6)}`,
+    cardId,
+    reason,
+    details,
+    reportedBy,
+    timestamp,
+    status: 'pending'
+  };
+
+  triggerAdminNotification({
+    type: 'report',
+    questionId: `Akıl Kartı: ${cardId}`,
+    reason,
+    details,
+    author: reportedBy,
+    discipline: 'Akıl Kartı',
+    topic: cardId,
+  });
+
+  try {
+    const enq = autoRepairStore.enqueue({
+      source: 'flashcard',
+      targetId: cardId,
+      userReport: {
+        reason,
+        details,
+        reportedBy,
+        reportedAt: timestamp,
+      },
+      fullContext: { cardId, details } as any,
+    });
+    if (enq) {
+      processQueueItem(enq.id).catch((e) => console.warn('[AutoRepairEngine] Anlık kart inceleme hatası:', e.message));
+    }
+  } catch (arErr: any) {
+    console.warn('[AutoRepairEngine] Kart bildirimi kuyruğa eklenemedi:', arErr.message);
+  }
+
+  res.json({ success: true, report });
+});
+
+// Evrensel İçerik Hata Bildirimi (Tablo, Slayt, Özet, Spot vb.)
+app.post('/api/universal-report', (req, res) => {
+  const targetType = String(req.body?.targetType || 'content');
+  const targetId = String(req.body?.targetId || '');
+  const reason = String(req.body?.reason || 'İçerik Hata Bildirimi').trim();
+  const details = String(req.body?.details || '').trim();
+  const reportedBy = String(req.body?.reportedBy || 'Tıp Öğrencisi').slice(0, 80);
+  const timestamp = new Date().toISOString();
+
+  const report = {
+    id: `rep-uni-${Date.now()}-${Math.random().toString(36).substring(2, 6)}`,
+    targetType,
+    targetId,
+    reason,
+    details,
+    reportedBy,
+    timestamp,
+    status: 'pending'
+  };
+
+  triggerAdminNotification({
+    type: 'report',
+    questionId: `${targetType.toUpperCase()}: ${targetId}`,
+    reason,
+    details,
+    author: reportedBy,
+    discipline: targetType,
+    topic: targetId,
+  });
+
+  res.json({ success: true, report });
+});
+
+// Soru bankasındaki bir sorunun hata bildirimini düzenle (PUT)
+app.put('/api/questions/:id/reports/:reportId', (req, res) => {
+  try {
+    const question: any = db.questions.find((q) => q.id === req.params.id);
+    if (!question) return res.status(404).json({ error: 'Soru bulunamadı.' });
+
+    const report = (question.reports || []).find((r: any) => r.id === req.params.reportId);
+    if (!report) return res.status(404).json({ error: 'Hata bildirimi bulunamadı.' });
+
+    if (!canUserManageReport(report, req)) {
+      return res.status(403).json({ error: 'Bu bildirimi düzenleme yetkiniz yok.' });
+    }
+
+    const { reason, details } = req.body;
+    if (reason && reason.trim()) report.reason = reason.trim();
+    if (details !== undefined) report.details = String(details || '').trim();
+    report.updatedAt = new Date().toISOString();
+    report.isEdited = true;
+    question.updatedAt = report.updatedAt;
+    saveDatabase();
+
+    res.json({ success: true, message: 'Bildirim güncellendi.', report });
+  } catch (err: any) {
+    res.status(500).json({ error: 'Güncellenemedi: ' + err.message });
+  }
+});
+
+// Soru bankasındaki bir sorunun hata bildirimini KALICI sil (DELETE)
+app.delete('/api/questions/:id/reports/:reportId', (req, res) => {
+  try {
+    const question: any = db.questions.find((q) => q.id === req.params.id);
+    if (!question) return res.status(404).json({ error: 'Soru bulunamadı.' });
+
+    const report = (question.reports || []).find((r: any) => r.id === req.params.reportId);
+    if (!report) return res.status(404).json({ error: 'Hata bildirimi bulunamadı.' });
+
+    if (!canUserManageReport(report, req)) {
+      return res.status(403).json({ error: 'Bu bildirimi silme yetkiniz yok.' });
+    }
+
+    question.reports = (question.reports || []).filter((r: any) => r.id !== req.params.reportId);
+    question.updatedAt = new Date().toISOString();
+    saveDatabase();
+
+    try {
+      autoRepairStore.banAndRemove(req.params.reportId);
+    } catch (_) {}
+
+    res.json({ success: true, message: 'Bildirim tüm veritabanından kalıcı olarak silindi.' });
+  } catch (err: any) {
+    res.status(500).json({ error: 'Silinemedi: ' + err.message });
+  }
 });
 
 // Add fragment/memory to a question
@@ -3770,22 +4503,9 @@ app.post('/api/questions/:id/fragments/:fragmentId/upvote', (req, res) => {
   const fragment = question.fragments.find((f) => f.id === req.params.fragmentId);
   if (!fragment) return res.status(404).json({ error: 'Katkı bulunamadı.' });
 
-  const userId = req.body?.userId || req.headers['x-user-id'] || 'anon';
-  fragment.likedBy = fragment.likedBy || [];
-  const idx = fragment.likedBy.indexOf(userId);
-
-  let liked = false;
-  if (idx >= 0) {
-    // Already liked -> cancel like
-    fragment.likedBy.splice(idx, 1);
-    fragment.upvotes = Math.max(0, (fragment.upvotes || 1) - 1);
-    liked = false;
-  } else {
-    // Add like
-    fragment.likedBy.push(userId);
-    fragment.upvotes = (fragment.upvotes || 0) + 1;
-    liked = true;
-  }
+  const userId = voterIdFrom(req);
+  if (!userId) return res.status(400).json({ error: 'Oy vermek için kullanıcı kimliği gerekli.' });
+  const liked = toggleVote(fragment, userId);
 
   question.updatedAt = new Date().toISOString();
   saveDatabase();
@@ -3833,22 +4553,9 @@ app.post('/api/questions/:id/options/:key/upvote', (req, res) => {
   const opt = question.options.find((o) => o.key === req.params.key);
   if (!opt) return res.status(404).json({ error: 'Şık bulunamadı.' });
 
-  const userId = req.body?.userId || req.headers['x-user-id'] || 'anon';
-  opt.likedBy = opt.likedBy || [];
-  const idx = opt.likedBy.indexOf(userId);
-
-  let liked = false;
-  if (idx >= 0) {
-    // Already liked -> cancel like
-    opt.likedBy.splice(idx, 1);
-    opt.upvotes = Math.max(0, (opt.upvotes || 1) - 1);
-    liked = false;
-  } else {
-    // Add like
-    opt.likedBy.push(userId);
-    opt.upvotes = (opt.upvotes || 0) + 1;
-    liked = true;
-  }
+  const userId = voterIdFrom(req);
+  if (!userId) return res.status(400).json({ error: 'Oy vermek için kullanıcı kimliği gerekli.' });
+  const liked = toggleVote(opt, userId);
 
   question.updatedAt = new Date().toISOString();
   saveDatabase();
@@ -5387,6 +6094,38 @@ app.post('/api/admin/reports/:id/resolve', requireAdmin, async (req, res) => {
           await client.from('past_questions').update({ reports: next, updated_at: new Date().toISOString() }).eq('id', questionId);
         }
       } catch (_) {}
+
+      // Yerel pastQuestions veritabanında da çözüldü olarak işaretle
+      try {
+        const pastList = getPastQuestionsDb();
+        const qIdx = pastList.findIndex((q: any) => String(q.id) === questionId);
+        if (qIdx !== -1) {
+          const q = pastList[qIdx];
+          const curReports = Array.isArray(q.reports) ? q.reports : [];
+          q.reports = curReports.map((r: any) =>
+            !reportId || r.id === reportId || r.id?.includes(reportId)
+              ? { ...r, status: 'resolved', resolvedAt: new Date().toISOString(), resolvedBy: 'Admin' }
+              : r
+          );
+          q.qualityIssues = (Array.isArray(q.qualityIssues) ? q.qualityIssues : []).filter(
+            (issue: string) => !issue.startsWith('sikayet-')
+          );
+          q.qualityScore = Math.max(Number(q.qualityScore || 0), 95);
+          q.updatedAt = new Date().toISOString();
+          savePastQuestionsDb(pastList);
+        }
+      } catch (locErr) {
+        console.warn('[Server] Yerel pastQuestions.json çözüldü güncelleme hatası:', locErr);
+      }
+
+      // autoRepairStore kuyruğundan da kalıcı olarak banla/kaldır
+      try {
+        const repKey = `past-rep-${questionId}-${reportId}`;
+        autoRepairStore.banAndRemove(repKey);
+        if (reportId) {
+          autoRepairStore.banAndRemove(reportId);
+        }
+      } catch (_) {}
     }
     res.json({ success: true, message: 'Bildirim çözüldü olarak işaretlendi.' });
   } catch (err: any) {
@@ -5798,6 +6537,35 @@ const cloudNotificationBridge = new CloudNotificationBridge({
         if (!seen) {
           phase14Queue.enqueue(qid, { kind: 'hata', name: params.author || 'Tıp öğrencisi', reason: params.reason, message: params.details });
           kickPhase14UserQueue(true);
+
+          try {
+            const pastItem = getPastQuestionsDb().find((x: any) => String(x.id) === qid);
+            const poolItem = db.questions?.find((x: any) => String(x.id) === qid);
+            const source = pastItem ? 'past_question' : (poolItem ? 'practice_question' : 'past_question');
+
+            const enqueued = autoRepairStore.enqueue({
+              source,
+              targetId: qid,
+              userReport: {
+                reason: params.reason || 'Bulut Hata Bildirimi',
+                details: params.details || '',
+                reportedBy: params.author || 'Tıp öğrencisi',
+                reportedAt: new Date().toISOString(),
+              },
+              fullContext: pastItem || poolItem || null,
+            });
+
+            if (enqueued) {
+              console.log(`[AutoRepairEngine] ⚡ Realtime Bildirim Kuyruğa Alındı (#${qid}). Anında AI denetimi başlatılıyor...`);
+              processQueueItem(enqueued.id).then(() => {
+                console.log(`[AutoRepairEngine] ✅ Realtime bildirim başarıyla incelendi (#${qid})`);
+              }).catch((err) => {
+                console.warn(`[AutoRepairEngine] ⚠️ Realtime inceleme hatası (#${qid}):`, err.message);
+              });
+            }
+          } catch (arErr: any) {
+            console.warn('[AutoRepairEngine] Buluttan gelen bildirim kuyruğa eklenemedi:', arErr.message);
+          }
         }
       }
     } catch (qErr: any) {
@@ -7373,35 +8141,12 @@ app.post('/api/pdf/render', async (req, res) => {
 // Stream local lecture note PDF file directly
 app.get('/api/lecture-pdf/:filename', (req, res) => {
   try {
-    const baseDir = process.env.MEDS_DATABASE_DIR || '/home/indu/medsor/meds_database';
-    const notlarDir = path.join(baseDir, 'ders_notlari_pdf');
-    const rawFilename = decodeURIComponent(req.params.filename);
-    const safeFilename = path.basename(rawFilename);
-
-    if (fs.existsSync(notlarDir)) {
-      const directPath = path.join(notlarDir, safeFilename);
-      if (fs.existsSync(directPath)) {
-        res.setHeader('Content-Type', 'application/pdf');
-        res.setHeader('Content-Disposition', `inline; filename="${encodeURIComponent(safeFilename)}"`);
-        return res.sendFile(directPath);
-      }
-
-      // Fuzzy matching by filename
-      const files = fs.readdirSync(notlarDir);
-      const cleanTarget = safeFilename.toLowerCase().replace(/\.pdf$/i, '').trim();
-      const matched = files.find(f => {
-        const cleanFile = f.toLowerCase().replace(/\.pdf$/i, '').trim();
-        return cleanFile === cleanTarget || cleanFile.includes(cleanTarget) || cleanTarget.includes(cleanFile);
-      });
-
-      if (matched) {
-        res.setHeader('Content-Type', 'application/pdf');
-        res.setHeader('Content-Disposition', `inline; filename="${encodeURIComponent(matched)}"`);
-        return res.sendFile(path.join(notlarDir, matched));
-      }
-    }
-
-    res.status(404).json({ error: 'PDF dosyası bulunamadı.' });
+    const found = findLecturePdf(decodeURIComponent(req.params.filename));
+    if (!found) return res.status(404).json({ error: 'PDF dosyası bulunamadı.' });
+    res.setHeader('Content-Type', 'application/pdf');
+    res.setHeader('Content-Disposition', `inline; filename="${encodeURIComponent(path.basename(found))}"`);
+    res.setHeader('Cache-Control', 'private, max-age=3600');
+    return res.sendFile(found);
   } catch (err: any) {
     res.status(500).json({ error: 'PDF açılırken hata: ' + err.message });
   }
@@ -7829,6 +8574,27 @@ app.post('/api/ai/interactions', async (req, res) => {
 });
 
 // 8. AI Interactions: Upvote helpful explanation
+// Müzik: kullanıcı bazlı kalıcı çalma listesi
+app.get('/api/music/playlist', (req, res) => {
+  const owner = voterIdFrom(req);
+  if (!owner) return res.status(400).json({ error: 'Kullanıcı kimliği gerekli.' });
+  res.json(getPlaylist(owner));
+});
+app.put('/api/music/playlist', (req, res) => {
+  const owner = voterIdFrom(req);
+  if (!owner) return res.status(400).json({ error: 'Kullanıcı kimliği gerekli.' });
+  const tracks = sanitizeTracks(req.body?.tracks);
+  // Boş liste yalnız açıkça istenirse yazılır; aksi hâlde kayıtlı liste korunur.
+  if (tracks.length === 0 && req.body?.clear !== true && getPlaylist(owner).tracks.length > 0) {
+    return res.json(getPlaylist(owner));
+  }
+  try {
+    res.json(savePlaylist(owner, tracks));
+  } catch (err: any) {
+    res.status(500).json({ error: 'Çalma listesi kaydedilemedi: ' + err.message });
+  }
+});
+
 app.post('/api/ai/interactions/:id/upvote', (req, res) => {
   try {
     const ok = upvoteAiInteraction(req.params.id);
@@ -8343,6 +9109,282 @@ app.get('/api/tester/ozet', (req, res) => {
   }
 });
 
+// --- Ücretsiz Gemini Hata İnceleme ve Onarım Otomasyonu (Realtime & Yönetim API) ---
+function hydrateExistingReportsToAutoRepair() {
+  try {
+    let count = 0;
+    // 1. Çıkmış sorular içindeki raporlar
+    const past = getPastQuestionsDb();
+    for (const q of past) {
+      if (Array.isArray(q.reports) && q.reports.length > 0) {
+        for (const r of q.reports) {
+          // Çözülmüş veya admin tarafından daha önce incelenmiş olanları asla tekrar kuyruğa alma!
+          if (r.status === 'resolved' || r.status === 'verified_correct' || r.status === 'dismissed') {
+            continue;
+          }
+          const repId = `past-rep-${q.id}-${r.id || r.timestamp || 'old'}`;
+          // Admin tarafından banlanmış veya silinmiş ID ise ASLA KUYRUĞA ALMA
+          if (autoRepairStore.isBanned(repId) || (r.id && autoRepairStore.isBanned(r.id))) {
+            continue;
+          }
+          autoRepairStore.enqueue({
+            id: repId,
+            source: 'past_question',
+            targetId: String(q.id),
+            userReport: {
+              reason: r.reason || 'Hata Bildirimi',
+              details: r.details || '',
+              reportedBy: r.reportedBy || 'Tıp Öğrencisi',
+              reportedAt: r.timestamp || new Date().toISOString(),
+            },
+            fullContext: q,
+          });
+          count++;
+        }
+      }
+    }
+
+    // 2. Havuz/örnek sorular
+    if (db.questions && Array.isArray(db.questions)) {
+      for (const q of db.questions) {
+        const qReports = (q as any).reports;
+        if (Array.isArray(qReports) && qReports.length > 0) {
+          for (const r of qReports) {
+            if (r.status === 'resolved' || r.status === 'verified_correct' || r.status === 'dismissed') {
+              continue;
+            }
+            const repId = `pool-rep-${q.id}-${r.id || r.timestamp || 'old'}`;
+            if (autoRepairStore.isBanned(repId) || (r.id && autoRepairStore.isBanned(r.id))) {
+              continue;
+            }
+            autoRepairStore.enqueue({
+              id: repId,
+              source: 'practice_question',
+              targetId: String(q.id),
+              userReport: {
+                reason: r.reason || 'Hata Bildirimi',
+                details: r.details || '',
+                reportedBy: r.reportedBy || 'Tıp Öğrencisi',
+                reportedAt: r.timestamp || new Date().toISOString(),
+              },
+              fullContext: q,
+            });
+            count++;
+          }
+        }
+      }
+    }
+
+    // 3. Öğren ders geri bildirimleri (learn_feedback.json)
+    const learnFeedbackFile = path.resolve(DATA_DIR, 'learn_feedback.json');
+    if (fs.existsSync(learnFeedbackFile)) {
+      try {
+        const lfData = JSON.parse(fs.readFileSync(learnFeedbackFile, 'utf-8'));
+        if (Array.isArray(lfData)) {
+          for (const lf of lfData) {
+            const repId = `learn-fb-${lf.id}`;
+            if (autoRepairStore.isBanned(repId) || autoRepairStore.isBanned(lf.id)) {
+              continue;
+            }
+            autoRepairStore.enqueue({
+              id: repId,
+              source: 'interactive_deck',
+              targetId: lf.deckId,
+              subTarget: {
+                slideNumber: lf.slideNumber,
+                targetKey: lf.targetKey,
+                location: lf.location,
+                label: lf.targetLabel,
+              },
+              userReport: {
+                reason: lf.field || 'İçerik Hatası',
+                details: lf.reason || '',
+                reportedBy: lf.author?.name || 'Anonim Öğrenci',
+                reportedAt: lf.createdAt || new Date().toISOString(),
+              },
+              fullContext: enrichAndFetchContext('interactive_deck', lf.deckId, { slideNumber: lf.slideNumber, targetKey: lf.targetKey }),
+            });
+            count++;
+          }
+        }
+      } catch (_) {}
+    }
+
+    // 4. ornek_soru_bildirimleri.jsonl
+    const ornekBildirimFile = path.resolve(DATA_DIR, 'ornek_soru_bildirimleri.jsonl');
+    if (fs.existsSync(ornekBildirimFile)) {
+      try {
+        const lines = fs.readFileSync(ornekBildirimFile, 'utf-8').split('\n');
+        for (const line of lines) {
+          if (!line.trim()) continue;
+          const rep = JSON.parse(line);
+          const repId = `ornek-rep-${rep.soru_id}-${rep.timestamp}`;
+          if (autoRepairStore.isBanned(repId)) {
+            continue;
+          }
+          autoRepairStore.enqueue({
+            id: repId,
+            source: 'practice_question',
+            targetId: String(rep.soru_id),
+            userReport: {
+              reason: rep.reason || 'Soru Hatası',
+              details: rep.details || '',
+              reportedBy: rep.reportedBy || 'Anonim Öğrenci',
+              reportedAt: rep.timestamp || new Date().toISOString(),
+            },
+            fullContext: db.questions?.find((x: any) => String(x.id) === String(rep.soru_id)) || null,
+          });
+          count++;
+        }
+      } catch (_) {}
+    }
+
+    console.log(`[AutoRepairEngine] 🚀 Başlangıçta mevcut ${count} hata bildirimi kuyruk deposuyla senkronize edildi.`);
+  } catch (err: any) {
+    console.warn('[AutoRepairEngine] Başlangıç bildirim senkronizasyon uyarısı:', err.message);
+  }
+}
+
+// Admin Auto-Repair API Endpoints (Catch-all'dan ÖNCE Express'e kaydedilir)
+app.get('/api/admin/auto-repair/items', requireAdmin, (_req, res) => {
+  try {
+    const items = autoRepairStore.getAll();
+    res.json({ success: true, items });
+  } catch (err: any) {
+    res.status(500).json({ error: 'Kuyruk okunamadı: ' + err.message });
+  }
+});
+
+app.get('/api/admin/auto-repair/stats', requireAdmin, (_req, res) => {
+  try {
+    const all = autoRepairStore.getAll();
+    const stats = {
+      total: all.length,
+      pending: all.filter((x) => x.status === 'pending').length,
+      processing: all.filter((x) => x.status === 'processing').length,
+      applied: all.filter((x) => x.status === 'applied').length,
+      noChange: all.filter((x) => x.status === 'no_change').length,
+      rolledBack: all.filter((x) => x.status === 'rolled_back').length,
+      error: all.filter((x) => x.status === 'error').length,
+      isWorkerActive: isAutoRepairWorkerActive(),
+    };
+    res.json({ success: true, stats });
+  } catch (err: any) {
+    res.status(500).json({ error: 'İstatistikler okunamadı: ' + err.message });
+  }
+});
+
+app.post('/api/admin/auto-repair/run-next', requireAdmin, async (_req, res) => {
+  try {
+    const pending = autoRepairStore.getPending();
+    if (pending.length === 0) {
+      return res.json({ success: true, message: 'Kuyrukta bekleyen işlem yok.', item: null });
+    }
+    const item = await processQueueItem(pending[0].id);
+    res.json({ success: true, message: `İşlem tamamlandı: ${item.status}`, item });
+  } catch (err: any) {
+    res.status(500).json({ error: 'İşlem yürütülemedi: ' + err.message });
+  }
+});
+
+app.post('/api/admin/auto-repair/run-all', requireAdmin, async (_req, res) => {
+  try {
+    const pending = autoRepairStore.getPending();
+    if (pending.length === 0) {
+      return res.json({ success: true, message: 'Kuyrukta bekleyen işlem yok.', count: 0 });
+    }
+    (async () => {
+      for (const p of pending) {
+        try {
+          await processQueueItem(p.id);
+          await new Promise((r) => setTimeout(r, 3000));
+        } catch (e) {
+          console.error('[AutoRepairEngine] Toplu işleme hatası:', e);
+        }
+      }
+    })();
+    res.json({ success: true, message: `${pending.length} adet işlem arka planda sırayla yürütülüyor.`, count: pending.length });
+  } catch (err: any) {
+    res.status(500).json({ error: 'Toplu çalıştırma başlatılamadı: ' + err.message });
+  }
+});
+
+app.post('/api/admin/auto-repair/:id/rollback', requireAdmin, (req, res) => {
+  try {
+    const result = rollbackRepair(req.params.id);
+    if (!result.success) {
+      return res.status(400).json({ success: false, error: result.message });
+    }
+    res.json({ success: true, message: result.message });
+  } catch (err: any) {
+    res.status(500).json({ error: 'Geri alma işlemi başarısız: ' + err.message });
+  }
+});
+
+app.post('/api/admin/auto-repair/:id/retry', requireAdmin, async (req, res) => {
+  try {
+    const item = autoRepairStore.getById(req.params.id);
+    if (!item) return res.status(404).json({ error: 'İşlem bulunamadı.' });
+    autoRepairStore.update(req.params.id, { status: 'pending', errorDetails: undefined });
+    const processed = await processQueueItem(req.params.id);
+    res.json({ success: true, item: processed });
+  } catch (err: any) {
+    res.status(500).json({ error: 'Yeniden işleme başarısız: ' + err.message });
+  }
+});
+
+app.post('/api/admin/auto-repair/toggle-worker', requireAdmin, (req, res) => {
+  try {
+    const { paused } = req.body;
+    setAutoRepairWorkerPaused(Boolean(paused));
+    res.json({ success: true, isWorkerActive: isAutoRepairWorkerActive() });
+  } catch (err: any) {
+    res.status(500).json({ error: 'Ayar değiştirilemedi: ' + err.message });
+  }
+});
+
+app.delete('/api/admin/auto-repair/:id', requireAdmin, (req, res) => {
+  try {
+    const ok = autoRepairStore.banAndRemove(req.params.id);
+    if (!ok) return res.status(404).json({ error: 'İşlem bulunamadı.' });
+    res.json({ success: true, message: "Hata bildirimi silindi ve ID'si kalıcı olarak banlandı (tekrar geri gelemez)." });
+  } catch (err: any) {
+    res.status(500).json({ error: 'Silinemedi: ' + err.message });
+  }
+});
+
+// Tüm işlem yapılmış (uygulandı, doğru bulundu, geri alındı) bildirimleri topluca sil ve ID'lerini banla
+app.post('/api/admin/auto-repair/clear-processed', requireAdmin, (_req, res) => {
+  try {
+    const result = autoRepairStore.clearProcessed();
+    res.json({
+      success: true,
+      message: `İşlem yapılmış ${result.clearedCount} adet bildirim kuyruktan temizlendi ve ID'leri banlandı.`,
+      ...result,
+    });
+  } catch (err: any) {
+    res.status(500).json({ error: 'İşlem yapılanlar temizlenemedi: ' + err.message });
+  }
+});
+
+// Seçilen bildirimleri topluca sil ve banla
+app.post('/api/admin/auto-repair/bulk-delete', requireAdmin, (req, res) => {
+  try {
+    const { ids } = req.body;
+    if (!Array.isArray(ids) || ids.length === 0) {
+      return res.status(400).json({ error: 'Geçersiz veya boş ID listesi.' });
+    }
+    const result = autoRepairStore.bulkBanAndRemove(ids);
+    res.json({
+      success: true,
+      message: `${result.removedCount} adet bildirim kuyruktan silindi ve banlandı.`,
+      ...result,
+    });
+  } catch (err: any) {
+    res.status(500).json({ error: 'Toplu silme başarısız: ' + err.message });
+  }
+});
+
 // Express Error Handling Middleware (Catches PayloadTooLarge, 413, JSON errors, etc. - NEVER returns HTML)
 app.use((err: any, req: express.Request, res: express.Response, next: express.NextFunction) => {
   console.error('[Express Global Error]:', err);
@@ -8454,6 +9496,10 @@ async function startServer() {
 
   app.listen(PORT, () => {
     console.log(`Server listening on port ${PORT} (isProd: ${isProd})`);
+    // 🤖 Ücretsiz Gemini Hata İnceleme ve Onarım Otomasyonunu Başlat
+    startAutoRepairWorker();
+    hydrateExistingReportsToAutoRepair();
+    startAutoRepairWorker();
     // Masaüstü klasör izleyicisi arka planı meşgul etmemesi için otomatik başlatılmaz.
     // İhtiyaç olduğunda Admin Panel üzerinden tek tuşla veya manuel başlatılabilir.
     console.log('[DesktopSync] ℹ️ Arka plan kaynak tasarrufu devrede: Masaüstü belge izleyicisi manuel bekleme modunda.');

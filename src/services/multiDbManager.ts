@@ -1,9 +1,10 @@
 import { Committee, QuestionItem, LectureNote, AdminNotification } from '../types';
-import { FirestoreDbService, db as firestoreDb, filterCurrent2026_2027Committees } from './firestoreDb';
+import { FirestoreDbService, db as firestoreDb, filterCurrent2026_2027Committees, INITIAL_COMMITTEES } from './firestoreDb';
 import { SupabaseDbService, broadcastLiveEvent } from './supabaseDb';
 import { safeJsonFetch, getCustomApiUrl, getLocalDb, saveLocalDb } from './api';
 import { systemHealthMonitor } from './systemHealthMonitor';
 import { pastQuestionsCache } from './pastQuestionsCache';
+import { offlineDatabaseService } from './offlineDatabaseService';
 import { ADMIN_EMAIL } from './auth';
 
 export type DatabaseMode = 'auto' | 'supabase' | 'firebase' | 'local_pc';
@@ -130,29 +131,39 @@ class MultiDbManager {
    */
   public async getCommittees(): Promise<Committee[]> {
     const mode = this.activeMode;
+    let result: Committee[] = [];
+
+    // 0. Çevrimdışıysak doğrudan cihaz hafızasından oku
+    if (typeof navigator !== 'undefined' && !navigator.onLine) {
+      const offCommittees = await offlineDatabaseService.getCommittees();
+      if (offCommittees && offCommittees.length > 0) {
+        return filterCurrent2026_2027Committees(offCommittees);
+      }
+      return filterCurrent2026_2027Committees(INITIAL_COMMITTEES);
+    }
 
     // 1. If explicit Supabase mode
     if (mode === 'supabase') {
       try {
         const supa = await SupabaseDbService.getCommittees();
-        if (supa && supa.length > 0) return supa;
+        if (supa && supa.length > 0) result = supa;
       } catch (e) {
         console.warn('[MultiDbManager] Supabase getCommittees failed, falling back', e);
       }
     }
 
     // 2. If explicit Local PC mode
-    if (mode === 'local_pc') {
+    if (!result.length && mode === 'local_pc') {
       const raw = await this.getLocalCommittees();
-      return filterCurrent2026_2027Committees(raw);
+      result = raw;
     }
 
     // 3. Auto or Firebase mode: Try Firebase Spark first if quota not marked exceeded
-    if (!this.isFirebaseQuotaExceeded() && mode !== 'supabase') {
+    if (!result.length && !this.isFirebaseQuotaExceeded() && mode !== 'supabase') {
       try {
         const fbCommittees = await FirestoreDbService.getCommittees();
         if (fbCommittees && fbCommittees.length > 0) {
-          return fbCommittees;
+          result = fbCommittees;
         }
       } catch (err: any) {
         if (
@@ -169,18 +180,42 @@ class MultiDbManager {
     }
 
     // 4. Fallback to Supabase
-    try {
-      const supaCommittees = await SupabaseDbService.getCommittees();
-      if (supaCommittees && supaCommittees.length > 0) {
-        return supaCommittees;
+    if (!result.length) {
+      try {
+        const supaCommittees = await SupabaseDbService.getCommittees();
+        if (supaCommittees && supaCommittees.length > 0) {
+          result = supaCommittees;
+        }
+      } catch (e) {
+        console.warn('[MultiDbManager] Supabase fallback getCommittees failed', e);
       }
-    } catch (e) {
-      console.warn('[MultiDbManager] Supabase fallback getCommittees failed', e);
     }
 
-    // 5. Final fallback to Local PC Express Server or LocalStorage
-    const raw = await this.getLocalCommittees();
-    return filterCurrent2026_2027Committees(raw);
+    // 5. Fallback to Local PC Express Server
+    if (!result.length) {
+      const raw = await this.getLocalCommittees();
+      if (raw && raw.length > 0) result = raw;
+    }
+
+    // 6. Son Çare: Cihaz hafızasındaki (IndexedDB) çevrimdışı komiteleri getir
+    if (!result.length) {
+      const offCommittees = await offlineDatabaseService.getCommittees();
+      if (offCommittees && offCommittees.length > 0) {
+        result = offCommittees;
+      }
+    }
+
+    // 7. Mutlak Son Çare: Kod içi gömülü resmi 2026-2027 komiteleri
+    if (!result.length) {
+      result = INITIAL_COMMITTEES;
+    }
+
+    const filtered = filterCurrent2026_2027Committees(result);
+    // Başarılı sonucu arka planda cihaz önbelleğine de kaydet
+    if (filtered.length > 0) {
+      offlineDatabaseService.saveCommittees(filtered).catch(() => {});
+    }
+    return filtered;
   }
 
   private async getLocalCommittees(): Promise<Committee[]> {
@@ -202,37 +237,46 @@ class MultiDbManager {
    */
   public async getQuestions(committeeId: string): Promise<QuestionItem[]> {
     const mode = this.activeMode;
+    let questionsList: QuestionItem[] = [];
+
+    // 0. Çevrimdışıysak doğrudan cihaz hafızasından oku
+    if (typeof navigator !== 'undefined' && !navigator.onLine) {
+      const offQ = await offlineDatabaseService.getQuestions(committeeId);
+      if (offQ && offQ.length > 0) return offQ;
+      const local = getLocalDb();
+      return (local.questions || []).filter((q) => q.committeeId === committeeId);
+    }
 
     // 1. Explicit Supabase
     if (mode === 'supabase') {
       try {
         const supa = await SupabaseDbService.getQuestions(committeeId);
-        if (supa && supa.length > 0) return supa;
+        if (supa && supa.length > 0) questionsList = supa;
       } catch (e) {
         console.warn('[MultiDbManager] Supabase getQuestions failed', e);
       }
     }
 
     // 2. Explicit Local PC
-    if (mode === 'local_pc') {
-      return this.getLocalQuestions(committeeId);
+    if (!questionsList.length && mode === 'local_pc') {
+      questionsList = await this.getLocalQuestions(committeeId);
     }
 
     // 3. Auto mode: Primary PostgreSQL with Realtime Subscriptions
-    if (mode === 'auto') {
+    if (!questionsList.length && mode === 'auto') {
       try {
         const supaQ = await SupabaseDbService.getQuestions(committeeId);
-        if (supaQ && supaQ.length > 0) return supaQ;
+        if (supaQ && supaQ.length > 0) questionsList = supaQ;
       } catch (e) {
         console.warn('[MultiDbManager] Supabase getQuestions failed, falling back to Firebase Spark:', e);
       }
     }
 
     // 4. Firebase Spark Plan (Mirror / Fallback)
-    if (!this.isFirebaseQuotaExceeded() && mode !== 'supabase') {
+    if (!questionsList.length && !this.isFirebaseQuotaExceeded() && mode !== 'supabase') {
       try {
         const fbQ = await FirestoreDbService.getQuestions(committeeId);
-        if (fbQ && fbQ.length > 0) return fbQ;
+        if (fbQ && fbQ.length > 0) questionsList = fbQ;
       } catch (err: any) {
         if (
           err?.message?.toLowerCase().includes('quota') ||
@@ -248,15 +292,36 @@ class MultiDbManager {
     }
 
     // 5. Secondary fallback to Supabase if not tried in auto
-    if (mode !== 'auto' && mode !== 'supabase') {
+    if (!questionsList.length && mode !== 'auto' && mode !== 'supabase') {
       try {
         const supaQ = await SupabaseDbService.getQuestions(committeeId);
-        if (supaQ && supaQ.length > 0) return supaQ;
+        if (supaQ && supaQ.length > 0) questionsList = supaQ;
       } catch (e) {}
     }
 
-    // 6. Final fallback to Local PC server
-    return this.getLocalQuestions(committeeId);
+    // 6. Fallback to Local PC server
+    if (!questionsList.length) {
+      questionsList = await this.getLocalQuestions(committeeId);
+    }
+
+    // 7. Çevrimdışı IndexedDB Fallback
+    if (!questionsList.length) {
+      const offQ = await offlineDatabaseService.getQuestions(committeeId);
+      if (offQ && offQ.length > 0) questionsList = offQ;
+    }
+
+    // 8. LocalStorage Fallback
+    if (!questionsList.length) {
+      const local = getLocalDb();
+      questionsList = (local.questions || []).filter((q) => q.committeeId === committeeId);
+    }
+
+    // Başarılı soruları arka planda çevrimdışı IndexedDB'ye de kaydet
+    if (questionsList.length > 0) {
+      offlineDatabaseService.saveQuestions(questionsList).catch(() => {});
+    }
+
+    return questionsList;
   }
 
   private async getLocalQuestions(committeeId: string): Promise<QuestionItem[]> {

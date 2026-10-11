@@ -1,4 +1,5 @@
 import React from 'react';
+import { confirmDialog } from '../ui/ConfirmDialog';
 import {
   Eraser,
   Hand,
@@ -127,7 +128,7 @@ export function AnnotationToolbar({ engine, snapshot, title, isFullscreen, onTog
           label="Tümünü temizle"
           disabled={snapshot.strokeCount === 0}
           onClick={() => {
-            if (window.confirm('Bu sayfadaki tüm çizimler silinsin mi? (Geri al ile geri getirebilirsiniz)')) engine?.clear();
+            void confirmDialog({ title: 'Sayfadaki çizimler silinsin mi?', message: 'Geri al ile geri getirebilirsin.', confirmLabel: 'Temizle', tone: 'danger' }).then((ok) => ok && engine?.clear());
           }}
         >
           <Trash2 size={18} />

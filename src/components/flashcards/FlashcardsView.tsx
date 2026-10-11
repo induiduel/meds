@@ -1,9 +1,13 @@
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { CardExtras } from './CardExtras';
 import { PageHeader } from '../ui/PageHeader';
-import { BookA, GraduationCap, FileQuestion, Search, Shuffle, Repeat2, X, RotateCcw, Play, Check, Layers, Volume2, ChevronLeft, ChevronRight, ChevronDown, Star } from 'lucide-react';
+import { BookA, GraduationCap, FileQuestion, Search, Shuffle, Repeat2, X, RotateCcw, Play, Check, Layers, Volume2, ChevronLeft, ChevronRight, ChevronDown, Star, Share2, AlertCircle } from 'lucide-react';
 import { getFavoriteCards, toggleFavoriteCard } from '../../services/studyStore';
 import { GLOSSARY } from '../../data/glossary';
 import { EmptySearch, SectionLoader, SuccessCheck } from '../ui/Animations';
+import { shareDeepLink, executeDeepLinkFocus } from '../../services/universalRedirectService';
+import { ApiService } from '../../services/api';
+import { toast } from '../ui/Toast';
 
 // ---------------------------------------------------------------------------
 // Card model + spaced repetition (Leitner boxes, stored per device)
@@ -186,22 +190,140 @@ export const FlashcardsView: React.FC = () => {
     });
   };
 
+  const [reportingCard, setReportingCard] = useState<StudyCard | null>(null);
+  const [reportReason, setReportReason] = useState('Hatalı Tanım / Cevap');
+  const [reportDetails, setReportDetails] = useState('');
+  const [isSubmittingReport, setIsSubmittingReport] = useState(false);
+
+  const handleShare = useCallback((c: StudyCard) => {
+    shareDeepLink({
+      type: 'flashcard',
+      targetId: c.id,
+      title: `Akıl Kartı: ${plain(c.front)}`,
+      highlightText: plain(c.back),
+    });
+  }, []);
+
+  const handleReport = useCallback((c: StudyCard) => {
+    setReportingCard(c);
+    setReportReason('Hatalı Tanım / Cevap');
+    setReportDetails('');
+  }, []);
+
+  const submitCardReport = async () => {
+    if (!reportingCard) return;
+    setIsSubmittingReport(true);
+    try {
+      await ApiService.reportFlashcard(reportingCard.id, reportReason, reportDetails);
+      toast.success('Hata Bildirildi', 'Kart bildirimi kaydedildi, inceleme kuyruğuna alındı.');
+      setReportingCard(null);
+    } catch (err: any) {
+      toast.error('Hata', err?.message || 'Bildirim kaydedilemedi.');
+    } finally {
+      setIsSubmittingReport(false);
+    }
+  };
+
+  // Derin Bağlantı (Deep Link) ile karta doğrudan zıplama
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    const sp = new URLSearchParams(window.location.search);
+    const targetId = sp.get('id') || (window.location.hash.startsWith('#card-') ? window.location.hash.slice(6) : null);
+    if (targetId && all.length > 0) {
+      const found = all.find((c) => c.id === targetId || c.id === `g:${targetId}` || c.front.toLowerCase() === targetId.toLowerCase());
+      if (found) {
+        setSession([found]);
+        setTimeout(() => executeDeepLinkFocus({ targetId: found.id }), 300);
+      }
+    }
+  }, [all]);
+
   if (session) {
     return (
-      <StudySession
-        cards={session}
-        reverse={reverse}
-        onGrade={grade}
-        onExit={() => {
-          setSession(null);
-          setNow(Date.now());
-          setFavCards(getFavoriteCards());
-        }}
-        onRestart={() => {
-          setNow(Date.now());
-          buildSession(true);
-        }}
-      />
+      <>
+        <StudySession
+          cards={session}
+          reverse={reverse}
+          onGrade={grade}
+          onExit={() => {
+            setSession(null);
+            setNow(Date.now());
+            setFavCards(getFavoriteCards());
+          }}
+          onRestart={() => {
+            setNow(Date.now());
+            buildSession(true);
+          }}
+          onShare={handleShare}
+          onReport={handleReport}
+        />
+        {reportingCard && (
+          <div className="cf-root" role="dialog" aria-modal="true">
+            <div className="cf max-w-md w-full !text-left">
+              <div className="flex items-center justify-between w-full border-b border-line pb-2 mb-2">
+                <div className="flex items-center gap-2">
+                  <div className="cf-ic !w-8 !h-8 !mb-0 bg-bad-soft text-bad-text">
+                    <AlertCircle className="w-4 h-4" />
+                  </div>
+                  <h3 className="font-bold text-base m-0 text-ink">Kart Hata Bildirimi</h3>
+                </div>
+                <button
+                  type="button"
+                  onClick={() => setReportingCard(null)}
+                  className="ms-btn is-icon is-ghost !w-7 !h-7"
+                >
+                  <X className="w-4 h-4" />
+                </button>
+              </div>
+
+              <div className="bg-canvas p-2.5 rounded-xl border border-line text-xs space-y-1 mb-2">
+                <div className="font-semibold text-ink line-clamp-1">{plain(reportingCard.front)}</div>
+                <div className="text-ink-3 line-clamp-2">{plain(reportingCard.back)}</div>
+              </div>
+
+              <label className="text-xs font-semibold text-ink-2 mb-1 block">Bildirim Sebebi</label>
+              <select
+                value={reportReason}
+                onChange={(e) => setReportReason(e.target.value)}
+                className="w-full h-10 px-3 rounded-lg border border-line bg-canvas text-sm text-ink mb-3"
+              >
+                <option value="Hatalı Tanım / Cevap">Hatalı Tanım / Cevap</option>
+                <option value="İmla / Yazım Yanlışı">İmla / Yazım Yanlışı</option>
+                <option value="Ders Notu Uyuşmazlığı">Ders Notu Uyuşmazlığı</option>
+                <option value="Eksik Kilit Bilgi">Eksik Kilit Bilgi</option>
+                <option value="Diğer">Diğer</option>
+              </select>
+
+              <label className="text-xs font-semibold text-ink-2 mb-1 block">Detay / Doğru Bilgi (Opsiyonel)</label>
+              <textarea
+                value={reportDetails}
+                onChange={(e) => setReportDetails(e.target.value)}
+                placeholder="Düzeltilmesi gereken noktayı açıklayabilirsiniz…"
+                rows={3}
+                className="w-full p-2.5 rounded-lg border border-line bg-canvas text-sm text-ink mb-4 resize-none"
+              />
+
+              <div className="flex justify-end gap-2 w-full">
+                <button
+                  type="button"
+                  onClick={() => setReportingCard(null)}
+                  className="ms-btn is-ghost is-sm"
+                >
+                  Vazgeç
+                </button>
+                <button
+                  type="button"
+                  disabled={isSubmittingReport}
+                  onClick={submitCardReport}
+                  className="ms-btn is-primary is-sm bg-bad hover:bg-bad-hover text-white font-semibold"
+                >
+                  {isSubmittingReport ? 'Gönderiliyor…' : 'Bildirimi Gönder'}
+                </button>
+              </div>
+            </div>
+          </div>
+        )}
+      </>
     );
   }
 
@@ -335,8 +457,80 @@ export const FlashcardsView: React.FC = () => {
               <input type="search" value={query} onChange={(e) => setQuery(e.target.value)} placeholder="Terim ya da tanım ara" />
               <span className="ds-count">{visible.length} kart</span>
             </label>
-            <BrowseList cards={visible} store={store} now={now} />
+            <BrowseList
+              cards={visible}
+              store={store}
+              now={now}
+              onShare={handleShare}
+              onReport={handleReport}
+            />
           </section>
+          {reportingCard && (
+            <div className="cf-root" role="dialog" aria-modal="true">
+              <div className="cf max-w-md w-full !text-left">
+                <div className="flex items-center justify-between w-full border-b border-line pb-2 mb-2">
+                  <div className="flex items-center gap-2">
+                    <div className="cf-ic !w-8 !h-8 !mb-0 bg-bad-soft text-bad-text">
+                      <AlertCircle className="w-4 h-4" />
+                    </div>
+                    <h3 className="font-bold text-base m-0 text-ink">Kart Hata Bildirimi</h3>
+                  </div>
+                  <button
+                    type="button"
+                    onClick={() => setReportingCard(null)}
+                    className="ms-btn is-icon is-ghost !w-7 !h-7"
+                  >
+                    <X className="w-4 h-4" />
+                  </button>
+                </div>
+
+                <div className="bg-canvas p-2.5 rounded-xl border border-line text-xs space-y-1 mb-2">
+                  <div className="font-semibold text-ink line-clamp-1">{plain(reportingCard.front)}</div>
+                  <div className="text-ink-3 line-clamp-2">{plain(reportingCard.back)}</div>
+                </div>
+
+                <label className="text-xs font-semibold text-ink-2 mb-1 block">Bildirim Sebebi</label>
+                <select
+                  value={reportReason}
+                  onChange={(e) => setReportReason(e.target.value)}
+                  className="w-full h-10 px-3 rounded-lg border border-line bg-canvas text-sm text-ink mb-3"
+                >
+                  <option value="Hatalı Tanım / Cevap">Hatalı Tanım / Cevap</option>
+                  <option value="İmla / Yazım Yanlışı">İmla / Yazım Yanlışı</option>
+                  <option value="Ders Notu Uyuşmazlığı">Ders Notu Uyuşmazlığı</option>
+                  <option value="Eksik Kilit Bilgi">Eksik Kilit Bilgi</option>
+                  <option value="Diğer">Diğer</option>
+                </select>
+
+                <label className="text-xs font-semibold text-ink-2 mb-1 block">Detay / Doğru Bilgi (Opsiyonel)</label>
+                <textarea
+                  value={reportDetails}
+                  onChange={(e) => setReportDetails(e.target.value)}
+                  placeholder="Düzeltilmesi gereken noktayı açıklayabilirsiniz…"
+                  rows={3}
+                  className="w-full p-2.5 rounded-lg border border-line bg-canvas text-sm text-ink mb-4 resize-none"
+                />
+
+                <div className="flex justify-end gap-2 w-full">
+                  <button
+                    type="button"
+                    onClick={() => setReportingCard(null)}
+                    className="ms-btn is-ghost is-sm"
+                  >
+                    Vazgeç
+                  </button>
+                  <button
+                    type="button"
+                    disabled={isSubmittingReport}
+                    onClick={submitCardReport}
+                    className="ms-btn is-primary is-sm bg-bad hover:bg-bad-hover text-white font-semibold"
+                  >
+                    {isSubmittingReport ? 'Gönderiliyor…' : 'Bildirimi Gönder'}
+                  </button>
+                </div>
+              </div>
+            </div>
+          )}
         </>
       )}
     </div>
@@ -353,7 +547,13 @@ const ToggleChip: React.FC<{ on: boolean; onClick: () => void; icon: React.Eleme
 const STATUS_LABEL: Record<Status, string> = { new: 'Yeni', due: 'Tekrar', learning: 'Öğreniliyor', mastered: 'Ezber' };
 const STATUS_TONE: Record<Status, string> = { new: '', due: 'is-warn', learning: 'is-new', mastered: 'is-ok' };
 
-const BrowseList: React.FC<{ cards: StudyCard[]; store: Record<string, CardState>; now: number }> = ({ cards, store, now }) => {
+const BrowseList: React.FC<{
+  cards: StudyCard[];
+  store: Record<string, CardState>;
+  now: number;
+  onShare: (c: StudyCard) => void;
+  onReport: (c: StudyCard) => void;
+}> = ({ cards, store, now, onShare, onReport }) => {
   const [shown, setShown] = useState(24);
   const [open, setOpen] = useState<string | null>(null);
   useEffect(() => setShown(24), [cards]);
@@ -372,15 +572,52 @@ const BrowseList: React.FC<{ cards: StudyCard[]; store: Record<string, CardState
           const st = statusOf(store[c.id], now);
           const isOpen = open === c.id;
           return (
-            <li key={c.id}>
-              <button type="button" onClick={() => setOpen(isOpen ? null : c.id)} aria-expanded={isOpen} className={`ds-row ${isOpen ? 'is-open' : ''}`}>
-                <span className="ds-row-t">
-                  <b>{plain(c.front)}</b>
-                  <span className={isOpen ? '' : 'line-clamp-1'}>{plain(c.back)}</span>
-                </span>
-                <span className={`ms-tag ${STATUS_TONE[st]}`}>{STATUS_LABEL[st]}</span>
-                <ChevronDown className={`ds-row-chev ${isOpen ? 'is-open' : ''}`} aria-hidden />
-              </button>
+            <li key={c.id} id={`card-${c.id}`}>
+              <div className={`ds-row ${isOpen ? 'is-open' : ''} flex-col !items-stretch`}>
+                <div
+                  role="button"
+                  tabIndex={0}
+                  onClick={() => setOpen(isOpen ? null : c.id)}
+                  onKeyDown={(e) => (e.key === 'Enter' || e.key === ' ') && setOpen(isOpen ? null : c.id)}
+                  aria-expanded={isOpen}
+                  className="flex items-center gap-3 cursor-pointer w-full text-left"
+                >
+                  <span className="ds-row-t flex-1 min-w-0">
+                    <b>{plain(c.front)}</b>
+                    <span className={isOpen ? '' : 'line-clamp-1'}>{plain(c.back)}</span>
+                  </span>
+                  <span className={`ms-tag ${STATUS_TONE[st]}`}>{STATUS_LABEL[st]}</span>
+                  <ChevronDown className={`ds-row-chev ${isOpen ? 'is-open' : ''}`} aria-hidden />
+                </div>
+                {isOpen && (
+                  <div className="flex items-center gap-2 mt-2 pt-2 border-t border-line/60">
+                    <button
+                      type="button"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        onShare(c);
+                      }}
+                      className="ms-btn is-sm is-ghost gap-1.5"
+                      title="Kartı Paylaş"
+                    >
+                      <Share2 className="w-3.5 h-3.5" />
+                      <span>Paylaş</span>
+                    </button>
+                    <button
+                      type="button"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        onReport(c);
+                      }}
+                      className="ms-btn is-sm is-ghost gap-1.5 text-ink-3 hover:text-bad-text"
+                      title="Hata Bildir"
+                    >
+                      <AlertCircle className="w-3.5 h-3.5" />
+                      <span>Hata Bildir</span>
+                    </button>
+                  </div>
+                )}
+              </div>
             </li>
           );
         })}
@@ -403,7 +640,9 @@ const StudySession: React.FC<{
   onGrade: (c: StudyCard, g: Grade) => void;
   onExit: () => void;
   onRestart: () => void;
-}> = ({ cards, reverse, onGrade, onExit, onRestart }) => {
+  onShare?: (c: StudyCard) => void;
+  onReport?: (c: StudyCard) => void;
+}> = ({ cards, reverse, onGrade, onExit, onRestart, onShare, onReport }) => {
   const [queue, setQueue] = useState<StudyCard[]>(cards);
   const [idx, setIdx] = useState(0);
   const [flipped, setFlipped] = useState(false);
@@ -528,30 +767,29 @@ const StudySession: React.FC<{
 
   return (
     <div className="ds-fc-session">
-      {/* Top bar */}
-      <div className="flex items-center gap-3">
-        <button type="button" onClick={onExit} aria-label="Oturumu bitir" className="ms-btn is-icon is-ghost">
-          <X className="w-5 h-5" />
-        </button>
-        <div className="flex-1 h-1.5 rounded-full bg-line overflow-hidden" aria-hidden="true">
-          <div className="h-full rounded-full bg-accent transition-[width] duration-300" style={{ width: `${pct}%` }} />
-        </div>
-        <div className="flex items-center gap-0.5 shrink-0">
-          <button type="button" onClick={goPrev} disabled={idx === 0} aria-label="Önceki kart" className="ms-btn is-icon is-ghost">
-            <ChevronLeft className="w-5 h-5" />
-          </button>
-          <span className="font-mono text-sm text-ink-2 min-w-[3.5ch] text-center tabular-nums">
-            {Math.min(idx + 1, queue.length)}/{queue.length}
-          </span>
-          <button type="button" onClick={goNext} aria-label="Sonraki kart" className="ms-btn is-icon is-ghost">
-            <ChevronRight className="w-5 h-5" />
-          </button>
-        </div>
+      {/* Üst çubuk: çıkış · deste adı ve sayaç · gezinme · paylaş · bildir (canvas "Cards") */}
+      <div className="fcx-top">
+        <button type="button" onClick={onExit} aria-label="Oturumu bitir" className="qk-ib"><X aria-hidden /></button>
+        <span className="fcx-title">
+          <b>{card?.group || 'Ezber kartları'}</b>
+          <span>{reverse ? 'Ters yön · ' : ''}{Math.min(idx + 1, queue.length)} / {queue.length}</span>
+        </span>
+        <button type="button" onClick={goPrev} disabled={idx === 0} aria-label="Önceki kart" className="qk-ib"><ChevronLeft aria-hidden /></button>
+        <button type="button" onClick={goNext} aria-label="Sonraki kart" className="qk-ib"><ChevronRight aria-hidden /></button>
+        {card && onShare && <button type="button" onClick={() => onShare(card)} aria-label="Kartı paylaş" title="Kartı paylaş" className="qk-ib"><Share2 aria-hidden /></button>}
+        {card && onReport && <button type="button" onClick={() => onReport(card)} aria-label="Hata bildir" title="Hata bildir" className="qk-ib"><AlertCircle aria-hidden /></button>}
+      </div>
+      <div className="fcx-seg" aria-label={`İlerleme: ${answered} / ${total}`}>
+        {Array.from({ length: Math.min(total, 40) }, (_, i) => {
+          const at = Math.floor((i / Math.min(total, 40)) * total);
+          return <span key={i} className={at < answered ? 'is-done' : at === answered ? 'is-cur' : ''} />;
+        })}
       </div>
 
-      {/* Card */}
+      {/* Kart: arkada iki hayalet kart, 3B çevirme */}
       <div
-        className="relative flex-1 min-h-[300px] [perspective:1400px]"
+        id={card ? `card-${card.id}` : undefined}
+        className="fcx-stack"
         onTouchStart={(e) => (touch.current = { x: e.touches[0].clientX, y: e.touches[0].clientY })}
         onTouchEnd={(e) => {
           if (!touch.current) return;
@@ -562,70 +800,48 @@ const StudySession: React.FC<{
           answer(dx > 0 ? 'good' : 'again');
         }}
       >
+        <span className="fcx-ghost is-2" aria-hidden />
+        <span className="fcx-ghost is-1" aria-hidden />
         <button
           type="button"
           onClick={() => setFlipped((f) => !f)}
           aria-label={flipped ? 'Kartın ön yüzüne dön' : 'Kartı çevir'}
-          className={`absolute inset-0 w-full h-full cursor-pointer transition-all duration-500 [transform-style:preserve-3d] ${flipped ? '[transform:rotateY(180deg)]' : ''} ${leaveCls}`}
+          className={`ds-flip fcx-flip ${flipped ? 'is-back' : ''} ${leaveCls}`}
         >
-          {/* Front */}
-          <span
-            className="ds-flip-face absolute inset-0 [backface-visibility:hidden] flex flex-col text-left"
-            style={{ opacity: flipped ? 0 : 1, transition: 'opacity 0s linear 0.25s' }}
-            aria-hidden={flipped}
-          >
-            <span className="flex items-center gap-2">
-              <span className="ms-tag is-new max-w-[70%] truncate">{card.group}</span>
-              <span className="ml-auto mr-12 text-xs text-ink-3">{card.id.startsWith('q:') ? (reverse ? 'Cevap' : 'Soru') : reverse ? 'Tanım' : 'Terim'}</span>
+          <span className="fcx-face" style={{ opacity: flipped ? 0 : 1, transition: 'opacity 0s linear 0.25s' }} aria-hidden={flipped}>
+            <span className="fcx-row">
+              <span className="fcx-tag">{card.group}</span>
+              <span className="fcx-side">{card.id.startsWith('q:') ? (reverse ? 'CEVAP' : 'SORU') : reverse ? 'TANIM' : 'TERİM'}</span>
             </span>
-            <span className="flex-1 flex flex-col items-center justify-center text-center gap-2 px-2">
-              <span className={`font-display font-bold tracking-[-0.02em] text-ink whitespace-pre-line ${reverse || plain(front).length > 60 ? 'text-lg sm:text-xl leading-[1.45] font-medium' : 'text-2xl sm:text-3xl leading-[1.18]'} ${plain(front).length > 60 ? 'self-stretch text-left' : ''}`}>
-                {plain(front)}
-              </span>
-              {!reverse && card.sub && <span className="font-mono text-sm text-ink-3">{card.sub}</span>}
+            <span className={`fcx-main ${reverse || plain(front).length > 60 ? 'is-long' : ''}`}>
+              {plain(front)}
+              {!reverse && card.sub && <small>{card.sub}</small>}
             </span>
-            <span className="text-center text-xs text-ink-3">Çevirmek için dokun · boşluk tuşu</span>
+            <span className="fcx-hint">Çevirmek için dokun · boşluk</span>
           </span>
-          {/* Back */}
-          <span
-            className="ds-flip-face is-back absolute inset-0 [backface-visibility:hidden] [transform:rotateY(180deg)] flex flex-col text-left overflow-y-auto"
-            style={{ opacity: flipped ? 1 : 0, transition: 'opacity 0s linear 0.25s' }}
-            aria-hidden={!flipped}
-          >
-            <span className="flex items-center gap-2">
-              <span className="text-md font-semibold text-accent truncate pr-12">{plain(reverse ? card.back : card.front).slice(0, 60)}</span>
+          <span className="fcx-face is-b" style={{ opacity: flipped ? 1 : 0, transition: 'opacity 0s linear 0.25s' }} aria-hidden={!flipped}>
+            <span className="fcx-row">
+              <span className="fcx-tag is-ok">Cevap</span>
+              <span className="fcx-side">{plain(reverse ? card.back : card.front).slice(0, 40)}</span>
             </span>
-            <span className="flex-1 flex flex-col justify-center gap-3 py-3">
-              <span className={`text-ink ${reverse ? 'font-display font-bold text-3xl leading-[1.15] text-center' : 'text-md sm:text-md leading-[1.6]'}`}>{plain(back)}</span>
-              {card.pearl && (
-                <span className="ds-callout is-important">
-                  <b>Akılda tut</b>
-                  {plain(card.pearl)}
-                </span>
-              )}
+            <span className="fcx-ans">
+              <b className={reverse ? 'is-big' : ''}>{plain(back)}</b>
+              {card.pearl && <span className="fcx-pearl"><b>Akılda tut</b>{plain(card.pearl)}</span>}
             </span>
+            <span className="fcx-hint">Kendini puanla</span>
           </span>
         </button>
-        <button
-          type="button"
-          onClick={() => toggleFav(card)}
-          aria-pressed={favIds.has(card.id)}
-          aria-label={favIds.has(card.id) ? 'Favorilerden çıkar' : 'Favorilere ekle'}
-          className={`ms-btn is-icon absolute right-2.5 top-2.5 z-10 ${favIds.has(card.id) ? 'is-fav' : 'is-ghost'}`}
-        >
-          <Star className="w-[18px] h-[18px]" fill={favIds.has(card.id) ? 'currentColor' : 'none'} />
-        </button>
-        {!reverse && (
-          <button
-            type="button"
-            onClick={() => speak(plain(card.front))}
-            aria-label="Terimi seslendir"
-            className="ms-btn is-icon is-ghost absolute right-2.5 bottom-2.5 z-10"
-          >
-            <Volume2 className="w-[18px] h-[18px]" />
+        <span className="fcx-corner">
+          <button type="button" onClick={() => toggleFav(card)} aria-pressed={favIds.has(card.id)} aria-label={favIds.has(card.id) ? 'Favorilerden çıkar' : 'Favorilere ekle'} className={`qk-ib ${favIds.has(card.id) ? 'is-fav' : ''}`}>
+            <Star fill={favIds.has(card.id) ? 'currentColor' : 'none'} aria-hidden />
           </button>
-        )}
+          {!reverse && (
+            <button type="button" onClick={() => speak(plain(card.front))} aria-label="Terimi seslendir" className="qk-ib"><Volume2 aria-hidden /></button>
+          )}
+        </span>
       </div>
+
+      {card && <CardExtras card={card} />}
 
       {/* Actions */}
       {flipped ? (

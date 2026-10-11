@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useMemo } from 'react';
+import { confirmDialog } from './ui/ConfirmDialog';
 import { SourceText } from './ui/SourceText';
 import { PageHeader } from './ui/PageHeader';
+import { Segmented } from './ui/kit';
 import { 
   BookMarked, 
   Search, 
@@ -40,6 +42,7 @@ import { db, cleanForFirestore } from '../services/firestoreDb';
 import { collection, doc, setDoc, deleteDoc, getDocs } from 'firebase/firestore';
 import { ApiService } from '../services/api';
 import { multiDbManager } from '../services/multiDbManager';
+import { triggerDomHighlightAndScroll } from '../services/universalRedirectService';
 
 interface LectureNotesViewProps {
   committee?: Committee;
@@ -51,6 +54,24 @@ interface LectureNotesViewProps {
 }
 
 const LOCAL_NOTES_KEY = 'medsoru_lecture_notes_v5_verbatim';
+
+/** "1)Cinsel yolla…" → { no: '1', title: 'Cinsel yolla…' }: numara ayrı mono çipte gösterilir. */
+const splitSlideTitle = (raw: string) => {
+  const m = String(raw || '').match(/^\s*(\d{1,3})\s*[).\-–]\s*(.*)$/);
+  return m ? { no: m[1], title: m[2].trim() } : { no: '', title: String(raw || '').trim() };
+};
+/** Geçersiz/boş tarihte "Invalid Date" yerine hiçbir şey. */
+const fmtDate = (v?: string) => {
+  const d = v ? new Date(v) : null;
+  return d && !Number.isNaN(d.getTime()) ? d.toLocaleDateString('tr-TR') : '';
+};
+const LN_TONES = ['accent', 'clinic', 'ai', 'warn', 'ok', 'bad'] as const;
+/** Anabilim dalına sabit ton (Hastalıklar ile aynı ölçek, yalnız DS tokenları). */
+const disciplineTone = (d: string) => {
+  let h = 0;
+  for (const ch of String(d || '')) h = (h * 31 + ch.charCodeAt(0)) >>> 0;
+  return LN_TONES[h % LN_TONES.length];
+};
 
 // Filter helper: Discard any old mock note that contains AI template sentences
 export const isPureVerbatimNote = (note: LectureNote): boolean => {
@@ -124,6 +145,19 @@ export const LectureNotesView: React.FC<LectureNotesViewProps> = ({
   const [isSyncingDesktop, setIsSyncingDesktop] = useState(false);
 
   // Notes are managed in memory and synced via multiDbManager & Supabase Realtime
+
+  // Universal Text / Sentence Deep-linking Highlight listener
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    const urlParams = new URLSearchParams(window.location.search);
+    const highlight = urlParams.get('highlight');
+    if (highlight) {
+      const timer = setTimeout(() => {
+        triggerDomHighlightAndScroll(highlight);
+      }, 700);
+      return () => clearTimeout(timer);
+    }
+  }, []);
 
   // Load verified notes from Multi-Database (Supabase / Local / Firestore) and listen for Realtime updates
   useEffect(() => {
@@ -252,6 +286,34 @@ export const LectureNotesView: React.FC<LectureNotesViewProps> = ({
 
   const progressPercent = Math.round((renderedPagesCount / TOTAL_CATALOG_PAGES) * 100);
 
+  // Derin bağlantı: /notlar?id=<notId>&page=<n> → işlenmiş notlar sekmesinde o not açılır, sayfaya kayılır.
+  useEffect(() => {
+    if (typeof window === 'undefined' || notes.length === 0) return;
+    const sp = new URLSearchParams(window.location.search);
+    const id = sp.get('id');
+    if (!id) return;
+    const note = notes.find((n) => n.id === id);
+    if (!note) return;
+    setActiveTab('rendered_notes');
+    setActiveNote(note);
+    const page = Number(sp.get('page') || 0);
+    if (page > 0) {
+      window.setTimeout(() => {
+        const el = document.getElementById(`ln-page-${page}`);
+        el?.scrollIntoView({ block: 'start', behavior: 'smooth' });
+        el?.classList.add('deep-link-highlight-pulse');
+      }, 350);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [notes.length]);
+
+  // Anabilim dalı çipleri katalogdan sayılır (sabit sayı yok).
+  const catalogDisciplines = useMemo(() => {
+    const m = new Map<string, number>();
+    DRIVE_SLIDES_CATALOG.forEach((s) => m.set(s.discipline, (m.get(s.discipline) || 0) + 1));
+    return [['Tümü', DRIVE_SLIDES_CATALOG.length] as [string, number], ...[...m.entries()].sort((x, y) => y[1] - x[1])];
+  }, []);
+
   // Filter catalog slides
   const filteredCatalog = useMemo(() => {
     return DRIVE_SLIDES_CATALOG.filter(s => {
@@ -322,7 +384,7 @@ export const LectureNotesView: React.FC<LectureNotesViewProps> = ({
 
   // Handler: Delete rendered note
   const handleDeleteNote = async (id: string, title: string) => {
-    if (!confirm(`"${title}" ders notunu silmek istediğinize emin misiniz?`)) return;
+    if (!(await confirmDialog({ title: 'Ders notu silinsin mi?', message: `“${title}” silinir.`, confirmLabel: 'Sil', tone: 'danger' }))) return;
 
     setNotes(prev => prev.filter(n => n.id !== id));
     if (activeNote?.id === id) {
@@ -338,8 +400,8 @@ export const LectureNotesView: React.FC<LectureNotesViewProps> = ({
   };
 
   // Handler: Purge all local/sample notes
-  const handlePurgeMockNotes = () => {
-    if (!confirm('Yerel hafızadaki tüm örnek ders notlarını silmek ve listeyi sıfırlamak istediğinize emin misiniz?')) return;
+  const handlePurgeMockNotes = async () => {
+    if (!(await confirmDialog({ title: 'Örnek ders notları sıfırlansın mı?', message: 'Yerel hafızadaki tüm örnek ders notları silinir.', confirmLabel: 'Sıfırla', tone: 'danger' }))) return;
     localStorage.removeItem(LOCAL_NOTES_KEY);
     localStorage.removeItem('medsoru_lecture_notes');
     localStorage.removeItem('medsoru_lecture_notes_v2');
@@ -528,19 +590,19 @@ export const LectureNotesView: React.FC<LectureNotesViewProps> = ({
   };
 
   return (
-    <div className="flex flex-col gap-3 sm:gap-5 min-w-0">
+    <div className="ln-page">
       <PageHeader
         eyebrow="Kaynak kütüphanesi"
         title="Ders notları ve slaytlar"
         description="Drive'daki ders slaytları sayfa sayfa, yorumsuz metin olarak işlenir. Sorular bu sayfalarla eşleştirilir."
         actions={
-          <div className="flex flex-wrap items-center gap-2 min-w-0 max-w-full">
+          <div className="ln-head-tools">
             {isAdmin && (
               <button
                 type="button"
                 onClick={handleTriggerDesktopSync}
                 disabled={isSyncingDesktop}
-                className="h-10 px-3.5 rounded-[10px] border border-line bg-white text-base font-semibold text-ink inline-flex items-center gap-2 cursor-pointer hover:border-line-2 disabled:opacity-60"
+                className="ui-btn is-sm"
                 title="Yerel ders notu klasörünü şimdi tara"
               >
                 {isSyncingDesktop ? <RefreshCw className="w-4 h-4 animate-spin" /> : <FolderOpen className="w-4 h-4" />}
@@ -551,7 +613,7 @@ export const LectureNotesView: React.FC<LectureNotesViewProps> = ({
               href={DRIVE_FOLDER_URL}
               target="_blank"
               rel="noreferrer"
-              className="h-10 px-3.5 rounded-[10px] border border-line bg-white text-base font-semibold text-ink inline-flex items-center gap-2 hover:border-line-2"
+              className="ui-btn is-sm"
             >
               <ExternalLink className="w-4 h-4" />
               Drive klasörü
@@ -560,7 +622,7 @@ export const LectureNotesView: React.FC<LectureNotesViewProps> = ({
               <button
                 type="button"
                 onClick={() => setIsAddingNote(true)}
-                className="h-10 px-3.5 rounded-[10px] bg-accent hover:bg-accent-hover text-white text-base font-semibold inline-flex items-center gap-2 cursor-pointer"
+                className="ui-btn is-primary is-sm"
               >
                 <Plus className="w-4 h-4" />
                 Not yükle
@@ -569,475 +631,212 @@ export const LectureNotesView: React.FC<LectureNotesViewProps> = ({
           </div>
         }
       />
-      <div className="bg-white border border-line rounded-2xl p-4 sm:p-5 flex flex-col gap-3.5">
+      <section className="ln-prog" aria-label="Slayt işleme durumu">
         {isAdmin && <DriveSyncVisualizer onSelectLecture={handleOpenSlideFromMonitor} />}
-
-        <div className="flex flex-col gap-1.5">
-          <div className="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1 text-sm">
-            <span className="text-ink-2">
-              <strong className="text-ink font-semibold">
-                {renderedSlidesCount} / {TOTAL_CATALOG_SLIDES}
-              </strong>{' '}
-              slayt işlendi · {renderedPagesCount.toLocaleString('tr-TR')} / {TOTAL_CATALOG_PAGES.toLocaleString('tr-TR')} sayfa · %{progressPercent}
-            </span>
-            <span className="flex items-center gap-3 text-ink-3">
-              Kalan {(TOTAL_CATALOG_PAGES - renderedPagesCount).toLocaleString('tr-TR')} sayfa
-              {isAdmin && notes.length > 0 && (
-                <button type="button" onClick={handlePurgeMockNotes} title="Önbellekte kalan örnek notları temizler" className="text-bad-text font-semibold cursor-pointer">
-                  Örnekleri temizle
-                </button>
-              )}
-            </span>
-          </div>
-          <div className="w-full h-2 rounded-full bg-line-soft overflow-hidden" role="progressbar" aria-valuenow={progressPercent} aria-valuemin={0} aria-valuemax={100} aria-label="Slayt işleme ilerlemesi">
-            <div className="h-full rounded-full bg-accent transition-all duration-500" style={{ width: `${Math.max(2, progressPercent)}%` }} />
-          </div>
+        <div className="ln-prog-row">
+          <span><b>{renderedSlidesCount} / {TOTAL_CATALOG_SLIDES}</b> slayt işlendi · {renderedPagesCount.toLocaleString('tr-TR')} / {TOTAL_CATALOG_PAGES.toLocaleString('tr-TR')} sayfa</span>
+          <span className="ln-prog-pct">%{progressPercent}</span>
         </div>
-
+        <div className="ln-bar" role="progressbar" aria-valuenow={progressPercent} aria-valuemin={0} aria-valuemax={100} aria-label="Slayt işleme ilerlemesi">
+          <i style={{ width: `${Math.max(2, progressPercent)}%` }} />
+        </div>
+        <div className="ln-prog-row is-sub">
+          <span>Kalan {(TOTAL_CATALOG_PAGES - renderedPagesCount).toLocaleString('tr-TR')} sayfa</span>
+          {isAdmin && notes.length > 0 && (
+            <button type="button" onClick={handlePurgeMockNotes} title="Önbellekte kalan örnek notları temizler" className="ln-link is-bad">Örnekleri temizle</button>
+          )}
+        </div>
         {feedbackMessage && (
-          <div role="status" className="px-3.5 py-2.5 rounded-xl bg-ok-soft text-base text-ink flex items-center justify-between gap-3">
-            <span className="flex items-center gap-2">
-              <CheckCircle2 className="w-4 h-4 text-ok shrink-0" />
-              {feedbackMessage}
-            </span>
-            <button type="button" onClick={() => setFeedbackMessage(null)} aria-label="Bildirimi kapat" className="w-8 h-8 rounded-lg flex items-center justify-center text-ok cursor-pointer">
-              <X className="w-4 h-4" />
-            </button>
+          <div role="status" className="ln-feedback">
+            <CheckCircle2 aria-hidden />
+            <span>{feedbackMessage}</span>
+            <button type="button" onClick={() => setFeedbackMessage(null)} aria-label="Bildirimi kapat"><X aria-hidden /></button>
           </div>
         )}
+        <Segmented<'drive_catalog' | 'rendered_notes'>
+          className="ln-seg"
+          label="Ders notu görünümü"
+          value={activeTab}
+          onChange={setActiveTab}
+          options={[
+            { value: 'drive_catalog', label: <><FolderGit2 aria-hidden /> Slayt kataloğu <span className="ln-n">{TOTAL_CATALOG_SLIDES}</span></> },
+            { value: 'rendered_notes', label: <><BookOpen aria-hidden /> İşlenmiş notlar <span className="ln-n">{notes.length}</span></> },
+          ]}
+        />
+      </section>
 
-        <div role="tablist" aria-label="Ders notu görünümü" className="grid grid-cols-2 gap-1 bg-canvas rounded-xl p-1">
-          {(
-            [
-              ['drive_catalog', FolderGit2, 'Slayt kataloğu', TOTAL_CATALOG_SLIDES],
-              ['rendered_notes', BookOpen, 'İşlenmiş notlar', notes.length],
-            ] as const
-          ).map(([id, Icon, label, count]) => {
-            const on = activeTab === id;
-            return (
-              <button
-                key={id}
-                type="button"
-                role="tab"
-                aria-selected={on}
-                onClick={() => setActiveTab(id)}
-                className={`min-h-10 px-2 rounded-lg flex items-center justify-center gap-2 text-base cursor-pointer ${
-                  on ? 'bg-white text-ink font-semibold shadow-xs' : 'text-ink-2 hover:text-ink'
-                }`}
-              >
-                <Icon className={`w-4 h-4 shrink-0 ${on ? 'text-accent' : ''}`} />
-                <span className="truncate">{label}</span>
-                <span className="font-mono text-xs text-ink-3">{count}</span>
-              </button>
-            );
-          })}
-        </div>
-      </div>
-
-      {/* TAB 1: GOOGLE DRIVE SLIDES CATALOG */}
       {activeTab === 'drive_catalog' && (
-        <div className="space-y-4">
-          {/* Filter Bar */}
-          <div className="bg-white rounded-xl p-4 border border-line shadow-xs space-y-3">
-            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-              {/* Search */}
-              <div className="relative flex-1">
-                <Search className="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-ink-3" />
-                <input
-                  type="text"
-                  placeholder="Drive slayt adı veya konu ara (örn. Nekroz, Glomerül, BPH, Sepsis)..."
-                  value={catalogSearch}
-                  onChange={(e) => setCatalogSearch(e.target.value)}
-                  className="w-full pl-9 pr-3 py-2 bg-field border border-line rounded-lg text-xs text-ink placeholder-ink-3 focus:outline-none focus:ring-2 focus:ring-ok/30 focus:bg-white"
-                />
-              </div>
-
-              {/* Status Filter */}
-              <div className="flex items-center gap-1.5 text-xs shrink-0">
-                <span className="text-ink-3 font-semibold text-2xs">Durum:</span>
-                <button
-                  onClick={() => setCatalogStatusFilter('all')}
-                  className={`px-2.5 py-1.5 rounded-lg font-bold text-xs cursor-pointer ${
-                    catalogStatusFilter === 'all'
-                      ? 'bg-accent-soft text-accent ring-1 ring-inset ring-accent/40'
-                      : 'bg-field text-ink-2 hover:bg-line'
-                  }`}
-                >
-                  Tümü ({TOTAL_CATALOG_SLIDES})
-                </button>
-                <button
-                  onClick={() => setCatalogStatusFilter('unrendered')}
-                  className={`px-2.5 py-1.5 rounded-lg font-bold text-xs cursor-pointer ${
-                    catalogStatusFilter === 'unrendered'
-                      ? 'bg-warn text-white'
-                      : 'bg-field text-ink-2 hover:bg-line'
-                  }`}
-                >
-                  İşlenmemiş ({TOTAL_CATALOG_SLIDES - renderedSlidesCount})
-                </button>
-                <button
-                  onClick={() => setCatalogStatusFilter('rendered')}
-                  className={`px-2.5 py-1.5 rounded-lg font-bold text-xs cursor-pointer ${
-                    catalogStatusFilter === 'rendered'
-                      ? 'bg-ok text-white'
-                      : 'bg-field text-ink-2 hover:bg-line'
-                  }`}
-                >
-                  İşlenmiş ({renderedSlidesCount})
-                </button>
-              </div>
+        <>
+          <div className="cx-dock ln-dock">
+            <div className="cx-search">
+              <Search aria-hidden />
+              <input
+                type="search"
+                placeholder="Slayt adı ya da konu ara (Nekroz, Glomerül…)"
+                aria-label="Slaytlarda ara"
+                value={catalogSearch}
+                onChange={(e) => setCatalogSearch(e.target.value)}
+              />
+              {catalogSearch && <button type="button" className="dz-x" onClick={() => setCatalogSearch('')} aria-label="Aramayı temizle"><X aria-hidden /></button>}
             </div>
-
-            {/* Discipline Badges */}
-            <div className="flex flex-wrap gap-1.5 pt-1 border-t border-line text-xs">
-              {[
-                { name: 'Tümü', count: 40 },
-                { name: 'Tıbbi Patoloji', count: 22 },
-                { name: 'Tıbbi Genetik', count: 5 },
-                { name: 'Halk Sağlığı', count: 5 },
-                { name: 'Üroloji', count: 4 },
-                { name: 'Enfeksiyon Hastalıkları', count: 4 },
-              ].map((d) => (
-                <button
-                  key={d.name}
-                  onClick={() => setCatalogDiscipline(d.name)}
-                  className={`px-3 py-1 rounded-lg text-xs font-semibold cursor-pointer transition-colors ${
-                    catalogDiscipline === d.name
-                      ? 'bg-ok text-white shadow-xs'
-                      : 'bg-field text-ink-2 hover:bg-line'
-                  }`}
-                >
-                  {d.name} <span className="opacity-70 text-2xs">({d.count})</span>
-                </button>
-              ))}
+            <div className="ln-filters">
+              <nav className="cx-tabs" aria-label="Anabilim dalı" onWheel={(e) => { if (e.deltaY) e.currentTarget.scrollLeft += e.deltaY; }}>
+                {catalogDisciplines.map(([name, count]) => (
+                  <button key={name} type="button" aria-pressed={catalogDiscipline === name} className={`cx-tab ${catalogDiscipline === name ? 'is-on' : ''}`} onClick={() => setCatalogDiscipline(name)}>
+                    {name}<small>{count}</small>
+                  </button>
+                ))}
+              </nav>
+              <Segmented<'all' | 'unrendered' | 'rendered'>
+                className="ln-status"
+                label="Durum"
+                value={catalogStatusFilter}
+                onChange={setCatalogStatusFilter}
+                options={[
+                  { value: 'all', label: <>Tümü <span className="ln-n">{TOTAL_CATALOG_SLIDES}</span></> },
+                  { value: 'unrendered', label: <>Bekleyen <span className="ln-n">{TOTAL_CATALOG_SLIDES - renderedSlidesCount}</span></> },
+                  { value: 'rendered', label: <>İşlenen <span className="ln-n">{renderedSlidesCount}</span></> },
+                ]}
+              />
             </div>
           </div>
 
-          {/* Slide Cards Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {filteredCatalog.map((slide) => {
-              const renderedNote = isSlideRendered(slide);
-              const isRendered = Boolean(renderedNote);
-              const isProcessing = renderingSlideId === slide.id;
-
-              return (
-                <div
-                  key={slide.id}
-                  className={`rounded-2xl p-5 border transition-all space-y-3.5 ${
-                    isRendered
-                      ? 'bg-ok-soft/40 border-ok/30 shadow-xs'
-                      : 'bg-white border-line hover:border-ok/30 shadow-xs'
-                  }`}
-                >
-                  {/* Card Header */}
-                  <div className="flex items-start justify-between gap-3">
-                    <div className="space-y-1">
-                      <div className="flex items-center gap-2">
-                        <span className="text-2xs font-bold uppercase tracking-wider px-2 py-0.5 rounded-full bg-field text-ink-2 border border-line">
-                          {slide.discipline}
-                        </span>
-                        <span className="text-2xs font-bold px-2 py-0.5 rounded-full bg-ok-soft text-ok">
-                          {slide.totalRealPages} Gerçek Sayfa
-                        </span>
-                      </div>
-                      <h3 className="font-bold text-sm text-ink leading-snug">
-                        {slide.title}
-                      </h3>
+          {filteredCatalog.length === 0 ? (
+            <div className="dz-empty">
+              <span className="dz-empty-ic" aria-hidden><Search /></span>
+              <b>Aramana uygun slayt yok</b>
+              <p>Başka bir anabilim dalı ya da anahtar kelime dene.</p>
+            </div>
+          ) : (
+            <ul className="ln-grid">
+              {filteredCatalog.map((slide) => {
+                const renderedNote = isSlideRendered(slide);
+                const isRendered = Boolean(renderedNote);
+                const isProcessing = renderingSlideId === slide.id;
+                const { no, title } = splitSlideTitle(slide.title);
+                const topics = slide.keyTopics.map((t) => splitSlideTitle(t).title).filter((t) => t && t.toLocaleLowerCase('tr-TR') !== title.toLocaleLowerCase('tr-TR'));
+                return (
+                  <li key={slide.id} className={`ln-card ${isRendered ? 'is-done' : ''}`} data-tone={disciplineTone(slide.discipline)}>
+                    <div className="ln-card-top">
+                      <span className="dz-cat"><i aria-hidden />{slide.discipline}</span>
+                      <span className="ln-pages">{slide.totalRealPages} sayfa</span>
+                      <span className={`ln-state ${isRendered ? 'is-ok' : ''}`}>
+                        {isRendered ? <><CheckCircle2 aria-hidden /> İşlendi</> : 'Bekliyor'}
+                      </span>
                     </div>
-
-                    {isRendered ? (
-                      <span className="inline-flex items-center gap-1 bg-ok-soft text-ok text-2xs font-bold px-2.5 py-1 rounded-full border border-ok/30 shrink-0">
-                        <CheckCircle2 className="w-3.5 h-3.5 text-ok" />
-                        <span>Render Edildi</span>
-                      </span>
-                    ) : (
-                      <span className="inline-flex items-center gap-1 bg-field text-ink-2 text-2xs font-bold px-2.5 py-1 rounded-full border border-line shrink-0">
-                        <span>İşlenmedi</span>
-                      </span>
+                    <h3 className="ln-title">{no && <span className="ln-no">{no}</span>}{title}</h3>
+                    {topics.length > 0 && (
+                      <ul className="ln-topics" aria-label="Kapsadığı konular">
+                        {topics.slice(0, 6).map((t, i) => <li key={i}>{t}</li>)}
+                        {topics.length > 6 && <li className="is-more">+{topics.length - 6}</li>}
+                      </ul>
                     )}
-                  </div>
-
-                  {/* Key Topics */}
-                  <div className="space-y-1">
-                    <span className="text-2xs text-ink-3 font-semibold uppercase block">
-                      Dersin Kapsadığı Konular:
-                    </span>
-                    <div className="flex flex-wrap gap-1">
-                      {slide.keyTopics.map((topic, i) => (
-                        <span
-                          key={i}
-                          className="bg-field text-ink-2 text-2xs px-2 py-0.5 rounded-md font-medium"
-                        >
-                          {topic}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-
-                  {/* Card Actions */}
-                  <div className="pt-2 border-t border-line flex items-center justify-between gap-2">
-                    <a
-                      href={`https://drive.google.com/file/d/${slide.fileId}/view?usp=sharing`}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="text-xs text-ink-3 hover:text-ok flex items-center gap-1"
-                    >
-                      <ExternalLink className="w-3.5 h-3.5" />
-                      <span>Drive'da İncele</span>
-                    </a>
-
-                    <div className="flex items-center gap-2">
+                    <div className="ln-card-f">
+                      <a className="qk-ib" href={`https://drive.google.com/file/d/${slide.fileId}/view?usp=sharing`} target="_blank" rel="noreferrer" aria-label="Drive'da aç" title="Drive'da aç">
+                        <ExternalLink aria-hidden />
+                      </a>
+                      {isRendered && (
+                        <button type="button" className="qk-ib" onClick={() => handleRenderSlide(slide)} disabled={isProcessing} aria-label="Yeniden işle" title="Tüm sayfaları yeniden işler">
+                          <RefreshCw className={isProcessing ? 'animate-spin' : ''} aria-hidden />
+                        </button>
+                      )}
+                      {isRendered && isAdmin && (
+                        <button type="button" className="qk-ib is-danger" onClick={() => handleDeleteNote(slide.id, slide.title)} aria-label="İşlenmiş notu sil" title="İşlenmiş notu sil">
+                          <Trash2 aria-hidden />
+                        </button>
+                      )}
+                      <span className="qk-sp" />
                       {isRendered ? (
-                        <>
-                          <button
-                            onClick={() => {
-                              if (renderedNote) {
-                                setActiveNote(renderedNote);
-                                setActiveTab('rendered_notes');
-                              }
-                            }}
-                            className="bg-ok hover:bg-ok text-white font-bold px-3 py-1.5 rounded-lg text-xs flex items-center gap-1 cursor-pointer shadow-xs"
-                          >
-                            <Eye className="w-3.5 h-3.5" />
-                            <span>Sayfaları Oku</span>
-                          </button>
-
-                          <button
-                            onClick={() => handleRenderSlide(slide)}
-                            disabled={isProcessing}
-                            title="Tüm sayfaları yeniden oluşturup günceller"
-                            className="text-ink-3 hover:text-ink-2 p-1.5 rounded-lg hover:bg-field cursor-pointer"
-                          >
-                            <RefreshCw className={`w-3.5 h-3.5 ${isProcessing ? 'animate-spin' : ''}`} />
-                          </button>
-
-                          {isAdmin && (
-                            <button
-                              onClick={() => handleDeleteNote(slide.id, slide.title)}
-                              title="İşlenmiş notu siler"
-                              className="text-bad-text hover:text-bad-text p-1.5 rounded-lg hover:bg-bad-soft cursor-pointer"
-                            >
-                              <Trash2 className="w-3.5 h-3.5" />
-                            </button>
-                          )}
-                        </>
+                        <button type="button" className="ui-btn is-tonal is-sm" onClick={() => { if (renderedNote) { setActiveNote(renderedNote); setActiveTab('rendered_notes'); } }}>
+                          <Eye aria-hidden /> Sayfaları oku
+                        </button>
                       ) : (
-                        <button
-                          onClick={() => handleRenderSlide(slide)}
-                          disabled={isProcessing}
-                          className="bg-ok hover:bg-ok text-white font-bold px-3.5 py-1.5 rounded-lg text-xs flex items-center gap-1.5 cursor-pointer shadow-xs disabled:opacity-50"
-                        >
-                          {isProcessing ? (
-                            <>
-                              <RefreshCw className="w-3.5 h-3.5 animate-spin" />
-                              <span>{slide.totalRealPages} Sayfa İşleniyor...</span>
-                            </>
-                          ) : (
-                            <>
-                              <Play className="w-3.5 h-3.5 fill-current" />
-                              <span>Bu Slaytı Render Et ({slide.totalRealPages} Sayfa)</span>
-                            </>
-                          )}
+                        <button type="button" className={`ui-btn is-primary is-sm ${isProcessing ? 'is-busy' : ''}`} onClick={() => handleRenderSlide(slide)} disabled={isProcessing}>
+                          {isProcessing ? <><RefreshCw className="animate-spin" aria-hidden /> İşleniyor…</> : <><Play aria-hidden /> İşle</>}
                         </button>
                       )}
                     </div>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-
-          {filteredCatalog.length === 0 && (
-            <div className="bg-white rounded-2xl border border-line p-12 text-center space-y-3">
-              <Search className="w-10 h-10 text-ink-3 mx-auto" />
-              <h4 className="font-bold text-ink">Aramanıza uygun slayt bulunamadı</h4>
-              <p className="text-xs text-ink-3">
-                Farklı bir anabilim dalı veya anahtar kelime seçebilirsiniz.
-              </p>
-            </div>
+                  </li>
+                );
+              })}
+            </ul>
           )}
-        </div>
+        </>
       )}
 
-      {/* TAB 2: RENDERED NOTES & SLIDE READER */}
       {activeTab === 'rendered_notes' && (
-        <div className="space-y-4">
-          {notes.length === 0 ? (
-            <div className="bg-white rounded-2xl border border-line p-12 text-center space-y-4 shadow-xs">
-              <div className="w-14 h-14 rounded-2xl bg-ok-soft text-ok flex items-center justify-center mx-auto">
-                <BookMarked className="w-8 h-8" />
+        notes.length === 0 ? (
+          <div className="dz-empty">
+            <span className="dz-empty-ic" aria-hidden><BookMarked /></span>
+            <b>Henüz işlenmiş ders notu yok</b>
+            <p>Slayt kataloğundan bir slaytı işle ya da kendi notunu yükle.</p>
+            <button type="button" className="ui-btn is-tonal is-sm" onClick={() => setActiveTab('drive_catalog')}><FolderGit2 aria-hidden /> Slayt kataloğuna git</button>
+          </div>
+        ) : (
+          <div className="ln-read">
+            <aside className="ln-side" aria-label="İşlenmiş notlar">
+              <div className="cx-search ln-side-search">
+                <Search aria-hidden />
+                <input type="search" placeholder="Notlarda ara" aria-label="Notlarda ara" value={notesSearch} onChange={(e) => setNotesSearch(e.target.value)} />
               </div>
-              <div className="space-y-1">
-                <h4 className="font-bold text-base text-ink">Henüz Render Edilmiş Ders Notu Bulunmuyor</h4>
-                <p className="text-xs text-ink-3 max-w-md mx-auto leading-relaxed">
-                  Gerçek dışı örnek notlar temizlendi. Google Drive kataloğundan istediğiniz slaytı tek tıkla renderlayabilir ya da "+ Yeni Slayt / Not Yükle" butonunu kullanarak kendi ders notunuzu ekleyebilirsiniz.
-                </p>
-              </div>
-              <button
-                onClick={() => setActiveTab('drive_catalog')}
-                className="bg-ok hover:bg-ok text-white font-bold px-4 py-2 rounded-xl text-xs inline-flex items-center gap-1.5 cursor-pointer shadow-sm"
-              >
-                <FolderGit2 className="w-4 h-4" />
-                <span>Google Drive Slayt Kataloğuna Git</span>
-              </button>
-            </div>
-          ) : (
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
-              {/* Left Sidebar: Rendered Notes List */}
-              <div className="lg:col-span-4 space-y-3">
-                <div className="bg-white rounded-2xl border border-line p-4 shadow-xs space-y-3">
-                  <div className="flex items-center justify-between">
-                    <h3 className="font-bold text-sm text-ink">İşlenmiş Notlar ({notes.length})</h3>
-                    <button
-                      onClick={() => setActiveTab('drive_catalog')}
-                      className="text-2xs font-bold text-ok hover:underline"
-                    >
-                      + Daha Fazla Slayt Ekle
-                    </button>
-                  </div>
+              <ul className="ln-list">
+                {filteredRenderedNotes.map((note) => {
+                  const on = activeNote?.id === note.id;
+                  const { no, title } = splitSlideTitle(note.title);
+                  return (
+                    <li key={note.id}>
+                      <button type="button" className={`ln-item ${on ? 'is-on' : ''}`} aria-current={on ? 'true' : undefined} onClick={() => setActiveNote(note)}>
+                        <span className="ln-item-top"><span className="ln-item-d">{note.discipline}</span><span>{note.totalSlides} sayfa</span></span>
+                        <b>{no && <span className="ln-no">{no}</span>}{title}</b>
+                        <span className="ln-item-m">{[note.instructor, fmtDate(note.uploadedAt)].filter(Boolean).join(' · ') || 'Ders slaytı'}</span>
+                      </button>
+                    </li>
+                  );
+                })}
+                {filteredRenderedNotes.length === 0 && <li className="ln-none">Eşleşen not yok.</li>}
+              </ul>
+              <button type="button" className="ln-link" onClick={() => setActiveTab('drive_catalog')}><Plus aria-hidden /> Katalogdan slayt işle</button>
+            </aside>
 
-                  <div className="relative">
-                    <Search className="w-3.5 h-3.5 absolute left-3 top-1/2 -translate-y-1/2 text-ink-3" />
-                    <input
-                      type="text"
-                      placeholder="Notlarda ara..."
-                      value={notesSearch}
-                      onChange={(e) => setNotesSearch(e.target.value)}
-                      className="w-full pl-8 pr-3 py-1.5 bg-field border border-line rounded-lg text-xs"
-                    />
-                  </div>
-
-                  <div className="space-y-1.5 max-h-[600px] overflow-y-auto pr-1">
-                    {filteredRenderedNotes.map((note) => {
-                      const isSelected = activeNote?.id === note.id;
-                      return (
-                        <div
-                          key={note.id}
-                          onClick={() => setActiveNote(note)}
-                          className={`p-3 rounded-xl border text-left cursor-pointer transition-all ${
-                            isSelected
-                              ? 'bg-ok-soft border-ok shadow-xs'
-                              : 'bg-white border-line hover:border-line-2'
-                          }`}
-                        >
-                          <div className="flex items-center justify-between text-2xs text-ink-3 mb-1">
-                            <span className="font-bold uppercase text-ok">{note.discipline}</span>
-                            <span>{note.totalSlides} Sayfa</span>
-                          </div>
-                          <h4 className="font-bold text-xs text-ink line-clamp-1">{note.title}</h4>
-                          <p className="text-2xs text-ink-3 mt-0.5">
-                            {note.instructor || 'Anabilim Dalı'} • {new Date(note.uploadedAt).toLocaleDateString('tr-TR')}
-                          </p>
-                        </div>
-                      );
-                    })}
-                  </div>
-                </div>
-              </div>
-
-              {/* Right Content: Page-by-Page Interactive Slide Reader */}
-              <div className="lg:col-span-8">
-                {activeNote ? (
-                  <div className="bg-white rounded-2xl border border-line shadow-xs overflow-hidden space-y-4 p-5 sm:p-6">
-                    {/* Note Header */}
-                    <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-4 border-b border-line">
-                      <div>
-                        <div className="flex items-center gap-2 mb-1">
-                          <span className="bg-ok-soft text-ok text-2xs font-bold px-2 py-0.5 rounded-full">
-                            {activeNote.discipline}
-                          </span>
-                          <span className="text-ink-3 text-xs">
-                            Toplam {activeNote.totalSlides} Sayfa
-                          </span>
-                        </div>
-                        <h3 className="font-black text-lg text-ink">{activeNote.title}</h3>
-                        <p className="text-xs text-ink-3 mt-0.5">
-                          {activeNote.instructor && `Eğitici: ${activeNote.instructor} • `}
-                          Yükleyen: {activeNote.uploadedBy}
-                        </p>
-                      </div>
-
-                      <div className="flex items-center gap-2">
-                        <button
-                          onClick={() => setReaderNote(activeNote)}
-                          className="bg-ink hover:bg-ink text-white font-bold px-3 py-1.5 rounded-lg text-xs flex items-center gap-1.5 cursor-pointer shadow-xs"
-                        >
-                          <BookOpen className="w-3.5 h-3.5" />
-                          <span>Tam Ekran Okuyucu</span>
-                        </button>
-
-                        {isAdmin && (
-                          <button
-                            onClick={() => handleDeleteNote(activeNote.id, activeNote.title)}
-                            className="text-bad-text hover:text-bad-text p-1.5 rounded-lg hover:bg-bad-soft cursor-pointer"
-                            title="Bu notu sil"
-                          >
-                            <Trash2 className="w-4 h-4" />
+            <section className="ln-doc" aria-label="Not sayfaları">
+              {activeNote ? (
+                <>
+                  <header className="ln-doc-h">
+                    <div className="min-w-0">
+                      <span className="ln-doc-meta"><span className="dz-cat" data-tone={disciplineTone(activeNote.discipline)}><i aria-hidden />{activeNote.discipline}</span>{activeNote.totalSlides} sayfa</span>
+                      <h3>{splitSlideTitle(activeNote.title).title}</h3>
+                      {(activeNote.instructor || activeNote.uploadedBy) && <p>{[activeNote.instructor, activeNote.uploadedBy ? `Yükleyen: ${activeNote.uploadedBy}` : null].filter(Boolean).join(' · ')}</p>}
+                    </div>
+                    <div className="ln-doc-tools">
+                      <button type="button" className="ui-btn is-primary is-sm" onClick={() => setReaderNote(activeNote)}><BookOpen aria-hidden /> Tam ekran oku</button>
+                      {isAdmin && (
+                        <button type="button" className="qk-ib is-danger" onClick={() => handleDeleteNote(activeNote.id, activeNote.title)} aria-label="Bu notu sil" title="Bu notu sil"><Trash2 aria-hidden /></button>
+                      )}
+                    </div>
+                  </header>
+                  <ol className="ln-pages-list">
+                    {activeNote.pages.map((page) => (
+                      <li key={page.pageNumber} id={`ln-page-${page.pageNumber}`} className="ln-page">
+                        <div className="ln-page-h">
+                          <span className="ln-page-no">Sayfa {page.pageNumber}<small>/{activeNote.totalSlides}</small></span>
+                          <button type="button" className={`ln-copy ${copySuccess[page.pageNumber] ? 'is-done' : ''}`} onClick={() => copyPageContent(page.content, page.pageNumber)}>
+                            {copySuccess[page.pageNumber] ? <><Check aria-hidden /> Kopyalandı</> : <><Copy aria-hidden /> Kopyala</>}
                           </button>
-                        )}
-                      </div>
-                    </div>
-
-                    {/* Pages List */}
-                    <div className="space-y-4 max-h-[700px] overflow-y-auto pr-2">
-                      {activeNote.pages.map((page) => (
-                        <div
-                          key={page.pageNumber}
-                          className="border border-line rounded-xl p-4 bg-field/50 space-y-2.5"
-                        >
-                          <div className="flex items-center justify-between text-xs border-b border-line/60 pb-2">
-                            <span className="font-bold text-ink-2 bg-white px-2 py-0.5 rounded border border-line">
-                              Sayfa / Slayt #{page.pageNumber} / {activeNote.totalSlides}
-                            </span>
-
-                            <button
-                              onClick={() => copyPageContent(page.content, page.pageNumber)}
-                              className="text-ink-3 hover:text-ink flex items-center gap-1 cursor-pointer text-2xs"
-                            >
-                              {copySuccess[page.pageNumber] ? (
-                                <>
-                                  <Check className="w-3 h-3 text-ok" />
-                                  <span className="text-ok font-bold">Kopyalandı</span>
-                                </>
-                              ) : (
-                                <>
-                                  <Copy className="w-3 h-3" />
-                                  <span>Sayfa Metnini Kopyala</span>
-                                </>
-                              )}
-                            </button>
-                          </div>
-
-                          <div className="bg-white p-3.5 rounded-lg border border-line">
-                            <SourceText text={String(page.content || '')} size="sm" />
-                          </div>
-
-                          {page.keywords && page.keywords.length > 0 && (
-                            <div className="flex flex-wrap gap-1 items-center pt-1">
-                              <span className="text-2xs text-ink-3 font-bold">Kavramlar:</span>
-                              {page.keywords.map((kw, i) => (
-                                <span
-                                  key={i}
-                                  className="bg-line/70 text-ink-2 text-2xs px-1.5 py-0.5 rounded"
-                                >
-                                  {kw}
-                                </span>
-                              ))}
-                            </div>
-                          )}
                         </div>
-                      ))}
-                    </div>
-                  </div>
-                ) : (
-                  <div className="bg-white rounded-2xl border border-line p-12 text-center text-ink-3">
-                    Sol taraftaki listeden görüntülemek istediğiniz ders notunu seçiniz.
-                  </div>
-                )}
-              </div>
-            </div>
-          )}
-        </div>
+                        <div className="ln-page-b"><SourceText text={String(page.content || '')} size="sm" /></div>
+                        {page.keywords && page.keywords.length > 0 && (
+                          <ul className="ln-topics is-kw" aria-label="Kavramlar">{page.keywords.map((kw, i) => <li key={i}>{kw}</li>)}</ul>
+                        )}
+                      </li>
+                    ))}
+                  </ol>
+                </>
+              ) : (
+                <div className="ln-doc-empty">Okumak için soldaki listeden bir not seç.</div>
+              )}
+            </section>
+          </div>
+        )
       )}
 
       {/* MODAL: ADD MANUAL / CUSTOM LECTURE NOTE */}

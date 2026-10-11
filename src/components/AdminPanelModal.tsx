@@ -1693,14 +1693,14 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
         {activeTab === 'database' && (
           <div className="p-4 sm:p-6 space-y-5 overflow-y-auto flex-1 text-xs">
             {/* Multi-Database Active Mode & Cloud Failover Card */}
-            <div className="bg-ink-surface text-white rounded-2xl p-5 border border-accent/50 shadow-lg space-y-4">
+            <div className="bg-white text-ink rounded-2xl p-5 border border-accent/50 space-y-4">
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-line-2/70">
                 <div className="space-y-1">
                   <div className="flex items-center gap-2">
-                    <span className="p-1.5 bg-accent/20 text-accent rounded-lg border border-accent/30">
+                    <span className="p-1.5 bg-accent-soft text-accent rounded-lg border border-accent/30">
                       <Layers className="w-4 h-4" />
                     </span>
-                    <h3 className="text-sm font-bold text-white">Çoklu Veritabanı Yönetimi & Kesintisiz Geçiş</h3>
+                    <h3 className="text-sm font-bold text-ink">Çoklu Veritabanı Yönetimi & Kesintisiz Geçiş</h3>
                   </div>
                   <p className="text-2xs text-ink-3">
                     Firebase Spark, Supabase (PostgreSQL) ve Yerel PC veritabanları arasında anlık geçiş yapın. Her kayıt işlemi Firebase Spark'a da otomatik yedeklenir.
@@ -1711,7 +1711,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                   type="button"
                   onClick={refreshDbStatuses}
                   disabled={isRefreshingDbStatus}
-                  className="bg-ink hover:bg-ink-2 text-ink-3 border border-line-2 font-semibold px-3 py-1.5 rounded-lg flex items-center gap-1.5 transition-all cursor-pointer self-start sm:self-center text-xs"
+                  className="bg-white hover:bg-canvas text-ink-3 border border-line-2 font-semibold px-3 py-1.5 rounded-lg flex items-center gap-1.5 transition-all cursor-pointer self-start sm:self-center text-xs"
                 >
                   <RefreshCw className={`w-3.5 h-3.5 ${isRefreshingDbStatus ? 'animate-spin text-ok' : ''}`} />
                   <span>Yenile</span>
@@ -1723,8 +1723,8 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                 {/* Firebase Spark Badge */}
                 <div className={`p-3 rounded-xl border flex flex-col gap-1 ${
                   dbStatuses?.firebase.status === 'quota_exceeded'
-                    ? 'bg-warn/60 border-warn/60 text-warn-soft'
-                    : 'bg-ink/60 border-line-2 text-ink-3'
+                    ? 'bg-warn-soft border-warn/60 text-warn'
+                    : 'bg-canvas border-line-2 text-ink-3'
                 }`}>
                   <div className="flex items-center justify-between">
                     <span className="font-bold flex items-center gap-1.5 text-xs">
@@ -1732,8 +1732,8 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                     </span>
                     <span className={`text-2xs font-extrabold px-2 py-0.5 rounded-full ${
                       dbStatuses?.firebase.status === 'quota_exceeded'
-                        ? 'bg-warn/30 text-warn border border-warn/50'
-                        : 'bg-ok/20 text-ok border border-ok/40'
+                        ? 'bg-warn-soft text-warn border border-warn/50'
+                        : 'bg-ok-soft text-ok border border-ok/40'
                     }`}>
                       {dbStatuses?.firebase.status === 'quota_exceeded' ? 'Kota Doldu' : 'Aktif'}
                     </span>
@@ -1746,8 +1746,8 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                 {/* Supabase Badge */}
                 <div className={`p-3 rounded-xl border flex flex-col gap-1 ${
                   dbStatuses?.supabase.status === 'online'
-                    ? 'bg-ok/50 border-ok/50 text-ok-soft'
-                    : 'bg-ink/60 border-line-2 text-ink-3'
+                    ? 'bg-ok-soft border-ok/50 text-ok'
+                    : 'bg-canvas border-line-2 text-ink-3'
                 }`}>
                   <div className="flex items-center justify-between">
                     <span className="font-bold flex items-center gap-1.5 text-xs">
@@ -1755,8 +1755,8 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                     </span>
                     <span className={`text-2xs font-extrabold px-2 py-0.5 rounded-full ${
                       dbStatuses?.supabase.status === 'online'
-                        ? 'bg-ok/30 text-ok border border-ok/50'
-                        : 'bg-accent/20 text-accent border border-accent/40'
+                        ? 'bg-ok-soft text-ok border border-ok/50'
+                        : 'bg-accent-soft text-accent border border-accent/40'
                     }`}>
                       {dbStatuses?.supabase.status === 'online' ? 'Bağlı' : 'Yapılandırıldı'}
                     </span>
@@ -1769,8 +1769,8 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                 {/* Local PC Badge */}
                 <div className={`p-3 rounded-xl border flex flex-col gap-1 ${
                   dbStatuses?.localPc.status === 'online'
-                    ? 'bg-ok/50 border-ok/50 text-ok-soft'
-                    : 'bg-ink/60 border-line-2 text-ink-3'
+                    ? 'bg-ok-soft border-ok/50 text-ok'
+                    : 'bg-canvas border-line-2 text-ink-3'
                 }`}>
                   <div className="flex items-center justify-between">
                     <span className="font-bold flex items-center gap-1.5 text-xs">
@@ -1778,8 +1778,8 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                     </span>
                     <span className={`text-2xs font-extrabold px-2 py-0.5 rounded-full ${
                       dbStatuses?.localPc.status === 'online'
-                        ? 'bg-ok/30 text-ok border border-ok/50'
-                        : 'bg-bad/20 text-bad-text border border-bad/40'
+                        ? 'bg-ok-soft text-ok border border-ok/50'
+                        : 'bg-bad-soft text-bad-text border border-bad/40'
                     }`}>
                       {dbStatuses?.localPc.status === 'online' ? 'Online' : 'Offline'}
                     </span>
@@ -1800,7 +1800,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                     className={`p-3 rounded-xl border text-left transition-all cursor-pointer ${
                       dbMode === 'auto'
                         ? 'bg-accent text-white border-accent shadow-md ring-2 ring-accent/50'
-                        : 'bg-ink/70 text-ink-3 border-line-2 hover:bg-ink/80'
+                        : 'bg-canvas text-ink-3 border-line-2 hover:bg-field'
                     }`}
                   >
                     <div className="font-bold flex items-center gap-1.5 text-xs">
@@ -1818,7 +1818,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                     className={`p-3 rounded-xl border text-left transition-all cursor-pointer ${
                       dbMode === 'supabase'
                         ? 'bg-ok text-white border-ok shadow-md ring-2 ring-ok/50'
-                        : 'bg-ink/70 text-ink-3 border-line-2 hover:bg-ink/80'
+                        : 'bg-canvas text-ink-3 border-line-2 hover:bg-field'
                     }`}
                   >
                     <div className="font-bold flex items-center gap-1.5 text-xs">
@@ -1835,7 +1835,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                     className={`p-3 rounded-xl border text-left transition-all cursor-pointer ${
                       dbMode === 'firebase'
                         ? 'bg-warn text-white border-warn shadow-md ring-2 ring-warn/50'
-                        : 'bg-ink/70 text-ink-3 border-line-2 hover:bg-ink/80'
+                        : 'bg-canvas text-ink-3 border-line-2 hover:bg-field'
                     }`}
                   >
                     <div className="font-bold flex items-center gap-1.5 text-xs">
@@ -1852,7 +1852,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                     className={`p-3 rounded-xl border text-left transition-all cursor-pointer ${
                       dbMode === 'local_pc'
                         ? 'bg-ok text-white border-ok shadow-md ring-2 ring-ok/50'
-                        : 'bg-ink/70 text-ink-3 border-line-2 hover:bg-ink/80'
+                        : 'bg-canvas text-ink-3 border-line-2 hover:bg-field'
                     }`}
                   >
                     <div className="font-bold flex items-center gap-1.5 text-xs">
@@ -1880,7 +1880,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                 <button
                   type="button"
                   onClick={() => setShowSqlSchemaModal(true)}
-                  className="bg-ink hover:bg-ink-2 text-accent border border-accent/50 font-bold px-3.5 py-2 rounded-xl text-xs flex items-center gap-1.5 transition-all cursor-pointer shadow-sm"
+                  className="bg-white hover:bg-canvas text-accent border border-accent/50 font-bold px-3.5 py-2 rounded-xl text-xs flex items-center gap-1.5 transition-all cursor-pointer shadow-sm"
                 >
                   <Terminal className="w-3.5 h-3.5" />
                   <span>Supabase SQL Şemasını Göster</span>
@@ -1891,10 +1891,10 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
               {multiDbFeedback && (
                 <div className={`p-3 rounded-xl text-xs font-semibold flex items-center gap-2 ${
                   multiDbFeedback.startsWith('✓')
-                    ? 'bg-ok/80 text-ok-soft border border-ok/50'
+                    ? 'bg-ok/80 text-ok border border-ok/50'
                     : multiDbFeedback.startsWith('Hata')
-                    ? 'bg-bad/80 text-bad-soft border border-bad/50'
-                    : 'bg-accent/80 text-accent-soft border border-accent/50'
+                    ? 'bg-bad/80 text-bad-text border border-bad/50'
+                    : 'bg-accent/80 text-accent border border-accent/50'
                 }`}>
                   <CheckCircle2 className="w-4 h-4 shrink-0" />
                   <span>{multiDbFeedback}</span>
@@ -1902,7 +1902,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
               )}
 
               {/* Gemini API Key Box with Tiered Pool Info */}
-              <div className="bg-ink/70 border border-line-2 rounded-xl p-3.5 space-y-2">
+              <div className="bg-canvas border border-line-2 rounded-xl p-3.5 space-y-2">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-1.5 text-xs font-bold text-ink-3">
                     <Key className="w-3.5 h-3.5 text-warn" />
@@ -1916,7 +1916,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                     value={geminiApiKeyInput}
                     onChange={(e) => setGeminiApiKeyInput(e.target.value)}
                     placeholder="AIzaSy... (Özel veya yedek Gemini API anahtarınızı buraya yapıştırın)"
-                    className="flex-1 bg-ink border border-line-2 rounded-lg px-3 py-1.5 text-xs text-ink-3 focus:outline-none focus:border-warn font-mono"
+                    className="flex-1 bg-white border border-line-2 rounded-lg px-3 py-1.5 text-xs text-ink-3 focus:outline-none focus:border-warn font-mono"
                   />
                   <button
                     type="button"
@@ -1932,7 +1932,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
               </div>
 
               {/* Groq Cloud Alternative API Key Box */}
-              <div className="bg-ink/70 border border-line-2 rounded-xl p-3.5 space-y-2">
+              <div className="bg-canvas border border-line-2 rounded-xl p-3.5 space-y-2">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-1.5 text-xs font-bold text-ink-3">
                     <Sparkles className="w-3.5 h-3.5 text-warn" />
@@ -1946,7 +1946,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                     value={groqApiKeyInput}
                     onChange={(e) => setGroqApiKeyInput(e.target.value)}
                     placeholder="1. Groq Anahtarı (gsk_...)"
-                    className="flex-1 bg-ink border border-line-2 rounded-lg px-3 py-1.5 text-xs text-ink-3 focus:outline-none focus:border-warn font-mono"
+                    className="flex-1 bg-white border border-line-2 rounded-lg px-3 py-1.5 text-xs text-ink-3 focus:outline-none focus:border-warn font-mono"
                   />
                   <button
                     type="button"
@@ -1962,7 +1962,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                     value={groqApiKey2Input}
                     onChange={(e) => setGroqApiKey2Input(e.target.value)}
                     placeholder="2. Yedek Groq Anahtarı (gsk_...)"
-                    className="flex-1 bg-ink border border-line-2 rounded-lg px-3 py-1.5 text-xs text-ink-3 focus:outline-none focus:border-warn font-mono"
+                    className="flex-1 bg-white border border-line-2 rounded-lg px-3 py-1.5 text-xs text-ink-3 focus:outline-none focus:border-warn font-mono"
                   />
                 </div>
                 {groqKeyFeedback && (
@@ -1972,17 +1972,17 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
             </div>
 
             {/* DeepSeek Data Pool & RAG Ingestion Card */}
-            <div className="bg-ink-surface text-white rounded-2xl p-5 border border-accent/40 shadow-lg space-y-4">
+            <div className="bg-white text-ink rounded-2xl p-5 border border-accent/40 space-y-4">
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-accent/60">
                 <div className="space-y-1">
                   <div className="flex items-center gap-2">
-                    <span className="p-1.5 bg-accent/20 text-accent rounded-lg border border-accent/30">
+                    <span className="p-1.5 bg-accent-soft text-accent rounded-lg border border-accent/30">
                       <Sparkles className="w-4 h-4 text-accent" />
                     </span>
-                    <h3 className="text-sm font-bold text-white">DeepSeek Veri Havuzu & RAG Zeminleme Entegrasyonu</h3>
+                    <h3 className="text-sm font-bold text-ink">DeepSeek Veri Havuzu & RAG Zeminleme Entegrasyonu</h3>
                   </div>
                   <p className="text-2xs text-ink-3">
-                    DeepSeek tarafından düzenlenmiş soru, özet ve ders verilerini <code className="bg-black/40 px-1.5 py-0.5 rounded text-accent font-mono text-2xs">{deepseekStatus?.directory || 'C:\\Users\\indui\\Desktop\\meds_database\\deepseek_data'}</code> klasöründen otomatik olarak içeri aktarır ve RAG vektör sistemine katar.
+                    DeepSeek tarafından düzenlenmiş soru, özet ve ders verilerini <code className="bg-field px-1.5 py-0.5 rounded text-accent font-mono text-2xs">{deepseekStatus?.directory || 'C:\\Users\\indui\\Desktop\\meds_database\\deepseek_data'}</code> klasöründen otomatik olarak içeri aktarır ve RAG vektör sistemine katar.
                   </p>
                 </div>
 
@@ -1999,26 +1999,26 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
 
               {/* Status metrics */}
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 text-center">
-                <div className="bg-ink/80 border border-accent/60 p-2.5 rounded-xl">
+                <div className="bg-canvas border border-accent/60 p-2.5 rounded-xl">
                   <span className="text-2xs text-ink-3 block">Klasördeki Dosyalar</span>
-                  <span className="text-sm font-extrabold text-white">{deepseekStatus?.filesCount || 0} Dosya</span>
+                  <span className="text-sm font-extrabold text-ink">{deepseekStatus?.filesCount || 0} Dosya</span>
                 </div>
-                <div className="bg-ink/80 border border-accent/60 p-2.5 rounded-xl">
+                <div className="bg-canvas border border-accent/60 p-2.5 rounded-xl">
                   <span className="text-2xs text-ink-3 block">İşlenen Katkı Verisi</span>
                   <span className="text-sm font-extrabold text-accent">{deepseekStatus?.itemsCount || 0} Kayıt</span>
                 </div>
-                <div className="bg-ink/80 border border-accent/60 p-2.5 rounded-xl">
+                <div className="bg-canvas border border-accent/60 p-2.5 rounded-xl">
                   <span className="text-2xs text-ink-3 block">Kaynak Statüsü</span>
                   <span className="text-sm font-extrabold text-ok">DeepSeek Katkısı</span>
                 </div>
-                <div className="bg-ink/80 border border-accent/60 p-2.5 rounded-xl">
+                <div className="bg-canvas border border-accent/60 p-2.5 rounded-xl">
                   <span className="text-2xs text-ink-3 block">RAG Arama Önceliği</span>
                   <span className="text-sm font-extrabold text-warn">Birincil Zemin (1. Sıra)</span>
                 </div>
               </div>
 
               {deepseekFeedback && (
-                <div className="p-3 bg-accent/50 border border-accent/40 rounded-xl text-xs font-semibold text-accent-soft flex items-center gap-2">
+                <div className="p-3 bg-accent-soft border border-accent/40 rounded-xl text-xs font-semibold text-accent flex items-center gap-2">
                   <CheckCircle2 className="w-4 h-4 text-ok shrink-0" />
                   <span>{deepseekFeedback}</span>
                 </div>
@@ -2026,14 +2026,14 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
             </div>
 
             {/* Lecture Notes Repair & Cross-Enrichment Card */}
-            <div className="bg-ink-surface text-white rounded-2xl p-5 border border-ok/40 shadow-lg space-y-4">
+            <div className="bg-white text-ink rounded-2xl p-5 border border-ok/40 space-y-4">
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-ok/60">
                 <div className="space-y-1">
                   <div className="flex items-center gap-2">
-                    <span className="p-1.5 bg-ok/20 text-ok rounded-lg border border-ok/30">
+                    <span className="p-1.5 bg-ok-soft text-ok rounded-lg border border-ok/30">
                       <BookOpen className="w-4 h-4 text-ok" />
                     </span>
-                    <h3 className="text-sm font-bold text-white">Slayt Onarım & Redakte Zenginleştirme Motoru</h3>
+                    <h3 className="text-sm font-bold text-ink">Slayt Onarım & Redakte Zenginleştirme Motoru</h3>
                   </div>
                   <p className="text-2xs text-ink-3">
                     Orijinal ders sunumlarındaki boş, eksik veya okunamamış slaytları 347 adet doğrulanmış amfi redakte ders özetiyle otomatik çapraz eşleştirir, tamamlar ve RAG sistemine katar.
@@ -2052,7 +2052,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
               </div>
 
               {repairFeedback && (
-                <div className="p-3 bg-ok/50 border border-ok/40 rounded-xl text-xs font-semibold text-ok-soft flex items-center gap-2">
+                <div className="p-3 bg-ok-soft border border-ok/40 rounded-xl text-xs font-semibold text-ok flex items-center gap-2">
                   <CheckCircle2 className="w-4 h-4 text-ok shrink-0" />
                   <span>{repairFeedback}</span>
                 </div>
@@ -2099,16 +2099,16 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
             </div>
 
             {/* Cloud Firestore Sync Card */}
-            <div className="bg-ink-surface text-white border border-ok/50 rounded-xl p-4 sm:p-5 space-y-3 shadow-md">
+            <div className="bg-white text-ink border border-ok/50 rounded-xl p-4 sm:p-5 space-y-3 shadow-md">
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
                 <div className="flex items-center gap-2.5">
-                  <div className="w-8 h-8 rounded-lg bg-ok/20 text-ok border border-ok/30 flex items-center justify-center">
+                  <div className="w-8 h-8 rounded-lg bg-ok-soft text-ok border border-ok/30 flex items-center justify-center">
                     <Cloud className="w-4 h-4" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-sm text-white flex items-center gap-2">
+                    <h4 className="font-bold text-sm text-ink flex items-center gap-2">
                       <span>Firebase Firestore Bulut Senkronizasyonu</span>
-                      <span className="bg-ok/20 text-ok border border-ok/30 text-2xs font-bold px-2 py-0.5 rounded-full">
+                      <span className="bg-ok-soft text-ok border border-ok/30 text-2xs font-bold px-2 py-0.5 rounded-full">
                         Canlı Bulut
                       </span>
                     </h4>
@@ -2129,7 +2129,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                 </button>
               </div>
 
-              <div className="bg-ink/60 border border-line-2/50 rounded-lg p-3 text-2xs text-ink-3 space-y-1.5">
+              <div className="bg-canvas border border-line-2/50 rounded-lg p-3 text-2xs text-ink-3 space-y-1.5">
                 <div className="flex items-center gap-1.5 text-ok font-semibold">
                   <CheckCircle2 className="w-3.5 h-3.5" />
                   <span>Güvenli & Parçalı (Chunked) Firestore Aktarımı:</span>
@@ -2142,10 +2142,10 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
               {firestoreSyncFeedback && (
                 <div className={`p-3 rounded-lg border text-xs flex items-start gap-2 ${
                   firestoreSyncFeedback.startsWith('✓')
-                    ? 'bg-ok/80 border-ok/50 text-ok-soft'
+                    ? 'bg-ok/80 border-ok/50 text-ok'
                     : firestoreSyncFeedback.startsWith('Hata')
-                    ? 'bg-bad/80 border-bad/50 text-bad-soft'
-                    : 'bg-ok/80 border-ok/50 text-ok-soft'
+                    ? 'bg-bad/80 border-bad/50 text-bad-text'
+                    : 'bg-ok/80 border-ok/50 text-ok'
                 }`}>
                   <CheckCircle2 className="w-4 h-4 text-ok shrink-0 mt-0.5" />
                   <span>{firestoreSyncFeedback}</span>

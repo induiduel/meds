@@ -1,7 +1,9 @@
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { observeScrollReveal } from '../../../utils/scrollReveal';
+import { DeckNotePanel } from './DeckNotePanel';
 import {
   BookOpen, Check, Eraser, Hand, Highlighter, PenLine, ChevronDown, ChevronLeft, ChevronRight, Columns, EyeOff, FileDown, FileText, GalleryHorizontal, History,
-  Info, LayoutPanelLeft, ListTree, Lock, Maximize2, MessageCircleQuestion, Minimize2, MoreHorizontal, NotebookText,
+  Info, LayoutPanelLeft, ListTree, Lock, Maximize2, MessageCircleQuestion, Minimize2, MoreHorizontal, NotebookText, NotebookPen,
   PanelsTopLeft, Rows3, Search, Sparkles, X,
 } from 'lucide-react';
 import type { InteractiveDeck } from '../InteractiveDeckView';
@@ -75,7 +77,7 @@ const readDeepLink = (): { adim?: number; hedef?: string } | null => {
   }
 };
 type ReadMode = 'paged' | 'scroll';
-type Sheet = null | 'notes' | 'ai';
+type Sheet = null | 'notes' | 'ai' | 'mine';
 
 const pref = {
   get<T extends string>(k: string, d: T, ok: readonly T[]): T {
@@ -649,6 +651,9 @@ export const LessonPlayer: React.FC<LessonPlayerProps> = ({ deck, startAt, initi
     if (Math.abs(dx) > 90 && Math.abs(dx) > Math.abs(dy) * 2) (dx < 0 ? next : prev)();
   };
 
+  // Kaydırınca beliren başlık, tablo ve etkileşimler (yalnız görünür alanın altındakiler).
+  useEffect(() => observeScrollReveal(mainRef.current, '.ls-prose > *, .ls-table, .ls-ix, .ls-dock'), [index, viewMode, layout]);
+
   const openPdf = (page?: number) => {
     setPdfPage(page ?? pdfLoc.primaryPage);
     setViewMode('split');
@@ -754,6 +759,9 @@ export const LessonPlayer: React.FC<LessonPlayerProps> = ({ deck, startAt, initi
               </button>
               <button type="button" role="menuitemcheckbox" aria-checked={drawMode !== 'none'} className={`ls-tools-item ${drawMode !== 'none' ? 'is-on' : ''}`} onClick={() => pickTool(() => { stopPen(); setDrawingGlobalState({ activeMode: drawMode !== 'none' ? 'none' : 'pen' }); })}>
                 <PenLine aria-hidden /> <span>Kalem (çizim)<small>Sayfanın üstüne serbest çiz; renk ve kalınlık tepede</small></span>
+              </button>
+              <button type="button" role="menuitem" className="ls-tools-item" onClick={() => { setSheet('mine'); setToolsOpen(false); }}>
+                <NotebookPen aria-hidden /> <span>Notlarım<small>Biçimli not: liste, tablo, vurgu, renk</small></span>
               </button>
               <button type="button" role="menuitem" className="ls-tools-item" onClick={() => { setSheet('notes'); setToolsOpen(false); }}>
                 <NotebookText aria-hidden /> <span>Ders notları<small>Dersin özeti ve en çok sorulan spotlar</small></span>
@@ -1108,14 +1116,16 @@ export const LessonPlayer: React.FC<LessonPlayerProps> = ({ deck, startAt, initi
       {sheet && (
         <>
           <button type="button" className="ls-scrim is-right" aria-label="Paneli kapat" onClick={() => setSheet(null)} />
-          <aside className="ls-side-sheet" aria-label={sheet === 'ai' ? 'Asistana sor' : 'Ders notları'}>
+          <aside className="ls-side-sheet" aria-label={sheet === 'ai' ? 'Asistana sor' : sheet === 'mine' ? 'Notlarım' : 'Ders notları'}>
             <div className="ls-drawer-h">
-              <b>{sheet === 'ai' ? 'Asistana sor' : 'Ders notları'}</b>
+              <b>{sheet === 'ai' ? 'Asistana sor' : sheet === 'mine' ? 'Notlarım' : 'Ders notları'}</b>
               <button type="button" className="ls-btn is-icon is-ghost" onClick={() => setSheet(null)} aria-label="Kapat"><X aria-hidden /></button>
             </div>
             <div className="ls-side-sheet-b">
               {sheet === 'ai' ? (
                 <AskAi key={step.number} deck={deck} slide={step.slide} />
+              ) : sheet === 'mine' ? (
+                <DeckNotePanel deckId={deck.id} deckTitle={deckName(deck)} discipline={deck.discipline} stepNumber={step.number} stepTitle={String((step.slide as any)?.title || '').trim() || `Slayt ${step.slide.slideNumber}`} />
               ) : (
                 <>
                   {deck.overview && <Prose text={deck.overview} className="is-sm" />}

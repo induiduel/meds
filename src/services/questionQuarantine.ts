@@ -7,7 +7,7 @@ import fs from 'fs';
 import path from 'path';
 
 type QOpt = { key: string; text: string };
-type QFile = { sorular: Record<string, { neden: string[] }>; onarim: Record<string, { stem: string; options: QOpt[] }> };
+type QFile = { sorular: Record<string, { neden: string[]; kaynak?: string; dosya?: string }>; onarim: Record<string, { stem: string; options: QOpt[] }> };
 let cache: QFile | null = null;
 let cacheMtime = 0;
 
@@ -190,8 +190,23 @@ export function applyQuarantine<T extends { id?: string; stem?: string; options?
       out.push(phase14View(item as any));
       continue;
     }
-    const fix = q.onarim?.[id];          // onarımı olan soru (veritabanı kopyası bozuk olsa da) onarılmış hâliyle gösterilir
-    if (!fix && q.sorular?.[id]) continue;
+    const fix = q.onarim?.[id];
+    if (!fix && q.sorular?.[id]) {
+      const qInfo = q.sorular[id];
+      const tags = Array.isArray((item as any).tags) ? [...(item as any).tags] : [];
+      if (!tags.includes('karantina')) tags.push('karantina');
+      out.push({
+        ...item,
+        isQuarantined: true,
+        quarantineReasons: qInfo?.neden || [],
+        quarantineSource: qInfo?.kaynak || null,
+        quarantineDetails: qInfo || null,
+        tags,
+        // istemci önbelleği karantina durumunu ve etiketini delta senkronizasyonla alsın
+        updatedAt: new Date(Math.max(Date.parse((item as any).updatedAt || '') || 0, cacheMtime)).toISOString(),
+      });
+      continue;
+    }
     if (fix) {
       // doğru cevabı şık metnine göre eşle (onarımda harfler kayabilir)
       const oldCorrect = (item.options || []).find((o: any) => o?.key === item.correctAnswer)?.text;

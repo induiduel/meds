@@ -18,13 +18,15 @@ import {
   ChevronDown,
   Info,
   Cloud,
-  Database
+  Database,
+  Table
 } from 'lucide-react';
 import { Committee, QuestionItem } from '../types';
 import { ApiService } from '../services/api';
 import { InfoPopover } from './InfoPopover';
 import { DONEM3_CURRICULUM_DISCIPLINES } from '../data/curriculumData';
 import mufredatPaketi from '../data/mufredat_paketi.json';
+import { FlatfileDataOnboarding } from './manage/FlatfileDataOnboarding';
 
 const getKurulNo = (cid: string) => {
   if (cid.includes('1')) return 1;
@@ -95,6 +97,36 @@ export const AdminPastExamImporterModal: React.FC<AdminPastExamImporterModalProp
   // Importing state
   const [isImporting, setIsImporting] = useState(false);
   const [importSuccessMessage, setImportSuccessMessage] = useState<string | null>(null);
+
+  // Flatfile Onboarding vs AI Text mode
+  const [importerMode, setImporterMode] = useState<'flatfile' | 'ai_text'>('flatfile');
+
+  const handleFlatfileImport = async (questions: any[], meta: { title: string; count: number; validCount: number }) => {
+    setIsImporting(true);
+    setParseError(null);
+    try {
+      const result = await ApiService.batchImportPastQuestions(
+        adminEmail,
+        targetCommitteeId,
+        examYear,
+        questions
+      );
+
+      const syncTargets = [];
+      if (result.serverSynced) syncTargets.push('Yerel Sunucu');
+      if (result.firebaseSynced) syncTargets.push('Firebase Firestore Bulutu');
+      const syncedStr = syncTargets.length > 0 ? syncTargets.join(' ve ') : 'Veritabanı';
+
+      setImportSuccessMessage(
+        `✓ ${result.count} adet çıkmış soru Flatfile Onboarding ile ${syncedStr} üzerine başarıyla aktarıldı!`
+      );
+      await onImportSuccess();
+    } catch (err: any) {
+      setParseError('Flatfile aktarımında hata: ' + (err.message || String(err)));
+    } finally {
+      setIsImporting(false);
+    }
+  };
 
   if (!isOpen) return null;
 
@@ -374,8 +406,52 @@ export const AdminPastExamImporterModal: React.FC<AdminPastExamImporterModalProp
           </div>
         )}
 
-        {/* Content Body */}
-        <div className="p-4 sm:p-6 overflow-y-auto space-y-5 text-xs">
+        {/* Tab Switcher: Flatfile Onboarding vs AI Parser */}
+        <div className="flex items-center px-4 sm:px-6 pt-2.5 border-b border-line bg-canvas/40 gap-3 shrink-0">
+          <button
+            type="button"
+            onClick={() => setImporterMode('flatfile')}
+            className={`flex items-center gap-1.5 px-3 py-2 text-xs font-bold border-b-2 transition cursor-pointer ${
+              importerMode === 'flatfile'
+                ? 'border-accent text-accent'
+                : 'border-transparent text-ink-3 hover:text-ink'
+            }`}
+          >
+            <Table className="w-3.5 h-3.5" />
+            <span>Flatfile Data Onboarding (JSON / Tablo / Şema Eşleme)</span>
+            <span className="text-2xs px-1.5 py-0.2 rounded-full bg-ok/10 text-ok font-extrabold ml-1">
+              ÖNERİLEN
+            </span>
+          </button>
+
+          <button
+            type="button"
+            onClick={() => setImporterMode('ai_text')}
+            className={`flex items-center gap-1.5 px-3 py-2 text-xs font-bold border-b-2 transition cursor-pointer ${
+              importerMode === 'ai_text'
+                ? 'border-accent text-accent'
+                : 'border-transparent text-ink-3 hover:text-ink'
+            }`}
+          >
+            <Sparkles className="w-3.5 h-3.5 text-accent" />
+            <span>Yapay Zeka Metin &amp; PDF Çıkarıcı (Ham Doküman)</span>
+          </button>
+        </div>
+
+        {importerMode === 'flatfile' ? (
+          <div className="p-4 sm:p-6 overflow-y-auto flex-1">
+            <FlatfileDataOnboarding
+              targetMode="database_direct"
+              defaultCommitteeId={String(getKurulNo(targetCommitteeId))}
+              defaultExamYear={examYear}
+              onComplete={handleFlatfileImport}
+              onCancel={onClose}
+              isSubmitting={isImporting}
+            />
+          </div>
+        ) : (
+          /* Content Body */
+          <div className="p-4 sm:p-6 overflow-y-auto space-y-5 text-xs">
           {/* Metadata Controls Bar */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 bg-canvas p-3.5 rounded-xl border border-line">
             {/* Exam Year */}
@@ -825,6 +901,7 @@ Cevap: A
             </div>
           )}
         </div>
+        )}
 
         {/* Footer */}
         <div className="bg-canvas p-4 border-t border-line flex items-center justify-between shrink-0">

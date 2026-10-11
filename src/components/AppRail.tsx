@@ -16,6 +16,7 @@ import {
   Target,
   Compass,
   Music,
+  Settings2,
 } from 'lucide-react';
 import type { AppTab } from './Header';
 import { pathFor, linkClick } from '../router';
@@ -34,6 +35,7 @@ export const RAIL: { id: AppTab; label: string; icon: React.ElementType }[] = [
   { id: 'glossary', label: 'Sözlük', icon: BookOpenText },
   { id: 'leaderboard', label: 'Sıralama', icon: Trophy },
   { id: 'music', label: 'Müzik', icon: Music },
+  { id: 'settings', label: 'Ayarlar', icon: Settings2 },
 ];
 
 /** Menü kategorileri: kenar menüsünde başlıklı gruplar, telefonda "Daha" sayfasında aynı sıra. */
@@ -42,6 +44,7 @@ export const NAV_GROUPS: { label: string | null; ids: AppTab[] }[] = [
   { label: 'Sorular', ids: ['past_exams', 'ornek_sorular', 'questions', 'study'] },
   { label: 'Öğrenme', ids: ['kazanimlar', 'learn', 'summaries', 'flashcards', 'glossary'] },
   { label: 'Topluluk', ids: ['leaderboard', 'music'] },
+  { label: 'Hesap', ids: ['settings'] },
 ];
 const BY_ID = Object.fromEntries(RAIL.map((r) => [r.id, r])) as Record<string, (typeof RAIL)[number]>;
 

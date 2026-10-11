@@ -1,4 +1,5 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect, useMemo, useRef } from 'react';
+import { confirmText } from '../ui/ConfirmDialog';
 import {
   Brain,
   Sparkles,
@@ -18,10 +19,20 @@ import {
   Copy,
   ExternalLink,
   ChevronRight,
+  ChevronLeft,
+  Eye,
+  Code,
+  AlertTriangle,
+  ArrowLeftRight,
+  Check,
+  FolderOpen,
   X,
-  Plus
+  Plus,
+  Table,
+  GraduationCap
 } from 'lucide-react';
 import { toast } from '../ui/Toast';
+import { FlatfileDataOnboarding } from './FlatfileDataOnboarding';
 
 export interface NotebookLMItem {
   id: string;
@@ -39,14 +50,117 @@ export interface NotebookLMItem {
 }
 
 const TYPE_LABELS: Record<string, { label: string; color: string; icon: React.ElementType }> = {
-  past_question_correction: { label: 'Çıkmış Soru Düzeltmesi', color: 'bg-amber-500/10 text-amber-500 border-amber-500/20', icon: CheckCircle2 },
-  interactive_deck: { label: 'İnteraktif Öğrenme Destesi', color: 'bg-purple-500/10 text-purple-500 border-purple-500/20', icon: Layers },
-  spot_pearls: { label: 'Spot Bilgiler & Özet', color: 'bg-blue-500/10 text-blue-500 border-blue-500/20', icon: Sparkles },
-  practice_questions: { label: 'Örnek Sorular', color: 'bg-emerald-500/10 text-emerald-500 border-emerald-500/20', icon: FileText },
-  glossary_terms: { label: 'Tıbbi Terimler Sözlüğü', color: 'bg-cyan-500/10 text-cyan-500 border-cyan-500/20', icon: Database },
-  flashcards: { label: 'Akıl Kartları (Flashcards)', color: 'bg-rose-500/10 text-rose-500 border-rose-500/20', icon: Brain },
-  raw_json: { label: 'Genel JSON Paketi', color: 'bg-slate-500/10 text-slate-500 border-slate-500/20', icon: FileText },
+  past_question_correction: { label: 'Çıkmış Soru Düzeltmesi', color: 'bg-warn/10 text-warn border-warn/20', icon: CheckCircle2 },
+  interactive_deck: { label: 'İnteraktif Öğrenme Destesi', color: 'bg-ai/10 text-ai border-ai/20', icon: Layers },
+  spot_pearls: { label: 'Spot Bilgiler & Özet', color: 'bg-accent/10 text-accent border-accent/20', icon: Sparkles },
+  practice_questions: { label: 'Örnek Sorular', color: 'bg-ok/10 text-ok border-ok/20', icon: FileText },
+  glossary_terms: { label: 'Tıbbi Terimler Sözlüğü', color: 'bg-accent/10 text-accent border-accent/20', icon: Database },
+  flashcards: { label: 'Akıl Kartları (Flashcards)', color: 'bg-bad/10 text-bad-text border-bad/20', icon: Brain },
+  raw_json: { label: 'Genel JSON Paketi', color: 'bg-ink-3/10 text-ink-3 border-line-2/20', icon: FileText },
 };
+
+function cleanQid(id: any): string {
+  if (!id) return '';
+  return String(id).replace(/^q:/i, '').trim();
+}
+
+function extractQuestionsList(proposedData: any): any[] {
+  if (!proposedData) return [];
+  if (Array.isArray(proposedData)) return proposedData;
+  if (Array.isArray(proposedData.questions)) return proposedData.questions;
+  if (proposedData.stem || proposedData.question) return [proposedData];
+  return [];
+}
+
+function resolveOriginalQuestion(originalSnapshot: any, proposedQ: any, _index: number): any {
+  if (!originalSnapshot || !proposedQ) return null;
+
+  // Single question snapshot
+  if (originalSnapshot.stem && !originalSnapshot.questions) {
+    const rawId = proposedQ.id ? String(proposedQ.id).trim() : '';
+    const cId = cleanQid(rawId);
+    if (cId && originalSnapshot.id && cleanQid(originalSnapshot.id) !== cId) {
+      return null;
+    }
+    return originalSnapshot;
+  }
+
+  const rawId = proposedQ.id ? String(proposedQ.id).trim() : '';
+  const cId = cleanQid(rawId);
+
+  // If dictionary of questions
+  if (typeof originalSnapshot === 'object' && !Array.isArray(originalSnapshot)) {
+    if (cId && originalSnapshot[cId]) return originalSnapshot[cId];
+    if (rawId && originalSnapshot[rawId]) return originalSnapshot[rawId];
+
+    const vals = Object.values(originalSnapshot) as any[];
+    if (cId) {
+      const match = vals.find((q) => q && cleanQid(q.id) === cId);
+      if (match) return match;
+      // If question has an ID that was not found, it is a brand new question!
+      return null;
+    }
+
+    if (proposedQ.questionNumber && proposedQ.kurul) {
+      const match = vals.find(
+        (q) => q && String(q.kurul) === String(proposedQ.kurul) && Number(q.questionNumber) === Number(proposedQ.questionNumber)
+      );
+      if (match) return match;
+    }
+  }
+
+  // If array of questions
+  if (Array.isArray(originalSnapshot)) {
+    if (cId) {
+      const match = originalSnapshot.find((q) => q && cleanQid(q.id) === cId);
+      if (match) return match;
+      // If question has an ID that was not found, it is a brand new question!
+      return null;
+    }
+
+    if (proposedQ.questionNumber && proposedQ.kurul) {
+      const match = originalSnapshot.find(
+        (q) => q && String(q.kurul) === String(proposedQ.kurul) && Number(q.questionNumber) === Number(proposedQ.questionNumber)
+      );
+      if (match) return match;
+    }
+  }
+
+  return null;
+}
+
+function normalizeOptionsList(options: any, correctAnswer?: string): Array<{ key: string; text: string; isCorrect: boolean }> {
+  if (!options) return [];
+  const targetAns = (correctAnswer || '').trim().toUpperCase();
+  const keys = ['A', 'B', 'C', 'D', 'E'];
+
+  if (Array.isArray(options)) {
+    return options.map((opt, idx) => {
+      const fallbackKey = keys[idx] || String(idx + 1);
+      if (typeof opt === 'string') {
+        const match = opt.match(/^\s*([A-Ea-e])[\).\s:-]+(.*)$/);
+        const key = match ? match[1].toUpperCase() : fallbackKey;
+        const text = match ? match[2].trim() : opt.trim();
+        return { key, text, isCorrect: key === targetAns };
+      }
+      const key = String(opt.key || opt.label || fallbackKey).toUpperCase();
+      const text = String(opt.text || opt.content || '');
+      const isCorrect = opt.isCorrect !== undefined ? Boolean(opt.isCorrect) : key === targetAns;
+      return { key, text, isCorrect };
+    });
+  }
+
+  if (typeof options === 'object') {
+    return keys
+      .filter((k) => options[k] !== undefined || options[k.toLowerCase()] !== undefined)
+      .map((k) => {
+        const text = String(options[k] ?? options[k.toLowerCase()] ?? '');
+        return { key: k, text, isCorrect: k === targetAns };
+      });
+  }
+
+  return [];
+}
 
 export const ManageNotebookLMSection: React.FC = () => {
   const [items, setItems] = useState<NotebookLMItem[]>([]);
@@ -56,15 +170,120 @@ export const ManageNotebookLMSection: React.FC = () => {
 
   // Upload & Editor state
   const [showUploadModal, setShowUploadModal] = useState(false);
+  const [showOnboardingModal, setShowOnboardingModal] = useState(false);
   const [inputTitle, setInputTitle] = useState('');
   const [inputText, setInputText] = useState('');
   const [inputNotes, setInputNotes] = useState('');
   const [submitting, setSubmitting] = useState(false);
+  const [uploadedFileName, setUploadedFileName] = useState<string>('');
+  const [uploadedFileSize, setUploadedFileSize] = useState<string>('');
+  const [isDragging, setIsDragging] = useState(false);
+  const fileInputRef = useRef<HTMLInputElement>(null);
+
+  const handleOnboardingComplete = async (
+    questions: any[],
+    meta: { title: string; count: number; validCount: number }
+  ) => {
+    try {
+      const res = await fetch('/api/notebooklm/manage/stage', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          payload: {
+            type: 'past_question_correction',
+            questions
+          },
+          title: meta.title,
+          notes: `Flatfile Data Onboarding ile yüklendi (${meta.validCount} geçerli soru)`
+        })
+      });
+      const data = await res.json();
+      if (data.success) {
+        toast.success(data.message || `${questions.length} soru Flatfile ile başarıyla aktarıldı.`);
+        setShowOnboardingModal(false);
+        await fetchItems();
+      } else {
+        toast.error(data.message || 'Onboarding aktarımı başarısız.');
+      }
+    } catch (err: any) {
+      toast.error('Bağlantı hatası: ' + err.message);
+    }
+  };
 
   // Compare & Edit modal state
   const [selectedItemForDiff, setSelectedItemForDiff] = useState<NotebookLMItem | null>(null);
+  const [diffIndex, setDiffIndex] = useState(0);
+  const [diffMode, setDiffMode] = useState<'ui' | 'json'>('ui');
   const [editingItem, setEditingItem] = useState<NotebookLMItem | null>(null);
   const [editJsonText, setEditJsonText] = useState('');
+
+  const handleFileProcess = (file: File) => {
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = (e) => {
+      const content = (e.target?.result as string) || '';
+      setInputText(content);
+      setUploadedFileName(file.name);
+      const sizeKB = (file.size / 1024).toFixed(1);
+      setUploadedFileSize(`${sizeKB} KB`);
+
+      if (!inputTitle.trim()) {
+        const cleanName = file.name
+          .replace(/\.[^/.]+$/, '')
+          .replace(/[_-]/g, ' ')
+          .replace(/\b\w/g, (c) => c.toUpperCase());
+        setInputTitle(cleanName);
+      }
+      toast.success(`"${file.name}" yüklendi (${sizeKB} KB).`);
+    };
+    reader.onerror = () => {
+      toast.error('Dosya okunamadı!');
+    };
+    reader.readAsText(file, 'UTF-8');
+  };
+
+  const handleFileInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (file) {
+      handleFileProcess(file);
+    }
+  };
+
+  const handleDragOver = (e: React.DragEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setIsDragging(true);
+  };
+
+  const handleDragLeave = (e: React.DragEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setIsDragging(false);
+  };
+
+  const handleDrop = (e: React.DragEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setIsDragging(false);
+    const file = e.dataTransfer.files?.[0];
+    if (file) {
+      handleFileProcess(file);
+    }
+  };
+
+  const handleClearFile = () => {
+    setUploadedFileName('');
+    setUploadedFileSize('');
+    if (fileInputRef.current) {
+      fileInputRef.current.value = '';
+    }
+  };
+
+  const openDiff = (item: NotebookLMItem) => {
+    setSelectedItemForDiff(item);
+    setDiffIndex(0);
+    setDiffMode('ui');
+  };
 
   const fetchItems = async () => {
     setLoading(true);
@@ -91,14 +310,49 @@ export const ManageNotebookLMSection: React.FC = () => {
       const codeMatch = raw.match(/```(?:json)?\s*([\s\S]*?)\s*```/);
       if (codeMatch) raw = codeMatch[1];
       const parsed = JSON.parse(raw);
-      const type = parsed.type || (Array.isArray(parsed) && parsed[0]?.stem ? 'past_question_correction' : 'raw_json');
+
+      let type = parsed.type;
+      if (!type) {
+        if (Array.isArray(parsed)) {
+          if (parsed.length > 0 && (parsed[0].stem || parsed[0].question || parsed[0].options || parsed[0].reconstruction)) {
+            type = 'past_question_correction';
+          } else if (parsed.length > 0 && parsed[0].front && parsed[0].back) {
+            type = 'flashcards';
+          } else if (parsed.length > 0 && parsed[0].term && parsed[0].definition) {
+            type = 'glossary_terms';
+          }
+        } else if (typeof parsed === 'object' && parsed !== null) {
+          if (parsed.questions || parsed.corrections || parsed.stem || parsed.reconstruction || (parsed.options && Array.isArray(parsed.options))) {
+            type = 'past_question_correction';
+          } else if (parsed.slides || parsed.deckId || parsed.deck) {
+            type = 'interactive_deck';
+          } else if (parsed.keyPoints || parsed.highYieldPearls) {
+            type = 'spot_pearls';
+          } else if (parsed.terms || parsed.thesaurus) {
+            type = 'glossary_terms';
+          } else if (parsed.cards) {
+            type = 'flashcards';
+          }
+        }
+      }
+      type = type || 'raw_json';
+
+      let count = 1;
+      if (Array.isArray(parsed)) count = parsed.length;
+      else if (Array.isArray(parsed.questions)) count = parsed.questions.length;
+      else if (Array.isArray(parsed.slides)) count = parsed.slides.length;
+      else if (parsed.deck && Array.isArray(parsed.deck.slides)) count = parsed.deck.slides.length;
+      else if (Array.isArray(parsed.terms)) count = parsed.terms.length;
+      else if (Array.isArray(parsed.cards)) count = parsed.cards.length;
+      else if (Array.isArray(parsed.keyPoints)) count = parsed.keyPoints.length;
+
       return {
         type,
         valid: true,
-        count: Array.isArray(parsed) ? parsed.length : Array.isArray(parsed.questions) ? parsed.questions.length : 1
+        count
       };
     } catch {
-      return { valid: false, count: 0 };
+      return { valid: false, count: 0, type: 'error' };
     }
   }, [inputText]);
 
@@ -126,6 +380,9 @@ export const ManageNotebookLMSection: React.FC = () => {
         setInputText('');
         setInputTitle('');
         setInputNotes('');
+        setUploadedFileName('');
+        setUploadedFileSize('');
+        if (fileInputRef.current) fileInputRef.current.value = '';
         await fetchItems();
       } else {
         toast.error(data.message || 'Yükleme başarısız.');
@@ -171,7 +428,7 @@ export const ManageNotebookLMSection: React.FC = () => {
 
   // Delete contribution
   const handleDelete = async (item: NotebookLMItem) => {
-    if (!window.confirm(`"${item.title}" kaydını silmek istediğinize emin misiniz?`)) return;
+    if (!(await confirmText(`"${item.title}" kaydını silmek istediğinize emin misiniz?`))) return;
     try {
       const res = await fetch(`/api/notebooklm/manage/contribution/${item.id}`, { method: 'DELETE' });
       const data = await res.json();
@@ -266,18 +523,30 @@ export const ManageNotebookLMSection: React.FC = () => {
           </button>
           <button
             type="button"
+            onClick={() => setShowOnboardingModal(true)}
+            className="ms-btn is-sm is-secondary flex items-center gap-2 text-xs shadow-xs"
+            title="Flatfile tarzı kolon eşleme ve tablosal doğrulama ile içe aktar"
+          >
+            <Table className="w-3.5 h-3.5 text-primary" />
+            <span>Flatfile Data Onboarding</span>
+            <span className="text-2xs px-1.5 py-0.2 rounded-full bg-ok/10 text-ok font-extrabold">
+              YENİ
+            </span>
+          </button>
+          <button
+            type="button"
             onClick={() => setShowUploadModal(true)}
             className="ms-btn is-primary flex items-center gap-2 text-sm shadow-sm"
           >
             <Plus className="w-4 h-4" />
-            Yeni JSON / Dosya Yükle
+            Hızlı JSON Yükle
           </button>
         </div>
       </div>
 
       {/* Peace of Mind Callout */}
-      <div className="flex items-start gap-3 p-4 bg-emerald-500/5 border border-emerald-500/20 rounded-xl text-xs text-emerald-800 dark:text-emerald-300">
-        <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+      <div className="flex items-start gap-3 p-4 bg-ok/5 border border-ok/20 rounded-xl text-xs text-ok dark:text-emerald-300">
+        <CheckCircle2 className="w-4 h-4 text-ok shrink-0 mt-0.5" />
         <div>
           <strong className="font-semibold">Sıfır Çakışma ve Güvenli Alternatif Garantisi:</strong> Yüklediğiniz hiçbir dosya veya JSON mevcut veritabanınızın üzerine doğrudan yazılmaz. İlk aşamada <em>"Alternatif"</em> olarak depolanır; siz yan yana inceleyip <em>"Tercih Et"</em> butonuna basana kadar ana sistem korunur. Dilediğiniz an tek tıkla orijinal veriye geri dönebilirsiniz.
         </div>
@@ -290,16 +559,16 @@ export const ManageNotebookLMSection: React.FC = () => {
           <span className="text-xl font-bold text-ink">{stats.total}</span>
         </div>
         <div className="p-3.5 bg-card border border-border rounded-xl flex flex-col gap-0.5">
-          <span className="text-xs text-emerald-600 font-medium">Tercih Edilen (Aktif)</span>
-          <span className="text-xl font-bold text-emerald-600">{stats.active}</span>
+          <span className="text-xs text-ok font-medium">Tercih Edilen (Aktif)</span>
+          <span className="text-xl font-bold text-ok">{stats.active}</span>
         </div>
         <div className="p-3.5 bg-card border border-border rounded-xl flex flex-col gap-0.5">
-          <span className="text-xs text-amber-600 font-medium">Bekleyen Alternatif</span>
-          <span className="text-xl font-bold text-amber-600">{stats.alternative}</span>
+          <span className="text-xs text-warn font-medium">Bekleyen Alternatif</span>
+          <span className="text-xl font-bold text-warn">{stats.alternative}</span>
         </div>
         <div className="p-3.5 bg-card border border-border rounded-xl flex flex-col gap-0.5">
-          <span className="text-xs text-blue-600 font-medium">RAG'e Entegre</span>
-          <span className="text-xl font-bold text-blue-600">{stats.rag}</span>
+          <span className="text-xs text-accent font-medium">RAG'e Entegre</span>
+          <span className="text-xl font-bold text-accent">{stats.rag}</span>
         </div>
       </div>
 
@@ -316,14 +585,14 @@ export const ManageNotebookLMSection: React.FC = () => {
           <button
             type="button"
             onClick={() => setActiveTab('active')}
-            className={`px-3 py-1.5 rounded-md font-medium transition ${activeTab === 'active' ? 'bg-card text-emerald-600 shadow-xs' : 'text-ink-3 hover:text-ink'}`}
+            className={`px-3 py-1.5 rounded-md font-medium transition ${activeTab === 'active' ? 'bg-card text-ok shadow-xs' : 'text-ink-3 hover:text-ink'}`}
           >
             🟢 Aktifler ({stats.active})
           </button>
           <button
             type="button"
             onClick={() => setActiveTab('alternative')}
-            className={`px-3 py-1.5 rounded-md font-medium transition ${activeTab === 'alternative' ? 'bg-card text-amber-600 shadow-xs' : 'text-ink-3 hover:text-ink'}`}
+            className={`px-3 py-1.5 rounded-md font-medium transition ${activeTab === 'alternative' ? 'bg-card text-warn shadow-xs' : 'text-ink-3 hover:text-ink'}`}
           >
             🟡 Alternatifler ({stats.alternative})
           </button>
@@ -389,7 +658,7 @@ export const ManageNotebookLMSection: React.FC = () => {
               <div
                 key={item.id}
                 className={`p-4 bg-card border rounded-xl transition flex flex-col gap-3 ${
-                  isActive ? 'border-emerald-500/40 shadow-xs' : 'border-border'
+                  isActive ? 'border-ok/40 shadow-xs' : 'border-border'
                 }`}
               >
                 <div className="flex flex-wrap items-start justify-between gap-3">
@@ -400,26 +669,26 @@ export const ManageNotebookLMSection: React.FC = () => {
                     <div>
                       <div className="flex flex-wrap items-center gap-2">
                         <h4 className="text-sm font-bold text-ink">{item.title}</h4>
-                        <span className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-[11px] font-medium border ${typeConfig.color}`}>
+                        <span className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-2xs font-medium border ${typeConfig.color}`}>
                           {typeConfig.label}
                         </span>
                         {isActive ? (
-                          <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-[11px] font-semibold bg-emerald-500/10 text-emerald-600 border border-emerald-500/30">
+                          <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-2xs font-semibold bg-ok/10 text-ok border border-ok/30">
                             🟢 Tercih Edilen (Aktif)
                           </span>
                         ) : (
-                          <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-[11px] font-semibold bg-amber-500/10 text-amber-600 border border-amber-500/30">
+                          <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-2xs font-semibold bg-warn/10 text-warn border border-warn/30">
                             🟡 Alternatif (Beklemede)
                           </span>
                         )}
                         {item.ragOptimized && (
-                          <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-[11px] font-semibold bg-blue-500/10 text-blue-600 border border-blue-500/30">
+                          <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-2xs font-semibold bg-accent/10 text-accent border border-accent/30">
                             RAG Aktif
                           </span>
                         )}
                       </div>
 
-                      <div className="flex flex-wrap items-center gap-3 text-[12px] text-ink-3 mt-1.5">
+                      <div className="flex flex-wrap items-center gap-3 text-xs text-ink-3 mt-1.5">
                         {item.targetId && (
                           <span>Hedef ID: <code className="bg-surface-2 px-1 rounded">{item.targetId}</code></span>
                         )}
@@ -433,16 +702,14 @@ export const ManageNotebookLMSection: React.FC = () => {
 
                   {/* Actions */}
                   <div className="flex items-center gap-2">
-                    {item.originalSnapshot && (
-                      <button
-                        type="button"
-                        onClick={() => setSelectedItemForDiff(item)}
-                        className="ms-btn is-sm is-ghost text-xs flex items-center gap-1"
-                      >
-                        <GitCompare className="w-3.5 h-3.5 text-blue-500" />
-                        Karşılaştır
-                      </button>
-                    )}
+                    <button
+                      type="button"
+                      onClick={() => openDiff(item)}
+                      className="ms-btn is-sm is-ghost text-xs flex items-center gap-1"
+                    >
+                      <GitCompare className="w-3.5 h-3.5 text-accent" />
+                      Karşılaştır / İncele
+                    </button>
 
                     <button
                       type="button"
@@ -461,7 +728,7 @@ export const ManageNotebookLMSection: React.FC = () => {
                       <button
                         type="button"
                         onClick={() => handleDeactivate(item)}
-                        className="ms-btn is-sm is-outline text-xs text-amber-600 border-amber-500/30 hover:bg-amber-500/10"
+                        className="ms-btn is-sm is-outline text-xs text-warn border-warn/30 hover:bg-warn/10"
                         title="Orijinal veriye geri dön"
                       >
                         Orijinal Veriye Dön
@@ -470,7 +737,7 @@ export const ManageNotebookLMSection: React.FC = () => {
                       <button
                         type="button"
                         onClick={() => handleActivate(item)}
-                        className="ms-btn is-sm is-primary text-xs bg-emerald-600 hover:bg-emerald-700"
+                        className="ms-btn is-sm is-primary text-xs bg-ok hover:bg-ok"
                         title="Bu alternatifi sisteme uygula"
                       >
                         Tercih Et (Uygula)
@@ -480,7 +747,7 @@ export const ManageNotebookLMSection: React.FC = () => {
                     <button
                       type="button"
                       onClick={() => handleDelete(item)}
-                      className="ms-btn is-sm is-ghost text-xs text-red-500 hover:bg-red-500/10"
+                      className="ms-btn is-sm is-ghost text-xs text-bad-text hover:bg-bad/10"
                       title="Kaydı sil"
                     >
                       <Trash2 className="w-3.5 h-3.5" />
@@ -515,15 +782,100 @@ export const ManageNotebookLMSection: React.FC = () => {
               <div className="p-3 bg-primary/5 border border-primary/20 rounded-xl text-xs text-primary flex items-start gap-2">
                 <Sparkles className="w-4 h-4 shrink-0 mt-0.5" />
                 <div>
-                  NotebookLM'den kopyaladığınız JSON veya Markdown kod bloğunu aşağıya yapıştırın ya da dosya yükleyin. Sistem veriyi otomatik tanıyacak ve güvenli bir <strong>alternatif</strong> olarak kaydedecektir.
+                  NotebookLM'den aldığınız <strong>.json</strong>, <strong>.md</strong> veya <strong>.txt</strong> dosyasını doğrudan seçebilir veya içeriğini kopyalayıp yapıştırabilirsiniz. Sistem veriyi otomatik tanıyacak ve güvenli bir <strong>alternatif</strong> olarak kaydedecektir.
                 </div>
               </div>
+
+              {/* Hidden file input */}
+              <input
+                ref={fileInputRef}
+                type="file"
+                accept=".json,.md,.txt,.jsonl,application/json,text/plain,text/markdown"
+                onChange={handleFileInputChange}
+                className="hidden"
+              />
+
+              {/* File Upload Dropzone / Loaded File Banner */}
+              {uploadedFileName ? (
+                <div className="flex items-center justify-between p-3.5 bg-ok/10 border border-ok/25 rounded-xl transition-all">
+                  <div className="flex items-center gap-3 min-w-0">
+                    <div className="p-2.5 rounded-lg bg-ok/20 text-ok dark:text-emerald-400 shrink-0">
+                      <FileText className="w-5 h-5" />
+                    </div>
+                    <div className="min-w-0">
+                      <div className="text-xs font-semibold text-ok dark:text-emerald-100 truncate flex items-center gap-1.5">
+                        <span>{uploadedFileName}</span>
+                        <span className="text-2xs px-1.5 py-0.5 rounded bg-ok/20 text-ok dark:text-emerald-300 font-mono">
+                          {uploadedFileSize}
+                        </span>
+                      </div>
+                      <div className="text-2xs text-ok dark:text-emerald-400 mt-0.5">
+                        Dosya içeriği başarıyla okundu ve aşağıdaki metin alanına aktarıldı.
+                      </div>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-2 shrink-0">
+                    <button
+                      type="button"
+                      onClick={() => fileInputRef.current?.click()}
+                      className="ms-btn is-xs is-secondary text-xs flex items-center gap-1"
+                    >
+                      <FolderOpen className="w-3.5 h-3.5" />
+                      Farklı Dosya Seç
+                    </button>
+                    <button
+                      type="button"
+                      onClick={handleClearFile}
+                      className="p-1.5 rounded-md text-ink-3 hover:text-bad-text hover:bg-bad/10 transition-colors"
+                      title="Dosya seçimini temizle"
+                    >
+                      <X className="w-4 h-4" />
+                    </button>
+                  </div>
+                </div>
+              ) : (
+                <div
+                  onDragOver={handleDragOver}
+                  onDragLeave={handleDragLeave}
+                  onDrop={handleDrop}
+                  onClick={() => fileInputRef.current?.click()}
+                  className={`border-2 border-dashed rounded-xl p-5 text-center cursor-pointer transition-all flex flex-col items-center justify-center gap-2 group ${
+                    isDragging
+                      ? 'border-primary bg-primary/10 scale-[0.99]'
+                      : 'border-border hover:border-primary/60 hover:bg-surface-2/60 bg-surface-1/40'
+                  }`}
+                >
+                  <div className="p-3 rounded-full bg-primary/10 text-primary group-hover:scale-110 transition-transform">
+                    <FolderOpen className="w-6 h-6" />
+                  </div>
+                  <div className="flex flex-col items-center gap-1">
+                    <div className="text-xs font-semibold text-ink group-hover:text-primary transition-colors flex items-center gap-1.5">
+                      <span>Bilgisayarınızdan Dosya Seçin</span>
+                      <span className="text-ink-3 font-normal">veya buraya sürükleyip bırakın</span>
+                    </div>
+                    <div className="text-2xs text-ink-3">
+                      Desteklenen: <strong className="text-ink font-medium">.json</strong>, <strong className="text-ink font-medium">.md</strong>, <strong className="text-ink font-medium">.txt</strong>, <strong className="text-ink font-medium">.jsonl</strong> (Maks: 50MB)
+                    </div>
+                  </div>
+                  <button
+                    type="button"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      fileInputRef.current?.click();
+                    }}
+                    className="ms-btn is-xs is-secondary text-xs mt-1 pointer-events-none"
+                  >
+                    <Upload className="w-3 h-3" />
+                    Dosya Seç
+                  </button>
+                </div>
+              )}
 
               <div>
                 <label className="text-xs font-semibold text-ink block mb-1">Başlık (İsteğe Bağlı)</label>
                 <input
                   type="text"
-                  placeholder="Örn: Kurul 1 Patoloji Soru Düzeltmeleri"
+                  placeholder="Örn: Kurul 1 Patoloji Soru Düzeltmeleri (Boş bırakılırsa dosya adı kullanılır)"
                   value={inputTitle}
                   onChange={(e) => setInputTitle(e.target.value)}
                   className="ms-input text-xs w-full"
@@ -534,8 +886,8 @@ export const ManageNotebookLMSection: React.FC = () => {
                 <div className="flex items-center justify-between mb-1">
                   <label className="text-xs font-semibold text-ink">JSON veya Markdown Metni</label>
                   {detectedFormat && (
-                    <span className={`text-[11px] px-2 py-0.5 rounded font-medium ${detectedFormat.valid ? 'bg-emerald-500/10 text-emerald-600' : 'bg-rose-500/10 text-rose-600'}`}>
-                      {detectedFormat.valid ? `✓ Algılandı: ${detectedFormat.type} (${detectedFormat.count} öge)` : 'JSON hatası'}
+                    <span className={`text-2xs px-2 py-0.5 rounded font-medium ${detectedFormat.valid ? 'bg-ok/10 text-ok' : 'bg-bad/10 text-bad-text'}`}>
+                      {detectedFormat.valid ? `✓ Algılandı: ${TYPE_LABELS[detectedFormat.type]?.label || detectedFormat.type} (${detectedFormat.count} öge)` : 'Geçersiz JSON formatı'}
                     </span>
                   )}
                 </div>
@@ -557,6 +909,22 @@ export const ManageNotebookLMSection: React.FC = () => {
                   onChange={(e) => setInputNotes(e.target.value)}
                   className="ms-input text-xs w-full"
                 />
+              </div>
+
+              {/* Shortcut to Flatfile Data Onboarding */}
+              <div className="flex items-center justify-between p-3 bg-surface-2/80 rounded-xl border border-border text-xs">
+                <span className="text-ink-3">Kolon eşleme ve tablosal doğrulama mı istiyorsunuz?</span>
+                <button
+                  type="button"
+                  onClick={() => {
+                    setShowUploadModal(false);
+                    setShowOnboardingModal(true);
+                  }}
+                  className="text-primary hover:underline font-bold flex items-center gap-1.5 cursor-pointer"
+                >
+                  <Table className="w-3.5 h-3.5" />
+                  Flatfile Onboarding Sihirbazını Aç
+                </button>
               </div>
             </div>
 
@@ -582,88 +950,598 @@ export const ManageNotebookLMSection: React.FC = () => {
         </div>
       )}
 
-      {/* Side-by-Side Diff Modal */}
-      {selectedItemForDiff && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-xs">
-          <div className="bg-card border border-border rounded-2xl w-full max-w-4xl max-h-[90vh] flex flex-col shadow-2xl overflow-hidden">
-            <div className="flex items-center justify-between p-4 border-b border-border bg-surface-1">
-              <div className="flex items-center gap-2">
-                <GitCompare className="w-5 h-5 text-blue-500" />
-                <h3 className="text-base font-bold text-ink">Yan Yana Karşılaştırma: {selectedItemForDiff.title}</h3>
-              </div>
-              <button
-                type="button"
-                onClick={() => setSelectedItemForDiff(null)}
-                className="p-1 rounded-lg text-ink-3 hover:text-ink"
-              >
-                <X className="w-5 h-5" />
-              </button>
-            </div>
-
-            <div className="p-4 grid grid-cols-1 md:grid-cols-2 gap-4 overflow-y-auto max-h-[70vh]">
-              {/* Left: Original snapshot */}
-              <div className="flex flex-col gap-2">
-                <div className="flex items-center justify-between text-xs font-bold text-ink-2 pb-1 border-b border-border">
-                  <span>Mevcut Sistem Verisi (Orijinal)</span>
-                  <span className="text-[10px] px-2 py-0.5 rounded bg-surface-2">Mevcut DB</span>
-                </div>
-                <pre className="p-3 bg-surface-2 rounded-lg text-[11.5px] font-mono overflow-x-auto text-ink-2 max-h-[500px]">
-                  {JSON.stringify(selectedItemForDiff.originalSnapshot, null, 2)}
-                </pre>
-              </div>
-
-              {/* Right: Proposed alternative */}
-              <div className="flex flex-col gap-2">
-                <div className="flex items-center justify-between text-xs font-bold text-primary pb-1 border-b border-primary/20">
-                  <span>NotebookLM Önerisi (Alternatif)</span>
-                  <span className="text-[10px] px-2 py-0.5 rounded bg-primary/10 text-primary">NotebookLM</span>
-                </div>
-                <pre className="p-3 bg-primary/5 border border-primary/20 rounded-lg text-[11.5px] font-mono overflow-x-auto text-ink max-h-[500px]">
-                  {JSON.stringify(selectedItemForDiff.proposedData, null, 2)}
-                </pre>
-              </div>
-            </div>
-
-            <div className="flex items-center justify-between p-4 border-t border-border bg-surface-1">
-              <span className="text-xs text-ink-3">
-                {selectedItemForDiff.status === 'active' ? '🟢 Bu alternatif şu anda sistemde aktiftir.' : '🟡 Bu alternatif henüz aktif edilmemiştir.'}
-              </span>
-              <div className="flex items-center gap-2">
-                <button
-                  type="button"
-                  onClick={() => setSelectedItemForDiff(null)}
-                  className="ms-btn is-sm is-ghost text-xs"
-                >
-                  Kapat
-                </button>
-                {selectedItemForDiff.status === 'active' ? (
-                  <button
-                    type="button"
-                    onClick={() => {
-                      handleDeactivate(selectedItemForDiff);
-                      setSelectedItemForDiff(null);
-                    }}
-                    className="ms-btn is-sm is-outline text-xs text-amber-600"
-                  >
-                    Orijinal Veriye Geri Dön
-                  </button>
-                ) : (
-                  <button
-                    type="button"
-                    onClick={() => {
-                      handleActivate(selectedItemForDiff);
-                      setSelectedItemForDiff(null);
-                    }}
-                    className="ms-btn is-sm is-primary text-xs bg-emerald-600 hover:bg-emerald-700"
-                  >
-                    Bu Alternatifi Tercih Et (Sisteme Uygula)
-                  </button>
-                )}
-              </div>
-            </div>
+      {/* Flatfile Data Onboarding Full Modal */}
+      {showOnboardingModal && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/75 backdrop-blur-xs">
+          <div className="w-full max-w-6xl max-h-[94vh] h-[850px] flex flex-col">
+            <FlatfileDataOnboarding
+              targetMode="notebooklm_alternative"
+              onComplete={handleOnboardingComplete}
+              onCancel={() => setShowOnboardingModal(false)}
+            />
           </div>
         </div>
       )}
+
+      {/* Side-by-Side Visual UI Diff Modal */}
+      {selectedItemForDiff && (() => {
+        const isQuestionType =
+          selectedItemForDiff.type === 'past_question_correction' ||
+          Boolean(selectedItemForDiff.proposedData?.questions || selectedItemForDiff.proposedData?.stem);
+
+        const qList = extractQuestionsList(selectedItemForDiff.proposedData);
+        const safeIndex = Math.min(Math.max(0, diffIndex), Math.max(0, qList.length - 1));
+        const propQ = qList[safeIndex] || qList[0];
+        const origQ = resolveOriginalQuestion(selectedItemForDiff.originalSnapshot, propQ, safeIndex);
+
+        const propOpts = normalizeOptionsList(propQ?.options, propQ?.correctAnswer);
+        const origOpts = normalizeOptionsList(
+          origQ?.options || origQ?.reconstruction?.options,
+          origQ?.correctAnswer || origQ?.reconstruction?.correctAnswer
+        );
+
+        const answerChanged =
+          origQ &&
+          propQ &&
+          origQ.correctAnswer &&
+          propQ.correctAnswer &&
+          String(origQ.correctAnswer).toUpperCase() !== String(propQ.correctAnswer).toUpperCase();
+
+        return (
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/70 backdrop-blur-xs">
+            <div className="bg-card border border-border rounded-2xl w-full max-w-6xl max-h-[92vh] flex flex-col shadow-2xl overflow-hidden">
+              {/* Modal Header */}
+              <div className="flex flex-wrap items-center justify-between p-3.5 sm:p-4 border-b border-border bg-surface-1 gap-2">
+                <div className="flex items-center gap-2">
+                  <GitCompare className="w-5 h-5 text-accent shrink-0" />
+                  <div>
+                    <h3 className="text-sm sm:text-base font-bold text-ink flex items-center gap-2">
+                      Görsel Karşılaştırma: {selectedItemForDiff.title}
+                    </h3>
+                    <div className="flex flex-wrap items-center gap-1.5 mt-0.5">
+                      <p className="text-2xs text-ink-3">
+                        {isQuestionType
+                          ? `Toplam ${qList.length} soru önerisi • Birebir karşılıklı soru incelemesi`
+                          : 'Veri paketi görsel incelemesi'}
+                      </p>
+                      {selectedItemForDiff.proposedData?.batch !== undefined && (
+                        <span className="text-2xs font-semibold px-2 py-0.5 rounded-full bg-accent/10 text-accent border border-accent/20">
+                          Batch {selectedItemForDiff.proposedData.batch}
+                        </span>
+                      )}
+                      {selectedItemForDiff.proposedData?.questionRange && (
+                        <span className="text-2xs font-semibold px-2 py-0.5 rounded-full bg-ai/10 text-ai border border-ai/20">
+                          Sorular: {selectedItemForDiff.proposedData.questionRange}
+                        </span>
+                      )}
+                    </div>
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-2">
+                  {/* Mode switcher: UI vs JSON */}
+                  <div className="flex items-center p-0.5 bg-surface-2 rounded-lg border border-border text-2xs">
+                    <button
+                      type="button"
+                      onClick={() => setDiffMode('ui')}
+                      className={`flex items-center gap-1 px-2.5 py-1 rounded-md font-medium transition ${
+                        diffMode === 'ui' ? 'bg-card text-ink shadow-xs' : 'text-ink-3 hover:text-ink'
+                      }`}
+                    >
+                      <Eye className="w-3.5 h-3.5" />
+                      Görsel UI
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => setDiffMode('json')}
+                      className={`flex items-center gap-1 px-2.5 py-1 rounded-md font-medium transition ${
+                        diffMode === 'json' ? 'bg-card text-ink shadow-xs' : 'text-ink-3 hover:text-ink'
+                      }`}
+                    >
+                      <Code className="w-3.5 h-3.5" />
+                      Ham JSON
+                    </button>
+                  </div>
+
+                  <button
+                    type="button"
+                    onClick={() => setSelectedItemForDiff(null)}
+                    className="p-1.5 rounded-lg text-ink-3 hover:text-ink hover:bg-surface-2 transition"
+                  >
+                    <X className="w-5 h-5" />
+                  </button>
+                </div>
+              </div>
+
+              {/* Multi-Question Navigator Bar (when more than 1 question) */}
+              {isQuestionType && qList.length > 1 && diffMode === 'ui' && (
+                <div className="flex flex-wrap items-center justify-between px-4 py-2 border-b border-border bg-surface-2/60 gap-2">
+                  <div className="flex items-center gap-2">
+                    <button
+                      type="button"
+                      disabled={safeIndex <= 0}
+                      onClick={() => setDiffIndex((prev) => Math.max(0, prev - 1))}
+                      className="ms-btn is-sm is-ghost text-xs disabled:opacity-30 flex items-center gap-1"
+                    >
+                      <ChevronLeft className="w-4 h-4" /> Önceki Soru
+                    </button>
+
+                    <span className="text-xs font-bold text-ink px-2 py-0.5 bg-card border rounded-md">
+                      Soru {safeIndex + 1} / {qList.length}
+                    </span>
+
+                    <button
+                      type="button"
+                      disabled={safeIndex >= qList.length - 1}
+                      onClick={() => setDiffIndex((prev) => Math.min(qList.length - 1, prev + 1))}
+                      className="ms-btn is-sm is-ghost text-xs disabled:opacity-30 flex items-center gap-1"
+                    >
+                      Sonraki Soru <ChevronRight className="w-4 h-4" />
+                    </button>
+                  </div>
+
+                  {/* Quick Jump Pills */}
+                  <div className="flex items-center gap-1 overflow-x-auto max-w-full py-1">
+                    {qList.map((q, idx) => {
+                      const oq = resolveOriginalQuestion(selectedItemForDiff.originalSnapshot, q, idx);
+                      const isChg =
+                        oq &&
+                        q &&
+                        oq.correctAnswer &&
+                        q.correctAnswer &&
+                        String(oq.correctAnswer).toUpperCase() !== String(q.correctAnswer).toUpperCase();
+                      const isNew = !oq;
+                      const isCur = idx === safeIndex;
+                      return (
+                        <button
+                          key={idx}
+                          type="button"
+                          onClick={() => setDiffIndex(idx)}
+                          className={`px-2 py-0.5 text-2xs rounded-md font-mono font-medium transition shrink-0 relative ${
+                            isCur
+                              ? 'bg-primary text-white font-bold'
+                              : isNew
+                                ? 'bg-ok/10 border border-ok/30 text-ok dark:text-emerald-300'
+                                : 'bg-card border border-border text-ink hover:border-primary/40'
+                          }`}
+                          title={`Soru ${idx + 1} (${isNew ? 'Yeni Eklenecek Soru' : q.id || 'Mevcut'})`}
+                        >
+                          #{idx + 1}
+                          {isChg && (
+                            <span
+                              className="absolute -top-0.5 -right-0.5 w-1.5 h-1.5 rounded-full bg-warn"
+                              title="Cevap değişikliği var"
+                            />
+                          )}
+                          {isNew && !isCur && (
+                            <span
+                              className="absolute -top-0.5 -right-0.5 w-1.5 h-1.5 rounded-full bg-ok"
+                              title="Yeni soru kaydı"
+                            />
+                          )}
+                        </button>
+                      );
+                    })}
+                  </div>
+                </div>
+              )}
+
+              {/* Modal Body */}
+              <div className="p-3.5 sm:p-4 overflow-y-auto max-h-[72vh] flex-1">
+                {diffMode === 'json' ? (
+                  /* Raw JSON Diff Mode */
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div className="flex flex-col gap-2">
+                      <div className="flex items-center justify-between text-xs font-bold text-ink-2 pb-1 border-b border-border">
+                        <span>Mevcut Sistem Verisi (Orijinal)</span>
+                        <span className="text-2xs px-2 py-0.5 rounded bg-surface-2">Mevcut DB</span>
+                      </div>
+                      <pre className="p-3 bg-surface-2 rounded-lg text-2xs font-mono overflow-x-auto text-ink-2 max-h-[500px]">
+                        {JSON.stringify(selectedItemForDiff.originalSnapshot, null, 2) || 'Kayıt bulunamadı'}
+                      </pre>
+                    </div>
+
+                    <div className="flex flex-col gap-2">
+                      <div className="flex items-center justify-between text-xs font-bold text-primary pb-1 border-b border-primary/20">
+                        <span>NotebookLM Önerisi (Alternatif)</span>
+                        <span className="text-2xs px-2 py-0.5 rounded bg-primary/10 text-primary">NotebookLM</span>
+                      </div>
+                      <pre className="p-3 bg-primary/5 border border-primary/20 rounded-lg text-2xs font-mono overflow-x-auto text-ink max-h-[500px]">
+                        {JSON.stringify(selectedItemForDiff.proposedData, null, 2)}
+                      </pre>
+                    </div>
+                  </div>
+                ) : isQuestionType && propQ ? (
+                  /* Visual UI Question Comparison Mode */
+                  <div className="flex flex-col gap-3">
+                    {/* Change alert banner */}
+                    {answerChanged && (
+                      <div className="flex items-center gap-2 p-3 bg-warn/10 border border-warn/30 rounded-xl text-warn dark:text-amber-300 text-xs font-medium">
+                        <AlertTriangle className="w-4 h-4 shrink-0 text-warn" />
+                        <span>
+                          <strong>Cevap Anahtarı Değişikliği:</strong> Orijinal soru cevabı{' '}
+                          <strong>{origQ?.correctAnswer}</strong> iken, NotebookLM önerisi bu sorunun doğru cevabını{' '}
+                          <strong>{propQ?.correctAnswer}</strong> olarak belirlemiştir.
+                        </span>
+                      </div>
+                    )}
+
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 items-start">
+                      {/* Left: Original Question UI */}
+                      <div className="p-4 bg-surface-1 border border-border rounded-xl flex flex-col gap-3">
+                        <div className="flex flex-wrap items-center justify-between gap-2 pb-2 border-b border-border">
+                          <div className="flex items-center gap-1.5">
+                            <span className="px-2 py-0.5 rounded text-2xs font-bold bg-surface-2 text-ink">
+                              Orijinal Soru (Mevcut DB)
+                            </span>
+                            {origQ?.kurul && (
+                              <span className="px-1.5 py-0.5 rounded text-2xs font-medium bg-surface-2 text-ink-3">
+                                Kurul {origQ.kurul}
+                              </span>
+                            )}
+                          </div>
+                          {origQ?.id && (
+                            <code className="text-2xs text-ink-3 bg-surface-2 px-1 py-0.5 rounded">
+                              ID: {origQ.id}
+                            </code>
+                          )}
+                        </div>
+
+                        {origQ ? (
+                          <>
+                            {/* Stem */}
+                            <div>
+                              <div className="text-2xs font-semibold text-ink-3 uppercase tracking-wider mb-1">
+                                Soru Metni
+                              </div>
+                              <p className="text-xs sm:text-sm text-ink font-medium leading-relaxed bg-card p-3 rounded-lg border border-border">
+                                {origQ.stem || origQ.reconstruction?.stem || origQ.question || 'Soru kökü kaydı yok.'}
+                              </p>
+                            </div>
+
+                            {/* Onculler if any */}
+                            {(origQ.oncul_maddeleri || origQ.reconstruction?.oncul_maddeleri) && (
+                              <div className="flex flex-col gap-1">
+                                <div className="text-2xs font-semibold text-ink-3 uppercase tracking-wider">
+                                  Öncül Maddeleri
+                                </div>
+                                <div className="flex flex-col gap-1 bg-card p-2.5 rounded-lg border border-border">
+                                  {(origQ.oncul_maddeleri || origQ.reconstruction?.oncul_maddeleri).map(
+                                    (m: string, i: number) => (
+                                      <div key={i} className="text-xs text-ink">
+                                        {m}
+                                      </div>
+                                    )
+                                  )}
+                                </div>
+                              </div>
+                            )}
+
+                            {/* Options */}
+                            <div>
+                              <div className="text-2xs font-semibold text-ink-3 uppercase tracking-wider mb-1.5">
+                                Seçenekler
+                              </div>
+                              <div className="flex flex-col gap-1.5">
+                                {origOpts.length > 0 ? (
+                                  origOpts.map((opt) => {
+                                    const isCor =
+                                      opt.key ===
+                                      String(origQ.correctAnswer || origQ.reconstruction?.correctAnswer).toUpperCase();
+                                    return (
+                                      <div
+                                        key={opt.key}
+                                        className={`flex items-start gap-2 p-2 rounded-lg text-xs transition border ${
+                                          isCor
+                                            ? 'bg-ok/10 border-ok/40 text-ok dark:text-emerald-300 font-semibold'
+                                            : 'bg-card border-border text-ink'
+                                        }`}
+                                      >
+                                        <span
+                                          className={`w-5 h-5 rounded flex items-center justify-center shrink-0 text-2xs font-bold ${
+                                            isCor ? 'bg-ok text-white' : 'bg-surface-2 text-ink-2'
+                                          }`}
+                                        >
+                                          {opt.key}
+                                        </span>
+                                        <span className="flex-1 leading-snug pt-0.5">{opt.text}</span>
+                                        {isCor && (
+                                          <span className="text-2xs px-1.5 py-0.5 rounded bg-ok/20 text-ok dark:text-emerald-300 shrink-0 font-bold">
+                                            ✓ Doğru
+                                          </span>
+                                        )}
+                                      </div>
+                                    );
+                                  })
+                                ) : (
+                                  <div className="text-xs text-ink-3 p-2 bg-card rounded border">
+                                    Seçenek kaydı bulunmuyor.
+                                  </div>
+                                )}
+                              </div>
+                            </div>
+
+                            {/* Explanation */}
+                            <div>
+                              <div className="text-2xs font-semibold text-ink-3 uppercase tracking-wider mb-1">
+                                Açıklama & Fizyopatoloji
+                              </div>
+                              <div className="text-xs text-ink leading-relaxed bg-card p-3 rounded-lg border border-border whitespace-pre-wrap">
+                                {origQ.explanation ||
+                                  origQ.tibbi_aciklama ||
+                                  origQ.reconstruction?.explanation ||
+                                  'Açıklama bulunmuyor.'}
+                              </div>
+                            </div>
+
+                            {/* Sik Analizi */}
+                            {(origQ.sik_analizi || origQ.denetleyiciSurumu?.sik_analizi) && (
+                              <div>
+                                <div className="text-2xs font-semibold text-ink-3 uppercase tracking-wider mb-1">
+                                  Şık Analizi
+                                </div>
+                                <div className="text-xs text-ink leading-relaxed bg-card p-2.5 rounded-lg border border-border flex flex-col gap-1">
+                                  {typeof (origQ.sik_analizi || origQ.denetleyiciSurumu?.sik_analizi) === 'object' ? (
+                                    Object.entries(origQ.sik_analizi || origQ.denetleyiciSurumu?.sik_analizi).map(
+                                      ([k, val]) => (
+                                        <div key={k} className="text-xs border-b border-border/50 pb-1 last:border-none">
+                                          <strong className="text-primary">{k})</strong> {String(val)}
+                                        </div>
+                                      )
+                                    )
+                                  ) : (
+                                    <div className="whitespace-pre-wrap text-xs">
+                                      {String(origQ.sik_analizi || origQ.denetleyiciSurumu?.sik_analizi)}
+                                    </div>
+                                  )}
+                                </div>
+                              </div>
+                            )}
+                          </>
+                        ) : (
+                          <div className="p-8 text-center text-xs text-ink-3 flex flex-col items-center justify-center gap-2.5 bg-card/60 rounded-xl border border-dashed border-border/80 my-auto py-12">
+                            <div className="p-2.5 rounded-full bg-ok/10 text-ok dark:text-emerald-400">
+                              <Plus className="w-5 h-5" />
+                            </div>
+                            <div className="font-bold text-ink text-sm">Bu soru veritabanında henüz mevcut değildir.</div>
+                            <p className="text-xs text-ink-3 max-w-sm leading-relaxed">
+                              Bu kayıt sistemde sıfırdan oluşturulacak <strong>yeni bir çıkmış soru</strong> olarak eklenecektir. Bu alternatifi tercih ettiğinizde otomatik olarak veritabanı kütüğüne işlenecektir.
+                            </p>
+                            <span className="text-2xs px-2 py-0.5 rounded-full bg-ok/10 text-ok font-semibold border border-ok/20">
+                              + Yeni Soru Ekleme Akışı
+                            </span>
+                          </div>
+                        )}
+                      </div>
+
+                      {/* Right: NotebookLM Proposed UI */}
+                      <div className="p-4 bg-primary/5 border border-primary/20 rounded-xl flex flex-col gap-3">
+                        <div className="flex flex-wrap items-center justify-between gap-2 pb-2 border-b border-primary/20">
+                          <div className="flex items-center gap-1.5">
+                            <span className={`px-2 py-0.5 rounded text-2xs font-bold ${!origQ ? 'bg-ok text-white' : 'bg-primary text-white'}`}>
+                              {!origQ ? '+ Yeni Soru Kaydı (Veritabanına Eklenecek)' : 'NotebookLM Önerisi (Alternatif)'}
+                            </span>
+                            {propQ.kurul && (
+                              <span className="px-1.5 py-0.5 rounded text-2xs font-medium bg-primary/10 text-primary">
+                                Kurul {propQ.kurul}
+                              </span>
+                            )}
+                          </div>
+                          {propQ.id && (
+                            <code className="text-2xs text-primary bg-primary/10 px-1 py-0.5 rounded">
+                              ID: {propQ.id}
+                            </code>
+                          )}
+                        </div>
+
+                        {/* NotebookLM / Fakülte Müfredat Kazanımı */}
+                        {propQ.notebooklm_verisi && (
+                          <div className="p-3 bg-ai/10 border border-ai/20 rounded-lg flex flex-col gap-1.5">
+                            <div className="text-2xs font-bold text-ai dark:text-purple-400 uppercase tracking-wider flex items-center gap-1.5">
+                              <GraduationCap className="w-3.5 h-3.5" />
+                              Fakülte Müfredat Kazanımı & Künye
+                            </div>
+                            {propQ.notebooklm_verisi.kazanim && (
+                              <p className="text-xs text-ink font-medium leading-relaxed bg-card p-2 rounded border border-ai/20">
+                                {propQ.notebooklm_verisi.kazanim}
+                              </p>
+                            )}
+                            <div className="flex flex-wrap items-center gap-1.5 text-2xs">
+                              {propQ.notebooklm_verisi.mufredat && (
+                                <span className="px-2 py-0.5 rounded bg-card border border-border text-ink-2">
+                                  <strong>Müfredat:</strong> {propQ.notebooklm_verisi.mufredat}
+                                </span>
+                              )}
+                              {propQ.notebooklm_verisi.kurul && (
+                                <span className="px-2 py-0.5 rounded bg-card border border-border text-ink-2">
+                                  <strong>Kurul:</strong> {propQ.notebooklm_verisi.kurul}
+                                </span>
+                              )}
+                              {propQ.notebooklm_verisi.ders && (
+                                <span className="px-2 py-0.5 rounded bg-card border border-border text-ink-2">
+                                  <strong>Ders:</strong> {propQ.notebooklm_verisi.ders}
+                                </span>
+                              )}
+                              {propQ.notebooklm_verisi.konu && (
+                                <span className="px-2 py-0.5 rounded bg-card border border-border text-ink-2">
+                                  <strong>Konu:</strong> {propQ.notebooklm_verisi.konu}
+                                </span>
+                              )}
+                            </div>
+                          </div>
+                        )}
+
+                        {/* Stem */}
+                        <div>
+                          <div className="text-2xs font-semibold text-primary uppercase tracking-wider mb-1">
+                            Önerilen Soru Metni
+                          </div>
+                          <p className="text-xs sm:text-sm text-ink font-medium leading-relaxed bg-card p-3 rounded-lg border border-primary/20 shadow-2xs">
+                            {propQ.stem || propQ.question || 'Soru kökü yok.'}
+                          </p>
+                        </div>
+
+                        {/* Onculler if any */}
+                        {propQ.oncul_maddeleri && propQ.oncul_maddeleri.length > 0 && (
+                          <div className="flex flex-col gap-1">
+                            <div className="text-2xs font-semibold text-primary uppercase tracking-wider">
+                              Öncül Maddeleri
+                            </div>
+                            <div className="flex flex-col gap-1 bg-card p-2.5 rounded-lg border border-primary/20">
+                              {propQ.oncul_maddeleri.map((m: string, i: number) => (
+                                <div key={i} className="text-xs text-ink">
+                                  {m}
+                                </div>
+                              ))}
+                            </div>
+                          </div>
+                        )}
+
+                        {/* Options */}
+                        <div>
+                          <div className="text-2xs font-semibold text-primary uppercase tracking-wider mb-1.5">
+                            Seçenekler
+                          </div>
+                          <div className="flex flex-col gap-1.5">
+                            {propOpts.length > 0 ? (
+                              propOpts.map((opt) => {
+                                const isCor = opt.key === String(propQ.correctAnswer).toUpperCase();
+                                return (
+                                  <div
+                                    key={opt.key}
+                                    className={`flex items-start gap-2 p-2 rounded-lg text-xs transition border ${
+                                      isCor
+                                        ? 'bg-ok/10 border-ok text-ok dark:text-emerald-300 font-semibold shadow-2xs'
+                                        : 'bg-card border-border text-ink'
+                                    }`}
+                                  >
+                                    <span
+                                      className={`w-5 h-5 rounded flex items-center justify-center shrink-0 text-2xs font-bold ${
+                                        isCor ? 'bg-ok text-white' : 'bg-surface-2 text-ink-2'
+                                      }`}
+                                    >
+                                      {opt.key}
+                                    </span>
+                                    <span className="flex-1 leading-snug pt-0.5">{opt.text}</span>
+                                    {isCor && (
+                                      <span className="text-2xs px-1.5 py-0.5 rounded bg-ok/20 text-ok dark:text-emerald-300 shrink-0 font-bold">
+                                        ✓ Doğru Seçenek ({opt.key})
+                                      </span>
+                                    )}
+                                  </div>
+                                );
+                              })
+                            ) : (
+                              <div className="text-xs text-ink-3 p-2 bg-card rounded border">Seçenek yok.</div>
+                            )}
+                          </div>
+                        </div>
+
+                        {/* Explanation */}
+                        <div>
+                          <div className="text-2xs font-semibold text-primary uppercase tracking-wider mb-1">
+                            Önerilen Açıklama & Fizyopatoloji
+                          </div>
+                          <div className="text-xs text-ink leading-relaxed bg-card p-3 rounded-lg border border-primary/20 whitespace-pre-wrap">
+                            {propQ.explanation || propQ.tibbi_aciklama || 'Açıklama belirtilmemiş.'}
+                          </div>
+                        </div>
+
+                        {/* Sik Analizi */}
+                        {propQ.sik_analizi && (
+                          <div>
+                            <div className="text-2xs font-semibold text-primary uppercase tracking-wider mb-1">
+                              Şık Analizi & Çürütme
+                            </div>
+                            <div className="text-xs text-ink leading-relaxed bg-card p-2.5 rounded-lg border border-primary/20 flex flex-col gap-1">
+                              {typeof propQ.sik_analizi === 'object' ? (
+                                Object.entries(propQ.sik_analizi).map(([k, val]) => (
+                                  <div key={k} className="text-xs border-b border-border/50 pb-1 last:border-none">
+                                    <strong className="text-ok dark:text-emerald-400">{k})</strong> {String(val)}
+                                  </div>
+                                ))
+                              ) : (
+                                <div className="whitespace-pre-wrap text-xs">{String(propQ.sik_analizi)}</div>
+                              )}
+                            </div>
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                ) : (
+                  /* Other types UI view */
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div className="p-4 bg-surface-1 border rounded-xl flex flex-col gap-2">
+                      <div className="text-xs font-bold text-ink-2 pb-1 border-b border-border">Mevcut Veri</div>
+                      <pre className="p-3 bg-card rounded-lg text-xs font-mono overflow-auto max-h-[450px]">
+                        {JSON.stringify(selectedItemForDiff.originalSnapshot, null, 2) || 'Kayıt bulunamadı'}
+                      </pre>
+                    </div>
+                    <div className="p-4 bg-primary/5 border border-primary/20 rounded-xl flex flex-col gap-2">
+                      <div className="text-xs font-bold text-primary pb-1 border-b border-primary/20">
+                        NotebookLM Önerisi
+                      </div>
+                      <pre className="p-3 bg-card rounded-lg text-xs font-mono overflow-auto max-h-[450px]">
+                        {JSON.stringify(selectedItemForDiff.proposedData, null, 2)}
+                      </pre>
+                    </div>
+                  </div>
+                )}
+              </div>
+
+              {/* Modal Footer */}
+              <div className="flex flex-wrap items-center justify-between p-3 sm:p-4 border-t border-border bg-surface-1 gap-2">
+                <span className="text-xs text-ink-3 flex items-center gap-1.5">
+                  {selectedItemForDiff.status === 'active' ? (
+                    <span className="text-ok font-semibold flex items-center gap-1">
+                      <CheckCircle2 className="w-4 h-4" /> Bu alternatif şu anda canlı veritabanında aktiftir.
+                    </span>
+                  ) : (
+                    <span className="text-warn font-medium flex items-center gap-1">
+                      <Clock className="w-4 h-4" /> Alternatif havuzunda beklemede; onaylandığında sisteme uygulanır.
+                    </span>
+                  )}
+                </span>
+
+                <div className="flex items-center gap-2">
+                  <button
+                    type="button"
+                    onClick={() => setSelectedItemForDiff(null)}
+                    className="ms-btn is-sm is-ghost text-xs"
+                  >
+                    Kapat
+                  </button>
+
+                  {selectedItemForDiff.status === 'active' ? (
+                    <button
+                      type="button"
+                      onClick={() => {
+                        handleDeactivate(selectedItemForDiff);
+                        setSelectedItemForDiff(null);
+                      }}
+                      className="ms-btn is-sm is-outline text-xs text-warn border-warn/30 hover:bg-warn/10"
+                    >
+                      Orijinal Veriye Geri Dön
+                    </button>
+                  ) : (
+                    <button
+                      type="button"
+                      onClick={() => {
+                        handleActivate(selectedItemForDiff);
+                        setSelectedItemForDiff(null);
+                      }}
+                      className="ms-btn is-sm is-primary text-xs bg-ok hover:bg-ok"
+                    >
+                      Bu Alternatifi Tercih Et (Sisteme Uygula)
+                    </button>
+                  )}
+                </div>
+              </div>
+            </div>
+          </div>
+        );
+      })()}
 
       {/* Edit Modal */}
       {editingItem && (

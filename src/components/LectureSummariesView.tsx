@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useMemo } from 'react';
+import { disciplineClass, disciplineLabel } from '../utils/discipline';
 import { PageHeader } from './ui/PageHeader';
 import { 
   BookOpen, 
@@ -24,6 +25,7 @@ import summariesMetaData from '../data/summaries_meta.json';
 import summariesEnrichment from '../data/summaries_enrichment.json';
 import curriculumDisciplines from '../data/curriculum_disciplines.json';
 import { SummaryArtifactReader } from './SummaryArtifactReader';
+import { triggerDomHighlightAndScroll } from '../services/universalRedirectService';
 
 export interface SummaryMeta {
   id: string;
@@ -190,6 +192,13 @@ export const LectureSummariesView: React.FC<LectureSummariesViewProps> = ({ onOp
       const found = list.find((s: any) => s.id === meta.id);
       if (found && found.content) {
         setActiveSummary(found);
+        if (typeof window !== 'undefined') {
+          const urlParams = new URLSearchParams(window.location.search);
+          const highlight = urlParams.get('highlight');
+          if (highlight) {
+            setTimeout(() => triggerDomHighlightAndScroll(highlight), 400);
+          }
+        }
       }
     } catch (e) {
       console.warn('Could not load summary content from committee chunk:', e);
@@ -197,12 +206,26 @@ export const LectureSummariesView: React.FC<LectureSummariesViewProps> = ({ onOp
       setIsLoadingContent(false);
     }
   };
+
   useEffect(() => {
-    if (!initialSummaryId) return;
-    const meta = summaries.find((x) => x.id === initialSummaryId);
-    if (meta) handleOpenSummary(meta);
+    if (typeof window === 'undefined') return;
+    const urlParams = new URLSearchParams(window.location.search);
+    const targetId = initialSummaryId || urlParams.get('id') || urlParams.get('summaryId') || urlParams.get('noteId');
+    const highlight = urlParams.get('highlight');
+
+    if (targetId) {
+      const meta = summaries.find((x) => x.id === targetId);
+      if (meta) {
+        handleOpenSummary(meta);
+        if (highlight) {
+          setTimeout(() => triggerDomHighlightAndScroll(highlight), 700);
+        }
+      }
+    } else if (highlight) {
+      setTimeout(() => triggerDomHighlightAndScroll(highlight), 500);
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [initialSummaryId]);
+  }, [initialSummaryId, summaries]);
 
 
   const handleCopyMarkdown = () => {
@@ -284,29 +307,29 @@ export const LectureSummariesView: React.FC<LectureSummariesViewProps> = ({ onOp
       {selectedKurul !== 'all' && <p className="m-0 -mt-1 text-sm text-ink-3">{KURUL_LABELS[selectedKurul]}</p>}
 
       {filteredSummaries.length === 0 ? (
-        <div className="bg-white border border-line rounded-2xl px-6 py-12 text-center flex flex-col items-center gap-2">
-          <h3 className="m-0 font-display text-xl font-bold tracking-[-0.02em]">Bu filtrede özet yok</h3>
-          <p className="m-0 text-base text-ink-2">Aramayı temizleyip farklı bir kurul seçebilirsin.</p>
+        <div className="ui-card text-center flex flex-col items-center gap-2" style={{ paddingBlock: 36 }}>
+          <h3 className="m-0 font-display text-xl font-bold tracking-[-0.02em]">Bu süzgeçte özet yok</h3>
+          <p className="m-0 text-base text-ink-2">Aramayı temizle ya da başka bir kurul seç.</p>
         </div>
       ) : (
-        <ul className="list-none m-0 p-0 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-2.5 sm:gap-3">
+        <ul className="list-none m-0 p-0 ui-grid">
           {filteredSummaries.map((s) => (
-            <li key={s.id} className="min-w-0">
+            <li key={s.id} className={`min-w-0 ${disciplineClass(s.discipline)}`}>
               <button
                 type="button"
                 onClick={() => handleOpenSummary(s)}
-                className="w-full h-full text-left bg-white border border-line rounded-xl p-3.5 sm:p-4 flex flex-col gap-2 cursor-pointer hover:border-accent transition-colors group"
+                className="ks-lesson group"
               >
-                <span className="flex items-center gap-1.5 min-w-0">
-                  <span className="shrink-0 h-6 px-2 rounded-full bg-canvas text-ink-2 text-xs font-semibold inline-flex items-center">Kurul {s.kurul}</span>
-                  <span className="min-w-0 h-6 px-2 rounded-full bg-accent-soft text-accent text-xs font-semibold inline-flex items-center truncate">{s.discipline}</span>
+                <span className="ks-lesson-top">
+                  <span className="hk-eyebrow"><i className="hk-dot" aria-hidden /><span>{disciplineLabel(s.discipline) || s.discipline}</span></span>
+                  <span className="ks-lesson-no">K{s.kurul}</span>
                   {s.sourceYear && (
                     <span className="ml-auto shrink-0 text-xs text-ink-3 tabular-nums" title={s.pdfName ? `${s.pdfName} · ${s.sourceDate}` : s.sourceDate}>
                       {s.sourceYear}
                     </span>
                   )}
                 </span>
-                <span className="text-md font-semibold leading-snug text-ink group-hover:text-accent line-clamp-2">{s.title}</span>
+                <span className="ks-lesson-t line-clamp-2">{s.title}</span>
                 {s.instructor && (
                   <span className="text-sm text-ink-2 font-medium flex items-center gap-1.5 truncate">
                     <GraduationCap className="w-3.5 h-3.5 text-accent shrink-0" />

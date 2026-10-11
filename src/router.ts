@@ -39,7 +39,10 @@ export type AppRoute =
   | 'ornek_sorular'
   | 'kazanimlar'
   | 'music'
-  | 'datacore';
+  | 'datacore'
+  | 'diseases'
+  | 'settings'
+  | 'stats';
 
 export const ROUTE_PATHS: Record<AppRoute, string> = {
   quick_add: '/',
@@ -66,12 +69,16 @@ export const ROUTE_PATHS: Record<AppRoute, string> = {
   admin: '/yonetim',
   manage: '/manage',
   search: '/ara',
+  diseases: '/hastaliklar',
+  settings: '/ayarlar',
+  stats: '/istatistik',
 };
 
 export const ROUTE_TITLES: Record<AppRoute, string> = {
   quick_add: 'Soru ekle',
   learn: 'Öğren',
-  glossary: 'Sözlük & Ansiklopedi',
+  glossary: 'Sözlük',
+  diseases: 'Hastalıklar',
   flashcards: 'Ezber kartları',
   questions: 'Soru havuzu',
   past_exams: 'Çıkmış sorular',
@@ -93,6 +100,8 @@ export const ROUTE_TITLES: Record<AppRoute, string> = {
   admin: 'Yönetim',
   manage: 'Yönetim Konsolu',
   search: 'Arama',
+  settings: 'Profil ve ayarlar',
+  stats: 'İstatistiklerim',
 };
 
 const BY_SEGMENT: Record<string, AppRoute> = Object.fromEntries(
@@ -127,6 +136,10 @@ const ALIASES: Record<string, AppRoute> = {
   leaderboard: 'leaderboard',
   music: 'music',
   muzik: 'music',
+  settings: 'settings',
+  ayarlar: 'settings',
+  profil: 'settings',
+  profile: 'settings',
   'müzik': 'music',
   notes: 'notes',
   practice: 'practice',
@@ -144,6 +157,10 @@ const ALIASES: Record<string, AppRoute> = {
   yonetim: 'admin',
   search: 'search',
   arama: 'search',
+  diseases: 'diseases',
+  hastaliklar: 'diseases',
+  'tibbi-hastaliklar': 'diseases',
+  atlas: 'diseases',
 };
 
 export interface ParsedRoute {

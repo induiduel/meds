@@ -1,5 +1,5 @@
 import React, { Suspense, useEffect, useRef, useState } from 'react';
-import { ArrowUpRight, ChevronDown, Loader2, Search, X } from 'lucide-react';
+import { ArrowUpRight, ChevronDown, LayoutGrid, List as ListIcon, Loader2, Search, X } from 'lucide-react';
 import { safeJsonFetch } from '../../services/api';
 import type { LectureNote } from '../../types';
 import { PageHeader } from '../ui/PageHeader';
@@ -16,6 +16,10 @@ export const SOURCE_ACTION: Partial<Record<SearchDocType, string>> = {
   summary: 'Özeti aç',
   past_question: 'Çıkmış sorularda aç',
   deepseek_contribution: 'Çıkmış sorularda aç',
+  ornek_question: 'Örnek sorularda aç',
+  deck_slide: 'Öğrenmede aç',
+  glossary_term: 'Sözlükte aç',
+  disease: 'Hastalıklarda aç',
   active_question: 'Havuzda aç',
   user_contribution: 'Havuzda aç',
   transcript: 'Ses kayıtlarına git',
@@ -51,6 +55,12 @@ export const SearchView: React.FC<SearchViewProps> = ({ initialQuery, focusId, c
   const [openId, setOpenId] = useState<string | undefined>(focusId);
   const [byType, setByType] = useState<SearchResponse['byType']>({});
   const listTop = useRef<HTMLDivElement>(null);
+  // Görünüm (liste/kart) ve sıralama cihazda hatırlanır.
+  const [view, setView] = useState<'list' | 'grid'>(() => {
+    try { return localStorage.getItem('medsoru_search_view') === 'grid' ? 'grid' : 'list'; } catch { return 'list'; }
+  });
+  const pickView = (v: 'list' | 'grid') => { setView(v); try { localStorage.setItem('medsoru_search_view', v); } catch { /* yoksay */ } };
+  const [sortBy, setSortBy] = useState<'relevance' | 'discipline'>('relevance');
 
   // Adres çubuğundan ya da paletten gelen yeni sorgu
   useEffect(() => { setInput(initialQuery); setQuery(initialQuery); }, [initialQuery]);
@@ -158,11 +168,25 @@ export const SearchView: React.FC<SearchViewProps> = ({ initialQuery, focusId, c
         <div className="py-14 text-center text-md text-ink-3">“{query}” için sonuç bulunamadı. Daha kısa ya da farklı bir ifade dene.</div>
       ) : (
         <>
-          <p className="m-0 text-sm text-ink-3">
-            “<span className="text-ink font-medium">{query}</span>” için {total}{data?.capped ? '+' : ''} sonuç · alaka sırasına göre
-          </p>
-          <ol className="m-0 p-0 list-none flex flex-col gap-2">
-            {items.map((r) => {
+          <div className="rb-search-bar">
+            <p className="m-0 text-sm text-ink-3 min-w-0">
+              “<span className="text-ink font-medium">{query}</span>” için {total}{data?.capped ? '+' : ''} sonuç
+            </p>
+            <span className="flex-1" />
+            <label className="rb-search-sort">
+              <span>Sırala</span>
+              <select value={sortBy} onChange={(e) => setSortBy(e.target.value as 'relevance' | 'discipline')} aria-label="Sonuçları sırala">
+                <option value="relevance">Alaka</option>
+                <option value="discipline">Derse göre</option>
+              </select>
+            </label>
+            <span className="rb-viewseg" role="radiogroup" aria-label="Görünüm">
+              <button type="button" role="radio" aria-checked={view === 'list'} aria-label="Liste görünümü" title="Liste" onClick={() => pickView('list')}><ListIcon /></button>
+              <button type="button" role="radio" aria-checked={view === 'grid'} aria-label="Kart görünümü" title="Kart" onClick={() => pickView('grid')}><LayoutGrid /></button>
+            </span>
+          </div>
+          <ol className={`m-0 p-0 list-none rb-hits ${view === 'grid' ? 'is-grid' : ''}`}>
+            {(sortBy === 'discipline' ? [...items].sort((a, b) => String(a.discipline || '~').localeCompare(String(b.discipline || '~'), 'tr')) : items).map((r) => {
               const open = openId === r.id;
               return (
                 <li key={r.id} data-hit={r.id} className={`ms-hit ${open ? 'is-open' : ''}`}>

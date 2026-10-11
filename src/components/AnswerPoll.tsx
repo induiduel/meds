@@ -155,7 +155,7 @@ export const AnswerPoll: React.FC<Props> = ({ questionId, options, voterUid, hin
           <span className={`ms-poll-status ${myVote ? 'is-done' : ''} ${error ? 'is-err' : ''}`}>{error && votes ? error : status}</span>
         )}
       </header>
-      {hint && <p className="ms-poll-hint">{hint}</p>}
+      {hint && !accepted && <p className="ms-poll-hint">{hint}</p>}
 
       <ol className="ms-poll-list">
         {rows.map((o, i) => {
@@ -179,8 +179,8 @@ export const AnswerPoll: React.FC<Props> = ({ questionId, options, voterUid, hin
                 <span className="ms-poll-key">{mine || acc ? <Check className="w-3.5 h-3.5" strokeWidth={3} /> : o.key}</span>
                 <span className="ms-poll-text">{renderText ? renderText(o.key, o.text) : <Highlight text={o.text} terms={terms} />}</span>
                 <span className="ms-poll-meta">
-                  {acc && <span className="ms-poll-tag is-accepted">Kabul edilen</span>}
-                  {lead && <span className="ms-poll-tag">{accepted ? (leaders.length > 1 ? 'Topluluk · eşit' : 'Topluluk') : leaders.length > 1 ? 'Eşit' : 'Önde'}</span>}
+                  {/* Kabul edilen şık onay işaretiyle belli; etiket yalnız topluluk ondan ayrıştığında anlam taşır. */}
+                  {lead && !acc && total > 0 && <span className="ms-poll-tag">{accepted ? (leaders.length > 1 ? 'Topluluk · eşit' : 'Topluluk') : leaders.length > 1 ? 'Eşit' : 'Önde'}</span>}
                   <span className="ms-poll-pct"><Pct value={pct} run={run} /></span>
                 </span>
               </button>
@@ -194,6 +194,8 @@ export const AnswerPoll: React.FC<Props> = ({ questionId, options, voterUid, hin
         const agree = total > 0 && leaders.length === 1 && leaders[0] === accepted;
         const tie = total > 0 && leaders.length > 1 && leaders.includes(accepted);
         const tone = total === 0 ? '' : agree ? 'is-agree' : tie ? 'is-tie' : 'is-disagree';
+        // Uyuşma ya da oy yokken özet satırı bilgi taşımaz.
+        if (total === 0 || agree) return null;
         return (
           <div className={`ms-poll-compare ${tone}`} role="status">
             <span className="ms-poll-compare-cell">

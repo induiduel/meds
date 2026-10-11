@@ -14,6 +14,7 @@ import { QuestionItem, Committee } from '../types';
 import { pastQuestionsCache } from './pastQuestionsCache';
 import { loadDeck, DECK_CATALOG } from '../data/deckStore';
 import { pwaService } from './pwaService';
+import { toast } from '../components/ui/Toast';
 
 const OFFLINE_DB_NAME = 'medsoru_offline_db';
 const OFFLINE_DB_VERSION = 2;
@@ -53,7 +54,7 @@ export interface OfflineProgress {
 
 export interface OfflineAction {
   id?: number;
-  type: 'contribute' | 'vote' | 'note' | 'feedback';
+  type: 'contribute' | 'vote' | 'note' | 'feedback' | 'report' | 'comment';
   endpoint: string;
   method: 'POST' | 'PUT' | 'DELETE';
   payload: any;
@@ -352,6 +353,151 @@ class OfflineDatabaseService {
   }
 
   /**
+   * Çevrimdışı komiteleri getir
+   */
+  public async getCommittees(): Promise<Committee[]> {
+    const db = await this.initDb();
+    if (!db || !db.objectStoreNames.contains(STORE_COMMITTEES)) return [];
+    return new Promise((resolve) => {
+      try {
+        const tx = db.transaction(STORE_COMMITTEES, 'readonly');
+        const req = tx.objectStore(STORE_COMMITTEES).getAll();
+        req.onsuccess = () => resolve(req.result || []);
+        req.onerror = () => resolve([]);
+      } catch {
+        resolve([]);
+      }
+    });
+  }
+
+  /**
+   * Komiteleri cihaza kaydet
+   */
+  public async saveCommittees(committees: Committee[]): Promise<void> {
+    if (!committees || committees.length === 0) return;
+    const db = await this.initDb();
+    if (!db) return;
+    await this.putBatch(db, STORE_COMMITTEES, committees);
+  }
+
+  /**
+   * Çevrimdışı havuz sorularını getir
+   */
+  public async getQuestions(committeeId?: string): Promise<QuestionItem[]> {
+    const db = await this.initDb();
+    if (!db || !db.objectStoreNames.contains(STORE_QUESTIONS)) return [];
+    return new Promise((resolve) => {
+      try {
+        const tx = db.transaction(STORE_QUESTIONS, 'readonly');
+        const store = tx.objectStore(STORE_QUESTIONS);
+        if (committeeId && store.indexNames.contains('by_committee')) {
+          const idx = store.index('by_committee');
+          const req = idx.getAll(committeeId);
+          req.onsuccess = () => resolve(req.result || []);
+          req.onerror = () => resolve([]);
+        } else {
+          const req = store.getAll();
+          req.onsuccess = () => {
+            const all: QuestionItem[] = req.result || [];
+            if (committeeId) {
+              resolve(all.filter((q) => q.committeeId === committeeId));
+            } else {
+              resolve(all);
+            }
+          };
+          req.onerror = () => resolve([]);
+        }
+      } catch {
+        resolve([]);
+      }
+    });
+  }
+
+  /**
+   * Havuz sorularını cihaza kaydet
+   */
+  public async saveQuestions(questions: QuestionItem[]): Promise<void> {
+    if (!questions || questions.length === 0) return;
+    const db = await this.initDb();
+    if (!db) return;
+    await this.putBatch(db, STORE_QUESTIONS, questions);
+  }
+
+  /**
+   * Çevrimdışı tıbbi sözlüğü getir
+   */
+  public async getGlossary(): Promise<any[]> {
+    const db = await this.initDb();
+    if (!db || !db.objectStoreNames.contains(STORE_GLOSSARY)) return [];
+    return new Promise((resolve) => {
+      try {
+        const tx = db.transaction(STORE_GLOSSARY, 'readonly');
+        const req = tx.objectStore(STORE_GLOSSARY).getAll();
+        req.onsuccess = () => resolve(req.result || []);
+        req.onerror = () => resolve([]);
+      } catch {
+        resolve([]);
+      }
+    });
+  }
+
+  /**
+   * Tıbbi sözlük terimlerini cihaza kaydet
+   */
+  public async saveGlossary(items: any[]): Promise<void> {
+    if (!items || items.length === 0) return;
+    const db = await this.initDb();
+    if (!db) return;
+    await this.putBatch(db, STORE_GLOSSARY, items);
+  }
+
+  /**
+   * Çevrimdışı akıl kartlarını getir
+   */
+  public async getFlashcards(): Promise<any[]> {
+    const db = await this.initDb();
+    if (!db || !db.objectStoreNames.contains(STORE_FLASHCARDS)) return [];
+    return new Promise((resolve) => {
+      try {
+        const tx = db.transaction(STORE_FLASHCARDS, 'readonly');
+        const req = tx.objectStore(STORE_FLASHCARDS).getAll();
+        req.onsuccess = () => resolve(req.result || []);
+        req.onerror = () => resolve([]);
+      } catch {
+        resolve([]);
+      }
+    });
+  }
+
+  /**
+   * Akıl kartlarını cihaza kaydet
+   */
+  public async saveFlashcards(cards: any[]): Promise<void> {
+    if (!cards || cards.length === 0) return;
+    const db = await this.initDb();
+    if (!db) return;
+    await this.putBatch(db, STORE_FLASHCARDS, cards);
+  }
+
+  /**
+   * Çevrimdışı ders özetlerini getir
+   */
+  public async getSummaries(): Promise<any[]> {
+    const db = await this.initDb();
+    if (!db || !db.objectStoreNames.contains(STORE_SUMMARIES)) return [];
+    return new Promise((resolve) => {
+      try {
+        const tx = db.transaction(STORE_SUMMARIES, 'readonly');
+        const req = tx.objectStore(STORE_SUMMARIES).getAll();
+        req.onsuccess = () => resolve(req.result || []);
+        req.onerror = () => resolve([]);
+      } catch {
+        resolve([]);
+      }
+    });
+  }
+
+  /**
    * TÜM VERİTABANINI CİHAZA İNDİR (TEK TIKLA %100 ÇEVRİMDIŞI)
    */
   public async downloadEntireDatabase(
@@ -620,7 +766,7 @@ class OfflineDatabaseService {
   }
 
   /**
-   * Çevrimdışı Eylem Kuyruğu: Kullanıcı internetsizken katkı yaparsa sakla
+   * Çevrimdışı Eylem Kuyruğu: Kullanıcı internetsizken katkı/oy/rapor yaparsa sakla
    */
   public async queueAction(action: Omit<OfflineAction, 'timestamp'>): Promise<void> {
     const db = await this.initDb();
@@ -645,6 +791,11 @@ class OfflineDatabaseService {
     this.state.queuedActionsCount += 1;
     this.notify();
     pwaService.registerBackgroundSync();
+
+    toast.info(
+      'Çevrimdışı Kaydedildi',
+      'İşleminiz cihaz hafızasında güvene alındı. İnternet bağlantısı sağlandığında otomatik iletilecektir.'
+    );
   }
 
   /**
@@ -697,6 +848,14 @@ class OfflineDatabaseService {
 
     this.state.queuedActionsCount = Math.max(0, actions.length - synced);
     this.notify();
+
+    if (synced > 0) {
+      toast.success(
+        'Senkronizasyon Tamamlandı',
+        `${synced} adet çevrimdışı işlem başarıyla sunucuya iletildi.`
+      );
+    }
+
     return { synced, failed };
   }
 

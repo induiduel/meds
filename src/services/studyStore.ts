@@ -5,6 +5,7 @@
  * pages still render when storage is blocked (private mode, cleared site data).
  */
 import { QuestionItem } from '../types';
+import { logActivity } from './activityLog';
 import { ApiService } from './api';
 import { normalizeDonem3Discipline, isDonem3Question } from '../data/curriculumData';
 
@@ -52,6 +53,8 @@ export interface StudyNote {
   questionId?: string;
   questionStem?: string;
   pinned?: boolean;
+  /** Kullanıcı etiketleri (v8 not defteri) */
+  tags?: string[];
   createdAt: string;
   updatedAt: string;
 }
@@ -194,6 +197,7 @@ export const recordAttempt = (id: string, picked: OptionKey, correct: boolean) =
   write(KEYS.progress, all);
   // Wrong answers go straight to the review list
   if (!correct) setInReview(id, true);
+  logActivity(correct ? 'coz' : 'yanlis', correct ? `Soru çözdün (${picked})` : `Soruyu yanlış yaptın (${picked})`);
   return all;
 };
 export const resetProgress = (ids?: string[]) => {
@@ -221,6 +225,7 @@ export const setFavorite = (id: string, on: boolean) => {
   if (on) s.add(id);
   else s.delete(id);
   write(KEYS.favorites, [...s]);
+  if (on) logActivity('kaydet', 'Bir soruyu favorilere ekledin');
   return s;
 };
 
@@ -240,6 +245,7 @@ export const toggleFavoriteCard = (card: Omit<FavoriteCard, 'at'>) => {
     ? all.filter((c) => c.id !== card.id)
     : [{ ...card, at: new Date().toISOString() }, ...all];
   write(KEYS.cardFavorites, next);
+  if (next.some((c) => c.id === card.id)) logActivity('begen', `“${card.front.slice(0, 60)}” kartını favorilere ekledin`);
   return next;
 };
 
@@ -249,6 +255,7 @@ export const getTestHistory = () => read<SelfTestResult[]>(KEYS.tests, []);
 export const saveTestResult = (r: SelfTestResult) => {
   const all = [r, ...getTestHistory()].slice(0, 30);
   write(KEYS.tests, all);
+  logActivity('test', `${r.title || 'Test'} bitti · ${r.correct}/${r.total} doğru`);
   return all;
 };
 export const clearTestHistory = () => write(KEYS.tests, []);
@@ -256,14 +263,18 @@ export const clearTestHistory = () => write(KEYS.tests, []);
 // ---------------- Notes ----------------
 
 export const getNotes = () => read<StudyNote[]>(KEYS.notes, []);
-export const saveNotes = (notes: StudyNote[]) => write(KEYS.notes, notes);
+export const saveNotes = (notes: StudyNote[]) => {
+  const before = getNotes().length;
+  write(KEYS.notes, notes);
+  if (notes.length > before) logActivity('not', `Yeni not: ${notes[0]?.title || 'Başlıksız'}`);
+};
 export const newNoteId = () => `note-${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 7)}`;
 
 /** Exports notes as a Markdown file the viewer can keep. */
 export const notesToMarkdown = (notes: StudyNote[]) =>
   notes
     .map((n) => {
-      const meta = [n.discipline, n.questionStem ? `Soru: ${n.questionStem.slice(0, 120)}` : ''].filter(Boolean).join(' · ');
+      const meta = [n.discipline, n.tags?.length ? n.tags.map((t) => `#${t}`).join(' ') : '', n.questionStem ? `Soru: ${n.questionStem.slice(0, 120)}` : ''].filter(Boolean).join(' · ');
       return `## ${n.title || 'Başlıksız not'}\n${meta ? `_${meta}_\n` : ''}\n${n.body}\n`;
     })
     .join('\n---\n\n');

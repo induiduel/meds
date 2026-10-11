@@ -8,6 +8,9 @@ import { filterCurrent2026_2027Committees } from '../../services/firestoreDb';
 import { SolveView } from './SolveView';
 import { SelfTestView } from './SelfTestView';
 import { NotesView } from './NotesView';
+import { NotesViewClassic } from './NotesViewClassic';
+import { useUiVersion } from '../../utils/uiVersion';
+import { Segmented as Seg } from '../ui/kit';
 import { btnSecondary } from './StudyUI';
 
 export type StudySection = 'solve' | 'test' | 'notes' | 'lists';
@@ -40,6 +43,7 @@ export const StudyHub: React.FC<StudyHubProps> = ({
   const [loading, setLoading] = useState(true);
   const [tick, setTick] = useState(0);
   const [quickNonce, setQuickNonce] = useState(0);
+  const { isV7 } = useUiVersion();
 
   // Strict 2026-2027 committees
   const cleanCommittees = useMemo(() => filterCurrent2026_2027Committees(committees), [committees]);
@@ -104,11 +108,47 @@ export const StudyHub: React.FC<StudyHubProps> = ({
         description={loading && bank.length === 0 ? 'Soru bankası yükleniyor…' : undefined}
         stats={loading && bank.length === 0 ? undefined : [
           { label: 'soru', value: bank.length.toLocaleString('tr-TR') },
-          { label: 'doğruluk', value: `%${stats.accuracy}`, tone: stats.accuracy >= 70 ? 'ok' : 'default' },
+          ...(stats.solved > 0
+            ? [
+                { label: 'çözülen', value: stats.solved.toLocaleString('tr-TR') },
+                { label: 'doğru', value: `%${stats.accuracy}`, tone: (stats.accuracy >= 70 ? 'ok' : stats.accuracy >= 50 ? 'warn' : 'default') as 'ok' | 'warn' | 'default' },
+              ]
+            : []),
         ]}
       />
 
-      {/* Tek satır: sekmeler solda, hızlı test sağda */}
+      {isV7 ? (
+        <>
+          {/* v8: özet satırı + kayan sekmeler; hızlı test her zaman görünür */}
+          {/* Özet tek satır olarak başlıkta; ayrı dört kutulu KPI şeridi aynı bilgiyi tekrarlıyordu. */}
+          <div className="cx-dock st-dock">
+            <div className="st-row">
+              <Seg<StudySection>
+                className="st-tabs"
+                label="Çalışma bölümleri"
+                value={section}
+                onChange={setSection}
+                options={tabs.map((t) => {
+                  const Icon = t.icon;
+                  return {
+                    value: t.id,
+                    label: (
+                      <span className="inline-flex items-center gap-1.5">
+                        <Icon className="w-4 h-4 shrink-0" />
+                        <span className="st-tab-l">{t.label}</span>
+                        {t.count ? <span className="lh-n">{t.count}</span> : null}
+                      </span>
+                    ),
+                  };
+                })}
+              />
+              <button type="button" onClick={startQuick} disabled={bank.length === 0} className="ui-btn is-primary st-quick" title="Karışık 20 soruluk hızlı test">
+                <Zap /> <span className="st-tab-l">Hızlı test</span>
+              </button>
+            </div>
+          </div>
+        </>
+      ) : (
       <div className="flex items-center gap-2 min-w-0">
         <div role="tablist" aria-label="Çalışma bölümleri" className="ms-f-seg flex-1 sm:flex-none">
           {tabs.map((t) => {
@@ -144,6 +184,8 @@ export const StudyHub: React.FC<StudyHubProps> = ({
         </button>
       </div>
 
+      )}
+
       <div role="tabpanel" id={`study-panel-${section}`} aria-labelledby={`study-tab-${section}`}>
         {section === 'solve' && (
           <SolveView
@@ -165,7 +207,7 @@ export const StudyHub: React.FC<StudyHubProps> = ({
           />
         )}
         {section === 'lists' && <ListsView bank={bank} onChange={bump} />}
-        {section === 'notes' && <NotesView disciplines={disciplines} />}
+        {section === 'notes' && (isV7 ? <NotesView disciplines={disciplines} /> : <NotesViewClassic disciplines={disciplines} />)}
       </div>
     </div>
   );

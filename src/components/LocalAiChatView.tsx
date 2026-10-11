@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { confirmDialog } from './ui/ConfirmDialog';
 import {
   BotMessageSquare,
   Sparkles,
@@ -109,8 +110,8 @@ export const LocalAiChatView: React.FC<LocalAiChatViewProps> = ({
     } catch (_) {}
   }, [messages, userStorageKey]);
 
-  const handleClearHistory = () => {
-    if (window.confirm('Sohbet geçmişinizi temizlemek istediğinize emin misiniz?')) {
+  const handleClearHistory = async () => {
+    if (await confirmDialog({ title: 'Sohbet geçmişi temizlensin mi?', confirmLabel: 'Temizle', tone: 'danger' })) {
       const fresh = [{ ...DEFAULT_WELCOME_MESSAGE, timestamp: new Date().toLocaleTimeString('tr-TR', { hour: '2-digit', minute: '2-digit' }) }];
       setMessages(fresh);
       try {

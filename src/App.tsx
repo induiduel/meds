@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useMemo, useCallback, Suspense } from 'react';
-import { AppRoute, parseLocation, writeLocation, ROUTE_TITLES } from './router';
+import { logActivity } from './services/activityLog';
+import { getVoterId, toggledVote } from './utils/voterId';
+import { AppRoute, parseLocation, writeLocation, pathFor, ROUTE_TITLES } from './router';
 import { 
   Stethoscope, 
   Sparkles, 
@@ -17,7 +19,10 @@ import {
   ExternalLink,
   ShieldCheck,
   Zap,
-  FileText
+  FileText,
+  BrainCircuit,
+  Share2,
+  ChevronRight
 } from 'lucide-react';
 import { Committee, QuestionItem, QuestionLectureMatch } from './types';
 import { Header } from './components/Header';
@@ -28,6 +33,11 @@ import { MobileBottomNav } from './components/MobileBottomNav';
 import { MusicPlayerProvider } from './components/music/MusicPlayerContext';
 import { MiniMusicPlayer } from './components/music/MiniMusicPlayer';
 import { AppRail } from './components/AppRail';
+import { SideNav } from './components/shell/SideNav';
+import { TopBar } from './components/shell/TopBar';
+import { TabBar } from './components/shell/TabBar';
+import { useUiVersion } from './utils/uiVersion';
+import { ConfirmHost, confirmDialog } from './components/ui/ConfirmDialog';
 import { PageHeader } from './components/ui/PageHeader';
 import { LearnFab } from './components/learn/LearnFab';
 import { SplashScreen, Onboarding } from './components/onboarding/Onboarding';
@@ -38,6 +48,9 @@ import { OfflineDatabaseModal } from './components/pwa/OfflineDatabaseModal';
 import { PwaInstallWelcomeModal, PWA_WELCOME_STORAGE_KEY } from './components/pwa/PwaInstallWelcomeModal';
 import { offlineDatabaseService } from './services/offlineDatabaseService';
 import { pwaService } from './services/pwaService';
+import { userNotificationService } from './services/userNotificationService';
+import { buildDeepLinkUrl, executeDeepLinkFocus, initDeepLinkAutoScroll } from './services/universalRedirectService';
+import { QuestionClusterAutomationModal } from './components/admin/QuestionClusterAutomationModal';
 
 function wrapLazy<T extends { default: React.ComponentType<any> }>(
   promise: Promise<T>
@@ -81,6 +94,7 @@ const PracticeMode = React.lazy(() => wrapLazy(import('./components/PracticeMode
 const StudyHub = React.lazy(() => wrapLazy(import('./components/study/StudyHub').then(m => ({ default: m.StudyHub }))));
 const BookletView = React.lazy(() => wrapLazy(import('./components/BookletView').then(m => ({ default: m.BookletView }))));
 const LeaderboardView = React.lazy(() => wrapLazy(import('./components/LeaderboardView').then(m => ({ default: m.LeaderboardView }))));
+const StatsView = React.lazy(() => wrapLazy(import('./components/stats/StatsView').then(m => ({ default: m.StatsView }))));
 const MusicView = React.lazy(() => wrapLazy(import('./components/MusicView').then(m => ({ default: m.MusicView }))));
 const LectureNotesView = React.lazy(() => wrapLazy(import('./components/LectureNotesView').then(m => ({ default: m.LectureNotesView }))));
 const PastExamsView = React.lazy(() => wrapLazy(import('./components/PastExamsView').then(m => ({ default: m.PastExamsView }))));
@@ -91,6 +105,7 @@ const TestCikmisView = React.lazy(() => wrapLazy(import('./components/TestCikmis
 const TesterOzetView = React.lazy(() => wrapLazy(import('./components/TesterOzetView').then(m => ({ default: m.TesterOzetView }))));
 const PracticeQuestionsView = React.lazy(() => wrapLazy(import('./components/PracticeQuestionsView')));
 const KazanimlarView = React.lazy(() => wrapLazy(import('./components/KazanimlarView').then(m => ({ default: m.KazanimlarView }))));
+const DiseasesView = React.lazy(() => wrapLazy(import('./components/diseases/DiseasesView').then(m => ({ default: m.DiseasesView }))));
 
 // Lazy-loaded Modals (Only downloaded when opened)
 const AdminPanelModal = React.lazy(() => wrapLazy(import('./components/AdminPanelModal').then(m => ({ default: m.AdminPanelModal }))));
@@ -101,6 +116,7 @@ const GithubPagesGuideModal = React.lazy(() => wrapLazy(import('./components/Git
 const AuthErrorModal = React.lazy(() => wrapLazy(import('./components/AuthErrorModal').then(m => ({ default: m.AuthErrorModal }))));
 const DriveSaveModal = React.lazy(() => wrapLazy(import('./components/DriveSaveModal').then(m => ({ default: m.DriveSaveModal }))));
 const UserAuthModal = React.lazy(() => wrapLazy(import('./components/UserAuthModal').then(m => ({ default: m.UserAuthModal }))));
+const ProfileSettingsView = React.lazy(() => wrapLazy(import('./components/settings/ProfileSettingsView').then(m => ({ default: m.ProfileSettingsView }))));
 const UserProfileModal = React.lazy(() => wrapLazy(import('./components/UserProfileModal').then(m => ({ default: m.UserProfileModal }))));
 const EditMyQuestionModal = React.lazy(() => wrapLazy(import('./components/EditMyQuestionModal').then(m => ({ default: m.EditMyQuestionModal }))));
 const RevisionHistoryModal = React.lazy(() => wrapLazy(import('./components/RevisionHistoryModal').then(m => ({ default: m.RevisionHistoryModal }))));
@@ -172,7 +188,10 @@ export default function App() {
         const p = new URLSearchParams(window.location.search);
         const qId = p.get('questionId');
         if (qId) {
-          return { route: 'past_exams' as ValidAppTab, param: qId };
+          // Eski paylaşım bağlantıları: /cikmis yolundaysa çıkmış sorusu, aksi halde havuz sorusu
+          // (havuzda yoksa aşağıdaki etki çıkmışa yönlendirir).
+          const past = /^\/(meds\/)?cikmis/.test(window.location.pathname);
+          return { route: (past ? 'past_exams' : 'questions') as ValidAppTab, param: qId };
         }
         if (/^manage\./i.test(window.location.hostname) && parsed.route === 'quick_add') {
           return { route: 'manage' as ValidAppTab, param: undefined as string | undefined };
@@ -182,6 +201,10 @@ export default function App() {
     return parsed;
   });
   const [activeTab, setActiveTabState] = useState<ValidAppTab>(initialRoute.route);
+  // Havuz derin bağlantısı: /sorular/<soruId> — o soru listenin başında gösterilir ve odaklanır.
+  const [poolFocusId, setPoolFocusId] = useState<string | undefined>(initialRoute.route === 'questions' ? initialRoute.param : undefined);
+  // v8 kabuğu yeni tasarımda; klasik tasarım (v2) eski üst çubuk, ray ve alt menüyle kalır
+  const { isV7: shellV8 } = useUiVersion();
   const setActiveTab = useCallback((tab: ValidAppTab) => {
     setActiveTabState(tab);
     writeLocation(tab);
@@ -204,10 +227,9 @@ export default function App() {
     }
   });
   const [searchQuery, setSearchQuery] = useState<string>('');
-  const [pastExamsSearchQuery, setPastExamsSearchQuery] = useState<string>(() => {
-    if (initialRoute.route === 'past_exams' && initialRoute.param) return initialRoute.param;
-    return '';
-  });
+  // /cikmis/<id> paylaşılan soruyu PastExamsView kendi gösterir; kimlik arama kutusuna yazılmaz
+  // (yazılınca "süzgeç değişti" sayılıp paylaşılan görünüm kapanıyor, adres /cikmis'e dönüyordu).
+  const [pastExamsSearchQuery, setPastExamsSearchQuery] = useState<string>('');
   const [filterMyQuestionsOnly, setFilterMyQuestionsOnly] = useState<boolean>(false);
 
   // Modals state
@@ -244,10 +266,25 @@ export default function App() {
       return false;
     }
   });
-  // İlk açılış: splash her açılışta kısa sürer; kayıtsız kullanıcıya tanıtım + kayıt gösterilir
-  const [showSplash, setShowSplash] = useState(true);
+  // İlk açılış: HTML splash ekranı (MeDSor nabız animasyonu) ilk andan itibaren görünür; React hazır olunca tek hamlede solar
+  const [showSplash, setShowSplash] = useState(false);
   const [showOnboarding, setShowOnboarding] = useState(() => isAuthModalOpen);
   const [isPwaWelcomeOpen, setIsPwaWelcomeOpen] = useState(false);
+  const [showClusterModal, setShowClusterModal] = useState(false);
+
+  useEffect(() => {
+    const el = document.getElementById('app-splash');
+    if (el) {
+      const reduce = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
+      const t = setTimeout(() => {
+        el.classList.add('is-leaving');
+        setTimeout(() => {
+          try { el.remove(); } catch {}
+        }, 400);
+      }, reduce ? 150 : 850);
+      return () => clearTimeout(t);
+    }
+  }, []);
 
   // Site açılışında PWA & Çevrimdışı Veritabanı Kurulum Önerisi
   useEffect(() => {
@@ -294,7 +331,17 @@ export default function App() {
   const [selectedLearnDeckId, setSelectedLearnDeckId] = useState<string | undefined>(
     initialRoute.route === 'learn' ? initialRoute.param : undefined
   );
-  const [selectedLearnSlideNumber, setSelectedLearnSlideNumber] = useState<number | undefined>(undefined);
+  const [selectedLearnSlideNumber, setSelectedLearnSlideNumber] = useState<number | undefined>(() => {
+    if (typeof window !== 'undefined') {
+      const sp = new URLSearchParams(window.location.search);
+      const s = sp.get('slide');
+      if (s) {
+        const n = parseInt(s, 10);
+        if (!isNaN(n)) return n;
+      }
+    }
+    return undefined;
+  });
   // Selected Ornek Sorular lesson and kazanim state
   const [selectedOrnekLessonId, setSelectedOrnekLessonId] = useState<string | null>(null);
   const [selectedOrnekKazanimNo, setSelectedOrnekKazanimNo] = useState<number | null>(null);
@@ -348,16 +395,33 @@ export default function App() {
   } | null>(null);
   const [hasAutoBackedUp, setHasAutoBackedUp] = useState<boolean>(false);
 
+  // Derin bağlantı odağı: ilk açılışta, geri/ileri ve çapa değişiminde hedef öğeye kaydırıp vurgular.
+  useEffect(() => initDeepLinkAutoScroll(), []);
+
   // Normalise legacy #tab links to their path once, then follow back / forward
   useEffect(() => {
-    writeLocation(initialRoute.route, initialRoute.param, true);
+    // Yol normalleştirilirken derin bağlantının sorgu (?opt, ?sec, ?highlight) ve çapası (#…) korunur.
+    try {
+      const next = pathFor(initialRoute.route, initialRoute.param);
+      const sp = new URLSearchParams(window.location.search);
+      sp.delete('questionId');
+      const qs = sp.toString();
+      if (window.location.pathname.replace(/^\/meds(?=\/|$)/, '') !== next || window.location.search.includes('questionId')) {
+        window.history.replaceState({ route: initialRoute.route, param: initialRoute.param }, '', next + (qs ? `?${qs}` : '') + window.location.hash);
+      }
+    } catch {
+      writeLocation(initialRoute.route, initialRoute.param, true);
+    }
     const onPop = () => {
       const { route, param } = parseLocation();
       setActiveTabState(route);
+      setPoolFocusId(route === 'questions' ? param : undefined);
       if (route === 'search') setSearchPageQuery(param || '');
       if (route === 'learn') {
         setSelectedLearnDeckId(param);
-        setSelectedLearnSlideNumber(undefined);
+        const sp = new URLSearchParams(window.location.search);
+        const s = sp.get('slide');
+        setSelectedLearnSlideNumber(s ? parseInt(s, 10) : undefined);
       }
     };
     window.addEventListener('popstate', onPop);
@@ -644,6 +708,7 @@ export default function App() {
   ) => {
     try {
       const updatedQuestion = await ApiService.addFragment(questionId, text, author, type);
+      logActivity('katki', 'Bir soruya hafıza parçası ekledin');
       if (updatedQuestion) {
         setQuestions((prev) =>
           prev.map((q) => (q.id === questionId ? updatedQuestion : q))
@@ -656,21 +721,10 @@ export default function App() {
 
   // Toggle Question Upvote (0ms Optimistic UI)
   const handleUpvoteQuestion = async (questionId: string) => {
-    const currentUserId = currentUser?.uid || currentUser?.email || localStorage.getItem('medsoru_device_token') || 'local_user';
+    const currentUserId = getVoterId(currentUser);
     setQuestions((prev) =>
       prev.map((q) => {
-        if (q.id === questionId) {
-          const likedBy = q.likedBy || [];
-          const idx = likedBy.indexOf(currentUserId);
-          const newLikedBy = idx >= 0
-            ? likedBy.filter((u) => u !== currentUserId)
-            : [...likedBy, currentUserId];
-          return {
-            ...q,
-            upvotes: idx >= 0 ? Math.max(0, (q.upvotes || 1) - 1) : (q.upvotes || 0) + 1,
-            likedBy: newLikedBy,
-          };
-        }
+        if (q.id === questionId) return toggledVote(q, currentUserId);
         return q;
       })
     );
@@ -683,7 +737,7 @@ export default function App() {
 
   // Upvote memory fragment (0ms Optimistic UI)
   const handleUpvoteFragment = async (questionId: string, fragmentId: string) => {
-    const currentUserId = currentUser?.uid || currentUser?.email || localStorage.getItem('medsoru_device_token') || 'local_user';
+    const currentUserId = getVoterId(currentUser);
     setQuestions((prev) =>
       prev.map((q) => {
         if (q.id === questionId) {
@@ -691,16 +745,7 @@ export default function App() {
             ...q,
             fragments: q.fragments.map((f) => {
               if (f.id === fragmentId) {
-                const likedBy = f.likedBy || [];
-                const idx = likedBy.indexOf(currentUserId);
-                const newLikedBy = idx >= 0
-                  ? likedBy.filter((u) => u !== currentUserId)
-                  : [...likedBy, currentUserId];
-                return {
-                  ...f,
-                  upvotes: idx >= 0 ? Math.max(0, (f.upvotes || 1) - 1) : (f.upvotes || 0) + 1,
-                  likedBy: newLikedBy,
-                };
+                return toggledVote(f, currentUserId);
               }
               return f;
             }),
@@ -725,6 +770,7 @@ export default function App() {
   ) => {
     try {
       const updatedQuestion = await ApiService.addOption(questionId, key, text, suggestedBy);
+      logActivity('katki', `Bir soruya ${key} şıkkını ekledin`);
       if (updatedQuestion) {
         setQuestions((prev) =>
           prev.map((q) => (q.id === questionId ? updatedQuestion : q))
@@ -740,7 +786,7 @@ export default function App() {
     questionId: string,
     key: 'A' | 'B' | 'C' | 'D' | 'E'
   ) => {
-    const currentUserId = currentUser?.uid || currentUser?.email || localStorage.getItem('medsoru_device_token') || 'local_user';
+    const currentUserId = getVoterId(currentUser);
     setQuestions((prev) =>
       prev.map((q) => {
         if (q.id === questionId) {
@@ -748,16 +794,7 @@ export default function App() {
             ...q,
             options: q.options.map((o) => {
               if (o.key === key) {
-                const likedBy = o.likedBy || [];
-                const idx = likedBy.indexOf(currentUserId);
-                const newLikedBy = idx >= 0
-                  ? likedBy.filter((u) => u !== currentUserId)
-                  : [...likedBy, currentUserId];
-                return {
-                  ...o,
-                  upvotes: idx >= 0 ? Math.max(0, (o.upvotes || 1) - 1) : (o.upvotes || 0) + 1,
-                  likedBy: newLikedBy,
-                };
+                return toggledVote(o, currentUserId);
               }
               return o;
             }),
@@ -792,7 +829,7 @@ export default function App() {
   const handleDeleteQuestion = async (targetQ: QuestionItem) => {
     const isDraft = targetQ.isUnassignedNumber || targetQ.questionNumber === 0;
     const label = isDraft ? `"${targetQ.topic || 'Bu taslağı'}"` : `Soru #${targetQ.questionNumber}'ı`;
-    if (!window.confirm(`${label} kalıcı olarak veritabanından silmek istediğinize emin misiniz? Bu işlem geri alınamaz.`)) {
+    if (!(await confirmDialog({ title: isDraft ? 'Taslak silinsin mi?' : `Soru #${targetQ.questionNumber} silinsin mi?`, message: `${isDraft ? `“${targetQ.topic || 'Taslak'}” ` : ''}Veritabanından kalıcı olarak silinir. Bu işlem geri alınamaz.`, confirmLabel: 'Kalıcı sil', tone: 'danger' }))) {
       return;
     }
     try {
@@ -804,19 +841,44 @@ export default function App() {
     }
   };
 
-  // Trigger Gemini AI Reconstruction
+  // Trigger Free AI Reconstruction via Queue
   const handleReconstructWithAi = async (questionId: string) => {
     setReconstructingMap((prev) => ({ ...prev, [questionId]: true }));
+    const targetQ = questions.find((q) => q.id === questionId);
+    const qNum = targetQ?.questionNumber ? `#${targetQ.questionNumber}` : 'Taslak soru';
+
+    toast.info('AI Kuyruğuna Eklendi', `${qNum} ücretsiz yapay zekâ işlem sırasına alındı.`);
+
+    userNotificationService.addNotification({
+      type: 'ai_queued',
+      title: `${qNum} AI Kuyruğuna Alındı`,
+      message: `${qNum} için yapay zeka rekonstrüksiyon isteği ücretsiz sıraya eklendi.`,
+      targetType: 'pool_question',
+      targetId: questionId,
+      deepLinkUrl: buildDeepLinkUrl({ type: 'pool_question', id: questionId, committeeId: targetQ?.committeeId }),
+      userEmail: currentUser?.email || undefined,
+    });
+
     try {
       const updatedQuestion = await ApiService.reconstructWithAi(questionId);
       if (updatedQuestion) {
         setQuestions((prev) =>
           prev.map((q) => (q.id === questionId ? updatedQuestion : q))
         );
+        toast.success('AI Redaksiyonu Tamamlandı', `${qNum} başarıyla yeniden kuruldu ve müfredatla eşleştirildi.`);
+        userNotificationService.addNotification({
+          type: 'ai_reconstruction_complete',
+          title: `✓ ${qNum} AI Redaksiyonu Tamamlandı`,
+          message: `${qNum} yapay zekâ tarafından başarıyla yeniden kuruldu, şıklar ve açıklamalar oluşturuldu.`,
+          targetType: 'pool_question',
+          targetId: questionId,
+          deepLinkUrl: buildDeepLinkUrl({ type: 'pool_question', id: questionId, committeeId: targetQ?.committeeId }),
+          userEmail: currentUser?.email || undefined,
+        });
       }
     } catch (err: any) {
       console.error('Reconstruct error:', err);
-      alert('Yapay zeka rekonstrüksiyonu sırasında bağlantı hatası oluştu: ' + (err.message || ''));
+      toast.error('AI İşlem Hatası', 'Yapay zeka işlemi tamamlanamadı: ' + (err.message || ''));
     } finally {
       setReconstructingMap((prev) => ({ ...prev, [questionId]: false }));
     }
@@ -1031,7 +1093,28 @@ export default function App() {
   }, [selectedCommitteeId, selectedDiscipline, selectedStatus, searchQuery, filterMyQuestionsOnly]);
 
   const poolQuestions = filterMyQuestionsOnly ? myQuestions : filteredQuestions;
-  const displayedQuestions = poolQuestions.slice(0, visibleCount);
+  const poolFocusQuestion = poolFocusId ? questions.find((q) => String(q.id) === String(poolFocusId)) : undefined;
+  const displayedQuestions = poolFocusQuestion ? [poolFocusQuestion] : poolQuestions.slice(0, visibleCount);
+  // Havuz derin bağlantısı: soru yüklenince ona kaydır (?opt / ?sec çapası executeDeepLinkFocus ile);
+  // havuzda yoksa (eski ?questionId bağlantısı çıkmış sorusuysa) Çıkmış'a geçilir.
+  useEffect(() => {
+    if (activeTab !== 'questions' || !poolFocusId || loading) return;
+    if (!poolFocusQuestion) {
+      if (questions.length > 0) {
+        setPoolFocusId(undefined);
+        setActiveTabState('past_exams');
+        writeLocation('past_exams', poolFocusId, true);
+      }
+      return;
+    }
+    const t = window.setTimeout(() => {
+      const el = document.querySelector(`[data-qid="${CSS.escape(String(poolFocusId))}"]`);
+      el?.scrollIntoView({ block: 'start' });
+      if (window.location.hash || window.location.search) executeDeepLinkFocus();
+    }, 250);
+    return () => window.clearTimeout(t);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [activeTab, poolFocusId, loading, Boolean(poolFocusQuestion), questions.length]);
 
   // Jump to a single question in the pool (home rows, practice "full explanation")
   const openQuestion = (q: QuestionItem) => {
@@ -1091,6 +1174,7 @@ export default function App() {
       {showOnboarding && !currentUser && <Onboarding onAuthSuccess={handleAuthSuccess} />}
       <div className="min-h-dvh bg-canvas text-ink flex flex-col font-sans antialiased">
       <ToastHost />
+      <ConfirmHost />
       <TooltipHost />
       {activeTab !== 'music' && activeTab !== 'practice' && activeTab !== 'manage' && (
         <MiniMusicPlayer onOpen={() => setActiveTab('music')} />
@@ -1159,9 +1243,56 @@ export default function App() {
       ) : (
       <>
       {/* v3 shell: icon rail on tablet/desktop, bottom tabs on phones */}
-      <AppRail activeTab={activeTab} setActiveTab={setActiveTab} isAdmin={isAdmin} />
-      <div className="ms-shell md:pl-[76px] lg:pl-[208px] flex-1 flex flex-col min-w-0">
-      {/* Navigation Header with Google Auth & Drive */}
+      {shellV8 ? (
+        <SideNav active={activeTab} onGo={setActiveTab} isAdmin={isAdmin} user={currentUser} />
+      ) : (
+        <AppRail activeTab={activeTab} setActiveTab={setActiveTab} isAdmin={isAdmin} />
+      )}
+      <div className={shellV8 ? 'sh-app' : 'ms-shell md:pl-[76px] lg:pl-[208px] flex-1 flex flex-col min-w-0'}>
+      {shellV8 ? (
+        <TopBar
+          active={activeTab}
+          onGo={setActiveTab}
+          user={currentUser}
+          isAdmin={isAdmin}
+          searchQuery={searchQuery}
+          onSearch={(q, focusId) => openSearchPage(q, focusId)}
+          onOpenOffline={() => setIsOfflineModalOpen(true)}
+          actions={{
+            onSettings: () => setActiveTab('settings'),
+            onContribute: () => {
+              setContributeDefaultNumber(undefined);
+              setIsContributeModalOpen(true);
+            },
+            onPdf: () => setIsPdfModalOpen(true),
+            onOffline: () => setIsOfflineModalOpen(true),
+            onLogin: () => {
+              setAuthModalInitialMode('login');
+              setIsAuthModalOpen(true);
+            },
+            onAdminLogin: () => {
+              setAuthModalInitialMode('admin');
+              setIsAuthModalOpen(true);
+            },
+            onLogout: handleGoogleLogout,
+            isLoggingIn,
+            admin: isAdmin
+              ? {
+                  onConsole: () => setActiveTab('manage'),
+                  onFaz14: () => setActiveTab('test_cikmis'),
+                  onDiagnostics: () => setIsDiagnosticsOpen(true),
+                  onPastExam: () => setIsPastExamImporterOpen(true),
+                  onNotebookLM: () => setIsNotebookLMModalOpen(true),
+                  onDrive: () => handleDriveUpload(false),
+                  driveBusy: isUploadingToDrive,
+                  driveFresh: !!driveUploadSuccess?.webViewLink,
+                  onNewCommittee: () => setIsNewCommitteeModalOpen(true),
+                  onSubagents: () => setIsSubagentMonitorOpen(true),
+                }
+              : undefined,
+          }}
+        />
+      ) : (
       <Header
         searchQuery={searchQuery}
         onSearch={(q, focusId) => openSearchPage(q, focusId)}
@@ -1179,7 +1310,7 @@ export default function App() {
         onOpenPastExamModal={isAdmin ? () => setIsPastExamImporterOpen(true) : undefined}
         onOpenNotebookLMModal={isAdmin ? () => setIsNotebookLMModalOpen(true) : undefined}
         onOpenSubagentMonitor={isAdmin ? () => setIsSubagentMonitorOpen(true) : undefined}
-        onOpenProfileModal={() => setIsProfileModalOpen(true)}
+        onOpenProfileModal={() => setActiveTab('settings')}
         onOpenAuthModal={(m) => {
           setAuthModalInitialMode(m);
           setIsAuthModalOpen(true);
@@ -1202,8 +1333,16 @@ export default function App() {
         onOpenDiagnostics={isAdmin ? () => setIsDiagnosticsOpen(true) : undefined}
         onOpenOfflineModal={() => setIsOfflineModalOpen(true)}
       />
+      )}
 
-      {!isOnline && (
+      {!isOnline && shellV8 && (
+        <div className="sh-offline" role="status">
+          <i aria-hidden="true" />
+          <span><b>Çevrimdışısın.</b> Sorular ve desteler cihazdaki kopyadan açılıyor.</span>
+          <button type="button" onClick={() => setIsOfflineModalOpen(true)}>Veritabanı</button>
+        </div>
+      )}
+      {!isOnline && !shellV8 && (
         <div className="bg-warn/15 border-b border-warn/30 px-4 py-2.5 text-xs flex items-center justify-between text-warn dark:text-amber-200">
           <div className="flex items-center gap-2">
             <span className="w-2 h-2 rounded-full bg-warn animate-pulse shrink-0" />
@@ -1220,7 +1359,7 @@ export default function App() {
       )}
 
       {/* Main Container */}
-      <main key={activeTab} className={`ms-view-enter min-w-0 flex-1 max-w-[1180px] w-full mx-auto px-4 sm:px-5 lg:px-6 pt-3 sm:pt-4 flex flex-col gap-3 ${activeTab === 'ai_chat' ? 'ms-chat-main pb-[84px] md:pb-4' : 'pb-24 md:pb-8'}`}>
+      <main key={activeTab} className={shellV8 ? `sh-main ms-view-enter ${activeTab === 'ai_chat' ? 'ms-chat-main' : ''}` : `ms-view-enter min-w-0 flex-1 max-w-[1180px] w-full mx-auto px-4 sm:px-5 lg:px-6 pt-3 sm:pt-4 flex flex-col gap-3 ${activeTab === 'ai_chat' ? 'ms-chat-main pb-[84px] md:pb-4' : 'pb-24 md:pb-8'}`}>
 
         {/* Drive Upload Notification Banner if successful */}
         {driveUploadSuccess && (
@@ -1367,6 +1506,18 @@ export default function App() {
           </Suspense>
         )}
 
+        {/* TAB: Diseases Atlas / Tıbbi Hastalıklar & Klinik Atlas */}
+        {activeTab === 'diseases' && (
+          <Suspense fallback={<ViewFallback />}>
+            <DiseasesView
+              currentUser={currentUser}
+              onOpenReportModal={(t) => {
+                toast.info('Hata Bildirimi Alındı', `${t.title} için bildiriminiz inceleme sırasına eklendi.`);
+              }}
+            />
+          </Suspense>
+        )}
+
         {/* TAB 1: Questions List */}
         {activeTab === 'questions' && (
           <div className="flex flex-col gap-3 sm:gap-5">
@@ -1390,6 +1541,15 @@ export default function App() {
                       </option>
                     ))}
                   </select>
+                  <button
+                    type="button"
+                    onClick={() => setShowClusterModal(true)}
+                    className="inline-flex h-10 px-3.5 rounded-[10px] bg-teal-500/10 hover:bg-teal-500/20 text-teal-400 border border-teal-500/30 font-semibold text-sm items-center gap-2 cursor-pointer shadow-sm transition-all"
+                    title="Yapay zeka soru eşleme ve birleştirilmiş öneri taslakları"
+                  >
+                    <BrainCircuit className="w-4 h-4 text-teal-400" />
+                    <span>Öneri Taslak Havuzu</span>
+                  </button>
                   <button
                     type="button"
                     onClick={() => {
@@ -1438,29 +1598,32 @@ export default function App() {
 
             {/* Questions Stream */}
             {loading ? (
-              <div className="text-center py-16 bg-white rounded-2xl border border-line">
-                <RefreshCw className="w-6 h-6 text-accent animate-spin mx-auto mb-3" />
-                <p className="m-0 text-base text-ink-2">Soru havuzu yükleniyor…</p>
+              <div className="flex flex-col gap-3" aria-busy="true" aria-label="Soru havuzu yükleniyor">
+                {[0, 1, 2].map((i) => (
+                  <div key={i} className="ui-card flex flex-col gap-2.5">
+                    <div className="ui-skel" style={{ width: '32%', height: 10 }} />
+                    <div className="ui-skel" style={{ height: 14 }} />
+                    <div className="ui-skel" style={{ width: '78%', height: 14 }} />
+                    <div className="ui-skel" style={{ width: '54%', height: 10, marginTop: 6 }} />
+                  </div>
+                ))}
               </div>
             ) : poolQuestions.length === 0 ? (
-              <div className="bg-white rounded-2xl border border-line px-6 py-14 text-center flex flex-col items-center gap-4">
-                <div>
-                  <h3 className="m-0 font-display text-2xl font-bold tracking-[-0.02em]">
-                    {filterMyQuestionsOnly ? 'Henüz katkıda bulunduğun soru yok' : 'Bu kriterlere uyan soru yok'}
+              <div className="ui-card flex flex-col items-center text-center gap-3" style={{ paddingBlock: 40 }}>
+                <span className="ui-ico is-soft" style={{ width: 44, height: 44, borderRadius: 12 }}><Plus className="w-5 h-5" /></span>
+                <div className="flex flex-col gap-1">
+                  <h3 className="m-0 font-display text-xl font-bold tracking-[-0.02em]">
+                    {filterMyQuestionsOnly ? 'Henüz katkıda bulunduğun soru yok' : 'Bu süzgeçlere uyan soru yok'}
                   </h3>
-                  <p className="m-0 mt-1.5 text-md text-ink-2 max-w-[420px]">
+                  <p className="m-0 text-base text-ink-2 max-w-[420px]">
                     {filterMyQuestionsOnly
-                      ? 'Aklında kalan parçaları ekleyerek kurul arşivine katkı sağlayabilirsin.'
-                      : 'Henüz soru girilmemiş olabilir ya da filtreye uyan soru yok.'}
+                      ? 'Aklında kalan tek bir kelime bile işe yarar; parçayı ekle, kaynaklarla tamamlansın.'
+                      : 'Branşı ya da durumu değiştir, veya aramayı kısalt.'}
                   </p>
                 </div>
-                <div className="flex items-center justify-center gap-2">
+                <div className="flex flex-wrap items-center justify-center gap-2">
                   {filterMyQuestionsOnly && (
-                    <button
-                      type="button"
-                      onClick={() => setFilterMyQuestionsOnly(false)}
-                      className="h-11 px-4 rounded-[10px] border border-line-2 bg-white font-semibold cursor-pointer"
-                    >
+                    <button type="button" onClick={() => setFilterMyQuestionsOnly(false)} className="ui-btn">
                       Tüm soruları göster
                     </button>
                   )}
@@ -1470,14 +1633,21 @@ export default function App() {
                       setContributeDefaultNumber(undefined);
                       setIsContributeModalOpen(true);
                     }}
-                    className="h-11 px-5 rounded-[10px] bg-accent hover:bg-accent-hover text-white font-semibold cursor-pointer"
+                    className="ui-btn is-primary"
                   >
-                    İlk soruyu ekle
+                    Soru parçası ekle
                   </button>
                 </div>
               </div>
             ) : (
               <div className="flex flex-col gap-3 sm:gap-5">
+                {poolFocusQuestion && (
+                  <div className="ms-shared-band" role="status">
+                    <Share2 className="w-4 h-4 shrink-0" aria-hidden />
+                    <span className="min-w-0 flex-1">Paylaşılan soru gösteriliyor</span>
+                    <button type="button" onClick={() => { setPoolFocusId(undefined); writeLocation('questions'); }} className="ms-btn is-ghost is-sm">Tüm sorular <ChevronRight className="w-4 h-4" /></button>
+                  </div>
+                )}
                 {displayedQuestions.map((q) => (
                   <div key={q.id} data-qid={q.id} className="scroll-mt-20 min-w-0">
                   <QuestionCard
@@ -1635,6 +1805,11 @@ export default function App() {
         )}
 
         {/* TAB 5: Leaderboard / Katkı Sıralaması */}
+        {activeTab === 'stats' && (
+          <Suspense fallback={<ViewFallback />}>
+            <StatsView questions={questions} currentUser={currentUser} onGo={(r) => setActiveTab(r)} />
+          </Suspense>
+        )}
         {activeTab === 'leaderboard' && (
           <Suspense fallback={<ViewFallback />}>
             <LeaderboardView
@@ -1647,6 +1822,25 @@ export default function App() {
                 setContributeDefaultNumber(undefined);
                 setIsContributeModalOpen(true);
               }}
+            />
+          </Suspense>
+        )}
+
+        {/* Profil ve ayarlar: kimlik, tema × palet, yoğunluk, klasik tasarım */}
+        {activeTab === 'settings' && (
+          <Suspense fallback={<ViewFallback />}>
+            <ProfileSettingsView
+              currentUser={currentUser}
+              isAdmin={isAdmin}
+              questions={questions}
+              onUpdateUser={(u: AppUser) => setCurrentUser(u)}
+              onOpenAuth={() => {
+                setAuthModalInitialMode('login');
+                setIsAuthModalOpen(true);
+              }}
+              onLogout={handleGoogleLogout}
+              onOpenAdmin={() => setActiveTab('admin')}
+              onOpenOffline={() => setIsOfflineModalOpen(true)}
             />
           </Suspense>
         )}
@@ -1738,7 +1932,16 @@ export default function App() {
         </div>
       </footer>
 
-      {/* Mobile-First Bottom Navigation Bar */}
+      {/* Alt gezinme: v8 TabBar, klasik tasarımda eski alt menü */}
+      {shellV8 ? (
+        <TabBar
+          active={activeTab}
+          onGo={setActiveTab}
+          isAdmin={isAdmin}
+          onPdf={() => setIsPdfModalOpen(true)}
+          onOffline={() => setIsOfflineModalOpen(true)}
+        />
+      ) : (
       <MobileBottomNav
         activeTab={activeTab}
         setActiveTab={setActiveTab}
@@ -1753,6 +1956,7 @@ export default function App() {
         onUploadToDrive={() => handleDriveUpload(false)}
         onOpenOfflineModal={() => setIsOfflineModalOpen(true)}
       />
+      )}
       </div>
       </>
       )}
@@ -2014,6 +2218,14 @@ export default function App() {
           />
         </Suspense>
       )}
+
+      {/* Soru Havuzu Kümeleme ve Öneri Taslak Otomasyonu Modalı */}
+      <QuestionClusterAutomationModal
+        isOpen={showClusterModal}
+        onClose={() => setShowClusterModal(false)}
+        currentUser={currentUser}
+        isAdmin={isAdmin}
+      />
 
       </div>
     </MusicPlayerProvider>

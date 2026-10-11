@@ -23,12 +23,18 @@
 
 import { QuestionItem } from '../types';
 import { SupabaseDbService } from './supabaseDb';
+import { defaultApiBaseForThisHost } from '../config/deployment';
 
 function getCustomApiUrl(): string {
   if (typeof window === 'undefined' || !window.localStorage) return '';
   const url = localStorage.getItem('medsoru_custom_api_url') || '';
   if (url && (url.includes('github.io') || url.includes('github.com'))) return '';
-  return url.trim().replace(/\/$/, '');
+  if (url.trim()) return url.trim().replace(/\/$/, '');
+  try {
+    return defaultApiBaseForThisHost();
+  } catch (_) {
+    return '';
+  }
 }
 
 const DB_NAME = 'medsoru_past_questions_db';
@@ -482,6 +488,21 @@ class PastQuestionsCacheService {
       const localCount = localQuestions.length;
       let lastSyncTime = await this.getLastSyncTime();
 
+      // Çevrimdışı Kontrolü: Cihaz internetsizse doğrudan cihaz hafızasını sun, ağı bekleme
+      if (typeof navigator !== 'undefined' && !navigator.onLine) {
+        this.syncInProgress = false;
+        this.currentStatus.isSyncing = false;
+        this.currentStatus.isUpToDate = true;
+        this.currentStatus.statusMessage = 'Çevrimdışı mod: Cihaz hafızasındaki sorular hazır.';
+        this.notifyListeners();
+        return {
+          success: true,
+          updatedCount: 0,
+          isUpToDate: true,
+          totalCount: localCount,
+        };
+      }
+
       // Eğer hiç soru yoksa veya zorunlu tam çekim istenmişse tam yükleme yap
       if (localCount === 0 || options.forceFull || !lastSyncTime) {
         const fullResult = await this.performInitialLoad();
@@ -537,23 +558,27 @@ class PastQuestionsCacheService {
               return { success: true, updatedCount: 0, isUpToDate: true, totalCount: localCount };
             }
 
-            if (data.updatedQuestions && Array.isArray(data.updatedQuestions) && data.updatedQuestions.length > 0) {
-              await this.saveBatch(data.updatedQuestions);
+            const incomingQuestions = (Array.isArray(data.updatedQuestions) && data.updatedQuestions.length > 0)
+              ? data.updatedQuestions
+              : (Array.isArray(data.questions) && data.questions.length > 0 ? data.questions : null);
+
+            if (incomingQuestions && incomingQuestions.length > 0) {
+              await this.saveBatch(incomingQuestions);
               if (data.lastModified) {
-                await this.setLastSyncTime(data.lastModified, data.count);
+                await this.setLastSyncTime(data.lastModified, data.count || incomingQuestions.length);
                 this.currentStatus.lastSyncTime = data.lastModified;
               }
-              options.onUpdate?.(data.updatedQuestions);
+              options.onUpdate?.(incomingQuestions);
 
               this.syncInProgress = false;
               this.currentStatus.isSyncing = false;
               this.currentStatus.isUpToDate = true;
-              this.currentStatus.lastSyncDeltaCount = data.updatedQuestions.length;
-              this.currentStatus.statusMessage = `${data.updatedQuestions.length} adet soru cihazınızda güncellendi.`;
-              this.notifyListeners(data.updatedQuestions);
+              this.currentStatus.lastSyncDeltaCount = incomingQuestions.length;
+              this.currentStatus.statusMessage = `${incomingQuestions.length} adet soru cihazınızda güncellendi.`;
+              this.notifyListeners(incomingQuestions);
               return {
                 success: true,
-                updatedCount: data.updatedQuestions.length,
+                updatedCount: incomingQuestions.length,
                 isUpToDate: true,
                 totalCount: this.memoryMap.size,
               };

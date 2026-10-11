@@ -418,7 +418,7 @@ export const ManageDraftsSection: React.FC<ManageDraftsSectionProps> = ({
     const isRec = reconstructingIds.has(q.id);
     const isDel = deletingIds.has(q.id);
     return (
-      <span className={`inline-flex items-center gap-1 ${compact ? '' : 'flex-wrap'}`} onClick={(e) => e.stopPropagation()}>
+      <span className="inline-flex flex-wrap items-center gap-1" onClick={(e) => e.stopPropagation()}>
         <button type="button" onClick={() => setEditingDraft(q)} className="ms-btn is-sm is-ghost" title="Taslağı düzenle">
           <Pencil /> Düzenle
         </button>

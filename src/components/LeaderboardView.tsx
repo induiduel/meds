@@ -1,4 +1,6 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useLayoutEffect, useRef } from 'react';
+import { useUiVersion } from '../utils/uiVersion';
+import { Segmented } from './ui/kit';
 import { PageHeader } from './ui/PageHeader';
 import { EmptySearch } from './ui/Animations';
 import {
@@ -20,6 +22,7 @@ import {
 import { QuestionItem, Committee } from '../types';
 import { AppUser } from '../services/auth';
 import { getCleanRumuz } from '../services/profanityFilter';
+import { computeContributorStats } from '../utils/contributionScore';
 
 interface LeaderboardViewProps {
   questions: QuestionItem[];
@@ -30,17 +33,6 @@ interface LeaderboardViewProps {
   onOpenContributeModal: () => void;
 }
 
-interface ContributorStats {
-  id: string;
-  name: string;
-  studentNumber?: string;
-  questionsCount: number;
-  optionsCount: number;
-  upvotesCount: number;
-  revisionsCount: number;
-  totalPoints: number;
-  isCurrentUser: boolean;
-}
 
 export const LeaderboardView: React.FC<LeaderboardViewProps> = ({
   questions,
@@ -52,6 +44,9 @@ export const LeaderboardView: React.FC<LeaderboardViewProps> = ({
 }) => {
   const [filterScope, setFilterScope] = useState<'current' | 'all'>('current');
   const [searchTerm, setSearchTerm] = useState('');
+  const { isV7 } = useUiVersion();
+  const listRef = useRef<HTMLOListElement>(null);
+  const lastPos = useRef<Map<string, number>>(new Map());
 
   const currentCommittee = committees.find((c) => c.id === selectedCommitteeId);
 
@@ -61,169 +56,7 @@ export const LeaderboardView: React.FC<LeaderboardViewProps> = ({
       ? questions.filter((q) => q.committeeId === selectedCommitteeId)
       : questions;
 
-    const statsMap: Record<string, ContributorStats> = {};
-
-    // Yapay zeka botları ve sistem hesaplarını sıralamadan hariç tut
-    const isBotOrSystem = (name?: string, key?: string) => {
-      const s = `${name || ''} ${key || ''}`.toLocaleLowerCase('tr-TR');
-      return (
-        s.includes('yapay zeka') ||
-        s.includes('ai (') ||
-        s.includes(' ai') ||
-        s.startsWith('ai') ||
-        s.includes('bot') ||
-        s.includes('gemini') ||
-        s.includes('gpt') ||
-        s.includes('deepseek') ||
-        s.includes('claude') ||
-        s.includes('asistan') ||
-        s.includes('reconstruct') ||
-        s.includes('otomasyon') ||
-        s.includes('sistem') ||
-        s.includes('system') ||
-        s.includes('ocr') ||
-        s.includes('taranmış') ||
-        s.includes('arşivi') ||
-        s.includes('arşiv') ||
-        s.includes('taslak ayırma')
-      );
-    };
-
-    // Helper to get or create stats entry
-    const getEntry = (key: string, name: string, studentNumber?: string): ContributorStats | null => {
-      if (isBotOrSystem(name, key)) return null;
-      const cleanKey = key.trim().toLowerCase();
-      if (!statsMap[cleanKey]) {
-        const isCurrent = !!(
-          (currentUser?.uid && key === currentUser.uid) ||
-          (currentUser?.displayName && cleanKey === currentUser.displayName.toLowerCase())
-        );
-
-        statsMap[cleanKey] = {
-          id: cleanKey,
-          name: getCleanRumuz(name || 'Anonim Tıbbiyeli'),
-          studentNumber: studentNumber || (isCurrent ? currentUser?.studentNumber || undefined : undefined),
-          questionsCount: 0,
-          optionsCount: 0,
-          upvotesCount: 0,
-          revisionsCount: 0,
-          totalPoints: 0,
-          isCurrentUser: isCurrent,
-        };
-      }
-      return statsMap[cleanKey];
-    };
-
-    // Calculate points from questions
-    relevantQuestions.forEach((q) => {
-      // 1. Question creators
-      if (q.contributedByName || q.contributedByUid) {
-        const key = q.contributedByUid || q.contributedByName!;
-        const entry = getEntry(key, q.contributedByName || 'Öğrenci', q.contributedByStudentNumber);
-        if (entry) {
-          entry.questionsCount += 1;
-          entry.totalPoints += 10; // +10 points for introducing a question
-        }
-      }
-
-      // 2. Memory fragments (stem, clue, text)
-      q.fragments.forEach((f) => {
-        if (f.author && f.author !== 'Anonim' && f.author !== 'Hafıza Parçası') {
-          const key = f.authorUid || f.author;
-          const entry = getEntry(key, f.author, f.authorStudentNumber);
-          if (entry) {
-            if (f.type === 'stem') {
-              entry.questionsCount += 1;
-              entry.totalPoints += 10;
-            } else {
-              entry.totalPoints += 5;
-            }
-            entry.upvotesCount += (f.upvotes || 0);
-            entry.totalPoints += (f.upvotes || 0) * 2; // +2 points per upvote
-          }
-        }
-      });
-
-      // 3. Options
-      q.options.forEach((opt) => {
-        if (opt.suggestedBy && opt.suggestedBy !== 'Anonim' && !opt.isAiGenerated) {
-          const key = opt.suggestedByUid || opt.suggestedBy;
-          const entry = getEntry(key, opt.suggestedBy);
-          if (entry) {
-            entry.optionsCount += 1;
-            entry.totalPoints += 5; // +5 points for providing an option
-            entry.upvotesCount += (opt.upvotes || 0);
-            entry.totalPoints += (opt.upvotes || 0) * 2; // +2 points per upvote
-          }
-        }
-      });
-
-      // 4. Revisions
-      if (q.revisions) {
-        q.revisions.forEach((rev) => {
-          if (rev.editorName && rev.editorName !== 'Anonim') {
-            const key = rev.editorUid || rev.editorName;
-            const entry = getEntry(key, rev.editorName, rev.editorStudentNumber);
-            if (entry) {
-              entry.revisionsCount += 1;
-              entry.totalPoints += 5; // +5 points for refining and editing
-            }
-          }
-        });
-      }
-    });
-
-    // Ensure current logged-in user is listed even if 0 contributions
-    if (currentUser) {
-      const userKey = currentUser.uid || currentUser.displayName || currentUser.email || 'me';
-      const cleanUserKey = userKey.trim().toLowerCase();
-      if (!statsMap[cleanUserKey]) {
-        statsMap[cleanUserKey] = {
-          id: cleanUserKey,
-          name: getCleanRumuz(currentUser.displayName || currentUser.email?.split('@')[0] || 'Ben'),
-          studentNumber: currentUser.studentNumber || undefined,
-          questionsCount: 0,
-          optionsCount: 0,
-          upvotesCount: 0,
-          revisionsCount: 0,
-          totalPoints: 0,
-          isCurrentUser: true,
-        };
-      } else {
-        statsMap[cleanUserKey].isCurrentUser = true;
-      }
-    }
-
-    // Add sample registered classmates who haven't contributed yet so they appear in list as requested
-    const samplePassiveUsers = [
-      { key: 'ogrenci_ali', name: 'Alperen_Tıp3', studentNumber: '2101030012' },
-      { key: 'ogrenci_selin', name: 'DrSelin', studentNumber: '2101030045' },
-      { key: 'ogrenci_burak', name: 'BurakC_Med', studentNumber: '2101030089' },
-    ];
-    samplePassiveUsers.forEach((su) => {
-      if (!statsMap[su.key]) {
-        statsMap[su.key] = {
-          id: su.key,
-          name: getCleanRumuz(su.name),
-          studentNumber: su.studentNumber,
-          questionsCount: 0,
-          optionsCount: 0,
-          upvotesCount: 0,
-          revisionsCount: 0,
-          totalPoints: 0,
-          isCurrentUser: false,
-        };
-      }
-    });
-
-    // Sort descending by totalPoints
-    const sorted = Object.values(statsMap).sort((a, b) => {
-      if (b.totalPoints !== a.totalPoints) return b.totalPoints - a.totalPoints;
-      if (b.questionsCount !== a.questionsCount) return b.questionsCount - a.questionsCount;
-      return b.upvotesCount - a.upvotesCount;
-    });
-
-    return sorted;
+    return computeContributorStats(relevantQuestions, currentUser, { includeSamplePassive: true });
   }, [questions, selectedCommitteeId, filterScope, currentUser]);
 
   const filteredLeaderboard = useMemo(() => {
@@ -240,6 +73,24 @@ export const LeaderboardView: React.FC<LeaderboardViewProps> = ({
 
   const me = leaderboard.find((x) => x.isCurrentUser);
   const myRank = me ? leaderboard.indexOf(me) + 1 : 0;
+
+  // Canlı sıralama: sıra değişince satırlar eski yerinden yenisine kayar (FLIP)
+  useLayoutEffect(() => {
+    const ol = listRef.current;
+    if (!ol) return;
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const next = new Map<string, number>();
+    ol.querySelectorAll<HTMLElement>('li[data-id]').forEach((li) => {
+      const id = li.dataset.id!;
+      const top = li.offsetTop;
+      next.set(id, top);
+      const prev = lastPos.current.get(id);
+      if (!reduce && prev !== undefined && prev !== top) {
+        li.animate([{ transform: `translateY(${prev - top}px)` }, { transform: 'none' }], { duration: 320, easing: 'cubic-bezier(.32,.72,0,1)' });
+      }
+    });
+    lastPos.current = next;
+  });
   const maxPoints = Math.max(1, leaderboard[0]?.totalPoints || 1);
   const initials = (name: string) =>
     name
@@ -269,6 +120,15 @@ export const LeaderboardView: React.FC<LeaderboardViewProps> = ({
 
       {/* Kapsam + kurul */}
       <div className="ds-toolbar">
+        {isV7 ? (
+          <Segmented<'current' | 'all'>
+            className="lb-scope"
+            label="Kapsam"
+            value={filterScope}
+            onChange={setFilterScope}
+            options={[{ value: 'current', label: 'Bu kurul' }, { value: 'all', label: 'Tüm kurullar' }]}
+          />
+        ) : (
         <div role="radiogroup" aria-label="Kapsam" className="ds-seg">
           {(
             [
@@ -281,6 +141,7 @@ export const LeaderboardView: React.FC<LeaderboardViewProps> = ({
             </button>
           ))}
         </div>
+        )}
         {filterScope === 'current' && (
           <label className="ds-select is-wide">
             <span>Kurul</span>
@@ -294,72 +155,54 @@ export const LeaderboardView: React.FC<LeaderboardViewProps> = ({
         )}
       </div>
 
-      {/* İlk üç: sade podyum */}
+      {/* İlk üç: basamaklı podyum (canvas "Leaderboard"; renkler tasarım sistemi tokenlarından) */}
       {top3.some((t) => t.totalPoints > 0) && (
-        <ol className="ds-podium">
-          {top3.map((item, i) => (
-            <li key={item.id} className={`${i === 0 ? 'is-first' : ''} ${item.isCurrentUser ? 'is-me' : ''}`}>
-              <span className="ds-avatar is-lg">{initials(item.name)}<i>{i + 1}</i></span>
-              <span className="ds-podium-t">
-                <b>{item.name}</b>
-                <span>{item.totalPoints} puan</span>
-              </span>
-            </li>
-          ))}
+        <ol className="lbx-podium" aria-label="İlk üç">
+          {[1, 0, 2].map((i) => {
+            const item = top3[i];
+            if (!item) return <li key={i} className="lbx-col is-empty" aria-hidden />;
+            const photo = item.isCurrentUser ? currentUser?.photoURL : null;
+            return (
+              <li key={item.id} className={`lbx-col t${i + 1} ${item.isCurrentUser ? 'is-me' : ''}`}>
+                <span className="lbx-who">
+                  {i === 0 && <CrownIcon className="lbx-crown" />}
+                  <span className="lbx-av">{photo ? <img src={photo} alt="" /> : initials(item.name)}</span>
+                  <b>{item.name}</b>
+                </span>
+                <span className="lbx-step">
+                  <span className="lbx-rk">{i + 1}</span>
+                  <span className="lbx-pt">{item.totalPoints} puan</span>
+                </span>
+              </li>
+            );
+          })}
         </ol>
       )}
 
-      {/* Senin sıran */}
-      {me && (
-        <div className="ds-me">
-          <span className="ds-me-rank">{myRank}.</span>
-          <span className="ds-row-t">
-            <span>Senin sıran</span>
-            <b>{me.name}</b>
-          </span>
-          <span className="ds-me-pts">{me.totalPoints}<small>puan</small></span>
-        </div>
-      )}
-
       {/* Tam liste */}
-      <section className="ds-panel is-flush">
-        <label className="ds-panel-search">
+      <section className="lbx-list" aria-label="Sıralama listesi">
+        <label className="lbx-search">
           <Search aria-hidden />
-          <input
-            type="search"
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-            placeholder="Rumuz ya da öğrenci no ara"
-            aria-label="Katkıcı ara"
-          />
-          <span className="ds-count">{filteredLeaderboard.length} kişi</span>
+          <input type="search" value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} placeholder="Rumuz ya da öğrenci no ara" aria-label="Katkıcı ara" />
+          <span className="lbx-count">{filteredLeaderboard.length} kişi</span>
         </label>
+        <div className="lbx-row is-head" aria-hidden><span>SIRA</span><span /><span>KİŞİ</span><span>KATKI</span><span>PUAN</span></div>
         {filteredLeaderboard.length === 0 ? (
-          <div className="ds-empty">
-            <EmptySearch size={56} />
-            <b>Aramaya uyan katkıcı yok</b>
-          </div>
+          <div className="ds-empty"><EmptySearch size={56} /><b>Aramaya uyan katkıcı yok</b></div>
         ) : (
-          <ol className="ds-rank-list">
+          <ol className="lbx-rows" ref={listRef}>
             {filteredLeaderboard.map((item) => {
               const rank = leaderboard.indexOf(item) + 1;
               return (
-                <li key={item.id} className={item.isCurrentUser ? 'is-me' : ''}>
-                  <span className={`ds-rank ${rank <= 3 ? 'is-top' : ''}`}>{rank}</span>
-                  <span className="ds-avatar">{initials(item.name)}</span>
-                  <span className="ds-row-t">
-                    <b>
-                      {item.name}
-                      {item.isCurrentUser && <span className="ms-tag is-new">Sen</span>}
-                    </b>
-                    <span>
-                      {item.questionsCount} soru · {item.optionsCount} şık · {item.upvotesCount} beğeni
-                    </span>
+                <li key={item.id} data-id={item.id} className={`lbx-row ${item.isCurrentUser ? 'is-me' : ''}`}>
+                  <span className={`lbx-rank ${rank <= 3 ? `t${rank}` : ''}`}>{rank}</span>
+                  <span className="lbx-av is-sm">{item.isCurrentUser && currentUser?.photoURL ? <img src={currentUser.photoURL} alt="" /> : initials(item.name)}</span>
+                  <span className="lbx-name">
+                    <b>{item.name}{item.isCurrentUser && <span className="lbx-me">Sen</span>}</b>
+                    <span>{item.questionsCount} soru · {item.optionsCount} şık · {item.upvotesCount} beğeni</span>
                   </span>
-                  <span className="ds-bar" aria-hidden="true">
-                    <i style={{ width: `${Math.max(item.totalPoints > 0 ? 3 : 0, (item.totalPoints / maxPoints) * 100)}%` }} />
-                  </span>
-                  <span className="ds-pts">{item.totalPoints}</span>
+                  <span className="lbx-bar" aria-hidden><i style={{ width: `${Math.max(item.totalPoints > 0 ? 3 : 0, (item.totalPoints / maxPoints) * 100)}%` }} /></span>
+                  <span className="lbx-pts">{item.totalPoints}</span>
                 </li>
               );
             })}

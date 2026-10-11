@@ -1,4 +1,6 @@
 import React, { useEffect, useMemo, useState } from 'react';
+import { copyQuestion } from '../utils/copyQuestion';
+import { getVoterId } from '../utils/voterId';
 import {
   BookOpen,
   Check,
@@ -14,7 +16,9 @@ import {
   Share2,
   Info,
   Send,
+  Flag,
 } from 'lucide-react';
+import { ReportQuestionModal } from './ReportQuestionModal';
 import { PageHeader } from './ui/PageHeader';
 import { QuestionAboutDialog } from './QuestionAboutDialog';
 import { toast } from './ui/Toast';
@@ -96,7 +100,7 @@ function usePqSocial(id: string): [PQSocial, { toggleLike: () => void; toggleDis
         [id]: { ...prev, liked: newLiked, disliked: newDisliked, upvotes: newUp, downvotes: newDown }
       };
       notifyPqSocial();
-      try { ApiService.upvotePastQuestion(id, 'anonim-std'); } catch {}
+      try { ApiService.upvotePastQuestion(id, getVoterId()); } catch {}
     },
     toggleDislike: () => {
       const prev = PQ_SOCIAL_STORE[id] || { upvotes: 0, downvotes: 0, liked: false, disliked: false, comments: [] };
@@ -111,7 +115,7 @@ function usePqSocial(id: string): [PQSocial, { toggleLike: () => void; toggleDis
         [id]: { ...prev, liked: newLiked, disliked: newDisliked, upvotes: newUp, downvotes: newDown }
       };
       notifyPqSocial();
-      try { ApiService.downvotePastQuestion(id, 'anonim-std'); } catch {}
+      try { ApiService.downvotePastQuestion(id, getVoterId()); } catch {}
     },
     addComment: (text: string, author: string = 'Tıp Öğrencisi') => {
       if (!text.trim()) return;
@@ -148,14 +152,10 @@ function QuestionCard({ q, n, onOpenAbout }: { q: PQ; n: number; onOpenAbout?: (
   const [showComments, setShowComments] = useState(false);
   const [commentText, setCommentText] = useState('');
   const [copied, setCopied] = useState(false);
+  const [reporting, setReporting] = useState(false);
 
   const handleCopy = () => {
-    const seceneklerText = LETTERS
-      .filter((k) => q.secenekler && q.secenekler[k])
-      .map((k) => `${k}) ${q.secenekler[k]}`)
-      .join('\n');
-    const fullText = `[Örnek Soru · Kurul ${q.kurul} · ${q.ders}${q.kazanim_no ? ` · K${q.kazanim_no}` : ''}]\n\n${soruMetni}\n\n${seceneklerText}\n\nDoğru Cevap: ${correctVal}${aciklamalar.length > 0 ? `\n\nAçıklama: ${aciklamalar.join('\n')}` : ''}`;
-    navigator.clipboard.writeText(fullText);
+    void copyQuestion(soruMetni, LETTERS.filter((k) => q.secenekler && q.secenekler[k]).map((k) => ({ key: k, text: q.secenekler[k] })));
     setCopied(true);
     toast.success('Soru kopyalandı', 'Soru metni ve şıklar panoya kopyalandı.');
     setTimeout(() => setCopied(false), 2000);
@@ -188,138 +188,99 @@ function QuestionCard({ q, n, onOpenAbout }: { q: PQ; n: number; onOpenAbout?: (
   };
 
   return (
-    <article className="bg-white border border-line rounded-2xl p-4 sm:p-5 flex flex-col gap-3">
-      <header className="flex flex-wrap items-center gap-2 text-sm text-ink-3">
-        <span className="font-mono font-semibold text-ink">{n}.</span>
-        <span>Kurul {q.kurul} · {q.ders}</span>
-        {q.kazanim_no && <span className="font-mono text-2xs bg-canvas px-1.5 py-0.5 rounded text-accent">K{q.kazanim_no}</span>}
-        {q.zorluk && <span className="px-1.5 py-0.5 rounded bg-canvas text-ink-2 capitalize">{q.zorluk}</span>}
-        {q.version && <span className="px-1.5 py-0.5 rounded bg-accent-soft text-accent text-2xs font-mono">{q.version}</span>}
+    <article data-auto-reveal className="qk is-ornek">
+      <header className="qk-h">
+        {q.kurul && <span className="qk-chip" title={`Kurul ${q.kurul}`}>K{q.kurul}</span>}
+        <span className="qk-kunye">{[`#${n}`, q.kazanim_no ? `Kaz. ${q.kazanim_no}` : null].filter(Boolean).join(' · ')}</span>
+        {q.ders && <span className="qk-ders">{q.ders}</span>}
+        <span className="qk-flags">
+          {q.zorluk && <span className={`cx-flag ${q.zorluk === 'zor' ? 'is-warn' : q.zorluk === 'kolay' ? 'is-ok' : ''}`}>{q.zorluk}</span>}
+          {done && <span className={`cx-flag ${correct ? 'is-ok' : 'is-bad'}`}>{correct ? 'Doğru' : 'Yanlış'}</span>}
+        </span>
+        <span className="qk-sp" />
+        {onOpenAbout && (
+          <button type="button" onClick={() => onOpenAbout(q)} className="qk-ib" aria-label="Soru hakkında" title="Soru hakkında"><Info aria-hidden /></button>
+        )}
+        <button type="button" onClick={handleCopy} className={`qk-ib ${copied ? 'is-done' : ''}`} aria-label={copied ? 'Kopyalandı' : 'Soru kökünü ve şıkları kopyala'} title={copied ? 'Kopyalandı' : 'Soru kökünü ve şıkları kopyala'}>
+          {copied ? <Check aria-hidden /> : <Copy aria-hidden />}
+        </button>
+        <button type="button" onClick={() => setReporting(true)} className="qk-ib" aria-label="Hata bildir" title="Soruda hata ya da sorun bildir"><Flag aria-hidden /></button>
       </header>
-      <p className="m-0 text-md sm:text-lg font-medium text-ink leading-[1.5]">{soruMetni}</p>
-      <ol className="list-none m-0 p-0 flex flex-col gap-1.5" aria-label="Şıklar">
+      <div className="qk-stem">{soruMetni}</div>
+      <ol className="qk-opts" aria-label="Şıklar">
         {LETTERS.filter((k) => q.secenekler && q.secenekler[k]).map((k) => {
           const isRight = k === correctVal;
           const isPicked = k === picked;
-          const tone = !done
-            ? 'bg-white border-line-soft hover:border-accent cursor-pointer'
-            : isRight
-            ? 'bg-ok-tint border-ok'
-            : isPicked
-            ? 'bg-bad-soft border-bad'
-            : 'bg-white border-line-soft opacity-80';
+          const st = !done ? '' : isRight ? 'is-correct' : isPicked ? 'is-wrong' : 'is-dim';
           return (
-            <li key={k}>
-              <button
-                type="button"
-                disabled={done}
-                onClick={() => setPicked(k)}
-                className={`w-full min-h-11 grid grid-cols-[28px_minmax(0,1fr)_auto] items-center gap-2.5 px-3 py-2.5 rounded-xl border text-left ${tone}`}
-                aria-pressed={isPicked}
-              >
-                <span className={`w-7 h-7 rounded-lg flex items-center justify-center font-mono text-sm font-semibold ${done && isRight ? 'bg-ok text-white' : 'bg-canvas text-ink-2'}`}>{k}</span>
-                <span className="text-md leading-[1.45] text-ink">{q.secenekler[k]}</span>
-                {done && isRight ? <Check className="w-4 h-4 text-ok" /> : done && isPicked ? <X className="w-4 h-4 text-bad" /> : <span />}
+            <li key={k} className="qk-opt-li">
+              <button type="button" disabled={done} onClick={() => setPicked(k)} className={`qk-opt ${st}`} aria-pressed={isPicked}>
+                <span className="qk-bub" aria-hidden>{done && isRight ? <Check strokeWidth={3} /> : done && isPicked ? <X strokeWidth={3} /> : k}</span>
+                <span className="qk-opt-t">{q.secenekler[k]}</span>
+                {done && (isRight || isPicked) && <span className={`qk-opt-tag ${isRight ? 'is-ok' : 'is-bad'}`}>{isPicked ? 'Senin cevabın' : 'Doğru cevap'}</span>}
               </button>
-              {done && q.sik_aciklamalari && q.sik_aciklamalari[k] && (
-                <p className={`m-0 px-3 py-1.5 pl-[48px] text-sm leading-relaxed ${isRight ? 'text-ok' : 'text-ink-2'}`}>
-                  {q.sik_aciklamalari[k]}
-                </p>
-              )}
             </li>
           );
         })}
       </ol>
       {done && (
-        <div className="flex flex-col gap-2.5">
-          <p className={`m-0 text-base font-semibold ${correct ? 'text-ok' : 'text-bad-text'}`}>
-            {correct ? 'Doğru!' : `Yanlış — doğru cevap ${correctVal}`}
+        <>
+          <p className={`qk-verdict ${correct ? 'is-ok' : 'is-bad'}`} role="status">
+            <b>{correct ? 'Doğru' : `Yanlış · doğru cevap ${correctVal}`}</b>
+            <span className="qk-sp" />
+            <button type="button" onClick={() => setPicked(null)}><RotateCcw aria-hidden /> Tekrar çöz</button>
           </p>
-          {aciklamalar.length > 0 && (
-            <ul className="m-0 pl-5 flex flex-col gap-1 text-base text-ink-2 leading-relaxed">
-              {aciklamalar.map((m, i) => (
-                <li key={i}>{m}</li>
-              ))}
-            </ul>
-          )}
-          {q.kaynak?.alinti && (
-            <blockquote className="m-0 rounded-xl bg-field px-3 py-2.5 text-sm text-ink-2 flex flex-col gap-1">
-              <span className="flex items-center gap-1.5 text-xs font-semibold text-ink-3">
-                <BookOpen className="w-3.5 h-3.5" /> {q.kaynak.ders_notu}
-                {q.kaynak.sayfa ? ` · sayfa ${q.kaynak.sayfa}` : ''}
-              </span>
-              <span className="italic">“{q.kaynak.alinti}”</span>
-            </blockquote>
-          )}
-          <button type="button" onClick={() => setPicked(null)} className="self-start h-9 px-3 rounded-lg border border-line text-sm text-ink-2 inline-flex items-center gap-1.5 cursor-pointer hover:bg-canvas">
-            <RotateCcw className="w-3.5 h-3.5" /> Tekrar çöz
-          </button>
-        </div>
+          <div className="qk-discs">
+            <div className="qk-disc is-open">
+              <div className="qk-disc-h is-static"><BookOpen aria-hidden /><span>Açıklama ve şık analizi</span></div>
+              <div className="qk-disc-b"><div className="qk-disc-in">
+                {aciklamalar.length > 0 && (
+                  <ul className="m-0 pl-5 flex flex-col gap-1 text-[14px] text-ink leading-relaxed">
+                    {aciklamalar.map((m, i) => <li key={i}>{m}</li>)}
+                  </ul>
+                )}
+                {q.sik_aciklamalari && LETTERS.some((k) => q.sik_aciklamalari![k]) && (
+                  <dl className="qk-analysis">
+                    {LETTERS.filter((k) => q.sik_aciklamalari![k]).map((k) => (
+                      <div key={k} className={k === correctVal ? 'is-correct' : ''}><dt>{k}</dt><dd>{q.sik_aciklamalari![k]}</dd></div>
+                    ))}
+                  </dl>
+                )}
+                {q.kaynak?.alinti && (
+                  <p className="qk-refs"><b>Kaynak</b>{q.kaynak.ders_notu}{q.kaynak.sayfa ? ` · s. ${q.kaynak.sayfa}` : ''} — “{q.kaynak.alinti}”</p>
+                )}
+              </div></div>
+            </div>
+          </div>
+        </>
       )}
 
-      {/* Aksiyon Butonları (Like, Dislike, Yorum, Hakkında, Kopyala, Paylaş) */}
-      <footer className="ms-qcard-foot pt-2 border-t border-line-soft">
-        <button
-          type="button"
-          onClick={socialActions.toggleLike}
-          aria-pressed={social.liked}
-          title={social.liked ? 'Beğeniyi geri al' : 'Soruyu beğen'}
-          className={`ms-btn is-sm ${social.liked ? 'is-on' : 'is-ghost'}`}
-        >
-          <ThumbsUp className={social.liked ? 'fill-current' : ''} /> {social.upvotes || 0}
+      <footer className="qk-f">
+        <button type="button" onClick={socialActions.toggleLike} aria-pressed={social.liked} title={social.liked ? 'Beğeniyi geri al' : 'Soruyu beğen'} className={`qk-act ${social.liked ? 'is-on' : ''}`}>
+          <ThumbsUp className={social.liked ? 'fill-current' : ''} aria-hidden /><span>{social.upvotes || 0}</span>
         </button>
-        <button
-          type="button"
-          onClick={socialActions.toggleDislike}
-          aria-pressed={social.disliked}
-          title={social.disliked ? 'Beğenmemeyi geri al' : 'Eksik ya da hatalı'}
-          className={`ms-btn is-sm ${social.disliked ? 'is-danger bg-bad-soft!' : 'is-ghost'}`}
-        >
-          <ThumbsDown className={social.disliked ? 'fill-current' : ''} /> {social.downvotes || 0}
+        <button type="button" onClick={socialActions.toggleDislike} aria-pressed={social.disliked} title={social.disliked ? 'Beğenmemeyi geri al' : 'Eksik ya da hatalı'} className={`qk-act ${social.disliked ? 'is-bad' : ''}`}>
+          <ThumbsDown className={social.disliked ? 'fill-current' : ''} aria-hidden /><span>{social.downvotes || 0}</span>
         </button>
-        <button
-          type="button"
-          onClick={() => setShowComments((prev) => !prev)}
-          aria-expanded={showComments}
-          className={`ms-btn is-sm ${showComments ? 'is-on' : 'is-ghost'}`}
-        >
-          <MessageSquare /> {(social.comments || []).length > 0 ? `${social.comments.length} yorum` : 'Yorum'}
+        <button type="button" onClick={() => setShowComments((prev) => !prev)} aria-expanded={showComments} className={`qk-act ${showComments ? 'is-on' : ''}`}>
+          <MessageSquare aria-hidden /><span>{(social.comments || []).length}</span><span className="sr-only"> yorum</span>
         </button>
-        <span className="ms-qcard-foot-sep" aria-hidden />
-        {onOpenAbout && (
-          <button
-            type="button"
-            onClick={() => onOpenAbout(q)}
-            className="ms-btn is-sm is-ghost is-icon text-ink-2 hover:text-ink"
-            aria-label="Soru hakkında"
-            title="Soru hakkında (künye, kazanım, kaynak not)"
-          >
-            <Info className="w-4 h-4" />
-          </button>
-        )}
-        <button
-          type="button"
-          onClick={handleCopy}
-          className={`ms-btn is-sm is-ghost is-icon ${copied ? 'text-ok!' : ''}`}
-          aria-label={copied ? 'Soru kopyalandı' : 'Soruyu kopyala'}
-          title={copied ? 'Kopyalandı' : 'Soruyu metin olarak kopyala'}
-        >
-          {copied ? <Check /> : <Copy />}
-        </button>
-        <button
-          type="button"
-          onClick={handleShare}
-          className="ms-btn is-sm is-ghost is-icon"
-          aria-label="Soruyu paylaş"
-          title="Soru bağlantısını paylaş"
-        >
-          <Share2 />
-        </button>
+        <span className="qk-sp" />
+        <button type="button" onClick={handleShare} className="qk-act" aria-label="Soruyu paylaş" title="Soru bağlantısını paylaş"><Share2 aria-hidden /></button>
       </footer>
+      {reporting && (
+        <ReportQuestionModal
+          question={{ stem: soruMetni, correctAnswer: correctVal, discipline: q.ders, questionNumber: q.id }}
+          onClose={() => setReporting(false)}
+          onSubmit={async (reason, details) => {
+            await ApiService.reportOrnekQuestion(q.id, reason, [details, `Kaynak: Çalışma soruları · Kurul ${q.kurul} · ${q.ders}`].filter(Boolean).join('\n'));
+          }}
+        />
+      )}
 
       {/* Yorumlar Paneli */}
       {showComments && (
-        <div className="ms-pop-in bg-field rounded-xl p-2.5 flex flex-col gap-2">
+        <div className="ms-pop-in bg-field rounded-xl p-2.5 m-2 mt-0 flex flex-col gap-2">
           <div className="flex flex-col gap-1.5 max-h-56 overflow-y-auto">
             {(social.comments || []).length > 0 ? (
               social.comments.map((c) => (

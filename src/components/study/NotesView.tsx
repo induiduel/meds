@@ -1,7 +1,9 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
-import { Plus, Search, Pin, PinOff, Trash2, Download, ArrowLeft, Link2 } from 'lucide-react';
+import { ArrowLeft, Check, Download, Link2, NotebookPen, Pin, PinOff, Plus, Search, Trash2, X } from 'lucide-react';
 import { StudyNote, getNotes, saveNotes, newNoteId, notesToMarkdown } from '../../services/studyStore';
-import { cardCls, btnPrimary, btnSecondary, btnGhost, selectCls, EmptyState } from './StudyUI';
+import { disciplineClass, disciplineLabel } from '../../utils/discipline';
+import { RichTextArea } from '../ui/RichTextArea';
+import { TagInput } from '../ui/TagInput';
 
 interface NotesViewProps {
   disciplines: string[];
@@ -10,45 +12,66 @@ interface NotesViewProps {
 const fmt = (iso: string) =>
   new Date(iso).toLocaleDateString('tr-TR', { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' });
 
+/** Biçim işaretlerini liste özetinden ayıklar */
+const plain = (t: string) => t.replace(/^#{1,4}\s+|^-\s+|^\d+[.)]\s+|^(Not|Sınav):\s*/gim, '').replace(/\*\*/g, '').replace(/\n+/g, ' ').trim();
+
+/**
+ * v8 not defteri: ana-ayrıntı. Solda arama, ders ve etiket süzgeçli liste; sağda biçimli düzenleyici
+ * (araç çubuğu, önizleme), etiket girişi, otomatik kayıt durumu. Telefonda liste → tam ekran düzenleyici.
+ * Silme iki adımlıdır (tarayıcı onay penceresi yok). Notlar yalnız bu cihazda saklanır.
+ */
 export const NotesView: React.FC<NotesViewProps> = ({ disciplines }) => {
   const [notes, setNotes] = useState<StudyNote[]>(getNotes);
   const [activeId, setActiveId] = useState<string | null>(() => getNotes()[0]?.id || null);
   const [query, setQuery] = useState('');
-  const [filter, setFilter] = useState('all');
+  const [ders, setDers] = useState('all');
+  const [tag, setTag] = useState<string | null>(null);
   const [mobileEditing, setMobileEditing] = useState(false);
-  const [savedAt, setSavedAt] = useState<string | null>(null);
+  const [save, setSave] = useState<'idle' | 'saving' | 'saved'>('idle');
+  const [mode, setMode] = useState<'write' | 'preview'>('write');
+  const [confirmDel, setConfirmDel] = useState(false);
   const saveTimer = useRef<number | undefined>(undefined);
   const titleRef = useRef<HTMLInputElement>(null);
 
-  // Debounced persistence
   const persist = (next: StudyNote[]) => {
     setNotes(next);
+    setSave('saving');
     window.clearTimeout(saveTimer.current);
     saveTimer.current = window.setTimeout(() => {
       saveNotes(next);
-      setSavedAt(new Date().toISOString());
+      setSave('saved');
     }, 400);
   };
   useEffect(() => () => window.clearTimeout(saveTimer.current), []);
+  useEffect(() => {
+    setConfirmDel(false);
+    setMode('write');
+  }, [activeId]);
 
   const allDisciplines = useMemo(
     () => [...new Set([...notes.map((n) => n.discipline).filter(Boolean), ...disciplines])].sort((a, b) => a.localeCompare(b, 'tr')),
     [notes, disciplines]
   );
+  const allTags = useMemo(() => {
+    const m = new Map<string, number>();
+    notes.forEach((n) => (n.tags || []).forEach((t) => m.set(t, (m.get(t) || 0) + 1)));
+    return [...m.entries()].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0], 'tr'));
+  }, [notes]);
 
   const visible = useMemo(() => {
     const q = query.trim().toLocaleLowerCase('tr-TR');
     return notes
-      .filter((n) => filter === 'all' || n.discipline === filter)
-      .filter((n) => !q || `${n.title} ${n.body} ${n.questionStem || ''}`.toLocaleLowerCase('tr-TR').includes(q))
+      .filter((n) => ders === 'all' || n.discipline === ders)
+      .filter((n) => !tag || (n.tags || []).includes(tag))
+      .filter((n) => !q || `${n.title} ${n.body} ${n.questionStem || ''} ${(n.tags || []).join(' ')}`.toLocaleLowerCase('tr-TR').includes(q))
       .sort((a, b) => Number(!!b.pinned) - Number(!!a.pinned) || b.updatedAt.localeCompare(a.updatedAt));
-  }, [notes, query, filter]);
+  }, [notes, query, ders, tag]);
 
-  const active = (notes || []).find((n) => n.id === activeId) || null;
+  const active = notes.find((n) => n.id === activeId) || null;
 
   const create = () => {
     const now = new Date().toISOString();
-    const n: StudyNote = { id: newNoteId(), title: '', body: '', discipline: filter !== 'all' ? filter : '', createdAt: now, updatedAt: now };
+    const n: StudyNote = { id: newNoteId(), title: '', body: '', discipline: ders !== 'all' ? ders : '', tags: tag ? [tag] : [], createdAt: now, updatedAt: now };
     persist([n, ...notes]);
     setActiveId(n.id);
     setMobileEditing(true);
@@ -61,7 +84,12 @@ export const NotesView: React.FC<NotesViewProps> = ({ disciplines }) => {
   };
 
   const remove = () => {
-    if (!active || !window.confirm('Bu not silinsin mi?')) return;
+    if (!active) return;
+    if (!confirmDel) {
+      setConfirmDel(true);
+      window.setTimeout(() => setConfirmDel(false), 3500);
+      return;
+    }
     const next = notes.filter((n) => n.id !== active.id);
     persist(next);
     setActiveId(next[0]?.id || null);
@@ -80,115 +108,102 @@ export const NotesView: React.FC<NotesViewProps> = ({ disciplines }) => {
 
   if (notes.length === 0) {
     return (
-      <EmptyState
-        title="Henüz notun yok"
-        body="Konu özetlerini, hocanın vurguladıklarını ya da çözdüğün sorulardan çıkardıklarını burada tut. Soru çözerken “Not al” ile de ekleyebilirsin."
-        action={
-          <button type="button" onClick={create} className={btnPrimary}>
-            <Plus className="w-4 h-4" /> İlk notu yaz
-          </button>
-        }
-      />
+      <div className="ui-card nt-empty">
+        <span className="ui-ico is-soft" style={{ width: 48, height: 48, borderRadius: 14 }}><NotebookPen className="w-6 h-6" /></span>
+        <h3>Henüz notun yok</h3>
+        <p>Konu özetlerini, hocanın vurguladıklarını ya da çözdüğün sorulardan çıkardıklarını burada tut. Soru çözerken “Not al” ile de ekleyebilirsin.</p>
+        <button type="button" onClick={create} className="ui-btn is-primary"><Plus /> İlk notu yaz</button>
+      </div>
     );
   }
 
+  const words = active?.body.trim() ? plain(active.body).split(/\s+/).length : 0;
+
   return (
-    <div className={`${cardCls} grid grid-cols-1 md:grid-cols-[300px_minmax(0,1fr)] overflow-hidden min-h-[560px]`}>
-      {/* ---------- List ---------- */}
-      <aside aria-label="Not listesi" className={`${mobileEditing ? 'hidden md:flex' : 'flex'} flex-col border-b md:border-b-0 md:border-r border-line min-w-0`}>
-        <div className="p-3 flex flex-col gap-2 border-b border-line">
-          <div className="flex gap-2">
-            <label className="flex items-center gap-2 h-10 px-3 border border-line-2 rounded-[10px] bg-field flex-1 min-w-0 focus-within:border-accent">
-              <Search className="w-4 h-4 text-ink-2 shrink-0" />
-              <span className="sr-only">Notlarda ara</span>
-              <input
-                type="search"
-                value={query}
-                onChange={(e) => setQuery(e.target.value)}
-                placeholder="Notlarda ara"
-                className="flex-1 min-w-0 bg-transparent border-0 outline-0 text-base"
-              />
-            </label>
-            <button type="button" onClick={create} aria-label="Yeni not" className="w-10 h-10 rounded-[10px] bg-accent hover:bg-accent-hover text-white flex items-center justify-center cursor-pointer shrink-0">
-              <Plus className="w-4 h-4" />
-            </button>
-          </div>
-          <div className="flex gap-2">
-            <label className="sr-only" htmlFor="notes-filter">
-              Ders filtresi
-            </label>
-            <select id="notes-filter" value={filter} onChange={(e) => setFilter(e.target.value)} className={`${selectCls} h-9 flex-1 text-sm`}>
-              <option value="all">Tüm dersler ({notes.length})</option>
-              {allDisciplines
-                .filter((d) => notes.some((n) => n.discipline === d))
-                .map((d) => (
-                  <option key={d} value={d}>
-                    {d} ({notes.filter((n) => n.discipline === d).length})
-                  </option>
-                ))}
-            </select>
-            <button type="button" onClick={exportMd} title="Görünen notları Markdown olarak indir" aria-label="Notları indir" className="w-9 h-9 rounded-[10px] border border-line-2 flex items-center justify-center cursor-pointer hover:border-ink-3 shrink-0">
-              <Download className="w-4 h-4 text-ink-2" />
-            </button>
-          </div>
+    <div className={`nt ${mobileEditing ? 'is-editing' : ''}`}>
+      {/* ---------- Liste ---------- */}
+      <aside className="nt-side" aria-label="Not listesi">
+        <div className="nt-side-head">
+          <label className="cx-search nt-search">
+            <Search aria-hidden />
+            <span className="sr-only">Notlarda ara</span>
+            <input type="search" value={query} onChange={(e) => setQuery(e.target.value)} placeholder="Notlarda ara" />
+            {query && <button type="button" className="cx-search-x" onClick={() => setQuery('')} aria-label="Aramayı temizle"><X /></button>}
+          </label>
+          <button type="button" onClick={create} className="ui-btn is-primary nt-new" aria-label="Yeni not" title="Yeni not">
+            <Plus />
+          </button>
         </div>
-        <ul className="list-none m-0 p-1.5 flex flex-col gap-0.5 overflow-y-auto md:max-h-[640px]">
-          {visible.length === 0 && <li className="px-3 py-6 text-base text-ink-2">Aramana uyan not yok.</li>}
-          {visible.map((n) => {
-            const on = n.id === activeId;
-            return (
-              <li key={n.id}>
-                <button
-                  type="button"
-                  onClick={() => {
-                    setActiveId(n.id);
-                    setMobileEditing(true);
-                  }}
-                  aria-current={on ? 'true' : undefined}
-                  className={`w-full text-left px-3 py-2.5 rounded-[10px] flex flex-col gap-0.5 cursor-pointer ${on ? 'bg-accent-soft' : 'hover:bg-canvas'}`}
-                >
-                  <span className="flex items-center gap-1.5 min-w-0">
-                    {n.pinned && <Pin className="w-3.5 h-3.5 text-accent shrink-0" />}
-                    <span className={`text-base font-semibold truncate ${on ? 'text-accent' : 'text-ink'}`}>{n.title || 'Başlıksız not'}</span>
-                  </span>
-                  <span className="text-sm text-ink-2 line-clamp-2">{n.body || 'Boş not'}</span>
-                  <span className="text-2xs text-ink-3 flex gap-1.5 items-center">
-                    {n.discipline && <span className="truncate">{n.discipline}</span>}
-                    {n.discipline && <span aria-hidden="true">·</span>}
-                    <span className="shrink-0">{fmt(n.updatedAt)}</span>
-                    {n.questionId && <Link2 className="w-3 h-3 shrink-0" aria-label="Soruya bağlı" />}
-                  </span>
-                </button>
-              </li>
-            );
-          })}
+        <div className="nt-filters">
+          <label className="ms-select-chip nt-ders">
+            <span className="sr-only">Ders süzgeci</span>
+            <select value={ders} onChange={(e) => setDers(e.target.value)} aria-label="Ders süzgeci">
+              <option value="all">Tüm dersler ({notes.length})</option>
+              {allDisciplines.filter((d) => notes.some((n) => n.discipline === d)).map((d) => (
+                <option key={d} value={d}>{d} ({notes.filter((n) => n.discipline === d).length})</option>
+              ))}
+            </select>
+          </label>
+          <button type="button" onClick={exportMd} className="ui-btn is-ghost is-sm" title="Görünen notları Markdown olarak indir" aria-label="Notları indir">
+            <Download />
+          </button>
+        </div>
+        {allTags.length > 0 && (
+          <div className="nt-tags" role="group" aria-label="Etiket süzgeci">
+            {allTags.slice(0, 14).map(([t, c]) => (
+              <button key={t} type="button" aria-pressed={tag === t} className="cx-fchip" onClick={() => setTag(tag === t ? null : t)}>
+                #{t}<span className="n">{c}</span>
+              </button>
+            ))}
+          </div>
+        )}
+        <ul className="nt-list">
+          {visible.length === 0 && <li className="nt-none">Süzgeçlere uyan not yok.</li>}
+          {visible.map((n) => (
+            <li key={n.id} className={n.discipline ? disciplineClass(n.discipline) : ''}>
+              <button
+                type="button"
+                onClick={() => { setActiveId(n.id); setMobileEditing(true); }}
+                aria-current={n.id === activeId ? 'true' : undefined}
+                className="nt-row"
+              >
+                <span className="nt-row-t">
+                  {n.pinned && <Pin aria-label="Sabitli" />}
+                  <b>{n.title || 'Başlıksız not'}</b>
+                </span>
+                <span className="nt-row-x">{plain(n.body) || 'Boş not'}</span>
+                <span className="nt-row-m">
+                  {n.discipline && <><i className="hk-dot" aria-hidden /><span>{disciplineLabel(n.discipline) || n.discipline}</span></>}
+                  {(n.tags || []).slice(0, 2).map((t) => <span key={t} className="nt-row-tag">#{t}</span>)}
+                  <span className="nt-row-d">{fmt(n.updatedAt)}</span>
+                  {n.questionId && <Link2 aria-label="Soruya bağlı" />}
+                </span>
+              </button>
+            </li>
+          ))}
         </ul>
       </aside>
 
-      {/* ---------- Editor ---------- */}
-      <section aria-label="Not düzenleyici" className={`${mobileEditing ? 'flex' : 'hidden md:flex'} flex-col min-w-0`}>
+      {/* ---------- Düzenleyici ---------- */}
+      <section className="nt-main" aria-label="Not düzenleyici">
         {!active ? (
-          <div className="flex-1 flex items-center justify-center p-8 text-base text-ink-2">Soldan bir not seç ya da yeni not oluştur.</div>
+          <div className="nt-pick">Soldan bir not seç ya da yeni not oluştur.</div>
         ) : (
           <>
-            <div className="flex items-center gap-1.5 px-3 py-2 border-b border-line">
-              <button type="button" onClick={() => setMobileEditing(false)} className={`${btnGhost} md:hidden px-2`} aria-label="Listeye dön">
-                <ArrowLeft className="w-4 h-4" />
+            <div className="nt-bar">
+              <button type="button" onClick={() => setMobileEditing(false)} className="ui-btn is-ghost is-sm nt-back" aria-label="Listeye dön">
+                <ArrowLeft />
               </button>
-              <label className="sr-only" htmlFor="note-discipline">
-                Ders
+              <label className="ms-select-chip nt-bar-ders">
+                <span className="sr-only">Ders</span>
+                <select value={active.discipline} onChange={(e) => update({ discipline: e.target.value })} aria-label="Ders">
+                  <option value="">Ders seç</option>
+                  {allDisciplines.map((d) => <option key={d} value={d}>{d}</option>)}
+                </select>
               </label>
-              <select id="note-discipline" value={active.discipline} onChange={(e) => update({ discipline: e.target.value })} className={`${selectCls} h-9 text-sm max-w-[200px]`}>
-                <option value="">Ders seç</option>
-                {allDisciplines.map((d) => (
-                  <option key={d} value={d}>
-                    {d}
-                  </option>
-                ))}
-              </select>
               <span className="flex-1" />
-              <span className="hidden sm:inline text-xs text-ink-3 mr-1" role="status">
-                {savedAt ? 'Kaydedildi' : ''}
+              <span className={`nt-save is-${save}`} role="status" aria-live="polite">
+                {save === 'saving' ? 'Kaydediliyor…' : save === 'saved' ? <><Check /> Kaydedildi</> : ''}
               </span>
               <button
                 type="button"
@@ -196,49 +211,44 @@ export const NotesView: React.FC<NotesViewProps> = ({ disciplines }) => {
                 aria-pressed={!!active.pinned}
                 aria-label={active.pinned ? 'Sabitlemeyi kaldır' : 'Sabitle'}
                 title={active.pinned ? 'Sabitlemeyi kaldır' : 'Sabitle'}
-                className={`w-9 h-9 rounded-lg flex items-center justify-center cursor-pointer ${active.pinned ? 'bg-accent-soft text-accent' : 'text-ink-2 hover:bg-canvas'}`}
+                className={`ui-btn is-sm ${active.pinned ? 'is-tonal' : 'is-ghost'}`}
               >
-                {active.pinned ? <PinOff className="w-4 h-4" /> : <Pin className="w-4 h-4" />}
+                {active.pinned ? <PinOff /> : <Pin />}
               </button>
-              <button type="button" onClick={remove} aria-label="Notu sil" title="Notu sil" className="w-9 h-9 rounded-lg flex items-center justify-center text-ink-2 hover:text-bad-text hover:bg-bad-soft cursor-pointer">
-                <Trash2 className="w-4 h-4" />
+              <button type="button" onClick={remove} className={`ui-btn is-sm ${confirmDel ? 'is-danger' : 'is-ghost'}`} aria-label={confirmDel ? 'Silmeyi onayla' : 'Notu sil'} title="Notu sil">
+                <Trash2 />{confirmDel && <span>Sil?</span>}
               </button>
             </div>
 
-            <div className="flex-1 flex flex-col gap-3 p-4 sm:p-5">
-              <label className="sr-only" htmlFor="note-title">
-                Başlık
-              </label>
-              <input
-                id="note-title"
-                ref={titleRef}
-                value={active.title}
-                onChange={(e) => update({ title: e.target.value })}
-                placeholder="Başlık"
-                className="border-0 outline-0 bg-transparent font-display text-2xl sm:text-2xl font-bold tracking-[-0.02em] placeholder:text-accent"
-              />
+            <div className="nt-doc">
+              <label className="sr-only" htmlFor="note-title">Başlık</label>
+              <input id="note-title" ref={titleRef} value={active.title} onChange={(e) => update({ title: e.target.value })} placeholder="Başlık" className="nt-title" />
               {active.questionStem && (
-                <div className="flex gap-2 items-start rounded-[10px] bg-canvas px-3 py-2.5 text-sm text-ink-2">
-                  <Link2 className="w-4 h-4 shrink-0 mt-0.5" />
-                  <span className="line-clamp-3">{active.questionStem}</span>
+                <div className="nt-link">
+                  <Link2 aria-hidden />
+                  <span>{active.questionStem}</span>
                 </div>
               )}
-              <label className="sr-only" htmlFor="note-body">
-                Not
-              </label>
-              <textarea
-                id="note-body"
-                value={active.body}
-                onChange={(e) => update({ body: e.target.value })}
-                placeholder="Notunu yaz… Madde için satır başına - koyabilirsin."
-                className="flex-1 min-h-[320px] resize-none border-0 outline-0 bg-transparent text-md leading-[1.65] placeholder:text-ink-3"
+              <TagInput
+                label="Etiketler"
+                value={active.tags || []}
+                onChange={(tags) => update({ tags })}
+                suggestions={allTags.map(([t]) => t)}
+                placeholder="Etiket ekle (Enter)"
               />
-              <div className="flex flex-wrap items-center justify-between gap-2 border-t border-line-soft pt-3 text-xs text-ink-3">
-                <span>
-                  Oluşturuldu {fmt(active.createdAt)} · {active.body.trim() ? active.body.trim().split(/\s+/).length : 0} kelime
-                </span>
-                <span>Notlar yalnızca bu cihazda saklanır.</span>
-              </div>
+              <RichTextArea
+                id="note-body"
+                label="Not"
+                value={active.body}
+                onChange={(body) => update({ body })}
+                mode={mode}
+                onModeChange={setMode}
+                placeholder={'Notunu yaz…\n- Madde için satır başına tire\n## Başlık · **kalın** · Not: önemli satır'}
+              />
+              <p className="nt-foot">
+                <span>Oluşturuldu {fmt(active.createdAt)} · {words} kelime</span>
+                <span>Notlar yalnız bu cihazda saklanır.</span>
+              </p>
             </div>
           </>
         )}

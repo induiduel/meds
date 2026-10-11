@@ -3,6 +3,7 @@ import { X, ArrowLeft, ArrowRight, BookOpen, Sparkles, LayoutGrid, RotateCcw } f
 import { QuestionItem } from '../types';
 import { parseExplanation } from './QuestionCard';
 import { QuestionAiChatDrawer } from './QuestionAiChatDrawer';
+import { Sheet } from './ui/Sheet';
 
 interface PracticeModeProps {
   questions: QuestionItem[];
@@ -146,22 +147,16 @@ export const PracticeMode: React.FC<PracticeModeProps> = ({
   const pct = (position / total) * 100;
 
   return (
-    <div className="min-h-[100dvh] bg-white text-ink flex flex-col">
-      <header className="sticky top-0 bg-white/95 backdrop-blur z-20 border-b border-line">
+    <div className="tm min-h-[100dvh] text-ink flex flex-col">
+      <header className="tm-head sticky top-0 z-20">
         <div className="max-w-[1280px] mx-auto px-3 sm:px-8 h-14 flex items-center gap-2 sm:gap-4">
           {exitButton}
           <div className="flex flex-col leading-[1.25] min-w-0 flex-1 sm:flex-none sm:max-w-[320px]">
             <span className="font-semibold truncate text-md">{title}</span>
             {subtitle && <span className="text-xs text-ink-3 truncate">{subtitle}</span>}
           </div>
-          <div className="hidden sm:flex flex-1 items-center gap-3 max-w-[460px] mx-auto">
-            <div className="flex-1 h-1.5 rounded-full bg-line-soft">
-              <div className="h-1.5 rounded-full bg-accent transition-all" style={{ width: `${pct}%` }} />
-            </div>
-            <span className="font-mono text-sm text-ink-2 whitespace-nowrap">
-              {position}/{total}
-            </span>
-          </div>
+          <span className="flex-1 hidden sm:block" />
+          <span className="tm-count hk-num" aria-label={`Soru ${position} / ${total}`}>{position}<small>/{total}</small></span>
           <span className="shrink-0 font-mono text-sm px-2.5 h-8 inline-flex items-center rounded-lg bg-canvas text-ink-2" aria-label="Geçen süre">
             {formatElapsed(elapsed)}
           </span>
@@ -175,8 +170,17 @@ export const PracticeMode: React.FC<PracticeModeProps> = ({
             <span className="hidden sm:inline">AI'ya sor</span>
           </button>
         </div>
-        <div className="sm:hidden h-[3px] bg-line-soft">
-          <div className="h-[3px] bg-accent transition-all" style={{ width: `${pct}%` }} />
+        {/* Çentikli ilerleme: her soru bir çentik — doğru, yanlış, boş, şu anki */}
+        <div className="tm-track" role="progressbar" aria-valuemin={1} aria-valuemax={total} aria-valuenow={position} aria-label="İlerleme">
+          {total <= 80 ? (
+            items.map((q, i) => {
+              const ans = selectedAnswers[q.id];
+              const st = i === currentIndex ? 'is-now' : ans ? (ans === q.reconstruction?.correctAnswer ? 'is-ok' : 'is-bad') : '';
+              return <i key={q.id} className={st} />;
+            })
+          ) : (
+            <b style={{ width: `${pct}%` }} />
+          )}
         </div>
       </header>
 
@@ -200,23 +204,7 @@ export const PracticeMode: React.FC<PracticeModeProps> = ({
             const opt = { ...o0, key: o0.key || 'ABCDE'[oi] };
             const isThisCorrect = rec.correctAnswer === opt.key;
             const isPicked = userAnswer === opt.key;
-            let box = 'border border-line bg-white hover:border-accent/60';
-            let key = 'bg-canvas text-ink-2';
-            let tag = '';
-            let tagCls = 'text-ink-2';
-            if (isAnswered && isThisCorrect) {
-              box = 'border-[1.5px] border-ok-bright bg-ok-tint';
-              key = 'bg-ok text-white';
-              tag = 'Doğru';
-              tagCls = 'text-ok';
-            } else if (isAnswered && isPicked) {
-              box = 'border-[1.5px] border-bad bg-bad-soft';
-              key = 'bg-bad text-white';
-              tag = 'Senin cevabın';
-              tagCls = 'text-bad-text';
-            } else if (isAnswered) {
-              box = 'border border-line-soft bg-white opacity-60';
-            }
+            const st = isAnswered ? (isThisCorrect ? 'is-correct' : isPicked ? 'is-wrong' : 'is-dim') : '';
             return (
               <button
                 key={opt.key}
@@ -224,20 +212,20 @@ export const PracticeMode: React.FC<PracticeModeProps> = ({
                 role="radio"
                 aria-checked={isPicked}
                 onClick={() => handleSelect(opt.key)}
-                className={`flex items-center gap-3 min-h-[52px] px-3 py-2.5 rounded-xl text-md sm:text-md leading-snug text-left transition-colors ${box} ${
-                  isAnswered ? 'cursor-default' : 'cursor-pointer'
-                }`}
+                disabled={isAnswered && !isPicked && !isThisCorrect}
+                className={`tm-opt ${st}`}
               >
-                <span className={`w-8 h-8 shrink-0 rounded-lg flex items-center justify-center font-mono text-sm font-semibold ${key}`}>{opt.key}</span>
-                <span className="flex-1">{opt.text}</span>
-                {tag && <span className={`text-xs font-semibold whitespace-nowrap ${tagCls}`}>{tag}</span>}
+                <span className="tm-bubble" aria-hidden>{opt.key}</span>
+                <span className="flex-1 min-w-0">{opt.text}</span>
+                {isAnswered && isThisCorrect && <span className="tm-tag is-ok">Doğru</span>}
+                {isAnswered && isPicked && !isThisCorrect && <span className="tm-tag is-bad">Senin cevabın</span>}
               </button>
             );
           })}
         </div>
 
         {isAnswered && (
-          <section className={`rounded-2xl px-4 py-4 flex flex-col gap-2 ${isCorrect ? 'bg-ok-soft' : 'bg-bad-soft'}`}>
+          <section className={`tm-verdict ${isCorrect ? 'is-ok' : 'is-bad'}`} role="status">
             <span className={`font-semibold text-md ${isCorrect ? 'text-ok' : 'text-bad-text'}`}>
               {isCorrect ? 'Doğru!' : `Doğru cevap ${rec.correctAnswer}`}
             </span>
@@ -261,17 +249,36 @@ export const PracticeMode: React.FC<PracticeModeProps> = ({
           </section>
         )}
 
+        {answeredCount === total && total > 0 && (
+          <section className="tm-done" aria-label="Test sonucu">
+            <div className="tm-done-score">
+              <b className="hk-num">%{Math.round((correctCount / total) * 100)}</b>
+              <span>{correctCount} doğru · {total - correctCount} yanlış · {formatElapsed(elapsed)}</span>
+            </div>
+            {total - correctCount > 0 && (
+              <div className="tm-done-wrong">
+                <span>Yanlışlara dön</span>
+                <div>
+                  {items.map((q, i) => (selectedAnswers[q.id] && selectedAnswers[q.id] !== q.reconstruction?.correctAnswer ? (
+                    <button key={q.id} type="button" onClick={() => go(i)} className="tm-chip">{i + 1}</button>
+                  ) : null))}
+                </div>
+              </div>
+            )}
+          </section>
+        )}
+
         <p className="hidden md:block m-0 text-sm text-ink-3">Kısayollar: A–E cevap · ← → soru değiştir</p>
       </main>
 
       {/* Sticky bottom bar: navigator · previous · next */}
-      <div className="fixed bottom-0 left-0 right-0 z-20 bg-white/95 backdrop-blur border-t border-line pb-[max(env(safe-area-inset-bottom),10px)] pt-2.5">
+      <div className="tm-foot fixed bottom-0 left-0 right-0 z-20 pb-[max(env(safe-area-inset-bottom),10px)] pt-2.5">
         <div className="max-w-[960px] mx-auto px-4 sm:px-8 flex items-center gap-2">
           <button
             type="button"
             onClick={() => setNavOpen(true)}
             aria-haspopup="dialog"
-            className="h-12 px-3 rounded-xl border border-line bg-white inline-flex items-center gap-2 font-mono text-base text-ink cursor-pointer shrink-0"
+            className="tm-nav-btn"
           >
             <LayoutGrid className="w-[18px] h-[18px] text-ink-2" />
             {position}/{total}
@@ -281,7 +288,7 @@ export const PracticeMode: React.FC<PracticeModeProps> = ({
             onClick={() => go(currentIndex - 1)}
             disabled={currentIndex === 0}
             aria-label="Önceki soru"
-            className="w-12 h-12 rounded-xl border border-line bg-white flex items-center justify-center cursor-pointer disabled:opacity-40 shrink-0"
+            className="tm-nav-btn is-icon"
           >
             <ArrowLeft className="w-5 h-5" />
           </button>
@@ -289,7 +296,7 @@ export const PracticeMode: React.FC<PracticeModeProps> = ({
             type="button"
             onClick={() => go(currentIndex + 1)}
             disabled={currentIndex >= total - 1}
-            className="flex-1 h-12 rounded-xl bg-accent hover:bg-accent-hover text-white font-semibold text-md inline-flex items-center justify-center gap-2 cursor-pointer disabled:opacity-40"
+            className="ui-btn is-primary tm-next"
           >
             {isAnswered ? 'Sonraki soru' : 'Atla'}
             <ArrowRight className="w-5 h-5" />
@@ -297,50 +304,34 @@ export const PracticeMode: React.FC<PracticeModeProps> = ({
         </div>
       </div>
 
-      {/* Question navigator sheet */}
-      {navOpen && (
-        <div className="fixed inset-0 z-[60] flex items-end sm:items-center justify-center" role="dialog" aria-modal="true" aria-label="Soru gezgini">
-          <button type="button" aria-label="Kapat" onClick={() => setNavOpen(false)} className="absolute inset-0 bg-[rgba(14,26,38,0.4)] cursor-default" />
-          <div className="relative w-full sm:max-w-[560px] max-h-[80dvh] overflow-y-auto bg-white rounded-t-2xl sm:rounded-2xl px-4 sm:px-5 pt-2 sm:pt-5 pb-[max(env(safe-area-inset-bottom),20px)] sm:pb-5 flex flex-col gap-3">
-            <span className="sm:hidden self-center w-10 h-[5px] rounded-full bg-line-2" aria-hidden="true" />
-            <div className="flex items-center gap-3">
-              <span className="flex-1 text-lg font-bold">Sorular</span>
-              <span className="font-mono text-sm text-ink-2">
-                <span className="text-ok font-semibold">{correctCount}</span> doğru · {answeredCount - correctCount} yanlış · {total - answeredCount} boş
-              </span>
-              <button type="button" onClick={() => setNavOpen(false)} aria-label="Kapat" className="w-9 h-9 -mr-1 rounded-full flex items-center justify-center text-ink-2 cursor-pointer hover:bg-canvas">
-                <X className="w-5 h-5" />
+      {/* Soru gezgini: ortak alt sayfa */}
+      <Sheet
+        open={navOpen}
+        onClose={() => setNavOpen(false)}
+        title="Sorular"
+        subtitle={`${correctCount} doğru · ${answeredCount - correctCount} yanlış · ${total - answeredCount} boş`}
+        width={560}
+      >
+        <nav aria-label="Soru gezgini" className="tm-grid">
+          {items.map((q, i) => {
+            const ans = selectedAnswers[q.id];
+            const current = i === currentIndex;
+            const right = ans && ans === q.reconstruction?.correctAnswer;
+            return (
+              <button
+                key={q.id}
+                type="button"
+                onClick={() => { go(i); setNavOpen(false); }}
+                aria-current={current ? 'step' : undefined}
+                aria-label={`Soru ${i + 1}${ans ? (right ? ', doğru' : ', yanlış') : ''}`}
+                className={`tm-cell ${ans ? (right ? 'is-ok' : 'is-bad') : ''}`}
+              >
+                {i + 1}
               </button>
-            </div>
-            <nav aria-label="Soru gezgini" className="grid grid-cols-[repeat(auto-fill,minmax(44px,1fr))] gap-1.5">
-              {items.map((q, i) => {
-                const ans = selectedAnswers[q.id];
-                const current = i === currentIndex;
-                const right = ans && ans === q.reconstruction?.correctAnswer;
-                const cls = current
-                  ? 'bg-white text-accent ring-2 ring-inset ring-accent font-semibold'
-                  : ans
-                    ? right
-                      ? 'bg-ok-soft text-ok'
-                      : 'bg-bad-soft text-bad-text'
-                    : 'bg-canvas text-ink-2';
-                return (
-                  <button
-                    key={q.id}
-                    type="button"
-                    onClick={() => go(i)}
-                    aria-current={current ? 'step' : undefined}
-                    aria-label={`Soru ${i + 1}${ans ? (right ? ', doğru' : ', yanlış') : ''}`}
-                    className={`h-11 rounded-[10px] flex items-center justify-center font-mono text-sm cursor-pointer ${cls}`}
-                  >
-                    {i + 1}
-                  </button>
-                );
-              })}
-            </nav>
-          </div>
-        </div>
-      )}
+            );
+          })}
+        </nav>
+      </Sheet>
 
       {/* AI Live Tutor Chat Drawer */}
       <QuestionAiChatDrawer

@@ -66,6 +66,7 @@ import { QuestionFocus, focusMarks } from '../../services/questionFocus';
 import { InteractiveStepRenderer } from './InteractiveStepElements';
 import { LessonPlayer } from './lesson/LessonPlayer';
 import { LearnHub, touchRecent } from './LearnHub';
+import { triggerDomHighlightAndScroll } from '../../services/universalRedirectService';
 
 // ---------------------------------------------------------------------------
 // Data types (shape of interactive_learning_decks.json)
@@ -732,6 +733,17 @@ export const InteractiveDeckView: React.FC<InteractiveDeckViewProps> = ({ initia
     });
     return () => { alive = false; };
   }, [deckId]);
+
+  // Cümle/Metin odaklama (?highlight=...) kontrolü
+  useEffect(() => {
+    if (typeof window !== 'undefined' && activeDeck) {
+      const sp = new URLSearchParams(window.location.search);
+      const hl = sp.get('highlight');
+      if (hl) {
+        setTimeout(() => triggerDomHighlightAndScroll(hl), 600);
+      }
+    }
+  }, [activeDeck, initialSlideNumber]);
 
   return (
     <div className="flex flex-col gap-3 sm:gap-4 min-w-0">

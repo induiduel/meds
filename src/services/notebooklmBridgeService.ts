@@ -384,6 +384,7 @@ export async function ingestNotebookLMData(rawInput: any, forcedType?: string): 
 
   switch (targetType) {
     case 'past_question_correction':
+    case 'past_question_correction_full_schema':
     case 'past_questions':
     case 'soru_duzeltme':
       return ingestPastQuestionCorrections(payload);
@@ -546,11 +547,12 @@ export function ingestPastQuestionCorrections(payload: any): IngestionResult {
   const warnings: string[] = [];
 
   items.forEach((item) => {
-    const qid = item.id ? String(item.id).trim() : null;
-    let targetIdx = qid ? questionMap.get(qid) : undefined;
+    const rawQid = item.id ? String(item.id).trim() : null;
+    const cleanQid = rawQid ? rawQid.replace(/^q:/i, '').trim() : null;
+    let targetIdx = cleanQid ? (questionMap.get(cleanQid) ?? (rawQid ? questionMap.get(rawQid) : undefined)) : undefined;
 
-    // If ID not found, attempt match by questionNumber and kurul
-    if (targetIdx === undefined && item.questionNumber && item.kurul) {
+    // If ID not found, attempt match by questionNumber and kurul ONLY IF no question ID was provided
+    if (targetIdx === undefined && !rawQid && !cleanQid && item.questionNumber && item.kurul) {
       targetIdx = existingQuestions.findIndex(
         (q) => String(q.kurul) === String(item.kurul) && Number(q.questionNumber) === Number(item.questionNumber)
       );
@@ -606,7 +608,7 @@ export function ingestPastQuestionCorrections(payload: any): IngestionResult {
       updatedIds.push(curr.id);
     } else {
       // Create new question entry
-      const newId = qid || `q-nlm-${Date.now()}-${Math.random().toString(36).substring(2, 7)}`;
+      const newId = cleanQid || rawQid || `q-nlm-${Date.now()}-${Math.random().toString(36).substring(2, 7)}`;
       const kurulNum = Number(item.kurul) || 1;
       const committeeId = item.committeeId || COMMITTEE_CODE_MAP[kurulNum] || `donem3-kurul${kurulNum}`;
       const finalStem = item.stem || item.question || '';

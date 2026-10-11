@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import type { SupabaseClient } from '@supabase/supabase-js';
 import { db } from './firestoreDb.ts';
-import { collection, getDocs, query, orderBy, limit } from 'firebase/firestore';
+import { collection, getDocs, query, orderBy, limit, onSnapshot } from 'firebase/firestore';
 
 export interface CloudBridgeOptions {
   dataDir: string;
@@ -29,6 +29,8 @@ export class CloudNotificationBridge {
   private processedIds: Set<string> = new Set();
   private timer: NodeJS.Timeout | null = null;
   private isChecking = false;
+  private firestoreUnsub: (() => void) | null = null;
+  private supabaseChannel: any = null;
 
   constructor(opts: CloudBridgeOptions) {
     this.dataDir = opts.dataDir;
@@ -57,18 +59,177 @@ export class CloudNotificationBridge {
     } catch (_) {}
   }
 
+  /**
+   * Hem Realtime WebSocket dinleyicilerini (Supabase + Firebase) hem de yedek polling döngüsünü başlatır.
+   */
   public start(intervalMs = 10000) {
-    if (this.timer) return;
-    console.log(`[CloudNotificationBridge] Bulut bildirim köprüsü başlatıldı (Aralık: ${intervalMs / 1000}s).`);
-    // İlk kontrol
+    console.log(`[CloudNotificationBridge] ⚡ Realtime Bildirim Köprüsü başlatılıyor...`);
+
+    // 1. Firebase Realtime (Firestore onSnapshot) Dinleyicisi
+    this.setupFirebaseRealtime();
+
+    // 2. Supabase Realtime (WebSocket postgres_changes) Dinleyicisi
+    this.setupSupabaseRealtime();
+
+    // 3. İlk Kontrol & Güvenlik Yedek Döngüsü (Polling)
     this.check();
-    this.timer = setInterval(() => this.check(), intervalMs);
+    if (!this.timer) {
+      this.timer = setInterval(() => this.check(), intervalMs);
+    }
   }
 
   public stop() {
     if (this.timer) {
       clearInterval(this.timer);
       this.timer = null;
+    }
+    if (this.firestoreUnsub) {
+      try { this.firestoreUnsub(); } catch (_) {}
+      this.firestoreUnsub = null;
+    }
+    if (this.supabaseChannel && this.cloudSupabase) {
+      try { this.cloudSupabase.removeChannel(this.supabaseChannel); } catch (_) {}
+      this.supabaseChannel = null;
+    }
+  }
+
+  /**
+   * Firebase Firestore Realtime Listener:
+   * Yeni admin bildirimleri veya hata raporları eklendiğinde 0 gecikmeyle WebSocket ile tetiklenir.
+   */
+  private setupFirebaseRealtime() {
+    try {
+      const q = query(collection(db, 'admin_notifications'), orderBy('timestamp', 'desc'), limit(15));
+      this.firestoreUnsub = onSnapshot(
+        q,
+        (snap) => {
+          snap.docChanges().forEach((change) => {
+            if (change.type === 'added') {
+              const data = change.doc.data();
+              const id = change.doc.id;
+              if (!this.processedIds.has(id)) {
+                this.processedIds.add(id);
+                this.saveProcessedIds();
+
+                console.log(`[CloudBridge] 🔥 Firebase Realtime: Yeni bildirim yakalandı (#${data.questionId || id})!`);
+                const type = (data.type === 'comment' ? 'comment' : 'report') as 'report' | 'comment';
+                this.onNewNotification({
+                  type,
+                  questionId: data.questionId || 'Genel',
+                  reason: data.title || data.reason,
+                  details: data.message || data.details,
+                  text: data.text || data.message,
+                  author: data.author || 'Tıp Öğrencisi',
+                  discipline: data.discipline,
+                  topic: data.topic,
+                });
+              }
+            }
+          });
+        },
+        (err) => {
+          console.warn('[CloudBridge] Firebase Realtime dinleme uyarısı (polling devrede):', err.message);
+        }
+      );
+      console.log('[CloudBridge] 🔥 Firebase Realtime (Firestore onSnapshot) aktif.');
+    } catch (e: any) {
+      console.warn('[CloudBridge] Firebase Realtime başlatılamadı:', e.message);
+    }
+  }
+
+  /**
+   * Supabase Realtime Listener:
+   * 'past_question_reports', 'past_questions' ve 'questions' tablolarında INSERT/UPDATE olduğunda
+   * WebSocket ile derhal tetiklenir.
+   */
+  private setupSupabaseRealtime() {
+    try {
+      if (!this.cloudSupabase) return;
+
+      this.supabaseChannel = this.cloudSupabase
+        .channel('realtime_error_notifications')
+        // 1. Doğrudan rapor tablosu (varsa)
+        .on(
+          'postgres_changes',
+          { event: 'INSERT', schema: 'public', table: 'past_question_reports' },
+          (payload: any) => {
+            const r = payload?.new;
+            if (!r) return;
+            const repKey = `sb-rep-${r.id || Date.now()}`;
+            if (!this.processedIds.has(repKey)) {
+              this.processedIds.add(repKey);
+              this.saveProcessedIds();
+
+              console.log(`[CloudBridge] ⚡ Supabase Realtime: Yeni çıkmış soru hata bildirimi yakalandı (#${r.question_id})!`);
+              this.onNewNotification({
+                type: 'report',
+                questionId: String(r.question_id || ''),
+                reason: r.reason || 'Hata Bildirimi',
+                details: r.details || '',
+                author: r.reported_by || 'Tıp Öğrencisi',
+              });
+            }
+          }
+        )
+        // 2. past_questions güncellemesi (reports alanı yenilendiğinde)
+        .on(
+          'postgres_changes',
+          { event: 'UPDATE', schema: 'public', table: 'past_questions' },
+          (payload: any) => {
+            const row = payload?.new;
+            if (!row || !Array.isArray(row.reports) || row.reports.length === 0) return;
+            for (const r of row.reports) {
+              const repKey = r.id ? `rep-${r.id}` : `rep-${row.id}-${r.timestamp || r.createdAt || r.reason}`;
+              if (!this.processedIds.has(repKey)) {
+                this.processedIds.add(repKey);
+                this.saveProcessedIds();
+
+                console.log(`[CloudBridge] ⚡ Supabase Realtime: past_questions içinde yeni hata yakalandı (#${row.id})!`);
+                this.onNewNotification({
+                  type: 'report',
+                  questionId: String(row.id),
+                  reason: r.reason || 'Hata Bildirimi',
+                  details: r.details || '',
+                  author: r.reportedBy || 'Tıp Öğrencisi',
+                  discipline: row.discipline,
+                  topic: row.topic,
+                });
+              }
+            }
+          }
+        )
+        // 3. questions (havuz) güncellemesi
+        .on(
+          'postgres_changes',
+          { event: 'UPDATE', schema: 'public', table: 'questions' },
+          (payload: any) => {
+            const row = payload?.new;
+            if (!row || !Array.isArray(row.reports) || row.reports.length === 0) return;
+            for (const r of row.reports) {
+              const repKey = r.id ? `rep-${r.id}` : `pool-rep-${row.id}-${r.timestamp || r.createdAt}`;
+              if (!this.processedIds.has(repKey)) {
+                this.processedIds.add(repKey);
+                this.saveProcessedIds();
+
+                console.log(`[CloudBridge] ⚡ Supabase Realtime: havuz sorusunda yeni hata yakalandı (#${row.id})!`);
+                this.onNewNotification({
+                  type: 'report',
+                  questionId: String(row.id),
+                  reason: r.reason || 'Hata Bildirimi',
+                  details: r.details || '',
+                  author: r.reportedBy || 'Tıp Öğrencisi',
+                  discipline: row.discipline,
+                  topic: row.topic,
+                });
+              }
+            }
+          }
+        )
+        .subscribe((status: string) => {
+          console.log(`[CloudBridge] ⚡ Supabase Realtime kanal durumu: ${status}`);
+        });
+    } catch (e: any) {
+      console.warn('[CloudBridge] Supabase Realtime başlatılamadı:', e.message);
     }
   }
 
@@ -101,7 +262,6 @@ export class CloudNotificationBridge {
           this.processedIds.add(id);
           this.saveProcessedIds();
 
-          // Yeni bildirim yakalandı, mail ve push tetikle
           const type = (data.type === 'comment' ? 'comment' : 'report') as 'report' | 'comment';
           this.onNewNotification({
             type,
@@ -130,7 +290,6 @@ export class CloudNotificationBridge {
       if (error || !Array.isArray(data)) return;
 
       for (const row of data) {
-        // 1. Reports kontrolü
         if (Array.isArray(row.reports) && row.reports.length > 0) {
           for (const r of row.reports) {
             const repKey = r.id ? `rep-${r.id}` : `rep-${row.id}-${r.timestamp || r.createdAt || r.reason}`;
@@ -141,7 +300,7 @@ export class CloudNotificationBridge {
               console.log(`[CloudBridge] 🚨 Supabase past_questions içinde yeni hata bildirimi tespit edildi (#${row.id})`);
               this.onNewNotification({
                 type: 'report',
-                questionId: row.id,
+                questionId: String(row.id),
                 reason: r.reason || 'Hata Bildirimi',
                 details: r.details || '',
                 author: r.reportedBy || 'Tıp Öğrencisi',
@@ -152,7 +311,6 @@ export class CloudNotificationBridge {
           }
         }
 
-        // 2. Comments kontrolü
         if (Array.isArray(row.comments) && row.comments.length > 0) {
           for (const c of row.comments) {
             const commKey = c.id ? `comm-${c.id}` : `comm-${row.id}-${c.timestamp || c.createdAt || c.text}`;
@@ -160,10 +318,9 @@ export class CloudNotificationBridge {
               this.processedIds.add(commKey);
               this.saveProcessedIds();
 
-              console.log(`[CloudBridge] 💬 Supabase past_questions içinde yeni yorum tespit edildi (#${row.id})`);
               this.onNewNotification({
                 type: 'comment',
-                questionId: row.id,
+                questionId: String(row.id),
                 text: c.text || '',
                 author: c.author || 'Tıp Öğrencisi',
                 discipline: row.discipline,
@@ -199,7 +356,7 @@ export class CloudNotificationBridge {
 
               this.onNewNotification({
                 type: 'report',
-                questionId: row.id,
+                questionId: String(row.id),
                 reason: r.reason || 'Hata Bildirimi',
                 details: r.details || '',
                 author: r.reportedBy || 'Tıp Öğrencisi',
@@ -217,7 +374,6 @@ export class CloudNotificationBridge {
     try {
       if (!this.cloudSupabase) return;
 
-      // 1. Mobil Push Aboneliklerini Senkronize Et
       const { data: subData } = await this.cloudSupabase
         .from('system_status')
         .select('data')

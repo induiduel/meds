@@ -149,6 +149,7 @@ export const saveFirestoreUserProfile = async (user: AppUser): Promise<void> => 
         displayName: user.displayName || null,
         studentNumber: user.studentNumber || null,
         congratsSentCommittees: user.congratsSentCommittees || [],
+        photoURL: user.photoURL || null,
         updatedAt: new Date().toISOString(),
       };
       await setDoc(userDocRef, dataToSave, { merge: true });
@@ -253,7 +254,8 @@ export const initAuth = (
         email: firebaseUser.email,
         displayName: firebaseUser.displayName || cached?.displayName || remembered.name || null,
         studentNumber: cached?.studentNumber || remembered.studentNumber || null,
-        photoURL: firebaseUser.photoURL,
+        // Kullanıcının kırptığı fotoğraf Google fotoğrafından önce gelir
+        photoURL: cached?.photoURL ?? firebaseUser.photoURL,
         congratsSentCommittees: cached?.congratsSentCommittees || [],
       };
 
@@ -264,6 +266,7 @@ export const initAuth = (
             ...appUser,
             displayName: remote.displayName || appUser.displayName,
             studentNumber: remote.studentNumber || appUser.studentNumber,
+            photoURL: remote.photoURL || appUser.photoURL,
             congratsSentCommittees: remote.congratsSentCommittees || appUser.congratsSentCommittees,
           };
           cacheUserProfile(appUser);
@@ -407,7 +410,7 @@ export const loginWithEmailPassword = async (
       email: fbUser.email,
       displayName: fbUser.displayName || remote?.displayName || cached?.displayName || remembered.name || cleanEmail.split('@')[0],
       studentNumber: remote?.studentNumber || cached?.studentNumber || remembered.studentNumber || null,
-      photoURL: fbUser.photoURL,
+      photoURL: remote?.photoURL || (cached?.photoURL ?? fbUser.photoURL),
       congratsSentCommittees: remote?.congratsSentCommittees || cached?.congratsSentCommittees || [],
     };
   } catch (firebaseErr: any) {
@@ -444,6 +447,8 @@ export const updateUserProfileData = async (
     displayName?: string;
     studentNumber?: string;
     congratsSentCommittees?: string[];
+    /** Kırpılmış profil fotoğrafı (data URL) ya da null = kaldır */
+    photoURL?: string | null;
   }
 ): Promise<AppUser> => {
   const cleanName = updates.displayName !== undefined ? updates.displayName.trim() : currentUser.displayName;
@@ -459,6 +464,7 @@ export const updateUserProfileData = async (
     displayName: cleanName || null,
     studentNumber: cleanNumber || null,
     congratsSentCommittees: congrats,
+    photoURL: updates.photoURL !== undefined ? updates.photoURL : currentUser.photoURL ?? null,
   };
 
   if (auth.currentUser && cleanName && cleanName !== auth.currentUser.displayName) {

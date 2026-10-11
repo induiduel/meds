@@ -64,13 +64,35 @@ export interface QuestionRevision {
   editorName: string;
   editorUid?: string;
   editorStudentNumber?: string;
+  editorRole?: 'ai_auto_repair' | 'admin_manual' | 'student' | string;
+  ticketNo?: string;
   changeSummary?: string;
+  medicalReasoning?: string;
+  detectedIssues?: string[];
+  reportId?: string;
+  userReport?: any;
   stem?: string;
   discipline?: string;
   topic?: string;
   claimedAnswer?: 'A' | 'B' | 'C' | 'D' | 'E';
   options?: QuestionOption[];
   explanation?: string;
+}
+
+export interface QuestionReportItem {
+  id?: string;
+  reason: string;
+  details?: string;
+  reportedBy?: string;
+  reportedAt?: string;
+  status?: 'pending' | 'resolved' | 'verified_correct' | 'rejected' | string;
+  ticketNo?: string;
+  resolvedAt?: string;
+  resolvedBy?: string;
+  resolutionSummary?: string;
+  medicalReasoning?: string;
+  detectedIssues?: string[];
+  suggestedAnswer?: string;
 }
 
 export interface QuestionLectureMatch {
@@ -156,7 +178,7 @@ export interface QuestionItem {
   correctAnswer?: 'A' | 'B' | 'C' | 'D' | 'E';
   isAmbiguous?: boolean;
   comments?: Array<{ id?: string; author: string; text: string; createdAt?: string }>;
-  reports?: Array<{ id?: string; reason: string; details?: string; reportedBy?: string; reportedAt?: string }>;
+  reports?: QuestionReportItem[];
   isLocked?: boolean;
   author?: string;
   mergedSatellites?: QuestionItem[];
@@ -198,6 +220,20 @@ export interface QuestionItem {
   };
   explanation?: string;
   evidenceText?: string;
+  notebooklm_verisi?: {
+    mufredat?: string;
+    kurul?: string;
+    ders?: string;
+    konu?: string;
+    kazanim?: string;
+  };
+  sik_analizi?: Record<string, string> | string;
+  isQuarantined?: boolean;
+  quarantineReasons?: string[];
+  quarantineSource?: string | null;
+  quarantineDetails?: any;
+  isInaccessible?: boolean;
+  isDonem3?: boolean;
   lectureMatches?: any[];
   lectureRefs?: any[];
   deepseekEnriched?: boolean;
@@ -249,7 +285,6 @@ export interface QuestionItem {
     isAmbiguous?: boolean;
     status?: string;
   };
-  sik_analizi?: Record<string, string>;
   tibbi_aciklama?: string;
   cevap_gerekcesi?: string;
   referans_kaynaklar?: string[];

@@ -233,6 +233,22 @@ export const ContributeModal: React.FC<ContributeModalProps> = ({
 
   // Kapanış animasyonlu: önce pencere aşağı/küçülerek çıkar, sonra kapatılır
   const [closing, setClosing] = useState(false);
+  // Telefonda form adım adım ilerler (künye → kök → şıklar → gönder); masaüstünde tek sayfa.
+  const [isPhone, setIsPhone] = useState(() => typeof window !== 'undefined' && window.matchMedia('(max-width: 639px)').matches);
+  useEffect(() => {
+    const mq = window.matchMedia('(max-width: 639px)');
+    const on = () => setIsPhone(mq.matches);
+    mq.addEventListener('change', on);
+    return () => mq.removeEventListener('change', on);
+  }, []);
+  const [step, setStep] = useState(1);
+  const STEP_TITLES = ['Hangi soru?', 'Soru kökü', 'Şıklar', 'Gönder'];
+  const goStep = (n: number) => {
+    setStep(Math.max(1, Math.min(4, n)));
+    requestAnimationFrame(() => document.getElementById('contribute-form')?.scrollTo({ top: 0 }));
+  };
+  // Gönderimde hata çıkarsa hatanın göründüğü son adıma geç
+  useEffect(() => { if (formError && isPhone) setStep(4); }, [formError, isPhone]);
   useEffect(() => { if (isOpen) setClosing(false); }, [isOpen]);
   const requestClose = () => {
     if (closing) return;
@@ -397,6 +413,14 @@ export const ContributeModal: React.FC<ContributeModalProps> = ({
             <X className="w-5 h-5" />
           </button>
         </header>
+        {isPhone && !saveSuccess && (
+          <div className="ct-steps" aria-label={`Adım ${step} / 4 · ${STEP_TITLES[step - 1]}`}>
+            <div className="ct-steps-bar" aria-hidden>
+              {[1, 2, 3, 4].map((n) => <span key={n} className={n <= step ? 'is-on' : ''} />)}
+            </div>
+            <span className="ct-steps-t"><b>{STEP_TITLES[step - 1]}</b><span>{step} / 4</span></span>
+          </div>
+        )}
 
         {saveSuccess ? (
           <div role="status" className="row-span-2 flex flex-col items-center justify-center gap-2 px-6 py-14 text-center">
@@ -406,9 +430,9 @@ export const ContributeModal: React.FC<ContributeModalProps> = ({
           </div>
         ) : (
           <>
-            <form id="contribute-form" onSubmit={handleSubmit} noValidate className="relative overflow-y-auto px-5 py-4 flex flex-col gap-5">
+            <form id="contribute-form" onSubmit={handleSubmit} noValidate className={`relative overflow-y-auto px-5 py-4 flex flex-col gap-5 ct-form ${isPhone ? `is-wizard is-step-${step}` : ''}`}>
               {/* Hangi soru: kurul, ders, sene, numara */}
-              <section className="flex flex-col gap-2">
+              <section data-step="1" className="flex flex-col gap-2">
                 <span className={labelCls}>Hangi soru?</span>
                 <div className="ct-kunye">
                   <MetaPicker label="Kurul" icon={Layers} value={selectedComm ? committeeShortLabel(selectedComm) : 'Seç'} width={300}>
@@ -491,7 +515,7 @@ export const ContributeModal: React.FC<ContributeModalProps> = ({
               </section>
 
               {/* Stem */}
-              <section className="flex flex-col gap-2">
+              <section data-step="2" className="flex flex-col gap-2">
                 <div className="flex items-center justify-between gap-2">
                   <label htmlFor="contrib-stem" className={labelCls}>
                     Soru kökü / ipucu
@@ -648,7 +672,7 @@ export const ContributeModal: React.FC<ContributeModalProps> = ({
               </section>
 
               {/* Options + answer */}
-              <section className="flex flex-col gap-2">
+              <section data-step="3" className="flex flex-col gap-2">
                 <span className={labelCls}>Şıklar</span>
                 <OptionsEditor
                   options={options}
@@ -663,7 +687,7 @@ export const ContributeModal: React.FC<ContributeModalProps> = ({
               </section>
 
               {/* Author */}
-              <section className="flex flex-col gap-2">
+              <section data-step="4" className="flex flex-col gap-2">
                 <label htmlFor="contrib-author" className={labelCls}>
                   Rumuz <span className="normal-case tracking-normal font-normal">· isteğe bağlı</span>
                 </label>
@@ -686,13 +710,33 @@ export const ContributeModal: React.FC<ContributeModalProps> = ({
             </form>
 
             <footer className="flex items-center gap-2 px-5 py-3 pb-[max(env(safe-area-inset-bottom),12px)] sm:pb-3 border-t border-line-soft bg-white">
+              {isPhone && step < 4 ? (
+                <>
+                  <button
+                    type="button"
+                    onClick={() => (step === 1 ? requestClose() : goStep(step - 1))}
+                    disabled={isSubmitting}
+                    className="h-12 px-4 rounded-xl text-md font-semibold text-ink-2 hover:bg-canvas cursor-pointer disabled:opacity-50"
+                  >
+                    {step === 1 ? 'Vazgeç' : 'Geri'}
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => goStep(step + 1)}
+                    className="flex-1 h-12 px-6 rounded-xl bg-accent hover:bg-accent-hover text-white text-md font-semibold inline-flex items-center justify-center gap-2 cursor-pointer"
+                  >
+                    Devam et
+                    <ArrowRight className="w-4 h-4" />
+                  </button>
+                </>
+              ) : (<>
               <button
                 type="button"
-                onClick={requestClose}
+                onClick={isPhone ? () => goStep(3) : requestClose}
                 disabled={isSubmitting}
                 className="h-12 sm:h-11 px-4 rounded-xl text-md font-semibold text-ink-2 hover:bg-canvas cursor-pointer disabled:opacity-50"
               >
-                Vazgeç
+                {isPhone ? 'Geri' : 'Vazgeç'}
               </button>
               <button
                 type="submit"
@@ -703,6 +747,7 @@ export const ContributeModal: React.FC<ContributeModalProps> = ({
                 Havuza ekle
                 <ArrowRight className="w-4 h-4" />
               </button>
+              </>)}
             </footer>
           </>
         )}

@@ -13,6 +13,7 @@ import {
   ListMusic,
   Headphones,
   Info,
+  Check,
 } from 'lucide-react';
 import { PageHeader } from './ui/PageHeader';
 import { isDirectAudio, parseYouTube, useMusicPlayer, type MusicTrack } from './music/MusicPlayerContext';
@@ -48,7 +49,7 @@ export const MusicView: React.FC<{ isAdmin: boolean }> = ({ isAdmin }) => {
     const entry: MusicTrack = {
       id,
       title,
-      artist: 'Admin seçkisi',
+      artist: 'Senin listen',
       url,
       videoId: parsed && 'videoId' in parsed && parsed.videoId ? parsed.videoId : undefined,
       listId: parsed && 'listId' in parsed ? parsed.listId : undefined,
@@ -61,242 +62,88 @@ export const MusicView: React.FC<{ isAdmin: boolean }> = ({ isAdmin }) => {
   };
 
   const progress = dur > 0 ? Math.min(100, (cur / dur) * 100) : 0;
+  const [list, setList] = useState<'mine' | 'all' | 'picks'>('all');
+  const mine = tracks.filter((t) => t.custom).length;
+  const shown = tracks.map((t, i) => ({ t, i })).filter(({ t }) => list === 'all' || (list === 'mine' ? t.custom : !t.custom));
 
   return (
-    <div className="w-full flex flex-col gap-3 sm:gap-4 min-w-0">
+    <div className="mux">
       <PageHeader
         eyebrow="Topluluk"
         title="Müzik"
-        description="Adminin paylaştığı parçalar · yalnızca ses — başka sayfalara geçince de çalmaya devam eder, bildirimden ve kilit ekranından kontrol edilir."
+        description="Çalışırken dinle. Eklediğin parçalar hesabına kaydedilir; sayfa değişince de çalmaya devam eder."
       />
 
-      {/* Ana çalar */}
-      <section className="bg-white border border-line rounded-2xl p-4 sm:p-5 flex flex-col gap-4">
-        <div className="flex items-center gap-4">
-          <span
-            aria-hidden="true"
-            className={`w-16 h-16 sm:w-20 sm:h-20 rounded-2xl flex items-center justify-center shrink-0 ${
-              playing ? 'bg-accent text-white' : 'bg-canvas text-ink-2'
-            }`}
-          >
-            {playing ? <Headphones className="w-8 h-8" /> : <Music className="w-8 h-8" />}
-          </span>
-          <div className="min-w-0 flex-1">
-            <p className="m-0 text-2xs font-semibold uppercase tracking-[0.08em] text-ink-3">
-              {tracks.length === 0 ? 'Liste boş' : `Parça ${safeIndex + 1} / ${tracks.length}`}
-            </p>
-            <h2 className="m-0 font-display font-bold text-xl sm:text-2xl tracking-[-0.02em] text-ink truncate">
-              {current?.title || 'Henüz parça eklenmedi'}
-            </h2>
-            <p className="m-0 text-base text-ink-2 truncate">{current?.artist || 'Admin seçkisi'}</p>
-            {playing && (
-              <span className="mt-1.5 flex items-end gap-1 h-4" aria-hidden="true">
-                {[0, 1, 2, 3].map((i) => (
-                  <span
-                    key={i}
-                    className="w-1 rounded-full bg-accent ms-eq-bar"
-                    style={{ animationDelay: `${i * 0.18}s` }}
-                  />
-                ))}
-              </span>
-            )}
+      <div className="mux-body">
+        <aside className="mux-lists" aria-label="Çalma listeleri">
+          <span className="mux-cap">ÇALMA LİSTELERİ</span>
+          {([['all', 'Tümü', tracks.length], ['mine', 'Senin listen', mine], ['picks', 'Seçki', tracks.length - mine]] as const).map(([id, l, n]) => (
+            <button key={id} type="button" className={`mux-list ${list === id ? 'is-on' : ''}`} aria-pressed={list === id} onClick={() => setList(id)}>
+              {id === 'mine' ? <Headphones aria-hidden /> : <ListMusic aria-hidden />}
+              <span>{l}</span>
+              <span className="n">{n}</span>
+            </button>
+          ))}
+        </aside>
+
+        <section className="mux-main" aria-label="Parçalar">
+          <div className="mux-h">
+            <b>{list === 'mine' ? 'Senin listen' : list === 'picks' ? 'Seçki' : 'Tüm parçalar'}</b>
+            <span className="mux-saved"><Check aria-hidden />Hesabına kaydedilir</span>
           </div>
-          {current && (
-            <a
-              href={current.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="h-10 px-3 rounded-[10px] border border-line-2 text-ink font-semibold text-base hidden sm:inline-flex items-center gap-1.5 shrink-0"
-            >
-              YouTube'da aç
-              <ExternalLink className="w-3.5 h-3.5" />
-            </a>
-          )}
-        </div>
-
-        {/* İlerleme */}
-        <div className="flex items-center gap-2.5">
-          <span className="font-mono text-sm text-ink-2 w-10 text-right shrink-0">{fmt(cur)}</span>
-          <input
-            type="range"
-            min={0}
-            max={Math.max(1, Math.floor(dur))}
-            step={1}
-            value={Math.floor(Math.min(cur, dur || 0))}
-            onChange={(e) => seek(Number(e.target.value))}
-            aria-label="Parça konumu"
-            className="flex-1 min-w-0 accent-[var(--accent)] cursor-pointer"
-            disabled={!current}
-          />
-          <span className="font-mono text-sm text-ink-2 w-10 shrink-0">{fmt(dur)}</span>
-        </div>
-        <div
-          className="h-1.5 rounded-full bg-line-soft overflow-hidden -mt-2"
-          aria-hidden="true"
-        >
-          <div className="h-full rounded-full bg-accent transition-[width]" style={{ width: `${progress}%` }} />
-        </div>
-
-        {/* Kontroller */}
-        <div className="flex items-center justify-center gap-2">
-          <button
-            type="button"
-            onClick={prev}
-            disabled={tracks.length < 2}
-            aria-label="Önceki parça"
-            className="w-11 h-11 rounded-full flex items-center justify-center text-ink-2 hover:text-ink hover:bg-canvas disabled:opacity-40 cursor-pointer"
-          >
-            <SkipBack className="w-5 h-5" />
-          </button>
-          <button
-            type="button"
-            onClick={toggle}
-            disabled={!current}
-            aria-label={playing ? 'Duraklat' : 'Oynat'}
-            className="w-14 h-14 rounded-full bg-accent hover:bg-accent-hover text-white flex items-center justify-center cursor-pointer shadow-sm disabled:opacity-50"
-          >
-            {playing ? <Pause className="w-6 h-6" /> : <Play className="w-6 h-6 ml-0.5" />}
-          </button>
-          <button
-            type="button"
-            onClick={next}
-            disabled={tracks.length < 2}
-            aria-label="Sonraki parça"
-            className="w-11 h-11 rounded-full flex items-center justify-center text-ink-2 hover:text-ink hover:bg-canvas disabled:opacity-40 cursor-pointer"
-          >
-            <SkipForward className="w-5 h-5" />
-          </button>
-        </div>
-
-        {/* Ses */}
-        <div className="flex items-center gap-2.5">
-          <button
-            type="button"
-            onClick={toggleMute}
-            aria-label={muted ? 'Sesi aç' : 'Sessize al'}
-            className="w-9 h-9 rounded-lg flex items-center justify-center text-ink-2 hover:text-ink hover:bg-canvas cursor-pointer shrink-0"
-          >
-            {muted || volume === 0 ? <VolumeX className="w-4.5 h-4.5" /> : <Volume2 className="w-4.5 h-4.5" />}
-          </button>
-          <input
-            type="range"
-            min={0}
-            max={100}
-            value={muted ? 0 : volume}
-            onChange={(e) => changeVolume(Number(e.target.value))}
-            aria-label="Ses düzeyi"
-            className="w-36 sm:w-44 accent-[var(--accent)] cursor-pointer"
-          />
-          <span className="font-mono text-sm text-ink-3">%{muted ? 0 : volume}</span>
-        </div>
-
-      </section>
-
-      {/* Liste */}
-      <section className="bg-white border border-line rounded-2xl overflow-hidden">
-        <div className="flex items-center gap-2 px-4 py-3 border-b border-line-soft">
-          <ListMusic className="w-4 h-4 text-ink-3 shrink-0" />
-          <h3 className="m-0 flex-1 text-md font-semibold text-ink">Çalma listesi</h3>
-          <span className="text-sm text-ink-3">{tracks.length} parça</span>
-        </div>
-        {tracks.length === 0 ? (
-          <p className="m-0 px-4 py-8 text-center text-base text-ink-3">
-            Liste boş. Yönetici ilk parçayı ekleyince burada görünür.
-          </p>
-        ) : (
-          <ol className="list-none m-0 p-0">
-            {tracks.map((t, i) => {
-              const on = i === safeIndex;
-              return (
-                <li key={t.id} className={`flex items-center gap-3 px-3 sm:px-4 py-2.5 border-b border-line-soft last:border-b-0 ${on ? 'bg-accent-soft/60' : ''}`}>
-                  <button
-                    type="button"
-                    onClick={() => playIndex(i)}
-                    aria-label={`${t.title} parçasını çal`}
-                    className={`w-10 h-10 rounded-xl flex items-center justify-center shrink-0 cursor-pointer ${
-                      on ? 'bg-accent text-white' : 'bg-canvas text-ink-2 hover:text-ink'
-                    }`}
-                  >
-                    {on && playing ? <Pause className="w-4.5 h-4.5" /> : <Play className="w-4.5 h-4.5 ml-0.5" />}
-                  </button>
-                  <span className="flex-1 min-w-0">
-                    <span className={`block text-md font-semibold truncate ${on ? 'text-accent' : 'text-ink'}`}>{t.title}</span>
-                    <span className="block text-sm text-ink-3 truncate">{t.artist || 'Admin seçkisi'}</span>
-                  </span>
-                  <a
-                    href={t.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={`${t.title} bağlantısını yeni sekmede aç`}
-                    className="w-9 h-9 rounded-lg hidden sm:flex items-center justify-center text-ink-3 hover:text-ink hover:bg-canvas shrink-0"
-                  >
-                    <ExternalLink className="w-4 h-4" />
-                  </a>
-                  {isAdmin && t.custom && (
-                    <button
-                      type="button"
-                      onClick={() => removeTrack(t.id)}
-                      aria-label={`${t.title} parçasını sil`}
-                      className="w-9 h-9 rounded-lg flex items-center justify-center text-ink-3 hover:text-bad-text hover:bg-bad-soft cursor-pointer shrink-0"
-                    >
-                      <Trash2 className="w-4 h-4" />
+          <form className="mux-add" onSubmit={(e) => { e.preventDefault(); addTrack(); }}>
+            <input value={formUrl} onChange={(e) => setFormUrl(e.target.value)} placeholder="YouTube ya da .mp3 bağlantısı yapıştır" inputMode="url" aria-label="Parça bağlantısı" />
+            <input value={formTitle} onChange={(e) => setFormTitle(e.target.value)} placeholder="Parça adı (isteğe bağlı)" aria-label="Parça adı" className="is-title" />
+            <button type="submit" className="os-btn is-primary"><Plus aria-hidden />Listeye ekle</button>
+          </form>
+          {formError && <p role="alert" className="mux-err">{formError}</p>}
+          {shown.length === 0 ? (
+            <p className="mux-empty">{list === 'mine' ? 'Henüz parça eklemedin. Bir YouTube bağlantısı yapıştır.' : 'Liste boş.'}</p>
+          ) : (
+            <ol className="mux-tracks">
+              {shown.map(({ t, i }, n) => {
+                const on = i === safeIndex;
+                return (
+                  <li key={t.id} className={on ? 'is-on' : ''}>
+                    <button type="button" className="mux-play" onClick={() => playIndex(i)} aria-label={`${t.title} parçasını ${on && playing ? 'duraklat' : 'çal'}`}>
+                      {on && playing ? <Pause aria-hidden /> : <span className="mux-no">{n + 1}</span>}
                     </button>
-                  )}
-                </li>
-              );
-            })}
-          </ol>
-        )}
-      </section>
-
-      {/* Yönetici ekleme */}
-      {isAdmin ? (
-        <section className="bg-white border border-line rounded-2xl p-4 sm:p-5 flex flex-col gap-3">
-          <h3 className="m-0 text-md font-semibold text-ink flex items-center gap-2">
-            <Plus className="w-4 h-4" />
-            Yeni parça ekle (yönetici)
-          </h3>
-          <div className="grid sm:grid-cols-[1fr_2fr_auto] gap-2">
-            <label className="flex flex-col gap-1 min-w-0">
-              <span className="text-sm font-medium text-ink-2">Parça adı</span>
-              <input
-                value={formTitle}
-                onChange={(e) => setFormTitle(e.target.value)}
-                placeholder="Örn. Ahu Figan Dilber (Trap)"
-                className="h-11 rounded-xl bg-canvas border border-line px-3 text-base text-ink outline-none focus:border-accent"
-              />
-            </label>
-            <label className="flex flex-col gap-1 min-w-0">
-              <span className="text-sm font-medium text-ink-2">YouTube / ses bağlantısı</span>
-              <input
-                value={formUrl}
-                onChange={(e) => setFormUrl(e.target.value)}
-                placeholder="https://youtu.be/…  ya da  https://…/parca.mp3"
-                inputMode="url"
-                className="h-11 rounded-xl bg-canvas border border-line px-3 text-base text-ink outline-none focus:border-accent"
-              />
-            </label>
-            <span className="flex items-end">
-              <button
-                type="button"
-                onClick={addTrack}
-                className="h-11 px-5 rounded-xl bg-accent hover:bg-accent-hover text-white font-semibold text-md cursor-pointer whitespace-nowrap"
-              >
-                Ekle
-              </button>
-            </span>
-          </div>
-          {formError && <p role="alert" className="m-0 text-base text-bad-text">{formError}</p>}
-          <p className="m-0 text-sm text-ink-2 leading-relaxed flex gap-1.5">
-            <Info className="w-4 h-4 shrink-0 mt-0.5 text-ink-3" />
-            <span>Yerleştirme (embed / iframe) koduna gerek yok — normal YouTube paylaşım linkini yapıştırman yeterli, uygulama otomatik çözer (youtu.be, youtube.com/watch, /embed/, /shorts, liste parametresi dahil). Doğrudan .mp3 bağlantıları da çalınır.</span>
-          </p>
+                    <span className="mux-t">
+                      <b>{t.title}</b>
+                      <span>{t.custom ? 'Senin listen' : t.artist || 'Seçki'}{/youtu/.test(t.url) ? ' · YouTube' : ' · Ses'}</span>
+                    </span>
+                    <a href={t.url} target="_blank" rel="noopener noreferrer" className="qk-ib" aria-label={`${t.title} bağlantısını yeni sekmede aç`}><ExternalLink aria-hidden /></a>
+                    {t.custom && (
+                      <button type="button" className="qk-ib" onClick={() => removeTrack(t.id)} aria-label={`${t.title} parçasını listeden çıkar`}><Trash2 aria-hidden /></button>
+                    )}
+                  </li>
+                );
+              })}
+            </ol>
+          )}
+          <p className="mux-tip"><Info aria-hidden />Yerleştirme koduna gerek yok: youtu.be, youtube.com/watch, /shorts ve liste bağlantıları çözülür; doğrudan .mp3 de çalınır.</p>
         </section>
-      ) : (
-        <p className="m-0 text-sm text-ink-3 leading-relaxed">
-          Yeni parça önerin varsa yöneticiye YouTube bağlantısını göndermen yeterli — yerleştirme kodu gerekmez.
-        </p>
-      )}
+      </div>
+
+      {/* Yapışkan çalar */}
+      <div className="mux-player" role="region" aria-label="Çalar">
+        <button type="button" onClick={prev} disabled={tracks.length < 2} aria-label="Önceki parça" className="qk-ib"><SkipBack aria-hidden /></button>
+        <button type="button" onClick={toggle} disabled={!current} aria-label={playing ? 'Duraklat' : 'Oynat'} className="mux-pp">
+          {playing ? <Pause aria-hidden /> : <Play aria-hidden />}
+        </button>
+        <button type="button" onClick={next} disabled={tracks.length < 2} aria-label="Sonraki parça" className="qk-ib"><SkipForward aria-hidden /></button>
+        <span className="mux-now">
+          <b>{current?.title || 'Parça seçilmedi'}</b>
+          <span>{tracks.length ? `Parça ${safeIndex + 1} / ${tracks.length}` : 'Liste boş'}</span>
+        </span>
+        <span className="mux-time">{fmt(cur)}</span>
+        <input type="range" min={0} max={Math.max(1, Math.floor(dur))} step={1} value={Math.floor(Math.min(cur, dur || 0))} onChange={(e) => seek(Number(e.target.value))} aria-label="Parça konumu" disabled={!current} className="mux-seek" style={{ '--p': `${progress}%` } as React.CSSProperties} />
+        <span className="mux-time">{fmt(dur)}</span>
+        <button type="button" onClick={toggleMute} aria-label={muted ? 'Sesi aç' : 'Sessize al'} className="qk-ib mux-vol-b">
+          {muted || volume === 0 ? <VolumeX aria-hidden /> : <Volume2 aria-hidden />}
+        </button>
+        <input type="range" min={0} max={100} value={muted ? 0 : volume} onChange={(e) => changeVolume(Number(e.target.value))} aria-label="Ses düzeyi" className="mux-vol" />
+      </div>
     </div>
   );
 };

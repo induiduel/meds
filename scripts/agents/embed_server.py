@@ -16,8 +16,10 @@ from sentence_transformers import SentenceTransformer  # noqa: E402
 import torch  # noqa: E402
 
 torch.set_num_threads(4)
-MODEL = SentenceTransformer("intfloat/multilingual-e5-small", device="cpu")
-MODEL.max_seq_length = 256
+# Test/entegrasyon: MEDS_EMBED_MODEL=BAAI/bge-m3 ile 1024 boyuta geçilebilir (varsayılan e5-small/384 korunur).
+EMBED_MODEL_NAME = os.environ.get("MEDS_EMBED_MODEL", "intfloat/multilingual-e5-small")
+MODEL = SentenceTransformer(EMBED_MODEL_NAME, device="cpu")
+MODEL.max_seq_length = 512 if "bge-m3" in EMBED_MODEL_NAME.lower() else 256
 LOCK = threading.Lock()
 CACHE: dict[str, list[float]] = {}
 
@@ -35,7 +37,11 @@ class H(BaseHTTPRequestHandler):
         self.wfile.write(b)
 
     def do_GET(self):
-        self._send(200, {"ok": True, "model": "multilingual-e5-small", "boyut": 384})
+        try:
+            dim = int(MODEL.get_sentence_embedding_dimension())
+        except Exception:
+            dim = 1024 if "bge-m3" in EMBED_MODEL_NAME.lower() else 384
+        self._send(200, {"ok": True, "model": EMBED_MODEL_NAME, "boyut": dim})
 
     def do_POST(self):
         if self.path != "/embed":
@@ -64,4 +70,5 @@ class H(BaseHTTPRequestHandler):
 
 
 if __name__ == "__main__":
-    ThreadingHTTPServer(("127.0.0.1", int(os.environ.get("MEDS_EMBED_PORT", "8091"))), H).serve_forever()
+    host = os.environ.get("MEDS_EMBED_HOST", "127.0.0.1")
+    ThreadingHTTPServer((host, int(os.environ.get("MEDS_EMBED_PORT", "8091"))), H).serve_forever()

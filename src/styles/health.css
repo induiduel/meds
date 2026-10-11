@@ -222,7 +222,7 @@ html.ui-v7 .ms-btn.is-outline { background: var(--color-white); color: var(--col
 html.ui-v7 .ms-btn.is-outline:hover { background: color-mix(in srgb, var(--color-white) 92%, var(--color-ink)); }
 html.ui-v7 .ms-btn.is-danger { background: transparent; color: var(--color-bad-text); }
 html.ui-v7 .ms-btn.is-danger:hover { background: var(--color-bad-soft); }
-html.ui-v7 .ms-btn.is-ok { background: var(--color-ok); color: #fff; }
+html.ui-v7 .ms-btn.is-ok { background: var(--color-ok); color: var(--color-on-solid, #fff); }
 html.ui-v7 .ms-btn.is-warn { background: var(--color-warn-soft); color: var(--color-warn); }
 html.ui-v7 .ms-btn.is-fav { background: var(--color-warn-soft); color: var(--color-warn); }
 html.ui-v7 .ms-btn.is-sm { height: var(--ms-ctl-sm); padding: 0 11px; font-size: 13px; border-radius: 8px; }
@@ -409,7 +409,7 @@ html.ui-v7 .cx-q-meta b { display: inline-flex; align-items: center; gap: 6px; }
 .ms-cpal-t b { font-size: 14px; font-weight: 600; }
 .ms-cpal-t small { font-size: 12px; color: var(--color-ink-3); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .ms-cpal-n { font-family: var(--font-round); font-size: 12px; font-weight: 600; padding: 1px 7px; border-radius: 99px; background: var(--color-field); color: var(--color-ink-2); }
-.ms-cpal-n.is-alert { background: var(--color-bad); color: #fff; }
+.ms-cpal-n.is-alert { background: var(--color-bad); color: var(--color-on-solid, #fff); }
 .ms-cpal-enter { width: 15px; height: 15px; opacity: .8; }
 .ms-cpal-empty { padding: 18px; text-align: center; color: var(--color-ink-3); font-size: 13px; }
 

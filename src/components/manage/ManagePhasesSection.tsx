@@ -221,12 +221,20 @@ export const ManagePhasesSection: React.FC<{ adminEmail: string }> = ({ adminEma
   };
 
   // Kart başlığına bölüm işlemleri
+  // Kartlardaki "Düzenle": elle düzeltme formundaki ilgili alana kaydırıp odaklar (satır içi düzenleme).
+  const EDIT_FIELD: Record<string, string> = { mufredat: 'ph-edit-kurul', slayt: 'ph-edit-slaytlar', kisaltmalar: 'ph-edit-kisaltmalar' };
+  const jumpEdit = (k: string) => {
+    const el = document.getElementById(EDIT_FIELD[k] || 'ph-edit');
+    el?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    window.setTimeout(() => (el as HTMLInputElement | null)?.focus?.({ preventScroll: true }), 250);
+  };
   const SecActions = ({ k }: { k: string }) => {
     const ov = detail?.duzeltme || {};
     const hid = (ov.gizle || []).includes(k);
     const rem = (ov.kaldir || []).includes(k);
     return (
       <span className="inline-flex items-center gap-1">
+        {EDIT_FIELD[k] && <button type="button" className="ms-btn is-sm is-ghost" onClick={() => jumpEdit(k)}>Düzenle</button>}
         {(hid || rem) && <span className={`ms-tag ${rem ? 'is-bad' : 'is-warn'}`}>{rem ? 'Kaldırıldı' : 'Gizli'}</span>}
         <button type="button" className="ms-btn is-sm is-ghost" onClick={() => toggleSection('gizle', k)}>{hid ? 'Göster' : 'Gizle'}</button>
         <button type="button" className={`ms-btn is-sm ${rem ? 'is-ghost' : 'is-danger'}`} onClick={() => toggleSection('kaldir', k)}>{rem ? 'Geri al' : 'Kaldır'}</button>
@@ -376,6 +384,11 @@ export const ManagePhasesSection: React.FC<{ adminEmail: string }> = ({ adminEma
       >
       {detail && (
         <>
+          <nav className="rb-ph-nav" aria-label="Bölümler">
+            {([['ph-cards', 'Faz verileri'], ['ph-edit', 'Elle düzelt'], ['ph-test', 'Arama testi'], ['ph-preview', 'Önizleme']] as const).map(([id, l]) => (
+              <button key={id} type="button" onClick={() => document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' })}>{l}</button>
+            ))}
+          </nav>
           <p className="m-0 text-md leading-relaxed text-ink font-medium">{stemOf(selQ)}</p>
           {detail.gorunen?.elle_duzeltildi && (
             <div className="ms-alert is-warn !py-2">
@@ -409,7 +422,7 @@ export const ManagePhasesSection: React.FC<{ adminEmail: string }> = ({ adminEma
               <div className={card}><h3 className={h3}>Diğer kayıtlar</h3><Json value={kay} /></div>
             </div>
           ) : (
-            <div className="grid gap-3 md:grid-cols-2">
+            <div id="ph-cards" className="grid gap-3 md:grid-cols-2 scroll-mt-14">
               <div className={card}>
                 <div className="flex items-center justify-between gap-2"><h3 className={h3}>Müfredat</h3><SecActions k="mufredat" /></div>
                 <p className="m-0 text-sm">
@@ -471,7 +484,7 @@ export const ManagePhasesSection: React.FC<{ adminEmail: string }> = ({ adminEma
             </div>
           )}
 
-          <section className="ms-dsec">
+          <section className="ms-dsec" id="ph-edit">
             <h3>Elle düzelt</h3>
             <div className="flex flex-wrap gap-x-4 gap-y-1.5">
               {HIDEABLE.map(([k, label]) => (
@@ -487,13 +500,13 @@ export const ManagePhasesSection: React.FC<{ adminEmail: string }> = ({ adminEma
               ))}
             </div>
             <div className="grid gap-2 sm:grid-cols-4">
-              <input className={input} placeholder="Kurul" inputMode="numeric" value={form.kazanim?.kurul ?? ''} onChange={(e) => setForm((f) => ({ ...f, kazanim: { ...f.kazanim, kurul: e.target.value ? Number(e.target.value) : undefined } }))} />
+              <input id="ph-edit-kurul" className={input} placeholder="Kurul" inputMode="numeric" value={form.kazanim?.kurul ?? ''} onChange={(e) => setForm((f) => ({ ...f, kazanim: { ...f.kazanim, kurul: e.target.value ? Number(e.target.value) : undefined } }))} />
               <input className={input} placeholder="Ders" value={form.kazanim?.ders || ''} onChange={(e) => setForm((f) => ({ ...f, kazanim: { ...f.kazanim, ders: e.target.value } }))} />
               <input className={input} placeholder="Konu" value={form.kazanim?.konu || ''} onChange={(e) => setForm((f) => ({ ...f, kazanim: { ...f.kazanim, konu: e.target.value } }))} />
               <input className={input} placeholder="Kazanım" value={form.kazanim?.kazanim || ''} onChange={(e) => setForm((f) => ({ ...f, kazanim: { ...f.kazanim, kazanim: e.target.value } }))} />
             </div>
-            <textarea className={`${input} min-h-[64px] font-mono`} placeholder={'Slaytlar: her satıra "kaynak | sayfa | alıntı (isteğe bağlı)"'} value={form.slaytlar} onChange={(e) => setForm((f) => ({ ...f, slaytlar: e.target.value }))} />
-            <textarea className={`${input} min-h-[48px] font-mono`} placeholder={'Kısaltmalar: her satıra "KISALTMA = açılım"'} value={form.kisaltmalar} onChange={(e) => setForm((f) => ({ ...f, kisaltmalar: e.target.value }))} />
+            <textarea id="ph-edit-slaytlar" className={`${input} min-h-[64px] font-mono`} placeholder={'Slaytlar: her satıra "kaynak | sayfa | alıntı (isteğe bağlı)"'} value={form.slaytlar} onChange={(e) => setForm((f) => ({ ...f, slaytlar: e.target.value }))} />
+            <textarea id="ph-edit-kisaltmalar" className={`${input} min-h-[48px] font-mono`} placeholder={'Kısaltmalar: her satıra "KISALTMA = açılım"'} value={form.kisaltmalar} onChange={(e) => setForm((f) => ({ ...f, kisaltmalar: e.target.value }))} />
             <input className={input} placeholder="Not (neden düzeltildi)" value={form.not} onChange={(e) => setForm((f) => ({ ...f, not: e.target.value }))} />
             <div className="flex flex-wrap gap-2">
               <button type="button" disabled={busy !== ''} onClick={() => save(false)} className="ms-btn is-primary">
@@ -505,7 +518,7 @@ export const ManagePhasesSection: React.FC<{ adminEmail: string }> = ({ adminEma
             </div>
           </section>
 
-          <section className="ms-dsec">
+          <section className="ms-dsec" id="ph-test">
             <h3>Arama testi · ders slaytları, BM25 + temiz ders materyali</h3>
             <textarea className={`${input} min-h-[56px]`} value={query} onChange={(e) => setQuery(e.target.value)} />
             <button type="button" disabled={busy !== ''} onClick={runTest} className="ms-btn self-start">
@@ -524,7 +537,7 @@ export const ManagePhasesSection: React.FC<{ adminEmail: string }> = ({ adminEma
             )}
           </section>
 
-          <section className="ms-dsec">
+          <section className="ms-dsec" id="ph-preview">
             <h3>Sitede görünen · önizleme</h3>
             <QuestionInsightsPanel key={`${selId}-${previewKey}`} questionId={selId!} />
           </section>

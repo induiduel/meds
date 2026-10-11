@@ -1,4 +1,5 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
+import { confirmDialog } from '../ui/ConfirmDialog';
 import { ArrowLeft, ArrowRight, Flag, Timer, Trash2, RotateCcw, ChevronDown, ChevronUp, Play, Bookmark, BookmarkCheck, Sparkles } from 'lucide-react';
 import { Committee } from '../../types';
 import {
@@ -298,8 +299,8 @@ export const SelfTestView: React.FC<SelfTestViewProps> = ({ bank, committees, lo
             {history.length > 0 && (
               <button
                 type="button"
-                onClick={() => {
-                  if (window.confirm('Tüm deneme geçmişi silinsin mi?')) {
+                onClick={async () => {
+                  if (await confirmDialog({ title: 'Tüm deneme geçmişi silinsin mi?', confirmLabel: 'Sil', tone: 'danger' })) {
                     clearTestHistory();
                     setHistory([]);
                   }
@@ -354,92 +355,79 @@ export const SelfTestView: React.FC<SelfTestViewProps> = ({ bank, committees, lo
     const remaining = limit !== null ? Math.max(0, limit - elapsed) : null;
     const low = remaining !== null && remaining <= 60;
     return (
-      <div className="flex flex-col gap-3 sm:gap-4">
-        <div className={`${cardCls} sticky top-[60px] sm:top-[76px] z-20 px-3 sm:px-4 py-2.5 flex items-center gap-3`}>
-          <span className={`inline-flex items-center gap-1.5 font-mono text-md px-2.5 h-9 rounded-lg ${low ? 'bg-bad-soft text-bad-text' : 'bg-canvas text-ink'}`} aria-label="Süre">
-            <Timer className="w-4 h-4" />
-            {remaining !== null ? formatDuration(remaining) : formatDuration(elapsed)}
-          </span>
-          <span className="text-sm text-ink-2">
-            <strong className="text-ink font-mono">{answeredCount}</strong>/{items.length} cevaplandı
-          </span>
-          <div className="hidden sm:block flex-1 h-1.5 rounded-full bg-line-soft">
-            <div className="h-1.5 rounded-full bg-accent" style={{ width: `${(answeredCount / items.length) * 100}%` }} />
+      <div className="tsx">
+        {/* Üst çubuk: süre · çentikli ilerleme · bitir (canvas "Test") */}
+        <div className="tsx-bar">
+          <span className={`tsx-time ${low ? 'is-low' : ''}`} aria-label="Süre"><Timer aria-hidden />{remaining !== null ? formatDuration(remaining) : formatDuration(elapsed)}</span>
+          <span className="tsx-count"><b>{answeredCount}</b>/{items.length}</span>
+          <div className="tsx-notches" aria-hidden>
+            {items.slice(0, 60).map((it, i) => (
+              <span key={it.id} className={`${answers[it.id] ? 'is-done' : ''} ${flags.has(it.id) ? 'is-flag' : ''} ${i === cur ? 'is-cur' : ''}`} />
+            ))}
           </div>
-          <span className="flex-1 sm:hidden" />
           {confirmFinish ? (
-            <span className="flex items-center gap-1.5">
-              <span className="hidden sm:inline text-sm text-ink-2">{items.length - answeredCount} boş. Emin misin?</span>
-              <button type="button" onClick={() => setConfirmFinish(false)} className={btnGhost}>
-                Devam
-              </button>
-              <button type="button" onClick={finish} className={btnPrimary}>
-                Bitir
-              </button>
+            <span className="tsx-confirm">
+              <span>{items.length - answeredCount} boş. Emin misin?</span>
+              <button type="button" onClick={() => setConfirmFinish(false)} className={btnGhost}>Devam</button>
+              <button type="button" onClick={finish} className={btnPrimary}>Bitir</button>
             </span>
           ) : (
-            <button type="button" onClick={() => (answeredCount < items.length ? setConfirmFinish(true) : finish())} className={btnPrimary}>
-              Bitir
-            </button>
+            <button type="button" onClick={() => (answeredCount < items.length ? setConfirmFinish(true) : finish())} className={btnPrimary}>Bitir</button>
           )}
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_280px] gap-3 sm:gap-4 items-start">
-          <article className={`${cardCls} p-4 sm:p-6 flex flex-col gap-4`}>
-            <header className="flex items-center gap-2">
-              <span className="font-mono text-sm text-ink-2">
-                SORU {cur + 1} · {q.discipline.toLocaleUpperCase('tr-TR')}
-              </span>
-              <span className="flex-1" />
+        <div className="tsx-body">
+          <article className="qk is-solve">
+            <header className="qk-h">
+              <span className="qk-chip">{cur + 1}</span>
+              <span className="qk-kunye">{[q.year, q.number ? `S${q.number}` : null].filter(Boolean).join(' · ') || 'Soru'}</span>
+              {q.discipline && <span className="qk-ders">{q.discipline}</span>}
+              {flags.has(q.id) && <span className="qk-flags"><span className="cx-flag is-warn">İşaretli</span></span>}
+              <span className="qk-sp" />
               <button
                 type="button"
                 aria-pressed={flags.has(q.id)}
-                onClick={() =>
-                  setFlags((f) => {
-                    const n = new Set(f);
-                    n.has(q.id) ? n.delete(q.id) : n.add(q.id);
-                    return n;
-                  })
-                }
-                className={`h-9 px-2.5 rounded-lg text-sm font-semibold inline-flex items-center gap-1.5 cursor-pointer ${
-                  flags.has(q.id) ? 'bg-warn-soft text-warn' : 'text-ink-2 hover:bg-canvas'
-                }`}
+                onClick={() => setFlags((f) => { const n = new Set(f); n.has(q.id) ? n.delete(q.id) : n.add(q.id); return n; })}
+                className={`qk-ib ${flags.has(q.id) ? 'is-fav' : ''}`}
+                aria-label={flags.has(q.id) ? 'İşareti kaldır' : 'Sonra bakmak için işaretle'}
+                title="Sonra bak"
               >
-                <Flag className="w-4 h-4" /> {flags.has(q.id) ? 'İşaretli' : 'Sonra bak'}
+                <Flag aria-hidden />
               </button>
-              <StudyReportButton q={q} compact />
+              <StudyReportButton q={q} compact className="qk-ib" />
             </header>
-            <h2 className={`m-0 font-display font-medium tracking-[-0.01em] leading-[1.35] ${q.stem.length > 220 ? 'text-lg sm:text-xl' : 'text-xl sm:text-2xl'}`}>{q.stem}</h2>
-            <div role="radiogroup" aria-label="Şıklar" className="flex flex-col gap-2">
-              {q.options.map((o) => (
-                <OptionButton
-                  key={o.key}
-                  opt={o}
-                  state={answers[q.id] === o.key ? 'selected' : 'idle'}
-                  onClick={() => setAnswers((p) => ({ ...p, [q.id]: p[q.id] === o.key ? undefined : o.key }))}
-                />
-              ))}
-            </div>
-            <footer className="flex items-center justify-between gap-2 border-t border-line-soft pt-3">
+            <div className="qk-stem is-lead">{q.stem}</div>
+            <ol role="radiogroup" aria-label="Şıklar" className="qk-opts">
+              {q.options.map((o) => {
+                const sel = answers[q.id] === o.key;
+                return (
+                  <li key={o.key} className="qk-opt-li">
+                    <button type="button" role="radio" aria-checked={sel} onClick={() => setAnswers((p) => ({ ...p, [q.id]: p[q.id] === o.key ? undefined : o.key }))} className={`qk-opt ${sel ? 'is-sel' : ''}`}>
+                      <span className="qk-bub" aria-hidden>{o.key}</span>
+                      <span className="qk-opt-t">{o.text}</span>
+                    </button>
+                  </li>
+                );
+              })}
+            </ol>
+            <p className="qk-hint">A–E seç · tekrar basınca boşalır · ← → gezin</p>
+            <footer className="qk-nav">
               <button type="button" onClick={() => setCur((i) => Math.max(0, i - 1))} disabled={cur === 0} className={btnSecondary}>
                 <ArrowLeft className="w-4 h-4" /> Önceki
               </button>
-              <span className="hidden sm:inline text-xs text-ink-3">A–E seç · tekrar basınca boşalır · ← →</span>
+              <div className="qk-progress" aria-hidden><span style={{ width: `${((cur + 1) / items.length) * 100}%` }} /></div>
               <button type="button" onClick={() => setCur((i) => Math.min(items.length - 1, i + 1))} disabled={cur >= items.length - 1} className={btnPrimary}>
                 Sonraki <ArrowRight className="w-4 h-4" />
               </button>
             </footer>
           </article>
 
-          <nav aria-label="Optik form" className={`${cardCls} p-3 sm:p-4 flex flex-col gap-3 lg:sticky lg:top-[148px]`}>
-            <div className="flex items-center justify-between">
-              <span className="text-sm font-semibold text-ink-2">Optik form</span>
-              <span className="flex gap-2 text-2xs text-ink-3">
-                <span className="inline-flex items-center gap-1"><span className="w-2.5 h-2.5 rounded-sm bg-accent" />Dolu</span>
-                <span className="inline-flex items-center gap-1"><span className="w-2.5 h-2.5 rounded-sm bg-warn" />İşaretli</span>
-              </span>
+          <nav aria-label="Optik form" className="tsx-sheet">
+            <div className="tsx-sheet-h">
+              <b>Optik form</b>
+              <span className="tsx-lg"><i className="is-done" />Dolu <i className="is-flag" />İşaretli</span>
             </div>
-            <div className="grid grid-cols-8 sm:grid-cols-10 lg:grid-cols-6 gap-1.5 max-h-[50dvh] overflow-y-auto">
+            <div className="tsx-grid">
               {items.map((it, i) => {
                 const a = answers[it.id];
                 const isCur = i === cur;
@@ -451,17 +439,14 @@ export const SelfTestView: React.FC<SelfTestViewProps> = ({ bank, committees, lo
                     onClick={() => setCur(i)}
                     aria-current={isCur ? 'step' : undefined}
                     aria-label={`Soru ${i + 1}${a ? `, ${a} işaretli` : ', boş'}${flagged ? ', sonra bakılacak' : ''}`}
-                    className={`relative h-9 rounded-md font-mono text-xs flex items-center justify-center cursor-pointer ${
-                      isCur ? 'ring-2 ring-accent ring-offset-1' : ''
-                    } ${a ? 'bg-accent text-white' : 'bg-canvas text-ink-2 hover:bg-line-soft'}`}
+                    className={`${a ? 'is-done' : ''} ${isCur ? 'is-cur' : ''} ${flagged ? 'is-flag' : ''}`}
                   >
                     {a ? `${i + 1}${a}` : i + 1}
-                    {flagged && <span className="absolute top-0.5 right-0.5 w-1.5 h-1.5 rounded-full bg-warn" />}
                   </button>
                 );
               })}
             </div>
-            <button type="button" onClick={() => window.confirm('Deneme iptal edilsin mi? Cevapların kaydedilmez.') && setPhase('setup')} className={`${btnGhost} self-start`}>
+            <button type="button" onClick={async () => (await confirmDialog({ title: 'Deneme iptal edilsin mi?', message: 'Cevapların kaydedilmez.', confirmLabel: 'İptal et', cancelLabel: 'Devam et', tone: 'danger' })) && setPhase('setup')} className={`${btnGhost} self-start`}>
               Denemeyi iptal et
             </button>
           </nav>

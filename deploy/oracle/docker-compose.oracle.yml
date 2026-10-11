@@ -1,0 +1,86 @@
+# docker-compose.oracle.yml — Oracle VM üzerinde canlı MedSoru.
+# Çalıştırma yeri: meds/ dizini →  docker compose -f deploy/oracle/docker-compose.oracle.yml up -d --build
+# .env (Oracle sürümü) meds/.env konumunda olmalı. Token gelmeden önce yalnız meds-server ayağa kaldırılır:
+#   docker compose -f deploy/oracle/docker-compose.oracle.yml up -d --build meds-server
+name: medsoru-oracle
+
+services:
+  meds-server:
+    build:
+      context: ../..
+      dockerfile: deploy/oracle/Dockerfile.oracle
+      # .env'den gelir (--env-file bayrağı şart, bkz. README). Değerler imaja
+      # gömülür (publishable key zaten herkese açık ön-yüz anahtarıdır).
+      args:
+        SUPABASE_URL: ${SUPABASE_URL:-https://kgutsltgmqbnlxcnzrtl.supabase.co}
+        SUPABASE_PUBLISHABLE_KEY: ${SUPABASE_PUBLISHABLE_KEY:-sb_publishable_EVdXdIi_2mxVr3HZKYabwQ_li5KuE1Q}
+    image: medsoru-server:oracle
+    container_name: meds-server
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:3000:3000"
+    # Oracle local Supabase (envoy :8000) host ağında; konteyner içinden
+    # host.docker.internal ile erişilir. LOCAL_SUPABASE_URL bunu gösterir.
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    env_file:
+      - path: ../../.env
+        required: true
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+      # Vektör arama: sorgu gömme Oracle içindeki bge-m3 servisinden, vektörler local Supabase'ten.
+      - MEDS_EMBED_URL=http://meds-embed:8094/embed
+    volumes:
+      - ../../data:/app/data
+      - /home/ubuntu/medsor/meds_database:/home/ubuntu/medsor/meds_database:ro
+      - /home/ubuntu/medsor/meds_database_v2:/home/ubuntu/medsor/meds_database_v2:ro
+      - /home/ubuntu/medsor/meds_database_core:/home/ubuntu/medsor/meds_database_core:ro
+      - /home/ubuntu/medsor/meds_temp:/home/ubuntu/medsor/meds_temp:ro
+      - /home/ubuntu/medsor/meds_downloads:/home/ubuntu/medsor/meds_downloads:ro
+    logging:
+      driver: json-file
+      options:
+        max-size: "20m"
+        max-file: "3"
+
+  cloudflared:
+    image: cloudflare/cloudflared:latest
+    container_name: meds-tunnel
+    restart: unless-stopped
+    # Token, Zero Trust → Networks → Tunnels → medsoru-oracle → Configure → Token
+    # (.env'deki CLOUDFLARE_TUNNEL_TOKEN; compose --env-file ile okunur)
+    command: tunnel --no-autoupdate run --token ${CLOUDFLARE_TUNNEL_TOKEN}
+    depends_on:
+      - meds-server
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "2"
+
+  # bge-m3 sorgu gömme servisi (CPU). İlk açılışta modeli (~1.2GB) indirir.
+  meds-embed:
+    build:
+      context: ../..
+      dockerfile: deploy/oracle/Dockerfile.embed
+    image: medsoru-embed:bge-m3
+    container_name: meds-embed
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:8094:8094"
+    environment:
+      - MEDS_EMBED_MODEL=BAAI/bge-m3
+      - MEDS_EMBED_HOST=0.0.0.0
+      - MEDS_EMBED_PORT=8094
+      - OMP_NUM_THREADS=4
+    volumes:
+      - meds-embed-models:/models
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "2"
+
+volumes:
+  meds-embed-models:

@@ -3,7 +3,13 @@ import { createRoot } from 'react-dom/client';
 import App from './App.tsx';
 import './index.css';
 import './styles/health.css';
+import './styles/appearance.css';
+import './styles/shell.css';
+import './styles/screens.css';
+import './styles/rebuild.css';
 import { installToastBridge } from './components/ui/Toast';
+import { installAutoReveal } from './utils/autoReveal';
+import { installStudyTimer } from './services/activityLog';
 import { applyTheme, readTheme } from './utils/theme';
 import { applyUiVersion } from './utils/uiVersion';
 import { pwaService } from './services/pwaService';
@@ -40,6 +46,8 @@ if (typeof window !== 'undefined') {
 
 // alert() and unhandled failures become friendly floating toasts
 installToastBridge();
+installAutoReveal();
+installStudyTimer();
 
 // Auto reload on stale Vite chunk after a new deployment
 window.addEventListener('vite:preloadError', (event) => {

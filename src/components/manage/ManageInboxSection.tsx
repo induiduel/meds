@@ -48,6 +48,9 @@ interface Props {
   loading: boolean;
   onReview: (r: InboxReport) => void;
   onResolve: (r: InboxReport) => void;
+  onEditReport?: (r: InboxReport, updates: { reason: string; details: string }) => void;
+  onDeleteReport?: (r: InboxReport) => void;
+  onEditComment?: (c: InboxComment, text: string) => void;
   onDeleteComment: (c: InboxComment) => void;
   onEditDraft: (d: QuestionItem) => void;
   onPublishDraft: (d: QuestionItem) => void;
@@ -65,6 +68,9 @@ export const ManageInboxSection: React.FC<Props> = ({
   loading,
   onReview,
   onResolve,
+  onEditReport,
+  onDeleteReport,
+  onEditComment,
   onDeleteComment,
   onEditDraft,
   onPublishDraft,
@@ -151,6 +157,9 @@ export const ManageInboxSection: React.FC<Props> = ({
   const pendingReports = reports.filter((r) => !isDone(r)).length;
   const resolvedCount = reports.length - pendingReports;
 
+  const [editingReport, setEditingReport] = useState<{ report: InboxReport; reason: string; details: string } | null>(null);
+  const [editingComment, setEditingComment] = useState<{ comment: InboxComment; text: string } | null>(null);
+
   // Gün başlıklarıyla gruplanmış satırlar
   const rows: React.ReactNode[] = [];
   let lastDay = '';
@@ -164,7 +173,23 @@ export const ManageInboxSection: React.FC<Props> = ({
       );
       lastDay = day;
     }
-    rows.push(<QueueRow key={item.key} item={item} busyAction={busyAction} {...{ onReview, onResolve, onDeleteComment, onEditDraft, onPublishDraft, onDeleteDraft, onNavigateToData }} />);
+    rows.push(
+      <QueueRow
+        key={item.key}
+        item={item}
+        busyAction={busyAction}
+        onReview={onReview}
+        onResolve={onResolve}
+        onStartEditReport={(r) => setEditingReport({ report: r, reason: r.reason || '', details: r.details || '' })}
+        onDeleteReport={onDeleteReport}
+        onStartEditComment={(c) => setEditingComment({ comment: c, text: c.text || '' })}
+        onDeleteComment={onDeleteComment}
+        onEditDraft={onEditDraft}
+        onPublishDraft={onPublishDraft}
+        onDeleteDraft={onDeleteDraft}
+        onNavigateToData={onNavigateToData}
+      />
+    );
   }
 
   return (
@@ -172,16 +197,14 @@ export const ManageInboxSection: React.FC<Props> = ({
       <div className="flex flex-col md:flex-row md:items-center gap-2">
         <SearchBox value={query} onChange={(v) => { setQuery(v); setLimit(PAGE); }} placeholder="Kuyrukta ara: bildirim, yorum, taslak, kişi" className="flex-1" />
         <button
+          type="button"
           onClick={() => setShowNotificationCard(!showNotificationCard)}
-          className={`px-3 py-1.5 rounded-lg text-xs font-bold flex items-center gap-1.5 transition-all cursor-pointer ${
-            showNotificationCard
-              ? 'bg-ok text-white'
-              : 'bg-ok/60 hover:bg-ok text-ok-soft border border-ok/60'
-          }`}
-          title="Telefonda (nofrostlife.com.tr) admin bildirim ayarları"
+          aria-pressed={showNotificationCard}
+          className={`ui-btn is-sm shrink-0 ${showNotificationCard ? 'is-primary' : 'is-tonal'}`}
+          title="Telefonda (nofrostlife.com.tr) yönetici bildirim ayarları"
         >
-          <Smartphone className="w-3.5 h-3.5 text-warn" />
-          <span>{showNotificationCard ? 'Bildirim Ayarlarını Kapat' : '📱 Telefon Bildirim Ayarı'}</span>
+          <Smartphone />
+          <span>{showNotificationCard ? 'Bildirim ayarlarını kapat' : 'Telefon bildirimleri'}</span>
         </button>
         {resolvedCount > 0 && <Switch checked={showResolved} onChange={setShowResolved} label={`Çözülenleri göster (${resolvedCount})`} />}
       </div>
@@ -228,13 +251,155 @@ export const ManageInboxSection: React.FC<Props> = ({
           </button>
         )}
       </Panel>
+
+      {/* Hata Bildirimi Düzenleme Penceresi */}
+      {editingReport && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-ink/60 backdrop-blur-xs animate-fade-in" onClick={() => setEditingReport(null)}>
+          <div className="bg-white rounded-2xl shadow-2xl border border-line w-full max-w-lg p-5 flex flex-col gap-4" onClick={(e) => e.stopPropagation()}>
+            <div className="flex items-center justify-between pb-2 border-b border-line">
+              <h3 className="font-bold text-base text-ink flex items-center gap-2">
+                <Flag className="w-4 h-4 text-bad" />
+                <span>Hata Bildirimini Düzenle</span>
+              </h3>
+              <span className="text-xs font-mono text-ink-3">#{editingReport.report.id}</span>
+            </div>
+
+            <div className="flex flex-col gap-3">
+              <label className="flex flex-col gap-1">
+                <span className="text-xs font-semibold text-ink-2">Bildirim Konusu / Sebep:</span>
+                <input
+                  type="text"
+                  value={editingReport.reason}
+                  onChange={(e) => setEditingReport({ ...editingReport, reason: e.target.value })}
+                  className="h-10 px-3 rounded-lg border border-line-2 text-sm focus:border-accent outline-0"
+                  placeholder="Örn: Yanlış şık / Doğru cevap C olmalı"
+                />
+              </label>
+
+              <label className="flex flex-col gap-1">
+                <span className="text-xs font-semibold text-ink-2">Detaylı Açıklama:</span>
+                <textarea
+                  value={editingReport.details}
+                  onChange={(e) => setEditingReport({ ...editingReport, details: e.target.value })}
+                  rows={4}
+                  className="p-3 rounded-lg border border-line-2 text-sm focus:border-accent outline-0 resize-y"
+                  placeholder="Öğrencinin veya kullanıcının bildirdiği hata ayrıntısı..."
+                />
+              </label>
+            </div>
+
+            <div className="flex items-center justify-end gap-2 pt-2 border-t border-line">
+              <button
+                type="button"
+                onClick={() => setEditingReport(null)}
+                className="px-4 py-2 rounded-lg text-xs font-semibold text-ink-2 hover:bg-field"
+              >
+                Vazgeç
+              </button>
+              <button
+                type="button"
+                disabled={!editingReport.reason.trim()}
+                onClick={async () => {
+                  if (onEditReport) {
+                    await onEditReport(editingReport.report, {
+                      reason: editingReport.reason.trim(),
+                      details: editingReport.details.trim(),
+                    });
+                  }
+                  setEditingReport(null);
+                }}
+                className="px-4 py-2 rounded-lg text-xs font-semibold bg-accent text-white hover:bg-accent/90 disabled:opacity-50"
+              >
+                Değişiklikleri Kaydet
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Yorum Düzenleme Penceresi */}
+      {editingComment && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-ink/60 backdrop-blur-xs animate-fade-in" onClick={() => setEditingComment(null)}>
+          <div className="bg-white rounded-2xl shadow-2xl border border-line w-full max-w-lg p-5 flex flex-col gap-4" onClick={(e) => e.stopPropagation()}>
+            <div className="flex items-center justify-between pb-2 border-b border-line">
+              <h3 className="font-bold text-base text-ink flex items-center gap-2">
+                <MessageSquare className="w-4 h-4 text-accent" />
+                <span>Öğrenci Yorumunu Düzenle</span>
+              </h3>
+              <span className="text-xs font-mono text-ink-3">#{editingComment.comment.id}</span>
+            </div>
+
+            <div className="flex flex-col gap-3">
+              <label className="flex flex-col gap-1">
+                <span className="text-xs font-semibold text-ink-2">Yorum Metni:</span>
+                <textarea
+                  value={editingComment.text}
+                  onChange={(e) => setEditingComment({ ...editingComment, text: e.target.value })}
+                  rows={4}
+                  className="p-3 rounded-lg border border-line-2 text-sm focus:border-accent outline-0 resize-y"
+                  placeholder="Yorum veya çözüm önerisi..."
+                />
+              </label>
+            </div>
+
+            <div className="flex items-center justify-end gap-2 pt-2 border-t border-line">
+              <button
+                type="button"
+                onClick={() => setEditingComment(null)}
+                className="px-4 py-2 rounded-lg text-xs font-semibold text-ink-2 hover:bg-field"
+              >
+                Vazgeç
+              </button>
+              <button
+                type="button"
+                disabled={!editingComment.text.trim()}
+                onClick={async () => {
+                  if (onEditComment) {
+                    await onEditComment(editingComment.comment, editingComment.text.trim());
+                  }
+                  setEditingComment(null);
+                }}
+                className="px-4 py-2 rounded-lg text-xs font-semibold bg-accent text-white hover:bg-accent/90 disabled:opacity-50"
+              >
+                Değişiklikleri Kaydet
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
 
-const QueueRow: React.FC<
-  { item: QueueItem; busyAction: string | null } & Pick<Props, 'onReview' | 'onResolve' | 'onDeleteComment' | 'onEditDraft' | 'onPublishDraft' | 'onDeleteDraft' | 'onNavigateToData'>
-> = ({ item, busyAction, onReview, onResolve, onDeleteComment, onEditDraft, onPublishDraft, onDeleteDraft, onNavigateToData }) => {
+interface QueueRowProps {
+  item: QueueItem;
+  busyAction: string | null;
+  onReview: (r: InboxReport) => void;
+  onResolve: (r: InboxReport) => void;
+  onStartEditReport?: (r: InboxReport) => void;
+  onDeleteReport?: (r: InboxReport) => void;
+  onStartEditComment?: (c: InboxComment) => void;
+  onDeleteComment: (c: InboxComment) => void;
+  onEditDraft: (d: QuestionItem) => void;
+  onPublishDraft: (d: QuestionItem) => void;
+  onDeleteDraft: (d: QuestionItem) => void;
+  onNavigateToData?: (questionId: string, dsId?: 'questions' | 'past') => void;
+}
+
+const QueueRow: React.FC<QueueRowProps> = ({
+  item,
+  busyAction,
+  onReview,
+  onResolve,
+  onStartEditReport,
+  onDeleteReport,
+  onStartEditComment,
+  onDeleteComment,
+  onEditDraft,
+  onPublishDraft,
+  onDeleteDraft,
+  onNavigateToData,
+}) => {
   const m = KIND_META[item.kind];
   const Icon = m.icon;
   const time = timeLabel(item.at);
@@ -284,20 +449,43 @@ const QueueRow: React.FC<
       <div className="ms-row-actions">
         {item.report && (
           <>
-            <button type="button" onClick={() => onReview(item.report!)} className="ms-btn is-sm is-tonal">
+            <button type="button" onClick={() => onReview(item.report!)} className="ms-btn is-sm is-tonal" title="Soruyu incele">
               <Eye /> İncele
             </button>
+            {onStartEditReport && (
+              <button type="button" onClick={() => onStartEditReport(item.report!)} className="ms-btn is-sm" title="Hata bildirimini düzenle">
+                <Pencil /> Düzenle
+              </button>
+            )}
             {!item.done && (
               <button type="button" onClick={() => onResolve(item.report!)} disabled={busyAction === `resolve-${item.report.id}`} className="ms-btn is-sm" title="Bildirimi kapat">
                 <Check /> Çözüldü
               </button>
             )}
+            {onDeleteReport && (
+              <ConfirmButton
+                icon={Trash2}
+                confirmLabel="Kalıcı Silinsin mi?"
+                busy={busyAction === `delreport-${item.report.id}`}
+                onConfirm={() => onDeleteReport(item.report!)}
+                title="Hata bildirimini tüm veritabanından kalıcı olarak sil"
+              >
+                Sil
+              </ConfirmButton>
+            )}
           </>
         )}
         {item.comment && (
-          <ConfirmButton icon={Trash2} confirmLabel="Emin misin? Sil" busy={busyAction === `comment-${item.comment.id}`} onConfirm={() => onDeleteComment(item.comment!)} title="Yorumu sil">
-            Sil
-          </ConfirmButton>
+          <>
+            {onStartEditComment && (
+              <button type="button" onClick={() => onStartEditComment(item.comment!)} className="ms-btn is-sm" title="Yorumu düzenle">
+                <Pencil /> Düzenle
+              </button>
+            )}
+            <ConfirmButton icon={Trash2} confirmLabel="Emin misin? Sil" busy={busyAction === `comment-${item.comment.id}`} onConfirm={() => onDeleteComment(item.comment!)} title="Yorumu sil">
+              Sil
+            </ConfirmButton>
+          </>
         )}
         {item.draft && (
           <>
@@ -316,3 +504,4 @@ const QueueRow: React.FC<
     </li>
   );
 };
+

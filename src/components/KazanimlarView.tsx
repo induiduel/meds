@@ -24,6 +24,7 @@ import { SectionLoader } from './ui/Animations';
 import { StemText } from './ui/StemText';
 import { SourceText } from './ui/SourceText';
 import { pathFor } from '../router';
+import { disciplineClass } from '../utils/discipline';
 
 interface KazanimItem {
   id: string;
@@ -195,90 +196,49 @@ export const KazanimlarView: React.FC<Props> = ({
         description="Her dersin, her konusunun kazanımları ve o kazanıma bağlı amfi slaytları, sözlük kavramları, örnek ve çıkmış sorular."
       />
 
-      {/* Kurul Selector Bar (Kaydırılabilir) */}
-      <div
-        className="ms-chipbar overflow-x-auto scroll-smooth py-1"
-        role="toolbar"
-        aria-label="Kurul seçimi"
-        onWheel={(e) => {
-          if (e.deltaY !== 0) {
-            e.currentTarget.scrollLeft += e.deltaY;
-          }
-        }}
-      >
-        {[1, 2, 3, 4, 5, 6].map((k) => {
-          const on = selectedKurul === k;
-          return (
-            <button
-              key={k}
-              type="button"
-              onClick={() => setSelectedKurul(k)}
-              className={`ms-fchip ${on ? 'is-on' : ''}`}
-            >
-              <Compass className="w-3.5 h-3.5" />
-              <span>Kurul {k}</span>
+      {/* Kontrol yuvası: kurul, arama, ders; kaydırınca üst çubuğun altına yapışır */}
+      <div className="cx-dock kz-dock">
+        <nav className="cx-tabs" aria-label="Kurul seçimi" onWheel={(e) => { if (e.deltaY) e.currentTarget.scrollLeft += e.deltaY; }}>
+          {[1, 2, 3, 4, 5, 6].map((k) => (
+            <button key={k} type="button" aria-pressed={selectedKurul === k} onClick={() => setSelectedKurul(k)} className={`cx-tab ${selectedKurul === k ? 'is-on' : ''}`}>
+              Kurul {k}
             </button>
-          );
-        })}
-      </div>
-
-      {/* Arama ve Ders Filtreleri */}
-      <div className="flex flex-col sm:flex-row gap-2.5 my-3">
-        <div className="relative flex-1">
-          <Search className="w-4 h-4 text-ink-3 absolute left-3 top-1/2 -translate-y-1/2 pointer-events-none" />
-          <input
-            type="search"
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            placeholder="Kazanım, konu, terim veya patoloji ara..."
-            className="w-full h-10 pl-9 pr-3 rounded-xl bg-white border border-line text-base text-ink placeholder:text-ink-3 focus:outline-hidden focus:border-accent"
-          />
-          {searchQuery && (
-            <button
-              type="button"
-              onClick={() => setSearchQuery('')}
-              className="absolute right-2.5 top-1/2 -translate-y-1/2 text-ink-3 hover:text-ink p-1"
-            >
-              <X className="w-3.5 h-3.5" />
-            </button>
-          )}
+          ))}
+        </nav>
+        <div className="kz-row">
+          <label className="cx-search kz-search">
+            <Search aria-hidden />
+            <span className="sr-only">Kazanımlarda ara</span>
+            <input type="search" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} placeholder="Kazanım, konu, terim ya da patoloji ara" />
+            {searchQuery && (
+              <button type="button" onClick={() => setSearchQuery('')} className="cx-search-x" aria-label="Aramayı temizle"><X /></button>
+            )}
+          </label>
+          <label className="ms-select-chip kz-ders">
+            <span className="text-ink-3 shrink-0">Ders</span>
+            <select value={selectedDers} onChange={(e) => setSelectedDers(e.target.value)} aria-label="Ders süzgeci">
+              <option value="all">Tüm dersler ({kurulData?.totalCount || 0})</option>
+              {dersList.map((d) => (
+                <option key={d.ders} value={d.ders}>{d.ders} ({d.count})</option>
+              ))}
+            </select>
+            <ChevronDown className="w-4 h-4 text-ink-3 shrink-0 pointer-events-none" />
+          </label>
         </div>
-
-        {/* Ders Seçici */}
-        <label className="ms-select-chip shrink-0 sm:max-w-[260px]">
-          <span className="text-ink-3 shrink-0">Ders</span>
-          <select
-            value={selectedDers}
-            onChange={(e) => setSelectedDers(e.target.value)}
-            aria-label="Ders Filtresi"
-          >
-            <option value="all">Tüm Dersler ({kurulData?.totalCount || 0})</option>
-            {dersList.map((d) => (
-              <option key={d.ders} value={d.ders}>
-                {d.ders} ({d.count})
-              </option>
-            ))}
-          </select>
-          <ChevronDown className="w-4 h-4 text-ink-3 shrink-0 pointer-events-none" />
-        </label>
-      </div>
-
-      {/* Sonuç Sayısı ve Bilgi */}
-      <div className="flex items-center justify-between gap-2 text-sm text-ink-3 mb-3">
-        <span>
-          Kurul {selectedKurul}: <b className="text-ink">{totalFilteredCount}</b> kazanım listeleniyor
-        </span>
-        {kurulData && <span className="truncate max-w-[280px]">{kurulData.name}</span>}
+        <p className="kz-meta">
+          <b className="hk-num">{totalFilteredCount}</b> kazanım{kurulData ? <> · <span>{kurulData.name}</span></> : null}
+        </p>
       </div>
 
       {/* İçerik */}
       {loading ? (
         <SectionLoader variant="book" label={`Kurul ${selectedKurul} kazanımları yükleniyor…`} />
       ) : filteredDersler.length === 0 ? (
-        <div className="rounded-2xl border border-line bg-white p-8 text-center flex flex-col items-center gap-2">
-          <Compass className="w-8 h-8 text-ink-3 opacity-60" />
-          <h3 className="m-0 text-md font-semibold text-ink">Eşleşen kazanım bulunamadı</h3>
-          <p className="m-0 text-sm text-ink-3">Arama terimini değiştirebilir ya da filtreyi temizleyebilirsiniz.</p>
+        <div className="ui-card text-center flex flex-col items-center gap-2" style={{ paddingBlock: 32 }}>
+          <Compass className="w-7 h-7 text-ink-3" />
+          <h3 className="m-0 text-md font-semibold text-ink">Eşleşen kazanım yok</h3>
+          <p className="m-0 text-sm text-ink-3">Kelimeyi kısalt ya da ders süzgecini kaldır.</p>
+          <button type="button" className="ui-btn is-tonal is-sm" onClick={() => { setSearchQuery(''); setSelectedDers('all'); }}>Süzgeçleri temizle</button>
         </div>
       ) : (
         <div className="flex flex-col gap-2">
@@ -291,7 +251,7 @@ export const KazanimlarView: React.FC<Props> = ({
             // Arama ya da tek ders seçiliyken içerik açık gelir; aksi hâlde ders başlığına tıklayınca açılır
             const isOpen = openDers[dersGroup.ders] ?? (Boolean(searchQuery.trim()) || selectedDers !== 'all');
             return (
-            <section key={dersGroup.ders} className={`ms-ders-acc ${isOpen ? 'is-open' : ''}`}>
+            <section key={dersGroup.ders} className={`ms-ders-acc ${isOpen ? 'is-open' : ''} ${disciplineClass(dersGroup.ders)}`}>
               {/* Ders Başlığı */}
               <h2 className="m-0">
                 <button
@@ -301,6 +261,7 @@ export const KazanimlarView: React.FC<Props> = ({
                   className="ms-ders-acc-head"
                 >
                   <ChevronDown className="ms-ders-acc-chev" aria-hidden />
+                  <i className="hk-dot" aria-hidden />
                   <span className="min-w-0 flex-1 truncate text-md font-semibold text-ink text-left">{dersGroup.ders}</span>
                   <span className="hidden sm:inline text-sm text-ink-3 shrink-0">{dersGroup.konular.length} konu</span>
                   <span className="ms-tag shrink-0 tabular-nums">{dersGroup.count} kazanım</span>

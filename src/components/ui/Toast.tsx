@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { createPortal } from 'react-dom';
-import { X } from 'lucide-react';
+import { AlertCircle, Check, Info, X } from 'lucide-react';
+import { useUiVersion } from '../../utils/uiVersion';
 
 /**
  * App-wide floating notifications. Call from anywhere:
@@ -83,6 +84,7 @@ const TONE: Record<ToastKind, { ring: string; title: string; bar: string }> = {
 
 /** Mount once (App). Renders inside the fullscreen element when one is active. */
 export const ToastHost: React.FC = () => {
+  const { isV7 } = useUiVersion();
   const [list, setList] = useState<ToastItem[]>(items);
   const [host, setHost] = useState<Element | null>(null);
 
@@ -99,6 +101,34 @@ export const ToastHost: React.FC = () => {
   }, []);
 
   if (typeof document === 'undefined') return null;
+  if (isV7) {
+    // v8: sade kapsül. Durum simgesi + başlık + mesaj + eylem; en yeni altta, en çok 3; zamanlayıcı alt çizgide
+    const ICON: Record<ToastKind, React.ElementType> = { error: AlertCircle, success: Check, info: Info };
+    const v8 = (
+      <div aria-live="polite" className="tst-host print:hidden">
+        {list.slice(-3).map((t) => {
+          const Icon = ICON[t.kind];
+          return (
+            <div key={t.id} role={t.kind === 'error' ? 'alert' : 'status'} className={`tst is-${t.kind}`}>
+              <span className="tst-ic" aria-hidden><Icon strokeWidth={2.6} /></span>
+              <div className="tst-body">
+                <p className="tst-t">{t.title}</p>
+                {t.message && <p className="tst-m">{t.message}</p>}
+              </div>
+              {t.action && (
+                <button type="button" className="tst-act" onClick={() => { dismiss(t.id); t.action!.onClick(); }}>
+                  {t.action.label}
+                </button>
+              )}
+              <button type="button" className="tst-x" onClick={() => dismiss(t.id)} aria-label="Bildirimi kapat"><X /></button>
+              <span className="tst-timer" style={{ animationDuration: t.kind === 'error' ? '7s' : '4.2s' }} />
+            </div>
+          );
+        })}
+      </div>
+    );
+    return createPortal(v8, host || document.body);
+  }
   const ui = (
     <div
       aria-live="assertive"

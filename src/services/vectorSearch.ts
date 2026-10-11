@@ -15,6 +15,40 @@ const TIMEOUT_MS = Number(process.env.MEDS_VECTOR_TIMEOUT_MS || 1500);
 const RRF_K = 60;
 const VECTOR_WEIGHT = Number(process.env.MEDS_VECTOR_WEIGHT || 0.8);
 
+/**
+ * Halk dili → tıbbi terim eşanlamlısı (yalnız VEKTÖR sorgusuna eklenir; BM25 aynen kalır).
+ * Amaç: "kansızlık/alyuvar" gibi günlük dilin dense aramada kaybolmaması.
+ */
+const MEDICAL_SYNONYMS: Array<[string, string]> = [
+  ['kırmızı küre', 'eritrosit'],
+  ['beyaz küre', 'lökosit'],
+  ['kan pulcuğu', 'trombosit'],
+  ['kansızlık', 'anemi'],
+  ['alyuvar', 'eritrosit'],
+  ['akyuvar', 'lökosit'],
+  ['yüksek tansiyon', 'hipertansiyon'],
+  ['düşük tansiyon', 'hipotansiyon'],
+  ['şeker hastalığı', 'diyabet diabetes mellitus'],
+  ['kalp krizi', 'miyokard enfarktüsü'],
+  ['nefes darlığı', 'dispne'],
+  ['sarılık', 'ikter hiperbilirubinemi'],
+  ['ishal', 'diyare'],
+  ['kabızlık', 'konstipasyon'],
+  ['çarpıntı', 'palpitasyon'],
+  ['kaşıntı', 'pruritus'],
+  ['böbrek yetmezliği', 'renal yetmezlik'],
+  ['karaciğer yağlanması', 'hepatosteatoz'],
+];
+
+export function expandMedicalQuery(query: string): string {
+  const q = query.toLowerCase();
+  const add: string[] = [];
+  for (const [halk, tip] of MEDICAL_SYNONYMS) {
+    if (q.includes(halk) && !q.includes(tip.split(' ')[0])) add.push(tip);
+  }
+  return add.length ? `${query} ${add.join(' ')}`.slice(0, 1500) : query;
+}
+
 type Row = Record<string, any> & { id: string };
 
 let downUntil = 0; // servis düşükse bir süre denenmez (her aramada zaman aşımı beklenmesin)
@@ -45,14 +79,23 @@ export async function semanticSearch(query: string, opts: { documentTypes?: stri
   const { url, key } = supabaseTarget();
   if (!key) return [];
   try {
+    const vecQuery = expandMedicalQuery(query);
     const vec = await withTimeout(async (signal) => {
-      const r = await fetch(EMBED_URL, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ texts: [query.slice(0, 1500)] }), signal });
+      const r = await fetch(EMBED_URL, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ texts: [vecQuery.slice(0, 1500)] }), signal });
       if (!r.ok) throw new Error(`embed ${r.status}`);
       return (await r.json()).vectors?.[0] as number[];
     });
-    if (!Array.isArray(vec) || vec.length !== 384) return [];
+    if (!Array.isArray(vec) || (vec.length !== 384 && vec.length !== 1024)) return [];
+    // bge-m3 (1024) test kolonu; 384 varsayılan yol aynen korunur.
+    const rpcFn = vec.length === 1024 ? 'match_rag_chunks_bge_m3' : 'match_rag_chunks_e5';
+    // Yassı skor gürültü filtresi: çok düşük güvenli vektör kuyruğu RRF'ye girmez.
+    // Not: mutlak eşik tek başına yetmez (serotonin≈troponin gibi 0.56'lık karışmalar
+    // paraphrase kazançlarının 0.47'sinden yüksek olabilir); eşik 0.45 = yalnız kuyruk keser.
+    const MIN_SIM = vec.length === 1024
+      ? Number(process.env.MEDS_VECTOR_MIN_SIM_BGE || 0.45)
+      : Number(process.env.MEDS_VECTOR_MIN_SIM_E5 || 0.8);
     const rows = await withTimeout(async (signal) => {
-      const r = await fetch(`${url}/rest/v1/rpc/match_rag_chunks_e5`, {
+      const r = await fetch(`${url}/rest/v1/rpc/${rpcFn}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', apikey: key, Authorization: `Bearer ${key}` },
         body: JSON.stringify({
@@ -64,7 +107,8 @@ export async function semanticSearch(query: string, opts: { documentTypes?: stri
         signal,
       });
       if (!r.ok) throw new Error(`rpc ${r.status}`);
-      return (await r.json()) as Row[];
+      const all = (await r.json()) as Row[];
+      return (all || []).filter((rw) => (Number(rw.similarity) || 0) >= MIN_SIM);
     });
     return rows || [];
   } catch {

@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import { Sheet } from './ui/Sheet';
+import { useUiVersion } from '../utils/uiVersion';
 import { X, AlertCircle, CheckCircle2, Eye, EyeOff, ShieldCheck, ArrowLeft, Loader2 } from 'lucide-react';
 import { registerWithEmailPassword, loginWithEmailPassword, googleSignIn, ADMIN_EMAIL, AppUser } from '../services/auth';
 import { validateNamePolicy } from '../utils/namePolicy';
@@ -37,6 +39,7 @@ export const UserAuthModal: React.FC<UserAuthModalProps> = ({
   mandatory = false,
   embedded = false,
 }) => {
+  const { isV7 } = useUiVersion();
   const [mode, setMode] = useState<Mode>(initialMode);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -156,9 +159,10 @@ export const UserAuthModal: React.FC<UserAuthModalProps> = ({
   const label = 'block text-sm font-semibold text-ink-2 mb-1';
   const disabled = busy !== '' || Boolean(success);
 
+  const inSheet = isV7 && !embedded;
   const card = (
-    <div className={`w-full max-w-[380px] mx-auto bg-white rounded-2xl border border-line ${embedded ? '' : 'shadow-xl'} p-4 sm:p-5 flex flex-col gap-3.5`}>
-      {!embedded && (
+    <div className={inSheet ? 'flex flex-col gap-3.5 pb-1' : `w-full max-w-[380px] mx-auto bg-white rounded-2xl border border-line ${embedded ? '' : 'shadow-xl'} p-4 sm:p-5 flex flex-col gap-3.5`}>
+      {!embedded && !inSheet && (
         <div className="flex items-center justify-between -mt-1">
           <h2 className="m-0 text-md font-bold text-ink">{mode === 'admin' ? 'Yönetici girişi' : mode === 'login' ? 'Giriş yap' : 'Kayıt ol'}</h2>
           {!mandatory && (
@@ -291,6 +295,21 @@ export const UserAuthModal: React.FC<UserAuthModalProps> = ({
   );
 
   if (embedded) return card;
+  if (inSheet) {
+    return (
+      <Sheet
+        open
+        onClose={() => !mandatory && onClose()}
+        hideClose={mandatory}
+        title={mode === 'admin' ? 'Yönetici girişi' : mode === 'login' ? 'Giriş yap' : 'Kayıt ol'}
+        subtitle={mode === 'admin' ? undefined : 'Katkıların adınla görünsün; soru eklemek için giriş şart değil.'}
+        width={420}
+        label="Giriş ve kayıt"
+      >
+        {card}
+      </Sheet>
+    );
+  }
   return (
     <div
       className="fixed inset-0 z-[100] flex items-end sm:items-center justify-center p-3 sm:p-4 bg-ink/45"

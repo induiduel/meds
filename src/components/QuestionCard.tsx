@@ -1,4 +1,6 @@
 import React, { useState, useMemo } from 'react';
+import { CopyQuestionButton } from './ui/CopyQuestionButton';
+import { getVoterId } from '../utils/voterId';
 import { SourceText } from './ui/SourceText';
 import {
   Plus,
@@ -8,6 +10,8 @@ import {
   ChevronUp,
   ChevronUp as Caret,
   RefreshCw,
+  Flag,
+  Brain,
   Sparkles,
   ExternalLink,
   History,
@@ -17,10 +21,20 @@ import {
   Wand2,
   Trash2,
   Layers,
+  GraduationCap,
+  ShieldCheck,
+  CheckCircle2,
+  Share2,
+  AlertCircle,
+  Send,
+  X,
 } from 'lucide-react';
 import { ActionMenu } from './ui/ActionMenu';
 import { QuestionItem } from '../types';
 import { AppUser } from '../services/auth';
+import { ErrorReportHistoryModal } from './ErrorReportHistoryModal';
+import { shareDeepLink } from '../services/universalRedirectService';
+import * as api from '../services/api';
 
 const SOURCE_TYPE_LABELS: Record<string, string> = {
   past_question: 'Çıkmış soru',
@@ -31,6 +45,8 @@ const SOURCE_TYPE_LABELS: Record<string, string> = {
 import { StatusPill, questionStemText } from './QuickAddHero';
 import { toast } from './ui/Toast';
 import { validateNamePolicy } from '../utils/namePolicy';
+import { useUiVersion } from '../utils/uiVersion';
+import { disciplineClass, disciplineLabel } from '../utils/discipline';
 
 type OptionKey = 'A' | 'B' | 'C' | 'D' | 'E';
 const KEYS: OptionKey[] = ['A', 'B', 'C', 'D', 'E'];
@@ -130,17 +146,59 @@ const QuestionCardComponent: React.FC<QuestionCardProps> = ({
   isReconstructing,
 }) => {
   const [isExpanded, setIsExpanded] = useState(true);
+  const { isV7 } = useUiVersion();
   // Phones: explanation + side column live behind one toggle to keep the list scannable
   const [detailsOpen, setDetailsOpen] = useState(false);
+  const [flagsOpen, setFlagsOpen] = useState(false);
   const [stemOpen, setStemOpen] = useState(false);
   const longStem = questionStemText(question).length > 180;
   const [showAddFragment, setShowAddFragment] = useState(false);
   const [showAddOption, setShowAddOption] = useState(false);
+  const [showReportHistoryModal, setShowReportHistoryModal] = useState(false);
+  const [showReportModal, setShowReportModal] = useState(false);
+  const [reportReason, setReportReason] = useState('Cevap anahtarı / Şık hatalı');
+  const [reportDetails, setReportDetails] = useState('');
+  const [reportSuggestedAnswer, setReportSuggestedAnswer] = useState('');
+  const [isSubmittingReport, setIsSubmittingReport] = useState(false);
 
-  const currentUserId =
-    currentUser?.uid ||
-    currentUser?.email ||
-    (typeof localStorage !== 'undefined' ? localStorage.getItem('medsoru_device_token') || 'local_user' : 'local_user');
+  const handleReportSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!reportDetails.trim() && !reportSuggestedAnswer.trim()) {
+      toast.error('Eksik Bilgi', 'Lütfen hatayı veya önerinizi kısaca açıklayın.');
+      return;
+    }
+    setIsSubmittingReport(true);
+    try {
+      const detailsWithAnswer = reportSuggestedAnswer.trim()
+        ? `${reportDetails.trim()}\n[Önerilen Doğru Şık/Cevap]: ${reportSuggestedAnswer.trim()}`
+        : reportDetails.trim();
+
+      await api.ApiService.reportPoolQuestion(
+        question.id,
+        reportReason,
+        detailsWithAnswer,
+        currentUser?.displayName || currentUser?.email || 'Anonim Öğrenci'
+      );
+      toast.success('Bildirim Alındı', 'Hata bildiriminiz yapay zeka ve moderatör inceleme sırasına eklendi.');
+      setShowReportModal(false);
+      setReportDetails('');
+      setReportSuggestedAnswer('');
+    } catch (err: any) {
+      toast.error('Hata', err.message || 'Bildirim kaydedilemedi.');
+    } finally {
+      setIsSubmittingReport(false);
+    }
+  };
+
+  const handleShareQuestion = async () => {
+    await shareDeepLink({
+      type: 'pool_question',
+      id: question.id,
+      committeeId: question.committeeId,
+    });
+  };
+
+  const currentUserId = getVoterId(currentUser);
   const isQuestionLiked = !!question.likedBy?.includes(currentUserId);
 
   // Satellites and merged contributions
@@ -185,7 +243,7 @@ const QuestionCardComponent: React.FC<QuestionCardProps> = ({
             authorUid: sat.contributedByUid,
             type: 'stem',
             timestamp: sat.updatedAt || sat.createdAt || new Date().toISOString(),
-            upvotes: sat.upvotes || 1,
+            upvotes: sat.upvotes || 0,
             isSatellite: true,
             satelliteAuthor: satAuthor,
           });
@@ -328,10 +386,49 @@ const QuestionCardComponent: React.FC<QuestionCardProps> = ({
   const field = 'border border-line-2 rounded-[10px] bg-white px-3 text-md text-ink outline-0 focus:border-accent placeholder:text-ink-2';
 
   return (
-    <article className="bg-white border border-line rounded-2xl overflow-hidden">
+    <article
+      id={`q-${question.id}`}
+      data-question-id={question.id}
+      className={isV7 ? `qc ${disciplineClass(question.discipline)}` : 'bg-white border border-line rounded-2xl overflow-hidden transition-all duration-300'}
+    >
       <div className={`grid grid-cols-1 ${isExpanded ? 'lg:grid-cols-[minmax(0,1.75fr)_minmax(0,1fr)]' : ''}`}>
         {/* ---------------- Main column ---------------- */}
         <div className="p-4 sm:p-6 flex flex-col gap-4 sm:gap-5 min-w-0">
+          {isV7 && (() => {
+            const reps = question.reports || [];
+            const solved = reps.filter((r) => r.status === 'resolved' || r.status === 'verified_correct').length;
+            const flagNodes: React.ReactNode[] = [<StatusPill key="st" status={question.status} hasFragments={question.fragments.length > 0} />];
+            if (isMyQuestion) flagNodes.push(<span key="me" className="cx-flag is-new">Senin katkın</span>);
+            // Yalnız açık bildirim gösterilir; çözülmüş bildirim ve düzenleme tarihçesi ⋯ menüsünde.
+            if (reps.length > solved) flagNodes.push(
+              <button key="rep" type="button" onClick={() => setShowReportHistoryModal(true)} className="cx-flag is-warn" title="Bildirim ve çözüm geçmişi">
+                <AlertTriangle aria-hidden />{reps.length - solved} bildirim
+              </button>
+            );
+            if (isMergedQuestion) flagNodes.push(<span key="mg" className="cx-flag is-ok"><Layers aria-hidden />{satelliteCount > 0 ? `${satelliteCount + 1} taslak` : 'Birleşik'}</span>);
+            const shown = flagsOpen ? flagNodes : flagNodes.slice(0, 2);
+            return (
+              <header className={`qk-h is-pool ${flagsOpen ? 'is-flags-open' : ''}`}>
+                <span className="qk-chip" title={question.isUnassignedNumber ? 'Soru numarası bilinmiyor' : `Soru ${question.questionNumber}`}>{question.isUnassignedNumber ? '?' : `S${question.questionNumber}`}</span>
+                <span className="qk-ders"><i className="hk-dot" aria-hidden />{disciplineLabel(question.discipline) || question.discipline || 'Tıp'}</span>
+                {question.topic && !/hatırlanan soru|çıkmış sorusu/i.test(question.topic) && <span className="qk-kunye is-topic" title={question.topic}>{question.topic}</span>}
+                <span className="qk-flags">{shown}</span>
+                {flagNodes.length > shown.length && <button type="button" className="qk-more-flags" onClick={() => setFlagsOpen(true)}>+{flagNodes.length - shown.length}</button>}
+                <span className="qk-sp" />
+                <CopyQuestionButton
+                  stem={question.reconstruction?.stem || question.fragments?.[0]?.text || question.topic}
+                  options={(question.reconstruction?.options?.length ? question.reconstruction.options : question.options) as any[]}
+                  className="qk-ib"
+                />
+                <button type="button" onClick={() => setShowReportModal(true)} className="qk-ib" aria-label="Hata bildir" title="Hata bildir"><Flag aria-hidden /></button>
+                <button type="button" onClick={handleShareQuestion} className="qk-ib" aria-label="Soruyu paylaş" title="Soruyu paylaş"><Share2 aria-hidden /></button>
+                <button type="button" onClick={() => setIsExpanded(!isExpanded)} aria-expanded={isExpanded} aria-label={isExpanded ? 'Soruyu daralt' : 'Soruyu genişlet'} className="qk-ib">
+                  <ChevronDown className={`qk-chev ${isExpanded ? 'is-open' : ''}`} aria-hidden />
+                </button>
+              </header>
+            );
+          })()}
+          {!isV7 && (
           <div className="flex items-start gap-3">
             <div className="flex gap-2 flex-wrap flex-1 min-w-0">
               <StatusPill status={question.status} hasFragments={question.fragments.length > 0} />
@@ -344,6 +441,12 @@ const QuestionCardComponent: React.FC<QuestionCardProps> = ({
                   {question.topic}
                 </span>
               )}
+              {question.notebooklm_verisi?.mufredat && (
+                <span className="h-7 px-2.5 rounded-full bg-ai-soft text-ai text-xs font-semibold inline-flex items-center gap-1">
+                  <GraduationCap className="w-3.5 h-3.5" />
+                  {question.notebooklm_verisi.mufredat}
+                </span>
+              )}
               {isMyQuestion && (
                 <span className="h-7 px-2.5 rounded-full bg-accent-soft text-accent text-xs font-semibold inline-flex items-center">Senin katkın</span>
               )}
@@ -353,6 +456,75 @@ const QuestionCardComponent: React.FC<QuestionCardProps> = ({
                   {satelliteCount > 0 ? `${satelliteCount + 1} taslak birleşik` : 'Birleşik taslak'}
                 </span>
               )}
+              <button
+                type="button"
+                onClick={handleShareQuestion}
+                className="h-7 px-2.5 rounded-full bg-canvas hover:bg-accent-soft hover:text-accent text-ink-2 text-xs font-semibold inline-flex items-center gap-1 cursor-pointer transition-colors"
+                title="Sorunun derin bağlantısını kopyala / paylaş"
+                aria-label="Soruyu paylaş"
+              >
+                <Share2 className="w-3.5 h-3.5" />
+                <span>Paylaş</span>
+              </button>
+              <button
+                type="button"
+                onClick={() => setShowReportModal(true)}
+                className="h-7 px-2.5 rounded-full bg-canvas hover:bg-warn-soft hover:text-warn text-ink-2 text-xs font-semibold inline-flex items-center gap-1 cursor-pointer transition-colors"
+                title="Hata bildirimi gönder"
+                aria-label="Hata bildir"
+              >
+                <AlertCircle className="w-3.5 h-3.5" />
+                <span>Hata Bildir</span>
+              </button>
+              {/* Hata Bildirimi & Çözüm Durumu Rozeti */}
+              {(() => {
+                const reportsList = question.reports || [];
+                const resolvedReports = reportsList.filter((r) => r.status === 'resolved' || r.status === 'verified_correct');
+                const hasReports = reportsList.length > 0;
+                const isFullyResolved = hasReports && resolvedReports.length === reportsList.length;
+                const hasRevisions = (question.revisions || []).length > 0;
+
+                if (hasReports && isFullyResolved) {
+                  return (
+                    <button
+                      type="button"
+                      onClick={() => setShowReportHistoryModal(true)}
+                      className="h-7 px-2.5 rounded-full bg-ok-soft text-ok text-xs font-semibold inline-flex items-center gap-1 cursor-pointer transition-colors"
+                      title="Bu sorudaki hata bildirimleri incelendi ve çözüldü. Değişim geçmişini görmek için tıklayın."
+                    >
+                      <CheckCircle2 className="w-3.5 h-3.5" />
+                      <span>✓ Çözüldü ({reportsList.length})</span>
+                    </button>
+                  );
+                }
+                if (hasReports && !isFullyResolved) {
+                  return (
+                    <button
+                      type="button"
+                      onClick={() => setShowReportHistoryModal(true)}
+                      className="h-7 px-2.5 rounded-full bg-warn-soft text-warn text-xs font-semibold inline-flex items-center gap-1 cursor-pointer transition-colors"
+                      title="Bu soruda hata bildirimi mevcut. Çözüm ve inceleme geçmişini görmek için tıklayın."
+                    >
+                      <AlertTriangle className="w-3.5 h-3.5" />
+                      <span>{reportsList.length} Bildirim ({resolvedReports.length} Çözüldü)</span>
+                    </button>
+                  );
+                }
+                if (hasRevisions) {
+                  return (
+                    <button
+                      type="button"
+                      onClick={() => setShowReportHistoryModal(true)}
+                      className="h-7 px-2.5 rounded-full bg-canvas text-ink-2 text-xs font-semibold inline-flex items-center gap-1 cursor-pointer transition-colors"
+                      title="Soru düzenleme ve versiyon geçmişini gör"
+                    >
+                      <ShieldCheck className="w-3.5 h-3.5" />
+                      <span>Tarihçe ({(question.revisions || []).length})</span>
+                    </button>
+                  );
+                }
+                return null;
+              })()}
             </div>
             <button
               type="button"
@@ -365,8 +537,11 @@ const QuestionCardComponent: React.FC<QuestionCardProps> = ({
             </button>
           </div>
 
+          )}
+
           <h3
-            className={`m-0 font-display font-medium leading-[1.3] tracking-[-0.02em] text-ink ${
+            id={`stem-${question.id}`}
+            className={isV7 ? `qk-stem is-pool ${longStem && !stemOpen ? 'is-clamped' : ''}` : `m-0 font-display font-medium leading-[1.3] tracking-[-0.02em] text-ink ${
               longStem ? 'text-lg sm:text-xl' : 'text-xl sm:text-2xl'
             } ${longStem && !stemOpen ? 'line-clamp-6 sm:line-clamp-none' : ''}`}
           >
@@ -391,64 +566,50 @@ const QuestionCardComponent: React.FC<QuestionCardProps> = ({
             </div>
           )}
 
+          {question.notebooklm_verisi?.kazanim && (
+            <div className="flex items-start gap-2.5 p-3 sm:p-3.5 bg-ai-soft rounded-xl text-sm text-ink my-1">
+              <GraduationCap className="w-4.5 h-4.5 text-ai shrink-0 mt-0.5" />
+              <div className="flex-1 min-w-0">
+                <div className="text-2xs font-bold uppercase tracking-wider text-ai mb-0.5 flex flex-wrap items-center gap-1.5">
+                  <span>Resmi Fakülte Müfredat Kazanımı</span>
+                  {question.notebooklm_verisi.ders && (
+                    <span className="font-normal text-ink-3">· {question.notebooklm_verisi.ders}</span>
+                  )}
+                  {question.notebooklm_verisi.konu && (
+                    <span className="font-normal text-ink-3">· {question.notebooklm_verisi.konu}</span>
+                  )}
+                </div>
+                <div className="font-medium leading-relaxed text-ink">{question.notebooklm_verisi.kazanim}</div>
+              </div>
+            </div>
+          )}
+
           {isExpanded && (
             <>
               {rows.length > 0 ? (
                 <div className="flex flex-col gap-2.5">
-                  <ol className="list-none m-0 p-0 flex flex-col gap-2.5">
+                  <ol className="qk-opts is-pool">
                     {rows.map((o) => (
-                      <li
-                        key={o.key}
-                        className={`grid grid-cols-[32px_minmax(0,1fr)_auto] sm:grid-cols-[40px_minmax(0,1fr)_180px] gap-x-3 sm:gap-x-4 items-center px-2.5 sm:px-4 py-2 sm:py-3 rounded-xl sm:rounded-xl ${
-                          o.correct ? 'border-[1.5px] border-ok-bright bg-ok-tint' : o.ai ? 'border border-dashed border-line-2' : 'border border-line'
-                        }`}
-                      >
-                        <span
-                          className={`w-8 h-8 sm:w-9 sm:h-9 rounded-lg sm:rounded-[10px] flex items-center justify-center font-mono text-sm sm:text-base ${
-                            o.correct ? 'bg-ok text-white' : 'bg-canvas text-ink'
-                          }`}
-                        >
-                          {o.key}
-                        </span>
-                        <span className="flex flex-col gap-0.5 min-w-0">
-                          <span className="text-md sm:text-lg leading-snug font-medium text-ink">{o.text}</span>
-                          {o.ai && (
-                            <span className="text-xs text-ink-2 inline-flex items-center gap-1">
-                              <Sparkles className="w-3 h-3" />
-                              <span className="sm:hidden">AI tamamladı</span>
-                              <span className="hidden sm:inline">Kimse hatırlamadı, AI tamamladı</span>
-                            </span>
-                          )}
-                          {o.correct && <span className="text-xs text-ok font-semibold">{correctLabel}</span>}
-                        </span>
-                        <span className="flex items-center gap-2.5">
-                          <span className="hidden sm:block flex-1 h-1.5 rounded-full bg-line-soft">
-                            <span
-                              className="block h-1.5 rounded-full"
-                              style={{ width: `${Math.max(2, (o.votes / maxVotes) * 100)}%`, background: o.correct ? '#1F9D55' : '#AEB8C3' }}
-                            />
+                      <li key={o.key} id={`opt-${question.id}-${o.key}`} className="qk-opt-li">
+                        <div className={`qk-opt ${o.correct ? 'is-correct' : ''} ${o.ai ? 'is-ai' : ''}`}>
+                          <span className="qk-bub" aria-hidden>{o.correct ? <Check strokeWidth={3} /> : o.key}</span>
+                          <span className="qk-opt-t">
+                            {o.text}
+                            {o.ai && <span className="qk-opt-sub"><Sparkles aria-hidden />Kimse hatırlamadı, yapay zekâ tamamladı</span>}
+                            {o.correct && <span className="qk-opt-sub is-ok">{correctLabel}</span>}
                           </span>
-                          {o.hasStudent ? (
-                            <button
-                              type="button"
-                              onClick={() => onUpvoteOption(question.id, o.key)}
-                              aria-pressed={o.liked}
-                              aria-label={`${o.key} şıkkını ben de böyle hatırlıyorum`}
-                              className={`min-w-11 h-8 px-1.5 rounded-lg font-mono text-xs inline-flex items-center justify-end gap-1 cursor-pointer ${
-                                o.liked ? 'text-accent font-semibold' : 'text-ink-2 hover:text-accent'
-                              }`}
-                            >
-                              <Caret className="w-3 h-3" strokeWidth={2.6} />
-                              {o.votes}
-                            </button>
-                          ) : (
-                            <span className="min-w-11 text-right font-mono text-xs text-ink-2">0</span>
-                          )}
-                        </span>
+                          <span className="qk-votebar" aria-hidden><i style={{ width: `${Math.max(2, (o.votes / maxVotes) * 100)}%` }} className={o.correct ? 'is-ok' : ''} /></span>
+                        </div>
+                        {o.hasStudent ? (
+                          <button type="button" onClick={() => onUpvoteOption(question.id, o.key)} aria-pressed={o.liked} aria-label={o.liked ? `${o.key} şıkkına verdiğin oyu geri çek` : `${o.key} şıkkını ben de böyle hatırlıyorum`} className={`qk-vote ${o.liked ? 'is-on' : ''}`}>
+                            <Caret aria-hidden strokeWidth={2.6} />{o.votes}
+                          </button>
+                        ) : (
+                          <span className="qk-vote is-off" aria-label="Oy yok">0</span>
+                        )}
                       </li>
                     ))}
                   </ol>
-                  {anyVotes && <p className="m-0 text-sm text-ink-3">Çubuklar, öğrencilerin hangi şıkkı doğru hatırladığını gösterir.</p>}
                 </div>
               ) : (
                 <p className="m-0 text-base text-ink-2 bg-canvas rounded-xl px-4 py-3">Henüz şık girilmedi. Hatırladığın bir şık varsa ekle.</p>
@@ -593,18 +754,16 @@ const QuestionCardComponent: React.FC<QuestionCardProps> = ({
               )}
 
               {/* Actions: two primary, the rest in one menu */}
-              <div className="flex items-center gap-2 border-t border-line-soft pt-4">
+              <div className="qk-f is-pool">
                 {onUpvoteQuestion && (
                   <button
                     type="button"
                     onClick={() => onUpvoteQuestion(question.id)}
                     aria-pressed={isQuestionLiked}
                     aria-label="Soruyu beğen"
-                    className={`shrink-0 h-10 min-w-10 px-2.5 rounded-[10px] border inline-flex items-center justify-center gap-1.5 cursor-pointer font-mono text-sm ${
-                      isQuestionLiked ? 'border-accent/40 bg-accent-soft text-accent' : 'border-line bg-white text-ink-2 hover:border-line-2'
-                    }`}
+                    className={`qk-act ${isQuestionLiked ? 'is-on' : ''}`}
                   >
-                    <ThumbsUp className={`w-4 h-4 ${isQuestionLiked ? 'fill-current' : ''}`} />
+                    <ThumbsUp className={isQuestionLiked ? 'fill-current' : ''} aria-hidden />
                     {question.upvotes || 0}
                   </button>
                 )}
@@ -643,6 +802,18 @@ const QuestionCardComponent: React.FC<QuestionCardProps> = ({
                       disabled: isReconstructing || (question.fragments.length === 0 && question.options.length === 0),
                       onClick: () => onReconstructWithAi(question.id),
                     },
+                    {
+                      label: 'Soruyu Paylaş (Deep Link)',
+                      icon: Share2,
+                      group: 'Paylaşım',
+                      onClick: handleShareQuestion,
+                    },
+                    {
+                      label: 'Hata Bildir',
+                      icon: AlertCircle,
+                      group: 'Geri Bildirim',
+                      onClick: () => setShowReportModal(true),
+                    },
                     ...(isAdmin && onOpenAiOptimizer
                       ? [{ label: 'AI ile düzenle', icon: Wand2, group: 'Yapay zekâ', onClick: () => onOpenAiOptimizer(question) }]
                       : []),
@@ -663,6 +834,9 @@ const QuestionCardComponent: React.FC<QuestionCardProps> = ({
                     ...(revisionCount > 0 && onOpenHistory
                       ? [{ label: 'Değişiklik geçmişi', icon: History, group: 'Soru', hint: String(revisionCount), onClick: () => onOpenHistory(question) }]
                       : []),
+                    ...((question.reports || []).length > 0
+                      ? [{ label: 'Bildirim geçmişi', icon: AlertTriangle, group: 'Soru', hint: String((question.reports || []).length), onClick: () => setShowReportHistoryModal(true) }]
+                      : []),
                   ]}
                 />
               </div>
@@ -672,19 +846,18 @@ const QuestionCardComponent: React.FC<QuestionCardProps> = ({
                 type="button"
                 onClick={() => setDetailsOpen((v) => !v)}
                 aria-expanded={detailsOpen}
-                className="sm:hidden -mb-1 h-11 px-3 rounded-[10px] bg-canvas text-base font-semibold text-ink flex items-center justify-between cursor-pointer"
+                className="qk-disc-h is-pool-disc"
               >
                 <span>
-                  {sections.length > 0 ? 'Açıklama ve ayrıntılar' : 'Ayrıntılar'}
+                  {sections.length > 0 || Boolean(question.sik_analizi) ? 'Açıklama ve ayrıntılar' : 'Ayrıntılar'}
                   <span className="font-normal text-ink-2"> · {question.fragments.length} parça</span>
                 </span>
                 {detailsOpen ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
               </button>
 
               {/* Explanation */}
-              {sections.length > 0 && (
-                <section aria-label="Açıklama" className={`${mobileHidden} flex-col gap-5 sm:gap-7 border-t border-line-soft pt-5 sm:pt-8`}>
-                  <h4 className="hidden sm:block m-0 font-display text-2xl font-bold tracking-[-0.02em]">Açıklama</h4>
+              {(sections.length > 0 || Boolean(question.sik_analizi)) && (
+                <section id={`expl-${question.id}`} aria-label="Açıklama" className={`${detailsOpen ? 'flex' : 'hidden'} qk-pool-expl flex-col gap-5`}>
                   {sections.map((s, i) => {
                     const distractors = s.label === 'Çeldiriciler' ? parseDistractors(s.body) : null;
                     if (sections.length === 1 && s.label === 'Açıklama') {
@@ -710,6 +883,46 @@ const QuestionCardComponent: React.FC<QuestionCardProps> = ({
                       </div>
                     );
                   })}
+                  {question.sik_analizi && (
+                    <div className="grid grid-cols-1 sm:grid-cols-[160px_minmax(0,1fr)] gap-2 sm:gap-6 items-start">
+                      <h5 className="m-0 text-sm font-semibold text-ink-2 uppercase tracking-[0.06em] flex items-center gap-1.5">
+                        <ShieldCheck className="w-4 h-4 text-ok" />
+                        Şık Analizi
+                      </h5>
+                      <div className="flex flex-col gap-2">
+                        {typeof question.sik_analizi === 'object' && question.sik_analizi !== null ? (
+                          Object.entries(question.sik_analizi).sort(([a], [b]) => a.localeCompare(b)).map(([k, val]) => {
+                            const isCorrect = correctKey === k;
+                            return (
+                              <div
+                                key={k}
+                                className={`p-2.5 sm:p-3 rounded-xl border text-sm flex items-start gap-2.5 transition ${
+                                  isCorrect
+                                    ? 'bg-ok-soft/70 border-ok/40 text-ink shadow-2xs'
+                                    : 'bg-canvas border-line text-ink-2'
+                                }`}
+                              >
+                                <span
+                                  className={`w-5 h-5 rounded-md flex items-center justify-center font-bold text-xs shrink-0 ${
+                                    isCorrect ? 'bg-ok text-white' : 'bg-line-2 text-ink-2 font-mono'
+                                  }`}
+                                >
+                                  {k}
+                                </span>
+                                <div className="flex-1 leading-relaxed">
+                                  {String(val)}
+                                </div>
+                              </div>
+                            );
+                          })
+                        ) : (
+                          <div className="p-3 rounded-xl bg-canvas border border-line text-sm whitespace-pre-wrap text-ink-2 leading-relaxed">
+                            {String(question.sik_analizi)}
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  )}
                   {rec?.notesAndDiscrepancies && (
                     <div className="flex items-start gap-2.5 rounded-xl bg-warn-soft px-4 py-3 text-base text-ink">
                       <AlertTriangle className="w-4 h-4 text-warn shrink-0 mt-0.5" />
@@ -739,9 +952,9 @@ const QuestionCardComponent: React.FC<QuestionCardProps> = ({
 
         {/* ---------------- Side column ---------------- */}
         {isExpanded && (
-          <aside className={`${mobileHidden} bg-accent-soft border-t lg:border-t-0 lg:border-l border-line p-3 sm:p-6 flex-col gap-3 sm:gap-5`}>
-            <section className="bg-white border border-line rounded-xl sm:rounded-2xl p-4 sm:p-6 flex flex-col gap-4">
-              <h4 className="m-0 text-md font-semibold">Yeniden kurulum</h4>
+          <aside className={`${mobileHidden} rb-qside bg-canvas border-t lg:border-t-0 lg:border-l border-line p-3 sm:p-4 flex-col gap-3`}>
+            <section className="bg-white border border-line rounded-xl p-3 sm:p-4 flex flex-col gap-3">
+              <h4 className="rb-qside-h"><span className="ic is-accent" aria-hidden><RefreshCw /></span>Yeniden kurulum<span className="n">{checklist.filter((c) => c.ok).length}/{checklist.length}</span></h4>
               <ul className="list-none m-0 p-0 flex flex-col gap-3 text-base">
                 {checklist.map((c) => (
                   <li key={c.label} className={`flex gap-2.5 items-center ${c.ok ? 'text-ink' : 'text-ink-2'}`}>
@@ -820,11 +1033,8 @@ const QuestionCardComponent: React.FC<QuestionCardProps> = ({
               </section>
             )}
 
-            <section className="bg-white border border-line rounded-xl sm:rounded-2xl p-4 sm:p-6 flex flex-col gap-4">
-              <div className="flex justify-between items-baseline">
-                <h4 className="m-0 text-md font-semibold">Hafıza parçaları & katkılar</h4>
-                <span className="font-mono text-xs text-ink-2">{allFragments.length}</span>
-              </div>
+            <section className="bg-white border border-line rounded-xl p-3 sm:p-4 flex flex-col gap-3">
+              <h4 className="rb-qside-h"><span className="ic is-clinic" aria-hidden><Brain /></span>Hafıza parçaları ve katkılar<span className="n">{allFragments.length}</span></h4>
               {allFragments.length === 0 ? (
                 <p className="m-0 text-base text-ink-2">Henüz parça yok. İlk hatırlayan sen ol.</p>
               ) : (
@@ -870,6 +1080,93 @@ const QuestionCardComponent: React.FC<QuestionCardProps> = ({
           </aside>
         )}
       </div>
+
+      {showReportHistoryModal && (
+        <ErrorReportHistoryModal
+          isOpen={showReportHistoryModal}
+          onClose={() => setShowReportHistoryModal(false)}
+          question={question}
+        />
+      )}
+
+      {showReportModal && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-xs animate-in fade-in duration-200">
+          <div className="bg-white dark:bg-[#12161f] border border-line rounded-2xl w-full max-w-lg shadow-xl overflow-hidden flex flex-col max-h-[90vh]">
+            <div className="flex items-center justify-between px-6 py-4 border-b border-line bg-canvas">
+              <div className="flex items-center gap-2">
+                <AlertCircle className="w-5 h-5 text-warn" />
+                <h3 className="font-semibold text-lg text-ink">Soru Hata Bildirimi</h3>
+              </div>
+              <button
+                type="button"
+                onClick={() => setShowReportModal(false)}
+                className="p-1 rounded-lg hover:bg-canvas text-ink-3 hover:text-ink cursor-pointer transition-colors"
+                aria-label="Kapat"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+            <form onSubmit={handleReportSubmit} className="p-6 flex flex-col gap-4 overflow-y-auto">
+              <p className="text-sm text-ink-2">
+                Bu soruda hatalı bir kök, yanlış şık, çelişkili cevap anahtarı veya eksik bilgi tespit ettiyseniz bildirin.
+                Bildiriminiz yapay zeka denetim kuyruğuna alınacak ve otomatik düzeltilecektir.
+              </p>
+              <div className="flex flex-col gap-1.5">
+                <label className="text-xs font-semibold text-ink-2 uppercase tracking-wider">Hata Türü</label>
+                <select
+                  value={reportReason}
+                  onChange={(e) => setReportReason(e.target.value)}
+                  className="w-full px-3 py-2 text-sm rounded-xl border border-line bg-canvas text-ink focus:border-accent outline-hidden"
+                >
+                  <option value="Cevap anahtarı / Şık hatalı">Cevap anahtarı / Şık hatalı</option>
+                  <option value="Soru kökü veya öncüllerde hata var">Soru kökü veya öncüllerde hata var</option>
+                  <option value="Yapay zeka analizinde hata var">Yapay zeka analizinde hata var</option>
+                  <option value="Müfredat dışı / Yanlış komite">Müfredat dışı / Yanlış komite</option>
+                  <option value="Diğer">Diğer</option>
+                </select>
+              </div>
+              <div className="flex flex-col gap-1.5">
+                <label className="text-xs font-semibold text-ink-2 uppercase tracking-wider">Açıklama / Tespit Edilen Hata *</label>
+                <textarea
+                  rows={3}
+                  value={reportDetails}
+                  onChange={(e) => setReportDetails(e.target.value)}
+                  placeholder="Örn: Doğru cevap C değil D olmalıdır çünkü..."
+                  required
+                  className="w-full px-3 py-2 text-sm rounded-xl border border-line bg-canvas text-ink focus:border-accent outline-hidden resize-none"
+                />
+              </div>
+              <div className="flex flex-col gap-1.5">
+                <label className="text-xs font-semibold text-ink-2 uppercase tracking-wider">Önerilen Doğru Çözüm / Şık (İsteğe Bağlı)</label>
+                <input
+                  type="text"
+                  value={reportSuggestedAnswer}
+                  onChange={(e) => setReportSuggestedAnswer(e.target.value)}
+                  placeholder="Örn: Doğru şık D: Lizozomal depo hastalığı"
+                  className="w-full px-3 py-2 text-sm rounded-xl border border-line bg-canvas text-ink focus:border-accent outline-hidden"
+                />
+              </div>
+              <div className="flex items-center justify-end gap-3 pt-3 border-t border-line">
+                <button
+                  type="button"
+                  onClick={() => setShowReportModal(false)}
+                  className="px-4 py-2 text-sm font-semibold rounded-xl text-ink-2 hover:bg-canvas cursor-pointer transition-colors"
+                >
+                  Vazgeç
+                </button>
+                <button
+                  type="submit"
+                  disabled={isSubmittingReport}
+                  className="px-5 py-2 text-sm font-semibold rounded-xl bg-accent text-white hover:bg-accent-hover disabled:opacity-50 cursor-pointer flex items-center gap-2 transition-colors"
+                >
+                  <Send className="w-4 h-4" />
+                  {isSubmittingReport ? 'Gönderiliyor...' : 'Bildirimi Gönder'}
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      )}
     </article>
   );
 };

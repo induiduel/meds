@@ -4,7 +4,8 @@ import { safeJsonFetch } from '../../services/api';
 export type SearchDocType =
   | 'past_question' | 'active_question' | 'lecture_slide' | 'summary' | 'transcript'
   | 'user_contribution' | 'ai_refinement' | 'ai_qa' | 'deepseek_contribution'
-  | 'gemini_v3_question' | 'gemini_v3_lecture' | 'gemini_v3_term';
+  | 'gemini_v3_question' | 'gemini_v3_lecture' | 'gemini_v3_term'
+  | 'ornek_question' | 'deck_slide' | 'glossary_term' | 'disease';
 
 export interface SearchHit {
   id: string;
@@ -31,6 +32,10 @@ export const TYPE_META: Record<SearchDocType, { label: string; dot: string }> = 
   past_question: { label: 'Çıkmış soru', dot: 'bg-ai' },
   deepseek_contribution: { label: 'Soru bankası', dot: 'bg-accent' },
   active_question: { label: 'Havuz sorusu', dot: 'bg-accent' },
+  ornek_question: { label: 'Örnek soru', dot: 'bg-accent' },
+  deck_slide: { label: 'İnteraktif slayt', dot: 'bg-ok' },
+  glossary_term: { label: 'Sözlük', dot: 'bg-ok' },
+  disease: { label: 'Hastalık', dot: 'bg-warn' },
   lecture_slide: { label: 'Ders slaytı', dot: 'bg-ok' },
   summary: { label: 'Özet', dot: 'bg-ok' },
   transcript: { label: 'Ses kaydı', dot: 'bg-warn' },
@@ -45,6 +50,7 @@ export const TYPE_META: Record<SearchDocType, { label: string; dot: string }> = 
 export const TYPE_ORDER: SearchDocType[] = [
   'past_question', 'deepseek_contribution', 'lecture_slide', 'summary', 'transcript',
   'active_question', 'user_contribution', 'gemini_v3_question', 'gemini_v3_lecture', 'gemini_v3_term',
+  'ornek_question', 'deck_slide', 'glossary_term', 'disease',
 ];
 
 export async function fetchSearch(

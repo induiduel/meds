@@ -1,5 +1,9 @@
 import React, { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState } from 'react';
 import BUNDLED from '../../data/musicTracks.json';
+import { onAuthStateChanged } from 'firebase/auth';
+import { auth } from '../../services/auth';
+import { safeJsonFetch } from '../../services/api';
+import { getVoterId } from '../../utils/voterId';
 
 /*
  * Uygulama genelinde tek müzik çalar. Sağlayıcı App kökünde durduğu için sayfa
@@ -161,6 +165,44 @@ export const useMusicPlayer = () => {
 
 export const MusicPlayerProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [custom, setCustom] = useState<MusicTrack[]>(() => loadCustom());
+
+  // Kalıcılık: eklenen parçalar sunucuda kullanıcı (ya da cihaz) kimliğine göre saklanır.
+  // Açılışta sunucu listesi yerel listeyle URL'ye göre birleştirilir; sonraki her değişiklik 800 ms sonra yazılır.
+  // Kimlik URL'ye değil başlığa konur.
+  const [owner, setOwner] = useState(() => getVoterId(auth.currentUser ? { uid: auth.currentUser.uid, email: auth.currentUser.email } : null));
+  const syncReady = useRef(false);
+  useEffect(() => onAuthStateChanged(auth, (u) => setOwner(getVoterId(u ? { uid: u.uid, email: u.email } : null))), []);
+  useEffect(() => {
+    let alive = true;
+    syncReady.current = false;
+    (async () => {
+      const r = await safeJsonFetch<{ tracks: MusicTrack[] }>('/api/music/playlist', { headers: { 'x-user-id': owner } });
+      if (!alive) return;
+      if (r.ok && Array.isArray(r.data?.tracks)) {
+        const remote = r.data!.tracks.map((x) => ({ ...x, custom: true }));
+        setCustom((local) => {
+          const byUrl = new Map<string, MusicTrack>();
+          [...remote, ...local].forEach((x) => { if (x?.url && !byUrl.has(x.url)) byUrl.set(x.url, x); });
+          const merged = [...byUrl.values()];
+          saveCustom(merged);
+          return merged;
+        });
+      }
+      syncReady.current = true;
+    })();
+    return () => { alive = false; };
+  }, [owner]);
+  useEffect(() => {
+    if (!syncReady.current) return;
+    const h = window.setTimeout(() => {
+      void safeJsonFetch('/api/music/playlist', {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json', 'x-user-id': owner },
+        body: JSON.stringify({ tracks: custom, clear: custom.length === 0 }),
+      });
+    }, 800);
+    return () => window.clearTimeout(h);
+  }, [custom, owner]);
   const [index, setIndex] = useState(0);
   const [playing, setPlaying] = useState(false);
   const [started, setStarted] = useState(false);

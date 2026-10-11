@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useMemo } from 'react';
+import { confirmText } from './ui/ConfirmDialog';
 import { PageHeader } from './ui/PageHeader';
 import {
   Sparkles,
@@ -470,7 +471,7 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
   const toggleAuto = async () => {
     if (autoOn === null) return;
     const acilacak = !autoOn;
-    if (acilacak && !window.confirm(`Otomatik ücretsiz inceleme açılsın mı?\n\nİncelenmemiş ${autoLimit} soru ücretsiz anahtarlara dağıtılır; her anahtar kendi sorularını tek tek çözer, kota bitince 1/10/30 dk bekleyip devam eder. Ücretli anahtar kullanılmaz. Kapatana ya da "Durdur"a basana kadar sürer.`)) return;
+    if (acilacak && !(await confirmText(`Otomatik ücretsiz inceleme açılsın mı?\n\nİncelenmemiş ${autoLimit} soru ücretsiz anahtarlara dağıtılır; her anahtar kendi sorularını tek tek çözer, kota bitince 1/10/30 dk bekleyip devam eder. Ücretli anahtar kullanılmaz. Kapatana ya da "Durdur"a basana kadar sürer.`))) return;
     setIsTriggering(true);
     try {
       const s = await ApiService.setPhase14Settings(ADMIN_EMAIL, { otomatik_ucretsiz: acilacak, otomatik_limit: autoLimit });
@@ -589,7 +590,7 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
   };
 
   const handlePermanentDelete = async (qId: string) => {
-    if (!window.confirm(`Soru #${qId} kalıcı olarak silinecektir.\n\nBu soru hem Faz 14 inceleme listesinden hem de soru veritabanından kalıcı olarak kaldırılacaktır ve bu işlem geri alınamaz.\n\nKalıcı olarak silmek istediğinize emin misiniz?`)) {
+    if (!(await confirmText(`Soru #${qId} kalıcı olarak silinecektir.\n\nBu soru hem Faz 14 inceleme listesinden hem de soru veritabanından kalıcı olarak kaldırılacaktır ve bu işlem geri alınamaz.\n\nKalıcı olarak silmek istediğinize emin misiniz?`))) {
       return;
     }
     setProcessingId(qId);

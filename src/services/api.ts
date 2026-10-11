@@ -4,9 +4,11 @@ import { FirestoreDbService, INITIAL_COMMITTEES, COMMITTEE_SORT_ORDER, filterCur
 import { multiDbManager } from './multiDbManager';
 import { SupabaseDbService, getSupabaseClient } from './supabaseDb';
 import { pastQuestionsCache } from './pastQuestionsCache';
+import { offlineDatabaseService } from './offlineDatabaseService';
 import { collection, addDoc, doc, setDoc } from 'firebase/firestore';
 import { ADMIN_EMAIL, getLocalAdminSession } from './auth';
 import { systemHealthMonitor } from './systemHealthMonitor';
+import { defaultApiBaseForThisHost } from '../config/deployment';
 import { BUNDLED_SCRIPTS, BUNDLED_PIPELINES } from '../data/bundledScripts';
 import {
   clusterDraftsForCommittee,
@@ -26,7 +28,13 @@ export const getCustomApiUrl = (): string => {
     try { localStorage.removeItem(API_BASE_URL_KEY); } catch (_) {}
     return '';
   }
-  return url;
+  if (url) return url;
+  // Canlı hostta özel URL yoksa Oracle Named Tunnel'a düş (cihazda localhost → '').
+  try {
+    return defaultApiBaseForThisHost();
+  } catch (_) {
+    return '';
+  }
 };
 
 export const setCustomApiUrl = (url: string) => {
@@ -631,7 +639,7 @@ export const ApiService = {
           text: data.fragmentText.trim(),
           type: 'stem',
           timestamp: new Date().toISOString(),
-          upvotes: 1,
+          upvotes: 0,
         }
       : null;
 
@@ -655,7 +663,7 @@ export const ApiService = {
               text: `${o.key}) ${o.text.trim()}`,
               type: 'option',
               timestamp: new Date().toISOString(),
-              upvotes: 1,
+              upvotes: 0,
             });
             const exOpt = explicitTarget.options.find((opt) => opt.key === o.key);
             if (exOpt) {
@@ -666,7 +674,7 @@ export const ApiService = {
                 text: o.text.trim(),
                 suggestedBy: data.author || 'Anonim',
                 suggestedByUid: data.authorUid,
-                upvotes: 1,
+                upvotes: 0,
               });
             }
           });
@@ -715,7 +723,7 @@ export const ApiService = {
               text: `${o.key}) ${o.text.trim()}`,
               type: 'option',
               timestamp: new Date().toISOString(),
-              upvotes: 1,
+              upvotes: 0,
             });
             const exOpt = existing.options.find((opt) => opt.key === o.key);
             if (exOpt) {
@@ -726,7 +734,7 @@ export const ApiService = {
                 text: o.text.trim(),
                 suggestedBy: data.author,
                 suggestedByUid: data.authorUid,
-                upvotes: 1,
+                upvotes: 0,
               });
             }
           });
@@ -765,7 +773,7 @@ export const ApiService = {
                 text: o.text.trim(),
                 suggestedBy: data.author || 'Anonim',
                 suggestedByUid: data.authorUid,
-                upvotes: 1,
+                upvotes: 0,
               }))
           : [],
         claimedAnswer: data.claimedAnswer,
@@ -787,7 +795,7 @@ export const ApiService = {
             discipline: data.discipline,
             topic: data.topic,
             claimedAnswer: data.claimedAnswer,
-            options: data.options ? data.options.map(o => ({ key: o.key, text: o.text, upvotes: 1 })) : [],
+            options: data.options ? data.options.map(o => ({ key: o.key, text: o.text, upvotes: 0 })) : [],
           }
         ],
         createdAt: new Date().toISOString(),
@@ -806,7 +814,7 @@ export const ApiService = {
               text: `${o.key}) ${o.text.trim()}`,
               type: 'option',
               timestamp: new Date().toISOString(),
-              upvotes: 1,
+              upvotes: 0,
             });
           }
         });
@@ -877,7 +885,7 @@ export const ApiService = {
               text: `${o.key}) ${o.text.trim()}`,
               type: 'option',
               timestamp: new Date().toISOString(),
-              upvotes: 1,
+              upvotes: 0,
             });
 
             const exOpt = existing!.options.find((opt) => opt.key === o.key);
@@ -895,7 +903,7 @@ export const ApiService = {
                 text: o.text.trim(),
                 suggestedBy: data.author,
                 suggestedByUid: data.authorUid,
-                upvotes: 1,
+                upvotes: 0,
               });
             }
           });
@@ -943,7 +951,7 @@ export const ApiService = {
                   text: o.text.trim(),
                   suggestedBy: data.author,
                   suggestedByUid: data.authorUid,
-                  upvotes: 1,
+                  upvotes: 0,
                 }))
             : [],
           claimedAnswer: data.claimedAnswer,
@@ -964,7 +972,7 @@ export const ApiService = {
               discipline: data.discipline,
               topic: data.topic,
               claimedAnswer: data.claimedAnswer,
-              options: data.options ? data.options.map(o => ({ key: o.key, text: o.text, upvotes: 1 })) : [],
+              options: data.options ? data.options.map(o => ({ key: o.key, text: o.text, upvotes: 0 })) : [],
             }
           ],
           createdAt: new Date().toISOString(),
@@ -982,7 +990,7 @@ export const ApiService = {
                 text: `${o.key}) ${o.text.trim()}`,
                 type: 'option',
                 timestamp: new Date().toISOString(),
-                upvotes: 1,
+                upvotes: 0,
               });
             }
           });
@@ -1038,7 +1046,7 @@ export const ApiService = {
       discipline: data.discipline !== undefined ? data.discipline : q.discipline,
       topic: data.topic !== undefined ? data.topic : q.topic,
       claimedAnswer: data.claimedAnswer !== undefined ? data.claimedAnswer : q.claimedAnswer,
-      options: data.options ? data.options.map(o => ({ key: o.key, text: o.text, upvotes: 1 })) : [...q.options],
+      options: data.options ? data.options.map(o => ({ key: o.key, text: o.text, upvotes: 0 })) : [...q.options],
       explanation: q.reconstruction?.explanation,
     };
 
@@ -1067,7 +1075,7 @@ export const ApiService = {
           text: cleanStem,
           type: 'stem',
           timestamp: new Date().toISOString(),
-          upvotes: 1,
+          upvotes: 0,
         });
       }
     }
@@ -2452,7 +2460,12 @@ export const ApiService = {
     return [];
   },
 
-  async commentPastQuestion(questionId: string, author: string, text: string): Promise<any> {
+  async commentPastQuestion(
+    questionId: string,
+    author: string,
+    text: string,
+    userMeta?: { uid?: string; email?: string; ownershipToken?: string; parentId?: string }
+  ): Promise<any> {
     const apiBase = getCustomApiUrl() || '';
     
     // 1. Try local server
@@ -2460,7 +2473,14 @@ export const ApiService = {
       const res = await fetch(`${apiBase}/api/past-exams/${encodeURIComponent(questionId)}/comment`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ author, text }),
+        body: JSON.stringify({
+          author,
+          text,
+          authorUid: userMeta?.uid,
+          authorEmail: userMeta?.email,
+          ownershipToken: userMeta?.ownershipToken,
+          parentId: userMeta?.parentId,
+        }),
       });
       if (res.ok) {
         return await res.json();
@@ -2474,6 +2494,10 @@ export const ApiService = {
       const commentObj = {
         id: `c-${Date.now()}-${Math.random().toString(36).substring(2, 6)}`,
         author: author || 'Tıp Öğrencisi',
+        authorUid: userMeta?.uid,
+        authorEmail: userMeta?.email,
+        ownershipToken: userMeta?.ownershipToken,
+        ...(userMeta?.parentId ? { parentId: userMeta.parentId } : {}),
         text: text.trim(),
         createdAt: new Date().toISOString(),
         upvotes: 0
@@ -2499,7 +2523,86 @@ export const ApiService = {
     }
   },
 
-  async reportPastQuestion(questionId: string, reason: string, details?: string, reportedBy?: string, reporter?: { email?: string | null; uid?: string | null }): Promise<any> {
+  async editPastComment(
+    questionId: string,
+    commentId: string,
+    text: string,
+    userAuth?: { uid?: string; email?: string; author?: string; ownershipToken?: string; adminEmail?: string }
+  ): Promise<{ success: boolean; message?: string; comment?: any }> {
+    const apiBase = getCustomApiUrl() || '';
+    const headers: Record<string, string> = { 'Content-Type': 'application/json' };
+    if (userAuth?.adminEmail) headers['x-admin-email'] = userAuth.adminEmail;
+    if (userAuth?.uid) headers['x-user-uid'] = userAuth.uid;
+    if (userAuth?.email) headers['x-user-email'] = userAuth.email;
+    if (userAuth?.author) headers['x-user-name'] = userAuth.author;
+    if (userAuth?.ownershipToken) headers['x-ownership-token'] = userAuth.ownershipToken;
+
+    try {
+      const res = await fetch(`${apiBase}/api/past-exams/${encodeURIComponent(questionId)}/comments/${encodeURIComponent(commentId)}`, {
+        method: 'PUT',
+        headers,
+        body: JSON.stringify({
+          text,
+          authorUid: userAuth?.uid,
+          authorEmail: userAuth?.email,
+          author: userAuth?.author,
+          ownershipToken: userAuth?.ownershipToken,
+        }),
+      });
+      if (res.ok) {
+        const data = await res.json();
+        // Bulutta da güncelle
+        await SupabaseDbService.updatePastQuestionComment(questionId, commentId, text).catch(() => {});
+        return { success: true, message: data.message || 'Yorum güncellendi.', comment: data.comment };
+      }
+      const errData = await res.json().catch(() => ({}));
+      return { success: false, message: errData.error || 'Yorum güncellenemedi.' };
+    } catch (e: any) {
+      // Fallback doğrudan Supabase
+      const sbRes = await SupabaseDbService.updatePastQuestionComment(questionId, commentId, text);
+      return { success: sbRes.success, message: sbRes.success ? 'Yorum güncellendi.' : (sbRes.error || e.message) };
+    }
+  },
+
+  async deletePastComment(
+    questionId: string,
+    commentId: string,
+    userAuth?: { uid?: string; email?: string; author?: string; ownershipToken?: string; adminEmail?: string }
+  ): Promise<{ success: boolean; message?: string }> {
+    const apiBase = getCustomApiUrl() || '';
+    const headers: Record<string, string> = { 'Content-Type': 'application/json' };
+    if (userAuth?.adminEmail) headers['x-admin-email'] = userAuth.adminEmail;
+    if (userAuth?.uid) headers['x-user-uid'] = userAuth.uid;
+    if (userAuth?.email) headers['x-user-email'] = userAuth.email;
+    if (userAuth?.author) headers['x-user-name'] = userAuth.author;
+    if (userAuth?.ownershipToken) headers['x-ownership-token'] = userAuth.ownershipToken;
+
+    try {
+      const res = await fetch(`${apiBase}/api/past-exams/${encodeURIComponent(questionId)}/comments/${encodeURIComponent(commentId)}`, {
+        method: 'DELETE',
+        headers,
+        body: JSON.stringify({
+          authorUid: userAuth?.uid,
+          authorEmail: userAuth?.email,
+          author: userAuth?.author,
+          ownershipToken: userAuth?.ownershipToken,
+        }),
+      });
+      if (res.ok) {
+        const data = await res.json();
+        // Supabase doğrudan silme
+        await SupabaseDbService.deletePastQuestionComment(questionId, commentId).catch(() => {});
+        return { success: true, message: data.message || 'Yorum silindi.' };
+      }
+      const errData = await res.json().catch(() => ({}));
+      return { success: false, message: errData.error || 'Yorum silinemedi.' };
+    } catch (e: any) {
+      const sbRes = await SupabaseDbService.deletePastQuestionComment(questionId, commentId);
+      return { success: sbRes.success, message: sbRes.success ? 'Yorum silindi.' : (sbRes.error || e.message) };
+    }
+  },
+
+  async reportPastQuestion(questionId: string, reason: string, details?: string, reportedBy?: string, reporter?: { email?: string | null; uid?: string | null; ownershipToken?: string }): Promise<any> {
     const apiBase = getCustomApiUrl() || '';
     const nowIso = new Date().toISOString();
     const reportObj = {
@@ -2522,9 +2625,9 @@ export const ApiService = {
           reason: reportObj.reason,
           details: reportObj.details,
           reportedBy: reportObj.reportedBy,
-          // Soru güncellenince bildirene e-posta için; sunucuda yalnız yerel kuyrukta tutulur
           reporterEmail: reporter?.email || undefined,
           reporterUid: reporter?.uid || undefined,
+          ownershipToken: reporter?.ownershipToken || undefined,
         }),
       });
       if (res.ok) {
@@ -2564,6 +2667,24 @@ export const ApiService = {
       }
     } catch (_) {}
 
+    // Çevrimdışıysa kuyruğa al
+    if (typeof navigator !== 'undefined' && !navigator.onLine) {
+      offlineDatabaseService.queueAction({
+        type: 'report',
+        endpoint: `/api/past-exams/${encodeURIComponent(questionId)}/report`,
+        method: 'POST',
+        payload: {
+          id: reportObj.id,
+          reason: reportObj.reason,
+          details: reportObj.details,
+          reportedBy: reportObj.reportedBy,
+          reporterEmail: reporter?.email || undefined,
+          reporterUid: reporter?.uid || undefined,
+          ownershipToken: reporter?.ownershipToken || undefined,
+        },
+      }).catch(() => {});
+    }
+
     // 4. Firestore Dual Cloud Fallback (Firebase Spark/Cloud kesintisiz yedek)
     if (FIREBASE_DB_ENABLED) try {
       await addDoc(collection(db, 'past_question_reports'), reportObj);
@@ -2573,6 +2694,102 @@ export const ApiService = {
 
     return { success: true, report: reportObj };
   },
+
+  async editPastReport(
+    questionId: string,
+    reportId: string,
+    updates: { reason: string; details?: string },
+    userAuth?: { uid?: string; email?: string; reportedBy?: string; ownershipToken?: string; adminEmail?: string }
+  ): Promise<{ success: boolean; message?: string; report?: any }> {
+    const apiBase = getCustomApiUrl() || '';
+    const headers: Record<string, string> = { 'Content-Type': 'application/json' };
+    if (userAuth?.adminEmail) headers['x-admin-email'] = userAuth.adminEmail;
+    if (userAuth?.uid) headers['x-user-uid'] = userAuth.uid;
+    if (userAuth?.email) headers['x-user-email'] = userAuth.email;
+    if (userAuth?.reportedBy) headers['x-user-name'] = userAuth.reportedBy;
+    if (userAuth?.ownershipToken) headers['x-ownership-token'] = userAuth.ownershipToken;
+
+    const url = questionId 
+      ? `${apiBase}/api/past-exams/${encodeURIComponent(questionId)}/reports/${encodeURIComponent(reportId)}`
+      : `${apiBase}/api/reports/${encodeURIComponent(reportId)}`;
+
+    try {
+      const res = await fetch(url, {
+        method: 'PUT',
+        headers,
+        body: JSON.stringify({
+          reason: updates.reason,
+          details: updates.details,
+          reporterUid: userAuth?.uid,
+          reporterEmail: userAuth?.email,
+          reportedBy: userAuth?.reportedBy,
+          ownershipToken: userAuth?.ownershipToken,
+        }),
+      });
+      if (res.ok) {
+        const data = await res.json();
+        if (questionId) {
+          await SupabaseDbService.updatePastQuestionReport(questionId, reportId, updates).catch(() => {});
+        }
+        return { success: true, message: data.message || 'Bildirim güncellendi.', report: data.report };
+      }
+      const errData = await res.json().catch(() => ({}));
+      return { success: false, message: errData.error || 'Bildirim güncellenemedi.' };
+    } catch (e: any) {
+      if (questionId) {
+        const sbRes = await SupabaseDbService.updatePastQuestionReport(questionId, reportId, updates);
+        return { success: sbRes.success, message: sbRes.success ? 'Bildirim güncellendi.' : (sbRes.error || e.message) };
+      }
+      return { success: false, message: e.message || 'Bağlantı hatası' };
+    }
+  },
+
+  async deletePastReport(
+    questionId: string,
+    reportId: string,
+    userAuth?: { uid?: string; email?: string; reportedBy?: string; ownershipToken?: string; adminEmail?: string }
+  ): Promise<{ success: boolean; message?: string }> {
+    const apiBase = getCustomApiUrl() || '';
+    const headers: Record<string, string> = { 'Content-Type': 'application/json' };
+    if (userAuth?.adminEmail) headers['x-admin-email'] = userAuth.adminEmail;
+    if (userAuth?.uid) headers['x-user-uid'] = userAuth.uid;
+    if (userAuth?.email) headers['x-user-email'] = userAuth.email;
+    if (userAuth?.reportedBy) headers['x-user-name'] = userAuth.reportedBy;
+    if (userAuth?.ownershipToken) headers['x-ownership-token'] = userAuth.ownershipToken;
+
+    const url = questionId 
+      ? `${apiBase}/api/past-exams/${encodeURIComponent(questionId)}/reports/${encodeURIComponent(reportId)}`
+      : `${apiBase}/api/reports/${encodeURIComponent(reportId)}`;
+
+    try {
+      const res = await fetch(url, {
+        method: 'DELETE',
+        headers,
+        body: JSON.stringify({
+          reporterUid: userAuth?.uid,
+          reporterEmail: userAuth?.email,
+          reportedBy: userAuth?.reportedBy,
+          ownershipToken: userAuth?.ownershipToken,
+        }),
+      });
+      if (res.ok) {
+        const data = await res.json();
+        if (questionId) {
+          await SupabaseDbService.deletePastQuestionReport(questionId, reportId).catch(() => {});
+        }
+        return { success: true, message: data.message || 'Bildirim kalıcı olarak silindi.' };
+      }
+      const errData = await res.json().catch(() => ({}));
+      return { success: false, message: errData.error || 'Bildirim silinemedi.' };
+    } catch (e: any) {
+      if (questionId) {
+        const sbRes = await SupabaseDbService.deletePastQuestionReport(questionId, reportId);
+        return { success: sbRes.success, message: sbRes.success ? 'Bildirim kalıcı olarak silindi.' : (sbRes.error || e.message) };
+      }
+      return { success: false, message: e.message || 'Bağlantı hatası' };
+    }
+  },
+
 
   async upvotePastQuestion(questionId: string, userId?: string): Promise<{ success: boolean; upvotes: number; downvotes: number; likedBy?: string[]; dislikedBy?: string[] }> {
     try {
@@ -2592,7 +2809,25 @@ export const ApiService = {
         };
       }
     } catch (e) {}
-    return { success: false, upvotes: 0, downvotes: 0 };
+
+    // Çevrimdışı Mod Fallback: Eylemi arka plan kuyruğuna al ve yerel hafızada uygula
+    offlineDatabaseService.queueAction({
+      type: 'vote',
+      endpoint: `/api/past-exams/${encodeURIComponent(questionId)}/upvote`,
+      method: 'POST',
+      payload: { userId },
+    }).catch(() => {});
+
+    try {
+      const q = await pastQuestionsCache.getCachedQuestionById(questionId);
+      if (q) {
+        q.upvotes = (q.upvotes || 0) + 1;
+        await pastQuestionsCache.saveQuestion(q);
+        return { success: true, upvotes: q.upvotes, downvotes: (q as any).downvotes || 0 };
+      }
+    } catch (_) {}
+
+    return { success: true, upvotes: 1, downvotes: 0 };
   },
 
   async downvotePastQuestion(questionId: string, userId?: string): Promise<{ success: boolean; upvotes: number; downvotes: number; likedBy?: string[]; dislikedBy?: string[] }> {
@@ -2613,7 +2848,91 @@ export const ApiService = {
         };
       }
     } catch (e) {}
-    return { success: false, upvotes: 0, downvotes: 0 };
+
+    offlineDatabaseService.queueAction({
+      type: 'vote',
+      endpoint: `/api/past-exams/${encodeURIComponent(questionId)}/downvote`,
+      method: 'POST',
+      payload: { userId },
+    }).catch(() => {});
+
+    return { success: true, upvotes: 0, downvotes: 1 };
+  },
+
+  async reportTerm(termId: string, reason: string, details?: string, reportedBy?: string): Promise<any> {
+    const payload = {
+      termId,
+      reason: (reason || 'Hata Bildirimi').trim(),
+      details: (details || '').trim(),
+      reportedBy: reportedBy || 'Tıp Öğrencisi',
+      timestamp: new Date().toISOString()
+    };
+
+    if (typeof navigator !== 'undefined' && !navigator.onLine) {
+      await offlineDatabaseService.queueAction({
+        type: 'report',
+        endpoint: `/api/terms/${encodeURIComponent(termId)}/report`,
+        method: 'POST',
+        payload
+      });
+      return { success: true, queued: true };
+    }
+
+    try {
+      const res = await fetch(`/api/terms/${encodeURIComponent(termId)}/report`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+      if (res.ok) return await res.json();
+    } catch (e) {
+      await offlineDatabaseService.queueAction({
+        type: 'report',
+        endpoint: `/api/terms/${encodeURIComponent(termId)}/report`,
+        method: 'POST',
+        payload
+      });
+      return { success: true, queued: true };
+    }
+    return { success: true };
+  },
+
+  async reportFlashcard(cardId: string, reason: string, details?: string, reportedBy?: string): Promise<any> {
+    const payload = {
+      cardId,
+      reason: (reason || 'Hata Bildirimi').trim(),
+      details: (details || '').trim(),
+      reportedBy: reportedBy || 'Tıp Öğrencisi',
+      timestamp: new Date().toISOString()
+    };
+
+    if (typeof navigator !== 'undefined' && !navigator.onLine) {
+      await offlineDatabaseService.queueAction({
+        type: 'report',
+        endpoint: `/api/cards/${encodeURIComponent(cardId)}/report`,
+        method: 'POST',
+        payload
+      });
+      return { success: true, queued: true };
+    }
+
+    try {
+      const res = await fetch(`/api/cards/${encodeURIComponent(cardId)}/report`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+      if (res.ok) return await res.json();
+    } catch (e) {
+      await offlineDatabaseService.queueAction({
+        type: 'report',
+        endpoint: `/api/cards/${encodeURIComponent(cardId)}/report`,
+        method: 'POST',
+        payload
+      });
+      return { success: true, queued: true };
+    }
+    return { success: true };
   },
 
   // AI: Generate similar exam question grounded in matched lecture note
@@ -2857,6 +3176,15 @@ export const ApiService = {
       });
     } catch (_) {}
 
+    if (typeof navigator !== 'undefined' && !navigator.onLine) {
+      offlineDatabaseService.queueAction({
+        type: 'report',
+        endpoint: `/api/ornek-sorular/${encodeURIComponent(questionId)}/report`,
+        method: 'POST',
+        payload: { reason: reportObj.reason, details: reportObj.details, reportedBy: reportObj.reportedBy },
+      }).catch(() => {});
+    }
+
     return { success: true, report: reportObj };
   },
 
@@ -2913,7 +3241,118 @@ export const ApiService = {
       });
     } catch (_) {}
 
+    if (typeof navigator !== 'undefined' && !navigator.onLine) {
+      offlineDatabaseService.queueAction({
+        type: 'report',
+        endpoint: `/api/questions/${encodeURIComponent(questionId)}/report`,
+        method: 'POST',
+        payload: { reason: reportObj.reason, details: reportObj.details, reportedBy: reportObj.reportedBy },
+      }).catch(() => {});
+    }
+
     return { success: true, report: reportObj };
+  },
+
+  async editPoolQuestionReport(
+    questionId: string,
+    reportId: string,
+    updates: { reason: string; details?: string },
+    userAuth?: { uid?: string; email?: string; reportedBy?: string; ownershipToken?: string; adminEmail?: string }
+  ): Promise<{ success: boolean; message?: string; report?: any }> {
+    const apiBase = getCustomApiUrl() || '';
+    const headers: Record<string, string> = { 'Content-Type': 'application/json' };
+    if (userAuth?.adminEmail) headers['x-admin-email'] = userAuth.adminEmail;
+    if (userAuth?.uid) headers['x-user-uid'] = userAuth.uid;
+    if (userAuth?.email) headers['x-user-email'] = userAuth.email;
+    if (userAuth?.reportedBy) headers['x-user-name'] = userAuth.reportedBy;
+    if (userAuth?.ownershipToken) headers['x-ownership-token'] = userAuth.ownershipToken;
+
+    try {
+      const res = await safeJsonFetch<{ success: boolean; message?: string; report?: any; error?: string }>(
+        `${apiBase}/api/questions/${encodeURIComponent(questionId)}/reports/${encodeURIComponent(reportId)}`,
+        { method: 'PUT', headers, body: JSON.stringify(updates) }
+      );
+      if (res.ok && res.data?.success) {
+        return { success: true, message: res.data.message || 'Bildirim güncellendi.', report: res.data.report };
+      }
+      return { success: false, message: res.data?.error || res.error || 'Bildirim güncellenemedi.' };
+    } catch (e: any) {
+      return { success: false, message: e.message || 'Bağlantı hatası' };
+    }
+  },
+
+  async deletePoolQuestionReport(
+    questionId: string,
+    reportId: string,
+    userAuth?: { uid?: string; email?: string; reportedBy?: string; ownershipToken?: string; adminEmail?: string }
+  ): Promise<{ success: boolean; message?: string }> {
+    const apiBase = getCustomApiUrl() || '';
+    const headers: Record<string, string> = { 'Content-Type': 'application/json' };
+    if (userAuth?.adminEmail) headers['x-admin-email'] = userAuth.adminEmail;
+    if (userAuth?.uid) headers['x-user-uid'] = userAuth.uid;
+    if (userAuth?.email) headers['x-user-email'] = userAuth.email;
+    if (userAuth?.reportedBy) headers['x-user-name'] = userAuth.reportedBy;
+    if (userAuth?.ownershipToken) headers['x-ownership-token'] = userAuth.ownershipToken;
+
+    try {
+      const res = await safeJsonFetch<{ success: boolean; message?: string; error?: string }>(
+        `${apiBase}/api/questions/${encodeURIComponent(questionId)}/reports/${encodeURIComponent(reportId)}`,
+        { method: 'DELETE', headers }
+      );
+      if (res.ok && res.data?.success) {
+        return { success: true, message: res.data.message || 'Bildirim kalıcı olarak silindi.' };
+      }
+      return { success: false, message: res.data?.error || res.error || 'Bildirim silinemedi.' };
+    } catch (e: any) {
+      return { success: false, message: e.message || 'Bağlantı hatası' };
+    }
+  },
+
+  async editLearnFeedback(
+    feedbackId: string,
+    updates: { field?: string; reason?: string },
+    userAuth?: { voterId?: string; adminEmail?: string }
+  ): Promise<{ success: boolean; message?: string; item?: any }> {
+    const apiBase = getCustomApiUrl() || '';
+    const headers: Record<string, string> = { 'Content-Type': 'application/json' };
+    if (userAuth?.adminEmail) headers['x-admin-email'] = userAuth.adminEmail;
+    if (userAuth?.voterId) headers['x-user-uid'] = userAuth.voterId;
+
+    try {
+      const res = await safeJsonFetch<{ success: boolean; item?: any; error?: string }>(
+        `${apiBase}/api/learn/feedback/${encodeURIComponent(feedbackId)}`,
+        { method: 'PUT', headers, body: JSON.stringify({ ...updates, voterId: userAuth?.voterId }) }
+      );
+      if (res.ok && res.data?.success) {
+        return { success: true, message: 'Öğrenme bildirimi güncellendi.', item: res.data.item };
+      }
+      return { success: false, message: res.data?.error || res.error || 'Güncellenemedi.' };
+    } catch (e: any) {
+      return { success: false, message: e.message || 'Bağlantı hatası' };
+    }
+  },
+
+  async deleteLearnFeedback(
+    feedbackId: string,
+    userAuth?: { voterId?: string; adminEmail?: string }
+  ): Promise<{ success: boolean; message?: string }> {
+    const apiBase = getCustomApiUrl() || '';
+    const headers: Record<string, string> = { 'Content-Type': 'application/json' };
+    if (userAuth?.adminEmail) headers['x-admin-email'] = userAuth.adminEmail;
+    if (userAuth?.voterId) headers['x-user-uid'] = userAuth.voterId;
+
+    try {
+      const res = await safeJsonFetch<{ success: boolean; message?: string; error?: string }>(
+        `${apiBase}/api/learn/feedback/${encodeURIComponent(feedbackId)}`,
+        { method: 'DELETE', headers, body: JSON.stringify({ voterId: userAuth?.voterId }) }
+      );
+      if (res.ok && res.data?.success) {
+        return { success: true, message: res.data.message || 'Öğrenme bildirimi kalıcı olarak silindi.' };
+      }
+      return { success: false, message: res.data?.error || res.error || 'Silinemedi.' };
+    } catch (e: any) {
+      return { success: false, message: e.message || 'Bağlantı hatası' };
+    }
   },
 
   async getAnswerVotes(questionId: string, voterUid: string): Promise<AnswerVotes> {
@@ -3994,6 +4433,37 @@ export const ApiService = {
       headers: { 'Content-Type': 'application/json', 'x-admin-email': adminEmail },
       body: JSON.stringify({ id }),
     });
+  },
+
+  async getPoolQuestionClusters(): Promise<any[]> {
+    const res = await safeJsonFetch<{ clusters: any[] }>('/api/pool-clusters');
+    return res.data?.clusters || [];
+  },
+
+  async contributeToPoolCluster(
+    clusterId: string,
+    studentName: string,
+    text: string,
+    studentUid?: string
+  ): Promise<{ success: boolean; contribution: any; cluster: any }> {
+    const res = await safeJsonFetch<{ success: boolean; contribution: any; cluster: any }>(
+      `/api/pool-clusters/${encodeURIComponent(clusterId)}/contribute`,
+      {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ studentName, text, studentUid }),
+      }
+    );
+    if (!res.ok || !res.data) throw new Error(res.error || 'Katkı eklenemedi.');
+    return res.data;
+  },
+
+  async runPoolQuestionClusterPipeline(): Promise<{ success: boolean; message: string }> {
+    const res = await safeJsonFetch<{ success: boolean; message: string }>('/api/pool-clusters/run-pipeline', {
+      method: 'POST',
+    });
+    if (!res.ok || !res.data) throw new Error(res.error || 'Otomasyon başlatılamadı.');
+    return res.data;
   },
 };
 

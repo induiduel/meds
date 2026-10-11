@@ -65,11 +65,61 @@ function writeJsonAtomic(filePath: string, data: any) {
   fs.renameSync(tempPath, filePath);
 }
 
+export function normalizeContributionType(rawType?: string, payload?: any): NotebookLMType {
+  if (!rawType) {
+    if (Array.isArray(payload)) {
+      if (payload.length > 0 && (payload[0].stem || payload[0].question || payload[0].options || payload[0].reconstruction)) {
+        return 'past_question_correction';
+      }
+      if (payload.length > 0 && payload[0].front && payload[0].back) return 'flashcards';
+      if (payload.length > 0 && payload[0].term && payload[0].definition) return 'glossary_terms';
+    }
+    if (typeof payload === 'object' && payload !== null) {
+      if (payload.questions || payload.corrections || payload.stem || payload.reconstruction) return 'past_question_correction';
+      if (payload.slides || payload.deckId || payload.deck) return 'interactive_deck';
+      if (payload.keyPoints || payload.highYieldPearls) return 'spot_pearls';
+      if (payload.terms || payload.thesaurus) return 'glossary_terms';
+      if (payload.cards) return 'flashcards';
+    }
+    return 'raw_json';
+  }
+
+  const t = String(rawType).toLowerCase().trim();
+  if (t.includes('question') || t.includes('soru') || t.startsWith('past_question')) return 'past_question_correction';
+  if (t.includes('deck') || t.includes('deste') || t.includes('slide') || t.includes('ogren')) return 'interactive_deck';
+  if (t.includes('spot') || t.includes('pearl') || t.includes('summary') || t.includes('ozet')) return 'spot_pearls';
+  if (t.includes('glossary') || t.includes('sozluk') || t.includes('term')) return 'glossary_terms';
+  if (t.includes('card') || t.includes('kart')) return 'flashcards';
+  if (t.includes('practice')) return 'practice_questions';
+  return 'raw_json';
+}
+
 /**
- * Get all NotebookLM contributions
+ * Get all NotebookLM contributions with auto-healing for missing snapshots
  */
 export function getAllNotebookLMContributions(): NotebookLMContribution[] {
   const list = readJsonSafe<NotebookLMContribution[]>(CONTRIBUTIONS_FILE, []);
+  let dirty = false;
+  list.forEach((item) => {
+    // Normalize type if needed
+    const normType = normalizeContributionType(item.type, item.proposedData);
+    if (item.type !== normType) {
+      item.type = normType;
+      dirty = true;
+    }
+    // Auto-heal snapshot if missing or null
+    if (!item.originalSnapshot) {
+      const { snapshot, targetId } = captureOriginalSnapshot(item.type, item.proposedData);
+      if (snapshot) {
+        item.originalSnapshot = snapshot;
+        if (targetId && !item.targetId) item.targetId = targetId;
+        dirty = true;
+      }
+    }
+  });
+  if (dirty) {
+    saveAllContributions(list);
+  }
   return list.sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime());
 }
 
@@ -84,27 +134,66 @@ function saveAllContributions(list: NotebookLMContribution[]) {
 /**
  * Finds snapshot of original data from canonical DB for diffing & safe rollback
  */
-function captureOriginalSnapshot(type: NotebookLMType, proposedData: any): { targetId?: string; snapshot?: any } {
+function captureOriginalSnapshot(rawType: any, proposedData: any): { targetId?: string; snapshot?: any } {
   try {
+    const type = normalizeContributionType(rawType, proposedData);
     if (type === 'past_question_correction') {
-      const qItem = Array.isArray(proposedData) ? proposedData[0] : (proposedData.questions?.[0] || proposedData);
-      const qid = qItem?.id;
+      const qList = Array.isArray(proposedData)
+        ? proposedData
+        : Array.isArray(proposedData?.questions)
+          ? proposedData.questions
+          : [proposedData];
+
       const questions: any[] = readJsonSafe(PAST_QUESTIONS_FILE, []);
-      if (qid) {
-        const found = questions.find((q) => String(q.id) === String(qid));
-        if (found) return { targetId: String(qid), snapshot: found };
-      }
-      if (qItem?.questionNumber && qItem?.kurul) {
-        const found = questions.find(
-          (q) => String(q.kurul) === String(qItem.kurul) && Number(q.questionNumber) === Number(qItem.questionNumber)
-        );
-        if (found) return { targetId: String(found.id), snapshot: found };
-      }
+      const questionMap = new Map<string, any>();
+      questions.forEach((q) => {
+        if (q.id) {
+          questionMap.set(String(q.id).toLowerCase(), q);
+          questionMap.set(String(q.id).replace(/^q:/i, '').toLowerCase(), q);
+        }
+      });
+
+      const snapshots: Record<string, any> = {};
+      let firstTargetId: string | undefined;
+
+      qList.forEach((qItem: any) => {
+        const rawQid = qItem?.id ? String(qItem.id).trim() : '';
+        const cleanQid = rawQid.replace(/^q:/i, '').trim();
+
+        let found = cleanQid ? (questionMap.get(cleanQid.toLowerCase()) ?? (rawQid ? questionMap.get(rawQid.toLowerCase()) : undefined)) : undefined;
+
+        // Fallback to questionNumber and kurul ONLY IF no question ID was provided
+        if (!found && !rawQid && !cleanQid && qItem?.questionNumber && qItem?.kurul) {
+          found = questions.find(
+            (q) => String(q.kurul) === String(qItem.kurul) && Number(q.questionNumber) === Number(qItem.questionNumber)
+          );
+        }
+
+        if (found) {
+          if (!firstTargetId) firstTargetId = String(found.id);
+          const key = cleanQid || rawQid || String(found.id);
+          snapshots[key] = found;
+          if (cleanQid && cleanQid !== key) snapshots[cleanQid] = found;
+          if (found.id && String(found.id) !== key) snapshots[String(found.id)] = found;
+        }
+      });
+
+      return {
+        targetId: firstTargetId,
+        snapshot: qList.length === 1 && firstTargetId && snapshots[firstTargetId] ? snapshots[firstTargetId] : snapshots,
+      };
     } else if (type === 'spot_pearls') {
       const sItem = Array.isArray(proposedData) ? proposedData[0] : proposedData;
-      const lectureId = sItem.lectureId || sItem.id;
+      const lectureId = sItem?.lectureId || sItem?.id;
       const summaries: any[] = readJsonSafe(SUMMARIES_CATALOG_FILE, []);
       const found = summaries.find((s) => String(s.id) === String(lectureId));
+      if (found) return { targetId: String(found.id), snapshot: found };
+    } else if (type === 'interactive_deck') {
+      const deck = proposedData?.deck || proposedData;
+      const deckId = deck?.id || deck?.deckId;
+      const DECKS_FILE = path.resolve(SRC_DATA_DIR, 'interactive_learning_decks.json');
+      const decks: any[] = readJsonSafe(DECKS_FILE, []);
+      const found = decks.find((d) => d.id === deckId);
       if (found) return { targetId: String(found.id), snapshot: found };
     }
   } catch (err) {
@@ -123,7 +212,7 @@ export function stageNotebookLMInput(
 ): { success: boolean; contribution?: NotebookLMContribution; message: string } {
   try {
     const { type: detectedType, payload } = parseNotebookLMPayload(rawInput);
-    const type: NotebookLMType = (detectedType as NotebookLMType) || 'raw_json';
+    const type: NotebookLMType = normalizeContributionType(detectedType, payload);
 
     let count = 1;
     if (Array.isArray(payload)) {

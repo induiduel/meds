@@ -20,6 +20,7 @@ import {
   Compass,
   Music,
   Database,
+  Settings2,
 } from 'lucide-react';
 import type { AppTab } from './Header';
 import { pathFor, linkClick } from '../router';
@@ -68,6 +69,10 @@ const MORE_GROUPS: { label: string; items: { id: AppTab; label: string; hint: st
       { id: 'leaderboard', label: 'Sıralama', hint: 'En çok katkı verenler', icon: Trophy },
       { id: 'music', label: 'Müzik', hint: 'Çalışırken dinle', icon: Music },
     ],
+  },
+  {
+    label: 'Hesap',
+    items: [{ id: 'settings', label: 'Profil ve ayarlar', hint: 'Tema, palet, yoğunluk, fotoğraf', icon: Settings2 }],
   },
 ];
 

@@ -286,12 +286,28 @@ export function normalizeDonem3Discipline(raw?: string): string | null {
 }
 
 /**
+ * Kurul kodlarını (örn. TIP310, TIP320 vb.) standart donem3-kurul formatına normalize eder.
+ */
+export function normalizeCommitteeId(committeeId?: string): string {
+  if (!committeeId) return '';
+  const cid = committeeId.toLowerCase().trim();
+  if (cid.startsWith('donem3')) return cid;
+  if (/^tip\s*310/i.test(cid)) return 'donem3-kurul1';
+  if (/^tip\s*320/i.test(cid)) return 'donem3-kurul2';
+  if (/^tip\s*330/i.test(cid)) return 'donem3-kurul3';
+  if (/^tip\s*340/i.test(cid) || /dolaşım ve solunum/i.test(cid)) return 'donem3-kurul4';
+  if (/^tip\s*350/i.test(cid)) return 'donem3-kurul5';
+  if (/^tip\s*360/i.test(cid)) return 'donem3-kurul6';
+  return committeeId;
+}
+
+/**
  * Sorunun Dönem 3'e ait olup olmadığını doğrular.
- * Hem kurul kimliğinin donem3 ile başlamasını hem de dersin Dönem 3 müfredatında yer almasını kontrol eder.
+ * Hem kurul kimliğinin donem3 ile başlamasını hem de TIP 310-360 kodlarını kontrol eder.
  */
 export function isDonem3Question(q: { committeeId?: string; discipline?: string }): boolean {
   if (!q) return false;
-  const cid = (q.committeeId || '').toLowerCase().trim();
+  const cid = normalizeCommitteeId(q.committeeId).toLowerCase().trim();
   return cid.startsWith('donem3');
 }
 
