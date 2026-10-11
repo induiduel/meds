@@ -201,6 +201,19 @@ def sira_isle(zorla_is_id: str | None = None):
         yaz(KAYIT, kayit)
 
 
+def yarim_kalanlari_geri_al():
+    """Konteyner yeniden başlarken 'isleniyor'da kalan iş (tek süreç, eşzamanlı iş yok) bir daha hiç seçilmezdi:
+    'bekliyor'a döndür. Taslak klasöründeki Claude oturumu (oturum.json) isle() tarafından sürdürülür."""
+    kuyruk = oku(KUYRUK, [])
+    geri = [k for k in kuyruk if k["durum"] == "isleniyor"]
+    for k in geri:
+        k["durum"], k["sonra"] = "bekliyor", 0
+        k["son_mesaj"] = "yeniden başlatmada yarım kaldı; kaldığı yerden sürdürülecek"
+    if geri:
+        yaz(KUYRUK, kuyruk)
+        log("yarım kalan iş kuyruğa geri alındı: " + ", ".join(k["is_id"] for k in geri))
+
+
 def durum():
     kuyruk = oku(KUYRUK, [])
     kayit = oku(KAYIT, {})
@@ -242,6 +255,7 @@ def main():
     if a.bir_kez:
         return tur(not a.taramasiz)
     log(f"ders işçisi başladı: kök={IZLENEN_KOK} aralık={ARALIK_SN}s günlük={GUNLUK_SINIR}")
+    yarim_kalanlari_geri_al()
     try:
         from api import baslat  # noqa: E402  (onay ekranı için iç API; yalnız compose iç ağı)
         baslat(int(os.environ.get("MEDS_ISCI_API_PORT", "8095")))
