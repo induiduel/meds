@@ -66,7 +66,7 @@ const keep = new Set(reachable);
 for (const { f } of ledgers.slice(0, KEEP_BUILDS)) {
   for (const n of fs.readFileSync(path.join(LEDGER, f), 'utf8').split('\n')) if (n) keep.add(n);
 }
-if (APPLY) for (const { f } of ledgers.slice(KEEP_BUILDS)) fs.rmSync(path.join(LEDGER, f));
+if (APPLY) for (const { f } of ledgers.slice(KEEP_BUILDS)) fs.rmSync(path.join(LEDGER, f), { force: true });
 
 const cutoff = Date.now() - KEEP_HOURS * 3600_000;
 let delCount = 0;
@@ -82,7 +82,7 @@ for (const name of all) {
   }
   delCount++;
   delBytes += st.size;
-  if (APPLY) fs.rmSync(p);
+  if (APPLY) fs.rmSync(p, { force: true });
 }
 
 const mb = (b) => (b / 1e6).toFixed(1) + 'MB';

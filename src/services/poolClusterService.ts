@@ -260,45 +260,140 @@ function buildIdf(items: PoolItem[]): Idf {
  * uzun bir parçanın içinde tamamen geçiyorsa yüksek çıkar. Tek ortak terim tek başına tam puan vermez
  * (güven = ortak terim sayısı / 2, en çok 1).
  */
-function weightedOverlap(a: string[], b: string[], w: Map<string, number>): number {
-  if (!a.length || !b.length) return 0;
-  const sa = new Set(a);
-  const sb = new Set(b);
-  const sum = (set: Set<string>) => [...set].reduce((x, t) => x + (w.get(t) || 1), 0);
-  let inter = 0;
-  let n = 0;
-  for (const t of sa) if (sb.has(t)) { inter += w.get(t) || 1; n++; }
-  if (!n) return 0;
-  return (inter / Math.min(sum(sa), sum(sb))) * Math.min(1, n / 2);
-}
+// ---------- optimize edilmiş benzerlik ve indeksleme
 
 const optKey = (t: string) => fold(t).split(' ').filter((x) => x.length >= 3 && !STOP.has(x));
-function optionOverlap(a: PoolOption[], b: PoolOption[]): number {
+
+interface FastItemMeta {
+  termSet: Set<string>;
+  stemSet: Set<string>;
+  optKeys: string[][];
+  discSet: Set<string>;
+  konuFolded?: string;
+}
+
+const itemMetaCache = new WeakMap<PoolItem, FastItemMeta>();
+
+function getFastItemMeta(it: PoolItem): FastItemMeta {
+  let m = itemMetaCache.get(it);
+  if (!m) {
+    m = {
+      termSet: new Set(it.terms),
+      stemSet: new Set(it.stems),
+      optKeys: it.options.map((o) => optKey(o.text)),
+      discSet: new Set(it.disciplines),
+      konuFolded: it.konu ? fold(it.konu) : undefined,
+    };
+    itemMetaCache.set(it, m);
+  }
+  return m;
+}
+
+function getSetWeightSum(set: Set<string>, w: Map<string, number>): number {
+  let sum = 0;
+  for (const t of set) sum += w.get(t) || 1;
+  return sum;
+}
+
+/**
+ * Ağırlıklı kapsama: ortak terimlerin ağırlığı / küçük kümenin ağırlığı.
+ * Sıfır geçici dizi/Set tahsisiyle yüksek hızlı kümeleme.
+ */
+function weightedOverlap(
+  a: string[],
+  b: string[],
+  w: Map<string, number>,
+  setA?: Set<string>,
+  setB?: Set<string>,
+  sumA?: number,
+  sumB?: number
+): number {
+  const sa = setA || new Set(a);
+  const sb = setB || new Set(b);
+  if (sa.size === 0 || sb.size === 0) return 0;
+  const [small, large] = sa.size <= sb.size ? [sa, sb] : [sb, sa];
+  let inter = 0;
+  let n = 0;
+  for (const t of small) {
+    if (large.has(t)) {
+      inter += w.get(t) || 1;
+      n++;
+    }
+  }
+  if (!n) return 0;
+  const sA = sumA !== undefined ? sumA : getSetWeightSum(sa, w);
+  const sB = sumB !== undefined ? sumB : getSetWeightSum(sb, w);
+  const minSum = Math.min(sA, sB);
+  if (minSum <= 0) return 0;
+  return (inter / minSum) * Math.min(1, n / 2);
+}
+
+function optionOverlap(a: PoolOption[], b: PoolOption[], aKeys?: string[][], bKeys?: string[][]): number {
   if (!a.length || !b.length) return 0;
+  const ak = aKeys || a.map((x) => optKey(x.text));
+  const bk = bKeys || b.map((y) => optKey(y.text));
   let hit = 0;
-  for (const x of a) {
-    const kx = optKey(x.text);
-    if (b.some((y) => optKey(y.text).some((t) => kx.some((s) => sameTerm(s, t))))) hit++;
+  for (let i = 0; i < ak.length; i++) {
+    const kx = ak[i];
+    if (!kx.length) continue;
+    let found = false;
+    for (let j = 0; j < bk.length; j++) {
+      const ky = bk[j];
+      for (let x = 0; x < kx.length; x++) {
+        for (let y = 0; y < ky.length; y++) {
+          if (sameTerm(kx[x], ky[y])) {
+            found = true;
+            break;
+          }
+        }
+        if (found) break;
+      }
+      if (found) break;
+    }
+    if (found) hit++;
   }
   return hit / Math.min(a.length, b.length);
 }
 
-const discCompatible = (a: string[], b: string[]) => !a.length || !b.length || a.some((x) => b.includes(x));
+const discCompatible = (a: string[], b: string[], aSet?: Set<string>, bSet?: Set<string>) => {
+  if (!a.length || !b.length) return true;
+  const sa = aSet || new Set(a);
+  const sb = bSet || new Set(b);
+  const [small, large] = sa.size <= sb.size ? [sa, sb] : [sb, sa];
+  for (const x of small) {
+    if (large.has(x)) return true;
+  }
+  return false;
+};
 
-export function similarity(a: PoolItem, b: PoolItem, idf: Idf): number {
+export function similarity(
+  a: PoolItem,
+  b: PoolItem,
+  idf: Idf,
+  termSumA?: number,
+  termSumB?: number,
+  stemSumA?: number,
+  stemSumB?: number
+): number {
   if (a.committeeId !== b.committeeId) return 0;
   if (a.number && b.number && a.number !== b.number) return 0;
-  if (!discCompatible(a.disciplines, b.disciplines)) return 0;
-  const term = weightedOverlap(a.terms, b.terms, idf.terms);
-  const lex = weightedOverlap(a.stems, b.stems, idf.stems);
-  const opt = optionOverlap(a.options, b.options);
+
+  const ma = getFastItemMeta(a);
+  const mb = getFastItemMeta(b);
+
+  if (!discCompatible(a.disciplines, b.disciplines, ma.discSet, mb.discSet)) return 0;
+
+  const term = weightedOverlap(a.terms, b.terms, idf.terms, ma.termSet, mb.termSet, termSumA, termSumB);
+  const lex = weightedOverlap(a.stems, b.stems, idf.stems, ma.stemSet, mb.stemSet, stemSumA, stemSumB);
+  const opt = optionOverlap(a.options, b.options, ma.optKeys, mb.optKeys);
+
   // Sözlük terimi ile içerik kökü aynı sinyalin iki ölçümü: güçlüsü esas, zayıfı destek. Sözlükte olmayan
   // terimler (ilaç, boya adları) kökler üzerinden yine yakalanır.
   const content = 0.7 * Math.max(term, lex) + 0.3 * Math.min(term, lex);
   let s = a.options.length && b.options.length ? 0.8 * content + 0.2 * opt : content;
   if (a.number && b.number && a.number === b.number) s += 0.35;
   // Konular çoğu kayıtta serbest metin: eşitlik artı puan, farklılık ceza değil
-  if (a.konu && b.konu && fold(a.konu) === fold(b.konu)) s += 0.08;
+  if (ma.konuFolded && mb.konuFolded && ma.konuFolded === mb.konuFolded) s += 0.08;
   // Ortak hiçbir terim/kök yoksa yalnız konu ya da numara benzerliği küme kurmaya yetmez
   if (term === 0 && lex < 0.05 && opt === 0 && !(a.number && a.number === b.number)) return 0;
   return Math.max(0, Math.min(1, s));
@@ -314,11 +409,24 @@ export async function clusterItems(items: PoolItem[]): Promise<{ members: PoolIt
   for (const group of byCommittee.values()) {
     const idf = buildIdf(group);
     const n = group.length;
+
+    // Ağırlık toplamlarını ve meta verileri tek seferde O(n) hesapla
+    const termSums = new Float64Array(n);
+    const stemSums = new Float64Array(n);
+    for (let i = 0; i < n; i++) {
+      const meta = getFastItemMeta(group[i]);
+      termSums[i] = getSetWeightSum(meta.termSet, idf.terms);
+      stemSums[i] = getSetWeightSum(meta.stemSet, idf.stems);
+    }
+
     const sim: Float32Array[] = [];
     for (let i = 0; i < n; i++) sim.push(new Float32Array(n));
     for (let i = 0; i < n; i++) {
+      const gi = group[i];
+      const tsi = termSums[i];
+      const ssi = stemSums[i];
       for (let j = 0; j < i; j++) {
-        const v = similarity(group[i], group[j], idf);
+        const v = similarity(gi, group[j], idf, tsi, termSums[j], ssi, stemSums[j]);
         sim[i][j] = v;
         sim[j][i] = v;
         if ((j & 63) === 63) await yieldIfBusy();
@@ -331,9 +439,17 @@ export async function clusterItems(items: PoolItem[]): Promise<{ members: PoolIt
     const numbers = group.map((g) => g.number);
     const discs = group.map((g) => new Set(g.disciplines));
     const internal = group.map(() => 0);
+
+    const discsOverlap = (a: Set<string>, b: Set<string>): boolean => {
+      if (!a.size || !b.size) return true;
+      const [small, large] = a.size <= b.size ? [a, b] : [b, a];
+      for (const d of small) if (large.has(d)) return true;
+      return false;
+    };
+
     const link = (a: number, b: number) => {
       if (numbers[a] && numbers[b] && numbers[a] !== numbers[b]) return -1;
-      if (discs[a].size && discs[b].size && ![...discs[a]].some((d) => discs[b].has(d))) return -1;
+      if (!discsOverlap(discs[a], discs[b])) return -1;
       return sim[a][b];
     };
     // Satır başına en iyi komşu önbelleği: her birleştirmede yalnız etkilenen satırlar yeniden taranır (≈O(n²))

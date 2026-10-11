@@ -1,109 +1,19 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
-import { CornerDownLeft, Sparkles, Wand2 } from 'lucide-react';
-import { ApiService, safeJsonFetch } from '../../services/api';
+import { CornerDownLeft, Sparkles, Wand2, ArrowRight, HelpCircle } from 'lucide-react';
+import { safeJsonFetch } from '../../services/api';
+import { smartComposerService, AssistOption, AssistResult } from '../../services/smartComposerService';
 
 /**
- * Tam ekran yazmada öneri çubuğu + cümle tamamlama (telefon).
+ * MedSoru Akıllı Soru Yazma Yardımcısı (ComposerAssist)
  *
- *  - Kullanıcı yazmayı BIRAKINCA (600 ms) yazdığı metne benzeyen çıkmış soru kökleri istenir; yazılan son
- *    kelimeler bu köklerde aranır ve kökün devamı (cümle sonuna kadar) olası tamamlama olur. Yaygın soru
- *    kalıpları ("…aşağıdakilerden hangisidir?") yedek kaynaktır. Yapay zekâ çağrısı yok; yerel ve hızlı.
- *  - En iyi tamamlama, metnin hemen ardında soluk ipucu metni (hint) olarak görünür (textarea'nın arkasındaki
- *    ayna katman). Çubuktaki "Ekle", ipucuna dokunmak ya da Tab/→ kabul eder → metnin sonuna eklenir.
- *  - Düzeltme önerisi: baş harf, çift boşluk, soru kalıbında eksik "?".
- *  Klavye açık/kapalı fark etmez: çubuk kompozörün altında, klavye açıkken klavyenin hemen üstündedir.
+ *  - Masaüstü ve mobil tam ekran yazmada anlık (0ms-30ms) akıllı metin tamamlama,
+ *    klinik vaka devamı ve güvenli yazım düzeltmesi.
+ *  - Cümle İçi Devam (isExpanding) ile Soruyu Kapatma (isQuestionReady) ayrımını yapar:
+ *    Kullanıcı vaka yazarken gereksizce "hangisidir?" ile soruyu kesmez; klinik devam önerir.
+ *  - Bütün cümleyi dikkate alır (organ, semptom, hastalık, tetkik bağlamı).
+ *  - Ayna katmanı (ca-mirror) textarea ile %100 piksel uyumlu hizalanır.
+ *  - Tab ya da imleç sondayken → ile soluk hayalet metin (ghost) anında kabul edilir.
  */
-
-const TEMPLATES = [
-  'aşağıdakilerden hangisidir?',
-  'aşağıdakilerden hangisi yanlıştır?',
-  'aşağıdakilerden hangisi doğrudur?',
-  'aşağıdakilerden hangisi değildir?',
-  'en olası tanı hangisidir?',
-  'ilk yapılması gereken hangisidir?',
-  'en sık görülen bulgu hangisidir?',
-  'tedavisinde ilk tercih edilen ilaç hangisidir?',
-  'ile ilgili aşağıdakilerden hangisi yanlıştır?',
-  'ifadelerden hangileri doğrudur?',
-];
-
-const fold = (s: string) =>
-  s.toLocaleLowerCase('tr-TR').replace(/[.,;:!?()"'“”‘’«»\[\]]/g, '').replace(/\s+/g, ' ').trim();
-
-/** Yazılan metnin sonu ile kaynak metindeki eşleşmenin devamı. */
-function continuations(typed: string, sources: string[], max = 3): string[] {
-  const endsWithSpace = /\s$/.test(typed);
-  const tw = fold(typed).split(' ').filter(Boolean);
-  if (tw.length === 0) return [];
-  const partial = endsWithSpace ? '' : tw[tw.length - 1];
-  const done = endsWithSpace ? tw : tw.slice(0, -1);
-  const out: { text: string; k: number; i: number }[] = [];
-  sources.forEach((src, si) => {
-    const sw = src.split(/\s+/).filter(Boolean);
-    const sf = sw.map(fold);
-    for (let k = Math.min(4, done.length); k >= (partial ? 0 : 1); k--) {
-      const ctx = done.slice(done.length - k);
-      if (k === 0 && partial.length < 3) break;
-      for (let i = 0; i + k < sw.length + (partial ? 0 : 1); i++) {
-        let ok = true;
-        for (let j = 0; j < k; j++) if (sf[i + j] !== ctx[j]) { ok = false; break; }
-        if (!ok) continue;
-        let rest: string[] = [];
-        const at = i + k;
-        let lead = '';
-        if (partial) {
-          const w = sf[at];
-          if (!w || !w.startsWith(partial)) continue;
-          if (w === partial) {
-            // Son kelime tam yazılmış (ardında boşluk yok): sonraki kelimeden, boşlukla devam et
-            rest = sw.slice(at + 1);
-            lead = ' ';
-          } else {
-            rest = [sw[at].slice(partial.length), ...sw.slice(at + 1)];
-          }
-        } else {
-          rest = sw.slice(at);
-        }
-        // cümle sonuna kadar, en çok 12 kelime
-        const cut: string[] = [];
-        for (const t of rest) {
-          cut.push(t);
-          if (/[?.!]$/.test(t) || cut.length >= 12) break;
-        }
-        let text = cut.join(' ');
-        if (lead && text) text = lead + text;
-        else if (!partial && text) text = (endsWithSpace ? '' : ' ') + text;
-        if (text.trim().length >= 2) out.push({ text, k: k + (partial ? 0.5 : 0), i: si });
-        return; // bu kaynaktan en uzun bağlamlı tek eşleşme yeter
-      }
-    }
-  });
-  out.sort((a, b) => b.k - a.k || a.i - b.i);
-  const seen = new Set<string>();
-  return out.filter((o) => { const f = fold(o.text); if (seen.has(f)) return false; seen.add(f); return true; }).slice(0, max).map((o) => o.text);
-}
-
-/** Basit yazım düzeltmeleri: düzeltilmiş metin + kullanıcıya gösterilecek "önce → sonra" listesi; yoksa null. */
-function fixText(s: string): { text: string; changes: string[] } | null {
-  const changes: string[] = [];
-  let t = s;
-  if (/[ \t]{2,}/.test(t)) { t = t.replace(/[ \t]{2,}/g, ' '); changes.push('çift boşluk → tek boşluk'); }
-  const sp = t.match(/(\S+)\s+([?.!,;:])/);
-  if (sp) { t = t.replace(/\s+([?.!,;:])/g, '$1'); changes.push(`${sp[1]} ${sp[2]} → ${sp[1]}${sp[2]}`); }
-  const first = t.match(/^(\s*)(\p{Ll}\S*)/u);
-  if (first) {
-    const w = first[2];
-    const W = w.charAt(0).toLocaleUpperCase('tr-TR') + w.slice(1);
-    t = first[1] + W + t.slice(first[0].length);
-    changes.push(`${w} → ${W}`);
-  }
-  const q = t.trimEnd().match(/(\S+)$/);
-  if (q && /^(hangisidir|hangisi|hangileridir|hangileri|nedir|değildir|yanlıştır|doğrudur|hangisinde|hangisine)$/i.test(q[1])) {
-    t = t.trimEnd() + '?';
-    changes.push(`${q[1]} → ${q[1]}?`);
-  }
-  return changes.length ? { text: t, changes } : null;
-}
 
 export const ComposerAssist: React.FC<{
   active: boolean;
@@ -113,121 +23,246 @@ export const ComposerAssist: React.FC<{
   committeeId?: string;
 }> = ({ active, value, onChange, textareaId, committeeId }) => {
   const [sources, setSources] = useState<string[]>([]);
-  // Sorgu zekâsı (/api/text/assist): derlem n-gram'ından cümle devamı + bağlamlı yazım düzeltmesi
-  const [assist, setAssist] = useState<{ for: string; ghost: string; correction: { text: string; changes: { from: string; to: string }[] } | null } | null>(null);
-  const [paused, setPaused] = useState(false);
-  const [box, setBox] = useState<{ top: number; left: number; width: number; height: number; scroll: number } | null>(null);
+  const [localResult, setLocalResult] = useState<AssistResult | null>(null);
+  const [box, setBox] = useState<{
+    top: number;
+    left: number;
+    width: number;
+    height: number;
+    scroll: number;
+    paddingTop: string;
+    paddingRight: string;
+    paddingBottom: string;
+    paddingLeft: string;
+    fontSize: string;
+    fontFamily: string;
+    lineHeight: string;
+    letterSpacing: string;
+  } | null>(null);
+
   const mirrorRef = useRef<HTMLDivElement>(null);
   const reqId = useRef(0);
 
-  // Yazmayı bırakınca (600 ms) kaynak kökleri getir
+  // 1. Anlık Yerel Hesaplama (30ms micro-debounce — sıfır kasma, anlık yanıt)
   useEffect(() => {
-    setPaused(false);
-    if (!active) return;
+    if (!active || !value.trim()) {
+      setLocalResult(null);
+      return;
+    }
+
     const t = window.setTimeout(() => {
-      setPaused(true);
-      const q = value.trim();
-      if (q.split(/\s+/).length < 2) { setSources([]); return; }
-      const id = ++reqId.current;
-      const v = value;
-      safeJsonFetch<{ success: boolean; ghost: string; correction: { text: string; changes: { from: string; to: string }[] } | null }>(
-        `/api/text/assist?text=${encodeURIComponent(v.slice(-600))}`,
-      ).then((r) => { if (id === reqId.current && r.ok && r.data?.success) setAssist({ for: v, ghost: r.data.ghost || '', correction: r.data.correction }); });
-      ApiService.findSimilarPastQuestions(q, committeeId)
-        .then((r) => { if (id === reqId.current) setSources((r || []).slice(0, 8).map((x) => String(x.stem || x.title || ''))); })
-        .catch(() => { if (id === reqId.current) setSources([]); });
-    }, 600);
+      const res = smartComposerService.getAssist(value, sources);
+      setLocalResult(res);
+    }, 30);
+
     return () => window.clearTimeout(t);
+  }, [value, active, sources]);
+
+  // 2. Arka Planda Çıkmış Soru Kaynaklarını Çekme (Non-blocking, UI thread'ini dondurmaz)
+  useEffect(() => {
+    if (!active || value.trim().length < 8) return;
+    const currentId = ++reqId.current;
+    const query = value.trim();
+
+    const idleTimer = window.setTimeout(() => {
+      // Arka planda benzer soruları sorgula; hata verirse sessizce yoksay
+      safeJsonFetch<any>(`/api/past-exams/similar?q=${encodeURIComponent(query.slice(-200))}${committeeId ? `&committeeId=${encodeURIComponent(committeeId)}` : ''}`)
+        .then((r) => {
+          if (currentId !== reqId.current) return;
+          if (r.ok && Array.isArray(r.data)) {
+            const stems = r.data.slice(0, 5).map((x: any) => String(x.stem || x.rawStem || ''));
+            setSources(stems.filter(Boolean));
+          }
+        })
+        .catch(() => {});
+    }, 400);
+
+    return () => window.clearTimeout(idleTimer);
   }, [value, active, committeeId]);
 
-  const options = useMemo(() => {
-    if (!paused || !value.trim()) return [];
-    const fromPast = continuations(value, sources, 3);
-    const fromTpl = continuations(value, TEMPLATES, 3);
-    // n-gram devamı yalnız bu metin için geldiyse (eski yanıt yeni metne eklenmesin)
-    const fromCorpus = assist && assist.for === value && assist.ghost ? [assist.ghost] : [];
-    const all = [...fromPast, ...fromCorpus, ...fromTpl];
-    const seen = new Set<string>();
-    return all.filter((t) => { const f = fold(t); if (seen.has(f)) return false; seen.add(f); return true; }).slice(0, 3);
-  }, [paused, value, sources, assist]);
-  // Düzelt: önce sözcük yazımı (derlem sözlüğü, bağlamlı), sonra biçim (baş harf, boşluk, "?")
-  const fix = useMemo(() => {
-    if (!paused) return null;
-    const spell = assist && assist.for === value ? assist.correction : null;
-    const base = spell?.text ?? value;
-    const f = fixText(base);
-    const changes = [...(spell?.changes || []).map((c) => `${c.from} → ${c.to}`), ...(f?.changes || [])];
-    return changes.length ? { text: f?.text ?? base, changes } : null;
-  }, [paused, value, assist]);
-  const ghost = options[0] || '';
-
-  // Ayna katmanı textarea'nın üstüne hizala (konum, boyut, kaydırma)
+  // 3. Ayna Katmanı (ca-mirror) Textarea ile Birebir Piksel Eşleme
   useEffect(() => {
-    if (!active) { setBox(null); return; }
+    if (!active) {
+      setBox(null);
+      return;
+    }
     const ta = document.getElementById(textareaId) as HTMLTextAreaElement | null;
     if (!ta) return;
-    const measure = () => setBox({ top: ta.offsetTop, left: ta.offsetLeft, width: ta.offsetWidth, height: ta.offsetHeight, scroll: ta.scrollTop });
+
+    const measure = () => {
+      const cs = window.getComputedStyle(ta);
+      setBox({
+        top: ta.offsetTop,
+        left: ta.offsetLeft,
+        width: ta.offsetWidth,
+        height: ta.offsetHeight,
+        scroll: ta.scrollTop,
+        paddingTop: cs.paddingTop,
+        paddingRight: cs.paddingRight,
+        paddingBottom: cs.paddingBottom,
+        paddingLeft: cs.paddingLeft,
+        fontSize: cs.fontSize,
+        fontFamily: cs.fontFamily,
+        lineHeight: cs.lineHeight,
+        letterSpacing: cs.letterSpacing,
+      });
+    };
+
     measure();
     const ro = new ResizeObserver(measure);
     ro.observe(ta);
     ta.addEventListener('scroll', measure);
-    // Tab ya da imleç sondayken → ile ipucunu kabul et
+
+    // Tab veya imleç en sondayken ArrowRight tuşuyla hayalet metni kabul et
     const onKey = (e: KeyboardEvent) => {
-      const g = (ta.dataset.ghost || '');
+      const g = ta.dataset.ghost || '';
       if (!g) return;
       const atEnd = ta.selectionStart === ta.value.length && ta.selectionEnd === ta.value.length;
       if (e.key === 'Tab' || (e.key === 'ArrowRight' && atEnd)) {
         e.preventDefault();
-        onChange(ta.value + g);
+        accept(g);
       }
     };
+
     ta.addEventListener('keydown', onKey);
-    return () => { ro.disconnect(); ta.removeEventListener('scroll', measure); ta.removeEventListener('keydown', onKey); };
+    return () => {
+      ro.disconnect();
+      ta.removeEventListener('scroll', measure);
+      ta.removeEventListener('keydown', onKey);
+    };
   }, [active, textareaId, onChange]);
 
-  // Kabul kısayolu için ipucunu textarea'ya iliştir
+  const ghost = localResult?.ghost || '';
+
+  // Kabul kısayolu için hayalet metni textarea dataset'ine iliştir
   useEffect(() => {
     const ta = document.getElementById(textareaId) as HTMLTextAreaElement | null;
     if (ta) ta.dataset.ghost = active ? ghost : '';
   }, [ghost, active, textareaId]);
 
-  if (!active) return null;
-  const accept = (t: string) => {
-    onChange(value + t);
+  if (!active || !value.trim()) return null;
+
+  const accept = (textToAdd: string) => {
+    onChange(value + textToAdd);
     const ta = document.getElementById(textareaId) as HTMLTextAreaElement | null;
     ta?.focus();
-    window.setTimeout(() => ta && ta.setSelectionRange(ta.value.length, ta.value.length), 0);
+    window.setTimeout(() => {
+      if (ta) {
+        const nextLen = ta.value.length;
+        ta.setSelectionRange(nextLen, nextLen);
+      }
+    }, 0);
   };
+
+  const options = localResult?.options || [];
+  const fix = localResult?.fix || null;
+  const spell = localResult?.spell || null;
+
+  // Düzeltme seçeneği: hem noktalama hem yazım hatalarını birleştirir
+  const activeFix = fix || (spell ? { text: spell.text, changes: spell.changes.map((c) => `${c.from} → ${c.to}`) } : null);
+
+  const hasItems = options.length > 0 || !!activeFix;
 
   return (
     <>
+      {/* 1. Piksel Uyumlu Hayalet Metin Katmanı (Ghost Text Overlay) */}
       {box && ghost && (
         <div
           ref={mirrorRef}
           className="ca-mirror"
           aria-hidden
-          style={{ top: box.top, left: box.left, width: box.width, height: box.height }}
+          style={{
+            top: box.top,
+            left: box.left,
+            width: box.width,
+            height: box.height,
+            paddingTop: box.paddingTop,
+            paddingRight: box.paddingRight,
+            paddingBottom: box.paddingBottom,
+            paddingLeft: box.paddingLeft,
+            fontSize: box.fontSize,
+            fontFamily: box.fontFamily,
+            lineHeight: box.lineHeight,
+            letterSpacing: box.letterSpacing,
+          }}
         >
           <div style={{ transform: `translateY(${-box.scroll}px)` }}>
             <span className="ca-typed">{value}</span>
-            <button type="button" tabIndex={-1} className="ca-ghost" onPointerDown={(e) => { e.preventDefault(); accept(ghost); }}>{ghost}</button>
+            <button
+              type="button"
+              tabIndex={-1}
+              className="ca-ghost"
+              onPointerDown={(e) => {
+                e.preventDefault();
+                accept(ghost);
+              }}
+              title="Kabul etmek için Tab veya ⇥ tuşuna basın"
+            >
+              {ghost}
+            </button>
           </div>
         </div>
       )}
-      <div className={`ca-bar ${options.length || fix ? 'is-on' : ''}`} role="toolbar" aria-label="Yazım önerileri">
-        {fix && (
-          <button type="button" className="ca-chip is-fix" onPointerDown={(e) => e.preventDefault()} onClick={() => onChange(fix.text)} title={`Düzelt: ${fix.changes.join(', ')}`}>
-            <Wand2 aria-hidden />
+
+      {/* 2. Akıllı Öneri Çubuğu (Toolbar & Chips) */}
+      <div
+        className={`ca-bar ${hasItems ? 'is-on' : ''}`}
+        role="toolbar"
+        aria-label="Akıllı tıp yazma ve tamamlama önerileri"
+      >
+        {/* Güvenli Yazım & Biçim Düzeltme Çipi */}
+        {activeFix && (
+          <button
+            type="button"
+            className="ca-chip is-fix"
+            onPointerDown={(e) => e.preventDefault()}
+            onClick={() => onChange(activeFix.text)}
+            title={`Yazımı düzelt: ${activeFix.changes.join(', ')}`}
+          >
+            <Wand2 aria-hidden className="w-3.5 h-3.5 text-ai shrink-0" />
             <span className="ca-fix-l">Düzelt</span>
-            <span className="ca-fix-d">{fix.changes.slice(0, 2).join(' · ')}{fix.changes.length > 2 ? ` +${fix.changes.length - 2}` : ''}</span>
+            <span className="ca-fix-d">
+              {activeFix.changes.slice(0, 2).join(' · ')}
+              {activeFix.changes.length > 2 ? ` +${activeFix.changes.length - 2}` : ''}
+            </span>
           </button>
         )}
-        {options.map((t, i) => (
-          <button key={t} type="button" className={`ca-chip ${i === 0 ? 'is-top' : ''}`} onPointerDown={(e) => e.preventDefault()} onClick={() => accept(t)}>
-            {i === 0 ? <CornerDownLeft aria-hidden /> : <Sparkles aria-hidden />}
-            <span>…{t.trim()}</span>
-          </button>
-        ))}
+
+        {/* Cümle İçi Devam ve Soru Kapatma Çipleri */}
+        {options.map((opt, i) => {
+          const isContinue = opt.type === 'continue';
+          const isComplete = opt.type === 'complete';
+          const isTop = opt.isTop || i === 0;
+
+          return (
+            <button
+              key={`${opt.type}-${opt.text}-${i}`}
+              type="button"
+              className={`ca-chip ${isTop ? 'is-top' : ''} ${isContinue ? 'is-continue' : ''} ${isComplete ? 'is-complete' : ''}`}
+              onPointerDown={(e) => e.preventDefault()}
+              onClick={() => accept(opt.text)}
+              title={isContinue ? 'Klinik vaka anlatımına devam et' : 'Soruyu bu kök ile tamamla'}
+            >
+              {isContinue ? (
+                <ArrowRight aria-hidden className="w-3.5 h-3.5 text-accent shrink-0" />
+              ) : isComplete ? (
+                <HelpCircle aria-hidden className="w-3.5 h-3.5 text-ai shrink-0" />
+              ) : (
+                <Sparkles aria-hidden className="w-3.5 h-3.5 text-ink-3 shrink-0" />
+              )}
+
+              <span className={`ca-badge ${isContinue ? 'is-continue' : isComplete ? 'is-complete' : ''}`}>
+                {opt.label}
+              </span>
+
+              <span>{opt.preview}</span>
+
+              {isTop && (
+                <CornerDownLeft aria-hidden className="w-3 h-3 text-ink-3 opacity-60 ml-auto shrink-0 hidden sm:inline" />
+              )}
+            </button>
+          );
+        })}
       </div>
     </>
   );

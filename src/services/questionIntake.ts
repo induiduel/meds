@@ -142,14 +142,22 @@ function readJson<T>(f: string, fallback: T): T {
   try { return JSON.parse(fs.readFileSync(f, 'utf8')); } catch { return fallback; }
 }
 
+const curriculumCache = new Map<string, { kurulName: string; disciplines: string[]; topics: Record<string, string[]> }>();
+
 export function curriculumContext(rootDir: string, committeeId: string) {
+  const cacheKey = `${rootDir}:${committeeId}`;
+  const hit = curriculumCache.get(cacheKey);
+  if (hit) return hit;
+
   const no = kurulNo(committeeId);
   const disc = readJson<Record<string, string[]>>(path.join(rootDir, 'src/data/curriculum_disciplines.json'), {});
   const kaz = readJson<any>(path.join(rootDir, `src/data/kazanimlar/k${no}.json`), null);
   const topics: Record<string, string[]> = {};
   for (const d of kaz?.dersler || []) topics[d.ders] = (d.konular || []).map((k: any) => String(k.konu || '')).filter(Boolean);
   const disciplines = (disc[no] || Object.keys(topics)).filter(Boolean);
-  return { kurulName: kaz?.name ? `Dönem 3 Kurul ${no} (${kaz.name})` : `Dönem 3 Kurul ${no || '?'}`, disciplines, topics };
+  const res = { kurulName: kaz?.name ? `Dönem 3 Kurul ${no} (${kaz.name})` : `Dönem 3 Kurul ${no || '?'}`, disciplines, topics };
+  curriculumCache.set(cacheKey, res);
+  return res;
 }
 
 // ---------- uzman ajanlar (gerçek ders listesine göre)
@@ -290,19 +298,36 @@ export function evidenceOk(kanit: string, corpusFolded: string, corpusTokens: Se
   return tk.length > 0 && tk.every((x) => corpusTokens.has(x));
 }
 
+const LEV_ROW = new Int32Array(64);
+
 function lev(a: string, b: string): number {
-  if (Math.abs(a.length - b.length) > 2) return 3;
-  const d = Array.from({ length: b.length + 1 }, (_, i) => i);
+  const bLen = b.length;
+  if (Math.abs(a.length - bLen) > 2) return 3;
+  if (bLen >= 64) {
+    let prevRow = Array.from({ length: bLen + 1 }, (_, i) => i);
+    for (let i = 1; i <= a.length; i++) {
+      let prev = prevRow[0];
+      prevRow[0] = i;
+      for (let j = 1; j <= bLen; j++) {
+        const t = prevRow[j];
+        prevRow[j] = Math.min(prevRow[j] + 1, prevRow[j - 1] + 1, prev + (a[i - 1] === b[j - 1] ? 0 : 1));
+        prev = t;
+      }
+    }
+    return prevRow[bLen];
+  }
+
+  for (let j = 0; j <= bLen; j++) LEV_ROW[j] = j;
   for (let i = 1; i <= a.length; i++) {
-    let prev = d[0];
-    d[0] = i;
-    for (let j = 1; j <= b.length; j++) {
-      const t = d[j];
-      d[j] = Math.min(d[j] + 1, d[j - 1] + 1, prev + (a[i - 1] === b[j - 1] ? 0 : 1));
+    let prev = LEV_ROW[0];
+    LEV_ROW[0] = i;
+    for (let j = 1; j <= bLen; j++) {
+      const t = LEV_ROW[j];
+      LEV_ROW[j] = Math.min(LEV_ROW[j] + 1, LEV_ROW[j - 1] + 1, prev + (a[i - 1] === b[j - 1] ? 0 : 1));
       prev = t;
     }
   }
-  return d[b.length];
+  return LEV_ROW[bLen];
 }
 
 /**
@@ -934,14 +959,27 @@ export function createQuestionIntake(dataDir: string, rootDir: string, deps: Int
         counts[st] = (counts[st] || 0) + 1;
         if (outdated(r.id)) outdatedCount++;
       }
+      const searchHayCache = new Map<string, string>();
+      const getSearchHay = (r: IntakeRaw, p?: IntakeParse) => {
+        const k = `${r.id}:${p?.createdAt || ''}`;
+        let hay = searchHayCache.get(k);
+        if (!hay) {
+          hay = fold([
+            r.rawText, r.id, r.questionId, r.author,
+            ...(r.formOptions || []).map((o) => o.text),
+            ...(p?.units || []).flatMap((u) => [u.ders_tahmini, u.konu_tahmini || '', ...u.tibbi_varliklar.map((v) => v.ad)])
+          ].join(' '));
+          searchHayCache.set(k, hay);
+        }
+        return hay;
+      };
+
       const matched = inCommittee
         .filter((r) => !status || (status === 'eski' ? outdated(r.id) : statusOf(r.id) === status))
         .filter((r) => {
           if (!q) return true;
           const p = parses.get(r.id);
-          const hay = fold([r.rawText, r.id, r.questionId, r.author, ...(r.formOptions || []).map((o) => o.text),
-            ...(p?.units || []).flatMap((u) => [u.ders_tahmini, u.konu_tahmini || '', ...u.tibbi_varliklar.map((v) => v.ad)])].join(' '));
-          return hay.includes(q);
+          return getSearchHay(r, p).includes(q);
         })
         .sort((a, b) => (a.createdAt < b.createdAt ? 1 : -1));
       const items = matched.slice(0, limit).map((r) => ({ raw: r, state: state[r.id] || null, parse: parses.get(r.id) || null }));

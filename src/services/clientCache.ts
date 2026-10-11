@@ -56,6 +56,16 @@ class ClientCacheService {
   private dbPromise: Promise<IDBDatabase | null> | null = null;
   private pendingFetches = new Map<string, Promise<any>>();
   private realtimeActiveTags = new Set<string>();
+  private activeRevalidations = new Set<string>();
+  private readonly MAX_MEMORY_ENTRIES = 250;
+
+  private setMemoryEntry(key: string, entry: CacheEntry) {
+    if (this.memoryCache.size >= this.MAX_MEMORY_ENTRIES && !this.memoryCache.has(key)) {
+      const oldestKey = this.memoryCache.keys().next().value;
+      if (oldestKey !== undefined) this.memoryCache.delete(oldestKey);
+    }
+    this.memoryCache.set(key, entry);
+  }
 
   constructor() {
     if (typeof window !== 'undefined') {
@@ -125,9 +135,12 @@ class ClientCacheService {
    * Bellekten (L1) veya IndexedDB'den (L2) anında önbellek kaydını getirir.
    */
   public async get<T = any>(key: string): Promise<CacheEntry<T> | null> {
-    // 1. L1 Memory Cache (0 ms)
+    // 1. L1 Memory Cache (0 ms) - LRU terfisi
     if (this.memoryCache.has(key)) {
-      return this.memoryCache.get(key) as CacheEntry<T>;
+      const entry = this.memoryCache.get(key) as CacheEntry<T>;
+      this.memoryCache.delete(key);
+      this.memoryCache.set(key, entry);
+      return entry;
     }
 
     // 2. L2 IndexedDB Cache
@@ -143,7 +156,7 @@ class ClientCacheService {
           const res = req.result as CacheEntry<T> | undefined;
           if (res) {
             // Memory cache'e terfi ettir
-            this.memoryCache.set(key, res);
+            this.setMemoryEntry(key, res);
             resolve(res);
           } else {
             resolve(null);
@@ -168,8 +181,8 @@ class ClientCacheService {
       etag: options.etag,
     };
 
-    // L1 Memory
-    this.memoryCache.set(key, entry);
+    // L1 Memory (LRU korumalı)
+    this.setMemoryEntry(key, entry);
 
     // L2 IndexedDB (Arka planda asenkron)
     this.saveToIndexedDb(entry).catch(() => {});
@@ -479,6 +492,9 @@ class ClientCacheService {
     fetcher: () => Promise<T>,
     options: { tag?: string; onBackgroundUpdate?: (freshData: T) => void }
   ) {
+    if (this.activeRevalidations.has(key)) return;
+    this.activeRevalidations.add(key);
+
     const check = async () => {
       try {
         const hashes = await this.fetchServerVersionHashes();
@@ -499,6 +515,8 @@ class ClientCacheService {
         }
       } catch (err) {
         console.warn(`[ClientCache] revalidateWithVersionHash (${entityName}) hatası:`, err);
+      } finally {
+        this.activeRevalidations.delete(key);
       }
     };
 

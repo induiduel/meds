@@ -11,6 +11,15 @@
 }
 
 :3000 {
+	# Supabase Realtime WebSocket & API (Oracle yerel Supabase Envoy :8000)
+	@supabase_realtime path /realtime/v1/*
+	reverse_proxy @supabase_realtime supabase-envoy:8000
+
+	# Supabase PostgREST, Auth, Storage API (Oracle yerel Supabase Envoy :8000)
+	@supabase_api path /rest/v1/* /auth/v1/* /storage/v1/*
+	reverse_proxy @supabase_api supabase-envoy:8000
+
+	# Ana uygulama (Express API + Vite SPA)
 	reverse_proxy meds-app:3000 {
 		lb_try_duration 60s
 		lb_try_interval 250ms
@@ -19,3 +28,4 @@
 		}
 	}
 }
+

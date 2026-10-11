@@ -193,6 +193,7 @@ export async function detectActiveSupabase(): Promise<boolean> {
         }
         isLocalSupabaseActive = true;
         supabase = localSupabase;
+        initLocalSupabaseRealtimeSync();
         return true;
       }
     } catch (_) {}
@@ -1117,6 +1118,9 @@ app.post('/api/batch', async (req, res) => {
 
   const responses: Record<string, { status: number; body: any; error?: string }> = {};
 
+  let pastMap: Map<string, any> | null = null;
+  let qMap: Map<string, any> | null = null;
+
   for (const item of requests) {
     const rawUrl = item.url || '';
     const cleanUrl = rawUrl.replace(/^https?:\/\/[^/]+/i, '');
@@ -1127,8 +1131,12 @@ app.post('/api/batch', async (req, res) => {
       const pastMatch = pathPart.match(/^\/api\/past-exams\/([^/]+)$/);
       if (pastMatch) {
         const id = decodeURIComponent(pastMatch[1]);
-        const list = getPastQuestionsDb();
-        const found = list.find((q) => q.id === id);
+        if (!pastMap) {
+          const list = getPastQuestionsDb();
+          pastMap = new Map();
+          for (let i = 0; i < list.length; i++) pastMap.set(list[i].id, list[i]);
+        }
+        const found = pastMap.get(id);
         if (found) {
           responses[item.id] = { status: 200, body: found };
         } else {
@@ -1141,7 +1149,12 @@ app.post('/api/batch', async (req, res) => {
       const qMatch = pathPart.match(/^\/api\/questions\/([^/]+)$/);
       if (qMatch) {
         const id = decodeURIComponent(qMatch[1]);
-        const found = (db.questions || []).find((q: any) => q.id === id);
+        if (!qMap) {
+          const qList = db.questions || [];
+          qMap = new Map();
+          for (let i = 0; i < qList.length; i++) qMap.set(qList[i].id, qList[i]);
+        }
+        const found = qMap.get(id);
         if (found) {
           responses[item.id] = { status: 200, body: found };
         } else {
@@ -1365,14 +1378,20 @@ app.post('/api/pool-clusters/run-pipeline', requireAdmin, (_req, res) => {
 
 // Faz 5/6/6.5/8 analizleri (müfredat kazanımı, slayt kanıtı, terimler). Faz 6 doğrulanmamış AI çıktısıdır.
 // Ortak veri kataloğu: tüm veri kümeleri tek yerden (meds_database/ortak/KATALOG.json — build_unified_store.py)
-app.get('/api/data-catalog', (_req, res) => {
+let dataCatalogCache: { mtime: number; data: any } | null = null;
+app.get('/api/data-catalog', (req, res) => {
   try {
     const f = path.join(process.env.MEDS_DATABASE_DIR || path.resolve(process.cwd(), '..', 'meds_database'), 'ortak', 'KATALOG.json');
     if (!fs.existsSync(f)) return res.json({ veri_kumeleri: [] });
-    const cat = JSON.parse(fs.readFileSync(f, 'utf-8'));
-    // yerel dosya yolları istemciye gönderilmez
-    cat.veri_kumeleri = (cat.veri_kumeleri || []).map(({ yol, ortak_yol, ...rest }: any) => rest);
-    res.json(cat);
+    const stat = fs.statSync(f);
+    if (!dataCatalogCache || dataCatalogCache.mtime !== stat.mtimeMs) {
+      const cat = JSON.parse(fs.readFileSync(f, 'utf-8'));
+      // yerel dosya yolları istemciye gönderilmez
+      cat.veri_kumeleri = (cat.veri_kumeleri || []).map(({ yol, ortak_yol, ...rest }: any) => rest);
+      dataCatalogCache = { mtime: stat.mtimeMs, data: cat };
+    }
+    if (handleConditionalResponse(req, res, dataCatalogCache.data, 'public, max-age=600, stale-while-revalidate=86400')) return;
+    res.json(dataCatalogCache.data);
   } catch (err: any) {
     res.status(500).json({ error: 'Veri kataloğu okunamadı: ' + err.message });
   }
@@ -1879,12 +1898,18 @@ app.get('/api/curriculum/package', (req, res) => {
   }
 });
 
-app.get('/api/learn-links', (_req, res) => {
+let learnLinksCache: { mtime: number; content: string } | null = null;
+app.get('/api/learn-links', (req, res) => {
   try {
     const f = path.join(process.env.MEDS_DATABASE_DIR || path.resolve(process.cwd(), '..', 'meds_database'), 'derived', 'learn_links.json');
     if (!fs.existsSync(f)) return res.json({ baglantilar: {} });
-    res.setHeader('Cache-Control', 'public, max-age=300');
-    res.type('application/json').send(fs.readFileSync(f, 'utf-8'));
+    const stat = fs.statSync(f);
+    if (!learnLinksCache || learnLinksCache.mtime !== stat.mtimeMs) {
+      learnLinksCache = { mtime: stat.mtimeMs, content: fs.readFileSync(f, 'utf-8') };
+    }
+    if (handleConditionalResponse(req, res, learnLinksCache.content, 'public, max-age=300, stale-while-revalidate=3600')) return;
+    res.setHeader('Cache-Control', 'public, max-age=300, stale-while-revalidate=3600');
+    res.type('application/json').send(learnLinksCache.content);
   } catch (err: any) {
     res.status(500).json({ error: 'Öğren bağlantıları okunamadı: ' + err.message });
   }
@@ -1937,8 +1962,10 @@ app.get('/api/learn-match-index', (req, res) => {
   try {
     const q = String(req.query.seviye || 'hafif');
     const level: LearnIndexLevel = q === 'orta' || q === 'guclu' ? q : 'hafif';
+    const body = buildLearnMatchIndex(level);
+    if (handleConditionalResponse(req, res, body, 'public, max-age=300, stale-while-revalidate=3600')) return;
     res.setHeader('Cache-Control', 'public, max-age=300, stale-while-revalidate=3600');
-    res.type('application/json').send(buildLearnMatchIndex(level));
+    res.type('application/json').send(body);
   } catch (err: any) {
     res.status(500).json({ error: 'Öğren eşleşme indeksi üretilemedi: ' + err.message });
   }
@@ -2131,6 +2158,155 @@ for (const sig of ['SIGTERM', 'SIGINT'] as const) {
   process.once(sig, () => { flushPastQuestionsDbSync(); process.exit(0); });
 }
 process.once('beforeExit', () => flushPastQuestionsDbSync());
+
+// ==============================================================================
+// Oracle Yerel Supabase Realtime Database Synchronization Hub
+// ==============================================================================
+let localRealtimeChannel: any = null;
+let localRealtimeStatus: 'disconnected' | 'connecting' | 'connected' | 'error' = 'disconnected';
+let localRealtimeLastEventAt: number = 0;
+let localRealtimeEventsCount: number = 0;
+let localRealtimeReconnectTimer: any = null;
+
+export function initLocalSupabaseRealtimeSync() {
+  if (!localSupabase) return;
+  if (localRealtimeStatus === 'connected' && localRealtimeChannel) return;
+
+  try {
+    if (localRealtimeChannel) {
+      try { localSupabase.removeChannel(localRealtimeChannel); } catch (_) {}
+      localRealtimeChannel = null;
+    }
+    localRealtimeStatus = 'connecting';
+    const channel = localSupabase.channel('oracle-server-realtime-hub', {
+      config: { broadcast: { self: false } },
+    });
+
+    // 1. past_questions değişiklikleri (INSERT, UPDATE, DELETE)
+    channel.on(
+      'postgres_changes',
+      { event: '*', schema: 'public', table: 'past_questions' },
+      (payload: any) => {
+        localRealtimeLastEventAt = Date.now();
+        localRealtimeEventsCount++;
+        const id = payload.new?.id || payload.old?.id;
+        pastListCache = null;
+
+        if (payload.new && id) {
+          try {
+            const list = getPastQuestionsDb();
+            const idx = list.findIndex((q: any) => q.id === id);
+            if (idx >= 0) {
+              list[idx] = { ...list[idx], ...payload.new };
+            }
+          } catch (_) {}
+        }
+
+        broadcastRealtimeEvent('past_questions_changed', { id, eventType: payload.eventType, time: Date.now() });
+        if (payload.new) {
+          broadcastRealtimeEvent('past_question_updated', { id, question: payload.new, eventType: payload.eventType });
+        }
+        broadcastRealtimeEvent('database_sync', { table: 'past_questions', eventType: payload.eventType, time: Date.now() });
+      }
+    );
+
+    // 2. questions değişiklikleri (INSERT, UPDATE, DELETE)
+    channel.on(
+      'postgres_changes',
+      { event: '*', schema: 'public', table: 'questions' },
+      (payload: any) => {
+        localRealtimeLastEventAt = Date.now();
+        localRealtimeEventsCount++;
+        const id = payload.new?.id || payload.old?.id;
+
+        broadcastRealtimeEvent('questions_changed', { id, eventType: payload.eventType, time: Date.now() });
+        if (payload.new) {
+          broadcastRealtimeEvent('question_updated', { id, question: payload.new, eventType: payload.eventType });
+        }
+        broadcastRealtimeEvent('database_sync', { table: 'questions', eventType: payload.eventType, time: Date.now() });
+      }
+    );
+
+    // 3. past_question_reports değişiklikleri
+    channel.on(
+      'postgres_changes',
+      { event: '*', schema: 'public', table: 'past_question_reports' },
+      (payload: any) => {
+        localRealtimeLastEventAt = Date.now();
+        localRealtimeEventsCount++;
+        broadcastRealtimeEvent('inbox_update', { table: 'past_question_reports', eventType: payload.eventType, time: Date.now() }, true);
+        broadcastRealtimeEvent('database_sync', { table: 'past_question_reports', eventType: payload.eventType, time: Date.now() });
+      }
+    );
+
+    // 4. answer_votes değişiklikleri
+    channel.on(
+      'postgres_changes',
+      { event: '*', schema: 'public', table: 'answer_votes' },
+      (payload: any) => {
+        localRealtimeLastEventAt = Date.now();
+        localRealtimeEventsCount++;
+        broadcastRealtimeEvent('votes_changed', { questionId: payload.new?.question_id || payload.old?.question_id, time: Date.now() });
+        broadcastRealtimeEvent('database_sync', { table: 'answer_votes', eventType: payload.eventType, time: Date.now() });
+      }
+    );
+
+    // 5. system_status değişiklikleri
+    channel.on(
+      'postgres_changes',
+      { event: '*', schema: 'public', table: 'system_status' },
+      (payload: any) => {
+        localRealtimeLastEventAt = Date.now();
+        localRealtimeEventsCount++;
+        broadcastRealtimeEvent('database_sync', { table: 'system_status', eventType: payload.eventType, id: payload.new?.id, time: Date.now() });
+      }
+    );
+
+    channel.subscribe((status: string, err: any) => {
+      if (status === 'SUBSCRIBED') {
+        localRealtimeStatus = 'connected';
+        console.log('⚡ [Realtime DB Hub] Oracle yerel Supabase Realtime yayınına başarıyla bağlandı.');
+      } else if (status === 'CHANNEL_ERROR' || status === 'TIMED_OUT') {
+        localRealtimeStatus = 'error';
+        console.warn(`⚠️ [Realtime DB Hub] Realtime kanal durumu: ${status}`, err || '');
+        if (!localRealtimeReconnectTimer) {
+          localRealtimeReconnectTimer = setTimeout(() => {
+            localRealtimeReconnectTimer = null;
+            initLocalSupabaseRealtimeSync();
+          }, 10000);
+        }
+      } else if (status === 'CLOSED') {
+        localRealtimeStatus = 'disconnected';
+      }
+    });
+
+    localRealtimeChannel = channel;
+  } catch (err) {
+    localRealtimeStatus = 'error';
+    console.warn('[Realtime DB Hub] Başlatma hatası:', err);
+  }
+}
+
+// Supabase algılandığında veya ilk açılışta başlat
+setTimeout(() => {
+  initLocalSupabaseRealtimeSync();
+}, 2500);
+
+// Realtime altyapı ve sağlık durumu teşhis endpoint'i
+app.get('/api/realtime/status', async (req, res) => {
+  res.json({
+    success: true,
+    realtime: {
+      status: localRealtimeStatus,
+      connected: localRealtimeStatus === 'connected',
+      lastEventAt: localRealtimeLastEventAt ? new Date(localRealtimeLastEventAt).toISOString() : null,
+      eventsReceived: localRealtimeEventsCount,
+      activeSseClients: realtimeClients.size,
+      localSupabaseActive: isLocalSupabaseActive,
+      localSupabaseUrl: LOCAL_SUPABASE_URL,
+    },
+  });
+});
 
 // Incremental Delta-Sync endpoint: checks if client cache is up to date and returns only modified questions
 app.get('/api/past-exams/sync', (req, res) => {
@@ -9378,10 +9554,12 @@ app.get('/api/deepseek/contributions', (_req, res) => {
 // ----------------------------------------------------
 // AMFİ SES TRANSKRİPTLERİ (AUDIO TRANSCRIPTIONS) ENDPOINTS
 // ----------------------------------------------------
-app.get('/api/transcriptions', (_req, res) => {
+app.get('/api/transcriptions', (req, res) => {
   try {
     const list = getAllTranscriptionsMeta();
-    res.json({ success: true, count: list.length, transcriptions: list });
+    const payload = { success: true, count: list.length, transcriptions: list };
+    if (handleConditionalResponse(req, res, payload, 'public, max-age=300, stale-while-revalidate=3600')) return;
+    res.json(payload);
   } catch (err: any) {
     res.status(500).json({ success: false, error: err.message });
   }
@@ -10277,10 +10455,19 @@ async function startServer() {
         }
       },
     };
+    const publicStaticOptions = {
+      setHeaders: (res: express.Response, filePath: string) => {
+        if (filePath.endsWith('.html') || filePath.endsWith('sw.js') || filePath.endsWith('manifest.json')) {
+          res.setHeader('Cache-Control', 'no-cache, no-store, must-revalidate');
+        } else if (/\.(ico|png|jpg|jpeg|svg|webp|woff|woff2|ttf)$/i.test(filePath)) {
+          res.setHeader('Cache-Control', 'public, max-age=604800, stale-while-revalidate=86400');
+        }
+      },
+    };
     app.use('/meds', express.static(path.resolve(__dirname, 'dist'), staticOptions));
     app.use(express.static(path.resolve(__dirname, 'dist'), staticOptions));
-    app.use('/meds', express.static(path.resolve(__dirname, 'public')));
-    app.use(express.static(path.resolve(__dirname, 'public')));
+    app.use('/meds', express.static(path.resolve(__dirname, 'public'), publicStaticOptions));
+    app.use(express.static(path.resolve(__dirname, 'public'), publicStaticOptions));
     app.get('*', (req, res) => {
       // Do not return HTML for static asset requests that were not found (prevents MIME errors)
       if (

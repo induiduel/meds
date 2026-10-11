@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
 import { Archive, CloudDownload, Smartphone, WifiOff } from 'lucide-react';
-import { pwaService } from '../../services/pwaService';
+import { pwaService, PWA_WELCOME_STORAGE_KEY } from '../../services/pwaService';
 import { offlineDatabaseService } from '../../services/offlineDatabaseService';
 import { Dialog } from '../ui/Dialog';
+
+export { PWA_WELCOME_STORAGE_KEY };
 
 interface PwaInstallWelcomeModalProps {
   isOpen: boolean;
   onClose: () => void;
   onOpenOfflineDatabase: () => void;
 }
-
-export const PWA_WELCOME_STORAGE_KEY = 'medsoru_pwa_welcome_dismissed_v1';
 
 const remember = (permanent: boolean) => {
   try {

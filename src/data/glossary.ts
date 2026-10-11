@@ -1,5 +1,4 @@
 import rawGlossary from './medical_glossary.json';
-import rawEncyclopedia from './medical_encyclopedia.json';
 
 /**
  * Universal reader and synthesizer for medical terms:
@@ -117,44 +116,50 @@ if (Array.isArray(rawGlossary)) {
   }
 }
 
-// 2. medical_encyclopedia.json: yalnız takma ad zenginleştirmesi (bkz. aşağıdaki not)
-if (Array.isArray(rawEncyclopedia)) {
-  for (const enc of rawEncyclopedia as any[]) {
-    if (!enc) continue;
-    const term = String(enc.term || enc.title || '').trim();
-    if (!term) continue;
-    const normKey = term.toLowerCase();
-
-    // Definition from definition, description, or summary
-    const definition = String(enc.definition || enc.description || enc.summary || '').trim();
-    if (!definition) continue;
-
-    // Takma adlar: aliases, latinName ve terimdeki parantez (relatedTerms eş anlamlı değildir, eklenmez)
-    const aliases: string[] = [];
-    if (enc.latinName && typeof enc.latinName === 'string') {
-      aliases.push(enc.latinName.trim());
-    }
-    if (Array.isArray(enc.aliases)) {
-      aliases.push(...enc.aliases.map((a: string) => String(a).trim()));
-    }
-    const parenMatch = term.match(/^(.+?)\s*\((.+?)\)$/);
-    if (parenMatch) {
-      aliases.push(parenMatch[1].trim());
-      aliases.push(parenMatch[2].trim());
-    }
-
-    // Ansiklopedi kayıtları doğrulanmamış (AI) içerik taşır: sözlüğe yeni terim eklemez, tanımı ezmez.
-    // Yalnız aynı terimin (veya parantez dışı adının) sözlük kaydına takma ad ekler.
-    const existing = termMap.get(normKey) || (parenMatch ? termMap.get(parenMatch[1].trim().toLowerCase()) : undefined);
-    if (existing && aliases.length > 0) {
-      const own = existing.term.toLowerCase();
-      const mergedAliases = Array.from(new Set([...(existing.aliases || []), ...aliases])).filter(
-        (a) => a && a.toLowerCase() !== own
-      );
-      existing.aliases = mergedAliases.length > 0 ? mergedAliases : undefined;
-    }
-  }
-}
-
 export const GLOSSARY: GlossaryEntry[] = Array.from(termMap.values());
+
+// 2. medical_encyclopedia.json: yalnız takma ad zenginleştirmesi (boşta/istek üzerine dinamik yüklenir)
+let encyclopediaEnhanced = false;
+export async function enhanceGlossaryWithEncyclopedia(): Promise<GlossaryEntry[]> {
+  if (encyclopediaEnhanced) return GLOSSARY;
+  try {
+    const rawModule = await import('./medical_encyclopedia.json');
+    const rawEncyclopedia = rawModule.default || rawModule;
+    if (Array.isArray(rawEncyclopedia)) {
+      for (const enc of rawEncyclopedia as any[]) {
+        if (!enc) continue;
+        const term = String(enc.term || enc.title || '').trim();
+        if (!term) continue;
+        const normKey = term.toLowerCase();
+
+        const definition = String(enc.definition || enc.description || enc.summary || '').trim();
+        if (!definition) continue;
+
+        const aliases: string[] = [];
+        if (enc.latinName && typeof enc.latinName === 'string') {
+          aliases.push(enc.latinName.trim());
+        }
+        if (Array.isArray(enc.aliases)) {
+          aliases.push(...enc.aliases.map((a: string) => String(a).trim()));
+        }
+        const parenMatch = term.match(/^(.+?)\s*\((.+?)\)$/);
+        if (parenMatch) {
+          aliases.push(parenMatch[1].trim());
+          aliases.push(parenMatch[2].trim());
+        }
+
+        const existing = termMap.get(normKey) || (parenMatch ? termMap.get(parenMatch[1].trim().toLowerCase()) : undefined);
+        if (existing && aliases.length > 0) {
+          const own = existing.term.toLowerCase();
+          const mergedAliases = Array.from(new Set([...(existing.aliases || []), ...aliases])).filter(
+            (a) => a && a.toLowerCase() !== own
+          );
+          existing.aliases = mergedAliases.length > 0 ? mergedAliases : undefined;
+        }
+      }
+      encyclopediaEnhanced = true;
+    }
+  } catch {}
+  return GLOSSARY;
+}
 

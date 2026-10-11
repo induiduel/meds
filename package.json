@@ -33,7 +33,11 @@
     "sync:drive:dry": "node scripts/orchestrate_drive_curriculum_ai.mjs --dry-run",
     "glossary:build": "python scripts/generate_medical_glossary.py",
     "git:sync": "node scripts/auto-git-sync.mjs --once",
-    "git:watch": "node scripts/auto-git-sync.mjs --interval=20"
+    "git:watch": "node scripts/auto-git-sync.mjs --interval=20",
+    "eval:pool": "tsx scripts/eval/pool-cluster-check.mts",
+    "eval:pool:scale": "tsx scripts/eval/pool-cluster-scale.mts",
+    "eval:intake": "tsx scripts/eval/question-intake-unit.mts",
+    "eval:all": "tsx scripts/eval/question-intake-unit.mts && tsx scripts/eval/pool-cluster-synthetic.mts && tsx scripts/eval/pool-cluster-check.mts"
   },
   "dependencies": {
     "@google/genai": "^2.4.0",

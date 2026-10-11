@@ -41,14 +41,27 @@ export class DataLoader<K, V> {
   private delayMs: number;
   private cache = new Map<K, V>();
   private enableCache: boolean;
+  private maxCacheSize: number;
+  private maxBatchSize: number;
 
   constructor(
     batchFn: (keys: K[]) => Promise<Map<K, V> | Array<V | null>>,
-    options: { delayMs?: number; enableCache?: boolean } = {}
+    options: { delayMs?: number; enableCache?: boolean; maxCacheSize?: number; maxBatchSize?: number } = {}
   ) {
     this.batchFn = batchFn;
     this.delayMs = options.delayMs ?? 50;
     this.enableCache = options.enableCache ?? true;
+    this.maxCacheSize = options.maxCacheSize ?? 1000;
+    this.maxBatchSize = options.maxBatchSize ?? 50;
+  }
+
+  private setCache(key: K, val: V) {
+    if (!this.enableCache) return;
+    if (this.cache.size >= this.maxCacheSize) {
+      const oldestKey = this.cache.keys().next().value;
+      if (oldestKey !== undefined) this.cache.delete(oldestKey);
+    }
+    this.cache.set(key, val);
   }
 
   public async load(key: K): Promise<V> {
@@ -80,9 +93,7 @@ export class DataLoader<K, V> {
   }
 
   public prime(key: K, value: V) {
-    if (this.enableCache) {
-      this.cache.set(key, value);
-    }
+    this.setCache(key, value);
   }
 
   private async dispatchBatch() {
@@ -90,28 +101,34 @@ export class DataLoader<K, V> {
     const currentQueue = new Map(this.queue);
     this.queue.clear();
 
-    const keys = Array.from(currentQueue.keys());
-    if (keys.length === 0) return;
+    const allKeys = Array.from(currentQueue.keys());
+    if (allKeys.length === 0) return;
 
-    try {
-      const result = await this.batchFn(keys);
-      if (result instanceof Map) {
-        for (const [key, waiters] of currentQueue.entries()) {
-          const val = result.get(key);
-          if (this.enableCache && val !== undefined) this.cache.set(key, val);
-          waiters.forEach((w) => w.resolve(val as V));
+    // maxBatchSize dilimleriyle parçala
+    for (let i = 0; i < allKeys.length; i += this.maxBatchSize) {
+      const keys = allKeys.slice(i, i + this.maxBatchSize);
+      try {
+        const result = await this.batchFn(keys);
+        if (result instanceof Map) {
+          for (const key of keys) {
+            const waiters = currentQueue.get(key) || [];
+            const val = result.get(key);
+            if (val !== undefined) this.setCache(key, val);
+            waiters.forEach((w) => w.resolve(val as V));
+          }
+        } else if (Array.isArray(result)) {
+          keys.forEach((key, idx) => {
+            const val = result[idx];
+            const waiters = currentQueue.get(key) || [];
+            if (val !== undefined && val !== null) this.setCache(key, val as V);
+            waiters.forEach((w) => w.resolve(val as V));
+          });
         }
-      } else if (Array.isArray(result)) {
-        keys.forEach((key, idx) => {
-          const val = result[idx];
+      } catch (err) {
+        for (const key of keys) {
           const waiters = currentQueue.get(key) || [];
-          if (this.enableCache && val !== undefined && val !== null) this.cache.set(key, val as V);
-          waiters.forEach((w) => w.resolve(val as V));
-        });
-      }
-    } catch (err) {
-      for (const waiters of currentQueue.values()) {
-        waiters.forEach((w) => w.reject(err));
+          waiters.forEach((w) => w.reject(err));
+        }
       }
     }
   }
@@ -120,18 +137,23 @@ export class DataLoader<K, V> {
 /**
  * HTTP İstek Paketleyicisi (Request Batcher)
  * 50ms içindeki istekleri POST /api/batch altında birleştirir.
+ * Özdeş GET isteklerini tekilleştirir, 50 üstü istekleri güvenli paketler halinde böler.
  */
 class RequestBatcherService {
   private queue: {
     req: BatchRequestItem;
-    resolve: (res: BatchResponseItem) => void;
-    reject: (err: any) => void;
+    waiters: {
+      resolve: (res: BatchResponseItem) => void;
+      reject: (err: any) => void;
+    }[];
   }[] = [];
+  private getDedupeMap = new Map<string, BatchRequestItem>();
   private timer: any = null;
   private readonly WINDOW_MS = 50;
+  private readonly MAX_BATCH_SIZE = 50;
 
   /**
-   * Bir URL isteğini paket havuzuna ekler.
+   * Bir URL isteğini paket havuzuna ekler. Özdeş GET istekleri havuz içinde tekilleştirilir.
    */
   public async fetchBatched<T = any>(
     url: string,
@@ -141,19 +163,13 @@ class RequestBatcherService {
       body?: any;
     } = {}
   ): Promise<T> {
-    const id = `req_${Date.now()}_${Math.random().toString(36).slice(2, 8)}`;
-    const reqItem: BatchRequestItem = {
-      id,
-      method: options.method || 'GET',
-      url,
-      headers: options.headers,
-      body: options.body,
-    };
+    const method = options.method || 'GET';
+    const isGet = method === 'GET';
+    const dedupeKey = isGet ? `${url}|${JSON.stringify(options.headers || {})}` : null;
 
     return new Promise<T>((resolve, reject) => {
-      this.queue.push({
-        req: reqItem,
-        resolve: (resItem) => {
+      const waiter = {
+        resolve: (resItem: BatchResponseItem) => {
           if (resItem.status >= 200 && resItem.status < 300) {
             resolve(resItem.body as T);
           } else {
@@ -161,6 +177,34 @@ class RequestBatcherService {
           }
         },
         reject,
+      };
+
+      // Özdeş GET isteği pencere içinde zaten varsa yeni bir HTTP kaydı açma, garsonu ona bağla
+      if (dedupeKey && this.getDedupeMap.has(dedupeKey)) {
+        const existingReq = this.getDedupeMap.get(dedupeKey)!;
+        const entry = this.queue.find((q) => q.req.id === existingReq.id);
+        if (entry) {
+          entry.waiters.push(waiter);
+          return;
+        }
+      }
+
+      const id = `req_${Date.now()}_${Math.random().toString(36).slice(2, 8)}`;
+      const reqItem: BatchRequestItem = {
+        id,
+        method,
+        url,
+        headers: options.headers,
+        body: options.body,
+      };
+
+      if (dedupeKey) {
+        this.getDedupeMap.set(dedupeKey, reqItem);
+      }
+
+      this.queue.push({
+        req: reqItem,
+        waiters: [waiter],
       });
 
       if (!this.timer) {
@@ -173,10 +217,11 @@ class RequestBatcherService {
     this.timer = null;
     const batch = [...this.queue];
     this.queue = [];
+    this.getDedupeMap.clear();
 
     if (batch.length === 0) return;
 
-    // Eğer havuzda tek bir istek varsa doğrudan sunucuya gönderebilir veya batch uç noktasına iletebilir
+    // Eğer havuzda tek bir istek varsa doğrudan sunucuya gönderebilir
     if (batch.length === 1) {
       const single = batch[0];
       try {
@@ -187,39 +232,49 @@ class RequestBatcherService {
         });
         const contentType = res.headers.get('content-type') || '';
         const body = contentType.includes('application/json') ? await res.json() : await res.text();
-        single.resolve({ status: res.status, body });
+        single.waiters.forEach((w) => w.resolve({ status: res.status, body }));
       } catch (err) {
-        single.reject(err);
+        single.waiters.forEach((w) => w.reject(err));
       }
       return;
     }
 
-    // Birden fazla istek varsa tek bir POST /api/batch ile gönder
-    try {
-      const res = await fetch('/api/batch', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ requests: batch.map((b) => b.req) }),
-      });
-
-      if (!res.ok) {
-        throw new Error(`Batch request failed with HTTP ${res.status}`);
-      }
-
-      const payload: BatchResponsePayload = await res.json();
-      for (const item of batch) {
-        const subRes = payload.responses?.[item.req.id];
-        if (subRes) {
-          item.resolve(subRes);
-        } else {
-          item.reject(new Error(`No sub-response received for batch request ${item.req.id}`));
-        }
-      }
-    } catch (err) {
-      for (const item of batch) {
-        item.reject(err);
-      }
+    // 50'den fazla istek varsa MAX_BATCH_SIZE (50) dilimlerine bölerek sunucu limitini aşma
+    const chunks: typeof batch[] = [];
+    for (let i = 0; i < batch.length; i += this.MAX_BATCH_SIZE) {
+      chunks.push(batch.slice(i, i + this.MAX_BATCH_SIZE));
     }
+
+    await Promise.all(
+      chunks.map(async (chunk) => {
+        try {
+          const res = await fetch('/api/batch', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ requests: chunk.map((b) => b.req) }),
+          });
+
+          if (!res.ok) {
+            throw new Error(`Batch request failed with HTTP ${res.status}`);
+          }
+
+          const payload: BatchResponsePayload = await res.json();
+          for (const item of chunk) {
+            const subRes = payload.responses?.[item.req.id];
+            if (subRes) {
+              item.waiters.forEach((w) => w.resolve(subRes));
+            } else {
+              const err = new Error(`No sub-response received for batch request ${item.req.id}`);
+              item.waiters.forEach((w) => w.reject(err));
+            }
+          }
+        } catch (err) {
+          for (const item of chunk) {
+            item.waiters.forEach((w) => w.reject(err));
+          }
+        }
+      })
+    );
   }
 }
 

@@ -27,6 +27,7 @@ import { AppUser } from '../services/auth';
 import { getDefaultActiveCommitteeId, filterCurrent2026_2027Committees } from '../services/firestoreDb';
 import { OptionsEditor } from './ui/OptionsEditor';
 import { ComposerAssist } from './quickadd/ComposerAssist';
+import { smartComposerService } from '../services/smartComposerService';
 import { IntakeEcho } from './quickadd/IntakeEcho';
 import { BlurOverlay } from './ui/Animations';
 import { toast } from './ui/Toast';
@@ -35,9 +36,12 @@ import { validateNamePolicy } from '../utils/namePolicy';
 import { findRealtimeMatchingDrafts, RealtimeMatchItem, warmMedicalIndex } from '../services/draftClusteringService';
 import { getSmartQuestionAssistant, SmartQuestionAssistantResult } from '../services/medicalPredictorService';
 import { Colored, WordLegend, ContextBadge, sharedWordColors } from './draftHighlight';
-import { AiQuestionOptimizerModal } from './AiQuestionOptimizerModal';
 import { LoveNote } from './home/LoveNote';
 import { MetaPicker } from './ui/MetaPicker';
+
+const AiQuestionOptimizerModal = React.lazy(() =>
+  import('./AiQuestionOptimizerModal').then((m) => ({ default: m.AiQuestionOptimizerModal }))
+);
 
 // Benzerlik puanı kademesine göre renk ve stil haritası
 export const getScoreTier = (score: number) => {
@@ -680,11 +684,16 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Telefon sihirbazı: son adım dışında hiçbir gönderim (klavyenin "Git/Enter" tuşu, örtük form gönderimi)
-    // soruyu havuza göndermez — yarım soru gidiyor, alanlar sıfırlanıyor ve "devam edemiyorum" hatası oluşuyordu.
-    if (fullRef.current === 'open' && wizRef.current !== 'son') {
-      if (wizRef.current !== 'tur') wizNext();
-      return;
+    // Telefon sihirbazı: Yalnızca 'son' adımında ve kullanıcının açıkça 'Havuza ekle' düğmesine basmasıyla gönderim yapılır.
+    // Başka bir adımda (kök, tür, öncüller, şıklar) veya klavyenin Enter/Git tuşuyla yanlışlıkla form gönderimi kesinlikle engellenir.
+    if (fullRef.current === 'open') {
+      if (wizRef.current !== 'son') {
+        return;
+      }
+      const submitter = (e.nativeEvent as SubmitEvent | undefined)?.submitter as HTMLElement | null;
+      if (submitter && !submitter.classList.contains('wz-submit')) {
+        return;
+      }
     }
     setFormError(null);
 
@@ -797,25 +806,31 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [realtimeMatches]);
 
-  // "Bunu mu kastettiniz?": derlem sözlüğüne göre yazım önerisi (2+ kelime)
+  // "Bunu mu kastettiniz?": anlık yerel tıp sözlüğü + derlem yazım önerisi (2+ kelime)
   const [spell, setSpell] = useState<{ text: string | null; changes: { from: string; to: string }[] } | null>(null);
   const [dismissedSpell, setDismissedSpell] = useState<string | null>(null);
   useEffect(() => {
-    const q = debouncedText;
-    if (mode === 'option' || q.split(/\s+/).length < 2) { setSpell(null); return; }
+    const q = debouncedText || text;
+    if (mode === 'option' || !q.trim() || q.trim().split(/\s+/).length < 2) { setSpell(null); return; }
+
+    // 1. Önce anlık tıp sözlüğü ile kontrol et (< 1ms, sıfır gecikme)
+    const localSpell = smartComposerService.getSpellingCorrection(q);
+    if (localSpell && localSpell.changes.length > 0) {
+      setSpell(localSpell.text !== text ? localSpell : null);
+      return;
+    }
+
+    // 2. Yerelde bulunamazsa arka planda sunucudan yokla (donma/kasma yaratmaz)
     const ctrl = new AbortController();
     const t = window.setTimeout(() => {
       ApiService.suggestSpelling(q, ctrl.signal).then((r) => {
         if (ctrl.signal.aborted || !r?.text) { if (!ctrl.signal.aborted) setSpell(null); return; }
-        // Öneri yazılmakta olan metne uygulanır: yalnızca değişen sözcükler değiştirilir
-        let next = text;
-        r.changes.forEach((c) => { next = next.replace(new RegExp(`(^|[^\\p{L}])${c.from.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}(?=$|[^\\p{L}])`, 'u'), `$1${c.to}`); });
-        setSpell(next !== text ? { text: next, changes: r.changes } : null);
+        setSpell(r.text !== text ? r : null);
       });
-    }, 350);
+    }, 400);
     return () => { ctrl.abort(); window.clearTimeout(t); };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [debouncedText, mode]);
+  }, [debouncedText, text, mode]);
 
   // Telefonda tam ekran yazma adım adım ilerler: kök → soru tipi → (öncüller) → şıklar → ipucu ve künye
   type WizStep = 'kok' | 'tur' | 'onculler' | 'siklar' | 'son';
@@ -864,19 +879,24 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
   const [full, setFull] = useState<false | 'open' | 'closing'>(false);
   const fullRef = React.useRef(full);
   fullRef.current = full;
+  const isClosingRef = React.useRef(false);
+
   const openFull = () => {
     if (fullRef.current || !window.matchMedia('(max-width: 767px)').matches) return;
+    isClosingRef.current = false;
     setFull('open');
     setWizRaw('kok');
     try { window.history.pushState({ ...(window.history.state || {}), msComposer: 1 }, ''); } catch { /* yok */ }
   };
   const finishClose = () => {
+    isClosingRef.current = false;
     setFull('closing');
     window.setTimeout(() => setFull(false), 240);
     (document.activeElement as HTMLElement | null)?.blur?.();
   };
   const closeFull = () => {
-    if (fullRef.current !== 'open') return;
+    if (fullRef.current !== 'open' || isClosingRef.current) return;
+    isClosingRef.current = true;
     if (window.history.state?.msComposer) window.history.back();
     else finishClose();
   };
@@ -884,6 +904,17 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
     // Geri tuşu: önce bir önceki adıma döner, ilk adımda tam ekranı kapatır
     const onPop = () => {
       if (fullRef.current !== 'open') return;
+      if (isClosingRef.current) {
+        finishClose();
+        return;
+      }
+      // Açık künye/alt sayfa (Kurul, Ders vb.) varsa önce onu kapat
+      const openSheetCloseBtn = document.querySelector('.qa-pop.is-sheet .qa-pop-head button, .qa-pop-scrim') as HTMLElement | null;
+      if (openSheetCloseBtn) {
+        openSheetCloseBtn.click();
+        try { window.history.pushState({ ...(window.history.state || {}), msComposer: 1 }, ''); } catch { /* yok */ }
+        return;
+      }
       if (wizRef.current !== 'kok') {
         wizBack();
         try { window.history.pushState({ ...(window.history.state || {}), msComposer: 1 }, ''); } catch { /* yok */ }
@@ -922,7 +953,16 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
         )}
       </div>
 
-      <form onSubmit={handleSubmit} aria-busy={isSubmitting} className="relative flex flex-col gap-3">
+      <form
+        onSubmit={handleSubmit}
+        onKeyDown={(e) => {
+          if (e.key === 'Enter' && (e.target as HTMLElement).tagName === 'INPUT') {
+            e.preventDefault();
+          }
+        }}
+        aria-busy={isSubmitting}
+        className="relative flex flex-col gap-3"
+      >
         <BlurOverlay show={isSubmitting} label="Havuza ekleniyor…" hint="Benzer parçalar varsa aynı soruya bağlıyoruz" />
         {mode === 'option' ? (
           <div className="bg-white rounded-2xl p-3 shadow-sm">
@@ -982,8 +1022,14 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
                 placeholder="Tek kelime bile işe yarar…"
                 className="ms-bare-input w-full block resize-none px-4 pt-3.5 pb-2 text-md leading-[1.6] text-ink placeholder:text-ink-3 bg-transparent border-0 outline-0 min-h-[128px]"
               />
-              {/* Telefon tam ekran: yazmayı bırakınca ipucu metni + klavyenin üstünde öneri çubuğu */}
-              <ComposerAssist active={full === 'open' && wiz === 'kok'} value={text} onChange={setText} textareaId="hatira" committeeId={committee?.id} />
+              {/* Akıllı soru tamamlama, klinik devam ve yazım yardımcısı (Masaüstü ve Mobil) */}
+              <ComposerAssist
+                active={(!full || full === 'open') && (wiz === 'kok' || !full) && mode === 'stem'}
+                value={text}
+                onChange={setText}
+                textareaId="hatira"
+                committeeId={committee?.id}
+              />
               {full && wiz !== 'kok' && (
                 <div key={wiz} className={`wz-panel ${wizDir > 0 ? 'is-fwd' : 'is-back'}`}>
                   {wiz === 'tur' && (
@@ -1037,6 +1083,9 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
                           <Plus aria-hidden /> {ROMAN[premises.length]}. öncülü ekle
                         </button>
                       )}
+                      <button type="button" className="wz-submit wz-next-action mt-3" onClick={wizNext}>
+                        Şıklara geç <ArrowRight aria-hidden />
+                      </button>
                     </>
                   )}
                   {wiz === 'siklar' && (
@@ -1059,6 +1108,9 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
                         reason={answerReason}
                         onReasonChange={setAnswerReason}
                       />
+                      <button type="button" className="wz-submit wz-next-action mt-3" onClick={wizNext}>
+                        Devam et <ArrowRight aria-hidden />
+                      </button>
                     </>
                   )}
                   {wiz === 'son' && (
@@ -1131,9 +1183,11 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
                             inputMode="numeric"
                             value={questionNumber}
                             onChange={(e) => { setQuestionNumber(e.target.value.replace(/[^0-9]/g, '').slice(0, 3)); setUserManualNumber(true); setAutoNum(false); }}
+                            enterKeyHint="done"
                             onKeyDown={(e) => {
                               if (e.key === 'Enter') {
                                 e.preventDefault();
+                                e.stopPropagation();
                                 (e.target as HTMLInputElement).blur();
                               }
                             }}

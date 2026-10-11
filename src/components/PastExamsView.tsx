@@ -1126,10 +1126,15 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
 
   // Seçili kurul/ders artık sonuç vermiyorsa (başka seçim yüzünden) seçimi düşürme: kullanıcı neyi seçtiyse o kalır,
   // yalnızca listelerde 0 sayılı seçenekler sönük gösterilir.
-  const committeeList = useMemo(
-    () => ['donem3-kurul1', 'donem3-kurul2', 'donem3-kurul3', 'donem3-kurul4', 'donem3-kurul5', 'donem3-kurul6', 'donem3-final', 'donem3-butunleme'].filter((c) => questions.some((q) => q.committeeId === c || (q as any).contentCommitteeId === c)),
-    [questions],
-  );
+  const committeeList = useMemo(() => {
+    const present = new Set<string>();
+    for (const q of questions) {
+      if (q.committeeId) present.add(q.committeeId);
+      if ((q as any).contentCommitteeId) present.add((q as any).contentCommitteeId);
+    }
+    const order = ['donem3-kurul1', 'donem3-kurul2', 'donem3-kurul3', 'donem3-kurul4', 'donem3-kurul5', 'donem3-kurul6', 'donem3-final', 'donem3-butunleme'];
+    return order.filter((c) => present.has(c));
+  }, [questions]);
   const disciplineList = useMemo(() => {
     let base = DONEM3_CURRICULUM_DISCIPLINES;
     if (selectedCommittee !== 'all' && !selectedCommittee.includes('final') && !selectedCommittee.includes('butunleme')) {

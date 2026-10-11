@@ -11,9 +11,13 @@
 import { createClient, SupabaseClient } from '@supabase/supabase-js';
 import { Committee, QuestionItem, LectureNote } from '../types';
 import { filterCurrent2026_2027Committees } from './firestoreDb';
+import { isProductionHost } from '../config/deployment';
 
 export const DEFAULT_SUPABASE_URL = 'https://kgutsltgmqbnlxcnzrtl.supabase.co';
 export const DEFAULT_SUPABASE_KEY = 'sb_publishable_EVdXdIi_2mxVr3HZKYabwQ_li5KuE1Q';
+
+// Oracle Yerel Supabase Anonim Erişim Anahtarı (Canlı sitede Caddy kapısı üzerinden /realtime/v1 ve /rest/v1 erişimi)
+export const ORACLE_LOCAL_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYW5vbiIsImlzcyI6InN1cGFiYXNlIiwiaWF0IjoxNzkxMDcwMTUzLCJleHAiOjE5NDg3NTAxNTN9.LvXBTMzVLKAcPLu2UFtt-1If27K4_GXhaPioUWfSvdY';
 
 const STORAGE_URL_KEY = 'medsoru_custom_supabase_url';
 const STORAGE_KEY_KEY = 'medsoru_custom_supabase_key';
@@ -37,13 +41,28 @@ export function cleanForPostgres<T>(data: T): T {
 }
 
 export function getSupabaseConfig(): { url: string; key: string } {
-  let localUrl = '';
-  let localKey = '';
+  let customUrl = '';
+  let customKey = '';
   if (typeof localStorage !== 'undefined') {
     try {
-      localUrl = localStorage.getItem(STORAGE_URL_KEY) || '';
-      localKey = localStorage.getItem(STORAGE_KEY_KEY) || '';
+      customUrl = localStorage.getItem(STORAGE_URL_KEY) || '';
+      customKey = localStorage.getItem(STORAGE_KEY_KEY) || '';
     } catch (_) {}
+  }
+
+  // Kullanıcı özel bir adres ve anahtar tanımladıysa öncelikli kullan
+  if (customUrl && customKey) {
+    return { url: customUrl.trim(), key: customKey.trim() };
+  }
+
+  // Canlı Oracle ortamında (nofrostlife.com.tr / api.nofrostlife.com.tr):
+  // Caddy kapısı üzerinden doğrudan Oracle yerel Supabase Envoy (:8000) servisine
+  // sıfır gecikmeli aynı-köken (same-origin) Realtime WebSocket ve REST bağlantısı kurulur.
+  if (typeof window !== 'undefined' && isProductionHost()) {
+    return {
+      url: window.location.origin,
+      key: ORACLE_LOCAL_SUPABASE_KEY,
+    };
   }
 
   let envUrl = '';
@@ -54,8 +73,8 @@ export function getSupabaseConfig(): { url: string; key: string } {
   } catch (_) {}
 
   return {
-    url: (localUrl || envUrl || DEFAULT_SUPABASE_URL).trim(),
-    key: (localKey || envKey || DEFAULT_SUPABASE_KEY).trim(),
+    url: (customUrl || envUrl || DEFAULT_SUPABASE_URL).trim(),
+    key: (customKey || envKey || DEFAULT_SUPABASE_KEY).trim(),
   };
 }
 

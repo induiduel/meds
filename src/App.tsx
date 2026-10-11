@@ -29,14 +29,11 @@ import { Onboarding } from './components/onboarding/Onboarding';
 import { PageLoader } from './components/ui/Animations';
 import { ToastHost, toast } from './components/ui/Toast';
 import { TooltipHost } from './components/ui/TooltipHost';
-import { OfflineDatabaseModal } from './components/pwa/OfflineDatabaseModal';
-import { PwaInstallWelcomeModal, PWA_WELCOME_STORAGE_KEY } from './components/pwa/PwaInstallWelcomeModal';
 import { offlineDatabaseService } from './services/offlineDatabaseService';
-import { pwaService } from './services/pwaService';
+import { pwaService, PWA_WELCOME_STORAGE_KEY } from './services/pwaService';
 import { userNotificationService } from './services/userNotificationService';
 import { backupUserDataToDatabase } from './services/userDataSyncService';
 import { buildDeepLinkUrl, executeDeepLinkFocus, initDeepLinkAutoScroll } from './services/universalRedirectService';
-import { QuestionClusterAutomationModal } from './components/admin/QuestionClusterAutomationModal';
 
 function wrapLazy<T extends { default: React.ComponentType<any> }>(
   promise: Promise<T>
@@ -139,6 +136,9 @@ const SearchView = React.lazy(() => wrapLazy(import('./components/search/SearchV
 const InteractiveDeckView = React.lazy(() => wrapLazy(import('./components/learn/InteractiveDeckView').then(m => ({ default: m.InteractiveDeckView }))));
 const MedicalEncyclopediaView = React.lazy(() => wrapLazy(import('./components/encyclopedia/MedicalEncyclopediaView').then(m => ({ default: m.MedicalEncyclopediaView }))));
 const ManageConsole = React.lazy(() => wrapLazy(import('./components/manage/ManageConsole').then(m => ({ default: m.ManageConsole }))));
+const OfflineDatabaseModal = React.lazy(() => wrapLazy(import('./components/pwa/OfflineDatabaseModal').then(m => ({ default: m.OfflineDatabaseModal }))));
+const PwaInstallWelcomeModal = React.lazy(() => wrapLazy(import('./components/pwa/PwaInstallWelcomeModal').then(m => ({ default: m.PwaInstallWelcomeModal }))));
+const QuestionClusterAutomationModal = React.lazy(() => wrapLazy(import('./components/admin/QuestionClusterAutomationModal').then(m => ({ default: m.QuestionClusterAutomationModal }))));
 
 const ViewFallback = () => <PageLoader />;
 import { GlossaryProvider } from './components/learn/MedicalGlossaryPopover';
@@ -562,12 +562,32 @@ export default function App() {
     fetchCommittees();
   }, []);
 
-  // Load questions when selected committee changes
+  // Load questions when selected committee changes or when switching to a question tab
   useEffect(() => {
-    if (selectedCommitteeId) {
+    if (!selectedCommitteeId) return;
+
+    const isQuestionTab =
+      activeTab === 'questions' ||
+      activeTab === 'booklet' ||
+      activeTab === 'practice' ||
+      activeTab === 'quick_add' ||
+      activeTab === 'stats';
+
+    if (isQuestionTab) {
       fetchQuestions();
+      return;
     }
-  }, [selectedCommitteeId]);
+
+    // Kullanıcı çıkmış, öğren, sözlük gibi farklı bir sekmedeyse ilk açılış bant genişliğini boğmamak
+    // için soru havuzunu tarayıcı boşta kaldığında (idle) arka planda sessizce yükle.
+    if (typeof window !== 'undefined' && 'requestIdleCallback' in window) {
+      const id = (window as any).requestIdleCallback(() => fetchQuestions(), { timeout: 3500 });
+      return () => (window as any).cancelIdleCallback(id);
+    } else {
+      const timer = setTimeout(() => fetchQuestions(), 2500);
+      return () => clearTimeout(timer);
+    }
+  }, [selectedCommitteeId, activeTab]);
 
   // Supabase Realtime Subscription: Sorulardaki yeni ekleme, oy ve güncellemeleri canlı dinle
   useEffect(() => {
@@ -2047,18 +2067,26 @@ export default function App() {
       )}
 
       {/* Çevrimdışı Veritabanı & PWA Yönetim Modalı */}
-      <OfflineDatabaseModal
-        isOpen={isOfflineModalOpen}
-        onClose={() => setIsOfflineModalOpen(false)}
-        isAdmin={isAdmin}
-      />
+      {isOfflineModalOpen && (
+        <Suspense fallback={null}>
+          <OfflineDatabaseModal
+            isOpen={isOfflineModalOpen}
+            onClose={() => setIsOfflineModalOpen(false)}
+            isAdmin={isAdmin}
+          />
+        </Suspense>
+      )}
 
       {/* PWA & Çevrimdışı Veritabanı Açılış Önerisi Modalı */}
-      <PwaInstallWelcomeModal
-        isOpen={isPwaWelcomeOpen && !isAdmin && !offlineDatabaseService.getState().isDatabaseDownloaded}
-        onClose={() => setIsPwaWelcomeOpen(false)}
-        onOpenOfflineDatabase={() => setIsOfflineModalOpen(true)}
-      />
+      {isPwaWelcomeOpen && !isAdmin && !offlineDatabaseService.getState().isDatabaseDownloaded && (
+        <Suspense fallback={null}>
+          <PwaInstallWelcomeModal
+            isOpen={true}
+            onClose={() => setIsPwaWelcomeOpen(false)}
+            onOpenOfflineDatabase={() => setIsOfflineModalOpen(true)}
+          />
+        </Suspense>
+      )}
 
       {/* User Login/Register Modal */}
       {isAuthModalOpen && !showOnboarding && (
@@ -2173,12 +2201,16 @@ export default function App() {
       )}
 
       {/* Soru Havuzu Kümeleme ve Öneri Taslak Otomasyonu Modalı */}
-      <QuestionClusterAutomationModal
-        isOpen={showClusterModal}
-        onClose={() => setShowClusterModal(false)}
-        currentUser={currentUser}
-        isAdmin={isAdmin}
-      />
+      {showClusterModal && (
+        <Suspense fallback={null}>
+          <QuestionClusterAutomationModal
+            isOpen={showClusterModal}
+            onClose={() => setShowClusterModal(false)}
+            currentUser={currentUser}
+            isAdmin={isAdmin}
+          />
+        </Suspense>
+      )}
 
       </div>
     </MusicPlayerProvider>

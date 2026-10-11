@@ -96,10 +96,19 @@ export const OptionsEditor: React.FC<OptionsEditorProps> = ({
               type="text"
               value={options[k]}
               onChange={(e) => onChange(k, e.target.value)}
+              enterKeyHint={k === keys[keys.length - 1] ? (count < 5 ? 'next' : 'done') : 'next'}
               onKeyDown={(e) => {
                 if (e.key === 'Enter') {
                   e.preventDefault();
-                  if (k === keys[keys.length - 1] && options[k].trim()) add();
+                  e.stopPropagation();
+                  const idx = keys.indexOf(k);
+                  if (idx < keys.length - 1) {
+                    inputs.current[keys[idx + 1]]?.focus();
+                  } else if (count < 5 && options[k].trim()) {
+                    add();
+                  } else {
+                    (e.target as HTMLElement).blur();
+                  }
                 }
               }}
               placeholder={`${k} şıkkı`}

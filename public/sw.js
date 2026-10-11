@@ -1,5 +1,5 @@
-// MedSoru Service Worker - PWA v7: Güçlendirilmiş Çevrimdışı Önbellek, Sıfır Gecikmeli Yenileme, Background Sync ve Push
-const CACHE_VERSION = 'medsoru-pwa-v7';
+// MedSoru Service Worker - PWA v8: Yüksek Hızlı Açılış, Optimize Edilmiş Bellek & Modül Parçalama
+const CACHE_VERSION = 'medsoru-pwa-v8';
 const STATIC_CACHE = `medsoru-static-${CACHE_VERSION}`;
 const RUNTIME_CACHE = `medsoru-runtime-${CACHE_VERSION}`;
 const DATA_CACHE = `medsoru-data-${CACHE_VERSION}`;
@@ -116,8 +116,8 @@ self.addEventListener('fetch', (event) => {
           })
           .catch(() => null);
 
-        // Ağ 1.2 saniye içinde yanıt verirse ağı kullan
-        const timeoutPromise = new Promise((resolve) => setTimeout(() => resolve(null), 1200));
+        // Ağ 400ms içinde yanıt verirse ağı kullan, gecikirse beklemeden anında önbellekteki App Shell'i ver (arka planda güncellenir)
+        const timeoutPromise = new Promise((resolve) => setTimeout(() => resolve(null), 400));
         const fastNetworkRes = await Promise.race([fetchPromise, timeoutPromise]);
 
         if (fastNetworkRes) {

@@ -25,6 +25,9 @@ export default defineConfig(({ mode }) => {
       },
     },
     build: {
+      target: 'es2022',
+      cssCodeSplit: true,
+      minify: 'esbuild',
       emptyOutDir: false,
       chunkSizeWarningLimit: 2500,
       rollupOptions: {
@@ -55,6 +58,9 @@ export default defineConfig(({ mode }) => {
               }
               if (normalized.includes('/@google/genai/')) {
                 return 'vendor-genai';
+              }
+              if (normalized.includes('/@tanstack/')) {
+                return 'vendor-tanstack';
               }
               // jspdf/html2canvas yalnızca PDF dışa aktarırken dinamik yüklenir; elle gruplanınca
               // ortak yardımcılar bu parçaya düşüp her sayfada 600 KB yükleniyordu.

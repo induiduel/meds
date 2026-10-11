@@ -326,6 +326,10 @@ services:
       SEED_SELF_HOST: "true"
       RUN_JANITOR: "true"
       DISABLE_HEALTHCHECK_LOGGING: "true"
+      RATE_LIMIT_COUNTER_ENABLED: "false"
+      REPLICATION_POLL_INTERVAL: "50"
+      HEARTBEAT_INTERVAL: "15000"
+      MAX_HEADER_LENGTH: "8192"
 
   # To use S3 backed storage: docker compose -f docker-compose.yml -f docker-compose.s3.yml up
   storage:

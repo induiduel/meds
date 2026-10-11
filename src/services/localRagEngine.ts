@@ -1923,13 +1923,13 @@ export function suggestSpelling(text: string): SpellSuggestion {
     if (FOLDED_STOPWORDS.has(f)) return word;
     const own = df(f);
     let target = f;
-    // Bilinmeyen ya da derlemde nadir (muhtemelen yazım hatası) sözcük: yakın ve çok daha yaygın terim ara
-    if (own < 20) {
-      const best = fuzzyVocab.findMatches(f, 2)
-        .filter((h) => h.term !== f && h.dist <= (f.length >= 7 ? 2 : 1) && df(h.term) >= Math.max(3, own * 25))
+    // Bilinmeyen sözcük (derlemde hiç geçmeyen): yakın ve yaygın terim ara
+    if (own === 0 && f.length >= 5) {
+      const best = fuzzyVocab.findMatches(f, 1)
+        .filter((h) => h.term !== f && df(h.term) >= 10 && prefix(f, h.term) >= 2)
         .sort((x, y) => x.dist - y.dist || prefix(f, y.term) - prefix(f, x.term) || df(y.term) - df(x.term))[0];
       if (best) target = best.term;
-      else if (own === 0) return word;
+      else return word;
     }
     // Türkçe karakter geri kazanımı: "tumoru" → "tümörü" (yalnızca kullanıcı Türkçe harf yazmadıysa)
     let to = surfaceForms!.get(target) || target;

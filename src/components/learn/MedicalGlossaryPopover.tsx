@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useEffect, useMemo, useRef, useState } from 'react';
+import React, { createContext, useContext, useEffect, useMemo, useRef, useState, useCallback } from 'react';
 import { createPortal } from 'react-dom';
 import {
   X,
@@ -9,7 +9,19 @@ import {
   ExternalLink,
   ChevronRight,
 } from 'lucide-react';
-import { GLOSSARY } from '../../data/glossary';
+let cachedGlossary: GlossaryItem[] | null = null;
+let glossaryLoadingPromise: Promise<GlossaryItem[]> | null = null;
+
+export async function fetchGlossaryAsync(): Promise<GlossaryItem[]> {
+  if (cachedGlossary) return cachedGlossary;
+  if (!glossaryLoadingPromise) {
+    glossaryLoadingPromise = import('../../data/glossary').then((m) => {
+      cachedGlossary = m.GLOSSARY as unknown as GlossaryItem[];
+      return cachedGlossary;
+    });
+  }
+  return glossaryLoadingPromise;
+}
 
 // ---------------------------------------------------------------------------
 // Type definitions
@@ -55,11 +67,11 @@ const fallbackGlossaryContext: GlossaryContextValue = {
   hideTerm: () => {},
   lookupTerm: (termOrAlias: string) => {
     const q = (termOrAlias || '').trim().toLowerCase();
-    return (GLOSSARY as unknown as GlossaryItem[]).find(
+    return (cachedGlossary || []).find(
       (g) => g.term.toLowerCase() === q || (g.aliases || []).some((a) => a.toLowerCase() === q)
     );
   },
-  glossaryList: GLOSSARY as unknown as GlossaryItem[],
+  glossaryList: cachedGlossary || [],
   isDrawerOpen: false,
   setIsDrawerOpen: () => {},
   currentSlideText: '',
@@ -111,12 +123,44 @@ export const getCategoryBadgeStyle = (category: string, badgeColor?: string) => 
 // Provider Component
 // ---------------------------------------------------------------------------
 export const GlossaryProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  // Normalised list (handles both glossary file shapes, skips entries without a definition)
-  const glossaryList = GLOSSARY as GlossaryItem[];
+  const [glossaryList, setGlossaryList] = useState<GlossaryItem[]>(() => cachedGlossary || []);
   const [activeState, setActiveState] = useState<ActiveGlossaryState | null>(null);
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const [currentSlideText, setCurrentSlideText] = useState<string>('');
   const hideTimeoutRef = useRef<number | null>(null);
+
+  useEffect(() => {
+    if (cachedGlossary) {
+      if (glossaryList.length === 0) setGlossaryList(cachedGlossary);
+      return;
+    }
+    let active = true;
+    const load = () => {
+      fetchGlossaryAsync().then((list) => {
+        if (active) setGlossaryList(list);
+      });
+    };
+    if (typeof window !== 'undefined' && 'requestIdleCallback' in window) {
+      const handle = (window as any).requestIdleCallback(load, { timeout: 3500 });
+      return () => {
+        active = false;
+        (window as any).cancelIdleCallback(handle);
+      };
+    } else {
+      const t = setTimeout(load, 1500);
+      return () => {
+        active = false;
+        clearTimeout(t);
+      };
+    }
+  }, [glossaryList.length]);
+
+  const handleSetDrawerOpen = useCallback((open: boolean) => {
+    if (open && (!cachedGlossary || glossaryList.length === 0)) {
+      fetchGlossaryAsync().then((list) => setGlossaryList(list));
+    }
+    setIsDrawerOpen(open);
+  }, [glossaryList.length]);
 
   // Fast lookup map (lowercased alias/term -> GlossaryItem)
   const lookupMap = useMemo(() => {
@@ -171,7 +215,7 @@ export const GlossaryProvider: React.FC<{ children: React.ReactNode }> = ({ chil
         lookupTerm,
         glossaryList,
         isDrawerOpen,
-        setIsDrawerOpen,
+        setIsDrawerOpen: handleSetDrawerOpen,
         currentSlideText,
         setCurrentSlideText,
       }}
