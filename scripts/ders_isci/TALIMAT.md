@@ -8,7 +8,9 @@ yönetici onayından sonra yayınlanır.
 ## Girdiler (çalışma dizininde)
 
 - `kaynak.md` — PDF metni, `=== SAYFA n ===` işaretleriyle. **Tek bilgi kaynağın budur.**
-- `baglam.json` — ders programı eşleşmesi (kurul, ders, konu, öğretim üyesi, tarih, güven), önerilen kimlikler
+- `baglam.json` — `mod`: `yeni` (yeni ders) ya da `guncelleme` (bu konunun destesi zaten var; aynı `deste_id` ile
+  güncel PDF'ten baştan, eksiksiz bir paket üret — onaylanınca eskisinin yerini alır; değişenleri `rapor.md`'de özetle);
+  ders programı eşleşmesi (kurul, ders, konu, öğretim üyesi, tarih, güven), önerilen kimlikler
   (`ders_id`, `deste_id`), aynı kurulun mevcut ders listesi, sözlükte zaten olan terimler, mevcut hastalık kayıtları
   (ad → id), çıkmış soru adayları (id, kök, şıklar, cevap, benzerlik) ve varsa bu dersin kazanımları.
 

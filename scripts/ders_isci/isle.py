@@ -112,15 +112,34 @@ def cikmis_adaylari(metin: str, kurul: int | None, en_cok: int = 40) -> list[dic
 def baglam_hazirla(j: dict, d: Path, metin: str, bilgi: dict) -> dict:
     es = program_eslesmesi(j["yol"])
     kurul = es.get("kurul") or 0
-    n = sonraki_numara(kurul) if kurul else 0
-    ders_id = f"k{kurul}-{n:02d}-{slug(es.get('konu') or Path(j['yol']).stem)}"
     sozluk = oku(APP / "src" / "data" / "medical_glossary.json", {})
     hast = oku(APP / "src" / "data" / "diseases.json", [])
     decks = oku(APP / "src" / "data" / "interactive_learning_decks.json", [])
+    # Bu konunun destesi zaten varsa (hoca PDF'i güncelledi / yeniden yükledi): yeni numara açma, mevcut dersi güncelle
+    konu_f = fold(es.get("konu") or Path(j["yol"]).stem)
+    def benzerlik(d: dict) -> float:  # başlık ya da kimlikteki konu kısmı (k1p-k1-02-patolojiye-giris → patolojiye giris)
+        kimlik = re.sub(r"^k\d+p-k\d+-\d+-", "", d.get("id", "")).replace("-", " ")
+        return max(difflib.SequenceMatcher(None, konu_f, fold(d.get("title", ""))).ratio(),
+                   difflib.SequenceMatcher(None, konu_f, kimlik).ratio())
+
+    mevcut = max(((benzerlik(d), d)
+                  for d in (decks if isinstance(decks, list) else []) if d.get("id", "").startswith(f"k{kurul}p-")),
+                 key=lambda x: x[0], default=(0.0, None))
+    if mevcut[1] is not None and mevcut[0] >= 0.85:
+        deste_id = mevcut[1]["id"]
+        ders_id = deste_id.split("-", 1)[1]
+        n = int(re.match(rf"k{kurul}-(\d+)-", ders_id).group(1))
+        mod = "guncelleme"
+    else:
+        n = sonraki_numara(kurul) if kurul else 0
+        ders_id = f"k{kurul}-{n:02d}-{slug(es.get('konu') or Path(j['yol']).stem)}"
+        deste_id = f"k{kurul}p-{ders_id}"
+        mod = "yeni"
     b = {
         "is_id": j["is_id"], "pdf_yolu": j["yol"], "pdf_adi": Path(j["yol"]).name, "yil": j.get("yil"),
         "uyari": j.get("uyari", ""), "sayfa": bilgi["sayfa"], "ocr_sayfalar": bilgi["ocr_sayfalar"],
-        "program": es, "kurul": kurul, "numara": n, "ders_id": ders_id, "deste_id": f"k{kurul}p-{ders_id}",
+        "program": es, "kurul": kurul, "numara": n, "ders_id": ders_id, "deste_id": deste_id, "mod": mod,
+        "mevcut_eslesme": round(mevcut[0], 3),
         "committeeId": f"donem3-kurul{kurul}" if kurul else "",
         "mevcut_dersler": [d.get("title") for d in (decks if isinstance(decks, list) else []) if d.get("id", "").startswith(f"k{kurul}p-")],
         "kazanimlar": kazanimlar(kurul, es.get("konu") or "") if kurul else [],
