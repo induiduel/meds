@@ -102,6 +102,12 @@ def deste(p: dict) -> dict:
 
 
 def run(log=print) -> dict:
+    # Tek seferlik dönüştürücü (2026-10-08). Desteler sonradan elle/işçiyle zenginleştirildi (ör. k1p-k1-01 100 slayt);
+    # yeniden çalıştırmak hepsini 15 slaytlık paket sürümüne döndürür. Bilerek isteniyorsa MEDS_S15_ZORLA=1.
+    import os
+    if os.environ.get("MEDS_S15_ZORLA") != "1":
+        log("s15 çalıştırılmadı: mevcut k1p- desteleri zenginleştirilmiş sürümler; ezmek için MEDS_S15_ZORLA=1")
+        return {"deste": 0, "atlandi": True}
     paketler = [json.loads(f.read_text(encoding="utf-8")) for f in sorted(PAKET_DIR.glob("k1-*.json"))]
     yeni = [deste(p) for p in paketler]
     mevcut = store.read_json(DECKS_JSON, []) or []
