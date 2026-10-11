@@ -59,28 +59,68 @@ def is_id(yol: str, sha: str) -> str:
     return time.strftime("%Y%m%d") + "-" + sha[:10]
 
 
-def kuyruga_al(ilk_kurulum: bool) -> int:
-    kayit = oku(KAYIT, {})
-    kuyruk = oku(KUYRUK, [])
-    bekleyen = {j["sha256"] for j in kuyruk}
+def kapsam_guncelle() -> int:
+    """Her izlenen-kök PDF'i için kapsam (hangi konular, hangi sayfalar). Dosya başına bir kez; içerik değişirse yeniden."""
+    from cikar import pdf_metni  # noqa: E402
+    from isle import program_eslesmesi  # noqa: E402
+    from kapsam import pdf_kapsami  # noqa: E402
+    from checklist import KAPSAM  # noqa: E402
+    kap = oku(KAPSAM, {})
+    imza = oku(KAPSAM.with_name("kapsam_imza.json"), {})
     yeni = 0
     for p in pdfler():
-        if p["sha256"] in kayit or p["sha256"] in bekleyen:
+        if "ders programı" in p["yol"].lower() or imza.get(p["yol"]) == p["sha256"]:
             continue
-        if "Ders Programı" in p["yol"] or "ders programı" in p["yol"].lower():
-            kayit[p["sha256"]] = {"durum": "program", "yol": p["yol"], "zaman": time.time()}
+        try:
+            metin, _ = pdf_metni(Path(p["tam"]))
+            ana = program_eslesmesi(p["yol"], metin)
+            kap[p["yol"]] = pdf_kapsami(p["yol"], metin, ana)
+            imza[p["yol"]] = p["sha256"]
+            yeni += 1
+            yaz(KAPSAM, kap)
+            yaz(KAPSAM.with_name("kapsam_imza.json"), imza)
+        except Exception as e:  # noqa: BLE001
+            log(f"kapsam hesaplanamadı: {p['yol']}: {e}")
+    if yeni:
+        log(f"kapsam: {yeni} PDF için konu/sayfa haritası güncellendi")
+    return yeni
+
+
+def kuyruga_al(ilk_kurulum: bool) -> int:
+    """Kural (kullanıcı, 2026-10-11): Drive'daki HER PDF'in kapsadığı konulardan biri 2026-27 checklist'inde tamam değilse
+    ('islenmeli' ya da 'yenilenmeli') PDF kuyruğa alınır — yalnız eksik konularıyla. Hepsi tamamsa yalnız kaydedilir."""
+    from checklist import KAPSAM, olustur  # noqa: E402
+    kayit = oku(KAYIT, {})
+    kuyruk = oku(KUYRUK, [])
+    kapsam_haritasi = oku(KAPSAM, {})
+    liste = olustur()
+    durum_of = {(x["kurul"], x["konu"]): x["durum"] for x in liste["konular"]}
+    bekleyen = {j["sha256"] for j in kuyruk if j["durum"] in ("bekliyor", "isleniyor", "taslak")}
+    yeni = 0
+    for p in pdfler():
+        if "ders programı" in p["yol"].lower():
+            kayit.setdefault(p["sha256"], {"durum": "program", "yol": p["yol"], "zaman": time.time()})
             continue
-        if ilk_kurulum:
-            kayit[p["sha256"]] = {"durum": "mevcut", "yol": p["yol"], "yil": yil_sinifi(p["yol"], IZLENEN_KOK), "zaman": time.time()}
+        if p["sha256"] in bekleyen or kayit.get(p["sha256"], {}).get("durum") in ("taslak", "hata"):
             continue
-        # Kullanıcı kararı: izlenen klasöre YENİ eklenen her dosya bu yılındır; addaki eski yıl işareti yalnız uyarıdır.
+        konular = kapsam_haritasi.get(p["yol"]) or []
+        from checklist import benzer  # noqa: E402
+        eksik = [k for k in konular
+                 if next((d for (ku, ko), d in durum_of.items() if ku == k.get("kurul") and benzer(ko, k["konu"]) >= 0.9),
+                         "islenmeli") in ("islenmeli", "yenilenmeli")]
+        if not konular or not eksik:
+            kayit.setdefault(p["sha256"], {"durum": "kapsanmis", "yol": p["yol"], "zaman": time.time()})
+            continue
         uyari = "dosya adında eski yıl işareti var" if yil_sinifi(p["yol"], IZLENEN_KOK) == "gecmis" else ""
         kuyruk.append({"is_id": is_id(p["yol"], p["sha256"]), "yol": p["yol"], "tam": p["tam"], "sha256": p["sha256"],
-                       "yil": "bu_yil", "uyari": uyari, "durum": "bekliyor", "eklendi": time.time(), "deneme": 0})
+                       "yil": "bu_yil", "uyari": uyari, "durum": "bekliyor", "eklendi": time.time(), "deneme": 0,
+                       "konular": eksik})
+        kayit.pop(p["sha256"], None)
         yeni += 1
-        log(f"kuyruğa alındı: {p['yol']}")
+        log(f"kuyruğa alındı: {p['yol']} → " + ", ".join(f"{k['konu']} (s.{k.get('sayfa_bas')}–{k.get('sayfa_bit')})" for k in eksik))
     yaz(KAYIT, kayit)
     yaz(KUYRUK, kuyruk)
+    olustur()  # kuyruk değişti: checklist + rapor güncel kalsın
     return yeni
 
 
@@ -150,11 +190,10 @@ def tur(tara: bool = True):
     ilk = not KAYIT.exists()
     if tara and not drive_tara():
         return
+    kapsam_guncelle()
     n = kuyruga_al(ilk)
-    if ilk:
-        log(f"ilk kurulum: mevcut {len(oku(KAYIT, {}))} dosya 'mevcut' olarak kaydedildi (yeniden işlenmez)")
-    elif n:
-        log(f"{n} yeni ders PDF'i kuyrukta")
+    if n:
+        log(f"{n} PDF kuyrukta (2026-27 checklist'inde eksik konuları var)")
     sira_isle()
 
 
@@ -164,11 +203,17 @@ def main():
     ap.add_argument("--taramasiz", action="store_true", help="Drive taramadan yalnız kuyruk/işleme")
     ap.add_argument("--durum", action="store_true")
     ap.add_argument("--simdi", metavar="IS_ID_VEYA_AD", help="bu işi şimdi işle (saat/günlük sınır atlanır)")
+    ap.add_argument("--checklist", action="store_true", help="yalnız kapsam + checklist + rapor (işleme yok)")
     a = ap.parse_args()
     if a.durum:
         return durum()
     if a.simdi:
         return sira_isle(a.simdi)
+    if a.checklist:
+        kapsam_guncelle()
+        from checklist import olustur  # noqa: E402
+        v = olustur()
+        return print(f"checklist: {len(v['konular'])} konu → {v['sayim']}")
     if a.bir_kez:
         return tur(not a.taramasiz)
     log(f"ders işçisi başladı: kök={IZLENEN_KOK} aralık={ARALIK_SN}s günlük={GUNLUK_SINIR}")

@@ -179,7 +179,14 @@ def cikmis_adaylari(metin: str, kurul: int | None, en_cok: int = 40) -> list[dic
 
 
 def baglam_hazirla(j: dict, d: Path, metin: str, bilgi: dict) -> dict:
-    es = program_eslesmesi(j["yol"], metin)
+    kz = j.get("konu_zorla")
+    if kz:  # kapsam tespitinden gelen konu (çok konulu PDF'te her alt iş kendi konusunu taşır)
+        es = {"kurul": kz.get("kurul"), "ders": kz.get("ders"), "konu": kz.get("konu"), "ogretim_uyesi": kz.get("ogretim_uyesi"),
+              "tarih": kz.get("tarih"), "programda": bool(kz.get("programda")), "guven": kz.get("guven") or "orta",
+              "pdf_basligi": kz.get("konu"), "ders_klasoru": Path(j["yol"]).parts[-2] if len(Path(j["yol"]).parts) > 1 else "",
+              "sayfa_araligi": [kz.get("sayfa_bas"), kz.get("sayfa_bit")], "yontem": kz.get("yontem")}
+    else:
+        es = program_eslesmesi(j["yol"], metin)
     kurul = es.get("kurul") or 0
     sozluk = oku(APP / "src" / "data" / "medical_glossary.json", {})
     hast = oku(APP / "src" / "data" / "diseases.json", [])
@@ -274,13 +281,18 @@ def denetle(d: Path) -> dict:
 
 
 # ------------------------------------------------------------------ ana akış
-def isle(j: dict) -> dict:
+def _isle_tek(j: dict) -> dict:
     if not (os.environ.get("CLAUDE_CODE_OAUTH_TOKEN") or (Path(os.environ.get("HOME", "~")).expanduser() / ".claude").exists()):
         return {"durum": "kota", "mesaj": "Claude anahtarı yok (deploy/oracle/isci-token-yukle.sh)"}
     d = TASLAK / j["is_id"]
     d.mkdir(parents=True, exist_ok=True)
     if not (d / "kaynak.md").exists():
         metin, bilgi = pdf_metni(Path(j["tam"]))
+        if j.get("sayfalar"):  # çok konulu PDF: yalnız bu konunun sayfa aralığı
+            bas, bit = j["sayfalar"]
+            parcalar = [b for b in metin.split("=== SAYFA ")[1:] if bas <= int(b.split(" ===")[0]) <= bit]
+            metin = "\n\n".join("=== SAYFA " + b.rstrip() for b in parcalar)
+            bilgi = {**bilgi, "karakter": len(metin), "sayfa_araligi": [bas, bit]}
         if bilgi["karakter"] < 300:
             return {"durum": "hata", "mesaj": "PDF'ten okunabilir metin çıkmadı"}
         (d / "kaynak.md").write_text(metin, encoding="utf-8")
@@ -322,3 +334,24 @@ def isle(j: dict) -> dict:
     bildir("Yeni ders işlendi — onay bekliyor", ozet + (f"\nUyarı: {b['uyari']}" if b.get("uyari") else ""), b.get("ders_id", j["is_id"]))
     log(f"taslak hazır: {j['is_id']} → {ozet}")
     return {"durum": "taslak", "mesaj": ozet}
+
+
+def isle(j: dict) -> dict:
+    """Bir PDF işi. Kapsamda birden çok konu varsa her konu ayrı alt iş (kendi sayfa aralığı, kendi ders paketi)."""
+    konular = j.get("konular") or []
+    if len(konular) <= 1:
+        if konular:
+            j = {**j, "konu_zorla": konular[0]}
+        return _isle_tek(j)
+    sonuclar = []
+    for i, kz in enumerate(konular, 1):
+        alt = {**j, "is_id": f"{j['is_id']}-{i}", "konu_zorla": kz, "sayfalar": (kz.get("sayfa_bas"), kz.get("sayfa_bit"))}
+        if oku(TASLAK / alt["is_id"] / "durum.json", {}).get("durum") == "onay_bekliyor":
+            sonuclar.append({"durum": "taslak", "mesaj": f"{kz.get('konu')}: zaten hazır"})
+            continue
+        r = _isle_tek(alt)
+        sonuclar.append(r)
+        if r["durum"] == "kota":
+            return {"durum": "kota", "mesaj": f"{i}/{len(konular)} konuda kota; kalan konular sonra"}
+    durum = "taslak" if all(r["durum"] == "taslak" for r in sonuclar) else "hata"
+    return {"durum": durum, "mesaj": " | ".join(r.get("mesaj", "")[:120] for r in sonuclar)}
