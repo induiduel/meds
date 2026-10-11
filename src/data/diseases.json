@@ -33229,48 +33229,388 @@
  {
   "id": "s13-ektopik-gebelik",
   "name": "Ektopik gebelik",
-  "latinName": "Ektopik gebelik",
-  "icd_code": null,
+  "latinName": "Graviditas ectopica",
+  "kind": "hastalik",
   "category": "Tıbbi Patoloji",
-  "etiology": [
-   "Ektopik gebelik için altta yatan tetikleyici genetik ve çevresel faktörler incelenmektedir."
-  ],
-  "morphology_pathology": [
-   "Karakteristik histopatolojik doku değişiklikleri ve hücresel proliferasyon gözlenir."
-  ],
-  "symptoms_clinical": [
-   "Ektopik gebelik tablosuna özgü akut veya kronik klinik semptomlar."
-  ],
-  "pathognomonic_features": [
-   ""
-  ],
-  "diagnostic_methods": [
-   "Laboratuvar incelemeleri ve klinik patolojik değerlendirme"
-  ],
-  "imaging_findings": [
-   "Radyolojik görüntüleme ve ultrasonografik/kesitsel analiz"
-  ],
-  "treatment": [
-   "Standart medikal protokol ve klinik rehber kılavuzları"
-  ],
-  "physiology_pathophysiology": [
-   "Hücresel düzeyde fizyopatolojik disfonksiyon mekanizması."
-  ],
-  "epidemiology": "Toplumda yaş ve cinsiyet değişkenliklerine göre dağılım gösterir.",
-  "source_notes_summary": "",
-  "relatedLectures": [
-   "Kurul 1"
-  ],
-  "verifiedSources": [
+  "hallmarks": [
    {
-    "source": "Amfi Notu",
-    "verified": true,
-    "verifiedAt": "2026-10-11T02:40:43Z"
+    "text": "Embriyonun uterus dışında implantasyonu; en sık (~%90) fallop tüpü",
+    "entities": [
+     {
+      "name": "fallop tüpü",
+      "type": "anatomi"
+     }
+    ]
+   },
+   {
+    "text": "En önemli yatkınlık: kronik salpenjite bağlı ==pelvik inflamatuvar hastalık==",
+    "entities": [
+     {
+      "name": "pelvik inflamatuvar hastalık",
+      "type": "risk_faktoru"
+     },
+     {
+      "name": "kronik salpenjit",
+      "type": "risk_faktoru"
+     }
+    ]
+   },
+   {
+    "text": "Rüptürde ani şiddetli karın ağrısı, akut batın ve hipovolemik şok",
+    "entities": [
+     {
+      "name": "karın ağrısı",
+      "type": "belirti",
+      "qualifier": "ani, şiddetli"
+     },
+     {
+      "name": "akut batın",
+      "type": "bulgu"
+     },
+     {
+      "name": "hipovolemik şok",
+      "type": "bulgu"
+     }
+    ]
+   },
+   {
+    "text": "Histolojik tanı: koryonik villusların gösterilmesi",
+    "entities": [
+     {
+      "name": "koryonik villus",
+      "type": "histopatoloji"
+     }
+    ]
    }
   ],
+  "sections": {
+   "definition": [
+    {
+     "text": "Embriyonun uterus dışında implantasyonudur.",
+     "key": true,
+     "source": "k1-67-gebelik-hastaliklari · s. 11"
+    },
+    {
+     "text": "En sık yerleşim fallop tüpünün uterus dışı kısmıdır (~%90).",
+     "label": "En sık yer",
+     "key": true,
+     "entities": [
+      {
+       "name": "fallop tüpü",
+       "type": "anatomi"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 11"
+    },
+    {
+     "text": "Diğer lokalizasyonlar: ovaryum, karın boşluğu (abdominal gebelik) ve tüpün uterus içi kısmı (kornual/interstisyel gebelik; uterusun fallop tüpleriyle birleştiği kornu bölgesine implantasyon).",
+     "label": "Diğer yerleşimler",
+     "entities": [
+      {
+       "name": "ovaryum",
+       "type": "anatomi"
+      },
+      {
+       "name": "periton",
+       "type": "anatomi"
+      },
+      {
+       "name": "uterus kornusu",
+       "type": "anatomi"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 11"
+    }
+   ],
+   "etiology": [
+    {
+     "text": "En önemli yatkınlık pelvik inflamatuvar hastalıktır; kronik salpenjite bağlı tüp lümeninde skarlaşma ve daralma/tıkanma gelişir.",
+     "label": "PİH",
+     "key": true,
+     "entities": [
+      {
+       "name": "pelvik inflamatuvar hastalık",
+       "type": "risk_faktoru"
+      },
+      {
+       "name": "kronik salpenjit",
+       "type": "risk_faktoru"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 12"
+    },
+    {
+     "text": "Diğer nedenler: uterus içi tümörler, endometriozis ve apandisit ya da önceki cerrahi sonrası peritübal skar.",
+     "label": "Diğer nedenler",
+     "entities": [
+      {
+       "name": "endometriozis",
+       "type": "risk_faktoru"
+      },
+      {
+       "name": "uterus içi tümör",
+       "type": "risk_faktoru"
+      },
+      {
+       "name": "peritübal skar",
+       "type": "risk_faktoru"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 12"
+    },
+    {
+     "text": "Rahim içi araç (RİA/intrauterin cihaz) ektopik gebelik riskini ~2 kat artırır.",
+     "label": "Kontrasepsiyon",
+     "key": true,
+     "entities": [
+      {
+       "name": "rahim içi araç",
+       "type": "risk_faktoru"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 13"
+    },
+    {
+     "text": "Çoğu olguda belirgin anatomik neden bulunmayabilir.",
+     "source": "k1-67-gebelik-hastaliklari · s. 13"
+    }
+   ],
+   "physiology": [
+    {
+     "text": "Ovaryum gebeliği, ovumun folikül rüptürü ile eş zamanlı döllenmesiyle oluşur.",
+     "label": "Ovaryan gebelik",
+     "entities": [
+      {
+       "name": "ovaryum",
+       "type": "anatomi"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 14"
+    },
+    {
+     "text": "Karın içi (abdominal) gebelikte döllenmiş ovum fallop tüpünün fimbriyal ucundan peritona düşer ve periton yüzeyine implante olur.",
+     "label": "Abdominal gebelik",
+     "entities": [
+      {
+       "name": "periton",
+       "type": "anatomi"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 14"
+    }
+   ],
+   "pathology": [
+    {
+     "text": "Tüm bölgelerde erken dönemde plasenta dokusu, amniyotik kese ve desidual değişiklikler gelişir.",
+     "entities": [
+      {
+       "name": "desidual değişiklik",
+       "type": "histopatoloji"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 15"
+    },
+    {
+     "text": "Tüp gebeliğinde invaziv plasenta tüp duvarını deler; intratubal hematom (hematosalpinks) ve intraperitoneal kanama oluşur.",
+     "label": "Tüp gebeliği",
+     "key": true,
+     "entities": [
+      {
+       "name": "hematosalpinks",
+       "type": "histopatoloji"
+      },
+      {
+       "name": "intraperitoneal kanama",
+       "type": "bulgu"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 15"
+    },
+    {
+     "text": "Makroskopide tüp lümeni yeni pıhtılaşmış kanla doludur; plasenta ve fetal doku parçaları içerir.",
+     "label": "Makroskopi",
+     "source": "k1-67-gebelik-hastaliklari · s. 16"
+    }
+   ],
+   "symptoms": [
+    {
+     "text": "Rüptür öncesi: adet gecikmesi, idrar ve serumda hCG artışı; normal gebelikten ayırt etmek zor olabilir.",
+     "label": "Rüptür öncesi",
+     "entities": [
+      {
+       "name": "adet gecikmesi",
+       "type": "belirti"
+      },
+      {
+       "name": "hCG",
+       "type": "laboratuvar",
+       "qualifier": "artmış"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 17"
+    },
+    {
+     "text": "Rüptür gelişince: ani başlayan şiddetli karın ağrısı, akut batın bulguları ve hipovolemik şok.",
+     "label": "Rüptür",
+     "key": true,
+     "entities": [
+      {
+       "name": "karın ağrısı",
+       "type": "belirti",
+       "qualifier": "ani, şiddetli"
+      },
+      {
+       "name": "akut batın",
+       "type": "bulgu"
+      },
+      {
+       "name": "hipovolemik şok",
+       "type": "bulgu"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 17"
+    }
+   ],
+   "pathognomonic": [
+    {
+     "text": "Histolojik tanı koryonik villusların gösterilmesiyle konur; nadiren embriyo yapıları görülebilir.",
+     "label": "Histolojik tanı",
+     "key": true,
+     "entities": [
+      {
+       "name": "koryonik villus",
+       "type": "histopatoloji"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 16"
+    }
+   ],
+   "diagnosis": [
+    {
+     "text": "Erken tanıda transvajinal ultrason ve serum hCG seri ölçümleri kullanılır.",
+     "label": "Erken tanı",
+     "key": true,
+     "entities": [
+      {
+       "name": "transvajinal ultrasonografi",
+       "type": "test"
+      },
+      {
+       "name": "serum hCG",
+       "type": "test",
+       "qualifier": "seri ölçüm"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 18"
+    }
+   ],
+   "treatment": [
+    {
+     "text": "Rüptüre tubal gebelik acil cerrahi gerektirir; amaç kanamanın kontrolü ve tüpün onarımı veya çıkarılmasıdır.",
+     "label": "Rüptüre olgu",
+     "key": true,
+     "entities": [
+      {
+       "name": "acil cerrahi",
+       "type": "tedavi"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 18"
+    },
+    {
+     "text": "Hemodinamik olarak stabil, rüptüre olmamış ve hCG düzeyi düşük seçilmiş olgularda metotreksat ile medikal tedavi uygulanabilir.",
+     "label": "Medikal tedavi (referans)",
+     "entities": [
+      {
+       "name": "metotreksat",
+       "type": "ilac"
+      }
+     ],
+     "source": "Williams Obstetrics (referans; derste yok)",
+     "refs": [
+      2
+     ]
+    }
+   ],
+   "complications": [
+    {
+     "text": "Tüp duvarının delinmesi intraperitoneal kanamaya ve hipovolemik şoka yol açar.",
+     "label": "Rüptür",
+     "entities": [
+      {
+       "name": "intraperitoneal kanama",
+       "type": "bulgu"
+      },
+      {
+       "name": "hipovolemik şok",
+       "type": "bulgu"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 15, 17"
+    },
+    {
+     "text": "Ektopik gebelikler gebelik koryokarsinomunun kaynak gebelikleri arasındadır (koryokarsinomun ~%50 tam mol, ~%25 düşük, ~%22 normal gebelik sonrası; kalanı ektopik gebelik sonrası).",
+     "label": "Koryokarsinom",
+     "entities": [
+      {
+       "name": "gebelik koryokarsinomu",
+       "type": "hastalik"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 56"
+    }
+   ],
+   "epidemiology": [
+    {
+     "text": "Doğrulanmış gebeliklerin ~%2'sinde görülür.",
+     "key": true,
+     "source": "k1-67-gebelik-hastaliklari · s. 11"
+    }
+   ],
+   "lecture": [
+    {
+     "text": "Ders ektopik gebeliği tanım/sıklık, risk faktörleri (PİH, RİA), ovaryan-abdominal gebelik, morfoloji (hematosalpinks), klinik seyir ve yönetim başlıklarıyla işler.",
+     "source": "k1-67-gebelik-hastaliklari · s. 11–18"
+    },
+    {
+     "text": "Slayttaki \"korneal gebelik\" ifadesi kornual (interstisyel) gebelik olarak düzeltilmiştir: uterusun fallop tüpleriyle birleştiği kornu/interstisyel bölgeye implantasyon.",
+     "entities": [
+      {
+       "name": "uterus kornusu",
+       "type": "anatomi"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 11"
+    }
+   ]
+  },
+  "references": [
+   {
+    "label": "Ders: Gebelik Hastalıkları (Kurul 1, Tıbbi Patoloji) — ders işçisi 20261011-e1c2ffa86e"
+   },
+   {
+    "label": "Robbins & Kumar Basic Pathology (11. baskı) — dersin kaynakçası"
+   },
+   {
+    "label": "Williams Obstetrics — Ectopic Pregnancy / Hypertensive Disorders bölümleri (derste olmayan madde)"
+   }
+  ],
+  "relatedLectures": [
+   "Kurul 1",
+   "k1-67-gebelik-hastaliklari"
+  ],
+  "schemaVersion": 2,
+  "curation": {
+   "method": "ders notu (onaylı ders işçisi çıktısı) + ders kaynakçası; madde/varlık modeli; referans maddeler source alanında işaretli",
+   "kaynak": "ders işçisi is_id 20261011-e1c2ffa86e · ders k1-67-gebelik-hastaliklari",
+   "at": "2026-10-12T00:00:00Z"
+  },
   "isCustom": false,
   "createdAt": "2026-10-11T02:40:43Z",
-  "updatedAt": "2026-10-11T02:40:43Z"
+  "aliases": [],
+  "altNames": [],
+  "icd_code": null,
+  "updatedAt": "2026-10-11T23:39:48Z"
  },
  {
   "id": "s13-endometriozis",
@@ -40213,48 +40553,508 @@
  {
   "id": "s13-preeklampsi",
   "name": "Preeklampsi",
-  "latinName": "Preeklampsi",
-  "icd_code": null,
-  "category": "Kadın Hastalıkları ve Doğum",
-  "etiology": [
-   "Preeklampsi için altta yatan tetikleyici genetik ve çevresel faktörler incelenmektedir."
-  ],
-  "morphology_pathology": [
-   "Karakteristik histopatolojik doku değişiklikleri ve hücresel proliferasyon gözlenir."
-  ],
-  "symptoms_clinical": [
-   "Gebeliğin üçüncü trimesterinde hipertansiyon, ödem ve proteinüri bulgularının birlikte görüldüğü tablo (gebelik toksemisi)."
-  ],
-  "pathognomonic_features": [
-   ""
-  ],
-  "diagnostic_methods": [
-   "Laboratuvar incelemeleri ve klinik patolojik değerlendirme"
-  ],
-  "imaging_findings": [
-   "Radyolojik görüntüleme ve ultrasonografik/kesitsel analiz"
-  ],
-  "treatment": [
-   "Standart medikal protokol ve klinik rehber kılavuzları"
-  ],
-  "physiology_pathophysiology": [
-   "Hücresel düzeyde fizyopatolojik disfonksiyon mekanizması."
-  ],
-  "epidemiology": "Toplumda yaş ve cinsiyet değişkenliklerine göre dağılım gösterir.",
-  "source_notes_summary": "",
-  "relatedLectures": [
-   "Kurul 1"
-  ],
-  "verifiedSources": [
+  "latinName": "Praeeclampsia",
+  "kind": "hastalik",
+  "category": "Tıbbi Patoloji",
+  "hallmarks": [
    {
-    "source": "Amfi Notu",
-    "verified": true,
-    "verifiedAt": "2026-10-11T02:40:43Z"
+    "text": "Temel mekanizma: ==maternal endotel disfonksiyonu==",
+    "entities": [
+     {
+      "name": "endotel disfonksiyonu",
+      "type": "mekanizma"
+     }
+    ]
+   },
+   {
+    "text": "Spiral arterlerde yetersiz yeniden şekillenme → plasental hipoksi",
+    "entities": [
+     {
+      "name": "spiral arter",
+      "type": "anatomi"
+     },
+     {
+      "name": "plasental hipoksi",
+      "type": "mekanizma"
+     }
+    ]
+   },
+   {
+    "text": "sFlt-1 ve endoglin artışı VEGF ve TGF-β etkilerini antagonize eder",
+    "entities": [
+     {
+      "name": "sFlt-1",
+      "type": "gen_protein"
+     },
+     {
+      "name": "endoglin",
+      "type": "gen_protein"
+     },
+     {
+      "name": "VEGF",
+      "type": "gen_protein"
+     },
+     {
+      "name": "TGF-β",
+      "type": "gen_protein"
+     }
+    ]
+   },
+   {
+    "text": "Tipik üçlü: hipertansiyon, ödem, proteinüri",
+    "entities": [
+     {
+      "name": "hipertansiyon",
+      "type": "bulgu"
+     },
+     {
+      "name": "ödem",
+      "type": "bulgu"
+     },
+     {
+      "name": "proteinüri",
+      "type": "laboratuvar"
+     }
+    ]
    }
   ],
+  "sections": {
+   "definition": [
+    {
+     "text": "Gebelik sırasında gelişen, temel mekanizması maternal endotel disfonksiyonu olan sistemik bir sendromdur (gebelik zehirlenmesi/toksemisi).",
+     "key": true,
+     "entities": [
+      {
+       "name": "endotel disfonksiyonu",
+       "type": "mekanizma"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 20, 28"
+    },
+    {
+     "text": "Eklampsi, preeklampsiye konvülsiyonların eklendiği şiddetli formdur.",
+     "label": "Eklampsi",
+     "key": true,
+     "entities": [
+      {
+       "name": "eklampsi",
+       "type": "hastalik"
+      },
+      {
+       "name": "nöbet",
+       "type": "belirti"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 20"
+    }
+   ],
+   "etiology": [
+    {
+     "text": "Tüm olguların ortak özelliği utero-plasental vasküler havuzda yetmezliktir.",
+     "key": true,
+     "entities": [
+      {
+       "name": "utero-plasental yetmezlik",
+       "type": "mekanizma"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 22"
+    },
+    {
+     "text": "İlk gebelikte daha sık görülür.",
+     "label": "Risk",
+     "entities": [
+      {
+       "name": "ilk gebelik",
+       "type": "risk_faktoru"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 20"
+    },
+    {
+     "text": "Hidatiform mol ve önceden var olan böbrek hastalığı, hipertansiyon veya koagülasyon bozuklukları varlığında daha erken ortaya çıkabilir.",
+     "label": "Erken başlangıç",
+     "entities": [
+      {
+       "name": "hidatiform mol",
+       "type": "risk_faktoru"
+      },
+      {
+       "name": "böbrek hastalığı",
+       "type": "risk_faktoru"
+      },
+      {
+       "name": "hipertansiyon",
+       "type": "risk_faktoru"
+      },
+      {
+       "name": "koagülasyon bozukluğu",
+       "type": "risk_faktoru"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 31"
+    }
+   ],
+   "physiology": [
+    {
+     "text": "Normal gebelikte spiral arterlerin kas-elastik duvarları trofoblastlarca istila edilir ve geniş vasküler sinüzoidlere dönüşür; plasentaya düşük dirençli, yüksek akımlı perfüzyon sağlanır.",
+     "label": "Normal gebelik",
+     "entities": [
+      {
+       "name": "spiral arter",
+       "type": "anatomi"
+      },
+      {
+       "name": "trofoblast",
+       "type": "hucre"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 23"
+    },
+    {
+     "text": "Preeklampside vasküler yeniden şekillenme bozulur: kas-elastik duvarlar korunur, lümenler dar kalır; utero-plasental kan akımı azalır ve plasental hipoksi gelişir.",
+     "label": "Spiral arter patolojisi",
+     "key": true,
+     "entities": [
+      {
+       "name": "spiral arter",
+       "type": "anatomi",
+       "qualifier": "yetersiz yeniden şekillenme"
+      },
+      {
+       "name": "plasental hipoksi",
+       "type": "mekanizma"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 22–24"
+    },
+    {
+     "text": "Plasental hipoksi anjiyogenezi düzenleyen faktörleri değiştirir: anti-anjiyojenik çözünür FMS benzeri tirozin kinaz-1 (sFlt-1) ve endoglin artar; VEGF ve TGF-β'nın etkilerini antagonize ederek endotel disfonksiyonunu tetikler.",
+     "label": "Anjiyojenik dengesizlik",
+     "key": true,
+     "entities": [
+      {
+       "name": "sFlt-1",
+       "type": "gen_protein"
+      },
+      {
+       "name": "endoglin",
+       "type": "gen_protein"
+      },
+      {
+       "name": "VEGF",
+       "type": "gen_protein"
+      },
+      {
+       "name": "TGF-β",
+       "type": "gen_protein"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 25"
+    },
+    {
+     "text": "Endotel disfonksiyonu vasküler hiperreaktivite ve uç organ mikroanjiyopatisine yol açar.",
+     "label": "Endotel",
+     "entities": [
+      {
+       "name": "mikroanjiyopati",
+       "type": "mekanizma"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 26"
+    },
+    {
+     "text": "Hipertansiyon: vazodilatör prostasiklin (PGI2) ve prostaglandin E2 üretimi azalır, vazokonstriktör tromboksan A2 artar.",
+     "label": "Hipertansiyon mekanizması",
+     "entities": [
+      {
+       "name": "prostasiklin",
+       "type": "gen_protein",
+       "qualifier": "azalmış"
+      },
+      {
+       "name": "prostaglandin E2",
+       "type": "gen_protein",
+       "qualifier": "azalmış"
+      },
+      {
+       "name": "tromboksan A2",
+       "type": "gen_protein",
+       "qualifier": "artmış"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 27"
+    },
+    {
+     "text": "Hiperkoagülabilite: antitrombotik faktörler (PGI2 vb.) azalır, prokoagülan faktör üretimi artar.",
+     "label": "Tromboz mekanizması",
+     "entities": [
+      {
+       "name": "hiperkoagülabilite",
+       "type": "mekanizma"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 27"
+    }
+   ],
+   "pathology": [
+    {
+     "text": "Plasentada enfarktlar artar; normal gebelikte de olabilir ancak şiddetli preeklampsi/eklampside çok daha fazladır (kronik hipoperfüzyon → enfarktüs).",
+     "label": "Plasenta",
+     "entities": [
+      {
+       "name": "plasenta enfarktı",
+       "type": "histopatoloji"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 26, 29"
+    },
+    {
+     "text": "Retroplasental kanama görülür.",
+     "entities": [
+      {
+       "name": "retroplasental kanama",
+       "type": "histopatoloji"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 29"
+    },
+    {
+     "text": "Villus iskemik değişiklikleri: terminal villuslarda sinsityal epitel düğümlerinde artış.",
+     "label": "Villus",
+     "entities": [
+      {
+       "name": "sinsityal düğüm",
+       "type": "histopatoloji",
+       "qualifier": "artmış"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 29"
+    },
+    {
+     "text": "Desidual damarlarda fibrinoid nekroz, lipid içeren makrofaj birikimi ve \"==akut aterozis==\" görünümü; bu vaskülopati plasental perfüzyon bozukluğunu artırır.",
+     "label": "Desidual damarlar",
+     "key": true,
+     "entities": [
+      {
+       "name": "fibrinoid nekroz",
+       "type": "histopatoloji"
+      },
+      {
+       "name": "akut aterozis",
+       "type": "histopatoloji"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 30"
+    }
+   ],
+   "symptoms": [
+    {
+     "text": "Genellikle son trimesterde başlar; en sık başlangıç 34. gebelik haftasından sonradır.",
+     "label": "Başlangıç",
+     "source": "k1-67-gebelik-hastaliklari · s. 21, 31"
+    },
+    {
+     "text": "Tipik üçlü: hipertansiyon, ödem ve proteinüri.",
+     "label": "Tipik üçlü",
+     "key": true,
+     "entities": [
+      {
+       "name": "hipertansiyon",
+       "type": "bulgu"
+      },
+      {
+       "name": "ödem",
+       "type": "bulgu"
+      },
+      {
+       "name": "proteinüri",
+       "type": "laboratuvar"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 21"
+    },
+    {
+     "text": "Eklampsiye ilerlemede kan basıncı daha da yükselir, böbrek fonksiyonu bozulur; konvülsiyonlar ve koma gelişir.",
+     "label": "Eklampsi",
+     "entities": [
+      {
+       "name": "nöbet",
+       "type": "belirti"
+      },
+      {
+       "name": "koma",
+       "type": "bulgu"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 32"
+    }
+   ],
+   "diagnosis": [
+    {
+     "text": "Tanı gebeliğin 20. haftasından sonra ortaya çıkan hipertansiyon (≥140/90 mmHg) ile proteinüri ya da uç organ disfonksiyonu bulgularının birlikteliğine dayanır.",
+     "label": "Tanı ölçütü (referans)",
+     "entities": [
+      {
+       "name": "kan basıncı ölçümü",
+       "type": "test"
+      },
+      {
+       "name": "proteinüri",
+       "type": "laboratuvar"
+      }
+     ],
+     "source": "Williams Obstetrics (referans; derste sayısal ölçüt yok)",
+     "refs": [
+      2
+     ]
+    }
+   ],
+   "treatment": [
+    {
+     "text": "En etkili tedavi acil doğumdur.",
+     "key": true,
+     "entities": [
+      {
+       "name": "doğum",
+       "type": "tedavi",
+       "qualifier": "acil"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 33"
+    },
+    {
+     "text": "Doğum kararı, erken doğumun riskleri ile preeklampsinin sürmesinin riskleri arasında dengelenerek verilir.",
+     "label": "Karar dengesi",
+     "source": "k1-67-gebelik-hastaliklari · s. 33"
+    },
+    {
+     "text": "Eklampsi nöbetlerinin önlenmesi ve tedavisinde ilk seçenek magnezyum sülfattır.",
+     "label": "Nöbet profilaksisi (referans)",
+     "entities": [
+      {
+       "name": "magnezyum sülfat",
+       "type": "ilac"
+      }
+     ],
+     "source": "Williams Obstetrics (referans; derste yok)",
+     "refs": [
+      2
+     ]
+    },
+    {
+     "text": "Doğum sonrası proteinüri ve hipertansiyon genellikle 1–2 hafta içinde kaybolur; çoğu olguda kalıcı sekel kalmaz.",
+     "label": "Prognoz",
+     "source": "k1-67-gebelik-hastaliklari · s. 33"
+    }
+   ],
+   "complications": [
+    {
+     "text": "Eklampside en sık organ yetmezliği böbrek ve karaciğerdir.",
+     "label": "Organ yetmezliği",
+     "key": true,
+     "entities": [
+      {
+       "name": "böbrek yetmezliği",
+       "type": "hastalik"
+      },
+      {
+       "name": "karaciğer yetmezliği",
+       "type": "hastalik"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 32"
+    },
+    {
+     "text": "Şiddetli preeklampsi olgularının ~%10'unda HELLP sendromu gelişir (mikroanjiyopatik hemolitik anemi, karaciğer enzimlerinde yükselme, trombositopeni); bazı olgularda DIC eşlik eder.",
+     "label": "HELLP",
+     "key": true,
+     "entities": [
+      {
+       "name": "HELLP sendromu",
+       "type": "hastalik"
+      },
+      {
+       "name": "yaygın damar içi pıhtılaşma",
+       "type": "hastalik"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 28"
+    },
+    {
+     "text": "Sistemik sonuçlar: hipertansiyon, hiperkoagülabilite ve organ hasarı.",
+     "label": "Sistemik",
+     "source": "k1-67-gebelik-hastaliklari · s. 26"
+    },
+    {
+     "text": "Erken tanı ve tedavi eklampsi ve maternal ölüm riskini belirgin azaltmıştır.",
+     "label": "Erken tanının önemi",
+     "source": "k1-67-gebelik-hastaliklari · s. 21"
+    }
+   ],
+   "epidemiology": [
+    {
+     "text": "Gebelerin %3–5'inde görülür; ilk gebelikte daha sıktır.",
+     "key": true,
+     "entities": [
+      {
+       "name": "ilk gebelik",
+       "type": "risk_faktoru"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 20"
+    }
+   ],
+   "lecture": [
+    {
+     "text": "Ders patogenezi zincir halinde verir: spiral arterlerde yetersiz yeniden şekillenme → plasental hipoksi → sFlt-1/endoglin artışı → endotel disfonksiyonu → hipertansiyon, hiperkoagülabilite, organ hasarı.",
+     "entities": [
+      {
+       "name": "endotel disfonksiyonu",
+       "type": "mekanizma"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 22–27"
+    },
+    {
+     "text": "Plasental morfoloji: artmış enfarktlar, retroplasental kanama, sinsityal düğüm artışı; desidual damarlarda fibrinoid nekroz ve akut aterozis.",
+     "entities": [
+      {
+       "name": "akut aterozis",
+       "type": "histopatoloji"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 29–30"
+    }
+   ]
+  },
+  "references": [
+   {
+    "label": "Ders: Gebelik Hastalıkları (Kurul 1, Tıbbi Patoloji) — ders işçisi 20261011-e1c2ffa86e"
+   },
+   {
+    "label": "Robbins & Kumar Basic Pathology (11. baskı) — dersin kaynakçası"
+   },
+   {
+    "label": "Williams Obstetrics — Ectopic Pregnancy / Hypertensive Disorders bölümleri (derste olmayan madde)"
+   }
+  ],
+  "relatedLectures": [
+   "Kurul 1",
+   "k1-67-gebelik-hastaliklari"
+  ],
+  "schemaVersion": 2,
+  "curation": {
+   "method": "ders notu (onaylı ders işçisi çıktısı) + ders kaynakçası; madde/varlık modeli; referans maddeler source alanında işaretli",
+   "kaynak": "ders işçisi is_id 20261011-e1c2ffa86e · ders k1-67-gebelik-hastaliklari",
+   "at": "2026-10-12T00:00:00Z"
+  },
   "isCustom": false,
   "createdAt": "2026-10-11T02:40:43Z",
-  "updatedAt": "2026-10-11T02:40:43Z"
+  "aliases": [],
+  "altNames": [],
+  "icd_code": null,
+  "updatedAt": "2026-10-11T23:39:48Z"
  },
  {
   "id": "s13-primer-hiperparatiroidizm",
@@ -42297,48 +43097,334 @@
  {
   "id": "s13-torch-enfeksiyonlari",
   "name": "TORCH enfeksiyonları",
-  "latinName": "TORCH enfeksiyonları",
-  "icd_code": null,
+  "latinName": "TORCH infections",
+  "kind": "kavram",
   "category": "Tıbbi Patoloji",
-  "etiology": [
-   "Sifiliz, tüberküloz, listeriozis, toksoplazmozis, kandidiyazis ve kızamıkçık, sitomegalovirüs, herpes simpleks gibi virüslerin plasental villitise ve fetüsü etkileyen transplasental enfeksiyonlara ned"
-  ],
-  "morphology_pathology": [
-   "Karakteristik histopatolojik doku değişiklikleri ve hücresel proliferasyon gözlenir."
-  ],
-  "symptoms_clinical": [
-   "TORCH enfeksiyonları tablosuna özgü akut veya kronik klinik semptomlar."
-  ],
-  "pathognomonic_features": [
-   ""
-  ],
-  "diagnostic_methods": [
-   "Laboratuvar incelemeleri ve klinik patolojik değerlendirme"
-  ],
-  "imaging_findings": [
-   "Radyolojik görüntüleme ve ultrasonografik/kesitsel analiz"
-  ],
-  "treatment": [
-   "Standart medikal protokol ve klinik rehber kılavuzları"
-  ],
-  "physiology_pathophysiology": [
-   "Hücresel düzeyde fizyopatolojik disfonksiyon mekanizması."
-  ],
-  "epidemiology": "Toplumda yaş ve cinsiyet değişkenliklerine göre dağılım gösterir.",
-  "source_notes_summary": "",
-  "relatedLectures": [
-   "Kurul 1"
-  ],
-  "verifiedSources": [
+  "hallmarks": [
    {
-    "source": "Amfi Notu",
-    "verified": true,
-    "verifiedAt": "2026-10-11T02:40:43Z"
+    "text": "Hematojen (transplasental) yolla anne kanından plasentaya yayılan enfeksiyon grubu",
+    "entities": [
+     {
+      "name": "transplasental bulaş",
+      "type": "mekanizma"
+     }
+    ]
+   },
+   {
+    "text": "Koryon villuslarında kronik inflamatuvar infiltrasyon: ==kronik villit==",
+    "entities": [
+     {
+      "name": "kronik villit",
+      "type": "histopatoloji"
+     }
+    ]
+   },
+   {
+    "text": "Fetüste ensefalit ve koryo-retinit; uzun dönemde zihinsel gerilik ve kalp anomalileri",
+    "entities": [
+     {
+      "name": "ensefalit",
+      "type": "hastalik"
+     },
+     {
+      "name": "korioretinit",
+      "type": "hastalik"
+     },
+     {
+      "name": "zihinsel gerilik",
+      "type": "bulgu"
+     }
+    ]
    }
   ],
+  "sections": {
+   "definition": [
+    {
+     "text": "TORCH, anne kanından plasentaya hematojen (transplasental) yolla yayılan ve fetüsü etkileyebilen enfeksiyonların kısaltmasıdır: Toxoplasma, Others (diğerleri), Rubella, Cytomegalovirus, Herpes simplex virüs.",
+     "key": true,
+     "entities": [
+      {
+       "name": "transplasental bulaş",
+       "type": "mekanizma"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 9"
+    }
+   ],
+   "etiology": [
+    {
+     "text": "T: Toxoplasma gondii (protozoon); az pişmiş et veya kedi dışkısı ile bulaşabilir.",
+     "label": "T",
+     "entities": [
+      {
+       "name": "Toxoplasma gondii",
+       "type": "patojen"
+      },
+      {
+       "name": "az pişmiş et",
+       "type": "risk_faktoru"
+      },
+      {
+       "name": "kedi dışkısı",
+       "type": "risk_faktoru"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 9"
+    },
+    {
+     "text": "O (Others): Treponema pallidum (sifiliz), Mycobacterium tuberculosis ve Listeria monocytogenes.",
+     "label": "O",
+     "key": true,
+     "entities": [
+      {
+       "name": "Treponema pallidum",
+       "type": "patojen"
+      },
+      {
+       "name": "Mycobacterium tuberculosis",
+       "type": "patojen"
+      },
+      {
+       "name": "Listeria monocytogenes",
+       "type": "patojen"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 9"
+    },
+    {
+     "text": "Derste \"Others\" grubunda ayrıca suçiçeği (Varicella zoster), hepatit B, HIV, parvovirüs B19 ve enterovirüsler de sayılır.",
+     "label": "O (geniş liste)",
+     "entities": [
+      {
+       "name": "Varicella zoster virüsü",
+       "type": "patojen"
+      },
+      {
+       "name": "hepatit B virüsü",
+       "type": "patojen"
+      },
+      {
+       "name": "HIV",
+       "type": "patojen"
+      },
+      {
+       "name": "parvovirüs B19",
+       "type": "patojen"
+      },
+      {
+       "name": "enterovirüs",
+       "type": "patojen"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 9"
+    },
+    {
+     "text": "R: Rubella (kızamıkçık) virüsü; öksürük veya hapşırma ile yayılır.",
+     "label": "R",
+     "entities": [
+      {
+       "name": "rubella virüsü",
+       "type": "patojen"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 9"
+    },
+    {
+     "text": "C: Sitomegalovirüs (CMV); tükürük ve vücut sıvıları yoluyla yayılan bir herpes virüsüdür.",
+     "label": "C",
+     "entities": [
+      {
+       "name": "sitomegalovirüs",
+       "type": "patojen"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 9"
+    },
+    {
+     "text": "H: Herpes simpleks virüs (HSV); genellikle vajinal doğum sırasında bebeğe bulaşır.",
+     "label": "H",
+     "entities": [
+      {
+       "name": "herpes simpleks virüs",
+       "type": "patojen"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 9"
+    }
+   ],
+   "physiology": [
+    {
+     "text": "Etkenler anne kanından plasentaya geçer (hematojen/transplasental yayılım) ve plasentadan fetüse yayılarak organ hasarı oluşturabilir.",
+     "entities": [
+      {
+       "name": "transplasental bulaş",
+       "type": "mekanizma"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 9–10"
+    },
+    {
+     "text": "Plasentaya enfeksiyonun diğer yolu olan asendan yol en sık görülendir ve neredeyse her zaman bakteriyeldir; TORCH grubu ise hematojen yolu temsil eder.",
+     "label": "Yol karşılaştırması",
+     "entities": [
+      {
+       "name": "asendan enfeksiyon",
+       "type": "mekanizma"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 5–6, 9"
+    }
+   ],
+   "pathology": [
+    {
+     "text": "Koryon villuslarında kronik inflamatuvar infiltrasyon gelişir; bu tablo \"kronik villit\" olarak adlandırılır.",
+     "label": "Plasenta",
+     "key": true,
+     "entities": [
+      {
+       "name": "kronik villit",
+       "type": "histopatoloji"
+      },
+      {
+       "name": "koryon villusu",
+       "type": "anatomi"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 10"
+    }
+   ],
+   "symptoms": [
+    {
+     "text": "Fetüse yayılımda ensefalit gelişebilir.",
+     "label": "Fetüs",
+     "entities": [
+      {
+       "name": "ensefalit",
+       "type": "hastalik",
+       "qualifier": "fetal"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 10"
+    },
+    {
+     "text": "Fetüste koryo-retinit (korioretinit) ve diğer organ hasarları görülebilir.",
+     "label": "Fetüs",
+     "entities": [
+      {
+       "name": "korioretinit",
+       "type": "hastalik",
+       "qualifier": "fetal"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 10"
+    }
+   ],
+   "pathognomonic": [
+    {
+     "text": "Asendan enfeksiyondan ayrım: asendan enfeksiyon koryo-amniyonda akut nötrofilik inflamasyon (akut koryo-amniyonit) yaparken TORCH grubu villuslarda kronik villit oluşturur.",
+     "label": "Asendan enfeksiyondan ayrım",
+     "key": true,
+     "entities": [
+      {
+       "name": "akut koryoamniyonit",
+       "type": "hastalik"
+      },
+      {
+       "name": "kronik villit",
+       "type": "histopatoloji"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 7, 10"
+    }
+   ],
+   "complications": [
+    {
+     "text": "Uzun dönem sekeller: zihinsel gerilik, kalp anomalileri ve diğer konjenital malformasyonlar.",
+     "label": "Uzun dönem sekeller",
+     "key": true,
+     "entities": [
+      {
+       "name": "zihinsel gerilik",
+       "type": "bulgu"
+      },
+      {
+       "name": "konjenital kalp hastalığı",
+       "type": "hastalik"
+      },
+      {
+       "name": "konjenital malformasyon",
+       "type": "hastalik"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 10"
+    },
+    {
+     "text": "Plasental enfeksiyonların klinik sonuçları erken membran rüptürü, preterm doğum ve fetüs enfeksiyonudur.",
+     "label": "Gebelik sonuçları",
+     "entities": [
+      {
+       "name": "erken membran rüptürü",
+       "type": "bulgu"
+      },
+      {
+       "name": "preterm doğum",
+       "type": "bulgu"
+      },
+      {
+       "name": "fetal enfeksiyon",
+       "type": "hastalik"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 5"
+    }
+   ],
+   "lecture": [
+    {
+     "text": "Derste klasik TORCH grubu Toxoplasma gondii, Others (Treponema pallidum, Mycobacterium tuberculosis, Listeria monocytogenes), rubella virüsü, CMV ve HSV olarak verilir; sifiliz hem \"Others\" listesinde hem tablodaki \"O\" satırında geçer.",
+     "entities": [
+      {
+       "name": "TORCH enfeksiyonları",
+       "type": "hastalik"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 9"
+    },
+    {
+     "text": "Plasental etki kronik villit; fetal etkiler ensefalit, koryo-retinit ve diğer organ hasarları; uzun dönem sekeller zihinsel gerilik, kalp anomalileri ve diğer konjenital malformasyonlardır.",
+     "entities": [
+      {
+       "name": "kronik villit",
+       "type": "histopatoloji"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 10"
+    }
+   ]
+  },
+  "references": [
+   {
+    "label": "Ders: Gebelik Hastalıkları (Kurul 1, Tıbbi Patoloji) — ders işçisi 20261011-e1c2ffa86e"
+   },
+   {
+    "label": "Robbins & Kumar Basic Pathology (11. baskı) — dersin kaynakçası"
+   }
+  ],
+  "relatedLectures": [
+   "Kurul 1",
+   "k1-67-gebelik-hastaliklari"
+  ],
+  "schemaVersion": 2,
+  "curation": {
+   "method": "ders notu (onaylı ders işçisi çıktısı) + ders kaynakçası; madde/varlık modeli; referans maddeler source alanında işaretli",
+   "kaynak": "ders işçisi is_id 20261011-e1c2ffa86e · ders k1-67-gebelik-hastaliklari",
+   "at": "2026-10-12T00:00:00Z"
+  },
   "isCustom": false,
   "createdAt": "2026-10-11T02:40:43Z",
-  "updatedAt": "2026-10-11T02:40:43Z"
+  "aliases": [],
+  "altNames": [],
+  "icd_code": null,
+  "updatedAt": "2026-10-11T23:39:48Z"
  },
  {
   "id": "s13-trombositopeni",
@@ -43283,5 +44369,2385 @@
   "isCustom": false,
   "createdAt": "2026-10-11T02:40:43Z",
   "updatedAt": "2026-10-11T02:40:43Z"
+ },
+ {
+  "id": "akut-koryoamniyonit",
+  "name": "Akut koryoamniyonit",
+  "latinName": "Chorioamnionitis acuta",
+  "kind": "patolojik_surec",
+  "category": "Tıbbi Patoloji",
+  "hallmarks": [
+   {
+    "text": "Asendan (doğum kanalından yukarı doğru) bakteriyel enfeksiyonun plasentadaki karşılığıdır",
+    "entities": [
+     {
+      "name": "asendan enfeksiyon",
+      "type": "mekanizma"
+     }
+    ]
+   },
+   {
+    "text": "Koryo-amniyonda ==nötrofilik infiltrasyon==, ödem ve konjesyon",
+    "entities": [
+     {
+      "name": "nötrofilik infiltrasyon",
+      "type": "histopatoloji",
+      "qualifier": "koryo-amniyon"
+     }
+    ]
+   },
+   {
+    "text": "Erken membran yırtılması ve erken (preterm) doğumun sık nedeni",
+    "entities": [
+     {
+      "name": "erken membran rüptürü",
+      "type": "bulgu"
+     },
+     {
+      "name": "preterm doğum",
+      "type": "bulgu"
+     }
+    ]
+   }
+  ],
+  "sections": {
+   "definition": [
+    {
+     "text": "Doğum kanalından yukarı doğru (asendan) yayılan enfeksiyonun koryo-amniyon zarlarında oluşturduğu akut inflamasyondur; morfolojik tanı adı \"akut koryo-amniyonit\"tir.",
+     "entities": [
+      {
+       "name": "koryo-amniyon",
+       "type": "anatomi"
+      },
+      {
+       "name": "asendan enfeksiyon",
+       "type": "mekanizma"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 7"
+    }
+   ],
+   "etiology": [
+    {
+     "text": "Plasentaya enfeksiyonun iki yayılım yolundan (asendan ve hematojen/transplasental) ==asendan yol en sık== görülenidir.",
+     "label": "Yayılım yolu",
+     "key": true,
+     "entities": [
+      {
+       "name": "asendan enfeksiyon",
+       "type": "mekanizma"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 5–6"
+    },
+    {
+     "text": "Etken neredeyse her zaman bakteriyeldir ve genellikle polimikrobiyaldir.",
+     "label": "Etken",
+     "key": true,
+     "entities": [
+      {
+       "name": "bakteriyel enfeksiyon",
+       "type": "patojen",
+       "qualifier": "polimikrobiyal"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 6"
+    },
+    {
+     "text": "Bakteriler vajinal floradan ve enterik bakterilerden kaynaklanır.",
+     "label": "Kaynak flora",
+     "entities": [
+      {
+       "name": "vajinal flora bakterileri",
+       "type": "patojen"
+      },
+      {
+       "name": "enterik bakteriler",
+       "type": "patojen"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 6"
+    }
+   ],
+   "physiology": [
+    {
+     "text": "Enfeksiyon doğum kanalından yukarı doğru ilerleyerek koryo-amniyona ulaşır ve burada akut inflamasyon başlatır.",
+     "entities": [
+      {
+       "name": "koryo-amniyon",
+       "type": "anatomi"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 6–7"
+    },
+    {
+     "text": "Enfeksiyon koryo-amniyondan göbek kordonuna ve villuslara ilerleyebilir; kordon damarlarına yayılım funisitis oluşturur.",
+     "label": "Yayılım",
+     "entities": [
+      {
+       "name": "funisitis",
+       "type": "hastalik"
+      },
+      {
+       "name": "göbek kordonu",
+       "type": "anatomi"
+      },
+      {
+       "name": "koryon villusu",
+       "type": "anatomi"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 7–8"
+    }
+   ],
+   "pathology": [
+    {
+     "text": "Koryo-amniyonda nötrofilik infiltrasyon görülür.",
+     "label": "Mikroskopi",
+     "key": true,
+     "entities": [
+      {
+       "name": "nötrofilik infiltrasyon",
+       "type": "histopatoloji",
+       "qualifier": "koryo-amniyon"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 7"
+    },
+    {
+     "text": "Nötrofilik infiltrasyona koryo-amniyonda ödem ve konjesyon eşlik eder.",
+     "label": "Eşlik eden değişiklikler",
+     "entities": [
+      {
+       "name": "ödem",
+       "type": "histopatoloji"
+      },
+      {
+       "name": "konjesyon",
+       "type": "histopatoloji"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 7"
+    }
+   ],
+   "symptoms": [
+    {
+     "text": "Asendan enfeksiyon sıklıkla erken membran yırtılmasına (rüptürüne) neden olur.",
+     "key": true,
+     "entities": [
+      {
+       "name": "erken membran rüptürü",
+       "type": "bulgu"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 6"
+    },
+    {
+     "text": "Preterm (erken) doğuma neden olur; preterm doğum gebeliğin 20. ile 37. haftaları arasında gerçekleşen doğumdur.",
+     "entities": [
+      {
+       "name": "preterm doğum",
+       "type": "bulgu"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 5–6"
+    }
+   ],
+   "pathognomonic": [
+    {
+     "text": "TORCH (hematojen) enfeksiyonlarından ayrım: asendan enfeksiyon koryo-amniyonda akut nötrofilik inflamasyon yaparken TORCH grubu koryon villuslarında kronik inflamatuvar infiltrasyon (kronik villit) oluşturur.",
+     "label": "TORCH'tan ayrım",
+     "key": true,
+     "entities": [
+      {
+       "name": "TORCH enfeksiyonları",
+       "type": "hastalik"
+      },
+      {
+       "name": "kronik villit",
+       "type": "histopatoloji"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 7, 10"
+    }
+   ],
+   "complications": [
+    {
+     "text": "Plasental enfeksiyonun klinik sonuçlarından biri fetüs enfeksiyonudur.",
+     "label": "Fetüs",
+     "entities": [
+      {
+       "name": "fetal enfeksiyon",
+       "type": "hastalik"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 5"
+    },
+    {
+     "text": "Göbek kordonuna yayılım funisitise yol açar; funisitis fetal inflamasyon belirtecidir ve neonatal sepsis riskini gösterir.",
+     "label": "Funisitis",
+     "entities": [
+      {
+       "name": "funisitis",
+       "type": "hastalik"
+      },
+      {
+       "name": "sepsis",
+       "type": "hastalik",
+       "qualifier": "neonatal"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 8"
+    },
+    {
+     "text": "Plasenta ve gebelikle ilişkili hastalıklar anne morbidite ve mortalitesine, fetüs ve yenidoğan morbidite ve mortalitesine katkıda bulunur.",
+     "label": "Anne ve yenidoğan",
+     "source": "k1-67-gebelik-hastaliklari · s. 4"
+    }
+   ],
+   "lecture": [
+    {
+     "text": "Ders plasental enfeksiyonları yayılım yoluna göre ikiye ayırır: asendan yol en sık, neredeyse her zaman bakteriyel ve genellikle polimikrobiyaldir (vajinal flora, enterik bakteriler).",
+     "entities": [
+      {
+       "name": "asendan enfeksiyon",
+       "type": "mekanizma"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 5–6"
+    },
+    {
+     "text": "Koryo-amniyonda nötrofilik infiltrasyon, ödem ve konjesyon \"akut koryo-amniyonit\" olarak tanımlanır; yayılım göbek kordonu ve villuslara ilerleyebilir.",
+     "entities": [
+      {
+       "name": "nötrofilik infiltrasyon",
+       "type": "histopatoloji"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 7"
+    }
+   ]
+  },
+  "references": [
+   {
+    "label": "Ders: Gebelik Hastalıkları (Kurul 1, Tıbbi Patoloji) — ders işçisi 20261011-e1c2ffa86e"
+   },
+   {
+    "label": "Robbins & Kumar Basic Pathology (11. baskı) — dersin kaynakçası"
+   }
+  ],
+  "relatedLectures": [
+   "Kurul 1",
+   "k1-67-gebelik-hastaliklari"
+  ],
+  "schemaVersion": 2,
+  "curation": {
+   "method": "ders notu (onaylı ders işçisi çıktısı) + ders kaynakçası; madde/varlık modeli; referans maddeler source alanında işaretli",
+   "kaynak": "ders işçisi is_id 20261011-e1c2ffa86e · ders k1-67-gebelik-hastaliklari",
+   "at": "2026-10-12T00:00:00Z"
+  },
+  "isCustom": false,
+  "aliases": [],
+  "altNames": [],
+  "createdAt": "2026-10-11T23:39:48Z",
+  "updatedAt": "2026-10-11T23:39:48Z"
+ },
+ {
+  "id": "funisitis",
+  "name": "Funisitis",
+  "latinName": "Funisitis",
+  "kind": "patolojik_surec",
+  "category": "Tıbbi Patoloji",
+  "hallmarks": [
+   {
+    "text": "Göbek kordonunun ==akut vasküliti==",
+    "entities": [
+     {
+      "name": "akut vaskülit",
+      "type": "histopatoloji",
+      "qualifier": "göbek kordonu"
+     }
+    ]
+   },
+   {
+    "text": "Koryo-amniyon enfeksiyonunun kordon damarlarına yayılmasıyla oluşur",
+    "entities": [
+     {
+      "name": "akut koryoamniyonit",
+      "type": "hastalik"
+     }
+    ]
+   },
+   {
+    "text": "Fetal inflamasyon belirteci; neonatal sepsis riski",
+    "entities": [
+     {
+      "name": "sepsis",
+      "type": "hastalik",
+      "qualifier": "neonatal"
+     }
+    ]
+   }
+  ],
+  "sections": {
+   "definition": [
+    {
+     "text": "Funisitis, göbek kordonunun akut vaskülitidir.",
+     "key": true,
+     "entities": [
+      {
+       "name": "göbek kordonu",
+       "type": "anatomi"
+      },
+      {
+       "name": "akut vaskülit",
+       "type": "histopatoloji"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 8"
+    }
+   ],
+   "etiology": [
+    {
+     "text": "Nedeni koryo-amniyon enfeksiyonunun kordon damarlarına yayılmasıdır.",
+     "key": true,
+     "entities": [
+      {
+       "name": "akut koryoamniyonit",
+       "type": "hastalik"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 8"
+    },
+    {
+     "text": "Zemindeki koryo-amniyon enfeksiyonu asendan yolla gelişir; etken neredeyse her zaman bakteriyel ve genellikle polimikrobiyaldir (vajinal flora ve enterik bakteriler).",
+     "label": "Zemin enfeksiyon",
+     "entities": [
+      {
+       "name": "asendan enfeksiyon",
+       "type": "mekanizma"
+      },
+      {
+       "name": "vajinal flora bakterileri",
+       "type": "patojen"
+      },
+      {
+       "name": "enterik bakteriler",
+       "type": "patojen"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 6–8"
+    }
+   ],
+   "physiology": [
+    {
+     "text": "Asendan enfeksiyon koryo-amniyondan göbek kordonuna ve villuslara ilerleyebilir; kordon damarlarının tutulumu funisitis tablosunu oluşturur.",
+     "label": "Yayılım",
+     "entities": [
+      {
+       "name": "göbek kordonu",
+       "type": "anatomi"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 7–8"
+    },
+    {
+     "text": "Kordon damarlarındaki akut inflamasyon fetal inflamasyonun belirteci olarak kabul edilir.",
+     "entities": [
+      {
+       "name": "fetal inflamasyon",
+       "type": "mekanizma"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 8"
+    }
+   ],
+   "pathology": [
+    {
+     "text": "Göbek kordonu damarlarında akut vaskülit görülür.",
+     "label": "Mikroskopi",
+     "key": true,
+     "entities": [
+      {
+       "name": "akut vaskülit",
+       "type": "histopatoloji",
+       "qualifier": "kordon damarları"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 8"
+    },
+    {
+     "text": "Akut koryo-amniyonit zemininde gelişir; koryo-amniyonda nötrofilik infiltrasyon, ödem ve konjesyon eşlik eder.",
+     "label": "Eşlik eden lezyon",
+     "entities": [
+      {
+       "name": "nötrofilik infiltrasyon",
+       "type": "histopatoloji",
+       "qualifier": "koryo-amniyon"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 7–8"
+    }
+   ],
+   "pathognomonic": [
+    {
+     "text": "Omfalit-omfaloflebit doğumdan sonra bebeğin göbek kalıntısında gelişen enfeksiyonlardır; funisitis ise koryo-amniyon enfeksiyonunun kordon damarlarına yayılmasıyla oluşan akut vaskülittir.",
+     "label": "Omfalitten ayrım",
+     "key": true,
+     "entities": [
+      {
+       "name": "omfalit",
+       "type": "hastalik"
+      },
+      {
+       "name": "omfaloflebit",
+       "type": "hastalik"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 8"
+    }
+   ],
+   "complications": [
+    {
+     "text": "Fetal inflamasyon belirtecidir.",
+     "label": "Klinik önemi",
+     "key": true,
+     "entities": [
+      {
+       "name": "fetal inflamasyon",
+       "type": "mekanizma"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 8"
+    },
+    {
+     "text": "Neonatal sepsis riskini gösterir.",
+     "label": "Neonatal sepsis",
+     "key": true,
+     "entities": [
+      {
+       "name": "sepsis",
+       "type": "hastalik",
+       "qualifier": "neonatal"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 8"
+    },
+    {
+     "text": "Zemindeki asendan enfeksiyon sıklıkla erken membran yırtılmasına ve erken doğuma neden olur.",
+     "label": "Gebelik sonucu",
+     "entities": [
+      {
+       "name": "erken membran rüptürü",
+       "type": "bulgu"
+      },
+      {
+       "name": "preterm doğum",
+       "type": "bulgu"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 6"
+    }
+   ],
+   "lecture": [
+    {
+     "text": "Ders funisitisi göbek kordonunun akut vasküliti olarak tanımlar; nedeni koryo-amniyon enfeksiyonunun kordon damarlarına yayılması, klinik önemi fetal inflamasyon belirteci olması ve neonatal sepsis riskidir.",
+     "entities": [
+      {
+       "name": "funisitis",
+       "type": "hastalik"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 8"
+    }
+   ]
+  },
+  "references": [
+   {
+    "label": "Ders: Gebelik Hastalıkları (Kurul 1, Tıbbi Patoloji) — ders işçisi 20261011-e1c2ffa86e"
+   },
+   {
+    "label": "Robbins & Kumar Basic Pathology (11. baskı) — dersin kaynakçası"
+   }
+  ],
+  "relatedLectures": [
+   "Kurul 1",
+   "k1-67-gebelik-hastaliklari"
+  ],
+  "schemaVersion": 2,
+  "curation": {
+   "method": "ders notu (onaylı ders işçisi çıktısı) + ders kaynakçası; madde/varlık modeli; referans maddeler source alanında işaretli",
+   "kaynak": "ders işçisi is_id 20261011-e1c2ffa86e · ders k1-67-gebelik-hastaliklari",
+   "at": "2026-10-12T00:00:00Z"
+  },
+  "isCustom": false,
+  "aliases": [],
+  "altNames": [],
+  "createdAt": "2026-10-11T23:39:48Z",
+  "updatedAt": "2026-10-11T23:39:48Z"
+ },
+ {
+  "id": "gebelik-koryokarsinomu",
+  "name": "Gebelik koryokarsinomu",
+  "latinName": "Choriocarcinoma gestationalis",
+  "kind": "hastalik",
+  "category": "Tıbbi Patoloji",
+  "hallmarks": [
+   {
+    "text": "Çok agresif malign trofoblastik tümör; ==koryonik villus yok==",
+    "entities": [
+     {
+      "name": "koryonik villus yokluğu",
+      "type": "histopatoloji"
+     }
+    ]
+   },
+   {
+    "text": "Anaplastik sitotrofoblast + sinsityotrofoblastlardan solid, hemorajik-nekrotik tümör",
+    "entities": [
+     {
+      "name": "sitotrofoblast",
+      "type": "hucre",
+      "qualifier": "anaplastik"
+     },
+     {
+      "name": "sinsityotrofoblast",
+      "type": "hucre"
+     }
+    ]
+   },
+   {
+    "text": "Hızla yükselen hCG; tanıda genellikle metastaz (akciğer ~%50, vajina %30–40)",
+    "entities": [
+     {
+      "name": "hCG",
+      "type": "laboratuvar",
+      "qualifier": "hızla yükselen"
+     },
+     {
+      "name": "akciğer metastazı",
+      "type": "hastalik"
+     }
+    ]
+   },
+   {
+    "text": "Gestasyonel form kemoterapiye son derece duyarlı: uzak metastazda bile neredeyse %100 kür",
+    "entities": [
+     {
+      "name": "kemoterapi",
+      "type": "tedavi"
+     }
+    ]
+   }
+  ],
+  "sections": {
+   "definition": [
+    {
+     "text": "Gebelik koryonik epitelinden köken alan çok agresif malign trofoblastik tümördür.",
+     "key": true,
+     "entities": [
+      {
+       "name": "koryonik epitel",
+       "type": "anatomi"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 55"
+    },
+    {
+     "text": "Nadir olarak gonad içi totipotent hücrelerden (ovaryum/testis) köken alan gonadal koryokarsinom da vardır.",
+     "label": "Gonadal form",
+     "entities": [
+      {
+       "name": "gonadal koryokarsinom",
+       "type": "hastalik"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 55"
+    }
+   ],
+   "etiology": [
+    {
+     "text": "Kaynak gebeliklerin ~%50'si tam hidatiform mol, ~%25'i önceki düşükler, ~%22'si normal gebelik; kalanı ektopik gebelik sonrasıdır.",
+     "label": "Kaynak gebelik",
+     "key": true,
+     "entities": [
+      {
+       "name": "tam hidatiform mol",
+       "type": "risk_faktoru"
+      },
+      {
+       "name": "düşük",
+       "type": "risk_faktoru"
+      },
+      {
+       "name": "ektopik gebelik",
+       "type": "risk_faktoru"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 56"
+    },
+    {
+     "text": "Tam molde sonraki koryokarsinom riski %2.5'tir; ders kısmi molü koryokarsinomla ilişkili saymaz (Tablo 17.5: nadir).",
+     "label": "Mol sonrası risk",
+     "entities": [
+      {
+       "name": "tam hidatiform mol",
+       "type": "risk_faktoru"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 39, 42"
+    }
+   ],
+   "physiology": [
+    {
+     "text": "Erken yayılır; yayılım hematojendir, lenfatik yayılım nadirdir.",
+     "label": "Yayılım",
+     "key": true,
+     "entities": [
+      {
+       "name": "hematojen yayılım",
+       "type": "mekanizma"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 57, 60"
+    }
+   ],
+   "pathology": [
+    {
+     "text": "Hemorajik, nekrotik uterus kitlesi; canlı tümör minimal olabilir, bazen yalnız metastatik odaklarda bulunur.",
+     "label": "Makroskopi",
+     "entities": [
+      {
+       "name": "hemorajik nekrotik kitle",
+       "type": "histopatoloji"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 58"
+    },
+    {
+     "text": "Koryonik villus yoktur; anaplastik sitotrofoblastlar ve sinsityotrofoblastlardan oluşan solid tümör.",
+     "label": "Mikroskopi",
+     "key": true,
+     "entities": [
+      {
+       "name": "koryonik villus yokluğu",
+       "type": "histopatoloji"
+      },
+      {
+       "name": "sitotrofoblast",
+       "type": "hucre",
+       "qualifier": "anaplastik"
+      },
+      {
+       "name": "sinsityotrofoblast",
+       "type": "hucre"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 58"
+    },
+    {
+     "text": "Bol, bazen anormal mitozlar; neoplastik sitotrofoblastlar ve çok çekirdekli sinsityotrofoblastlar birlikte görülür.",
+     "label": "Mitoz",
+     "entities": [
+      {
+       "name": "atipik mitoz",
+       "type": "histopatoloji"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 58–59"
+    }
+   ],
+   "symptoms": [
+    {
+     "text": "Çoğu olguda uterus büyümesi belirgin değildir.",
+     "source": "k1-67-gebelik-hastaliklari · s. 57"
+    },
+    {
+     "text": "Kanlı, kahverengi vajinal akıntı.",
+     "key": true,
+     "entities": [
+      {
+       "name": "vajinal akıntı",
+       "type": "belirti",
+       "qualifier": "kanlı, kahverengi"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 57"
+    },
+    {
+     "text": "Serum ve idrarda hızla yükselen hCG titreleri.",
+     "key": true,
+     "entities": [
+      {
+       "name": "hCG",
+       "type": "laboratuvar",
+       "qualifier": "hızla yükselen"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 57"
+    }
+   ],
+   "diagnosis": [
+    {
+     "text": "Serum ve idrar hCG titreleri hızla yükselir; tanı anında genellikle metastaz mevcuttur.",
+     "entities": [
+      {
+       "name": "serum hCG",
+       "type": "test"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 57"
+    }
+   ],
+   "pathognomonic": [
+    {
+     "text": "İnvaziv molden ayrım: koryokarsinomda koryonik villus yoktur ve uzak metastaz yapar; invaziv mol hidropik villusları korur ve uzak metastaz kapasitesi yoktur.",
+     "label": "İnvaziv molden ayrım",
+     "key": true,
+     "entities": [
+      {
+       "name": "invaziv mol",
+       "type": "hastalik"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 51, 58"
+    }
+   ],
+   "treatment": [
+    {
+     "text": "Plasental (gestasyonel) koryokarsinom kemoterapiye son derece duyarlıdır; uzak metastaz olsa bile neredeyse %100 kür sağlanır.",
+     "label": "Gestasyonel",
+     "key": true,
+     "entities": [
+      {
+       "name": "kemoterapi",
+       "type": "tedavi"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 60"
+    },
+    {
+     "text": "Gonadal (ovaryan/testiküler) koryokarsinom kemoterapiye daha dirençlidir; prognozu daha kötüdür.",
+     "label": "Gonadal",
+     "key": true,
+     "entities": [
+      {
+       "name": "gonadal koryokarsinom",
+       "type": "hastalik"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 60"
+    },
+    {
+     "text": "Kemoterapide metotreksat ve/veya daktinomisin temelli rejimler kullanılır.",
+     "label": "İlaçlar (referans)",
+     "entities": [
+      {
+       "name": "metotreksat",
+       "type": "ilac"
+      },
+      {
+       "name": "daktinomisin",
+       "type": "ilac"
+      }
+     ],
+     "source": "Katzung (referans; derste ilaç adı yok)",
+     "refs": [
+      2
+     ]
+    }
+   ],
+   "complications": [
+    {
+     "text": "En sık metastaz yerleri: akciğer (~%50), vajina (%30–40), beyin, karaciğer, böbrek.",
+     "label": "Metastaz",
+     "key": true,
+     "entities": [
+      {
+       "name": "akciğer metastazı",
+       "type": "hastalik"
+      },
+      {
+       "name": "vajina",
+       "type": "anatomi"
+      },
+      {
+       "name": "beyin",
+       "type": "anatomi"
+      },
+      {
+       "name": "karaciğer",
+       "type": "anatomi"
+      },
+      {
+       "name": "böbrek",
+       "type": "anatomi"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 60"
+    }
+   ],
+   "epidemiology": [
+    {
+     "text": "~1 / 20.000–30.000 gebelikte görülür.",
+     "key": true,
+     "source": "k1-67-gebelik-hastaliklari · s. 56"
+    }
+   ],
+   "lecture": [
+    {
+     "text": "Ders gestasyonel koryokarsinomun kemoterapiye son derece duyarlı olduğunu (uzak metastazda bile neredeyse %100 kür), gonadal formun ise daha dirençli ve kötü prognozlu olduğunu vurgular.",
+     "source": "k1-67-gebelik-hastaliklari · s. 60"
+    },
+    {
+     "text": "Slaytlardaki \"koriokarsinom\" yazımı \"koryokarsinom\" olarak birleştirilmiştir.",
+     "source": "k1-67-gebelik-hastaliklari · s. 39, 56"
+    }
+   ]
+  },
+  "references": [
+   {
+    "label": "Ders: Gebelik Hastalıkları (Kurul 1, Tıbbi Patoloji) — ders işçisi 20261011-e1c2ffa86e"
+   },
+   {
+    "label": "Robbins & Kumar Basic Pathology (11. baskı) — dersin kaynakçası"
+   },
+   {
+    "label": "Katzung Basic & Clinical Pharmacology — Cancer Chemotherapy (derste olmayan madde)"
+   }
+  ],
+  "relatedLectures": [
+   "Kurul 1",
+   "k1-67-gebelik-hastaliklari"
+  ],
+  "schemaVersion": 2,
+  "curation": {
+   "method": "ders notu (onaylı ders işçisi çıktısı) + ders kaynakçası; madde/varlık modeli; referans maddeler source alanında işaretli",
+   "kaynak": "ders işçisi is_id 20261011-e1c2ffa86e · ders k1-67-gebelik-hastaliklari",
+   "at": "2026-10-12T00:00:00Z"
+  },
+  "isCustom": false,
+  "aliases": [],
+  "altNames": [],
+  "createdAt": "2026-10-11T23:39:48Z",
+  "updatedAt": "2026-10-11T23:39:48Z"
+ },
+ {
+  "id": "hellp-sendromu",
+  "name": "HELLP sendromu",
+  "latinName": "HELLP syndrome",
+  "kind": "hastalik",
+  "category": "Tıbbi Patoloji",
+  "hallmarks": [
+   {
+    "text": "Mikroanjiyopatik ==hemoliz== + karaciğer enzimlerinde yükselme + ==trombositopeni==",
+    "entities": [
+     {
+      "name": "mikroanjiyopatik hemolitik anemi",
+      "type": "laboratuvar"
+     },
+     {
+      "name": "karaciğer enzim yüksekliği",
+      "type": "laboratuvar"
+     },
+     {
+      "name": "trombositopeni",
+      "type": "laboratuvar"
+     }
+    ]
+   },
+   {
+    "text": "Şiddetli preeklampsi olgularının ~%10'unda",
+    "entities": [
+     {
+      "name": "preeklampsi",
+      "type": "hastalik",
+      "qualifier": "şiddetli"
+     }
+    ]
+   },
+   {
+    "text": "Bazı olgularda yaygın damar içi pıhtılaşma (DIC)",
+    "entities": [
+     {
+      "name": "yaygın damar içi pıhtılaşma",
+      "type": "hastalik"
+     }
+    ]
+   }
+  ],
+  "sections": {
+   "definition": [
+    {
+     "text": "Gebeliğin son dönemlerinde veya doğum sonrasında ortaya çıkan; hemoliz, karaciğer enzimlerinin yükselmesi ve trombosit sayısının düşmesiyle karakterize gebelik komplikasyonudur.",
+     "key": true,
+     "source": "k1-67-gebelik-hastaliklari · s. 28"
+    },
+    {
+     "text": "Preeklampsinin (gebelik zehirlenmesi) en ağır formlarından biridir.",
+     "entities": [
+      {
+       "name": "preeklampsi",
+       "type": "hastalik"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 28"
+    }
+   ],
+   "etiology": [
+    {
+     "text": "Şiddetli preeklampsi zemininde gelişir.",
+     "key": true,
+     "entities": [
+      {
+       "name": "preeklampsi",
+       "type": "risk_faktoru",
+       "qualifier": "şiddetli"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 28"
+    }
+   ],
+   "physiology": [
+    {
+     "text": "Zemindeki preeklampside endotel disfonksiyonu uç organ mikroanjiyopatisi ve hiperkoagülabiliteye yol açar; HELLP bu sistemik tablonun ağır ucunda yer alır.",
+     "label": "Zemin mekanizma",
+     "entities": [
+      {
+       "name": "endotel disfonksiyonu",
+       "type": "mekanizma"
+      },
+      {
+       "name": "mikroanjiyopati",
+       "type": "mekanizma"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 26–28"
+    },
+    {
+     "text": "Trombositopeni trombosit tüketimine bağlıdır.",
+     "label": "Trombositopeni",
+     "key": true,
+     "entities": [
+      {
+       "name": "trombosit tüketimi",
+       "type": "mekanizma"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 28"
+    }
+   ],
+   "symptoms": [
+    {
+     "text": "Mikroanjiyopatik hemolitik anemi.",
+     "label": "H",
+     "key": true,
+     "entities": [
+      {
+       "name": "mikroanjiyopatik hemolitik anemi",
+       "type": "laboratuvar"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 28"
+    },
+    {
+     "text": "Karaciğer enzimlerinde yükselme.",
+     "label": "EL",
+     "key": true,
+     "entities": [
+      {
+       "name": "karaciğer enzim yüksekliği",
+       "type": "laboratuvar"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 28"
+    },
+    {
+     "text": "Trombositopeni (trombosit tüketimi).",
+     "label": "LP",
+     "key": true,
+     "entities": [
+      {
+       "name": "trombositopeni",
+       "type": "laboratuvar"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 28"
+    },
+    {
+     "text": "Zemindeki preeklampsiye ait tipik üçlü: hipertansiyon, ödem ve proteinüri.",
+     "label": "Preeklampsi zemini",
+     "entities": [
+      {
+       "name": "hipertansiyon",
+       "type": "bulgu"
+      },
+      {
+       "name": "ödem",
+       "type": "bulgu"
+      },
+      {
+       "name": "proteinüri",
+       "type": "laboratuvar"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 21"
+    }
+   ],
+   "diagnosis": [
+    {
+     "text": "Tanı üç laboratuvar bileşeninin birlikteliğine dayanır: hemoliz, karaciğer enzimlerinde yükselme ve düşük trombosit sayısı.",
+     "entities": [
+      {
+       "name": "tam kan sayımı",
+       "type": "test"
+      },
+      {
+       "name": "karaciğer fonksiyon testleri",
+       "type": "test"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 28"
+    }
+   ],
+   "treatment": [
+    {
+     "text": "Derste HELLP'e özgü tedavi verilmez; HELLP preeklampsinin en ağır formlarından biri olduğundan preeklampsi için belirtilen en etkili tedavi olan acil doğum burada da esastır.",
+     "label": "Doğum (referans)",
+     "entities": [
+      {
+       "name": "doğum",
+       "type": "tedavi",
+       "qualifier": "acil"
+      }
+     ],
+     "source": "Ders s. 28 ve 33 + Williams Obstetrics (referans)",
+     "refs": [
+      2
+     ]
+    }
+   ],
+   "complications": [
+    {
+     "text": "Bazı olgularda yaygın damar içi pıhtılaşma (DIC) gelişir.",
+     "label": "DIC",
+     "key": true,
+     "entities": [
+      {
+       "name": "yaygın damar içi pıhtılaşma",
+       "type": "hastalik"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 28"
+    },
+    {
+     "text": "Preeklampsi/eklampside en sık organ yetmezliği böbrek ve karaciğerdir.",
+     "label": "Organ yetmezliği",
+     "entities": [
+      {
+       "name": "böbrek yetmezliği",
+       "type": "hastalik"
+      },
+      {
+       "name": "karaciğer yetmezliği",
+       "type": "hastalik"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 32"
+    }
+   ],
+   "epidemiology": [
+    {
+     "text": "Şiddetli preeklampsi olgularının ~%10'unda görülür.",
+     "key": true,
+     "source": "k1-67-gebelik-hastaliklari · s. 28"
+    }
+   ],
+   "lecture": [
+    {
+     "text": "Ders HELLP sendromunu preeklampsi bölümünde, şiddetli preeklampsinin ~%10'unda görülen mikroanjiyopatik hemolitik anemi, karaciğer enzim yüksekliği ve trombositopeni (trombosit tüketimi) üçlüsü olarak verir; bazı olgularda DIC eşlik eder.",
+     "entities": [
+      {
+       "name": "HELLP sendromu",
+       "type": "hastalik"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 28"
+    }
+   ]
+  },
+  "references": [
+   {
+    "label": "Ders: Gebelik Hastalıkları (Kurul 1, Tıbbi Patoloji) — ders işçisi 20261011-e1c2ffa86e"
+   },
+   {
+    "label": "Robbins & Kumar Basic Pathology (11. baskı) — dersin kaynakçası"
+   },
+   {
+    "label": "Williams Obstetrics — Ectopic Pregnancy / Hypertensive Disorders bölümleri (derste olmayan madde)"
+   }
+  ],
+  "relatedLectures": [
+   "Kurul 1",
+   "k1-67-gebelik-hastaliklari"
+  ],
+  "schemaVersion": 2,
+  "curation": {
+   "method": "ders notu (onaylı ders işçisi çıktısı) + ders kaynakçası; madde/varlık modeli; referans maddeler source alanında işaretli",
+   "kaynak": "ders işçisi is_id 20261011-e1c2ffa86e · ders k1-67-gebelik-hastaliklari",
+   "at": "2026-10-12T00:00:00Z"
+  },
+  "isCustom": false,
+  "aliases": [],
+  "altNames": [],
+  "createdAt": "2026-10-11T23:39:48Z",
+  "updatedAt": "2026-10-11T23:39:48Z"
+ },
+ {
+  "id": "invaziv-mol",
+  "name": "İnvaziv mol",
+  "latinName": "Mola hydatidosa invasiva",
+  "kind": "hastalik",
+  "category": "Tıbbi Patoloji",
+  "hallmarks": [
+   {
+    "text": "Lokal agresif tam hidatiform mol; ==hidropik villusları korur==",
+    "entities": [
+     {
+      "name": "hidropik villus",
+      "type": "histopatoloji"
+     }
+    ]
+   },
+   {
+    "text": "Miyometriyuma derin invazyon; uterus duvarını delebilir",
+    "entities": [
+     {
+      "name": "miyometriyum",
+      "type": "anatomi"
+     }
+    ]
+   },
+   {
+    "text": "Uzak metastaz kapasitesi yok; akciğer/beyne embolize villuslar genellikle spontan geriler",
+    "entities": [
+     {
+      "name": "villus embolisi",
+      "type": "histopatoloji",
+      "qualifier": "akciğer, beyin"
+     }
+    ]
+   }
+  ],
+  "sections": {
+   "definition": [
+    {
+     "text": "Lokal agresif tam hidatiform moldür; dersteki \"kalıcı trofoblastik hastalık (invaziv mol)\" tablosudur.",
+     "key": true,
+     "entities": [
+      {
+       "name": "tam hidatiform mol",
+       "type": "hastalik"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 36, 51"
+    }
+   ],
+   "etiology": [
+    {
+     "text": "Hidatiform molden gelişir; hem tam hem kısmi molde kalıcı mol hastalığı riski artmıştır.",
+     "entities": [
+      {
+       "name": "tam hidatiform mol",
+       "type": "risk_faktoru"
+      },
+      {
+       "name": "kısmi hidatiform mol",
+       "type": "risk_faktoru"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 36, 42"
+    }
+   ],
+   "physiology": [
+    {
+     "text": "Hidropik villuslar korunur ancak miyometriyuma derin penetre olur; koryokarsinom gibi uzak metastaz yapma kapasitesi yoktur.",
+     "label": "Lokal agresiflik",
+     "key": true,
+     "entities": [
+      {
+       "name": "miyometriyum",
+       "type": "anatomi"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 51"
+    },
+    {
+     "text": "Hidropik villuslar akciğer veya beyne embolize olabilir; bu odaklar genellikle büyümez ve spontan geriler.",
+     "label": "Emboli",
+     "key": true,
+     "entities": [
+      {
+       "name": "villus embolisi",
+       "type": "histopatoloji",
+       "qualifier": "akciğer, beyin"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 52"
+    }
+   ],
+   "pathology": [
+    {
+     "text": "Hidropik villuslar miyometriyuma derin penetre olur ve uterus duvarını delebilir.",
+     "label": "Morfoloji",
+     "key": true,
+     "entities": [
+      {
+       "name": "hidropik villus",
+       "type": "histopatoloji"
+      },
+      {
+       "name": "miyometriyal invazyon",
+       "type": "histopatoloji"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 52"
+    },
+    {
+     "text": "Villus epitelinde sitotrofoblast ve sinsityotrofoblast proliferasyonu görülür.",
+     "label": "Mikroskopi",
+     "entities": [
+      {
+       "name": "sitotrofoblast",
+       "type": "hucre"
+      },
+      {
+       "name": "sinsityotrofoblast",
+       "type": "hucre"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 52"
+    }
+   ],
+   "symptoms": [
+    {
+     "text": "Önemli uterin kanamaya yol açabilir.",
+     "key": true,
+     "entities": [
+      {
+       "name": "uterin kanama",
+       "type": "belirti"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 52"
+    },
+    {
+     "text": "Mol sonrası serum hCG düzeyinin yüksek kalması kalıcı trofoblastik hastalığı düşündürür ve ek tedavi gerektirir.",
+     "label": "hCG",
+     "entities": [
+      {
+       "name": "hCG",
+       "type": "laboratuvar",
+       "qualifier": "persistan yüksek"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 45, 53"
+    }
+   ],
+   "pathognomonic": [
+    {
+     "text": "Koryokarsinomdan ayrım: invaziv molde hidropik villuslar korunur ve uzak metastaz kapasitesi yoktur; koryokarsinomda koryonik villus yoktur ve tanı anında genellikle metastaz vardır.",
+     "label": "Koryokarsinomdan ayrım",
+     "key": true,
+     "entities": [
+      {
+       "name": "gebelik koryokarsinomu",
+       "type": "hastalik"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 51, 57–58"
+    }
+   ],
+   "diagnosis": [
+    {
+     "text": "Mol sonrası 6–12 aylık seri hCG takibi kalıcı trofoblastik hastalığı saptamayı amaçlar.",
+     "entities": [
+      {
+       "name": "serum hCG",
+       "type": "test",
+       "qualifier": "seri takip"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 45"
+    }
+   ],
+   "treatment": [
+    {
+     "text": "Miyometriyumun derin invazyonu nedeniyle cerrahi eksizyon zordur; küretaj yetersiz kalabilir.",
+     "label": "Cerrahi/küretaj",
+     "entities": [
+      {
+       "name": "uterus küretajı",
+       "type": "tedavi"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 53"
+    },
+    {
+     "text": "Serum hCG yüksek kalırsa ek tedavi gerekir; çoğu vakada kemoterapi ile tam iyileşme sağlanır.",
+     "label": "Kemoterapi",
+     "key": true,
+     "entities": [
+      {
+       "name": "kemoterapi",
+       "type": "tedavi"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 53"
+    }
+   ],
+   "complications": [
+    {
+     "text": "Uterus duvarının delinmesi ve önemli uterin kanama.",
+     "entities": [
+      {
+       "name": "uterus perforasyonu",
+       "type": "bulgu"
+      },
+      {
+       "name": "uterin kanama",
+       "type": "belirti"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 52"
+    },
+    {
+     "text": "Hidropik villusların akciğer/beyne embolizasyonu.",
+     "entities": [
+      {
+       "name": "villus embolisi",
+       "type": "histopatoloji"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 52"
+    }
+   ],
+   "lecture": [
+    {
+     "text": "Ders invaziv molü lokal agresif tam hidatiform mol olarak tanımlar: hidropik villuslar korunur, derin miyometriyal invazyon olur, uzak metastaz kapasitesi yoktur; embolize villuslar genellikle büyümez ve spontan geriler.",
+     "source": "k1-67-gebelik-hastaliklari · s. 51–53"
+    }
+   ]
+  },
+  "references": [
+   {
+    "label": "Ders: Gebelik Hastalıkları (Kurul 1, Tıbbi Patoloji) — ders işçisi 20261011-e1c2ffa86e"
+   },
+   {
+    "label": "Robbins & Kumar Basic Pathology (11. baskı) — dersin kaynakçası"
+   }
+  ],
+  "relatedLectures": [
+   "Kurul 1",
+   "k1-67-gebelik-hastaliklari"
+  ],
+  "schemaVersion": 2,
+  "curation": {
+   "method": "ders notu (onaylı ders işçisi çıktısı) + ders kaynakçası; madde/varlık modeli; referans maddeler source alanında işaretli",
+   "kaynak": "ders işçisi is_id 20261011-e1c2ffa86e · ders k1-67-gebelik-hastaliklari",
+   "at": "2026-10-12T00:00:00Z"
+  },
+  "isCustom": false,
+  "aliases": [],
+  "altNames": [],
+  "createdAt": "2026-10-11T23:39:48Z",
+  "updatedAt": "2026-10-11T23:39:48Z"
+ },
+ {
+  "id": "kismi-hidatiform-mol",
+  "name": "Kısmi (parsiyel) hidatiform mol",
+  "latinName": "Mola hydatidosa partialis",
+  "kind": "hastalik",
+  "category": "Tıbbi Patoloji",
+  "hallmarks": [
+   {
+    "text": "Neredeyse her zaman ==triploid== (örn. 69,XXY); normal ovum + iki sperm",
+    "entities": [
+     {
+      "name": "triploidi",
+      "type": "gen_protein"
+     },
+     {
+      "name": "69,XXY",
+      "type": "gen_protein"
+     }
+    ]
+   },
+   {
+    "text": "Villöz ödem yalnız bazı villuslarda; trofoblast proliferasyonu fokal ve hafif",
+    "entities": [
+     {
+      "name": "trofoblast proliferasyonu",
+      "type": "histopatoloji",
+      "qualifier": "fokal, hafif"
+     }
+    ]
+   },
+   {
+    "text": "Fetal parçalar ve villuslarda fetal kırmızı kan hücreleri sık",
+    "entities": [
+     {
+      "name": "fetal eritrosit",
+      "type": "histopatoloji",
+      "qualifier": "villus içinde"
+     }
+    ]
+   }
+  ],
+  "sections": {
+   "definition": [
+    {
+     "text": "Erken embriyo oluşumunun olabildiği, bazı normal villusların korunduğu ve fetal parçaların sık görüldüğü hidatiform mol tipidir.",
+     "key": true,
+     "entities": [
+      {
+       "name": "hidatiform mol",
+       "type": "hastalik"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 38"
+    }
+   ],
+   "etiology": [
+    {
+     "text": "Normal bir ovumun iki sperm tarafından döllenmesiyle (dispermi) ya da ovum + diploid sperm ile oluşur.",
+     "label": "Döllenme",
+     "key": true,
+     "entities": [
+      {
+       "name": "dispermi",
+       "type": "mekanizma"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 40–41"
+    },
+    {
+     "text": "Sonuç, paternal genlerin baskın olduğu triploid karyotiptir (69,XXY, 69,XXX veya 69,XYY); her iki mol tipi paternal genetik materyal fazlalığı ile ilişkilidir.",
+     "label": "Karyotip",
+     "key": true,
+     "entities": [
+      {
+       "name": "triploidi",
+       "type": "gen_protein"
+      },
+      {
+       "name": "paternal genom",
+       "type": "mekanizma"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 40–41"
+    }
+   ],
+   "physiology": [
+    {
+     "text": "Trofoblast proliferasyonu daha az olduğundan hCG yüksek ya da normal sınırlar içinde olabilir.",
+     "entities": [
+      {
+       "name": "hCG",
+       "type": "laboratuvar"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 44"
+    }
+   ],
+   "pathology": [
+    {
+     "text": "Villöz ödem yalnızca bazı villuslardadır; bazı normal villuslar mevcuttur.",
+     "label": "Villuslar",
+     "key": true,
+     "entities": [
+      {
+       "name": "villöz ödem",
+       "type": "histopatoloji",
+       "qualifier": "fokal"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 38, 48"
+    },
+    {
+     "text": "Trofoblast proliferasyonu fokal ve hafiftir.",
+     "label": "Trofoblast",
+     "entities": [
+      {
+       "name": "trofoblast proliferasyonu",
+       "type": "histopatoloji",
+       "qualifier": "fokal, hafif"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 48"
+    },
+    {
+     "text": "Vakaların çoğunda plasenta villuslarında fetal kırmızı kan hücreleri, bazen tamamen oluşmuş fetüs bulunur.",
+     "label": "Fetal elemanlar",
+     "key": true,
+     "entities": [
+      {
+       "name": "fetal eritrosit",
+       "type": "histopatoloji",
+       "qualifier": "villus içinde"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 50"
+    },
+    {
+     "text": "Makroskopide fetal parçalar sık görülür.",
+     "label": "Makroskopi",
+     "source": "k1-67-gebelik-hastaliklari · s. 46"
+    }
+   ],
+   "symptoms": [
+    {
+     "text": "hCG yüksek veya normal sınırlar içinde olabilir (serum hCG tam mole göre daha az yüksek; doku hCG +).",
+     "label": "hCG",
+     "key": true,
+     "entities": [
+      {
+       "name": "hCG",
+       "type": "laboratuvar",
+       "qualifier": "yüksek veya normal"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 39, 44"
+    },
+    {
+     "text": "Fetal kalp sesleri genellikle yoktur.",
+     "entities": [
+      {
+       "name": "fetal kalp sesi yokluğu",
+       "type": "bulgu"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 44"
+    }
+   ],
+   "pathognomonic": [
+    {
+     "text": "Fetal elemanların (villuslarda fetal kırmızı kan hücreleri, fetal parçalar) varlığı tam molden ayrımda yardımcıdır.",
+     "label": "Tam molden ayrım",
+     "key": true,
+     "entities": [
+      {
+       "name": "tam hidatiform mol",
+       "type": "hastalik"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 50"
+    },
+    {
+     "text": "Tablo 17.5'e göre tam molden farkı: triploid karyotip, bazı villuslarda ödem, fokal-hafif trofoblast proliferasyonu, daha az yüksek serum hCG, doku hCG +.",
+     "label": "Tablo 17.5",
+     "entities": [
+      {
+       "name": "tam hidatiform mol",
+       "type": "hastalik"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 39"
+    }
+   ],
+   "diagnosis": [
+    {
+     "text": "Hidatiform molde erken gebelikte tanı pelvik ultrason ve hCG düzeyleriyle konur; kısmi molde hCG yüksek veya normal sınırlarda olabilir.",
+     "entities": [
+      {
+       "name": "pelvik ultrasonografi",
+       "type": "test"
+      },
+      {
+       "name": "serum hCG",
+       "type": "test"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 36, 44"
+    }
+   ],
+   "treatment": [
+    {
+     "text": "Çoğu mol uterus küretajı ile eksize edilir.",
+     "key": true,
+     "entities": [
+      {
+       "name": "uterus küretajı",
+       "type": "tedavi"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 45"
+    },
+    {
+     "text": "Küretaj sonrası 6–12 ay boyunca seri hCG ölçümüyle gebelik dışı düşük seviyelere düşüş doğrulanır ve kalıcı trofoblastik hastalık araştırılır.",
+     "label": "İzlem",
+     "entities": [
+      {
+       "name": "serum hCG",
+       "type": "test",
+       "qualifier": "seri takip"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 45"
+    }
+   ],
+   "complications": [
+    {
+     "text": "Kalıcı mol hastalığı riski artmıştır.",
+     "label": "Kalıcı hastalık",
+     "key": true,
+     "entities": [
+      {
+       "name": "invaziv mol",
+       "type": "hastalik"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 42"
+    },
+    {
+     "text": "Ders: kısmi mol koryokarsinom ile ilişkili değildir (s. 42); Tablo 17.5 ise sonraki koryokarsinom riskini \"nadir\" olarak verir.",
+     "label": "Koryokarsinom riski",
+     "key": true,
+     "entities": [
+      {
+       "name": "gebelik koryokarsinomu",
+       "type": "hastalik"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 39, 42"
+    }
+   ],
+   "epidemiology": [
+    {
+     "text": "Hidatiform mol her yaşta gelişebilir; risk ergenlik döneminde ve 40–50 yaş arası kadınlarda artar.",
+     "label": "Yaş",
+     "entities": [
+      {
+       "name": "ergenlik",
+       "type": "risk_faktoru"
+      },
+      {
+       "name": "40 yaş üstü",
+       "type": "risk_faktoru"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 37"
+    },
+    {
+     "text": "Önceki mol öyküsü sonraki gebeliklerde mol riskini artırır.",
+     "entities": [
+      {
+       "name": "önceki mol öyküsü",
+       "type": "risk_faktoru"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 43"
+    }
+   ],
+   "lecture": [
+    {
+     "text": "Ders kısmi molü tam molle karşılaştırmalı anlatır: erken embriyo oluşabilir, fetal parçalar sık, bazı normal villuslar mevcut ve karyotip neredeyse her zaman triploiddir (örn. 69,XXY).",
+     "source": "k1-67-gebelik-hastaliklari · s. 38"
+    }
+   ]
+  },
+  "references": [
+   {
+    "label": "Ders: Gebelik Hastalıkları (Kurul 1, Tıbbi Patoloji) — ders işçisi 20261011-e1c2ffa86e"
+   },
+   {
+    "label": "Robbins & Kumar Basic Pathology (11. baskı) — dersin kaynakçası"
+   }
+  ],
+  "relatedLectures": [
+   "Kurul 1",
+   "k1-67-gebelik-hastaliklari"
+  ],
+  "schemaVersion": 2,
+  "curation": {
+   "method": "ders notu (onaylı ders işçisi çıktısı) + ders kaynakçası; madde/varlık modeli; referans maddeler source alanında işaretli",
+   "kaynak": "ders işçisi is_id 20261011-e1c2ffa86e · ders k1-67-gebelik-hastaliklari",
+   "at": "2026-10-12T00:00:00Z"
+  },
+  "isCustom": false,
+  "aliases": [],
+  "altNames": [],
+  "createdAt": "2026-10-11T23:39:48Z",
+  "updatedAt": "2026-10-11T23:39:48Z"
+ },
+ {
+  "id": "plasental-bolge-trofoblastik-tumoru-pstt",
+  "name": "Plasental bölge trofoblastik tümörü (PSTT)",
+  "latinName": "Placental site trophoblastic tumor",
+  "kind": "hastalik",
+  "category": "Tıbbi Patoloji",
+  "hallmarks": [
+   {
+    "text": "Ekstravillöz (ara) trofoblastlardan köken alır",
+    "entities": [
+     {
+      "name": "ara trofoblast",
+      "type": "hucre"
+     }
+    ]
+   },
+   {
+    "text": "Az hCG (serum hCG düşük), bol ==hPL==",
+    "entities": [
+     {
+      "name": "hCG",
+      "type": "laboratuvar",
+      "qualifier": "düşük"
+     },
+     {
+      "name": "insan plasental laktojen",
+      "type": "gen_protein"
+     }
+    ]
+   },
+   {
+    "text": "Diğer trofoblastik tümörlere göre kemoterapiye daha az duyarlı",
+    "entities": [
+     {
+      "name": "kemoterapi",
+      "type": "tedavi"
+     }
+    ]
+   }
+  ],
+  "sections": {
+   "definition": [
+    {
+     "text": "Ekstravillöz (ara) trofoblastlardan köken alan gestasyonel trofoblastik neoplazidir; gestasyonel trofoblastik neoplazilerin <%2'sini oluşturur.",
+     "key": true,
+     "entities": [
+      {
+       "name": "ara trofoblast",
+       "type": "hucre"
+      },
+      {
+       "name": "gebelik trofoblastik hastalığı",
+       "type": "hastalik"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 35, 62"
+    }
+   ],
+   "etiology": [
+    {
+     "text": "Köken hücre olan ekstravillöz trofoblastlar normalde sitotrofoblasttan çoğalır ve maternal desidua ile miyometriyumu istila eder.",
+     "label": "Köken hücre",
+     "key": true,
+     "entities": [
+      {
+       "name": "ara trofoblast",
+       "type": "hucre"
+      },
+      {
+       "name": "desidua",
+       "type": "anatomi"
+      },
+      {
+       "name": "miyometriyum",
+       "type": "anatomi"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 62"
+    },
+    {
+     "text": "Genellikle XX karyotipli diploid tümörlerdir.",
+     "label": "Genetik",
+     "entities": [
+      {
+       "name": "46,XX",
+       "type": "gen_protein"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 64"
+    }
+   ],
+   "physiology": [
+    {
+     "text": "Tümör hücreleri az miktarda hCG ürettiğinden serum hCG genelde düşüktür; insan plasental laktojen (hPL) ise önemli miktarda üretilir.",
+     "label": "Hormon üretimi",
+     "key": true,
+     "entities": [
+      {
+       "name": "hCG",
+       "type": "laboratuvar",
+       "qualifier": "düşük"
+      },
+      {
+       "name": "insan plasental laktojen",
+       "type": "gen_protein"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 63"
+    }
+   ],
+   "pathology": [
+    {
+     "text": "Hücreler sitotrofoblast ve sinsityotrofoblastla örtüşen bir fenotip gösterir.",
+     "label": "Hücresel özellik",
+     "entities": [
+      {
+       "name": "sitotrofoblast",
+       "type": "hucre"
+      },
+      {
+       "name": "sinsityotrofoblast",
+       "type": "hucre"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 63"
+    },
+    {
+     "text": "Prognozu belirleyen başlıca özellik tümörün endometriyum ve miyometriyumla sınırlı olup olmamasıdır.",
+     "label": "Yayılım",
+     "entities": [
+      {
+       "name": "endometriyum",
+       "type": "anatomi"
+      },
+      {
+       "name": "miyometriyum",
+       "type": "anatomi"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 64"
+    }
+   ],
+   "symptoms": [
+    {
+     "text": "Çoğu gebelikten birkaç ay sonra ortaya çıkar.",
+     "label": "Zamanlama",
+     "source": "k1-67-gebelik-hastaliklari · s. 64"
+    },
+    {
+     "text": "Genellikle yavaş seyirlidir.",
+     "label": "Seyir",
+     "source": "k1-67-gebelik-hastaliklari · s. 64"
+    }
+   ],
+   "pathognomonic": [
+    {
+     "text": "Diğer gebelik trofoblastik hastalıklarından farklı olarak serum hCG genelde düşük, hPL üretimi belirgindir.",
+     "label": "Hormon profili",
+     "key": true,
+     "entities": [
+      {
+       "name": "insan plasental laktojen",
+       "type": "gen_protein"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 63"
+    },
+    {
+     "text": "Koryokarsinomdan ayrım: koryokarsinomda hızla yükselen hCG ve kemoterapiye son derece duyarlılık vardır; PSTT'de serum hCG düşük, kemoterapiye duyarlılık daha azdır.",
+     "label": "Koryokarsinomdan ayrım",
+     "entities": [
+      {
+       "name": "gebelik koryokarsinomu",
+       "type": "hastalik"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 57, 60, 63–64"
+    }
+   ],
+   "treatment": [
+    {
+     "text": "Diğer trofoblastik tümörlere göre kemoterapiye daha az duyarlıdır.",
+     "key": true,
+     "entities": [
+      {
+       "name": "kemoterapi",
+       "type": "tedavi"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 64"
+    }
+   ],
+   "complications": [
+    {
+     "text": "Tümör endometriyum ve miyometriyumla sınırlıysa prognoz genellikle iyidir; uterus dışına yayılırsa prognoz kötüdür.",
+     "label": "Prognoz",
+     "key": true,
+     "source": "k1-67-gebelik-hastaliklari · s. 64"
+    }
+   ],
+   "epidemiology": [
+    {
+     "text": "Gestasyonel trofoblastik neoplazilerin <%2'sidir.",
+     "source": "k1-67-gebelik-hastaliklari · s. 62"
+    }
+   ],
+   "lecture": [
+    {
+     "text": "Ders PSTT'yi ara trofoblast kökeni, düşük serum hCG ile önemli hPL üretimi, XX diploid karyotip, gebelikten aylar sonra yavaş seyir ve kemoterapiye görece direnç ile tanımlar.",
+     "source": "k1-67-gebelik-hastaliklari · s. 62–64"
+    }
+   ]
+  },
+  "references": [
+   {
+    "label": "Ders: Gebelik Hastalıkları (Kurul 1, Tıbbi Patoloji) — ders işçisi 20261011-e1c2ffa86e"
+   },
+   {
+    "label": "Robbins & Kumar Basic Pathology (11. baskı) — dersin kaynakçası"
+   }
+  ],
+  "relatedLectures": [
+   "Kurul 1",
+   "k1-67-gebelik-hastaliklari"
+  ],
+  "schemaVersion": 2,
+  "curation": {
+   "method": "ders notu (onaylı ders işçisi çıktısı) + ders kaynakçası; madde/varlık modeli; referans maddeler source alanında işaretli",
+   "kaynak": "ders işçisi is_id 20261011-e1c2ffa86e · ders k1-67-gebelik-hastaliklari",
+   "at": "2026-10-12T00:00:00Z"
+  },
+  "isCustom": false,
+  "aliases": [],
+  "altNames": [],
+  "createdAt": "2026-10-11T23:39:48Z",
+  "updatedAt": "2026-10-11T23:39:48Z"
+ },
+ {
+  "id": "tam-hidatiform-mol",
+  "name": "Tam hidatiform mol",
+  "latinName": "Mola hydatidosa completa",
+  "kind": "hastalik",
+  "category": "Tıbbi Patoloji",
+  "hallmarks": [
+   {
+    "text": "Diploid (46,XX; nadiren 46,XY); tüm genetik içerik babadan",
+    "entities": [
+     {
+      "name": "46,XX",
+      "type": "gen_protein"
+     },
+     {
+      "name": "paternal genom",
+      "type": "mekanizma"
+     }
+    ]
+   },
+   {
+    "text": "Tüm koryonik villuslarda hidropik şişme; diffüz, villusu çepeçevre saran trofoblast proliferasyonu",
+    "entities": [
+     {
+      "name": "hidropik villus",
+      "type": "histopatoloji"
+     },
+     {
+      "name": "trofoblast proliferasyonu",
+      "type": "histopatoloji",
+      "qualifier": "diffüz"
+     }
+    ]
+   },
+   {
+    "text": "hCG gebelik yaşına göre çok yüksek; ==100.000 IU/L== düzeyine ulaşabilir",
+    "entities": [
+     {
+      "name": "hCG",
+      "type": "laboratuvar",
+      "qualifier": "çok yüksek"
+     }
+    ]
+   },
+   {
+    "text": "Sonraki koryokarsinom riski %2.5",
+    "entities": [
+     {
+      "name": "gebelik koryokarsinomu",
+      "type": "hastalik"
+     }
+    ]
+   }
+  ],
+  "sections": {
+   "definition": [
+    {
+     "text": "Embriyogenezle uyumlu olmayan, tüm koryonik villusların anormal olduğu ve fetal parçaların nadir görüldüğü hidatiform mol tipidir.",
+     "key": true,
+     "entities": [
+      {
+       "name": "hidatiform mol",
+       "type": "hastalik"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 38"
+    },
+    {
+     "text": "Gebelik trofoblastik hastalıklarındandır; bu grubun ortak özelliği villöz veya trofoblastik plasenta dokusunun proliferasyonu ve değişen düzeylerde hCG üretimidir.",
+     "label": "Grup",
+     "entities": [
+      {
+       "name": "gebelik trofoblastik hastalığı",
+       "type": "hastalik"
+      },
+      {
+       "name": "hCG",
+       "type": "gen_protein"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 35"
+    }
+   ],
+   "etiology": [
+    {
+     "text": "En sık, kromozomları duplikasyona uğrayan tek bir spermin boş bir yumurtayı döllemesiyle oluşur (homozigot tam mol, 46,XX).",
+     "label": "Homozigot tam mol",
+     "key": true,
+     "entities": [
+      {
+       "name": "boş ovum",
+       "type": "mekanizma"
+      },
+      {
+       "name": "46,XX",
+       "type": "gen_protein"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 41"
+    },
+    {
+     "text": "Daha az sıklıkla iki spermin boş bir yumurtayı döllemesiyle (dispermi) oluşur (heterozigot tam mol, 46,XX veya 46,XY).",
+     "label": "Heterozigot tam mol",
+     "entities": [
+      {
+       "name": "dispermi",
+       "type": "mekanizma"
+      },
+      {
+       "name": "46,XY",
+       "type": "gen_protein"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 40–41"
+    },
+    {
+     "text": "Tüm genetik içerik babadandır; sonuçta yalnız baba kromozomlarını içeren diploid hücreler oluşur. Her iki mol tipi paternal genetik materyal fazlalığı ile ilişkilidir.",
+     "label": "Paternal genom",
+     "key": true,
+     "entities": [
+      {
+       "name": "paternal genom",
+       "type": "mekanizma"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 40"
+    }
+   ],
+   "physiology": [
+    {
+     "text": "Trofoblast proliferasyonu diffüz olduğundan doku hCG'si ++++, serum hCG gebelik haftasına göre yüksektir.",
+     "entities": [
+      {
+       "name": "hCG",
+       "type": "laboratuvar",
+       "qualifier": "yüksek"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 39, 44"
+    },
+    {
+     "text": "Kalıcı trofoblastik hastalık (invaziv mol) ve koryokarsinom gelişim riski taşır; invaziv mol lokal agresif tam hidatiform moldür.",
+     "label": "Önemi",
+     "entities": [
+      {
+       "name": "invaziv mol",
+       "type": "hastalik"
+      },
+      {
+       "name": "gebelik koryokarsinomu",
+       "type": "hastalik"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 36, 51"
+    }
+   ],
+   "pathology": [
+    {
+     "text": "İleri vakalarda uterin kavite ince duvarlı, saydam kistik yapılarla doludur; hassas, kırılgan kitle çok sayıda şişmiş (hidropik) villustan oluşur.",
+     "label": "Makroskopi",
+     "entities": [
+      {
+       "name": "hidropik villus",
+       "type": "histopatoloji"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 46–47"
+    },
+    {
+     "text": "Koryonik villuslarda hidropik şişme; gevşek, miksomatöz, ödemli stroma ve yetersiz vaskülarizasyon.",
+     "label": "Mikroskopi",
+     "key": true,
+     "entities": [
+      {
+       "name": "hidropik villus",
+       "type": "histopatoloji"
+      },
+      {
+       "name": "miksomatöz stroma",
+       "type": "histopatoloji"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 48"
+    },
+    {
+     "text": "Koryonik epitelde sitotrofoblast ve sinsityotrofoblast proliferasyonu; proliferasyon diffüzdür ve villusu çepeçevre sarar.",
+     "label": "Trofoblast",
+     "key": true,
+     "entities": [
+      {
+       "name": "sitotrofoblast",
+       "type": "hucre"
+      },
+      {
+       "name": "sinsityotrofoblast",
+       "type": "hucre"
+      },
+      {
+       "name": "trofoblast proliferasyonu",
+       "type": "histopatoloji",
+       "qualifier": "diffüz"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 39, 48"
+    },
+    {
+     "text": "Fetal parçalar nadirdir.",
+     "label": "Fetal parçalar",
+     "source": "k1-67-gebelik-hastaliklari · s. 38, 46"
+    }
+   ],
+   "symptoms": [
+    {
+     "text": "hCG düzeyleri gebelik yaşına göre beklenenden çok daha yüksektir; 100.000 IU/L düzeyine ulaşabilir.",
+     "label": "hCG",
+     "key": true,
+     "entities": [
+      {
+       "name": "hCG",
+       "type": "laboratuvar",
+       "qualifier": "çok yüksek"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 44"
+    },
+    {
+     "text": "Fetal kalp sesleri genellikle yoktur.",
+     "entities": [
+      {
+       "name": "fetal kalp sesi yokluğu",
+       "type": "bulgu"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 44"
+    }
+   ],
+   "pathognomonic": [
+    {
+     "text": "Kısmi molden ayrım (Tablo 17.5): tam molde karyotip diploid, villöz ödem tüm villuslarda, trofoblast proliferasyonu diffüz, serum hCG yüksek, doku hCG ++++, sonraki koryokarsinom riski %2.5; kısmi molde triploid, bazı villuslarda ödem, fokal-hafif proliferasyon, daha az yüksek serum hCG, doku hCG +, risk nadir.",
+     "label": "Tablo 17.5",
+     "key": true,
+     "entities": [
+      {
+       "name": "kısmi hidatiform mol",
+       "type": "hastalik"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 39"
+    },
+    {
+     "text": "Fetal parçaların nadir olması, fetal parçaları ve villuslarda fetal kırmızı kan hücreleri sık görülen kısmi molden ayırımda yardımcıdır.",
+     "label": "Fetal elemanlar",
+     "entities": [
+      {
+       "name": "kısmi hidatiform mol",
+       "type": "hastalik"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 46, 50"
+    }
+   ],
+   "diagnosis": [
+    {
+     "text": "Erken gebelikte pelvik ultrason ve çok yüksek hCG seviyeleriyle tanınır; günümüzde erken ultrason sayesinde daha erken tanı konur.",
+     "key": true,
+     "entities": [
+      {
+       "name": "pelvik ultrasonografi",
+       "type": "test"
+      },
+      {
+       "name": "serum hCG",
+       "type": "test"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 36, 43"
+    }
+   ],
+   "imaging": [
+    {
+     "text": "Ultrasonografide gebelik odağı içinde çok sayıda küçük kistik alan içeren \"kar fırtınası\" (snowstorm) görünümü tipiktir.",
+     "label": "Ultrason (referans)",
+     "entities": [
+      {
+       "name": "kar fırtınası görünümü",
+       "type": "goruntuleme"
+      }
+     ],
+     "source": "Robbins & Cotran (referans; derste ultrason bulgusu tanımlanmamış)",
+     "refs": [
+      2
+     ]
+    }
+   ],
+   "treatment": [
+    {
+     "text": "Çoğu mol uterus küretajı ile eksize edilir.",
+     "key": true,
+     "entities": [
+      {
+       "name": "uterus küretajı",
+       "type": "tedavi"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 45"
+    },
+    {
+     "text": "Takipte 6–12 ay boyunca seri hCG ölçümü yapılır; amaç gebelik dışı düşük seviyelere düşüşü doğrulamak ve kalıcı trofoblastik hastalığı saptamaktır.",
+     "label": "İzlem",
+     "key": true,
+     "entities": [
+      {
+       "name": "serum hCG",
+       "type": "test",
+       "qualifier": "seri takip"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 45"
+    }
+   ],
+   "complications": [
+    {
+     "text": "Kalıcı mol hastalığı (invaziv mol) riski artmıştır.",
+     "label": "Kalıcı hastalık",
+     "entities": [
+      {
+       "name": "invaziv mol",
+       "type": "hastalik"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 36, 42"
+    },
+    {
+     "text": "Koryokarsinom gelişimiyle ilişkilidir; gebelik koryokarsinomlarının ~%50'si tam hidatiform mol sonrası gelişir.",
+     "label": "Koryokarsinom",
+     "key": true,
+     "entities": [
+      {
+       "name": "gebelik koryokarsinomu",
+       "type": "hastalik"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 42, 56"
+    },
+    {
+     "text": "Hidatiform mol varlığında preeklampsi daha erken (34. gebelik haftasından önce) ortaya çıkabilir.",
+     "label": "Preeklampsi",
+     "entities": [
+      {
+       "name": "preeklampsi",
+       "type": "hastalik"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 31"
+    }
+   ],
+   "epidemiology": [
+    {
+     "text": "Batı ülkelerinde ~1–1,5 / 2000 gebelikte görülür.",
+     "key": true,
+     "source": "k1-67-gebelik-hastaliklari · s. 43"
+    },
+    {
+     "text": "Her yaşta gelişebilir; risk ergenlik döneminde (<20 yaş) ve 40–50 yaş arası kadınlarda artar.",
+     "label": "Yaş",
+     "entities": [
+      {
+       "name": "ergenlik",
+       "type": "risk_faktoru"
+      },
+      {
+       "name": "40 yaş üstü",
+       "type": "risk_faktoru"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 37, 43"
+    },
+    {
+     "text": "Önceki mol öyküsü sonraki gebeliklerde mol riskini artırır.",
+     "label": "Tekrarlama",
+     "entities": [
+      {
+       "name": "önceki mol öyküsü",
+       "type": "risk_faktoru"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 43"
+    }
+   ],
+   "lecture": [
+    {
+     "text": "Ders tam ve kısmi molü karyotip, villöz ödem, trofoblast proliferasyonu, serum/doku hCG ve koryokarsinom riski üzerinden karşılaştırır (Tablo 17.5); tam molde sonraki koryokarsinom riski %2.5'tir.",
+     "source": "k1-67-gebelik-hastaliklari · s. 38–39"
+    },
+    {
+     "text": "Genetik köken (Şekil 17.7): tam mol en sık boş ovum + kromozomları duplike olan tek sperm (homozigot), daha az sıklıkla boş ovum + iki sperm (heterozigot) ile oluşur.",
+     "entities": [
+      {
+       "name": "boş ovum",
+       "type": "mekanizma"
+      }
+     ],
+     "source": "k1-67-gebelik-hastaliklari · s. 40–41"
+    }
+   ]
+  },
+  "references": [
+   {
+    "label": "Ders: Gebelik Hastalıkları (Kurul 1, Tıbbi Patoloji) — ders işçisi 20261011-e1c2ffa86e"
+   },
+   {
+    "label": "Robbins & Kumar Basic Pathology (11. baskı) — dersin kaynakçası"
+   },
+   {
+    "label": "Robbins & Cotran Pathologic Basis of Disease — Gestational Trophoblastic Disease (derste olmayan madde)"
+   }
+  ],
+  "relatedLectures": [
+   "Kurul 1",
+   "k1-67-gebelik-hastaliklari"
+  ],
+  "schemaVersion": 2,
+  "curation": {
+   "method": "ders notu (onaylı ders işçisi çıktısı) + ders kaynakçası; madde/varlık modeli; referans maddeler source alanında işaretli",
+   "kaynak": "ders işçisi is_id 20261011-e1c2ffa86e · ders k1-67-gebelik-hastaliklari",
+   "at": "2026-10-12T00:00:00Z"
+  },
+  "isCustom": false,
+  "aliases": [],
+  "altNames": [],
+  "createdAt": "2026-10-11T23:39:48Z",
+  "updatedAt": "2026-10-11T23:39:48Z"
  }
 ]
