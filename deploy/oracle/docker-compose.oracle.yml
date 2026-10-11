@@ -96,5 +96,52 @@ services:
         max-size: "10m"
         max-file: "2"
 
+  # Ders işçisi: Drive kök klasörünü 30 dk'da bir tarar; yeni ders PDF'ini Claude aboneliğiyle (CLAUDE_CODE_OAUTH_TOKEN,
+  # ../../.env) işler ve çıktıyı YALNIZ /isci/taslak altına yazar. Kod salt-okunur; yayın yönetim onayıyla.
+  # Anahtar yüklemek için cihazda: deploy/oracle/isci-token-yukle.sh
+  meds-ders-isci:
+    build:
+      context: ../..
+      dockerfile: deploy/oracle/Dockerfile.isci
+    image: medsoru-isci:latest
+    container_name: meds-ders-isci
+    restart: unless-stopped
+    user: "1001:1001"
+    depends_on:
+      - meds-server
+      - meds-embed
+    env_file:
+      - path: ../../.env
+        required: true
+    environment:
+      - HOME=/isci/home
+      - MEDS_APP_DIR=/app
+      - MEDS_ISCI_DIR=/isci
+      - MEDS_DOWNLOADS_DIR=/home/ubuntu/medsor/meds_downloads
+      - MEDS_DATABASE_DIR=/home/ubuntu/medsor/meds_database
+      - MEDS_TEMP_DIR=/home/ubuntu/medsor/meds_temp
+      - MEDS_ISCI_API=http://meds-server:3000
+      - MEDS_EMBED_URL=http://meds-embed:8094/embed
+      - MEDS_EMBED_BGE_URL=http://meds-embed:8094/embed
+      - MEDS_ISCI_GUNLUK=2
+      - MEDS_ISCI_SAATLER=01-08
+    volumes:
+      - ../..:/app:ro
+      - /home/ubuntu/medsor/ders_isci:/isci
+      - /home/ubuntu/medsor/meds_downloads:/home/ubuntu/medsor/meds_downloads
+      - /home/ubuntu/medsor/meds_database:/home/ubuntu/medsor/meds_database:ro
+      - /home/ubuntu/medsor/meds_database_v2:/home/ubuntu/medsor/meds_database_v2:ro
+      - /home/ubuntu/medsor/meds_temp:/home/ubuntu/medsor/meds_temp:ro
+    deploy:
+      resources:
+        limits:
+          cpus: "1.0"
+          memory: 2G
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "2"
+
 volumes:
   meds-embed-models:
