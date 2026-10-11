@@ -35,6 +35,8 @@ services:
     environment:
       - NODE_ENV=production
       - PORT=3000
+      # Çalışma zamanı yığını 3G konteyner tavanının altında (imajdaki 4096 yalnız derleme içindir).
+      - NODE_OPTIONS=--max-old-space-size=2560
       # Vektör arama: sorgu gömme Oracle içindeki bge-m3 servisinden, vektörler local Supabase'ten.
       - MEDS_EMBED_URL=http://meds-embed:8094/embed
     volumes:
