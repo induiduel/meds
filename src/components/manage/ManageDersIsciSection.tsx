@@ -41,6 +41,8 @@ const DURUM: Record<string, { label: string; cls: string }> = {
   onayla: { label: 'Onaylandı', cls: 'is-ok' },
   reddet: { label: 'Reddedildi', cls: 'is-bad' },
   duzelt: { label: 'Düzeltme istendi', cls: 'is-warn' },
+  yayinlandi: { label: 'Yayınlandı', cls: 'is-ok' },
+  reddedildi: { label: 'Reddedildi', cls: 'is-bad' },
 };
 
 export const ManageDersIsciSection: React.FC<{ adminEmail: string }> = ({ adminEmail }) => {
@@ -117,7 +119,8 @@ export const ManageDersIsciSection: React.FC<{ adminEmail: string }> = ({ adminE
     api(`/taslak/${secili}`).then((x) => x.ok && setAyr(x.data));
   };
 
-  const durumAnahtari = (t: Taslak) => (t.karar?.karar ? t.karar.karar : t.durum);
+  // yayınlanan taslak (scripts/ders_isci/yayinla.py) kararın önüne geçer; onaylı ama aktarılmamışsa "Onaylandı"
+  const durumAnahtari = (t: Taslak) => (t.durum === 'yayinlandi' ? t.durum : t.karar?.karar ? t.karar.karar : t.durum);
   const gorunen = (liste || []).filter((t) =>
     filtre === 'hepsi' ? true : filtre === 'bekleyen' ? !t.karar && t.durum === 'onay_bekliyor' : !!t.karar,
   );
@@ -258,6 +261,8 @@ export const ManageDersIsciSection: React.FC<{ adminEmail: string }> = ({ adminE
                     Karar: <b>{DURUM[ayr.karar.karar]?.label}</b>
                     {ayr.karar.not ? ` — ${ayr.karar.not}` : ''}
                     {ayr.karar.kim ? ` (${ayr.karar.kim})` : ''}
+                    {ayr.karar.karar === 'onayla' &&
+                      (ayr.durum === 'yayinlandi' ? ' · Sitede yayında.' : ' · Siteye aktarılmayı bekliyor (yayinla.py).')}
                   </p>
                 ) : ayr.durum === 'onay_bekliyor' ? (
                   <>
