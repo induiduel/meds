@@ -73,11 +73,15 @@ const Reveal: React.FC<{ open: boolean; id?: string; className?: string; childre
 );
 
 /**
- * Kayan işlem çekmecesi olan şık satırı.
- * - Dokunma/tıklama: çekmeceyi açar/kapar (sınav kipinde dokunma cevap seçer).
- * - Sürükleme: şık parmağı izler; eylemler sürükleme oranına göre (--p) belirir; eşiği geçerse yerine oturur.
- * - Çekmece genişliği eylemlerin gerçek genişliğinden ölçülür (tek eylemde boş alan kalmaz).
+ * Şık satırı — iki etkileşim (Çıkmış):
+ *  1) ÇEK-BIRAK: şık yatayda çekilip bırakılınca "kalkar" (yüzen kart: büyür, kenarlardan taşar, gölge,
+ *     solda kırmızı parıltı) ve sağında gömülü eylem kapsülü belirir (Bilgi · Bildir). Tekrar çek-bırak → iner.
+ *     Çekerken şık parmağı dirençle izler; bırakınca yaylanarak yerine döner.
+ *  2) TEK DOKUNUŞ: dokunulan noktada halka dalgası + üstünde oklu balon (Bilgi · Hata Bildir). Sınav kipinde
+ *     dokunuş cevap seçer (balon açılmaz).
  */
+const LIFT_AT = 28; // çek-bırak eşiği (px)
+
 const OptRow: React.FC<{
   qid: string;
   k: string;
@@ -85,103 +89,149 @@ const OptRow: React.FC<{
   inner: React.ReactNode;
   pickable: boolean;
   onPick: () => void;
-  open: boolean;
-  setOpen: (v: boolean) => void;
+  lifted: boolean;
+  setLifted: (v: boolean) => void;
+  onTap: (x: number, y: number) => void;
   info: CikmisOptionInfo | null;
   canObject: boolean;
   onObject: () => void;
   onInfo: (info: CikmisOptionInfo) => void;
-}> = ({ qid, k, cls, inner, pickable, onPick, open, setOpen, info, canObject, onObject, onInfo }) => {
+}> = ({ qid, k, cls, inner, pickable, onPick, lifted, setLifted, onTap, info, canObject, onObject, onInfo }) => {
   const [dx, setDx] = useState<number | null>(null);
-  const [w, setW] = useState(120);
-  const actsRef = useRef<HTMLDivElement>(null);
-  const start = useRef<{ x: number; y: number; base: number; locked: boolean | null } | null>(null);
+  const start = useRef<{ x: number; y: number; locked: boolean | null } | null>(null);
   const moved = useRef(false);
   const hasActions = Boolean(info) || canObject;
 
-  // Çekmece genişliği = eylem grubunun gerçek genişliği
   useEffect(() => {
-    const el = actsRef.current;
-    if (!el) return;
-    const m = () => setW(Math.ceil(el.scrollWidth));
-    m();
-    const ro = new ResizeObserver(m);
-    ro.observe(el);
-    return () => ro.disconnect();
-  }, [hasActions, info, canObject]);
-
-  useEffect(() => {
-    if (open) { try { navigator.vibrate?.(8); } catch { /* yok */ } }
-  }, [open]);
+    if (lifted) { try { navigator.vibrate?.(10); } catch { /* yok */ } }
+  }, [lifted]);
 
   const onPointerDown = (e: React.PointerEvent) => {
-    if (!hasActions || e.button !== 0) return;
-    start.current = { x: e.clientX, y: e.clientY, base: open ? -w : 0, locked: null };
+    if (e.button !== 0) return;
+    start.current = { x: e.clientX, y: e.clientY, locked: null };
     moved.current = false;
   };
   const onPointerMove = (e: React.PointerEvent) => {
     const s = start.current;
-    if (!s) return;
+    if (!s || !hasActions) return;
     const mx = e.clientX - s.x;
     const my = e.clientY - s.y;
     if (s.locked === null && (Math.abs(mx) > 6 || Math.abs(my) > 6)) s.locked = Math.abs(mx) > Math.abs(my);
     if (!s.locked) return;
     moved.current = true;
     try { (e.currentTarget as HTMLElement).setPointerCapture(e.pointerId); } catch { /* yoksay */ }
-    const raw = s.base + mx;
-    // Sağa çekişte ve çekmeceden öteye çekişte direnç
-    setDx(raw > 0 ? Math.sqrt(raw) * 2 : raw < -w ? -w - Math.sqrt(-raw - w) * 3 : raw);
+    // Dirençli izleme: ilk 28px doğrusal, sonrası karekök
+    const sgn = Math.sign(mx);
+    const a = Math.abs(mx);
+    setDx(sgn * (a <= LIFT_AT ? a : LIFT_AT + Math.sqrt(a - LIFT_AT) * 4));
   };
   const onPointerUp = () => {
     start.current = null;
     if (dx !== null) {
-      setOpen(dx < -w / 2.4);
+      if (Math.abs(dx) >= LIFT_AT) setLifted(!lifted);
       setDx(null);
     }
     window.setTimeout(() => { moved.current = false; }, 0);
   };
-  const onClick = () => {
+  const onClick = (e: React.MouseEvent) => {
     if (moved.current) return;
     if (pickable) { onPick(); return; }
-    if (hasActions) setOpen(!open);
+    if (lifted) { setLifted(false); return; }
+    if (hasActions) onTap(e.clientX || (e.currentTarget as HTMLElement).getBoundingClientRect().right - 40, e.clientY || (e.currentTarget as HTMLElement).getBoundingClientRect().top + 20);
   };
 
-  const x = dx ?? (open ? -w : 0);
-  const prog = Math.max(0, Math.min(1, -x / w));
   return (
-    <li id={`opt-${qid}-${k}`} className={`qk-opt-li qk-swipe ${open ? 'is-open' : ''} ${dx !== null ? 'is-drag' : ''}`} style={{ ['--p' as string]: prog.toFixed(3) }}>
-      <div className="qk-swipe-row">
-        {hasActions && (
-          <div ref={actsRef} className="qk-swipe-acts" aria-hidden={!open} role="group" aria-label={`${k} şıkkı işlemleri`}>
-            {info && (
-              <button type="button" tabIndex={open ? 0 : -1} className="qk-sa is-info" onClick={() => { setOpen(false); onInfo(info); }} title="Bu şıkta yapılan değişiklik">
-                <i aria-hidden><Info /></i><span>Bilgi</span>
-              </button>
-            )}
-            {canObject && (
-              <button type="button" tabIndex={open ? 0 : -1} className="qk-sa is-flag" onClick={() => { setOpen(false); onObject(); }} title="Bu şıkta hata bildir / itiraz et">
-                <i aria-hidden><Flag /></i><span>Bildir</span>
-              </button>
-            )}
-          </div>
-        )}
+    <li id={`opt-${qid}-${k}`} className={`qk-opt-li qk-lift ${lifted ? 'is-lifted' : ''} ${dx !== null ? 'is-drag' : ''}`}>
+      <div className="qk-lift-row" style={dx !== null ? { transform: `translate3d(${dx}px,0,0)` } : undefined}>
         <button
           type="button"
-          className={`${cls} qk-swipe-front`}
-          style={{ transform: `translate3d(${x}px,0,0)` }}
+          className={`${cls} qk-lift-front`}
           onPointerDown={onPointerDown}
           onPointerMove={onPointerMove}
           onPointerUp={onPointerUp}
           onPointerCancel={onPointerUp}
           onClick={onClick}
-          aria-expanded={hasActions && !pickable ? open : undefined}
+          aria-haspopup={hasActions && !pickable ? 'dialog' : undefined}
           aria-label={pickable ? `${k} şıkkını işaretle` : undefined}
         >
           {inner}
-          {info && <span className="qk-opt-dot" aria-hidden />}
+          {info && !lifted && <span className="qk-opt-dot" aria-hidden />}
         </button>
+        {hasActions && (
+          <div className="qk-lift-pill" role="group" aria-label={`${k} şıkkı işlemleri`} aria-hidden={!lifted}>
+            {info && (
+              <button type="button" tabIndex={lifted ? 0 : -1} className="qk-lp is-info" onClick={() => { setLifted(false); onInfo(info); }} aria-label="Bu şıkta yapılan değişiklik" title="Bu şıkta yapılan değişiklik">
+                <Info aria-hidden />
+              </button>
+            )}
+            {info && canObject && <i className="qk-lp-sep" aria-hidden />}
+            {canObject && (
+              <button type="button" tabIndex={lifted ? 0 : -1} className="qk-lp is-flag" onClick={() => { setLifted(false); onObject(); }}>
+                <Flag aria-hidden /><span>Bildir</span>
+              </button>
+            )}
+          </div>
+        )}
       </div>
     </li>
+  );
+};
+
+/** Tek dokunuş balonu: dokunma noktasında halka dalgası, üstünde oklu eylem balonu (ekranda kalacak şekilde konumlanır). */
+const TapPopover: React.FC<{
+  x: number; y: number; info: CikmisOptionInfo | null; canObject: boolean;
+  onInfo: () => void; onObject: () => void; onClose: () => void;
+}> = ({ x, y, info, canObject, onInfo, onObject, onClose }) => {
+  const ref = useRef<HTMLDivElement>(null);
+  const [left, setLeft] = useState(x);
+  const [below, setBelow] = useState(false);
+  useEffect(() => {
+    const el = ref.current;
+    if (el) {
+      const w = el.offsetWidth;
+      setLeft(Math.min(window.innerWidth - w / 2 - 10, Math.max(w / 2 + 10, x)));
+      setBelow(y - el.offsetHeight - 22 < 64); // üstte yer yoksa altta aç
+    }
+    const close = (e: Event) => {
+      if (e.type === 'keydown' && (e as KeyboardEvent).key !== 'Escape') return;
+      if (e.type === 'pointerdown' && ref.current?.contains(e.target as Node)) return;
+      onClose();
+    };
+    const t = window.setTimeout(() => {
+      document.addEventListener('pointerdown', close);
+      window.addEventListener('scroll', close, { passive: true, once: true });
+    }, 0);
+    document.addEventListener('keydown', close);
+    return () => {
+      window.clearTimeout(t);
+      document.removeEventListener('pointerdown', close);
+      window.removeEventListener('scroll', close);
+      document.removeEventListener('keydown', close);
+    };
+  }, [x, y, onClose]);
+  return createPortal(
+    <>
+      <span className="qk-ripple" style={{ left: x, top: y }} aria-hidden><i /><i /></span>
+      <div
+        ref={ref}
+        className={`qk-pop ${below ? 'is-below' : ''}`}
+        role="dialog"
+        aria-label="Şık işlemleri"
+        style={{ left, top: below ? y + 22 : y - 22, ['--ax' as string]: `${x - left}px` }}
+      >
+        {info && (
+          <button type="button" className="qk-pop-info" onClick={() => { onClose(); onInfo(); }} aria-label="Bu şıkta yapılan değişiklik" title="Bu şıkta yapılan değişiklik">
+            <Info aria-hidden />
+          </button>
+        )}
+        {canObject && (
+          <button type="button" className="qk-pop-flag" onClick={() => { onClose(); onObject(); }} autoFocus>
+            <Flag aria-hidden /><span>Hata Bildir</span>
+          </button>
+        )}
+      </div>
+    </>,
+    document.body
   );
 };
 
@@ -218,7 +268,9 @@ const InfoToast: React.FC<{ info: CikmisOptionInfo; onClose: () => void }> = ({ 
 
 export const CikmisCard: React.FC<CikmisCardProps> = (p) => {
   const [flagsOpen, setFlagsOpen] = useState(false);
-  const [openOpt, setOpenOpt] = useState<string | null>(null);
+  const [liftedOpt, setLiftedOpt] = useState<string | null>(null);
+  const [pop, setPop] = useState<{ key: string; x: number; y: number } | null>(null);
+  const closePop = useCallback(() => setPop(null), []);
   const [infoToast, setInfoToast] = useState<CikmisOptionInfo | null>(null);
   const explWanted = useCallback(() => wantsSection(p.id, 'explanation'), [p.id]);
   const [panel, setPanel] = useState<'expl' | 'hist' | null>(() => (explWanted() ? 'expl' : null));
@@ -238,12 +290,12 @@ export const CikmisCard: React.FC<CikmisCardProps> = (p) => {
     return () => window.removeEventListener('popstate', on);
   }, [explWanted]);
 
-  // Açık çekmece: o şıkkın dışına dokununca ya da Esc ile kapanır.
+  // Kalkık şık: o şıkkın dışına dokununca ya da Esc ile iner.
   useEffect(() => {
-    if (!openOpt) return;
+    if (!liftedOpt) return;
     const close = (e: Event) => {
-      const row = rootRef.current?.querySelector(`#opt-${CSS.escape(p.id)}-${CSS.escape(openOpt)}`);
-      if (e instanceof KeyboardEvent ? e.key === 'Escape' : !row?.contains(e.target as Node)) setOpenOpt(null);
+      const row = rootRef.current?.querySelector(`#opt-${CSS.escape(p.id)}-${CSS.escape(liftedOpt)}`);
+      if (e instanceof KeyboardEvent ? e.key === 'Escape' : !row?.contains(e.target as Node)) setLiftedOpt(null);
     };
     document.addEventListener('pointerdown', close);
     document.addEventListener('keydown', close);
@@ -251,7 +303,7 @@ export const CikmisCard: React.FC<CikmisCardProps> = (p) => {
       document.removeEventListener('pointerdown', close);
       document.removeEventListener('keydown', close);
     };
-  }, [openOpt, p.id]);
+  }, [liftedOpt, p.id]);
 
   const toggle = (k: 'expl' | 'hist') => setPanel((v) => (v === k ? null : k));
 
@@ -280,7 +332,7 @@ export const CikmisCard: React.FC<CikmisCardProps> = (p) => {
 
       {p.special ?? (
         p.options.length > 0 && (
-          <ol className={`qk-opts is-swipe ${short ? 'is-short' : ''}`}>
+          <ol className={`qk-opts is-lift ${short ? 'is-short' : ''}`}>
             {p.options.map((o) => {
               const key = String(o.key);
               const isCorrect = key === p.correctAnswer;
@@ -303,8 +355,9 @@ export const CikmisCard: React.FC<CikmisCardProps> = (p) => {
                   inner={inner}
                   pickable={p.quiz.on && !p.quiz.picked}
                   onPick={() => p.quiz.onPick(key)}
-                  open={openOpt === key}
-                  setOpen={(v) => setOpenOpt(v ? key : null)}
+                  lifted={liftedOpt === key}
+                  setLifted={(v) => { setPop(null); setLiftedOpt(v ? key : null); }}
+                  onTap={(x, y) => { setLiftedOpt(null); setPop({ key, x, y }); }}
                   info={hideAnswer ? null : p.optionInfo?.(key) ?? null}
                   canObject={!hideAnswer}
                   onObject={() => p.onObject(key, String(o.text ?? ''))}
@@ -379,6 +432,22 @@ export const CikmisCard: React.FC<CikmisCardProps> = (p) => {
 
       {p.comments && <div id={`comments-${p.id}`}>{p.comments}</div>}
       {infoToast && <InfoToast info={infoToast} onClose={() => setInfoToast(null)} />}
+      {pop && (() => {
+        const o = p.options.find((x) => String(x.key) === pop.key);
+        const info = hideAnswer ? null : p.optionInfo?.(pop.key) ?? null;
+        return (
+          <TapPopover
+            key={`${pop.key}-${pop.x}-${pop.y}`}
+            x={pop.x}
+            y={pop.y}
+            info={info}
+            canObject={!hideAnswer}
+            onInfo={() => info && setInfoToast(info)}
+            onObject={() => p.onObject(pop.key, String(o?.text ?? ''))}
+            onClose={closePop}
+          />
+        );
+      })()}
     </article>
   );
 };

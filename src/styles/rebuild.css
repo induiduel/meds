@@ -1610,3 +1610,70 @@ html.theme-dark .deep-link-highlight-pulse, html[data-mode="dark"] .deep-link-hi
   .qk-swipe:not(.is-open):not(.is-drag) .qk-swipe-row:hover .qk-swipe-front:not(.is-dim) { transform: translate3d(-4px, 0, 0) !important; }
 }
 @media (prefers-reduced-motion: reduce) { .qk-sa, .qk-sa i, .qk-swipe-front { transition: none !important; } }
+
+/* 49 · Şık etkileşimleri v3 (2026-10-11 gece 23): ÇEK-BIRAK ile kalkan şık + gömülü kapsül, TEK DOKUNUŞ ile oklu balon. */
+.qk-opts.is-lift .qk-opt-li { display: block; position: relative; }
+@media (min-width: 720px) { .qk-opts.is-lift.is-short { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.qk-lift-row { position: relative; transition: transform 520ms cubic-bezier(.34, 1.56, .64, 1); will-change: transform; }
+.qk-lift.is-drag .qk-lift-row { transition: none; }
+.qk-lift-front { position: relative; z-index: 1; width: 100%; background: var(--color-white); touch-action: pan-y; user-select: none; -webkit-user-select: none; cursor: pointer;
+  transition: transform 460ms cubic-bezier(.34, 1.4, .64, 1), box-shadow 320ms ease, border-radius 320ms ease, padding 320ms ease, background 150ms; }
+.qk-lift-front.is-correct { background: var(--color-ok-soft); }
+.qk-lift-front.is-wrong { background: var(--color-bad-soft); }
+.qk-opt-li:has(> .qk-lift-row > .qk-lift-front.is-correct) { background: var(--color-ok-soft); }
+/* Kalkık durum: yüzen kart */
+.qk:has(.qk-lift.is-lifted) { overflow: visible; z-index: 5; }
+.qk-lift.is-lifted { z-index: 6; }
+.qk-lift.is-lifted .qk-lift-row { transform: scale(1.035); }
+.qk-lift.is-lifted .qk-lift-front { border-radius: 14px; padding-right: 160px;
+  box-shadow: 0 22px 44px -18px rgb(0 0 0 / .38), 0 6px 14px -6px rgb(0 0 0 / .14), 0 0 0 1px var(--color-line); }
+.qk-lift-row::before { content: ""; position: absolute; z-index: 2; left: 0; top: 10%; bottom: 10%; width: 46px; pointer-events: none; border-radius: 14px 0 0 14px;
+  background: radial-gradient(60px 70% at 0% 50%, color-mix(in srgb, var(--color-bad) 55%, transparent), transparent 70%);
+  opacity: 0; transform: translateX(-10px); transition: opacity 260ms ease, transform 420ms cubic-bezier(.22, 1, .36, 1); }
+.qk-lift.is-lifted .qk-lift-row::before { opacity: 1; transform: none; animation: qk-glow 2.2s 400ms ease-in-out infinite; }
+@keyframes qk-glow { 0%, 100% { opacity: 1; } 50% { opacity: .55; } }
+/* Gömülü kapsül */
+.qk-lift-pill { position: absolute; z-index: 3; right: 10px; top: 50%; display: flex; align-items: stretch; height: 40px; border-radius: 99px; overflow: hidden;
+  background: var(--color-bad); color: #fff; box-shadow: 0 10px 20px -10px color-mix(in srgb, var(--color-bad) 80%, transparent), inset 0 1px 0 rgb(255 255 255 / .18);
+  opacity: 0; pointer-events: none; transform: translateY(-50%) translateX(16px) scale(.8);
+  transition: opacity 200ms ease, transform 460ms cubic-bezier(.34, 1.56, .64, 1); }
+.qk-lift.is-lifted .qk-lift-pill { opacity: 1; pointer-events: auto; transform: translateY(-50%); transition-delay: 90ms; }
+.qk-lp { display: inline-flex; align-items: center; justify-content: center; gap: 7px; border: 0; background: transparent; color: inherit; font: inherit; font-size: 14px; font-weight: 650; cursor: pointer; transition: background 120ms; }
+.qk-lp:hover { background: rgb(255 255 255 / .12); }
+.qk-lp:active { background: rgb(0 0 0 / .1); }
+.qk-lp:focus-visible { outline: 2px solid #fff; outline-offset: -4px; }
+.qk-lp svg { width: 17px; height: 17px; stroke-width: 2.3; }
+.qk-lp.is-info { width: 44px; }
+.qk-lp.is-flag { padding: 0 16px 0 12px; }
+.qk-lp-sep { width: 1px; margin: 9px 0; background: rgb(255 255 255 / .38); }
+@container (max-width: 420px) { .qk-lift.is-lifted .qk-lift-front { padding-right: 140px; } .qk-lp.is-flag { padding: 0 13px 0 10px; } }
+/* Masaüstü ipucu: üzerine gelince hafif yükselme */
+@media (hover: hover) { .qk-lift:not(.is-lifted) .qk-lift-front:not(.is-dim):hover { background: var(--color-field); } .qk-lift:not(.is-lifted) .qk-lift-front.is-correct:hover { background: var(--color-ok-soft); } }
+
+/* Tek dokunuş: halka dalgası + oklu balon */
+.qk-ripple { position: fixed; z-index: 95; width: 0; height: 0; pointer-events: none; }
+.qk-ripple i { position: absolute; left: -22px; top: -22px; width: 44px; height: 44px; border-radius: 99px; border: 2px solid color-mix(in srgb, var(--color-ink) 35%, transparent);
+  background: color-mix(in srgb, var(--color-ink) 8%, transparent); animation: qk-rip 900ms cubic-bezier(.22, 1, .36, 1) both; }
+.qk-ripple i:nth-child(2) { animation-delay: 140ms; background: transparent; }
+@keyframes qk-rip { from { transform: scale(.3); opacity: .9; } to { transform: scale(2.1); opacity: 0; } }
+.qk-pop { position: fixed; z-index: 96; display: flex; align-items: center; gap: 10px; padding: 8px; border-radius: 18px;
+  background: color-mix(in srgb, var(--color-white) 92%, transparent); -webkit-backdrop-filter: blur(14px) saturate(1.2); backdrop-filter: blur(14px) saturate(1.2);
+  box-shadow: 0 18px 40px -16px rgb(0 0 0 / .35), 0 0 0 1px var(--color-line); transform: translate(-50%, -100%); transform-origin: calc(50% + var(--ax, 0px)) 100%;
+  animation: qk-pop-in 380ms cubic-bezier(.34, 1.56, .64, 1) both; }
+.qk-pop.is-below { transform: translate(-50%, 0); transform-origin: calc(50% + var(--ax, 0px)) 0%; animation-name: qk-pop-in-b; }
+.qk-pop::after { content: ""; position: absolute; left: calc(50% + var(--ax, 0px)); bottom: -7px; width: 14px; height: 14px; margin-left: -7px; transform: rotate(45deg);
+  background: inherit; box-shadow: 1px 1px 0 var(--color-line); border-radius: 0 0 3px 0; }
+.qk-pop.is-below::after { bottom: auto; top: -7px; box-shadow: -1px -1px 0 var(--color-line); border-radius: 3px 0 0 0; }
+.qk-pop-info { width: 42px; height: 42px; border-radius: 99px; display: grid; place-items: center; border: 1px solid var(--color-line); background: var(--color-white); color: var(--color-ink-2); cursor: pointer; transition: background 120ms, color 120ms; }
+.qk-pop-info:hover { background: var(--color-ai-soft); color: var(--color-ai); border-color: transparent; }
+.qk-pop-info svg { width: 20px; height: 20px; }
+.qk-pop-flag { height: 42px; display: inline-flex; align-items: center; gap: 8px; padding: 0 16px 0 14px; border: 0; border-radius: 12px; background: var(--color-bad); color: #fff;
+  font: inherit; font-size: 15px; font-weight: 650; cursor: pointer; box-shadow: 0 8px 16px -8px color-mix(in srgb, var(--color-bad) 80%, transparent); transition: filter 120ms, transform 120ms; }
+.qk-pop-flag:hover { filter: brightness(1.06); }
+.qk-pop-flag:active { transform: scale(.97); }
+.qk-pop-flag svg { width: 18px; height: 18px; stroke-width: 2.3; }
+.qk-pop-flag:focus-visible, .qk-pop-info:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+@keyframes qk-pop-in { from { opacity: 0; transform: translate(-50%, -100%) translateY(8px) scale(.82); } to { opacity: 1; transform: translate(-50%, -100%); } }
+@keyframes qk-pop-in-b { from { opacity: 0; transform: translate(-50%, 0) translateY(-8px) scale(.82); } to { opacity: 1; transform: translate(-50%, 0); } }
+@media (prefers-reduced-motion: reduce) { .qk-lift-row, .qk-lift-front, .qk-lift-pill, .qk-pop, .qk-ripple i, .qk-lift-row::before { animation: none !important; transition: none !important; } }
+.qk-lift.is-lifted .qk-lift-front:not(.is-correct):not(.is-wrong) { background: var(--color-white) !important; }
