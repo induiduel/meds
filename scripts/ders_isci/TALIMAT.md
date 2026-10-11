@@ -36,6 +36,11 @@ yönetici onayından sonra yayınlanır.
      (özellikle `baglam.ocr_sayfalar`). Bağlamdan ve tıbbi terminolojiden akıl yürüterek doğru hâlini çıkar; ürettiğin
      metinlerde DOĞRU hâli kullan, kanıt `alinti`'sında ise HAM hâli bırak. Önemli düzeltmeleri `rapor.md`'de
      "OCR düzeltmeleri" başlığında `ham → doğru (s. n)` diye listele. Emin olamadığın kelimeyi uydurma; `guven: dusuk`.
+   - **Madde imleri ve birimler OCR hatası değildir:** Satır başındaki `•`, `–`, `▪`, `o`, `-` slayt madde imidir; kayıp
+     `>`/`<`/`≥` işareti sayma (ör. "•100.000 IU/L olabilir" = "100.000 IU/L olabilir"). Kayıp işaret yalnız aynı
+     slayttaki eşi (ör. "<20 yaş" yanında "40 yaş") ya da dersin başka sayfası açıkça gösteriyorsa yorumlanır ve
+     `guven: dusuk` + raporda yazılır. Birimler (IU/L, mIU/mL, mmHg, mg/dL, g/dL, mEq/L, mmol/L, /mm³, %) dersteki
+     hâliyle aynen korunur; başka birimde referans verirsen eşdeğerini yaz (1 IU/L = 1 mIU/mL), sayıyı değiştirme.
    - Hocanın kişisel uyarı/ileti/telif sayfalarını içerik olarak alma.
 3. **Tıbbi doğruluk.** Terminoloji standart tıp Türkçesi + gerektiğinde Latince/İngilizce. Ders ile güncel standart
    kaynak çelişirse ikisini de belirt ("derste X; güncel kaynakta Y"), sınav için dersi esas al ve `rapor.md`'ye not et.
