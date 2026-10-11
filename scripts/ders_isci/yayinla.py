@@ -1,29 +1,35 @@
 #!/usr/bin/env python3
-"""Ders işçisi — B2 yayın: yöneticinin onayladığı taslakları kanonik kaynaklara birleştirir (CİHAZDA çalışır).
+"""Ders işçisi — B2 yayın: yöneticinin onayladığı taslakları kanonik kaynaklara birleştirir.
 
-  ../.venv-ocr/bin/python scripts/ders_isci/yayinla.py            # Oracle'dan onaylananları çek + birleştir
-  ... yayinla.py --deneme                                          # yalnız denetle, hiçbir şey yazma
-  ... yayinla.py --is 20261011-e1c2ffa86e                          # tek taslak
-  ... yayinla.py --cekme                                           # Oracle'a bağlanma, yereldekileri işle
+ORACLE (asıl yol; systemd `meds-ders-yayin.timer`, 10 dk'da bir — deploy/oracle/meds-ders-yayin.*):
+  python3 scripts/ders_isci/yayinla.py --sunucu
+    · /home/ubuntu/medsor/ders_isci/taslak/* içinde karar=onayla ve yayin.json'u olmayan taslakları yayınlar,
+    · asıl yayın defteri durum klasöründedir (ders_isci/yayin_kaydi.json); cihazdan yapılan bir dağıtım repo
+      kopyasındaki yayını ezdiyse (scripts/ders_isci/yayin_kaydi.json'da eksik) izinden YENİDEN uygular,
+    · bir şey yazıldıysa meds-app'i yeniden derler (/tmp/meds-deploy.lock), taslağı `yayinlandi` işaretler, bildirim atar.
+CİHAZ:
+  .venv-ocr/bin/python scripts/ders_isci/yayinla.py --esitle      # Oracle'da yayınlananları yerel kaynaklara işle
+    (deploy-code.sh ve sync-data.sh --to-oracle bunu önce çalıştırır; eşit değilse dağıtım durur)
+  ... yayinla.py --deneme --is <is_id>                              # bir taslağı yalnız denetle (yazmaz)
 
-Akış (her taslak için önce TÜM denetimler, sonra yazım; bir hata → o taslak hiç yazılmaz):
+Akış (her taslak için önce TÜM denetimler, sonra yazım; bir hata → o taslak hiç yazılmaz; yazım idempotent upsert):
   deck.json          → meds/src/data/interactive_learning_decks.json (aynı kimlik varsa değiştirilir)
   ders_paketi.json   → meds_database_v2/kurul1_ders_paketleri/<id>.json + index.json
   ders_notu.md       → meds_temp/study/k1/NN_slug.md + site özetleri (s14 kayıt biçimi; yalnız bu ders güncellenir)
-  ornek_sorular.json → meds_temp/study/ornek/sorular/<id>.json → s16 build --export (korumalı)
+  ornek_sorular.json → meds_temp/study/ornek/sorular/<id>.json → s16 çıktısı → site (yalnız bu ders, upsert)
   sozluk.json        → editor_glossary_new/fix.jsonl (s13 kalıcılığı) + medical_glossary.json + ansiklopedi
   cikmis_baglantilari→ meds_database/derived/learn_links_ders_isci.json + learn_links.json (ilgili, güven ≥ orta)
   bilgi_havuzu.jsonl → meds_database_v2/bilgi_havuzu/<id>.jsonl
-  hastaliklar.json   → meds_database_v2/ders_isci/hastalik_onerileri/<id>.json (diseases.json'a ELLE/ayrı adımla)
-  taslağın tamamı    → meds_database_v2/ders_isci/yayinlanan/<is_id>/ (iz)
+  hastaliklar.json   → meds_database_v2/ders_isci/hastalik_onerileri/<id>.json (diseases.json'a ayrı adımla)
+  taslağın tamamı    → meds_database_v2/ders_isci/yayinlanan/<is_id>/ (iz; yeniden uygulama ve cihaz eşitlemesi buradan)
   kayıt              → scripts/ders_isci/yayin_kaydi.json (s14 LESSONS'a ek/güncelleme; checklist de okur)
-Yazılan her dosya önce /home/indu/medsor-yedek/ders_isci_yayin/<zaman>/ altına yedeklenir. Sonda Oracle'daki
-taslak `yayinlandi` olarak işaretlenir. Commit ve dağıtım ayrı adımdır (çıktıda listelenir).
+Yazılan her dosya önce <yedek>/ders_isci_yayin/<zaman>/ altına yedeklenir.
 """
 from __future__ import annotations
 
 import argparse
 import json
+import os
 import re
 import shutil
 import subprocess
@@ -35,6 +41,9 @@ HERE = Path(__file__).resolve().parent
 MEDS = HERE.parents[1]
 ROOT = MEDS.parent
 sys.path.insert(0, str(MEDS / "scripts"))
+# v2/config.py kökü varsayılan /home/indu/medsor'dur; Oracle'da (/home/ubuntu/medsor) yanlış yola okur/yazardı
+os.environ.setdefault("MEDS_PROJECT_ROOT", str(ROOT))
+os.environ.setdefault("CUDA_VISIBLE_DEVICES", "")
 
 from v2.stages import s14_notes as s14  # noqa: E402
 from v2.stages import s16_ornek_sorular as s16  # noqa: E402
@@ -42,7 +51,12 @@ from v2.stages.s15_k1_decks import COMMITTEE, RENK  # noqa: E402
 
 ONAYLANAN = ROOT / "meds_temp" / "ders_isci" / "onaylanan"
 KAYIT = HERE / "yayin_kaydi.json"
-YEDEK = Path("/home/indu/medsor-yedek/ders_isci_yayin")
+SUNUCU = Path("/home/ubuntu/medsor/ders_isci").is_dir() and str(ROOT) == "/home/ubuntu/medsor"
+YEDEK = (Path("/home/ubuntu/medsor-yedek") if SUNUCU else Path("/home/indu/medsor-yedek")) / "ders_isci_yayin"
+DURUM_KAYIT = Path("/home/ubuntu/medsor/ders_isci/yayin_kaydi.json")   # Oracle: asıl yayın defteri (rsync'e kapalı)
+L_TASLAK = Path("/home/ubuntu/medsor/ders_isci/taslak")
+L_MANIFEST = Path("/home/ubuntu/medsor/meds_downloads/_manifest.json")
+KILIT = "/tmp/meds-deploy.lock"
 SITE = MEDS / "src" / "data"
 DECKS = SITE / "interactive_learning_decks.json"
 GLOSSARY = SITE / "medical_glossary.json"
@@ -53,8 +67,6 @@ DB2 = ROOT / "meds_database_v2"
 LINKS = ROOT / "meds_database" / "derived" / "learn_links.json"
 LINKS_ISCI = ROOT / "meds_database" / "derived" / "learn_links_ders_isci.json"
 ORACLE = "medsor-oracle"
-O_TASLAK = "/home/ubuntu/medsor/ders_isci/taslak"
-O_MANIFEST = "/home/ubuntu/medsor/meds_downloads/_manifest.json"
 GIT_HEDEF = [  # yazılan ve commit'lenecek repo yolları; başka oturumun yarım işi varsa yayın durur
     "src/data/interactive_learning_decks.json", "src/data/summaries/kurul1.json", "src/data/summaries_meta.json",
     "src/data/summaries_enrichment.json", "src/data/lectureSummariesCatalog.json", "data/lectureSummariesCatalog.json",
@@ -244,7 +256,7 @@ class Yayin:
                    "profiller": oku(self.d / "hastaliklar.json", [])})
         iz = DB2 / "ders_isci" / "yayinlanan" / self.d.name
         iz.mkdir(parents=True, exist_ok=True)
-        for f in self.d.iterdir():
+        for f in ([] if self.d.resolve() == iz.resolve() else self.d.iterdir()):  # izden yeniden uygulamada kopya yok
             if f.is_file() and f.name not in ("oturum.json",):
                 shutil.copy2(f, iz / f.name)
         # kayıt
@@ -288,9 +300,12 @@ class Yayin:
         for t in sz.get("yeni", []):
             term = t["term"].strip()
             key = term.replace("I", "ı").replace("İ", "i").lower()
-            if key in g or norm_key(term) in mevcut:
+            var = g.get(key) or g.get(mevcut.get(norm_key(term), ""))
+            if var and (var.get("dogrulama") or {}).get("is_id") != self.d.name:   # başkasının terimi: dokunma
                 self.not_.append(f"sözlük: '{term}' zaten var, eklenmedi")
                 continue
+            if var:  # yeniden uygulama: aynı taslağın terimi aynı anahtarla yeniden yazılır
+                key = mevcut.get(norm_key(term), key)
             kanit = t.get("kanit") or {}
             rec = {"term": term, "category": t.get("category") or "terim", "definition": t["definition"],
                    "description": t["definition"], "discipline": t.get("discipline") or k["ders"], "committee": ""}
@@ -316,16 +331,17 @@ class Yayin:
                 self.not_.append(f"sözlük zenginleştirme: '{z.get('key')}' bulunamadı")
                 continue
             eski = (g[key].get("clinicalPearl") or "").strip()
-            if z["pearl"].strip() in eski:
-                continue
-            g[key]["clinicalPearl"] = (eski + " · " if eski else "") + z["pearl"].strip()
+            if z["pearl"].strip() not in eski:  # yeniden uygulamada ikinci kez eklenmez
+                g[key]["clinicalPearl"] = (eski + " · " if eski else "") + z["pearl"].strip()
             fix_satir.append({"key": key, "pearl": g[key]["clinicalPearl"], "isci": {"is_id": self.d.name}})
         self._yaz(GLOSSARY, g, indent=2)
         for ad, satirlar in (("editor_glossary_new.jsonl", yeni_satir), ("editor_glossary_fix.jsonl", fix_satir)):
-            if satirlar:
-                f = STUDY / ad
-                eski = f.read_text(encoding="utf-8") if f.exists() else ""
-                self._yaz_metin(f, eski + ("" if not eski or eski.endswith("\n") else "\n")
+            f = STUDY / ad
+            eski = [x for x in (f.read_text(encoding="utf-8") if f.exists() else "").splitlines() if x.strip()]
+            # yeniden uygulamada aynı taslağın satırları tekrarlanmasın: bu is_id'nin eski satırları yenilerle değişir
+            kalan = [x for x in eski if f'"is_id": "{self.d.name}"' not in x]
+            if satirlar or len(kalan) != len(eski):
+                self._yaz_metin(f, "".join(x + "\n" for x in kalan)
                                 + "".join(json.dumps(x, ensure_ascii=False) + "\n" for x in satirlar))
         # ansiklopedi: s13'ün yeni terim biçimi
         enc = oku(ENCYCLOPEDIA, [])
@@ -372,38 +388,17 @@ def ssh(cmd: str, **kw) -> subprocess.CompletedProcess:
     return subprocess.run(["ssh", ORACLE, cmd], capture_output=True, text=True, timeout=120, **kw)
 
 
-def cek(tek: str | None) -> list[str]:
-    """Oracle'da onaylanmış ama yayınlanmamış taslakları yerel `onaylanan/` altına çeker."""
-    r = ssh(f"cd {O_TASLAK} && for d in */; do d=${{d%/}}; [ -f $d/karar.json ] && [ ! -f $d/yayin.json ] && "
-            f"grep -q '\"onayla\"' $d/karar.json && echo $d; done; true")
-    ids = [x for x in r.stdout.split() if re.match(r"^[0-9]{8}-[0-9a-f]{10}(?:-\d+)?$", x) and (not tek or x == tek)]
-    ONAYLANAN.mkdir(parents=True, exist_ok=True)
-    for i in ids:
-        subprocess.run(["rsync", "-a", "--delete", f"{ORACLE}:{O_TASLAK}/{i}/", str(ONAYLANAN / i) + "/"], check=True)
-    return ids
-
-
-def kaynak_kimligi(pdf_yolu: str) -> str | None:
+def kaynak_kimligi(pdf_yolu: str, manifest: dict | None) -> str | None:
     """Drive manifestinde PDF'in source_id'si (s14 kaynak kimliği). Yol karşılaştırması boşluklara duyarsız."""
-    r = ssh(f"cat {O_MANIFEST}")
-    if r.returncode != 0:
-        return None
     sade = lambda s: re.sub(r"\s+", "", s or "")  # noqa: E731
-    for it in json.loads(r.stdout).get("items", []):
+    for it in (manifest or {}).get("items", []):
         if sade(it.get("path")) == sade(pdf_yolu):
             return it.get("source_id")
     return None
 
 
-def isaretle(is_id: str, ozet: dict):
-    """Oracle'daki taslağı yayınlandı işaretler (dosyalar işçi kullanıcısına ait → konteyner içinden)."""
-    js = json.dumps(ozet, ensure_ascii=False).replace("'", "'\\''")
-    kod = ("import json,sys,time;d='/isci/taslak/%s';o=json.loads(sys.argv[1]);"
-           "json.dump(o,open(d+'/yayin.json','w'),ensure_ascii=False,indent=1);"
-           "du=json.load(open(d+'/durum.json'));du.update(durum='yayinlandi',zaman=time.time());"
-           "json.dump(du,open(d+'/durum.json','w'),ensure_ascii=False,indent=1)") % is_id
-    r = ssh(f"docker exec meds-ders-isci python3 -c \"{kod}\" '{js}'")
-    return r.returncode == 0, r.stderr.strip()
+def yayin_kaydi_bul(is_id: str, kaynak: list[dict]) -> str | None:
+    return next((y["kaynak_idleri"][0] for y in kaynak if y["is_id"] == is_id and y.get("kaynak_idleri")), None)
 
 
 def git_kirli() -> list[str]:
@@ -411,65 +406,280 @@ def git_kirli() -> list[str]:
     return [x for x in r.stdout.splitlines() if x.strip()]
 
 
-def main() -> int:
-    ap = argparse.ArgumentParser()
-    ap.add_argument("--deneme", action="store_true")
-    ap.add_argument("--is", dest="tek")
-    ap.add_argument("--cekme", action="store_true")
-    a = ap.parse_args()
-
-    if not a.cekme:
-        print("Oracle'dan çekilen:", cek(a.tek) or "yok")
-    yayinli = {y["is_id"] for y in oku(KAYIT, [])}
-    adaylar = sorted(d for d in ONAYLANAN.glob("*") if d.is_dir() and (not a.tek or d.name == a.tek)
-                     and d.name not in yayinli and (oku(d / "karar.json", {}) or {}).get("karar") == "onayla")
-    if not adaylar:
-        print("yayınlanacak onaylı taslak yok")
-        return 0
-    kirli = git_kirli()
-    if kirli and not a.deneme:
-        print("DURDU: hedef dosyalarda commit'lenmemiş değişiklik var (başka oturum?):", *kirli, sep="\n  ")
-        return 2
+def uygula(dizinler: list[Path], kimlik, deneme: bool = False) -> tuple[list[Yayin], list[Yayin]]:
+    """Denetle + yaz. `kimlik(Yayin) -> source_id`. Dönüş: (yazılanlar, denetimden kalanlar)."""
     yedek = YEDEK / time.strftime("%Y%m%d_%H%M%S")
-    sonuc = []
-    for d in adaylar:
-        y = Yayin(d, a.deneme, yedek)
-        kid = kaynak_kimligi(y.b.get("pdf_yolu") or "")
-        ok = y.denetle(kid)
-        print(f"\n== {d.name} · {y.b.get('ders_id')} · sadakat {getattr(y, 'sadakat', '?')} · "
+    ok_, red = [], []
+    for d in dizinler:
+        y = Yayin(d, deneme, yedek)
+        ok = y.denetle(kimlik(y))
+        print(f"== {d.name} · {y.b.get('ders_id')} · sadakat {getattr(y, 'sadakat', '?')} · "
               f"{'DENETİM TAMAM' if ok else 'DENETİM HATALI'}")
         for h in y.hata:
             print("  HATA", h)
-        if not ok or a.deneme:
+        if not ok:
+            red.append(y)
+            continue
+        if deneme:
             continue
         y.yaz()
         for x in y.not_:
             print("  ·", x)
-        sonuc.append(y)
-    if not sonuc:
-        return 0 if a.deneme else 1
+        ok_.append(y)
+    if ok_:
+        print("yedek:", yedek)
+    eski = sorted(x for x in YEDEK.glob("2*") if x.is_dir())
+    for x in eski[:-5]:  # yedeklerin son 5'i tutulur (her biri ~100 MB)
+        shutil.rmtree(x, ignore_errors=True)
+    return ok_, red
 
-    # toplu adımlar: deste doğrulama, örnek soru derlemesi (korumalı), paketler
+
+def toplu_adimlar(sonuc: list[Yayin]) -> bool:
+    """Tüm desteler doğrulayıcıdan geçmeli; örnek sorular yalnız bu dersler için siteye (upsert)."""
     r = subprocess.run([sys.executable, str(MEDS / "scripts" / "validate_learning_decks.py"), "--ozet"],
                        capture_output=True, text=True, cwd=MEDS)
-    print("deste doğrulayıcı:", r.stdout.strip().splitlines()[-1])
+    print("deste doğrulayıcı:", (r.stdout.strip().splitlines() or ["?"])[-1])
     if r.returncode != 0:
-        print("DURDU: tüm desteler doğrulamadan geçmedi; yedek:", yedek)
-        return 3
-    rapor = s16.build(export=False)  # yalnız meds_database_v2/ornek_sorular_k1 (çıktı) — site toptan yazılmaz
+        return False
+    rapor = s16.build(export=False)  # yalnız meds_database_v2/ornek_sorular_k1 — site toptan yazılmaz
     sorunlu = [y.ders_id for y in sonuc if rapor.get(y.ders_id) is None or rapor.get(y.ders_id)]
     if sorunlu:
         print("örnek sorular siteye AKTARILMADI (s16 denetimi):", sorunlu)
     s16.disa_aktar([y.ders_id for y in sonuc if y.ders_id not in sorunlu])
-    subprocess.run(["npm", "run", "-s", "decks:packages"], cwd=MEDS, check=False)
+    return True
+
+
+# ---------------------------------------------------------------------------------------------- Oracle
+def _kilit():
+    import fcntl
+    f = open(KILIT, "w")
+    try:
+        fcntl.flock(f, fcntl.LOCK_EX | fcntl.LOCK_NB)
+    except BlockingIOError:
+        return None
+    return f
+
+
+def _bildir(baslik: str, ayrinti: str):
+    import urllib.request
+    h = {"Content-Type": "application/json"}
+    for satir in (MEDS / ".env").read_text(encoding="utf-8").splitlines() if (MEDS / ".env").exists() else []:
+        if satir.startswith("MEDSORU_API_PASSWORD="):
+            h["X-API-Password"] = satir.split("=", 1)[1].strip().strip('"')
+    body = {"targetType": "pipeline", "targetId": "ders-isci-yayin", "reason": baslik, "details": ayrinti,
+            "reportedBy": "Ders işçisi"}
+    try:
+        urllib.request.urlopen(urllib.request.Request("http://127.0.0.1:3000/api/universal-report",
+                                                      json.dumps(body).encode(), h), timeout=30)
+    except Exception as e:  # noqa: BLE001
+        print("bildirim gönderilemedi:", e)
+
+
+def _site_derle() -> bool:
+    c = ["docker", "compose", "--env-file", str(MEDS / ".env"), "-f", str(MEDS / "deploy" / "oracle" / "docker-compose.oracle.yml")]
+    for adim in (["build", "-q", "meds-app"], ["up", "-d", "--no-deps", "meds-app"]):
+        r = subprocess.run(["nice", *c, *adim], cwd=MEDS, capture_output=True, text=True)
+        if r.returncode != 0:
+            print("meds-app derleme hatası:", r.stderr[-1500:])
+            return False
+    for _ in range(60):
+        if subprocess.run(["curl", "-sf", "-m", "5", "http://127.0.0.1:3000/api/health"], capture_output=True).returncode == 0:
+            return True
+        time.sleep(2)
+    print("sağlık kontrolü geçmedi")
+    return False
+
+
+def sunucu() -> int:
+    kilit = _kilit()
+    if not kilit:
+        print("başka dağıtım/yayın sürüyor; sonraki turda")
+        return 0
+    asil = oku(DURUM_KAYIT, []) or []
+    repo = {y["is_id"] for y in oku(KAYIT, [])}
+    # 1) cihazdan yapılan dağıtım repo kopyasındaki yayını ezdiyse: izden yeniden uygula
+    yeniden = [DB2 / "ders_isci" / "yayinlanan" / y["is_id"] for y in asil if y["is_id"] not in repo]
+    # 2) yeni onaylar
+    yeni = []
+    for d in sorted(L_TASLAK.glob("*")):
+        k = oku(d / "karar.json", {}) or {}
+        if d.is_dir() and k.get("karar") == "onayla" and not (d / "yayin.json").exists() \
+                and d.name not in repo and d.name not in {y["is_id"] for y in asil}:
+            hedef = ONAYLANAN / d.name
+            if hedef.exists():
+                shutil.rmtree(hedef)
+            shutil.copytree(d, hedef, ignore=shutil.ignore_patterns("oturum.json"))
+            yeni.append(hedef)
+    if not yeniden and not yeni:
+        return 0
+    manifest = oku(L_MANIFEST, {})
+    print(time.strftime("[%Y-%m-%d %H:%M:%S]"), "yeniden uygulanacak:", [d.name for d in yeniden],
+          "yeni:", [d.name for d in yeni])
+    sonuc, red = uygula([d for d in yeniden if d.is_dir()] + yeni,
+                        lambda y: yayin_kaydi_bul(y.d.name, asil) or kaynak_kimligi(y.b.get("pdf_yolu") or "", manifest))
+    for y in red:  # denetimden geçmeyen onaylı taslak: yöneticiye bildir, bir daha denenmesin diye işaretle
+        if y.d.parent == ONAYLANAN:
+            yaz_json(L_TASLAK / y.d.name / "yayin.json", {"durum": "denetim_hatasi", "hatalar": y.hata[:20],
+                                                           "zaman": time.strftime("%Y-%m-%dT%H:%M:%S")})
+            _bildir("Onaylanan ders yayınlanamadı", f"{y.d.name} · {y.ders_id}: " + "; ".join(y.hata[:5]))
+    if not sonuc:
+        return 1 if red else 0
+    if not toplu_adimlar(sonuc):
+        _bildir("Ders yayını durdu", "Deste doğrulayıcı tüm destelerde 0 HATA vermedi; yedekten geri alınabilir.")
+        return 3
+    derlendi = _site_derle()
     for y in sonuc:
-        ok, err = isaretle(y.d.name, {"yayin_zamani": time.strftime("%Y-%m-%dT%H:%M:%S"), "ders_id": y.ders_id,
-                                      "deste_id": y.deste_id, "yedek": str(yedek)})
-        print(f"Oracle işareti {y.d.name}: {'tamam' if ok else 'BAŞARISIZ ' + err}")
-    print("\nYedek:", yedek)
-    print("Commit edilecek repo yolları:", *GIT_HEDEF, sep="\n  ")
-    print("Sonra: vite build + Oracle dağıtımı (src/data, data/, meds_database/derived/learn_links.json).")
+        asil = [x for x in asil if x["is_id"] != y.d.name] + [y.kayit | {"yayin_zamani": time.strftime("%Y-%m-%dT%H:%M:%S")}]
+        if y.d.parent == ONAYLANAN:
+            t = L_TASLAK / y.d.name
+            yaz_json(t / "yayin.json", {"durum": "yayinlandi", "yayin_zamani": time.strftime("%Y-%m-%dT%H:%M:%S"),
+                                        "ders_id": y.ders_id, "deste_id": y.deste_id, "site_derlendi": derlendi})
+            yaz_json(t / "durum.json", (oku(t / "durum.json", {}) or {}) | {"durum": "yayinlandi", "zaman": time.time()})
+    yaz_json(DURUM_KAYIT, sorted(asil, key=lambda y: (y["kurul"], y["numara"])))
+    yeni_adlar = [f"{y.kayit['konu']} ({y.ders_id})" for y in sonuc if y.d.parent == ONAYLANAN]
+    if yeni_adlar:
+        _bildir("Ders yayınlandı" if derlendi else "Ders yayınlandı, site derlenemedi",
+                "Sitede: " + ", ".join(yeni_adlar) + ("" if derlendi else " — meds-app derlemesi başarısız, kayıtlara bakın."))
+    return 0 if derlendi else 4
+
+
+# ---------------------------------------------------------------------------------------------- cihaz
+def esitle() -> int:
+    """Oracle'da yayınlanan dersleri yerel kaynaklara işler (dağıtımdan önce zorunlu). 0 = eşit."""
+    r = ssh(f"cat {DURUM_KAYIT}")
+    if r.returncode != 0:
+        print("Oracle yayın defteri okunamadı:", r.stderr.strip()[:200])
+        return 5
+    asil = json.loads(r.stdout or "[]")
+    yerel = {y["is_id"] for y in oku(KAYIT, [])}
+    eksik = [y for y in asil if y["is_id"] not in yerel]
+    if not eksik:
+        print("yayınlar eşit:", len(asil), "ders")
+        return 0
+    kirli_once = git_kirli()
+    ONAYLANAN.mkdir(parents=True, exist_ok=True)
+    for y in eksik:
+        subprocess.run(["rsync", "-a", "--delete", f"{ORACLE}:/home/ubuntu/medsor/meds_database_v2/ders_isci/yayinlanan/{y['is_id']}/",
+                        str(ONAYLANAN / y["is_id"]) + "/"], check=True)
+    sonuc, red = uygula([ONAYLANAN / y["is_id"] for y in eksik], lambda yy: yayin_kaydi_bul(yy.d.name, asil))
+    if red or not sonuc or not toplu_adimlar(sonuc):
+        print("EŞİTLENEMEDİ — dağıtım yapma")
+        return 6
+    subprocess.run(["npm", "run", "-s", "decks:packages"], cwd=MEDS, check=False)
+    if kirli_once:
+        print("Hedef dosyalarda başka değişiklikler vardı; commit ATILMADI (elle commit'le):", *kirli_once, sep="\n  ")
+    else:
+        mesaj = "ders işçisi: Oracle yayınları eşitlendi — " + ", ".join(y.ders_id for y in sonuc)
+        subprocess.run(["git", "add", "--", *GIT_HEDEF], cwd=MEDS, check=True)
+        subprocess.run(["git", "commit", "-q", "-m", mesaj + "\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>",
+                        "--", *GIT_HEDEF], cwd=MEDS, check=False)
+    print("eşitlendi:", [y.ders_id for y in sonuc])
     return 0
+
+
+def esitle_ve_hastaliklar() -> int:
+    r = esitle()
+    if r == 0:
+        hastaliklari_uygula()  # başka oturum diseases.json'u bitirince ilk dağıtımda kendiliğinden eklenir
+    return r
+
+
+DISEASES = SITE / "diseases.json"
+HASTALIK_ONERI = DB2 / "ders_isci" / "hastalik_onerileri" / "sema2"
+HASTALIK_UYGULANAN = DB2 / "ders_isci" / "hastalik_onerileri" / "uygulanan.json"
+
+
+def _hastalik_hata() -> int | None:
+    r = subprocess.run([sys.executable, str(MEDS / "scripts" / "diseases" / "hastalik_profilleri.py"), "denetle"],
+                       capture_output=True, text=True, cwd=MEDS, env=os.environ | {"HASTALIK_DOGRULAMA_ZORUNLU": "0"})
+    m = re.search(r"·\s*(\d+)\s*HATA", r.stdout)
+    return int(m.group(1)) if m else None
+
+
+def hastaliklari_uygula() -> int:
+    """Şema 2'ye çevrilmiş hastalık önerilerini (sema2/<id>.json) src/data/diseases.json'a upsert eder (cihaz).
+    diseases.json'da commit'lenmemiş değişiklik varsa (başka oturum çalışıyor) BEKLER; denetim hatası artarsa geri alır."""
+    import hashlib
+    dosyalar = sorted(HASTALIK_ONERI.glob("*.json")) if HASTALIK_ONERI.is_dir() else []
+    uyg = oku(HASTALIK_UYGULANAN, {}) or {}
+    bekleyen = [f for f in dosyalar if uyg.get(f.stem) != hashlib.sha1(f.read_bytes()).hexdigest()]
+    if not bekleyen:
+        return 0
+    kirli = subprocess.run(["git", "status", "--porcelain", "--", "src/data/diseases.json"], cwd=MEDS,
+                           capture_output=True, text=True).stdout.strip()
+    if kirli:
+        print(f"hastalık önerileri ({len(bekleyen)}) BEKLİYOR: diseases.json'da commit'lenmemiş değişiklik var (başka oturum)")
+        return 0
+    once = _hastalik_hata()
+    yedek = YEDEK / ("hastalik_" + time.strftime("%Y%m%d_%H%M%S"))
+    yedek.mkdir(parents=True, exist_ok=True)
+    shutil.copy2(DISEASES, yedek / DISEASES.name)
+    kayitlar = oku(DISEASES, [])
+    sira = {r.get("id"): i for i, r in enumerate(kayitlar)}
+    for i, r in enumerate(kayitlar):  # başka oturum kayıtları birleştirdiyse eski kimlik `aliases`'ta yaşar
+        for e in r.get("aliases") or []:
+            sira.setdefault(e, i)
+    simdi = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
+    for f in bekleyen:
+        yeni = json.loads(f.read_text(encoding="utf-8"))
+        eski = kayitlar[sira[yeni["id"]]] if yeni["id"] in sira else None
+        if eski and eski.get("id") != yeni["id"]:  # birleştirilmiş kayıt: onun kimliğiyle güncelle
+            yeni = yeni | {"id": eski["id"], "aliases": [*(yeni.get("aliases") or []), yeni["id"]]}
+        if eski:  # mevcut kayıt: oluşturma zamanı, ders bağları, eş adlar korunur
+            yeni["createdAt"] = eski.get("createdAt") or simdi
+            yeni["relatedLectures"] = list(dict.fromkeys([*(eski.get("relatedLectures") or []), *(yeni.get("relatedLectures") or [])]))
+            for alan in ("aliases", "altNames"):
+                yeni[alan] = list(dict.fromkeys([*(eski.get(alan) or []), *(yeni.get(alan) or [])]))
+            for alan in ("icd_code",):
+                yeni.setdefault(alan, eski.get(alan))
+            kayitlar[sira[yeni["id"]]] = yeni | {"updatedAt": simdi}
+        else:
+            yeni.setdefault("aliases", [])
+            yeni.setdefault("altNames", [])
+            kayitlar.append(yeni | {"createdAt": simdi, "updatedAt": simdi})
+            sira[yeni["id"]] = len(kayitlar) - 1
+    yaz_json(DISEASES, kayitlar)
+    sonra = _hastalik_hata()
+    if sonra is None or (once is not None and sonra > once):
+        shutil.copy2(yedek / DISEASES.name, DISEASES)
+        print(f"hastalık önerileri GERİ ALINDI: denetim hatası {once} → {sonra}")
+        return 7
+    for f in bekleyen:
+        uyg[f.stem] = hashlib.sha1(f.read_bytes()).hexdigest()
+    yaz_json(HASTALIK_UYGULANAN, uyg)
+    subprocess.run(["git", "commit", "-q", "-m", f"hastalıklar: ders işçisi önerileri eklendi ({len(bekleyen)} profil: "
+                    + ", ".join(f.stem for f in bekleyen)[:300] + ")\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>",
+                    "--", "src/data/diseases.json"], cwd=MEDS, check=False)
+    print(f"hastalık önerileri eklendi: {len(bekleyen)} profil (denetim {once} → {sonra} HATA)")
+    return 0
+
+
+def main() -> int:
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--sunucu", action="store_true", help="Oracle: onaylıları yayınla + site derle (timer)")
+    ap.add_argument("--esitle", action="store_true", help="cihaz: Oracle yayınlarını yerel kaynaklara işle")
+    ap.add_argument("--hastaliklar", action="store_true", help="cihaz: şema 2 hastalık önerilerini diseases.json'a ekle")
+    ap.add_argument("--deneme", action="store_true", help="cihaz: --is taslağını yalnız denetle")
+    ap.add_argument("--is", dest="tek")
+    a = ap.parse_args()
+    if a.sunucu:
+        if not SUNUCU:
+            print("--sunucu yalnız Oracle'da çalışır")
+            return 2
+        return sunucu()
+    if a.esitle:
+        return esitle_ve_hastaliklar()
+    if a.hastaliklar:
+        return hastaliklari_uygula()
+    if a.deneme and a.tek:
+        hedef = ONAYLANAN / a.tek
+        subprocess.run(["rsync", "-a", "--delete", f"{ORACLE}:{L_TASLAK}/{a.tek}/", str(hedef) + "/"], check=True)
+        r = ssh(f"cat {L_MANIFEST}")
+        manifest = json.loads(r.stdout) if r.returncode == 0 else {}
+        uygula([hedef], lambda y: kaynak_kimligi(y.b.get("pdf_yolu") or "", manifest), deneme=True)
+        return 0
+    ap.print_help()
+    return 2
 
 
 if __name__ == "__main__":

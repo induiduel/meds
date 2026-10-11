@@ -15,6 +15,12 @@ DO_BUILD=0
 [[ "${1:-}" == "--build" ]] && DO_BUILD=1
 SSH="ssh -i $KEY -o StrictHostKeyChecking=no"
 
+echo "==> [0/4] ders işçisi yayınları: Oracle'da yayınlanan dersler önce yerel kaynaklara işlenir"
+# Oracle onaylanan dersleri kendisi yayınlar (yayinla.py --sunucu). Eşitlemeden rsync, o dersleri sitede eski
+# hâline döndürürdü (Oracle sonraki turda kendini onarır ama arada ders kaybolur).
+PY="$MEDS_DIR/.venv-ocr/bin/python"; [[ -x "$PY" ]] || PY=python3
+"$PY" "$MEDS_DIR/scripts/ders_isci/yayinla.py" --esitle || { echo "DURDU: yayınlar eşitlenemedi (yukarıdaki çıktıya bakın)"; exit 1; }
+
 echo "==> [1/4] rsync kod (src/data DAHİL, .env HARİÇ)"
 rsync -avz --checksum \
   --exclude='/node_modules' --exclude='/dist' --exclude='/dist-gh' \

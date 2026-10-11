@@ -52,6 +52,12 @@ EXCLUDES=(
   --exclude='active_tunnel.txt'
 )
 
+if [[ "$MODE" == "to" ]]; then
+  # data/lectureSummariesCatalog.json Oracle'daki ders işçisi yayınlarını da içerir: önce yerel kaynaklara işle
+  PY="$SCRIPT_DIR/../../.venv-ocr/bin/python"; [[ -x "$PY" ]] || PY=python3
+  "$PY" "$SCRIPT_DIR/../../scripts/ders_isci/yayinla.py" --esitle || { echo "DURDU: ders yayınları eşitlenemedi"; exit 1; }
+fi
+
 echo "==> Eşitleme yönü: $MODE (dry-run: ${DRY_RUN:-yok})"
 if [[ "$MODE" == "to" ]]; then
   # shellcheck disable=SC2086

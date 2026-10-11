@@ -30,6 +30,7 @@ type Taslak = {
   referans?: number;
   karar: Karar;
   zaman?: number;
+  yayin?: { durum?: string; hatalar?: string[]; yayin_zamani?: string; site_derlendi?: boolean } | null;
 };
 type Ayrinti = Taslak & { rapor: string; denetim: { hatalar?: string[]; uyarilar?: string[]; referansla_tamamlanan?: string[] }; dosyalar: string[] };
 type Sekme = 'rapor' | 'deste' | 'sorular' | 'sozluk' | 'hastaliklar' | 'havuz' | 'cikmis' | 'kaynak';
@@ -257,13 +258,26 @@ export const ManageDersIsciSection: React.FC<{ adminEmail: string }> = ({ adminE
 
               <div className="mt-4 border-t border-line pt-3 flex flex-col gap-2">
                 {ayr.karar ? (
-                  <p className="text-sm">
-                    Karar: <b>{DURUM[ayr.karar.karar]?.label}</b>
-                    {ayr.karar.not ? ` — ${ayr.karar.not}` : ''}
-                    {ayr.karar.kim ? ` (${ayr.karar.kim})` : ''}
-                    {ayr.karar.karar === 'onayla' &&
-                      (ayr.durum === 'yayinlandi' ? ' · Sitede yayında.' : ' · Siteye aktarılmayı bekliyor (yayinla.py).')}
-                  </p>
+                  <>
+                    <p className="text-sm">
+                      Karar: <b>{DURUM[ayr.karar.karar]?.label}</b>
+                      {ayr.karar.not ? ` — ${ayr.karar.not}` : ''}
+                      {ayr.karar.kim ? ` (${ayr.karar.kim})` : ''}
+                      {ayr.karar.karar === 'onayla' &&
+                        (ayr.durum === 'yayinlandi'
+                          ? ' · Sitede yayında.'
+                          : ayr.yayin?.durum === 'denetim_hatasi'
+                            ? ' · Yayınlanamadı (yayın denetimi):'
+                            : ' · Sunucu en geç 10 dakika içinde siteye ekler.')}
+                    </p>
+                    {ayr.yayin?.durum === 'denetim_hatasi' && (
+                      <ul className="text-sm text-ink-2 list-disc pl-5">
+                        {(ayr.yayin.hatalar || []).slice(0, 8).map((h) => (
+                          <li key={h}>{h}</li>
+                        ))}
+                      </ul>
+                    )}
+                  </>
                 ) : ayr.durum === 'onay_bekliyor' ? (
                   <>
                     <label className="text-sm text-ink-2" htmlFor="isci-not">

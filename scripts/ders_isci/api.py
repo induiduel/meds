@@ -35,7 +35,7 @@ def taslak_ozeti(d) -> dict:
             "pdf": b.get("pdf_adi"), "program": {k: (b.get("program") or {}).get(k) for k in
                                                   ("kurul", "ders", "konu", "ogretim_uyesi", "tarih", "guven", "skor")},
             "sayilar": den.get("sayilar", {}), "denetim_hata": den.get("hata"), "referans": len(den.get("referansla_tamamlanan", [])),
-            "karar": oku(d / "karar.json", None), "zaman": du.get("zaman")}
+            "karar": oku(d / "karar.json", None), "yayin": oku(d / "yayin.json", None), "zaman": du.get("zaman")}
 
 
 class H(BaseHTTPRequestHandler):
