@@ -1,4 +1,4 @@
-import { loadAllDecks } from '../data/deckStore';
+import { loadAllDecks, loadDeck } from '../data/deckStore';
 import { safeJsonFetch } from './api';
 import { QuestionItem } from '../types';
 import { SlideFlashcard } from '../components/learn/InteractiveDeckView';
@@ -101,22 +101,73 @@ class LearnMatcherService {
   private computed: Map<string, { deckId: string; slideNumber: number; guven?: 'yuksek' | 'orta' }> | null = null;
 
   /**
-   * Slayt indeksini arka planda kurar (desteler parça parça yüklenir). Hazır olana kadar
+   * Slayt indeksini arka planda kurar (önce sunucu indeksi, yoksa desteler). Hazır olana kadar
    * getMatch null döner; çağıran taraf promise çözülünce yeniden çizer.
    */
   public ensureLoaded(): Promise<void> {
     if (!this.loading) {
-      const links = safeJsonFetch<{ baglantilar: Record<string, { deckId: string; slideNumber: number; guven?: 'yuksek' | 'orta' }> }>('/api/learn-links')
-        .then((r) => {
-          if (r.ok && r.data?.baglantilar) this.computed = new Map(Object.entries(r.data.baglantilar));
-        })
-        .catch(() => {});
-      this.loading = Promise.all([loadAllDecks<any>(), links]).then(([decks]) => {
-        this.init(decks);
-        this.cache.clear();
-      });
+      this.loading = this.loadIndex().then((ok) => (ok ? undefined : this.loadFromDecks()));
     }
     return this.loading;
+  }
+
+  /** Sunucudaki hazır eşleşme indeksi (hafif ~180KB): tüm desteleri indirmeden aynı sonuç. */
+  private async loadIndex(level: 'hafif' | 'orta' | 'guclu' = 'hafif'): Promise<boolean> {
+    type Slide = [string, string, string, string, string, string | null, string?, any[]?, SlideFlashcard[]?];
+    const r = await safeJsonFetch<{
+      baglantilar: Record<string, { deckId: string; slideNumber: number; guven?: 'yuksek' | 'orta' }>;
+      direct: Record<string, [string, number]>;
+      stems: Record<string, string>;
+      slides: Record<string, Slide>;
+    }>(`/api/learn-match-index?seviye=${level}`).catch(() => null);
+    if (!r?.ok || !r.data?.slides) return false;
+    const { baglantilar, direct, stems, slides } = r.data;
+    for (const [key, [deckTitle, discipline, committee, slideTitle, badge, badgeColor, narrative, pearls, flashcards]] of Object.entries(slides)) {
+      const hash = key.lastIndexOf('#');
+      this.slideByKey.set(key, {
+        deckId: key.slice(0, hash), slideNumber: Number(key.slice(hash + 1)) || 1,
+        deckTitle, discipline, committee, slideTitle, badge, badgeColor: badgeColor || undefined,
+        // orta/güçlü seviye ayrıntıyı içerir; hafifte withDetails() pencere açılınca doldurur
+        ...(narrative !== undefined ? { synthesisNarrative: narrative } : {}),
+        ...(pearls ? { spotPearls: pearls } : {}),
+        ...(flashcards ? { flashcards } : {}),
+        matchType: 'direct', matchScore: 100,
+      });
+    }
+    for (const [id, [key, score]] of Object.entries(direct || {})) {
+      const base = this.slideByKey.get(key);
+      if (base) this.directIdMap.set(id, { ...base, matchType: 'direct', matchScore: score || 100 });
+    }
+    for (const [stem, key] of Object.entries(stems || {})) {
+      const base = this.slideByKey.get(key);
+      const k = normalizeTr(stem).replace(/[^a-z0-9]/g, '');
+      if (base && k) this.directStemMap.set(k, { ...base, matchType: 'stem', matchScore: 95 });
+    }
+    this.computed = new Map(Object.entries(baglantilar || {}));
+    this.cache.clear();
+    return true;
+  }
+
+  /** Eşleşmeye slayt ayrıntısını (anlatım, inciler, kartlar) yalnız o desteyi yükleyerek ekler. */
+  public async withDetails(m: QuestionLearnMatch): Promise<QuestionLearnMatch> {
+    if (m.synthesisNarrative !== undefined && (m.spotPearls || m.flashcards)) return m;
+    const deck: any = await loadDeck(m.deckId).catch(() => null);
+    const s = (deck?.slides || []).find((x: any) => Number(x.slideNumber || 1) === m.slideNumber);
+    if (!s) return m;
+    return { ...m, synthesisNarrative: s.synthesisNarrative || '', spotPearls: s.spotPearls, flashcards: s.flashcards };
+  }
+
+  /** Yedek yol (sunucu indeksi yoksa / çevrimdışı): tüm desteleri indirip indeksi istemcide kurar. */
+  private loadFromDecks(): Promise<void> {
+    const links = safeJsonFetch<{ baglantilar: Record<string, { deckId: string; slideNumber: number; guven?: 'yuksek' | 'orta' }> }>('/api/learn-links')
+      .then((r) => {
+        if (r.ok && r.data?.baglantilar) this.computed = new Map(Object.entries(r.data.baglantilar));
+      })
+      .catch(() => {});
+    return Promise.all([loadAllDecks<any>(), links]).then(([decks]) => {
+      this.init(decks);
+      this.cache.clear();
+    });
   }
 
   private init(decks: any[]) {

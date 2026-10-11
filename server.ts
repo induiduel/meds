@@ -7,6 +7,7 @@ import mammoth from 'mammoth';
 import dotenv from 'dotenv';
 import path from 'path';
 import os from 'os';
+import zlib from 'zlib';
 import fs from 'fs';
 import { fileURLToPath } from 'url';
 import { createRequire } from 'module';
@@ -384,9 +385,17 @@ app.use(express.urlencoded({ extended: true, limit: '100mb' }));
 app.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', '*');
   res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS, PATCH');
-  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization, Cache-Control, x-admin-email, X-API-Password');
+  // Sabit liste yeni bir başlık eklendiğinde (x-voter-uid, x-user-id) tarayıcıda
+  // "Failed to fetch" veriyordu; köken * ve kimlik bilgisi yok, istenen başlığı yansıtmak güvenli.
+  const requested = req.headers['access-control-request-headers'];
+  res.header('Access-Control-Allow-Headers', typeof requested === 'string' && requested
+    ? requested
+    : 'Origin, X-Requested-With, Content-Type, Accept, Authorization, Cache-Control, x-admin-email, X-API-Password, x-voter-uid, x-user-id');
+  res.vary('Access-Control-Request-Headers');
   if (req.method === 'OPTIONS') {
-    return res.sendStatus(200);
+    // Ön-kontrolü 1 gün önbelleğe al: her yazmada tünel üstünden ~300ms'lik ek tur gitmesin.
+    res.header('Access-Control-Max-Age', '86400');
+    return res.sendStatus(204);
   }
   next();
 });
@@ -1599,6 +1608,66 @@ app.get('/api/learn-links', (_req, res) => {
   }
 });
 
+// Çıkmış kartlarının "Öğren slaytı" eşleşme indeksi. İstemci eskiden bunun için 114 destenin
+// tamamını (~58MB) indiriyordu. Üç seviye (aynı eşleşmeler, artan slayt ayrıntısı):
+//   hafif  (varsayılan, ~180KB gzip): kimlik → slayt künyesi; ayrıntı pencere açılınca tek desteden gelir
+//   orta   : + slayt anlatımı (synthesisNarrative)
+//   guclu  (~1.5MB gzip): + inciler ve kartlar (çevrimdışı/ön yükleme için tam paket)
+type LearnIndexLevel = 'hafif' | 'orta' | 'guclu';
+const learnMatchIndexCache = new Map<LearnIndexLevel, { key: string; body: string }>();
+function buildLearnMatchIndex(level: LearnIndexLevel): string {
+  const linksFile = path.join(process.env.MEDS_DATABASE_DIR || path.resolve(process.cwd(), '..', 'meds_database'), 'derived', 'learn_links.json');
+  const decks = getDecksDb();
+  const linksMtime = fs.existsSync(linksFile) ? fs.statSync(linksFile).mtimeMs : 0;
+  const cacheKey = `${decksCache?.mtime || 0}:${linksMtime}:${decks.length}`;
+  const hit = learnMatchIndexCache.get(level);
+  if (hit && hit.key === cacheKey) return hit.body;
+  const baglantilar = linksMtime ? (JSON.parse(fs.readFileSync(linksFile, 'utf-8')).baglantilar || {}) : {};
+  const used = new Set<string>(Object.values(baglantilar).map((v: any) => `${v.deckId}#${Number(v.slideNumber || 1)}`));
+  const direct: Record<string, [string, number]> = {};
+  const stems: Record<string, string> = {};
+  for (const d of decks) {
+    for (const s of d.slides || []) {
+      const key = `${d.id}#${Number(s.slideNumber || 1)}`;
+      for (const rq of s.relatedQuestions || []) {
+        if (rq.id) { direct[rq.id] = [key, rq.matchScore || 100]; used.add(key); }
+        if (rq.stem && rq.stem.length > 20) { stems[String(rq.stem).slice(0, 70)] = key; used.add(key); }
+      }
+    }
+  }
+  // [desteAdı, disiplin, kurul, slaytBaşlığı, rozet, rozetRengi, anlatım?, inciler?, kartlar?]
+  const slides: Record<string, any[]> = {};
+  for (const d of decks) {
+    for (const s of d.slides || []) {
+      const key = `${d.id}#${Number(s.slideNumber || 1)}`;
+      if (!used.has(key)) continue;
+      const row: any[] = [d.shortTitle || d.title || 'Ders', d.discipline || '', d.committee || '', s.title || '', s.badge || 'Ders Notu', s.badgeColor || null];
+      if (level !== 'hafif') row.push(s.synthesisNarrative || '');
+      if (level === 'guclu') row.push(s.spotPearls || [], s.flashcards || []);
+      slides[key] = row;
+    }
+  }
+  const body = JSON.stringify({ seviye: level, baglantilar, direct, stems, slides });
+  learnMatchIndexCache.set(level, { key: cacheKey, body });
+  return body;
+}
+app.get('/api/learn-match-index', (req, res) => {
+  try {
+    const q = String(req.query.seviye || 'hafif');
+    const level: LearnIndexLevel = q === 'orta' || q === 'guclu' ? q : 'hafif';
+    res.setHeader('Cache-Control', 'public, max-age=300, stale-while-revalidate=3600');
+    res.type('application/json').send(buildLearnMatchIndex(level));
+  } catch (err: any) {
+    res.status(500).json({ error: 'Öğren eşleşme indeksi üretilemedi: ' + err.message });
+  }
+});
+// Açılışta üç seviyeyi de hazırla (ilk istek beklemesin)
+setTimeout(() => {
+  for (const l of ['hafif', 'orta', 'guclu'] as const) {
+    try { buildLearnMatchIndex(l); } catch (e) { console.warn('[learn-match-index]', l, e); }
+  }
+}, 5000);
+
 app.get('/api/insights/summary', (_req, res) => {
   res.json(getInsightsSummary());
 });
@@ -1658,6 +1727,37 @@ function addDeletedPastQuestion(id: string) {
   }
 }
 
+// Tam çıkmış listesi (~61MB JSON) her istekte yeniden örtülüp gzip'lenince Oracle'da ~1.9 sn CPU
+// harcıyor ve bu sırada tüm diğer istekler bekliyordu. Örtülü liste + gzip gövdesi kaynak değişene
+// kadar (en çok 30 sn; Faz 14 kaydı kendi önbelleğinde) bellekte tutulur, gzip iş parçacığında yapılır.
+type PastListCache = { key: string; at: number; list: any[]; listJson: string; bodies: Map<string, Promise<{ raw: string; gz: Buffer }>> };
+let pastListCache: PastListCache | null = null;
+function getServedPastList(): PastListCache {
+  const base = getPastQuestionsDb();
+  const key = `${lastPastQuestionsMtime}:${base.length}:${quarantineMtime()}:${mergeMtime()}:${getDeletedPastQuestions().size}`;
+  if (!pastListCache || pastListCache.key !== key || Date.now() - pastListCache.at > 30_000) {
+    const list = applyMergeOverlay(applyQuarantine(applyPhase14Overlay(base)));
+    pastListCache = { key, at: Date.now(), list, listJson: JSON.stringify(list), bodies: new Map() };
+  }
+  return pastListCache;
+}
+function sendPastListBody(req: express.Request, res: express.Response, cache: PastListCache, name: string, build: () => string) {
+  let p = cache.bodies.get(name);
+  if (!p) {
+    const raw = build();
+    p = new Promise((resolve, reject) => zlib.gzip(raw, { level: 6 }, (err, gz) => (err ? reject(err) : resolve({ raw, gz }))));
+    cache.bodies.set(name, p);
+  }
+  p.then(({ raw, gz }) => {
+    res.type('application/json');
+    res.vary('Accept-Encoding');
+    if (/\bgzip\b/.test(String(req.headers['accept-encoding'] || ''))) {
+      res.setHeader('Content-Encoding', 'gzip');
+      res.end(gz);
+    } else res.end(raw);
+  }).catch((err) => res.status(500).json({ error: 'Çıkmış listesi hazırlanamadı: ' + err.message }));
+}
+
 function getPastQuestionsDb(): any[] {
   const deletedSet = getDeletedPastQuestions();
   if (fs.existsSync(PAST_QUESTIONS_FILE)) {
@@ -1701,7 +1801,8 @@ function savePastQuestionsDb(list: any[]) {
 app.get('/api/past-exams/sync', (req, res) => {
   try {
     // Karantina uygulanmış liste: sayı değişince istemci allIds ile karantinadakileri önbelleğinden siler
-    const list = applyMergeOverlay(applyQuarantine(applyPhase14Overlay(getPastQuestionsDb())));
+    const served = getServedPastList();
+    const list = served.list;
     const since = req.query.since as string;
     const clientCount = req.query.count ? parseInt(req.query.count as string, 10) : undefined;
     const deletedIds = Array.from(getDeletedPastQuestions());
@@ -1749,15 +1850,9 @@ app.get('/api/past-exams/sync', (req, res) => {
       });
     }
 
-    // 3. Initial sync or no 'since' header
-    res.json({
-      success: true,
-      upToDate: false,
-      count: list.length,
-      lastModified: maxUpdatedAt,
-      questions: list,
-      deletedIds: deletedIds.length > 0 ? deletedIds : undefined
-    });
+    // 3. Initial sync or no 'since' header — hazır gövde (önbellekli JSON + gzip)
+    sendPastListBody(req, res, served, `sync:${maxUpdatedAt}:${deletedIds.length}`, () =>
+      `{"success":true,"upToDate":false,"count":${list.length},"lastModified":${JSON.stringify(maxUpdatedAt)},"questions":${served.listJson}${deletedIds.length > 0 ? `,"deletedIds":${JSON.stringify(deletedIds)}` : ''}}`);
   } catch (err: any) {
     res.status(500).json({ error: 'Delta senkronizasyonu başarısız: ' + err.message });
   }
@@ -1767,7 +1862,8 @@ app.get('/api/past-exams/sync', (req, res) => {
 app.get('/api/past-exams', (req, res) => {
   try {
     // Karantina: birleşik/bozuk sorular gösterilmez, onarılanlar temiz döner (yalnız okuma yanıtı)
-    const list = applyMergeOverlay(applyQuarantine(applyPhase14Overlay(getPastQuestionsDb())));
+    const served = getServedPastList();
+    const list = served.list;
     const { committeeId, discipline, year, query } = req.query;
 
     // Fast HTTP Cache validator (304 Not Modified)
@@ -1807,6 +1903,9 @@ app.get('/api/past-exams', (req, res) => {
       );
     }
 
+    if (filtered === list) {
+      return sendPastListBody(req, res, served, 'list', () => `{"success":true,"totalCount":${list.length},"questions":${served.listJson}}`);
+    }
     res.json({
       success: true,
       totalCount: filtered.length,

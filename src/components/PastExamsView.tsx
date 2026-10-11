@@ -419,6 +419,16 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
     question: QuestionItem;
     match: QuestionLearnMatch;
   } | null>(null);
+  // Eşleşme indeksi hafif gelir; anlatım/inciler/kartlar pencere açılınca yalnız o desteden yüklenir
+  useEffect(() => {
+    const m = selectedLearnMatch?.match;
+    if (!m) return;
+    let alive = true;
+    learnMatcher.withDetails(m).then((full) => {
+      if (alive && full !== m) setSelectedLearnMatch((prev) => (prev && prev.match === m ? { ...prev, match: full } : prev));
+    });
+    return () => { alive = false; };
+  }, [selectedLearnMatch?.match]);
 
   // Selected Ham Soru location modal state
   const [selectedRawSourceQuestion, setSelectedRawSourceQuestion] = useState<QuestionItem | null>(null);

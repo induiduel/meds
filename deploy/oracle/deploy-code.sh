@@ -35,7 +35,7 @@ done
 
 if [[ "$DO_BUILD" == "1" ]]; then
   echo "==> [3/4] Oracle'da derle + başlat"
-  $SSH "$ORACLE_USER@$ORACLE_HOST" "cd $ORACLE_DIR && docker compose --env-file $ORACLE_DIR/.env -f deploy/oracle/docker-compose.oracle.yml up -d --build meds-server 2>&1 | tail -2"
+  $SSH "$ORACLE_USER@$ORACLE_HOST" "cd $ORACLE_DIR && flock /tmp/meds-deploy.lock docker compose --env-file $ORACLE_DIR/.env -f deploy/oracle/docker-compose.oracle.yml up -d --build meds-server 2>&1 | tail -2"
   sleep 25
 fi
 

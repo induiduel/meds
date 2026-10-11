@@ -1,34 +1,57 @@
 name: Deploy code to Oracle VM
 
-# Cihaz pushlar -> Oracle çeker (kod senkronu). Veri senkronu HARİÇ
-# (veri için deploy/oracle/sync-data.sh kullanılır).
-# Gerekli Secrets: ORACLE_HOST, ORACLE_USER, ORACLE_SSH_KEY
+# main'e push -> kod Oracle'a rsync ile gider, meds-server imajı yeniden derlenir.
+# Oracle'da git klonu yok (deploy-code.sh ile aynı rsync yolu).
+# VERİ HARİÇ: data/ ve src/data/*.json cihazdaki çalışma kopyasından gelir
+# (deploy/oracle/deploy-code.sh veya sync-data.sh). Git'teki eski sürüm Oracle'ı ezmesin.
+# Gerekli Secrets: ORACLE_HOST (92.5.55.109), ORACLE_USER (ubuntu), ORACLE_SSH_KEY (ssh-key1.key içeriği)
 on:
   push:
-    branches: [main, master]
-    paths:
-      - 'meds/**'
-      - '!meds/data/**'
+    branches: [main]
+    paths-ignore:
+      - 'data/**'
+      - 'src/data/**/*.json'
+      - '**/*.md'
   workflow_dispatch:
+
+# Üst üste binen iki dağıtım sunucuyu iki kez yeniden başlatıyordu (2026-10-11 kesintileri)
+concurrency:
+  group: oracle-deploy
+  cancel-in-progress: false
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     steps:
-      - name: Pull + build + restart on Oracle
-        uses: appleboy/ssh-action@v1.0.3
-        with:
-          host: ${{ secrets.ORACLE_HOST }}
-          username: ${{ secrets.ORACLE_USER }}
-          key: ${{ secrets.ORACLE_SSH_KEY }}
-          script: |
+      - uses: actions/checkout@v4
+
+      - name: SSH anahtarı
+        run: |
+          install -m 700 -d ~/.ssh
+          printf '%s\n' "${{ secrets.ORACLE_SSH_KEY }}" > ~/.ssh/oracle
+          chmod 600 ~/.ssh/oracle
+          ssh-keyscan -H "${{ secrets.ORACLE_HOST }}" >> ~/.ssh/known_hosts
+
+      - name: Kod rsync (veri ve .env hariç)
+        run: |
+          rsync -az --checksum \
+            --exclude='/node_modules' --exclude='/dist' --exclude='/dist-gh' \
+            --exclude='/data' --exclude='/.git' --exclude='/.github' --exclude='/models' \
+            --exclude='/training_data' --exclude='/linux' \
+            --exclude='.venv*' --exclude='__pycache__' --exclude='*.log' \
+            --exclude='/supabase-server/volumes' --exclude='/supabase-server/backups' \
+            --exclude='/cloudflared.exe' --exclude='src/data/decks/items' \
+            --exclude='/src/data/*.json' --exclude='/src/data/**/*.json' \
+            --exclude='/.env' \
+            -e "ssh -i ~/.ssh/oracle" ./ "${{ secrets.ORACLE_USER }}@${{ secrets.ORACLE_HOST }}:/home/ubuntu/medsor/meds/"
+
+      - name: Derle + başlat + sağlık
+        run: |
+          ssh -i ~/.ssh/oracle "${{ secrets.ORACLE_USER }}@${{ secrets.ORACLE_HOST }}" '
             set -e
-            cd ~/meds
-            git pull --ff-only
-            cd meds
-            npm ci --no-audit --no-fund || npm install --no-audit --no-fund
-            npm run build
-            npx tsc --noEmit
-            docker compose --env-file /home/ubuntu/medsor/meds/.env -f deploy/oracle/docker-compose.oracle.yml up -d --build
-            sleep 20
-            curl -sf http://127.0.0.1:3000/api/health
+            cd /home/ubuntu/medsor/meds
+            flock /tmp/meds-deploy.lock docker compose --env-file /home/ubuntu/medsor/meds/.env -f deploy/oracle/docker-compose.oracle.yml up -d --build meds-server
+            for i in $(seq 1 30); do curl -sf http://127.0.0.1:3000/api/health && exit 0; sleep 3; done
+            echo "sağlık kontrolü geçmedi"; docker logs meds-server --tail 40; exit 1
+          '
