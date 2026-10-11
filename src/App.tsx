@@ -254,12 +254,13 @@ export default function App() {
     const el = document.getElementById('app-splash');
     if (el) {
       const reduce = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
+      // Uygulama hazır olur olmaz kalkar; animasyon bitsin diye bekletmek her yenilemeye ~1,5 sn ekliyordu.
       const t = setTimeout(() => {
         el.classList.add('is-leaving');
         setTimeout(() => {
           try { el.remove(); } catch {}
-        }, 500);
-      }, reduce ? 150 : Math.max(250, 1400 - performance.now())); // açılış animasyonu (~1.3 sn) tamamlansın; geç yüklenmede bekletme
+        }, reduce ? 0 : 220);
+      });
       return () => clearTimeout(t);
     }
   }, []);
@@ -463,12 +464,19 @@ export default function App() {
     } catch (e) {}
   }, [selectedStatus]);
 
-  // Scroll Position Restoration: Save scroll position on scroll
+  // Scroll Position Restoration: Save scroll position on scroll (throttled with rAF)
   useEffect(() => {
+    let ticking = false;
     const handleScroll = () => {
-      try {
-        sessionStorage.setItem('medsoru_scroll_pos', window.scrollY.toString());
-      } catch (e) {}
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          try {
+            sessionStorage.setItem('medsoru_scroll_pos', window.scrollY.toString());
+          } catch (e) {}
+          ticking = false;
+        });
+        ticking = true;
+      }
     };
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
@@ -1345,7 +1353,7 @@ export default function App() {
         </div>
       )}
       {/* Main Container */}
-      <main key={activeTab} className={`sh-main ms-view-enter ${activeTab === 'ai_chat' ? 'ms-chat-main' : ''}`}>
+      <main className={`sh-main ${activeTab === 'ai_chat' ? 'ms-chat-main' : ''}`}>
 
         {/* Drive Upload Notification Banner if successful */}
         {driveUploadSuccess && (

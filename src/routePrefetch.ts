@@ -36,12 +36,11 @@ export function prefetchIdle() {
   const conn = (navigator as any).connection;
   if (conn?.saveData || /2g/.test(conn?.effectiveType || '') || getNetState() !== 'online') return;
   const order: AppRoute[] = ['learn', 'flashcards', 'past_exams', 'study', 'glossary', 'ornek_sorular', 'summaries'];
-  const idle = (cb: () => void) => ((window as any).requestIdleCallback ? (window as any).requestIdleCallback(cb, { timeout: 4000 }) : window.setTimeout(cb, 1500));
   let i = 0;
   const step = () => {
     if (i >= order.length || getNetState() !== 'online') return;
     prefetchRoute(order[i++]);
-    idle(step);
+    window.setTimeout(step, 3000);
   };
-  window.setTimeout(() => idle(step), 3500);
+  window.setTimeout(step, 5000);
 }

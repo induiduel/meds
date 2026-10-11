@@ -1344,8 +1344,8 @@ html.theme-dark .deep-link-highlight-pulse, html[data-mode="dark"] .deep-link-hi
 /* 43 · Sayfa yükleme katmanı (PageLoader): tam ekran bulanık perde, ortada halka + marka çizgisi.
  *  150 ms gecikmeli belirir (hızlı yüklemede görünmez); halka döner, kalp ritmi çizgisi çizilir. */
 .pl-veil { position: fixed; inset: 0; z-index: 25; display: grid; place-items: center; pointer-events: none;
-  background: color-mix(in srgb, var(--color-canvas) 55%, transparent); -webkit-backdrop-filter: blur(10px) saturate(1.1); backdrop-filter: blur(10px) saturate(1.1);
-  animation: pl-in 260ms 150ms cubic-bezier(.22, 1, .36, 1) both; }
+  background: color-mix(in srgb, var(--color-canvas) 80%, transparent); -webkit-backdrop-filter: blur(2px); backdrop-filter: blur(2px);
+  animation: pl-in 200ms 100ms cubic-bezier(.22, 1, .36, 1) both; }
 .pl-box { display: flex; flex-direction: column; align-items: center; gap: 14px; padding: 22px 28px; border-radius: 20px;
   background: color-mix(in srgb, var(--color-white) 82%, transparent); box-shadow: 0 12px 40px -12px rgb(0 0 0 / .22), 0 0 0 1px var(--color-line-soft);
   animation: pl-pop 420ms 150ms cubic-bezier(.34, 1.4, .64, 1) both; }

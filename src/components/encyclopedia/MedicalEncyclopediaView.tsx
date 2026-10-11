@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useEffect } from 'react';
+import React, { useState, useMemo, useEffect, useDeferredValue } from 'react';
 import { Sheet } from '../ui/Sheet';
 import { PageHeader } from '../ui/PageHeader';
 import { EmptySearch } from '../ui/Animations';
@@ -171,12 +171,44 @@ const useWide = () => {
   return wide;
 };
 
+export interface IndexedEncyclopediaEntry extends EncyclopediaEntry {
+  _corpus: string;
+  _termNorm: string;
+  _firstLetter: string;
+}
+
+const buildSearchCorpus = (e: EncyclopediaEntry): string => {
+  const parts: string[] = [
+    e.term || '',
+    e.latinName || '',
+    ...(e.aliases || []),
+    typeof e.definition === 'string' ? e.definition : JSON.stringify(e.definition || ''),
+    typeof e.lectureContextNotes === 'string' ? e.lectureContextNotes : JSON.stringify(e.lectureContextNotes || ''),
+    Array.isArray(e.examSpotPearls)
+      ? e.examSpotPearls.join(' ')
+      : typeof e.examSpotPearls === 'string'
+      ? e.examSpotPearls
+      : JSON.stringify(e.examSpotPearls || ''),
+    typeof e.morphologyOrMechanism === 'string' ? e.morphologyOrMechanism : JSON.stringify(e.morphologyOrMechanism || ''),
+    typeof e.differentialDiagnosis === 'string' ? e.differentialDiagnosis : JSON.stringify(e.differentialDiagnosis || ''),
+    typeof e.pitfallsAndWarnings === 'string' ? e.pitfallsAndWarnings : JSON.stringify(e.pitfallsAndWarnings || ''),
+  ];
+  return parts.filter(Boolean).join(' ').toLocaleLowerCase('tr-TR');
+};
+
+const indexEntry = (e: EncyclopediaEntry): IndexedEncyclopediaEntry => ({
+  ...e,
+  _corpus: buildSearchCorpus(e),
+  _termNorm: String(e.term || '').toLocaleLowerCase('tr-TR'),
+  _firstLetter: firstLetterOf(e.term),
+});
+
 export const MedicalEncyclopediaView: React.FC<MedicalEncyclopediaViewProps> = ({
   initialTermId,
   onNavigateToDeck,
 }) => {
-  // Load database with user's local enhancements from localStorage
-  const [entries, setEntries] = useState<EncyclopediaEntry[]>(() => withNames(readEntries()));
+  // Load database with user's local enhancements from localStorage and pre-index search corpus
+  const [entries, setEntries] = useState<IndexedEncyclopediaEntry[]>(() => withNames(readEntries()).map(indexEntry));
 
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<EncyclopediaCategory>('all');
@@ -311,12 +343,43 @@ export const MedicalEncyclopediaView: React.FC<MedicalEncyclopediaViewProps> = (
     });
   };
 
-  // Filtered entries
+  const deferredSearchQuery = useDeferredValue(searchQuery);
+  const [listLimit, setListLimit] = useState(60);
+
+  // Süzgeç veya arama değişince liste sınırını başa al
+  useEffect(() => {
+    setListLimit(60);
+  }, [deferredSearchQuery, selectedCategory, selectedKurul, selectedDiscipline, selectedLetter, onlySaved, onlyAiVerified]);
+
+  // Statistics & Category Counts in 1 single pass
+  const { stats, catCount } = useMemo(() => {
+    const m = new Map<string, number>();
+    let hastalik = 0, ilac = 0, patoloji = 0, patojen = 0, genetik = 0, verified = 0;
+    for (let i = 0; i < entries.length; i++) {
+      const e = entries[i];
+      const c = String(e.category || '');
+      m.set(c, (m.get(c) || 0) + 1);
+      if (c === 'hastalik') hastalik++;
+      else if (c === 'ilac') ilac++;
+      else if (c === 'patoloji') patoloji++;
+      else if (c === 'patojen') patojen++;
+      else if (c === 'genetik') genetik++;
+      if (e.aiAudit?.verified) verified++;
+    }
+    return {
+      stats: { total: entries.length, hastalik, ilac, patoloji, patojen, genetik, verified },
+      catCount: m,
+    };
+  }, [entries]);
+
+  // Filtered entries (yüksek performanslı, tokenize edilmiş arama indeksi)
   const filteredEntries = useMemo(() => {
-    const q = searchQuery.trim().toLocaleLowerCase('tr-TR');
+    const rawQ = deferredSearchQuery.trim();
+    const qTokens = rawQ ? rawQ.toLocaleLowerCase('tr-TR').split(/\s+/).filter(Boolean) : null;
+    const bookmarkedSet = onlySaved ? new Set(bookmarkedIds) : null;
 
     const list = entries.filter((e) => {
-      if (onlySaved && !bookmarkedIds.includes(e.id)) return false;
+      if (bookmarkedSet && !bookmarkedSet.has(e.id)) return false;
       // Category
       if (selectedCategory !== 'all' && e.category !== selectedCategory) return false;
 
@@ -330,41 +393,30 @@ export const MedicalEncyclopediaView: React.FC<MedicalEncyclopediaViewProps> = (
       if (onlyAiVerified && !e.aiAudit?.verified) return false;
 
       // Alphabet letter filter
-      if (selectedLetter) {
-        const firstLetter = (e.term || '')[0]?.toLocaleUpperCase('tr-TR');
-        if (firstLetter !== selectedLetter) return false;
-      }
+      if (selectedLetter && e._firstLetter !== selectedLetter) return false;
 
-      // Search Query
-      if (q) {
-        // Bazı maddelerde alanlar dizi/nesne gelir (examSpotPearls: string[]); düz metne çevrilip aranır.
-        const has = (v: unknown) => (Array.isArray(v) ? v.join(' ') : typeof v === 'string' ? v : v == null ? '' : JSON.stringify(v)).toLocaleLowerCase('tr-TR').includes(q);
-        const matchTerm = has(e.term);
-        const matchLatin = has(e.latinName);
-        const matchAliases = (e.aliases || []).some((a) => has(a));
-        const matchDefn = has(e.definition);
-        const matchNotes = has(e.lectureContextNotes);
-        const matchPearls = has(e.examSpotPearls);
-        const matchMech = has(e.morphologyOrMechanism);
-        if (!matchTerm && !matchLatin && !matchAliases && !matchDefn && !matchNotes && !matchPearls && !matchMech) {
-          return false;
+      // Search Query via precomputed corpus
+      if (qTokens) {
+        for (let i = 0; i < qTokens.length; i++) {
+          if (!e._corpus.includes(qTokens[i])) return false;
         }
       }
 
       return true;
     });
-    const sorted = [...list];
-    const term = (e: any) => String(e?.term ?? '');
+
     // Varsayılan: arama yoksa alfabetik (sözlük düzeni); aramada isabet sırası korunur
     if (sortMode === 'default') {
-      if (!q) sorted.sort((a, b) => term(a).localeCompare(term(b), 'tr'));
-      return sorted;
+      if (!qTokens) return [...list].sort((a, b) => a._termNorm.localeCompare(b._termNorm, 'tr'));
+      return list;
     }
-    if (sortMode === 'az') sorted.sort((a, b) => term(a).localeCompare(term(b), 'tr'));
-    if (sortMode === 'za') sorted.sort((a, b) => term(b).localeCompare(term(a), 'tr'));
-    if (sortMode === 'kurul') sorted.sort((a, b) => String(a.kurul ?? '').localeCompare(String(b.kurul ?? ''), 'tr') || term(a).localeCompare(term(b), 'tr'));
-    return sorted;
-  }, [entries, searchQuery, selectedCategory, selectedKurul, selectedDiscipline, onlyAiVerified, selectedLetter, onlySaved, bookmarkedIds, sortMode]);
+    if (sortMode === 'az') return [...list].sort((a, b) => a._termNorm.localeCompare(b._termNorm, 'tr'));
+    if (sortMode === 'za') return [...list].sort((a, b) => b._termNorm.localeCompare(a._termNorm, 'tr'));
+    if (sortMode === 'kurul') {
+      return [...list].sort((a, b) => String(a.kurul ?? '').localeCompare(String(b.kurul ?? ''), 'tr') || a._termNorm.localeCompare(b._termNorm, 'tr'));
+    }
+    return list;
+  }, [entries, deferredSearchQuery, selectedCategory, selectedKurul, selectedDiscipline, onlyAiVerified, selectedLetter, onlySaved, bookmarkedIds, sortMode]);
 
   const wide = useWide();
   const [filtersOpen, setFiltersOpen] = useState(false);
@@ -375,28 +427,28 @@ export const MedicalEncyclopediaView: React.FC<MedicalEncyclopediaViewProps> = (
   const pickView = (v: 'grid' | 'list') => { setView(v); try { localStorage.setItem('medsoru_glossary_view', v); } catch { /* yoksay */ } };
   const [gridLimit, setGridLimit] = useState(60);
   const [gridSheet, setGridSheet] = useState(false);
-  const catCount = useMemo(() => {
-    const m = new Map<string, number>();
-    entries.forEach((e) => m.set(String(e.category), (m.get(String(e.category)) || 0) + 1));
-    return m;
-  }, [entries]);
+
   const activeFilterCount = [selectedKurul !== 'Tümü', selectedDiscipline !== 'Tümü', sortMode !== 'default', onlyAiVerified, onlySaved].filter(Boolean).length;
   const listRef = React.useRef<HTMLDivElement>(null);
-  const grouped = !searchQuery.trim() && (sortMode === 'default' || sortMode === 'az' || sortMode === 'za');
+  const grouped = !deferredSearchQuery.trim() && (sortMode === 'default' || sortMode === 'az' || sortMode === 'za');
   const groups = useMemo(() => {
     if (sortMode === 'kurul') {
-      const m = new Map<string, EncyclopediaEntry[]>();
+      const m = new Map<string, IndexedEncyclopediaEntry[]>();
       filteredEntries.forEach((e) => {
         const k = String(e.kurul || 'Diğer');
-        m.set(k, [...(m.get(k) || []), e]);
+        const arr = m.get(k);
+        if (arr) arr.push(e);
+        else m.set(k, [e]);
       });
       return [...m.entries()].map(([k, items]) => ({ key: k.replace(/\s+/g, '-'), title: k, items }));
     }
     if (!grouped) return [{ key: 'all', title: '', items: filteredEntries }];
-    const m = new Map<string, EncyclopediaEntry[]>();
+    const m = new Map<string, IndexedEncyclopediaEntry[]>();
     filteredEntries.forEach((e) => {
-      const k = firstLetterOf(e.term);
-      m.set(k, [...(m.get(k) || []), e]);
+      const k = e._firstLetter || '#';
+      const arr = m.get(k);
+      if (arr) arr.push(e);
+      else m.set(k, [e]);
     });
     const rank = (k: string) => (k === '#' ? 999 : ALPHABET.indexOf(k));
     const out = [...m.entries()].map(([k, items]) => ({ key: k, title: k, items })).sort((a, b) => rank(a.key) - rank(b.key));
@@ -404,24 +456,15 @@ export const MedicalEncyclopediaView: React.FC<MedicalEncyclopediaViewProps> = (
   }, [filteredEntries, grouped, sortMode]);
   const letterSet = useMemo(() => new Set(grouped ? groups.map((g) => g.key) : []), [groups, grouped]);
   const jumpTo = (ch: string) => document.getElementById(`gx-${ch}`)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  // Geniş ekranda ilk madde kendiliğinden açık gelir (boş panel kalmasın)
-  React.useEffect(() => {
-    // İşlevsel güncelleme: aynı turda derin bağlantının seçtiği maddeyi ezmez.
-    if (wide && !activeEntry && filteredEntries[0]) setActiveEntry((prev) => prev || filteredEntries[0]);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [wide, filteredEntries]);
 
-  // Statistics
-  const stats = useMemo(() => {
-    const total = entries.length;
-    const hastalik = entries.filter((e) => e.category === 'hastalik').length;
-    const ilac = entries.filter((e) => e.category === 'ilac').length;
-    const patoloji = entries.filter((e) => e.category === 'patoloji').length;
-    const patojen = entries.filter((e) => e.category === 'patojen').length;
-    const genetik = entries.filter((e) => e.category === 'genetik').length;
-    const verified = entries.filter((e) => e.aiAudit?.verified).length;
-    return { total, hastalik, ilac, patoloji, patojen, genetik, verified };
-  }, [entries]);
+  // Geniş ekranda ilk madde kendiliğinden açık gelir (boş panel kalmasın)
+  const firstFilteredId = filteredEntries[0]?.id;
+  React.useEffect(() => {
+    if (wide && !activeEntry && firstFilteredId) {
+      const first = filteredEntries[0];
+      if (first) setActiveEntry(first);
+    }
+  }, [wide, Boolean(activeEntry), firstFilteredId]);
 
   // Run AI Audit on active entry
   const handleRunAiAudit = async (entry: EncyclopediaEntry) => {
@@ -476,9 +519,11 @@ Lütfen bu kavramı fakülte sınavları ve TUS açısından en yüksek verimle 
         },
       };
 
+      const updatedIndexed = indexEntry(updatedEntry);
+
       // Persist to state and localStorage
-      setEntries((prev) => prev.map((e) => (e.id === entry.id ? updatedEntry : e)));
-      setActiveEntry(updatedEntry);
+      setEntries((prev) => prev.map((e) => (e.id === entry.id ? updatedIndexed : e)));
+      setActiveEntry(updatedIndexed);
 
       // Save custom updates
       try {
@@ -527,8 +572,10 @@ Lütfen bu kavramı fakülte sınavları ve TUS açısından en yüksek verimle 
     }
   };
 
-  const detailPanel = activeEntry ? (
-          <div className={true ? 'gx-pane flex flex-col overflow-hidden' : 'ds-modal w-full max-w-[720px] flex flex-col max-h-[92dvh] overflow-hidden'}>
+  const detailPanel = useMemo(() => {
+    if (!activeEntry) return null;
+    return (
+      <div className="gx-pane flex flex-col overflow-hidden">
             {/* Modal Header */}
             <div className="ds-modal-head">
               <div className="min-w-0 flex-1">
@@ -750,9 +797,10 @@ Lütfen bu kavramı fakülte sınavları ve TUS açısından en yüksek verimle 
                   <span>{isAiAuditing ? 'Yapay zekâ denetliyor…' : 'Yapay zekâyla denetle'}</span>
                 </button>
               </div>
-            </div>
           </div>
-  ) : null;
+        </div>
+      );
+    }, [activeEntry, auditMessage, isAiAuditing, bookmarkedIds, copiedLink, wide]);
 
   return (
     <div className="ds-page">
@@ -951,60 +999,68 @@ Lütfen bu kavramı fakülte sınavları ve TUS açısından en yüksek verimle 
       ) : (
         <div className="gx">
           <div className="gx-list" ref={listRef}>
-            {groups.map((g) => (
-              <section key={g.key} className="gx-group" id={`gx-${g.key}`}>
-                {g.title && <h3 className="gx-letter">{g.title}</h3>}
-                <ul>
-                  {g.items.map((entry) => {
-                    const tone = catTone(entry.category);
-                    const Icon = tone.icon;
-                    const on = activeEntry?.id === entry.id;
-                    const saved = bookmarkedIds.includes(entry.id);
-                    return (
-                      <li key={entry.id} id={`term-${entry.id}`} className={tone.cls}>
-                        <div className="flex items-center w-full">
-                          <button type="button" onClick={() => setActiveEntry(entry)} aria-current={on ? 'true' : undefined} className={`gx-row flex-1 ${on ? 'is-on' : ''}`}>
-                            <span className="hk-tile is-sm"><Icon aria-hidden /></span>
-                            <span className="gx-row-t">
-                              <b>
-                                {entry.term}
-                                {entry.aiAudit?.verified && <ShieldCheck className="gx-ok" aria-label="Doğrulanmış" />}
-                              </b>
-                              <span>{entry.latinName || entry.definition}</span>
-                            </span>
-                            {saved && <Bookmark className="gx-saved" fill="currentColor" aria-label="Kaydedildi" />}
-                            <span className="gx-kurul">{String(entry.kurul || '').replace('Kurul ', 'K')}</span>
-                          </button>
-                          <div className="flex items-center gap-1 shrink-0 px-2">
-                            <button
-                              type="button"
-                              onClick={(e) => {
-                                e.stopPropagation();
-                                copyShareLink(entry);
-                              }}
-                              className="p-1.5 rounded-lg text-ink-3 hover:text-accent hover:bg-canvas-subtle transition-colors cursor-pointer"
-                              title="Bağlantıyı Paylaş"
-                              aria-label="Paylaş"
-                            >
-                              <Share2 className="w-3.5 h-3.5" />
+            {groups.map((g) => {
+              const itemsToShow = grouped ? g.items : g.items.slice(0, listLimit);
+              return (
+                <section key={g.key} className="gx-group" id={`gx-${g.key}`}>
+                  {g.title && <h3 className="gx-letter">{g.title}</h3>}
+                  <ul>
+                    {itemsToShow.map((entry) => {
+                      const tone = catTone(entry.category);
+                      const Icon = tone.icon;
+                      const on = activeEntry?.id === entry.id;
+                      const saved = bookmarkedIds.includes(entry.id);
+                      return (
+                        <li key={entry.id} id={`term-${entry.id}`} className={tone.cls}>
+                          <div className="flex items-center w-full">
+                            <button type="button" onClick={() => setActiveEntry(entry)} aria-current={on ? 'true' : undefined} className={`gx-row flex-1 ${on ? 'is-on' : ''}`}>
+                              <span className="hk-tile is-sm"><Icon aria-hidden /></span>
+                              <span className="gx-row-t">
+                                <b>
+                                  {entry.term}
+                                  {entry.aiAudit?.verified && <ShieldCheck className="gx-ok" aria-label="Doğrulanmış" />}
+                                </b>
+                                <span>{entry.latinName || entry.definition}</span>
+                              </span>
+                              {saved && <Bookmark className="gx-saved" fill="currentColor" aria-label="Kaydedildi" />}
+                              <span className="gx-kurul">{String(entry.kurul || '').replace('Kurul ', 'K')}</span>
                             </button>
-                            <button
-                              type="button"
-                              onClick={(e) => handleOpenReport(entry, e)}
-                              className="p-1.5 rounded-lg text-ink-3 hover:text-warn hover:bg-canvas-subtle transition-colors cursor-pointer"
-                              title="Hata Bildir"
-                              aria-label="Hata bildir"
-                            >
-                              <AlertCircle className="w-3.5 h-3.5" />
-                            </button>
+                            <div className="flex items-center gap-1 shrink-0 px-2">
+                              <button
+                                type="button"
+                                onClick={(e) => {
+                                  e.stopPropagation();
+                                  copyShareLink(entry);
+                                }}
+                                className="p-1.5 rounded-lg text-ink-3 hover:text-accent hover:bg-canvas-subtle transition-colors cursor-pointer"
+                                title="Bağlantıyı Paylaş"
+                                aria-label="Paylaş"
+                              >
+                                <Share2 className="w-3.5 h-3.5" />
+                              </button>
+                              <button
+                                type="button"
+                                onClick={(e) => handleOpenReport(entry, e)}
+                                className="p-1.5 rounded-lg text-ink-3 hover:text-warn hover:bg-canvas-subtle transition-colors cursor-pointer"
+                                title="Hata Bildir"
+                                aria-label="Hata bildir"
+                              >
+                                <AlertCircle className="w-3.5 h-3.5" />
+                              </button>
+                            </div>
                           </div>
-                        </div>
-                      </li>
-                    );
-                  })}
-                </ul>
-              </section>
-            ))}
+                        </li>
+                      );
+                    })}
+                  </ul>
+                  {!grouped && g.items.length > listLimit && (
+                    <button type="button" className="os-btn gl-more" onClick={() => setListLimit((n) => n + 60)}>
+                      {Math.min(60, g.items.length - listLimit)} madde daha göster
+                    </button>
+                  )}
+                </section>
+              );
+            })}
           </div>
           {wide && (
             <aside className="gx-detail" aria-label="Madde ayrıntısı">
@@ -1023,8 +1079,8 @@ Lütfen bu kavramı fakülte sınavları ve TUS açısından en yüksek verimle 
       {/* ========================================================= */}
       {/* DETAYLI ANSİKLOPEDİ MODAL / SLIDE-OVER                    */}
       {/* ========================================================= */}
-      {(!wide || view === 'grid') && (
-        <Sheet open={!!activeEntry && (view === 'list' || gridSheet)} onClose={() => { setActiveEntry(null); setGridSheet(false); }} label={activeEntry?.term || 'Madde'} size="full" width={720} bare>
+      {(!wide || view === 'grid') && !!activeEntry && (view === 'list' || gridSheet) && (
+        <Sheet open={true} onClose={() => { setActiveEntry(null); setGridSheet(false); }} label={activeEntry?.term || 'Madde'} size="full" width={720} bare>
           {detailPanel}
         </Sheet>
       )}

@@ -477,6 +477,8 @@ html.ui-v7:not(.theme-dark) :is(.cx-q, .ds-card, .ds-list, .ds-panel, .lh-card, 
 @media (min-width: 1024px) {
   .gx-list { position: sticky; top: 60px; max-height: calc(var(--vvh, 100dvh) - 76px); overflow-y: auto; overscroll-behavior: contain; padding-right: 2px; scrollbar-width: thin; }
 }
+.gx-group { content-visibility: auto; contain-intrinsic-size: 1px 260px; }
+.gl-grid > li { content-visibility: auto; contain-intrinsic-size: 1px 180px; }
 .gx-group > ul { list-style: none; margin: 0; padding: 0; border-radius: 14px; background: var(--color-white); overflow: hidden; }
 html.ui-v7:not(.theme-dark) .gx-group > ul { box-shadow: 0 0 0 1px rgb(30 40 60 / .06); }
 .gx-letter { position: sticky; top: 0; z-index: 1; margin: 0; padding: 4px 6px 6px; font-family: var(--font-round); font-size: 13px; font-weight: 700; color: var(--color-ink-3); background: var(--color-canvas); }
