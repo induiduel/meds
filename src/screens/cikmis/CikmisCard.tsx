@@ -72,12 +72,11 @@ const Reveal: React.FC<{ open: boolean; id?: string; className?: string; childre
   </div>
 );
 
-const DRAWER_W = 112; // eylem çekmecesi genişliği (px)
-
 /**
  * Kayan işlem çekmecesi olan şık satırı.
- * - Dokunma/tıklama: çekmeceyi açar/kapar (sınav kipinde dokunma cevap seçer, çekmece kaydırmayla açılır).
- * - Sürükleme: parmakla sola çekilir; eşiği geçerse yerine oturur (yay eğrisi), geçmezse geri döner.
+ * - Dokunma/tıklama: çekmeceyi açar/kapar (sınav kipinde dokunma cevap seçer).
+ * - Sürükleme: şık parmağı izler; eylemler sürükleme oranına göre (--p) belirir; eşiği geçerse yerine oturur.
+ * - Çekmece genişliği eylemlerin gerçek genişliğinden ölçülür (tek eylemde boş alan kalmaz).
  */
 const OptRow: React.FC<{
   qid: string;
@@ -94,13 +93,30 @@ const OptRow: React.FC<{
   onInfo: (info: CikmisOptionInfo) => void;
 }> = ({ qid, k, cls, inner, pickable, onPick, open, setOpen, info, canObject, onObject, onInfo }) => {
   const [dx, setDx] = useState<number | null>(null);
+  const [w, setW] = useState(120);
+  const actsRef = useRef<HTMLDivElement>(null);
   const start = useRef<{ x: number; y: number; base: number; locked: boolean | null } | null>(null);
   const moved = useRef(false);
   const hasActions = Boolean(info) || canObject;
 
+  // Çekmece genişliği = eylem grubunun gerçek genişliği
+  useEffect(() => {
+    const el = actsRef.current;
+    if (!el) return;
+    const m = () => setW(Math.ceil(el.scrollWidth));
+    m();
+    const ro = new ResizeObserver(m);
+    ro.observe(el);
+    return () => ro.disconnect();
+  }, [hasActions, info, canObject]);
+
+  useEffect(() => {
+    if (open) { try { navigator.vibrate?.(8); } catch { /* yok */ } }
+  }, [open]);
+
   const onPointerDown = (e: React.PointerEvent) => {
     if (!hasActions || e.button !== 0) return;
-    start.current = { x: e.clientX, y: e.clientY, base: open ? -DRAWER_W : 0, locked: null };
+    start.current = { x: e.clientX, y: e.clientY, base: open ? -w : 0, locked: null };
     moved.current = false;
   };
   const onPointerMove = (e: React.PointerEvent) => {
@@ -112,14 +128,14 @@ const OptRow: React.FC<{
     if (!s.locked) return;
     moved.current = true;
     try { (e.currentTarget as HTMLElement).setPointerCapture(e.pointerId); } catch { /* yoksay */ }
-    // Sağa aşırı çekişte direnç
     const raw = s.base + mx;
-    setDx(raw > 0 ? Math.sqrt(raw) * 2 : Math.max(raw, -DRAWER_W - 24));
+    // Sağa çekişte ve çekmeceden öteye çekişte direnç
+    setDx(raw > 0 ? Math.sqrt(raw) * 2 : raw < -w ? -w - Math.sqrt(-raw - w) * 3 : raw);
   };
   const onPointerUp = () => {
     start.current = null;
     if (dx !== null) {
-      setOpen(dx < -DRAWER_W / 2.4);
+      setOpen(dx < -w / 2.4);
       setDx(null);
     }
     window.setTimeout(() => { moved.current = false; }, 0);
@@ -130,19 +146,20 @@ const OptRow: React.FC<{
     if (hasActions) setOpen(!open);
   };
 
-  const x = dx ?? (open ? -DRAWER_W : 0);
+  const x = dx ?? (open ? -w : 0);
+  const prog = Math.max(0, Math.min(1, -x / w));
   return (
-    <li id={`opt-${qid}-${k}`} className={`qk-opt-li qk-swipe ${open ? 'is-open' : ''} ${dx !== null ? 'is-drag' : ''}`}>
+    <li id={`opt-${qid}-${k}`} className={`qk-opt-li qk-swipe ${open ? 'is-open' : ''} ${dx !== null ? 'is-drag' : ''}`} style={{ ['--p' as string]: prog.toFixed(3) }}>
       <div className="qk-swipe-row">
         {hasActions && (
-          <div className="qk-swipe-acts" aria-hidden={!open} style={{ width: DRAWER_W }}>
+          <div ref={actsRef} className="qk-swipe-acts" aria-hidden={!open} role="group" aria-label={`${k} şıkkı işlemleri`}>
             {info && (
-              <button type="button" tabIndex={open ? 0 : -1} className="qk-swipe-act is-info" onClick={() => { setOpen(false); onInfo(info); }}>
+              <button type="button" tabIndex={open ? 0 : -1} className="qk-sa is-info" onClick={() => { setOpen(false); onInfo(info); }} title="Bu şıkta yapılan değişiklik">
                 <i aria-hidden><Info /></i><span>Bilgi</span>
               </button>
             )}
             {canObject && (
-              <button type="button" tabIndex={open ? 0 : -1} className="qk-swipe-act is-flag" onClick={() => { setOpen(false); onObject(); }}>
+              <button type="button" tabIndex={open ? 0 : -1} className="qk-sa is-flag" onClick={() => { setOpen(false); onObject(); }} title="Bu şıkta hata bildir / itiraz et">
                 <i aria-hidden><Flag /></i><span>Bildir</span>
               </button>
             )}
@@ -161,7 +178,7 @@ const OptRow: React.FC<{
           aria-label={pickable ? `${k} şıkkını işaretle` : undefined}
         >
           {inner}
-          {info && <span className="qk-opt-dot" title="Bu şık düzeltildi" aria-hidden />}
+          {info && <span className="qk-opt-dot" aria-hidden />}
         </button>
       </div>
     </li>
@@ -243,7 +260,7 @@ export const CikmisCard: React.FC<CikmisCardProps> = (p) => {
       <header className={`qk-h ${flagsOpen ? 'is-flags-open' : ''}`}>
         {p.ders && <span className="qk-ders"><i className="hk-dot" aria-hidden />{p.ders}</span>}
         {p.kurul && <span className="qk-chip" title="Kurul">{p.kurul}</span>}
-        <span className="qk-kunye" title={p.kunye}>{p.kunye}</span>
+        <span className="qk-kunye">{p.kunye}</span>
         {shownFlags.length > 0 && <span className="qk-flags">{shownFlags.map((f, i) => <React.Fragment key={i}>{f}</React.Fragment>)}</span>}
         {hiddenCount > 0 && (
           <button type="button" className="qk-more-flags" onClick={() => setFlagsOpen(true)} aria-label={`${hiddenCount} işaret daha göster`}>+{hiddenCount}</button>

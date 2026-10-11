@@ -1574,3 +1574,39 @@ html.theme-dark .deep-link-highlight-pulse, html[data-mode="dark"] .deep-link-hi
   100% { background-color: var(--color-white); }
 }
 @media (prefers-reduced-motion: reduce) { .qk-opt-li.deep-link-highlight-pulse, .qk-opt-li.deep-link-highlight-pulse .qk-swipe-front { animation: none !important; } }
+
+/* 48 · Şık işlem çekmecesi — gelişmiş/modern sürüm (2026-10-11 gece 22).
+ *  - Eylemler satır yüksekliğine sığan YATAY kapsüller: renkli ikon dairesi + etiket (eskiden dikey yığın satırdan
+ *    taşıyor, "Bildir" kesiliyordu).
+ *  - Çekmece genişliği eylemlerin ölçülen genişliği (TSX); tek eylemde boş alan yok.
+ *  - Görünürlük sürükleme oranına (--p) bağlı: parmakla açarken kapsüller kademeli belirir, açılınca yaylanır.
+ *  - Zemin: vurgu renginden çok hafif bir geçiş; şık yüzü sağ kenarında yumuşak gölge + yuvarlak köşe. */
+.qk-swipe-acts { position: absolute; z-index: 0; top: 0; right: 0; bottom: 0; width: auto !important; display: flex; align-items: center; justify-content: flex-end; gap: 6px;
+  padding: 0 10px 0 12px; background: linear-gradient(90deg, var(--color-canvas) 0%, color-mix(in srgb, var(--color-accent-soft) 55%, var(--color-canvas)) 100%); }
+.qk-sa { flex: none; display: inline-flex; align-items: center; gap: 7px; height: 32px; padding: 0 12px 0 4px; border-radius: 99px; border: 1px solid transparent; cursor: pointer;
+  font: inherit; font-size: 12.5px; font-weight: 650; letter-spacing: .005em; white-space: nowrap;
+  -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px);
+  opacity: calc(var(--p, 0) * 1.4 - .3); transform: translateX(calc((1 - var(--p, 0)) * 18px)) scale(calc(.86 + var(--p, 0) * .14));
+  transition: opacity 220ms ease, transform 420ms cubic-bezier(.34, 1.45, .64, 1), background 150ms, box-shadow 150ms; }
+.qk-swipe.is-drag .qk-sa { transition: background 150ms; }
+.qk-swipe.is-open .qk-sa:nth-child(2) { transition-delay: 0ms, 50ms, 0ms, 0ms; }
+.qk-sa i { width: 24px; height: 24px; border-radius: 99px; display: grid; place-items: center; font-style: normal; color: #fff; flex: none;
+  transition: transform 260ms cubic-bezier(.34, 1.5, .64, 1); }
+.qk-sa i svg { width: 13px; height: 13px; stroke-width: 2.4; }
+.qk-sa.is-info { background: color-mix(in srgb, var(--color-ai-soft) 85%, transparent); color: var(--color-ai); border-color: color-mix(in srgb, var(--color-ai) 18%, transparent); }
+.qk-sa.is-info i { background: var(--color-ai); box-shadow: 0 3px 8px -3px var(--color-ai); }
+.qk-sa.is-flag { background: color-mix(in srgb, var(--color-bad-soft) 85%, transparent); color: var(--color-bad-text); border-color: color-mix(in srgb, var(--color-bad) 18%, transparent); }
+.qk-sa.is-flag i { background: var(--color-bad); box-shadow: 0 3px 8px -3px var(--color-bad); }
+.qk-sa:hover { box-shadow: 0 4px 12px -6px rgb(0 0 0 / .25); }
+.qk-sa:hover i { transform: rotate(-8deg) scale(1.08); }
+.qk-sa:active { transform: scale(.95); }
+.qk-sa:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+.qk-swipe-front { transition: transform 420ms cubic-bezier(.22, 1.15, .36, 1), box-shadow 220ms ease, border-radius 220ms ease, background 120ms; }
+.qk-swipe.is-open .qk-swipe-front, .qk-swipe.is-drag .qk-swipe-front { border-top-right-radius: 14px; border-bottom-right-radius: 14px;
+  box-shadow: 10px 0 22px -14px rgb(0 0 0 / .35), 1px 0 0 var(--color-line); }
+/* Masaüstü ipucu: üzerine gelince yalnız sağ kenarda ince bir aralık; eylemler gizli kalır (yarım görünüm yok) */
+@media (hover: hover) {
+  .qk-swipe:not(.is-open) .qk-swipe-row:hover .qk-sa { opacity: 0; transform: translateX(18px) scale(.86); }
+  .qk-swipe:not(.is-open):not(.is-drag) .qk-swipe-row:hover .qk-swipe-front:not(.is-dim) { transform: translate3d(-4px, 0, 0) !important; }
+}
+@media (prefers-reduced-motion: reduce) { .qk-sa, .qk-sa i, .qk-swipe-front { transition: none !important; } }
