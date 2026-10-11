@@ -84,10 +84,15 @@ export const ManageDersIsciSection: React.FC<{ adminEmail: string }> = ({ adminE
   }, [secili]);
 
   const dosyaAl = async (ad: string) => {
-    if (dosya[ad] !== undefined || !secili) return dosya[ad];
-    const r = await fetch(`/api/admin/ders-isci/taslak/${secili}/dosya/${ad}`, { headers }).catch(() => null);
+    if ((dosya[ad] !== undefined && dosya[ad] !== null) || !secili) return dosya[ad];
+    const iste = () => fetch(`/api/admin/ders-isci/taslak/${secili}/dosya/${ad}`, { headers }).catch(() => null);
+    let r = await iste();
     if (!r || !r.ok) {
-      setDosya((d) => ({ ...d, [ad]: null }));
+      await new Promise((t) => setTimeout(t, 1500)); // geçici aksaklık (yeniden başlatma, ağ): bir kez daha dene
+      r = await iste();
+    }
+    if (!r || !r.ok) {
+      setDosya((d) => ({ ...d, [ad]: null })); // önbelleğe "kalıcı" yazılmaz: sekmeye/düğmeye yeniden basınca tekrar denenir
       return null;
     }
     const txt = await r.text();
