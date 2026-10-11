@@ -823,10 +823,11 @@ html:has(.cx-dock), html:has(.cx-dock) body { overflow-anchor: none; }
 .qk { container-type: inline-size; }
 @container (max-width: 760px) {
   .qk-h { row-gap: 4px; padding: 4px 4px 4px 12px; }
-  .qk-h:has(.qk-ders, .qk-flags)::after { content: ""; order: 9; flex-basis: 100%; height: 0; }
-  .qk-h > .qk-ders, .qk-h > .qk-flags, .qk-h > .qk-more-flags { order: 10; }
-  .qk-h > .qk-ders { max-width: 100%; }
-  .qk-h:has(.qk-ders, .qk-flags) { padding-bottom: 6px; }
+  /* Ders etiketi üst satırda (künyenin yanında, sığmazsa kısalır); alt satır yalnız işaret varsa açılır. */
+  .qk-h:has(> .qk-flags)::after { content: ""; order: 9; flex-basis: 100%; height: 0; }
+  .qk-h > .qk-flags, .qk-h > .qk-more-flags { order: 10; }
+  .qk-h > .qk-ders { order: 0; flex: 1 1 0; min-width: 0; max-width: max-content; }
+  .qk-h:has(> .qk-flags) { padding-bottom: 6px; }
 }
 /* Telefonda anket satırındaki "Kabul edilen / Topluluk" etiketleri şık metnini iki satıra sıkıştırmasın: alta iner. */
 @media (max-width: 599px) {
@@ -1251,3 +1252,44 @@ html.ui-v7 .cx-dock .cx-search { height: 40px; min-height: 40px; border-radius: 
    çevirince beyaz gösterge seçili düğmeden kayıyordu (Çalış). Izgara her zaman eşit sütun. */
 .ui-seg { display: grid !important; grid-auto-flow: column !important; grid-auto-columns: minmax(0, 1fr) !important; }
 .ui-seg > button { min-width: 0; }
+
+/* Dar kartta üst satır: kurul · künye · ders tek satırda kalır; ders sığmazsa üç noktayla kısalır. */
+@container (max-width: 760px) {
+  .qk-h > .qk-chip, .qk-h > .qk-kunye { flex-shrink: 0; }
+  .qk-h > .qk-sp { flex: 1 1 0; min-width: 0; }
+}
+@container (max-width: 520px) {
+  /* Telefonda künye tek satır: kurul · künye · ders · bildir · ⋯ (kopyala ⋯ menüsünde de var). */
+  .qk-h:not(:has(> .qk-flags)) { flex-wrap: nowrap; }
+  .qk-h > .qk-ib:has(.lucide-copy), .qk-h > .qk-ib[aria-label*="opyala"] { display: none; }
+  .qk-h .qk-ib, .qk-h [aria-haspopup="menu"] { min-width: 34px !important; min-height: 34px !important; width: 34px !important; height: 34px !important; }
+  .qk-h { gap: 4px; }
+}
+
+/* 40 · Soru havuzu kartı — sade tek kutu (2026-10-11 gece 20).
+ *  Önceki: dolgulu sarmalayıcı içinde çerçeveli şık kutusu + gri "Ayrıntılar" kutusu + sağda gri zeminde çerçeveli
+ *  kutular (iç içe 3 kutu). Şimdi Çıkmış kartıyla aynı dil: tek kart, kenardan kenara ince çizgili satırlar, 14px hiza. */
+.qc { --qk-x: 14px; border: 1px solid var(--color-line); border-radius: 12px; overflow: clip; box-shadow: none; }
+.qc > .grid > div:has(> .qk-h.is-pool) { padding: 0 !important; gap: 0 !important; }
+.qc > .grid > div:has(> .qk-h.is-pool) > * { margin-left: var(--qk-x); margin-right: var(--qk-x); }
+.qc .qk-h.is-pool { min-height: 44px; padding: 4px 6px 2px 0; margin-right: 0 !important; }
+.qc .qk-stem.is-pool { padding: 2px 0 10px; font-size: 15.5px; line-height: 1.6; }
+/* Şıklar: çerçeveli iç kutu yok — kartın kenarına kadar uzanan satırlar */
+.qc > .grid > div:has(> .qk-h.is-pool) > div:has(> .qk-opts.is-pool) { margin-left: 0; margin-right: 0; gap: 0; }
+.qk-opts.is-pool { border: 0; border-radius: 0; border-top: 1px solid var(--color-line-soft); border-bottom: 1px solid var(--color-line-soft); overflow: visible; }
+.qk-opts.is-pool .qk-opt { padding: 8px var(--qk-x); min-height: 40px; }
+.qk-opts.is-pool .qk-opt-li > .qk-vote { margin-right: 10px; }
+/* Eylem satırı ve ayrıntılar: düz satırlar, gri kutu yok */
+.qc .qk-f.is-pool { margin: 0 !important; padding: 6px 8px 6px var(--qk-x); border-top: 0; }
+.qc .qk-disc-h.is-pool-disc { margin: 0 !important; width: 100%; height: 40px; padding: 0 var(--qk-x); border-radius: 0; background: transparent; border-top: 1px solid var(--color-line-soft); color: var(--color-ink-2); font-size: 13px; }
+.qc .qk-disc-h.is-pool-disc:hover { background: var(--color-field); }
+.qc .qk-pool-expl { padding: 12px 0 14px; }
+.qc > .grid > div:has(> .qk-h.is-pool) > p.bg-canvas { background: transparent; padding: 4px 0 12px; border-radius: 0; color: var(--color-ink-3); }
+.qc > .grid > div:has(> .qk-h.is-pool) > .ms-pop-in { margin-top: 10px; margin-bottom: 10px; }
+/* Masaüstü yan paneli: gri zemin + çerçeveli kutular yerine tek beyaz sütun, bölümler ince çizgiyle ayrılır */
+.qc .rb-qside { background: var(--color-white) !important; padding: 0 !important; gap: 0 !important; }
+.qc .rb-qside > section { border: 0 !important; border-radius: 0 !important; background: transparent !important; padding: 12px var(--qk-x) !important; box-shadow: none !important; }
+.qc .rb-qside > section + section { border-top: 1px solid var(--color-line-soft) !important; }
+.qc .qk-f.is-pool > :is(button, a):not(.qk-act) { height: 32px !important; min-height: 32px !important; padding: 0 12px; font-size: 13px; border-radius: 9px; }
+.qc .qk-f.is-pool > :is(button, a):not(.qk-act) svg { width: 15px; height: 15px; }
+.qc .qk-f.is-pool [aria-haspopup="menu"] { width: 32px !important; height: 32px !important; }
