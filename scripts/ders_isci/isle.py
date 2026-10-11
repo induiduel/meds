@@ -130,15 +130,26 @@ def sonraki_numara(kurul: int) -> int:
     return max(nums, default=0) + 1
 
 
+def _kokler(s: str) -> set[str]:
+    return {w[:5] for w in fold(s).split() if len(w) >= 3 and w not in {"ve", "ile", "icin", "bir", "veya"}}
+
+
 def kazanimlar(kurul: int, konu: str) -> list[str]:
+    """Kazanım dosyasında bu konunun kazanımları. Yalnız konu adının anlamlı kelimelerinin HEPSİ tutarsa (harf benzerliği
+    yetmez: 'Gebelik Hastalıkları' ≠ 'Memenin Benign Hastalıkları'). Bulunamazsa boş: Claude kazanımları dersten yazar."""
     k = oku(APP / "src" / "data" / "kazanimlar" / f"k{kurul}.json", {})
+    hedef = _kokler(konu)
     best, sc = None, 0.0
     for d in k.get("dersler") or []:
         for kn in d.get("konular") or []:
-            r = difflib.SequenceMatcher(None, fold(konu), fold(kn.get("konu") or kn.get("baslik") or "")).ratio()
+            ad = kn.get("konu") or kn.get("baslik") or ""
+            a = _kokler(ad)
+            if not hedef or not a or not (hedef <= a or a <= hedef):
+                continue
+            r = difflib.SequenceMatcher(None, fold(konu), fold(ad)).ratio()
             if r > sc:
                 best, sc = kn, r
-    if not best or sc < 0.6:
+    if not best or sc < 0.75:
         return []
     return [x.get("metin") for x in best.get("kazanimlar") or [] if x.get("metin")]
 
@@ -211,7 +222,7 @@ def baglam_hazirla(j: dict, d: Path, metin: str, bilgi: dict) -> dict:
         "mevcut_eslesme": round(mevcut[0], 3),
         "committeeId": f"donem3-kurul{kurul}" if kurul else "",
         "mevcut_dersler": [d.get("title") for d in (decks if isinstance(decks, list) else []) if d.get("id", "").startswith(f"k{kurul}p-")],
-        "kazanimlar": kazanimlar(kurul, es.get("konu") or "") if kurul else [],
+        "kazanimlar": kazanimlar(kurul, es.get("konu") or "") if (kurul and es.get("programda")) else [],
         "sozluk_terimleri": sorted(sozluk.keys()) if isinstance(sozluk, dict) else [],
         "hastaliklar": {h.get("name"): h.get("id") for h in (hast if isinstance(hast, list) else []) if h.get("name")},
         "cikmis_adaylari": cikmis_adaylari(metin, kurul or None),
