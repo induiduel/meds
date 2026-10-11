@@ -23,7 +23,11 @@
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=Geist:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet" />
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=Geist:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=Geist:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" media="print" onload="this.media='all'" />
+    <noscript>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=Geist:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" />
+    </noscript>
     <script>
       // Görünüm tercihi boyamadan önce uygulanır (tema/palet/yoğunluk yanıp sönmesin) — utils/appearance.ts ile aynı anahtar
       (function () {
@@ -105,7 +109,7 @@
         --sp-bg: #F4F6F9; --sp-ink: #121A24; --sp-ink3: #566475; --sp-accent: #1A5FB4; --sp-glow: rgba(232,48,106,.10);
         position: fixed; inset: 0; z-index: 99999; display: grid; place-items: center; overflow: hidden;
         background: radial-gradient(60vmax 60vmax at 50% 42%, var(--sp-glow), transparent 62%), var(--sp-bg);
-        transition: opacity .4s ease, transform .5s cubic-bezier(.22,1,.36,1), visibility .4s;
+        transition: opacity .2s ease, transform .2s ease, visibility .2s;
       }
       html[data-mode="sepia"] #app-splash { --sp-bg: #F3ECDD; --sp-ink: #32271D; --sp-ink3: #6A5846; --sp-accent: #7E5026; --sp-glow: rgba(184,50,79,.10); }
       html[data-mode="dark"] #app-splash { --sp-bg: #0D1420; --sp-ink: #E2E8F1; --sp-ink3: #8A97A8; --sp-accent: #5CC6E4; --sp-glow: rgba(255,92,134,.12); }

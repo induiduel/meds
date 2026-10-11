@@ -53,7 +53,7 @@ export const SearchPalette: React.FC<SearchPaletteProps> = ({ initialQuery = '',
       setData(res);
       setFailed(!res);
       setLoading(false);
-    }, 200);
+    }, 300);
     return () => { ctrl.abort(); window.clearTimeout(t); };
   }, [q, committeeId]);
 

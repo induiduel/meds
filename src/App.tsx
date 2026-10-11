@@ -43,7 +43,8 @@ function wrapLazy<T extends { default: React.ComponentType<any> }>(
 ): Promise<T> {
   return promise.catch((err) => {
     console.warn('[SafeLazy] Failed to load component:', err?.message || err);
-    if (typeof window !== 'undefined' && navigator.onLine) {
+    const isOnline = typeof window !== 'undefined' && navigator.onLine;
+    if (isOnline) {
       const msg = String(err?.message || err || '');
       if (
         msg.includes('dynamically imported module') ||
@@ -59,16 +60,38 @@ function wrapLazy<T extends { default: React.ComponentType<any> }>(
     }
     return {
       default: (() => (
-        <div className="p-8 text-center text-ink-3">
-          <p className="font-semibold text-ink">Bileşen yüklenirken bir sorun oluştu.</p>
-          <p className="text-sm mt-1">Lütfen sayfayı yenileyiniz.</p>
-          <button
-            type="button"
-            onClick={() => window.location.reload()}
-            className="mt-3 px-4 py-2 bg-accent text-white rounded-xl text-sm font-semibold hover:bg-accent-hover cursor-pointer"
-          >
-            Yenile
-          </button>
+        <div className="p-8 text-center text-ink-3 max-w-md mx-auto my-12 bg-white rounded-2xl border border-line shadow-sm">
+          <div className="text-3xl mb-3">📶</div>
+          <p className="font-semibold text-ink text-base">
+            {isOnline ? 'Bileşen yüklenirken bir sorun oluştu.' : 'Bu bölüm henüz cihazınıza indirilmemiş.'}
+          </p>
+          <p className="text-sm mt-1.5 text-ink-2">
+            {isOnline
+              ? 'Lütfen sayfayı yenileyiniz veya bağlantınızı kontrol ediniz.'
+              : 'İnternet bağlantısı olduğunda bu sayfayı açarak veya Ayarlar\'dan Çevrimdışı Veritabanını indirerek tam erişebilirsiniz.'}
+          </p>
+          <div className="mt-5 flex items-center justify-center gap-2.5">
+            <button
+              type="button"
+              onClick={() => {
+                if (window.history.length > 1) {
+                  window.history.back();
+                } else {
+                  window.location.href = '/';
+                }
+              }}
+              className="px-4 py-2 bg-field text-ink rounded-xl text-sm font-semibold hover:bg-line cursor-pointer transition-colors"
+            >
+              Geri Dön
+            </button>
+            <button
+              type="button"
+              onClick={() => window.location.reload()}
+              className="px-4 py-2 bg-accent text-white rounded-xl text-sm font-semibold hover:bg-accent-hover cursor-pointer transition-colors"
+            >
+              Yeniden Dene
+            </button>
+          </div>
         </div>
       )) as unknown as T['default']
     } as T;
@@ -929,6 +952,23 @@ export default function App() {
         authorStudentNumber: currentUser?.studentNumber || data.authorStudentNumber,
       });
 
+      // Öğrencinin yazdığı metin ayrıca ham kayıt olarak sunucuya gider; sunucu ücretsiz Gemini ile ayrıştırır.
+      // Ayrıştırma başarısız olsa da katkı kaydedilmiş olur (hata yutulur).
+      const intakePromise = (data.fragmentText?.trim() || data.options?.length)
+        ? ApiService.submitQuestionIntake({
+            rawText: data.fragmentText || '',
+            committeeId: data.committeeId,
+            questionNumber: data.questionNumber,
+            discipline: data.discipline,
+            questionId: savedQuestion?.id,
+            uid: currentUser?.uid || data.authorUid,
+            author: data.author,
+            source: data.targetQuestionId ? 'katki-bagli' : 'hizli-ekle',
+            options: data.options,
+            claimedAnswer: data.claimedAnswer,
+          }).catch(() => null)
+        : Promise.resolve(null);
+
       // Anında arayüze yansıt (0ms Optimistic UI)
       if (savedQuestion) {
         setJustAddedId(savedQuestion.id);
@@ -982,6 +1022,7 @@ export default function App() {
 
       // Arka planda verileri tazele
       fetchQuestions().catch((e) => console.warn('Background fetchQuestions error', e));
+      return { intakeId: await intakePromise };
     } catch (err: any) {
       console.error('Add question contribution error:', err);
       alert('Soru kaydedilirken hata oluştu: ' + (err.message || ''));

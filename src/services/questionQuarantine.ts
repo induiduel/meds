@@ -166,6 +166,35 @@ function isPhase14Approved(item: Record<string, any>): boolean {
   return Boolean(item?.phase14 || (Array.isArray(item?.tags) && item.tags.includes('faz14_duzeltildi')));
 }
 
+// Check-solve (Faz 16, meds_temp/cikmis_check_solve): kök, şıklar, cevap, açıklama ve müfredat eşlemesi tıbbi
+// literatür + ders kaynağıyla yeniden denetlenip kayda yazılmış soru. Faz 14 dahil hiçbir okuma katmanı bunu değiştirmez.
+export function checkSolveStatus(item: Record<string, any>): 'onayli' | 'karantina' | null {
+  const s = item?.checkSolve?.status;
+  return s === 'onayli' || s === 'karantina' ? s : null;
+}
+
+function checkSolveView<T extends Record<string, any>>(item: T): T {
+  const m = item.checkSolve?.mufredat || {};
+  if (checkSolveStatus(item) === 'karantina') {
+    const tags = Array.isArray(item.tags) ? [...item.tags] : [];
+    if (!tags.includes('karantina')) tags.push('karantina');
+    return { ...item, isQuarantined: true, quarantineReasons: ['check_solve: ' + String(item.checkSolve?.karantinaGerekcesi || 'kurtarılamadı')], tags };
+  }
+  return {
+    ...item,
+    contentCommitteeId: m.kurul ? `donem3-kurul${m.kurul}` : item.committeeId,
+    contentDiscipline: m.ders || item.discipline,
+    contentTopic: m.konu || item.topic,
+    contentOutcome: m.kazanim || undefined,
+    committeeUncertain: false,
+    curriculumSource: 'check_solve',
+    answerStatus: 'check_solve',
+    answerNote: undefined,
+    answerDoubtful: false,
+    isQuarantined: false,
+  };
+}
+
 function phase14View<T extends Record<string, any>>(item: T): T {
   const rec = item.reconstruction && typeof item.reconstruction === 'object' ? item.reconstruction : null;
   return {
@@ -182,10 +211,14 @@ function phase14View<T extends Record<string, any>>(item: T): T {
 
 export function applyQuarantine<T extends { id?: string; stem?: string; options?: any[]; correctAnswer?: string }>(list: T[]): T[] {
   const q = load();
-  if (!q) return list.map((x) => (isPhase14Approved(x as any) ? phase14View(x as any) : x));
+  if (!q) return list.map((x) => (checkSolveStatus(x as any) ? checkSolveView(x as any) : isPhase14Approved(x as any) ? phase14View(x as any) : x));
   const out: T[] = [];
   for (const item of list) {
     const id = String(item.id);
+    if (checkSolveStatus(item as any)) {
+      out.push(checkSolveView(item as any));
+      continue;
+    }
     if (isPhase14Approved(item as any)) {
       out.push(phase14View(item as any));
       continue;
@@ -224,5 +257,5 @@ export function applyQuarantine<T extends { id?: string; stem?: string; options?
       out.push(item);
     }
   }
-  return out.map((x) => (isPhase14Approved(x as any) ? x : applyCurriculum(applyAnswerKey(x))));
+  return out.map((x) => (checkSolveStatus(x as any) || isPhase14Approved(x as any) ? x : applyCurriculum(applyAnswerKey(x))));
 }

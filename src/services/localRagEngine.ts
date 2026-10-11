@@ -29,6 +29,8 @@ import { GoogleGenAI } from '@google/genai';
 import { createClient, SupabaseClient } from '@supabase/supabase-js';
 import { loadDeepSeekContributions } from './deepseekDataService.ts';
 import { foldTurkish as foldTrUtil, FastFuzzyVocab } from '../utils/fuzzyMatching.ts';
+import { KIND_LABEL, factPlain, normalizeDisease, sectionTexts, sectionTitle } from './diseaseModel.ts';
+import type { DiseaseSectionId } from '../types/disease';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -191,7 +193,7 @@ function getNextGeminiClient(): GoogleGenAI | null {
 let memoryChunks: Map<string, RagChunk> = new Map();
 // token -> Map<chunkId, termFrequency> for exact BM25 calculation
 let invertedIndex: Map<string, Map<string, number>> = new Map();
-const fuzzyVocab = new FastFuzzyVocab();
+let fuzzyVocab = new FastFuzzyVocab();
 let docLengths: Map<string, number> = new Map();
 let avgDocLength = 110;
 let isInitialized = false;
@@ -199,14 +201,36 @@ let isIndexingInProgress = false;
 let saveDebounceTimer: NodeJS.Timeout | null = null;
 let isSavingToFile = false;
 
+// Açılış yükü (108MB, ~57k parça) olay döngüsünü kilitlemesin: dosya eşzamansız okunur, indeks
+// dilimler halinde kurulur. Arama bu söz bitene dek bekler; diğer istekler beklemeden yanıtlanır.
+let loadPromise: Promise<void> | null = null;
+let indexReady = false;
+function ensureLoaded(): Promise<void> {
+  if (!loadPromise) loadPromise = loadLocalChunksFromFile();
+  return loadPromise;
+}
+
+// Her ~20 ms işten sonra olay döngüsüne nefes aldırır
+const SLICE_MS = 20;
+const yieldToLoop = () => new Promise<void>((resolve) => setImmediate(resolve));
+function makeSlicer() {
+  let last = performance.now();
+  return async () => {
+    if (performance.now() - last < SLICE_MS) return;
+    await yieldToLoop();
+    last = performance.now();
+  };
+}
+
 // Load stored chunks from local file into memory
-function loadLocalChunksFromFile(): void {
+async function loadLocalChunksFromFile(): Promise<void> {
   if (!fs.existsSync(LOCAL_CHUNKS_FILE)) {
     memoryChunks = new Map();
+    indexReady = true;
     return;
   }
   try {
-    const raw = fs.readFileSync(LOCAL_CHUNKS_FILE, 'utf-8');
+    const raw = await fs.promises.readFile(LOCAL_CHUNKS_FILE, 'utf-8');
     const list: RagChunk[] = JSON.parse(raw);
     memoryChunks.clear();
     for (const chunk of list) {
@@ -250,11 +274,12 @@ ${act.response}`.trim();
       }
     } catch (_) {}
 
-    rebuildInvertedIndex();
+    await rebuildInvertedIndex();
     console.log(`[LocalRagEngine] 🚀 ${memoryChunks.size} adet yerel parça (chunk) belleğe yüklendi ve BM25 indeksi oluşturuldu.`);
   } catch (err: any) {
     console.warn('[LocalRagEngine] Yerel parça dosyası okunamadı:', err.message);
   }
+  indexReady = true;
 }
 
 // Asynchronous, debounced, compact disk serialization (avoids event loop blocking)
@@ -287,30 +312,48 @@ export async function saveLocalChunksToFile(forceImmediate: boolean = false): Pr
   }
 }
 
-function rebuildInvertedIndex(): void {
-  invertedIndex.clear();
-  docLengths.clear();
-  fuzzyVocab.clear();
-  let totalDocLen = 0;
-  for (const chunk of memoryChunks.values()) {
-    indexChunkTokens(chunk);
-    totalDocLen += (docLengths.get(chunk.id) || 0);
+// Yeni indeks ayrı yapılarda dilim dilim kurulur, sonunda tek adımda yerine konur; kurulum sürerken
+// aramalar eski indeksi kullanır. Daha yenisi başlarsa eski kurulum bırakılır.
+let rebuildSeq = 0;
+async function rebuildInvertedIndex(): Promise<void> {
+  const seq = ++rebuildSeq;
+  const nextIndex: Map<string, Map<string, number>> = new Map();
+  const nextLengths: Map<string, number> = new Map();
+  const nextVocab = new FastFuzzyVocab();
+  const slice = makeSlicer();
+  for (const chunk of Array.from(memoryChunks.values())) {
+    indexChunkTokens(chunk, nextIndex, nextLengths);
+    await slice();
+    if (seq !== rebuildSeq) return;
   }
-  avgDocLength = memoryChunks.size > 0 ? totalDocLen / memoryChunks.size : 110;
+  // Kurulum sırasında eklenen parçalar (ör. yeni AI etkileşimi) da yeni indekse girsin
+  for (const chunk of memoryChunks.values()) {
+    if (!nextLengths.has(chunk.id)) indexChunkTokens(chunk, nextIndex, nextLengths);
+  }
+  let totalDocLen = 0;
+  for (const len of nextLengths.values()) totalDocLen += len;
 
-  // Build fuzzy vocabulary once from unique index keys (ultra-fast < 5ms)
-  for (const k of invertedIndex.keys()) {
+  // Build fuzzy vocabulary once from unique index keys
+  for (const k of nextIndex.keys()) {
     if (!k.endsWith('*') && k.length >= 4) {
-      fuzzyVocab.add(k);
+      nextVocab.add(k);
     }
   }
+  invertedIndex = nextIndex;
+  docLengths = nextLengths;
+  fuzzyVocab = nextVocab;
+  avgDocLength = nextLengths.size > 0 ? totalDocLen / nextLengths.size : 110;
 }
 
-function indexChunkTokens(chunk: RagChunk): void {
+function indexChunkTokens(
+  chunk: RagChunk,
+  index: Map<string, Map<string, number>> = invertedIndex,
+  lengths: Map<string, number> = docLengths,
+): void {
   // Boost title and discipline by repeating in text representation
   const textToScan = `${chunk.title} ${chunk.title} ${chunk.discipline || ''} ${chunk.content}`;
   const tokens = cleanTextForTokens(textToScan);
-  docLengths.set(chunk.id, tokens.length);
+  lengths.set(chunk.id, tokens.length);
 
   const freqMap = new Map<string, number>();
   for (const t of tokens) {
@@ -318,10 +361,10 @@ function indexChunkTokens(chunk: RagChunk): void {
   }
 
   for (const [t, freq] of freqMap.entries()) {
-    let posting = invertedIndex.get(t);
+    let posting = index.get(t);
     if (!posting) {
       posting = new Map<string, number>();
-      invertedIndex.set(t, posting);
+      index.set(t, posting);
     }
     posting.set(chunk.id, freq);
   }
@@ -1125,41 +1168,43 @@ export function chunkDiseases(): RagChunk[] {
   const list = JSON.parse(fs.readFileSync(p, 'utf-8'));
   const chunks: RagChunk[] = [];
   const now = new Date().toISOString();
-  // Şablon/dolgu cümleleri (tüm profillerde aynı: "…için altta yatan tetikleyici…") aranabilir içerik değildir
-  const GENERIC = [/standart medikal protokol/, /laboratuvar incelemeleri ve klinik/, /radyolojik goruntuleme ve/, /tablosuna ozgu akut veya kronik/,
-    /altta yatan tetikleyici genetik/, /karakteristik histopatolojik doku/, /hucresel duzeyde fizyopatolojik/, /ders mufredati kapsaminda ele alinmistir/,
-    /toplumda yas ve cinsiyet/, /klinik ve histopatolojik ayirici tani$/, /ayirici tanisinda klinik ve laboratuvar bulgulari belirleyici/];
-  const real = (v: any) => (Array.isArray(v) ? v : v ? [v] : []).filter((x: any) => {
-    const f = foldTurkish(String(x || ''));
-    return f.length >= 12 && !GENERIC.some((re) => re.test(f));
-  }).join(' · ');
+  // Şema 2: her profil 3 parça (genel bakış · mekanizma · tanı-tedavi); bölüm başlıkları türe göre, maddeler "Etiket: metin"
+  const GROUPS: Array<{ suffix: string; label: string; secs: DiseaseSectionId[] }> = [
+    { suffix: '', label: 'Genel bakış', secs: ['definition', 'symptoms', 'pathognomonic', 'lecture'] },
+    { suffix: '-mekanizma', label: 'Etiyoloji ve patoloji', secs: ['etiology', 'physiology', 'pathology', 'epidemiology'] },
+    { suffix: '-tani-tedavi', label: 'Tanı ve tedavi', secs: ['diagnosis', 'imaging', 'treatment', 'complications'] },
+  ];
   for (const raw of Array.isArray(list) ? list : []) {
-    const d = { ...raw };
-    for (const k of ['etiology', 'symptoms_clinical', 'pathognomonic_features', 'patognomonik_features', 'diagnostic_methods', 'treatment', 'physiology_pathophysiology', 'morphology_pathology']) d[k] = real(raw[k]);
-    const body = [`Latince: ${d.latinName || ''}`, `Kategori: ${d.category || ''}`, `ICD: ${d.icd_code || ''}`,
-      `Etiyoloji: ${d.etiology || ''}`, `Belirtiler: ${d.symptoms_clinical || ''}`,
-      `Patognomonik: ${d.patognomonik_features || d.pathognomonic_features || ''}`,
-      `Tanı: ${d.diagnostic_methods || ''}`, `Tedavi: ${d.treatment || ''}`,
-      `Patofizyoloji: ${d.physiology_pathophysiology || d.morphology_pathology || ''}`,
-      `Ders notu: ${String(d.source_notes_summary || '').replace(/^Ders notu bağlamı:\s*/i, '')}`]
-      .filter((l) => l.split(': ')[1]?.trim()).join('\n');
-    const content = `[HASTALIK]\nHastalık: ${d.name}\n${body}`.slice(0, 1500);
-    if (!d.name || content.length < 20) continue;
-    const h = hashContent(content);
-    chunks.push({
-      id: `chunk-dis-${d.id || h.slice(0, 12)}`,
-      documentId: String(d.id || d.name),
-      documentType: 'disease',
-      committeeId: 'donem3-kurul1',
-      discipline: 'Tıp',
-      title: `Hastalık: ${d.name}`,
-      pageNumber: undefined,
-      content,
-      metadata: { source: 'hastaliklar', icd: d.icd_code, category: d.category, latin: d.latinName },
-      hash: h,
-      createdAt: now,
-      updatedAt: now,
-    });
+    const d = normalizeDisease(raw);
+    if (!d.name) continue;
+    const head = [`[HASTALIK] ${d.name}${d.latinName ? ` (${d.latinName})` : ''}`, `Tür: ${KIND_LABEL[d.kind]} · ${d.category}${d.icd_code ? ` · ICD-10 ${d.icd_code}` : ''}`];
+    if (d.altNames?.length) head.push(`Diğer adlar: ${d.altNames.join(', ')}`);
+    for (const g of GROUPS) {
+      const lines = [...head];
+      if (!g.suffix && d.hallmarks.length) lines.push(`Karakteristik özellik: ${d.hallmarks.map(factPlain).join(' · ')}`);
+      for (const sec of g.secs) {
+        const title = sectionTitle(d.kind, sec);
+        const items = sectionTexts(d, sec);
+        if (title && items.length) lines.push(`${title}:`, ...items.map((t) => `- ${t}`));
+      }
+      if (lines.length <= head.length) continue;
+      const content = lines.join('\n').slice(0, 2400);
+      const h = hashContent(content);
+      chunks.push({
+        id: `chunk-dis-${d.id}${g.suffix}`,
+        documentId: String(d.id),
+        documentType: 'disease',
+        committeeId: 'donem3-kurul1',
+        discipline: 'Tıp',
+        title: g.suffix ? `Hastalık: ${d.name} — ${g.label}` : `Hastalık: ${d.name}`,
+        pageNumber: undefined,
+        content,
+        metadata: { source: 'hastaliklar', icd: d.icd_code, category: d.category, latin: d.latinName, kind: d.kind },
+        hash: h,
+        createdAt: now,
+        updatedAt: now,
+      });
+    }
   }
   return chunks;
 }
@@ -1347,6 +1392,7 @@ export async function runAutoChunking(options: { limit?: number; syncToCloud?: b
   byType: Record<string, number>;
   newlyIndexed: number;
 }> {
+  await ensureLoaded(); // açılış yükü bitmeden birleştirirse yükleme sonradan üzerine yazar
   if (isIndexingInProgress) {
     return {
       totalChunks: memoryChunks.size,
@@ -1444,7 +1490,8 @@ export async function runAutoChunking(options: { limit?: number; syncToCloud?: b
       }
     }
 
-    rebuildInvertedIndex();
+    await rebuildInvertedIndex();
+    void warmSurfaceForms(); // yeni terimler öneri sözlüğüne de girsin (eskisi hazır olana dek kullanılır)
     saveLocalChunksToFile();
 
     console.log(`\n🎉 Toplam Yerel Parça Sayısı: ${memoryChunks.size} (${newlyIndexed} yeni/güncellenen)`);
@@ -1543,9 +1590,7 @@ export async function searchLocalRag(
     queryEmbedding?: number[];
   } = {}
 ): Promise<RagSearchResult[]> {
-  if (memoryChunks.size === 0) {
-    loadLocalChunksFromFile();
-  }
+  await ensureLoaded();
   const limit = options.limit || 5;
   const rawWords = foldTurkish(queryText)
     .replace(/[.,\/#!$%\^&\*;:{}=\-_`~()?"'’“”…\[\]<>|\\+]/g, ' ')
@@ -1750,8 +1795,7 @@ export function initLocalRagEngine(): void {
   isInitialized = true;
 
   console.log('[LocalRagEngine] 🚀 Başlatılıyor...');
-  loadLocalChunksFromFile();
-
+  ensureLoaded().then(() => {
   // If local chunks are empty, trigger initial chunking in background
   if (memoryChunks.size === 0) {
     console.log('[LocalRagEngine] Yerel parçalar henüz oluşturulmamış, ilk tarama başlatılıyor...');
@@ -1763,6 +1807,7 @@ export function initLocalRagEngine(): void {
   } else {
     console.log(`[LocalRagEngine] ✓ Hazır: Toplam ${memoryChunks.size} parça bellekte ve anında aranabilir.`);
   }
+  });
 
   // Watch data folder for changes (ONLY core course content files, strictly ignore runtime state/log files!)
   const WATCHED_CONTENT_FILES = new Set([
@@ -1796,7 +1841,7 @@ export function initLocalRagEngine(): void {
  * BM25 sıralamasına dokunmaz.
  */
 export function findChunksById(term: string, limit = 50): RagChunk[] {
-  if (memoryChunks.size === 0) loadLocalChunksFromFile();
+  if (!indexReady) { void ensureLoaded(); return []; }
   const norm = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, '');
   const needle = norm(term);
   if (needle.length < 4) return [];
@@ -1819,9 +1864,22 @@ export function findChunksById(term: string, limit = 50): RagChunk[] {
 // ------------------------------------------------------------------
 let surfaceForms: Map<string, string> | null = null;
 
-function buildSurfaceForms(): Map<string, string> {
+let surfaceFormsBuild: Promise<void> | null = null;
+function warmSurfaceForms(): Promise<void> {
+  if (!surfaceFormsBuild) {
+    surfaceFormsBuild = ensureLoaded()
+      .then(buildSurfaceForms)
+      .then((m) => { surfaceForms = m; })
+      .finally(() => { surfaceFormsBuild = null; });
+  }
+  return surfaceFormsBuild;
+}
+
+async function buildSurfaceForms(): Promise<Map<string, string>> {
   const counts = new Map<string, Map<string, number>>();
-  for (const c of memoryChunks.values()) {
+  const slice = makeSlicer();
+  for (const c of Array.from(memoryChunks.values())) {
+    await slice();
     const words = c.content.match(/[\p{L}]{4,}/gu);
     if (!words) continue;
     for (const raw of words) {
@@ -1834,6 +1892,7 @@ function buildSurfaceForms(): Map<string, string> {
   }
   const out = new Map<string, string>();
   for (const [f, m] of counts) {
+    await slice();
     let best = '';
     let n = 0;
     for (const [w, k] of m) if (k > n) { best = w; n = k; }
@@ -1844,7 +1903,7 @@ function buildSurfaceForms(): Map<string, string> {
 
 /** Sunucu açıldıktan sonra arka planda yüzey biçimlerini hazırlar (ilk öneri beklemesin) */
 export function warmSpellIndex(): void {
-  setTimeout(() => { try { suggestSpelling('ısınma'); } catch { /* yok say */ } }, 15000);
+  setTimeout(() => { warmSurfaceForms().catch(() => { /* yok say */ }); }, 15000);
 }
 
 export interface SpellSuggestion {
@@ -1854,8 +1913,8 @@ export interface SpellSuggestion {
 }
 
 export function suggestSpelling(text: string): SpellSuggestion {
-  if (memoryChunks.size === 0) loadLocalChunksFromFile();
-  if (!surfaceForms) surfaceForms = buildSurfaceForms();
+  // Sözlük hazır değilken öneri yok (kurulumu tetikler, isteği bekletmez)
+  if (!indexReady || !surfaceForms) { void warmSurfaceForms(); return { text: null, changes: [] }; }
   const changes: Array<{ from: string; to: string }> = [];
   const df = (t: string) => invertedIndex.get(t)?.size || 0;
   const prefix = (x: string, y: string) => { let i = 0; while (i < x.length && i < y.length && x[i] === y[i]) i++; return i; };

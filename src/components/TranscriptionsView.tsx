@@ -11,27 +11,14 @@ import {
   ChevronRight,
 } from 'lucide-react';
 
-export interface TranscriptionMeta {
-  id: string;
-  fileName: string;
-  title: string;
-  discipline: string;
-  committeeId: string;
-  charCount: number;
-  wordCount: number;
-  estimatedMinutes: number;
-  sectionsCount: number;
-  firstSnippet: string;
-}
+import {
+  useTranscriptionsQuery,
+  useTranscriptionDetailQuery,
+  TranscriptionMeta,
+  TranscriptionDetail,
+} from '../hooks/useMedicalQueries';
 
-export interface TranscriptionDetail extends TranscriptionMeta {
-  content: string;
-  sections: Array<{
-    title: string;
-    level: number;
-    content: string;
-  }>;
-}
+export type { TranscriptionMeta, TranscriptionDetail };
 
 interface TranscriptionsViewProps {
   onAskAiWithContext?: (contextText: string, title: string) => void;
@@ -46,54 +33,19 @@ const DISCIPLINE_COLORS: Record<string, { bg: string; text: string; border: stri
 };
 
 export const TranscriptionsView: React.FC<TranscriptionsViewProps> = ({ onAskAiWithContext }) => {
-  const [transcriptions, setTranscriptions] = useState<TranscriptionMeta[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
+  const { data: transcriptions = [], isLoading } = useTranscriptionsQuery();
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedDiscipline, setSelectedDiscipline] = useState<string>('all');
   
-  // Selected detail modal / reader
-  const [selectedItem, setSelectedItem] = useState<TranscriptionDetail | null>(null);
-  const [isLoadingDetail, setIsLoadingDetail] = useState(false);
+  // Selected detail modal / reader (TanStack Query ile önbellekli)
+  const [selectedId, setSelectedId] = useState<string | null>(null);
+  const { data: selectedItem, isLoading: isLoadingDetail } = useTranscriptionDetailQuery(selectedId);
   const [copied, setCopied] = useState(false);
 
-  useEffect(() => {
-    fetchTranscriptions();
-  }, []);
-
-  const fetchTranscriptions = async () => {
-    setIsLoading(true);
-    try {
-      const res = await fetch('/api/transcriptions');
-      if (res.ok) {
-        const data = await res.json();
-        if (data.success && Array.isArray(data.transcriptions)) {
-          setTranscriptions(data.transcriptions);
-        }
-      }
-    } catch (e) {
-      console.warn('Transkripsiyonlar yüklenemedi:', e);
-    } finally {
-      setIsLoading(false);
-    }
+  const handleOpenDetail = (meta: TranscriptionMeta) => {
+    setSelectedId(meta.id);
   };
 
-  const handleOpenDetail = async (meta: TranscriptionMeta) => {
-    setIsLoadingDetail(true);
-    try {
-      const res = await fetch(`/api/transcriptions/${encodeURIComponent(meta.id)}`);
-      if (res.ok) {
-        const data = await res.json();
-        if (data.success && data.transcription) {
-          setSelectedItem(data.transcription);
-          return;
-        }
-      }
-    } catch (e) {
-      console.warn('Detay yüklenemedi:', e);
-    } finally {
-      setIsLoadingDetail(false);
-    }
-  };
 
   const disciplines = useMemo(() => {
     const set = new Set<string>();
@@ -257,7 +209,7 @@ export const TranscriptionsView: React.FC<TranscriptionsViewProps> = ({ onAskAiW
                   {copied ? 'Kopyalandı' : 'Kopyala'}
                 </button>
                 <button
-                  onClick={() => setSelectedItem(null)}
+                  onClick={() => setSelectedId(null)}
                   className="p-1.5 rounded-lg text-ink-3 hover:text-ink-2 hover:bg-line transition-colors"
                 >
                                   </button>
@@ -286,7 +238,7 @@ export const TranscriptionsView: React.FC<TranscriptionsViewProps> = ({ onAskAiW
                 Bu transkript RAG vektör sisteminde aramalara açıktır.
               </span>
               <button
-                onClick={() => setSelectedItem(null)}
+                onClick={() => setSelectedId(null)}
                 className="px-4 py-2 bg-ink text-white rounded-lg font-semibold hover:bg-ink transition-colors"
               >
                 Kapat

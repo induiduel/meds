@@ -57,14 +57,78 @@ export function syncNotes(): Promise<boolean> {
       replaceNotesFromSync(out);
       writeJson(DEL_KEY, merged.deleted || {});
       try { localStorage.setItem(LAST_KEY, new Date().toISOString()); } catch { /* yok */ }
-      window.dispatchEvent(new CustomEvent('medsoru:notes-synced'));
       return true;
     } catch {
       return false;
+    } finally {
+      running = null;
     }
-  })().finally(() => { running = null; });
+  })();
   return running;
 }
+
+/**
+ * Delta / Incremental Sync: Sunucudan yalnızca son senkronizasyondan sonraki değişiklikleri çeker.
+ * Megabaytlarca veriyi boş yere tekrar indirmeyi engeller.
+ */
+export async function pullDeltaNotes(): Promise<boolean> {
+  if (getNetState() === 'offline') return false;
+  const since = lastSyncedAt();
+  if (!since) return syncNotes(); // İlk kez ise tam senkronizasyon yap
+
+  const base = (getCustomApiUrl() || '').replace(/\/$/, '');
+  try {
+    const res = await fetch(`${base}/api/notes?since=${encodeURIComponent(since)}`, {
+      method: 'GET',
+      headers: { 'x-user-id': getSyncCode() },
+    });
+    if (!res.ok) return false;
+    const data = await res.json();
+    if (data.upToDate) {
+      // Veri tamamen güncel, ağ tasarrufu sağlandı
+      return true;
+    }
+
+    const localNotes = getNotes();
+    const localMap = new Map(localNotes.map((n) => [n.id, n]));
+    const incomingDelta: StudyNote[] = Array.isArray(data.notes) ? data.notes : [];
+    const incomingDeleted: Record<string, string> = data.deleted || {};
+
+    let hasChange = false;
+
+    // Silinenleri yerelden kaldır
+    for (const [delId, delAt] of Object.entries(incomingDeleted)) {
+      const existing = localMap.get(delId);
+      if (existing && existing.updatedAt <= delAt) {
+        localMap.delete(delId);
+        hasChange = true;
+      }
+    }
+
+    // Güncellenenleri veya yeni eklenenleri birleştir
+    for (const inNote of incomingDelta) {
+      const existing = localMap.get(inNote.id);
+      if (!existing || existing.updatedAt < inNote.updatedAt) {
+        localMap.set(inNote.id, inNote);
+        hasChange = true;
+      }
+    }
+
+    if (hasChange) {
+      const updatedList = Array.from(localMap.values()).sort((a, b) => b.updatedAt.localeCompare(a.updatedAt));
+      replaceNotesFromSync(updatedList);
+      window.dispatchEvent(new CustomEvent('medsoru:notes-synced'));
+    }
+
+    if (data.updatedAt) {
+      try { localStorage.setItem(LAST_KEY, data.updatedAt); } catch { /* yok */ }
+    }
+    return true;
+  } catch {
+    return false;
+  }
+}
+
 
 const schedule = (ms = 4000) => {
   window.clearTimeout(timer);
@@ -84,7 +148,11 @@ export function installNotesSync() {
     }
     schedule();
   });
-  onNetChange(() => { if (getNetState() === 'online') schedule(1500); });
-  // Açılışta bir kez (ilk boyamayı geciktirmesin)
-  schedule(5000);
+  onNetChange(() => {
+    if (getNetState() === 'online') {
+      window.setTimeout(() => void pullDeltaNotes(), 1500);
+    }
+  });
+  // Açılışta bir kez delta kontrolü (ilk boyamayı geciktirmesin)
+  window.setTimeout(() => void pullDeltaNotes(), 5000);
 }

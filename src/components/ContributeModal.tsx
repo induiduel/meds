@@ -38,7 +38,7 @@ interface ContributeModalProps {
     claimedAnswer?: 'A' | 'B' | 'C' | 'D' | 'E';
     options?: { key: 'A' | 'B' | 'C' | 'D' | 'E'; text: string }[];
     examYear?: string;
-  }) => Promise<void>;
+  }) => Promise<void | { intakeId?: string | null }>;
 }
 
 const DISCIPLINES = [

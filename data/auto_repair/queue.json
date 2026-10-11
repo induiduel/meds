@@ -1,6 +1,620 @@
 [
   {
     "source": "past_question",
+    "targetId": "5defe4cac878",
+    "userReport": {
+      "reason": "Hatalı Soru Kökü",
+      "details": "Kaynak: Çalış · çıkmış soru",
+      "reportedBy": "Tıp Öğrencisi",
+      "reportedAt": "2026-10-11T22:38:01.313Z"
+    },
+    "fullContext": {
+      "id": "5defe4cac878",
+      "committeeId": "donem3-kurul1",
+      "donem": "Dönem 3",
+      "kurul": 1,
+      "questionNumber": 1060,
+      "discipline": "İç Hastalıkları",
+      "topic": "İç Hastalıkları Kurul Sorusu",
+      "stem": "İYABETES MELLİTUS\nOral antidiyabetik ilaç\ntedavisi verilmesi uygun\nolan diyabetik hasta\ngrubu hangisidir?",
+      "reconstruction": {
+        "stem": "İYABETES MELLİTUS\nOral antidiyabetik ilaç\ntedavisi verilmesi uygun\nolan diyabetik hasta\ngrubu hangisidir?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Tip 1 Diyabetes Mellitus",
+            "isCorrect": false
+          },
+          {
+            "key": "B",
+            "text": "Büyük cerrahi girişim, ağır travması olanlar",
+            "isCorrect": true
+          },
+          {
+            "key": "C",
+            "text": "Ağır enfeksiyona maruz kalanlar",
+            "isCorrect": false
+          },
+          {
+            "key": "D",
+            "text": "Karaciğer yetmezliği olanlar",
+            "isCorrect": false
+          },
+          {
+            "key": "E",
+            "text": "Hamileler",
+            "isCorrect": false
+          }
+        ],
+        "correctAnswer": "B",
+        "explanation": "",
+        "reconstructionQuality": "verified_evidence"
+      },
+      "options": [
+        {
+          "key": "A",
+          "label": "A",
+          "text": "Tip 1 Diyabetes Mellitus",
+          "isCorrect": false,
+          "upvotes": 0,
+          "likedBy": []
+        },
+        {
+          "key": "B",
+          "label": "B",
+          "text": "Büyük cerrahi girişim, ağır travması olanlar",
+          "isCorrect": true,
+          "upvotes": 0,
+          "likedBy": []
+        },
+        {
+          "key": "C",
+          "label": "C",
+          "text": "Ağır enfeksiyona maruz kalanlar",
+          "isCorrect": false,
+          "upvotes": 0,
+          "likedBy": []
+        },
+        {
+          "key": "D",
+          "label": "D",
+          "text": "Karaciğer yetmezliği olanlar",
+          "isCorrect": false,
+          "upvotes": 0,
+          "likedBy": []
+        },
+        {
+          "key": "E",
+          "label": "E",
+          "text": "Hamileler",
+          "isCorrect": false,
+          "upvotes": 0,
+          "likedBy": []
+        }
+      ],
+      "correctAnswer": "B",
+      "claimedAnswer": "B",
+      "explanation": "",
+      "examYear": "2023-2024",
+      "sourceFile": "c4259dc9087e",
+      "sourceNote": "Dönem 3 Kurul 1 Doğrulanmış Sınavı",
+      "status": "verified",
+      "isSuspect": false,
+      "isAmbiguous": false,
+      "isPastExam": true,
+      "tags": [
+        "donem3-kurul1",
+        "İç Hastalıkları",
+        "Çıkmış Sınav",
+        "dogrulanmis_soru",
+        "denetleyici_onayi",
+        "denetleyici_onayli",
+        "faz15_onaylandi",
+        "altin_standart"
+      ],
+      "evidence": [
+        "c4259dc9087e:p1249:c0"
+      ],
+      "supportRatio": 0.9231,
+      "updatedAt": "2026-10-05T05:38:09.100830+00:00",
+      "denetleyiciOnayi": true,
+      "denetleyici_onayi": false,
+      "surum": "orijinal",
+      "aktifSurum": "orijinal",
+      "sik_analizi": {
+        "A": "YANLIŞ: 'Tip 1 Diyabetes Mellitus' seçeneği soruda tarif edilen spesifik durum için geçerli değildir; farklı bir klinik evrede veya alternatif etiyolojik mekanizmalarda rol oynar.",
+        "B": "DOĞRU: 'Büyük cerrahi girişim, ağır travması olanlar' ifadesi, soruda sorgulanan fizyopatolojik mekanizma ve klinik tablonun birincil doğru karşılığıdır.",
+        "C": "YANLIŞ: 'Ağır enfeksiyona maruz kalanlar' seçeneği soruda tarif edilen spesifik durum için geçerli değildir; farklı bir klinik evrede veya alternatif etiyolojik mekanizmalarda rol oynar.",
+        "D": "YANLIŞ: 'Karaciğer yetmezliği olanlar' seçeneği soruda tarif edilen spesifik durum için geçerli değildir; farklı bir klinik evrede veya alternatif etiyolojik mekanizmalarda rol oynar.",
+        "E": "YANLIŞ: 'Hamileler' seçeneği soruda tarif edilen spesifik durum için geçerli değildir; farklı bir klinik evrede veya alternatif etiyolojik mekanizmalarda rol oynar."
+      },
+      "qualityScore": 79,
+      "qualityTier": "saglam",
+      "qualityIssues": [
+        "aciklamasiz",
+        "kok-satir-kirik"
+      ],
+      "qualityVersion": "v1-2026-10-10",
+      "upvotes": 0,
+      "likedBy": []
+    },
+    "id": "rep_uniq_1791758281313_sb2qsob_qsx8",
+    "ticketNo": "#000004",
+    "status": "applied",
+    "retryCount": 0,
+    "beforeSnapshot": {
+      "id": "5defe4cac878",
+      "committeeId": "donem3-kurul1",
+      "donem": "Dönem 3",
+      "kurul": 1,
+      "questionNumber": 1060,
+      "discipline": "İç Hastalıkları",
+      "topic": "İç Hastalıkları Kurul Sorusu",
+      "stem": "İYABETES MELLİTUS\nOral antidiyabetik ilaç\ntedavisi verilmesi uygun\nolan diyabetik hasta\ngrubu hangisidir?",
+      "reconstruction": {
+        "stem": "İYABETES MELLİTUS\nOral antidiyabetik ilaç\ntedavisi verilmesi uygun\nolan diyabetik hasta\ngrubu hangisidir?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Tip 1 Diyabetes Mellitus",
+            "isCorrect": false
+          },
+          {
+            "key": "B",
+            "text": "Büyük cerrahi girişim, ağır travması olanlar",
+            "isCorrect": true
+          },
+          {
+            "key": "C",
+            "text": "Ağır enfeksiyona maruz kalanlar",
+            "isCorrect": false
+          },
+          {
+            "key": "D",
+            "text": "Karaciğer yetmezliği olanlar",
+            "isCorrect": false
+          },
+          {
+            "key": "E",
+            "text": "Hamileler",
+            "isCorrect": false
+          }
+        ],
+        "correctAnswer": "B",
+        "explanation": "",
+        "reconstructionQuality": "verified_evidence"
+      },
+      "options": [
+        {
+          "key": "A",
+          "label": "A",
+          "text": "Tip 1 Diyabetes Mellitus",
+          "isCorrect": false,
+          "upvotes": 0,
+          "likedBy": []
+        },
+        {
+          "key": "B",
+          "label": "B",
+          "text": "Büyük cerrahi girişim, ağır travması olanlar",
+          "isCorrect": true,
+          "upvotes": 0,
+          "likedBy": []
+        },
+        {
+          "key": "C",
+          "label": "C",
+          "text": "Ağır enfeksiyona maruz kalanlar",
+          "isCorrect": false,
+          "upvotes": 0,
+          "likedBy": []
+        },
+        {
+          "key": "D",
+          "label": "D",
+          "text": "Karaciğer yetmezliği olanlar",
+          "isCorrect": false,
+          "upvotes": 0,
+          "likedBy": []
+        },
+        {
+          "key": "E",
+          "label": "E",
+          "text": "Hamileler",
+          "isCorrect": false,
+          "upvotes": 0,
+          "likedBy": []
+        }
+      ],
+      "correctAnswer": "B",
+      "claimedAnswer": "B",
+      "explanation": "",
+      "examYear": "2023-2024",
+      "sourceFile": "c4259dc9087e",
+      "sourceNote": "Dönem 3 Kurul 1 Doğrulanmış Sınavı",
+      "status": "verified",
+      "isSuspect": false,
+      "isAmbiguous": false,
+      "isPastExam": true,
+      "tags": [
+        "donem3-kurul1",
+        "İç Hastalıkları",
+        "Çıkmış Sınav",
+        "dogrulanmis_soru",
+        "denetleyici_onayi",
+        "denetleyici_onayli",
+        "faz15_onaylandi",
+        "altin_standart"
+      ],
+      "evidence": [
+        "c4259dc9087e:p1249:c0"
+      ],
+      "supportRatio": 0.9231,
+      "updatedAt": "2026-10-05T05:38:09.100830+00:00",
+      "denetleyiciOnayi": true,
+      "denetleyici_onayi": false,
+      "surum": "orijinal",
+      "aktifSurum": "orijinal",
+      "sik_analizi": {
+        "A": "YANLIŞ: 'Tip 1 Diyabetes Mellitus' seçeneği soruda tarif edilen spesifik durum için geçerli değildir; farklı bir klinik evrede veya alternatif etiyolojik mekanizmalarda rol oynar.",
+        "B": "DOĞRU: 'Büyük cerrahi girişim, ağır travması olanlar' ifadesi, soruda sorgulanan fizyopatolojik mekanizma ve klinik tablonun birincil doğru karşılığıdır.",
+        "C": "YANLIŞ: 'Ağır enfeksiyona maruz kalanlar' seçeneği soruda tarif edilen spesifik durum için geçerli değildir; farklı bir klinik evrede veya alternatif etiyolojik mekanizmalarda rol oynar.",
+        "D": "YANLIŞ: 'Karaciğer yetmezliği olanlar' seçeneği soruda tarif edilen spesifik durum için geçerli değildir; farklı bir klinik evrede veya alternatif etiyolojik mekanizmalarda rol oynar.",
+        "E": "YANLIŞ: 'Hamileler' seçeneği soruda tarif edilen spesifik durum için geçerli değildir; farklı bir klinik evrede veya alternatif etiyolojik mekanizmalarda rol oynar."
+      },
+      "qualityScore": 79,
+      "qualityTier": "saglam",
+      "qualityIssues": [
+        "aciklamasiz",
+        "kok-satir-kirik"
+      ],
+      "qualityVersion": "v1-2026-10-10",
+      "upvotes": 0,
+      "likedBy": [],
+      "_crossData": {
+        "targetId": "5defe4cac878",
+        "stem": "İYABETES MELLİTUS\nOral antidiyabetik ilaç\ntedavisi verilmesi uygun\nolan diyabetik hasta\ngrubu hangisidir?",
+        "isQuarantined": false,
+        "quarantineReasons": [],
+        "quarantineRecord": null,
+        "quarantineRepair": null,
+        "hasLocalReconstruction": true,
+        "localReconstruction": {
+          "stem": "İYABETES MELLİTUS\nOral antidiyabetik ilaç\ntedavisi verilmesi uygun\nolan diyabetik hasta\ngrubu hangisidir?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Tip 1 Diyabetes Mellitus",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "text": "Büyük cerrahi girişim, ağır travması olanlar",
+              "isCorrect": true
+            },
+            {
+              "key": "C",
+              "text": "Ağır enfeksiyona maruz kalanlar",
+              "isCorrect": false
+            },
+            {
+              "key": "D",
+              "text": "Karaciğer yetmezliği olanlar",
+              "isCorrect": false
+            },
+            {
+              "key": "E",
+              "text": "Hamileler",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "B",
+          "explanation": "",
+          "reconstructionQuality": "verified_evidence"
+        },
+        "hasRevisions": false,
+        "latestRevisions": [],
+        "mergeGroup": {
+          "groupId": "g-dff6f3f5a668",
+          "isAsil": false,
+          "asilId": "dff6f3f5a668",
+          "uyeler": [
+            "dff6f3f5a668",
+            "5defe4cac878"
+          ],
+          "otherMembers": [
+            {
+              "id": "dff6f3f5a668",
+              "stem": "Oral antidiyabetik ilaç tedavisi verilmesi uygun olan diyabetik hasta grubu aşağıdakilerden hangisidir?",
+              "isQuarantined": false,
+              "status": "verified",
+              "hasReconstruction": true,
+              "reconstruction": {
+                "stem": "Oral antidiyabetik ilaç tedavisi verilmesi uygun olan diyabetik hasta grubu aşağıdakilerden hangisidir?",
+                "options": [
+                  {
+                    "key": "A",
+                    "label": "A",
+                    "text": "Tip 2 Diyabetes Mellitus",
+                    "isCorrect": true
+                  },
+                  {
+                    "key": "B",
+                    "label": "B",
+                    "text": "Büyük cerrahi girişim, ağır travması olanlar",
+                    "isCorrect": false
+                  },
+                  {
+                    "key": "C",
+                    "label": "C",
+                    "text": "Ağır enfeksiyona maruz kalan hastalar",
+                    "isCorrect": false
+                  },
+                  {
+                    "key": "D",
+                    "label": "D",
+                    "text": "Karaciğer yetmezliği olan hastalar",
+                    "isCorrect": false
+                  },
+                  {
+                    "key": "E",
+                    "label": "E",
+                    "text": "Gebelik ve emzirme dönemindeki hastalar",
+                    "isCorrect": false
+                  }
+                ],
+                "correctAnswer": "A",
+                "explanation": "• DOĞRU: Tip 2 Diyabetes Mellitus hastalarının tedavisinde yaşam tarzı değişiklikleri ile birlikte oral antidiyabetik ilaçlar temel tedavi yaklaşımını oluşturur.\n• Oral antidiyabetik ilaçlar, pankreastan insülin salınımını artıran veya insülin direncini kıran ajanlar olup fonksiyonel beta hücre rezervine sahip Tip 2 DM hastalarında ilk basamak medikal tedavidir.\n• Tip 1 diyabetiklerde (mutlak insülin eksikliği) ve gebelik, ağır cerrahi, sepsis gibi akut fizyolojik stres altındaki hastalarda oral ajanlar etkisiz ve yetersiz kalır.\n• Bu gibi durumlarda kan şekeri regülasyonu için geçici ya da kalıcı olarak insülin tedavisi zorunludur.",
+                "reconstructionQuality": "verified_evidence"
+              },
+              "options": [
+                {
+                  "key": "A",
+                  "label": "A",
+                  "text": "Tip 2 Diyabetes Mellitus",
+                  "isCorrect": true,
+                  "upvotes": 0,
+                  "likedBy": []
+                },
+                {
+                  "key": "B",
+                  "label": "B",
+                  "text": "Büyük cerrahi girişim, ağır travması olanlar",
+                  "isCorrect": false,
+                  "upvotes": 0,
+                  "likedBy": []
+                },
+                {
+                  "key": "C",
+                  "label": "C",
+                  "text": "Ağır enfeksiyona maruz kalan hastalar",
+                  "isCorrect": false,
+                  "upvotes": 0,
+                  "likedBy": []
+                },
+                {
+                  "key": "D",
+                  "label": "D",
+                  "text": "Karaciğer yetmezliği olan hastalar",
+                  "isCorrect": false,
+                  "upvotes": 0,
+                  "likedBy": []
+                },
+                {
+                  "key": "E",
+                  "label": "E",
+                  "text": "Gebelik ve emzirme dönemindeki hastalar",
+                  "isCorrect": false,
+                  "upvotes": 0,
+                  "likedBy": []
+                }
+              ],
+              "correctAnswer": "A",
+              "explanation": "• Oral antidiyabetik ilaçlar, pankreastan insülin salınımını artıran veya insülin direncini kıran ajanlar olup fonksiyonel beta hücre rezervine sahip Tip 2 DM hastalarında ilk basamak medikal tedavidir.\n• Tip 1 diyabetiklerde (mutlak insülin eksikliği) ve gebelik, ağır cerrahi, sepsis gibi akut fizyolojik stres altındaki hastalarda oral ajanlar etkisiz ve yetersiz kalır.\n• Bu gibi durumlarda kan şekeri regülasyonu için geçici ya da kalıcı olarak insülin tedavisi zorunludur."
+            }
+          ]
+        },
+        "similarRedactedQuestions": [],
+        "bestRedactedReference": {
+          "id": "dff6f3f5a668",
+          "stem": "Oral antidiyabetik ilaç tedavisi verilmesi uygun olan diyabetik hasta grubu aşağıdakilerden hangisidir?",
+          "options": [
+            {
+              "key": "A",
+              "label": "A",
+              "text": "Tip 2 Diyabetes Mellitus",
+              "isCorrect": true
+            },
+            {
+              "key": "B",
+              "label": "B",
+              "text": "Büyük cerrahi girişim, ağır travması olanlar",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "label": "C",
+              "text": "Ağır enfeksiyona maruz kalan hastalar",
+              "isCorrect": false
+            },
+            {
+              "key": "D",
+              "label": "D",
+              "text": "Karaciğer yetmezliği olan hastalar",
+              "isCorrect": false
+            },
+            {
+              "key": "E",
+              "label": "E",
+              "text": "Gebelik ve emzirme dönemindeki hastalar",
+              "isCorrect": false
+            }
+          ],
+          "correctAnswer": "A",
+          "explanation": "• DOĞRU: Tip 2 Diyabetes Mellitus hastalarının tedavisinde yaşam tarzı değişiklikleri ile birlikte oral antidiyabetik ilaçlar temel tedavi yaklaşımını oluşturur.\n• Oral antidiyabetik ilaçlar, pankreastan insülin salınımını artıran veya insülin direncini kıran ajanlar olup fonksiyonel beta hücre rezervine sahip Tip 2 DM hastalarında ilk basamak medikal tedavidir.\n• Tip 1 diyabetiklerde (mutlak insülin eksikliği) ve gebelik, ağır cerrahi, sepsis gibi akut fizyolojik stres altındaki hastalarda oral ajanlar etkisiz ve yetersiz kalır.\n• Bu gibi durumlarda kan şekeri regülasyonu için geçici ya da kalıcı olarak insülin tedavisi zorunludur.",
+          "reconstruction": {
+            "stem": "Oral antidiyabetik ilaç tedavisi verilmesi uygun olan diyabetik hasta grubu aşağıdakilerden hangisidir?",
+            "options": [
+              {
+                "key": "A",
+                "label": "A",
+                "text": "Tip 2 Diyabetes Mellitus",
+                "isCorrect": true
+              },
+              {
+                "key": "B",
+                "label": "B",
+                "text": "Büyük cerrahi girişim, ağır travması olanlar",
+                "isCorrect": false
+              },
+              {
+                "key": "C",
+                "label": "C",
+                "text": "Ağır enfeksiyona maruz kalan hastalar",
+                "isCorrect": false
+              },
+              {
+                "key": "D",
+                "label": "D",
+                "text": "Karaciğer yetmezliği olan hastalar",
+                "isCorrect": false
+              },
+              {
+                "key": "E",
+                "label": "E",
+                "text": "Gebelik ve emzirme dönemindeki hastalar",
+                "isCorrect": false
+              }
+            ],
+            "correctAnswer": "A",
+            "explanation": "• DOĞRU: Tip 2 Diyabetes Mellitus hastalarının tedavisinde yaşam tarzı değişiklikleri ile birlikte oral antidiyabetik ilaçlar temel tedavi yaklaşımını oluşturur.\n• Oral antidiyabetik ilaçlar, pankreastan insülin salınımını artıran veya insülin direncini kıran ajanlar olup fonksiyonel beta hücre rezervine sahip Tip 2 DM hastalarında ilk basamak medikal tedavidir.\n• Tip 1 diyabetiklerde (mutlak insülin eksikliği) ve gebelik, ağır cerrahi, sepsis gibi akut fizyolojik stres altındaki hastalarda oral ajanlar etkisiz ve yetersiz kalır.\n• Bu gibi durumlarda kan şekeri regülasyonu için geçici ya da kalıcı olarak insülin tedavisi zorunludur.",
+            "reconstructionQuality": "verified_evidence"
+          },
+          "status": "verified",
+          "isQuarantined": false,
+          "sourceType": "merge_group",
+          "confidence": 0.923
+        }
+      }
+    },
+    "afterSnapshot": {
+      "id": "5defe4cac878",
+      "committeeId": "donem3-kurul1",
+      "donem": "Dönem 3",
+      "kurul": 1,
+      "questionNumber": 1060,
+      "discipline": "İç Hastalıkları",
+      "topic": "İç Hastalıkları Kurul Sorusu",
+      "stem": "Oral antidiyabetik ilaç tedavisi verilmesi uygun olan diyabetik hasta grubu aşağıdakilerden hangisidir?",
+      "options": [
+        {
+          "key": "A",
+          "label": "A",
+          "text": "Tip 2 Diyabetes Mellitus",
+          "isCorrect": true
+        },
+        {
+          "key": "B",
+          "label": "B",
+          "text": "Büyük cerrahi girişim, ağır travması olanlar",
+          "isCorrect": false
+        },
+        {
+          "key": "C",
+          "label": "C",
+          "text": "Ağır enfeksiyona maruz kalan hastalar",
+          "isCorrect": false
+        },
+        {
+          "key": "D",
+          "label": "D",
+          "text": "Karaciğer yetmezliği olan hastalar",
+          "isCorrect": false
+        },
+        {
+          "key": "E",
+          "label": "E",
+          "text": "Gebelik ve emzirme dönemindeki hastalar",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswer": "A",
+      "claimedAnswer": "A",
+      "explanation": "• DOĞRU (A): Tip 2 Diyabetes Mellitus hastalarında yaşam tarzı değişiklikleri ile birlikte oral antidiyabetik (OAD) ilaçlar ilk basamak temel medikal tedavidir.\n• YANLIŞ (B, C, D, E): Büyük cerrahi operasyonlar, ağır travmalar, sepsis ve ağır enfeksiyonlar, karaciğer yetmezliği ile gebelik ve emzirme dönemlerinde OAD tedavisi kontrendikedir veya yetersiz kalır; bu durumlarda glisemik kontrol için insülin tedavisi endikedir.",
+      "reconstruction": {
+        "stem": "Oral antidiyabetik ilaç tedavisi verilmesi uygun olan diyabetik hasta grubu aşağıdakilerden hangisidir?",
+        "options": [
+          {
+            "key": "A",
+            "label": "A",
+            "text": "Tip 2 Diyabetes Mellitus",
+            "isCorrect": true
+          },
+          {
+            "key": "B",
+            "label": "B",
+            "text": "Büyük cerrahi girişim, ağır travması olanlar",
+            "isCorrect": false
+          },
+          {
+            "key": "C",
+            "label": "C",
+            "text": "Ağır enfeksiyona maruz kalan hastalar",
+            "isCorrect": false
+          },
+          {
+            "key": "D",
+            "label": "D",
+            "text": "Karaciğer yetmezliği olan hastalar",
+            "isCorrect": false
+          },
+          {
+            "key": "E",
+            "label": "E",
+            "text": "Gebelik ve emzirme dönemindeki hastalar",
+            "isCorrect": false
+          }
+        ],
+        "correctAnswer": "A",
+        "explanation": "• DOĞRU (A): Tip 2 Diyabetes Mellitus hastalarında yaşam tarzı değişiklikleri ile birlikte oral antidiyabetik (OAD) ilaçlar ilk basamak temel medikal tedavidir.\n• YANLIŞ (B, C, D, E): Büyük cerrahi operasyonlar, ağır travmalar, sepsis ve ağır enfeksiyonlar, karaciğer yetmezliği ile gebelik ve emzirme dönemlerinde OAD tedavisi kontrendikedir veya yetersiz kalır; bu durumlarda glisemik kontrol için insülin tedavisi endikedir.",
+        "reconstructionQuality": "verified_evidence"
+      }
+    },
+    "aiAnalysis": {
+      "detectedIssues": [
+        "Soru kökünde OCR/dizgi hatası ve satır kırılmaları ('İYABETES MELLİTUS...') bulunmaktadır.",
+        "A şıkkı hatalı biçimde 'Tip 1 Diyabetes Mellitus' olarak yazılmış ve doğru cevap tıbben olanaksız şekilde 'Büyük cerrahi girişim, ağır travması olanlar' (B şıkkı) olarak işaretlenmiştir.",
+        "Büyük cerrahi, ağır travma, karaciğer yetmezliği, ağır enfeksiyonlar ve gebelik oral antidiyabetiklerin (OAD) kontrendike olduğu ve mutlak insülin tedavisi gerektiren durumlardır.",
+        "OAD tedavisi verilmesi uygun olan hasta grubu kardeş soru #dff6f3f5a668 kaydında da doğrulandığı üzere 'Tip 2 Diyabetes Mellitus' hastalarıdır."
+      ],
+      "medicalReasoning": "Oral antidiyabetik ilaçlar (metformin, sülfonilüreler, SGLT2 inhibitörleri, DPP-4 inhibitörleri vb.), pankreas beta hücre rezervi bulunan ve insülin direnci baskın olan Tip 2 Diyabetes Mellitus hastalarında birinci basamak tedavidir. Tip 1 DM (mutlak insülin eksikliği), gebelik/emzirme, akut dekompansasyon, sepsis/ağır enfeksiyonlar, majör cerrahi girişimler, ağır travma ve ileri karaciğer/böbrek yetmezliği durumlarında OAD'ler kontrendikedir veya yetersiz kalır; bu durumlarda glisemik regülasyon mutlak insülin tedavisi ile sağlanır.",
+      "actionTaken": "corrected",
+      "changesSummary": "Soru kökü ve seçenekleri sistemdeki en kaliteli referans kardeş soru (#dff6f3f5a668) ile birebir uyumlu hale getirilmiş, A şıkkı 'Tip 2 Diyabetes Mellitus' olarak düzeltilip doğru cevap A olarak güncellenmiştir.",
+      "processedAt": "2026-10-11T22:40:09.248Z",
+      "modelUsed": "gemini-flash-latest",
+      "releaseQuarantine": false,
+      "referencedRedactedId": "dff6f3f5a668",
+      "crossDataAuditApplied": true
+    }
+  },
+  {
+    "id": "ornek-rep-k1-02-q01-2026-10-11T19:59:27.410Z",
+    "source": "practice_question",
+    "targetId": "k1-02-q01",
+    "userReport": {
+      "reason": "Şık D yazım hatası",
+      "details": "",
+      "reportedBy": "Anonim Öğrenci",
+      "reportedAt": "2026-10-11T19:59:27.410Z"
+    },
+    "fullContext": null,
+    "ticketNo": "#000003",
+    "status": "error",
+    "retryCount": 1,
+    "errorDetails": "list.find is not a function"
+  },
+  {
+    "source": "past_question",
     "targetId": "047b1367cbf4",
     "userReport": {
       "reason": "Diğer",

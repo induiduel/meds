@@ -207,6 +207,18 @@ for q in past_questions:
         q.update(duz)
 pq_by_id = {q["id"]: q for q in past_questions}
 
+# Check-solve (meds_temp/cikmis_check_solve): soru-kazanım eşlemesi denetlenmiş sorular doğrudan kendi
+# kazanımına bağlanır; karantinaya ayrılanlar hiç atanmaz. Diğerleri aşağıdaki sezgisel eşlemeden geçer.
+cs_kazanim_sorulari = {}
+cs_haric = set()
+for q in past_questions:
+    cs = q.get("checkSolve") or {}
+    if cs.get("status") == "karantina":
+        cs_haric.add(q["id"])
+    elif cs.get("status") == "onayli" and (cs.get("mufredat") or {}).get("kazanimId"):
+        cs_kazanim_sorulari.setdefault(cs["mufredat"]["kazanimId"], []).append(q)
+        cs_haric.add(q["id"])
+
 # 8. Ders Özetleri
 with open(DATA_DIR / "lectureSummariesCatalog.json", encoding="utf-8") as f:
     lecture_summaries = json.load(f)
@@ -235,6 +247,14 @@ print(f"Archive DB Eşleşmesi: {len(q_to_archive_kazanim)}")
 # Soru Tekilleştirme Kümeleri (Her soru yalnız 1 kere atanabilir)
 assigned_question_ids = set()
 assigned_ornek_ids = set()
+
+def cs_atamalari(kz_id: str) -> list:
+    out = []
+    for q in cs_kazanim_sorulari.get(kz_id, []):
+        if q["id"] not in assigned_question_ids:
+            out.append(format_question(q))
+            assigned_question_ids.add(q["id"])
+    return out
 
 def format_question(q: dict) -> dict:
     return {
@@ -344,7 +364,7 @@ for kurul_info in mufredat_pkg["kurullar"]:
             for q in available_kurul_questions:
                 if q["id"] in assigned_question_ids:
                     continue
-                if q["id"] in Q_KARANTINA:
+                if q["id"] in Q_KARANTINA or q["id"] in cs_haric:
                     continue
                 qid = q["id"]
                 is_match = False
@@ -453,7 +473,7 @@ for kurul_info in mufredat_pkg["kurullar"]:
                                         })
 
                     # Bu kazanıma ait ÇIKMIŞ SORULAR (Tekil atama!)
-                    kazanim_cikmis = []
+                    kazanim_cikmis = cs_atamalari(f"k{k_num}-d{d_idx+1}-c{c_idx+1}-kz-{k_idx_num}")
 
                     # 1. Öncelik: ornek_sorular'da doğrudan bu kazanım no'ya eşlenmiş çıkmış sorular
                     # (manuel kürasyon; yalnız kurul filtresi uygulanır)
@@ -507,7 +527,7 @@ for kurul_info in mufredat_pkg["kurullar"]:
                             base_objectives.append(f"{kp_clean} mekanizmasını ve klinik önemini analiz eder.")
 
                 for k_idx_num, kaz_text in enumerate(base_objectives, 1):
-                    kazanim_cikmis = []
+                    kazanim_cikmis = cs_atamalari(f"k{k_num}-d{d_idx+1}-c{c_idx+1}-kz-{k_idx_num}")
 
                     # Bu kazanıma en uygun aday soruları tekil ata (en fazla 3 soru).
                     # Düzeltme 2026-10-09: ilk-kazanıma zorla atama kaldırıldı;

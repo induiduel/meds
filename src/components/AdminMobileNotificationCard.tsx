@@ -18,6 +18,7 @@ import {
 import { ApiService } from '../services/api';
 import { FirestoreDbService } from '../services/firestoreDb';
 import { getSupabaseClient } from '../services/supabaseDb';
+import { realtimeEventService } from '../services/realtimeEvents';
 
 const ADMIN_EMAIL = 'nofrostlife@gmail.com';
 
@@ -146,7 +147,7 @@ export const AdminMobileNotificationCard: React.FC<AdminMobileNotificationCardPr
     }
   }, []);
 
-  // Periyodik kontrol ve Canlı Firestore Bildirim Dinleyicisi
+  // Periyodik kontrol ve Canlı Dinleyiciler (Firestore + Express SSE)
   useEffect(() => {
     // 1. Periyodik yoklama
     const interval = setInterval(() => {
@@ -158,9 +159,15 @@ export const AdminMobileNotificationCard: React.FC<AdminMobileNotificationCardPr
       setRecentNotifs((prev) => [notif, ...prev.filter((p) => p.id !== notif.id)]);
     });
 
+    // 3. Canlı Express SSE Dinleyicisi (Sunucudan gelen bildirimler anında eklenir)
+    const unsubscribeSSE = realtimeEventService.onNotification((notif) => {
+      setRecentNotifs((prev) => [notif, ...prev.filter((p) => p.id !== notif.id)]);
+    });
+
     return () => {
       clearInterval(interval);
       if (typeof unsubscribe === 'function') unsubscribe();
+      unsubscribeSSE();
     };
   }, [checkSubscriptionStatus]);
 

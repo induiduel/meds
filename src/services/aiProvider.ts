@@ -786,3 +786,110 @@ export async function generateResilientMedicalAi(options: {
   failureError.isAllFailed = true;
   throw failureError;
 }
+
+
+// =========================================================================
+// Ücretsiz Gemini JSON çağrısı (soru girişi ayrıştırıcısı vb.): yalnız GEMINI_API_KEY + GEMINI_FREE_KEY_N,
+// kullanıcı/faturalı anahtar yok. Model listesi sırayla, her model için anahtar havuzu denenir.
+// 429 → o anahtar+model beklemeye (günlükse 6 sa), 503/zaman aşımı → model 30-120 sn atlanır.
+// Hepsi geçici nedenle başarısızsa AiRetryLaterError: çağıran girdiyi saklayıp sonra yeniden dener.
+// =========================================================================
+export class AiRetryLaterError extends Error {}
+const FREE_JSON_GAP_MS = 2500;
+
+const freeJsonCooldown = new Map<string, number>(); // `${keyIdx}:${model}` → bekleme bitişi
+const freeJsonQuota = new Set<string>(); // bekleme nedeni kota olanlar
+let freeJsonLastCall = 0;
+
+export function extractJsonObject(text: string): any {
+  const t = String(text || '').trim().replace(/^```(?:json)?\s*/i, '').replace(/```\s*$/, '');
+  try { return JSON.parse(t); } catch { /* aşağıda */ }
+  const a = t.indexOf('{');
+  const b = t.lastIndexOf('}');
+  if (a >= 0 && b > a) return JSON.parse(t.slice(a, b + 1));
+  throw new Error('Model JSON döndürmedi');
+}
+
+export async function callFreeGeminiJson(
+  models: string[],
+  system: string,
+  user: string,
+  opts: { groqFallback?: boolean; debug?: boolean; timeoutMs?: number } = {},
+): Promise<{ json: any; model: string }> {
+  const keys = getFreeGeminiKeys(); // kullanıcı anahtarı ve faturalı anahtar yok
+  if (!keys.length && opts.groqFallback === false) throw new Error('Ücretsiz Gemini anahtarı yok (GEMINI_API_KEY / GEMINI_FREE_KEY_N).');
+  let lastErr: Error | null = null;
+  let quotaHits = 0;
+  let tried = 0;
+  let transient = false; // 429/503/zaman aşımı: sonra yeniden denenir
+  for (const model of models) {
+    for (let ki = 0; ki < keys.length; ki++) {
+      const ck = `${ki}:${model}`;
+      if ((freeJsonCooldown.get(ck) || 0) > Date.now()) { if (freeJsonQuota.has(ck)) quotaHits++; else transient = true; continue; }
+      freeJsonQuota.delete(ck);
+      tried++;
+      const wait = freeJsonLastCall + FREE_JSON_GAP_MS - Date.now();
+      if (wait > 0) await new Promise((r) => setTimeout(r, wait));
+      freeJsonLastCall = Date.now();
+      const ctrl = new AbortController();
+      const timer = setTimeout(() => ctrl.abort(), opts.timeoutMs || 40_000);
+      try {
+        const r = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'x-goog-api-key': keys[ki].key },
+          body: JSON.stringify({
+            systemInstruction: { parts: [{ text: system }] },
+            contents: [{ role: 'user', parts: [{ text: user }] }],
+            generationConfig: { temperature: 0, responseMimeType: 'application/json', thinkingConfig: { thinkingLevel: 'low' } },
+          }),
+          signal: ctrl.signal,
+        });
+        clearTimeout(timer);
+        const body = await r.text();
+        if (!r.ok && opts.debug) console.warn(`[intake] ${model} anahtar#${ki} ${r.status}: ${body.slice(0, 200)}`);
+        if (r.status === 429) {
+          quotaHits++;
+          transient = true;
+          const daily = /per\s*day|PerDay|daily/i.test(body);
+          freeJsonCooldown.set(ck, Date.now() + (daily ? 6 * 3600_000 : 65_000));
+          freeJsonQuota.add(ck);
+          lastErr = new AiRetryLaterError(`${model} kota (429)`);
+          continue;
+        }
+        if (r.status === 404 || r.status === 400 || r.status === 403) {
+          freeJsonCooldown.set(ck, Date.now() + 3600_000);
+          lastErr = new Error(`${model} ${r.status}: ${body.slice(0, 160)}`);
+          continue;
+        }
+        if (!r.ok) {
+          // 503 "high demand": bu model bir süre atlanır, sıradaki model denenir
+          if (r.status === 503 || r.status === 500) transient = true;
+          if (r.status === 503 || r.status === 500) for (let k = 0; k < keys.length; k++) freeJsonCooldown.set(`${k}:${model}`, Date.now() + 30_000);
+          lastErr = new Error(`${model} ${r.status}`);
+          continue;
+        }
+        const data = JSON.parse(body);
+        const text = (data?.candidates?.[0]?.content?.parts || []).map((p: any) => p.text || '').join('');
+        return { json: extractJsonObject(text), model: `gemini:${model}` };
+      } catch (e: any) {
+        clearTimeout(timer);
+        if (opts.debug) console.warn(`[intake] ${model} anahtar#${ki} hata: ${e?.message}`);
+        lastErr = e?.name === 'AbortError' ? new Error(`${model} zaman aşımı`) : e;
+        if (e?.name === 'AbortError') transient = true;
+        if (e?.name === 'AbortError') for (let k = 0; k < keys.length; k++) freeJsonCooldown.set(`${k}:${model}`, Date.now() + 120_000);
+      }
+    }
+  }
+  // Gemini'nin tamamı kotadaysa Groq (ücretsiz) denenir
+  if (opts.groqFallback !== false) {
+    try {
+      const g = await callGroqCloud(user, 'openai/gpt-oss-120b', undefined, { systemPrompt: system, isJson: true, timeoutMs: 45_000 });
+      return { json: extractJsonObject(g.text), model: `groq:${g.model}` };
+    } catch (e: any) {
+      if (/429|rate|quota|zaman aşımı/i.test(e?.message || '')) transient = true;
+      lastErr = e;
+    }
+  }
+  if (transient || (quotaHits > 0 && tried === 0)) throw new AiRetryLaterError(lastErr?.message || 'Ücretsiz kota doldu');
+  throw lastErr || new Error('Model yanıt vermedi');
+}

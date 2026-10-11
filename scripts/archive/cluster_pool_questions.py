@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """
+# ARŞİV (2026-10-12): Yerini src/services/poolClusterService.ts aldı (sunucu içinde, ders/konu/terim tabanlı). Çağıran yok.
 MeDSor Soru Havuzu Kümeleme, Eşleme ve Öneri Taslak Otomasyonu
 Ücretsiz Yapay Zeka Ajanları ile Arka Planda Eşleme ve Birleştirme
 
@@ -111,13 +112,58 @@ def load_pool_questions() -> List[Dict[str, Any]]:
 
     return []
 
+def question_text(q: Dict[str, Any]) -> str:
+    """Sorunun öğrenci metni: stem/title yoksa kök ve ipucu parçaları."""
+    t = q.get("stem") or q.get("title") or ""
+    if t:
+        return t
+    frs = [f.get("text", "") for f in (q.get("fragments") or []) if f.get("type") in ("stem", "clue")]
+    return " ".join(x for x in frs if x).strip()
+
+
+def question_options(q: Dict[str, Any]) -> List[Dict[str, str]]:
+    return [{"key": o.get("key"), "text": (o.get("text") or "").strip()} for o in (q.get("options") or []) if (o.get("text") or "").strip()]
+
+
+MISSING_OPTION = "[EKSİK ŞIK]"
+
+
+def evidence_only_proposal(chunk: List[Dict[str, Any]]) -> Dict[str, Any]:
+    """AI yoksa uydurma yok: eksikler [EKSİK ŞIK], cevap boş. Kümedeki sorular aynı soru olduğu doğrulanmadığı
+    için şıklar yalnız tek sorulu kümede alınır (farklı soruların şıkları karıştırılmaz)."""
+    by_key: Dict[str, Dict[str, Any]] = {}
+    for q in (chunk if len(chunk) == 1 else []):
+        for o in question_options(q):
+            k = str(o["key"] or "").upper()
+            if k in "ABCDE" and len(k) == 1:
+                by_key.setdefault(k, {}).setdefault(o["text"], 0)
+                by_key[k][o["text"]] += 1
+    opts = []
+    for k in "ABCDE":
+        if k in by_key:
+            text = max(by_key[k].items(), key=lambda kv: kv[1])[0]
+            opts.append({"key": k, "text": text})
+        else:
+            opts.append({"key": k, "text": MISSING_OPTION})
+    first = next((question_text(q) for q in chunk if question_text(q)), "")
+    return {
+        "clusterTitle": f"Birleştirilmemiş soru grubu: {first[:40]}..." if first else "Birleştirilmemiş soru grubu",
+        "discipline": chunk[0].get("discipline") or "Belirsiz",
+        "mergedStem": f"[EKSİK KÖK] {len(chunk)} öğrenci parçası; yapay zekâ birleştirmesi henüz yapılmadı.",
+        "mergedOptions": opts,
+        "claimedAnswer": "",
+        "explanation": "",
+        "aiMerged": False,
+    }
+
+
 def group_questions_into_clusters(questions: List[Dict[str, Any]], max_per_cluster: int = 10) -> List[Dict[str, Any]]:
     """Soruları komite ve konu anahtar kelimelerine göre mantıksal gruplara böler."""
     groups_by_key: Dict[str, List[Dict[str, Any]]] = {}
 
     for q in questions:
         cid = q.get("committeeId") or "genel-kurul"
-        stem = q.get("stem") or q.get("title") or ""
+        stem = question_text(q)
         # Temel tıbbi anahtar kelime çıkarımı
         words = re.findall(r'\b[a-zA-ZğüşıöçĞÜŞİÖÇ]{4,}\b', stem.lower())
         topic = words[0] if words else "klinik-muhasebe"
@@ -151,7 +197,7 @@ def generate_cluster_proposal_with_ai(cluster: Dict[str, Any]) -> Dict[str, Any]
 
     stems_and_opts = []
     for idx, q in enumerate(chunk, 1):
-        q_stem = q.get("stem") or q.get("title") or "Soru kökü"
+        q_stem = question_text(q) or "(kök yok)"
         q_opts = q.get("options") or []
         opts_text = ", ".join([f"{o.get('key')}: {o.get('text')}" for o in q_opts]) if isinstance(q_opts, list) else str(q_opts)
         stems_and_opts.append(f"Parça #{idx}: {q_stem} | Şıklar: {opts_text}")
@@ -161,9 +207,14 @@ def generate_cluster_proposal_with_ai(cluster: Dict[str, Any]) -> Dict[str, Any]
     prompt = f"""
 Sen bir Tıp Fakültesi Sınav Komisyonu Akademisyenisin.
 Aşağıda öğrencilerin girdiği {len(chunk)} adet eksik/parçalı soru taslağı bulunmaktadır.
-Bu parçaları analiz et, ortak konuyu tespit et ve en uygun şekilde birleştirilmiş, tek bir kusursuz sınav sorusu taslağı üret.
+Bu parçaları analiz et, ortak konuyu tespit et ve YALNIZ parçalarda bulunan bilgiyle tek bir soru taslağında birleştir. Eksik kalan yeri doldurma, işaretle.
 
-ÖNEMLİ KURAL: Yanıtın SADECE geçerli bir JSON objesi olmalıdır.
+KURALLAR
+1. Yanıtın SADECE geçerli bir JSON objesi olmalıdır.
+2. UYDURMA YOK: Öğrenci parçalarında geçmeyen şık yazma; o şıkkın metni "[EKSİK ŞIK]" olsun. Kökte eksik kısım varsa "[EKSİK KÖK PARÇASI]" yaz.
+3. Parçalar farklı soruları anlatıyorsa birleştirme; "mergedStem" alanına "[BİRLEŞTİRİLEMEDİ] parçalar farklı sorulara ait" yaz.
+4. "claimedAnswer": yalnız öğrencilerin işaretlediği/iddia ettiği harf; kanıt yoksa "" (boş).
+5. Parçalarda "değildir / yanlıştır / beklenmez" geçiyorsa kökü olumsuz kur.
 
 İstenen JSON formatı:
 {{
@@ -177,20 +228,38 @@ Bu parçaları analiz et, ortak konuyu tespit et ve en uygun şekilde birleştir
     {{"key": "D", "text": "D şıkkı metni"}},
     {{"key": "E", "text": "E şıkkı metni"}}
   ],
-  "claimedAnswer": "Doğru şık harfi (A, B, C, D veya E)",
-  "explanation": "Doğru cevabın fizyopatolojik gerekçesi ve diğer şıkların çürütülmesi"
+  "claimedAnswer": "Öğrencilerin iddia ettiği harf ya da \"\"",
+  "explanation": "Hangi parçanın neyi desteklediği; eksikler ve çelişkiler"
 }}
 
 ÖĞRENCİ PARÇALARI ({len(chunk)} soru birleştiriliyor):
 {context_str[:2500]}
 """
 
-    # 1. Groq Free Tier
+    # 1. Gemini (yalnız ücretsiz anahtarlar)
+    gemini_key = get_next_gemini_key()
+    if gemini_key:
+        try:
+            gemini_url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent?key={gemini_key}"
+            req_data = json.dumps({
+                "contents": [{"parts": [{"text": prompt}]}],
+                "generationConfig": {"responseMimeType": "application/json", "temperature": 0, "thinkingConfig": {"thinkingLevel": "low"}}
+            }).encode('utf-8')
+
+            req = urllib.request.Request(gemini_url, data=req_data, headers={"Content-Type": "application/json"})
+            with urllib.request.urlopen(req, timeout=40) as res:
+                resp_json = json.loads(res.read().decode('utf-8'))
+                raw_text = resp_json["candidates"][0]["content"]["parts"][0]["text"]
+                return json.loads(raw_text)
+        except Exception:
+            pass
+
+    # 2. Groq (ücretsiz) yedek
     groq_key = get_next_groq_key()
     if groq_key:
         try:
             req_data = json.dumps({
-                "model": "llama-3.3-70b-versatile",
+                "model": "openai/gpt-oss-120b",
                 "messages": [
                     {"role": "system", "content": "You are a professional medical exam committee expert. Output strictly JSON."},
                     {"role": "user", "content": prompt}
@@ -204,47 +273,15 @@ Bu parçaları analiz et, ortak konuyu tespit et ve en uygun şekilde birleştir
                 data=req_data,
                 headers={"Authorization": f"Bearer {groq_key}", "Content-Type": "application/json"}
             )
-            with urllib.request.urlopen(req, timeout=12) as res:
+            with urllib.request.urlopen(req, timeout=40) as res:
                 resp_json = json.loads(res.read().decode('utf-8'))
                 raw_text = resp_json["choices"][0]["message"]["content"]
                 return json.loads(raw_text)
         except Exception:
             pass
 
-    # 2. Gemini Free Tier
-    gemini_key = get_next_gemini_key()
-    if gemini_key:
-        try:
-            gemini_url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={gemini_key}"
-            req_data = json.dumps({
-                "contents": [{"parts": [{"text": prompt}]}],
-                "generationConfig": {"responseMimeType": "application/json", "temperature": 0.2}
-            }).encode('utf-8')
-
-            req = urllib.request.Request(gemini_url, data=req_data, headers={"Content-Type": "application/json"})
-            with urllib.request.urlopen(req, timeout=12) as res:
-                resp_json = json.loads(res.read().decode('utf-8'))
-                raw_text = resp_json["candidates"][0]["content"]["parts"][0]["text"]
-                return json.loads(raw_text)
-        except Exception:
-            pass
-
-    # Deterministik yedek
-    first_q = chunk[0]
-    return {
-        "clusterTitle": f"Birleştirilmiş Soru Grubu: {first_q.get('stem', '')[:40]}...",
-        "discipline": first_q.get("discipline") or "Tıp Eğitimi",
-        "mergedStem": f"{len(chunk)} öğrenci parçası birleştirildi: {first_q.get('stem', 'Soru kökü')}",
-        "mergedOptions": [
-            {"key": "A", "text": "Doğrulanan klinik bulgu veya ilk seçenek"},
-            {"key": "B", "text": "İkinci ayırıcı tanı seçeneği"},
-            {"key": "C", "text": "Üçüncü fizyopatolojik mekanizma seçeneği"},
-            {"key": "D", "text": "Dördüncü farmakolojik seçenek"},
-            {"key": "E", "text": "Beşinci seçenek"}
-        ],
-        "claimedAnswer": "A",
-        "explanation": "Öğrenci hatırlatma parçaları sentezlenerek ortak soru kurgusu oluşturulmuştur."
-    }
+    # Yapay zekâ yanıt vermedi: yalnız kanıta dayalı taslak (uydurma şık/cevap yok)
+    return evidence_only_proposal(chunk)
 
 def run_clustering_pipeline():
     print("=" * 65)
@@ -284,6 +321,14 @@ def run_clustering_pipeline():
 
         print(f"[*] Küme {cluster_id} işleniyor ({len(q_ids)} soru parçası)...")
         proposal_data = generate_cluster_proposal_with_ai(c)
+        if proposal_data.get("aiMerged") is False and existing and existing.get("aiMerged"):
+            print(f"    [!] AI yanıt vermedi; önceki AI birleştirmesi korunuyor.")
+            results.append(existing)
+            continue
+        got = {str(o.get("key", "")).upper(): (o.get("text") or "").strip() for o in (proposal_data.get("mergedOptions") or []) if isinstance(o, dict)}
+        proposal_data["mergedOptions"] = [{"key": k, "text": got.get(k) or MISSING_OPTION} for k in "ABCDE"]
+        ca = str(proposal_data.get("claimedAnswer") or "").strip().upper()
+        proposal_data["claimedAnswer"] = ca if ca in ("A", "B", "C", "D", "E") else ""
 
         cluster_obj = {
             "id": cluster_id,
@@ -294,7 +339,8 @@ def run_clustering_pipeline():
             "mergedQuestionCount": len(q_ids),
             "mergedStem": proposal_data.get("mergedStem") or "",
             "mergedOptions": proposal_data.get("mergedOptions") or [],
-            "claimedAnswer": proposal_data.get("claimedAnswer") or "A",
+            "claimedAnswer": proposal_data.get("claimedAnswer") or "",
+            "aiMerged": proposal_data.get("aiMerged", True),
             "explanation": proposal_data.get("explanation") or "",
             "status": "proposal", # DAİMA ÖNERİ STATÜSÜNDE KALIR
             "isLockedForDeletion": True, # ÖĞRENCİLER SİLEMEZ VEYA ONAYLAYAMAZ

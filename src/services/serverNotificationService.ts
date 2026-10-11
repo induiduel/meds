@@ -39,6 +39,14 @@ export class ServerNotificationService {
   private notifsFile: string;
   private vapidKeys: { publicKey: string; privateKey: string } | null = null;
   private recentEventKeys: Map<string, number> = new Map();
+  private notificationListeners: Set<(item: AdminNotificationItem) => void> = new Set();
+
+  public onNotification(fn: (item: AdminNotificationItem) => void): () => void {
+    this.notificationListeners.add(fn);
+    return () => {
+      this.notificationListeners.delete(fn);
+    };
+  }
 
   constructor(dataDir: string) {
     this.dataDir = dataDir;
@@ -149,6 +157,13 @@ export class ServerNotificationService {
       const list = this.getNotifications(200);
       list.unshift(item);
       fs.writeFileSync(this.notifsFile, JSON.stringify(list.slice(0, 100), null, 2), 'utf-8');
+      for (const fn of this.notificationListeners) {
+        try {
+          fn(item);
+        } catch (err: any) {
+          console.warn('[NotificationService] onNotification dinleyici hatası:', err?.message);
+        }
+      }
     } catch (err: any) {
       console.warn('[NotificationService] Bildirim geçmişe yazılamadı:', err.message);
     }
@@ -421,7 +436,7 @@ export class ServerNotificationService {
     appUrl?: string;
     /** Uygulama içi yol (ör. Öğren derin bağlantısı); verilirse bağlantı buraya gider */
     link?: string;
-  }) {
+  }): Promise<AdminNotificationItem | null> {
     const { type, questionId, reason, details, text, author, discipline, topic, appUrl, transporter, smtpFrom } = params;
 
     // Mükerrer bildirim koruması (Aynı soru ve tip için 3 dakika içinde mükerrer bildirimleri filtrele)
@@ -430,7 +445,7 @@ export class ServerNotificationService {
     const lastSent = this.recentEventKeys.get(dedupKey);
     if (lastSent && (now - lastSent) < 180000) {
       console.log(`[NotificationService] 🛑 Mükerrer bildirim engellendi (Son 3dk içinde iletildi): ${dedupKey}`);
-      return;
+      return null;
     }
     this.recentEventKeys.set(dedupKey, now);
 
@@ -527,5 +542,7 @@ export class ServerNotificationService {
     }).catch(err => {
       console.warn('[NotificationService] E-posta tetikleme hatası:', err.message);
     });
+
+    return notifItem;
   }
 }

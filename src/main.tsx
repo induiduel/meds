@@ -122,10 +122,30 @@ class RootErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState
 
   handleHardReset = () => {
     try {
-      localStorage.clear();
       sessionStorage.clear();
+      // Yalnızca geçici chunk/reload ve önbellek anahtarlarını temizle; kullanıcının notlarını,
+      // çözdüğü soruları, akıl kartlarını ve favorilerini ASLA silme!
+      const volatilePrefixes = ['medsoru_last_chunk_', 'medsoru_chunk_', 'medsoru_db_data_'];
+      for (let i = localStorage.length - 1; i >= 0; i--) {
+        const k = localStorage.key(i);
+        if (k && volatilePrefixes.some((p) => k.startsWith(p))) {
+          localStorage.removeItem(k);
+        }
+      }
+      if ('caches' in window) {
+        caches.keys().then((keys) => keys.forEach((k) => caches.delete(k))).catch(() => {});
+      }
     } catch (e) {}
     window.location.reload();
+  };
+
+  handleGoBack = () => {
+    this.setState({ hasError: false, error: null });
+    if (window.history.length > 1) {
+      window.history.back();
+    } else {
+      window.location.href = '/';
+    }
   };
 
   render() {
@@ -144,11 +164,14 @@ class RootErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState
             </h2>
             <p className="m-0 text-xs text-ink-2 font-mono bg-field p-3 rounded-lg text-left overflow-auto max-h-32">{msg}</p>
             <div className="flex flex-col sm:flex-row gap-2 justify-center">
+              <button type="button" onClick={this.handleGoBack} className="ui-btn">
+                Geri dön
+              </button>
               <button type="button" onClick={this.handleSoftReload} className="ui-btn is-primary">
                 Sayfayı yenile
               </button>
-              <button type="button" onClick={this.handleHardReset} className="ui-btn">
-                Önbelleği sıfırla
+              <button type="button" onClick={this.handleHardReset} className="ui-btn is-ghost text-xs">
+                Önbelleği tazele
               </button>
             </div>
           </div>
@@ -160,8 +183,14 @@ class RootErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState
   }
 }
 
+import { QueryClientProvider } from '@tanstack/react-query';
+import { queryClient } from './queryClient';
+
 createRoot(document.getElementById('root')!).render(
   <RootErrorBoundary>
-    <App />
+    <QueryClientProvider client={queryClient}>
+      <App />
+    </QueryClientProvider>
   </RootErrorBoundary>
 );
+

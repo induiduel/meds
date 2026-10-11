@@ -63,6 +63,9 @@ services:
       - NODE_OPTIONS=--max-old-space-size=2560
       # Vektör arama: sorgu gömme Oracle içindeki bge-m3 servisinden, vektörler local Supabase'ten.
       - MEDS_EMBED_URL=http://meds-embed:8094/embed
+      - MEDS_EMBED_BGE_URL=http://meds-embed:8094/embed
+      - LOCAL_SUPABASE_URL=${LOCAL_SUPABASE_URL:-http://host.docker.internal:8000}
+      - MEDS_VECTOR_SEARCH=${MEDS_VECTOR_SEARCH:-1}
     volumes:
       - ../../data:/app/data
       - /home/ubuntu/medsor/meds_database:/home/ubuntu/medsor/meds_database:ro

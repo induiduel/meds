@@ -59,6 +59,12 @@ export function applyPhase14Overlay<T extends Record<string, any>>(list: T[]): T
   };
   return list.map((q) => {
     const r = revs.get(String(q.id));
+    // Check-solve ile denetlenmiş kayıt: ondan önceki Faz 14 önerileri uygulanmaz, yalnız sonradan yapılan düzenleme gösterilir
+    if (q.checkSolve?.status) {
+      const csAt = Date.parse(q.checkSolve.at || '') || 0;
+      const editedAt = r ? Date.parse(r.last_edited_at || r.processed_at || '') || 0 : 0;
+      if (!r || r.status !== 'review_required' || !r.proposal || editedAt <= csAt) return q;
+    }
     if (q.phase14 && q.phase14.status !== 'onay_bekliyor') {
       // Onaylı: veri zaten Faz 14 hâlinde. Onaydan SONRA yeniden düzenlenip onaylanmamış kayıt varsa o gösterilir.
       const approvedAt = Date.parse(q.phase14.approvedAt || '') || 0;

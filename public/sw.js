@@ -1,5 +1,5 @@
-// MedSoru Service Worker - PWA v4: Güçlendirilmiş Çevrimdışı Önbellek, Sıfır Gecikmeli Yenileme, Background Sync ve Push
-const CACHE_VERSION = 'medsoru-pwa-v6';
+// MedSoru Service Worker - PWA v7: Güçlendirilmiş Çevrimdışı Önbellek, Sıfır Gecikmeli Yenileme, Background Sync ve Push
+const CACHE_VERSION = 'medsoru-pwa-v7';
 const STATIC_CACHE = `medsoru-static-${CACHE_VERSION}`;
 const RUNTIME_CACHE = `medsoru-runtime-${CACHE_VERSION}`;
 const DATA_CACHE = `medsoru-data-${CACHE_VERSION}`;
@@ -15,6 +15,17 @@ const PRECACHE_ASSETS = [
   '/icons/icon-512x512.png',
   '/icons/maskable-icon-192x192.png',
   '/icons/maskable-icon-512x512.png',
+  '/cikmis',
+  '/ogren',
+  '/kartlar',
+  '/hastaliklar',
+  '/sozluk',
+  '/calis',
+  '/ozetler',
+  '/kazanimlar',
+  '/test',
+  '/istatistik',
+  '/ayarlar',
 ];
 
 // Varsayılan komiteler (çevrimdışıyken sunucuya hiç ulaşılamasa dahi arayüzün boş kalmasını önler)
@@ -199,10 +210,12 @@ self.addEventListener('fetch', (event) => {
         const networkRes = await fetchPromise;
         if (networkRes) return networkRes;
 
-        // Önbellekte de yoksa ve ağ kapalıysa: JavaScript ve CSS için boş modül dönerek script çökmelerini engelle
+        // Önbellekte de yoksa ve ağ kapalıysa: 503 döndürerek React.lazy / wrapLazy catch mekanizmasının güvenle devreye girmesini sağla
         if (url.pathname.endsWith('.js') || url.pathname.includes('.js?')) {
-          return new Response('/* Offline fallback module */ export default {};', {
-            headers: { 'Content-Type': 'application/javascript; charset=utf-8' },
+          return new Response('/* Offline fallback: Module not cached */', {
+            status: 503,
+            statusText: 'Service Unavailable (Offline)',
+            headers: { 'Content-Type': 'text/plain; charset=utf-8' },
           });
         }
         if (url.pathname.endsWith('.css') || url.pathname.includes('.css?')) {

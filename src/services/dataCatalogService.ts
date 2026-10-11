@@ -341,10 +341,11 @@ export function registerDataCatalogRoutes(app: express.Express, requireAdmin: ex
     {
       id: 'diseases', label: 'Hastalıklar', group: 'Kaynaklar', source: 'src/data/diseases.json',
       editable: [],
-      facets: [{ key: 'category', label: 'Kategori' }],
+      facets: [{ key: 'category', label: 'Kategori' }, { key: 'kind', label: 'Tür' }],
       load: () => readJson(path.join(SRC, 'diseases.json'), []),
       key: (x) => String(x.id), title: (x) => x.name, subtitle: (x) => [x.latinName, x.icd_code].filter(Boolean).join(' · '),
-      facet: (x, k) => (x[k] == null ? undefined : String(x[k])), text: (x) => `${x.name} ${x.latinName || ''} ${x.icd_code || ''} ${x.etiology || ''}`,
+      facet: (x, k) => (x[k] == null ? undefined : String(x[k])),
+      text: (x) => `${x.name} ${x.latinName || ''} ${x.icd_code || ''} ${(x.altNames || []).join(' ')} ${(x.hallmarks || []).map((h: Any) => h?.text || '').join(' ')}`,
       relations: (x) => {
         const ids = termDecks().get(fold(x.name)) || new Set<string>();
         return Array.from(ids).map((id) => deckRef(id, 'Hastalık bu destede terim olarak geçiyor')).filter(Boolean) as RelationRef[];

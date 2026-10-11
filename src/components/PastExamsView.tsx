@@ -1,4 +1,5 @@
 import React, { useCallback, useState, useMemo, useEffect, useDeferredValue, useRef } from 'react';
+import { useAnswerDoubtfulQuery, useAiReviewQueueQuery } from '../hooks/useMedicalQueries';
 import { CikmisCard } from '../screens/cikmis/CikmisCard';
 import { logActivity } from '../services/activityLog';
 import { FilterGroup } from './ui/FilterGroup';
@@ -128,6 +129,10 @@ interface Prep {
   disc: string;
   topic: string;
   year: string;
+  yearNum: number;
+  qualityScore: number;
+  popularityScore: number;
+  updatedTimestamp: number;
   comms: string[];
   isNew: boolean;
   isManual: boolean;
@@ -310,23 +315,34 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
     }
   }, [sharedId]);
 
-  // Cevabı belirsiz sorular sunucudan güncel alınır (cihaz önbelleği eski kalsa bile anket açılır)
-  const [doubtInfo, setDoubtInfo] = useState<{ ids: Set<string>; options: Record<string, Record<string, string>>; resolved: Record<string, { answer: string; by: string }> } | null>(null);
-  useEffect(() => {
-    let alive = true;
-    const load = () => ApiService.getAnswerDoubtful().then((d) => alive && d && setDoubtInfo({ ids: new Set(d.ids), options: d.options, resolved: d.resolved })).catch(() => {});
-    load();
-    const t = window.setInterval(() => !document.hidden && load(), 60000);
-    return () => { alive = false; window.clearInterval(t); };
-  }, []);
-  // Yapay zekâ inceleme kuyruğu (Faz 14 · ücretsiz): sıradaki sorular kartta "Sırada" olarak görünür
-  const [aiQueue, setAiQueue] = useState<Record<string, { status: string; position?: number; requests: number }>>({});
-  const loadAiQueue = useCallback(() => ApiService.getAiReviewQueue().then((d) => d && setAiQueue(d.items)).catch(() => {}), []);
-  useEffect(() => {
-    loadAiQueue();
-    const t = window.setInterval(() => !document.hidden && loadAiQueue(), 90000);
-    return () => window.clearInterval(t);
-  }, [loadAiQueue]);
+  // Cevabı belirsiz sorular TanStack Query ile önbelleklenir ve arka planda güncellenir
+  const { data: rawDoubtData } = useAnswerDoubtfulQuery();
+  const [doubtOverrides, setDoubtOverrides] = useState<{
+    ids: Set<string>;
+    options: Record<string, Record<string, string>>;
+    resolved: Record<string, { answer: string; by: string }>;
+  } | null>(null);
+
+  const doubtInfo = useMemo(() => {
+    if (!rawDoubtData && !doubtOverrides) return null;
+    const baseIds = rawDoubtData?.ids ? new Set(rawDoubtData.ids) : new Set<string>();
+    const baseOptions = { ...(rawDoubtData?.options || {}) };
+    const baseResolved = { ...(rawDoubtData?.resolved || {}) };
+
+    if (doubtOverrides) {
+      doubtOverrides.ids.forEach((id) => baseIds.add(id));
+      Object.assign(baseOptions, doubtOverrides.options);
+      Object.assign(baseResolved, doubtOverrides.resolved);
+    }
+
+    return { ids: baseIds, options: baseOptions, resolved: baseResolved };
+  }, [rawDoubtData, doubtOverrides]);
+
+  // Yapay zekâ inceleme kuyruğu (TanStack Query ile önbellekli)
+  const { data: aiQueueData, refetch: refetchAiQueue } = useAiReviewQueueQuery();
+  const aiQueue = useMemo(() => aiQueueData?.items || {}, [aiQueueData]);
+  const loadAiQueue = useCallback(() => { refetchAiQueue(); }, [refetchAiQueue]);
+
   const [aiReviewQ, setAiReviewQ] = useState<QuestionItem | null>(null);
   const [aiReviewMsg, setAiReviewMsg] = useState('');
   const [aiReviewBusy, setAiReviewBusy] = useState(false);
@@ -358,8 +374,8 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
     }
     try {
       const { answer } = await ApiService.openAnswerPoll(String(q.id), uid);
-      setDoubtInfo((prev) => ({
-        ids: prev?.ids || new Set(),
+      setDoubtOverrides((prev) => ({
+        ids: prev?.ids ? new Set([...prev.ids, String(q.id)]) : new Set([String(q.id)]),
         options: prev?.options || {},
         resolved: { ...(prev?.resolved || {}), [String(q.id)]: { answer: answer || String(q.correctAnswer || ''), by: 'kullanici' } },
       }));
@@ -937,11 +953,19 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
       const disc = normalizeDonem3Discipline(q.discipline) || q.discipline || '';
       const content = anyQ.contentCommitteeId as string | undefined;
       const uncertain = Boolean(anyQ.committeeUncertain);
+      const yearVal = parseInt((q.examYear || '').match(/\d{4}/)?.[0] || '0', 10);
+      const qScore = getQualityScore(q);
+      const popScore = (q.upvotes || 0) - (q.downvotes || 0) + (q.comments?.length || 0);
+      const updTime = Date.parse(String(anyQ.updatedAt || q.createdAt || 0)) || 0;
       return {
         q,
         disc,
         topic: String(q.topic || ''),
         year: yearKey(q.examYear),
+        yearNum: yearVal,
+        qualityScore: qScore,
+        popularityScore: popScore,
+        updatedTimestamp: updTime,
         comms: uncertain ? (content ? [content] : []) : Array.from(new Set([q.committeeId, content].filter(Boolean) as string[])),
         isNew: isNewQ(q),
         isManual: Boolean(q.is_manual_entry || (q as any).manuel_ekleme || (Array.isArray(q.tags) && q.tags.includes('manuel_ekleme'))),
@@ -952,13 +976,18 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
         isQuarantined: Boolean(anyQ.isQuarantined || (Array.isArray(q.tags) && q.tags.includes('karantina'))),
         isInaccessible: Boolean(anyQ.isInaccessible),
         isDonem3: Boolean(anyQ.isDonem3 !== false),
-        fields: [
-          { text: foldText(stem), weight: 3 },
-          { text: foldText(opts), weight: 2 },
-          { text: foldText(`${q.topic || ''} \n ${disc}`), weight: 2 },
-          { text: foldText(expl), weight: 0.8 },
-          { text: foldText(`${q.id} ${q.examYear || ''} ${q.sourceFile || ''} ${(q.fragments || []).map((f) => f.text).join(' ')}`), weight: 0.6 },
-        ],
+        get fields() {
+          if (anyQ._cachedFields) return anyQ._cachedFields;
+          const f: SearchField[] = [
+            { text: foldText(stem), weight: 3 },
+            { text: foldText(opts), weight: 2 },
+            { text: foldText(`${q.topic || ''} \n ${disc}`), weight: 2 },
+            { text: foldText(expl), weight: 0.8 },
+            { text: foldText(`${q.id} ${q.examYear || ''} ${q.sourceFile || ''} ${(q.fragments || []).map((f: any) => f.text).join(' ')}`), weight: 0.6 },
+          ];
+          anyQ._cachedFields = f;
+          return f;
+        },
       };
     });
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -1080,17 +1109,16 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
         for (const k of keys) bump(k, p);
       }
     }
-    let list = hits.map((p) => p.q);
-    const yearOf = (q: QuestionItem) => parseInt((q.examYear || '').match(/\d{4}/)?.[0] || '0', 10);
-    if (sortOrder === 'default' && searchScores) list.sort((a, b) => (searchScores.get(b.id) || 0) - (searchScores.get(a.id) || 0));
-    if (sortOrder === 'newest') list.sort((a, b) => yearOf(b) - yearOf(a));
-    if (sortOrder === 'oldest') list.sort((a, b) => (yearOf(a) || 9999) - (yearOf(b) || 9999));
-    if (sortOrder === 'number') list.sort((a, b) => (a.questionNumber || 9999) - (b.questionNumber || 9999));
-    if (sortOrder === 'quality_desc') list.sort((a, b) => getQualityScore(b) - getQualityScore(a));
-    if (sortOrder === 'quality_asc') list.sort((a, b) => getQualityScore(a) - getQualityScore(b));
-    if (sortOrder === 'popular') list.sort((a, b) => ((b.upvotes || 0) - (b.downvotes || 0) + (b.comments?.length || 0)) - ((a.upvotes || 0) - (a.downvotes || 0) + (a.comments?.length || 0)));
-    if (sortOrder === 'discipline') list.sort((a, b) => String(a.discipline || '').localeCompare(String(b.discipline || ''), 'tr') || (a.questionNumber || 0) - (b.questionNumber || 0));
-    if (sortOrder === 'updated') list.sort((a, b) => Date.parse(String((b as any).updatedAt || b.createdAt || 0)) - Date.parse(String((a as any).updatedAt || a.createdAt || 0)));
+    if (sortOrder === 'default' && searchScores) hits.sort((a, b) => (searchScores.get(b.q.id) || 0) - (searchScores.get(a.q.id) || 0));
+    else if (sortOrder === 'newest') hits.sort((a, b) => b.yearNum - a.yearNum);
+    else if (sortOrder === 'oldest') hits.sort((a, b) => (a.yearNum || 9999) - (b.yearNum || 9999));
+    else if (sortOrder === 'number') hits.sort((a, b) => (a.q.questionNumber || 9999) - (b.q.questionNumber || 9999));
+    else if (sortOrder === 'quality_desc') hits.sort((a, b) => b.qualityScore - a.qualityScore);
+    else if (sortOrder === 'quality_asc') hits.sort((a, b) => a.qualityScore - b.qualityScore);
+    else if (sortOrder === 'popular') hits.sort((a, b) => b.popularityScore - a.popularityScore);
+    else if (sortOrder === 'discipline') hits.sort((a, b) => a.disc.localeCompare(b.disc, 'tr') || (a.q.questionNumber || 0) - (b.q.questionNumber || 0));
+    else if (sortOrder === 'updated') hits.sort((a, b) => b.updatedTimestamp - a.updatedTimestamp);
+    const list = hits.map((p) => p.q);
     return { filteredQuestions: list, facetCounts: counts };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [prepared, searchScores, ambiguityTab, selectedCommittee, selectedYear, selectedDiscipline, selectedTopic, answerFilter, explanationFilter, sourceFilter, phase14Filter, denetleyiciFilter, newnessFilter, manualFilter, repeatedFilter, quarantineFilter, sortOrder]);

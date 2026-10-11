@@ -103,8 +103,7 @@ $C up -d --build meds-server && sleep 25 && curl -s http://127.0.0.1:3000/api/he
 - `deploy/oracle/sync-data.sh` (cihazdan):
   - `./sync-data.sh --to-oracle` → cihaz Oracle'a yazar + Oracle sunucuyu restart eder.
   - `./sync-data.sh --from-oracle` → Oracle cihazı yazar.
-  - Her çalışta `~/meds-data-backup/<tarih>/` altına yedek alır.
-- Hariçler: `local_rag_chunks.json` (78MB, Oracle'da yeniden üretilir), `*.legacy_backup.json`, loglar.
+- Hariçler: `*.legacy_backup.json`, loglar (`local_rag_chunks.json` RAG BM25 motoru için Oracle'a eşitlenir).
 - Büyük klasörler (`meds_database*`, `meds_downloads`, `meds_temp` — ~2.8GB) ilk kurulumda
   tek seferlik rsync ile gönderildi; sonrası değişince aynı komut tekrarlanır.
 - Kural: iki tarafta aynı anda yazma — önce çek, sonra yaz. Supabase tabloları bu işin dışındadır.

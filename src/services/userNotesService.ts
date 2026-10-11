@@ -40,7 +40,11 @@ export function mergeNotes(a: Store, incoming: { notes?: unknown; deleted?: unkn
   return { notes, deleted, updatedAt: new Date().toISOString() };
 }
 
-export function registerUserNotesRoutes(app: express.Express, dataDir: string) {
+export function registerUserNotesRoutes(
+  app: express.Express,
+  dataDir: string,
+  onNotesUpdated?: (codeHash: string, store: Store) => void
+) {
   const dir = path.join(dataDir, 'user_notes');
   const fileFor = (code: string) => path.join(dir, crypto.createHash('sha256').update(code).digest('hex').slice(0, 40) + '.json');
   const codeOf = (req: express.Request) => {
@@ -54,7 +58,37 @@ export function registerUserNotesRoutes(app: express.Express, dataDir: string) {
   app.get('/api/notes', (req, res) => {
     const code = codeOf(req);
     if (!code) return res.status(400).json({ error: 'Eşitleme kodu (x-user-id) gerekli' });
-    res.json(read(fileFor(code)));
+    const store = read(fileFor(code));
+    const since = typeof req.query.since === 'string' ? req.query.since.trim() : '';
+
+    // Incremental Delta Sync (1. Madde: Değişiklik Senkronizasyonu)
+    if (since) {
+      if (store.updatedAt && since >= store.updatedAt) {
+        return res.json({
+          upToDate: true,
+          count: store.notes.length,
+          updatedAt: store.updatedAt,
+          notes: [],
+          deleted: {}
+        });
+      }
+
+      const deltaNotes = store.notes.filter((n) => n.updatedAt && n.updatedAt > since);
+      const deltaDeleted: Record<string, string> = {};
+      for (const [id, at] of Object.entries(store.deleted || {})) {
+        if (at > since) deltaDeleted[id] = at;
+      }
+
+      return res.json({
+        upToDate: deltaNotes.length === 0 && Object.keys(deltaDeleted).length === 0,
+        count: store.notes.length,
+        updatedAt: store.updatedAt,
+        notes: deltaNotes,
+        deleted: deltaDeleted
+      });
+    }
+
+    res.json(store);
   });
 
   app.put('/api/notes', (req, res) => {
@@ -67,6 +101,14 @@ export function registerUserNotesRoutes(app: express.Express, dataDir: string) {
       const tmp = `${f}.${process.pid}.tmp`;
       fs.writeFileSync(tmp, JSON.stringify(merged), 'utf8');
       fs.renameSync(tmp, f);
+
+      if (onNotesUpdated) {
+        try {
+          const hash = crypto.createHash('sha256').update(code).digest('hex').slice(0, 16);
+          onNotesUpdated(hash, merged);
+        } catch (_) {}
+      }
+
       res.json(merged);
     } catch (err: any) {
       res.status(500).json({ error: 'Notlar kaydedilemedi: ' + err.message });

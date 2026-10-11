@@ -535,8 +535,13 @@ export async function searchEverything(
 
   // AI üretimi kayıtlar kaynak değildir (bkz. GROUNDING_DOC_TYPES): aramada gösterilmez
   const byId = new Map<string, Awaited<ReturnType<typeof searchLocalRag>>[number]>();
-  for (let vi = 0; vi < variants.length; vi++) {
-    const part = await searchLocalRag(variants[vi], { committeeId: options.committeeId, limit: vi === 0 ? SEARCH_POOL : 150 });
+  const parts = await Promise.all(
+    variants.map((v, vi) =>
+      searchLocalRag(v, { committeeId: options.committeeId, limit: vi === 0 ? SEARCH_POOL : 150 })
+    )
+  );
+  for (let vi = 0; vi < parts.length; vi++) {
+    const part = parts[vi];
     for (const r of part) {
       if (r.documentType === 'ai_qa' || r.documentType === 'ai_refinement') continue;
       const prev = byId.get(r.id);

@@ -24,9 +24,22 @@ export interface QuestionClusterItem {
   sourceQuestionIds: string[];
   mergedQuestionCount: number;
   mergedStem: string;
-  mergedOptions: Array<{ key: string; text: string }>;
+  mergedOptions: Array<{ key: string; text: string; votes?: number; conflict?: string[]; source?: 'ogrenci' | 'ders_notu' | 'eksik'; isAiFilled?: boolean }>;
   claimedAnswer: string;
   explanation: string;
+  // kume-v2 alanları (src/services/poolClusterService.ts); eski kayıtlarda yok
+  questionNumber?: number | null;
+  anchorQuestionId?: string | null;
+  sourceIntakeUnits?: string[];
+  stemFragments?: { key: string; text: string }[];
+  unplacedOptions?: { text: string; votes: number }[];
+  answerVotes?: Record<string, number>;
+  negativeStemLikely?: boolean;
+  sharedTerms?: string[];
+  cohesion?: number;
+  aiMerged?: boolean;
+  aiAnswerSuggestion?: string;
+  sources?: { title?: string; documentTitle?: string; source?: string }[];
   status: 'proposal';
   isLockedForDeletion: boolean;
   studentContributions: Array<{
@@ -146,8 +159,9 @@ export const QuestionClusterAutomationModal: React.FC<QuestionClusterAutomationM
               Birleştirilmiş Soru Taslakları & Kolektif Öneri Havuzu
             </h2>
             <p className="text-xs sm:text-sm text-ink-3 mt-1 max-w-2xl leading-relaxed">
-              Soru havuzundaki benzer ve parçalı sorular ücretsiz yapay zeka ajanları tarafından analiz edilip
-              10'arlı gruplar halinde ideal soru kökü ve şıklarıyla birleştirilmiştir.
+              Aynı soruyu hatırlayan parçalar ders, konu, soru numarası ve tıbbi terimlere göre gruplanır. Şıklar
+              öğrencilerin oylarıyla kurulur; hatırlanmayan şık <b>[EKSİK ŞIK]</b> kalır. Yapay zekâ kökü ders notu
+              kaynaklarıyla birleştirir, cevabı kendisi belirlemez.
             </p>
           </div>
           <button
@@ -160,7 +174,7 @@ export const QuestionClusterAutomationModal: React.FC<QuestionClusterAutomationM
         </div>
 
         {/* Kural Uyarı Kutusu */}
-        <div className="mt-4 p-3.5 rounded-2xl bg-warn/10 border border-warn/20 flex items-start gap-3 text-xs text-warn-soft/90 leading-relaxed">
+        <div className="mt-4 p-3.5 rounded-2xl bg-warn/10 border border-warn/20 flex items-start gap-3 text-xs text-ink-2 leading-relaxed">
           <ShieldAlert className="w-5 h-5 text-warn shrink-0 mt-0.5" />
           <div>
             <span className="font-bold text-warn">Öğrenci Kuralı & Kısıtlama: </span>
@@ -172,7 +186,7 @@ export const QuestionClusterAutomationModal: React.FC<QuestionClusterAutomationM
         {/* Kontrol Çubuğu */}
         <div className="mt-4 flex items-center justify-between gap-3">
           <div className="text-xs text-ink-3">
-            Toplam <span className="font-bold text-ok">{clusters.length}</span> birleştirilmiş öneri kümesi
+            Toplam <span className="font-bold text-ok">{clusters.length}</span> öneri kümesi
           </div>
           <div className="flex items-center gap-2">
             <button
@@ -220,7 +234,7 @@ export const QuestionClusterAutomationModal: React.FC<QuestionClusterAutomationM
               return (
                 <div
                   key={cluster.id}
-                  className="rounded-2xl border border-line bg-slate-850 overflow-hidden transition-all shadow-md"
+                  className="rounded-2xl border border-line bg-canvas overflow-hidden transition-all shadow-md"
                 >
                   {/* Başlık Satırı */}
                   <div
@@ -232,15 +246,21 @@ export const QuestionClusterAutomationModal: React.FC<QuestionClusterAutomationM
                         {cluster.mergedQuestionCount}
                       </div>
                       <div className="min-w-0">
-                        <div className="flex items-center gap-2 mb-0.5">
+                        <div className="flex flex-wrap items-center gap-2 mb-0.5">
                           <span className="px-2 py-0.5 rounded bg-ok/20 text-ok text-2xs font-semibold uppercase">
                             {cluster.committeeId}
                           </span>
-                          <span className="px-2 py-0.5 rounded bg-ink-2 text-ink-3 text-2xs font-medium">
+                          <span className="px-2 py-0.5 rounded bg-line-soft text-ink-2 text-2xs font-medium">
                             {cluster.discipline}
                           </span>
-                          <span className="px-2 py-0.5 rounded bg-warn/20 text-warn text-2xs font-semibold flex items-center gap-1">
-                            <Lock className="w-2.5 h-2.5" /> Kalıcı Öneri Taslağı
+                          {cluster.questionNumber ? (
+                            <span className="px-2 py-0.5 rounded bg-accent-soft text-accent text-2xs font-semibold">Soru {cluster.questionNumber}</span>
+                          ) : null}
+                          {typeof cluster.cohesion === 'number' && (
+                            <span className="px-2 py-0.5 rounded bg-line-soft text-ink-3 text-2xs font-medium tabular-nums" title="Üyelerin ortalama benzerliği">uyum %{Math.round(cluster.cohesion * 100)}</span>
+                          )}
+                          <span className={`px-2 py-0.5 rounded text-2xs font-semibold flex items-center gap-1 ${cluster.aiMerged ? 'bg-ok/15 text-ok' : 'bg-warn/20 text-warn'}`}>
+                            <Lock className="w-2.5 h-2.5" /> {cluster.aiMerged ? 'Öneri taslağı' : 'Birleştirme bekliyor'}
                           </span>
                         </div>
                         <h4 className="text-sm font-bold text-ink truncate">
@@ -264,7 +284,7 @@ export const QuestionClusterAutomationModal: React.FC<QuestionClusterAutomationM
                       <div className="space-y-1.5">
                         <div className="font-bold text-ink-3 uppercase tracking-wider text-2xs flex items-center gap-1.5">
                           <Sparkles className="w-3.5 h-3.5 text-ok" />
-                          <span>Yapay Zeka Tarafından Birleştirilen Öneri Soru Kökü:</span>
+                          <span>{cluster.aiMerged ? 'Ders notu kaynaklarıyla birleştirilen öneri kök:' : 'Öneri kök (yapay zekâ birleştirmesi bekliyor):'}</span>
                         </div>
                         <div className="p-3.5 rounded-xl bg-field border border-line text-ink-3 leading-relaxed text-sm font-medium">
                           {cluster.mergedStem}
@@ -278,35 +298,50 @@ export const QuestionClusterAutomationModal: React.FC<QuestionClusterAutomationM
                         </div>
                         <div className="grid grid-cols-1 gap-2">
                           {cluster.mergedOptions.map(opt => {
-                            const isCorrect = opt.key.toUpperCase() === cluster.claimedAnswer.toUpperCase();
+                            const isCorrect = !!cluster.claimedAnswer && opt.key.toUpperCase() === cluster.claimedAnswer.toUpperCase();
+                            const missing = opt.source === 'eksik' || opt.text === '[EKSİK ŞIK]';
                             return (
                               <div
                                 key={opt.key}
                                 className={`p-2.5 rounded-xl border flex items-start gap-3 transition-colors ${
-                                  isCorrect
-                                    ? 'bg-ok/20 border-ok/40 text-ok-soft'
-                                    : 'bg-field border-line text-ink-3'
+                                  isCorrect ? 'bg-ok/20 border-ok/40 text-ink' : missing ? 'border-dashed border-line text-ink-3' : 'bg-field border-line text-ink-3'
                                 }`}
                               >
-                                <span
-                                  className={`w-6 h-6 rounded-lg flex items-center justify-center font-bold text-xs shrink-0 ${
-                                    isCorrect ? 'bg-ok text-ink' : 'bg-ink-2 text-ink'
-                                  }`}
-                                >
+                                <span className={`w-6 h-6 rounded-lg flex items-center justify-center font-bold text-xs shrink-0 ${isCorrect ? 'bg-ok text-ink' : 'bg-ink-2 text-ink'}`}>
                                   {opt.key}
                                 </span>
-                                <span className="pt-0.5 leading-relaxed">{opt.text}</span>
+                                <span className="pt-0.5 leading-relaxed min-w-0 flex-1">
+                                  <span className={missing ? 'italic' : ''}>{opt.text}</span>
+                                  {opt.conflict && opt.conflict.length > 0 && (
+                                    <span className="block text-2xs text-warn mt-0.5">Çelişen hatıra: {opt.conflict.join(' · ')}</span>
+                                  )}
+                                </span>
+                                <span className="shrink-0 text-2xs text-ink-3 pt-1 text-right">
+                                  {opt.source === 'ogrenci' && !opt.isAiFilled && opt.votes ? `${opt.votes} öğrenci` : opt.source === 'ders_notu' ? 'ders notundan öneri' : opt.isAiFilled ? 'AI' : ''}
+                                </span>
                               </div>
                             );
                           })}
                         </div>
+                        {cluster.unplacedOptions && cluster.unplacedOptions.length > 0 && (
+                          <p className="text-2xs text-ink-3">Harfi hatırlanmayan şıklar: {cluster.unplacedOptions.map((o) => `${o.text} (${o.votes})`).join(' · ')}</p>
+                        )}
+                        <p className="text-2xs text-ink-3">
+                          {cluster.answerVotes && Object.keys(cluster.answerVotes).length
+                            ? <>İşaretlenen cevap oyları: {Object.entries(cluster.answerVotes).map(([k, v]) => `${k}: ${v}`).join(' · ')}{cluster.claimedAnswer ? ` → çoğunluk ${cluster.claimedAnswer}` : ' → çoğunluk yok'}</>
+                            : 'İşaretlenen cevap bildirilmedi.'}
+                          {cluster.aiAnswerSuggestion && <> · Ders notuna göre öneri: <b>{cluster.aiAnswerSuggestion}</b></>}
+                        </p>
+                        {cluster.negativeStemLikely && (
+                          <p className="text-2xs text-warn font-semibold">Kök büyük olasılıkla olumsuz ("hangisi yanlıştır / değildir"): oyları doğrudan cevap sayma.</p>
+                        )}
                       </div>
 
                       {/* Gerekçeli Açıklama */}
                       {cluster.explanation && (
                         <div className="space-y-1.5">
                           <div className="font-bold text-ink-3 uppercase tracking-wider text-2xs">
-                            Fizyopatolojik Gerekçe & Çözüm:
+                            Birleştirme notu (hangi parça neyi destekliyor):
                           </div>
                           <div className="p-3 rounded-xl bg-field border border-line text-ink-3 leading-relaxed">
                             {cluster.explanation}
@@ -314,10 +349,26 @@ export const QuestionClusterAutomationModal: React.FC<QuestionClusterAutomationM
                         </div>
                       )}
 
-                      {/* Birleştirilen Kaynak Soru Kimlikleri */}
-                      <div className="pt-2 border-t border-line text-2xs text-ink-3">
-                        <span className="font-semibold text-ink-3">Birleştirilen Soru Parçaları ({cluster.sourceQuestionIds.length}): </span>
-                        {cluster.sourceQuestionIds.join(', ')}
+                      {/* Neden birleşti: ortak terimler ve öğrenci parçaları */}
+                      <div className="pt-2 border-t border-line text-2xs text-ink-3 space-y-1.5">
+                        {cluster.sharedTerms && cluster.sharedTerms.length > 0 && (
+                          <p><span className="font-semibold">Ortak terimler:</span> {cluster.sharedTerms.join(' · ')}</p>
+                        )}
+                        {cluster.stemFragments && cluster.stemFragments.length > 0 ? (
+                          <div>
+                            <span className="font-semibold">Birleştirilen öğrenci parçaları ({cluster.stemFragments.length}):</span>
+                            <ul className="mt-1 space-y-1 list-disc pl-4">
+                              {cluster.stemFragments.map((f) => (
+                                <li key={f.key} className="break-words"><span className="text-ink-2">{f.text}</span>{f.key.startsWith('u:') ? ' (serbest girdi)' : ''}</li>
+                              ))}
+                            </ul>
+                          </div>
+                        ) : (
+                          <p><span className="font-semibold">Birleştirilen soru kayıtları ({cluster.sourceQuestionIds.length}):</span> {cluster.sourceQuestionIds.join(', ')}</p>
+                        )}
+                        {cluster.sources && cluster.sources.length > 0 && (
+                          <p><span className="font-semibold">Ders notu kaynakları:</span> {cluster.sources.map((x) => x.documentTitle || x.title || x.source).filter(Boolean).join(' · ')}</p>
+                        )}
                       </div>
 
                       {/* Öğrenci Katkıları & Eklemeler */}

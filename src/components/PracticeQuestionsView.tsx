@@ -408,12 +408,31 @@ const TumHavuzUretim: React.FC<{ focusId?: string | null }> = ({ focusId }) => {
     if (version) url += `&version=${encodeURIComponent(version)}`;
     if (zorluk) url += `&zorluk=${encodeURIComponent(zorluk)}`;
 
+    const cacheKey = `medsoru_practice_pool_cache_${kurul}_${version}_${zorluk}`;
+
     safeJsonFetch<{ sorular: PQ[]; toplam: number }>(url).then((r) => {
       if (r.ok && r.data) {
         setAll(r.data.sorular || []);
         setTotalCount(r.data.toplam || (r.data.sorular || []).length);
+        setError(null);
+        try {
+          sessionStorage.setItem(cacheKey, JSON.stringify(r.data));
+        } catch (_) {}
       } else {
-        setError('Örnek sorular alınamadı. Bağlantınızı kontrol edip sayfayı yenileyin.');
+        // Çevrimdışıyken veya hata anında yerel oturum önbelleğine bak
+        try {
+          const cached = sessionStorage.getItem(cacheKey);
+          if (cached) {
+            const data = JSON.parse(cached);
+            if (data.sorular && data.sorular.length > 0) {
+              setAll(data.sorular);
+              setTotalCount(data.toplam || data.sorular.length);
+              setError(null);
+              return;
+            }
+          }
+        } catch (_) {}
+        setError('Örnek sorular alınamadı. İnternet bağlantınızı kontrol edip tekrar deneyin.');
       }
     });
   }, [kurul, version, zorluk]);

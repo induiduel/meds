@@ -31,16 +31,37 @@ export function prefetchRoute(r: AppRoute) {
   l().catch(() => done.delete(r));
 }
 
-/** Açılıştan sonra boşta: alt gezinmedeki sayfalar, ardından sık kullanılanlar (kısıtlı veri modunda yapılmaz). */
+/** Açılıştan sonra boşta: kullanıcı etkileşimini boğmadan, uzun aralıklarla ve tarayıcı boştayken önden yükler. */
 export function prefetchIdle() {
+  if (typeof window === 'undefined') return;
   const conn = (navigator as any).connection;
   if (conn?.saveData || /2g/.test(conn?.effectiveType || '') || getNetState() !== 'online') return;
-  const order: AppRoute[] = ['learn', 'flashcards', 'past_exams', 'study', 'glossary', 'ornek_sorular', 'summaries'];
+  const order: AppRoute[] = [
+    'past_exams',
+    'learn',
+    'flashcards',
+    'diseases',
+    'glossary',
+    'study',
+    'summaries',
+    'kazanimlar',
+    'practice',
+    'stats',
+    'settings',
+  ];
   let i = 0;
   const step = () => {
     if (i >= order.length || getNetState() !== 'online') return;
-    prefetchRoute(order[i++]);
-    window.setTimeout(step, 3000);
+    const nextRoute = order[i++];
+    const runner = () => {
+      prefetchRoute(nextRoute);
+      window.setTimeout(step, 4500);
+    };
+    if ('requestIdleCallback' in window) {
+      (window as any).requestIdleCallback(runner, { timeout: 4000 });
+    } else {
+      runner();
+    }
   };
-  window.setTimeout(step, 5000);
+  window.setTimeout(step, 8000);
 }

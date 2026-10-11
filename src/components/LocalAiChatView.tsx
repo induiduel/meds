@@ -20,6 +20,7 @@ import {
 import { ApiService } from '../services/api';
 import { PageHeader } from './ui/PageHeader';
 import { AppUser } from '../services/auth';
+import { useQualityAuditStatusQuery, useAiErrorLogsQuery } from '../hooks/useMedicalQueries';
 
 interface ChatMessage {
   id: string;
@@ -117,7 +118,9 @@ export const LocalAiChatView: React.FC<LocalAiChatViewProps> = ({
   const [providerMode, setProviderMode] = useState<'ollama' | 'auto' | 'groq' | 'muse-spark'>('ollama');
   const [selectedModel, setSelectedModel] = useState<string>('gemma3:4b');
   const [interactionMode, setInteractionMode] = useState<'general' | 'find_question' | 'generate_from_keywords' | 'explain'>('general');
-  const [auditSummary, setAuditSummary] = useState<any>(null);
+  // TanStack Query ile önbellekli Kalite Denetim Durumu (3 dk staleTime)
+  const { data: auditData } = useQualityAuditStatusQuery();
+  const auditSummary = auditData?.hasAudit ? auditData : null;
 
   // Model-spesifik zaman aşımları ve kullanıcı onaylı bulut fallback state'i
   const [fallbackPromptDialog, setFallbackPromptDialog] = useState<{
@@ -126,10 +129,11 @@ export const LocalAiChatView: React.FC<LocalAiChatViewProps> = ({
     errorMsg: string;
   } | null>(null);
 
-  // AI Hata Kayıtları (Error Logs) Denetim Modalı
+  // AI Hata Kayıtları (Error Logs) Denetim Modalı (TanStack Query ile önbellekli)
   const [showErrorLogsModal, setShowErrorLogsModal] = useState(false);
-  const [errorLogs, setErrorLogs] = useState<any[]>([]);
-  const [unresolvedLogCount, setUnresolvedLogCount] = useState(0);
+  const { data: errorLogsData, refetch: refetchErrorLogs } = useAiErrorLogsQuery();
+  const errorLogs = errorLogsData?.logs || [];
+  const unresolvedLogCount = errorLogsData?.unresolvedCount || 0;
 
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
@@ -144,26 +148,12 @@ export const LocalAiChatView: React.FC<LocalAiChatViewProps> = ({
   };
 
   const loadErrorLogs = async () => {
-    const res = await ApiService.getAiErrorLogs();
-    if (res.success) {
-      setErrorLogs(res.logs || []);
-      setUnresolvedLogCount(res.unresolvedCount || 0);
-    }
+    await refetchErrorLogs();
   };
 
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [messages, isLoading]);
-
-  useEffect(() => {
-    // Soru Denetim Durumunu Çek
-    ApiService.getQualityAuditStatus().then(res => {
-      if (res && res.hasAudit) {
-        setAuditSummary(res);
-      }
-    });
-    loadErrorLogs();
-  }, []);
 
   const handleSendMessage = async (textToSend?: string, forceCloudFallback: boolean = false) => {
     const query = (textToSend || inputText).trim();

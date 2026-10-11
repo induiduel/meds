@@ -9,15 +9,13 @@ const FOLD: Record<string, string> = {
   â: 'a', Â: 'a', î: 'i', Î: 'i', û: 'u', Û: 'u', é: 'e', É: 'e', ä: 'a', ë: 'e',
 };
 
+const FOLD_RE = /[çÇğĞıIİöÖşŞüÜâÂîÎûÛéÉäë]/g;
+
 export function foldText(s: string): string {
-  let out = '';
-  for (const ch of s) {
-    const f = FOLD[ch];
-    if (f) { out += f; continue; }
-    const lower = ch.toLowerCase();
-    out += lower.length === ch.length ? lower : ch;
-  }
-  return out;
+  if (!s) return '';
+  return s
+    .replace(FOLD_RE, (ch) => FOLD[ch] || ch)
+    .toLowerCase();
 }
 
 export interface ParsedQuery {

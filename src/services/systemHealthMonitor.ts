@@ -215,11 +215,11 @@ class SystemHealthMonitor {
       console.log('%c🔍 [MedSoru Teşhis] Tam sistem sağlık kontrolü başlatılıyor...', 'color:#2563EB;font-weight:bold;font-size:14px;');
     }
 
-    // 1. Firebase Firestore Testi
-    await this.checkFirebase(logToConsole);
-
-    // 2. Supabase PostgreSQL Testi
-    await this.checkSupabase(logToConsole);
+    // 1 & 2. Firebase Firestore ve Supabase PostgreSQL Testlerini paralel yürüt
+    await Promise.all([
+      this.checkFirebase(logToConsole),
+      this.checkSupabase(logToConsole),
+    ]);
 
     // 3. Yapay Zeka (Gemini & Groq) Testi - Sadece manuel/detaylı teşhiste çalıştır, kota koruması
     if (checkAi) {
@@ -333,23 +333,26 @@ class SystemHealthMonitor {
     let hasTableError = false;
     let authError = false;
 
-    for (const t of ['committees', 'questions', 'past_questions', 'lecture_notes'] as const) {
-      try {
-        const { count, error } = await client.from(t).select('*', { count: 'exact', head: true });
-        if (error) {
-          if (/relation|does not exist/i.test(error.message)) {
-            hasTableError = true;
-          } else if (/JWT|unauthorized|API key/i.test(error.message)) {
-            authError = true;
+    const tableNames = ['committees', 'questions', 'past_questions', 'lecture_notes'] as const;
+    await Promise.all(
+      tableNames.map(async (t) => {
+        try {
+          const { count, error } = await client.from(t).select('*', { count: 'exact', head: true });
+          if (error) {
+            if (/relation|does not exist/i.test(error.message)) {
+              hasTableError = true;
+            } else if (/JWT|unauthorized|API key/i.test(error.message)) {
+              authError = true;
+            }
+          } else {
+            tables[t] = true;
+            rowCounts[t] = count ?? 0;
           }
-        } else {
-          tables[t] = true;
-          rowCounts[t] = count ?? 0;
+        } catch {
+          hasTableError = true;
         }
-      } catch {
-        hasTableError = true;
-      }
-    }
+      })
+    );
 
     const latencyMs = Date.now() - start;
 

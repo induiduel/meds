@@ -106,7 +106,7 @@ export const ManageModerationSection: React.FC<Props> = ({
       };
       if (isPast) {
         const updated: QuestionItem = { ...question, reconstruction, claimedAnswer: answer, status: 'completed', updatedAt: new Date().toISOString() };
-        await ApiService.saveApprovedPastQuestion(updated);
+        await ApiService.saveApprovedPastQuestion(updated, adminEmail);
         setPastQuestions((prev) => prev.map((q) => (q.id === updated.id ? updated : q)));
       } else {
         await ApiService.adminUpdateQuestion(adminEmail, question.id, { reconstruction, claimedAnswer: answer, status: 'completed' } as Partial<QuestionItem>);
@@ -345,11 +345,15 @@ export const ManageModerationSection: React.FC<Props> = ({
             question={question}
             isOpen
             onClose={() => setAiOpen(false)}
-            onSaved={(updated) => {
+            onSaved={async (updated) => {
               setAiOpen(false);
               setPastQuestions((prev) => prev.map((q) => (q.id === updated.id ? updated : q)));
-              if (report) void onResolve(report);
+              if (report) await onResolve(report);
               notify('AI düzeltmesi kaydedildi ve bildirim kapatıldı.');
+              try {
+                await onRefreshData();
+                await reloadInbox();
+              } catch (_) {}
             }}
           />
         </React.Suspense>

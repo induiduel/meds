@@ -267,8 +267,10 @@ export function findBestMatchingLectureSlides(
   return results.slice(0, limit);
 }
 
+let cachedLectureNotes: { mtime: number; data: LectureNoteRecord[] } | null = null;
+
 /**
- * Load all lecture notes from data/lecture_notes.json
+ * Load all lecture notes from data/lecture_notes.json (with mtime in-memory caching)
  */
 export function getAllLectureNotes(): LectureNoteRecord[] {
   try {
@@ -276,22 +278,34 @@ export function getAllLectureNotes(): LectureNoteRecord[] {
       fs.mkdirSync(DATA_DIR, { recursive: true });
     }
     if (fs.existsSync(LECTURE_NOTES_FILE)) {
+      const mtime = fs.statSync(LECTURE_NOTES_FILE).mtimeMs;
+      if (cachedLectureNotes && cachedLectureNotes.mtime === mtime) {
+        return cachedLectureNotes.data;
+      }
       const raw = fs.readFileSync(LECTURE_NOTES_FILE, 'utf-8');
       const parsed = JSON.parse(raw);
       if (Array.isArray(parsed)) {
+        cachedLectureNotes = { mtime, data: parsed };
         return parsed;
       }
     }
     const srcPath = path.resolve(PROJECT_ROOT, 'src', 'data', 'lecture_notes.json');
     if (fs.existsSync(srcPath)) {
+      const mtime = fs.statSync(srcPath).mtimeMs;
+      if (cachedLectureNotes && cachedLectureNotes.mtime === mtime) {
+        return cachedLectureNotes.data;
+      }
       const raw = fs.readFileSync(srcPath, 'utf-8');
       const parsed = JSON.parse(raw);
-      if (Array.isArray(parsed)) return parsed;
+      if (Array.isArray(parsed)) {
+        cachedLectureNotes = { mtime, data: parsed };
+        return parsed;
+      }
     }
   } catch (err) {
     console.error('[LectureNotesManager] Error reading lecture_notes.json:', err);
   }
-  return [];
+  return cachedLectureNotes?.data || [];
 }
 export async function extractVerbatimPdfPages(
   buffer: Buffer,
@@ -439,6 +453,7 @@ export function saveLectureNote(note: Partial<LectureNoteRecord> & { title: stri
   }
 
   fs.writeFileSync(LECTURE_NOTES_FILE, JSON.stringify(notes, null, 2), 'utf-8');
+  cachedLectureNotes = null;
   console.log(`[LectureNotesManager] Saved "${record.title}" (${record.totalSlides} pages) to database.`);
   return record;
 }
@@ -452,6 +467,7 @@ export function deleteLectureNote(id: string): boolean {
     const filtered = notes.filter(n => n.id !== id);
     if (filtered.length !== notes.length) {
       fs.writeFileSync(LECTURE_NOTES_FILE, JSON.stringify(filtered, null, 2), 'utf-8');
+      cachedLectureNotes = null;
       return true;
     }
   } catch (err) {

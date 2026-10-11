@@ -841,7 +841,8 @@
       ],
       "isMerged": true,
       "placementNotes": "[03.10.2026]: 4 taslak ile iç içe geçirildi. [03.10.2026]: 5 taslak ile iç içe geçirildi.",
-      "claimedAnswer": "A"
+      "claimedAnswer": "A",
+      "likedBy": []
     },
     {
       "id": "q-donem3-kurul1-unassigned-1790967524679",
@@ -864,9 +865,10 @@
           "text": "down sendromu simian çizgisi endse saydamlığı",
           "type": "stem",
           "author": "Dr House",
-          "upvotes": 1,
+          "upvotes": 0,
           "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
-          "timestamp": "2026-10-04T19:24:46.565Z"
+          "timestamp": "2026-10-04T19:24:46.565Z",
+          "likedBy": []
         }
       ],
       "revisions": [
@@ -1509,7 +1511,8 @@
         "totalSlides": 0,
         "matchedSnippet": "[DERS ÖZETİ & SPOT BİLGİ] Ders / Branş: Tıbbi Genetik Konu / Başlık: Kromozomal Hastalıklar ve Genetik Danışma Kurul: donem3-kurul1 Bölüm: #6 Özet Metin: ## 5. Down Sendromu-fenoti̇p Yenidoğan Döneminde Hipotoni Karakte",
         "confidenceScore": 100
-      }
+      },
+      "likedBy": []
     },
     {
       "id": "q-donem3-kurul1-unassigned-1791090673803",
@@ -1525,54 +1528,60 @@
           "text": "Bir hastalık ismi verilmiş hangisi yanlıştır diye sorulmuş",
           "type": "stem",
           "author": "Dr House",
-          "upvotes": 1,
+          "upvotes": 0,
           "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
-          "timestamp": "2026-10-04T05:11:13.803Z"
+          "timestamp": "2026-10-04T05:11:13.803Z",
+          "likedBy": []
         },
         {
           "id": "f-opt-1791090673804-A",
           "text": "A) Erkek çocuklarda daha sık görülür",
           "type": "option",
           "author": "Dr House",
-          "upvotes": 1,
+          "upvotes": 0,
           "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
-          "timestamp": "2026-10-04T05:11:13.804Z"
+          "timestamp": "2026-10-04T05:11:13.804Z",
+          "likedBy": []
         },
         {
           "id": "f-1791090713693-39ii",
           "text": "Hirschsprung hastalığı ile ilgili hangisi yanlıştır?",
           "type": "stem",
           "author": "Dr House",
-          "upvotes": 1,
+          "upvotes": 0,
           "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
-          "timestamp": "2026-10-04T05:11:53.693Z"
+          "timestamp": "2026-10-04T05:11:53.693Z",
+          "likedBy": []
         },
         {
           "id": "f-opt-1791090713969-A",
           "text": "A) Kız çocuklarında daha ağır seyreder",
           "type": "option",
           "author": "Dr House",
-          "upvotes": 1,
+          "upvotes": 0,
           "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
-          "timestamp": "2026-10-04T05:11:53.969Z"
+          "timestamp": "2026-10-04T05:11:53.969Z",
+          "likedBy": []
         },
         {
           "id": "f-1791090736538-l3qe",
           "text": "Hirschsprung sorusu",
           "type": "stem",
           "author": "Dr House",
-          "upvotes": 1,
+          "upvotes": 0,
           "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
-          "timestamp": "2026-10-04T05:12:16.538Z"
+          "timestamp": "2026-10-04T05:12:16.538Z",
+          "likedBy": []
         },
         {
           "id": "f-opt-1791090736542-A",
           "text": "A) Rektum mutlaka etkilenir",
           "type": "option",
           "author": "Dr House",
-          "upvotes": 1,
+          "upvotes": 0,
           "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
-          "timestamp": "2026-10-04T05:12:16.542Z"
+          "timestamp": "2026-10-04T05:12:16.542Z",
+          "likedBy": []
         }
       ],
       "options": [
@@ -1580,31 +1589,36 @@
           "key": "A",
           "text": "Erkek çocuklarda daha sık görülür",
           "suggestedBy": "Yönetici",
-          "upvotes": 0
+          "upvotes": 0,
+          "likedBy": []
         },
         {
           "key": "B",
           "text": "Kız çocuklarında daha ağır seyreder",
           "suggestedBy": "Yönetici",
-          "upvotes": 0
+          "upvotes": 0,
+          "likedBy": []
         },
         {
           "key": "C",
           "text": "Nöral krest hücrelerinin çekumdan rektuma doğru ilerleyişindeki sorundan kaynaklanır",
           "suggestedBy": "Yönetici",
-          "upvotes": 0
+          "upvotes": 0,
+          "likedBy": []
         },
         {
           "key": "D",
           "text": "Rektum mutlaka etkilenir",
           "suggestedBy": "Yönetici",
-          "upvotes": 0
+          "upvotes": 0,
+          "likedBy": []
         },
         {
           "key": "E",
           "text": "Normal sinir uyarılarını alan proksimal kolon kontraktedir",
           "suggestedBy": "Yönetici",
-          "upvotes": 1
+          "upvotes": 0,
+          "likedBy": []
         }
       ],
       "tags": [
@@ -1678,7 +1692,8 @@
         "lastUpdated": "2026-10-04T15:03:14.900Z"
       },
       "rawStem": "Hirschsprung sorusu",
-      "claimedAnswer": "E"
+      "claimedAnswer": "E",
+      "likedBy": []
     },
     {
       "id": "q-donem3-kurul1-unassigned-1791222885038",
@@ -1694,64 +1709,72 @@
           "text": "Oligohidramniyosa bağlı mekanik bası sonucu fetüste gelişen yumru ayak (pes ekinovarus) hangi morfolojik defekttir?",
           "type": "stem",
           "author": "Tahir Kahrama",
-          "upvotes": 1,
-          "timestamp": "2026-10-05T17:54:45.024Z"
+          "upvotes": 0,
+          "timestamp": "2026-10-05T17:54:45.024Z",
+          "likedBy": []
         },
         {
           "id": "f-opt-1791222885038-A",
           "text": "A) Disrupsiyon",
           "type": "option",
           "author": "Tahir Kahrama",
-          "upvotes": 1,
-          "timestamp": "2026-10-05T17:54:45.038Z"
+          "upvotes": 0,
+          "timestamp": "2026-10-05T17:54:45.038Z",
+          "likedBy": []
         },
         {
           "id": "f-1791222946030-yhrj",
           "text": "Embriyonik yapısı baştan normal olan bir organda, mekanik bası etkisiyle oluşan şekil bozukluğu hangisidir?",
           "type": "stem",
           "author": "Tahir Kahrama",
-          "upvotes": 1,
-          "timestamp": "2026-10-05T17:55:46.030Z"
+          "upvotes": 0,
+          "timestamp": "2026-10-05T17:55:46.030Z",
+          "likedBy": []
         },
         {
           "id": "f-opt-1791222946045-A",
           "text": "A) Agenezi",
           "type": "option",
           "author": "Tahir Kahrama",
-          "upvotes": 1,
-          "timestamp": "2026-10-05T17:55:46.045Z"
+          "upvotes": 0,
+          "timestamp": "2026-10-05T17:55:46.045Z",
+          "likedBy": []
         },
         {
           "id": "f-opt-1791222946045-B",
           "text": "B) Deformasyon",
           "type": "option",
           "author": "Tahir Kahrama",
-          "upvotes": 1,
-          "timestamp": "2026-10-05T17:55:46.045Z"
+          "upvotes": 0,
+          "timestamp": "2026-10-05T17:55:46.045Z",
+          "likedBy": []
         },
         {
           "id": "f-merged-1791223176989-j9px",
           "text": "[Birleştirilen Taslak #Belirsiz]: Normal gelişen bir dokunun rahim içi mekanik baskıyla şekil değiştirmesine ne ad verilir?",
           "type": "stem",
           "author": "Tahir Kahrama",
-          "upvotes": 1,
-          "timestamp": "2026-10-05T17:59:36.989Z"
+          "upvotes": 0,
+          "timestamp": "2026-10-05T17:59:36.989Z",
+          "likedBy": []
         },
         {
           "id": "f-1791222829196-sbwv",
           "text": "Normal gelişen bir dokunun rahim içi mekanik baskıyla şekil değiştirmesine ne ad verilir?",
           "type": "stem",
           "author": "Tahir Kahrama",
-          "upvotes": 1,
-          "timestamp": "2026-10-05T17:53:49.196Z"
+          "upvotes": 0,
+          "timestamp": "2026-10-05T17:53:49.196Z",
+          "likedBy": []
         },
         {
           "id": "f-opt-1791222829197-A",
           "text": "A) Malformasyon",
           "type": "option",
           "author": "Tahir Kahrama",
-          "upvotes": 1,
-          "timestamp": "2026-10-05T17:53:49.197Z"
+          "upvotes": 0,
+          "timestamp": "2026-10-05T17:53:49.197Z",
+          "likedBy": []
         }
       ],
       "options": [
@@ -1759,13 +1782,15 @@
           "key": "A",
           "text": "Disrupsiyon",
           "upvotes": 2,
-          "suggestedBy": "Tahir Kahrama"
+          "suggestedBy": "Tahir Kahrama",
+          "likedBy": []
         },
         {
           "key": "B",
           "text": "Deformasyon",
-          "upvotes": 1,
-          "suggestedBy": "Tahir Kahrama"
+          "upvotes": 0,
+          "suggestedBy": "Tahir Kahrama",
+          "likedBy": []
         }
       ],
       "tags": [
@@ -1987,7 +2012,8 @@
         "totalSlides": 0,
         "matchedSnippet": "[ÇIKMIŞ SINAV SORUSU] Ders / Branş: Tıbbi Biyoloji ve Genetik Kurul: donem3-kurul1 Sınav Yılı: 2025-2026 Konu: Dismorfolojide Genetik Terminoloji – Deformasyon, Disrupsiyon ve Malformasyon Ayrımı Soru Kökü: Aşağıdaki kon",
         "confidenceScore": 100
-      }
+      },
+      "likedBy": []
     },
     {
       "id": "past-donem3-kurul1-1-3081",
@@ -3383,7 +3409,8 @@
           "text": "İpucu: Jdjwjfhevd",
           "type": "stem",
           "timestamp": "2026-10-10T18:36:08.129Z",
-          "upvotes": 1
+          "upvotes": 0,
+          "likedBy": []
         }
       ],
       "options": [],
@@ -5166,8 +5193,8 @@
         "Çıkmış Soru",
         "Tıbbi Patoloji"
       ],
-      "createdAt": "2026-10-08T17:32:28.510437+00:00",
-      "updatedAt": "2026-10-09T21:51:15.302Z",
+      "createdAt": "2026-10-08T22:56:14.697229+00:00",
+      "updatedAt": "2026-10-11T15:17:32.004Z",
       "contributedByName": "Yönetici (2023-2024 Arşivi)",
       "fragments": [],
       "options": [],
@@ -5206,7 +5233,9 @@
         "confidenceScore": 85,
         "notesAndDiscrepancies": "Geçmiş yıl çıkmış soru dosyasından AI tarafından ayrıştırıldı. Öğrenciler tarafından düzenlenebilir."
       },
-      "isUnassignedNumber": false
+      "isUnassignedNumber": false,
+      "revisions": null,
+      "examYear": null
     },
     {
       "id": "past-donem3-kurul1-57-3082",
@@ -7754,31 +7783,41 @@
           "key": "A",
           "label": "A",
           "text": "Escherichia coli",
-          "isCorrect": false
+          "isCorrect": false,
+          "upvotes": 0,
+          "likedBy": []
         },
         {
           "key": "B",
           "label": "B",
           "text": "Neisseria meningitidis",
-          "isCorrect": false
+          "isCorrect": false,
+          "upvotes": 0,
+          "likedBy": []
         },
         {
           "key": "C",
           "label": "C",
           "text": "Listeria monocytogenes",
-          "isCorrect": true
+          "isCorrect": true,
+          "upvotes": 0,
+          "likedBy": []
         },
         {
           "key": "D",
           "label": "D",
           "text": "Legionella pneumophila",
-          "isCorrect": false
+          "isCorrect": false,
+          "upvotes": 0,
+          "likedBy": []
         },
         {
           "key": "E",
           "label": "E",
           "text": "Erysipelothrix rhusiopathiae",
-          "isCorrect": false
+          "isCorrect": false,
+          "upvotes": 0,
+          "likedBy": []
         }
       ],
       "examYear": "2020-2021",
@@ -7892,7 +7931,9 @@
         "D": "YANLIŞ: Legionella pneumophila inhalasyon yoluyla bulaşan atipik pnömoni etkenidir; neonatal granülomatozise neden olmaz.",
         "E": "YANLIŞ: Erysipelothrix rhusiopathiae et/balık işleyenlerde erizipeloid deri lezyonlarına neden olur."
       },
-      "referans_kaynaklar": "Murray Medical Microbiology 9th Ed., Robbins Pathologic Basis of Disease 10th Ed."
+      "referans_kaynaklar": "Murray Medical Microbiology 9th Ed., Robbins Pathologic Basis of Disease 10th Ed.",
+      "upvotes": 0,
+      "likedBy": []
     },
     {
       "id": "past-1790877045460-967594",
@@ -7914,31 +7955,41 @@
           "key": "A",
           "label": "A",
           "text": "DaBT-İPA-Hib (Beşli karma aşı)",
-          "isCorrect": false
+          "isCorrect": false,
+          "upvotes": 0,
+          "likedBy": []
         },
         {
           "key": "B",
           "label": "B",
           "text": "KKK (Kızamık-Kızamıkçık-Kabakulak aşısı)",
-          "isCorrect": false
+          "isCorrect": false,
+          "upvotes": 0,
+          "likedBy": []
         },
         {
           "key": "C",
           "label": "C",
           "text": "Varisella (Suçiçeği aşısı)",
-          "isCorrect": false
+          "isCorrect": false,
+          "upvotes": 0,
+          "likedBy": []
         },
         {
           "key": "D",
           "label": "D",
           "text": "Rotavirüs aşısı",
-          "isCorrect": true
+          "isCorrect": true,
+          "upvotes": 0,
+          "likedBy": []
         },
         {
           "key": "E",
           "label": "E",
           "text": "KPA (Konjuge Pnömokok Aşısı)",
-          "isCorrect": false
+          "isCorrect": false,
+          "upvotes": 0,
+          "likedBy": []
         }
       ],
       "examYear": "2021-2022",
@@ -8052,7 +8103,9 @@
         "D": "DOĞRU: Rotavirüs aşısı (ve Meningokok aşıları), çocukluk çağı gastroenteritlerinden korunmada önerilmesine rağmen Türkiye Sağlık Bakanlığı rutin GBP takviminde yer almamaktadır; özel aşı statüsündedir.",
         "E": "YANLIŞ: KPA (13 valanlı konjuge pnömokok) 2, 4 ve 12. aylarda rutin takvimde yer alır."
       },
-      "referans_kaynaklar": "T.C. Sağlık Bakanlığı Aşı Portalı ve Genişletilmiş Bağışıklama Programı Genelgesi."
+      "referans_kaynaklar": "T.C. Sağlık Bakanlığı Aşı Portalı ve Genişletilmiş Bağışıklama Programı Genelgesi.",
+      "upvotes": 0,
+      "likedBy": []
     },
     {
       "id": "past-1790877045489-277118",
@@ -8074,31 +8127,41 @@
           "key": "A",
           "label": "A",
           "text": "Hem Tetanoz aşısı (Td) hem de Tetanoz İmmünglobulini (TİG / TAT) birlikte uygulanmalıdır",
-          "isCorrect": false
+          "isCorrect": false,
+          "upvotes": 0,
+          "likedBy": []
         },
         {
           "key": "B",
           "label": "B",
           "text": "Yalnızca yara temizliği yeterlidir, herhangi bir aşı veya immünglobulin verilmez",
-          "isCorrect": false
+          "isCorrect": false,
+          "upvotes": 0,
+          "likedBy": []
         },
         {
           "key": "C",
           "label": "C",
           "text": "Aşı yapılmaksızın yalnızca Tetanoz İmmünglobulini (TİG / TAT) uygulanmalıdır",
-          "isCorrect": false
+          "isCorrect": false,
+          "upvotes": 0,
+          "likedBy": []
         },
         {
           "key": "D",
           "label": "D",
           "text": "Aşı ve immünglobulin ertelenerek geniş spektrumlu profilaktik antibiyotik başlanmalıdır",
-          "isCorrect": false
+          "isCorrect": false,
+          "upvotes": 0,
+          "likedBy": []
         },
         {
           "key": "E",
           "label": "E",
           "text": "Yalnızca tek doz Tetanoz aşısı (Td rapel dozu) uygulanmalıdır",
-          "isCorrect": true
+          "isCorrect": true,
+          "upvotes": 0,
+          "likedBy": []
         }
       ],
       "examYear": "2021-2022",
@@ -8212,7 +8275,9 @@
         "D": "YANLIŞ: Antibiyotikler tetanoz toksinine karşı nötralizan antikor oluşturamaz; profilakside aşının alternatifi değildir.",
         "E": "DOĞRU: Sağlık Bakanlığı ve CDC kılavuzlarına göre, tam primer aşı serisi (≥3 doz) olan bir kişide kirli/kontamine yara varlığında son aşı üzerinden >5 yıl geçmişse YALNIZCA TETANOZ AŞISI (Td rapel) yapılır; pasif antikor (TİG / TAT) GEREKMEZ."
       },
-      "referans_kaynaklar": "CDC Pinkbook: Tetanus, T.C. Sağlık Bakanlığı Tetanoz Profilaksi Rehberi."
+      "referans_kaynaklar": "CDC Pinkbook: Tetanus, T.C. Sağlık Bakanlığı Tetanoz Profilaksi Rehberi.",
+      "upvotes": 0,
+      "likedBy": []
     },
     {
       "id": "e65ebc557399",
@@ -8261,13 +8326,17 @@
           "key": "A",
           "text": "Ranitidin",
           "label": "A",
-          "isCorrect": false
+          "isCorrect": false,
+          "upvotes": 0,
+          "likedBy": []
         },
         {
           "key": "B",
           "text": "Metoklopramid",
           "label": "B",
-          "isCorrect": false
+          "isCorrect": false,
+          "upvotes": 0,
+          "likedBy": []
         },
         {
           "key": "C",
@@ -8283,13 +8352,17 @@
           "key": "D",
           "text": "Serum Fizyolojik infüzyonu",
           "label": "D",
-          "isCorrect": false
+          "isCorrect": false,
+          "upvotes": 0,
+          "likedBy": []
         },
         {
           "key": "E",
           "text": "Askorbik Asit (C vitamini)",
           "label": "E",
-          "isCorrect": false
+          "isCorrect": false,
+          "upvotes": 0,
+          "likedBy": []
         }
       ],
       "correctAnswer": "C",
@@ -8349,7 +8422,8 @@
           "likedBy": []
         }
       ],
-      "createdAt": "2026-10-09T18:08:59.758351+00:00"
+      "createdAt": "2026-10-09T18:08:59.758351+00:00",
+      "likedBy": []
     },
     {
       "id": "past-1790877039193-522440",
@@ -8371,31 +8445,41 @@
           "key": "A",
           "label": "A",
           "text": "Granüloma gravidarum (Gebelik epulisi)",
-          "isCorrect": true
+          "isCorrect": true,
+          "upvotes": 0,
+          "likedBy": []
         },
         {
           "key": "B",
           "label": "B",
           "text": "Kavernöz hemanjiyom",
-          "isCorrect": false
+          "isCorrect": false,
+          "upvotes": 0,
+          "likedBy": []
         },
         {
           "key": "C",
           "label": "C",
           "text": "Basiller anjiyomatozis",
-          "isCorrect": false
+          "isCorrect": false,
+          "upvotes": 0,
+          "likedBy": []
         },
         {
           "key": "D",
           "label": "D",
           "text": "Glomanjiyom (Glomus tümörü)",
-          "isCorrect": false
+          "isCorrect": false,
+          "upvotes": 0,
+          "likedBy": []
         },
         {
           "key": "E",
           "label": "E",
           "text": "Kaposi sarkomu",
-          "isCorrect": false
+          "isCorrect": false,
+          "upvotes": 0,
+          "likedBy": []
         }
       ],
       "examYear": "2020-2021",
@@ -8509,7 +8593,9 @@
         "D": "YANLIŞ: Glomanjiyom subungual yerleşimli termoregülatuar nöromiyovasküler tümördür.",
         "E": "YANLIŞ: Kaposi sarkomu HHV-8 kaynaklı malign vasküler neoplazidir."
       },
-      "referans_kaynaklar": "Robbins & Cotran Pathologic Basis of Disease 10th Ed."
+      "referans_kaynaklar": "Robbins & Cotran Pathologic Basis of Disease 10th Ed.",
+      "upvotes": 0,
+      "likedBy": []
     },
     {
       "id": "past-1790877045287-35456",
@@ -8531,31 +8617,41 @@
           "key": "A",
           "label": "A",
           "text": "Plazma kalsiyumunun yaklaşık %90'ı serum bilirubinine bağlı olarak dolaşımda bulunur",
-          "isCorrect": true
+          "isCorrect": true,
+          "upvotes": 0,
+          "likedBy": []
         },
         {
           "key": "B",
           "label": "B",
           "text": "Kalsiyum metabolizmasının temel hormonal regülatörleri PTH, 1,25-(OH)2 D3 ve kalsitonindir",
-          "isCorrect": false
+          "isCorrect": false,
+          "upvotes": 0,
+          "likedBy": []
         },
         {
           "key": "C",
           "label": "C",
           "text": "Erişkin bir insanda normal total serum kalsiyum düzeyi 8.5 - 10.5 mg/dL arasındadır",
-          "isCorrect": false
+          "isCorrect": false,
+          "upvotes": 0,
+          "likedBy": []
         },
         {
           "key": "D",
           "label": "D",
           "text": "Böbrekte filtrelenen kalsiyumun büyük kısmı proksimal tübül ve çıkan Henle kulpunda sodyuma paralel emilir",
-          "isCorrect": false
+          "isCorrect": false,
+          "upvotes": 0,
+          "likedBy": []
         },
         {
           "key": "E",
           "label": "E",
           "text": "Plazma kalsiyumunun yaklaşık %50'si biyolojik olarak aktif olan serbest iyonize kalsiyumdur",
-          "isCorrect": false
+          "isCorrect": false,
+          "upvotes": 0,
+          "likedBy": []
         }
       ],
       "examYear": "2021-2022",
@@ -8665,7 +8761,9 @@
         "D": "YANLIŞ: Bu ifade doğrudur; kalsiyumun %65'i proksimal tübülde sodyum ve suyla paralel pasif emilir.",
         "E": "YANLIŞ: Bu ifade doğrudur; iyonize kalsiyum (%50) nöromüsküler uyarılabilirlik ve pıhtılaşmadan sorumlu aktif fraksiyondur."
       },
-      "referans_kaynaklar": "Guyton and Hall Textbook of Medical Physiology 14th Ed."
+      "referans_kaynaklar": "Guyton and Hall Textbook of Medical Physiology 14th Ed.",
+      "upvotes": 0,
+      "likedBy": []
     },
     {
       "id": "past-1790877045300-676441",
@@ -8687,31 +8785,41 @@
           "key": "A",
           "label": "A",
           "text": "İdrar osmolaritesinde artış (>300-500 mOsm/kg)",
-          "isCorrect": false
+          "isCorrect": false,
+          "upvotes": 0,
+          "likedBy": []
         },
         {
           "key": "B",
           "label": "B",
           "text": "Plazma osmolaritesinde düşme ve dilüsyonel hiponatremi (<135 mEq/L)",
-          "isCorrect": false
+          "isCorrect": false,
+          "upvotes": 0,
+          "likedBy": []
         },
         {
           "key": "C",
           "label": "C",
           "text": "Belirgin periferik pretibial ödem ve şiddetli hipertansiyon",
-          "isCorrect": true
+          "isCorrect": true,
+          "upvotes": 0,
+          "likedBy": []
         },
         {
           "key": "D",
           "label": "D",
           "text": "İdrar sodyum konsantrasyonunun yüksek olması (>20-40 mEq/L)",
-          "isCorrect": false
+          "isCorrect": false,
+          "upvotes": 0,
+          "likedBy": []
         },
         {
           "key": "E",
           "label": "E",
           "text": "Serum ürik asit ve kan üre azotu (BUN) düzeylerinde düşüklük",
-          "isCorrect": false
+          "isCorrect": false,
+          "upvotes": 0,
+          "likedBy": []
         }
       ],
       "examYear": "2021-2022",
@@ -8825,7 +8933,9 @@
         "D": "YANLIŞ: İkincil natriürez nedeniyle idrar sodyumu tipik olarak >40 mEq/L'dir.",
         "E": "YANLIŞ: Dilüsyon ve yüksek klirens nedeniyle ürik asit ve BUN düzeyleri düşüktür."
       },
-      "referans_kaynaklar": "Harrison's Principles of Internal Medicine 21st Ed."
+      "referans_kaynaklar": "Harrison's Principles of Internal Medicine 21st Ed.",
+      "upvotes": 0,
+      "likedBy": []
     },
     {
       "id": "past-1790877045493-899234",
@@ -8847,31 +8957,41 @@
           "key": "A",
           "label": "A",
           "text": "Enjeksiyon yerinde 24-48 saat süren hafif kızarıklık, ağrı ve <2 cm lokal endürasyon",
-          "isCorrect": true
+          "isCorrect": true,
+          "upvotes": 0,
+          "likedBy": []
         },
         {
           "key": "B",
           "label": "B",
           "text": "Oral Polio Aşısından sonra gelişen Aşı İlişkili Paralitik Poliomiyelit (AİPP)",
-          "isCorrect": false
+          "isCorrect": false,
+          "upvotes": 0,
+          "likedBy": []
         },
         {
           "key": "C",
           "label": "C",
           "text": "BCG aşısından aylar sonra gelişen süpüratif lenfadenit ve osteit tablosu",
-          "isCorrect": false
+          "isCorrect": false,
+          "upvotes": 0,
+          "likedBy": []
         },
         {
           "key": "D",
           "label": "D",
           "text": "Aşı uygulamasından sonraki ilk saatlerde gelişen anaflaksi veya anjiyoödem",
-          "isCorrect": false
+          "isCorrect": false,
+          "upvotes": 0,
+          "likedBy": []
         },
         {
           "key": "E",
           "label": "E",
           "text": "Aşı uygulamasını takiben gelişen ensefalopati veya Guillain-Barré sendromu",
-          "isCorrect": false
+          "isCorrect": false,
+          "upvotes": 0,
+          "likedBy": []
         }
       ],
       "examYear": "2021-2022",
@@ -8985,7 +9105,9 @@
         "D": "YANLIŞ: Anaflaksi hayati tehdit eden bir reaksiyondur ve derhal bildirilir.",
         "E": "YANLIŞ: Ensefalopati ve GBS majör nörolojik komplikasyonlar olup zorunlu bildirime tabidir."
       },
-      "referans_kaynaklar": "T.C. Sağlık Bakanlığı ASİE Genelgesi ve Saha Rehberi."
+      "referans_kaynaklar": "T.C. Sağlık Bakanlığı ASİE Genelgesi ve Saha Rehberi.",
+      "upvotes": 0,
+      "likedBy": []
     },
     {
       "id": "past-1790877047944-269108",
@@ -9007,31 +9129,41 @@
           "key": "A",
           "label": "A",
           "text": "Yalnız I, II ve III",
-          "isCorrect": true
+          "isCorrect": true,
+          "upvotes": 0,
+          "likedBy": []
         },
         {
           "key": "B",
           "label": "B",
           "text": "Yalnız I ve III",
-          "isCorrect": false
+          "isCorrect": false,
+          "upvotes": 0,
+          "likedBy": []
         },
         {
           "key": "C",
           "label": "C",
           "text": "Yalnız II ve IV",
-          "isCorrect": false
+          "isCorrect": false,
+          "upvotes": 0,
+          "likedBy": []
         },
         {
           "key": "D",
           "label": "D",
           "text": "Yalnız IV",
-          "isCorrect": false
+          "isCorrect": false,
+          "upvotes": 0,
+          "likedBy": []
         },
         {
           "key": "E",
           "label": "E",
           "text": "I, II, III ve IV",
-          "isCorrect": false
+          "isCorrect": false,
+          "upvotes": 0,
+          "likedBy": []
         }
       ],
       "examYear": "2021-2022",
@@ -9145,7 +9277,9 @@
         "D": "YANLIŞ: IV. öncül yanlıştır.",
         "E": "YANLIŞ: IV. öncül vaka-kontrolün avantajı olamaz."
       },
-      "referans_kaynaklar": "Fletcher's Clinical Epidemiology 6th Ed."
+      "referans_kaynaklar": "Fletcher's Clinical Epidemiology 6th Ed.",
+      "upvotes": 0,
+      "likedBy": []
     },
     {
       "id": "past-1790877047962-243892",
@@ -9167,31 +9301,41 @@
           "key": "A",
           "label": "A",
           "text": "Yalnız I, II ve III",
-          "isCorrect": true
+          "isCorrect": true,
+          "upvotes": 0,
+          "likedBy": []
         },
         {
           "key": "B",
           "label": "B",
           "text": "Yalnız I ve III",
-          "isCorrect": false
+          "isCorrect": false,
+          "upvotes": 0,
+          "likedBy": []
         },
         {
           "key": "C",
           "label": "C",
           "text": "Yalnız II ve IV",
-          "isCorrect": false
+          "isCorrect": false,
+          "upvotes": 0,
+          "likedBy": []
         },
         {
           "key": "D",
           "label": "D",
           "text": "Yalnız IV",
-          "isCorrect": false
+          "isCorrect": false,
+          "upvotes": 0,
+          "likedBy": []
         },
         {
           "key": "E",
           "label": "E",
           "text": "I, II, III ve IV",
-          "isCorrect": false
+          "isCorrect": false,
+          "upvotes": 0,
+          "likedBy": []
         }
       ],
       "examYear": "2021-2022",
@@ -9305,7 +9449,9 @@
         "D": "YANLIŞ: Yalnız IV seçeneği yanlıştır.",
         "E": "YANLIŞ: Hipertansiyon primer besin yetersizliği hastalığı değildir."
       },
-      "referans_kaynaklar": "Halk Sağlığı Temel Bilgiler Kitabı, Nelson Pediatrics 21st Ed."
+      "referans_kaynaklar": "Halk Sağlığı Temel Bilgiler Kitabı, Nelson Pediatrics 21st Ed.",
+      "upvotes": 0,
+      "likedBy": []
     },
     {
       "id": "past-1790877047976-16793",
@@ -9327,31 +9473,41 @@
           "key": "A",
           "label": "A",
           "text": "Yalnız I, II ve III",
-          "isCorrect": true
+          "isCorrect": true,
+          "upvotes": 0,
+          "likedBy": []
         },
         {
           "key": "B",
           "label": "B",
           "text": "Yalnız I ve III",
-          "isCorrect": false
+          "isCorrect": false,
+          "upvotes": 0,
+          "likedBy": []
         },
         {
           "key": "C",
           "label": "C",
           "text": "Yalnız II ve IV",
-          "isCorrect": false
+          "isCorrect": false,
+          "upvotes": 0,
+          "likedBy": []
         },
         {
           "key": "D",
           "label": "D",
           "text": "Yalnız IV",
-          "isCorrect": false
+          "isCorrect": false,
+          "upvotes": 0,
+          "likedBy": []
         },
         {
           "key": "E",
           "label": "E",
           "text": "I, II, III ve IV",
-          "isCorrect": false
+          "isCorrect": false,
+          "upvotes": 0,
+          "likedBy": []
         }
       ],
       "examYear": "2021-2022",
@@ -9465,7 +9621,9 @@
         "D": "YANLIŞ: IV. öncül fiziki çevreye dahil edilemez.",
         "E": "YANLIŞ: Sosyoekonomik ve psikososyal etkenler fiziki değil sosyal çevre faktörüdür."
       },
-      "referans_kaynaklar": "Halk Sağlığı Temel Bilgiler Kitabı."
+      "referans_kaynaklar": "Halk Sağlığı Temel Bilgiler Kitabı.",
+      "upvotes": 0,
+      "likedBy": []
     },
     {
       "id": "past-1790877041268-901039",
@@ -9475,31 +9633,41 @@
           "key": "A",
           "label": "A",
           "text": "Esansiyel hipertansiyonun basamaklı medikal tedavisi",
-          "isCorrect": false
+          "isCorrect": false,
+          "upvotes": 0,
+          "likedBy": []
         },
         {
           "key": "B",
           "label": "B",
           "text": "Otoimmün/enflamatuvar hastalıkların ve çeşitli kanserlerin hedefe yönelik tedavisi",
-          "isCorrect": true
+          "isCorrect": true,
+          "upvotes": 0,
+          "likedBy": []
         },
         {
           "key": "C",
           "label": "C",
           "text": "Hepatik sitokrom P450 mikrozomal enzimlerinin uyarılması (indüksiyonu)",
-          "isCorrect": false
+          "isCorrect": false,
+          "upvotes": 0,
+          "likedBy": []
         },
         {
           "key": "D",
           "label": "D",
           "text": "Bakteriyel suşlarda antibiyotik direnç genlerinin transferinin engellenmesi",
-          "isCorrect": false
+          "isCorrect": false,
+          "upvotes": 0,
+          "likedBy": []
         },
         {
           "key": "E",
           "label": "E",
           "text": "Gastrointestinal paraziter enfeksiyonların profilaktik eliminasyonu",
-          "isCorrect": false
+          "isCorrect": false,
+          "upvotes": 0,
+          "likedBy": []
         }
       ],
       "correctAnswer": "B",
@@ -9523,7 +9691,9 @@
         "dogrulanmis_soru",
         "altin_standart"
       ],
-      "updatedAt": "2026-10-09T17:59:55.795Z"
+      "updatedAt": "2026-10-09T17:59:55.795Z",
+      "upvotes": 0,
+      "likedBy": []
     },
     {
       "id": "039bf4cb1cf9",
@@ -9556,27 +9726,37 @@
         {
           "key": "A",
           "text": "I, II, III ve IV",
-          "isCorrect": false
+          "isCorrect": false,
+          "upvotes": 0,
+          "likedBy": []
         },
         {
           "key": "B",
           "text": "I, II ve III",
-          "isCorrect": false
+          "isCorrect": false,
+          "upvotes": 0,
+          "likedBy": []
         },
         {
           "key": "C",
           "text": "II ve IV",
-          "isCorrect": false
+          "isCorrect": false,
+          "upvotes": 0,
+          "likedBy": []
         },
         {
           "key": "D",
           "text": "Yalnız IV",
-          "isCorrect": true
+          "isCorrect": true,
+          "upvotes": 0,
+          "likedBy": []
         },
         {
           "key": "E",
           "text": "I ve III",
-          "isCorrect": false
+          "isCorrect": false,
+          "upvotes": 0,
+          "likedBy": []
         }
       ],
       "dogru_secenek": "D",
@@ -9604,7 +9784,9 @@
       "isAmbiguous": false,
       "isPastExam": true,
       "supportRatio": 1,
-      "updatedAt": "2026-10-09T18:08:19.473Z"
+      "updatedAt": "2026-10-09T18:08:19.473Z",
+      "upvotes": 0,
+      "likedBy": []
     },
     {
       "id": "q-donem3-kurul1-unassigned-1791657348899",
@@ -9622,7 +9804,8 @@
           "text": "Down Sendromu",
           "type": "stem",
           "timestamp": "2026-10-10T18:35:48.896Z",
-          "upvotes": 1
+          "upvotes": 0,
+          "likedBy": []
         },
         {
           "id": "f-opt-1791657348899-A",
@@ -9631,7 +9814,8 @@
           "text": "A) Jsje",
           "type": "option",
           "timestamp": "2026-10-10T18:35:48.899Z",
-          "upvotes": 1
+          "upvotes": 0,
+          "likedBy": []
         },
         {
           "id": "f-opt-1791657348899-B",
@@ -9640,7 +9824,8 @@
           "text": "B) Kdkejr",
           "type": "option",
           "timestamp": "2026-10-10T18:35:48.899Z",
-          "upvotes": 1
+          "upvotes": 0,
+          "likedBy": []
         },
         {
           "id": "f-opt-1791657348899-C",
@@ -9649,7 +9834,8 @@
           "text": "C) Kerkjdjr",
           "type": "option",
           "timestamp": "2026-10-10T18:35:48.899Z",
-          "upvotes": 1
+          "upvotes": 0,
+          "likedBy": []
         },
         {
           "id": "f-opt-1791657348899-D",
@@ -9658,7 +9844,8 @@
           "text": "D) Kdjedj",
           "type": "option",
           "timestamp": "2026-10-10T18:35:48.899Z",
-          "upvotes": 1
+          "upvotes": 0,
+          "likedBy": []
         },
         {
           "id": "f-opt-1791657348899-E",
@@ -9667,7 +9854,8 @@
           "text": "E) Kdkejdje",
           "type": "option",
           "timestamp": "2026-10-10T18:35:48.899Z",
-          "upvotes": 1
+          "upvotes": 0,
+          "likedBy": []
         }
       ],
       "options": [
@@ -9676,35 +9864,40 @@
           "text": "Jsje",
           "suggestedBy": "Dr House",
           "suggestedByUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
-          "upvotes": 1
+          "upvotes": 0,
+          "likedBy": []
         },
         {
           "key": "B",
           "text": "Kdkejr",
           "suggestedBy": "Dr House",
           "suggestedByUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
-          "upvotes": 1
+          "upvotes": 0,
+          "likedBy": []
         },
         {
           "key": "C",
           "text": "Kerkjdjr",
           "suggestedBy": "Dr House",
           "suggestedByUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
-          "upvotes": 1
+          "upvotes": 0,
+          "likedBy": []
         },
         {
           "key": "D",
           "text": "Kdjedj",
           "suggestedBy": "Dr House",
           "suggestedByUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
-          "upvotes": 1
+          "upvotes": 0,
+          "likedBy": []
         },
         {
           "key": "E",
           "text": "Kdkejdje",
           "suggestedBy": "Dr House",
           "suggestedByUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
-          "upvotes": 1
+          "upvotes": 0,
+          "likedBy": []
         }
       ],
       "claimedAnswer": "B",
@@ -9759,7 +9952,9 @@
       ],
       "createdAt": "2026-10-10T18:35:48.899Z",
       "updatedAt": "2026-10-10T18:35:49.171Z",
-      "examYear": "2026-2027"
+      "examYear": "2026-2027",
+      "upvotes": 0,
+      "likedBy": []
     },
     {
       "id": "q-donem3-kurul1-unassigned-1791657355971",
@@ -9777,7 +9972,8 @@
           "text": "A) Irue",
           "type": "option",
           "timestamp": "2026-10-10T18:35:55.971Z",
-          "upvotes": 1
+          "upvotes": 0,
+          "likedBy": []
         },
         {
           "id": "f-opt-1791657355971-B",
@@ -9786,7 +9982,8 @@
           "text": "B) Iruj",
           "type": "option",
           "timestamp": "2026-10-10T18:35:55.971Z",
-          "upvotes": 1
+          "upvotes": 0,
+          "likedBy": []
         },
         {
           "id": "f-opt-1791657355971-C",
@@ -9795,7 +9992,8 @@
           "text": "C) Jjj",
           "type": "option",
           "timestamp": "2026-10-10T18:35:55.971Z",
-          "upvotes": 1
+          "upvotes": 0,
+          "likedBy": []
         },
         {
           "id": "f-opt-1791657355971-D",
@@ -9804,7 +10002,8 @@
           "text": "D) Nnn",
           "type": "option",
           "timestamp": "2026-10-10T18:35:55.971Z",
-          "upvotes": 1
+          "upvotes": 0,
+          "likedBy": []
         },
         {
           "id": "f-opt-1791657355971-E",
@@ -9813,7 +10012,8 @@
           "text": "E) Nnn",
           "type": "option",
           "timestamp": "2026-10-10T18:35:55.971Z",
-          "upvotes": 1
+          "upvotes": 0,
+          "likedBy": []
         }
       ],
       "options": [
@@ -9822,35 +10022,40 @@
           "text": "Irue",
           "suggestedBy": "Dr House",
           "suggestedByUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
-          "upvotes": 1
+          "upvotes": 0,
+          "likedBy": []
         },
         {
           "key": "B",
           "text": "Iruj",
           "suggestedBy": "Dr House",
           "suggestedByUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
-          "upvotes": 1
+          "upvotes": 0,
+          "likedBy": []
         },
         {
           "key": "C",
           "text": "Jjj",
           "suggestedBy": "Dr House",
           "suggestedByUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
-          "upvotes": 1
+          "upvotes": 0,
+          "likedBy": []
         },
         {
           "key": "D",
           "text": "Nnn",
           "suggestedBy": "Dr House",
           "suggestedByUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
-          "upvotes": 1
+          "upvotes": 0,
+          "likedBy": []
         },
         {
           "key": "E",
           "text": "Nnn",
           "suggestedBy": "Dr House",
           "suggestedByUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
-          "upvotes": 1
+          "upvotes": 0,
+          "likedBy": []
         }
       ],
       "tags": [
@@ -9901,7 +10106,9 @@
       ],
       "createdAt": "2026-10-10T18:35:55.971Z",
       "updatedAt": "2026-10-10T18:35:56.239Z",
-      "examYear": "2026-2027"
+      "examYear": "2026-2027",
+      "upvotes": 0,
+      "likedBy": []
     },
     {
       "id": "q-donem3-kurul1-unassigned-1791657377613",
@@ -9919,7 +10126,8 @@
           "text": "A) Jdjdjd",
           "type": "option",
           "timestamp": "2026-10-10T18:36:17.613Z",
-          "upvotes": 1
+          "upvotes": 0,
+          "likedBy": []
         },
         {
           "id": "f-opt-1791657377613-B",
@@ -9928,7 +10136,8 @@
           "text": "B) Dfrejjr",
           "type": "option",
           "timestamp": "2026-10-10T18:36:17.613Z",
-          "upvotes": 1
+          "upvotes": 0,
+          "likedBy": []
         },
         {
           "id": "f-opt-1791657377613-C",
@@ -9937,7 +10146,8 @@
           "text": "C) Dıejfjdh",
           "type": "option",
           "timestamp": "2026-10-10T18:36:17.613Z",
-          "upvotes": 1
+          "upvotes": 0,
+          "likedBy": []
         },
         {
           "id": "f-opt-1791657377613-D",
@@ -9946,7 +10156,8 @@
           "text": "D) Jekwkw7wue",
           "type": "option",
           "timestamp": "2026-10-10T18:36:17.613Z",
-          "upvotes": 1
+          "upvotes": 0,
+          "likedBy": []
         },
         {
           "id": "f-opt-1791657377613-E",
@@ -9955,7 +10166,8 @@
           "text": "E) Udjehdhejeje",
           "type": "option",
           "timestamp": "2026-10-10T18:36:17.613Z",
-          "upvotes": 1
+          "upvotes": 0,
+          "likedBy": []
         }
       ],
       "options": [
@@ -9964,35 +10176,40 @@
           "text": "Jdjdjd",
           "suggestedBy": "Dr House",
           "suggestedByUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
-          "upvotes": 1
+          "upvotes": 0,
+          "likedBy": []
         },
         {
           "key": "B",
           "text": "Dfrejjr",
           "suggestedBy": "Dr House",
           "suggestedByUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
-          "upvotes": 1
+          "upvotes": 0,
+          "likedBy": []
         },
         {
           "key": "C",
           "text": "Dıejfjdh",
           "suggestedBy": "Dr House",
           "suggestedByUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
-          "upvotes": 1
+          "upvotes": 0,
+          "likedBy": []
         },
         {
           "key": "D",
           "text": "Jekwkw7wue",
           "suggestedBy": "Dr House",
           "suggestedByUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
-          "upvotes": 1
+          "upvotes": 0,
+          "likedBy": []
         },
         {
           "key": "E",
           "text": "Udjehdhejeje",
           "suggestedBy": "Dr House",
           "suggestedByUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
-          "upvotes": 1
+          "upvotes": 0,
+          "likedBy": []
         }
       ],
       "claimedAnswer": "A",
@@ -10045,7 +10262,9 @@
       ],
       "createdAt": "2026-10-10T18:36:17.613Z",
       "updatedAt": "2026-10-10T18:36:17.953Z",
-      "examYear": "2026-2027"
+      "examYear": "2026-2027",
+      "upvotes": 0,
+      "likedBy": []
     },
     {
       "id": "q-donem3-kurul1-unassigned-1791657402480",
@@ -10061,63 +10280,70 @@
           "text": "Ufjrnfjenfıwnfnsbdv",
           "type": "stem",
           "author": "Dr House",
-          "upvotes": 1,
+          "upvotes": 0,
           "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
-          "timestamp": "2026-10-10T18:36:42.435Z"
+          "timestamp": "2026-10-10T18:36:42.435Z",
+          "likedBy": []
         },
         {
           "id": "f-opt-1791657402480-A",
           "text": "A) Dıkdjd",
           "type": "option",
           "author": "Dr House",
-          "upvotes": 1,
+          "upvotes": 0,
           "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
-          "timestamp": "2026-10-10T18:36:42.480Z"
+          "timestamp": "2026-10-10T18:36:42.480Z",
+          "likedBy": []
         },
         {
           "id": "f-opt-1791657402480-B",
           "text": "B) Kdkejfje",
           "type": "option",
           "author": "Dr House",
-          "upvotes": 1,
+          "upvotes": 0,
           "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
-          "timestamp": "2026-10-10T18:36:42.480Z"
+          "timestamp": "2026-10-10T18:36:42.480Z",
+          "likedBy": []
         },
         {
           "id": "f-opt-1791657402480-C",
           "text": "C) Kdkwjdjejd",
           "type": "option",
           "author": "Dr House",
-          "upvotes": 1,
+          "upvotes": 0,
           "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
-          "timestamp": "2026-10-10T18:36:42.480Z"
+          "timestamp": "2026-10-10T18:36:42.480Z",
+          "likedBy": []
         },
         {
           "id": "f-opt-1791657402480-D",
           "text": "D) Jfjsjfjsjd",
           "type": "option",
           "author": "Dr House",
-          "upvotes": 1,
+          "upvotes": 0,
           "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
-          "timestamp": "2026-10-10T18:36:42.480Z"
+          "timestamp": "2026-10-10T18:36:42.480Z",
+          "likedBy": []
         },
         {
           "id": "f-opt-1791657402480-E",
           "text": "E) Jdjwjfjsndh",
           "type": "option",
           "author": "Dr House",
-          "upvotes": 1,
+          "upvotes": 0,
           "authorUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
-          "timestamp": "2026-10-10T18:36:42.480Z"
+          "timestamp": "2026-10-10T18:36:42.480Z",
+          "likedBy": []
         }
       ],
       "options": [
         {
           "key": "A",
           "text": "Dıkdjd",
-          "upvotes": 1,
+          "upvotes": 0,
           "suggestedBy": "Dr House",
-          "suggestedByUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1"
+          "suggestedByUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+          "likedBy": []
         },
         {
           "key": "B",
@@ -10152,9 +10378,10 @@
         {
           "key": "E",
           "text": "Jdjwjfjsndh",
-          "upvotes": 1,
+          "upvotes": 0,
           "suggestedBy": "Dr House",
-          "suggestedByUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1"
+          "suggestedByUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+          "likedBy": []
         }
       ],
       "tags": [
@@ -10208,7 +10435,129 @@
       "examYear": "2026-2027",
       "upvotes": 0,
       "reconstruction": null,
-      "claimedAnswer": "C"
+      "claimedAnswer": "C",
+      "likedBy": []
+    },
+    {
+      "id": "q-donem3-kurul1-unassigned-1791731031404",
+      "committeeId": "donem3-kurul1",
+      "questionNumber": 0,
+      "isUnassignedNumber": true,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "Tıbbi Patoloji Hatırlanan Soru",
+      "status": "gathering",
+      "fragments": [
+        {
+          "id": "f-1791731031379-vkha",
+          "author": "Dönem 3 Öğrencisi",
+          "text": "fdjefgv",
+          "type": "stem",
+          "timestamp": "2026-10-11T15:03:51.379Z",
+          "upvotes": 0
+        },
+        {
+          "id": "f-opt-1791731031404-A",
+          "author": "Dönem 3 Öğrencisi",
+          "text": "A) dfd",
+          "type": "option",
+          "timestamp": "2026-10-11T15:03:51.404Z",
+          "upvotes": 0
+        },
+        {
+          "id": "f-opt-1791731031404-C",
+          "author": "Dönem 3 Öğrencisi",
+          "text": "C) sdsd",
+          "type": "option",
+          "timestamp": "2026-10-11T15:03:51.404Z",
+          "upvotes": 0
+        },
+        {
+          "id": "f-opt-1791731031404-D",
+          "author": "Dönem 3 Öğrencisi",
+          "text": "D) dsd",
+          "type": "option",
+          "timestamp": "2026-10-11T15:03:51.404Z",
+          "upvotes": 0
+        },
+        {
+          "id": "f-opt-1791731031404-E",
+          "author": "Dönem 3 Öğrencisi",
+          "text": "E) sdsdsd",
+          "type": "option",
+          "timestamp": "2026-10-11T15:03:51.404Z",
+          "upvotes": 0
+        }
+      ],
+      "options": [
+        {
+          "key": "A",
+          "text": "dfd",
+          "suggestedBy": "Dönem 3 Öğrencisi",
+          "upvotes": 0
+        },
+        {
+          "key": "C",
+          "text": "sdsd",
+          "suggestedBy": "Dönem 3 Öğrencisi",
+          "upvotes": 0
+        },
+        {
+          "key": "D",
+          "text": "dsd",
+          "suggestedBy": "Dönem 3 Öğrencisi",
+          "upvotes": 0
+        },
+        {
+          "key": "E",
+          "text": "sdsdsd",
+          "suggestedBy": "Dönem 3 Öğrencisi",
+          "upvotes": 0
+        }
+      ],
+      "claimedAnswer": "B",
+      "tags": [
+        "Tıbbi Patoloji",
+        "numarasız-hatırlanan"
+      ],
+      "contributedByName": "Dönem 3 Öğrencisi",
+      "revisions": [
+        {
+          "id": "rev-1791731031404",
+          "version": 1,
+          "editedAt": "2026-10-11T15:03:51.404Z",
+          "editorName": "Dönem 3 Öğrencisi",
+          "changeSummary": "İlk soru kaydı oluşturuldu (Numarasız)",
+          "stem": "fdjefgv",
+          "discipline": "Tıbbi Patoloji",
+          "topic": "Tıbbi Patoloji Hatırlanan Soru",
+          "claimedAnswer": "B",
+          "options": [
+            {
+              "key": "A",
+              "text": "dfd",
+              "upvotes": 0
+            },
+            {
+              "key": "C",
+              "text": "sdsd",
+              "upvotes": 0
+            },
+            {
+              "key": "D",
+              "text": "dsd",
+              "upvotes": 0
+            },
+            {
+              "key": "E",
+              "text": "sdsdsd",
+              "upvotes": 0
+            }
+          ]
+        }
+      ],
+      "createdAt": "2026-10-11T15:03:51.404Z",
+      "updatedAt": "2026-10-11T15:03:51.425Z",
+      "examYear": "2026-2027"
     }
   ]
 }

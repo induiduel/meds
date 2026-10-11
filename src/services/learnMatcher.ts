@@ -1,4 +1,4 @@
-import { loadAllDecks, loadDeck } from '../data/deckStore';
+import { DECK_CATALOG, loadDeck } from '../data/deckStore';
 import { safeJsonFetch } from './api';
 import { QuestionItem } from '../types';
 import { SlideFlashcard } from '../components/learn/InteractiveDeckView';
@@ -157,17 +157,34 @@ class LearnMatcherService {
     return { ...m, synthesisNarrative: s.synthesisNarrative || '', spotPearls: s.spotPearls, flashcards: s.flashcards };
   }
 
-  /** Yedek yol (sunucu indeksi yoksa / çevrimdışı): tüm desteleri indirip indeksi istemcide kurar. */
-  private loadFromDecks(): Promise<void> {
-    const links = safeJsonFetch<{ baglantilar: Record<string, { deckId: string; slideNumber: number; guven?: 'yuksek' | 'orta' }> }>('/api/learn-links')
-      .then((r) => {
-        if (r.ok && r.data?.baglantilar) this.computed = new Map(Object.entries(r.data.baglantilar));
-      })
-      .catch(() => {});
-    return Promise.all([loadAllDecks<any>(), links]).then(([decks]) => {
-      this.init(decks);
-      this.cache.clear();
-    });
+  /** Yedek yol (sunucu indeksi yoksa / çevrimdışı): hafif katalogdan indeksi kurar (83 MB deste indirilmez). */
+  private async loadFromDecks(): Promise<void> {
+    try {
+      const links = await safeJsonFetch<{ baglantilar: Record<string, { deckId: string; slideNumber: number; guven?: 'yuksek' | 'orta' }> }>('/api/learn-links').catch(() => null);
+      if (links?.ok && links.data?.baglantilar) {
+        this.computed = new Map(Object.entries(links.data.baglantilar));
+      }
+    } catch {}
+
+    // 83 MB 114 desteyi arka planda indirmek yerine DECK_CATALOG (280 KB) ile hafif önbellek kur
+    for (const d of DECK_CATALOG) {
+      const deckTitle = d.shortTitle || d.title || 'Ders';
+      const deckDiscipline = d.discipline || '';
+      const deckCommittee = d.committee || '';
+      const slideMatchBase: QuestionLearnMatch = {
+        deckId: d.id,
+        deckTitle,
+        discipline: deckDiscipline,
+        committee: deckCommittee,
+        slideNumber: d.firstSlideNumber || 1,
+        slideTitle: d.title || '',
+        badge: 'Ders Notu',
+        matchType: 'direct',
+        matchScore: 100,
+      };
+      this.slideByKey.set(`${d.id}#${d.firstSlideNumber || 1}`, slideMatchBase);
+    }
+    this.cache.clear();
   }
 
   private init(decks: any[]) {

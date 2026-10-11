@@ -42,6 +42,7 @@ import {
   getUniversalLocationBreadcrumb,
 } from '../../services/universalRedirectService';
 import { guardedInterval } from '../../services/net';
+import { realtimeEventService } from '../../services/realtimeEvents';
 
 export const ManagePendingOperationsSection: React.FC = () => {
   const [items, setItems] = useState<AutoRepairItemClient[]>([]);
@@ -73,8 +74,20 @@ export const ManagePendingOperationsSection: React.FC = () => {
 
   useEffect(() => {
     loadData();
-    // Önceki yükleme bitmeden yenisi başlamaz; sekme gizliyken durur
-    return guardedInterval(loadData, 10000);
+
+    // 1. SSE (Server-Sent Events) Kalıcı Akış Dinleyicisi
+    // Kuyrukta işlem işlendiğinde, hata veya onay geldiğinde 0ms anında yenile
+    const unsub = realtimeEventService.onAutoRepairUpdate(() => {
+      loadData();
+    });
+
+    // 2. Güvenlik ve yedek yoklama: 2.5 saniyeden 30 saniyeye çekildi (SSE ile %92 ağ tasarrufu)
+    const stopInterval = guardedInterval(loadData, 30000);
+
+    return () => {
+      unsub();
+      stopInterval();
+    };
   }, []);
 
   const handleRunNext = async () => {

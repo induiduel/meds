@@ -28,6 +28,7 @@ import {
   Clock,
   Boxes,
   BookOpenCheck,
+  MessageSquareText,
 } from 'lucide-react';
 import type { QuestionItem, Committee, AdminNotification } from '../../types';
 import { ApiService } from '../../services/api';
@@ -45,6 +46,7 @@ import { ManagePhasesSection } from './ManagePhasesSection';
 import { ManageMergesSection } from './ManageMergesSection';
 import { ManageDersIsciSection } from './ManageDersIsciSection';
 import { ManageInboxSection } from './ManageInboxSection';
+import { ManageIntakeSection } from './ManageIntakeSection';
 import { ManageModerationSection } from './ManageModerationSection';
 import { ManageUsersSection } from './ManageUsersSection';
 import { ManageSystemSection } from './ManageSystemSection';
@@ -55,6 +57,8 @@ import { ManagePendingOperationsSection } from './ManagePendingOperationsSection
 import { consoleLogBuffer } from './ConsoleLogBuffer';
 import { ManageMetrics } from './ManageMetrics';
 import { useAppearance, DENSITY_LABELS, type Density as AppDensity } from '../../utils/appearance';
+import { guardedInterval } from '../../services/net';
+import { realtimeEventService } from '../../services/realtimeEvents';
 import { Segmented } from '../ui/kit';
 import { Drawer, classifyNotice } from './consoleUi';
 import {
@@ -73,7 +77,7 @@ import {
   deleteDraftEverywhere,
 } from '../../services/manageConsoleService';
 
-export type ManageSection = 'pending' | 'inbox' | 'pool' | 'catalog' | 'data' | 'phases' | 'merges' | 'ders_isci' | 'drafts' | 'studio' | 'moderation' | 'users' | 'scripts' | 'system' | 'automation' | 'datacore' | 'notebooklm' | 'database';
+export type ManageSection = 'pending' | 'inbox' | 'intake' | 'pool' | 'catalog' | 'data' | 'phases' | 'merges' | 'ders_isci' | 'drafts' | 'studio' | 'moderation' | 'users' | 'scripts' | 'system' | 'automation' | 'datacore' | 'notebooklm' | 'database';
 
 interface ManageConsoleProps {
   adminEmail: string;
@@ -103,6 +107,7 @@ const SECTIONS: { id: ManageSection; slug: string; label: string; hint: string; 
   { id: 'merges', slug: 'birlesenler', label: 'Birleştirilen sorular', hint: 'Kopya çıkmış sorular: yan yana karşılaştır, asıl soruyu seç ya da ayır.', icon: GitMerge, group: 'İçerik', keywords: 'kopya birleştir' },
   { id: 'datacore', slug: 'veri-merkezi', label: 'Veri Merkezi (v2)', hint: 'Bağımsız Core v2 hattı: sorular, kazanım, ders notu bağları, kavram grafı, toplu tamamlama.', icon: Database, group: 'İçerik', keywords: 'core kazanım graf' },
   { id: 'notebooklm', slug: 'notebooklm', label: 'NotebookLM Stüdyosu', hint: 'NotebookLM JSON/MD çıktılarını yükle, alternatif olarak sakla, orijinalle karşılaştır ve tercihi seç.', icon: Brain, group: 'İçerik', keywords: 'notebooklm ai json alternatif rag soru deste spot' },
+  { id: 'intake', slug: 'serbest-girdiler', label: 'Serbest girdiler', hint: 'Öğrencilerin tek kutuya yazdığı metinler ve ücretsiz Gemini ajanlarının ayrıştırması: kanıt, güven, olumsuz kök, yeniden ayrıştır.', icon: MessageSquareText, group: 'İçerik', keywords: 'serbest metin girdi ayrıştır ajan gemini hatırlanan şık kök kanıt' },
   { id: 'drafts', slug: 'taslaklar', label: 'Taslaklar', hint: 'Öğrenci taslaklarını kümele, birleştir, düzenle ya da AI ile tam soruya dönüştür.', icon: Layers, group: 'İçerik', keywords: 'parça taslak' },
   { id: 'studio', slug: 'studyo', label: 'Taslak stüdyosu', hint: 'Parçaları elle eşle: ağaç, pano, akış ve terim görünümleri.', icon: Workflow, group: 'İçerik', keywords: 'eşle pano' },
   { id: 'users', slug: 'kullanicilar', label: 'Kullanıcılar', hint: 'Katkılar, hesaplar, roller ve e-posta.', icon: Users, group: 'Topluluk', keywords: 'öğrenci hesap rol smtp e-posta' },
@@ -227,6 +232,39 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
 
   useEffect(() => {
     void reloadInbox();
+
+    // 1. SSE (Server-Sent Events) Kalıcı Kanal Dinleyicileri (Anlık 0ms Gecikme)
+    const unsubInbox = realtimeEventService.onInboxUpdate(() => {
+      loadManageInbox(selectedCommitteeId)
+        .then((data) => {
+          setReports(data.reports);
+          setComments(data.comments);
+          setNotifications(data.notifications);
+          if (data.drafts.length > 0) setDrafts(data.drafts);
+        })
+        .catch(() => {});
+    });
+
+    const unsubNotif = realtimeEventService.onNotification((newNotif) => {
+      setNotifications((prev) => [newNotif, ...prev.filter((n) => n.id !== newNotif.id)]);
+    });
+
+    // 2. Güvenlik ve yedek yoklama: 6 saniyeden 60 saniyeye çekildi (SSE ile %90 ağ/sunucu tasarrufu)
+    const stopInterval = guardedInterval(async () => {
+      try {
+        const data = await loadManageInbox(selectedCommitteeId);
+        setReports(data.reports);
+        setComments(data.comments);
+        setNotifications(data.notifications);
+        if (data.drafts.length > 0) setDrafts(data.drafts);
+      } catch (_) {}
+    }, 60000);
+
+    return () => {
+      unsubInbox();
+      unsubNotif();
+      stopInterval();
+    };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selectedCommitteeId]);
 
@@ -525,6 +563,7 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
             )}
             {section === 'phases' && <ManagePhasesSection adminEmail={adminEmail} />}
             {section === 'merges' && <ManageMergesSection adminEmail={adminEmail} />}
+            {section === 'intake' && <ManageIntakeSection adminEmail={adminEmail} />}
             {section === 'ders_isci' && <ManageDersIsciSection adminEmail={adminEmail} />}
 
             {section === 'drafts' && (

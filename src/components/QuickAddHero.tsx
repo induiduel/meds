@@ -27,6 +27,7 @@ import { AppUser } from '../services/auth';
 import { getDefaultActiveCommitteeId, filterCurrent2026_2027Committees } from '../services/firestoreDb';
 import { OptionsEditor } from './ui/OptionsEditor';
 import { ComposerAssist } from './quickadd/ComposerAssist';
+import { IntakeEcho } from './quickadd/IntakeEcho';
 import { BlurOverlay } from './ui/Animations';
 import { toast } from './ui/Toast';
 import { ApiService, SimilarPastQuestion, SourceRefLite } from '../services/api';
@@ -101,7 +102,7 @@ interface QuickAddHeroProps {
     targetQuestionId?: string;
     /** Sınav yılı ("2025-2026"); bilinmiyorsa yok */
     examYear?: string;
-  }) => Promise<void>;
+  }) => Promise<void | { intakeId?: string | null }>;
   unassignedCount: number;
   totalQuestionsCount: number;
   questions?: QuestionItem[];
@@ -271,6 +272,7 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
   const [linkedQuestion, setLinkedQuestion] = useState<QuestionItem | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [successMessage, setSuccessMessage] = useState<string | null>(null);
+  const [intakeId, setIntakeId] = useState<string | null>(null);
   const [formError, setFormError] = useState<string | null>(null);
   const [similar, setSimilar] = useState<SimilarPastQuestion[]>([]);
   const [simOpen, setSimOpen] = useState(false);
@@ -729,8 +731,9 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
     }
 
     setIsSubmitting(true);
+    setIntakeId(null);
     try {
-      await onSubmitContribution({
+      const submitted = await onSubmitContribution({
         committeeId: targetCommittee.id,
         questionNumber: hasNumber ? num : undefined,
         isUnknownNumber: !hasNumber,
@@ -745,6 +748,7 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
         targetQuestionId: linkedQuestion?.id,
         examYear: examYear || undefined,
       });
+      if (submitted && submitted.intakeId) setIntakeId(submitted.intakeId);
       setTexts({ stem: '', clue: '' });
       setOptions({ A: '', B: '', C: '', D: '', E: '' });
       setOptionCount(1);
@@ -949,11 +953,11 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
                       {({ kok: 'Soru kökü', tur: 'Soru tipi', onculler: 'Öncüller', siklar: 'Şıklar', son: 'Son dokunuş' } as Record<WizStep, string>)[wiz]}
                       <small>{wizSteps.indexOf(wiz) + 1} / {wiz === 'kok' || wiz === 'tur' ? (qType === 'onculu' ? 5 : qType ? 4 : '4–5') : wizSteps.length}</small>
                     </span>
-                    {wiz === 'son' ? (
-                      <button type="submit" className="ms-composer-send" disabled={isSubmitting || isLocked}>
-                        {isSubmitting ? 'Ekleniyor…' : 'Havuza ekle'}
-                      </button>
-                    ) : wiz !== 'tur' ? (
+                    {/* Son adımda sağ üstte 'Havuza ekle' butonu konmaz; önceki adımda (şıklar)
+                        'Devam et'e basan kullanıcının çift dokunuşla ya da refleksle künye ve
+                        ipucunu doldurmadan soruyu göndermesini önlemek için gönderim yalnızca panelin
+                        altındaki birincil .wz-submit butonuyla yapılır. */}
+                    {wiz !== 'tur' && wiz !== 'son' ? (
                       <button type="button" className="ms-composer-send" disabled={wiz === 'kok' && !texts.stem.trim()} onClick={wizNext}>
                         Devam et
                       </button>
@@ -1127,6 +1131,12 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
                             inputMode="numeric"
                             value={questionNumber}
                             onChange={(e) => { setQuestionNumber(e.target.value.replace(/[^0-9]/g, '').slice(0, 3)); setUserManualNumber(true); setAutoNum(false); }}
+                            onKeyDown={(e) => {
+                              if (e.key === 'Enter') {
+                                e.preventDefault();
+                                (e.target as HTMLInputElement).blur();
+                              }
+                            }}
                             placeholder="bilmiyorum"
                             aria-label="Soru numarası (bilmiyorsan boş bırak)"
                           />
@@ -1590,6 +1600,7 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
         {successMessage && (
           <div role="status" className="ms-pop-in px-4 py-3 rounded-2xl bg-ok-soft text-ok text-base font-medium">Teşekkürler! {successMessage}</div>
         )}
+        {intakeId && <IntakeEcho key={intakeId} intakeId={intakeId} onClose={() => setIntakeId(null)} />}
       </form>
 
       {optimizingQuestion && (

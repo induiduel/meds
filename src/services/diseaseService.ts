@@ -1,5 +1,6 @@
 import { DiseaseProfile } from '../types/disease';
 import seedDiseases from '../data/diseases.json';
+import { isV2, normalizeDisease } from './diseaseModel';
 
 const CUSTOM_DISEASES_STORAGE_KEY = 'medsor_custom_diseases_v1';
 const FAVORITES_STORAGE_KEY = 'medsor_favorite_diseases_v1';
@@ -9,17 +10,20 @@ export const DiseaseService = {
    * Tüm hastalıkları getirir (varsayılan veritabanı + kullanıcının eklediği/düzenlediği)
    */
   getAllDiseases(): DiseaseProfile[] {
-    const list: DiseaseProfile[] = [...(seedDiseases as unknown as DiseaseProfile[])];
+    const list: DiseaseProfile[] = (seedDiseases as unknown[]).map(normalizeDisease);
     
     if (typeof localStorage !== 'undefined') {
       try {
         const rawCustom = localStorage.getItem(CUSTOM_DISEASES_STORAGE_KEY);
         if (rawCustom) {
-          const customList: DiseaseProfile[] = JSON.parse(rawCustom);
-          for (const item of customList) {
-            const idx = list.findIndex(d => d.id === item.id);
+          // Eski (şema 1) yerel katkılar da şema 2'ye çevrilir; birleştirilmiş eski kimlik kanonik kayda düşer
+          for (const rawItem of JSON.parse(rawCustom) as unknown[]) {
+            const item = normalizeDisease(rawItem);
+            const idx = list.findIndex(d => d.id === item.id || (d.aliases || []).includes(item.id));
+            // Şema 1 düzenlemesi eski şablon verisinin kopyasıdır: yeniden yazılmış kanonik kaydı ezmez
+            if (idx >= 0 && !isV2(rawItem)) continue;
             if (idx >= 0) {
-              list[idx] = { ...list[idx], ...item };
+              list[idx] = { ...list[idx], ...item, id: list[idx].id };
             } else {
               list.unshift(item);
             }
@@ -33,8 +37,10 @@ export const DiseaseService = {
     return list;
   },
 
+  /** Kimlik ya da birleştirilmiş eski kimlik (alias) ile */
   getDiseaseById(id: string): DiseaseProfile | undefined {
-    return this.getAllDiseases().find(d => d.id === id);
+    const all = this.getAllDiseases();
+    return all.find(d => d.id === id) || all.find(d => (d.aliases || []).includes(id));
   },
 
   /**
@@ -92,7 +98,11 @@ export const DiseaseService = {
     if (typeof localStorage === 'undefined') return new Set();
     try {
       const raw = localStorage.getItem(FAVORITES_STORAGE_KEY);
-      return new Set(raw ? JSON.parse(raw) : []);
+      const ids: string[] = raw ? JSON.parse(raw) : [];
+      // Birleştirilen eski kimlikler kanonik kimliğe çevrilir
+      const canon = new Map<string, string>();
+      for (const d of seedDiseases as Array<{ id: string; aliases?: string[] }>) for (const a of d.aliases || []) canon.set(a, d.id);
+      return new Set(ids.map((id) => canon.get(id) || id));
     } catch {
       return new Set();
     }

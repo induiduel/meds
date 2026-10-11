@@ -8,6 +8,7 @@ import { offlineDatabaseService } from './offlineDatabaseService';
 import { collection, addDoc } from 'firebase/firestore';
 import { ADMIN_EMAIL, getLocalAdminSession } from './auth';
 import { defaultApiBaseForThisHost } from '../config/deployment';
+import { clientCache } from './clientCache';
 import { BUNDLED_SCRIPTS, BUNDLED_PIPELINES } from '../data/bundledScripts';
 import {
   clusterDraftsForCommittee,
@@ -295,6 +296,12 @@ export async function safeJsonFetch<T = any>(
         headers.set('x-admin-email', ADMIN_EMAIL);
       }
     }
+    const resolvedUrlString = typeof resolvedInput === 'string' ? resolvedInput : String(resolvedInput);
+    const storedEtagEntry = method === 'GET' ? clientCache.getStoredETag(resolvedUrlString) : null;
+    if (storedEtagEntry?.etag && !headers.has('If-None-Match')) {
+      headers.set('If-None-Match', storedEtagEntry.etag);
+    }
+
     const fetchOptions: RequestInit = {
       ...init,
       headers,
@@ -303,6 +310,12 @@ export async function safeJsonFetch<T = any>(
     sentHeaders = headers;
     sentTimeoutMs = timeoutMs;
     const res = await fetch(resolvedInput, fetchOptions);
+
+    // HTTP 304 Not Modified: Sunucuda veri değişmemiş, yerel önbellekteki veriyi anında döndür (0 bayt aktarım)
+    if (res.status === 304 && storedEtagEntry?.cachedResponse) {
+      return { ok: true, status: 200, data: storedEtagEntry.cachedResponse as T };
+    }
+
     const contentType = res.headers.get('content-type') || '';
     if (!res.ok) {
       let errMsg = `HTTP ${res.status}`;
@@ -328,12 +341,21 @@ export async function safeJsonFetch<T = any>(
     }
 
     const data = await res.json();
+    const responseEtag = res.headers.get('ETag') || res.headers.get('etag');
+    if (method === 'GET' && responseEtag) {
+      clientCache.setStoredETag(resolvedUrlString, responseEtag, data);
+    }
     return { ok: true, status: res.status, data };
   } catch (err: any) {
     // Ağ düzeyinde hata + kayıtlı özel API adresi varsa: adres bayatlamış olabilir
     // (eski tünel/DNS). Varsayılan adres farklıysa bir kez oradan dene; tutarsa bayat kaydı sil.
     try {
-      if (typeof input === 'string' && input.startsWith('/') && typeof localStorage !== 'undefined') {
+      if (
+        (typeof navigator === 'undefined' || navigator.onLine) &&
+        typeof input === 'string' &&
+        input.startsWith('/') &&
+        typeof localStorage !== 'undefined'
+      ) {
         const stored = (localStorage.getItem(API_BASE_URL_KEY) || '').trim().replace(/\/$/, '');
         let def = '';
         try { def = defaultApiBaseForThisHost().replace(/\/$/, ''); } catch { def = ''; }
@@ -353,16 +375,24 @@ export async function safeJsonFetch<T = any>(
       }
     } catch (_) {}
     const isTimeout = err.name === 'AbortError' || err.name === 'TimeoutError';
-    const errMsg = isTimeout
-      ? 'Sunucu yanıt zaman aşımına uğradı. İstemci yapay zeka motoru devreye alınıyor...'
-      : (err.message || 'Bağlantı hatası');
+    const isOffline = typeof navigator !== 'undefined' && !navigator.onLine;
+    const errMsg = isOffline
+      ? 'Çevrimdışı mod: Cihazınızda internet bağlantısı yok.'
+      : isTimeout
+        ? 'Sunucu yanıt zaman aşımına uğradı. İstemci yapay zeka motoru devreye alınıyor...'
+        : (err.message || 'Bağlantı hatası');
     return { ok: false, status: 0, error: errMsg };
   }
 }
 
 let isServerAvailable: boolean | null = null;
+if (typeof window !== 'undefined') {
+  window.addEventListener('online', () => { isServerAvailable = null; });
+  window.addEventListener('offline', () => { isServerAvailable = false; });
+}
 
 async function checkServer(): Promise<boolean> {
+  if (typeof navigator !== 'undefined' && !navigator.onLine) return false;
   if (isServerAvailable !== null) return isServerAvailable;
   try {
     const customUrl = getCustomApiUrl();
@@ -377,6 +407,24 @@ async function checkServer(): Promise<boolean> {
   }
   isServerAvailable = false;
   return false;
+}
+
+/** Serbest metin girdisinin öğrenciye dönen ayrıştırma özeti (GET /api/question-intake/:id) */
+export interface QuestionIntakeSummary {
+  id: string;
+  status: 'bekliyor' | 'isleniyor' | 'ayristirildi' | 'icerik_yok' | 'kota_bekliyor' | 'hata';
+  nextTryAt?: string;
+  units: {
+    ders: string;
+    konu: string | null;
+    soruNo: number | null;
+    odak: string | null;
+    bulgular: string[];
+    siklar: { harf: string | null; metin: string }[];
+    cevap: { harf: string | null; metin: string } | null;
+    olumsuzKok: number;
+    eksikler: string[];
+  }[];
 }
 
 export interface StudioAiModels {
@@ -1572,6 +1620,35 @@ export const ApiService = {
     return res.ok && res.data?.success ? { text: res.data.text, changes: res.data.changes } : null;
   },
 
+  /** Serbest metin girdisini ham kayıt olarak gönderir; sunucu arka planda ücretsiz Gemini ile ayrıştırır. */
+  async submitQuestionIntake(data: {
+    rawText: string;
+    committeeId: string;
+    questionNumber?: number;
+    discipline?: string;
+    questionId?: string;
+    uid?: string;
+    author?: string;
+    source: string;
+    options?: { key: 'A' | 'B' | 'C' | 'D' | 'E'; text: string }[];
+    claimedAnswer?: 'A' | 'B' | 'C' | 'D' | 'E';
+  }): Promise<string | null> {
+    const res = await safeJsonFetch<{ id: string }>('/api/question-intake', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data),
+    });
+    return res.ok ? res.data?.id || null : null;
+  },
+
+  async getQuestionIntake(id: string): Promise<QuestionIntakeSummary | null> {
+    const res = await safeJsonFetch<QuestionIntakeSummary>(`/api/question-intake/${encodeURIComponent(id)}`, {
+      method: 'GET',
+      headers: { Accept: 'application/json' },
+    });
+    return res.ok ? res.data || null : null;
+  },
+
   async findSimilarPastQuestions(text: string, committeeId?: string): Promise<SimilarPastQuestion[]> {
     const res = await safeJsonFetch<{ results: SimilarPastQuestion[] }>('/api/past-questions/similar', {
       method: 'POST',
@@ -2424,8 +2501,14 @@ export const ApiService = {
       const cached = await pastQuestionsCache.getCachedQuestions();
       if (cached && cached.length > 0) {
         list = cached;
-        // Arka planda soru bazında artıksal senkronizasyon çalıştır (Bloklamaz, 0 gecikme)
-        pastQuestionsCache.syncWithRemote().catch(() => {});
+        // Arka planda soru bazında artıksal senkronizasyonu tarayıcı boştayken çalıştır (0 UI bloklama)
+        if (typeof window !== 'undefined') {
+          if ('requestIdleCallback' in window) {
+            (window as any).requestIdleCallback(() => pastQuestionsCache.syncWithRemote().catch(() => {}), { timeout: 8000 });
+          } else {
+            setTimeout(() => pastQuestionsCache.syncWithRemote().catch(() => {}), 4000);
+          }
+        }
       }
     } catch {}
 
@@ -3599,19 +3682,38 @@ export const ApiService = {
   },
 
 
-  async saveApprovedPastQuestion(question: QuestionItem): Promise<QuestionItem> {
+  async saveApprovedPastQuestion(question: QuestionItem, adminEmailHint?: string): Promise<QuestionItem> {
     const updated: QuestionItem = {
       ...question,
       status: 'completed',
       updatedAt: new Date().toISOString(),
     };
 
+    // 1. Express sunucusuna PUT gönder (sunucu belleği + pastQuestions.json + Supabase anında güncellenir)
+    try {
+      const email = adminEmailHint || (typeof window !== 'undefined' && (window as any).currentUser?.email) || ADMIN_EMAIL;
+      await safeJsonFetch(`/api/past-exams/${encodeURIComponent(question.id)}`, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json', 'x-admin-email': email },
+        body: JSON.stringify(updated),
+      });
+    } catch (e) {
+      console.warn('[ApiService] saveApprovedPastQuestion server PUT warning:', e);
+    }
+
+    // 2. İstemci IndexedDB Cache'ini anında güncelle (ekranda ve sınav listesinde hemen güncel görünür)
+    try {
+      await pastQuestionsCache.saveQuestion(updated);
+    } catch (_) {}
+
+    // 3. multiDbManager ile Supabase/Firestore doğrudan aynala
     try {
       await multiDbManager.savePastQuestion(updated);
     } catch (e) {
       console.warn('[ApiService] multiDbManager savePastQuestion fallback', e);
     }
 
+    // 4. Local DB fallback
     const db = getLocalDb();
     const idx = db.questions.findIndex((item) => item.id === question.id);
     if (idx !== -1) {

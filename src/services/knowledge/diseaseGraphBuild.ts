@@ -14,6 +14,7 @@ import fs from 'fs';
 import path from 'path';
 import { PhraseMatcher, fold, splitWords, type IntentKey } from '../queryIntel/core';
 import type { QueryIntelPackJson } from '../queryIntel/engine';
+import { toFlatView } from '../diseaseModel';
 import {
   EvidenceBucket, SECTION_FIELD, SOURCE_TIER, maskSig, placeholderSignatures, sectionsOf, sentenceQuality, splitSentences,
   type Evidence, type SectionKey,
@@ -88,6 +89,7 @@ export function diseaseAliases(d: any, enc?: any): string[] {
   const m = name.match(/\(([^)]{2,40})\)/);
   if (m) for (const p of m[1].split(/[\/,;]| ve /)) { const t = p.trim(); if (t.length >= 3) out.add(t); }
   if (d.latinName && String(d.latinName).length >= 4) out.add(String(d.latinName));
+  for (const a of d.altNames || []) { const t = String(a).replace(/\s*\([^)]*\)\s*/g, ' ').replace(/\s+/g, ' ').trim(); if (t.length >= 4) out.add(t); }
   for (const a of enc?.aliases || []) if (String(a).length >= 3) out.add(String(a));
   // Çok genel tek sözcüklü adlar (≤4 harf, kısaltma değil) eşleşmeyi bozar
   return [...out].filter((a) => !(a.split(/\s+/).length === 1 && a.length <= 4 && a !== a.toLocaleUpperCase('tr-TR')));
@@ -130,7 +132,8 @@ export function buildDiseaseGraph(opts: GraphBuildOptions): { skipped: boolean; 
     return { skipped: true, stats: prev.stats, outPath };
   }
 
-  const diseases = readJson<any[]>(diseasesPath) || [];
+  // Şema 2 (yapılandırılmış maddeler) → denetim/eşleyicinin kullandığı düz alan görünümü
+  const diseases = (readJson<any[]>(diseasesPath) || []).map(toFlatView);
   const enc = new Map<string, any>((readJson<any[]>(encPath) || []).map((e) => [e.id, e]));
   const chunks = readJson<any[]>(chunksPath) || [];
   if (!diseases.length || chunks.length < 100) throw new Error('hastalık ya da derlem verisi yok');

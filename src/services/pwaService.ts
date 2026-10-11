@@ -115,7 +115,7 @@ class PwaService {
     try {
       // Sürüm sorgusu Cloudflare önbelleğini atlatır: /sw.js eskiden "immutable, 1 yıl" başlığıyla CDN'de
       // takılı kalmıştı (yeni SW hiç inmiyordu). public/sw.js içindeki CACHE_VERSION değişince bunu da artır.
-      const swUrl = '/sw.js?v=6';
+      const swUrl = '/sw.js?v=7';
       const reg = await navigator.serviceWorker.register(swUrl, { scope: '/' });
       this.registration = reg;
       this.state.isRegistered = true;
@@ -139,6 +139,49 @@ class PwaService {
 
       // Arka plan senkronizasyonunu kaydet
       await this.registerBackgroundSync();
+
+      // Çevrimdışı çekirdek rotaları Service Worker'a mühürle
+      if (typeof window !== 'undefined' && 'requestIdleCallback' in window) {
+        (window as any).requestIdleCallback(() => {
+          this.precacheUrls([
+            '/',
+            '/index.html',
+            '/manifest.json',
+            '/cikmis',
+            '/ogren',
+            '/kartlar',
+            '/hastaliklar',
+            '/sozluk',
+            '/calis',
+            '/ozetler',
+            '/kazanimlar',
+            '/test',
+            '/istatistik',
+            '/ayarlar',
+            '/api/committees',
+          ]);
+        }, { timeout: 6000 });
+      } else {
+        setTimeout(() => {
+          this.precacheUrls([
+            '/',
+            '/index.html',
+            '/manifest.json',
+            '/cikmis',
+            '/ogren',
+            '/kartlar',
+            '/hastaliklar',
+            '/sozluk',
+            '/calis',
+            '/ozetler',
+            '/kazanimlar',
+            '/test',
+            '/istatistik',
+            '/ayarlar',
+            '/api/committees',
+          ]);
+        }, 4000);
+      }
 
       this.notify();
       return reg;

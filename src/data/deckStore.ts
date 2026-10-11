@@ -105,18 +105,29 @@ export function loadDeck<T = any>(id: string): Promise<T | null> {
   if (!p) {
     const loader = loaders[`./decks/items/${safe(id)}.json`];
     p = (async () => {
-      try {
-        if (loader) {
+      // 1. Önce Vite derlenmiş modülünü dene (RAM / hızlı chunk)
+      if (loader) {
+        try {
           const res = await loader();
           if (res) return res;
-        }
-      } catch (err) {
-        console.warn(`[DeckStore] Modül yüklenemedi (${id}), API yedeği deneniyor:`, err);
+        } catch (_) {}
       }
-      // Derlenmiş parça yoksa (eski imaj / eksik bölme) canlı API'den çek
-      const viaApi = await loadFromApi<T>(id);
-      if (viaApi) return viaApi;
-      return await loadFromIndexedDb(id);
+
+      // 2. Cihaz hafızasındaki (IndexedDB) tam desteye bak (< 5ms - sıfır ağ gecikmesi)
+      try {
+        const fromDb = await loadFromIndexedDb(id);
+        if (fromDb) return fromDb;
+      } catch (_) {}
+
+      // 3. Cihazda yoksa ve internete bağlıysak sunucudan dene
+      if (typeof navigator === 'undefined' || navigator.onLine) {
+        try {
+          const viaApi = await loadFromApi<T>(id);
+          if (viaApi) return viaApi;
+        } catch (_) {}
+      }
+
+      return null;
     })();
     cache.set(id, p);
     // Başarısız yükleme önbellekte kalmasın: bağlantı dönünce aynı deste yeniden denenebilsin

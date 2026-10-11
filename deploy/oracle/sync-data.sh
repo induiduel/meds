@@ -47,7 +47,6 @@ EXCLUDES=(
   --exclude='node_modules'
   --exclude='dist'
   --exclude='*.log'
-  --exclude='local_rag_chunks.json'
   --exclude='*.legacy_backup.json'
   --exclude='active_tunnel.txt'
 )

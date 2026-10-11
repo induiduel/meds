@@ -55,12 +55,49 @@ export const TYPE_ORDER: SearchDocType[] = [
   'ornek_question', 'deck_slide', 'glossary_term', 'disease',
 ];
 
+// İstemci tarafı arama sonuçları önbelleği (LRU Memory Cache)
+// Aynı arama terimleri için sunucuya gereksiz paralel 4 istek atılmasını önler (10 dk TTL)
+const SEARCH_CACHE_TTL = 10 * 60 * 1000;
+const MAX_SEARCH_CACHE_ENTRIES = 150;
+interface SearchCacheEntry {
+  res: SearchResponse;
+  timestamp: number;
+}
+const searchCacheMap = new Map<string, SearchCacheEntry>();
+
+function getCachedSearch(key: string): SearchResponse | null {
+  const entry = searchCacheMap.get(key);
+  if (!entry) return null;
+  if (Date.now() - entry.timestamp > SEARCH_CACHE_TTL) {
+    searchCacheMap.delete(key);
+    return null;
+  }
+  return entry.res;
+}
+
+function setCachedSearch(key: string, res: SearchResponse) {
+  if (searchCacheMap.size >= MAX_SEARCH_CACHE_ENTRIES) {
+    const oldestKey = searchCacheMap.keys().next().value;
+    if (oldestKey) searchCacheMap.delete(oldestKey);
+  }
+  searchCacheMap.set(key, { res, timestamp: Date.now() });
+}
+
 export async function fetchSearch(
   q: string,
   opts: { types?: SearchDocType[]; offset?: number; limit?: number; committeeId?: string; track?: boolean } = {},
   signal?: AbortSignal
 ): Promise<SearchResponse | null> {
-  const params = new URLSearchParams({ q, offset: String(opts.offset || 0), limit: String(opts.limit || 5) });
+  const normalizedQ = q.trim();
+  if (!normalizedQ) return null;
+
+  const cacheKey = `${normalizedQ.toLowerCase()}_${(opts.types || []).slice().sort().join(',')}_${opts.offset || 0}_${opts.limit || 5}_${opts.committeeId || ''}`;
+  const cached = getCachedSearch(cacheKey);
+  if (cached) {
+    return cached;
+  }
+
+  const params = new URLSearchParams({ q: normalizedQ, offset: String(opts.offset || 0), limit: String(opts.limit || 5) });
   if (opts.types?.length) params.set('types', opts.types.join(','));
   if (opts.committeeId) params.set('committeeId', opts.committeeId);
   // Yalnız gerçek arama (arama sayfası) anonim günlüğe yazılır; paletin yazarken yaptığı istekler değil
@@ -68,13 +105,16 @@ export async function fetchSearch(
   const res = await safeJsonFetch<SearchResponse & { success: boolean }>(`/api/search/all?${params}`, { signal });
   if (!res.ok || !res.data?.success) return null;
   const includeV3 = !opts.types?.length || opts.types.some((type) => type.startsWith('gemini_v3_'));
-  if (!includeV3 || !q.trim()) return res.data;
-  const v3Params = new URLSearchParams({ q, limit: String(Math.max(opts.limit || 5, 20)) });
+  if (!includeV3) {
+    setCachedSearch(cacheKey, res.data);
+    return res.data;
+  }
+  const v3Params = new URLSearchParams({ q: normalizedQ, limit: String(Math.max(opts.limit || 5, 20)) });
   if (opts.committeeId) v3Params.set('committeeId', opts.committeeId);
   const [questions, lectures, terms] = await Promise.all([
     safeJsonFetch<any>(`/api/gemini-v3/questions?${v3Params}`, { signal }),
     safeJsonFetch<any>(`/api/gemini-v3/lecture-notes?${v3Params}`, { signal }),
-    safeJsonFetch<any>(`/api/gemini-v3/thesaurus?q=${encodeURIComponent(q)}`, { signal }),
+    safeJsonFetch<any>(`/api/gemini-v3/thesaurus?q=${encodeURIComponent(normalizedQ)}`, { signal }),
   ]);
   const v3Hits: SearchHit[] = [];
   if (questions.ok && questions.data?.items) for (const item of questions.data.items) v3Hits.push({
@@ -96,8 +136,15 @@ export async function fetchSearch(
   });
   const filteredV3 = opts.types?.length ? v3Hits.filter((hit) => opts.types!.includes(hit.documentType)) : v3Hits;
   const merged = [...res.data.results, ...filteredV3].slice(0, opts.offset ? (opts.offset + (opts.limit || 5)) : (opts.limit || 5));
-  return { ...res.data, total: res.data.total + filteredV3.length, capped: res.data.capped, results: merged,
-    byType: { ...res.data.byType, ...Object.fromEntries(filteredV3.reduce((map, hit) => map.set(hit.documentType, (map.get(hit.documentType) || 0) + 1), new Map<SearchDocType, number>())) } };
+  const finalResult: SearchResponse = {
+    ...res.data,
+    total: res.data.total + filteredV3.length,
+    capped: res.data.capped,
+    results: merged,
+    byType: { ...res.data.byType, ...Object.fromEntries(filteredV3.reduce((map, hit) => map.set(hit.documentType, (map.get(hit.documentType) || 0) + 1), new Map<SearchDocType, number>())) }
+  };
+  setCachedSearch(cacheKey, finalResult);
+  return finalResult;
 }
 
 /* Türkçe duyarlı vurgulama: aranan sözcüklerin ilk 5 harfi (kök) eşleşir */

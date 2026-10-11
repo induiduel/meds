@@ -142,45 +142,38 @@ export const RelatedPanel: React.FC<{
   onOpenDisease: (id: string) => void;
   onSearch: (q: string) => void;
 }> = ({ data, onOpenDisease, onSearch }) => {
-  if (!data || (!data.related.length && !data.relatedDiseases.length)) return null;
+  // En alakalı en çok 5 hastalık + 5 kavram (ağırlığa göre sıralı gelir); kaynak listesi gösterilmez
+  const dis = (data?.relatedDiseases || []).slice(0, 5);
+  const con = (data?.related || []).filter((r) => r.type !== 'topic').slice(0, 5);
+  if (!dis.length && !con.length) return null;
   return (
     <section className="dz-sec is-ai">
       <header className="dz-sec-h">
         <span className="dz-sec-ic" aria-hidden><GitBranch /></span>
         <h4>Bağlantılı kavramlar</h4>
       </header>
-      {data.relatedDiseases.length > 0 && (
+      {dis.length > 0 && (
         <>
           <h5 className="dz-sub">İlişkili hastalıklar</h5>
           <div className="dz-chips">
-            {data.relatedDiseases.map((r) => (
-              <button key={r.id} type="button" className="dz-chip" onClick={() => onOpenDisease(r.id)} title={r.ddx ? 'Kaynaklarda ayırıcı tanı bağlamında geçiyor' : 'Kaynaklarda birlikte geçiyor'}>
-                <ConceptIcon type="disease" className="w-3.5 h-3.5" /> {r.name}{r.ddx && <em>ayırıcı tanı</em>}
+            {dis.map((r) => (
+              <button key={r.id} type="button" className="dz-chip" onClick={() => onOpenDisease(r.id)}>
+                {r.name}{r.ddx && <em>ayırıcı tanı</em>}
               </button>
             ))}
           </div>
         </>
       )}
-      {data.related.length > 0 && (
+      {con.length > 0 && data && (
         <>
           <h5 className="dz-sub">Sık birlikte geçen kavramlar</h5>
           <div className="dz-chips">
-            {data.related.slice(0, 14).map((r) => (
+            {con.map((r) => (
               <button key={r.ref} type="button" className="dz-chip" onClick={() => onSearch(`${data.name.replace(/\s*\([^)]*\)/g, '')} ${r.label}`)} title={`${CONCEPT_META[r.type]?.label || 'Kavram'} — ikisini birlikte ara`}>
-                <ConceptIcon type={r.type} className="w-3.5 h-3.5" /> {r.label} <ArrowUpRight className="w-3 h-3 opacity-60" aria-hidden />
+                {r.label}
               </button>
             ))}
           </div>
-        </>
-      )}
-      {data.sources.length > 0 && (
-        <>
-          <h5 className="dz-sub">En çok geçtiği kaynaklar</h5>
-          <ul className="dz-srclist">
-            {data.sources.slice(0, 5).map((s, i) => (
-              <li key={i}><span>{SRC_LABEL[s.type] || s.type}</span> {s.title} <b>{s.n}</b></li>
-            ))}
-          </ul>
         </>
       )}
     </section>

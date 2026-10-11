@@ -19,6 +19,7 @@ import { disciplineClass } from '../utils/discipline';
 interface KazanimItem {
   id: string;
   metin: string;
+  totalOrnekCount?: number;
   slaytlar: Array<{ kaynak: string; sayfa: number; alinti?: string; deckId?: string }>;
   cikmisSorular: Array<{
     id: string;
@@ -287,7 +288,8 @@ export const KazanimlarView: React.FC<Props> = ({
                       {konuGroup.kazanimlar.map((kazanim, kIdx) => {
                         const activeTab = activeTabByKazanim[kazanim.id] || '';
                         const hasSlides = kazanim.slaytlar.length > 0;
-                        const hasOrnek = kazanim.ornekSorular.length > 0;
+                        const ornekCount = kazanim.totalOrnekCount ?? (kazanim.ornekSorular ? kazanim.ornekSorular.length : 0);
+                        const hasOrnek = ornekCount > 0;
                         const hasCikmis = kazanim.cikmisSorular.length > 0;
                         const hasGlossary = kazanim.sozlukTerimleri.length > 0;
                         const hasSummaries = kazanim.ozetler.length > 0;
@@ -342,7 +344,7 @@ export const KazanimlarView: React.FC<Props> = ({
                                   title="Kazanım temelli örnek sorular"
                                 >
                                   <Target className="w-3.5 h-3.5" />
-                                  <span className="sr-only">Örnek Soru</span><span className="tabular-nums">{kazanim.ornekSorular.length}</span>
+                                  <span className="sr-only">Örnek Soru</span><span className="tabular-nums">{ornekCount}</span>
                                 </button>
                               )}
 

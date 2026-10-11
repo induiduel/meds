@@ -520,6 +520,16 @@ class OfflineDatabaseService {
   }
 
   /**
+   * Ders özetlerini cihaza kaydet
+   */
+  public async saveSummaries(items: any[]): Promise<void> {
+    if (!items || items.length === 0) return;
+    const db = await this.initDb();
+    if (!db) return;
+    await this.putBatch(db, STORE_SUMMARIES, items);
+  }
+
+  /**
    * TÜM VERİTABANINI CİHAZA İNDİR (TEK TIKLA %100 ÇEVRİMDIŞI)
    */
   public async downloadEntireDatabase(
@@ -686,13 +696,33 @@ class OfflineDatabaseService {
         if (flashcardsList.length > 0) {
           await this.putBatch(db, STORE_FLASHCARDS, flashcardsList);
         }
-        report(`${flashcardsList.length} akıl kartı hazırlandı ve kaydedildi.`, 90);
+        report(`${flashcardsList.length} akıl kartı hazırlandı ve kaydedildi.`, 88);
       } catch (e) {
         console.warn('[OfflineDb] Kartlar indirme uyarısı:', e);
       }
 
-      // 7. AŞAMA: Çevrimdışı Sayfa Modüllerini Önceden Yükle (Preload Chunks) (%90 - %96)
-      report('Çevrimdışı sayfaların modülleri önbelleğe alınıyor...', 92);
+      // 6.5 AŞAMA: Ders Özetlerini (Summaries) Kaydet (%88 - %92)
+      report('Ders özetleri önbelleğe alınıyor...', 89);
+      try {
+        const [k1, k2, k3, k4, k5, k6] = await Promise.all([
+          import('../data/summaries/kurul1.json').then((m) => m.default || m).catch(() => []),
+          import('../data/summaries/kurul2.json').then((m) => m.default || m).catch(() => []),
+          import('../data/summaries/kurul3.json').then((m) => m.default || m).catch(() => []),
+          import('../data/summaries/kurul4.json').then((m) => m.default || m).catch(() => []),
+          import('../data/summaries/kurul5.json').then((m) => m.default || m).catch(() => []),
+          import('../data/summaries/kurul6.json').then((m) => m.default || m).catch(() => []),
+        ]);
+        const allSummaries = [...k1, ...k2, ...k3, ...k4, ...k5, ...k6];
+        if (allSummaries.length > 0) {
+          await this.putBatch(db, STORE_SUMMARIES, allSummaries);
+        }
+        report(`${allSummaries.length} ders özeti cihaza kaydedildi.`, 92);
+      } catch (e) {
+        console.warn('[OfflineDb] Özet indirme uyarısı:', e);
+      }
+
+      // 7. AŞAMA: Çevrimdışı Sayfa Modüllerini Önceden Yükle (Preload Chunks) (%92 - %96)
+      report('Çevrimdışı sayfaların modülleri önbelleğe alınıyor...', 93);
       try {
         await Promise.allSettled([
           import('../components/encyclopedia/MedicalEncyclopediaView'),
@@ -706,6 +736,11 @@ class OfflineDatabaseService {
           import('../components/BookletView'),
           import('../components/LeaderboardView'),
           import('../components/learn/InteractiveDeckView'),
+          import('../components/diseases/DiseasesView'),
+          import('../components/LectureSummariesView'),
+          import('../components/PracticeQuestionsView'),
+          import('../components/stats/StatsView'),
+          import('../components/settings/ProfileSettingsView'),
         ]);
       } catch (e) {
         console.warn('[OfflineDb] Modül preload uyarısı:', e);
@@ -722,9 +757,15 @@ class OfflineDatabaseService {
         '/sozluk',
         '/kartlar',
         '/ogren',
+        '/hastaliklar',
         '/calis',
+        '/ozetler',
+        '/ornek-sorular',
         '/sorular',
         '/kazanimlar',
+        '/test',
+        '/istatistik',
+        '/ayarlar',
         '/api/committees',
         '/api/questions',
         '/api/past-exams/sync',
@@ -736,7 +777,7 @@ class OfflineDatabaseService {
       await this.setMeta(KEY_DOWNLOAD_DATE, now);
 
       await this.loadStats();
-      report('✓ Tüm veritabanı (sorular, desteler, sözlük, kartlar) başarıyla indirildi.', 100);
+      report('✓ Tüm veritabanı (sorular, desteler, özetler, sözlük, kartlar) başarıyla indirildi.', 100);
 
       this.isDownloading = false;
       this.state.isDownloading = false;

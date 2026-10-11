@@ -55,6 +55,34 @@ export const loadManageInbox = async (
   notifications: import('../types').AdminNotification[];
   drafts: QuestionItem[];
 }> => {
+  // 1. Önce hafif ve hızlı Express API gelen kutusunu dene (60MB yerine 20KB, 20ms anlık yanıt)
+  try {
+    const admin = getLocalAdminSession();
+    const email = admin?.email || auth?.currentUser?.email || 'nofrostlife@gmail.com';
+    const serverInbox = await safeJsonFetch<{ success: boolean; reports: InboxReport[]; comments: InboxComment[] }>(
+      '/api/admin/inbox',
+      { headers: { 'x-admin-email': email } }
+    );
+    if (serverInbox.ok && serverInbox.data?.success && Array.isArray(serverInbox.data.reports)) {
+      const [notifications, drafts] = await Promise.all([
+        FirestoreDbService.getAdminNotifications().catch(() => []),
+        committeeId
+          ? multiDbManager.getQuestions(committeeId).then((p) => (p || []).filter((q) => q.status !== 'completed')).catch(() => [] as QuestionItem[])
+          : Promise.resolve([] as QuestionItem[]),
+      ]);
+      return {
+        reports: serverInbox.data.reports,
+        comments: serverInbox.data.comments || [],
+        pastQuestions: [],
+        notifications,
+        drafts,
+      };
+    }
+  } catch (e) {
+    console.warn('[loadManageInbox] Hızlı sunucu inbox fallback yapılıyor:', e);
+  }
+
+  // 2. Fallback: Bulut servisleri üzerinden çek
   const [reports, pastQuestions, notifications] = await Promise.all([
     SupabaseDbService.getPastQuestionReports(200).catch(() => [] as InboxReport[]),
     multiDbManager.getPastQuestions().catch(() => [] as QuestionItem[]),

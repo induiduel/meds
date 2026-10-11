@@ -2,6 +2,7 @@ import { Committee, QuestionItem, LectureNote } from '../types';
 import { FirestoreDbService, filterCurrent2026_2027Committees, INITIAL_COMMITTEES } from './firestoreDb';
 import { SupabaseDbService, broadcastLiveEvent } from './supabaseDb';
 import { safeJsonFetch, getCustomApiUrl, getLocalDb, saveLocalDb } from './api';
+import { clientCache } from './clientCache';
 import { pastQuestionsCache } from './pastQuestionsCache';
 import { offlineDatabaseService } from './offlineDatabaseService';
 import { ADMIN_EMAIL } from './auth';
@@ -126,9 +127,22 @@ class MultiDbManager {
   }
 
   /**
-   * Resilient Committee fetcher with failover
+   * Resilient Committee fetcher with failover and client-side caching
    */
-  public async getCommittees(): Promise<Committee[]> {
+  public async getCommittees(options?: { forceRefresh?: boolean }): Promise<Committee[]> {
+    return clientCache.fetchWithCache<Committee[]>(
+      'app_committees_v1',
+      async () => this.fetchCommitteesInternal(),
+      {
+        ttlMs: 30 * 60 * 1000, // 30 dakika boyunca internetten tekrar çekilmez
+        staleMs: 7 * 24 * 60 * 60 * 1000,
+        forceRefresh: options?.forceRefresh,
+        tag: 'committees',
+      }
+    );
+  }
+
+  private async fetchCommitteesInternal(): Promise<Committee[]> {
     const mode = this.activeMode;
     let result: Committee[] = [];
 
@@ -232,9 +246,23 @@ class MultiDbManager {
   }
 
   /**
-   * Resilient Questions fetcher with failover
+   * Resilient Questions fetcher with failover and client-side caching
    */
-  public async getQuestions(committeeId: string): Promise<QuestionItem[]> {
+  public async getQuestions(committeeId: string, options?: { forceRefresh?: boolean }): Promise<QuestionItem[]> {
+    const cacheKey = `committee_questions_${committeeId}`;
+    return clientCache.fetchWithCache<QuestionItem[]>(
+      cacheKey,
+      async () => this.fetchQuestionsInternal(committeeId),
+      {
+        ttlMs: 5 * 60 * 1000, // 5 dakika boyunca internetten tekrar çekilmez
+        staleMs: 24 * 60 * 60 * 1000,
+        forceRefresh: options?.forceRefresh,
+        tag: `questions_${committeeId}`,
+      }
+    );
+  }
+
+  private async fetchQuestionsInternal(committeeId: string): Promise<QuestionItem[]> {
     const mode = this.activeMode;
     let questionsList: QuestionItem[] = [];
 
@@ -345,14 +373,23 @@ class MultiDbManager {
     try {
       const cached = await pastQuestionsCache.getCachedQuestions();
       if (cached && cached.length > 0) {
-        // Trigger non-blocking incremental delta-sync in the background
-        pastQuestionsCache.syncWithRemote().catch((err) => {
-          console.warn('[MultiDbManager] Background delta sync error:', err);
-        });
+        // Trigger non-blocking incremental delta-sync in the background when browser is idle
+        if (typeof window !== 'undefined') {
+          if ('requestIdleCallback' in window) {
+            (window as any).requestIdleCallback(() => pastQuestionsCache.syncWithRemote().catch(() => {}), { timeout: 8000 });
+          } else {
+            setTimeout(() => pastQuestionsCache.syncWithRemote().catch(() => {}), 4000);
+          }
+        }
         return cached;
       }
     } catch (e) {
       console.warn('[MultiDbManager] Cache check warning:', e);
+    }
+
+    // Çevrimdışıysa ve önbellekte yoksa ağ bağlantısını bekleme, anında boş dön
+    if (typeof navigator !== 'undefined' && !navigator.onLine) {
+      return [];
     }
 
     const mode = this.activeMode;
@@ -887,9 +924,57 @@ class MultiDbManager {
     broadcastLiveEvent('past_questions_changed', { eventType: 'DELETE', old: { id }, id });
   }
 
-  // Realtime Subscriptions
+  // Realtime Subscriptions with In-Memory / IndexedDB Live Push Sync
   public subscribeToQuestions(callback: (payload: any) => void): () => void {
-    return SupabaseDbService.subscribeToQuestions(callback);
+    clientCache.setRealtimeActive('questions', true);
+    const unsub = SupabaseDbService.subscribeToQuestions((payload) => {
+      try {
+        if ((payload.eventType === 'INSERT' || payload.eventType === 'UPDATE') && payload.new) {
+          const raw = payload.new;
+          const qData: QuestionItem = raw.data || {
+            id: raw.id,
+            committeeId: raw.committee_id,
+            questionNumber: raw.question_number,
+            discipline: raw.discipline,
+            topic: raw.topic,
+            status: raw.status,
+            claimedAnswer: raw.claimed_answer,
+            upvotes: raw.upvotes,
+            tags: raw.tags || [],
+            fragments: raw.fragments || [],
+            options: raw.options || [],
+            reconstruction: raw.reconstruction,
+            createdAt: raw.created_at,
+            updatedAt: raw.updated_at,
+          };
+          if (qData.committeeId) {
+            clientCache.updateItemInList<QuestionItem>(
+              `committee_questions_${qData.committeeId}`,
+              (item) => item.id === qData.id,
+              () => qData,
+              qData
+            );
+          }
+        } else if (payload.eventType === 'DELETE' && payload.old) {
+          const deletedId = (payload.old as any)?.id;
+          const commId = (payload.old as any)?.committee_id;
+          if (deletedId && commId) {
+            clientCache.removeItemFromList<QuestionItem>(
+              `committee_questions_${commId}`,
+              (item) => item.id === deletedId
+            );
+          }
+        }
+      } catch (e) {
+        console.warn('[MultiDbManager] Realtime push cache update warning:', e);
+      }
+      callback(payload);
+    });
+
+    return () => {
+      unsub();
+      clientCache.setRealtimeActive('questions', false);
+    };
   }
 
   public subscribeToPastQuestions(callback: (payload: any) => void): () => void {

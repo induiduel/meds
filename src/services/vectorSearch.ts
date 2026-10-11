@@ -10,7 +10,7 @@
  * konu 44; karma w=0.8 → 94/93/41, w=0.3 → 95/93/43. Öğrenci parçası sorgularında BM25 daha iyi; vektör yalnız
  * anlamca benzer (eş anlamlı) aramalarda yarar, onu ölçen bir test eklenince yeniden değerlendirilmeli.
  */
-const EMBED_URL = process.env.MEDS_EMBED_URL || 'http://127.0.0.1:8091/embed';
+const EMBED_URL = process.env.MEDS_EMBED_URL || process.env.MEDS_EMBED_BGE_URL || 'http://127.0.0.1:8094/embed';
 const TIMEOUT_MS = Number(process.env.MEDS_VECTOR_TIMEOUT_MS || 1500);
 const RRF_K = 60;
 const VECTOR_WEIGHT = Number(process.env.MEDS_VECTOR_WEIGHT || 0.8);
@@ -55,7 +55,7 @@ let downUntil = 0; // servis düşükse bir süre denenmez (her aramada zaman a�
 
 function supabaseTarget() {
   const url = (process.env.LOCAL_SUPABASE_URL || process.env.SUPABASE_URL || 'http://127.0.0.1:8000').replace(/\/+$/, '');
-  const key = process.env.LOCAL_SUPABASE_KEY || process.env.SUPABASE_SECRET_KEY || '';
+  const key = process.env.LOCAL_SUPABASE_KEY || process.env.SUPABASE_SECRET_KEY || process.env.SUPABASE_PUBLISHABLE_KEY || process.env.SUPABASE_KEY || '';
   return { url, key };
 }
 
@@ -70,7 +70,9 @@ async function withTimeout<T>(p: (signal: AbortSignal) => Promise<T>): Promise<T
 }
 
 export function vectorSearchEnabled(): boolean {
-  return process.env.MEDS_VECTOR_SEARCH === '1' && Date.now() > downUntil;
+  const flag = process.env.MEDS_VECTOR_SEARCH;
+  const enabled = flag !== undefined ? flag === '1' : Boolean(process.env.LOCAL_SUPABASE_URL || process.env.MEDS_EMBED_URL);
+  return enabled && Date.now() > downUntil;
 }
 
 /** Sorguya anlamsal olarak en yakın parçalar (yerel Supabase). Hata/kapalıysa boş liste. */

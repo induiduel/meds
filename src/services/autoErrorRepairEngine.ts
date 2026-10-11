@@ -168,6 +168,24 @@ class AutoRepairStore {
   private queue: AutoRepairItem[] = [];
   private bannedIds: Set<string> = new Set();
   private isLoaded = false;
+  private changeListeners: Set<() => void> = new Set();
+
+  public onQueueChange(fn: () => void): () => void {
+    this.changeListeners.add(fn);
+    return () => {
+      this.changeListeners.delete(fn);
+    };
+  }
+
+  private emitChange() {
+    for (const fn of this.changeListeners) {
+      try {
+        fn();
+      } catch (e: any) {
+        console.warn('[AutoRepairStore] onQueueChange dinleyici hatası:', e?.message);
+      }
+    }
+  }
 
   private load() {
     ensureDirs();
@@ -180,11 +198,13 @@ class AutoRepairStore {
   private save() {
     ensureDirs();
     writeJsonAtomic(QUEUE_FILE, this.queue);
+    this.emitChange();
   }
 
   private saveBanned() {
     ensureDirs();
     writeJsonAtomic(BANNED_IDS_FILE, Array.from(this.bannedIds));
+    this.emitChange();
   }
 
   isBanned(id: string): boolean {
@@ -418,10 +438,10 @@ function parseAiJsonOutput(text: string): any {
 
 // --- Ücretsiz Yapay Zeka Entegrasyonu & Çok Katmanlı Fall-back Sistemi ---
 // 1. Aşama: Google Gemini Ücretsiz Havuzu (7 Adet Key)
-// 2. Aşama: Groq Cloud Ücretsiz (openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b)
+// 2. Aşama: Groq Cloud Ücretsiz (llama-3.3-70b-versatile, llama-3.1-8b-instant)
 // 3. Aşama: OpenRouter / Muse Spark Ücretsiz Modeller (:free)
-// 4. Aşama: Yerel Ollama GPU Modelleri (qwen3:1.7b, medgemma1.5:4b)
-const FREE_GEMINI_MODELS = ['gemini-2.5-flash', 'gemini-2.0-flash', 'gemini-1.5-flash-latest', 'gemini-flash-latest'];
+// (Yerel GPU/Ollama AGENTS.md Kural 10 gereği tamamen kaldırılmıştır)
+const FREE_GEMINI_MODELS = ['gemini-2.0-flash', 'gemini-1.5-flash'];
 
 async function callFreeAiWithFallback(prompt: string, systemInstruction: string): Promise<{ data: any; model: string }> {
   let lastError: any = null;
@@ -454,6 +474,7 @@ async function callFreeAiWithFallback(prompt: string, systemInstruction: string)
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(body),
+            signal: AbortSignal.timeout(18000),
           });
 
           if (!res.ok) {
@@ -476,12 +497,12 @@ async function callFreeAiWithFallback(prompt: string, systemInstruction: string)
 
   console.warn('[AutoRepairEngine] ⚠️ Tüm ücretsiz Gemini anahtarları/modelleri tükendi veya limit aşıldı. 1. Fallback (Groq Cloud) devreye giriyor...');
 
-  // 2. AŞAMA (FALLBACK 1): Groq Cloud Ücretsiz (openai/gpt-oss-120b, qwen/qwen3.8-27b)
+  // 2. AŞAMA (FALLBACK 1): Groq Cloud Ücretsiz (llama-3.3-70b-versatile, llama-3.1-8b-instant)
   loadMedsEnv();
   const groqKeys = [process.env.GROQ_API_KEY, process.env.GROQ_API_KEY_2].filter(
     (k): k is string => Boolean(k && k.trim() && !k.startsWith('MY_'))
   );
-  const GROQ_MODELS = ['openai/gpt-oss-120b', 'qwen/qwen3.8-27b', 'openai/gpt-oss-20b'];
+  const GROQ_MODELS = ['llama-3.3-70b-versatile', 'llama-3.1-8b-instant'];
 
   if (groqKeys.length > 0) {
     for (const groqKey of groqKeys) {
@@ -503,6 +524,7 @@ async function callFreeAiWithFallback(prompt: string, systemInstruction: string)
               temperature: 0.1,
               response_format: { type: 'json_object' },
             }),
+            signal: AbortSignal.timeout(18000),
           });
 
           if (!res.ok) {
@@ -556,6 +578,7 @@ async function callFreeAiWithFallback(prompt: string, systemInstruction: string)
               ],
               temperature: 0.1,
             }),
+            signal: AbortSignal.timeout(18000),
           });
 
           if (!res.ok) {
@@ -576,32 +599,7 @@ async function callFreeAiWithFallback(prompt: string, systemInstruction: string)
     }
   }
 
-  // 4. AŞAMA (FALLBACK 3): Yerel Ollama (Eğer aktifse)
-  try {
-    console.log('[AutoRepairEngine] 🔄 [Ollama Fallback] Yerel Ollama (qwen3:1.7b-q8_0) deneniyor...');
-    const controller = new AbortController();
-    const timeout = setTimeout(() => controller.abort(), 12000);
-    const ollamaRes = await fetch('http://localhost:11434/api/generate', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        model: 'qwen3:1.7b-q8_0',
-        prompt: `${systemInstruction}\n\nİstek:\n${prompt}\n\nLütfen yalnızca geçerli bir JSON nesnesi döndür:`,
-        format: 'json',
-        stream: false,
-      }),
-      signal: controller.signal,
-    });
-    clearTimeout(timeout);
-    if (ollamaRes.ok) {
-      const data = await ollamaRes.json();
-      const parsed = parseAiJsonOutput(data.response);
-      console.log('[AutoRepairEngine] ✅ Yerel Ollama başarıyla yanıt verdi.');
-      return { data: parsed, model: 'ollama/qwen3:1.7b-q8_0' };
-    }
-  } catch (_) {}
-
-  throw lastError || new Error('Tüm ücretsiz yapay zeka modelleri (Gemini, Groq, OpenRouter, Ollama) tükendi veya erişilemez durumda.');
+  throw lastError || new Error('Tüm ücretsiz yapay zeka modelleri (Gemini, Groq, OpenRouter) tükendi veya erişilemez durumda.');
 }
 
 // Geriye dönük uyumluluk için alias
@@ -1068,6 +1066,20 @@ function syncSlideRevisionsAndReports(slide: any, item: AutoRepairItem, correcte
   };
 }
 
+// --- Veritabanı ve Sunucu Bellek Senkronizasyon Kancası (Database Sync Hook) ---
+export type DatabaseSyncHook = (params: {
+  source: ErrorSource;
+  targetId: string;
+  updatedData: any;
+  action: 'applied' | 'rolled_back' | 'verified_correct';
+}) => Promise<void> | void;
+
+let globalDatabaseSyncHook: DatabaseSyncHook | null = null;
+
+export function registerDatabaseSyncHook(hook: DatabaseSyncHook) {
+  globalDatabaseSyncHook = hook;
+}
+
 // --- Değişiklikleri Atomik Uygulama (Atomic Apply) ---
 export function applyRepairToDatabase(item: AutoRepairItem, correctedData: any): { success: boolean; error?: string } {
   try {
@@ -1116,6 +1128,19 @@ export function applyRepairToDatabase(item: AutoRepairItem, correctedData: any):
         );
       }
 
+      if (globalDatabaseSyncHook) {
+        try {
+          void globalDatabaseSyncHook({
+            source: item.source,
+            targetId: item.targetId,
+            updatedData: correctedData,
+            action: 'applied',
+          });
+        } catch (syncErr: any) {
+          console.warn('[AutoRepairEngine] DatabaseSyncHook error:', syncErr?.message);
+        }
+      }
+
       return { success: true };
     }
 
@@ -1126,6 +1151,20 @@ export function applyRepairToDatabase(item: AutoRepairItem, correctedData: any):
       if (idx !== -1) {
         list[idx] = syncQuestionRevisionsAndReports(list[idx], item, correctedData);
         writeJsonAtomic(PRACTICE_QUESTIONS_FILE, list);
+
+        if (globalDatabaseSyncHook) {
+          try {
+            void globalDatabaseSyncHook({
+              source: item.source,
+              targetId: item.targetId,
+              updatedData: correctedData,
+              action: 'applied',
+            });
+          } catch (syncErr: any) {
+            console.warn('[AutoRepairEngine] DatabaseSyncHook error:', syncErr?.message);
+          }
+        }
+
         return { success: true };
       }
       return { success: false, error: 'Örnek soru bulunamadı.' };
@@ -1164,6 +1203,19 @@ export function applyRepairToDatabase(item: AutoRepairItem, correctedData: any):
       }
 
       // Dışa aktarım paketleri (meds_export/deste_paketleri) `npm run decks:packages` ile kaynaktan üretilir.
+
+      if (globalDatabaseSyncHook) {
+        try {
+          void globalDatabaseSyncHook({
+            source: item.source,
+            targetId: item.targetId,
+            updatedData: correctedData,
+            action: 'applied',
+          });
+        } catch (syncErr: any) {
+          console.warn('[AutoRepairEngine] DatabaseSyncHook error:', syncErr?.message);
+        }
+      }
 
       return { success: true };
     }

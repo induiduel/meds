@@ -15,6 +15,8 @@ import summariesEnrichment from '../data/summaries_enrichment.json';
 import curriculumDisciplines from '../data/curriculum_disciplines.json';
 import { SummaryArtifactReader } from './SummaryArtifactReader';
 import { triggerDomHighlightAndScroll } from '../services/universalRedirectService';
+import { queryClient } from '../queryClient';
+import { offlineDatabaseService } from '../services/offlineDatabaseService';
 
 export interface SummaryMeta {
   id: string;
@@ -124,53 +126,59 @@ export const LectureSummariesView: React.FC<LectureSummariesViewProps> = ({ onOp
     });
   }, [summaries, selectedKurul, selectedDiscipline, searchQuery]);
 
-  // Load full summary content when opened
+  // Load full summary content when opened (TanStack Query ile 1 saat önbellekli)
   const handleOpenSummary = async (meta: SummaryMeta) => {
     setActiveSummary(meta);
     setIsLoadingContent(true);
     try {
-      // 1. Try server API
-      const res = await fetch(`/api/summaries/${meta.id}`);
-      if (res.ok && res.headers.get('content-type')?.includes('application/json')) {
-        const data = await res.json();
-        if (data.success && data.summary?.content) {
-          setActiveSummary(data.summary);
-          setIsLoadingContent(false);
-          return;
-        }
-      }
-    } catch (_) {}
+      const detail = await queryClient.fetchQuery({
+        queryKey: ['summary-detail', meta.id],
+        queryFn: async (): Promise<SummaryDetail | null> => {
+          // 0. Cihaz hafızasındaki (IndexedDB) özetlere bak (< 5ms)
+          try {
+            const allSaved = await offlineDatabaseService.getSummaries();
+            const foundInDb = allSaved.find((s: any) => s.id === meta.id);
+            if (foundInDb && foundInDb.content) return foundInDb;
+          } catch (_) {}
 
-    // 2. Fallback to dynamic per-committee chunk import for offline
-    try {
-      let kurulMod: any;
-      switch (meta.kurul) {
-        case 1:
-          kurulMod = await import('../data/summaries/kurul1.json');
-          break;
-        case 2:
-          kurulMod = await import('../data/summaries/kurul2.json');
-          break;
-        case 3:
-          kurulMod = await import('../data/summaries/kurul3.json');
-          break;
-        case 4:
-          kurulMod = await import('../data/summaries/kurul4.json');
-          break;
-        case 5:
-          kurulMod = await import('../data/summaries/kurul5.json');
-          break;
-        case 6:
-          kurulMod = await import('../data/summaries/kurul6.json');
-          break;
-        default:
-          kurulMod = await import('../data/summaries/kurul1.json');
-          break;
-      }
-      const list = (kurulMod && (kurulMod.default || kurulMod)) || [];
-      const found = list.find((s: any) => s.id === meta.id);
-      if (found && found.content) {
-        setActiveSummary(found);
+          // 1. Çevrimiçi ise sunucu API'sini dene
+          if (typeof navigator === 'undefined' || navigator.onLine) {
+            try {
+              const res = await fetch(`/api/summaries/${meta.id}`);
+              if (res.ok && res.headers.get('content-type')?.includes('application/json')) {
+                const data = await res.json();
+                if (data.success && data.summary?.content) {
+                  return data.summary;
+                }
+              }
+            } catch (_) {}
+          }
+
+          // 2. Fallback to dynamic per-committee chunk import for offline
+          try {
+            let kurulMod: any;
+            switch (meta.kurul) {
+              case 1: kurulMod = await import('../data/summaries/kurul1.json'); break;
+              case 2: kurulMod = await import('../data/summaries/kurul2.json'); break;
+              case 3: kurulMod = await import('../data/summaries/kurul3.json'); break;
+              case 4: kurulMod = await import('../data/summaries/kurul4.json'); break;
+              case 5: kurulMod = await import('../data/summaries/kurul5.json'); break;
+              case 6: kurulMod = await import('../data/summaries/kurul6.json'); break;
+              default: kurulMod = await import('../data/summaries/kurul1.json'); break;
+            }
+            const list = (kurulMod && (kurulMod.default || kurulMod)) || [];
+            const found = list.find((s: any) => s.id === meta.id);
+            if (found && found.content) return found;
+          } catch (e) {
+            console.warn('Could not load summary content from committee chunk:', e);
+          }
+          return null;
+        },
+        staleTime: 1000 * 60 * 60, // 1 saat önbellek
+      });
+
+      if (detail) {
+        setActiveSummary(detail);
         if (typeof window !== 'undefined') {
           const urlParams = new URLSearchParams(window.location.search);
           const highlight = urlParams.get('highlight');
@@ -180,7 +188,7 @@ export const LectureSummariesView: React.FC<LectureSummariesViewProps> = ({ onOp
         }
       }
     } catch (e) {
-      console.warn('Could not load summary content from committee chunk:', e);
+      console.warn('Özet detay yükleme hatası:', e);
     } finally {
       setIsLoadingContent(false);
     }

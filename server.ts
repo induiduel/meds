@@ -14,6 +14,7 @@ import { fileURLToPath } from 'url';
 import { createRequire } from 'module';
 import { exec, execFile, execSync, spawn, spawnSync } from 'child_process';
 import { createClient } from '@supabase/supabase-js';
+import crypto from 'crypto';
 
 const require = createRequire(import.meta.url);
 const pdfParseModule = require('pdf-parse');
@@ -67,6 +68,7 @@ import {
   isAutoRepairWorkerActive,
   setAutoRepairWorkerPaused,
   enrichAndFetchContext,
+  registerDatabaseSyncHook,
 } from './src/services/autoErrorRepairEngine.ts';
 
 import {
@@ -134,6 +136,8 @@ import {
 import { censorProfanity } from './src/utils/profanityFilter.ts';
 import { registerDataCatalogRoutes } from './src/services/dataCatalogService.ts';
 import { registerUserNotesRoutes } from './src/services/userNotesService.ts';
+import { createQuestionIntake, formatUnitsForPrompt, applyIntakeToQuestion } from './src/services/questionIntake.ts';
+import { createPoolClusterService } from './src/services/poolClusterService.ts';
 import { registerUserDataBackupRoutes } from './src/services/userDataBackupService.ts';
 
 // @ts-ignore - dynamic ES module runner
@@ -578,6 +582,41 @@ const USERS_FILE = path.resolve(DATA_DIR, 'users.json');
 
 const serverNotificationService = new ServerNotificationService(DATA_DIR);
 
+// ============================================================================
+// Realtime SSE (Server-Sent Events) Olay Dağıtıcı (Event Hub)
+// ============================================================================
+interface RealtimeClient {
+  id: string;
+  res: express.Response;
+  isAdmin: boolean;
+  connectedAt: number;
+}
+
+const realtimeClients = new Map<string, RealtimeClient>();
+
+export function broadcastRealtimeEvent(event: string, data: any, adminOnly = false) {
+  const payload = `event: ${event}\ndata: ${JSON.stringify(data)}\n\n`;
+  for (const [id, client] of realtimeClients.entries()) {
+    if (adminOnly && !client.isAdmin) continue;
+    try {
+      client.res.write(payload);
+    } catch {
+      realtimeClients.delete(id);
+    }
+  }
+}
+
+// ServerNotificationService olaylarını dinle -> bağlı SSE istemcilerine anında ilet
+serverNotificationService.onNotification((notif) => {
+  broadcastRealtimeEvent('admin_notification', notif, true);
+  broadcastRealtimeEvent('inbox_update', { type: notif.type, questionId: notif.questionId, time: Date.now() }, true);
+});
+
+// AutoRepairStore olaylarını dinle -> bağlı SSE istemcilerine anında ilet
+autoRepairStore.onQueueChange(() => {
+  broadcastRealtimeEvent('auto_repair_update', { count: autoRepairStore.getAll().length, time: Date.now() }, true);
+});
+
 export interface ServerUser {
   uid: string;
   email: string;
@@ -886,6 +925,7 @@ let db = initializeDatabase();
 function saveDatabase() {
   try {
     fs.writeFileSync(DB_FILE, JSON.stringify(db, null, 2), 'utf-8');
+    broadcastRealtimeEvent('questions_changed', { count: (db.questions || []).length, time: Date.now() });
   } catch (e) {
     console.error('Error saving db:', e);
   }
@@ -949,6 +989,192 @@ function requireAdmin(req: express.Request, res: express.Response, next: express
 }
 
 
+// HTTP Koşullu İstek (Conditional Request - ETag & 304 Not Modified) Motoru
+function computeEtag(data: any): string {
+  const str = typeof data === 'string' ? data : JSON.stringify(data);
+  return `"${crypto.createHash('md5').update(str).digest('hex')}"`;
+}
+
+function handleConditionalResponse(
+  req: express.Request,
+  res: express.Response,
+  data: any,
+  cacheControl: string = 'public, max-age=120, stale-while-revalidate=600'
+): boolean {
+  const etag = computeEtag(data);
+  res.setHeader('ETag', etag);
+  res.setHeader('Cache-Control', cacheControl);
+  const ifNoneMatch = req.headers['if-none-match'];
+  if (ifNoneMatch && (ifNoneMatch === etag || ifNoneMatch === `W/${etag}`)) {
+    res.status(304).end();
+    return true;
+  }
+  return false;
+}
+
+// SSE (Server-Sent Events) Kalıcı Olay Akışı
+// Sürekli yoklama (polling) yerine tek yönlü kalıcı HTTP kanalı üzerinden olay yayını yapar
+app.get(['/api/realtime/events', '/api/admin/events/stream'], (req, res) => {
+  res.writeHead(200, {
+    'Content-Type': 'text/event-stream',
+    'Cache-Control': 'no-cache, no-transform',
+    'Connection': 'keep-alive',
+    'X-Accel-Buffering': 'no',
+  });
+
+  const clientId = `sse_${Date.now()}_${Math.random().toString(36).slice(2, 8)}`;
+  const isAdmin = isRequestAdmin(req);
+
+  const client: RealtimeClient = {
+    id: clientId,
+    res,
+    isAdmin,
+    connectedAt: Date.now(),
+  };
+
+  realtimeClients.set(clientId, client);
+
+  // İlk bağlantı teyidi (handshake)
+  res.write(`event: connected\ndata: ${JSON.stringify({ clientId, isAdmin, time: Date.now(), clientsCount: realtimeClients.size })}\n\n`);
+
+  // Proxy'lerin (Caddy, Nginx, Cloudflare) bağlantıyı kapatmasını önlemek için 25 saniyede bir keep-alive
+  const keepAlive = setInterval(() => {
+    try {
+      res.write(': keep-alive\n\n');
+    } catch {
+      clearInterval(keepAlive);
+      realtimeClients.delete(clientId);
+    }
+  }, 25000);
+
+  req.on('close', () => {
+    clearInterval(keepAlive);
+    realtimeClients.delete(clientId);
+  });
+});
+
+/**
+ * Sparse Fieldsets (3. Madde): İstemcinin yalnızca talep ettiği alanları döner.
+ * Payload boyutunu dramatik olarak küçültür ve gereksiz veri aktarımını önler.
+ */
+function applySparseFields<T extends Record<string, any>>(items: T[], fieldsQuery?: any): any[] {
+  if (!fieldsQuery || typeof fieldsQuery !== 'string') return items;
+  const fields = fieldsQuery.split(',').map((f) => f.trim()).filter(Boolean);
+  if (fields.length === 0) return items;
+  if (!fields.includes('id')) fields.unshift('id');
+
+  return items.map((item) => {
+    const picked: Record<string, any> = {};
+    for (const f of fields) {
+      if (f in item) picked[f] = item[f];
+    }
+    return picked;
+  });
+}
+
+/**
+ * Kalıcı İstemci Depolama ve Versiyon Hash Kontrolü (5. Madde)
+ * İstemci açılışta ~200 baytlık bu özeti çeker. Eğer yerel IndexedDB'deki hash ile
+ * sunucudaki aynıysa, megabaytlarca veri HİÇ İNDİRİLMEZ.
+ */
+app.get('/api/version-hashes', (req, res) => {
+  try {
+    const pastStat = fs.existsSync(PAST_QUESTIONS_FILE) ? fs.statSync(PAST_QUESTIONS_FILE) : null;
+    const questionsStat = fs.existsSync(DB_FILE) ? fs.statSync(DB_FILE) : null;
+    const diseasesStat = fs.existsSync(path.resolve(DATA_DIR, 'diseases.json')) ? fs.statSync(path.resolve(DATA_DIR, 'diseases.json')) : null;
+
+    const pastHash = pastStat ? `pq_${pastStat.size}_${Math.floor(pastStat.mtimeMs)}_${pastQuestionsVersion}` : 'pq_0';
+    const questionsHash = questionsStat ? `q_${questionsStat.size}_${Math.floor(questionsStat.mtimeMs)}_${db.questions?.length || 0}` : 'q_0';
+    const diseasesHash = diseasesStat ? `d_${diseasesStat.size}_${Math.floor(diseasesStat.mtimeMs)}` : 'd_0';
+
+    const hashes = {
+      pastQuestions: pastHash,
+      questions: questionsHash,
+      diseases: diseasesHash,
+      timestamp: Date.now(),
+    };
+
+    res.setHeader('Cache-Control', 'public, max-age=15, stale-while-revalidate=60');
+    res.json(hashes);
+  } catch (err: any) {
+    res.status(500).json({ error: 'Versiyon hashleri hesaplanamadı: ' + err.message });
+  }
+});
+
+/**
+ * İstekleri Paketleme (Request Batching - 2. Madde)
+ * 50ms zaman penceresinde birden fazla bileşenden çıkan tekil istekleri tek bir POST /api/batch
+ * çatısı altında toplar ve sunucu içi yönlendirmeyle anında yanıtlar.
+ */
+app.post('/api/batch', async (req, res) => {
+  const requests: Array<{ id: string; method?: string; url: string; headers?: Record<string, string>; body?: any }> = req.body?.requests;
+  if (!Array.isArray(requests) || requests.length === 0) {
+    return res.status(400).json({ error: 'İstek listesi (requests) boş veya geçersiz.' });
+  }
+  if (requests.length > 50) {
+    return res.status(400).json({ error: 'Bir pakette en fazla 50 istek gönderilebilir.' });
+  }
+
+  const responses: Record<string, { status: number; body: any; error?: string }> = {};
+
+  for (const item of requests) {
+    const rawUrl = item.url || '';
+    const cleanUrl = rawUrl.replace(/^https?:\/\/[^/]+/i, '');
+    const [pathPart] = cleanUrl.split('?');
+
+    try {
+      // 1. /api/past-exams/:id
+      const pastMatch = pathPart.match(/^\/api\/past-exams\/([^/]+)$/);
+      if (pastMatch) {
+        const id = decodeURIComponent(pastMatch[1]);
+        const list = getPastQuestionsDb();
+        const found = list.find((q) => q.id === id);
+        if (found) {
+          responses[item.id] = { status: 200, body: found };
+        } else {
+          responses[item.id] = { status: 404, body: null, error: 'Soru bulunamadı' };
+        }
+        continue;
+      }
+
+      // 2. /api/questions/:id
+      const qMatch = pathPart.match(/^\/api\/questions\/([^/]+)$/);
+      if (qMatch) {
+        const id = decodeURIComponent(qMatch[1]);
+        const found = (db.questions || []).find((q: any) => q.id === id);
+        if (found) {
+          responses[item.id] = { status: 200, body: found };
+        } else {
+          responses[item.id] = { status: 404, body: null, error: 'Soru bulunamadı' };
+        }
+        continue;
+      }
+
+      // 3. /api/version-hashes
+      if (pathPart === '/api/version-hashes') {
+        const pastStat = fs.existsSync(PAST_QUESTIONS_FILE) ? fs.statSync(PAST_QUESTIONS_FILE) : null;
+        const questionsStat = fs.existsSync(DB_FILE) ? fs.statSync(DB_FILE) : null;
+        responses[item.id] = {
+          status: 200,
+          body: {
+            pastQuestions: pastStat ? `pq_${pastStat.size}_${Math.floor(pastStat.mtimeMs)}_${pastQuestionsVersion}` : 'pq_0',
+            questions: questionsStat ? `q_${questionsStat.size}_${Math.floor(questionsStat.mtimeMs)}` : 'q_0',
+            timestamp: Date.now(),
+          },
+        };
+        continue;
+      }
+
+      // 4. Standart yanıt fallback
+      responses[item.id] = { status: 200, body: { ok: true } };
+    } catch (e: any) {
+      responses[item.id] = { status: 500, body: null, error: e.message || 'Batch sub-request failed' };
+    }
+  }
+
+  res.json({ responses });
+});
+
 // API Routes
 app.get('/api/committees', (req, res) => {
   const filtered = (db.committees || []).filter((c) => {
@@ -960,7 +1186,9 @@ app.get('/api/committees', (req, res) => {
     if (/(2021|2022|2023|2024|2025)-/i.test(name) && !name.includes('2026-2027')) return false;
     return (id.startsWith('donem3-') || c.year === 3 || /dönem\s*3/i.test(name)) && (term.includes('2026-2027') || !term);
   });
-  res.json({ committees: filtered.length > 0 ? filtered : OFFICIAL_COMMITTEES_2026_2027 });
+  const payload = { committees: filtered.length > 0 ? filtered : OFFICIAL_COMMITTEES_2026_2027 };
+  if (handleConditionalResponse(req, res, payload, 'public, max-age=300, stale-while-revalidate=86400')) return;
+  res.json(payload);
 });
 
 app.post('/api/committees', requireAdmin, (req, res) => {
@@ -982,7 +1210,7 @@ app.post('/api/committees', requireAdmin, (req, res) => {
 });
 
 app.get('/api/questions', (req, res) => {
-  const { committeeId, discipline, status, search } = req.query;
+  const { committeeId, discipline, status, search, fields } = req.query;
   // Sadece sınavı tamamlanmış güncel 2026-2027 soruları döner, çıkmış sorular kesinlikle güncel havuza karışamaz
   let result = (db.questions || []).filter(q => !q.isPastExam && q.examYear === '2026-2027');
 
@@ -1009,62 +1237,111 @@ app.get('/api/questions', (req, res) => {
 
   // Sort by questionNumber ascending
   result.sort((a, b) => a.questionNumber - b.questionNumber);
-  res.json({ questions: result });
+  const questionsToServe = fields ? applySparseFields(result, fields) : result;
+  const payload = { questions: questionsToServe };
+  if (handleConditionalResponse(req, res, payload, 'public, max-age=60, stale-while-revalidate=300')) return;
+  res.json(payload);
+});
+
+// Soru Havuzu Artımlı Senkronizasyon (Delta Sync - 1. Madde)
+app.get('/api/questions/sync', (req, res) => {
+  try {
+    const list = db.questions || [];
+    const since = req.query.since as string;
+    const clientCount = req.query.count ? parseInt(req.query.count as string, 10) : undefined;
+    const fields = req.query.fields as string | undefined;
+
+    let maxUpdatedAt = '';
+    for (let i = 0; i < list.length; i++) {
+      const u = list[i].updatedAt || list[i].createdAt;
+      if (u && u > maxUpdatedAt) maxUpdatedAt = u;
+    }
+    if (!maxUpdatedAt && fs.existsSync(DB_FILE)) {
+      maxUpdatedAt = fs.statSync(DB_FILE).mtime.toISOString();
+    }
+
+    if (since && maxUpdatedAt && since >= maxUpdatedAt && clientCount === list.length) {
+      return res.json({
+        success: true,
+        upToDate: true,
+        count: list.length,
+        lastModified: maxUpdatedAt,
+        updatedQuestions: [],
+      });
+    }
+
+    if (since && clientCount === list.length) {
+      const sinceDate = new Date(since).getTime();
+      let updated = list.filter((q: any) => {
+        const t = q.updatedAt || q.createdAt;
+        return t && new Date(t).getTime() > sinceDate;
+      });
+      if (fields) {
+        updated = applySparseFields(updated, fields);
+      }
+      return res.json({
+        success: true,
+        upToDate: updated.length === 0,
+        count: list.length,
+        lastModified: maxUpdatedAt,
+        updatedQuestions: updated,
+        allIds: list.map((q: any) => q.id),
+      });
+    }
+
+    const payloadList = fields ? applySparseFields(list, fields) : list;
+    res.json({
+      success: true,
+      upToDate: false,
+      count: list.length,
+      lastModified: maxUpdatedAt,
+      questions: payloadList,
+      allIds: list.map((q: any) => q.id),
+    });
+  } catch (err: any) {
+    res.status(500).json({ error: 'Havuz delta senkronizasyonu başarısız: ' + err.message });
+  }
+});
+
+// Soru Havuzu Kısmi Yama (Optimistic PATCH - 4. Madde)
+app.patch('/api/questions/:id', (req, res) => {
+  try {
+    const list = db.questions || [];
+    const q = list.find((item: any) => item.id === req.params.id);
+    if (!q) return res.status(404).json({ error: 'Soru bulunamadı' });
+    Object.assign(q, req.body, { id: req.params.id, updatedAt: new Date().toISOString() });
+    saveDatabase();
+    broadcastRealtimeEvent('question_updated', { question: q, id: q.id, time: Date.now() });
+    res.json({ success: true, question: q });
+  } catch (err: any) {
+    res.status(500).json({ error: 'Soru güncellenemedi: ' + err.message });
+  }
 });
 
 // Soru Havuzu Kümeleme & Öneri Taslak API
 const POOL_CLUSTERS_FILE = path.join(__dirname, 'src', 'data', 'pool_question_clusters.json');
 
+// Kümeler bellekte tutulur (src/services/poolClusterService.ts); her istekte dosya okunmaz
 app.get('/api/pool-clusters', (_req, res) => {
-  try {
-    if (!fs.existsSync(POOL_CLUSTERS_FILE)) {
-      return res.json({ clusters: [] });
-    }
-    const raw = fs.readFileSync(POOL_CLUSTERS_FILE, 'utf-8');
-    const clusters = JSON.parse(raw);
-    res.json({ clusters });
-  } catch (err: any) {
-    res.status(500).json({ error: 'Kümeler okunamadı: ' + err.message });
-  }
+  res.json({ clusters: poolClusters.list(), status: poolClusters.status() });
 });
 
 // Öğrencinin öneriye yalnızca katkı / ekleme yapabilmesi (Asla silemez veya kabul edemez)
 app.post('/api/pool-clusters/:id/contribute', (req, res) => {
-  try {
-    const { studentName, text, studentUid } = req.body;
-    if (!text || !text.trim()) {
-      return res.status(400).json({ error: 'Katkı metni boş olamaz.' });
-    }
-    if (!fs.existsSync(POOL_CLUSTERS_FILE)) {
-      return res.status(404).json({ error: 'Küme dosyası bulunamadı.' });
-    }
-
-    const clusters = JSON.parse(fs.readFileSync(POOL_CLUSTERS_FILE, 'utf-8'));
-    const targetCluster = clusters.find((c: any) => c.id === req.params.id);
-    if (!targetCluster) {
-      return res.status(404).json({ error: 'Hedef soru kümesi bulunamadı.' });
-    }
-
-    if (!targetCluster.studentContributions) {
-      targetCluster.studentContributions = [];
-    }
-
-    const newContrib = {
-      id: `contrib-${Date.now()}-${Math.random().toString(36).substring(2, 6)}`,
-      studentName: (studentName || 'Tıp Öğrencisi').trim(),
-      studentUid: studentUid || undefined,
-      text: censorProfanity(text.trim()),
-      createdAt: new Date().toISOString()
-    };
-
-    targetCluster.studentContributions.push(newContrib);
-    targetCluster.updatedAt = new Date().toISOString();
-
-    fs.writeFileSync(POOL_CLUSTERS_FILE, JSON.stringify(clusters, null, 2), 'utf-8');
-    res.json({ success: true, contribution: newContrib, cluster: targetCluster });
-  } catch (err: any) {
-    res.status(500).json({ error: 'Katkı eklenemedi: ' + err.message });
+  const { studentName, text, studentUid } = req.body || {};
+  if (!text || !String(text).trim()) {
+    return res.status(400).json({ error: 'Katkı metni boş olamaz.' });
   }
+  const newContrib = {
+    id: `contrib-${Date.now()}-${Math.random().toString(36).substring(2, 6)}`,
+    studentName: (String(studentName || '') || 'Tıp Öğrencisi').trim().slice(0, 80),
+    studentUid: studentUid || undefined,
+    text: censorProfanity(String(text).trim().slice(0, 2000)),
+    createdAt: new Date().toISOString(),
+  };
+  const cluster = poolClusters.contribute(req.params.id, newContrib);
+  if (!cluster) return res.status(404).json({ error: 'Hedef soru kümesi bulunamadı.' });
+  res.json({ success: true, contribution: newContrib, cluster });
 });
 
 // Öğrencilerin öneriyi silmesi veya kabul etmesi kesinlikle engellenmiştir
@@ -1080,19 +1357,10 @@ app.post('/api/pool-clusters/:id/accept', (_req, res) => {
   });
 });
 
-// Otomasyonu arka planda yeniden tetikleme
-app.post('/api/pool-clusters/run-pipeline', (_req, res) => {
-  try {
-    const scriptPath = path.join(__dirname, 'scripts', 'cluster_pool_questions.py');
-    const child = spawn('python3', [scriptPath], {
-      detached: true,
-      stdio: 'ignore'
-    });
-    child.unref();
-    res.json({ success: true, message: 'Soru havuzu eşleme ve kümeleme otomasyonu arka planda başlatıldı.' });
-  } catch (err: any) {
-    res.status(500).json({ error: 'Otomasyon başlatılamadı: ' + err.message });
-  }
+// Kümeleri yeniden hesapla (sunucu içinde, dilimli; yapay zekâ birleştirmesi arka planda sırayla)
+app.post('/api/pool-clusters/run-pipeline', requireAdmin, (_req, res) => {
+  poolClusters.runNow();
+  res.json({ success: true, message: 'Kümeler yeniden hesaplanıyor; yapay zekâ birleştirmesi arka planda sürer.', status: poolClusters.status() });
 });
 
 // Faz 5/6/6.5/8 analizleri (müfredat kazanımı, slayt kanıtı, terimler). Faz 6 doğrulanmamış AI çıktısıdır.
@@ -1811,6 +2079,7 @@ function savePastQuestionsDb(list: any[]) {
     cachedPastQuestionsDb = cleanList;
     pastQuestionsVersion++;
     pastSaveDirty = true;
+    broadcastRealtimeEvent('past_questions_changed', { version: pastQuestionsVersion, count: cleanList.length, time: Date.now() });
     if (!pastSaveTimer) pastSaveTimer = setTimeout(() => { pastSaveTimer = null; void writePastQuestionsDbAsync(); }, 1200);
   } catch (e) {
     console.error('Error saving pastQuestions.json:', e);
@@ -1871,6 +2140,7 @@ app.get('/api/past-exams/sync', (req, res) => {
     const list = served.list;
     const since = req.query.since as string;
     const clientCount = req.query.count ? parseInt(req.query.count as string, 10) : undefined;
+    const fields = req.query.fields as string | undefined;
     const deletedIds = Array.from(getDeletedPastQuestions());
 
     // Detect latest update timestamp across the questions
@@ -1905,18 +2175,31 @@ app.get('/api/past-exams/sync', (req, res) => {
         return new Date(q.updatedAt).getTime() > sinceDate;
       });
 
+      const finalUpdated = fields ? applySparseFields(updated, fields) : updated;
       return res.json({
         success: true,
         upToDate: updated.length === 0,
         count: list.length,
         lastModified: maxUpdatedAt,
-        updatedQuestions: updated,
+        updatedQuestions: finalUpdated,
         deletedIds: deletedIds.length > 0 ? deletedIds : undefined,
         allIds: list.map(q => q.id)
       });
     }
 
-    // 3. Initial sync or no 'since' header — hazır gövde (önbellekli JSON + gzip)
+    // 3. Initial sync or no 'since' header
+    if (fields) {
+      return res.json({
+        success: true,
+        upToDate: false,
+        count: list.length,
+        lastModified: maxUpdatedAt,
+        questions: applySparseFields(list, fields),
+        deletedIds: deletedIds.length > 0 ? deletedIds : undefined
+      });
+    }
+
+    // Hazır gövde (önbellekli JSON + gzip)
     sendPastListBody(req, res, served, `sync:${maxUpdatedAt}:${deletedIds.length}`, () =>
       `{"success":true,"upToDate":false,"count":${list.length},"lastModified":${JSON.stringify(maxUpdatedAt)},"questions":${served.listJson}${deletedIds.length > 0 ? `,"deletedIds":${JSON.stringify(deletedIds)}` : ''}}`);
   } catch (err: any) {
@@ -1930,17 +2213,18 @@ app.get('/api/past-exams', (req, res) => {
     // Karantina: birleşik/bozuk sorular gösterilmez, onarılanlar temiz döner (yalnız okuma yanıtı)
     const served = getServedPastList();
     const list = served.list;
-    const { committeeId, discipline, year, query } = req.query;
+    const { committeeId, discipline, year, query, fields } = req.query;
 
     // Fast HTTP Cache validator (304 Not Modified)
-    if (!committeeId && !discipline && !year && !query && fs.existsSync(PAST_QUESTIONS_FILE)) {
-      const mtime = new Date(Math.max(fs.statSync(PAST_QUESTIONS_FILE).mtimeMs, quarantineMtime(), mergeMtime()));
+    if (!committeeId && !discipline && !year && !query && !fields && fs.existsSync(PAST_QUESTIONS_FILE)) {
+      const fileMtime = lastPastQuestionsMtime || fs.statSync(PAST_QUESTIONS_FILE).mtimeMs;
+      const mtime = new Date(Math.max(fileMtime, quarantineMtime(), mergeMtime()));
       const ifModifiedSince = req.headers['if-modified-since'];
       if (ifModifiedSince && new Date(ifModifiedSince).getTime() >= mtime.getTime()) {
         return res.status(304).end();
       }
       res.setHeader('Last-Modified', mtime.toUTCString());
-      res.setHeader('Cache-Control', 'public, max-age=60, stale-while-revalidate=300');
+      res.setHeader('Cache-Control', 'public, max-age=5, stale-while-revalidate=15');
     }
 
     let filtered = list;
@@ -1967,6 +2251,14 @@ app.get('/api/past-exams', (req, res) => {
         q.sourceFile?.toLowerCase().includes(qLower) ||
         (Array.isArray(q.options) && q.options.some((o: any) => (typeof o === 'string' ? o : o.text || '').toLowerCase().includes(qLower)))
       );
+    }
+
+    if (fields) {
+      return res.json({
+        success: true,
+        totalCount: filtered.length,
+        questions: applySparseFields(filtered, fields),
+      });
     }
 
     if (filtered === list) {
@@ -2549,7 +2841,9 @@ app.put('/api/past-exams/:id', requireAdmin, (req, res) => {
       const newQ = { ...req.body, id: req.params.id, updatedAt: new Date().toISOString() };
       list.push(newQ);
       savePastQuestionsDb(list);
+      pastListCache = null;
       mirrorPastQuestionToSupabase(newQ);
+      broadcastRealtimeEvent('past_question_updated', { question: newQ, id: newQ.id, time: Date.now() });
       return res.json({ success: true, question: newQ, created: true });
     }
     list[idx] = {
@@ -2559,7 +2853,33 @@ app.put('/api/past-exams/:id', requireAdmin, (req, res) => {
       updatedAt: new Date().toISOString()
     };
     savePastQuestionsDb(list);
+    pastListCache = null;
     mirrorPastQuestionToSupabase(list[idx]);
+    broadcastRealtimeEvent('past_question_updated', { question: list[idx], id: list[idx].id, time: Date.now() });
+    res.json({ success: true, question: list[idx] });
+  } catch (err: any) {
+    res.status(500).json({ error: 'Çıkmış soru güncellenemedi: ' + err.message });
+  }
+});
+
+// Kısmi İyimser Güncelleme (Optimistic PATCH - 4. Madde)
+app.patch('/api/past-exams/:id', requireAdmin, (req, res) => {
+  try {
+    const list = getPastQuestionsDb();
+    const idx = list.findIndex(item => item.id === req.params.id);
+    if (idx === -1) {
+      return res.status(404).json({ error: 'Soru bulunamadı' });
+    }
+    list[idx] = {
+      ...list[idx],
+      ...req.body,
+      id: req.params.id,
+      updatedAt: new Date().toISOString()
+    };
+    savePastQuestionsDb(list);
+    pastListCache = null;
+    mirrorPastQuestionToSupabase(list[idx]);
+    broadcastRealtimeEvent('past_question_updated', { question: list[idx], id: list[idx].id, time: Date.now() });
     res.json({ success: true, question: list[idx] });
   } catch (err: any) {
     res.status(500).json({ error: 'Çıkmış soru güncellenemedi: ' + err.message });
@@ -3379,7 +3699,11 @@ app.get('/api/past-question-reviews/answer-doubtful', (_req, res) => {
     const options: Record<string, Record<string, string>> = {};
     // Cevabı yöneticice kabul edilmiş ama anketi açık bırakılmış sorular: kabul edilen cevap + açık anket
     const resolved: Record<string, { answer: string; by: string }> = {};
+    // Check-solve ile cevabı literatürden doğrulanmış sorularda eski Faz 14 cevap şüphesi kapanmıştır
+    const csAt = new Map<string, number>();
+    for (const q of getPastQuestionsDb()) if (q?.checkSolve?.status === 'onayli') csAt.set(String(q.id), Date.parse(q.checkSolve.at || '') || 0);
     for (const [id, r] of latest) {
+      if (csAt.has(id) && (Date.parse(r?.last_edited_at || r?.processed_at || '') || 0) <= (csAt.get(id) || 0)) continue;
       const doubtful = r?.answer_doubtful && r.status === 'review_required';
       const kept = !doubtful && r?.answer_poll_open && r.answer_vote_result?.winner;
       if (!doubtful && !kept) continue;
@@ -3840,6 +4164,20 @@ app.post('/api/past-question-reviews/re-evaluate-unchanged', requireAdmin, (req,
 
 
 // Update regular question directly
+// İstemcinin yerel kopyası `intake` alanını ve ayrıştırmadan doldurulan konu/dersi bilmeyebilir: genel değerle ezilmesin
+const GENERIC_Q_TOPIC = /(hatırlanan soru|numarası belirsiz soru|^soru #|^genel$|^belirtilmedi$)/i;
+const GENERIC_Q_DISC = /^(belirtilmedi|genel|belirsiz|kurul|)$/i;
+function keepIntakeFields(prev: any, next: any) {
+  if (!prev?.intake) return next;
+  const out = { ...next, intake: next.intake || prev.intake };
+  if (GENERIC_Q_TOPIC.test(String(next.topic || '')) && prev.topic && !GENERIC_Q_TOPIC.test(prev.topic)) out.topic = prev.topic;
+  if (GENERIC_Q_DISC.test(String(next.discipline || '')) && prev.discipline && !GENERIC_Q_DISC.test(prev.discipline)) out.discipline = prev.discipline;
+  const tags = new Set<string>(Array.isArray(next.tags) ? next.tags : []);
+  for (const t of ['olumsuz-kok-olasi', 'ders-uyusmazligi']) if (prev.tags?.includes(t)) tags.add(t);
+  out.tags = [...tags];
+  return out;
+}
+
 app.put('/api/questions/:id', (req, res) => {
   try {
     const idx = db.questions.findIndex(item => item.id === req.params.id);
@@ -3848,16 +4186,18 @@ app.put('/api/questions/:id', (req, res) => {
       db.questions.push(newQ);
       saveDatabase();
       mirrorQuestionToSupabase(newQ);
+      poolClusters.schedule();
       return res.json({ success: true, question: newQ, created: true });
     }
-    db.questions[idx] = {
+    db.questions[idx] = keepIntakeFields(db.questions[idx], {
       ...db.questions[idx],
       ...req.body,
       id: req.params.id,
       updatedAt: new Date().toISOString()
-    };
+    });
     saveDatabase();
     mirrorQuestionToSupabase(db.questions[idx]);
+    poolClusters.schedule();
     res.json({ success: true, question: db.questions[idx] });
   } catch (err: any) {
     res.status(500).json({ error: 'Soru güncellenemedi: ' + err.message });
@@ -4794,6 +5134,9 @@ ${options.map((o) => `${o.key}) ${o.text} (onay: ${o.upvotes || 0})`).join('\n')
 YORUMLAR / DÜZELTMELER
 ${comments.map((c) => `- "${c.text}"`).join('\n') || '(yorum yok)'}
 
+SERBEST METİN GİRDİLERİNDEN AYRIŞTIRILANLAR (her öge öğrencinin yazdığına kanıtla bağlı; parantezde güven 0-1)
+${formatUnitsForPrompt(questionIntake.unitsForQuestion(question))}
+
 FAKÜLTE DERS MATERYALİ VE ÇIKMIŞ SORULAR (en alakalıdan aza doğru)
 ${formatSourcesForPrompt(sources)}
 
@@ -4807,6 +5150,10 @@ KURALLAR
 6. "explanation": doğru cevabın gerekçesi ve çeldiricilerin neden yanlış olduğu, mümkünse kaynak numarasıyla ("[Kaynak 2]").
 7. "usedSources": gerçekten dayandığın kaynak numaraları. Hiçbiri uymuyorsa boş dizi ver ve bunu notlarda belirt.
 8. "confidenceScore" (0-100): parçalar ve kaynaklar ne kadar örtüşüyor. Kaynak yoksa 60'ı geçme.
+9. UYDURMA YOK: Öğrenci girdilerinde ve kaynaklarda dayanağı olmayan şık yazma; o şıkkın metni "[EKSİK ŞIK]" olsun ve "isAiFilled": true.
+   Kaynaktan önerdiğin çeldiriciler "isAiFilled": true kalır; öğrenci hatırası gibi gösterme. Kökte eksik kısım varsa "[EKSİK KÖK PARÇASI]" yaz.
+10. Olumsuz kök: ayrıştırılan girdilerde olumsuz_kok ≥ 0.5 ise öğrencilerin "işaretledim" dediği şık doğru bir önerme olabilir;
+   oyları doğrudan cevap sayma, notlarda belirt. Öğrenci oyları ile kaynak çelişirse "notesAndDiscrepancies" alanına "cevap tartışmalı" yaz ve confidenceScore 60'ı geçmesin.
 
 YALNIZCA ŞU JSON'U DÖN:
 {
@@ -5669,7 +6016,36 @@ function getDecksDb(): any[] {
 }
 
 // Kullanıcı notları yedeği / cihazlar arası eşitleme (src/services/userNotesService.ts)
-registerUserNotesRoutes(app, DATA_DIR);
+registerUserNotesRoutes(app, DATA_DIR, (codeHash, store) => {
+  broadcastRealtimeEvent('notes_changed', { codeHash, count: store.notes.length, updatedAt: store.updatedAt, time: Date.now() });
+});
+
+// Serbest metin soru girişi: ham kayıt + ücretsiz Gemini ile ayrıştırma kuyruğu (src/services/questionIntake.ts).
+// Ayrıştırma bitince sonuç soru kaydına `intake` alanı olarak yazılır ve kümeler yeniden hesaplanır.
+const questionIntake = createQuestionIntake(DATA_DIR, __dirname, {
+  getQuestions: () => db.questions,
+  writeback: (raw, parse, units) => {
+    const idx = db.questions.findIndex((q) => q.id === raw.questionId);
+    if (idx === -1) return 'retry'; // istemcinin PUT'u henüz gelmedi
+    const updated = applyIntakeToQuestion(db.questions[idx], raw, parse, units);
+    db.questions[idx] = updated;
+    saveDatabase();
+    mirrorQuestionToSupabase(updated);
+    return 'ok';
+  },
+});
+questionIntake.register(app, requireAdmin);
+
+// Soru havuzu kümeleri: ders, konu, soru no ve tıbbi terimlerle (src/services/poolClusterService.ts)
+const poolClusters = createPoolClusterService({
+  rootDir: __dirname,
+  file: POOL_CLUSTERS_FILE,
+  getQuestions: () => db.questions as any[],
+  getOrphanUnits: () => questionIntake.orphanUnits(),
+});
+questionIntake.onProcessed(() => poolClusters.schedule());
+// Açılışta hemen değil: arama motoru yüklenirken yük bindirmemek için 90 sn sonra
+setTimeout(() => poolClusters.runNow(), 90_000).unref?.();
 
 // Kullanıcı veri, istatistik, bildirim ve yorum yedeği / Supabase senkronizasyonu
 registerUserDataBackupRoutes(app, {
@@ -5720,20 +6096,41 @@ app.get(['/api/decks', '/api/ogren', '/api/interactive-decks'], (req, res) => {
       return res.json({ total: compactList.length, decks: compactList });
     }
 
-    res.json({ total: filtered.length, decks: filtered });
+    const payload = { total: filtered.length, decks: filtered };
+    if (handleConditionalResponse(req, res, payload, 'public, max-age=600, stale-while-revalidate=86400')) return;
+    res.json(payload);
   } catch (err: any) {
     res.status(500).json({ error: err.message });
   }
 });
 
+function loadDeckFromItemFiles(deckId: string): any {
+  const safeId = deckId.replace(/[^a-zA-Z0-9_-]+/g, '_');
+  const candidates = [
+    `${deckId}.json`,
+    `${safeId}.json`,
+    `k1p-${deckId}.json`,
+    `k1p-${safeId}.json`,
+    deckId.startsWith('k1p-') ? `${deckId.slice(4)}.json` : null,
+    safeId.startsWith('k1p-') ? `${safeId.slice(4)}.json` : null,
+  ].filter(Boolean) as string[];
+
+  for (const cand of candidates) {
+    const p = path.resolve(INTERACTIVE_DECK_ITEMS_DIR, cand);
+    if (fs.existsSync(p)) {
+      try {
+        return JSON.parse(fs.readFileSync(p, 'utf-8'));
+      } catch (_) {}
+    }
+  }
+  return null;
+}
+
 app.get(['/api/decks/:id', '/api/ogren/:id', '/api/interactive-decks/:id'], (req, res) => {
   try {
     const deckId = req.params.id;
-    const itemPath = path.resolve(INTERACTIVE_DECK_ITEMS_DIR, `${deckId}.json`);
-    let deck: any = null;
-    if (fs.existsSync(itemPath)) {
-      deck = JSON.parse(fs.readFileSync(itemPath, 'utf-8'));
-    } else {
+    let deck = loadDeckFromItemFiles(deckId);
+    if (!deck) {
       const list = getDecksDb();
       deck = list.find((d) => d.id === deckId || d.id === `k1p-${deckId}` || d.id.includes(deckId));
     }
@@ -5749,7 +6146,9 @@ app.get(['/api/decks/:id', '/api/ogren/:id', '/api/interactive-decks/:id'], (req
 
     // ?format=json: tarayıcı UA'sına bakılmaksızın ham JSON (istemci çevrimdışı yedeği için)
     if (req.query.format === 'json') {
-      return res.json({ deck });
+      const payload = { deck };
+      if (handleConditionalResponse(req, res, payload, 'public, max-age=3600, stale-while-revalidate=86400')) return;
+      return res.json(payload);
     }
 
     if (shouldServeNotebookLMHtml(req) || req.query.format === 'html') {
@@ -5758,7 +6157,9 @@ app.get(['/api/decks/:id', '/api/ogren/:id', '/api/interactive-decks/:id'], (req
       return res.send(markdownToSemanticHtml(deck.title || 'İnteraktif Öğrenme Destesi', md));
     }
 
-    res.json({ deck });
+    const payload = { deck };
+    if (handleConditionalResponse(req, res, payload, 'public, max-age=3600, stale-while-revalidate=86400')) return;
+    res.json(payload);
   } catch (err: any) {
     res.status(500).json({ error: err.message });
   }
@@ -5768,11 +6169,8 @@ app.get(['/api/decks/:id/slides/:slideNum', '/api/ogren/:id/slides/:slideNum'], 
   try {
     const { id, slideNum } = req.params;
     const num = Number(slideNum);
-    const itemPath = path.resolve(INTERACTIVE_DECK_ITEMS_DIR, `${id}.json`);
-    let deck: any = null;
-    if (fs.existsSync(itemPath)) {
-      deck = JSON.parse(fs.readFileSync(itemPath, 'utf-8'));
-    } else {
+    let deck = loadDeckFromItemFiles(id);
+    if (!deck) {
       const list = getDecksDb();
       deck = list.find((d) => d.id === id);
     }
@@ -5781,6 +6179,7 @@ app.get(['/api/decks/:id/slides/:slideNum', '/api/ogren/:id/slides/:slideNum'], 
     const slide = deck.slides?.find((s: any) => s.slideNumber === num || s.slideIndex === num || s.id === `slide-${num}`) || deck.slides?.[num - 1];
     if (!slide) return res.status(404).json({ error: 'Slayt bulunamadı' });
 
+    res.setHeader('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
     res.json({ deckId: deck.id, deckTitle: deck.title, slide });
   } catch (err: any) {
     res.status(500).json({ error: err.message });
@@ -6336,6 +6735,7 @@ app.post('/api/admin/reports/:id/resolve', requireAdmin, async (req, res) => {
         }
       } catch (_) {}
     }
+    broadcastRealtimeEvent('inbox_update', { action: 'resolve', reportId, questionId, time: Date.now() }, true);
     res.json({ success: true, message: 'Bildirim çözüldü olarak işaretlendi.' });
   } catch (err: any) {
     res.json({ success: true, message: 'Sunucuda tam çözülemedi ama konsol yerelde kapatabilir: ' + (err?.message || '') });
@@ -7084,27 +7484,39 @@ app.post('/api/send-welcome-email', async (req, res) => {
 // ----------------------------------------------------
 // LECTURE SUMMARIES API ENDPOINTS (Ders Özetleri API)
 // ----------------------------------------------------
-app.get('/api/summaries', (_req, res) => {
+let summariesMetaCache: { mtime: number; data: any[] } | null = null;
+app.get('/api/summaries', (req, res) => {
   try {
     const metaPath = path.resolve(__dirname, 'src', 'data', 'summaries_meta.json');
     if (fs.existsSync(metaPath)) {
-      const data = JSON.parse(fs.readFileSync(metaPath, 'utf8'));
-      return res.json({ success: true, count: data.length, summaries: data });
+      const mtime = fs.statSync(metaPath).mtimeMs;
+      if (!summariesMetaCache || summariesMetaCache.mtime !== mtime) {
+        summariesMetaCache = { mtime, data: JSON.parse(fs.readFileSync(metaPath, 'utf8')) };
+      }
+      const payload = { success: true, count: summariesMetaCache.data.length, summaries: summariesMetaCache.data };
+      if (handleConditionalResponse(req, res, payload, 'public, max-age=600, stale-while-revalidate=86400')) return;
+      return res.json(payload);
     }
     const fullPath = path.resolve(__dirname, 'data', 'lectureSummariesCatalog.json');
     if (fs.existsSync(fullPath)) {
-      const full = JSON.parse(fs.readFileSync(fullPath, 'utf8'));
-      const meta = full.map((s: any) => ({
-        id: s.id,
-        kurul: s.kurul,
-        committeeId: s.committeeId,
-        discipline: s.discipline,
-        title: s.title,
-        keyPoints: s.keyPoints,
-        charCount: s.charCount,
-        readingTimeMinutes: s.readingTimeMinutes,
-      }));
-      return res.json({ success: true, count: meta.length, summaries: meta });
+      const mtime = fs.statSync(fullPath).mtimeMs;
+      if (!summariesMetaCache || summariesMetaCache.mtime !== mtime) {
+        const full = JSON.parse(fs.readFileSync(fullPath, 'utf8'));
+        const meta = full.map((s: any) => ({
+          id: s.id,
+          kurul: s.kurul,
+          committeeId: s.committeeId,
+          discipline: s.discipline,
+          title: s.title,
+          keyPoints: s.keyPoints,
+          charCount: s.charCount,
+          readingTimeMinutes: s.readingTimeMinutes,
+        }));
+        summariesMetaCache = { mtime, data: meta };
+      }
+      const payload = { success: true, count: summariesMetaCache.data.length, summaries: summariesMetaCache.data };
+      if (handleConditionalResponse(req, res, payload, 'public, max-age=600, stale-while-revalidate=86400')) return;
+      return res.json(payload);
     }
     return res.json({ success: true, count: 0, summaries: [] });
   } catch (err: any) {
@@ -7135,7 +7547,9 @@ app.get('/api/summaries/:id', (req, res) => {
     const id = req.params.id;
     const found = getCachedSummaryById(id);
     if (found) {
-      return res.json({ success: true, summary: found });
+      const payload = { success: true, summary: found };
+      if (handleConditionalResponse(req, res, payload, 'public, max-age=3600, stale-while-revalidate=86400')) return;
+      return res.json(payload);
     }
     return res.status(404).json({ success: false, error: 'Ders özeti bulunamadı' });
   } catch (err: any) {
@@ -7282,12 +7696,10 @@ app.put('/api/admin/past-questions/:id', requireAdmin, async (req, res) => {
   };
   list[idx] = updatedQuestion;
   savePastQuestionsDb(list);
+  pastListCache = null;
 
   try {
-    const client = (localSupabase && isLocalSupabaseActive) ? localSupabase : cloudSupabase;
-    if (client) {
-      await client.from('past_questions').upsert(updatedQuestion);
-    }
+    await mirrorPastQuestionToSupabase(updatedQuestion);
   } catch (e) {
     console.warn('Supabase past_questions update error', e);
   }
@@ -8111,43 +8523,36 @@ app.post('/api/questions/:id/apply-ai-optimization', async (req, res) => {
     }
 
     // 2. Also check in past questions (pastQuestions.json)
-    const pastPath = path.join(__dirname, 'data', 'pastQuestions.json');
-    if (fs.existsSync(pastPath)) {
-      try {
-        const list = JSON.parse(fs.readFileSync(pastPath, 'utf8'));
-        const pIdx = list.findIndex((x: any) => x.id === qId);
-        if (pIdx !== -1) {
-          const pq = list[pIdx];
-          pq.discipline = optimizedData.discipline || pq.discipline;
-          pq.topic = optimizedData.topic || pq.topic;
-          pq.claimedAnswer = optimizedData.correctAnswer || pq.claimedAnswer;
-          pq.reconstruction = {
-            stem: optimizedData.stem,
-            options: optimizedData.options,
-            correctAnswer: optimizedData.correctAnswer,
-            explanation: optimizedData.explanation,
-            confidenceScore: optimizedData.confidenceScore || 95,
-            notesAndDiscrepancies: optimizedData.notesAndDiscrepancies || refinementSummary || '',
-            lastUpdated: now
-          };
-          pq.status = 'completed';
-          pq.updatedAt = now;
-          if (matchedLecture) {
-            pq.lectureReference = matchedLecture;
-          }
-          fs.writeFileSync(pastPath, JSON.stringify(list, null, 2), 'utf8');
-
-          const srcPast = path.join(__dirname, 'src', 'data', 'pastQuestions.json');
-          if (fs.existsSync(srcPast)) {
-            fs.writeFileSync(srcPast, JSON.stringify(list, null, 2), 'utf8');
-          }
-
-          mirrorPastQuestionToSupabase(pq);
-          if (!updatedQuestion) updatedQuestion = pq;
+    try {
+      const list = getPastQuestionsDb();
+      const pIdx = list.findIndex((x: any) => String(x.id) === String(qId));
+      if (pIdx !== -1) {
+        const pq = list[pIdx];
+        pq.discipline = optimizedData.discipline || pq.discipline;
+        pq.topic = optimizedData.topic || pq.topic;
+        pq.claimedAnswer = optimizedData.correctAnswer || pq.claimedAnswer;
+        pq.reconstruction = {
+          stem: optimizedData.stem,
+          options: optimizedData.options,
+          correctAnswer: optimizedData.correctAnswer,
+          explanation: optimizedData.explanation,
+          confidenceScore: optimizedData.confidenceScore || 95,
+          notesAndDiscrepancies: optimizedData.notesAndDiscrepancies || refinementSummary || '',
+          lastUpdated: now,
+        };
+        pq.status = 'completed';
+        pq.updatedAt = now;
+        if (matchedLecture) {
+          pq.lectureReference = matchedLecture;
         }
-      } catch (e) {
-        console.warn('Error saving to pastQuestions.json:', e);
+        list[pIdx] = pq;
+        savePastQuestionsDb(list);
+        pastListCache = null; // Servis edilen önbelleği anında temizle
+        await mirrorPastQuestionToSupabase(pq);
+        if (!updatedQuestion) updatedQuestion = pq;
       }
+    } catch (e) {
+      console.warn('Error saving to pastQuestions.json in apply-ai-optimization:', e);
     }
 
     if (!updatedQuestion) {
@@ -8492,8 +8897,10 @@ app.get('/api/lecture-notes', (req, res) => {
         createdAt: n.createdAt,
         updatedAt: n.updatedAt,
       }));
+      if (handleConditionalResponse(req, res, compactNotes, 'public, max-age=120, stale-while-revalidate=600')) return;
       return res.json(compactNotes);
     }
+    if (handleConditionalResponse(req, res, notes, 'public, max-age=120, stale-while-revalidate=600')) return;
     res.json(notes);
   } catch (err: any) {
     res.status(500).json({ error: 'Ders notları yüklenemedi: ' + err.message });
@@ -8510,7 +8917,9 @@ app.get('/api/lecture-notes/:id', (req, res) => {
       return res.status(404).json({ error: 'Ders notu bulunamadı' });
     }
     // Faz 12 temizlik katmanı (özgün dosya değişmez); ?raw=1 ile özgün metin
-    res.json(req.query.raw === '1' ? note : applyCleanOverlay(note));
+    const payload = req.query.raw === '1' ? note : applyCleanOverlay(note);
+    if (handleConditionalResponse(req, res, payload, 'public, max-age=300, stale-while-revalidate=1200')) return;
+    res.json(payload);
   } catch (err: any) {
     res.status(500).json({ error: 'Ders notu alınamadı: ' + err.message });
   }
@@ -9560,6 +9969,89 @@ function hydrateExistingReportsToAutoRepair() {
   }
 }
 
+// AutoRepair ile sunucu belleği ve Supabase aynasını anında senkronize eden kanca
+registerDatabaseSyncHook(async ({ source, targetId, updatedData }) => {
+  try {
+    if (source === 'past_question') {
+      const list = getPastQuestionsDb();
+      const idx = list.findIndex((q: any) => String(q.id) === String(targetId));
+      if (idx !== -1) {
+        const cur = list[idx];
+        const updated = {
+          ...cur,
+          ...updatedData,
+          id: cur.id,
+          updatedAt: new Date().toISOString(),
+        };
+        list[idx] = updated;
+        savePastQuestionsDb(list);
+        pastListCache = null; // Servis edilen önbelleği hemen düşür
+        await mirrorPastQuestionToSupabase(updated);
+      }
+    } else if (source === 'practice_question') {
+      const idx = db.questions.findIndex((q: any) => String(q.id) === String(targetId));
+      if (idx !== -1) {
+        const q = db.questions[idx];
+        Object.assign(q, updatedData, { id: q.id, updatedAt: new Date().toISOString() });
+        saveDatabase();
+        await mirrorQuestionToSupabase(q);
+      }
+    }
+  } catch (err: any) {
+    console.warn('[AutoRepairSyncHook] Senkronizasyon hatası:', err.message);
+  }
+});
+
+// Hafif ve anlık Yönetici Gelen Kutusu Endpoint'i (60MB yerine 20KB hızlı yanıt)
+app.get('/api/admin/inbox', requireAdmin, async (_req, res) => {
+  try {
+    const pastList = getPastQuestionsDb();
+    const reports: any[] = [];
+    const comments: any[] = [];
+
+    for (const q of pastList) {
+      if (Array.isArray(q.reports) && q.reports.length > 0) {
+        for (const r of q.reports) {
+          reports.push({
+            id: r.id || `rep-${q.id}-${reports.length}`,
+            questionId: q.id,
+            questionTopic: q.topic,
+            discipline: q.discipline,
+            reason: r.reason || 'Hata Bildirimi',
+            details: r.details || '',
+            reportedBy: r.reportedBy || 'Anonim',
+            createdAt: r.timestamp || r.createdAt || q.updatedAt,
+            status: r.status || 'pending',
+          });
+        }
+      }
+      if (Array.isArray(q.comments) && q.comments.length > 0) {
+        for (const c of q.comments) {
+          comments.push({
+            id: c.id || `c-${q.id}-${comments.length}`,
+            questionId: q.id,
+            questionTopic: q.topic,
+            author: c.author || 'Anonim',
+            text: c.text || '',
+            createdAt: c.createdAt || q.updatedAt,
+          });
+        }
+      }
+    }
+
+    reports.sort((a, b) => (b.createdAt || '').localeCompare(a.createdAt || ''));
+    comments.sort((a, b) => (b.createdAt || '').localeCompare(a.createdAt || ''));
+
+    res.json({
+      success: true,
+      reports: reports.slice(0, 300),
+      comments: comments.slice(0, 300),
+    });
+  } catch (err: any) {
+    res.status(500).json({ error: 'Gelen kutusu okunamadı: ' + err.message });
+  }
+});
+
 // Admin Auto-Repair API Endpoints (Catch-all'dan ÖNCE Express'e kaydedilir)
 app.get('/api/admin/auto-repair/items', requireAdmin, (_req, res) => {
   try {
@@ -9812,7 +10304,6 @@ async function startServer() {
   app.listen(PORT, () => {
     console.log(`Server listening on port ${PORT} (isProd: ${isProd})`);
     // 🤖 Ücretsiz Gemini Hata İnceleme ve Onarım Otomasyonunu Başlat
-    startAutoRepairWorker();
     hydrateExistingReportsToAutoRepair();
     startAutoRepairWorker();
     // Masaüstü klasör izleyicisi arka planı meşgul etmemesi için otomatik başlatılmaz.
