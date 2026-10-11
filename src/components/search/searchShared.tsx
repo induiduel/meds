@@ -26,6 +26,8 @@ export interface SearchResponse {
   capped: boolean;
   byType: Partial<Record<SearchDocType, number>>;
   results: SearchHit[];
+  /** Sunucunun sorguyu anlama biçimi (düzeltme, kavramlar, niyet, eşanlamlılar) */
+  understanding?: import('./QueryIntelUi').Understanding;
 }
 
 export const TYPE_META: Record<SearchDocType, { label: string; dot: string }> = {
@@ -55,12 +57,14 @@ export const TYPE_ORDER: SearchDocType[] = [
 
 export async function fetchSearch(
   q: string,
-  opts: { types?: SearchDocType[]; offset?: number; limit?: number; committeeId?: string } = {},
+  opts: { types?: SearchDocType[]; offset?: number; limit?: number; committeeId?: string; track?: boolean } = {},
   signal?: AbortSignal
 ): Promise<SearchResponse | null> {
   const params = new URLSearchParams({ q, offset: String(opts.offset || 0), limit: String(opts.limit || 5) });
   if (opts.types?.length) params.set('types', opts.types.join(','));
   if (opts.committeeId) params.set('committeeId', opts.committeeId);
+  // Yalnız gerçek arama (arama sayfası) anonim günlüğe yazılır; paletin yazarken yaptığı istekler değil
+  if (opts.track) params.set('log', '1');
   const res = await safeJsonFetch<SearchResponse & { success: boolean }>(`/api/search/all?${params}`, { signal });
   if (!res.ok || !res.data?.success) return null;
   const includeV3 = !opts.types?.length || opts.types.some((type) => type.startsWith('gemini_v3_'));

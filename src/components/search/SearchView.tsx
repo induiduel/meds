@@ -5,6 +5,7 @@ import type { LectureNote } from '../../types';
 import { PageHeader } from '../ui/PageHeader';
 import { fetchSearch, Highlight, TypeTag, TYPE_META, TYPE_ORDER, type SearchDocType, type SearchHit, type SearchResponse } from './searchShared';
 import { rememberSearch } from './SearchPalette';
+import { UnderstandingBar } from './QueryIntelUi';
 
 const PAGE = 20;
 
@@ -70,7 +71,7 @@ export const SearchView: React.FC<SearchViewProps> = ({ initialQuery, focusId, c
     if (!query.trim()) { setData(null); setItems([]); setByType({}); return; }
     const ctrl = new AbortController();
     setLoading(true);
-    fetchSearch(query, { limit: PAGE, types: type === 'all' ? undefined : [type], committeeId }, ctrl.signal).then((res) => {
+    fetchSearch(query, { limit: PAGE, types: type === 'all' ? undefined : [type], committeeId, track: type === 'all' }, ctrl.signal).then((res) => {
       if (ctrl.signal.aborted) return;
       setData(res);
       setItems(res?.results || []);
@@ -135,6 +136,18 @@ export const SearchView: React.FC<SearchViewProps> = ({ initialQuery, focusId, c
         )}
         <button type="submit" className="ms-search-submit">Ara</button>
       </form>
+
+      {query && data?.understanding && (
+        <UnderstandingBar
+          u={data.understanding}
+          query={query}
+          onQuery={(nq) => { setInput(nq); setQuery(nq); onQueryChange(nq); }}
+          onOpenConcept={(c) => c.ref && onOpenSource({
+            id: `concept-${c.ref.id}`, documentId: c.ref.id, documentType: c.ref.kind === 'disease' ? 'disease' : 'glossary_term',
+            title: c.label, snippet: '', content: '', score: 0,
+          })}
+        />
+      )}
 
       {chips.length > 0 && (
         <div className="flex gap-2 overflow-x-auto no-scrollbar -mx-4 px-4 sm:mx-0 sm:px-0" role="tablist" aria-label="Kaynak türü">

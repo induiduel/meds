@@ -449,6 +449,14 @@ export interface SearchEverythingResult {
   capped: boolean;
   byType: Partial<Record<RagDocumentType, number>>;
   results: SearchHit[];
+  /** Sorgunun anlaşılma biçimi: düzeltme, kavramlar (varlık kartı), niyet, eşanlamlı yeniden yazımlar */
+  understanding?: {
+    corrected: string | null;
+    changes: Array<{ from: string; to: string }>;
+    concepts: Array<{ label: string; type: string; ref: { kind: string; id: string } | null }>;
+    intent: string | null;
+    rewrites: string[];
+  };
 }
 
 const SEARCH_POOL = 400;
@@ -491,33 +499,77 @@ export async function searchEverything(
   const limit = Math.min(50, Math.max(1, options.limit || 5));
   if (!q) return { query: q, total: 0, capped: false, byType: {}, results: [] };
 
+  // Sıralanmış havuz önbelleği: sayfalama ve aynı sorgunun tekrarı (palet → tüm sonuçlar) anında döner
+  const cacheKey = `${q.toLocaleLowerCase('tr-TR')}|${options.committeeId || ''}`;
+  const cached = searchPoolCache.get(cacheKey);
+  if (cached && Date.now() - cached.at < 10 * 60_000) return finishSearch(cached, options, q, offset, limit);
+
+  // Sorgu zekâsı: yazım düzeltme, kavramlar, niyet, eşdeğerlik yuvaları ("böbrek tümörü" ≈ "renal neoplazm")
+  const { analyzeFor, getQueryIntel } = await import('./queryIntel/server.ts');
+  const intelReady = Boolean(getQueryIntel());
+  const { EVIDENCE_CUES } = await import('./queryIntel/core.ts');
+  // Tırnak içindeki sorgu ("…") olduğu gibi aranır: düzeltme/eşanlamlı yok (kullanıcı "özgün sorguyla ara" dedi)
+  const exact = /^".+"$/.test(q);
+  const u = exact
+    ? { query: q, corrected: null, changes: [], concepts: [], intent: null, rewrites: [], focus: [], slots: [] }
+    : analyzeFor(q);
+  const base = exact ? q.slice(1, -1) : u.corrected || q;
+  const variants: string[] = [base];
+  for (const rw of u.rewrites.slice(0, 2)) variants.push(rw);
+  // Yuva varyantları: tek seferde bir sözcüğü eşdeğer kökle değiştir (en çok 2)
+  const baseWords = foldTurkish(base).split(/[^a-z0-9]+/).filter(Boolean);
+  for (const sl of u.slots) {
+    if (variants.length >= 5) break;
+    const alt = sl.alts.find((a) => a.length >= 4);
+    if (!alt) continue;
+    const at = baseWords.indexOf(sl.w);
+    if (at < 0) continue;
+    variants.push(baseWords.map((w, i) => (i === at ? alt : w)).join(' '));
+  }
+  // Vektör kolu BM25 ile PARALEL başlar (eskiden sırayla: ~400 ms kayıp). Kavram etiketleri yoğun sorguya eklenir.
+  const vecText = [base, ...u.concepts.filter((c) => c.strong !== false).map((c) => c.label.replace(/\s*\([^)]*\)/g, ''))].join(' ').slice(0, 500);
+  const vecPromise = Promise.race([
+    semanticSearch(vecText, { committeeId: options.committeeId, limit: 30 }),
+    new Promise<never>((_, rej) => setTimeout(() => rej(new Error('vec-zamanasimi')), 2500)),
+  ]).catch(() => [] as any[]);
+
   // AI üretimi kayıtlar kaynak değildir (bkz. GROUNDING_DOC_TYPES): aramada gösterilmez
-  const pooled = (await searchLocalRag(q, { committeeId: options.committeeId, limit: SEARCH_POOL }))
-    .filter((r) => r.documentType !== 'ai_qa' && r.documentType !== 'ai_refinement');
-  // Yeniden sıralama: BM25 puanı tür bonusları içerir (soru bankası öne çıkar). Genel aramada
-  // önce sorgu köklerinin kaçının geçtiğine (kapsama), sonra başlıkta geçmesine, en son BM25'e bakılır.
-  // Uzun tıbbi terimlerde 5 harf kök fazla geniş (tromboksan ≠ trombosit): 8+ harfte 7 harf kullanılır
-  const stems = Array.from(new Set(foldTurkish(q).split(/[^a-z0-9]+/).filter((w) => w.length >= 3).map((w) => w.slice(0, w.length >= 8 ? 7 : 5))));
-  const fullWords = Array.from(new Set(foldTurkish(q).split(/[^a-z0-9]+/).filter((w) => w.length >= 4)));
-  // Vektör bonusu: dense aramanın ilk 30'undaki belge küçük bonus alır.
-  // BM25'i ezmez, ters-ilişkiyi (hipotiroidizm→Abortus nedeni vs Abortus'un nedeni) düzeltir.
-  // Vektör servisi yavaşsa/ölüyse site araması beklemez (2.5sn koruma).
+  const byId = new Map<string, Awaited<ReturnType<typeof searchLocalRag>>[number]>();
+  for (let vi = 0; vi < variants.length; vi++) {
+    const part = await searchLocalRag(variants[vi], { committeeId: options.committeeId, limit: vi === 0 ? SEARCH_POOL : 150 });
+    for (const r of part) {
+      if (r.documentType === 'ai_qa' || r.documentType === 'ai_refinement') continue;
+      const prev = byId.get(r.id);
+      // Varyanttan gelen sonuç ana sorgudan biraz geride başlar
+      const sc = vi === 0 ? r.matchScore : r.matchScore * 0.9;
+      if (!prev || prev.matchScore < sc) byId.set(r.id, { ...r, matchScore: sc });
+    }
+  }
+  const pooled = [...byId.values()];
+  // Yeniden sıralama: kapsama yuva bazında ölçülür (yuvadaki herhangi bir eşdeğer kök yeter);
+  // uzun tıbbi terimlerde 5 harf kök fazla geniş (tromboksan ≠ trombosit): 8+ harfte 7 harf kullanılır.
+  const stemOf = (w: string) => w.slice(0, w.length >= 8 ? 7 : 5);
+  const slotStems: string[][] = (u.slots.length ? u.slots.map((sl) => [sl.w, ...sl.alts]) : baseWords.filter((w) => w.length >= 3).map((w) => [w]))
+    .filter((alts) => alts[0].length >= 3)
+    .map((alts) => Array.from(new Set(alts.map(stemOf))));
+  const stems = Array.from(new Set(slotStems.flat()));
+  const fullWords = Array.from(new Set(baseWords.filter((w) => w.length >= 4)));
+  const conceptKeys = u.concepts
+    .filter((c) => c.strong !== false)
+    .map((c) => ({ key: foldTurkish(c.label.replace(/\s*\([^)]*\)/g, '')).replace(/[^a-z0-9]+/g, ' ').trim(), entity: c.type !== 'topic' }))
+    .filter((c) => c.key.length >= 3);
+  const intentStems = u.intent ? (EVIDENCE_CUES.find((x) => x.k === u.intent)?.stems || []) : [];
   const denseRank = new Map<string, number>();
-  try {
-    const vec = await Promise.race([
-      semanticSearch(q, { committeeId: options.committeeId, limit: 30 }),
-      new Promise<never>((_, rej) => setTimeout(() => rej(new Error('vec-zamanasimi')), 2500)),
-    ]);
-    (vec as any[]).forEach((r: any, i: number) => {
-      if (r?.id && !denseRank.has(r.id)) denseRank.set(r.id, i);
-    });
-  } catch { /* vektör yoksa BM25 düzeni korunur */ }
+  ((await vecPromise) as any[]).forEach((r: any, i: number) => {
+    if (r?.id && !denseRank.has(r.id)) denseRank.set(r.id, i);
+  });
   const rank = (r: (typeof pooled)[number]) => {
-    if (stems.length === 0) return r.matchScore;
+    if (slotStems.length === 0) return r.matchScore;
     const body = foldTurkish(r.content);
     const title = foldTurkish(r.title);
-    const cover = stems.filter((st) => body.includes(st) || title.includes(st)).length / stems.length;
-    const inTitle = stems.filter((st) => title.includes(st)).length / stems.length;
+    const has = (txt: string, alts: string[]) => alts.some((st) => txt.includes(st));
+    const cover = slotStems.filter((alts) => has(body, alts) || has(title, alts)).length / slotStems.length;
+    const inTitle = slotStems.filter((alts) => has(title, alts)).length / slotStems.length;
     // Tam kelime başlıkta geçiyorsa güçlü sinyal ("Hipotiroidi" başlığı > "hipotir" kök geçişi).
     const inTitleFull = fullWords.filter((w) => title.includes(w)).length / Math.max(1, fullWords.length);
     // Yoğunluk: konuyla ilgili belge terimi sık geçirir (tekil etiyoloji listesinden ayrışır).
@@ -530,7 +582,20 @@ export async function searchEverything(
     const dens = Math.min(10, (hits / words) * 100);
     const d = denseRank.get(r.id);
     const vecBonus = d === undefined ? 0 : (1 - d / 30) * 40;
-    return cover * 100 + inTitle * 30 + inTitleFull * 60 + dens * 4 + vecBonus + Math.min(r.matchScore, 120) * 0.25;
+    // Kavram: başlığında sorgudaki kavramın adı geçen belge öne; hastalık/sözlük kartı en öne (varlık kartı)
+    let conceptBonus = 0;
+    const titleN = title.replace(/\([^)]*\)/g, ' ').replace(/[^a-z0-9]+/g, ' ').trim();
+    for (const c of conceptKeys) {
+      if (!titleN.includes(c.key)) continue;
+      // Varlık kartı yalnız kavramın KENDİ kartı: "Hastalık: Nefrotik sendrom" evet, "Sözlük: silinme ve nefrotik sendrom" hayır
+      const core = titleN.replace(/^(hastalik|sozluk)\s+/, '');
+      const own = core === c.key || (core.startsWith(c.key) && core.length <= c.key.length + 3);
+      const card = r.documentType === 'disease' || r.documentType === 'glossary_term';
+      conceptBonus = Math.max(conceptBonus, c.entity && card && own ? (r.documentType === 'disease' ? 95 : 85) : card ? 10 : 35);
+    }
+    // Niyet: "tedavisi" aranıyorsa tedavi anlatan parça öne
+    const intentBonus = intentStems.length && intentStems.some((st) => body.includes(st)) ? 18 : 0;
+    return cover * 100 + inTitle * 30 + inTitleFull * 60 + dens * 4 + vecBonus + conceptBonus + intentBonus + Math.min(r.matchScore, 120) * 0.25;
   };
   const ranked = pooled
     .map((r) => ({ r, k: rank(r) }))
@@ -561,7 +626,6 @@ export async function searchEverything(
     if (keys.some((k) => seen.has(k))) continue;
     keys.forEach((k) => seen.add(k));
     byType[r.documentType] = (byType[r.documentType] || 0) + 1;
-    if (options.types?.length && !options.types.includes(r.documentType)) continue;
     pool.push({
       id: r.id,
       documentId: r.documentId,
@@ -575,5 +639,30 @@ export async function searchEverything(
       score: Math.round(r.matchScore * 10) / 10,
     });
   }
-  return { query: q, total: pool.length, capped: raw.length >= SEARCH_POOL, byType, results: pool.slice(offset, offset + limit) };
+  const understanding = {
+    corrected: u.corrected,
+    changes: u.changes.map((c) => ({ from: c.from, to: c.to })),
+    concepts: u.concepts.filter((c) => c.strong !== false).slice(0, 3).map((c) => ({ label: c.label, type: c.type, ref: c.ref })),
+    intent: u.intent,
+    rewrites: u.rewrites.slice(0, 2),
+  };
+  const entry = { at: Date.now(), pool, byType, capped: raw.length >= SEARCH_POOL, understanding };
+  // Motor henüz yüklenmemişken (açılışın ilk saniyeleri) yapılan anlamlandırmasız sonuç önbelleğe girmez
+  if (intelReady) searchPoolCache.set(cacheKey, entry);
+  if (searchPoolCache.size > 300) searchPoolCache.delete(searchPoolCache.keys().next().value as string);
+  return finishSearch(entry, options, q, offset, limit);
+}
+
+interface PoolEntry {
+  at: number;
+  pool: SearchHit[];
+  byType: Partial<Record<RagDocumentType, number>>;
+  capped: boolean;
+  understanding: SearchEverythingResult['understanding'];
+}
+const searchPoolCache = new Map<string, PoolEntry>();
+
+function finishSearch(e: PoolEntry, options: { types?: RagDocumentType[] }, q: string, offset: number, limit: number): SearchEverythingResult {
+  const pool = options.types?.length ? e.pool.filter((r) => options.types!.includes(r.documentType)) : e.pool;
+  return { query: q, total: pool.length, capped: e.capped, byType: e.byType, results: pool.slice(offset, offset + limit), understanding: e.understanding };
 }

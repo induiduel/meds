@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { CornerDownLeft, Sparkles, Wand2 } from 'lucide-react';
-import { ApiService } from '../../services/api';
+import { ApiService, safeJsonFetch } from '../../services/api';
 
 /**
  * Tam ekran yazmada öneri çubuğu + cümle tamamlama (telefon).
@@ -113,6 +113,8 @@ export const ComposerAssist: React.FC<{
   committeeId?: string;
 }> = ({ active, value, onChange, textareaId, committeeId }) => {
   const [sources, setSources] = useState<string[]>([]);
+  // Sorgu zekâsı (/api/text/assist): derlem n-gram'ından cümle devamı + bağlamlı yazım düzeltmesi
+  const [assist, setAssist] = useState<{ for: string; ghost: string; correction: { text: string; changes: { from: string; to: string }[] } | null } | null>(null);
   const [paused, setPaused] = useState(false);
   const [box, setBox] = useState<{ top: number; left: number; width: number; height: number; scroll: number } | null>(null);
   const mirrorRef = useRef<HTMLDivElement>(null);
@@ -127,6 +129,10 @@ export const ComposerAssist: React.FC<{
       const q = value.trim();
       if (q.split(/\s+/).length < 2) { setSources([]); return; }
       const id = ++reqId.current;
+      const v = value;
+      safeJsonFetch<{ success: boolean; ghost: string; correction: { text: string; changes: { from: string; to: string }[] } | null }>(
+        `/api/text/assist?text=${encodeURIComponent(v.slice(-600))}`,
+      ).then((r) => { if (id === reqId.current && r.ok && r.data?.success) setAssist({ for: v, ghost: r.data.ghost || '', correction: r.data.correction }); });
       ApiService.findSimilarPastQuestions(q, committeeId)
         .then((r) => { if (id === reqId.current) setSources((r || []).slice(0, 8).map((x) => String(x.stem || x.title || ''))); })
         .catch(() => { if (id === reqId.current) setSources([]); });
@@ -138,11 +144,21 @@ export const ComposerAssist: React.FC<{
     if (!paused || !value.trim()) return [];
     const fromPast = continuations(value, sources, 3);
     const fromTpl = continuations(value, TEMPLATES, 3);
-    const all = [...fromPast, ...fromTpl];
+    // n-gram devamı yalnız bu metin için geldiyse (eski yanıt yeni metne eklenmesin)
+    const fromCorpus = assist && assist.for === value && assist.ghost ? [assist.ghost] : [];
+    const all = [...fromPast, ...fromCorpus, ...fromTpl];
     const seen = new Set<string>();
     return all.filter((t) => { const f = fold(t); if (seen.has(f)) return false; seen.add(f); return true; }).slice(0, 3);
-  }, [paused, value, sources]);
-  const fix = useMemo(() => (paused ? fixText(value) : null), [paused, value]);
+  }, [paused, value, sources, assist]);
+  // Düzelt: önce sözcük yazımı (derlem sözlüğü, bağlamlı), sonra biçim (baş harf, boşluk, "?")
+  const fix = useMemo(() => {
+    if (!paused) return null;
+    const spell = assist && assist.for === value ? assist.correction : null;
+    const base = spell?.text ?? value;
+    const f = fixText(base);
+    const changes = [...(spell?.changes || []).map((c) => `${c.from} → ${c.to}`), ...(f?.changes || [])];
+    return changes.length ? { text: f?.text ?? base, changes } : null;
+  }, [paused, value, assist]);
   const ghost = options[0] || '';
 
   // Ayna katmanı textarea'nın üstüne hizala (konum, boyut, kaydırma)

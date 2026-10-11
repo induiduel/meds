@@ -8631,8 +8631,110 @@ app.get('/api/rag/status', (req, res) => {
 // "Bunu mu kastettiniz?": ?q=metin → { text, changes }
 app.get('/api/search/spell', async (req, res) => {
   try {
+    const q = String(req.query.q || '').slice(0, 2000);
+    // Yeni motor (bağlamlı SymSpell + Türkçe karakter geri kazanımı); paket hazır değilse eski sözlük önerisi
+    const { getQueryIntel } = await import('./src/services/queryIntel/server.ts');
+    const eng = getQueryIntel();
+    if (eng) return res.json({ success: true, ...eng.correct(q, 0.6) });
     const { suggestSpelling } = await import('./src/services/localRagEngine.ts');
-    res.json({ success: true, ...suggestSpelling(String(req.query.q || '').slice(0, 2000)) });
+    res.json({ success: true, ...suggestSpelling(q) });
+  } catch (err: any) {
+    res.status(500).json({ success: false, error: err.message });
+  }
+});
+
+// Sorgu zekâsı: yazarken öneriler (kavram / sözcük / sonraki sözcük), düzeltme, kavramlar, niyet. ~1 ms + önbellek.
+app.get('/api/search/suggest', async (req, res) => {
+  try {
+    const { suggestFor } = await import('./src/services/queryIntel/server.ts');
+    const limit = Math.min(12, Math.max(1, parseInt(String(req.query.limit || '8'), 10) || 8));
+    const payload = suggestFor(String(req.query.q || ''), limit);
+    if (payload.ready) res.setHeader('Cache-Control', 'public, max-age=600');
+    res.json({ success: true, ...payload });
+  } catch (err: any) {
+    res.status(500).json({ success: false, error: err.message });
+  }
+});
+
+// Sorgunun anlamlandırılması (kavramlar, niyet, eşdeğerlik yuvaları, yeniden yazımlar) — tanılama ve istemci için
+app.get('/api/search/understand', async (req, res) => {
+  try {
+    const { analyzeFor } = await import('./src/services/queryIntel/server.ts');
+    res.setHeader('Cache-Control', 'public, max-age=600');
+    res.json({ success: true, ...analyzeFor(String(req.query.q || '')) });
+  } catch (err: any) {
+    res.status(500).json({ success: false, error: err.message });
+  }
+});
+
+// Soru yazma yardımcısı: soluk cümle devamı + sonraki sözcükler + yazım düzeltmesi
+app.get('/api/text/assist', async (req, res) => {
+  try {
+    const { composeAssist } = await import('./src/services/queryIntel/server.ts');
+    res.json({ success: true, ...composeAssist(String(req.query.text || '').slice(0, 2000)) });
+  } catch (err: any) {
+    res.status(500).json({ success: false, error: err.message });
+  }
+});
+
+app.get('/api/search/intel/status', async (_req, res) => {
+  const { queryIntelStatus } = await import('./src/services/queryIntel/server.ts');
+  const { getDiseaseAudit } = await import('./src/services/knowledge/diseaseGraph.ts');
+  const audit = await getDiseaseAudit();
+  res.json({ success: true, queryIntel: queryIntelStatus(), diseaseGraph: audit ? { builtAt: audit.builtAt, stats: audit.stats } : null });
+});
+
+// Anonim arama günlüğü özeti (yönetici): sonuçsuz / az sonuçlu aramalar veri eksiği adayıdır
+app.get('/api/search/intel/log', requireAdmin, async (_req, res) => {
+  const { searchLogSummary } = await import('./src/services/queryIntel/server.ts');
+  res.json({ success: true, ...searchLogSummary() });
+});
+
+// Paketleri yeniden derle (yönetici): düşük öncelikli alt süreç; ?force=1 imzayı yok sayar
+app.post('/api/search/intel/rebuild', requireAdmin, async (req, res) => {
+  const { runQueryIntelBuild } = await import('./src/services/queryIntel/server.ts');
+  runQueryIntelBuild({ force: req.query.force === '1' }).then((r) => console.log('[query-intel] elle derleme:', r.ok ? 'tamam' : 'başarısız'));
+  res.json({ success: true, started: true });
+});
+
+// Hastalık bilgi grafiği: kanıtlar, ilişkili kavramlar/hastalıklar, profil denetimi
+app.get('/api/diseases/audit', async (_req, res) => {
+  try {
+    const { getDiseaseAudit } = await import('./src/services/knowledge/diseaseGraph.ts');
+    const audit = await getDiseaseAudit();
+    if (!audit) return res.status(503).json({ success: false, error: 'Hastalık grafiği henüz derlenmedi' });
+    res.json({ success: true, ...audit });
+  } catch (err: any) {
+    res.status(500).json({ success: false, error: err.message });
+  }
+});
+
+app.get('/api/diseases/quality', async (_req, res) => {
+  try {
+    const { getDiseaseQualityMap } = await import('./src/services/knowledge/diseaseGraph.ts');
+    const m = await getDiseaseQualityMap();
+    if (!m) return res.status(503).json({ success: false, error: 'Hastalık grafiği henüz derlenmedi' });
+    res.setHeader('Cache-Control', 'public, max-age=600');
+    res.json({ success: true, ...m });
+  } catch (err: any) {
+    res.status(500).json({ success: false, error: err.message });
+  }
+});
+
+app.get('/api/diseases/:id/insights', async (req, res) => {
+  try {
+    const { getDiseaseInsights, analyzeDiseaseByName } = await import('./src/services/knowledge/diseaseGraph.ts');
+    const hit = await getDiseaseInsights(req.params.id);
+    if (hit) {
+      res.setHeader('Cache-Control', 'public, max-age=300');
+      return res.json({ success: true, insights: hit });
+    }
+    // Grafikte yok (yeni / kullanıcı eklemesi): ?name= ile anlık analiz
+    const name = String(req.query.name || '').trim().slice(0, 120);
+    if (!name) return res.status(404).json({ success: false, error: 'Hastalık grafikte yok; anlık analiz için ad gerekli' });
+    const aliases = String(req.query.aliases || '').split('|').map((x) => x.trim()).filter(Boolean).slice(0, 8);
+    const insights = await analyzeDiseaseByName({ id: req.params.id, name, latinName: String(req.query.latin || ''), aliases });
+    res.json({ success: true, insights });
   } catch (err: any) {
     res.status(500).json({ success: false, error: err.message });
   }
@@ -8649,6 +8751,10 @@ app.get('/api/search/all', async (req, res) => {
       offset: parseInt(String(req.query.offset || '0'), 10) || 0,
       limit: parseInt(String(req.query.limit || '5'), 10) || 5,
     });
+    // Anonim sorgu günlüğü: yalnız ilk sayfa ve süzgeçsiz arama (sayfalama/tür sekmesi aynı aramayı tekrar saymasın)
+    if (req.query.log === '1' && (!req.query.offset || req.query.offset === '0')) {
+      if (!types.length) import('./src/services/queryIntel/server.ts').then((m) => m.logSearch(String(req.query.q || ''), result.total)).catch(() => {});
+    }
     res.json({ success: true, ...result });
   } catch (err: any) {
     res.status(500).json({ success: false, error: 'Arama sırasında hata oluştu: ' + err.message });
@@ -9693,6 +9799,8 @@ async function startServer() {
     // Initialize Local & Hybrid RAG Engine (49,000+ medical chunks)
     initLocalRagEngine();
     warmSpellIndex();
+    import('./src/services/queryIntel/server.ts').then((m) => m.startQueryIntel()).catch((e) => console.warn('[query-intel] başlatılamadı:', e?.message));
+    import('./src/services/knowledge/diseaseGraph.ts').then((m) => m.warmDiseaseGraph()).catch(() => {});
     // Initialize DeepSeek Data Watcher
     initDeepSeekWatcher(() => {
       runAutoChunking({ syncToCloud: false }).catch(() => {});

@@ -1125,12 +1125,23 @@ export function chunkDiseases(): RagChunk[] {
   const list = JSON.parse(fs.readFileSync(p, 'utf-8'));
   const chunks: RagChunk[] = [];
   const now = new Date().toISOString();
-  for (const d of Array.isArray(list) ? list : []) {
+  // Şablon/dolgu cümleleri (tüm profillerde aynı: "…için altta yatan tetikleyici…") aranabilir içerik değildir
+  const GENERIC = [/standart medikal protokol/, /laboratuvar incelemeleri ve klinik/, /radyolojik goruntuleme ve/, /tablosuna ozgu akut veya kronik/,
+    /altta yatan tetikleyici genetik/, /karakteristik histopatolojik doku/, /hucresel duzeyde fizyopatolojik/, /ders mufredati kapsaminda ele alinmistir/,
+    /toplumda yas ve cinsiyet/, /klinik ve histopatolojik ayirici tani$/, /ayirici tanisinda klinik ve laboratuvar bulgulari belirleyici/];
+  const real = (v: any) => (Array.isArray(v) ? v : v ? [v] : []).filter((x: any) => {
+    const f = foldTurkish(String(x || ''));
+    return f.length >= 12 && !GENERIC.some((re) => re.test(f));
+  }).join(' · ');
+  for (const raw of Array.isArray(list) ? list : []) {
+    const d = { ...raw };
+    for (const k of ['etiology', 'symptoms_clinical', 'pathognomonic_features', 'patognomonik_features', 'diagnostic_methods', 'treatment', 'physiology_pathophysiology', 'morphology_pathology']) d[k] = real(raw[k]);
     const body = [`Latince: ${d.latinName || ''}`, `Kategori: ${d.category || ''}`, `ICD: ${d.icd_code || ''}`,
       `Etiyoloji: ${d.etiology || ''}`, `Belirtiler: ${d.symptoms_clinical || ''}`,
       `Patognomonik: ${d.patognomonik_features || d.pathognomonic_features || ''}`,
       `Tanı: ${d.diagnostic_methods || ''}`, `Tedavi: ${d.treatment || ''}`,
-      `Patofizyoloji: ${d.physiology_pathophysiology || d.morphology_pathology || ''}`]
+      `Patofizyoloji: ${d.physiology_pathophysiology || d.morphology_pathology || ''}`,
+      `Ders notu: ${String(d.source_notes_summary || '').replace(/^Ders notu bağlamı:\s*/i, '')}`]
       .filter((l) => l.split(': ')[1]?.trim()).join('\n');
     const content = `[HASTALIK]\nHastalık: ${d.name}\n${body}`.slice(0, 1500);
     if (!d.name || content.length < 20) continue;

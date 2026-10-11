@@ -27,15 +27,22 @@ import { shareDeepLink, triggerDomHighlightAndScroll } from '../../services/univ
 import { toast } from '../ui/Toast';
 import { Sheet } from '../ui/Sheet';
 import { AppUser, ADMIN_EMAIL } from '../../services/auth';
+import { safeJsonFetch } from '../../services/api';
+import { writeLocation } from '../../router';
+import { foldText } from '../../services/searchText';
+import { EvidenceList, QualityStrip, RelatedPanel, useDiseaseInsights, type Evidence, type SectionKey } from './DiseaseInsights';
 
 interface DiseasesViewProps {
   currentUser?: AppUser | null;
   onOpenReportModal?: (target: { type: string; id: string; title: string }) => void;
+  /** Aramadan gelen hastalık: açılınca ayrıntı sayfası açılır */
+  initialDiseaseId?: string;
 }
 
 export const DiseasesView: React.FC<DiseasesViewProps> = ({
   currentUser,
   onOpenReportModal,
+  initialDiseaseId,
 }) => {
   const isAdmin = currentUser?.email === ADMIN_EMAIL || Boolean((currentUser as any)?.isMasterAdmin);
   const [diseases, setDiseases] = useState<DiseaseProfile[]>([]);
@@ -80,10 +87,16 @@ export const DiseasesView: React.FC<DiseasesViewProps> = ({
     const targetId = params.get('id');
     const hash = window.location.hash;
 
-    let targetDiseaseId = targetId;
+    let targetDiseaseId = initialDiseaseId || targetId;
     if (!targetDiseaseId && hash.startsWith('#disease-')) {
-      const parts = hash.replace('#disease-', '').split('-');
-      targetDiseaseId = parts[0];
+      // Kimlikler tire içerir (akut-apendisit): önce tam kimlik, sonra bölüm son eki (-etiology …) atılarak denenir
+      const raw = decodeURIComponent(hash.slice('#disease-'.length));
+      const ids = new Set(diseases.map((d) => d.id));
+      const parts = raw.split('-');
+      for (let k = parts.length; k >= 1 && !targetDiseaseId; k--) {
+        const cand = parts.slice(0, k).join('-');
+        if (ids.has(cand)) targetDiseaseId = cand;
+      }
     }
 
     if (targetDiseaseId) {
@@ -95,7 +108,31 @@ export const DiseasesView: React.FC<DiseasesViewProps> = ({
         }, 300);
       }
     }
-  }, [diseases]);
+  }, [diseases, initialDiseaseId]);
+
+  // Kaynak analizi: profil doluluğu (liste rozetleri ve şablon metinlerin gizlenmesi için kompakt harita)
+  const [quality, setQuality] = useState<Record<string, [number, string[], number]>>({});
+  useEffect(() => {
+    safeJsonFetch<{ success: boolean; q: Record<string, [number, string[], number]> }>('/api/diseases/quality').then((r) => {
+      if (r.ok && r.data?.success) setQuality(r.data.q || {});
+    });
+  }, []);
+  const isWeak = (d: DiseaseProfile, field: string) => Boolean(quality[d.id]?.[1].includes(field));
+
+  // Sorgu zekâsı: yazım hatası / eşanlamlı / kısaltma ("kansizlik", "ttp", "bobrek tumoru") → hastalık kimlikleri
+  const [conceptIds, setConceptIds] = useState<string[]>([]);
+  useEffect(() => {
+    const q = searchQuery.trim();
+    if (q.length < 3) { setConceptIds([]); return; }
+    const ctrl = new AbortController();
+    const t = window.setTimeout(async () => {
+      const r = await safeJsonFetch<{ success: boolean; corrected: string | null; concepts: Array<{ ref: { kind: string; id: string } | null }> }>(
+        `/api/search/understand?q=${encodeURIComponent(q)}`, { signal: ctrl.signal });
+      if (ctrl.signal.aborted || !r.ok || !r.data?.success) return;
+      setConceptIds(r.data.concepts.filter((c) => c.ref?.kind === 'disease').map((c) => c.ref!.id));
+    }, 160);
+    return () => { ctrl.abort(); window.clearTimeout(t); };
+  }, [searchQuery]);
 
   // Kategoriler
   const categories = useMemo(() => {
@@ -107,24 +144,33 @@ export const DiseasesView: React.FC<DiseasesViewProps> = ({
   }, [diseases]);
 
   // Filtreleme
+  // Türkçe karakter ve büyük/küçük harf duyarsız; ad/Latince/ICD eşleşmesi ve sorgu zekâsının tanıdığı hastalıklar öne
   const filteredDiseases = useMemo(() => {
-    const q = searchQuery.trim().toLowerCase();
-    return diseases.filter(d => {
-      if (onlyFavorites && !favoriteIds.has(d.id)) return false;
-      if (selectedCategory !== 'all' && d.category !== selectedCategory) return false;
-
-      if (!q) return true;
-
-      const nameMatch = d.name.toLowerCase().includes(q) || (d.latinName && d.latinName.toLowerCase().includes(q));
-      const icdMatch = d.icd_code && d.icd_code.toLowerCase().includes(q);
-      const symptomMatch = d.symptoms_clinical.some(s => s.toLowerCase().includes(q));
-      const pathogMatch = d.pathognomonic_features.some(p => p.toLowerCase().includes(q));
-      const etiologyMatch = d.etiology.some(e => e.toLowerCase().includes(q));
-      const treatmentMatch = d.treatment.some(t => t.toLowerCase().includes(q));
-
-      return nameMatch || icdMatch || symptomMatch || pathogMatch || etiologyMatch || treatmentMatch;
-    });
-  }, [diseases, searchQuery, selectedCategory, onlyFavorites, favoriteIds]);
+    const q = foldText(searchQuery.trim());
+    const terms = q.split(/\s+/).filter((t) => t.length >= 2);
+    const pinned = new Set(conceptIds);
+    const scored: Array<{ d: DiseaseProfile; s: number }> = [];
+    for (const d of diseases) {
+      if (onlyFavorites && !favoriteIds.has(d.id)) continue;
+      if (selectedCategory !== 'all' && d.category !== selectedCategory) continue;
+      if (!terms.length) { scored.push({ d, s: 0 }); continue; }
+      const name = foldText(`${d.name} ${d.latinName || ''} ${d.icd_code || ''}`);
+      let s = 0;
+      if (pinned.has(d.id)) s += 100;
+      if (terms.every((t) => name.includes(t))) s += 50 + (name.startsWith(terms[0]) ? 10 : 0);
+      else {
+        // Profil içeriği (yalnız gerçek, şablon olmayan bölümler)
+        const body = foldText([
+          ...(isWeak(d, 'symptoms') ? [] : d.symptoms_clinical), ...(isWeak(d, 'pathognomonic') ? [] : d.pathognomonic_features),
+          ...(isWeak(d, 'etiology') ? [] : d.etiology), ...(isWeak(d, 'treatment') ? [] : d.treatment), d.source_notes_summary || '',
+        ].join(' '));
+        if (terms.every((t) => name.includes(t) || body.includes(t))) s += 10;
+      }
+      if (s > 0) scored.push({ d, s });
+    }
+    if (terms.length) scored.sort((a, b) => b.s - a.s);
+    return scored.map((x) => x.d);
+  }, [diseases, searchQuery, selectedCategory, onlyFavorites, favoriteIds, conceptIds, quality]);
 
   // Favori Aç/Kapa
   const handleToggleFavorite = (id: string, e?: React.MouseEvent) => {
@@ -195,6 +241,18 @@ export const DiseasesView: React.FC<DiseasesViewProps> = ({
     setFormPhysiology((disease.physiology_pathophysiology || []).join('\n'));
     setFormNotes(disease.source_notes_summary || '');
     setShowAddEditModal(true);
+  };
+
+  // Kaynak kanıtını forma aktar: düzenleme formu açılır, cümle ilgili alana eklenir (alan şablonsa şablonun yerine)
+  const handleAdoptEvidence = (disease: DiseaseProfile, e: Evidence, weak: boolean) => {
+    handleOpenEdit(disease);
+    const setters: Partial<Record<SectionKey, React.Dispatch<React.SetStateAction<string>>>> = {
+      symptoms: setFormSymptoms, pathognomonic: setFormPathognomonic, etiology: setFormEtiology, physiology: setFormPhysiology,
+      pathology: setFormMorphology, diagnosis: setFormDiagnosis, imaging: setFormImaging, treatment: setFormTreatment,
+    };
+    const set = setters[e.section] || setFormNotes;
+    set((cur) => (weak || !cur.trim() ? e.t : cur.includes(e.t) ? cur : `${cur}\n${e.t}`));
+    toast.info('Forma aktarıldı', 'Kaynak cümlesi ilgili alana eklendi; gözden geçirip kaydedebilirsin.');
   };
 
   // Yeni ekleme aç
@@ -278,11 +336,18 @@ export const DiseasesView: React.FC<DiseasesViewProps> = ({
   };
 
   const sel = selectedDisease;
+  const { data: insights, loading: insightsLoading } = useDiseaseInsights(sel);
+  const canEdit = Boolean(sel && (isAdmin || sel.isCustom));
   const catCount = (c: string) => (c === 'all' ? diseases.length : diseases.filter((d) => d.category === c).length);
 
   /** Ayrıntı bölümü: ikon karolu başlık + madde listesi; boş bölüm gösterilmez. */
-  const Sec: React.FC<{ id: string; icon: React.ElementType; tone: string; title: string; items?: string[]; shareKey?: string; children?: React.ReactNode }> = ({ id, icon: Icon, tone, title, items, shareKey, children }) => {
-    if (!children && (!items || items.length === 0)) return null;
+  const Sec: React.FC<{ id: string; icon: React.ElementType; tone: string; title: string; items?: string[]; shareKey?: string; secKey?: SectionKey; children?: React.ReactNode }> = ({ id, icon: Icon, tone, title, items, shareKey, secKey, children }) => {
+    // Profil alanı şablon/boş ise (kaynak analizi) şablon metni gösterilmez; yerine ders kaynaklarından kanıtlar
+    const status = secKey ? insights?.audit?.fields[secKey] : undefined;
+    const weak = status === 'placeholder' || status === 'empty';
+    const ev = secKey ? insights?.evidence[secKey] : undefined;
+    const shownItems = weak ? [] : items;
+    if (!children && (!shownItems || shownItems.length === 0) && !(weak && ev?.length)) return null;
     return (
       <section id={id} className={`dz-sec is-${tone}`}>
         <header className="dz-sec-h">
@@ -294,10 +359,13 @@ export const DiseasesView: React.FC<DiseasesViewProps> = ({
             </button>
           )}
         </header>
-        {items && items.length > 0 && (
-          <ul className="dz-list">{items.map((t, k) => <li key={k}>{t}</li>)}</ul>
+        {shownItems && shownItems.length > 0 && (
+          <ul className="dz-list">{shownItems.map((t, k) => <li key={k}>{t}</li>)}</ul>
         )}
         {children}
+        {weak && ev && ev.length > 0 && (
+          <EvidenceList items={ev} onAdopt={canEdit && sel ? (e) => handleAdoptEvidence(sel, e, true) : undefined} />
+        )}
       </section>
     );
   };
@@ -394,13 +462,16 @@ export const DiseasesView: React.FC<DiseasesViewProps> = ({
                     <span className="dz-card-top">
                       <span className="dz-cat"><i aria-hidden />{d.category}</span>
                       {d.icd_code && <span className="dz-icd">{d.icd_code}</span>}
+                      {quality[d.id] && (
+                        <span className={`dz-qbadge ${quality[d.id][0] >= 70 ? 'is-good' : ''} ${d.icd_code ? '' : 'ml-auto'}`} title="Profil doluluğu (kaynak analizi)">%{quality[d.id][0]}</span>
+                      )}
                     </span>
                     <span className="dz-name">{d.name}</span>
                     {d.latinName && d.latinName !== d.name && <span className="dz-latin">{d.latinName}</span>}
-                    {d.pathognomonic_features.length > 0 && (
+                    {d.pathognomonic_features.length > 0 && !isWeak(d, 'pathognomonic') && (
                       <span className="dz-tip"><Zap aria-hidden /><span><b>Ayırıcı ipucu</b>{d.pathognomonic_features[0]}</span></span>
                     )}
-                    {d.symptoms_clinical.length > 0 && (
+                    {d.symptoms_clinical.length > 0 && !isWeak(d, 'symptoms') && (
                       <span className="dz-clin"><b>Klinik</b>{d.symptoms_clinical.slice(0, 2).join(' · ')}</span>
                     )}
                   </button>
@@ -447,6 +518,7 @@ export const DiseasesView: React.FC<DiseasesViewProps> = ({
       >
         {sel && (
           <div className="dz-detail">
+            <QualityStrip data={insights} loading={insightsLoading} />
             {(sel.latinName || (sel.verifiedSources && sel.verifiedSources.length > 0)) && (
               <div className="dz-meta">
                 {sel.latinName && <p className="dz-latin"><span>Latince</span>{sel.latinName}</p>}
@@ -462,23 +534,42 @@ export const DiseasesView: React.FC<DiseasesViewProps> = ({
                 )}
               </div>
             )}
-            <Sec id={`disease-${sel.id}-pathognomonic`} icon={Zap} tone="warn" title="Patognomonik ve ayırıcı tanı" items={sel.pathognomonic_features} shareKey="pathognomonic" />
-            <Sec id={`disease-${sel.id}-symptoms`} icon={Stethoscope} tone="accent" title="Klinik belirti ve bulgular" items={sel.symptoms_clinical} shareKey="symptoms" />
-            <Sec id={`disease-${sel.id}-etiology`} icon={Activity} tone="ai" title="Etiyoloji ve risk faktörleri" items={sel.etiology} shareKey="etiology" />
-            <Sec id={`disease-${sel.id}-physiology`} icon={Heart} tone="clinic" title="Fizyopatoloji" items={sel.physiology_pathophysiology} />
-            <Sec id={`disease-${sel.id}-pathology`} icon={BookOpenText} tone="bad" title="Morfoloji ve patoloji" items={sel.morphology_pathology} shareKey="pathology" />
-            {(sel.diagnostic_methods.length > 0 || (sel.imaging_findings || []).length > 0) && (
-              <Sec id={`disease-${sel.id}-diagnosis`} icon={Stethoscope} tone="clinic" title="Tanı ve görüntüleme" shareKey="diagnosis">
-                {sel.diagnostic_methods.length > 0 && (<><h5 className="dz-sub">Laboratuvar ve biyopsi</h5><ul className="dz-list">{sel.diagnostic_methods.map((t, k) => <li key={k}>{t}</li>)}</ul></>)}
-                {(sel.imaging_findings || []).length > 0 && (<><h5 className="dz-sub">Görüntüleme</h5><ul className="dz-list">{sel.imaging_findings.map((t, k) => <li key={k}>{t}</li>)}</ul></>)}
-              </Sec>
-            )}
-            <Sec id={`disease-${sel.id}-treatment`} icon={Pill} tone="ok" title="Tedavi ve ilaçlar" items={sel.treatment} shareKey="treatment" />
+            <Sec id={`disease-${sel.id}-pathognomonic`} icon={Zap} tone="warn" title="Patognomonik ve ayırıcı tanı" items={sel.pathognomonic_features} shareKey="pathognomonic" secKey="pathognomonic" />
+            <Sec id={`disease-${sel.id}-symptoms`} icon={Stethoscope} tone="accent" title="Klinik belirti ve bulgular" items={sel.symptoms_clinical} shareKey="symptoms" secKey="symptoms" />
+            <Sec id={`disease-${sel.id}-etiology`} icon={Activity} tone="ai" title="Etiyoloji ve risk faktörleri" items={sel.etiology} shareKey="etiology" secKey="etiology" />
+            <Sec id={`disease-${sel.id}-physiology`} icon={Heart} tone="clinic" title="Fizyopatoloji" items={sel.physiology_pathophysiology} secKey="physiology" />
+            <Sec id={`disease-${sel.id}-pathology`} icon={BookOpenText} tone="bad" title="Morfoloji ve patoloji" items={sel.morphology_pathology} shareKey="pathology" secKey="pathology" />
+            {(() => {
+              const dxWeak = insights?.audit?.fields.diagnosis && insights.audit.fields.diagnosis !== 'ok';
+              const imWeak = insights?.audit?.fields.imaging && insights.audit.fields.imaging !== 'ok';
+              const dx = dxWeak ? [] : sel.diagnostic_methods;
+              const im = imWeak ? [] : sel.imaging_findings || [];
+              const dxEv = dxWeak ? insights?.evidence.diagnosis : undefined;
+              const imEv = imWeak ? insights?.evidence.imaging : undefined;
+              if (!dx.length && !im.length && !dxEv?.length && !imEv?.length) return null;
+              const adopt = canEdit ? (e: Evidence) => handleAdoptEvidence(sel, e, true) : undefined;
+              return (
+                <Sec id={`disease-${sel.id}-diagnosis`} icon={Stethoscope} tone="clinic" title="Tanı ve görüntüleme" shareKey="diagnosis">
+                  {(dx.length > 0 || (dxEv?.length || 0) > 0) && <h5 className="dz-sub">Laboratuvar ve biyopsi</h5>}
+                  {dx.length > 0 && <ul className="dz-list">{dx.map((t, k) => <li key={k}>{t}</li>)}</ul>}
+                  <EvidenceList items={dxEv} onAdopt={adopt} limit={3} />
+                  {(im.length > 0 || (imEv?.length || 0) > 0) && <h5 className="dz-sub">Görüntüleme</h5>}
+                  {im.length > 0 && <ul className="dz-list">{im.map((t, k) => <li key={k}>{t}</li>)}</ul>}
+                  <EvidenceList items={imEv} onAdopt={adopt} limit={3} />
+                </Sec>
+              );
+            })()}
+            <Sec id={`disease-${sel.id}-treatment`} icon={Pill} tone="ok" title="Tedavi ve ilaçlar" items={sel.treatment} shareKey="treatment" secKey="treatment" />
             {sel.source_notes_summary && (
               <Sec id={`disease-${sel.id}-notes`} icon={Sparkles} tone="ai" title="Amfi ve ders notu vurguları">
                 <p className="dz-note">{sel.source_notes_summary}</p>
               </Sec>
             )}
+            <RelatedPanel
+              data={insights}
+              onOpenDisease={(id) => { const d = diseases.find((x) => x.id === id); if (d) setSelectedDisease(d); }}
+              onSearch={(q) => { writeLocation('search', q); window.dispatchEvent(new PopStateEvent('popstate')); }}
+            />
             {onOpenReportModal && (
               <button type="button" className="ui-btn is-ghost is-sm dz-report" onClick={() => onOpenReportModal({ type: 'disease', id: sel.id, title: sel.name })}>
                 <Flag aria-hidden /> Bu profilde hata bildir

@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { ArrowRight, CornerDownLeft, Loader2, Search, X } from 'lucide-react';
 import { fetchSearch, Highlight, TypeTag, type SearchResponse } from './searchShared';
+import { DidYouMean, SuggestList, useQuerySuggest, type SuggestItem } from './QueryIntelUi';
 
 interface SearchPaletteProps {
   initialQuery?: string;
@@ -58,6 +59,17 @@ export const SearchPalette: React.FC<SearchPaletteProps> = ({ initialQuery = '',
 
   const results = data?.results || [];
   const query = q.trim();
+  // Yazarken öneriler: kavramlar + sözcük tamamlama + yazım düzeltmesi (sunucu ~1 ms, 90 ms bekleme)
+  const sug = useQuerySuggest(q);
+  const suggestions: SuggestItem[] = (sug?.q === q ? sug.suggestions : []).slice(0, 5);
+  const correction = sug?.q === q ? sug.correction?.text : null;
+  const S = suggestions.length;
+  const pickSuggestion = (s: SuggestItem) => {
+    // Kavram seçilince doğrudan aranır (sonuçlarda varlık kartı başta); sözcük önerisi kutuya yazılır, yazmaya devam
+    if (s.kind === 'concept') { rememberSearch(s.value); onOpenResults(s.value); onClose(); return; }
+    setQ(/\s$/.test(s.value) ? s.value : `${s.value} `);
+    inputRef.current?.focus();
+  };
   const seeAll = (focusId?: string) => {
     if (!query) return;
     rememberSearch(query);
@@ -67,9 +79,14 @@ export const SearchPalette: React.FC<SearchPaletteProps> = ({ initialQuery = '',
 
   const onKeyDown = (e: React.KeyboardEvent) => {
     if (e.key === 'Escape') { e.preventDefault(); onClose(); }
-    else if (e.key === 'ArrowDown') { e.preventDefault(); setCursor((c) => Math.min(results.length - 1, c + 1)); }
+    else if (e.key === 'ArrowDown') { e.preventDefault(); setCursor((c) => Math.min(S + results.length - 1, c + 1)); }
     else if (e.key === 'ArrowUp') { e.preventDefault(); setCursor((c) => Math.max(-1, c - 1)); }
-    else if (e.key === 'Enter') { e.preventDefault(); seeAll(cursor >= 0 ? results[cursor]?.id : undefined); }
+    else if (e.key === 'Tab' && !e.shiftKey && S > 0) { e.preventDefault(); pickSuggestion(suggestions[Math.max(0, Math.min(cursor, S - 1))]); }
+    else if (e.key === 'Enter') {
+      e.preventDefault();
+      if (cursor >= 0 && cursor < S) pickSuggestion(suggestions[cursor]);
+      else seeAll(cursor >= S ? results[cursor - S]?.id : undefined);
+    }
   };
 
   const totalLabel = data ? `${data.total}${data.capped ? '+' : ''}` : '';
@@ -118,18 +135,25 @@ export const SearchPalette: React.FC<SearchPaletteProps> = ({ initialQuery = '',
                 Slaytlar, özetler, çıkmış sorular ve ses kayıtlarının tamamında arar.
               </p>
             )
-          ) : failed ? (
+          ) : null}
+          {query.length >= 2 && (correction || S > 0) && (
+            <div className="border-b border-line">
+              {correction && <div className="px-2 pt-2"><DidYouMean text={correction} onPick={(t) => { setQ(t); inputRef.current?.focus(); }} /></div>}
+              <SuggestList items={suggestions} cursor={cursor} onPick={pickSuggestion} onHover={setCursor} />
+            </div>
+          )}
+          {query.length < 2 ? null : failed ? (
             <p className="m-0 px-5 py-8 text-center text-base text-ink-3">Arama şu an yapılamadı. Bağlantını kontrol edip tekrar dene.</p>
           ) : data && results.length === 0 && !loading ? (
             <p className="m-0 px-5 py-8 text-center text-base text-ink-3">“{query}” için sonuç bulunamadı.</p>
           ) : (
             <ul className="m-0 p-2 list-none" role="listbox">
               {results.map((r, i) => (
-                <li key={r.id} role="option" aria-selected={i === cursor}>
+                <li key={r.id} role="option" aria-selected={i + S === cursor}>
                   <button
                     type="button"
-                    className={`ms-search-hit ${i === cursor ? 'is-active' : ''}`}
-                    onMouseEnter={() => setCursor(i)}
+                    className={`ms-search-hit ${i + S === cursor ? 'is-active' : ''}`}
+                    onMouseEnter={() => setCursor(i + S)}
                     onClick={() => seeAll(r.id)}
                   >
                     <span className="flex items-center gap-2 min-w-0">
