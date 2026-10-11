@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { AlertCircle, Check, Info, X } from 'lucide-react';
-import { useUiVersion } from '../../utils/uiVersion';
 
 /**
  * App-wide floating notifications. Call from anywhere:
@@ -49,42 +48,8 @@ export const toast = {
   info: (title: string, message?: string) => push('info', title, message),
 };
 
-// ---------------------------------------------------------------------------
-// Little faces: the capsule mascot, worried for errors and happy for success
-// ---------------------------------------------------------------------------
-const Face: React.FC<{ kind: ToastKind }> = ({ kind }) => {
-  const color = kind === 'error' ? '#E0566E' : kind === 'success' ? '#1F9D55' : '#1E4FD8';
-  return (
-    <svg width="44" height="44" viewBox="0 0 48 48" aria-hidden="true" className={kind === 'error' ? 'ms-wobble' : 'ms-float'}>
-      <g transform="rotate(-16 24 24)">
-        <rect x="13" y="6" width="22" height="36" rx="11" fill="#FFFFFF" stroke="#0E1A26" strokeWidth="2" />
-        <path d="M13 24v-7a11 11 0 0 1 22 0v7z" fill={color} stroke="#0E1A26" strokeWidth="2" strokeLinejoin="round" />
-        <g className="ms-blink">
-          <circle cx="20" cy="30" r="1.7" fill="#0E1A26" />
-          <circle cx="28" cy="30" r="1.7" fill="#0E1A26" />
-        </g>
-        {kind === 'error' ? (
-          <>
-            <path d="M21 36q3-2.4 6 0" stroke="#0E1A26" strokeWidth="1.8" strokeLinecap="round" fill="none" />
-            <path className="ms-drop" d="M31.5 25.5c1.4 1.8 1.4 3.2 0 3.8-1.4-.6-1.4-2 0-3.8z" fill="#6AA8F5" />
-          </>
-        ) : (
-          <path d="M21 34.5q3 2.6 6 0" stroke="#0E1A26" strokeWidth="1.8" strokeLinecap="round" fill="none" />
-        )}
-      </g>
-    </svg>
-  );
-};
-
-const TONE: Record<ToastKind, { ring: string; title: string; bar: string }> = {
-  error: { ring: 'border-bad/30', title: 'text-bad-text', bar: 'bg-bad' },
-  success: { ring: 'border-ok/30', title: 'text-ok', bar: 'bg-ok-bright' },
-  info: { ring: 'border-accent/20', title: 'text-accent', bar: 'bg-accent' },
-};
-
 /** Mount once (App). Renders inside the fullscreen element when one is active. */
 export const ToastHost: React.FC = () => {
-  const { isV7 } = useUiVersion();
   const [list, setList] = useState<ToastItem[]>(items);
   const [host, setHost] = useState<Element | null>(null);
 
@@ -101,79 +66,32 @@ export const ToastHost: React.FC = () => {
   }, []);
 
   if (typeof document === 'undefined') return null;
-  if (isV7) {
-    // v8: sade kapsül. Durum simgesi + başlık + mesaj + eylem; en yeni altta, en çok 3; zamanlayıcı alt çizgide
-    const ICON: Record<ToastKind, React.ElementType> = { error: AlertCircle, success: Check, info: Info };
-    const v8 = (
-      <div aria-live="polite" className="tst-host print:hidden">
-        {list.slice(-3).map((t) => {
-          const Icon = ICON[t.kind];
-          return (
-            <div key={t.id} role={t.kind === 'error' ? 'alert' : 'status'} className={`tst is-${t.kind}`}>
-              <span className="tst-ic" aria-hidden><Icon strokeWidth={2.6} /></span>
-              <div className="tst-body">
-                <p className="tst-t">{t.title}</p>
-                {t.message && <p className="tst-m">{t.message}</p>}
-              </div>
-              {t.action && (
-                <button type="button" className="tst-act" onClick={() => { dismiss(t.id); t.action!.onClick(); }}>
-                  {t.action.label}
-                </button>
-              )}
-              <button type="button" className="tst-x" onClick={() => dismiss(t.id)} aria-label="Bildirimi kapat"><X /></button>
-              <span className="tst-timer" style={{ animationDuration: t.kind === 'error' ? '7s' : '4.2s' }} />
-            </div>
-          );
-        })}
-      </div>
-    );
-    return createPortal(v8, host || document.body);
-  }
-  const ui = (
-    <div
-      aria-live="assertive"
-      className="pointer-events-none fixed z-[100000] left-0 right-0 bottom-[calc(84px+env(safe-area-inset-bottom))] md:bottom-6 px-3 flex flex-col items-center md:items-end md:right-6 md:left-auto gap-2 print:hidden"
-    >
-      {list.map((t) => {
-        const tone = TONE[t.kind];
+      // v8: sade kapsül. Durum simgesi + başlık + mesaj + eylem; en yeni altta, en çok 3; zamanlayıcı alt çizgide
+  const ICON: Record<ToastKind, React.ElementType> = { error: AlertCircle, success: Check, info: Info };
+  const v8 = (
+    <div aria-live="polite" className="tst-host print:hidden">
+      {list.slice(-3).map((t) => {
+        const Icon = ICON[t.kind];
         return (
-          <div
-            key={t.id}
-            role={t.kind === 'error' ? 'alert' : 'status'}
-            className={`ms-toast-in pointer-events-auto relative w-full max-w-[400px] overflow-hidden rounded-2xl bg-white border ${tone.ring} shadow-lg pl-2.5 pr-2 py-2.5 flex items-center gap-2.5`}
-          >
-            <Face kind={t.kind} />
-            <div className="flex-1 min-w-0">
-              <p className={`m-0 text-md font-semibold leading-snug ${tone.title}`}>{t.title}</p>
-              {t.message && <p className="m-0 mt-0.5 text-base text-ink-2 leading-snug break-words">{t.message}</p>}
-              {t.action && (
-                <button
-                  type="button"
-                  onClick={() => {
-                    dismiss(t.id);
-                    t.action!.onClick();
-                  }}
-                  className="mt-1.5 h-8 px-3 rounded-lg bg-canvas hover:bg-line-soft text-sm font-semibold text-ink cursor-pointer"
-                >
-                  {t.action.label}
-                </button>
-              )}
+          <div key={t.id} role={t.kind === 'error' ? 'alert' : 'status'} className={`tst is-${t.kind}`}>
+            <span className="tst-ic" aria-hidden><Icon strokeWidth={2.6} /></span>
+            <div className="tst-body">
+              <p className="tst-t">{t.title}</p>
+              {t.message && <p className="tst-m">{t.message}</p>}
             </div>
-            <button
-              type="button"
-              onClick={() => dismiss(t.id)}
-              aria-label="Bildirimi kapat"
-              className="self-start w-8 h-8 rounded-full flex items-center justify-center text-ink-3 hover:text-ink hover:bg-canvas cursor-pointer shrink-0"
-            >
-              <X className="w-4 h-4" />
-            </button>
-            <span className={`ms-toast-timer absolute left-0 bottom-0 h-[3px] ${tone.bar}`} style={{ animationDuration: t.kind === 'error' ? '7s' : '4.2s' }} />
+            {t.action && (
+              <button type="button" className="tst-act" onClick={() => { dismiss(t.id); t.action!.onClick(); }}>
+                {t.action.label}
+              </button>
+            )}
+            <button type="button" className="tst-x" onClick={() => dismiss(t.id)} aria-label="Bildirimi kapat"><X /></button>
+            <span className="tst-timer" style={{ animationDuration: t.kind === 'error' ? '7s' : '4.2s' }} />
           </div>
         );
       })}
     </div>
   );
-  return createPortal(ui, host || document.body);
+  return createPortal(v8, host || document.body);
 };
 
 // ---------------------------------------------------------------------------

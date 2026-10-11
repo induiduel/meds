@@ -85,8 +85,6 @@ export const safeStorage = {
     } catch (e) {}
   }
 };
-
-let isSigningIn = false;
 let cachedAccessToken: string | null = safeStorage.getItem(LOCAL_TOKEN_KEY) || null;
 
 export const rememberStudentInfo = (name: string, studentNumber?: string) => {
@@ -486,7 +484,6 @@ export const googleSignIn = async (
   options: { preferRedirect?: boolean } = {}
 ): Promise<{ user: AppUser; accessToken: string } | null> => {
   try {
-    isSigningIn = true;
     let result;
 
     if (options.preferRedirect) {
@@ -536,8 +533,6 @@ export const googleSignIn = async (
   } catch (error: any) {
     console.error('Sign in error:', error);
     throw error;
-  } finally {
-    isSigningIn = false;
   }
 };
 

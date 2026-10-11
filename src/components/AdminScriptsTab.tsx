@@ -1,27 +1,17 @@
 import React, { useState, useEffect, useRef } from 'react';
 import {
-  Terminal,
   Play,
   Square,
   RefreshCw,
-  CheckCircle2,
-  AlertTriangle,
   Search,
   Zap,
-  Clock,
-  ExternalLink,
   Layers,
   Copy,
-  Cpu,
-  Filter,
   Eye,
-  ChevronRight,
   Code,
-  ShieldCheck,
   Check,
-  X,
   FileCode,
-  ArrowRight
+  ArrowRight,
 } from 'lucide-react';
 import {
   ApiService,

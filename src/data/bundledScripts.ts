@@ -465,15 +465,6 @@ export const BUNDLED_SCRIPTS: AdminScriptItem[] = [
     runtime: 'tsx',
   },
   {
-    name: 'deploy-gh-pages.cjs',
-    title: 'GitHub Pages Dağıtımı',
-    category: 'Ağ & Tünel',
-    description: 'dist/ klasöründeki üretim derlemesini GitHub Pages dalına yayınlar.',
-    defaultArgs: '',
-    tags: ['dağıtım', 'github-pages', 'yayınla'],
-    runtime: 'node',
-  },
-  {
     name: 'manage-service.ps1',
     title: 'Windows Servis Yöneticisi (PowerShell)',
     category: 'Sistem & Servis',

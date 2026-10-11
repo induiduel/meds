@@ -29,8 +29,8 @@ and may write to `data/*.json`. Check `git status` afterwards and revert uninten
   `executeRagQuery`. Server-only.
 - `src/services/localRagEngine.ts` — chunking + in-memory BM25 index (Turkish folding + 5-char stems).
 - `src/services/api.ts` — frontend API client (`ApiService`, `safeJsonFetch`). Always use
-  `safeJsonFetch('/api/...')`; it prepends the user-configured API URL (GitHub Pages + tunnel setup).
-  Raw `fetch('/api/...')` breaks on GitHub Pages.
+  `safeJsonFetch('/api/...')`; it prepends the user-configured API URL (live site → Oracle API, or a custom tunnel).
+  Raw `fetch('/api/...')` ignores that setting.
 - `src/serverLectureNotes.ts` — lecture note storage. `findBestMatchingLectureSlides` is legacy
   (substring matcher, poor ranking); only `scripts/verify-question-answers.mjs` still uses it.
 - `scripts/link-exam-questions.mts` — parses exam PDFs/DOCX and links each question to the pool and to

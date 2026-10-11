@@ -192,3 +192,72 @@ Kaynak limitleri (EKLENECEK — şu an YOK, siteyi komşu işten korur):
 - K3: `VITE_GEMINI_API_KEY` istemci okuması kaldırılsın mı? Öneri: EVET (F2'de).
 - K4: Yedek şifreleme parolası nerede saklansın? Öneri: cihazda kâğıt + Oracle `.env`de DEĞİL ayrı dosya.
 - K5: Otomatik deploy (GitHub→Oracle SSH) açılsın mı? Öneri: secrets girilince EVET, rsync birincil kalır.
+
+---
+
+## 12. Revizyon (2026-10-11, gece) — Tam proje toparlama kapsamı
+
+> Kontrol sonucu: §0–§11 **repo + Oracle + secret** ekseninde doğru ve geçerli; ancak plan yalnız `meds/` repo'sunu
+> kapsıyor. Repo DIŞI kök klasör, cihaz servisleri, derleme birikimi, Oracle trafik yükü ve hata-önleme kapıları
+> eksikti. Aşağıdaki T-fazları F-fazlarını **tamamlar**, yerine geçmez. Ölçümler 2026-10-11 gece (salt-okunur).
+
+### 12.1 Düzeltmeler / eksik bulgular (ölçülen)
+
+| # | Bulgu | Ölçüm | Etki |
+|---|---|---|---|
+| B1 | `vite.config.ts:33` `emptyOutDir: false` → her derleme hash'li parçaları biriktiriyor | `dist/assets` **9420 dosya, 1.2GB** | Oracle imajı/rsync şişer, disk dolar (§8 disk satırı bunu atlamış) |
+| B2 | Kök (`/home/indu/medsor/`) dağınık: 12 `patch_*/fix_*/apply_*/update_builder.py`, `scripts/` (208 tek seferlik betik, `apply_web_grounded_party1..22` vb.), `src/data/decks` (başıboş), `packages/` (13 — asıl yer `meds/src/data/decks/packages` 30), `splash_box*.png`, `rag-project/` (venv) | — | Hangi dosya canlı belli değil, ajanlar yanlış yere yazıyor |
+| B3 | `ssh-key1.key` proje kökünde (izin 400 ✓ ama proje ağacında) | — | Yanlış rsync/zip ile sızma riski → `~/.ssh/` |
+| B4 | `yedek/` **1.2GB** proje içinde (§4'teki "repo dışı yedek" hedefine aykırı); `meds_temp/supabase_local.dump` 330MB, `meds_database/backups` 72MB, `meds/data/*.backup*` 6 dosya | — | Yedek ≠ çalışma verisi; sync'e karışıyor |
+| B5 | Veri klasörü sayısı: `meds_database`, `_v2`, `_core`, `_v3_export`, `meds_export`, `meds_temp`, `meds_downloads` (7) | 1.2G+168M+122M+18M+106M+940M+682M | Tek-kaynak belirsiz; §5 matrisi yalnız repo verisini kapsıyor |
+| B6 | Cihazda 12 `meds-*` servis: üç ayrı vektör sunucusu (`meds-embed` :8091, `meds-v2search`, `meds-v2semantic`), GPU (RTX 4060) var ama `.env` ile kapalı (`MEDS_DISABLE_GPU`); `meds-phases` elle kipte boşta, `meds-watchdog` olmayan `meds-ollama` konteynerini denetliyor; :8094 bge-m3 süreci ünitesiz (yeniden başlatmada düşer) | — | RAM/CPU israfı, arıza yüzeyi |
+| B7 | Belge dağınıklığı: kökte 6 md (`GEMINI.md`≠`AGENTS.md`, `INTERAKTIF_OGRENME_REHBERI.md` ↔ `meds/docs/OGREN_ETKILESIM_REHBERI.md`), `DEGISIKLIK_KAYDI.md` 1412 satır/216KB | — | Ajan bağlamı şişer, çelişen kurallar |
+| B8 | Oracle'da istek başına büyük JSON: deste 82MB kaynak, `pastQuestions` 71MB, `kazanimlar/k1.json` bölünmedi (kayıt satır 43) | decks önbelleksiz 1–1.7s | Tünel + CPU yükü |
+
+### 12.2 T-fazları (F-fazlarıyla birlikte sıra)
+
+Başlama koşulu (hepsi): paralel oturum boşta · `meds/` git ağacı temiz/commit'li · uzun rsync/derleme yok.
+Kalıcı silme her zaman **önce `/home/indu/medsor-yedek/<tarih>/`e taşı → 7 gün gözlem → onayla sil**.
+
+- **T0 — Tam envanter (salt-okunur, her an):** her dosya/klasör için "canlı mı" tespiti: kod referansı (grep `server.ts`,
+  `src/`, `scripts/`, systemd `ExecStart`, compose), son değişim tarihi, boyut. Çıktı: `meds/docs/ENVANTER.md` tablosu
+  (KALIR / TAŞI / ARŞİVLE / SİL-ADAYI). Kullanıcı onayı bu tablo üzerinden alınır.
+- **T1 (= F0) — Yedek:** F0'a ek olarak `yedek/` klasörü repo dışına (`/home/indu/medsor-yedek/`) taşınır; `ssh-key1.key` → `~/.ssh/`
+  (`deploy-code.sh`/`sync-*.sh` yol güncellemesiyle aynı adımda).
+- **T2 — Kök temizliği:** kökte yalnız `meds/`, veri klasörleri, `AGENTS.md`, `PROJE_TANITIMI.md`, `DEGISIKLIK_KAYDI.md` kalır.
+  Tek seferlik betikler → `meds/scripts/archive/<tarih>/`; başıboş `src/`, `packages/` → içerik `meds/src/data/decks/packages` ile
+  diff'lenir, fark yoksa arşiv. `get-pip.py`, `.commandcode/` → sil-adayı.
+- **T3 (F1 ile birlikte) — Derleme birikimi:** `emptyOutDir` false kalabilir (eski SW istemcileri için) ama `scripts/prune-dist.mjs`:
+  son 2 derlemenin manifest'inde olmayan + 7 günden eski parçaları siler; `deploy-code.sh --build` sonunda çağrılır. Hedef dist < 250MB.
+- **T4 (F4 ile birlikte) — Veri klasörü birleştirme:** hedef 3 kök: `meds_downloads/` (ham, salt-ekle), `meds_work/` (= temp1-3 + state + logs,
+  yeniden üretilebilir), `meds_database/` (yayın; `v2`, `core`, `v3_export`, `export` alt klasör olarak). Önce env değişkeni + symlink
+  ile geçiş (kod kırılmaz), betikler yeni yola çekildikten sonra symlink kalkar. `supabase_local.dump` ve `backups/` → yedek klasörü.
+- **T5 — Cihaz servis sadeleştirme:** üç vektör sunucusu tek `meds-embed`'e (e5 + FAISS tek süreç) birleştirme değerlendirmesi;
+  GPU yoksa `meds-gpuguard`/`meds-phases` GPU adımları devre dışı (ünite `Condition`). Her servis `MemoryMax`/`CPUQuota`.
+  **Çalışan servis durdurmak/değiştirmek kullanıcı onaylı.**
+- **T6 — Oracle yük azaltma:** (a) statik `dist/assets` için `Cache-Control: public, max-age=31536000, immutable` + Cloudflare önbellek
+  kuralı (tünelden geçmeden kenarda sunulur); (b) büyük JSON'lar için ön-sıkıştırılmış `.br` dosyası + ETag/304; (c) `kazanimlar` ve
+  `pastQuestions` ders/kurul bazlı parçalama (istemci yalnız açtığını çeker); (d) `/api/decks` ve arama sonuç önbelleği (LRU, TTL);
+  (e) `/similar` gibi yavaş uçlara zaman aşımı + istemci iptali. Doğrulama: aynı 10 istek seti önce/sonra süre + Oracle CPU.
+- **T7 — Hata önleme kapıları:** tek komut `npm run check` = `tsc` + `validate_learning_decks.py` + pastQuestions şema doğrulayıcı
+  (5 şık, cevap ∈ şıklar, kurul kodu biçimi, tekil id) + `db-audit.ts` + 375px taşma testi (mümkünse Playwright). `deploy-code.sh`
+  bunu geçmeden derlemez. Veri yazan her betik atomik yazım + yazım öncesi otomatik yedek kullanır (ortak yardımcı).
+- **T8 — Belge sadeleştirme:** `DEGISIKLIK_KAYDI.md` → son 14 gün kalır, eski girdiler `meds/docs/kayit_arsivi/YYYY-MM.md`;
+  `GEMINI.md`/`INTERAKTIF_OGRENME_REHBERI.md` kuralları `AGENTS.md`/rehbere birleştirilir (çelişki listesi kullanıcıya);
+  `PROJE_TANITIMI.md` yeni klasör düzeniyle güncellenir.
+- **T9 (= F6) — Son doğrulama:** sayaçlar (pq=5713, deste=114, chunks=70752/bge 62967) + `npm run check` + Oracle health/deste/arama
+  + fresh clone derlemesi. `SISTEM_MIMARISI.md` ve bu dosya kapatılır.
+
+Önerilen sıra: T0 → T1/F0 → T2 → F1+T3 → F2 → F3 → F4+T4 → T5 → F5+T6 → T7 → T8 → T9.
+Her faz sonunda `DEGISIKLIK_KAYDI.md`'ye kayıt; sayaç tutmazsa durulur.
+
+### 12.3 İlerleme (2026-10-11 gece)
+
+- **T0 ✓** `meds/docs/ENVANTER.md` (öneri tabloları + §9'da 14 karar kalemi).
+- **T1/F0 ✓** `deploy/backup.sh` → `/home/indu/medsor-yedek/20261011_2008/` (db.dump 345MB + data + src_data, SHA256 ✓, pg_restore listesi 63 tablo, geri açma provası pq=5713). Secret'lar K4 kararına kadar yedeğe girmez.
+  Proje dışına taşınan 1.8GB (`yedek/`, `supabase_local.dump`, `ozet_satir_yedek`, `meds_database/backups`, iki `.bak_manual_import`) — liste: `medsor-yedek/proje_disina_tasinan_20261011/TASINANLAR.tsv`. SSH anahtarı `~/.ssh/medsor-oracle.key` (deploy-code/sync-vectors/SISTEM_MIMARISI güncel, SSH doğrulandı).
+- **T2 (kısmi) ✓** kök `patch_*/fix_*/apply_fixed/update_builder.py` + başıboş `src/` → `medsor-yedek/arsiv_kok_20261011/`. Kök `scripts/` ve `packages/` BEKLİYOR (k1-30…42 paketleri yanlış cwd yüzünden köke yazılmış; önce paket yeniden üretim kararı).
+- **T3 ✓** `scripts/prune-dist.mjs` (erişilebilirlik BFS + son 2 derleme defteri + 24s tampon); `postbuild` ve `build:gh-pages` sonuna bağlandı. dist 1.2GB→459MB, dist-gh 434→111MB. §12.2'deki "7 gün" kuralı yerine derleme-sayısı kuralı (bayatların hepsi <7 gün olduğu için).
+- **deploy-code.sh rsync** artık `/.env.*`, `*.bak*`, `*.backup*`, `get-pip.py`, `.agents/.claude/.github`, `scripts/archive`, `scripts/semantic/data` göndermiyor.
+- **Oracle'da bekleyen (kullanıcı eli/izni):** önceki rsync artıkları uygulama ağacında duruyor: `.env.cloud.bak` (secret kopyası), `src/data/pastQuestions.json.bak_manual_import` 61MB, `scripts/semantic/data` 108MB, `.agents` + `.claude` 2×20MB → `~/meds-backup/`e taşınmalı.
+- Doğrulama: validator 114 deste 0 HATA · tsc 0 · yerel+canlı health 200.

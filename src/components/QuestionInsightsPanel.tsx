@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { ChevronDown, GraduationCap, Tags } from 'lucide-react';
 import { safeJsonFetch } from '../services/api';
 import { SourceText } from './ui/SourceText';

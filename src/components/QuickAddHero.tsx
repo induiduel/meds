@@ -2,7 +2,6 @@ import React, { useEffect, useMemo, useState } from 'react';
 import {
   ArrowRight,
   CheckCircle2,
-  ChevronRight,
   ChevronLeft,
   ChevronDown,
   Check,
@@ -22,22 +21,17 @@ import {
   BookOpen,
   CalendarDays,
   Hash,
-  Lightbulb,
-  ListChecks,
-  PenLine,
 } from 'lucide-react';
 import { Committee, QuestionItem } from '../types';
 import { AppUser } from '../services/auth';
 import { getDefaultActiveCommitteeId, filterCurrent2026_2027Committees } from '../services/firestoreDb';
-import { pathFor, linkClick } from '../router';
 import { OptionsEditor } from './ui/OptionsEditor';
 import { ComposerAssist } from './quickadd/ComposerAssist';
-import { BlurOverlay, SuccessCheck } from './ui/Animations';
+import { BlurOverlay } from './ui/Animations';
 import { toast } from './ui/Toast';
 import { ApiService, SimilarPastQuestion, SourceRefLite } from '../services/api';
 import { validateNamePolicy } from '../utils/namePolicy';
-import { useUiVersion } from '../utils/uiVersion';
-import { findRealtimeMatchingDrafts, RealtimeMatchItem, DraftCompatibilityResult, warmMedicalIndex } from '../services/draftClusteringService';
+import { findRealtimeMatchingDrafts, RealtimeMatchItem, warmMedicalIndex } from '../services/draftClusteringService';
 import { getSmartQuestionAssistant, SmartQuestionAssistantResult } from '../services/medicalPredictorService';
 import { Colored, WordLegend, ContextBadge, sharedWordColors } from './draftHighlight';
 import { AiQuestionOptimizerModal } from './AiQuestionOptimizerModal';
@@ -76,14 +70,6 @@ export const getScoreTier = (score: number) => {
     barColor: 'bg-ai',
     cardBorder: 'border-ai/30 bg-ai-soft/30 hover:border-ai/30',
   };
-};
-
-// Kaynak türü etiketi ve rengi (tasarımdaki Slayt / Özet / Çıkmış / Deşifre)
-const SOURCE_KIND: Record<string, { label: string; cls: string }> = {
-  lecture_slide: { label: 'Slayt', cls: 'bg-accent-soft text-accent' },
-  summary: { label: 'Özet', cls: 'bg-ok-soft text-ok' },
-  past_question: { label: 'Çıkmış', cls: 'bg-ai-soft text-ai' },
-  transcript: { label: 'Deşifre', cls: 'bg-warn-soft text-warn' },
 };
 
 /**
@@ -143,11 +129,6 @@ export const academicYears = () => {
 
 // The correct answer is picked inside the option list (tap a letter), so there is no separate "Cevap" mode
 type Mode = 'stem' | 'option' | 'clue';
-const MODES: { id: Mode; label: string }[] = [
-  { id: 'stem', label: 'Soru kökü' },
-  { id: 'option', label: 'Şıklar' },
-  { id: 'clue', label: 'İpucu' },
-];
 
 const PLACEHOLDERS: Record<Mode, string> = {
   stem: "Sorudan hatırladığın kısmı yaz… örn. göçük altında kalan hasta, EKG'de sivri T",
@@ -293,7 +274,6 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
   const [formError, setFormError] = useState<string | null>(null);
   const [similar, setSimilar] = useState<SimilarPastQuestion[]>([]);
   const [simOpen, setSimOpen] = useState(false);
-  const { isV3 } = useUiVersion();
   const [sources, setSources] = useState<SourceRefLite[]>([]);
   const [realtimeMatches, setRealtimeMatches] = useState<RealtimeMatchItem[]>([]);
   const [selectedMatchIds, setSelectedMatchIds] = useState<Set<string>>(new Set());
@@ -793,8 +773,6 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
     }
   };
 
-  const field = 'bg-field border border-transparent outline-0 focus:border-accent focus:bg-white';
-
   // v3 · minimal ana sayfa: tek alan, tek düğme. Benzerler ve şıklar yalnızca istenince.
   // Kutudaki ders/numara overlay'leri 2+ kelimeden sonra (ya da değer girildiyse) görünür
   const wordCount = text.trim() ? text.trim().split(/\s+/).length : 0;
@@ -923,838 +901,354 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
     if (full === 'open' && successMessage && !texts.stem.trim() && !texts.clue.trim()) closeFull();
   }, [successMessage, texts]); // eslint-disable-line react-hooks/exhaustive-deps
 
-  if (isV3) {
-    return (
-      <div className="w-full max-w-[760px] mx-auto lg:mx-0 flex flex-col gap-5 pt-4 sm:pt-8">
-        <LoveNote />
-        <div className="flex flex-col items-center text-center lg:items-start lg:text-left gap-2">
-          <span className="inline-flex items-center text-sm text-ink-3">
-            <span className={`w-1.5 h-1.5 rounded-full mr-2 ${isCollecting ? 'bg-ok-bright' : 'bg-line-2'}`} aria-hidden="true" />
-            {committee ? titleCase(committee) : 'Kurul'}{isCollecting ? ' · toplama açık' : ''}
-          </span>
-          <h1 className="ms-page-title m-0 text-3xl sm:text-4xl text-ink">Aklında ne kaldı?</h1>
-          {isLocked && (
-            <div className="ms-pop-in flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-warn/10 border border-warn/80 text-warn text-sm font-medium mt-1">
-              <Lock className="w-3.5 h-3.5 text-warn shrink-0" />
-              <span>Ders programına göre sınav tamamlanmadan bu kurula soru yazılamaz.</span>
-            </div>
-          )}
-        </div>
+      return (
+    <div className="w-full max-w-[760px] mx-auto lg:mx-0 flex flex-col gap-5 pt-4 sm:pt-8">
+      <LoveNote />
+      <div className="flex flex-col items-center text-center lg:items-start lg:text-left gap-2">
+        <span className="inline-flex items-center text-sm text-ink-3">
+          <span className={`w-1.5 h-1.5 rounded-full mr-2 ${isCollecting ? 'bg-ok-bright' : 'bg-line-2'}`} aria-hidden="true" />
+          {committee ? titleCase(committee) : 'Kurul'}{isCollecting ? ' · toplama açık' : ''}
+        </span>
+        <h1 className="ms-page-title m-0 text-3xl sm:text-4xl text-ink">Aklında ne kaldı?</h1>
+        {isLocked && (
+          <div className="ms-pop-in flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-warn/10 border border-warn/80 text-warn text-sm font-medium mt-1">
+            <Lock className="w-3.5 h-3.5 text-warn shrink-0" />
+            <span>Ders programına göre sınav tamamlanmadan bu kurula soru yazılamaz.</span>
+          </div>
+        )}
+      </div>
 
-        <form onSubmit={handleSubmit} aria-busy={isSubmitting} className="relative flex flex-col gap-3">
-          <BlurOverlay show={isSubmitting} label="Havuza ekleniyor…" hint="Benzer parçalar varsa aynı soruya bağlıyoruz" />
-          {mode === 'option' ? (
-            <div className="bg-white rounded-2xl p-3 shadow-sm">
-              <OptionsEditor
-                options={options}
-                onChange={(k, v) => setOptions((p) => ({ ...p, [k]: v }))}
-                count={optionCount}
-                onCountChange={setOptionCount}
-                answer={claimedAnswer}
-                onAnswerChange={setClaimedAnswer}
-                reason={answerReason}
-                onReasonChange={setAnswerReason}
+      <form onSubmit={handleSubmit} aria-busy={isSubmitting} className="relative flex flex-col gap-3">
+        <BlurOverlay show={isSubmitting} label="Havuza ekleniyor…" hint="Benzer parçalar varsa aynı soruya bağlıyoruz" />
+        {mode === 'option' ? (
+          <div className="bg-white rounded-2xl p-3 shadow-sm">
+            <OptionsEditor
+              options={options}
+              onChange={(k, v) => setOptions((p) => ({ ...p, [k]: v }))}
+              count={optionCount}
+              onCountChange={setOptionCount}
+              answer={claimedAnswer}
+              onAnswerChange={setClaimedAnswer}
+              reason={answerReason}
+              onReasonChange={setAnswerReason}
+            />
+          </div>
+        ) : (
+          <>
+            <label htmlFor="hatira" className="sr-only">Hatırladığın kısım</label>
+            <div className={`ms-composer ${showMeta ? 'has-meta' : ''} ${full ? `is-full ${full === 'closing' ? 'is-closing' : ''}` : ''}`}>
+              {full && (
+                <>
+                  <div className="ms-composer-top">
+                    {wiz === 'kok' ? (
+                      <button type="button" className="ms-composer-close" onClick={closeFull} aria-label="Kapat"><ChevronDown /></button>
+                    ) : (
+                      <button type="button" className="ms-composer-close" onClick={wizBack} aria-label="Geri"><ChevronLeft /></button>
+                    )}
+                    <span className="ms-composer-title">
+                      {({ kok: 'Soru kökü', tur: 'Soru tipi', onculler: 'Öncüller', siklar: 'Şıklar', son: 'Son dokunuş' } as Record<WizStep, string>)[wiz]}
+                      <small>{wizSteps.indexOf(wiz) + 1} / {wiz === 'kok' || wiz === 'tur' ? (qType === 'onculu' ? 5 : qType ? 4 : '4–5') : wizSteps.length}</small>
+                    </span>
+                    {wiz === 'son' ? (
+                      <button type="submit" className="ms-composer-send" disabled={isSubmitting || isLocked}>
+                        {isSubmitting ? 'Ekleniyor…' : 'Havuza ekle'}
+                      </button>
+                    ) : wiz !== 'tur' ? (
+                      <button type="button" className="ms-composer-send" disabled={wiz === 'kok' && !texts.stem.trim()} onClick={wizNext}>
+                        Devam et
+                      </button>
+                    ) : <span className="w-[74px]" aria-hidden />}
+                  </div>
+                  <div className="wz-progress" aria-hidden><i style={{ width: `${((wizSteps.indexOf(wiz) + 1) / (qType ? wizSteps.length : 4.5)) * 100}%` }} /></div>
+                </>
+              )}
+              <textarea
+                id="hatira"
+                hidden={!!full && wiz !== 'kok'}
+                rows={4}
+                value={text}
+                onFocus={openFull}
+                onChange={(e) => setText(e.target.value)}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter' && (e.ctrlKey || e.metaKey)) {
+                    e.preventDefault();
+                    e.currentTarget.form?.requestSubmit();
+                  }
+                }}
+                placeholder="Tek kelime bile işe yarar…"
+                className="ms-bare-input w-full block resize-none px-4 pt-3.5 pb-2 text-md leading-[1.6] text-ink placeholder:text-ink-3 bg-transparent border-0 outline-0 min-h-[128px]"
               />
-            </div>
-          ) : (
-            <>
-              <label htmlFor="hatira" className="sr-only">Hatırladığın kısım</label>
-              <div className={`ms-composer ${showMeta ? 'has-meta' : ''} ${full ? `is-full ${full === 'closing' ? 'is-closing' : ''}` : ''}`}>
-                {full && (
-                  <>
-                    <div className="ms-composer-top">
-                      {wiz === 'kok' ? (
-                        <button type="button" className="ms-composer-close" onClick={closeFull} aria-label="Kapat"><ChevronDown /></button>
-                      ) : (
-                        <button type="button" className="ms-composer-close" onClick={wizBack} aria-label="Geri"><ChevronLeft /></button>
-                      )}
-                      <span className="ms-composer-title">
-                        {({ kok: 'Soru kökü', tur: 'Soru tipi', onculler: 'Öncüller', siklar: 'Şıklar', son: 'Son dokunuş' } as Record<WizStep, string>)[wiz]}
-                        <small>{wizSteps.indexOf(wiz) + 1} / {wiz === 'kok' || wiz === 'tur' ? (qType === 'onculu' ? 5 : qType ? 4 : '4–5') : wizSteps.length}</small>
-                      </span>
-                      {wiz === 'son' ? (
-                        <button type="submit" className="ms-composer-send" disabled={isSubmitting || isLocked}>
-                          {isSubmitting ? 'Ekleniyor…' : 'Havuza ekle'}
+              {/* Telefon tam ekran: yazmayı bırakınca ipucu metni + klavyenin üstünde öneri çubuğu */}
+              <ComposerAssist active={full === 'open' && wiz === 'kok'} value={text} onChange={setText} textareaId="hatira" committeeId={committee?.id} />
+              {full && wiz !== 'kok' && (
+                <div key={wiz} className={`wz-panel ${wizDir > 0 ? 'is-fwd' : 'is-back'}`}>
+                  {wiz === 'tur' && (
+                    <>
+                      <p className="wz-q">Soru nasıl bir soruydu?</p>
+                      <div className="wz-types" role="radiogroup" aria-label="Soru tipi">
+                        <button type="button" role="radio" aria-checked={qType === 'klasik'} className={`wz-type ${qType === 'klasik' ? 'is-on' : ''}`} onClick={() => pickType('klasik')}>
+                          <span className="wz-type-art" aria-hidden><i /><i /><b>A</b><b>B</b><b>C</b></span>
+                          <b>Klasik</b>
+                          <small>Kök ve beş şık. Doğrudan şıklara geçersin.</small>
                         </button>
-                      ) : wiz !== 'tur' ? (
-                        <button type="button" className="ms-composer-send" disabled={wiz === 'kok' && !texts.stem.trim()} onClick={wizNext}>
-                          Devam et
+                        <button type="button" role="radio" aria-checked={qType === 'onculu'} className={`wz-type ${qType === 'onculu' ? 'is-on' : ''}`} onClick={() => pickType('onculu')}>
+                          <span className="wz-type-art" aria-hidden><i /><em>I</em><em>II</em><em>III</em><b>Yalnız I</b></span>
+                          <b>Öncüllü</b>
+                          <small>I, II, III ifadeleri; şıklar “Yalnız I”, “I ve II” gibi.</small>
                         </button>
-                      ) : <span className="w-[74px]" aria-hidden />}
-                    </div>
-                    <div className="wz-progress" aria-hidden><i style={{ width: `${((wizSteps.indexOf(wiz) + 1) / (qType ? wizSteps.length : 4.5)) * 100}%` }} /></div>
-                  </>
-                )}
-                <textarea
-                  id="hatira"
-                  hidden={!!full && wiz !== 'kok'}
-                  rows={4}
-                  value={text}
-                  onFocus={openFull}
-                  onChange={(e) => setText(e.target.value)}
-                  onKeyDown={(e) => {
-                    if (e.key === 'Enter' && (e.ctrlKey || e.metaKey)) {
-                      e.preventDefault();
-                      e.currentTarget.form?.requestSubmit();
-                    }
-                  }}
-                  placeholder="Tek kelime bile işe yarar…"
-                  className="ms-bare-input w-full block resize-none px-4 pt-3.5 pb-2 text-md leading-[1.6] text-ink placeholder:text-ink-3 bg-transparent border-0 outline-0 min-h-[128px]"
-                />
-                {/* Telefon tam ekran: yazmayı bırakınca ipucu metni + klavyenin üstünde öneri çubuğu */}
-                <ComposerAssist active={full === 'open' && wiz === 'kok'} value={text} onChange={setText} textareaId="hatira" committeeId={committee?.id} />
-                {full && wiz !== 'kok' && (
-                  <div key={wiz} className={`wz-panel ${wizDir > 0 ? 'is-fwd' : 'is-back'}`}>
-                    {wiz === 'tur' && (
-                      <>
-                        <p className="wz-q">Soru nasıl bir soruydu?</p>
-                        <div className="wz-types" role="radiogroup" aria-label="Soru tipi">
-                          <button type="button" role="radio" aria-checked={qType === 'klasik'} className={`wz-type ${qType === 'klasik' ? 'is-on' : ''}`} onClick={() => pickType('klasik')}>
-                            <span className="wz-type-art" aria-hidden><i /><i /><b>A</b><b>B</b><b>C</b></span>
-                            <b>Klasik</b>
-                            <small>Kök ve beş şık. Doğrudan şıklara geçersin.</small>
-                          </button>
-                          <button type="button" role="radio" aria-checked={qType === 'onculu'} className={`wz-type ${qType === 'onculu' ? 'is-on' : ''}`} onClick={() => pickType('onculu')}>
-                            <span className="wz-type-art" aria-hidden><i /><em>I</em><em>II</em><em>III</em><b>Yalnız I</b></span>
-                            <b>Öncüllü</b>
-                            <small>I, II, III ifadeleri; şıklar “Yalnız I”, “I ve II” gibi.</small>
-                          </button>
-                        </div>
-                      </>
-                    )}
-                    {wiz === 'onculler' && (
-                      <>
-                        <p className="wz-q">Öncülleri yaz <small>hatırladıkların yeter, sırası önemli</small></p>
-                        <ol className="wz-prem">
-                          {premises.map((p, i) => (
-                            <li key={i}>
-                              <span className="wz-prem-k">{ROMAN[i]}</span>
-                              <input
-                                value={p}
-                                autoFocus={i === 0}
-                                onChange={(e) => setPremises((list) => list.map((x, j) => (j === i ? e.target.value : x)))}
-                                onKeyDown={(e) => {
-                                  if (e.key === 'Enter') {
-                                    e.preventDefault();
-                                    const ol = e.currentTarget.closest('ol');
-                                    if (i === premises.length - 1 && premises.length < 6) setPremises((l) => [...l, '']);
-                                    window.setTimeout(() => (ol?.querySelectorAll('input')[i + 1] as HTMLInputElement | undefined)?.focus(), 0);
-                                  }
-                                }}
-                                placeholder={`${ROMAN[i]}. öncül`}
-                                aria-label={`${ROMAN[i]}. öncül`}
-                                enterKeyHint="next"
-                              />
-                              {premises.length > 2 && (
-                                <button type="button" className="wz-prem-x" onClick={() => setPremises((l) => l.filter((_, j) => j !== i))} aria-label={`${ROMAN[i]}. öncülü sil`}><X /></button>
-                              )}
-                            </li>
-                          ))}
-                        </ol>
-                        {premises.length < 6 && (
-                          <button type="button" className="wz-add" onClick={() => setPremises((l) => [...l, ''])}>
-                            <Plus aria-hidden /> {ROMAN[premises.length]}. öncülü ekle
-                          </button>
-                        )}
-                      </>
-                    )}
-                    {wiz === 'siklar' && (
-                      <>
-                        <p className="wz-q">Şıkları yaz <small>{qType === 'onculu' ? 'kalıplara dokununca sıradaki boş şıkka yazılır' : 'A’dan E’ye; hatırladıkların yeter'}</small></p>
-                        {qType === 'onculu' && (
-                          <div className="wz-chips" aria-label="Sık kullanılan şık kalıpları">
-                            {comboChips.map((c) => (
-                              <button key={c} type="button" onClick={() => fillNextOption(c)} disabled={KEYS.filter((k) => options[k].trim()).length >= 5}>{c}</button>
-                            ))}
-                          </div>
-                        )}
-                        <OptionsEditor
-                          options={options}
-                          onChange={(k, v) => setOptions((p) => ({ ...p, [k]: v }))}
-                          count={optionCount}
-                          onCountChange={setOptionCount}
-                          answer={claimedAnswer}
-                          onAnswerChange={setClaimedAnswer}
-                          reason={answerReason}
-                          onReasonChange={setAnswerReason}
-                        />
-                      </>
-                    )}
-                    {wiz === 'son' && (
-                      <>
-                        <p className="wz-q">İpucu <small>isteğe bağlı · hocanın vurgusu, vaka ayrıntısı…</small></p>
-                        <textarea
-                          className="wz-clue"
-                          rows={3}
-                          value={texts.clue}
-                          onChange={(e) => setTexts((prev) => ({ ...prev, clue: e.target.value }))}
-                          placeholder={PLACEHOLDERS.clue}
-                          aria-label="İpucu"
-                        />
-                        <p className="wz-q">Hangi soru? <small>bilmediğini boş bırak</small></p>
-                        <div className="wz-kunye">
-                          <MetaPicker label="Kurul" icon={Layers} value={committee ? titleCase(committee) : 'Seç'}>
-                            {(close) => (
-                              <ul className="qa-list" role="listbox" aria-label="Kurul">
-                                {sortedCommittees.map((c) => {
-                                  const locked = isCommitteeLocked(c.id);
-                                  const on = c.id === committee?.id;
-                                  return (
-                                    <li key={c.id}>
-                                      <button type="button" role="option" aria-selected={on} disabled={locked} className={on ? 'is-on' : ''} onClick={() => { onSelectCommittee(c.id); close(); }}>
-                                        <i className={`qa-dot ${c.id === activeCommitteeId ? 'is-live' : ''}`} aria-hidden />
-                                        <span className="qa-list-t">{titleCase(c)}</span>
-                                        <small>{locked ? <><Lock aria-hidden /> açılmadı</> : c.id === activeCommitteeId ? 'toplama açık' : ''}</small>
-                                        {on && <Check className="qa-list-ok" aria-hidden />}
-                                      </button>
-                                    </li>
-                                  );
-                                })}
-                              </ul>
+                      </div>
+                    </>
+                  )}
+                  {wiz === 'onculler' && (
+                    <>
+                      <p className="wz-q">Öncülleri yaz <small>hatırladıkların yeter, sırası önemli</small></p>
+                      <ol className="wz-prem">
+                        {premises.map((p, i) => (
+                          <li key={i}>
+                            <span className="wz-prem-k">{ROMAN[i]}</span>
+                            <input
+                              value={p}
+                              autoFocus={i === 0}
+                              onChange={(e) => setPremises((list) => list.map((x, j) => (j === i ? e.target.value : x)))}
+                              onKeyDown={(e) => {
+                                if (e.key === 'Enter') {
+                                  e.preventDefault();
+                                  const ol = e.currentTarget.closest('ol');
+                                  if (i === premises.length - 1 && premises.length < 6) setPremises((l) => [...l, '']);
+                                  window.setTimeout(() => (ol?.querySelectorAll('input')[i + 1] as HTMLInputElement | undefined)?.focus(), 0);
+                                }
+                              }}
+                              placeholder={`${ROMAN[i]}. öncül`}
+                              aria-label={`${ROMAN[i]}. öncül`}
+                              enterKeyHint="next"
+                            />
+                            {premises.length > 2 && (
+                              <button type="button" className="wz-prem-x" onClick={() => setPremises((l) => l.filter((_, j) => j !== i))} aria-label={`${ROMAN[i]}. öncülü sil`}><X /></button>
                             )}
-                          </MetaPicker>
-                          <MetaPicker label="Ders" icon={BookOpen} value={discipline} auto={autoDisc && !userManualDiscipline}>
-                            {(close) => (
-                              <ul className="qa-list" role="listbox" aria-label="Ders">
-                                {disciplines.map((d) => (
-                                  <li key={d}>
-                                    <button type="button" role="option" aria-selected={d === discipline} className={d === discipline ? 'is-on' : ''} onClick={() => { setDiscipline(d); setUserManualDiscipline(true); setAutoDisc(false); close(); }}>
-                                      <span className="qa-list-t">{d}</span>
-                                      {d === discipline && <Check className="qa-list-ok" aria-hidden />}
+                          </li>
+                        ))}
+                      </ol>
+                      {premises.length < 6 && (
+                        <button type="button" className="wz-add" onClick={() => setPremises((l) => [...l, ''])}>
+                          <Plus aria-hidden /> {ROMAN[premises.length]}. öncülü ekle
+                        </button>
+                      )}
+                    </>
+                  )}
+                  {wiz === 'siklar' && (
+                    <>
+                      <p className="wz-q">Şıkları yaz <small>{qType === 'onculu' ? 'kalıplara dokununca sıradaki boş şıkka yazılır' : 'A’dan E’ye; hatırladıkların yeter'}</small></p>
+                      {qType === 'onculu' && (
+                        <div className="wz-chips" aria-label="Sık kullanılan şık kalıpları">
+                          {comboChips.map((c) => (
+                            <button key={c} type="button" onClick={() => fillNextOption(c)} disabled={KEYS.filter((k) => options[k].trim()).length >= 5}>{c}</button>
+                          ))}
+                        </div>
+                      )}
+                      <OptionsEditor
+                        options={options}
+                        onChange={(k, v) => setOptions((p) => ({ ...p, [k]: v }))}
+                        count={optionCount}
+                        onCountChange={setOptionCount}
+                        answer={claimedAnswer}
+                        onAnswerChange={setClaimedAnswer}
+                        reason={answerReason}
+                        onReasonChange={setAnswerReason}
+                      />
+                    </>
+                  )}
+                  {wiz === 'son' && (
+                    <>
+                      <p className="wz-q">İpucu <small>isteğe bağlı · hocanın vurgusu, vaka ayrıntısı…</small></p>
+                      <textarea
+                        className="wz-clue"
+                        rows={3}
+                        value={texts.clue}
+                        onChange={(e) => setTexts((prev) => ({ ...prev, clue: e.target.value }))}
+                        placeholder={PLACEHOLDERS.clue}
+                        aria-label="İpucu"
+                      />
+                      <p className="wz-q">Hangi soru? <small>bilmediğini boş bırak</small></p>
+                      <div className="wz-kunye">
+                        <MetaPicker label="Kurul" icon={Layers} value={committee ? titleCase(committee) : 'Seç'}>
+                          {(close) => (
+                            <ul className="qa-list" role="listbox" aria-label="Kurul">
+                              {sortedCommittees.map((c) => {
+                                const locked = isCommitteeLocked(c.id);
+                                const on = c.id === committee?.id;
+                                return (
+                                  <li key={c.id}>
+                                    <button type="button" role="option" aria-selected={on} disabled={locked} className={on ? 'is-on' : ''} onClick={() => { onSelectCommittee(c.id); close(); }}>
+                                      <i className={`qa-dot ${c.id === activeCommitteeId ? 'is-live' : ''}`} aria-hidden />
+                                      <span className="qa-list-t">{titleCase(c)}</span>
+                                      <small>{locked ? <><Lock aria-hidden /> açılmadı</> : c.id === activeCommitteeId ? 'toplama açık' : ''}</small>
+                                      {on && <Check className="qa-list-ok" aria-hidden />}
                                     </button>
                                   </li>
-                                ))}
-                              </ul>
-                            )}
-                          </MetaPicker>
-                          <MetaPicker label="Sene" icon={CalendarDays} value={examYear ? `${examYear.slice(0, 4)}–${examYear.slice(7, 9)}` : 'Bilmiyorum'} empty={!examYear}>
-                            {(close) => (
-                              <div className="qa-years">
-                                <div className="qa-years-grid" role="listbox" aria-label="Öğretim yılı">
-                                  {academicYears().map((y) => (
-                                    <button key={y} type="button" role="option" aria-selected={examYear === y} className={examYear === y ? 'is-on' : ''} onClick={() => { setExamYear(y); close(); }}>
-                                      {`${y.slice(0, 4)}–${y.slice(7, 9)}`}
-                                      {y === currentAcademicYear() && <small>bu yıl</small>}
-                                    </button>
-                                  ))}
-                                </div>
-                                <button type="button" className={`qa-years-none ${!examYear ? 'is-on' : ''}`} onClick={() => { setExamYear(''); close(); }}>Bilmiyorum</button>
-                              </div>
-                            )}
-                          </MetaPicker>
-                          <label className={`qa-tok is-num ${!questionNumber ? 'is-empty' : ''}`}>
-                            <Hash className="qa-tok-i" aria-hidden />
-                            <span className="qa-tok-l">Soru no</span>
-                            <input
-                              type="text"
-                              inputMode="numeric"
-                              value={questionNumber}
-                              onChange={(e) => { setQuestionNumber(e.target.value.replace(/[^0-9]/g, '').slice(0, 3)); setUserManualNumber(true); setAutoNum(false); }}
-                              placeholder="bilmiyorum"
-                              aria-label="Soru numarası (bilmiyorsan boş bırak)"
-                            />
-                          </label>
-                        </div>
-                        <div className="wz-sum">
-                          <span>{texts.stem.trim() ? texts.stem.trim().split(/\s+/).length : 0} kelime kök</span>
-                          {qType === 'onculu' && <span>{premises.filter((p) => p.trim()).length} öncül</span>}
-                          <span>{filledOptionCount} şık{claimedAnswer ? ` · cevap ${claimedAnswer}` : ''}</span>
-                        </div>
-                        {formError && <div role="alert" className="qa-note is-bad">{formError}</div>}
-                        <button type="submit" className="wz-submit" disabled={isSubmitting || isLocked}>
-                          {isSubmitting ? 'Ekleniyor…' : 'Havuza ekle'} <ArrowRight aria-hidden />
-                        </button>
-                      </>
-                    )}
-                  </div>
-                )}
-                {/* Alt şerit: soru kimliği. Ders ve numara akıllı etiketler; otomatik dolanlar işaretli */}
-                {showMeta && (
-                  <div className="ms-meta" data-no-tip>
-                    <MetaPicker variant="token" label="Kurul" icon={Layers} value={committee ? titleCase(committee) : 'Kurul'} width={280}>
-                      {(close) => (
-                        <ul className="qa-list" role="listbox" aria-label="Kurul">
-                          {sortedCommittees.map((c) => {
-                            const locked = isCommitteeLocked(c.id);
-                            const on = c.id === committee?.id;
-                            return (
-                              <li key={c.id}>
-                                <button type="button" role="option" aria-selected={on} disabled={locked} className={on ? 'is-on' : ''} onClick={() => { onSelectCommittee(c.id); close(); }}>
-                                  <i className={`qa-dot ${c.id === activeCommitteeId ? 'is-live' : ''}`} aria-hidden />
-                                  <span className="qa-list-t">{titleCase(c)}</span>
-                                  <small>{locked ? <><Lock aria-hidden /> açılmadı</> : c.id === activeCommitteeId ? 'toplama açık' : ''}</small>
-                                  {on && <Check className="qa-list-ok" aria-hidden />}
-                                </button>
-                              </li>
-                            );
-                          })}
-                        </ul>
-                      )}
-                    </MetaPicker>
-                    <MetaPicker variant="token" label="Ders" icon={BookOpen} value={discipline} auto={autoDisc && !userManualDiscipline} width={300}>
-                      {(close) => {
-                        const list = disciplines.filter((d) => !discQuery || d.toLocaleLowerCase('tr').includes(discQuery.toLocaleLowerCase('tr')));
-                        return (
-                          <>
-                            {disciplines.length > 6 && (
-                              <input autoFocus value={discQuery} onChange={(e) => setDiscQuery(e.target.value)} placeholder="Ders ara" aria-label="Ders ara" className="qa-pop-search" />
-                            )}
+                                );
+                              })}
+                            </ul>
+                          )}
+                        </MetaPicker>
+                        <MetaPicker label="Ders" icon={BookOpen} value={discipline} auto={autoDisc && !userManualDiscipline}>
+                          {(close) => (
                             <ul className="qa-list" role="listbox" aria-label="Ders">
-                              {list.map((d) => (
+                              {disciplines.map((d) => (
                                 <li key={d}>
-                                  <button type="button" role="option" aria-selected={d === discipline} className={d === discipline ? 'is-on' : ''} onClick={() => { setDiscipline(d); setUserManualDiscipline(true); setAutoDisc(false); setDiscQuery(''); close(); }}>
+                                  <button type="button" role="option" aria-selected={d === discipline} className={d === discipline ? 'is-on' : ''} onClick={() => { setDiscipline(d); setUserManualDiscipline(true); setAutoDisc(false); close(); }}>
                                     <span className="qa-list-t">{d}</span>
                                     {d === discipline && <Check className="qa-list-ok" aria-hidden />}
                                   </button>
                                 </li>
                               ))}
-                              {list.length === 0 && <li className="qa-list-empty">“{discQuery}” bu kurulun derslerinde yok.</li>}
                             </ul>
-                          </>
-                        );
-                      }}
-                    </MetaPicker>
-                    <MetaPicker variant="token" label="Sene" icon={CalendarDays} value={((y: string) => (y ? `${y.slice(0, 4)}–${y.slice(7, 9)}` : 'Sene?'))(examYear)} empty={!examYear} width={300} title="Sorunun çıktığı sınavın öğretim yılı">
-                      {(close) => (
-                        <div className="qa-years">
-                          <div className="qa-years-grid" role="listbox" aria-label="Öğretim yılı">
-                            {academicYears().map((y) => (
-                              <button key={y} type="button" role="option" aria-selected={examYear === y} className={examYear === y ? 'is-on' : ''} onClick={() => { setExamYear(y); close(); }}>
-                                {`${y.slice(0, 4)}–${y.slice(7, 9)}`}
-                                {y === currentAcademicYear() && <small>bu yıl</small>}
+                          )}
+                        </MetaPicker>
+                        <MetaPicker label="Sene" icon={CalendarDays} value={examYear ? `${examYear.slice(0, 4)}–${examYear.slice(7, 9)}` : 'Bilmiyorum'} empty={!examYear}>
+                          {(close) => (
+                            <div className="qa-years">
+                              <div className="qa-years-grid" role="listbox" aria-label="Öğretim yılı">
+                                {academicYears().map((y) => (
+                                  <button key={y} type="button" role="option" aria-selected={examYear === y} className={examYear === y ? 'is-on' : ''} onClick={() => { setExamYear(y); close(); }}>
+                                    {`${y.slice(0, 4)}–${y.slice(7, 9)}`}
+                                    {y === currentAcademicYear() && <small>bu yıl</small>}
+                                  </button>
+                                ))}
+                              </div>
+                              <button type="button" className={`qa-years-none ${!examYear ? 'is-on' : ''}`} onClick={() => { setExamYear(''); close(); }}>Bilmiyorum</button>
+                            </div>
+                          )}
+                        </MetaPicker>
+                        <label className={`qa-tok is-num ${!questionNumber ? 'is-empty' : ''}`}>
+                          <Hash className="qa-tok-i" aria-hidden />
+                          <span className="qa-tok-l">Soru no</span>
+                          <input
+                            type="text"
+                            inputMode="numeric"
+                            value={questionNumber}
+                            onChange={(e) => { setQuestionNumber(e.target.value.replace(/[^0-9]/g, '').slice(0, 3)); setUserManualNumber(true); setAutoNum(false); }}
+                            placeholder="bilmiyorum"
+                            aria-label="Soru numarası (bilmiyorsan boş bırak)"
+                          />
+                        </label>
+                      </div>
+                      <div className="wz-sum">
+                        <span>{texts.stem.trim() ? texts.stem.trim().split(/\s+/).length : 0} kelime kök</span>
+                        {qType === 'onculu' && <span>{premises.filter((p) => p.trim()).length} öncül</span>}
+                        <span>{filledOptionCount} şık{claimedAnswer ? ` · cevap ${claimedAnswer}` : ''}</span>
+                      </div>
+                      {formError && <div role="alert" className="qa-note is-bad">{formError}</div>}
+                      <button type="submit" className="wz-submit" disabled={isSubmitting || isLocked}>
+                        {isSubmitting ? 'Ekleniyor…' : 'Havuza ekle'} <ArrowRight aria-hidden />
+                      </button>
+                    </>
+                  )}
+                </div>
+              )}
+              {/* Alt şerit: soru kimliği. Ders ve numara akıllı etiketler; otomatik dolanlar işaretli */}
+              {showMeta && (
+                <div className="ms-meta" data-no-tip>
+                  <MetaPicker variant="token" label="Kurul" icon={Layers} value={committee ? titleCase(committee) : 'Kurul'} width={280}>
+                    {(close) => (
+                      <ul className="qa-list" role="listbox" aria-label="Kurul">
+                        {sortedCommittees.map((c) => {
+                          const locked = isCommitteeLocked(c.id);
+                          const on = c.id === committee?.id;
+                          return (
+                            <li key={c.id}>
+                              <button type="button" role="option" aria-selected={on} disabled={locked} className={on ? 'is-on' : ''} onClick={() => { onSelectCommittee(c.id); close(); }}>
+                                <i className={`qa-dot ${c.id === activeCommitteeId ? 'is-live' : ''}`} aria-hidden />
+                                <span className="qa-list-t">{titleCase(c)}</span>
+                                <small>{locked ? <><Lock aria-hidden /> açılmadı</> : c.id === activeCommitteeId ? 'toplama açık' : ''}</small>
+                                {on && <Check className="qa-list-ok" aria-hidden />}
                               </button>
-                            ))}
-                          </div>
-                          <button type="button" className={`qa-years-none ${!examYear ? 'is-on' : ''}`} onClick={() => { setExamYear(''); close(); }}>Bilmiyorum</button>
-                        </div>
-                      )}
-                    </MetaPicker>
-                    <label className={`ms-meta-token is-number ${autoNum && !userManualNumber ? 'is-auto' : ''}`} title="Soru numarası (bilmiyorsan boş bırak)">
-                      <span className="opacity-70">No</span>
-                      <input
-                        type="text"
-                        inputMode="numeric"
-                        value={questionNumber}
-                        onChange={(e) => { setQuestionNumber(e.target.value.replace(/[^0-9]/g, '').slice(0, 3)); setUserManualNumber(true); setAutoNum(false); }}
-                        placeholder="—"
-                        aria-label="Soru numarası (bilmiyorsan boş bırak)"
-                      />
-                      {autoNum && !userManualNumber && <Sparkles className="ms-meta-auto w-3 h-3 shrink-0" aria-label="otomatik" />}
-                    </label>
-                    {(autoDisc || autoNum) && !(userManualDiscipline && userManualNumber) && (
-                      <span className="hidden sm:inline ml-auto text-xs text-ink-3 truncate">Eşleşen taslaktan dolduruldu</span>
+                            </li>
+                          );
+                        })}
+                      </ul>
                     )}
-                  </div>
-                )}
-              </div>
-              {spell?.text && spell.text !== dismissedSpell && (
-                <div className="ms-pop-in flex items-center gap-2 text-base text-ink-2 min-w-0">
-                  <span className="shrink-0 text-ink-3">Bunu mu kastettiniz?</span>
-                  <button
-                    type="button"
-                    onClick={() => { setText(spell.text!); setSpell(null); }}
-                    className="min-w-0 truncate text-left text-accent font-medium hover:underline cursor-pointer"
-                  >
-                    {spell.changes.map((c) => c.to).join(', ')}
-                  </button>
-                  <button type="button" onClick={() => setDismissedSpell(spell.text)} aria-label="Öneriyi kapat" className="shrink-0 w-7 h-7 rounded-full flex items-center justify-center text-ink-3 hover:bg-field cursor-pointer">
-                    <X className="w-3.5 h-3.5" />
-                  </button>
-                </div>
-              )}
-              {/* Canlı arama mikro-animasyonu / yükleme göstergesi */}
-              {isSearching && text.trim().length >= 6 && (
-                <div className="ms-fade-in flex items-center gap-2 px-3 py-1.5 rounded-xl bg-accent-soft/60 border border-accent/20 text-accent text-xs font-medium w-fit">
-                  <span className="w-2 h-2 rounded-full bg-accent animate-ping" />
-                  <span className="flex items-center gap-1">
-                    <Sparkles className="w-3.5 h-3.5 animate-spin" />
-                    Benzer soru, kurul ve taslaklar taranıyor…
-                  </span>
-                </div>
-              )}
-
-              {/* Seçili Soruya / Taslağa Bağlandı Rozeti */}
-              {linkedQuestion && (
-                <div className="ms-pop-in flex items-center justify-between gap-2 px-3.5 py-2 rounded-xl bg-ok-soft border border-ok/30 text-ok text-sm">
-                  <div className="flex items-center gap-2 min-w-0">
-                    <Link2 className="w-4 h-4 text-ok shrink-0" />
-                    <span className="font-semibold text-ok truncate">
-                      {linkedQuestion.questionNumber ? `Soru #${linkedQuestion.questionNumber} ile bağlandı` : 'Mevcut taslakla bağlandı'}
-                    </span>
-                    <span className="text-ok text-xs hidden sm:inline truncate">
-                      (Yazdıkların bu sorunun katkılarına eklenecek)
-                    </span>
-                  </div>
-                  <button
-                    type="button"
-                    onClick={() => {
-                      setLinkedQuestion(null);
-                      setQuestionNumber('');
+                  </MetaPicker>
+                  <MetaPicker variant="token" label="Ders" icon={BookOpen} value={discipline} auto={autoDisc && !userManualDiscipline} width={300}>
+                    {(close) => {
+                      const list = disciplines.filter((d) => !discQuery || d.toLocaleLowerCase('tr').includes(discQuery.toLocaleLowerCase('tr')));
+                      return (
+                        <>
+                          {disciplines.length > 6 && (
+                            <input autoFocus value={discQuery} onChange={(e) => setDiscQuery(e.target.value)} placeholder="Ders ara" aria-label="Ders ara" className="qa-pop-search" />
+                          )}
+                          <ul className="qa-list" role="listbox" aria-label="Ders">
+                            {list.map((d) => (
+                              <li key={d}>
+                                <button type="button" role="option" aria-selected={d === discipline} className={d === discipline ? 'is-on' : ''} onClick={() => { setDiscipline(d); setUserManualDiscipline(true); setAutoDisc(false); setDiscQuery(''); close(); }}>
+                                  <span className="qa-list-t">{d}</span>
+                                  {d === discipline && <Check className="qa-list-ok" aria-hidden />}
+                                </button>
+                              </li>
+                            ))}
+                            {list.length === 0 && <li className="qa-list-empty">“{discQuery}” bu kurulun derslerinde yok.</li>}
+                          </ul>
+                        </>
+                      );
                     }}
-                    className="p-1 text-ok hover:text-ok hover:bg-ok-soft rounded-lg cursor-pointer transition-colors shrink-0"
-                    title="Bağlantıyı kaldır"
-                  >
-                    <X className="w-3.5 h-3.5" />
-                  </button>
-                </div>
-              )}
-            </>
-          )}
-
-          {/* Akıllı Kurul & Ders Öneri ve Uyarı Kutusu */}
-          {smartAssistant && mode !== 'option' && (smartAssistant.crossCommitteeWarning || smartAssistant.suggestedTopics.length > 0) && (
-            <div className="ms-pop-in rounded-2xl bg-warn/10 border border-warn/80 p-3.5 flex flex-col gap-2.5">
-              {smartAssistant.crossCommitteeWarning && smartAssistant.predictedCommittee && (
-                <div className="flex items-start justify-between gap-3 flex-wrap sm:flex-nowrap">
-                  <div className="flex items-start gap-2 text-sm text-warn leading-snug">
-                    <AlertCircle className="w-4 h-4 text-warn shrink-0 mt-0.5" />
-                    <div>
-                      <span className="font-bold">Kurul Uyuşmazlığı Olabilir: </span>
-                      {smartAssistant.crossCommitteeWarning}
-                    </div>
-                  </div>
-                  <button
-                    type="button"
-                    onClick={() => {
-                      if (smartAssistant.predictedCommittee) {
-                        onSelectCommittee(smartAssistant.predictedCommittee.committeeId);
-                        if (smartAssistant.predictedDiscipline) {
-                          setDiscipline(smartAssistant.predictedDiscipline.discipline);
-                        }
-                        toast.success('Kurul Değiştirildi', `${smartAssistant.predictedCommittee.committeeName} kuruluna geçildi.`);
-                      }
-                    }}
-                    className="shrink-0 h-8 px-3 rounded-xl bg-warn hover:bg-warn text-white text-xs font-bold inline-flex items-center gap-1 cursor-pointer transition-colors shadow-xs"
-                  >
-                    Bu Kurula Geç
-                    <ArrowRight className="w-3.5 h-3.5" />
-                  </button>
-                </div>
-              )}
-
-              {/* Tespit Edilen Tıbbi Konular / Kavramlar */}
-              {smartAssistant.suggestedTopics.length > 0 && (
-                <div className="flex items-center gap-1.5 flex-wrap pt-0.5">
-                  <span className="text-xs font-bold uppercase tracking-wider text-warn/80 flex items-center gap-1">
-                    <Sparkles className="w-3 h-3 text-warn" />
-                    İlişkili Konu Önerileri:
-                  </span>
-                  {smartAssistant.suggestedTopics.slice(0, 3).map((st, i) => (
-                    <span
-                      key={i}
-                      className="h-6 px-2.5 rounded-full bg-white text-warn text-xs font-semibold border border-warn/30 shadow-2xs inline-flex items-center gap-1"
-                    >
-                      {st.topic}
-                    </span>
-                  ))}
-                  {smartAssistant.predictedDiscipline && discipline !== smartAssistant.predictedDiscipline.discipline && (
-                    <button
-                      type="button"
-                      onClick={() => setDiscipline(smartAssistant.predictedDiscipline!.discipline)}
-                      className="h-6 px-2.5 rounded-full bg-accent/15 hover:bg-accent/25 text-accent text-xs font-bold border border-accent/30 inline-flex items-center gap-1 cursor-pointer transition-colors"
-                      title="Dersi otomatik eşle"
-                    >
-                      Dersi "{smartAssistant.predictedDiscipline.discipline}" yap
-                    </button>
+                  </MetaPicker>
+                  <MetaPicker variant="token" label="Sene" icon={CalendarDays} value={((y: string) => (y ? `${y.slice(0, 4)}–${y.slice(7, 9)}` : 'Sene?'))(examYear)} empty={!examYear} width={300} title="Sorunun çıktığı sınavın öğretim yılı">
+                    {(close) => (
+                      <div className="qa-years">
+                        <div className="qa-years-grid" role="listbox" aria-label="Öğretim yılı">
+                          {academicYears().map((y) => (
+                            <button key={y} type="button" role="option" aria-selected={examYear === y} className={examYear === y ? 'is-on' : ''} onClick={() => { setExamYear(y); close(); }}>
+                              {`${y.slice(0, 4)}–${y.slice(7, 9)}`}
+                              {y === currentAcademicYear() && <small>bu yıl</small>}
+                            </button>
+                          ))}
+                        </div>
+                        <button type="button" className={`qa-years-none ${!examYear ? 'is-on' : ''}`} onClick={() => { setExamYear(''); close(); }}>Bilmiyorum</button>
+                      </div>
+                    )}
+                  </MetaPicker>
+                  <label className={`ms-meta-token is-number ${autoNum && !userManualNumber ? 'is-auto' : ''}`} title="Soru numarası (bilmiyorsan boş bırak)">
+                    <span className="opacity-70">No</span>
+                    <input
+                      type="text"
+                      inputMode="numeric"
+                      value={questionNumber}
+                      onChange={(e) => { setQuestionNumber(e.target.value.replace(/[^0-9]/g, '').slice(0, 3)); setUserManualNumber(true); setAutoNum(false); }}
+                      placeholder="—"
+                      aria-label="Soru numarası (bilmiyorsan boş bırak)"
+                    />
+                    {autoNum && !userManualNumber && <Sparkles className="ms-meta-auto w-3 h-3 shrink-0" aria-label="otomatik" />}
+                  </label>
+                  {(autoDisc || autoNum) && !(userManualDiscipline && userManualNumber) && (
+                    <span className="hidden sm:inline ml-auto text-xs text-ink-3 truncate">Eşleşen taslaktan dolduruldu</span>
                   )}
                 </div>
               )}
             </div>
-          )}
-
-          {realtimeMatches.length > 0 && mode !== 'option' && (
-            <div className="flex flex-col gap-2.5">
-              <div className="flex items-center justify-between gap-2 px-1">
-                <span className="flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-ink-3">
-                  <Sparkles className="w-3.5 h-3.5 text-accent animate-pulse" />
-                  Benzer Taslaklar ({realtimeMatches.length})
-                </span>
-                <div className="flex items-center gap-2">
-                  <button
-                    type="button"
-                    onClick={selectedMatchIds.size === realtimeMatches.length ? clearSelection : selectAllMatches}
-                    className="text-xs font-semibold text-accent hover:underline cursor-pointer"
-                  >
-                    {selectedMatchIds.size === realtimeMatches.length ? 'Seçimi Bırak' : 'Tümünü Seç'}
-                  </button>
-                </div>
-              </div>
-
-              {/* Benzer sorular listesi: En belirgin soru ilk sırada */}
-              <div className="flex flex-col gap-2">
-                {realtimeMatches.map((m, idx) => {
-                  const q = m.question;
-                  const stem = questionStemText(q);
-                  const isTop = idx === 0;
-                  const isSelected = selectedMatchIds.has(q.id);
-                  const tier = getScoreTier(m.compatibility.score);
-
-                  return (
-                    <div
-                      key={q.id}
-                      className={`ms-pop-in rounded-2xl border transition-all p-3.5 flex flex-col gap-2 relative ${
-                        isSelected
-                          ? 'border-accent bg-accent-soft/30 shadow-xs ring-1 ring-accent'
-                          : tier.cardBorder
-                      }`}
-                      style={{ animationDelay: `${idx * 60}ms` }}
-                    >
-                      <div className="flex items-center justify-between gap-2 flex-wrap">
-                        <div className="flex items-center gap-2 flex-wrap">
-                          <button
-                            type="button"
-                            onClick={() => toggleSelectMatch(q.id)}
-                            className="cursor-pointer text-ink-2 hover:text-ink focus:outline-none"
-                            title={isSelected ? 'Seçimi Kaldır' : 'Seç'}
-                            aria-label={`Soru ${q.questionNumber || 'taslak'} seç`}
-                          >
-                            {isSelected ? (
-                              <CheckSquare className="w-4 h-4 text-accent fill-accent-soft" />
-                            ) : (
-                              <Square className="w-4 h-4 text-ink-3 hover:text-ink" />
-                            )}
-                          </button>
-
-                          {isTop && (
-                            <span className="h-5 px-2 rounded-full bg-accent text-white text-2xs font-bold uppercase tracking-wider">
-                              En Yakın
-                            </span>
-                          )}
-
-                          <span className={`h-6 px-2.5 rounded-full text-xs font-semibold inline-flex items-center gap-1 border ${tier.pillBg}`}>
-                            <span className={`w-1.5 h-1.5 rounded-full ${tier.barColor}`} />
-                            %{m.compatibility.score} · {tier.tierName}
-                          </span>
-
-                          {m.isCrossCommittee && (
-                            <span className="h-5 px-2 rounded-full bg-ai text-white text-2xs font-bold uppercase tracking-wider">
-                              Farklı Kurul Taslağı
-                            </span>
-                          )}
-
-                          {m.contextHashtag && m.compatibility.score >= HIGHLIGHT_MIN_SCORE && (
-                            <ContextBadge hashtag={m.contextHashtag} colorIndex={idx} />
-                          )}
-                        </div>
-
-                        <span className="text-xs font-mono font-bold text-ink-2">
-                          {q.questionNumber ? `Soru #${q.questionNumber}` : 'Numarasız'}
-                        </span>
-                      </div>
-
-                      <div className="text-sm leading-relaxed text-ink bg-white/90 rounded-xl p-2.5 border border-line-soft">
-                        <Colored text={stem} colors={sharedColors} />
-                      </div>
-
-                      <div className="flex items-center justify-between gap-2 pt-1">
-                        <div className="flex items-center gap-1.5 flex-wrap">
-                          <button
-                            type="button"
-                            onClick={() => handleLinkToQuestion(q)}
-                            className="h-7 px-2.5 rounded-lg bg-white hover:bg-canvas text-ink text-xs font-medium border border-line inline-flex items-center gap-1 cursor-pointer transition-colors shadow-2xs"
-                          >
-                            <CheckCircle2 className="w-3.5 h-3.5 text-accent" />
-                            {q.questionNumber ? `S.${q.questionNumber} ile Bağla` : 'Bu Taslakla Bağla'}
-                          </button>
-                          <button
-                            type="button"
-                            onClick={() => setOptimizingQuestion(q)}
-                            className="h-7 px-2.5 rounded-lg bg-accent-soft hover:bg-accent/20 text-accent text-xs font-semibold inline-flex items-center gap-1 cursor-pointer transition-colors shadow-2xs"
-                            title="Taslağı amfi slaytları ve AI ile tam soruya dönüştür"
-                          >
-                            <Wand2 className="w-3.5 h-3.5" />
-                            AI ile Dönüştür
-                          </button>
-                        </div>
-                        {q.discipline && (
-                          <span className="text-xs text-ink-3 truncate">{q.discipline}</span>
-                        )}
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
-
-              {/* Ortak kelimeler renk kılavuzu */}
-              <WordLegend texts={[text, ...realtimeMatches.map((m) => questionStemText(m.question))]} colors={sharedColors} />
-
-              {/* Seçim yapıldığında ortaya çıkan bağlamsal çubuk */}
-              {selectedMatchIds.size > 0 && (
-                <div className="ms-pop-in sticky bottom-3 z-20 flex items-center justify-between gap-3 p-3 rounded-2xl bg-ink text-white shadow-xl border border-white/10 backdrop-blur-md">
-                  <div className="flex items-center gap-2 min-w-0">
-                    <span className="w-6 h-6 rounded-full bg-accent text-white text-xs font-bold flex items-center justify-center shrink-0">
-                      {selectedMatchIds.size}
-                    </span>
-                    <span className="text-sm font-medium truncate">
-                      {selectedMatchIds.size === 1
-                        ? '1 soru seçildi'
-                        : `${selectedMatchIds.size} soru seçildi`}
-                    </span>
-                  </div>
-
-                  <div className="flex items-center gap-2 shrink-0">
-                    <button
-                      type="button"
-                      onClick={clearSelection}
-                      className="h-8 px-2.5 rounded-lg hover:bg-white/10 text-white/80 hover:text-white text-xs font-medium cursor-pointer transition-colors"
-                    >
-                      İptal
-                    </button>
-                    <button
-                      type="button"
-                      disabled={isMergingSelected}
-                      onClick={handleMergeAndGroupSelected}
-                      className="h-8 px-3.5 rounded-lg bg-accent hover:bg-accent-hover text-white text-sm font-bold inline-flex items-center gap-1.5 cursor-pointer shadow-md disabled:opacity-50 transition-colors"
-                    >
-                      <Layers className="w-3.5 h-3.5" />
-                      {isMergingSelected
-                        ? 'Birleştiriliyor…'
-                        : selectedMatchIds.size === 1
-                        ? 'Bu Soru ile Birleştir'
-                        : `Seçilenleri Gruplandır & Birleştir (${selectedMatchIds.size})`}
-                    </button>
-                  </div>
-                </div>
-              )}
-            </div>
-          )}
-
-          {similar.length > 0 && mode !== 'option' && (
-            <button
-              type="button"
-              onClick={() => setSimOpen((v) => !v)}
-              aria-expanded={simOpen}
-              className="ms-pop-in w-full min-h-11 px-4 rounded-2xl bg-field hover:bg-line flex items-center gap-3 text-left text-base cursor-pointer"
-            >
-              <span className="h-6 min-w-6 px-2 rounded-full bg-accent-soft text-accent text-xs font-semibold inline-flex items-center justify-center">
-                {similar.length}
-              </span>
-              <span className="flex-1 text-ink-2">benzer çıkmış soru bulundu</span>
-              <span className="text-sm text-ink-3">{simOpen ? 'Gizle' : 'Göster'}</span>
-            </button>
-          )}
-          {simOpen && similar.length > 0 && mode !== 'option' && (
-            <ul className="list-none m-0 p-0 flex flex-col gap-2">
-              {similar.map((s, i) => (
-                <li
-                  key={s.id}
-                  className="ms-pop-in p-3 rounded-xl bg-field/60 border border-line-soft hover:bg-field text-base text-ink flex flex-col gap-2"
-                  style={{ animationDelay: `${i * 60}ms` }}
+            {spell?.text && spell.text !== dismissedSpell && (
+              <div className="ms-pop-in flex items-center gap-2 text-base text-ink-2 min-w-0">
+                <span className="shrink-0 text-ink-3">Bunu mu kastettiniz?</span>
+                <button
+                  type="button"
+                  onClick={() => { setText(spell.text!); setSpell(null); }}
+                  className="min-w-0 truncate text-left text-accent font-medium hover:underline cursor-pointer"
                 >
-                  <div className="flex flex-col gap-0.5 min-w-0">
-                    <span className="line-clamp-2 text-ink-2 font-medium">{s.stem}</span>
-                    {s.options && s.options.length > 0 && (
-                      <ol className="m-0 mt-1 p-0 list-none grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-0.5 text-sm text-ink-2">
-                        {s.options.map((o) => (
-                          <li key={o.key} className={`min-w-0 truncate ${o.key === s.claimedAnswer ? 'text-ok font-semibold' : ''}`}>
-                            <span className="font-mono text-ink-3 mr-1">{o.key})</span>{o.text}
-                          </li>
-                        ))}
-                      </ol>
-                    )}
-                    <span className="text-xs text-ink-3">
-                      {[s.discipline, s.examYear ? `Çıkmış ${s.examYear}` : 'Çıkmış', s.claimedAnswer ? `Cevap: ${s.claimedAnswer}` : ''].filter(Boolean).join(' · ')}
-                    </span>
-                  </div>
-                  <div className="flex items-center gap-2 pt-1 border-t border-line-soft">
-                    <button
-                      type="button"
-                      onClick={() => handleTransferEntireQuestion(s)}
-                      className="h-7 px-2.5 rounded-lg bg-accent text-white text-xs font-semibold inline-flex items-center gap-1 cursor-pointer hover:bg-accent-hover shadow-2xs transition-colors"
-                      title="Sorunun kökünü, branşını ve şıklarını editöre aktar"
-                    >
-                      <FileText className="w-3.5 h-3.5" />
-                      {s.options && s.options.length ? 'Kök + şıkları aktar' : 'Soruyu aktar'}
-                    </button>
-                    <button
-                      type="button"
-                      onClick={() => handleCopyQuestionStem(s.stem)}
-                      className="h-7 px-2.5 rounded-lg bg-white text-ink text-xs font-medium border border-line inline-flex items-center gap-1 cursor-pointer hover:bg-canvas shadow-2xs transition-colors"
-                      title="Yalnızca soru kökünü editöre yaz ve panoya kopyala"
-                    >
-                      <Copy className="w-3.5 h-3.5 text-accent" />
-                      Yalnızca Kökü Al
-                    </button>
-                  </div>
-                </li>
-              ))}
-            </ul>
-          )}
-
-          <div className="flex items-center gap-2 text-sm text-ink-3">
-            <span className="flex-1" />
-            {/* Şık ekle: gönder düğmesinin solunda küçük baloncuk */}
-            <button
-              type="button"
-              onClick={() => setMode(mode === 'option' ? 'stem' : 'option')}
-              aria-pressed={mode === 'option'}
-              className={`ms-opt-bubble ${mode === 'option' || filledOptionCount > 0 ? 'is-on' : ''}`}
-            >
-              {mode === 'option' ? (
-                <>Köke dön</>
-              ) : filledOptionCount > 0 ? (
-                <>{filledOptionCount} şık{claimedAnswer ? ` · ${claimedAnswer}` : ''}</>
-              ) : (
-                <><Plus className="w-3.5 h-3.5" strokeWidth={2.4} /> Şık</>
-              )}
-            </button>
-            <button
-              type="submit"
-              disabled={isSubmitting}
-              className="h-12 sm:h-11 px-6 rounded-full bg-accent hover:bg-accent-hover text-white text-md sm:text-md font-semibold cursor-pointer disabled:opacity-60 transition-colors shrink-0"
-            >
-              {isSubmitting ? 'Kaydediliyor…' : 'Havuza ekle'}
-            </button>
-          </div>
-
-          {formError && (
-            <div role="alert" className="ms-shake px-4 py-3 rounded-2xl bg-bad-soft text-bad-text text-base">{formError}</div>
-          )}
-          {successMessage && (
-            <div role="status" className="ms-pop-in px-4 py-3 rounded-2xl bg-ok-soft text-ok text-base font-medium">Teşekkürler! {successMessage}</div>
-          )}
-        </form>
-
-        {optimizingQuestion && (
-          <AiQuestionOptimizerModal
-            question={optimizingQuestion}
-            isOpen={Boolean(optimizingQuestion)}
-            onClose={() => setOptimizingQuestion(null)}
-            currentUser={currentUser}
-            onSaved={async (updated) => {
-              setOptimizingQuestion(null);
-              toast.success('Taslak Geliştirildi', `Soru #${updated.questionNumber || 'taslak'} başarıyla güncellendi.`);
-              if (onQuestionsUpdated) {
-                await onQuestionsUpdated();
-              }
-            }}
-          />
-        )}
-      </div>
-    );
-  }
-
-
-  return (
-    <div className="w-full grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_340px] gap-4 lg:gap-5 md:pt-2">
-      <div className="flex flex-col gap-3 min-w-0">
-      {/* Başlık + kurul (tasarım: sola hizalı, kompakt) */}
-      <div className="flex flex-wrap items-end justify-between gap-x-4 gap-y-2">
-        <div className="flex flex-col gap-1.5 min-w-0">
-        <label className="relative inline-flex items-center">
-          <span className="sr-only">Kurul seç</span>
-          <span
-            className={`pointer-events-none absolute left-3 w-2 h-2 rounded-full ${isCollecting ? 'bg-ok-bright' : 'bg-line-2'}`}
-            aria-hidden="true"
-          />
-          <select
-            value={committee?.id || ''}
-            onChange={(e) => onSelectCommittee(e.target.value)}
-            className={`appearance-none h-8 pl-7 pr-8 rounded-full text-sm font-semibold cursor-pointer border-0 outline-0 ${
-              isCollecting ? 'bg-ok-soft text-ok' : 'bg-white text-ink-2 ring-1 ring-inset ring-line'
-            }`}
-          >
-            {sortedCommittees.map((c) => {
-              const locked = isCommitteeLocked(c.id);
-              return (
-                <option key={c.id} value={c.id} disabled={locked}>
-                  {titleCase(c)}
-                  {c.id === activeCommitteeId ? ' · toplama açık' : ''}
-                  {locked ? ' · (Henüz Açılmadı)' : ''}
-                </option>
-              );
-            })}
-          </select>
-          <ChevronDown className="pointer-events-none absolute right-2.5 w-3.5 h-3.5 opacity-70" aria-hidden="true" />
-        </label>
-        {isLocked && (
-          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-warn/10 border border-warn/30 text-warn text-xs font-semibold">
-            <Lock className="w-3 h-3 text-warn" />
-            Sınav tamamlanmadan bu kurula soru eklenemez
-          </span>
-        )}
-        <span className="ms-eyebrow">Soru ekle</span>
-        <h1 className="ms-page-title m-0 text-2xl sm:text-3xl text-ink">Hatırladığın soruyu yaz</h1>
-        </div>
-        <p className="m-0 text-sm text-ink-3">Parça parça da olur; gerisini kaynaklardan tamamlarız.</p>
-      </div>
-
-      {/* Composer */}
-      <form
-        onSubmit={handleSubmit}
-        aria-busy={isSubmitting}
-        className="relative bg-white border border-line rounded-xl p-3 sm:p-5 flex flex-col gap-3"
-      >
-        <BlurOverlay show={isSubmitting} label="Havuza ekleniyor…" hint="Benzer parçalar varsa aynı soruya bağlıyoruz" />
-        <div role="radiogroup" aria-label="Ne ekliyorsun?" className="grid grid-cols-3 gap-1 bg-canvas rounded-xl p-1">
-          {MODES.map((m) => {
-            const on = mode === m.id;
-            return (
-              <button
-                key={m.id}
-                type="button"
-                role="radio"
-                aria-checked={on}
-                onClick={() => setMode(m.id)}
-                className={`h-9 rounded-lg text-base sm:text-base whitespace-nowrap cursor-pointer transition-colors inline-flex items-center justify-center gap-1.5 ${
-                  on ? 'bg-white text-ink font-semibold shadow-xs' : 'text-ink-2 hover:text-ink'
-                }`}
-              >
-                {m.label}
-                {m.id === 'option' && claimedAnswer && (
-                  <span className="h-5 min-w-5 px-1 rounded-full bg-ok text-white text-2xs font-mono font-semibold inline-flex items-center justify-center" aria-label={`Cevap ${claimedAnswer}`}>
-                    {claimedAnswer}
-                  </span>
-                )}
-              </button>
-            );
-          })}
-        </div>
-
-        {mode === 'option' ? (
-          <OptionsEditor
-            options={options}
-            onChange={(k, v) => setOptions((p) => ({ ...p, [k]: v }))}
-            count={optionCount}
-            onCountChange={setOptionCount}
-            answer={claimedAnswer}
-            onAnswerChange={setClaimedAnswer}
-            reason={answerReason}
-            onReasonChange={setAnswerReason}
-          />
-        ) : (
-          <>
-            <label htmlFor="hatira" className="sr-only">
-              Hatırladığın kısım
-            </label>
-            <textarea
-              id="hatira"
-              rows={4}
-              value={text}
-              onChange={(e) => setText(e.target.value)}
-              placeholder={PLACEHOLDERS[mode]}
-              onKeyDown={(e) => {
-                if (e.key === 'Enter' && (e.ctrlKey || e.metaKey)) {
-                  e.preventDefault();
-                  e.currentTarget.form?.requestSubmit();
-                }
-              }}
-              className={`resize-y rounded-[10px] px-3.5 py-3 text-md leading-[1.6] text-ink placeholder:text-ink-3 min-h-[132px] sm:min-h-[150px] ${field}`}
-            />
-            <div className="flex items-center justify-between gap-1.5 text-xs text-ink-3 -mt-1 flex-wrap">
-              <div className="flex items-center gap-1.5">
-                <span className="font-mono">{text.length} karakter</span>
-                <span aria-hidden="true">·</span>
-                <span className="truncate">Şıkları “Şıklar” sekmesinden ekleyebilirsin</span>
+                  {spell.changes.map((c) => c.to).join(', ')}
+                </button>
+                <button type="button" onClick={() => setDismissedSpell(spell.text)} aria-label="Öneriyi kapat" className="shrink-0 w-7 h-7 rounded-full flex items-center justify-center text-ink-3 hover:bg-field cursor-pointer">
+                  <X className="w-3.5 h-3.5" />
+                </button>
               </div>
-              {/* Canlı arama mikro-animasyonu / yükleme göstergesi */}
-              {isSearching && text.trim().length >= 6 && (
-                <div className="ms-fade-in flex items-center gap-1.5 text-accent text-xs font-medium">
+            )}
+            {/* Canlı arama mikro-animasyonu / yükleme göstergesi */}
+            {isSearching && text.trim().length >= 6 && (
+              <div className="ms-fade-in flex items-center gap-2 px-3 py-1.5 rounded-xl bg-accent-soft/60 border border-accent/20 text-accent text-xs font-medium w-fit">
+                <span className="w-2 h-2 rounded-full bg-accent animate-ping" />
+                <span className="flex items-center gap-1">
                   <Sparkles className="w-3.5 h-3.5 animate-spin" />
-                  <span>Eşleşmeler taranıyor…</span>
-                </div>
-              )}
-            </div>
+                  Benzer soru, kurul ve taslaklar taranıyor…
+                </span>
+              </div>
+            )}
 
             {/* Seçili Soruya / Taslağa Bağlandı Rozeti */}
             {linkedQuestion && (
@@ -1784,12 +1278,73 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
           </>
         )}
 
+        {/* Akıllı Kurul & Ders Öneri ve Uyarı Kutusu */}
+        {smartAssistant && mode !== 'option' && (smartAssistant.crossCommitteeWarning || smartAssistant.suggestedTopics.length > 0) && (
+          <div className="ms-pop-in rounded-2xl bg-warn/10 border border-warn/80 p-3.5 flex flex-col gap-2.5">
+            {smartAssistant.crossCommitteeWarning && smartAssistant.predictedCommittee && (
+              <div className="flex items-start justify-between gap-3 flex-wrap sm:flex-nowrap">
+                <div className="flex items-start gap-2 text-sm text-warn leading-snug">
+                  <AlertCircle className="w-4 h-4 text-warn shrink-0 mt-0.5" />
+                  <div>
+                    <span className="font-bold">Kurul Uyuşmazlığı Olabilir: </span>
+                    {smartAssistant.crossCommitteeWarning}
+                  </div>
+                </div>
+                <button
+                  type="button"
+                  onClick={() => {
+                    if (smartAssistant.predictedCommittee) {
+                      onSelectCommittee(smartAssistant.predictedCommittee.committeeId);
+                      if (smartAssistant.predictedDiscipline) {
+                        setDiscipline(smartAssistant.predictedDiscipline.discipline);
+                      }
+                      toast.success('Kurul Değiştirildi', `${smartAssistant.predictedCommittee.committeeName} kuruluna geçildi.`);
+                    }
+                  }}
+                  className="shrink-0 h-8 px-3 rounded-xl bg-warn hover:bg-warn text-white text-xs font-bold inline-flex items-center gap-1 cursor-pointer transition-colors shadow-xs"
+                >
+                  Bu Kurula Geç
+                  <ArrowRight className="w-3.5 h-3.5" />
+                </button>
+              </div>
+            )}
+
+            {/* Tespit Edilen Tıbbi Konular / Kavramlar */}
+            {smartAssistant.suggestedTopics.length > 0 && (
+              <div className="flex items-center gap-1.5 flex-wrap pt-0.5">
+                <span className="text-xs font-bold uppercase tracking-wider text-warn/80 flex items-center gap-1">
+                  <Sparkles className="w-3 h-3 text-warn" />
+                  İlişkili Konu Önerileri:
+                </span>
+                {smartAssistant.suggestedTopics.slice(0, 3).map((st, i) => (
+                  <span
+                    key={i}
+                    className="h-6 px-2.5 rounded-full bg-white text-warn text-xs font-semibold border border-warn/30 shadow-2xs inline-flex items-center gap-1"
+                  >
+                    {st.topic}
+                  </span>
+                ))}
+                {smartAssistant.predictedDiscipline && discipline !== smartAssistant.predictedDiscipline.discipline && (
+                  <button
+                    type="button"
+                    onClick={() => setDiscipline(smartAssistant.predictedDiscipline!.discipline)}
+                    className="h-6 px-2.5 rounded-full bg-accent/15 hover:bg-accent/25 text-accent text-xs font-bold border border-accent/30 inline-flex items-center gap-1 cursor-pointer transition-colors"
+                    title="Dersi otomatik eşle"
+                  >
+                    Dersi "{smartAssistant.predictedDiscipline.discipline}" yap
+                  </button>
+                )}
+              </div>
+            )}
+          </div>
+        )}
+
         {realtimeMatches.length > 0 && mode !== 'option' && (
           <div className="flex flex-col gap-2.5">
             <div className="flex items-center justify-between gap-2 px-1">
               <span className="flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-ink-3">
                 <Sparkles className="w-3.5 h-3.5 text-accent animate-pulse" />
-                Benzer / Devamı Olan Taslaklar ({realtimeMatches.length})
+                Benzer Taslaklar ({realtimeMatches.length})
               </span>
               <div className="flex items-center gap-2">
                 <button
@@ -1803,7 +1358,7 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
             </div>
 
             {/* Benzer sorular listesi: En belirgin soru ilk sırada */}
-            <div className="flex flex-col gap-2.5">
+            <div className="flex flex-col gap-2">
               {realtimeMatches.map((m, idx) => {
                 const q = m.question;
                 const stem = questionStemText(q);
@@ -1814,9 +1369,9 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
                 return (
                   <div
                     key={q.id}
-                    className={`ms-pop-in rounded-xl border transition-all p-3.5 sm:p-4 flex flex-col gap-2.5 relative shadow-2xs ${
+                    className={`ms-pop-in rounded-2xl border transition-all p-3.5 flex flex-col gap-2 relative ${
                       isSelected
-                        ? 'border-accent bg-accent-soft/30 ring-1 ring-accent'
+                        ? 'border-accent bg-accent-soft/30 shadow-xs ring-1 ring-accent'
                         : tier.cardBorder
                     }`}
                     style={{ animationDelay: `${idx * 60}ms` }}
@@ -1843,10 +1398,16 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
                           </span>
                         )}
 
-                        <span className={`h-6 px-2.5 rounded-full text-xs font-semibold inline-flex items-center gap-1.5 border ${tier.pillBg}`}>
+                        <span className={`h-6 px-2.5 rounded-full text-xs font-semibold inline-flex items-center gap-1 border ${tier.pillBg}`}>
                           <span className={`w-1.5 h-1.5 rounded-full ${tier.barColor}`} />
-                          %{m.compatibility.score} uyum · {tier.tierName}
+                          %{m.compatibility.score} · {tier.tierName}
                         </span>
+
+                        {m.isCrossCommittee && (
+                          <span className="h-5 px-2 rounded-full bg-ai text-white text-2xs font-bold uppercase tracking-wider">
+                            Farklı Kurul Taslağı
+                          </span>
+                        )}
 
                         {m.contextHashtag && m.compatibility.score >= HIGHLIGHT_MIN_SCORE && (
                           <ContextBadge hashtag={m.contextHashtag} colorIndex={idx} />
@@ -1854,43 +1415,37 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
                       </div>
 
                       <span className="text-xs font-mono font-bold text-ink-2">
-                        {q.questionNumber ? `Soru #${q.questionNumber}` : 'Numarasız Taslak'}
+                        {q.questionNumber ? `Soru #${q.questionNumber}` : 'Numarasız'}
                       </span>
                     </div>
 
-                    <div className="text-base leading-relaxed text-ink bg-white/95 rounded-xl p-3 border border-line-soft">
-                      <div className="text-2xs font-semibold uppercase tracking-wider text-ink-3 mb-1 flex items-center justify-between">
-                        <span>Havuzdaki Taslak Metni:</span>
-                        {q.discipline && (
-                          <span className="font-normal text-xs text-ink-3">{q.discipline}</span>
-                        )}
+                    <div className="text-sm leading-relaxed text-ink bg-white/90 rounded-xl p-2.5 border border-line-soft">
+                      <Colored text={stem} colors={sharedColors} />
+                    </div>
+
+                    <div className="flex items-center justify-between gap-2 pt-1">
+                      <div className="flex items-center gap-1.5 flex-wrap">
+                        <button
+                          type="button"
+                          onClick={() => handleLinkToQuestion(q)}
+                          className="h-7 px-2.5 rounded-lg bg-white hover:bg-canvas text-ink text-xs font-medium border border-line inline-flex items-center gap-1 cursor-pointer transition-colors shadow-2xs"
+                        >
+                          <CheckCircle2 className="w-3.5 h-3.5 text-accent" />
+                          {q.questionNumber ? `S.${q.questionNumber} ile Bağla` : 'Bu Taslakla Bağla'}
+                        </button>
+                        <button
+                          type="button"
+                          onClick={() => setOptimizingQuestion(q)}
+                          className="h-7 px-2.5 rounded-lg bg-accent-soft hover:bg-accent/20 text-accent text-xs font-semibold inline-flex items-center gap-1 cursor-pointer transition-colors shadow-2xs"
+                          title="Taslağı amfi slaytları ve AI ile tam soruya dönüştür"
+                        >
+                          <Wand2 className="w-3.5 h-3.5" />
+                          AI ile Dönüştür
+                        </button>
                       </div>
-                      <p className="m-0 line-clamp-3">
-                        <Colored text={stem} colors={sharedColors} />
-                      </p>
-                    </div>
-
-                    <div className="flex flex-wrap items-center gap-2 pt-1 border-t border-line-soft/80">
-                      <button
-                        type="button"
-                        onClick={() => handleLinkToQuestion(q)}
-                        className="h-8 px-3 rounded-lg bg-white hover:bg-canvas text-ink text-sm font-semibold border border-line inline-flex items-center gap-1.5 cursor-pointer shadow-2xs transition-colors"
-                      >
-                        <CheckCircle2 className="w-3.5 h-3.5 text-accent" />
-                        {q.questionNumber ? `Bu soruya bağla (S.${q.questionNumber})` : 'Bu taslağa bağla'}
-                      </button>
-                      <button
-                        type="button"
-                        onClick={() => setOptimizingQuestion(q)}
-                        className="h-8 px-3 rounded-lg bg-accent-soft hover:bg-accent/20 text-accent text-xs font-semibold inline-flex items-center gap-1.5 cursor-pointer transition-colors shadow-2xs"
-                        title="Taslağı amfi slaytları ve AI ile tam soruya dönüştür"
-                      >
-                        <Wand2 className="w-3.5 h-3.5" />
-                        AI ile Dönüştür
-                      </button>
-                      <span className="text-xs text-ink-3">
-                        veya çoklu seçim yapıp birleştirebilirsin.
-                      </span>
+                      {q.discipline && (
+                        <span className="text-xs text-ink-3 truncate">{q.discipline}</span>
+                      )}
                     </div>
                   </div>
                 );
@@ -1902,7 +1457,7 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
 
             {/* Seçim yapıldığında ortaya çıkan bağlamsal çubuk */}
             {selectedMatchIds.size > 0 && (
-              <div className="ms-pop-in sticky bottom-3 z-20 flex items-center justify-between gap-3 p-3 sm:p-3.5 rounded-2xl bg-ink text-white shadow-xl border border-white/10 backdrop-blur-md">
+              <div className="ms-pop-in sticky bottom-3 z-20 flex items-center justify-between gap-3 p-3 rounded-2xl bg-ink text-white shadow-xl border border-white/10 backdrop-blur-md">
                 <div className="flex items-center gap-2 min-w-0">
                   <span className="w-6 h-6 rounded-full bg-accent text-white text-xs font-bold flex items-center justify-center shrink-0">
                     {selectedMatchIds.size}
@@ -1942,184 +1497,100 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
         )}
 
         {similar.length > 0 && mode !== 'option' && (
-          <div className="flex flex-col gap-1" aria-live="polite">
-            <span className="flex items-center gap-1.5 text-xs font-semibold uppercase tracking-[.06em] text-ink-3">
-              Benzer çıkmış sorular
-              <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" aria-hidden="true" />
+          <button
+            type="button"
+            onClick={() => setSimOpen((v) => !v)}
+            aria-expanded={simOpen}
+            className="ms-pop-in w-full min-h-11 px-4 rounded-2xl bg-field hover:bg-line flex items-center gap-3 text-left text-base cursor-pointer"
+          >
+            <span className="h-6 min-w-6 px-2 rounded-full bg-accent-soft text-accent text-xs font-semibold inline-flex items-center justify-center">
+              {similar.length}
             </span>
-            {similar.map((s, i) => {
-              // Ham arama puanı yüzde değildir: çubuk yalnızca en iyi sonuca göre göreli yakınlığı gösterir
-              const top = similar[0]?.score || 0;
-              const rel = top > 0 && typeof s.score === 'number' ? Math.max(8, Math.round((s.score / top) * 100)) : null;
-              return (
-                <details
-                  key={s.id}
-                  className="ms-pop-in group rounded-[10px] border border-line bg-white open:bg-canvas hover:border-accent transition-colors"
-                  style={{ animationDelay: `${i * 70}ms` }}
-                >
-                  <summary className="list-none cursor-pointer min-h-10 px-2.5 py-1.5 flex items-center gap-2 text-sm">
-                    {rel !== null && (
-                      <span className="shrink-0 hidden sm:block w-9 h-1 rounded-full bg-line overflow-hidden" title="Göreli benzerlik">
-                        <span className="block h-full bg-accent" style={{ width: `${rel}%` }} />
-                      </span>
-                    )}
-                    <span className="min-w-0 flex-1 truncate group-open:whitespace-normal text-ink-2" title={s.stem}>
-                      {s.stem}
-                    </span>
-                    <span className="shrink-0 text-2xs font-semibold px-1.5 py-0.5 rounded-md bg-ai-soft text-ai">
-                      {s.examYear ? `Çıkmış ${s.examYear}` : 'Çıkmış'}
-                    </span>
-                  </summary>
-                  <div className="px-2.5 pb-2.5 flex flex-col gap-2 border-t border-line-soft pt-1.5">
-                    <div className="text-xs text-ink-3">
-                      {[s.discipline, s.title].filter(Boolean).join(' · ')}
-                      {s.claimedAnswer ? ` · Cevap: ${s.claimedAnswer}` : ''}
-                    </div>
-                    <div className="flex items-center gap-2 pt-0.5">
-                      <button
-                        type="button"
-                        onClick={() => handleTransferEntireQuestion(s)}
-                        className="h-7 px-2.5 rounded-lg bg-accent text-white text-xs font-semibold inline-flex items-center gap-1 cursor-pointer hover:bg-accent-hover shadow-2xs transition-colors"
-                        title="Sorunun kökünü, branşını ve şıklarını editöre aktar"
-                      >
-                        <FileText className="w-3.5 h-3.5" />
-                        Soruyu Aktar
-                      </button>
-                      <button
-                        type="button"
-                        onClick={() => handleCopyQuestionStem(s.stem)}
-                        className="h-7 px-2.5 rounded-lg bg-white text-ink text-xs font-medium border border-line inline-flex items-center gap-1 cursor-pointer hover:bg-canvas shadow-2xs transition-colors"
-                        title="Yalnızca soru kökünü editöre yaz ve panoya kopyala"
-                      >
-                        <Copy className="w-3.5 h-3.5 text-accent" />
-                        Yalnızca Kökü Al
-                      </button>
-                    </div>
-                  </div>
-                </details>
-              );
-            })}
-          </div>
+            <span className="flex-1 text-ink-2">benzer çıkmış soru bulundu</span>
+            <span className="text-sm text-ink-3">{simOpen ? 'Gizle' : 'Göster'}</span>
+          </button>
+        )}
+        {simOpen && similar.length > 0 && mode !== 'option' && (
+          <ul className="list-none m-0 p-0 flex flex-col gap-2">
+            {similar.map((s, i) => (
+              <li
+                key={s.id}
+                className="ms-pop-in p-3 rounded-xl bg-field/60 border border-line-soft hover:bg-field text-base text-ink flex flex-col gap-2"
+                style={{ animationDelay: `${i * 60}ms` }}
+              >
+                <div className="flex flex-col gap-0.5 min-w-0">
+                  <span className="line-clamp-2 text-ink-2 font-medium">{s.stem}</span>
+                  {s.options && s.options.length > 0 && (
+                    <ol className="m-0 mt-1 p-0 list-none grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-0.5 text-sm text-ink-2">
+                      {s.options.map((o) => (
+                        <li key={o.key} className={`min-w-0 truncate ${o.key === s.claimedAnswer ? 'text-ok font-semibold' : ''}`}>
+                          <span className="font-mono text-ink-3 mr-1">{o.key})</span>{o.text}
+                        </li>
+                      ))}
+                    </ol>
+                  )}
+                  <span className="text-xs text-ink-3">
+                    {[s.discipline, s.examYear ? `Çıkmış ${s.examYear}` : 'Çıkmış', s.claimedAnswer ? `Cevap: ${s.claimedAnswer}` : ''].filter(Boolean).join(' · ')}
+                  </span>
+                </div>
+                <div className="flex items-center gap-2 pt-1 border-t border-line-soft">
+                  <button
+                    type="button"
+                    onClick={() => handleTransferEntireQuestion(s)}
+                    className="h-7 px-2.5 rounded-lg bg-accent text-white text-xs font-semibold inline-flex items-center gap-1 cursor-pointer hover:bg-accent-hover shadow-2xs transition-colors"
+                    title="Sorunun kökünü, branşını ve şıklarını editöre aktar"
+                  >
+                    <FileText className="w-3.5 h-3.5" />
+                    {s.options && s.options.length ? 'Kök + şıkları aktar' : 'Soruyu aktar'}
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => handleCopyQuestionStem(s.stem)}
+                    className="h-7 px-2.5 rounded-lg bg-white text-ink text-xs font-medium border border-line inline-flex items-center gap-1 cursor-pointer hover:bg-canvas shadow-2xs transition-colors"
+                    title="Yalnızca soru kökünü editöre yaz ve panoya kopyala"
+                  >
+                    <Copy className="w-3.5 h-3.5 text-accent" />
+                    Yalnızca Kökü Al
+                  </button>
+                </div>
+              </li>
+            ))}
+          </ul>
         )}
 
-        <div className="flex flex-wrap sm:flex-nowrap items-center gap-2">
-          <label className="relative flex-1 min-w-[150px]">
-            <span className="sr-only">Ders</span>
-            <select
-              value={discipline}
-              onChange={(e) => {
-                setDiscipline(e.target.value);
-                setUserManualDiscipline(true);
-              }}
-              className={`appearance-none w-full h-11 rounded-xl pl-3 pr-8 text-base text-ink cursor-pointer truncate ${field}`}
-            >
-              {disciplines.map((d) => (
-                <option key={d} value={d}>
-                  {d}
-                </option>
-              ))}
-            </select>
-            <ChevronDown className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-ink-3" aria-hidden="true" />
-          </label>
-          <label className="flex items-center gap-1.5 h-11 w-[104px] px-3 rounded-xl bg-field border border-transparent focus-within:border-accent focus-within:bg-white">
-            <span className="text-sm text-ink-3">No</span>
-            <input
-              type="text"
-              inputMode="numeric"
-              value={questionNumber}
-              onChange={(e) => {
-                setQuestionNumber(e.target.value.replace(/[^0-9]/g, '').slice(0, 3));
-                setUserManualNumber(true);
-              }}
-              placeholder="?"
-              aria-label="Soru numarası (bilmiyorsan boş bırak)"
-              className="w-full min-w-0 bg-transparent border-0 outline-0 text-md font-mono placeholder:text-ink-2"
-            />
-          </label>
+        <div className="flex items-center gap-2 text-sm text-ink-3">
+          <span className="flex-1" />
+          {/* Şık ekle: gönder düğmesinin solunda küçük baloncuk */}
+          <button
+            type="button"
+            onClick={() => setMode(mode === 'option' ? 'stem' : 'option')}
+            aria-pressed={mode === 'option'}
+            className={`ms-opt-bubble ${mode === 'option' || filledOptionCount > 0 ? 'is-on' : ''}`}
+          >
+            {mode === 'option' ? (
+              <>Köke dön</>
+            ) : filledOptionCount > 0 ? (
+              <>{filledOptionCount} şık{claimedAnswer ? ` · ${claimedAnswer}` : ''}</>
+            ) : (
+              <><Plus className="w-3.5 h-3.5" strokeWidth={2.4} /> Şık</>
+            )}
+          </button>
           <button
             type="submit"
             disabled={isSubmitting}
-            className={`h-12 sm:h-11 px-5 rounded-xl text-white text-md font-semibold flex items-center justify-center gap-2 cursor-pointer disabled:opacity-60 w-full sm:w-auto transition-colors ${
-              canSubmit ? 'bg-accent hover:bg-accent-hover shadow-md' : 'bg-accent/75'
-            }`}
+            className="h-12 sm:h-11 px-6 rounded-full bg-accent hover:bg-accent-hover text-white text-md sm:text-md font-semibold cursor-pointer disabled:opacity-60 transition-colors shrink-0"
           >
             {isSubmitting ? 'Kaydediliyor…' : 'Havuza ekle'}
-            <ArrowRight className="w-4 h-4" strokeWidth={2.2} />
           </button>
         </div>
 
         {formError && (
-          <div role="alert" className="flex items-center gap-2 px-3 py-2.5 rounded-xl bg-bad-soft text-bad-text text-base">
-            <AlertCircle className="w-4 h-4 shrink-0 text-bad" />
-            <span>{formError}</span>
-          </div>
+          <div role="alert" className="ms-shake px-4 py-3 rounded-2xl bg-bad-soft text-bad-text text-base">{formError}</div>
         )}
         {successMessage && (
-          <div role="status" className="ms-pop-in flex items-center gap-3 px-3 py-2 rounded-xl bg-ok-tint border border-ok/30">
-            <SuccessCheck size={48} className="shrink-0 -my-1" />
-            <span className="flex flex-col">
-              <span className="text-md font-semibold text-ok">Teşekkürler!</span>
-              <span className="text-base text-ink-2">{successMessage}</span>
-            </span>
-          </div>
+          <div role="status" className="ms-pop-in px-4 py-3 rounded-2xl bg-ok-soft text-ok text-base font-medium">Teşekkürler! {successMessage}</div>
         )}
       </form>
-
-      </div>
-
-      {/* Sağ sütun: bulunan kaynaklar, havuz durumu, kısayol */}
-      <aside className="flex flex-col gap-3 min-w-0 lg:pt-[52px]">
-        <section className="bg-white border border-line rounded-xl px-4 py-3" aria-live="polite">
-          <h2 className="m-0 mb-1 text-2xs font-semibold uppercase tracking-[.06em] text-ink-3">Bulunan kaynaklar</h2>
-          {sources.length === 0 ? (
-            <p className="m-0 py-2 text-sm text-ink-3">Yazmaya başlayınca soruna en yakın slayt, özet ve çıkmış sorular burada görünür.</p>
-          ) : (
-            <ul className="list-none m-0 p-0">
-              {sources.map((src, i) => {
-                const kind = SOURCE_KIND[src.documentType] || SOURCE_KIND.lecture_slide;
-                return (
-                  <li
-                    key={`${src.documentId}-${src.pageNumber ?? i}`}
-                    className="ms-pop-in flex items-center gap-2 py-2 border-t first:border-t-0 border-line text-sm"
-                    style={{ animationDelay: `${i * 60}ms` }}
-                    title={src.snippet}
-                  >
-                    <span className={`shrink-0 text-2xs font-semibold px-1.5 py-0.5 rounded-md ${kind.cls}`}>{kind.label}</span>
-                    <span className="min-w-0 flex-1 truncate text-ink">{src.title}</span>
-                    {src.pageNumber ? <span className="shrink-0 text-xs text-ink-3 font-mono">s.{src.pageNumber}</span> : null}
-                  </li>
-                );
-              })}
-            </ul>
-          )}
-        </section>
-      <a
-        href={pathFor('questions')}
-        onClick={linkClick(() => onNavigateTab('questions'))}
-        className="group bg-white border border-line rounded-xl px-4 py-3 flex items-center gap-3 hover:border-line-2"
-      >
-        <span className="flex-1 min-w-0 flex flex-col gap-1.5">
-          <span className="flex items-baseline gap-2 text-base min-w-0">
-            <span className="font-semibold text-ink shrink-0">{shortName} havuzu</span>
-            <span className="font-mono text-ink-2 shrink-0">
-              {completed}/{target}
-            </span>
-            <span className="text-ink-3 truncate">kuruldu · {drafts} taslak</span>
-          </span>
-          <span role="img" aria-label={`${completed} doğrulandı, ${drafts} taslak`} className="flex h-1.5 rounded-full overflow-hidden gap-[2px] bg-line-soft">
-            {completed > 0 && <span className="bg-ok-bright" style={{ width: `${pctNum(completed)}%` }} />}
-            {drafts > 0 && <span className="bg-warn" style={{ width: `${draftPct}%` }} />}
-          </span>
-        </span>
-        <span className="text-sm font-semibold text-accent inline-flex items-center gap-0.5 shrink-0">
-          Havuz
-          <ChevronRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
-        </span>
-      </a>
-        <p className="hidden lg:block m-0 px-1 text-xs text-ink-3">
-          Kısayol: <kbd className="font-mono border border-line rounded px-1">Ctrl</kbd> + <kbd className="font-mono border border-line rounded px-1">Enter</kbd> gönderir.
-        </p>
-      </aside>
 
       {optimizingQuestion && (
         <AiQuestionOptimizerModal

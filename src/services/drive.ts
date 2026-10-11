@@ -187,7 +187,6 @@ export async function generateBookletPdfBlob(
   const INK3: RGB = [120, 132, 146];
   const LINE: RGB = [226, 231, 236];
   const ACCENT: RGB = [30, 79, 216];
-  const ACCENT_SOFT: RGB = [232, 238, 253];
   const OK: RGB = [21, 122, 62];
   const OK_SOFT: RGB = [236, 248, 241];
   const CANVAS: RGB = [246, 247, 249];

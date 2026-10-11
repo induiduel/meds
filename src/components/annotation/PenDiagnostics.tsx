@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 /**
  * Kalem tanılama paneli: cihazın gerçekte hangi değerleri bildirdiğini gösterir.

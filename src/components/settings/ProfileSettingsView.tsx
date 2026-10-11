@@ -9,7 +9,6 @@ import {
   Check,
   CheckCircle2,
   Database,
-  History,
   LogIn,
   LogOut,
   Moon,
@@ -31,12 +30,10 @@ import {
   MODE_LABELS,
   PALETTE_INFO,
   type Density,
-  type Palette,
   type ThemeMode,
   useAppearance,
 } from '../../utils/appearance';
 import { palettesFor } from '../../utils/palettes';
-import { useUiVersion } from '../../utils/uiVersion';
 import { AvatarCropper } from '../ui/AvatarCropper';
 import { Row, Section, Segmented, Switch } from '../ui/kit';
 import { toast } from '../ui/Toast';
@@ -57,7 +54,6 @@ const SECTIONS = [
   { id: 'gorunum', label: 'Tema ve palet', icon: PaletteIcon },
   { id: 'yogunluk', label: 'Yoğunluk', icon: Rows3 },
   { id: 'calisma', label: 'Çalışma', icon: Crosshair },
-  { id: 'surum', label: 'Arayüz sürümü', icon: History },
   { id: 'hesap', label: 'Hesap ve veri', icon: ShieldCheck },
 ] as const;
 
@@ -70,12 +66,11 @@ const initialsOf = (u: AppUser | null) => {
 };
 
 /**
- * Profil ve Ayarlar tek sayfada (/ayarlar, /profil): kimlik, görünüm (tema × palet), yoğunluk, klasik tasarım, hesap.
+ * Profil ve Ayarlar tek sayfada (/ayarlar, /profil): kimlik, görünüm (tema × palet), yoğunluk, hesap.
  * Görünüm ayarları girişsiz de çalışır; profil bölümü girişte açılır.
  */
 export const ProfileSettingsView: React.FC<Props> = ({ currentUser, isAdmin, questions, onUpdateUser, onOpenAuth, onLogout, onOpenAdmin, onOpenOffline }) => {
   const look = useAppearance();
-  const { ui, setUi } = useUiVersion();
   const [active, setActive] = useState<string>('profil');
   const [autoReveal, setAutoReveal] = useState(autoRevealEnabled);
 
@@ -200,22 +195,6 @@ export const ProfileSettingsView: React.FC<Props> = ({ currentUser, isAdmin, que
                 title="Açıklamaya otomatik kaydır"
                 sub={autoReveal ? 'Açık' : 'Kapalı'}
                 end={<Switch label="Açıklamaya otomatik kaydır" checked={autoReveal} onChange={(on) => { setAutoReveal(on); setAutoRevealEnabled(on); }} />}
-              />
-            </div>
-          </Section>
-
-          <Section
-            id="surum"
-            title="Arayüz sürümü"
-            foot="Klasik tasarım eski arayüzü olduğu gibi açar; tema paletleri ve yoğunluk yalnız yeni tasarımda geçerlidir. İstediğin an geri dönebilirsin."
-          >
-            <div className="ui-group">
-              <Row
-                icon={History}
-                iconBg="#8E8E93"
-                title="Klasik tasarıma dön"
-                sub={ui === 'v2' ? 'Eski tasarım açık' : 'Yeni tasarım açık'}
-                end={<Switch label="Klasik tasarım" checked={ui === 'v2'} onChange={(on) => setUi(on ? 'v2' : 'v7')} />}
               />
             </div>
           </Section>

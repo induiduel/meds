@@ -1,13 +1,10 @@
 import React from 'react';
-import { 
-  X, 
-  History, 
-  Calendar, 
-  User, 
-  Hash, 
-  CheckCircle2, 
-  ArrowRight,
-  BookOpen
+import {
+  X,
+  History,
+  Calendar,
+  User,
+  CheckCircle2,
 } from 'lucide-react';
 import { QuestionItem } from '../types';
 

@@ -35,7 +35,6 @@ PY = str(ROOT / ".venv-ocr" / "bin" / "python") if (ROOT / ".venv-ocr" / "bin" /
 AI = ROOT / "scripts" / "advanced_ai"
 AGENTS = ROOT / "scripts" / "agents"
 
-MAX_TEMP = int(os.environ.get("MEDS_PHASE_MAX_TEMP", "89"))
 PAUSE_BETWEEN_CYCLES = int(os.environ.get("MEDS_PHASE_PAUSE_SEC", str(20 * 60)))
 
 # (anahtar, ad, komut, zaman aşımı sn)
@@ -77,26 +76,6 @@ def log(msg: str):
     LOG.parent.mkdir(parents=True, exist_ok=True)
     with open(LOG, "a", encoding="utf-8") as f:
         f.write(line + "\n")
-
-
-def gpu_temp() -> int | None:
-    try:
-        r = subprocess.run(["nvidia-smi", "--query-gpu=temperature.gpu", "--format=csv,noheader,nounits"],
-                           capture_output=True, text=True, timeout=5)
-        return int(r.stdout.strip().splitlines()[0])
-    except Exception:
-        return None
-
-
-def wait_cool():
-    t = gpu_temp()
-    waited = 0
-    while t is not None and t >= MAX_TEMP and waited < 1800:
-        if waited == 0:
-            log(f"GPU {t} °C ≥ {MAX_TEMP} °C — soğuması bekleniyor")
-        time.sleep(30)
-        waited += 30
-        t = gpu_temp()
 
 
 def pop_queue() -> str | None:
@@ -194,45 +173,16 @@ def save_state(state: dict):
     json.dump(state, open(STATE, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
 
 
-# GPU'yu tek başına kullanabilecek adımlar: başlamadan önce Ollama modeli GPU belleğinden boşaltılır (aynı anda iki CUDA
-# işi 2026-10-06'da "GPU fallen off the bus" hatasına yol açtı). GPU koruyucu (meds-gpuguard) bu adımları da izler.
-# 2026-10-06 16:5x: Ollama boşaltılmış, GPU'da TEK BAŞINA çalışan PyTorch işi (learn_links, e5/cross-encoder) yine
-# "GPU fallen off the bus" (Xid 79) verdi → sorun eşzamanlılık değil, bu kartta PyTorch CUDA işi. PyTorch adımları CPU'da.
-GPU_STEPS: set = set()
-OLLAMA = os.environ.get("OLLAMA_URL") or "http://127.0.0.1:11434"
-
-
-def unload_ollama() -> bool:
-    import urllib.request
-    try:
-        ps = json.loads(urllib.request.urlopen(f"{OLLAMA}/api/ps", timeout=10).read()).get("models") or []
-        for m in ps:
-            body = json.dumps({"model": m.get("name"), "keep_alive": 0}).encode()
-            urllib.request.urlopen(urllib.request.Request(f"{OLLAMA}/api/generate", data=body,
-                                                          headers={"Content-Type": "application/json"}), timeout=60).read()
-        time.sleep(3)
-        apps = subprocess.run(["nvidia-smi", "--query-compute-apps=pid", "--format=csv,noheader"], capture_output=True, text=True, timeout=10)
-        return apps.returncode == 0 and not apps.stdout.strip()
-    except Exception:
-        return False
+# Yerel GPU YASAK (2026-10-11): tüm adımlar CPU'da (CUDA_VISIBLE_DEVICES=""), Ollama kullanılmaz.
 
 
 def run_step(key: str, name: str, cmd: list[str], timeout: int) -> dict:
-    wait_cool()
-    gpu_free = False
-    if key in GPU_STEPS and gpu_temp() is not None:
-        gpu_free = unload_ollama()
-        log(f"  GPU {'boş — adım GPU kullanacak' if gpu_free else 'boşaltılamadı — adım CPU kullanacak'}")
     log(f"▶ {name}")
     t0 = time.time()
     out_path = TEMP / "logs" / f"phase_cycle_{key}.log"
     with open(out_path, "w", encoding="utf-8") as out:
         try:
-            env = {**os.environ, "PYTHONUNBUFFERED": "1"}
-            if key in GPU_STEPS:
-                env.update({"MEDS_FAZ11_DEVICE": "auto" if gpu_free else "cpu", "MEDS_GPU_OK": "1" if gpu_free else "0"})
-                if not gpu_free:
-                    env["CUDA_VISIBLE_DEVICES"] = ""
+            env = {**os.environ, "PYTHONUNBUFFERED": "1", "CUDA_VISIBLE_DEVICES": "", "MEDS_FAZ11_DEVICE": "cpu", "MEDS_GPU_OK": "0"}
             p = subprocess.Popen(cmd, env=env, cwd=str(ROOT), stdout=out, stderr=subprocess.STDOUT, start_new_session=True)
             rc = p.wait(timeout=timeout)
         except subprocess.TimeoutExpired:

@@ -7,7 +7,7 @@
 
 import { QuestionItem, MemoryFragment, QuestionOption, QuestionRevision, AlternativeOption } from '../types';
 import { GoogleGenAI } from '@google/genai';
-import { areWordsFuzzyEqual, damerauLevenshtein, foldTurkish, toContextHashtag } from '../utils/fuzzyMatching.ts';
+import { areWordsFuzzyEqual, toContextHashtag } from '../utils/fuzzyMatching.ts';
 
 // ==========================================
 // TİPLER VE VERİ YAPILARI

@@ -16,7 +16,6 @@ const SRC_PAST_QUESTIONS_FILE = path.resolve(SRC_DATA_DIR, 'pastQuestions.json')
 
 const DECKS_FILE = path.resolve(SRC_DATA_DIR, 'interactive_learning_decks.json');
 const DECK_ITEMS_DIR = path.resolve(SRC_DATA_DIR, 'decks', 'items');
-const PACKAGES_DIR = path.resolve(REPO_ROOT, 'packages');
 
 const SUMMARIES_CATALOG_FILE = path.resolve(SRC_DATA_DIR, 'lectureSummariesCatalog.json');
 const DATA_SUMMARIES_CATALOG_FILE = path.resolve(DATA_DIR, 'lectureSummariesCatalog.json');
@@ -711,11 +710,7 @@ export function ingestInteractiveDeck(payload: any): IngestionResult {
   const itemPath = path.resolve(DECK_ITEMS_DIR, `${deckId}.json`);
   writeJsonAtomic(itemPath, formattedDeck);
 
-  // Also save to packages/ if exists
-  const pkgPath = path.resolve(PACKAGES_DIR, deckId, `${deckId}.json`);
-  if (fs.existsSync(path.dirname(pkgPath))) {
-    writeJsonAtomic(pkgPath, formattedDeck);
-  }
+  // Dışa aktarım paketleri `npm run decks:packages` ile kaynaktan üretilir.
 
   return {
     success: true,

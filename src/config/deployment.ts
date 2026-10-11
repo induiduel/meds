@@ -2,7 +2,7 @@
  * deployment.ts — tek yerden dağıtım adresleri.
  *
  * - Cihazda (localhost): getCustomApiUrl() boş döner, aynı-köken /api kullanılır.
- * - Canlıda (nofrostlife.com.tr / github.io): kullanıcı özel URL girmediyse
+ * - Canlıda (nofrostlife.com.tr): kullanıcı özel URL girmediyse
  *   Oracle üzerindeki Named Tunnel adresine düşülür.
  * - Build sırasında VITE_ORACLE_API_URL verilirse o ezberlenir, yoksa
  *   aşağıdaki varsayılan kullanılır.
@@ -11,7 +11,7 @@ export const ORACLE_API_URL: string =
   ((import.meta as any)?.env?.VITE_ORACLE_API_URL as string) ||
   'https://api.nofrostlife.com.tr';
 
-const PROD_HOST_SUFFIX = ['nofrostlife.com.tr', 'github.io', 'pages.dev'];
+const PROD_HOST_SUFFIX = ['nofrostlife.com.tr'];
 
 export function isProductionHost(): boolean {
   if (typeof window === 'undefined') return false;

@@ -2,22 +2,13 @@ import React, { useState, useEffect, useMemo } from 'react';
 import { PageHeader } from './ui/PageHeader';
 import {
   Mic,
-  Headphones,
   Search,
-  Filter,
   FileText,
   Clock,
-  BookOpen,
   Sparkles,
   Copy,
   Check,
   ChevronRight,
-  ExternalLink,
-  Volume2,
-  Calendar,
-  Layers,
-  GraduationCap,
-  MessageSquare
 } from 'lucide-react';
 
 export interface TranscriptionMeta {

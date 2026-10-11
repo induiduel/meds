@@ -381,7 +381,7 @@ app.use(compression({ threshold: 1024 }));
 app.use(express.json({ limit: '100mb' }));
 app.use(express.urlencoded({ extended: true, limit: '100mb' }));
 
-// Enable CORS for all origins (supports GitHub Pages and tunnel access)
+// Enable CORS for all origins (canlı alan adı ve tünel erişimi)
 app.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', '*');
   res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS, PATCH');
@@ -3884,7 +3884,7 @@ export async function executeAdminCommand(command: string, payload: any = {}, re
   return { success: true, message: `Komut (${command}) yerel sunucuda başarıyla kaydedildi.` };
 }
 
-// Poller that checks Supabase system_status for pending commands sent from GitHub Pages / Mobile
+// Poller that checks Supabase system_status for pending commands sent from the web / mobile
 function startSupabaseCommandPoller() {
   console.log('📡 [Supabase Bridge] Bulut komut kuyruğu dinleyicisi başlatıldı.');
   setInterval(async () => {

@@ -1,27 +1,17 @@
 import React, { useState } from 'react';
-import { 
-  X, 
-  Sparkles, 
-  Upload, 
-  FileText, 
-  CheckCircle2, 
-  AlertCircle, 
-  Layers, 
-  Trash2, 
-  Edit3, 
-  Plus, 
+import {
+  X,
+  Sparkles,
+  Upload,
+  FileText,
+  CheckCircle2,
+  AlertCircle,
+  Trash2,
   RefreshCw,
-  FolderPlus,
-  BookOpen,
-  Calendar,
-  Check,
-  ChevronDown,
-  Info,
   Cloud,
-  Database,
-  Table
+  Table,
 } from 'lucide-react';
-import { Committee, QuestionItem } from '../types';
+import { Committee } from '../types';
 import { ApiService } from '../services/api';
 import { InfoPopover } from './InfoPopover';
 import { DONEM3_CURRICULUM_DISCIPLINES } from '../data/curriculumData';

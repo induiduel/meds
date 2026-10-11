@@ -21,7 +21,7 @@ import {
   FOLDER_NAME,
   ThresholdStatus 
 } from '../services/drive';
-import { AppUser, FIREBASE_CONSOLE_URL, setCustomAccessToken } from '../services/auth';
+import { AppUser, setCustomAccessToken } from '../services/auth';
 
 interface DriveSaveModalProps {
   isOpen: boolean;
@@ -81,7 +81,7 @@ export const DriveSaveModal: React.FC<DriveSaveModalProps> = ({
         return;
       } catch (e: any) {
         setUploadError(
-          'Google oturumu açılamadı. GitHub Pages için Firebase Console yetkili alan adlarına induiduel.github.io eklenmelidir.'
+          'Google oturumu açılamadı. Canlı alan adı için Firebase Console yetkili alan adlarına nofrostlife.com.tr eklenmelidir.'
         );
         return;
       }
@@ -288,7 +288,7 @@ export const DriveSaveModal: React.FC<DriveSaveModalProps> = ({
                 <p className="text-2xs text-warn bg-warn-soft p-2 rounded border border-warn/30 flex items-start gap-1.5">
                   <ShieldAlert className="w-3.5 h-3.5 text-warn shrink-0 mt-0.5" />
                   <span>
-                    GitHub Pages üzerinden Google Drive'a doğrudan yükleyebilmek için Firebase Console'da <strong>induiduel.github.io</strong> alan adının ekli olması gerekir.
+                    Google Drive'a doğrudan yükleyebilmek için Firebase Console'da <strong>nofrostlife.com.tr</strong> alan adının ekli olması gerekir.
                   </span>
                 </p>
               </div>

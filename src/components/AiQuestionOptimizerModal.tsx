@@ -6,26 +6,14 @@ import {
   AlertTriangle,
   BookOpen,
   FileText,
-  Send,
   RefreshCw,
   Sliders,
   Check,
-  GraduationCap,
   Layers,
-  Cpu,
   BookMarked,
-  ExternalLink,
-  Brain,
-  Wand2,
-  Edit3,
   Lightbulb,
-  Search,
-  MessageSquare,
-  ThumbsUp,
-  HelpCircle,
-  ArrowRight
 } from 'lucide-react';
-import { QuestionItem, ReconstructedQuestion, LectureNote } from '../types';
+import { QuestionItem } from '../types';
 import { ApiService } from '../services/api';
 import { AppUser } from '../services/auth';
 import { AiQuotaAlertModal } from './AiQuotaAlertModal';

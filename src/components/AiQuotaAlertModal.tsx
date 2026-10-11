@@ -6,10 +6,9 @@ import {
   Key,
   Zap,
   ExternalLink,
-  Check,
   X,
   RefreshCw,
-  Cpu
+  Cpu,
 } from 'lucide-react';
 
 interface AiQuotaAlertModalProps {

@@ -8,10 +8,7 @@ import { filterCurrent2026_2027Committees } from '../../services/firestoreDb';
 import { SolveView } from './SolveView';
 import { SelfTestView } from './SelfTestView';
 import { NotesView } from './NotesView';
-import { NotesViewClassic } from './NotesViewClassic';
-import { useUiVersion } from '../../utils/uiVersion';
 import { Segmented as Seg } from '../ui/kit';
-import { btnSecondary } from './StudyUI';
 
 export type StudySection = 'solve' | 'test' | 'notes' | 'lists';
 
@@ -43,7 +40,6 @@ export const StudyHub: React.FC<StudyHubProps> = ({
   const [loading, setLoading] = useState(true);
   const [tick, setTick] = useState(0);
   const [quickNonce, setQuickNonce] = useState(0);
-  const { isV7 } = useUiVersion();
 
   // Strict 2026-2027 committees
   const cleanCommittees = useMemo(() => filterCurrent2026_2027Committees(committees), [committees]);
@@ -117,12 +113,10 @@ export const StudyHub: React.FC<StudyHubProps> = ({
         ]}
       />
 
-      {isV7 ? (
-        <>
           {/* v8: özet satırı + kayan sekmeler; hızlı test her zaman görünür */}
           {/* Özet tek satır olarak başlıkta; ayrı dört kutulu KPI şeridi aynı bilgiyi tekrarlıyordu. */}
           <div className="cx-dock st-dock">
-            <div className="st-row">
+            <div className="st-dock-row">
               <Seg<StudySection>
                 className="st-tabs"
                 label="Çalışma bölümleri"
@@ -147,44 +141,6 @@ export const StudyHub: React.FC<StudyHubProps> = ({
               </button>
             </div>
           </div>
-        </>
-      ) : (
-      <div className="flex items-center gap-2 min-w-0">
-        <div role="tablist" aria-label="Çalışma bölümleri" className="ms-f-seg flex-1 sm:flex-none">
-          {tabs.map((t) => {
-            const on = section === t.id;
-            const Icon = t.icon;
-            return (
-              <button
-                key={t.id}
-                type="button"
-                role="tab"
-                id={`study-tab-${t.id}`}
-                aria-selected={on}
-                aria-controls={`study-panel-${t.id}`}
-                onClick={() => setSection(t.id)}
-                className={`inline-flex items-center justify-center gap-1.5 ${on ? 'is-on' : ''}`}
-              >
-                <Icon className="w-4 h-4 shrink-0" strokeWidth={on ? 2.3 : 2} />
-                <span className="hidden min-[420px]:inline">{t.label}</span>
-                {t.count ? <span className="text-xs text-ink-3">{t.count}</span> : null}
-              </button>
-            );
-          })}
-        </div>
-        <span className="hidden sm:block flex-1" />
-        <button
-          type="button"
-          onClick={startQuick}
-          disabled={bank.length === 0}
-          className="h-10 px-4 rounded-full bg-accent hover:bg-accent-hover text-white text-base font-semibold inline-flex items-center gap-1.5 cursor-pointer disabled:opacity-50 shrink-0"
-          title="Karışık 20 soruluk hızlı test"
-        >
-          <Zap className="w-4 h-4" /> <span className="hidden sm:inline">Hızlı test</span>
-        </button>
-      </div>
-
-      )}
 
       <div role="tabpanel" id={`study-panel-${section}`} aria-labelledby={`study-tab-${section}`}>
         {section === 'solve' && (
@@ -207,7 +163,7 @@ export const StudyHub: React.FC<StudyHubProps> = ({
           />
         )}
         {section === 'lists' && <ListsView bank={bank} onChange={bump} />}
-        {section === 'notes' && (isV7 ? <NotesView disciplines={disciplines} /> : <NotesViewClassic disciplines={disciplines} />)}
+        {section === 'notes' && <NotesView disciplines={disciplines} />}
       </div>
     </div>
   );

@@ -1,6 +1,5 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import { Sheet } from '../ui/Sheet';
-import { useUiVersion } from '../../utils/uiVersion';
 import { PageHeader } from '../ui/PageHeader';
 import { EmptySearch } from '../ui/Animations';
 import {
@@ -20,12 +19,8 @@ import {
   LayoutGrid,
   List as ListIcon,
   Bug,
-  ArrowRight,
-  ExternalLink,
-  CheckCircle2,
   RefreshCw,
   X,
-  ChevronRight,
   Bookmark,
   Share2,
   Stethoscope,
@@ -34,7 +29,6 @@ import {
   BrainCircuit,
   HelpCircle,
   Hash,
-  Copy,
   AlertCircle,
   Send,
 } from 'lucide-react';
@@ -195,7 +189,6 @@ export const MedicalEncyclopediaView: React.FC<MedicalEncyclopediaViewProps> = (
   const [sortMode, setSortMode] = useState<'default' | 'az' | 'za' | 'kurul'>('default');
 
   // Detail Modal State
-  const { isV7 } = useUiVersion();
   const [activeEntry, setActiveEntry] = useState<EncyclopediaEntry | null>(() => {
     if (initialTermId) {
       return ((rawEncyclopediaData as EncyclopediaEntry[]) || []).find((e) => e.id === initialTermId) || null;
@@ -519,7 +512,7 @@ Lütfen bu kavramı fakülte sınavları ve TUS açısından en yüksek verimle 
   };
 
   const detailPanel = activeEntry ? (
-          <div className={wide || isV7 ? 'gx-pane flex flex-col overflow-hidden' : 'ds-modal w-full max-w-[720px] flex flex-col max-h-[92dvh] overflow-hidden'}>
+          <div className={true ? 'gx-pane flex flex-col overflow-hidden' : 'ds-modal w-full max-w-[720px] flex flex-col max-h-[92dvh] overflow-hidden'}>
             {/* Modal Header */}
             <div className="ds-modal-head">
               <div className="min-w-0 flex-1">
@@ -1014,12 +1007,12 @@ Lütfen bu kavramı fakülte sınavları ve TUS açısından en yüksek verimle 
       {/* ========================================================= */}
       {/* DETAYLI ANSİKLOPEDİ MODAL / SLIDE-OVER                    */}
       {/* ========================================================= */}
-      {(!wide || view === 'grid') && isV7 && (
+      {(!wide || view === 'grid') && (
         <Sheet open={!!activeEntry && (view === 'list' || gridSheet)} onClose={() => { setActiveEntry(null); setGridSheet(false); }} label={activeEntry?.term || 'Madde'} size="full" width={720} bare>
           {detailPanel}
         </Sheet>
       )}
-      {activeEntry && !wide && !isV7 && (
+      {false && (
         <div
           className="ms-overlay ds-modal-wrap fixed inset-0 z-[70] flex items-end sm:items-center justify-center sm:p-4"
           role="dialog"

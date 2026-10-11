@@ -4,7 +4,7 @@
  * son açılma zamanı burada `medsoru_learn_recent_v1` içinde tutulur.
  */
 import React, { useEffect, useMemo, useRef, useState } from 'react';
-import { ArrowRight, BookOpen, Check, FileText, HelpCircle, Layers, Lock, Play, Search, X } from 'lucide-react';
+import { ArrowRight, Check, FileText, Lock, Play, Search, X } from 'lucide-react';
 import { deckName, type DeckCatalogEntry } from '../../data/deckStore';
 import { getDeckOriginalPdf } from '../../data/deckPdfCatalog';
 import { disciplineClass } from '../../utils/discipline';

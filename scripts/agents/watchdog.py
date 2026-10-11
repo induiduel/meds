@@ -1,16 +1,7 @@
 #!/usr/bin/env python3
 """
-MedSoru Watchdog & Otonom Donanım Denetleyicisi (Autonomous Hardware Supervisor)
-Sürekli arka planda çalışarak sistemi denetler:
-1. GPU ve VRAM Kontrolü:
-   - GPU'ya sadece 3 katman (-ngl 3) yüklenmiş ve CPU'ya taşmış asılı süreçleri yakalar, anında temizler.
-   - VRAM kullanımını ve sıcaklığını takip eder.
-2. Kod / Süreç Tazelik Denetimi:
-   - Kaynak kodlar (stage2, stage3, lib.py) güncellendiğinde, eski kodla çalışan bayat süreçleri tespit eder ve güvenle yeniden başlatır.
-3. Donanım & Kilitlenme Kurtarma:
-   - GPU uykuya geçerse veya Ollama 500/timeout verirse otomatik meds-gpu-recovery tetikler.
-4. Zombi & Kaçak Süreç Temizliği:
-   - İşlevi bitmiş ama VRAM'i bloke eden llama-server veya python süreçlerini otomatik tahliye eder.
+MedSoru Watchdog: pipeline_runner, dashboard (8085) ve web sunucusunun (3000) canlılığını, ajan kodu değişince
+bayat süreçleri ve sistem belleğini denetler. Yerel GPU/Ollama denetimi yok (2026-10-11: yerel GPU yasak).
 """
 import time
 import os
@@ -59,20 +50,6 @@ def get_process_start_time(pid: int) -> float:
     except Exception:
         return 0.0
 
-def inspect_gpu_processes():
-    """Ollama ve llama-server süreçlerini denetler, -ngl 3 gibi anomalileri temizler"""
-    try:
-        # ps aux ile llama-server süreçlerini tara
-        res = subprocess.run(["ps", "-eo", "pid,cmd"], capture_output=True, text=True)
-        for line in res.stdout.splitlines():
-            if "llama-server" in line and "-ngl 3" in line:
-                pid = int(line.strip().split()[0])
-                log(f"KRİTİK UYARI: PID {pid} '-ngl 3' ile CPU'ya taşmış olarak tespit edildi! Süreç sonlandırılıyor...")
-                subprocess.run(["kill", "-9", str(pid)], capture_output=True)
-                log(f"PID {pid} temizlendi. Model sonraki çağrıda '-ngl 99' ile tam GPU'da başlayacak.")
-    except Exception as e:
-        log(f"GPU süreç denetleme hatası: {e}")
-
 def inspect_pipeline_freshness(last_code_mtime: float):
     """Kod değiştiği halde eski kodla çalışan stage süreçlerini yakalar"""
     try:
@@ -86,17 +63,6 @@ def inspect_pipeline_freshness(last_code_mtime: float):
                 subprocess.run(["kill", "-9", str(pid)], capture_output=True)
     except Exception as e:
         log(f"Pipeline tazelik denetleme hatası: {e}")
-
-def check_ollama_health():
-    """Ollama servisinin canlılığını ve yanıt süresini kontrol eder"""
-    try:
-        r = requests.get("http://127.0.0.1:11434/api/tags", timeout=6)
-        if not r.ok:
-            raise RuntimeError(f"HTTP {r.status_code}")
-    except Exception as e:
-        log(f"Ollama yanıt vermiyor ({e}). Servis bekleniyor...")
-        time.sleep(5)
-
 
 def systemd_user_active(unit: str) -> bool:
     """systemd --user servisi etkin/çalışıyor mu (servis varsa yeniden başlatmayı systemd'ye bırak)."""
@@ -141,20 +107,6 @@ def check_pipeline_runner_alive():
         ]
         subprocess.Popen(cmd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, start_new_session=True)
         log("pipeline_runner.py arka planda güvenle başlatıldı ✓")
-
-def check_docker_containers():
-    """Tüm kritik Docker konteynerlerini denetler (meds-ollama, open-webui vb.)"""
-    env = os.environ.copy()
-    env["DOCKER_HOST"] = "unix:///var/run/docker.sock"
-    for cname in ["meds-ollama", "open-webui"]:
-        try:
-            res = subprocess.run(["docker", "inspect", "-f", "{{.State.Running}}", cname], env=env, capture_output=True, text=True)
-            if "true" not in res.stdout.lower():
-                log(f"UYARI: Konteyner '{cname}' durmuş! Otomatik olarak yeniden başlatılıyor...")
-                subprocess.run(["docker", "start", cname], env=env, capture_output=True)
-                log(f"Konteyner '{cname}' ayağa kaldırıldı ✓")
-        except Exception as e:
-            pass
 
 def check_supabase_health():
     """Supabase yerel veritabanı ve REST servislerinin canlılığını denetler"""
@@ -247,47 +199,6 @@ def check_system_resources():
         pass
 
 
-def enforce_gpu_thermal_and_load_limits(max_util: int = 90, max_temp: int = 90):
-    """GPU %90 üzeri yük veya 90°C üzeri sıcaklığa ulaşırsa boru hattını dinlendirir."""
-    try:
-        res = subprocess.run(
-            ["nvidia-smi", "--query-gpu=utilization.gpu,temperature.gpu", "--format=csv,noheader,nounits"],
-            capture_output=True, text=True, timeout=2
-        )
-        if res.returncode == 0 and res.stdout.strip():
-            parts = res.stdout.strip().split(",")
-            util = int(parts[0].strip())
-            temp = int(parts[1].strip())
-            if temp >= max_temp or util > max_util:
-                log(f"GÜVENLİK FRENİ: GPU Yükü: %{util} (Limit: %{max_util}), Sıcaklık: {temp}°C (Limit: {max_temp}°C). Model 5 sn dinlendiriliyor...")
-                time.sleep(5)
-    except Exception:
-        pass
-
-
-lora_was_running = False
-
-def check_post_lora_training_trigger():
-    """QLoRA eğitimi sonlandığı an otomatik veri denetleme ve iyileştirme motorunu devreye alır."""
-    global lora_was_running
-    res = subprocess.run(["pgrep", "-f", "train_lora.py"], capture_output=True, text=True)
-    is_currently_running = bool(res.stdout.strip())
-
-    if is_currently_running:
-        lora_was_running = True
-        return
-
-    # Eğer daha önce çalışıyordu ve şimdi kapandıysa -> Eğitim BİTTİ
-    if lora_was_running and not is_currently_running:
-        lora_was_running = False
-        log("🎉 [OTOMASYON] QLoRA eğitimi tamamlandı! Veri denetleme ve iyileştirme motoru (post_lora_auto_refiner.py) devreye alınıyor...")
-        refiner_script = SCRIPTS_DIR / "agents" / "post_lora_auto_refiner.py"
-        if refiner_script.exists():
-            py_bin = sys.executable
-            cmd = [py_bin, str(refiner_script), "--sync-supabase"]
-            subprocess.Popen(cmd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, start_new_session=True)
-            log("post_lora_auto_refiner.py arka planda otomatik olarak başlatıldı ✓")
-
 def main():
     log("MedSoru Gelişmiş Otonom Sistem & Docker Watchdog Başlatıldı.")
     last_known_code_mtime = get_code_mtime()
@@ -300,14 +211,8 @@ def main():
                 inspect_pipeline_freshness(current_code_mtime)
                 last_known_code_mtime = current_code_mtime
 
-            # 1. Hatalı katman (-ngl 3) kullanan llama-server'ları denetle
-            inspect_gpu_processes()
-
-            # 2. Ollama ve GPU sağlığını denetle
-            check_ollama_health()
-
-            # 3. Docker konteynerlerini denetle
-            check_docker_containers()
+            # 1–3. GPU/Ollama/Docker (meds-ollama, open-webui) denetimleri KALDIRILDI (2026-10-11): yerel GPU yasak,
+            #      Ollama kapatıldı. Bu konteynerleri yeniden başlatmak GPU'yu geri açardı.
 
             # 4. Pipeline koşucusunun canlılığını sağla
             check_pipeline_runner_alive()
@@ -327,7 +232,6 @@ def main():
             # 8–9. Otomatik faz geçişleri KAPALI (2026-10-07, kullanıcı isteği): watchdog hiçbir fazı/betiği kendiliğinden
             # başlatmaz (eskiden Faz 5 → 6 → 7.5 sırası ve LoRA sonrası iyileştirici). Fazlar yalnız panelden başlatılır.
             if os.environ.get("MEDS_PHASE_AUTO") == "1":
-                check_post_lora_training_trigger()
                 check_phase5_and_phase6_workers()
 
         except Exception as e:

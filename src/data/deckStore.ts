@@ -84,8 +84,10 @@ function apiBase(): string {
 /** Sunucudan tek deste (derlenmiş parça eksikse yedek yol; ?format=json ham JSON döndürür). */
 async function loadFromApi<T>(id: string): Promise<T | null> {
   try {
+    // Zayıf bağlantıda sonsuza dek beklemesin: 20 sn sonra IndexedDB yedeğine düşülür
     const res = await fetch(`${apiBase()}/api/decks/${encodeURIComponent(id)}?format=json`, {
       headers: { Accept: 'application/json' },
+      signal: typeof AbortSignal !== 'undefined' && 'timeout' in AbortSignal ? AbortSignal.timeout(20000) : undefined,
     });
     if (!res.ok) return null;
     const data = await res.json();
@@ -117,6 +119,8 @@ export function loadDeck<T = any>(id: string): Promise<T | null> {
       return await loadFromIndexedDb(id);
     })();
     cache.set(id, p);
+    // Başarısız yükleme önbellekte kalmasın: bağlantı dönünce aynı deste yeniden denenebilsin
+    p.then((v) => { if (!v) cache.delete(id); }, () => cache.delete(id));
   }
   return p as Promise<T | null>;
 }

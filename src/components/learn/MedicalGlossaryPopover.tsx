@@ -8,7 +8,6 @@ import {
   Sparkles,
   ExternalLink,
   ChevronRight,
-  Filter,
 } from 'lucide-react';
 import { GLOSSARY } from '../../data/glossary';
 

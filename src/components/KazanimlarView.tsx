@@ -1,29 +1,19 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { PageHeader } from './ui/PageHeader';
-import { 
-  Compass, 
-  Search, 
-  BookOpen, 
-  Presentation, 
-  CheckCircle2, 
-  Archive, 
-  Layers, 
-  BookOpenText, 
-  ChevronDown, 
-  ChevronRight, 
+import {
+  Compass,
+  Search,
+  Presentation,
+  Archive,
+  BookOpenText,
+  ChevronDown,
   ExternalLink,
   GraduationCap,
   Sparkles,
   Target,
-  FileText,
-  Filter,
-  Check,
-  X
+  X,
 } from 'lucide-react';
 import { SectionLoader } from './ui/Animations';
-import { StemText } from './ui/StemText';
-import { SourceText } from './ui/SourceText';
-import { pathFor } from '../router';
 import { disciplineClass } from '../utils/discipline';
 
 interface KazanimItem {

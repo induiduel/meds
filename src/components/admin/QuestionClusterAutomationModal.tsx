@@ -1,13 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import {
   Sparkles,
-  Layers,
-  CheckCircle2,
-  AlertTriangle,
   Send,
   RefreshCw,
   X,
-  Plus,
   Lock,
   ChevronDown,
   ChevronUp,

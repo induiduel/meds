@@ -2,7 +2,6 @@ import React from 'react';
 import { SourceText } from '../ui/SourceText';
 import { parseExplanation } from '../QuestionCard';
 import { OptionKey, StudyQuestion } from '../../services/studyStore';
-import { useUiVersion } from '../../utils/uiVersion';
 
 /** Segmented control (single choice). */
 export function Segmented<T extends string | number>({
@@ -64,40 +63,8 @@ export const OptionButton: React.FC<{
   disabled?: boolean;
   tag?: string;
 }> = ({ opt, state, onClick, disabled, tag }) => {
-  const { isV7 } = useUiVersion();
-  if (isV7) {
-    // v8: ortak şık durumları (.tm-opt) — doğru yaylanır, yanlış sarsılır, kalanlar soluklaşır
-    const st = { idle: '', selected: 'is-selected', correct: 'is-correct', wrong: 'is-wrong', muted: 'is-dim' }[state];
-    return (
-      <button
-        type="button"
-        role="radio"
-        aria-checked={state === 'selected' || state === 'wrong' || (state === 'correct' && tag === 'Senin cevabın')}
-        onClick={onClick}
-        disabled={disabled}
-        className={`tm-opt w-full ${st}`}
-      >
-        <span className="tm-bubble" aria-hidden>{opt.key}</span>
-        <span className="flex-1 min-w-0 break-words">{opt.text}</span>
-        {tag && <span className={`tm-tag ${state === 'correct' ? 'is-ok' : state === 'wrong' ? 'is-bad' : ''}`}>{tag}</span>}
-      </button>
-    );
-  }
-  const box = {
-    idle: 'border border-line bg-white hover:border-line-2',
-    selected: 'border-[1.5px] border-accent bg-accent-soft',
-    correct: 'border-[1.5px] border-ok-bright bg-ok-tint',
-    wrong: 'border-[1.5px] border-bad bg-bad-soft',
-    muted: 'border border-line bg-white opacity-70',
-  }[state];
-  const key = {
-    idle: 'bg-canvas text-ink',
-    selected: 'bg-accent text-white',
-    correct: 'bg-ok text-white',
-    wrong: 'bg-bad text-white',
-    muted: 'bg-canvas text-ink-2',
-  }[state];
-  const tagCls = state === 'correct' ? 'text-ok' : state === 'wrong' ? 'text-bad-text' : 'text-accent';
+      // v8: ortak şık durumları (.tm-opt) — doğru yaylanır, yanlış sarsılır, kalanlar soluklaşır
+  const st = { idle: '', selected: 'is-selected', correct: 'is-correct', wrong: 'is-wrong', muted: 'is-dim' }[state];
   return (
     <button
       type="button"
@@ -105,13 +72,11 @@ export const OptionButton: React.FC<{
       aria-checked={state === 'selected' || state === 'wrong' || (state === 'correct' && tag === 'Senin cevabın')}
       onClick={onClick}
       disabled={disabled}
-      className={`w-full flex items-center gap-3 min-h-[48px] px-3 py-2 rounded-xl text-md leading-snug text-left transition-colors ${box} ${
-        disabled ? 'cursor-default' : 'cursor-pointer'
-      }`}
+      className={`tm-opt w-full ${st}`}
     >
-      <span className={`w-8 h-8 shrink-0 rounded-lg flex items-center justify-center font-mono text-sm ${key}`}>{opt.key}</span>
+      <span className="tm-bubble" aria-hidden>{opt.key}</span>
       <span className="flex-1 min-w-0 break-words">{opt.text}</span>
-      {tag && <span className={`text-xs font-semibold whitespace-nowrap ${tagCls}`}>{tag}</span>}
+      {tag && <span className={`tm-tag ${state === 'correct' ? 'is-ok' : state === 'wrong' ? 'is-bad' : ''}`}>{tag}</span>}
     </button>
   );
 };

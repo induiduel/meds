@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { PageHeader } from './ui/PageHeader';
-import { Printer, Download, Eye, EyeOff, FileText, CheckCircle2 } from 'lucide-react';
+import { Printer, Eye, EyeOff } from 'lucide-react';
 import { QuestionItem, Committee } from '../types';
 
 interface BookletViewProps {

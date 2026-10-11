@@ -9,27 +9,21 @@ import {
   Trash2,
   Edit3,
   GitCompare,
-  ArrowRight,
   Database,
   Layers,
   FileText,
   Search,
   RefreshCw,
-  AlertCircle,
-  Copy,
-  ExternalLink,
   ChevronRight,
   ChevronLeft,
   Eye,
   Code,
   AlertTriangle,
-  ArrowLeftRight,
-  Check,
   FolderOpen,
   X,
   Plus,
   Table,
-  GraduationCap
+  GraduationCap,
 } from 'lucide-react';
 import { toast } from '../ui/Toast';
 import { FlatfileDataOnboarding } from './FlatfileDataOnboarding';

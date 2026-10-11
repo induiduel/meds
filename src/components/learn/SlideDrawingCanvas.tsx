@@ -7,10 +7,7 @@ import {
   Undo2,
   Trash2,
   X,
-  Palette,
-  Minus,
   Check,
-  ChevronDown,
 } from 'lucide-react';
 import { toast } from '../ui/Toast';
 

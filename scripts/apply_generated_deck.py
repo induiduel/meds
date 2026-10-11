@@ -53,13 +53,9 @@ def apply_deck(deck):
             json.dump(catalog, f, ensure_ascii=False, indent=2)
         print(f"Updated {catalog_path}")
 
-    # 4. Update packages/<id>/deck.json
-    pkg_path = os.path.join(repo_root, f"packages/{deck_id}/deck.json")
-    if os.path.exists(os.path.dirname(pkg_path)):
-        with open(pkg_path, "w", encoding="utf-8") as f:
-            json.dump(deck, f, ensure_ascii=False, indent=2)
-        print(f"Updated {pkg_path}")
-        
+    # 4. Paketler tek kaynaktan yeniden üretilir (meds_export/deste_paketleri).
+    subprocess.run([sys.executable, os.path.join(os.path.dirname(os.path.abspath(__file__)), 'build_deck_packages.py')], check=False)
+
     print(f"Deck {deck_id} applied successfully!")
 
 if __name__ == '__main__':

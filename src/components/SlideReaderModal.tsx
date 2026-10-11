@@ -1,19 +1,18 @@
 import React, { useState } from 'react';
 import { SourceText } from './ui/SourceText';
-import { 
-  X, 
-  BookOpen, 
-  ExternalLink, 
-  ChevronLeft, 
-  ChevronRight, 
-  Layers, 
-  Search, 
-  Sparkles, 
-  Check, 
-  Copy, 
-  FileText,
+import {
+  X,
+  BookOpen,
+  ExternalLink,
+  ChevronLeft,
+  ChevronRight,
+  Layers,
+  Search,
+  Sparkles,
+  Check,
+  Copy,
   User,
-  Tag
+  Tag,
 } from 'lucide-react';
 import { LectureNote } from '../types';
 

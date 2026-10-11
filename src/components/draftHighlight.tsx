@@ -1,5 +1,5 @@
 import React from 'react';
-import { areWordsFuzzyEqual, foldTurkish, toContextHashtag } from '../utils/fuzzyMatching';
+import { areWordsFuzzyEqual, foldTurkish } from '../utils/fuzzyMatching';
 
 // ---------------------------------------------------------------------------
 // Shared-word colouring: words that recur across drafts of one cluster get the

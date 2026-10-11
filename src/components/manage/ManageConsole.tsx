@@ -16,7 +16,6 @@ import {
   GitMerge,
   Table2,
   FlaskConical,
-  Plus,
   Menu,
   ChevronDown,
   GraduationCap,
@@ -52,7 +51,6 @@ import { ManagePendingOperationsSection } from './ManagePendingOperationsSection
 import { consoleLogBuffer } from './ConsoleLogBuffer';
 import { ManageMetrics } from './ManageMetrics';
 import { useAppearance, DENSITY_LABELS, type Density as AppDensity } from '../../utils/appearance';
-import { useUiVersion } from '../../utils/uiVersion';
 import { Segmented } from '../ui/kit';
 import { Drawer, classifyNotice } from './consoleUi';
 import {
@@ -109,17 +107,8 @@ const SECTIONS: { id: ManageSection; slug: string; label: string; hint: string; 
 ];
 const sectionBySlug = (slug?: string) => SECTIONS.find((x) => x.slug === slug || x.id === slug);
 
-// Yoğunluk: tek ayar konsoldaki tüm liste ve kartları küçültür (cihaz başına hatırlanır)
+// Yoğunluk: uygulamanın görünüm ayarından gelir (Profil ve ayarlar → Kompakt/Normal/Geniş)
 type Density = 'comfy' | 'compact' | 'tight';
-const DENSITY_LABEL: Record<Density, string> = { comfy: 'Rahat', compact: 'Kompakt', tight: 'Sıkı' };
-const readDensity = (): Density => {
-  try {
-    const v = localStorage.getItem('medsoru_manage_density');
-    return v === 'compact' || v === 'tight' ? v : 'comfy';
-  } catch {
-    return 'comfy';
-  }
-};
 const SECTION_KEY = 'medsoru_manage_section';
 const readSection = (entry: 'manage' | 'admin', slug?: string): ManageSection => {
   const fromUrl = sectionBySlug(slug);
@@ -146,11 +135,9 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
   initialSlug,
 }) => {
   const [section, setSectionState] = useState<ManageSection>(() => readSection(entry, initialSlug));
-  const [ownDensity, setDensityState] = useState<Density>(readDensity);
   // v8: konsol uygulamanın tek yoğunluk ayarını kullanır (Profil ve ayarlar ile aynı)
-  const { isV7 } = useUiVersion();
   const look = useAppearance();
-  const density: Density = isV7 ? (look.density === 'compact' ? 'tight' : 'comfy') : ownDensity;
+  const density: Density = look.density === 'compact' ? 'tight' : 'comfy';
   const [menuOpen, setMenuOpen] = useState(false);
   const [paletteOpen, setPaletteOpen] = useState(false);
   const [usersTab, setUsersTab] = useState<'activity' | 'accounts'>('activity');
@@ -162,14 +149,6 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
     writeLocation(entry, SECTIONS.find((x) => x.id === s)?.slug, opts.replace);
     try {
       localStorage.setItem(SECTION_KEY, s);
-    } catch {
-      /* gizli pencere: bu ziyaretlik */
-    }
-  };
-  const setDensity = (d: Density) => {
-    setDensityState(d);
-    try {
-      localStorage.setItem('medsoru_manage_density', d);
     } catch {
       /* gizli pencere: bu ziyaretlik */
     }
@@ -429,7 +408,7 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
             </select>
             <ChevronDown className="w-3.5 h-3.5 text-ink-3 shrink-0 pointer-events-none" aria-hidden="true" />
           </label>
-          {isV7 ? (
+          {(
             <Segmented<AppDensity>
               className="ms-density shrink-0"
               label="Yoğunluk"
@@ -437,14 +416,6 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
               onChange={(d) => look.set({ density: d })}
               options={(['compact', 'normal', 'wide'] as AppDensity[]).map((d) => ({ value: d, label: DENSITY_LABELS[d] }))}
             />
-          ) : (
-          <div role="radiogroup" aria-label="Yoğunluk" className="ms-seg ms-density shrink-0">
-            {(['comfy', 'compact', 'tight'] as Density[]).map((d) => (
-              <button key={d} type="button" role="radio" aria-checked={density === d} onClick={() => setDensity(d)}>
-                {DENSITY_LABEL[d]}
-              </button>
-            ))}
-          </div>
           )}
           <button type="button" onClick={() => void refreshAll()} disabled={loading} className="ms-btn is-ghost is-icon shrink-0" title="Verileri yenile" aria-label="Verileri yenile">
             <RefreshCw className={loading ? 'animate-spin' : ''} />
@@ -474,7 +445,7 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
               <ManagePendingOperationsSection />
             )}
 
-            {section === 'inbox' && isV7 && (
+            {section === 'inbox' && (
               <ManageMetrics
                 loading={loading && !reports.length}
                 items={[

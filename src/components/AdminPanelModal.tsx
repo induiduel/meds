@@ -1,41 +1,33 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { 
-  X, 
-  ShieldCheck, 
-  Database, 
-  Download, 
-  Upload, 
-  RotateCcw, 
-  Trash2, 
-  Edit3, 
-  CheckCircle2, 
+import {
+  X,
+  ShieldCheck,
+  Database,
+  Download,
+  Upload,
+  RotateCcw,
+  Trash2,
+  Edit3,
+  CheckCircle2,
   AlertTriangle,
   Search,
   Sparkles,
   Zap,
-  FilePlus,
   BookOpen,
   Cloud,
   GitBranch,
   Terminal,
   Clock,
-  Calendar,
   Check,
   ExternalLink,
   Layers,
   RefreshCw,
-  FolderOpen,
   Users,
   Mail,
   UserPlus,
-  UserCheck,
-  Hash,
   User,
   Key,
   Send,
-  Server,
-  Settings,
-  Lock,
   Bell,
   Smartphone,
   Monitor,
@@ -53,7 +45,6 @@ import { DraftDeduplicationModal } from './DraftDeduplicationModal';
 import { AdminScriptsTab } from './AdminScriptsTab';
 import { AdminDriveSyncSettings } from './AdminDriveSyncSettings';
 import { AdminMobileNotificationCard } from './AdminMobileNotificationCard';
-import { InfoPopover } from './InfoPopover';
 import { StatusPill, questionStemText } from './QuickAddHero';
 import { ApiService, safeJsonFetch } from '../services/api';
 import { FirestoreDbService } from '../services/firestoreDb';

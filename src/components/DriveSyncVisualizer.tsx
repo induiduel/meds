@@ -1,17 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import { 
-  FolderDown, 
-  CheckCircle2, 
-  Clock, 
-  AlertCircle, 
-  RefreshCw, 
-  FileText, 
-  Search, 
-  HardDrive, 
-  ExternalLink,
+import {
+  FolderDown,
+  CheckCircle2,
+  Clock,
+  RefreshCw,
+  FileText,
+  Search,
+  HardDrive,
   ChevronDown,
   ChevronUp,
-  Cpu
+  Cpu,
 } from 'lucide-react';
 
 interface DriveFileStatusSummary {

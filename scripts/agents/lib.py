@@ -387,15 +387,18 @@ def chat_local(model: str, prompt: str, system: str | None = None, as_json: bool
 
 
 def embed(texts: list[str], model: str = MODEL_EMBED, batch: int = 64):
+    """CPU vektörleme servisi (embed_server.py, kind=raw: metin aynen; önek çağıranda). Yerel GPU/Ollama kullanılmaz.
+    bge-m3 → meds-embed-bge (:8094), diğerleri → meds-embed (:8091). Ollama bge-m3 ile kosinüs ≥0.9999 (2026-10-11 ölçüldü)."""
     import numpy as np
     import requests
 
+    url = (os.environ.get("MEDS_EMBED_BGE_URL", "http://127.0.0.1:8094/embed") if "bge" in model.lower()
+           else os.environ.get("MEDS_EMBED_E5_URL", "http://127.0.0.1:8091/embed"))
     out = []
-    for i in range(0, len(texts), batch):
-        wait_for_gpu_safety(max_util=92, max_temp=89)
-        r = requests.post(f"{OLLAMA_URL}/api/embed", json={"model": model, "input": texts[i:i + batch]}, timeout=600)
+    for i in range(0, len(texts), min(batch, 64)):
+        r = requests.post(url, json={"texts": texts[i:i + min(batch, 64)], "kind": "raw"}, timeout=600)
         r.raise_for_status()
-        out += r.json()["embeddings"]
+        out += r.json()["vectors"]
     a = np.array(out, dtype="float32")
     n = np.linalg.norm(a, axis=1, keepdims=True)
     return a / np.maximum(n, 1e-9)

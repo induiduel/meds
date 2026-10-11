@@ -10,7 +10,6 @@ import {
   ChevronLeft,
   ChevronRight,
   History,
-  Target,
   Flag,
   Maximize2,
   Search,
@@ -58,11 +57,6 @@ const loaders = import.meta.glob('../data/ornek_sorular/k1/k1-*.json', { import:
 const INDEX: IndexRow[] = Object.values(indexModules)[0] || [];
 
 const LETTERS = ['A', 'B', 'C', 'D', 'E'];
-const ZORLUK_STIL: Record<Zorluk, string> = {
-  kolay: 'bg-ok-tint text-ok',
-  orta: 'bg-accent-soft text-accent',
-  zor: 'bg-warn-soft text-warn',
-};
 const SECIM_KEY = 'medsoru_ornek_k1_ders';
 const CEVAP_KEY = 'medsoru_ornek_k1_cevap';
 

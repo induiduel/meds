@@ -7,7 +7,7 @@ set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 MEDS_DIR="$(cd "$SCRIPT_DIR/../.." && pwd)"
-KEY="${SSH_KEY:-/home/indu/medsor/ssh-key1.key}"
+KEY="${SSH_KEY:-$HOME/.ssh/medsor-oracle.key}"
 ORACLE_USER="${ORACLE_USER:-ubuntu}"
 ORACLE_HOST="${ORACLE_HOST:?ORACLE_HOST tanımlı değil (export ORACLE_HOST=92.5.55.109)}"
 ORACLE_DIR="/home/ubuntu/medsor/meds"
@@ -23,7 +23,9 @@ rsync -avz --checksum \
   --exclude='.venv*' --exclude='__pycache__' --exclude='*.log' \
   --exclude='/supabase-server/volumes' --exclude='/supabase-server/backups' \
   --exclude='/cloudflared.exe' --exclude='src/data/decks/items' \
-  --exclude='/.env' \
+  --exclude='/.env' --exclude='/.env.*' --exclude='*.bak' --exclude='*.bak_*' --exclude='*.backup*' \
+  --exclude='/get-pip.py' --exclude='/.agents' --exclude='/.claude' --exclude='/.github' \
+  --exclude='/scripts/archive' --exclude='/scripts/semantic/data' \
   -e "$SSH" "$MEDS_DIR/" "$ORACLE_USER@$ORACLE_HOST:$ORACLE_DIR/" 2>&1 | tail -2
 
 echo "==> [2/4] bütünlük: kritik dosya md5 karşılaştırma"

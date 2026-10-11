@@ -2,12 +2,10 @@ import React, { useCallback, useState, useMemo, useEffect, useDeferredValue, use
 import { CikmisCard } from '../screens/cikmis/CikmisCard';
 import { logActivity } from '../services/activityLog';
 import { FilterGroup } from './ui/FilterGroup';
-import { CopyQuestionButton } from './ui/CopyQuestionButton';
 import { copyQuestion } from '../utils/copyQuestion';
 import { getVoterId, toggledVote } from '../utils/voterId';
 import { AnswerPoll } from './AnswerPoll';
-import { PageHeader } from './ui/PageHeader';
-import { StemText, Highlight } from './ui/StemText';
+import { StemText } from './ui/StemText';
 import { Collapsible } from './ui/Collapsible';
 import { Dialog } from './ui/Dialog';
 import { Sheet } from './ui/Sheet';
@@ -17,7 +15,6 @@ import { QuestionAboutDialog, normalizeRefList } from './QuestionAboutDialog';
 import { SourceText, Marked } from './ui/SourceText';
 import { buildQuestionFocus, QuestionFocus } from '../services/questionFocus';
 import { toast } from './ui/Toast';
-import { ChangeInfo } from './ui/ChangeInfo';
 import { ErrorReportHistoryModal } from './ErrorReportHistoryModal';
 import { triggerDomHighlightAndScroll, shareDeepLink } from '../services/universalRedirectService';
 import {
@@ -25,48 +22,31 @@ import {
   Info,
   BookOpen,
   Search,
-  Filter,
-  CheckCircle2,
-  Calendar,
   Layers,
   ChevronLeft,
   ChevronRight,
-  ThumbsUp,
-  ThumbsDown,
-  ExternalLink,
-  BookMarked,
   X,
   FileText,
   HelpCircle,
   Copy,
   Check,
   GraduationCap,
-  Eye,
   ArrowUpDown,
   RefreshCw,
-  Clock,
   Tag,
-  Stethoscope,
   Flag,
-  MessageSquare,
   Send,
-  AlertCircle,
-  Database,
-  HardDrive,
   SlidersHorizontal,
   ChevronDown,
   Wand2,
-  EyeOff,
   BarChart3,
   Share2,
   ShieldAlert,
   ShieldCheck,
   History,
-  Scale,
   Trash2,
-  Pencil,
 } from 'lucide-react';
-import { ActionMenu, ActionItem } from './ui/ActionMenu';
+import { ActionItem } from './ui/ActionMenu';
 import { ReportQuestionModal } from './ReportQuestionModal';
 import { EmptySearch, SectionLoader } from './ui/Animations';
 import { disciplineClass, disciplineLabel } from '../utils/discipline';
@@ -75,10 +55,9 @@ import { AppUser, ADMIN_EMAIL } from '../services/auth';
 import { ApiService } from '../services/api';
 import { pastQuestionsCache, CacheSyncStatus } from '../services/pastQuestionsCache';
 import { AdminCustomRedactModal } from './AdminCustomRedactModal';
-import { renderHighlightedSnippet } from './QuestionCard';
 import { learnMatcher, QuestionLearnMatch, isReliableLearnMatch } from '../services/learnMatcher';
 import { FlashcardComponent } from './learn/InteractiveDeckView';
-import { pathFor, linkClick, parseLocation, writeLocation } from '../router';
+import { pathFor, parseLocation, writeLocation } from '../router';
 import { censorProfanity } from '../utils/profanityFilter';
 import {
   OFFICIAL_CURRICULUM_COMMITTEES,
@@ -523,30 +502,6 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
     await pastQuestionsCache.syncWithRemote();
   };
 
-  // Submit Question Report ("Şikayet Et / Hata Bildir")
-  const handleReportSubmit = async () => {
-    if (!reportingQuestion) return;
-    setIsSubmittingReport(true);
-    try {
-      await ApiService.reportPastQuestion(
-        reportingQuestion.id,
-        reportReason,
-        reportDetails,
-        currentUser?.displayName || 'Tıp Öğrencisi'
-      );
-      setReportSuccessMsg('Geri bildiriminiz ve şikayetiniz incelenmek üzere kaydedildi. Katkınız için teşekkür ederiz!');
-      setTimeout(() => {
-        setReportSuccessMsg(null);
-        setReportingQuestion(null);
-        setReportDetails('');
-      }, 2000);
-    } catch (e: any) {
-      alert('Şikayet kaydedilemedi: ' + (e.message || 'Bilinmeyen hata'));
-    } finally {
-      setIsSubmittingReport(false);
-    }
-  };
-
   const [editingCommentId, setEditingCommentId] = useState<string | null>(null);
   const [editCommentText, setEditCommentText] = useState('');
   const [isUpdatingComment, setIsUpdatingComment] = useState(false);
@@ -832,12 +787,6 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
     setCopiedId(q.id);
     setTimeout(() => setCopiedId(null), 2000);
   };
-
-  // Soruyu bağlantı olarak paylaş: telefonda paylaşım menüsü, değilse bağlantı panoya kopyalanır
-  const questionLink = (q: QuestionItem) => {
-    const base = (window.location.pathname.match(/^\/meds(?=\/|$)/) || [''])[0];
-    return `${window.location.origin}${base}${pathFor('past_exams', String(q.id))}`;
-  };
   const handleShareQuestion = async (q: QuestionItem, subTarget?: string) => {
     await shareDeepLink({
       type: 'past_question',
@@ -950,24 +899,6 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
       return best;
     };
   }, [effectiveNotes]);
-
-  // Format raw source file and location labels
-  const getRawSourceBadge = (q: QuestionItem) => {
-    const file = (q.sourceFile || q.sourceNote || 'Sınav Arşivi')
-      .replace(/\.[^/.]+$/, '')
-      .replace(/_/g, ' ');
-    const page = q.matchedSlidePage ? ` #${q.matchedSlidePage}` : '';
-    return `${file.substring(0, 18)}${page}`;
-  };
-
-  const getRawSourceSummary = (q: QuestionItem) => {
-    const file = (q.sourceFile || q.sourceNote || 'Sınav Arşivi')
-      .replace(/\.[^/.]+$/, '')
-      .replace(/_/g, ' ');
-    const page = q.matchedSlidePage ? ` · Sayfa #${q.matchedSlidePage}` : '';
-    const qNum = q.questionNumber ? ` · Soru #${q.questionNumber}` : '';
-    return `${file}${page}${qNum}`;
-  };
 
   // Human committee name translator (Dönem 3 Resmi Programı)
   const formatCommitteeName = (cId: string) => {
@@ -1731,7 +1662,6 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
             const p14Fixed = isPhase14Fixed(q);
             const p14o: any = p14Fixed ? (q as any).phase14Original || {} : null;
             const p14s: any = p14Fixed ? (q as any).phase14?.summary : null;
-            const p14Note = (k: string) => (p14s && typeof p14s === 'object' ? p14s[k] : undefined) as string | undefined;
             const norm = (t: any) => String(t ?? '').replace(/\s+/g, ' ').trim();
             const oldOpt = (key: string) => {
               const o = (p14o?.options || []).find((x: any) => String(x.key).toUpperCase() === String(key).toUpperCase());

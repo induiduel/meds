@@ -5,33 +5,6 @@ import type { AppUser } from '../../services/auth';
 const UserAuthModal = React.lazy(() => import('../UserAuthModal').then(m => ({ default: m.UserAuthModal || (m as any).default })));
 
 /* ------------------------------------------------------------------
- * Açılış (splash): logo çizilir, nabız çizgisi akar, sonra solar.
- * ------------------------------------------------------------------ */
-export const SplashScreen: React.FC<{ onDone: () => void }> = ({ onDone }) => {
-  const [leaving, setLeaving] = useState(false);
-  useEffect(() => {
-    const reduce = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
-    const t1 = window.setTimeout(() => setLeaving(true), reduce ? 200 : 1150);
-    const t2 = window.setTimeout(onDone, reduce ? 350 : 1500);
-    return () => { clearTimeout(t1); clearTimeout(t2); };
-  }, [onDone]);
-
-  return (
-    <div className={`ms-splash ${leaving ? 'is-leaving' : ''}`} aria-hidden="true">
-      <div className="ms-splash-mark">
-        <svg viewBox="0 0 120 120" width="88" height="88">
-          <rect className="ms-splash-box" x="6" y="6" width="108" height="108" rx="30" />
-          <path className="ms-splash-pulse" d="M22 64 H44 L52 44 L62 84 L72 54 L78 64 H98" />
-        </svg>
-        <div className="ms-splash-word">
-          Me<span>DS</span>or
-        </div>
-      </div>
-    </div>
-  );
-};
-
-/* ------------------------------------------------------------------
  * Tanıtım: 4 animasyonlu sahne + 5. adımda kayıt / giriş.
  * ------------------------------------------------------------------ */
 const STEPS = [

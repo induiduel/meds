@@ -12,7 +12,6 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { getFreeGeminiKeys } from './aiProvider.ts';
 import {
   detectQuestionCrossData,
   buildCrossDataPromptSection,
@@ -41,7 +40,6 @@ const PRACTICE_QUESTIONS_FILE = path.resolve(DATA_DIR, 'questions.json');
 
 const DECKS_FILE = path.resolve(SRC_DATA_DIR, 'interactive_learning_decks.json');
 const DECK_ITEMS_DIR = path.resolve(SRC_DATA_DIR, 'decks', 'items');
-const PACKAGES_DIR = path.resolve(REPO_ROOT, 'packages');
 
 export type ErrorSource = 'past_question' | 'practice_question' | 'interactive_deck' | 'lecture_summary' | 'term' | 'flashcard';
 export type RepairStatus = 'pending' | 'processing' | 'applied' | 'no_change' | 'rolled_back' | 'error';
@@ -547,7 +545,7 @@ async function callFreeAiWithFallback(prompt: string, systemInstruction: string)
             headers: {
               'Content-Type': 'application/json',
               Authorization: `Bearer ${orKey}`,
-              'HTTP-Referer': 'https://induiduel.github.io/meds',
+              'HTTP-Referer': 'https://nofrostlife.com.tr',
               'X-Title': 'MeDSor Auto Repair',
             },
             body: JSON.stringify({
@@ -1165,11 +1163,7 @@ export function applyRepairToDatabase(item: AutoRepairItem, correctedData: any):
         writeJsonAtomic(itemFile, decks[deckIdx]);
       }
 
-      // Senkronize Et: packages/<id>/<id>.json
-      const pkgFile = path.resolve(PACKAGES_DIR, item.targetId, `${item.targetId}.json`);
-      if (fs.existsSync(path.dirname(pkgFile))) {
-        writeJsonAtomic(pkgFile, decks[deckIdx]);
-      }
+      // Dışa aktarım paketleri (meds_export/deste_paketleri) `npm run decks:packages` ile kaynaktan üretilir.
 
       return { success: true };
     }

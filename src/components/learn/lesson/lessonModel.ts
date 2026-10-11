@@ -57,30 +57,6 @@ const splitTitle = (t: string): [string, string] => {
 };
 
 const OPT_RE = /^\s*([A-Ea-e])[).:-]\s*/;
-const normQuestion = (q: any, i: number, practiceDefault = false): LessonQuestion | null => {
-  if (!q || typeof q !== 'object') return null;
-  const stem = String(q.stem || q.question || '').trim();
-  if (stem.length < 10 || !Array.isArray(q.options) || q.options.length < 2) return null;
-  const options = q.options.map((o: any, k: number) => {
-    if (typeof o === 'string') {
-      const m = o.match(OPT_RE);
-      return { key: m ? m[1].toUpperCase() : String.fromCharCode(65 + k), text: m ? o.slice(m[0].length) : o };
-    }
-    return { key: String(o.key || String.fromCharCode(65 + k)).toUpperCase(), text: String(o.text ?? ''), explanation: o.explanation };
-  });
-  // Doğru şık: önce şıklardaki işaret, sonra harf (answer/correctAnswer), en son sıra numarası (0 tabanlı)
-  const flagged = q.options.findIndex((o: any) => o && typeof o === 'object' && o.isCorrect);
-  const letterOf = (v: any) => {
-    const t = String(v ?? '').trim();
-    const m = t.match(OPT_RE) || t.match(/^([A-Ea-e])$/);
-    return m ? m[1].toUpperCase() : options.find((o: any) => t && o.text === t)?.key || '';
-  };
-  let answer = flagged >= 0 ? options[flagged].key : letterOf(q.answer) || letterOf(q.correctAnswer);
-  if (!answer && /^\d+$/.test(String(q.correctAnswer ?? '').trim())) answer = options[Number(q.correctAnswer)]?.key || '';
-  const examYear = q.examYear ? String(q.examYear) : undefined;
-  const practice = Boolean(q.isPracticeQuestion) || practiceDefault || /Çalışma|Özgün|Pekiştirme/i.test(examYear || '');
-  return { id: String(q.id || `q-${i}`), stem, options, answer, explanation: q.explanation, examYear, practice };
-};
 
 const normCard = (c: any, i: number): LessonCard | null => {
   const front = String(c?.front || c?.question || '').trim();

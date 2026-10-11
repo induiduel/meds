@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { X, FolderPlus, Check } from 'lucide-react';
+import { X, FolderPlus } from 'lucide-react';
 
 interface AddCommitteeModalProps {
   isOpen: boolean;

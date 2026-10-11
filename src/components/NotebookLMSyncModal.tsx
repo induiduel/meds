@@ -1,23 +1,20 @@
 import React, { useState } from 'react';
-import { 
-  X, 
-  Sparkles, 
-  Copy, 
-  Check, 
-  Download, 
-  Upload, 
-  Database, 
-  ExternalLink, 
-  Layers, 
-  FileText,
+import {
+  X,
+  Sparkles,
+  Copy,
+  Check,
+  Download,
+  Upload,
+  Database,
+  ExternalLink,
   AlertCircle,
   CheckCircle2,
   RefreshCw,
-  Brain
+  Brain,
 } from 'lucide-react';
 import { Committee, QuestionItem, LectureNote } from '../types';
 import { AppUser } from '../services/auth';
-import { ApiService } from '../services/api';
 import { REAL_KURUL1_DRIVE_SLIDES } from '../services/driveAutomation';
 
 interface NotebookLMSyncModalProps {

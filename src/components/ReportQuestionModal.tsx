@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { logActivity } from '../services/activityLog';
-import { X, Flag, FileWarning, ListX, CircleX, Tags, Sparkles, MoreHorizontal, AlertCircle, Send } from 'lucide-react';
+import { FileWarning, ListX, CircleX, Tags, Sparkles, MoreHorizontal, AlertCircle, Send } from 'lucide-react';
 import { BlurOverlay, SuccessCheck } from './ui/Animations';
 import { toast } from './ui/Toast';
 import { Sheet } from './ui/Sheet';
-import { useUiVersion } from '../utils/uiVersion';
 
 const REASONS: { id: string; label: string; hint: string; icon: React.ElementType; placeholder: string }[] = [
   { id: 'Hatalı Soru Kökü', label: 'Soru kökü', hint: 'Eksik ya da hatalı', icon: FileWarning, placeholder: 'Kökte neyin eksik ya da yanlış olduğunu yaz…' },
@@ -37,7 +36,6 @@ interface ReportQuestionModalProps {
 
 /** "Hata bildir": pick what is wrong, optionally the right answer and a note. Bottom sheet on phones. */
 export const ReportQuestionModal: React.FC<ReportQuestionModalProps> = ({ question, onClose, onSubmit, objectOption, notifyEmail }) => {
-  const { isV7 } = useUiVersion();
   const objection = Boolean(objectOption);
   const [reason, setReason] = useState<string | null>(null);
   const [suggested, setSuggested] = useState<string | null>(null);
@@ -45,18 +43,6 @@ export const ReportQuestionModal: React.FC<ReportQuestionModalProps> = ({ questi
   const [busy, setBusy] = useState(false);
   const [done, setDone] = useState(false);
   const [error, setError] = useState<string | null>(null);
-
-  useEffect(() => {
-    if (isV7) return; // v8'de Esc ve kaydırma kilidini Sheet yönetir
-    const onKey = (e: KeyboardEvent) => e.key === 'Escape' && !busy && onClose();
-    document.addEventListener('keydown', onKey);
-    const prev = document.body.style.overflow;
-    document.body.style.overflow = 'hidden';
-    return () => {
-      document.removeEventListener('keydown', onKey);
-      document.body.style.overflow = prev;
-    };
-  }, [busy, onClose, isV7]);
 
   const stem: string = question?.reconstruction?.stem || question?.stem || question?.rawQuestion?.stem || question?.topic || '';
   const current = question?.reconstruction?.correctAnswer || question?.correctAnswer || question?.claimedAnswer || question?.answer;
@@ -258,67 +244,18 @@ export const ReportQuestionModal: React.FC<ReportQuestionModalProps> = ({ questi
             </>
   );
 
-  if (isV7) {
-    // v8: ortak alt sayfa (telefonda sürüklenir, geniş ekranda pencere)
-    return (
-      <Sheet
-        open
-        onClose={() => !busy && onClose()}
-        title={objection ? `${objKey} şıkkına itiraz` : 'Hata bildir'}
-        subtitle={meta || 'Çıkmış soru'}
-        width={540}
-        footer={done ? undefined : footerButtons}
-      >
-        <div className="rq">{done ? doneView : bodyView}</div>
-        <BlurOverlay show={busy} label="Gönderiliyor…" rounded="rounded-none" />
-      </Sheet>
-    );
-  }
-
+      // v8: ortak alt sayfa (telefonda sürüklenir, geniş ekranda pencere)
   return (
-    <div
-      className="ms-overlay fixed inset-0 z-[70] bg-[rgba(14,26,38,0.45)] backdrop-blur-[3px] flex items-end sm:items-center justify-center sm:p-5 ms-fade-in"
-      onMouseDown={(e) => e.target === e.currentTarget && !busy && onClose()}
+    <Sheet
+      open
+      onClose={() => !busy && onClose()}
+      title={objection ? `${objKey} şıkkına itiraz` : 'Hata bildir'}
+      subtitle={meta || 'Çıkmış soru'}
+      width={540}
+      footer={done ? undefined : footerButtons}
     >
-      <div
-        role="dialog"
-        aria-modal="true"
-        aria-labelledby="report-title"
-        className="relative w-full sm:max-w-[540px] max-h-[94dvh] sm:max-h-[90dvh] bg-white rounded-t-2xl sm:rounded-2xl shadow-xl grid grid-rows-[auto_minmax(0,1fr)_auto] overflow-hidden ms-pop-in"
-      >
-        <header className="relative flex items-center gap-3 px-5 pt-4 pb-3">
-          <span className="sm:hidden absolute left-1/2 -translate-x-1/2 top-1.5 w-10 h-[5px] rounded-full bg-line-2" aria-hidden="true" />
-          <span className="w-10 h-10 rounded-xl bg-bad-soft text-bad-text flex items-center justify-center shrink-0">
-            <Flag className="w-5 h-5" />
-          </span>
-          <div className="flex-1 min-w-0">
-            <h2 id="report-title" className="m-0 font-display font-bold text-xl tracking-[-0.02em] leading-tight">
-              {objection ? `${objKey} şıkkına itiraz` : 'Hata bildir'}
-            </h2>
-            <p className="m-0 text-sm text-ink-3 truncate">{meta || 'Çıkmış soru'}</p>
-          </div>
-          <button
-            type="button"
-            onClick={onClose}
-            disabled={busy}
-            aria-label="Kapat"
-            className="w-10 h-10 rounded-full flex items-center justify-center text-ink-2 hover:text-ink hover:bg-canvas cursor-pointer shrink-0"
-          >
-            <X className="w-5 h-5" />
-          </button>
-        </header>
-
-        {done ? (
-          doneView
-        ) : (
-          <>
-            {bodyView}
-            <footer className="flex items-center gap-2 px-5 py-3 pb-[max(env(safe-area-inset-bottom),12px)] sm:pb-3 border-t border-line-soft">{footerButtons}</footer>
-          </>
-        )}
-
-        <BlurOverlay show={busy} label="Gönderiliyor…" rounded="rounded-t-2xl sm:rounded-2xl" />
-      </div>
-    </div>
+      <div className="rq">{done ? doneView : bodyView}</div>
+      <BlurOverlay show={busy} label="Gönderiliyor…" rounded="rounded-none" />
+    </Sheet>
   );
 };

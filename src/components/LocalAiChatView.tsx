@@ -1,29 +1,21 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { confirmDialog } from './ui/ConfirmDialog';
 import {
-  BotMessageSquare,
   Sparkles,
   Send,
   Cpu,
   Globe,
-  HelpCircle,
   Search,
   BookOpen,
   ArrowRight,
-  RefreshCw,
-  SlidersHorizontal,
-  Flame,
   CheckCircle2,
   AlertTriangle,
   Lightbulb,
-  ExternalLink,
-  ShieldAlert,
   Clock,
   X,
   Check,
-  FileText,
   History,
-  Trash2
+  Trash2,
 } from 'lucide-react';
 import { ApiService } from '../services/api';
 import { PageHeader } from './ui/PageHeader';

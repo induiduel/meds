@@ -1,8 +1,7 @@
-import { Committee, QuestionItem, LectureNote, AdminNotification } from '../types';
-import { FirestoreDbService, db as firestoreDb, filterCurrent2026_2027Committees, INITIAL_COMMITTEES } from './firestoreDb';
+import { Committee, QuestionItem, LectureNote } from '../types';
+import { FirestoreDbService, filterCurrent2026_2027Committees, INITIAL_COMMITTEES } from './firestoreDb';
 import { SupabaseDbService, broadcastLiveEvent } from './supabaseDb';
 import { safeJsonFetch, getCustomApiUrl, getLocalDb, saveLocalDb } from './api';
-import { systemHealthMonitor } from './systemHealthMonitor';
 import { pastQuestionsCache } from './pastQuestionsCache';
 import { offlineDatabaseService } from './offlineDatabaseService';
 import { ADMIN_EMAIL } from './auth';
@@ -559,9 +558,6 @@ class MultiDbManager {
       (async () => {
         try {
           const customUrl = getCustomApiUrl();
-          if (typeof window !== 'undefined' && window.location.hostname.includes('github.io') && !customUrl) {
-            return;
-          }
           const endpoint = customUrl ? `${customUrl}/api/questions/${question.id}` : `/api/questions/${question.id}`;
           await safeJsonFetch(endpoint, {
             method: 'PUT',
@@ -625,9 +621,6 @@ class MultiDbManager {
       (async () => {
         try {
           const customUrl = getCustomApiUrl();
-          if (typeof window !== 'undefined' && window.location.hostname.includes('github.io') && !customUrl) {
-            return;
-          }
           const endpoint = customUrl ? `${customUrl}/api/past-exams/${question.id}` : `/api/past-exams/${question.id}`;
           await safeJsonFetch(endpoint, {
             method: 'PUT',
@@ -729,9 +722,6 @@ class MultiDbManager {
       (async () => {
         try {
           const customUrl = getCustomApiUrl();
-          if (typeof window !== 'undefined' && window.location.hostname.includes('github.io') && !customUrl) {
-            return;
-          }
           const endpoint = customUrl ? `${customUrl}/api/lecture-notes` : '/api/lecture-notes';
           await safeJsonFetch(endpoint, {
             method: 'POST',
@@ -831,9 +821,6 @@ class MultiDbManager {
       (async () => {
         try {
           const customUrl = getCustomApiUrl();
-          if (typeof window !== 'undefined' && window.location.hostname.includes('github.io') && !customUrl) {
-            return;
-          }
           const endpoint = customUrl ? `${customUrl}/api/questions/${id}` : `/api/questions/${id}`;
           await safeJsonFetch(endpoint, {
             method: 'DELETE',
@@ -885,9 +872,6 @@ class MultiDbManager {
       (async () => {
         try {
           const customUrl = getCustomApiUrl();
-          if (typeof window !== 'undefined' && window.location.hostname.includes('github.io') && !customUrl) {
-            return;
-          }
           const endpoint = customUrl ? `${customUrl}/api/past-exams/${id}` : `/api/past-exams/${id}`;
           await safeJsonFetch(endpoint, {
             method: 'DELETE',

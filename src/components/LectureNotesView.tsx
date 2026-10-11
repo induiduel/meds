@@ -3,43 +3,34 @@ import { confirmDialog } from './ui/ConfirmDialog';
 import { SourceText } from './ui/SourceText';
 import { PageHeader } from './ui/PageHeader';
 import { Segmented } from './ui/kit';
-import { 
-  BookMarked, 
-  Search, 
-  FileText, 
-  CheckCircle2, 
-  ExternalLink, 
-  Copy, 
-  Check, 
-  Download, 
-  UploadCloud, 
-  FileUp, 
-  RefreshCw, 
-  SlidersHorizontal, 
-  FolderGit2, 
-  ChevronRight, 
-  Trash2, 
-  Play, 
-  Eye, 
-  Sparkles,
-  AlertCircle,
+import {
+  BookMarked,
+  Search,
+  CheckCircle2,
+  ExternalLink,
+  Copy,
+  Check,
+  UploadCloud,
+  FileUp,
+  RefreshCw,
+  FolderGit2,
+  Trash2,
+  Play,
+  Eye,
   Plus,
   BookOpen,
   FolderOpen,
   X,
 } from 'lucide-react';
 import { LectureNote, QuestionItem, QuestionLectureMatch, UserProfile, Committee } from '../types';
-import { 
-  DRIVE_SLIDES_CATALOG, 
-  DriveSlideMeta, 
-  DRIVE_FOLDER_ID, 
-  DRIVE_FOLDER_URL 
+import {
+  DRIVE_SLIDES_CATALOG,
+  DriveSlideMeta,
+  DRIVE_FOLDER_URL,
 } from '../data/driveCatalog';
 import { renderSingleDriveSlide } from '../services/driveAutomation';
 import { SlideReaderModal } from './SlideReaderModal';
 import { DriveSyncVisualizer } from './DriveSyncVisualizer';
-import { db, cleanForFirestore } from '../services/firestoreDb';
-import { collection, doc, setDoc, deleteDoc, getDocs } from 'firebase/firestore';
 import { ApiService } from '../services/api';
 import { multiDbManager } from '../services/multiDbManager';
 import { triggerDomHighlightAndScroll } from '../services/universalRedirectService';

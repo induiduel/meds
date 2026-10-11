@@ -1,6 +1,6 @@
 import React from 'react';
 import { PageHeader } from './ui/PageHeader';
-import { Sparkles, Plus, Clock, HelpCircle, Layers } from 'lucide-react';
+import { Sparkles, Plus, Clock } from 'lucide-react';
 import { QuestionItem } from '../types';
 
 interface QuestionMatrixProps {

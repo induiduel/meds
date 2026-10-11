@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { CardExtras } from './CardExtras';
 import { PageHeader } from '../ui/PageHeader';
-import { BookA, GraduationCap, FileQuestion, Search, Shuffle, Repeat2, X, RotateCcw, Play, Check, Layers, Volume2, ChevronLeft, ChevronRight, ChevronDown, Star, Share2, AlertCircle } from 'lucide-react';
+import { BookA, GraduationCap, Search, Shuffle, Repeat2, X, RotateCcw, Play, Check, Layers, Volume2, ChevronLeft, ChevronRight, ChevronDown, Star, Share2, AlertCircle } from 'lucide-react';
 import { getFavoriteCards, toggleFavoriteCard } from '../../services/studyStore';
 import { GLOSSARY } from '../../data/glossary';
 import { EmptySearch, SectionLoader, SuccessCheck } from '../ui/Animations';
@@ -66,7 +66,6 @@ const statusOf = (s: CardState | undefined, now: number): Status => {
   if (s.due <= now) return 'due';
   return s.box >= MASTERED_BOX ? 'mastered' : 'learning';
 };
-const STATUS_DOT: Record<Status, string> = { new: '#C9D2DB', due: '#F59E0B', learning: '#1E4FD8', mastered: '#1F9D55' };
 
 // ---------------------------------------------------------------------------
 // Sources

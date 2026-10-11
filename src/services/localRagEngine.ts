@@ -28,7 +28,7 @@ import { fileURLToPath } from 'url';
 import { GoogleGenAI } from '@google/genai';
 import { createClient, SupabaseClient } from '@supabase/supabase-js';
 import { loadDeepSeekContributions } from './deepseekDataService.ts';
-import { foldTurkish as foldTrUtil, FastFuzzyVocab, damerauLevenshtein } from '../utils/fuzzyMatching.ts';
+import { foldTurkish as foldTrUtil, FastFuzzyVocab } from '../utils/fuzzyMatching.ts';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -254,46 +254,6 @@ ${act.response}`.trim();
     console.log(`[LocalRagEngine] 🚀 ${memoryChunks.size} adet yerel parça (chunk) belleğe yüklendi ve BM25 indeksi oluşturuldu.`);
   } catch (err: any) {
     console.warn('[LocalRagEngine] Yerel parça dosyası okunamadı:', err.message);
-  }
-}
-
-function loadGeminiV3RagChunks(): void {
-  const file = process.env.MEDS_DATABASE_V3_RAG_CHUNKS
-    || '/home/indu/medsor/meds_database/deepseek_meta_data/gemini_v3_rag_chunks.jsonl';
-  if (!fs.existsSync(file)) return;
-  try {
-    const rows = fs.readFileSync(file, 'utf8').split(/\r?\n/);
-    let loaded = 0;
-    for (const line of rows) {
-      if (!line.trim()) continue;
-      try {
-        const row = JSON.parse(line);
-        if (row?.source_tag !== 'aistudio_curated_20261005' || !row.content || !row.chunk_id) continue;
-        const metadata = row.metadata || {};
-        const chunk: RagChunk = {
-          id: row.chunk_id,
-          documentId: row.document_id || row.chunk_id,
-          documentType: row.document_type,
-          committeeId: metadata.committee_id,
-          discipline: metadata.discipline,
-          title: row.source_label || 'Gemini v3',
-          pageNumber: metadata.page_number,
-          content: row.content,
-          metadata: { ...metadata, source: 'gemini_v3', source_tag: row.source_tag },
-          hash: row.hash || hashContent(row.content),
-          createdAt: row.created_at || new Date().toISOString(),
-          updatedAt: row.created_at || new Date().toISOString(),
-        };
-        memoryChunks.set(chunk.id, chunk);
-        loaded += 1;
-      } catch { /* malformed additive row is skipped */ }
-    }
-    if (loaded) {
-      rebuildInvertedIndex();
-      console.log(`[LocalRagEngine] ✓ Gemini v3 RAG parçaları: ${loaded}`);
-    }
-  } catch (error) {
-    console.warn('[LocalRagEngine] Gemini v3 RAG dosyası okunamadı:', error);
   }
 }
 

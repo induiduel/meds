@@ -10,7 +10,6 @@ import json, os, sys, copy, re
 ROOT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SRC_DECKS_PATH = os.path.join(ROOT_DIR, 'src', 'data', 'interactive_learning_decks.json')
 ITEMS_DIR = os.path.join(ROOT_DIR, 'src', 'data', 'decks', 'items')
-PACKAGES_DIR = os.path.join(os.path.dirname(ROOT_DIR), 'packages')
 
 sys.path.insert(0, os.path.join(ROOT_DIR, 'scripts'))
 from validate_learning_decks import check_deck, leaks
@@ -380,7 +379,7 @@ def main():
     with open(SRC_DECKS_PATH, 'w', encoding='utf-8') as f:
         json.dump(decks, f, ensure_ascii=False, indent=2)
 
-    print(f"Syncing {len(modified_deck_ids)} modified decks to items/ and packages/...")
+    print(f"Syncing {len(modified_deck_ids)} modified decks to items/ (+ paket yeniden üretimi)...")
     for did in modified_deck_ids:
         deck_obj = next(x for x in decks if x['id'] == did)
         item_path = os.path.join(ITEMS_DIR, f"{did}.json")
@@ -388,11 +387,9 @@ def main():
             with open(item_path, 'w', encoding='utf-8') as f:
                 json.dump(deck_obj, f, ensure_ascii=False, indent=2)
 
-        pkg_deck_path = os.path.join(PACKAGES_DIR, did, 'deck.json')
-        if os.path.exists(os.path.dirname(pkg_deck_path)):
-            with open(pkg_deck_path, 'w', encoding='utf-8') as f:
-                json.dump(deck_obj, f, ensure_ascii=False, indent=2)
 
+    # Paketler tek kaynaktan yeniden üretilir (meds_export/deste_paketleri).
+    subprocess.run([sys.executable, os.path.join(os.path.dirname(os.path.abspath(__file__)), 'build_deck_packages.py')], check=False)
     print("Sync complete.")
 
 if __name__ == '__main__':

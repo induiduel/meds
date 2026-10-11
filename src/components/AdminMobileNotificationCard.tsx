@@ -9,12 +9,11 @@ import {
   RefreshCw,
   ExternalLink,
   ShieldCheck,
-  Volume2,
   Clock,
   MessageSquare,
   AlertCircle,
   Power,
-  BellOff
+  BellOff,
 } from 'lucide-react';
 import { ApiService } from '../services/api';
 import { FirestoreDbService } from '../services/firestoreDb';

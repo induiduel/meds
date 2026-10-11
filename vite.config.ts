@@ -11,13 +11,8 @@ dotenv.config();
 const __dirname = fileURLToPath(new URL('.', import.meta.url));
 
 export default defineConfig(({ mode }) => {
-  const isGhPages =
-    process.env.BUILD_TARGET === 'gh-pages' ||
-    process.env.npm_lifecycle_event === 'build:gh-pages' ||
-    process.env.npm_lifecycle_event === 'predeploy';
-
   return {
-    base: process.env.VITE_BASE || (isGhPages ? '/meds/' : '/'),
+    base: process.env.VITE_BASE || '/',
     plugins: [splitLearningDecks(__dirname), react(), tailwindcss()],
     define: {
       'process.env.SUPABASE_URL': JSON.stringify(process.env.SUPABASE_URL || 'https://kgutsltgmqbnlxcnzrtl.supabase.co'),

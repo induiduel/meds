@@ -1,5 +1,5 @@
 # Dockerfile.embed — bge-m3 sorgu vektörleme servisi (CPU, Oracle ARM).
-# Cihazdaki :8094 servisinin aynısı (scripts/agents/embed_server.py, MEDS_EMBED_MODEL=BAAI/bge-m3).
+# Cihazdaki meds-embed-bge (:8094) servisinin aynısı (scripts/agents/embed_server.py, MEDS_EMBED_MODEL=BAAI/bge-m3).
 # Model (~1.2GB) ilk açılışta HF_HOME volume'üne iner, sonra kalıcıdır.
 FROM python:3.11-slim
 
@@ -9,11 +9,15 @@ RUN pip install --no-cache-dir torch --index-url https://download.pytorch.org/wh
 WORKDIR /app
 COPY scripts/agents/embed_server.py /app/embed_server.py
 
+# Always Free (2 OCPU): 2 iş parçacığı; model açılışta yüklenir ve kalır (canlı arama ilk istekte beklemesin).
 ENV MEDS_EMBED_MODEL=BAAI/bge-m3 \
   MEDS_EMBED_HOST=0.0.0.0 \
   MEDS_EMBED_PORT=8094 \
-  HF_HOME=/models \
-  OMP_NUM_THREADS=4
+  MEDS_EMBED_THREADS=2 \
+  MEDS_EMBED_PRELOAD=1 \
+  MEDS_EMBED_IDLE_SEC=0 \
+  MEDS_EMBED_CACHE=4000 \
+  HF_HOME=/models
 
 EXPOSE 8094
 

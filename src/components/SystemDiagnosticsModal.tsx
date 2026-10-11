@@ -9,15 +9,11 @@ import {
   Database,
   Cpu,
   Key,
-  Layers,
   Copy,
   Check,
   ExternalLink,
-  ShieldCheck,
-  Server,
   Zap,
-  Info,
-  Sparkles
+  Sparkles,
 } from 'lucide-react';
 import { systemHealthMonitor, SystemOverallHealth } from '../services/systemHealthMonitor';
 import { multiDbManager, DatabaseMode } from '../services/multiDbManager';

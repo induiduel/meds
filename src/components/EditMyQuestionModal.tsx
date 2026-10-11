@@ -1,15 +1,13 @@
 import React, { useState } from 'react';
-import { 
-  X, 
-  Edit3, 
-  History, 
-  Save, 
-  AlertCircle, 
-  CheckCircle2, 
-  HelpCircle,
-  FileText,
+import {
+  X,
+  Edit3,
+  History,
+  Save,
+  AlertCircle,
+  CheckCircle2,
   Sparkles,
-  RefreshCw
+  RefreshCw,
 } from 'lucide-react';
 import { QuestionItem, Committee } from '../types';
 import { AppUser } from '../services/auth';

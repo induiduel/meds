@@ -3,24 +3,18 @@ import {
   Cpu,
   RefreshCw,
   X,
-  CheckCircle2,
-  AlertCircle,
-  Clock,
   Layers,
   FileText,
   Sparkles,
   Server,
   Cloud,
   HardDrive,
-  Database,
   Radio,
-  ArrowRight,
   ShieldCheck,
-  Send,
   Terminal,
   Activity,
   Zap,
-  Globe
+  Globe,
 } from 'lucide-react';
 import { FirestoreDbService } from '../services/firestoreDb';
 import { ApiService, safeJsonFetch } from '../services/api';
@@ -533,7 +527,7 @@ export const SubagentMonitorModal: React.FC<SubagentMonitorModalProps> = ({
                   <span>Hibrit Mimari: Ücretsiz Yerel PC Sunucusu & Firebase Kotasız Çalışma</span>
                 </div>
                 <p className="text-xs text-ink-3 leading-relaxed">
-                  Firebase Firestore'un ücretsiz günlük okuma/yazma kotaları (50.000 okuma/gün) tükendiğinde veya site GitHub Pages üzerinden yoğun trafik aldığında; sistem otomatik olarak bilgisayarınızdaki yerel veritabanına ve Express sunucusuna yönlenir. Böylece sıfır maliyetle sınırsız hizmet verilir!
+                  Firebase Firestore'un ücretsiz günlük okuma/yazma kotaları (50.000 okuma/gün) tükendiğinde veya site yoğun trafik aldığında; sistem otomatik olarak bilgisayarınızdaki yerel veritabanına ve Express sunucusuna yönlenir. Böylece sıfır maliyetle sınırsız hizmet verilir!
                 </p>
               </div>
 
@@ -580,14 +574,14 @@ export const SubagentMonitorModal: React.FC<SubagentMonitorModalProps> = ({
 
               </div>
 
-              {/* Tunnel / Remote Access Config for GitHub Pages */}
+              {/* Özel API adresi (ör. Oracle ya da yerel tünel) */}
               <div className="bg-ink/40 border border-line-2 rounded-xl p-4 space-y-3">
                 <h4 className="text-xs font-bold text-white flex items-center gap-2">
                   <Globe className="w-4 h-4 text-ok" />
-                  <span>GitHub Pages Üzerinden Yerel Bilgisayara Bağlantı (Tünel / API URL):</span>
+                  <span>Özel API adresi (Oracle / tünel):</span>
                 </h4>
                 <p className="text-xs text-ink-3">
-                  GitHub Pages (HTTPS) üzerinden yerel bilgisayarınıza erişmek için Cloudflare Tunnel veya LocalTunnel kullanabilirsiniz. Tünel adresinizi buraya girdiğinizde site doğrudan bilgisayarınızla konuşur:
+                  Site varsayılan olarak Oracle API'sini kullanır; farklı bir sunucuya (ör. yerel tünel) bağlanmak için adresi buraya girin. Tünel adresinizi buraya girdiğinizde site doğrudan bilgisayarınızla konuşur:
                 </p>
 
                 <div className="flex items-center gap-2">

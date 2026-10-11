@@ -156,19 +156,8 @@ html.ui-v7 :where(a, button, input, select, textarea, summary, [tabindex]):focus
 html.ui-v7 ::selection { background: color-mix(in srgb, var(--color-accent) 22%, transparent); }
 
 /* ---------- Kabuk: kenar menüsü (iPadOS kenar çubuğu) ---------- */
-html.ui-v7 .ms-rail { background: var(--color-canvas); border-right: 1px solid var(--color-line); }
-html.ui-v7 .ms-rail-item { color: var(--color-ink); border-radius: 10px !important; font-weight: 500; }
-html.ui-v7 .ms-rail-item > svg { color: var(--color-accent); }
-html.ui-v7 .ms-rail-item:hover { background: rgb(118 118 128 / .10); }
-html.ui-v7 .ms-rail-item[aria-current="page"] { background: var(--color-accent); color: var(--color-on-accent); font-weight: 600; }
-html.ui-v7 .ms-rail-item[aria-current="page"] > svg { color: inherit; }
-html.ui-v7 .ms-rail-group { color: var(--color-ink-3); font-size: 12px; letter-spacing: 0; text-transform: none; font-weight: 650; padding: 14px 8px 4px; }
 html.ui-v7 .ms-rail-mark { background: var(--color-brand); color: #fff; border-radius: 8px; }
 html.ui-v7 .ms-rail-word { font-family: var(--font-display); }
-@media (min-width: 1024px) {
-  html.ui-v7 .ms-rail-item { height: 34px !important; font-size: 14px !important; }
-  html.ui-v7 .ms-rail-item > svg { width: 18px !important; height: 18px !important; }
-}
 
 /* Üst çubuk: buzlu cam */
 html.ui-v7 header.sticky { background: color-mix(in srgb, var(--color-canvas) 78%, transparent); border-bottom: 1px solid color-mix(in srgb, var(--color-line) 70%, transparent); -webkit-backdrop-filter: saturate(1.8) blur(20px); backdrop-filter: saturate(1.8) blur(20px); }
@@ -197,8 +186,6 @@ html.ui-v7 :is(.ds-panel, .ds-list, .ds-card, .ds-podium > li, .ds-empty.is-pane
   border-color: transparent !important; box-shadow: none; border-radius: 14px;
 }
 html.ui-v7 main :is(div, section, article, li, aside).bg-white.border.rounded-xl { border-radius: 12px; }
-html.ui-v7 .ds-card.is-link:hover, html.ui-v7 .lh-card:hover { background: color-mix(in srgb, var(--color-white) 94%, var(--color-ink)); }
-html.ui-v7 :is(.ms-lift):hover { transform: none; box-shadow: none; }
 
 /* Girintili ayırıcılı gruplu liste (iOS inset grouped) */
 html.ui-v7 .ds-list > li + li { border-top: 0; }
@@ -246,7 +233,6 @@ html.ui-v7 :is(.cx-search, .ms-qsearch) > svg { color: var(--color-ink-3); width
 html.ui-v7 :is(.cx-search, .ms-qsearch) input { font-size: 15px; }
 html.ui-v7 .cx-search-sep { display: none; }
 html.ui-v7 .cx-filterbtn { color: var(--color-accent); height: 30px; border-radius: 8px; }
-html.ui-v7 .ds-panel-search { border-bottom: 0; margin: 8px 8px 4px; height: 36px; border-radius: 10px; background: rgb(118 118 128 / .12); }
 
 /* ---------- Kategori şeritleri: kaydırılan kapsül çipler ---------- */
 html.ui-v7 :is(.cx-tabs, .ms-chipbar:not(.is-wrap)) { gap: 6px; border-bottom: 0 !important; padding: 2px 0; -webkit-mask-image: linear-gradient(90deg, #000 calc(100% - 24px), transparent); mask-image: linear-gradient(90deg, #000 calc(100% - 24px), transparent); }
@@ -292,8 +278,6 @@ html.ui-v7 .cx-opts .cx-opt-li { border-top-color: var(--color-line-soft); }
 html.ui-v7 .cx-opt { font-size: 15px; padding-block: 9px; }
 html.ui-v7 .cx-bubble { width: 24px; height: 24px; border-width: 1.5px; border-color: var(--color-line-2); font-family: var(--font-round); font-size: 12px; }
 html.ui-v7 .cx-opt.is-correct .cx-bubble { background: var(--color-ok); border-color: var(--color-ok); }
-html.ui-v7 .cx-verdict { border-radius: 10px; }
-html.ui-v7 .cx-q-foot { border-top-color: var(--color-line-soft); }
 html.ui-v7 .cx-act { color: var(--color-accent); font-weight: 500; }
 html.ui-v7 .cx-act:hover { background: rgb(118 118 128 / .12); }
 html.ui-v7 .cx-chip { background: var(--color-accent); color: var(--color-on-accent); border-radius: 99px; }
@@ -304,26 +288,10 @@ html.ui-v7 .cx-clear { color: var(--color-accent); text-decoration: none; }
 }
 
 /* ---------- Kartlar, Sözlük, Sıralama parçaları ---------- */
-html.ui-v7 .ds-card { padding: 12px 14px 14px; gap: 3px; }
-html.ui-v7 .ds-card-meta { color: var(--d-ink, var(--color-ink-3)); font-weight: 650; font-size: 12px; }
-html.ui-v7 .ds-card-title { font-size: 16px; line-height: 21px; letter-spacing: -.01em; }
-html.ui-v7 .ds-card-body { font-size: 13.5px; line-height: 19px; }
-html.ui-v7 .ds-dot { width: 8px; height: 8px; background: var(--d, currentColor); }
 html.ui-v7 .ds-alpha > button[aria-pressed="true"] { background: var(--color-accent); color: var(--color-on-accent); border-radius: 99px; }
 html.ui-v7 .ds-alpha > button { border-radius: 99px; color: var(--color-accent); }
 html.ui-v7 .ds-meter { height: 6px; }
-html.ui-v7 .ds-legend b, html.ui-v7 .ds-pts, html.ui-v7 .ds-me-pts, html.ui-v7 .ds-count, html.ui-v7 .ds-rank, html.ui-v7 .ds-resultbar b { font-family: var(--font-round); }
-html.ui-v7 .ds-me { border-radius: 14px; background: var(--color-white); }
-html.ui-v7 .ds-me-rank { font-family: var(--font-round); color: var(--color-accent); font-size: 26px; }
-html.ui-v7 .ds-avatar { background: var(--d-soft, var(--color-field)); color: var(--d-ink, var(--color-ink-2)); }
-html.ui-v7 .ds-podium > li.is-first .ds-avatar { background: #FFD60A; color: #5C4400; }
-html.ui-v7 .ds-podium > li:nth-child(2) .ds-avatar { background: #E5E5EA; color: #3A3A3C; }
-html.ui-v7 .ds-podium > li:nth-child(3) .ds-avatar { background: #F2D4B6; color: #6B3E12; }
-html.ui-v7 .ds-podium > li.is-first .ds-avatar > i { background: var(--color-ink); color: var(--color-white); }
-html.ui-v7 .ds-bar { height: 6px; }
-html.ui-v7 .ds-rank-list > li { border-top: 0; box-shadow: inset 60px 1px 0 var(--color-white), inset 0 1px 0 var(--color-line); }
-html.ui-v7 .ds-rank-list > li:first-child { box-shadow: none; }
-html.ui-v7 .ds-rank-list > li.is-me { background: var(--color-accent-soft); box-shadow: none; }
+html.ui-v7 .ds-legend b, html.ui-v7 .ds-count, html.ui-v7 .ds-resultbar b { font-family: var(--font-round); }
 html.ui-v7 .ds-callout { border-radius: 12px; }
 html.ui-v7 .ds-grade { border-radius: 14px; height: 50px; }
 
@@ -337,7 +305,6 @@ html.ui-v7 .ms-modal-panel > header h2, html.ui-v7 .ms-drawer-title { font-size:
 html.ui-v7 :is(.ms-modal-panel > footer, .ds-modal-foot, .ms-drawer-foot) { border-top: 0; background: var(--color-canvas); }
 html.ui-v7 .ms-drawer { width: min(400px, 100vw); }
 html.ui-v7 .ms-drawer-scrim { background: rgb(0 0 0 / .32); }
-html.ui-v7 :is(.ms-facet-head, .ms-f-label, .ms-f-select > span) { text-transform: uppercase; font-size: 12px; letter-spacing: .02em; font-weight: 500; color: var(--color-ink-3); }
 html.ui-v7 .ms-fchip { height: 32px; padding: 0 12px; border: 0; border-radius: 99px; background: var(--color-white); color: var(--color-ink); font-size: 14px; font-weight: 500; }
 html.ui-v7 .ms-fchip:hover { background: color-mix(in srgb, var(--color-white) 90%, var(--color-ink)); }
 html.ui-v7 .ms-fchip.is-on { background: var(--color-accent); color: var(--color-on-accent); border: 0; font-weight: 600; }
@@ -530,10 +497,10 @@ html.ui-v7 .cx-q-meta b { display: inline-flex; align-items: center; gap: 6px; }
 html.ui-v7:not(.theme-dark) :is(.d-pat, .d-farm, .d-enf, .d-mikro, .d-halk, .d-ic, .d-gen, .d-cocuk, .d-kadin, .d-acil, .d-biyo, .d-ana, .d-fiz, .d-noro, .d-psik, .d-kardi, .d-cerr, .d-ftr, .d-uro, .d-onko, .d-diger) {
   --d-soft: color-mix(in srgb, var(--d) 12%, #FFFFFF);
 }
-html.ui-v7 .ms-rail-item[aria-current="page"], html.ui-v7 .ms-side-item.is-on { background: var(--color-accent-soft); color: var(--color-accent); }
-html.ui-v7 .ms-rail-item[aria-current="page"] > svg, html.ui-v7 .ms-side-item.is-on > svg { color: var(--color-accent); }
+html.ui-v7 .ms-side-item.is-on { background: var(--color-accent-soft); color: var(--color-accent); }
+html.ui-v7 .ms-side-item.is-on > svg { color: var(--color-accent); }
 html.ui-v7 .ms-side-item.is-on .n { background: var(--color-white); color: var(--color-accent); }
-html.ui-v7 .ms-rail-item > svg, html.ui-v7 .ms-side-item > svg { color: var(--color-ink-3); }
+html.ui-v7 .ms-side-item > svg { color: var(--color-ink-3); }
 html.ui-v7 .ms-rail-mark { background: var(--color-brand-soft); color: var(--color-brand); }
 html.ui-v7 :is(.cx-tab.is-on, .cx-tab[aria-selected="true"], .ms-chipbar:not(.is-wrap) > :is(.ms-chip, .ms-fchip):is(.is-on, [aria-checked="true"]), .ms-chip.is-on) { background: var(--color-accent-soft); color: var(--color-accent); }
 html.ui-v7 :is(.cx-tab, .ms-chipbar:not(.is-wrap) > :is(.ms-chip, .ms-fchip), .ms-chip) { box-shadow: inset 0 0 0 1px var(--color-line); }

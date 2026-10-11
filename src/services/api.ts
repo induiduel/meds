@@ -1,13 +1,12 @@
 import { FIREBASE_DB_ENABLED } from './dbFlags';
-import { Committee, QuestionItem, MemoryFragment, QuestionOption, ReconstructedQuestion, PastQuestionReviewRecord } from '../types';
+import { Committee, QuestionItem, MemoryFragment, ReconstructedQuestion, PastQuestionReviewRecord } from '../types';
 import { FirestoreDbService, INITIAL_COMMITTEES, COMMITTEE_SORT_ORDER, filterCurrent2026_2027Committees, db } from './firestoreDb';
 import { multiDbManager } from './multiDbManager';
 import { SupabaseDbService, getSupabaseClient } from './supabaseDb';
 import { pastQuestionsCache } from './pastQuestionsCache';
 import { offlineDatabaseService } from './offlineDatabaseService';
-import { collection, addDoc, doc, setDoc } from 'firebase/firestore';
+import { collection, addDoc } from 'firebase/firestore';
 import { ADMIN_EMAIL, getLocalAdminSession } from './auth';
-import { systemHealthMonitor } from './systemHealthMonitor';
 import { defaultApiBaseForThisHost } from '../config/deployment';
 import { BUNDLED_SCRIPTS, BUNDLED_PIPELINES } from '../data/bundledScripts';
 import {
@@ -313,7 +312,7 @@ export async function safeJsonFetch<T = any>(
           errMsg = errObj.error || errObj.message || errMsg;
         } catch (_) {}
       } else if (res.status === 405) {
-        errMsg = 'Statik barındırma ortamı (HTTP 405 Method Not Allowed - GitHub Pages). İstemci modu veya yedek veritabanı devreye alınıyor.';
+        errMsg = 'Statik barındırma ortamı (HTTP 405 Method Not Allowed). İstemci modu veya yedek veritabanı devreye alınıyor.';
       } else {
         errMsg = `Uç nokta bulunamadı veya statik sayfa döndü (HTTP ${res.status})`;
       }
@@ -2128,7 +2127,7 @@ export const ApiService = {
       const res = await fetch('/api/lecture-notes');
       if (res.ok) return await res.json();
     } catch (e) {
-      // Fallback for static environments (e.g. GitHub Pages)
+      // Statik/çevrimdışı ortam yedeği
     }
     // MultiDbManager with automatic Supabase failover
     try {
@@ -2515,7 +2514,7 @@ export const ApiService = {
       console.warn('[commentPastQuestion] Server çağrısı başarısız, Firestore yedeğine geçiliyor:', e);
     }
 
-    // 2. Direct Firestore fallback (Guarantees zero 405 error on GitHub Pages!)
+    // 2. Direct Firestore fallback (sunucuya ulaşılamazsa)
     try {
       const commentObj = {
         id: `c-${Date.now()}-${Math.random().toString(36).substring(2, 6)}`,
@@ -2667,7 +2666,7 @@ export const ApiService = {
       console.warn('[reportPastQuestion] Server çağrısı başarısız, doğrudan buluta geçiliyor:', e);
     }
 
-    // 2. Direct Supabase save (Garanti: GitHub Pages ve sunucusuz ortamlarda da Supabase'e anında yazar!)
+    // 2. Direct Supabase save (sunucuya ulaşılamazsa Supabase'e yazar)
     try {
       await SupabaseDbService.reportPastQuestion(questionId, {
         id: reportObj.id,
@@ -3173,7 +3172,7 @@ export const ApiService = {
       }
     } catch (_) {}
 
-    // 2. Direct Firestore Cloud save (Guarantees success on GitHub Pages)
+    // 2. Direct Firestore Cloud save (sunucuya ulaşılamazsa)
     try {
       await FirestoreDbService.logAdminNotification({
         id: reportObj.id,
@@ -3238,7 +3237,7 @@ export const ApiService = {
       }
     } catch (_) {}
 
-    // 2. Direct Firestore Cloud save (Guarantees success on GitHub Pages)
+    // 2. Direct Firestore Cloud save (sunucuya ulaşılamazsa)
     try {
       await FirestoreDbService.logAdminNotification({
         id: reportObj.id,
@@ -3865,7 +3864,7 @@ export const ApiService = {
       return res.data;
     }
 
-    // 2. Cloud Fallback via Firestore (Guarantees working on GitHub Pages without mixed-content errors!)
+    // 2. Cloud Fallback via Firestore (sunucuya ulaşılamazsa)
     try {
       const cloudHeartbeat = await FirestoreDbService.getWorkerHeartbeat();
       if (cloudHeartbeat) {

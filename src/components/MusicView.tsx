@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import {
-  Music,
   Play,
   Pause,
   SkipBack,

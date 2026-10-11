@@ -2,9 +2,34 @@ import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { observeScrollReveal } from '../../../utils/scrollReveal';
 import { DeckNotePanel } from './DeckNotePanel';
 import {
-  BookOpen, Check, Eraser, Hand, Highlighter, PenLine, ChevronDown, ChevronLeft, ChevronRight, Columns, EyeOff, FileDown, FileText, GalleryHorizontal, History,
-  Info, LayoutPanelLeft, ListTree, Lock, Maximize2, MessageCircleQuestion, Minimize2, MoreHorizontal, NotebookText, NotebookPen,
-  PanelsTopLeft, Rows3, Search, Sparkles, X,
+  BookOpen,
+  Check,
+  Eraser,
+  Hand,
+  Highlighter,
+  PenLine,
+  ChevronDown,
+  ChevronLeft,
+  ChevronRight,
+  Columns,
+  EyeOff,
+  FileDown,
+  FileText,
+  GalleryHorizontal,
+  Info,
+  LayoutPanelLeft,
+  ListTree,
+  Maximize2,
+  MessageCircleQuestion,
+  Minimize2,
+  MoreHorizontal,
+  NotebookText,
+  NotebookPen,
+  PanelsTopLeft,
+  Rows3,
+  Search,
+  Sparkles,
+  X,
 } from 'lucide-react';
 import type { InteractiveDeck } from '../InteractiveDeckView';
 import { AskAi, GlobalTopicSearchModal, SpotList } from '../InteractiveDeckView';
@@ -332,10 +357,9 @@ export interface LessonPlayerProps {
   onExportPdf?: (slideNumber: number) => void;
   focus?: QuestionFocus | null;
   onClearFocus?: () => void;
-  onClassic?: () => void;
 }
 
-export const LessonPlayer: React.FC<LessonPlayerProps> = ({ deck, startAt, initialViewMode = 'interactive', onProgress, onClose, onExportPdf, focus, onClearFocus, onClassic }) => {
+export const LessonPlayer: React.FC<LessonPlayerProps> = ({ deck, startAt, initialViewMode = 'interactive', onProgress, onClose, onExportPdf, focus, onClearFocus }) => {
   const steps = useMemo(() => buildSteps(deck), [deck]);
   const sections = useMemo(() => buildSections(steps), [steps]);
   const n = steps.length;
@@ -781,11 +805,6 @@ export const LessonPlayer: React.FC<LessonPlayerProps> = ({ deck, startAt, initi
               {onExportPdf && (
                 <button type="button" role="menuitem" className="ls-tools-item" onClick={() => { setToolsOpen(false); if (document.fullscreenElement) document.exitFullscreen?.().catch(() => {}); onExportPdf(step.slide.slideNumber); }}>
                   <FileDown aria-hidden /> <span>Bu adımı PDF yap</span>
-                </button>
-              )}
-              {onClassic && (
-                <button type="button" role="menuitem" className="ls-tools-item" onClick={() => { setToolsOpen(false); onClassic(); }}>
-                  <History aria-hidden /> <span>Klasik görünüm<small>Önceki slayt ekranı</small></span>
                 </button>
               )}
             </div>

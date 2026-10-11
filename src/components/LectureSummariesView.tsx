@@ -1,24 +1,13 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { disciplineClass, disciplineLabel } from '../utils/discipline';
 import { PageHeader } from './ui/PageHeader';
-import { 
-  BookOpen, 
-  Search, 
-  Filter, 
-  FileText, 
-  ExternalLink, 
-  Copy, 
-  Check, 
-  Clock, 
-  Sparkles, 
-  AlertTriangle, 
-  ChevronRight, 
-  X, 
-  Printer, 
+import {
+  Search,
+  Clock,
+  ChevronRight,
+  X,
   Download,
   GraduationCap,
-  BookMarked,
-  Layers
 } from 'lucide-react';
 import summariesMetaData from '../data/summaries_meta.json';
 // Resmi ders programı + kaynak PDF eşleşmesi: scripts/pipeline/10-enrich-summaries.mjs üretir
@@ -74,16 +63,6 @@ const KURUL_LABELS: Record<number, string> = {
   4: 'Kurul 4: Dolaşım, Solunum & Tümör',
   5: 'Kurul 5: Ortopedi, Travma & Hematopoetik',
   6: 'Kurul 6: Endokrin & Yaşlanma',
-};
-
-const DISCIPLINE_COLORS: Record<string, { bg: string; text: string; border: string }> = {
-  'Tıbbi Farmakoloji': { bg: 'bg-ok-soft', text: 'text-ok', border: 'border-ok/30' },
-  'Tıbbi Patoloji': { bg: 'bg-bad-soft', text: 'text-bad-text', border: 'border-bad/30' },
-  'Tıbbi Mikrobiyoloji': { bg: 'bg-warn-soft', text: 'text-warn', border: 'border-warn/30' },
-  'Tıbbi Genetik': { bg: 'bg-accent-soft', text: 'text-accent', border: 'border-accent/30' },
-  'Halk Sağlığı': { bg: 'bg-accent-soft', text: 'text-accent', border: 'border-accent/30' },
-  'Tıbbi Biyokimya': { bg: 'bg-ai-soft', text: 'text-ai', border: 'border-ai/30' },
-  'İç Hastalıkları': { bg: 'bg-accent-soft', text: 'text-accent', border: 'border-accent/30' },
 };
 
 export const LectureSummariesView: React.FC<LectureSummariesViewProps> = ({ onOpenPdfModal, initialSummaryId }) => {
@@ -162,7 +141,7 @@ export const LectureSummariesView: React.FC<LectureSummariesViewProps> = ({ onOp
       }
     } catch (_) {}
 
-    // 2. Fallback to dynamic per-committee chunk import for GitHub Pages / offline
+    // 2. Fallback to dynamic per-committee chunk import for offline
     try {
       let kurulMod: any;
       switch (meta.kurul) {
@@ -226,18 +205,6 @@ export const LectureSummariesView: React.FC<LectureSummariesViewProps> = ({ onOp
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [initialSummaryId, summaries]);
-
-
-  const handleCopyMarkdown = () => {
-    if (!activeSummary?.content) return;
-    navigator.clipboard.writeText(activeSummary.content);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
-  };
-
-  const handlePrint = () => {
-    window.print();
-  };
 
   return (
     <div className="flex flex-col gap-3 sm:gap-5 min-w-0">

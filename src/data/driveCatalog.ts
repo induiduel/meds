@@ -1,4 +1,4 @@
-import { LectureNote } from '../types';
+
 
 export interface DriveSlideMeta {
   id: string;

@@ -43,7 +43,7 @@
 ## 2. Oracle makine bilgileri
 
 - IP: `92.5.55.109` · OS: Ubuntu 24.04.5 LTS (aarch64, Ampere) · RAM ~12GB
-- SSH: `ssh -i /home/indu/medsor/ssh-key1.key ubuntu@92.5.55.109` (anahtar `chmod 400`)
+- SSH: `ssh -i ~/.ssh/medsor-oracle.key ubuntu@92.5.55.109` (anahtar `chmod 400`)
 - Ağ: VCN `medsoru-vcn` → subnet `public-subnet-1` (public) → route table
   `public-rt` (`0.0.0.0/0 → gateway1`) → security list ingress **22/80/443**
 - Docker 29.9.0 + Compose v5.6.0 (resmi repo). `ubuntu` kullanıcısı docker grubunda.
@@ -55,7 +55,7 @@
 > Bu yüzden her komutta `--env-file /home/ubuntu/medsor/meds/.env` ŞART.
 
 ```bash
-ssh -i ~/ssh-key1.key ubuntu@92.5.55.109   # önce bağlan (aşağıdakiler Oracle içinde)
+ssh -i ~/.ssh/medsor-oracle.key ubuntu@92.5.55.109   # önce bağlan (aşağıdakiler Oracle içinde)
 
 cd /home/ubuntu/medsor/meds
 C="docker compose --env-file /home/ubuntu/medsor/meds/.env -f deploy/oracle/docker-compose.oracle.yml"
@@ -86,7 +86,7 @@ rsync -avz --exclude='/node_modules' --exclude='/dist' --exclude='/dist-gh' \
  --exclude='/linux' --exclude='.venv*' --exclude='__pycache__' --exclude='*.log' \
  --exclude='/supabase-server/volumes' --exclude='/supabase-server/backups' \
  --exclude='/cloudflared.exe' --exclude='src/data/decks/items' --exclude='/.env' \
- -e "ssh -i /home/indu/medsor/ssh-key1.key" \
+ -e "ssh -i ~/.ssh/medsor-oracle.key" \
  /home/indu/medsor/meds/ ubuntu@92.5.55.109:/home/ubuntu/medsor/meds/
 ```
 > **`.env` ASLA ezilmez:** Oracle `.env` dosyasına token + yol düzeltmeleri işlendi;

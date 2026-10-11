@@ -2,46 +2,30 @@ import React, { useState, useEffect, useMemo, useCallback, Suspense } from 'reac
 import { logActivity } from './services/activityLog';
 import { getVoterId, toggledVote } from './utils/voterId';
 import { AppRoute, parseLocation, writeLocation, pathFor, ROUTE_TITLES } from './router';
-import { 
-  Stethoscope, 
-  Sparkles, 
-  Plus, 
-  RefreshCw, 
-  AlertCircle, 
-  BookOpen, 
-  Layers, 
-  Printer, 
-  Brain, 
-  HelpCircle,
-  FolderPlus,
-  Cloud,
+import {
+  Sparkles,
+  Plus,
   CheckCircle2,
   ExternalLink,
   ShieldCheck,
-  Zap,
-  FileText,
   BrainCircuit,
   Share2,
-  ChevronRight
+  ChevronRight,
 } from 'lucide-react';
 import { Committee, QuestionItem, QuestionLectureMatch } from './types';
-import { Header } from './components/Header';
 import { MetricsBar } from './components/MetricsBar';
 import { QuestionCard } from './components/QuestionCard';
 import { QuickAddHero, committeeShortLabel, questionStemText } from './components/QuickAddHero';
-import { MobileBottomNav } from './components/MobileBottomNav';
 import { MusicPlayerProvider } from './components/music/MusicPlayerContext';
 import { MiniMusicPlayer } from './components/music/MiniMusicPlayer';
-import { AppRail } from './components/AppRail';
 import { SideNav } from './components/shell/SideNav';
 import { TopBar } from './components/shell/TopBar';
 import { TabBar } from './components/shell/TabBar';
-import { useUiVersion } from './utils/uiVersion';
 import { ConfirmHost, confirmDialog } from './components/ui/ConfirmDialog';
 import { PageHeader } from './components/ui/PageHeader';
 import { LearnFab } from './components/learn/LearnFab';
-import { SplashScreen, Onboarding } from './components/onboarding/Onboarding';
-import { SectionLoader, PageLoader } from './components/ui/Animations';
+import { Onboarding } from './components/onboarding/Onboarding';
+import { PageLoader } from './components/ui/Animations';
 import { ToastHost, toast } from './components/ui/Toast';
 import { TooltipHost } from './components/ui/TooltipHost';
 import { OfflineDatabaseModal } from './components/pwa/OfflineDatabaseModal';
@@ -112,12 +96,10 @@ const AdminPanelModal = React.lazy(() => wrapLazy(import('./components/AdminPane
 const ExamPdfModal = React.lazy(() => wrapLazy(import('./components/ExamPdfModal').then(m => ({ default: m.ExamPdfModal }))));
 const ContributeModal = React.lazy(() => wrapLazy(import('./components/ContributeModal').then(m => ({ default: m.ContributeModal }))));
 const AddCommitteeModal = React.lazy(() => wrapLazy(import('./components/AddCommitteeModal').then(m => ({ default: m.AddCommitteeModal }))));
-const GithubPagesGuideModal = React.lazy(() => wrapLazy(import('./components/GithubPagesGuideModal').then(m => ({ default: m.GithubPagesGuideModal }))));
 const AuthErrorModal = React.lazy(() => wrapLazy(import('./components/AuthErrorModal').then(m => ({ default: m.AuthErrorModal }))));
 const DriveSaveModal = React.lazy(() => wrapLazy(import('./components/DriveSaveModal').then(m => ({ default: m.DriveSaveModal }))));
 const UserAuthModal = React.lazy(() => wrapLazy(import('./components/UserAuthModal').then(m => ({ default: m.UserAuthModal }))));
 const ProfileSettingsView = React.lazy(() => wrapLazy(import('./components/settings/ProfileSettingsView').then(m => ({ default: m.ProfileSettingsView }))));
-const UserProfileModal = React.lazy(() => wrapLazy(import('./components/UserProfileModal').then(m => ({ default: m.UserProfileModal }))));
 const EditMyQuestionModal = React.lazy(() => wrapLazy(import('./components/EditMyQuestionModal').then(m => ({ default: m.EditMyQuestionModal }))));
 const RevisionHistoryModal = React.lazy(() => wrapLazy(import('./components/RevisionHistoryModal').then(m => ({ default: m.RevisionHistoryModal }))));
 const AdminPastExamImporterModal = React.lazy(() => wrapLazy(import('./components/AdminPastExamImporterModal').then(m => ({ default: m.AdminPastExamImporterModal }))));
@@ -125,7 +107,6 @@ const AiQuestionOptimizerModal = React.lazy(() => wrapLazy(import('./components/
 const NotebookLMSyncModal = React.lazy(() => wrapLazy(import('./components/NotebookLMSyncModal').then(m => ({ default: m.NotebookLMSyncModal }))));
 const SubagentMonitorModal = React.lazy(() => wrapLazy(import('./components/SubagentMonitorModal').then(m => ({ default: m.SubagentMonitorModal }))));
 const SystemDiagnosticsModal = React.lazy(() => wrapLazy(import('./components/SystemDiagnosticsModal').then(m => ({ default: m.SystemDiagnosticsModal }))));
-const AiQuotaAlertModal = React.lazy(() => wrapLazy(import('./components/AiQuotaAlertModal').then(m => ({ default: m.AiQuotaAlertModal }))));
 const LectureSummariesView = React.lazy(() => wrapLazy(import('./components/LectureSummariesView').then(m => ({ default: m.LectureSummariesView }))));
 const TranscriptionsView = React.lazy(() => wrapLazy(import('./components/TranscriptionsView').then(m => ({ default: m.TranscriptionsView }))));
 const FlashcardsView = React.lazy(() => wrapLazy(import('./components/flashcards/FlashcardsView').then(m => ({ default: m.FlashcardsView }))));
@@ -140,19 +121,17 @@ import { systemHealthMonitor } from './services/systemHealthMonitor';
 import { ApiService } from './services/api';
 import type { QuestionFocus } from './services/questionFocus';
 import { multiDbManager } from './services/multiDbManager';
-import { 
-  initAuth, 
-  googleSignIn, 
-  logout, 
-  isAdminUser, 
-  ADMIN_EMAIL, 
-  getAccessToken,
+import {
+  initAuth,
+  googleSignIn,
+  logout,
+  isAdminUser,
+  ADMIN_EMAIL,
   getLocalAdminSession,
-  setLocalAdminSession,
   clearLocalAdminSession,
   safeStorage,
   updateUserProfileData,
-  AppUser
+  AppUser,
 } from './services/auth';
 import { getDefaultActiveCommitteeId, filterCurrent2026_2027Committees } from './services/firestoreDb';
 import { 
@@ -203,8 +182,6 @@ export default function App() {
   const [activeTab, setActiveTabState] = useState<ValidAppTab>(initialRoute.route);
   // Havuz derin bağlantısı: /sorular/<soruId> — o soru listenin başında gösterilir ve odaklanır.
   const [poolFocusId, setPoolFocusId] = useState<string | undefined>(initialRoute.route === 'questions' ? initialRoute.param : undefined);
-  // v8 kabuğu yeni tasarımda; klasik tasarım (v2) eski üst çubuk, ray ve alt menüyle kalır
-  const { isV7: shellV8 } = useUiVersion();
   const setActiveTab = useCallback((tab: ValidAppTab) => {
     setActiveTabState(tab);
     writeLocation(tab);
@@ -235,7 +212,6 @@ export default function App() {
   // Modals state
   const [isContributeModalOpen, setIsContributeModalOpen] = useState(false);
   const [isNewCommitteeModalOpen, setIsNewCommitteeModalOpen] = useState(false);
-  const [isGithubPagesModalOpen, setIsGithubPagesModalOpen] = useState(false);
   const [isAuthErrorModalOpen, setIsAuthErrorModalOpen] = useState(false);
   const [isDriveModalOpen, setIsDriveModalOpen] = useState(false);
   const [isPdfModalOpen, setIsPdfModalOpen] = useState(false);
@@ -244,7 +220,6 @@ export default function App() {
   const [isNotebookLMModalOpen, setIsNotebookLMModalOpen] = useState(false);
   const [isSubagentMonitorOpen, setIsSubagentMonitorOpen] = useState(false);
   const [isDiagnosticsOpen, setIsDiagnosticsOpen] = useState(false);
-  const [isAiQuotaModalOpen, setIsAiQuotaModalOpen] = useState(false);
   const [isOfflineModalOpen, setIsOfflineModalOpen] = useState(false);
   const [isOnline, setIsOnline] = useState(typeof navigator !== 'undefined' ? navigator.onLine : true);
   const [contributeDefaultNumber, setContributeDefaultNumber] = useState<number | undefined>(undefined);
@@ -267,7 +242,6 @@ export default function App() {
     }
   });
   // İlk açılış: HTML splash ekranı (MeDSor nabız animasyonu) ilk andan itibaren görünür; React hazır olunca tek hamlede solar
-  const [showSplash, setShowSplash] = useState(false);
   const [showOnboarding, setShowOnboarding] = useState(() => isAuthModalOpen);
   const [isPwaWelcomeOpen, setIsPwaWelcomeOpen] = useState(false);
   const [showClusterModal, setShowClusterModal] = useState(false);
@@ -288,7 +262,7 @@ export default function App() {
 
   // Site açılışında PWA & Çevrimdışı Veritabanı Kurulum Önerisi
   useEffect(() => {
-    if (showSplash || showOnboarding) return;
+    if (showOnboarding) return;
     if (pwaService.isStandalone()) return;
 
     try {
@@ -307,7 +281,7 @@ export default function App() {
     }, 1200);
 
     return () => clearTimeout(timer);
-  }, [showSplash, showOnboarding]);
+  }, [showOnboarding]);
   const [justAddedId, setJustAddedId] = useState<string | null>(null);
   const [searchPageQuery, setSearchPageQuery] = useState<string>(() => (initialRoute.route === 'search' ? initialRoute.param || '' : ''));
   const [openSummaryId, setOpenSummaryId] = useState<string | undefined>(undefined);
@@ -320,7 +294,6 @@ export default function App() {
     window.scrollTo({ top: 0 });
   }, []);
   const [authModalInitialMode, setAuthModalInitialMode] = useState<'login' | 'register' | 'admin'>('register');
-  const [isProfileModalOpen, setIsProfileModalOpen] = useState(false);
   const [isEditQuestionModalOpen, setIsEditQuestionModalOpen] = useState(false);
   const [selectedQuestionToEdit, setSelectedQuestionToEdit] = useState<QuestionItem | null>(null);
   const [isHistoryModalOpen, setIsHistoryModalOpen] = useState(false);
@@ -1170,7 +1143,6 @@ export default function App() {
   return (
     <GlossaryProvider>
     <MusicPlayerProvider>
-      {showSplash && <SplashScreen onDone={() => setShowSplash(false)} />}
       {showOnboarding && !currentUser && <Onboarding onAuthSuccess={handleAuthSuccess} />}
       <div className="min-h-dvh bg-canvas text-ink flex flex-col font-sans antialiased">
       <ToastHost />
@@ -1242,14 +1214,9 @@ export default function App() {
         )
       ) : (
       <>
-      {/* v3 shell: icon rail on tablet/desktop, bottom tabs on phones */}
-      {shellV8 ? (
-        <SideNav active={activeTab} onGo={setActiveTab} isAdmin={isAdmin} user={currentUser} />
-      ) : (
-        <AppRail activeTab={activeTab} setActiveTab={setActiveTab} isAdmin={isAdmin} />
-      )}
-      <div className={shellV8 ? 'sh-app' : 'ms-shell md:pl-[76px] lg:pl-[208px] flex-1 flex flex-col min-w-0'}>
-      {shellV8 ? (
+      {/* v8 kabuğu: masaüstü/tablette yan menü, telefonda alt sekmeler */}
+      <SideNav active={activeTab} onGo={setActiveTab} isAdmin={isAdmin} user={currentUser} />
+      <div className="sh-app">
         <TopBar
           active={activeTab}
           onGo={setActiveTab}
@@ -1292,74 +1259,16 @@ export default function App() {
               : undefined,
           }}
         />
-      ) : (
-      <Header
-        searchQuery={searchQuery}
-        onSearch={(q, focusId) => openSearchPage(q, focusId)}
-        committees={committees}
-        selectedCommitteeId={selectedCommitteeId}
-        onSelectCommittee={(id) => setSelectedCommitteeId(id)}
-        activeTab={activeTab}
-        setActiveTab={setActiveTab}
-        onOpenContributeModal={() => {
-          setContributeDefaultNumber(undefined);
-          setIsContributeModalOpen(true);
-        }}
-        onOpenNewCommitteeModal={isAdmin ? () => setIsNewCommitteeModalOpen(true) : () => {}}
-        onOpenAdminPanel={isAdmin ? () => setActiveTab('admin') : () => {}}
-        onOpenPastExamModal={isAdmin ? () => setIsPastExamImporterOpen(true) : undefined}
-        onOpenNotebookLMModal={isAdmin ? () => setIsNotebookLMModalOpen(true) : undefined}
-        onOpenSubagentMonitor={isAdmin ? () => setIsSubagentMonitorOpen(true) : undefined}
-        onOpenProfileModal={() => setActiveTab('settings')}
-        onOpenAuthModal={(m) => {
-          setAuthModalInitialMode(m);
-          setIsAuthModalOpen(true);
-        }}
-        completedCount={completedQuestions.length}
-        totalCount={questions.length}
-        targetCount={targetCount}
-        currentUser={currentUser}
-        isAdmin={isAdmin}
-        onLogin={() => {
-          setAuthModalInitialMode('login');
-          setIsAuthModalOpen(true);
-        }}
-        onLogout={handleGoogleLogout}
-        isLoggingIn={isLoggingIn}
-        onUploadToDrive={() => handleDriveUpload(false)}
-        isUploadingToDrive={isUploadingToDrive}
-        driveLastUploadedLink={driveUploadSuccess?.webViewLink || null}
-        onOpenPdfModal={() => setIsPdfModalOpen(true)}
-        onOpenDiagnostics={isAdmin ? () => setIsDiagnosticsOpen(true) : undefined}
-        onOpenOfflineModal={() => setIsOfflineModalOpen(true)}
-      />
-      )}
 
-      {!isOnline && shellV8 && (
+      {!isOnline && (
         <div className="sh-offline" role="status">
           <i aria-hidden="true" />
           <span><b>Çevrimdışısın.</b> Sorular ve desteler cihazdaki kopyadan açılıyor.</span>
           <button type="button" onClick={() => setIsOfflineModalOpen(true)}>Veritabanı</button>
         </div>
       )}
-      {!isOnline && !shellV8 && (
-        <div className="bg-warn/15 border-b border-warn/30 px-4 py-2.5 text-xs flex items-center justify-between text-warn dark:text-amber-200">
-          <div className="flex items-center gap-2">
-            <span className="w-2 h-2 rounded-full bg-warn animate-pulse shrink-0" />
-            <span><strong>Çevrimdışı Mod:</strong> İnternet bağlantısı yok. Sorular ve desteler cihazınızın yerel belleğinden sunuluyor.</span>
-          </div>
-          <button
-            type="button"
-            onClick={() => setIsOfflineModalOpen(true)}
-            className="underline font-semibold hover:text-warn dark:hover:text-amber-100 cursor-pointer shrink-0 ml-2"
-          >
-            Veritabanı
-          </button>
-        </div>
-      )}
-
       {/* Main Container */}
-      <main key={activeTab} className={shellV8 ? `sh-main ms-view-enter ${activeTab === 'ai_chat' ? 'ms-chat-main' : ''}` : `ms-view-enter min-w-0 flex-1 max-w-[1180px] w-full mx-auto px-4 sm:px-5 lg:px-6 pt-3 sm:pt-4 flex flex-col gap-3 ${activeTab === 'ai_chat' ? 'ms-chat-main pb-[84px] md:pb-4' : 'pb-24 md:pb-8'}`}>
+      <main key={activeTab} className={`sh-main ms-view-enter ${activeTab === 'ai_chat' ? 'ms-chat-main' : ''}`}>
 
         {/* Drive Upload Notification Banner if successful */}
         {driveUploadSuccess && (
@@ -1911,52 +1820,14 @@ export default function App() {
 
       </main>
 
-      {/* Footer */}
-      <footer className="hidden border-t border-line bg-white print:hidden">
-        <div className="max-w-[1280px] mx-auto px-4 sm:px-8 py-5 flex flex-col sm:flex-row sm:justify-between gap-3 text-sm text-ink-3">
-          <span>
-            MeDSor · Tıp Dönem 3 kurul soru havuzu
-            {currentUser ? ` · ${currentUser.email}${isAdmin ? ' (yönetici)' : ''}` : ''}
-          </span>
-          <span className="flex flex-wrap gap-5">
-            <button type="button" onClick={() => { setContributeDefaultNumber(undefined); setIsContributeModalOpen(true); }} className="text-ink-2 hover:text-accent cursor-pointer">Katkı yap</button>
-            <a href="/sartlar" target="_blank" rel="noopener noreferrer" className="text-ink-2 hover:text-accent">Şartlar</a>
-            <a href="/policy" target="_blank" rel="noopener noreferrer" className="text-ink-2 hover:text-accent">Gizlilik</a>
-            {isAdmin && (
-              <button type="button" onClick={() => setActiveTab('admin')} className="text-ink-2 hover:text-accent cursor-pointer">Yönetim</button>
-            )}
-            {isAdmin && (
-              <button type="button" onClick={() => setActiveTab('manage')} className="text-ink-2 hover:text-accent cursor-pointer">Yönetim Konsolu</button>
-            )}
-          </span>
-        </div>
-      </footer>
-
-      {/* Alt gezinme: v8 TabBar, klasik tasarımda eski alt menü */}
-      {shellV8 ? (
-        <TabBar
-          active={activeTab}
-          onGo={setActiveTab}
-          isAdmin={isAdmin}
-          onPdf={() => setIsPdfModalOpen(true)}
-          onOffline={() => setIsOfflineModalOpen(true)}
-        />
-      ) : (
-      <MobileBottomNav
-        activeTab={activeTab}
-        setActiveTab={setActiveTab}
-        questionsCount={questions.length}
+      {/* Alt gezinme (telefon) */}
+      <TabBar
+        active={activeTab}
+        onGo={setActiveTab}
         isAdmin={isAdmin}
-        onOpenContributeModal={() => {
-          setContributeDefaultNumber(undefined);
-          setIsContributeModalOpen(true);
-        }}
-        onOpenPdfModal={() => setIsPdfModalOpen(true)}
-        onOpenAdminPanel={() => setActiveTab('admin')}
-        onUploadToDrive={() => handleDriveUpload(false)}
-        onOpenOfflineModal={() => setIsOfflineModalOpen(true)}
+        onPdf={() => setIsPdfModalOpen(true)}
+        onOffline={() => setIsOfflineModalOpen(true)}
       />
-      )}
       </div>
       </>
       )}
@@ -1984,15 +1855,6 @@ export default function App() {
             isOpen={isNewCommitteeModalOpen}
             onClose={() => setIsNewCommitteeModalOpen(false)}
             onAddCommittee={handleAddCommittee}
-          />
-        </Suspense>
-      )}
-
-      {isGithubPagesModalOpen && (
-        <Suspense fallback={null}>
-          <GithubPagesGuideModal
-            isOpen={isGithubPagesModalOpen}
-            onClose={() => setIsGithubPagesModalOpen(false)}
           />
         </Suspense>
       )}
@@ -2068,17 +1930,6 @@ export default function App() {
         </Suspense>
       )}
 
-      {/* Yapay Zeka (AI) Quota & Rate Limit Exceeded Modal */}
-      {isAdmin && isAiQuotaModalOpen && (
-        <Suspense fallback={null}>
-          <AiQuotaAlertModal
-            isOpen={isAiQuotaModalOpen}
-            onClose={() => setIsAiQuotaModalOpen(false)}
-            onRetry={fetchQuestions}
-          />
-        </Suspense>
-      )}
-
       {/* Çevrimdışı Veritabanı & PWA Yönetim Modalı */}
       <OfflineDatabaseModal
         isOpen={isOfflineModalOpen}
@@ -2102,20 +1953,6 @@ export default function App() {
             initialMode={authModalInitialMode}
             mandatory={!currentUser}
             onAuthSuccess={handleAuthSuccess}
-          />
-        </Suspense>
-      )}
-
-      {/* User Profile & Student Number Modal */}
-      {isProfileModalOpen && currentUser && (
-        <Suspense fallback={null}>
-          <UserProfileModal
-            isOpen={isProfileModalOpen}
-            onClose={() => setIsProfileModalOpen(false)}
-            currentUser={currentUser}
-            onUpdateUser={(updated: AppUser) => setCurrentUser(updated)}
-            questions={questions}
-            onOpenAdminPanel={() => setActiveTab('admin')}
           />
         </Suspense>
       )}

@@ -5,25 +5,14 @@ import {
   FileText,
   CheckCircle2,
   AlertCircle,
-  AlertTriangle,
   ArrowRight,
   ArrowLeft,
-  Columns,
   Table,
   Sparkles,
   Edit3,
   Trash2,
-  RefreshCw,
   Search,
-  Filter,
   Check,
-  X,
-  Plus,
-  HelpCircle,
-  Download,
-  Copy,
-  Layers,
-  ChevronDown
 } from 'lucide-react';
 import { toast } from '../ui/Toast';
 

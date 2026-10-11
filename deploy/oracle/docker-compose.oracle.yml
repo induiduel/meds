@@ -17,6 +17,12 @@ services:
     image: medsoru-server:oracle
     container_name: meds-server
     restart: unless-stopped
+    # Always Free (2 OCPU / ~12GB): site + Supabase + embed aynı makinede; taşan bir süreç diğerlerini düşürmesin.
+    deploy:
+      resources:
+        limits:
+          cpus: "1.5"
+          memory: 3G
     ports:
       - "127.0.0.1:3000:3000"
     # Oracle local Supabase (envoy :8000) host ağında; konteyner içinden
@@ -73,7 +79,13 @@ services:
       - MEDS_EMBED_MODEL=BAAI/bge-m3
       - MEDS_EMBED_HOST=0.0.0.0
       - MEDS_EMBED_PORT=8094
-      - OMP_NUM_THREADS=4
+      - MEDS_EMBED_THREADS=2
+      - MEDS_EMBED_PRELOAD=1
+    deploy:
+      resources:
+        limits:
+          cpus: "1.0"
+          memory: 2800M
     volumes:
       - meds-embed-models:/models
     logging:

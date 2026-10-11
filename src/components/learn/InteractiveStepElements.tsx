@@ -3,7 +3,6 @@ import {
   HelpCircle,
   CheckCircle2,
   XCircle,
-  ArrowRight,
   Eye,
   EyeOff,
   Sparkles,
@@ -14,7 +13,7 @@ import {
   RotateCcw,
   Sliders,
   ChevronRight,
-  Network
+  Network,
 } from 'lucide-react';
 import { cleanWhy, SpotTheLie, SwipeMatching, FeatureBidding, VennGrid } from './lesson/LessonBlocks';
 

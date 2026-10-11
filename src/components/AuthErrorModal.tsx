@@ -1,23 +1,19 @@
 import React, { useState } from 'react';
-import { 
-  X, 
-  ShieldAlert, 
-  ExternalLink, 
-  Copy, 
-  Check, 
-  KeyRound, 
-  CheckCircle2, 
+import {
+  X,
+  ShieldAlert,
+  ExternalLink,
+  Copy,
+  KeyRound,
   Globe,
-  Sparkles,
-  ShieldCheck
+  ShieldCheck,
 } from 'lucide-react';
-import { 
-  ADMIN_EMAIL, 
-  FIREBASE_PROJECT_ID, 
-  FIREBASE_CONSOLE_URL, 
+import {
+  ADMIN_EMAIL,
+  FIREBASE_PROJECT_ID,
+  FIREBASE_CONSOLE_URL,
   setLocalAdminSession,
-  setCustomAccessToken,
-  AppUser
+  AppUser,
 } from '../services/auth';
 
 interface AuthErrorModalProps {
@@ -37,14 +33,8 @@ export const AuthErrorModal: React.FC<AuthErrorModalProps> = ({
 
   if (!isOpen) return null;
 
-  const currentHostname = typeof window !== 'undefined' ? window.location.hostname : 'induiduel.github.io';
-  const domainToAuthorize = currentHostname || 'induiduel.github.io';
-
-  const copyDomain = () => {
-    navigator.clipboard.writeText(domainToAuthorize);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
-  };
+  const currentHostname = typeof window !== 'undefined' ? window.location.hostname : 'nofrostlife.com.tr';
+  const domainToAuthorize = currentHostname || 'nofrostlife.com.tr';
 
   const handleBypassAdminLogin = () => {
     const user = setLocalAdminSession(ADMIN_EMAIL, tokenInput ? tokenInput.trim() : undefined);

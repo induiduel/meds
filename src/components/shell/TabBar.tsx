@@ -123,7 +123,7 @@ export const TabBar: React.FC<{
               </button>
               <a href={pathFor('settings')} onClick={linkClick(() => go('settings'))} className="ui-row has-icon sh-more-row" aria-current={active === 'settings' ? 'page' : undefined}>
                 <span className="ui-ico" style={{ '--ico-bg': NAV_ITEMS.settings.tint, '--ico-fg': '#fff' } as React.CSSProperties}><NAV_ITEMS.settings.icon strokeWidth={2.1} /></span>
-                <span className="ui-row-main"><b>Profil ve ayarlar</b><span>Palet, yoğunluk, fotoğraf, klasik tasarım</span></span>
+                <span className="ui-row-main"><b>Profil ve ayarlar</b><span>Palet, yoğunluk, fotoğraf</span></span>
                 <ChevronRight className="w-4 h-4 shrink-0" style={{ color: 'var(--color-line-2)' }} />
               </a>
               {onOffline && (

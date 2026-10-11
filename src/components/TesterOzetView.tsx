@@ -1,17 +1,14 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { PageHeader } from './ui/PageHeader';
-import { 
-  FileText, 
-  Sparkles, 
-  Search, 
-  RefreshCw, 
-  BookOpen, 
-  CheckCircle2, 
-  Copy, 
-  Check, 
-  ChevronRight,
-  ExternalLink,
-  Layers
+import {
+  Sparkles,
+  Search,
+  RefreshCw,
+  BookOpen,
+  CheckCircle2,
+  Copy,
+  Check,
+  Layers,
 } from 'lucide-react';
 import { safeJsonFetch } from '../services/api';
 

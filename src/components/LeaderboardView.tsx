@@ -1,27 +1,14 @@
 import React, { useState, useMemo, useLayoutEffect, useRef } from 'react';
-import { useUiVersion } from '../utils/uiVersion';
 import { Segmented } from './ui/kit';
 import { PageHeader } from './ui/PageHeader';
 import { EmptySearch } from './ui/Animations';
 import {
   ChevronDown,
-  Trophy, 
-  Medal, 
-  Award, 
-  Sparkles, 
-  User, 
-  ThumbsUp, 
-  FileText, 
-  CheckCircle2, 
-  ListFilter,
-  Shield,
-  HelpCircle,
-  Hash,
+  Sparkles,
   Search,
 } from 'lucide-react';
 import { QuestionItem, Committee } from '../types';
 import { AppUser } from '../services/auth';
-import { getCleanRumuz } from '../services/profanityFilter';
 import { computeContributorStats } from '../utils/contributionScore';
 
 interface LeaderboardViewProps {
@@ -44,7 +31,6 @@ export const LeaderboardView: React.FC<LeaderboardViewProps> = ({
 }) => {
   const [filterScope, setFilterScope] = useState<'current' | 'all'>('current');
   const [searchTerm, setSearchTerm] = useState('');
-  const { isV7 } = useUiVersion();
   const listRef = useRef<HTMLOListElement>(null);
   const lastPos = useRef<Map<string, number>>(new Map());
 
@@ -120,7 +106,7 @@ export const LeaderboardView: React.FC<LeaderboardViewProps> = ({
 
       {/* Kapsam + kurul */}
       <div className="ds-toolbar">
-        {isV7 ? (
+        {(
           <Segmented<'current' | 'all'>
             className="lb-scope"
             label="Kapsam"
@@ -128,19 +114,6 @@ export const LeaderboardView: React.FC<LeaderboardViewProps> = ({
             onChange={setFilterScope}
             options={[{ value: 'current', label: 'Bu kurul' }, { value: 'all', label: 'Tüm kurullar' }]}
           />
-        ) : (
-        <div role="radiogroup" aria-label="Kapsam" className="ds-seg">
-          {(
-            [
-              ['current', 'Bu kurul'],
-              ['all', 'Tüm kurullar'],
-            ] as const
-          ).map(([id, label]) => (
-            <button key={id} type="button" role="radio" aria-checked={filterScope === id} onClick={() => setFilterScope(id)}>
-              {label}
-            </button>
-          ))}
-        </div>
         )}
         {filterScope === 'current' && (
           <label className="ds-select is-wide">

@@ -4,7 +4,7 @@
 # Yöntem: pg_dump -t (yalnız rag_chunks) → restore --clean. Diğer tablolara dokunmaz.
 # Kullanım (cihazdan): ./deploy/oracle/sync-vectors.sh
 set -euo pipefail
-KEY="${SSH_KEY:-/home/indu/medsor/ssh-key1.key}"
+KEY="${SSH_KEY:-$HOME/.ssh/medsor-oracle.key}"
 ORACLE_USER="${ORACLE_USER:-ubuntu}"
 ORACLE_HOST="${ORACLE_HOST:?ORACLE_HOST tanımlı değil (export ORACLE_HOST=92.5.55.109)}"
 SSH="ssh -i $KEY -o StrictHostKeyChecking=no"

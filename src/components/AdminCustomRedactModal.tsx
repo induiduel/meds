@@ -6,16 +6,12 @@ import {
   AlertTriangle,
   BookOpen,
   FileText,
-  Send,
   RefreshCw,
   Sliders,
   Check,
-  GraduationCap,
-  Layers,
-  Cpu,
-  Lock
+  Lock,
 } from 'lucide-react';
-import { QuestionItem, ReconstructedQuestion, LectureNote } from '../types';
+import { QuestionItem, ReconstructedQuestion } from '../types';
 import { ApiService } from '../services/api';
 import { ADMIN_EMAIL } from '../services/auth';
 

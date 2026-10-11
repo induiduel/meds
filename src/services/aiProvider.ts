@@ -573,7 +573,7 @@ export async function callMuseSpark(
             headers['Authorization'] = `Bearer ${keyInfo.key}`;
           }
           if (baseUrl.includes('openrouter')) {
-            headers['HTTP-Referer'] = 'https://induiduel.github.io/meds';
+            headers['HTTP-Referer'] = 'https://nofrostlife.com.tr';
             headers['X-Title'] = 'MedSoru AI Medical Tutor';
           }
 

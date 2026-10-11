@@ -23,17 +23,6 @@ def acquire_lock():
         sys.exit(0)
 
 
-def ollama_up():
-    try:
-        import requests
-        requests.get(os.environ.get("OLLAMA_URL", "http://127.0.0.1:11434") + "/api/tags", timeout=10).raise_for_status()
-        return True
-    except Exception as e:
-        log.warning("Ollama API geçici olarak yanıt vermedi (%s), bekleniyor...", e)
-        time.sleep(3)
-        return False
-
-
 STAGE_LOCK = Path(os.environ.get("MEDS_TEMP_DIR") or Path(__file__).resolve().parents[3] / "meds_temp") / "state" / "asama_kilidi.lock"
 
 

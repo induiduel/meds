@@ -12,10 +12,10 @@
  * ==============================================================================
  */
 
-import { Committee, QuestionItem } from '../types';
-import { OFFICIAL_CURRICULUM_COMMITTEES, CurriculumCommittee } from '../data/curriculumData';
+
+import { OFFICIAL_CURRICULUM_COMMITTEES } from '../data/curriculumData';
 import { detectMedicalConcepts, MedicalConceptBank } from './draftClusteringService';
-import { foldTurkish, damerauLevenshtein, areWordsFuzzyEqual } from '../utils/fuzzyMatching';
+import { foldTurkish, areWordsFuzzyEqual } from '../utils/fuzzyMatching';
 
 export interface CommitteePrediction {
   committeeId: string;

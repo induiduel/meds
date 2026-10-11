@@ -46,7 +46,6 @@ const STORE_META = 'metadata';
 
 const KEY_LAST_SYNC = 'last_sync_timestamp';
 const KEY_TOTAL_COUNT = 'last_sync_count';
-const KEY_SYNC_SOURCE = 'last_sync_source';
 
 export interface CacheSyncStatus {
   isSyncing: boolean;
@@ -522,10 +521,7 @@ class PastQuestionsCacheService {
 
       // 2. YÖNTEM A: Yerel Node.js / Express Sunucusu Kontrolü (Hızlı ve Yerel)
       const customUrl = getCustomApiUrl();
-      const isGitHubPages = typeof window !== 'undefined' && window.location.hostname.includes('github.io');
-      const canTryLocalServer = !isGitHubPages || Boolean(customUrl);
-
-      if (canTryLocalServer) {
+      {
         try {
           const apiBase = customUrl || '';
           const syncUrl = `${apiBase}/api/past-exams/sync?since=${encodeURIComponent(lastSyncTime)}&count=${localCount}`;

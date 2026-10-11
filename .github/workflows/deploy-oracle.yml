@@ -4,7 +4,7 @@ name: Deploy code to Oracle VM
 # Oracle'da git klonu yok (deploy-code.sh ile aynı rsync yolu).
 # VERİ HARİÇ: data/ ve src/data/*.json cihazdaki çalışma kopyasından gelir
 # (deploy/oracle/deploy-code.sh veya sync-data.sh). Git'teki eski sürüm Oracle'ı ezmesin.
-# Gerekli Secrets: ORACLE_HOST (92.5.55.109), ORACLE_USER (ubuntu), ORACLE_SSH_KEY (ssh-key1.key içeriği)
+# Gerekli Secrets: ORACLE_HOST (92.5.55.109), ORACLE_USER (ubuntu), ORACLE_SSH_KEY (~/.ssh/medsor-oracle.key içeriği)
 on:
   push:
     branches: [main]

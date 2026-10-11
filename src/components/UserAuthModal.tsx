@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { Sheet } from './ui/Sheet';
-import { useUiVersion } from '../utils/uiVersion';
 import { X, AlertCircle, CheckCircle2, Eye, EyeOff, ShieldCheck, ArrowLeft, Loader2, Mail, Lock, User, Hash, Activity } from 'lucide-react';
 import { Segmented } from './ui/kit';
 import { registerWithEmailPassword, loginWithEmailPassword, googleSignIn, ADMIN_EMAIL, AppUser } from '../services/auth';
@@ -40,7 +39,6 @@ export const UserAuthModal: React.FC<UserAuthModalProps> = ({
   mandatory = false,
   embedded = false,
 }) => {
-  const { isV7 } = useUiVersion();
   const [mode, setMode] = useState<Mode>(initialMode);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -156,7 +154,7 @@ export const UserAuthModal: React.FC<UserAuthModalProps> = ({
   };
 
   const disabled = busy !== '' || Boolean(success);
-  const inSheet = isV7 && !embedded;
+  const inSheet = !embedded;
 
   /** Yüzen etiketli, ikonlu alan: boşken etiket yer tutucu gibi durur, odak/doluyken yukarı küçülür. */
   const field = (o: {

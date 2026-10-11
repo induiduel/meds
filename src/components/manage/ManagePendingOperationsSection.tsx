@@ -18,7 +18,6 @@ import {
   BookOpen,
   HelpCircle,
   ShieldCheck,
-  ArrowRight,
   ExternalLink,
   Layers,
   MapPin,

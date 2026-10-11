@@ -1,19 +1,13 @@
 import React, { useState, useEffect, useRef } from 'react';
 import {
   Cloud,
-  RefreshCw,
   CheckCircle2,
   AlertTriangle,
   Search,
   FileText,
-  Layers,
-  Settings,
   Terminal,
   ExternalLink,
   FolderOpen,
-  Clock,
-  Bell,
-  Play,
   Square,
   Copy,
   Sparkles,
@@ -21,7 +15,6 @@ import {
   ChevronUp,
   Check,
   FolderSync,
-  HelpCircle,
 } from 'lucide-react';
 import {
   ApiService,

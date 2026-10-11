@@ -153,6 +153,28 @@ function mapRowToPastQuestion(row: any): QuestionItem {
   };
 }
 
+// `past_question_reports` tablosu bulutta yok (bildiren e-postaları buluta çıkmasın diye bilerek uygulanmadı; Oracle/yerel
+// Supabase'de var). İlk "tablo yok" yanıtında oturum boyunca bir daha denenmez: her açılışta tekrarlanan 404'ler biter.
+const REPORTS_TABLE_KEY = 'medsoru_reports_table_missing_at';
+let reportsTableMissing = (() => {
+  try {
+    const at = Number(localStorage.getItem(REPORTS_TABLE_KEY) || 0);
+    return at > 0 && Date.now() - at < 24 * 60 * 60 * 1000; // 24 saatte bir yeniden denenir
+  } catch {
+    return false;
+  }
+})();
+const noteReportsTable = (error: any) => {
+  const msg = String(error?.message || '') + String(error?.code || '');
+  if (!/PGRST205|42P01|not find the table|does not exist|404/i.test(msg)) return;
+  reportsTableMissing = true;
+  try {
+    localStorage.setItem(REPORTS_TABLE_KEY, String(Date.now()));
+  } catch {
+    /* gizli pencere */
+  }
+};
+
 export const SupabaseDbService = {
   isConfigured(): boolean {
     const { url, key } = getSupabaseConfig();
@@ -601,8 +623,8 @@ export const SupabaseDbService = {
       }
 
       // 2. Also try inserting into dedicated past_question_reports table if it exists
-      try {
-        await client.from('past_question_reports').insert([cleanForPostgres({
+      if (!reportsTableMissing) try {
+        const { error: tblErr } = await client.from('past_question_reports').insert([cleanForPostgres({
           id: reportObj.id,
           question_id: questionId,
           reason: reportObj.reason,
@@ -611,8 +633,9 @@ export const SupabaseDbService = {
           status: 'pending',
           created_at: nowIso,
         })]);
+        noteReportsTable(tblErr);
       } catch (_) {
-        // Table might not exist yet; reports column in past_questions is the primary storage
+        // Tablo yoksa birincil depo past_questions.reports kolonudur
       }
 
       broadcastLiveEvent('past_question_reported', { questionId, report: reportObj });
@@ -653,8 +676,9 @@ export const SupabaseDbService = {
       }
 
       // 2. past_question_reports tablosundan da sil
-      try {
-        await client.from('past_question_reports').delete().eq('id', reportId);
+      if (!reportsTableMissing) try {
+        const { error: tblErr } = await client.from('past_question_reports').delete().eq('id', reportId);
+        noteReportsTable(tblErr);
       } catch (_) {}
 
       return { success: true };
@@ -701,12 +725,13 @@ export const SupabaseDbService = {
         await client.from('past_questions').update(updatePayload).eq('id', questionId);
       }
 
-      try {
-        await client.from('past_question_reports').update(cleanForPostgres({
+      if (!reportsTableMissing) try {
+        const { error: tblErr } = await client.from('past_question_reports').update(cleanForPostgres({
           reason: updates.reason,
           details: updates.details || '',
           updated_at: nowIso,
         })).eq('id', reportId);
+        noteReportsTable(tblErr);
       } catch (_) {}
 
       return { success: true };
@@ -792,12 +817,13 @@ export const SupabaseDbService = {
     if (!client) return [];
 
     // First try dedicated past_question_reports table
-    try {
+    if (!reportsTableMissing) try {
       const { data, error } = await client
         .from('past_question_reports')
         .select('*')
         .order('created_at', { ascending: false })
         .limit(limit);
+      noteReportsTable(error);
       if (!error && Array.isArray(data) && data.length > 0) {
         // Tablo satırları snake_case; yönetim ekranı camelCase alanlar bekler
         return data.map(normalizeReportRow);

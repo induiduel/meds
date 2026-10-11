@@ -6,17 +6,13 @@ import {
   CheckCircle2,
   Clock,
   Sparkles,
-  AlertTriangle,
   ExternalLink,
   ShieldCheck,
   User,
   Calendar,
-  FileText,
   BadgeCheck,
   Pencil,
   Trash2,
-  Check,
-  AlertCircle,
 } from 'lucide-react';
 import { QuestionItem } from '../types';
 import { AppUser, ADMIN_EMAIL } from '../services/auth';

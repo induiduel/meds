@@ -40,9 +40,7 @@ html.ui-v7 :is(.cx-search, .ms-qsearch, .lh-search, .ms-search-field, .rd-search
 .ms-qcard:has([aria-expanded="true"]) { z-index: 5; }
 
 /* 4 · Kabul edilen / doğru metni her temada okunur kalır. */
-.is-accepted,
-.cx-accepted,
-.text-accepted {
+.is-accepted {
   color: var(--color-ok);
 }
 
@@ -66,13 +64,6 @@ html.ui-v7 :is(.cx-search, .ms-qsearch, .lh-search, .ms-search-field, .rd-search
 .cx-dock.is-compact .cx-search { height: 36px; min-height: 36px; }
 .cx-dock.is-compact .cx-chips { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; }
 .cx-dock.is-compact .cx-chips::-webkit-scrollbar { display: none; }
-.cx-dock-more {
-  display: inline-flex; align-items: center; gap: 4px; flex-shrink: 0; height: 28px; padding: 0 8px; margin-right: 2px;
-  border: 0; border-radius: 8px; background: var(--color-accent-soft); color: var(--color-accent);
-  font: inherit; font-size: 12.5px; font-weight: 600; white-space: nowrap; cursor: pointer;
-}
-.cx-dock-more > svg { width: 14px; height: 14px; }
-@media (max-width: 479px) { .cx-dock-more > span, .cx-dock-more { font-size: 12px; } }
 @media (prefers-reduced-motion: reduce) { .cx-dock, .cx-dock > .cx-rail { transition: none; } }
 
 /* 7 · Akordiyon süzgeç bölümleri (FilterGroup) ve "Gelişmiş süzgeçler" anahtarı. */
@@ -148,7 +139,6 @@ html.ui-v7 :is(.cx-search, .ms-qsearch, .lh-search, .ms-search-field, .rd-search
   will-change: transform;
   backface-visibility: hidden;
 }
-.ds-flip .ds-flip-face { -webkit-backface-visibility: hidden; backface-visibility: hidden; transform-style: preserve-3d; }
 @media (prefers-reduced-motion: reduce) { .ds-flip { transition: opacity 120ms linear; } }
 
 /* 10 · Kaydırınca beliren içerik (Öğren başlıkları, tablolar). Görünür durumdan başlar; JS yoksa her şey görünür. */
@@ -383,7 +373,7 @@ html.ui-v7 :is(.cx-search, .ms-qsearch, .lh-search, .ms-search-field, .rd-search
 .qk-ib:hover { background: var(--color-field) !important; color: var(--color-ink); }
 .qk-ib.is-done, .qk-ib[aria-label="Kopyalandı"] { color: var(--color-ok); }
 .qk-ib svg { width: 16px; height: 16px; }
-.qk-h [aria-haspopup="menu"], .qk-h .ms-am-trigger { width: 32px !important; height: 32px !important; border: 0 !important; background: transparent !important; color: var(--color-ink-3) !important; }
+.qk-h [aria-haspopup="menu"] { width: 32px !important; height: 32px !important; border: 0 !important; background: transparent !important; color: var(--color-ink-3) !important; }
 .qk-stem { padding: 4px 12px 10px; font-size: var(--dn-read, 15px); line-height: 1.6; font-weight: 500; color: var(--color-ink); max-width: 76ch; }
 .qk-kaz { display: flex; flex-direction: column; gap: 2px; margin: 0 12px 10px; padding: 8px 10px; border-radius: 8px; background: var(--color-accent-soft); font-size: 13px; line-height: 1.5; color: var(--color-ink); }
 .qk-kaz b { font-size: 11px; font-weight: 650; letter-spacing: .04em; color: var(--color-accent); }
@@ -402,11 +392,6 @@ button.qk-opt:hover { background: var(--color-field); }
 .qk-opt.is-wrong { background: var(--color-bad-soft); }
 .qk-opt.is-wrong .qk-bub { background: var(--color-bad); border-color: var(--color-bad); color: var(--color-white); }
 .qk-opt.is-dim { opacity: .6; }
-.qk-obj { flex: none; width: 36px; display: inline-flex; align-items: center; justify-content: center; border: 0; background: transparent; color: var(--color-ink-3); opacity: 0; cursor: pointer; transition: opacity 120ms; }
-.qk-opt-li:hover .qk-obj, .qk-obj:focus-visible { opacity: 1; }
-@media (pointer: coarse) { .qk-obj { opacity: .7; } }
-.qk-obj svg { width: 14px; height: 14px; }
-.qk-opt-li .cx-opt-info { display: inline-flex; align-items: center; padding-right: 2px; }
 @media (min-width: 720px) {
   .qk-opts.is-short { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .qk-opts.is-short .qk-opt-li:nth-child(odd) { border-right: 1px solid var(--color-line-soft); }
@@ -416,7 +401,7 @@ button.qk-opt:hover { background: var(--color-field); }
 .qk-verdict.is-ok b { color: var(--color-ok); }
 .qk-verdict.is-bad b { color: var(--color-bad-text); }
 .qk-verdict button { border: 0; background: transparent; color: var(--color-accent); font: inherit; font-weight: 600; cursor: pointer; }
-.qk > .cx-note, .qk > .ms-answer-poll, .qk > div > .cx-note { margin: 8px 12px 0; }
+.qk > .cx-note, .qk > div > .cx-note { margin: 8px 12px 0; }
 .qk-discs { display: flex; flex-direction: column; border-top: 1px solid var(--color-line-soft); margin-top: 8px; }
 .qk-disc + .qk-disc { border-top: 1px solid var(--color-line-soft); }
 .qk-disc-h { display: flex; align-items: center; gap: 8px; width: 100%; height: 38px; padding: 0 12px; border: 0; background: transparent; color: var(--color-ink-2); font: inherit; font-size: 13px; font-weight: 600; text-align: left; cursor: pointer; }
@@ -808,7 +793,6 @@ button.qk-opt:disabled { cursor: default; }
 .qk > .ms-poll .ms-poll-status { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; }
 .qk-opt-li:has(> .qk-opt.is-correct) { background: var(--color-ok-soft); }
 .qk-opt-li:has(> .qk-opt.is-wrong) { background: var(--color-bad-soft); }
-.qk-opt-li:has(> .qk-opt.is-dim) .qk-obj { opacity: 0; }
 @media (min-width: 720px) {
   .qk-opts.is-short .qk-opt-li:last-child:nth-child(odd) { grid-column: 1 / -1; border-right: 0; }
 }
@@ -893,11 +877,7 @@ html.ui-v7[data-dock="hidden"] .cx-dock::after { opacity: 0; }
 }
 
 .qk-opt-li { display: grid; grid-template-columns: minmax(0, 1fr) 36px; align-items: stretch; }
-.qk-opts:has(.cx-opt-info) .qk-opt-li { grid-template-columns: minmax(0, 1fr) 30px 36px; }
 .qk-opt-li > .qk-opt { grid-column: 1; grid-row: 1; }
-.qk-opt-li > .cx-opt-info { grid-column: 2; grid-row: 1; position: static !important; inset: auto !important; transform: none !important; display: inline-flex; align-items: center; justify-content: center; padding: 0; }
-.qk-opt-li > .qk-obj { grid-column: -2; grid-row: 1; width: 36px; }
-.qk-opt-li > .cx-opt-info button { width: 28px; height: 28px; }
 /* Kökteki "düzeltildi" (i) düğmesi şıklardaki bilgi sütunuyla aynı dikey hatta durur. */
 .qk-stem:has(> .flex > .relative:last-child) { max-width: none; }
 .qk-stem > .flex > .relative:last-child { margin-right: 24px; }
@@ -918,7 +898,6 @@ html[data-dock="hidden"] [data-autohide] { transform: translateY(calc(-100% - 14
    (havuzda oy düğmesi, diğerlerinde 36px itiraz düğmesi) — oy sayacı artık kesilmez. */
 .qc { container-type: inline-size; }
 .qk-opt-li { grid-template-columns: minmax(0, 1fr) auto; }
-.qk-opts:has(.cx-opt-info) .qk-opt-li { grid-template-columns: minmax(0, 1fr) 30px auto; }
 .qk-opt-li > .qk-vote { grid-column: -2; grid-row: 1; align-self: center; margin-right: 8px; }
 
 /* 35 · Hastalıklar (DiseasesView) — yeniden kurulum. Sabit slate/teal/amber renkleri kaldırıldı; yalnız DS tokenları,
@@ -1264,6 +1243,12 @@ html.ui-v7 .cx-dock .cx-search { height: 40px; min-height: 40px; border-radius: 
   .qk-h > .qk-ib:has(.lucide-copy), .qk-h > .qk-ib[aria-label*="opyala"] { display: none; }
   .qk-h .qk-ib, .qk-h [aria-haspopup="menu"] { min-width: 34px !important; min-height: 34px !important; width: 34px !important; height: 34px !important; }
   .qk-h { gap: 4px; }
+  /* Çok eylemli kartlarda (Çalış: AI · tekrar · favori · not · bildir) satır taşmasın: kaynak künyesi gizlenir,
+     ders etiketi kalan yere sığar ve "…" ile kısalır (2026-10-11). */
+  .qk.is-solve .qk-h > .qk-kunye { display: none; }
+  .qk.is-solve .qk-h { gap: 2px; }
+  .qk.is-solve .qk-h .qk-ib, .qk.is-solve .qk-h > button { min-width: 32px !important; width: 32px !important; }
+  .qk-h > .qk-ders { display: block; min-width: 0; overflow: hidden; text-overflow: ellipsis; line-height: 22px !important; }
 }
 
 /* 40 · Soru havuzu kartı — sade tek kutu (2026-10-11 gece 20).
@@ -1299,42 +1284,11 @@ html.ui-v7 .cx-dock .cx-search { height: 40px; min-height: 40px; border-radius: 
 .qk-h > .qk-ders { order: 0 !important; }
 /* Şık satırı: ön yüz (şık) sola itilir, arkadan sağda eylemler görünür */
 .qk-opts.is-swipe .qk-opt-li { display: block; }
-.qk-swipe-row { position: relative; overflow: hidden; isolation: isolate; }
-.qk-swipe-acts { position: absolute; z-index: 0; top: 0; right: 0; bottom: 0; display: flex; align-items: stretch; }
-.qk-swipe-act { flex: 1; min-width: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; border: 0; padding: 0 4px; font: inherit; font-size: 11px; font-weight: 650; color: var(--color-white); cursor: pointer;
-  opacity: 0; transform: translateX(14px) scale(.9); transition: opacity 200ms ease, transform 320ms cubic-bezier(.34, 1.4, .64, 1), filter 120ms; }
-.qk-swipe-act svg { width: 17px; height: 17px; }
-.qk-swipe-act.is-flag { background: var(--color-bad); }
-.qk-swipe-act.is-info { background: var(--color-ai); }
-.qk-swipe-act.is-info.is-on { filter: brightness(.88); }
-.qk-swipe-act:hover { filter: brightness(.94); }
-.qk-swipe-act:focus-visible { outline: 2px solid var(--color-white); outline-offset: -4px; }
-.qk-swipe.is-open .qk-swipe-act, .qk-swipe.is-drag .qk-swipe-act { opacity: 1; transform: none; }
-.qk-swipe.is-open .qk-swipe-act:nth-child(2) { transition-delay: 40ms; }
-.qk-swipe-front { position: relative; z-index: 1; width: 100%; background: var(--color-white); touch-action: pan-y; user-select: none; -webkit-user-select: none;
-  transition: transform 380ms cubic-bezier(.22, 1.2, .36, 1), box-shadow 200ms ease, background 120ms; will-change: transform; cursor: pointer; }
-.qk-swipe.is-drag .qk-swipe-front { transition: none; }
-.qk-swipe.is-open .qk-swipe-front { box-shadow: 6px 0 14px -6px rgb(0 0 0 / .18); }
-.qk-swipe-front.is-correct { background: var(--color-ok-soft); }
-.qk-swipe-front.is-wrong { background: var(--color-bad-soft); }
-.qk-opt-li:has(> .qk-swipe-row > .qk-swipe-front.is-correct) { background: var(--color-ok-soft); }
 .qk-opt-dot { flex: none; align-self: center; width: 7px; height: 7px; margin-left: auto; border-radius: 99px; background: var(--color-ai); box-shadow: 0 0 0 3px var(--color-ai-soft); }
 /* İpucu: masaüstünde üstüne gelince şıkkın sağ kenarı hafifçe aralanır (çekmece olduğunu gösterir) */
-@media (hover: hover) {
-  .qk-swipe:not(.is-open):not(.is-drag) .qk-swipe-row:hover .qk-swipe-front:not(.is-dim) { transform: translate3d(-6px, 0, 0) !important; }
-  .qk-swipe:not(.is-open) .qk-swipe-row:hover .qk-swipe-act { opacity: .55; transform: translateX(8px) scale(.94); }
-}
-.qk-opt-info .qk-chg { margin: 0 var(--qk-x, 14px) 10px; padding: 10px 12px; border-radius: 10px; background: var(--color-ai-soft); display: flex; flex-direction: column; gap: 4px; font-size: 13px; line-height: 1.5; color: var(--color-ink); }
-.qk-chg b { font-size: 12px; font-weight: 700; color: var(--color-ai); }
-.qk-chg p { margin: 0; display: flex; gap: 8px; }
-.qk-chg p > span { flex: none; width: 44px; font-size: 11.5px; font-weight: 650; color: var(--color-ink-3); padding-top: 1px; }
-.qk-chg del { color: var(--color-bad-text); text-decoration-color: var(--color-bad-text); }
-.qk-chg ins { text-decoration: none; color: var(--color-ok); font-weight: 600; }
-.qk-chg .is-note { color: var(--color-ink-2); font-size: 12.5px; }
 @media (min-width: 720px) {
   .qk-opts.is-swipe.is-short { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
-@media (prefers-reduced-motion: reduce) { .qk-swipe-front, .qk-swipe-act { transition: none; } }
 
 /* Açılır bölüm (yükseklik canlandırması) */
 .qk-rev { display: grid; grid-template-rows: 0fr; transition: grid-template-rows 320ms cubic-bezier(.22, 1, .36, 1); }
@@ -1482,20 +1436,6 @@ html.theme-dark .deep-link-highlight-pulse, html[data-mode="dark"] .deep-link-hi
 
 /* 46 · Bilgi / Bildir eylemleri (modern) + değişiklik diyalog-toast'u.
  *  Çekmece zemini sakin bir alan; eylemler ikon dairesi + etiketli kapsül, yaylanarak sırayla belirir. */
-.qk-swipe-acts { gap: 6px; padding: 0 8px 0 6px; align-items: center; justify-content: flex-end; background: var(--color-field); }
-.qk-swipe-act { flex: none; width: 46px; height: auto; padding: 4px 0; gap: 4px; border-radius: 12px; background: transparent !important; color: var(--color-ink-2); font-size: 10.5px; font-weight: 650; filter: none !important; }
-.qk-swipe-act i { width: 34px; height: 34px; border-radius: 99px; display: grid; place-items: center; font-style: normal; color: var(--color-white);
-  box-shadow: 0 6px 14px -6px currentColor; transition: transform 220ms cubic-bezier(.34, 1.5, .64, 1); }
-.qk-swipe-act i svg { width: 16px; height: 16px; }
-.qk-swipe-act.is-info { color: var(--color-ai); }
-.qk-swipe-act.is-info i { background: var(--color-ai); }
-.qk-swipe-act.is-flag { color: var(--color-bad-text); }
-.qk-swipe-act.is-flag i { background: var(--color-bad); }
-.qk-swipe-act:hover i { transform: scale(1.08); }
-.qk-swipe-act:active i { transform: scale(.92); }
-.qk-swipe-act:focus-visible { outline: none; }
-.qk-swipe-act:focus-visible i { outline: 2px solid var(--color-accent); outline-offset: 2px; }
-.qk-swipe.is-open .qk-swipe-front { box-shadow: 8px 0 18px -10px rgb(0 0 0 / .25); border-top-right-radius: 12px; border-bottom-right-radius: 12px; }
 
 .qk-toast-wrap { position: fixed; inset: 0; z-index: 90; display: flex; align-items: flex-end; justify-content: center;
   padding: 16px 12px calc(var(--sh-tabs-h, 0px) + 16px + env(safe-area-inset-bottom, 0px)); background: rgb(0 0 0 / .08); animation: qk-tw-in 200ms ease both; }
@@ -1561,7 +1501,6 @@ html.theme-dark .deep-link-highlight-pulse, html[data-mode="dark"] .deep-link-hi
 /* Şık hedefleri kartın içinde kırpılıyor: halka içe çizilir, renk dalgası şık yüzünde oynar. */
 .qk-opt-li.deep-link-highlight-pulse { animation: none !important; border-radius: 0; }
 .qk-opt-li.deep-link-highlight-pulse::after { z-index: 3; border-radius: 0; }
-.qk-opt-li.deep-link-highlight-pulse .qk-swipe-front { animation: dl-wash 2600ms cubic-bezier(.22, 1, .36, 1) both, dl-ring-in 2600ms cubic-bezier(.22, 1, .36, 1) both; }
 @keyframes dl-ring-in {
   0% { box-shadow: inset 0 0 0 0 transparent; }
   12%, 70% { box-shadow: inset 3px 0 0 var(--color-accent), inset 0 0 0 1.5px var(--color-accent); }
@@ -1573,43 +1512,7 @@ html.theme-dark .deep-link-highlight-pulse, html[data-mode="dark"] .deep-link-hi
   70% { background-color: color-mix(in srgb, var(--color-accent-soft) 55%, var(--color-white)); }
   100% { background-color: var(--color-white); }
 }
-@media (prefers-reduced-motion: reduce) { .qk-opt-li.deep-link-highlight-pulse, .qk-opt-li.deep-link-highlight-pulse .qk-swipe-front { animation: none !important; } }
-
-/* 48 · Şık işlem çekmecesi — gelişmiş/modern sürüm (2026-10-11 gece 22).
- *  - Eylemler satır yüksekliğine sığan YATAY kapsüller: renkli ikon dairesi + etiket (eskiden dikey yığın satırdan
- *    taşıyor, "Bildir" kesiliyordu).
- *  - Çekmece genişliği eylemlerin ölçülen genişliği (TSX); tek eylemde boş alan yok.
- *  - Görünürlük sürükleme oranına (--p) bağlı: parmakla açarken kapsüller kademeli belirir, açılınca yaylanır.
- *  - Zemin: vurgu renginden çok hafif bir geçiş; şık yüzü sağ kenarında yumuşak gölge + yuvarlak köşe. */
-.qk-swipe-acts { position: absolute; z-index: 0; top: 0; right: 0; bottom: 0; width: auto !important; display: flex; align-items: center; justify-content: flex-end; gap: 6px;
-  padding: 0 10px 0 12px; background: linear-gradient(90deg, var(--color-canvas) 0%, color-mix(in srgb, var(--color-accent-soft) 55%, var(--color-canvas)) 100%); }
-.qk-sa { flex: none; display: inline-flex; align-items: center; gap: 7px; height: 32px; padding: 0 12px 0 4px; border-radius: 99px; border: 1px solid transparent; cursor: pointer;
-  font: inherit; font-size: 12.5px; font-weight: 650; letter-spacing: .005em; white-space: nowrap;
-  -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px);
-  opacity: calc(var(--p, 0) * 1.4 - .3); transform: translateX(calc((1 - var(--p, 0)) * 18px)) scale(calc(.86 + var(--p, 0) * .14));
-  transition: opacity 220ms ease, transform 420ms cubic-bezier(.34, 1.45, .64, 1), background 150ms, box-shadow 150ms; }
-.qk-swipe.is-drag .qk-sa { transition: background 150ms; }
-.qk-swipe.is-open .qk-sa:nth-child(2) { transition-delay: 0ms, 50ms, 0ms, 0ms; }
-.qk-sa i { width: 24px; height: 24px; border-radius: 99px; display: grid; place-items: center; font-style: normal; color: #fff; flex: none;
-  transition: transform 260ms cubic-bezier(.34, 1.5, .64, 1); }
-.qk-sa i svg { width: 13px; height: 13px; stroke-width: 2.4; }
-.qk-sa.is-info { background: color-mix(in srgb, var(--color-ai-soft) 85%, transparent); color: var(--color-ai); border-color: color-mix(in srgb, var(--color-ai) 18%, transparent); }
-.qk-sa.is-info i { background: var(--color-ai); box-shadow: 0 3px 8px -3px var(--color-ai); }
-.qk-sa.is-flag { background: color-mix(in srgb, var(--color-bad-soft) 85%, transparent); color: var(--color-bad-text); border-color: color-mix(in srgb, var(--color-bad) 18%, transparent); }
-.qk-sa.is-flag i { background: var(--color-bad); box-shadow: 0 3px 8px -3px var(--color-bad); }
-.qk-sa:hover { box-shadow: 0 4px 12px -6px rgb(0 0 0 / .25); }
-.qk-sa:hover i { transform: rotate(-8deg) scale(1.08); }
-.qk-sa:active { transform: scale(.95); }
-.qk-sa:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
-.qk-swipe-front { transition: transform 420ms cubic-bezier(.22, 1.15, .36, 1), box-shadow 220ms ease, border-radius 220ms ease, background 120ms; }
-.qk-swipe.is-open .qk-swipe-front, .qk-swipe.is-drag .qk-swipe-front { border-top-right-radius: 14px; border-bottom-right-radius: 14px;
-  box-shadow: 10px 0 22px -14px rgb(0 0 0 / .35), 1px 0 0 var(--color-line); }
-/* Masaüstü ipucu: üzerine gelince yalnız sağ kenarda ince bir aralık; eylemler gizli kalır (yarım görünüm yok) */
-@media (hover: hover) {
-  .qk-swipe:not(.is-open) .qk-swipe-row:hover .qk-sa { opacity: 0; transform: translateX(18px) scale(.86); }
-  .qk-swipe:not(.is-open):not(.is-drag) .qk-swipe-row:hover .qk-swipe-front:not(.is-dim) { transform: translate3d(-4px, 0, 0) !important; }
-}
-@media (prefers-reduced-motion: reduce) { .qk-sa, .qk-sa i, .qk-swipe-front { transition: none !important; } }
+@media (prefers-reduced-motion: reduce) { .qk-opt-li.deep-link-highlight-pulse { animation: none !important; } }
 
 /* 49 · Şık etkileşimleri v3 (2026-10-11 gece 23): ÇEK-BIRAK ile kalkan şık + gömülü kapsül, TEK DOKUNUŞ ile oklu balon. */
 .qk-opts.is-lift .qk-opt-li { display: block; position: relative; }

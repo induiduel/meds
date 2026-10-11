@@ -23,7 +23,6 @@ import {
   Layers,
   GraduationCap,
   ShieldCheck,
-  CheckCircle2,
   Share2,
   AlertCircle,
   Send,
@@ -45,7 +44,6 @@ const SOURCE_TYPE_LABELS: Record<string, string> = {
 import { StatusPill, questionStemText } from './QuickAddHero';
 import { toast } from './ui/Toast';
 import { validateNamePolicy } from '../utils/namePolicy';
-import { useUiVersion } from '../utils/uiVersion';
 import { disciplineClass, disciplineLabel } from '../utils/discipline';
 
 type OptionKey = 'A' | 'B' | 'C' | 'D' | 'E';
@@ -146,7 +144,6 @@ const QuestionCardComponent: React.FC<QuestionCardProps> = ({
   isReconstructing,
 }) => {
   const [isExpanded, setIsExpanded] = useState(true);
-  const { isV7 } = useUiVersion();
   // Phones: explanation + side column live behind one toggle to keep the list scannable
   const [detailsOpen, setDetailsOpen] = useState(false);
   const [flagsOpen, setFlagsOpen] = useState(false);
@@ -389,12 +386,12 @@ const QuestionCardComponent: React.FC<QuestionCardProps> = ({
     <article
       id={`q-${question.id}`}
       data-question-id={question.id}
-      className={isV7 ? `qc ${disciplineClass(question.discipline)}` : 'bg-white border border-line rounded-2xl overflow-hidden transition-all duration-300'}
+      className={`qc ${disciplineClass(question.discipline)}`}
     >
       <div className={`grid grid-cols-1 ${isExpanded ? 'lg:grid-cols-[minmax(0,1.75fr)_minmax(0,1fr)]' : ''}`}>
         {/* ---------------- Main column ---------------- */}
         <div className="p-4 sm:p-6 flex flex-col gap-4 sm:gap-5 min-w-0">
-          {isV7 && (() => {
+          {(() => {
             const reps = question.reports || [];
             const solved = reps.filter((r) => r.status === 'resolved' || r.status === 'verified_correct').length;
             const flagNodes: React.ReactNode[] = [<StatusPill key="st" status={question.status} hasFragments={question.fragments.length > 0} />];
@@ -428,122 +425,11 @@ const QuestionCardComponent: React.FC<QuestionCardProps> = ({
               </header>
             );
           })()}
-          {!isV7 && (
-          <div className="flex items-start gap-3">
-            <div className="flex gap-2 flex-wrap flex-1 min-w-0">
-              <StatusPill status={question.status} hasFragments={question.fragments.length > 0} />
-              <span className="h-7 px-2.5 rounded-full bg-canvas text-ink-2 text-xs font-semibold inline-flex items-center font-mono">
-                {question.isUnassignedNumber ? 'No ?' : `S.${question.questionNumber}`}
-              </span>
-              <span className="h-7 px-2.5 rounded-full bg-canvas text-ink-2 text-xs font-semibold inline-flex items-center">{question.discipline}</span>
-              {question.topic && !/hatırlanan soru|çıkmış sorusu/i.test(question.topic) && (
-                <span className="h-7 px-2.5 rounded-full bg-canvas text-ink-2 text-xs font-semibold hidden sm:inline-flex items-center max-w-[260px] truncate">
-                  {question.topic}
-                </span>
-              )}
-              {question.notebooklm_verisi?.mufredat && (
-                <span className="h-7 px-2.5 rounded-full bg-ai-soft text-ai text-xs font-semibold inline-flex items-center gap-1">
-                  <GraduationCap className="w-3.5 h-3.5" />
-                  {question.notebooklm_verisi.mufredat}
-                </span>
-              )}
-              {isMyQuestion && (
-                <span className="h-7 px-2.5 rounded-full bg-accent-soft text-accent text-xs font-semibold inline-flex items-center">Senin katkın</span>
-              )}
-              {isMergedQuestion && (
-                <span className="h-7 px-2.5 rounded-full bg-ok-soft border border-ok/30 text-ok text-xs font-semibold inline-flex items-center gap-1">
-                  <Layers className="w-3.5 h-3.5 text-ok" />
-                  {satelliteCount > 0 ? `${satelliteCount + 1} taslak birleşik` : 'Birleşik taslak'}
-                </span>
-              )}
-              <button
-                type="button"
-                onClick={handleShareQuestion}
-                className="h-7 px-2.5 rounded-full bg-canvas hover:bg-accent-soft hover:text-accent text-ink-2 text-xs font-semibold inline-flex items-center gap-1 cursor-pointer transition-colors"
-                title="Sorunun derin bağlantısını kopyala / paylaş"
-                aria-label="Soruyu paylaş"
-              >
-                <Share2 className="w-3.5 h-3.5" />
-                <span>Paylaş</span>
-              </button>
-              <button
-                type="button"
-                onClick={() => setShowReportModal(true)}
-                className="h-7 px-2.5 rounded-full bg-canvas hover:bg-warn-soft hover:text-warn text-ink-2 text-xs font-semibold inline-flex items-center gap-1 cursor-pointer transition-colors"
-                title="Hata bildirimi gönder"
-                aria-label="Hata bildir"
-              >
-                <AlertCircle className="w-3.5 h-3.5" />
-                <span>Hata Bildir</span>
-              </button>
-              {/* Hata Bildirimi & Çözüm Durumu Rozeti */}
-              {(() => {
-                const reportsList = question.reports || [];
-                const resolvedReports = reportsList.filter((r) => r.status === 'resolved' || r.status === 'verified_correct');
-                const hasReports = reportsList.length > 0;
-                const isFullyResolved = hasReports && resolvedReports.length === reportsList.length;
-                const hasRevisions = (question.revisions || []).length > 0;
-
-                if (hasReports && isFullyResolved) {
-                  return (
-                    <button
-                      type="button"
-                      onClick={() => setShowReportHistoryModal(true)}
-                      className="h-7 px-2.5 rounded-full bg-ok-soft text-ok text-xs font-semibold inline-flex items-center gap-1 cursor-pointer transition-colors"
-                      title="Bu sorudaki hata bildirimleri incelendi ve çözüldü. Değişim geçmişini görmek için tıklayın."
-                    >
-                      <CheckCircle2 className="w-3.5 h-3.5" />
-                      <span>✓ Çözüldü ({reportsList.length})</span>
-                    </button>
-                  );
-                }
-                if (hasReports && !isFullyResolved) {
-                  return (
-                    <button
-                      type="button"
-                      onClick={() => setShowReportHistoryModal(true)}
-                      className="h-7 px-2.5 rounded-full bg-warn-soft text-warn text-xs font-semibold inline-flex items-center gap-1 cursor-pointer transition-colors"
-                      title="Bu soruda hata bildirimi mevcut. Çözüm ve inceleme geçmişini görmek için tıklayın."
-                    >
-                      <AlertTriangle className="w-3.5 h-3.5" />
-                      <span>{reportsList.length} Bildirim ({resolvedReports.length} Çözüldü)</span>
-                    </button>
-                  );
-                }
-                if (hasRevisions) {
-                  return (
-                    <button
-                      type="button"
-                      onClick={() => setShowReportHistoryModal(true)}
-                      className="h-7 px-2.5 rounded-full bg-canvas text-ink-2 text-xs font-semibold inline-flex items-center gap-1 cursor-pointer transition-colors"
-                      title="Soru düzenleme ve versiyon geçmişini gör"
-                    >
-                      <ShieldCheck className="w-3.5 h-3.5" />
-                      <span>Tarihçe ({(question.revisions || []).length})</span>
-                    </button>
-                  );
-                }
-                return null;
-              })()}
-            </div>
-            <button
-              type="button"
-              onClick={() => setIsExpanded(!isExpanded)}
-              aria-expanded={isExpanded}
-              aria-label={isExpanded ? 'Soruyu daralt' : 'Soruyu genişlet'}
-              className="w-10 h-10 -mt-1 -mr-1 rounded-[10px] border border-line flex items-center justify-center shrink-0 cursor-pointer hover:border-line-2"
-            >
-              {isExpanded ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
-            </button>
-          </div>
-
-          )}
+          
 
           <h3
             id={`stem-${question.id}`}
-            className={isV7 ? `qk-stem is-pool ${longStem && !stemOpen ? 'is-clamped' : ''}` : `m-0 font-display font-medium leading-[1.3] tracking-[-0.02em] text-ink ${
-              longStem ? 'text-lg sm:text-xl' : 'text-xl sm:text-2xl'
-            } ${longStem && !stemOpen ? 'line-clamp-6 sm:line-clamp-none' : ''}`}
+            className={`qk-stem is-pool ${longStem && !stemOpen ? 'is-clamped' : ''}`}
           >
             {questionStemText(question)}
           </h3>
