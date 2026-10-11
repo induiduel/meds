@@ -1,4 +1,5 @@
 import React, { useEffect, useMemo, useState } from 'react';
+import { pathFor } from '../router';
 import { copyQuestion } from '../utils/copyQuestion';
 import { getVoterId } from '../utils/voterId';
 import { disciplineClass, disciplineLabel } from '../utils/discipline';
@@ -227,7 +228,7 @@ function SoruKarti({
   };
 
   const handleShare = async () => {
-    const url = `${window.location.origin}${window.location.pathname}?ornekId=${encodeURIComponent(q.id)}`;
+    const url = `${window.location.origin}${pathFor('ornek_sorular', q.id)}`;
     const title = `Örnek Soru · ${ders} · K${q.kazanim}`;
     if (navigator.share && window.matchMedia?.('(pointer: coarse)').matches) {
       try {
@@ -504,7 +505,7 @@ function TamEkran({
   );
 }
 
-function DersGorunumu({ id, initialKazanimNo, onBack }: { id: string; initialKazanimNo?: number; onBack: () => void }) {
+function DersGorunumu({ id, initialKazanimNo, initialQuestionId, onBack }: { id: string; initialKazanimNo?: number; initialQuestionId?: string; onBack: () => void }) {
   const [ders, setDers] = useState<Ders | null>(null);
   const [hata, setHata] = useState(false);
   const [zorluk, setZorluk] = useState<Zorluk | ''>('');
@@ -526,13 +527,34 @@ function DersGorunumu({ id, initialKazanimNo, onBack }: { id: string; initialKaz
     setDers(null);
     load().then((data) => {
       setDers(data);
-      if (initialKazanimNo) {
+      // Derin bağlantı (/ornek-sorular/<soruId>): sorunun kazanımı açılır, soruya kayılır ve vurgulanır.
+      const hedef = initialQuestionId ? data.kazanimlar.find((k) => k.sorular.some((q) => q.id === initialQuestionId)) : undefined;
+      if (hedef && initialQuestionId) {
+        setZorluk('');
+        setAcik((s) => new Set(s).add(hedef.no));
+        let n = 0;
+        // Kartlar açılırken sayfa uzar ve kaydırma kesilebilir: soru görünür alana oturana dek yeniden dener.
+        const odak = () => {
+          const el = document.getElementById(`os-${initialQuestionId}`);
+          if (!el) { if (++n < 12) window.setTimeout(odak, 150); return; }
+          const r = el.getBoundingClientRect();
+          if (r.top < 0 || r.top > window.innerHeight * 0.6) {
+            el.scrollIntoView({ behavior: n < 2 ? 'smooth' : 'auto', block: 'center' });
+            if (++n < 8) { window.setTimeout(odak, 450); return; }
+          }
+          if (!el.classList.contains('deep-link-highlight-pulse')) {
+            el.classList.add('deep-link-highlight-pulse');
+            window.setTimeout(() => el.classList.remove('deep-link-highlight-pulse'), 3200);
+          }
+        };
+        window.setTimeout(odak, 120);
+      } else if (initialKazanimNo) {
         setTimeout(() => {
           document.getElementById(`kz-${initialKazanimNo}`)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }, 120);
       }
     }).catch(() => setHata(true));
-  }, [id, initialKazanimNo]);
+  }, [id, initialKazanimNo, initialQuestionId]);
 
   if (hata) return <p className="m-0 text-base text-bad-text">Bu dersin soruları yüklenemedi. Sayfayı yenileyip tekrar deneyin.</p>;
   if (!ders) return <p className="m-0 text-base text-ink-3">Sorular yükleniyor…</p>;
@@ -724,10 +746,21 @@ function DersGorunumu({ id, initialKazanimNo, onBack }: { id: string; initialKaz
   );
 }
 
+/** Soru kimliğinden dersi bulur: "k1-05-hucre-hasari-…-k03-q11" ve "k1-01-q01" biçimleri ("k1-NN" öneki). */
+export const lessonIdForQuestion = (qid?: string | null): string | null => {
+  if (!qid) return null;
+  const direct = INDEX.find((x) => qid.startsWith(`${x.id}-`));
+  if (direct) return direct.id;
+  const m = /^(k\d+-\d+)-/.exec(qid);
+  return (m && INDEX.find((x) => x.id.startsWith(`${m[1]}-`))?.id) || null;
+};
+
 export const KazanimSorulariView: React.FC<{
   initialLessonId?: string | null;
   initialKazanimNo?: number | null;
-}> = ({ initialLessonId, initialKazanimNo }) => {
+  initialQuestionId?: string | null;
+}> = ({ initialLessonId: lessonProp, initialKazanimNo, initialQuestionId }) => {
+  const initialLessonId = lessonProp || lessonIdForQuestion(initialQuestionId);
   const [secili, setSecili] = useState<string | null>(() => {
     if (initialLessonId && INDEX.some((x) => x.id === initialLessonId)) return initialLessonId;
     const s = readSecim();
@@ -756,7 +789,7 @@ export const KazanimSorulariView: React.FC<{
 
   const sec = (id: string | null) => { setSecili(id); writeSecim(id); window.scrollTo({ top: 0 }); };
 
-  if (secili) return <DersGorunumu id={secili} initialKazanimNo={initialKazanimNo || undefined} onBack={() => sec(null)} />;
+  if (secili) return <DersGorunumu id={secili} initialKazanimNo={initialKazanimNo || undefined} initialQuestionId={secili === initialLessonId ? initialQuestionId || undefined : undefined} onBack={() => sec(null)} />;
 
   if (!INDEX.length) {
     return <p className="m-0 rounded-2xl border border-line bg-white p-6 text-center text-base text-ink-3">Kurul 1 örnek soruları henüz hazırlanmadı.</p>;

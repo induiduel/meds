@@ -6,6 +6,7 @@ import { pwaService } from '../../services/pwaService';
 import { useTheme } from '../../utils/theme';
 import { OfflineStatusBadge } from '../pwa/OfflineStatusBadge';
 import { SearchPalette } from '../search/SearchPalette';
+import type { SearchHit } from '../search/searchShared';
 import { AccountMenu, type AccountActions } from './AccountMenu';
 import { initialsOf } from './navModel';
 import { userNotificationService } from '../../services/userNotificationService';
@@ -35,7 +36,8 @@ export const TopBar: React.FC<{
   user: AppUser | null;
   isAdmin: boolean;
   searchQuery?: string;
-  onSearch?: (q: string, focusId?: string) => void;
+  /** hit verilirse (palette sonucuna tıklandı) doğrudan kaynağı açmak denenir */
+  onSearch?: (q: string, focusId?: string, hit?: SearchHit) => void;
   onOpenOffline?: () => void;
   actions: Omit<AccountActions, 'onInstall'>;
 }> = ({ active, onGo, user, isAdmin, searchQuery = '', onSearch, onOpenOffline, actions }) => {
@@ -169,7 +171,7 @@ export const TopBar: React.FC<{
         <SearchPalette
           initialQuery={searchQuery}
           onClose={() => setSearch(false)}
-          onOpenResults={(q, focusId) => onSearch?.(q, focusId)}
+          onOpenResults={(q, focusId, hit) => onSearch?.(q, focusId, hit)}
         />
       )}
 

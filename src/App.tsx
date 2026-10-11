@@ -1,7 +1,8 @@
-import React, { useState, useEffect, useMemo, useCallback, Suspense } from 'react';
+import React, { useState, useEffect, useMemo, useCallback, useRef, Suspense } from 'react';
 import { logActivity } from './services/activityLog';
 import { getVoterId, toggledVote } from './utils/voterId';
-import { AppRoute, parseLocation, writeLocation, pathFor, ROUTE_TITLES } from './router';
+import type { SearchHit } from './components/search/searchShared';
+import { AppRoute, parseLocation, writeLocation, pathFor, ROUTE_TITLES, deepLinkIdFor, navigateTo } from './router';
 import {
   Sparkles,
   Plus,
@@ -181,9 +182,12 @@ export default function App() {
   });
   const [activeTab, setActiveTabState] = useState<ValidAppTab>(initialRoute.route);
   // Havuz derin bağlantısı: /sorular/<soruId> — o soru listenin başında gösterilir ve odaklanır.
+  const clearDeepLinkTargets = useRef<() => void>(() => {});
   const [poolFocusId, setPoolFocusId] = useState<string | undefined>(initialRoute.route === 'questions' ? initialRoute.param : undefined);
   const setActiveTab = useCallback((tab: ValidAppTab) => {
     setActiveTabState(tab);
+    // Menüden düz geçiş: önceki derin bağlantının hedefi (terim/hastalık/örnek soru) yeniden açılmasın.
+    clearDeepLinkTargets.current();
     writeLocation(tab);
     window.scrollTo({ top: 0 });
   }, []);
@@ -328,14 +332,24 @@ export default function App() {
   const [selectedOrnekKazanimNo, setSelectedOrnekKazanimNo] = useState<number | null>(null);
   // Çıkmış sorudan Öğren'e gelindiyse soru ifadeleri ve doğru şık slaytta işaretlenir
   const [learnQuestionFocus, setLearnQuestionFocus] = useState<QuestionFocus | null>(null);
-  const [selectedGlossaryTermId, setSelectedGlossaryTermId] = useState<string | undefined>(() => {
-    if (initialRoute.route === 'glossary' && initialRoute.param) return initialRoute.param;
-    if (typeof window !== 'undefined') {
-      const p = new URLSearchParams(window.location.search);
-      return p.get('id') || undefined;
-    }
-    return undefined;
-  });
+  // Aramadan / kavram çipinden açılacak hastalık profili
+  const [selectedDiseaseId, setSelectedDiseaseId] = useState<string | undefined>(() =>
+    initialRoute.route === 'diseases' ? deepLinkIdFor('diseases', initialRoute.param) : undefined
+  );
+  const [selectedGlossaryTermId, setSelectedGlossaryTermId] = useState<string | undefined>(() =>
+    initialRoute.route === 'glossary' ? deepLinkIdFor('glossary', initialRoute.param) : undefined
+  );
+  // Örnek soru derin bağlantısı: /ornek-sorular/<soruId> (eski ?ornekId=)
+  const [ornekQuestionId, setOrnekQuestionId] = useState<string | undefined>(() =>
+    initialRoute.route === 'ornek_sorular' ? deepLinkIdFor('ornek_sorular', initialRoute.param) : undefined
+  );
+  // Kart / ders notu ekranları derin bağlantıyı açılışta okur; uygulama içi gezinmede yeniden kurulsunlar.
+  const [deepLinkNonce, setDeepLinkNonce] = useState(0);
+  clearDeepLinkTargets.current = () => {
+    setSelectedGlossaryTermId(undefined);
+    setSelectedDiseaseId(undefined);
+    setOrnekQuestionId(undefined);
+  };
 
   // Celebration Toast
   const [congratsToast, setCongratsToast] = useState<string | null>(null);
@@ -398,6 +412,18 @@ export default function App() {
       setActiveTabState(route);
       setPoolFocusId(route === 'questions' ? param : undefined);
       if (route === 'search') setSearchPageQuery(param || '');
+      // Derin bağlantı kimlikleri adres çubuğundan yeniden kurulur (yol parametresi ya da ?id=).
+      const linkId = deepLinkIdFor(route, param);
+      if (route === 'glossary') setSelectedGlossaryTermId(linkId);
+      if (route === 'diseases') setSelectedDiseaseId(linkId);
+      if (route === 'summaries') setOpenSummaryId(linkId);
+      if (route === 'ornek_sorular') {
+        setOrnekQuestionId(linkId);
+        if (linkId) { setSelectedOrnekLessonId(null); setSelectedOrnekKazanimNo(null); }
+      }
+      // Çıkmış soru kimliği PastExamsView'de adresten okunur; eski arama metni onu ezmesin.
+      if (route === 'past_exams' && param) setPastExamsSearchQuery('');
+      if ((route === 'flashcards' || route === 'notes') && linkId) setDeepLinkNonce((n) => n + 1);
       if (route === 'learn') {
         setSelectedLearnDeckId(param);
         const sp = new URLSearchParams(window.location.search);
@@ -451,6 +477,8 @@ export default function App() {
   // Restore scroll position after initial loading completes
   useEffect(() => {
     if (!loading) {
+      // Derin bağlantıyla açılan sayfa kendi hedefine kayar; eski kaydırma konumu onu ezmesin.
+      if (initialRoute.param || window.location.search || window.location.hash) return;
       try {
         const savedPos = sessionStorage.getItem('medsoru_scroll_pos');
         if (savedPos) {
@@ -1107,6 +1135,47 @@ export default function App() {
     window.scrollTo({ top: 0 });
   };
 
+  /** Arama sonucunu kendi sayfasında, derin bağlantısıyla açar; açılacak yeri yoksa false döner. */
+  const openSearchHit = (hit: SearchHit): boolean => {
+    const id = encodeURIComponent(hit.documentId);
+    switch (hit.documentType) {
+      case 'past_question':
+      case 'deepseek_contribution':
+        navigateTo(`${pathFor('past_exams')}/${id}`);
+        return true;
+      case 'summary':
+        navigateTo(`${pathFor('summaries')}?noteId=${id}`);
+        return true;
+      case 'transcript':
+        setActiveTab('transcripts');
+        return true;
+      case 'disease':
+        // chunk-dis-<id> → hastalık kimliği documentId'dir
+        navigateTo(`${pathFor('diseases')}?id=${id}`);
+        return true;
+      case 'glossary_term':
+        // documentId terim adıdır; sözlük ada / eşanlamlıya göre eşler
+        navigateTo(`${pathFor('glossary')}?id=${id}`);
+        return true;
+      case 'ornek_question':
+        navigateTo(`${pathFor('ornek_sorular')}/${id}`);
+        return true;
+      case 'deck_slide':
+        navigateTo(`${pathFor('learn')}/${id}${hit.pageNumber ? `?slide=${hit.pageNumber}` : ''}`);
+        return true;
+      case 'active_question':
+      case 'user_contribution': {
+        // Havuz sorusu ve öğrenci katkısı chunk'larında documentId soru kimliğidir
+        if (questions.some((q) => q.id === hit.documentId)) navigateTo(`${pathFor('questions')}/${id}`);
+        else { setSearchQuery(''); setActiveTab('questions'); }
+        return true;
+      }
+      default:
+        // Ders slaytı arama sayfasındaki okuyucuda açılır; AI yanıtı vb. yalnız sonuç listesinde okunur.
+        return false;
+    }
+  };
+
   const handleUpdateQuestionReference = async (questionId: string, reference: QuestionLectureMatch) => {
     try {
       const updated = await ApiService.updateQuestionLectureMatch(questionId, reference);
@@ -1231,7 +1300,7 @@ export default function App() {
           user={currentUser}
           isAdmin={isAdmin}
           searchQuery={searchQuery}
-          onSearch={(q, focusId) => openSearchPage(q, focusId)}
+          onSearch={(q, focusId, hit) => { if (!hit || !openSearchHit(hit)) openSearchPage(q, focusId); }}
           onOpenOffline={() => setIsOfflineModalOpen(true)}
           actions={{
             onSettings: () => setActiveTab('settings'),
@@ -1390,22 +1459,7 @@ export default function App() {
               focusId={searchFocusId}
               committeeId={selectedCommitteeId}
               onQueryChange={(q) => { setSearchPageQuery(q); writeLocation('search', q || undefined, true); }}
-              onOpenSource={(hit) => {
-                if (hit.documentType === 'past_question' || hit.documentType === 'deepseek_contribution') {
-                  setPastExamsSearchQuery(hit.documentId);
-                  setActiveTab('past_exams');
-                } else if (hit.documentType === 'summary') {
-                  setOpenSummaryId(hit.documentId);
-                  setActiveTab('summaries');
-                } else if (hit.documentType === 'transcript') {
-                  setActiveTab('transcripts');
-                } else {
-                  // Havuz sorusu ve öğrenci katkısı chunk'larında documentId soru kimliğidir
-                  const target = questions.find((q) => q.id === hit.documentId);
-                  if (target) openQuestion(target);
-                  else { setSearchQuery(''); setActiveTab('questions'); }
-                }
-              }}
+              onOpenSource={(hit) => { openSearchHit(hit); }}
             />
           </Suspense>
         )}
@@ -1428,6 +1482,7 @@ export default function App() {
           <Suspense fallback={<ViewFallback />}>
             <DiseasesView
               currentUser={currentUser}
+              initialDiseaseId={selectedDiseaseId}
               onOpenReportModal={(t) => {
                 toast.info('Hata Bildirimi Alındı', `${t.title} için bildiriminiz inceleme sırasına eklendi.`);
               }}
@@ -1629,7 +1684,7 @@ export default function App() {
               currentUser={currentUser}
               initialSearchQuery={pastExamsSearchQuery}
               onOpenNote={(noteId, pageNumber) => {
-                setActiveTab('notes');
+                navigateTo(`${pathFor('notes')}?id=${encodeURIComponent(noteId)}${pageNumber ? `&page=${pageNumber}` : ''}`);
               }}
               onUpdateQuestionReference={handleUpdateQuestionReference}
               onNavigateToLearn={(deckId, slideNumber, focus) => {
@@ -1648,6 +1703,7 @@ export default function App() {
             <PracticeQuestionsView
               initialLessonId={selectedOrnekLessonId}
               initialKazanimNo={selectedOrnekKazanimNo}
+              initialQuestionId={ornekQuestionId}
             />
           </Suspense>
         )}
@@ -1773,6 +1829,7 @@ export default function App() {
         {activeTab === 'notes' && (
           <Suspense fallback={<ViewFallback />}>
             <LectureNotesView
+              key={deepLinkNonce}
               committee={currentCommittee}
               committees={committees}
               questions={questions}
@@ -1807,7 +1864,7 @@ export default function App() {
         {/* /kartlar — spaced-repetition flashcards (medical terms + lesson cards) */}
         {activeTab === 'flashcards' && (
           <Suspense fallback={<ViewFallback />}>
-            <FlashcardsView />
+            <FlashcardsView key={deepLinkNonce} />
           </Suspense>
         )}
 
@@ -1817,10 +1874,7 @@ export default function App() {
             <LocalAiChatView
               currentUser={currentUser}
               isAdmin={isAdmin}
-              onNavigateToQuestion={(qId) => {
-                setPastExamsSearchQuery(qId);
-                setActiveTab('past_exams');
-              }}
+              onNavigateToQuestion={(qId) => navigateTo(`${pathFor('past_exams')}/${encodeURIComponent(qId)}`)}
             />
           </Suspense>
         )}

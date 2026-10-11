@@ -1139,6 +1139,18 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
 
   // Paginated list
   const totalPages = Math.max(1, Math.ceil(filteredQuestions.length / itemsPerPage));
+  // Birleştirilen sorunun eski kimliği (arama dizini, eski paylaşım bağlantısı) yaşayan kayda yönlenir.
+  const mergedTarget = useMemo(() => {
+    if (!sharedId || questions.some((q) => String(q.id) === sharedId)) return null;
+    const has = (v: unknown) => (Array.isArray(v) ? v.map(String).includes(sharedId) : false);
+    return questions.find((q: any) => has(q.mergedFrom) || has(q.mergedQuestionIds)) || null;
+  }, [sharedId, questions]);
+  useEffect(() => {
+    if (!mergedTarget) return;
+    const id = String(mergedTarget.id);
+    setSharedId(id);
+    writeLocation('past_exams', id, true);
+  }, [mergedTarget]);
   const paginatedQuestions = useMemo(() => {
     if (sharedId) return questions.filter((q) => String(q.id) === sharedId);
     const start = (currentPage - 1) * itemsPerPage;

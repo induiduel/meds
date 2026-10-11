@@ -269,9 +269,22 @@ export const MedicalEncyclopediaView: React.FC<MedicalEncyclopediaViewProps> = (
     const highlight = urlParams.get('highlight');
 
     if (targetId) {
-      const found = (entries || []).find(
-        (e) => e.id === targetId || e.term.toLowerCase() === targetId.toLowerCase()
-      );
+      // Arama sonucunda kimlik yerine terim ADI gelir ("apoptoz", "Apoptoz (Programlı Hücre Ölümü)"):
+      // kimlik → tam ad → parantezsiz ad → eşanlamlı sırasıyla eşlenir.
+      const norm = (t?: string) => (t || '').toLocaleLowerCase('tr').replace(/\s*\(.*?\)\s*/g, ' ').replace(/\s+/g, ' ').trim();
+      const want = targetId.toLocaleLowerCase('tr').trim();
+      const wantBare = norm(targetId);
+      const list = entries || [];
+      const found =
+        list.find((e) => e.id === targetId) ||
+        list.find((e) => (e.term || '').toLocaleLowerCase('tr').trim() === want) ||
+        list.find((e) => norm(e.term) === wantBare) ||
+        list.find((e) => (e.aliases || []).some((al) => norm(al) === wantBare));
+      if (!found) {
+        // Ansiklopedide karşılığı olmayan terim (ör. tıbbi terimler sözlüğü): liste o terimle süzülür.
+        setActiveEntry(null);
+        setSearchQuery(targetId.replace(/\s*\(.*?\)\s*/g, ' ').trim());
+      }
       if (found) {
         setActiveEntry(found);
         // Izgara görünümünde ayrıntı paneli ayrıca açılmalı (derin bağlantı yalnız kartı seçiyordu).
@@ -324,13 +337,15 @@ export const MedicalEncyclopediaView: React.FC<MedicalEncyclopediaViewProps> = (
 
       // Search Query
       if (q) {
-        const matchTerm = String(e.term ?? '').toLocaleLowerCase('tr-TR').includes(q);
-        const matchLatin = (e.latinName || '').toLocaleLowerCase('tr-TR').includes(q);
-        const matchAliases = (e.aliases || []).some((a) => a.toLocaleLowerCase('tr-TR').includes(q));
-        const matchDefn = (e.definition || '').toLocaleLowerCase('tr-TR').includes(q);
-        const matchNotes = (e.lectureContextNotes || '').toLocaleLowerCase('tr-TR').includes(q);
-        const matchPearls = (e.examSpotPearls || '').toLocaleLowerCase('tr-TR').includes(q);
-        const matchMech = (e.morphologyOrMechanism || '').toLocaleLowerCase('tr-TR').includes(q);
+        // Bazı maddelerde alanlar dizi/nesne gelir (examSpotPearls: string[]); düz metne çevrilip aranır.
+        const has = (v: unknown) => (Array.isArray(v) ? v.join(' ') : typeof v === 'string' ? v : v == null ? '' : JSON.stringify(v)).toLocaleLowerCase('tr-TR').includes(q);
+        const matchTerm = has(e.term);
+        const matchLatin = has(e.latinName);
+        const matchAliases = (e.aliases || []).some((a) => has(a));
+        const matchDefn = has(e.definition);
+        const matchNotes = has(e.lectureContextNotes);
+        const matchPearls = has(e.examSpotPearls);
+        const matchMech = has(e.morphologyOrMechanism);
         if (!matchTerm && !matchLatin && !matchAliases && !matchDefn && !matchNotes && !matchPearls && !matchMech) {
           return false;
         }
@@ -391,7 +406,8 @@ export const MedicalEncyclopediaView: React.FC<MedicalEncyclopediaViewProps> = (
   const jumpTo = (ch: string) => document.getElementById(`gx-${ch}`)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   // Geniş ekranda ilk madde kendiliğinden açık gelir (boş panel kalmasın)
   React.useEffect(() => {
-    if (wide && !activeEntry && filteredEntries[0]) setActiveEntry(filteredEntries[0]);
+    // İşlevsel güncelleme: aynı turda derin bağlantının seçtiği maddeyi ezmez.
+    if (wide && !activeEntry && filteredEntries[0]) setActiveEntry((prev) => prev || filteredEntries[0]);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [wide, filteredEntries]);
 

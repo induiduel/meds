@@ -234,3 +234,44 @@ export const linkClick = (go: () => void) => (e: React.MouseEvent) => {
   e.preventDefault();
   go();
 };
+
+/**
+ * A page's deep-link target id: the path parameter (/sozluk/<id>) or the legacy query keys
+ * share links used (?id=, ?term=, ?noteId=, ?ornekId= …). Undefined when the URL has none.
+ */
+export const deepLinkIdFor = (route: AppRoute, param?: string): string | undefined => {
+  if (param) return param;
+  if (typeof window === 'undefined') return undefined;
+  const sp = new URLSearchParams(window.location.search);
+  const keys: Partial<Record<AppRoute, string[]>> = {
+    glossary: ['id', 'term'],
+    diseases: ['id'],
+    summaries: ['noteId', 'summaryId', 'id'],
+    ornek_sorular: ['ornekId'],
+    flashcards: ['id'],
+    notes: ['id'],
+  };
+  for (const k of keys[route] || []) {
+    const v = sp.get(k);
+    if (v) return v;
+  }
+  return undefined;
+};
+
+/**
+ * In-app navigation to any path (with query/hash): pushes the URL and lets the App's popstate
+ * handler rebuild the page state from it, so a link behaves the same clicked in-app or opened fresh.
+ */
+export const navigateTo = (url: string) => {
+  try {
+    const u = new URL(url, window.location.origin);
+    const next = u.pathname + u.search + u.hash;
+    if (window.location.pathname + window.location.search + window.location.hash !== next) {
+      window.history.pushState({}, '', next);
+    }
+    window.dispatchEvent(new PopStateEvent('popstate'));
+    window.scrollTo({ top: 0 });
+  } catch {
+    window.location.assign(url);
+  }
+};

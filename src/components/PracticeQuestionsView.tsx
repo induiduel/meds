@@ -24,6 +24,7 @@ import { QuestionAboutDialog } from './QuestionAboutDialog';
 import { toast } from './ui/Toast';
 import { safeJsonFetch, ApiService } from '../services/api';
 import { KazanimSorulariView, KAZANIM_INDEX } from './KazanimSorulariView';
+import { pathFor } from '../router';
 
 /**
  * Örnek çalışma soruları (/ornek-sorular): müfredata dayalı, Drive ders notlarından (drive_root) yapay zekâ ile üretilmiş,
@@ -162,7 +163,7 @@ function QuestionCard({ q, n, onOpenAbout }: { q: PQ; n: number; onOpenAbout?: (
   };
 
   const handleShare = async () => {
-    const url = `${window.location.origin}${window.location.pathname}?havuzId=${encodeURIComponent(q.id)}`;
+    const url = `${window.location.origin}${pathFor('ornek_sorular')}?havuzId=${encodeURIComponent(q.id)}`;
     const title = `Örnek Soru · ${q.ders} · ${q.konu}`;
     if (navigator.share && window.matchMedia?.('(pointer: coarse)').matches) {
       try {
@@ -327,17 +328,22 @@ const SEKME_KEY = 'medsoru_ornek_sekme';
 export const PracticeQuestionsView: React.FC<{
   initialLessonId?: string | null;
   initialKazanimNo?: number | null;
-}> = ({ initialLessonId, initialKazanimNo }) => {
+  /** Derin bağlantı: /ornek-sorular/<soruId> (eski ?ornekId=) kazanım sorusu; ?havuzId= serbest havuz sorusu */
+  initialQuestionId?: string | null;
+}> = ({ initialLessonId, initialKazanimNo, initialQuestionId }) => {
+  const havuzId = useMemo(() => {
+    try { return new URLSearchParams(window.location.search).get('havuzId'); } catch { return null; }
+  }, [initialQuestionId]);
   const [sekme, setSekme] = useState<'k1' | 'havuz'>(() => {
-    if (initialLessonId) return 'k1';
+    if (initialLessonId || initialQuestionId) return 'k1';
+    if (havuzId) return 'havuz';
     try { return (window.localStorage.getItem(SEKME_KEY) as any) || 'k1'; } catch { return 'k1'; }
   });
 
   useEffect(() => {
-    if (initialLessonId) {
-      setSekme('k1');
-    }
-  }, [initialLessonId]);
+    if (initialLessonId || initialQuestionId) setSekme('k1');
+    else if (havuzId) setSekme('havuz');
+  }, [initialLessonId, initialQuestionId, havuzId]);
 
   const sekmeSec = (v: 'k1' | 'havuz') => { 
     setSekme(v); 
@@ -371,17 +377,21 @@ export const PracticeQuestionsView: React.FC<{
         <KazanimSorulariView
           initialLessonId={initialLessonId}
           initialKazanimNo={initialKazanimNo}
+          initialQuestionId={initialQuestionId}
         />
       ) : (
-        <TumHavuzUretim />
+        <TumHavuzUretim focusId={havuzId} />
       )}
     </div>
   );
 };
 
 /** Supabase practice_questions tablosundan tüm soruları çeken ve filtreleyen görünüm */
-const TumHavuzUretim: React.FC = () => {
+const TumHavuzUretim: React.FC<{ focusId?: string | null }> = ({ focusId }) => {
   const [all, setAll] = useState<PQ[] | null>(null);
+  // Paylaşılan havuz sorusu (?havuzId=) yalnız o soruyla açılır; "Tüm sorular" listeye döner.
+  const [odak, setOdak] = useState<string | null>(focusId || null);
+  useEffect(() => { setOdak(focusId || null); }, [focusId]);
 
   const [totalCount, setTotalCount] = useState<number>(0);
   const [error, setError] = useState<string | null>(null);
@@ -418,6 +428,7 @@ const TumHavuzUretim: React.FC = () => {
   }, [all, ders]);
 
   const shown = useMemo(() => {
+    if (odak) return (all || []).filter((q) => String(q.id) === odak);
     return (all || []).filter((q) => {
       if (ders && q.ders !== ders) return false;
       if (konu && q.konu !== konu) return false;
@@ -428,7 +439,7 @@ const TumHavuzUretim: React.FC = () => {
       }
       return true;
     });
-  }, [all, ders, konu, search]);
+  }, [all, ders, konu, search, odak]);
 
   const groups = useMemo(() => {
     const m = new Map<string, PQ[]>();
@@ -484,6 +495,13 @@ const TumHavuzUretim: React.FC = () => {
           className="w-full h-11 pl-9 pr-3 rounded-xl bg-white border border-line text-base text-ink placeholder:text-ink-3 outline-none focus:border-accent"
         />
       </div>
+
+      {odak && all !== null && (
+        <div className="flex items-center justify-between gap-2 text-sm text-ink-3">
+          <span>{shown.length ? 'Paylaşılan soru gösteriliyor.' : 'Paylaşılan soru bulunamadı; kaldırılmış olabilir.'}</span>
+          <button type="button" onClick={() => { setOdak(null); try { window.history.replaceState(window.history.state, '', pathFor('ornek_sorular')); } catch { /* yoksay */ } }} className="ms-btn is-ghost is-sm">Tüm sorular</button>
+        </div>
+      )}
 
       {error ? (
         <p className="m-0 text-base text-bad-text">{error}</p>

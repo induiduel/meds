@@ -1,15 +1,15 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { ArrowRight, CornerDownLeft, Loader2, Search, X } from 'lucide-react';
-import { fetchSearch, Highlight, TypeTag, type SearchResponse } from './searchShared';
+import { fetchSearch, Highlight, TypeTag, type SearchHit, type SearchResponse } from './searchShared';
 import { DidYouMean, SuggestList, useQuerySuggest, type SuggestItem } from './QueryIntelUi';
 
 interface SearchPaletteProps {
   initialQuery?: string;
   committeeId?: string;
   onClose: () => void;
-  /** Tüm sonuçlar sayfasına gider; focusId verilirse o sonuç açık gelir */
-  onOpenResults: (query: string, focusId?: string) => void;
+  /** Tüm sonuçlar sayfasına gider; focusId verilirse o sonuç açık gelir. hit: seçilen sonuç (kaynağında açılabilir) */
+  onOpenResults: (query: string, focusId?: string, hit?: SearchHit) => void;
 }
 
 const RECENT_KEY = 'medsoru_recent_searches';
@@ -73,7 +73,7 @@ export const SearchPalette: React.FC<SearchPaletteProps> = ({ initialQuery = '',
   const seeAll = (focusId?: string) => {
     if (!query) return;
     rememberSearch(query);
-    onOpenResults(query, focusId);
+    onOpenResults(query, focusId, focusId ? results.find((r) => r.id === focusId) : undefined);
     onClose();
   };
 
