@@ -212,6 +212,8 @@ def baglam_hazirla(j: dict, d: Path, metin: str, bilgi: dict) -> dict:
               if es.get("programda") else (0.0, None))
     mevcut = pdf_en
     uyarilar = [j.get("uyari")] if j.get("uyari") else []
+    if (j.get("konu_zorla") or {}).get("kullanici_notu"):
+        uyarilar.append("KULLANICI EŞLEŞME KARARI: " + j["konu_zorla"]["kullanici_notu"])
     ayni = prg_en[1] is None or (pdf_en[1] is not None and prg_en[1]["id"] == pdf_en[1]["id"])
     if pdf_en[1] is not None and pdf_en[0] >= 0.85 and ayni:
         deste_id = pdf_en[1]["id"]

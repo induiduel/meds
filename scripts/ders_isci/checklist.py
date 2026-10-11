@@ -26,6 +26,8 @@ from ayarlar import APP, DATABASE, DOWNLOADS, IZLENEN_KOK, KAYIT, KUYRUK, STATE,
 CHECKLIST = STATE / "checklist.json"
 RAPOR = STATE / "durum_raporu.md"
 KAPSAM = STATE / "kapsam.json"          # pdf yolu → [{konu, kurul, sayfa_bas, sayfa_bit, yontem, guven}]
+# Kullanıcının elle verdiği eşleşme kararları (otomatik eşleşmeyi ezer): pdf yolu → {kurul, konu, not}
+ESLESME_DUZELTME = STATE / "eslesme_duzeltme.json"
 _FOLD = str.maketrans("çğıöşüâîûÇĞİÖŞÜÂÎÛ", "cgiosuaiucgiosuaiu")
 ETIKET = {"tamam_2627": "✅ Tamam (2026-27)", "onay_bekliyor": "🟣 Onay bekliyor", "isleniyor": "🔵 İşleniyor",
           "kuyrukta": "🔵 Kuyrukta", "yenilenmeli": "🟠 Yenilenmeli (26-27 PDF geldi, ders geçen yıl kaynaklı)",
@@ -145,7 +147,14 @@ def olustur() -> dict:
                 r["_pdf"].append({"pdf": sid_yol[sid], "sayfa": "tümü", "yontem": "ders_kaynagi"})
     ders_kaynak_pdf = {x["pdf"] for r in satirlar for x in r["_pdf"]}
     pdf_konulari: dict[str, list] = {}
+    duzeltme = oku(ESLESME_DUZELTME, {})
     for yol, xs in kapsam.items():                              # c) kapsam haritası (yeni / ders kaynağı olmayan PDF'ler)
+        if yol in duzeltme:                                     #    kullanıcı kararı: tüm PDF bu konuya aittir
+            dz = duzeltme[yol]
+            x0 = xs[0] if xs else {}
+            xs = [{**x0, "konu": dz["konu"], "kurul": dz.get("kurul", x0.get("kurul")), "programda": True,
+                   "yontem": "kullanici", "guven": "kullanici", "kullanici_notu": dz.get("not", ""),
+                   "sayfa_bas": 1, "sayfa_bit": max((x.get("sayfa_bit") or 1) for x in xs) if xs else None}]
         if yol in ders_kaynak_pdf:
             r = next(r for r in satirlar if any(x["pdf"] == yol for x in r["_pdf"]))
             pdf_konulari[yol] = [{**(xs[0] if xs else {}), "konu": r["konu"], "kurul": r["kurul"], "_satir": r}]
