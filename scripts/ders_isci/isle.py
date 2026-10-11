@@ -66,6 +66,9 @@ def program_eslesmesi(yol: str, metin: str = "") -> dict:
     kurul = next((int(m.group(1)) for p in parts if (m := re.match(r"Kurul\s*(\d)", p, re.I))), None)
     ders_klasoru = parts[-2] if len(parts) >= 2 else ""
     stem = re.sub(r"^\s*\d+\s*[\)\.\-]\s*", "", Path(yol).stem).strip()
+    stem = re.sub(r"^[\s'\"“”‘’]+|[\s'\"“”‘’.]+$", "", stem).replace("_", " ").strip()   # 'BAŞLIK.' → BAŞLIK
+    if stem.isupper():
+        stem = stem.title()
     prog = oku(DATABASE / "taxonomy" / "donem3_ders_programi.json", {})
     konular = [x for k in prog.get("kurullar") or [] if kurul is None or k.get("kurul") == kurul
                for x in k.get("konular") or [] if x.get("tur", "ders") == "ders" and x.get("konu")]

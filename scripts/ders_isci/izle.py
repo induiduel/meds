@@ -59,6 +59,9 @@ def is_id(yol: str, sha: str) -> str:
     return time.strftime("%Y%m%d") + "-" + sha[:10]
 
 
+KAPSAM_SURUM = ":v3"   # kapsam/eşleşme mantığı değişince artır → tüm PDF'ler yeniden haritalanır
+
+
 def kapsam_guncelle() -> int:
     """Her izlenen-kök PDF'i için kapsam (hangi konular, hangi sayfalar). Dosya başına bir kez; içerik değişirse yeniden."""
     from cikar import pdf_metni  # noqa: E402
@@ -69,13 +72,13 @@ def kapsam_guncelle() -> int:
     imza = oku(KAPSAM.with_name("kapsam_imza.json"), {})
     yeni = 0
     for p in pdfler():
-        if "ders programı" in p["yol"].lower() or imza.get(p["yol"]) == p["sha256"]:
+        if "ders programı" in p["yol"].lower() or imza.get(p["yol"]) == p["sha256"] + KAPSAM_SURUM:
             continue
         try:
             metin, _ = pdf_metni(Path(p["tam"]))
             ana = program_eslesmesi(p["yol"], metin)
             kap[p["yol"]] = pdf_kapsami(p["yol"], metin, ana)
-            imza[p["yol"]] = p["sha256"]
+            imza[p["yol"]] = p["sha256"] + KAPSAM_SURUM
             yeni += 1
             yaz(KAPSAM, kap)
             yaz(KAPSAM.with_name("kapsam_imza.json"), imza)

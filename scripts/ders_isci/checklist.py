@@ -49,7 +49,7 @@ DURAK = {"ve", "ile", "icin", "bir", "veya", "de", "da", "in", "nin"}
 
 
 def norm_konu(s: str) -> str:
-    f = fold(s)
+    f = fold(re.sub(r"^[\s'\"“”‘’]+|[\s'\"“”‘’.]+$", "", str(s)))
     for a, b in SINONIM:
         f = re.sub(a, b, f)
     return f
@@ -114,7 +114,15 @@ def olustur() -> dict:
     satirlar: list[dict] = []
 
     def satir_bul(kurul, konu):
-        return next((r for r in satirlar if r["kurul"] == kurul and ayni_konu(r["konu"], konu)), None)
+        r = next((r for r in satirlar if r["kurul"] == kurul and ayni_konu(r["konu"], konu)), None)
+        if r:
+            return r
+        # Alt küme kuralı: kısa ad uzun adın kelimelerinin alt kümesi (≥3 anlamlı kök) ve TEK aday varsa aynı konu
+        # ("Ürogenital Sistem Tümörlerinde Genetik Belirteçler" ⊂ "... ve Kliniğe Yansımaları"); Nekroz I/II gibi çoklu adayda bağlanmaz.
+        kk = kokler(konu)
+        aday = [r for r in satirlar if r["kurul"] == kurul and len(kk) >= 3 and len(kokler(r["konu"])) >= 3
+                and (kk <= kokler(r["konu"]) or kokler(r["konu"]) <= kk)]
+        return aday[0] if len(aday) == 1 else None
 
     def satir_ekle(kurul, t, programda=True):
         r = {"kurul": kurul, "tarih": t.get("tarih"), "ders": t.get("ders"), "konu": t["konu"], "programda": programda,
