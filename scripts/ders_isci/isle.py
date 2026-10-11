@@ -37,29 +37,85 @@ def slug(s: str) -> str:
 
 
 # ------------------------------------------------------------------ bağlam paketi
-def program_eslesmesi(yol: str) -> dict:
-    """Ders programındaki konulardan bu PDF'e en uygun olanı (parse_ders_programi.match_pdfs ile aynı puanlama)."""
-    from parse_ders_programi import match_pdfs  # noqa: E402
+def _embed(metinler: list[str]) -> list[list[float]] | None:
+    try:
+        req = urllib.request.Request(os.environ.get("MEDS_EMBED_URL", "http://meds-embed:8094/embed"),
+                                     json.dumps({"texts": metinler, "kind": "query"}).encode(), {"Content-Type": "application/json"})
+        return json.load(urllib.request.urlopen(req, timeout=180))["vectors"]
+    except Exception as e:  # noqa: BLE001
+        log(f"anlam benzerliği hesaplanamadı (embed): {e}")
+        return None
 
+
+def _baslik_alani(metin: str) -> str:
+    """PDF'in ilk 2 sayfasındaki anlamlı satırlar (kapak/başlık; hoca adı, uyarı satırları hariç)."""
+    satirlar = []
+    for sayfa in metin.split("=== SAYFA ")[1:3]:
+        for x in sayfa.split("\n")[1:]:
+            x = x.strip()
+            if 4 <= len(x) <= 120 and not re.search(r"dr\.|prof|doç|üyesi|unutmay|telif|paylaş|şahsınıza|amaçlıdır|gösteriniz|platform|hassasiyet|fikri mülkiyet", x, re.I):
+                satirlar.append(x)
+    return " ".join(satirlar[:8])
+
+
+def program_eslesmesi(yol: str, metin: str = "") -> dict:
+    """PDF'i ders programındaki AYNI KURULUN konularından birine eşler. Tarih KULLANILMAZ (konu kurul içinde başka gün
+    işlenebilir; tarih yalnız bilgi). Puan = ad benzerliği (parse_ders_programi puanlaması) + kapak başlığı benzerliği +
+    içerik anlam benzerliği (bge-m3, ilk sayfalar ↔ konu adı). Güven, puan VE ikinci adaya fark ile belirlenir."""
     parts = Path(yol).parts
     kurul = next((int(m.group(1)) for p in parts if (m := re.match(r"Kurul\s*(\d)", p, re.I))), None)
-    stem = re.sub(r"^\s*\d+\s*[\)\.\-]\s*", "", Path(yol).stem)
-    pdf = {"path": yol, "kurul": kurul, "ders_klasoru": parts[-2] if len(parts) >= 2 else "", "ad": Path(yol).stem,
-           "fold": fold(stem)}
+    ders_klasoru = parts[-2] if len(parts) >= 2 else ""
+    stem = re.sub(r"^\s*\d+\s*[\)\.\-]\s*", "", Path(yol).stem).strip()
     prog = oku(DATABASE / "taxonomy" / "donem3_ders_programi.json", {})
-    en_iyi, skor = None, 0.0
-    for k in prog.get("kurullar") or []:
-        for konu in k.get("konular") or []:
-            for c in match_pdfs(konu, [pdf]):
-                if c["skor"] > skor:
-                    en_iyi, skor = konu, c["skor"]
-    out = {"kurul": kurul, "ders_klasoru": pdf["ders_klasoru"], "skor": skor,
-           "guven": "yuksek" if skor >= 0.75 else "orta" if skor >= 0.55 else "dusuk"}
-    if en_iyi:
-        out.update({k: en_iyi.get(k) for k in ("ders", "konu", "ogretim_uyesi", "tarih", "hafta", "saat")})
-        out["kurul"] = en_iyi.get("kurul") or kurul
-    else:
-        out.update({"ders": pdf["ders_klasoru"], "konu": stem})
+    konular = [x for k in prog.get("kurullar") or [] if kurul is None or k.get("kurul") == kurul
+               for x in k.get("konular") or [] if x.get("tur", "ders") == "ders" and x.get("konu")]
+    out = {"kurul": kurul, "ders_klasoru": ders_klasoru, "pdf_basligi": stem, "skor": 0.0, "guven": "dusuk",
+           "ders": ders_klasoru, "konu": stem, "programda": False}
+    if not konular:
+        return out
+    baslik = _baslik_alani(metin)
+    giris = " ".join(metin.split("=== SAYFA ")[1:5])[:1800] if metin else ""
+
+    def ad_puani(konu: dict) -> float:
+        t, pf = fold(konu["konu"]), fold(stem)
+        r = difflib.SequenceMatcher(None, t, pf).ratio()
+        tw, pw = set(t.split()), set(pf.split())
+        jac = len(tw & pw) / max(1, len(tw | pw))
+        ayni = bool(konu.get("ders")) and fold(konu["ders"]) == fold(ders_klasoru)
+        return min(1.0, 0.6 * r + 0.4 * jac + (0.1 if ayni else 0))
+
+    def baslik_puani(konu: dict) -> float:
+        if not baslik:
+            return 0.0
+        t = fold(konu["konu"])
+        return 1.0 if t and t in fold(baslik) else difflib.SequenceMatcher(None, t, fold(baslik)[: len(t) + 20]).ratio()
+
+    anlam = [0.0] * len(konular)
+    v = _embed([giris or stem] + [k["konu"] for k in konular]) if (giris or stem) else None
+    if v:
+        import math
+        q = v[0]
+        for i, kv in enumerate(v[1:]):
+            anlam[i] = sum(a * b for a, b in zip(q, kv)) / (math.sqrt(sum(a * a for a in q)) * math.sqrt(sum(b * b for b in kv)) or 1)
+
+    puanlar = []
+    for i, konu in enumerate(konular):
+        ad, bs = ad_puani(konu), baslik_puani(konu)
+        ayni_ders = bool(konu.get("ders")) and fold(konu["ders"]) == fold(ders_klasoru)
+        # bge-m3 kosinüsü ~0.3–0.8 aralığında; 0.45 altı ilgisiz sayılır
+        an = max(0.0, min(1.0, (anlam[i] - 0.45) / 0.35))
+        top = 0.45 * ad + 0.25 * bs + 0.30 * an + (0.05 if ayni_ders else 0)
+        puanlar.append((round(top, 3), konu, {"ad": round(ad, 3), "baslik": round(bs, 3), "anlam": round(anlam[i], 3)}))
+    puanlar.sort(key=lambda x: -x[0])
+    (s1, k1, d1), s2 = puanlar[0], (puanlar[1][0] if len(puanlar) > 1 else 0.0)
+    fark = s1 - s2
+    guven = "yuksek" if (s1 >= 0.70 and fark >= 0.10) else "orta" if (s1 >= 0.50 and fark >= 0.05) else "dusuk"
+    out.update({"skor": s1, "fark": round(fark, 3), "guven": guven, "ayrinti": d1,
+                "adaylar": [{"konu": k["konu"], "ders": k.get("ders"), "tarih": k.get("tarih"), "puan": sc} for sc, k, _ in puanlar[:3]]})
+    if guven != "dusuk":
+        out.update({k: k1.get(k) for k in ("ders", "konu", "ogretim_uyesi", "tarih", "hafta", "saat")})
+        out["kurul"] = k1.get("kurul") or kurul
+        out["programda"] = True
     return out
 
 
@@ -112,34 +168,45 @@ def cikmis_adaylari(metin: str, kurul: int | None, en_cok: int = 40) -> list[dic
 
 
 def baglam_hazirla(j: dict, d: Path, metin: str, bilgi: dict) -> dict:
-    es = program_eslesmesi(j["yol"])
+    es = program_eslesmesi(j["yol"], metin)
     kurul = es.get("kurul") or 0
     sozluk = oku(APP / "src" / "data" / "medical_glossary.json", {})
     hast = oku(APP / "src" / "data" / "diseases.json", [])
     decks = oku(APP / "src" / "data" / "interactive_learning_decks.json", [])
-    # Bu konunun destesi zaten varsa (hoca PDF'i güncelledi / yeniden yükledi): yeni numara açma, mevcut dersi güncelle
-    konu_f = fold(es.get("konu") or Path(j["yol"]).stem)
-    def benzerlik(d: dict) -> float:  # başlık ya da kimlikteki konu kısmı (k1p-k1-02-patolojiye-giris → patolojiye giris)
+    # Bu konunun destesi zaten varsa (hoca PDF'i güncelledi / yeniden yükledi) yeni numara açma, mevcut dersi güncelle.
+    # GÜVENLİK: güncelleme yalnız (a) PDF'in KENDİ adı/başlığı aynı desteyi gösteriyorsa ve (b) program eşleşmesi varsa o da
+    # aynı desteyi gösteriyorsa seçilir. Aksi halde yeni taslak + uyarı (yanlış dersin üzerine yazılmasın).
+    def benzerlik(ad: str, d: dict) -> float:  # başlık ya da kimlikteki konu kısmı (k1p-k1-02-patolojiye-giris)
         kimlik = re.sub(r"^k\d+p-k\d+-\d+-", "", d.get("id", "")).replace("-", " ")
-        return max(difflib.SequenceMatcher(None, konu_f, fold(d.get("title", ""))).ratio(),
-                   difflib.SequenceMatcher(None, konu_f, kimlik).ratio())
+        f = fold(ad)
+        return max(difflib.SequenceMatcher(None, f, fold(d.get("title", ""))).ratio(), difflib.SequenceMatcher(None, f, kimlik).ratio())
 
-    mevcut = max(((benzerlik(d), d)
-                  for d in (decks if isinstance(decks, list) else []) if d.get("id", "").startswith(f"k{kurul}p-")),
-                 key=lambda x: x[0], default=(0.0, None))
-    if mevcut[1] is not None and mevcut[0] >= 0.85:
-        deste_id = mevcut[1]["id"]
+    adaylar = [d for d in (decks if isinstance(decks, list) else []) if d.get("id", "").startswith(f"k{kurul}p-")]
+    pdf_adi = es.get("pdf_basligi") or Path(j["yol"]).stem
+    pdf_en = max(((benzerlik(pdf_adi, d), d) for d in adaylar), key=lambda x: x[0], default=(0.0, None))
+    prg_en = (max(((benzerlik(es["konu"], d), d) for d in adaylar), key=lambda x: x[0], default=(0.0, None))
+              if es.get("programda") else (0.0, None))
+    mevcut = pdf_en
+    uyarilar = [j.get("uyari")] if j.get("uyari") else []
+    ayni = prg_en[1] is None or (pdf_en[1] is not None and prg_en[1]["id"] == pdf_en[1]["id"])
+    if pdf_en[1] is not None and pdf_en[0] >= 0.85 and ayni:
+        deste_id = pdf_en[1]["id"]
         ders_id = deste_id.split("-", 1)[1]
         n = int(re.match(rf"k{kurul}-(\d+)-", ders_id).group(1))
         mod = "guncelleme"
     else:
+        if pdf_en[1] is not None and pdf_en[0] >= 0.85 and not ayni:
+            uyarilar.append(f"PDF adı '{pdf_en[1]['id']}' destesini, program eşleşmesi '{prg_en[1]['id']}' destesini gösteriyor — yeni taslak açıldı, kontrol et")
+        if not es.get("programda"):
+            uyarilar.append("ders programında güvenle eşleşen konu yok (adaylar rapordadır); ders PDF'in kendi adıyla açıldı")
         n = sonraki_numara(kurul) if kurul else 0
-        ders_id = f"k{kurul}-{n:02d}-{slug(es.get('konu') or Path(j['yol']).stem)}"
+        ad_kaynagi = es.get("konu") if es.get("programda") else pdf_adi
+        ders_id = f"k{kurul}-{n:02d}-{slug(ad_kaynagi)}"
         deste_id = f"k{kurul}p-{ders_id}"
         mod = "yeni"
     b = {
         "is_id": j["is_id"], "pdf_yolu": j["yol"], "pdf_adi": Path(j["yol"]).name, "yil": j.get("yil"),
-        "uyari": j.get("uyari", ""), "sayfa": bilgi["sayfa"], "ocr_sayfalar": bilgi["ocr_sayfalar"],
+        "uyari": "; ".join(u for u in uyarilar if u), "sayfa": bilgi["sayfa"], "ocr_sayfalar": bilgi["ocr_sayfalar"],
         "program": es, "kurul": kurul, "numara": n, "ders_id": ders_id, "deste_id": deste_id, "mod": mod,
         "mevcut_eslesme": round(mevcut[0], 3),
         "committeeId": f"donem3-kurul{kurul}" if kurul else "",
