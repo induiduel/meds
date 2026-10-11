@@ -1,0 +1,1234 @@
+[
+  {
+    "source": "past_question",
+    "targetId": "047b1367cbf4",
+    "userReport": {
+      "reason": "Diğer",
+      "details": "Sorun nedir bilmiyorum fakat karantinaya alındığına göre hata var",
+      "reportedBy": "Dr House",
+      "reportedAt": "2026-10-10T23:44:08.054Z",
+      "email": "nofrostlife@gmail.com"
+    },
+    "fullContext": {
+      "id": "047b1367cbf4",
+      "committeeId": "donem3-kurul5",
+      "donem": "Dönem 3",
+      "kurul": 1,
+      "questionNumber": 1016,
+      "discipline": "FTR",
+      "topic": "Boyun ağrılarına yaklaşım",
+      "stem": "Servikal disk hernisinde anulusun tüm lamelleri ve posterior longitüdinal ligament yırtılmış ise bu tablo Macnab sınıflamasına göre aşağıdakilerden hangisidir?",
+      "reconstruction": {
+        "stem": "Servikal disk hernisinde anulusun tüm lamelleri ve posterior longitüdinal ligament yırtılmış ise bu tablo Macnab sınıflamasına göre aşağıdakilerden hangisidir?",
+        "options": [
+          {
+            "key": "A",
+            "label": "A",
+            "text": "Servikal disk hernisinde anulusun tüm lamelleri ve posterior longitüdinal ligament yırtılmış ise tablo Mac nab sınıflamasına aşağıdakilerden hangisidir?",
+            "isCorrect": false
+          },
+          {
+            "key": "B",
+            "label": "B",
+            "text": "Protrüzyon",
+            "isCorrect": false
+          },
+          {
+            "key": "C",
+            "label": "C",
+            "text": "Anuler Bulging",
+            "isCorrect": false
+          },
+          {
+            "key": "D",
+            "label": "D",
+            "text": "Protrüzyon",
+            "isCorrect": false
+          },
+          {
+            "key": "E",
+            "label": "E",
+            "text": "Sekestrasyon",
+            "isCorrect": true
+          }
+        ],
+        "correctAnswer": "E",
+        "explanation": "• Macnab sınıflaması, disk herniasyonlarını morfolojik özelliklerine ve ligament ilişkilerine göre sınıflandırır.\n• Protrüzyonda nükleus pulposus anulus liflerini yırtar ancak en dış lifler ve posterior longitüdinal ligament (PLL) sağlamdır.\n• Ekstrüzyonda anulus fibrosusun tüm katmanları ve PLL yırtılarak disk materyali epidural mesafeye taşar, ancak ana disk ile bağlantısı devam eder.\n• Sekestrasyonda ise bu bağlantı tamamen koparak serbest fragman (sekestre fragman) oluşur.\n• Soruda anulusun tüm lamellerinin ve PLL'nin yırtıldığı belirtildiğinden ve serbest fragmandan bahsedilmediğinden doğru cevap Ekstrüzyon'dur.",
+        "reconstructionQuality": "denetleyici_onayli"
+      },
+      "options": [
+        {
+          "key": "A",
+          "text": "Servikal disk hernisinde anulusun tüm lamelleri ve posterior longitüdinal ligament yırtılmış ise tablo Mac nab sınıflamasına aşağıdakilerden hangisidir",
+          "isCorrect": false
+        },
+        {
+          "key": "B",
+          "text": "Protrüzyon",
+          "isCorrect": false
+        },
+        {
+          "key": "C",
+          "text": "Anuler Bulging",
+          "isCorrect": false
+        },
+        {
+          "key": "D",
+          "text": "Protrüzyon",
+          "isCorrect": false
+        },
+        {
+          "key": "E",
+          "text": "Sekestrasyon",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswer": "E",
+      "claimedAnswer": "E",
+      "explanation": "• Macnab sınıflaması, disk herniasyonlarını morfolojik özelliklerine ve ligament ilişkilerine göre sınıflandırır.\n• Protrüzyonda nükleus pulposus anulus liflerini yırtar ancak en dış lifler ve posterior longitüdinal ligament (PLL) sağlamdır.\n• Ekstrüzyonda anulus fibrosusun tüm katmanları ve PLL yırtılarak disk materyali epidural mesafeye taşar, ancak ana disk ile bağlantısı devam eder.\n• Sekestrasyonda ise bu bağlantı tamamen koparak serbest fragman (sekestre fragman) oluşur.\n• Soruda anulusun tüm lamellerinin ve PLL'nin yırtıldığı belirtildiğinden ve serbest fragmandan bahsedilmediğinden doğru cevap Ekstrüzyon'dur.",
+      "examYear": "2023-2024",
+      "sourceFile": "c4259dc9087e",
+      "sourceNote": "Dönem 3 Kurul 1 Doğrulanmış Sınavı",
+      "status": "quarantined",
+      "isSuspect": false,
+      "isAmbiguous": false,
+      "isPastExam": true,
+      "tags": [
+        "Tıbbi Patoloji",
+        "altin_standart",
+        "donem3-kurul1",
+        "faz14_tamamlandi",
+        "Çıkmış Sınav",
+        "karantina",
+        "faz15_reddedildi",
+        "hasarli_soru"
+      ],
+      "evidence": [
+        "c4259dc9087e:p1056:c0"
+      ],
+      "supportRatio": 0.9583,
+      "updatedAt": "2026-10-10T23:44:08.054Z",
+      "eskiSurum": {
+        "stem": "Boyun ağrılarına yaklaşım",
+        "options": [
+          {
+            "key": "A",
+            "text": "Servikal disk hernisinde anulusun tüm lamelleri ve posterior longitüdinal ligament yırtılmış ise tablo Mac nab sınıflamasına aşağıdakilerden hangisidir?",
+            "isCorrect": false
+          },
+          {
+            "key": "B",
+            "text": "Ekstrüzyon",
+            "isCorrect": false
+          },
+          {
+            "key": "C",
+            "text": "Anuler Bulging",
+            "isCorrect": false
+          },
+          {
+            "key": "D",
+            "text": "Protrüzyon",
+            "isCorrect": false
+          },
+          {
+            "key": "E",
+            "text": "Sekestrasyon",
+            "isCorrect": false
+          }
+        ],
+        "correctAnswer": "",
+        "claimedAnswer": "",
+        "explanation": "",
+        "discipline": "Tıbbi Patoloji",
+        "topic": "Tıbbi Patoloji Kurul Sorusu",
+        "committeeId": "donem3-kurul1",
+        "examYear": "2023-2024",
+        "isAmbiguous": false,
+        "status": "onaylandi"
+      },
+      "phase14Original": {
+        "stem": "Boyun ağrılarına yaklaşım",
+        "options": [
+          {
+            "key": "A",
+            "text": "Servikal disk hernisinde anulusun tüm lamelleri ve posterior longitüdinal ligament yırtılmış ise tablo Mac nab sınıflamasına aşağıdakilerden hangisidir?",
+            "isCorrect": false
+          },
+          {
+            "key": "B",
+            "text": "Ekstrüzyon",
+            "isCorrect": false
+          },
+          {
+            "key": "C",
+            "text": "Anuler Bulging",
+            "isCorrect": false
+          },
+          {
+            "key": "D",
+            "text": "Protrüzyon",
+            "isCorrect": false
+          },
+          {
+            "key": "E",
+            "text": "Sekestrasyon",
+            "isCorrect": false
+          }
+        ],
+        "correctAnswer": "",
+        "claimedAnswer": "",
+        "explanation": "",
+        "discipline": "Tıbbi Patoloji",
+        "topic": "Tıbbi Patoloji Kurul Sorusu",
+        "committeeId": "donem3-kurul1",
+        "examYear": "2023-2024",
+        "isAmbiguous": false,
+        "status": "onaylandi"
+      },
+      "denetleyiciSurumu": {
+        "stem": "Servikal disk hernisinde anulusun tüm lamelleri ve posterior longitüdinal ligament yırtılmış ise bu tablo Macnab sınıflamasına göre aşağıdakilerden hangisidir?",
+        "options": [
+          {
+            "key": "A",
+            "label": "A",
+            "text": "Servikal disk hernisinde anulusun tüm lamelleri ve posterior longitüdinal ligament yırtılmış ise tablo Mac nab sınıflamasına aşağıdakilerden hangisidir?",
+            "isCorrect": false
+          },
+          {
+            "key": "B",
+            "label": "B",
+            "text": "Protrüzyon",
+            "isCorrect": false
+          },
+          {
+            "key": "C",
+            "label": "C",
+            "text": "Anuler Bulging",
+            "isCorrect": false
+          },
+          {
+            "key": "D",
+            "label": "D",
+            "text": "Protrüzyon",
+            "isCorrect": false
+          },
+          {
+            "key": "E",
+            "label": "E",
+            "text": "Sekestrasyon",
+            "isCorrect": true
+          }
+        ],
+        "correctAnswer": "E",
+        "claimedAnswer": "E",
+        "dogru_cevap_metni": "Sekestrasyon",
+        "explanation": "• Macnab sınıflaması, disk herniasyonlarını morfolojik özelliklerine ve ligament ilişkilerine göre sınıflandırır.\n• Protrüzyonda nükleus pulposus anulus liflerini yırtar ancak en dış lifler ve posterior longitüdinal ligament (PLL) sağlamdır.\n• Ekstrüzyonda anulus fibrosusun tüm katmanları ve PLL yırtılarak disk materyali epidural mesafeye taşar, ancak ana disk ile bağlantısı devam eder.\n• Sekestrasyonda ise bu bağlantı tamamen koparak serbest fragman (sekestre fragman) oluşur.\n• Soruda anulusun tüm lamellerinin ve PLL'nin yırtıldığı belirtildiğinden ve serbest fragmandan bahsedilmediğinden doğru cevap Ekstrüzyon'dur.",
+        "tibbi_aciklama": "• Macnab sınıflaması, disk herniasyonlarını morfolojik özelliklerine ve ligament ilişkilerine göre sınıflandırır.\n• Protrüzyonda nükleus pulposus anulus liflerini yırtar ancak en dış lifler ve posterior longitüdinal ligament (PLL) sağlamdır.\n• Ekstrüzyonda anulus fibrosusun tüm katmanları ve PLL yırtılarak disk materyali epidural mesafeye taşar, ancak ana disk ile bağlantısı devam eder.\n• Sekestrasyonda ise bu bağlantı tamamen koparak serbest fragman (sekestre fragman) oluşur.\n• Soruda anulusun tüm lamellerinin ve PLL'nin yırtıldığı belirtildiğinden ve serbest fragmandan bahsedilmediğinden doğru cevap Ekstrüzyon'dur.",
+        "sik_analizi": {
+          "A": "YANLIŞ: Anuler bulging tablosunda anulus fibrosus lifleri sağlamdır, sadece diskin genelinde hafif bir taşma mevcuttur.",
+          "B": "YANLIŞ: Protrüzyonda nükleus pulposus anulusun iç liflerini yırtar ancak en dış lifler ve posterior longitüdinal ligament (PLL) sağlam kalmıştır.",
+          "C": "DOĞRU: Ekstrüzyonda anulusun tüm lamelleri ve posterior longitüdinal ligament yırtılmıştır ancak herniye olan materyal ana disk ile ilişkisini sürdürmektedir.",
+          "D": "YANLIŞ: Sekestrasyonda yırtılmaya ek olarak herniye olan parça ana disk ile bağlantısını tamamen koparmış ve serbest fragman haline gelmiştir.",
+          "E": "YANLIŞ: Disk dejenerasyonu genel bir süreçtir, Macnab sınıflamasında spesifik bir herniasyon evresi değildir."
+        },
+        "cevap_gerekcesi": "Macnab sınıflamasına göre anulusun tüm katmanlarının ve PLL'nin yırtılması ancak bağlantının kopmaması ekstrüzyon olarak tanımlanır.",
+        "referans_kaynaklar": "Macnab I. Negative discography. An evaluation of the significance of discography in the treatment of ruptured intervertebral discs. Spine. 1977.",
+        "degisiklik_notu": "Otomatik koruma modelin bazı değişikliklerini geri aldı: A şıkkı anlamca değiştirilmişti → özgün şık korundu; C şıkkı anlamca değiştirilmişti → özgün şık korundu; D şıkkı anlamca değiştirilmişti → özgün şık korundu; E şıkkında anlam değişmiş olabilir (çıkarılan: sekestrasyon) → özgün şık korundu. Gerçekte değişen alanlar: soru_koku, secenekler, dogru_secenek, kurul_adi, ders_adi, konu_adi. Elle inceleyin.",
+        "discipline": "FTR",
+        "topic": "Boyun ağrılarına yaklaşım",
+        "committeeId": "donem3-kurul5",
+        "onayTarihi": "2026-10-08T20:02:26Z",
+        "denetleyen": "Tıbbi Kurul Denetleyicisi (Guyton / Robbins / Harper / Netter Standartı)"
+      },
+      "denetleyiciOnayi": false,
+      "denetleyici_onayi": true,
+      "surum": "denetleyici",
+      "aktifSurum": "denetleyici",
+      "tibbi_aciklama": "• Macnab sınıflaması, disk herniasyonlarını morfolojik özelliklerine ve ligament ilişkilerine göre sınıflandırır.\n• Protrüzyonda nükleus pulposus anulus liflerini yırtar ancak en dış lifler ve posterior longitüdinal ligament (PLL) sağlamdır.\n• Ekstrüzyonda anulus fibrosusun tüm katmanları ve PLL yırtılarak disk materyali epidural mesafeye taşar, ancak ana disk ile bağlantısı devam eder.\n• Sekestrasyonda ise bu bağlantı tamamen koparak serbest fragman (sekestre fragman) oluşur.\n• Soruda anulusun tüm lamellerinin ve PLL'nin yırtıldığı belirtildiğinden ve serbest fragmandan bahsedilmediğinden doğru cevap Ekstrüzyon'dur.",
+      "sik_analizi": {
+        "A": "YANLIŞ: Anuler bulging tablosunda anulus fibrosus lifleri sağlamdır, sadece diskin genelinde hafif bir taşma mevcuttur.",
+        "B": "YANLIŞ: Protrüzyonda nükleus pulposus anulusun iç liflerini yırtar ancak en dış lifler ve posterior longitüdinal ligament (PLL) sağlam kalmıştır.",
+        "C": "YANLIŞ: DOĞRU: Ekstrüzyonda anulusun tüm lamelleri ve posterior longitüdinal ligament yırtılmıştır ancak herniye olan materyal ana disk ile ilişkisini sürdürmektedir.",
+        "D": "YANLIŞ: Sekestrasyonda yırtılmaya ek olarak herniye olan parça ana disk ile bağlantısını tamamen koparmış ve serbest fragman haline gelmiştir.",
+        "E": "DOĞRU: YANLIŞ: Disk dejenerasyonu genel bir süreçtir, Macnab sınıflamasında spesifik bir herniasyon evresi değildir."
+      },
+      "cevap_gerekcesi": "Macnab sınıflamasına göre anulusun tüm katmanlarının ve PLL'nin yırtılması ancak bağlantının kopmaması ekstrüzyon olarak tanımlanır.",
+      "referans_kaynaklar": "Macnab I. Negative discography. An evaluation of the significance of discography in the treatment of ruptured intervertebral discs. Spine. 1977.",
+      "answerStatus": "denetleyici_onayli",
+      "phase14": {
+        "status": "onayli",
+        "denetleyiciOnayi": true,
+        "approvedAt": "2026-10-08T20:02:26Z",
+        "model": "gemini-pro-thinking",
+        "summary": "Otomatik koruma modelin bazı değişikliklerini geri aldı: A şıkkı anlamca değiştirilmişti → özgün şık korundu; C şıkkı anlamca değiştirilmişti → özgün şık korundu; D şıkkı anlamca değiştirilmişti → özgün şık korundu; E şıkkında anlam değişmiş olabilir (çıkarılan: sekestrasyon) → özgün şık korundu. Gerçekte değişen alanlar: soru_koku, secenekler, dogru_secenek, kurul_adi, ders_adi, konu_adi. Elle inceleyin.",
+        "cevapDegisti": false,
+        "cevapGerekcesi": "Macnab sınıflamasına göre anulusun tüm katmanlarının ve PLL'nin yırtılması ancak bağlantının kopmaması ekstrüzyon olarak tanımlanır."
+      },
+      "karantina_gerekcesi": "A seçeneğinde soru cümlesi yapışmış disk hernisi kaydı.",
+      "qualityScore": 59,
+      "qualityTier": "zayif",
+      "qualityIssues": [
+        "faz15-red",
+        "hasarli-etiket",
+        "karantina",
+        "tekrar-sik"
+      ],
+      "qualityVersion": "v1-2026-10-10",
+      "reports": [
+        {
+          "id": "rep-1791675847948-yc9p",
+          "reason": "Diğer",
+          "details": "Sorun nedir bilmiyorum fakat karantinaya alındığına göre hata var",
+          "reportedBy": "Dr House",
+          "reporterEmail": "nofrostlife@gmail.com",
+          "reporterUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+          "timestamp": "2026-10-10T23:44:08.054Z"
+        }
+      ]
+    },
+    "id": "rep_uniq_1791675848887_0pg0rk2_0791",
+    "ticketNo": "#000002",
+    "status": "applied",
+    "retryCount": 0,
+    "beforeSnapshot": {
+      "id": "047b1367cbf4",
+      "committeeId": "donem3-kurul5",
+      "donem": "Dönem 3",
+      "kurul": 1,
+      "questionNumber": 1016,
+      "discipline": "FTR",
+      "topic": "Boyun ağrılarına yaklaşım",
+      "stem": "Servikal disk hernisinde anulusun tüm lamelleri ve posterior longitüdinal ligament yırtılmış ise bu tablo Macnab sınıflamasına göre aşağıdakilerden hangisidir?",
+      "reconstruction": {
+        "stem": "Servikal disk hernisinde anulusun tüm lamelleri ve posterior longitüdinal ligament yırtılmış ise bu tablo Macnab sınıflamasına göre aşağıdakilerden hangisidir?",
+        "options": [
+          {
+            "key": "A",
+            "label": "A",
+            "text": "Servikal disk hernisinde anulusun tüm lamelleri ve posterior longitüdinal ligament yırtılmış ise tablo Mac nab sınıflamasına aşağıdakilerden hangisidir?",
+            "isCorrect": false
+          },
+          {
+            "key": "B",
+            "label": "B",
+            "text": "Protrüzyon",
+            "isCorrect": false
+          },
+          {
+            "key": "C",
+            "label": "C",
+            "text": "Anuler Bulging",
+            "isCorrect": false
+          },
+          {
+            "key": "D",
+            "label": "D",
+            "text": "Protrüzyon",
+            "isCorrect": false
+          },
+          {
+            "key": "E",
+            "label": "E",
+            "text": "Sekestrasyon",
+            "isCorrect": true
+          }
+        ],
+        "correctAnswer": "E",
+        "explanation": "• Macnab sınıflaması, disk herniasyonlarını morfolojik özelliklerine ve ligament ilişkilerine göre sınıflandırır.\n• Protrüzyonda nükleus pulposus anulus liflerini yırtar ancak en dış lifler ve posterior longitüdinal ligament (PLL) sağlamdır.\n• Ekstrüzyonda anulus fibrosusun tüm katmanları ve PLL yırtılarak disk materyali epidural mesafeye taşar, ancak ana disk ile bağlantısı devam eder.\n• Sekestrasyonda ise bu bağlantı tamamen koparak serbest fragman (sekestre fragman) oluşur.\n• Soruda anulusun tüm lamellerinin ve PLL'nin yırtıldığı belirtildiğinden ve serbest fragmandan bahsedilmediğinden doğru cevap Ekstrüzyon'dur.",
+        "reconstructionQuality": "denetleyici_onayli"
+      },
+      "options": [
+        {
+          "key": "A",
+          "text": "Servikal disk hernisinde anulusun tüm lamelleri ve posterior longitüdinal ligament yırtılmış ise tablo Mac nab sınıflamasına aşağıdakilerden hangisidir",
+          "isCorrect": false
+        },
+        {
+          "key": "B",
+          "text": "Protrüzyon",
+          "isCorrect": false
+        },
+        {
+          "key": "C",
+          "text": "Anuler Bulging",
+          "isCorrect": false
+        },
+        {
+          "key": "D",
+          "text": "Protrüzyon",
+          "isCorrect": false
+        },
+        {
+          "key": "E",
+          "text": "Sekestrasyon",
+          "isCorrect": true
+        }
+      ],
+      "correctAnswer": "E",
+      "claimedAnswer": "E",
+      "explanation": "• Macnab sınıflaması, disk herniasyonlarını morfolojik özelliklerine ve ligament ilişkilerine göre sınıflandırır.\n• Protrüzyonda nükleus pulposus anulus liflerini yırtar ancak en dış lifler ve posterior longitüdinal ligament (PLL) sağlamdır.\n• Ekstrüzyonda anulus fibrosusun tüm katmanları ve PLL yırtılarak disk materyali epidural mesafeye taşar, ancak ana disk ile bağlantısı devam eder.\n• Sekestrasyonda ise bu bağlantı tamamen koparak serbest fragman (sekestre fragman) oluşur.\n• Soruda anulusun tüm lamellerinin ve PLL'nin yırtıldığı belirtildiğinden ve serbest fragmandan bahsedilmediğinden doğru cevap Ekstrüzyon'dur.",
+      "examYear": "2023-2024",
+      "sourceFile": "c4259dc9087e",
+      "sourceNote": "Dönem 3 Kurul 1 Doğrulanmış Sınavı",
+      "status": "quarantined",
+      "isSuspect": false,
+      "isAmbiguous": false,
+      "isPastExam": true,
+      "tags": [
+        "Tıbbi Patoloji",
+        "altin_standart",
+        "donem3-kurul1",
+        "faz14_tamamlandi",
+        "Çıkmış Sınav",
+        "karantina",
+        "faz15_reddedildi",
+        "hasarli_soru"
+      ],
+      "evidence": [
+        "c4259dc9087e:p1056:c0"
+      ],
+      "supportRatio": 0.9583,
+      "updatedAt": "2026-10-10T23:44:08.054Z",
+      "eskiSurum": {
+        "stem": "Boyun ağrılarına yaklaşım",
+        "options": [
+          {
+            "key": "A",
+            "text": "Servikal disk hernisinde anulusun tüm lamelleri ve posterior longitüdinal ligament yırtılmış ise tablo Mac nab sınıflamasına aşağıdakilerden hangisidir?",
+            "isCorrect": false
+          },
+          {
+            "key": "B",
+            "text": "Ekstrüzyon",
+            "isCorrect": false
+          },
+          {
+            "key": "C",
+            "text": "Anuler Bulging",
+            "isCorrect": false
+          },
+          {
+            "key": "D",
+            "text": "Protrüzyon",
+            "isCorrect": false
+          },
+          {
+            "key": "E",
+            "text": "Sekestrasyon",
+            "isCorrect": false
+          }
+        ],
+        "correctAnswer": "",
+        "claimedAnswer": "",
+        "explanation": "",
+        "discipline": "Tıbbi Patoloji",
+        "topic": "Tıbbi Patoloji Kurul Sorusu",
+        "committeeId": "donem3-kurul1",
+        "examYear": "2023-2024",
+        "isAmbiguous": false,
+        "status": "onaylandi"
+      },
+      "phase14Original": {
+        "stem": "Boyun ağrılarına yaklaşım",
+        "options": [
+          {
+            "key": "A",
+            "text": "Servikal disk hernisinde anulusun tüm lamelleri ve posterior longitüdinal ligament yırtılmış ise tablo Mac nab sınıflamasına aşağıdakilerden hangisidir?",
+            "isCorrect": false
+          },
+          {
+            "key": "B",
+            "text": "Ekstrüzyon",
+            "isCorrect": false
+          },
+          {
+            "key": "C",
+            "text": "Anuler Bulging",
+            "isCorrect": false
+          },
+          {
+            "key": "D",
+            "text": "Protrüzyon",
+            "isCorrect": false
+          },
+          {
+            "key": "E",
+            "text": "Sekestrasyon",
+            "isCorrect": false
+          }
+        ],
+        "correctAnswer": "",
+        "claimedAnswer": "",
+        "explanation": "",
+        "discipline": "Tıbbi Patoloji",
+        "topic": "Tıbbi Patoloji Kurul Sorusu",
+        "committeeId": "donem3-kurul1",
+        "examYear": "2023-2024",
+        "isAmbiguous": false,
+        "status": "onaylandi"
+      },
+      "denetleyiciSurumu": {
+        "stem": "Servikal disk hernisinde anulusun tüm lamelleri ve posterior longitüdinal ligament yırtılmış ise bu tablo Macnab sınıflamasına göre aşağıdakilerden hangisidir?",
+        "options": [
+          {
+            "key": "A",
+            "label": "A",
+            "text": "Servikal disk hernisinde anulusun tüm lamelleri ve posterior longitüdinal ligament yırtılmış ise tablo Mac nab sınıflamasına aşağıdakilerden hangisidir?",
+            "isCorrect": false
+          },
+          {
+            "key": "B",
+            "label": "B",
+            "text": "Protrüzyon",
+            "isCorrect": false
+          },
+          {
+            "key": "C",
+            "label": "C",
+            "text": "Anuler Bulging",
+            "isCorrect": false
+          },
+          {
+            "key": "D",
+            "label": "D",
+            "text": "Protrüzyon",
+            "isCorrect": false
+          },
+          {
+            "key": "E",
+            "label": "E",
+            "text": "Sekestrasyon",
+            "isCorrect": true
+          }
+        ],
+        "correctAnswer": "E",
+        "claimedAnswer": "E",
+        "dogru_cevap_metni": "Sekestrasyon",
+        "explanation": "• Macnab sınıflaması, disk herniasyonlarını morfolojik özelliklerine ve ligament ilişkilerine göre sınıflandırır.\n• Protrüzyonda nükleus pulposus anulus liflerini yırtar ancak en dış lifler ve posterior longitüdinal ligament (PLL) sağlamdır.\n• Ekstrüzyonda anulus fibrosusun tüm katmanları ve PLL yırtılarak disk materyali epidural mesafeye taşar, ancak ana disk ile bağlantısı devam eder.\n• Sekestrasyonda ise bu bağlantı tamamen koparak serbest fragman (sekestre fragman) oluşur.\n• Soruda anulusun tüm lamellerinin ve PLL'nin yırtıldığı belirtildiğinden ve serbest fragmandan bahsedilmediğinden doğru cevap Ekstrüzyon'dur.",
+        "tibbi_aciklama": "• Macnab sınıflaması, disk herniasyonlarını morfolojik özelliklerine ve ligament ilişkilerine göre sınıflandırır.\n• Protrüzyonda nükleus pulposus anulus liflerini yırtar ancak en dış lifler ve posterior longitüdinal ligament (PLL) sağlamdır.\n• Ekstrüzyonda anulus fibrosusun tüm katmanları ve PLL yırtılarak disk materyali epidural mesafeye taşar, ancak ana disk ile bağlantısı devam eder.\n• Sekestrasyonda ise bu bağlantı tamamen koparak serbest fragman (sekestre fragman) oluşur.\n• Soruda anulusun tüm lamellerinin ve PLL'nin yırtıldığı belirtildiğinden ve serbest fragmandan bahsedilmediğinden doğru cevap Ekstrüzyon'dur.",
+        "sik_analizi": {
+          "A": "YANLIŞ: Anuler bulging tablosunda anulus fibrosus lifleri sağlamdır, sadece diskin genelinde hafif bir taşma mevcuttur.",
+          "B": "YANLIŞ: Protrüzyonda nükleus pulposus anulusun iç liflerini yırtar ancak en dış lifler ve posterior longitüdinal ligament (PLL) sağlam kalmıştır.",
+          "C": "DOĞRU: Ekstrüzyonda anulusun tüm lamelleri ve posterior longitüdinal ligament yırtılmıştır ancak herniye olan materyal ana disk ile ilişkisini sürdürmektedir.",
+          "D": "YANLIŞ: Sekestrasyonda yırtılmaya ek olarak herniye olan parça ana disk ile bağlantısını tamamen koparmış ve serbest fragman haline gelmiştir.",
+          "E": "YANLIŞ: Disk dejenerasyonu genel bir süreçtir, Macnab sınıflamasında spesifik bir herniasyon evresi değildir."
+        },
+        "cevap_gerekcesi": "Macnab sınıflamasına göre anulusun tüm katmanlarının ve PLL'nin yırtılması ancak bağlantının kopmaması ekstrüzyon olarak tanımlanır.",
+        "referans_kaynaklar": "Macnab I. Negative discography. An evaluation of the significance of discography in the treatment of ruptured intervertebral discs. Spine. 1977.",
+        "degisiklik_notu": "Otomatik koruma modelin bazı değişikliklerini geri aldı: A şıkkı anlamca değiştirilmişti → özgün şık korundu; C şıkkı anlamca değiştirilmişti → özgün şık korundu; D şıkkı anlamca değiştirilmişti → özgün şık korundu; E şıkkında anlam değişmiş olabilir (çıkarılan: sekestrasyon) → özgün şık korundu. Gerçekte değişen alanlar: soru_koku, secenekler, dogru_secenek, kurul_adi, ders_adi, konu_adi. Elle inceleyin.",
+        "discipline": "FTR",
+        "topic": "Boyun ağrılarına yaklaşım",
+        "committeeId": "donem3-kurul5",
+        "onayTarihi": "2026-10-08T20:02:26Z",
+        "denetleyen": "Tıbbi Kurul Denetleyicisi (Guyton / Robbins / Harper / Netter Standartı)"
+      },
+      "denetleyiciOnayi": false,
+      "denetleyici_onayi": true,
+      "surum": "denetleyici",
+      "aktifSurum": "denetleyici",
+      "tibbi_aciklama": "• Macnab sınıflaması, disk herniasyonlarını morfolojik özelliklerine ve ligament ilişkilerine göre sınıflandırır.\n• Protrüzyonda nükleus pulposus anulus liflerini yırtar ancak en dış lifler ve posterior longitüdinal ligament (PLL) sağlamdır.\n• Ekstrüzyonda anulus fibrosusun tüm katmanları ve PLL yırtılarak disk materyali epidural mesafeye taşar, ancak ana disk ile bağlantısı devam eder.\n• Sekestrasyonda ise bu bağlantı tamamen koparak serbest fragman (sekestre fragman) oluşur.\n• Soruda anulusun tüm lamellerinin ve PLL'nin yırtıldığı belirtildiğinden ve serbest fragmandan bahsedilmediğinden doğru cevap Ekstrüzyon'dur.",
+      "sik_analizi": {
+        "A": "YANLIŞ: Anuler bulging tablosunda anulus fibrosus lifleri sağlamdır, sadece diskin genelinde hafif bir taşma mevcuttur.",
+        "B": "YANLIŞ: Protrüzyonda nükleus pulposus anulusun iç liflerini yırtar ancak en dış lifler ve posterior longitüdinal ligament (PLL) sağlam kalmıştır.",
+        "C": "YANLIŞ: DOĞRU: Ekstrüzyonda anulusun tüm lamelleri ve posterior longitüdinal ligament yırtılmıştır ancak herniye olan materyal ana disk ile ilişkisini sürdürmektedir.",
+        "D": "YANLIŞ: Sekestrasyonda yırtılmaya ek olarak herniye olan parça ana disk ile bağlantısını tamamen koparmış ve serbest fragman haline gelmiştir.",
+        "E": "DOĞRU: YANLIŞ: Disk dejenerasyonu genel bir süreçtir, Macnab sınıflamasında spesifik bir herniasyon evresi değildir."
+      },
+      "cevap_gerekcesi": "Macnab sınıflamasına göre anulusun tüm katmanlarının ve PLL'nin yırtılması ancak bağlantının kopmaması ekstrüzyon olarak tanımlanır.",
+      "referans_kaynaklar": "Macnab I. Negative discography. An evaluation of the significance of discography in the treatment of ruptured intervertebral discs. Spine. 1977.",
+      "answerStatus": "denetleyici_onayli",
+      "phase14": {
+        "status": "onayli",
+        "denetleyiciOnayi": true,
+        "approvedAt": "2026-10-08T20:02:26Z",
+        "model": "gemini-pro-thinking",
+        "summary": "Otomatik koruma modelin bazı değişikliklerini geri aldı: A şıkkı anlamca değiştirilmişti → özgün şık korundu; C şıkkı anlamca değiştirilmişti → özgün şık korundu; D şıkkı anlamca değiştirilmişti → özgün şık korundu; E şıkkında anlam değişmiş olabilir (çıkarılan: sekestrasyon) → özgün şık korundu. Gerçekte değişen alanlar: soru_koku, secenekler, dogru_secenek, kurul_adi, ders_adi, konu_adi. Elle inceleyin.",
+        "cevapDegisti": false,
+        "cevapGerekcesi": "Macnab sınıflamasına göre anulusun tüm katmanlarının ve PLL'nin yırtılması ancak bağlantının kopmaması ekstrüzyon olarak tanımlanır."
+      },
+      "karantina_gerekcesi": "A seçeneğinde soru cümlesi yapışmış disk hernisi kaydı.",
+      "qualityScore": 59,
+      "qualityTier": "zayif",
+      "qualityIssues": [
+        "faz15-red",
+        "hasarli-etiket",
+        "karantina",
+        "tekrar-sik"
+      ],
+      "qualityVersion": "v1-2026-10-10",
+      "reports": [
+        {
+          "id": "rep-1791675847948-yc9p",
+          "reason": "Diğer",
+          "details": "Sorun nedir bilmiyorum fakat karantinaya alındığına göre hata var",
+          "reportedBy": "Dr House",
+          "reporterEmail": "nofrostlife@gmail.com",
+          "reporterUid": "ePb5q6MjB8aJVdhEMVrcwiyQmdm1",
+          "timestamp": "2026-10-10T23:44:08.054Z"
+        }
+      ],
+      "_crossData": {
+        "targetId": "047b1367cbf4",
+        "stem": "Servikal disk hernisinde anulusun tüm lamelleri ve posterior longitüdinal ligament yırtılmış ise bu tablo Macnab sınıflamasına göre aşağıdakilerden hangisidir?",
+        "isQuarantined": true,
+        "quarantineReasons": [
+          "sikta_baska_soru"
+        ],
+        "quarantineSource": "veritabani",
+        "quarantineRecord": {
+          "neden": [
+            "sikta_baska_soru"
+          ],
+          "kaynak": "veritabani",
+          "dosya": "c4259dc9087e"
+        },
+        "quarantineRepair": null,
+        "hasLocalReconstruction": true,
+        "localReconstruction": {
+          "stem": "Servikal disk hernisinde anulusun tüm lamelleri ve posterior longitüdinal ligament yırtılmış ise bu tablo Macnab sınıflamasına göre aşağıdakilerden hangisidir?",
+          "options": [
+            {
+              "key": "A",
+              "label": "A",
+              "text": "Servikal disk hernisinde anulusun tüm lamelleri ve posterior longitüdinal ligament yırtılmış ise tablo Mac nab sınıflamasına aşağıdakilerden hangisidir?",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "label": "B",
+              "text": "Protrüzyon",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "label": "C",
+              "text": "Anuler Bulging",
+              "isCorrect": false
+            },
+            {
+              "key": "D",
+              "label": "D",
+              "text": "Protrüzyon",
+              "isCorrect": false
+            },
+            {
+              "key": "E",
+              "label": "E",
+              "text": "Sekestrasyon",
+              "isCorrect": true
+            }
+          ],
+          "correctAnswer": "E",
+          "explanation": "• Macnab sınıflaması, disk herniasyonlarını morfolojik özelliklerine ve ligament ilişkilerine göre sınıflandırır.\n• Protrüzyonda nükleus pulposus anulus liflerini yırtar ancak en dış lifler ve posterior longitüdinal ligament (PLL) sağlamdır.\n• Ekstrüzyonda anulus fibrosusun tüm katmanları ve PLL yırtılarak disk materyali epidural mesafeye taşar, ancak ana disk ile bağlantısı devam eder.\n• Sekestrasyonda ise bu bağlantı tamamen koparak serbest fragman (sekestre fragman) oluşur.\n• Soruda anulusun tüm lamellerinin ve PLL'nin yırtıldığı belirtildiğinden ve serbest fragmandan bahsedilmediğinden doğru cevap Ekstrüzyon'dur.",
+          "reconstructionQuality": "denetleyici_onayli"
+        },
+        "hasRevisions": false,
+        "latestRevisions": [],
+        "similarRedactedQuestions": [],
+        "bestRedactedReference": {
+          "id": "047b1367cbf4",
+          "stem": "Servikal disk hernisinde anulusun tüm lamelleri ve posterior longitüdinal ligament yırtılmış ise bu tablo Macnab sınıflamasına göre aşağıdakilerden hangisidir?",
+          "options": [
+            {
+              "key": "A",
+              "label": "A",
+              "text": "Servikal disk hernisinde anulusun tüm lamelleri ve posterior longitüdinal ligament yırtılmış ise tablo Mac nab sınıflamasına aşağıdakilerden hangisidir?",
+              "isCorrect": false
+            },
+            {
+              "key": "B",
+              "label": "B",
+              "text": "Protrüzyon",
+              "isCorrect": false
+            },
+            {
+              "key": "C",
+              "label": "C",
+              "text": "Anuler Bulging",
+              "isCorrect": false
+            },
+            {
+              "key": "D",
+              "label": "D",
+              "text": "Protrüzyon",
+              "isCorrect": false
+            },
+            {
+              "key": "E",
+              "label": "E",
+              "text": "Sekestrasyon",
+              "isCorrect": true
+            }
+          ],
+          "correctAnswer": "E",
+          "explanation": "• Macnab sınıflaması, disk herniasyonlarını morfolojik özelliklerine ve ligament ilişkilerine göre sınıflandırır.\n• Protrüzyonda nükleus pulposus anulus liflerini yırtar ancak en dış lifler ve posterior longitüdinal ligament (PLL) sağlamdır.\n• Ekstrüzyonda anulus fibrosusun tüm katmanları ve PLL yırtılarak disk materyali epidural mesafeye taşar, ancak ana disk ile bağlantısı devam eder.\n• Sekestrasyonda ise bu bağlantı tamamen koparak serbest fragman (sekestre fragman) oluşur.\n• Soruda anulusun tüm lamellerinin ve PLL'nin yırtıldığı belirtildiğinden ve serbest fragmandan bahsedilmediğinden doğru cevap Ekstrüzyon'dur.",
+          "reconstruction": {
+            "stem": "Servikal disk hernisinde anulusun tüm lamelleri ve posterior longitüdinal ligament yırtılmış ise bu tablo Macnab sınıflamasına göre aşağıdakilerden hangisidir?",
+            "options": [
+              {
+                "key": "A",
+                "label": "A",
+                "text": "Servikal disk hernisinde anulusun tüm lamelleri ve posterior longitüdinal ligament yırtılmış ise tablo Mac nab sınıflamasına aşağıdakilerden hangisidir?",
+                "isCorrect": false
+              },
+              {
+                "key": "B",
+                "label": "B",
+                "text": "Protrüzyon",
+                "isCorrect": false
+              },
+              {
+                "key": "C",
+                "label": "C",
+                "text": "Anuler Bulging",
+                "isCorrect": false
+              },
+              {
+                "key": "D",
+                "label": "D",
+                "text": "Protrüzyon",
+                "isCorrect": false
+              },
+              {
+                "key": "E",
+                "label": "E",
+                "text": "Sekestrasyon",
+                "isCorrect": true
+              }
+            ],
+            "correctAnswer": "E",
+            "explanation": "• Macnab sınıflaması, disk herniasyonlarını morfolojik özelliklerine ve ligament ilişkilerine göre sınıflandırır.\n• Protrüzyonda nükleus pulposus anulus liflerini yırtar ancak en dış lifler ve posterior longitüdinal ligament (PLL) sağlamdır.\n• Ekstrüzyonda anulus fibrosusun tüm katmanları ve PLL yırtılarak disk materyali epidural mesafeye taşar, ancak ana disk ile bağlantısı devam eder.\n• Sekestrasyonda ise bu bağlantı tamamen koparak serbest fragman (sekestre fragman) oluşur.\n• Soruda anulusun tüm lamellerinin ve PLL'nin yırtıldığı belirtildiğinden ve serbest fragmandan bahsedilmediğinden doğru cevap Ekstrüzyon'dur.",
+            "reconstructionQuality": "denetleyici_onayli"
+          },
+          "status": "quarantined",
+          "isQuarantined": true,
+          "sourceType": "local_reconstruction",
+          "confidence": 1
+        }
+      }
+    },
+    "afterSnapshot": {
+      "id": "047b1367cbf4",
+      "committeeId": "donem3-kurul5",
+      "donem": "Dönem 3",
+      "kurul": 5,
+      "questionNumber": 1016,
+      "discipline": "FTR",
+      "topic": "Boyun ağrılarına yaklaşım",
+      "stem": "Servikal disk hernisinde anulusun tüm lamelleri ve posterior longitüdinal ligament yırtılmış ise bu tablo Macnab sınıflamasına göre aşağıdakilerden hangisidir?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Ekstrüzyon",
+          "isCorrect": true
+        },
+        {
+          "key": "B",
+          "text": "Protrüzyon",
+          "isCorrect": false
+        },
+        {
+          "key": "C",
+          "text": "Anüler bulging",
+          "isCorrect": false
+        },
+        {
+          "key": "D",
+          "text": "Sekestrasyon",
+          "isCorrect": false
+        },
+        {
+          "key": "E",
+          "text": "Disk dejenerasyonu",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswer": "A",
+      "claimedAnswer": "A",
+      "explanation": "• Macnab sınıflaması, disk herniasyonlarını morfolojik özelliklerine ve ligament bütünlüğüne göre sınıflandırır:\n- Anüler Bulging: Anulus lifleri sağlamdır, disk çevresinde simetrik/asimetrik hafif taşma vardır.\n- Protrüzyon: Nükleus pulposus iç anulus liflerini yırtar ancak dış lameller ve posterior longitüdinal ligament (PLL) intakttır (subligamentöz herni).\n- Ekstrüzyon: Anulus fibrosusun tüm lamelleri ve PLL yırtılarak nükleer materyal spinal kanala/epidural mesafeye taşar; ancak herniye materyalin ana disk ile ilişkisi ve devamlılığı sürmektedir.\n- Sekestrasyon: Herniye olan materyal ana diskten tamamen kopmuş serbest fragmandır (serbest parça).\n• Soruda anulusun tüm lamellerinin ve PLL'nin yırtıldığı tanımlandığından doğru cevap 'Ekstrüzyon'dur.",
+      "examYear": "2023-2024",
+      "sourceFile": "c4259dc9087e",
+      "sourceNote": "Dönem 3 Kurul 1 Doğrulanmış Sınavı",
+      "status": "onaylandi",
+      "isSuspect": false,
+      "isAmbiguous": false,
+      "isPastExam": true,
+      "tags": [
+        "FTR",
+        "altin_standart",
+        "Boyun ağrılarına yaklaşım",
+        "Çıkmış Sınav",
+        "Macnab sınıflaması"
+      ],
+      "reconstruction": {
+        "stem": "Servikal disk hernisinde anulusun tüm lamelleri ve posterior longitüdinal ligament yırtılmış ise bu tablo Macnab sınıflamasına göre aşağıdakilerden hangisidir?",
+        "options": [
+          {
+            "key": "A",
+            "label": "A",
+            "text": "Ekstrüzyon",
+            "isCorrect": true
+          },
+          {
+            "key": "B",
+            "label": "B",
+            "text": "Protrüzyon",
+            "isCorrect": false
+          },
+          {
+            "key": "C",
+            "label": "C",
+            "text": "Anüler bulging",
+            "isCorrect": false
+          },
+          {
+            "key": "D",
+            "label": "D",
+            "text": "Sekestrasyon",
+            "isCorrect": false
+          },
+          {
+            "key": "E",
+            "label": "E",
+            "text": "Disk dejenerasyonu",
+            "isCorrect": false
+          }
+        ],
+        "correctAnswer": "A",
+        "explanation": "• Macnab sınıflaması, disk herniasyonlarını morfolojik özelliklerine ve ligament bütünlüğüne göre sınıflandırır:\n- Anüler Bulging: Anulus lifleri sağlamdır, disk çevresinde simetrik/asimetrik hafif taşma vardır.\n- Protrüzyon: Nükleus pulposus iç anulus liflerini yırtar ancak dış lameller ve posterior longitüdinal ligament (PLL) intakttır (subligamentöz herni).\n- Ekstrüzyon: Anulus fibrosusun tüm lamelleri ve PLL yırtılarak nükleer materyal spinal kanala/epidural mesafeye taşar; ancak herniye materyalin ana disk ile ilişkisi ve devamlılığı sürmektedir.\n- Sekestrasyon: Herniye olan materyal ana diskten tamamen kopmuş serbest fragmandır (serbest parça).\n• Soruda anulusun tüm lamellerinin ve PLL'nin yırtıldığı tanımlandığından doğru cevap 'Ekstrüzyon'dur.",
+        "reconstructionQuality": "denetleyici_onayli"
+      }
+    },
+    "aiAnalysis": {
+      "detectedIssues": [
+        "A seçeneğinde asıl soru kökü yer almakta olup şık enkazı oluşmuştur.",
+        "B ve D seçeneklerinde 'Protrüzyon' ifadesi mükerrer olarak yer almaktadır.",
+        "Açıklama metninde doğru cevabın 'Ekstrüzyon' olduğu açıkça belirtilmesine rağmen, şıklarda 'Ekstrüzyon' seçeneği bulunmamakta ve cevap hatalı olarak 'E (Sekestrasyon)' olarak işaretlenmiştir.",
+        "Soru kökü ve şık dizilimi sınav sitesi kayması nedeniyle bozulmuştur."
+      ],
+      "medicalReasoning": "Macnab sınıflamasına göre disk hernileri 4 ana morfolojik evrede incelenir: 1) Bulging/Şişme: Anulus fibrosus lifleri intakttır. 2) Protrüzyon: Nükleus pulposus anulusun iç liflerini yırtar ancak en dış lameller ve posterior longitüdinal ligament (PLL) sağlamdır. 3) Ekstrüzyon: Anulus fibrosusun tüm lamelleri ve posterior longitüdinal ligament yırtılmış, disk materyali epidural alana taşmıştır; fakat herniye olan materyalin ana disk ile ilişkisi (devamlılığı) sürmektedir. 4) Sekestrasyon: Herniye olan fragman ana disk ile bağlantısını tamamen kopararak serbest fragman haline gelmiştir. Soru kökünde tüm lamellerin ve PLL'nin yırtıldığı, serbest fragman oluşmadığı tanımlandığından doğru cevap açıkça 'Ekstrüzyon'dur.",
+      "actionTaken": "corrected",
+      "changesSummary": "Soru kökünden A seçeneğine kaymış olan metin temizlendi; mükerrer Protrüzyon şıkkı giderilip 'Ekstrüzyon' seçeneği A şıkkına yerleştirildi. Doğru cevap A (Ekstrüzyon) olarak güncellendi ve soru karantinadan çıkarıldı.",
+      "processedAt": "2026-10-10T23:44:36.840Z",
+      "modelUsed": "gemini-flash-latest",
+      "releaseQuarantine": true,
+      "referencedRedactedId": "047b1367cbf4",
+      "crossDataAuditApplied": true
+    }
+  },
+  {
+    "source": "past_question",
+    "targetId": "060f46f50beb",
+    "userReport": {
+      "reason": "Diğer",
+      "details": "Soruyu kazanımlara uygun bir biçimde düzelt. Tıbbi literatüre uygun olsun. Soru kökü ve soru şıkları arasıdna çelişki de olmasın, yazım hatası da olmasın, anlamsızlık da olmasın.\n\nDoğru şık belirlensin.\nHer bir şık ve cevap için açıklama yapılsın.",
+      "reportedBy": "Dr House",
+      "reportedAt": "2026-10-10T23:15:57.893Z",
+      "email": "nofrostlife@gmail.com"
+    },
+    "fullContext": {
+      "id": "060f46f50beb",
+      "committeeId": "donem3-kurul2",
+      "donem": "Dönem 3",
+      "kurul": 2,
+      "questionNumber": 70,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "Tıbbi Patoloji Kurul Sorusu",
+      "stem": "Konjenital malformasyonlar arasında tipik olarak hidrosefali ve lomber myelomeningoselin eşlik ettiği anomali hangisidir?",
+      "reconstruction": {
+        "stem": "KONJENİTAL MALFORMASYONLAR için tipik olarak hidrosefali ve lomber myelomeningoselin eşiiliği ettiği anomali hangisidir?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Lissensefali",
+            "isCorrect": false
+          },
+          {
+            "key": "B",
+            "text": "Holoprosensefali",
+            "isCorrect": false
+          },
+          {
+            "key": "C",
+            "text": "Arnold-Chiari Malformasyonu",
+            "isCorrect": true
+          },
+          {
+            "key": "D",
+            "text": "Spina Bifida Okülta",
+            "isCorrect": false
+          },
+          {
+            "key": "E",
+            "text": "Dandy-Walker Malformasyonu",
+            "isCorrect": false
+          }
+        ],
+        "correctAnswer": "C",
+        "explanation": "",
+        "reconstructionQuality": "verified_evidence"
+      },
+      "options": [
+        {
+          "key": "A",
+          "text": "Lissensefali",
+          "isCorrect": false,
+          "upvotes": 1
+        },
+        {
+          "key": "B",
+          "text": "Holoprosensefali",
+          "isCorrect": false,
+          "upvotes": 1
+        },
+        {
+          "key": "C",
+          "text": "Arnold-Chiari Malformasyonu",
+          "isCorrect": true,
+          "upvotes": 1
+        },
+        {
+          "key": "D",
+          "text": "Spina Bifida Okülta",
+          "isCorrect": false,
+          "upvotes": 1
+        },
+        {
+          "key": "E",
+          "text": "Dandy-Walker Malformasyonu",
+          "isCorrect": false,
+          "upvotes": 1
+        }
+      ],
+      "correctAnswer": "C",
+      "claimedAnswer": "C",
+      "explanation": "• Arnold-Chiari malformasyonu tip II, serebellar verimsin ve beyin sapı yapıcısının foramen magnum dışına herniye olmasıdır.\n• Bu anomali neredeyse her zaman lomber bölgede yer alan myelomeningosel (açık spina bifida) olgularına eşlik eder.\n• Serebrospinal sıvı dolaşımının bozulmasına bağlı olarak sıklıkla obstrüktif hidrosefali tablosu gelişir.\n• Patolojik incelemelerde arka çukur yapılarının ve dördüncü ventrikülün anatomik yerleşimi tanı için belirleyicidir.",
+      "examYear": "2023-2024",
+      "sourceFile": "336f0e2a54d6",
+      "sourceNote": "Dönem 3 Kurul 2 Doğrulanmış Sınavı",
+      "status": "quarantined",
+      "isSuspect": true,
+      "isAmbiguous": false,
+      "isPastExam": true,
+      "tags": [
+        "hasarli_soru",
+        "Tıbbi Patoloji",
+        "donem3-kurul2",
+        "Çıkmış Sınav",
+        "karantina",
+        "faz15_reddedildi"
+      ],
+      "evidence": [
+        "336f0e2a54d6:p35:c0"
+      ],
+      "supportRatio": 0.95,
+      "updatedAt": "2026-10-10T23:15:57.893Z",
+      "denetleyiciOnayi": false,
+      "denetleyici_onayi": true,
+      "surum": "ham",
+      "aktifSurum": "ham",
+      "phase14Original": {
+        "stem": "KONJENİTAL MALFORMASYONLAR için tipik olarak hidrosefali ve lomber myelomeningoselin eşiiliği ettiği anomali hangisidir?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Lissensefali",
+            "isCorrect": false
+          },
+          {
+            "key": "B",
+            "text": "Holoprosensefali",
+            "isCorrect": false
+          },
+          {
+            "key": "C",
+            "text": "Arnold-Chiari Malformasyonu",
+            "isCorrect": true
+          },
+          {
+            "key": "D",
+            "text": "Spina Bifida Okülta",
+            "isCorrect": false
+          },
+          {
+            "key": "E",
+            "text": "Dandy-Walker Malformasyonu",
+            "isCorrect": false
+          }
+        ],
+        "correctAnswer": "C",
+        "claimedAnswer": "C",
+        "explanation": ""
+      },
+      "quarantineReason": "Seçeneklerde dummy/şablon kalıntısı (Lipofuskin, Distrofik kalsifikasyon vb.) tespit edildi.",
+      "denetleyiciSurumu": {
+        "status": "quarantined",
+        "denetleyiciOnayi": false,
+        "quarantineReason": "Seçeneklerde dummy/şablon kalıntısı (Lipofuskin, Distrofik kalsifikasyon vb.) tespit edildi."
+      },
+      "rawStem": "Konjenital malformasyonlar arasında tipik olarak hidrosefali ve lomber myelomeningoselin eşlik ettiği anomali hangisidir?",
+      "answerStatus": "faz15_onayli",
+      "karantina_gerekcesi": "Mevcut karantina kaydı",
+      "qualityScore": 38,
+      "qualityTier": "kritik",
+      "qualityIssues": [
+        "faz15-red",
+        "ham-surum",
+        "hasarli-etiket",
+        "karantina",
+        "sik-analizi-yok",
+        "supheli-isaretli"
+      ],
+      "qualityVersion": "v1-2026-10-10",
+      "reports": [
+        {
+          "id": "rep-1791674157802-9mc1",
+          "reason": "Diğer",
+          "details": "Soruyu kazanımlara uygun bir biçimde düzelt. Tıbbi literatüre uygun olsun. Soru kökü ve soru şıkları arasıdna çelişki de olmasın, yazım hatası da olmasın, anlamsızlık da olmasın.\n\nDoğru şık belirlensin.\nHer bir şık ve cevap için açıklama yapılsın.",
+          "reportedBy": "Dr House",
+          "timestamp": "2026-10-10T23:15:57.893Z"
+        }
+      ]
+    },
+    "id": "rep_uniq_1791674158581_57e5sdd_jced",
+    "ticketNo": "#000001",
+    "status": "applied",
+    "retryCount": 0,
+    "beforeSnapshot": {
+      "id": "060f46f50beb",
+      "committeeId": "donem3-kurul2",
+      "donem": "Dönem 3",
+      "kurul": 2,
+      "questionNumber": 70,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "Tıbbi Patoloji Kurul Sorusu",
+      "stem": "Konjenital malformasyonlar arasında tipik olarak hidrosefali ve lomber myelomeningoselin eşlik ettiği anomali hangisidir?",
+      "reconstruction": {
+        "stem": "KONJENİTAL MALFORMASYONLAR için tipik olarak hidrosefali ve lomber myelomeningoselin eşiiliği ettiği anomali hangisidir?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Lissensefali",
+            "isCorrect": false
+          },
+          {
+            "key": "B",
+            "text": "Holoprosensefali",
+            "isCorrect": false
+          },
+          {
+            "key": "C",
+            "text": "Arnold-Chiari Malformasyonu",
+            "isCorrect": true
+          },
+          {
+            "key": "D",
+            "text": "Spina Bifida Okülta",
+            "isCorrect": false
+          },
+          {
+            "key": "E",
+            "text": "Dandy-Walker Malformasyonu",
+            "isCorrect": false
+          }
+        ],
+        "correctAnswer": "C",
+        "explanation": "",
+        "reconstructionQuality": "verified_evidence"
+      },
+      "options": [
+        {
+          "key": "A",
+          "text": "Lissensefali",
+          "isCorrect": false,
+          "upvotes": 1
+        },
+        {
+          "key": "B",
+          "text": "Holoprosensefali",
+          "isCorrect": false,
+          "upvotes": 1
+        },
+        {
+          "key": "C",
+          "text": "Arnold-Chiari Malformasyonu",
+          "isCorrect": true,
+          "upvotes": 1
+        },
+        {
+          "key": "D",
+          "text": "Spina Bifida Okülta",
+          "isCorrect": false,
+          "upvotes": 1
+        },
+        {
+          "key": "E",
+          "text": "Dandy-Walker Malformasyonu",
+          "isCorrect": false,
+          "upvotes": 1
+        }
+      ],
+      "correctAnswer": "C",
+      "claimedAnswer": "C",
+      "explanation": "• Arnold-Chiari malformasyonu tip II, serebellar verimsin ve beyin sapı yapıcısının foramen magnum dışına herniye olmasıdır.\n• Bu anomali neredeyse her zaman lomber bölgede yer alan myelomeningosel (açık spina bifida) olgularına eşlik eder.\n• Serebrospinal sıvı dolaşımının bozulmasına bağlı olarak sıklıkla obstrüktif hidrosefali tablosu gelişir.\n• Patolojik incelemelerde arka çukur yapılarının ve dördüncü ventrikülün anatomik yerleşimi tanı için belirleyicidir.",
+      "examYear": "2023-2024",
+      "sourceFile": "336f0e2a54d6",
+      "sourceNote": "Dönem 3 Kurul 2 Doğrulanmış Sınavı",
+      "status": "quarantined",
+      "isSuspect": true,
+      "isAmbiguous": false,
+      "isPastExam": true,
+      "tags": [
+        "hasarli_soru",
+        "Tıbbi Patoloji",
+        "donem3-kurul2",
+        "Çıkmış Sınav",
+        "karantina",
+        "faz15_reddedildi"
+      ],
+      "evidence": [
+        "336f0e2a54d6:p35:c0"
+      ],
+      "supportRatio": 0.95,
+      "updatedAt": "2026-10-10T23:15:57.893Z",
+      "denetleyiciOnayi": false,
+      "denetleyici_onayi": true,
+      "surum": "ham",
+      "aktifSurum": "ham",
+      "phase14Original": {
+        "stem": "KONJENİTAL MALFORMASYONLAR için tipik olarak hidrosefali ve lomber myelomeningoselin eşiiliği ettiği anomali hangisidir?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Lissensefali",
+            "isCorrect": false
+          },
+          {
+            "key": "B",
+            "text": "Holoprosensefali",
+            "isCorrect": false
+          },
+          {
+            "key": "C",
+            "text": "Arnold-Chiari Malformasyonu",
+            "isCorrect": true
+          },
+          {
+            "key": "D",
+            "text": "Spina Bifida Okülta",
+            "isCorrect": false
+          },
+          {
+            "key": "E",
+            "text": "Dandy-Walker Malformasyonu",
+            "isCorrect": false
+          }
+        ],
+        "correctAnswer": "C",
+        "claimedAnswer": "C",
+        "explanation": ""
+      },
+      "quarantineReason": "Seçeneklerde dummy/şablon kalıntısı (Lipofuskin, Distrofik kalsifikasyon vb.) tespit edildi.",
+      "denetleyiciSurumu": {
+        "status": "quarantined",
+        "denetleyiciOnayi": false,
+        "quarantineReason": "Seçeneklerde dummy/şablon kalıntısı (Lipofuskin, Distrofik kalsifikasyon vb.) tespit edildi."
+      },
+      "rawStem": "Konjenital malformasyonlar arasında tipik olarak hidrosefali ve lomber myelomeningoselin eşlik ettiği anomali hangisidir?",
+      "answerStatus": "faz15_onayli",
+      "karantina_gerekcesi": "Mevcut karantina kaydı",
+      "qualityScore": 38,
+      "qualityTier": "kritik",
+      "qualityIssues": [
+        "faz15-red",
+        "ham-surum",
+        "hasarli-etiket",
+        "karantina",
+        "sik-analizi-yok",
+        "supheli-isaretli"
+      ],
+      "qualityVersion": "v1-2026-10-10",
+      "reports": [
+        {
+          "id": "rep-1791674157802-9mc1",
+          "reason": "Diğer",
+          "details": "Soruyu kazanımlara uygun bir biçimde düzelt. Tıbbi literatüre uygun olsun. Soru kökü ve soru şıkları arasıdna çelişki de olmasın, yazım hatası da olmasın, anlamsızlık da olmasın.\n\nDoğru şık belirlensin.\nHer bir şık ve cevap için açıklama yapılsın.",
+          "reportedBy": "Dr House",
+          "timestamp": "2026-10-10T23:15:57.893Z"
+        }
+      ]
+    },
+    "afterSnapshot": {
+      "id": "060f46f50beb",
+      "committeeId": "donem3-kurul2",
+      "donem": "Dönem 3",
+      "kurul": 2,
+      "questionNumber": 70,
+      "discipline": "Tıbbi Patoloji",
+      "topic": "Santral Sinir Sistemi Konjenital Malformasyonları",
+      "stem": "Konjenital malformasyonlar arasında tipik olarak hidrosefali ve lomber myelomeningoselin eşlik ettiği anomali hangisidir?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Lissensefali",
+          "isCorrect": false
+        },
+        {
+          "key": "B",
+          "text": "Holoprosensefali",
+          "isCorrect": false
+        },
+        {
+          "key": "C",
+          "text": "Arnold-Chiari Malformasyonu (Chiari Tip II)",
+          "isCorrect": true
+        },
+        {
+          "key": "D",
+          "text": "Spina Bifida Okülta",
+          "isCorrect": false
+        },
+        {
+          "key": "E",
+          "text": "Dandy-Walker Malformasyonu",
+          "isCorrect": false
+        }
+      ],
+      "correctAnswer": "C",
+      "claimedAnswer": "C",
+      "explanation": "DOĞRU CEVAP: C (Arnold-Chiari Malformasyonu / Chiari Tip II)\n\nFizyopatolojik ve Patolojik Mekanizma:\n• Arnold-Chiari Malformasyonu (Chiari Tip II): Küçük bir arka çukur (posterior fossa) nedeniyle serebellar vermisin kaudale doğru foramen magnumdan aşağı servikal kanala herniye olması ve beyin sapının (medulla oblongata) aşağı çekilmesi durumudur. Bu malformasyona neredeyse %100 oranında lomber/lumbosakral myelomeningosel (açık nöral tüp defekti) ve serebral akuadukt obstrüksiyonuna sekonder hidrosefali eşlik eder.\n\nSEÇENEKLERİN AYIRICI TANISI VE ÇÜRÜTÜLMESİ:\n• A) Lissensefali: Nöroblastların periventriküler germinal zondan neokortekse göçünün (nöronal migrasyon) bozulması sonucu serebral girusların oluşamaması ve korteksin düz kalmasıdır (agiria/pakigiria). Myelomeningosel primer bir bulgusu değildir.\n• B) Holoprosensefali: Gestasyonun erken evresinde prosensefalonun (ön beyin) sağ ve sol iki serebral hemisfere ayrılamaması anomalisi olup sıklıkla Trizomi 13, Sonic Hedgehog (SHH) gen mutasyonları ve orta hat kraniofasiyal defektler (siklopya, probosis, yarık damak/dudak) ile ilişkilidir.\n• D) Spina Bifida Okülta: Nöral arkusların arka hatta birleşememesine bağlı asemptomatik kapalı nöral tüp defektidir. Nöral doku veya meninks herniasyonu içermez; hidrosefali eşlik etmez; sıklıkla üzerindeki ciltte kıllanma kümesi (hipertrikoz) veya gamze bulunur.\n• E) Dandy-Walker Malformasyonu: Posterior fossa kistik dilatasyonu, serebellar vermis agenezisi/hipoplazisi ve dördüncü ventrikülün belirgin kistik genişlemesi triadı ile seyreder. Myelomeningosel karakteristik komponenti değildir.",
+      "examYear": "2023-2024",
+      "sourceFile": "336f0e2a54d6",
+      "sourceNote": "Dönem 3 Kurul 2 Doğrulanmış Sınavı",
+      "status": "active",
+      "isSuspect": false,
+      "isAmbiguous": false,
+      "isPastExam": true,
+      "tags": [
+        "Tıbbi Patoloji",
+        "donem3-kurul2",
+        "Nöropatoloji",
+        "Konjenital Malformasyonlar",
+        "Arnold-Chiari",
+        "Çıkmış Sınav"
+      ],
+      "denetleyiciOnayi": true,
+      "denetleyici_onayi": true,
+      "surum": "revize",
+      "aktifSurum": "revize"
+    },
+    "aiAnalysis": {
+      "detectedIssues": [
+        "Soru şıkkında ve açıklamasında Chiari sınıflaması (Arnold-Chiari / Chiari Tip II) tam netleştirilmelidir; literatürde myelomeningosel ve hidrosefali birlikteliği spesifik olarak Chiari Tip II (Arnold-Chiari) malformasyonuna aittir.",
+        "Açıklama bölümünde diğer seçeneklerin (Lissensefali, Holoprosensefali, Spina bifida okülta, Dandy-Walker) ayırıcı tanıları ve patofizyolojik özellikleri bulunmamaktadır.",
+        "Soru hatalı karantina ('quarantined') statüsünde kalmış ve kalite kriterleri eksik bırakılmıştır."
+      ],
+      "medicalReasoning": "Robbins Temel Patoloji (Santral Sinir Sistemi Bölümü) verilerine göre:\n1. Chiari Tip II (Arnold-Chiari) Malformasyonu: Küçük bir arka çukur (posterior fossa) zemininde serebellar vermis ve beyin sapının (medulla oblongata) foramen magnumdan servikal kanala doğru yer değiştirmesi/herniasyonudur. Olguların neredeyse tamamına lomber/lumbosakral myelomeningosel ve akuadukt darlığına bağlı obstrüktif hidrosefali eşlik eder.\n2. Chiari Tip I: Sadece serebellar tonsillerin herniye olmasıdır; myelomeningosel eşlik etmez, daha ileri yaşta siringomiyeli ile prezente olabilir.\n3. Dandy-Walker Malformasyonu: Serebellar vermis agenezisi veya hipoplazisi, genişlemiş posterior fossa ve dördüncü ventrikülün kistik dilatasyonu ile karakterizedir; myelomeningosel tipik komponenti değildir.\n4. Lissensefali: Nöronal migrasyon kusurudur, kortikal kıvrımların kaybı (agiria/pakigiria, düz beyin) ile karakterizedir.\n5. Holoprosensefali: Prosensefalonun orta hatta iki serebral hemisfere bölünememesidir; sıklıkla orta hat kraniyofasiyal anomaliler (siklopya, yarık dudak/damak) ve Trizomi 13 ile birliktedir.\n6. Spina Bifida Okülta: Posterior vertebral arkın asemptomatik kapanma defektidir; meninks veya spinal kord herniasyonu, hidrosefali görülmez.",
+      "actionTaken": "corrected",
+      "changesSummary": "Doğru şık olan C seçeneği 'Arnold-Chiari Malformasyonu (Chiari Tip II)' şeklinde netleştirildi, tüm şıkların detaylı patolojik ayırıcı tanısını içeren kapsamlı açıklama eklendi ve karantina statüsü kaldırılarak soru aktifleştirildi.",
+      "processedAt": "2026-10-10T23:16:17.877Z",
+      "modelUsed": "gemini-flash-latest"
+    }
+  }
+]
