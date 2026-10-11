@@ -1,4 +1,5 @@
 import React, { useEffect, useId, useRef, useState } from 'react';
+import { lockScroll, unlockScroll } from '../../utils/scrollLock';
 import { X } from 'lucide-react';
 
 interface DialogProps {
@@ -38,11 +39,10 @@ export const Dialog: React.FC<DialogProps> = ({ title, subtitle, onClose, footer
     panelRef.current?.focus();
     const onKey = (e: KeyboardEvent) => e.key === 'Escape' && closeRef.current();
     document.addEventListener('keydown', onKey);
-    const prevOverflow = document.body.style.overflow;
-    document.body.style.overflow = 'hidden';
+    lockScroll();
     return () => {
       document.removeEventListener('keydown', onKey);
-      document.body.style.overflow = prevOverflow;
+      unlockScroll();
       prevFocus?.focus?.();
     };
   }, []);

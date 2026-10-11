@@ -286,10 +286,10 @@ export async function safeJsonFetch<T = any>(
         // Admin kullanıcı veya yerel geliştirme için şifre sormadan otomatik geçiş sağla
         password = '12345678';
         sessionStorage.setItem('medsoru_api_write_password', password);
-      } else if (!password) {
-        password = window.prompt('Veri göndermek veya değiştirmek için yazma parolasını girin:') || '';
-        if (password) sessionStorage.setItem('medsoru_api_write_password', password);
       }
+      // Eskiden parola yoksa her yazmada window.prompt açılıyordu: sayfayı donduran, iptal edilince her
+      // tıklamada yeniden çıkan bir pencere. Artık sorulmaz; sunucu parola isterse 401 yanıtı arayüzde gösterilir
+      // (parola gerekiyorsa sessionStorage 'medsoru_api_write_password' anahtarına yazılır).
       if (password) headers.set('X-API-Password', password);
       if (isAdmin && !headers.has('x-admin-email')) {
         headers.set('x-admin-email', ADMIN_EMAIL);
@@ -1674,12 +1674,15 @@ export const ApiService = {
     if (adminEmail !== ADMIN_EMAIL) {
       throw new Error('Yetkisiz işlem: Soru düzenleme yetkisi yalnızca sistem yöneticisine aittir.');
     }
+    // Soru bu tarayıcının yerel kopyasında olmayabilir (yalnız sunucudan yüklenmiş): eskiden burada
+    // "Soru bulunamadı" atılıp sunucuya hiç gidilmiyordu. Yerel kopya varsa güncellenir, sunucu her durumda yazılır.
     const db = getLocalDb();
     const idx = db.questions.findIndex((q) => q.id === id);
-    if (idx === -1) throw new Error('Soru bulunamadı');
-    db.questions[idx] = { ...db.questions[idx], ...updated, id, updatedAt: new Date().toISOString() };
-    const saved = db.questions[idx];
-    saveLocalDb(db);
+    const saved = { ...(idx >= 0 ? db.questions[idx] : {}), ...updated, id, updatedAt: new Date().toISOString() } as QuestionItem;
+    if (idx >= 0) {
+      db.questions[idx] = saved;
+      saveLocalDb(db);
+    }
 
     try {
       await multiDbManager.saveQuestion(saved);
@@ -1687,18 +1690,16 @@ export const ApiService = {
       console.warn('multiDbManager adminUpdateQuestion fallback', e);
     }
 
-    try {
-      await safeJsonFetch(`/api/admin/questions/${encodeURIComponent(id)}`, {
-        method: 'PUT',
-        headers: {
-          'Content-Type': 'application/json',
-          'x-admin-email': adminEmail,
-        },
-        body: JSON.stringify(saved),
-      });
-    } catch (e) {
-      console.warn('server adminUpdateQuestion fallback', e);
-    }
+    const r = await safeJsonFetch(`/api/admin/questions/${encodeURIComponent(id)}`, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json',
+        'x-admin-email': adminEmail,
+      },
+      body: JSON.stringify(saved),
+    });
+    // Yerelde de yoksa ve sunucu da yazmadıysa başarı gösterme
+    if (!r.ok && idx === -1) throw new Error(r.error || 'Sunucu soruyu güncelleyemedi');
 
     return saved;
   },

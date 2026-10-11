@@ -1,7 +1,7 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { Search, ArrowUp, ArrowDown, Columns3, Download, X, Trash2, CheckCircle2, Copy, RefreshCw, ChevronDown, Save, RotateCcw, Sparkles, AlertTriangle, FileJson, User, History, FileText, ArrowRight } from 'lucide-react';
 import { Committee, QuestionItem } from '../../types';
-import { ApiService } from '../../services/api';
+import { ApiService, safeJsonFetch } from '../../services/api';
 import { toast } from '../ui/Toast';
 import { Seg, SearchBox, EmptyState, ConfirmButton, Drawer } from './consoleUi';
 import { AdminEditQuestionModal } from '../AdminEditQuestionModal';
@@ -558,9 +558,18 @@ export const ManageDataSection: React.FC<Props> = ({
       } else if (ds.id === 'summaries') {
         await ApiService.adminUpdateSummary(adminEmail, id, payload);
         await load();
+      } else if (ds.id === 'decks' || ds.id === 'glossary' || ds.id === 'cards') {
+        // Gerçek kayıt: veri kataloğu ucu (izinli alanlar, yedekli atomik yazma). Eskiden yalnız ekrandaki
+        // satır değişiyor ama "Kaydedildi" deniyordu — veri hiç yazılmıyordu.
+        const entity = ds.id;
+        const r = await safeJsonFetch(`/api/admin/catalog/${entity}/${encodeURIComponent(entity === 'glossary' ? String(openRow._key || id).toLocaleLowerCase('tr') : id)}`, {
+          method: 'PUT',
+          headers: { 'Content-Type': 'application/json', 'x-admin-email': adminEmail },
+          body: JSON.stringify({ patch: payload }),
+        });
+        if (!r.ok) throw new Error(r.error || (r.data as any)?.error || 'Sunucu kaydı reddetti');
       } else {
-        // decks, glossary veya genel veri kümesi
-        setRows((prev) => prev.map((r) => (ds.idOf(r) === id ? { ...r, ...payload } : r)));
+        throw new Error('Bu veri kümesi buradan düzenlenemez. Değerlendirme ve etiket için Veri kataloğunu kullanın.');
       }
 
       toast.success('Kaydedildi', 'Tüm değişiklikler başarıyla uygulandı.');

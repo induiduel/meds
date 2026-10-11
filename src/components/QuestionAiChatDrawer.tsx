@@ -331,7 +331,7 @@ export const QuestionAiChatDrawer: React.FC<QuestionAiChatDrawerProps> = ({
     <>
       {/* Backdrop */}
       <div 
-        className="fixed inset-0 bg-ink/25 backdrop-blur-[2px] z-40 transition-opacity animate-fade-in"
+        className="fixed inset-0 bg-[var(--color-scrim)]] z-40 transition-opacity animate-fade-in"
         onClick={onClose}
         aria-hidden="true"
       />

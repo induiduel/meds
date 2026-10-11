@@ -8,6 +8,7 @@ import { EmptySearch, SectionLoader, SuccessCheck } from '../ui/Animations';
 import { shareDeepLink, executeDeepLinkFocus } from '../../services/universalRedirectService';
 import { ApiService } from '../../services/api';
 import { toast } from '../ui/Toast';
+import './fcHero.css';
 
 // ---------------------------------------------------------------------------
 // Card model + spaced repetition (Leitner boxes, stored per device)
@@ -333,11 +334,7 @@ export const FlashcardsView: React.FC = () => {
     <div className="ds-page">
       <PageHeader
         title="Kartlar"
-        stats={[
-          { label: 'kart', value: inGroup.length.toLocaleString('tr-TR') },
-          { label: 'tekrar', value: counts.due, tone: counts.due ? 'warn' : 'default' },
-          { label: 'ezber', value: counts.mastered, tone: 'ok' },
-        ]}
+        stats={[{ label: 'kart', value: inGroup.length.toLocaleString('tr-TR') }]}
         description="Kartı çevir, bildiğini işaretle; bildiklerin giderek daha seyrek gelir."
       />
 
@@ -373,51 +370,46 @@ export const FlashcardsView: React.FC = () => {
         <SectionLoader label="Ders kartları yükleniyor…" />
       ) : (
         <>
-          {/* Başlat paneli: ilerleme, ayarlar ve tek birincil eylem */}
-          <section className="ds-panel ds-fc-start">
-            {inGroup.length > 0 && (
-              <div className="ds-meter" aria-hidden="true">
-                <span style={{ width: `${(counts.mastered / inGroup.length) * 100}%`, background: 'var(--color-ok)' }} />
-                <span style={{ width: `${(counts.learning / inGroup.length) * 100}%`, background: 'var(--color-accent)' }} />
-                <span style={{ width: `${(counts.due / inGroup.length) * 100}%`, background: 'var(--color-warn)' }} />
+          {/* Bugünkü oturum (v9): ilerleme halkası + durum hapları + tek satır ayar + tek birincil eylem */}
+          <section className="fc-hero" aria-label="Bugünkü oturum">
+            <div className="fc-hero-top">
+              <Ring value={inGroup.length ? counts.mastered / inGroup.length : 0} />
+              <div className="fc-hero-t">
+                <b>{counts.due + counts.new > 0 ? `Bugün ${counts.due + counts.new} kart seni bekliyor` : 'Bugünlük hepsi tamam'}</b>
+                <div className="fc-pills">
+                  {(
+                    [
+                      ['tekrar', counts.due, 'is-warn'],
+                      ['yeni', counts.new, ''],
+                      ['öğreniliyor', counts.learning, 'is-acc'],
+                      ['ezber', counts.mastered, 'is-ok'],
+                    ] as const
+                  ).map(([label, n, tone]) => (
+                    <span key={label} className={`fc-pill ${tone}`}><b>{n.toLocaleString('tr-TR')}</b> {label}</span>
+                  ))}
+                </div>
               </div>
-            )}
-            <div className="ds-legend">
-              {(
-                [
-                  ['due', 'tekrar', counts.due, 'var(--color-warn)'],
-                  ['new', 'yeni', counts.new, 'var(--color-line-2)'],
-                  ['learning', 'öğreniliyor', counts.learning, 'var(--color-accent)'],
-                  ['mastered', 'ezber', counts.mastered, 'var(--color-ok)'],
-                ] as const
-              ).map(([k, label, n, c]) => (
-                <span key={k}>
-                  <i style={{ background: c }} />
-                  <b>{n}</b> {label}
-                </span>
-              ))}
             </div>
-            <div className="ds-fc-row">
-              <ToggleChip on={doShuffle} onClick={() => setDoShuffle((v) => !v)} icon={Shuffle} label="Karıştır" />
-              <ToggleChip on={reverse} onClick={() => setReverse((v) => !v)} icon={Repeat2} label="Ters çevir" />
-              <div role="radiogroup" aria-label="Kart sayısı" className="ds-seg is-compact">
+            <div className="fc-hero-ctl">
+              <div role="radiogroup" aria-label="Kart sayısı" className="ds-seg is-compact fc-count">
                 {[10, 20, 50, 0].map((n) => (
                   <button key={n} type="button" role="radio" aria-checked={limit === n} onClick={() => setLimit(n)}>
                     {n === 0 ? 'Hepsi' : n}
                   </button>
                 ))}
               </div>
-              <span className="ds-grow" />
+              <ToggleChip on={doShuffle} onClick={() => setDoShuffle((v) => !v)} icon={Shuffle} label="Karıştır" />
+              <ToggleChip on={reverse} onClick={() => setReverse((v) => !v)} icon={Repeat2} label="Ters çevir" />
               {counts.due + counts.new > 0 && counts.learning + counts.mastered > 0 && (
-                <button type="button" onClick={() => buildSession(true)} className="ms-btn is-ghost">
-                  <Layers aria-hidden /> Tüm kartlar
+                <button type="button" onClick={() => buildSession(true)} className="fc-ibtn" aria-label="Tüm kartlarla başla" title="Tüm kartlar">
+                  <Layers aria-hidden />
                 </button>
               )}
-              <button type="button" onClick={() => buildSession(false)} disabled={inGroup.length === 0} className="ms-btn is-primary">
-                <Play className="fill-current" aria-hidden />
-                {counts.due + counts.new > 0 ? `Başla · ${startCount} kart` : 'Hepsini tekrar et'}
-              </button>
             </div>
+            <button type="button" onClick={() => buildSession(false)} disabled={inGroup.length === 0} className="fc-go">
+              <Play className="fill-current" aria-hidden />
+              {counts.due + counts.new > 0 ? `Başla · ${startCount} kart` : 'Hepsini tekrar et'}
+            </button>
           </section>
 
           {/* Göz at: durum ve favori süzgeci */}
@@ -536,12 +528,27 @@ export const FlashcardsView: React.FC = () => {
   );
 };
 
+/** Açık/kapalı ayar: simge + etiket (telefonda yalnız simge; etiket aria-label ve ipucunda) */
 const ToggleChip: React.FC<{ on: boolean; onClick: () => void; icon: React.ElementType; label: string }> = ({ on, onClick, icon: Icon, label }) => (
-  <button type="button" aria-pressed={on} onClick={onClick} className={`ms-btn ${on ? 'is-tonal' : 'is-outline'}`}>
+  <button type="button" aria-pressed={on} onClick={onClick} className={`fc-toggle ${on ? 'is-on' : ''}`} aria-label={label} title={label}>
     <Icon aria-hidden />
-    {label}
+    <span>{label}</span>
   </button>
 );
+
+/** Ezber oranı halkası */
+const Ring: React.FC<{ value: number }> = ({ value }) => {
+  const pct = Math.round(value * 100);
+  return (
+    <span className="fc-ring" role="img" aria-label={`Ezber oranı yüzde ${pct}`}>
+      <svg viewBox="0 0 44 44" aria-hidden="true">
+        <circle cx="22" cy="22" r="18" fill="none" stroke="var(--color-line)" strokeWidth="5" />
+        <circle cx="22" cy="22" r="18" fill="none" stroke="var(--color-ok)" strokeWidth="5" strokeLinecap="round" strokeDasharray={`${(value * 113.1).toFixed(1)} 113.1`} transform="rotate(-90 22 22)" className="fc-ring-arc" />
+      </svg>
+      <b>%{pct}</b>
+    </span>
+  );
+};
 
 const STATUS_LABEL: Record<Status, string> = { new: 'Yeni', due: 'Tekrar', learning: 'Öğreniliyor', mastered: 'Ezber' };
 const STATUS_TONE: Record<Status, string> = { new: '', due: 'is-warn', learning: 'is-new', mastered: 'is-ok' };

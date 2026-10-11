@@ -131,6 +131,8 @@ import {
   deleteNotebookLMContribution,
 } from './src/services/notebooklmManageService.ts';
 import { censorProfanity } from './src/utils/profanityFilter.ts';
+import { registerDataCatalogRoutes } from './src/services/dataCatalogService.ts';
+import { registerUserNotesRoutes } from './src/services/userNotesService.ts';
 
 // @ts-ignore - dynamic ES module runner
 import {
@@ -1693,6 +1695,11 @@ const PAST_QUESTIONS_FILE = path.resolve(DATA_DIR, 'pastQuestions.json');
 const DELETED_PAST_QUESTIONS_FILE = path.resolve(DATA_DIR, 'deleted_past_questions.json');
 let cachedPastQuestionsDb: any[] | null = null;
 let lastPastQuestionsMtime = 0;
+let pastQuestionsVersion = 0;
+let pastSaveTimer: ReturnType<typeof setTimeout> | null = null;
+let pastSaveRunning: Promise<void> | null = null;
+let pastSaveDirty = false;
+const PAST_SRC_COPY = path.resolve(__dirname, 'src', 'data', 'pastQuestions.json');
 let cachedDeletedPastQuestions: Set<string> | null = null;
 let lastDeletedPastQuestionsMtime = 0;
 
@@ -1734,7 +1741,7 @@ type PastListCache = { key: string; at: number; list: any[]; listJson: string; b
 let pastListCache: PastListCache | null = null;
 function getServedPastList(): PastListCache {
   const base = getPastQuestionsDb();
-  const key = `${lastPastQuestionsMtime}:${base.length}:${quarantineMtime()}:${mergeMtime()}:${getDeletedPastQuestions().size}`;
+  const key = `${lastPastQuestionsMtime}:${pastQuestionsVersion}:${base.length}:${quarantineMtime()}:${mergeMtime()}:${getDeletedPastQuestions().size}`;
   if (!pastListCache || pastListCache.key !== key || Date.now() - pastListCache.at > 30_000) {
     const list = applyMergeOverlay(applyQuarantine(applyPhase14Overlay(base)));
     pastListCache = { key, at: Date.now(), list, listJson: JSON.stringify(list), bodies: new Map() };
@@ -1763,7 +1770,9 @@ function getPastQuestionsDb(): any[] {
   if (fs.existsSync(PAST_QUESTIONS_FILE)) {
     try {
       const stat = fs.statSync(PAST_QUESTIONS_FILE);
-      if (!cachedPastQuestionsDb || stat.mtimeMs !== lastPastQuestionsMtime) {
+      // Bekleyen/süren kendi yazmamız varken dosyayı yeniden okuma (bellekteki yeni oylar kaybolmasın)
+      const ownWritePending = pastSaveDirty || !!pastSaveRunning;
+      if (!cachedPastQuestionsDb || (stat.mtimeMs !== lastPastQuestionsMtime && !ownWritePending)) {
         const data = JSON.parse(fs.readFileSync(PAST_QUESTIONS_FILE, 'utf-8'));
         const list = Array.isArray(data) ? data : [];
         list.forEach((q: any) => normalizeQuestionVotes(q));
@@ -1778,24 +1787,69 @@ function getPastQuestionsDb(): any[] {
   return (cachedPastQuestionsDb || []).filter((q: any) => !deletedSet.has(q.id));
 }
 
+// Kayıt: bellek hemen güncellenir, ~75MB dosya ise toplu ve eşzamansız yazılır. Eskiden her oy/yorum/bildirim
+// dosyayı girintili JSON olarak İKİ KEZ writeFileSync ile yazıyor, bu sırada tüm sunucu (her kullanıcı) bekliyordu.
+// Ardışık kayıtlar 1.2 sn içinde birleşir; yazma geçici dosya + rename ile atomiktir. Dosyayı dışarıdan okuyup
+// yazan yollar (NotebookLM ingest/activate) önce flushPastQuestionsDbSync() çağırır; kapanışta da boşaltılır.
+
 function savePastQuestionsDb(list: any[]) {
   try {
     const deletedSet = getDeletedPastQuestions();
     const cleanList = deletedSet.size > 0 ? list.filter((q: any) => !deletedSet.has(q.id)) : list;
     cachedPastQuestionsDb = cleanList;
-    const jsonStr = JSON.stringify(cleanList, null, 2);
-    fs.writeFileSync(PAST_QUESTIONS_FILE, jsonStr, 'utf-8');
-    if (fs.existsSync(PAST_QUESTIONS_FILE)) {
-      lastPastQuestionsMtime = fs.statSync(PAST_QUESTIONS_FILE).mtimeMs;
-    }
-    const srcCopy = path.resolve(__dirname, 'src', 'data', 'pastQuestions.json');
-    if (fs.existsSync(path.dirname(srcCopy))) {
-      fs.writeFileSync(srcCopy, jsonStr, 'utf-8');
-    }
+    pastQuestionsVersion++;
+    pastSaveDirty = true;
+    if (!pastSaveTimer) pastSaveTimer = setTimeout(() => { pastSaveTimer = null; void writePastQuestionsDbAsync(); }, 1200);
   } catch (e) {
     console.error('Error saving pastQuestions.json:', e);
   }
 }
+
+async function writePastQuestionsDbAsync(): Promise<void> {
+  if (pastSaveRunning) { await pastSaveRunning; if (!pastSaveDirty) return; }
+  if (!pastSaveDirty || !cachedPastQuestionsDb) return;
+  pastSaveDirty = false;
+  const snapshot = cachedPastQuestionsDb;
+  pastSaveRunning = (async () => {
+    const tmp = `${PAST_QUESTIONS_FILE}.${process.pid}.tmp`;
+    try {
+      // Biçim korunur (girintili; git farkları okunur kalsın) — maliyet artık oy başına değil, 1.2 sn'lik toplu yazmada bir kez
+      const jsonStr = JSON.stringify(snapshot, null, 2);
+      await fs.promises.writeFile(tmp, jsonStr, 'utf-8');
+      await fs.promises.rename(tmp, PAST_QUESTIONS_FILE);
+      // Bu süreçte yeniden okumayı tetiklemesin: yazdığımız mtime "bilinen" sürüm olur
+      lastPastQuestionsMtime = (await fs.promises.stat(PAST_QUESTIONS_FILE)).mtimeMs;
+      if (fs.existsSync(path.dirname(PAST_SRC_COPY))) await fs.promises.copyFile(PAST_QUESTIONS_FILE, PAST_SRC_COPY);
+    } catch (e) {
+      pastSaveDirty = true; // bir sonraki kayıtta tekrar denenir
+      console.error('Error saving pastQuestions.json:', e);
+      try { await fs.promises.unlink(tmp); } catch { /* yok */ }
+    }
+  })();
+  try { await pastSaveRunning; } finally { pastSaveRunning = null; }
+  if (pastSaveDirty && !pastSaveTimer) pastSaveTimer = setTimeout(() => { pastSaveTimer = null; void writePastQuestionsDbAsync(); }, 1200);
+}
+
+/** Bekleyen kaydı hemen ve eşzamanlı yazar (dosyayı doğrudan okuyacak işlemlerden ve kapanıştan önce). */
+function flushPastQuestionsDbSync() {
+  if (pastSaveTimer) { clearTimeout(pastSaveTimer); pastSaveTimer = null; }
+  if (!pastSaveDirty || !cachedPastQuestionsDb) return;
+  try {
+    const jsonStr = JSON.stringify(cachedPastQuestionsDb, null, 2);
+    const tmp = `${PAST_QUESTIONS_FILE}.${process.pid}.sync.tmp`;
+    fs.writeFileSync(tmp, jsonStr, 'utf-8');
+    fs.renameSync(tmp, PAST_QUESTIONS_FILE);
+    lastPastQuestionsMtime = fs.statSync(PAST_QUESTIONS_FILE).mtimeMs;
+    if (fs.existsSync(path.dirname(PAST_SRC_COPY))) fs.copyFileSync(PAST_QUESTIONS_FILE, PAST_SRC_COPY);
+    pastSaveDirty = false;
+  } catch (e) {
+    console.error('Error flushing pastQuestions.json:', e);
+  }
+}
+for (const sig of ['SIGTERM', 'SIGINT'] as const) {
+  process.once(sig, () => { flushPastQuestionsDbSync(); process.exit(0); });
+}
+process.once('beforeExit', () => flushPastQuestionsDbSync());
 
 // Incremental Delta-Sync endpoint: checks if client cache is up to date and returns only modified questions
 app.get('/api/past-exams/sync', (req, res) => {
@@ -5502,6 +5556,7 @@ app.post('/api/notebooklm/ingest', async (req, res) => {
   try {
     const payload = req.body?.payload !== undefined ? req.body.payload : req.body;
     const forcedType = (req.body?.type || req.query.type) as string | undefined;
+    flushPastQuestionsDbSync();
     const result = await ingestNotebookLMData(payload, forcedType);
 
     // Invalidate in-memory past questions cache immediately
@@ -5518,6 +5573,7 @@ app.post('/api/notebooklm/ingest', async (req, res) => {
 app.post('/api/notebooklm/ingest/questions', async (req, res) => {
   try {
     const payload = req.body?.payload !== undefined ? req.body.payload : req.body;
+    flushPastQuestionsDbSync();
     const result = await ingestNotebookLMData(payload, 'past_question_correction');
     cachedPastQuestionsDb = null;
     lastPastQuestionsMtime = 0;
@@ -5596,6 +5652,18 @@ function getDecksDb(): any[] {
   }
   return decksCache?.data || [];
 }
+
+// Kullanıcı notları yedeği / cihazlar arası eşitleme (src/services/userNotesService.ts)
+registerUserNotesRoutes(app, DATA_DIR);
+
+// Yönetim · veri kataloğu: tüm veri türleri tek arayüzde (liste/ara/süz, düzenle, değerlendir-sınıfla, ilişkiler)
+registerDataCatalogRoutes(app, requireAdmin, {
+  rootDir: __dirname,
+  dataDir: DATA_DIR,
+  getPastQuestions: getPastQuestionsDb,
+  savePastQuestions: savePastQuestionsDb,
+  getDecks: getDecksDb,
+});
 
 app.get(['/api/decks', '/api/ogren', '/api/interactive-decks'], (req, res) => {
   try {
@@ -5696,11 +5764,11 @@ app.get(['/api/decks/:id/slides/:slideNum', '/api/ogren/:id/slides/:slideNum'], 
 });
 
 // --- NotebookLM Safe Stage & Alternative Management Endpoints ---
-app.get('/api/notebooklm/manage/contributions', (_req, res) => {
+app.get('/api/notebooklm/manage/contributions', requireAdmin, (_req, res) => {
   res.json({ contributions: getAllNotebookLMContributions() });
 });
 
-app.post('/api/notebooklm/manage/stage', (req, res) => {
+app.post('/api/notebooklm/manage/stage', requireAdmin, (req, res) => {
   try {
     const payload = req.body?.payload !== undefined ? req.body.payload : req.body;
     const title = req.body?.title;
@@ -5712,8 +5780,9 @@ app.post('/api/notebooklm/manage/stage', (req, res) => {
   }
 });
 
-app.post('/api/notebooklm/manage/activate/:id', async (req, res) => {
+app.post('/api/notebooklm/manage/activate/:id', requireAdmin, async (req, res) => {
   try {
+    flushPastQuestionsDbSync();
     const result = await activateNotebookLMContribution(req.params.id);
     cachedPastQuestionsDb = null;
     lastPastQuestionsMtime = 0;
@@ -5723,8 +5792,9 @@ app.post('/api/notebooklm/manage/activate/:id', async (req, res) => {
   }
 });
 
-app.post('/api/notebooklm/manage/deactivate/:id', async (req, res) => {
+app.post('/api/notebooklm/manage/deactivate/:id', requireAdmin, async (req, res) => {
   try {
+    flushPastQuestionsDbSync();
     const result = await deactivateNotebookLMContribution(req.params.id);
     cachedPastQuestionsDb = null;
     lastPastQuestionsMtime = 0;
@@ -5734,7 +5804,7 @@ app.post('/api/notebooklm/manage/deactivate/:id', async (req, res) => {
   }
 });
 
-app.put('/api/notebooklm/manage/contribution/:id', (req, res) => {
+app.put('/api/notebooklm/manage/contribution/:id', requireAdmin, (req, res) => {
   try {
     const result = updateNotebookLMContribution(req.params.id, req.body);
     res.json(result);
@@ -5743,7 +5813,7 @@ app.put('/api/notebooklm/manage/contribution/:id', (req, res) => {
   }
 });
 
-app.delete('/api/notebooklm/manage/contribution/:id', (req, res) => {
+app.delete('/api/notebooklm/manage/contribution/:id', requireAdmin, (req, res) => {
   try {
     const result = deleteNotebookLMContribution(req.params.id);
     res.json(result);

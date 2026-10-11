@@ -93,7 +93,8 @@ const normalizeArchive = (q: any): StudyQuestion | null => {
   const rec = q?.reconstruction;
   const rawOpts = rec?.options || q?.options || q?.rawQuestion?.options || [];
   const opts = rawOpts
-    .filter((o: any) => o && VALID.includes(String(o.key || '').trim().toUpperCase() as OptionKey) && String(o.text || '').trim())
+    // "Şık A" gibi yer tutucu şıklar (havuzdaki yarım taslaklar) çözülebilir soru sayılmaz
+    .filter((o: any) => o && VALID.includes(String(o.key || '').trim().toUpperCase() as OptionKey) && String(o.text || '').trim() && !/^(şık\s*)?[a-e][).]?$/i.test(String(o.text).trim()))
     .map((o: any) => ({ key: String(o.key || '').trim().toUpperCase() as OptionKey, text: String(o.text).trim() }));
   const answer = (
     rec?.correctAnswer ||
@@ -125,7 +126,7 @@ const normalizePool = (q: QuestionItem): StudyQuestion | null => {
   const stem = String(rec?.stem || (q as any).stem || (q.fragments && q.fragments.length > 0 ? q.fragments.map((f: any) => f.text).join(' ') : '')).trim();
   const rawOpts = rec?.options && rec.options.length >= 2 ? rec.options : q.options || [];
   const opts = rawOpts
-    .filter((o: any) => o && VALID.includes(String(o.key || '').trim().toUpperCase() as OptionKey) && String(o.text || '').trim())
+    .filter((o: any) => o && VALID.includes(String(o.key || '').trim().toUpperCase() as OptionKey) && String(o.text || '').trim() && !/^(şık\s*)?[a-e][).]?$/i.test(String(o.text).trim()))
     .map((o: any) => ({ key: String(o.key || '').trim().toUpperCase() as OptionKey, text: String(o.text).trim() }));
   const answer = (
     rec?.correctAnswer ||
@@ -264,10 +265,25 @@ export const clearTestHistory = () => write(KEYS.tests, []);
 
 export const getNotes = () => read<StudyNote[]>(KEYS.notes, []);
 export const saveNotes = (notes: StudyNote[]) => {
-  const before = getNotes().length;
+  const prev = getNotes();
   write(KEYS.notes, notes);
-  if (notes.length > before) logActivity('not', `Yeni not: ${notes[0]?.title || 'Başlıksız'}`);
+  if (notes.length > prev.length) logActivity('not', `Yeni not: ${notes[0]?.title || 'Başlıksız'}`);
+  // Silinenler sunucu yedeğine "mezar taşı" olarak gider; sonra arka planda eşitlenir
+  const keep = new Set(notes.map((n) => n.id));
+  const removed = prev.filter((n) => !keep.has(n.id)).map((n) => n.id);
+  notesChanged(removed);
 };
+/** Eşitlemenin sunucudan gelen birleşik listeyi yerele yazması (tekrar eşitleme tetiklemez). */
+export const replaceNotesFromSync = (notes: StudyNote[]) => write(KEYS.notes, notes);
+
+type NotesListener = (removedIds: string[]) => void;
+const notesListeners = new Set<NotesListener>();
+/** notesSync bu kancaya bağlanır (döngüsel içe aktarmayı önlemek için olay ile) */
+export const onNotesChanged = (fn: NotesListener) => {
+  notesListeners.add(fn);
+  return () => notesListeners.delete(fn);
+};
+const notesChanged = (removed: string[]) => notesListeners.forEach((l) => l(removed));
 export const newNoteId = () => `note-${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 7)}`;
 
 /** Exports notes as a Markdown file the viewer can keep. */

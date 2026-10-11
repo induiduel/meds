@@ -3,7 +3,7 @@
  * Yalnız token okur (appearance.css). Klasik tasarımda (v2) bu bileşenler render edilmez.
  * ============================================================================= */
 
-html { --sh-side-w: 0px; --sh-top-h: 52px; --sh-tabs-h: 58px; }
+html { --sh-side-w: 0px; --sh-top-h: 52px; --sh-tabs-h: 62px; }
 @media (min-width: 768px) { html { --sh-side-w: 76px; } }
 @media (min-width: 1024px) {
   html { --sh-side-w: 236px; }
@@ -13,7 +13,7 @@ html { --sh-side-w: 0px; --sh-top-h: 52px; --sh-tabs-h: 58px; }
 /* ---------- Uygulama sütunu ---------- */
 .sh-app { flex: 1; min-width: 0; display: flex; flex-direction: column; padding-left: var(--sh-side-w); transition: padding-left var(--mo-slow) var(--mo-spring); }
 .sh-main { width: 100%; max-width: 1180px; margin-inline: auto; flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 12px;
-  padding: 12px var(--dn-page-x) calc(var(--sh-tabs-h) + env(safe-area-inset-bottom, 0px) + 28px); }
+  padding: 12px var(--dn-page-x) calc(var(--sh-tabs-h) + env(safe-area-inset-bottom, 0px) + 36px); }
 @media (min-width: 768px) { .sh-main { padding-bottom: 40px; padding-inline: max(var(--dn-page-x), 20px); } }
 @media (min-width: 1024px) { .sh-main { padding-inline: max(var(--dn-page-x), 28px); } }
 
@@ -146,20 +146,46 @@ html { --sh-side-w: 0px; --sh-top-h: 52px; --sh-tabs-h: 58px; }
 .sh-acct-gl { padding: 4px 6px 0; font-size: 12px; font-weight: 650; color: var(--color-ink-3); }
 .sh-acct button.ui-row:disabled { opacity: .5; cursor: not-allowed; }
 
-/* ---------- Alt gezinme ---------- */
-.sh-tabs { position: fixed; z-index: 40; left: 0; right: 0; bottom: 0; padding-bottom: env(safe-area-inset-bottom, 0px);
-  background: color-mix(in srgb, var(--color-white) 84%, transparent); -webkit-backdrop-filter: saturate(1.8) blur(20px); backdrop-filter: saturate(1.8) blur(20px);
-  box-shadow: 0 -1px 0 color-mix(in srgb, var(--color-line) 85%, transparent); }
+/* ---------- Alt gezinme (v9 · yüzen ada) ----------
+ * Ekranın altında kenarlardan ayrık, yuvarlak, katı yüzeyli çubuk (bulanıklık yok → kaydırırken GPU yükü yok).
+ * Etkin sekme: simge kendi renginde (--tab-c) bir hapa oturur, etiket kalınlaşır; hap yaylanarak büyür.
+ * Ortada yükseltilmiş "Ekle" düğmesi (marka rengi). Klavye açıkken gizlenir. */
+.sh-tabs { position: fixed; z-index: 40; left: 0; right: 0; bottom: 0; pointer-events: none;
+  padding: 0 10px calc(env(safe-area-inset-bottom, 0px) + 8px); }
 @media (min-width: 768px) { .sh-tabs { display: none; } }
-.sh-tabs-in { position: relative; max-width: 560px; margin-inline: auto; height: var(--sh-tabs-h); display: grid; grid-template-columns: repeat(5, 1fr); padding: 5px 6px; }
-.sh-tabs-ind { position: absolute; top: 5px; bottom: 5px; left: 6px; width: calc((100% - 12px) / 5); pointer-events: none; transition: transform var(--mo-slow) var(--mo-spring), opacity var(--mo-base); }
-.sh-tabs-ind::before { content: ""; position: absolute; left: 50%; top: 2px; width: 52px; height: 28px; margin-left: -26px; border-radius: 99px; background: var(--color-accent-soft); }
-.sh-tab { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; gap: 3px; padding-top: 4px;
-  color: var(--color-ink-3); text-decoration: none; font-size: 10.5px; font-weight: 500; letter-spacing: .005em; cursor: pointer; -webkit-tap-highlight-color: transparent; }
-.sh-tab > svg { width: 22px; height: 22px; transition: transform var(--mo-slow) var(--mo-spring); }
-.sh-tab:active > svg { transform: scale(.86); }
-.sh-tab[aria-current="page"] { color: var(--color-accent); font-weight: 650; }
-.sh-tab > span { max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.sh-tabs-in { pointer-events: auto; position: relative; max-width: 480px; margin-inline: auto; height: var(--sh-tabs-h); display: grid; grid-template-columns: repeat(5, 1fr); align-items: center;
+  padding: 0 4px; border-radius: 22px; background: var(--color-white);
+  box-shadow: 0 10px 30px -8px rgb(0 0 0 / .22), 0 2px 6px rgb(0 0 0 / .06), inset 0 0 0 1px color-mix(in srgb, var(--color-line) 80%, transparent);
+  animation: sh-tabs-in .5s var(--mo-spring) both; }
+@keyframes sh-tabs-in { from { transform: translateY(120%); } to { transform: none; } }
+.sh-tab { position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; height: 100%;
+  color: var(--color-ink-3); text-decoration: none; font-size: 10.5px; font-weight: 550; cursor: pointer; -webkit-tap-highlight-color: transparent; }
+.sh-tab-pill { position: relative; width: 50px; height: 30px; border-radius: 99px; display: grid; place-items: center; }
+.sh-tab-pill::before { content: ""; position: absolute; inset: 0; border-radius: inherit; background: color-mix(in srgb, var(--tab-c, var(--color-accent)) 16%, var(--color-white));
+  transform: scaleX(.3); opacity: 0; transition: transform .38s var(--mo-spring), opacity .2s ease; }
+.sh-tab-pill > svg { position: relative; width: 22px; height: 22px; transition: transform .38s var(--mo-spring), color .2s; }
+.sh-tab:active .sh-tab-pill > svg { transform: scale(.84); }
+.sh-tab-l { max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; transition: color .2s; }
+.sh-tab[aria-current="page"] { color: var(--color-ink); font-weight: 700; }
+.sh-tab[aria-current="page"] .sh-tab-pill::before { transform: none; opacity: 1; }
+.sh-tab[aria-current="page"] .sh-tab-pill > svg { color: color-mix(in srgb, var(--tab-c, var(--color-accent)) 82%, var(--color-ink)); animation: sh-tab-hop .5s var(--mo-spring); }
+@keyframes sh-tab-hop { 0% { transform: translateY(0) scale(1); } 35% { transform: translateY(-4px) scale(1.12); } 100% { transform: none; } }
+.sh-tab-dot { position: absolute; top: 3px; right: 11px; width: 8px; height: 8px; border-radius: 50%; background: var(--color-brand); box-shadow: 0 0 0 2px var(--color-white); }
+/* Ortadaki ekle düğmesi */
+.sh-tab-fab { display: flex; flex-direction: column; align-items: center; justify-content: flex-end; gap: 2px; height: 100%; padding-bottom: 6px; text-decoration: none; color: var(--color-ink-3); font-size: 10.5px; font-weight: 600; -webkit-tap-highlight-color: transparent; }
+.sh-tab-fab-in { width: 50px; height: 50px; margin-top: -26px; border-radius: 17px; display: grid; place-items: center; color: #fff;
+  background: linear-gradient(145deg, color-mix(in srgb, var(--color-brand) 88%, #fff), var(--color-brand));
+  box-shadow: 0 8px 18px -6px color-mix(in srgb, var(--color-brand) 70%, transparent), 0 0 0 4px var(--color-white);
+  transition: transform .3s var(--mo-spring), box-shadow .2s; }
+.sh-tab-fab-in > svg { width: 24px; height: 24px; transition: transform .4s var(--mo-spring); }
+.sh-tab-fab:active .sh-tab-fab-in { transform: scale(.9); }
+.sh-tab-fab:active .sh-tab-fab-in > svg { transform: rotate(90deg); }
+.sh-tab-fab[aria-current="page"] { color: var(--color-ink); font-weight: 700; }
+.sh-tab-fab[aria-current="page"] .sh-tab-fab-in { box-shadow: 0 8px 18px -6px color-mix(in srgb, var(--color-brand) 70%, transparent), 0 0 0 4px var(--color-white), 0 0 0 6px color-mix(in srgb, var(--color-brand) 35%, transparent); }
+@media (prefers-reduced-motion: reduce) {
+  .sh-tabs-in, .sh-tab[aria-current="page"] .sh-tab-pill > svg { animation: none; }
+  .sh-tab-pill::before, .sh-tab-fab-in, .sh-tab-fab-in > svg { transition: none; }
+}
 
 /* ---------- Alt sayfa / pencere ---------- */
 .sh-sheet-root { position: fixed; inset: 0; z-index: 80; display: flex; align-items: flex-end; justify-content: center; }
@@ -216,7 +242,7 @@ html[data-mode="dark"] .sh-sheet-backdrop { background: rgb(0 0 0 / .62); }
 .sh-sheet-body.is-bare > * { flex: 1; min-height: 0; }
 
 /* ---------- Toast (v8) ---------- */
-.tst-host { position: fixed; z-index: 100000; left: 0; right: 0; bottom: calc(var(--sh-tabs-h) + env(safe-area-inset-bottom, 0px) + 12px); display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 0 12px; pointer-events: none; }
+.tst-host { position: fixed; z-index: 100000; left: 0; right: 0; bottom: calc(var(--sh-tabs-h) + env(safe-area-inset-bottom, 0px) + 22px); display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 0 12px; pointer-events: none; }
 @media (min-width: 768px) { .tst-host { bottom: 24px; left: auto; right: 24px; align-items: flex-end; } }
 html.kb-open .tst-host { bottom: calc(100dvh - var(--vvh, 100dvh) + 12px); }
 .tst { --tc: var(--color-accent); position: relative; pointer-events: auto; width: min(100%, 420px); display: flex; align-items: center; gap: 10px; padding: 10px 8px 10px 12px; border-radius: 16px; overflow: hidden;

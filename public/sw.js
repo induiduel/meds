@@ -1,5 +1,5 @@
 // MedSoru Service Worker - PWA v4: Güçlendirilmiş Çevrimdışı Önbellek, Sıfır Gecikmeli Yenileme, Background Sync ve Push
-const CACHE_VERSION = 'medsoru-pwa-v4';
+const CACHE_VERSION = 'medsoru-pwa-v5';
 const STATIC_CACHE = `medsoru-static-${CACHE_VERSION}`;
 const RUNTIME_CACHE = `medsoru-runtime-${CACHE_VERSION}`;
 const DATA_CACHE = `medsoru-data-${CACHE_VERSION}`;
@@ -229,60 +229,46 @@ self.addEventListener('fetch', (event) => {
       return;
     }
 
+    // Büyük tam listeler IndexedDB'de tutulur; SW önbelleğine ikinci kopya yazılmaz
+    const cacheable = !/\/api\/past-exams(\/?$|\/sync)/.test(url.pathname) && !url.pathname.includes('/admin/');
+
     event.respondWith(
-      fetch(req)
-        .then((networkRes) => {
-          if (networkRes && networkRes.status === 200) {
+      (async () => {
+        const network = fetch(req).then((networkRes) => {
+          if (cacheable && networkRes && networkRes.status === 200) {
             const clone = networkRes.clone();
-            caches.open(DATA_CACHE).then((cache) => {
-              cache.put(req, clone.clone());
-              cache.put(url.pathname, clone);
-            });
+            // Anahtar TAM URL'dir (sorgu dizesi dahil): ?committee=k1 ile ?committee=k2 birbirini ezmez
+            caches.open(DATA_CACHE).then((cache) => cache.put(req.url, clone)).catch(() => {});
           }
           return networkRes;
-        })
-        .catch(async () => {
-          const cached =
-            (await caches.match(req, { ignoreSearch: true })) ||
-            (await caches.match(url.pathname, { ignoreSearch: true }));
-          if (cached) {
-            return cached;
-          }
-
-          // Çevrimdışıyken istemci kodunun parse ederken çökmesini önleyen akıllı mock yanıtlar
+        });
+        // Zayıf ağ: 4 sn içinde yanıt yoksa önbellekteki kopya hemen verilir (ağ arka planda önbelleği tazeler)
+        const cached = cacheable ? await caches.match(req.url) : undefined;
+        if (cached) {
+          const slow = new Promise((resolve) => setTimeout(() => resolve(null), 4000));
+          const winner = await Promise.race([network.catch(() => null), slow]);
+          if (winner) return winner;
+          const headers = new Headers(cached.headers);
+          headers.set('X-From-Cache', '1');
+          return new Response(await cached.clone().blob(), { status: cached.status, statusText: cached.statusText, headers });
+        }
+        try {
+          return await network;
+        } catch (err) {
+          // Önbellekte yok ve ağ yok: komite listesi gerçek varsayılanlarla, diğerleri dürüst 503 ile döner
+          // (eskiden boş liste 200 dönüyordu → istemci "veri yok" sanıp boş ekran gösteriyordu)
           if (url.pathname.includes('/api/committees')) {
-            return new Response(
-              JSON.stringify({ offline: true, committees: DEFAULT_OFFLINE_COMMITTEES }),
-              { headers: { 'Content-Type': 'application/json' }, status: 200 }
-            );
-          }
-          if (url.pathname.includes('/api/past-exams/sync')) {
-            return new Response(
-              JSON.stringify({ offline: true, upToDate: true, deletedIds: [], allIds: [] }),
-              { headers: { 'Content-Type': 'application/json' }, status: 200 }
-            );
-          }
-          if (url.pathname.includes('/api/past-exams')) {
-            return new Response(
-              JSON.stringify({ offline: true, questions: [] }),
-              { headers: { 'Content-Type': 'application/json' }, status: 200 }
-            );
-          }
-          if (url.pathname.includes('/api/questions')) {
-            return new Response(
-              JSON.stringify({ offline: true, questions: [] }),
-              { headers: { 'Content-Type': 'application/json' }, status: 200 }
-            );
-          }
-
-          return new Response(
-            JSON.stringify({ offline: true, error: 'Ağ bağlantısı yok (Çevrimdışı)' }),
-            {
-              headers: { 'Content-Type': 'application/json' },
+            return new Response(JSON.stringify({ offline: true, committees: DEFAULT_OFFLINE_COMMITTEES }), {
+              headers: { 'Content-Type': 'application/json', 'X-From-Cache': '1' },
               status: 200,
-            }
-          );
-        })
+            });
+          }
+          return new Response(JSON.stringify({ offline: true, error: 'Ağ bağlantısı yok (çevrimdışı)' }), {
+            headers: { 'Content-Type': 'application/json' },
+            status: 503,
+          });
+        }
+      })()
     );
     return;
   }

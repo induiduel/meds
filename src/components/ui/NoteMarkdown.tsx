@@ -7,6 +7,7 @@ import React from 'react';
  *  - `| a | b |` satırları tablo; `|---|---|` ayırıcı satırı başlığı belirler
  *  - `Not: …`, `Sınav: …` vurgu kutuları
  *  - satır içi: `**kalın**`, `*italik*`, `==vurgu==`, `[kırmızı]metin[/]` (kırmızı, yeşil, mavi, turuncu, mor)
+ *  - blok: `> alıntı`, görev listesi `- [ ] madde` / `- [x] madde`
  * HTML kabul edilmez; her şey React düğümü olarak üretilir (XSS yok).
  */
 
@@ -44,7 +45,8 @@ type Block =
   | { kind: 'p'; text: string }
   | { kind: 'list'; items: ListItem[]; ordered: boolean }
   | { kind: 'table'; head: string[] | null; rows: string[][] }
-  | { kind: 'note'; tone: 'note' | 'exam'; text: string };
+  | { kind: 'note'; tone: 'note' | 'exam'; text: string }
+  | { kind: 'quote'; lines: string[] };
 
 const LIST = /^((?: {2}|\t)*)(-|\*|\d+[.)])\s+(.*)$/;
 const indentOf = (s: string) => s.replace(/\t/g, '  ').length / 2;
@@ -64,6 +66,14 @@ export function parseNoteMarkdown(raw: string): Block[] {
     if (!t) { flush(); continue; }
     const h = t.match(/^(#{1,3})\s+(.+)$/);
     if (h) { flush(); blocks.push({ kind: 'h', level: h[1].length === 1 ? 1 : 2, text: h[2] }); continue; }
+    if (t.startsWith('>')) {
+      flush();
+      const q: string[] = [];
+      while (i < lines.length && lines[i].trim().startsWith('>')) { q.push(lines[i].trim().replace(/^>\s?/, '')); i++; }
+      i--;
+      blocks.push({ kind: 'quote', lines: q });
+      continue;
+    }
     const note = t.match(/^(not|sınav)\s*:\s*(.*)$/i);
     if (note) { flush(); blocks.push({ kind: 'note', tone: /^s/i.test(note[1]) ? 'exam' : 'note', text: note[2] }); continue; }
     if (t.startsWith('|')) {
@@ -114,8 +124,15 @@ const ListView: React.FC<{ items: ListItem[]; ordered: boolean }> = ({ items, or
   return (
     <Tag className="nm-list">
       {items.map((it, i) => (
-        <li key={i}>
-          <NoteInline text={it.text} />
+        <li key={i} className={/^\[[ xX]\]\s/.test(it.text) ? 'nm-task' : undefined}>
+          {/^\[[ xX]\]\s/.test(it.text) ? (
+            <>
+              <span className={`nm-check ${/^\[[xX]\]/.test(it.text) ? 'is-on' : ''}`} aria-hidden="true" />
+              <NoteInline text={it.text.slice(4)} />
+            </>
+          ) : (
+            <NoteInline text={it.text} />
+          )}
           {it.children.length > 0 && <ListView items={it.children} ordered={it.children[0].ordered} />}
         </li>
       ))}
@@ -131,6 +148,12 @@ export const NoteMarkdown: React.FC<{ text: string; className?: string }> = ({ t
         if (b.kind === 'h') return b.level === 1 ? <h3 key={i} className="nm-h1"><NoteInline text={b.text} /></h3> : <h4 key={i} className="nm-h2"><NoteInline text={b.text} /></h4>;
         if (b.kind === 'p') return <p key={i}><NoteInline text={b.text} /></p>;
         if (b.kind === 'list') return <ListView key={i} items={b.items} ordered={b.ordered} />;
+        if (b.kind === 'quote')
+          return (
+            <blockquote key={i} className="nm-quote">
+              {b.lines.map((l, j) => <p key={j}><NoteInline text={l} /></p>)}
+            </blockquote>
+          );
         if (b.kind === 'note')
           return (
             <p key={i} className={`nm-note ${b.tone === 'exam' ? 'is-exam' : ''}`}>

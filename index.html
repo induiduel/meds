@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="tr">
+<html lang="tr" class="ui-v3 ui-v4 ui-v7" data-mode="light" data-palette="a">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, interactive-widget=resizes-content" />
@@ -9,8 +9,7 @@
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/manifest.json" />
-    <meta name="theme-color" content="#F5F7F9" media="(prefers-color-scheme: light)" />
-    <meta name="theme-color" content="#0D1420" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#F4F6F9" />
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -29,7 +28,8 @@
         try {
           var d = document.documentElement, a = JSON.parse(localStorage.getItem('medsoru_appearance') || 'null');
           var legacy = localStorage.getItem('medsoru_theme');
-          var mode = a && a.mode ? a.mode : (legacy || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'));
+          // Kayıtlı tercih yoksa açılış (ve uygulama) açık temayla başlar — sistem koyu olsa bile
+          var mode = a && (a.mode === 'light' || a.mode === 'sepia' || a.mode === 'dark') ? a.mode : (legacy === 'dark' ? 'dark' : 'light');
           d.dataset.mode = mode;
           d.dataset.palette = (a && a.palettes && a.palettes[mode]) || 'a';
           d.dataset.density = (a && a.density) || 'normal';
@@ -97,11 +97,12 @@
          Sıra: zemin ışıması → işaret yaylanarak belirir → kalp ritmi çizgisi çizilir → nabız halkası →
          yazı harf harf yükselir → alt ince ilerleme çubuğu. Çıkışta hafif büyüyüp bulanıklaşarak kaybolur. */
       #app-splash {
-        --sp-bg: #F5F7F9; --sp-ink: #14202B; --sp-ink3: #6B7A88; --sp-accent: #0A6A85; --sp-brand: #E0245E; --sp-glow: rgba(10,106,133,.16);
+        --sp-bg: #F4F6F9; --sp-ink: #121A24; --sp-ink3: #566475; --sp-accent: #1A5FB4; --sp-brand: #E0245E; --sp-glow: rgba(10,106,133,.16);
         position: fixed; inset: 0; z-index: 99999; display: grid; place-items: center; overflow: hidden;
         background: radial-gradient(60vmax 60vmax at 50% 42%, var(--sp-glow), transparent 62%), var(--sp-bg);
         transition: opacity .45s ease, transform .55s cubic-bezier(.22,1,.36,1), filter .45s ease, visibility .45s;
       }
+      html[data-mode="sepia"] #app-splash { --sp-bg: #F3ECDD; --sp-ink: #32271D; --sp-ink3: #6A5846; --sp-accent: #7E5026; --sp-brand: #B8324F; --sp-glow: rgba(126,80,38,.14); }
       html[data-mode="dark"] #app-splash { --sp-bg: #0D1420; --sp-ink: #E2E8F1; --sp-ink3: #8A97A8; --sp-accent: #5CC6E4; --sp-brand: #FF375F; --sp-glow: rgba(92,198,228,.14); }
       #app-splash.is-leaving { opacity: 0; transform: scale(1.04); filter: blur(6px); visibility: hidden; pointer-events: none; }
       .app-splash-mark { display: flex; flex-direction: column; align-items: center; gap: 18px; }

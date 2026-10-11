@@ -522,7 +522,7 @@ export const PdfStudio: React.FC<PdfStudioProps> = ({ isOpen, onClose, committee
 
   return createPortal(
     <div
-      className="ms-overlay fixed inset-0 z-[80] bg-[rgba(14,26,38,0.5)] backdrop-blur-[2px] flex items-stretch sm:items-center justify-center sm:p-5"
+      className="ms-overlay fixed inset-0 z-[80] bg-[var(--color-scrim)] flex items-stretch sm:items-center justify-center sm:p-5"
       onMouseDown={(e) => e.target === e.currentTarget && onClose()}
     >
       <div

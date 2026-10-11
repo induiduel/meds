@@ -327,7 +327,7 @@ export const AdminPastExamImporterModal: React.FC<AdminPastExamImporterModalProp
   };
 
   return (
-    <div className="ms-overlay fixed inset-0 z-50 bg-ink/60 backdrop-blur-xs flex items-center justify-center p-2 sm:p-4 overflow-y-auto">
+    <div className="ms-overlay fixed inset-0 z-50 bg-[var(--color-scrim)] flex items-center justify-center p-2 sm:p-4 overflow-y-auto">
       <div className="ms-modal-panel bg-white rounded-2xl w-full max-w-5xl shadow-2xl border border-line overflow-hidden my-auto flex flex-col max-h-[92dvh]">
         {/* Header */}
         <div className="bg-ink-surface text-white p-4 sm:p-5 flex items-center justify-between shrink-0">

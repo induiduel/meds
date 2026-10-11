@@ -730,7 +730,12 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
   }, []);
 
   // Upvote / Like toggle — kişi başı tek oy, ikinci basış geri çeker
+  // Oy uçları aç/kapa çalışır: istek sürerken gelen ikinci dokunuş sunucuda oyu geri alıyor, ekranla
+  // veri ayrışıyordu. Aynı soruda istek bitene kadar yeni oy dokunuşu yok sayılır (tek uçuş kilidi).
+  const voteInFlight = useRef<Set<string>>(new Set());
   const handleToggleLike = async (q: QuestionItem) => {
+    if (voteInFlight.current.has(q.id)) return;
+    voteInFlight.current.add(q.id);
     const userUid = getVoterId(currentUser);
     const liked = toggledVote(q, userUid);
     const undoDislike = liked.likedBy.includes(userUid) && (q.dislikedBy || []).includes(userUid);
@@ -751,11 +756,15 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
       await ApiService.upvotePastQuestion(q.id, userUid);
     } catch (err) {
       console.warn('Like toggle error:', err);
+    } finally {
+      voteInFlight.current.delete(q.id);
     }
   };
 
   // Downvote / Dislike toggle
   const handleToggleDislike = async (q: QuestionItem) => {
+    if (voteInFlight.current.has(q.id)) return;
+    voteInFlight.current.add(q.id);
     const userUid = getVoterId(currentUser);
     const dis = toggledVote({ upvotes: q.downvotes, likedBy: q.dislikedBy }, userUid);
     const undoLike = dis.likedBy.includes(userUid) && (q.likedBy || []).includes(userUid);
@@ -776,6 +785,8 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
       await ApiService.downvotePastQuestion(q.id, userUid);
     } catch (err) {
       console.warn('Dislike toggle error:', err);
+    } finally {
+      voteInFlight.current.delete(q.id);
     }
   };
 
@@ -1748,8 +1759,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
             if (q.similarPastQuestions && q.similarPastQuestions.length > 0) flagNodes.push(<span className="cx-flag is-ai" title="Birden çok sınavda çıktı"><Layers aria-hidden />{q.similarPastQuestions.length + 1} sınav</span>);
             if (isAdminUser && p14Fixed && isPhase14Pending(q)) flagNodes.push(<span className="cx-flag is-ai"><Sparkles aria-hidden />Onay bekliyor</span>);
             if (isAdminUser) {
-              const tier = getQualityTier(q);
-              flagNodes.push(<span className={`cx-flag ${tier === 'altin' ? 'is-ok' : tier === 'zayif' ? 'is-warn' : tier === 'kritik' ? 'is-bad' : ''}`} title="Kalite puanı">Q{getQualityScore(q)}</span>);
+              // Kalite puanı rozeti (Q0–Q100) kullanıcı isteğiyle kaldırıldı (2026-10-11); kalite sıralaması süzgeçte duruyor
               if (!(q as any).isDonem3) flagNodes.push(<span className="cx-flag is-warn">{(q as any).committeeId || 'Diğer dönem'}</span>);
               if ((q as any).hidden || (q as any).data?.hidden) flagNodes.push(<span className="cx-flag is-warn">Gizli</span>);
               if (q.is_manual_entry || (q as any).manuel_ekleme) flagNodes.push(<span className="cx-flag is-new">Manuel</span>);

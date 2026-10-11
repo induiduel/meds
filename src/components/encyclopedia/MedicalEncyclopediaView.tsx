@@ -497,17 +497,17 @@ Lütfen bu kavramı fakülte sınavları ve TUS açısından en yüksek verimle 
   const getCategoryBadge = (cat: string) => {
     switch (cat) {
       case 'hastalik':
-        return { label: 'Hastalık', dot: 'bg-bad', cls: 'bg-bad/10 text-bad-text dark:text-rose-300 border-bad/20' };
+        return { label: 'Hastalık', dot: 'bg-bad', cls: 'bg-bad/10 text-bad-text border-bad/20' };
       case 'ilac':
-        return { label: 'İlaç & Tedavi', dot: 'bg-accent', cls: 'bg-accent/10 text-accent dark:text-blue-300 border-accent/20' };
+        return { label: 'İlaç & Tedavi', dot: 'bg-accent', cls: 'bg-accent/10 text-accent border-accent/20' };
       case 'patoloji':
-        return { label: 'Patoloji', dot: 'bg-ok', cls: 'bg-ok/10 text-ok dark:text-emerald-300 border-ok/20' };
+        return { label: 'Patoloji', dot: 'bg-ok', cls: 'bg-ok/10 text-ok border-ok/20' };
       case 'patojen':
-        return { label: 'Patojen', dot: 'bg-warn', cls: 'bg-warn/10 text-warn dark:text-amber-300 border-warn/20' };
+        return { label: 'Patojen', dot: 'bg-warn', cls: 'bg-warn/10 text-warn border-warn/20' };
       case 'genetik':
-        return { label: 'Genetik', dot: 'bg-ai', cls: 'bg-ai/10 text-ai dark:text-purple-300 border-ai/20' };
+        return { label: 'Genetik', dot: 'bg-ai', cls: 'bg-ai/10 text-ai border-ai/20' };
       default:
-        return { label: 'Tıbbi Kavram', dot: 'bg-ok', cls: 'bg-ok/10 text-ok dark:text-teal-300 border-ok/20' };
+        return { label: 'Tıbbi Kavram', dot: 'bg-ok', cls: 'bg-ok/10 text-ok border-ok/20' };
     }
   };
 
@@ -1023,8 +1023,8 @@ Lütfen bu kavramı fakülte sınavları ve TUS açısından en yüksek verimle 
       )}
 
       {showReportModal && reportingEntry && (
-        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/50 backdrop-blur-xs animate-in fade-in duration-200">
-          <div className="bg-white dark:bg-[#12161f] border border-line rounded-2xl w-full max-w-lg shadow-xl overflow-hidden flex flex-col max-h-[90vh]">
+        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-[var(--color-scrim)] animate-in fade-in duration-200">
+          <div className="bg-white border border-line rounded-2xl w-full max-w-lg shadow-xl overflow-hidden flex flex-col max-h-[90vh]">
             <div className="flex items-center justify-between px-6 py-4 border-b border-line bg-canvas">
               <div className="flex items-center gap-2">
                 <AlertCircle className="w-5 h-5 text-warn" />

@@ -276,9 +276,17 @@ export default function App() {
       }
     } catch {}
 
+    // İlk ziyarette hiç sorma (uygulama önce tanınsın); sonraki ziyaretlerde 20 sn kullanım sonra, ekran
+    // boşken sor. Eskiden açılıştan 1.2 sn sonra her sayfada ekranın yarısını kaplıyordu.
+    let visits = 0;
+    try {
+      visits = Number(localStorage.getItem('medsoru_visit_count') || 0) + 1;
+      localStorage.setItem('medsoru_visit_count', String(visits));
+    } catch {}
+    if (visits < 2) return;
     const timer = setTimeout(() => {
-      setIsPwaWelcomeOpen(true);
-    }, 1200);
+      if (!document.querySelector('.sh-sheet-root, .ls-root, [role="dialog"]')) setIsPwaWelcomeOpen(true);
+    }, 20000);
 
     return () => clearTimeout(timer);
   }, [showOnboarding]);
@@ -1453,10 +1461,10 @@ export default function App() {
                   <button
                     type="button"
                     onClick={() => setShowClusterModal(true)}
-                    className="inline-flex h-10 px-3.5 rounded-[10px] bg-teal-500/10 hover:bg-teal-500/20 text-teal-400 border border-teal-500/30 font-semibold text-sm items-center gap-2 cursor-pointer shadow-sm transition-all"
+                    className="inline-flex h-10 px-3.5 rounded-[10px] bg-ok/10 hover:bg-ok/20 text-ok border border-ok/30 font-semibold text-sm items-center gap-2 cursor-pointer shadow-sm transition-all"
                     title="Yapay zeka soru eşleme ve birleştirilmiş öneri taslakları"
                   >
-                    <BrainCircuit className="w-4 h-4 text-teal-400" />
+                    <BrainCircuit className="w-4 h-4 text-ok" />
                     <span>Öneri Taslak Havuzu</span>
                   </button>
                   <button

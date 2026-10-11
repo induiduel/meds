@@ -200,7 +200,17 @@ html.ui-v7 .ms-ders-acc-head .hk-dot { margin-right: 2px; }
 .st-dock-row { display: flex; align-items: center; gap: 8px; min-width: 0; }
 .st-tabs { flex: 1 1 auto; min-width: 0; max-width: 560px; }
 .st-quick { flex-shrink: 0; margin-left: auto; }
-@media (max-width: 479px) { .st-tab-l { display: none; } .st-tabs .lh-n { display: none; } }
+/* Telefon: etiketsiz simge sekmeleri anlaşılmıyordu → simge üstte, kısa etiket altta (mini sekme çubuğu) */
+@media (max-width: 479px) {
+  .st-tabs > button { height: 48px !important; padding: 0 2px !important; }
+  .st-tabs > button > span { flex-direction: column; gap: 2px !important; line-height: 1.1; }
+  .st-tabs .st-tab-l { font-size: 10.5px; font-weight: 600; white-space: nowrap; }
+  .st-tabs .lh-n { position: absolute; top: 4px; right: 6px; min-width: 16px; height: 16px; padding: 0 4px; font-size: 10px; line-height: 16px; border-radius: 99px; }
+  .st-tabs > button { position: relative; }
+  .st-quick { height: 48px; width: 52px; padding: 0 !important; flex-direction: column; gap: 2px; border-radius: 12px; }
+  .st-quick .st-tab-l { display: inline !important; font-size: 10.5px; }
+  .st-hide-xs { display: none; }
+}
 
 /* ---------- Not defteri (NotesView v8) ---------- */
 .nt { display: grid; grid-template-columns: minmax(0, 1fr); min-height: 560px; border-radius: var(--dn-radius); background: var(--color-white); overflow: hidden; }

@@ -24,6 +24,9 @@ __pycache__/
 .tmp*
 data/nested_fix_report.json
 data/local_rag_chunks.json
+# Sorgu zekâsı + hastalık grafiği: derlemden üretilir (scripts/search/build-query-intel.mts; sunucu açılışta kendisi derler)
+data/search/
+data/knowledge/
 data/_write_probe/
 data/ds_work/
 data/ds_out/
@@ -51,3 +54,7 @@ src/data/decks/items/
 data/users.json
 *.log
 data/music_playlists.json
+
+# Kişisel not yedekleri (userNotesService) ve katalog düzenleme yedekleri — depoya girmez
+data/user_notes/
+data/backups/

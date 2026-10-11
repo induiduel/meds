@@ -1,0 +1,80 @@
+/* Yönetim · Veri kataloğu (ManageCatalogSection) — yalnız palet token'ları */
+.ct-root { display: grid; gap: 16px; grid-template-columns: minmax(0, 1fr); min-width: 0; }
+@media (min-width: 1024px) { .ct-root { grid-template-columns: 210px minmax(0, 1fr); align-items: start; } }
+
+.ct-types { display: flex; gap: 6px; overflow-x: auto; padding-bottom: 2px; scrollbar-width: none; }
+.ct-types::-webkit-scrollbar { display: none; }
+.ct-tgroup { display: contents; }
+.ct-tg { display: none; }
+@media (min-width: 1024px) {
+  .ct-types { position: sticky; top: 72px; flex-direction: column; gap: 2px; overflow: visible; }
+  .ct-tgroup { display: flex; flex-direction: column; gap: 2px; }
+  .ct-tgroup + .ct-tgroup { margin-top: 10px; }
+  .ct-tg { display: block; padding: 0 10px 2px; font-size: 11.5px; font-weight: 650; letter-spacing: .02em; color: var(--color-ink-3); }
+}
+.ct-type { position: relative; flex-shrink: 0; display: inline-flex; align-items: center; justify-content: space-between; gap: 8px; height: 34px; padding: 0 10px; border-radius: 10px; background: var(--color-white); color: var(--color-ink-2); font-size: 13px; font-weight: 600; cursor: pointer; white-space: nowrap; box-shadow: inset 0 0 0 1px var(--color-line); transition: background .15s var(--mo-ease), color .15s, box-shadow .15s, transform .12s var(--mo-press); }
+@media (min-width: 1024px) { .ct-type { box-shadow: none; background: transparent; width: 100%; } }
+.ct-type b { font: 600 11.5px/1 var(--font-mono); color: var(--color-ink-3); font-variant-numeric: tabular-nums; }
+.ct-type:hover { background: var(--color-field); color: var(--color-ink); }
+.ct-type:active { transform: scale(.98); }
+.ct-type.is-on { background: var(--color-accent-soft); color: var(--color-accent); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--color-accent) 30%, transparent); }
+.ct-type.is-on b { color: var(--color-accent); }
+.ct-dot { position: absolute; top: 6px; right: 4px; width: 6px; height: 6px; border-radius: 50%; }
+.ct-dot.is-bad { background: var(--color-bad); }
+
+.ct-main { display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+.ct-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.ct-head h2 { margin: 0; font-size: 20px; font-weight: 700; letter-spacing: -.01em; color: var(--color-ink); }
+.ct-head p { margin: 2px 0 0; font-size: 12.5px; color: var(--color-ink-3); overflow-wrap: anywhere; }
+.ct-head code { font-family: var(--font-mono); font-size: 11.5px; padding: 1px 5px; border-radius: 5px; background: var(--color-field); color: var(--color-ink-2); }
+.ct-head-act { display: flex; gap: 6px; align-items: center; }
+.ct-select { height: 32px; max-width: 220px; padding: 0 28px 0 10px; border-radius: 9px; border: 1px solid var(--color-line); background: var(--color-white); color: var(--color-ink-2); font-size: 12.5px; font-weight: 600; cursor: pointer; text-overflow: ellipsis; }
+.ct-select:hover { border-color: var(--color-line-2); }
+.ct-select.is-on { border-color: var(--color-accent); color: var(--color-accent); background: var(--color-accent-soft); }
+
+.ct-filters { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.ct-status { display: inline-flex; flex-wrap: wrap; gap: 4px; }
+.ct-status > button { display: inline-flex; align-items: center; gap: 5px; height: 30px; padding: 0 10px; border-radius: 99px; background: var(--color-white); color: var(--color-ink-2); font-size: 12.5px; font-weight: 600; cursor: pointer; box-shadow: inset 0 0 0 1px var(--color-line); transition: background .15s, color .15s, box-shadow .15s, transform .12s var(--mo-press); }
+.ct-status > button:active { transform: scale(.96); }
+.ct-status > button > svg { width: 14px; height: 14px; }
+.ct-status > button b { font: 600 11px/1 var(--font-mono); opacity: .8; }
+.ct-status > button.is-on { background: var(--color-ink); color: var(--color-white); box-shadow: none; }
+.ct-status > button.is-ok.is-on { background: var(--color-ok-soft); color: var(--color-ok); box-shadow: inset 0 0 0 1px var(--color-ok); }
+.ct-status > button.is-warn.is-on { background: var(--color-warn-soft); color: var(--color-warn); box-shadow: inset 0 0 0 1px var(--color-warn); }
+.ct-status > button.is-bad.is-on { background: var(--color-bad-soft); color: var(--color-bad-text); box-shadow: inset 0 0 0 1px var(--color-bad); }
+.ct-status.is-big > button { height: 36px; padding: 0 14px; font-size: 13.5px; }
+
+.ct-bulk { position: sticky; top: calc(var(--sh-top-h, 56px) + 6px); z-index: 5; display: flex; flex-wrap: wrap; align-items: center; gap: 6px; padding: 8px 10px; border-radius: 12px; background: var(--color-white); box-shadow: var(--shadow-md), inset 0 0 0 1px var(--color-line); animation: ui-in var(--mo-base) var(--mo-ease) both; }
+.ct-bulk > b { font-size: 13px; color: var(--color-ink); margin-right: 4px; }
+.ct-bulk-tag { display: inline-flex; align-items: center; gap: 6px; height: var(--ms-ctl-sm); padding: 0 8px; border-radius: 8px; background: var(--color-field); color: var(--color-ink-3); }
+.ct-bulk-tag > svg { width: 14px; height: 14px; }
+.ct-bulk-tag input { width: 120px; border: 0; background: transparent; color: var(--color-ink); font-size: 12.5px; outline: 0; }
+
+.ct-list { display: flex; flex-direction: column; border-radius: var(--dn-radius); background: var(--color-white); overflow: hidden; box-shadow: inset 0 0 0 1px var(--color-line-soft); transition: opacity .2s; }
+.ct-list.is-loading { opacity: .6; }
+.ct-row { position: relative; display: flex; align-items: center; gap: 10px; min-height: 52px; padding: 6px 12px; animation: ct-row-in .28s var(--mo-ease) both; transition: background .12s; }
+.ct-row + .ct-row::before { content: ""; position: absolute; top: 0; left: 40px; right: 0; height: 1px; background: var(--color-line-soft); }
+.ct-row.is-head { min-height: 38px; font-size: 12px; font-weight: 600; color: var(--color-ink-3); background: var(--color-field); animation: none; cursor: pointer; }
+.ct-row:hover:not(.is-head) { background: color-mix(in srgb, var(--color-white) 94%, var(--color-ink)); }
+.ct-row.is-sel { background: var(--color-accent-soft); }
+.ct-row input[type="checkbox"] { width: 17px; height: 17px; flex-shrink: 0; accent-color: var(--color-accent); cursor: pointer; }
+.ct-row-main { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; text-align: left; cursor: pointer; padding: 4px 0; }
+.ct-row-main > b { font-size: 13.5px; font-weight: 600; color: var(--color-ink); line-height: 1.35; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+.ct-row-main > span { font-size: 12px; color: var(--color-ink-3); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.ct-row-end { display: flex; align-items: center; gap: 4px; flex-shrink: 0; }
+.ct-row-end .ui-tag { max-width: 120px; overflow: hidden; text-overflow: ellipsis; }
+@media (max-width: 639px) { .ct-row-end .ui-tag:not(.is-ok):not(.is-warn):not(.is-bad) { display: none; } }
+.ct-chev { width: 16px; height: 16px; color: var(--color-ink-3); transition: transform .15s var(--mo-ease); }
+.ct-row:hover .ct-chev { transform: translateX(2px); color: var(--color-accent); }
+@keyframes ct-row-in { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+
+.ct-pager { display: flex; align-items: center; justify-content: center; gap: 10px; font: 600 12.5px/1 var(--font-mono); color: var(--color-ink-3); }
+
+.ct-detail { display: flex; flex-direction: column; gap: 14px; }
+.ct-tabs { align-self: flex-start; }
+.ct-tabs > button[aria-checked="true"] { background: var(--color-white); box-shadow: var(--shadow-sm); }
+.ct-fields, .ct-rels { display: flex; flex-direction: column; gap: 14px; animation: ui-in var(--mo-base) var(--mo-ease) both; }
+.ct-ta { height: auto; min-height: 72px; padding: 10px 12px; line-height: 1.5; resize: vertical; }
+.ct-raw { margin: 0; max-height: 60vh; overflow: auto; padding: 12px; border-radius: 10px; background: var(--color-field); color: var(--color-ink-2); font: 12px/1.5 var(--font-mono); white-space: pre-wrap; overflow-wrap: anywhere; }
+.ct-foot { display: flex; align-items: center; justify-content: space-between; gap: 10px; width: 100%; font-size: 12.5px; color: var(--color-ink-3); }
+@media (prefers-reduced-motion: reduce) { .ct-row, .ct-fields, .ct-rels, .ct-bulk { animation: none; } }

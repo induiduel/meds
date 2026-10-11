@@ -1077,7 +1077,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
 
   return (
     <div
-      className={isPage ? 'w-full' : 'fixed inset-0 z-50 bg-[rgba(14,26,38,0.55)] flex items-stretch sm:items-center justify-center sm:p-4'}
+      className={isPage ? 'w-full' : 'fixed inset-0 z-50 bg-[var(--color-scrim)] flex items-stretch sm:items-center justify-center sm:p-4'}
       onMouseDown={isPage ? undefined : (e) => e.target === e.currentTarget && onClose()}
     >
       <div
@@ -1167,7 +1167,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
               onClick={onClose}
               aria-label="Yönetim panelini kapat"
               title="Kapat (Esc)"
-              className={`hidden ${isPage ? '' : 'lg:flex'} w-10 h-10 rounded-[10px] border border-line items-center justify-center text-ink-2 hover:text-ink hover:border-line-2 cursor-pointer`}
+              className={`hidden ${isPage ? '' : 'lg:flex'} w-10 h-10 rounded-[10px] border border-line items-center justify-center text-ink-2 hover:text-ink hover:border-line cursor-pointer`}
             >
               <X className="w-[18px] h-[18px]" />
             </button>
@@ -1202,7 +1202,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
             </div>
 
             <div className="flex flex-col md:flex-row md:items-center gap-2">
-              <label className="flex items-center gap-2 h-10 px-3 border border-line-2 rounded-[10px] bg-field flex-1 min-w-0 focus-within:border-accent">
+              <label className="flex items-center gap-2 h-10 px-3 border border-line rounded-[10px] bg-field flex-1 min-w-0 focus-within:border-accent">
                 <Search className="w-4 h-4 text-ink-2 shrink-0" />
                 <span className="sr-only">Soru ara</span>
                 <input
@@ -1242,7 +1242,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                   id="admin-q-discipline"
                   value={qDiscipline}
                   onChange={(e) => setQDiscipline(e.target.value)}
-                  className="h-[38px] border border-line-2 rounded-[10px] px-2.5 text-sm bg-white cursor-pointer shrink-0 max-w-[200px]"
+                  className="h-[38px] border border-line rounded-[10px] px-2.5 text-sm bg-white cursor-pointer shrink-0 max-w-[200px]"
                 >
                   <option value="all">Tüm dersler</option>
                   {tableDisciplines.map((d) => (
@@ -1339,7 +1339,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                   onClick={() => setQPage(Math.max(0, qPageSafe - 1))}
                   disabled={qPageSafe === 0}
                   aria-label="Önceki sayfa"
-                  className="w-10 h-10 rounded-[10px] border border-line-2 flex items-center justify-center cursor-pointer disabled:opacity-40 disabled:cursor-not-allowed"
+                  className="w-10 h-10 rounded-[10px] border border-line flex items-center justify-center cursor-pointer disabled:opacity-40 disabled:cursor-not-allowed"
                 >
                   <ChevronLeft className="w-4 h-4" />
                 </button>
@@ -1351,7 +1351,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                   onClick={() => setQPage(Math.min(qPageCount - 1, qPageSafe + 1))}
                   disabled={qPageSafe >= qPageCount - 1}
                   aria-label="Sonraki sayfa"
-                  className="w-10 h-10 rounded-[10px] border border-line-2 flex items-center justify-center cursor-pointer disabled:opacity-40 disabled:cursor-not-allowed"
+                  className="w-10 h-10 rounded-[10px] border border-line flex items-center justify-center cursor-pointer disabled:opacity-40 disabled:cursor-not-allowed"
                 >
                   <ChevronRight className="w-4 h-4" />
                 </button>
@@ -1435,7 +1435,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
 
             {/* Windows Desktop Shortcut & Daily 16:00 - 18:00 Automation Card */}
             <div className="hk-group space-y-4">
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-line-2/80">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-line">
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-xl bg-ok/20 text-ok border border-ok/30 flex items-center justify-center shrink-0">
                     <Monitor className="w-5 h-5 text-ok" />
@@ -1615,7 +1615,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                 </div>
               </div>
 
-              <div className="flex flex-wrap items-center justify-between gap-3 pt-1 border-t border-line-2">
+              <div className="flex flex-wrap items-center justify-between gap-3 pt-1 border-t border-line">
                 <div className="text-2xs text-ink-3">
                   <span>Hedef klasörler: <strong>meds_sorular</strong> & <strong>ders_notlari_pdf</strong></span>
                 </div>
@@ -1685,7 +1685,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
           <div className="p-4 sm:p-6 space-y-5 overflow-y-auto flex-1 text-xs">
             {/* Multi-Database Active Mode & Cloud Failover Card */}
             <div className="bg-white text-ink rounded-2xl p-5 border border-accent/50 space-y-4">
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-line-2/70">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-line">
                 <div className="space-y-1">
                   <div className="flex items-center gap-2">
                     <span className="p-1.5 bg-accent-soft text-accent rounded-lg border border-accent/30">
@@ -1702,7 +1702,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                   type="button"
                   onClick={refreshDbStatuses}
                   disabled={isRefreshingDbStatus}
-                  className="bg-white hover:bg-canvas text-ink-3 border border-line-2 font-semibold px-3 py-1.5 rounded-lg flex items-center gap-1.5 transition-all cursor-pointer self-start sm:self-center text-xs"
+                  className="bg-white hover:bg-canvas text-ink-3 border border-line font-semibold px-3 py-1.5 rounded-lg flex items-center gap-1.5 transition-all cursor-pointer self-start sm:self-center text-xs"
                 >
                   <RefreshCw className={`w-3.5 h-3.5 ${isRefreshingDbStatus ? 'animate-spin text-ok' : ''}`} />
                   <span>Yenile</span>
@@ -1715,7 +1715,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                 <div className={`p-3 rounded-xl border flex flex-col gap-1 ${
                   dbStatuses?.firebase.status === 'quota_exceeded'
                     ? 'bg-warn-soft border-warn/60 text-warn'
-                    : 'bg-canvas border-line-2 text-ink-3'
+                    : 'bg-canvas border-line text-ink-3'
                 }`}>
                   <div className="flex items-center justify-between">
                     <span className="font-bold flex items-center gap-1.5 text-xs">
@@ -1738,7 +1738,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                 <div className={`p-3 rounded-xl border flex flex-col gap-1 ${
                   dbStatuses?.supabase.status === 'online'
                     ? 'bg-ok-soft border-ok/50 text-ok'
-                    : 'bg-canvas border-line-2 text-ink-3'
+                    : 'bg-canvas border-line text-ink-3'
                 }`}>
                   <div className="flex items-center justify-between">
                     <span className="font-bold flex items-center gap-1.5 text-xs">
@@ -1761,7 +1761,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                 <div className={`p-3 rounded-xl border flex flex-col gap-1 ${
                   dbStatuses?.localPc.status === 'online'
                     ? 'bg-ok-soft border-ok/50 text-ok'
-                    : 'bg-canvas border-line-2 text-ink-3'
+                    : 'bg-canvas border-line text-ink-3'
                 }`}>
                   <div className="flex items-center justify-between">
                     <span className="font-bold flex items-center gap-1.5 text-xs">
@@ -1791,7 +1791,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                     className={`p-3 rounded-xl border text-left transition-all cursor-pointer ${
                       dbMode === 'auto'
                         ? 'bg-accent text-white border-accent shadow-md ring-2 ring-accent/50'
-                        : 'bg-canvas text-ink-3 border-line-2 hover:bg-field'
+                        : 'bg-canvas text-ink-3 border-line hover:bg-field'
                     }`}
                   >
                     <div className="font-bold flex items-center gap-1.5 text-xs">
@@ -1809,7 +1809,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                     className={`p-3 rounded-xl border text-left transition-all cursor-pointer ${
                       dbMode === 'supabase'
                         ? 'bg-ok text-white border-ok shadow-md ring-2 ring-ok/50'
-                        : 'bg-canvas text-ink-3 border-line-2 hover:bg-field'
+                        : 'bg-canvas text-ink-3 border-line hover:bg-field'
                     }`}
                   >
                     <div className="font-bold flex items-center gap-1.5 text-xs">
@@ -1826,7 +1826,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                     className={`p-3 rounded-xl border text-left transition-all cursor-pointer ${
                       dbMode === 'firebase'
                         ? 'bg-warn text-white border-warn shadow-md ring-2 ring-warn/50'
-                        : 'bg-canvas text-ink-3 border-line-2 hover:bg-field'
+                        : 'bg-canvas text-ink-3 border-line hover:bg-field'
                     }`}
                   >
                     <div className="font-bold flex items-center gap-1.5 text-xs">
@@ -1843,7 +1843,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                     className={`p-3 rounded-xl border text-left transition-all cursor-pointer ${
                       dbMode === 'local_pc'
                         ? 'bg-ok text-white border-ok shadow-md ring-2 ring-ok/50'
-                        : 'bg-canvas text-ink-3 border-line-2 hover:bg-field'
+                        : 'bg-canvas text-ink-3 border-line hover:bg-field'
                     }`}
                   >
                     <div className="font-bold flex items-center gap-1.5 text-xs">
@@ -1857,7 +1857,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
               </div>
 
               {/* Action Buttons & Helpers */}
-              <div className="flex flex-wrap items-center gap-2 pt-2 border-t border-line-2">
+              <div className="flex flex-wrap items-center gap-2 pt-2 border-t border-line">
                 <button
                   type="button"
                   onClick={handleSyncToAllDatabases}
@@ -1893,7 +1893,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
               )}
 
               {/* Gemini API Key Box with Tiered Pool Info */}
-              <div className="bg-canvas border border-line-2 rounded-xl p-3.5 space-y-2">
+              <div className="bg-canvas border border-line rounded-xl p-3.5 space-y-2">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-1.5 text-xs font-bold text-ink-3">
                     <Key className="w-3.5 h-3.5 text-warn" />
@@ -1907,7 +1907,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                     value={geminiApiKeyInput}
                     onChange={(e) => setGeminiApiKeyInput(e.target.value)}
                     placeholder="AIzaSy... (Özel veya yedek Gemini API anahtarınızı buraya yapıştırın)"
-                    className="flex-1 bg-white border border-line-2 rounded-lg px-3 py-1.5 text-xs text-ink-3 focus:outline-none focus:border-warn font-mono"
+                    className="flex-1 bg-white border border-line rounded-lg px-3 py-1.5 text-xs text-ink-3 focus:outline-none focus:border-warn font-mono"
                   />
                   <button
                     type="button"
@@ -1923,7 +1923,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
               </div>
 
               {/* Groq Cloud Alternative API Key Box */}
-              <div className="bg-canvas border border-line-2 rounded-xl p-3.5 space-y-2">
+              <div className="bg-canvas border border-line rounded-xl p-3.5 space-y-2">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-1.5 text-xs font-bold text-ink-3">
                     <Sparkles className="w-3.5 h-3.5 text-warn" />
@@ -1937,7 +1937,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                     value={groqApiKeyInput}
                     onChange={(e) => setGroqApiKeyInput(e.target.value)}
                     placeholder="1. Groq Anahtarı (gsk_...)"
-                    className="flex-1 bg-white border border-line-2 rounded-lg px-3 py-1.5 text-xs text-ink-3 focus:outline-none focus:border-warn font-mono"
+                    className="flex-1 bg-white border border-line rounded-lg px-3 py-1.5 text-xs text-ink-3 focus:outline-none focus:border-warn font-mono"
                   />
                   <button
                     type="button"
@@ -1953,7 +1953,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                     value={groqApiKey2Input}
                     onChange={(e) => setGroqApiKey2Input(e.target.value)}
                     placeholder="2. Yedek Groq Anahtarı (gsk_...)"
-                    className="flex-1 bg-white border border-line-2 rounded-lg px-3 py-1.5 text-xs text-ink-3 focus:outline-none focus:border-warn font-mono"
+                    className="flex-1 bg-white border border-line rounded-lg px-3 py-1.5 text-xs text-ink-3 focus:outline-none focus:border-warn font-mono"
                   />
                 </div>
                 {groqKeyFeedback && (
@@ -2120,7 +2120,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                 </button>
               </div>
 
-              <div className="bg-canvas border border-line-2/50 rounded-lg p-3 text-2xs text-ink-3 space-y-1.5">
+              <div className="bg-canvas border border-line rounded-lg p-3 text-2xs text-ink-3 space-y-1.5">
                 <div className="flex items-center gap-1.5 text-ok font-semibold">
                   <CheckCircle2 className="w-3.5 h-3.5" />
                   <span>Güvenli & Parçalı (Chunked) Firestore Aktarımı:</span>
@@ -2150,7 +2150,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
         {activeTab === 'users' && (
           <div className="p-4 sm:p-6 overflow-y-auto space-y-5">
             {/* Top Status & Sync Banner */}
-            <div className="bg-ink-surface text-white p-4 sm:p-5 rounded-2xl border border-ok shadow-md flex flex-col md:flex-row md:items-center justify-between gap-4">
+            <div className="bg-white text-ink p-4 sm:p-5 rounded-2xl border border-ok shadow-md flex flex-col md:flex-row md:items-center justify-between gap-4">
               <div className="space-y-1">
                 <div className="flex items-center gap-2">
                   <span className="w-2.5 h-2.5 rounded-full bg-ok animate-pulse" />
@@ -2158,7 +2158,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                     Auth & Realtime Database Bağlantı Durumu: Aktif & Senkronize
                   </span>
                 </div>
-                <h3 className="text-base sm:text-lg font-black text-white">
+                <h3 className="text-base sm:text-lg font-black text-ink">
                   Kayıtlı Öğrenci & Kullanıcı Yönetim Masası
                 </h3>
                 <p className="text-xs text-ink-3 max-w-xl">
@@ -2261,14 +2261,14 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
 
             {/* SMTP E-posta Sunucu Yapılandırması Kartı */}
             {showSmtpSettings && (
-              <div className="bg-ink-surface text-white rounded-2xl p-5 border border-ok/50 shadow-xl space-y-4 animate-fade-in">
-                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-3 border-b border-line-2">
+              <div className="bg-white text-ink rounded-2xl p-5 border border-ok/50 shadow-xl space-y-4 animate-fade-in">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-3 border-b border-line">
                   <div className="flex items-center gap-2.5">
                     <div className="w-8 h-8 rounded-lg bg-ok/20 text-ok border border-ok/30 flex items-center justify-center">
                       <Mail className="w-4 h-4" />
                     </div>
                     <div>
-                      <h4 className="font-bold text-sm text-white flex items-center gap-2">
+                      <h4 className="font-bold text-sm text-ink flex items-center gap-2">
                         <span>E-posta & SMTP Sunucu Yapılandırması (Gmail Canlı İletim)</span>
                         {smtpConfig?.hasPass ? (
                           <span className="bg-ok/20 text-ok border border-ok/30 text-2xs font-bold px-2 py-0.5 rounded-full flex items-center gap-1">
@@ -2290,7 +2290,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
 
                   <button
                     onClick={() => setShowSmtpSettings(false)}
-                    className="self-end sm:self-auto text-ink-3 hover:text-white text-xs px-2.5 py-1 rounded-lg hover:bg-ink cursor-pointer"
+                    className="self-end sm:self-auto text-ink-3 hover:text-ink text-xs px-2.5 py-1 rounded-lg hover:bg-field cursor-pointer"
                   >
                     Gizle
                   </button>
@@ -2309,7 +2309,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                         value={smtpUser}
                         onChange={(e) => setSmtpUser(e.target.value)}
                         placeholder="nofrostlife@gmail.com"
-                        className="w-full bg-ink border border-line-2 rounded-lg px-3 py-2 text-xs text-white focus:border-ok focus:ring-1 focus:ring-ok font-mono"
+                        className="w-full bg-canvas border border-line rounded-lg px-3 py-2 text-xs text-ink focus:border-ok focus:ring-1 focus:ring-ok font-mono"
                       />
                     </div>
 
@@ -2326,7 +2326,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                           value={smtpPass}
                           onChange={(e) => setSmtpPass(e.target.value)}
                           placeholder={smtpConfig?.hasPass ? 'Yeni şifre girmek için yazınız...' : 'örn: abcd efgh ijkl mnop'}
-                          className="w-full bg-ink border border-line-2 rounded-lg px-3 py-2 text-xs text-white focus:border-ok focus:ring-1 focus:ring-ok font-mono"
+                          className="w-full bg-canvas border border-line rounded-lg px-3 py-2 text-xs text-ink focus:border-ok focus:ring-1 focus:ring-ok font-mono"
                         />
                       </div>
                     </div>
@@ -2340,13 +2340,13 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                         value={smtpFrom}
                         onChange={(e) => setSmtpFrom(e.target.value)}
                         placeholder="MeDSor Tıp Fakültesi <nofrostlife@gmail.com>"
-                        className="w-full bg-ink border border-line-2 rounded-lg px-3 py-2 text-xs text-white focus:border-ok focus:ring-1 focus:ring-ok"
+                        className="w-full bg-canvas border border-line rounded-lg px-3 py-2 text-xs text-ink focus:border-ok focus:ring-1 focus:ring-ok"
                       />
                     </div>
                   </div>
 
                   {/* Instructions Box */}
-                  <div className="bg-ink/80 border border-ok/60 rounded-xl p-3.5 text-xs space-y-2 text-ink-3">
+                  <div className="bg-field border border-ok/60 rounded-xl p-3.5 text-xs space-y-2 text-ink-3">
                     <div className="flex items-center gap-2 font-bold text-ok">
                       <Key className="w-4 h-4 text-ok" />
                       <span>Google 16 Haneli Uygulama Şifresi Nasıl Alınır? (Gmail 2022+ Kuralı)</span>
@@ -2354,7 +2354,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                     <ol className="list-decimal list-inside space-y-1 text-2xs text-ink-3 leading-relaxed">
                       <li>
                         Gmail normal e-posta şifrenizle programlardan giriş yapılmasına izin vermez. 
-                        Önce Google hesabınızda <strong className="text-white">2 Adımlı Doğrulama</strong>'nın açık olduğundan emin olun.
+                        Önce Google hesabınızda <strong className="text-ink">2 Adımlı Doğrulama</strong>'nın açık olduğundan emin olun.
                       </li>
                       <li>
                         Tarayıcınızda{' '}
@@ -2370,7 +2370,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                         sayfasına gidin.
                       </li>
                       <li>
-                        Uygulama adı olarak <strong className="text-ok">MeDSor</strong> yazın ve <strong className="text-white">Oluştur</strong> butonuna tıklayın.
+                        Uygulama adı olarak <strong className="text-ok">MeDSor</strong> yazın ve <strong className="text-ink">Oluştur</strong> butonuna tıklayın.
                       </li>
                       <li>
                         Google'ın size ekranda gösterdiği 16 haneli sarı kod bloğunu (örnek: <span className="font-mono text-warn">abcd efgh ijkl mnop</span>) kopyalayıp yukarıdaki alana yapıştırın ve <strong>Ayarları Kaydet</strong>'e basınız.
@@ -2386,7 +2386,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                         value={testEmailTarget}
                         onChange={(e) => setTestEmailTarget(e.target.value)}
                         placeholder="Test maili alıcısı (örn: nofrostlife@gmail.com)"
-                        className="flex-1 bg-ink border border-line-2 rounded-lg px-3 py-1.5 text-xs text-white placeholder-ink-3 font-mono"
+                        className="flex-1 bg-canvas border border-line rounded-lg px-3 py-1.5 text-xs text-ink placeholder-ink-3 font-mono"
                       />
                       <button
                         type="button"
@@ -2457,7 +2457,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                       value={newEmail}
                       onChange={(e) => setNewEmail(e.target.value)}
                       placeholder="ogrenci@ogr.karabuk.edu.tr"
-                      className="w-full bg-white border border-line-2 rounded-lg px-3 py-2 text-xs text-ink focus:border-ok focus:ring-1 focus:ring-ok"
+                      className="w-full bg-white border border-line rounded-lg px-3 py-2 text-xs text-ink focus:border-ok focus:ring-1 focus:ring-ok"
                     />
                   </div>
 
@@ -2468,7 +2468,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                       value={newName}
                       onChange={(e) => setNewName(e.target.value)}
                       placeholder="Örn: Eren Yılmaz"
-                      className="w-full bg-white border border-line-2 rounded-lg px-3 py-2 text-xs text-ink focus:border-ok focus:ring-1 focus:ring-ok"
+                      className="w-full bg-white border border-line rounded-lg px-3 py-2 text-xs text-ink focus:border-ok focus:ring-1 focus:ring-ok"
                     />
                   </div>
 
@@ -2479,7 +2479,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                       value={newStudentNumber}
                       onChange={(e) => setNewStudentNumber(e.target.value.replace(/\D/g, ''))}
                       placeholder="Örn: 202311045"
-                      className="w-full bg-white border border-line-2 rounded-lg px-3 py-2 text-xs text-ink focus:border-ok focus:ring-1 focus:ring-ok"
+                      className="w-full bg-white border border-line rounded-lg px-3 py-2 text-xs text-ink focus:border-ok focus:ring-1 focus:ring-ok"
                     />
                   </div>
 
@@ -2488,7 +2488,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                     <select
                       value={newRole}
                       onChange={(e) => setNewRole(e.target.value as any)}
-                      className="w-full bg-white border border-line-2 rounded-lg px-3 py-2 text-xs text-ink font-semibold focus:border-ok focus:ring-1 focus:ring-ok"
+                      className="w-full bg-white border border-line rounded-lg px-3 py-2 text-xs text-ink font-semibold focus:border-ok focus:ring-1 focus:ring-ok"
                     >
                       <option value="student">Öğrenci (Soru Ekleme & Test)</option>
                       <option value="admin">Yönetici (Tam Yetki)</option>
@@ -2692,7 +2692,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                                   <button
                                     onClick={() => handleSendWelcomeEmail(u)}
                                     disabled={isWelcomeSending}
-                                    className="inline-flex items-center gap-1 text-ink-2 hover:text-ok bg-field hover:bg-ok-soft border border-line-2 px-2 py-0.5 rounded-md text-2xs font-semibold transition-colors cursor-pointer"
+                                    className="inline-flex items-center gap-1 text-ink-2 hover:text-ok bg-field hover:bg-ok-soft border border-line px-2 py-0.5 rounded-md text-2xs font-semibold transition-colors cursor-pointer"
                                     title="Öğrenciye hoş geldiniz bilgilendirme maili gönder"
                                   >
                                     <Mail className="w-3 h-3 text-ok" />
@@ -2751,7 +2751,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
 
       {/* Confirmation Dialog */}
       {confirmDialog && (
-        <div className="ms-overlay fixed inset-0 z-60 bg-ink/70 flex items-center justify-center p-4">
+        <div className="ms-overlay fixed inset-0 z-60 bg-[var(--color-scrim)] flex items-center justify-center p-4">
           <div className="ms-modal-panel bg-white rounded-xl max-w-md w-full p-5 shadow-2xl space-y-4 border border-line">
             <div className="flex items-start gap-3">
               <div className="p-2 rounded-full bg-bad-soft text-bad-text shrink-0">
@@ -2789,9 +2789,9 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
 
       {/* Supabase SQL Schema Viewer Modal */}
       {showSqlSchemaModal && (
-        <div className="ms-overlay fixed inset-0 z-50 flex items-center justify-center p-4 bg-ink/80 backdrop-blur-xs animate-fadeIn">
-          <div className="bg-ink border border-line-2 rounded-2xl max-w-3xl w-full max-h-[85dvh] flex flex-col shadow-2xl overflow-hidden text-white">
-            <div className="p-4 bg-ink border-b border-line-2 flex items-center justify-between">
+        <div className="ms-overlay fixed inset-0 z-50 flex items-center justify-center p-4 bg-[var(--color-scrim)] animate-fadeIn">
+          <div className="bg-canvas border border-line rounded-2xl max-w-3xl w-full max-h-[85dvh] flex flex-col shadow-2xl overflow-hidden text-ink">
+            <div className="p-4 bg-canvas border-b border-line flex items-center justify-between">
               <div className="flex items-center gap-2">
                 <Terminal className="w-5 h-5 text-accent" />
                 <h3 className="font-bold text-sm text-ink-3">Supabase PostgreSQL Veritabanı Şeması</h3>
@@ -2799,7 +2799,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
               <button
                 type="button"
                 onClick={() => setShowSqlSchemaModal(false)}
-                className="text-ink-3 hover:text-white p-1 rounded-lg hover:bg-ink cursor-pointer"
+                className="text-ink-3 hover:text-ink p-1 rounded-lg hover:bg-field cursor-pointer"
               >
                 <X className="w-5 h-5" />
               </button>
@@ -2810,7 +2810,7 @@ export const AdminPanelModal: React.FC<AdminPanelModalProps> = ({
                 Supabase Dashboard &gt; <strong>SQL Editor</strong> bölümüne aşağıdaki kodu yapıştırıp <strong>RUN</strong> butonuna basınız. Bu komutlar gerekli tüm tabloları (committees, questions, past_questions, lecture_notes, users, system_status), indeksleri ve RLS politikalarını oluşturur:
               </p>
 
-              <pre className="p-3 bg-ink rounded-xl border border-line-2 font-mono text-2xs text-ok overflow-x-auto select-all max-h-[50dvh]">
+              <pre className="p-3 bg-canvas rounded-xl border border-line font-mono text-2xs text-ok overflow-x-auto select-all max-h-[50dvh]">
 {`-- 1. Kurullar Tablosu
 CREATE TABLE IF NOT EXISTS public.committees (
   id TEXT PRIMARY KEY,
@@ -2954,7 +2954,7 @@ ALTER TABLE public.system_status REPLICA IDENTITY FULL;`}
               </pre>
             </div>
 
-            <div className="p-4 bg-ink border-t border-line-2 flex items-center justify-between">
+            <div className="p-4 bg-canvas border-t border-line flex items-center justify-between">
               <span className="text-2xs text-ink-3">
                 Panoya kopyalayıp Supabase SQL konsolunda çalıştırın.
               </span>
@@ -2975,7 +2975,7 @@ ALTER TABLE public.system_status REPLICA IDENTITY FULL;`}
                 <button
                   type="button"
                   onClick={() => setShowSqlSchemaModal(false)}
-                  className="bg-ink hover:bg-ink-2 text-ink-3 px-4 py-2 rounded-xl text-xs font-semibold cursor-pointer"
+                  className="bg-canvas hover:bg-line-soft text-ink-3 px-4 py-2 rounded-xl text-xs font-semibold cursor-pointer"
                 >
                   Kapat
                 </button>

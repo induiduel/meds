@@ -41,6 +41,7 @@ import {
   buildUniversalReportUrl,
   getUniversalLocationBreadcrumb,
 } from '../../services/universalRedirectService';
+import { guardedInterval } from '../../services/net';
 
 export const ManagePendingOperationsSection: React.FC = () => {
   const [items, setItems] = useState<AutoRepairItemClient[]>([]);
@@ -72,8 +73,8 @@ export const ManagePendingOperationsSection: React.FC = () => {
 
   useEffect(() => {
     loadData();
-    const interval = setInterval(loadData, 10000); // 10 saniyede bir otomatik yenile
-    return () => clearInterval(interval);
+    // Önceki yükleme bitmeden yenisi başlamaz; sekme gizliyken durur
+    return guardedInterval(loadData, 10000);
   }, []);
 
   const handleRunNext = async () => {

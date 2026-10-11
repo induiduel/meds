@@ -1,0 +1,226 @@
+/**
+ * Ağ katmanı — zayıf bağlantıda donma ve istek yığılmasını önler.
+ *
+ * installFetchGuard() tarayıcının fetch'ini bir kez sarar; böylece projedeki tüm istekler (ham fetch, safeJsonFetch,
+ * Supabase istemcisi) aynı kurallara uyar:
+ *  1. Zaman aşımı: yanıt BAŞLIKLARI gelene kadar süre tutulur (gövde indirmesi sınırsız). GET 15 sn, yazma 20 sn,
+ *     yapay zekâ / uzun işler 120 sn. Çağıranın kendi AbortSignal'ı korunur ve zaman aşımıyla birleşir.
+ *     Zaman aşımında AbortError değil ağ hatası (TypeError) atılır → mevcut çevrimdışı/önbellek yedekleri devreye girer.
+ *  2. Birleştirme: aynı anda uçuşan özdeş GET istekleri (aynı URL + kimlik başlıkları) tek ağ isteği paylaşır.
+ *  3. Bağlantı durumu: ardışık hata/zaman aşımı → "slow", navigator.onLine=false → "offline"; ilk başarılı yanıtta "online".
+ *     useNetState() ve onNetChange() ile okunur; NetworkBanner ve usePoll bunu kullanır.
+ */
+import { useEffect, useRef, useSyncExternalStore } from 'react';
+
+export type NetState = 'online' | 'slow' | 'offline';
+
+const LONG_RE = /\/api\/(ai|studio|rag|admin\/scripts|admin\/phases\/question\/[^/]+\/(rereview|test)|notebooklm|past-question-reviews|phase14|transcri|upload|import|backup|drive|automation|v2\/cluster|learn\/ask)|reconstruct|optimize|\/generate|\/chat|\/stream|\/audit\/|\/master\//i;
+const GET_TIMEOUT = 15_000;
+const WRITE_TIMEOUT = 20_000;
+const LONG_TIMEOUT = 120_000;
+const ID_HEADERS = ['authorization', 'x-user-id', 'x-voter-uid', 'x-admin-email', 'apikey', 'range', 'accept'];
+
+let state: NetState = typeof navigator !== 'undefined' && navigator.onLine === false ? 'offline' : 'online';
+const listeners = new Set<() => void>();
+let failTimes: number[] = [];
+
+function setState(next: NetState) {
+  if (next === state) return;
+  state = next;
+  listeners.forEach((l) => l());
+}
+
+export const getNetState = () => state;
+export function onNetChange(cb: () => void) {
+  listeners.add(cb);
+  return () => listeners.delete(cb);
+}
+export function useNetState(): NetState {
+  return useSyncExternalStore(onNetChange, getNetState, () => 'online');
+}
+
+function reportOk() {
+  failTimes = [];
+  if (state !== 'online' && (typeof navigator === 'undefined' || navigator.onLine !== false)) setState('online');
+}
+function reportFail() {
+  if (typeof navigator !== 'undefined' && navigator.onLine === false) return setState('offline');
+  const now = Date.now();
+  failTimes = failTimes.filter((t) => now - t < 30_000);
+  failTimes.push(now);
+  if (failTimes.length >= 2) setState('slow');
+}
+
+/** Zaman aşımı: isteğin türüne göre ms. */
+export function timeoutFor(url: string, method: string) {
+  if (LONG_RE.test(url)) return LONG_TIMEOUT;
+  return method === 'GET' || method === 'HEAD' ? GET_TIMEOUT : WRITE_TIMEOUT;
+}
+
+function anySignal(signals: AbortSignal[]): AbortSignal {
+  const ctrl = new AbortController();
+  for (const s of signals) {
+    if (s.aborted) {
+      ctrl.abort(s.reason);
+      break;
+    }
+    s.addEventListener('abort', () => ctrl.abort(s.reason), { once: true });
+  }
+  return ctrl.signal;
+}
+
+let installed = false;
+
+export function installFetchGuard() {
+  if (installed || typeof window === 'undefined' || typeof window.fetch !== 'function') return;
+  installed = true;
+  const nativeFetch = window.fetch.bind(window);
+  type Waiter = [(r: Response) => void, (e: unknown) => void];
+  const inflight = new Map<string, Waiter[]>();
+
+  const guarded = async (input: RequestInfo | URL, init?: RequestInit): Promise<Response> => {
+    const req = input instanceof Request ? input : null;
+    const url = typeof input === 'string' ? input : input instanceof URL ? input.href : req!.url;
+    if (!/^(https?:|\/)/i.test(url) || url.includes('/@vite') || url.includes('/node_modules/')) return nativeFetch(input, init);
+    const method = String(init?.method || req?.method || 'GET').toUpperCase();
+    const headers = new Headers(init?.headers || req?.headers || undefined);
+
+    const run = async () => {
+      const timer = new AbortController();
+      const ms = timeoutFor(url, method);
+      let timedOut = false;
+      const t = window.setTimeout(() => {
+        timedOut = true;
+        timer.abort();
+      }, ms);
+      const callerSignal = init?.signal || req?.signal || null;
+      const signal = callerSignal ? anySignal([callerSignal, timer.signal]) : timer.signal;
+      try {
+        const res = await nativeFetch(input, { ...init, signal });
+        reportOk();
+        return res;
+      } catch (err: any) {
+        if (timedOut) {
+          reportFail();
+          throw new TypeError(`Bağlantı zaman aşımına uğradı (${Math.round(ms / 1000)} sn)`);
+        }
+        if (err?.name !== 'AbortError') reportFail();
+        throw err;
+      } finally {
+        window.clearTimeout(t);
+      }
+    };
+
+    // Özdeş GET'leri birleştir: ilk çağıran özgün yanıtı alır; bekleyenlere yanıt gelir gelmez (ilk çağıran
+    // gövdeyi okumadan önce) kopya verilir. Bekleyen yoksa kopya yapılmaz → büyük gövdeler iki kez tutulmaz.
+    // Kendi iptal sinyali olan istekler birleştirilmez (bir çağıranın iptali ötekini düşürmesin)
+    if (method === 'GET' && !init?.body && !init?.signal && !req?.signal) {
+      const key = url + '|' + ID_HEADERS.map((h) => headers.get(h) || '').join('|');
+      const waiting = inflight.get(key);
+      if (waiting) return new Promise<Response>((resolve, reject) => waiting.push([resolve, reject]));
+      const waiters: Waiter[] = [];
+      inflight.set(key, waiters);
+      const p = run();
+      p.then(
+        (r) => {
+          inflight.delete(key);
+          for (const [resolve, reject] of waiters) {
+            try { resolve(r.clone()); } catch (e) { reject(e); }
+          }
+        },
+        (e) => {
+          inflight.delete(key);
+          for (const [, reject] of waiters) reject(e);
+        }
+      );
+      return p;
+    }
+    return run();
+  };
+
+  window.fetch = guarded as typeof window.fetch;
+  window.addEventListener('online', () => {
+    failTimes = [];
+    setState('online');
+  });
+  window.addEventListener('offline', () => setState('offline'));
+}
+
+/**
+ * Yoklama kancası: önceki çağrı bitmeden yenisini başlatmaz, sekme gizliyken ve çevrimdışıyken durur,
+ * hatada aralığı ikiye katlar (en çok 8×). `fn` güncel kalır (ref).
+ */
+export function usePoll(fn: () => Promise<unknown> | unknown, ms: number, enabled = true) {
+  const fnRef = useRef(fn);
+  fnRef.current = fn;
+  useEffect(() => {
+    if (!enabled) return;
+    let stopped = false;
+    let busy = false;
+    let factor = 1;
+    let timer: number | undefined;
+    const schedule = () => {
+      if (!stopped) timer = window.setTimeout(tick, ms * factor);
+    };
+    const tick = async () => {
+      if (stopped) return;
+      if (busy || document.hidden || getNetState() === 'offline') return schedule();
+      busy = true;
+      try {
+        await fnRef.current();
+        factor = 1;
+      } catch {
+        factor = Math.min(8, factor * 2);
+      } finally {
+        busy = false;
+        schedule();
+      }
+    };
+    schedule();
+    const onVis = () => {
+      if (!document.hidden && !busy) {
+        window.clearTimeout(timer);
+        void tick();
+      }
+    };
+    document.addEventListener('visibilitychange', onVis);
+    return () => {
+      stopped = true;
+      window.clearTimeout(timer);
+      document.removeEventListener('visibilitychange', onVis);
+    };
+  }, [ms, enabled]);
+}
+
+/**
+ * Tek uçuş kilidi: aynı anahtarla bir işlem sürerken yeni çağrı onu bekler, ikinci istek atılmaz.
+ * Düğmelerde çift dokunuşla yığılan yazmaları önler.
+ */
+const locks = new Map<string, Promise<unknown>>();
+export function singleFlight<T>(key: string, fn: () => Promise<T>): Promise<T> {
+  const cur = locks.get(key) as Promise<T> | undefined;
+  if (cur) return cur;
+  const p = fn().finally(() => locks.delete(key));
+  locks.set(key, p);
+  return p;
+}
+
+/**
+ * setInterval yerine: önceki çağrı bitmeden yenisini başlatmaz (yavaş ağda istekler üst üste yığılmaz),
+ * sekme gizliyken ve çevrimdışıyken atlar. Dönen işlev aralığı durdurur.
+ */
+export function guardedInterval(fn: () => unknown, ms: number): () => void {
+  let busy = false;
+  const id = window.setInterval(async () => {
+    if (busy || document.hidden || getNetState() === 'offline') return;
+    busy = true;
+    try {
+      await fn();
+    } catch {
+      /* çağıran kendi hatasını gösterir */
+    } finally {
+      busy = false;
+    }
+  }, ms);
+  return () => window.clearInterval(id);
+}

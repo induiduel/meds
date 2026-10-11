@@ -254,7 +254,7 @@ export const ManageInboxSection: React.FC<Props> = ({
 
       {/* Hata Bildirimi Düzenleme Penceresi */}
       {editingReport && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-ink/60 backdrop-blur-xs animate-fade-in" onClick={() => setEditingReport(null)}>
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[var(--color-scrim)] animate-fade-in" onClick={() => setEditingReport(null)}>
           <div className="bg-white rounded-2xl shadow-2xl border border-line w-full max-w-lg p-5 flex flex-col gap-4" onClick={(e) => e.stopPropagation()}>
             <div className="flex items-center justify-between pb-2 border-b border-line">
               <h3 className="font-bold text-base text-ink flex items-center gap-2">
@@ -319,7 +319,7 @@ export const ManageInboxSection: React.FC<Props> = ({
 
       {/* Yorum Düzenleme Penceresi */}
       {editingComment && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-ink/60 backdrop-blur-xs animate-fade-in" onClick={() => setEditingComment(null)}>
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[var(--color-scrim)] animate-fade-in" onClick={() => setEditingComment(null)}>
           <div className="bg-white rounded-2xl shadow-2xl border border-line w-full max-w-lg p-5 flex flex-col gap-4" onClick={(e) => e.stopPropagation()}>
             <div className="flex items-center justify-between pb-2 border-b border-line">
               <h3 className="font-bold text-base text-ink flex items-center gap-2">

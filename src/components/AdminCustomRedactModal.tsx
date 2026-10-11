@@ -179,7 +179,7 @@ export const AdminCustomRedactModal: React.FC<AdminCustomRedactModalProps> = ({
   };
 
   return (
-    <div className="ms-overlay fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-ink/80 backdrop-blur-xs overflow-y-auto animate-fadeIn">
+    <div className="ms-overlay fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-[var(--color-scrim)] overflow-y-auto animate-fadeIn">
       <div className="ms-modal-panel bg-white rounded-2xl shadow-2xl max-w-4xl w-full max-h-[92dvh] flex flex-col border border-line overflow-hidden">
         
         {/* Header */}

@@ -37,6 +37,7 @@ import { palettesFor } from '../../utils/palettes';
 import { AvatarCropper } from '../ui/AvatarCropper';
 import { Row, Section, Segmented, Switch } from '../ui/kit';
 import { toast } from '../ui/Toast';
+import { NotesSyncRow } from './NotesSyncRow';
 
 interface Props {
   currentUser: AppUser | null;
@@ -143,7 +144,7 @@ export const ProfileSettingsView: React.FC<Props> = ({ currentUser, isAdmin, que
                 />
               </Row>
               <Row stack title="Palet">
-                <div role="radiogroup" aria-label={`${MODE_LABELS[look.mode]} tema paleti`} className="grid gap-2.5" style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 220px), 1fr))' }}>
+                <div role="radiogroup" aria-label={`${MODE_LABELS[look.mode]} tema paleti`} className="grid gap-2.5" style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 140px), 1fr))' }}>
                   {palettesFor(look.mode).map(({ id: p }) => {
                     const info = PALETTE_INFO[look.mode][p];
                     const on = look.palette === p;
@@ -202,6 +203,7 @@ export const ProfileSettingsView: React.FC<Props> = ({ currentUser, isAdmin, que
           <Section id="hesap" title="Hesap ve veri">
             <div className="ui-group">
               <Row icon={Database} iconBg="#30B0C7" title="Çevrimdışı veritabanı" sub="Soruları, sözlüğü ve kartları cihaza indir" onClick={onOpenOffline} />
+              <NotesSyncRow />
               {isAdmin && <Row icon={ShieldCheck} iconBg="#FF9500" title="Yönetim konsolu" sub="Taslaklar, moderasyon, sistem" onClick={onOpenAdmin} />}
               {currentUser ? (
                 <button type="button" className="ui-row has-icon" onClick={onLogout}>

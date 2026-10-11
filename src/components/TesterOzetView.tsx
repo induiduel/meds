@@ -11,6 +11,7 @@ import {
   Layers,
 } from 'lucide-react';
 import { safeJsonFetch } from '../services/api';
+import { guardedInterval } from '../services/net';
 
 interface TesterOzetItem {
   id: string;
@@ -50,8 +51,7 @@ export function TesterOzetView() {
 
   useEffect(() => {
     fetchItems();
-    const interval = setInterval(fetchItems, 10000); // 10 saniyede bir yeni üretilenleri tazele
-    return () => clearInterval(interval);
+    return guardedInterval(fetchItems, 10000); // yeni üretilenleri tazele (üst üste binmez)
   }, []);
 
   const filteredItems = useMemo<TesterOzetItem[]>(() => {

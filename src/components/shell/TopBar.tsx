@@ -117,7 +117,7 @@ export const TopBar: React.FC<{
           </button>
           <button
             type="button"
-            className="sh-ibtn"
+            className="sh-ibtn sh-top-theme"
             onClick={toggle}
             aria-label={theme === 'dark' ? 'Aydınlık temaya geç' : 'Koyu temaya geç'}
             title={theme === 'dark' ? 'Aydınlık tema' : 'Koyu tema'}
@@ -129,7 +129,7 @@ export const TopBar: React.FC<{
           </button>
           <button
             type="button"
-            className="sh-ibtn relative"
+            className="sh-ibtn relative sh-top-bell"
             onClick={() => setShowNotifModal(true)}
             aria-label={unreadNotifs ? `Bildirimler, ${unreadNotifs} okunmamış` : 'Bildirimler'}
             title="Bildirimler"
@@ -140,7 +140,7 @@ export const TopBar: React.FC<{
           <div className="sh-acct-anchor">
             <button
               type="button"
-              className={`sh-acct-btn ${menu ? 'is-open' : ''}`}
+              className={`sh-acct-btn ${menu ? 'is-open' : ''} ${unreadNotifs ? 'has-unread' : ''}`}
               onClick={() => setMenu((v) => !v)}
               aria-haspopup="dialog"
               aria-expanded={menu}

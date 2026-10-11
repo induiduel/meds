@@ -287,7 +287,7 @@ const StructuredSynthesisRenderer: React.FC<{ text?: string }> = ({ text }) => {
         const dataRows = tableLines.slice(1).filter((r) => !/^\|[\s\-:|]+\|$/.test(r)).map(parseRow);
 
         elements.push(
-          <div key={`table-${i}`} className="my-3 overflow-hidden rounded-xl border border-line bg-white dark:bg-zinc-900 shadow-2xs">
+          <div key={`table-${i}`} className="my-3 overflow-hidden rounded-xl border border-line bg-white shadow-2xs">
             <div className="overflow-x-auto">
               <table className="w-full text-left text-sm sm:text-sm border-collapse">
                 <thead>
@@ -368,8 +368,8 @@ const StructuredSynthesisRenderer: React.FC<{ text?: string }> = ({ text }) => {
           key={`callout-${i}`}
           className={`p-3 sm:p-3.5 my-2 rounded-xl border text-sm sm:text-sm leading-relaxed flex items-start gap-2.5 shadow-2xs ${
             isRed
-              ? 'bg-bad-soft/90 dark:bg-rose-950/30 border-bad/30 dark:border-rose-800 text-bad-text dark:text-rose-200'
-              : 'bg-accent-soft/40 dark:bg-accent-soft/10 border-accent/40 text-ink'
+              ? 'bg-bad-soft/90 border-bad/30 text-bad-text '
+              : 'bg-accent-soft/40 border-accent/40 text-ink'
           }`}
         >
           <span className="text-md select-none shrink-0 mt-0.5" aria-hidden="true">{icon}</span>
@@ -388,7 +388,7 @@ const StructuredSynthesisRenderer: React.FC<{ text?: string }> = ({ text }) => {
       elements.push(
         <div
           key={`subsub-${i}`}
-          className="ml-7 sm:ml-10 my-1 p-2 sm:p-2.5 rounded-lg bg-field/80 dark:bg-zinc-850/60 border-l-2 border-accent/40 border-t border-r border-b border-line-soft/80 text-sm text-ink-3 leading-relaxed flex items-start gap-2.5 shadow-2xs hover:border-accent/60 transition-colors"
+          className="ml-7 sm:ml-10 my-1 p-2 sm:p-2.5 rounded-lg bg-field/80 border-l-2 border-accent/40 border-t border-r border-b border-line-soft/80 text-sm text-ink-3 leading-relaxed flex items-start gap-2.5 shadow-2xs hover:border-accent/60 transition-colors"
         >
           <span className="text-accent text-xs select-none shrink-0 mt-0.5 font-bold">↳</span>
           <div className="min-w-0 flex-1 leading-relaxed">
@@ -406,7 +406,7 @@ const StructuredSynthesisRenderer: React.FC<{ text?: string }> = ({ text }) => {
       elements.push(
         <div
           key={`sub-${i}`}
-          className="ml-3 sm:ml-5 my-1.5 p-2.5 sm:p-3 rounded-xl bg-field/90 dark:bg-zinc-850/80 border-l-3 border-accent border-t border-r border-b border-line-soft text-sm sm:text-base text-ink-2 leading-relaxed flex items-start gap-3 shadow-2xs hover:border-accent transition-all"
+          className="ml-3 sm:ml-5 my-1.5 p-2.5 sm:p-3 rounded-xl bg-field/90 border-l-3 border-accent border-t border-r border-b border-line-soft text-sm sm:text-base text-ink-2 leading-relaxed flex items-start gap-3 shadow-2xs hover:border-accent transition-all"
         >
           <span className="mt-2 w-2 h-2 rounded-sm bg-accent/80 shrink-0 rotate-45" />
           <div className="min-w-0 flex-1 leading-relaxed">
@@ -424,7 +424,7 @@ const StructuredSynthesisRenderer: React.FC<{ text?: string }> = ({ text }) => {
       elements.push(
         <div
           key={`num-${i}`}
-          className="my-1.5 p-3 sm:p-3.5 rounded-xl bg-white dark:bg-zinc-850 border border-line-soft hover:border-accent/40 text-base text-ink leading-relaxed flex items-start gap-3 shadow-2xs transition-all"
+          className="my-1.5 p-3 sm:p-3.5 rounded-xl bg-white border border-line-soft hover:border-accent/40 text-base text-ink leading-relaxed flex items-start gap-3 shadow-2xs transition-all"
         >
           <span className="shrink-0 w-5.5 h-5.5 rounded-lg bg-accent text-white text-xs font-bold flex items-center justify-center mt-0.5 shadow-xs">
             {numMatch[1]}
@@ -444,7 +444,7 @@ const StructuredSynthesisRenderer: React.FC<{ text?: string }> = ({ text }) => {
       elements.push(
         <div
           key={`bullet-${i}`}
-          className="my-2 p-3 sm:p-3.5 rounded-xl bg-white dark:bg-zinc-850 border border-line-soft hover:border-accent/50 text-base sm:text-base text-ink leading-relaxed flex items-start gap-3 shadow-2xs transition-all"
+          className="my-2 p-3 sm:p-3.5 rounded-xl bg-white border border-line-soft hover:border-accent/50 text-base sm:text-base text-ink leading-relaxed flex items-start gap-3 shadow-2xs transition-all"
         >
           <span className="mt-2 w-2.5 h-2.5 rounded-full bg-accent shrink-0 shadow-xs ring-4 ring-accent/15" />
           <div className="min-w-0 flex-1 leading-relaxed">
@@ -498,9 +498,9 @@ export const FlashcardComponent: React.FC<{ card: SlideFlashcard }> = ({ card })
       <div
         className={`w-full grid rounded-2xl transition-all duration-500 ease-out shadow-xs hover:shadow-md min-h-[175px] border ${
           status === 'learned'
-            ? 'border-ok dark:border-emerald-700 bg-ok-soft/20'
+            ? 'border-ok bg-ok-soft/20'
             : status === 'review'
-            ? 'border-warn dark:border-amber-700 bg-warn-soft/20'
+            ? 'border-warn bg-warn-soft/20'
             : 'border-line hover:border-accent/40 bg-canvas'
         }`}
         style={{
@@ -518,8 +518,8 @@ export const FlashcardComponent: React.FC<{ card: SlideFlashcard }> = ({ card })
           }}
         >
           <div className="flex items-start justify-between gap-2 shrink-0">
-            <span className="min-w-0 min-h-6 px-2.5 py-1 rounded-lg text-xs leading-tight font-semibold bg-warn-soft dark:bg-amber-950/60 text-warn dark:text-amber-200 uppercase tracking-[0.04em] inline-flex items-center gap-1.5 border border-warn/80 dark:border-amber-800">
-              <BrainCircuit className="w-3.5 h-3.5 shrink-0 text-warn dark:text-amber-400" />
+            <span className="min-w-0 min-h-6 px-2.5 py-1 rounded-lg text-xs leading-tight font-semibold bg-warn-soft text-warn uppercase tracking-[0.04em] inline-flex items-center gap-1.5 border border-warn/80 ">
+              <BrainCircuit className="w-3.5 h-3.5 shrink-0 text-warn " />
               <span className="min-w-0">{card.category || card.subtopic || 'Klinik Spot'}</span>
             </span>
             <div className="flex items-center gap-1.5">
@@ -546,7 +546,7 @@ export const FlashcardComponent: React.FC<{ card: SlideFlashcard }> = ({ card })
             {card.hint && (
               <div className="mt-2.5">
                 {showHint ? (
-                  <p className="m-0 text-xs text-warn dark:text-amber-200 bg-warn-soft dark:bg-amber-950/50 border border-warn/30 dark:border-amber-800 rounded-xl p-2.5 leading-relaxed shadow-2xs">
+                  <p className="m-0 text-xs text-warn bg-warn-soft border border-warn/30 rounded-xl p-2.5 leading-relaxed shadow-2xs">
                     <strong>İpucu:</strong> {card.hint}
                   </p>
                 ) : (
@@ -585,11 +585,11 @@ export const FlashcardComponent: React.FC<{ card: SlideFlashcard }> = ({ card })
           }}
         >
           <div className="flex items-start justify-between gap-2 shrink-0 select-none">
-            <span className="min-w-0 min-h-6 px-2.5 py-1 rounded-lg text-xs leading-tight font-semibold bg-ok-soft dark:bg-emerald-950/60 text-ok dark:text-emerald-200 uppercase tracking-[0.04em] inline-flex items-center gap-1.5 border border-ok/80 dark:border-emerald-800">
-              <CheckCircle2 className="w-3.5 h-3.5 shrink-0 text-ok dark:text-emerald-400" />
+            <span className="min-w-0 min-h-6 px-2.5 py-1 rounded-lg text-xs leading-tight font-semibold bg-ok-soft text-ok uppercase tracking-[0.04em] inline-flex items-center gap-1.5 border border-ok/80 ">
+              <CheckCircle2 className="w-3.5 h-3.5 shrink-0 text-ok " />
               <span className="min-w-0">Çözüm & Mekanizma</span>
             </span>
-            <span aria-hidden="true" className="shrink-0 w-8 h-8 rounded-full flex items-center justify-center bg-white/80 dark:bg-zinc-800 text-ok dark:text-emerald-400 border border-ok/30 dark:border-emerald-800 shadow-2xs">
+            <span aria-hidden="true" className="shrink-0 w-8 h-8 rounded-full flex items-center justify-center bg-white/80 text-ok border border-ok/30 shadow-2xs">
               <RefreshCw className="w-4 h-4 group-hover:rotate-180 transition-transform duration-500" />
             </span>
           </div>
@@ -607,7 +607,7 @@ export const FlashcardComponent: React.FC<{ card: SlideFlashcard }> = ({ card })
                 className={`px-2.5 py-1 rounded-lg text-2xs font-bold transition-all cursor-pointer flex items-center gap-1 ${
                   status === 'learned'
                     ? 'bg-ok text-white shadow-xs ring-2 ring-ok/30'
-                    : 'bg-ok-soft dark:bg-emerald-950/40 text-ok dark:text-emerald-300 border border-ok/30 dark:border-emerald-800 hover:bg-ok-soft'
+                    : 'bg-ok-soft text-ok border border-ok/30 hover:bg-ok-soft'
                 }`}
               >
                 <Check className="w-3 h-3" />
@@ -619,7 +619,7 @@ export const FlashcardComponent: React.FC<{ card: SlideFlashcard }> = ({ card })
                 className={`px-2.5 py-1 rounded-lg text-2xs font-bold transition-all cursor-pointer flex items-center gap-1 ${
                   status === 'review'
                     ? 'bg-warn text-white shadow-xs ring-2 ring-warn/30'
-                    : 'bg-warn-soft dark:bg-amber-950/40 text-warn dark:text-amber-300 border border-warn/30 dark:border-amber-800 hover:bg-warn-soft'
+                    : 'bg-warn-soft text-warn border border-warn/30 hover:bg-warn-soft'
                 }`}
               >
                 <RotateCcw className="w-3 h-3" />
@@ -645,10 +645,12 @@ export const InteractiveDeckView: React.FC<InteractiveDeckViewProps> = ({ initia
   const [playerViewMode, setPlayerViewMode] = useState<DeckViewMode>('interactive');
   const [adminArchiveFilter, setAdminArchiveFilter] = useState<'new_only' | 'all' | 'legacy_only'>('new_only');
 
+  // URL'deki deste değişince izle: tarayıcının geri tuşu deste kimliğini kaldırınca açık ders de kapanır
+  const prevInitial = useRef(initialDeckId);
   useEffect(() => {
-    if (initialDeckId) {
-      setDeckId(initialDeckId);
-    }
+    if (initialDeckId) setDeckId(initialDeckId);
+    else if (prevInitial.current) setDeckId(null);
+    prevInitial.current = initialDeckId;
   }, [initialDeckId]);
 
   const [progress, setProgress] = useState<DeckProgress>(readProgress);
@@ -661,11 +663,18 @@ export const InteractiveDeckView: React.FC<InteractiveDeckViewProps> = ({ initia
     setDeckLoading(true);
     loadDeck<InteractiveDeck>(deckId).then((d) => {
       if (!alive) return;
-      setActiveDeck(d && Array.isArray(d.slides) && d.slides.length > 0 ? d : null);
+      const ok = d && Array.isArray(d.slides) && d.slides.length > 0 ? d : null;
+      setActiveDeck(ok);
       setDeckLoading(false);
+      // Yüklenemediyse kullanıcı boş ekranda kalmasın: bildir ve kataloğa dön (bağlantı gelince yeniden denenebilir)
+      if (!ok) {
+        toast.error('Ders açılamadı', 'Bağlantıyı kontrol edip yeniden deneyin. Dersi çevrimdışı kullanmak için önce indirin.');
+        setDeckId(null);
+        onDeckChange?.(null);
+      }
     });
     return () => { alive = false; };
-  }, [deckId]);
+  }, [deckId]); // eslint-disable-line react-hooks/exhaustive-deps
 
   // Cümle/Metin odaklama (?highlight=...) kontrolü
   useEffect(() => {
@@ -673,7 +682,8 @@ export const InteractiveDeckView: React.FC<InteractiveDeckViewProps> = ({ initia
       const sp = new URLSearchParams(window.location.search);
       const hl = sp.get('highlight');
       if (hl) {
-        setTimeout(() => triggerDomHighlightAndScroll(hl), 600);
+        const t = window.setTimeout(() => triggerDomHighlightAndScroll(hl), 600);
+        return () => window.clearTimeout(t);
       }
     }
   }, [activeDeck, initialSlideNumber]);
@@ -696,10 +706,15 @@ export const InteractiveDeckView: React.FC<InteractiveDeckViewProps> = ({ initia
 
       {deckId && deckLoading && !activeDeck && (
         <div className="fixed inset-0 z-[60] bg-canvas flex items-center justify-center" role="status" aria-live="polite">
-          <span className="flex items-center gap-3 text-md text-ink-2">
-            <span className="w-5 h-5 rounded-full border-2 border-accent border-t-transparent animate-spin" aria-hidden="true" />
-            Ders açılıyor…
-          </span>
+          <div className="flex flex-col items-center gap-4">
+            <span className="flex items-center gap-3 text-md text-ink-2">
+              <span className="w-5 h-5 rounded-full border-2 border-accent border-t-transparent animate-spin" aria-hidden="true" />
+              Ders açılıyor…
+            </span>
+            <button type="button" className="ui-btn is-sm is-ghost" onClick={() => { setDeckId(null); onDeckChange?.(null); }}>
+              Vazgeç
+            </button>
+          </div>
         </div>
       )}
 
@@ -844,7 +859,7 @@ export const GlobalTopicSearchModal: React.FC<{
   }, [deck, q]);
 
   return (
-    <div className="ms-overlay fixed inset-0 z-[70] bg-[rgba(14,26,38,0.5)] backdrop-blur-xs flex items-center justify-center p-3 sm:p-6" role="dialog" aria-modal="true">
+    <div className="ms-overlay fixed inset-0 z-[70] bg-[var(--color-scrim)] flex items-center justify-center p-3 sm:p-6" role="dialog" aria-modal="true">
       <div className="w-full max-w-2xl bg-white border border-line rounded-2xl shadow-2xl flex flex-col max-h-[85dvh] overflow-hidden animate-in fade-in duration-200">
         {/* Modal Search Header */}
         <div className="p-3.5 sm:p-4 border-b border-line flex items-center gap-2.5">
@@ -966,7 +981,7 @@ export const EnhancedDifferentialTable: React.FC<{
 
     if (isRed) {
       return (
-        <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-md text-xs font-semibold bg-bad/10 text-bad-text dark:text-rose-300 border border-bad/20 shadow-2xs">
+        <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-md text-xs font-semibold bg-bad/10 text-bad-text border border-bad/20 shadow-2xs">
           <span className="w-1.5 h-1.5 rounded-full bg-bad shrink-0" />
           <Rich text={cellText} />
         </span>
@@ -979,7 +994,7 @@ export const EnhancedDifferentialTable: React.FC<{
 
     if (isGreen) {
       return (
-        <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-md text-xs font-medium bg-ok/10 text-ok dark:text-emerald-300 border border-ok/20 shadow-2xs">
+        <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-md text-xs font-medium bg-ok/10 text-ok border border-ok/20 shadow-2xs">
           <span className="w-1.5 h-1.5 rounded-full bg-ok shrink-0" />
           <Rich text={cellText} />
         </span>
@@ -992,7 +1007,7 @@ export const EnhancedDifferentialTable: React.FC<{
 
     if (isAmber) {
       return (
-        <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-md text-xs font-medium bg-warn/10 text-warn dark:text-amber-300 border border-warn/20 shadow-2xs">
+        <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-md text-xs font-medium bg-warn/10 text-warn border border-warn/20 shadow-2xs">
           <span className="w-1.5 h-1.5 rounded-full bg-warn shrink-0" />
           <Rich text={cellText} />
         </span>
@@ -1005,7 +1020,7 @@ export const EnhancedDifferentialTable: React.FC<{
 
     if (isBlue) {
       return (
-        <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-md text-xs font-medium bg-accent/10 text-accent dark:text-blue-300 border border-accent/20 shadow-2xs">
+        <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-md text-xs font-medium bg-accent/10 text-accent border border-accent/20 shadow-2xs">
           <span className="w-1.5 h-1.5 rounded-full bg-accent shrink-0" />
           <Rich text={cellText} />
         </span>
@@ -1137,25 +1152,25 @@ export const KeyBulletsRenderer: React.FC<{
             (/(?:||)/.test(b.title) ||
               /\b(özet|tekrar|sentez|hatırlatma|yaklaşım|prognoz|sonuç)\b/i.test(t));
 
-          let badgeCls = 'bg-ok/10 text-ok dark:text-teal-300 border-ok/20';
-          let borderCls = 'bg-ok-soft/20 dark:bg-teal-950/20 border-line-soft';
+          let badgeCls = 'bg-ok/10 text-ok border-ok/20';
+          let borderCls = 'bg-ok-soft/20 border-line-soft';
           let icon = <BookOpen className="w-3.5 h-3.5 text-ok shrink-0" />;
 
           if (isRed) {
-            badgeCls = 'bg-bad/10 text-bad-text dark:text-rose-300 border-bad/30';
-            borderCls = 'bg-bad-soft/40 dark:bg-rose-950/30 border-bad/20';
+            badgeCls = 'bg-bad/10 text-bad-text border-bad/30';
+            borderCls = 'bg-bad-soft/40 border-bad/20';
             icon = <AlertTriangle className="w-3.5 h-3.5 text-bad-text shrink-0" />;
           } else if (isAmber) {
-            badgeCls = 'bg-warn/10 text-warn dark:text-amber-300 border-warn/30';
-            borderCls = 'bg-warn-soft/40 dark:bg-amber-950/30 border-warn/20';
+            badgeCls = 'bg-warn/10 text-warn border-warn/30';
+            borderCls = 'bg-warn-soft/40 border-warn/20';
             icon = <Lightbulb className="w-3.5 h-3.5 text-warn shrink-0" />;
           } else if (isBlue) {
-            badgeCls = 'bg-accent/10 text-accent dark:text-blue-300 border-accent/30';
-            borderCls = 'bg-accent-soft/40 dark:bg-blue-950/30 border-accent/20';
+            badgeCls = 'bg-accent/10 text-accent border-accent/30';
+            borderCls = 'bg-accent-soft/40 border-accent/20';
             icon = <ArrowLeftRight className="w-3.5 h-3.5 text-accent shrink-0" />;
           } else if (isPurple) {
-            badgeCls = 'bg-ai/10 text-ai dark:text-purple-300 border-ai/30';
-            borderCls = 'bg-ai-soft/40 dark:bg-purple-950/30 border-ai/20';
+            badgeCls = 'bg-ai/10 text-ai border-ai/30';
+            borderCls = 'bg-ai-soft/40 border-ai/20';
             icon = <RotateCcw className="w-3.5 h-3.5 text-ai shrink-0" />;
           }
 
@@ -1165,7 +1180,7 @@ export const KeyBulletsRenderer: React.FC<{
               className={`rounded-xl p-3 sm:p-3.5 border transition-all duration-150 flex items-start gap-3 shadow-2xs ${borderCls}`}
             >
               <div className="mt-0.5 shrink-0 flex flex-col items-center gap-1">
-                <span className="w-6 h-6 rounded-lg bg-white/90 dark:bg-panel shadow-2xs border border-line flex items-center justify-center">
+                <span className="w-6 h-6 rounded-lg bg-white/90 shadow-2xs border border-line flex items-center justify-center">
                   {icon}
                 </span>
                 <span className="text-2xs font-mono font-bold text-ink-3">
@@ -1205,24 +1220,24 @@ export const SpotList: React.FC<{ items: Array<string | any>; title?: string; no
   note,
   compact = false,
 }) => (
-  <section className={`rounded-2xl border-2 border-warn/90 dark:border-amber-700/60 bg-gradient-to-br from-warn-soft/95 via-warn-soft/40 to-warn-soft/60 dark:from-amber-950/40 dark:via-zinc-900 dark:to-orange-950/20 shadow-sm flex flex-col ${compact ? 'p-3 gap-2.5' : 'p-4 sm:p-5 gap-3.5'}`}>
-    <header className="flex items-center gap-2.5 pb-2.5 border-b border-warn/80 dark:border-amber-800/40">
+  <section className={`rounded-2xl border-2 border-warn/90 bg-gradient-to-br from-warn-soft/95 via-warn-soft/40 to-warn-soft/60 shadow-sm flex flex-col ${compact ? 'p-3 gap-2.5' : 'p-4 sm:p-5 gap-3.5'}`}>
+    <header className="flex items-center gap-2.5 pb-2.5 border-b border-warn/80 ">
       <span className="w-8 h-8 rounded-xl bg-gradient-to-br from-warn to-warn text-white flex items-center justify-center shrink-0 shadow-xs" aria-hidden="true">
         <Lightbulb className="w-4.5 h-4.5" />
       </span>
       <div className="min-w-0">
-        <span className="text-xs sm:text-sm font-black uppercase tracking-wider text-warn dark:text-amber-300 block">
+        <span className="text-xs sm:text-sm font-black uppercase tracking-wider text-warn block">
           {title}
         </span>
-        <span className="text-2xs text-warn/80 dark:text-amber-400 font-medium">
+        <span className="text-2xs text-warn/80 font-medium">
           Komite ve kurul sınavlarında doğrudan puan getiren kilit prensipler
         </span>
       </div>
-      <span className="ml-auto font-mono text-xs font-bold text-warn bg-warn/80 dark:bg-amber-900/60 px-2.5 py-0.5 rounded-full border border-warn/30 dark:border-amber-700">
+      <span className="ml-auto font-mono text-xs font-bold text-warn bg-warn/80 px-2.5 py-0.5 rounded-full border border-warn/30 ">
         {items.length} Spot
       </span>
     </header>
-    {note && <p className="m-0 -mt-1 text-sm text-warn/80 dark:text-amber-300/80 font-medium">{note}</p>}
+    {note && <p className="m-0 -mt-1 text-sm text-warn/80 font-medium">{note}</p>}
     <ol className={`list-none m-0 p-0 flex flex-col ${compact ? 'gap-2' : 'gap-2.5'}`}>
       {items.map((p, i) => {
         const isObj = p && typeof p === 'object';
@@ -1241,24 +1256,24 @@ export const SpotList: React.FC<{ items: Array<string | any>; title?: string; no
             key={i}
             className={`rounded-xl transition-all shadow-2xs border-l-4 border-t border-r border-b ${
               isRed
-                ? 'border-l-bad bg-bad-soft/90 dark:bg-red-950/30 border-bad/30 dark:border-red-900/50 text-bad-text dark:text-red-100'
+                ? 'border-l-bad bg-bad-soft/90 border-bad/30 text-bad-text '
                 : isBlue
-                ? 'border-l-accent bg-accent-soft/90 dark:bg-blue-950/30 border-accent/30 dark:border-blue-900/50 text-accent dark:text-blue-100'
-                : 'border-l-warn bg-white dark:bg-zinc-800/90 border-warn/80 dark:border-zinc-700 text-ink'
+                ? 'border-l-accent bg-accent-soft/90 border-accent/30 text-accent '
+                : 'border-l-warn bg-white border-warn/80 text-ink'
             } p-3 sm:p-3.5 text-sm sm:text-base leading-[1.65]`}
           >
             <div className="flex items-center justify-between gap-2 mb-1.5 pb-1 border-b border-inherit/20">
               <span className="inline-flex items-center gap-1.5">
                 {isRed ? (
-                  <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-2xs font-bold bg-bad-soft dark:bg-red-900/60 text-bad-text dark:text-red-200">
+                  <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-2xs font-bold bg-bad-soft text-bad-text ">
                     <AlertCircle className="w-3 h-3" /> {pBadge ? pBadge.replace(/^[🚨]\s*/, '') : 'KRİTİK UYARI'}
                   </span>
                 ) : isBlue ? (
-                  <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-2xs font-bold bg-accent-soft dark:bg-blue-900/60 text-accent dark:text-blue-200">
+                  <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-2xs font-bold bg-accent-soft text-accent ">
                     <HelpCircle className="w-3 h-3" /> {pBadge ? pBadge.replace(/^[❓]\s*/, '') : 'ÇIKMIŞ SORU ODAĞI'}
                   </span>
                 ) : (
-                  <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-2xs font-bold bg-warn-soft dark:bg-amber-950/60 text-warn dark:text-amber-300">
+                  <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-2xs font-bold bg-warn-soft text-warn ">
                     <Lightbulb className="w-3 h-3 text-warn" /> {pBadge ? pBadge.replace(/^[💡]\s*/, '') : 'SINAV SPOTU'}
                   </span>
                 )}
@@ -1277,7 +1292,7 @@ export const SpotList: React.FC<{ items: Array<string | any>; title?: string; no
                 if (isSubBullet) {
                   const cleanText = trimmed.replace(/^[-•*→]\s*/, '');
                   return (
-                    <div key={lIdx} className="ml-3 pl-2.5 py-0.5 border-l-2 border-warn/30 dark:border-amber-700 text-sm flex items-start gap-1.5 text-ink-2">
+                    <div key={lIdx} className="ml-3 pl-2.5 py-0.5 border-l-2 border-warn/30 text-sm flex items-start gap-1.5 text-ink-2">
                       <span className="text-2xs opacity-70 mt-1 select-none">▫</span>
                       <span className="min-w-0 flex-1"><Rich text={cleanText} /></span>
                     </div>
@@ -1505,7 +1520,7 @@ export const AskAi: React.FC<{ deck: InteractiveDeck; slide: SlideItem }> = ({ d
             value={selectedModel}
             disabled={loading}
             onChange={(e) => setSelectedModel(e.target.value)}
-            className="bg-white dark:bg-slate-800 border border-line-2 rounded-md px-2 py-0.5 text-xs font-medium text-ink outline-none cursor-pointer focus:border-accent disabled:opacity-50"
+            className="bg-white border border-line-2 rounded-md px-2 py-0.5 text-xs font-medium text-ink outline-none cursor-pointer focus:border-accent disabled:opacity-50"
           >
             <option value="gemini-3.8-flash">Google Gemini 3.8 Flash (Önerilen)</option>
             <option value="gemini-3.7-flash">Google Gemini 3.7 Flash</option>
@@ -1544,7 +1559,7 @@ export const AskAi: React.FC<{ deck: InteractiveDeck; slide: SlideItem }> = ({ d
             </span>
             {modelUsed && (
               <span
-                className="inline-flex items-center gap-1.5 text-2xs font-medium bg-white/95 dark:bg-slate-800 text-ink-2 px-2.5 py-0.5 rounded-full border border-accent/25 shadow-2xs"
+                className="inline-flex items-center gap-1.5 text-2xs font-medium bg-white/95 text-ink-2 px-2.5 py-0.5 rounded-full border border-accent/25 shadow-2xs"
                 title={`Bu yanıtı üreten yapay zeka: ${modelUsed}`}
               >
                 <Bot className="w-3.5 h-3.5 text-accent shrink-0" />
@@ -1576,7 +1591,7 @@ export const AskAi: React.FC<{ deck: InteractiveDeck; slide: SlideItem }> = ({ d
             <button
               type="button"
               onClick={handleCopy}
-              className="inline-flex items-center gap-1 text-xs text-ink-2 hover:text-ink cursor-pointer px-2 py-0.5 rounded hover:bg-white/60 dark:hover:bg-white/10 transition-colors ml-auto"
+              className="inline-flex items-center gap-1 text-xs text-ink-2 hover:text-ink cursor-pointer px-2 py-0.5 rounded hover:bg-white/60 transition-colors ml-auto"
             >
               {copied ? <Check className="w-3.5 h-3.5 text-ok" /> : <Copy className="w-3.5 h-3.5" />}
               <span>{copied ? 'Kopyalandı' : 'Kopyala'}</span>

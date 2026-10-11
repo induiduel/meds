@@ -382,7 +382,7 @@ export const ContributeModal: React.FC<ContributeModalProps> = ({
 
   return (
     <div
-      className={`ms-overlay fixed inset-0 z-[70] bg-[rgba(14,26,38,0.45)] backdrop-blur-[3px] flex items-end sm:items-center justify-center sm:p-5 ms-fade-in ct-overlay ${closing ? 'is-closing' : ''}`}
+      className={`ms-overlay fixed inset-0 z-[70] bg-[var(--color-scrim)] flex items-end sm:items-center justify-center sm:p-5 ms-fade-in ct-overlay ${closing ? 'is-closing' : ''}`}
       onMouseDown={(e) => e.target === e.currentTarget && !isSubmitting && requestClose()}
     >
       <div

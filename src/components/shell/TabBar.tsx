@@ -1,5 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { ChevronRight, Database, FileDown, LayoutGrid, Moon, ShieldCheck, Sun, SunMedium, Bell } from 'lucide-react';
+import { ChevronRight, Database, FileDown, LayoutGrid, Moon, ShieldCheck, Sun, SunMedium, Bell, Plus } from 'lucide-react';
+import { prefetchRoute } from '../../routePrefetch';
+
+/** Dokunuşta çok kısa titreşim (destekleyen telefonlarda) — uygulama hissi */
+const buzz = () => {
+  try { navigator.vibrate?.(6); } catch { /* yok */ }
+};
 import { linkClick, pathFor, type AppRoute } from '../../router';
 import { MODE_LABELS, type ThemeMode, useAppearance } from '../../utils/appearance';
 import { Segmented } from '../ui/kit';
@@ -11,8 +17,10 @@ import { NotificationHistoryModal } from '../notifications/NotificationHistoryMo
 const MODE_ICONS: Record<ThemeMode, React.ElementType> = { light: Sun, sepia: SunMedium, dark: Moon };
 
 /**
- * v8 alt gezinme (<768px): dört sayfa + "Daha". Etkin sekmenin arkasında tek bir hap kayar.
- * Klavye açıkken gizlenir (html.kb-open). "Daha" ortak Sheet'te: gruplu liste, hızlı tema, araçlar.
+ * v9 alt gezinme (<768px): ekranın altında yüzen "ada". Öğren · Kartlar · [+ Ekle] · Çıkmış · Daha.
+ * Etkin sekmenin simgesi kendi renginde bir hapa oturur (yaylanarak), ortada yükseltilmiş ekle düğmesi.
+ * Dokunuşta kısa titreşim, basılı tutunca sayfanın kodu önden yüklenir. Klavye açıkken gizlenir (html.kb-open).
+ * "Daha" ortak Sheet'te: gruplu liste, hızlı tema, araçlar.
  */
 export const TabBar: React.FC<{
   active: AppRoute;
@@ -32,32 +40,60 @@ export const TabBar: React.FC<{
   }, []);
 
   const look = useAppearance();
-  const idx = TAB_ITEMS.findIndex((t) => t.id === active);
-  const at = idx >= 0 ? idx : active === 'practice' ? -1 : 4;
+  const inMore = !TAB_ITEMS.some((t) => t.id === active) && active !== 'practice';
   useEffect(() => setMore(false), [active]);
 
   const go = (r: AppRoute) => {
     setMore(false);
     onGo(r);
   };
+  const [addTab, learnTab, cardsTab, pastTab] = TAB_ITEMS;
+  const tabLink = ({ id, short, label, icon: Icon, tint }: (typeof TAB_ITEMS)[number]) => {
+    const on = active === id;
+    return (
+      <a
+        key={id}
+        href={pathFor(id)}
+        onClick={linkClick(() => { if (!on) buzz(); go(id); })}
+        onPointerDown={() => prefetchRoute(id)}
+        aria-current={on ? 'page' : undefined}
+        className="sh-tab"
+        style={{ ['--tab-c' as string]: tint }}
+      >
+        <span className="sh-tab-pill"><Icon strokeWidth={on ? 2.3 : 1.9} /></span>
+        <span className="sh-tab-l">{short || label}</span>
+      </a>
+    );
+  };
 
   return (
     <>
       <nav aria-label="Alt gezinme" className="sh-tabs ms-hide-on-kb print:hidden">
         <div className="sh-tabs-in">
-          <span className="sh-tabs-ind" aria-hidden="true" style={{ transform: `translateX(${Math.max(0, at) * 100}%)`, opacity: at < 0 ? 0 : 1 }} />
-          {TAB_ITEMS.map(({ id, short, label, icon: Icon }) => {
-            const on = active === id;
-            return (
-              <a key={id} href={pathFor(id)} onClick={linkClick(() => go(id))} aria-current={on ? 'page' : undefined} className="sh-tab">
-                <Icon strokeWidth={on ? 2.3 : 1.9} />
-                <span>{short || label}</span>
-              </a>
-            );
-          })}
-          <button type="button" className="sh-tab" onClick={() => setMore(true)} aria-haspopup="dialog" aria-expanded={more} aria-current={at === 4 ? 'page' : undefined}>
-            <LayoutGrid strokeWidth={at === 4 ? 2.3 : 1.9} />
-            <span>Daha</span>
+          {[learnTab, cardsTab].map((t) => tabLink(t))}
+          {/* Ortadaki birincil eylem: soru ekle (yükseltilmiş yuvarlak düğme) */}
+          <a
+            href={pathFor(addTab.id)}
+            onClick={linkClick(() => { buzz(); go(addTab.id); })}
+            aria-current={active === addTab.id ? 'page' : undefined}
+            className="sh-tab-fab"
+            aria-label={addTab.label}
+          >
+            <span className="sh-tab-fab-in"><Plus strokeWidth={2.6} /></span>
+            <span className="sh-tab-fab-l">{addTab.short || addTab.label}</span>
+          </a>
+          {tabLink(pastTab)}
+          <button
+            type="button"
+            className="sh-tab"
+            onClick={() => { buzz(); setMore(true); }}
+            aria-haspopup="dialog"
+            aria-expanded={more}
+            aria-current={inMore ? 'page' : undefined}
+            style={{ ['--tab-c' as string]: 'var(--color-ink-2)' }}
+          >
+            <span className="sh-tab-pill"><LayoutGrid strokeWidth={inMore ? 2.3 : 1.9} />{unreadNotifs > 0 && <i className="sh-tab-dot" aria-hidden />}</span>
+            <span className="sh-tab-l">Daha</span>
           </button>
         </div>
       </nav>

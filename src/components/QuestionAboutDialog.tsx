@@ -167,7 +167,7 @@ export const QuestionAboutDialog: React.FC<Props> = ({
     >
       {/* Durum Bildirimleri (Karantina, Eski sürüm, Faz 14 vb.) */}
       {question?.isQuarantined && (
-        <div className="p-3 bg-bad/10 border border-bad/30 rounded-xl text-sm text-bad-text dark:text-red-400 flex items-start gap-2.5 mb-1">
+        <div className="p-3 bg-bad/10 border border-bad/30 rounded-xl text-sm text-bad-text flex items-start gap-2.5 mb-1">
           <ShieldAlert className="w-4 h-4 shrink-0 text-bad-text mt-0.5" />
           <div className="flex-1 min-w-0">
             <b>Karantina Kaydı:</b> Bu soru sistem tarafından karantinaya alınmıştır.
@@ -224,7 +224,7 @@ export const QuestionAboutDialog: React.FC<Props> = ({
               Resmi Fakülte Müfredatı & Öğrenim Kazanımı
             </H>
             {(question.batch !== undefined || question.questionRange) && (
-              <span className="text-2xs font-semibold text-ai bg-ai-soft dark:bg-purple-900/40 px-2 py-0.5 rounded-full border border-ai/40">
+              <span className="text-2xs font-semibold text-ai bg-ai-soft px-2 py-0.5 rounded-full border border-ai/40">
                 {[question.batch !== undefined ? `Batch ${question.batch}` : null, question.questionRange ? `Sıra: ${question.questionRange}` : null].filter(Boolean).join(' · ')}
               </span>
             )}
@@ -233,7 +233,7 @@ export const QuestionAboutDialog: React.FC<Props> = ({
           {question.notebooklm_verisi?.kazanim && (
             <div className="flex flex-col gap-1">
               <span className="text-2xs font-bold uppercase tracking-wider text-ai">Ders Hedefi & Öğrenim Kazanımı</span>
-              <p className="m-0 text-sm font-medium text-ink leading-relaxed bg-white/70 dark:bg-card/70 p-2.5 rounded-lg border border-ai/50">
+              <p className="m-0 text-sm font-medium text-ink leading-relaxed bg-white/70 p-2.5 rounded-lg border border-ai/50">
                 {question.notebooklm_verisi.kazanim}
               </p>
             </div>
@@ -242,25 +242,25 @@ export const QuestionAboutDialog: React.FC<Props> = ({
           {question.notebooklm_verisi && (
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
               {question.notebooklm_verisi.mufredat && (
-                <div className="flex items-center gap-1.5 p-2 rounded-lg bg-white/50 dark:bg-card/50 border border-border/60">
+                <div className="flex items-center gap-1.5 p-2 rounded-lg bg-white/50 border border-border/60">
                   <span className="text-ink-3">Müfredat:</span>
                   <span className="font-semibold text-ink">{question.notebooklm_verisi.mufredat}</span>
                 </div>
               )}
               {question.notebooklm_verisi.kurul && (
-                <div className="flex items-center gap-1.5 p-2 rounded-lg bg-white/50 dark:bg-card/50 border border-border/60">
+                <div className="flex items-center gap-1.5 p-2 rounded-lg bg-white/50 border border-border/60">
                   <span className="text-ink-3">Kurul:</span>
                   <span className="font-semibold text-ink">{question.notebooklm_verisi.kurul}</span>
                 </div>
               )}
               {question.notebooklm_verisi.ders && (
-                <div className="flex items-center gap-1.5 p-2 rounded-lg bg-white/50 dark:bg-card/50 border border-border/60">
+                <div className="flex items-center gap-1.5 p-2 rounded-lg bg-white/50 border border-border/60">
                   <span className="text-ink-3">Ders:</span>
                   <span className="font-semibold text-ink">{question.notebooklm_verisi.ders}</span>
                 </div>
               )}
               {question.notebooklm_verisi.konu && (
-                <div className="flex items-center gap-1.5 p-2 rounded-lg bg-white/50 dark:bg-card/50 border border-border/60">
+                <div className="flex items-center gap-1.5 p-2 rounded-lg bg-white/50 border border-border/60">
                   <span className="text-ink-3">Konu:</span>
                   <span className="font-semibold text-ink">{question.notebooklm_verisi.konu}</span>
                 </div>

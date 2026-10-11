@@ -137,7 +137,7 @@ export const StudyHub: React.FC<StudyHubProps> = ({
                 })}
               />
               <button type="button" onClick={startQuick} disabled={bank.length === 0} className="ui-btn is-primary st-quick" title="Karışık 20 soruluk hızlı test">
-                <Zap /> <span className="st-tab-l">Hızlı test</span>
+                <Zap /> <span className="st-tab-l">Hızlı<span className="st-hide-xs"> test</span></span>
               </button>
             </div>
           </div>

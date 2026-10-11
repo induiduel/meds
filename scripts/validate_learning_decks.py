@@ -79,13 +79,17 @@ def check_deck(d, out):
                 add('UYARI', 'soru-cevap-eski', n, f'correctAnswer eski biçimde ({ans[:20]!r}); yeni içerikte yalnız harf (A-E) kullanın')
             else:
                 add('HATA', 'soru-cevap', n, f'correctAnswer tek harf (A-E) olmalı; şu an: {ans!r}')
-        for e in s.get('interactiveElements') or []:
+        # Ekranla aynı kaynak sırası (lesson/lessonModel.ts buildSteps): interactiveElements > elements > interactiveElement
+        shown = s.get('interactiveElements') or s.get('elements') or ([s['interactiveElement']] if isinstance(s.get('interactiveElement'), dict) else [])
+        for e in shown:
+            if not isinstance(e, dict) or not e.get('type'):
+                continue
             t = e.get('type')
             if t not in TYPES:
                 add('HATA', 'tur', n, f'bilinmeyen etkileşim türü: {t}')
                 continue
             if t == 'micro_quiz':
-                opts = e.get('microQuizOptions') or []
+                opts = e.get('microQuizOptions') or e.get('options') or []
                 if not (e.get('question') or e.get('sentence')) or len(opts) < 2:
                     add('HATA', 'mini-soru', n, 'question ve en az 2 microQuizOptions gerekli')
                 if sum(1 for o in opts if o.get('isCorrect')) != 1:
@@ -93,10 +97,11 @@ def check_deck(d, out):
                 if any(not o.get('explanation') for o in opts):
                     add('UYARI', 'mini-soru-aciklama', n, 'her şıkta explanation olmalı (öğrenci tüm şıkları açıp okuyabiliyor)')
             elif t == 'branching_logic':
-                opts = e.get('options') or []
-                if not e.get('scenario') or len(opts) < 2 or sum(1 for o in opts if o.get('isCorrect')) != 1:
-                    add('HATA', 'klinik-karar', n, 'scenario, ≥2 options ve tek isCorrect gerekli')
-                if any(not o.get('feedback') for o in opts):
+                # Ekran options | choices | branchingOptions okur (LessonBlocks IxBody)
+                opts = next((x for x in (e.get('options'), e.get('choices'), e.get('branchingOptions')) if isinstance(x, list) and x), [])
+                if not e.get('scenario') or len(opts) < 2 or sum(1 for o in opts if o.get('isCorrect') or o.get('correct')) != 1:
+                    add('HATA', 'klinik-karar', n, 'scenario, ≥2 seçenek (options/choices) ve tek isCorrect gerekli')
+                if any(not (o.get('feedback') or o.get('explanation')) for o in opts):
                     add('UYARI', 'klinik-karar-geri', n, 'her seçenekte feedback olmalı')
             elif t == 'cloze_masking':
                 sen, term = e.get('sentence', ''), e.get('maskedTerm', '')

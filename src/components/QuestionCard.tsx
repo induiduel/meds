@@ -976,8 +976,8 @@ const QuestionCardComponent: React.FC<QuestionCardProps> = ({
       )}
 
       {showReportModal && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-xs animate-in fade-in duration-200">
-          <div className="bg-white dark:bg-[#12161f] border border-line rounded-2xl w-full max-w-lg shadow-xl overflow-hidden flex flex-col max-h-[90vh]">
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[var(--color-scrim)] animate-in fade-in duration-200">
+          <div className="bg-white border border-line rounded-2xl w-full max-w-lg shadow-xl overflow-hidden flex flex-col max-h-[90vh]">
             <div className="flex items-center justify-between px-6 py-4 border-b border-line bg-canvas">
               <div className="flex items-center gap-2">
                 <AlertCircle className="w-5 h-5 text-warn" />

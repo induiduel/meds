@@ -18,7 +18,8 @@ const plain = (t: string) => t.replace(/^#{1,4}\s+|^-\s+|^\d+[.)]\s+|^(Not|Sına
 /**
  * v8 not defteri: ana-ayrıntı. Solda arama, ders ve etiket süzgeçli liste; sağda biçimli düzenleyici
  * (araç çubuğu, önizleme), etiket girişi, otomatik kayıt durumu. Telefonda liste → tam ekran düzenleyici.
- * Silme iki adımlıdır (tarayıcı onay penceresi yok). Notlar yalnız bu cihazda saklanır.
+ * Silme iki adımlıdır (tarayıcı onay penceresi yok). Notlar cihazda tutulur ve sunucuya yedeklenir
+ * (services/notesSync: eşitleme kodu ile cihazlar arası aynı defter).
  */
 export const NotesView: React.FC<NotesViewProps> = ({ disciplines }) => {
   const [notes, setNotes] = useState<StudyNote[]>(getNotes);
@@ -38,11 +39,21 @@ export const NotesView: React.FC<NotesViewProps> = ({ disciplines }) => {
     setSave('saving');
     window.clearTimeout(saveTimer.current);
     saveTimer.current = window.setTimeout(() => {
+      saveTimer.current = undefined;
       saveNotes(next);
       setSave('saved');
     }, 400);
   };
   useEffect(() => () => window.clearTimeout(saveTimer.current), []);
+  // Arka plan eşitlemesi (notesSync) başka cihazdan gelen notları yazınca listeyi tazele
+  useEffect(() => {
+    const on = () => {
+      if (saveTimer.current) return; // kullanıcı yazarken ekranı ezme
+      setNotes(getNotes());
+    };
+    window.addEventListener('medsoru:notes-synced', on);
+    return () => window.removeEventListener('medsoru:notes-synced', on);
+  }, []);
   useEffect(() => {
     setConfirmDel(false);
     setMode('write');

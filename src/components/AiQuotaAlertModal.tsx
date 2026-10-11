@@ -95,7 +95,7 @@ export const AiQuotaAlertModal: React.FC<AiQuotaAlertModalProps> = ({
   };
 
   return (
-    <div className="ms-overlay fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-5 bg-black/60 backdrop-blur-sm animate-in fade-in duration-200">
+    <div className="ms-overlay fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-5 bg-[var(--color-scrim)] animate-in fade-in duration-200">
       <div 
         role="dialog"
         aria-labelledby="ai-quota-title"

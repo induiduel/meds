@@ -1,0 +1,42 @@
+/* =============================================================================
+ * MedSoru · Etkileşim hareket katmanı (en son yüklenir)
+ * Her dokunulabilir öğe basınca hafifçe çöker, bırakınca yaylanır; odak halkası yumuşak belirir;
+ * açılır/kapanır içerikler ve listeler kısa bir giriş hareketiyle gelir.
+ *  - `scale` özelliği kullanılır (transform'dan bağımsız) → bileşenlerin kendi translate/rotate'i bozulmaz.
+ *  - Tüm seçiciler :where() içinde → özgüllük 0; bileşenlerin kendi geçişleri her zaman kazanır.
+ *    Kendi :active hareketi olan bileşenler (.ui-btn, .ls-btn …) hariç tutulur.
+ *  - prefers-reduced-motion: tümü kapanır.
+ * ============================================================================= */
+:where(button, [role="button"], [role="tab"], [role="radio"], [role="switch"], [role="menuitem"], [role="menuitemcheckbox"], summary, a.ms-btn, label.ms-btn, .ms-chip, .ms-fchip):where(:not(:disabled, [aria-disabled="true"], .ui-btn, .ls-btn, .ls-tt, .ui-choice, .ct-type, .ui-row, .ui-switch, .no-press, .sh-tab, .ms-fab)) {
+  transition-property: var(--mo-props, background-color, border-color, color, box-shadow, opacity), scale;
+  transition-duration: 160ms, 160ms, 160ms, 160ms, 160ms, 220ms;
+  transition-timing-function: var(--mo-ease, cubic-bezier(.22, 1, .36, 1));
+}
+:where(button, [role="button"], [role="tab"], [role="radio"], [role="menuitem"], [role="menuitemcheckbox"], summary, a.ms-btn, label.ms-btn, .ms-chip, .ms-fchip):where(:not(:disabled, [aria-disabled="true"], .ui-btn, .ls-btn, .ls-tt, .ui-choice, .ct-type, .ui-row, .ui-switch, .no-press, .sh-tab, .ms-fab)):where(:active) {
+  scale: .97;
+  transition-duration: 60ms;
+}
+/* Geniş satırlar ve kartlar: çok hafif çökme */
+:where(.ui-row, button.ui-row, a.ui-row, .ct-row-main, .lh-card, .qk[role="button"]):active { scale: .995; }
+
+/* Odak halkası yumuşak büyür (yalnız klavye) */
+:where(a, button, input, select, textarea, summary, [tabindex]):focus-visible { animation: mo-focus 260ms var(--mo-ease, ease) both; }
+@keyframes mo-focus { from { outline-offset: 5px; outline-color: transparent; } to { outline-offset: 2px; } }
+
+/* <details> akordiyonlar: içerik kayarak açılır */
+details[open] > :not(summary) { animation: mo-reveal 260ms var(--mo-ease, ease) both; }
+@keyframes mo-reveal { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: none; } }
+
+/* Seçim kutuları: işaretlenince kısa sıçrama */
+input[type="checkbox"]:checked, input[type="radio"]:checked { animation: mo-check 240ms var(--mo-spring, ease) both; }
+@keyframes mo-check { 0% { scale: .8; } 60% { scale: 1.12; } 100% { scale: 1; } }
+
+/* Yüklenirken nabız (aria-busy olan bölgeler) */
+[aria-busy="true"] { transition: opacity 200ms; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scale: none !important; }
+  :where(a, button, input, select, textarea, summary, [tabindex]):focus-visible,
+  details[open] > :not(summary),
+  input[type="checkbox"]:checked, input[type="radio"]:checked { animation: none !important; }
+}

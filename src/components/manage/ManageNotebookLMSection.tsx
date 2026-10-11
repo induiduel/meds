@@ -27,6 +27,16 @@ import {
 } from 'lucide-react';
 import { toast } from '../ui/Toast';
 import { FlatfileDataOnboarding } from './FlatfileDataOnboarding';
+import { getCustomApiUrl } from '../../services/api';
+import { ADMIN_EMAIL } from '../../services/auth';
+/** NotebookLM uçları: Ayarlar'daki/canlı API tabanını kullanır ve yönetici başlığını ekler (ham fetch ikisini de atlıyordu). */
+const nlmFetch = (url: string, init: RequestInit = {}) => {
+  const base = (getCustomApiUrl() || '').replace(/\/$/, '');
+  const headers = new Headers(init.headers);
+  headers.set('x-admin-email', ADMIN_EMAIL);
+  return fetch(`${base}${url}`, { ...init, headers });
+};
+
 
 export interface NotebookLMItem {
   id: string;
@@ -179,7 +189,7 @@ export const ManageNotebookLMSection: React.FC = () => {
     meta: { title: string; count: number; validCount: number }
   ) => {
     try {
-      const res = await fetch('/api/notebooklm/manage/stage', {
+      const res = await nlmFetch('/api/notebooklm/manage/stage', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -282,7 +292,7 @@ export const ManageNotebookLMSection: React.FC = () => {
   const fetchItems = async () => {
     setLoading(true);
     try {
-      const res = await fetch('/api/notebooklm/manage/contributions');
+      const res = await nlmFetch('/api/notebooklm/manage/contributions');
       const data = await res.json();
       setItems(data.contributions || []);
     } catch (err: any) {
@@ -358,7 +368,7 @@ export const ManageNotebookLMSection: React.FC = () => {
     }
     setSubmitting(true);
     try {
-      const res = await fetch('/api/notebooklm/manage/stage', {
+      const res = await nlmFetch('/api/notebooklm/manage/stage', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -391,7 +401,7 @@ export const ManageNotebookLMSection: React.FC = () => {
   // Activate / Choose alternative
   const handleActivate = async (item: NotebookLMItem) => {
     try {
-      const res = await fetch(`/api/notebooklm/manage/activate/${item.id}`, { method: 'POST' });
+      const res = await nlmFetch(`/api/notebooklm/manage/activate/${item.id}`, { method: 'POST' });
       const data = await res.json();
       if (data.success) {
         toast.success(data.message);
@@ -407,7 +417,7 @@ export const ManageNotebookLMSection: React.FC = () => {
   // Deactivate / Rollback to original
   const handleDeactivate = async (item: NotebookLMItem) => {
     try {
-      const res = await fetch(`/api/notebooklm/manage/deactivate/${item.id}`, { method: 'POST' });
+      const res = await nlmFetch(`/api/notebooklm/manage/deactivate/${item.id}`, { method: 'POST' });
       const data = await res.json();
       if (data.success) {
         toast.success(data.message);
@@ -424,7 +434,7 @@ export const ManageNotebookLMSection: React.FC = () => {
   const handleDelete = async (item: NotebookLMItem) => {
     if (!(await confirmText(`"${item.title}" kaydını silmek istediğinize emin misiniz?`))) return;
     try {
-      const res = await fetch(`/api/notebooklm/manage/contribution/${item.id}`, { method: 'DELETE' });
+      const res = await nlmFetch(`/api/notebooklm/manage/contribution/${item.id}`, { method: 'DELETE' });
       const data = await res.json();
       if (data.success) {
         toast.success(data.message);
@@ -442,7 +452,7 @@ export const ManageNotebookLMSection: React.FC = () => {
     if (!editingItem) return;
     try {
       const parsed = JSON.parse(editJsonText);
-      const res = await fetch(`/api/notebooklm/manage/contribution/${editingItem.id}`, {
+      const res = await nlmFetch(`/api/notebooklm/manage/contribution/${editingItem.id}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ proposedData: parsed })
@@ -539,7 +549,7 @@ export const ManageNotebookLMSection: React.FC = () => {
       </div>
 
       {/* Peace of Mind Callout */}
-      <div className="flex items-start gap-3 p-4 bg-ok/5 border border-ok/20 rounded-xl text-xs text-ok dark:text-emerald-300">
+      <div className="flex items-start gap-3 p-4 bg-ok/5 border border-ok/20 rounded-xl text-xs text-ok ">
         <CheckCircle2 className="w-4 h-4 text-ok shrink-0 mt-0.5" />
         <div>
           <strong className="font-semibold">Sıfır Çakışma ve Güvenli Alternatif Garantisi:</strong> Yüklediğiniz hiçbir dosya veya JSON mevcut veritabanınızın üzerine doğrudan yazılmaz. İlk aşamada <em>"Alternatif"</em> olarak depolanır; siz yan yana inceleyip <em>"Tercih Et"</em> butonuna basana kadar ana sistem korunur. Dilediğiniz an tek tıkla orijinal veriye geri dönebilirsiniz.
@@ -756,7 +766,7 @@ export const ManageNotebookLMSection: React.FC = () => {
 
       {/* Upload & Staging Modal */}
       {showUploadModal && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-xs">
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[var(--color-scrim)]">
           <div className="bg-card border border-border rounded-2xl w-full max-w-2xl max-h-[90vh] flex flex-col shadow-2xl overflow-hidden animate-in fade-in zoom-in-95 duration-150">
             <div className="flex items-center justify-between p-4 border-b border-border bg-surface-1">
               <div className="flex items-center gap-2">
@@ -793,17 +803,17 @@ export const ManageNotebookLMSection: React.FC = () => {
               {uploadedFileName ? (
                 <div className="flex items-center justify-between p-3.5 bg-ok/10 border border-ok/25 rounded-xl transition-all">
                   <div className="flex items-center gap-3 min-w-0">
-                    <div className="p-2.5 rounded-lg bg-ok/20 text-ok dark:text-emerald-400 shrink-0">
+                    <div className="p-2.5 rounded-lg bg-ok/20 text-ok shrink-0">
                       <FileText className="w-5 h-5" />
                     </div>
                     <div className="min-w-0">
-                      <div className="text-xs font-semibold text-ok dark:text-emerald-100 truncate flex items-center gap-1.5">
+                      <div className="text-xs font-semibold text-ok truncate flex items-center gap-1.5">
                         <span>{uploadedFileName}</span>
-                        <span className="text-2xs px-1.5 py-0.5 rounded bg-ok/20 text-ok dark:text-emerald-300 font-mono">
+                        <span className="text-2xs px-1.5 py-0.5 rounded bg-ok/20 text-ok font-mono">
                           {uploadedFileSize}
                         </span>
                       </div>
-                      <div className="text-2xs text-ok dark:text-emerald-400 mt-0.5">
+                      <div className="text-2xs text-ok mt-0.5">
                         Dosya içeriği başarıyla okundu ve aşağıdaki metin alanına aktarıldı.
                       </div>
                     </div>
@@ -946,7 +956,7 @@ export const ManageNotebookLMSection: React.FC = () => {
 
       {/* Flatfile Data Onboarding Full Modal */}
       {showOnboardingModal && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/75 backdrop-blur-xs">
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-[var(--color-scrim)]">
           <div className="w-full max-w-6xl max-h-[94vh] h-[850px] flex flex-col">
             <FlatfileDataOnboarding
               targetMode="notebooklm_alternative"
@@ -982,7 +992,7 @@ export const ManageNotebookLMSection: React.FC = () => {
           String(origQ.correctAnswer).toUpperCase() !== String(propQ.correctAnswer).toUpperCase();
 
         return (
-          <div className="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/70 backdrop-blur-xs">
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-[var(--color-scrim)]">
             <div className="bg-card border border-border rounded-2xl w-full max-w-6xl max-h-[92vh] flex flex-col shadow-2xl overflow-hidden">
               {/* Modal Header */}
               <div className="flex flex-wrap items-center justify-between p-3.5 sm:p-4 border-b border-border bg-surface-1 gap-2">
@@ -1095,7 +1105,7 @@ export const ManageNotebookLMSection: React.FC = () => {
                             isCur
                               ? 'bg-primary text-white font-bold'
                               : isNew
-                                ? 'bg-ok/10 border border-ok/30 text-ok dark:text-emerald-300'
+                                ? 'bg-ok/10 border border-ok/30 text-ok '
                                 : 'bg-card border border-border text-ink hover:border-primary/40'
                           }`}
                           title={`Soru ${idx + 1} (${isNew ? 'Yeni Eklenecek Soru' : q.id || 'Mevcut'})`}
@@ -1150,7 +1160,7 @@ export const ManageNotebookLMSection: React.FC = () => {
                   <div className="flex flex-col gap-3">
                     {/* Change alert banner */}
                     {answerChanged && (
-                      <div className="flex items-center gap-2 p-3 bg-warn/10 border border-warn/30 rounded-xl text-warn dark:text-amber-300 text-xs font-medium">
+                      <div className="flex items-center gap-2 p-3 bg-warn/10 border border-warn/30 rounded-xl text-warn text-xs font-medium">
                         <AlertTriangle className="w-4 h-4 shrink-0 text-warn" />
                         <span>
                           <strong>Cevap Anahtarı Değişikliği:</strong> Orijinal soru cevabı{' '}
@@ -1227,7 +1237,7 @@ export const ManageNotebookLMSection: React.FC = () => {
                                         key={opt.key}
                                         className={`flex items-start gap-2 p-2 rounded-lg text-xs transition border ${
                                           isCor
-                                            ? 'bg-ok/10 border-ok/40 text-ok dark:text-emerald-300 font-semibold'
+                                            ? 'bg-ok/10 border-ok/40 text-ok font-semibold'
                                             : 'bg-card border-border text-ink'
                                         }`}
                                       >
@@ -1240,7 +1250,7 @@ export const ManageNotebookLMSection: React.FC = () => {
                                         </span>
                                         <span className="flex-1 leading-snug pt-0.5">{opt.text}</span>
                                         {isCor && (
-                                          <span className="text-2xs px-1.5 py-0.5 rounded bg-ok/20 text-ok dark:text-emerald-300 shrink-0 font-bold">
+                                          <span className="text-2xs px-1.5 py-0.5 rounded bg-ok/20 text-ok shrink-0 font-bold">
                                             ✓ Doğru
                                           </span>
                                         )}
@@ -1294,7 +1304,7 @@ export const ManageNotebookLMSection: React.FC = () => {
                           </>
                         ) : (
                           <div className="p-8 text-center text-xs text-ink-3 flex flex-col items-center justify-center gap-2.5 bg-card/60 rounded-xl border border-dashed border-border/80 my-auto py-12">
-                            <div className="p-2.5 rounded-full bg-ok/10 text-ok dark:text-emerald-400">
+                            <div className="p-2.5 rounded-full bg-ok/10 text-ok ">
                               <Plus className="w-5 h-5" />
                             </div>
                             <div className="font-bold text-ink text-sm">Bu soru veritabanında henüz mevcut değildir.</div>
@@ -1331,7 +1341,7 @@ export const ManageNotebookLMSection: React.FC = () => {
                         {/* NotebookLM / Fakülte Müfredat Kazanımı */}
                         {propQ.notebooklm_verisi && (
                           <div className="p-3 bg-ai/10 border border-ai/20 rounded-lg flex flex-col gap-1.5">
-                            <div className="text-2xs font-bold text-ai dark:text-purple-400 uppercase tracking-wider flex items-center gap-1.5">
+                            <div className="text-2xs font-bold text-ai uppercase tracking-wider flex items-center gap-1.5">
                               <GraduationCap className="w-3.5 h-3.5" />
                               Fakülte Müfredat Kazanımı & Künye
                             </div>
@@ -1405,7 +1415,7 @@ export const ManageNotebookLMSection: React.FC = () => {
                                     key={opt.key}
                                     className={`flex items-start gap-2 p-2 rounded-lg text-xs transition border ${
                                       isCor
-                                        ? 'bg-ok/10 border-ok text-ok dark:text-emerald-300 font-semibold shadow-2xs'
+                                        ? 'bg-ok/10 border-ok text-ok font-semibold shadow-2xs'
                                         : 'bg-card border-border text-ink'
                                     }`}
                                   >
@@ -1418,7 +1428,7 @@ export const ManageNotebookLMSection: React.FC = () => {
                                     </span>
                                     <span className="flex-1 leading-snug pt-0.5">{opt.text}</span>
                                     {isCor && (
-                                      <span className="text-2xs px-1.5 py-0.5 rounded bg-ok/20 text-ok dark:text-emerald-300 shrink-0 font-bold">
+                                      <span className="text-2xs px-1.5 py-0.5 rounded bg-ok/20 text-ok shrink-0 font-bold">
                                         ✓ Doğru Seçenek ({opt.key})
                                       </span>
                                     )}
@@ -1451,7 +1461,7 @@ export const ManageNotebookLMSection: React.FC = () => {
                               {typeof propQ.sik_analizi === 'object' ? (
                                 Object.entries(propQ.sik_analizi).map(([k, val]) => (
                                   <div key={k} className="text-xs border-b border-border/50 pb-1 last:border-none">
-                                    <strong className="text-ok dark:text-emerald-400">{k})</strong> {String(val)}
+                                    <strong className="text-ok ">{k})</strong> {String(val)}
                                   </div>
                                 ))
                               ) : (
@@ -1539,7 +1549,7 @@ export const ManageNotebookLMSection: React.FC = () => {
 
       {/* Edit Modal */}
       {editingItem && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-xs">
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[var(--color-scrim)]">
           <div className="bg-card border border-border rounded-2xl w-full max-w-2xl max-h-[90vh] flex flex-col shadow-2xl overflow-hidden">
             <div className="flex items-center justify-between p-4 border-b border-border bg-surface-1">
               <div className="flex items-center gap-2">

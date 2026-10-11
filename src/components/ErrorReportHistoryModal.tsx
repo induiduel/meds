@@ -148,7 +148,7 @@ export const ErrorReportHistoryModal: React.FC<ErrorReportHistoryModalProps> = (
 
   return (
     <div
-      className="ms-overlay fixed inset-0 z-50 flex items-center justify-center p-4 bg-ink/60 backdrop-blur-xs animate-fadeIn"
+      className="ms-overlay fixed inset-0 z-50 flex items-center justify-center p-4 bg-[var(--color-scrim)] animate-fadeIn"
       onClick={onClose}
     >
       <div

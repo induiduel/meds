@@ -626,7 +626,7 @@ export const DraftStudio: React.FC<Props> = ({ adminEmail, committeeId, committe
     const loadingCount = results.filter(([, r]) => r === 'loading').length;
     const okCount = results.filter(([, r]) => r !== 'loading' && r.ok).length;
     return (
-      <div className="ms-overlay fixed inset-0 z-[70] bg-[rgba(14,26,38,0.45)] flex items-center justify-center p-3" onMouseDown={(e) => e.target === e.currentTarget && !aiSaving && setAiFor(null)}>
+      <div className="ms-overlay fixed inset-0 z-[70] bg-[var(--color-scrim)] flex items-center justify-center p-3" onMouseDown={(e) => e.target === e.currentTarget && !aiSaving && setAiFor(null)}>
         <div role="dialog" aria-modal="true" aria-label="AI ile dönüştür" className="ms-modal-panel bg-white rounded-2xl shadow-xl w-full max-w-[1180px] max-h-[92dvh] flex flex-col overflow-hidden">
           <div className="flex items-center gap-3 px-5 py-3.5 border-b border-line">
             <Bot className="w-5 h-5 text-accent" />
@@ -1814,7 +1814,7 @@ export const DraftStudio: React.FC<Props> = ({ adminEmail, committeeId, committe
         {/* Sağ: düzenleyici (geniş ekranda sabit, dar ekranda çekmece) */}
         {(sel && (selCand || selFrag || selGroup)) ? (
           <>
-            {inspectorOpen && <button type="button" aria-label="Düzenleyiciyi kapat" onClick={() => setInspectorOpen(false)} className="xl:hidden ms-fade-in fixed inset-0 z-40 bg-[rgba(14,26,38,0.35)] cursor-default" />}
+            {inspectorOpen && <button type="button" aria-label="Düzenleyiciyi kapat" onClick={() => setInspectorOpen(false)} className="xl:hidden ms-fade-in fixed inset-0 z-40 bg-[var(--color-scrim)] cursor-default" />}
             <aside
               aria-label="Düzenleyici"
               className={`${inspectorOpen ? 'flex' : 'hidden'} xl:flex ms-slide-left xl:animate-none fixed xl:sticky z-50 xl:z-auto top-0 xl:top-3 right-0 bottom-0 xl:bottom-auto w-[min(420px,94vw)] xl:w-auto xl:max-h-[calc(100dvh-140px)] flex-col bg-white xl:rounded-2xl shadow-xl xl:shadow-sm overflow-y-auto overscroll-contain p-4`}

@@ -24,7 +24,7 @@ export const RevisionHistoryModal: React.FC<RevisionHistoryModalProps> = ({
   const revisions = question.revisions || [];
 
   return (
-    <div className="ms-overlay fixed inset-0 z-50 flex items-center justify-center p-4 bg-ink/60 backdrop-blur-xs animate-fadeIn">
+    <div className="ms-overlay fixed inset-0 z-50 flex items-center justify-center p-4 bg-[var(--color-scrim)] animate-fadeIn">
       <div 
         className="ms-modal-panel bg-white rounded-2xl shadow-2xl border border-line w-full max-w-2xl max-h-[90dvh] flex flex-col overflow-hidden relative"
         onClick={(e) => e.stopPropagation()}

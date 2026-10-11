@@ -110,12 +110,12 @@ export const DriveSaveModal: React.FC<DriveSaveModalProps> = ({
   };
 
   return (
-    <div className="ms-overlay fixed inset-0 z-50 bg-ink/60 backdrop-blur-xs flex items-center justify-center p-4 overflow-y-auto">
+    <div className="ms-overlay fixed inset-0 z-50 bg-[var(--color-scrim)] flex items-center justify-center p-4 overflow-y-auto">
       <div className="ms-modal-panel bg-white rounded-2xl max-w-lg w-full shadow-2xl border border-line overflow-hidden my-6 flex flex-col max-h-[90dvh]">
         {/* Header */}
-        <div className="bg-ink-surface text-white p-5 flex items-center justify-between shrink-0">
+        <div className="bg-white text-ink p-5 flex items-center justify-between shrink-0">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-white/10 text-white border border-white/20 flex items-center justify-center">
+            <div className="w-10 h-10 rounded-xl bg-white/10 text-ink border border-white/20 flex items-center justify-center">
               <Cloud className="w-6 h-6 text-ok" />
             </div>
             <div>
@@ -127,7 +127,7 @@ export const DriveSaveModal: React.FC<DriveSaveModalProps> = ({
           </div>
           <button
             onClick={onClose}
-            className="p-1.5 rounded-lg text-ok-soft hover:text-white hover:bg-white/10 cursor-pointer"
+            className="p-1.5 rounded-lg text-ok-soft hover:text-ink hover:bg-white/10 cursor-pointer"
           >
             <X className="w-5 h-5" />
           </button>
@@ -243,7 +243,7 @@ export const DriveSaveModal: React.FC<DriveSaveModalProps> = ({
               <button
                 onClick={handleUploadDrive}
                 disabled={isUploading}
-                className="w-full bg-ink hover:bg-ink text-white font-bold py-2 px-4 rounded-lg flex items-center justify-center gap-2 text-xs shadow-xs cursor-pointer active:scale-98 transition-all disabled:opacity-50"
+                className="w-full bg-white hover:bg-field text-ink font-bold py-2 px-4 rounded-lg flex items-center justify-center gap-2 text-xs shadow-xs cursor-pointer active:scale-98 transition-all disabled:opacity-50"
               >
                 {isUploading ? (
                   <>
@@ -262,7 +262,7 @@ export const DriveSaveModal: React.FC<DriveSaveModalProps> = ({
                 <button
                   onClick={handleUploadDrive}
                   disabled={isUploading}
-                  className="w-full bg-white hover:bg-field border border-line-2 text-ink font-semibold py-2 px-4 rounded-lg flex items-center justify-center gap-2 text-xs shadow-xs cursor-pointer"
+                  className="w-full bg-white hover:bg-field border border-line text-ink font-semibold py-2 px-4 rounded-lg flex items-center justify-center gap-2 text-xs shadow-xs cursor-pointer"
                 >
                   <svg className="w-4 h-4" viewBox="0 0 24 24">
                     <path
@@ -312,7 +312,7 @@ export const DriveSaveModal: React.FC<DriveSaveModalProps> = ({
                     placeholder="ya29.a0AfH6SM..."
                     value={tokenInput}
                     onChange={(e) => setTokenInput(e.target.value)}
-                    className="w-full bg-white border border-line-2 rounded p-1.5 font-mono text-2xs"
+                    className="w-full bg-white border border-line rounded p-1.5 font-mono text-2xs"
                   />
                   <div className="flex justify-between items-center text-2xs text-ink-3">
                     <span>Google Drive scope içeren geçici belirteç</span>
@@ -341,7 +341,7 @@ export const DriveSaveModal: React.FC<DriveSaveModalProps> = ({
           </button>
           <button
             onClick={onClose}
-            className="bg-ink hover:bg-ink text-white font-bold px-4 py-1.5 rounded-lg text-xs cursor-pointer"
+            className="bg-white hover:bg-field text-ink font-bold px-4 py-1.5 rounded-lg text-xs cursor-pointer"
           >
             Kapat
           </button>

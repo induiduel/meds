@@ -2,7 +2,7 @@ import { useSyncExternalStore } from 'react';
 import { PALETTES, findPalette, installPaletteStyles, type ThemeMode } from './palettes';
 
 /**
- * Görünüm tercihleri: tema (açık / sarı / koyu), her temada iki palet (a / b) ve yerleşim yoğunluğu.
+ * Görünüm tercihleri: tema (açık / sarı / koyu), her temada dört palet (a–d, utils/palettes.ts) ve yerleşim yoğunluğu.
  * Kök öğeye `data-mode`, `data-palette`, `data-density` yazılır; koyu temada eski `theme-dark` sınıfı da kalır
  * (index.css ve health.css'teki koyu kurallar onu kullanır). Token değerleri styles/appearance.css'tedir.
  */
@@ -31,12 +31,9 @@ const KEY = 'medsoru_appearance';
 const LEGACY_THEME_KEY = 'medsoru_theme';
 const listeners = new Set<() => void>();
 
-function systemDark() {
-  return typeof window !== 'undefined' && !!window.matchMedia?.('(prefers-color-scheme: dark)').matches;
-}
-
 function read(): Appearance {
-  const fallback: Appearance = { mode: systemDark() ? 'dark' : 'light', palettes: { light: 'a', sepia: 'a', dark: 'a' }, density: 'normal' };
+  // İlk açılış her zaman açık temadır (sistem koyu olsa bile); kullanıcı Ayarlar'dan değiştirir.
+  const fallback: Appearance = { mode: 'light', palettes: { light: 'a', sepia: 'a', dark: 'a' }, density: 'normal' };
   try {
     const raw = localStorage.getItem(KEY);
     if (raw) {

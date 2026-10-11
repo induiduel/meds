@@ -20,34 +20,6 @@ html.ui-v7 {
   --font-mono: ui-monospace, "SF Mono", "JetBrains Mono", Menlo, monospace;
 
   /* Göz dostu açık tema: hafif sıcak nötr zemin, kırık beyaz yüzey, yumuşatılmış mürekkep */
-  --color-canvas: #F7F8FA;
-  --color-white: #FFFFFF;
-  --color-field: #F1F3F6;
-  --color-line: #E6E9EE;
-  --color-line-soft: #EEF0F3;
-  --color-line-2: #CDD2DA;
-  --color-ink: #23262C;
-  --color-ink-2: #4A4F58;
-  --color-ink-3: #666C76;
-  --color-ink-surface: #2A2B2F;
-  --color-accent: #2A64B8;
-  --color-accent-hover: #22549E;
-  --color-accent-soft: #E3ECF8;
-  --color-on-accent: #FFFFFF;
-  --color-brand: #E0245E;
-  --color-brand-soft: #FDE7EE;
-  --color-clinic: #00756F;
-  --color-clinic-soft: #DDF5F3;
-  --color-ok: #27723F;
-  --color-ok-soft: #E2F0E5;
-  --color-ok-tint: #F0FAF2;
-  --color-warn: #9A5A12;
-  --color-warn-soft: #F8EBD8;
-  --color-bad: #C23A3A;
-  --color-bad-text: #B03232;
-  --color-bad-soft: #F8E4E2;
-  --color-ai: #8944AB;
-  --color-ai-soft: #F3E8FA;
   --color-teal-600: #0066CC; /* eski teal-* sınıfları vurguya */
 
   --radius-sm: 6px;
@@ -76,34 +48,6 @@ html.ui-v7 {
 
 html.ui-v7.theme-dark {
   /* Koyu tema: saf siyah yerine yumuşak grafit, saf beyaz yerine kırık açık gri */
-  --color-canvas: #121315;
-  --color-white: #1C1D20;
-  --color-field: #26272B;
-  --color-line: #2F3035;
-  --color-line-soft: #26272B;
-  --color-line-2: #45464C;
-  --color-ink: #E4E5E8;
-  --color-ink-2: #BEC0C6;
-  --color-ink-3: #9497A0;
-  --color-ink-surface: #26272B;
-  --color-accent: #6FA3EE;
-  --color-accent-hover: #8DB6F2;
-  --color-accent-soft: #1A2A40;
-  --color-on-accent: #000000;
-  --color-brand: #FF375F;
-  --color-brand-soft: #3A1220;
-  --color-clinic: #40C8BE;
-  --color-clinic-soft: #0C2A28;
-  --color-ok: #5CC981;
-  --color-ok-soft: #13291B;
-  --color-ok-tint: #0B2413;
-  --color-warn: #E6A24B;
-  --color-warn-soft: #2E2312;
-  --color-bad: #E86F68;
-  --color-bad-text: #EE8A84;
-  --color-bad-soft: #351A19;
-  --color-ai: #DA8FFF;
-  --color-ai-soft: #2E1A3A;
   --shadow-md: 0 6px 18px rgb(0 0 0 / 0.5);
   --shadow-lg: 0 12px 32px rgb(0 0 0 / 0.6);
   --shadow-xl: 0 20px 56px rgb(0 0 0 / 0.7);
@@ -198,13 +142,13 @@ html.ui-v7 .ds-row-t > span { font-size: 13px; }
 html.ui-v7 .ds-row-chev { color: var(--color-line-2); }
 
 /* ---------- Düğmeler (iOS: dolu / gri / düz) ---------- */
-html.ui-v7 .ms-btn { height: var(--ms-ctl); padding: 0 14px; border-radius: 10px; border: 0; font-size: 14px; font-weight: 600; background: rgb(118 118 128 / .12); color: var(--color-accent); }
-html.ui-v7 .ms-btn:hover { background: rgb(118 118 128 / .18); }
+html.ui-v7 .ms-btn { height: var(--ms-ctl); padding: 0 14px; border-radius: 10px; border: 0; font-size: 14px; font-weight: 600; background: color-mix(in srgb, var(--color-ink) 8%, transparent); color: var(--color-accent); }
+html.ui-v7 .ms-btn:hover { background: color-mix(in srgb, var(--color-ink) 12%, transparent); }
 html.ui-v7 .ms-btn.is-primary { background: var(--color-accent); color: var(--color-on-accent); }
 html.ui-v7 .ms-btn.is-primary:hover { background: var(--color-accent-hover); }
 html.ui-v7 .ms-btn.is-tonal, html.ui-v7 .ms-btn.is-on { background: var(--color-accent-soft); color: var(--color-accent); }
 html.ui-v7 .ms-btn.is-ghost { background: transparent; color: var(--color-accent); }
-html.ui-v7 .ms-btn.is-ghost:hover { background: rgb(118 118 128 / .12); }
+html.ui-v7 .ms-btn.is-ghost:hover { background: color-mix(in srgb, var(--color-ink) 8%, transparent); }
 html.ui-v7 .ms-btn.is-outline { background: var(--color-white); color: var(--color-ink); border: 0; box-shadow: none; }
 html.ui-v7 .ms-btn.is-outline:hover { background: color-mix(in srgb, var(--color-white) 92%, var(--color-ink)); }
 html.ui-v7 .ms-btn.is-danger { background: transparent; color: var(--color-bad-text); }
@@ -227,7 +171,7 @@ html.ui-v7 .cx-flag { border-radius: 99px; height: 20px; padding: 0 7px; }
 html.ui-v7 .cx-q-no { border-radius: 7px; background: var(--d-soft, var(--color-field)); color: var(--d-ink, var(--color-ink)); font-family: var(--font-round); }
 
 /* ---------- Arama: iOS arama alanı (gri dolgu, çerçevesiz) ---------- */
-html.ui-v7 :is(.cx-search, .ms-qsearch, .lh-search, .ms-search-field) { height: 38px; border: 0; border-radius: 10px; background: rgb(118 118 128 / .12); box-shadow: none; padding-left: 10px; }
+html.ui-v7 :is(.cx-search, .ms-qsearch, .lh-search, .ms-search-field) { height: 38px; border: 0; border-radius: 10px; background: color-mix(in srgb, var(--color-ink) 8%, transparent); box-shadow: none; padding-left: 10px; }
 html.ui-v7 :is(.cx-search, .ms-qsearch, .lh-search, .ms-search-field):focus-within { background: var(--color-white); box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-accent) 30%, transparent); border: 0; }
 html.ui-v7 :is(.cx-search, .ms-qsearch) > svg { color: var(--color-ink-3); width: 16px; height: 16px; }
 html.ui-v7 :is(.cx-search, .ms-qsearch) input { font-size: 15px; }
@@ -247,7 +191,7 @@ html.ui-v7 .ds-tabrail { border-bottom: 0; align-items: center; }
 html.ui-v7 .ds-tabrail > .ms-btn { margin-bottom: 0; }
 
 /* ---------- Segmentli denetim (iOS) ---------- */
-html.ui-v7 :is(.ds-seg, .ms-seg, .ms-f-seg) { padding: 2px; gap: 0; border-radius: 9px; background: rgb(118 118 128 / .12); }
+html.ui-v7 :is(.ds-seg, .ms-seg, .ms-f-seg) { padding: 2px; gap: 0; border-radius: 9px; background: color-mix(in srgb, var(--color-ink) 8%, transparent); }
 html.ui-v7 :is(.ds-seg, .ms-seg, .ms-f-seg) > button { height: calc(var(--ms-ctl) - 4px); border-radius: 7px; font-size: 13px; font-weight: 500; color: var(--color-ink); box-shadow: none; }
 html.ui-v7 :is(.ds-seg > button:is([aria-checked="true"], [aria-pressed="true"], [aria-selected="true"], .is-on), .ms-seg > button:is([aria-checked="true"], [aria-pressed="true"], .is-on), .ms-f-seg button.is-on) {
   background: var(--color-white); color: var(--color-ink); font-weight: 600; box-shadow: 0 3px 8px rgb(0 0 0 / .12), 0 3px 1px rgb(0 0 0 / .04);
@@ -279,7 +223,7 @@ html.ui-v7 .cx-opt { font-size: 15px; padding-block: 9px; }
 html.ui-v7 .cx-bubble { width: 24px; height: 24px; border-width: 1.5px; border-color: var(--color-line-2); font-family: var(--font-round); font-size: 12px; }
 html.ui-v7 .cx-opt.is-correct .cx-bubble { background: var(--color-ok); border-color: var(--color-ok); }
 html.ui-v7 .cx-act { color: var(--color-accent); font-weight: 500; }
-html.ui-v7 .cx-act:hover { background: rgb(118 118 128 / .12); }
+html.ui-v7 .cx-act:hover { background: color-mix(in srgb, var(--color-ink) 8%, transparent); }
 html.ui-v7 .cx-chip { background: var(--color-accent); color: var(--color-on-accent); border-radius: 99px; }
 html.ui-v7 .cx-clear { color: var(--color-accent); text-decoration: none; }
 @media (max-width: 639px) {
@@ -313,7 +257,17 @@ html.ui-v7 .ms-fchip .n { font-family: var(--font-round); }
 html.ui-v7 .ms-chip { border: 0; border-radius: 99px; height: 32px; background: var(--color-white); font-size: 14px; }
 html.ui-v7 .ms-chip.is-on { background: var(--color-ink); color: var(--color-white); }
 html.ui-v7 :is(.ms-overlay, [role="dialog"], .ms-drawer) :is(input:not([type="checkbox"]):not([type="radio"]):not(.bg-transparent), textarea:not(.bg-transparent), select) { border-radius: 10px; }
-html.ui-v7 :is(.ms-menu, [role="menu"], .ms-popover, .ms-menu-pop, .ls-tools-pop) { border-radius: 14px !important; border: 0 !important; background: color-mix(in srgb, var(--color-white) 92%, transparent) !important; -webkit-backdrop-filter: saturate(1.8) blur(24px); backdrop-filter: saturate(1.8) blur(24px); box-shadow: var(--shadow-lg) !important; }
+/* Yalnız gerçek açılır menüler cam efekti alır. Eskiden çıplak [role="menu"] seçicisi Hesap/Bildirim sayfalarındaki
+   gruplara ve telefondaki kaydırılan eylem sayfasına da 24px bulanıklık veriyordu → kaydırırken her kare yeniden çizim (donma). */
+html.ui-v7 :is(.ms-menu, .ms-popover, .ms-menu-pop, .ls-tools-pop) { border-radius: 14px !important; border: 0 !important; background: color-mix(in srgb, var(--color-white) 92%, transparent) !important; -webkit-backdrop-filter: saturate(1.8) blur(24px); backdrop-filter: saturate(1.8) blur(24px); box-shadow: var(--shadow-lg) !important; }
+/* Dokunmatik cihazlarda büyük/kayan yüzeylerde bulanıklık yok: düz, hafif şeffaf olmayan zemin (GPU yükü yok) */
+@media (pointer: coarse) {
+  html.ui-v7 :is(.ms-menu, .ms-popover, .ms-menu-pop, .ls-tools-pop, .sh-top, .sh-tabs, .ls-top, .cx-dock, .cx-bar) { -webkit-backdrop-filter: none !important; backdrop-filter: none !important; }
+  html.ui-v7 :is(.ms-menu, .ms-popover, .ms-menu-pop, .ls-tools-pop) { background: var(--color-white) !important; }
+  html.ui-v7 :is(.sh-top, .ls-top) { background: var(--color-canvas) !important; }
+}
+/* Kilitli katman açıkken kök hiçbir şekilde kaymasın/sıçramasın */
+html.scroll-locked, html.scroll-locked body { overscroll-behavior: none; }
 
 /* ---------- Öğren ---------- */
 html.ui-v7 .ls-top { background: color-mix(in srgb, var(--color-white) 86%, transparent); -webkit-backdrop-filter: saturate(1.8) blur(20px); backdrop-filter: saturate(1.8) blur(20px); }
@@ -334,7 +288,7 @@ html.ui-v7 .ls-btn { border-radius: 10px; }
 html.ui-v7 .ms-side { background: var(--color-canvas); border-right: 1px solid var(--color-line); }
 html.ui-v7 .ms-side-item { border-radius: 10px; color: var(--color-ink); font-weight: 500; height: 34px; }
 html.ui-v7 .ms-side-item > svg { color: var(--color-accent); }
-html.ui-v7 .ms-side-item:hover { background: rgb(118 118 128 / .10); }
+html.ui-v7 .ms-side-item:hover { background: color-mix(in srgb, var(--color-ink) 7%, transparent); }
 html.ui-v7 .ms-side-item.is-on { background: var(--color-accent); color: var(--color-on-accent); }
 html.ui-v7 .ms-side-item.is-on > svg { color: inherit; }
 html.ui-v7 .ms-side-item.is-on .n { background: rgb(255 255 255 / .25); color: inherit; }
@@ -357,7 +311,7 @@ html.ui-v7 .ms-view-enter { animation: hk-enter .34s var(--hk-spring) backwards;
 html.ui-v7 .cx-q-meta b { display: inline-flex; align-items: center; gap: 6px; }
 
 /* ---------- Konsol: bölüm paleti (Ctrl/⌘ K) ---------- */
-.ms-cpal-btn { display: inline-flex; align-items: center; gap: 8px; height: 32px; min-width: 0; max-width: 280px; flex: 0 1 260px; padding: 0 8px 0 10px; border: 0; border-radius: 10px; background: rgb(118 118 128 / .12); color: var(--color-ink-3); font: inherit; font-size: 14px; cursor: pointer; }
+.ms-cpal-btn { display: inline-flex; align-items: center; gap: 8px; height: 32px; min-width: 0; max-width: 280px; flex: 0 1 260px; padding: 0 8px 0 10px; border: 0; border-radius: 10px; background: color-mix(in srgb, var(--color-ink) 8%, transparent); color: var(--color-ink-3); font: inherit; font-size: 14px; cursor: pointer; }
 .ms-cpal-btn svg { width: 15px; height: 15px; flex-shrink: 0; }
 .ms-cpal-btn span { flex: 1; text-align: left; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .ms-cpal-btn kbd, .ms-cpal-in kbd { font-family: var(--font-sans); font-size: 11px; padding: 1px 6px; border-radius: 5px; background: var(--color-white); color: var(--color-ink-3); box-shadow: 0 0 0 1px var(--color-line); }
@@ -429,13 +383,13 @@ html.ui-v7 .cx-q-meta b { display: inline-flex; align-items: center; gap: 6px; }
 .rd-title span { max-width: 100%; font-size: 12px; color: var(--reader-text-subtle, var(--color-ink-3)); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-variant-numeric: tabular-nums; }
 .rd-tools { display: flex; align-items: center; gap: 2px; flex-shrink: 0; }
 .rd-btn { width: 36px; height: 36px; flex-shrink: 0; display: inline-grid; place-items: center; border: 0; border-radius: 10px; background: transparent; color: var(--color-accent); cursor: pointer; font: inherit; transition: background-color .12s; }
-.rd-btn:hover { background: rgb(118 118 128 / .12); }
-.rd-btn.is-on { background: rgb(118 118 128 / .16); }
+.rd-btn:hover { background: color-mix(in srgb, var(--color-ink) 8%, transparent); }
+.rd-btn.is-on { background: color-mix(in srgb, var(--color-ink) 11%, transparent); }
 .rd-btn svg { width: 19px; height: 19px; }
 .rd-btn.is-sm { width: 26px; height: 26px; color: var(--reader-text-subtle, var(--color-ink-3)); }
 .rd-btn.is-sm svg { width: 14px; height: 14px; }
 .rd-aa { width: 40px; font-size: 16px; font-weight: 600; letter-spacing: -.02em; }
-.rd-search { display: flex; align-items: center; gap: 6px; height: 34px; width: min(260px, 46vw); padding: 0 2px 0 10px; border-radius: 10px; background: rgb(118 118 128 / .14); color: var(--reader-text-subtle, var(--color-ink-3)); animation: ds-pop .16s var(--ease-out-soft) both; }
+.rd-search { display: flex; align-items: center; gap: 6px; height: 34px; width: min(260px, 46vw); padding: 0 2px 0 10px; border-radius: 10px; background: color-mix(in srgb, var(--color-ink) 9%, transparent); color: var(--reader-text-subtle, var(--color-ink-3)); animation: ds-pop .16s var(--ease-out-soft) both; }
 .rd-search > svg { width: 15px; height: 15px; flex-shrink: 0; }
 .rd-search input { flex: 1; min-width: 0; height: 100%; border: 0; outline: 0; background: transparent; color: var(--reader-text, var(--color-ink)); font: inherit; font-size: 15px; }
 .rd-search input::-webkit-search-cancel-button { display: none; }
@@ -448,9 +402,9 @@ html.ui-v7 .cx-q-meta b { display: inline-flex; align-items: center; gap: 6px; }
 
 /* "Aa" paneli */
 .rd-pop { position: absolute; right: 0; top: calc(100% + 8px); z-index: 40; width: 300px; padding: 10px; display: flex; flex-direction: column; gap: 10px; border-radius: 14px; background: color-mix(in srgb, var(--color-white) 94%, transparent); -webkit-backdrop-filter: saturate(1.8) blur(30px); backdrop-filter: saturate(1.8) blur(30px); box-shadow: var(--shadow-lg); color: var(--color-ink); animation: ds-pop .16s var(--ease-out-soft) both; transform-origin: top right; }
-.rd-pop-row { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; height: 40px; border-radius: 10px; background: rgb(118 118 128 / .12); }
+.rd-pop-row { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; height: 40px; border-radius: 10px; background: color-mix(in srgb, var(--color-ink) 8%, transparent); }
 .rd-step { height: 100%; border: 0; background: transparent; color: var(--color-ink); font-weight: 600; cursor: pointer; border-radius: 10px; }
-.rd-step:hover { background: rgb(118 118 128 / .12); }
+.rd-step:hover { background: color-mix(in srgb, var(--color-ink) 8%, transparent); }
 .rd-scale { border: 0; background: transparent; padding: 0 10px; font-family: var(--font-round); font-size: 13px; font-weight: 600; color: var(--color-ink-3); cursor: pointer; }
 .rd-themes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
 .rd-theme { display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 8px 4px; border: 0; border-radius: 12px; background: transparent; color: var(--color-ink-2); font: inherit; font-size: 12px; cursor: pointer; }

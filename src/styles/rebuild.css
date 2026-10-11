@@ -101,6 +101,12 @@ html.ui-v7 :is(.cx-search, .ms-qsearch, .lh-search, .ms-search-field, .rd-search
 .nm-list { margin: 0; padding-left: 1.35em; }
 .nm-list .nm-list { margin-top: .2em; }
 .nm-list li + li { margin-top: .2em; }
+.nm-list li.nm-task { list-style: none; margin-left: -1.35em; display: flex; gap: .5em; align-items: baseline; }
+.nm-check { flex-shrink: 0; width: .95em; height: .95em; border-radius: .25em; box-shadow: inset 0 0 0 1.5px var(--color-line-2); translate: 0 .12em; }
+.nm-check.is-on { background: var(--color-ok); box-shadow: none; }
+.nm-quote { margin: .4em 0; padding: .35em .8em; border-left: 3px solid var(--color-accent); border-radius: 0 8px 8px 0; background: var(--color-accent-soft); color: var(--color-ink-2); }
+.nm-quote p { margin: 0; }
+.nm-quote p + p { margin-top: .25em; }
 .nm-list li::marker { color: var(--color-ink-3); }
 .nm-mark { padding: 0 .15em; border-radius: 3px; background: color-mix(in srgb, var(--color-warn) 22%, var(--color-white)); color: inherit; }
 .nm-c-red { color: var(--color-bad-text); }
@@ -1226,7 +1232,7 @@ html.ui-v7 .cx-dock .cx-search { height: 40px; min-height: 40px; border-radius: 
 .qk-opts.is-pool .qk-opt-li > .qk-vote { margin-right: 8px; }
 /* Çalış sekmeleri: dar ekranda etiket kesilmesin — ikonlar gizlenir, "Hızlı test" yalnız ikon. */
 @media (min-width: 480px) and (max-width: 767px) { .st-tabs svg, .st-tabs .lh-n { display: none; } }
-@media (max-width: 639px) { .st-quick .st-tab-l { display: none; } .st-quick { padding: 0 12px; } }
+@media (min-width: 480px) and (max-width: 639px) { .st-quick .st-tab-l { display: none; } .st-quick { padding: 0 12px; } }
 /* Segment göstergesi eşit sütun varsayar (genişlik = 1/n, kayma = i × %100): sayfa kuralları segmenti flex'e
    çevirince beyaz gösterge seçili düğmeden kayıyordu (Çalış). Izgara her zaman eşit sütun. */
 .ui-seg { display: grid !important; grid-auto-flow: column !important; grid-auto-columns: minmax(0, 1fr) !important; }
@@ -1537,7 +1543,7 @@ html.theme-dark .deep-link-highlight-pulse, html[data-mode="dark"] .deep-link-hi
 @keyframes qk-glow { 0%, 100% { opacity: 1; } 50% { opacity: .55; } }
 /* Gömülü kapsül */
 .qk-lift-pill { position: absolute; z-index: 3; right: 10px; top: 50%; display: flex; align-items: stretch; height: 40px; border-radius: 99px; overflow: hidden;
-  background: var(--color-bad); color: #fff; box-shadow: 0 10px 20px -10px color-mix(in srgb, var(--color-bad) 80%, transparent), inset 0 1px 0 rgb(255 255 255 / .18);
+  background: var(--color-bad); color: var(--color-on-solid, #fff); box-shadow: 0 10px 20px -10px color-mix(in srgb, var(--color-bad) 80%, transparent), inset 0 1px 0 rgb(255 255 255 / .18);
   opacity: 0; pointer-events: none; transform: translateY(-50%) translateX(16px) scale(.8);
   transition: opacity 200ms ease, transform 460ms cubic-bezier(.34, 1.56, .64, 1); }
 .qk-lift.is-lifted .qk-lift-pill { opacity: 1; pointer-events: auto; transform: translateY(-50%); transition-delay: 90ms; }

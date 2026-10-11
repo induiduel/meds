@@ -1,0 +1,54 @@
+/* Bağlantı şeridi (NetworkBanner) — yalnız palet token'ları; tüm temalarda uyumlu */
+.nb-wrap {
+  position: fixed; z-index: 2147483000; left: 50%; top: calc(env(safe-area-inset-top, 0px) + 8px);
+  transform: translate(-50%, -140%); opacity: 0; pointer-events: none;
+  transition: transform 380ms cubic-bezier(.32, .72, 0, 1), opacity 240ms ease;
+}
+.nb-wrap.is-in { transform: translate(-50%, 0); opacity: 1; }
+.nb-wrap.is-in .nb-pill { pointer-events: auto; }
+.nb-pill {
+  display: inline-flex; align-items: center; gap: 8px; height: 34px; padding: 0 6px 0 8px; border-radius: 99px;
+  background: var(--color-ink-surface, #1B2633); color: #fff; font: 600 12.5px/1 var(--font-sans, system-ui, sans-serif);
+  box-shadow: 0 8px 24px rgb(0 0 0 / .22), 0 0 0 1px rgb(255 255 255 / .06) inset; white-space: nowrap;
+}
+html[data-mode="dark"] .nb-pill { background: var(--color-field); color: var(--color-ink); box-shadow: 0 8px 24px rgb(0 0 0 / .5), 0 0 0 1px var(--color-line-2) inset; }
+.nb-ico { width: 22px; height: 22px; border-radius: 50%; display: grid; place-items: center; background: var(--nb-c); color: var(--color-on-solid, #fff); }
+.nb-ico > svg { width: 13px; height: 13px; }
+.nb-pill.is-off { --nb-c: var(--color-bad); }
+.nb-pill.is-slow { --nb-c: var(--color-warn); }
+.nb-pill.is-ok { --nb-c: var(--color-ok); }
+.nb-pill.is-slow .nb-ico, .nb-pill.is-off .nb-ico { animation: nb-pulse 1.6s ease-in-out infinite; }
+.nb-t { padding-right: 2px; }
+.nb-q { height: 22px; padding: 0 8px; border-radius: 99px; display: inline-flex; align-items: center; font-size: 11.5px; background: rgb(255 255 255 / .14); }
+html[data-mode="dark"] .nb-q { background: color-mix(in srgb, var(--color-ink) 12%, transparent); }
+.nb-btn { width: 26px; height: 26px; border-radius: 50%; display: grid; place-items: center; color: inherit; background: rgb(255 255 255 / .12); cursor: pointer; transition: transform 160ms ease, background 160ms ease; }
+html[data-mode="dark"] .nb-btn { background: color-mix(in srgb, var(--color-ink) 12%, transparent); }
+.nb-btn:active { transform: scale(.9); }
+.nb-btn > svg { width: 14px; height: 14px; }
+.nb-btn.is-busy > svg { animation: nb-spin .8s linear infinite; }
+@keyframes nb-pulse { 0%, 100% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--nb-c) 55%, transparent); } 50% { box-shadow: 0 0 0 5px transparent; } }
+@keyframes nb-spin { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) {
+  .nb-wrap { transition: opacity 120ms linear; }
+  .nb-pill .nb-ico, .nb-btn.is-busy > svg { animation: none; }
+}
+
+/* Aşağı çekip yenile (PullToRefresh, dokunmatik cihazlar) */
+.ptr {
+  position: fixed; z-index: 2147482000; top: env(safe-area-inset-top, 0px); left: 50%; width: 40px; height: 40px;
+  transform: translate3d(-50%, -48px, 0); opacity: 0; pointer-events: none; will-change: transform;
+}
+.ptr.is-back { transition: transform 280ms cubic-bezier(.32, .72, 0, 1), opacity 200ms ease; }
+.ptr-ring {
+  width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center;
+  background: var(--color-white, #fff); color: var(--color-accent, #1A5FB4);
+  box-shadow: 0 4px 14px rgb(0 0 0 / .16), 0 0 0 1px var(--color-line, #DDE3EA);
+}
+.ptr-ring svg { width: 20px; height: 20px; transform: rotate(calc(var(--ptr-p, 0) * 180deg)); transition: transform 120ms linear; }
+.ptr.is-ready .ptr-ring { background: var(--color-accent); color: var(--color-on-accent, #fff); }
+.ptr.is-loading .ptr-ring svg { display: none; }
+.ptr.is-loading .ptr-ring::after {
+  content: ""; width: 18px; height: 18px; border-radius: 50%; border: 2.4px solid currentColor; border-right-color: transparent;
+  animation: nb-spin .7s linear infinite;
+}
+@media (prefers-reduced-motion: reduce) { .ptr-ring svg { transition: none; } }

@@ -1,3 +1,4 @@
+import './services/netInstall';
 import { Component, ErrorInfo, ReactNode } from 'react';
 import { createRoot } from 'react-dom/client';
 import App from './App.tsx';
@@ -7,7 +8,13 @@ import './styles/appearance.css';
 import './styles/shell.css';
 import './styles/screens.css';
 import './styles/rebuild.css';
+import './styles/motion.css';
+import './styles/mobile.css';
 import { installToastBridge } from './components/ui/Toast';
+import { installNetworkBanner } from './components/system/NetworkBanner';
+import { installPullToRefresh } from './components/system/PullToRefresh';
+import { installNotesSync } from './services/notesSync';
+import { prefetchIdle } from './routePrefetch';
 import { installAutoReveal } from './utils/autoReveal';
 import { installStudyTimer } from './services/activityLog';
 import { applyTheme, readTheme } from './utils/theme';
@@ -29,23 +36,34 @@ if (typeof window !== 'undefined') {
 (function trackVisualViewport() {
   const vv = window.visualViewport;
   const root = document.documentElement;
-  const update = () => {
-    const h = vv ? vv.height : window.innerHeight;
-    root.style.setProperty('--vvh', `${Math.round(h)}px`);
-    root.style.setProperty('--vvt', `${Math.round(vv ? vv.offsetTop : 0)}px`);
+  // Mobilde adres çubuğu kaydırırken sürekli resize/scroll olayı üretir: kare başına en çok bir kez ölç,
+  // yalnız DEĞİŞEN değeri yaz (her yazma --vvh kullanan tüm katmanları yeniden yerleştiriyordu → kasma).
+  let lastH = -1, lastT = -1, lastKb: boolean | null = null, raf = 0;
+  const measure = () => {
+    raf = 0;
+    const h = Math.round(vv ? vv.height : window.innerHeight);
+    const t = Math.round(vv ? vv.offsetTop : 0);
+    if (h !== lastH) { lastH = h; root.style.setProperty('--vvh', `${h}px`); }
+    if (t !== lastT) { lastT = t; root.style.setProperty('--vvt', `${t}px`); }
     const typing = !!(document.activeElement as HTMLElement | null)?.closest?.('input,textarea,select,[contenteditable="true"]');
-    root.classList.toggle('kb-open', typing && h < window.innerHeight * 0.8 || (typing && !!vv && vv.height < screen.height * 0.6));
+    const kb = (typing && h < window.innerHeight * 0.8) || (typing && !!vv && vv.height < screen.height * 0.6);
+    if (kb !== lastKb) { lastKb = kb; root.classList.toggle('kb-open', kb); }
   };
-  update();
-  vv?.addEventListener('resize', update);
-  vv?.addEventListener('scroll', update);
-  window.addEventListener('resize', update);
+  const update = () => { if (!raf) raf = requestAnimationFrame(measure); };
+  measure();
+  vv?.addEventListener('resize', update, { passive: true });
+  vv?.addEventListener('scroll', update, { passive: true });
+  window.addEventListener('resize', update, { passive: true });
   document.addEventListener('focusin', () => setTimeout(update, 250));
   document.addEventListener('focusout', () => setTimeout(update, 250));
 })();
 
 // alert() and unhandled failures become friendly floating toasts
 installToastBridge();
+installNetworkBanner();
+installPullToRefresh();
+installNotesSync();
+prefetchIdle();
 installAutoReveal();
 installStudyTimer();
 
@@ -116,29 +134,21 @@ class RootErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState
       const isChunkError = /Failed to fetch dynamically imported module|Importing a module script failed/i.test(msg);
 
       return (
-        <div className="min-h-dvh bg-ink text-white flex flex-col items-center justify-center p-4">
-          <div className="max-w-md w-full bg-ink border border-line-2 rounded-2xl p-6 shadow-2xl text-center space-y-4">
-            <div className="w-12 h-12 bg-bad/20 text-bad-text rounded-full flex items-center justify-center mx-auto text-xl font-bold">
+        <div className="min-h-dvh bg-canvas text-ink flex flex-col items-center justify-center p-4">
+          <div className="ui-card max-w-md w-full p-6 text-center flex flex-col gap-4" role="alert" style={{ boxShadow: 'var(--shadow-lg)' }}>
+            <div className="w-12 h-12 bg-bad-soft text-bad-text rounded-full flex items-center justify-center mx-auto text-xl font-bold" aria-hidden="true">
               !
             </div>
-            <h2 className="text-lg font-bold text-ink-3">
-              {isChunkError ? 'Yeni Sürüm Tespit Edildi' : 'Uygulama Yüklenirken Bir Sorun Oluştu'}
+            <h2 className="m-0 text-lg font-bold text-ink">
+              {isChunkError ? 'Yeni sürüm hazır' : 'Uygulama yüklenirken bir sorun oluştu'}
             </h2>
-            <p className="text-xs text-ink-3 font-mono bg-ink p-3 rounded-lg text-left overflow-auto max-h-32">
-              {msg}
-            </p>
-            <div className="flex flex-col sm:flex-row gap-2 justify-center pt-2">
-              <button
-                onClick={this.handleSoftReload}
-                className="bg-ok hover:bg-ok text-white text-xs font-bold px-4 py-2.5 rounded-lg cursor-pointer transition-colors"
-              >
-                Sayfayı Yenile (Güncelle)
+            <p className="m-0 text-xs text-ink-2 font-mono bg-field p-3 rounded-lg text-left overflow-auto max-h-32">{msg}</p>
+            <div className="flex flex-col sm:flex-row gap-2 justify-center">
+              <button type="button" onClick={this.handleSoftReload} className="ui-btn is-primary">
+                Sayfayı yenile
               </button>
-              <button
-                onClick={this.handleHardReset}
-                className="bg-ink-2 hover:bg-ink-2 text-ink-3 text-xs font-medium px-3 py-2.5 rounded-lg cursor-pointer transition-colors"
-              >
-                Önbelleği Sıfırla
+              <button type="button" onClick={this.handleHardReset} className="ui-btn">
+                Önbelleği sıfırla
               </button>
             </div>
           </div>

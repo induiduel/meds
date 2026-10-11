@@ -1,0 +1,55 @@
+/* =============================================================================
+ * MedSoru v9 · Telefon katmanı (≤767px) — kompakt, uygulama hissi, hızlı
+ * Kabuk (shell.css) yüzen alt gezinmeyi çizer; bu dosya içerik yoğunluğunu, üst çubuğu, geçişleri ve
+ * uzun listelerin çizim maliyetini telefona göre ayarlar. Yalnız palet token'ları kullanılır.
+ * ============================================================================= */
+@media (max-width: 767px) {
+  /* Üst çubuk: yalnız marka/başlık + arama + profil. Tema ve bildirimler profil sayfasında;
+     çevrimdışı rozeti yalnız bağlantı yokken ya da indirme sürerken görünür. */
+  .sh-top-theme, .sh-top-bell { display: none !important; }
+  .sh-top .of-badge:not(.is-offline):not(.is-busy) { display: none; }
+  .sh-top-in { gap: 4px; padding-inline: 14px 8px; }
+  .sh-brand-mark { width: 28px; height: 28px; border-radius: 9px; }
+  .sh-brand-word { font-size: 17px; }
+  .sh-acct-btn { position: relative; }
+  .sh-acct-btn.has-unread::after { content: ""; position: absolute; top: 5px; right: 5px; width: 9px; height: 9px; border-radius: 50%; background: var(--color-brand); box-shadow: 0 0 0 2px var(--color-canvas); animation: m-dot 2s ease-in-out infinite; }
+  @keyframes m-dot { 50% { transform: scale(1.25); } }
+
+  /* Sayfa: kenar boşluğu 14px, bölümler arası sıkı, başlıklar telefona göre */
+  html { --dn-page-x: 14px; }
+  .sh-main { gap: 10px; padding-top: 6px; }
+  :is(.ms-page-title, .cx-title, .ui-page-head h1) { font-size: 25px !important; letter-spacing: -.02em; }
+  .ui-page { gap: 18px; padding-bottom: 24px; }
+
+  /* Kartlar ve gruplar: daha yuvarlak, kenarlık yerine yumuşak gölge (sevimli, uygulama gibi) */
+  :is(.ui-group, .ui-card, .gl-card, .lh-res) { border-radius: 18px; }
+  :is(.ui-card, .gl-card) { box-shadow: 0 1px 2px rgb(0 0 0 / .04), 0 4px 14px -6px rgb(0 0 0 / .10); }
+
+  /* Yatay çip şeritleri: parmakla kayar, kenarda yumuşak solma, kaydırma çubuğu yok */
+  .ms-chipbar:not(.is-wrap) { scroll-snap-type: x proximity; scrollbar-width: none; -webkit-mask-image: linear-gradient(90deg, #000 88%, transparent); mask-image: linear-gradient(90deg, #000 88%, transparent); }
+  .ms-chipbar:not(.is-wrap)::-webkit-scrollbar { display: none; }
+  .ms-chipbar:not(.is-wrap) > * { scroll-snap-align: start; }
+
+  /* Hız: ekran dışındaki uzun liste öğeleri çizilmez (yer tutucu boyutu hatırlanır) */
+  :is(.qk, .cx-q, .gl-card, .lh-res, .ds-row, .ct-row) { content-visibility: auto; contain-intrinsic-size: auto 140px; }
+
+  /* Sayfa geçişi: alttan hafif yükselip netleşir (sekme değişiminde) */
+  .sh-main.ms-view-enter { animation: m-page-in .34s var(--mo-spring, cubic-bezier(.32, .72, 0, 1)) both; }
+  @keyframes m-page-in { from { opacity: 0; transform: translateY(10px) scale(.994); } to { opacity: 1; transform: none; } }
+
+  /* Dokunma hedefleri: küçük ikon düğmeleri en az 40px */
+  .sh-ibtn { width: 40px; height: 40px; border-radius: 12px; }
+}
+
+/* Telefonda dikey alan dar olduğunda (yatay tutuş) alt gezinme ince */
+@media (max-width: 767px) and (max-height: 480px) {
+  html { --sh-tabs-h: 52px; }
+  .sh-tab-l, .sh-tab-fab-l { display: none; }
+  .sh-tab-fab-in { margin-top: 0; width: 42px; height: 42px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .sh-main.ms-view-enter, .sh-acct-btn.has-unread::after { animation: none !important; }
+}
+
+/* Klavye kısayolu ipuçları dokunmatik cihazda anlamsız */
+@media (pointer: coarse) { .qk-hint:not(.is-ok), .kbd-hint { display: none !important; } }

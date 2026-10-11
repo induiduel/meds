@@ -272,7 +272,7 @@ export const cleanWhy = (t?: string): string => {
 
   return s;
 };
-const OptionList: React.FC<{ question: string; options: OptLike[]; onDone?: () => void; extraWhy?: string }> = ({ question, options, onDone, extraWhy }) => {
+const OptionList: React.FC<{ question: string; options: OptLike[]; onDone?: () => void; extraWhy?: string; context?: string }> = ({ question, options, onDone, extraWhy, context }) => {
   const [first, setFirst] = useState<string | null>(null);
   const [opened, setOpened] = useState<Set<string>>(new Set());
   const right = options.find((o) => o.ok);
@@ -293,6 +293,7 @@ const OptionList: React.FC<{ question: string; options: OptLike[]; onDone?: () =
   };
   return (
     <div className="ls-ix-body">
+      {context && <Inline text={context} as="p" className="ls-ix-case" />}
       <Inline text={question} as="p" className="ls-ix-q" />
       <ul className="ls-opts">
         {options.map((o) => {
@@ -1038,14 +1039,21 @@ const IxBody: React.FC<{ item: PracticeItem; onDone?: () => void }> = ({ item, o
           onDone={onDone}
         />
       );
-    case 'branching_logic':
+    case 'branching_logic': {
+      // Veri üç biçimde gelir: options | branchingOptions | choices; soru question/initialQuestion'da, vaka scenario'da
+      const ask = e.question || e.initialQuestion || '';
+      const opts = [e.options, e.choices, e.branchingOptions].find((x) => Array.isArray(x) && x.length) || [];
+      // Bazı vakalarda soru cümlesi senaryonun sonuna da eklenmiş: vaka kutusunda tekrar gösterme
+      const caseText = ask && e.scenario ? String(e.scenario).replace(ask, '').replace(/[\s\-–—:]+$/, '').trim() : '';
       return (
         <OptionList
-          question={e.scenario || e.question || ''}
-          options={(e.options || []).map((o: any, k: number) => ({ key: String.fromCharCode(65 + k), text: o.text, ok: !!o.isCorrect, why: o.feedback }))}
+          context={caseText || undefined}
+          question={ask || e.scenario || ''}
+          options={opts.map((o: any, k: number) => ({ key: String.fromCharCode(65 + k), text: o.text || o.label || '', ok: !!(o.isCorrect ?? o.correct), why: o.feedback || o.explanation }))}
           onDone={onDone}
         />
       );
+    }
     case 'interactive_table':
     case 'hidden_table': {
       const title = e.tableTitle || e.title || '';

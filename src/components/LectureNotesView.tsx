@@ -832,7 +832,7 @@ export const LectureNotesView: React.FC<LectureNotesViewProps> = ({
 
       {/* MODAL: ADD MANUAL / CUSTOM LECTURE NOTE */}
       {isAddingNote && (
-        <div className="ms-overlay fixed inset-0 z-50 bg-ink/60 backdrop-blur-xs flex items-center justify-center p-4 overflow-y-auto">
+        <div className="ms-overlay fixed inset-0 z-50 bg-[var(--color-scrim)] flex items-center justify-center p-4 overflow-y-auto">
           <div className="bg-white rounded-2xl border border-line max-w-2xl w-full p-6 shadow-2xl space-y-4 my-8">
             <div className="flex items-center justify-between border-b border-line pb-3">
               <div className="flex items-center gap-2 text-ink font-bold">

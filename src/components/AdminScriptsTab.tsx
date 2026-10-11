@@ -22,6 +22,7 @@ import {
 import { BUNDLED_SCRIPTS, BUNDLED_PIPELINES } from '../data/bundledScripts';
 import { toast } from './ui/Toast';
 import { Panel, EmptyState, SearchBox, ChipBar, Switch, Drawer, logTone } from './manage/consoleUi';
+import { guardedInterval } from '../services/net';
 
 interface AdminScriptsTabProps {
   adminEmail: string;
@@ -103,10 +104,11 @@ export const AdminScriptsTab: React.FC<AdminScriptsTabProps> = ({
 
     fetchStatus();
     if (pollingRef.current) clearInterval(pollingRef.current);
-
-    pollingRef.current = setInterval(fetchStatus, 1200);
+    // Önceki durum isteği bitmeden yenisi atılmaz
+    const stop = guardedInterval(fetchStatus, 1200);
 
     return () => {
+      stop();
       if (pollingRef.current) clearInterval(pollingRef.current);
     };
   }, [terminalJobId]);

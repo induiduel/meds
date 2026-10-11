@@ -15,6 +15,8 @@ import { pastQuestionsCache } from './pastQuestionsCache';
 import { loadDeck, DECK_CATALOG } from '../data/deckStore';
 import { pwaService } from './pwaService';
 import { toast } from '../components/ui/Toast';
+import { defaultApiBaseForThisHost } from '../config/deployment';
+import { onNetChange, getNetState } from './net';
 
 const OFFLINE_DB_NAME = 'medsoru_offline_db';
 const OFFLINE_DB_VERSION = 2;
@@ -59,7 +61,22 @@ export interface OfflineAction {
   method: 'POST' | 'PUT' | 'DELETE';
   payload: any;
   timestamp: string;
+  /** Kuyruk denemesi: kaç kez gönderilmeye çalışıldı, bir sonraki deneme zamanı (ms) */
+  attempts?: number;
+  nextAt?: number;
 }
+
+/** Göreli /api yolunu canlı API tabanına çevirir (Ayarlar'daki özel adres > hostun varsayılanı). */
+function resolveApiUrl(endpoint: string) {
+  if (!endpoint.startsWith('/')) return endpoint;
+  let base = '';
+  try {
+    base = (localStorage.getItem('medsoru_custom_api_url') || '').trim();
+  } catch { /* yok */ }
+  if (!base) base = defaultApiBaseForThisHost();
+  return `${base.replace(/\/$/, '')}${endpoint}`;
+}
+const MAX_ATTEMPTS = 8;
 
 export interface OfflineState {
   isOnline: boolean;
@@ -110,7 +127,7 @@ class OfflineDatabaseService {
     window.addEventListener('online', () => {
       this.state.isOnline = true;
       this.notify();
-      this.syncOfflineQueue();
+      void this.syncOfflineQueue();
     });
 
     window.addEventListener('offline', () => {
@@ -118,13 +135,18 @@ class OfflineDatabaseService {
       this.notify();
     });
 
+    // Bağlantı "zayıf"tan "çevrimiçi"ye dönünce ve sekme öne gelince kuyruk boşaltılır
+    onNetChange(() => {
+      if (getNetState() === 'online') void this.syncOfflineQueue();
+    });
+    document.addEventListener('visibilitychange', () => {
+      if (!document.hidden && this.state.queuedActionsCount > 0) void this.syncOfflineQueue();
+    });
+
     // Service Worker'dan gelen background sync sinyallerini dinle
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.addEventListener('message', (event) => {
-        if (event.data?.type === 'MEDSORU_BACKGROUND_SYNC') {
-          console.log('[OfflineDb] SW Background sync sinyali alındı.');
-          this.syncOfflineQueue();
-        }
+        if (event.data?.type === 'MEDSORU_BACKGROUND_SYNC') void this.syncOfflineQueue();
       });
     }
   }
@@ -765,48 +787,8 @@ class OfflineDatabaseService {
     });
   }
 
-  /**
-   * Çevrimdışı Eylem Kuyruğu: Kullanıcı internetsizken katkı/oy/rapor yaparsa sakla
-   */
-  public async queueAction(action: Omit<OfflineAction, 'timestamp'>): Promise<void> {
-    const db = await this.initDb();
-    if (!db) return;
-
-    const fullAction: OfflineAction = {
-      ...action,
-      timestamp: new Date().toISOString(),
-    };
-
-    await new Promise<void>((resolve) => {
-      try {
-        const tx = db.transaction(STORE_QUEUE, 'readwrite');
-        tx.objectStore(STORE_QUEUE).add(fullAction);
-        tx.oncomplete = () => resolve();
-        tx.onerror = () => resolve();
-      } catch {
-        resolve();
-      }
-    });
-
-    this.state.queuedActionsCount += 1;
-    this.notify();
-    pwaService.registerBackgroundSync();
-
-    toast.info(
-      'Çevrimdışı Kaydedildi',
-      'İşleminiz cihaz hafızasında güvene alındı. İnternet bağlantısı sağlandığında otomatik iletilecektir.'
-    );
-  }
-
-  /**
-   * Kuyruktaki çevrimdışı eylemleri sunucuya gönder
-   */
-  public async syncOfflineQueue(): Promise<{ synced: number; failed: number }> {
-    if (!this.state.isOnline) return { synced: 0, failed: 0 };
-    const db = await this.initDb();
-    if (!db) return { synced: 0, failed: 0 };
-
-    const actions: (OfflineAction & { id: number })[] = await new Promise((resolve) => {
+  private readQueue(db: IDBDatabase): Promise<(OfflineAction & { id: number })[]> {
+    return new Promise((resolve) => {
       try {
         const tx = db.transaction(STORE_QUEUE, 'readonly');
         const req = tx.objectStore(STORE_QUEUE).getAll();
@@ -816,46 +798,128 @@ class OfflineDatabaseService {
         resolve([]);
       }
     });
+  }
 
-    if (actions.length === 0) return { synced: 0, failed: 0 };
+  private writeQueue(db: IDBDatabase, op: (store: IDBObjectStore) => void): Promise<void> {
+    return new Promise((resolve) => {
+      try {
+        const tx = db.transaction(STORE_QUEUE, 'readwrite');
+        op(tx.objectStore(STORE_QUEUE));
+        tx.oncomplete = () => resolve();
+        tx.onerror = () => resolve();
+      } catch {
+        resolve();
+      }
+    });
+  }
+
+  private syncRegistered = false;
+  private queueToastAt = 0;
+
+  /**
+   * Çevrimdışı Eylem Kuyruğu: istek ağ hatasıyla düşerse işlem cihazda saklanır.
+   * - Oy uçları aç/kapa çalışır: kuyrukta aynı oyun bekleyen bir kopyası varsa ikisi birbirini sıfırlar (iki dokunuş = değişiklik yok).
+   * - Aynı uca aynı yükle bekleyen kopya varsa yenisi eklenmez (çift dokunuş yığılmaz).
+   */
+  public async queueAction(action: Omit<OfflineAction, 'timestamp'>): Promise<void> {
+    const db = await this.initDb();
+    if (!db) return;
+    const existing = await this.readQueue(db);
+    const payloadKey = JSON.stringify(action.payload ?? null);
+    const twin = existing.find((a) => a.endpoint === action.endpoint && a.method === action.method && JSON.stringify(a.payload ?? null) === payloadKey);
+
+    if (twin && action.type === 'vote') {
+      await this.writeQueue(db, (st) => st.delete(twin.id));
+    } else if (!twin) {
+      const fullAction: OfflineAction = { ...action, timestamp: new Date().toISOString(), attempts: 0, nextAt: 0 };
+      await this.writeQueue(db, (st) => st.add(fullAction));
+    }
+
+    this.state.queuedActionsCount = (await this.readQueue(db)).length;
+    this.notify();
+    if (!this.syncRegistered) {
+      this.syncRegistered = true;
+      void pwaService.registerBackgroundSync();
+    }
+    // Art arda işlemlerde tek bildirim
+    if (Date.now() - this.queueToastAt > 15_000) {
+      this.queueToastAt = Date.now();
+      toast.info('Bağlantı yok — sıraya alındı', 'İşleminiz cihazda saklandı; bağlantı gelince kendiliğinden gönderilecek.');
+    }
+  }
+
+  private draining: Promise<{ synced: number; failed: number }> | null = null;
+
+  /**
+   * Kuyruktaki eylemleri sırayla gönderir. Aynı anda tek boşaltma çalışır (online olayı, SW sinyali ve
+   * el ile tetikleme üst üste binmez). Başarısız eylem geri çekilmeyle (2^n sn) bekler; 4xx yanıtı (408/429
+   * hariç) ya da 8 deneme sonrası kuyruktan düşer — sonsuza dek tekrar edilmez.
+   */
+  public syncOfflineQueue(): Promise<{ synced: number; failed: number }> {
+    if (this.draining) return this.draining;
+    this.draining = this.drain().finally(() => {
+      this.draining = null;
+    });
+    return this.draining;
+  }
+
+  private async drain(): Promise<{ synced: number; failed: number }> {
+    if (!this.state.isOnline || getNetState() === 'offline') return { synced: 0, failed: 0 };
+    const db = await this.initDb();
+    if (!db) return { synced: 0, failed: 0 };
+    const actions = await this.readQueue(db);
+    if (actions.length === 0) {
+      if (this.state.queuedActionsCount) { this.state.queuedActionsCount = 0; this.notify(); }
+      return { synced: 0, failed: 0 };
+    }
 
     let synced = 0;
     let failed = 0;
-
+    let dropped = 0;
+    const now = Date.now();
     for (const act of actions) {
+      if ((act.nextAt || 0) > now) continue;
+      let ok = false;
+      let permanent = false;
       try {
-        const res = await fetch(act.endpoint, {
+        const headers: Record<string, string> = { 'Content-Type': 'application/json' };
+        try {
+          const pw = sessionStorage.getItem('medsoru_api_write_password');
+          if (pw) headers['X-API-Password'] = pw;
+        } catch { /* yok */ }
+        const res = await fetch(resolveApiUrl(act.endpoint), {
           method: act.method,
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(act.payload),
+          headers,
+          body: act.method === 'DELETE' && act.payload == null ? undefined : JSON.stringify(act.payload),
         });
-
-        if (res.ok) {
-          synced += 1;
-          await new Promise<void>((resDel) => {
-            const txDel = db.transaction(STORE_QUEUE, 'readwrite');
-            txDel.objectStore(STORE_QUEUE).delete(act.id);
-            txDel.oncomplete = () => resDel();
-            txDel.onerror = () => resDel();
-          });
-        } else {
-          failed += 1;
-        }
+        ok = res.ok;
+        permanent = !ok && res.status >= 400 && res.status < 500 && res.status !== 408 && res.status !== 429;
       } catch {
+        ok = false;
+      }
+      const attempts = (act.attempts || 0) + 1;
+      if (ok || permanent || attempts >= MAX_ATTEMPTS) {
+        if (ok) synced += 1;
+        else dropped += 1;
+        await this.writeQueue(db, (st) => st.delete(act.id));
+      } else {
         failed += 1;
+        await this.writeQueue(db, (st) => st.put({ ...act, attempts, nextAt: Date.now() + Math.min(5 * 60_000, 2000 * 2 ** attempts) }));
+        // Ağ hâlâ yoksa kalanları bu turda zorlamaya gerek yok
+        if (getNetState() !== 'online') break;
       }
     }
 
-    this.state.queuedActionsCount = Math.max(0, actions.length - synced);
+    this.state.queuedActionsCount = (await this.readQueue(db)).length;
     this.notify();
-
-    if (synced > 0) {
-      toast.success(
-        'Senkronizasyon Tamamlandı',
-        `${synced} adet çevrimdışı işlem başarıyla sunucuya iletildi.`
-      );
+    if (synced > 0) toast.success('Gönderildi', `Bekleyen ${synced} işlem sunucuya iletildi.`);
+    if (dropped > 0) toast.info('Bazı işlemler gönderilemedi', `${dropped} işlem sunucu tarafından kabul edilmedi ve kuyruktan çıkarıldı.`);
+    // Hâlâ bekleyen varsa en yakın deneme zamanına kur
+    if (this.state.queuedActionsCount > 0) {
+      const rest = await this.readQueue(db);
+      const soonest = Math.min(...rest.map((a) => a.nextAt || 0));
+      window.setTimeout(() => void this.syncOfflineQueue(), Math.max(1000, soonest - Date.now()));
     }
-
     return { synced, failed };
   }
 

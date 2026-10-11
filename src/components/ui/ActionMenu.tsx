@@ -1,4 +1,5 @@
 import React, { useEffect, useLayoutEffect, useRef, useState } from 'react';
+import { lockScroll, unlockScroll } from '../../utils/scrollLock';
 import { createPortal } from 'react-dom';
 import { MoreHorizontal, X } from 'lucide-react';
 
@@ -104,6 +105,13 @@ export const ActionMenu: React.FC<ActionMenuProps> = ({ items, label, title = '�
     };
   }, [open]);
 
+  // Telefon alt sayfası açıkken arka sayfa kaymasın (ortak sayaçlı kilit)
+  useEffect(() => {
+    if (!open || !isPhone) return;
+    lockScroll();
+    return unlockScroll;
+  }, [open, isPhone]);
+
   if (visible.length === 0) return null;
 
   // Group consecutive items; a rule separates groups
@@ -177,10 +185,10 @@ export const ActionMenu: React.FC<ActionMenuProps> = ({ items, label, title = '�
         (isPhone ? (
           createPortal(
             <div data-action-sheet className={`ms-am fixed inset-0 z-[70] ${closing ? 'is-closing' : ''}`} role="dialog" aria-modal="true" aria-label={title}>
-              <button type="button" aria-label="Kapat" onClick={() => setOpen(false)} className="ms-am-scrim absolute inset-0 bg-[rgba(14,26,38,0.4)] cursor-default" />
+              <button type="button" aria-label="Kapat" onClick={() => setOpen(false)} className="ms-am-scrim absolute inset-0 bg-[var(--color-scrim,rgb(14_26_38/.4))] cursor-default" />
               <div
                 role="menu"
-                className="ms-am-sheet absolute left-0 right-0 bottom-0 max-h-[80dvh] overflow-y-auto bg-white rounded-t-2xl px-4 pt-2 pb-[max(env(safe-area-inset-bottom),20px)] shadow-lg"
+                className="ms-am-sheet absolute left-0 right-0 bottom-0 max-h-[80dvh] overflow-y-auto overscroll-contain bg-white rounded-t-2xl px-4 pt-2 pb-[max(env(safe-area-inset-bottom),20px)] shadow-lg"
               >
                 <span className="block mx-auto w-10 h-[5px] rounded-full bg-line-2" aria-hidden="true" />
                 <div className="flex items-center py-2">

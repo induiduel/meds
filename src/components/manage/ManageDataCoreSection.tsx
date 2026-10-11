@@ -53,7 +53,7 @@ export function ManageDataCoreSection({ notify }: { notify?: (msg: string) => vo
             ['Kazanımlı', stats.kazanimli], ['Kaynağa bağlı', stats.kaynak_bagli], ['Not dosyası', stats.notlar_dosya],
             ['Özet dosyası', stats.ozet_dosya], ['Vektör', stats.vektor?.sayi ?? 0],
           ].map(([l, v]) => (
-            <div key={String(l)} className="rounded-lg border border-black/10 dark:border-white/15 p-3">
+            <div key={String(l)} className="rounded-lg border border-black/10 p-3">
               <div className="text-xs opacity-60">{l}</div>
               <div className="text-lg font-semibold">{String(v ?? 0)}</div>
             </div>
@@ -62,7 +62,7 @@ export function ManageDataCoreSection({ notify }: { notify?: (msg: string) => vo
       )}
 
       {audit?.toplam && (
-        <div className="rounded-lg border border-black/10 dark:border-white/15 p-3 text-sm">
+        <div className="rounded-lg border border-black/10 p-3 text-sm">
           <div className="font-medium mb-1">Eski veri denetimi ({audit.zaman})</div>
           <div className="opacity-80">
             {audit.toplam.kayit} kayıt · engelleyici {audit.toplam.blocking} · inceleme {audit.toplam.review} ·
@@ -72,13 +72,13 @@ export function ManageDataCoreSection({ notify }: { notify?: (msg: string) => vo
       )}
 
       {graph && (
-        <div className="rounded-lg border border-black/10 dark:border-white/15 p-3 text-sm">
+        <div className="rounded-lg border border-black/10 p-3 text-sm">
           <div className="font-medium mb-1">Kavram grafı</div>
           <div className="opacity-80">{graph.dugum} düğüm · {graph.kenar} kenar</div>
         </div>
       )}
 
-      <div className="rounded-lg border border-black/10 dark:border-white/15 p-3">
+      <div className="rounded-lg border border-black/10 p-3">
         <div className="font-medium text-sm mb-2">Toplu tamamlama adayları ({clusters.length})</div>
         <ul className="space-y-1 text-xs">
           {clusters.slice(0, 12).map((c, i) => {

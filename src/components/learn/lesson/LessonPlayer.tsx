@@ -30,6 +30,10 @@ import {
   Search,
   Sparkles,
   X,
+  ZoomIn,
+  ZoomOut,
+  RotateCcw,
+  Type,
 } from 'lucide-react';
 import type { InteractiveDeck } from '../InteractiveDeckView';
 import { AskAi, GlobalTopicSearchModal, SpotList } from '../InteractiveDeckView';
@@ -47,6 +51,7 @@ import {
   buildSections, buildSteps, DeckKazanim, LessonSection, LessonStep, loadKazanimIndex, matchKazanim, PracticeItem, readDone, writeDone,
 } from './lessonModel';
 import { stripEmoji, withGlossaryTerms } from './lessonModel';
+import { setLessonZoom, stepZoom, useLessonZoom, useLessonZoomGestures, ZOOM_MAX, ZOOM_MIN } from './lessonZoom';
 import { FeedbackItem, FeedbackTarget, listFeedback } from './lessonFeedback';
 import { FeedbackDialog, FeedbackFlag, FeedbackProvider, groupFeedback } from './LessonFeedbackUI';
 import { Formula, hideTermTip, InfoId, InfoPane, Infographic, infoTabsFor, KeyPoints, LessonTable, PracticeCard, practiceMeta, Prose } from './LessonBlocks';
@@ -382,6 +387,9 @@ export const LessonPlayer: React.FC<LessonPlayerProps> = ({ deck, startAt, initi
   const [outlineOpen, setOutlineOpen] = useState(() => pref.get('medsoru_learn_toc', typeof window !== 'undefined' && window.innerWidth >= 1100 ? '1' : '0', ['1', '0'] as const) === '1');
   const [outlineMobile, setOutlineMobile] = useState(false);
   const [toolsOpen, setToolsOpen] = useState(false);
+  const [zoomOpen, setZoomOpen] = useState(false);
+  const zoom = useLessonZoom();
+  const [zoomBadge, setZoomBadge] = useState(0);
   const [sheet, setSheet] = useState<Sheet>(null);
   const [searchOpen, setSearchOpen] = useState(false);
   const [dockTab, setDockTab] = useState<InfoId | null>(null);
@@ -417,6 +425,15 @@ export const LessonPlayer: React.FC<LessonPlayerProps> = ({ deck, startAt, initi
   const mainRef = useRef<HTMLDivElement>(null);
   const stageRef = useRef<HTMLDivElement>(null);
   const toolsRef = useRef<HTMLDivElement>(null);
+  const zoomRef = useRef<HTMLDivElement>(null);
+  // Yakınlaştırma rozeti: hareketle değişince ~0.9 sn ölçeği gösterir
+  const flashZoom = useCallback(() => setZoomBadge(Date.now()), []);
+  useEffect(() => {
+    if (!zoomBadge) return;
+    const t = window.setTimeout(() => setZoomBadge(0), 900);
+    return () => window.clearTimeout(t);
+  }, [zoomBadge]);
+  useLessonZoomGestures(stageRef, zoom.gestures, flashZoom);
   const flowRefs = useRef<(HTMLElement | null)[]>([]);
   const programmatic = useRef(false);
   const penOn = usePenActive();
@@ -646,25 +663,33 @@ export const LessonPlayer: React.FC<LessonPlayerProps> = ({ deck, startAt, initi
     return () => document.removeEventListener('keydown', onKey);
   });
 
-  // Araçlar menüsü dışına tıklayınca kapanır
+  // Araçlar / yakınlaştırma menüsü dışına tıklayınca kapanır
   useEffect(() => {
-    if (!toolsOpen) return;
+    if (!toolsOpen && !zoomOpen) return;
     const on = (e: PointerEvent) => {
-      if (toolsRef.current && !toolsRef.current.contains(e.target as Node) && !(e.target as HTMLElement).closest?.('[data-ls-keep]')) setToolsOpen(false);
+      const t = e.target as HTMLElement;
+      if (t.closest?.('[data-ls-keep]')) return;
+      if (toolsOpen && toolsRef.current && !toolsRef.current.contains(t)) setToolsOpen(false);
+      if (zoomOpen && zoomRef.current && !zoomRef.current.contains(t)) setZoomOpen(false);
     };
     document.addEventListener('pointerdown', on);
     return () => document.removeEventListener('pointerdown', on);
-  }, [toolsOpen]);
+  }, [toolsOpen, zoomOpen]);
 
   /* --- kaydırma hareketi (sayfa sayfa): kalem/çizim açıkken ya da metin seçiliyken çevirmez --- */
   const touch = useRef<{ x: number; y: number; at: number } | null>(null);
   const onTouchStart = (e: React.TouchEvent) => {
+    if (e.touches.length > 1) {
+      touch.current = null;
+      return;
+    }
     const t = e.touches[0];
     touch.current = e.touches.length === 1 && (t as any).touchType !== 'stylus' ? { x: t.clientX, y: t.clientY, at: Date.now() } : null;
   };
   const onTouchEnd = (e: React.TouchEvent) => {
     const s = touch.current;
     touch.current = null;
+    if (e.touches.length > 0) return; // iki parmak (yakınlaştırma) sayfa çevirmez
     if (!s || (layout === 'A' && readMode === 'scroll') || isPenActive() || marking || Date.now() - s.at > 450) return;
     if ((e.target as HTMLElement).closest('.ls-ix, .ls-table, .ls-dock, input')) return;
     const sel = window.getSelection();
@@ -740,25 +765,54 @@ export const LessonPlayer: React.FC<LessonPlayerProps> = ({ deck, startAt, initi
           })}
         </div>
       )}
-      <span className="ls-count" aria-live="polite">{index + 1} / {n}</span>
+      <span className="ls-count" aria-live="polite">{index + 1}<i>/</i>{n}</span>
       <button type="button" className="ls-btn is-icon is-ghost" onClick={() => setSearchOpen(true)} aria-label="Derste ara" title="Derste ara (Ctrl+K)"><Search aria-hidden /></button>
-      <button type="button" className="ls-btn is-icon is-ghost ls-hide-phone" onClick={prev} disabled={index === 0} aria-label="Önceki adım" title="Önceki (←)"><ChevronLeft aria-hidden /></button>
-      <button type="button" className="ls-btn is-icon is-ghost ls-hide-phone" onClick={next} disabled={index >= n - 1} aria-label="Sonraki adım" title="Sonraki (→)"><ChevronRight aria-hidden /></button>
+      <div className="ls-tools" ref={zoomRef}>
+        <button
+          type="button"
+          className={`ls-btn is-icon is-ghost ${zoomOpen || zoom.scale !== 1 ? 'is-on' : ''}`}
+          aria-expanded={zoomOpen}
+          aria-haspopup="true"
+          aria-label={`Yazı boyutu ve yakınlaştırma (%${Math.round(zoom.scale * 100)})`}
+          title="Yazı boyutu (Ctrl + / −)"
+          onClick={() => { setZoomOpen((v) => !v); setToolsOpen(false); }}
+        >
+          <Type aria-hidden />
+        </button>
+        {zoomOpen && (
+          <div className="ls-tools-pop ls-zoom-pop" role="dialog" aria-label="Yazı boyutu">
+            <div className="ls-zoom-row">
+              <button type="button" className="ls-btn is-icon" onClick={() => stepZoom(-1)} disabled={zoom.scale <= ZOOM_MIN} aria-label="Küçült"><ZoomOut aria-hidden /></button>
+              <input
+                type="range"
+                className="ls-zoom-range"
+                min={ZOOM_MIN * 100}
+                max={ZOOM_MAX * 100}
+                step={10}
+                value={Math.round(zoom.scale * 100)}
+                onChange={(e) => setLessonZoom({ scale: Number(e.target.value) / 100 })}
+                aria-label="Yakınlaştırma oranı"
+                style={{ ['--p' as string]: `${((zoom.scale - ZOOM_MIN) / (ZOOM_MAX - ZOOM_MIN)) * 100}%` }}
+              />
+              <button type="button" className="ls-btn is-icon" onClick={() => stepZoom(1)} disabled={zoom.scale >= ZOOM_MAX} aria-label="Büyüt"><ZoomIn aria-hidden /></button>
+            </div>
+            <div className="ls-zoom-row is-meta">
+              <b className="ls-zoom-val">%{Math.round(zoom.scale * 100)}</b>
+              <button type="button" className="ls-btn is-sm is-ghost" onClick={() => setLessonZoom({ scale: 1 })} disabled={zoom.scale === 1}><RotateCcw aria-hidden /> Sıfırla</button>
+            </div>
+            <label className="ls-zoom-switch">
+              <span>Hareketle yakınlaştır<small>İki parmak, trackpad ve Ctrl + / − / 0</small></span>
+              <button type="button" role="switch" aria-checked={zoom.gestures} className="ui-switch" onClick={() => setLessonZoom({ gestures: !zoom.gestures })} aria-label="Hareketle yakınlaştırma" />
+            </label>
+          </div>
+        )}
+      </div>
       <div className="ls-tools" ref={toolsRef}>
-        <button type="button" className={`ls-btn ${toolsOpen ? 'is-on' : ''}`} aria-expanded={toolsOpen} aria-haspopup="true" onClick={() => setToolsOpen((v) => !v)}>
+        <button type="button" className={`ls-btn ${toolsOpen ? 'is-on' : ''}`} aria-expanded={toolsOpen} aria-haspopup="true" onClick={() => { setToolsOpen((v) => !v); setZoomOpen(false); }}>
           <MoreHorizontal aria-hidden /> <span className="ls-hide-phone">Araçlar</span>
         </button>
         {toolsOpen && (
-          <div className="ls-tools-pop" role="menu" aria-label="Araçlar">
-            {!isPhone && (
-              <div className="ls-tools-grp">
-                <span className="ls-eyebrow">Düzen</span>
-                <div className="ls-seg" role="radiogroup" aria-label="Düzen">
-                  <button type="button" role="radio" aria-checked={layout === 'A'} onClick={() => pickTool(() => setLayoutPref('A'))}><LayoutPanelLeft aria-hidden /> Akış</button>
-                  <button type="button" role="radio" aria-checked={layout === 'B'} onClick={() => pickTool(() => setLayoutPref('B'))}><PanelsTopLeft aria-hidden /> Stüdyo</button>
-                </div>
-              </div>
-            )}
+          <div className="ls-tools-pop ls-tools-v2" role="menu" aria-label="Araçlar">
             <div className="ls-tools-grp">
               <span className="ls-eyebrow">Görünüm</span>
               <div className="ls-seg" role="radiogroup" aria-label="Görünüm">
@@ -766,54 +820,60 @@ export const LessonPlayer: React.FC<LessonPlayerProps> = ({ deck, startAt, initi
                 <button type="button" role="radio" aria-checked={viewMode === 'split'} onClick={() => pickTool(() => setViewMode('split'))}><Columns aria-hidden /> Yan yana</button>
                 <button type="button" role="radio" aria-checked={viewMode === 'pdf'} onClick={() => pickTool(() => setViewMode('pdf'))}><FileText aria-hidden /> PDF</button>
               </div>
-              {layout === 'A' && viewMode === 'interactive' && (
-                <div className="ls-seg" role="radiogroup" aria-label="Okuma">
-                  <button type="button" role="radio" aria-checked={readMode === 'paged'} onClick={() => pickTool(() => setReadMode('paged'))}><GalleryHorizontal aria-hidden /> Sayfa sayfa</button>
-                  <button type="button" role="radio" aria-checked={readMode === 'scroll'} onClick={() => pickTool(() => setReadMode('scroll'))}><Rows3 aria-hidden /> Kaydırarak</button>
+              {(layout === 'A' && viewMode === 'interactive') || !isPhone ? (
+                <div className="ls-seg-pair">
+                  {layout === 'A' && viewMode === 'interactive' && (
+                    <div className="ls-seg" role="radiogroup" aria-label="Okuma">
+                      <button type="button" role="radio" aria-checked={readMode === 'paged'} onClick={() => pickTool(() => setReadMode('paged'))} title="Sayfa sayfa"><GalleryHorizontal aria-hidden /> Sayfa</button>
+                      <button type="button" role="radio" aria-checked={readMode === 'scroll'} onClick={() => pickTool(() => setReadMode('scroll'))} title="Kaydırarak"><Rows3 aria-hidden /> Kaydır</button>
+                    </div>
+                  )}
+                  {!isPhone && (
+                    <div className="ls-seg" role="radiogroup" aria-label="Düzen">
+                      <button type="button" role="radio" aria-checked={layout === 'A'} onClick={() => pickTool(() => setLayoutPref('A'))} title="Akış düzeni"><LayoutPanelLeft aria-hidden /> Akış</button>
+                      <button type="button" role="radio" aria-checked={layout === 'B'} onClick={() => pickTool(() => setLayoutPref('B'))} title="Stüdyo düzeni"><PanelsTopLeft aria-hidden /> Stüdyo</button>
+                    </div>
+                  )}
                 </div>
-              )}
+              ) : null}
             </div>
             <div className="ls-tools-grp">
               <span className="ls-eyebrow">Çalışma</span>
-              <button type="button" role="menuitemcheckbox" aria-checked={recall} className={`ls-tools-item ${recall ? 'is-on' : ''}`} onClick={() => pickTool(() => setRecall((v) => !v))}>
-                <EyeOff aria-hidden /> <span>Hatırlama modu<small>Kalın ifadeler örtülür, dokununca açılır</small></span>
-              </button>
-              <button type="button" role="menuitemcheckbox" aria-checked={penOn} className={`ls-tools-item ${penOn ? 'is-on' : ''}`} onClick={() => pickTool(() => { setDrawingGlobalState({ activeMode: 'none' }); setHighlighterTool({ active: !penOn, eraser: false }); })}>
-                <Highlighter aria-hidden /> <span>Fosforlu kalem (marker)<small>Metni renkli işaretle; renkler ekranın tepesinde</small></span>
-              </button>
-              <button type="button" role="menuitemcheckbox" aria-checked={drawMode !== 'none'} className={`ls-tools-item ${drawMode !== 'none' ? 'is-on' : ''}`} onClick={() => pickTool(() => { stopPen(); setDrawingGlobalState({ activeMode: drawMode !== 'none' ? 'none' : 'pen' }); })}>
-                <PenLine aria-hidden /> <span>Kalem (çizim)<small>Sayfanın üstüne serbest çiz; renk ve kalınlık tepede</small></span>
-              </button>
-              <button type="button" role="menuitem" className="ls-tools-item" onClick={() => { setSheet('mine'); setToolsOpen(false); }}>
-                <NotebookPen aria-hidden /> <span>Notlarım<small>Biçimli not: liste, tablo, vurgu, renk</small></span>
-              </button>
-              <button type="button" role="menuitem" className="ls-tools-item" onClick={() => { setSheet('notes'); setToolsOpen(false); }}>
-                <NotebookText aria-hidden /> <span>Ders notları<small>Dersin özeti ve en çok sorulan spotlar</small></span>
-              </button>
-              <button type="button" role="menuitem" className="ls-tools-item" onClick={() => { setSheet('ai'); setToolsOpen(false); }}>
-                <MessageCircleQuestion aria-hidden /> <span>Asistana sor<small>Bu adım hakkında soru sor</small></span>
-              </button>
-              <button type="button" role="menuitem" className="ls-tools-item" onClick={() => { setIsDrawerOpen(true); setToolsOpen(false); }}>
-                <BookOpen aria-hidden /> <span>Tıbbi sözlük<small>{glossaryList.length} terim</small></span>
-              </button>
-            </div>
-            <div className="ls-tools-grp">
-              <span className="ls-eyebrow">Diğer</span>
-              <button type="button" role="menuitem" className="ls-tools-item" onClick={toggleFullscreen}>
-                {fsOn ? <Minimize2 aria-hidden /> : <Maximize2 aria-hidden />} <span>{fsOn ? 'Tam ekrandan çık' : 'Tam ekran'}<small>Kısayol: F</small></span>
-              </button>
-              {onExportPdf && (
-                <button type="button" role="menuitem" className="ls-tools-item" onClick={() => { setToolsOpen(false); if (document.fullscreenElement) document.exitFullscreen?.().catch(() => {}); onExportPdf(step.slide.slideNumber); }}>
-                  <FileDown aria-hidden /> <span>Bu adımı PDF yap</span>
+              <div className="ls-tgrid">
+                <button type="button" role="menuitemcheckbox" aria-checked={recall} className={`ls-tt ${recall ? 'is-on' : ''}`} onClick={() => pickTool(() => setRecall((v) => !v))} title="Kalın ifadeler örtülür, dokununca açılır">
+                  <EyeOff aria-hidden /><span>Hatırlama</span>
                 </button>
-              )}
+                <button type="button" role="menuitemcheckbox" aria-checked={penOn} className={`ls-tt ${penOn ? 'is-on' : ''}`} onClick={() => pickTool(() => { setDrawingGlobalState({ activeMode: 'none' }); setHighlighterTool({ active: !penOn, eraser: false }); })} title="Metni renkli işaretle">
+                  <Highlighter aria-hidden /><span>Marker</span>
+                </button>
+                <button type="button" role="menuitemcheckbox" aria-checked={drawMode !== 'none'} className={`ls-tt ${drawMode !== 'none' ? 'is-on' : ''}`} onClick={() => pickTool(() => { stopPen(); setDrawingGlobalState({ activeMode: drawMode !== 'none' ? 'none' : 'pen' }); })} title="Sayfanın üstüne serbest çiz">
+                  <PenLine aria-hidden /><span>Kalem</span>
+                </button>
+                <button type="button" role="menuitem" className={`ls-tt ${sheet === 'mine' ? 'is-on' : ''}`} onClick={() => pickTool(() => setSheet('mine'))} title="Biçimli kişisel not">
+                  <NotebookPen aria-hidden /><span>Notlarım</span>
+                </button>
+                <button type="button" role="menuitem" className={`ls-tt ${sheet === 'notes' ? 'is-on' : ''}`} onClick={() => pickTool(() => setSheet('notes'))} title="Dersin özeti ve spotları">
+                  <NotebookText aria-hidden /><span>Ders notu</span>
+                </button>
+                <button type="button" role="menuitem" className={`ls-tt ${sheet === 'ai' ? 'is-on' : ''}`} onClick={() => pickTool(() => setSheet('ai'))} title="Bu adım hakkında soru sor">
+                  <MessageCircleQuestion aria-hidden /><span>Asistan</span>
+                </button>
+                <button type="button" role="menuitem" className="ls-tt" onClick={() => pickTool(() => setIsDrawerOpen(true))} title={`${glossaryList.length} terim`}>
+                  <BookOpen aria-hidden /><span>Sözlük</span>
+                </button>
+                <button type="button" role="menuitem" className={`ls-tt ${fsOn ? 'is-on' : ''}`} onClick={() => pickTool(toggleFullscreen)} title="Kısayol: F">
+                  {fsOn ? <Minimize2 aria-hidden /> : <Maximize2 aria-hidden />}<span>{fsOn ? 'Küçült' : 'Tam ekran'}</span>
+                </button>
+                {onExportPdf && (
+                  <button type="button" role="menuitem" className="ls-tt" onClick={() => { setToolsOpen(false); if (document.fullscreenElement) document.exitFullscreen?.().catch(() => {}); onExportPdf(step.slide.slideNumber); }} title="Bu adımı PDF olarak indir">
+                    <FileDown aria-hidden /><span>PDF yap</span>
+                  </button>
+                )}
+              </div>
             </div>
           </div>
         )}
       </div>
-      <button type="button" className="ls-btn is-icon is-ghost ls-hide-phone" onClick={toggleFullscreen} aria-label={fsOn ? 'Tam ekrandan çık' : 'Tam ekran'} title="Tam ekran (F)">
-        {fsOn ? <Minimize2 aria-hidden /> : <Maximize2 aria-hidden />}
-      </button>
       <div className="ls-prog" aria-hidden><i style={{ width: `${((index + 1) / n) * 100}%` }} /></div>
     </header>
   );
@@ -1101,7 +1161,8 @@ export const LessonPlayer: React.FC<LessonPlayerProps> = ({ deck, startAt, initi
       role="dialog"
       aria-modal="true"
       aria-label={`${deckName(deck, false)} dersi`}
-      className={`ls-root ${marking ? 'is-marking' : ''} ${recall ? 'ms-recall' : ''} ${immersive ? 'is-immersive' : ''} ${layout === 'B' ? 'is-B' : 'is-A'}`}
+      className={`ls-root ${marking ? 'is-marking' : ''} ${recall ? 'ms-recall' : ''} ${immersive ? 'is-immersive' : ''} ${layout === 'B' ? 'is-B' : 'is-A'} ${zoom.scale !== 1 ? 'is-zoomed' : ''} ${zoom.gestures ? 'has-pinch' : ''}`}
+      style={{ ['--ls-zoom' as string]: zoom.scale }}
       onClickCapture={(e) => {
         if (!recall) return;
         const t = (e.target as HTMLElement).closest('.ls-content strong, .ls-content b');
@@ -1117,6 +1178,7 @@ export const LessonPlayer: React.FC<LessonPlayerProps> = ({ deck, startAt, initi
       )}
       {topBar}
       {markingBar}
+      {zoomBadge > 0 && <div className="ls-zoom-badge" aria-hidden key={zoomBadge}>%{Math.round(zoom.scale * 100)}</div>}
       <div className="ls-stage" ref={stageRef}>
         {focusBand}
         {stage}
@@ -1144,7 +1206,19 @@ export const LessonPlayer: React.FC<LessonPlayerProps> = ({ deck, startAt, initi
               {sheet === 'ai' ? (
                 <AskAi key={step.number} deck={deck} slide={step.slide} />
               ) : sheet === 'mine' ? (
-                <DeckNotePanel deckId={deck.id} deckTitle={deckName(deck)} discipline={deck.discipline} stepNumber={step.number} stepTitle={String((step.slide as any)?.title || '').trim() || `Slayt ${step.slide.slideNumber}`} />
+                <DeckNotePanel
+                  deckId={deck.id}
+                  deckTitle={deckName(deck)}
+                  discipline={deck.discipline}
+                  stepNumber={step.number}
+                  stepTitle={String((step.slide as any)?.title || '').trim() || `Slayt ${step.slide.slideNumber}`}
+                  spots={step.spots}
+                  bullets={step.bullets.map((b: any) => [b.title, b.desc].filter(Boolean).join(': '))}
+                  onJump={(num) => {
+                    const i = steps.findIndex((x) => x.number === num);
+                    if (i >= 0) { goTo(i); setSheet(null); }
+                  }}
+                />
               ) : (
                 <>
                   {deck.overview && <Prose text={deck.overview} className="is-sm" />}

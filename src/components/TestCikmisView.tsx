@@ -35,6 +35,7 @@ import { safeJsonFetch } from '../services/api';
 import { StemText } from './ui/StemText';
 import { Collapsible } from './ui/Collapsible';
 import { ActionMenu, ActionItem } from './ui/ActionMenu';
+import { guardedInterval } from '../services/net';
 
 // Kelime düzeyinde fark (LCS). Kök birkaç yüz kelimeyi geçmez; 400 kelime üstünde fark çizilmez.
 type DiffPart = { t: string; k: 'same' | 'add' | 'del' };
@@ -427,10 +428,8 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
       if (s?.otomatik_limit) setAutoLimit(s.otomatik_limit);
     });
     fetchLiveStatus();
-    const interval = setInterval(() => {
-      if (!document.hidden) fetchLiveStatus();
-    }, 3000);
-    return () => clearInterval(interval);
+    // 3 sn'de bir; önceki istek bitmeden yenisi atılmaz (yavaş ağda 20 isteğin yığılması önlenir)
+    return guardedInterval(fetchLiveStatus, 3000);
   }, [isAdmin]);
 
   // filtre/arama değişince listeyi başa al
@@ -884,14 +883,14 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
               </span>
             }
           >
-            <div className="bg-ink p-3 rounded-lg font-mono text-xs text-ink-3 max-h-56 overflow-y-auto flex flex-col gap-0.5 select-text">
+            <div className="bg-field p-3 rounded-lg font-mono text-xs text-ink-2 max-h-56 overflow-y-auto flex flex-col gap-0.5 select-text">
               {liveStatus?.logs && liveStatus.logs.length > 0 ? (
                 liveStatus.logs.map((line, idx) => {
                   const isErr = line.includes('ERROR') || line.includes('hata') || line.includes('429') || line.includes('404');
                   const isOk = line.includes('✓') || line.includes('başarıyla') || line.includes('unchanged');
                   const isWarn = line.includes('WARNING') || line.includes('review_required');
                   return (
-                    <div key={idx} className={`leading-relaxed whitespace-pre-wrap ${isErr ? 'text-bad' : isOk ? 'text-ok' : isWarn ? 'text-warn' : 'text-ink-3'}`}>
+                    <div key={idx} className={`leading-relaxed whitespace-pre-wrap ${isErr ? 'text-bad' : isOk ? 'text-ok' : isWarn ? 'text-warn' : 'text-ink-2'}`}>
                       {line}
                     </div>
                   );

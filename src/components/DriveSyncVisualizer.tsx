@@ -11,6 +11,7 @@ import {
   ChevronUp,
   Cpu,
 } from 'lucide-react';
+import { guardedInterval } from '../services/net';
 
 interface DriveFileStatusSummary {
   totalExamsDownloaded: number;
@@ -76,8 +77,7 @@ export const DriveSyncVisualizer: React.FC<{
   useEffect(() => {
     fetchStatus();
     // Otomatik olarak her 5 saniyede bir durumu güncelle (indirme takibi için)
-    const interval = setInterval(fetchStatus, 5000);
-    return () => clearInterval(interval);
+    return guardedInterval(fetchStatus, 5000);
   }, []);
 
   const disciplines = Array.from(new Set(lectures.map((l) => l.folderName).filter(Boolean)));
@@ -98,7 +98,7 @@ export const DriveSyncVisualizer: React.FC<{
   return (
     <div className={`bg-white border border-line rounded-2xl shadow-xs overflow-hidden ${className}`}>
       {/* Header Bar */}
-      <div className="bg-ink-surface text-white p-4 sm:p-5">
+      <div className="bg-white text-ink p-4 sm:p-5">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
           <div className="space-y-1">
             <div className="flex items-center gap-2">
@@ -107,12 +107,12 @@ export const DriveSyncVisualizer: React.FC<{
                 Google Drive & Yerel Bilgisayar Arşiv İzleyici
               </span>
             </div>
-            <h3 className="text-base sm:text-lg font-black text-white flex items-center gap-2">
+            <h3 className="text-base sm:text-lg font-black text-ink flex items-center gap-2">
               <HardDrive className="w-5 h-5 text-ok" />
               <span>Yerel Disk & PDF İndirme Durumu</span>
             </h3>
             <p className="text-xs text-ink-3">
-              Hedef klasör: <code className="bg-ink text-ok px-1.5 py-0.5 rounded font-mono text-2xs">{summary?.databaseDir || 'C:\\Users\\indui\\Desktop\\meds_database'}</code>
+              Hedef klasör: <code className="bg-canvas text-ok px-1.5 py-0.5 rounded font-mono text-2xs">{summary?.databaseDir || 'C:\\Users\\indui\\Desktop\\meds_database'}</code>
             </p>
           </div>
 
@@ -120,16 +120,16 @@ export const DriveSyncVisualizer: React.FC<{
             <button
               onClick={fetchStatus}
               disabled={isLoading}
-              className="bg-ok/60 hover:bg-ok text-ok-soft border border-ok/50 font-semibold px-3 py-1.5 rounded-xl text-xs flex items-center gap-1.5 transition-all cursor-pointer active:scale-95"
+              className="ui-btn is-sm is-tonal"
               title="Durumu yenile"
             >
-              <RefreshCw className={`w-3.5 h-3.5 ${isLoading ? 'animate-spin text-ok' : ''}`} />
+              <RefreshCw className={isLoading ? 'animate-spin' : ''} />
               <span>{isLoading ? 'Kontrol...' : 'Yenile'}</span>
             </button>
 
             <button
               onClick={() => setIsExpanded(!isExpanded)}
-              className="bg-ink hover:bg-ink-2 text-ink-3 font-semibold p-1.5 rounded-xl text-xs transition-colors cursor-pointer"
+              className="bg-canvas hover:bg-line-soft text-ink-3 font-semibold p-1.5 rounded-xl text-xs transition-colors cursor-pointer"
               title={isExpanded ? 'Paneli Daralt' : 'Paneli Genişlet'}
             >
               {isExpanded ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
@@ -139,9 +139,9 @@ export const DriveSyncVisualizer: React.FC<{
 
         {/* Live Progress Metrics Cards */}
         {summary && (
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mt-4 pt-4 border-t border-line-2/80">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mt-4 pt-4 border-t border-line">
             {/* 1. Ders Slaytları İlerlemesi */}
-            <div className="bg-ink/60 border border-line-2/60 rounded-xl p-3 space-y-2">
+            <div className="bg-field border border-line rounded-xl p-3 space-y-2">
               <div className="flex items-center justify-between text-xs">
                 <span className="font-bold text-ink-3 flex items-center gap-1.5">
                   <FileText className="w-3.5 h-3.5 text-ok" />
@@ -151,7 +151,7 @@ export const DriveSyncVisualizer: React.FC<{
                   {summary.totalLecturesDownloaded} / {summary.totalLecturesTarget}
                 </span>
               </div>
-              <div className="w-full bg-ink rounded-full h-2 overflow-hidden">
+              <div className="w-full bg-canvas rounded-full h-2 overflow-hidden">
                 <div 
                   className="bg-accent h-full rounded-full transition-all duration-500"
                   style={{ width: `${summary.lecturesProgressPercent}%` }}
@@ -164,7 +164,7 @@ export const DriveSyncVisualizer: React.FC<{
             </div>
 
             {/* 2. Çıkmış Sınavlar İlerlemesi */}
-            <div className="bg-ink/60 border border-line-2/60 rounded-xl p-3 space-y-2">
+            <div className="bg-field border border-line rounded-xl p-3 space-y-2">
               <div className="flex items-center justify-between text-xs">
                 <span className="font-bold text-ink-3 flex items-center gap-1.5">
                   <FolderDown className="w-3.5 h-3.5 text-warn" />
@@ -174,7 +174,7 @@ export const DriveSyncVisualizer: React.FC<{
                   {summary.totalExamsDownloaded} / {summary.totalExamsTarget}
                 </span>
               </div>
-              <div className="w-full bg-ink rounded-full h-2 overflow-hidden">
+              <div className="w-full bg-canvas rounded-full h-2 overflow-hidden">
                 <div 
                   className="bg-accent h-full rounded-full transition-all duration-500"
                   style={{ width: `${summary.examsProgressPercent}%` }}
@@ -187,13 +187,13 @@ export const DriveSyncVisualizer: React.FC<{
             </div>
 
             {/* 3. Yerel Soru Ayrıştırma & OCR */}
-            <div className="bg-ink/60 border border-line-2/60 rounded-xl p-3 space-y-2">
+            <div className="bg-field border border-line rounded-xl p-3 space-y-2">
               <div className="flex items-center justify-between text-xs">
                 <span className="font-bold text-ink-3 flex items-center gap-1.5">
                   <Cpu className="w-3.5 h-3.5 text-ok" />
                   Çıkarılan Çıkmış Sorular
                 </span>
-                <span className="font-black text-white font-mono">
+                <span className="font-black text-ink font-mono">
                   {summary.totalParsedQuestions.toLocaleString('tr-TR')} Soru
                 </span>
               </div>

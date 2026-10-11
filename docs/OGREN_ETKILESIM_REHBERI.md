@@ -325,7 +325,10 @@ Dosyalar: `src/components/learn/lesson/`
 
 ### Ekran kuralları (değiştirirken korunmalı)
 - Telefonda (≤ 767 px) yalnız **Akış (A)** düzeni; Stüdyo (B) masaüstü/tablette Araçlar → Düzen'den seçilir.
-- İkincil özellikler **Araçlar** menüsündedir: Düzen, Görünüm (Ders / Yan yana / PDF), Okuma (Sayfa sayfa / Kaydırarak), Hatırlama modu, Fosforlu kalem + Kalem modu, Ders notları, Asistana sor, Tıbbi sözlük, Tam ekran, Bu adımı PDF yap, Klasik görünüm.
+- Üst çubuk (2026-10-11 sadeleştirildi): Kapat · Bölümler · ders adı · `adım/toplam` · Ara · **Yazı boyutu (T)** · Araçlar. Önceki/sonraki yalnız alttaki gezinmede ve klavyede; tam ekran yalnız Araçlar'da ve `F` tuşunda (tekrarlar kaldırıldı).
+- **Araçlar** iki gruptur: *Görünüm* (Ders / Yan yana / PDF; Sayfa / Kaydır; masaüstünde Akış / Stüdyo) ve *Çalışma* ızgarası (Hatırlama, Marker, Kalem, Notlarım, Ders notu, Asistan, Sözlük, Tam ekran, PDF yap).
+- **Yazı boyutu / yakınlaştırma** (`lesson/lessonZoom.ts`, anahtar `medsoru_learn_zoom`): %80–%180, yalnız ders sütunu/kartı CSS `zoom` ile büyür (sütunun görsel genişliği sabit, yatay kaydırma yok). "Hareketle yakınlaştır" açıkken iki parmak, trackpad sıkıştırma ve Ctrl + / − / 0 çalışır; kapatılabilir. Değişince kısa bir yüzde rozeti görünür.
+- **Notlarım** (`DeckNotePanel`): hızlı ekleme — Adım başlığı, derste seçili metni Alıntı (`> `), adımın Spotları (`==vurgu==`), ana maddeler Liste (`- [ ]`); nottaki "Adım N" başlıkları çip olur, dokununca o adıma gidilir. Notlar sunucuya yedeklenir (`/api/notes`, `services/notesSync.ts`).
 - Tam ekran belge kökünü tam ekrana alır; API yoksa/yanıtsızsa (iPhone) odak moduna düşer.
 - Kalem/çizim katmanı (`SlideDrawingCanvas`) CSS pikseliyle çizer; DPR ile ikinci kez çarpma (telefonda çizgiler kayıyordu).
 - **Kalem algılama** (`src/components/ui/penInput.ts`): bir kez `pointerType: "pen"` görülünce cihaz kalemli sayılır (oturum boyunca). Kalemli cihazda marker ve çizim yalnız kalemle yazar; parmak sayfayı kaydırır (`startFingerPan`). Kalem hiç görülmezse parmak yazar. Yüzen çubuktaki "Parmakla yaz" algılamayı sıfırlar.
@@ -333,7 +336,8 @@ Dosyalar: `src/components/learn/lesson/`
 - **Pekiştir adım çubuğu** (`PracticeSet`, `.ls-psteps`): sekme şeridi yatayda kaymaz, sarar; etkin adım etiketiyle genişler, diğerleri simgedir. Telefonda 6+ etkinlikte etkin adım da simgeye iner (ad kart başlığında). Alttaki ince çizgi tamamlanan oranı gösterir; bir etkinlik bitince "Sonraki: <ad>" düğmesi çıkar.
 - **Kart içinde metin kesilmez:** etiketler, kategori adları, kutup adları sarar (`overflow-wrap: anywhere`); `.ls-ix-body .ls-btn` tek satıra zorlanmaz. Uzun iki kutuplu adlar (`venn_grid`) satırlarda kısa harfle (A / B / İkisi) seçilir, tam ad üstteki kutup etiketinde ve `aria-label`'dadır.
 - **Hareket yalnız durum anlatır:** seçim → karar → ilerleme (damga, sarsıntı, puan uçuşu, kart destesi). `prefers-reduced-motion` altında hepsi kapanır. Veri açıklamalarındaki "Doğru." / "Tuzak / Yalan!" hükümleri ekranda ayıklanır (`cleanVerdict`); hükmü arayüz verir.
-- Kalıcı tercih anahtarları: `medsoru_learn_layout`, `medsoru_learn_mode`, `medsoru_learn_toc`, `medsoru_learn_done_v1`, `medsoru_learn_progress_v1`, `medsoru_learn_voter_id`.
+- Kalıcı tercih anahtarları: `medsoru_learn_layout`, `medsoru_learn_mode`, `medsoru_learn_toc`, `medsoru_learn_zoom`, `medsoru_learn_done_v1`, `medsoru_learn_progress_v1`, `medsoru_learn_voter_id`.
+- `branching_logic` seçenekleri `options` | `choices` | `branchingOptions` alanlarından okunur (ekran ve doğrulayıcı aynı sırayı kullanır); soru `question`/`initialQuestion`'da ise `scenario` üstte vaka kutusunda gösterilir. Doğrulayıcı artık `elements` ve `interactiveElement` kaynaklarını da denetler.
 
 ---
 

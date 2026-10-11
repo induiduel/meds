@@ -188,7 +188,7 @@ export const DeckPdfViewer: React.FC<DeckPdfViewerProps> = ({
   const displayName = customFileName || pdfMeta?.fileName || `${deck.title}.pdf`;
 
   return (
-    <div className={`flex flex-col h-full bg-ink text-ink-3 select-none overflow-hidden ${compact ? 'rounded-xl border border-line-2' : ''}`}>
+    <div className={`flex flex-col h-full bg-canvas text-ink-3 select-none overflow-hidden ${compact ? 'rounded-xl border border-line' : ''}`}>
       {/* Hidden file input */}
       <input
         ref={fileInputRef}
@@ -199,7 +199,7 @@ export const DeckPdfViewer: React.FC<DeckPdfViewerProps> = ({
       />
 
       {/* Top Controls Toolbar */}
-      <header className="shrink-0 bg-ink/95 border-b border-line-2 px-3 py-2 flex items-center justify-between gap-2 flex-wrap text-xs">
+      <header className="shrink-0 bg-field border-b border-line px-3 py-2 flex items-center justify-between gap-2 flex-wrap text-xs">
         {/* Title & Document Badge */}
         <div className="flex items-center gap-2 min-w-0">
           <div className="w-7 h-7 rounded-lg bg-bad/20 text-bad-text border border-bad/30 flex items-center justify-center shrink-0">
@@ -207,7 +207,7 @@ export const DeckPdfViewer: React.FC<DeckPdfViewerProps> = ({
           </div>
           <div className="min-w-0">
             <div className="flex items-center gap-1.5">
-              <span className="font-semibold text-white truncate max-w-[200px] sm:max-w-xs md:max-w-md" title={displayName}>
+              <span className="font-semibold text-ink truncate max-w-[200px] sm:max-w-xs md:max-w-md" title={displayName}>
                 {displayName}
               </span>
               <span className="text-2xs font-mono px-1.5 py-0.2 rounded bg-bad/10 text-bad-text border border-bad/20 shrink-0">
@@ -225,7 +225,7 @@ export const DeckPdfViewer: React.FC<DeckPdfViewerProps> = ({
         {/* Action Controls */}
         <div className="flex items-center gap-1.5 ml-auto">
           {/* Source switch pills */}
-          <div className="hidden sm:inline-flex items-center bg-ink border border-line-2 rounded-lg p-0.5 text-2xs">
+          <div className="hidden sm:inline-flex items-center bg-canvas border border-line rounded-lg p-0.5 text-2xs">
             {isLocalServerAvailable && (
               <button
                 type="button"
@@ -234,7 +234,7 @@ export const DeckPdfViewer: React.FC<DeckPdfViewerProps> = ({
                   setIsLoading(true);
                 }}
                 className={`px-2 py-1 rounded-md cursor-pointer transition-colors flex items-center gap-1 ${
-                  sourceType === 'local' ? 'bg-ok text-white font-medium shadow-xs' : 'text-ink-3 hover:text-white'
+                  sourceType === 'local' ? 'bg-ok text-white font-medium shadow-xs' : 'text-ink-3 hover:text-ink'
                 }`}
                 title="Yerel Bilgisayar Veritabanından Doğrudan Sayfa Senkronizasyonu"
               >
@@ -250,7 +250,7 @@ export const DeckPdfViewer: React.FC<DeckPdfViewerProps> = ({
                   setIsLoading(true);
                 }}
                 className={`px-2 py-1 rounded-md cursor-pointer transition-colors flex items-center gap-1 ${
-                  sourceType === 'drive' ? 'bg-accent text-white font-medium shadow-xs' : 'text-ink-3 hover:text-white'
+                  sourceType === 'drive' ? 'bg-accent text-white font-medium shadow-xs' : 'text-ink-3 hover:text-ink'
                 }`}
                 title="Google Drive Bulut Önizleyicisi"
               >
@@ -266,7 +266,7 @@ export const DeckPdfViewer: React.FC<DeckPdfViewerProps> = ({
                   setIsLoading(true);
                 }}
                 className={`px-2 py-1 rounded-md cursor-pointer transition-colors flex items-center gap-1 ${
-                  sourceType === 'custom' ? 'bg-ai text-white font-medium shadow-xs' : 'text-ink-3 hover:text-white'
+                  sourceType === 'custom' ? 'bg-ai text-white font-medium shadow-xs' : 'text-ink-3 hover:text-ink'
                 }`}
                 title="Yüklediğiniz Özel PDF"
               >
@@ -281,7 +281,7 @@ export const DeckPdfViewer: React.FC<DeckPdfViewerProps> = ({
             type="button"
             onClick={() => fileInputRef.current?.click()}
             title="Bilgisayarınızdan başka bir slayt PDF'i seçip yükleyin"
-            className="h-7 px-2 rounded-lg bg-ink hover:bg-ink text-ink-3 hover:text-white border border-line-2 inline-flex items-center gap-1 cursor-pointer transition-colors text-2xs"
+            className="h-7 px-2 rounded-lg bg-white hover:bg-field text-ink-3 hover:text-ink border border-line inline-flex items-center gap-1 cursor-pointer transition-colors text-2xs"
           >
             <Upload className="w-3.5 h-3.5 text-accent" />
             <span className="hidden md:inline">PDF Seç</span>
@@ -289,12 +289,12 @@ export const DeckPdfViewer: React.FC<DeckPdfViewerProps> = ({
 
           {/* Zoom controls for local/custom mode */}
           {sourceType !== 'drive' && (
-            <div className="hidden lg:flex items-center gap-1 bg-ink border border-line-2 rounded-lg p-0.5 text-2xs">
+            <div className="hidden lg:flex items-center gap-1 bg-canvas border border-line rounded-lg p-0.5 text-2xs">
               <button
                 type="button"
                 onClick={() => setZoom((z) => Math.max(50, z - 15))}
                 title="Uzaklaştır"
-                className="w-6 h-6 flex items-center justify-center text-ink-3 hover:text-white rounded cursor-pointer"
+                className="w-6 h-6 flex items-center justify-center text-ink-3 hover:text-ink rounded cursor-pointer"
               >
                 <ZoomOut className="w-3 h-3" />
               </button>
@@ -303,7 +303,7 @@ export const DeckPdfViewer: React.FC<DeckPdfViewerProps> = ({
                 type="button"
                 onClick={() => setZoom((z) => Math.min(200, z + 15))}
                 title="Yakınlaştır"
-                className="w-6 h-6 flex items-center justify-center text-ink-3 hover:text-white rounded cursor-pointer"
+                className="w-6 h-6 flex items-center justify-center text-ink-3 hover:text-ink rounded cursor-pointer"
               >
                 <ZoomIn className="w-3 h-3" />
               </button>
@@ -311,7 +311,7 @@ export const DeckPdfViewer: React.FC<DeckPdfViewerProps> = ({
                 type="button"
                 onClick={() => setZoom(100)}
                 title="Sıfırla"
-                className="w-6 h-6 flex items-center justify-center text-ink-3 hover:text-white rounded cursor-pointer"
+                className="w-6 h-6 flex items-center justify-center text-ink-3 hover:text-ink rounded cursor-pointer"
               >
                 <RotateCcw className="w-3 h-3" />
               </button>
@@ -327,7 +327,7 @@ export const DeckPdfViewer: React.FC<DeckPdfViewerProps> = ({
               className={`h-7 px-2 rounded-lg border inline-flex items-center gap-1 cursor-pointer transition-colors text-2xs ${
                 isSplitView
                   ? 'bg-accent/20 border-accent/40 text-accent font-semibold'
-                  : 'bg-ink hover:bg-ink text-ink-3 border-line-2'
+                  : 'bg-white hover:bg-field text-ink-3 border-line'
               }`}
             >
               <Columns className="w-3.5 h-3.5" />
@@ -342,7 +342,7 @@ export const DeckPdfViewer: React.FC<DeckPdfViewerProps> = ({
               target="_blank"
               rel="noopener noreferrer"
               title="Orijinal PDF'i Yeni Sekmede Aç"
-              className="h-7 px-2 rounded-lg bg-ink hover:bg-ink text-ink-3 hover:text-white border border-line-2 inline-flex items-center gap-1 cursor-pointer transition-colors text-2xs"
+              className="h-7 px-2 rounded-lg bg-white hover:bg-field text-ink-3 hover:text-ink border border-line inline-flex items-center gap-1 cursor-pointer transition-colors text-2xs"
             >
               <ExternalLink className="w-3.5 h-3.5 text-ink-3" />
               <span className="hidden sm:inline">Yeni Sekme</span>
@@ -355,7 +355,7 @@ export const DeckPdfViewer: React.FC<DeckPdfViewerProps> = ({
               type="button"
               onClick={onClose}
               title="PDF Görüntüleyiciyi Kapat"
-              className="w-7 h-7 rounded-lg bg-ink hover:bg-ink text-ink-3 hover:text-white border border-line-2 flex items-center justify-center cursor-pointer transition-colors"
+              className="w-7 h-7 rounded-lg bg-white hover:bg-field text-ink-3 hover:text-ink border border-line flex items-center justify-center cursor-pointer transition-colors"
             >
               <X className="w-4 h-4" />
             </button>
@@ -364,7 +364,7 @@ export const DeckPdfViewer: React.FC<DeckPdfViewerProps> = ({
       </header>
 
       {/* Synchronized Page Navigation Banner (İlişkilendirilmiş Sayfa Gezinme Çubuğu) */}
-      <div className="shrink-0 bg-ink/80 border-b border-line-2/80 px-3 py-1.5 flex items-center justify-between gap-2 flex-wrap text-2xs">
+      <div className="shrink-0 bg-field border-b border-line px-3 py-1.5 flex items-center justify-between gap-2 flex-wrap text-2xs">
         {/* Mapping info badge */}
         <div className="flex items-center gap-2">
           <div className="flex items-center gap-1 text-accent font-medium">
@@ -387,7 +387,7 @@ export const DeckPdfViewer: React.FC<DeckPdfViewerProps> = ({
               onClick={() => handleJumpToPage(activePage - 1)}
               disabled={activePage <= 1}
               title="Önceki Sayfa"
-              className="w-6 h-6 rounded flex items-center justify-center bg-ink border border-line-2 text-ink-3 hover:text-white disabled:opacity-30 disabled:cursor-not-allowed cursor-pointer"
+              className="w-6 h-6 rounded flex items-center justify-center bg-canvas border border-line text-ink-3 hover:text-ink disabled:opacity-30 disabled:cursor-not-allowed cursor-pointer"
             >
               <ChevronLeft className="w-3.5 h-3.5" />
             </button>
@@ -401,7 +401,7 @@ export const DeckPdfViewer: React.FC<DeckPdfViewerProps> = ({
                 className={`px-2 py-0.5 rounded text-2xs font-mono cursor-pointer transition-colors ${
                   activePage === p
                     ? 'bg-accent text-white font-bold shadow-xs'
-                    : 'bg-ink hover:bg-ink text-ink-3 border border-line-2/80'
+                    : 'bg-white hover:bg-field text-ink-3 border border-line'
                 }`}
                 title={`Sayfa ${p}'e git`}
               >
@@ -414,7 +414,7 @@ export const DeckPdfViewer: React.FC<DeckPdfViewerProps> = ({
               onClick={() => handleJumpToPage(activePage + 1)}
               disabled={activePage >= (slideLoc.totalPages || 300)}
               title="Sonraki Sayfa"
-              className="w-6 h-6 rounded flex items-center justify-center bg-ink border border-line-2 text-ink-3 hover:text-white disabled:opacity-30 disabled:cursor-not-allowed cursor-pointer"
+              className="w-6 h-6 rounded flex items-center justify-center bg-canvas border border-line text-ink-3 hover:text-ink disabled:opacity-30 disabled:cursor-not-allowed cursor-pointer"
             >
               <ChevronRight className="w-3.5 h-3.5" />
             </button>
@@ -433,7 +433,7 @@ export const DeckPdfViewer: React.FC<DeckPdfViewerProps> = ({
                 const val = parseInt(pageInputVal, 10);
                 if (!isNaN(val) && val > 0) handleJumpToPage(val);
               }}
-              className="w-11 h-6 bg-ink border border-line-2 rounded px-1 text-center font-mono text-2xs text-white focus:outline-hidden focus:border-accent"
+              className="w-11 h-6 bg-canvas border border-line rounded px-1 text-center font-mono text-2xs text-ink focus:outline-hidden focus:border-accent"
               title="Doğrudan sayfa numarası girip Enter'a basın"
             />
           </form>
@@ -441,10 +441,10 @@ export const DeckPdfViewer: React.FC<DeckPdfViewerProps> = ({
       </div>
 
       {/* Main Viewer Area */}
-      <div className="relative flex-1 min-h-0 w-full bg-ink flex items-center justify-center overflow-hidden">
+      <div className="relative flex-1 min-h-0 w-full bg-canvas flex items-center justify-center overflow-hidden">
         {/* Loading Spinner */}
         {isLoading && (
-          <div className="absolute inset-0 z-10 flex flex-col items-center justify-center gap-3 bg-ink/80 backdrop-blur-xs text-ink-3">
+          <div className="absolute inset-0 z-10 flex flex-col items-center justify-center gap-3 bg-field text-ink-3">
             <RefreshCw className="w-8 h-8 text-accent animate-spin" />
             <p className="m-0 text-sm font-medium text-ink-3">
               Orijinal PDF hazırlanıyor (Sayfa {activePage})…
@@ -472,7 +472,7 @@ export const DeckPdfViewer: React.FC<DeckPdfViewerProps> = ({
             <div className="w-12 h-12 rounded-2xl bg-warn/20 text-warn border border-warn/30 flex items-center justify-center">
               <AlertCircle className="w-6 h-6" />
             </div>
-            <h3 className="m-0 text-md font-bold text-white">PDF Sayfa İçinde Yüklenemedi</h3>
+            <h3 className="m-0 text-md font-bold text-ink">PDF Sayfa İçinde Yüklenemedi</h3>
             <p className="m-0 text-xs text-ink-3 leading-relaxed">
               Tarayıcınızın üçüncü taraf çerez ayarları Google Drive önizleyicisini engellemiş olabilir veya yerel sunucu bağlantısı kapalıdır.
             </p>
@@ -491,7 +491,7 @@ export const DeckPdfViewer: React.FC<DeckPdfViewerProps> = ({
               <button
                 type="button"
                 onClick={() => fileInputRef.current?.click()}
-                className="h-9 px-3.5 rounded-xl bg-ink hover:bg-ink-2 text-ink-3 text-sm font-medium inline-flex items-center gap-2 transition-colors border border-line-2"
+                className="h-9 px-3.5 rounded-xl bg-canvas hover:bg-line-soft text-ink-3 text-sm font-medium inline-flex items-center gap-2 transition-colors border border-line"
               >
                 <Upload className="w-4 h-4 text-accent" />
                 <span>Yerel Dosyadan Seç</span>
@@ -502,7 +502,7 @@ export const DeckPdfViewer: React.FC<DeckPdfViewerProps> = ({
       </div>
 
       {/* Footer Info Strip */}
-      <footer className="shrink-0 bg-ink border-t border-line-2/80 px-3 py-1.5 flex items-center justify-between text-2xs text-ink-3">
+      <footer className="shrink-0 bg-canvas border-t border-line px-3 py-1.5 flex items-center justify-between text-2xs text-ink-3">
         <div className="flex items-center gap-2 truncate">
           <span className={`w-2 h-2 rounded-full shrink-0 ${sourceType === 'local' ? 'bg-ok' : 'bg-accent'}`} />
           <span className="truncate">

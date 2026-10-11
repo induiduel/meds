@@ -288,7 +288,7 @@ export const UserAuthModal: React.FC<UserAuthModalProps> = ({
   }
   return (
     <div
-      className="fixed inset-0 z-[100] flex items-end sm:items-center justify-center p-3 sm:p-4 bg-ink/45"
+      className="fixed inset-0 z-[100] flex items-end sm:items-center justify-center p-3 sm:p-4 bg-[var(--color-scrim)]"
       role="dialog"
       aria-modal="true"
       aria-label="Giriş ve kayıt"

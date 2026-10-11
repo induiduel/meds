@@ -26,6 +26,7 @@ import {
   CornerDownLeft,
   Brain,
   Clock,
+  Boxes,
 } from 'lucide-react';
 import type { QuestionItem, Committee, AdminNotification } from '../../types';
 import { ApiService } from '../../services/api';
@@ -38,6 +39,7 @@ import { useTheme } from '../../utils/theme';
 import { toast } from '../ui/Toast';
 import { ManageDraftsSection } from './ManageDraftsSection';
 import { ManageDataSection } from './ManageDataSection';
+import { ManageCatalogSection } from './ManageCatalogSection';
 import { ManagePhasesSection } from './ManagePhasesSection';
 import { ManageMergesSection } from './ManageMergesSection';
 import { ManageInboxSection } from './ManageInboxSection';
@@ -69,7 +71,7 @@ import {
   deleteDraftEverywhere,
 } from '../../services/manageConsoleService';
 
-export type ManageSection = 'pending' | 'inbox' | 'pool' | 'data' | 'phases' | 'merges' | 'drafts' | 'studio' | 'moderation' | 'users' | 'scripts' | 'system' | 'automation' | 'datacore' | 'notebooklm' | 'database';
+export type ManageSection = 'pending' | 'inbox' | 'pool' | 'catalog' | 'data' | 'phases' | 'merges' | 'drafts' | 'studio' | 'moderation' | 'users' | 'scripts' | 'system' | 'automation' | 'datacore' | 'notebooklm' | 'database';
 
 interface ManageConsoleProps {
   adminEmail: string;
@@ -92,6 +94,7 @@ const SECTIONS: { id: ManageSection; slug: string; label: string; hint: string; 
   { id: 'inbox', slug: 'gelen-kutusu', label: 'Gelen kutusu', hint: 'Bildirim, yorum, taslak ve sistem uyarıları tek kuyrukta; en yenisi üstte.', icon: Inbox, group: 'Genel', keywords: 'bildirim yorum uyarı' },
   { id: 'moderation', slug: 'moderasyon', label: 'Moderasyon', hint: 'Şikâyet edilen soruyu gör, düzelt ya da kaldır.', icon: Wrench, group: 'Genel', keywords: 'şikayet hata bildirimi' },
   { id: 'pool', slug: 'soru-havuzu', label: 'Soru havuzu', hint: 'Kurul sorularını düzenle, sil, içe aktar; taslakları kümele.', icon: Library, group: 'İçerik', keywords: 'kurul soru içe aktar yükle çıkmış' },
+  { id: 'catalog', slug: 'veri-katalogu', label: 'Veri kataloğu', hint: 'Her veri türü tek yerde: ara, sınıflara göre süz, kaydı düzenle, değerlendir (onaylı / inceleme / sorunlu), etiketle ve ilişkileri gez.', icon: Boxes, group: 'İçerik', keywords: 'katalog sınıflandır etiket değerlendir ilişki deste kazanım sözlük kart hastalık özet geri bildirim müzik' },
   { id: 'data', slug: 'tum-veriler', label: 'Tüm veriler', hint: 'Her veri kümesi tek tabloda: ara, sırala, seç, toplu işlem yap, CSV al.', icon: Table2, group: 'İçerik', keywords: 'tablo csv toplu' },
   { id: 'phases', slug: 'fazlar', label: 'Faz verileri', hint: 'Soru bazında faz çıktıları: gez, elle düzelt, arama testini çalıştır.', icon: FlaskConical, group: 'İçerik', keywords: 'faz 14 faz 15' },
   { id: 'merges', slug: 'birlesenler', label: 'Birleştirilen sorular', hint: 'Kopya çıkmış sorular: yan yana karşılaştır, asıl soruyu seç ya da ayır.', icon: GitMerge, group: 'İçerik', keywords: 'kopya birleştir' },
@@ -505,6 +508,7 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
               />
             )}
 
+            {section === 'catalog' && <ManageCatalogSection adminEmail={adminEmail} />}
             {section === 'data' && (
               <ManageDataSection
                 adminEmail={adminEmail}

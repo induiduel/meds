@@ -622,7 +622,7 @@ export const LocalAiChatView: React.FC<LocalAiChatViewProps> = ({
 
       {/* 1. Kullanıcı Onaylı Bulut Fallback Modalı (Otomatik Geçiş Kesinlikle Engellendi) */}
       {fallbackPromptDialog && (
-        <div className="ms-overlay fixed inset-0 z-50 bg-black/50 backdrop-blur-xs flex items-center justify-center p-4">
+        <div className="ms-overlay fixed inset-0 z-50 bg-[var(--color-scrim)] flex items-center justify-center p-4">
           <div className="bg-white rounded-2xl border border-line p-5 max-w-[500px] w-full shadow-xl flex flex-col gap-4">
             <div className="flex items-start gap-3">
               <div className="p-2.5 rounded-xl bg-warn-soft border border-warn/30 text-warn shrink-0">
@@ -666,7 +666,7 @@ export const LocalAiChatView: React.FC<LocalAiChatViewProps> = ({
 
       {/* 2. Yapay Zeka Hata Kayıtları (Error Logs) Denetim Modalı */}
       {showErrorLogsModal && (
-        <div className="ms-overlay fixed inset-0 z-50 bg-black/50 backdrop-blur-xs flex items-center justify-center p-4">
+        <div className="ms-overlay fixed inset-0 z-50 bg-[var(--color-scrim)] flex items-center justify-center p-4">
           <div className="bg-white rounded-2xl border border-line p-5 max-w-[700px] w-full max-h-[85dvh] flex flex-col shadow-2xl">
             <div className="flex items-center justify-between pb-3 border-b border-line">
               <div className="flex items-center gap-2">

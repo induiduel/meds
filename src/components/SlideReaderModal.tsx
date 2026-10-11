@@ -68,7 +68,7 @@ export const SlideReaderModal: React.FC<SlideReaderModalProps> = ({
     : note.pages;
 
   return (
-    <div className="ms-overlay fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-ink/70 backdrop-blur-xs animate-in fade-in duration-200">
+    <div className="ms-overlay fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-[var(--color-scrim)] animate-in fade-in duration-200">
       <div 
         className="bg-white rounded-2xl shadow-2xl border border-line w-full max-w-4xl max-h-[92dvh] flex flex-col overflow-hidden"
         onClick={(e) => e.stopPropagation()}

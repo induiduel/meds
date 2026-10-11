@@ -362,7 +362,7 @@ export const SlideDrawingCanvas: React.FC<{
 
       {/* Floating Canvas Action Controls when drawings exist */}
       {isInteractive && (
-        <div className="fixed left-1/2 -translate-x-1/2 bottom-[max(16px,env(safe-area-inset-bottom))] flex items-center gap-1.5 z-[66] pointer-events-auto bg-white/95 dark:bg-panel/90 backdrop-blur-md p-1 rounded-xl border border-line shadow-lg animate-in fade-in duration-150">
+        <div className="fixed left-1/2 -translate-x-1/2 bottom-[max(16px,env(safe-area-inset-bottom))] flex items-center gap-1.5 z-[66] pointer-events-auto bg-white/95 backdrop-blur-md p-1 rounded-xl border border-line shadow-lg animate-in fade-in duration-150">
           <button
             type="button"
             onClick={undo}
@@ -377,7 +377,7 @@ export const SlideDrawingCanvas: React.FC<{
             onClick={clearAll}
             disabled={strokes.length === 0}
             title="Bu Slaytın Çizimlerini Temizle"
-            className="p-1.5 rounded-lg text-ink-2 hover:text-rose-600 hover:bg-rose-50 dark:hover:bg-rose-950/40 disabled:opacity-30 disabled:pointer-events-none cursor-pointer transition-colors"
+            className="p-1.5 rounded-lg text-ink-2 hover:text-rose-600 hover:bg-rose-50 disabled:opacity-30 disabled:pointer-events-none cursor-pointer transition-colors"
           >
             <Trash2 className="w-4 h-4" />
           </button>
@@ -507,7 +507,7 @@ export const DrawingModeToolbarTrigger: React.FC<{ className?: string }> = ({ cl
             {/* Color Palette Popover */}
             {showColorPicker && (
               <div
-                className="absolute top-9 left-0 z-50 p-2 bg-white dark:bg-panel border border-line rounded-xl shadow-xl flex items-center gap-1.5 animate-in fade-in duration-100"
+                className="absolute top-9 left-0 z-50 p-2 bg-white border border-line rounded-xl shadow-xl flex items-center gap-1.5 animate-in fade-in duration-100"
                 onClick={(e) => e.stopPropagation()}
               >
                 {PALETTE_COLORS.map((c) => (
