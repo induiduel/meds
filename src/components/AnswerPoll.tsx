@@ -62,6 +62,7 @@ export const AnswerPoll: React.FC<Props> = ({ questionId, options, voterUid, hin
   const [run, setRun] = useState(false);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState('');
+  const [retryN, setRetryN] = useState(0);
 
   useEffect(() => {
     const el = rootRef.current;
@@ -74,11 +75,13 @@ export const AnswerPoll: React.FC<Props> = ({ questionId, options, voterUid, hin
   useEffect(() => {
     if (!visible) return;
     let alive = true;
+    setError('');
     ApiService.getAnswerVotes(questionId, voterUid || '')
       .then((v) => alive && setVotes(v))
-      .catch((e) => alive && setError(e.message));
+      // Ham ağ hatası ("Failed to fetch" vb.) kullanıcıya gösterilmez; bayrak tutulur, ileti altta dostça yazılır.
+      .catch(() => alive && setError('load'));
     return () => { alive = false; };
-  }, [visible, questionId, voterUid]);
+  }, [visible, questionId, voterUid, retryN]);
 
   useEffect(() => {
     if (!votes) return;
@@ -137,6 +140,7 @@ export const AnswerPoll: React.FC<Props> = ({ questionId, options, voterUid, hin
     : picked
     ? 'Seçimini onayla'
     : 'Doğru bildiğin şıkka dokun';
+  const loadFailed = !votes && !!error;
 
   return (
     <section ref={rootRef} className={`ms-poll ${className}`} aria-label="Cevap anketi" aria-busy={!votes}>
@@ -144,7 +148,11 @@ export const AnswerPoll: React.FC<Props> = ({ questionId, options, voterUid, hin
         <BarChart3 className="w-4 h-4 shrink-0" aria-hidden />
         <span className="font-semibold text-ink">Cevap anketi</span>
         <span className="ms-poll-total"><Users className="w-3.5 h-3.5" aria-hidden /> {total.toLocaleString('tr-TR')} oy</span>
-        {myVote && !error ? (
+        {loadFailed ? (
+          <button type="button" className="ms-poll-status is-err" style={{ cursor: 'pointer' }} onClick={() => setRetryN((n) => n + 1)} title="Tekrar dene">
+            Oylar yüklenemedi — tekrar dene
+          </button>
+        ) : myVote && !error ? (
           <span className="ms-poll-status is-done">
             Oyun <b className="font-mono">{myVote}</b>
             <button type="button" className="ms-poll-undo" onClick={undo} disabled={busy} title="Oyunu geri al ve başka şık seç">

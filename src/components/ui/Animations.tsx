@@ -21,7 +21,7 @@ export const BookLoader: React.FC<{ size?: number; className?: string }> = ({ si
       <path d="M20 24h20M20 31h20M20 38h14" />
       <path d="M56 24h20M56 31h20M56 38h16" />
     </g>
-    <path className="ms-page" d="M48 16c8-6 22-7 36-4v44c-14-3-28-2-36 4z" fill="#FFF9EF" stroke="#0E1A26" strokeWidth="2.2" strokeLinejoin="round" />
+<path className="ms-book-page" d="M48 16c8-6 22-7 36-4v44c-14-3-28-2-36 4z" fill="#FFF9EF" stroke="#0E1A26" strokeWidth="2.2" strokeLinejoin="round" />
     <line x1="48" y1="16" x2="48" y2="60" stroke="#0E1A26" strokeWidth="2.2" />
   </svg>
 );

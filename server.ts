@@ -5482,15 +5482,20 @@ app.post('/api/notebooklm/ingest/flashcards', async (req, res) => {
 const INTERACTIVE_DECKS_FILE = path.resolve(__dirname, 'src', 'data', 'interactive_learning_decks.json');
 const INTERACTIVE_DECK_ITEMS_DIR = path.resolve(__dirname, 'src', 'data', 'decks', 'items');
 
+let decksCache: { mtime: number; data: any[] } | null = null;
 function getDecksDb(): any[] {
   try {
     if (fs.existsSync(INTERACTIVE_DECKS_FILE)) {
-      return JSON.parse(fs.readFileSync(INTERACTIVE_DECKS_FILE, 'utf-8'));
+      const mtime = fs.statSync(INTERACTIVE_DECKS_FILE).mtimeMs;
+      if (decksCache && decksCache.mtime === mtime) return decksCache.data;
+      const data = JSON.parse(fs.readFileSync(INTERACTIVE_DECKS_FILE, 'utf-8'));
+      decksCache = { mtime, data };
+      return data;
     }
   } catch (e) {
     console.error('Error reading interactive_learning_decks.json:', e);
   }
-  return [];
+  return decksCache?.data || [];
 }
 
 app.get(['/api/decks', '/api/ogren', '/api/interactive-decks'], (req, res) => {

@@ -249,6 +249,8 @@ export async function safeJsonFetch<T = any>(
   input: RequestInfo | URL,
   init?: RequestInit
 ): Promise<{ ok: boolean; status: number; data?: T; error?: string }> {
+  let sentHeaders: Headers | null = null;
+  let sentTimeoutMs = 30000;
   try {
     let resolvedInput = input;
     if (typeof input === 'string' && input.startsWith('/')) {
@@ -299,6 +301,8 @@ export async function safeJsonFetch<T = any>(
       headers,
       signal: hasSignal || (typeof AbortSignal !== 'undefined' && 'timeout' in AbortSignal ? AbortSignal.timeout(timeoutMs) : undefined),
     };
+    sentHeaders = headers;
+    sentTimeoutMs = timeoutMs;
     const res = await fetch(resolvedInput, fetchOptions);
     const contentType = res.headers.get('content-type') || '';
     if (!res.ok) {
@@ -327,6 +331,28 @@ export async function safeJsonFetch<T = any>(
     const data = await res.json();
     return { ok: true, status: res.status, data };
   } catch (err: any) {
+    // Ağ düzeyinde hata + kayıtlı özel API adresi varsa: adres bayatlamış olabilir
+    // (eski tünel/DNS). Varsayılan adres farklıysa bir kez oradan dene; tutarsa bayat kaydı sil.
+    try {
+      if (typeof input === 'string' && input.startsWith('/') && typeof localStorage !== 'undefined') {
+        const stored = (localStorage.getItem(API_BASE_URL_KEY) || '').trim().replace(/\/$/, '');
+        let def = '';
+        try { def = defaultApiBaseForThisHost().replace(/\/$/, ''); } catch { def = ''; }
+        if (stored && def && stored.replace(/\/$/, '') !== def) {
+          const retryInit: RequestInit = {
+            ...init,
+            headers: sentHeaders || new Headers(init?.headers),
+            signal: typeof AbortSignal !== 'undefined' && 'timeout' in AbortSignal ? AbortSignal.timeout(sentTimeoutMs) : undefined,
+          };
+          const retry = await fetch(`${def}${input}`, retryInit);
+          const ct = retry.headers.get('content-type') || '';
+          if (retry.ok && ct.includes('application/json')) {
+            try { localStorage.removeItem(API_BASE_URL_KEY); } catch (_) {}
+            return { ok: true, status: retry.status, data: await retry.json() as T };
+          }
+        }
+      }
+    } catch (_) {}
     const isTimeout = err.name === 'AbortError' || err.name === 'TimeoutError';
     const errMsg = isTimeout
       ? 'Sunucu yanıt zaman aşımına uğradı. İstemci yapay zeka motoru devreye alınıyor...'

@@ -49,7 +49,7 @@ html.ui-v7 .cx-verdict { animation: ui-in var(--mo-base) var(--mo-ease) both; }
 
 /* ---------- Soru havuzu: özet + yuva ---------- */
 .pl-sum { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; padding: var(--dn-pad); border-radius: var(--dn-radius); background: var(--color-white); }
-.pl-ring { width: 64px; height: 64px; flex-shrink: 0; transform: rotate(-90deg); }
+svg.pl-ring { width: 64px; height: 64px; flex-shrink: 0; transform: rotate(-90deg); }
 .pl-ring circle { fill: none; stroke-width: 8; stroke-linecap: round; transition: stroke-dasharray .8s var(--mo-ease); }
 .pl-ring-bg { stroke: var(--color-line-soft); }
 .pl-ring-draft { stroke: var(--color-warn); opacity: .55; }
