@@ -353,6 +353,9 @@ def build_glossary(corpus: LectureCorpus) -> tuple[dict, dict, list[dict]]:
         definition = _clean(n["definition"])
         top = _refs(corpus, n.get("kaynak") or [])
         destek = corpus.support(definition, top) if top else 0.0
+        isci = n.get("isci")  # ders işçisi: alıntısı PDF'e karşı doğrulandı + yönetici onayı (scripts/ders_isci/yayinla.py)
+        if isci:
+            destek = 1.0
         mevcut = key in out or ids.norm_key(term) in {ids.norm_key(r["term"]) for r in out.values()}
         if destek < ESIK or mevcut:
             counts["yeni_red"] += 1
@@ -366,6 +369,9 @@ def build_glossary(corpus: LectureCorpus) -> tuple[dict, dict, list[dict]]:
             rec["aliases"] = n["aliases"]
         rec["dogrulama"] = {"durum": "kaynakli", "destek": destek, "uretici": "s13_study"}
         rec["kaynaklar"] = [corpus.ref(i) for i in top[:2]]
+        if isci:
+            rec["dogrulama"] = {"durum": "ders_isci", "destek": 1.0, "uretici": "s13_study", "is_id": isci.get("is_id")}
+            rec["kaynaklar"] = [isci["kaynak"]]
         out[key] = rec
         counts["yeni"] += 1
         counts["kaynakli"] += 1

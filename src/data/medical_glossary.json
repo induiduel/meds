@@ -5197,7 +5197,7 @@
     "description": "Vasküler endotel hücreleri tarafından araşidonik asitten COX-1/COX-2 ve Prostasiklin Sentaz enzimleri aracılığıyla sentezlenen prostanoid. Trombosit IP reseptörlerine bağlanıp hücre içi cAMP düzeyini artırarak trombosit agregasyonunu kuvvetle inhibe eder ve arteriollerde güçlü vazodilatasyon oluşturur. Trombositte üretilen protrombotik Tromboksan A2 (TXA2) ile zıt çalışarak damar içi trombüs oluşumunu engeller.",
     "discipline": "Tıbbi Patoloji",
     "committee": "",
-    "clinicalPearl": "Selektif COX-2 inhibitörleri endoteldeki PGI2 sentezini baskılarken trombositteki TXA2'ye dokunmaz; bu durum tromboz, inme ve miyokard enfarktüsü riskini artırır.",
+    "clinicalPearl": "Selektif COX-2 inhibitörleri endoteldeki PGI2 sentezini baskılarken trombositteki TXA2'ye dokunmaz; bu durum tromboz, inme ve miyokard enfarktüsü riskini artırır. · Preeklampside prostasiklin ve prostaglandin E2 azalır, tromboksan A2 artar; PGI2 azalması hem hipertansiyona hem hiperkoagülabiliteye katkıda bulunur.",
     "aliases": [
       "PGI2",
       "Prostasiklin"
@@ -5231,7 +5231,7 @@
     "description": "Dolaşımdaki trombositler tarafından COX-1 ve Tromboksan Sentaz enzimleri aracılığıyla üretilen son derece kararsız lipid mediyatör. Güçlü vazokonstriktördür ve trombosit agregasyonu ile granül salınımını tetikleyerek primer hemostatik tıkacın oluşmasını sağlar.",
     "discipline": "Tıbbi Patoloji / Hematoloji",
     "committee": "",
-    "clinicalPearl": "Trombositler çekirdeksiz olduğu için aspirin tarafından geri dönüşümsüz asetillenen COX-1 enzimini yenileyemezler; bu nedenle düşük doz aspirin tüm trombosit ömrü boyunca (7-10 gün) TXA2 üretimini durdurur.",
+    "clinicalPearl": "Trombositler çekirdeksiz olduğu için aspirin tarafından geri dönüşümsüz asetillenen COX-1 enzimini yenileyemezler; bu nedenle düşük doz aspirin tüm trombosit ömrü boyunca (7-10 gün) TXA2 üretimini durdurur. · Preeklampside tromboksan A2 artışı vazokonstriksiyon ve hipertansiyona katkıda bulunur.",
     "aliases": [
       "TXA2",
       "Tromboksan A2"
@@ -10380,7 +10380,8 @@
         "kurul": 1,
         "sayfa": 27
       }
-    ]
+    ],
+    "clinicalPearl": "Spiral arterlerde yetersiz yeniden şekillenme → plasental hipoksi → sFlt-1/endoglin artışı → endotel disfonksiyonu; en etkili tedavi acil doğumdur."
   },
   "hipertrofi": {
     "term": "Hipertrofi",
@@ -15173,7 +15174,8 @@
         "kurul": 1,
         "sayfa": 20
       }
-    ]
+    ],
+    "clinicalPearl": "TORCH'ta plasentada kronik villit görülür; asendan enfeksiyonda ise akut koryoamniyonit."
   },
   "kızamıkçık aşısı ve gebelik": {
     "term": "Kızamıkçık aşısı ve gebelik",
@@ -15637,7 +15639,8 @@
         "kurul": 1,
         "sayfa": 24
       }
-    ]
+    ],
+    "clinicalPearl": "Yaklaşık %90 Fallop tüpünde; en önemli yatkınlık kronik salpingite bağlı PİH; RİA riski yaklaşık 2 kat artırır; histolojik tanı koryonik villustur."
   },
   "osteonekroz klinik özellikleri": {
     "term": "Osteonekroz klinik özellikleri",
@@ -16051,7 +16054,8 @@
         "kurul": 1,
         "sayfa": 66
       }
-    ]
+    ],
+    "clinicalPearl": "Sitotrofoblast, sinsityotrofoblast ve ekstravillöz (ara) trofoblast ayrımı; PSTT ara trofoblasttan, koryokarsinom koryonik epitelden gelişir."
   },
   "fosfomisin": {
     "term": "Fosfomisin",
@@ -19060,7 +19064,7 @@
     "description": "Gebeliğin temel hormonu; hamileliğin erken dönemlerinde yükselmeye başlar, 14-16. haftalar arasında en yüksek değerine ulaşır ve sonra yavaşça azalır.",
     "discipline": "Tıbbi Genetik",
     "committee": "",
-    "clinicalPearl": "Beta-hCG, AFP ve LDH ile birlikte testis germ hücreli tümörlerinde prognoz ve tedavi yanıtını değerlendirmede kritik serum belirtecidir.",
+    "clinicalPearl": "Beta-hCG, AFP ve LDH ile birlikte testis germ hücreli tümörlerinde prognoz ve tedavi yanıtını değerlendirmede kritik serum belirtecidir. · Tüm gebelik trofoblastik hastalıkları hCG üretir; PSTT'de hCG düşüktür ve hPL belirgindir.",
     "aliases": [
       "hCG"
     ],
@@ -19727,7 +19731,8 @@
         "kurul": 1,
         "sayfa": 8
       }
-    ]
+    ],
+    "clinicalPearl": "Kısmi hidatiform mol neredeyse her zaman triploiddir (örn. 69,XXY); tam mol diploiddir."
   },
   "neoplazi": {
     "term": "Neoplazi",
@@ -20221,6 +20226,969 @@
         "ders": "patoloji",
         "kurul": 2,
         "sayfa": 102
+      }
+    ]
+  },
+  "asendan enfeksiyon (plasental)": {
+    "term": "Asendan enfeksiyon (plasental)",
+    "category": "patoloji",
+    "definition": "Doğum kanalından yukarı doğru yayılarak plasenta ve zarlara ulaşan, neredeyse her zaman bakteriyel ve genellikle polimikrobiyal enfeksiyon yoludur.",
+    "description": "Doğum kanalından yukarı doğru yayılarak plasenta ve zarlara ulaşan, neredeyse her zaman bakteriyel ve genellikle polimikrobiyal enfeksiyon yoludur.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "",
+    "clinicalPearl": "En sık plasental enfeksiyon yoludur; erken membran yırtılması ve erken doğuma neden olur.",
+    "aliases": [
+      "asendan plasental enfeksiyon"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-e1c2ffa86e"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Patoloji/32)Gebelik Hastalıkları .pdf",
+        "ders": "Tıbbi Patoloji",
+        "kurul": 1,
+        "sayfa": 6,
+        "alinti": "En sık görülen yol Neredeyse her zaman bakteriyel Genellikle polimikrobiyal"
+      }
+    ]
+  },
+  "akut koryoamniyonit": {
+    "term": "Akut koryoamniyonit",
+    "category": "patoloji",
+    "definition": "Koryo-amniyonda nötrofilik infiltrasyon, ödem ve konjesyonla karakterize, asendan enfeksiyonun plasental inflamasyonudur.",
+    "description": "Koryo-amniyonda nötrofilik infiltrasyon, ödem ve konjesyonla karakterize, asendan enfeksiyonun plasental inflamasyonudur.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "",
+    "clinicalPearl": "Kordon ve villuslara ilerleyebilir; funisitise yol açar.",
+    "aliases": [
+      "koryoamniyonit"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-e1c2ffa86e"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Patoloji/32)Gebelik Hastalıkları .pdf",
+        "ders": "Tıbbi Patoloji",
+        "kurul": 1,
+        "sayfa": 7,
+        "alinti": "Koryo-amniyon: Nötrofilik infiltrasyon Ödem Konjesyon Tanım: Akut koryo-amniyonit"
+      }
+    ]
+  },
+  "funisitis": {
+    "term": "Funisitis",
+    "category": "patoloji",
+    "definition": "Koryo-amniyon enfeksiyonunun kordon damarlarına yayılmasıyla oluşan göbek kordonunun akut vaskülitidir.",
+    "description": "Koryo-amniyon enfeksiyonunun kordon damarlarına yayılmasıyla oluşan göbek kordonunun akut vaskülitidir.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "",
+    "clinicalPearl": "Fetal inflamasyon belirtecidir; neonatal sepsis riskini gösterir.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-e1c2ffa86e"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Patoloji/32)Gebelik Hastalıkları .pdf",
+        "ders": "Tıbbi Patoloji",
+        "kurul": 1,
+        "sayfa": 8,
+        "alinti": "Funisitis: Göbek kordonunun akut vasküliti Nedeni: Koryo-amniyon enfeksiyonunun kordon damarlarına yayılması"
+      }
+    ]
+  },
+  "omfalit-omfaloflebit": {
+    "term": "Omfalit-omfaloflebit",
+    "category": "terim",
+    "definition": "Doğumdan sonra bebeğin göbek kalıntısında oluşan enfeksiyonlardır.",
+    "description": "Doğumdan sonra bebeğin göbek kalıntısında oluşan enfeksiyonlardır.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "",
+    "clinicalPearl": "Doğum öncesi kordon vasküliti olan funisitisten ayrılır.",
+    "aliases": [
+      "omfalit"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-e1c2ffa86e"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Patoloji/32)Gebelik Hastalıkları .pdf",
+        "ders": "Tıbbi Patoloji",
+        "kurul": 1,
+        "sayfa": 8,
+        "alinti": "Omfalit-omfaloflebitis Doğumdan sonra bebeğin göbek kalıntısında oluşan enfeksiyonlar"
+      }
+    ]
+  },
+  "preterm doğum": {
+    "term": "Preterm doğum",
+    "category": "terim",
+    "definition": "Gebeliğin 20. ile 37. haftaları arasında gerçekleşen doğumdur.",
+    "description": "Gebeliğin 20. ile 37. haftaları arasında gerçekleşen doğumdur.",
+    "discipline": "Obstetri",
+    "committee": "",
+    "clinicalPearl": "Asendan plasental enfeksiyonun önemli sonucudur.",
+    "aliases": [
+      "erken doğum"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-e1c2ffa86e"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Patoloji/32)Gebelik Hastalıkları .pdf",
+        "ders": "Tıbbi Patoloji",
+        "kurul": 1,
+        "sayfa": 5,
+        "alinti": "Preterm (erken) doğum, gebeliğin 20. ile 37. haftaları arasında gerçekleşen doğum"
+      }
+    ]
+  },
+  "kronik villit": {
+    "term": "Kronik villit",
+    "category": "patoloji",
+    "definition": "Koryon villuslarında kronik inflamatuvar infiltrasyon bulunmasıdır; TORCH gibi hematojen enfeksiyonların plasental örüntüsüdür.",
+    "description": "Koryon villuslarında kronik inflamatuvar infiltrasyon bulunmasıdır; TORCH gibi hematojen enfeksiyonların plasental örüntüsüdür.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "",
+    "clinicalPearl": "Asendan enfeksiyonda akut koryoamniyonit, hematojen enfeksiyonda kronik villit görülür.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-e1c2ffa86e"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Patoloji/32)Gebelik Hastalıkları .pdf",
+        "ders": "Tıbbi Patoloji",
+        "kurul": 1,
+        "sayfa": 10,
+        "alinti": "Koryon villuslarında: Kronik inflamatuvar infiltrasyon Kronik villit"
+      }
+    ]
+  },
+  "koryo-retinit": {
+    "term": "Koryo-retinit",
+    "category": "patoloji",
+    "definition": "Retina ve koroidin birlikte inflamasyonudur; TORCH enfeksiyonlarında fetal göz tutulumunu gösterir.",
+    "description": "Retina ve koroidin birlikte inflamasyonudur; TORCH enfeksiyonlarında fetal göz tutulumunu gösterir.",
+    "discipline": "Oftalmoloji",
+    "committee": "",
+    "aliases": [
+      "korioretinit"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-e1c2ffa86e"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Patoloji/32)Gebelik Hastalıkları .pdf",
+        "ders": "Tıbbi Patoloji",
+        "kurul": 1,
+        "sayfa": 10,
+        "alinti": "Fetüse yayılım: Ensefalit Koryo-retinit Diğer organ hasarları"
+      }
+    ]
+  },
+  "kornual (interstisyel) gebelik": {
+    "term": "Kornual (interstisyel) gebelik",
+    "category": "hastalik",
+    "definition": "Tüpün uterus içi kısmına, uterusun Fallop tüpleriyle birleştiği kornu bölgesine yerleşen ektopik gebelik biçimidir.",
+    "description": "Tüpün uterus içi kısmına, uterusun Fallop tüpleriyle birleştiği kornu bölgesine yerleşen ektopik gebelik biçimidir.",
+    "discipline": "Kadın Hastalıkları ve Doğum",
+    "committee": "",
+    "aliases": [
+      "korneal gebelik",
+      "interstisyel gebelik"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-e1c2ffa86e"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Patoloji/32)Gebelik Hastalıkları .pdf",
+        "ders": "Tıbbi Patoloji",
+        "kurul": 1,
+        "sayfa": 11,
+        "alinti": "Diğer lokalizasyonlar: Ovaryum Karın boşluğu (abdominal gebelik) Tüpün uterus içi kısmı (korneal gebelik)"
+      }
+    ]
+  },
+  "hematosalpinks": {
+    "term": "Hematosalpinks",
+    "category": "patoloji",
+    "definition": "Tüp gebeliğinde invaziv plasentanın duvarı delmesiyle tüp lümeninde kan birikmesidir (intratubal hematom).",
+    "description": "Tüp gebeliğinde invaziv plasentanın duvarı delmesiyle tüp lümeninde kan birikmesidir (intratubal hematom).",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "",
+    "clinicalPearl": "İntraperitoneal kanamaya zemin hazırlar.",
+    "aliases": [
+      "intratubal hematom"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-e1c2ffa86e"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Patoloji/32)Gebelik Hastalıkları .pdf",
+        "ders": "Tıbbi Patoloji",
+        "kurul": 1,
+        "sayfa": 15,
+        "alinti": "Tüp gebeliklerinde: İnvaziv plasenta: Tüp duvarını deler İntratubal hematom (hematosalpinx) İntraperitoneal kanama"
+      }
+    ]
+  },
+  "eklampsi": {
+    "term": "Eklampsi",
+    "category": "hastalik",
+    "definition": "Preeklampsiye konvülsiyonların eklenmesidir; hastalığın şiddetli formudur.",
+    "description": "Preeklampsiye konvülsiyonların eklenmesidir; hastalığın şiddetli formudur.",
+    "discipline": "Kadın Hastalıkları ve Doğum",
+    "committee": "",
+    "clinicalPearl": "Koma ve en sık böbrek-karaciğer yetmezliği eşlik edebilir.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-e1c2ffa86e"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Patoloji/32)Gebelik Hastalıkları .pdf",
+        "ders": "Tıbbi Patoloji",
+        "kurul": 1,
+        "sayfa": 20,
+        "alinti": "Eklampsi: Preeklampsiye eklenen konvülziyonlar Şiddetli form"
+      }
+    ]
+  },
+  "hellp sendromu": {
+    "term": "HELLP sendromu",
+    "category": "hastalik",
+    "definition": "Gebeliğin son döneminde ya da doğum sonrasında görülen; mikroanjiyopatik hemoliz, karaciğer enzimlerinde yükselme ve trombositopeni ile karakterize preeklampsi komplikasyonudur.",
+    "description": "Gebeliğin son döneminde ya da doğum sonrasında görülen; mikroanjiyopatik hemoliz, karaciğer enzimlerinde yükselme ve trombositopeni ile karakterize preeklampsi komplikasyonudur.",
+    "discipline": "Kadın Hastalıkları ve Doğum",
+    "committee": "",
+    "clinicalPearl": "Şiddetli preeklampsinin yaklaşık %10'unda görülür; DIC eşlik edebilir.",
+    "aliases": [
+      "HELLP"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-e1c2ffa86e"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Patoloji/32)Gebelik Hastalıkları .pdf",
+        "ders": "Tıbbi Patoloji",
+        "kurul": 1,
+        "sayfa": 28,
+        "alinti": "Şiddetli preeklampsi olgularının ~%10’unda Özellikler: Mikroanjiyopatik hemolitik anemi Karaciğer enzimlerinde yükselme Trombositopeni (trombosit tüketimi)"
+      }
+    ]
+  },
+  "sflt-1": {
+    "term": "sFlt-1",
+    "category": "fizyoloji",
+    "definition": "Çözünür FMS benzeri tirozin kinaz-1; VEGF'in etkisini antagonize eden anti-anjiyojenik faktördür.",
+    "description": "Çözünür FMS benzeri tirozin kinaz-1; VEGF'in etkisini antagonize eden anti-anjiyojenik faktördür.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "",
+    "clinicalPearl": "Preeklampside plasental hipoksiyle artar ve endotel disfonksiyonunu tetikler.",
+    "aliases": [
+      "çözünür FMS benzeri tirozin kinaz-1"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-e1c2ffa86e"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Patoloji/32)Gebelik Hastalıkları .pdf",
+        "ders": "Tıbbi Patoloji",
+        "kurul": 1,
+        "sayfa": 25,
+        "alinti": "Artan anti-anjiyojenik faktörler: Çözünür FMS benzeri tirozin kinaz-1 (sFlt-1) Endoglin"
+      }
+    ]
+  },
+  "endoglin (cd105)": {
+    "term": "Endoglin (CD105)",
+    "category": "fizyoloji",
+    "definition": "9. kromozomda kodlanan, özellikle vasküler endotel hücrelerinde yoğun bulunan tip-I transmembran glikoproteindir.",
+    "description": "9. kromozomda kodlanan, özellikle vasküler endotel hücrelerinde yoğun bulunan tip-I transmembran glikoproteindir.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "",
+    "clinicalPearl": "Preeklampside artar ve TGF-β etkisini antagonize eder.",
+    "aliases": [
+      "CD105"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-e1c2ffa86e"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Patoloji/32)Gebelik Hastalıkları .pdf",
+        "ders": "Tıbbi Patoloji",
+        "kurul": 1,
+        "sayfa": 25,
+        "alinti": "Endoglin (CD105), insan 9. kromozomunda bulunan özellikle vasküler endotel hücrelerinde yoğun olarak bulunan tip-I transmembran glikoprotein"
+      }
+    ]
+  },
+  "spiral arter yeniden şekillenmesi": {
+    "term": "Spiral arter yeniden şekillenmesi",
+    "category": "fizyoloji",
+    "definition": "Normal gebelikte spiral arterlerin kas-elastik duvarlarının trofoblastlarca istila edilip geniş sinüzoidlere dönüşmesidir.",
+    "description": "Normal gebelikte spiral arterlerin kas-elastik duvarlarının trofoblastlarca istila edilip geniş sinüzoidlere dönüşmesidir.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "",
+    "clinicalPearl": "Preeklampside bozulur; lümenler dar kalır ve plasental hipoksi gelişir.",
+    "aliases": [
+      "spiral arter remodelingi"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-e1c2ffa86e"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Patoloji/32)Gebelik Hastalıkları .pdf",
+        "ders": "Tıbbi Patoloji",
+        "kurul": 1,
+        "sayfa": 23,
+        "alinti": "Spiral arter kas-elastik duvarları: Trofoblastlar tarafından istila edilir Geniş vasküler sinüzoidlere dönüşür"
+      }
+    ]
+  },
+  "akut aterozis": {
+    "term": "Akut aterozis",
+    "category": "patoloji",
+    "definition": "Desidual damarlarda fibrinoid nekroz ve lipid içeren makrofaj birikimiyle oluşan vaskülopati görünümüdür.",
+    "description": "Desidual damarlarda fibrinoid nekroz ve lipid içeren makrofaj birikimiyle oluşan vaskülopati görünümüdür.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "",
+    "clinicalPearl": "Preeklampside plasental perfüzyon bozukluğunu artırır.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-e1c2ffa86e"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Patoloji/32)Gebelik Hastalıkları .pdf",
+        "ders": "Tıbbi Patoloji",
+        "kurul": 1,
+        "sayfa": 30,
+        "alinti": "Anormal desidual damarlar: Fibrinoid nekroz Lipid içeren makrofaj birikimi “Akut aterozis” görünümü"
+      }
+    ]
+  },
+  "retroplasental kanama": {
+    "term": "Retroplasental kanama",
+    "category": "patoloji",
+    "definition": "Plasentanın arkasında gelişen kanamadır.",
+    "description": "Plasentanın arkasında gelişen kanamadır.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "",
+    "clinicalPearl": "Preeklampside plasental morfolojik bulgulardandır.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-e1c2ffa86e"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Patoloji/32)Gebelik Hastalıkları .pdf",
+        "ders": "Tıbbi Patoloji",
+        "kurul": 1,
+        "sayfa": 29,
+        "alinti": "Retro-plasental kanama Villus iskemik değişiklikleri: Terminal villuslarda sinsityal epitel düğümleri artışı"
+      }
+    ]
+  },
+  "sinsityal düğüm": {
+    "term": "Sinsityal düğüm",
+    "category": "patoloji",
+    "definition": "Terminal villuslarda sinsityal epitel çekirdeklerinin toplanmasıyla oluşan düğümlerdir.",
+    "description": "Terminal villuslarda sinsityal epitel çekirdeklerinin toplanmasıyla oluşan düğümlerdir.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "",
+    "clinicalPearl": "Preeklampside artışı villus iskemik değişikliğini gösterir.",
+    "aliases": [
+      "sinsityal epitel düğümü"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-e1c2ffa86e"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Patoloji/32)Gebelik Hastalıkları .pdf",
+        "ders": "Tıbbi Patoloji",
+        "kurul": 1,
+        "sayfa": 29,
+        "alinti": "Retro-plasental kanama Villus iskemik değişiklikleri: Terminal villuslarda sinsityal epitel düğümleri artışı"
+      }
+    ]
+  },
+  "gebelik trofoblastik hastalıkları": {
+    "term": "Gebelik trofoblastik hastalıkları",
+    "category": "hastalik",
+    "definition": "Villöz veya trofoblastik plasenta dokusunun proliferasyonuyla karakterize hidatiform mol, invaziv mol, koryokarsinom ve PSTT grubudur.",
+    "description": "Villöz veya trofoblastik plasenta dokusunun proliferasyonuyla karakterize hidatiform mol, invaziv mol, koryokarsinom ve PSTT grubudur.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "",
+    "clinicalPearl": "Hepsi değişen düzeylerde hCG üretir.",
+    "aliases": [
+      "GTH"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-e1c2ffa86e"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Patoloji/32)Gebelik Hastalıkları .pdf",
+        "ders": "Tıbbi Patoloji",
+        "kurul": 1,
+        "sayfa": 35,
+        "alinti": "Ortak özellik: Villöz veya trofoblastik plasenta dokusunun proliferasyonu"
+      }
+    ]
+  },
+  "hidatiform mol": {
+    "term": "Hidatiform mol",
+    "category": "hastalik",
+    "definition": "Koryonik villusların kistik şişmesi ve değişken trofoblastik proliferasyonla karakterize, tam ve kısmi olmak üzere iki alt tipli trofoblastik hastalıktır.",
+    "description": "Koryonik villusların kistik şişmesi ve değişken trofoblastik proliferasyonla karakterize, tam ve kısmi olmak üzere iki alt tipli trofoblastik hastalıktır.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "",
+    "clinicalPearl": "Kalıcı trofoblastik hastalık ve koryokarsinom riski taşır.",
+    "aliases": [
+      "mol hidatiform",
+      "molar gebelik"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-e1c2ffa86e"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Patoloji/32)Gebelik Hastalıkları .pdf",
+        "ders": "Tıbbi Patoloji",
+        "kurul": 1,
+        "sayfa": 36,
+        "alinti": "Kalıcı trofoblastik hastalık (invaziv mol) riski Koryokarsinom gelişim riski"
+      }
+    ]
+  },
+  "tam hidatiform mol": {
+    "term": "Tam hidatiform mol",
+    "category": "hastalik",
+    "definition": "Embriyogenezle uyumlu olmayan, tüm koryonik villusların anormal olduğu, diploid (46,XX) ve yalnızca paternal genomlu moldür.",
+    "description": "Embriyogenezle uyumlu olmayan, tüm koryonik villusların anormal olduğu, diploid (46,XX) ve yalnızca paternal genomlu moldür.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "",
+    "clinicalPearl": "Doku hCG ++++; koryokarsinom riski %2,5.",
+    "aliases": [
+      "komplet mol"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-e1c2ffa86e"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Patoloji/32)Gebelik Hastalıkları .pdf",
+        "ders": "Tıbbi Patoloji",
+        "kurul": 1,
+        "sayfa": 38,
+        "alinti": "Tam hidatiform mol: Embriyogenezle uyumlu değildir Fetal parçalar nadirdir Tüm koryonik villuslar anormal Epitel hücreleri diploid (46,XX; nadiren 46,XY)"
+      }
+    ]
+  },
+  "kısmi (parsiyel) hidatiform mol": {
+    "term": "Kısmi (parsiyel) hidatiform mol",
+    "category": "hastalik",
+    "definition": "Erken embriyo oluşumunun görülebildiği, bazı normal villusların bulunduğu ve neredeyse her zaman triploid (örn. 69,XXY) olan moldür.",
+    "description": "Erken embriyo oluşumunun görülebildiği, bazı normal villusların bulunduğu ve neredeyse her zaman triploid (örn. 69,XXY) olan moldür.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "",
+    "clinicalPearl": "Fetal parçalar sık; koryokarsinomla ilişkili değildir.",
+    "aliases": [
+      "parsiyel mol"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-e1c2ffa86e"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Patoloji/32)Gebelik Hastalıkları .pdf",
+        "ders": "Tıbbi Patoloji",
+        "kurul": 1,
+        "sayfa": 38,
+        "alinti": "Kısmi hidatiform mol: Erken embriyo oluşumu olabilir Fetal parçalar sık Bazı normal villuslar mevcuttur Neredeyse her zaman triploid (örn. 69,XXY)"
+      }
+    ]
+  },
+  "invaziv mol": {
+    "term": "İnvaziv mol",
+    "category": "hastalik",
+    "definition": "Hidropik villusları koruyan, derin uterus duvarı invazyonu yapan ancak uzak metastaz yapmayan lokal agresif tam hidatiform moldür.",
+    "description": "Hidropik villusları koruyan, derin uterus duvarı invazyonu yapan ancak uzak metastaz yapmayan lokal agresif tam hidatiform moldür.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "",
+    "clinicalPearl": "hCG yüksek kalırsa kemoterapi ile çoğu vakada tam iyileşme sağlanır.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-e1c2ffa86e"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Patoloji/32)Gebelik Hastalıkları .pdf",
+        "ders": "Tıbbi Patoloji",
+        "kurul": 1,
+        "sayfa": 51,
+        "alinti": "İnvaziv mol: Lokal agresif tam hidatiform mol Özellik: Hidropik villusları korur"
+      }
+    ]
+  },
+  "gebelik koryokarsinomu": {
+    "term": "Gebelik koryokarsinomu",
+    "category": "hastalik",
+    "definition": "Gebelik koryonik epitelinden gelişen, çok agresif malign trofoblastik tümördür.",
+    "description": "Gebelik koryonik epitelinden gelişen, çok agresif malign trofoblastik tümördür.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "",
+    "clinicalPearl": "Villus yoktur; hematojen yayılır; gestasyonel formda kemoterapiyle neredeyse %100 kür.",
+    "aliases": [
+      "koryokarsinom",
+      "koriokarsinom"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-e1c2ffa86e"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Patoloji/32)Gebelik Hastalıkları .pdf",
+        "ders": "Tıbbi Patoloji",
+        "kurul": 1,
+        "sayfa": 55,
+        "alinti": "Gebelik koryokarsinomu: Çok agresif malign trofoblastik tümör Köken: Gebelik koryonik epiteli"
+      }
+    ]
+  },
+  "plasental bölge trofoblastik tümörü (pstt)": {
+    "term": "Plasental bölge trofoblastik tümörü (PSTT)",
+    "category": "hastalik",
+    "definition": "Ekstravillöz (ara) trofoblastlardan köken alan, gestasyonel trofoblastik neoplazilerin %2'sinden azını oluşturan nadir tümördür.",
+    "description": "Ekstravillöz (ara) trofoblastlardan köken alan, gestasyonel trofoblastik neoplazilerin %2'sinden azını oluşturan nadir tümördür.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "",
+    "clinicalPearl": "Düşük hCG, belirgin hPL; kemoterapiye daha az duyarlıdır.",
+    "aliases": [
+      "PSTT"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-e1c2ffa86e"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Patoloji/32)Gebelik Hastalıkları .pdf",
+        "ders": "Tıbbi Patoloji",
+        "kurul": 1,
+        "sayfa": 62,
+        "alinti": "PSTT: Gestasyonel trofoblastik neoplazilerin <%2’si Köken: Ekstravillöz trofoblastlar (ara trofoblastlar)"
+      }
+    ]
+  },
+  "ekstravillöz (ara) trofoblast": {
+    "term": "Ekstravillöz (ara) trofoblast",
+    "category": "terim",
+    "definition": "Normalde sitotrofoblasttan çoğalıp maternal desidua ve miyometriyumu istila eden trofoblast hücresidir.",
+    "description": "Normalde sitotrofoblasttan çoğalıp maternal desidua ve miyometriyumu istila eden trofoblast hücresidir.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "",
+    "aliases": [
+      "ara trofoblast"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-e1c2ffa86e"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Patoloji/32)Gebelik Hastalıkları .pdf",
+        "ders": "Tıbbi Patoloji",
+        "kurul": 1,
+        "sayfa": 62,
+        "alinti": "PSTT: Gestasyonel trofoblastik neoplazilerin <%2’si Köken: Ekstravillöz trofoblastlar (ara trofoblastlar)"
+      }
+    ]
+  },
+  "insan plasental laktogen (hpl)": {
+    "term": "İnsan plasental laktogen (hPL)",
+    "category": "fizyoloji",
+    "definition": "Plasentada üretilen bir hormondur; PSTT'de önemli miktarda üretilir.",
+    "description": "Plasentada üretilen bir hormondur; PSTT'de önemli miktarda üretilir.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "",
+    "clinicalPearl": "PSTT'de hCG düşükken hPL belirgindir.",
+    "aliases": [
+      "hPL"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-e1c2ffa86e"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Patoloji/32)Gebelik Hastalıkları .pdf",
+        "ders": "Tıbbi Patoloji",
+        "kurul": 1,
+        "sayfa": 63,
+        "alinti": "hCG: Az miktarda → serum hCG genelde düşük İnsan plasental laktogen (hPL): Önemli miktarda üretilir"
+      }
+    ]
+  },
+  "sitotrofoblast": {
+    "term": "Sitotrofoblast",
+    "category": "anatomi",
+    "definition": "Koryonik epitelde yer alan, trofoblast proliferasyonlarında çoğalan trofoblast tabakasıdır.",
+    "description": "Koryonik epitelde yer alan, trofoblast proliferasyonlarında çoğalan trofoblast tabakasıdır.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-e1c2ffa86e"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Patoloji/32)Gebelik Hastalıkları .pdf",
+        "ders": "Tıbbi Patoloji",
+        "kurul": 1,
+        "sayfa": 48,
+        "alinti": "Koryonik villuslarda: Hidropik şişme Gevşek, miksomatöz, ödemli stroma Yetersiz vaskülarizasyon"
+      }
+    ]
+  },
+  "sinsityotrofoblast": {
+    "term": "Sinsityotrofoblast",
+    "category": "anatomi",
+    "definition": "Koryonik epitelin çok çekirdekli trofoblast tabakasıdır.",
+    "description": "Koryonik epitelin çok çekirdekli trofoblast tabakasıdır.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-e1c2ffa86e"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Patoloji/32)Gebelik Hastalıkları .pdf",
+        "ders": "Tıbbi Patoloji",
+        "kurul": 1,
+        "sayfa": 58,
+        "alinti": "Histoloji: Koryonik villus yok Anaplastik sitotrofoblastlar Sinsityotrofoblastlardan oluşan solid tümör"
+      }
+    ]
+  },
+  "dispermi": {
+    "term": "Dispermi",
+    "category": "genetik",
+    "definition": "Bir ovumun iki sperm tarafından döllenmesidir.",
+    "description": "Bir ovumun iki sperm tarafından döllenmesidir.",
+    "discipline": "Tıbbi Genetik",
+    "committee": "",
+    "clinicalPearl": "Boş ovumla heterozigot tam moli, normal ovumla kısmi moli oluşturur.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-e1c2ffa86e"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Patoloji/32)Gebelik Hastalıkları .pdf",
+        "ders": "Tıbbi Patoloji",
+        "kurul": 1,
+        "sayfa": 41,
+        "alinti": "Daha az sıklıkla, tam moller, iki spermin boş bir yumurtayı döllemesiyle oluşan dispermiden kaynaklanır"
+      }
+    ]
+  },
+  "kalıcı trofoblastik hastalık": {
+    "term": "Kalıcı trofoblastik hastalık",
+    "category": "hastalik",
+    "definition": "Molün küretajından sonra da devam eden trofoblastik hastalıktır; invaziv mol bu gruptadır.",
+    "description": "Molün küretajından sonra da devam eden trofoblastik hastalıktır; invaziv mol bu gruptadır.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "",
+    "clinicalPearl": "6–12 ay seri hCG izlemi ile saptanır.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-e1c2ffa86e"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Patoloji/32)Gebelik Hastalıkları .pdf",
+        "ders": "Tıbbi Patoloji",
+        "kurul": 1,
+        "sayfa": 36,
+        "alinti": "Kalıcı trofoblastik hastalık (invaziv mol) riski Koryokarsinom gelişim riski"
+      }
+    ]
+  },
+  "hidropik villus": {
+    "term": "Hidropik villus",
+    "category": "patoloji",
+    "definition": "Sıvı birikimiyle şişmiş koryonik villustur.",
+    "description": "Sıvı birikimiyle şişmiş koryonik villustur.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "",
+    "clinicalPearl": "Tam molün temel morfolojik birimidir.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-e1c2ffa86e"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Patoloji/32)Gebelik Hastalıkları .pdf",
+        "ders": "Tıbbi Patoloji",
+        "kurul": 1,
+        "sayfa": 47,
+        "alinti": "ŞEKİL 17.20 Tam hidatiform mol, çok sayıda şişmiş (hidropik) villustan oluşur"
+      }
+    ]
+  },
+  "miksomatöz stroma": {
+    "term": "Miksomatöz stroma",
+    "category": "patoloji",
+    "definition": "Gevşek, müsin içeren, ödemli bağ dokusu stromasıdır.",
+    "description": "Gevşek, müsin içeren, ödemli bağ dokusu stromasıdır.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "",
+    "clinicalPearl": "Tam molde hidropik villus stromasının özelliğidir.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-e1c2ffa86e"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Patoloji/32)Gebelik Hastalıkları .pdf",
+        "ders": "Tıbbi Patoloji",
+        "kurul": 1,
+        "sayfa": 48,
+        "alinti": "Koryonik villuslarda: Hidropik şişme Gevşek, miksomatöz, ödemli stroma Yetersiz vaskülarizasyon"
+      }
+    ]
+  },
+  "miyoepitel hücre": {
+    "term": "Miyoepitel hücre",
+    "category": "anatomi",
+    "definition": "Meme lobülünde bazal tabakada yer alan, kasılarak süt atılımına yardım eden ve bazal membranı destekleyen hücredir.",
+    "description": "Meme lobülünde bazal tabakada yer alan, kasılarak süt atılımına yardım eden ve bazal membranı destekleyen hücredir.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "",
+    "clinicalPearl": "İn situ karsinomda korunur, invaziv karsinomda kaybolur.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-e1c2ffa86e"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Patoloji/32)Gebelik Hastalıkları .pdf",
+        "ders": "Tıbbi Patoloji",
+        "kurul": 1,
+        "sayfa": 67,
+        "alinti": "Bazal miyoepitel hücreleri: Kasılma ile süt atılımına yardım eder Bazal membranı destekler"
+      }
+    ]
+  },
+  "terminal duktus–lobüler birim (tdlu)": {
+    "term": "Terminal duktus–lobüler birim (TDLU)",
+    "category": "anatomi",
+    "definition": "Memenin fonksiyonel birimi olan lobülün diğer adıdır.",
+    "description": "Memenin fonksiyonel birimi olan lobülün diğer adıdır.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "",
+    "clinicalPearl": "Birçok benign ve malign meme lezyonunun kökenidir.",
+    "aliases": [
+      "TDLU"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-e1c2ffa86e"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Patoloji/32)Gebelik Hastalıkları .pdf",
+        "ders": "Tıbbi Patoloji",
+        "kurul": 1,
+        "sayfa": 66,
+        "alinti": "Lobüller: Terminal duktus–lobüler birim (TDLU) olarak da adlandırılır Birçok benign ve malign lezyonun kökeni"
+      }
+    ]
+  },
+  "filloid tümör": {
+    "term": "Filloid tümör",
+    "category": "hastalik",
+    "definition": "Meme dokusundaki bağ dokusundan kaynaklanan, nadir görülen fibroepitelyal kitledir.",
+    "description": "Meme dokusundaki bağ dokusundan kaynaklanan, nadir görülen fibroepitelyal kitledir.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "",
+    "clinicalPearl": "İntralobüler stromadan köken alır.",
+    "aliases": [
+      "filloides tümör"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-e1c2ffa86e"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Patoloji/32)Gebelik Hastalıkları .pdf",
+        "ders": "Tıbbi Patoloji",
+        "kurul": 1,
+        "sayfa": 69,
+        "alinti": "Filloid tümör (veya filloides tümör), meme dokusundaki bağ dokusundan kaynaklanan, nadir görülen fibroepitelyal kitle"
+      }
+    ]
+  },
+  "intraduktal papillom": {
+    "term": "İntraduktal papillom",
+    "category": "hastalik",
+    "definition": "Meme ucunun altındaki sinüslerde büyüyen benign epitel lezyonudur.",
+    "description": "Meme ucunun altındaki sinüslerde büyüyen benign epitel lezyonudur.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-e1c2ffa86e"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Patoloji/32)Gebelik Hastalıkları .pdf",
+        "ders": "Tıbbi Patoloji",
+        "kurul": 1,
+        "sayfa": 69,
+        "alinti": "İyi huylu epitel lezyonları arasında meme ucunun altındaki sinüslerde büyüyen intraduktal papillomlar ve lobüllerde ortaya çıkan epitel hiperplazisi bulunur"
       }
     ]
   }

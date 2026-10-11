@@ -78,13 +78,17 @@ def benzer(a: str, b: str) -> float:
 
 
 def k1_dersleri() -> list[dict]:
-    """s14_notes.LESSONS (Kurul 1): (ders, konu, hoca, tarih, kaynak_idleri, gecen_yil) → kimlik k1-NN-slug."""
+    """s14_notes.LESSONS + yayin_kaydi.json (Kurul 1): (ders, konu, hoca, tarih, kaynak_idleri, gecen_yil) → k1-NN-slug."""
     src = (APP / "scripts" / "v2" / "stages" / "s14_notes.py").read_text(encoding="utf-8")
     m = re.search(r"^LESSONS = (\[.*?^\])", src, re.S | re.M)
     if not m:
         return []
+    liste = dict(enumerate(ast.literal_eval(m.group(1)), 1))
+    for y in oku(APP / "scripts" / "ders_isci" / "yayin_kaydi.json", []):   # onaylanıp yayınlanan dersler
+        if y.get("kurul") == 1:
+            liste[y["numara"]] = (y["ders"], y["konu"], y["hoca"], y.get("tarih") or "", y["kaynak_idleri"], False)
     out = []
-    for n, (ders, konu, hoca, tarih, kaynak, gecen) in enumerate(ast.literal_eval(m.group(1)), 1):
+    for n, (ders, konu, hoca, tarih, kaynak, gecen) in sorted(liste.items()):
         s = re.sub(r"[^a-z0-9]+", "_", fold(konu)).strip("_")[:50].replace("_", "-")
         out.append({"kurul": 1, "numara": n, "id": f"k1-{n:02d}-{s}", "ders": ders, "konu": konu, "hoca": hoca,
                     "tarih": tarih, "kaynak_idleri": kaynak, "gecen_yil": bool(gecen)})
@@ -103,7 +107,8 @@ def olustur() -> dict:
     for b in TASLAK.glob("*/baglam.json"):
         bg = oku(b, {})
         bg["_durum"] = oku(b.parent / "durum.json", {}).get("durum") or "isleniyor"
-        taslaklar.append(bg)
+        if bg["_durum"] not in ("yayinlandi", "reddedildi"):   # yayınlanan ders artık kaynaklarda (yayin_kaydi.json)
+            taslaklar.append(bg)
 
     # ---- kaynak kimliği → yerel PDF yolu (s14 dersleri hangi Drive PDF'inden üretildi: kesin bağ)
     man_items = oku(DOWNLOADS / "_manifest.json", {}).get("items", [])

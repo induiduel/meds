@@ -104,6 +104,31 @@ LESSONS = [
 # Programda olup hiçbir yılda kaynak PDF'i bulunamayanlar (uydurulmaz): Koruyucu Sağlık Hizmetleri,
 # Mikroorganizmalarda Direnç Sorunu ve Antimikrobiyal Yönetim.
 
+# Ders işçisinin onaylanıp yayınlanan dersleri (scripts/ders_isci/yayinla.py yazar): LESSONS'taki dersi bu yılın
+# PDF'iyle günceller ya da listeye yeni ders (numara > len(LESSONS)) ekler. Kaynak sadakati işçinin çıkardığı
+# PDF metnine (`kaynak_md`) karşı ölçülür; derlemde o PDF olmasa da not düşmez.
+YAYIN_KAYDI = config.MEDS_DIR / "scripts" / "ders_isci" / "yayin_kaydi.json"
+
+
+def yayin_kaydi() -> list[dict]:
+    return [x for x in (store.read_json(YAYIN_KAYDI, []) or []) if x.get("kurul") == KURUL]
+
+
+def dersler() -> list[tuple[int, tuple]]:
+    """(numara, (ders, konu, hoca, tarih, kaynak_idleri, gecen_yil)) — LESSONS + yayın kaydı."""
+    out = dict(enumerate(LESSONS, 1))
+    for y in yayin_kaydi():
+        out[y["numara"]] = (y["ders"], y["konu"], y["hoca"], y.get("tarih") or "", y["kaynak_idleri"], False)
+    return sorted(out.items())
+
+
+def _kaynak_md(n: int) -> str | None:
+    for y in yayin_kaydi():
+        k = config.PROJECT_ROOT / y.get("kaynak_md", "")
+        if y["numara"] == n and y.get("kaynak_md") and k.is_file():
+            return k.read_text(encoding="utf-8")
+    return None
+
 
 def _slug(text: str) -> str:
     return re.sub(r"[^a-z0-9]+", "_", ids.fold_tr(text)).strip("_")[:50]
@@ -169,7 +194,7 @@ def _assign_questions(corpus: LectureCorpus) -> dict[int, list[dict]]:
     pos: dict[str, list[int]] = {}
     for i, c in enumerate(corpus.chunks):
         pos.setdefault(c["source_id"], []).append(i)
-    lesson_chunks = {n: [i for sid in L[4] for i in pos.get(sid, [])] for n, L in enumerate(LESSONS, 1)}
+    lesson_chunks = {n: [i for sid in L[4] for i in pos.get(sid, [])] for n, L in dersler()}
     by: dict[int, list[dict]] = {}
     for q in _exam_pool():
         text = f"{q['front']} {' '.join(q['options'].values())}"
@@ -192,7 +217,7 @@ def prepare(log=print) -> dict:
     corpus = LectureCorpus()
     qs = _assign_questions(corpus)
     index = []
-    for n, (ders, konu, hoca, tarih, sids, eski) in enumerate(LESSONS, 1):
+    for n, (ders, konu, hoca, tarih, sids, eski) in dersler():
         pages = _pages(corpus, sids)
         names = [corpus.sources.get(s, {}).get("name", s) for s in sids]
         head = [
@@ -220,14 +245,15 @@ def prepare(log=print) -> dict:
 _QUESTION_BLOCK = re.compile(r"^###\s+Soru.*?(?=^##\s|^###\s(?!Soru)|\Z)", re.S | re.M)
 
 
-def fidelity(md: str, corpus: LectureCorpus, source_ids: list[str]) -> float:
-    """Not metninin (çıkmış soru blokları hariç) içerik köklerinin kaynakta geçme oranı."""
+def fidelity(md: str, corpus: LectureCorpus, source_ids: list[str], kaynak: str | None = None) -> float:
+    """Not metninin (çıkmış soru blokları hariç) içerik köklerinin kaynakta geçme oranı.
+    `kaynak`: ders işçisinin PDF metni (yayın kaydı) — derlem parçalarına ek olarak sayılır."""
     body = _QUESTION_BLOCK.sub("", md)
     body = re.sub(r"^\*\*(?:Ders Kodu|Öğretim Üyesi|Müfredat|Tıbbi Kaynak|Öğrenci)[^\n]*", "", body, flags=re.M)
     toks = stems(body)
     if not toks:
         return 0.0
-    src: set[str] = set()
+    src: set[str] = set(stems(kaynak)) if kaynak else set()
     for c in corpus.chunks:
         if c["source_id"] in source_ids:
             src.update(stems(c["text"]))
@@ -242,7 +268,7 @@ def _key_points(md: str) -> list[str]:
 def build(export: bool = False, log=print) -> dict:
     corpus = LectureCorpus()
     notes, review = [], []
-    for n, (ders, konu, hoca, tarih, sids, eski) in enumerate(LESSONS, 1):
+    for n, (ders, konu, hoca, tarih, sids, eski) in dersler():
         path = WORK / f"{n:02d}_{_slug(konu)}.md"
         if not path.exists():
             continue
@@ -250,7 +276,7 @@ def build(export: bool = False, log=print) -> dict:
         problems = []
         if not re.search(r"^##\s+", md, flags=re.M):
             problems.append("bölüm yok")
-        sad = fidelity(md, corpus, sids)
+        sad = fidelity(md, corpus, sids, _kaynak_md(n))
         if sad < SADAKAT_ESIK:
             problems.append(f"sadakat {sad}")
         rec = {

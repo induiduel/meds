@@ -116,6 +116,8 @@ class H(BaseHTTPRequestHandler):
         k = {"karar": karar, "not": str(body.get("not") or "")[:4000], "kim": str(body.get("kim") or "")[:200],
              "zaman": time.time()}
         yaz(d / "karar.json", k)
+        if karar == "reddet":
+            yaz(d / "durum.json", oku(d / "durum.json", {}) | {"durum": "reddedildi", "zaman": time.time()})
         log(f"karar: {d.name} → {karar}" + (f" ({k['not'][:80]})" if k["not"] else ""))
         return self._json(200, {"ok": True, "karar": k})
 

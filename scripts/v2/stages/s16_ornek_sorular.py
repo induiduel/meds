@@ -79,6 +79,22 @@ def _cikmislar() -> list[dict]:
     return out
 
 
+def _site_cikmislar() -> list[dict]:
+    """Sitenin çıkmış soru bankası (src/data/pastQuestions.json) — v2 deposunda olmayan kimlikler için yedek
+    (ders işçisi bağları site kimliklerini kullanır). v2 kayıt biçimine çevrilir."""
+    f = config.MEDS_DIR / "src" / "data" / "pastQuestions.json"
+    if not f.exists():
+        return []
+    out = []
+    for q in json.loads(f.read_text(encoding="utf-8")):
+        if not q.get("id") or not q.get("stem"):
+            continue
+        opts = {o.get("key"): o.get("text") for o in q.get("options") or [] if isinstance(o, dict) and o.get("key")}
+        out.append({"question_id": q["id"], "donem": 3, "stem": q["stem"], "options": opts,
+                    "answer": q.get("correctAnswer")})
+    return out
+
+
 def _kazanim_esle(kazanimlar: list[str], metin: str) -> int:
     """Bilgi paketi maddesinin kazanım metnini (yeniden ifade edilmiş olabilir) en yakın kazanıma bağlar."""
     a = set(_terimler(metin))
@@ -232,6 +248,8 @@ def build(export: bool = False) -> dict:
         for line in f.read_text(encoding="utf-8").splitlines():
             d = json.loads(line)
             by_id.setdefault(d["question_id"], d)
+    for d in _site_cikmislar():
+        by_id.setdefault(d["question_id"], d)
     baglar = json.loads((WORK / "baglar.json").read_text(encoding="utf-8")) if (WORK / "baglar.json").exists() else {}
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     index, rapor = [], {}
@@ -269,11 +287,30 @@ def build(export: bool = False) -> dict:
             print(f"✗ {k}:", *v[:12], sep="\n   ")
     print(f"hazır: {len(index)} ders, {sum(x['soru_sayisi'] for x in index)} soru; sorunlu: {sum(1 for v in rapor.values() if v)}")
     if export:
-        SITE_DIR.mkdir(parents=True, exist_ok=True)
-        for old in SITE_DIR.glob("*.json"):
-            old.unlink()
-        for x in index:
-            (SITE_DIR / f"{x['id']}.json").write_text((OUT_DIR / f"{x['id']}.json").read_text(encoding="utf-8"), encoding="utf-8")
-        (SITE_DIR / "index.json").write_text(json.dumps(index, ensure_ascii=False, indent=1), encoding="utf-8")
-        print(f"site: {SITE_DIR} ({len(index)} ders)")
+        disa_aktar([x["id"] for x in index])
     return rapor
+
+
+def disa_aktar(ders_idleri: list[str]) -> dict:
+    """OUT_DIR'deki dersleri siteye yazar — yalnız UPSERT. Sitede daha çok sorulu (başka hatla genişletilmiş, ör.
+    be87643: 8774 soru) bir dosya varsa ezilmez; hiçbir site dosyası silinmez (2026-10-12: toptan dışa aktarım
+    zengin site sürümünü 2406 soruluk eski sürümle ezmişti)."""
+    SITE_DIR.mkdir(parents=True, exist_ok=True)
+    site_idx = {x["id"]: x for x in (json.loads((SITE_DIR / "index.json").read_text(encoding="utf-8"))
+                                     if (SITE_DIR / "index.json").exists() else [])}
+    yazilan, korunan = [], []
+    for did in ders_idleri:
+        yeni = json.loads((OUT_DIR / f"{did}.json").read_text(encoding="utf-8"))
+        hedef = SITE_DIR / f"{did}.json"
+        if hedef.exists() and json.loads(hedef.read_text(encoding="utf-8")).get("soru_sayisi", 0) > yeni["soru_sayisi"]:
+            korunan.append(did)
+            continue
+        hedef.write_text(json.dumps({k: v for k, v in yeni.items() if k not in ("uretim", "guncelleme")},
+                                    ensure_ascii=False, indent=1), encoding="utf-8")
+        site_idx[did] = {k: yeni[k] for k in ("id", "sira", "ders", "konu", "ogretim_uyesi", "soru_sayisi")} | {
+            "kazanim": len(yeni["kazanimlar"])}
+        yazilan.append(did)
+    (SITE_DIR / "index.json").write_text(json.dumps(sorted(site_idx.values(), key=lambda x: x["sira"]),
+                                                    ensure_ascii=False, indent=1), encoding="utf-8")
+    print(f"site: {SITE_DIR} — yazılan {len(yazilan)}, sitede daha zengin olduğu için korunan {len(korunan)}")
+    return {"yazilan": yazilan, "korunan": korunan}

@@ -6,7 +6,8 @@ Denetimler:
   - KANIT: her `kanit.alinti` `kaynak.md`'nin belirtilen sayfasında (±1 sayfa) kelimesi kelimesine geçiyor
     (Türkçe katlama + boşluk normalize). Geçmeyen kayıt HATA'dır (uydurma bilgi reddedilir).
   - deck.json: /app/scripts/validate_learning_decks.py 0 HATA.
-  - ornek_sorular: kazanım başına 3–10 soru, A–E tam, doğru A–E, kanıtlı.
+  - ornek_sorular: kazanım başına 3–10 soru (kolay/orta/zor ≥1, fazlası çoğunlukla orta), A–E tam, doğru A–E,
+    her şık ≥20 karakter gerekçeli açıklama, kanıtlı (yayın aracı s16 ile aynı kurallar).
 Sonuç ayrıca <klasör>/denetim.json'a yazılır.
 """
 from __future__ import annotations
@@ -149,11 +150,25 @@ class Denetim:
                     self.hata(f"soru {qid}: dogru A–E olmalı")
                 if len(str(q.get("aciklama", ""))) < 20:
                     self.hata(f"soru {qid}: açıklama çok kısa")
+                sa = q.get("sik_aciklamalari") or {}
+                kisa = [h for h in "ABCDE" if len(str(sa.get(h, "")).strip()) < 20]
+                if kisa:  # yayın (s16) kuralı: her şıkkın gerekçeli açıklaması; "Yanlış. Doğrudur." yetmez
+                    self.hata(f"soru {qid}: şık açıklaması eksik/kısa (<20 karakter, gerekçe+sayfa yaz): {''.join(kisa)}")
+                if q.get("zorluk") not in ("kolay", "orta", "zor"):
+                    self.hata(f"soru {qid}: zorluk kolay|orta|zor olmalı")
+                if not isinstance(q.get("kazanim"), int) or not isinstance(q.get("bilgi"), list):
+                    self.hata(f"soru {qid}: kazanim tamsayı, bilgi liste olmalı")
+                if len(str(q.get("soru", "")).strip()) < 15:
+                    self.hata(f"soru {qid}: soru kökü kısa")
                 self.kanit(q.get("kanit"), f"soru {qid}")
-                per[q.get("kazanim")] = per.get(q.get("kazanim"), 0) + 1
-            for k, n in per.items():
-                if not 3 <= n <= 10:
-                    self.uyarilar.append(f"kazanım {k}: {n} soru (3–10 beklenir)")
+                per.setdefault(q.get("kazanim"), []).append(q.get("zorluk"))
+            for k, zs in per.items():
+                if not 3 <= len(zs) <= 10:
+                    self.hata(f"kazanım {k}: {len(zs)} soru (3–10 olmalı)")
+                elif any(z not in zs for z in ("kolay", "orta", "zor")):
+                    self.hata(f"kazanım {k}: kolay/orta/zor her biri en az 1 olmalı")
+                elif len(zs) > 3 and zs.count("orta") < max(zs.count("kolay"), zs.count("zor")):
+                    self.hata(f"kazanım {k}: fazladan sorular çoğunlukla orta olmalı")
             self.sayilar["soru"] = len(sorular)
 
         sz = self.json_oku("sozluk.json")

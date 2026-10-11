@@ -125,6 +125,10 @@ def main():
     if not out:
         log("bağlantı üretilemedi; önceki dosya korunuyor")
         return 1
+    # ders işçisinin onaylı bağları (editör teyitli; scripts/ders_isci/yayinla.py) hesaplanan bağın önüne geçer
+    isci = OUT.with_name("learn_links_ders_isci.json")
+    if isci.exists():
+        out.update(json.load(open(isci, encoding="utf-8")))
     tmp = OUT.with_suffix(".tmp")
     json.dump({"zaman": time.strftime("%Y-%m-%dT%H:%M:%S"), "esik_ce": MIN_CE, "baglantilar": out}, open(tmp, "w", encoding="utf-8"),
               ensure_ascii=False)

@@ -101,6 +101,9 @@ yönetici onayından sonra yayınlanır.
 - **Yalnız bu dersin bilgisiyle** (bilgi_paketi numaralarına bağla). Her kazanım için 3–10 soru; her kazanımda
   kolay/orta/zor en az birer, çoğunluk orta. Şıklar tam A–E, tekrarsız. Çıkmış soruyu kopyalama (yakın benzer
   olabilir, kopya değil); benzeri varsa id'sini `benzer_cikmis`'e yaz.
+- **Her şıkkın açıklaması gerekçeli** (≥20 karakter): neden doğru/yanlış olduğunu ders bilgisiyle ve sayfasıyla yaz.
+  "HANGİSİ YANLIŞTIR" sorularında doğru önermeler için de "Yanlış seçenek; ifade doğrudur: <ders bilgisi> (s. n)" yaz —
+  yalnız "Yanlış. Doğrudur." kabul edilmez (denetim HATA verir).
 
 ### 5. `sozluk.json` — tıbbi terimler
 ```json

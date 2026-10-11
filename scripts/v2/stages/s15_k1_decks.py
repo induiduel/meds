@@ -111,7 +111,10 @@ def run(log=print) -> dict:
     dst = config.PROJECT_ROOT / "yedek" / "desteler" / stamp
     dst.mkdir(parents=True, exist_ok=True)
     shutil.copy2(DECKS_JSON, dst / DECKS_JSON.name)
-    korunan = [d for d in mevcut if not str(d.get("id", "")).startswith(PREFIX)]
+    # ders işçisiyle yayınlanan desteler (scripts/ders_isci/yayin_kaydi.json) bu dönüştürücüyle ezilmez
+    isci = {y["deste_id"] for y in store.read_json(config.MEDS_DIR / "scripts" / "ders_isci" / "yayin_kaydi.json", []) or []}
+    yeni = [d for d in yeni if d.get("id") not in isci]
+    korunan = [d for d in mevcut if not str(d.get("id", "")).startswith(PREFIX) or d.get("id") in isci]
     store.atomic_write_json(DECKS_JSON, korunan + yeni, indent=1)
     rapor = {"deste": len(yeni), "korunan": len(korunan), "slayt": sum(d["totalSlides"] for d in yeni),
              "soru": sum(d["matchedPastQuestionsCount"] for d in yeni), "yedek": str(dst)}

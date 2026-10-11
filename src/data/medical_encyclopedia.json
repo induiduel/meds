@@ -18208,5 +18208,736 @@
       "accuracyScore": 81,
       "auditSummary": "Tanım ders notu alıntılarından yazıldı ve kanıt desteği ölçüldü."
     }
+  },
+  {
+    "id": "s13-asendan_enfeksiyon_plasental",
+    "term": "Asendan enfeksiyon (plasental)",
+    "aliases": [
+      "asendan plasental enfeksiyon"
+    ],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 32)Gebelik Hastalıkları  s.6",
+    "definition": "Doğum kanalından yukarı doğru yayılarak plasenta ve zarlara ulaşan, neredeyse her zaman bakteriyel ve genellikle polimikrobiyal enfeksiyon yoludur.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "En sık plasental enfeksiyon yoludur; erken membran yırtılması ve erken doğuma neden olur.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-12",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-akut_koryoamniyonit",
+    "term": "Akut koryoamniyonit",
+    "aliases": [
+      "koryoamniyonit"
+    ],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 32)Gebelik Hastalıkları  s.7",
+    "definition": "Koryo-amniyonda nötrofilik infiltrasyon, ödem ve konjesyonla karakterize, asendan enfeksiyonun plasental inflamasyonudur.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Kordon ve villuslara ilerleyebilir; funisitise yol açar.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-12",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-funisitis",
+    "term": "Funisitis",
+    "aliases": [],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 32)Gebelik Hastalıkları  s.8",
+    "definition": "Koryo-amniyon enfeksiyonunun kordon damarlarına yayılmasıyla oluşan göbek kordonunun akut vaskülitidir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Fetal inflamasyon belirtecidir; neonatal sepsis riskini gösterir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-12",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-omfalit_omfaloflebit",
+    "term": "Omfalit-omfaloflebit",
+    "aliases": [
+      "omfalit"
+    ],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 32)Gebelik Hastalıkları  s.8",
+    "definition": "Doğumdan sonra bebeğin göbek kalıntısında oluşan enfeksiyonlardır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Doğum öncesi kordon vasküliti olan funisitisten ayrılır.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-12",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-preterm_dogum",
+    "term": "Preterm doğum",
+    "aliases": [
+      "erken doğum"
+    ],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Obstetri",
+    "instructorAndSource": "Ders notu: 32)Gebelik Hastalıkları  s.5",
+    "definition": "Gebeliğin 20. ile 37. haftaları arasında gerçekleşen doğumdur.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Asendan plasental enfeksiyonun önemli sonucudur.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-12",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-kronik_villit",
+    "term": "Kronik villit",
+    "aliases": [],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 32)Gebelik Hastalıkları  s.10",
+    "definition": "Koryon villuslarında kronik inflamatuvar infiltrasyon bulunmasıdır; TORCH gibi hematojen enfeksiyonların plasental örüntüsüdür.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Asendan enfeksiyonda akut koryoamniyonit, hematojen enfeksiyonda kronik villit görülür.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-12",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-koryo_retinit",
+    "term": "Koryo-retinit",
+    "aliases": [
+      "korioretinit"
+    ],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Oftalmoloji",
+    "instructorAndSource": "Ders notu: 32)Gebelik Hastalıkları  s.10",
+    "definition": "Retina ve koroidin birlikte inflamasyonudur; TORCH enfeksiyonlarında fetal göz tutulumunu gösterir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-12",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-kornual_interstisyel_gebelik",
+    "term": "Kornual (interstisyel) gebelik",
+    "aliases": [
+      "korneal gebelik",
+      "interstisyel gebelik"
+    ],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Kadın Hastalıkları ve Doğum",
+    "instructorAndSource": "Ders notu: 32)Gebelik Hastalıkları  s.11",
+    "definition": "Tüpün uterus içi kısmına, uterusun Fallop tüpleriyle birleştiği kornu bölgesine yerleşen ektopik gebelik biçimidir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-12",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-hematosalpinks",
+    "term": "Hematosalpinks",
+    "aliases": [
+      "intratubal hematom"
+    ],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 32)Gebelik Hastalıkları  s.15",
+    "definition": "Tüp gebeliğinde invaziv plasentanın duvarı delmesiyle tüp lümeninde kan birikmesidir (intratubal hematom).",
+    "lectureContextNotes": "",
+    "examSpotPearls": "İntraperitoneal kanamaya zemin hazırlar.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-12",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-eklampsi",
+    "term": "Eklampsi",
+    "aliases": [],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Kadın Hastalıkları ve Doğum",
+    "instructorAndSource": "Ders notu: 32)Gebelik Hastalıkları  s.20",
+    "definition": "Preeklampsiye konvülsiyonların eklenmesidir; hastalığın şiddetli formudur.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Koma ve en sık böbrek-karaciğer yetmezliği eşlik edebilir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-12",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-hellp_sendromu",
+    "term": "HELLP sendromu",
+    "aliases": [
+      "HELLP"
+    ],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Kadın Hastalıkları ve Doğum",
+    "instructorAndSource": "Ders notu: 32)Gebelik Hastalıkları  s.28",
+    "definition": "Gebeliğin son döneminde ya da doğum sonrasında görülen; mikroanjiyopatik hemoliz, karaciğer enzimlerinde yükselme ve trombositopeni ile karakterize preeklampsi komplikasyonudur.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Şiddetli preeklampsinin yaklaşık %10'unda görülür; DIC eşlik edebilir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-12",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-sflt_1",
+    "term": "sFlt-1",
+    "aliases": [
+      "çözünür FMS benzeri tirozin kinaz-1"
+    ],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 32)Gebelik Hastalıkları  s.25",
+    "definition": "Çözünür FMS benzeri tirozin kinaz-1; VEGF'in etkisini antagonize eden anti-anjiyojenik faktördür.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Preeklampside plasental hipoksiyle artar ve endotel disfonksiyonunu tetikler.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-12",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-endoglin_cd105",
+    "term": "Endoglin (CD105)",
+    "aliases": [
+      "CD105"
+    ],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 32)Gebelik Hastalıkları  s.25",
+    "definition": "9. kromozomda kodlanan, özellikle vasküler endotel hücrelerinde yoğun bulunan tip-I transmembran glikoproteindir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Preeklampside artar ve TGF-β etkisini antagonize eder.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-12",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-spiral_arter_yeniden_sekillenmesi",
+    "term": "Spiral arter yeniden şekillenmesi",
+    "aliases": [
+      "spiral arter remodelingi"
+    ],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 32)Gebelik Hastalıkları  s.23",
+    "definition": "Normal gebelikte spiral arterlerin kas-elastik duvarlarının trofoblastlarca istila edilip geniş sinüzoidlere dönüşmesidir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Preeklampside bozulur; lümenler dar kalır ve plasental hipoksi gelişir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-12",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-akut_aterozis",
+    "term": "Akut aterozis",
+    "aliases": [],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 32)Gebelik Hastalıkları  s.30",
+    "definition": "Desidual damarlarda fibrinoid nekroz ve lipid içeren makrofaj birikimiyle oluşan vaskülopati görünümüdür.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Preeklampside plasental perfüzyon bozukluğunu artırır.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-12",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-retroplasental_kanama",
+    "term": "Retroplasental kanama",
+    "aliases": [],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 32)Gebelik Hastalıkları  s.29",
+    "definition": "Plasentanın arkasında gelişen kanamadır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Preeklampside plasental morfolojik bulgulardandır.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-12",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-sinsityal_dugum",
+    "term": "Sinsityal düğüm",
+    "aliases": [
+      "sinsityal epitel düğümü"
+    ],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 32)Gebelik Hastalıkları  s.29",
+    "definition": "Terminal villuslarda sinsityal epitel çekirdeklerinin toplanmasıyla oluşan düğümlerdir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Preeklampside artışı villus iskemik değişikliğini gösterir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-12",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-gebelik_trofoblastik_hastaliklari",
+    "term": "Gebelik trofoblastik hastalıkları",
+    "aliases": [
+      "GTH"
+    ],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 32)Gebelik Hastalıkları  s.35",
+    "definition": "Villöz veya trofoblastik plasenta dokusunun proliferasyonuyla karakterize hidatiform mol, invaziv mol, koryokarsinom ve PSTT grubudur.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Hepsi değişen düzeylerde hCG üretir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-12",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-hidatiform_mol",
+    "term": "Hidatiform mol",
+    "aliases": [
+      "mol hidatiform",
+      "molar gebelik"
+    ],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 32)Gebelik Hastalıkları  s.36",
+    "definition": "Koryonik villusların kistik şişmesi ve değişken trofoblastik proliferasyonla karakterize, tam ve kısmi olmak üzere iki alt tipli trofoblastik hastalıktır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Kalıcı trofoblastik hastalık ve koryokarsinom riski taşır.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-12",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-tam_hidatiform_mol",
+    "term": "Tam hidatiform mol",
+    "aliases": [
+      "komplet mol"
+    ],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 32)Gebelik Hastalıkları  s.38",
+    "definition": "Embriyogenezle uyumlu olmayan, tüm koryonik villusların anormal olduğu, diploid (46,XX) ve yalnızca paternal genomlu moldür.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Doku hCG ++++; koryokarsinom riski %2,5.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-12",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-kismi_parsiyel_hidatiform_mol",
+    "term": "Kısmi (parsiyel) hidatiform mol",
+    "aliases": [
+      "parsiyel mol"
+    ],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 32)Gebelik Hastalıkları  s.38",
+    "definition": "Erken embriyo oluşumunun görülebildiği, bazı normal villusların bulunduğu ve neredeyse her zaman triploid (örn. 69,XXY) olan moldür.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Fetal parçalar sık; koryokarsinomla ilişkili değildir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-12",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-invaziv_mol",
+    "term": "İnvaziv mol",
+    "aliases": [],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 32)Gebelik Hastalıkları  s.51",
+    "definition": "Hidropik villusları koruyan, derin uterus duvarı invazyonu yapan ancak uzak metastaz yapmayan lokal agresif tam hidatiform moldür.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "hCG yüksek kalırsa kemoterapi ile çoğu vakada tam iyileşme sağlanır.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-12",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-gebelik_koryokarsinomu",
+    "term": "Gebelik koryokarsinomu",
+    "aliases": [
+      "koryokarsinom",
+      "koriokarsinom"
+    ],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 32)Gebelik Hastalıkları  s.55",
+    "definition": "Gebelik koryonik epitelinden gelişen, çok agresif malign trofoblastik tümördür.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Villus yoktur; hematojen yayılır; gestasyonel formda kemoterapiyle neredeyse %100 kür.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-12",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-plasental_bolge_trofoblastik_tumoru_pstt",
+    "term": "Plasental bölge trofoblastik tümörü (PSTT)",
+    "aliases": [
+      "PSTT"
+    ],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 32)Gebelik Hastalıkları  s.62",
+    "definition": "Ekstravillöz (ara) trofoblastlardan köken alan, gestasyonel trofoblastik neoplazilerin %2'sinden azını oluşturan nadir tümördür.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Düşük hCG, belirgin hPL; kemoterapiye daha az duyarlıdır.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-12",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-ekstravilloz_ara_trofoblast",
+    "term": "Ekstravillöz (ara) trofoblast",
+    "aliases": [
+      "ara trofoblast"
+    ],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 32)Gebelik Hastalıkları  s.62",
+    "definition": "Normalde sitotrofoblasttan çoğalıp maternal desidua ve miyometriyumu istila eden trofoblast hücresidir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-12",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-insan_plasental_laktogen_hpl",
+    "term": "İnsan plasental laktogen (hPL)",
+    "aliases": [
+      "hPL"
+    ],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 32)Gebelik Hastalıkları  s.63",
+    "definition": "Plasentada üretilen bir hormondur; PSTT'de önemli miktarda üretilir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "PSTT'de hCG düşükken hPL belirgindir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-12",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-sitotrofoblast",
+    "term": "Sitotrofoblast",
+    "aliases": [],
+    "category": "anatomi",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 32)Gebelik Hastalıkları  s.48",
+    "definition": "Koryonik epitelde yer alan, trofoblast proliferasyonlarında çoğalan trofoblast tabakasıdır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-12",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-sinsityotrofoblast",
+    "term": "Sinsityotrofoblast",
+    "aliases": [],
+    "category": "anatomi",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 32)Gebelik Hastalıkları  s.58",
+    "definition": "Koryonik epitelin çok çekirdekli trofoblast tabakasıdır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-12",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-dispermi",
+    "term": "Dispermi",
+    "aliases": [],
+    "category": "genetik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 32)Gebelik Hastalıkları  s.41",
+    "definition": "Bir ovumun iki sperm tarafından döllenmesidir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Boş ovumla heterozigot tam moli, normal ovumla kısmi moli oluşturur.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-12",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-kalici_trofoblastik_hastalik",
+    "term": "Kalıcı trofoblastik hastalık",
+    "aliases": [],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 32)Gebelik Hastalıkları  s.36",
+    "definition": "Molün küretajından sonra da devam eden trofoblastik hastalıktır; invaziv mol bu gruptadır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "6–12 ay seri hCG izlemi ile saptanır.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-12",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-hidropik_villus",
+    "term": "Hidropik villus",
+    "aliases": [],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 32)Gebelik Hastalıkları  s.47",
+    "definition": "Sıvı birikimiyle şişmiş koryonik villustur.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Tam molün temel morfolojik birimidir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-12",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-miksomatoz_stroma",
+    "term": "Miksomatöz stroma",
+    "aliases": [],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 32)Gebelik Hastalıkları  s.48",
+    "definition": "Gevşek, müsin içeren, ödemli bağ dokusu stromasıdır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Tam molde hidropik villus stromasının özelliğidir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-12",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-miyoepitel_hucre",
+    "term": "Miyoepitel hücre",
+    "aliases": [],
+    "category": "anatomi",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 32)Gebelik Hastalıkları  s.67",
+    "definition": "Meme lobülünde bazal tabakada yer alan, kasılarak süt atılımına yardım eden ve bazal membranı destekleyen hücredir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "İn situ karsinomda korunur, invaziv karsinomda kaybolur.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-12",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-terminal_duktus_lobuler_birim_tdlu",
+    "term": "Terminal duktus–lobüler birim (TDLU)",
+    "aliases": [
+      "TDLU"
+    ],
+    "category": "anatomi",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 32)Gebelik Hastalıkları  s.66",
+    "definition": "Memenin fonksiyonel birimi olan lobülün diğer adıdır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Birçok benign ve malign meme lezyonunun kökenidir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-12",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-filloid_tumor",
+    "term": "Filloid tümör",
+    "aliases": [
+      "filloides tümör"
+    ],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 32)Gebelik Hastalıkları  s.69",
+    "definition": "Meme dokusundaki bağ dokusundan kaynaklanan, nadir görülen fibroepitelyal kitledir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "İntralobüler stromadan köken alır.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-12",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-intraduktal_papillom",
+    "term": "İntraduktal papillom",
+    "aliases": [],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 32)Gebelik Hastalıkları  s.69",
+    "definition": "Meme ucunun altındaki sinüslerde büyüyen benign epitel lezyonudur.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-12",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
   }
 ]

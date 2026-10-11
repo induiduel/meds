@@ -1,0 +1,1303 @@
+{
+ "id": "k1-67-gebelik-hastaliklari",
+ "sira": 67,
+ "kurul": 1,
+ "ders": "Tıbbi Patoloji",
+ "konu": "Gebelik Hastalıkları",
+ "ogretim_uyesi": "Prof. Dr. Hikmet KELEŞ",
+ "tarih": "",
+ "kazanimlar": [
+  {
+   "no": 1,
+   "metin": "Öğrenci, plasentaya enfeksiyon yayılım yollarını (asendan, hematojen/TORCH) ve akut koryoamniyonit, funisitis ve kronik villit morfolojisini karşılaştırır.",
+   "sorular": [
+    {
+     "id": "k1-67-gebelik-hastaliklari-q01",
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "Plasentaya enfeksiyonun en sık ulaştığı yol aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Anne kanından transplasental (hematojen) geçiş",
+      "B": "Fetüsten anneye retrograd yayılım",
+      "C": "Lenfatik yolla komşu organlardan geçiş",
+      "D": "Yalnızca cerrahi girişimlerle bulaşma",
+      "E": "Doğum kanalından yukarı doğru (asendan) yayılım"
+     },
+     "dogru": "E",
+     "aciklama": "Plasentaya enfeksiyon asendan ve hematojen yolla ulaşır; asendan yol en sık olandır ve vajinal ile enterik bakterilerin oluşturduğu polimikrobiyal bir tablodur.",
+     "sik_aciklamalari": {
+      "A": "Yanlış. Hematojen yol daha seyrektir ve TORCH grubuyla ilişkilidir.",
+      "B": "Yanlış. Böyle bir yol tanımlanmamıştır.",
+      "C": "Yanlış. Plasental enfeksiyonun ana yollarından biri değildir.",
+      "D": "Yanlış. Plasental enfeksiyonun sık yolu değildir.",
+      "E": "Doğru. Asendan yol en sık görülen yoldur; neredeyse her zaman bakteriyeldir."
+     },
+     "bilgi": [
+      1,
+      4
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 5,
+      "alinti": "Plasentaya enfeksiyon yayılım yolları: 1. Doğum kanalından yukarı doğru (asendan) 2. Hematogen (transplasental) yol"
+     }
+    },
+    {
+     "id": "k1-67-gebelik-hastaliklari-q02",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Erken membran yırtılması sonrası preterm doğum yapan bir olgunun plasenta incelemesinde koryo-amniyonda nötrofilik infiltrasyon, ödem ve konjesyon saptanıyor. Aşağıdakilerden hangisi tabloyu en doğru açıklar?",
+     "secenekler": {
+      "A": "Hematojen TORCH enfeksiyonuna bağlı kronik villit",
+      "B": "Preeklampsiye bağlı plasental enfarkt",
+      "C": "Asendan polimikrobiyal bakteriyel enfeksiyona bağlı akut koryoamniyonit",
+      "D": "Omfalit",
+      "E": "Tüp gebeliğine bağlı hematosalpinks"
+     },
+     "dogru": "C",
+     "aciklama": "Koryo-amniyonda nötrofilik infiltrasyon, ödem ve konjesyon akut koryoamniyonittir ve asendan enfeksiyonun morfolojik imzasıdır.",
+     "sik_aciklamalari": {
+      "A": "Yanlış. Kronik villit villuslarda kronik inflamatuvar infiltrasyonla tanımlanır; nötrofilik koryo-amniyon inflamasyonu değildir.",
+      "B": "Yanlış. Enfarkt iskemik doku ölümüdür; inflamatuvar zar infiltrasyonu değildir.",
+      "C": "Doğru. Nötrofil, ödem ve konjesyon akut koryoamniyonit tanımıdır; erken membran yırtılması ve erken doğumla birlikte asendan bakteriyel enfeksiyonu gösterir.",
+      "D": "Yanlış. Omfalit doğum sonrası göbek kalıntısı enfeksiyonudur.",
+      "E": "Yanlış. Tüp lümeninde kan birikimidir; zar inflamasyonu değildir."
+     },
+     "bilgi": [
+      5,
+      6
+     ],
+     "benzer_cikmis": [
+      "594723e45fb6",
+      "633a00385237"
+     ],
+     "kanit": {
+      "sayfa": 7,
+      "alinti": "Koryo-amniyon: Nötrofilik infiltrasyon Ödem Konjesyon Tanım: Akut koryo-amniyonit"
+     }
+    },
+    {
+     "id": "k1-67-gebelik-hastaliklari-q03",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Funisitis ile ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Göbek kordonunun akut vaskülitidir ve neonatal sepsis riskini gösteren fetal inflamasyon belirtecidir",
+      "B": "Doğumdan sonra göbek kalıntısında oluşan enfeksiyondur",
+      "C": "Villusların kronik inflamasyonudur",
+      "D": "Yalnızca hematojen TORCH enfeksiyonlarında görülür",
+      "E": "Klinik açıdan önemsiz tesadüfi bir bulgudur"
+     },
+     "dogru": "A",
+     "aciklama": "Funisitis göbek kordonunun akut vaskülitidir; fetal inflamasyon belirteci olup yenidoğan sepsisi riskini işaret eder ve doğum sonrası gelişen omfalitten ayrılır.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Koryo-amniyon enfeksiyonunun kordon damarlarına yayılmasıyla oluşur.",
+      "B": "Yanlış. Bu omfalit-omfaloflebittir.",
+      "C": "Yanlış. Bu kronik villittir.",
+      "D": "Yanlış. Koryo-amniyon enfeksiyonunun kordona yayılmasıyla oluşur.",
+      "E": "Yanlış. Fetal inflamasyon belirtecidir ve neonatal sepsis riskini gösterir."
+     },
+     "bilgi": [
+      7,
+      8
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 8,
+      "alinti": "Funisitis: Göbek kordonunun akut vasküliti Nedeni: Koryo-amniyon enfeksiyonunun kordon damarlarına yayılması"
+     }
+    },
+    {
+     "id": "k1-67-gebelik-hastaliklari-q04",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "TORCH grubuyla ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
+     "secenekler": {
+      "A": "Herpes simpleks virüs genellikle vajinal doğum sırasında bebeğe bulaşır",
+      "B": "Rubella öksürük veya hapşırmayla yayılan bir virüstür",
+      "C": "'Others' grubuna sifiliz, tüberküloz ve listeriyoz girer",
+      "D": "Sitomegalovirüs az pişmiş et veya kedi dışkısı ile bulaşan bir protozoondur",
+      "E": "TORCH enfeksiyonlarında koryon villuslarında kronik inflamatuvar infiltrasyon görülür"
+     },
+     "dogru": "D",
+     "aciklama": "CMV tükürük ve vücut sıvılarıyla yayılan bir herpes virüsüdür; az pişmiş et ve kedi dışkısı ile bulaşan etken Toxoplasma gondii'dir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış seçenek; ifade doğrudur: derste HSV'nin genellikle vajinal doğum sırasında bebeğe bulaştığı belirtilir (s. 9).",
+      "B": "Yanlış seçenek; ifade doğrudur: kızamıkçık (rubella) virüsü öksürük veya hapşırmayla yayılır (s. 9).",
+      "C": "Yanlış seçenek; ifade doğrudur: 'Others' grubunda sifiliz (T. pallidum), tüberküloz ve Listeria sayılır (s. 9).",
+      "D": "Doğru. Bu tanım Toxoplasma gondii için geçerlidir; CMV tükürük ve vücut sıvılarıyla yayılan bir herpes virüsüdür.",
+      "E": "Yanlış seçenek; ifade doğrudur: hematojen TORCH enfeksiyonları koryon villuslarında kronik inflamatuvar infiltrasyon, yani kronik villit yapar (s. 10)."
+     },
+     "bilgi": [
+      11,
+      12,
+      14
+     ],
+     "benzer_cikmis": [
+      "55ecc868fdb6"
+     ],
+     "kanit": {
+      "sayfa": 9,
+      "alinti": "Tükürük ve vücut sıvıları yoluyla yayılan bir herpes virüs"
+     }
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "594723e45fb6",
+     "soru": "Tıbbi Patoloji\nÇift kontü\ntren rayı\nGebelik ve gestasyonel\nhastalıkların patolojisi\nmikroskopik\nincelemede\nkoryoamniyonda\nödem ve damar\ndolgunluğu ile birlikte\nnötroil iniltrasyonu\nizlendiğinde tanınız\nedir?",
+     "secenekler": {
+      "A": "Hematosalpenks",
+      "B": "Hidrosalpenks",
+      "C": "Mol hidatiform",
+      "D": "Akut koryoamniyonit",
+      "E": "Plesental site trofoblastik tümör"
+     },
+     "cevap": null
+    },
+    {
+     "id": "633a00385237",
+     "soru": "Gebelik ve gestasyonel hastalıkların patolojisi, mikroskopik incelemede koryoamniyonda ödem ve damar dolgunluğu ile birlikte nötroil infiltrasyonu izlendiğinde tanınız nedir?",
+     "secenekler": {
+      "A": "Hematosalpenks",
+      "B": "Hidrosalpenks",
+      "C": "Mol hidatiform",
+      "D": "Akut koryoamniyonit",
+      "E": "Plesental site trofoblastik tümör"
+     },
+     "cevap": "D"
+    },
+    {
+     "id": "55ecc868fdb6",
+     "soru": "IV. Tüm gebelerde TORCH taraması yapılmalıdır",
+     "secenekler": {
+      "A": "Yalnız I ve III",
+      "B": "Yalnız II ve IV",
+      "C": "Yalnız IV",
+      "D": "I, II, III ve IV"
+     },
+     "cevap": null
+    }
+   ]
+  },
+  {
+   "no": 2,
+   "metin": "Öğrenci, ektopik gebeliğin tanımını, yerleşim yerlerini, risk faktörlerini, morfolojisini, klinik seyrini ve yönetimini açıklar.",
+   "sorular": [
+    {
+     "id": "k1-67-gebelik-hastaliklari-q05",
+     "kazanim": 2,
+     "zorluk": "kolay",
+     "soru": "Ektopik gebelik en sık hangi anatomik bölgede görülür?",
+     "secenekler": {
+      "A": "Ovaryum",
+      "B": "Karın boşluğu (abdominal)",
+      "C": "Fallop tüpünün uterus dışı kısmı",
+      "D": "Uterin korpus kavitesi",
+      "E": "Endoservikal kanal"
+     },
+     "dogru": "C",
+     "aciklama": "Ektopik gebelikte en sık yerleşim Fallop tüpünün uterus dışı kısmıdır (yaklaşık %90).",
+     "sik_aciklamalari": {
+      "A": "Yanlış. Daha nadir bir yerleşimdir.",
+      "B": "Yanlış. Nadir bir yerleşimdir.",
+      "C": "Doğru. Ektopik gebeliklerin yaklaşık %90'ı tüpte yerleşir.",
+      "D": "Yanlış. Normal implantasyon yeridir; ektopik değildir.",
+      "E": "Yanlış. Ders en sık yerleşim olarak vermez."
+     },
+     "bilgi": [
+      20
+     ],
+     "benzer_cikmis": [
+      "06cd1112d702",
+      "k1-2020-2021-c-q058"
+     ],
+     "kanit": {
+      "sayfa": 11,
+      "alinti": "En sık yerleşim: Fallop tüpünün uterus dışı kısmı (~%90)"
+     }
+    },
+    {
+     "id": "k1-67-gebelik-hastaliklari-q06",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi ektopik gebeliğe en önemli yatkınlık nedenidir?",
+     "secenekler": {
+      "A": "Kronik salpingite bağlı pelvik inflamatuvar hastalık",
+      "B": "Endometriozis",
+      "C": "Rahim içi araç kullanımı",
+      "D": "Uterus içi tümörler",
+      "E": "Apandisit sonrası peritübal skar"
+     },
+     "dogru": "A",
+     "aciklama": "Ektopik gebeliğin en önemli yatkınlık nedeni kronik salpingite bağlı pelvik inflamatuvar hastalıktır; diğer seçenekler yardımcı risk faktörleridir.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Tüp lümeninde skarlaşma, daralma ve tıkanmaya yol açar; en önemli yatkınlıktır.",
+      "B": "Yanlış. Yatkınlık nedenidir ancak en önemlisi değildir.",
+      "C": "Yanlış. Riski yaklaşık 2 kat artırır; en önemli neden değildir.",
+      "D": "Yanlış. Diğer nedenler arasındadır.",
+      "E": "Yanlış. Yatkınlık yaratır; en önemlisi değildir."
+     },
+     "bilgi": [
+      23,
+      24,
+      25
+     ],
+     "benzer_cikmis": [
+      "k1-2023-2024-q021",
+      "31cd3fa3da1b",
+      "k1-2020-2021-a-q067"
+     ],
+     "kanit": {
+      "sayfa": 12,
+      "alinti": "En önemli yatkınlık: Pelvik inflamatuvar hastalık Kronik salpingite bağlı"
+     }
+    },
+    {
+     "id": "k1-67-gebelik-hastaliklari-q07",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Adet gecikmesi ve pozitif hCG öyküsü olan bir kadında birdenbire şiddetli karın ağrısı, akut batın bulguları ve hipotansiyon gelişiyor. Bu tablodaki temel patolojik mekanizma hangisidir?",
+     "secenekler": {
+      "A": "Spiral arterlerde yetersiz yeniden şekillenme",
+      "B": "Koryo-amniyonda nötrofilik infiltrasyon",
+      "C": "Villusların hidropik şişmesi",
+      "D": "İnvaziv plasentanın tüp duvarını delerek intraperitoneal kanamaya yol açması",
+      "E": "Göbek kordonu damarlarında vaskülit"
+     },
+     "dogru": "D",
+     "aciklama": "Şiddetli ağrı, akut batın ve hipovolemik şok rüptüre tubal gebeliği gösterir; mekanizma invaziv plasentanın tüp duvarını delmesi ve intraperitoneal kanamadır.",
+     "sik_aciklamalari": {
+      "A": "Yanlış. Preeklampsi patogenezidir.",
+      "B": "Yanlış. Asendan enfeksiyon bulgusudur.",
+      "C": "Yanlış. Mol bulgusudur; tüp rüptürü tablosunu açıklamaz.",
+      "D": "Doğru. Tüp gebeliği rüptüründe kanama hipovolemik şoka götürür.",
+      "E": "Yanlış. Funisitis, rüptürden farklıdır."
+     },
+     "bilgi": [
+      29,
+      32
+     ],
+     "benzer_cikmis": [
+      "d13d1f298e93"
+     ],
+     "kanit": {
+      "sayfa": 15,
+      "alinti": "Tüp gebeliklerinde: İnvaziv plasenta: Tüp duvarını deler İntratubal hematom (hematosalpinx) İntraperitoneal kanama"
+     }
+    },
+    {
+     "id": "k1-67-gebelik-hastaliklari-q08",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "Ektopik gebelikle ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Ovaryum gebeliğinde döllenmiş ovum fimbriyal uçtan peritona düşer",
+      "B": "Histolojik tanı koryonik villusların gösterilmesiyle konur; embriyo yapıları nadiren görülür",
+      "C": "Abdominal gebelik ovumun folikül rüptürüyle eş zamanlı döllenmesiyle oluşur",
+      "D": "Risk faktörü bulunmaması ektopik gebeliği dışlar",
+      "E": "Rüptür öncesi tablo normal gebelikten kolayca ayırt edilir"
+     },
+     "dogru": "B",
+     "aciklama": "Tüp gebeliğinde tanı koryonik villuslarla konur; ovaryan ve abdominal gebeliklerin mekanizmaları birbirine karıştırılmamalıdır.",
+     "sik_aciklamalari": {
+      "A": "Yanlış. Bu abdominal gebeliğin mekanizmasıdır.",
+      "B": "Doğru. Villusların varlığı tanı için yeterlidir.",
+      "C": "Yanlış. Bu ovaryum gebeliğinin mekanizmasıdır.",
+      "D": "Yanlış. Çoğu olguda belirgin neden bulunmayabilir.",
+      "E": "Yanlış. Ayırt etmek zor olabilir."
+     },
+     "bilgi": [
+      26,
+      27,
+      30
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 16,
+      "alinti": "Histolojik tanı: Koryonik villusların gösterilmesi Nadiren embriyo yapıları görülebilir"
+     }
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "06cd1112d702",
+     "soru": "Ektopik gebelik en sık nerede görülür?",
+     "secenekler": {
+      "A": "Over",
+      "B": "Karın boşluğu",
+      "C": "Tuba",
+      "D": "Uterin korpus",
+      "E": "Endoservikal kanal"
+     },
+     "cevap": "C"
+    },
+    {
+     "id": "k1-2020-2021-c-q058",
+     "soru": "Ektopik gebelik en sık nerede görülür?",
+     "secenekler": {
+      "A": "Over",
+      "B": "Karın boşluğu",
+      "C": "Tuba",
+      "D": "Uterin korpus",
+      "E": "Endoservikal kanal"
+     },
+     "cevap": "C"
+    },
+    {
+     "id": "k1-2023-2024-q021",
+     "soru": "Ektopik gebeliğin en önemli nedeni aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Endometriozis",
+      "B": "Uterin anomaliler",
+      "C": "Kronik salpenjit",
+      "D": "Leiomyom",
+      "E": "Over kisti"
+     },
+     "cevap": "C"
+    },
+    {
+     "id": "31cd3fa3da1b",
+     "soru": "Hangisi ektopik gebelik sebeplerinden olamaz?",
+     "secenekler": {
+      "A": "Kanalda nebde oluşumu",
+      "B": "X",
+      "C": "Tıbbi Patoloji",
+      "D": "Tıbbi Patoloji",
+      "E": "Tıbbi Patoloji"
+     },
+     "cevap": "B"
+    },
+    {
+     "id": "k1-2020-2021-a-q067",
+     "soru": "Hangisi ektopik gebelik sebeplerinden olamaz?",
+     "secenekler": {
+      "A": "Endometriozis",
+      "B": "Kronik iltihabi değişiklikler",
+      "C": "Kanalda nebde oluşumu",
+      "D": "Tümörler",
+      "E": "Kordonda akut vaskülit(Funisit) Sendromu)"
+     },
+     "cevap": "E"
+    },
+    {
+     "id": "d13d1f298e93",
+     "soru": "Son adet tarihine göre 8 hafta gebeliği olan kadının acil servise vajinal kanama ile başvurusunda, yapılan genital muayene ve ultrasonografisine göre servikal os'un kapalı",
+     "secenekler": {
+      "A": "Septik Abortus",
+      "B": "Kaçınılmaz Düşük",
+      "C": "Ektopik Gebelik",
+      "D": "Kaçınılmaz",
+      "E": "Sıra No"
+     },
+     "cevap": null
+    }
+   ]
+  },
+  {
+   "no": 3,
+   "metin": "Öğrenci, preeklampsi/eklampsinin tanımını, klinik tanısını ve patogenezini (spiral arter, plasental hipoksi, sFlt-1/endoglin, mediyatör dengesizliği) ve HELLP sendromunu açıklar.",
+   "sorular": [
+    {
+     "id": "k1-67-gebelik-hastaliklari-q09",
+     "kazanim": 3,
+     "zorluk": "kolay",
+     "soru": "Preeklampsinin tipik klinik üçlüsü aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Hipertansiyon, ödem, proteinüri",
+      "B": "Ateş, öksürük, dispne",
+      "C": "Hipotansiyon, bradikardi, anemi",
+      "D": "Karın ağrısı, adet gecikmesi, şok",
+      "E": "Hemoliz, karaciğer enzim yüksekliği, trombositopeni"
+     },
+     "dogru": "A",
+     "aciklama": "Preeklampsinin tipik üçlüsü hipertansiyon, ödem ve proteinüridir.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Genellikle son trimesterde başlayan klasik üçlüdür.",
+      "B": "Yanlış. Enfeksiyon bulgularıdır.",
+      "C": "Yanlış. Preeklampsi hipertansiyonla seyreder.",
+      "D": "Yanlış. Rüptüre ektopik gebelik tablosudur.",
+      "E": "Yanlış. HELLP sendromu bileşenleridir."
+     },
+     "bilgi": [
+      37
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 21,
+      "alinti": "Genellikle: Son trimesterde başlar Tipik üçlü: Hipertansiyon Ödem Proteinüri"
+     }
+    },
+    {
+     "id": "k1-67-gebelik-hastaliklari-q10",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Normal gebelikle karşılaştırıldığında preeklampside spiral arterlerde aşağıdakilerden hangisi gözlenir?",
+     "secenekler": {
+      "A": "Trofoblastlarca tam istila ve geniş sinüzoidlere dönüşüm",
+      "B": "Düşük dirençli, yüksek akımlı perfüzyon",
+      "C": "Kan akımında artış",
+      "D": "Kas-elastik duvarların korunması ve lümenlerin dar kalması",
+      "E": "Plasental hipoksinin ortadan kalkması"
+     },
+     "dogru": "D",
+     "aciklama": "Preeklampside spiral arterlerin kas-elastik duvarları korunur, lümenler dar kalır ve plasentaya kan akımı azalır; sonuç plasental hipoksidir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış. Bu normal gebelikteki dönüşümdür.",
+      "B": "Yanlış. Normal gebelikte olur.",
+      "C": "Yanlış. Preeklampside azalır.",
+      "D": "Doğru. Yeniden şekillenme bozulur; kan akımı azalır ve plasental hipoksi gelişir.",
+      "E": "Yanlış. Hipoksi gelişir."
+     },
+     "bilgi": [
+      40,
+      42
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 24,
+      "alinti": "Vasküler yeniden şekillenme bozulur Kas-elastik duvarlar korunur Lumenler dar kalır"
+     }
+    },
+    {
+     "id": "k1-67-gebelik-hastaliklari-q11",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Preeklampside plasental hipoksiye yanıt olarak artan sFlt-1 ve endoglin için aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "VEGF ve TGF-β'nın etkilerini artırırlar",
+      "B": "VEGF ve TGF-β'nın etkilerini antagonize ederek endotel disfonksiyonunu tetiklerler",
+      "C": "Prostasiklin üretimini artırarak vazodilatasyon yaparlar",
+      "D": "Yalnızca plasental enfarktı önlerler",
+      "E": "Trofoblastların spiral arter istilasını güçlendirirler"
+     },
+     "dogru": "B",
+     "aciklama": "Hipoksi anti-anjiyojenik faktörleri (sFlt-1, endoglin) artırır; bunlar VEGF ve TGF-β etkilerini antagonize ederek endotel disfonksiyonuna yol açar.",
+     "sik_aciklamalari": {
+      "A": "Yanlış. Etkileri antagonize ederler.",
+      "B": "Doğru. Anti-anjiyojenik faktörlerdir.",
+      "C": "Yanlış. Prostasiklin azalır.",
+      "D": "Yanlış. Endotel disfonksiyonunu tetiklerler.",
+      "E": "Yanlış. İstila yetersizdir."
+     },
+     "bilgi": [
+      43,
+      44
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 25,
+      "alinti": "Artan anti-anjiyojenik faktörler: Çözünür FMS benzeri tirozin kinaz-1 (sFlt-1) Endoglin"
+     }
+    },
+    {
+     "id": "k1-67-gebelik-hastaliklari-q13",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Şiddetli preeklampsili bir gebede mikroanjiyopatik hemolitik anemi, karaciğer enzim yüksekliği ve trombositopeni saptanıyor. Aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Tablo eklampsidir ve konvülsiyon tanı için şarttır",
+      "B": "Tablo funisitistir",
+      "C": "Tablo HELLP sendromudur ve bazı olgularda DIC eşlik eder",
+      "D": "HELLP yalnızca doğumdan önce görülür",
+      "E": "Tablo TORCH enfeksiyonunun sonucudur"
+     },
+     "dogru": "C",
+     "aciklama": "Hemoliz, yüksek karaciğer enzimleri ve düşük trombosit HELLP sendromunu oluşturur; DIC eşlik edebilir ve doğum sonrası da görülebilir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış. Eklampsi konvülsiyonla tanımlanır; bu üçlü HELLP'tir.",
+      "B": "Yanlış. Funisitis kordon vaskülitidir.",
+      "C": "Doğru. HELLP şiddetli preeklampsi olgularının yaklaşık %10'unda görülür.",
+      "D": "Yanlış. Doğum sonrasında da ortaya çıkabilir.",
+      "E": "Yanlış. Preeklampsi spektrumundadır."
+     },
+     "bilgi": [
+      48
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 28,
+      "alinti": "Şiddetli preeklampsi olgularının ~%10’unda Özellikler: Mikroanjiyopatik hemolitik anemi Karaciğer enzimlerinde yükselme Trombositopeni (trombosit tüketimi)"
+     }
+    },
+    {
+     "id": "k1-67-gebelik-hastaliklari-q12",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "Preeklampside hipertansiyon ve hiperkoagülabilite gelişimine ilişkin aşağıdaki ifadelerden hangisi YANLIŞTIR?",
+     "secenekler": {
+      "A": "Prostaglandin E2 üretimi azalır",
+      "B": "Tromboksan A2 vazokonstriktör etkiyle hipertansiyona katkıda bulunur",
+      "C": "Antitrombotik faktörlerin azalması hiperkoagülabiliteye katkıda bulunur",
+      "D": "Prokoagülan faktör üretimi artar",
+      "E": "Prostasiklin (PGI2) artar, tromboksan A2 azalır"
+     },
+     "dogru": "E",
+     "aciklama": "Preeklampside vazodilatörler (PGI2, PGE2) azalır, vazokonstriktör tromboksan A2 artar; antitrombotik faktörler azalıp prokoagülanlar artar.",
+     "sik_aciklamalari": {
+      "A": "Yanlış seçenek; ifade doğrudur: preeklampside vazodilatör PGE2 (ve PGI2) üretimi azalır, bu da hipertansiyona katkıda bulunur (s. 27).",
+      "B": "Yanlış seçenek; ifade doğrudur: vazokonstriktör tromboksan A2 artar ve kan basıncını yükseltir (s. 27).",
+      "C": "Yanlış seçenek; ifade doğrudur: PGI2 gibi antitrombotik faktörlerin azalması hiperkoagülabiliteye yol açar (s. 27).",
+      "D": "Yanlış seçenek; ifade doğrudur: prokoagülan faktör üretiminin artması hiperkoagülabilitenin ikinci ayağıdır (s. 27).",
+      "E": "Doğru. Tam tersi gerçekleşir: PGI2 azalır, tromboksan A2 artar."
+     },
+     "bilgi": [
+      46,
+      47
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 27,
+      "alinti": "Vazodilatör üretiminde azalma: Prostasiklin (PGI2) Prostaglandin E2 Vazokonstriktör artışı: Tromboxan A2"
+     }
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 4,
+   "metin": "Öğrenci, preeklampsi/eklampsinin plasental ve desidual morfolojisini, klinik seyrini, organ yetmezliklerini ve tedavisini açıklar.",
+   "sorular": [
+    {
+     "id": "k1-67-gebelik-hastaliklari-q14",
+     "kazanim": 4,
+     "zorluk": "kolay",
+     "soru": "Preeklampsinin en etkili tedavisi aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Uterus küretajı",
+      "B": "Acil doğum",
+      "C": "Antibiyotik tedavisi",
+      "D": "Tüpün cerrahi çıkarılması",
+      "E": "Tek başına gözlem"
+     },
+     "dogru": "B",
+     "aciklama": "Preeklampsinin en etkili tedavisi acil doğumdur; doğumdan sonra proteinüri ve hipertansiyon genellikle 1–2 haftada kaybolur.",
+     "sik_aciklamalari": {
+      "A": "Yanlış. Mol tedavisinde kullanılır.",
+      "B": "Doğru. Plasental kaynağı ortadan kaldırır.",
+      "C": "Yanlış. Enfeksiyon yoktur.",
+      "D": "Yanlış. Tubal gebelik cerrahisidir.",
+      "E": "Yanlış. Karar dengesi doğum yönündedir."
+     },
+     "bilgi": [
+      55,
+      56
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 33,
+      "alinti": "En etkili tedavi: Acil doğum Karar dengesi: Erken doğum riskleri Preeklampsinin sürmesinin riskleri"
+     }
+    },
+    {
+     "id": "k1-67-gebelik-hastaliklari-q15",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Preeklampsili gebenin plasenta incelemesiyle ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Enfarkt yalnızca preeklampside görülür",
+      "B": "Terminal villuslarda sinsityal düğümler azalır",
+      "C": "Retroplasental kanama görülmez",
+      "D": "Koryo-amniyonda nötrofilik infiltrasyon tanı koydurur",
+      "E": "Enfarktlar normal gebelikte de olabilir ancak şiddetli preeklampsi/eklampside çok daha fazladır"
+     },
+     "dogru": "E",
+     "aciklama": "Preeklampside plasentada enfarktlar, retroplasental kanama ve terminal villuslarda sinsityal düğüm artışı görülür; enfarkt normal gebelikte de bulunabilir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış. Normal gebelikte de olabilir.",
+      "B": "Yanlış; villus iskemisinde terminal villuslarda sinsityal epitel düğümleri azalmaz, artar (s. 29).",
+      "C": "Yanlış. Görülebilir.",
+      "D": "Yanlış. Asendan enfeksiyon bulgusudur.",
+      "E": "Doğru. Enfarkt tek başına özgül değildir; sayısı önemlidir."
+     },
+     "bilgi": [
+      49,
+      50
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 29,
+      "alinti": "Normal gebelikte de olabilir Şiddetli preeklampsi / eklampside çok daha fazla"
+     }
+    },
+    {
+     "id": "k1-67-gebelik-hastaliklari-q16",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "24. gebelik haftasında hipertansiyon ve proteinüri gelişen bir gebede preeklampsinin bu kadar erken başlamasına en olası eşlik eden durum aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Normal tek fetüslü gebelik",
+      "B": "Funisitis",
+      "C": "Hidatiform mol",
+      "D": "Ektopik gebelik",
+      "E": "Omfalit"
+     },
+     "dogru": "C",
+     "aciklama": "Preeklampsi en sık 34. haftadan sonra başlar; daha erken ortaya çıkış hidatiform mol ve önceden var olan hastalıklarla ilişkilidir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış. Preeklampsi en sık 34. haftadan sonra başlar.",
+      "B": "Yanlış. Plasental enfeksiyon sonucudur.",
+      "C": "Doğru. Hidatiform mol ve önceden var olan böbrek hastalığı, hipertansiyon veya koagülasyon bozuklukları erken başlangıçla ilişkilidir.",
+      "D": "Yanlış. Ektopik gebelikte preeklampsi gelişmez.",
+      "E": "Yanlış. Doğum sonrası göbek enfeksiyonudur."
+     },
+     "bilgi": [
+      52,
+      53
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 31,
+      "alinti": "En sık başlangıç: 34.gebelik haftasından sonra"
+     }
+    },
+    {
+     "id": "k1-67-gebelik-hastaliklari-q17",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "Eklampsi ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
+     "secenekler": {
+      "A": "Doğum sonrasında kalıcı sekel bırakması kuraldır",
+      "B": "Kan basıncı daha da yükselir",
+      "C": "Böbrek fonksiyonu bozulur",
+      "D": "Konvülsiyon ve koma görülür",
+      "E": "En sık organ yetmezliği böbrek ve karaciğerde olur"
+     },
+     "dogru": "A",
+     "aciklama": "Eklampsi konvülsiyon ve komayla seyreder, en sık böbrek ve karaciğer yetmezliğine yol açar; ancak doğumdan sonra çoğu olguda kalıcı sekel kalmaz.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Çoğu olguda kalıcı sekel yoktur; bulgular 1–2 haftada kaybolur.",
+      "B": "Yanlış seçenek; ifade doğrudur: preeklampsi eklampsiye ilerlediğinde kan basıncı daha da yükselir (s. 32).",
+      "C": "Yanlış seçenek; ifade doğrudur: eklampsiye ilerlemede böbrek fonksiyonu bozulur (s. 32).",
+      "D": "Yanlış seçenek; ifade doğrudur: eklampsinin klinik tablosu konvülsiyonlar ve komadır (s. 32).",
+      "E": "Yanlış seçenek; ifade doğrudur: eklampside en sık organ yetmezliği böbrek ve karaciğerde görülür (s. 32)."
+     },
+     "bilgi": [
+      54,
+      56
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 32,
+      "alinti": "Preeklampsi eklampsiye ilerlerse: Kan basıncı daha da yükselir Böbrek fonksiyonu bozulur"
+     }
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 5,
+   "metin": "Öğrenci, tam ve kısmi hidatiform molü karyotip, genetik köken, morfoloji, hCG, klinik risk ve izlem açısından karşılaştırır ve invaziv molü tanımlar.",
+   "sorular": [
+    {
+     "id": "k1-67-gebelik-hastaliklari-q18",
+     "kazanim": 5,
+     "zorluk": "kolay",
+     "soru": "Kısmi hidatiform molün karyotipi aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Diploid 46,XX",
+      "B": "Monozomi 45,X",
+      "C": "Trizomi 21",
+      "D": "Normal 46,XY, yalnızca anneden gelen",
+      "E": "Neredeyse her zaman triploid (örn. 69,XXY)"
+     },
+     "dogru": "E",
+     "aciklama": "Kısmi mol neredeyse her zaman triploiddir (ör. 69,XXY); tam mol diploiddir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış. Tam molün karyotipidir.",
+      "B": "Yanlış. Mol karyotipi değildir.",
+      "C": "Yanlış. Mol karyotipi değildir.",
+      "D": "Yanlış. Mol paternal fazlalıkla ilişkilidir.",
+      "E": "Doğru. Kısmi molün karakteristik karyotipidir."
+     },
+     "bilgi": [
+      64,
+      65
+     ],
+     "benzer_cikmis": [
+      "past-1790877034766-353191"
+     ],
+     "kanit": {
+      "sayfa": 38,
+      "alinti": "Kısmi hidatiform mol: Erken embriyo oluşumu olabilir Fetal parçalar sık Bazı normal villuslar mevcuttur Neredeyse her zaman triploid (örn. 69,XXY)"
+     }
+    },
+    {
+     "id": "k1-67-gebelik-hastaliklari-q19",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Tam ve parsiyel hidatiform molü karşılaştıran aşağıdaki ifadelerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Tam molde villöz ödem yalnızca bazı villuslardadır",
+      "B": "Parsiyel molde doku hCG ++++ iken tam molde +'dır",
+      "C": "Tam molde trofoblast proliferasyonu diffüz ve villusu çepeçevre, parsiyel molde fokal ve hafiftir",
+      "D": "Parsiyel molde karyotip diploid, tam molde triploiddir",
+      "E": "İkisinde de sonraki koriokarsinom riski %2,5'tir"
+     },
+     "dogru": "C",
+     "aciklama": "Tam molde karyotip diploid, ödem tüm villuslarda, proliferasyon diffüz ve doku hCG ++++; parsiyel molde karyotip triploid, ödem bazı villuslarda, proliferasyon fokal ve hafiftir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış. Tam molde tüm villuslardadır.",
+      "B": "Yanlış. Tersidir: tam molde ++++.",
+      "C": "Doğru. Tablo 17.5'e uygundur.",
+      "D": "Yanlış; karyotip ters verilmiştir: tam mol diploid, parsiyel mol triploiddir (Tablo 17.5, s. 39).",
+      "E": "Yanlış. Parsiyel molde risk nadirdir."
+     },
+     "bilgi": [
+      65,
+      66,
+      67
+     ],
+     "benzer_cikmis": [
+      "d3-k1-pat-052",
+      "k1-2021-2022-q074",
+      "k1-2019-2020-q060"
+     ],
+     "kanit": {
+      "sayfa": 39,
+      "alinti": "Karyotip Diploid Triploid Villöz ödem Tüm villuslarda Bazı villuslarda"
+     }
+    },
+    {
+     "id": "k1-67-gebelik-hastaliklari-q20",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Tam hidatiform molün genetik kökenini en doğru şekilde hangisi ifade eder?",
+     "secenekler": {
+      "A": "Boş ovumun duplike olmuş tek sperm ya da iki sperm tarafından döllenmesiyle yalnızca baba kromozomlarını içeren diploid hücreler oluşur",
+      "B": "Normal ovumun iki sperm tarafından döllenmesiyle triploid hücreler oluşur",
+      "C": "Maternal kromozomların duplikasyonuyla diploid hücre oluşur",
+      "D": "Normal ovum ve normal sperm döllenmesi",
+      "E": "Yalnızca anneden gelen kromozomlarla gelişen embriyo"
+     },
+     "dogru": "A",
+     "aciklama": "Tam molde tüm genetik içerik babadandır (boş ovum + sperm); kısmi molde normal ovum iki spermle döllenir ve triploid karyotip oluşur.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Androgenetik oluşumdur.",
+      "B": "Yanlış. Bu kısmi mol mekanizmasıdır.",
+      "C": "Yanlış. Mol paternal fazlalıkla ilişkilidir.",
+      "D": "Yanlış. Normal gebeliktir.",
+      "E": "Yanlış. Mol paternal genomla ilişkilidir."
+     },
+     "bilgi": [
+      68,
+      69,
+      71
+     ],
+     "benzer_cikmis": [
+      "5e19b32c3163"
+     ],
+     "kanit": {
+      "sayfa": 40,
+      "alinti": "Tam mol: Tüm genetik içerik babadan Mekanizma: Boş ovum + iki sperm Veya boş ovum + diploid sperm"
+     }
+    },
+    {
+     "id": "k1-67-gebelik-hastaliklari-q21",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Hidatiform mol nedeniyle küretaj uygulanan hastanın izlemiyle ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Küretajdan sonra izlem gerekmez",
+      "B": "Tek bir hCG ölçümü yeterlidir",
+      "C": "Yalnızca ultrasonla izlenir",
+      "D": "6–12 ay boyunca seri hCG ölçülerek hCG'nin gebelik dışı düşük düzeye indiği doğrulanır ve kalıcı trofoblastik hastalık aranır",
+      "E": "İzlem yalnızca kısmi molde yapılır"
+     },
+     "dogru": "D",
+     "aciklama": "Mol küretajla eksize edilir; takip 6–12 ay seri hCG ölçümü ile yapılır, amaç hCG'nin düşüşünü doğrulamak ve kalıcı trofoblastik hastalığı saptamaktır.",
+     "sik_aciklamalari": {
+      "A": "Yanlış. Seri hCG izlemi zorunludur.",
+      "B": "Yanlış. İzlem 6–12 ay sürer.",
+      "C": "Yanlış. hCG izlemin temelidir.",
+      "D": "Doğru. Standart izlem budur.",
+      "E": "Yanlış. Mol izlemi iki tipte de gereklidir."
+     },
+     "bilgi": [
+      79,
+      80
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 45,
+      "alinti": "Çoğu mol: Uterus küretajı ile eksize edilir"
+     }
+    },
+    {
+     "id": "k1-67-gebelik-hastaliklari-q22",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "Gebeliğin erken döneminde hCG'si gebelik haftasına göre belirgin yüksek olmayan, fetal kalp sesi duyulmayan hastada alınan materyalde bazı villuslarda ödem, fokal ve hafif trofoblast proliferasyonu ve villuslarda fetal kırmızı kan hücreleri saptanıyor. Bu olgu için aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Tam moldür; karyotip diploiddir ve koryokarsinom riski %2,5'tir",
+      "B": "Kısmi moldür; karyotip büyük olasılıkla triploiddir ve koryokarsinomla ilişkili değildir",
+      "C": "İnvaziv moldür; hidropik villuslar miyometriyuma derin penetre olmuştur",
+      "D": "Koryokarsinomdur; villus yoktur",
+      "E": "PSTT'dir; ara trofoblast kökenlidir"
+     },
+     "dogru": "B",
+     "aciklama": "Bazı villuslarda ödem, fokal-hafif proliferasyon ve fetal eritrositler kısmi molü gösterir; karyotip triploid, koryokarsinom riski ise derste ilişkilendirilmez.",
+     "sik_aciklamalari": {
+      "A": "Yanlış. Tam molde tüm villuslar anormaldir, fetal eleman beklenmez.",
+      "B": "Doğru. Fokal ödem, hafif proliferasyon ve fetal eritrositler kısmi molü gösterir.",
+      "C": "Yanlış. Bu bulgular miyometrium invazyonunu göstermez.",
+      "D": "Yanlış. Burada villuslar mevcuttur.",
+      "E": "Yanlış. PSTT'de hCG düşük, hPL yüksektir ve villus tümörü değildir."
+     },
+     "bilgi": [
+      73,
+      84,
+      85
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 48,
+      "alinti": "Villöz ödem: Sadece bazı villuslarda Trofoblast proliferasyonu: Fokal ve hafif"
+     }
+    },
+    {
+     "id": "k1-67-gebelik-hastaliklari-q23",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "Mol nedeniyle küretaj yapılan bir hastada hCG gebelik dışı düşük seviyelere inmiyor; hidropik villuslar miyometriyuma derin penetre ve uzak metastaz yok. En olası tanı ve tedavi aşağıdakilerden hangisidir?",
+     "secenekler": {
+      "A": "Koryokarsinom; villus yoktur, yalnızca küretaj yeterlidir",
+      "B": "PSTT; hCG düşüktür",
+      "C": "Kısmi mol; ek tedavi gerekmez",
+      "D": "Tam mol; ikinci küretaj kesin tedavidir",
+      "E": "İnvaziv mol; hCG yüksek kaldığı için kemoterapi ile çoğu vakada tam iyileşme sağlanır"
+     },
+     "dogru": "E",
+     "aciklama": "Hidropik villusları koruyan, miyometriyuma derin invazyon yapan ve metastaz yapmayan lezyon invaziv moldür; hCG yüksek kalırsa kemoterapi gerekir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış. Burada hidropik villuslar korunmuştur.",
+      "B": "Yanlış. Bu olguda hCG yüksek kalmıştır.",
+      "C": "Yanlış. Kalıcı hastalık söz konusudur.",
+      "D": "Yanlış. Küretaj yetersiz kalabilir.",
+      "E": "Doğru. Villuslar korunmuş, uzak metastaz yok, derin invazyon var."
+     },
+     "bilgi": [
+      86,
+      87,
+      90
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 51,
+      "alinti": "İnvaziv mol: Lokal agresif tam hidatiform mol Özellik: Hidropik villusları korur"
+     }
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "past-1790877034766-353191",
+     "soru": "Molar gebeliklerle ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Komplet molde tüm villuslarda yaygın ödem izlenir",
+      "B": "Parsiel mol, triploid karyotipe (69,XXY) sahiptir",
+      "C": "Fetusa ait parçalar, komplet mollerde yaygın olarak görülürken, parsiel mollerde çok nadir izlenir",
+      "D": "Komplet mollerde trofoblastik proliferasyonu, çok belirgin ve diffüz-çepeçevre iken, parsiel mollerde daha fokal, odaksal ve hafiftir",
+      "E": "Komplet mollerin %2'sinde koryokarsinom gelişme riski varken, parsiel mollerde koryokarsinom gelişme riski daha nadirdir"
+     },
+     "cevap": "C"
+    },
+    {
+     "id": "d3-k1-pat-052",
+     "soru": "Molar gebelikler ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Komplet molde tüm villuslarda yaygın ödem izlenir",
+      "B": "Parsiyel mol, diploid karyotipe (46,XX) sahiptir",
+      "C": "Fetusa ait parçalar komplet mollerde görülmezken, parsiyel mollerde görülebilir",
+      "D": "Komplet mollerde trofoblastik proliferasyon diffüz-çepeçevre iken, parsiyel mollerde daha fokaldir",
+      "E": "Komplet mollerin yaklaşık %2'sinde koryokarsinom gelişme riski varken, parsiyel mollerde bu risk daha nadirdir"
+     },
+     "cevap": "B"
+    },
+    {
+     "id": "k1-2021-2022-q074",
+     "soru": "Molar gebeliklerle ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Komplet molde tüm villuslarda yaygın ödem izlenir.",
+      "B": "Parsiyel mol, triploid karyotipe (69XXY) sahiptir.",
+      "C": "Fetusa ait parçalar, komplet mollerde yaygın olarak görülürken, parsiyel mollerde çok nadir izlenir.",
+      "D": "Komplet mollerde trofoblastik proliferasyon çok belirgin ve diffüz- çepçevre iken, parsiyel mollerde daha fokal, odaksal ve hafiftir.",
+      "E": "Komplet mollerin %2’sinde koriokarsinom gelişme riski varken, parsiyel mollerde koriokarsinom gelişme riski daha nadirdir."
+     },
+     "cevap": "C"
+    },
+    {
+     "id": "k1-2019-2020-q060",
+     "soru": "Parsiyel mol hidatiform ile karşılaştırıldığında aşağıdakilerden hangisi/hangileri komplet mol hidatiform lehinedir? I-Trofoblastik atipi daha fazladır II-Trofoblastik psödoinklüzyonlar vardır III-Villusların çevresi daha az girintili çıkıntılıdır IV-Fibrotik villuslar hidropik villuslarla iç içedir",
+     "secenekler": {
+      "A": "Yalnız I, II ve III",
+      "B": "Yalnız I ve III",
+      "C": "Yalnız II ve IV",
+      "D": "Yalnız IV",
+      "E": "I, II, III ve IV"
+     },
+     "cevap": "B"
+    },
+    {
+     "id": "5e19b32c3163",
+     "soru": "Tıbbi Patoloji Tıbbi Patoloji Gebelik ve gestasyonel hastalıkların patolojisi Mol hidatiform sıklığını arttıran faktörlerden değildir?",
+     "secenekler": {
+      "A": "20 yaş altında olmak",
+      "B": "40 yaş üstünde olmak",
+      "C": "Asya kökenli olmak",
+      "D": "Geçirilmiş mol öyküsü"
+     },
+     "cevap": "D"
+    }
+   ]
+  },
+  {
+   "no": 6,
+   "metin": "Öğrenci, gebelik koryokarsinomu ve plasental bölge trofoblastik tümörünü köken, epidemiyoloji, klinik, morfoloji, yayılım ve prognoz açısından açıklar.",
+   "sorular": [
+    {
+     "id": "k1-67-gebelik-hastaliklari-q24",
+     "kazanim": 6,
+     "zorluk": "kolay",
+     "soru": "Plasental bölge trofoblastik tümörü (PSTT) hangi hücrelerden kaynaklanır?",
+     "secenekler": {
+      "A": "Sitotrofoblast",
+      "B": "Sinsityotrofoblast",
+      "C": "Fetal eritrositler",
+      "D": "Ekstravillöz (ara) trofoblastlar",
+      "E": "Desidual hücreler"
+     },
+     "dogru": "D",
+     "aciklama": "PSTT ekstravillöz (ara) trofoblast kökenli, nadir (<%2) bir tümördür.",
+     "sik_aciklamalari": {
+      "A": "Yanlış. PSTT ara trofoblast kökenlidir.",
+      "B": "Yanlış. Köken ara trofoblasttır.",
+      "C": "Yanlış. Kan hücresidir.",
+      "D": "Doğru. Normalde desidua ve miyometriyumu istila eden hücrelerdir.",
+      "E": "Yanlış. Köken ara trofoblasttır."
+     },
+     "bilgi": [
+      101
+     ],
+     "benzer_cikmis": [
+      "ab0692667382"
+     ],
+     "kanit": {
+      "sayfa": 62,
+      "alinti": "PSTT: Gestasyonel trofoblastik neoplazilerin <%2’si Köken: Ekstravillöz trofoblastlar (ara trofoblastlar)"
+     }
+    },
+    {
+     "id": "k1-67-gebelik-hastaliklari-q25",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Gebelik koryokarsinomu en sık aşağıdaki hangi gebelik sonrasında gelişir?",
+     "secenekler": {
+      "A": "Normal gebelik",
+      "B": "Tam hidatiform mol",
+      "C": "Önceki düşükler",
+      "D": "Ektopik gebelik",
+      "E": "Kısmi mol"
+     },
+     "dogru": "B",
+     "aciklama": "Koryokarsinomun yaklaşık %50'si tam mol, %25'i düşük, %22'si normal gebelik sonrası gelişir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış. Yaklaşık %22.",
+      "B": "Doğru. Olguların yaklaşık %50'si tam mol sonrasıdır.",
+      "C": "Yanlış. Yaklaşık %25.",
+      "D": "Yanlış. Kalan küçük bir kısımdır.",
+      "E": "Yanlış. Kısmi mol koryokarsinomla ilişkilendirilmez."
+     },
+     "bilgi": [
+      94
+     ],
+     "benzer_cikmis": [
+      "k1-2023-2024-q058"
+     ],
+     "kanit": {
+      "sayfa": 56,
+      "alinti": "~%50: tam hidatiform mol sonrası ~%25: önceki düşükler sonrası ~%22: normal gebelik sonrası Kalanı: ektopik gebelikler sonrası"
+     }
+    },
+    {
+     "id": "k1-67-gebelik-hastaliklari-q26",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Bir olguda hemorajik ve nekrotik uterus kitlesi, histolojide koryonik villus yokluğu ve anaplastik sito- ve sinsityotrofoblastlar saptanıyor. Aşağıdakilerden hangisi bu tümör için doğrudur?",
+     "secenekler": {
+      "A": "Hidropik villusları korur ve uzak metastaz yapmaz",
+      "B": "Lenfatik yayılım en sık yoldur",
+      "C": "Serum hCG genellikle düşüktür",
+      "D": "Tanı anında genellikle metastaz yoktur",
+      "E": "Hematojen yayılır ve en sık akciğere metastaz yapar"
+     },
+     "dogru": "E",
+     "aciklama": "Villus yokluğu ve anaplastik trofoblastlar koryokarsinomu gösterir; hematojen yayılır, en sık akciğere (~%50) metastaz yapar.",
+     "sik_aciklamalari": {
+      "A": "Yanlış. İnvaziv molün özelliğidir.",
+      "B": "Yanlış. Lenfatik yayılım nadirdir.",
+      "C": "Yanlış. hCG hızla yükselir.",
+      "D": "Yanlış. Tanı anında genellikle metastaz vardır.",
+      "E": "Doğru. Gebelik koryokarsinomudur; akciğer ~%50."
+     },
+     "bilgi": [
+      97,
+      98
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 58,
+      "alinti": "Histoloji: Koryonik villus yok Anaplastik sitotrofoblastlar Sinsityotrofoblastlardan oluşan solid tümör"
+     }
+    },
+    {
+     "id": "k1-67-gebelik-hastaliklari-q28",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Koryokarsinomun prognozu ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Plasental (gestasyonel) form kemoterapiye son derece duyarlıdır ve uzak metastazda bile neredeyse %100 kür sağlanır; gonadal form daha dirençlidir",
+      "B": "Gonadal form gestasyonel formdan daha iyi prognozludur",
+      "C": "Metastaz varsa kür mümkün değildir",
+      "D": "Kemoterapiye dirençlidir, yalnızca cerrahi etkilidir",
+      "E": "Her iki formda kür oranı aynıdır"
+     },
+     "dogru": "A",
+     "aciklama": "Gestasyonel koryokarsinom kemoterapiyle neredeyse %100 küre ulaşır; gonadal köken daha dirençli ve kötü prognozludur.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Dersin prognoz ayrımıdır.",
+      "B": "Yanlış. Gonadal form daha dirençli, prognozu kötüdür.",
+      "C": "Yanlış. Gestasyonel formda metastazda bile kür vardır.",
+      "D": "Yanlış. Kemoterapiye son derece duyarlıdır.",
+      "E": "Yanlış. Gonadal form daha dirençlidir."
+     },
+     "bilgi": [
+      99,
+      100
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 60,
+      "alinti": "Plasental (gestasyonel) koryokarsinom: Kemoterapiye son derece duyarlı Uzak metastaz olsa bile neredeyse %100 kür"
+     }
+    },
+    {
+     "id": "k1-67-gebelik-hastaliklari-q27",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "Doğumdan birkaç ay sonra anormal kanama ile gelen bir hastada tümör endometriyum ve miyometriyuma sınırlıdır, serum hCG düşük, hPL ise belirgin yüksektir. Bu tümör için aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Koryokarsinomdur; kemoterapiye son derece duyarlıdır ve ~%100 kür sağlanır",
+      "B": "İnvaziv moldür; hidropik villus korunmuştur",
+      "C": "PSTT'dir; kemoterapiye diğer trofoblastik tümörlere göre daha az duyarlıdır ve sınırlı hastalıkta prognoz genellikle iyidir",
+      "D": "Tam moldür; karyotip diploid 46,XX ve hCG çok yüksektir",
+      "E": "Kısmi moldür; fetal parçalar sıktır"
+     },
+     "dogru": "C",
+     "aciklama": "PSTT'de serum hCG düşüktür, hPL belirgindir; sınırlıysa prognoz iyi, yayılırsa kötüdür ve kemoterapiye daha az duyarlıdır.",
+     "sik_aciklamalari": {
+      "A": "Yanlış. Koryokarsinomda hCG hızla yükselir.",
+      "B": "Yanlış. Burada villus tümörü tanımlanmamıştır.",
+      "C": "Doğru. Düşük hCG ve belirgin hPL PSTT'nin profilidir.",
+      "D": "Yanlış. hCG düşüktür.",
+      "E": "Yanlış. PSTT ile ilgisi yoktur."
+     },
+     "bilgi": [
+      102,
+      104,
+      105
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 63,
+      "alinti": "hCG: Az miktarda → serum hCG genelde düşük İnsan plasental laktogen (hPL): Önemli miktarda üretilir"
+     }
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "ab0692667382",
+     "soru": "Plesental site trofoblastik tümör hangi hücrelerden kaynaklanır?",
+     "secenekler": {
+      "A": "Sitotrofoblast",
+      "B": "Sinsityotrofoblast",
+      "C": "İntermediyer trofoblast",
+      "D": "Fetal eritrosit",
+      "E": "Desidual hücreler"
+     },
+     "cevap": "A"
+    },
+    {
+     "id": "k1-2023-2024-q058",
+     "soru": "Koryokarsinom(gestasyonel karsinom) en sık aşağıdakilerden hangisinden sonra gelişir?",
+     "secenekler": {
+      "A": "Normal gebelik",
+      "B": "Ektopik gebelik",
+      "C": "Abortus",
+      "D": "Komplet mol gebelik→İnvaziv mol→Karyokarsinom",
+      "E": "Parsiyel mol gebelik"
+     },
+     "cevap": "D"
+    }
+   ]
+  },
+  {
+   "no": 7,
+   "metin": "Öğrenci, meme lobül, kanal ve stroma histolojisini ve bu yapının lezyon kökeni ve in situ-invaziv ayrımındaki önemini açıklar.",
+   "sorular": [
+    {
+     "id": "k1-67-gebelik-hastaliklari-q29",
+     "kazanim": 7,
+     "zorluk": "kolay",
+     "soru": "Memede kasılarak süt atılımına yardım eden ve bazal membranı destekleyen hücre hangisidir?",
+     "secenekler": {
+      "A": "Lümen epitel hücresi",
+      "B": "İntralobüler stromal hücre",
+      "C": "Duktal epitel hücresi",
+      "D": "Sinsityotrofoblast",
+      "E": "Bazal miyoepitel hücresi"
+     },
+     "dogru": "E",
+     "aciklama": "Bazal miyoepitel hücreleri kasılarak süt atılımına yardım eder ve bazal membranı destekler.",
+     "sik_aciklamalari": {
+      "A": "Yanlış. Emzirme döneminde süt üretir.",
+      "B": "Yanlış. Lobülü destekler.",
+      "C": "Yanlış. Kanalı döşer.",
+      "D": "Yanlış. Meme hücresi değildir.",
+      "E": "Doğru. Kasılma ve bazal membran desteği sağlar."
+     },
+     "bilgi": [
+      109
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 67,
+      "alinti": "Bazal miyoepitel hücreleri: Kasılma ile süt atılımına yardım eder Bazal membranı destekler"
+     }
+    },
+    {
+     "id": "k1-67-gebelik-hastaliklari-q30",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Miyoepitel tabakanın varlığı meme lezyonlarında neyi ayırt etmeye yardım eder?",
+     "secenekler": {
+      "A": "İn situ karsinomda kaybolur, invaziv karsinomda korunur",
+      "B": "Her iki durumda da kaybolur",
+      "C": "İn situ karsinomda korunur, invaziv karsinomda kaybolur; bu yüzden in situ–invaziv ayrımında immünohistokimyasal belirteçtir",
+      "D": "Fibroadenom ile filloid tümörü ayırır",
+      "E": "Yalnızca süt üretimini gösterir"
+     },
+     "dogru": "C",
+     "aciklama": "Miyoepitel in situ karsinomda korunur, invaziv karsinomda kaybolur; bu nedenle ayırıcı immünohistokimyasal belirteçtir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış. Tam tersidir.",
+      "B": "Yanlış. İn situde korunur.",
+      "C": "Doğru. Miyoepitel varlığı in situ lezyonu gösterir.",
+      "D": "Yanlış. Dersin vurgusu değildir.",
+      "E": "Yanlış. Süt üreten hücre lümen epitelidir."
+     },
+     "bilgi": [
+      110,
+      115
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 67,
+      "alinti": "Miyoepitel varlığı: İnvaziv ve in situ lezyon ayrımında önemli immünohistokimyasal belirteç"
+     }
+    },
+    {
+     "id": "k1-67-gebelik-hastaliklari-q31",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Aşağıdaki meme lezyonu–köken eşleşmelerinden hangisi YANLIŞTIR?",
+     "secenekler": {
+      "A": "İnterlobüler stroma – filloid tümör",
+      "B": "İntralobüler stroma – fibroadenom",
+      "C": "Meme ucu altı sinüsler – intraduktal papillom",
+      "D": "Lobül – epitel hiperplazisi",
+      "E": "İntralobüler stroma – filloid tümör"
+     },
+     "dogru": "A",
+     "aciklama": "Fibroadenom ve filloid tümörler özelleşmiş intralobüler stromadan; interlobüler stroma ise çeşitli nadir benign ve malign tümörlerden köken alır.",
+     "sik_aciklamalari": {
+      "A": "Doğru. Filloid tümör ve fibroadenom intralobüler stromadan köken alır.",
+      "B": "Yanlış seçenek; eşleşme doğrudur: fibroadenom özelleşmiş intralobüler stromadan köken alır (Şekil 17.23, s. 69).",
+      "C": "Yanlış seçenek; eşleşme doğrudur: intraduktal papillom meme ucunun altındaki sinüslerde büyür (Şekil 17.23, s. 69).",
+      "D": "Yanlış seçenek; eşleşme doğrudur: iyi huylu epitel hiperplazisi lobüllerde ortaya çıkar (Şekil 17.23, s. 69).",
+      "E": "Yanlış seçenek; eşleşme doğrudur: filloid tümör de fibroadenom gibi intralobüler stromadan köken alır (Şekil 17.23, s. 69)."
+     },
+     "bilgi": [
+      112,
+      113
+     ],
+     "benzer_cikmis": [
+      "ed720d8c8d25",
+      "0a61f5139a06"
+     ],
+     "kanit": {
+      "sayfa": 69,
+      "alinti": "Özelleşmiş intralobüler stromal (pembe) hücreler fibroadenomlara ve filloid tümörlere yol açabilirken, interlobüler stroma (kırmızı) çeşitli nadir iyi huylu ve kötü huylu tümörlere yol açabilir"
+     }
+    },
+    {
+     "id": "k1-67-gebelik-hastaliklari-q32",
+     "kazanim": 7,
+     "zorluk": "zor",
+     "soru": "Memenin interlobüler stroması ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Süt üretiminden sorumludur",
+      "B": "Yalnızca malign lezyonların kaynağıdır",
+      "C": "Lobülü saran özel stromadır",
+      "D": "Memenin boyutunu belirleyen ana komponenttir; ergenlikte artar, yaşla azalır",
+      "E": "Yaşla artar"
+     },
+     "dogru": "D",
+     "aciklama": "İnterlobüler stroma memenin boyutunu belirler; ergenlikte artar, yaşla atrofiye uğrar ve hem benign hem malign lezyonların kaynağı olabilir.",
+     "sik_aciklamalari": {
+      "A": "Yanlış. Lümen epitelinin işlevidir.",
+      "B": "Yanlış. Hem benign hem malign lezyonların kaynağıdır.",
+      "C": "Yanlış. Lobülü saran özel stroma intralobülerdir.",
+      "D": "Doğru. Boyutu belirleyen ana komponent interlobüler stromadır.",
+      "E": "Yanlış. Yaşla azalır (atrofi)."
+     },
+     "bilgi": [
+      106,
+      111
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 68,
+      "alinti": "İnterlobüler stroma: Memenin boyutunu belirleyen ana komponent Ergenlikte artar Yaşla birlikte azalır (atrofi)"
+     }
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "ed720d8c8d25",
+     "soru": "Meme hastalıkları patolojisi, meme lezyonları ve köken aldıkları doku eşleşmelerinden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Terminal duktal lobülar ünite- duktal ektazi",
+      "B": "İnterlobular stromaYağ nekrozu",
+      "C": "Lobular stromaFilloides tümör",
+      "D": "Laktiferöz sinüsSoliter duktal papillom",
+      "E": "Terminal duktal lobülar ünite- Atipik hiperplazi"
+     },
+     "cevap": "E"
+    },
+    {
+     "id": "0a61f5139a06",
+     "soru": "köken alan\nbifazik tümör\nhangisidir?",
+     "secenekler": {
+      "A": "Filloides",
+      "B": "Fibroadenom",
+      "C": "İnsitu duktal karsinom",
+      "D": "Karsinom",
+      "E": "Papillom"
+     },
+     "cevap": null
+    }
+   ]
+  }
+ ],
+ "soru_sayisi": 32
+}
