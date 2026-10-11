@@ -273,4 +273,5 @@ Her faz sonunda `DEGISIKLIK_KAYDI.md`'ye kayıt; sayaç tutmazsa durulur.
 
 - Drive izleme → taslak (Oracle, `meds-ders-isci`, Claude aboneliği, 01–08) → Yönetim "Yeni dersler" onayı → **B2 yayın ✓** (`scripts/ders_isci/yayinla.py`, cihazda; yayın kaydı `scripts/ders_isci/yayin_kaydi.json`). İlk yayın: k1-67 Gebelik Hastalıkları.
 - Site verisi yazarları toptan ezmeye karşı korundu: s16 site dışa aktarımı yalnız upsert, s15 kapalı (`MEDS_S15_ZORLA=1`), s13/learn_links/checklist yayın kaydına saygılı.
-- Açık: hastalık önerilerini şema 2'ye çevirip `diseases.json`'a ekleme; yayını Oracle'da otomatik çalıştırma (şimdilik cihazda, onaydan sonra elle); e5 RAG vektörlerinin yeniden üretimi.
+- Otomatik yayın ✓ (Oracle `meds-ders-yayin.timer`; cihaz `--esitle` dağıtım öncesi zorunlu). Hastalık önerileri şema 2'de hazır, `diseases.json` başka oturumda bitince `--hastaliklar` ile eklenir.
+- Açık: e5 RAG vektörlerinin yeniden üretimi; Kurul 2+ için yayın (şimdilik yalnız Kurul 1).
