@@ -122,6 +122,15 @@ export function createLearnFeedbackStore(dataDir: string) {
       return true;
     },
 
+    /** Yönetim çöp kutusundan geri yükleme: aynı kimlik yoksa kaydı olduğu gibi geri koyar. */
+    restore(item: LearnFeedback): boolean {
+      const list = load();
+      if (!item?.id || list.some((x) => x.id === item.id)) return false;
+      list.push(item);
+      save();
+      return true;
+    },
+
     delete(id: string): boolean {
       const list = load();
       const idx = list.findIndex((x) => x.id === id);

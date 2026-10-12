@@ -6,11 +6,14 @@
  *    Bu "açıklama katmanı" kaynak veriyi değiştirmez; data/catalog_annotations.json'da tutulur.
  *  - ilişkileri gösterilir: deste ↔ kazanım ↔ örnek soru ↔ çıkmış soru ↔ sözlük terimi ↔ hastalık.
  *
+ * Yeni kayıt / çoğaltma: CREATE'teki şablon (form alanları + kayıt iskeleti) olan türlerde açıktır; yeni kayıt
+ * o türün mevcut kayıt biçimine uygun kurulur, çoğaltılan kayıt aslının hemen arkasına eklenir.
  * Yeni veri türü eklemek = ENTITIES listesine bir bağdaştırıcı. Ham dosya biçimi (girinti) korunarak yazılır.
  * server.ts yalnız registerDataCatalogRoutes(app, requireAdmin, deps) çağırır.
  */
 import fs from 'fs';
 import path from 'path';
+import crypto from 'crypto';
 import type express from 'express';
 
 type Any = Record<string, any>;
@@ -21,6 +24,13 @@ export interface CatalogDeps {
   getPastQuestions: () => any[];
   savePastQuestions: (list: any[]) => void;
   getDecks: () => any[];
+  /** Bellekte tutulan türlerin silme/geri yükleme yolları (server.ts sağlar; silinen kayıtları döndürür) */
+  removePast?: (ids: string[]) => Promise<any[]>;
+  restorePast?: (records: any[]) => Promise<void>;
+  removePool?: (ids: string[]) => Promise<any[]>;
+  restorePool?: (records: any[]) => Promise<void>;
+  removeLearnFeedback?: (ids: string[]) => any[];
+  restoreLearnFeedback?: (records: any[]) => void;
 }
 
 export interface RelationRef { entity: string; id: string; title: string; why: string }
@@ -43,7 +53,14 @@ interface EntityDef {
   text: (x: Any) => string;
   save?: (id: string, patch: Any) => Any;
   relations?: (x: Any) => RelationRef[];
+  /** Kayıtları kaynaktan kaldırır, kaldırılanları (çöp kutusu için tam haliyle) döndürür */
+  remove?: (ids: string[]) => Any[] | Promise<Any[]>;
+  /** Çöp kutusundaki kayıtları kaynağa geri koyar */
+  restore?: (records: Any[]) => void | Promise<void>;
 }
+
+/** Çöp kutusu kaydı: silinen kaydın tamamı burada durur; geri yüklenebilir ya da kalıcı silinir. */
+interface TrashEntry { key: string; entity: string; id: string; title: string; record: Any; deletedAt: string; by?: string }
 
 const fold = (s: unknown) =>
   String(s ?? '')
@@ -68,7 +85,17 @@ function readJson(file: string, fallback: any) {
     return fallback;
   }
 }
+/** Dosya boşalınca ("[]") girinti okunamaz; son bilinen girinti hatırlanır. */
+const knownIndent = new Map<string, number>();
 function detectIndent(file: string): number {
+  const n = detectIndentRaw(file);
+  if (n) knownIndent.set(file, n);
+  return n || knownIndent.get(file) || (/^\s*[\[{]\s*[\]}]\s*$/.test(safeHead(file)) ? 2 : 0);
+}
+function safeHead(file: string): string {
+  try { return fs.readFileSync(file, 'utf8').slice(0, 20); } catch { return ''; }
+}
+function detectIndentRaw(file: string): number {
   try {
     const fd = fs.openSync(file, 'r');
     const buf = Buffer.alloc(200);
@@ -105,6 +132,71 @@ function applyPatch(target: Any, patch: Any, editable: string[], arrays: string[
   }
   target.updatedAt = new Date().toISOString();
   return target;
+}
+
+/* ---------- yeni kayıt / çoğaltma şablonu ---------- */
+export interface FormField {
+  key: string;
+  label: string;
+  /** text: tek satır · long: çok satır · number · options: A–E şıkları · choice: seçenekli · list: virgüllü dizi */
+  kind?: 'text' | 'long' | 'number' | 'options' | 'choice' | 'list';
+  required?: boolean;
+  choices?: string[] | (() => string[]);
+  /** choice alanında listede olmayan değer de yazılabilir mi */
+  free?: boolean;
+  hint?: string;
+}
+interface CreateDef {
+  fields: FormField[];
+  /** kayıt → form değerleri (çoğaltmada formu doldurur) */
+  toForm: (x: Any) => Any;
+  /** form değerleri (+ çoğaltılan asıl kayıt) → türün biçimine uygun yeni kayıt; hatalı girişte Error fırlatır */
+  build: (v: Any, base?: Any) => Any;
+  /** yazar; afterId verilirse yeni kayıt aslının arkasına konur */
+  insert: (rec: Any, afterId?: string) => void;
+}
+const OPTION_KEYS = ['A', 'B', 'C', 'D', 'E'];
+const str = (v: unknown) => String(v ?? '').trim();
+const hexId = (n = 12) => crypto.randomBytes(Math.ceil(n / 2)).toString('hex').slice(0, n);
+const slug = (s: string) => fold(s).replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '').slice(0, 60) || 'kayit';
+const uniqueKey = (base: string, taken: (k: string) => boolean) => {
+  if (!taken(base)) return base;
+  for (let i = 2; ; i++) if (!taken(`${base}-${i}`)) return `${base}-${i}`;
+};
+const listOf = (v: unknown) => (Array.isArray(v) ? v : String(v ?? '').split(',')).map((x) => String(x).trim()).filter(Boolean);
+const clone = <T,>(x: T): T => JSON.parse(JSON.stringify(x));
+/** A–E şıkları: boşluksuz A'dan başlamalı; cevap doldurulmuş bir şıkkı göstermeli */
+function readOptions(v: Any, answerKey: string, min = 2) {
+  const raw = (v.options || {}) as Any;
+  const opts = OPTION_KEYS.map((k) => ({ key: k, text: str(raw[k]) }));
+  const lastFilled = opts.map((o) => !!o.text).lastIndexOf(true);
+  const filled = opts.slice(0, lastFilled + 1);
+  if (filled.some((o) => !o.text)) throw new Error("Şıklar A'dan başlayıp arada boşluk bırakmadan doldurulmalı.");
+  if (filled.length < min) throw new Error(`En az ${min} şık gerekli.`);
+  const ans = str(v[answerKey]).toUpperCase();
+  if (ans && !filled.some((o) => o.key === ans)) throw new Error(`Doğru cevap (${ans}) doldurulmuş şıklardan biri olmalı.`);
+  return { opts: filled, ans };
+}
+function checkRequired(fields: FormField[], v: Any) {
+  for (const f of fields) {
+    if (!f.required || f.kind === 'options') continue;
+    const val = v[f.key];
+    if (f.kind === 'list' ? !listOf(val).length : !str(val)) throw new Error(`"${f.label}" boş bırakılamaz.`);
+  }
+}
+/** YouTube paylaşım / watch / embed / shorts bağlantısından videoId + listId */
+function parseYouTubeUrl(input: string): { videoId?: string; listId?: string } | null {
+  const raw = input.trim();
+  if (/^[A-Za-z0-9_-]{11}$/.test(raw)) return { videoId: raw };
+  let u: URL;
+  try { u = new URL(/^https?:\/\//i.test(raw) ? raw : `https://${raw}`); } catch { return null; }
+  if (!/(^|\.)(youtube\.com|youtu\.be|youtube-nocookie\.com)$/i.test(u.hostname)) return null;
+  const listId = u.searchParams.get('list') || undefined;
+  let videoId: string | undefined;
+  if (/youtu\.be$/i.test(u.hostname)) videoId = u.pathname.split('/')[1];
+  else videoId = u.searchParams.get('v') || (u.pathname.match(/\/(?:embed|shorts|live)\/([A-Za-z0-9_-]{11})/) || [])[1];
+  if (videoId && !/^[A-Za-z0-9_-]{11}$/.test(videoId)) videoId = undefined;
+  return videoId || listId ? { videoId, listId } : null;
 }
 
 /* ---------- açıklama katmanı ---------- */
@@ -196,6 +288,25 @@ export function registerDataCatalogRoutes(app: express.Express, requireAdmin: ex
   const musicFile = path.join(SRC, 'musicTracks.json');
   const decksFile = path.join(SRC, 'interactive_learning_decks.json');
 
+  /** Dizi tutan JSON dosyası için ortak silme/geri yükleme */
+  const listFileOps = (file: string, keyOf: (x: Any) => string) => ({
+    remove: (ids: string[]) => {
+      const set = new Set(ids);
+      const list: Any[] = readJson(file, []);
+      const removed = list.filter((x) => set.has(keyOf(x)));
+      if (removed.length) writeJsonAtomic(file, list.filter((x) => !set.has(keyOf(x))), BACKUP);
+      return removed;
+    },
+    restore: (records: Any[]) => {
+      const list: Any[] = [...readJson(file, [])];
+      const have = new Set(list.map(keyOf));
+      for (const r of records) if (!have.has(keyOf(r))) list.push(r);
+      writeJsonAtomic(file, list, BACKUP);
+    },
+  });
+  const ornekFeedbackFile = path.join(deps.dataDir, 'ornek_soru_bildirimleri.jsonl');
+  const ornekFeedbackId = (r: Any, i: number) => `ornek:${r.soru_id}:${r.timestamp || i}`;
+
   const ENTITIES: EntityDef[] = [
     {
       id: 'past', label: 'Çıkmış sorular', group: 'Sorular', source: 'data/pastQuestions.json',
@@ -231,6 +342,8 @@ export function registerDataCatalogRoutes(app: express.Express, requireAdmin: ex
         for (const o of ornekSorular()) if ((o.benzer_cikmis || []).includes(x.id)) out.push({ entity: 'ornek', id: o.id, title: clip(o.soru, 90), why: 'Örnek soru bu çıkmışa benziyor' });
         return out.slice(0, 20);
       },
+      remove: deps.removePast,
+      restore: deps.restorePast,
     },
     {
       id: 'pool', label: 'Soru havuzu', group: 'Sorular', source: 'data/questions.json',
@@ -240,6 +353,8 @@ export function registerDataCatalogRoutes(app: express.Express, requireAdmin: ex
       key: (x) => String(x.id), title: (x) => clip(x.stem || x.text || x.title || (x.fragments || [])[0]?.text), subtitle: (x) => [x.committeeId, x.status].filter(Boolean).join(' · '),
       facet: (x, k) => (x[k] == null ? undefined : String(x[k])),
       text: (x) => `${x.id} ${x.stem || ''} ${x.text || ''} ${(x.fragments || []).map((f: Any) => f?.text).join(' ')}`,
+      remove: deps.removePool,
+      restore: deps.restorePool,
     },
     {
       id: 'decks', label: 'Öğren desteleri', group: 'Öğrenme', source: 'src/data/interactive_learning_decks.json',
@@ -268,6 +383,7 @@ export function registerDataCatalogRoutes(app: express.Express, requireAdmin: ex
         for (const t of Array.from(terms).slice(0, 12)) out.push({ entity: 'glossary', id: fold(t), title: t, why: 'Destede geçen terim' });
         return out;
       },
+      ...listFileOps(decksFile, (x) => String(x.id)),
     },
     {
       id: 'kazanim', label: 'Kazanımlar', group: 'Öğrenme', source: 'src/data/kazanimlar/k*.json',
@@ -298,6 +414,35 @@ export function registerDataCatalogRoutes(app: express.Express, requireAdmin: ex
         }
         return out;
       },
+      remove: (ids) => {
+        const set = new Set(ids);
+        const hits = ornekSorular().filter((o) => set.has(o.id));
+        for (const file of new Set(hits.map((o) => o._file as string))) {
+          const lesson = readJson(file, null);
+          if (!lesson) continue;
+          for (const kz of lesson.kazanimlar || []) kz.sorular = (kz.sorular || []).filter((q: Any) => !set.has(q.id));
+          writeJsonAtomic(file, lesson, BACKUP);
+        }
+        ornekCache = null;
+        return hits;
+      },
+      restore: (records) => {
+        const byFile = new Map<string, Any[]>();
+        for (const r of records) byFile.set(r._file, [...(byFile.get(r._file) || []), r]);
+        for (const [file, rs] of byFile) {
+          const lesson = readJson(file, null);
+          if (!lesson) throw new Error(`Ders dosyası bulunamadı: ${path.basename(file)}`);
+          for (const r of rs) {
+            const { _ders, _konu, _lesson, _kurul, _kazanimMetin, _file, ...q } = r;
+            const kz = (lesson.kazanimlar || []).find((k: Any) => k.metin === _kazanimMetin) || lesson.kazanimlar?.[0];
+            if (!kz) continue;
+            kz.sorular = kz.sorular || [];
+            if (!kz.sorular.some((x: Any) => x.id === q.id)) kz.sorular.push(q);
+          }
+          writeJsonAtomic(file, lesson, BACKUP);
+        }
+        ornekCache = null;
+      },
     },
     {
       id: 'glossary', label: 'Sözlük', group: 'Kaynaklar', source: 'src/data/medical_glossary.json',
@@ -321,6 +466,19 @@ export function registerDataCatalogRoutes(app: express.Express, requireAdmin: ex
         if (dz) out.push({ entity: 'diseases', id: dz.id, title: dz.name, why: 'Aynı adlı hastalık kaydı' });
         return out;
       },
+      remove: (ids) => {
+        const all = { ...readJson(glossaryFile, {}) };
+        const removed = ids.filter((id) => id in all).map((id) => ({ _key: id, _value: all[id] }));
+        for (const r of removed) delete all[r._key];
+        if (removed.length) writeJsonAtomic(glossaryFile, all, BACKUP);
+        termIdx = null;
+        return removed;
+      },
+      restore: (records) => {
+        const all = { ...readJson(glossaryFile, {}) };
+        for (const r of records) if (!(r._key in all)) all[r._key] = r._value;
+        writeJsonAtomic(glossaryFile, all, BACKUP);
+      },
     },
     {
       id: 'cards', label: 'Ezber kartları', group: 'Öğrenme', source: 'src/data/question_cards.json',
@@ -337,6 +495,7 @@ export function registerDataCatalogRoutes(app: express.Express, requireAdmin: ex
         writeJsonAtomic(cardsFile, list, BACKUP);
         return c;
       },
+      ...listFileOps(cardsFile, (x) => String(x.id)),
     },
     {
       id: 'diseases', label: 'Hastalıklar', group: 'Kaynaklar', source: 'src/data/diseases.json',
@@ -350,6 +509,7 @@ export function registerDataCatalogRoutes(app: express.Express, requireAdmin: ex
         const ids = termDecks().get(fold(x.name)) || new Set<string>();
         return Array.from(ids).map((id) => deckRef(id, 'Hastalık bu destede terim olarak geçiyor')).filter(Boolean) as RelationRef[];
       },
+      ...listFileOps(path.join(SRC, 'diseases.json'), (x) => String(x.id)),
     },
     {
       id: 'summaries', label: 'Ders özetleri', group: 'Kaynaklar', source: 'src/data/summaries_meta.json',
@@ -369,7 +529,7 @@ export function registerDataCatalogRoutes(app: express.Express, requireAdmin: ex
         try {
           ornek = fs.readFileSync(path.join(deps.dataDir, 'ornek_soru_bildirimleri.jsonl'), 'utf8').split('\n').filter((l) => l.trim()).map((l, i) => {
             const r = JSON.parse(l);
-            return { ...r, kind: 'Örnek soru', field: r.reason, _id: `ornek:${r.soru_id}:${r.timestamp || i}` };
+            return { ...r, kind: 'Örnek soru', field: r.reason, _id: ornekFeedbackId(r, i) };
           });
         } catch { /* dosya yok */ }
         return ([...learn, ...ornek] as Any[]).sort((a, b) => String(b.createdAt || b.timestamp || '').localeCompare(String(a.createdAt || a.timestamp || '')));
@@ -380,6 +540,29 @@ export function registerDataCatalogRoutes(app: express.Express, requireAdmin: ex
         if (x.kind === 'Öğren') { const r = deckRef(x.deckId, `Bildirilen deste (adım ${x.slideNumber ?? '?'})`); return r ? [r] : []; }
         const o = ornekSorular().find((q) => q.id === x.soru_id);
         return o ? [{ entity: 'ornek', id: o.id, title: clip(o.soru, 90), why: 'Bildirilen örnek soru' }] : [];
+      },
+      remove: (ids) => {
+        const set = new Set(ids);
+        const out: Any[] = [];
+        const learnIds = ids.filter((id) => id.startsWith('learn:')).map((id) => id.slice(6));
+        if (learnIds.length && deps.removeLearnFeedback) out.push(...deps.removeLearnFeedback(learnIds).map((f) => ({ ...f, kind: 'Öğren', _id: `learn:${f.id}` })));
+        if (ids.some((id) => id.startsWith('ornek:')) && fs.existsSync(ornekFeedbackFile)) {
+          const keep: string[] = [];
+          fs.readFileSync(ornekFeedbackFile, 'utf8').split('\n').filter((l) => l.trim()).forEach((l, i) => {
+            const r = JSON.parse(l);
+            const id = ornekFeedbackId(r, i);
+            if (set.has(id)) out.push({ ...r, kind: 'Örnek soru', _id: id, _line: l });
+            else keep.push(l);
+          });
+          fs.writeFileSync(ornekFeedbackFile, keep.map((l) => l + '\n').join(''), 'utf8');
+        }
+        return out;
+      },
+      restore: (records) => {
+        const learn = records.filter((r) => r.kind === 'Öğren').map(({ kind, _id, ...f }) => f);
+        if (learn.length) deps.restoreLearnFeedback?.(learn);
+        const lines = records.filter((r) => r.kind === 'Örnek soru' && r._line).map((r) => r._line + '\n');
+        if (lines.length) fs.appendFileSync(ornekFeedbackFile, lines.join(''), 'utf8');
       },
     },
     {
@@ -394,12 +577,238 @@ export function registerDataCatalogRoutes(app: express.Express, requireAdmin: ex
         const t = list.find((x: Any) => x.id === id);
         if (!t) throw new Error('Parça bulunamadı');
         applyPatch(t, patch, ['title', 'artist', 'url']);
+        if ('url' in (patch || {})) {
+          const yt = parseYouTubeUrl(String(t.url || ''));
+          if (!yt) throw new Error('Geçerli bir YouTube bağlantısı girin.');
+          if (yt.videoId) t.videoId = yt.videoId; else delete t.videoId;
+          if (yt.listId) t.listId = yt.listId; else delete t.listId;
+        }
         writeJsonAtomic(musicFile, list, BACKUP);
         return t;
       },
+      ...listFileOps(musicFile, (x) => String(x.id)),
     },
   ];
+
+  /* ---------- çöp kutusu (silinenler; geri yüklenebilir) ---------- */
+  const TRASH_FILE = path.join(deps.dataDir, 'catalog_trash.json');
+  const TRASH_MAX = 20_000;
+  const trashAll = (): TrashEntry[] => readJson(TRASH_FILE, []);
+  const writeTrash = (list: TrashEntry[]) => {
+    fs.mkdirSync(path.dirname(TRASH_FILE), { recursive: true });
+    const tmp = `${TRASH_FILE}.${process.pid}.tmp`;
+    fs.writeFileSync(tmp, JSON.stringify(list.slice(-TRASH_MAX)), 'utf8');
+    fs.renameSync(tmp, TRASH_FILE);
+    fileCache.delete(TRASH_FILE);
+  };
+  const labelOf = (id: string) => ENTITIES.find((e) => e.id === id)?.label || id;
+  ENTITIES.push({
+    id: 'trash', label: 'Çöp kutusu', group: 'Topluluk', source: 'data/catalog_trash.json',
+    editable: [],
+    facets: [{ key: 'entity', label: 'Tür' }],
+    load: () => [...trashAll()].reverse(),
+    key: (x) => x.key, title: (x) => x.title || x.id,
+    subtitle: (x) => `${labelOf(x.entity)} · ${new Date(x.deletedAt).toLocaleString('tr-TR')}${x.by ? ` · ${x.by}` : ''}`,
+    facet: (x, k) => (k === 'entity' ? labelOf(x.entity) : undefined),
+    text: (x) => `${x.id} ${x.title} ${labelOf(x.entity)}`,
+    remove: (ids) => {
+      const set = new Set(ids);
+      const list = trashAll();
+      const removed = list.filter((t) => set.has(t.key));
+      writeTrash(list.filter((t) => !set.has(t.key)));
+      return removed;
+    },
+  });
   const byId = (id: string) => ENTITIES.find((e) => e.id === id);
+
+  /* ---------- şablonlar: yeni kayıt + çoğaltma (yalnız düzenlenebilir kaynaklar) ---------- */
+  const facetValues = (entity: string, k: string) => () => {
+    const e = ENTITIES.find((x) => x.id === entity)!;
+    const m = new Map<string, number>();
+    for (const x of e.load()) { const v = e.facet(x, k); for (const one of Array.isArray(v) ? v : [v]) if (one) m.set(one, (m.get(one) || 0) + 1); }
+    return Array.from(m).sort((a, b) => b[1] - a[1]).map(([v]) => v);
+  };
+  const optionsToForm = (o: unknown) => {
+    const out: Any = {};
+    if (Array.isArray(o)) for (const x of o) { const k = str(x?.key || x?.label).toUpperCase(); if (k) out[k] = typeof x === 'string' ? x : x?.text ?? ''; }
+    else if (o && typeof o === 'object') Object.assign(out, o);
+    return out;
+  };
+  const insertInto = (list: Any[], rec: Any, afterIdx: number) => {
+    if (afterIdx >= 0) list.splice(afterIdx + 1, 0, rec);
+    else list.push(rec);
+  };
+
+  const CREATE: Record<string, CreateDef> = {
+    past: {
+      fields: [
+        { key: 'committeeId', label: 'Kurul', kind: 'choice', required: true, choices: facetValues('past', 'committeeId'), free: true, hint: 'ör. donem3-kurul1' },
+        { key: 'examYear', label: 'Sınav yılı', kind: 'choice', choices: facetValues('past', 'examYear'), free: true },
+        { key: 'discipline', label: 'Ders', kind: 'choice', required: true, choices: facetValues('past', 'discipline'), free: true },
+        { key: 'topic', label: 'Konu' },
+        { key: 'stem', label: 'Soru kökü', kind: 'long', required: true },
+        { key: 'options', label: 'Şıklar', kind: 'options', required: true },
+        { key: 'correctAnswer', label: 'Doğru cevap', kind: 'choice', required: true, choices: OPTION_KEYS },
+        { key: 'explanation', label: 'Açıklama', kind: 'long' },
+        { key: 'tags', label: 'Etiketler', kind: 'list' },
+      ],
+      toForm: (x) => ({ committeeId: x.committeeId, examYear: x.examYear, discipline: x.discipline, topic: x.topic, stem: x.stem, options: optionsToForm(x.options), correctAnswer: x.correctAnswer, explanation: x.explanation, tags: (x.tags || []).join(', ') }),
+      build: (v, base) => {
+        checkRequired(CREATE.past.fields, v);
+        const { opts, ans } = readOptions(v, 'correctAnswer');
+        const now = new Date().toISOString();
+        const taken = new Set(deps.getPastQuestions().map((q) => String(q.id)));
+        const committeeId = str(v.committeeId);
+        const rec: Any = base
+          ? clone(base)
+          : { status: 'verified', isSuspect: false, isAmbiguous: false, isPastExam: true, sourceNote: 'Veri kataloğundan elle eklendi', qualityIssues: [] };
+        // Kişisel/oy alanları kopyalanmaz
+        for (const k of ['reports', 'comments', 'notes', 'checkSolve', 'checkSolveOriginal', 'phase14', 'phase14Original', 'eskiSurum', 'denetleyiciSurumu']) if (base) delete rec[k];
+        Object.assign(rec, {
+          id: uniqueKey(hexId(), (k) => taken.has(k)),
+          committeeId,
+          kurul: Number((committeeId.match(/kurul\s*-?\s*(\d)/i) || [])[1]) || rec.kurul,
+          donem: (committeeId.match(/donem\s*(\d)/i) || [])[1] ? `Dönem ${(committeeId.match(/donem\s*(\d)/i) || [])[1]}` : rec.donem,
+          discipline: str(v.discipline), topic: str(v.topic), examYear: str(v.examYear),
+          stem: str(v.stem), explanation: str(v.explanation),
+          options: opts.map((o) => ({ key: o.key, label: o.key, text: o.text, isCorrect: o.key === ans, upvotes: 0, likedBy: [] })),
+          correctAnswer: ans, claimedAnswer: ans,
+          tags: listOf(v.tags), upvotes: 0, likedBy: [], createdAt: now, updatedAt: now,
+        });
+        if (base) rec.copiedFrom = String(base.id);
+        return { id: rec.id, ...rec };
+      },
+      insert: (rec, afterId) => {
+        const list = deps.getPastQuestions();
+        insertInto(list, rec, afterId ? list.findIndex((q) => String(q.id) === afterId) : -1);
+        deps.savePastQuestions(list);
+      },
+    },
+    glossary: {
+      fields: [
+        { key: 'term', label: 'Terim', required: true },
+        { key: 'category', label: 'Tür', kind: 'choice', required: true, choices: facetValues('glossary', 'category'), free: true },
+        { key: 'discipline', label: 'Ders', kind: 'choice', choices: facetValues('glossary', 'discipline'), free: true },
+        { key: 'definition', label: 'Tanım', kind: 'long', required: true },
+        { key: 'description', label: 'Açıklama', kind: 'long', hint: 'Boşsa tanım kullanılır' },
+        { key: 'clinicalPearl', label: 'Klinik inci', kind: 'long' },
+        { key: 'aliases', label: 'Eş anlamlılar', kind: 'list' },
+      ],
+      toForm: (x) => ({ term: x.term, category: x.category, discipline: x.discipline, definition: x.definition, description: x.description, clinicalPearl: x.clinicalPearl, aliases: (x.aliases || []).join(', ') }),
+      build: (v, base) => {
+        checkRequired(CREATE.glossary.fields, v);
+        const all = readJson(glossaryFile, {});
+        const term = str(v.term);
+        const key = term.toLocaleLowerCase('tr');
+        if (key in all || Object.values(all).some((g: any) => fold(g?.term) === fold(term))) throw new Error(`"${term}" sözlükte zaten var; terim adını değiştirin.`);
+        const rec: Any = base ? clone(base) : { committee: '', kaynaklar: [] };
+        delete rec._key;
+        Object.assign(rec, {
+          term, category: str(v.category), discipline: str(v.discipline), definition: str(v.definition),
+          description: str(v.description) || str(v.definition), dogrulama: { durum: 'elle_eklendi', uretici: 'veri_katalogu' },
+        });
+        if (str(v.clinicalPearl)) rec.clinicalPearl = str(v.clinicalPearl); else delete rec.clinicalPearl;
+        if (listOf(v.aliases).length) rec.aliases = listOf(v.aliases); else delete rec.aliases;
+        return { ...rec, _key: key };
+      },
+      insert: (rec, afterId) => {
+        const all = readJson(glossaryFile, {});
+        const { _key, ...val } = rec;
+        // Sözlük nesnedir: asıl terimin hemen arkasına yerleştir (sıra korunur)
+        const next: Any = {};
+        let placed = false;
+        for (const [k, x] of Object.entries(all)) { next[k] = x; if (k === afterId) { next[_key] = val; placed = true; } }
+        if (!placed) next[_key] = val;
+        writeJsonAtomic(glossaryFile, next, BACKUP);
+      },
+    },
+    cards: {
+      fields: [
+        { key: 'kurul', label: 'Kurul', kind: 'choice', required: true, choices: ['1', '2', '3', '4', '5', '6'] },
+        { key: 'group', label: 'Ders (grup)', kind: 'choice', required: true, choices: facetValues('cards', 'group'), free: true },
+        { key: 'konu', label: 'Konu', kind: 'choice', choices: facetValues('cards', 'konu'), free: true },
+        { key: 'front', label: 'Ön yüz (soru)', kind: 'long', required: true },
+        { key: 'options', label: 'Şıklar', kind: 'options', hint: 'Klasik kartta boş bırakılabilir' },
+        { key: 'answer', label: 'Doğru şık', kind: 'choice', choices: OPTION_KEYS },
+        { key: 'back', label: 'Arka yüz (cevap)', kind: 'long', hint: 'Boşsa doğru şıktan üretilir' },
+        { key: 'note', label: 'Not', kind: 'long' },
+      ],
+      toForm: (x) => ({ kurul: x.kurul == null ? '' : String(x.kurul), group: x.group, konu: x.konu, front: x.front, options: optionsToForm(x.options), answer: x.answer, back: x.back, note: x.note }),
+      build: (v, base) => {
+        checkRequired(CREATE.cards.fields, v);
+        const hasOpts = OPTION_KEYS.some((k) => str(v.options?.[k]));
+        const { opts, ans } = hasOpts ? readOptions(v, 'answer') : { opts: [], ans: '' };
+        if (hasOpts && !ans) throw new Error('Şıklı kartta doğru şık seçilmeli.');
+        const back = str(v.back) || (ans ? `${ans}) ${opts.find((o) => o.key === ans)?.text}` : '');
+        if (!back) throw new Error('Arka yüz boş bırakılamaz (ya da şık + doğru şık girin).');
+        const taken = new Set(readJson(cardsFile, []).map((c: Any) => c.id));
+        const rec: Any = base ? clone(base) : { tekrar: 0, cikis: [], kaynak: null };
+        Object.assign(rec, {
+          id: uniqueKey(`q:${hexId()}`, (k) => taken.has(k)),
+          front: str(v.front), answer: ans, back, note: str(v.note), group: str(v.group),
+          kurul: Number(v.kurul) || null, konu: str(v.konu) || null,
+          dogrulama: { durum: 'elle_eklendi', editor: true },
+        });
+        if (hasOpts) rec.options = Object.fromEntries(opts.map((o) => [o.key, o.text])); else delete rec.options;
+        return { id: rec.id, ...rec };
+      },
+      insert: (rec, afterId) => {
+        const list = readJson(cardsFile, []).slice();
+        insertInto(list, rec, afterId ? list.findIndex((c: Any) => c.id === afterId) : -1);
+        writeJsonAtomic(cardsFile, list, BACKUP);
+      },
+    },
+    music: {
+      fields: [
+        { key: 'title', label: 'Başlık', required: true },
+        { key: 'artist', label: 'Sanatçı', kind: 'choice', choices: facetValues('music', 'artist'), free: true, hint: 'Boşsa "Admin seçkisi"' },
+        { key: 'url', label: 'YouTube bağlantısı', required: true, hint: 'Video ya da oynatma listesi bağlantısı' },
+      ],
+      toForm: (x) => ({ title: x.title, artist: x.artist, url: x.url }),
+      build: (v, base) => {
+        checkRequired(CREATE.music.fields, v);
+        const yt = parseYouTubeUrl(str(v.url));
+        if (!yt) throw new Error('Geçerli bir YouTube bağlantısı girin.');
+        const list = readJson(musicFile, []);
+        const rec: Any = base ? clone(base) : {};
+        delete rec.videoId; delete rec.listId;
+        Object.assign(rec, {
+          id: uniqueKey(slug(str(v.title)), (k) => list.some((t: Any) => t.id === k)),
+          title: str(v.title), artist: str(v.artist) || 'Admin seçkisi', url: str(v.url),
+          ...(yt.videoId ? { videoId: yt.videoId } : {}), ...(yt.listId ? { listId: yt.listId } : {}),
+        });
+        return rec;
+      },
+      insert: (rec, afterId) => {
+        const list = readJson(musicFile, []).slice();
+        insertInto(list, rec, afterId ? list.findIndex((t: Any) => t.id === afterId) : -1);
+        writeJsonAtomic(musicFile, list, BACKUP);
+      },
+    },
+  };
+  /** Çoğaltma formu: ayırt edici alan benzersiz olmalı (sözlükte terim, müzikte başlık) → "(kopya)" eki */
+  const dupForm = (entity: string, x: Any) => {
+    const v = CREATE[entity].toForm(x);
+    if (entity === 'glossary') v.term = `${v.term} (kopya)`;
+    if (entity === 'music') v.title = `${v.title} (kopya)`;
+    return v;
+  };
+  const serializeFields = (fields: FormField[]) => fields.map((f) => ({ ...f, choices: typeof f.choices === 'function' ? f.choices().slice(0, 200) : f.choices }));
+  const forget = (entity: string, ids: string[]) => {
+    const all = { ...annAll() };
+    if (!all[entity]) return;
+    const bucket = { ...all[entity] };
+    for (const id of ids) delete bucket[id];
+    all[entity] = bucket;
+    writeAnn(all);
+  };
+  const writeAnn = (all: Record<string, Record<string, Annotation>>) => {
+    fs.mkdirSync(path.dirname(ANN_FILE), { recursive: true });
+    const tmp = `${ANN_FILE}.${process.pid}.tmp`;
+    fs.writeFileSync(tmp, JSON.stringify(all, null, 1), 'utf8');
+    fs.renameSync(tmp, ANN_FILE);
+    fileCache.delete(ANN_FILE);
+  };
 
   /* ---------- uçlar ---------- */
   app.get('/api/admin/catalog', requireAdmin, (_req, res) => {
@@ -410,7 +819,7 @@ export function registerDataCatalogRoutes(app: express.Express, requireAdmin: ex
         try { count = e.load().length; } catch { /* okunamadı */ }
         const a = Object.values(ann[e.id] || {});
         return {
-          id: e.id, label: e.label, group: e.group, source: e.source, editable: e.editable, arrays: e.arrays || [], facets: e.facets, count,
+          id: e.id, label: e.label, group: e.group, source: e.source, editable: e.editable, creatable: !!CREATE[e.id], deletable: !!e.remove, restorable: !!e.restore, arrays: e.arrays || [], facets: e.facets, count,
           reviewed: { onayli: a.filter((x) => x.status === 'onayli').length, inceleme: a.filter((x) => x.status === 'inceleme').length, sorunlu: a.filter((x) => x.status === 'sorunlu').length },
         };
       }),
@@ -461,9 +870,56 @@ export function registerDataCatalogRoutes(app: express.Express, requireAdmin: ex
     const sort = String(req.query.sort || '');
     if (sort === 'title') rows = [...rows].sort((a, b) => e.title(a).localeCompare(e.title(b), 'tr'));
     if (sort === 'updated') rows = [...rows].sort((a, b) => String(b.updatedAt || ann[e.key(b)]?.updatedAt || '').localeCompare(String(a.updatedAt || ann[e.key(a)]?.updatedAt || '')));
+    // Toplu seçim: süzgece uyan TÜM kayıtların kimlikleri (sayfadan bağımsız)
+    if (req.query.idsOnly) return res.json({ total: rows.length, ids: rows.map((x) => e.key(x)) });
     const total = rows.length;
     const items = rows.slice(page * size, page * size + size).map((x) => ({ id: e.key(x), title: e.title(x), subtitle: e.subtitle?.(x) || '', ann: ann[e.key(x)] || null }));
     res.json({ total, page, size, items, facets });
+  });
+
+  /** Yeni kayıt şablonu: form alanları (seçenekleriyle) */
+  app.get('/api/admin/catalog/:entity/template', requireAdmin, (req, res) => {
+    const c = CREATE[req.params.entity];
+    if (!c) return res.status(400).json({ error: 'Bu veri türüne buradan kayıt eklenemez.' });
+    res.json({ fields: serializeFields(c.fields) });
+  });
+
+  /** Yeni kayıt (body.values = form değerleri). Kayıt türün şablonuna göre kurulur. */
+  app.post('/api/admin/catalog/:entity', requireAdmin, (req, res) => {
+    const e = byId(req.params.entity);
+    const c = CREATE[req.params.entity];
+    if (!e || !c) return res.status(400).json({ error: 'Bu veri türüne buradan kayıt eklenemez.' });
+    try {
+      const rec = c.build(req.body?.values || {});
+      c.insert(rec);
+      res.json({ success: true, id: e.key(rec), record: rec, note: e.source.startsWith('src/') ? 'Eklendi. Uygulamadaki paket bir sonraki derlemede güncellenir.' : 'Eklendi.' });
+    } catch (err: any) {
+      res.status(400).json({ error: err.message });
+    }
+  });
+
+  /** Çoğalt: asıl kayıt kopyalanır, (varsa) body.values ile değiştirilir, yeni kimlikle aslının arkasına eklenir.
+   *  Toplu: body.ids[] (values yok sayılır; ayırt edici alan otomatik "(kopya)" alır). */
+  app.post('/api/admin/catalog/:entity/duplicate', requireAdmin, (req, res) => {
+    const e = byId(req.params.entity);
+    const c = CREATE[req.params.entity];
+    if (!e || !c) return res.status(400).json({ error: 'Bu veri türü buradan çoğaltılamaz.' });
+    const ids: string[] = (Array.isArray(req.body?.ids) ? req.body.ids : [req.body?.id]).filter(Boolean).map(String);
+    if (!ids.length) return res.status(400).json({ error: 'id gerekli' });
+    const created: string[] = [];
+    try {
+      for (const id of ids) {
+        const base = e.load().find((x) => e.key(x) === id);
+        if (!base) throw new Error(`Kayıt bulunamadı: ${id}`);
+        const values = ids.length === 1 && req.body?.values ? req.body.values : dupForm(e.id, base);
+        const rec = c.build(values, base);
+        c.insert(rec, id);
+        created.push(e.key(rec));
+      }
+      res.json({ success: true, ids: created, id: created[0], note: e.source.startsWith('src/') ? 'Çoğaltıldı. Uygulamadaki paket bir sonraki derlemede güncellenir.' : 'Çoğaltıldı.' });
+    } catch (err: any) {
+      res.status(400).json({ error: err.message, ids: created });
+    }
   });
 
   app.get('/api/admin/catalog/:entity/:id', requireAdmin, (req, res) => {
@@ -477,7 +933,7 @@ export function registerDataCatalogRoutes(app: express.Express, requireAdmin: ex
     const record = e.id === 'decks'
       ? { ...x, slides: undefined, _slides: (x.slides || []).map((s: Any, i: number) => ({ n: s.slideNumber ?? i + 1, title: s.title, elements: (s.interactiveElements || s.elements || []).length })) }
       : x;
-    res.json({ id: e.key(x), title: e.title(x), record, relations, ann: annOf(e.id, e.key(x)) || null, editable: e.save ? e.editable : [] });
+    res.json({ id: e.key(x), title: e.title(x), record, relations, ann: annOf(e.id, e.key(x)) || null, editable: e.save ? e.editable : [], form: CREATE[e.id] ? dupForm(e.id, x) : null });
   });
 
   app.put('/api/admin/catalog/:entity/:id', requireAdmin, (req, res) => {
@@ -513,11 +969,64 @@ export function registerDataCatalogRoutes(app: express.Express, requireAdmin: ex
       else bucket[id] = next;
     }
     all[e.id] = bucket;
-    fs.mkdirSync(path.dirname(ANN_FILE), { recursive: true });
-    const tmp = `${ANN_FILE}.${process.pid}.tmp`;
-    fs.writeFileSync(tmp, JSON.stringify(all, null, 1), 'utf8');
-    fs.renameSync(tmp, ANN_FILE);
-    fileCache.delete(ANN_FILE);
+    writeAnn(all);
     res.json({ success: true, updated: ids.length });
+  });
+
+  /**
+   * Toplu silme. Varsayılan: kayıt kaynaktan çıkar ve ÇÖP KUTUSUNA gider (geri yüklenebilir).
+   * permanent: true → çöp kutusuna gitmez, değerlendirmesi de silinir. Çöp kutusu türünde silme her zaman kalıcıdır.
+   */
+  app.post('/api/admin/catalog/:entity/delete', requireAdmin, async (req, res) => {
+    const e = byId(req.params.entity);
+    if (!e) return res.status(404).json({ error: 'Bilinmeyen veri türü' });
+    if (!e.remove) return res.status(400).json({ error: `${e.label} buradan silinemez.` });
+    const ids: string[] = Array.isArray(req.body?.ids) ? Array.from(new Set(req.body.ids.map(String))) : [];
+    if (!ids.length) return res.status(400).json({ error: 'ids gerekli' });
+    const permanent = e.id === 'trash' || req.body?.permanent === true;
+    try {
+      const removed = await e.remove(ids);
+      if (e.id === 'trash') {
+        // Çöp kutusundan kalıcı silme: kaydın değerlendirmesi de gider
+        const byEnt = new Map<string, string[]>();
+        for (const t of removed as TrashEntry[]) byEnt.set(t.entity, [...(byEnt.get(t.entity) || []), t.id]);
+        for (const [ent, list] of byEnt) forget(ent, list);
+      } else if (permanent) {
+        forget(e.id, removed.map((x) => e.key(x)));
+      } else if (removed.length) {
+        const now = new Date().toISOString();
+        const by = String(req.headers['x-admin-email'] || 'yönetici');
+        const keys = new Set(removed.map((x) => `${e.id}:${e.key(x)}`));
+        writeTrash([...trashAll().filter((t) => !keys.has(t.key)), ...removed.map((x) => ({ key: `${e.id}:${e.key(x)}`, entity: e.id, id: e.key(x), title: e.title(x), record: x, deletedAt: now, by }))]);
+      }
+      console.log(`[catalog] ${e.id}: ${removed.length}/${ids.length} kayıt ${permanent ? 'kalıcı olarak silindi' : 'çöp kutusuna taşındı'}`);
+      res.json({ success: true, deleted: removed.length, requested: ids.length, permanent });
+    } catch (err: any) {
+      res.status(500).json({ error: err.message });
+    }
+  });
+
+  /** Çöp kutusundan geri yükleme (anahtarlar: "<tür>:<id>") */
+  app.post('/api/admin/catalog/trash/restore', requireAdmin, async (req, res) => {
+    const keys = new Set<string>(Array.isArray(req.body?.ids) ? req.body.ids.map(String) : []);
+    if (!keys.size) return res.status(400).json({ error: 'ids gerekli' });
+    const list = trashAll();
+    const picked = list.filter((t) => keys.has(t.key));
+    const byEnt = new Map<string, TrashEntry[]>();
+    for (const t of picked) byEnt.set(t.entity, [...(byEnt.get(t.entity) || []), t]);
+    const done = new Set<string>();
+    const errors: string[] = [];
+    for (const [ent, entries] of byEnt) {
+      const e = byId(ent);
+      if (!e?.restore) { errors.push(`${labelOf(ent)} geri yüklenemez`); continue; }
+      try {
+        await e.restore(entries.map((t) => t.record));
+        entries.forEach((t) => done.add(t.key));
+      } catch (err: any) {
+        errors.push(`${labelOf(ent)}: ${err.message}`);
+      }
+    }
+    writeTrash(trashAll().filter((t) => !done.has(t.key)));
+    res.status(errors.length && !done.size ? 500 : 200).json({ success: done.size > 0, restored: done.size, errors });
   });
 }

@@ -48,6 +48,9 @@
 .ct-bulk > b { font-size: 13px; color: var(--color-ink); margin-right: 4px; }
 .ct-bulk-tag { display: inline-flex; align-items: center; gap: 6px; height: var(--ms-ctl-sm); padding: 0 8px; border-radius: 8px; background: var(--color-field); color: var(--color-ink-3); }
 .ct-bulk-tag > svg { width: 14px; height: 14px; }
+.ct-bulk-del { display: inline-flex; gap: 6px; margin-left: auto; }
+.ct-selall { margin-left: auto; padding: 4px 8px; border-radius: 6px; font: inherit; font-weight: 600; color: var(--color-accent); background: transparent; border: 0; cursor: pointer; }
+.ct-selall:hover { background: var(--color-accent-soft, var(--color-line-soft)); }
 .ct-bulk-tag input { width: 120px; border: 0; background: transparent; color: var(--color-ink); font-size: 12.5px; outline: 0; }
 
 .ct-list { display: flex; flex-direction: column; border-radius: var(--dn-radius); background: var(--color-white); overflow: hidden; box-shadow: inset 0 0 0 1px var(--color-line-soft); transition: opacity .2s; }
@@ -78,3 +81,9 @@
 .ct-raw { margin: 0; max-height: 60vh; overflow: auto; padding: 12px; border-radius: 10px; background: var(--color-field); color: var(--color-ink-2); font: 12px/1.5 var(--font-mono); white-space: pre-wrap; overflow-wrap: anywhere; }
 .ct-foot { display: flex; align-items: center; justify-content: space-between; gap: 10px; width: 100%; font-size: 12.5px; color: var(--color-ink-3); }
 @media (prefers-reduced-motion: reduce) { .ct-row, .ct-fields, .ct-rels, .ct-bulk { animation: none; } }
+
+/* Yeni kayıt / çoğaltma formu */
+.ct-opts { display: flex; flex-direction: column; gap: 6px; }
+.ct-opt { display: flex; align-items: center; gap: 8px; }
+.ct-opt > b { flex-shrink: 0; width: 28px; height: 28px; display: grid; place-items: center; border-radius: 8px; background: var(--color-field); color: var(--color-ink-2); font: 700 12.5px/1 var(--font-mono); }
+.ct-foot-act { display: flex; gap: 8px; flex-shrink: 0; }
