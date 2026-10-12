@@ -55,6 +55,7 @@ SUNUCU = Path("/home/ubuntu/medsor/ders_isci").is_dir() and str(ROOT) == "/home/
 YEDEK = (Path("/home/ubuntu/medsor-yedek") if SUNUCU else Path("/home/indu/medsor-yedek")) / "ders_isci_yayin"
 DURUM_KAYIT = Path("/home/ubuntu/medsor/ders_isci/yayin_kaydi.json")   # Oracle: asıl yayın defteri (rsync'e kapalı)
 L_TASLAK = Path("/home/ubuntu/medsor/ders_isci/taslak")
+DOWNLOADS_MANIFEST = Path(__file__).resolve().parents[3] / "meds_downloads" / "_manifest.json"
 L_MANIFEST = Path("/home/ubuntu/medsor/meds_downloads/_manifest.json")
 KILIT = "/tmp/meds-deploy.lock"
 SITE = MEDS / "src" / "data"
@@ -114,6 +115,8 @@ class Yayin:
         self.paket = oku(d / "ders_paketi.json", {})
         self.deck = oku(d / "deck.json", {})
         self.karar = oku(d / "karar.json", {})
+        # revize taslakları (cihaz, Yönetim → Yeni dersler → Revize): degistir | ekle | ikisini_tut
+        self.kip = self.karar.get("islem") or "degistir"
 
     # ------------------------------------------------------------------ yardımcılar
     def _yedekle(self, p: Path):
@@ -136,6 +139,11 @@ class Yayin:
     # ------------------------------------------------------------------ 1. denetim (hiçbir şey yazmaz)
     def denetle(self, kaynak_id: str | None) -> bool:
         b, p, k = self.b, self.paket, self.karar
+        var = any(x.get("id") == b.get("deste_id") for x in oku(DECKS, []))
+        if self.kip == "ekle" and var:
+            self.hata.append("bu dersin yayında bir sürümü var: 'Yer değiştir' ya da 'Her ikisini tut' seç")
+        if self.kip in ("degistir", "ikisini_tut") and not var and b.get("revize"):
+            self.hata.append("yayında alternatif yok: 'Ekle' seç")
         if k.get("karar") != "onayla":
             self.hata.append(f"karar onayla değil ({k.get('karar')})")
         if b.get("kurul") != 1:
@@ -210,6 +218,16 @@ class Yayin:
                   "audioFile": "", "audioDuration": "", "programDate": self.paket.get("tarih") or None,
                   "totalSlides": len(d.get("slides") or []), "matchedPastQuestionsCount": len(bag),
                   "deckId": d["id"]})
+        if self.kip == "ikisini_tut":
+            grup = self.deste_id
+            mevcut = [x for x in oku(DECKS, []) if x.get("id") == grup or x.get("versionGroup") == grup]
+            n = max([int(str(x.get("versionLabel") or "V1")[1:] or 1) for x in mevcut] or [1]) + 1
+            d.update({"id": f"{grup}-v{n}", "deckId": f"{grup}-v{n}", "versionGroup": grup, "versionLabel": f"V{n}",
+                      "versionNote": "Revize ders işçisi (2026-27 PDF'inden yeniden üretildi)"})
+        elif self.kip == "degistir":
+            eski = next((x for x in oku(DECKS, []) if x.get("id") == self.deste_id), None)
+            if eski and eski.get("versionGroup"):
+                d.update({k: eski[k] for k in ("versionGroup", "versionLabel") if eski.get(k)})
         return d
 
     # ------------------------------------------------------------------ 2. yazım
@@ -217,11 +235,24 @@ class Yayin:
         p, n, did = self.paket, self.n, self.ders_id
         md = (self.d / "ders_notu.md").read_text(encoding="utf-8")
         deste = self._deste()
+        self.son_deste = deste["id"]
         # deste
         decks = oku(DECKS, [])
-        decks = [x for x in decks if x.get("id") != deste["id"]]
-        decks.append(deste)
+        if self.kip == "ikisini_tut":
+            for x in decks:
+                if x.get("id") == self.deste_id:
+                    x.setdefault("versionGroup", self.deste_id)
+                    x.setdefault("versionLabel", "V1")
+        yer = next((i for i, x in enumerate(decks) if x.get("id") == deste["id"]), None)
+        if yer is None:
+            decks.append(deste)
+        else:
+            decks[yer] = deste  # yer değiştir: listedeki sırası korunur
         self._yaz(DECKS, decks)
+        if self.kip == "ikisini_tut":  # V1'in notu, paketi ve örnek soruları yerinde kalır; yalnız deste + sözlük + bağlar
+            self._sozluk()
+            self._baglar()
+            return
         # ders paketi + dizin
         paket = {**{k: v for k, v in p.items()}, "gecen_yil_kaynagi": False, "ders_notu": md,
                  "ogrenim_slaytlari": p.get("ogrenim_slaytlari") or [], "kaynak": "ders_isci", "is_id": self.d.name}
@@ -577,6 +608,35 @@ def esitle() -> int:
     return 0
 
 
+def yerel(is_id: str, deneme: bool = False) -> int:
+    """Revize taslağı (cihazda üretildi) yerel kaynaklara yayınlar; karar.json'daki `islem` kipini uygular.
+    Sonuç taslak/<is>/yayin.json'a yazılır. Commit/dağıtım yapmaz."""
+    d = ROOT / "ders_isci" / "taslak" / is_id
+    if not (d / "baglam.json").exists():
+        print("taslak yok:", d)
+        return 2
+    manifest = oku(DOWNLOADS_MANIFEST, {})
+    import unicodedata
+    nfc = lambda x: unicodedata.normalize("NFC", x or "")  # noqa: E731
+    mf = {"items": [{**i, "path": nfc(i.get("path"))} for i in manifest.get("items", [])]}
+    kimlik = lambda y: kaynak_kimligi(nfc(re.sub(r"^drive_root/", "", y.b.get("pdf_yolu") or "")), mf)  # noqa: E731
+    sonuc, red = uygula([d], kimlik, deneme=deneme)
+    zaman = time.strftime("%Y-%m-%dT%H:%M:%S")
+    if red:
+        yaz_json(d / "yayin.json", {"durum": "denetim_hatasi", "hatalar": red[0].hata[:20], "zaman": zaman})
+        return 1
+    if deneme:
+        return 0
+    ok = toplu_adimlar(sonuc)
+    subprocess.run(["npm", "run", "-s", "decks:packages"], cwd=MEDS, check=False, capture_output=True)
+    y = sonuc[0]
+    yaz_json(d / "yayin.json", {"durum": "yayinlandi" if ok else "dogrulayici_hatasi", "yayin_zamani": zaman, "kip": y.kip,
+                                "deste_id": getattr(y, "son_deste", None), "yazilan": y.yazilan})
+    yaz_json(d / "durum.json", (oku(d / "durum.json", {}) or {}) | {"durum": "yayinlandi" if ok else "yayin_hatasi",
+                                                                   "zaman": time.time()})
+    return 0 if ok else 3
+
+
 def esitle_ve_hastaliklar() -> int:
     r = esitle()
     if r == 0:
@@ -661,6 +721,7 @@ def main() -> int:
     ap.add_argument("--hastaliklar", action="store_true", help="cihaz: şema 2 hastalık önerilerini diseases.json'a ekle")
     ap.add_argument("--deneme", action="store_true", help="cihaz: --is taslağını yalnız denetle")
     ap.add_argument("--is", dest="tek")
+    ap.add_argument("--yerel", action="store_true", help="cihaz: ders_isci/taslak/<is> revize taslağını yerelde yayınla")
     a = ap.parse_args()
     if a.sunucu:
         if not SUNUCU:
@@ -671,6 +732,8 @@ def main() -> int:
         return esitle_ve_hastaliklar()
     if a.hastaliklar:
         return hastaliklari_uygula()
+    if a.yerel and a.tek:
+        return yerel(a.tek, a.deneme)
     if a.deneme and a.tek:
         hedef = ONAYLANAN / a.tek
         subprocess.run(["rsync", "-a", "--delete", f"{ORACLE}:{L_TASLAK}/{a.tek}/", str(hedef) + "/"], check=True)

@@ -52,9 +52,20 @@ export function splitLearningDecks(root: string): Plugin {
         (Array.isArray(flashcards) ? flashcards.length : 0) ||
         slides.reduce((n: number, s: any) => n + (s.flashcards?.length || 0), 0);
 
+      // Sürüm seçimi (V1/V2) için öğrenciye gösterilen ölçüler
+      let interactiveCount = 0;
+      let wordCount = 0;
+      for (const s of slides) {
+        const els = s.interactiveElements || s.elements || (s.interactiveElement ? [s.interactiveElement] : []);
+        interactiveCount += Array.isArray(els) ? els.length : 0;
+        wordCount += String(s.synthesisNarrative || s.content || '').split(/\s+/).filter(Boolean).length;
+      }
       catalog.push({
         ...meta,
         slideCount: slides.length,
+        interactiveCount,
+        wordCount,
+        sizeKb: Math.round(Buffer.byteLength(JSON.stringify(d)) / 1024),
         questionCount,
         cardCount,
         firstSlideNumber: slides[0]?.slideNumber ?? 1,

@@ -29,6 +29,8 @@ import { safeJsonFetch } from '../../services/api';
 import { QuestionFocus } from '../../services/questionFocus';
 import { LessonPlayer } from './lesson/LessonPlayer';
 import { LearnHub, touchRecent } from './LearnHub';
+import { Dialog } from '../ui/Dialog';
+import type { DeckCatalogEntry } from '../../data/deckStore';
 import { triggerDomHighlightAndScroll } from '../../services/universalRedirectService';
 
 // ---------------------------------------------------------------------------
@@ -660,6 +662,16 @@ export const InteractiveDeckView: React.FC<InteractiveDeckViewProps> = ({ initia
   const [liveTick, setLiveTick] = useState(0);
   const [catalogTick, setCatalogTick] = useState(0);
   const allDecks = useMemo(() => [...DECK_CATALOG], [catalogTick]);
+  // Sürümlü dersler (V1, V2…): listede yalnız grubun ilk sürümü görünür; açarken öğrenci sürümü seçer
+  const hubDecks = useMemo(() => allDecks.filter((d) => !d.versionGroup || d.versionGroup === d.id), [allDecks]);
+  const [versionPick, setVersionPick] = useState<{ list: DeckCatalogEntry[]; pdf?: boolean } | null>(null);
+  const versionsOf = (id: string) => {
+    const g = allDecks.find((d) => d.id === id)?.versionGroup;
+    if (!g) return [];
+    return allDecks
+      .filter((d) => d.id === g || d.versionGroup === g)
+      .sort((a, b) => String(a.versionLabel || 'V1').localeCompare(String(b.versionLabel || 'V1'), 'tr', { numeric: true }));
+  };
   const deckIdRef = useRef(deckId);
   deckIdRef.current = deckId;
   useEffect(() => {
@@ -705,18 +717,39 @@ export const InteractiveDeckView: React.FC<InteractiveDeckViewProps> = ({ initia
   return (
     <div className="flex flex-col gap-3 sm:gap-4 min-w-0">
       <LearnHub
-        decks={allDecks}
+        decks={hubDecks}
         progress={progress}
         isAdmin={isAdmin}
         archive={adminArchiveFilter}
         onArchive={setAdminArchiveFilter}
         onOpen={(id, pdf) => {
+          const versions = versionsOf(id);
+          if (versions.length > 1) {
+            setVersionPick({ list: versions, pdf });
+            return;
+          }
           touchRecent(id);
           setPlayerViewMode(pdf ? 'pdf' : 'interactive');
           setDeckId(id);
           onDeckChange?.(id);
         }}
       />
+
+      {versionPick && (
+        <VersionPicker
+          versions={versionPick.list}
+          progress={progress}
+          onClose={() => setVersionPick(null)}
+          onPick={(id) => {
+            const pdf = versionPick.pdf;
+            setVersionPick(null);
+            touchRecent(versionPick.list[0].id);
+            setPlayerViewMode(pdf ? 'pdf' : 'interactive');
+            setDeckId(id);
+            onDeckChange?.(id);
+          }}
+        />
+      )}
 
       {deckId && deckLoading && !activeDeck && (
         <div className="fixed inset-0 z-[60] bg-canvas flex items-center justify-center" role="status" aria-live="polite">
@@ -1614,5 +1647,51 @@ export const AskAi: React.FC<{ deck: InteractiveDeck; slide: SlideItem }> = ({ d
         </div>
       )}
     </div>
+  );
+};
+
+/** Bir dersin birden çok sürümü varsa (V1, V2…) öğrenci hangisini açacağını ölçülere bakarak seçer. */
+const VersionPicker: React.FC<{
+  versions: DeckCatalogEntry[];
+  progress: DeckProgress;
+  onClose: () => void;
+  onPick: (id: string) => void;
+}> = ({ versions, progress, onClose, onPick }) => {
+  const base = versions[0];
+  return (
+    <Dialog title={base.shortTitle || base.title} subtitle="Bu dersin birden çok sürümü var. Hangisini açmak istersin?" onClose={onClose}>
+      <ul className="flex flex-col gap-3">
+        {versions.map((v) => {
+          const adim = v.slideCount || 0;
+          const etk = v.interactiveCount ?? 0;
+          const kelime = v.wordCount ?? 0;
+          const dk = Math.max(1, Math.round(kelime / 180 + etk * 0.4));
+          const seen = progress[v.id]?.seen?.length || 0;
+          const detay = adim ? (kelime / adim >= 130 ? 'Ayrıntılı anlatım' : kelime / adim >= 90 ? 'Orta yoğunluk' : 'Kısa ve öz') : '';
+          return (
+            <li key={v.id}>
+              <button
+                type="button"
+                onClick={() => onPick(v.id)}
+                className="w-full text-left rounded-xl border border-line-soft hover:border-accent p-4 transition-colors cursor-pointer"
+              >
+                <div className="flex items-center gap-2">
+                  <span className="ui-tag is-accent font-semibold">{v.versionLabel || 'V1'}</span>
+                  <b className="min-w-0 truncate">{v.versionNote || (v.versionLabel && v.versionLabel !== 'V1' ? 'Yeni sürüm' : 'İlk sürüm')}</b>
+                  {seen > 0 && <span className="ui-tag ml-auto">{seen}/{adim} adım görüldü</span>}
+                </div>
+                <dl className="grid grid-cols-2 sm:grid-cols-4 gap-2 mt-3 text-sm">
+                  <div><dt className="text-ink-3 text-xs">Adım</dt><dd className="font-semibold">{adim}</dd></div>
+                  <div><dt className="text-ink-3 text-xs">Etkileşim</dt><dd className="font-semibold">{etk}</dd></div>
+                  <div><dt className="text-ink-3 text-xs">Uzunluk</dt><dd className="font-semibold">~{dk} dk · {kelime.toLocaleString('tr-TR')} kelime</dd></div>
+                  <div><dt className="text-ink-3 text-xs">Boyut</dt><dd className="font-semibold">{v.sizeKb ? `${v.sizeKb} KB` : '–'}</dd></div>
+                </dl>
+                {detay && <p className="text-xs text-ink-2 mt-2">{detay} · adım başına ~{adim ? Math.round(kelime / adim) : 0} kelime, {adim ? (etk / adim).toFixed(1) : 0} etkileşim</p>}
+              </button>
+            </li>
+          );
+        })}
+      </ul>
+    </Dialog>
   );
 };

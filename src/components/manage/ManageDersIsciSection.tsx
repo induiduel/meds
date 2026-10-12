@@ -46,7 +46,48 @@ const DURUM: Record<string, { label: string; cls: string }> = {
   reddedildi: { label: 'Reddedildi', cls: 'is-bad' },
 };
 
+const ManageDersRevizeSection = React.lazy(() => import('./ManageDersRevizeSection').then((m) => ({ default: m.ManageDersRevizeSection })));
+
+type Kategori = 'otomatik' | 'revize';
+
+/** Yeni dersler: Otomatik (Oracle'daki işçi, Drive'dan) ve Revize (cihazda yeniden üretilen mevcut dersler). */
 export const ManageDersIsciSection: React.FC<{ adminEmail: string }> = ({ adminEmail }) => {
+  const [kategori, setKategori] = useState<Kategori>(() => {
+    try {
+      return (localStorage.getItem('manage:dersIsciKategori') as Kategori) || 'otomatik';
+    } catch {
+      return 'otomatik';
+    }
+  });
+  const sec = (k: Kategori) => {
+    setKategori(k);
+    try {
+      localStorage.setItem('manage:dersIsciKategori', k);
+    } catch {}
+  };
+  return (
+    <div className="flex flex-col gap-3">
+      <ChipBar<Kategori>
+        label="Ders işçisi kategorisi"
+        value={kategori}
+        onChange={sec}
+        options={[
+          { id: 'otomatik', label: 'Otomatik Ders İşçisi' },
+          { id: 'revize', label: 'Revize Ders İşçisi' },
+        ]}
+      />
+      {kategori === 'otomatik' ? (
+        <OtomatikDersIsci adminEmail={adminEmail} />
+      ) : (
+        <Suspense fallback={<p className="text-sm text-ink-2">Yükleniyor…</p>}>
+          <ManageDersRevizeSection adminEmail={adminEmail} />
+        </Suspense>
+      )}
+    </div>
+  );
+};
+
+const OtomatikDersIsci: React.FC<{ adminEmail: string }> = ({ adminEmail }) => {
   const headers = useMemo(() => ({ 'Content-Type': 'application/json', 'x-admin-email': adminEmail || '' }), [adminEmail]);
   const [liste, setListe] = useState<Taslak[] | null>(null);
   const [hata, setHata] = useState<string | null>(null);
@@ -130,7 +171,7 @@ export const ManageDersIsciSection: React.FC<{ adminEmail: string }> = ({ adminE
   return (
     <div className="flex flex-col gap-3">
       <Panel
-        title="Yeni dersler"
+        title="Otomatik Ders İşçisi"
         icon={BookOpenCheck}
         count={liste ? liste.length : undefined}
         desc="Drive'a eklenen ders PDF'lerinden ders işçisinin ürettiği paketler. İncele, önizle, karar ver; onaylananlar yayına birleştirilir."
@@ -326,7 +367,7 @@ const Kanit: React.FC<{ k?: any }> = ({ k }) =>
     </span>
   );
 
-const Sorular: React.FC<{ veri: any }> = ({ veri }) => {
+export const Sorular: React.FC<{ veri: any }> = ({ veri }) => {
   if (!veri) return <Yukleniyor veri={veri} />;
   return (
     <ol className="flex flex-col gap-3">
@@ -353,7 +394,7 @@ const Sorular: React.FC<{ veri: any }> = ({ veri }) => {
   );
 };
 
-const Sozluk: React.FC<{ veri: any }> = ({ veri }) => {
+export const Sozluk: React.FC<{ veri: any }> = ({ veri }) => {
   if (!veri) return <Yukleniyor veri={veri} />;
   return (
     <div className="flex flex-col gap-3 text-sm">
@@ -384,7 +425,7 @@ const ALANLAR: [string, string][] = [
   ['treatment', 'Tedavi'],
 ];
 
-const Hastaliklar: React.FC<{ veri: any }> = ({ veri }) => {
+export const Hastaliklar: React.FC<{ veri: any }> = ({ veri }) => {
   if (!veri) return <Yukleniyor veri={veri} />;
   return (
     <div className="flex flex-col gap-3 text-sm">
@@ -411,7 +452,7 @@ const Hastaliklar: React.FC<{ veri: any }> = ({ veri }) => {
   );
 };
 
-const Havuz: React.FC<{ veri: any }> = ({ veri }) => {
+export const Havuz: React.FC<{ veri: any }> = ({ veri }) => {
   if (!veri) return <Yukleniyor veri={veri} />;
   return (
     <ul className="flex flex-col gap-1 text-sm">
@@ -424,7 +465,7 @@ const Havuz: React.FC<{ veri: any }> = ({ veri }) => {
   );
 };
 
-const Cikmis: React.FC<{ veri: any }> = ({ veri }) => {
+export const Cikmis: React.FC<{ veri: any }> = ({ veri }) => {
   if (!veri) return <Yukleniyor veri={veri} />;
   const ilgili = (veri || []).filter((c: any) => c.ilgili);
   return (
