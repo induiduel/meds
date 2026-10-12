@@ -17,9 +17,6 @@
  * ==============================================================================
  */
 
-import medicalAccentMapRaw from '../data/medical_accent_map.json';
-const medicalAccentMap: Record<string, string> = medicalAccentMapRaw as Record<string, string>;
-
 export type AssistChipType = 'continue' | 'complete' | 'fix';
 
 export interface AssistOption {
@@ -63,10 +60,7 @@ export const MEDICAL_ACCENT_RESTORES: Record<string, string> = {
   'gogsun': 'göğsün',
   'bagirsak': 'bağırsak',
   'bagirsaklar': 'bağırsaklar',
-  'safra kesesi': 'safra kesesi',
-  'tiroid': 'tiroit',
   'tiroit': 'tiroit',
-  'kemik iligi': 'kemik iliği',
   'omurilik': 'omurilik',
   'dalak': 'dalak',
   'ureter': 'üreter',
@@ -81,7 +75,6 @@ export const MEDICAL_ACCENT_RESTORES: Record<string, string> = {
   // Semptom & Bulgular
   'agri': 'ağrı',
   'agrisi': 'ağrısı',
-  'nefes darligi': 'nefes darlığı',
   'nefes': 'nefes',
   'darligi': 'darlığı',
   'ates': 'ateş',
@@ -109,11 +102,7 @@ export const MEDICAL_ACCENT_RESTORES: Record<string, string> = {
   'kabizlik': 'kabızlık',
   'halsizlik': 'halsizlik',
   'yorgunluk': 'yorgunluk',
-  'kilo kaybi': 'kilo kaybı',
-  'gece terlemesi': 'gece terlemesi',
   'istahsizlik': 'iştahsızlık',
-  'bas agrisi': 'baş ağrısı',
-  'bas donmesi': 'baş dönmesi',
   'ufurum': 'üfürüm',
   'ufurumu': 'üfürümü',
   'ronkus': 'ronküs',
@@ -129,7 +118,6 @@ export const MEDICAL_ACCENT_RESTORES: Record<string, string> = {
   'biyopsisi': 'biyopsisi',
   'biyopsisinde': 'biyopsisinde',
   'kreatinin': 'kreatinin',
-  'kreatin': 'kreatinin',
   'proteinuri': 'proteinüri',
   'proteinurisi': 'proteinürisi',
   'hematuri': 'hematüri',
@@ -203,8 +191,6 @@ export const MEDICAL_ACCENT_RESTORES: Record<string, string> = {
   'grafi': 'grafi',
   'grafisi': 'grafisi',
   'grafisinde': 'grafisinde',
-  'ultrason': 'ultrasonografi',
-  'ultrasonu': 'ultrasonografisi',
   'tomografi': 'tomografi',
   'tomografisi': 'tomografisi',
   'tomografisinde': 'tomografisinde',
@@ -220,7 +206,6 @@ export const MEDICAL_ACCENT_RESTORES: Record<string, string> = {
 export const COMMON_TYPOS: Record<string, string> = {
   'glamerülonefrit': 'glomerülonefrit',
   'glamerulonefrit': 'glomerülonefrit',
-  'nefrotik sendormu': 'nefrotik sendromu',
   'apandist': 'apandisit',
   'kolesistt': 'kolesistit',
   'enfeksyon': 'enfeksiyon',
@@ -237,212 +222,6 @@ export const COMMON_TYPOS: Record<string, string> = {
   'dogrudur': 'doğrudur',
   'degildir': 'değildir',
 };
-
-// ------------------------------------------------------------------------------
-// 2. KLİNİK CÜMLE İÇİ DEVAM KÜTÜPHANESİ (CONTINUATION CORPUS)
-// ------------------------------------------------------------------------------
-
-export interface ContinuationPattern {
-  triggerEndings: string[]; // Son kelime / bağlaçlar
-  continuation: string;     // Devam metni
-  contextKeywords?: string[]; // Bütün cümlede aranacak anahtar kavramlar
-  category: 'demografi' | 'semptom' | 'muayene' | 'tetkik' | 'biyopsi' | 'genel';
-  weight: number;
-}
-
-export const CLINICAL_CONTINUATION_PATTERNS: ContinuationPattern[] = [
-  // --- Vaka Başvuru & Demografi Devamları ---
-  {
-    triggerEndings: ['ile', 'yakınmasıyla', 'yakınması ile', 'şikayetiyle', 'şikayeti ile'],
-    continuation: 'acil servise başvuran hastanın',
-    category: 'demografi',
-    weight: 10,
-  },
-  {
-    triggerEndings: ['ile', 'yakınmasıyla', 'yakınması ile', 'şikayetiyle'],
-    continuation: 'polikliniğe başvuran 45 yaşında erkek hastanın',
-    category: 'demografi',
-    weight: 9,
-  },
-  {
-    triggerEndings: ['ile', 'yakınmasıyla', 'şikayetiyle'],
-    continuation: 'başvuran hastanın yapılan fizik muayenesinde',
-    category: 'muayene',
-    weight: 9,
-  },
-  {
-    triggerEndings: ['yaşında', 'yaşındaki'],
-    continuation: 'kadın hasta acil servise nefes darlığı ve göğüs ağrısı ile',
-    category: 'demografi',
-    weight: 8,
-  },
-  {
-    triggerEndings: ['yaşında', 'yaşındaki'],
-    continuation: 'erkek hasta 3 gündür devam eden yüksek ateş ve öksürük ile',
-    category: 'demografi',
-    weight: 8,
-  },
-  {
-    triggerEndings: ['öyküsü', 'hikayesi'],
-    continuation: 'bulunan ve son zamanlarda şikayetleri belirginleşen hastada',
-    category: 'demografi',
-    weight: 7,
-  },
-
-  // --- Semptom & Klinik Tablo Devamları ---
-  {
-    triggerEndings: ['ve', 'ile birlikte', 'ile beraber'],
-    continuation: 'göğüs ağrısı yakınması ile başvuran hastada',
-    contextKeywords: ['kalp', 'göğüs', 'retrosternal', 'nefes', 'dispne'],
-    category: 'semptom',
-    weight: 10,
-  },
-  {
-    triggerEndings: ['ve', 'ile birlikte'],
-    continuation: 'öksürük, yüksek ateş ve pürülan balgam çıkarma şikayeti ile',
-    contextKeywords: ['akciğer', 'solunum', 'ateş', 'öksürük', 'balgam'],
-    category: 'semptom',
-    weight: 10,
-  },
-  {
-    triggerEndings: ['ve', 'ile birlikte'],
-    continuation: 'bulantı, kusma ve yaygın karın ağrısı yakınması ile',
-    contextKeywords: ['karın', 'mide', 'bağırsak', 'bulantı', 'kusma', 'sarılık'],
-    category: 'semptom',
-    weight: 10,
-  },
-  {
-    triggerEndings: ['ve', 'ile birlikte'],
-    continuation: 'hematüri ve bacaklarda pretibial ödem şikayeti ile',
-    contextKeywords: ['böbrek', 'idrar', 'renal', 'hematüri', 'proteinüri', 'nefrotik'],
-    category: 'semptom',
-    weight: 10,
-  },
-  {
-    triggerEndings: ['ve', 'ile birlikte'],
-    continuation: 'çift görme, pitozis ve çiğneme güçlüğü yakınması ile',
-    contextKeywords: ['nörolojik', 'kas', 'göz', 'miyasteni', 'felç'],
-    category: 'semptom',
-    weight: 9,
-  },
-
-  // --- Fizik Muayene Devamları ---
-  {
-    triggerEndings: ['fizik muayenesinde', 'fizik muayenede', 'muayenesinde'],
-    continuation: 'batında hassasiyet, istemsiz defans ve rebound saptanan',
-    contextKeywords: ['karın', 'apandisit', 'akut batın', 'kolesistit'],
-    category: 'muayene',
-    weight: 10,
-  },
-  {
-    triggerEndings: ['fizik muayenesinde', 'fizik muayenede', 'muayenesinde'],
-    continuation: 'bilateral akciğer alt zonlarında krepitan raller duyulan',
-    contextKeywords: ['akciğer', 'pnömoni', 'nefes', 'dispne', 'öksürük'],
-    category: 'muayene',
-    weight: 10,
-  },
-  {
-    triggerEndings: ['fizik muayenesinde', 'fizik muayenede', 'muayenesinde'],
-    continuation: 'pretibial +++ gode bırakan ödem ve juguler venöz dolgunluk izlenen',
-    contextKeywords: ['kalp yetmezliği', 'ödem', 'böbrek', 'siroz'],
-    category: 'muayene',
-    weight: 10,
-  },
-  {
-    triggerEndings: ['fizik muayenesinde', 'fizik muayenede', 'muayenesinde'],
-    continuation: 'kardiyak oskültasyonda mezokardiyak odakta sistolik üfürüm duyulan',
-    contextKeywords: ['üfürüm', 'kalp', 'kapak', 'aort', 'mitral'],
-    category: 'muayene',
-    weight: 9,
-  },
-  {
-    triggerEndings: ['fizik muayenesinde', 'fizik muayenede', 'muayenesinde'],
-    continuation: 'boyunda ağrısız, sert ve fikse lenfadenopati saptanan',
-    contextKeywords: ['lenfoma', 'kanser', 'tiroit', 'tüberküloz'],
-    category: 'muayene',
-    weight: 9,
-  },
-  {
-    triggerEndings: ['fizik muayenesinde', 'fizik muayenede', 'muayenesinde'],
-    continuation: 'ense sertliği ve pozitif meningeal irritasyon bulguları saptanan',
-    contextKeywords: ['menenjit', 'baş ağrısı', 'ateş', 'nöroloji'],
-    category: 'muayene',
-    weight: 10,
-  },
-
-  // --- Laboratuvar & Tetkik Devamları ---
-  {
-    triggerEndings: ['yapılan', 'istenen', 'bakılan'],
-    continuation: 'laboratuvar incelemelerinde belirgin lökositoz ve CRP yüksekliği saptanan',
-    category: 'tetkik',
-    weight: 9,
-  },
-  {
-    triggerEndings: ['laboratuvar incelemelerinde', 'laboratuvar tetkiklerinde', 'kan tahlillerinde'],
-    continuation: 'serum üre ve kreatinin değerleri belirgin yüksek saptanan',
-    contextKeywords: ['böbrek', 'kreatinin', 'üre', 'oligüri'],
-    category: 'tetkik',
-    weight: 10,
-  },
-  {
-    triggerEndings: ['laboratuvar incelemelerinde', 'laboratuvar tetkiklerinde', 'tetkiklerinde'],
-    continuation: 'ALT ve AST enzim düzeylerinde 10 kat artış tespit edilen',
-    contextKeywords: ['karaciğer', 'hepatit', 'sarılık', 'enzim'],
-    category: 'tetkik',
-    weight: 10,
-  },
-  {
-    triggerEndings: ['tam idrar tahlilinde', 'idrar mikroskopisinde', 'idrar incelemesinde'],
-    continuation: 'mikroskopik hematüri ve dismorfik eritrosit silendirleri izlenen',
-    contextKeywords: ['böbrek', 'glomerülonefrit', 'idrar', 'hematüri'],
-    category: 'tetkik',
-    weight: 10,
-  },
-  {
-    triggerEndings: ['yapılan periferik yaymada', 'periferik yayma incelemesinde'],
-    continuation: 'şistositler, parçalanmış eritrositler ve trombositopeni saptanan',
-    contextKeywords: ['anemi', 'ttp', 'hus', 'hemoliz', 'trombosit'],
-    category: 'tetkik',
-    weight: 10,
-  },
-  {
-    triggerEndings: ['çekilen akciğer grafisinde', 'toraks grafisinde'],
-    continuation: 'sağ alt lobda lober konsolidasyon ve hava bronkogramları izlenen',
-    contextKeywords: ['akciğer', 'pnömoni', 'öksürük', 'grafi'],
-    category: 'tetkik',
-    weight: 10,
-  },
-  {
-    triggerEndings: ['çekilen elektrokardiyografisinde', 'ekg sinde', 'ekg de'],
-    continuation: 'anterior derivasyonlarda ST elevasyonu ve patolojik Q dalgaları izlenen',
-    contextKeywords: ['kalp', 'miyokard', 'infarktüs', 'göğüs ağrısı'],
-    category: 'tetkik',
-    weight: 10,
-  },
-
-  // --- Biyopsi & Histopatoloji Devamları ---
-  {
-    triggerEndings: ['yapılan biyopside', 'biyopsisinde', 'histopatolojik incelemesinde'],
-    continuation: 'glomerüllerde kresent oluşumu ve nekroz izlenen hastada',
-    contextKeywords: ['böbrek', 'glomerülonefrit', 'rpgn', 'biyopsi'],
-    category: 'biyopsi',
-    weight: 10,
-  },
-  {
-    triggerEndings: ['yapılan biyopside', 'biyopsisinde', 'histopatolojik incelemesinde'],
-    continuation: 'kazeifiye granülomatöz inflamasyon ve Langhans dev hücreleri saptanan',
-    contextKeywords: ['tüberküloz', 'granülom', 'akciğer'],
-    category: 'biyopsi',
-    weight: 10,
-  },
-  {
-    triggerEndings: ['yapılan biyopside', 'biyopsisinde', 'histopatolojik incelemesinde'],
-    continuation: 'pleomorfik atipik epitel hücre proliferasyonu ve lenfovasküler invazyon saptanan',
-    contextKeywords: ['kanser', 'tümör', 'karsinom', 'malign'],
-    category: 'biyopsi',
-    weight: 9,
-  },
-];
 
 // ------------------------------------------------------------------------------
 // 3. SORU KÖKÜ KAPATMA / YÖNELTME ŞABLONLARI (QUESTION STEM PATTERNS)
@@ -683,214 +462,145 @@ export function extractEntities(text: string): string[] {
 }
 
 // ------------------------------------------------------------------------------
-// 6. AKILLI DEVAM VE TAMAMLAMA MOTORU (SMART COMPOSER CORE)
+// 6. DERLEM MODELİ (src/data/composer_model.json — scripts/composer/build_composer_model.py)
+// ------------------------------------------------------------------------------
+
+export interface ComposerModel {
+  v: number;
+  /** katlanmış bağlam (1-3 kelime, cümle başı "^") → [[sonraki yüzey kelime, sayı]] */
+  ng: Record<string, [string, number][]>;
+  /** katlanmış kelime → sayı, ya da yüzey biçim farklıysa [yüzey biçim, sayı] */
+  vocab: Record<string, number | [string, number]>;
+  /** ASCII biçim → Türkçe karakterli biçim (belirsizliği olmayanlar) */
+  acc: Record<string, string>;
+}
+
+let MODEL: ComposerModel | null = null;
+let loading: Promise<void> | null = null;
+
+/** Modeli tembel yükler (ayrı parça; ana paketi büyütmez). */
+export function loadComposerModel(): Promise<void> {
+  if (MODEL) return Promise.resolve();
+  if (!loading) {
+    loading = import('../data/composer_model.json')
+      .then((m: any) => { MODEL = (m.default ?? m) as ComposerModel; })
+      .catch(() => { loading = null; });
+  }
+  return loading;
+}
+
+const ASCII_TR: Record<string, string> = { ç: 'c', ğ: 'g', ı: 'i', ö: 'o', ş: 's', ü: 'u', â: 'a', î: 'i', û: 'u' };
+const toAscii = (w: string) => w.replace(/[çğıöşüâîû]/g, (c) => ASCII_TR[c]);
+/** Tek kelimeyi model anahtarına katlar (build_composer_model.py::fold ile aynı) */
+const foldWord = (w: string) => w.toLocaleLowerCase('tr-TR').normalize('NFC').replace(/[^\p{L}\p{N}%/+-]/gu, '');
+const TR_LETTERS = 'abcçdefgğhıijklmnoöprsştuüvyz';
+/** Türkçe Q klavyede komşu tuşlar + aksan çiftleri (yanlış harf düzeltmesinde yalnız bunlar denenir) */
+const NEAR: Record<string, string> = {
+  a: 'sqz', b: 'vnh', c: 'çxv', ç: 'c.', d: 'sfe', e: 'wrd', f: 'dgr', g: 'ğfh', ğ: 'gpü', h: 'gjy',
+  ı: 'iuo', i: 'ıuo', j: 'hku', k: 'jlı', l: 'kş', m: 'nö', n: 'bm', o: 'öıp', ö: 'om', p: 'oğ',
+  r: 'et', s: 'şad', ş: 'sli', t: 'ry', u: 'üyı', ü: 'uğ', v: 'cb', y: 'tu', z: 'ax',
+};
+const CLOSER_RE = /\b(hangisi|hangileri|nedir|değildir|yanlıştır|doğrudur|aşağıdaki)/i;
+
+type Cand = { text: string; score: number; conf: number; src: 'kaynak' | 'model' | 'kalıp' | 'kelime'; first?: string };
+
+// ------------------------------------------------------------------------------
+// 7. AKILLI DEVAM VE TAMAMLAMA MOTORU (SMART COMPOSER CORE)
 // ------------------------------------------------------------------------------
 
 export class SmartComposerEngine {
+  /** Test/simülasyon için modeli doğrudan verir */
+  public setModel(m: ComposerModel | null): void { MODEL = m; }
+  public hasModel(): boolean { return !!MODEL; }
+  /** Hayalet metnin gösterileceği en düşük güven (simülasyonla ayarlandı) */
+  public ghostMin = 0.34;
+
   /**
-   * Kullanıcının yazdığı metne göre en uygun devamları, soru kapatmalarını
-   * ve yazım düzeltmelerini anlık (0ms - 5ms) hesaplar.
+   * Yazılan metne göre hayalet metin (ghost), seçenekler ve yazım düzeltmesi üretir.
+   * İlke: emin olunmayan öneri gösterilmez (yanlış öneri, öneri yokluğundan kötüdür).
+   * Sıra: 1) benzer çıkmış soru kökünden birebir devam, 2) derlem n-gram zinciri,
+   *       3) açıkça başlatılmış soru kökü kalıbı, 4) yarım kelime tamamlama.
    */
   public getAssist(text: string, sources: string[] = []): AssistResult {
     const raw = text || '';
-    const trimmed = raw.trim();
-    if (!trimmed) {
-      return {
-        ghost: '',
-        ghostType: null,
-        options: [],
-        fix: null,
-        spell: null,
-        isExpanding: true,
-        detectedEntities: [],
-      };
+    if (!raw.trim()) {
+      return { ghost: '', ghostType: null, options: [], fix: null, spell: null, isExpanding: true, detectedEntities: [] };
     }
+    if (!MODEL) void loadComposerModel();
 
     const phase = analyzeInputPhase(raw);
     const entities = extractEntities(raw);
-    const foldedInput = foldTr(raw);
-    const endsWithSpace = /\s$/.test(raw);
-    const inputWords = foldedInput.split(' ').filter(Boolean);
-    const lastWord = inputWords[inputWords.length - 1] || '';
-
-    // --- 1. Güvenli Yazım Düzeltmesi (Spell / Fix) ---
     const spell = this.getSpellingCorrection(raw);
-    const fix = this.getPunctuationFix(raw, spell?.text || null);
+    const punct = this.getPunctuationFix(raw, spell?.text || null);
+    // Düzelt çipi hem yazım hem noktalama değişikliklerini listeler
+    const spellChanges = spell ? spell.changes.map((c) => `${c.from} → ${c.to}`) : [];
+    const fix = punct
+      ? { text: punct.text, changes: [...spellChanges, ...punct.changes] }
+      : spell ? { text: spell.text, changes: spellChanges } : null;
 
-    // --- 2. Cümle İçi Devam Adayları (Continuations) ---
-    const continueCandidates: Array<{ text: string; preview: string; score: number }> = [];
-
-    // Kaynak çıkmış sorulardan bağlamlı devam çıkarma
-    if (sources.length > 0) {
-      this.extractContinuationsFromSources(raw, sources, entities, continueCandidates);
+    // Cümle bittiyse (soru işareti) devam önerme
+    if (/[?]\s*$/.test(raw)) {
+      return { ghost: '', ghostType: null, options: [], fix, spell, isExpanding: false, detectedEntities: entities };
     }
 
-    // Yerleşik zengin klinik kalıplardan bağlamlı devam çıkarma
-    for (const pat of CLINICAL_CONTINUATION_PATTERNS) {
-      let matchScore = 0;
+    const endsWithSpace = /\s$/.test(raw);
+    const words = raw.trim().split(/\s+/);
+    const partial = endsWithSpace ? '' : words[words.length - 1];
+    const done = (endsWithSpace ? words : words.slice(0, -1)).map(foldWord).filter(Boolean);
+    const pf = foldWord(partial);
+    const lead = endsWithSpace || !partial ? '' : ' ';
 
-      // Son kelime / tetikleyici kontrolü
-      const matchesTrigger = pat.triggerEndings.some((tr) => {
-        const trFold = foldTr(tr);
-        if (trFold === lastWord) return true;
-        if (foldedInput.endsWith(trFold)) return true;
-        // Yarım yazılmış kelime ile önek eşleşmesi
-        if (!endsWithSpace && trFold.startsWith(lastWord) && lastWord.length >= 2) return true;
-        return false;
-      });
+    const cands: Cand[] = [];
+    this.fromSources(done, pf, partial, endsWithSpace, sources, cands);
+    this.fromModel(done, pf, partial, endsWithSpace, cands);
+    this.fromStemPatterns(raw, endsWithSpace, cands);
+    if (!cands.length && pf.length >= 3) this.completeWord(done, pf, partial, cands);
 
-      if (matchesTrigger) {
-        matchScore += 30;
-      }
-
-      // Bütün cümle bağlamı puanı (Whole-Sentence Context)
-      if (pat.contextKeywords && entities.length > 0) {
-        const overlap = pat.contextKeywords.filter((kw) => entities.includes(kw)).length;
-        matchScore += overlap * 25;
-      }
-
-      if (matchScore > 0) {
-        // Cümlede zaten geçen kelimeleri peş peşe tekrarlamayı önle
-        const contWords = foldTr(pat.continuation).split(' ');
-        const firstContWord = contWords[0] || '';
-        if (lastWord === firstContWord) continue;
-
-        continueCandidates.push({
-          text: (endsWithSpace ? '' : ' ') + pat.continuation,
-          preview: `…${pat.continuation}`,
-          score: matchScore + pat.weight,
-        });
+    // Kaynak ile derlem modeli aynı kelimeyle başlıyorsa güven artar, ayrışıyorsa azalır
+    const firstOf = (c: Cand) => foldWord((pf ? partial + c.text : c.text).trim().split(/\s+/)[0] || '');
+    const modelC = cands.find((c) => c.src === 'model');
+    if (modelC) {
+      for (const c of cands) {
+        if (c.src !== 'kaynak') continue;
+        if (firstOf(c) === firstOf(modelC)) { c.conf = Math.min(1, c.conf + 0.25); modelC.conf = Math.min(1, modelC.conf + 0.25); }
+        else if (c.conf < 0.7) c.conf *= 0.75;
       }
     }
+    // Bozuk kaynak parçalarını (çift boşluk, sayfa artığı) eleme
+    for (let i = cands.length - 1; i >= 0; i--) if (/\s{2,}|\.{3,}|_{3,}/.test(cands[i].text.trim())) cands.splice(i, 1);
 
-    // --- 3. Soru Kökü Kapatma Adayları (Question Stems) ---
-    const questionCandidates: Array<{ text: string; preview: string; score: number }> = [];
+    // Sırala; aynı metni tekille
+    cands.sort((a, b) => b.score - a.score);
+    const seen = new Set<string>();
+    const uniq = cands.filter((c) => {
+      const k = foldTr(c.text);
+      if (!k || seen.has(k)) return false;
+      seen.add(k);
+      return true;
+    });
 
-    for (const qp of QUESTION_STEM_PATTERNS) {
-      let qScore = 0;
+    // Erken soru kapatma koruması: vaka anlatımı sürerken zayıf "hangisidir" önerisini bastır
+    const ok = uniq.filter((c) => !(phase.isExpanding && CLOSER_RE.test(c.text) && c.conf < 0.5 && c.src !== 'kalıp'));
+    const best = ok[0];
+    const ghostOk = !!best && best.conf >= this.ghostMin;
+    void lead;
 
-      // Soru başlatıcı kelime eşleşmesi
-      const matchesInit = qp.initiators.some((init) => {
-        const initFold = foldTr(init);
-        if (foldedInput.endsWith(initFold)) return true;
-        if (!endsWithSpace && initFold.startsWith(lastWord) && lastWord.length >= 2) return true;
-        return false;
-      });
-
-      if (matchesInit) qScore += 40;
-
-      // Kullanıcı zaten soru aşamasındaysa genel soru şablonları puan kazanır
-      if (phase.isQuestionReady) qScore += 25;
-
-      // Bütün cümle bağlamı puanı
-      if (qp.contextKeywords && entities.length > 0) {
-        const overlap = qp.contextKeywords.filter((kw) => entities.includes(kw)).length;
-        qScore += overlap * 20;
-      }
-
-      if (qScore > 0) {
-        let textToAdd = qp.stem;
-        // Eğer kullanıcı zaten "bu hastada" yazdıysa ve stem "bu hastada en olası..." ise baş kısmı kırp
-        for (const init of qp.initiators) {
-          const initFold = foldTr(init);
-          if (foldedInput.endsWith(initFold)) {
-            const idx = foldTr(textToAdd).indexOf(initFold);
-            if (idx >= 0) {
-              textToAdd = textToAdd.slice(idx + init.length).trim();
-            }
-          }
-        }
-
-        questionCandidates.push({
-          text: (endsWithSpace ? '' : ' ') + textToAdd,
-          preview: `…${textToAdd}`,
-          score: qScore + qp.weight,
-        });
-      }
-    }
-
-    // --- 4. Sıralama ve Ayrım (Devam vs Soru Kapatma) ---
-    continueCandidates.sort((a, b) => b.score - a.score);
-    questionCandidates.sort((a, b) => b.score - a.score);
-
-    const options: AssistOption[] = [];
-    let topGhost = '';
-    let topGhostType: AssistChipType | null = null;
-
-    if (phase.isExpanding) {
-      // KULLANICI CÜMLE İÇİ EKLEME YAPIYOR:
-      // Birincil öneri (Ghost Text) KESİNLİKLE soru kapatma olamaz; klinik devam olmalıdır!
-      if (continueCandidates.length > 0) {
-        const topCont = continueCandidates[0];
-        topGhost = topCont.text;
-        topGhostType = 'continue';
-        options.push({
-          type: 'continue',
-          label: 'Devam Et',
-          text: topCont.text,
-          preview: topCont.preview,
-          isTop: true,
-        });
-
-        if (continueCandidates.length > 1) {
-          options.push({
-            type: 'continue',
-            label: 'Alternatif',
-            text: continueCandidates[1].text,
-            preview: continueCandidates[1].preview,
-          });
-        }
-      }
-
-      // Kullanıcı dilerse soruyu kapatabilsin diye ayrı bir "Soruyu Kapat" seçeneği sun
-      if (questionCandidates.length > 0) {
-        const topQ = questionCandidates[0];
-        options.push({
-          type: 'complete',
-          label: 'Soruyu Tamamla',
-          text: topQ.text,
-          preview: topQ.preview,
-        });
-      }
-    } else {
-      // KULLANICI SORU AŞAMASINDA:
-      // Birincil öneri soru kökü kapatmadır
-      if (questionCandidates.length > 0) {
-        const topQ = questionCandidates[0];
-        topGhost = topQ.text;
-        topGhostType = 'complete';
-        options.push({
-          type: 'complete',
-          label: 'Soruyu Tamamla',
-          text: topQ.text,
-          preview: topQ.preview,
-          isTop: true,
-        });
-
-        if (questionCandidates.length > 1) {
-          options.push({
-            type: 'complete',
-            label: 'Farklı Soru',
-            text: questionCandidates[1].text,
-            preview: questionCandidates[1].preview,
-          });
-        }
-      }
-
-      if (continueCandidates.length > 0) {
-        options.push({
-          type: 'continue',
-          label: 'Klinik Bilgi Ekle',
-          text: continueCandidates[0].text,
-          preview: continueCandidates[0].preview,
-        });
-      }
-    }
-
+    const options: AssistOption[] = ok.slice(0, 3).map((c, i) => {
+      const closes = CLOSER_RE.test(c.text) || /\?\s*$/.test(c.text);
+      return {
+        type: closes ? 'complete' : 'continue',
+        label: closes ? 'Soruyu Tamamla' : i === 0 ? 'Devam Et' : 'Alternatif',
+        text: c.text,
+        preview: `…${c.text.trim()}`,
+        isTop: i === 0,
+        category: c.src,
+      } as AssistOption;
+    });
+    const ghost = ghostOk ? best.text : '';
     return {
-      ghost: topGhost,
-      ghostType: topGhostType,
-      options: options.slice(0, 4),
+      ghost,
+      ghostType: ghost ? options[0].type : null,
+      options,
       fix,
       spell,
       isExpanding: phase.isExpanding,
@@ -898,129 +608,236 @@ export class SmartComposerEngine {
     };
   }
 
-  /** Kaynak çıkmış sorulardan bütün cümle bağlamlı devam metinleri çıkarır */
-  private extractContinuationsFromSources(
-    typed: string,
-    sources: string[],
-    entities: string[],
-    out: Array<{ text: string; preview: string; score: number }>
-  ): void {
-    const endsWithSpace = /\s$/.test(typed);
-    const tw = foldTr(typed).split(' ').filter(Boolean);
-    if (tw.length === 0) return;
-    const partial = endsWithSpace ? '' : tw[tw.length - 1];
-    const done = endsWithSpace ? tw : tw.slice(0, -1);
-
+  /** Benzer çıkmış soru köklerinde yazılanın son kelimelerini bulup birebir devamını önerir */
+  private fromSources(done: string[], pf: string, partial: string, endsWithSpace: boolean, sources: string[], out: Cand[]): void {
+    if (!done.length && !pf) return;
+    const firsts: string[] = [];
     for (const src of sources) {
-      const sw = src.split(/\s+/).filter(Boolean);
-      const sf = sw.map((w) => foldTr(w));
-
-      // Bütün cümledeki ortak kavram sayısı
-      const srcOverlap = entities.filter((e) => foldTr(src).includes(e)).length;
-
-      for (let k = Math.min(4, done.length); k >= (partial ? 0 : 1); k--) {
-        const ctx = done.slice(done.length - k);
-        if (k === 0 && partial.length < 3) break;
-
-        for (let i = 0; i + k < sw.length + (partial ? 0 : 1); i++) {
-          let ok = true;
-          for (let j = 0; j < k; j++) {
-            if (sf[i + j] !== ctx[j]) { ok = false; break; }
-          }
-          if (!ok) continue;
-
-          let rest: string[] = [];
-          const at = i + k;
-          let lead = '';
-          if (partial) {
-            const w = sf[at];
-            if (!w || !w.startsWith(partial)) continue;
-            if (w === partial) {
-              rest = sw.slice(at + 1);
-              lead = ' ';
-            } else {
-              rest = [sw[at].slice(partial.length), ...sw.slice(at + 1)];
-            }
-          } else {
-            rest = sw.slice(at);
-          }
-
-          // Cümle sonuna kadar en fazla 8 kelime al
-          const cut: string[] = [];
-          for (const t of rest) {
-            cut.push(t);
-            if (/[?.!]$/.test(t) || cut.length >= 8) break;
-          }
-
-          let text = cut.join(' ');
-          if (lead && text) text = lead + text;
-          else if (!partial && text) text = (endsWithSpace ? '' : ' ') + text;
-
-          if (text.trim().length >= 4) {
-            out.push({
-              text,
-              preview: `…${text.trim()}`,
-              score: 25 + k * 10 + srcOverlap * 15,
-            });
-            return; // Bu kaynaktan tek en iyi devam yeterli
-          }
+      const sw = (src || '').trim().split(/\s+/).filter(Boolean);
+      const sf = sw.map(foldWord);
+      let bestK = 0, bestAt = -1;
+      for (let i = 0; i < sw.length; i++) {
+        // i: devam edecek kelimenin konumu; i'den önceki k kelime bağlamla eşleşmeli
+        let k = 0;
+        while (k < done.length && k < 6 && i - 1 - k >= 0 && sf[i - 1 - k] === done[done.length - 1 - k]) k++;
+        if (pf) {
+          if (!sf[i] || !sf[i].startsWith(pf) || sf[i] === pf && i === sw.length - 1) continue;
         }
+        if (k > bestK) { bestK = k; bestAt = i; }
+      }
+      const minK = pf ? 1 : 2;
+      if (bestAt < 0 || bestK < Math.min(minK, done.length) || (bestK === 0 && pf.length < 3)) continue;
+      const rest = this.takeSentence(sw, bestAt, 10);
+      if (!rest.length) continue;
+      let text: string;
+      if (pf) {
+        const first = rest[0];
+        const tail = first.slice(partial.length);
+        text = tail + (rest.length > 1 ? ' ' + rest.slice(1).join(' ') : '');
+        if (!tail) text = rest.length > 1 ? ' ' + rest.slice(1).join(' ') : '';
+      } else {
+        text = (endsWithSpace ? '' : ' ') + rest.join(' ');
+      }
+      if (text.trim().length < 2) continue;
+      // Bağlam ne kadar genelse ("aşağıdakilerden hangisi") kaynağın devamı o kadar tahmindir
+      let conf = bestK >= 4 ? 0.9 : bestK === 3 ? 0.7 : bestK === 2 ? 0.45 : 0.4;
+      const gen = this.contextMass(done.slice(done.length - Math.min(bestK, 3)));
+      if (gen > 30 && bestK < 4) conf *= 0.6;
+      firsts.push(foldWord(rest[0]));
+      out.push({ text, score: 100 + bestK * 20, conf, src: 'kaynak', first: foldWord(rest[0]) });
+    }
+    // Birden çok kaynak aynı kelimeyle devam ediyorsa güven artar
+    for (const c of out) {
+      if (c.src !== 'kaynak' || !c.first) continue;
+      const agree = firsts.filter((f) => f === c.first).length;
+      if (agree >= 2) c.conf = Math.min(1, c.conf + 0.2 * (agree - 1));
+    }
+  }
+
+  /** Bağlamın derlemdeki toplam geçiş sayısı (genellik ölçüsü) */
+  private contextMass(ctx: string[]): number {
+    if (!MODEL || !ctx.length) return 0;
+    const list = MODEL.ng[ctx.join(' ')];
+    return list ? list.reduce((a, [, n]) => a + n, 0) : 0;
+  }
+
+  /** Derlem n-gram modeliyle (3→2→1 geri çekilme) güvenli kelime zinciri kurar */
+  private fromModel(done: string[], pf: string, partial: string, endsWithSpace: boolean, out: Cand[]): void {
+    if (!MODEL) return;
+    const ctxWords = ['^', ...done];
+    const next = (ctx: string[], prefix: string): { w: string; p: number; n: number; k: number } | null => {
+      for (let k = Math.min(3, ctx.length); k >= 1; k--) {
+        const key = ctx.slice(ctx.length - k).join(' ');
+        let list = MODEL!.ng[key];
+        if (!list) continue;
+        if (prefix) list = list.filter(([w]) => { const f = foldWord(w); return f.startsWith(prefix) && f !== prefix; });
+        if (!list.length) continue;
+        const tot = list.reduce((a, [, n]) => a + n, 0);
+        const [w, n] = list[0];
+        // tek kelimelik bağlam zayıftır: daha sıkı eşik
+        if (k === 1 && !prefix && ctx.length > 1 && n / tot < 0.6) return null;
+        return { w, p: n / tot, n, k };
+      }
+      return null;
+    };
+
+    const first = next(ctxWords, pf);
+    if (!first) return;
+    const chain: string[] = [first.w];
+    let conf = first.p * (first.k >= 2 ? 1 : 0.7);
+    if (first.n < 2) return;
+    const ctx = [...ctxWords, foldWord(first.w)];
+    while (chain.length < 8 && !/[?.!]$/.test(chain[chain.length - 1])) {
+      const nx = next(ctx, '');
+      if (!nx || nx.p < 0.55 || nx.k < 2) break;
+      chain.push(nx.w);
+      ctx.push(foldWord(nx.w));
+    }
+    let text: string;
+    if (pf) {
+      const tail = chain[0].slice(partial.length);
+      // yüzey biçimi yazılanla aynı harflerle başlamıyorsa (büyük/küçük) katlanmış kuyruğu kullan
+      const okTail = foldWord(chain[0]).startsWith(pf) ? chain[0].slice(pf.length) : tail;
+      text = okTail + (chain.length > 1 ? ' ' + chain.slice(1).join(' ') : '');
+    } else {
+      text = (endsWithSpace ? '' : ' ') + chain.join(' ');
+    }
+    if (!text.trim()) return;
+    out.push({ text, score: 50 + conf * 40 + first.k * 5, conf, src: 'model' });
+  }
+
+  /** Kullanıcı açıkça bir soru kapatıcıya başladıysa ("en olası", "kesin tanı"…) kalıbı tamamlar */
+  private fromStemPatterns(raw: string, endsWithSpace: boolean, out: Cand[]): void {
+    const folded = foldTr(raw);
+    for (const qp of QUESTION_STEM_PATTERNS) {
+      for (const init of qp.initiators) {
+        const f = foldTr(init);
+        if (!folded.endsWith(' ' + f) && folded !== f) continue;
+        const stemF = foldTr(qp.stem);
+        if (!stemF.startsWith(f.split(' ').slice(-1)[0])) {
+          // kalıp yazılanla örtüşmüyorsa olduğu gibi ekle
+          out.push({ text: (endsWithSpace ? '' : ' ') + qp.stem, score: 40 + qp.weight, conf: 0.4, src: 'kalıp' });
+        } else {
+          const idx = stemF.indexOf(f);
+          const rest = idx === 0 ? qp.stem.split(' ').slice(f.split(' ').length).join(' ') : qp.stem;
+          if (rest) out.push({ text: (endsWithSpace ? '' : ' ') + rest, score: 40 + qp.weight, conf: 0.4, src: 'kalıp' });
+        }
+        break;
       }
     }
   }
 
+  /** Yarım kelimeyi derlemdeki en sık kelimeyle tamamlar (yalnız baskın aday varsa) */
+  private completeWord(done: string[], pf: string, partial: string, out: Cand[]): void {
+    if (!MODEL) return;
+    let best: [string, number] | null = null, second = 0;
+    for (const [f, v] of Object.entries(MODEL.vocab)) {
+      if (f.length <= pf.length || !f.startsWith(pf)) continue;
+      const [w, n] = typeof v === 'number' ? [f, v] : v;
+      if (!best || n > best[1]) { second = best ? best[1] : second; best = [w, n]; }
+      else if (n > second) second = n;
+    }
+    if (!best || best[1] < 5 || best[1] < second * 2) return;
+    void done; void partial;
+    out.push({ text: best[0].slice(pf.length), score: 20, conf: 0.35, src: 'kelime' });
+  }
+
+  private takeSentence(sw: string[], from: number, max: number): string[] {
+    const cut: string[] = [];
+    for (let i = from; i < sw.length && cut.length < max; i++) {
+      cut.push(sw[i]);
+      if (/[?.!]$/.test(sw[i])) break;
+    }
+    return cut;
+  }
+
+  // --------------------------------------------------------------------------
+  // YAZIM DÜZELTME
+  // --------------------------------------------------------------------------
+
   /**
-   * Güvenli ve doğru Türkçe / Tıbbi Yazım Düzeltmesi (0ms)
-   * Asla bilinen doğru tıp terimlerini bozmaz; yalnızca Türkçe harf eksikliklerini
-   * ve açıkça hatalı kelimeleri onarır.
+   * Güvenli Türkçe/tıbbi yazım düzeltmesi.
+   *  - Derlemde geçen (bilinen) kelimeye asla dokunmaz.
+   *  - Türkçe karakter eksikliği: yalnız ASCII biçimi derlemde kendi başına geçmiyorsa.
+   *  - Harf hatası: 1 düzenleme uzaklığındaki (düşme, yer değiştirme, çiftleme, yanlış harf)
+   *    tek baskın derlem kelimesine.
+   *  - Henüz yazılmakta olan son kelimeye dokunmaz.
    */
   public getSpellingCorrection(
     text: string
   ): { text: string; changes: { from: string; to: string }[] } | null {
     if (!text || text.trim().length < 3) return null;
     const changes: Array<{ from: string; to: string }> = [];
+    const asciiText = !/[çğıöşüÇĞİÖŞÜ]/.test(text);
+    const typing = /[\p{L}]$/u.test(text);
+    let lastIdx = -1;
+    if (typing) { const m = text.match(/[\p{L}]+$/u); lastIdx = m ? text.length - m[0].length : -1; }
 
-    // Kelime kelime güvenli tarama
-    const fixed = text.replace(/[\p{L}]{3,}/gu, (word) => {
-      const lower = word.toLocaleLowerCase('tr-TR');
-
-      // 1. Doğrudan genel yazım hatası sözlüğü
-      if (COMMON_TYPOS[lower]) {
-        const to = this.preserveCase(word, COMMON_TYPOS[lower]);
-        if (to !== word) {
-          changes.push({ from: word, to });
-          return to;
-        }
-      }
-
-      // 2. Türkçe karakter geri kazanımı ("bobrek" -> "böbrek", "akciger" -> "akciğer")
-      if (MEDICAL_ACCENT_RESTORES[lower]) {
-        const restored = MEDICAL_ACCENT_RESTORES[lower];
-        // Kullanıcı zaten Türkçe karakterlerle yazdıysa dokunma
-        if (restored === lower) return word;
-        const to = this.preserveCase(word, restored);
-        if (to !== word) {
-          changes.push({ from: word, to });
-          return to;
-        }
-      }
-
-      // 3. Genişletilmiş Tıbbi Veritabanı Türkçe Karakter Eşlemesi (6.900+ Terim)
-      if (medicalAccentMap[lower]) {
-        const restored = medicalAccentMap[lower];
-        if (restored !== lower) {
-          const to = this.preserveCase(word, restored);
-          if (to !== word) {
-            changes.push({ from: word, to });
-            return to;
-          }
-        }
-      }
-
+    const fixed = text.replace(/[\p{L}]{3,}/gu, (word, offset: number) => {
+      if (offset === lastIdx) return word;
+      const to = this.correctWord(word, asciiText);
+      if (to && to !== word) { changes.push({ from: word, to }); return to; }
       return word;
     });
-
     return changes.length > 0 ? { text: fixed, changes } : null;
+  }
+
+  private known(f: string): number {
+    const v = MODEL?.vocab[f];
+    return v === undefined ? 0 : typeof v === 'number' ? v : v[1];
+  }
+
+  private correctWord(word: string, asciiText = false): string | null {
+    let lower = word.toLocaleLowerCase('tr-TR');
+    // Aksansız metinde baştaki "I" çoğunlukla "İ"dir ("Izleminde")
+    if (asciiText && word[0] === 'I' && !this.known(lower) && !MODEL?.acc[lower]) lower = 'i' + lower.slice(1);
+    // Kısaltma (CRP, EKG) ve sayılı ifadeler
+    if (word.length <= 5 && word === word.toLocaleUpperCase('tr-TR')) return null;
+
+    if (COMMON_TYPOS[lower]) return this.preserveCase(word, COMMON_TYPOS[lower]);
+
+    const own = this.known(lower);
+    // Türkçe karakter geri kazanımı
+    const accTo = MODEL?.acc[lower] ?? (own ? undefined : MEDICAL_ACCENT_RESTORES[lower]);
+    if (accTo && accTo !== lower) return this.preserveCase(word, accTo);
+    if (own >= 1 || MEDICAL_ACCENT_RESTORES[lower] === lower) return null;
+    if (!MODEL || lower.length < 5) return null;
+
+    // Bilinen bir gövde + ek ise ("enfeksiyon|lu", "memede|n") geçerli çekim olabilir
+    let stemmed = false;
+    for (let k = lower.length - 1; k >= Math.max(5, lower.length - 4); k--) {
+      if (this.known(lower.slice(0, k)) >= 2) { stemmed = true; break; }
+    }
+    // Türkçe karakterlerin hiç kullanılmadığı metinde ASCII kelime büyük olasılıkla aksansız
+    // yazılmış geçerli bir çekimdir ("olmadi"); harf düzeltmesi yanlış kelimeye kayar.
+    const cand = new Map<string, number>();
+    const consider = (c: string, min: number) => {
+      const n = this.known(c);
+      if (n >= min) cand.set(c, Math.max(cand.get(c) ?? 0, n));
+      const a = MODEL!.acc[c];
+      if (a) { const m = this.known(a); if (m >= min) cand.set(a, Math.max(cand.get(a) ?? 0, m)); }
+    };
+    const L = lower.length;
+    if (asciiText && toAscii(lower) === lower) {
+      for (let i = 1; i < L; i++) if (lower[i] === lower[i - 1]) consider(lower.slice(0, i) + lower.slice(i + 1), 3);
+      if (!cand.size) return null;
+    } else {
+      for (let i = 0; i < L - 1; i++) consider(lower.slice(0, i) + lower[i + 1] + lower[i] + lower.slice(i + 2), 3); // yer değiştirme
+      for (let i = 1; i < L; i++) {                                                                                     // fazla harf
+        if (lower[i] === lower[i - 1]) consider(lower.slice(0, i) + lower.slice(i + 1), 3);        // çiftlenmiş harf ("hangii")
+        else if (!stemmed) consider(lower.slice(0, i) + lower.slice(i + 1), 8);
+    }
+    for (let i = 1; i <= L; i++) for (const ch of TR_LETTERS) consider(lower.slice(0, i) + ch + lower.slice(i), 8);   // eksik harf
+    if (!stemmed) for (let i = 0; i < L; i++) for (const ch of NEAR[lower[i]] ?? '') consider(lower.slice(0, i) + ch + lower.slice(i + 1), 8); // komşu tuş / aksan
+    }
+    if (!cand.size) return null;
+    const ranked = [...cand.entries()].sort((a, b) => b[1] - a[1]);
+    const [bw, bn] = ranked[0];
+    const second = ranked[1]?.[1] ?? 0;
+    if (bn < 3 || bn < second * 3) return null;
+    // Aday, yazılanın başı ise (yazılan = aday + ek) çekimdir
+    if (lower.startsWith(bw) && lower[bw.length] !== lower[bw.length - 1]) return null;
+    return this.preserveCase(word, bw);
   }
 
   /** Noktalama, çift boşluk ve büyük harf biçimlendirme */
@@ -1031,20 +848,17 @@ export class SmartComposerEngine {
     const changes: string[] = [];
     let t = spelledText ?? text;
 
-    // Çift boşlukları temizle
     if (/[ \t]{2,}/.test(t)) {
       t = t.replace(/[ \t]{2,}/g, ' ');
       changes.push('çift boşluk → tek boşluk');
     }
 
-    // Noktalama öncesi gereksiz boşlukları temizle ("kelime ?" -> "kelime?")
     const sp = t.match(/(\S+)\s+([?.!,;:])/);
     if (sp) {
       t = t.replace(/\s+([?.!,;:])/g, '$1');
       changes.push(`${sp[1]} ${sp[2]} → ${sp[1]}${sp[2]}`);
     }
 
-    // İlk harfi büyük yap
     const first = t.match(/^(\s*)(\p{Ll}\S*)/u);
     if (first) {
       const w = first[2];
@@ -1053,7 +867,6 @@ export class SmartComposerEngine {
       changes.push(`${w} → ${W}`);
     }
 
-    // Soru kelimesi ile bitiyorsa soru işareti ekle
     const q = t.trimEnd().match(/(\S+)$/);
     if (q && /^(hangisidir|hangisi|hangileridir|hangileri|nedir|değildir|yanlıştır|doğrudur)$/i.test(q[1])) {
       t = t.trimEnd() + '?';
@@ -1064,7 +877,7 @@ export class SmartComposerEngine {
   }
 
   private preserveCase(orig: string, target: string): string {
-    if (orig === orig.toLocaleUpperCase('tr-TR')) {
+    if (orig.length > 1 && orig === orig.toLocaleUpperCase('tr-TR')) {
       return target.toLocaleUpperCase('tr-TR');
     }
     if (orig[0] === orig[0].toLocaleUpperCase('tr-TR')) {

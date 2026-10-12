@@ -1,7 +1,7 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { CornerDownLeft, Sparkles, Wand2, ArrowRight, HelpCircle } from 'lucide-react';
-import { safeJsonFetch } from '../../services/api';
-import { smartComposerService, AssistOption, AssistResult } from '../../services/smartComposerService';
+import { ApiService } from '../../services/api';
+import { smartComposerService, loadComposerModel, AssistOption, AssistResult } from '../../services/smartComposerService';
 
 /**
  * MedSoru Akıllı Soru Yazma Yardımcısı (ComposerAssist)
@@ -24,6 +24,14 @@ export const ComposerAssist: React.FC<{
 }> = ({ active, value, onChange, textareaId, committeeId }) => {
   const [sources, setSources] = useState<string[]>([]);
   const [localResult, setLocalResult] = useState<AssistResult | null>(null);
+  // Derlem modeli (ayrı parça) yüklenince önerileri yeniden hesapla
+  const [modelReady, setModelReady] = useState(smartComposerService.hasModel());
+  useEffect(() => {
+    if (!active || modelReady) return;
+    let alive = true;
+    loadComposerModel().then(() => { if (alive) setModelReady(smartComposerService.hasModel()); });
+    return () => { alive = false; };
+  }, [active, modelReady]);
   const [box, setBox] = useState<{
     top: number;
     left: number;
@@ -56,7 +64,7 @@ export const ComposerAssist: React.FC<{
     }, 30);
 
     return () => window.clearTimeout(t);
-  }, [value, active, sources]);
+  }, [value, active, sources, modelReady]);
 
   // 2. Arka Planda Çıkmış Soru Kaynaklarını Çekme (Non-blocking, UI thread'ini dondurmaz)
   useEffect(() => {
@@ -66,13 +74,11 @@ export const ComposerAssist: React.FC<{
 
     const idleTimer = window.setTimeout(() => {
       // Arka planda benzer soruları sorgula; hata verirse sessizce yoksay
-      safeJsonFetch<any>(`/api/past-exams/similar?q=${encodeURIComponent(query.slice(-200))}${committeeId ? `&committeeId=${encodeURIComponent(committeeId)}` : ''}`)
-        .then((r) => {
+      // Sunucudaki benzer çıkmış soru araması (POST /api/past-questions/similar)
+      ApiService.findSimilarPastQuestions(query.slice(-400), committeeId)
+        .then((rows) => {
           if (currentId !== reqId.current) return;
-          if (r.ok && Array.isArray(r.data)) {
-            const stems = r.data.slice(0, 5).map((x: any) => String(x.stem || x.rawStem || ''));
-            setSources(stems.filter(Boolean));
-          }
+          setSources(rows.slice(0, 5).map((x) => String(x.stem || '')).filter(Boolean));
         })
         .catch(() => {});
     }, 400);
