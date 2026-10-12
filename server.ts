@@ -110,7 +110,7 @@ import { questionUpdatedEmail } from './src/services/phase14Mail.ts';
 import { renderHtmlToPdf, findChrome } from './src/services/pdfRenderService.ts';
 import { voterIdFrom, toggleVote, normalizeVotes, normalizeQuestionVotes } from './src/services/voteService.ts';
 import { findLecturePdf } from './src/services/lecturePdfLocator.ts';
-import { getPlaylist, savePlaylist, sanitizeTracks } from './src/services/musicStore.ts';
+import { getPlaylist, savePlaylist, sanitizeTracks, ensureSharedFile, getSharedTracks } from './src/services/musicStore.ts';
 import {
   exportPastExamsToMarkdown,
   exportSummariesToMarkdown,
@@ -6343,6 +6343,9 @@ registerUserDataBackupRoutes(app, {
 registerDataCatalogRoutes(app, requireAdmin, {
   rootDir: __dirname,
   dataDir: DATA_DIR,
+  musicFile: ensureSharedFile,
+  // Panelden yapılan her değişiklik bağlı tüm istemcilere duyurulur; istemci ilgili veriyi yeniden çeker.
+  onChange: (entity) => broadcastRealtimeEvent('content_changed', { entity, at: Date.now() }),
   getPastQuestions: getPastQuestionsDb,
   savePastQuestions: savePastQuestionsDb,
   getDecks: getDecksDb,
@@ -9631,6 +9634,11 @@ app.post('/api/ai/interactions', async (req, res) => {
 });
 
 // 8. AI Interactions: Upvote helpful explanation
+// Müzik: herkese açık yönetici seçkisi (data/music_shared.json). Değişince SSE `content_changed {entity:'music'}`.
+app.get('/api/music/shared', (_req, res) => {
+  res.setHeader('Cache-Control', 'no-cache');
+  res.json(getSharedTracks());
+});
 // Müzik: kullanıcı bazlı kalıcı çalma listesi
 app.get('/api/music/playlist', (req, res) => {
   const owner = voterIdFrom(req);

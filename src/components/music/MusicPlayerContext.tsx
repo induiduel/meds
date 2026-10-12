@@ -4,6 +4,7 @@ import { onAuthStateChanged } from 'firebase/auth';
 import { auth } from '../../services/auth';
 import { safeJsonFetch } from '../../services/api';
 import { getVoterId } from '../../utils/voterId';
+import { realtimeEventService } from '../../services/realtimeEvents';
 
 /*
  * Uygulama genelinde tek müzik çalar. Sağlayıcı App kökünde durduğu için sayfa
@@ -31,6 +32,7 @@ interface BundledTrack {
 }
 
 const CUSTOM_KEY = 'medsoru_music_custom_v1';
+const SHARED_KEY = 'medsoru_music_shared_v1';
 const VOLUME_KEY = 'medsoru_music_volume_v1';
 
 declare global {
@@ -163,8 +165,35 @@ export const useMusicPlayer = () => {
   return ctx;
 };
 
+/** Son bilinen seçki (açılışta ağ beklenmesin); yoksa paketteki tohum. */
+const loadShared = (): BundledTrack[] => {
+  try {
+    const v = JSON.parse(localStorage.getItem(SHARED_KEY) || 'null');
+    if (Array.isArray(v)) return v;
+  } catch { /* yoksay */ }
+  return BUNDLED as BundledTrack[];
+};
+
 export const MusicPlayerProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [custom, setCustom] = useState<MusicTrack[]>(() => loadCustom());
+
+  // Yönetici seçkisi sunucudan gelir (data/music_shared.json). Paketteki liste yalnız ilk açılış tohumu;
+  // panelde yapılan değişiklik SSE `content_changed {entity:'music'}` ile anında yeniden çekilir.
+  const [shared, setShared] = useState<BundledTrack[]>(loadShared);
+  useEffect(() => {
+    let alive = true;
+    const pull = async () => {
+      const r = await safeJsonFetch<{ tracks: BundledTrack[] }>('/api/music/shared', { cache: 'no-store' });
+      if (!alive || !r.ok || !Array.isArray(r.data?.tracks)) return;
+      setShared(r.data!.tracks);
+      try { localStorage.setItem(SHARED_KEY, JSON.stringify(r.data!.tracks)); } catch { /* yoksay */ }
+    };
+    void pull();
+    const offChange = realtimeEventService.on('content_changed', (d: any) => { if (d?.entity === 'music') void pull(); });
+    // Bağlantı koptuğu sırada kaçan değişiklik olabilir
+    const offStatus = realtimeEventService.onStatusChange((st) => { if (st === 'connected') void pull(); });
+    return () => { alive = false; offChange(); offStatus(); };
+  }, []);
 
   // Kalıcılık: eklenen parçalar sunucuda kullanıcı (ya da cihaz) kimliğine göre saklanır.
   // Açılışta sunucu listesi yerel listeyle URL'ye göre birleştirilir; sonraki her değişiklik 800 ms sonra yazılır.
@@ -213,9 +242,11 @@ export const MusicPlayerProvider: React.FC<{ children: React.ReactNode }> = ({ c
   const [muted, setMuted] = useState(false);
 
   const tracks: MusicTrack[] = useMemo(() => {
-    const base = (BUNDLED as BundledTrack[]).map((t) => ({ ...t, custom: false as const }));
-    return [...base, ...custom];
-  }, [custom]);
+    const base = shared.map((t) => ({ ...t, custom: false as const }));
+    // Seçkide de olan kişisel kopya gizlenir: başlık panelden değişince eski adı listede kalmasın
+    const seen = new Set(base.flatMap((t) => [t.url, t.videoId].filter(Boolean) as string[]));
+    return [...base, ...custom.filter((t) => !seen.has(t.url) && !(t.videoId && seen.has(t.videoId)))];
+  }, [shared, custom]);
 
   const safeIndex = tracks.length === 0 ? 0 : Math.min(index, tracks.length - 1);
   const current = tracks[safeIndex];

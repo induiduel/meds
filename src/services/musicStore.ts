@@ -11,6 +11,10 @@ export interface StoredTrack { id: string; title: string; artist?: string; url: 
 interface Store { [ownerId: string]: { tracks: StoredTrack[]; updatedAt: string } }
 
 const FILE = path.resolve(process.cwd(), 'data', 'music_playlists.json');
+/** Herkese gösterilen yönetici seçkisi. data/ kalıcı birimde durur (Oracle'da imaj değil volume); yönetim
+ *  panelindeki "Müzik listesi" buraya yazar. Dosya yoksa paketteki src/data/musicTracks.json ile tohumlanır. */
+export const SHARED_FILE = path.resolve(process.cwd(), 'data', 'music_shared.json');
+const SHARED_SEED = path.resolve(process.cwd(), 'src', 'data', 'musicTracks.json');
 const MAX_TRACKS = 300;
 
 function read(): Store {
@@ -68,4 +72,25 @@ export function savePlaylist(ownerId: string, tracks: StoredTrack[]): { tracks: 
   store[ownerId] = { tracks, updatedAt };
   write(store);
   return { tracks, updatedAt };
+}
+
+/** Yönetici seçkisi dosyasını (yoksa paketteki tohumdan) hazırlar ve yolunu döndürür. */
+export function ensureSharedFile(): string {
+  if (!fs.existsSync(SHARED_FILE)) {
+    let seed: unknown = [];
+    try { seed = JSON.parse(fs.readFileSync(SHARED_SEED, 'utf-8')); } catch { /* tohum yok */ }
+    fs.mkdirSync(path.dirname(SHARED_FILE), { recursive: true });
+    fs.writeFileSync(SHARED_FILE, JSON.stringify(Array.isArray(seed) ? seed : [], null, 2) + '\n', 'utf-8');
+  }
+  return SHARED_FILE;
+}
+
+export function getSharedTracks(): { tracks: StoredTrack[]; updatedAt: string | null } {
+  try {
+    const file = ensureSharedFile();
+    const list = JSON.parse(fs.readFileSync(file, 'utf-8'));
+    return { tracks: Array.isArray(list) ? list : [], updatedAt: fs.statSync(file).mtime.toISOString() };
+  } catch {
+    return { tracks: [], updatedAt: null };
+  }
 }

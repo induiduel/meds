@@ -31,6 +31,10 @@ export interface CatalogDeps {
   restorePool?: (records: any[]) => Promise<void>;
   removeLearnFeedback?: (ids: string[]) => any[];
   restoreLearnFeedback?: (records: any[]) => void;
+  /** Yönetici seçkisi dosyası (data/ altında, yoksa tohumlanır) */
+  musicFile?: () => string;
+  /** Bir türde kayıt eklendi/değişti/silindi → istemcilere canlı yayın */
+  onChange?: (entity: string) => void;
 }
 
 export interface RelationRef { entity: string; id: string; title: string; why: string }
@@ -285,7 +289,7 @@ export function registerDataCatalogRoutes(app: express.Express, requireAdmin: ex
   /* ---------- bağdaştırıcılar ---------- */
   const glossaryFile = path.join(SRC, 'medical_glossary.json');
   const cardsFile = path.join(SRC, 'question_cards.json');
-  const musicFile = path.join(SRC, 'musicTracks.json');
+  const musicFile = deps.musicFile ? deps.musicFile() : path.join(SRC, 'musicTracks.json');
   const decksFile = path.join(SRC, 'interactive_learning_decks.json');
 
   /** Dizi tutan JSON dosyası için ortak silme/geri yükleme */
@@ -566,7 +570,7 @@ export function registerDataCatalogRoutes(app: express.Express, requireAdmin: ex
       },
     },
     {
-      id: 'music', label: 'Müzik listesi', group: 'Topluluk', source: 'src/data/musicTracks.json',
+      id: 'music', label: 'Müzik listesi', group: 'Topluluk', source: deps.musicFile ? 'data/music_shared.json' : 'src/data/musicTracks.json',
       editable: ['title', 'artist', 'url'],
       facets: [{ key: 'artist', label: 'Sanatçı' }],
       load: () => readJson(musicFile, []),
@@ -892,6 +896,7 @@ export function registerDataCatalogRoutes(app: express.Express, requireAdmin: ex
     try {
       const rec = c.build(req.body?.values || {});
       c.insert(rec);
+      deps.onChange?.(e.id);
       res.json({ success: true, id: e.key(rec), record: rec, note: e.source.startsWith('src/') ? 'Eklendi. Uygulamadaki paket bir sonraki derlemede güncellenir.' : 'Eklendi.' });
     } catch (err: any) {
       res.status(400).json({ error: err.message });
@@ -916,8 +921,10 @@ export function registerDataCatalogRoutes(app: express.Express, requireAdmin: ex
         c.insert(rec, id);
         created.push(e.key(rec));
       }
+      deps.onChange?.(e.id);
       res.json({ success: true, ids: created, id: created[0], note: e.source.startsWith('src/') ? 'Çoğaltıldı. Uygulamadaki paket bir sonraki derlemede güncellenir.' : 'Çoğaltıldı.' });
     } catch (err: any) {
+      if (created.length) deps.onChange?.(e.id);
       res.status(400).json({ error: err.message, ids: created });
     }
   });
@@ -941,6 +948,7 @@ export function registerDataCatalogRoutes(app: express.Express, requireAdmin: ex
     if (!e?.save) return res.status(400).json({ error: 'Bu veri türü buradan düzenlenemez (salt okunur).' });
     try {
       const saved = e.save(req.params.id, req.body?.patch || {});
+      deps.onChange?.(e.id);
       res.json({ success: true, record: saved, note: e.source.startsWith('src/') ? 'Kaydedildi. Uygulamadaki paket bir sonraki derlemede güncellenir.' : 'Kaydedildi.' });
     } catch (err: any) {
       res.status(400).json({ error: err.message });
@@ -999,6 +1007,7 @@ export function registerDataCatalogRoutes(app: express.Express, requireAdmin: ex
         const keys = new Set(removed.map((x) => `${e.id}:${e.key(x)}`));
         writeTrash([...trashAll().filter((t) => !keys.has(t.key)), ...removed.map((x) => ({ key: `${e.id}:${e.key(x)}`, entity: e.id, id: e.key(x), title: e.title(x), record: x, deletedAt: now, by }))]);
       }
+      if (removed.length && e.id !== 'trash') deps.onChange?.(e.id);
       console.log(`[catalog] ${e.id}: ${removed.length}/${ids.length} kayıt ${permanent ? 'kalıcı olarak silindi' : 'çöp kutusuna taşındı'}`);
       res.json({ success: true, deleted: removed.length, requested: ids.length, permanent });
     } catch (err: any) {
@@ -1022,6 +1031,7 @@ export function registerDataCatalogRoutes(app: express.Express, requireAdmin: ex
       try {
         await e.restore(entries.map((t) => t.record));
         entries.forEach((t) => done.add(t.key));
+        deps.onChange?.(ent);
       } catch (err: any) {
         errors.push(`${labelOf(ent)}: ${err.message}`);
       }
