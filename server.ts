@@ -349,8 +349,9 @@ function requireWritePassword(req: express.Request, res: express.Response, next:
   // Salt-okunur retrieval uçları: yazma sayılmaz, parolasız herkese açık.
   // (Soru ekleme ekranındaki "benzer çıkmışlar / bulunan kaynaklar" bu uçları kullanır.)
   // /api/db/query kendi yetkisini denetler (yazma yalnız yönetici); /api/live/* yalnız SSE'ye sınırlı, hız sınırlı yayın.
-  // /api/user-data/backup sahipliği kendisi doğrular (Firebase ID jetonu ya da gizli cihaz jetonu).
-  const readOnlyPosts = ['/api/past-questions/similar', '/api/sources/for-fragment', '/api/db/query', '/api/live/broadcast', '/api/live/ping', '/api/user-data/backup'];
+  // /api/user-data/backup sahipliği kendisi doğrular (Firebase ID jetonu ya da gizli cihaz jetonu);
+  // /api/notes kimliği gizli eşitleme kodudur (yalnız SHA-256 özeti saklanır, kodu bilmeyen erişemez).
+  const readOnlyPosts = ['/api/past-questions/similar', '/api/sources/for-fragment', '/api/db/query', '/api/live/broadcast', '/api/live/ping', '/api/user-data/backup', '/api/notes'];
   const reqPath = String(req.originalUrl || req.path || '').split('?')[0];
   if (readOnlyPosts.some((p) => reqPath === p || reqPath.endsWith(p))) return next();
 

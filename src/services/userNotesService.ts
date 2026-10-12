@@ -91,7 +91,18 @@ export function registerUserNotesRoutes(
     res.json(store);
   });
 
+  // Yazma parolası gerekmez (kimlik = gizli kod); kötüye kullanıma karşı IP başına dakikada 60 yazma.
+  const writeRate = new Map<string, { n: number; at: number }>();
   app.put('/api/notes', (req, res) => {
+    const ip = String(req.headers['cf-connecting-ip'] || req.ip || '');
+    const now = Date.now();
+    const r = writeRate.get(ip);
+    if (!r || now - r.at > 60_000) {
+      if (writeRate.size > 5000) writeRate.clear();
+      writeRate.set(ip, { n: 1, at: now });
+    } else if (++r.n > 60) {
+      return res.status(429).json({ error: 'Çok sık eşitleme isteği; biraz sonra tekrar denenecek.' });
+    }
     const code = codeOf(req);
     if (!code) return res.status(400).json({ error: 'Eşitleme kodu (x-user-id) gerekli' });
     try {
