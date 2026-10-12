@@ -337,6 +337,8 @@ Dosyalar: `src/components/learn/lesson/`
 - **Kart içinde metin kesilmez:** etiketler, kategori adları, kutup adları sarar (`overflow-wrap: anywhere`); `.ls-ix-body .ls-btn` tek satıra zorlanmaz. Uzun iki kutuplu adlar (`venn_grid`) satırlarda kısa harfle (A / B / İkisi) seçilir, tam ad üstteki kutup etiketinde ve `aria-label`'dadır.
 - **Hareket yalnız durum anlatır:** seçim → karar → ilerleme (damga, sarsıntı, puan uçuşu, kart destesi). `prefers-reduced-motion` altında hepsi kapanır. Veri açıklamalarındaki "Doğru." / "Tuzak / Yalan!" hükümleri ekranda ayıklanır (`cleanVerdict`); hükmü arayüz verir.
 - Kalıcı tercih anahtarları: `medsoru_learn_layout`, `medsoru_learn_mode`, `medsoru_learn_toc`, `medsoru_learn_zoom`, `medsoru_learn_done_v1`, `medsoru_learn_progress_v1`, `medsoru_learn_voter_id`.
+- **Ders PDF'i** (`DeckPdfViewer` + tembel `pdf/PdfDocView`, 2026-10-12): sunucudaki dosya PDF.js ile uygulama içinde çizilir (iframe değil; telefonda da açılır). Sunucu Range (206) verir, yalnız gereken sayfaların baytları iner; yalnız görünen ±1 sayfa çizilir, uzaktakiler bellekten atılır; metin seçilebilir. Adım değişince PDF o adımın sayfasına kayar ve sayfa turuncu çerçeveyle "Bu adımın kaynağı" olarak işaretlenir. Sunucuda dosya yoksa Drive önizlemesi, o da yoksa "PDF seç" boş durumu.
+  - Deste → PDF ve slayt → (PDF, sayfa) eşlemesi **içerikle doğrulanır**: `src/data/deckPdfSources.json`, elle yazılmaz, `.venv-ocr/bin/python scripts/build_deck_pdf_sources.py` üretir. Her slayt Drive'daki tüm ders PDF sayfalarıyla karşılaştırılır; ad adayı (checklist/eski katalog/`OVERRIDES`) içerik desteklemezse içerik kazanır, kanıt zayıfsa deste PDF'siz kalır ve ekranda ders tarihi gösterilir (yanlış PDF gösterilmez, başlığa göre tahmin yok). Ders birden çok PDF'e yayılıyorsa her adım kendi PDF'ini açar. Rapor: `meds_temp/deck_pdf_eslesme_raporu.md` (ÇELİŞKİ / KANIT YOK / OK). Oracle'da ders işçisi her Drive taramasından sonra `_deck_pdf_sources.json`'ı yeniden üretir; sunucu yeni olanı kullanır. Uçlar: `GET /api/lecture-pdf/decks`, `/api/lecture-pdf/deck/:id`, `/api/lecture-pdf/deck/:id/:i` (`src/services/lecturePdfLocator.ts`).
 - `branching_logic` seçenekleri `options` | `choices` | `branchingOptions` alanlarından okunur (ekran ve doğrulayıcı aynı sırayı kullanır); soru `question`/`initialQuestion`'da ise `scenario` üstte vaka kutusunda gösterilir. Doğrulayıcı artık `elements` ve `interactiveElement` kaynaklarını da denetler.
 
 ---
@@ -352,6 +354,7 @@ Dosyalar: `src/components/learn/lesson/`
 - [ ] `correctAnswer` tek harf; şıklarda `key` A–E.
 - [ ] Her 6–12 adımda bir tekrar sayfası ya da tutarlı `badge` ile bölümleme.
 - [ ] `python3 scripts/build_kazanim_deck_index.py` çalıştırıldı.
+- [ ] Yeni deste ya da Drive'a yeni PDF geldiyse `.venv-ocr/bin/python scripts/build_deck_pdf_sources.py` çalıştırıldı (PDF eşleşmesi + sayfa hizalaması).
 - [ ] `npm run lint` 0 hata; ekranda Akış ve Stüdyo'da göz kontrolü.
 
 ## Not kutuları (anlatım içinde `>`)

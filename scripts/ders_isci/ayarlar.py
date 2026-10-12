@@ -25,7 +25,8 @@ GUNLUK_SINIR = int(os.environ.get("MEDS_ISCI_GUNLUK", "2"))      # Max 5x: günd
 SAATLER = os.environ.get("MEDS_ISCI_SAATLER", "01-08")           # Claude işi yalnız bu saatlerde (TR saati)
 ARALIK_SN = int(os.environ.get("MEDS_ISCI_ARALIK", "1800"))      # Drive tarama aralığı (30 dk)
 CLAUDE_BIN = os.environ.get("MEDS_ISCI_CLAUDE", "claude")
-CLAUDE_MODEL = os.environ.get("MEDS_ISCI_MODEL", "")             # boş: aboneliğin varsayılanı
+CLAUDE_MODEL = os.environ.get("MEDS_ISCI_MODEL", "claude-opus-5-5")  # kullanıcı kararı (2026-10-12): Opus 5.5
+CLAUDE_EFFORT = os.environ.get("MEDS_ISCI_EFFORT", "low")            # düşük efor; boş: CLI varsayılanı
 API = os.environ.get("MEDS_ISCI_API", "http://meds-server:3000")  # bildirim + benzer soru için site API'si
 EMBED = os.environ.get("MEDS_EMBED_URL", "http://meds-embed:8094/embed")
 

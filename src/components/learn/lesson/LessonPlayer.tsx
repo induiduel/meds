@@ -44,6 +44,7 @@ import { HL_COLORS, Highlightable, isPenActive, setHighlighterTool, stopPen, use
 import { resetPenDevice, usePenDevice } from '../../ui/penInput';
 import { PALETTE_COLORS, SlideDrawingCanvas, setDrawingGlobalState, useDrawingGlobalState } from '../SlideDrawingCanvas';
 import { getSlidePdfLocation } from '../../../services/slidePdfMappingService';
+import { useDeckPdf } from '../../../services/deckPdfService';
 import { QuestionFocus, focusMarks } from '../../../services/questionFocus';
 import { toast } from '../../ui/Toast';
 import { deckName } from '../../../data/deckStore';
@@ -443,7 +444,8 @@ export const LessonPlayer: React.FC<LessonPlayerProps> = ({ deck, startAt, initi
   const penDevice = usePenDevice();
   const marking = penOn || drawMode !== 'none';
 
-  const pdfLoc = useMemo(() => getSlidePdfLocation(deck.id, step.slide.slideNumber, step.slide, n), [deck.id, step, n]);
+  const pdfInfo = useDeckPdf(deck.id);
+  const pdfLoc = useMemo(() => getSlidePdfLocation(deck.id, step.slide.slideNumber, step.slide, n, pdfInfo?.slides), [deck.id, step, n, pdfInfo?.slides]);
   const [pdfPage, setPdfPage] = useState(pdfLoc.primaryPage);
   useEffect(() => setPdfPage(pdfLoc.primaryPage), [pdfLoc.primaryPage]);
   const kaz = useMemo(() => matchKazanim(step, kazIndex[deck.id], pdfLoc.primaryPage, `${deck.title} ${deck.discipline || ''}`), [step, kazIndex, deck.id, deck.title, deck.discipline, pdfLoc.primaryPage]);
@@ -1056,7 +1058,7 @@ export const LessonPlayer: React.FC<LessonPlayerProps> = ({ deck, startAt, initi
   const stage =
     viewMode === 'pdf' ? (
       <div className="ls-pdf">
-        <DeckPdfViewer deck={deck} currentSlideNumber={step.slide.slideNumber} currentSlide={step.slide} targetPage={pdfPage} targetPageRange={step.slide.sourcePageRange} onToggleSplitView={() => setViewMode('split')} onPageChange={setPdfPage} />
+        <DeckPdfViewer deck={deck} currentSlideNumber={step.slide.slideNumber} currentSlide={step.slide} targetPage={pdfPage} targetPageRange={pdfLoc.pageRange} onToggleSplitView={() => setViewMode('split')} onPageChange={setPdfPage} />
       </div>
     ) : viewMode === 'split' ? (
       <div className="ls-split">
@@ -1067,7 +1069,7 @@ export const LessonPlayer: React.FC<LessonPlayerProps> = ({ deck, startAt, initi
           </article>
         </div>
         <div className="ls-split-r">
-          <DeckPdfViewer deck={deck} currentSlideNumber={step.slide.slideNumber} currentSlide={step.slide} targetPage={pdfPage} targetPageRange={step.slide.sourcePageRange} isSplitView onToggleSplitView={() => setViewMode('interactive')} onPageChange={setPdfPage} />
+          <DeckPdfViewer deck={deck} currentSlideNumber={step.slide.slideNumber} currentSlide={step.slide} targetPage={pdfPage} targetPageRange={pdfLoc.pageRange} isSplitView onToggleSplitView={() => setViewMode('interactive')} onPageChange={setPdfPage} />
         </div>
       </div>
     ) : layout === 'A' ? (

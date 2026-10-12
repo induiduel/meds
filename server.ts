@@ -110,7 +110,7 @@ import { createPhase14UserQueue, type QueueItem } from './src/services/phase14Us
 import { questionUpdatedEmail } from './src/services/phase14Mail.ts';
 import { renderHtmlToPdf, findChrome } from './src/services/pdfRenderService.ts';
 import { voterIdFrom, toggleVote, normalizeVotes, normalizeQuestionVotes } from './src/services/voteService.ts';
-import { findLecturePdf } from './src/services/lecturePdfLocator.ts';
+import { findLecturePdf, resolveDeckPdfs, deckPdfAvailability, deckSourceEntry, toPublic } from './src/services/lecturePdfLocator.ts';
 import { getPlaylist, savePlaylist, sanitizeTracks, ensureSharedFile, getSharedTracks } from './src/services/musicStore.ts';
 import {
   exportPastExamsToMarkdown,
@@ -141,8 +141,8 @@ import { registerUserNotesRoutes, createNotesStore } from './src/services/userNo
 import { createQuestionIntake, formatUnitsForPrompt, applyIntakeToQuestion } from './src/services/questionIntake.ts';
 import { createPoolClusterService } from './src/services/poolClusterService.ts';
 import { registerUserDataBackupRoutes } from './src/services/userDataBackupService.ts';
-
 import { initContentOverlay, resolveContent, markContentChanged, contentManifest } from './src/services/contentOverlay.ts';
+
 // @ts-ignore - dynamic ES module runner
 import {
   getAllScripts,
@@ -9153,6 +9153,43 @@ app.post('/api/pdf/render', async (req, res) => {
     console.warn('[pdf] oluşturulamadı:', err?.message);
     res.status(err?.status || 500).json({ error: err?.message || 'PDF oluşturulamadı.' });
   }
+});
+
+// PDF.js yardımcı dosyaları (gömülü olmayan standart yazı tipleri, JPEG2000/ICC wasm, CMap). Sürüme bağlı, değişmez.
+for (const sub of ['standard_fonts', 'wasm', 'cmaps', 'iccs']) {
+  app.use(`/vendor/pdfjs/${sub}`, express.static(path.resolve(process.cwd(), 'node_modules', 'pdfjs-dist', sub), { maxAge: '30d', immutable: true, index: false }));
+}
+app.use('/vendor/pdfjs', (_req, res) => res.status(404).end()); // SPA sayfasına düşmesin
+
+// Öğren: deste → ders PDF'i (src/data/deckPdfSources.json + diskteki dosya). `:filename` rotasından önce olmalı.
+app.get('/api/lecture-pdf/decks', (_req, res) => {
+  try {
+    res.setHeader('Cache-Control', 'private, max-age=300');
+    res.json({ decks: deckPdfAvailability() });
+  } catch (err: any) {
+    res.status(500).json({ error: 'PDF listesi alınamadı: ' + err.message });
+  }
+});
+
+app.get('/api/lecture-pdf/deck/:deckId', (req, res) => {
+  const id = String(req.params.deckId);
+  const entry = deckSourceEntry(id);
+  res.setHeader('Cache-Control', 'private, max-age=120');
+  res.json({ deckId: id, files: resolveDeckPdfs(id).map(toPublic), slides: entry?.slides || null, missing: entry?.missing || null });
+});
+
+// Dosya akışı: sendFile Range isteklerini (206) destekler; PDF.js yalnız gereken sayfaların baytlarını çeker.
+app.get('/api/lecture-pdf/deck/:deckId/:index', (req, res) => {
+  const f = resolveDeckPdfs(String(req.params.deckId))[Number(req.params.index) || 0];
+  if (!f?.full) return res.status(404).json({ error: 'Bu dersin PDF dosyası sunucuda yok.' });
+  res.setHeader('Content-Type', 'application/pdf');
+  res.setHeader('Content-Disposition', `inline; filename*=UTF-8''${encodeURIComponent(f.name)}`);
+  // İstemci URL'ye ?v=<boyut> ekler; dosya değişince adres de değişir.
+  res.setHeader('Cache-Control', 'private, max-age=604800');
+  res.setHeader('Access-Control-Expose-Headers', 'Accept-Ranges, Content-Range, Content-Length');
+  res.sendFile(f.full, { acceptRanges: true, lastModified: true, etag: true }, (err: any) => {
+    if (err && !res.headersSent) res.status(err.statusCode || 500).end();
+  });
 });
 
 // Stream local lecture note PDF file directly

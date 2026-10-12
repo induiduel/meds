@@ -1,0 +1,79 @@
+/* Öğren · ders PDF görüntüleyici (DeckPdfViewer + PdfDocView). Renkler tema belirteçlerinden (palettes.ts). */
+
+/* ---------- çerçeve ---------- */
+.dpv { display: flex; flex-direction: column; height: 100%; min-height: 0; background: var(--color-canvas); color: var(--color-ink-2); }
+.dpv-bar { flex-shrink: 0; display: flex; align-items: center; gap: 8px; padding: 8px 10px; border-bottom: 1px solid var(--color-line); background: var(--color-white); }
+.dpv-title { min-width: 0; flex: 1; display: flex; align-items: center; gap: 8px; }
+.dpv-title > svg { width: 18px; height: 18px; flex-shrink: 0; color: var(--color-bad); }
+.dpv-title b { display: block; font-size: 13.5px; font-weight: 650; color: var(--color-ink); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.dpv-title small { display: block; font-size: 11.5px; color: var(--color-ink-3); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.dpv-acts { display: flex; align-items: center; gap: 4px; flex-shrink: 0; }
+.dpv-ib { display: inline-flex; align-items: center; justify-content: center; gap: 6px; height: 32px; min-width: 32px; padding: 0 8px; border: 0; border-radius: 9px; background: transparent; color: var(--color-ink-2); font: inherit; font-size: 12.5px; font-weight: 600; cursor: pointer; text-decoration: none; transition: background-color .15s, color .15s; }
+.dpv-ib > svg { width: 17px; height: 17px; }
+.dpv-ib:hover:not(:disabled) { background: var(--color-field); color: var(--color-ink); }
+.dpv-ib:disabled { opacity: .35; cursor: default; }
+.dpv-ib.is-on { background: var(--color-accent-soft); color: var(--color-accent); }
+.dpv-ib .dpv-lbl { display: none; }
+@media (min-width: 900px) { .dpv-ib .dpv-lbl { display: inline; } }
+
+.dpv-nav { flex-shrink: 0; display: flex; align-items: center; gap: 6px; padding: 6px 10px; border-bottom: 1px solid var(--color-line-soft); background: var(--color-white); font-size: 12.5px; overflow-x: auto; scrollbar-width: none; }
+.dpv-nav::-webkit-scrollbar { display: none; }
+.dpv-pg { display: inline-flex; align-items: center; gap: 4px; color: var(--color-ink-3); white-space: nowrap; }
+.dpv-pg input { width: 46px; height: 28px; border: 1px solid var(--color-line); border-radius: 8px; background: var(--color-field); color: var(--color-ink); text-align: center; font: inherit; font-variant-numeric: tabular-nums; }
+.dpv-pg input:focus { outline: 2px solid var(--color-accent); outline-offset: -1px; }
+.dpv-src { display: inline-flex; align-items: center; gap: 6px; height: 28px; padding: 0 10px; border: 0; border-radius: 99px; background: var(--color-warn-soft); color: var(--color-ink); font: inherit; font-size: 12px; font-weight: 600; white-space: nowrap; cursor: pointer; }
+.dpv-src > svg { width: 14px; height: 14px; color: var(--color-warn); }
+.dpv-src.is-here { background: var(--color-ok-soft); }
+.dpv-src.is-here > svg { color: var(--color-ok); }
+.dpv-files { display: inline-flex; gap: 4px; margin-left: auto; }
+.dpv-file { height: 28px; padding: 0 10px; border: 1px solid var(--color-line); border-radius: 99px; background: transparent; color: var(--color-ink-2); font: inherit; font-size: 12px; white-space: nowrap; cursor: pointer; max-width: 220px; overflow: hidden; text-overflow: ellipsis; }
+.dpv-file.is-on { border-color: var(--color-accent); background: var(--color-accent-soft); color: var(--color-accent); font-weight: 600; }
+.dpv-zoom { display: inline-flex; align-items: center; gap: 2px; margin-left: auto; }
+.dpv-files + .dpv-zoom { margin-left: 4px; }
+.dpv-zoom span { min-width: 42px; text-align: center; font-variant-numeric: tabular-nums; color: var(--color-ink-3); }
+
+.dpv-body { position: relative; flex: 1; min-height: 0; display: flex; }
+.dpv-frame { flex: 1; width: 100%; height: 100%; border: 0; background: var(--color-white); }
+
+/* boş/hata durumu */
+.dpv-empty { margin: auto; max-width: 380px; padding: 28px 20px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 10px; }
+.dpv-empty > svg { width: 34px; height: 34px; color: var(--color-ink-3); }
+.dpv-empty h3 { margin: 0; font-size: 16px; color: var(--color-ink); }
+.dpv-empty p { margin: 0; font-size: 13px; line-height: 1.5; color: var(--color-ink-3); }
+.dpv-empty .dpv-row { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-top: 6px; }
+.dpv-btn { display: inline-flex; align-items: center; gap: 6px; height: 36px; padding: 0 14px; border: 0; border-radius: 10px; background: var(--color-field); color: var(--color-ink); font: inherit; font-size: 13.5px; font-weight: 600; cursor: pointer; text-decoration: none; }
+.dpv-btn > svg { width: 16px; height: 16px; }
+.dpv-btn.is-primary { background: var(--color-accent); color: var(--color-on-accent, #fff); }
+
+/* ---------- PDF.js sayfaları ---------- */
+.pdv { position: relative; flex: 1; min-height: 0; overflow: auto; overscroll-behavior: contain; background: var(--color-canvas); outline: none; -webkit-overflow-scrolling: touch; }
+.pdv-track { position: relative; min-height: 100%; }
+.pdv-page {
+  position: absolute; left: 50%; transform: translateX(-50%);
+  background: #fff; border-radius: 4px; overflow: hidden;
+  box-shadow: 0 1px 2px rgb(0 0 0 / .08), 0 2px 10px rgb(0 0 0 / .06);
+  /* PDF.js metin katmanı değişkenleri */
+  --user-unit: 1; --total-scale-factor: calc(var(--scale-factor) * var(--user-unit)); --scale-round-x: 1px; --scale-round-y: 1px;
+}
+.pdv-page:not(.is-drawn)::before { content: ''; position: absolute; inset: 0; background: linear-gradient(100deg, transparent 30%, rgb(0 0 0 / .035) 50%, transparent 70%) 0 0 / 200% 100%; animation: pdv-shim 1.2s linear infinite; }
+@keyframes pdv-shim { to { background-position: -200% 0; } }
+@media (prefers-reduced-motion: reduce) { .pdv-page:not(.is-drawn)::before { animation: none; } }
+.pdv-canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+.pdv-page.is-src { box-shadow: 0 0 0 3px var(--color-warn), 0 4px 18px rgb(0 0 0 / .12); }
+.pdv-src-tag { position: absolute; z-index: 3; top: 8px; left: 8px; padding: 3px 9px; border-radius: 99px; background: var(--color-warn); color: #fff; font-size: 11.5px; font-weight: 700; pointer-events: none; box-shadow: 0 1px 4px rgb(0 0 0 / .2); }
+.pdv-no { position: absolute; z-index: 3; right: 8px; bottom: 6px; padding: 1px 7px; border-radius: 6px; background: rgb(0 0 0 / .45); color: #fff; font-size: 11px; font-variant-numeric: tabular-nums; pointer-events: none; opacity: 0; transition: opacity .2s; }
+.pdv-page:hover .pdv-no { opacity: 1; }
+
+.pdv-loading { position: sticky; top: 40%; z-index: 4; margin: 0 auto; width: max-content; display: flex; align-items: center; gap: 10px; padding: 10px 16px; border-radius: 12px; background: var(--color-white); color: var(--color-ink-2); font-size: 13px; box-shadow: var(--shadow-sm, 0 2px 10px rgb(0 0 0 / .1)); }
+.pdv-spin { width: 16px; height: 16px; border-radius: 50%; border: 2px solid var(--color-line); border-top-color: var(--color-accent); animation: pdv-rot .8s linear infinite; }
+@keyframes pdv-rot { to { transform: rotate(360deg); } }
+
+/* PDF.js metin katmanı (pdf_viewer.css'ten yalnız gereken kısım) */
+.pdv .textLayer { position: absolute; text-align: initial; inset: 0; overflow: clip; opacity: 1; line-height: 1; text-size-adjust: none; -webkit-text-size-adjust: none; forced-color-adjust: none; transform-origin: 0 0; caret-color: CanvasText; z-index: 2; }
+.pdv .textLayer :is(span, br) { color: transparent; position: absolute; white-space: pre; cursor: text; transform-origin: 0% 0%; }
+.pdv .textLayer > :not(.markedContent), .pdv .textLayer .markedContent span:not(.markedContent) { z-index: 1; }
+.pdv .textLayer span.markedContent { top: 0; height: 0; }
+.pdv .textLayer ::selection { background: color-mix(in srgb, var(--color-accent) 30%, transparent); }
+.pdv .textLayer br::selection { background: transparent; }
+.pdv .textLayer .endOfContent { display: block; position: absolute; inset: 100% 0 0; z-index: 0; cursor: default; user-select: none; }
+.pdv .textLayer.selecting .endOfContent { top: 0; }

@@ -1,25 +1,16 @@
-import React, { useState, useEffect, useMemo, useRef } from 'react';
-import { getCustomApiUrl } from '../../services/api';
-import {
-  FileText,
-  ExternalLink,
-  Upload,
-  RefreshCw,
-  ZoomIn,
-  ZoomOut,
-  RotateCcw,
-  Columns,
-  X,
-  AlertCircle,
-  HardDrive,
-  Cloud,
-  ChevronLeft,
-  ChevronRight,
-  Compass,
-} from 'lucide-react';
+/**
+ * Öğren · dersin özgün slayt PDF'i. Sunucudaki dosya PDF.js ile uygulama içinde çizilir (PdfDocView, tembel);
+ * sunucu yoksa Drive önizlemesi, o da yoksa kullanıcının kendi seçtiği dosya. Adımın kaynak sayfaları vurgulanır
+ * ve adım değişince oraya kaydırılır. Deste → PDF eşlemesi: services/deckPdfService.ts.
+ */
+import React, { Suspense, lazy, useEffect, useMemo, useRef, useState } from 'react';
+import { ChevronLeft, ChevronRight, Columns2, ExternalLink, FileText, FileX, MapPin, Maximize2, Upload, ZoomIn, ZoomOut, X } from 'lucide-react';
 import type { InteractiveDeck, SlideItem } from './InteractiveDeckView';
-import { getDeckOriginalPdf, DeckPdfMeta } from '../../data/deckPdfCatalog';
-import { getSlidePdfLocation, SlidePdfLocation } from '../../services/slidePdfMappingService';
+import { getSlidePdfLocation } from '../../services/slidePdfMappingService';
+import { drivePreviewUrl, driveViewUrl, useDeckPdf, type DeckPdfFile } from '../../services/deckPdfService';
+import './pdf/pdfDoc.css';
+
+const PdfDocView = lazy(() => import('./pdf/PdfDocView'));
 
 export interface DeckPdfViewerProps {
   deck: InteractiveDeck;
@@ -34,491 +25,260 @@ export interface DeckPdfViewerProps {
   onPageChange?: (page: number) => void;
 }
 
-type PdfSourceType = 'drive' | 'local' | 'custom';
+const fmtMb = (b?: number) => (b ? `${(b / 1048576).toFixed(b < 10485760 ? 1 : 0)} MB` : '');
 
 export const DeckPdfViewer: React.FC<DeckPdfViewerProps> = ({
   deck,
   currentSlideNumber = 1,
   currentSlide,
-  targetPage: propTargetPage,
-  targetPageRange: propTargetPageRange,
+  targetPage,
+  targetPageRange,
   onClose,
   isSplitView = false,
   onToggleSplitView,
   compact = false,
   onPageChange,
 }) => {
-  const pdfMeta: DeckPdfMeta | undefined = useMemo(() => {
-    return getDeckOriginalPdf(deck.id);
-  }, [deck.id]);
+  const info = useDeckPdf(deck.id);
+  // Kullanıcının sekmeyle seçtiği dosya yalnız o adım için geçerli
+  const [picked, setPicked] = useState<{ deck: string; slide: number; idx: number } | null>(null);
+  const [custom, setCustom] = useState<{ url: string; name: string } | null>(null);
+  const [numPages, setNumPages] = useState<number | null>(null);
+  const [failed, setFailed] = useState<string | null>(null);
+  const [zoom, setZoom] = useState(1);
+  const [frameReady, setFrameReady] = useState(false);
+  const fileInput = useRef<HTMLInputElement>(null);
 
-  // Compute slide-to-PDF location mapping
-  const slideLoc: SlidePdfLocation = useMemo(() => {
-    return getSlidePdfLocation(deck.id, currentSlideNumber, currentSlide, deck.slides?.length);
-  }, [deck.id, currentSlideNumber, currentSlide, deck.slides?.length]);
+  useEffect(() => () => { if (custom) URL.revokeObjectURL(custom.url); }, [custom]);
 
-  const activeTargetPage = propTargetPage ?? slideLoc.primaryPage;
-  const activePageRange = propTargetPageRange ?? slideLoc.pageRange;
+  const loc = useMemo(
+    () => getSlidePdfLocation(deck.id, currentSlideNumber, currentSlide, deck.slides?.length, custom ? undefined : info?.slides),
+    [deck.id, currentSlideNumber, currentSlide, deck.slides?.length, info?.slides, custom],
+  );
+  // Ders birden çok PDF'e yayılıyorsa her adım kendi dosyasını açar; kullanıcı sekmeyle başka dosyaya geçebilir
+  // (bir sonraki adımda yeniden adımın dosyasına dönülür).
+  const slideFile = info?.slides ? (loc.fileIndex ?? 0) : 0;
+  const fileIdx = picked && picked.deck === deck.id && picked.slide === currentSlideNumber ? picked.idx : slideFile;
+  const setFileIdx = (idx: number) => setPicked({ deck: deck.id, slide: currentSlideNumber, idx });
+  const mapped = fileIdx === slideFile;
+  const range: [number, number] = targetPageRange && !info?.slides ? targetPageRange : loc.pageRange;
+  const wanted = mapped ? (targetPage ?? loc.primaryPage) : 1;
+  const clamp = (p: number) => Math.max(1, Math.min(numPages || 9999, p));
 
-  const [activePage, setActivePage] = useState<number>(activeTargetPage);
-  const [sourceType, setSourceType] = useState<PdfSourceType>('local');
-  const [customFileUrl, setCustomFileUrl] = useState<string | null>(null);
-  const [customFileName, setCustomFileName] = useState<string | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
-  const [zoom, setZoom] = useState<number>(100);
-  const [hasError, setHasError] = useState(false);
-  const [isLocalServerAvailable, setIsLocalServerAvailable] = useState<boolean | null>(null);
-  const [pageInputVal, setPageInputVal] = useState<string>(String(activeTargetPage));
-  const fileInputRef = useRef<HTMLInputElement>(null);
-
-  // Sync internal active page when currentSlideNumber or propTargetPage changes
+  // Görünen sayfa (kaydırınca güncellenir) ve hedef (adım değişince/düğmeyle)
+  const [page, setPage] = useState(wanted);
+  const [target, setTarget] = useState(wanted);
+  const [pageInput, setPageInput] = useState(String(wanted));
   useEffect(() => {
-    const newPage = propTargetPage ?? slideLoc.primaryPage;
-    setActivePage(newPage);
-    setPageInputVal(String(newPage));
-    onPageChange?.(newPage);
-  }, [propTargetPage, slideLoc.primaryPage, currentSlideNumber]);
+    setTarget(wanted);
+    setPage(wanted);
+    setPageInput(String(wanted));
+  }, [wanted, currentSlideNumber, fileIdx]);
 
-  // Check if local backend endpoint is reachable and has the PDF
+  const file: DeckPdfFile | undefined = info?.files[fileIdx];
+  const appSrc = custom?.url || file?.url;
+  const driveId = !custom && !file?.url ? file?.fileId : undefined;
+  const openHref = custom?.url || (file?.url ? `${file.url}#page=${page}` : file?.fileId ? driveViewUrl(file.fileId) : undefined);
+  const name = custom?.name || file?.name || `${deck.title}.pdf`;
+
   useEffect(() => {
-    let active = true;
-    const testLocalPdf = async () => {
-      if (!pdfMeta?.fileName && !pdfMeta?.localFileName) return;
-      const targetName = pdfMeta.localFileName || pdfMeta.fileName;
-      try {
-        const resp = await fetch(`${getCustomApiUrl() || ''}/api/lecture-pdf/${encodeURIComponent(targetName)}`, {
-          method: 'HEAD',
-        });
-        if (active) {
-          if (resp.ok) {
-            setIsLocalServerAvailable(true);
-            setSourceType('local'); // Default to local for fast direct #page navigation
-          } else {
-            setIsLocalServerAvailable(false);
-            setSourceType('drive');
-          }
-        }
-      } catch {
-        if (active) {
-          setIsLocalServerAvailable(false);
-          setSourceType('drive');
-        }
-      }
-    };
-    testLocalPdf();
-    return () => {
-      active = false;
-    };
-  }, [pdfMeta]);
+    setNumPages(null);
+    setFailed(null);
+    setFrameReady(false);
+  }, [appSrc, driveId]);
 
-  // Clean up object URL on unmount
-  useEffect(() => {
-    return () => {
-      if (customFileUrl) {
-        URL.revokeObjectURL(customFileUrl);
-      }
-    };
-  }, [customFileUrl]);
-
-  // Construct iframe URL based on selected source type & activePage
-  const pdfUrl = useMemo(() => {
-    if (sourceType === 'custom' && customFileUrl) {
-      return `${customFileUrl}#page=${activePage}&zoom=${zoom}`;
-    }
-    if (sourceType === 'local' && (pdfMeta?.localFileName || pdfMeta?.fileName)) {
-      const fn = pdfMeta.localFileName || pdfMeta.fileName;
-      return `${getCustomApiUrl() || ''}/api/lecture-pdf/${encodeURIComponent(fn)}#page=${activePage}&zoom=${zoom}`;
-    }
-    // Default: Google Drive Preview Embed
-    if (pdfMeta?.fileId) {
-      return `https://drive.google.com/file/d/${pdfMeta.fileId}/preview`;
-    }
-    return null;
-  }, [sourceType, customFileUrl, pdfMeta, activePage, zoom]);
-
-  // Direct download / open link
-  const directLink = useMemo(() => {
-    if (sourceType === 'custom' && customFileUrl) return customFileUrl;
-    if (sourceType === 'local' && (pdfMeta?.localFileName || pdfMeta?.fileName)) {
-      return `${getCustomApiUrl() || ''}/api/lecture-pdf/${encodeURIComponent(pdfMeta.localFileName || pdfMeta.fileName)}#page=${activePage}`;
-    }
-    if (pdfMeta?.driveUrl) return pdfMeta.driveUrl;
-    if (pdfMeta?.fileId) return `https://drive.google.com/file/d/${pdfMeta.fileId}/view`;
-    return null;
-  }, [sourceType, customFileUrl, pdfMeta, activePage]);
-
-  const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (!file) return;
-    if (customFileUrl) URL.revokeObjectURL(customFileUrl);
-    const objUrl = URL.createObjectURL(file);
-    setCustomFileUrl(objUrl);
-    setCustomFileName(file.name);
-    setSourceType('custom');
-    setIsLoading(true);
-    setHasError(false);
+  const jump = (p: number) => {
+    const c = clamp(p);
+    setTarget(c);
+    setPage(c);
+    setPageInput(String(c));
+    onPageChange?.(c);
+  };
+  const onVisible = (p: number) => {
+    setPage(p);
+    setPageInput(String(p));
+    onPageChange?.(p);
   };
 
-  const handleJumpToPage = (p: number) => {
-    const safePage = Math.max(1, Math.min(slideLoc.totalPages || 300, p));
-    setActivePage(safePage);
-    setPageInputVal(String(safePage));
-    onPageChange?.(safePage);
+  const pickFile = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const f = e.target.files?.[0];
+    e.target.value = '';
+    if (!f) return;
+    setCustom({ url: URL.createObjectURL(f), name: f.name });
   };
 
-  const handlePageInputSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    const val = parseInt(pageInputVal, 10);
-    if (!isNaN(val) && val > 0) {
-      handleJumpToPage(val);
-    }
-  };
+  const inRange = page >= range[0] && page <= range[1];
+  const subtitle = custom
+    ? 'Cihazınızdan seçilen dosya'
+    : file?.url
+      ? [file?.folder, numPages ? `${numPages} sayfa` : file?.pages ? `${file.pages} sayfa` : '', fmtMb(file?.size)].filter(Boolean).join(' · ')
+      : driveId
+        ? 'Google Drive önizlemesi'
+        : deck.discipline || '';
 
-  // Generate range of buttons for the current slide mapping
-  const rangePages = useMemo(() => {
-    const [start, end] = activePageRange;
-    const pages: number[] = [];
-    const count = Math.min(6, end - start + 1);
-    for (let p = start; p < start + count; p++) {
-      pages.push(p);
-    }
-    return pages;
-  }, [activePageRange]);
+  let body: React.ReactNode;
+  if (!info && !custom) {
+    body = (
+      <div className="pdv-loading" role="status" style={{ margin: 'auto', position: 'static' }}>
+        <span className="pdv-spin" aria-hidden />
+        <span>Ders PDF'i aranıyor…</span>
+      </div>
+    );
+  } else if (appSrc && !failed) {
+    body = (
+      <Suspense fallback={<div className="pdv-loading" role="status" style={{ margin: 'auto', position: 'static' }}><span className="pdv-spin" aria-hidden /><span>Görüntüleyici yükleniyor…</span></div>}>
+        <PdfDocView
+          src={appSrc}
+          page={target}
+          highlight={custom || !mapped ? undefined : range}
+          zoom={zoom}
+          onZoom={setZoom}
+          onVisiblePage={onVisible}
+          onLoaded={setNumPages}
+          onError={setFailed}
+        />
+      </Suspense>
+    );
+  } else if (appSrc && failed) {
+    // PDF.js açamadıysa (eski tarayıcı vb.) tarayıcının kendi görüntüleyicisi
+    body = <iframe key={`${appSrc}#${target}`} className="dpv-frame" src={`${appSrc}#page=${target}`} title={name} />;
+  } else if (driveId) {
+    body = (
+      <>
+        {!frameReady && (
+          <div className="pdv-loading" role="status" style={{ position: 'absolute', top: '40%', left: '50%', transform: 'translateX(-50%)' }}>
+            <span className="pdv-spin" aria-hidden />
+            <span>Drive önizlemesi açılıyor…</span>
+          </div>
+        )}
+        <iframe key={driveId} className="dpv-frame" src={drivePreviewUrl(driveId)} title={name} allow="autoplay; fullscreen" onLoad={() => setFrameReady(true)} style={frameReady ? undefined : { opacity: 0 }} />
+      </>
+    );
+  } else {
+    const when = info?.missingDate ? new Date(`${info.missingDate}T12:00:00`) : null;
+    const upcoming = when ? when.getTime() > Date.now() : false;
+    const dateTxt = when ? when.toLocaleDateString('tr-TR', { day: 'numeric', month: 'long' }) : '';
+    body = (
+      <div className="dpv-empty">
+        <FileX aria-hidden />
+        <h3>{file ? 'PDF dosyasına şu an ulaşılamıyor' : "Bu dersin slayt PDF'i Drive'da henüz yok"}</h3>
+        <p>
+          {file
+            ? `${file.name} sunucuda bulunamadı. Drive eşitlemesinden sonra yeniden açılır.`
+            : when
+              ? upcoming
+                ? `Ders ${dateTxt} tarihinde. Hocanın slaytı Drive'daki 2026-27 klasörüne yüklenince burada kendiliğinden açılır.`
+                : `Ders ${dateTxt} tarihinde işlendi ama slaytı Drive'daki 2026-27 klasöründe yok. Yüklendiğinde burada kendiliğinden açılır.`
+              : "Slayt Drive'daki 2026-27 klasörüne yüklendiğinde burada kendiliğinden açılır."}{' '}
+          Elinizde varsa kendi dosyanızı açabilirsiniz.
+        </p>
+        <div className="dpv-row">
+          <button type="button" className="dpv-btn is-primary" onClick={() => fileInput.current?.click()}>
+            <Upload aria-hidden /> PDF seç
+          </button>
+        </div>
+      </div>
+    );
+  }
 
-  const displayName = customFileName || pdfMeta?.fileName || `${deck.title}.pdf`;
+  const canNav = !!appSrc && !failed;
+  const byFolder = !!info && new Set(info.files.map((f) => f.folder)).size === info.files.length;
 
   return (
-    <div className={`flex flex-col h-full bg-canvas text-ink-3 select-none overflow-hidden ${compact ? 'rounded-xl border border-line' : ''}`}>
-      {/* Hidden file input */}
-      <input
-        ref={fileInputRef}
-        type="file"
-        accept="application/pdf"
-        onChange={handleFileUpload}
-        className="hidden"
-      />
+    <div className={`dpv${compact ? ' is-compact' : ''}`}>
+      <input ref={fileInput} type="file" accept="application/pdf,.pdf" onChange={pickFile} hidden />
 
-      {/* Top Controls Toolbar */}
-      <header className="shrink-0 bg-field border-b border-line px-3 py-2 flex items-center justify-between gap-2 flex-wrap text-xs">
-        {/* Title & Document Badge */}
-        <div className="flex items-center gap-2 min-w-0">
-          <div className="w-7 h-7 rounded-lg bg-bad/20 text-bad-text border border-bad/30 flex items-center justify-center shrink-0">
-            <FileText className="w-4 h-4" />
-          </div>
-          <div className="min-w-0">
-            <div className="flex items-center gap-1.5">
-              <span className="font-semibold text-ink truncate max-w-[200px] sm:max-w-xs md:max-w-md" title={displayName}>
-                {displayName}
-              </span>
-              <span className="text-2xs font-mono px-1.5 py-0.2 rounded bg-bad/10 text-bad-text border border-bad/20 shrink-0">
-                PDF
-              </span>
-            </div>
-            {!compact && (
-              <span className="text-2xs text-ink-3 block truncate">
-                {deck.discipline} · {deck.instructor || 'Karabük Tıp Fakültesi'}
-              </span>
-            )}
+      <header className="dpv-bar">
+        <div className="dpv-title">
+          <FileText aria-hidden />
+          <div style={{ minWidth: 0 }}>
+            <b title={name}>{name.replace(/\.pdf$/i, '')}</b>
+            {subtitle && <small>{subtitle}</small>}
           </div>
         </div>
-
-        {/* Action Controls */}
-        <div className="flex items-center gap-1.5 ml-auto">
-          {/* Source switch pills */}
-          <div className="hidden sm:inline-flex items-center bg-canvas border border-line rounded-lg p-0.5 text-2xs">
-            {isLocalServerAvailable && (
-              <button
-                type="button"
-                onClick={() => {
-                  setSourceType('local');
-                  setIsLoading(true);
-                }}
-                className={`px-2 py-1 rounded-md cursor-pointer transition-colors flex items-center gap-1 ${
-                  sourceType === 'local' ? 'bg-ok text-white font-medium shadow-xs' : 'text-ink-3 hover:text-ink'
-                }`}
-                title="Yerel Bilgisayar Veritabanından Doğrudan Sayfa Senkronizasyonu"
-              >
-                <HardDrive className="w-3 h-3" />
-                <span>Yerel</span>
-              </button>
-            )}
-            {pdfMeta?.fileId && (
-              <button
-                type="button"
-                onClick={() => {
-                  setSourceType('drive');
-                  setIsLoading(true);
-                }}
-                className={`px-2 py-1 rounded-md cursor-pointer transition-colors flex items-center gap-1 ${
-                  sourceType === 'drive' ? 'bg-accent text-white font-medium shadow-xs' : 'text-ink-3 hover:text-ink'
-                }`}
-                title="Google Drive Bulut Önizleyicisi"
-              >
-                <Cloud className="w-3 h-3" />
-                <span>Drive</span>
-              </button>
-            )}
-            {customFileUrl && (
-              <button
-                type="button"
-                onClick={() => {
-                  setSourceType('custom');
-                  setIsLoading(true);
-                }}
-                className={`px-2 py-1 rounded-md cursor-pointer transition-colors flex items-center gap-1 ${
-                  sourceType === 'custom' ? 'bg-ai text-white font-medium shadow-xs' : 'text-ink-3 hover:text-ink'
-                }`}
-                title="Yüklediğiniz Özel PDF"
-              >
-                <Upload className="w-3 h-3" />
-                <span>Özel</span>
-              </button>
-            )}
-          </div>
-
-          {/* Upload Custom PDF Button */}
-          <button
-            type="button"
-            onClick={() => fileInputRef.current?.click()}
-            title="Bilgisayarınızdan başka bir slayt PDF'i seçip yükleyin"
-            className="h-7 px-2 rounded-lg bg-white hover:bg-field text-ink-3 hover:text-ink border border-line inline-flex items-center gap-1 cursor-pointer transition-colors text-2xs"
-          >
-            <Upload className="w-3.5 h-3.5 text-accent" />
-            <span className="hidden md:inline">PDF Seç</span>
-          </button>
-
-          {/* Zoom controls for local/custom mode */}
-          {sourceType !== 'drive' && (
-            <div className="hidden lg:flex items-center gap-1 bg-canvas border border-line rounded-lg p-0.5 text-2xs">
-              <button
-                type="button"
-                onClick={() => setZoom((z) => Math.max(50, z - 15))}
-                title="Uzaklaştır"
-                className="w-6 h-6 flex items-center justify-center text-ink-3 hover:text-ink rounded cursor-pointer"
-              >
-                <ZoomOut className="w-3 h-3" />
-              </button>
-              <span className="px-1 text-2xs font-mono text-ink-3">{zoom}%</span>
-              <button
-                type="button"
-                onClick={() => setZoom((z) => Math.min(200, z + 15))}
-                title="Yakınlaştır"
-                className="w-6 h-6 flex items-center justify-center text-ink-3 hover:text-ink rounded cursor-pointer"
-              >
-                <ZoomIn className="w-3 h-3" />
-              </button>
-              <button
-                type="button"
-                onClick={() => setZoom(100)}
-                title="Sıfırla"
-                className="w-6 h-6 flex items-center justify-center text-ink-3 hover:text-ink rounded cursor-pointer"
-              >
-                <RotateCcw className="w-3 h-3" />
-              </button>
-            </div>
-          )}
-
-          {/* Split view toggle */}
-          {onToggleSplitView && (
-            <button
-              type="button"
-              onClick={onToggleSplitView}
-              title={isSplitView ? 'Sadece Slaytı Göster' : 'Yan Yana Bölünmüş Ekran'}
-              className={`h-7 px-2 rounded-lg border inline-flex items-center gap-1 cursor-pointer transition-colors text-2xs ${
-                isSplitView
-                  ? 'bg-accent/20 border-accent/40 text-accent font-semibold'
-                  : 'bg-white hover:bg-field text-ink-3 border-line'
-              }`}
-            >
-              <Columns className="w-3.5 h-3.5" />
-              <span className="hidden md:inline">{isSplitView ? 'Bölünmüş' : 'Yan Yana'}</span>
+        <div className="dpv-acts">
+          {custom && (
+            <button type="button" className="dpv-ib" onClick={() => setCustom(null)} title="Dersin kendi PDF'ine dön">
+              <X aria-hidden /><span className="dpv-lbl">Seçimi kapat</span>
             </button>
           )}
-
-          {/* Open in new window */}
-          {directLink && (
-            <a
-              href={directLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              title="Orijinal PDF'i Yeni Sekmede Aç"
-              className="h-7 px-2 rounded-lg bg-white hover:bg-field text-ink-3 hover:text-ink border border-line inline-flex items-center gap-1 cursor-pointer transition-colors text-2xs"
-            >
-              <ExternalLink className="w-3.5 h-3.5 text-ink-3" />
-              <span className="hidden sm:inline">Yeni Sekme</span>
+          <button type="button" className="dpv-ib" onClick={() => fileInput.current?.click()} title="Cihazınızdan başka bir PDF açın">
+            <Upload aria-hidden /><span className="dpv-lbl">PDF seç</span>
+          </button>
+          {onToggleSplitView && (
+            <button type="button" className={`dpv-ib${isSplitView ? ' is-on' : ''}`} onClick={onToggleSplitView} title={isSplitView ? 'Yalnız PDF' : 'Ders ile yan yana'} aria-pressed={isSplitView}>
+              {isSplitView ? <Maximize2 aria-hidden /> : <Columns2 aria-hidden />}
+              <span className="dpv-lbl">{isSplitView ? 'Tam PDF' : 'Yan yana'}</span>
+            </button>
+          )}
+          {openHref && (
+            <a className="dpv-ib" href={openHref} target="_blank" rel="noopener noreferrer" title="PDF'i yeni sekmede aç">
+              <ExternalLink aria-hidden /><span className="dpv-lbl">Yeni sekme</span>
             </a>
           )}
-
-          {/* Close button if provided */}
           {onClose && (
-            <button
-              type="button"
-              onClick={onClose}
-              title="PDF Görüntüleyiciyi Kapat"
-              className="w-7 h-7 rounded-lg bg-white hover:bg-field text-ink-3 hover:text-ink border border-line flex items-center justify-center cursor-pointer transition-colors"
-            >
-              <X className="w-4 h-4" />
+            <button type="button" className="dpv-ib" onClick={onClose} title="Kapat" aria-label="PDF görüntüleyiciyi kapat">
+              <X aria-hidden />
             </button>
           )}
         </div>
       </header>
 
-      {/* Synchronized Page Navigation Banner (İlişkilendirilmiş Sayfa Gezinme Çubuğu) */}
-      <div className="shrink-0 bg-field border-b border-line px-3 py-1.5 flex items-center justify-between gap-2 flex-wrap text-2xs">
-        {/* Mapping info badge */}
-        <div className="flex items-center gap-2">
-          <div className="flex items-center gap-1 text-accent font-medium">
-            <Compass className="w-3.5 h-3.5 animate-pulse" />
-            <span>Slayt #{currentSlideNumber} Kaynağı:</span>
-          </div>
-          <span className="font-semibold text-warn bg-warn/10 border border-warn/20 px-2 py-0.5 rounded-md">
-            {slideLoc.citation}
-          </span>
-          <span className="text-ink-3 hidden md:inline">
-            (Toplam {slideLoc.totalPages} sayfa)
-          </span>
-        </div>
-
-        {/* Quick Jump Page Pills */}
-        <div className="flex items-center gap-1.5 ml-auto">
-          <div className="flex items-center gap-1">
-            <button
-              type="button"
-              onClick={() => handleJumpToPage(activePage - 1)}
-              disabled={activePage <= 1}
-              title="Önceki Sayfa"
-              className="w-6 h-6 rounded flex items-center justify-center bg-canvas border border-line text-ink-3 hover:text-ink disabled:opacity-30 disabled:cursor-not-allowed cursor-pointer"
-            >
-              <ChevronLeft className="w-3.5 h-3.5" />
-            </button>
-
-            {/* Quick Range Buttons */}
-            {rangePages.map((p) => (
-              <button
-                key={p}
-                type="button"
-                onClick={() => handleJumpToPage(p)}
-                className={`px-2 py-0.5 rounded text-2xs font-mono cursor-pointer transition-colors ${
-                  activePage === p
-                    ? 'bg-accent text-white font-bold shadow-xs'
-                    : 'bg-white hover:bg-field text-ink-3 border border-line'
-                }`}
-                title={`Sayfa ${p}'e git`}
+      {(canNav || (info && info.files.length > 1)) && (
+        <div className="dpv-nav">
+          {canNav && (
+            <>
+              <button type="button" className="dpv-ib" onClick={() => jump(page - 1)} disabled={page <= 1} aria-label="Önceki sayfa"><ChevronLeft aria-hidden /></button>
+              <form
+                className="dpv-pg"
+                onSubmit={(e) => {
+                  e.preventDefault();
+                  const v = parseInt(pageInput, 10);
+                  if (v > 0) jump(v);
+                }}
               >
-                S.{p}
-              </button>
-            ))}
-
-            <button
-              type="button"
-              onClick={() => handleJumpToPage(activePage + 1)}
-              disabled={activePage >= (slideLoc.totalPages || 300)}
-              title="Sonraki Sayfa"
-              className="w-6 h-6 rounded flex items-center justify-center bg-canvas border border-line text-ink-3 hover:text-ink disabled:opacity-30 disabled:cursor-not-allowed cursor-pointer"
-            >
-              <ChevronRight className="w-3.5 h-3.5" />
-            </button>
-          </div>
-
-          {/* Direct Page Input */}
-          <form onSubmit={handlePageInputSubmit} className="flex items-center gap-1 ml-1">
-            <span className="text-ink-3 font-mono text-2xs">S:</span>
-            <input
-              type="number"
-              min="1"
-              max={slideLoc.totalPages || 300}
-              value={pageInputVal}
-              onChange={(e) => setPageInputVal(e.target.value)}
-              onBlur={() => {
-                const val = parseInt(pageInputVal, 10);
-                if (!isNaN(val) && val > 0) handleJumpToPage(val);
-              }}
-              className="w-11 h-6 bg-canvas border border-line rounded px-1 text-center font-mono text-2xs text-ink focus:outline-hidden focus:border-accent"
-              title="Doğrudan sayfa numarası girip Enter'a basın"
-            />
-          </form>
-        </div>
-      </div>
-
-      {/* Main Viewer Area */}
-      <div className="relative flex-1 min-h-0 w-full bg-canvas flex items-center justify-center overflow-hidden">
-        {/* Loading Spinner */}
-        {isLoading && (
-          <div className="absolute inset-0 z-10 flex flex-col items-center justify-center gap-3 bg-field text-ink-3">
-            <RefreshCw className="w-8 h-8 text-accent animate-spin" />
-            <p className="m-0 text-sm font-medium text-ink-3">
-              Orijinal PDF hazırlanıyor (Sayfa {activePage})…
-            </p>
-            <span className="text-2xs text-ink-3 font-mono">{displayName}</span>
-          </div>
-        )}
-
-        {/* Main PDF iframe */}
-        {pdfUrl && !hasError ? (
-          <iframe
-            key={`${pdfUrl}-${sourceType}-${activePage}`}
-            src={pdfUrl}
-            title={displayName}
-            onLoad={() => setIsLoading(false)}
-            onError={() => {
-              setIsLoading(false);
-              setHasError(true);
-            }}
-            className="w-full h-full border-0 bg-white"
-            allow="autoplay; fullscreen"
-          />
-        ) : (
-          <div className="flex flex-col items-center justify-center gap-3 p-6 text-center max-w-md text-ink-3">
-            <div className="w-12 h-12 rounded-2xl bg-warn/20 text-warn border border-warn/30 flex items-center justify-center">
-              <AlertCircle className="w-6 h-6" />
-            </div>
-            <h3 className="m-0 text-md font-bold text-ink">PDF Sayfa İçinde Yüklenemedi</h3>
-            <p className="m-0 text-xs text-ink-3 leading-relaxed">
-              Tarayıcınızın üçüncü taraf çerez ayarları Google Drive önizleyicisini engellemiş olabilir veya yerel sunucu bağlantısı kapalıdır.
-            </p>
-            <div className="flex items-center gap-2 pt-2 flex-wrap justify-center">
-              {directLink && (
-                <a
-                  href={directLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="h-9 px-4 rounded-xl bg-accent hover:bg-accent-hover text-white text-sm font-semibold inline-flex items-center gap-2 transition-colors shadow-xs"
-                >
-                  <ExternalLink className="w-4 h-4" />
-                  <span>Google Drive'da Aç (Sayfa {activePage})</span>
-                </a>
+                <input
+                  inputMode="numeric"
+                  value={pageInput}
+                  onChange={(e) => setPageInput(e.target.value.replace(/\D/g, ''))}
+                  onBlur={() => setPageInput(String(page))}
+                  aria-label="Sayfa numarası"
+                />
+                <span>/ {numPages ?? '…'}</span>
+              </form>
+              <button type="button" className="dpv-ib" onClick={() => jump(page + 1)} disabled={!!numPages && page >= numPages} aria-label="Sonraki sayfa"><ChevronRight aria-hidden /></button>
+              {!custom && mapped && (
+                <button type="button" className={`dpv-src${inRange ? ' is-here' : ''}`} onClick={() => jump(range[0])} title={`Adım ${currentSlideNumber} bu sayfalardan anlatılıyor`}>
+                  <MapPin aria-hidden />
+                  Adım {currentSlideNumber}: {range[0] === range[1] ? `s. ${range[0]}` : `s. ${range[0]}–${range[1]}`}
+                </button>
               )}
-              <button
-                type="button"
-                onClick={() => fileInputRef.current?.click()}
-                className="h-9 px-3.5 rounded-xl bg-canvas hover:bg-line-soft text-ink-3 text-sm font-medium inline-flex items-center gap-2 transition-colors border border-line"
-              >
-                <Upload className="w-4 h-4 text-accent" />
-                <span>Yerel Dosyadan Seç</span>
-              </button>
+            </>
+          )}
+          {!custom && info && info.files.length > 1 && (
+            <div className="dpv-files" role="tablist" aria-label="Ders PDF'leri">
+              {info.files.map((f, i) => {
+                // Dosyalar farklı ders dallarındaysa (ör. Üroloji / Enfeksiyon Hastalıkları) sekmede dal adı gösterilir
+                const label = byFolder && f.folder ? f.folder : f.name.replace(/\.pdf$/i, '').replace(/^\s*\d+\s*\)\s*/, '');
+                return (
+                  <button key={`${f.folder}/${f.name}`} type="button" role="tab" aria-selected={i === fileIdx} className={`dpv-file${i === fileIdx ? ' is-on' : ''}`} onClick={() => setFileIdx(i)} title={f.folder ? `${f.folder} · ${f.name}` : f.name}>
+                    {label}
+                  </button>
+                );
+              })}
             </div>
-          </div>
-        )}
-      </div>
+          )}
+          {canNav && (
+            <div className="dpv-zoom">
+              <button type="button" className="dpv-ib" onClick={() => setZoom((z) => Math.max(0.5, Math.round((z - 0.15) * 100) / 100))} aria-label="Uzaklaştır"><ZoomOut aria-hidden /></button>
+              <button type="button" className="dpv-ib" onClick={() => setZoom(1)} title="Genişliğe sığdır"><span>%{Math.round(zoom * 100)}</span></button>
+              <button type="button" className="dpv-ib" onClick={() => setZoom((z) => Math.min(3, Math.round((z + 0.15) * 100) / 100))} aria-label="Yakınlaştır"><ZoomIn aria-hidden /></button>
+            </div>
+          )}
+        </div>
+      )}
 
-      {/* Footer Info Strip */}
-      <footer className="shrink-0 bg-canvas border-t border-line px-3 py-1.5 flex items-center justify-between text-2xs text-ink-3">
-        <div className="flex items-center gap-2 truncate">
-          <span className={`w-2 h-2 rounded-full shrink-0 ${sourceType === 'local' ? 'bg-ok' : 'bg-accent'}`} />
-          <span className="truncate">
-            {sourceType === 'local'
-              ? 'Yerel Amfi PDF Motoru (Sayfa Senkronizasyonu Aktif)'
-              : sourceType === 'drive'
-              ? 'Google Drive Bulut Önizleyicisi'
-              : 'Özel Kullanıcı PDF Dokümanı'}
-          </span>
-        </div>
-        <div className="flex items-center gap-3 shrink-0">
-          <span className="font-mono text-ink-3">
-            Aktif PDF Sayfası: <strong className="text-warn font-bold">#{activePage}</strong> / {slideLoc.totalPages}
-          </span>
-        </div>
-      </footer>
+      <div className="dpv-body">{body}</div>
     </div>
   );
 };

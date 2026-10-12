@@ -14,6 +14,8 @@ export interface SlidePdfLocation {
   pageRange: [number, number];
   citation: string;
   totalPages: number;
+  /** Destenin birden çok PDF'i varsa bu slaytın dosyası (deckPdfService dosya sırası) */
+  fileIndex?: number;
 }
 
 const slidePdfMappings = slidePdfMappingsRaw as unknown as Record<
@@ -49,8 +51,33 @@ export function getSlidePdfLocation(
   deckId: string,
   slideNumber: number,
   slide?: SlideItem,
-  totalSlides?: number
+  totalSlides?: number,
+  /** PDF metniyle hizalanmış sayfalar (deckPdfSources.json → useDeckPdf().slides) */
+  aligned?: Record<string, number[]>,
+  /** Gerçek sayfa sayısı (biliniyorsa) */
+  numPages?: number
 ): SlidePdfLocation {
+  // 0. Ders PDF'inin metniyle hizalanmış sayfa (en güvenilir; eski verideki tahmini sayfaların yerine geçer)
+  const al = aligned?.[String(slideNumber)];
+  if (al) {
+    const meta = getDeckOriginalPdf(deckId);
+    const [startP, endP, fileIndex = 0] = al;
+    return {
+      deckId,
+      slideNumber,
+      fileName: meta?.fileName || '',
+      fileId: meta?.fileId,
+      driveUrl: meta?.driveUrl,
+      startPage: startP,
+      endPage: endP,
+      primaryPage: startP,
+      pageRange: [startP, endP],
+      citation: startP === endP ? `Sayfa ${startP}` : `Sayfa ${startP}-${endP}`,
+      totalPages: numPages || slidePdfMappings[deckId]?.totalPdfPages || Math.max(endP, 1),
+      fileIndex,
+    };
+  }
+
   // 1. Check if slide itself contains sourcePdf
   if (slide?.sourcePdf?.startPage) {
     const sp = slide.sourcePdf;
@@ -69,7 +96,7 @@ export function getSlidePdfLocation(
       primaryPage: primP,
       pageRange: [startP, endP],
       citation: sp.citation || (startP === endP ? `Sayfa ${startP}` : `Sayfa ${startP}-${endP}`),
-      totalPages: meta ? 60 : 50,
+      totalPages: numPages || (meta ? 60 : 50),
     };
   }
 
@@ -97,7 +124,7 @@ export function getSlidePdfLocation(
   // 3. Fallback: Proportional mapping using catalog
   const meta: DeckPdfMeta | undefined = getDeckOriginalPdf(deckId);
   const nSlides = totalSlides || 30;
-  const totalPages = deckMap?.totalPdfPages || 60;
+  const totalPages = numPages || deckMap?.totalPdfPages || 60;
   const estimatedPage = Math.max(1, Math.min(totalPages, Math.round((slideNumber / nSlides) * totalPages)));
   const startPage = Math.max(1, estimatedPage - 1);
   const endPage = Math.min(totalPages, estimatedPage + 1);

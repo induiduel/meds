@@ -25,7 +25,7 @@ import time
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from ayarlar import (APP, ARALIK_SN, DOWNLOADS, GUNLUK_SINIR, IZLENEN_KOK, KAYIT, KUYRUK, oku, log,  # noqa: E402
+from ayarlar import (APP, ARALIK_SN, DOWNLOADS, GUNLUK_SINIR, IZLENEN_KOK, KAYIT, KUYRUK, STATE, oku, log,  # noqa: E402
                      saat_uygun, yaz, yil_sinifi)
 
 
@@ -224,11 +224,39 @@ def durum():
         print(f"  {j['is_id']} {j['durum']:<9} {j['yol']}  {j.get('son_mesaj', '')[:80]}")
 
 
+def pdf_eslesme_guncelle():
+    """Öğren deste → ders PDF eşlemesini Drive'daki güncel PDF'lere göre İÇERİKLE yeniden doğrular (girdi değiştiyse).
+
+    Çıktı DOWNLOADS/_deck_pdf_sources.json (meds-app aynı yolu salt-okunur görür, yeni olanı kullanır); rapor
+    STATE/pdf_eslesme_raporu.md. Yapay zekâsız, yalnız PyMuPDF.
+    """
+    cikti = DOWNLOADS / "_deck_pdf_sources.json"
+    girdiler = [APP / "src" / "data" / "interactive_learning_decks.json", DOWNLOADS / "_downloads.json", STATE / "checklist.json"]
+    imza = "|".join(f"{p.name}:{p.stat().st_mtime_ns}" for p in girdiler if p.exists())
+    imza_dosyasi = STATE / "pdf_eslesme_imza.txt"
+    if cikti.exists() and imza_dosyasi.exists() and imza_dosyasi.read_text() == imza:
+        return
+    try:
+        r = subprocess.run([sys.executable, str(APP / "scripts" / "build_deck_pdf_sources.py"), "--cikti", str(cikti),
+                            "--rapor", str(STATE / "pdf_eslesme_raporu.md"), "--sessiz"],
+                           cwd=APP, capture_output=True, text=True, timeout=900)
+    except Exception as e:  # zaman aşımı vb.: bir sonraki turda yeniden
+        log(f"PDF eşleşmesi çalışmadı: {e}")
+        return
+    if r.returncode not in (0, 3):
+        log(f"PDF eşleşmesi hatası: {(r.stderr or r.stdout)[-400:]}")
+        return
+    imza_dosyasi.write_text(imza)
+    if r.returncode == 3:
+        log("PDF eşleşmesinde ÇELİŞKİ var (içerik kazandı) → pdf_eslesme_raporu.md")
+
+
 def tur(tara: bool = True):
     ilk = not KAYIT.exists()
     if tara and not drive_tara():
         return
     kapsam_guncelle()
+    pdf_eslesme_guncelle()
     n = kuyruga_al(ilk)
     if n:
         log(f"{n} PDF kuyrukta (2026-27 checklist'inde eksik konuları var)")

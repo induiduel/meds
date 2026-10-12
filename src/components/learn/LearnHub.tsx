@@ -6,7 +6,7 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { ArrowRight, Check, FileText, Lock, Play, Search, X } from 'lucide-react';
 import { deckName, type DeckCatalogEntry } from '../../data/deckStore';
-import { getDeckOriginalPdf } from '../../data/deckPdfCatalog';
+import { useDeckPdfIds } from '../../services/deckPdfService';
 import { disciplineClass } from '../../utils/discipline';
 import { Segmented } from '../ui/kit';
 
@@ -57,6 +57,19 @@ const stateOf = (d: DeckCatalogEntry, p: Progress) => {
   return { seen, pct, status, last: (p[d.id]?.last ?? 0) + 1 };
 };
 
+/** İki (ya da daha çok) sürümü olan dersin satırda görünen işareti: üst üste binmiş sürüm kartları, en yenisi önde. */
+const VersionStack: React.FC<{ labels: string[] }> = ({ labels }) => {
+  const shown = labels.slice(-3);
+  return (
+    <span className="lcx-ver" title={`Bu dersin ${labels.length} sürümü var (${labels.join(', ')}) — açınca seçersin`}>
+      <span className="lcx-ver-stack" aria-hidden>
+        {shown.map((l, i) => <i key={l} className={i === shown.length - 1 ? 'is-new' : ''}>{l}</i>)}
+      </span>
+      <small><span className="sr-only">Bu dersin </span>{labels.length} sürüm</small>
+    </span>
+  );
+};
+
 const Ring: React.FC<{ pct: number; done?: boolean }> = ({ pct, done }) => (
   <span className={`lh-ring ${done ? 'is-done' : ''}`} style={{ ['--p' as string]: pct }} aria-hidden>
     {done ? <Check /> : <b>{pct}</b>}
@@ -70,12 +83,15 @@ export const LearnHub: React.FC<{
   archive: ArchiveFilter;
   onArchive: (f: ArchiveFilter) => void;
   onOpen: (id: string, pdf?: boolean) => void;
-}> = ({ decks: all, progress, isAdmin, archive, onArchive, onOpen }) => {
+  /** Sürümlü dersler: grup (V1) kimliği → sürüm etiketleri (["V1", "V2"]) */
+  versions?: Record<string, string[]>;
+}> = ({ decks: all, progress, isAdmin, archive, onArchive, onOpen, versions }) => {
   const [query, setQuery] = useState('');
   const [group, setGroup] = useState('all');
   const [status, setStatus] = useState<Status>('all');
   const [recent] = useState(readRecent);
   const searchRef = useRef<HTMLInputElement>(null);
+  const pdfIds = useDeckPdfIds(); // sunucuda dosyası ya da Drive kimliği olan desteler
 
   // "/" arama kutusuna odaklanır
   useEffect(() => {
@@ -89,17 +105,19 @@ export const LearnHub: React.FC<{
     return () => window.removeEventListener('keydown', onKey);
   }, []);
 
+  // Revize sürümü (V2…) olan ders, V1'i kısa/eski olsa da yayındadır
+  const published = (d: DeckCatalogEntry) => isPublished(d) || !!versions?.[d.id];
   const counts = useMemo(() => ({
-    published: all.filter(isPublished).length,
-    legacy: all.filter((d) => !isPublished(d)).length,
-  }), [all]);
+    published: all.filter(published).length,
+    legacy: all.filter((d) => !published(d)).length,
+  }), [all, versions]); // eslint-disable-line react-hooks/exhaustive-deps
 
   // Öğrenci yalnız yayındaki dersleri görür (hiç yoksa hepsini); yönetici arşivi de seçebilir
   const scoped = useMemo(() => {
     const f = isAdmin ? archive : 'new_only';
-    const list = f === 'all' ? all : f === 'legacy_only' ? all.filter((d) => !isPublished(d)) : all.filter(isPublished);
+    const list = f === 'all' ? all : f === 'legacy_only' ? all.filter((d) => !published(d)) : all.filter(published);
     return (list.length || isAdmin ? list : all).slice().sort((a, b) => orderOf(a) - orderOf(b) || deckName(a).localeCompare(deckName(b), 'tr'));
-  }, [all, isAdmin, archive]);
+  }, [all, isAdmin, archive, versions]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const groups = useMemo(() => {
     const m = new Map<string, number>();
@@ -253,14 +271,18 @@ export const LearnHub: React.FC<{
                 <ul>
                   {decks.map((d) => {
                     const s = stateOf(d, progress);
-                    const pdf = !!getDeckOriginalPdf(d.id);
+                    const pdf = !!pdfIds?.has(d.id);
                     const no = orderOf(d);
+                    const ver = versions?.[d.id];
                     return (
-                      <li key={d.id} className="lcx-row">
+                      <li key={d.id} className={`lcx-row${ver ? ' has-ver' : ''}`}>
                         <button type="button" className="lcx-main" onClick={() => onOpen(d.id)} aria-label={`${deckName(d, false)} — ${s.status === 'done' ? 'tamamlandı' : s.status === 'active' ? `%${s.pct}, devam et` : 'başla'}`}>
                           {no < 999 && <span className="lcx-no">{String(no).padStart(2, '0')}</span>}
                           <span className="lcx-t">
-                            <b title={deckName(d, false)}>{deckName(d, false)}</b>
+                            <span className="lcx-tl">
+                              <b title={deckName(d, false)}>{deckName(d, false)}</b>
+                              {ver && <VersionStack labels={ver} />}
+                            </span>
                             <span>{d.slideCount} adım{d.cardCount > 0 ? ` · ${d.cardCount} kart` : ''}{s.status === 'active' ? ` · %${s.pct}` : ''}</span>
                           </span>
                           {s.status === 'done' ? (

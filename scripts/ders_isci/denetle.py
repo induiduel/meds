@@ -53,6 +53,9 @@ class Denetim:
         self.sayilar: dict[str, int] = {}
         self.referanslar: list[str] = []
         self.sp = sayfalar((d / "kaynak.md").read_text(encoding="utf-8")) if (d / "kaynak.md").exists() else {}
+        # hafif revize (yalnız "ikisini tut" V2 destesi): ders notu, örnek soru, hastalık, bilgi havuzu üretilmez
+        self.hafif = bool(json.loads((d / "baglam.json").read_text(encoding="utf-8")).get("hafif")) \
+            if (d / "baglam.json").exists() else False
 
     def hata(self, m):
         self.hatalar.append(m)
@@ -116,7 +119,8 @@ class Denetim:
 
         nt = self.d / "ders_notu.md"
         if not nt.exists():
-            self.hata("ders_notu.md yok")
+            if not self.hafif:
+                self.hata("ders_notu.md yok")
         else:
             t = nt.read_text(encoding="utf-8")
             if t.count("\n## ") < 3:
@@ -137,7 +141,7 @@ class Denetim:
         else:
             self.hata("deck.json yok")
 
-        os_ = self.json_oku("ornek_sorular.json")
+        os_ = self.json_oku("ornek_sorular.json", not self.hafif)
         if os_:
             sorular = os_.get("sorular") or []
             per = {}
@@ -181,7 +185,7 @@ class Denetim:
                 self.kanit(t.get("kanit"), f"sözlük zenginleştir '{t.get('key')}'")
             self.sayilar["terim"] = len(sz.get("yeni") or []) + len(sz.get("zenginlestir") or [])
 
-        hs = self.json_oku("hastaliklar.json")
+        hs = self.json_oku("hastaliklar.json", not self.hafif)
         if isinstance(hs, list):
             for h in hs:
                 kan = {(k.get("alan"), k.get("madde")): k for k in h.get("kanitlar") or []}
@@ -195,7 +199,7 @@ class Denetim:
                                 self.kanit(k, f"hastalık '{h.get('name')}' {alan}[{i}]")
             self.sayilar["hastalik"] = len(hs)
 
-        bh = self.json_oku("bilgi_havuzu.jsonl")
+        bh = self.json_oku("bilgi_havuzu.jsonl", not self.hafif)
         if isinstance(bh, list):
             for i, b in enumerate(bh):
                 if not b.get("varlik") or not b.get("bilgi"):

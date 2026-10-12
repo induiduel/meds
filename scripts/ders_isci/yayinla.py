@@ -186,6 +186,11 @@ class Yayin:
         tmp.unlink()
         if r.returncode != 0:
             self.hata.append("deste doğrulayıcı: " + r.stdout.strip().splitlines()[-1])
+        if b.get("hafif"):  # hafif revize: yalnız V2 destesi + sözlük + bağlar; notu/soruları V1'inkiler kalır
+            if self.kip != "ikisini_tut":
+                self.hata.append("hafif revize yalnız 'Her ikisini tut' ile yayınlanır")
+            self.sadakat = None
+            return not self.hata
         # ders notu sadakati (işçinin PDF metnine karşı)
         md = (self.d / "ders_notu.md").read_text(encoding="utf-8")
         self.sadakat = s14.fidelity(md, _BosDerlem(), [], (self.d / "kaynak.md").read_text(encoding="utf-8"))
@@ -237,7 +242,7 @@ class Yayin:
     # ------------------------------------------------------------------ 2. yazım
     def yaz(self):
         p, n, did = self.paket, self.n, self.ders_id
-        md = (self.d / "ders_notu.md").read_text(encoding="utf-8")
+        md = (self.d / "ders_notu.md").read_text(encoding="utf-8") if (self.d / "ders_notu.md").exists() else ""
         deste = self._deste()
         self.son_deste = deste["id"]
         # deste
@@ -432,6 +437,28 @@ def kaynak_kimligi(pdf_yolu: str, manifest: dict | None) -> str | None:
     return None
 
 
+def kaynak_kimligi_esnek(pdf_yolu: str, manifest: dict | None, ders_id: str = "") -> str | None:
+    """Revize taslakları için: tam yol → Drive ad temizliği (':'→'_', boşluk) → aynı klasörde numara öneki
+    olmadan başlık (tekilse) → aynı dersin önceki yayın kaydındaki kimlik. (Drive dosya adlarında ':' '_' olur
+    ve numara önekleri yıllar arasında kayar: 26)Mesane ↔ 27)Mesane.)"""
+    import unicodedata
+    nfc = lambda x: unicodedata.normalize("NFC", x or "")  # noqa: E731
+    yol = nfc(re.sub(r"^drive_root/", "", pdf_yolu or ""))
+    items = [{**i, "path": nfc(i.get("path"))} for i in (manifest or {}).get("items", [])]
+    if (k := kaynak_kimligi(yol, {"items": items})):
+        return k
+    sade = lambda s: re.sub(r"[\s:_]+", "", s or "").casefold()  # noqa: E731
+    if (k := next((i.get("source_id") for i in items if sade(i["path"]) == sade(yol)), None)):
+        return k
+    klasor = lambda s: sade(s.rsplit("/", 1)[0]) if "/" in s else ""  # noqa: E731
+    baslik = lambda s: sade(re.sub(r"^\d+\)\s*", "", s.rsplit("/", 1)[-1]))  # noqa: E731
+    aday = [i.get("source_id") for i in items if klasor(i["path"]) == klasor(yol) and baslik(i["path"]) == baslik(yol)]
+    if len(set(aday)) == 1:
+        return aday[0]
+    return next((y["kaynak_idleri"][0] for y in oku(KAYIT, []) if ders_id and y.get("ders_id") == ders_id
+                 and y.get("kaynak_idleri")), None)
+
+
 def yayin_kaydi_bul(is_id: str, kaynak: list[dict]) -> str | None:
     return next((y["kaynak_idleri"][0] for y in kaynak if y["is_id"] == is_id and y.get("kaynak_idleri")), None)
 
@@ -619,13 +646,22 @@ def yerel(is_id: str, deneme: bool = False) -> int:
     if not (d / "baglam.json").exists():
         print("taslak yok:", d)
         return 2
-    manifest = oku(DOWNLOADS_MANIFEST, {})
-    import unicodedata
-    nfc = lambda x: unicodedata.normalize("NFC", x or "")  # noqa: E731
-    mf = {"items": [{**i, "path": nfc(i.get("path"))} for i in manifest.get("items", [])]}
-    kimlik = lambda y: kaynak_kimligi(nfc(re.sub(r"^drive_root/", "", y.b.get("pdf_yolu") or "")), mf)  # noqa: E731
-    sonuc, red = uygula([d], kimlik, deneme=deneme)
+    # Aynı kaynak dosyalara (107 MB deste json'u, sözlük, kayıt) yazan eşzamanlı yayınlar birbirinin
+    # yazdığını eziyordu (panel sırası + başka oturumun betiği) → tüm yerel yayınlar tek kilitle sıralanır.
+    import fcntl
+    kilit = open(ROOT / "ders_isci" / ".yayin.lock", "w")
+    fcntl.flock(kilit, fcntl.LOCK_EX)
     zaman = time.strftime("%Y-%m-%dT%H:%M:%S")
+    yayinda = next((x for x in oku(DECKS, []) if x.get("revizeIsId") == is_id), None)
+    if yayinda and not deneme:  # önceki çalıştırma desteyi yazıp durum kaydını bitiremeden kesilmiş: kaydı onar
+        yaz_json(d / "yayin.json", (oku(d / "yayin.json", {}) or {}) | {"durum": "yayinlandi", "deste_id": yayinda["id"],
+                                                                       "onarildi": zaman})
+        yaz_json(d / "durum.json", (oku(d / "durum.json", {}) or {}) | {"durum": "yayinlandi", "zaman": time.time()})
+        print("zaten yayında (kayıt onarıldı):", yayinda["id"])
+        return 0
+    manifest = oku(DOWNLOADS_MANIFEST, {})
+    kimlik = lambda y: kaynak_kimligi_esnek(y.b.get("pdf_yolu") or "", manifest, y.b.get("ders_id") or "")  # noqa: E731
+    sonuc, red = uygula([d], kimlik, deneme=deneme)
     if red:
         yaz_json(d / "yayin.json", {"durum": "denetim_hatasi", "hatalar": red[0].hata[:20], "zaman": zaman})
         return 1

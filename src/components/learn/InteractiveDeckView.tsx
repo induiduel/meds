@@ -664,6 +664,14 @@ export const InteractiveDeckView: React.FC<InteractiveDeckViewProps> = ({ initia
   const allDecks = useMemo(() => [...DECK_CATALOG], [catalogTick]);
   // Sürümlü dersler (V1, V2…): listede yalnız grubun ilk sürümü görünür; açarken öğrenci sürümü seçer
   const hubDecks = useMemo(() => allDecks.filter((d) => !d.versionGroup || d.versionGroup === d.id), [allDecks]);
+  const versionLabels = useMemo(() => {
+    const m: Record<string, string[]> = {};
+    allDecks.forEach((d) => {
+      if (d.versionGroup) (m[d.versionGroup] ||= []).push(String(d.versionLabel || 'V1'));
+    });
+    Object.keys(m).forEach((k) => (m[k].length > 1 ? m[k].sort((x, y) => x.localeCompare(y, 'tr', { numeric: true })) : delete m[k]));
+    return m;
+  }, [allDecks]);
   const [versionPick, setVersionPick] = useState<{ list: DeckCatalogEntry[]; pdf?: boolean } | null>(null);
   const versionsOf = (id: string) => {
     const g = allDecks.find((d) => d.id === id)?.versionGroup;
@@ -718,6 +726,7 @@ export const InteractiveDeckView: React.FC<InteractiveDeckViewProps> = ({ initia
     <div className="flex flex-col gap-3 sm:gap-4 min-w-0">
       <LearnHub
         decks={hubDecks}
+        versions={versionLabels}
         progress={progress}
         isAdmin={isAdmin}
         archive={adminArchiveFilter}

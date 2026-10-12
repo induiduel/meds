@@ -48,6 +48,71 @@ LISTE_ENF_URO = [
     ("k1p-k1-43-uriner-sistemin-spesifik-enfeksiyonlari", "Üroloji/5) Üriner Sistemin Spesifik Enfeksiyonları.pdf", "Üroloji"),
 ]
 
+# 2026-10-12 · kalan Kurul 1 dersleri (hafif revize → "Her ikisini tut" V2). Kaynak: deckPdfSources.json'daki içerikle
+# doğrulanmış PDF. Bir PDF birden çok ders içeriyorsa sayfa aralığı verilir; ikinci PDF'in sayfaları kaynak.md'de
+# +1000 kaydırılır (=== SAYFA 1035 === → o PDF'in 35. sayfası).
+P, G, H, KD, EH, U = "Tıbbi Patoloji/", "Tıbbi Genetik/", "Halk Sağlığı/", "Kadın Hastalıkları ve Doğum/", "Enfeksiyon Hastalıkları/", "Üroloji/"
+LISTE_KALAN = [  # deste_id, [(PDF, (ilk, son) | None), ...], ders
+    ("k1p-k1-01-dismorfolojide-genetik-terminoloji", [(G + "1)DİSMORFOLOJİDE GENETİK TERMİNOLOJİ.pdf", None)], "Tıbbi Genetik"),
+    ("k1p-k1-02-patolojiye-giris", [(P + "1)Patolojiye Giriş.pdf", None)], "Tıbbi Patoloji"),
+    ("k1p-k1-03-hucresel-adaptasyonlar", [(P + "4)Hücresel Adaptasyonlar.pdf", None)], "Tıbbi Patoloji"),
+    ("k1p-k1-04-hucre-hasari-ve-nekroz-i", [(P + "2)Hücre Hasarı ve Nekroz.pdf", None)], "Tıbbi Patoloji"),
+    ("k1p-k1-05-hucre-hasari-ve-nekroz-ii", [(P + "3)Hücre Hasarı ve Nekroz 2.pdf", None)], "Tıbbi Patoloji"),
+    ("k1p-k1-07-hucre-ici-birikimler-ve-kalsifikasyonlar", [(P + "5)Hücre İçi Birikimler ve Kalsifikasyonlar.pdf", None)], "Tıbbi Patoloji"),
+    ("k1p-k1-08-hucresel-yaslanma", [(P + "6)Hücresel Yaşlanma.pdf", None)], "Tıbbi Patoloji"),
+    ("k1p-k1-09-akut-enflamasyon-vaskuler-degisiklikler-ve-hucrese", [(P + "7)Akut Enflamasyon.pdf", None)], "Tıbbi Patoloji"),
+    ("k1p-k1-10-kromozomal-hastaliklar-ve-genetik-danisma", [(G + "2)KROMOZOMAL HASTALIKLAR VE GENETİK DANIŞMA.pdf", None)], "Tıbbi Genetik"),
+    ("k1p-k1-12-enflamasyonun-kimyasal-mediyatorleri", [(P + "8)Enflamasyonun Kimyasal Mediyatörleri.pdf", None)], "Tıbbi Patoloji"),
+    ("k1p-k1-13-kronik-ve-granulomatoz-enflamasyon", [(P + "9)Kronik ve Granülamatöz Enflamasyon .pdf", None)], "Tıbbi Patoloji"),
+    ("k1p-k1-14-salgin-hastaliklarda-kontrol-ve-korunma-yontemleri", [(H + "4)'Salgın Hastalıklarda Kontrol ve Korunma'.pdf", None)], "Halk Sağlığı"),
+    ("k1p-k1-15-doku-onarimi-ve-yara-iyilesmesi", [(P + "10)Doku Onarımı ve Yara İyileşmesi.pdf", None)], "Tıbbi Patoloji"),
+    ("k1p-k1-16-odem-hiperemi-konjesyon-ve-kanama", [(P + "11)Ödem, Hiperemi, Konjesyon ve Kanama.pdf", None)], "Tıbbi Patoloji"),
+    ("k1p-k1-18-halk-sagligi-tarihcesi", [(H + "1)Halk SağlığıTarihçesi.pdf", None)], "Halk Sağlığı"),
+    ("k1p-k1-19-dogumsal-kadin-erkek-genital-gelisim-anomalileri", [(G + "3)'DOĞUMSAL KADIN-ERKEK GELİŞİM ANOMALİLERİ'.pdf", None)], "Tıbbi Genetik"),
+    ("k1p-k1-20-tromboz-patofizyolojisi", [(P + "12) Tromboz Patofizyolojisi.pdf", None)], "Tıbbi Patoloji"),
+    ("k1p-k1-22-bebek-beslenmesi", [(H + "3)BEBEK BESLENMESİ.pdf", None)], "Halk Sağlığı"),
+    ("k1p-k1-23-ana-cocuk-sagligi-duzeyinin-izlenmesi", [(H + "2)Ana çocuk sağ.izleme .pdf", None)], "Halk Sağlığı"),
+    ("k1p-k1-24-emboli-enfarktus-ve-sok", [(P + "13) Emboli,enfarktüs ve şok.pdf", None)], "Tıbbi Patoloji"),
+    ("k1p-k1-25-asiri-duyarlilik-ve-otoimmunite", [(P + "14)Aşırı duyarlılık ve otoimmünite.pdf", None)], "Tıbbi Patoloji"),
+    ("k1p-k1-26-genetik-pediatrik-ve-cevresel-patoloji", [(P + "15)Genetik,pediatrik ve çevresel patoloji.pdf", None)], "Tıbbi Patoloji"),
+    ("k1p-k1-28-tumor-biyolojisi-ve-terminolojisi", [(P + "16)Tümör Biyolojisi ve Terminolojisi.pdf", None)], "Tıbbi Patoloji"),
+    ("k1p-k1-29-karsinojenezin-molekuler-temeli", [(P + "17)Karsinojenezin Moleküler Temeli.pdf", None)], "Tıbbi Patoloji"),
+    ("k1p-k1-30-ileri-tumor-genetigi-ve-metabolizmasi", [(P + "18)İleri Tümör Genetiği ve Metabolizması.pdf", None)], "Tıbbi Patoloji"),
+    ("k1p-k1-31-urogenital-sistem-tumorlerinde-genetik-belirtecler", [(G + "4)'ÜROGENİTAL SİSTEM TÜMÖRLERİNDE GENETİK BELİRTEÇLER.'.pdf", None)], "Tıbbi Genetik"),
+    ("k1p-k1-32-tumor-immunolojisi-ve-metastaz-mekanizmalari", [(P + "19)Tümör İmmünolojisi ve Metastaz Mekanizmaları.pdf", None)], "Tıbbi Patoloji"),
+    ("k1p-k1-33-tumor-evrelemesi-derecelendirme-ve-laboratuvar-tan", [(P + "20)Tümör Evrelemesi, Derecelendirme ve LaboratuvarTanısı.pdf", None)], "Tıbbi Patoloji"),
+    ("k1p-k1-35-prenatal-tani-yontemleri", [(G + "5)PRENATAL TANI ve UYGULAMA ALANLARI.pdf", None)], "Tıbbi Genetik"),
+    ("k1p-k1-37-glomeruler-hastaliklar-nefrotik-sendrom", [(P + "21)Glomerüler Hastalıklar_ Nefrotik Sendrom.pdf", None)], "Tıbbi Patoloji"),
+    ("k1p-k1-38-glomeruler-hastaliklar-nefritik-sendrom", [(P + "22)Glomeruler Hastalıklar_ Nefritik Sendrom.pdf", None)], "Tıbbi Patoloji"),
+    ("k1p-k1-41-sistemik-hastaliklarda-bobrek-hasari", [(P + "23)Sistemik Hastalıklarda Böbrek Hasarı.pdf", None)], "Tıbbi Patoloji"),
+    ("k1p-k1-42-tubulointerstisyel-hastaliklar", [(P + "24) Tübülointerstisyel Hastalıklar.pdf", None)], "Tıbbi Patoloji"),
+    ("k1p-k1-44-vaskuler-ve-kistik-bobrek-hastaliklari", [(P + "25) Vasküler ve Kistik Böbrek Hastalıkları.pdf", None)], "Tıbbi Patoloji"),
+    ("k1p-k1-45-bobrek-tumorleri", [(P + "26)Böbrek Tümörleri.pdf", None)], "Tıbbi Patoloji"),
+    ("k1p-k1-46-mesane-hastaliklari-ve-tumorleri", [(P + "26)Mesane Hastalıkları ve Tümörleri.pdf", None)], "Tıbbi Patoloji"),
+    ("k1p-k1-48-vulva-vajen-ve-serviks-hastaliklari", [(P + "28)Vulva, Vajen ve Serviks Hastalıkları.pdf", None)], "Tıbbi Patoloji"),
+    ("k1p-k1-49-invaziv-serviks-kanseri-ve-endometriyozis", [(P + "39)İnvaziv Serviks Kanseri ve Endometriyozis.pdf", None)], "Tıbbi Patoloji"),
+    ("k1p-k1-53-endometriyal-hiperplazi-ve-kanserleri", [(P + "30)Endometrial Hiperplazi ve Kanserleri.pdf", (1, 75))], "Tıbbi Patoloji"),
+    ("k1p-k1-54-uterus-duz-kas-ve-trofoblastik-tumorleri", [(P + "30)Endometrial Hiperplazi ve Kanserleri.pdf", (76, 92)),
+                                                            (P + "32)Gebelik Hastalıkları .pdf", (35, 65))], "Tıbbi Patoloji"),
+    ("k1p-k1-55-over-tumorleri", [(P + "31)Ovidukt ve Ovaryum Patolojisi.pdf", None)], "Tıbbi Patoloji"),
+    ("k1p-k1-56-memenin-benign-hastaliklari", [(P + "33) Memenin Benign Hastalıkları.pdf", (1, 40))], "Tıbbi Patoloji"),
+    ("k1p-k1-65-meme-kanseri-ve-molekuler-tipleri", [(P + "33) Memenin Benign Hastalıkları.pdf", (41, 72))], "Tıbbi Patoloji"),
+    ("k1p-k1-58-enurezis-nokturna", [(U + "6)Enürezis.pdf", None)], "Üroloji"),
+    ("k1p-k1-61-abortus", [(KD + "1)Abortus_2026.pdf", None)], "Kadın Hastalıkları ve Doğum"),
+    ("k1p-k1-62-uretral-akinti", [(EH + "8)ÜRETRAL AKINTI.pdf", None)], "Enfeksiyon Hastalıkları"),
+]
+
+HAFIF_KURALLAR = """
+HAFİF REVİZE (baglam.hafif = true) — bu ders yayında V1 olarak KALACAK; senin çıktın yanına V2 olarak eklenecek.
+- Yalnız şunları üret: ders_paketi.json (bilgi_paketi kanıtlı, tüm önemli bilgiler) → deck.json → sozluk.json →
+  cikmis_baglantilari.json → rapor.md. ders_notu.md, ornek_sorular.json, hastaliklar.json, bilgi_havuzu.jsonl ÜRETME
+  (V1'inkiler kullanılır). denetle.py bu dosyaların yokluğunu yalnız UYARI sayar.
+- `baglam.kaynak_dosyalari` birden çok PDF ya da sayfa aralığı verebilir: kaynak.md YALNIZ bu dersin sayfalarını içerir.
+  Sayfa no ≥ 1000 ise ikinci PDF'tir (1035 → o PDF'in 35. sayfası). Slayt `sourcePdf` = {"fileName": <o PDF'in adı>,
+  "primaryPage": <o PDF'teki GERÇEK sayfa>} — kanıt `sayfa` ise kaynak.md'deki numara.
+- Slayt sayısı içerikle orantılı (kısa ders ~40–60, uzun/yoğun ders 80–150); dolgu yok, her slayt yeni bilgi.
+"""
+
 EK_KURALLAR = """
 REVİZYON MODU (kullanıcı kuralları — TALIMAT.md ile çelişirse BUNLAR geçerli):
 - Bu ders zaten yayında (`baglam.mevcut_deste_dosyasi`). Onu yalnız neyin eksik/hatalı olduğunu görmek için oku; içeriği
@@ -86,10 +151,43 @@ def gorseller(pdf: Path, hedef: Path) -> int:
     return n
 
 
-def revize_et(deste_id: str, pdf_rel: str, ders: str) -> dict:
+def _pdf_bul(pdf_rel: str) -> Path:
     import unicodedata
     nfc = lambda x: unicodedata.normalize("NFC", x)
-    pdf = next((f for f in K1.rglob("*.pdf") if nfc(str(f.relative_to(K1))) == nfc(pdf_rel)), K1 / pdf_rel)
+    return next((f for f in K1.rglob("*.pdf") if nfc(str(f.relative_to(K1))) == nfc(pdf_rel)), K1 / pdf_rel)
+
+
+def _parcali_kaynak(kaynaklar: list, d: Path) -> tuple[str, dict, int, list]:
+    """Birden çok PDF / sayfa aralığı → tek kaynak.md (ikinci PDF +1000 kaydırılır) + görseller."""
+    parca, ocr, dosyalar, gn = [], [], [], 0
+    (d / "gorseller").mkdir(parents=True, exist_ok=True)
+    for i, (rel, aralik) in enumerate(kaynaklar):
+        pdf, ofset = _pdf_bul(rel), 1000 * i
+        metin, bilgi = isle.pdf_metni(pdf)
+        bas, bit = aralik or (1, bilgi["sayfa"])
+        for blok in metin.split("=== SAYFA ")[1:]:
+            n = int(blok.split(" ===")[0])
+            if bas <= n <= bit:
+                parca.append(f"=== SAYFA {n + ofset} ===" + blok.rstrip().split(" ===", 1)[1])
+        ocr += [n + ofset for n in bilgi.get("ocr_sayfalar", []) if bas <= n <= bit]
+        import pymupdf as fitz
+        with fitz.open(pdf) as doc:
+            for n in range(bas, bit + 1):
+                sayfa = doc[n - 1]
+                hedef = d / "gorseller" / f"sayfa_{n + ofset:04d}.png"
+                if sayfa.get_images() and not hedef.exists():
+                    sayfa.get_pixmap(dpi=90).save(hedef)
+                    gn += 1
+        dosyalar.append({"pdf_adi": pdf.name, "yol": f"drive_root/Kurul 1/{rel}", "sayfalar": [bas, bit], "sayfa_ofseti": ofset})
+    metin = "\n\n".join(parca)
+    return metin, {"sayfa": len(parca), "ocr_sayfalar": ocr, "karakter": len(metin)}, gn, dosyalar
+
+
+def revize_et(deste_id: str, pdf_rel, ders: str) -> dict:
+    kaynaklar = pdf_rel if isinstance(pdf_rel, list) else None  # hafif revize: [(PDF, aralık), ...]
+    if kaynaklar:
+        pdf_rel = kaynaklar[0][0]
+    pdf = _pdf_bul(pdf_rel)
     iid = is_id(deste_id)
     # aynı deste için daha önce açılmış taslak varsa onu sürdür
     for eski in TASLAK.glob("*-" + iid.split("-")[1]):
@@ -99,11 +197,19 @@ def revize_et(deste_id: str, pdf_rel: str, ders: str) -> dict:
     if du.get("durum") == "onay_bekliyor":
         return {"deste": deste_id, "durum": "zaten onay bekliyor", "is_id": iid}
     d.mkdir(parents=True, exist_ok=True)
-    if not (d / "kaynak.md").exists():
-        metin, bilgi = isle.pdf_metni(pdf)
-        (d / "kaynak.md").write_text(metin, encoding="utf-8")
-        yaz(d / "kaynak_bilgi.json", bilgi)
-    gn = gorseller(pdf, d / "gorseller")
+    dosyalar = None
+    if kaynaklar:
+        if not (d / "kaynak.md").exists() or not (d / "baglam.json").exists():
+            metin, bilgi, gn, dosyalar = _parcali_kaynak(kaynaklar, d)
+            (d / "kaynak.md").write_text(metin, encoding="utf-8")
+            yaz(d / "kaynak_bilgi.json", bilgi)
+        gn = len(list((d / "gorseller").glob("sayfa_*.png")))
+    else:
+        if not (d / "kaynak.md").exists():
+            metin, bilgi = isle.pdf_metni(pdf)
+            (d / "kaynak.md").write_text(metin, encoding="utf-8")
+            yaz(d / "kaynak_bilgi.json", bilgi)
+        gn = gorseller(pdf, d / "gorseller")
     if not (d / "baglam.json").exists():
         konu = pdf.stem.split(")", 1)[-1].strip(" '")
         j = {"is_id": iid, "yol": f"drive_root/Kurul 1/{pdf_rel}", "tam": str(pdf), "yil": "2026-27",
@@ -115,6 +221,8 @@ def revize_et(deste_id: str, pdf_rel: str, ders: str) -> dict:
         b.update({"mod": "guncelleme", "revize": True, "deste_id": deste_id, "ders_id": deste_id.split("-", 1)[1],
                   "numara": int(deste_id.split("-")[2]), "mevcut_deste_dosyasi": "mevcut_deste.json",
                   "gorsel_klasoru": "gorseller", "gorsel_sayisi": gn})
+        if dosyalar:
+            b.update({"hafif": True, "kaynak_dosyalari": dosyalar})
         yaz(d / "baglam.json", b)
     if os.environ.get("MEDS_REVIZE_HAZIRLA"):  # yalnız hazırlık (Claude oturum içinden çalışacak)
         return {"deste": deste_id, "durum": "hazir", "is_id": iid, "klasor": str(d)}
@@ -122,7 +230,7 @@ def revize_et(deste_id: str, pdf_rel: str, ders: str) -> dict:
     istem = (f"Talimat dosyası: {isle.TALIMAT}. Talimattaki /app yolu bu makinede {APP} demektir "
              f"(ör. /app/docs/OGREN_ETKILESIM_REHBERI.md → {APP}/docs/OGREN_ETKILESIM_REHBERI.md). Önce talimatı, "
              "baglam.json'u ve kaynak.md'yi oku; sonra talimattaki iş sırasıyla tüm çıktıları üret ve denetle.py 0 HATA "
-             "olana kadar düzelt." + EK_KURALLAR)
+             "olana kadar düzelt." + EK_KURALLAR + (HAFIF_KURALLAR if kaynaklar else ""))
     onceki = oku(d / "oturum.json", {}).get("session_id")
     if onceki:
         istem = "Kota/kesinti nedeniyle yarım kaldın. Klasördeki mevcut dosyalara bakıp kaldığın yerden devam et; " + istem
@@ -147,7 +255,7 @@ def revize_et(deste_id: str, pdf_rel: str, ders: str) -> dict:
 
 if __name__ == "__main__":
     sec = sys.argv[1:]
-    kaynak = LISTE_ENF_URO if os.environ.get("MEDS_REVIZE_GRUP") == "enf_uro" else LISTE
+    kaynak = {"enf_uro": LISTE_ENF_URO, "kalan": LISTE_KALAN}.get(os.environ.get("MEDS_REVIZE_GRUP", ""), LISTE)
     isler = [x for x in kaynak if not sec or any(x[0].startswith("k1p-" + s) for s in sec)]
     with ThreadPoolExecutor(int(os.environ.get("MEDS_REVIZE_PARALEL", "1"))) as ex:
         for r in ex.map(lambda x: revize_et(*x), isler):
