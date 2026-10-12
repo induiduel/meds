@@ -23,7 +23,7 @@
 
 import { QuestionItem } from '../types';
 import { SupabaseDbService } from './supabaseDb';
-import { defaultApiBaseForThisHost } from '../config/deployment';
+import { defaultApiBaseForThisHost, panelApiBase } from '../config/deployment';
 
 function getCustomApiUrl(): string {
   if (typeof window === 'undefined' || !window.localStorage) return '';
@@ -31,7 +31,8 @@ function getCustomApiUrl(): string {
   if (url && (url.includes('github.io') || url.includes('github.com'))) return '';
   if (url.trim()) return url.trim().replace(/\/$/, '');
   try {
-    return defaultApiBaseForThisHost();
+    // Yerel yönetim paneli Oracle'a bağlıysa çıkmış sorular da oradan
+    return panelApiBase('/api/past-exams') || defaultApiBaseForThisHost();
   } catch (_) {
     return '';
   }

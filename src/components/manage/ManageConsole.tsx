@@ -60,6 +60,7 @@ import { useAppearance, DENSITY_LABELS, type Density as AppDensity } from '../..
 import { guardedInterval } from '../../services/net';
 import { realtimeEventService } from '../../services/realtimeEvents';
 import { Segmented } from '../ui/kit';
+import { isLocalHost, getPanelTarget, PANEL_TARGET_KEY, PANEL_ON_ORACLE_AT_BOOT } from '../../config/deployment';
 import { Drawer, classifyNotice } from './consoleUi';
 import {
   InboxReport,
@@ -165,6 +166,23 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
     }
   };
   const [loading, setLoading] = useState(false);
+
+  // Yerel panel → Oracle: sayfadaki tüm veri tek kaynaktan gelsin diye kaynak açılışta seçilir. Panele uygulama
+  // içinden girilip hedef açılıştakinden farklıysa ya da panelden çıkılınca sayfa bir kez yenilenir.
+  const localHost = isLocalHost();
+  const panelTarget = getPanelTarget();
+  useEffect(() => {
+    if (!localHost) return;
+    if ((panelTarget === 'oracle') !== PANEL_ON_ORACLE_AT_BOOT) window.location.reload();
+    return () => {
+      if (PANEL_ON_ORACLE_AT_BOOT) setTimeout(() => { if (!/^\/manage(\/|$)/.test(window.location.pathname)) window.location.reload(); }, 0);
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+  const choosePanelTarget = (t: 'oracle' | 'yerel') => {
+    try { localStorage.setItem(PANEL_TARGET_KEY, t); } catch { /* gizli pencere */ }
+    window.location.reload();
+  };
 
   // Adres bölümü taşır: açılışta normalize et, geri/ileri ile bölüm değişsin
   useEffect(() => {
@@ -443,6 +461,18 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
             <kbd>Ctrl K</kbd>
           </button>
           <span className="flex-1" />
+          {localHost && (
+            <Segmented<'oracle' | 'yerel'>
+              className="shrink-0"
+              label="Veri kaynağı"
+              value={panelTarget}
+              onChange={choosePanelTarget}
+              options={[
+                { value: 'oracle', label: 'Canlı', title: 'Panel canlı siteye (Oracle) bağlı: değişiklikler doğrudan canlıya yazılır' },
+                { value: 'yerel', label: 'Yerel', title: 'Panel bu bilgisayardaki sunucuya bağlı (deneme için)' },
+              ]}
+            />
+          )}
           <label className="ms-select-chip !h-9 min-w-0 max-w-[46vw] sm:max-w-[300px]" title={committeeName}>
             <span className="sr-only">Kurul</span>
             <select value={selectedCommitteeId} onChange={(e) => onSelectCommittee(e.target.value)} className="!text-sm">

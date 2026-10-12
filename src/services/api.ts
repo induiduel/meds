@@ -7,7 +7,7 @@ import { pastQuestionsCache } from './pastQuestionsCache';
 import { offlineDatabaseService } from './offlineDatabaseService';
 import { collection, addDoc } from 'firebase/firestore';
 import { ADMIN_EMAIL, getLocalAdminSession } from './auth';
-import { defaultApiBaseForThisHost } from '../config/deployment';
+import { defaultApiBaseForThisHost, panelApiBase, PANEL_ON_ORACLE_AT_BOOT } from '../config/deployment';
 import { clientCache } from './clientCache';
 import { BUNDLED_SCRIPTS, BUNDLED_PIPELINES } from '../data/bundledScripts';
 import {
@@ -22,13 +22,16 @@ import {
 const STORAGE_KEY = 'medsoru_db_data_v1';
 const API_BASE_URL_KEY = 'medsoru_custom_api_url';
 
-export const getCustomApiUrl = (): string => {
+export const getCustomApiUrl = (path?: string): string => {
   const url = (typeof localStorage !== 'undefined' ? localStorage.getItem(API_BASE_URL_KEY) : '') || '';
   if (url && (url.includes('github.io') || url.includes('github.com'))) {
     try { localStorage.removeItem(API_BASE_URL_KEY); } catch (_) {}
     return '';
   }
   if (url) return url;
+  // Yerel yönetim paneli canlı sitedeki panel gibi Oracle'a bağlanır (cihaza özel bölümler hariç)
+  const panel = panelApiBase(path);
+  if (panel) return panel;
   // Canlı hostta özel URL yoksa Oracle Named Tunnel'a düş (cihazda localhost → '').
   try {
     return defaultApiBaseForThisHost();
@@ -254,7 +257,7 @@ export async function safeJsonFetch<T = any>(
   try {
     let resolvedInput = input;
     if (typeof input === 'string' && input.startsWith('/')) {
-      const customUrl = getCustomApiUrl();
+      const customUrl = getCustomApiUrl(input);
       if (customUrl) {
         resolvedInput = `${customUrl.replace(/\/$/, '')}${input}`;
       }
@@ -272,6 +275,10 @@ export async function safeJsonFetch<T = any>(
     const hasSignal = init?.signal;
     const method = (init?.method || 'GET').toUpperCase();
     const headers = new Headers(init?.headers);
+    // Yerel panel → Oracle: orada loopback yöneticisi yok; okuma isteklerinde de yönetici başlığı gider
+    if (PANEL_ON_ORACLE_AT_BOOT && typeof resolvedInput === 'string' && !resolvedInput.startsWith('/') && !headers.has('x-admin-email')) {
+      headers.set('x-admin-email', ADMIN_EMAIL);
+    }
     if (!['GET', 'HEAD', 'OPTIONS'].includes(method) && typeof window !== 'undefined') {
       const adminHeader = headers.get('x-admin-email');
       const localAdmin = getLocalAdminSession();
@@ -2432,7 +2439,7 @@ export const ApiService = {
     if (adminEmail !== ADMIN_EMAIL) {
       throw new Error('Yetkisiz erişim: Kullanıcı listeleme yetkisi yalnızca yöneticiye aittir.');
     }
-    const res = await fetch('/api/admin/users', {
+    const res = await fetch(`${getCustomApiUrl('/api/admin/users')}/api/admin/users`, {
       headers: {
         'x-admin-email': adminEmail,
       },

@@ -8,6 +8,7 @@
 
 import { AdminNotification } from '../types';
 import { getLocalAdminSession } from './auth';
+import { panelApiBase } from '../config/deployment';
 
 export type RealtimeConnectionStatus = 'disconnected' | 'connecting' | 'connected';
 
@@ -62,9 +63,11 @@ class RealtimeEventService {
     try {
       // Yalnız oturum açmış yönetici kendi e-postasını yollar; ziyaretçiler yönetici olaylarını almaz.
       const adminSession = getLocalAdminSession();
+      // Yerel panel Oracle'a bağlıysa olaylar da Oracle'dan (gelen kutusu, canlı içerik)
+      const base = panelApiBase('/api/realtime/events');
       const url = adminSession?.email
-        ? `/api/realtime/events?adminEmail=${encodeURIComponent(adminSession.email)}`
-        : '/api/realtime/events';
+        ? `${base}/api/realtime/events?adminEmail=${encodeURIComponent(adminSession.email)}`
+        : `${base}/api/realtime/events`;
 
       const es = new EventSource(url);
       this.eventSource = es;

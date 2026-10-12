@@ -4,7 +4,7 @@
  * sunucudaki POST /api/db/query kapısına yollar. Tarayıcı veritabanına ve anahtara hiç dokunmaz.
  * Yetki sunucuda: herkes yalnız genel tabloları okur, yazma yönetici ister.
  */
-import { defaultApiBaseForThisHost } from '../config/deployment';
+import { defaultApiBaseForThisHost, panelApiBase } from '../config/deployment';
 import { getLocalAdminSession } from './auth';
 
 export type RemoteResult<T = any> = { data: T | null; error: { message: string; code?: string } | null; count: number | null };
@@ -15,7 +15,8 @@ function apiBase(): string {
     if (custom && !custom.includes('github.')) return custom.replace(/\/+$/, '');
   } catch (_) {}
   try {
-    return defaultApiBaseForThisHost() || '';
+    // Yerel yönetim paneli Oracle'a bağlıysa sorgular da oraya
+    return panelApiBase('/api/db/query') || defaultApiBaseForThisHost() || '';
   } catch (_) {
     return '';
   }
