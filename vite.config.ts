@@ -19,6 +19,8 @@ export default defineConfig(({ mode }) => {
         '@': path.resolve(__dirname, '.'),
       },
     },
+    // Yazım yardımcısı işçisi (src/workers/composerWorker.ts) modeli dinamik içe aktarır: es biçimi gerekli
+    worker: { format: 'es' as const },
     build: {
       target: 'es2022',
       cssCodeSplit: true,

@@ -11,6 +11,10 @@ UI text, prompts and most comments are Turkish. Keep new user-facing strings Tur
 ## Commands
 
 - `npm run dev` — backend + Vite middleware on http://localhost:3000 (`PORT` is hardcoded in `server.ts`)
+- **Port 3000 = systemd user service `meds-web`, NOT watched** (since 2026-10-12 it runs `tsx server.ts`, see
+  `~/.config/systemd/user/meds-web.service.d/10-performans.conf`). After changing `server.ts` or any server-side code:
+  `systemctl --user restart meds-web` (ready when `/api/health` returns 200, ~20-30 s). Frontend-only changes need just
+  `npx vite build` (3000 serves `dist/`). Do not add `MemoryMax` (Node crashes at startup) or bring `tsx watch` back.
 - `npm run lint` — `tsc --noEmit` (must stay at 0 errors)
 - `npx vite build` — frontend build check
 - No test suite. Verify retrieval changes with a small `tsx` script against `searchRagChunks`

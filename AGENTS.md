@@ -17,6 +17,9 @@ Bu klasör MedSoru uygulamasının kodudur. Kurallar tek yerde tutulur:
 - LLM gereken her iş ücretsiz bulut zincirine gider (`MEDS_LLM_BACKEND=cloud`, `MEDS_FREE_ONLY=1`).
 - Makinede 15 GB RAM var: yeni servislerde `MemoryMax`/`CPUQuota`/`OOMScoreAdjust` zorunlu; ağır işleri (vite build, tsc,
   model yükleme) aynı anda çalıştırma.
+- **3000 sunucusu (`meds-web`) kendiliğinden yeniden başlamaz** (2026-10-12'den beri `tsx watch` yok). `server.ts` ya da
+  başka sunucu kodu değişince `systemctl --user restart meds-web`; yalnız ön yüz değiştiyse `npx vite build` yeter.
+  Ayrıntı: `../AGENTS.md` kural 12.
 
 ## Kapı (gönderimden önce)
 

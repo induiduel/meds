@@ -1,6 +1,7 @@
 /**
  * Soru ekle yazım yardımcısı simülasyonu (metin tamamlama + yazım düzeltme).
- * Kullanım: npm run composer:sim  (= npx tsx scripts/composer/simulate.mts [--verbose] [--seed 42])
+ * Kullanım: npm run composer:sim  (= npx tsx scripts/composer/simulate.mts [--verbose] [--seed 42] [--n 600])
+ *   Tamamlama senaryolarının 1/5'i aksansız yazılır; kelime-top3 = doğru kelime ilk 3 öneride mi (klavye şeridi).
  *   --test/--model verilmezse %10 test kümesi ayrılır ve model kalan %90'dan geçici olarak derlenir.
  *   GHOST_MIN=0.4 → hayalet eşiğini dener; NO_SOURCES=1 → sunucu kaynakları yokken ölçer.
  * Test kökleri modele hiç girmez (dışarıda bırakılmış %10); kaynaklar sunucudaki
@@ -35,7 +36,9 @@ const clean = (s: string) => (s || '').replace(/\s+/g, ' ').trim().replace(/^\(?
 const low = (s: string) => s.toLocaleLowerCase('tr-TR');
 const fw = (w: string) => low(w).replace(/[^\p{L}\p{N}%]/gu, '');
 const train = all.filter((q) => !testIds.has(q.id)).map((q) => clean(q.stem)).filter((s) => s.split(' ').length >= 3);
-const test = all.filter((q) => testIds.has(q.id)).map((q) => clean(q.stem)).filter((s) => s.split(' ').length >= 6);
+// OCR çöpü kökler (sözcük olmayan parçalar) ölçümü bozar: harf ağırlıklı ve makul uzunlukta olanlar
+const wordy = (s: string) => { const t = s.split(' '); return s.length < 700 && t.filter((w) => /^[\p{L}(]{2}[\p{L}%-]*[.,;:?)]?$/u.test(w)).length >= 0.75 * t.length; };
+const test = all.filter((q) => testIds.has(q.id)).map((q) => clean(q.stem)).filter((s) => s.split(' ').length >= 6 && wordy(s));
 
 // basit benzer kök bulucu (sunucu benzeri)
 const trainSets = train.map((s) => new Set(s.split(' ').map(fw).filter((w) => w.length > 3)));
@@ -55,14 +58,19 @@ const CLOSERS = /hangisi|hangileri|nedir|değildir|yanlıştır|doğrudur|aşağ
 type C = { kind: string; typed: string; truth: string; sources: string[] };
 const comp: C[] = [];
 const pick = test.slice().sort(() => rnd() - 0.5);
-for (let n = 0; n < 120; n++) {
+const NCOMP = Number(arg('--n') || 120);
+const ASC0: Record<string, string> = { ç: 'c', ğ: 'g', ı: 'i', ö: 'o', ş: 's', ü: 'u', Ç: 'C', Ğ: 'G', İ: 'I', Ö: 'O', Ş: 'S', Ü: 'U' };
+const strip0 = (s: string) => s.replace(/[çğıöşüÇĞİÖŞÜ]/g, (ch) => ASC0[ch]);
+for (let n = 0; n < NCOMP; n++) {
   const st = pick[n % pick.length]; const ws = st.split(' ');
   const cut = 2 + Math.floor(rnd() * (ws.length - 3));
   const mid = n % 3 === 0 && ws[cut].length > 4;
   let typed = ws.slice(0, cut).join(' ') + ' ';
   let truth = ws.slice(cut).join(' ');
   if (mid) { const k = 2 + Math.floor(rnd() * (ws[cut].length - 3)); typed = typed + ws[cut].slice(0, k); truth = ws[cut].slice(k) + ' ' + ws.slice(cut + 1).join(' '); }
-  const kind = n < 20 ? 'havuzda' : mid ? 'kelime-ortası' : 'kelime-sonu';
+  let kind = n < 20 ? 'havuzda' : mid ? 'kelime-ortası' : 'kelime-sonu';
+  // her 5 senaryodan biri aksansız yazılır (telefonda Türkçe klavyesiz yazım)
+  if (n >= 20 && n % 5 === 1 && strip0(typed) !== typed) { typed = strip0(typed); kind = mid ? 'aksansız-orta' : 'aksansız-son'; }
   comp.push({ kind, typed, truth, sources: similar(typed, n < 20 ? st : undefined) });
 }
 
@@ -85,8 +93,15 @@ for (const c of comp) {
   const r = smartComposerService.getAssist(c.typed, c.sources);
   tms = Math.max(tms, performance.now() - t0);
   const s = scoreComp(c, r.ghost);
-  const b = (res[c.kind] ||= { n: 0, offered: 0, firstOk: 0, words: 0, wrong: 0, premature: 0 });
+  const b = (res[c.kind] ||= { n: 0, offered: 0, firstOk: 0, words: 0, wrong: 0, premature: 0, top3: 0 });
   b.n++; for (const k of ['offered', 'firstOk', 'words', 'wrong', 'premature']) b[k] += (s as any)[k];
+  // kelime önerisi şeridi: doğru kelime ilk 3 öneride mi (hayaletin ilk kelimesi + Kelime çipleri)
+  const partial = /\S$/.test(c.typed) ? c.typed.split(' ').pop()! : '';
+  const target = fw(partial + c.truth.split(' ')[0]);
+  const ghostFirst = r.ghost ? fw((partial + r.ghost).trim().split(' ')[0]) : '';
+  const chips = r.options.filter((o: any) => o.label === 'Kelime').map((o: any) => fw(o.preview));
+  if ([ghostFirst, ...chips].filter(Boolean).slice(0, 3).includes(target)) b.top3++;
+  if (verbose && !s.offered && c.kind === 'havuzda') console.log(`∅ [havuzda] «${c.typed}» | doğru: «${c.truth.slice(0, 50)}» | kaynak1: «${(c.sources[0] || '').slice(0, 80)}»`);
   if (verbose && s.wrong) console.log(`✗ [${c.kind}/${r.options[0]?.category}] «${c.typed}» → «${r.ghost}» | doğru: «${c.truth.slice(0, 50)}»`);
 }
 
@@ -130,9 +145,9 @@ for (const s of sp) {
 }
 
 console.log(`\nTAMAMLAMA (${comp.length} senaryo, en uzun ${tms.toFixed(1)} ms)`);
-for (const [k, b] of Object.entries(res)) console.log(`  ${k.padEnd(14)} n=${b.n} öneri=%${(100 * b.offered / b.n).toFixed(0)} isabet=%${(100 * b.firstOk / b.n).toFixed(0)} yanlış=%${(100 * b.wrong / b.n).toFixed(0)} erken-kapatma=${b.premature} ort.doğru-kelime=${(b.words / Math.max(1, b.firstOk)).toFixed(1)}`);
+for (const [k, b] of Object.entries(res)) console.log(`  ${k.padEnd(14)} n=${b.n} öneri=%${(100 * b.offered / b.n).toFixed(0)} isabet=%${(100 * b.firstOk / b.n).toFixed(0)} yanlış=%${(100 * b.wrong / b.n).toFixed(0)} erken-kapatma=${b.premature} ort.doğru-kelime=${(b.words / Math.max(1, b.firstOk)).toFixed(1)} kelime-top3=%${(100 * b.top3 / b.n).toFixed(0)}`);
 console.log(`YAZIM (${sp.length} senaryo)`);
 for (const [k, b] of Object.entries(sres)) console.log(`  ${k.padEnd(14)} n=${b.n} düzeltilmesi-gereken=${b.need} düzeltilen=${b.fixed} (%${(100 * b.fixed / Math.max(1, b.need)).toFixed(0)}) bozulan-doğru-kelime=${b.broke}`);
-const T = Object.values(res).reduce((a: any, b: any) => ({ n: a.n + b.n, ok: a.ok + b.firstOk, wr: a.wr + b.wrong }), { n: 0, ok: 0, wr: 0 });
+const T = Object.values(res).reduce((a: any, b: any) => ({ n: a.n + b.n, ok: a.ok + b.firstOk, wr: a.wr + b.wrong, t3: a.t3 + b.top3 }), { n: 0, ok: 0, wr: 0, t3: 0 });
 const W = Object.values(sres).reduce((a: any, b: any) => ({ need: a.need + b.need, fixed: a.fixed + b.fixed, broke: a.broke + b.broke }), { need: 0, fixed: 0, broke: 0 });
-console.log(`ÖZET toplam=${comp.length + sp.length} tamamlama-isabet=%${(100 * T.ok / T.n).toFixed(1)} tamamlama-yanlış=%${(100 * T.wr / T.n).toFixed(1)} düzeltme-geri-çağırma=%${(100 * W.fixed / W.need).toFixed(1)} bozma=${W.broke}`);
+console.log(`ÖZET toplam=${comp.length + sp.length} tamamlama-isabet=%${(100 * T.ok / T.n).toFixed(1)} tamamlama-yanlış=%${(100 * T.wr / T.n).toFixed(1)} kelime-top3=%${(100 * T.t3 / T.n).toFixed(1)} düzeltme-geri-çağırma=%${(100 * W.fixed / W.need).toFixed(1)} bozma=${W.broke}`);

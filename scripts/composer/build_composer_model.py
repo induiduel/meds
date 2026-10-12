@@ -17,6 +17,8 @@ ROOT = Path(__file__).resolve().parents[2]
 ap = argparse.ArgumentParser()
 ap.add_argument('--exclude-ids')
 ap.add_argument('--out', default=str(ROOT / 'src/data/composer_model.json'))
+ap.add_argument('--ng-extra', type=int, default=int(__import__('os').environ.get('NG_EXTRA', '0')),
+                help='şık ve açıklama cümlelerini de n-gram derlemine kat (0/1; ölçümde +%%2 kelime isabeti, 4 kat boyut → kapalı)')
 a = ap.parse_args()
 
 excl = set(json.load(open(a.exclude_ids))) if a.exclude_ids else set()
@@ -34,16 +36,20 @@ def clean_stem(s):
     s = re.sub(r'^\(?\d+[.)-]\s*', '', s)  # soru numarası
     return s
 
-stems, texts = [], []
+stems, texts, extra = [], [], []
 for q in qs:
     st = clean_stem(q.get('stem') or '')
     if len(st.split()) >= 3: stems.append(st)
     texts.append(st)
-    # açıklamalar yalnız sözlüğe girer (geçerli çekimleri tanımak için; n-gram köklerden kurulur)
+    # açıklamalar ve şıklar sözlüğe girer; --ng-extra ile cümleleri n-gram derlemine de katılır
     for k in ('explanation', 'tibbi_aciklama'):
-        if isinstance(q.get(k), str): texts.append(q[k])
+        if isinstance(q.get(k), str):
+            texts.append(q[k])
+            extra.extend(x for x in re.split(r'(?<=[.!?])\s+', re.sub(r'\s+', ' ', q[k])) if len(x.split()) >= 4)
     for o in (q.get('options') or []):
-        texts.append(o.get('text', '') if isinstance(o, dict) else str(o))
+        ot = o.get('text', '') if isinstance(o, dict) else str(o)
+        texts.append(ot)
+        if len(ot.split()) >= 3: extra.append(re.sub(r'\s+', ' ', ot).strip())
 
 # ---- sözcük dağarcığı
 surf = defaultdict(Counter)
@@ -77,7 +83,7 @@ for k, cands in byasc.items():
 
 # ---- n-gram (soru köklerinden)
 ng = defaultdict(Counter)
-for st in stems:
+for st in stems + (extra if a.ng_extra else []):
     ws = st.split()
     fs = ['^'] + [fold(w) for w in ws]
     out = ws

@@ -1560,6 +1560,9 @@ html.theme-dark .deep-link-highlight-pulse, html[data-mode="dark"] .deep-link-hi
 .ca-bar.is-on { max-height: 96px; }
 .ca-chip { flex: 0 1 auto; min-width: 0; max-width: 100%; }
 .ca-chip.is-top { flex: 1 1 100%; }
+/* Kelime önerisi çipleri (klavye şeridi gibi): sade, kısa */
+.ca-chip.is-word { height: 30px; padding: 0 10px; gap: 4px; color: var(--color-ink-2, var(--color-ink)); font-weight: 500; }
+.ca-chip.is-word svg { width: 12px; height: 12px; opacity: .6; }
 .ca-chip > span { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .ca-fix-d { min-width: 0; }
 .ca-chip.is-top { order: -1; }

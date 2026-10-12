@@ -1,18 +1,19 @@
-import React, { useEffect, useMemo, useRef, useState } from 'react';
-import { CornerDownLeft, Sparkles, Wand2, ArrowRight, HelpCircle } from 'lucide-react';
+import React, { useEffect, useRef, useState } from 'react';
+import { CornerDownLeft, Sparkles, Wand2, ArrowRight, HelpCircle, Type } from 'lucide-react';
 import { ApiService } from '../../services/api';
-import { smartComposerService, loadComposerModel, AssistOption, AssistResult } from '../../services/smartComposerService';
+import { smartComposerService, AssistOption, AssistResult } from '../../services/smartComposerService';
+import { composerClient } from '../../services/composerClient';
 
 /**
  * MedSoru Akıllı Soru Yazma Yardımcısı (ComposerAssist)
  *
- *  - Masaüstü ve mobil tam ekran yazmada anlık (0ms-30ms) akıllı metin tamamlama,
- *    klinik vaka devamı ve güvenli yazım düzeltmesi.
- *  - Cümle İçi Devam (isExpanding) ile Soruyu Kapatma (isQuestionReady) ayrımını yapar:
- *    Kullanıcı vaka yazarken gereksizce "hangisidir?" ile soruyu kesmez; klinik devam önerir.
- *  - Bütün cümleyi dikkate alır (organ, semptom, hastalık, tetkik bağlamı).
+ *  - Hesaplar Web Worker'da yapılır (composerClient): yazarken ana iş parçacığı donmaz,
+ *    hızlı yazımda aradaki istekler atlanır.
+ *  - Öneriler imlecin solundaki metne göre hesaplanır; hayalet metin yalnız imleç sondayken
+ *    görünür ve Tab / → ile kabul edilir. Kelime çipleri imlecin olduğu yere eklenir.
+ *  - Yeni sonuç gelene kadar, yazılan harfler önceki hayaletle uyuşuyorsa hayalet kaydırılarak
+ *    gösterilmeye devam eder (titreme yok).
  *  - Ayna katmanı (ca-mirror) textarea ile %100 piksel uyumlu hizalanır.
- *  - Tab ya da imleç sondayken → ile soluk hayalet metin (ghost) anında kabul edilir.
  */
 
 export const ComposerAssist: React.FC<{
@@ -23,15 +24,15 @@ export const ComposerAssist: React.FC<{
   committeeId?: string;
 }> = ({ active, value, onChange, textareaId, committeeId }) => {
   const [sources, setSources] = useState<string[]>([]);
-  const [localResult, setLocalResult] = useState<AssistResult | null>(null);
-  // Derlem modeli (ayrı parça) yüklenince önerileri yeniden hesapla
-  const [modelReady, setModelReady] = useState(smartComposerService.hasModel());
+  const [localResult, setLocalResult] = useState<(AssistResult & { forText: string }) | null>(null);
+  // İmleç konumu: öneriler imlecin solundaki metne göre. Infinity = sonda (metin dışarıdan
+  // değişse de, ör. "Düzelt", sonda kalır); -1 = seçim var
+  const [caret, setCaret] = useState<number>(Infinity);
+  const mounted = useRef(true);
+  useEffect(() => () => { mounted.current = false; }, []);
   useEffect(() => {
-    if (!active || modelReady) return;
-    let alive = true;
-    loadComposerModel().then(() => { if (alive) setModelReady(smartComposerService.hasModel()); });
-    return () => { alive = false; };
-  }, [active, modelReady]);
+    if (active) composerClient.warm();
+  }, [active]);
   const [box, setBox] = useState<{
     top: number;
     left: number;
@@ -49,22 +50,25 @@ export const ComposerAssist: React.FC<{
   } | null>(null);
 
   const mirrorRef = useRef<HTMLDivElement>(null);
+  const acceptRef = useRef<(o: { text: string; replaceLen?: number }) => void>(() => {});
   const reqId = useRef(0);
 
-  // 1. Anlık Yerel Hesaplama (30ms micro-debounce — sıfır kasma, anlık yanıt)
+  // caret < 0: metin seçili → öneri yok
+  const caretAt = Math.min(caret, value.length);
+  const atEnd = caretAt >= value.length;
+  const head = caretAt < 0 ? '' : atEnd ? value : value.slice(0, caretAt);
+
+  // 1. İşçide hesaplama (en son metin kazanır; eski yanıt yeni metne yazılmaz)
   useEffect(() => {
-    if (!active || !value.trim()) {
+    if (!active || !head.trim()) {
       setLocalResult(null);
       return;
     }
-
-    const t = window.setTimeout(() => {
-      const res = smartComposerService.getAssist(value, sources);
-      setLocalResult(res);
-    }, 30);
-
-    return () => window.clearTimeout(t);
-  }, [value, active, sources, modelReady]);
+    // Yanıtlar sırayla gelir; araya giren (eski metne ait) yanıt da saklanır, hayalet kaydırmada kullanılır
+    composerClient.assist(head, sources).then((res) => {
+      if (mounted.current && res) setLocalResult({ ...res, forText: head });
+    });
+  }, [head, active, sources]);
 
   // 2. Arka Planda Çıkmış Soru Kaynaklarını Çekme (Non-blocking, UI thread'ini dondurmaz)
   useEffect(() => {
@@ -91,7 +95,7 @@ export const ComposerAssist: React.FC<{
   const localHasSpell = !!localResult?.spell;
   useEffect(() => {
     const q = value;
-    if (!active || localHasSpell || q.trim().split(/\s+/).length < 2) { setServerSpell(null); return; }
+    if (!active || !atEnd || localHasSpell || q.trim().split(/\s+/).length < 2) { setServerSpell(null); return; }
     const ctrl = new AbortController();
     const t = window.setTimeout(() => {
       ApiService.suggestSpelling(q, ctrl.signal).then((r) => {
@@ -100,7 +104,7 @@ export const ComposerAssist: React.FC<{
       });
     }, 400);
     return () => { ctrl.abort(); window.clearTimeout(t); };
-  }, [value, active, localHasSpell]);
+  }, [value, active, localHasSpell, atEnd]);
 
   // 3. Ayna Katmanı (ca-mirror) Textarea ile Birebir Piksel Eşleme
   useEffect(() => {
@@ -135,14 +139,23 @@ export const ComposerAssist: React.FC<{
     ro.observe(ta);
     ta.addEventListener('scroll', measure);
 
-    // Tab veya imleç en sondayken ArrowRight tuşuyla hayalet metni kabul et
+    // İmleç konumu (seçim varsa önerilere gerek yok: imleç sonu sayılmaz)
+    const syncCaret = () => {
+      if (document.activeElement !== ta && document.activeElement !== document.body) return;
+      setCaret(ta.selectionStart !== ta.selectionEnd ? -1 : ta.selectionStart >= ta.value.length ? Infinity : ta.selectionStart);
+    };
+    syncCaret();
+    document.addEventListener('selectionchange', syncCaret);
+    ta.addEventListener('input', syncCaret);
+
+    // Hayalet metin yalnız imleç sondayken var; Tab ya da → ile kabul edilir
     const onKey = (e: KeyboardEvent) => {
       const g = ta.dataset.ghost || '';
-      if (!g) return;
-      const atEnd = ta.selectionStart === ta.value.length && ta.selectionEnd === ta.value.length;
-      if (e.key === 'Tab' || (e.key === 'ArrowRight' && atEnd)) {
+      if (!g || e.shiftKey || e.altKey || e.ctrlKey || e.metaKey) return;
+      const end = ta.selectionStart === ta.value.length && ta.selectionEnd === ta.value.length;
+      if (end && (e.key === 'Tab' || e.key === 'ArrowRight')) {
         e.preventDefault();
-        accept(g);
+        acceptRef.current({ text: g, replaceLen: 0 });
       }
     };
 
@@ -151,10 +164,22 @@ export const ComposerAssist: React.FC<{
       ro.disconnect();
       ta.removeEventListener('scroll', measure);
       ta.removeEventListener('keydown', onKey);
+      ta.removeEventListener('input', syncCaret);
+      document.removeEventListener('selectionchange', syncCaret);
     };
-  }, [active, textareaId, onChange]);
+  }, [active, textareaId]);
 
-  const ghost = localResult?.ghost || '';
+  // Hayalet: sonuç tam bu metin içinse aynen; yazılan harfler hayaletle uyuşuyorsa kaydırılmış hâli
+  let ghost = '';
+  if (localResult && atEnd && localResult.ghost) {
+    const base = localResult.forText;
+    if (base === value) ghost = localResult.ghost;
+    else if (value.startsWith(base)) {
+      const typed = value.slice(base.length);
+      if (typed && localResult.ghost.startsWith(typed) && localResult.ghost.length > typed.length) ghost = localResult.ghost.slice(typed.length);
+    }
+  }
+  const fresh = !!localResult && localResult.forText === head;
 
   // Kabul kısayolu için hayalet metni textarea dataset'ine iliştir
   useEffect(() => {
@@ -164,31 +189,50 @@ export const ComposerAssist: React.FC<{
 
   if (!active || !value.trim()) return null;
 
-  const accept = (textToAdd: string) => {
-    onChange(value + textToAdd);
+  const accept = ({ text: add, replaceLen = 0 }: { text: string; replaceLen?: number }) => {
     const ta = document.getElementById(textareaId) as HTMLTextAreaElement | null;
+    const at = ta && ta.selectionStart === ta.selectionEnd ? ta.selectionStart : value.length;
+    const left = value.slice(0, Math.max(0, at - replaceLen));
+    // imleç bir kelimenin ortasındaysa ve sağda boşluk varsa çift boşluk bırakma
+    const right = value.slice(at);
+    let ins = add;
+    if (right.startsWith(' ') && ins.endsWith(' ')) ins = ins.slice(0, -1);
+    const next = left + ins + right;
+    const pos = left.length + ins.length;
+    onChange(next);
     ta?.focus();
     window.setTimeout(() => {
       if (ta) {
-        const nextLen = ta.value.length;
-        ta.setSelectionRange(nextLen, nextLen);
+        ta.setSelectionRange(pos, pos);
+        setCaret(pos >= ta.value.length ? Infinity : pos);
       }
     }, 0);
   };
+  acceptRef.current = accept;
 
-  const options = localResult?.options || [];
+  // Seçenekler yalnız güncel metnin sonucuysa (eski sonucun kelime çipi yanlış yere eklenir);
+  // hayalet kaydırıldıysa ilk çip hayaletin kendisidir
+  // Metnin ortasında yalnız kelime çipleri (cümle devamı araya eklenmez); imleç kelime içindeyse hiçbiri
+  const insideWord = !atEnd && /[\p{L}\p{N}]/u.test(value.charAt(caretAt));
+  const options: AssistOption[] = insideWord ? [] : fresh
+    ? (localResult?.options || []).filter((o) => atEnd || o.category === 'kelime')
+    : ghost ? [{ ...(localResult!.options[0] as AssistOption), text: ghost, preview: `…${ghost.trim()}` }] : [];
+  // Düzelt bütün metne uygulanır: yalnız imleç sondayken ve sonuç bu metin içinse
+  const ownSpell = fresh && atEnd ? localResult?.spell || null : null;
   // Sunucu önerisi yalnız tam o metin için geçerli (yazmaya devam edilince eski öneri uygulanmaz)
-  const spell = localResult?.spell || (serverSpell && serverSpell.q === value ? serverSpell : null);
-  let fix = localResult?.fix || null;
-  if (spell && !localResult?.spell) {
+  const spell = ownSpell || (serverSpell && serverSpell.q === value ? serverSpell : null);
+  let fix = fresh && atEnd ? localResult?.fix || null : null;
+  if (spell && !ownSpell) {
     // Sunucu yazım düzeltmesini noktalama düzeltmesiyle birleştir
     const punct = smartComposerService.getPunctuationFix(value, spell.text);
     const sc = spell.changes.map((c) => `${c.from} → ${c.to}`);
     fix = punct ? { text: punct.text, changes: [...sc, ...punct.changes] } : { text: spell.text, changes: sc };
   }
 
-  // Düzeltme seçeneği: hem noktalama hem yazım hatalarını birleştirir
-  const activeFix = fix || (spell ? { text: spell.text, changes: spell.changes.map((c) => `${c.from} → ${c.to}`) } : null);
+  // Düzeltme seçeneği: hem noktalama hem yazım hatalarını birleştirir. Yalnız ilk harfi büyütmek
+  // gibi tek başına biçim değişikliği çip olarak gösterilmez (her yazışta çıkıp gürültü yapıyordu).
+  const fixAll = fix || (spell ? { text: spell.text, changes: spell.changes.map((c) => `${c.from} → ${c.to}`) } : null);
+  const activeFix = fixAll && (spell || fixAll.changes.length > 1 || /\?$|boşluk/.test(fixAll.changes[0])) ? fixAll : null;
 
   const hasItems = options.length > 0 || !!activeFix;
 
@@ -223,7 +267,7 @@ export const ComposerAssist: React.FC<{
               className="ca-ghost"
               onPointerDown={(e) => {
                 e.preventDefault();
-                accept(ghost);
+                accept({ text: ghost });
               }}
               title="Kabul etmek için Tab veya ⇥ tuşuna basın"
             >
@@ -245,7 +289,13 @@ export const ComposerAssist: React.FC<{
             type="button"
             className="ca-chip is-fix"
             onPointerDown={(e) => e.preventDefault()}
-            onClick={() => onChange(activeFix.text)}
+            onClick={() => {
+              onChange(activeFix.text);
+              setCaret(Infinity);
+              const ta = document.getElementById(textareaId) as HTMLTextAreaElement | null;
+              ta?.focus();
+              window.setTimeout(() => ta?.setSelectionRange(ta.value.length, ta.value.length), 0);
+            }}
             title={`Yazımı düzelt: ${activeFix.changes.join(', ')}`}
           >
             <Wand2 aria-hidden className="w-3.5 h-3.5 text-ai shrink-0" />
@@ -259,20 +309,23 @@ export const ComposerAssist: React.FC<{
 
         {/* Cümle İçi Devam ve Soru Kapatma Çipleri */}
         {options.map((opt, i) => {
-          const isContinue = opt.type === 'continue';
+          const isWord = opt.category === 'kelime';
+          const isContinue = opt.type === 'continue' && !isWord;
           const isComplete = opt.type === 'complete';
-          const isTop = opt.isTop || i === 0;
+          const isTop = !!opt.isTop;
 
           return (
             <button
               key={`${opt.type}-${opt.text}-${i}`}
               type="button"
-              className={`ca-chip ${isTop ? 'is-top' : ''} ${isContinue ? 'is-continue' : ''} ${isComplete ? 'is-complete' : ''}`}
+              className={`ca-chip ${isTop ? 'is-top' : ''} ${isContinue ? 'is-continue' : ''} ${isComplete ? 'is-complete' : ''} ${isWord ? 'is-word' : ''}`}
               onPointerDown={(e) => e.preventDefault()}
-              onClick={() => accept(opt.text)}
-              title={isContinue ? 'Klinik vaka anlatımına devam et' : 'Soruyu bu kök ile tamamla'}
+              onClick={() => accept(opt)}
+              title={isWord ? `“${opt.preview}” kelimesini ekle` : isContinue ? 'Soru köküne devam et' : 'Soruyu bu kök ile tamamla'}
             >
-              {isContinue ? (
+              {isWord ? (
+                <Type aria-hidden className="w-3.5 h-3.5 text-ink-3 shrink-0" />
+              ) : isContinue ? (
                 <ArrowRight aria-hidden className="w-3.5 h-3.5 text-accent shrink-0" />
               ) : isComplete ? (
                 <HelpCircle aria-hidden className="w-3.5 h-3.5 text-ai shrink-0" />
@@ -280,9 +333,11 @@ export const ComposerAssist: React.FC<{
                 <Sparkles aria-hidden className="w-3.5 h-3.5 text-ink-3 shrink-0" />
               )}
 
-              <span className={`ca-badge ${isContinue ? 'is-continue' : isComplete ? 'is-complete' : ''}`}>
-                {opt.label}
-              </span>
+              {!isWord && (
+                <span className={`ca-badge ${isContinue ? 'is-continue' : isComplete ? 'is-complete' : ''}`}>
+                  {opt.label}
+                </span>
+              )}
 
               <span>{opt.preview}</span>
 

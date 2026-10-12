@@ -27,7 +27,7 @@ import { AppUser } from '../services/auth';
 import { getDefaultActiveCommitteeId, filterCurrent2026_2027Committees } from '../services/firestoreDb';
 import { OptionsEditor } from './ui/OptionsEditor';
 import { ComposerAssist } from './quickadd/ComposerAssist';
-import { smartComposerService } from '../services/smartComposerService';
+import { composerClient } from '../services/composerClient';
 import { IntakeEcho } from './quickadd/IntakeEcho';
 import { BlurOverlay } from './ui/Animations';
 import { toast } from './ui/Toast';
@@ -814,21 +814,20 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
     // Kökte öneri ComposerAssist kutusunda gösterilir
     if (mode === 'option' || mode === 'stem' || !q.trim() || q.trim().split(/\s+/).length < 2) { setSpell(null); return; }
 
-    // 1. Önce anlık tıp sözlüğü ile kontrol et (< 1ms, sıfır gecikme)
-    const localSpell = smartComposerService.getSpellingCorrection(q);
-    if (localSpell && localSpell.changes.length > 0) {
-      setSpell(localSpell.text !== text ? localSpell : null);
-      return;
-    }
-
-    // 2. Yerelde bulunamazsa arka planda sunucudan yokla (donma/kasma yaratmaz)
+    // 1. Önce yerel derlem sözlüğü (yazım işçisinde; ana iş parçacığını kilitlemez)
+    // 2. Yerelde bulunamazsa arka planda sunucudan yokla
     const ctrl = new AbortController();
-    const t = window.setTimeout(() => {
-      ApiService.suggestSpelling(q, ctrl.signal).then((r) => {
-        if (ctrl.signal.aborted || !r?.text) { if (!ctrl.signal.aborted) setSpell(null); return; }
-        setSpell(r.text !== text ? r : null);
-      });
-    }, 400);
+    let t = 0;
+    composerClient.spell(q).then((localSpell) => {
+      if (ctrl.signal.aborted) return;
+      if (localSpell && localSpell.changes.length > 0) { setSpell(localSpell.text !== text ? localSpell : null); return; }
+      t = window.setTimeout(() => {
+        ApiService.suggestSpelling(q, ctrl.signal).then((r) => {
+          if (ctrl.signal.aborted || !r?.text) { if (!ctrl.signal.aborted) setSpell(null); return; }
+          setSpell(r.text !== text ? r : null);
+        });
+      }, 400);
+    });
     return () => { ctrl.abort(); window.clearTimeout(t); };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [debouncedText, text, mode]);

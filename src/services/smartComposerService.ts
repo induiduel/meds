@@ -26,6 +26,8 @@ export interface AssistOption {
   preview: string; // User-facing display text
   isTop?: boolean;
   category?: string;
+  /** Eklemeden önce imlecin solundan silinecek karakter (yarım kelime değiştirilirken) */
+  replaceLen?: number;
 }
 
 export interface AssistResult {
@@ -478,12 +480,28 @@ export interface ComposerModel {
 let MODEL: ComposerModel | null = null;
 let loading: Promise<void> | null = null;
 
-/** Modeli tembel yükler (ayrı parça; ana paketi büyütmez). */
+/**
+ * Model üzerinden bir kez kurulan dizinler:
+ *  - pre: katlanmış sözlük, alfabetik (önek tamamlama ikili aramayla, tüm sözlüğü taramadan)
+ *  - asc: ASCII biçim → Türkçe karakterli adaylar (aksansız yazımda bağlamla seçim)
+ */
+interface ModelIndex { pre: string[]; asc: Map<string, string[]> }
+let IDX: ModelIndex | null = null;
+/** Kelime düzeltme önbelleği (yazarken aynı kelimeler her tuşta yeniden hesaplanmaz) */
+const WORD_MEMO = new Map<string, string | null>();
+
+function setModelInternal(m: ComposerModel | null): void {
+  MODEL = m;
+  IDX = null;
+  WORD_MEMO.clear();
+}
+
+/** Modeli tembel yükler (ayrı parça; ana paketi büyütmez). Tarayıcıda yalnız yazım işçisi çağırır. */
 export function loadComposerModel(): Promise<void> {
   if (MODEL) return Promise.resolve();
   if (!loading) {
     loading = import('../data/composer_model.json')
-      .then((m: any) => { MODEL = (m.default ?? m) as ComposerModel; })
+      .then((m: any) => { setModelInternal((m.default ?? m) as ComposerModel); })
       .catch(() => { loading = null; });
   }
   return loading;
@@ -500,9 +518,35 @@ const NEAR: Record<string, string> = {
   ı: 'iuo', i: 'ıuo', j: 'hku', k: 'jlı', l: 'kş', m: 'nö', n: 'bm', o: 'öıp', ö: 'om', p: 'oğ',
   r: 'et', s: 'şad', ş: 'sli', t: 'ry', u: 'üyı', ü: 'uğ', v: 'cb', y: 'tu', z: 'ax',
 };
-const CLOSER_RE = /\b(hangisi|hangileri|nedir|değildir|yanlıştır|doğrudur|aşağıdaki)/i;
+const CLOSER_RE = /(^|\s)(hangisi|hangileri|nedir|değildir|yanlıştır|doğrudur|aşağıdaki)/i;
+/** Geri çekilme (stupid backoff) katsayısı: bir alt bağlam dereceye göre bu oranla zayıflar */
+const BACKOFF = 0.4;
 
-type Cand = { text: string; score: number; conf: number; src: 'kaynak' | 'model' | 'kalıp' | 'kelime'; first?: string };
+type Cand = { text: string; score: number; conf: number; src: 'kaynak' | 'model' | 'kalıp' | 'kelime'; first?: string; k?: number };
+type NextWord = { w: string; f: string; p: number; k: number; tot: number };
+
+function index(): ModelIndex | null {
+  if (!MODEL) return null;
+  if (IDX) return IDX;
+  const keys = Object.keys(MODEL.vocab);
+  const asc = new Map<string, string[]>();
+  for (const f of keys) {
+    const a = toAscii(f);
+    if (a === f) continue;
+    const l = asc.get(a);
+    if (l) l.push(f); else asc.set(a, [f]);
+  }
+  keys.sort();
+  IDX = { pre: keys, asc };
+  return IDX;
+}
+
+/** Sıralı dizide öneki taşıyan ilk konum */
+function lowerBound(arr: string[], key: string): number {
+  let lo = 0, hi = arr.length;
+  while (lo < hi) { const mid = (lo + hi) >> 1; if (arr[mid] < key) lo = mid + 1; else hi = mid; }
+  return lo;
+}
 
 // ------------------------------------------------------------------------------
 // 7. AKILLI DEVAM VE TAMAMLAMA MOTORU (SMART COMPOSER CORE)
@@ -510,16 +554,18 @@ type Cand = { text: string; score: number; conf: number; src: 'kaynak' | 'model'
 
 export class SmartComposerEngine {
   /** Test/simülasyon için modeli doğrudan verir */
-  public setModel(m: ComposerModel | null): void { MODEL = m; }
+  public setModel(m: ComposerModel | null): void { setModelInternal(m); }
   public hasModel(): boolean { return !!MODEL; }
   /** Hayalet metnin gösterileceği en düşük güven (simülasyonla ayarlandı) */
   public ghostMin = 0.34;
 
   /**
    * Yazılan metne göre hayalet metin (ghost), seçenekler ve yazım düzeltmesi üretir.
-   * İlke: emin olunmayan öneri gösterilmez (yanlış öneri, öneri yokluğundan kötüdür).
-   * Sıra: 1) benzer çıkmış soru kökünden birebir devam, 2) derlem n-gram zinciri,
+   * İlke: emin olunmayan hayalet metin gösterilmez (yanlış öneri, öneri yokluğundan kötüdür);
+   * kelime önerileri (klavye şeridi gibi) ise bağlama göre sıralı en olası 3 kelimedir.
+   * Sıra: 1) benzer çıkmış soru kökünden birebir devam, 2) derlem n-gram zinciri (geri çekilmeli),
    *       3) açıkça başlatılmış soru kökü kalıbı, 4) yarım kelime tamamlama.
+   * Bağlam aksansız/hatalı yazılmış olsa da düzeltilmiş biçimiyle aranır ("en olasi tani" → "en olası tanı").
    */
   public getAssist(text: string, sources: string[] = []): AssistResult {
     const raw = text || '';
@@ -546,16 +592,28 @@ export class SmartComposerEngine {
     const endsWithSpace = /\s$/.test(raw);
     const words = raw.trim().split(/\s+/);
     const partial = endsWithSpace ? '' : words[words.length - 1];
-    const done = (endsWithSpace ? words : words.slice(0, -1)).map(foldWord).filter(Boolean);
+    const doneRaw = (endsWithSpace ? words : words.slice(0, -1)).map(foldWord).filter(Boolean);
+    // Bağlam: yazılan biçim + düzeltilmiş biçim (aksansız / harf hatalı yazımda da n-gram bulunur)
+    const done = this.normContext(doneRaw);
     const pf = foldWord(partial);
-    const lead = endsWithSpace || !partial ? '' : ' ';
 
     const cands: Cand[] = [];
     this.fromSources(done, pf, partial, endsWithSpace, sources, cands);
+    if (done.join(' ') !== doneRaw.join(' ')) this.fromSources(doneRaw, pf, partial, endsWithSpace, sources, cands);
     this.fromModel(done, pf, partial, endsWithSpace, cands);
-    this.fromStemPatterns(raw, endsWithSpace, cands);
+    this.fromStemPatterns([...done, ...(pf ? [pf] : [])].join(' '), endsWithSpace, cands);
     if (!cands.length && pf.length >= 3) this.completeWord(done, pf, partial, cands);
 
+    // Kaynak yalnız 1-2 kelimeyle eşleştiyse ve ilk kelimesi güçlü (2+ kelimelik, sık) bağlamın
+    // dağılımında hiç/çok az görülüyorsa kaynak yanlış dala sapmıştır
+    const dist = pf ? [] : this.nextWords(['^', ...done], '');
+    if ((dist[0]?.tot ?? 0) >= 8 && dist[0].k >= 2) {
+      for (const c of cands) {
+        if (c.src !== 'kaynak' || !c.first || (c.k ?? 0) > 2) continue;
+        const pm = dist.find((d) => d.f === c.first)?.p ?? 0;
+        c.conf *= pm >= 0.15 ? 1.15 : pm > 0 ? 0.85 : 0.6;
+      }
+    }
     // Kaynak ile derlem modeli aynı kelimeyle başlıyorsa güven artar, ayrışıyorsa azalır
     const firstOf = (c: Cand) => foldWord((pf ? partial + c.text : c.text).trim().split(/\s+/)[0] || '');
     const modelC = cands.find((c) => c.src === 'model');
@@ -582,21 +640,33 @@ export class SmartComposerEngine {
     // Erken soru kapatma koruması: vaka anlatımı sürerken zayıf "hangisidir" önerisini bastır
     const ok = uniq.filter((c) => !(phase.isExpanding && CLOSER_RE.test(c.text) && c.conf < 0.5 && c.src !== 'kalıp'));
     const best = ok[0];
-    const ghostOk = !!best && best.conf >= this.ghostMin;
-    void lead;
+    // kabul edilince sonraki kelimeye hazır olsun: cümle bitmiyorsa sona boşluk
+    const ghost = best && best.conf >= this.ghostMin ? best.text.replace(/([^\s?.!:])$/, '$1 ') : '';
 
-    const options: AssistOption[] = ok.slice(0, 3).map((c, i) => {
-      const closes = CLOSER_RE.test(c.text) || /\?\s*$/.test(c.text);
-      return {
+    const options: AssistOption[] = [];
+    if (ghost) {
+      const closes = CLOSER_RE.test(ghost) || /\?\s*$/.test(ghost);
+      options.push({
         type: closes ? 'complete' : 'continue',
-        label: closes ? 'Soruyu Tamamla' : i === 0 ? 'Devam Et' : 'Alternatif',
-        text: c.text,
-        preview: `…${c.text.trim()}`,
-        isTop: i === 0,
-        category: c.src,
-      } as AssistOption;
-    });
-    const ghost = ghostOk ? best.text : '';
+        label: closes ? 'Soruyu Tamamla' : 'Devam Et',
+        text: ghost,
+        preview: `…${ghost.trim()}`,
+        isTop: true,
+        category: best.src,
+      });
+    }
+    // Kelime önerileri (klavye şeridi): bağlama göre en olası kelimeler; hayaletin ilk kelimesi tekrarlanmaz
+    const ghostFirst = ghost ? foldWord((pf ? partial + ghost : ghost).trim().split(/\s+/)[0] || '') : '';
+    for (const w of this.suggestWords(done, pf, 4)) {
+      if (options.length >= 4) break;
+      const f = foldWord(w);
+      if (f === ghostFirst || f === pf) continue;
+      // yarım kelime seçilen kelimeyle değiştirilir (aksansız "asagi" → "aşağıdaki")
+      options.push({
+        type: 'continue', label: 'Kelime', text: (pf || endsWithSpace ? '' : ' ') + w + ' ', preview: w, category: 'kelime',
+        replaceLen: pf ? partial.length : 0,
+      });
+    }
     return {
       ghost,
       ghostType: ghost ? options[0].type : null,
@@ -606,6 +676,26 @@ export class SmartComposerEngine {
       isExpanding: phase.isExpanding,
       detectedEntities: entities,
     };
+  }
+
+  /** Bağlam kelimelerini sözlükteki doğru biçime getirir (bilinen kelime aynen kalır) */
+  private normContext(ws: string[]): string[] {
+    if (!MODEL) return ws;
+    const asciiCtx = ws.every((w) => toAscii(w) === w);
+    return ws.map((w, i) => {
+      if (this.known(w) >= 3 && !(asciiCtx && MODEL!.acc[w])) return w;
+      const acc = MODEL!.acc[w] || this.pickAccent(w, ws.slice(0, i));
+      if (acc) return acc;
+      if (this.known(w)) return w;
+      const c = w.length >= 5 ? this.correctWord(w, asciiCtx) : null;
+      return c ? foldWord(c) : w;
+    });
+  }
+
+  /** Katlanmış kelime, öneki (aksansız yazılmış olabilir) taşıyor mu? */
+  private prefixMatch(f: string, pf: string): boolean {
+    if (f.startsWith(pf)) return true;
+    return toAscii(pf) === pf && toAscii(f).startsWith(pf);
   }
 
   /** Benzer çıkmış soru köklerinde yazılanın son kelimelerini bulup birebir devamını önerir */
@@ -644,7 +734,7 @@ export class SmartComposerEngine {
       const gen = this.contextMass(done.slice(done.length - Math.min(bestK, 3)));
       if (gen > 30 && bestK < 4) conf *= 0.6;
       firsts.push(foldWord(rest[0]));
-      out.push({ text, score: 100 + bestK * 20, conf, src: 'kaynak', first: foldWord(rest[0]) });
+      out.push({ text, score: 100 + bestK * 20, conf, src: 'kaynak', first: foldWord(rest[0]), k: bestK });
     }
     // Birden çok kaynak aynı kelimeyle devam ediyorsa güven artar
     for (const c of out) {
@@ -661,54 +751,70 @@ export class SmartComposerEngine {
     return list ? list.reduce((a, [, n]) => a + n, 0) : 0;
   }
 
-  /** Derlem n-gram modeliyle (3→2→1 geri çekilme) güvenli kelime zinciri kurar */
+  /**
+   * Sonraki kelime dağılımı (3→2→1 bağlam, stupid backoff): her aday en yüksek dereceli
+   * bağlamdaki olasılığını alır, alt bağlamlar BACKOFF oranında zayıflar.
+   */
+  private nextWords(ctx: string[], prefix: string): NextWord[] {
+    if (!MODEL) return [];
+    const by = new Map<string, NextWord>();
+    let topK = 0;
+    for (let k = Math.min(3, ctx.length); k >= 1; k--) {
+      const list = MODEL.ng[ctx.slice(ctx.length - k).join(' ')];
+      if (!list) continue;
+      const fl = prefix ? list.filter(([w]) => { const f = foldWord(w); return f !== prefix && this.prefixMatch(f, prefix); }) : list;
+      if (!fl.length) continue;
+      if (!topK) topK = k;
+      const tot = list.reduce((a, [, n]) => a + n, 0);
+      const ftot = fl.reduce((a, [, n]) => a + n, 0);
+      const w8 = Math.pow(BACKOFF, topK - k);
+      for (const [w, n] of fl) {
+        const f = foldWord(w);
+        // önekli aramada olasılık öneke uyan adaylar içinde hesaplanır
+        const p = (n / (prefix ? ftot : tot)) * w8;
+        const cur = by.get(f);
+        if (!cur || p > cur.p) by.set(f, { w, f, p, k: cur ? Math.max(cur.k, k) : k, tot: prefix ? ftot : tot });
+      }
+    }
+    return [...by.values()].sort((a, b) => b.p - a.p);
+  }
+
+  /** Derlem n-gram modeliyle (geri çekilmeli) güvenli kelime zinciri kurar */
   private fromModel(done: string[], pf: string, partial: string, endsWithSpace: boolean, out: Cand[]): void {
     if (!MODEL) return;
     const ctxWords = ['^', ...done];
-    const next = (ctx: string[], prefix: string): { w: string; p: number; n: number; k: number } | null => {
-      for (let k = Math.min(3, ctx.length); k >= 1; k--) {
-        const key = ctx.slice(ctx.length - k).join(' ');
-        let list = MODEL!.ng[key];
-        if (!list) continue;
-        if (prefix) list = list.filter(([w]) => { const f = foldWord(w); return f.startsWith(prefix) && f !== prefix; });
-        if (!list.length) continue;
-        const tot = list.reduce((a, [, n]) => a + n, 0);
-        const [w, n] = list[0];
-        // tek kelimelik bağlam zayıftır: daha sıkı eşik
-        if (k === 1 && !prefix && ctx.length > 1 && n / tot < 0.6) return null;
-        return { w, p: n / tot, n, k };
-      }
-      return null;
-    };
-
-    const first = next(ctxWords, pf);
-    if (!first) return;
+    const list = this.nextWords(ctxWords, pf);
+    const first = list[0];
+    if (!first || first.tot < 2) return;
+    // tek kelimelik bağlam zayıftır: daha sıkı eşik (yalnız açık baskınlıkta)
+    if (first.k === 1 && !pf && ctxWords.length > 1 && first.p < 0.6) return;
+    // aksansız yazılmış öneke uyan aday, yazılanla birebir başlamıyorsa hayalet olarak eklenemez
+    if (pf && !foldWord(first.w).startsWith(pf)) return;
     const chain: string[] = [first.w];
-    let conf = first.p * (first.k >= 2 ? 1 : 0.7);
-    if (first.n < 2) return;
+    const support = Math.min(1, first.tot / 6);
+    const conf = first.p * (first.k >= 2 ? 1 : 0.7) * (0.6 + 0.4 * support);
     const ctx = [...ctxWords, foldWord(first.w)];
     while (chain.length < 8 && !/[?.!]$/.test(chain[chain.length - 1])) {
-      const nx = next(ctx, '');
-      if (!nx || nx.p < 0.55 || nx.k < 2) break;
+      const nx = this.nextWords(ctx, '')[0];
+      if (!nx || nx.p < 0.55 || nx.k < 2 || nx.tot < 3) break;
       chain.push(nx.w);
-      ctx.push(foldWord(nx.w));
+      ctx.push(nx.f);
     }
     let text: string;
     if (pf) {
-      const tail = chain[0].slice(partial.length);
       // yüzey biçimi yazılanla aynı harflerle başlamıyorsa (büyük/küçük) katlanmış kuyruğu kullan
-      const okTail = foldWord(chain[0]).startsWith(pf) ? chain[0].slice(pf.length) : tail;
-      text = okTail + (chain.length > 1 ? ' ' + chain.slice(1).join(' ') : '');
+      text = chain[0].slice(pf.length) + (chain.length > 1 ? ' ' + chain.slice(1).join(' ') : '');
     } else {
       text = (endsWithSpace ? '' : ' ') + chain.join(' ');
     }
+    void partial;
     if (!text.trim()) return;
     out.push({ text, score: 50 + conf * 40 + first.k * 5, conf, src: 'model' });
   }
 
   /** Kullanıcı açıkça bir soru kapatıcıya başladıysa ("en olası", "kesin tanı"…) kalıbı tamamlar */
-  private fromStemPatterns(raw: string, endsWithSpace: boolean, out: Cand[]): void {
-    const folded = foldTr(raw);
+  private fromStemPatterns(foldedCtx: string, endsWithSpace: boolean, out: Cand[]): void {
+    const folded = foldTr(foldedCtx);
     for (const qp of QUESTION_STEM_PATTERNS) {
       for (const init of qp.initiators) {
         const f = foldTr(init);
@@ -727,19 +833,71 @@ export class SmartComposerEngine {
     }
   }
 
+  /** Öneke uyan sözlük kelimeleri, sıklığa göre (ikili arama; tüm sözlük taranmaz) */
+  private prefixWords(pf: string, limit: number): [string, number][] {
+    const ix = index();
+    if (!ix || !pf) return [];
+    const res: [string, number][] = [];
+    const scan = (p: string) => {
+      let seen = 0;
+      for (let i = lowerBound(ix.pre, p); i < ix.pre.length && ix.pre[i].startsWith(p) && seen < 4000; i++, seen++) {
+        const f = ix.pre[i];
+        if (f === pf) continue;
+        res.push([f, this.known(f)]);
+      }
+    };
+    scan(pf);
+    // aksansız önek: Türkçe karakterli kelimeler de aday ("hangis" → "hangisidir", "asagi" → "aşağıdaki")
+    if (toAscii(pf) === pf && pf.length >= 2) {
+      const keep = new Set(res.map(([f]) => f));
+      for (const [a, list] of ix.asc) {
+        if (!a.startsWith(pf)) continue;
+        for (const f of list) if (!keep.has(f)) { keep.add(f); res.push([f, this.known(f)]); }
+      }
+    }
+    res.sort((a, b) => b[1] - a[1]);
+    return res.slice(0, limit);
+  }
+
+  private surface(f: string): string {
+    const v = MODEL?.vocab[f];
+    return Array.isArray(v) ? v[0] : f;
+  }
+
   /** Yarım kelimeyi derlemdeki en sık kelimeyle tamamlar (yalnız baskın aday varsa) */
   private completeWord(done: string[], pf: string, partial: string, out: Cand[]): void {
     if (!MODEL) return;
-    let best: [string, number] | null = null, second = 0;
-    for (const [f, v] of Object.entries(MODEL.vocab)) {
-      if (f.length <= pf.length || !f.startsWith(pf)) continue;
-      const [w, n] = typeof v === 'number' ? [f, v] : v;
-      if (!best || n > best[1]) { second = best ? best[1] : second; best = [w, n]; }
-      else if (n > second) second = n;
-    }
-    if (!best || best[1] < 5 || best[1] < second * 2) return;
+    const top = this.prefixWords(pf, 2).filter(([f]) => f.startsWith(pf));
+    if (!top.length) return;
+    const [f, n] = top[0];
+    const second = top[1]?.[1] ?? 0;
+    if (n < 5 || n < second * 2) return;
     void done; void partial;
-    out.push({ text: best[0].slice(pf.length), score: 20, conf: 0.35, src: 'kelime' });
+    out.push({ text: this.surface(f).slice(pf.length), score: 20, conf: 0.35, src: 'kelime' });
+  }
+
+  /**
+   * Kelime önerisi şeridi: bağlamdan gelen adaylar (n-gram olasılığı) + öneke uyan sık kelimeler.
+   * Sıralama: bağlam olasılığı baskın, sıklık (log) eşitlik bozucu.
+   */
+  public suggestWords(done: string[], pf: string, limit = 3): string[] {
+    if (!MODEL) return [];
+    const score = new Map<string, number>();
+    const ctx = ['^', ...done];
+    for (const nw of this.nextWords(ctx, pf).slice(0, 8)) {
+      if (nw.tot < 2) continue;
+      score.set(nw.f, (score.get(nw.f) ?? 0) + nw.p * 10 * Math.min(1, nw.tot / 4));
+    }
+    if (pf.length >= 2) {
+      for (const [f, n] of this.prefixWords(pf, 12)) {
+        if (n < 2) continue;
+        score.set(f, (score.get(f) ?? 0) + Math.log10(1 + n) * 0.6);
+      }
+    }
+    return [...score.entries()]
+      .sort((a, b) => b[1] - a[1])
+      .slice(0, limit)
+      .map(([f]) => this.surface(f));
   }
 
   private takeSentence(sw: string[], from: number, max: number): string[] {
@@ -758,10 +916,11 @@ export class SmartComposerEngine {
   /**
    * Güvenli Türkçe/tıbbi yazım düzeltmesi.
    *  - Derlemde geçen (bilinen) kelimeye asla dokunmaz.
-   *  - Türkçe karakter eksikliği: yalnız ASCII biçimi derlemde kendi başına geçmiyorsa.
+   *  - Türkçe karakter eksikliği: ASCII biçimi derlemde kendi başına geçmiyorsa; birden çok aday
+   *    varsa ("sinir": sınır/sinir) önceki kelimeyle birlikte geçiş sayısına göre seçer.
    *  - Harf hatası: 1 düzenleme uzaklığındaki (düşme, yer değiştirme, çiftleme, yanlış harf)
-   *    tek baskın derlem kelimesine.
-   *  - Henüz yazılmakta olan son kelimeye dokunmaz.
+   *    baskın derlem kelimesine; adaylar yakınsa önceki kelime bağlamı karar verir.
+   *  - Henüz yazılmakta olan son kelimeye dokunmaz. Sonuçlar kelime başına önbelleklenir.
    */
   public getSpellingCorrection(
     text: string
@@ -773,10 +932,13 @@ export class SmartComposerEngine {
     let lastIdx = -1;
     if (typing) { const m = text.match(/[\p{L}]+$/u); lastIdx = m ? text.length - m[0].length : -1; }
 
-    const fixed = text.replace(/[\p{L}]{3,}/gu, (word, offset: number) => {
-      if (offset === lastIdx) return word;
-      const to = this.correctWord(word, asciiText);
-      if (to && to !== word) { changes.push({ from: word, to }); return to; }
+    let prev = '';
+    const fixed = text.replace(/[\p{L}]+/gu, (word, offset: number) => {
+      const p = prev;
+      prev = foldWord(word);
+      if (word.length < 3 || offset === lastIdx) return word;
+      const to = this.correctWordCtx(word, asciiText, p);
+      if (to && to !== word) { changes.push({ from: word, to }); prev = foldWord(to); return to; }
       return word;
     });
     return changes.length > 0 ? { text: fixed, changes } : null;
@@ -787,7 +949,51 @@ export class SmartComposerEngine {
     return v === undefined ? 0 : typeof v === 'number' ? v : v[1];
   }
 
-  private correctWord(word: string, asciiText = false): string | null {
+  /** Önceki kelimeden sonra adayın derlemde kaç kez geldiği (bağlam kanıtı) */
+  private ctxCount(prev: string, cand: string): number {
+    if (!MODEL || !prev) return 0;
+    const list = MODEL.ng[prev];
+    if (!list) return 0;
+    for (const [w, n] of list) if (foldWord(w) === cand) return n;
+    return 0;
+  }
+
+  /** Aksansız kelime için Türkçe karakterli adaylardan bağlam/sıklıkla tek ve güvenli olanı seçer */
+  private pickAccent(lower: string, before: string[]): string | null {
+    const ix = index();
+    const vars = ix?.asc.get(lower);
+    if (!vars || !vars.length) return null;
+    const own = this.known(lower);
+    const prev = before[before.length - 1] || '';
+    const ranked = vars
+      .map((f) => ({ f, n: this.known(f), c: this.ctxCount(prev, f) }))
+      .sort((a, b) => (b.c - a.c) || (b.n - a.n));
+    const [a, b] = ranked;
+    // bağlam açıkça tek adayı gösteriyorsa
+    if (a.c >= 2 && (!b || a.c >= 3 * b.c) && a.c >= 2 * this.ctxCount(prev, lower)) return a.f;
+    // bağlam yoksa: aday çok baskın ve ASCII biçim kendi başına nadir
+    const tot = ranked.reduce((s, r) => s + r.n, 0);
+    if (a.n >= 5 && a.n >= 0.9 * tot && own * 6 <= a.n) return a.f;
+    return null;
+  }
+
+  private correctWordCtx(word: string, asciiText: boolean, prev: string): string | null {
+    const key = `${asciiText ? 1 : 0}|${prev}|${word}`;
+    if (WORD_MEMO.has(key)) return WORD_MEMO.get(key)!;
+    let r = this.correctWord(word, asciiText, prev);
+    if (!r && asciiText && MODEL) {
+      const lower = word.toLocaleLowerCase('tr-TR');
+      if (!MODEL.acc[lower] && !(word.length <= 5 && word === word.toLocaleUpperCase('tr-TR'))) {
+        const a = this.pickAccent(lower, prev ? [prev] : []);
+        if (a && a !== lower) r = this.preserveCase(word, this.surface(a));
+      }
+    }
+    if (WORD_MEMO.size > 6000) WORD_MEMO.clear();
+    WORD_MEMO.set(key, r);
+    return r;
+  }
+
+  private correctWord(word: string, asciiText = false, prev = ''): string | null {
     let lower = word.toLocaleLowerCase('tr-TR');
     // Aksansız metinde baştaki "I" çoğunlukla "İ"dir ("Izleminde")
     if (asciiText && word[0] === 'I' && !this.known(lower) && !MODEL?.acc[lower]) lower = 'i' + lower.slice(1);
@@ -826,18 +1032,22 @@ export class SmartComposerEngine {
       for (let i = 1; i < L; i++) {                                                                                     // fazla harf
         if (lower[i] === lower[i - 1]) consider(lower.slice(0, i) + lower.slice(i + 1), 3);        // çiftlenmiş harf ("hangii")
         else if (!stemmed) consider(lower.slice(0, i) + lower.slice(i + 1), 8);
-    }
-    for (let i = 1; i <= L; i++) for (const ch of TR_LETTERS) consider(lower.slice(0, i) + ch + lower.slice(i), 8);   // eksik harf
-    if (!stemmed) for (let i = 0; i < L; i++) for (const ch of NEAR[lower[i]] ?? '') consider(lower.slice(0, i) + ch + lower.slice(i + 1), 8); // komşu tuş / aksan
+      }
+      // eksik harf (sona ekleme yok: "olayla" → "olaylar" gibi geçerli çekimler bozulur)
+      for (let i = 1; i < L; i++) for (const ch of TR_LETTERS) consider(lower.slice(0, i) + ch + lower.slice(i), 8);
+      if (!stemmed) for (let i = 0; i < L; i++) for (const ch of NEAR[lower[i]] ?? '') consider(lower.slice(0, i) + ch + lower.slice(i + 1), 8); // komşu tuş / aksan
     }
     if (!cand.size) return null;
-    const ranked = [...cand.entries()].sort((a, b) => b[1] - a[1]);
+    // Sıklık × bağlam: önceki kelimeden sonra derlemde geçen aday öne çıkar
+    const ranked = [...cand.entries()]
+      .map(([w, n]) => [w, n * (1 + 4 * Math.min(1, this.ctxCount(prev, w) / 2))] as [string, number])
+      .sort((a, b) => b[1] - a[1]);
     const [bw, bn] = ranked[0];
     const second = ranked[1]?.[1] ?? 0;
     if (bn < 3 || bn < second * 3) return null;
     // Aday, yazılanın başı ise (yazılan = aday + ek) çekimdir
     if (lower.startsWith(bw) && lower[bw.length] !== lower[bw.length - 1]) return null;
-    return this.preserveCase(word, bw);
+    return this.preserveCase(word, this.surface(bw));
   }
 
   /** Noktalama, çift boşluk ve büyük harf biçimlendirme */
