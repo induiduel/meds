@@ -9699,6 +9699,43 @@ app.post('/api/ai/interactions', async (req, res) => {
 });
 
 // 8. AI Interactions: Upvote helpful explanation
+// Canlı içerik: pakete gömülü veriden yeni olanlar (panel değişiklikleri). İstemci açılışta bunu okur,
+// SSE `content_changed` gelince yeniden okur ve yalnız değişen veriyi sunucudan çeker.
+app.get('/api/content/manifest', (_req, res) => {
+  res.setHeader('Cache-Control', 'no-cache');
+  res.json({ entities: contentManifest(), at: Date.now() });
+});
+const sendContentFile = (res: express.Response, rel: string) => {
+  const file = resolveContent(path.join(__dirname, 'src', 'data', rel));
+  if (!fs.existsSync(file)) return res.status(404).json({ error: 'Bulunamadı' });
+  res.setHeader('Cache-Control', 'no-cache');
+  res.type('application/json');
+  res.sendFile(file);
+};
+app.get('/api/content/glossary', (_req, res) => sendContentFile(res, 'medical_glossary.json'));
+app.get('/api/content/diseases', (_req, res) => sendContentFile(res, 'diseases.json'));
+app.get('/api/content/ornek/:kurul/:ders', (req, res) => {
+  const { kurul, ders } = req.params;
+  if (!/^k\d$/.test(kurul) || !/^k\d-[A-Za-z0-9_-]+$/.test(ders)) return res.status(400).json({ error: 'Geçersiz ders' });
+  sendContentFile(res, path.join('ornek_sorular', kurul, `${ders}.json`));
+});
+/** Değişen destelerin liste bilgisi (slaytsız; derlemedeki decks/catalog.json ile aynı biçim) */
+app.get('/api/content/deck-catalog', (req, res) => {
+  const want = new Set(String(req.query.ids || '').split(',').map((x) => x.trim()).filter(Boolean));
+  const out = getDecksDb().filter((d) => d?.id && want.has(String(d.id)) && Array.isArray(d.slides) && d.slides.length).map((d) => {
+    const { slides, questions, steps, flashcards, ...meta } = d;
+    return {
+      ...meta,
+      slideCount: slides.length,
+      questionCount: meta.questionCount || (Array.isArray(questions) ? questions.length : 0) || slides.reduce((n: number, s: any) => n + (s.relatedQuestions?.length || s.questions?.length || 0), 0),
+      cardCount: meta.cardCount || meta.flashcardCount || (Array.isArray(flashcards) ? flashcards.length : 0) || slides.reduce((n: number, s: any) => n + (s.flashcards?.length || 0), 0),
+      firstSlideNumber: slides[0]?.slideNumber ?? 1,
+    };
+  });
+  res.setHeader('Cache-Control', 'no-cache');
+  res.json({ decks: out });
+});
+
 // Müzik: herkese açık yönetici seçkisi (data/music_shared.json). Değişince SSE `content_changed {entity:'music'}`.
 app.get('/api/music/shared', (_req, res) => {
   res.setHeader('Cache-Control', 'no-cache');
@@ -9738,43 +9775,6 @@ app.post('/api/ai/interactions/:id/upvote', (req, res) => {
 // DEEPSEEK DATA INTEGRATION & RAG ENDPOINTS
 // ----------------------------------------------------
 app.get('/api/deepseek/status', (_req, res) => {
-// Canlı içerik: pakete gömülü veriden yeni olanlar (panel değişiklikleri). İstemci açılışta bunu okur,
-// SSE `content_changed` gelince yeniden okur ve yalnız değişen veriyi sunucudan çeker.
-app.get('/api/content/manifest', (_req, res) => {
-  res.setHeader('Cache-Control', 'no-cache');
-  res.json({ entities: contentManifest(), at: Date.now() });
-});
-const sendContentFile = (res: express.Response, rel: string) => {
-  const file = resolveContent(path.join(__dirname, 'src', 'data', rel));
-  if (!fs.existsSync(file)) return res.status(404).json({ error: 'Bulunamadı' });
-  res.setHeader('Cache-Control', 'no-cache');
-  res.type('application/json');
-  res.sendFile(file);
-};
-app.get('/api/content/glossary', (_req, res) => sendContentFile(res, 'medical_glossary.json'));
-app.get('/api/content/diseases', (_req, res) => sendContentFile(res, 'diseases.json'));
-app.get('/api/content/ornek/:kurul/:ders', (req, res) => {
-  const { kurul, ders } = req.params;
-  if (!/^k\d$/.test(kurul) || !/^k\d-[A-Za-z0-9_-]+$/.test(ders)) return res.status(400).json({ error: 'Geçersiz ders' });
-  sendContentFile(res, path.join('ornek_sorular', kurul, `${ders}.json`));
-});
-/** Değişen destelerin liste bilgisi (slaytsız; derlemedeki decks/catalog.json ile aynı biçim) */
-app.get('/api/content/deck-catalog', (req, res) => {
-  const want = new Set(String(req.query.ids || '').split(',').map((x) => x.trim()).filter(Boolean));
-  const out = getDecksDb().filter((d) => d?.id && want.has(String(d.id)) && Array.isArray(d.slides) && d.slides.length).map((d) => {
-    const { slides, questions, steps, flashcards, ...meta } = d;
-    return {
-      ...meta,
-      slideCount: slides.length,
-      questionCount: meta.questionCount || (Array.isArray(questions) ? questions.length : 0) || slides.reduce((n: number, s: any) => n + (s.relatedQuestions?.length || s.questions?.length || 0), 0),
-      cardCount: meta.cardCount || meta.flashcardCount || (Array.isArray(flashcards) ? flashcards.length : 0) || slides.reduce((n: number, s: any) => n + (s.flashcards?.length || 0), 0),
-      firstSlideNumber: slides[0]?.slideNumber ?? 1,
-    };
-  });
-  res.setHeader('Cache-Control', 'no-cache');
-  res.json({ decks: out });
-});
-
   try {
     const items = loadDeepSeekContributions();
     let files: string[] = [];
