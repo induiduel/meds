@@ -33,6 +33,7 @@ const CATEGORY_LABELS: Record<string, string> = {
   'halk-sagligi': 'Halk sağlığı',
   epidemiyoloji: 'Halk sağlığı',
   uroloji: 'Üroloji',
+  tani: 'Tanı & Yöntem',
 };
 
 const BADGE_BY_CATEGORY: Record<string, string> = {
