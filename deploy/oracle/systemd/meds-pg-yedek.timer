@@ -1,0 +1,9 @@
+# /etc/systemd/system/meds-pg-yedek.timer — her gece 03:30 (İstanbul)
+[Unit]
+Description=MedSoru meds-pg günlük yedek zamanlaması
+[Timer]
+OnCalendar=*-*-* 03:30:00 Europe/Istanbul
+Persistent=true
+RandomizedDelaySec=5min
+[Install]
+WantedBy=timers.target

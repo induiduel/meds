@@ -1,0 +1,18 @@
+# /etc/systemd/system/meds-pg-yedek.service — meds-pg günlük pg_dump yedeği (deploy/pg/backup.sh, 7 gün saklanır)
+# Kurulum: sudo cp deploy/oracle/systemd/meds-pg-yedek.* /etc/systemd/system/ && sudo systemctl daemon-reload
+#          && sudo systemctl enable --now meds-pg-yedek.timer
+# Yedekler: /home/ubuntu/yedek/meds-pg/meds_YYYYMMDD_HHMM.dump · günlük: aynı klasörde yedek.log
+[Unit]
+Description=MedSoru meds-pg günlük yedek
+After=docker.service
+[Service]
+Type=oneshot
+User=ubuntu
+WorkingDirectory=/home/ubuntu/medsor/meds
+Environment=CUDA_VISIBLE_DEVICES= TZ=Europe/Istanbul
+ExecStart=/bin/sh -c 'mkdir -p /home/ubuntu/yedek/meds-pg && ./deploy/pg/backup.sh >> /home/ubuntu/yedek/meds-pg/yedek.log 2>&1'
+Nice=15
+IOSchedulingClass=idle
+MemoryMax=512M
+CPUQuota=50%
+TimeoutStartSec=30min

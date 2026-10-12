@@ -109,18 +109,18 @@ def check_pipeline_runner_alive():
         log("pipeline_runner.py arka planda güvenle başlatıldı ✓")
 
 def check_supabase_health():
-    """Supabase yerel veritabanı ve REST servislerinin canlılığını denetler"""
+    """Veritabanı (meds-pg) ve eski betikler için REST uyumluluk kapısının (127.0.0.1:8000) canlılığı.
+    Supabase 2026-10-12'de kaldırıldı; ad geriye uyumluluk için korunuyor."""
     try:
-        r = requests.get("http://127.0.0.1:8000/rest/v1/", headers={"apikey": os.environ.get("SUPABASE_ANON_KEY", "anon")}, timeout=3)
-        # 200 veya 401/404 bile olsa envoy ayaktadır
+        res = subprocess.run(["docker", "exec", "meds-pg", "pg_isready", "-U", "meds", "-d", "meds"], capture_output=True, text=True, timeout=10)
+        if res.returncode != 0:
+            log("UYARI: meds-pg veritabanı yanıt vermiyor (docker compose -f deploy/pg/docker-compose.yml --profile cihaz up -d).")
     except Exception:
-        # Docker desktop altındaki supabase-db kontrolü
-        try:
-            res = subprocess.run(["docker", "ps", "--filter", "name=supabase-db", "--format", "{{.Status}}"], capture_output=True, text=True)
-            if not res.stdout.strip():
-                log("BİLGİ: Supabase yerel servisleri henüz başlatılmamış veya durdurulmuş.")
-        except Exception:
-            pass
+        pass
+    try:
+        requests.get("http://127.0.0.1:8000/rest/v1/", timeout=3)
+    except Exception:
+        log("BİLGİ: REST uyumluluk kapısı (meds-rest, :8000) kapalı; eski betikler veritabanına yazamaz.")
 
 def check_dashboard_alive():
     """Dashboard izleme sunucusunun (8085) çökmesini veya asılı kalmasını engeller"""

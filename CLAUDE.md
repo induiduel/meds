@@ -43,8 +43,7 @@ and may write to `data/*.json`. Check `git status` afterwards and revert uninten
 
 - **Secrets:** provider keys come only from the server `.env` (see `.env.example`). Never hardcode,
   base64/XOR-obfuscate, or ship keys to the client bundle. The browser calls AI only through the
-  backend (`/api/ai/generate` or feature endpoints). Firebase web `apiKey` and Supabase publishable
-  key are public by design.
+  backend (`/api/ai/generate` or feature endpoints). Firebase web `apiKey` is public by design.
 - **Grounding:** any feature that writes or fixes a question must retrieve sources with
   `findSourcesForQuestion` and put them in the prompt via `formatSourcesForPrompt`, ask the model for
   `usedSources`, and return them with `toSourceRef`.
@@ -55,6 +54,20 @@ and may write to `data/*.json`. Check `git status` afterwards and revert uninten
   `deepseek_contribution` to it.
 - **Never overwrite data with an empty result** (see the guard in `deepseekDataService.ts`).
   Machine-specific folders (`MEDS_DATABASE_DIR`, `MEDS_DEEPSEEK_DIR`) come from env.
+
+## Veritabanı (meds-pg) ve canlı yayın
+
+Supabase 2026-10-12'de kaldırıldı. Tek veritabanı `meds-pg` (Postgres 17 + pgvector, `deploy/pg/`); asıl kaynak hâlâ
+`data/*.json`, Postgres sorgulanabilir kopya + RAG vektörleri + canlı yayın kaynağıdır.
+- Sunucu: `src/services/pgDb.ts` (`pgDb.from(...)` Supabase zincir biçimi, `pgDb.rpc`, `pgListen`). Bağlantı `DATABASE_URL`.
+- Tarayıcı veritabanına bağlanmaz: `getSupabaseClient()` → `dbRemoteClient` → `POST /api/db/query` (beyaz liste,
+  yazma yalnız yönetici; `src/services/dbQueryRoute.ts`).
+- Canlı yayın: tablo tetikleyicisi `pg_notify('meds_changes')` (`deploy/pg/sql/realtime.sql`) → server.ts hub
+  (120 ms toplu paket) → SSE `/api/realtime/events`. İstemciden istemciye: `broadcastLiveEvent` / `onLiveEvent`
+  (`POST /api/live/broadcast`, `app:*` olayları). Gidiş-dönüş testi `POST /api/live/ping`.
+- Şema değişikliği: `deploy/pg/sql/` altına idempotent .sql, iki makinede `docker exec -i meds-pg psql -U meds -d meds < ...`.
+- Cihazdaki eski betikler `127.0.0.1:8000/rest/v1` (PostgREST, `meds-rest`) ile çalışmaya devam eder; Oracle'da yoktur.
+- Yedek: Oracle `meds-pg-yedek.timer` her gece 03:30 → `~/yedek/meds-pg/` (7 gün).
 
 ## Retrieval
 
@@ -67,9 +80,9 @@ Current tokenizer: Turkish case/character folding + full word + 5-char stem. Las
 partial stem words 95%, suffix-changed words 91%, topic only 58% (98% same-topic; topics are shared
 by many questions, so exact match is not expected). Stem-only and word-only were both worse.
 
-Hybrid BM25 + e5 vectors (`src/services/vectorSearch.ts`, local Supabase `match_rag_chunks_e5`, embed service
+Hybrid BM25 + e5 vectors (`src/services/vectorSearch.ts`, meds-pg `match_rag_chunks_e5`, embed service
 `meds-embed` on 127.0.0.1:8091) is OFF by default (`MEDS_VECTOR_SEARCH=1` to enable): `HYBRID=1` eval gave
-94/93/41 (weight 0.8) and 95/93/43 (0.3) vs BM25 96/92/44. Vectors are local-only; cloud Supabase is full
+94/93/41 (weight 0.8) and 95/93/43 (0.3) vs BM25 96/92/44. Vectors live in meds-pg
 (`rag_vector_build.py` defaults to `--hedef yerel`).
 
 ## Known gaps
@@ -97,7 +110,7 @@ Hybrid BM25 + e5 vectors (`src/services/vectorSearch.ts`, local Supabase `match_
 Akış: Drive → `meds_downloads` (ham) → `meds_temp` (ara) → `meds_database` (temiz). Kapsam: Dönem 3.
 `00-init` iskelet, `01-inventory` envanter (`_manifest.json`), `02-download` artımlı indirme
 (`_downloads.json` durum; ücretsiz herkese açık indirme, olmazsa `GOOGLE_SERVICE_ACCOUNT_FILE`).
-Mevcut Supabase verisi yeni hat hazır olana kadar kullanılır, sonra silinmez: "eski" olarak saklanır.
+Eski Supabase verisinin tam dökümleri `meds_temp/yedek/supabase_oncesi_20261012/` altında saklanır (silinmez).
 
 ## Faz 14 kullanıcı kuyruğu
 

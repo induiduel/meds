@@ -29,7 +29,7 @@ tar -C "$APP" -czf "$DEST/src_data.tar.gz" --exclude='src/data/decks/items' src/
 
 # 3) Secret'lar yalnız şifreli
 if [[ -n "${MEDS_BACKUP_GPG_PASS_FILE:-}" && -r "${MEDS_BACKUP_GPG_PASS_FILE}" ]]; then
-  for f in "$APP/.env" "$APP/supabase-server/.env" "$APP/deploy/oracle/.env.oracle"; do
+  for f in "$APP/.env" "$APP/deploy/oracle/.env.oracle"; do
     [[ -f "$f" ]] || continue
     name="$(realpath --relative-to="$ROOT" "$f" | tr '/' '_')"
     gpg --batch --yes --pinentry-mode loopback --passphrase-file "$MEDS_BACKUP_GPG_PASS_FILE" \

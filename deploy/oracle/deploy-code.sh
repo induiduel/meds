@@ -27,7 +27,6 @@ rsync -avz --checksum \
   --exclude='/data' --exclude='/.git' --exclude='/models' \
   --exclude='/training_data' --exclude='/linux' \
   --exclude='.venv*' --exclude='__pycache__' --exclude='*.log' \
-  --exclude='/supabase-server/volumes' --exclude='/supabase-server/backups' \
   --exclude='/cloudflared.exe' --exclude='src/data/decks/items' \
   --exclude='/.env' --exclude='/.env.*' --exclude='*.bak' --exclude='*.bak_*' --exclude='*.backup*' \
   --exclude='/get-pip.py' --exclude='/.agents' --exclude='/.claude' --exclude='/.github' \

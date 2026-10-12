@@ -3,7 +3,7 @@
 Hedef mimari (kullanıcı kararı):
 - Kod: GitHub `main` tek doğruluk kaynağı. Cihaz pushlar, Oracle çeker.
 - Veri: `meds/data/*.json` hem cihazda hem Oracle'da durur, `sync-data.sh` ile çift yönlü eşitlenir.
-- Supabase Cloud: auth + realtime için sorumlu (birincil veri deposu değil).
+- Veritabanı: aynı makinede `meds-pg` konteyneri (Postgres 17 + pgvector). Supabase 2026-10-12'de kaldırıldı; canlı yayın Postgres NOTIFY → SSE.
 - Canlı API: `https://api.nofrostlife.com.tr` → Oracle `localhost:3000` (Named Tunnel, sabit adres).
 - Frontend: GitHub Pages (`nofrostlife.com.tr`) aynen kalır; canlı hostta API adresi
   girilmediyse istemci otomatikman Oracle'a düşer (`src/config/deployment.ts`).
@@ -55,10 +55,10 @@ curl -s https://api.nofrostlife.com.tr/api/health  # dışarıdan OK olmalı
 
 ## 3. Ortam değişkenleri (`.env` iki yerde ayrı yaşar)
 
-- Cihaz: mevcut `meds/.env` aynen kalır (yerel Supabase, yerel yollar).
+- Cihaz: mevcut `meds/.env` aynen kalır (yerel meds-pg `DATABASE_URL`, yerel yollar).
 - Oracle: `~/meds/meds/.env` dosyasını `.env.oracle.example` dosyasına bakarak doldur.
   Kritik farklar: `APP_URL=https://api.nofrostlife.com.tr`,
-  `SUPABASE_URL` = Cloud Supabase (auth/realtime), `MEDSORU_API_PASSWORD` cihazla
+  `MEDS_PG_PASSWORD` = meds-pg parolası (compose `DATABASE_URL`'i bundan kurar), `MEDSORU_API_PASSWORD` cihazla
   **aynı** olmalı (yoksa yazma istekleri 401 yer).
 - Sırlar asla git'e girmez (`.gitignore` zaten `.env*` kapsıyor).
 
@@ -92,7 +92,7 @@ GitHub → repo Settings → Secrets and variables → Actions'a ekle:
 - Eşitlenmeyenler: `node_modules`, `dist`, `*.log`, `data/local_rag_chunks.json`
   (78 MB, Oracle'da yeniden üretilir), `*.legacy_backup.json`.
 - Çakışma kuralı: son yazan kazanır (iki tarafta aynı anda yazma yapma;
-  önce çek, sonra yaz). Supabase auth/realtime tabloları bu scriptin dışındadır.
+  önce çek, sonra yaz). meds-pg tabloları bu scriptin dışındadır (sunucu JSON'dan kendisi eşitler).
 
 ## 7. Doğrulama listesi
 

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # meds-pg günlük yedeği: pg_dump (özel biçim, sıkıştırılmış) → $MEDS_PG_BACKUP_DIR, son $KEEP gün saklanır.
 # Geri yükleme: docker exec -i meds-pg pg_restore -U meds -d meds --clean --if-exists < dosya.dump
-# Cron (Oracle): 30 3 * * * /home/ubuntu/medsor/meds/deploy/pg/backup.sh >> /home/ubuntu/yedek/meds-pg/yedek.log 2>&1
+# Oracle: systemd zamanlayıcısı deploy/oracle/systemd/meds-pg-yedek.timer (her gece 03:30)
 set -euo pipefail
 DIR="${MEDS_PG_BACKUP_DIR:-$HOME/yedek/meds-pg}"
 KEEP="${MEDS_PG_BACKUP_KEEP:-7}"
