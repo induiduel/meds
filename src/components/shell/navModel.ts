@@ -4,6 +4,7 @@ import {
   BookOpen,
   BookOpenText,
   Compass,
+  Crosshair,
   GraduationCap,
   LayoutGrid,
   Layers,
@@ -47,6 +48,7 @@ const I: Record<string, NavItem> = {
   kazanimlar: { id: 'kazanimlar', label: 'Kazanımlar', hint: 'Müfredat ve kazanım haritası', icon: Compass, tint: '#00A79D' },
   learn: { id: 'learn', label: 'Öğren', hint: 'İnteraktif ders desteleri', icon: GraduationCap, tint: '#AF52DE' },
   summaries: { id: 'summaries', label: 'Ders özetleri', short: 'Özetler', hint: 'Spot bilgiler, uzun okuma', icon: BookOpen, tint: '#FF6B3D' },
+  spots: { id: 'spots', label: 'Sınav spotları', short: 'Spotlar', hint: 'En sık, ayırıcı bulgular, tuzaklar', icon: Crosshair, tint: '#FF3B30' },
   flashcards: { id: 'flashcards', label: 'Ezber kartları', short: 'Kartlar', hint: 'Aralıklı tekrar', icon: Layers, tint: '#32ADE6' },
   glossary: { id: 'glossary', label: 'Sözlük', hint: 'Hastalık ve ilaç ansiklopedisi', icon: BookOpenText, tint: '#A2845E' },
   diseases: { id: 'diseases', label: 'Hastalıklar', short: 'Atlas', hint: 'Tıbbi hastalık & klinik atlası', icon: Activity, tint: '#06B6D4' },
@@ -67,7 +69,7 @@ export const NAV_ITEMS = I;
  * başına duran birincil düğmedir (SideNav); telefonda alt gezinmenin ortasındadır.
  */
 export const NAV_TREE: NavGroup[] = [
-  { label: 'Öğren', items: [I.learn, I.flashcards, I.summaries] },
+  { label: 'Öğren', items: [I.learn, I.spots, I.flashcards, I.summaries] },
   { label: 'Soru çöz', items: [I.past_exams, I.ornek_sorular, I.study, I.practice] },
   { label: 'Başvuru', items: [I.glossary, I.diseases, I.kazanimlar] },
   { label: 'Topluluk', items: [I.questions, I.matrix, I.leaderboard] },

@@ -29,6 +29,7 @@ export type AppRoute =
   | 'booklet'
   | 'study'
   | 'summaries'
+  | 'spots'
   | 'transcripts'
   | 'ai_chat'
   | 'admin'
@@ -62,6 +63,7 @@ export const ROUTE_PATHS: Record<AppRoute, string> = {
   music: '/muzik',
   notes: '/notlar',
   summaries: '/ozetler',
+  spots: '/spotlar',
   transcripts: '/ses-kayitlari',
   ai_chat: '/asistan',
   matrix: '/harita',
@@ -93,6 +95,7 @@ export const ROUTE_TITLES: Record<AppRoute, string> = {
   music: 'Müzik',
   notes: 'Ders notları',
   summaries: 'Ders özetleri',
+  spots: 'Sınav spotları',
   transcripts: 'Ses kayıtları',
   ai_chat: 'Asistan',
   matrix: 'Soru haritası',
@@ -114,6 +117,9 @@ const BY_SEGMENT: Record<string, AppRoute> = Object.fromEntries(
 const ALIASES: Record<string, AppRoute> = {
   quick_add: 'quick_add',
   learn: 'learn',
+  spotlar: 'spots',
+  spots: 'spots',
+  'sinav-spotlari': 'spots',
   glossary: 'glossary',
   sozluk: 'glossary',
   ansiklopedi: 'glossary',

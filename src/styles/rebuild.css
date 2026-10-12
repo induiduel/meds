@@ -20,16 +20,16 @@
 .ms-tag > svg { flex-shrink: 0; display: block; }
 
 /* 2 · Arama kutuları: içteki input'un kendi mavi çizgisi kalkar; tek halka kutunun dış hattına oturur. */
-:is(.cx-search, .ms-qsearch, .lh-search, .ms-search-field, .rd-search) :is(input, input:focus, input:focus-visible) {
+:is(.cx-search, .ms-qsearch, .lh-search, .ms-search-field, .sr-find) :is(input, input:focus, input:focus-visible) {
   outline: none !important;
   box-shadow: none !important;
   border-color: transparent;
 }
-:is(.cx-search, .ms-qsearch, .lh-search, .ms-search-field, .rd-search):focus-within {
+:is(.cx-search, .ms-qsearch, .lh-search, .ms-search-field, .sr-find):focus-within {
   outline: 2px solid var(--color-accent);
   outline-offset: 2px;
 }
-html.ui-v7 :is(.cx-search, .ms-qsearch, .lh-search, .ms-search-field, .rd-search):focus-within {
+html.ui-v7 :is(.cx-search, .ms-qsearch, .lh-search, .ms-search-field, .sr-find):focus-within {
   box-shadow: none;
 }
 
@@ -1689,3 +1689,9 @@ html.theme-dark .deep-link-highlight-pulse, html[data-mode="dark"] .deep-link-hi
 /* Süzgeç: ders listesinde grup başlıkları */
 .cx-facet-gl { padding: 10px var(--dn-pad, 14px) 4px; font-size: 11.5px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; color: var(--color-ink-3); background: var(--color-canvas); }
 .cx-facet-gl:first-child { padding-top: 6px; }
+/* Kaynak PDF'i bilinmeyen ders (slaytı Drive'a gelmedi): kesik çizgili numara + kehribar etiket; satır PDF düğmesi yok */
+.lcx-row.is-nosrc .lcx-no { display: inline-grid; place-items: center; width: 24px; height: 24px; border: 1.5px dashed var(--color-warn); border-radius: 7px; color: var(--color-warn); }
+.lcx-nosrc { flex: none; display: inline-flex; align-items: center; gap: 4px; height: 20px; padding: 0 7px; border-radius: 999px; border: 1px dashed var(--color-warn); color: var(--color-warn); background: var(--color-warn-soft); }
+.lcx-nosrc svg { width: 12px; height: 12px; }
+.lcx-nosrc small { font-size: 11px; font-weight: 650; white-space: nowrap; }
+@media (max-width: 479px) { .lcx-nosrc small { display: none; } .lcx-nosrc { padding: 0 4px; } }

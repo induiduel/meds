@@ -31,12 +31,19 @@ import {
   Hash,
   AlertCircle,
   Send,
+  Microscope,
+  Users,
+  ListTree,
 } from 'lucide-react';
 import rawEncyclopediaData from '../../data/medical_encyclopedia.json';
 import * as api from '../../services/api';
 import { triggerDomHighlightAndScroll, shareDeepLink } from '../../services/universalRedirectService';
 
-export type EncyclopediaCategory = 'all' | 'hastalik' | 'ilac' | 'patoloji' | 'patojen' | 'genetik' | 'terim' | 'protein';
+export type EncyclopediaCategory = 'all' | 'hastalik' | 'ilac' | 'patoloji' | 'patojen' | 'genetik' | 'terim' | 'protein' | 'tani' | 'halk-sagligi';
+
+/** Bilgi kartı maddesi: düz metin ya da alt maddeli (en çok 3 düzey); **kalın** desteklenir */
+export type InfoCardItem = string | { text: string; sub?: InfoCardItem[] };
+export interface InfoCardSection { title?: string; intro?: string; items: InfoCardItem[] }
 
 export interface EncyclopediaEntry {
   id: string;
@@ -55,6 +62,10 @@ export interface EncyclopediaEntry {
   pitfallsAndWarnings?: string;
   relatedItems?: string[];
   badgeColor?: string;
+  /** Alt sınıf yolu: "Enfeksiyon › Cinsel yolla bulaşan › Bakteriyel" (sözlük v2) */
+  subcategory?: string;
+  /** Kısa bilgi kartı: iç içe maddeler (sözlük v2, scripts/sozluk_v2) */
+  infoCard?: { sections: InfoCardSection[] };
   /** 's13_study': tanım ders notu alıntılarından yazıldı (scripts/v2 study build). */
   uretici?: string;
   aiAudit: {
@@ -80,10 +91,12 @@ const CATEGORY_TABS: { id: EncyclopediaCategory; label: string; icon: React.Elem
   { id: 'patojen', label: 'Patojenler (Bakteri/Virüs)', icon: Bug, color: 'text-warn' },
   { id: 'genetik', label: 'Genetik & Gelişim', icon: Dna, color: 'text-ai' },
   { id: 'protein', label: 'Protein & Molekül', icon: FlaskConical, color: 'text-ink-2' },
+  { id: 'tani', label: 'Tanı & Yöntem', icon: Microscope, color: 'text-ink-2' },
+  { id: 'halk-sagligi', label: 'Halk Sağlığı', icon: Users, color: 'text-ink-2' },
   { id: 'terim', label: 'Terimler', icon: Tag, color: 'text-ink-2' },
 ];
 /** Veride İngilizce ya da eşanlamlı gelen kategori adları tek kimliğe indirilir */
-const CAT_ALIAS: Record<string, string> = { pathology: 'patoloji', genetic: 'genetik' };
+const CAT_ALIAS: Record<string, string> = { pathology: 'patoloji', genetic: 'genetik', epidemiyoloji: 'halk-sagligi' };
 
 const ALPHABET = 'ABCÇDEFGĞHIİJKLMNOÖPRSŞTUÜVYZ'.split('');
 
@@ -95,6 +108,8 @@ const CAT_TONE: Record<string, { cls: string; icon: React.ElementType; label: st
   patojen: { cls: 'd-enf', icon: Bug, label: 'Patojen' },
   genetik: { cls: 'd-gen', icon: Dna, label: 'Genetik' },
   protein: { cls: 'd-bio', icon: FlaskConical, label: 'Protein' },
+  tani: { cls: 'd-kardi', icon: Microscope, label: 'Tanı & Yöntem' },
+  'halk-sagligi': { cls: 'd-ic', icon: Users, label: 'Halk Sağlığı' },
   terim: { cls: 'd-ic', icon: Tag, label: 'Terim' },
 };
 const catTone = (c?: string) => CAT_TONE[c || ''] || { cls: 'd-ic', icon: BookOpenText, label: 'Tıbbi kavram' };
@@ -158,6 +173,59 @@ const RichField: React.FC<{ value: unknown }> = ({ value }) => {
   return <>{line(value)}</>;
 };
 
+/** "**kalın**" işaretini <strong>'a çevirir (bilgi kartı maddeleri) */
+const Inline: React.FC<{ text: string }> = ({ text }) => (
+  <>
+    {String(text).split(/(\*\*[^*]+\*\*)/g).map((part, i) =>
+      part.startsWith('**') && part.endsWith('**') && part.length > 4
+        ? <strong key={i} className="text-ink">{part.slice(2, -2)}</strong>
+        : <React.Fragment key={i}>{part}</React.Fragment>,
+    )}
+  </>
+);
+
+const InfoItems: React.FC<{ items?: InfoCardItem[]; depth?: number }> = ({ items, depth = 1 }) => {
+  if (!items?.length) return null;
+  return (
+    <ul className={`gx-tree is-d${depth}`}>
+      {items.map((it, i) => {
+        const text = typeof it === 'string' ? it : it?.text;
+        const sub = typeof it === 'string' ? undefined : it?.sub;
+        if (!text) return null;
+        return (
+          <li key={i}>
+            <Inline text={text} />
+            {depth < 3 && <InfoItems items={sub} depth={depth + 1} />}
+          </li>
+        );
+      })}
+    </ul>
+  );
+};
+
+/** Bilgi kartı: başlıklı bölümler + iç içe maddeler */
+const InfoCardView: React.FC<{ card?: EncyclopediaEntry['infoCard'] }> = ({ card }) => {
+  const sections = (card?.sections || []).filter((s) => s?.items?.length);
+  if (!sections.length) return null;
+  return (
+    <div className="gx-info">
+      {sections.map((s, i) => (
+        <section key={i} className="gx-info-s">
+          {s.title && <h4 className="gx-info-t">{s.title}</h4>}
+          {s.intro && <p className="gx-info-i"><Inline text={s.intro} /></p>}
+          <InfoItems items={s.items} />
+        </section>
+      ))}
+    </div>
+  );
+};
+
+const infoCardText = (card?: EncyclopediaEntry['infoCard']): string => {
+  const walk = (items?: InfoCardItem[]): string[] =>
+    (items || []).flatMap((it) => (typeof it === 'string' ? [it] : [it?.text || '', ...walk(it?.sub)]));
+  return (card?.sections || []).flatMap((s) => [s.title || '', s.intro || '', ...walk(s.items)]).join(' ').replace(/\*\*/g, '');
+};
+
 /** Geniş ekran mı (ana-ayrıntı düzeni) */
 const useWide = () => {
   const q = '(min-width: 1024px)';
@@ -182,6 +250,8 @@ const buildSearchCorpus = (e: EncyclopediaEntry): string => {
     e.term || '',
     e.latinName || '',
     ...(e.aliases || []),
+    e.subcategory || '',
+    infoCardText(e.infoCard),
     typeof e.definition === 'string' ? e.definition : JSON.stringify(e.definition || ''),
     typeof e.lectureContextNotes === 'string' ? e.lectureContextNotes : JSON.stringify(e.lectureContextNotes || ''),
     Array.isArray(e.examSpotPearls)
@@ -568,7 +638,7 @@ Lütfen bu kavramı fakülte sınavları ve TUS açısından en yüksek verimle 
       case 'genetik':
         return { label: 'Genetik', dot: 'bg-ai', cls: 'bg-ai/10 text-ai border-ai/20' };
       default:
-        return { label: 'Tıbbi Kavram', dot: 'bg-ok', cls: 'bg-ok/10 text-ok border-ok/20' };
+        return { label: catTone(cat).label, dot: 'bg-ok', cls: 'bg-ok/10 text-ok border-ok/20' };
     }
   };
 
@@ -589,7 +659,7 @@ Lütfen bu kavramı fakülte sınavları ve TUS açısından en yüksek verimle 
                   {activeEntry.aiAudit?.verified && (
                     <span className="ms-tag is-ok">
                       <ShieldCheck aria-hidden />
-                      <span>{activeEntry.uretici === 's13_study' ? 'Ders notuyla doğrulandı' : 'AI Onaylı'} {typeof activeEntry.aiAudit.accuracyScore === 'number' ? ` (%${activeEntry.aiAudit.accuracyScore})` : ''}</span>
+                      <span>{activeEntry.uretici === 's13_study' || activeEntry.uretici === 'sozluk_v2' ? 'Ders notuyla doğrulandı' : 'AI Onaylı'} {typeof activeEntry.aiAudit.accuracyScore === 'number' ? ` (%${activeEntry.aiAudit.accuracyScore})` : ''}</span>
                     </span>
                   )}
                 </div>
@@ -597,6 +667,13 @@ Lütfen bu kavramı fakülte sınavları ve TUS açısından en yüksek verimle 
                 <h2 className="m-0 font-display text-xl sm:text-2xl font-bold tracking-[-0.02em] text-ink leading-tight">
                   {activeEntry.term}
                 </h2>
+                {activeEntry.subcategory && (
+                  <p className="gx-path" aria-label="Sınıflandırma">
+                    {activeEntry.subcategory.split('›').map((p) => p.trim()).filter(Boolean).map((p, i) => (
+                      <span key={i}>{p}</span>
+                    ))}
+                  </p>
+                )}
                 {activeEntry.latinName && (
                   <p className="m-0 text-sm text-ink-3 italic mt-0.5">
                     {activeEntry.latinName}
@@ -682,6 +759,17 @@ Lütfen bu kavramı fakülte sınavları ve TUS açısından en yüksek verimle 
                   <RichField value={activeEntry.definition as unknown} />
                 </div>
               </div>
+
+              {/* 2b. Kısa bilgi kartı (iç içe maddeler) */}
+              {activeEntry.infoCard?.sections?.length ? (
+                <div id={`term-${activeEntry.id}-card`} className="ds-callout gx-info-box">
+                  <span className="ds-callout-t">
+                    <ListTree aria-hidden />
+                    <span>Bilgi kartı</span>
+                  </span>
+                  <InfoCardView card={activeEntry.infoCard} />
+                </div>
+              ) : null}
 
               {/* 3. Patoloji, Morfoloji ve Etki Mekanizması */}
               {activeEntry.morphologyOrMechanism && (
@@ -982,6 +1070,7 @@ Lütfen bu kavramı fakülte sınavları ve TUS açısından en yüksek verimle 
                     <span className="gl-def">{entry.definition}</span>
                     <span className="gl-tags">
                       <span className="gl-type"><Icon aria-hidden />{tone.label}</span>
+                      {entry.subcategory && <span className="gl-tag">{entry.subcategory.split('›').pop()?.trim()}</span>}
                       {entry.kurul && <span className="gl-tag">{String(entry.kurul).replace('Kurul ', 'K')}</span>}
                       {entry.discipline && <span className="gl-tag">{entry.discipline}</span>}
                     </span>

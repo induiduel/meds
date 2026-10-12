@@ -56,6 +56,9 @@ class Denetim:
         # hafif revize (yalnız "ikisini tut" V2 destesi): ders notu, örnek soru, hastalık, bilgi havuzu üretilmez
         self.hafif = bool(json.loads((d / "baglam.json").read_text(encoding="utf-8")).get("hafif")) \
             if (d / "baglam.json").exists() else False
+        # yenileme (2026-10-12): hafif taslağa sonradan ders notu + sitedeki sayı kadar örnek soru üretilir
+        self.yenileme = (json.loads((d / "baglam.json").read_text(encoding="utf-8")).get("yenileme") or {}) \
+            if (d / "baglam.json").exists() else {}
 
     def hata(self, m):
         self.hatalar.append(m)
@@ -119,7 +122,7 @@ class Denetim:
 
         nt = self.d / "ders_notu.md"
         if not nt.exists():
-            if not self.hafif:
+            if not self.hafif or self.yenileme:
                 self.hata("ders_notu.md yok")
         else:
             t = nt.read_text(encoding="utf-8")
@@ -141,7 +144,7 @@ class Denetim:
         else:
             self.hata("deck.json yok")
 
-        os_ = self.json_oku("ornek_sorular.json", not self.hafif)
+        os_ = self.json_oku("ornek_sorular.json", not self.hafif or bool(self.yenileme))
         if os_:
             sorular = os_.get("sorular") or []
             per = {}
@@ -167,7 +170,7 @@ class Denetim:
                 self.kanit(q.get("kanit"), f"soru {qid}")
                 per.setdefault(q.get("kazanim"), []).append(q.get("zorluk"))
             for k, zs in per.items():
-                if not 3 <= len(zs) <= 10:
+                if not 3 <= len(zs) <= (10_000 if self.yenileme else 10):
                     self.hata(f"kazanım {k}: {len(zs)} soru (3–10 olmalı)")
                 elif any(z not in zs for z in ("kolay", "orta", "zor")):
                     self.hata(f"kazanım {k}: kolay/orta/zor her biri en az 1 olmalı")

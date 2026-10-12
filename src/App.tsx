@@ -10,7 +10,7 @@ import {
   CheckCircle2,
   ExternalLink,
   ShieldCheck,
-  BrainCircuit,
+  Combine,
   Share2,
   ChevronRight,
 } from 'lucide-react';
@@ -136,6 +136,7 @@ const TranscriptionsView = React.lazy(() => wrapLazy(import('./components/Transc
 const FlashcardsView = React.lazy(() => wrapLazy(import('./components/flashcards/FlashcardsView').then(m => ({ default: m.FlashcardsView }))));
 const SearchView = React.lazy(() => wrapLazy(import('./components/search/SearchView').then(m => ({ default: m.SearchView }))));
 const InteractiveDeckView = React.lazy(() => wrapLazy(import('./components/learn/InteractiveDeckView').then(m => ({ default: m.InteractiveDeckView }))));
+const ExamSpotsView = React.lazy(() => wrapLazy(import('./components/spots/ExamSpotsView').then(m => ({ default: m.ExamSpotsView }))));
 const MedicalEncyclopediaView = React.lazy(() => wrapLazy(import('./components/encyclopedia/MedicalEncyclopediaView').then(m => ({ default: m.MedicalEncyclopediaView }))));
 const ManageConsole = React.lazy(() => wrapLazy(import('./components/manage/ManageConsole').then(m => ({ default: m.ManageConsole }))));
 const OfflineDatabaseModal = React.lazy(() => wrapLazy(import('./components/pwa/OfflineDatabaseModal').then(m => ({ default: m.OfflineDatabaseModal }))));
@@ -1549,6 +1550,13 @@ export default function App() {
           </Suspense>
         )}
 
+        {/* TAB: Sınav spotları */}
+        {activeTab === 'spots' && (
+          <Suspense fallback={<ViewFallback />}>
+            <ExamSpotsView />
+          </Suspense>
+        )}
+
         {/* TAB: Glossary & Encyclopedia / Tıbbi Sözlük & Ansiklopedi */}
         {activeTab === 'glossary' && (
           <Suspense fallback={<ViewFallback />}>
@@ -1601,10 +1609,10 @@ export default function App() {
                   <button
                     type="button"
                     onClick={() => setShowClusterModal(true)}
-                    className="inline-flex h-10 px-3.5 rounded-[10px] bg-ok/10 hover:bg-ok/20 text-ok border border-ok/30 font-semibold text-sm items-center gap-2 cursor-pointer shadow-sm transition-all"
-                    title="Yapay zeka soru eşleme ve birleştirilmiş öneri taslakları"
+                    className="inline-flex h-10 px-3.5 rounded-[10px] bg-accent-soft hover:brightness-95 text-accent font-semibold text-base items-center gap-2 cursor-pointer transition-[filter]"
+                    title="Aynı soruyu hatırlayan parçaların birleştirildiği öneri taslakları"
                   >
-                    <BrainCircuit className="w-4 h-4 text-ok" />
+                    <Combine className="w-4 h-4" strokeWidth={2.2} />
                     <span>Öneri Taslak Havuzu</span>
                   </button>
                   <button

@@ -44,7 +44,12 @@ export function useDockAutoHide(routeKey: string) {
       // Üst çubuktaki vekil aramaya yazılırken yuva geri gelip vekili kaldırmasın.
       if (ae && ae.closest('.sh-pq')) { extreme = y; return; }
       const busy = (ae && dock.contains(ae) && ae.matches('input, textarea, select')) || document.querySelector('.ms-suggest, [role="dialog"][aria-modal="true"]');
-      if (y < threshold || busy) { apply(false); extreme = y; return; }
+      // Yuva henüz yapışmadıysa (başlık altında akışta) saklama: transform yerini boş bırakır,
+      // başlık ile liste arasında boşluk görünür. Yapışma, önceki kardeşin üst çubuğun altına geçmesiyle anlaşılır.
+      const prev = dock.previousElementSibling;
+      const barBottom = document.querySelector('.sh-top')?.getBoundingClientRect().bottom ?? 0;
+      const stuck = !prev || prev.getBoundingClientRect().bottom <= barBottom + 1;
+      if (y < threshold || busy || !stuck) { apply(false); extreme = y; return; }
       if (state) {
         extreme = Math.max(extreme, y);
         if (extreme - y > UP) { apply(false); extreme = y; }

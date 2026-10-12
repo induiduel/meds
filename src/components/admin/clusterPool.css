@@ -1,0 +1,85 @@
+/* Öneri taslak havuzu (QuestionClusterAutomationModal). Yalnız token + ders rengi (--d, --d-ink, --d-soft). */
+.qpool { display: flex; flex-direction: column; gap: 14px; padding-top: 4px; scroll-margin-top: 16px; }
+.qpool-callout-sub { display: block; margin-top: 4px; color: var(--color-ink-3); font-size: 12.5px; }
+
+.qpool-iconbtn { width: 32px; height: 32px; margin-top: 2px; border-radius: 50%; display: grid; place-items: center; flex-shrink: 0; color: var(--color-ink-2); cursor: pointer; background: color-mix(in srgb, var(--color-ink) 8%, transparent); transition: background var(--mo-fast); }
+.qpool-iconbtn:hover { background: color-mix(in srgb, var(--color-ink) 13%, transparent); }
+.qpool-iconbtn:disabled { opacity: .5; cursor: default; }
+.qpool-iconbtn > svg { width: 16px; height: 16px; }
+
+/* Liste satırı */
+.qpool-row { position: relative; display: flex; align-items: center; gap: 12px; width: 100%; padding: 12px var(--dn-pad); text-align: left; color: var(--color-ink); }
+.qpool-row + .qpool-row::before { content: ""; position: absolute; top: 0; left: calc(var(--dn-pad) + 48px); right: 0; height: 1px; background: var(--color-line); }
+.qpool-row.is-btn { cursor: pointer; transition: background var(--mo-fast) var(--mo-ease); }
+.qpool-row.is-btn:hover { background: color-mix(in srgb, var(--color-white) 94%, var(--color-ink)); }
+.qpool-row.is-btn:active { background: color-mix(in srgb, var(--color-white) 88%, var(--color-ink)); }
+.qpool-count { width: 36px; height: 36px; border-radius: 10px; flex-shrink: 0; display: grid; place-items: center; background: var(--d, var(--color-accent)); color: #fff; font: 650 14px/1 var(--font-round); font-variant-numeric: tabular-nums; }
+.qpool-skel-ico { width: 36px; height: 36px; border-radius: 10px; flex-shrink: 0; }
+.qpool-row-main { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+.qpool-row-main > b { font-size: 14.5px; font-weight: 600; line-height: 1.3; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow-wrap: anywhere; }
+.qpool-eyebrow { font-size: 11.5px; font-weight: 650; color: var(--d-ink, var(--color-ink-3)); letter-spacing: .01em; }
+.qpool-meta { font-size: 12.5px; color: var(--color-ink-3); font-variant-numeric: tabular-nums; }
+.qpool-row-end { flex-shrink: 0; display: flex; align-items: center; gap: 6px; }
+.qpool-chev { width: 16px; height: 16px; color: var(--color-ink-3); opacity: .7; }
+@media (max-width: 520px) { .qpool-row-end .ui-tag { display: none; } }
+
+.qpool-empty { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 6px; padding: 32px 16px; }
+.qpool-empty-ic { width: 52px; height: 52px; border-radius: 50%; display: grid; place-items: center; background: var(--color-accent-soft); color: var(--color-accent); margin-bottom: 4px; }
+.qpool-empty-ic > svg { width: 24px; height: 24px; }
+.qpool-empty b { font-size: 15px; color: var(--color-ink); }
+.qpool-empty span { font-size: 13px; line-height: 1.45; color: var(--color-ink-3); max-width: 360px; }
+
+/* Ayrıntı */
+.qpool-detail { display: flex; flex-direction: column; gap: 16px; animation: ui-in var(--mo-base) var(--mo-ease) both; }
+.qpool-back { align-self: flex-start; display: inline-flex; align-items: center; gap: 2px; height: 30px; padding: 0 8px 0 2px; margin-left: -4px; border-radius: 8px; font-size: 14px; font-weight: 500; color: var(--color-accent); cursor: pointer; }
+.qpool-back:hover { background: var(--color-accent-soft); }
+.qpool-back > svg { width: 18px; height: 18px; }
+.qpool-head { display: flex; flex-direction: column; gap: 8px; }
+.qpool-head h3 { margin: 0; font: 700 20px/1.25 var(--font-display); letter-spacing: -.02em; color: var(--color-ink); overflow-wrap: anywhere; }
+.qpool-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.qpool-disc { --t-bg: var(--d-soft, var(--color-field)); --t-fg: var(--d-ink, var(--color-ink-2)); }
+.qpool-stats { display: flex; gap: 8px; margin: 2px 0 0; }
+.qpool-stats > div { flex: 1; max-width: 120px; padding: 8px 12px; border-radius: 10px; background: var(--color-white); }
+.qpool-stats dt { font-size: 11.5px; color: var(--color-ink-3); }
+.qpool-stats dd { margin: 0; font: 650 18px/1.2 var(--font-round); color: var(--color-ink); font-variant-numeric: tabular-nums; }
+
+.qpool-stem { font-size: var(--dn-read, 15px); line-height: 1.55; font-weight: 500; color: var(--color-ink); white-space: pre-wrap; overflow-wrap: anywhere; }
+.qpool-prose { font-size: 13.5px; line-height: 1.55; color: var(--color-ink-2); white-space: pre-wrap; overflow-wrap: anywhere; }
+
+/* Şıklar */
+.qpool-opts { list-style: none; margin: 0; padding: 0; }
+.qpool-opt { position: relative; display: flex; align-items: flex-start; gap: 12px; padding: 11px var(--dn-pad); }
+.qpool-opt + .qpool-opt::before { content: ""; position: absolute; top: 0; left: calc(var(--dn-pad) + 36px); right: 0; height: 1px; background: var(--color-line); }
+.qpool-opt > i { width: 24px; height: 24px; border-radius: 50%; flex-shrink: 0; display: grid; place-items: center; font: 600 12px/1 var(--font-round); font-style: normal; color: var(--color-ink-2); box-shadow: inset 0 0 0 1.5px var(--color-line-2); }
+.qpool-opt-main { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 4px; padding-top: 2px; font-size: 14px; line-height: 1.45; color: var(--color-ink); overflow-wrap: anywhere; }
+.qpool-opt-end { flex-shrink: 0; padding-top: 3px; font-size: 12px; color: var(--color-ink-3); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.qpool-conflict { font-size: 12px; color: var(--color-warn); }
+.qpool-bar { display: block; height: 4px; border-radius: 2px; background: var(--color-field); overflow: hidden; max-width: 220px; }
+.qpool-bar > s { display: block; height: 100%; border-radius: 2px; background: var(--color-accent); opacity: .55; text-decoration: none; }
+.qpool-opt.is-answer > i { background: var(--color-ok); box-shadow: none; color: var(--color-on-solid, #fff); }
+.qpool-opt.is-answer .qpool-opt-main > span:first-child { font-weight: 600; }
+.qpool-opt.is-answer .qpool-bar > s { background: var(--color-ok); opacity: 1; }
+.qpool-opt.is-missing > i { box-shadow: none; border: 1.5px dashed var(--color-line-2); color: var(--color-ink-3); }
+.qpool-opt.is-missing .qpool-opt-main > span:first-child { font-style: italic; color: var(--color-ink-3); }
+
+/* Neden birleşti */
+.qpool-why { display: flex; flex-direction: column; gap: 10px; }
+.qpool-terms { display: flex; flex-wrap: wrap; gap: 6px; }
+.qpool-frags { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 6px; }
+.qpool-frags li { padding-left: 10px; border-left: 2px solid var(--d, var(--color-line-2)); font-size: 13px; line-height: 1.45; color: var(--color-ink-2); overflow-wrap: anywhere; }
+.qpool-frags em { font-style: normal; color: var(--color-ink-3); }
+.qpool-muted { margin: 0; font-size: 12.5px; line-height: 1.45; color: var(--color-ink-3); overflow-wrap: anywhere; }
+
+/* Katkılar */
+.qpool-contrib { position: relative; display: flex; gap: 12px; padding: 12px var(--dn-pad); }
+.qpool-contrib + .qpool-contrib::before, .qpool-contrib + .qpool-compose::before, .qpool-contrib-empty + .qpool-compose::before { content: ""; position: absolute; top: 0; left: var(--dn-pad); right: 0; height: 1px; background: var(--color-line); }
+.qpool-av { width: 32px; height: 32px; border-radius: 50%; flex-shrink: 0; display: grid; place-items: center; background: var(--color-accent-soft); color: var(--color-accent); font: 650 12px/1 var(--font-round); }
+.qpool-contrib-main { flex: 1; min-width: 0; }
+.qpool-contrib-main > div { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; }
+.qpool-contrib-main b { font-size: 13.5px; font-weight: 600; color: var(--color-ink); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.qpool-contrib-main time { flex-shrink: 0; font-size: 12px; color: var(--color-ink-3); }
+.qpool-contrib-main p { margin: 2px 0 0; font-size: 13.5px; line-height: 1.5; color: var(--color-ink-2); overflow-wrap: anywhere; }
+.qpool-contrib-empty { margin: 0; padding: 14px var(--dn-pad); font-size: 13px; line-height: 1.45; color: var(--color-ink-3); }
+.qpool-compose { position: relative; display: flex; gap: 8px; padding: 10px var(--dn-pad) 12px; }
+.qpool-compose .ui-input { flex: 1; min-width: 0; }
+.qpool-compose .ui-btn { flex-shrink: 0; }

@@ -156,16 +156,16 @@
   "fileName": "08_hucresel_yaslanma.md",
   "keyPoints": [
    "Öğrenim Hedefleri",
-   "Tanım ve Klinik Önem",
-   "Başlıca Mekanizmalar",
-   "DNA Hasarı ve Yaşlanma",
+   "Hücresel Yaşlanma: Tanım, Klinik Önem ve Güncel Bakış",
+   "Hücresel Yaşlanmanın Başlıca Mekanizmaları",
+   "DNA Hasarı ve Erken Yaşlanma Sendromları",
    "ROS ve Oksidatif Stres",
-   "Mitokondriyal Disfonksiyon",
-   "Replikatif Yaşlanma, Telomer ve Telomeraz",
+   "Mitokondriyal Disfonksiyon ve Mitokondriyal Apoptoz Yolu",
+   "Replikatif Yaşlanma, Telomer–Telomeraz Sistemi ve Telomeropatiler",
    "Protein Homeostazında Bozulma"
   ],
-  "charCount": 9620,
-  "readingTimeMinutes": 7
+  "charCount": 27449,
+  "readingTimeMinutes": 20
  },
  {
   "id": "k1-09-akut-enflamasyon-vaskuler-degisiklikler-ve-hucrese",
@@ -461,16 +461,16 @@
   "fileName": "23_ana_cocuk_sagligi_duzeyinin_izlenmesi.md",
   "keyPoints": [
    "Öğrenim Hedefleri",
-   "Ana-Çocuk Sağlığı İzlemlerinin Önemi",
-   "Anne Ölümü",
-   "İzlenen Gruplar ve Aile Hekimliği",
-   "Doğum Öncesi Bakım (DÖB)",
-   "Türkiye'de Durum (TNSA-2018)",
-   "Gebe İzlemi",
-   "Lohusa ve Kadın İzlemi"
+   "Ana-Çocuk Sağlığı İzlemlerinin Gerekçesi ve Risk Grupları",
+   "Anne Ölümü ve Anne Ölüm Oranı",
+   "İzlenen Gruplar ve Yasal Çerçeve",
+   "Doğum Öncesi Bakım (DÖB): Tanım, Yarar, Tarihçe ve Yeterlilik",
+   "Bebek ve Çocuk Ölümlülüğünün Risk Faktörleri ve TNSA-2018 Özeti",
+   "Gebe İzlemlerinin Amaçları",
+   "Gebe İzlem Takvimi ve İzlemlerin İçeriği"
   ],
-  "charCount": 13192,
-  "readingTimeMinutes": 11
+  "charCount": 36117,
+  "readingTimeMinutes": 31
  },
  {
   "id": "k1-24-emboli-enfarktus-ve-sok",
@@ -478,18 +478,20 @@
   "committeeId": "donem3-kurul1",
   "discipline": "Tıbbi Patoloji",
   "title": "Emboli, Enfarktüs ve Şok",
-  "instructor": "Prof. Dr. Hikmet Keleş",
+  "instructor": "Prof. Dr. Hikmet KELEŞ",
   "fileName": "24_emboli_enfarktus_ve_sok.md",
   "keyPoints": [
    "Öğrenim Hedefleri",
-   "Emboli",
-   "Enfarktüs",
-   "Şok",
-   "Septik Şok",
-   "Şokun Evreleri"
+   "Emboli: Tanım ve Klinik Önemi",
+   "Pulmoner Tromboembolizm",
+   "Sistemik Tromboembolizm",
+   "Yağ Embolisi ve Yağ Embolisi Sendromu",
+   "Amniyotik Sıvı Embolisi",
+   "Hava (Gaz) Embolisi ve Dekompresyon Hastalığı",
+   "Enfarktüs: Tanım ve Nedenler"
   ],
-  "charCount": 11685,
-  "readingTimeMinutes": 9
+  "charCount": 30383,
+  "readingTimeMinutes": 23
  },
  {
   "id": "k1-25-asiri-duyarlilik-ve-otoimmunite",
@@ -578,20 +580,20 @@
   "committeeId": "donem3-kurul1",
   "discipline": "Tıbbi Patoloji",
   "title": "Karsinojenezin Moleküler Temeli",
-  "instructor": "Prof. Dr. Hikmet Keleş",
+  "instructor": "Prof. Dr. Hikmet KELEŞ",
   "fileName": "29_karsinojenezin_molekuler_temeli.md",
   "keyPoints": [
    "Öğrenim Hedefleri",
-   "Kanser Genleri",
-   "Genetik Lezyon Türleri",
-   "Genomik İstikrarsızlık ve DNA Onarımı",
-   "Tümörü Destekleyen İnflamasyon",
-   "Kimyasal Karsinojenler",
-   "Radyasyon",
-   "Viral ve Mikrobiyal Karsinogenez"
+   "Kanser Genleri: Genel Kavram ve Kanserin Ayırt Edici Özellikleri",
+   "Kanser Genlerinin Dört Ana Sınıfı",
+   "Temel Genetik Lezyonlar",
+   "MikroRNA'lar ve Epigenetik Değişiklikler",
+   "Genomik İstikrarsızlık ve DNA Onarım Kusurları",
+   "Tümörü Destekleyen Enflamasyon",
+   "Kimyasal Karsinojenler"
   ],
-  "charCount": 12812,
-  "readingTimeMinutes": 9
+  "charCount": 41614,
+  "readingTimeMinutes": 30
  },
  {
   "id": "k1-30-ileri-tumor-genetigi-ve-metabolizmasi",
@@ -603,15 +605,16 @@
   "fileName": "30_ileri_tumor_genetigi_ve_metabolizmasi.md",
   "keyPoints": [
    "Öğrenim Hedefleri",
-   "Retinoblastoma Proteini (RB) ve G1/S Kontrol Noktası",
-   "TP53: \"Genomun Koruyucusu\"",
-   "Diğer Tümör Baskılayıcı Yollar",
-   "Tümör Metabolizması",
-   "Sürekli Anjiyogenez",
-   "Genel Değerlendirme"
+   "RB Yolu ve G1/S Kontrol Noktası",
+   "İki Vuruş Hipotezi ve Retinoblastomanın Patogenezi",
+   "RB ve G1/S Kontrol Noktası: Mekanizma",
+   "RB Yolunu Bozan Onkojenik Değişiklikler ve Onkojenik Virüsler",
+   "TP53 – Genomun Koruyucusu",
+   "p53'ün Hücre Döngüsü, Yaşlanma ve Apoptozdaki İşlevleri",
+   "TP53 Mutasyonları ve Li–Fraumeni Sendromu"
   ],
-  "charCount": 10317,
-  "readingTimeMinutes": 8
+  "charCount": 36171,
+  "readingTimeMinutes": 27
  },
  {
   "id": "k1-31-urogenital-sistem-tumorlerinde-genetik-belirtecler",
@@ -700,15 +703,15 @@
   "keyPoints": [
    "Öğrenim Hedefleri",
    "Prenatal Tanı Nedir?",
-   "Prenatal Tanının Yararları ve Amaçları",
-   "Prenatal Tanı Öncesi Genetik Danışma",
-   "Prenatal Tanı Endikasyonları (Kime Yapılmalıdır?)",
-   "Prenatal Tanıda \"Beklentiler\"",
-   "Prenatal Tanı Yöntemleri",
-   "Non-invaziv Prenatal Tanı Yöntemleri"
+   "Prenatal Tanının Yararları, Ekip Yaklaşımı ve Genetik Danışma",
+   "Prenatal Tanının Amaçları",
+   "Prenatal Tanı Kime Yapılmalıdır? — Endikasyonlar",
+   "Endikasyonların Ayrıntıları ve Risk Düzeyleri",
+   "Prenatal Tanıda Beklentiler ve Yöntemlerin Sınıflandırılması",
+   "Non-invaziv Yöntemler: Ultrasonografi ve NTD Taraması"
   ],
-  "charCount": 30977,
-  "readingTimeMinutes": 23
+  "charCount": 49744,
+  "readingTimeMinutes": 37
  },
  {
   "id": "k1-36-izolasyon-yontemleri",
@@ -1115,15 +1118,16 @@
   "fileName": "55_over_tumorleri.md",
   "keyPoints": [
    "Öğrenim Hedefleri",
-   "Genel Bakış ve Epidemiyoloji",
-   "Sınıflandırma (WHO)",
-   "Yüzey Epitel (Epitelyal-Stromal) Tümörler",
-   "Germ Hücreli Tümörler (Teratomlar)",
-   "Seks Kord-Stromal Tümörler",
-   "Klinik Korelasyonlar ve Metastazlar"
+   "Fallop Tüpleri: Sık Görülen Lezyonlar ve Salpingit",
+   "Fallop Tüpü ve Seröz Karsinom Kökeni (STIC)",
+   "Ovaryum: Basit Fonksiyonel Kistler",
+   "Polikistik Over Sendromu (PCOS)",
+   "Ovaryum Tümörleri: Genel Bakış ve Sınıflama",
+   "Başlıca Over Tümörlerinin Sıklığı (Tablo 17.3)",
+   "Over Karsinomları: Tip I – Tip II Yolları, Risk Faktörleri ve BRCA"
   ],
-  "charCount": 20890,
-  "readingTimeMinutes": 15
+  "charCount": 33047,
+  "readingTimeMinutes": 25
  },
  {
   "id": "k1-56-memenin-benign-hastaliklari",
@@ -1172,18 +1176,20 @@
   "committeeId": "donem3-kurul1",
   "discipline": "Üroloji",
   "title": "Enürezis Nokturna",
-  "instructor": "Dr. Öğr. Üyesi Salih Bürlükkara",
+  "instructor": "Doç. Dr. Salih Bürlukkara",
   "fileName": "58_enurezis_nokturna.md",
   "keyPoints": [
    "Öğrenim Hedefleri",
    "Tanım ve Sınıflandırma",
+   "Mesane Kapasitesi ve Noktürnal Poliüri",
    "Epidemiyoloji",
    "Patogenez",
-   "İlk Değerlendirme",
-   "Tedavi"
+   "Uyanma Bozukluğu, Noktürnal Poliüri ve Detrusor Aktivitesi",
+   "Diğer Faktörler: Psikososyal, Diyet, Uyku Apnesi, Kabızlık",
+   "İlk Değerlendirme: Uyarı İşaretleri"
   ],
-  "charCount": 23405,
-  "readingTimeMinutes": 17
+  "charCount": 37424,
+  "readingTimeMinutes": 28
  },
  {
   "id": "k1-59-immunofarmakoloji",
@@ -1233,20 +1239,20 @@
   "committeeId": "donem3-kurul1",
   "discipline": "Kadın Hastalıkları ve Doğum",
   "title": "Abortus",
-  "instructor": "Dr. Öğr. Üyesi Hilal Ezgi Türkmen",
+  "instructor": "Dr. Hilal Ezgi Türkmen",
   "fileName": "61_abortus.md",
   "keyPoints": [
    "Öğrenim Hedefleri",
    "Tanım ve İnsidans",
    "Risk Faktörleri",
-   "Etiyoloji",
+   "Etiyoloji: Fetal (Embriyonik) Nedenler",
+   "Etiyoloji: Maternal Nedenler",
+   "Endokrin-Metabolik, Enfeksiyöz ve Çevresel Faktörler",
    "Abortus Tipleri",
-   "Septik Düşük",
-   "Vajinal Kanaması, Ağrısı ve Adet Gecikmesi Olan Hasta",
-   "Ayırıcı Tanı"
+   "Gebelik Kaybının Ultrasonografik Tanısı"
   ],
-  "charCount": 12376,
-  "readingTimeMinutes": 9
+  "charCount": 31819,
+  "readingTimeMinutes": 24
  },
  {
   "id": "k1-62-uretral-akinti",

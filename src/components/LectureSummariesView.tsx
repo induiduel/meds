@@ -1,22 +1,25 @@
-import React, { useState, useEffect, useMemo } from 'react';
-import { disciplineClass, disciplineLabel } from '../utils/discipline';
+import React, { useEffect, useMemo, useState } from 'react';
+import { Check, ChevronRight, Clock, Download, GraduationCap, Search, X } from 'lucide-react';
 import { PageHeader } from './ui/PageHeader';
-import {
-  Search,
-  Clock,
-  ChevronRight,
-  X,
-  Download,
-  GraduationCap,
-} from 'lucide-react';
+import { disciplineClass, disciplineLabel } from '../utils/discipline';
 import summariesMetaData from '../data/summaries_meta.json';
 // Resmi ders programı + kaynak PDF eşleşmesi: scripts/pipeline/10-enrich-summaries.mjs üretir
 import summariesEnrichment from '../data/summaries_enrichment.json';
 import curriculumDisciplines from '../data/curriculum_disciplines.json';
-import { SummaryArtifactReader } from './SummaryArtifactReader';
+import { SummaryReader } from './summary/SummaryReader';
+import { useReadingProgress, type ReadingMark } from './summary/readerStore';
 import { triggerDomHighlightAndScroll } from '../services/universalRedirectService';
+import { safeJsonFetch } from '../services/api';
 import { queryClient } from '../queryClient';
 import { offlineDatabaseService } from '../services/offlineDatabaseService';
+
+/**
+ * Ders özetleri (v9, sıfırdan). Yapı:
+ *   başlık + PDF · "Okumaya devam" şeridi (yarım kalan özetler) · arama + ders süzgeci · kurul şeridi
+ *   → Tümü'nde kurul kurul, bir kurulda ders ders gruplanmış kartlar; aramada düz sonuç listesi.
+ * Kart: ders rengi (--d), başlık, öğretim üyesi, okuma süresi ve okuma durumu (yeni / %ilerleme / bitti).
+ * Okuyucu: summary/SummaryReader (uygulama temasıyla, ayrı tema yok). Stil: styles/summary.css (.sl-*).
+ */
 
 export interface SummaryMeta {
   id: string;
@@ -35,9 +38,23 @@ export interface SummaryMeta {
   pdfName?: string;
 }
 
+export interface SummaryDetail extends SummaryMeta {
+  content?: string;
+}
+
 type Enrichment = { lessonTitle?: string; discipline?: string; instructor?: string; sourceYear?: number; sourceDate?: string; pdfName?: string };
 const ENRICH = summariesEnrichment as Record<string, Enrichment>;
 const KURUL_DISCIPLINES = curriculumDisciplines as Record<string, string[]>;
+
+const KURUL_LABELS: Record<number, string> = {
+  1: 'Ürogenital & Obstetrik',
+  2: 'Nöropsikiyatri',
+  3: 'Gastrointestinal Sistem',
+  4: 'Dolaşım, Solunum & Tümör',
+  5: 'Ortopedi, Travma & Hematopoetik',
+  6: 'Endokrin & Yaşlanma',
+};
+const KURULS = [1, 2, 3, 4, 5, 6] as const;
 
 /** Dosya adından türemiş başlıkları toparlar: baştaki sıra numarası, "D3", alt çizgi vb. */
 const cleanTitle = (t: string) =>
@@ -48,9 +65,7 @@ const cleanTitle = (t: string) =>
     .trim()
     .replace(/^\p{Ll}/u, (c) => c.toLocaleUpperCase('tr')) || t;
 
-export interface SummaryDetail extends SummaryMeta {
-  content?: string;
-}
+const fold = (s: string) => s.toLocaleLowerCase('tr').normalize('NFD').replace(/[̀-ͯ]/g, '');
 
 interface LectureSummariesViewProps {
   onOpenPdfModal?: () => void;
@@ -58,26 +73,95 @@ interface LectureSummariesViewProps {
   initialSummaryId?: string;
 }
 
-const KURUL_LABELS: Record<number, string> = {
-  1: 'Kurul 1: Ürogenital & Obstetrik',
-  2: 'Kurul 2: Nöropsikiyatri',
-  3: 'Kurul 3: Gastrointestinal Sistem',
-  4: 'Kurul 4: Dolaşım, Solunum & Tümör',
-  5: 'Kurul 5: Ortopedi, Travma & Hematopoetik',
-  6: 'Kurul 6: Endokrin & Yaşlanma',
+async function loadSummaryDetail(meta: SummaryMeta): Promise<SummaryDetail | null> {
+  // 0. Cihaz hafızası (IndexedDB)
+  try {
+    const saved = await offlineDatabaseService.getSummaries();
+    const hit = saved.find((s: any) => s.id === meta.id);
+    if (hit?.content) return hit;
+  } catch {
+    /* yoksa sıradakine geç */
+  }
+  // 1. Sunucu (kullanıcının seçtiği API adresine saygılı)
+  if (typeof navigator === 'undefined' || navigator.onLine) {
+    const res = await safeJsonFetch<{ success?: boolean; summary?: SummaryDetail }>(`/api/summaries/${encodeURIComponent(meta.id)}`);
+    if (res.ok && res.data?.summary?.content) return res.data.summary;
+  }
+  // 2. Paketle gelen kurul dosyası (çevrimdışı)
+  const loaders: Record<number, () => Promise<any>> = {
+    1: () => import('../data/summaries/kurul1.json'),
+    2: () => import('../data/summaries/kurul2.json'),
+    3: () => import('../data/summaries/kurul3.json'),
+    4: () => import('../data/summaries/kurul4.json'),
+    5: () => import('../data/summaries/kurul5.json'),
+    6: () => import('../data/summaries/kurul6.json'),
+  };
+  try {
+    const mod = await (loaders[meta.kurul] || loaders[1])();
+    const list: SummaryDetail[] = mod.default || mod;
+    return list.find((s) => s.id === meta.id) || null;
+  } catch (e) {
+    console.warn('Özet içeriği yüklenemedi:', e);
+    return null;
+  }
+}
+
+const ReadState: React.FC<{ mark?: ReadingMark }> = ({ mark }) => {
+  if (!mark || mark.p < 2) return null;
+  if (mark.p >= 97)
+    return (
+      <span className="sl-state is-done">
+        <Check aria-hidden /> Bitti
+      </span>
+    );
+  return (
+    <span className="sl-state">
+      <i className="sr-ring is-xs" style={{ '--p': mark.p } as React.CSSProperties} aria-hidden />%{Math.round(mark.p)}
+    </span>
+  );
 };
 
-export const LectureSummariesView: React.FC<LectureSummariesViewProps> = ({ onOpenPdfModal, initialSummaryId }) => {
-  const [selectedKurul, setSelectedKurul] = useState<number | 'all'>('all');
-  const [selectedDiscipline, setSelectedDiscipline] = useState<string>('all');
-  const [searchQuery, setSearchQuery] = useState('');
-  
-  // Active reading modal
-  const [activeSummary, setActiveSummary] = useState<SummaryDetail | null>(null);
-  const [isLoadingContent, setIsLoadingContent] = useState(false);
-  const [copied, setCopied] = useState(false);
+const Card: React.FC<{ s: SummaryMeta; i: number; mark?: ReadingMark; showKurul: boolean; onOpen: () => void }> = ({ s, i, mark, showKurul, onOpen }) => (
+  <li className={`sl-item ${disciplineClass(s.discipline)}`} style={{ '--i': Math.min(i, 14) } as React.CSSProperties}>
+    <button type="button" className="sl-card" onClick={onOpen}>
+      <span className="sl-card-top">
+        <span className="hk-eyebrow">
+          <i className="hk-dot" aria-hidden />
+          <span>{disciplineLabel(s.discipline)}</span>
+        </span>
+        {showKurul && <span className="sl-kurul">K{s.kurul}</span>}
+        <ReadState mark={mark} />
+      </span>
+      <span className="sl-card-t">{s.title}</span>
+      {s.instructor && (
+        <span className="sl-card-who">
+          <GraduationCap aria-hidden />
+          <span>{s.instructor}</span>
+        </span>
+      )}
+      <span className="sl-card-foot">
+        <span>
+          <Clock aria-hidden /> {s.readingTimeMinutes} dk
+        </span>
+        {s.sourceYear && <span title={s.pdfName ? `${s.pdfName} · ${s.sourceDate || ''}` : s.sourceDate}>{s.sourceYear}</span>}
+        <ChevronRight className="sl-card-go" aria-hidden />
+      </span>
+      {mark && mark.p >= 2 && mark.p < 97 && (
+        <span className="sl-card-bar" aria-hidden>
+          <i style={{ transform: `scaleX(${mark.p / 100})` }} />
+        </span>
+      )}
+    </button>
+  </li>
+);
 
-  // All metadata list
+export const LectureSummariesView: React.FC<LectureSummariesViewProps> = ({ onOpenPdfModal, initialSummaryId }) => {
+  const [kurul, setKurul] = useState<number | 'all'>('all');
+  const [discipline, setDiscipline] = useState('all');
+  const [query, setQuery] = useState('');
+  const [active, setActive] = useState<SummaryDetail | null>(null);
+  const progress = useReadingProgress();
+
   // Ders programından gelen gerçek ders adı, branş ve öğretim üyesi; kaynak PDF yılı
   const summaries: SummaryMeta[] = useMemo(
     () =>
@@ -95,173 +179,168 @@ export const LectureSummariesView: React.FC<LectureSummariesViewProps> = ({ onOp
       }),
     []
   );
+  const byId = useMemo(() => new Map(summaries.map((s) => [s.id, s])), [summaries]);
 
-  // Kurul seçiliyse yalnızca o kurulda verilen dersler (resmi programdan; özeti olanlar)
+  // Kurul seçiliyse yalnız o kurulda verilen dersler (resmi programdan; özeti olanlar)
   const disciplines = useMemo(() => {
-    const have = new Set(summaries.filter((s) => selectedKurul === 'all' || s.kurul === selectedKurul).map((s) => s.discipline).filter(Boolean));
-    const program = selectedKurul === 'all' ? null : KURUL_DISCIPLINES[String(selectedKurul)];
+    const have = new Set(summaries.filter((s) => kurul === 'all' || s.kurul === kurul).map((s) => s.discipline).filter(Boolean));
+    const program = kurul === 'all' ? null : KURUL_DISCIPLINES[String(kurul)];
     const list = program ? program.filter((d) => have.has(d)) : Array.from(have);
     return list.sort((a, b) => a.localeCompare(b, 'tr'));
-  }, [summaries, selectedKurul]);
+  }, [summaries, kurul]);
 
   useEffect(() => {
-    if (selectedDiscipline !== 'all' && !disciplines.includes(selectedDiscipline)) setSelectedDiscipline('all');
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [disciplines]);
+    if (discipline !== 'all' && !disciplines.includes(discipline)) setDiscipline('all');
+  }, [disciplines, discipline]);
 
-  // Filtered summaries
-  const filteredSummaries = useMemo(() => {
-    return summaries.filter((s) => {
-      if (selectedKurul !== 'all' && s.kurul !== selectedKurul) return false;
-      if (selectedDiscipline !== 'all' && s.discipline !== selectedDiscipline) return false;
-      if (searchQuery.trim()) {
-        const q = searchQuery.toLowerCase();
-        const inTitle = s.title.toLowerCase().includes(q);
-        const inDiscipline = s.discipline.toLowerCase().includes(q);
-        const inInstructor = s.instructor ? s.instructor.toLowerCase().includes(q) : false;
-        const inPoints = s.keyPoints.some((p) => p.toLowerCase().includes(q));
-        if (!inTitle && !inDiscipline && !inInstructor && !inPoints) return false;
-      }
-      return true;
-    });
-  }, [summaries, selectedKurul, selectedDiscipline, searchQuery]);
+  const q = fold(query.trim());
+  const filtered = useMemo(
+    () =>
+      summaries.filter((s) => {
+        if (kurul !== 'all' && s.kurul !== kurul) return false;
+        if (discipline !== 'all' && s.discipline !== discipline) return false;
+        if (!q) return true;
+        return [s.title, s.discipline, s.instructor || '', ...(s.keyPoints || [])].some((f) => fold(f).includes(q));
+      }),
+    [summaries, kurul, discipline, q]
+  );
 
-  // Load full summary content when opened (TanStack Query ile 1 saat önbellekli)
-  const handleOpenSummary = async (meta: SummaryMeta) => {
-    setActiveSummary(meta);
-    setIsLoadingContent(true);
+  // Gruplar: arama → düz liste; Tümü → kurul; kurul seçili → ders
+  const groups = useMemo(() => {
+    if (q || discipline !== 'all') return [{ key: 'flat', title: '', sub: '', items: filtered }];
+    if (kurul === 'all') {
+      return KURULS.map((k) => ({ key: `k${k}`, title: `Kurul ${k}`, sub: KURUL_LABELS[k], items: filtered.filter((s) => s.kurul === k) })).filter((g) => g.items.length);
+    }
+    const map = new Map<string, SummaryMeta[]>();
+    filtered.forEach((s) => map.set(s.discipline, [...(map.get(s.discipline) || []), s]));
+    return Array.from(map.entries())
+      .sort((a, b) => b[1].length - a[1].length || a[0].localeCompare(b[0], 'tr'))
+      .map(([d, items]) => ({ key: d, title: disciplineLabel(d), sub: d !== disciplineLabel(d) ? d : '', items, d }));
+  }, [filtered, kurul, discipline, q]);
+  const ordered = useMemo(() => groups.flatMap((g) => g.items), [groups]);
+
+  // Yarım kalan özetler (son okunan önce)
+  const inProgress = useMemo(
+    () =>
+      Object.entries(progress)
+        .filter(([id, m]) => m.p >= 2 && m.p < 97 && byId.has(id))
+        .sort((a, b) => b[1].t - a[1].t)
+        .slice(0, 8)
+        .map(([id, m]) => ({ s: byId.get(id)!, m })),
+    [progress, byId]
+  );
+  const doneCount = useMemo(() => summaries.filter((s) => (progress[s.id]?.p || 0) >= 97).length, [summaries, progress]);
+
+  const open = async (meta: SummaryMeta) => {
+    setActive(meta); // okuyucu hemen açılır, içerik gelene kadar iskelet gösterir
     try {
       const detail = await queryClient.fetchQuery({
         queryKey: ['summary-detail', meta.id],
-        queryFn: async (): Promise<SummaryDetail | null> => {
-          // 0. Cihaz hafızasındaki (IndexedDB) özetlere bak (< 5ms)
-          try {
-            const allSaved = await offlineDatabaseService.getSummaries();
-            const foundInDb = allSaved.find((s: any) => s.id === meta.id);
-            if (foundInDb && foundInDb.content) return foundInDb;
-          } catch (_) {}
-
-          // 1. Çevrimiçi ise sunucu API'sini dene
-          if (typeof navigator === 'undefined' || navigator.onLine) {
-            try {
-              const res = await fetch(`/api/summaries/${meta.id}`);
-              if (res.ok && res.headers.get('content-type')?.includes('application/json')) {
-                const data = await res.json();
-                if (data.success && data.summary?.content) {
-                  return data.summary;
-                }
-              }
-            } catch (_) {}
-          }
-
-          // 2. Fallback to dynamic per-committee chunk import for offline
-          try {
-            let kurulMod: any;
-            switch (meta.kurul) {
-              case 1: kurulMod = await import('../data/summaries/kurul1.json'); break;
-              case 2: kurulMod = await import('../data/summaries/kurul2.json'); break;
-              case 3: kurulMod = await import('../data/summaries/kurul3.json'); break;
-              case 4: kurulMod = await import('../data/summaries/kurul4.json'); break;
-              case 5: kurulMod = await import('../data/summaries/kurul5.json'); break;
-              case 6: kurulMod = await import('../data/summaries/kurul6.json'); break;
-              default: kurulMod = await import('../data/summaries/kurul1.json'); break;
-            }
-            const list = (kurulMod && (kurulMod.default || kurulMod)) || [];
-            const found = list.find((s: any) => s.id === meta.id);
-            if (found && found.content) return found;
-          } catch (e) {
-            console.warn('Could not load summary content from committee chunk:', e);
-          }
-          return null;
-        },
-        staleTime: 1000 * 60 * 60, // 1 saat önbellek
+        queryFn: () => loadSummaryDetail(meta),
+        staleTime: 1000 * 60 * 60,
       });
-
-      if (detail) {
-        setActiveSummary(detail);
-        if (typeof window !== 'undefined') {
-          const urlParams = new URLSearchParams(window.location.search);
-          const highlight = urlParams.get('highlight');
-          if (highlight) {
-            setTimeout(() => triggerDomHighlightAndScroll(highlight), 400);
-          }
-        }
-      }
+      setActive((cur) => (cur && cur.id === meta.id ? (detail ? { ...meta, ...detail, title: meta.title, discipline: meta.discipline, instructor: meta.instructor } : cur) : cur));
+      if (!detail) return;
+      const highlight = new URLSearchParams(window.location.search).get('highlight');
+      if (highlight) window.setTimeout(() => triggerDomHighlightAndScroll(highlight), 500);
     } catch (e) {
       console.warn('Özet detay yükleme hatası:', e);
-    } finally {
-      setIsLoadingContent(false);
     }
   };
 
   useEffect(() => {
-    if (typeof window === 'undefined') return;
-    const urlParams = new URLSearchParams(window.location.search);
-    const targetId = initialSummaryId || urlParams.get('id') || urlParams.get('summaryId') || urlParams.get('noteId');
-    const highlight = urlParams.get('highlight');
-
-    if (targetId) {
-      const meta = summaries.find((x) => x.id === targetId);
-      if (meta) {
-        handleOpenSummary(meta);
-        if (highlight) {
-          setTimeout(() => triggerDomHighlightAndScroll(highlight), 700);
-        }
-      }
+    const params = new URLSearchParams(window.location.search);
+    const target = initialSummaryId || params.get('id') || params.get('summaryId') || params.get('noteId');
+    const highlight = params.get('highlight');
+    if (target) {
+      const meta = byId.get(target);
+      if (meta) open(meta);
     } else if (highlight) {
-      setTimeout(() => triggerDomHighlightAndScroll(highlight), 500);
+      window.setTimeout(() => triggerDomHighlightAndScroll(highlight), 500);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [initialSummaryId, summaries]);
+  }, [initialSummaryId, byId]);
 
+  const nextOf = (id: string) => {
+    const i = ordered.findIndex((s) => s.id === id);
+    return i >= 0 ? ordered[i + 1] : undefined;
+  };
+  const next = active ? nextOf(active.id) : undefined;
+
+  let idx = 0;
   return (
-    <div className="flex flex-col gap-3 sm:gap-5 min-w-0">
+    <div className="sl-page">
       <PageHeader
-        eyebrow="Amfi notları"
         title="Ders özetleri"
-        description="Klinik ipuçları, mekanizmalar, sınav tuzakları ve tablolar; ders ders, okunur biçimde."
-        stats={[{ label: 'özet', value: filteredSummaries.length }]}
+        description="Amfi notlarından derlenmiş özetler: mekanizmalar, tablolar, sınav tuzakları ve çıkmış sorular."
+        stats={[
+          { label: 'özet', value: summaries.length },
+          ...(doneCount ? [{ label: 'bitti', value: doneCount, tone: 'ok' as const }] : []),
+        ]}
         actions={
           onOpenPdfModal && (
-            <button
-              type="button"
-              onClick={onOpenPdfModal}
-              aria-label="PDF indir"
-              className="shrink-0 h-10 px-3 rounded-[10px] border border-line bg-white text-base font-semibold inline-flex items-center gap-2 cursor-pointer hover:border-line-2"
-            >
-              <Download className="w-4 h-4" />
+            <button type="button" onClick={onOpenPdfModal} className="ms-btn" aria-label="PDF indir">
+              <Download aria-hidden />
               <span className="hidden sm:inline">PDF indir</span>
             </button>
           )
         }
       />
 
-      {/* Arama + branş tek satır; kurullar altı çizili sekme (Çıkmış dili) */}
-      <div className="flex flex-col sm:flex-row gap-2 min-w-0">
-        <label className="cx-search flex-1 min-w-0">
+      {inProgress.length > 0 && !q && (
+        <section className="sl-continue" aria-label="Okumaya devam">
+          <h2 className="sl-h">Okumaya devam</h2>
+          <ul className="sl-continue-rail">
+            {inProgress.map(({ s, m }, i) => (
+              <li key={s.id} className={disciplineClass(s.discipline)} style={{ '--i': i } as React.CSSProperties}>
+                <button type="button" className="sl-cont" onClick={() => open(s)}>
+                  <span className="sr-ring is-lg" style={{ '--p': m.p } as React.CSSProperties} aria-hidden>
+                    <b>%{Math.round(m.p)}</b>
+                  </span>
+                  <span className="sl-cont-txt">
+                    <span className="hk-eyebrow">
+                      <i className="hk-dot" aria-hidden />
+                      <span>{disciplineLabel(s.discipline)}</span>
+                    </span>
+                    <b>{s.title}</b>
+                    <small>~{Math.max(1, Math.round(s.readingTimeMinutes * (1 - m.p / 100)))} dk kaldı</small>
+                  </span>
+                </button>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
+
+      <div className="sl-filters">
+        <label className="cx-search sl-search">
           <Search aria-hidden />
           <span className="sr-only">Özetlerde ara</span>
-          <input type="search" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} placeholder="Ders, konu ya da terim ara" />
-          {searchQuery && (
-            <button type="button" className="cx-search-x" onClick={() => setSearchQuery('')} aria-label="Aramayı temizle"><X /></button>
+          <input type="search" value={query} onChange={(e) => setQuery(e.target.value)} placeholder="Ders, konu ya da hoca ara" />
+          {query && (
+            <button type="button" className="cx-search-x" onClick={() => setQuery('')} aria-label="Aramayı temizle">
+              <X />
+            </button>
           )}
         </label>
-        <label className="sr-only" htmlFor="summ-discipline">Branş</label>
-        <select
-          id="summ-discipline"
-          value={selectedDiscipline}
-          onChange={(e) => setSelectedDiscipline(e.target.value)}
-          className="ms-select h-11 sm:w-[230px] min-w-0"
-        >
-          <option value="all">{selectedKurul === 'all' ? 'Tüm dersler' : `Kurul ${selectedKurul} dersleri`} ({disciplines.length})</option>
+        <label className="sr-only" htmlFor="sl-discipline">
+          Ders
+        </label>
+        <select id="sl-discipline" value={discipline} onChange={(e) => setDiscipline(e.target.value)} className="ms-select sl-select">
+          <option value="all">
+            {kurul === 'all' ? 'Tüm dersler' : `Kurul ${kurul} dersleri`} ({disciplines.length})
+          </option>
           {disciplines.map((d) => (
-            <option key={d} value={d}>{d}</option>
+            <option key={d} value={d}>
+              {d}
+            </option>
           ))}
         </select>
       </div>
-      <nav className="cx-tabs" aria-label="Kurul" role="radiogroup">
-        {(['all', 1, 2, 3, 4, 5, 6] as const).map((k) => {
-          const on = selectedKurul === k;
+
+      <nav className="cx-tabs sl-tabs" aria-label="Kurul" role="radiogroup">
+        {(['all', ...KURULS] as const).map((k) => {
+          const on = kurul === k;
           const count = k === 'all' ? summaries.length : summaries.filter((s) => s.kurul === k).length;
           return (
             <button
@@ -269,73 +348,63 @@ export const LectureSummariesView: React.FC<LectureSummariesViewProps> = ({ onOp
               type="button"
               role="radio"
               aria-checked={on}
-              title={k === 'all' ? undefined : KURUL_LABELS[k]}
-              onClick={() => setSelectedKurul(k)}
+              title={k === 'all' ? undefined : `Kurul ${k}: ${KURUL_LABELS[k]}`}
+              onClick={() => setKurul(k)}
               className={`cx-tab ${on ? 'is-on' : ''} ${count === 0 ? 'is-zero' : ''}`}
             >
-              {k === 'all' ? 'Tümü' : `K${k}`} <small>{count}</small>
+              {k === 'all' ? 'Tümü' : `Kurul ${k}`} <small>{count}</small>
             </button>
           );
         })}
       </nav>
 
-      {selectedKurul !== 'all' && <p className="m-0 -mt-1 text-sm text-ink-3">{KURUL_LABELS[selectedKurul]}</p>}
-
-      {filteredSummaries.length === 0 ? (
-        <div className="ui-card text-center flex flex-col items-center gap-2" style={{ paddingBlock: 36 }}>
-          <h3 className="m-0 font-display text-xl font-bold tracking-[-0.02em]">Bu süzgeçte özet yok</h3>
-          <p className="m-0 text-base text-ink-2">Aramayı temizle ya da başka bir kurul seç.</p>
+      {filtered.length === 0 ? (
+        <div className="sl-empty">
+          <Search aria-hidden />
+          <h3>Bu süzgeçte özet yok</h3>
+          <p>Aramayı temizle ya da başka bir kurul seç.</p>
+          {(query || discipline !== 'all') && (
+            <button type="button" className="ms-btn" onClick={() => { setQuery(''); setDiscipline('all'); }}>
+              Süzgeçleri temizle
+            </button>
+          )}
         </div>
       ) : (
-        <ul className="list-none m-0 p-0 ui-grid">
-          {filteredSummaries.map((s) => (
-            <li key={s.id} className={`min-w-0 ${disciplineClass(s.discipline)}`}>
-              <button
-                type="button"
-                onClick={() => handleOpenSummary(s)}
-                className="ks-lesson group"
-              >
-                <span className="ks-lesson-top">
-                  <span className="hk-eyebrow"><i className="hk-dot" aria-hidden /><span>{disciplineLabel(s.discipline) || s.discipline}</span></span>
-                  <span className="ks-lesson-no">K{s.kurul}</span>
-                  {s.sourceYear && (
-                    <span className="ml-auto shrink-0 text-xs text-ink-3 tabular-nums" title={s.pdfName ? `${s.pdfName} · ${s.sourceDate}` : s.sourceDate}>
-                      {s.sourceYear}
-                    </span>
-                  )}
-                </span>
-                <span className="ks-lesson-t line-clamp-2">{s.title}</span>
-                {s.instructor && (
-                  <span className="text-sm text-ink-2 font-medium flex items-center gap-1.5 truncate">
-                    <GraduationCap className="w-3.5 h-3.5 text-accent shrink-0" />
-                    <span className="truncate">{s.instructor}</span>
-                  </span>
-                )}
-                {s.keyPoints?.length > 0 && (
-                  <span className="flex flex-col gap-0.5 text-sm text-ink-2">
-                    {s.keyPoints.slice(0, 3).map((pt, idx) => (
-                      <span key={idx} className="truncate">
-                        · {pt}
-                      </span>
-                    ))}
-                  </span>
-                )}
-                <span className="mt-auto pt-2 border-t border-line-soft flex items-center justify-between text-xs text-ink-3">
-                  <span className="inline-flex items-center gap-1 font-mono">
-                    <Clock className="w-3.5 h-3.5" /> ~{s.readingTimeMinutes} dk
-                  </span>
-                  <span className="inline-flex items-center gap-0.5 text-sm font-semibold text-accent">
-                    Oku <ChevronRight className="w-4 h-4" />
-                  </span>
-                </span>
-              </button>
-            </li>
+        <div className="sl-groups" key={`${kurul}|${discipline}`}>
+          {groups.map((g) => (
+            <section key={g.key} className={`sl-group ${'d' in g && g.d ? disciplineClass(g.d as string) : ''}`} aria-label={g.title || 'Sonuçlar'}>
+              {g.title ? (
+                <header className="sl-group-h">
+                  {'d' in g && <i className="hk-dot" aria-hidden />}
+                  <h2 className="sl-h">{g.title}</h2>
+                  {g.sub && <span>{g.sub}</span>}
+                  <small>{g.items.length}</small>
+                </header>
+              ) : (
+                q && (
+                  <p className="sl-result" aria-live="polite">
+                    {g.items.length} sonuç
+                  </p>
+                )
+              )}
+              <ul className="sl-grid">
+                {g.items.map((s) => (
+                  <Card key={s.id} s={s} i={idx++} mark={progress[s.id]} showKurul={kurul === 'all' && !g.title} onOpen={() => open(s)} />
+                ))}
+              </ul>
+            </section>
           ))}
-        </ul>
+        </div>
       )}
 
-      {activeSummary && (
-        <SummaryArtifactReader summary={activeSummary} onClose={() => setActiveSummary(null)} onOpenPdfModal={onOpenPdfModal} />
+      {active && (
+        <SummaryReader
+          summary={active}
+          onClose={() => setActive(null)}
+          onOpenPdfModal={onOpenPdfModal}
+          next={next}
+          onOpenNext={next ? () => open(next) : undefined}
+        />
       )}
     </div>
   );

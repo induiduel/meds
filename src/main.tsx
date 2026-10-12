@@ -8,6 +8,8 @@ import './styles/appearance.css';
 import './styles/shell.css';
 import './styles/screens.css';
 import './styles/rebuild.css';
+import './styles/summary.css';
+import './styles/spots.css';
 import './styles/motion.css';
 import './styles/mobile.css';
 import { installToastBridge } from './components/ui/Toast';

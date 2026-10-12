@@ -13,6 +13,7 @@ const LOADERS: Partial<Record<AppRoute, () => Promise<unknown>>> = {
   study: () => import('./components/study/StudyHub'),
   glossary: () => import('./components/encyclopedia/MedicalEncyclopediaView'),
   ornek_sorular: () => import('./components/PracticeQuestionsView'),
+  spots: () => import('./components/spots/ExamSpotsView'),
   summaries: () => import('./components/LectureSummariesView'),
   kazanimlar: () => import('./components/KazanimlarView'),
   diseases: () => import('./components/diseases/DiseasesView'),

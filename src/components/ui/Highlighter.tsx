@@ -166,15 +166,16 @@ export const HighlighterToolbar: React.FC<{ className?: string }> = ({ className
         type="button"
         onClick={togglePen}
         aria-pressed={t.active}
+        aria-label="Fosforlu kalem"
         title={t.active ? 'Kalemi kapat' : 'Fosforlu kalem'}
         className={`w-9 h-9 shrink-0 rounded-[10px] flex items-center justify-center cursor-pointer transition-colors ${
-          t.active ? 'bg-amber-200 text-amber-800 ring-1 ring-inset ring-amber-600/50' : 'text-ink-2 hover:bg-canvas hover:text-ink'
+          t.active ? 'bg-warn-soft text-warn ring-1 ring-inset ring-warn/40' : 'text-ink-2 hover:bg-field hover:text-ink'
         }`}
       >
         <PenIcon className="w-[18px] h-[18px]" />
       </button>
       {t.active && (
-        <div className="ms-pop-in flex items-center gap-1 h-9 px-1 rounded-[10px] bg-canvas">
+        <div className="ms-pop-in flex items-center gap-1 h-9 px-1 rounded-[10px] bg-field">
           {HL_COLORS.map((c) => {
             const on = !t.eraser && t.color === c.id;
             return (
@@ -185,7 +186,7 @@ export const HighlighterToolbar: React.FC<{ className?: string }> = ({ className
                 aria-pressed={on}
                 aria-label={`${c.label} kalem`}
                 title={c.label}
-                className={`w-7 h-7 rounded-full flex items-center justify-center cursor-pointer ${on ? 'bg-white shadow-xs' : ''}`}
+                className={`w-7 h-7 rounded-full flex items-center justify-center cursor-pointer ${on ? 'bg-white shadow-sm' : ''}`}
               >
                 <span className="w-4 h-4 rounded-full border border-black/10" style={{ background: c.swatch }} />
               </button>
@@ -197,7 +198,7 @@ export const HighlighterToolbar: React.FC<{ className?: string }> = ({ className
             aria-pressed={t.eraser}
             aria-label="Silgi"
             title="Silgi: işaretin üstüne dokun ya da seç"
-            className={`w-7 h-7 rounded-full flex items-center justify-center cursor-pointer ${t.eraser ? 'bg-white text-ink shadow-xs' : 'text-ink-2'}`}
+            className={`w-7 h-7 rounded-full flex items-center justify-center cursor-pointer ${t.eraser ? 'bg-white text-ink shadow-sm' : 'text-ink-2'}`}
           >
             <Eraser className="w-4 h-4" />
           </button>
@@ -210,7 +211,7 @@ export const HighlighterToolbar: React.FC<{ className?: string }> = ({ className
             }}
             aria-label="Bu sayfadaki işaretleri temizle"
             title="Bu sayfadaki işaretleri temizle"
-            className="w-7 h-7 rounded-full flex items-center justify-center text-ink-2 hover:text-rose-700 cursor-pointer"
+            className="w-7 h-7 rounded-full flex items-center justify-center text-ink-2 hover:text-bad-text cursor-pointer"
           >
             <Trash2 className="w-4 h-4" />
           </button>

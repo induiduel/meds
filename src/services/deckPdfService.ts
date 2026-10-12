@@ -142,3 +142,23 @@ export function useDeckPdfIds(): Set<string> | null {
   }, []);
   return ids;
 }
+
+/** Ders PDF'i hiç eşlenmemiş desteler → ders tarihi (programda yoksa ""). Liste satırındaki "kaynak bilinmiyor" işareti için. */
+export function useDeckPdfMissing(): Record<string, string> | null {
+  const [m, setM] = useState<Record<string, string> | null>(null);
+  useEffect(() => {
+    let live = true;
+    loadBundledSources().then((src) => {
+      if (!live) return;
+      const out: Record<string, string> = {};
+      Object.entries(src.decks).forEach(([id, e]) => {
+        if (!e.files.length && e.missing) out[id] = e.missing.tarih || '';
+      });
+      setM(out);
+    });
+    return () => {
+      live = false;
+    };
+  }, []);
+  return m;
+}

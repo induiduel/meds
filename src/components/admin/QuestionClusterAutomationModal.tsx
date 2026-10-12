@@ -1,20 +1,11 @@
-import React, { useState, useEffect } from 'react';
-import {
-  Sparkles,
-  Send,
-  RefreshCw,
-  X,
-  Lock,
-  ChevronDown,
-  ChevronUp,
-  BrainCircuit,
-  MessageSquare,
-  Library,
-  ShieldAlert,
-} from 'lucide-react';
+import React, { useEffect, useRef, useState } from 'react';
+import { ChevronLeft, ChevronRight, Combine, RefreshCw, Send, ShieldCheck, Sparkles, TriangleAlert } from 'lucide-react';
 import { ApiService } from '../../services/api';
 import { toast } from '../ui/Toast';
+import { Sheet } from '../ui/Sheet';
 import { AppUser } from '../../services/auth';
+import { disciplineClass, disciplineLabel } from '../../utils/discipline';
+import './clusterPool.css';
 
 export interface QuestionClusterItem {
   id: string;
@@ -60,29 +51,41 @@ interface QuestionClusterAutomationModalProps {
   isAdmin?: boolean;
 }
 
-export const QuestionClusterAutomationModal: React.FC<QuestionClusterAutomationModalProps> = ({
-  isOpen,
-  onClose,
-  currentUser,
-  isAdmin,
-}) => {
+const FAILED = /^\s*\[BİRLEŞTİRİLEMEDİ\]\s*/i;
+
+/** Kümenin durumu: birleştirilemedi (yönetici bakmalı) · birleştirme bekliyor · öneri taslağı */
+function clusterState(c: QuestionClusterItem): { label: string; tone: string } {
+  if (FAILED.test(c.mergedStem || '')) return { label: 'İnceleme gerekli', tone: 'is-bad' };
+  if (!c.aiMerged) return { label: 'Birleştirme bekliyor', tone: 'is-warn' };
+  return { label: 'Öneri taslağı', tone: 'is-accent' };
+}
+
+const initials = (name: string) =>
+  name
+    .split(/\s+/)
+    .filter(Boolean)
+    .slice(0, 2)
+    .map((p) => p[0]?.toLocaleUpperCase('tr-TR'))
+    .join('') || '?';
+
+/**
+ * Öneri taslak havuzu (soru havuzu → "Öneri Taslak Havuzu"). Aynı soruyu hatırlayan parçaların birleştirildiği
+ * kümeler listelenir; birine dokununca sayfa içinde ayrıntıya geçilir (kök, şıklar ve oylar, birleştirme gerekçesi,
+ * öğrenci katkıları). Öğrenci yalnız katkı ekler; silme/onay yöneticidedir. Renkler yalnız token + ders rengi (.d-*).
+ */
+export const QuestionClusterAutomationModal: React.FC<QuestionClusterAutomationModalProps> = ({ isOpen, onClose, currentUser, isAdmin }) => {
   const [clusters, setClusters] = useState<QuestionClusterItem[]>([]);
   const [loading, setLoading] = useState(true);
   const [runningPipeline, setRunningPipeline] = useState(false);
-  const [expandedClusterId, setExpandedClusterId] = useState<string | null>(null);
-
-  // Katkı formu state
-  const [contributionTexts, setContributionTexts] = useState<Record<string, string>>({});
-  const [submittingContribId, setSubmittingContribId] = useState<string | null>(null);
+  const [openId, setOpenId] = useState<string | null>(null);
+  const [draft, setDraft] = useState<Record<string, string>>({});
+  const [submittingId, setSubmittingId] = useState<string | null>(null);
+  const bodyTop = useRef<HTMLDivElement>(null);
 
   const fetchClusters = async () => {
     setLoading(true);
     try {
-      const data = await ApiService.getPoolQuestionClusters();
-      setClusters(data);
-      if (data.length > 0 && !expandedClusterId) {
-        setExpandedClusterId(data[0].id);
-      }
+      setClusters(await ApiService.getPoolQuestionClusters());
     } catch (e: any) {
       toast.error('Hata', 'Kümeler yüklenemedi: ' + (e.message || ''));
     } finally {
@@ -92,18 +95,22 @@ export const QuestionClusterAutomationModal: React.FC<QuestionClusterAutomationM
 
   useEffect(() => {
     if (isOpen) {
+      setOpenId(null);
       fetchClusters();
     }
   }, [isOpen]);
+
+  // Liste ↔ ayrıntı geçişinde kaydırmayı başa al
+  useEffect(() => {
+    bodyTop.current?.scrollIntoView({ block: 'start' });
+  }, [openId]);
 
   const handleRunPipeline = async () => {
     setRunningPipeline(true);
     try {
       const res = await ApiService.runPoolQuestionClusterPipeline();
-      toast.success('Otomasyon Başlatıldı', res.message);
-      setTimeout(() => {
-        fetchClusters();
-      }, 3000);
+      toast.success('Otomasyon başlatıldı', res.message);
+      window.setTimeout(fetchClusters, 3000);
     } catch (e: any) {
       toast.error('Hata', e.message || 'Otomasyon başlatılamadı.');
     } finally {
@@ -112,331 +119,297 @@ export const QuestionClusterAutomationModal: React.FC<QuestionClusterAutomationM
   };
 
   const handleAddContribution = async (clusterId: string) => {
-    const text = (contributionTexts[clusterId] || '').trim();
-    if (!text) {
-      toast.error('Eksik Bilgi', 'Lütfen eklemek istediğiniz notu veya bilgiyi yazın.');
-      return;
-    }
-
-    setSubmittingContribId(clusterId);
+    const text = (draft[clusterId] || '').trim();
+    if (!text) return;
+    setSubmittingId(clusterId);
     try {
       const studentName = currentUser?.displayName || currentUser?.email || 'Tıp Öğrencisi';
-      const res = await ApiService.contributeToPoolCluster(
-        clusterId,
-        studentName,
-        text,
-        currentUser?.uid
-      );
-      toast.success('Katkınız Eklendi', 'Öneri soru taslağına eklemeniz kaydedildi.');
-      setContributionTexts(prev => ({ ...prev, [clusterId]: '' }));
-      // Yerel state güncellemesi
-      setClusters(prev =>
-        prev.map(c => (c.id === clusterId ? res.cluster || {
-          ...c,
-          studentContributions: [...(c.studentContributions || []), res.contribution],
-        } : c))
+      const res = await ApiService.contributeToPoolCluster(clusterId, studentName, text, currentUser?.uid);
+      toast.success('Katkın eklendi', 'Öneri taslağına eklemen kaydedildi.');
+      setDraft((prev) => ({ ...prev, [clusterId]: '' }));
+      setClusters((prev) =>
+        prev.map((c) =>
+          c.id === clusterId ? res.cluster || { ...c, studentContributions: [...(c.studentContributions || []), res.contribution] } : c,
+        ),
       );
     } catch (e: any) {
       toast.error('Hata', e.message || 'Katkı eklenemedi.');
     } finally {
-      setSubmittingContribId(null);
+      setSubmittingId(null);
     }
   };
 
-  if (!isOpen) return null;
+  const current = openId ? clusters.find((c) => c.id === openId) || null : null;
+  const pending = clusters.filter((c) => clusterState(c).tone !== 'is-accent').length;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-[var(--color-scrim)] overflow-y-auto">
-      <div className="relative w-full max-w-4xl bg-canvas border border-line rounded-3xl p-5 sm:p-7 text-ink shadow-2xl my-6 flex flex-col max-h-[90vh]">
-        {/* Başlık & Kapat */}
-        <div className="flex items-start justify-between gap-4 pb-4 border-b border-line">
-          <div>
-            <div className="flex items-center gap-2 text-ok text-xs font-semibold uppercase tracking-wider mb-1">
-              <BrainCircuit className="w-4 h-4 animate-pulse" />
-              <span>Yapay Zeka Soru Eşleme & Kümeleme Otomasyonu</span>
-            </div>
-            <h2 className="text-xl sm:text-2xl font-black">
-              Birleştirilmiş Soru Taslakları & Kolektif Öneri Havuzu
-            </h2>
-            <p className="text-xs sm:text-sm text-ink-3 mt-1 max-w-2xl leading-relaxed">
-              Aynı soruyu hatırlayan parçalar ders, konu, soru numarası ve tıbbi terimlere göre gruplanır. Şıklar
-              öğrencilerin oylarıyla kurulur; hatırlanmayan şık <b>[EKSİK ŞIK]</b> kalır. Yapay zekâ kökü ders notu
-              kaynaklarıyla birleştirir, cevabı kendisi belirlemez.
-            </p>
-          </div>
-          <button
-            type="button"
-            onClick={onClose}
-            className="p-2 rounded-xl bg-field hover:bg-line-soft text-ink-3 hover:text-ink transition-colors"
-          >
-            <X className="w-5 h-5" />
+    <Sheet
+      open={isOpen}
+      onClose={onClose}
+      size="full"
+      width={760}
+      title="Öneri taslak havuzu"
+      subtitle={
+        loading
+          ? 'Kümeler yükleniyor…'
+          : clusters.length
+            ? `${clusters.length} küme${pending ? ` · ${pending} tanesi inceleme bekliyor` : ''}`
+            : 'Henüz küme yok'
+      }
+      actions={
+        <button type="button" className="qpool-iconbtn" onClick={fetchClusters} disabled={loading} aria-label="Yenile" title="Yenile">
+          <RefreshCw className={loading ? 'animate-spin' : ''} />
+        </button>
+      }
+      footer={
+        isAdmin ? (
+          <button type="button" className={`ui-btn is-primary ${runningPipeline ? 'is-loading' : ''}`} disabled={runningPipeline} onClick={handleRunPipeline}>
+            <Sparkles /> Otomasyonu çalıştır
           </button>
-        </div>
-
-        {/* Kural Uyarı Kutusu */}
-        <div className="mt-4 p-3.5 rounded-2xl bg-warn/10 border border-warn/20 flex items-start gap-3 text-xs text-ink-2 leading-relaxed">
-          <ShieldAlert className="w-5 h-5 text-warn shrink-0 mt-0.5" />
-          <div>
-            <span className="font-bold text-warn">Öğrenci Kuralı & Kısıtlama: </span>
-            Bu sorular kolektif öneri taslağı niteliğindedir. Öğrenciler bu taslaklara yalnızca eklemeler ve
-            tamamlayıcı notlar yapabilir; taslakları <strong>asla silemez veya doğrudan kabul/onay yapamaz</strong>.
-          </div>
-        </div>
-
-        {/* Kontrol Çubuğu */}
-        <div className="mt-4 flex items-center justify-between gap-3">
-          <div className="text-xs text-ink-3">
-            Toplam <span className="font-bold text-ok">{clusters.length}</span> öneri kümesi
-          </div>
-          <div className="flex items-center gap-2">
-            <button
-              type="button"
-              onClick={fetchClusters}
-              disabled={loading}
-              className="px-3 py-1.5 rounded-xl bg-canvas hover:bg-line-soft text-ink-3 text-xs font-semibold flex items-center gap-1.5 transition-colors"
-            >
-              <RefreshCw className={`w-3.5 h-3.5 ${loading ? 'animate-spin' : ''}`} />
-              <span>Yenile</span>
-            </button>
-
-            {isAdmin && (
-              <button
-                type="button"
-                onClick={handleRunPipeline}
-                disabled={runningPipeline}
-                className="px-3.5 py-1.5 rounded-xl bg-ok hover:bg-ok text-white text-xs font-bold flex items-center gap-1.5 shadow-lg transition-all"
-              >
-                <Sparkles className="w-3.5 h-3.5" />
-                <span>{runningPipeline ? 'Otomasyon Çalışıyor...' : 'Otomasyonu Tetikle'}</span>
-              </button>
-            )}
-          </div>
-        </div>
-
-        {/* Küme Listesi */}
-        <div className="mt-4 flex-1 overflow-y-auto space-y-4 pr-1">
-          {loading ? (
-            <div className="py-16 text-center text-ink-3 text-sm flex flex-col items-center gap-3">
-              <RefreshCw className="w-8 h-8 animate-spin text-ok" />
-              <span>Soru kümeleri ve öneri taslakları taranıyor...</span>
+        ) : undefined
+      }
+    >
+      <div className="qpool" ref={bodyTop}>
+        {current ? (
+          <ClusterDetail
+            cluster={current}
+            draft={draft[current.id] || ''}
+            submitting={submittingId === current.id}
+            onDraft={(v) => setDraft((p) => ({ ...p, [current.id]: v }))}
+            onSubmit={() => handleAddContribution(current.id)}
+            onBack={() => setOpenId(null)}
+          />
+        ) : (
+          <>
+            <div className="ui-callout">
+              <ShieldCheck aria-hidden />
+              <div>
+                Aynı soruyu hatırlayan parçalar ders, soru numarası ve ortak terimlerle birleştirilir; şıklar öğrenci oylarıyla
+                kurulur. Yapay zekâ kökü ders notuyla tamamlar, cevabı kendisi seçmez.
+                <span className="qpool-callout-sub">Taslaklara yalnız ekleme yapabilirsin; silme ve onay yöneticidedir.</span>
+              </div>
             </div>
-          ) : clusters.length === 0 ? (
-            <div className="py-16 text-center text-ink-3 text-sm bg-field rounded-2xl border border-line">
-              <Library className="w-10 h-10 text-ink-3 mx-auto mb-2" />
-              <p className="font-semibold text-ink-3">Henüz birleştirilmiş soru kümesi bulunmuyor.</p>
-              <p className="text-xs text-ink-3 mt-1">
-                Yukarıdaki "Otomasyonu Tetikle" butonu ile arka plan eşleme motorunu başlatabilirsiniz.
-              </p>
-            </div>
-          ) : (
-            clusters.map(cluster => {
-              const isExpanded = expandedClusterId === cluster.id;
-              return (
-                <div
-                  key={cluster.id}
-                  className="rounded-2xl border border-line bg-canvas overflow-hidden transition-all shadow-md"
-                >
-                  {/* Başlık Satırı */}
-                  <div
-                    onClick={() => setExpandedClusterId(isExpanded ? null : cluster.id)}
-                    className="p-4 bg-field hover:bg-field cursor-pointer flex items-center justify-between gap-3 transition-colors"
-                  >
-                    <div className="flex items-center gap-3 min-w-0">
-                      <div className="w-9 h-9 rounded-xl bg-ok/10 border border-ok/20 text-ok flex items-center justify-center font-bold text-xs shrink-0">
-                        {cluster.mergedQuestionCount}
-                      </div>
-                      <div className="min-w-0">
-                        <div className="flex flex-wrap items-center gap-2 mb-0.5">
-                          <span className="px-2 py-0.5 rounded bg-ok/20 text-ok text-2xs font-semibold uppercase">
-                            {cluster.committeeId}
-                          </span>
-                          <span className="px-2 py-0.5 rounded bg-line-soft text-ink-2 text-2xs font-medium">
-                            {cluster.discipline}
-                          </span>
-                          {cluster.questionNumber ? (
-                            <span className="px-2 py-0.5 rounded bg-accent-soft text-accent text-2xs font-semibold">Soru {cluster.questionNumber}</span>
-                          ) : null}
-                          {typeof cluster.cohesion === 'number' && (
-                            <span className="px-2 py-0.5 rounded bg-line-soft text-ink-3 text-2xs font-medium tabular-nums" title="Üyelerin ortalama benzerliği">uyum %{Math.round(cluster.cohesion * 100)}</span>
-                          )}
-                          <span className={`px-2 py-0.5 rounded text-2xs font-semibold flex items-center gap-1 ${cluster.aiMerged ? 'bg-ok/15 text-ok' : 'bg-warn/20 text-warn'}`}>
-                            <Lock className="w-2.5 h-2.5" /> {cluster.aiMerged ? 'Öneri taslağı' : 'Birleştirme bekliyor'}
-                          </span>
-                        </div>
-                        <h4 className="text-sm font-bold text-ink truncate">
-                          {cluster.clusterTitle}
-                        </h4>
-                      </div>
-                    </div>
 
-                    <div className="flex items-center gap-2 shrink-0">
-                      <span className="text-xs text-ink-3 hidden sm:inline">
-                        {cluster.studentContributions?.length || 0} Katkı
-                      </span>
-                      {isExpanded ? <ChevronUp className="w-4 h-4 text-ink-3" /> : <ChevronDown className="w-4 h-4 text-ink-3" />}
-                    </div>
+            {loading ? (
+              <div className="ui-group" aria-busy="true">
+                {[0, 1, 2].map((i) => (
+                  <div key={i} className="qpool-row">
+                    <span className="ui-skel qpool-skel-ico" />
+                    <span className="qpool-row-main">
+                      <span className="ui-skel" style={{ height: 14, width: '62%' }} />
+                      <span className="ui-skel" style={{ height: 11, width: '38%', marginTop: 6 }} />
+                    </span>
                   </div>
+                ))}
+              </div>
+            ) : clusters.length === 0 ? (
+              <div className="qpool-empty">
+                <span className="qpool-empty-ic"><Combine aria-hidden /></span>
+                <b>Henüz birleştirilmiş küme yok</b>
+                <span>
+                  {isAdmin
+                    ? 'Aşağıdaki “Otomasyonu çalıştır” ile havuzdaki parçaları eşleştirebilirsin.'
+                    : 'Havuza yeterince parça girildiğinde kümeler burada görünür.'}
+                </span>
+              </div>
+            ) : (
+              <div className="ui-group">
+                {clusters.map((c) => {
+                  const st = clusterState(c);
+                  const meta = [
+                    c.questionNumber ? `Soru ${c.questionNumber}` : null,
+                    `${c.mergedQuestionCount} parça`,
+                    typeof c.cohesion === 'number' ? `uyum %${Math.round(c.cohesion * 100)}` : null,
+                    c.studentContributions?.length ? `${c.studentContributions.length} katkı` : null,
+                  ].filter(Boolean);
+                  return (
+                    <button key={c.id} type="button" className={`qpool-row is-btn ${disciplineClass(c.discipline)}`} onClick={() => setOpenId(c.id)}>
+                      <span className="qpool-count" aria-label={`${c.mergedQuestionCount} parça`}>{c.mergedQuestionCount}</span>
+                      <span className="qpool-row-main">
+                        <span className="qpool-eyebrow">
+                          {disciplineLabel(c.discipline)} · {c.committeeId}
+                        </span>
+                        <b>{c.clusterTitle}</b>
+                        <span className="qpool-meta">{meta.join(' · ')}</span>
+                      </span>
+                      <span className="qpool-row-end">
+                        <span className={`ui-tag ${st.tone}`}>{st.label}</span>
+                        <ChevronRight aria-hidden className="qpool-chev" />
+                      </span>
+                    </button>
+                  );
+                })}
+              </div>
+            )}
+          </>
+        )}
+      </div>
+    </Sheet>
+  );
+};
 
-                  {/* Genişletilmiş Alan */}
-                  {isExpanded && (
-                    <div className="p-4 sm:p-5 space-y-4 border-t border-line bg-field text-xs">
-                      {/* Önerilen Soru Kökü */}
-                      <div className="space-y-1.5">
-                        <div className="font-bold text-ink-3 uppercase tracking-wider text-2xs flex items-center gap-1.5">
-                          <Sparkles className="w-3.5 h-3.5 text-ok" />
-                          <span>{cluster.aiMerged ? 'Ders notu kaynaklarıyla birleştirilen öneri kök:' : 'Öneri kök (yapay zekâ birleştirmesi bekliyor):'}</span>
-                        </div>
-                        <div className="p-3.5 rounded-xl bg-field border border-line text-ink-3 leading-relaxed text-sm font-medium">
-                          {cluster.mergedStem}
-                        </div>
-                      </div>
+const ClusterDetail: React.FC<{
+  cluster: QuestionClusterItem;
+  draft: string;
+  submitting: boolean;
+  onDraft: (v: string) => void;
+  onSubmit: () => void;
+  onBack: () => void;
+}> = ({ cluster: c, draft, submitting, onDraft, onSubmit, onBack }) => {
+  const st = clusterState(c);
+  const failed = FAILED.test(c.mergedStem || '');
+  const stem = (c.mergedStem || '').replace(FAILED, '');
+  const totalVotes = Math.max(1, ...c.mergedOptions.map((o) => o.votes || 0));
+  const answer = (c.claimedAnswer || '').toUpperCase();
+  const contributions = c.studentContributions || [];
 
-                      {/* Önerilen Şıklar */}
-                      <div className="space-y-2">
-                        <div className="font-bold text-ink-3 uppercase tracking-wider text-2xs">
-                          Önerilen Şıklar:
-                        </div>
-                        <div className="grid grid-cols-1 gap-2">
-                          {cluster.mergedOptions.map(opt => {
-                            const isCorrect = !!cluster.claimedAnswer && opt.key.toUpperCase() === cluster.claimedAnswer.toUpperCase();
-                            const missing = opt.source === 'eksik' || opt.text === '[EKSİK ŞIK]';
-                            return (
-                              <div
-                                key={opt.key}
-                                className={`p-2.5 rounded-xl border flex items-start gap-3 transition-colors ${
-                                  isCorrect ? 'bg-ok/20 border-ok/40 text-ink' : missing ? 'border-dashed border-line text-ink-3' : 'bg-field border-line text-ink-3'
-                                }`}
-                              >
-                                <span className={`w-6 h-6 rounded-lg flex items-center justify-center font-bold text-xs shrink-0 ${isCorrect ? 'bg-ok text-ink' : 'bg-ink-2 text-ink'}`}>
-                                  {opt.key}
-                                </span>
-                                <span className="pt-0.5 leading-relaxed min-w-0 flex-1">
-                                  <span className={missing ? 'italic' : ''}>{opt.text}</span>
-                                  {opt.conflict && opt.conflict.length > 0 && (
-                                    <span className="block text-2xs text-warn mt-0.5">Çelişen hatıra: {opt.conflict.join(' · ')}</span>
-                                  )}
-                                </span>
-                                <span className="shrink-0 text-2xs text-ink-3 pt-1 text-right">
-                                  {opt.source === 'ogrenci' && !opt.isAiFilled && opt.votes ? `${opt.votes} öğrenci` : opt.source === 'ders_notu' ? 'ders notundan öneri' : opt.isAiFilled ? 'AI' : ''}
-                                </span>
-                              </div>
-                            );
-                          })}
-                        </div>
-                        {cluster.unplacedOptions && cluster.unplacedOptions.length > 0 && (
-                          <p className="text-2xs text-ink-3">Harfi hatırlanmayan şıklar: {cluster.unplacedOptions.map((o) => `${o.text} (${o.votes})`).join(' · ')}</p>
-                        )}
-                        <p className="text-2xs text-ink-3">
-                          {cluster.answerVotes && Object.keys(cluster.answerVotes).length
-                            ? <>İşaretlenen cevap oyları: {Object.entries(cluster.answerVotes).map(([k, v]) => `${k}: ${v}`).join(' · ')}{cluster.claimedAnswer ? ` → çoğunluk ${cluster.claimedAnswer}` : ' → çoğunluk yok'}</>
-                            : 'İşaretlenen cevap bildirilmedi.'}
-                          {cluster.aiAnswerSuggestion && <> · Ders notuna göre öneri: <b>{cluster.aiAnswerSuggestion}</b></>}
-                        </p>
-                        {cluster.negativeStemLikely && (
-                          <p className="text-2xs text-warn font-semibold">Kök büyük olasılıkla olumsuz ("hangisi yanlıştır / değildir"): oyları doğrudan cevap sayma.</p>
-                        )}
-                      </div>
+  return (
+    <div className={`qpool-detail ${disciplineClass(c.discipline)}`}>
+      <button type="button" className="qpool-back" onClick={onBack}>
+        <ChevronLeft aria-hidden /> Tüm kümeler
+      </button>
 
-                      {/* Gerekçeli Açıklama */}
-                      {cluster.explanation && (
-                        <div className="space-y-1.5">
-                          <div className="font-bold text-ink-3 uppercase tracking-wider text-2xs">
-                            Birleştirme notu (hangi parça neyi destekliyor):
-                          </div>
-                          <div className="p-3 rounded-xl bg-field border border-line text-ink-3 leading-relaxed">
-                            {cluster.explanation}
-                          </div>
-                        </div>
-                      )}
+      <header className="qpool-head">
+        <div className="qpool-tags">
+          <span className="ui-tag qpool-disc">{disciplineLabel(c.discipline)}</span>
+          <span className="ui-tag">{c.committeeId}</span>
+          {c.questionNumber ? <span className="ui-tag">Soru {c.questionNumber}</span> : null}
+          <span className={`ui-tag ${st.tone}`}>{st.label}</span>
+        </div>
+        <h3>{c.clusterTitle}</h3>
+        <dl className="qpool-stats">
+          <div><dt>Parça</dt><dd>{c.mergedQuestionCount}</dd></div>
+          {typeof c.cohesion === 'number' && <div title="Üyelerin ortalama benzerliği"><dt>Uyum</dt><dd>%{Math.round(c.cohesion * 100)}</dd></div>}
+          <div><dt>Katkı</dt><dd>{contributions.length}</dd></div>
+        </dl>
+      </header>
 
-                      {/* Neden birleşti: ortak terimler ve öğrenci parçaları */}
-                      <div className="pt-2 border-t border-line text-2xs text-ink-3 space-y-1.5">
-                        {cluster.sharedTerms && cluster.sharedTerms.length > 0 && (
-                          <p><span className="font-semibold">Ortak terimler:</span> {cluster.sharedTerms.join(' · ')}</p>
-                        )}
-                        {cluster.stemFragments && cluster.stemFragments.length > 0 ? (
-                          <div>
-                            <span className="font-semibold">Birleştirilen öğrenci parçaları ({cluster.stemFragments.length}):</span>
-                            <ul className="mt-1 space-y-1 list-disc pl-4">
-                              {cluster.stemFragments.map((f) => (
-                                <li key={f.key} className="break-words"><span className="text-ink-2">{f.text}</span>{f.key.startsWith('u:') ? ' (serbest girdi)' : ''}</li>
-                              ))}
-                            </ul>
-                          </div>
-                        ) : (
-                          <p><span className="font-semibold">Birleştirilen soru kayıtları ({cluster.sourceQuestionIds.length}):</span> {cluster.sourceQuestionIds.join(', ')}</p>
-                        )}
-                        {cluster.sources && cluster.sources.length > 0 && (
-                          <p><span className="font-semibold">Ders notu kaynakları:</span> {cluster.sources.map((x) => x.documentTitle || x.title || x.source).filter(Boolean).join(' · ')}</p>
-                        )}
-                      </div>
+      {failed && (
+        <div className="ui-callout is-bad">
+          <TriangleAlert aria-hidden />
+          <div>{stem || 'Parçalar birleştirilemedi.'}</div>
+        </div>
+      )}
 
-                      {/* Öğrenci Katkıları & Eklemeler */}
-                      <div className="pt-3 border-t border-line space-y-3">
-                        <div className="flex items-center justify-between">
-                          <h5 className="font-bold text-ok text-xs flex items-center gap-1.5">
-                            <MessageSquare className="w-3.5 h-3.5" />
-                            <span>Öğrenci Katkıları & Eklemeler ({cluster.studentContributions?.length || 0})</span>
-                          </h5>
-                          <span className="text-2xs text-ink-3">Yalnızca ekleme yapılabilir</span>
-                        </div>
+      {!failed && (
+        <section className="ui-section">
+          <div className="ui-section-h"><h2>{c.aiMerged ? 'Önerilen kök · ders notuyla birleştirildi' : 'Önerilen kök · birleştirme bekliyor'}</h2></div>
+          <div className="ui-card qpool-stem">{stem}</div>
+        </section>
+      )}
 
-                        {cluster.studentContributions && cluster.studentContributions.length > 0 ? (
-                          <div className="space-y-2">
-                            {cluster.studentContributions.map(contrib => (
-                              <div
-                                key={contrib.id}
-                                className="p-3 rounded-xl bg-field border border-line space-y-1"
-                              >
-                                <div className="flex items-center justify-between text-2xs text-ok font-semibold">
-                                  <span>{contrib.studentName}</span>
-                                  <span className="text-ink-3 font-normal">
-                                    {new Date(contrib.createdAt).toLocaleDateString('tr-TR')}
-                                  </span>
-                                </div>
-                                <p className="text-ink-3 leading-relaxed text-xs">{contrib.text}</p>
-                              </div>
-                            ))}
-                          </div>
-                        ) : (
-                          <p className="text-ink-3 text-xs italic">
-                            Bu taslağa henüz öğrenci eklemesi yapılmamış. İlk eklemeyi siz yapabilirsiniz.
-                          </p>
-                        )}
+      {c.negativeStemLikely && (
+        <div className="ui-callout is-warn">
+          <TriangleAlert aria-hidden />
+          <div>Kök büyük olasılıkla olumsuz (“hangisi yanlıştır / değildir”); oyları doğrudan cevap sayma.</div>
+        </div>
+      )}
 
-                        {/* Katkı Ekleme Alanı */}
-                        <div className="flex gap-2 mt-2">
-                          <input
-                            type="text"
-                            value={contributionTexts[cluster.id] || ''}
-                            onChange={e =>
-                              setContributionTexts(prev => ({ ...prev, [cluster.id]: e.target.value }))
-                            }
-                            placeholder="Bu taslağa ekleme veya hatırlatma notu ekle..."
-                            className="flex-1 px-3.5 py-2 rounded-xl bg-canvas border border-line text-ink text-xs placeholder-ink-3 focus:outline-none focus:border-ok"
-                            onKeyDown={e => {
-                              if (e.key === 'Enter') handleAddContribution(cluster.id);
-                            }}
-                          />
-                          <button
-                            type="button"
-                            disabled={submittingContribId === cluster.id || !(contributionTexts[cluster.id] || '').trim()}
-                            onClick={() => handleAddContribution(cluster.id)}
-                            className="px-4 py-2 bg-ok hover:bg-ok disabled:opacity-50 text-white font-bold rounded-xl text-xs flex items-center gap-1.5 transition-all shrink-0"
-                          >
-                            <Send className="w-3.5 h-3.5" />
-                            <span>Ekle</span>
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  )}
+      <section className="ui-section">
+        <div className="ui-section-h"><h2>Şıklar</h2></div>
+        <ol className="ui-group qpool-opts">
+          {c.mergedOptions.map((o) => {
+            const isAnswer = !!answer && o.key.toUpperCase() === answer;
+            const missing = o.source === 'eksik' || o.text === '[EKSİK ŞIK]';
+            const votes = o.source === 'ogrenci' && !o.isAiFilled ? o.votes || 0 : 0;
+            const origin = votes ? `${votes} öğrenci` : o.source === 'ders_notu' ? 'ders notundan' : o.isAiFilled ? 'yapay zekâ' : '';
+            return (
+              <li key={o.key} className={`qpool-opt ${isAnswer ? 'is-answer' : ''} ${missing ? 'is-missing' : ''}`}>
+                <i>{o.key}</i>
+                <div className="qpool-opt-main">
+                  <span>{missing ? 'Hatırlanmayan şık' : o.text}</span>
+                  {o.conflict && o.conflict.length > 0 && <small className="qpool-conflict">Çelişen hatıra: {o.conflict.join(' · ')}</small>}
+                  {votes > 0 && <span className="qpool-bar" aria-hidden><s style={{ width: `${(votes / totalVotes) * 100}%` }} /></span>}
                 </div>
-              );
-            })
+                {origin && <span className="qpool-opt-end">{origin}</span>}
+              </li>
+            );
+          })}
+        </ol>
+        <p className="ui-section-foot">
+          {c.answerVotes && Object.keys(c.answerVotes).length ? (
+            <>
+              İşaretlenen cevap oyları: {Object.entries(c.answerVotes).map(([k, v]) => `${k} ${v}`).join(' · ')}
+              {c.claimedAnswer ? ` → çoğunluk ${c.claimedAnswer}` : ' → çoğunluk yok'}
+            </>
+          ) : (
+            'İşaretlenen cevap bildirilmedi.'
+          )}
+          {c.aiAnswerSuggestion && <> · Ders notuna göre öneri: <b>{c.aiAnswerSuggestion}</b></>}
+          {c.unplacedOptions && c.unplacedOptions.length > 0 && (
+            <><br />Harfi hatırlanmayan şıklar: {c.unplacedOptions.map((o) => `${o.text} (${o.votes})`).join(' · ')}</>
+          )}
+        </p>
+      </section>
+
+      {c.explanation && (
+        <section className="ui-section">
+          <div className="ui-section-h"><h2>Birleştirme notu</h2></div>
+          <div className="ui-card qpool-prose">{c.explanation}</div>
+        </section>
+      )}
+
+      <section className="ui-section">
+        <div className="ui-section-h"><h2>Neden birleşti</h2></div>
+        <div className="ui-card qpool-why">
+          {c.sharedTerms && c.sharedTerms.length > 0 && (
+            <div className="qpool-terms">
+              {c.sharedTerms.map((t) => <span key={t} className="ui-tag">{t}</span>)}
+            </div>
+          )}
+          {c.stemFragments && c.stemFragments.length > 0 ? (
+            <ul className="qpool-frags">
+              {c.stemFragments.map((f) => (
+                <li key={f.key}>
+                  “{f.text}”{f.key.startsWith('u:') && <em> · serbest girdi</em>}
+                </li>
+              ))}
+            </ul>
+          ) : (
+            <p className="qpool-muted">Kayıtlar: {c.sourceQuestionIds.join(', ')}</p>
+          )}
+          {c.sources && c.sources.length > 0 && (
+            <p className="qpool-muted">Ders notu kaynakları: {c.sources.map((x) => x.documentTitle || x.title || x.source).filter(Boolean).join(' · ')}</p>
           )}
         </div>
-      </div>
+      </section>
+
+      <section className="ui-section">
+        <div className="ui-section-h">
+          <h2>Katkılar{contributions.length ? ` (${contributions.length})` : ''}</h2>
+        </div>
+        <div className="ui-group">
+          {contributions.map((k) => (
+            <div key={k.id} className="qpool-contrib">
+              <span className="qpool-av" aria-hidden>{initials(k.studentName)}</span>
+              <div className="qpool-contrib-main">
+                <div><b>{k.studentName}</b><time>{new Date(k.createdAt).toLocaleDateString('tr-TR', { day: 'numeric', month: 'short' })}</time></div>
+                <p>{k.text}</p>
+              </div>
+            </div>
+          ))}
+          {contributions.length === 0 && <p className="qpool-contrib-empty">Henüz katkı yok. Hatırladığın bir şık, ayrıntı ya da kaynak ekleyebilirsin.</p>}
+          <form
+            className="qpool-compose"
+            onSubmit={(e) => {
+              e.preventDefault();
+              onSubmit();
+            }}
+          >
+            <input
+              className="ui-input"
+              value={draft}
+              onChange={(e) => onDraft(e.target.value)}
+              placeholder="Ekleme ya da hatırlatma notu yaz…"
+              aria-label="Katkı notu"
+            />
+            <button type="submit" className={`ui-btn is-primary ${submitting ? 'is-loading' : ''}`} disabled={submitting || !draft.trim()}>
+              <Send /> Ekle
+            </button>
+          </form>
+        </div>
+        <p className="ui-section-foot">Katkılar taslağa eklenir; taslağı değiştirmez ya da onaylamaz.</p>
+      </section>
     </div>
   );
 };

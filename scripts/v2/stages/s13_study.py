@@ -532,6 +532,10 @@ def build(export: bool = False, log=print) -> dict:
             _backup(p)
         if QUESTION_CARDS_JSON.exists():
             _backup(QUESTION_CARDS_JSON)
+        # Sözlük v2 kartları (scripts/sozluk_v2/birlestir.py) bu hattın dışında üretilir; ezilmesin
+        for k, v in (store.read_json(GLOSSARY_JSON, {}) or {}).items():
+            if (v.get("dogrulama") or {}).get("uretici") == "sozluk_v2" and k not in glossary:
+                glossary[k] = v
         store.atomic_write_json(GLOSSARY_JSON, glossary, indent=2)
         store.atomic_write_json(DECKS_JSON, decks, indent=2)
         if encyclopedia:

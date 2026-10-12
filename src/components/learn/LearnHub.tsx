@@ -4,9 +4,9 @@
  * son açılma zamanı burada `medsoru_learn_recent_v1` içinde tutulur.
  */
 import React, { useEffect, useMemo, useRef, useState } from 'react';
-import { ArrowRight, Check, FileText, Lock, Play, Search, X } from 'lucide-react';
+import { ArrowRight, Check, FileQuestionMark, FileText, Lock, Play, Search, X } from 'lucide-react';
 import { deckName, type DeckCatalogEntry } from '../../data/deckStore';
-import { useDeckPdfIds } from '../../services/deckPdfService';
+import { useDeckPdfIds, useDeckPdfMissing } from '../../services/deckPdfService';
 import { disciplineClass } from '../../utils/discipline';
 import { Segmented } from '../ui/kit';
 
@@ -70,6 +70,16 @@ const VersionStack: React.FC<{ labels: string[] }> = ({ labels }) => {
   );
 };
 
+/** Ders PDF'i eşlenemeyen ve ders günü üzerinden en az bir hafta geçmiş deste: slaytı Drive'a hiç gelmedi, içerik
+ *  geçen yılın kaynağından üretildi → hangi PDF'e ait olduğu bilinmiyor. Yakın/gelecek tarihli dersler PDF bekler. */
+const SOURCE_WAIT_DAYS = 7;
+const unknownSource = (tarih: string | undefined) => {
+  if (tarih === undefined) return false;
+  if (!tarih) return true;
+  return Date.now() - new Date(`${tarih}T00:00:00`).getTime() >= SOURCE_WAIT_DAYS * 864e5;
+};
+const trDate = (t: string) => (t ? new Date(`${t}T00:00:00`).toLocaleDateString('tr-TR', { day: 'numeric', month: 'long' }) : '');
+
 const Ring: React.FC<{ pct: number; done?: boolean }> = ({ pct, done }) => (
   <span className={`lh-ring ${done ? 'is-done' : ''}`} style={{ ['--p' as string]: pct }} aria-hidden>
     {done ? <Check /> : <b>{pct}</b>}
@@ -92,6 +102,7 @@ export const LearnHub: React.FC<{
   const [recent] = useState(readRecent);
   const searchRef = useRef<HTMLInputElement>(null);
   const pdfIds = useDeckPdfIds(); // sunucuda dosyası ya da Drive kimliği olan desteler
+  const pdfMissing = useDeckPdfMissing(); // PDF'i eşlenemeyen desteler → ders tarihi
 
   // "/" arama kutusuna odaklanır
   useEffect(() => {
@@ -274,14 +285,22 @@ export const LearnHub: React.FC<{
                     const pdf = !!pdfIds?.has(d.id);
                     const no = orderOf(d);
                     const ver = versions?.[d.id];
+                    const noSrc = !pdf && unknownSource(pdfMissing?.[d.id]);
+                    const noSrcTip = `Bu dersin 2026-27 slaytı Drive'da yok${pdfMissing?.[d.id] ? ` (ders ${trDate(pdfMissing[d.id])})` : ''}; içerik önceki yılın kaynağından hazırlandı, hangi PDF'e ait olduğu bilinmiyor.`;
                     return (
-                      <li key={d.id} className={`lcx-row${ver ? ' has-ver' : ''}`}>
+                      <li key={d.id} className={`lcx-row${ver ? ' has-ver' : ''}${noSrc ? ' is-nosrc' : ''}`}>
                         <button type="button" className="lcx-main" onClick={() => onOpen(d.id)} aria-label={`${deckName(d, false)} — ${s.status === 'done' ? 'tamamlandı' : s.status === 'active' ? `%${s.pct}, devam et` : 'başla'}`}>
                           {no < 999 && <span className="lcx-no">{String(no).padStart(2, '0')}</span>}
                           <span className="lcx-t">
                             <span className="lcx-tl">
                               <b title={deckName(d, false)}>{deckName(d, false)}</b>
                               {ver && <VersionStack labels={ver} />}
+                              {noSrc && (
+                                <span className="lcx-nosrc" title={noSrcTip}>
+                                  <FileQuestionMark aria-hidden />
+                                  <small><span className="sr-only">Uyarı: </span>Kaynak PDF bilinmiyor</small>
+                                </span>
+                              )}
                             </span>
                             <span>{d.slideCount} adım{d.cardCount > 0 ? ` · ${d.cardCount} kart` : ''}{s.status === 'active' ? ` · %${s.pct}` : ''}</span>
                           </span>
