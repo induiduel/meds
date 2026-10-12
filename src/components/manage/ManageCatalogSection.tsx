@@ -25,7 +25,7 @@ interface EntityInfo { id: string; label: string; group: string; source: string;
 interface Item { id: string; title: string; subtitle: string; ann: Ann | null }
 interface ListResp { total: number; page: number; size: number; items: Item[]; facets: Record<string, { value: string; n: number }[]> }
 interface Rel { entity: string; id: string; title: string; why: string }
-interface Detail { id: string; title: string; record: Record<string, any>; relations: Rel[]; ann: Ann | null; editable: string[]; form?: Record<string, any> | null }
+interface Detail { id: string; title: string; record: Record<string, any>; relations: Rel[]; ann: Ann | null; editable: string[]; form?: Record<string, any> | null; site?: { status: 'shown' | 'merged' | 'hidden'; shownId?: string } }
 interface FormField { key: string; label: string; kind?: 'text' | 'long' | 'number' | 'options' | 'choice' | 'list'; required?: boolean; choices?: string[]; free?: boolean; hint?: string }
 /** Yeni kayıt (base yok) ya da çoğaltma (base = asıl kaydın kimliği + ön dolu form) */
 interface CreateTarget { entity: string; base?: { id: string; title: string; form: Record<string, any> } }
@@ -487,6 +487,19 @@ const CatalogDetail: React.FC<{
       {!d && !err && <div className="flex flex-col gap-2 p-1">{[80, 60, 70].map((w) => <span key={w} className="ui-skel" style={{ height: 14, width: `${w}%` }} />)}</div>}
       {d && (
         <div className="ct-detail">
+          {d.site?.status === 'merged' && (
+            <div className="ui-callout is-warn">
+              <CircleAlert />
+              <span>
+                Bu soru sitede gösterilmiyor: kopya olarak <b>#{d.site.shownId}</b> ile birleştirilmiş, sitede o kayıt görünüyor.
+                Kök, cevap, açıklama, konu, ders ve kurul düzeltmeleri gruptaki tüm kopyalara yazılır.{' '}
+                <button type="button" className="ui-btn is-sm" onClick={() => onNavigate({ entity: 'past', id: d.site!.shownId! })}><ArrowUpRight /> Sitedeki kaydı aç</button>
+              </span>
+            </div>
+          )}
+          {d.site?.status === 'hidden' && (
+            <div className="ui-callout is-warn"><CircleAlert /> Bu soru sitede gösterilmiyor (karantinada ya da yayından kaldırılmış).</div>
+          )}
           <div className="ui-seg ct-tabs" role="tablist">
             {d.editable.length > 0 && <button type="button" role="tab" aria-checked={tab === 'fields'} aria-selected={tab === 'fields'} onClick={() => setTab('fields')}>Alanlar</button>}
             <button type="button" role="tab" aria-checked={tab === 'review'} aria-selected={tab === 'review'} onClick={() => setTab('review')}>Değerlendirme</button>

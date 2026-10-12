@@ -15,6 +15,7 @@ import fs from 'fs';
 import path from 'path';
 import crypto from 'crypto';
 import type express from 'express';
+import { mergeSiblings } from './questionMerge.ts';
 
 type Any = Record<string, any>;
 
@@ -23,6 +24,8 @@ export interface CatalogDeps {
   dataDir: string;
   getPastQuestions: () => any[];
   savePastQuestions: (list: any[]) => void;
+  /** Sitede gösterilen çıkmış listesi (karantina + birleştirme katmanı uygulanmış) — kayıt sitede mi, hangi kopya görünüyor */
+  getServedPast?: () => any[];
   getDecks: () => any[];
   /** Bellekte tutulan türlerin silme/geri yükleme yolları (server.ts sağlar; silinen kayıtları döndürür) */
   removePast?: (ids: string[]) => Promise<any[]>;
@@ -127,6 +130,22 @@ function writeJsonAtomic(file: string, data: any, backupDir: string) {
 }
 
 /** Yalnız izin verilen alanları uygular; dizi alanları virgüllü metinden diziye çevrilir. */
+/** Çıkmış sorunun site metni önce `reconstruction`dan okunur: kök/cevap/açıklama düzeltmesi oraya da yazılmalı. */
+const PAST_SHARED_FIELDS = ['stem', 'correctAnswer', 'explanation', 'topic', 'discipline', 'committeeId'];
+function syncPastReconstruction(q: Any, patch: Any) {
+  const rec = q.reconstruction;
+  if (!rec || typeof rec !== 'object') return;
+  if ('stem' in patch) rec.stem = q.stem;
+  if ('explanation' in patch) rec.explanation = q.explanation;
+  if ('correctAnswer' in patch) {
+    rec.correctAnswer = q.correctAnswer;
+    for (const list of [rec.options, q.options]) {
+      if (Array.isArray(list)) for (const o of list) if (o && typeof o === 'object' && 'isCorrect' in o) o.isCorrect = o.key === q.correctAnswer;
+    }
+  }
+  rec.updatedAt = q.updatedAt;
+}
+
 function applyPatch(target: Any, patch: Any, editable: string[], arrays: string[] = []) {
   for (const k of Object.keys(patch || {})) {
     if (!editable.includes(k)) continue;
@@ -325,6 +344,18 @@ export function registerDataCatalogRoutes(app: express.Express, requireAdmin: ex
         const q = list.find((x) => String(x.id) === id);
         if (!q) throw new Error('Soru bulunamadı');
         applyPatch(q, patch, ENTITIES[0].editable, ENTITIES[0].arrays);
+        syncPastReconstruction(q, patch);
+        // Birleştirilmiş kopyalar aynı sorudur, sitede yalnız biri görünür: içerik düzeltmesi hepsine yazılır
+        // (sınav yılı ve etiketler kopyaya özgüdür, onlar aktarılmaz).
+        const content = Object.fromEntries(Object.entries(patch || {}).filter(([k]) => PAST_SHARED_FIELDS.includes(k)));
+        if (Object.keys(content).length) {
+          for (const sid of mergeSiblings(id)) {
+            const sq = list.find((x) => String(x.id) === sid);
+            if (!sq) continue;
+            applyPatch(sq, content, PAST_SHARED_FIELDS);
+            syncPastReconstruction(sq, content);
+          }
+        }
         deps.savePastQuestions(list);
         return q;
       },
@@ -929,6 +960,15 @@ export function registerDataCatalogRoutes(app: express.Express, requireAdmin: ex
     }
   });
 
+  /** Çıkmış soru sitede nasıl görünüyor: kendisi mi, birleştirildiği başka kopya mı, hiç mi (karantina/silinmiş) */
+  const pastSiteState = (id: string): { status: 'shown' | 'merged' | 'hidden'; shownId?: string } | undefined => {
+    if (!deps.getServedPast) return undefined;
+    const served = deps.getServedPast();
+    if (served.some((q) => String(q.id) === id)) return { status: 'shown' };
+    const host = served.find((q) => Array.isArray(q.mergedFrom) && q.mergedFrom.map(String).includes(id));
+    return host ? { status: 'merged', shownId: String(host.id) } : { status: 'hidden' };
+  };
+
   app.get('/api/admin/catalog/:entity/:id', requireAdmin, (req, res) => {
     const e = byId(req.params.entity);
     if (!e) return res.status(404).json({ error: 'Bilinmeyen veri türü' });
@@ -940,7 +980,7 @@ export function registerDataCatalogRoutes(app: express.Express, requireAdmin: ex
     const record = e.id === 'decks'
       ? { ...x, slides: undefined, _slides: (x.slides || []).map((s: Any, i: number) => ({ n: s.slideNumber ?? i + 1, title: s.title, elements: (s.interactiveElements || s.elements || []).length })) }
       : x;
-    res.json({ id: e.key(x), title: e.title(x), record, relations, ann: annOf(e.id, e.key(x)) || null, editable: e.save ? e.editable : [], form: CREATE[e.id] ? dupForm(e.id, x) : null });
+    res.json({ id: e.key(x), title: e.title(x), record, relations, ann: annOf(e.id, e.key(x)) || null, editable: e.save ? e.editable : [], form: CREATE[e.id] ? dupForm(e.id, x) : null, site: e.id === 'past' ? pastSiteState(e.key(x)) : undefined });
   });
 
   app.put('/api/admin/catalog/:entity/:id', requireAdmin, (req, res) => {

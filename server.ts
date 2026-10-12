@@ -54,7 +54,7 @@ import {
   loadDeepSeekContributions,
   DEEPSEEK_DATA_DIR
 } from './src/services/deepseekDataService.ts';
-import { applyMergeOverlay, mergeMtime, readMergeGroups, updateMergeGroup } from './src/services/questionMerge.ts';
+import { applyMergeOverlay, mergeMtime, readMergeGroups, sameDisplayedContent, syncMergeSiblingsInList, updateMergeGroup } from './src/services/questionMerge.ts';
 import { applyPhase14Overlay, latestReviews } from './src/services/phase14Overlay.ts';
 import { getQuestionInsights, getInsightsSummary, getRawQuestionInsights, getPhaseOverride, savePhaseOverride, getQuestionDerivedRecords } from './src/services/phaseInsightsService.ts';
 import { applyCleanOverlay } from './src/services/lectureCleanOverlay.ts';
@@ -2032,6 +2032,16 @@ function sendPastListBody(req: express.Request, res: express.Response, cache: Pa
   }).catch((err) => res.status(500).json({ error: 'Çıkmış listesi hazırlanamadı: ' + err.message }));
 }
 
+// Birleştirilmiş kopyalar aynı sorudur ve sitede yalnız biri görünür (hangisi olduğu karantinaya göre değişebilir).
+// Kök/şık/cevap/açıklama düzeltmesi bu yüzden gruptaki tüm kopyalara yazılır; yoksa düzeltme gizli kopyada kalır.
+const PAST_CONTENT_KEYS = ['stem', 'options', 'correctAnswer', 'claimedAnswer', 'explanation', 'reconstruction'];
+function syncPastMergeSiblings(list: any[], sourceId: string, editor: string, body?: Record<string, any>): any[] {
+  if (body && !PAST_CONTENT_KEYS.some((k) => k in body)) return [];
+  const changed = syncMergeSiblingsInList(list, sourceId, editor);
+  for (const q of changed) mirrorPastQuestionToDb(q).catch((err: any) => console.warn('[Birleştirme] kardeş aynalama hatası:', err?.message || err));
+  return changed;
+}
+
 let pastFilteredFor: Set<string> | null = null;
 function getPastQuestionsDb(): any[] {
   const deletedSet = getDeletedPastQuestions();
@@ -3118,6 +3128,7 @@ app.put('/api/past-exams/:id', requireAdmin, (req, res) => {
       id: req.params.id,
       updatedAt: new Date().toISOString()
     };
+    syncPastMergeSiblings(list, req.params.id, 'Yönetici düzenlemesi', req.body);
     savePastQuestionsDb(list);
     pastListCache = null;
     mirrorPastQuestionToDb(list[idx]);
@@ -3142,6 +3153,7 @@ app.patch('/api/past-exams/:id', requireAdmin, (req, res) => {
       id: req.params.id,
       updatedAt: new Date().toISOString()
     };
+    syncPastMergeSiblings(list, req.params.id, 'Yönetici düzenlemesi', req.body);
     savePastQuestionsDb(list);
     pastListCache = null;
     mirrorPastQuestionToDb(list[idx]);
@@ -3546,6 +3558,7 @@ function applyPhase14Review(targetQId: string, approvedBy: string): Phase14Apply
     targetQ.phase14 = { approvedAt: new Date().toISOString(), model: rev.model || null, changes: proposal.degisen_alanlar || [], summary: proposal.degisiklik_ozeti || null };
     targetQ.updatedAt = new Date().toISOString();
 
+    syncPastMergeSiblings(pastList, targetQId, `Faz 14 onayı (${approvedBy})`);
     savePastQuestionsDb(pastList);
     // Asenkron aynalama: HTTP yanıtını bloke etmez
     mirrorPastQuestionToDb(targetQ).catch(err => {
@@ -4131,25 +4144,51 @@ app.put('/api/past-question-reviews/:id/proposal', requireAdmin, (req, res) => {
 app.use('/api/admin/ders-isci', requireAdmin, dersIsciRouter());
 
 // Kopya soru birleştirme (src/services/questionMerge.ts): grupları listele, asıl soruyu seç, onayla, ayır (Admin)
+// Kopyanın son içerik düzeltmesi (Faz 14 onayı, check-solve, onarım/yönetici revizyonu) — gruplar arası ayrışma tespiti
+function pastContentEdit(q: any): { at: string; kind: string } | null {
+  const cand: { at: string; kind: string }[] = [];
+  if (q?.phase14?.approvedAt) cand.push({ at: String(q.phase14.approvedAt), kind: 'Faz 14 onayı' });
+  if (q?.checkSolve?.at) cand.push({ at: String(q.checkSolve.at), kind: q.checkSolve.status === 'karantina' ? 'Check-solve (karantina)' : 'Check-solve doğrulaması' });
+  for (const r of Array.isArray(q?.revisions) ? q.revisions : []) {
+    if (r?.editedAt && r.editorRole !== 'merge_sync' && !/Senkronize/.test(String(r.changeSummary || ''))) cand.push({ at: String(r.editedAt), kind: r.editorName || 'Revizyon' });
+  }
+  return cand.sort((a, b) => b.at.localeCompare(a.at))[0] || null;
+}
+
 app.get('/api/admin/question-merges', requireAdmin, (_req, res) => {
   try {
     const byId = new Map(getPastQuestionsDb().map((q: any) => [String(q.id), q]));
-    const gruplar = readMergeGroups().map((g) => ({
-      ...g,
-      sorular: g.uyeler.map((id) => {
+    // Sitede gerçekten görünen kopya (asıl karantinadaysa katman başka üyeyi gösterebilir)
+    const shownOf = new Map<string, string>();
+    for (const q of getServedPastList().list) {
+      shownOf.set(String(q.id), String(q.id));
+      for (const h of Array.isArray(q.mergedFrom) ? q.mergedFrom : []) shownOf.set(String(h), String(q.id));
+    }
+    const gruplar = readMergeGroups().map((g) => {
+      const gorunen = g.durum === 'ayrildi' ? null : shownOf.get(g.asil) || g.uyeler.map((u) => shownOf.get(u)).find(Boolean) || null;
+      const shownQ = gorunen ? byId.get(gorunen) : null;
+      const sorular = g.uyeler.map((id) => {
         const q: any = byId.get(id) || {};
+        const rec = q.reconstruction && typeof q.reconstruction === 'object' ? q.reconstruction : {};
+        const opts = (Array.isArray(rec.options) && rec.options.length ? rec.options : q.options) || [];
+        const edit = pastContentEdit(q);
         return {
           id,
-          stem: q.stem || q.reconstruction?.stem || '',
-          options: (q.options || q.reconstruction?.options || []).map((o: any) => (typeof o === 'string' ? o : o?.text || '')),
-          correctAnswer: q.correctAnswer || '',
+          // Site önce reconstruction'ı okur: burada da aynı sırayla gösterilir
+          stem: rec.stem || q.stem || '',
+          options: opts.map((o: any) => (typeof o === 'string' ? o : o?.text || '')),
+          correctAnswer: rec.correctAnswer || q.correctAnswer || '',
           committeeId: q.committeeId || '',
           discipline: q.discipline || '',
-          year: q.year || '',
+          year: q.examYear || q.year || '',
           source: q.source || q.sourceFile || '',
+          duzenleme: edit,
+          // Sitedekinden farklı içerik taşıyan ve grup oluştuktan sonra düzeltilmiş gizli kopya: düzeltme sitede görünmüyor
+          ayrisik: !!(shownQ && id !== gorunen && byId.get(id) && edit && edit.at > String(g.olusturma || '') && !sameDisplayedContent(q, shownQ)),
         };
-      }),
-    }));
+      });
+      return { ...g, gorunen, ayrisik: sorular.some((x) => x.ayrisik), sorular };
+    });
     res.json({ gruplar });
   } catch (err: any) {
     res.status(500).json({ error: 'Birleştirmeler okunamadı: ' + err.message });
@@ -4158,6 +4197,21 @@ app.get('/api/admin/question-merges', requireAdmin, (_req, res) => {
 app.post('/api/admin/question-merges/:groupId', requireAdmin, (req, res) => {
   try {
     const t = String(req.body?.action || '');
+    // Seçilen kopyanın içeriğini gruptaki tüm kopyalara yaz (gizli kopyada kalmış düzeltmeyi siteye taşır ya da
+    // eski kopyaları sitedeki doğrulanmış sürüme eşitler). Önceki hâller revizyon olarak saklanır.
+    if (t === 'sync') {
+      const g = readMergeGroups().find((x) => x.id === String(req.params.groupId));
+      const kaynak = String(req.body?.kaynak || '');
+      if (!g) return res.status(404).json({ error: 'Birleştirme grubu bulunamadı.' });
+      if (!g.uyeler.includes(kaynak)) return res.status(400).json({ error: 'Seçilen soru bu grupta değil.' });
+      const list = getPastQuestionsDb();
+      const changed = syncPastMergeSiblings(list, kaynak, `Yönetici · Birleştirilen sorular (${req.headers['x-admin-email'] || 'yerel'})`);
+      if (changed.length) {
+        savePastQuestionsDb(list);
+        pastListCache = null;
+      }
+      return res.json({ success: true, grup: g, guncellenen: changed.map((q) => q.id) });
+    }
     const action =
       t === 'primary' ? { type: 'primary' as const, asil: String(req.body?.asil || '') }
       : t === 'confirm' ? { type: 'confirm' as const }
@@ -6348,6 +6402,7 @@ registerDataCatalogRoutes(app, requireAdmin, {
   onChange: (entity) => broadcastRealtimeEvent('content_changed', { entity, at: Date.now() }),
   getPastQuestions: getPastQuestionsDb,
   savePastQuestions: savePastQuestionsDb,
+  getServedPast: () => getServedPastList().list,
   getDecks: getDecksDb,
   // Toplu silme / geri yükleme: bellekte tutulan veriler (çıkmış, havuz, Öğren bildirimleri) sunucunun kendi
   // kayıt yollarından geçer; meds-pg'den de silinir, geri yüklenince yeniden eşitlenir.
@@ -8030,6 +8085,7 @@ app.put('/api/admin/past-questions/:id', requireAdmin, async (req, res) => {
     updatedAt: new Date().toISOString(),
   };
   list[idx] = updatedQuestion;
+  syncPastMergeSiblings(list, targetId, 'Yönetici düzenlemesi', req.body);
   savePastQuestionsDb(list);
   pastListCache = null;
 

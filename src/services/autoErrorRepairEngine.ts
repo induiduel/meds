@@ -843,15 +843,41 @@ Yanıtını JSON şemasına tam uygun olarak ver.`;
   };
 }
 
+// Birleştirme grubundaki kopyalar aynı sorudur ve sitede yalnız biri gösterilir (hangisi olduğu karantinaya göre
+// değişebilir). Düzeltilen içerik bu yüzden tüm kardeşlere yazılır; önceki hâl revizyon olarak saklanır.
+function applyCorrectionToSister(sq: any, correctedData: any): any {
+  const c = correctedData || {};
+  const answer = c.correctAnswer || c.claimedAnswer;
+  const out: any = { ...sq };
+  if (c.stem) out.stem = c.stem;
+  if (Array.isArray(c.options) && c.options.length) out.options = c.options;
+  if (answer) out.correctAnswer = answer;
+  if (c.explanation) out.explanation = c.explanation;
+  if (out.reconstruction && typeof out.reconstruction === 'object') {
+    out.reconstruction = {
+      ...out.reconstruction,
+      ...(c.stem ? { stem: c.stem } : {}),
+      ...(Array.isArray(c.options) && c.options.length ? { options: c.options } : {}),
+      ...(answer ? { correctAnswer: answer } : {}),
+      ...(c.explanation ? { explanation: c.explanation } : {}),
+      updatedAt: new Date().toISOString(),
+    };
+  }
+  return out;
+}
+
 function syncSisterQuestions(
   sisterMembers: Array<{ id: string }>,
   item: AutoRepairItem,
   ticketNo: string,
-  resolutionSummary: string
+  resolutionSummary: string,
+  correctedData: any
 ) {
   try {
     const list = readJsonSafe<any[]>(PAST_QUESTIONS_FILE, []);
     let modified = false;
+    const contentChanged = item.aiAnalysis?.actionTaken === 'corrected';
+    const syncedSisters: any[] = [];
 
     for (const sister of sisterMembers) {
       const idx = list.findIndex((q) => String(q.id) === String(sister.id));
@@ -873,7 +899,9 @@ function syncSisterQuestions(
           options: sq.options,
           explanation: sq.explanation,
         });
-        list[idx] = { ...sq, revisions: curRevs, updatedAt: new Date().toISOString() };
+        const synced = contentChanged ? applyCorrectionToSister(sq, correctedData) : sq;
+        list[idx] = { ...synced, revisions: curRevs, updatedAt: new Date().toISOString() };
+        if (contentChanged) syncedSisters.push(list[idx]);
         modified = true;
       }
     }
@@ -882,6 +910,14 @@ function syncSisterQuestions(
       writeJsonAtomic(PAST_QUESTIONS_FILE, list);
       if (fs.existsSync(SRC_PAST_QUESTIONS_FILE)) {
         writeJsonAtomic(SRC_PAST_QUESTIONS_FILE, list);
+      }
+      // Dosya yazıldıktan sonra: sunucu belleği dosyayı yeniden okur, hedef sorunun onarımı ezilmez
+      for (const rec of syncedSisters) {
+        try {
+          if (globalDatabaseSyncHook) void globalDatabaseSyncHook({ source: 'past_question', targetId: String(rec.id), updatedData: rec, action: 'applied' });
+        } catch (syncErr: any) {
+          console.warn('[AutoRepairEngine] Kardeş soru DatabaseSyncHook hatası:', syncErr?.message);
+        }
       }
     }
   } catch (err) {
@@ -1124,7 +1160,8 @@ export function applyRepairToDatabase(item: AutoRepairItem, correctedData: any):
           crossData.mergeGroup.otherMembers,
           item,
           item.ticketNo || '#000001',
-          item.aiAnalysis?.changesSummary || 'Kardeş soru onarımı tamamlandı.'
+          item.aiAnalysis?.changesSummary || 'Kardeş soru onarımı tamamlandı.',
+          correctedData
         );
       }
 

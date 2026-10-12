@@ -69,6 +69,93 @@ export function mergedInto(id: string): string | null {
   return load().hidden.get(String(id))?.asil || null;
 }
 
+/** Aynı birleştirme grubundaki diğer kimlikler (ayrılmış gruplar hariç). Bir kopyaya yapılan içerik düzeltmesi
+ *  sitede gösterilen üyeye de yazılmalı; hangi üyenin gösterileceği karantinaya göre değişebilir. */
+export function mergeSiblings(id: string): string[] {
+  const key = String(id);
+  const g = load().groups.find((x) => x.durum !== 'ayrildi' && x.uyeler.includes(key));
+  return g ? g.uyeler.filter((u) => u !== key) : [];
+}
+
+/** Kopyalar arasında paylaşılan içerik: sınav yılı, soru no, kaynak, etiket, oy, yorum ve bildirimler kopyaya özgüdür. */
+const SHARED_KEYS = ['stem', 'correctAnswer', 'claimedAnswer', 'explanation', 'sik_analizi', 'cevap_gerekcesi', 'topic', 'discipline', 'committeeId'];
+const REC_KEYS = ['stem', 'options', 'correctAnswer', 'explanation'];
+
+/** Sitede görünen içerik (kart önce reconstruction'ı okur) — kopyaları karşılaştırmak için. */
+export function displayedContent(q: Record<string, any>): { stem: string; options: string[]; answer: string } {
+  const rec = q?.reconstruction && typeof q.reconstruction === 'object' ? q.reconstruction : {};
+  const opts = (Array.isArray(rec.options) && rec.options.length ? rec.options : q?.options) || [];
+  const n = (s: unknown) => String(s ?? '').toLocaleLowerCase('tr').replace(/[^\p{L}\p{N}]+/gu, ' ').trim();
+  return {
+    stem: n(rec.stem || q?.stem),
+    options: opts.map((o: any) => n(typeof o === 'string' ? o : o?.text)),
+    answer: String(rec.correctAnswer || q?.correctAnswer || '').toUpperCase(),
+  };
+}
+export function sameDisplayedContent(a: Record<string, any>, b: Record<string, any>): boolean {
+  return JSON.stringify(displayedContent(a)) === JSON.stringify(displayedContent(b));
+}
+/** Kopyalar arasında eşitlenmesi gereken tüm içeriğin imzası (açıklama ve müfredat alanları dahil). */
+function contentSignature(q: Record<string, any>): string {
+  const rec = q?.reconstruction && typeof q.reconstruction === 'object' ? q.reconstruction : {};
+  return JSON.stringify([displayedContent(q), String(rec.explanation || q?.explanation || '').trim(), q?.topic, q?.discipline, q?.committeeId]);
+}
+
+/** Bir kopyada yapılan içerik düzeltmesini gruptaki diğer kopyalara yazar; değişen kardeşleri döndürür (kaydetme çağıranda). */
+export function syncMergeSiblingsInList(list: any[], sourceId: string, editor: string): any[] {
+  const src = list.find((q) => String(q?.id) === String(sourceId));
+  if (!src) return [];
+  const sig = contentSignature(src);
+  const changed: any[] = [];
+  for (const sid of mergeSiblings(String(sourceId))) {
+    const i = list.findIndex((q) => String(q?.id) === sid);
+    if (i === -1 || contentSignature(list[i]) === sig) continue;
+    list[i] = copyMergeContent(list[i], src, editor, `[Kopya #${sourceId} ile eşitlendi] Birleştirilmiş kopyada yapılan düzeltme bu kayda da yazıldı.`);
+    changed.push(list[i]);
+  }
+  return changed;
+}
+
+/** Kaynak kopyanın içeriğini hedefe yazar (hedefin şık oyları korunur, önceki hâli revizyon olarak saklanır). */
+export function copyMergeContent(target: Record<string, any>, source: Record<string, any>, editor: string, note: string): Record<string, any> {
+  const revisions = Array.isArray(target.revisions) ? [...target.revisions] : [];
+  revisions.push({
+    id: `rev-merge-${Date.now()}-${Math.random().toString(36).slice(2, 6)}`,
+    version: revisions.length + 1,
+    editedAt: new Date().toISOString(),
+    editorName: editor,
+    editorRole: 'merge_sync',
+    changeSummary: note,
+    stem: target.stem,
+    discipline: target.discipline,
+    topic: target.topic,
+    claimedAnswer: target.correctAnswer,
+    options: target.options,
+    explanation: target.explanation,
+  });
+  const out: Record<string, any> = { ...target, revisions, updatedAt: new Date().toISOString() };
+  for (const k of SHARED_KEYS) if (source[k] !== undefined) out[k] = source[k];
+  const votesOf = (list: any) => new Map((Array.isArray(list) ? list : []).map((o: any) => [o?.key, o]));
+  const keepVotes = (opts: any, old: any) => {
+    const prev = votesOf(old);
+    return Array.isArray(opts)
+      ? opts.map((o: any) => (o && typeof o === 'object' ? { ...o, upvotes: prev.get(o.key)?.upvotes ?? 0, likedBy: prev.get(o.key)?.likedBy ?? [] } : o))
+      : opts;
+  };
+  if (Array.isArray(source.options)) out.options = keepVotes(source.options, target.options);
+  const srcRec = source.reconstruction && typeof source.reconstruction === 'object' ? source.reconstruction : null;
+  if (srcRec || (out.reconstruction && typeof out.reconstruction === 'object')) {
+    const rec = { ...(out.reconstruction && typeof out.reconstruction === 'object' ? out.reconstruction : {}) };
+    for (const k of REC_KEYS) {
+      const v = srcRec?.[k] ?? source[k];
+      if (v !== undefined) rec[k] = k === 'options' ? keepVotes(v, rec.options) : v;
+    }
+    rec.updatedAt = out.updatedAt;
+    out.reconstruction = rec;
+  }
+  return out;
+}
+
 /** Kopyaları gizler, asıl soruya yönetici anahtarlarını ekler (veri dosyası değişmez). */
 export function applyMergeOverlay<T extends Record<string, any>>(list: T[]): T[] {
   const { groups } = load();
