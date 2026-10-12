@@ -1,0 +1,82 @@
+# meds-pg: Supabase yerine tek Postgres (pgvector) + isteğe bağlı PostgREST (yalnız cihaz betikleri için).
+# Cihaz:  docker compose --env-file ../../.env -f deploy/pg/docker-compose.yml --profile cihaz up -d
+# Oracle: docker-compose.oracle.yml içindeki meds-pg servisi kullanılır (dışarıya port açılmaz).
+name: meds-pg
+services:
+  meds-pg:
+    image: pgvector/pgvector:pg17
+    container_name: meds-pg
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: meds
+      POSTGRES_USER: meds
+      POSTGRES_PASSWORD: ${MEDS_PG_PASSWORD:?MEDS_PG_PASSWORD .env içinde tanımlı olmalı}
+    command:
+      - postgres
+      - -c
+      - shared_buffers=384MB
+      - -c
+      - effective_cache_size=1GB
+      - -c
+      - work_mem=16MB
+      - -c
+      - maintenance_work_mem=256MB
+      - -c
+      - max_connections=60
+      - -c
+      - wal_level=minimal
+      - -c
+      - max_wal_senders=0
+      - -c
+      - shared_preload_libraries=pg_stat_statements
+    ports:
+      - "127.0.0.1:${MEDS_PG_PORT:-54330}:5432"
+    volumes:
+      - meds_pg_data:/var/lib/postgresql/data
+      - ./init:/docker-entrypoint-initdb.d:ro
+    shm_size: 256mb
+    mem_limit: 1536m
+    cpus: 1.0
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U meds -d meds"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+  # Cihazdaki eski Python/Node betikleri /rest/v1 (PostgREST) biçimini kullanır; Supabase'in
+  # yalnız bu parçası korunur. Yalnız 127.0.0.1, yalnız cihaz profilinde.
+  meds-rest:
+    profiles: ["cihaz"]
+    image: postgrest/postgrest:v14.17
+    container_name: meds-rest
+    restart: unless-stopped
+    depends_on:
+      meds-pg:
+        condition: service_healthy
+    environment:
+      PGRST_DB_URI: postgres://authenticator:${MEDS_PG_PASSWORD}@meds-pg:5432/meds
+      PGRST_DB_SCHEMAS: public
+      PGRST_DB_ANON_ROLE: anon
+      PGRST_JWT_SECRET: ${MEDS_PG_JWT_SECRET:?MEDS_PG_JWT_SECRET (eski Supabase JWT_SECRET) gerekli}
+      PGRST_DB_POOL: 5
+      PGRST_SERVER_PORT: 3000
+    # Betikler http://127.0.0.1:8000/rest/v1/... çağırır; küçük Caddy önü /rest/v1 önekini kaldırır.
+    mem_limit: 128m
+    cpus: 0.5
+
+  meds-rest-gate:
+    profiles: ["cihaz"]
+    image: caddy:2-alpine
+    container_name: meds-rest-gate
+    restart: unless-stopped
+    depends_on: [meds-rest]
+    ports:
+      - "127.0.0.1:8000:8000"
+    volumes:
+      - ./Caddyfile.rest:/etc/caddy/Caddyfile:ro
+    mem_limit: 64m
+    cpus: 0.25
+
+volumes:
+  meds_pg_data:
+    name: meds_pg_data

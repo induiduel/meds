@@ -2,7 +2,7 @@
 # Yalnızca web/API katmanı çalışır (server.ts, port 3000). Ağır AI boru hattı (Ollama/GPU,
 # watchdog, pipeline) Oracle'da çalışmaz; veri rsync ile cihazdan gelir.
 # Build: docker compose -f deploy/oracle/docker-compose.oracle.yml up -d --build
-# Cihaz Node 24 çalıştırır; parity için aynı sürüm (native WebSocket gerekir — Supabase realtime).
+# Cihaz Node 24 çalıştırır; parity için aynı sürüm.
 FROM node:24-bookworm-slim
 
 RUN apt-get update && apt-get install -y --no-install-recommends python3 \
@@ -15,12 +15,6 @@ RUN npm ci --no-audit --no-fund || npm install --no-audit --no-fund
 
 COPY . .
 
-# Build-time Supabase adresleri (vite define bunları gömer; .env imajda YOK,
-# bu yüzden compose build.args ile gelir — bkz. docker-compose.oracle.yml).
-ARG SUPABASE_URL=https://kgutsltgmqbnlxcnzrtl.supabase.co
-ARG SUPABASE_PUBLISHABLE_KEY=sb_publishable_EVdXdIi_2mxVr3HZKYabwQ_li5KuE1Q
-ENV SUPABASE_URL=$SUPABASE_URL
-ENV SUPABASE_PUBLISHABLE_KEY=$SUPABASE_PUBLISHABLE_KEY
 ENV NODE_OPTIONS=--max-old-space-size=4096
 RUN npm run build
 

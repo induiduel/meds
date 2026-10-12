@@ -113,7 +113,7 @@ export const ManageSystemSection: React.FC<{ notify: (msg: string) => void }> = 
 
   const status = [
     { name: 'Firebase', s: health.firebase.status, detail: health.firebase.details || '' },
-    { name: 'Supabase', s: health.supabase.status, detail: health.supabase.details || '' },
+    { name: 'Veritabanı (meds-pg)', s: health.supabase.status, detail: health.supabase.details || '' },
     {
       name: 'Yapay zeka',
       s: health.ai.status,

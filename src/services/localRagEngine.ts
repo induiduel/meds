@@ -27,7 +27,7 @@ import path from 'path';
 import crypto from 'crypto';
 import { fileURLToPath } from 'url';
 import { GoogleGenAI } from '@google/genai';
-import { createClient, SupabaseClient } from '@supabase/supabase-js';
+import { pgDb } from './pgDb';
 import { loadDeepSeekContributions } from './deepseekDataService.ts';
 import { foldTurkish as foldTrUtil, FastFuzzyVocab } from '../utils/fuzzyMatching.ts';
 import { KIND_LABEL, factPlain, normalizeDisease, sectionTexts, sectionTitle } from './diseaseModel.ts';
@@ -151,20 +151,9 @@ function cleanTextForTokens(text: string): string[] {
     .flatMap(w => (w.length > STEM_LENGTH ? [w, w.slice(0, STEM_LENGTH) + '*'] : [w]));
 }
 
-// Supabase Init
-let supabaseClient: SupabaseClient | null = null;
-function getSupabase(): SupabaseClient | null {
-  if (supabaseClient) return supabaseClient;
-  // Büyük veri Oracle-local'den (LOCAL_*), yoksa klasik SUPABASE_* (cihazda localhost:8000).
-  const url = process.env.LOCAL_SUPABASE_URL || process.env.SUPABASE_URL || 'https://kgutsltgmqbnlxcnzrtl.supabase.co';
-  const key = process.env.LOCAL_SUPABASE_KEY || process.env.SUPABASE_SECRET_KEY || process.env.SUPABASE_PUBLISHABLE_KEY || 'sb_publishable_EVdXdIi_2mxVr3HZKYabwQ_li5KuE1Q';
-  if (url && key) {
-    try {
-      supabaseClient = createClient(url, key);
-      return supabaseClient;
-    } catch (_) {}
-  }
-  return null;
+// Postgres (meds-pg): rag_chunks + ai_question_interactions kopyası. Yalnız sunucu sürecinde.
+function getSupabase() {
+  return pgDb;
 }
 
 // Gemini Key Pool with Rotation
@@ -1305,7 +1294,7 @@ ${interaction.response}`.trim();
   memoryChunks.set(chunk.id, chunk);
   indexChunkTokens(chunk);
 
-  // 3. Asynchronously generate embedding and mirror to Supabase
+  // 3. Asynchronously generate embedding and mirror to meds-pg
   setTimeout(async () => {
     try {
       const emb = await generateGeminiEmbedding(chunk.content);
@@ -1375,7 +1364,7 @@ export function upvoteAiInteraction(interactionId: string): boolean {
     memoryChunks.set(chunk.id, chunk);
   }
 
-  // Update in Supabase
+  // Update in meds-pg
   const sb = getSupabase();
   if (sb) {
     try {
@@ -1542,7 +1531,7 @@ export function getChunkCountsByType(): Record<string, number> {
   return counts;
 }
 
-// Background sync to Supabase with Gemini embeddings
+// Background sync to meds-pg with Gemini embeddings
 async function syncPendingChunksToCloud(maxCount: number = 100): Promise<void> {
   const sb = getSupabase();
   if (!sb) return;
@@ -1557,7 +1546,7 @@ async function syncPendingChunksToCloud(maxCount: number = 100): Promise<void> {
 
   if (chunksWithoutCloud.length === 0) return;
 
-  console.log(`[LocalRagEngine] ☁️ ${chunksWithoutCloud.length} parça Supabase ve Gemini embedding için işleniyor...`);
+  console.log(`[LocalRagEngine] ☁️ ${chunksWithoutCloud.length} parça meds-pg ve Gemini embedding için işleniyor...`);
   const BATCH_SIZE = 10;
 
   for (let i = 0; i < chunksWithoutCloud.length; i += BATCH_SIZE) {

@@ -8,7 +8,7 @@
  *      favoriler ve profil verilerini alır.
  *    - data/user_backups/<sha256(id)>.json dosyasına atomik olarak yazar.
  *    - data/users.json içindeki ilgili kullanıcı kaydını günceller (lastBackupAt, backupStats).
- *    - mirrorUserToSupabase aracılığıyla Supabase PostgreSQL veritabanındaki `users` tablosuna
+ *    - mirrorUserToDb aracılığıyla meds-pg (Postgres) veritabanındaki `users` tablosuna
  *      (JSONB `data` sütunu) tam yedeği ve özetleri yansıtır.
  * 2. GET /api/user-data/backup:
  *    - Belirtilen kullanıcı (uid, email veya x-user-id) için diskteki ve veritabanındaki en güncel yedeği çeker.
@@ -26,7 +26,7 @@ export interface UserDataBackupDeps {
   dataDir: string;
   loadUsers: () => any[];
   saveUsers: (users: any[]) => void;
-  mirrorUserToSupabase: (user: any) => Promise<void>;
+  mirrorUserToDb: (user: any) => Promise<void>;
   getPastQuestions: () => any[];
 }
 
@@ -138,8 +138,8 @@ export function registerUserDataBackupRoutes(app: express.Express, deps: UserDat
         }
 
         if (matchedUser) {
-          deps.mirrorUserToSupabase(matchedUser).catch((e: any) => {
-            console.warn('[UserDataBackup] Supabase mirror non-fatal warning:', e?.message || e);
+          deps.mirrorUserToDb(matchedUser).catch((e: any) => {
+            console.warn('[UserDataBackup] meds-pg mirror non-fatal warning:', e?.message || e);
           });
         }
       } catch (dbErr) {

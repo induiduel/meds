@@ -2,7 +2,7 @@
 # MedSoru tam yedek (YENI_YAPI_YOL_HARITASI F0/T1). Yalnız yeni dosya yazar; kaynakta hiçbir şeyi değiştirmez.
 # Kullanım: deploy/backup.sh            → $MEDS_BACKUP_DIR/<YYYYMMDD_HHMM>/
 #   MEDS_BACKUP_DIR   yedek kökü (varsayılan: <proje>/../medsor-yedek, cihazda /home/indu/medsor-yedek)
-#   MEDS_DB_CONTAINER pg konteyneri (varsayılan: supabase-db)
+#   MEDS_DB_CONTAINER pg konteyneri (varsayılan: meds-pg)
 #   MEDS_BACKUP_GPG_PASS_FILE  verilirse .env dosyaları gpg ile şifreli eklenir; verilmezse secret ATLANIR (K4 kararı bekliyor)
 set -euo pipefail
 
@@ -10,14 +10,14 @@ APP="$(cd "$(dirname "$0")/.." && pwd)"          # meds/
 ROOT="$(dirname "$APP")"                          # medsor/
 DEST_ROOT="${MEDS_BACKUP_DIR:-$(dirname "$ROOT")/medsor-yedek}"
 DEST="$DEST_ROOT/$(date +%Y%m%d_%H%M)"
-DB="${MEDS_DB_CONTAINER:-supabase-db}"
+DB="${MEDS_DB_CONTAINER:-meds-pg}"
 mkdir -p "$DEST"
 echo "[yedek] hedef: $DEST"
 
 # 1) Veritabanı (özel biçim, pg_restore ile açılır)
 if docker inspect "$DB" >/dev/null 2>&1; then
   echo "[yedek] pg_dump ($DB)…"
-  docker exec "$DB" pg_dump -U postgres -Fc postgres > "$DEST/db.dump"
+  docker exec "$DB" pg_dump -U meds -Fc meds > "$DEST/db.dump"
 else
   echo "[yedek] UYARI: $DB konteyneri yok, DB atlandı"
 fi

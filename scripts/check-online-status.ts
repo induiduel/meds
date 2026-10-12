@@ -17,7 +17,6 @@ import dotenv from 'dotenv';
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { createClient } from '@supabase/supabase-js';
 import { initializeApp } from 'firebase/app';
 import { getFirestore, collection, getDocs, limit, query } from 'firebase/firestore';
 
@@ -110,18 +109,10 @@ async function testFirebase(): Promise<void> {
 // 2. ADIM: SUPABASE POSTGRESQL TESTİ
 // ============================================================================
 async function testSupabase(): Promise<void> {
-  process.stdout.write(`🐘 [2/3] Supabase PostgreSQL test ediliyor... `);
-  const supaUrl = process.env.SUPABASE_URL || 'https://kgutsltgmqbnlxcnzrtl.supabase.co';
-  const supaKey = process.env.SUPABASE_PUBLISHABLE_KEY || 'sb_publishable_EVdXdIi_2mxVr3HZKYabwQ_li5KuE1Q';
-
-  if (!supaUrl || !supaKey) {
-    summary.supabaseError = 'Supabase URL veya API Anahtarı eksik.';
-    console.log(`${RED}${BOLD}✗ AYAR EKSİK${RESET}`);
-    return;
-  }
-
+  process.stdout.write(`🐘 [2/3] meds-pg PostgreSQL test ediliyor... `);
   try {
-    const client = createClient(supaUrl, supaKey);
+    const { pgDb: client, pgPool } = await import('../src/services/pgDb');
+    process.once('beforeExit', () => void pgPool.end());
     let allGood = true;
     const tables = ['committees', 'questions', 'past_questions', 'lecture_notes'];
 

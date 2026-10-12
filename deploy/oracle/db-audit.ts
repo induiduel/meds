@@ -1,18 +1,10 @@
 /**
- * db-audit.ts — Oracle local Supabase denetimi (meds-app konteyneri içinden çalışır).
- * Çalıştırma (Oracle): docker cp db-audit.ts meds-app:/tmp/ &&
- *   docker exec -w /app meds-app npx tsx /tmp/db-audit.ts
+ * db-audit.ts — meds-pg denetimi (meds-app konteyneri içinden çalışır; DATABASE_URL ortamdan gelir).
+ * Çalıştırma (Oracle): docker exec -w /app meds-app npx tsx deploy/oracle/db-audit.ts
  * Her tablo: okuma + sayım. RPC'ler: gerçek vektörle self-test. questions: yaz-sil döngüsü.
  */
-import { createClient } from '@supabase/supabase-js';
-
-const url = (process.env.LOCAL_SUPABASE_URL || 'http://127.0.0.1:8000').replace(/\/+$/, '');
-const key = process.env.LOCAL_SUPABASE_KEY || process.env.SUPABASE_SECRET_KEY || '';
-if (!key) {
-  console.error('FAIL: anahtar yok (LOCAL_SUPABASE_KEY)');
-  process.exit(2);
-}
-const sb = createClient(url, key);
+import { pgDb as sb, pgPool } from '../../src/services/pgDb';
+process.once('beforeExit', () => void pgPool.end());
 
 async function main(): Promise<number> {
 let pass = 0;

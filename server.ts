@@ -13,7 +13,8 @@ import fs from 'fs';
 import { fileURLToPath } from 'url';
 import { createRequire } from 'module';
 import { exec, execFile, execSync, spawn, spawnSync } from 'child_process';
-import { createClient } from '@supabase/supabase-js';
+import { pgDb, pgHealth, pgListen } from './src/services/pgDb';
+import { registerDbQueryRoute } from './src/services/dbQueryRoute';
 import crypto from 'crypto';
 
 const require = createRequire(import.meta.url);
@@ -164,53 +165,17 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // ==============================================================================
-// Dual Supabase Hybrid Bridge: Local-First (Docker) + Cloud Backup (Online)
+// Veritabanı: meds-pg (Postgres + pgvector). Supabase (yerel + bulut) 2026-10-12'de kaldırıldı.
+// Asıl kaynak yerel JSON'dur; Postgres sorgulanabilir kopya + RAG vektörleri + canlı yayın kaynağıdır.
 // ==============================================================================
-const LOCAL_SUPABASE_URL = process.env.LOCAL_SUPABASE_URL || 'http://127.0.0.1:8000';
-const LOCAL_SUPABASE_KEY = process.env.LOCAL_SUPABASE_KEY || process.env.SUPABASE_SECRET_KEY || process.env.SUPABASE_KEY || '';
-
-const CLOUD_SUPABASE_URL = process.env.CLOUD_SUPABASE_URL || 'https://kgutsltgmqbnlxcnzrtl.supabase.co';
-const CLOUD_SUPABASE_KEY = process.env.CLOUD_SUPABASE_SECRET_KEY || process.env.CLOUD_SUPABASE_KEY || process.env.SUPABASE_SECRET_KEY || process.env.SUPABASE_KEY || '';
-const CLOUD_SUPABASE_KEY_SRC = process.env.CLOUD_SUPABASE_SECRET_KEY
-  ? 'CLOUD_SUPABASE_SECRET_KEY'
-  : (process.env.CLOUD_SUPABASE_KEY ? 'CLOUD_SUPABASE_KEY' : (process.env.SUPABASE_SECRET_KEY ? 'SUPABASE_SECRET_KEY' : 'none'));
-
-export const localSupabase = createClient(LOCAL_SUPABASE_URL, LOCAL_SUPABASE_KEY || 'anon-key-unset');
-export const cloudSupabase = createClient(CLOUD_SUPABASE_URL, CLOUD_SUPABASE_KEY || 'anon-key-unset');
-
-// Primary client: localSupabase if Docker is alive, fallback to cloudSupabase
-export let supabase = localSupabase;
-export let isLocalSupabaseActive = true;
-
-export async function detectActiveSupabase(): Promise<boolean> {
-  const checkUrls = [LOCAL_SUPABASE_URL, 'http://127.0.0.1:8000', 'http://localhost:8000'];
-  for (const url of checkUrls) {
-    try {
-      const res = await fetch(`${url}/rest/v1/`, { method: 'HEAD', signal: AbortSignal.timeout(2000) });
-      if (res.status === 200 || res.status === 401) {
-        if (!isLocalSupabaseActive) {
-          console.log('⚡ [Supabase Bridge] Yerel Docker Supabase aktif, yerel veritabanı devraldı.');
-        }
-        isLocalSupabaseActive = true;
-        supabase = localSupabase;
-        initLocalSupabaseRealtimeSync();
-        return true;
-      }
-    } catch (_) {}
-  }
-
-  if (isLocalSupabaseActive) {
-    console.warn('⚠️ [Supabase Bridge] Yerel Docker Supabase ulaşılamaz, Cloud Supabase yedek moduna geçildi.');
-  }
-  isLocalSupabaseActive = false;
-  supabase = cloudSupabase;
-  return false;
+let pgOnline = false;
+async function refreshPgStatus() {
+  const h = await pgHealth();
+  if (h.ok !== pgOnline) console.log(h.ok ? '⚡ [meds-pg] Postgres bağlı.' : `⚠️ [meds-pg] Postgres ulaşılamıyor: ${h.error}`);
+  pgOnline = h.ok;
 }
-
-// Initial detection
-detectActiveSupabase();
-// Heartbeat check every 30 seconds
-setInterval(detectActiveSupabase, 30000);
+void refreshPgStatus();
+setInterval(refreshPgStatus, 30000).unref();
 
 function cleanForPostgres<T>(data: T): T {
   if (data === null || data === undefined) return data;
@@ -230,7 +195,7 @@ function cleanForPostgres<T>(data: T): T {
   return data;
 }
 
-export async function mirrorQuestionToSupabase(question: any) {
+export async function mirrorQuestionToDb(question: any) {
   try {
     if (!question?.id) return;
     const row = cleanForPostgres({
@@ -249,53 +214,50 @@ export async function mirrorQuestionToSupabase(question: any) {
       data: question,
       updated_at: new Date().toISOString(),
     });
-    if (localSupabase && isLocalSupabaseActive) {
-      await localSupabase.from('questions').upsert([row], { onConflict: 'id' });
-    } else if (cloudSupabase) {
-      await cloudSupabase.from('questions').upsert([row], { onConflict: 'id' });
-    }
+    const { error } = await pgDb.from('questions').upsert([row], { onConflict: 'id' });
+    if (error) throw new Error(error.message);
   } catch (err: any) {
-    console.warn('[Supabase Mirror] Question save warning:', err.message);
+    console.warn('[meds-pg Mirror] Question save warning:', err.message);
   }
 }
 
-export async function mirrorPastQuestionToSupabase(question: any) {
+function pastQuestionRow(question: any, updatedAt?: string) {
+  return cleanForPostgres({
+    id: question.id,
+    committee_id: question.committeeId,
+    discipline: question.discipline || null,
+    topic: question.topic || null,
+    exam_year: question.examYear || 'Geçmiş Yıllar Çıkmışı (Arşiv)',
+    source_file: question.sourceFile || null,
+    ai_category: question.aiCategory || null,
+    claimed_answer: question.claimedAnswer || (question.reconstruction?.correctAnswer || null),
+    raw_question: question.rawQuestion || null,
+    reconstruction: question.reconstruction || null,
+    is_suspect: Boolean(question.isSuspect),
+    is_ambiguous: Boolean(question.isAmbiguous),
+    is_locked: Boolean(question.isLocked),
+    upvotes: question.upvotes || 0,
+    comments: question.comments || [],
+    reports: question.reports || [],
+    custom_redacted_by: question.customRedactedBy || null,
+    custom_redacted_at: question.customRedactedAt || null,
+    custom_redaction_prompt: question.customRedactionPrompt || null,
+    data: question,
+    updated_at: updatedAt || new Date().toISOString(),
+  });
+}
+
+export async function mirrorPastQuestionToDb(question: any) {
   try {
     if (!question?.id) return;
-    const row = cleanForPostgres({
-      id: question.id,
-      committee_id: question.committeeId,
-      discipline: question.discipline || null,
-      topic: question.topic || null,
-      exam_year: question.examYear || 'Geçmiş Yıllar Çıkmışı (Arşiv)',
-      source_file: question.sourceFile || null,
-      ai_category: question.aiCategory || null,
-      claimed_answer: question.claimedAnswer || (question.reconstruction?.correctAnswer || null),
-      raw_question: question.rawQuestion || null,
-      reconstruction: question.reconstruction || null,
-      is_suspect: Boolean(question.isSuspect),
-      is_ambiguous: Boolean(question.isAmbiguous),
-      is_locked: Boolean(question.isLocked),
-      upvotes: question.upvotes || 0,
-      comments: question.comments || [],
-      reports: question.reports || [],
-      custom_redacted_by: question.customRedactedBy || null,
-      custom_redacted_at: question.customRedactedAt || null,
-      custom_redaction_prompt: question.customRedactionPrompt || null,
-      data: question,
-      updated_at: new Date().toISOString(),
-    });
-    if (localSupabase && isLocalSupabaseActive) {
-      await localSupabase.from('past_questions').upsert([row], { onConflict: 'id' });
-    } else if (cloudSupabase) {
-      await cloudSupabase.from('past_questions').upsert([row], { onConflict: 'id' });
-    }
+    const { error } = await pgDb.from('past_questions').upsert([pastQuestionRow(question)], { onConflict: 'id' });
+    if (error) throw new Error(error.message);
   } catch (err: any) {
-    console.warn('[Supabase Mirror] Past question save warning:', err.message);
+    console.warn('[meds-pg Mirror] Past question save warning:', err.message);
   }
 }
 
-export async function mirrorLectureNoteToSupabase(note: any) {
+export async function mirrorLectureNoteToDb(note: any) {
   try {
     if (!note?.id) return;
     const row = cleanForPostgres({
@@ -307,17 +269,14 @@ export async function mirrorLectureNoteToSupabase(note: any) {
       page_count: note.pages ? note.pages.length : (note.pageCount || 0),
       data: note,
     });
-    if (localSupabase && isLocalSupabaseActive) {
-      await localSupabase.from('lecture_notes').upsert([row], { onConflict: 'id' });
-    } else if (cloudSupabase) {
-      await cloudSupabase.from('lecture_notes').upsert([row], { onConflict: 'id' });
-    }
+    const { error } = await pgDb.from('lecture_notes').upsert([row], { onConflict: 'id' });
+    if (error) throw new Error(error.message);
   } catch (err: any) {
-    console.warn('[Supabase Mirror] Lecture note save warning:', err.message);
+    console.warn('[meds-pg Mirror] Lecture note save warning:', err.message);
   }
 }
 
-export async function mirrorUserToSupabase(user: any) {
+export async function mirrorUserToDb(user: any) {
   try {
     if (!user || (!user.uid && !user.email)) return;
     const userRow = cleanForPostgres({
@@ -330,54 +289,20 @@ export async function mirrorUserToSupabase(user: any) {
       updated_at: new Date().toISOString(),
     });
 
-    const promises: Promise<any>[] = [];
-    if (localSupabase && isLocalSupabaseActive) {
-      promises.push(Promise.resolve(localSupabase.from('users').upsert([userRow], { onConflict: 'uid' })));
-    }
-    if (cloudSupabase) {
-      promises.push(
-        Promise.resolve(cloudSupabase.from('users').upsert([userRow], { onConflict: 'uid' })).catch((e: any) => {
-          console.warn('[CloudUserSync] Cloud Supabase user sync warning:', e.message);
-        })
-      );
-    }
-    await Promise.allSettled(promises);
+    const { error } = await pgDb.from('users').upsert([userRow], { onConflict: 'uid' });
+    if (error) throw new Error(error.message);
   } catch (err: any) {
-    console.warn('[Supabase Mirror] User save warning:', err.message);
+    console.warn('[meds-pg Mirror] User save warning:', err.message);
   }
 }
 
-/**
- * Sunucu-yetkili silme fan-out'u: gizli anahtar RLS'yi aştığı için
- * Supabase kopyası buradan garanti silinir (istemci anahtarı yetmeyebilir).
- * Yerel + buluttan dönen kanal raporu, sessiz başarısızlığı bitirir.
- */
-export async function deleteFromSupabaseEverywhere(
+/** Sunucu-yetkili silme: Postgres kopyasından satırı siler. Dönüş eski biçimle uyumludur (local=pg). */
+export async function deleteFromDb(
   table: 'questions' | 'past_questions' | 'users',
   id: string
-): Promise<{ local: boolean; cloud: boolean; localError?: string; cloudError?: string }> {
-  const result: { local: boolean; cloud: boolean; localError?: string; cloudError?: string } = { local: false, cloud: false };
-  const key = table === 'users' ? 'uid' : 'id';
-  try {
-    if (localSupabase && isLocalSupabaseActive) {
-      const { error } = await localSupabase.from(table).delete().eq(key, id);
-      if (!error) result.local = true;
-      else result.localError = error.message;
-    }
-  } catch (e: any) {
-    result.localError = e?.message || String(e);
-  }
-  try {
-    if (cloudSupabase) {
-      const { error } = await cloudSupabase.from(table).delete().eq(key, id);
-      if (!error) result.cloud = true;
-      else result.cloudError = error.message;
-    }
-  } catch (e: any) {
-    result.cloudError = e?.message || String(e);
-  }
-  // Not: gizli anahtar RLS'yi aşar; iki kanal da dürüstçe raporlanır.
-  return result;
+): Promise<{ local: boolean; localError?: string }> {
+  const { error } = await pgDb.from(table).delete().eq(table === 'users' ? 'uid' : 'id', id);
+  return error ? { local: false, localError: error.message } : { local: true };
 }
 
 const app = express();
@@ -423,7 +348,8 @@ function requireWritePassword(req: express.Request, res: express.Response, next:
 
   // Salt-okunur retrieval uçları: yazma sayılmaz, parolasız herkese açık.
   // (Soru ekleme ekranındaki "benzer çıkmışlar / bulunan kaynaklar" bu uçları kullanır.)
-  const readOnlyPosts = ['/api/past-questions/similar', '/api/sources/for-fragment'];
+  // /api/db/query kendi yetkisini denetler (yazma yalnız yönetici); /api/live/* yalnız SSE'ye sınırlı, hız sınırlı yayın.
+  const readOnlyPosts = ['/api/past-questions/similar', '/api/sources/for-fragment', '/api/db/query', '/api/live/broadcast', '/api/live/ping'];
   const reqPath = String(req.originalUrl || req.path || '').split('?')[0];
   if (readOnlyPosts.some((p) => reqPath === p || reqPath.endsWith(p))) return next();
 
@@ -561,14 +487,7 @@ app.get('/api/health', (req, res) => {
     uptime: Math.round(process.uptime()),
     timestamp: new Date().toISOString(),
     isLocalPc: true,
-    // Operasyonel teşhis (sır içermez): hangi Supabase'e, hangi anahtar uzunluğuyla bağlı
-    supabase: {
-      localActive: isLocalSupabaseActive,
-      localUrl: (() => { try { return new URL(LOCAL_SUPABASE_URL).host; } catch { return '?'; } })(),
-      cloudUrl: (() => { try { return new URL(CLOUD_SUPABASE_URL).host; } catch { return '?'; } })(),
-      cloudKeyLen: (CLOUD_SUPABASE_KEY || '').length,
-      cloudKeySrc: typeof CLOUD_SUPABASE_KEY_SRC !== 'undefined' ? CLOUD_SUPABASE_KEY_SRC : '?',
-    },
+    database: { engine: 'postgres', online: pgOnline },
   });
 });
 
@@ -595,11 +514,23 @@ interface RealtimeClient {
 
 const realtimeClients = new Map<string, RealtimeClient>();
 
-export function broadcastRealtimeEvent(event: string, data: any, adminOnly = false) {
+// Yavaş istemci koruması: tamponunda bu kadar yazılmamış veri biriken bağlantı kapatılır; istemci
+// yeniden bağlanıp delta eşitlemesiyle kaçanları alır (sunucu belleği tek yavaş istemci yüzünden şişmez).
+const SSE_MAX_BUFFERED_BYTES = 2 * 1024 * 1024;
+
+export function broadcastRealtimeEvent(event: string, data: any, adminOnly = false, excludeClient?: string, onlyClient?: string) {
+  if (realtimeClients.size === 0) return;
   const payload = `event: ${event}\ndata: ${JSON.stringify(data)}\n\n`;
   for (const [id, client] of realtimeClients.entries()) {
     if (adminOnly && !client.isAdmin) continue;
+    if (excludeClient && id === excludeClient) continue;
+    if (onlyClient && id !== onlyClient) continue;
     try {
+      if (client.res.writableLength > SSE_MAX_BUFFERED_BYTES) {
+        realtimeClients.delete(id);
+        client.res.end();
+        continue;
+      }
       client.res.write(payload);
     } catch {
       realtimeClients.delete(id);
@@ -1035,8 +966,8 @@ app.get(['/api/realtime/events', '/api/admin/events/stream'], (req, res) => {
 
   realtimeClients.set(clientId, client);
 
-  // İlk bağlantı teyidi (handshake)
-  res.write(`event: connected\ndata: ${JSON.stringify({ clientId, isAdmin, time: Date.now(), clientsCount: realtimeClients.size })}\n\n`);
+  // İlk bağlantı teyidi (handshake); retry: tarayıcının yeniden bağlanma bekleme süresi
+  res.write(`retry: 3000\nevent: connected\ndata: ${JSON.stringify({ clientId, isAdmin, time: Date.now(), clientsCount: realtimeClients.size })}\n\n`);
 
   // Proxy'lerin (Caddy, Nginx, Cloudflare) bağlantıyı kapatmasını önlemek için 25 saniyede bir keep-alive
   const keepAlive = setInterval(() => {
@@ -1827,8 +1758,8 @@ app.get('/api/practice-questions', async (req, res) => {
   try {
     const { kurul, ders, konu, zorluk, version, limit = '200', offset = '0' } = req.query as Record<string, string>;
 
-    if (supabase) {
-      let query = supabase
+    if (pgOnline) {
+      let query = pgDb
         .from('practice_questions')
         .select('*', { count: 'exact' });
 
@@ -2167,180 +2098,273 @@ for (const sig of ['SIGTERM', 'SIGINT'] as const) {
 process.once('beforeExit', () => flushPastQuestionsDbSync());
 
 // ==============================================================================
-// Oracle Yerel Supabase Realtime Database Synchronization Hub
+// meds-pg Canlı Yayın Merkezi (Realtime DB Hub)
+// Postgres tetikleyicisi → NOTIFY meds_changes → (120 ms toplu paket) → bellek/JSON eşitleme → SSE yayını.
+// Supabase Realtime'ın yerini alır; aynı SSE olay adları korunur (istemciler değişmeden çalışır).
 // ==============================================================================
-let localRealtimeChannel: any = null;
+/** Anahtar sırasından bağımsız JSON (jsonb ↔ JS nesnesi karşılaştırması için). */
+function stableJson(v: any): string {
+  if (v === null || typeof v !== 'object') return JSON.stringify(v) ?? 'null';
+  if (Array.isArray(v)) return `[${v.map(stableJson).join(',')}]`;
+  return `{${Object.keys(v)
+    .filter((k) => v[k] !== undefined)
+    .sort()
+    .map((k) => `${JSON.stringify(k)}:${stableJson(v[k])}`)
+    .join(',')}}`;
+}
+
+type DbChange = { t: string; op: 'INSERT' | 'UPDATE' | 'DELETE'; id: string | null; q?: string | null; c?: string | null };
+
 let localRealtimeStatus: 'disconnected' | 'connecting' | 'connected' | 'error' = 'disconnected';
-let localRealtimeLastEventAt: number = 0;
-let localRealtimeEventsCount: number = 0;
-let localRealtimeReconnectTimer: any = null;
+let localRealtimeLastEventAt = 0;
+let localRealtimeEventsCount = 0;
+const pendingDbChanges = new Map<string, Map<string, DbChange>>();
+let dbFlushTimer: ReturnType<typeof setTimeout> | null = null;
+let dbFlushRunning = false;
+// Toplu değişiklikte (ör. 5.000 soruluk içe aktarma) her satır için ayrı SSE olayı yerine tek özet gider.
+const DB_PER_ROW_EVENT_LIMIT = 50;
 
-export function initLocalSupabaseRealtimeSync() {
-  if (!localSupabase) return;
-  if (localRealtimeStatus === 'connected' && localRealtimeChannel) return;
-
+function queueDbChange(raw: string) {
+  let ch: DbChange;
   try {
-    if (localRealtimeChannel) {
-      try { localSupabase.removeChannel(localRealtimeChannel); } catch (_) {}
-      localRealtimeChannel = null;
-    }
-    localRealtimeStatus = 'connecting';
-    const channel = localSupabase.channel('oracle-server-realtime-hub', {
-      config: { broadcast: { self: false } },
-    });
+    ch = JSON.parse(raw);
+  } catch {
+    return;
+  }
+  localRealtimeLastEventAt = Date.now();
+  localRealtimeEventsCount++;
+  let byId = pendingDbChanges.get(ch.t);
+  if (!byId) pendingDbChanges.set(ch.t, (byId = new Map()));
+  // Aynı satırda paket içinde son işlem kazanır (INSERT+UPDATE → UPDATE, ... → DELETE)
+  const key = ch.t === 'answer_votes' ? `${ch.q}` : String(ch.id ?? '');
+  byId.set(key, ch);
+  if (!dbFlushTimer) dbFlushTimer = setTimeout(() => void flushDbChanges(), 120);
+}
 
-    // 1. past_questions değişiklikleri (INSERT, UPDATE, DELETE)
-    channel.on(
-      'postgres_changes',
-      { event: '*', schema: 'public', table: 'past_questions' },
-      (payload: any) => {
-        localRealtimeLastEventAt = Date.now();
-        localRealtimeEventsCount++;
-        const id = payload.new?.id || payload.old?.id;
-        pastListCache = null;
+async function fetchRowsById(table: 'past_questions' | 'questions' | 'lecture_notes', ids: string[]) {
+  const out = new Map<string, any>();
+  if (!ids.length) return out;
+  const cols = table === 'lecture_notes' ? 'id, committee_id, data, created_at' : 'id, committee_id, data, updated_at';
+  for (let i = 0; i < ids.length; i += 500) {
+    const r = await pgDb.query(`select ${cols} from ${table} where id = any($1)`, [ids.slice(i, i + 500)]);
+    for (const row of r.rows) out.set(row.id, row);
+  }
+  return out;
+}
 
-        // Satır snake_case sütunlar taşır; soru nesnesinin kendisi `data` sütunundadır. Satırı soruya
-        // karıştırmak exam_year/data alanlarını ekler ve her yazım yankısında `data` iç içe büyürdü.
-        // getPastQuestionsDb() sığ kopya döner; değişiklik savePastQuestionsDb ile belleğe+dosyaya işlenmeli,
-        // yoksa /api/past-exams ve /sync eski veriyi vermeye devam eder. updatedAt ileri alınır ki istemcilerin
-        // `since` tabanlı delta eşitlemesi değişikliği görsün.
-        const incoming = payload.new?.data;
-        if (id) {
-          try {
-            const list = getPastQuestionsDb();
-            const idx = list.findIndex((q: any) => q.id === id);
-            let changed = false;
-            if (payload.eventType === 'DELETE') {
-              if (idx >= 0) { list.splice(idx, 1); changed = true; }
-            } else if (incoming && typeof incoming === 'object') {
-              const { data: _nested, ...clean } = incoming as any;
-              const updatedAt = new Date(Math.max(Date.parse(payload.new?.updated_at || '') || 0, Date.now())).toISOString();
-              if (idx < 0) { list.push({ ...clean, id, updatedAt }); changed = true; }
-              else if (JSON.stringify(list[idx]) !== JSON.stringify({ ...list[idx], ...clean })) {
-                list[idx] = { ...list[idx], ...clean, updatedAt };
-                changed = true;
-              }
-            }
-            if (changed) savePastQuestionsDb(list);
-          } catch (_) {}
-        }
-
-        broadcastRealtimeEvent('past_questions_changed', { id, eventType: payload.eventType, time: Date.now() });
-        if (payload.new) {
-          if (payload.new.data) broadcastRealtimeEvent('past_question_updated', { id, question: payload.new.data, eventType: payload.eventType });
-        }
-        broadcastRealtimeEvent('database_sync', { table: 'past_questions', eventType: payload.eventType, time: Date.now() });
+async function flushDbChanges() {
+  dbFlushTimer = null;
+  if (dbFlushRunning) {
+    dbFlushTimer = setTimeout(() => void flushDbChanges(), 120);
+    return;
+  }
+  dbFlushRunning = true;
+  const batch = new Map(pendingDbChanges);
+  pendingDbChanges.clear();
+  try {
+    for (const [table, byId] of batch) {
+      const changes = Array.from(byId.values());
+      const time = Date.now();
+      if (table === 'ping') {
+        for (const c of changes) broadcastRealtimeEvent('pong', { id: c.id, time }, false, undefined, c.c || undefined);
+        continue;
       }
-    );
-
-    // 2. questions değişiklikleri (INSERT, UPDATE, DELETE)
-    channel.on(
-      'postgres_changes',
-      { event: '*', schema: 'public', table: 'questions' },
-      (payload: any) => {
-        localRealtimeLastEventAt = Date.now();
-        localRealtimeEventsCount++;
-        const id = payload.new?.id || payload.old?.id;
-
-        broadcastRealtimeEvent('questions_changed', { id, eventType: payload.eventType, time: Date.now() });
-        if (payload.new) {
-          // Satırın `data` sütunu soru nesnesidir; snake_case satır istemci önbelleğine yazılmamalı
-          if (payload.new.data) broadcastRealtimeEvent('question_updated', { id, question: payload.new.data, eventType: payload.eventType });
-        }
-        broadcastRealtimeEvent('database_sync', { table: 'questions', eventType: payload.eventType, time: Date.now() });
+      try {
+        await applyDbChanges(table, changes, time);
+      } catch (e: any) {
+        console.warn(`[Realtime DB Hub] ${table} işlenemedi:`, e?.message || e);
       }
-    );
-
-    // 3. past_question_reports değişiklikleri
-    channel.on(
-      'postgres_changes',
-      { event: '*', schema: 'public', table: 'past_question_reports' },
-      (payload: any) => {
-        localRealtimeLastEventAt = Date.now();
-        localRealtimeEventsCount++;
-        broadcastRealtimeEvent('inbox_update', { table: 'past_question_reports', eventType: payload.eventType, time: Date.now() }, true);
-        broadcastRealtimeEvent('database_sync', { table: 'past_question_reports', eventType: payload.eventType, time: Date.now() });
-      }
-    );
-
-    // 4. answer_votes değişiklikleri
-    channel.on(
-      'postgres_changes',
-      { event: '*', schema: 'public', table: 'answer_votes' },
-      (payload: any) => {
-        localRealtimeLastEventAt = Date.now();
-        localRealtimeEventsCount++;
-        broadcastRealtimeEvent('votes_changed', { questionId: payload.new?.question_id || payload.old?.question_id, time: Date.now() });
-        broadcastRealtimeEvent('database_sync', { table: 'answer_votes', eventType: payload.eventType, time: Date.now() });
-      }
-    );
-
-    // 6. Kurul, ders notu ve örnek soru tabloları: istemciler kendi önbelleklerini düşürüp yeniden çeker
-    for (const table of ['committees', 'lecture_notes', 'practice_questions']) {
-      channel.on(
-        'postgres_changes',
-        { event: '*', schema: 'public', table },
-        (payload: any) => {
-          localRealtimeLastEventAt = Date.now();
-          localRealtimeEventsCount++;
-          broadcastRealtimeEvent('database_sync', { table, eventType: payload.eventType, id: payload.new?.id || payload.old?.id, time: Date.now() });
-        }
+      broadcastRealtimeEvent(
+        'database_sync',
+        { table, eventType: changes.length === 1 ? changes[0].op : 'BULK', id: changes.length === 1 ? changes[0].id : undefined, count: changes.length, time },
+        table === 'users' || table === 'past_question_reports'
       );
     }
-
-    // 5. system_status değişiklikleri
-    channel.on(
-      'postgres_changes',
-      { event: '*', schema: 'public', table: 'system_status' },
-      (payload: any) => {
-        localRealtimeLastEventAt = Date.now();
-        localRealtimeEventsCount++;
-        broadcastRealtimeEvent('database_sync', { table: 'system_status', eventType: payload.eventType, id: payload.new?.id, time: Date.now() });
-      }
-    );
-
-    channel.subscribe((status: string, err: any) => {
-      if (status === 'SUBSCRIBED') {
-        localRealtimeStatus = 'connected';
-        console.log('⚡ [Realtime DB Hub] Oracle yerel Supabase Realtime yayınına başarıyla bağlandı.');
-      } else if (status === 'CHANNEL_ERROR' || status === 'TIMED_OUT') {
-        localRealtimeStatus = 'error';
-        console.warn(`⚠️ [Realtime DB Hub] Realtime kanal durumu: ${status}`, err || '');
-        if (!localRealtimeReconnectTimer) {
-          localRealtimeReconnectTimer = setTimeout(() => {
-            localRealtimeReconnectTimer = null;
-            initLocalSupabaseRealtimeSync();
-          }, 10000);
-        }
-      } else if (status === 'CLOSED') {
-        localRealtimeStatus = 'disconnected';
-      }
-    });
-
-    localRealtimeChannel = channel;
-  } catch (err) {
-    localRealtimeStatus = 'error';
-    console.warn('[Realtime DB Hub] Başlatma hatası:', err);
+  } finally {
+    dbFlushRunning = false;
   }
 }
 
-// Supabase algılandığında veya ilk açılışta başlat
-setTimeout(() => {
-  initLocalSupabaseRealtimeSync();
-}, 2500);
+async function applyDbChanges(table: string, changes: DbChange[], time: number) {
+  const perRow = changes.length <= DB_PER_ROW_EVENT_LIMIT;
+
+  if (table === 'past_questions') {
+    pastListCache = null;
+    const rows = await fetchRowsById('past_questions', changes.filter((c) => c.op !== 'DELETE' && c.id).map((c) => c.id!));
+    // Satırın `data` sütunu soru nesnesidir; snake_case satır soruya karıştırılmaz (iç içe `data` büyümesi).
+    // Sunucunun kendi yazımının yankısı içerik aynıysa hiçbir şey değiştirmez.
+    const list = getPastQuestionsDb();
+    const tombstones = getDeletedPastQuestions(); // silinmiş soru DB olayıyla geri dirilmesin
+    const index = new Map<string, number>();
+    list.forEach((q: any, i: number) => index.set(String(q.id), i));
+    let changed = false;
+    const deleted = new Set<string>();
+    for (const c of changes) {
+      if (!c.id) continue;
+      if (c.op === 'DELETE') {
+        if (index.has(c.id)) { deleted.add(c.id); changed = true; }
+        continue;
+      }
+      if (tombstones.has(c.id)) continue;
+      const row = rows.get(c.id);
+      const incoming = row?.data;
+      if (!incoming || typeof incoming !== 'object') continue;
+      const { data: _nested, updatedAt: _u, ...clean } = incoming as any;
+      const updatedAt = new Date(Math.max(Date.parse(row.updated_at || '') || 0, Date.now())).toISOString();
+      const idx = index.get(c.id);
+      if (idx === undefined) {
+        index.set(c.id, list.length);
+        list.push({ ...clean, id: c.id, updatedAt });
+        changed = true;
+      } else {
+        // jsonb anahtar sırasını değiştirir: karşılaştırma sıradan bağımsız ve updatedAt hariç yapılır.
+        // İçerik aynıysa (sunucunun kendi yazımının yankısı) soru ve updatedAt'i hiç değişmez.
+        const { updatedAt: _cur, ...current } = list[idx];
+        if (stableJson(cleanForPostgres(current)) !== stableJson({ ...cleanForPostgres(current), ...clean })) {
+          list[idx] = { ...list[idx], ...clean, updatedAt };
+          changed = true;
+        }
+      }
+    }
+    if (changed) savePastQuestionsDb(deleted.size ? list.filter((q: any) => !deleted.has(String(q.id))) : list);
+
+    if (perRow) {
+      for (const c of changes) {
+        broadcastRealtimeEvent('past_questions_changed', { id: c.id, eventType: c.op, time });
+        const data = c.id ? rows.get(c.id)?.data : null;
+        if (data) broadcastRealtimeEvent('past_question_updated', { id: c.id, question: data, eventType: c.op });
+      }
+    } else {
+      broadcastRealtimeEvent('past_questions_changed', { eventType: 'BULK', count: changes.length, time });
+    }
+    return;
+  }
+
+  if (table === 'questions' || table === 'lecture_notes') {
+    const rows = perRow
+      ? await fetchRowsById(table, changes.filter((c) => c.op !== 'DELETE' && c.id).map((c) => c.id!))
+      : new Map<string, any>();
+    if (perRow) {
+      for (const c of changes) {
+        const row = c.id ? rows.get(c.id) : null;
+        if (table === 'questions') {
+          broadcastRealtimeEvent('questions_changed', { id: c.id, eventType: c.op, time });
+          if (row?.data) broadcastRealtimeEvent('question_updated', { id: c.id, question: row.data, eventType: c.op });
+        }
+        // İstemcilerdeki subscribeToTable aboneleri için Supabase postgres_changes biçimi
+        broadcastRealtimeEvent('db_change', {
+          table,
+          eventType: c.op,
+          new: row ? { id: row.id, committee_id: row.committee_id, data: row.data } : null,
+          old: c.op === 'DELETE' ? { id: c.id, committee_id: c.c } : null,
+        });
+      }
+    } else {
+      if (table === 'questions') broadcastRealtimeEvent('questions_changed', { eventType: 'BULK', count: changes.length, time });
+      broadcastRealtimeEvent('db_change', { table, eventType: 'BULK', count: changes.length });
+    }
+    return;
+  }
+
+  if (table === 'past_question_reports') {
+    broadcastRealtimeEvent('inbox_update', { table, eventType: changes[0]?.op, count: changes.length, time }, true);
+    return;
+  }
+
+  if (table === 'answer_votes') {
+    for (const c of changes) broadcastRealtimeEvent('votes_changed', { questionId: c.q, time });
+    return;
+  }
+
+  if (table === 'committees') {
+    broadcastRealtimeEvent('db_change', { table, eventType: changes.length === 1 ? changes[0].op : 'BULK', count: changes.length });
+    return;
+  }
+
+  if (table === 'system_status') {
+    if (changes.some((c) => String(c.id || '').startsWith('cmd-'))) kickDbCommandPoller();
+  }
+}
+
+function initDbRealtimeHub() {
+  pgListen('meds_changes', queueDbChange, {
+    onStatus: (s) => {
+      const prev = localRealtimeStatus;
+      localRealtimeStatus = s;
+      if (s === 'connected' && prev !== 'connected') console.log('⚡ [Realtime DB Hub] meds-pg LISTEN meds_changes bağlı.');
+    },
+    // Kopukluk sırasında kaçan değişiklikler: istemciler kendi delta eşitlemesini çalıştırsın
+    onReconnect: () => {
+      pastListCache = null;
+      const time = Date.now();
+      broadcastRealtimeEvent('past_questions_changed', { eventType: 'RESYNC', time });
+      for (const table of ['committees', 'lecture_notes', 'questions', 'practice_questions']) {
+        broadcastRealtimeEvent('database_sync', { table, eventType: 'RESYNC', time });
+      }
+    },
+  });
+}
+setTimeout(initDbRealtimeHub, 1500);
+
+// İstemciden istemciye anlık mesaj: tarayıcılar artık veritabanına bağlanmaz; yayın sunucu üzerinden gider.
+// - "<tablo>_changed": yalnız ipucu (id + işlem) iletilir, satır içeriği iletilmez — gerçek içerik
+//   zaten veritabanı tetikleyicisinden gelir; istemcinin uydurduğu veri başka önbelleklere yazılamaz.
+// - "app:*": uygulama içi küçük mesajlar (≤ 4 KB), olduğu gibi iletilir.
+const LIVE_TABLES = new Set(['questions', 'past_questions', 'lecture_notes', 'committees']);
+const liveRate = new Map<string, { n: number; at: number }>();
+app.post('/api/live/broadcast', (req, res) => {
+  const ip = String(req.headers['cf-connecting-ip'] || req.ip || '');
+  const now = Date.now();
+  const r = liveRate.get(ip);
+  if (!r || now - r.at > 10_000) liveRate.set(ip, { n: 1, at: now });
+  else if (++r.n > 30) return res.status(429).json({ error: 'Çok fazla canlı mesaj.' });
+  if (liveRate.size > 5000) liveRate.clear();
+
+  const event = String(req.body?.event || '');
+  const payload = req.body?.payload ?? null;
+  const sender = String(req.headers['x-live-client'] || '').slice(0, 64) || undefined;
+  const m = /^([a-z_]+)_changed$/.exec(event);
+  if (m && LIVE_TABLES.has(m[1])) {
+    const op = ['INSERT', 'UPDATE', 'DELETE'].includes(payload?.eventType) ? payload.eventType : 'UPDATE';
+    broadcastRealtimeEvent('live', { event, payload: { id: String(payload?.id ?? '').slice(0, 200), eventType: op }, from: sender }, false, sender);
+    return res.json({ success: true });
+  }
+  if (/^app:[a-z0-9_:-]{1,60}$/i.test(event)) {
+    if (JSON.stringify(payload).length > 4096) return res.status(413).json({ error: 'Mesaj çok büyük.' });
+    broadcastRealtimeEvent('live', { event, payload, from: sender, time: now }, false, sender);
+    return res.json({ success: true });
+  }
+  res.status(400).json({ error: 'Geçersiz olay adı.' });
+});
+
+// Tarayıcının veritabanı erişimi yalnız bu kapıdan (beyaz liste + yönetici denetimi)
+registerDbQueryRoute(app, isRequestAdmin);
+
+// Gidiş-dönüş testi: NOTIFY → LISTEN → SSE zincirinin tamamını ölçer (Sistem Tanılama ekranı).
+app.post('/api/live/ping', async (req, res) => {
+  const id = `ping-${Date.now()}-${Math.random().toString(36).slice(2, 7)}`;
+  const t0 = Date.now();
+  try {
+    const c = String(req.headers['x-live-client'] || '').slice(0, 64) || null;
+    await pgDb.query(`select pg_notify('meds_changes', $1)`, [JSON.stringify({ t: 'ping', op: 'UPDATE', id, c })]);
+    res.json({ success: true, id, dbLatencyMs: Date.now() - t0 });
+  } catch (e: any) {
+    res.status(503).json({ success: false, error: e?.message });
+  }
+});
 
 // Realtime altyapı ve sağlık durumu teşhis endpoint'i
 app.get('/api/realtime/status', async (req, res) => {
   res.json({
     success: true,
     realtime: {
+      engine: 'postgres-listen-notify',
       status: localRealtimeStatus,
       connected: localRealtimeStatus === 'connected',
       lastEventAt: localRealtimeLastEventAt ? new Date(localRealtimeLastEventAt).toISOString() : null,
       eventsReceived: localRealtimeEventsCount,
       activeSseClients: realtimeClients.size,
-      localSupabaseActive: isLocalSupabaseActive,
-      localSupabaseUrl: LOCAL_SUPABASE_URL,
+      databaseOnline: pgOnline,
     },
   });
 });
@@ -2542,7 +2566,7 @@ app.post('/api/past-exams/:id/comment', (req, res) => {
 
     q.updatedAt = new Date().toISOString();
     savePastQuestionsDb(list);
-    mirrorPastQuestionToSupabase(q);
+    mirrorPastQuestionToDb(q);
 
     // Yalnızca yöneticiye anında e-posta ve telefon push bildirimi gönder
     triggerAdminNotification({
@@ -2597,7 +2621,7 @@ app.put('/api/past-exams/:id/comments/:commentId', (req, res) => {
 
     q.updatedAt = new Date().toISOString();
     savePastQuestionsDb(list);
-    mirrorPastQuestionToSupabase(q);
+    mirrorPastQuestionToDb(q);
 
     res.json({ success: true, message: 'Yorum başarıyla güncellendi.', comment });
   } catch (err: any) {
@@ -2639,7 +2663,7 @@ app.delete('/api/past-exams/:id/comments/:commentId', (req, res) => {
 
     q.updatedAt = new Date().toISOString();
     savePastQuestionsDb(list);
-    mirrorPastQuestionToSupabase(q);
+    mirrorPastQuestionToDb(q);
 
     res.json({ success: true, message: 'Yorum tüm veritabanından kalıcı olarak silindi.' });
   } catch (err: any) {
@@ -2681,12 +2705,12 @@ app.post('/api/past-exams/:id/report', async (req, res) => {
     savePastQuestionsDb(list);
 
     // 1. Supabase past_questions tablosundaki reports JSONB alanına anında kaydet
-    await mirrorPastQuestionToSupabase(q);
+    await mirrorPastQuestionToDb(q);
 
     // 2. Eğer past_question_reports tablosu mevcutsa oraya da satır olarak ekle
-    if (supabase) {
+    if (pgOnline) {
       try {
-        await supabase.from('past_question_reports').insert([cleanForPostgres({
+        await pgDb.from('past_question_reports').insert([cleanForPostgres({
           id: newReport.id,
           question_id: q.id,
           reason: newReport.reason,
@@ -2791,12 +2815,12 @@ app.put('/api/past-exams/:id/reports/:reportId', async (req, res) => {
 
     q.updatedAt = new Date().toISOString();
     savePastQuestionsDb(list);
-    await mirrorPastQuestionToSupabase(q);
+    await mirrorPastQuestionToDb(q);
 
     // Supabase past_question_reports tablosunda da güncelle
-    if (supabase) {
+    if (pgOnline) {
       try {
-        await supabase
+        await pgDb
           .from('past_question_reports')
           .update(cleanForPostgres({
             reason: report.reason,
@@ -2849,7 +2873,7 @@ app.delete('/api/past-exams/:id/reports/:reportId', async (req, res) => {
     q.reports = (q.reports || []).filter((r: any) => r.id !== req.params.reportId);
     q.updatedAt = new Date().toISOString();
     savePastQuestionsDb(list);
-    await mirrorPastQuestionToSupabase(q);
+    await mirrorPastQuestionToDb(q);
 
     // 2. Auto repair kuyruğundan sil ve kalıcı ban listesine ekle (asla geri gelmez)
     try {
@@ -2857,9 +2881,9 @@ app.delete('/api/past-exams/:id/reports/:reportId', async (req, res) => {
     } catch (_) {}
 
     // 3. Supabase past_question_reports tablosundan sil
-    if (supabase) {
+    if (pgOnline) {
       try {
-        await supabase.from('past_question_reports').delete().eq('id', req.params.reportId);
+        await pgDb.from('past_question_reports').delete().eq('id', req.params.reportId);
       } catch (_) {}
     }
 
@@ -2891,11 +2915,11 @@ app.put('/api/reports/:reportId', async (req, res) => {
         rep.isEdited = true;
         q.updatedAt = new Date().toISOString();
         savePastQuestionsDb(pastList);
-        await mirrorPastQuestionToSupabase(q);
+        await mirrorPastQuestionToDb(q);
 
-        if (supabase) {
+        if (pgOnline) {
           try {
-            await supabase.from('past_question_reports').update(cleanForPostgres({
+            await pgDb.from('past_question_reports').update(cleanForPostgres({
               reason: rep.reason,
               details: rep.details,
               updated_at: rep.updatedAt,
@@ -2946,7 +2970,7 @@ app.delete('/api/reports/:reportId', async (req, res) => {
         q.reports = (q.reports || []).filter((r: any) => r.id !== req.params.reportId);
         q.updatedAt = new Date().toISOString();
         savePastQuestionsDb(pastList);
-        await mirrorPastQuestionToSupabase(q);
+        await mirrorPastQuestionToDb(q);
         found = true;
         break;
       }
@@ -2976,9 +3000,9 @@ app.delete('/api/reports/:reportId', async (req, res) => {
     } catch (_) {}
 
     // 4. Supabase'den sil
-    if (supabase) {
+    if (pgOnline) {
       try {
-        await supabase.from('past_question_reports').delete().eq('id', req.params.reportId);
+        await pgDb.from('past_question_reports').delete().eq('id', req.params.reportId);
       } catch (_) {}
     }
 
@@ -3009,7 +3033,7 @@ app.post('/api/past-exams/:id/upvote', (req, res) => {
 
     q.updatedAt = new Date().toISOString();
     savePastQuestionsDb(list);
-    mirrorPastQuestionToSupabase(q);
+    mirrorPastQuestionToDb(q);
 
     res.json({ success: true, upvotes: q.upvotes, downvotes: q.downvotes || 0, likedBy: q.likedBy, dislikedBy: q.dislikedBy });
   } catch (err: any) {
@@ -3037,7 +3061,7 @@ app.post('/api/past-exams/:id/downvote', (req, res) => {
 
     q.updatedAt = new Date().toISOString();
     savePastQuestionsDb(list);
-    mirrorPastQuestionToSupabase(q);
+    mirrorPastQuestionToDb(q);
 
     res.json({ success: true, upvotes: q.upvotes || 0, downvotes: q.downvotes, likedBy: q.likedBy, dislikedBy: q.dislikedBy });
   } catch (err: any) {
@@ -3055,7 +3079,7 @@ app.put('/api/past-exams/:id', requireAdmin, (req, res) => {
       list.push(newQ);
       savePastQuestionsDb(list);
       pastListCache = null;
-      mirrorPastQuestionToSupabase(newQ);
+      mirrorPastQuestionToDb(newQ);
       broadcastRealtimeEvent('past_question_updated', { question: newQ, id: newQ.id, time: Date.now() });
       return res.json({ success: true, question: newQ, created: true });
     }
@@ -3067,7 +3091,7 @@ app.put('/api/past-exams/:id', requireAdmin, (req, res) => {
     };
     savePastQuestionsDb(list);
     pastListCache = null;
-    mirrorPastQuestionToSupabase(list[idx]);
+    mirrorPastQuestionToDb(list[idx]);
     broadcastRealtimeEvent('past_question_updated', { question: list[idx], id: list[idx].id, time: Date.now() });
     res.json({ success: true, question: list[idx] });
   } catch (err: any) {
@@ -3091,7 +3115,7 @@ app.patch('/api/past-exams/:id', requireAdmin, (req, res) => {
     };
     savePastQuestionsDb(list);
     pastListCache = null;
-    mirrorPastQuestionToSupabase(list[idx]);
+    mirrorPastQuestionToDb(list[idx]);
     broadcastRealtimeEvent('past_question_updated', { question: list[idx], id: list[idx].id, time: Date.now() });
     res.json({ success: true, question: list[idx] });
   } catch (err: any) {
@@ -3121,7 +3145,7 @@ app.delete('/api/past-exams/:id', requireAdmin, async (req, res) => {
       }
     } catch (_) {}
     // Yetkili servis anahtarıyla her iki Supabase veritabanından kalıcı sil
-    const cloud = await deleteFromSupabaseEverywhere('past_questions', qId);
+    const cloud = await deleteFromDb('past_questions', qId);
     console.log(`[PastQuestion Delete] Soru #${qId} kalıcı olarak silindi. Supabase durumu:`, cloud);
     res.json({ success: true, id: removedId, cloud });
   } catch (err: any) {
@@ -3148,7 +3172,7 @@ app.post('/api/past-exams/:id/verify', requireAdmin, async (req, res) => {
       if (idx !== -1) {
         list[idx] = result.question;
         savePastQuestionsDb(list);
-        mirrorPastQuestionToSupabase(list[idx]);
+        mirrorPastQuestionToDb(list[idx]);
       }
       return res.json({
         success: true,
@@ -3495,7 +3519,7 @@ function applyPhase14Review(targetQId: string, approvedBy: string): Phase14Apply
 
     savePastQuestionsDb(pastList);
     // Asenkron aynalama: HTTP yanıtını bloke etmez
-    mirrorPastQuestionToSupabase(targetQ).catch(err => {
+    mirrorPastQuestionToDb(targetQ).catch(err => {
       console.error('[Phase14] Supabase aynalama hatası:', err?.message || err);
     });
 
@@ -3778,7 +3802,7 @@ app.delete('/api/past-question-reviews/:id', requireAdmin, async (req, res) => {
     }
 
     // Supabase'den sil
-    const cloud = await deleteFromSupabaseEverywhere('past_questions', targetQId).catch(() => null);
+    const cloud = await deleteFromDb('past_questions', targetQId).catch(() => null);
     console.log(`[Phase14 Delete] Soru #${targetQId} kalıcı olarak silindi. Supabase:`, cloud);
 
     res.json({
@@ -3884,7 +3908,7 @@ app.post('/api/past-question-reviews/:id/answer-doubt/complete', requireAdmin, a
 
 // Cevap anketi: oylar yerel Supabase `answer_votes` tablosunda; kullanıcı başına soru başına tek oy.
 async function readAnswerVotes(questionId: string, voterUid: string) {
-  const { data, error } = await localSupabase.from('answer_votes').select('choice, voter_uid').eq('question_id', questionId);
+  const { data, error } = await pgDb.from('answer_votes').select('choice, voter_uid').eq('question_id', questionId);
   if (error) throw new Error(error.message);
   const counts: Record<string, number> = { A: 0, B: 0, C: 0, D: 0, E: 0 };
   let myVote: string | null = null;
@@ -3975,7 +3999,7 @@ app.delete('/api/past-question-reviews/:id/answer-votes', async (req, res) => {
     const qId = String(req.params.id);
     const voter = String(req.headers['x-voter-uid'] || '').slice(0, 128);
     if (!voter) return res.status(401).json({ error: 'Giriş yapmalısınız.' });
-    const { error } = await localSupabase.from('answer_votes').delete().eq('question_id', qId).eq('voter_uid', voter);
+    const { error } = await pgDb.from('answer_votes').delete().eq('question_id', qId).eq('voter_uid', voter);
     if (error) throw new Error(error.message);
     res.json({ success: true, ...(await readAnswerVotes(qId, voter)) });
   } catch (err: any) {
@@ -4002,7 +4026,7 @@ app.post('/api/past-question-reviews/:id/answer-votes', async (req, res) => {
     const review = latestReviews().get(qId);
     const pollOpen = (review?.answer_doubtful && review.status === 'review_required') || Boolean(review?.answer_poll_open) || pastQuestionHasNoAnswer(qId) || Boolean(readUserPolls()[qId]);
     if (!pollOpen) return res.status(409).json({ error: 'Bu soru için anket açık değil.' });
-    const { error } = await localSupabase.from('answer_votes').insert([{ question_id: qId, voter_uid: voter, choice }]);
+    const { error } = await pgDb.from('answer_votes').insert([{ question_id: qId, voter_uid: voter, choice }]);
     if (error) {
       if ((error as any).code === '23505') return res.status(409).json({ error: 'Bu soru için zaten oy verdiniz.' });
       throw new Error(error.message);
@@ -4398,7 +4422,7 @@ app.put('/api/questions/:id', (req, res) => {
       const newQ = { ...req.body, id: req.params.id, updatedAt: new Date().toISOString() };
       db.questions.push(newQ);
       saveDatabase();
-      mirrorQuestionToSupabase(newQ);
+      mirrorQuestionToDb(newQ);
       poolClusters.schedule();
       return res.json({ success: true, question: newQ, created: true });
     }
@@ -4409,7 +4433,7 @@ app.put('/api/questions/:id', (req, res) => {
       updatedAt: new Date().toISOString()
     });
     saveDatabase();
-    mirrorQuestionToSupabase(db.questions[idx]);
+    mirrorQuestionToDb(db.questions[idx]);
     poolClusters.schedule();
     res.json({ success: true, question: db.questions[idx] });
   } catch (err: any) {
@@ -4506,13 +4530,20 @@ export async function executeAdminCommand(command: string, payload: any = {}, re
   return { success: true, message: `Komut (${command}) yerel sunucuda başarıyla kaydedildi.` };
 }
 
-// Poller that checks Supabase system_status for pending commands sent from the web / mobile
-function startSupabaseCommandPoller() {
-  console.log('📡 [Supabase Bridge] Bulut komut kuyruğu dinleyicisi başlatıldı.');
-  setInterval(async () => {
+// system_status komut kuyruğu (cmd-* satırları): NOTIFY ile anında, 60 sn yoklama yedekli
+let dbCommandPollerRun: (() => Promise<void>) | null = null;
+function kickDbCommandPoller() {
+  void dbCommandPollerRun?.();
+}
+function startDbCommandPoller() {
+  console.log('📡 [meds-pg] Komut kuyruğu dinleyicisi başlatıldı.');
+  let running = false;
+  const run = async () => {
+    if (running) return;
+    running = true;
     try {
-      if (!supabase) return;
-      const { data, error } = await supabase
+      if (!pgOnline) return;
+      const { data, error } = await pgDb
         .from('system_status')
         .select('*')
         .like('id', 'cmd-%')
@@ -4523,11 +4554,11 @@ function startSupabaseCommandPoller() {
       for (const row of data) {
         const cmdData = row.data;
         if (cmdData && cmdData.status === 'pending') {
-          console.log(`[Supabase Bridge] ⚡ Buluttan Yeni Komut Alındı: ${cmdData.command} (${row.id})`);
+          console.log(`[meds-pg] ⚡ Yeni komut alındı: ${cmdData.command} (${row.id})`);
 
           if (cmdData.requested_by?.toLowerCase() !== ADMIN_EMAIL.toLowerCase()) {
-            console.warn(`[Supabase Bridge] ⛔ Yetkisiz komut reddedildi: ${cmdData.command} (${cmdData.requested_by})`);
-            await supabase.from('system_status').upsert([{
+            console.warn(`[meds-pg] ⛔ Yetkisiz komut reddedildi: ${cmdData.command} (${cmdData.requested_by})`);
+            await pgDb.from('system_status').upsert([{
               id: row.id,
               data: { ...cmdData, status: 'rejected', error: 'Yetkisiz erişim: Sadece sistem yöneticisi (nofrostlife@gmail.com) komut çalıştırabilir.' },
               updated_at: new Date().toISOString()
@@ -4535,7 +4566,7 @@ function startSupabaseCommandPoller() {
             continue;
           }
           
-          await supabase.from('system_status').upsert([{
+          await pgDb.from('system_status').upsert([{
             id: row.id,
             data: { ...cmdData, status: 'running', startedAt: new Date().toISOString() },
             updated_at: new Date().toISOString()
@@ -4543,14 +4574,14 @@ function startSupabaseCommandPoller() {
 
           try {
             const result = await executeAdminCommand(cmdData.command, cmdData.payload, cmdData.requested_by);
-            await supabase.from('system_status').upsert([{
+            await pgDb.from('system_status').upsert([{
               id: row.id,
               data: { ...cmdData, status: 'completed', result, completedAt: new Date().toISOString() },
               updated_at: new Date().toISOString()
             }]);
-            console.log(`[Supabase Bridge] ✅ Bulut Komutu Tamamlandı: ${cmdData.command}`);
+            console.log(`[meds-pg] ✅ Komut tamamlandı: ${cmdData.command}`);
           } catch (execErr: any) {
-            await supabase.from('system_status').upsert([{
+            await pgDb.from('system_status').upsert([{
               id: row.id,
               data: { ...cmdData, status: 'failed', error: execErr.message },
               updated_at: new Date().toISOString()
@@ -4558,8 +4589,14 @@ function startSupabaseCommandPoller() {
           }
         }
       }
-    } catch (_) {}
-  }, 5000);
+    } catch (_) {
+    } finally {
+      running = false;
+    }
+  };
+  dbCommandPollerRun = run;
+  // NOTIFY ile anında tetiklenir; 60 sn'lik yoklama yalnız güvenlik ağı
+  setInterval(run, 60000).unref();
 }
 
 // Admin Command Execution API (Bypasses Firestore permissions issues when on local server)
@@ -5422,7 +5459,7 @@ YALNIZCA ŞU JSON'U DÖN:
       Object.assign(stored, updated);
       saveDatabase();
     }
-    mirrorQuestionToSupabase(updated);
+    mirrorQuestionToDb(updated);
 
     res.json({ reconstruction, question: updated, providerUsed: aiResult.planUsed });
   } catch (error: any) {
@@ -6243,7 +6280,7 @@ const questionIntake = createQuestionIntake(DATA_DIR, __dirname, {
     const updated = applyIntakeToQuestion(db.questions[idx], raw, parse, units);
     db.questions[idx] = updated;
     saveDatabase();
-    mirrorQuestionToSupabase(updated);
+    mirrorQuestionToDb(updated);
     return 'ok';
   },
 });
@@ -6265,7 +6302,7 @@ registerUserDataBackupRoutes(app, {
   dataDir: DATA_DIR,
   loadUsers,
   saveUsers,
-  mirrorUserToSupabase,
+  mirrorUserToDb,
   getPastQuestions: getPastQuestionsDb,
 });
 
@@ -6902,7 +6939,7 @@ app.post('/api/admin/reports/:id/resolve', requireAdmin, async (req, res) => {
   const reportId = String(req.params.id || '');
   const questionId = String(req.body?.questionId || '');
   try {
-    const client = (supabase as any)?.from ? supabase : cloudSupabase;
+    const client = pgDb;
     try {
       await client.from('past_question_reports').update({ status: 'resolved' }).eq('id', reportId);
     } catch (_) {}
@@ -7122,7 +7159,7 @@ app.delete('/api/questions/:id', requireAdmin, async (req, res) => {
     localDeleted = true;
   }
   // Yerel JSON'da yoksa bile Supabase fan-out yapılır (havuz Supabase'te yaşar).
-  const cloud = await deleteFromSupabaseEverywhere('questions', req.params.id);
+  const cloud = await deleteFromDb('questions', req.params.id);
   res.json({ success: true, localDeleted, cloud });
 });
 
@@ -7345,7 +7382,7 @@ function triggerAdminNotification(params: {
 // Supabase & Firebase Bulut Bildirim Köprüsü (Canlı nofrostlife.com.tr -> Admin E-posta & Web Push)
 const cloudNotificationBridge = new CloudNotificationBridge({
   dataDir: DATA_DIR,
-  cloudSupabase,
+  cloudSupabase: null,
   onNewNotification: (params) => {
     console.log(`[CloudBridge] 🔔 Buluttan yeni bildirim yakalandı (#${params.questionId}), yöneticiye iletiliyor...`);
     triggerAdminNotification(params);
@@ -7796,7 +7833,7 @@ app.post('/api/users/sync', (req, res) => {
     if (congratsSentCommittees) existing.congratsSentCommittees = congratsSentCommittees;
     if (isAdmin) existing.role = 'admin';
     saveUsers(users);
-    mirrorUserToSupabase(existing).catch(() => {});
+    mirrorUserToDb(existing).catch(() => {});
     return res.json({ success: true, user: existing });
   } else {
     const newUser: ServerUser = {
@@ -7813,7 +7850,7 @@ app.post('/api/users/sync', (req, res) => {
     };
     users.unshift(newUser);
     saveUsers(users);
-    mirrorUserToSupabase(newUser).catch(() => {});
+    mirrorUserToDb(newUser).catch(() => {});
     return res.json({ success: true, user: newUser });
   }
 });
@@ -7865,7 +7902,7 @@ app.delete('/api/admin/users/:uid', requireAdmin, async (req, res) => {
   } else {
     // Yerel listede yoksa Supabase kaydını kontrol et: yönetici silinmesin.
     try {
-      const client = (localSupabase && isLocalSupabaseActive) ? localSupabase : cloudSupabase;
+      const client = pgDb;
       const { data: row } = await client.from('users').select('uid,email').eq('uid', req.params.uid).single();
       if ((row as any)?.email?.toLowerCase() === 'nofrostlife@gmail.com') {
         return res.status(400).json({ error: 'Ana yönetici hesabı silinemez.' });
@@ -7873,7 +7910,7 @@ app.delete('/api/admin/users/:uid', requireAdmin, async (req, res) => {
     } catch (_) {}
   }
   // Yerel listede yoksa bile Supabase fan-out yapılır (kullanıcılar Supabase'te yaşar).
-  const cloud = await deleteFromSupabaseEverywhere('users', req.params.uid);
+  const cloud = await deleteFromDb('users', req.params.uid);
   res.json({ success: true, deletedUser: deleted, localDeleted: idx !== -1, cloud });
 });
 
@@ -7912,7 +7949,7 @@ app.put('/api/admin/past-questions/:id', requireAdmin, async (req, res) => {
   pastListCache = null;
 
   try {
-    await mirrorPastQuestionToSupabase(updatedQuestion);
+    await mirrorPastQuestionToDb(updatedQuestion);
   } catch (e) {
     console.warn('Supabase past_questions update error', e);
   }
@@ -7938,7 +7975,7 @@ app.put('/api/admin/users/:uid', requireAdmin, async (req, res) => {
   saveUsers(users);
 
   try {
-    const client = (localSupabase && isLocalSupabaseActive) ? localSupabase : cloudSupabase;
+    const client = pgDb;
     if (client) {
       await client.from('users').upsert(updatedUser);
     }
@@ -7994,7 +8031,7 @@ app.delete('/api/admin/questions/:id', requireAdmin, async (req, res) => {
     saveDatabase();
   }
   // Yerel JSON'da yoksa bile Supabase fan-out yapılır (havuz Supabase'te yaşar).
-  const cloud = await deleteFromSupabaseEverywhere('questions', req.params.id);
+  const cloud = await deleteFromDb('questions', req.params.id);
   res.json({ success: true, deletedQuestion: deleted, localDeleted: idx !== -1, cloud });
 });
 
@@ -8272,7 +8309,7 @@ YALNIZCA AŞAĞIDAKİ GEÇERLİ JSON FORMATINDA YANIT DÖN:
           }
 
           // Mirror update to Supabase
-          mirrorPastQuestionToSupabase(list[idx]);
+          mirrorPastQuestionToDb(list[idx]);
         }
       } catch (e) {}
     }
@@ -8731,7 +8768,7 @@ app.post('/api/questions/:id/apply-ai-optimization', async (req, res) => {
       q.revisions = [...(q.revisions || []), newRevision];
 
       saveDatabase();
-      mirrorQuestionToSupabase(q);
+      mirrorQuestionToDb(q);
       updatedQuestion = q;
     }
 
@@ -8761,7 +8798,7 @@ app.post('/api/questions/:id/apply-ai-optimization', async (req, res) => {
         list[pIdx] = pq;
         savePastQuestionsDb(list);
         pastListCache = null; // Servis edilen önbelleği anında temizle
-        await mirrorPastQuestionToSupabase(pq);
+        await mirrorPastQuestionToDb(pq);
         if (!updatedQuestion) updatedQuestion = pq;
       }
     } catch (e) {
@@ -9220,8 +9257,8 @@ app.get('/api/rag/stats', async (req, res) => {
     let cloudChunksCount = 0;
     let cloudAvailable = false;
 
-    if (supabase) {
-      const { count, error } = await supabase
+    if (pgOnline) {
+      const { count, error } = await pgDb
         .from('rag_chunks')
         .select('*', { count: 'exact', head: true });
       if (!error && count !== null) {
@@ -9736,7 +9773,7 @@ app.post('/api/lecture-notes', requireAdmin, (req, res) => {
     const saved = saveLectureNote(note);
     // Make the new material searchable right away (RAG index is otherwise rebuilt on restart).
     runAutoChunking({ syncToCloud: false }).catch(() => {});
-    mirrorLectureNoteToSupabase(saved).catch(() => {});
+    mirrorLectureNoteToDb(saved).catch(() => {});
     res.json({ success: true, note: saved, totalNotes: getAllLectureNotes().length });
   } catch (err: any) {
     res.status(500).json({ error: 'Ders notu kaydedilemedi: ' + err.message });
@@ -9748,8 +9785,8 @@ app.delete('/api/lecture-notes/:id', requireAdmin, (req, res) => {
   try {
     const { id } = req.params;
     const ok = deleteLectureNote(id);
-    if (supabase) {
-      supabase.from('lecture_notes').delete().eq('id', id).then(() => {});
+    if (pgOnline) {
+      pgDb.from('lecture_notes').delete().eq('id', id).then(() => {});
     }
     res.json({ success: ok, deletedId: id });
   } catch (err: any) {
@@ -10202,7 +10239,7 @@ registerDatabaseSyncHook(async ({ source, targetId, updatedData }) => {
         list[idx] = updated;
         savePastQuestionsDb(list);
         pastListCache = null; // Servis edilen önbelleği hemen düşür
-        await mirrorPastQuestionToSupabase(updated);
+        await mirrorPastQuestionToDb(updated);
       }
     } else if (source === 'practice_question') {
       const idx = db.questions.findIndex((q: any) => String(q.id) === String(targetId));
@@ -10210,7 +10247,7 @@ registerDatabaseSyncHook(async ({ source, targetId, updatedData }) => {
         const q = db.questions[idx];
         Object.assign(q, updatedData, { id: q.id, updatedAt: new Date().toISOString() });
         saveDatabase();
-        await mirrorQuestionToSupabase(q);
+        await mirrorQuestionToDb(q);
       }
     }
   } catch (err: any) {
@@ -10520,9 +10557,9 @@ async function startServer() {
     });
   }
 
-  // Periodic Local-to-Cloud Supabase Backup
+  // Yerel JSON → meds-pg eşitleme (eski adres korunur: yönetim ekranı bu ucu çağırır)
   app.post('/api/admin/backup-to-cloud', requireAdmin, async (req, res) => {
-    const result = await backupLocalToCloud();
+    const result = await resyncLocalToDb();
     res.json(result);
   });
 
@@ -10534,8 +10571,8 @@ async function startServer() {
     // Masaüstü klasör izleyicisi arka planı meşgul etmemesi için otomatik başlatılmaz.
     // İhtiyaç olduğunda Admin Panel üzerinden tek tuşla veya manuel başlatılabilir.
     console.log('[DesktopSync] ℹ️ Arka plan kaynak tasarrufu devrede: Masaüstü belge izleyicisi manuel bekleme modunda.');
-    // Start Supabase Cloud command poller
-    startSupabaseCommandPoller();
+    // system_status komut kuyruğu (yönetici komutları, Postgres üzerinden)
+    startDbCommandPoller();
     // Initialize Local & Hybrid RAG Engine (49,000+ medical chunks)
     initLocalRagEngine();
     warmSpellIndex();
@@ -10546,95 +10583,78 @@ async function startServer() {
       runAutoChunking({ syncToCloud: false }).catch(() => {});
     });
 
-    // ☁️ Belli saatlerde (her 1 saatte bir) yerel verileri online Supabase'e yedekle
+    // Yerel JSON → meds-pg eşitleme: açılıştan 20 sn sonra ve 6 saatte bir (yalnız değişen satırlar yazılır)
     setInterval(() => {
-      backupLocalToCloud().catch(() => {});
-    }, 3600000);
-    // Sunucu açılışından 15 saniye sonra ilk yedekleme kontrolü
+      resyncLocalToDb().catch(() => {});
+    }, 6 * 3600000);
     setTimeout(() => {
-      backupLocalToCloud().catch(() => {});
-    }, 15000);
+      resyncLocalToDb().catch(() => {});
+    }, 20000);
   });
 }
 
-export async function backupLocalToCloud(): Promise<{ success: boolean; message: string; counts?: any }> {
+/**
+ * Yerel JSON → meds-pg tam eşitleme (güvenlik ağı). Yalnız `data` sütunu değişen satırlar yazılır;
+ * değişmeyenler tetikleyiciye/NOTIFY'a hiç ulaşmaz. Asıl yedek: Oracle'da günlük pg_dump (deploy/pg/backup.sh).
+ */
+export async function resyncLocalToDb(): Promise<{ success: boolean; message: string; counts?: any }> {
   try {
-    console.log('☁️ [Cloud Backup] Otomatik online Supabase yedekleme işlemi başladı...');
-    if (!cloudSupabase) {
-      return { success: false, message: 'Cloud Supabase istemcisi tanımlı değil.' };
-    }
-
-    // 1. Kurulları yedekle
-    let committeesCount = 0;
-    if (db.committees && db.committees.length > 0) {
-      const rows = db.committees.map((c: any) => cleanForPostgres({
-        id: c.id,
-        name: c.name,
-        year: c.year,
-        term: c.term,
-        target_count: c.targetCount || 100,
-        color: c.color || 'blue',
-        code: c.code || null,
-        exam_date: c.examDate || null,
-        description: c.description || null,
-        disciplines: c.disciplines || [],
-        data: c,
-        updated_at: new Date().toISOString(),
-      }));
-      await cloudSupabase.from('committees').upsert(rows, { onConflict: 'id' });
-      committeesCount = rows.length;
-    }
-
-    // 2. Aktif Soruları yedekle
-    let questionsCount = 0;
-    if (db.questions && db.questions.length > 0) {
-      const rows = db.questions.map((q) => cleanForPostgres({
-        id: q.id,
-        committee_id: q.committeeId,
-        question_number: q.questionNumber || null,
-        discipline: q.discipline || null,
-        topic: q.topic || null,
-        status: q.status || 'gathering',
-        claimed_answer: q.claimedAnswer || (q.reconstruction?.correctAnswer || null),
-        upvotes: q.upvotes || 0,
-        tags: q.tags || [],
-        fragments: q.fragments || [],
-        options: q.options || [],
-        reconstruction: q.reconstruction || null,
-        data: q,
-        updated_at: new Date().toISOString(),
-      }));
-      for (let i = 0; i < rows.length; i += 50) {
-        await cloudSupabase.from('questions').upsert(rows.slice(i, i + 50), { onConflict: 'id' });
+    if (!pgOnline) return { success: false, message: 'meds-pg ulaşılamıyor.' };
+    const opts = { onConflict: 'id', skipUnchangedColumn: 'data' };
+    const upsertChunks = async (table: string, rows: any[], o: any) => {
+      for (let i = 0; i < rows.length; i += 200) {
+        const { error } = await pgDb.from(table).upsert(rows.slice(i, i + 200), o);
+        if (error) throw new Error(`${table}: ${error.message}`);
       }
-      questionsCount = rows.length;
-    }
-
-    // 3. Kullanıcıları yedekle
-    const users = loadUsers();
-    let usersCount = 0;
-    if (users && users.length > 0) {
-      const rows = users.map((u) => cleanForPostgres({
-        uid: u.uid,
-        email: u.email,
-        display_name: u.displayName || u.email?.split('@')[0],
-        student_number: u.studentNumber || null,
-        role: u.role || 'student',
-        data: u,
-        updated_at: new Date().toISOString(),
-      }));
-      await cloudSupabase.from('users').upsert(rows, { onConflict: 'uid' });
-      usersCount = rows.length;
-    }
-
-    console.log(`✅ [Cloud Backup] Online Supabase yedeklemesi tamamlandı: ${committeesCount} kurul, ${questionsCount} aktif soru, ${usersCount} kullanıcı.`);
-    return {
-      success: true,
-      message: 'Yedekleme başarıyla tamamlandı.',
-      counts: { committeesCount, questionsCount, usersCount },
+      return rows.length;
     };
+
+    const committeesCount = await upsertChunks('committees', (db.committees || []).map((c: any) => cleanForPostgres({
+      id: c.id,
+      name: c.name,
+      color: c.color || 'blue',
+      target_questions: c.targetCount || null,
+      data: c,
+    })), opts);
+
+    const questionsCount = await upsertChunks('questions', (db.questions || []).map((q) => cleanForPostgres({
+      id: q.id,
+      committee_id: q.committeeId,
+      question_number: q.questionNumber || null,
+      discipline: q.discipline || null,
+      topic: q.topic || null,
+      status: q.status || 'gathering',
+      claimed_answer: q.claimedAnswer || (q.reconstruction?.correctAnswer || null),
+      upvotes: q.upvotes || 0,
+      tags: q.tags || [],
+      fragments: q.fragments || [],
+      options: q.options || [],
+      reconstruction: q.reconstruction || null,
+      data: q,
+      updated_at: (q as any).updatedAt || new Date().toISOString(),
+    })), opts);
+
+    const usersCount = await upsertChunks('users', loadUsers().filter((u) => u.uid).map((u) => cleanForPostgres({
+      uid: u.uid,
+      email: u.email,
+      display_name: u.displayName || u.email?.split('@')[0],
+      student_number: u.studentNumber || null,
+      role: u.role || 'student',
+      data: u,
+    })), { onConflict: 'uid', skipUnchangedColumn: 'data' });
+
+    // Çıkmış sorular: Postgres kopyası JSON'dan eski kalmasın (hub, DB olayında satırı belleğe birleştirir;
+    // eski kopya bir olayla geri yazılırsa yeni düzeltmeleri ezerdi). Yalnız `data`sı farklı satırlar yazılır.
+    const pastCount = await upsertChunks(
+      'past_questions',
+      getPastQuestionsDb().filter((q: any) => q?.id).map((q: any) => pastQuestionRow(q, q.updatedAt || undefined)),
+      opts
+    );
+
+    console.log(`✅ [meds-pg Eşitleme] ${committeesCount} kurul, ${questionsCount} aktif soru, ${pastCount} çıkmış soru, ${usersCount} kullanıcı denetlendi.`);
+    return { success: true, message: 'Eşitleme tamamlandı.', counts: { committeesCount, questionsCount, pastCount, usersCount } };
   } catch (err: any) {
-    console.error('❌ [Cloud Backup] Hata oluştu:', err.message);
+    console.error('❌ [meds-pg Eşitleme] Hata:', err.message);
     return { success: false, message: err.message };
   }
 }

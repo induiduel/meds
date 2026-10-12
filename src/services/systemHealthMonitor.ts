@@ -9,7 +9,7 @@
  * 5. Tarayıcı konsolunda doğrudan `window.medsoruCheckStatus()` ile çalıştırılabilir.
  */
 
-import { SupabaseDbService, getSupabaseConfig } from './supabaseDb';
+import { getSupabaseConfig, getSupabaseClient } from './supabaseDb';
 import { FirestoreDbService } from './firestoreDb';
 import { safeJsonFetch } from './api';
 import { FIREBASE_DB_ENABLED } from './dbFlags';
@@ -306,14 +306,7 @@ class SystemHealthMonitor {
     }
 
     try {
-      const client = (SupabaseDbService as any).getSupabaseClient ? (SupabaseDbService as any).getSupabaseClient() : null;
-      if (!client) {
-        const { createClient } = await import('@supabase/supabase-js');
-        const tempClient = createClient(url, key);
-        await this.inspectSupabaseTables(tempClient, logToConsole);
-      } else {
-        await this.inspectSupabaseTables(client, logToConsole);
-      }
+      await this.inspectSupabaseTables(getSupabaseClient(), logToConsole);
     } catch (err: any) {
       this.currentHealth.supabase = {
         status: 'offline',

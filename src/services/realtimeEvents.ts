@@ -7,7 +7,7 @@
  */
 
 import { AdminNotification } from '../types';
-import { getLocalAdminSession, ADMIN_EMAIL } from './auth';
+import { getLocalAdminSession } from './auth';
 
 export type RealtimeConnectionStatus = 'disconnected' | 'connecting' | 'connected';
 
@@ -25,6 +25,10 @@ class RealtimeEventService {
   private reconnectTimer: any = null;
   private reconnectAttempts = 0;
   private isExplicitlyClosed = false;
+  private clientId: string | null = null;
+  // Genel olay dinleyicileri (db_change, live, pong, votes_changed): olay adı → işleyiciler
+  private genericListeners = new Map<string, Set<(data: any) => void>>();
+  private boundGenericEvents = new Set<string>();
 
   constructor() {
     if (typeof window !== 'undefined') {
@@ -56,14 +60,21 @@ class RealtimeEventService {
     this.setStatus('connecting');
 
     try {
+      // Yalnız oturum açmış yönetici kendi e-postasını yollar; ziyaretçiler yönetici olaylarını almaz.
       const adminSession = getLocalAdminSession();
-      const email = adminSession?.email || ADMIN_EMAIL;
-      const url = `/api/realtime/events?adminEmail=${encodeURIComponent(email)}`;
+      const url = adminSession?.email
+        ? `/api/realtime/events?adminEmail=${encodeURIComponent(adminSession.email)}`
+        : '/api/realtime/events';
 
       const es = new EventSource(url);
       this.eventSource = es;
+      this.boundGenericEvents.clear();
+      for (const ev of this.genericListeners.keys()) this.bindGeneric(ev);
 
-      es.addEventListener('connected', () => {
+      es.addEventListener('connected', (e: MessageEvent) => {
+        try {
+          this.clientId = JSON.parse(e.data)?.clientId || null;
+        } catch (_) {}
         this.reconnectAttempts = 0;
         this.setStatus('connected');
       });
@@ -228,6 +239,34 @@ class RealtimeEventService {
         } catch (_) {}
       });
     }
+  }
+
+  private bindGeneric(event: string) {
+    const es = this.eventSource;
+    if (!es || this.boundGenericEvents.has(event)) return;
+    this.boundGenericEvents.add(event);
+    es.addEventListener(event, (e: MessageEvent) => {
+      let payload: any = null;
+      try { if (e.data) payload = JSON.parse(e.data); } catch (_) {}
+      this.genericListeners.get(event)?.forEach((fn) => { try { fn(payload); } catch (_) {} });
+    });
+  }
+
+  /** Herhangi bir SSE olayına abone ol (db_change, live, pong, votes_changed...). */
+  public on(event: string, fn: (data: any) => void): () => void {
+    let set = this.genericListeners.get(event);
+    if (!set) this.genericListeners.set(event, (set = new Set()));
+    set.add(fn);
+    this.bindGeneric(event);
+    this.ensureConnected();
+    return () => {
+      set!.delete(fn);
+    };
+  }
+
+  /** Sunucunun bu bağlantıya verdiği kimlik (kendi canlı mesajını geri almamak için). */
+  public getClientId(): string | null {
+    return this.status === 'connected' ? this.clientId : null;
   }
 
   public getStatus(): RealtimeConnectionStatus {

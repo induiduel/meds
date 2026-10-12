@@ -15,9 +15,6 @@ services:
       - "127.0.0.1:3000:3000"
     extra_hosts:
       - "host.docker.internal:host-gateway"
-    networks:
-      - default
-      - supabase_net
     volumes:
       - ./Caddyfile:/etc/caddy/Caddyfile:ro
     deploy:
@@ -36,16 +33,11 @@ services:
     build:
       context: ../..
       dockerfile: deploy/oracle/Dockerfile.oracle
-      # .env'den gelir (--env-file bayrağı şart, bkz. README). Değerler imaja
-      # gömülür (publishable key zaten herkese açık ön-yüz anahtarıdır).
-      args:
-        SUPABASE_URL: ${SUPABASE_URL:-https://kgutsltgmqbnlxcnzrtl.supabase.co}
-        SUPABASE_PUBLISHABLE_KEY: ${SUPABASE_PUBLISHABLE_KEY:-sb_publishable_EVdXdIi_2mxVr3HZKYabwQ_li5KuE1Q}
     image: medsoru-server:oracle
     container_name: meds-app
     restart: unless-stopped
     stop_grace_period: 15s
-    # Always Free (2 OCPU / ~12GB): site + Supabase + embed aynı makinede; taşan bir süreç diğerlerini düşürmesin.
+    # Always Free (2 OCPU / ~12GB): site + meds-pg + embed aynı makinede; taşan bir süreç diğerlerini düşürmesin.
     deploy:
       resources:
         limits:
@@ -54,10 +46,9 @@ services:
     # Doğrudan erişim (kapıyı atlayarak hata ayıklama): 127.0.0.1:3001
     ports:
       - "127.0.0.1:3001:3000"
-    # Oracle local Supabase (envoy :8000) host ağında; konteyner içinden
-    # host.docker.internal ile erişilir. LOCAL_SUPABASE_URL bunu gösterir.
-    extra_hosts:
-      - "host.docker.internal:host-gateway"
+    depends_on:
+      meds-pg:
+        condition: service_healthy
     env_file:
       - path: ../../.env
         required: true
@@ -66,10 +57,11 @@ services:
       - PORT=3000
       # Çalışma zamanı yığını 3G konteyner tavanının altında (imajdaki 4096 yalnız derleme içindir).
       - NODE_OPTIONS=--max-old-space-size=2560
-      # Vektör arama: sorgu gömme Oracle içindeki bge-m3 servisinden, vektörler local Supabase'ten.
+      # Veritabanı: aynı compose ağındaki meds-pg (dışarıya kapalı). Parola ../../.env → MEDS_PG_PASSWORD.
+      - DATABASE_URL=postgres://meds:${MEDS_PG_PASSWORD:?MEDS_PG_PASSWORD .env içinde olmalı}@meds-pg:5432/meds
+      # Vektör arama: sorgu gömme Oracle içindeki bge-m3 servisinden, vektörler meds-pg'den.
       - MEDS_EMBED_URL=http://meds-embed:8094/embed
       - MEDS_EMBED_BGE_URL=http://meds-embed:8094/embed
-      - LOCAL_SUPABASE_URL=${LOCAL_SUPABASE_URL:-http://host.docker.internal:8000}
       - MEDS_VECTOR_SEARCH=${MEDS_VECTOR_SEARCH:-1}
     volumes:
       - ../../data:/app/data
@@ -83,6 +75,57 @@ services:
       options:
         max-size: "20m"
         max-file: "3"
+
+  # Veritabanı: Postgres 17 + pgvector (Supabase'in yerine, 2026-10-12). İnternete kapalı; yalnız
+  # 127.0.0.1:54330 (SSH tüneli: deploy/oracle/db-yonet.sh). Canlı yayın tetikleyicileri: deploy/pg/sql/realtime.sql.
+  # Günlük yedek: deploy/pg/backup.sh (cron, 7 gün saklanır).
+  meds-pg:
+    image: pgvector/pgvector:pg17
+    container_name: meds-pg
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: meds
+      POSTGRES_USER: meds
+      POSTGRES_PASSWORD: ${MEDS_PG_PASSWORD:?MEDS_PG_PASSWORD .env içinde olmalı}
+    command:
+      - postgres
+      - -c
+      - shared_buffers=384MB
+      - -c
+      - effective_cache_size=1GB
+      - -c
+      - work_mem=16MB
+      - -c
+      - maintenance_work_mem=256MB
+      - -c
+      - max_connections=60
+      - -c
+      - wal_level=minimal
+      - -c
+      - max_wal_senders=0
+      - -c
+      - shared_preload_libraries=pg_stat_statements
+    ports:
+      - "127.0.0.1:54330:5432"
+    volumes:
+      - meds-pg-data:/var/lib/postgresql/data
+      - ../pg/init:/docker-entrypoint-initdb.d:ro
+    shm_size: 256mb
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U meds -d meds"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+    deploy:
+      resources:
+        limits:
+          cpus: "1.0"
+          memory: 1536M
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "2"
 
   cloudflared:
     image: cloudflare/cloudflared:latest
@@ -178,9 +221,4 @@ services:
 
 volumes:
   meds-embed-models:
-
-networks:
-  default:
-  supabase_net:
-    name: supabase_default
-    external: true
+  meds-pg-data:

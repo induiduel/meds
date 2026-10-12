@@ -1,8 +1,8 @@
 /**
  * Anlamsal (vektör) arama + karma sıralama (server-only).
  *
- * Sorgu meds-embed servisinde (127.0.0.1:8091, e5-small, CPU) vektöre çevrilir; yerel Supabase'deki
- * public.match_rag_chunks_e5 fonksiyonu en yakın parçaları döndürür (scripts/advanced_ai/rag_vector_build.py yazar).
+ * Sorgu meds-embed servisinde (127.0.0.1:8091, e5-small, CPU) vektöre çevrilir; meds-pg'deki
+ * public.match_rag_chunks_e5 / _bge_m3 fonksiyonu en yakın parçaları döndürür (scripts/advanced_ai/rag_vector_build.py yazar).
  * BM25 (localRagEngine) sonuçlarıyla Reciprocal Rank Fusion ile birleştirilir. Servis ya da veritabanı yanıt vermezse
  * sessizce yalnız BM25 kullanılır (arama asla bozulmaz).
  *
@@ -10,6 +10,8 @@
  * konu 44; karma w=0.8 → 94/93/41, w=0.3 → 95/93/43. Öğrenci parçası sorgularında BM25 daha iyi; vektör yalnız
  * anlamca benzer (eş anlamlı) aramalarda yarar, onu ölçen bir test eklenince yeniden değerlendirilmeli.
  */
+import { pgDb } from './pgDb';
+
 const EMBED_URL = process.env.MEDS_EMBED_URL || process.env.MEDS_EMBED_BGE_URL || 'http://127.0.0.1:8094/embed';
 const TIMEOUT_MS = Number(process.env.MEDS_VECTOR_TIMEOUT_MS || 1500);
 const RRF_K = 60;
@@ -53,17 +55,18 @@ type Row = Record<string, any> & { id: string };
 
 let downUntil = 0; // servis düşükse bir süre denenmez (her aramada zaman aşımı beklenmesin)
 
-function supabaseTarget() {
-  const url = (process.env.LOCAL_SUPABASE_URL || process.env.SUPABASE_URL || 'http://127.0.0.1:8000').replace(/\/+$/, '');
-  const key = process.env.LOCAL_SUPABASE_KEY || process.env.SUPABASE_SECRET_KEY || process.env.SUPABASE_PUBLISHABLE_KEY || process.env.SUPABASE_KEY || '';
-  return { url, key };
-}
-
 async function withTimeout<T>(p: (signal: AbortSignal) => Promise<T>): Promise<T> {
   const ctl = new AbortController();
-  const t = setTimeout(() => ctl.abort(), TIMEOUT_MS);
+  let t: ReturnType<typeof setTimeout> | undefined;
+  // Postgres sorgusu sinyali dinlemez; yarış ile arama süresi yine TIMEOUT_MS ile sınırlanır.
+  const timeout = new Promise<never>((_, reject) => {
+    t = setTimeout(() => {
+      ctl.abort();
+      reject(new Error('timeout'));
+    }, TIMEOUT_MS);
+  });
   try {
-    return await p(ctl.signal);
+    return await Promise.race([p(ctl.signal), timeout]);
   } finally {
     clearTimeout(t);
   }
@@ -71,15 +74,13 @@ async function withTimeout<T>(p: (signal: AbortSignal) => Promise<T>): Promise<T
 
 export function vectorSearchEnabled(): boolean {
   const flag = process.env.MEDS_VECTOR_SEARCH;
-  const enabled = flag !== undefined ? flag === '1' : Boolean(process.env.LOCAL_SUPABASE_URL || process.env.MEDS_EMBED_URL);
+  const enabled = flag !== undefined ? flag === '1' : Boolean(process.env.MEDS_EMBED_URL);
   return enabled && Date.now() > downUntil;
 }
 
-/** Sorguya anlamsal olarak en yakın parçalar (yerel Supabase). Hata/kapalıysa boş liste. */
+/** Sorguya anlamsal olarak en yakın parçalar (meds-pg pgvector). Hata/kapalıysa boş liste. */
 export async function semanticSearch(query: string, opts: { documentTypes?: string[]; committeeId?: string; limit?: number } = {}): Promise<Row[]> {
   if (!vectorSearchEnabled() || !query.trim()) return [];
-  const { url, key } = supabaseTarget();
-  if (!key) return [];
   try {
     const vecQuery = expandMedicalQuery(query);
     const vec = await withTimeout(async (signal) => {
@@ -96,21 +97,15 @@ export async function semanticSearch(query: string, opts: { documentTypes?: stri
     const MIN_SIM = vec.length === 1024
       ? Number(process.env.MEDS_VECTOR_MIN_SIM_BGE || 0.45)
       : Number(process.env.MEDS_VECTOR_MIN_SIM_E5 || 0.8);
-    const rows = await withTimeout(async (signal) => {
-      const r = await fetch(`${url}/rest/v1/rpc/${rpcFn}`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', apikey: key, Authorization: `Bearer ${key}` },
-        body: JSON.stringify({
-          query_embedding: `[${vec.join(',')}]`,
-          match_count: opts.limit || 40,
-          filter_types: opts.documentTypes?.length ? opts.documentTypes : null,
-          filter_committee: opts.committeeId || null,
-        }),
-        signal,
+    const rows = await withTimeout(async () => {
+      const { data, error } = await pgDb.rpc(rpcFn, {
+        query_embedding: vec,
+        match_count: opts.limit || 40,
+        filter_types: opts.documentTypes?.length ? opts.documentTypes : null,
+        filter_committee: opts.committeeId || null,
       });
-      if (!r.ok) throw new Error(`rpc ${r.status}`);
-      const all = (await r.json()) as Row[];
-      return (all || []).filter((rw) => (Number(rw.similarity) || 0) >= MIN_SIM);
+      if (error) throw new Error(`rpc ${error.message}`);
+      return ((data || []) as Row[]).filter((rw) => (Number(rw.similarity) || 0) >= MIN_SIM);
     });
     return rows || [];
   } catch {

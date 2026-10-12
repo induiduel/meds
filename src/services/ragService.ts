@@ -5,7 +5,7 @@
 // finds nothing). AI-generated chunks are excluded so model output never becomes a "source".
 import { semanticSearch, fuseRRF } from './vectorSearch';
 import { GoogleGenAI } from '@google/genai';
-import { supabase } from './supabaseClient.ts';
+import { pgDb } from './pgDb';
 import { searchLocalRag, foldTurkish, findChunksById, findCardsByName, cardNameKey, type RagDocumentType } from './localRagEngine.ts';
 import { generateResilientMedicalAi, getTieredGeminiKeys } from './aiProvider.ts';
 import { getCachedLectureNotes } from '../serverLectureNotes.ts';
@@ -106,10 +106,10 @@ async function searchCloud(
   apiKey: string,
   options: { committeeId?: string; discipline?: string; documentType?: string; limit: number }
 ): Promise<RagChunkResult[]> {
-  if (!supabase || !apiKey) return [];
+  if (!apiKey) return [];
   const run = async (): Promise<RagChunkResult[]> => {
     const embedding = await generateEmbedding(query, apiKey);
-    const { data, error } = await supabase.rpc('hybrid_match_rag_chunks', {
+    const { data, error } = await pgDb.rpc('hybrid_match_rag_chunks', {
       query_text: query,
       query_embedding: embedding,
       match_count: options.limit,

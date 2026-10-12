@@ -1,26 +1,16 @@
 /**
- * MedSoru Supabase PostgreSQL Veritabanı Servisi (supabaseDb.ts)
- * 
- * Bu servis:
- * 1. Supabase PostgreSQL veritabanı ile çift yönlü bağlantı kurar.
- * 2. Kurul, soru, çıkmış soru, ders notu ve kullanıcı verilerini depolar.
- * 3. Firebase (Spark Planı) devre dışı kaldığında veya kota dolduğunda
- *    kesintisiz yedek/paralel bulut veritabanı olarak devreye girer.
+ * MedSoru veritabanı servisi (istemci). Adı tarihsel: Supabase 2026-10-12'de kaldırıldı.
+ *
+ * - Okuma/yazma: `getSupabaseClient()` artık `dbRemoteClient` döner; aynı zincir biçimi sunucudaki
+ *   POST /api/db/query kapısına gider (meds-pg). Tarayıcıda veritabanı adresi ya da anahtar yoktur.
+ * - Canlı yayın: Postgres NOTIFY → sunucu → SSE (`realtimeEventService`). `subscribeToTable` aynı
+ *   { eventType, new, old } biçimini verir; istemciden istemciye mesaj `broadcastLiveEvent` ile sunucudan geçer.
  */
 
-import { createClient, SupabaseClient } from '@supabase/supabase-js';
 import { Committee, QuestionItem, LectureNote } from '../types';
 import { filterCurrent2026_2027Committees } from './firestoreDb';
-import { isProductionHost } from '../config/deployment';
-
-export const DEFAULT_SUPABASE_URL = 'https://kgutsltgmqbnlxcnzrtl.supabase.co';
-export const DEFAULT_SUPABASE_KEY = 'sb_publishable_EVdXdIi_2mxVr3HZKYabwQ_li5KuE1Q';
-
-// Oracle Yerel Supabase Anonim Erişim Anahtarı (Canlı sitede Caddy kapısı üzerinden /realtime/v1 ve /rest/v1 erişimi)
-export const ORACLE_LOCAL_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYW5vbiIsImlzcyI6InN1cGFiYXNlIiwiaWF0IjoxNzkxMDcwMTUzLCJleHAiOjE5NDg3NTAxNTN9.LvXBTMzVLKAcPLu2UFtt-1If27K4_GXhaPioUWfSvdY';
-
-const STORAGE_URL_KEY = 'medsoru_custom_supabase_url';
-const STORAGE_KEY_KEY = 'medsoru_custom_supabase_key';
+import { dbRemoteClient, dbApiBase, postLiveBroadcast, postLivePing, type DbRemoteClient } from './dbRemoteClient';
+import { realtimeEventService } from './realtimeEvents';
 
 export function cleanForPostgres<T>(data: T): T {
   if (data === null || data === undefined) return data;
@@ -40,56 +30,19 @@ export function cleanForPostgres<T>(data: T): T {
   return data;
 }
 
+/** Tanılama ekranları için: veritabanı artık sunucu üzerinden (aynı köken ya da özel API adresi). */
 export function getSupabaseConfig(): { url: string; key: string } {
-  let customUrl = '';
-  let customKey = '';
-  if (typeof localStorage !== 'undefined') {
-    try {
-      customUrl = localStorage.getItem(STORAGE_URL_KEY) || '';
-      customKey = localStorage.getItem(STORAGE_KEY_KEY) || '';
-    } catch (_) {}
-  }
+  const base = dbApiBase();
+  return { url: (base || (typeof window !== 'undefined' ? window.location.origin : '')) + '/api/db', key: 'server' };
+}
 
-  // Kullanıcı özel bir adres ve anahtar tanımladıysa öncelikli kullan
-  if (customUrl && customKey) {
-    return { url: customUrl.trim(), key: customKey.trim() };
-  }
-
-  // Canlı Oracle ortamında (nofrostlife.com.tr / api.nofrostlife.com.tr):
-  // Caddy kapısı üzerinden doğrudan Oracle yerel Supabase Envoy (:8000) servisine
-  // sıfır gecikmeli aynı-köken (same-origin) Realtime WebSocket ve REST bağlantısı kurulur.
-  if (typeof window !== 'undefined' && isProductionHost()) {
-    return {
-      url: window.location.origin,
-      key: ORACLE_LOCAL_SUPABASE_KEY,
-    };
-  }
-
-  let envUrl = '';
-  let envKey = '';
+/** Eski "özel Supabase adresi" ayarı artık kullanılmaz; kalıntı anahtarlar temizlenir. */
+export function setCustomSupabaseConfig(_url?: string, _key?: string) {
   try {
-    envUrl = (typeof process !== 'undefined' && process.env && process.env.SUPABASE_URL) || '';
-    envKey = (typeof process !== 'undefined' && process.env && (process.env.SUPABASE_PUBLISHABLE_KEY || process.env.SUPABASE_KEY)) || '';
+    localStorage.removeItem('medsoru_custom_supabase_url');
+    localStorage.removeItem('medsoru_custom_supabase_key');
   } catch (_) {}
-
-  return {
-    url: (customUrl || envUrl || DEFAULT_SUPABASE_URL).trim(),
-    key: (customKey || envKey || DEFAULT_SUPABASE_KEY).trim(),
-  };
 }
-
-export function setCustomSupabaseConfig(url: string, key: string) {
-  if (url) localStorage.setItem(STORAGE_URL_KEY, url.trim());
-  else localStorage.removeItem(STORAGE_URL_KEY);
-
-  if (key) localStorage.setItem(STORAGE_KEY_KEY, key.trim());
-  else localStorage.removeItem(STORAGE_KEY_KEY);
-
-  // Invalidate cached client
-  cachedClient = null;
-}
-
-let cachedClient: SupabaseClient | null = null;
 
 /** Şikâyet satırları iki kaynaktan (tablo / soru içi JSON) farklı adlarla gelir; tek biçime getir */
 function normalizeReportRow(r: any) {
@@ -102,47 +55,24 @@ function normalizeReportRow(r: any) {
   };
 }
 
-export function getSupabaseClient(): SupabaseClient | null {
-  if (cachedClient) return cachedClient;
-
-  const { url, key } = getSupabaseConfig();
-  if (!url || !key) return null;
-
-  try {
-    cachedClient = createClient(url, key, {
-      auth: {
-        persistSession: true,
-        autoRefreshToken: true,
-      },
-    });
-    return cachedClient;
-  } catch (err) {
-    console.warn('[Supabase] Client oluşturma hatası:', err);
-    return null;
-  }
+export function getSupabaseClient(): DbRemoteClient {
+  return dbRemoteClient;
 }
 
-let liveSyncChannel: any = null;
-
-export function getLiveSyncChannel() {
-  const client = getSupabaseClient();
-  if (!client) return null;
-  if (!liveSyncChannel) {
-    liveSyncChannel = client.channel('medsoru-live-sync', {
-      config: { broadcast: { self: false } },
-    });
-    liveSyncChannel.subscribe();
-  }
-  return liveSyncChannel;
-}
-
+/**
+ * İstemciden diğer ziyaretçilere canlı mesaj. "<tablo>_changed" olaylarında sunucu yalnız id + işlemi
+ * iletir (asıl içerik veritabanı tetikleyicisinden gelir); "app:*" olayları küçük JSON mesajlardır.
+ * Supabase'teki gibi gönderen kendi mesajını almaz.
+ */
 export function broadcastLiveEvent(event: string, payload: any) {
-  try {
-    const ch = getLiveSyncChannel();
-    if (ch) {
-      ch.send({ type: 'broadcast', event, payload }).catch(() => {});
-    }
-  } catch (_) {}
+  void postLiveBroadcast(event, payload, realtimeEventService.getClientId());
+}
+
+/** "app:*" canlı mesajlarını dinle (ör. app:presence). Dönen işlev aboneliği kapatır. */
+export function onLiveEvent(event: string, fn: (payload: any, from?: string) => void): () => void {
+  return realtimeEventService.on('live', (msg: any) => {
+    if (msg?.event === event) fn(msg.payload, msg.from);
+  });
 }
 
 function mapRowToPastQuestion(row: any): QuestionItem {
@@ -196,8 +126,7 @@ const noteReportsTable = (error: any) => {
 
 export const SupabaseDbService = {
   isConfigured(): boolean {
-    const { url, key } = getSupabaseConfig();
-    return Boolean(url && key);
+    return true;
   },
 
   async checkConnection(): Promise<{
@@ -211,7 +140,7 @@ export const SupabaseDbService = {
       return {
         success: false,
         tablesExist: false,
-        message: 'Supabase URL veya API Anahtarı eksik.',
+        message: 'Veritabanı yapılandırılmamış.',
       };
     }
 
@@ -1074,65 +1003,27 @@ export const SupabaseDbService = {
     }
   },
 
-  // Realtime Subscriptions (Dual-Layer: PostgreSQL WAL changes + Instant WebSocket Broadcast)
+  // Canlı abonelik: sunucu SSE 'db_change' (Postgres NOTIFY kaynaklı) + diğer istemcilerin 'live' ipuçları.
+  // Geri çağrı Supabase postgres_changes biçimini alır: { eventType, new, old }.
   subscribeToTable(table: string, callback: (payload: any) => void): () => void {
-    const client = getSupabaseClient();
-    if (!client) return () => {};
-
-    const channelName = `realtime:${table}:${Date.now()}_${Math.random().toString(36).slice(2, 7)}`;
-    const channel = client
-      .channel(channelName, {
-        config: { broadcast: { self: false } },
-      })
-      .on(
-        'postgres_changes',
-        { event: '*', schema: 'public', table },
-        (payload) => {
-          try {
-            callback(payload);
-          } catch (e) {
-            console.warn(`[Supabase Realtime] ${table} callback error:`, e);
-          }
-        }
-      )
-      .on(
-        'broadcast',
-        { event: `${table}_changed` },
-        (payload) => {
-          try {
-            const data = payload?.payload || payload;
-            callback(data);
-          } catch (e) {
-            console.warn(`[Supabase Realtime Broadcast] ${table} callback error:`, e);
-          }
-        }
-      )
-      .subscribe((status, err) => {
-        if (err) {
-          console.warn(`[Supabase Realtime] ${table} subscription error:`, err);
-        }
-      });
-
-    // Also register on global broadcast live-sync channel
-    const globalChannel = getLiveSyncChannel();
-    let isDisposed = false;
-    if (globalChannel) {
-      globalChannel.on('broadcast', { event: `${table}_changed` }, (payload: any) => {
-        if (isDisposed) return;
-        try {
-          const data = payload?.payload || payload;
-          callback(data);
-        } catch (e) {
-          console.warn(`[Global LiveSync] ${table} callback error:`, e);
-        }
-      });
-    }
-
-    return () => {
-      isDisposed = true;
+    const safe = (p: any) => {
       try {
-        client.removeChannel(channel);
-      } catch (_) {}
+        callback(p);
+      } catch (e) {
+        console.warn(`[Canlı] ${table} geri çağrı hatası:`, e);
+      }
+    };
+    const offDb = realtimeEventService.on('db_change', (p: any) => {
+      if (p?.table === table && p.eventType !== 'BULK') safe(p);
+    });
+    const offLive = realtimeEventService.on('live', (m: any) => {
+      if (m?.event !== `${table}_changed` || !m.payload?.id) return;
+      const { id, eventType } = m.payload;
+      safe(eventType === 'DELETE' ? { eventType, old: { id }, id } : { eventType, id });
+    });
+    return () => {
+      offDb();
+      offLive();
     };
   },
 
@@ -1171,7 +1062,7 @@ export const SupabaseDbService = {
         connected: false,
         latencyMs: 0,
         counts: { questions: 0, pastQuestions: 0, lectureNotes: 0, committees: 0, users: 0 },
-        error: 'Supabase URL veya API Anahtarı eksik.',
+        error: 'Veritabanı yapılandırılmamış.',
       };
     }
 
@@ -1218,7 +1109,7 @@ export const SupabaseDbService = {
     }
   },
 
-  // Active Realtime Verification Test (Dual Probe: WebSocket Broadcast + PostgreSQL WAL Changes)
+  // Gidiş-dönüş testi: sunucu Postgres'e NOTIFY yazar → LISTEN eden hub → SSE 'pong' bu sekmeye döner.
   async testRealtimeRoundtrip(timeoutMs: number = 4000): Promise<{
     success: boolean;
     latencyMs: number;
@@ -1228,116 +1119,56 @@ export const SupabaseDbService = {
     broadcastLatencyMs?: number;
     postgresLatencyMs?: number;
   }> {
-    const client = getSupabaseClient();
-    if (!client) {
-      return { success: false, latencyMs: 0, message: 'Supabase yapılandırılmamış.' };
+    const start = Date.now();
+    realtimeEventService.connect();
+    // SSE bağlantısının kimliği gerekir (pong yalnız bu sekmeye gönderilir)
+    while (!realtimeEventService.getClientId() && Date.now() - start < timeoutMs) {
+      await new Promise((r) => setTimeout(r, 100));
     }
-
+    const clientId = realtimeEventService.getClientId();
+    if (!clientId) {
+      return { success: false, latencyMs: Date.now() - start, broadcastActive: false, postgresActive: false, message: 'Canlı akışa (SSE) bağlanılamadı.' };
+    }
     return new Promise((resolve) => {
-      const testId = `rt-ping-${Date.now()}-${Math.random().toString(36).slice(2, 6)}`;
-      const startTime = Date.now();
-      let finished = false;
-      let broadcastReceived = false;
-      let broadcastLatencyMs = 0;
-      let postgresReceived = false;
-      let postgresLatencyMs = 0;
-
-      const finishTest = () => {
-        if (finished) return;
-        finished = true;
-        try { client.removeChannel(channel); } catch (_) {}
-        // Clean up test row asynchronously
-        client.from('system_status').delete().eq('id', testId).then(() => {});
-
-        if (postgresReceived) {
-          resolve({
-            success: true,
-            latencyMs: postgresLatencyMs,
-            broadcastActive: true,
-            postgresActive: true,
-            broadcastLatencyMs: broadcastLatencyMs || postgresLatencyMs,
-            postgresLatencyMs,
-            message: `✓ Realtime aktiftir ve tam kapasite çalışıyor! (WebSocket: ${broadcastLatencyMs || postgresLatencyMs}ms, DB Değişiklik Yayını: ${postgresLatencyMs}ms)`,
-          });
-        } else if (broadcastReceived) {
-          resolve({
-            success: true,
-            latencyMs: broadcastLatencyMs,
-            broadcastActive: true,
-            postgresActive: false,
-            broadcastLatencyMs,
-            message: `⚡ WebSocket Canlı Yayını Aktif (${broadcastLatencyMs}ms)! Ancak PostgreSQL veritabanı yayınları (WAL) henüz 'supabase_realtime' yayınına eklenmemiş.`,
-          });
-        } else {
-          resolve({
-            success: false,
-            latencyMs: Date.now() - startTime,
-            broadcastActive: false,
-            postgresActive: false,
-            message: 'Realtime zaman aşımına uğradı (WebSocket bağlantısı veya PostgreSQL yayını yanıt vermedi).',
-          });
-        }
+      let pingId: string | null = null;
+      let dbLatency = 0;
+      const t0 = Date.now();
+      const done = (r: any) => {
+        clearTimeout(timer);
+        off();
+        resolve(r);
       };
-
-      const timer = setTimeout(() => {
-        finishTest();
-      }, timeoutMs);
-
-      const channel = client
-        .channel(`rt-test-${testId}`, {
-          config: { broadcast: { self: true } },
-        })
-        .on(
-          'broadcast',
-          { event: 'rt_ping' },
-          (payload) => {
-            if (payload?.payload?.id === testId && !broadcastReceived) {
-              broadcastReceived = true;
-              broadcastLatencyMs = Date.now() - startTime;
-              if (postgresReceived) {
-                clearTimeout(timer);
-                finishTest();
-              }
-            }
-          }
-        )
-        .on(
-          'postgres_changes',
-          { event: '*', schema: 'public', table: 'system_status' },
-          (payload) => {
-            if (payload.new && (payload.new as any).id === testId && !postgresReceived) {
-              postgresReceived = true;
-              postgresLatencyMs = Date.now() - startTime;
-              clearTimeout(timer);
-              finishTest();
-            }
-          }
-        )
-        .subscribe(async (status) => {
-          if (status === 'SUBSCRIBED') {
-            // 1. Send broadcast ping (tests instant WebSocket layer)
-            try {
-              channel.send({
-                type: 'broadcast',
-                event: 'rt_ping',
-                payload: { id: testId, timestamp: Date.now() },
-              });
-            } catch (_) {}
-
-            // 2. Write ping record into PostgreSQL system_status (tests WAL postgres_changes layer)
-            try {
-              await client.from('system_status').upsert([
-                {
-                  id: testId,
-                  data: { ping: true, timestamp: Date.now() },
-                  updated_at: new Date().toISOString(),
-                },
-              ]);
-            } catch (err: any) {
-              console.warn('Realtime test ping row write error:', err);
-            }
-          }
+      const early = new Set<string>();
+      const finishOk = () => {
+        const ms = Date.now() - t0;
+        done({
+          success: true,
+          latencyMs: ms,
+          broadcastActive: true,
+          postgresActive: true,
+          broadcastLatencyMs: ms,
+          postgresLatencyMs: dbLatency,
+          message: `✓ Canlı yayın çalışıyor (Postgres NOTIFY → SSE gidiş-dönüş: ${ms} ms)`,
         });
+      };
+      // pong, ping yanıtından önce de gelebilir: erken gelenler saklanır
+      const off = realtimeEventService.on('pong', (p: any) => {
+        if (!p?.id) return;
+        if (pingId === p.id) finishOk();
+        else if (!pingId) early.add(p.id);
+      });
+      const timer = setTimeout(
+        () => done({ success: false, latencyMs: Date.now() - t0, broadcastActive: true, postgresActive: false, message: 'Canlı yayın zaman aşımı (Postgres bildirimi geri gelmedi).' }),
+        Math.max(500, timeoutMs - (Date.now() - start))
+      );
+      void postLivePing(clientId).then((r) => {
+        if (!r) done({ success: false, latencyMs: Date.now() - t0, broadcastActive: true, postgresActive: false, message: 'Sunucu veritabanına ulaşamadı.' });
+        else {
+          pingId = r.id;
+          dbLatency = r.dbLatencyMs;
+          if (early.has(r.id)) finishOk();
+        }
+      });
     });
   },
 

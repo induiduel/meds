@@ -14,11 +14,6 @@ export default defineConfig(({ mode }) => {
   return {
     base: process.env.VITE_BASE || '/',
     plugins: [splitLearningDecks(__dirname), react(), tailwindcss()],
-    define: {
-      'process.env.SUPABASE_URL': JSON.stringify(process.env.SUPABASE_URL || 'https://kgutsltgmqbnlxcnzrtl.supabase.co'),
-      'process.env.SUPABASE_PUBLISHABLE_KEY': JSON.stringify(process.env.SUPABASE_PUBLISHABLE_KEY || 'sb_publishable_EVdXdIi_2mxVr3HZKYabwQ_li5KuE1Q'),
-      'process.env.SUPABASE_KEY': JSON.stringify(process.env.SUPABASE_PUBLISHABLE_KEY || 'sb_publishable_EVdXdIi_2mxVr3HZKYabwQ_li5KuE1Q'),
-    },
     resolve: {
       alias: {
         '@': path.resolve(__dirname, '.'),
@@ -52,9 +47,6 @@ export default defineConfig(({ mode }) => {
                 normalized.includes('/@firebase/')
               ) {
                 return 'vendor-firebase';
-              }
-              if (normalized.includes('/@supabase/')) {
-                return 'vendor-supabase';
               }
               if (normalized.includes('/@google/genai/')) {
                 return 'vendor-genai';

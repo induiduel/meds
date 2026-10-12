@@ -9,7 +9,6 @@ import {
   Database,
   Cpu,
   Key,
-  Copy,
   Check,
   ExternalLink,
   Zap,
@@ -17,7 +16,6 @@ import {
 } from 'lucide-react';
 import { systemHealthMonitor, SystemOverallHealth } from '../services/systemHealthMonitor';
 import { multiDbManager, DatabaseMode } from '../services/multiDbManager';
-import { getSupabaseConfig, setCustomSupabaseConfig } from '../services/supabaseDb';
 
 interface SystemDiagnosticsModalProps {
   isOpen: boolean;
@@ -47,13 +45,9 @@ export const SystemDiagnosticsModal: React.FC<SystemDiagnosticsModalProps> = ({
   const [customMuseSparkKey, setCustomMuseSparkKey] = useState<string>(() => {
     return (typeof localStorage !== 'undefined' ? localStorage.getItem('medsoru_muse_spark_api_key') : '') || '';
   });
-  const [customSupaUrl, setCustomSupaUrl] = useState<string>(() => getSupabaseConfig().url);
-  const [customSupaKey, setCustomSupaKey] = useState<string>(() => getSupabaseConfig().key);
   const [dbMode, setDbMode] = useState<DatabaseMode>(() => multiDbManager.getActiveMode());
   
   const [saveSuccess, setSaveSuccess] = useState(false);
-  const [copiedSql, setCopiedSql] = useState(false);
-  const [copiedRealtimeSql, setCopiedRealtimeSql] = useState(false);
   const [realtimeTest, setRealtimeTest] = useState<{
     running: boolean;
     result?: {
@@ -132,7 +126,6 @@ export const SystemDiagnosticsModal: React.FC<SystemDiagnosticsModalProps> = ({
       }
     }
 
-    setCustomSupabaseConfig(customSupaUrl.trim(), customSupaKey.trim());
     multiDbManager.setActiveMode(dbMode);
 
     setSaveSuccess(true);
@@ -140,143 +133,6 @@ export const SystemDiagnosticsModal: React.FC<SystemDiagnosticsModalProps> = ({
 
     // Ayarlar değiştiğinde tekrar test yap
     handleRunTest();
-  };
-
-  const copySupabaseSql = () => {
-    const sql = `-- MeDSor Supabase PostgreSQL Tablo Şeması
-CREATE TABLE IF NOT EXISTS committees (
-  id TEXT PRIMARY KEY,
-  name TEXT NOT NULL,
-  academic_year TEXT DEFAULT '2026-2027',
-  target_questions INTEGER DEFAULT 100,
-  color TEXT DEFAULT 'teal',
-  data JSONB DEFAULT '{}'::jsonb,
-  created_at TIMESTAMPTZ DEFAULT NOW()
-);
-
-CREATE TABLE IF NOT EXISTS questions (
-  id TEXT PRIMARY KEY,
-  committee_id TEXT NOT NULL,
-  question_number INTEGER,
-  discipline TEXT,
-  topic TEXT,
-  status TEXT DEFAULT 'gathering',
-  claimed_answer TEXT,
-  upvotes INTEGER DEFAULT 0,
-  tags TEXT[] DEFAULT ARRAY[]::TEXT[],
-  fragments JSONB DEFAULT '[]'::jsonb,
-  options JSONB DEFAULT '[]'::jsonb,
-  reconstruction JSONB,
-  data JSONB DEFAULT '{}'::jsonb,
-  created_at TIMESTAMPTZ DEFAULT NOW(),
-  updated_at TIMESTAMPTZ DEFAULT NOW()
-);
-
-CREATE TABLE IF NOT EXISTS past_questions (
-  id TEXT PRIMARY KEY,
-  committee_id TEXT NOT NULL,
-  discipline TEXT,
-  topic TEXT,
-  exam_year TEXT,
-  source_file TEXT,
-  claimed_answer TEXT,
-  raw_question JSONB,
-  reconstruction JSONB,
-  upvotes INTEGER DEFAULT 0,
-  comments JSONB DEFAULT '[]'::jsonb,
-  reports JSONB DEFAULT '[]'::jsonb,
-  data JSONB DEFAULT '{}'::jsonb,
-  updated_at TIMESTAMPTZ DEFAULT NOW()
-);
-
-CREATE TABLE IF NOT EXISTS past_question_reports (
-  id TEXT PRIMARY KEY,
-  question_id TEXT REFERENCES past_questions(id) ON DELETE CASCADE,
-  reason TEXT NOT NULL,
-  details TEXT,
-  reported_by TEXT,
-  status TEXT DEFAULT 'pending',
-  created_at TIMESTAMPTZ DEFAULT NOW()
-);
-
-CREATE TABLE IF NOT EXISTS lecture_notes (
-  id TEXT PRIMARY KEY,
-  committee_id TEXT NOT NULL,
-  discipline TEXT,
-  title TEXT NOT NULL,
-  pages JSONB DEFAULT '[]'::jsonb,
-  page_count INTEGER DEFAULT 0,
-  data JSONB DEFAULT '{}'::jsonb,
-  created_at TIMESTAMPTZ DEFAULT NOW()
-);
-
--- RLS (Row Level Security) Herkese Açık Okuma/Yazma İzni (Soru havuzunun kesintisiz çalışması için)
-ALTER TABLE committees ENABLE ROW LEVEL SECURITY;
-ALTER TABLE questions ENABLE ROW LEVEL SECURITY;
-ALTER TABLE past_questions ENABLE ROW LEVEL SECURITY;
-ALTER TABLE past_question_reports ENABLE ROW LEVEL SECURITY;
-ALTER TABLE lecture_notes ENABLE ROW LEVEL SECURITY;
-
-CREATE POLICY "Allow public read committees" ON committees FOR SELECT USING (true);
-CREATE POLICY "Allow public write committees" ON committees FOR ALL USING (true);
-
-CREATE POLICY "Allow public read questions" ON questions FOR SELECT USING (true);
-CREATE POLICY "Allow public write questions" ON questions FOR ALL USING (true);
-
-CREATE POLICY "Allow public read past_questions" ON past_questions FOR SELECT USING (true);
-CREATE POLICY "Allow public write past_questions" ON past_questions FOR ALL USING (true);
-
-CREATE POLICY "Allow public read past_question_reports" ON past_question_reports FOR SELECT USING (true);
-CREATE POLICY "Allow public write past_question_reports" ON past_question_reports FOR ALL USING (true);
-
-CREATE POLICY "Allow public read lecture_notes" ON lecture_notes FOR SELECT USING (true);
-CREATE POLICY "Allow public write lecture_notes" ON lecture_notes FOR ALL USING (true);
-
--- Realtime yayınlarını ve REPLICA IDENTITY ayarını etkinleştir (Canlı dinleme ve anlık senkronizasyon için)
-ALTER PUBLICATION supabase_realtime SET TABLE 
-  public.committees, 
-  public.questions, 
-  public.past_questions, 
-  public.past_question_reports,
-  public.lecture_notes, 
-  public.system_status, 
-  public.users;
-
-ALTER TABLE public.committees REPLICA IDENTITY FULL;
-ALTER TABLE public.questions REPLICA IDENTITY FULL;
-ALTER TABLE public.past_questions REPLICA IDENTITY FULL;
-ALTER TABLE public.past_question_reports REPLICA IDENTITY FULL;
-ALTER TABLE public.lecture_notes REPLICA IDENTITY FULL;
-ALTER TABLE public.system_status REPLICA IDENTITY FULL;
-ALTER TABLE public.users REPLICA IDENTITY FULL;
-`;
-    navigator.clipboard.writeText(sql);
-    setCopiedSql(true);
-    setTimeout(() => setCopiedSql(false), 2500);
-  };
-
-  const copyRealtimeSql = () => {
-    const sql = `-- Supabase Realtime Yayınlarını ve REPLICA IDENTITY Ayarını Etkinleştir
-ALTER PUBLICATION supabase_realtime SET TABLE 
-  public.committees, 
-  public.questions, 
-  public.past_questions, 
-  public.past_question_reports,
-  public.lecture_notes, 
-  public.system_status, 
-  public.users;
-
-ALTER TABLE public.committees REPLICA IDENTITY FULL;
-ALTER TABLE public.questions REPLICA IDENTITY FULL;
-ALTER TABLE public.past_questions REPLICA IDENTITY FULL;
-ALTER TABLE public.past_question_reports REPLICA IDENTITY FULL;
-ALTER TABLE public.lecture_notes REPLICA IDENTITY FULL;
-ALTER TABLE public.system_status REPLICA IDENTITY FULL;
-ALTER TABLE public.users REPLICA IDENTITY FULL;
-`;
-    navigator.clipboard.writeText(sql);
-    setCopiedRealtimeSql(true);
-    setTimeout(() => setCopiedRealtimeSql(false), 2500);
   };
 
   const getStatusBadge = (status: string) => {
@@ -364,7 +220,7 @@ ALTER TABLE public.users REPLICA IDENTITY FULL;
                 )}
               </h2>
               <p className="text-sm text-ink-3 m-0">
-                Online Firebase, Supabase ve Yapay Zeka servislerinin canlı durum ve limit takibi
+                Online Firebase, sunucu veritabanı (meds-pg) ve Yapay Zeka servislerinin canlı durum ve limit takibi
               </p>
             </div>
           </div>
@@ -412,7 +268,7 @@ ALTER TABLE public.users REPLICA IDENTITY FULL;
             }`}
           >
             <Database className="w-4 h-4" />
-            Veritabanları (Firebase & Supabase)
+            Veritabanları (Firebase & meds-pg)
             {health.firebase.status === 'quota_exceeded' && (
               <span className="w-2 h-2 rounded-full bg-warn" />
             )}
@@ -463,8 +319,8 @@ ALTER TABLE public.users REPLICA IDENTITY FULL;
                     <div>
                       <h4 className="font-bold text-md m-0">Online Veritabanı Kesintisi Tespit Edildi!</h4>
                       <p className="text-sm mt-1 m-0 text-bad-text">
-                        Online sitede hem Firebase Spark kotası dolmuş hem de Supabase bağlantısı sağlanamıyor.
-                        Öğrenciler soru ekleyemez veya soruları yükleyemez. Lütfen <strong>Ayarlar</strong> sekmesinden Supabase bağlantınızı kontrol edin.
+                        Online sitede hem Firebase Spark kotası dolmuş hem de sunucu veritabanına (meds-pg) ulaşılamıyor.
+                        Öğrenciler soru ekleyemez veya soruları yükleyemez. Lütfen sunucunun ve meds-pg konteynerinin çalıştığını, sunucu loglarını kontrol edin.
                       </p>
                     </div>
                   </div>
@@ -478,7 +334,7 @@ ALTER TABLE public.users REPLICA IDENTITY FULL;
                     <div>
                       <h4 className="font-bold text-md m-0">✓ Otomatik Veritabanı Devri Başarılı</h4>
                       <p className="text-sm mt-1 m-0 text-warn">
-                        Firebase Spark günlük ücretsiz 50.000 okuma kotası doldu. MeDSor otomatik failover sistemi sayesinde tüm veri trafiği kesintisiz olarak <strong>Supabase PostgreSQL</strong> bulut veritabanına aktarıldı.
+                        Firebase Spark günlük ücretsiz 50.000 okuma kotası doldu. MeDSor otomatik failover sistemi sayesinde tüm veri trafiği kesintisiz olarak <strong>sunucu veritabanına (meds-pg PostgreSQL)</strong> aktarıldı.
                       </p>
                     </div>
                   </div>
@@ -516,18 +372,18 @@ ALTER TABLE public.users REPLICA IDENTITY FULL;
                   </button>
                 </div>
 
-                {/* Supabase Card */}
+                {/* Sunucu veritabanı (meds-pg) kartı */}
                 <div className="p-4 rounded-xl border border-line bg-canvas/40 flex flex-col justify-between">
                   <div>
                     <div className="flex items-center justify-between mb-2">
                       <span className="font-bold text-md text-ink flex items-center gap-2">
                         <Database className="w-4 h-4 text-ok" />
-                        Supabase PostgreSQL
+                        Veritabanı (meds-pg PostgreSQL)
                       </span>
                       {getStatusBadge(health.supabase.status)}
                     </div>
                     <div className="text-xs text-ink-3 space-y-1">
-                      <div>Veritabanı: kgutsltgmqbnlxcnzrtl</div>
+                      <div>Bağlantı: Sunucu üzerinden (meds-pg)</div>
                       <div>Çıkmış Soru Sayısı: {health.supabase.rowCounts.past_questions || 0}</div>
                       <div>Ders Notu Sayısı: {health.supabase.rowCounts.lecture_notes || 0}</div>
                       {health.supabase.details && (
@@ -617,17 +473,17 @@ ALTER TABLE public.users REPLICA IDENTITY FULL;
                 </div>
               </div>
 
-              {/* Supabase Deep Dive */}
+              {/* meds-pg Deep Dive */}
               <div className="p-5 rounded-xl border border-line bg-white space-y-4">
                 <div className="flex items-center justify-between">
                   <h3 className="font-bold text-md text-ink flex items-center gap-2 m-0">
                     <Database className="w-5 h-5 text-ok" />
-                    Supabase PostgreSQL Bulut Veritabanı
+                    Veritabanı (meds-pg PostgreSQL 17 + pgvector)
                   </h3>
                   {getStatusBadge(health.supabase.status)}
                 </div>
                 <p className="text-sm text-ink-2 m-0">
-                  Supabase, Firebase kotası dolduğunda veya kapalıyken soru havuzunu, çıkmış soruları ve amfi ders notlarını kesintisiz sunan paralel ilişkisel veritabanıdır.
+                  meds-pg, soru havuzunu, çıkmış soruları ve amfi ders notlarını tutan ilişkisel veritabanıdır. Tarayıcı veritabanına doğrudan bağlanmaz; tüm sorgular sunucu üzerinden (<code className="font-mono">/api/db/query</code>) geçer.
                 </p>
 
                 {/* Table Row Counts */}
@@ -651,153 +507,66 @@ ALTER TABLE public.users REPLICA IDENTITY FULL;
                 </div>
 
                 {/* Realtime Live Test Card */}
-                {(() => {
-                  const projectRef = (customSupaUrl || '').match(/https:\/\/([^.]+)\.supabase\.co/)?.[1] || 'kgutsltgmqbnlxcnzrtl';
-                  return (
-                    <div className="p-4 rounded-xl border border-line bg-canvas/40 space-y-3">
-                      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-                        <div>
-                          <div className="font-bold text-base text-ink flex items-center gap-1.5">
-                            <Zap className="w-4 h-4 text-warn" />
-                            Supabase Realtime (Anlık Çift Yönlü İletişim & Canlı Eşitleme)
-                          </div>
-                          <div className="text-xs text-ink-3">
-                            WebSocket üzerinden canlı veri dinleme, yayınlama ve cihazlar arası anlık senkronizasyon.
-                          </div>
-                        </div>
-                        <button
-                          type="button"
-                          onClick={handleTestRealtime}
-                          disabled={realtimeTest.running}
-                          className="h-8 px-3 rounded-lg bg-accent hover:bg-accent text-white font-semibold text-xs inline-flex items-center gap-1.5 shadow-xs cursor-pointer disabled:opacity-50 shrink-0"
-                        >
-                          <RefreshCw className={`w-3.5 h-3.5 ${realtimeTest.running ? 'animate-spin' : ''}`} />
-                          {realtimeTest.running ? 'Test Ediliyor…' : 'Realtime Canlı Test Et'}
-                        </button>
+                <div className="p-4 rounded-xl border border-line bg-canvas/40 space-y-3">
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                    <div>
+                      <div className="font-bold text-base text-ink flex items-center gap-1.5">
+                        <Zap className="w-4 h-4 text-warn" />
+                        Canlı Yayın (Postgres NOTIFY → Sunucu → SSE)
                       </div>
-
-                      {realtimeTest.result && (
-                        <div className="space-y-3">
-                          <div
-                            className={`p-3 rounded-xl text-sm font-medium border flex items-start gap-2.5 ${
-                              realtimeTest.result.postgresActive
-                                ? 'bg-ok-soft text-ok border-ok/30'
-                                : realtimeTest.result.broadcastActive
-                                ? 'bg-warn-soft text-warn border-warn/30'
-                                : 'bg-bad-soft text-bad-text border-bad/30'
-                            }`}
-                          >
-                            {realtimeTest.result.postgresActive ? (
-                              <CheckCircle2 className="w-5 h-5 text-ok shrink-0 mt-0.5" />
-                            ) : (
-                              <AlertTriangle className="w-5 h-5 text-warn shrink-0 mt-0.5" />
-                            )}
-                            <div className="space-y-1">
-                              <div className="font-bold">
-                                {realtimeTest.result.postgresActive
-                                  ? 'Tam Kapasite: Hem WebSocket Hem PostgreSQL Yayını Aktif!'
-                                  : realtimeTest.result.broadcastActive
-                                  ? 'WebSocket Canlı Yayını Aktif — PostgreSQL Yayını Açılmalı'
-                                  : 'Realtime Bağlantı Hatası'}
-                              </div>
-                              <div className="text-xs leading-relaxed">
-                                {realtimeTest.result.message}
-                              </div>
-                            </div>
-                          </div>
-
-                          {/* If PostgreSQL changes not active yet, show 1-click fix buttons and guide */}
-                          {!realtimeTest.result.postgresActive && (
-                            <div className="p-3.5 bg-white rounded-xl border border-warn/90 shadow-xs space-y-2.5">
-                              <div className="text-xs text-ink font-bold flex items-center gap-1.5">
-                                <Sparkles className="w-4 h-4 text-warn" />
-                                PostgreSQL Realtime Yayınını Açmak İçin (2 Kolay Yol):
-                              </div>
-                              <div className="text-xs text-ink-2 space-y-1.5 pl-1">
-                                <div>
-                                  <strong>1. Yöntem (Dashboard - 10 saniye):</strong> Supabase panelinizde{' '}
-                                  <a
-                                    href={`https://supabase.com/dashboard/project/${projectRef}/database/publications`}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="text-accent font-semibold underline inline-flex items-center gap-0.5"
-                                  >
-                                    Database &gt; Publications &gt; supabase_realtime
-                                    <ExternalLink className="w-3 h-3 inline" />
-                                  </a>{' '}
-                                  menüsüne tıklayın ve <code>questions</code>, <code>past_questions</code>, <code>lecture_notes</code>, <code>committees</code>, <code>system_status</code> anahtarlarını açın.
-                                </div>
-                                <div>
-                                  <strong>2. Yöntem (1 Tıkla SQL):</strong> Aşağıdaki butona tıklayarak SQL komutunu kopyalayın ve{' '}
-                                  <a
-                                    href={`https://supabase.com/dashboard/project/${projectRef}/sql/new`}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="text-accent font-semibold underline inline-flex items-center gap-0.5"
-                                  >
-                                    Supabase SQL Editöründe
-                                    <ExternalLink className="w-3 h-3 inline" />
-                                  </a>{' '}
-                                  yapıştırıp <strong>Run</strong> butonuna basın.
-                                </div>
-                              </div>
-
-                              <div className="flex flex-wrap items-center gap-2 pt-1">
-                                <button
-                                  type="button"
-                                  onClick={copyRealtimeSql}
-                                  className="h-8 px-3 rounded-lg bg-warn hover:bg-warn text-white font-semibold text-xs inline-flex items-center gap-1.5 shadow-xs cursor-pointer"
-                                >
-                                  {copiedRealtimeSql ? <Check className="w-3.5 h-3.5 text-white" /> : <Copy className="w-3.5 h-3.5" />}
-                                  {copiedRealtimeSql ? 'Realtime SQL Kopyalandı!' : '1 Tıkla Realtime SQL Kopyala'}
-                                </button>
-
-                                <a
-                                  href={`https://supabase.com/dashboard/project/${projectRef}/sql/new`}
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                  className="h-8 px-3 rounded-lg border border-line bg-white hover:bg-canvas text-ink font-semibold text-xs inline-flex items-center gap-1.5 cursor-pointer"
-                                >
-                                  <ExternalLink className="w-3.5 h-3.5" />
-                                  Supabase SQL Editörü Aç
-                                </a>
-
-                                <a
-                                  href={`https://supabase.com/dashboard/project/${projectRef}/database/publications`}
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                  className="h-8 px-3 rounded-lg border border-line bg-white hover:bg-canvas text-ink font-semibold text-xs inline-flex items-center gap-1.5 cursor-pointer"
-                                >
-                                  <ExternalLink className="w-3.5 h-3.5" />
-                                  Yayınlar (Publications) Menüsü Aç
-                                </a>
-                              </div>
-                            </div>
-                          )}
-                        </div>
-                      )}
+                      <div className="text-xs text-ink-3">
+                        Veritabanındaki değişiklikler tüm ziyaretçilere sunucu üzerinden anlık iletilir.
+                      </div>
                     </div>
-                  );
-                })()}
+                    <button
+                      type="button"
+                      onClick={handleTestRealtime}
+                      disabled={realtimeTest.running}
+                      className="h-8 px-3 rounded-lg bg-accent hover:bg-accent text-white font-semibold text-xs inline-flex items-center gap-1.5 shadow-xs cursor-pointer disabled:opacity-50 shrink-0"
+                    >
+                      <RefreshCw className={`w-3.5 h-3.5 ${realtimeTest.running ? 'animate-spin' : ''}`} />
+                      {realtimeTest.running ? 'Test Ediliyor…' : 'Canlı Yayını Test Et'}
+                    </button>
+                  </div>
 
-                <div className="pt-2 flex flex-wrap items-center gap-3">
-                  <button
-                    type="button"
-                    onClick={copySupabaseSql}
-                    className="h-9 px-3 rounded-lg border border-line bg-white hover:bg-canvas text-ink font-semibold text-sm inline-flex items-center gap-2 cursor-pointer transition-colors"
-                  >
-                    {copiedSql ? <Check className="w-4 h-4 text-ok" /> : <Copy className="w-4 h-4" />}
-                    {copiedSql ? 'SQL Şeması Kopyalandı!' : 'Supabase SQL Şemasını Kopyala'}
-                  </button>
-                  <a
-                    href="https://supabase.com/dashboard"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="h-9 px-3 rounded-lg border border-line bg-white hover:bg-canvas text-ink font-semibold text-sm inline-flex items-center gap-2 cursor-pointer transition-colors"
-                  >
-                    Supabase Dashboard'a Git
-                    <ExternalLink className="w-3.5 h-3.5" />
-                  </a>
+                  {realtimeTest.result && (
+                    <div
+                      className={`p-3 rounded-xl text-sm font-medium border flex items-start gap-2.5 ${
+                        realtimeTest.result.postgresActive
+                          ? 'bg-ok-soft text-ok border-ok/30'
+                          : realtimeTest.result.broadcastActive
+                          ? 'bg-warn-soft text-warn border-warn/30'
+                          : 'bg-bad-soft text-bad-text border-bad/30'
+                      }`}
+                    >
+                      {realtimeTest.result.postgresActive ? (
+                        <CheckCircle2 className="w-5 h-5 text-ok shrink-0 mt-0.5" />
+                      ) : (
+                        <AlertTriangle className="w-5 h-5 text-warn shrink-0 mt-0.5" />
+                      )}
+                      <div className="space-y-1">
+                        <div className="font-bold">
+                          {realtimeTest.result.postgresActive
+                            ? 'Canlı yayın çalışıyor (NOTIFY → SSE gidiş-dönüş başarılı)'
+                            : realtimeTest.result.broadcastActive
+                            ? 'SSE akışı açık — Postgres bildirimi geri gelmedi'
+                            : 'Canlı akışa (SSE) bağlanılamadı'}
+                        </div>
+                        <div className="text-xs leading-relaxed">
+                          {realtimeTest.result.message}
+                        </div>
+                      </div>
+                    </div>
+                  )}
+
+                  <div className="p-3 rounded-lg bg-white border border-line/60 text-xs text-ink-2 space-y-1.5">
+                    <div>
+                      Canlı yayın, Postgres tetikleyicileri (<code className="font-mono">NOTIFY</code>) → sunucu (<code className="font-mono">LISTEN</code>) → SSE (<code className="font-mono">/api/realtime/events</code>) zinciriyle çalışır; tarayıcıda ek bir ayar gerekmez.
+                    </div>
+                    <div>
+                      Sorun varsa sunucu loglarına ve <code className="font-mono">/api/realtime/status</code> uç noktasına bakın.
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -896,14 +665,14 @@ ALTER TABLE public.users REPLICA IDENTITY FULL;
                         onChange={() => setDbMode('auto')} 
                       />
                     </div>
-                    <span className="text-2xs text-ink-3">Firebase Spark kotası dolarsa otomatik Supabase devralır.</span>
+                    <span className="text-2xs text-ink-3">Firebase Spark kotası dolarsa otomatik olarak sunucu veritabanı (meds-pg) devralır.</span>
                   </label>
 
                   <label className={`p-3 rounded-lg border flex flex-col gap-1 cursor-pointer transition-colors ${
                     dbMode === 'supabase' ? 'border-accent bg-accent-soft' : 'border-line hover:bg-canvas'
                   }`}>
                     <div className="flex items-center justify-between">
-                      <span className="font-bold text-sm text-ink">Yalnızca Supabase</span>
+                      <span className="font-bold text-sm text-ink">Yalnızca sunucu veritabanı (meds-pg)</span>
                       <input 
                         type="radio" 
                         name="db_mode" 
@@ -911,7 +680,7 @@ ALTER TABLE public.users REPLICA IDENTITY FULL;
                         onChange={() => setDbMode('supabase')} 
                       />
                     </div>
-                    <span className="text-2xs text-ink-3">Firebase kotalarını atlar, doğrudan Supabase PostgreSQL kullanır.</span>
+                    <span className="text-2xs text-ink-3">Firebase kotalarını atlar, doğrudan sunucu üzerinden meds-pg PostgreSQL kullanır.</span>
                   </label>
 
                   <label className={`p-3 rounded-lg border flex flex-col gap-1 cursor-pointer transition-colors ${
@@ -991,27 +760,13 @@ ALTER TABLE public.users REPLICA IDENTITY FULL;
                 </div>
               </div>
 
-              {/* Supabase Config */}
-              <div className="p-4 rounded-xl border border-line bg-white space-y-4">
-                <h4 className="font-bold text-base text-ink m-0">Supabase Bağlantı Bilgileri</h4>
-                <div>
-                  <label className="block text-sm font-semibold text-ink mb-1">Supabase URL</label>
-                  <input
-                    type="text"
-                    value={customSupaUrl}
-                    onChange={(e) => setCustomSupaUrl(e.target.value)}
-                    className="w-full h-10 px-3 rounded-lg border border-line bg-field text-sm text-ink font-mono focus:border-accent outline-0"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-semibold text-ink mb-1">Supabase Anon / Publishable Key</label>
-                  <input
-                    type="password"
-                    value={customSupaKey}
-                    onChange={(e) => setCustomSupaKey(e.target.value)}
-                    className="w-full h-10 px-3 rounded-lg border border-line bg-field text-sm text-ink font-mono focus:border-accent outline-0"
-                  />
-                </div>
+              {/* Veritabanı bağlantısı (salt okunur bilgi) */}
+              <div className="p-4 rounded-xl border border-line bg-white space-y-2">
+                <h4 className="font-bold text-base text-ink m-0">Veritabanı Bağlantısı</h4>
+                <p className="text-sm text-ink-2 m-0">
+                  Veritabanı (meds-pg PostgreSQL) yalnızca sunucu üzerinden erişilir; tarayıcıda bağlantı adresi veya anahtar girilmez.
+                  Tüm sorgular <code className="font-mono">/api/db/query</code> uç noktasından geçer, bağlantı ayarları sunucunun <code className="font-mono">.env</code> dosyasındadır.
+                </p>
               </div>
 
               {/* Save Button */}

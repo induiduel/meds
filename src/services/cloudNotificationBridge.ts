@@ -1,12 +1,12 @@
 import fs from 'fs';
 import path from 'path';
-import type { SupabaseClient } from '@supabase/supabase-js';
 import { db } from './firestoreDb.ts';
 import { collection, getDocs, query, orderBy, limit, onSnapshot } from 'firebase/firestore';
 
 export interface CloudBridgeOptions {
   dataDir: string;
-  cloudSupabase: SupabaseClient;
+  /** Eski bulut Supabase köprüsü; Supabase kaldırıldı, null verilir (yalnız Firebase dinlenir). */
+  cloudSupabase: any | null;
   onNewNotification: (params: {
     type: 'report' | 'comment' | 'test';
     questionId: string;
@@ -23,7 +23,7 @@ export interface CloudBridgeOptions {
 export class CloudNotificationBridge {
   private dataDir: string;
   private idsFile: string;
-  private cloudSupabase: SupabaseClient;
+  private cloudSupabase: any | null;
   private onNewNotification: CloudBridgeOptions['onNewNotification'];
   private onSyncSubscriptions?: CloudBridgeOptions['onSyncSubscriptions'];
   private processedIds: Set<string> = new Set();
