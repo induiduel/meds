@@ -563,8 +563,11 @@ export default function App() {
   }, []);
 
   // Load questions when selected committee changes or when switching to a question tab
+  // Sekme değişimi yalnız ilk yüklemeyi öne çeker; aynı kurul için havuz yeniden indirilmez
+  const loadedCommitteeRef = useRef<string | null>(null);
   useEffect(() => {
-    if (!selectedCommitteeId) return;
+    if (!selectedCommitteeId || loadedCommitteeRef.current === selectedCommitteeId) return;
+    const load = () => { loadedCommitteeRef.current = selectedCommitteeId; fetchQuestions(); };
 
     const isQuestionTab =
       activeTab === 'questions' ||
@@ -574,17 +577,17 @@ export default function App() {
       activeTab === 'stats';
 
     if (isQuestionTab) {
-      fetchQuestions();
+      load();
       return;
     }
 
     // Kullanıcı çıkmış, öğren, sözlük gibi farklı bir sekmedeyse ilk açılış bant genişliğini boğmamak
     // için soru havuzunu tarayıcı boşta kaldığında (idle) arka planda sessizce yükle.
     if (typeof window !== 'undefined' && 'requestIdleCallback' in window) {
-      const id = (window as any).requestIdleCallback(() => fetchQuestions(), { timeout: 3500 });
+      const id = (window as any).requestIdleCallback(load, { timeout: 3500 });
       return () => (window as any).cancelIdleCallback(id);
     } else {
-      const timer = setTimeout(() => fetchQuestions(), 2500);
+      const timer = setTimeout(load, 2500);
       return () => clearTimeout(timer);
     }
   }, [selectedCommitteeId, activeTab]);
