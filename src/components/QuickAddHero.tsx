@@ -811,7 +811,8 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
   const [dismissedSpell, setDismissedSpell] = useState<string | null>(null);
   useEffect(() => {
     const q = debouncedText || text;
-    if (mode === 'option' || !q.trim() || q.trim().split(/\s+/).length < 2) { setSpell(null); return; }
+    // Kökte öneri ComposerAssist kutusunda gösterilir
+    if (mode === 'option' || mode === 'stem' || !q.trim() || q.trim().split(/\s+/).length < 2) { setSpell(null); return; }
 
     // 1. Önce anlık tıp sözlüğü ile kontrol et (< 1ms, sıfır gecikme)
     const localSpell = smartComposerService.getSpellingCorrection(q);
@@ -1288,7 +1289,7 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
                 </div>
               )}
             </div>
-            {spell?.text && spell.text !== dismissedSpell && (
+            {mode !== 'stem' && spell?.text && spell.text !== dismissedSpell && (
               <div className="ms-pop-in flex items-center gap-2 text-base text-ink-2 min-w-0">
                 <span className="shrink-0 text-ink-3">Bunu mu kastettiniz?</span>
                 <button

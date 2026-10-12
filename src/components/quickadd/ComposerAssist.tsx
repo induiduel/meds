@@ -86,6 +86,22 @@ export const ComposerAssist: React.FC<{
     return () => window.clearTimeout(idleTimer);
   }, [value, active, committeeId]);
 
+  // 2b. Yerel sözlük yazım hatası bulamazsa (ör. 5 harften kısa "Dwn") sunucunun derlem yazım önerisine sor
+  const [serverSpell, setServerSpell] = useState<{ q: string; text: string; changes: { from: string; to: string }[] } | null>(null);
+  const localHasSpell = !!localResult?.spell;
+  useEffect(() => {
+    const q = value;
+    if (!active || localHasSpell || q.trim().split(/\s+/).length < 2) { setServerSpell(null); return; }
+    const ctrl = new AbortController();
+    const t = window.setTimeout(() => {
+      ApiService.suggestSpelling(q, ctrl.signal).then((r) => {
+        if (ctrl.signal.aborted) return;
+        setServerSpell(r?.text && r.text !== q && r.changes?.length ? { q, text: r.text, changes: r.changes } : null);
+      });
+    }, 400);
+    return () => { ctrl.abort(); window.clearTimeout(t); };
+  }, [value, active, localHasSpell]);
+
   // 3. Ayna Katmanı (ca-mirror) Textarea ile Birebir Piksel Eşleme
   useEffect(() => {
     if (!active) {
@@ -161,8 +177,15 @@ export const ComposerAssist: React.FC<{
   };
 
   const options = localResult?.options || [];
-  const fix = localResult?.fix || null;
-  const spell = localResult?.spell || null;
+  // Sunucu önerisi yalnız tam o metin için geçerli (yazmaya devam edilince eski öneri uygulanmaz)
+  const spell = localResult?.spell || (serverSpell && serverSpell.q === value ? serverSpell : null);
+  let fix = localResult?.fix || null;
+  if (spell && !localResult?.spell) {
+    // Sunucu yazım düzeltmesini noktalama düzeltmesiyle birleştir
+    const punct = smartComposerService.getPunctuationFix(value, spell.text);
+    const sc = spell.changes.map((c) => `${c.from} → ${c.to}`);
+    fix = punct ? { text: punct.text, changes: [...sc, ...punct.changes] } : { text: spell.text, changes: sc };
+  }
 
   // Düzeltme seçeneği: hem noktalama hem yazım hatalarını birleştirir
   const activeFix = fix || (spell ? { text: spell.text, changes: spell.changes.map((c) => `${c.from} → ${c.to}`) } : null);
