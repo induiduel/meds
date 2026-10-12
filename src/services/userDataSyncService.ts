@@ -149,6 +149,24 @@ export function collectLocalUserData(): FullUserDataBundle {
 }
 
 /**
+ * Yedek isteği kimliği: oturum açıksa Firebase ID jetonu (sunucu uid/e-postayı ondan alır), değilse
+ * cihazın gizli jetonu (`dev-…`). Önbellekteki eski profil uid'si jetonsuz kullanılamaz; sunucu reddeder.
+ */
+async function backupIdentity(): Promise<{ uid: string; headers: Record<string, string> }> {
+  const user = auth.currentUser;
+  if (user) {
+    try {
+      const token = await user.getIdToken();
+      return { uid: user.uid, headers: { Authorization: `Bearer ${token}`, 'x-user-id': user.uid } };
+    } catch (_) {
+      /* jeton alınamazsa cihaz kimliğine düş */
+    }
+  }
+  const uid = getDeviceToken();
+  return { uid, headers: { 'x-user-id': uid } };
+}
+
+/**
  * Tüm kullanıcı verilerini sunucuya ve Supabase veritabanına aktarıp yedekler.
  */
 export async function backupUserDataToDatabase(): Promise<{
@@ -162,16 +180,14 @@ export async function backupUserDataToDatabase(): Promise<{
     return { success: false, error: 'Çevrimdışısınız. Bağlantı kurulduğunda otomatik eşitlenecektir.' };
   }
 
-  const payload = collectLocalUserData();
   const base = (getCustomApiUrl() || '').replace(/\/$/, '');
 
   try {
+    const who = await backupIdentity();
+    const payload = { ...collectLocalUserData(), uid: who.uid };
     const res = await fetch(`${base}/api/user-data/backup`, {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'x-user-id': payload.uid,
-      },
+      headers: { 'Content-Type': 'application/json', ...who.headers },
       body: JSON.stringify(payload),
     });
 
@@ -216,17 +232,13 @@ export async function restoreUserDataFromDatabase(): Promise<{
     return { success: false, error: 'Çevrimdışısınız. Bağlantı kurulduğunda yeniden deneyin.' };
   }
 
-  const firebaseUser = auth.currentUser;
-  const uid = firebaseUser?.uid || getDeviceToken();
-  const email = firebaseUser?.email || '';
   const base = (getCustomApiUrl() || '').replace(/\/$/, '');
 
   try {
-    const query = new URLSearchParams({ uid });
-    if (email) query.set('email', email);
-
+    const who = await backupIdentity();
+    const query = new URLSearchParams({ uid: who.uid });
     const res = await fetch(`${base}/api/user-data/backup?${query.toString()}`, {
-      headers: { 'x-user-id': uid },
+      headers: who.headers,
     });
 
     if (!res.ok) {

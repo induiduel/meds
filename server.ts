@@ -349,7 +349,8 @@ function requireWritePassword(req: express.Request, res: express.Response, next:
   // Salt-okunur retrieval uçları: yazma sayılmaz, parolasız herkese açık.
   // (Soru ekleme ekranındaki "benzer çıkmışlar / bulunan kaynaklar" bu uçları kullanır.)
   // /api/db/query kendi yetkisini denetler (yazma yalnız yönetici); /api/live/* yalnız SSE'ye sınırlı, hız sınırlı yayın.
-  const readOnlyPosts = ['/api/past-questions/similar', '/api/sources/for-fragment', '/api/db/query', '/api/live/broadcast', '/api/live/ping'];
+  // /api/user-data/backup sahipliği kendisi doğrular (Firebase ID jetonu ya da gizli cihaz jetonu).
+  const readOnlyPosts = ['/api/past-questions/similar', '/api/sources/for-fragment', '/api/db/query', '/api/live/broadcast', '/api/live/ping', '/api/user-data/backup'];
   const reqPath = String(req.originalUrl || req.path || '').split('?')[0];
   if (readOnlyPosts.some((p) => reqPath === p || reqPath.endsWith(p))) return next();
 
@@ -6304,6 +6305,13 @@ registerUserDataBackupRoutes(app, {
   saveUsers,
   mirrorUserToDb,
   getPastQuestions: getPastQuestionsDb,
+  firebaseApiKey: (() => {
+    try {
+      return JSON.parse(fs.readFileSync(path.join(__dirname, 'firebase-applet-config.json'), 'utf8')).apiKey;
+    } catch {
+      return undefined;
+    }
+  })(),
 });
 
 // Yönetim · veri kataloğu: tüm veri türleri tek arayüzde (liste/ara/süz, düzenle, değerlendir-sınıfla, ilişkiler)
