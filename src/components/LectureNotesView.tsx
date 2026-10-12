@@ -30,7 +30,6 @@ import {
 } from '../data/driveCatalog';
 import { renderSingleDriveSlide } from '../services/driveAutomation';
 import { SlideReaderModal } from './SlideReaderModal';
-import { DriveSyncVisualizer } from './DriveSyncVisualizer';
 import { ApiService } from '../services/api';
 import { multiDbManager } from '../services/multiDbManager';
 import { triggerDomHighlightAndScroll } from '../services/universalRedirectService';
@@ -458,37 +457,6 @@ export const LectureNotesView: React.FC<LectureNotesViewProps> = ({
     }
   };
 
-  // Handler: Open slide directly from DriveSyncVisualizer
-  const handleOpenSlideFromMonitor = (title: string, fileId?: string) => {
-    const existing = notes.find(n => 
-      n.title.toLowerCase() === title.toLowerCase() || 
-      n.title.toLowerCase().includes(title.toLowerCase().substring(0, 15)) ||
-      title.toLowerCase().includes(n.title.toLowerCase().substring(0, 15))
-    );
-    if (existing) {
-      setReaderNote(existing);
-      return;
-    }
-    const cat = DRIVE_SLIDES_CATALOG.find(c => 
-      c.title.toLowerCase() === title.toLowerCase() || 
-      (fileId && c.fileId === fileId) ||
-      c.title.toLowerCase().includes(title.toLowerCase().substring(0, 15))
-    );
-    if (cat) {
-      handleRenderSlide(cat);
-    } else {
-      handleRenderSlide({
-        id: `slide-${Date.now()}`,
-        title,
-        fileId: fileId || '',
-        totalRealPages: 30,
-        discipline: 'Tıp Dersi',
-        driveFolder: 'Kurul 1',
-        keyTopics: [title]
-      });
-    }
-  };
-
   // Handler: PDF file upload
   const handlePdfUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
@@ -623,7 +591,6 @@ export const LectureNotesView: React.FC<LectureNotesViewProps> = ({
         }
       />
       <section className="ln-prog" aria-label="Slayt işleme durumu">
-        {isAdmin && <DriveSyncVisualizer onSelectLecture={handleOpenSlideFromMonitor} />}
         <div className="ln-prog-row">
           <span><b>{renderedSlidesCount} / {TOTAL_CATALOG_SLIDES}</b> slayt işlendi · {renderedPagesCount.toLocaleString('tr-TR')} / {TOTAL_CATALOG_PAGES.toLocaleString('tr-TR')} sayfa</span>
           <span className="ln-prog-pct">%{progressPercent}</span>

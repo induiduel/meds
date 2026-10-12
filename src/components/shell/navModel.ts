@@ -67,7 +67,7 @@ export const NAV_ITEMS = I;
  * başına duran birincil düğmedir (SideNav); telefonda alt gezinmenin ortasındadır.
  */
 export const NAV_TREE: NavGroup[] = [
-  { label: 'Öğren', items: [I.learn, I.flashcards, I.summaries, I.notes] },
+  { label: 'Öğren', items: [I.learn, I.flashcards, I.summaries] },
   { label: 'Soru çöz', items: [I.past_exams, I.ornek_sorular, I.study, I.practice] },
   { label: 'Başvuru', items: [I.glossary, I.diseases, I.kazanimlar] },
   { label: 'Topluluk', items: [I.questions, I.matrix, I.leaderboard] },
