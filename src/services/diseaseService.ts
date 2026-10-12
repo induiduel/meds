@@ -1,16 +1,36 @@
 import { DiseaseProfile } from '../types/disease';
-import seedDiseases from '../data/diseases.json';
 import { isV2, normalizeDisease } from './diseaseModel';
+
+// 470 profil (~1 MB gzip) sayfa koduyla birlikte değil, ayrı parça olarak eşzamansız yüklenir
+let seed: DiseaseProfile[] | null = null;
+let loading: Promise<DiseaseProfile[]> | null = null;
 
 const CUSTOM_DISEASES_STORAGE_KEY = 'medsor_custom_diseases_v1';
 const FAVORITES_STORAGE_KEY = 'medsor_favorite_diseases_v1';
 
 export const DiseaseService = {
+  /** Tohum veriyi bir kez yükler (sonraki çağrılar önbellekten) */
+  load(): Promise<DiseaseProfile[]> {
+    if (seed) return Promise.resolve(seed);
+    if (!loading) {
+      loading = import('../data/diseases.json').then((m) => {
+        const raw = ((m as { default?: unknown }).default ?? m) as unknown[];
+        seed = raw.map(normalizeDisease);
+        return seed;
+      });
+    }
+    return loading;
+  },
+
+  isLoaded(): boolean {
+    return seed !== null;
+  },
+
   /**
    * Tüm hastalıkları getirir (varsayılan veritabanı + kullanıcının eklediği/düzenlediği)
    */
   getAllDiseases(): DiseaseProfile[] {
-    const list: DiseaseProfile[] = (seedDiseases as unknown[]).map(normalizeDisease);
+    const list: DiseaseProfile[] = [...(seed || [])];
     
     if (typeof localStorage !== 'undefined') {
       try {
@@ -101,7 +121,7 @@ export const DiseaseService = {
       const ids: string[] = raw ? JSON.parse(raw) : [];
       // Birleştirilen eski kimlikler kanonik kimliğe çevrilir
       const canon = new Map<string, string>();
-      for (const d of seedDiseases as Array<{ id: string; aliases?: string[] }>) for (const a of d.aliases || []) canon.set(a, d.id);
+      for (const d of seed || []) for (const a of d.aliases || []) canon.set(a, d.id);
       return new Set(ids.map((id) => canon.get(id) || id));
     } catch {
       return new Set();

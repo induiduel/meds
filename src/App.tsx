@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useMemo, useCallback, useRef, Suspense } from 'react';
+import { startLiveDataSync } from './services/liveDataSync';
 import { logActivity } from './services/activityLog';
 import { getVoterId, toggledVote } from './utils/voterId';
 import type { SearchHit } from './components/search/searchShared';
@@ -557,9 +558,13 @@ export default function App() {
     return () => unsubscribe();
   }, []);
 
-  // Load committees on mount
+  // Load committees on mount; canlı akıştan kurul değişikliği gelince yeniden çek
   useEffect(() => {
     fetchCommittees();
+    startLiveDataSync();
+    const onChange = () => fetchCommittees();
+    window.addEventListener('medsoru:committees-changed', onChange);
+    return () => window.removeEventListener('medsoru:committees-changed', onChange);
   }, []);
 
   // Load questions when selected committee changes or when switching to a question tab

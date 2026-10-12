@@ -58,6 +58,6 @@ echo
 if [[ "$DO_BUILD" == "1" ]]; then
   echo "==> [5/5] arama paketi + hastalık grafiği (AYRI konteynerde, arka planda; imza aynıysa ~1 sn)"
   # meds-app 3 GB tavanında derlemez (bellek koruması); derleme 2 GB sınırlı tek seferlik konteynerde
-  $SSH "$ORACLE_USER@$ORACLE_HOST" "cd $ORACLE_DIR && mkdir -p deploy/oracle/logs && nohup ./deploy/oracle/build-search.sh > deploy/oracle/logs/build-search.log 2>&1 &"
+  $SSH "$ORACLE_USER@$ORACLE_HOST" "cd $ORACLE_DIR && mkdir -p deploy/oracle/logs && nohup ./deploy/oracle/build-search.sh </dev/null > deploy/oracle/logs/build-search.log 2>&1 &"
 fi
 echo "BİTTİ."

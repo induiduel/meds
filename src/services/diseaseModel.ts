@@ -103,7 +103,7 @@ export function factPlain(f: DiseaseFact): string {
 }
 
 export function sectionFacts(d: DiseaseProfile, sec: DiseaseSectionId): DiseaseFact[] {
-  return (d.sections?.[sec] || []).filter((f) => f && String(f.text || '').trim());
+  return (d.sections?.[sec] || []).filter((f) => f && (String(f.text || '').trim() || (f.items || []).length));
 }
 
 export function sectionTexts(d: DiseaseProfile, sec: DiseaseSectionId): string[] {

@@ -248,7 +248,7 @@ def cmd_disa_aktar(_a):
                 nfacts += 1
                 fm.write(json.dumps({
                     'madde_id': f'{d["id"]}#{sec}-{i}', 'profil_id': d['id'], 'profil': d['name'], 'tur': d['kind'],
-                    'uzmanlik': d['category'], 'bolum': sec, 'etiket': f.get('label'), 'metin': f['text'],
+                    'uzmanlik': d['category'], 'bolum': sec, 'etiket': f.get('label'), 'metin': ' '.join([f['text']] + [f'- {x}' for x in f.get('items') or []]).strip(), 'alt_maddeler': f.get('items') or [],
                     'sinav': bool(f.get('key')), 'varliklar': f.get('entities') or [], 'ders_kaynagi': f.get('source'),
                     'dogrulayan_kaynaklar': [(d.get('references') or [])[i] for i in f.get('refs') or [] if i < len(d.get('references') or [])],
                 }, ensure_ascii=False) + '\n')

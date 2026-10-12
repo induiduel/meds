@@ -117,8 +117,11 @@ export const DiseasesView: React.FC<DiseasesViewProps> = ({
     setFavoriteIds(DiseaseService.getFavoriteIds());
   };
 
+  const [dataReady, setDataReady] = useState(DiseaseService.isLoaded());
   useEffect(() => {
-    reloadDiseases();
+    let alive = true;
+    DiseaseService.load().then(() => { if (alive) { reloadDiseases(); setDataReady(true); } });
+    return () => { alive = false; };
   }, []);
 
   /** Kimlik ya da birleştirilmiş eski kimlik */
@@ -481,7 +484,9 @@ export const DiseasesView: React.FC<DiseasesViewProps> = ({
         </div>
       )}
 
-      {filteredDiseases.length === 0 ? (
+      {!dataReady ? (
+        <p className="dz-result" aria-live="polite">Profiller yükleniyor…</p>
+      ) : filteredDiseases.length === 0 ? (
         <div className="dz-empty">
           <span className="dz-empty-ic" aria-hidden><BookOpenText /></span>
           <b>Eşleşen kayıt yok</b>
@@ -641,6 +646,12 @@ export const DiseasesView: React.FC<DiseasesViewProps> = ({
   );
 };
 
+/** Ders notu dosya adını okunur başlığa çevirir ("D4_D5_hiper_hipo_tiroid_260427_085228.md (Kurul 6)" → "hiper hipo tiroid (Kurul 6)") */
+function lectureLabel(src: string): string {
+  return src.replace(/_/g, ' ').replace(/\.md\b/g, '').replace(/\b\d{6}\b/g, '').replace(/\b[A-Z]\d+\b/g, '')
+    .replace(/^\s*\d+\s/, '').replace(/\s{2,}/g, ' ').trim();
+}
+
 /** Tek madde: etiket kalın, ==vurgu== fosforlu, kaynak numaraları tıklanabilir */
 const FactItem = memo(function FactItem({ f, d }: { f: DiseaseFact; d: DiseaseProfile }) {
   return (
@@ -653,7 +664,7 @@ const FactItem = memo(function FactItem({ f, d }: { f: DiseaseFact; d: DiseasePr
           onClick={(e) => { e.preventDefault(); document.getElementById(`disease-${d.id}-ref-${r}`)?.scrollIntoView({ behavior: 'smooth', block: 'center' }); }}>[{r + 1}]</a>
       ))}
       {f.items && f.items.length > 0 && <ul className="dz-sublist">{f.items.map((it, k) => <li key={k}><FactText text={it} /></li>)}</ul>}
-      {f.source && <small className="dz-fsrc">Ders notunda da var · {f.source.replace(/\.md$/, '').replace(/^\d+_/, '').replace(/_/g, ' ')}</small>}
+      {f.source && <small className="dz-fsrc">Ders notunda da var · {lectureLabel(f.source)}</small>}
     </li>
   );
 });

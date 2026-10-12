@@ -1698,7 +1698,8 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
             const denetleyiciData = (q as any).denetleyiciSurumu || {};
             const eskiData = (q as any).eskiSurum || (q as any).phase14Original || {};
             const activeVersion: 'denetleyici' | 'eski' | 'karsilastir' =
-              versionViewOverrides[q.id] || (isDenetleyici ? 'denetleyici' : 'eski');
+              // check-solve ile düzeltilmiş kayıt güncel sürümle açılır; eskiSurum/phase14Original yalnız istenince gösterilir
+              versionViewOverrides[q.id] || (isDenetleyici || (q as any).checkSolve?.status === 'onayli' ? 'denetleyici' : 'eski');
 
             const isEskiView = activeVersion === 'eski';
             const isCompareView = activeVersion === 'karsilastir';

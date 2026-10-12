@@ -1000,7 +1000,7 @@ function handleConditionalResponse(
   req: express.Request,
   res: express.Response,
   data: any,
-  cacheControl: string = 'public, max-age=120, stale-while-revalidate=600'
+  cacheControl: string = 'no-cache'
 ): boolean {
   const etag = computeEtag(data);
   res.setHeader('ETag', etag);
@@ -1095,7 +1095,7 @@ app.get('/api/version-hashes', (req, res) => {
       timestamp: Date.now(),
     };
 
-    res.setHeader('Cache-Control', 'public, max-age=15, stale-while-revalidate=60');
+    res.setHeader('Cache-Control', 'no-cache');
     res.json(hashes);
   } catch (err: any) {
     res.status(500).json({ error: 'Versiyon hashleri hesaplanamadı: ' + err.message });
@@ -1200,7 +1200,7 @@ app.get('/api/committees', (req, res) => {
     return (id.startsWith('donem3-') || c.year === 3 || /dönem\s*3/i.test(name)) && (term.includes('2026-2027') || !term);
   });
   const payload = { committees: filtered.length > 0 ? filtered : OFFICIAL_COMMITTEES_2026_2027 };
-  if (handleConditionalResponse(req, res, payload, 'public, max-age=300, stale-while-revalidate=86400')) return;
+  if (handleConditionalResponse(req, res, payload, 'no-cache')) return;
   res.json(payload);
 });
 
@@ -1252,7 +1252,7 @@ app.get('/api/questions', (req, res) => {
   result.sort((a, b) => a.questionNumber - b.questionNumber);
   const questionsToServe = fields ? applySparseFields(result, fields) : result;
   const payload = { questions: questionsToServe };
-  if (handleConditionalResponse(req, res, payload, 'public, max-age=60, stale-while-revalidate=300')) return;
+  if (handleConditionalResponse(req, res, payload, 'no-cache')) return;
   res.json(payload);
 });
 
@@ -1390,7 +1390,7 @@ app.get('/api/data-catalog', (req, res) => {
       cat.veri_kumeleri = (cat.veri_kumeleri || []).map(({ yol, ortak_yol, ...rest }: any) => rest);
       dataCatalogCache = { mtime: stat.mtimeMs, data: cat };
     }
-    if (handleConditionalResponse(req, res, dataCatalogCache.data, 'public, max-age=600, stale-while-revalidate=86400')) return;
+    if (handleConditionalResponse(req, res, dataCatalogCache.data, 'no-cache')) return;
     res.json(dataCatalogCache.data);
   } catch (err: any) {
     res.status(500).json({ error: 'Veri kataloğu okunamadı: ' + err.message });
@@ -1907,8 +1907,8 @@ app.get('/api/learn-links', (req, res) => {
     if (!learnLinksCache || learnLinksCache.mtime !== stat.mtimeMs) {
       learnLinksCache = { mtime: stat.mtimeMs, content: fs.readFileSync(f, 'utf-8') };
     }
-    if (handleConditionalResponse(req, res, learnLinksCache.content, 'public, max-age=300, stale-while-revalidate=3600')) return;
-    res.setHeader('Cache-Control', 'public, max-age=300, stale-while-revalidate=3600');
+    if (handleConditionalResponse(req, res, learnLinksCache.content, 'no-cache')) return;
+    res.setHeader('Cache-Control', 'no-cache');
     res.type('application/json').send(learnLinksCache.content);
   } catch (err: any) {
     res.status(500).json({ error: 'Öğren bağlantıları okunamadı: ' + err.message });
@@ -1963,8 +1963,8 @@ app.get('/api/learn-match-index', (req, res) => {
     const q = String(req.query.seviye || 'hafif');
     const level: LearnIndexLevel = q === 'orta' || q === 'guclu' ? q : 'hafif';
     const body = buildLearnMatchIndex(level);
-    if (handleConditionalResponse(req, res, body, 'public, max-age=300, stale-while-revalidate=3600')) return;
-    res.setHeader('Cache-Control', 'public, max-age=300, stale-while-revalidate=3600');
+    if (handleConditionalResponse(req, res, body, 'no-cache')) return;
+    res.setHeader('Cache-Control', 'no-cache');
     res.type('application/json').send(body);
   } catch (err: any) {
     res.status(500).json({ error: 'Öğren eşleşme indeksi üretilemedi: ' + err.message });
@@ -2128,8 +2128,8 @@ async function writePastQuestionsDbAsync(): Promise<void> {
   pastSaveRunning = (async () => {
     const tmp = `${PAST_QUESTIONS_FILE}.${process.pid}.tmp`;
     try {
-      // Biçim korunur (girintili; git farkları okunur kalsın) — maliyet artık oy başına değil, 1.2 sn'lik toplu yazmada bir kez
-      const jsonStr = JSON.stringify(snapshot, null, 2);
+      // GitHub 100 MB sınırını aşmamak için kompakt JSON yazılır (girintili halde 103MB+ aşımı oluyor)
+      const jsonStr = JSON.stringify(snapshot);
       await fs.promises.writeFile(tmp, jsonStr, 'utf-8');
       await fs.promises.rename(tmp, PAST_QUESTIONS_FILE);
       // Bu süreçte yeniden okumayı tetiklemesin: yazdığımız mtime "bilinen" sürüm olur
@@ -2201,15 +2201,27 @@ export function initLocalSupabaseRealtimeSync() {
 
         // Satır snake_case sütunlar taşır; soru nesnesinin kendisi `data` sütunundadır. Satırı soruya
         // karıştırmak exam_year/data alanlarını ekler ve her yazım yankısında `data` iç içe büyürdü.
+        // getPastQuestionsDb() sığ kopya döner; değişiklik savePastQuestionsDb ile belleğe+dosyaya işlenmeli,
+        // yoksa /api/past-exams ve /sync eski veriyi vermeye devam eder. updatedAt ileri alınır ki istemcilerin
+        // `since` tabanlı delta eşitlemesi değişikliği görsün.
         const incoming = payload.new?.data;
-        if (incoming && typeof incoming === 'object' && id) {
+        if (id) {
           try {
             const list = getPastQuestionsDb();
             const idx = list.findIndex((q: any) => q.id === id);
-            if (idx >= 0 && JSON.stringify(list[idx]) !== JSON.stringify(incoming)) {
+            let changed = false;
+            if (payload.eventType === 'DELETE') {
+              if (idx >= 0) { list.splice(idx, 1); changed = true; }
+            } else if (incoming && typeof incoming === 'object') {
               const { data: _nested, ...clean } = incoming as any;
-              list[idx] = { ...list[idx], ...clean };
+              const updatedAt = new Date(Math.max(Date.parse(payload.new?.updated_at || '') || 0, Date.now())).toISOString();
+              if (idx < 0) { list.push({ ...clean, id, updatedAt }); changed = true; }
+              else if (JSON.stringify(list[idx]) !== JSON.stringify({ ...list[idx], ...clean })) {
+                list[idx] = { ...list[idx], ...clean, updatedAt };
+                changed = true;
+              }
             }
+            if (changed) savePastQuestionsDb(list);
           } catch (_) {}
         }
 
@@ -2262,6 +2274,19 @@ export function initLocalSupabaseRealtimeSync() {
         broadcastRealtimeEvent('database_sync', { table: 'answer_votes', eventType: payload.eventType, time: Date.now() });
       }
     );
+
+    // 6. Kurul, ders notu ve örnek soru tabloları: istemciler kendi önbelleklerini düşürüp yeniden çeker
+    for (const table of ['committees', 'lecture_notes', 'practice_questions']) {
+      channel.on(
+        'postgres_changes',
+        { event: '*', schema: 'public', table },
+        (payload: any) => {
+          localRealtimeLastEventAt = Date.now();
+          localRealtimeEventsCount++;
+          broadcastRealtimeEvent('database_sync', { table, eventType: payload.eventType, id: payload.new?.id || payload.old?.id, time: Date.now() });
+        }
+      );
+    }
 
     // 5. system_status değişiklikleri
     channel.on(
@@ -6285,7 +6310,7 @@ app.get(['/api/decks', '/api/ogren', '/api/interactive-decks'], (req, res) => {
     }
 
     const payload = { total: filtered.length, decks: filtered };
-    if (handleConditionalResponse(req, res, payload, 'public, max-age=600, stale-while-revalidate=86400')) return;
+    if (handleConditionalResponse(req, res, payload, 'no-cache')) return;
     res.json(payload);
   } catch (err: any) {
     res.status(500).json({ error: err.message });
@@ -6335,7 +6360,7 @@ app.get(['/api/decks/:id', '/api/ogren/:id', '/api/interactive-decks/:id'], (req
     // ?format=json: tarayıcı UA'sına bakılmaksızın ham JSON (istemci çevrimdışı yedeği için)
     if (req.query.format === 'json') {
       const payload = { deck };
-      if (handleConditionalResponse(req, res, payload, 'public, max-age=3600, stale-while-revalidate=86400')) return;
+      if (handleConditionalResponse(req, res, payload, 'no-cache')) return;
       return res.json(payload);
     }
 
@@ -6346,7 +6371,7 @@ app.get(['/api/decks/:id', '/api/ogren/:id', '/api/interactive-decks/:id'], (req
     }
 
     const payload = { deck };
-    if (handleConditionalResponse(req, res, payload, 'public, max-age=3600, stale-while-revalidate=86400')) return;
+    if (handleConditionalResponse(req, res, payload, 'no-cache')) return;
     res.json(payload);
   } catch (err: any) {
     res.status(500).json({ error: err.message });
@@ -6367,7 +6392,7 @@ app.get(['/api/decks/:id/slides/:slideNum', '/api/ogren/:id/slides/:slideNum'], 
     const slide = deck.slides?.find((s: any) => s.slideNumber === num || s.slideIndex === num || s.id === `slide-${num}`) || deck.slides?.[num - 1];
     if (!slide) return res.status(404).json({ error: 'Slayt bulunamadı' });
 
-    res.setHeader('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
+    res.setHeader('Cache-Control', 'no-cache');
     res.json({ deckId: deck.id, deckTitle: deck.title, slide });
   } catch (err: any) {
     res.status(500).json({ error: err.message });
@@ -7682,7 +7707,7 @@ app.get('/api/summaries', (req, res) => {
         summariesMetaCache = { mtime, data: JSON.parse(fs.readFileSync(metaPath, 'utf8')) };
       }
       const payload = { success: true, count: summariesMetaCache.data.length, summaries: summariesMetaCache.data };
-      if (handleConditionalResponse(req, res, payload, 'public, max-age=600, stale-while-revalidate=86400')) return;
+      if (handleConditionalResponse(req, res, payload, 'no-cache')) return;
       return res.json(payload);
     }
     const fullPath = path.resolve(__dirname, 'data', 'lectureSummariesCatalog.json');
@@ -7703,7 +7728,7 @@ app.get('/api/summaries', (req, res) => {
         summariesMetaCache = { mtime, data: meta };
       }
       const payload = { success: true, count: summariesMetaCache.data.length, summaries: summariesMetaCache.data };
-      if (handleConditionalResponse(req, res, payload, 'public, max-age=600, stale-while-revalidate=86400')) return;
+      if (handleConditionalResponse(req, res, payload, 'no-cache')) return;
       return res.json(payload);
     }
     return res.json({ success: true, count: 0, summaries: [] });
@@ -7736,7 +7761,7 @@ app.get('/api/summaries/:id', (req, res) => {
     const found = getCachedSummaryById(id);
     if (found) {
       const payload = { success: true, summary: found };
-      if (handleConditionalResponse(req, res, payload, 'public, max-age=3600, stale-while-revalidate=86400')) return;
+      if (handleConditionalResponse(req, res, payload, 'no-cache')) return;
       return res.json(payload);
     }
     return res.status(404).json({ success: false, error: 'Ders özeti bulunamadı' });
@@ -9085,10 +9110,10 @@ app.get('/api/lecture-notes', (req, res) => {
         createdAt: n.createdAt,
         updatedAt: n.updatedAt,
       }));
-      if (handleConditionalResponse(req, res, compactNotes, 'public, max-age=120, stale-while-revalidate=600')) return;
+      if (handleConditionalResponse(req, res, compactNotes, 'no-cache')) return;
       return res.json(compactNotes);
     }
-    if (handleConditionalResponse(req, res, notes, 'public, max-age=120, stale-while-revalidate=600')) return;
+    if (handleConditionalResponse(req, res, notes, 'no-cache')) return;
     res.json(notes);
   } catch (err: any) {
     res.status(500).json({ error: 'Ders notları yüklenemedi: ' + err.message });
@@ -9106,7 +9131,7 @@ app.get('/api/lecture-notes/:id', (req, res) => {
     }
     // Faz 12 temizlik katmanı (özgün dosya değişmez); ?raw=1 ile özgün metin
     const payload = req.query.raw === '1' ? note : applyCleanOverlay(note);
-    if (handleConditionalResponse(req, res, payload, 'public, max-age=300, stale-while-revalidate=1200')) return;
+    if (handleConditionalResponse(req, res, payload, 'no-cache')) return;
     res.json(payload);
   } catch (err: any) {
     res.status(500).json({ error: 'Ders notu alınamadı: ' + err.message });
@@ -9439,9 +9464,10 @@ app.get('/api/search', async (req, res) => {
 });
 
 // 5. Trigger Full Multi-Modal Chunking & Cloud Sync
-app.post('/api/rag/reindex', async (req, res) => {
+app.post('/api/rag/reindex', requireAdmin, async (req, res) => {
   try {
-    const { syncToCloud = true, limit = 100 } = req.body || {};
+    // Bulut (Gemini) eşitlemesi eski yoldur; vektörler yerelde bge-m3 ile üretilir, açıkça istenmedikçe kapalı
+    const { syncToCloud = false, limit = 100 } = req.body || {};
     const result = await runAutoChunking({ syncToCloud, limit });
     res.json({ success: true, result });
   } catch (err: any) {
@@ -9570,7 +9596,7 @@ app.get('/api/transcriptions', (req, res) => {
   try {
     const list = getAllTranscriptionsMeta();
     const payload = { success: true, count: list.length, transcriptions: list };
-    if (handleConditionalResponse(req, res, payload, 'public, max-age=300, stale-while-revalidate=3600')) return;
+    if (handleConditionalResponse(req, res, payload, 'no-cache')) return;
     res.json(payload);
   } catch (err: any) {
     res.status(500).json({ success: false, error: err.message });

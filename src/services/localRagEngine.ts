@@ -21,6 +21,7 @@
 
 import fs from 'fs';
 import { latestReviews, normalizeKurul } from './phase14Overlay';
+import { mergedInto } from './questionMerge';
 import { applyCleanOverlay } from './lectureCleanOverlay.ts';
 import path from 'path';
 import crypto from 'crypto';
@@ -440,7 +441,13 @@ export function chunkPastQuestions(): RagChunk[] {
   const now = new Date().toISOString();
 
   for (const q of list) {
-    const isDenetleyici = Boolean(q.denetleyiciOnayi || q.denetleyici_onayi || q.surum === 'denetleyici');
+    // Sitede gösterilmeyen kayıtlar dizinlenmez: birleştirmede gizlenen kopya, karantina (check-solve dahil)
+    const cs = q.checkSolve?.status;
+    if (cs === 'karantina' || (!cs && (q.status === 'quarantined' || q.isQuarantined))) continue;
+    if (q.id && mergedInto(String(q.id))) continue;
+    // Check-solve (Faz 16) kaydı güncel ve doğrulanmış içeriktir; eski denetleyici sürümü onu ezmez
+    const csOk = cs === 'onayli';
+    const isDenetleyici = !csOk && Boolean(q.denetleyiciOnayi || q.denetleyici_onayi || q.surum === 'denetleyici');
     const denetleyiciData = q.denetleyiciSurumu || {};
 
     const stem = ((isDenetleyici ? (denetleyiciData.stem || q.stem) : (q.stem || q.reconstruction?.stem || q.rawQuestion?.stem || '')) || '').trim();
@@ -452,7 +459,7 @@ export function chunkPastQuestions(): RagChunk[] {
       : '';
     const claim = isDenetleyici
       ? (denetleyiciData.correctAnswer || q.correctAnswer || q.claimedAnswer || '')
-      : (q.claimedAnswer || q.reconstruction?.correctAnswer || q.reconstruction?.correctOption || '');
+      : (q.correctAnswer || q.claimedAnswer || q.reconstruction?.correctAnswer || q.reconstruction?.correctOption || '');
     const expl = isDenetleyici
       ? (denetleyiciData.tibbi_aciklama || denetleyiciData.explanation || q.explanation || '')
       : (q.explanation || q.reconstruction?.explanation || '');
@@ -473,13 +480,15 @@ export function chunkPastQuestions(): RagChunk[] {
         refs.map((r: string) => `- ${r}`).join('\n');
     }
 
-    const header = isDenetleyici
+    const header = csOk
+      ? '[ÇIKMIŞ SINAV SORUSU - DOĞRULANMIŞ]'
+      : isDenetleyici
       ? '[DENETLEYİCİ ONAYLI ÇIKMIŞ SINAV SORUSU - ALTIN STANDART]'
       : '[ÇIKMIŞ SINAV SORUSU]';
 
     const content = `${header}
 Ders / Branş: ${q.discipline || 'Tıp'}
-Kurul: ${q.committeeId || 'donem3-kurul1'}
+Kurul: ${q.committeeId || 'donem3-kurul1'}${q.kazanim?.metin ? `\nKazanım: ${q.kazanim.metin}` : ''}
 Sınav Yılı: ${q.examYear || 'Geçmiş Sınav'}
 Konu: ${q.topic || 'Kurul Sorusu'}
 ${isDenetleyici ? 'Denetim Statüsü: Denetleyici Onayı (Doğrulandı, Guyton/Robbins/Moore Uyumlu)\n' : ''}Soru Kökü:
@@ -509,7 +518,9 @@ ${expl ? `\nAkademik Açıklama & Patofizyolojik Mekanizma:\n${expl}` : ''}${opt
         isAmbiguous: q.isAmbiguous,
         hasSlideRef: Boolean(q.matchedNoteTitle || q.lectureReference),
         denetleyiciOnayi: isDenetleyici,
-        surum: isDenetleyici ? 'denetleyici' : 'orijinal',
+        checkSolve: csOk,
+        kazanimId: q.kazanim?.id,
+        surum: csOk ? 'check_solve' : isDenetleyici ? 'denetleyici' : 'orijinal',
         onayDurumu: isDenetleyici ? 'Denetleyici Onaylı' : 'Standart',
         hasOptionAnalysis: Boolean(sa && Object.keys(sa).length > 0)
       },
@@ -1489,6 +1500,14 @@ export async function runAutoChunking(options: { limit?: number; syncToCloud?: b
         newlyIndexed++;
       }
     }
+
+    // Çıkmış soru parçaları kaynak dosyanın tam yansımasıdır: artık üretilmeyen (silinen, birleştirilen, karantinaya alınan) soru parçası atılır
+    const pqIds = new Set(pq.map((c) => c.id));
+    let pruned = 0;
+    for (const [id, c] of memoryChunks) {
+      if (c.documentType === 'past_question' && !pqIds.has(id)) { memoryChunks.delete(id); pruned++; }
+    }
+    if (pruned) console.log(`🧹 Artık gösterilmeyen ${pruned} çıkmış soru parçası dizinden çıkarıldı`);
 
     await rebuildInvertedIndex();
     void warmSurfaceForms(); // yeni terimler öneri sözlüğüne de girsin (eskisi hazır olana dek kullanılır)
