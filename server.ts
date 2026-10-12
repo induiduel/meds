@@ -141,6 +141,7 @@ import { createQuestionIntake, formatUnitsForPrompt, applyIntakeToQuestion } fro
 import { createPoolClusterService } from './src/services/poolClusterService.ts';
 import { registerUserDataBackupRoutes } from './src/services/userDataBackupService.ts';
 
+import { initContentOverlay, resolveContent, markContentChanged, contentManifest } from './src/services/contentOverlay.ts';
 // @ts-ignore - dynamic ES module runner
 import {
   getAllScripts,
@@ -6332,14 +6333,18 @@ app.post('/api/notebooklm/ingest/flashcards', async (req, res) => {
 const INTERACTIVE_DECKS_FILE = path.resolve(__dirname, 'src', 'data', 'interactive_learning_decks.json');
 const INTERACTIVE_DECK_ITEMS_DIR = path.resolve(__dirname, 'src', 'data', 'decks', 'items');
 
-let decksCache: { mtime: number; data: any[] } | null = null;
+// Panel değişiklikleri data/content/ altında (canlı içerik katmanı); okuyan herkes önce oraya bakar.
+initContentOverlay(__dirname, DATA_DIR);
+
+let decksCache: { file: string; mtime: number; data: any[] } | null = null;
 function getDecksDb(): any[] {
   try {
-    if (fs.existsSync(INTERACTIVE_DECKS_FILE)) {
-      const mtime = fs.statSync(INTERACTIVE_DECKS_FILE).mtimeMs;
-      if (decksCache && decksCache.mtime === mtime) return decksCache.data;
-      const data = JSON.parse(fs.readFileSync(INTERACTIVE_DECKS_FILE, 'utf-8'));
-      decksCache = { mtime, data };
+    const file = resolveContent(INTERACTIVE_DECKS_FILE);
+    if (fs.existsSync(file)) {
+      const mtime = fs.statSync(file).mtimeMs;
+      if (decksCache && decksCache.file === file && decksCache.mtime === mtime) return decksCache.data;
+      const data = JSON.parse(fs.readFileSync(file, 'utf-8'));
+      decksCache = { file, mtime, data };
       return data;
     }
   } catch (e) {
@@ -6399,7 +6404,10 @@ registerDataCatalogRoutes(app, requireAdmin, {
   dataDir: DATA_DIR,
   musicFile: ensureSharedFile,
   // Panelden yapılan her değişiklik bağlı tüm istemcilere duyurulur; istemci ilgili veriyi yeniden çeker.
-  onChange: (entity) => broadcastRealtimeEvent('content_changed', { entity, at: Date.now() }),
+  onChange: (entity, ids) => {
+    markContentChanged(entity, ids);
+    broadcastRealtimeEvent('content_changed', { entity, ids: (ids || []).slice(0, 200), at: Date.now() });
+  },
   getPastQuestions: getPastQuestionsDb,
   savePastQuestions: savePastQuestionsDb,
   getServedPast: () => getServedPastList().list,
@@ -6519,7 +6527,8 @@ function loadDeckFromItemFiles(deckId: string): any {
 app.get(['/api/decks/:id', '/api/ogren/:id', '/api/interactive-decks/:id'], (req, res) => {
   try {
     const deckId = req.params.id;
-    let deck = loadDeckFromItemFiles(deckId);
+    // Panelde değiştirilen deste katmandadır; derlenmiş parça dosyaları eski kalır
+    let deck = resolveContent(INTERACTIVE_DECKS_FILE) === INTERACTIVE_DECKS_FILE ? loadDeckFromItemFiles(deckId) : null;
     if (!deck) {
       const list = getDecksDb();
       deck = list.find((d) => d.id === deckId || d.id === `k1p-${deckId}` || d.id.includes(deckId));
@@ -9729,6 +9738,43 @@ app.post('/api/ai/interactions/:id/upvote', (req, res) => {
 // DEEPSEEK DATA INTEGRATION & RAG ENDPOINTS
 // ----------------------------------------------------
 app.get('/api/deepseek/status', (_req, res) => {
+// Canlı içerik: pakete gömülü veriden yeni olanlar (panel değişiklikleri). İstemci açılışta bunu okur,
+// SSE `content_changed` gelince yeniden okur ve yalnız değişen veriyi sunucudan çeker.
+app.get('/api/content/manifest', (_req, res) => {
+  res.setHeader('Cache-Control', 'no-cache');
+  res.json({ entities: contentManifest(), at: Date.now() });
+});
+const sendContentFile = (res: express.Response, rel: string) => {
+  const file = resolveContent(path.join(__dirname, 'src', 'data', rel));
+  if (!fs.existsSync(file)) return res.status(404).json({ error: 'Bulunamadı' });
+  res.setHeader('Cache-Control', 'no-cache');
+  res.type('application/json');
+  res.sendFile(file);
+};
+app.get('/api/content/glossary', (_req, res) => sendContentFile(res, 'medical_glossary.json'));
+app.get('/api/content/diseases', (_req, res) => sendContentFile(res, 'diseases.json'));
+app.get('/api/content/ornek/:kurul/:ders', (req, res) => {
+  const { kurul, ders } = req.params;
+  if (!/^k\d$/.test(kurul) || !/^k\d-[A-Za-z0-9_-]+$/.test(ders)) return res.status(400).json({ error: 'Geçersiz ders' });
+  sendContentFile(res, path.join('ornek_sorular', kurul, `${ders}.json`));
+});
+/** Değişen destelerin liste bilgisi (slaytsız; derlemedeki decks/catalog.json ile aynı biçim) */
+app.get('/api/content/deck-catalog', (req, res) => {
+  const want = new Set(String(req.query.ids || '').split(',').map((x) => x.trim()).filter(Boolean));
+  const out = getDecksDb().filter((d) => d?.id && want.has(String(d.id)) && Array.isArray(d.slides) && d.slides.length).map((d) => {
+    const { slides, questions, steps, flashcards, ...meta } = d;
+    return {
+      ...meta,
+      slideCount: slides.length,
+      questionCount: meta.questionCount || (Array.isArray(questions) ? questions.length : 0) || slides.reduce((n: number, s: any) => n + (s.relatedQuestions?.length || s.questions?.length || 0), 0),
+      cardCount: meta.cardCount || meta.flashcardCount || (Array.isArray(flashcards) ? flashcards.length : 0) || slides.reduce((n: number, s: any) => n + (s.flashcards?.length || 0), 0),
+      firstSlideNumber: slides[0]?.slideNumber ?? 1,
+    };
+  });
+  res.setHeader('Cache-Control', 'no-cache');
+  res.json({ decks: out });
+});
+
   try {
     const items = loadDeepSeekContributions();
     let files: string[] = [];

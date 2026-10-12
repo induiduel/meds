@@ -155,6 +155,13 @@ export const GlossaryProvider: React.FC<{ children: React.ReactNode }> = ({ chil
     }
   }, [glossaryList.length]);
 
+  // Panelden sözlük değişince (canlı içerik) liste yeniden kurulur
+  useEffect(() => {
+    const onChange = () => { if (cachedGlossary) setGlossaryList([...cachedGlossary]); };
+    window.addEventListener('medsoru:glossary-changed', onChange);
+    return () => window.removeEventListener('medsoru:glossary-changed', onChange);
+  }, []);
+
   const handleSetDrawerOpen = useCallback((open: boolean) => {
     if (open && (!cachedGlossary || glossaryList.length === 0)) {
       fetchGlossaryAsync().then((list) => setGlossaryList(list));

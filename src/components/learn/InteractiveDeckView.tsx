@@ -640,7 +640,6 @@ export const FlashcardComponent: React.FC<{ card: SlideFlashcard }> = ({ card })
 export const InteractiveDeckView: React.FC<InteractiveDeckViewProps> = ({ initialDeckId, initialSlideNumber, onDeckChange, onOpenPdfModal, questionFocus, onClearQuestionFocus, isAdmin = false }) => {
   // Yeni ders ekranı varsayılan; klasik slayt ekranı Araçlar menüsünden açılır ve deste kapanınca sıfırlanır
   // Liste hafif katalogdan gelir; slaytlar yalnızca açılan deste için yüklenir (12 MB tek parça yerine)
-  const allDecks = DECK_CATALOG;
   const [deckId, setDeckId] = useState<string | null>(initialDeckId || null);
   const [playerViewMode, setPlayerViewMode] = useState<DeckViewMode>('interactive');
   const [adminArchiveFilter, setAdminArchiveFilter] = useState<'new_only' | 'all' | 'legacy_only'>('new_only');
@@ -657,10 +656,25 @@ export const InteractiveDeckView: React.FC<InteractiveDeckViewProps> = ({ initia
 
   const [activeDeck, setActiveDeck] = useState<InteractiveDeck | null>(null);
   const [deckLoading, setDeckLoading] = useState(false);
+  // Panelden deste değişince (canlı içerik): liste yeniden çizilir, açık deste yeniden yüklenir
+  const [liveTick, setLiveTick] = useState(0);
+  const [catalogTick, setCatalogTick] = useState(0);
+  const allDecks = useMemo(() => [...DECK_CATALOG], [catalogTick]);
+  const deckIdRef = useRef(deckId);
+  deckIdRef.current = deckId;
+  useEffect(() => {
+    const onChange = (e: Event) => {
+      const ids: string[] = (e as CustomEvent).detail?.ids || [];
+      setLiveTick((n) => (deckIdRef.current && ids.includes(deckIdRef.current) ? n + 1 : n));
+      setCatalogTick((n) => n + 1);
+    };
+    window.addEventListener('medsoru:decks-changed', onChange);
+    return () => window.removeEventListener('medsoru:decks-changed', onChange);
+  }, []);
   useEffect(() => {
     if (!deckId) { setActiveDeck(null); return; }
     let alive = true;
-    setDeckLoading(true);
+    if (!liveTick) setDeckLoading(true);
     loadDeck<InteractiveDeck>(deckId).then((d) => {
       if (!alive) return;
       const ok = d && Array.isArray(d.slides) && d.slides.length > 0 ? d : null;
@@ -674,7 +688,7 @@ export const InteractiveDeckView: React.FC<InteractiveDeckViewProps> = ({ initia
       }
     });
     return () => { alive = false; };
-  }, [deckId]); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [deckId, liveTick]); // eslint-disable-line react-hooks/exhaustive-deps
 
   // Cümle/Metin odaklama (?highlight=...) kontrolü
   useEffect(() => {

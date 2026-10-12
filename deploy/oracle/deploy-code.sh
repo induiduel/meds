@@ -21,6 +21,8 @@ echo "==> [0/4] ders işçisi yayınları: Oracle'da yayınlanan dersler önce y
 PY="$MEDS_DIR/.venv-ocr/bin/python"; [[ -x "$PY" ]] || PY=python3
 "$PY" "$MEDS_DIR/scripts/ders_isci/yayinla.py" --esitle || { echo "DURDU: yayınlar eşitlenemedi (yukarıdaki çıktıya bakın)"; exit 1; }
 
+echo "==> [0b/4] yönetim paneli değişiklikleri: Oracle data/content/ → yerel src/data (rsync ezmesin)"
+"$SCRIPT_DIR/content-overlay-sync.sh" || { echo "DURDU: panel değişiklikleri eşitlenemedi (yukarıdaki çıktıya bakın)"; exit 1; }
 echo "==> [1/4] rsync kod (src/data DAHİL, .env HARİÇ)"
 rsync -avz --checksum \
   --exclude='/node_modules' --exclude='/dist' --exclude='/dist-gh' \

@@ -65,6 +65,7 @@ async function loadFromIndexedDb(id: string): Promise<any> {
 }
 
 import { defaultApiBaseForThisHost } from '../config/deployment';
+import { contentReady, isContentChanged, changedIds, onContentChanged } from '../services/contentLive';
 
 /** Canlı API tabanı: Ayarlar'daki özel URL, yoksa bulunulan hostun varsayılanı (Oracle tüneli). */
 function apiBase(): string {
@@ -105,6 +106,13 @@ export function loadDeck<T = any>(id: string): Promise<T | null> {
   if (!p) {
     const loader = loaders[`./decks/items/${safe(id)}.json`];
     p = (async () => {
+      // 0. Panelden değiştirilen deste paketteki kopyadan yenidir: önce sunucudan
+      await contentReady();
+      if (isContentChanged('decks', id) && (typeof navigator === 'undefined' || navigator.onLine)) {
+        const fresh = await loadFromApi<T>(id);
+        if (fresh) return fresh;
+      }
+
       // 1. Önce Vite derlenmiş modülünü dene (RAM / hızlı chunk)
       if (loader) {
         try {
@@ -153,3 +161,31 @@ export const deckName = (d: { title?: string; shortTitle?: string }, short = tru
     .replace(/\s*\((?:yeni\s*)?mikro[-\s]?ders\)\s*/gi, ' ')
     .replace(/\s{2,}/g, ' ')
     .trim();
+
+/** Değişen destelerin liste bilgisini (başlık, ders…) sunucudan alıp DECK_CATALOG'u yerinde günceller. */
+async function patchCatalog(ids: string[]) {
+  if (!ids.length) return;
+  try {
+    const res = await fetch(`${apiBase()}/api/content/deck-catalog?ids=${encodeURIComponent(ids.join(','))}`, { cache: 'no-store' });
+    if (!res.ok) return;
+    const { decks } = (await res.json()) as { decks: DeckCatalogEntry[] };
+    for (const d of decks || []) {
+      const i = DECK_CATALOG.findIndex((x) => x.id === d.id);
+      if (i >= 0) DECK_CATALOG[i] = d;
+      else DECK_CATALOG.push(d);
+    }
+  } catch { /* çevrimdışı: paketteki liste kalır */ }
+}
+
+/** Panel değişikliği: önbellek düşer, liste güncellenir, açık ekranlar `medsoru:decks-changed` ile tazelenir. */
+function announce(ids: string[]) {
+  ids.forEach((id) => cache.delete(id));
+  void patchCatalog(ids).then(() => {
+    if (typeof window !== 'undefined') window.dispatchEvent(new CustomEvent('medsoru:decks-changed', { detail: { ids } }));
+  });
+}
+// Modül grafiği (contentLive ↔ api ↔ deckStore döngüsü) yüklenince kaydol
+if (typeof window !== 'undefined') setTimeout(() => {
+  void contentReady(8000).then(() => { const ids = changedIds('decks'); if (ids.length) announce(ids); });
+  onContentChanged('decks', (ids) => announce(ids.length ? ids : changedIds('decks')));
+}, 0);

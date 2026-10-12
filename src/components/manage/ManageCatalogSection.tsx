@@ -519,7 +519,7 @@ const CatalogDetail: React.FC<{
                   )}
                 </div>
               ))}
-              <p className="ui-hint">Sunucu yalnız bu alanları yazar ve önce yedek alır. Uygulama paketine gömülü veriler (src/data) bir sonraki derlemede güncellenir.</p>
+              <p className="ui-hint">Sunucu yalnız bu alanları yazar ve önce yedek alır. Kaydedince değişiklik sitede hemen görünür.</p>
             </div>
           )}
 

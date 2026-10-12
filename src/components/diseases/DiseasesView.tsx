@@ -121,7 +121,8 @@ export const DiseasesView: React.FC<DiseasesViewProps> = ({
   useEffect(() => {
     let alive = true;
     DiseaseService.load().then(() => { if (alive) { reloadDiseases(); setDataReady(true); } });
-    return () => { alive = false; };
+    window.addEventListener('medsoru:diseases-changed', reloadDiseases);
+    return () => { alive = false; window.removeEventListener('medsoru:diseases-changed', reloadDiseases); };
   }, []);
 
   /** Kimlik ya da birleştirilmiş eski kimlik */

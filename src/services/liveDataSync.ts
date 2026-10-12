@@ -7,6 +7,7 @@
 import { realtimeEventService } from './realtimeEvents';
 import { pastQuestionsCache } from './pastQuestionsCache';
 import { clientCache } from './clientCache';
+import { startContentLive } from './contentLive';
 
 let started = false;
 let pastTimer: ReturnType<typeof setTimeout> | null = null;
@@ -36,6 +37,7 @@ export function startLiveDataSync() {
   if (started || typeof window === 'undefined') return;
   started = true;
   realtimeEventService.connect();
+  startContentLive();
 
   window.addEventListener('medsoru:past-questions-changed', () => schedulePastSync());
 

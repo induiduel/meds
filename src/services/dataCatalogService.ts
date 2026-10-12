@@ -16,6 +16,7 @@ import path from 'path';
 import crypto from 'crypto';
 import type express from 'express';
 import { mergeSiblings } from './questionMerge.ts';
+import { resolveContent, writableContent } from './contentOverlay.ts';
 
 type Any = Record<string, any>;
 
@@ -37,7 +38,7 @@ export interface CatalogDeps {
   /** Yönetici seçkisi dosyası (data/ altında, yoksa tohumlanır) */
   musicFile?: () => string;
   /** Bir türde kayıt eklendi/değişti/silindi → istemcilere canlı yayın */
-  onChange?: (entity: string) => void;
+  onChange?: (entity: string, ids?: string[]) => void;
 }
 
 export interface RelationRef { entity: string; id: string; title: string; why: string }
@@ -79,8 +80,10 @@ const clip = (s: unknown, n = 140) => {
 };
 
 /* ---------- dosya yardımcıları (mtime önbellekli okuma, girintiyi koruyan atomik yazma + yedek) ---------- */
+// src/data altındaki dosyalar canlı içerik katmanından okunur / oraya yazılır (bkz. contentOverlay.ts)
 const fileCache = new Map<string, { mtime: number; data: any }>();
 function readJson(file: string, fallback: any) {
+  file = resolveContent(file);
   try {
     const st = fs.statSync(file);
     const c = fileCache.get(file);
@@ -115,14 +118,17 @@ function detectIndentRaw(file: string): number {
   }
 }
 function writeJsonAtomic(file: string, data: any, backupDir: string) {
-  const indent = detectIndent(file);
+  const current = resolveContent(file); // en güncel kopya: yedek ve girinti buradan
+  const target = writableContent(file); // src/data altındaysa canlı içerik katmanı
+  const indent = detectIndent(current);
   fs.mkdirSync(backupDir, { recursive: true });
   const stamp = new Date().toISOString().replace(/[:.]/g, '-');
-  if (fs.existsSync(file)) fs.copyFileSync(file, path.join(backupDir, `${path.basename(file)}.${stamp}.bak`));
-  const tmp = `${file}.${process.pid}.tmp`;
+  if (fs.existsSync(current)) fs.copyFileSync(current, path.join(backupDir, `${path.basename(file)}.${stamp}.bak`));
+  const tmp = `${target}.${process.pid}.tmp`;
   fs.writeFileSync(tmp, JSON.stringify(data, null, indent || undefined) + (indent ? '\n' : ''), 'utf8');
-  fs.renameSync(tmp, file);
-  fileCache.delete(file);
+  fs.renameSync(tmp, target);
+  fileCache.delete(target);
+  fileCache.delete(current);
   // Yedek klasörü şişmesin: dosya başına son 10 yedek kalır
   const prefix = path.basename(file) + '.';
   const olds = fs.readdirSync(backupDir).filter((f) => f.startsWith(prefix)).sort();
@@ -927,8 +933,8 @@ export function registerDataCatalogRoutes(app: express.Express, requireAdmin: ex
     try {
       const rec = c.build(req.body?.values || {});
       c.insert(rec);
-      deps.onChange?.(e.id);
-      res.json({ success: true, id: e.key(rec), record: rec, note: e.source.startsWith('src/') ? 'Eklendi. Uygulamadaki paket bir sonraki derlemede güncellenir.' : 'Eklendi.' });
+      deps.onChange?.(e.id, [e.key(rec)]);
+      res.json({ success: true, id: e.key(rec), record: rec, note: 'Eklendi. Sitede hemen görünür.' });
     } catch (err: any) {
       res.status(400).json({ error: err.message });
     }
@@ -952,10 +958,10 @@ export function registerDataCatalogRoutes(app: express.Express, requireAdmin: ex
         c.insert(rec, id);
         created.push(e.key(rec));
       }
-      deps.onChange?.(e.id);
-      res.json({ success: true, ids: created, id: created[0], note: e.source.startsWith('src/') ? 'Çoğaltıldı. Uygulamadaki paket bir sonraki derlemede güncellenir.' : 'Çoğaltıldı.' });
+      deps.onChange?.(e.id, created);
+      res.json({ success: true, ids: created, id: created[0], note: 'Çoğaltıldı. Sitede hemen görünür.' });
     } catch (err: any) {
-      if (created.length) deps.onChange?.(e.id);
+      if (created.length) deps.onChange?.(e.id, created);
       res.status(400).json({ error: err.message, ids: created });
     }
   });
@@ -988,8 +994,8 @@ export function registerDataCatalogRoutes(app: express.Express, requireAdmin: ex
     if (!e?.save) return res.status(400).json({ error: 'Bu veri türü buradan düzenlenemez (salt okunur).' });
     try {
       const saved = e.save(req.params.id, req.body?.patch || {});
-      deps.onChange?.(e.id);
-      res.json({ success: true, record: saved, note: e.source.startsWith('src/') ? 'Kaydedildi. Uygulamadaki paket bir sonraki derlemede güncellenir.' : 'Kaydedildi.' });
+      deps.onChange?.(e.id, [req.params.id]);
+      res.json({ success: true, record: saved, note: 'Kaydedildi. Sitede hemen görünür.' });
     } catch (err: any) {
       res.status(400).json({ error: err.message });
     }
@@ -1047,7 +1053,7 @@ export function registerDataCatalogRoutes(app: express.Express, requireAdmin: ex
         const keys = new Set(removed.map((x) => `${e.id}:${e.key(x)}`));
         writeTrash([...trashAll().filter((t) => !keys.has(t.key)), ...removed.map((x) => ({ key: `${e.id}:${e.key(x)}`, entity: e.id, id: e.key(x), title: e.title(x), record: x, deletedAt: now, by }))]);
       }
-      if (removed.length && e.id !== 'trash') deps.onChange?.(e.id);
+      if (removed.length && e.id !== 'trash') deps.onChange?.(e.id, removed.map((x) => e.key(x)));
       console.log(`[catalog] ${e.id}: ${removed.length}/${ids.length} kayıt ${permanent ? 'kalıcı olarak silindi' : 'çöp kutusuna taşındı'}`);
       res.json({ success: true, deleted: removed.length, requested: ids.length, permanent });
     } catch (err: any) {
@@ -1071,7 +1077,7 @@ export function registerDataCatalogRoutes(app: express.Express, requireAdmin: ex
       try {
         await e.restore(entries.map((t) => t.record));
         entries.forEach((t) => done.add(t.key));
-        deps.onChange?.(ent);
+        deps.onChange?.(ent, entries.map((t) => t.id));
       } catch (err: any) {
         errors.push(`${labelOf(ent)}: ${err.message}`);
       }

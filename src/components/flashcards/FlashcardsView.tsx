@@ -77,7 +77,7 @@ const glossaryGroup = (cat: string) => {
   return (cat.split(/\s*[\/&]\s*/)[0] || 'Diğer').trim();
 };
 
-const GLOSSARY_CARDS: StudyCard[] = GLOSSARY.map((g) => ({
+const glossaryCards = (): StudyCard[] => GLOSSARY.map((g) => ({
   id: `g:${g.term}`,
   group: glossaryGroup(g.category || 'Diğer'),
   front: g.term,
@@ -130,6 +130,13 @@ const plain = (s?: string) => String(s || '').replace(/\*\*/g, '');
 export const FlashcardsView: React.FC = () => {
   const [source, setSource] = useState<'terms' | 'lessons'>('terms');
   const [deckCards, setDeckCards] = useState<StudyCard[] | null>(null);
+  // Sözlük panelden değişince (canlı içerik) terim kartları yeniden kurulur
+  const [termCards, setTermCards] = useState<StudyCard[]>(glossaryCards);
+  useEffect(() => {
+    const onChange = () => setTermCards(glossaryCards());
+    window.addEventListener('medsoru:glossary-changed', onChange);
+    return () => window.removeEventListener('medsoru:glossary-changed', onChange);
+  }, []);
   const [group, setGroup] = useState('all');
   const [query, setQuery] = useState('');
   // Göz atma süzgeci: duruma göre ya da favoriler (favoriler kaynak/konu seçiminden bağımsız)
@@ -148,7 +155,7 @@ export const FlashcardsView: React.FC = () => {
   }, [source, deckCards]);
   useEffect(() => setGroup('all'), [source]);
 
-  const all = source === 'terms' ? GLOSSARY_CARDS : deckCards || [];
+  const all = source === 'terms' ? termCards : deckCards || [];
   const groups = useMemo(() => {
     const m: Record<string, number> = {};
     all.forEach((c) => (m[c.group] = (m[c.group] || 0) + 1));
@@ -343,7 +350,7 @@ export const FlashcardsView: React.FC = () => {
         <div role="radiogroup" aria-label="Kaynak" className="ds-seg">
           {(
             [
-              ['terms', BookA, 'Terimler', GLOSSARY_CARDS.length],
+              ['terms', BookA, 'Terimler', termCards.length],
               ['lessons', GraduationCap, 'Ders kartları', deckCards?.length],
             ] as const
           ).map(([id, Icon, label, n]) => (

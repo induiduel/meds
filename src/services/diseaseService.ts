@@ -1,5 +1,7 @@
 import { DiseaseProfile } from '../types/disease';
 import { isV2, normalizeDisease } from './diseaseModel';
+import { safeJsonFetch } from './api';
+import { contentReady, isContentChanged, onContentChanged } from './contentLive';
 
 // 470 profil (~1 MB gzip) sayfa koduyla birlikte değil, ayrı parça olarak eşzamansız yüklenir
 let seed: DiseaseProfile[] | null = null;
@@ -13,11 +15,21 @@ export const DiseaseService = {
   load(): Promise<DiseaseProfile[]> {
     if (seed) return Promise.resolve(seed);
     if (!loading) {
-      loading = import('../data/diseases.json').then((m) => {
-        const raw = ((m as { default?: unknown }).default ?? m) as unknown[];
+      loading = (async () => {
+        // Panelden değiştirildiyse paketteki kopya eskidir: sunucudan (canlı içerik katmanı)
+        await contentReady();
+        let raw: unknown[] | null = null;
+        if (isContentChanged('diseases')) {
+          const r = await safeJsonFetch<unknown[]>('/api/content/diseases', { cache: 'no-store' });
+          if (r.ok && Array.isArray(r.data)) raw = r.data;
+        }
+        if (!raw) {
+          const m = await import('../data/diseases.json');
+          raw = ((m as { default?: unknown }).default ?? m) as unknown[];
+        }
         seed = raw.map(normalizeDisease);
         return seed;
-      });
+      })();
     }
     return loading;
   },
@@ -148,3 +160,13 @@ export const DiseaseService = {
     return isNowFav;
   }
 };
+
+// Panel değişikliği: yeniden yüklenir, açık ekran `medsoru:diseases-changed` ile tazelenir
+if (typeof window !== 'undefined') setTimeout(() => {
+  onContentChanged('diseases', () => {
+    if (!seed) return; // hiç açılmadıysa ilk açılışta zaten güncel olanı alır
+    seed = null;
+    loading = null;
+    void DiseaseService.load().then(() => window.dispatchEvent(new CustomEvent('medsoru:diseases-changed')));
+  });
+}, 0);

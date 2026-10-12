@@ -26,7 +26,8 @@ import {
 import { ReportQuestionModal } from './ReportQuestionModal';
 import { QuestionAboutDialog } from './QuestionAboutDialog';
 import { toast } from './ui/Toast';
-import { ApiService } from '../services/api';
+import { ApiService, safeJsonFetch } from '../services/api';
+import { contentReady, isContentChanged, onContentChanged } from '../services/contentLive';
 
 /**
  * Kurul 1 kazanım temelli örnek sorular (/ornek-sorular, varsayılan sekme).
@@ -521,14 +522,26 @@ function DersGorunumu({ id, initialKazanimNo, initialQuestionId, onBack }: { id:
     window.setTimeout(() => document.getElementById(`os-${qid}`)?.scrollIntoView({ behavior: 'smooth', block: 'center' }), 120);
   };
 
+  // Panelden bu dersin soruları değişince (canlı içerik) yeniden yüklenir
+  const [canli, setCanli] = useState(0);
+  useEffect(() => onContentChanged('ornek', (ids) => { if (!ids.length || isContentChanged('ornek', `k1/${id}`)) setCanli((n) => n + 1); }), [id]);
+
   useEffect(() => {
     const load = loaders[`../data/ornek_sorular/k1/${id}.json`];
     if (!load) { setHata(true); return; }
-    setDers(null);
-    load().then((data) => {
+    if (!canli) setDers(null);
+    (async (): Promise<Ders> => {
+      await contentReady();
+      if (isContentChanged('ornek', `k1/${id}`)) {
+        const r = await safeJsonFetch<Ders>(`/api/content/ornek/k1/${id}`, { cache: 'no-store' });
+        if (r.ok && r.data?.kazanimlar) return r.data;
+      }
+      return load();
+    })().then((data) => {
       setDers(data);
       // Derin bağlantı (/ornek-sorular/<soruId>): sorunun kazanımı açılır, soruya kayılır ve vurgulanır.
-      const hedef = initialQuestionId ? data.kazanimlar.find((k) => k.sorular.some((q) => q.id === initialQuestionId)) : undefined;
+      // Canlı tazelemede kaydırma tekrarlanmaz
+      const hedef = !canli && initialQuestionId ? data.kazanimlar.find((k) => k.sorular.some((q) => q.id === initialQuestionId)) : undefined;
       if (hedef && initialQuestionId) {
         setZorluk('');
         setAcik((s) => new Set(s).add(hedef.no));
@@ -548,13 +561,13 @@ function DersGorunumu({ id, initialKazanimNo, initialQuestionId, onBack }: { id:
           }
         };
         window.setTimeout(odak, 120);
-      } else if (initialKazanimNo) {
+      } else if (initialKazanimNo && !canli) {
         setTimeout(() => {
           document.getElementById(`kz-${initialKazanimNo}`)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }, 120);
       }
     }).catch(() => setHata(true));
-  }, [id, initialKazanimNo, initialQuestionId]);
+  }, [id, initialKazanimNo, initialQuestionId, canli]);
 
   if (hata) return <p className="m-0 text-base text-bad-text">Bu dersin soruları yüklenemedi. Sayfayı yenileyip tekrar deneyin.</p>;
   if (!ders) return <p className="m-0 text-base text-ink-3">Sorular yükleniyor…</p>;
