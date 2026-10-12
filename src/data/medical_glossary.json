@@ -646,7 +646,7 @@
     "description": "Treponema pallidum enfeksiyonlarının (Primer, Sekonder ve Erken Latent Sifiliz) tedavisinde birinci basamak ve altın standart uzun etkili depo penisilindir.",
     "discipline": "Farmakoloji & Tedavi",
     "committee": "",
-    "clinicalPearl": "Sınav Spotu: 'Gebelikte sifiliz tedavisi': Tek güvenilir ve zorunlu ilaç Penisilin G'dir! Penisilin alerjisi olan gebede alternatif ilaç verilmez, MUTLAKA DESENSİTİZASYON YAPILIP PENİSİLİN VERİLİR.",
+    "clinicalPearl": "Sınav Spotu: 'Gebelikte sifiliz tedavisi': Tek güvenilir ve zorunlu ilaç Penisilin G'dir! Penisilin alerjisi olan gebede alternatif ilaç verilmez, MUTLAKA DESENSİTİZASYON YAPILIP PENİSİLİN VERİLİR. · Sifilizde primer, sekonder ve erken latentte tek doz 2.4 milyon ünite IM; geç latent, gommatöz ve kardiyovasküler sifilizde haftada 1 kez, 3 hafta.",
     "aliases": [
       "Benzatin Penisilin G",
       "Depopen"
@@ -9320,7 +9320,7 @@
     "description": "İnsan kanserlerinde en sık mutasyona uğrayan, DNA hasarında p21 ile hücre siklusunu G1'de durduran genom gardiyanı tümör supresör gen.",
     "discipline": "Tıbbi Patoloji",
     "committee": "",
-    "clinicalPearl": "Kalıtsal germ-line mutasyonunda Li-Fraumeni sendromu görülür. Hasar onarılamazsa Bax ile apoptozu tetikler.",
+    "clinicalPearl": "Kalıtsal germ-line mutasyonunda Li-Fraumeni sendromu görülür. Hasar onarılamazsa Bax ile apoptozu tetikler. · Germline TP53 mutasyonu Li-Fraumeni sendromudur (kadında 70 yaşa kadar meme riski ≈%50-60); somatik TP53 mutasyonları HER2 pozitif ve üçlü negatif meme kanserlerinde %70-80 sıklıktadır.",
     "aliases": [
       "TP53",
       "TP53 Geni",
@@ -9422,7 +9422,7 @@
     "description": "Tümör hücrelerinin epitelin tüm katlarını doldurmasına rağmen bazal membranı AŞMADIĞI pre-invaziv malign neoplazi evresi.",
     "discipline": "Tıbbi Patoloji",
     "committee": "",
-    "clinicalPearl": "Bazal membran sağlam olduğu için damar veya lenfatik invazyon yapamaz; metastaz riski sıfırdır.",
+    "clinicalPearl": "Bazal membran sağlam olduğu için damar veya lenfatik invazyon yapamaz; metastaz riski sıfırdır. · Tablo 17.6'da karsinoma in situ (LCIS ve DCIS) RR 8-10 ve mutlak yaşam boyu risk ≈%25-30 ile risk basamağının en üstündedir.",
     "aliases": [
       "CIS",
       "Karsinoma İn Situ",
@@ -10101,7 +10101,8 @@
         "kurul": 1,
         "sayfa": 51
       }
-    ]
+    ],
+    "clinicalPearl": "Kist rüptürü içeriğin çevre dokuya dökülmesine, kronik inflamasyona ve fibrozise yol açar; elle hissedilen nodülerlik bu şekilde oluşur. Basit kistlerin epiteli tek katmanlıdır ve sıklıkla apokrin metaplazi gösterir."
   },
   "metastaz": {
     "term": "Metastaz",
@@ -15106,7 +15107,8 @@
         "kurul": 1,
         "sayfa": 21
       }
-    ]
+    ],
+    "clinicalPearl": "HER2 bir reseptör tirozin kinazdır; RAS ve PI3K-AKT yollarını aktive ederek proliferasyonu artırır, apoptozu azaltır; HER2 pozitif kanserler agresiftir ama anti-HER2 tedaviye (trastuzumab) duyarlıdır."
   },
   "meme kanserinin moleküler alt tipleri": {
     "term": "Meme kanserinin moleküler alt tipleri",
@@ -15128,7 +15130,8 @@
         "kurul": 1,
         "sayfa": 14
       }
-    ]
+    ],
+    "clinicalPearl": "Lümenal %50-65 (ER+/HER2-, germline BRCA2, geç nüks), HER2 pozitif %10-20 (germline TP53, bimodal nüks), üçlü negatif %10-20 (germline BRCA1, <8 yılda erken nüks, kemoterapiye tam yanıt ≈%30)."
   },
   "hidrosefali": {
     "term": "Hidrosefali",
@@ -17003,7 +17006,7 @@
     "description": "Seçici östrojen reseptörü modülatörü; östrojen reseptörüne karşı estradiolle yarışan kompetitif parsiyel agonisttir ve ilerlemiş meme kanseri tedavisinde kullanılır.",
     "discipline": "Tıbbi Farmakoloji",
     "committee": "",
-    "clinicalPearl": "Tamoksifen kullanımı endometrium kanseri risk faktörlerindendir.",
+    "clinicalPearl": "Tamoksifen kullanımı endometrium kanseri risk faktörlerindendir. · Yüksek riskli kadınlarda lümenal kanser insidansını azaltır; ER pozitif kanserler tamoksifen ve aromataz inhibitörlerine duyarlıdır; menopoz sonrası östrojen+progesteron tedavisi ise insidansı artırır.",
     "aliases": [
       "SERM"
     ],
@@ -18606,7 +18609,7 @@
     "description": "Tersiyer sifilizde SSS tutulumu; en sık tipi asemptomatiktir. Meningovasküler sifiliz beyin, spinal kord ve meninkslerin damarlarını tutarak kişilik değişikliği, baş ağrısı ve paralizi yapar; parankimatöz nörosifiliz nöron hasarıyla seyreder.",
     "discipline": "Enfeksiyon Hastalıkları",
     "committee": "",
-    "clinicalPearl": "Tanı BOS bulguları (mononükleer hücre, protein ve IgG artışı) ve serolojik testlerle konur.",
+    "clinicalPearl": "Tanı BOS bulguları (mononükleer hücre, protein ve IgG artışı) ve serolojik testlerle konur. · Kronik nörosifilizde en sık tip asemptomatik; meningovasküler ve parankimatöz (tabes dorsalis, genel parezi) formlar vardır.",
     "dogrulama": {
       "durum": "kaynakli",
       "destek": 0.827,
@@ -18659,7 +18662,8 @@
         "kurul": 3,
         "sayfa": 11
       }
-    ]
+    ],
+    "clinicalPearl": "STK11 mutasyonlu kadınlarda 70 yaşa kadar meme kanseri riski ≈%40-60'tır; over, kolon ve pankreas kanserleri ile hamartomatöz kolon polipleri eşlik eder."
   },
   "yeni oral antikoagülanlar": {
     "term": "Yeni oral antikoagülanlar",
@@ -19544,7 +19548,8 @@
         "kurul": 1,
         "sayfa": 50
       }
-    ]
+    ],
+    "clinicalPearl": "ADH, DCIS'e çok benzer ama yayılımı sınırlıdır (homojen hücreler, keskin kenarlı yuvalar, sert köprüler); ALH, LCIS'e benzer (monomorfik hücreler, düzgün yuvarlak nükleus). Risk 4-5 kat artmıştır; ADH'de ipsilateral ve kontralateral, ALH'de her iki memede."
   },
   "guillain-barré sendromu (campylobacter sonrası)": {
     "term": "Guillain-Barré sendromu (Campylobacter sonrası)",
@@ -26673,6 +26678,1768 @@
         "kurul": 1,
         "sayfa": 2,
         "alinti": "Mikroorganizma yükü, virülansı ve patojenitesi"
+      }
+    ]
+  },
+  "spiroket": {
+    "term": "Spiroket",
+    "category": "patojen",
+    "definition": "Spiral şekilli, ince duvar yapılı, periplazmik flajellaları ile burgu hareketi yapan ve Gram boyası ile iyi boyanmayan bakteri grubu.",
+    "description": "Spiral şekilli, ince duvar yapılı, periplazmik flajellaları ile burgu hareketi yapan ve Gram boyası ile iyi boyanmayan bakteri grubu.",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "",
+    "clinicalPearl": "Karanlık alan mikroskopisi ile görülür.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-e9e8f4b0d1"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Enfeksiyon Hastalıkları/7)Sifiliz .pdf",
+        "ders": "Enfeksiyon Hastalıkları",
+        "kurul": 1,
+        "sayfa": 2,
+        "alinti": "Sitoplazmik membran İnce peptidoglikan Dış membran"
+      }
+    ]
+  },
+  "periplazmik flajella": {
+    "term": "Periplazmik flajella",
+    "category": "patojen",
+    "definition": "Spiroketlerde dış membran ile sitoplazmik membran arasındaki aralıkta bulunan ve burgu hareketini sağlayan flajella.",
+    "description": "Spiroketlerde dış membran ile sitoplazmik membran arasındaki aralıkta bulunan ve burgu hareketini sağlayan flajella.",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-e9e8f4b0d1"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Enfeksiyon Hastalıkları/7)Sifiliz .pdf",
+        "ders": "Enfeksiyon Hastalıkları",
+        "kurul": 1,
+        "sayfa": 2,
+        "alinti": "Karanlık alan mikroskopisi ile görülür Periplazmik aralıkta flajella burgu hareketi"
+      }
+    ]
+  },
+  "karanlık alan mikroskopisi": {
+    "term": "Karanlık alan mikroskopisi",
+    "category": "tani",
+    "definition": "Spiroketlerin görüntülenmesinde kullanılan mikroskopi yöntemi; sifilizde şankr, kondiloma lata ve mukozal lezyon akıntısı incelenir.",
+    "description": "Spiroketlerin görüntülenmesinde kullanılan mikroskopi yöntemi; sifilizde şankr, kondiloma lata ve mukozal lezyon akıntısı incelenir.",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "",
+    "clinicalPearl": "Spiroketler Gram boyası ile iyi boyanmaz.",
+    "aliases": [
+      "Karanlık saha mikroskobisi"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-e9e8f4b0d1"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Enfeksiyon Hastalıkları/7)Sifiliz .pdf",
+        "ders": "Enfeksiyon Hastalıkları",
+        "kurul": 1,
+        "sayfa": 2,
+        "alinti": "Gram boyası ile iyi boyanmaz Karanlık alan mikroskopisi ile görülür"
+      }
+    ]
+  },
+  "yaws": {
+    "term": "Yaws",
+    "category": "hastalik",
+    "definition": "Treponema pallidum subsp. pertenue'nin yol açtığı, cilt teması ile bulaşan ve cilt ile kemiği tutan treponematoz.",
+    "description": "Treponema pallidum subsp. pertenue'nin yol açtığı, cilt teması ile bulaşan ve cilt ile kemiği tutan treponematoz.",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "",
+    "aliases": [
+      "Frambezi"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-e9e8f4b0d1"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Enfeksiyon Hastalıkları/7)Sifiliz .pdf",
+        "ders": "Enfeksiyon Hastalıkları",
+        "kurul": 1,
+        "sayfa": 3,
+        "alinti": "Treponema pallidum subsp. pertenue yaws Tropikal Asya, Afrika, Kuzey ve Güney Amerika Cilt teması ile bulaş"
+      }
+    ]
+  },
+  "bejel": {
+    "term": "Bejel",
+    "category": "hastalik",
+    "definition": "Treponema pallidum subsp. endemicum'un yol açtığı, Afrika ve Orta Doğu'da görülen, cilt-mukozal temas ve kontamine kaplarla bulaşan treponematoz.",
+    "description": "Treponema pallidum subsp. endemicum'un yol açtığı, Afrika ve Orta Doğu'da görülen, cilt-mukozal temas ve kontamine kaplarla bulaşan treponematoz.",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-e9e8f4b0d1"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Enfeksiyon Hastalıkları/7)Sifiliz .pdf",
+        "ders": "Enfeksiyon Hastalıkları",
+        "kurul": 1,
+        "sayfa": 3,
+        "alinti": "Treponema pallidum subsp. endemicum bejel Afrika, Orta Doğu Cilt teması ile ve mukozal bulaş, kontamine yiyecek-içecek kapları"
+      }
+    ]
+  },
+  "pinta": {
+    "term": "Pinta",
+    "category": "hastalik",
+    "definition": "Treponema carateum'un yol açtığı, Kuzey ve Güney Amerika'da görülen ve cilt teması ile bulaşan treponematoz.",
+    "description": "Treponema carateum'un yol açtığı, Kuzey ve Güney Amerika'da görülen ve cilt teması ile bulaşan treponematoz.",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "",
+    "clinicalPearl": "Kemik tutulumu yapmaz.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-e9e8f4b0d1"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Enfeksiyon Hastalıkları/7)Sifiliz .pdf",
+        "ders": "Enfeksiyon Hastalıkları",
+        "kurul": 1,
+        "sayfa": 3,
+        "alinti": "Treponema carateum pinta Kuzey ve Güney Amerika Cilt teması ile bulaş"
+      }
+    ]
+  },
+  "şankr": {
+    "term": "Şankr",
+    "category": "patoloji",
+    "definition": "Primer sifilizde inokülasyon yerinde gelişen ağrısız ve bulaştırıcı ülser.",
+    "description": "Primer sifilizde inokülasyon yerinde gelişen ağrısız ve bulaştırıcı ülser.",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "",
+    "clinicalPearl": "Ağrısız ülser = şankr.",
+    "aliases": [
+      "Chancre"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-e9e8f4b0d1"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Enfeksiyon Hastalıkları/7)Sifiliz .pdf",
+        "ders": "Enfeksiyon Hastalıkları",
+        "kurul": 1,
+        "sayfa": 8,
+        "alinti": "Yaklaşık 3 hafta inkübasyon sonrası şankr (ağrısız ülser) bulaştırıcı"
+      }
+    ]
+  },
+  "spiroketemi": {
+    "term": "Spiroketemi",
+    "category": "patoloji",
+    "definition": "Kanda spiroket bulunması; primer sifilizde organ invazyonu için kaynak olabilir.",
+    "description": "Kanda spiroket bulunması; primer sifilizde organ invazyonu için kaynak olabilir.",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-e9e8f4b0d1"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Enfeksiyon Hastalıkları/7)Sifiliz .pdf",
+        "ders": "Enfeksiyon Hastalıkları",
+        "kurul": 1,
+        "sayfa": 8,
+        "alinti": "Spiroketemi organ invazyonu için kaynak olabilir"
+      }
+    ]
+  },
+  "kondiloma lata": {
+    "term": "Kondiloma lata",
+    "category": "patoloji",
+    "definition": "Sekonder sifilizde vulva, skrotum, perine ve meme altında görülen gri-beyaz maküler, papüler veya verrüköz bulaştırıcı lezyon.",
+    "description": "Sekonder sifilizde vulva, skrotum, perine ve meme altında görülen gri-beyaz maküler, papüler veya verrüköz bulaştırıcı lezyon.",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-e9e8f4b0d1"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Enfeksiyon Hastalıkları/7)Sifiliz .pdf",
+        "ders": "Enfeksiyon Hastalıkları",
+        "kurul": 1,
+        "sayfa": 9,
+        "alinti": "Vulva, skrotum, perine, meme altında gri-beyaz maküler, papüler veya verrüköz lezyonlar (kondiloma lata) bulaştırıcı"
+      }
+    ]
+  },
+  "toksik alopesi": {
+    "term": "Toksik alopesi",
+    "category": "patoloji",
+    "definition": "Sekonder sifilizde kıl folikülü tutulumuna bağlı, kaş dökülmesini de içeren kıl kaybı.",
+    "description": "Sekonder sifilizde kıl folikülü tutulumuna bağlı, kaş dökülmesini de içeren kıl kaybı.",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-e9e8f4b0d1"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Enfeksiyon Hastalıkları/7)Sifiliz .pdf",
+        "ders": "Enfeksiyon Hastalıkları",
+        "kurul": 1,
+        "sayfa": 11,
+        "alinti": "Kıl foliküllerinin tutulumu Kaşlarda dökülme Toksik alopesi"
+      }
+    ]
+  },
+  "epitroklear lenfadenopati": {
+    "term": "Epitroklear lenfadenopati",
+    "category": "patoloji",
+    "definition": "Dirsek iç tarafındaki epitroklear lenf nodlarının büyümesi; sifiliz özellikle düşündürür.",
+    "description": "Dirsek iç tarafındaki epitroklear lenf nodlarının büyümesi; sifiliz özellikle düşündürür.",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-e9e8f4b0d1"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Enfeksiyon Hastalıkları/7)Sifiliz .pdf",
+        "ders": "Enfeksiyon Hastalıkları",
+        "kurul": 1,
+        "sayfa": 11,
+        "alinti": "Genellikle inguinal, servikal, submental, aksiller Epitroklear LAP sifiliz özellikle düşünülmeli"
+      }
+    ]
+  },
+  "latent sifiliz": {
+    "term": "Latent sifiliz",
+    "category": "hastalik",
+    "definition": "Sekonder bulguların kaybolmasından tersiyer bulguların ortaya çıkmasına kadar geçen asemptomatik dönem; ilk 1 yıl erken, sonrası geç latenttir.",
+    "description": "Sekonder bulguların kaybolmasından tersiyer bulguların ortaya çıkmasına kadar geçen asemptomatik dönem; ilk 1 yıl erken, sonrası geç latenttir.",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-e9e8f4b0d1"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Enfeksiyon Hastalıkları/7)Sifiliz .pdf",
+        "ders": "Enfeksiyon Hastalıkları",
+        "kurul": 1,
+        "sayfa": 12,
+        "alinti": "Sekonder sifilizin bulgularının kaybolmasından tersiyer sifiliz bulgularının ortaya çıkmasına kadar geçen süre Asemptomatik dönem"
+      }
+    ]
+  },
+  "gom": {
+    "term": "Gom",
+    "category": "patoloji",
+    "definition": "Tersiyer sifilizde genellikle bakteri içermeyen, tip IV aşırı duyarlılık sonucu gelişen ve cilt, kemik, karaciğerde görülen granülom.",
+    "description": "Tersiyer sifilizde genellikle bakteri içermeyen, tip IV aşırı duyarlılık sonucu gelişen ve cilt, kemik, karaciğerde görülen granülom.",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "",
+    "clinicalPearl": "Gommatöz sifiliz haftada 1 kez, 3 hafta benzatin penisilin ile tedavi edilir.",
+    "aliases": [
+      "Gumma"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-e9e8f4b0d1"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Enfeksiyon Hastalıkları/7)Sifiliz .pdf",
+        "ders": "Enfeksiyon Hastalıkları",
+        "kurul": 1,
+        "sayfa": 13,
+        "alinti": "Genellikle bakteri içermeyen tip IV aşırı duyarlılık sonucu gelişen granülomlar"
+      }
+    ]
+  },
+  "meningovasküler sifiliz": {
+    "term": "Meningovasküler sifiliz",
+    "category": "hastalik",
+    "definition": "Beyin, spinal kord ve meninksleri besleyen damarların tutulduğu kronik nörosifiliz formu; kişilik değişikliği, baş ağrısı ve paralizi yapar.",
+    "description": "Beyin, spinal kord ve meninksleri besleyen damarların tutulduğu kronik nörosifiliz formu; kişilik değişikliği, baş ağrısı ve paralizi yapar.",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-e9e8f4b0d1"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Enfeksiyon Hastalıkları/7)Sifiliz .pdf",
+        "ders": "Enfeksiyon Hastalıkları",
+        "kurul": 1,
+        "sayfa": 14,
+        "alinti": "Meningovasküler sifiliz: beyin, spinal kord ve meningslerin damarlarının tutulumu; kişilik değişikliği, baş ağrısı, paralizi"
+      }
+    ]
+  },
+  "parankimatöz nörosifiliz": {
+    "term": "Parankimatöz nörosifiliz",
+    "category": "hastalik",
+    "definition": "Nöronların hasarı (demiyelinizasyon) ile seyreden; tabes dorsalis ve genel parezi formlarını içeren nörosifiliz.",
+    "description": "Nöronların hasarı (demiyelinizasyon) ile seyreden; tabes dorsalis ve genel parezi formlarını içeren nörosifiliz.",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-e9e8f4b0d1"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Enfeksiyon Hastalıkları/7)Sifiliz .pdf",
+        "ders": "Enfeksiyon Hastalıkları",
+        "kurul": 1,
+        "sayfa": 14,
+        "alinti": "Parankimatöz nörosifiliz: nöronların hasarı (demiyelinizasyon); kişilik değişikliği, paranoya, reflekslerde hiperaktivite, parezi, paralizi"
+      }
+    ]
+  },
+  "tabes dorsalis": {
+    "term": "Tabes dorsalis",
+    "category": "hastalik",
+    "definition": "Spinal kord dorsal kök gangliyonlarının tutulduğu nörosifiliz formu; parezi, parestezi, düşük ayak, ataksi ve Romberg belirtisi görülür.",
+    "description": "Spinal kord dorsal kök gangliyonlarının tutulduğu nörosifiliz formu; parezi, parestezi, düşük ayak, ataksi ve Romberg belirtisi görülür.",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-e9e8f4b0d1"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Enfeksiyon Hastalıkları/7)Sifiliz .pdf",
+        "ders": "Enfeksiyon Hastalıkları",
+        "kurul": 1,
+        "sayfa": 14,
+        "alinti": "Tabes dorsalis: spinal kord dorsal kök gangliyonlarının tutulumu, parezi, parestezi, düşük ayak, ataksi, Romberg belirtisi"
+      }
+    ]
+  },
+  "genel parezi": {
+    "term": "Genel parezi",
+    "category": "hastalik",
+    "definition": "İrritabilite, kişilik değişikliği, baş ağrısı, unutkanlık, depresyon ve demans ile seyreden nörosifiliz formu.",
+    "description": "İrritabilite, kişilik değişikliği, baş ağrısı, unutkanlık, depresyon ve demans ile seyreden nörosifiliz formu.",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "",
+    "aliases": [
+      "Paralitik demans"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-e9e8f4b0d1"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Enfeksiyon Hastalıkları/7)Sifiliz .pdf",
+        "ders": "Enfeksiyon Hastalıkları",
+        "kurul": 1,
+        "sayfa": 14,
+        "alinti": "Genel parezi: irrittabilite, kişilik değişikliği, baş ağrısı, unutkanlık, depresyon, demans"
+      }
+    ]
+  },
+  "endarteritis obliterans": {
+    "term": "Endarteritis obliterans",
+    "category": "patoloji",
+    "definition": "Endotelin iç tabakasının enflamasyonu sonucu damar oklüzyonuna yol açan lezyon; kardiyovasküler sifilizin temelidir.",
+    "description": "Endotelin iç tabakasının enflamasyonu sonucu damar oklüzyonuna yol açan lezyon; kardiyovasküler sifilizin temelidir.",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-e9e8f4b0d1"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Enfeksiyon Hastalıkları/7)Sifiliz .pdf",
+        "ders": "Enfeksiyon Hastalıkları",
+        "kurul": 1,
+        "sayfa": 15,
+        "alinti": "Endarteritis obliterans: endotelin iç tabakasının enflamasyonu sonucu damar oklüzyonu"
+      }
+    ]
+  },
+  "vdrl": {
+    "term": "VDRL",
+    "category": "tani",
+    "definition": "Kardiyolipin-lesitin-kolesterol antijenlerine karşı IgM ve IgG antikorlarını saptayan spesifik olmayan serolojik test; tarama, tedavi takibi ve nörosifiliz tanısında kullanılır.",
+    "description": "Kardiyolipin-lesitin-kolesterol antijenlerine karşı IgM ve IgG antikorlarını saptayan spesifik olmayan serolojik test; tarama, tedavi takibi ve nörosifiliz tanısında kullanılır.",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-e9e8f4b0d1"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Enfeksiyon Hastalıkları/7)Sifiliz .pdf",
+        "ders": "Enfeksiyon Hastalıkları",
+        "kurul": 1,
+        "sayfa": 17,
+        "alinti": "Bakterinin verdiği hasar sonucu dokudan kardiyolipin-lesitin-kolestrol antijenleri salınır Bu antijenlere karşı oluşan IgM ve IgG yapısındaki antikorları tespit eder"
+      }
+    ]
+  },
+  "rpr": {
+    "term": "RPR",
+    "category": "tani",
+    "definition": "VDRL gibi kardiyolipin antijenine karşı antikorları saptayan spesifik olmayan serolojik test; tedavi ile 1-2 yılda negatifleşir.",
+    "description": "VDRL gibi kardiyolipin antijenine karşı antikorları saptayan spesifik olmayan serolojik test; tedavi ile 1-2 yılda negatifleşir.",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "",
+    "aliases": [
+      "Rapid plasma reagin"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-e9e8f4b0d1"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Enfeksiyon Hastalıkları/7)Sifiliz .pdf",
+        "ders": "Enfeksiyon Hastalıkları",
+        "kurul": 1,
+        "sayfa": 17,
+        "alinti": "Primer ve sekonder sifilizde pozitif (tedavi ile 1 veya 2 yıl içinde negatifleştiği için tedavi takibinde kullanılır)"
+      }
+    ]
+  },
+  "tpha": {
+    "term": "TPHA",
+    "category": "tani",
+    "definition": "Treponema pallidum hemaglütinasyon testi; bakterinin kendisine karşı antikorları saptayan spesifik test.",
+    "description": "Treponema pallidum hemaglütinasyon testi; bakterinin kendisine karşı antikorları saptayan spesifik test.",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "",
+    "clinicalPearl": "Ömür boyu pozitif kalır, tedavi takibinde kullanılamaz.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-e9e8f4b0d1"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Enfeksiyon Hastalıkları/7)Sifiliz .pdf",
+        "ders": "Enfeksiyon Hastalıkları",
+        "kurul": 1,
+        "sayfa": 16,
+        "alinti": "Spesifik olmayan testler VDRL RPR Spesifik testler TPHA (Treponema pallidum hemaglütinasyon testi) FTA-ABS"
+      }
+    ]
+  },
+  "fta-abs": {
+    "term": "FTA-ABS",
+    "category": "tani",
+    "definition": "Floresan trponemal antikor-absorbsiyonu testi; bakteriye karşı antikorları saptayan, en erken yükselen ve en spesifik testlerden biri.",
+    "description": "Floresan trponemal antikor-absorbsiyonu testi; bakteriye karşı antikorları saptayan, en erken yükselen ve en spesifik testlerden biri.",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-e9e8f4b0d1"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Enfeksiyon Hastalıkları/7)Sifiliz .pdf",
+        "ders": "Enfeksiyon Hastalıkları",
+        "kurul": 1,
+        "sayfa": 18,
+        "alinti": "Tedavi takibinde kullanılamaz En erken yükselen ve en spesifik testler"
+      }
+    ]
+  },
+  "kristalize penisilin": {
+    "term": "Kristalize penisilin",
+    "category": "ilac",
+    "definition": "Nörosifiliz, oküler sifiliz ve otosifilizde 6x2-4 milyon ünite, 10-14 gün uygulanan penisilin.",
+    "description": "Nörosifiliz, oküler sifiliz ve otosifilizde 6x2-4 milyon ünite, 10-14 gün uygulanan penisilin.",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-e9e8f4b0d1"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Enfeksiyon Hastalıkları/7)Sifiliz .pdf",
+        "ders": "Enfeksiyon Hastalıkları",
+        "kurul": 1,
+        "sayfa": 20,
+        "alinti": "Nörosifiliz, oküler sifiliz, otosifiliz Kristalize penisilin 6x2-4milyon ünite (10-14 gün)"
+      }
+    ]
+  },
+  "romberg belirtisi": {
+    "term": "Romberg belirtisi",
+    "category": "terim",
+    "definition": "Tabes dorsalis gibi duyusal ataksili durumlarda görülen denge bozukluğu işareti.",
+    "description": "Tabes dorsalis gibi duyusal ataksili durumlarda görülen denge bozukluğu işareti.",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-e9e8f4b0d1"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Enfeksiyon Hastalıkları/7)Sifiliz .pdf",
+        "ders": "Enfeksiyon Hastalıkları",
+        "kurul": 1,
+        "sayfa": 14,
+        "alinti": "Tabes dorsalis: spinal kord dorsal kök gangliyonlarının tutulumu, parezi, parestezi, düşük ayak, ataksi, Romberg belirtisi"
+      }
+    ]
+  },
+  "mastalji (mastodini)": {
+    "term": "Mastalji (Mastodini)",
+    "category": "terim",
+    "definition": "Meme ağrısı; çoğunlukla adet dönemleriyle ilişkili döngüsel ödem ve şişliğe bağlıdır ve yaygın, bilateral hassasiyetle seyreder.",
+    "description": "Meme ağrısı; çoğunlukla adet dönemleriyle ilişkili döngüsel ödem ve şişliğe bağlıdır ve yaygın, bilateral hassasiyetle seyreder.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "",
+    "clinicalPearl": "Lokalize ağrı yırtılmış kist ya da travmaya bağlı yağ nekrozunu düşündürür; ağrılı kitlelerin ~%5'inde kanser vardır.",
+    "aliases": [
+      "Mastalji",
+      "Mastodini"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-a4d80876b3"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Patoloji/33) Memenin Benign Hastalıkları.pdf",
+        "ders": "Tıbbi Patoloji",
+        "kurul": 1,
+        "sayfa": 7,
+        "alinti": "Sıklıkla: – Adet dönemleriyle ilişkili – Döngüsel ödem ve şişliğe bağlı • Tipik özellik:"
+      }
+    ]
+  },
+  "jinekomasti": {
+    "term": "Jinekomasti",
+    "category": "hastalik",
+    "definition": "Erkekte meme büyümesi; östrojen uyarısının artması ve androjenin karşıt etkisinin azalmasıyla hem stromada hem epitelde proliferasyon gelişir.",
+    "description": "Erkekte meme büyümesi; östrojen uyarısının artması ve androjenin karşıt etkisinin azalmasıyla hem stromada hem epitelde proliferasyon gelişir.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "",
+    "clinicalPearl": "Erkekte en sık meme semptomudur; ayırıcı tanıda ilaçlar, karaciğer hastalığı ve testis tümörleri düşünülür.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-a4d80876b3"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Patoloji/33) Memenin Benign Hastalıkları.pdf",
+        "ders": "Tıbbi Patoloji",
+        "kurul": 1,
+        "sayfa": 13,
+        "alinti": "Östrojen uyarısı ↑ – Androjen karşıt etkisi ↓ • Sonuç: – Hem stromada – Hem epitelde proliferasyon • Ayırıcı"
+      }
+    ]
+  },
+  "palpabl kitle": {
+    "term": "Palpabl kitle",
+    "category": "terim",
+    "definition": "Elle hissedilen meme kitlesi; genellikle 2–3 cm'de fark edilir ve stromal veya epitel hücre proliferasyonuna bağlıdır.",
+    "description": "Elle hissedilen meme kitlesi; genellikle 2–3 cm'de fark edilir ve stromal veya epitel hücre proliferasyonuna bağlıdır.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "",
+    "clinicalPearl": "Benign kitleler (~%95) yuvarlak/oval, iyi sınırlı, hareketlidir; malign kitleler düzensiz, sert, bazen fikse olabilir; bazı kanserler iyi sınırlıdır.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-a4d80876b3"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Patoloji/33) Memenin Benign Hastalıkları.pdf",
+        "ders": "Tıbbi Patoloji",
+        "kurul": 1,
+        "sayfa": 12,
+        "alinti": "Genellikle 2–3 cm boyutta fark edilir • Kaynak: – Stromal hücre proliferasyonu – Epitel hücre proliferasyonu"
+      }
+    ]
+  },
+  "yaygın nodülerlik": {
+    "term": "Yaygın nodülerlik",
+    "category": "terim",
+    "definition": "Memede yaygın sertlik hissi (topaklanma); sıklıkla fizyolojiktir ve hormonal etkilerle değişen fibrokistik değişikliklere bağlıdır.",
+    "description": "Memede yaygın sertlik hissi (topaklanma); sıklıkla fizyolojiktir ve hormonal etkilerle değişen fibrokistik değişikliklere bağlıdır.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "",
+    "clinicalPearl": "Belirginse mamografi/USG ile ayrı kitle olup olmadığı ve diffüzlük sorgulanır.",
+    "aliases": [
+      "Topaklanma"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-a4d80876b3"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Patoloji/33) Memenin Benign Hastalıkları.pdf",
+        "ders": "Tıbbi Patoloji",
+        "kurul": 1,
+        "sayfa": 11,
+        "alinti": "Sıklıkla: – Fizyolojik – Hormonal etkilerle değişen fibrokistik değişiklikler • Belirgin olduğunda: – Görüntüleme (mamografi"
+      }
+    ]
+  },
+  "laktasyonel apse": {
+    "term": "Laktasyonel apse",
+    "category": "hastalik",
+    "definition": "Emzirme döneminde, çoğunlukla Staphylococcus aureus veya streptokok kaynaklı meme apsesi.",
+    "description": "Emzirme döneminde, çoğunlukla Staphylococcus aureus veya streptokok kaynaklı meme apsesi.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "",
+    "clinicalPearl": "Tedavi antibiyotik ve sütün sağılmasına devam; insizyon-drenaj nadiren gerekir; emzirmenin ilk ayında sıktır.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-a4d80876b3"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Patoloji/33) Memenin Benign Hastalıkları.pdf",
+        "ders": "Tıbbi Patoloji",
+        "kurul": 1,
+        "sayfa": 8,
+        "alinti": "Emzirme / laktasyon döneminde – Staphylococcus aureus veya streptokok kaynaklı laktasyonel apse"
+      }
+    ]
+  },
+  "inflamatuvar meme karsinomu": {
+    "term": "İnflamatuvar meme karsinomu",
+    "category": "hastalik",
+    "definition": "Enfeksiyonu taklit eden, nadir fakat önemli meme karsinomu; eritem ve ödemle seyreder.",
+    "description": "Enfeksiyonu taklit eden, nadir fakat önemli meme karsinomu; eritem ve ödemle seyreder.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "",
+    "clinicalPearl": "Enfeksiyon düşünülen her inflamasyon tablosunda ayırıcı tanıda akılda tutulmalıdır.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-a4d80876b3"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Patoloji/33) Memenin Benign Hastalıkları.pdf",
+        "ders": "Tıbbi Patoloji",
+        "kurul": 1,
+        "sayfa": 8,
+        "alinti": "“İnflamatuar” meme karsinomu: • Enfeksiyonu taklit eder • Her zaman akılda tutulmalı"
+      }
+    ]
+  },
+  "fibroadenom": {
+    "term": "Fibroadenom",
+    "category": "hastalik",
+    "definition": "İntralobüler stromadan köken alan, neoplastik stromal hücreler ve reaktif epitel proliferasyonundan oluşan benign tümör.",
+    "description": "İntralobüler stromadan köken alan, neoplastik stromal hücreler ve reaktif epitel proliferasyonundan oluşan benign tümör.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "",
+    "clinicalPearl": "Genç kadında iyi sınırlı, hareketli, lastiksi nodül; stromal fibroblastlar epiteli iterek yarık benzeri duktuslar oluşturur.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-a4d80876b3"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Patoloji/33) Memenin Benign Hastalıkları.pdf",
+        "ders": "Tıbbi Patoloji",
+        "kurul": 1,
+        "sayfa": 21,
+        "alinti": "Bileşenler: – Neoplastik stromal hücreler – Reaktif epitel proliferasyonu • Stromal"
+      }
+    ]
+  },
+  "intralobüler stroma": {
+    "term": "İntralobüler stroma",
+    "category": "anatomi",
+    "definition": "Lobül içindeki özelleşmiş stroma; fibroadenom ve filloid tümörün kaynağıdır.",
+    "description": "Lobül içindeki özelleşmiş stroma; fibroadenom ve filloid tümörün kaynağıdır.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-a4d80876b3"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Patoloji/33) Memenin Benign Hastalıkları.pdf",
+        "ders": "Tıbbi Patoloji",
+        "kurul": 1,
+        "sayfa": 19,
+        "alinti": "İntralobüler: • Fibroadenom • Filloid tümör – İnterlobüler: • Vücuttaki diğer"
+      }
+    ]
+  },
+  "interlobüler stroma": {
+    "term": "İnterlobüler stroma",
+    "category": "anatomi",
+    "definition": "Lobüller arasındaki stroma; lipom, anjiyosarkom gibi vücudun başka yerlerinde de görülen bağ dokusu tümörlerinin kaynağıdır.",
+    "description": "Lobüller arasındaki stroma; lipom, anjiyosarkom gibi vücudun başka yerlerinde de görülen bağ dokusu tümörlerinin kaynağıdır.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-a4d80876b3"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Patoloji/33) Memenin Benign Hastalıkları.pdf",
+        "ders": "Tıbbi Patoloji",
+        "kurul": 1,
+        "sayfa": 19,
+        "alinti": "İnterlobüler: • Vücuttaki diğer bağ dokusu tümörleri: – Lipom – Anjiyosarkom vb."
+      }
+    ]
+  },
+  "terminal duktal lobüler ünite": {
+    "term": "Terminal duktal lobüler ünite",
+    "category": "anatomi",
+    "definition": "Meme karsinomlarının kaynaklandığı düşünülen epitelyal yapı.",
+    "description": "Meme karsinomlarının kaynaklandığı düşünülen epitelyal yapı.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "",
+    "clinicalPearl": "Duktal ve lobüler terimleri karsinom alt tiplerini tanımlar; ortak kaynak bu ünitedir.",
+    "aliases": [
+      "TDLÜ"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-a4d80876b3"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Patoloji/33) Memenin Benign Hastalıkları.pdf",
+        "ders": "Tıbbi Patoloji",
+        "kurul": 1,
+        "sayfa": 34,
+        "alinti": "Hâlen in situ ve invaziv karsinom alt tiplerini tanımlar – Ancak: • Kanıtlar tüm meme karsinomlarının terminal duktal lobüler üniteden kaynaklandığını düşündürür"
+      }
+    ]
+  },
+  "basit kist (meme)": {
+    "term": "Basit kist (meme)",
+    "category": "patoloji",
+    "definition": "Lümeni tek katmanlı epitelle döşeli, en sık görülen proliferatif olmayan meme lezyonu.",
+    "description": "Lümeni tek katmanlı epitelle döşeli, en sık görülen proliferatif olmayan meme lezyonu.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "",
+    "clinicalPearl": "Sıklıkla apokrin metaplazi eşlik eder; sıvısı kalsifiye olursa mamografide kalsifikasyon verir.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-a4d80876b3"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Patoloji/33) Memenin Benign Hastalıkları.pdf",
+        "ders": "Tıbbi Patoloji",
+        "kurul": 1,
+        "sayfa": 29,
+        "alinti": "En sık proliferatif olmayan lezyon: – Basit kistler • Özellik: – Lümeni döşeyen tek katmanlı epitel"
+      }
+    ]
+  },
+  "apokrin metaplazi": {
+    "term": "Apokrin metaplazi",
+    "category": "patoloji",
+    "definition": "Epitelin granüler, eozinofilik sitoplazmalı hücrelere dönüşmesi; basit kistlerde sık görülür.",
+    "description": "Epitelin granüler, eozinofilik sitoplazmalı hücrelere dönüşmesi; basit kistlerde sık görülür.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "",
+    "clinicalPearl": "Proliferatif olmayan değişikliktir (RR 1.0).",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-a4d80876b3"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Patoloji/33) Memenin Benign Hastalıkları.pdf",
+        "ders": "Tıbbi Patoloji",
+        "kurul": 1,
+        "sayfa": 29,
+        "alinti": "Sıklıkla apokrin metaplazi: • Granüler, eozinofilik sitoplazma – Şekil 17.26A:"
+      }
+    ]
+  },
+  "adenozis": {
+    "term": "Adenozis",
+    "category": "patoloji",
+    "definition": "Lobül başına asinüs sayısında artış.",
+    "description": "Lobül başına asinüs sayısında artış.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "",
+    "clinicalPearl": "Gebelikte normaldir; kendi başına meme kanseri riskini belirgin artırmaz; sklerozan adenozis ise atipisiz proliferatif gruptadır.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-a4d80876b3"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Patoloji/33) Memenin Benign Hastalıkları.pdf",
+        "ders": "Tıbbi Patoloji",
+        "kurul": 1,
+        "sayfa": 31,
+        "alinti": "Adenozis: – Lobül başına asinüs sayısında artış • Fizyolojik:"
+      }
+    ]
+  },
+  "radyal skar": {
+    "term": "Radyal skar",
+    "category": "patoloji",
+    "definition": "Radyal sklerozan lezyon; atipisiz proliferatif meme lezyonlarından biri.",
+    "description": "Radyal sklerozan lezyon; atipisiz proliferatif meme lezyonlarından biri.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "",
+    "clinicalPearl": "Atipisiz proliferatif lezyonlarda risk 1,5–2 kat artmıştır.",
+    "aliases": [
+      "Radyal sklerozan lezyon"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-a4d80876b3"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Patoloji/33) Memenin Benign Hastalıkları.pdf",
+        "ders": "Tıbbi Patoloji",
+        "kurul": 1,
+        "sayfa": 32,
+        "alinti": "Örnekler: – Epitelyal hiperplazi – Sklerozan adenozis – Kompleks sklerozan lezyon – Radyal sklerozan lezyon (radyal skar) – Papillom (intraduktal)"
+      }
+    ]
+  },
+  "kompleks sklerozan lezyon": {
+    "term": "Kompleks sklerozan lezyon",
+    "category": "patoloji",
+    "definition": "Atipisiz proliferatif meme lezyonu grubunda yer alan sklerozan lezyon.",
+    "description": "Atipisiz proliferatif meme lezyonu grubunda yer alan sklerozan lezyon.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-a4d80876b3"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Patoloji/33) Memenin Benign Hastalıkları.pdf",
+        "ders": "Tıbbi Patoloji",
+        "kurul": 1,
+        "sayfa": 27,
+        "alinti": "Atipi olmadan proliferatif hastalık ( orta veya belirgin hiperplazi, sklerozan adenozis, kompleks sklerozan lezyon, kompleks özellikli fibroadenom) 1.5–2 (≈ %5–7)"
+      }
+    ]
+  },
+  "proliferatif olmayan meme değişiklikleri": {
+    "term": "Proliferatif olmayan meme değişiklikleri",
+    "category": "patoloji",
+    "definition": "Kistler, fibrozis ve adenozis paternlerini içeren, epitelin tek katmanlı olduğu ve kanser riskinin artmadığı değişiklikler.",
+    "description": "Kistler, fibrozis ve adenozis paternlerini içeren, epitelin tek katmanlı olduğu ve kanser riskinin artmadığı değişiklikler.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-a4d80876b3"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Patoloji/33) Memenin Benign Hastalıkları.pdf",
+        "ders": "Tıbbi Patoloji",
+        "kurul": 1,
+        "sayfa": 28,
+        "alinti": "Üç ana morfolojik patern: – Kistler – Fibrozis – Adenozis • “Proliferatif"
+      }
+    ]
+  },
+  "atipisiz proliferatif meme lezyonları": {
+    "term": "Atipisiz proliferatif meme lezyonları",
+    "category": "patoloji",
+    "definition": "Farklı derecelerde epitel proliferasyonu gösteren ancak atipisi olmayan lezyonlar; meme kanseri riskini 1,5–2 kat artırır.",
+    "description": "Farklı derecelerde epitel proliferasyonu gösteren ancak atipisi olmayan lezyonlar; meme kanseri riskini 1,5–2 kat artırır.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-a4d80876b3"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Patoloji/33) Memenin Benign Hastalıkları.pdf",
+        "ders": "Tıbbi Patoloji",
+        "kurul": 1,
+        "sayfa": 32,
+        "alinti": "Özellik: – Farklı derecelerde epitel proliferasyonu – Atipi yok"
+      }
+    ]
+  },
+  "duktal karsinoma in situ (dcıs)": {
+    "term": "Duktal karsinoma in situ (DCIS)",
+    "category": "hastalik",
+    "definition": "Kanal benzeri boşlukların lobülü deforme ettiği, kalsifiye salgı içerebilen in situ karsinom.",
+    "description": "Kanal benzeri boşlukların lobülü deforme ettiği, kalsifiye salgı içerebilen in situ karsinom.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "",
+    "clinicalPearl": "Mamografide ince, pleomorfik, lineer/dallanan kalsifikasyon verir; RR 8–10.",
+    "aliases": [
+      "DCIS"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-a4d80876b3"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Patoloji/33) Memenin Benign Hastalıkları.pdf",
+        "ders": "Tıbbi Patoloji",
+        "kurul": 1,
+        "sayfa": 55,
+        "alinti": "Duktal karsinom in situ (DCIS). Kanal benzeri boşluklar lobülü deforme etmektedir; kalsifiye salgı materyaline (oklar) dikkat ediniz."
+      }
+    ]
+  },
+  "lobüler karsinoma in situ (lcıs)": {
+    "term": "Lobüler karsinoma in situ (LCIS)",
+    "category": "hastalik",
+    "definition": "Monomorfik hücrelerin meme lobülünü doldurduğu in situ karsinom.",
+    "description": "Monomorfik hücrelerin meme lobülünü doldurduğu in situ karsinom.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "",
+    "clinicalPearl": "RR 8–10; ALH morfolojik olarak LCIS'e benzer ama tutulumu sınırlıdır.",
+    "aliases": [
+      "LCIS"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-a4d80876b3"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Patoloji/33) Memenin Benign Hastalıkları.pdf",
+        "ders": "Tıbbi Patoloji",
+        "kurul": 1,
+        "sayfa": 55,
+        "alinti": "Lobüler karsinom in situ (LCIS). Monomorfik hücreler meme lobülünü doldurmaktadır."
+      }
+    ]
+  },
+  "komedo tipi dcıs": {
+    "term": "Komedo tipi DCIS",
+    "category": "patoloji",
+    "definition": "Yüksek dereceli proliferasyonun çok sayıda kanalı doldurduğu, geniş santral nekroz ve kalsifikasyon gösteren DCIS paterni.",
+    "description": "Yüksek dereceli proliferasyonun çok sayıda kanalı doldurduğu, geniş santral nekroz ve kalsifikasyon gösteren DCIS paterni.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-a4d80876b3"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Patoloji/33) Memenin Benign Hastalıkları.pdf",
+        "ders": "Tıbbi Patoloji",
+        "kurul": 1,
+        "sayfa": 55,
+        "alinti": "DCIS, komedo tipi. Geniş santral nekroz ve kalsifikasyon (ok) alanlarıyla ilişkili yüksek dereceli proliferasyon, birçok kanalı doldurmaktadır."
+      }
+    ]
+  },
+  "lümenal meme kanseri": {
+    "term": "Lümenal meme kanseri",
+    "category": "hastalik",
+    "definition": "ER pozitif, HER2 negatif meme kanseri alt grubu; meme kanserlerinin %50–65'idir.",
+    "description": "ER pozitif, HER2 negatif meme kanseri alt grubu; meme kanserlerinin %50–65'idir.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "",
+    "clinicalPearl": "Yüksek ER'li olanlar iyi diferansiye ve yavaş büyür; germline BRCA2 ile ilişkilidir; >10 yıl sonra geç nüks olabilir.",
+    "aliases": [
+      "Lüminal"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-a4d80876b3"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Patoloji/33) Memenin Benign Hastalıkları.pdf",
+        "ders": "Tıbbi Patoloji",
+        "kurul": 1,
+        "sayfa": 43,
+        "alinti": "Lümenal (%50–65): • ER pozitif • HER2 negatif"
+      }
+    ]
+  },
+  "her2 pozitif meme kanseri": {
+    "term": "HER2 pozitif meme kanseri",
+    "category": "hastalik",
+    "definition": "HER2 pozitif, ER pozitif ya da negatif olabilen agresif meme kanseri alt grubu.",
+    "description": "HER2 pozitif, ER pozitif ya da negatif olabilen agresif meme kanseri alt grubu.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "",
+    "clinicalPearl": "Germline TP53 ile ilişkilidir; nüks bimodaldır; anti-HER2 tedavilere (trastuzumab) duyarlıdır.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-a4d80876b3"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Patoloji/33) Memenin Benign Hastalıkları.pdf",
+        "ders": "Tıbbi Patoloji",
+        "kurul": 1,
+        "sayfa": 43,
+        "alinti": "HER2 pozitif (%10–20): • HER2 pozitif • ER pozitif veya"
+      }
+    ]
+  },
+  "üçlü negatif meme kanseri (tnbc)": {
+    "term": "Üçlü negatif meme kanseri (TNBC)",
+    "category": "hastalik",
+    "definition": "ER, PR ve HER2 negatif meme kanseri alt grubu.",
+    "description": "ER, PR ve HER2 negatif meme kanseri alt grubu.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "",
+    "clinicalPearl": "Genç kadınlar ve BRCA1 taşıyıcılarında sıktır; çoğunlukla grade 3; <8 yılda erken nüks zirvesi; kemoterapiye tam yanıt ≈%30.",
+    "aliases": [
+      "TNBC",
+      "Triple-negatif meme kanseri"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-a4d80876b3"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Patoloji/33) Memenin Benign Hastalıkları.pdf",
+        "ders": "Tıbbi Patoloji",
+        "kurul": 1,
+        "sayfa": 43,
+        "alinti": "Üçlü negatif- TNBC (%10–20): • ER negatif • PR negatif • HER2 negatif"
+      }
+    ]
+  },
+  "brca1": {
+    "term": "BRCA1",
+    "category": "genetik",
+    "definition": "Çift sarmallı DNA kırığı onarımında rol alan klasik tümör baskılayıcı gen.",
+    "description": "Çift sarmallı DNA kırığı onarımında rol alan klasik tümör baskılayıcı gen.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "",
+    "clinicalPearl": "Üçlü negatif kanserlerle ilişkili; kadında 70 yaşa kadar meme riski ≈%40–90, over ≈%20–40.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-a4d80876b3"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Patoloji/33) Memenin Benign Hastalıkları.pdf",
+        "ders": "Tıbbi Patoloji",
+        "kurul": 1,
+        "sayfa": 56,
+        "alinti": "BRCA1 ve BRCA2: – Klasik tümör baskılayıcı genler – Kanser: • İki allel de inaktive olduğunda"
+      }
+    ]
+  },
+  "brca2": {
+    "term": "BRCA2",
+    "category": "genetik",
+    "definition": "Çift sarmallı DNA kırığı onarımında rol alan klasik tümör baskılayıcı gen.",
+    "description": "Çift sarmallı DNA kırığı onarımında rol alan klasik tümör baskılayıcı gen.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "",
+    "clinicalPearl": "ER pozitif tümörlerle ilişkili; erkekte meme kanseri riski %6; bialelik mutasyon Fanconi anemisi yapar.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-a4d80876b3"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Patoloji/33) Memenin Benign Hastalıkları.pdf",
+        "ders": "Tıbbi Patoloji",
+        "kurul": 1,
+        "sayfa": 57,
+        "alinti": "BRCA2 mutasyonları: – Öncelikle ER pozitif tümörlerle ilişkili • BRCA1 mutasyonları: – Üçlü negatif kanserlerle güçlü biçimde ilişkili"
+      }
+    ]
+  },
+  "pten": {
+    "term": "PTEN",
+    "category": "genetik",
+    "definition": "PI3K-AKT yolunun negatif düzenleyicisi olan tümör baskılayıcı gen.",
+    "description": "PI3K-AKT yolunun negatif düzenleyicisi olan tümör baskılayıcı gen.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "",
+    "clinicalPearl": "Cowden sendromu; tiroid ve endometrium kanseri, çok sayıda benign tümör.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-a4d80876b3"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Patoloji/33) Memenin Benign Hastalıkları.pdf",
+        "ders": "Tıbbi Patoloji",
+        "kurul": 1,
+        "sayfa": 59,
+        "alinti": "Ailesel meme kanseri ile ilişkili diğer genler: – TP53 – PTEN: PI3K-AKT yolunun negatif düzenleyicisi"
+      }
+    ]
+  },
+  "cowden sendromu": {
+    "term": "Cowden sendromu",
+    "category": "hastalik",
+    "definition": "PTEN mutasyonuyla ilişkili sendrom; meme, tiroid ve endometrium kanseri riski artar.",
+    "description": "PTEN mutasyonuyla ilişkili sendrom; meme, tiroid ve endometrium kanseri riski artar.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-a4d80876b3"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Patoloji/33) Memenin Benign Hastalıkları.pdf",
+        "ders": "Tıbbi Patoloji",
+        "kurul": 1,
+        "sayfa": 61,
+        "alinti": "PTEN (Cowden sendromu) <%1 Kadın: ≈%20–80 • Erkek: <%1 Tiroid, endometrium, diğerleri Çok sayıda benign tümör ile de ilişkilidir."
+      }
+    ]
+  },
+  "li-fraumeni sendromu": {
+    "term": "Li-Fraumeni sendromu",
+    "category": "hastalik",
+    "definition": "TP53 mutasyonuyla ilişkili sendrom; meme kanseri, sarkom, lösemi ve beyin tümörleri riski artar.",
+    "description": "TP53 mutasyonuyla ilişkili sendrom; meme kanseri, sarkom, lösemi ve beyin tümörleri riski artar.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "",
+    "clinicalPearl": "Meme kanserlerinin çoğu ER ve HER2 pozitiftir.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-a4d80876b3"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Patoloji/33) Memenin Benign Hastalıkları.pdf",
+        "ders": "Tıbbi Patoloji",
+        "kurul": 1,
+        "sayfa": 61,
+        "alinti": "TP53 (Li–Fraumeni sendromu) <%1 Kadın: ≈%50–60 • Erkek: <%1 Sarkom, lösemi, beyin tümörleri, diğerleri Kanserlerin çoğu ER ve HER2 pozitiftir."
+      }
+    ]
+  },
+  "stk11": {
+    "term": "STK11",
+    "category": "genetik",
+    "definition": "Peutz-Jeghers sendromundan sorumlu gen.",
+    "description": "Peutz-Jeghers sendromundan sorumlu gen.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "",
+    "clinicalPearl": "Kadında meme riski ≈%40–60; hamartomatöz kolon polipleri eşlik eder.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-a4d80876b3"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Patoloji/33) Memenin Benign Hastalıkları.pdf",
+        "ders": "Tıbbi Patoloji",
+        "kurul": 1,
+        "sayfa": 61,
+        "alinti": "STK11 (Peutz– Jeghers sendromu) <%1 Kadın: ≈%40–60 Over, kolon, pankreas, diğerleri Benign kolon polipleri (hamartomatöz polipler) ile de ilişkilidir."
+      }
+    ]
+  },
+  "cdh1": {
+    "term": "CDH1",
+    "category": "genetik",
+    "definition": "Kalıtsal diffüz mide kanseri geni; meme kanserlerinin çoğu lobüler tiptedir.",
+    "description": "Kalıtsal diffüz mide kanseri geni; meme kanserlerinin çoğu lobüler tiptedir.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-a4d80876b3"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Patoloji/33) Memenin Benign Hastalıkları.pdf",
+        "ders": "Tıbbi Patoloji",
+        "kurul": 1,
+        "sayfa": 62,
+        "alinti": "CDH1 (kalıtsal diffüz mide kanseri) <%1 Kadın: ≈%50 Mide signet ring hücreli karsinom, kolon Meme kanserlerinin çoğu lobüler tiptedir."
+      }
+    ]
+  },
+  "palb2": {
+    "term": "PALB2",
+    "category": "genetik",
+    "definition": "Kalıtsal meme kanseri geni; bialelik mutasyonları Fanconi anemisinin bir formuna yol açar.",
+    "description": "Kalıtsal meme kanseri geni; bialelik mutasyonları Fanconi anemisinin bir formuna yol açar.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "",
+    "clinicalPearl": "Derste gen adı 'PALPB2' yazılmıştır; doğru yazım PALB2'dir.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-a4d80876b3"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Patoloji/33) Memenin Benign Hastalıkları.pdf",
+        "ders": "Tıbbi Patoloji",
+        "kurul": 1,
+        "sayfa": 62,
+        "alinti": "PALPB2 (kalıtsal meme kanseri) <%1 Kadın: ≈%30–60 • Erkek: <%1 Pankreas, prostat Bialelik mutasyonlar Fanconi anemisinin bir formuna yol açar."
+      }
+    ]
+  },
+  "atm": {
+    "term": "ATM",
+    "category": "genetik",
+    "definition": "Ataksi telenjiektazi geni; orta penetranslı meme kanseri yatkınlık geni.",
+    "description": "Ataksi telenjiektazi geni; orta penetranslı meme kanseri yatkınlık geni.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "",
+    "clinicalPearl": "Bialelik mutasyon ataksi telenjiektazi yapar.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-a4d80876b3"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Patoloji/33) Memenin Benign Hastalıkları.pdf",
+        "ders": "Tıbbi Patoloji",
+        "kurul": 1,
+        "sayfa": 62,
+        "alinti": "ATM (ataksi telenjiektazi) ≈%5 Kadın: ≈%15–30 – Bialelik mutasyonlar ataksi telenjiektaziye neden olur."
+      }
+    ]
+  },
+  "chek2": {
+    "term": "CHEK2",
+    "category": "genetik",
+    "definition": "Orta penetranslı kalıtsal meme kanseri geni.",
+    "description": "Orta penetranslı kalıtsal meme kanseri geni.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "",
+    "clinicalPearl": "Kanserlerin çoğu ER pozitiftir.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-a4d80876b3"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Patoloji/33) Memenin Benign Hastalıkları.pdf",
+        "ders": "Tıbbi Patoloji",
+        "kurul": 1,
+        "sayfa": 62,
+        "alinti": "CHEK2 (kalıtsal meme kanseri) ≈%5 Kadın: ≈%10–30 Prostat, tiroid, kolon, böbrek Kanserlerin çoğu ER pozitiftir."
+      }
+    ]
+  },
+  "pık3ca": {
+    "term": "PIK3CA",
+    "category": "genetik",
+    "definition": "Fosfoinozitid 3-kinazı (PI3K) kodlayan gen; lümenal kanserlerde sık mutasyona uğrar.",
+    "description": "Fosfoinozitid 3-kinazı (PI3K) kodlayan gen; lümenal kanserlerde sık mutasyona uğrar.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "",
+    "clinicalPearl": "Lümenal %29–45, HER2 ≈%40, TNBC %9.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-a4d80876b3"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Patoloji/33) Memenin Benign Hastalıkları.pdf",
+        "ders": "Tıbbi Patoloji",
+        "kurul": 1,
+        "sayfa": 47,
+        "alinti": "Sık somatik mutasyonlar PIK3CA (%29–45), TP53 (%12–29) TP53 (%70–80), PIK3CA (≈%40) TP53 (%70–80), PIK3CA (%9)"
+      }
+    ]
+  },
+  "pı3k-akt yolu": {
+    "term": "PI3K-AKT yolu",
+    "category": "fizyoloji",
+    "definition": "Hücre proliferasyonunu artıran ve apoptozu azaltan sinyal yolu; HER2 ve PIK3CA mutasyonlarıyla aktive olur, PTEN tarafından baskılanır.",
+    "description": "Hücre proliferasyonunu artıran ve apoptozu azaltan sinyal yolu; HER2 ve PIK3CA mutasyonlarıyla aktive olur, PTEN tarafından baskılanır.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-a4d80876b3"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Patoloji/33) Memenin Benign Hastalıkları.pdf",
+        "ders": "Tıbbi Patoloji",
+        "kurul": 1,
+        "sayfa": 66,
+        "alinti": "PI3K-AKT yolunu aktive eden mutasyonlar: – Sporadik ER pozitif kanserlerde sık – HER2 pozitif kanserlerde de sık"
+      }
+    ]
+  },
+  "trastuzumab": {
+    "term": "Trastuzumab",
+    "category": "ilac",
+    "definition": "HER2'ye karşı geliştirilmiş anti-HER2 hedefli tedavi ajanı.",
+    "description": "HER2'ye karşı geliştirilmiş anti-HER2 hedefli tedavi ajanı.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "",
+    "clinicalPearl": "HER2 pozitif meme kanserinde kullanılır.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-a4d80876b3"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Patoloji/33) Memenin Benign Hastalıkları.pdf",
+        "ders": "Tıbbi Patoloji",
+        "kurul": 1,
+        "sayfa": 67,
+        "alinti": "Ancak: • Anti-HER2 tedavilere (örn. trastuzumab) duyarlı"
+      }
+    ]
+  },
+  "aromataz inhibitörleri": {
+    "term": "Aromataz inhibitörleri",
+    "category": "ilac",
+    "definition": "Östrojen sentezini azaltan, ER pozitif meme kanserinde kullanılan ilaç grubu.",
+    "description": "Östrojen sentezini azaltan, ER pozitif meme kanserinde kullanılan ilaç grubu.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "",
+    "clinicalPearl": "Tamoksifenle birlikte östrojen/ER hedefli tedavidir.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-a4d80876b3"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Patoloji/33) Memenin Benign Hastalıkları.pdf",
+        "ders": "Tıbbi Patoloji",
+        "kurul": 1,
+        "sayfa": 70,
+        "alinti": "ER pozitif kanserler: – Östrojen/ER hedefli tedaviye (tamoksifen, aromataz inhibitörleri) duyarlı"
+      }
+    ]
+  },
+  "rölatif risk (rr)": {
+    "term": "Rölatif risk (RR)",
+    "category": "terim",
+    "definition": "İnvaziv karsinom geliştirme olasılığının, bilinen risk faktörü olmayan kadınlara göre kaç kat arttığını gösteren ölçü.",
+    "description": "İnvaziv karsinom geliştirme olasılığının, bilinen risk faktörü olmayan kadınlara göre kaç kat arttığını gösteren ölçü.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-a4d80876b3"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Patoloji/33) Memenin Benign Hastalıkları.pdf",
+        "ders": "Tıbbi Patoloji",
+        "kurul": 1,
+        "sayfa": 27,
+        "alinti": "Rölatif risk, invaziv karsinom geliştirme olasılığının, bilinen risk faktörü olmayan kadınlara göre kaç kat arttığını gösterir."
+      }
+    ]
+  },
+  "penetrans": {
+    "term": "Penetrans",
+    "category": "terim",
+    "definition": "Bir mutasyon taşıyanlarda hastalığın ortaya çıkma olasılığı.",
+    "description": "Bir mutasyon taşıyanlarda hastalığın ortaya çıkma olasılığı.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "",
+    "clinicalPearl": "Yüksek penetranslı mutasyonlar RR >4, tüm meme kanserlerinin %3–7'si; orta penetranslılar RR 2–4, %5–10'u.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-a4d80876b3"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Patoloji/33) Memenin Benign Hastalıkları.pdf",
+        "ders": "Tıbbi Patoloji",
+        "kurul": 1,
+        "sayfa": 61,
+        "alinti": "Yüksek penetranslı germline mutasyonlar, meme kanseri riskini >4 kat artırır ve tüm meme kanserlerinin yaklaşık %3–7’sini oluşturur."
+      }
+    ]
+  },
+  "bialelik mutasyon": {
+    "term": "Bialelik mutasyon",
+    "category": "genetik",
+    "definition": "Her iki alelde de mutasyon bulunması.",
+    "description": "Her iki alelde de mutasyon bulunması.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "",
+    "clinicalPearl": "Bialelik BRCA2/PALB2 Fanconi anemisine, bialelik ATM ataksi telenjiektaziye yol açar.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-a4d80876b3"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Patoloji/33) Memenin Benign Hastalıkları.pdf",
+        "ders": "Tıbbi Patoloji",
+        "kurul": 1,
+        "sayfa": 60,
+        "alinti": "Kanserlerin çoğu ER pozitiftir. Bialelik mutasyonlar Fanconi anemisinin bir formuna yol açar."
+      }
+    ]
+  },
+  "promotor metilasyonu": {
+    "term": "Promotor metilasyonu",
+    "category": "genetik",
+    "definition": "Gen promotor bölgesinin metillenmesiyle gen ekspresyonunun susturulması.",
+    "description": "Gen promotor bölgesinin metillenmesiyle gen ekspresyonunun susturulması.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "",
+    "clinicalPearl": "Üçlü negatif kanserlerin ~%50'sinde BRCA1 bu mekanizmayla inaktive edilir.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-a4d80876b3"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Patoloji/33) Memenin Benign Hastalıkları.pdf",
+        "ders": "Tıbbi Patoloji",
+        "kurul": 1,
+        "sayfa": 63,
+        "alinti": "BRCA1 / BRCA2 somatik mutasyonları: – Sporadik kanserlerde nadir • Ancak: – BRCA1: • Üçlü negatif kanserlerin ~%50’sinde • Promotor metilasyonu ile inaktive"
+      }
+    ]
+  },
+  "fanconi anemisi": {
+    "term": "Fanconi anemisi",
+    "category": "hastalik",
+    "definition": "DNA onarım defektiyle giden kalıtsal sendrom; bialelik BRCA2 veya PALB2 mutasyonuyla ilişkilidir.",
+    "description": "DNA onarım defektiyle giden kalıtsal sendrom; bialelik BRCA2 veya PALB2 mutasyonuyla ilişkilidir.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-a4d80876b3"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Patoloji/33) Memenin Benign Hastalıkları.pdf",
+        "ders": "Tıbbi Patoloji",
+        "kurul": 1,
+        "sayfa": 60,
+        "alinti": "Kanserlerin çoğu ER pozitiftir. Bialelik mutasyonlar Fanconi anemisinin bir formuna yol açar."
+      }
+    ]
+  },
+  "ataksi telenjiektazi": {
+    "term": "Ataksi telenjiektazi",
+    "category": "hastalik",
+    "definition": "ATM genindeki bialelik mutasyonlarla oluşan hastalık.",
+    "description": "ATM genindeki bialelik mutasyonlarla oluşan hastalık.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-a4d80876b3"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Patoloji/33) Memenin Benign Hastalıkları.pdf",
+        "ders": "Tıbbi Patoloji",
+        "kurul": 1,
+        "sayfa": 62,
+        "alinti": "ATM (ataksi telenjiektazi) ≈%5 Kadın: ≈%15–30 – Bialelik mutasyonlar ataksi telenjiektaziye neden olur."
+      }
+    ]
+  },
+  "mamografi": {
+    "term": "Mamografi",
+    "category": "tani",
+    "definition": "Memenin X-ışınıyla görüntülenmesi; palpe edilemeyen, asemptomatik kanserlerin erken saptanmasında kullanılır.",
+    "description": "Memenin X-ışınıyla görüntülenmesi; palpe edilemeyen, asemptomatik kanserlerin erken saptanmasında kullanılır.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "",
+    "clinicalPearl": "Anormal mamografinin malign olma olasılığı 40 yaşta ~%10, 50 yaşta >%25; ince, pleomorfik, lineer/dallanan kalsifikasyon malign özelliktir.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-a4d80876b3"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Patoloji/33) Memenin Benign Hastalıkları.pdf",
+        "ders": "Tıbbi Patoloji",
+        "kurul": 1,
+        "sayfa": 14,
+        "alinti": "1980’lerden beri: – Palpe edilemeyen, asemptomatik kanserlerin erken saptanması • Duyarlılık ve"
+      }
+    ]
+  },
+  "yüksek meme dansitesi": {
+    "term": "Yüksek meme dansitesi",
+    "category": "terim",
+    "definition": "Meme kanseri için rölatif riski >4.0 olan risk faktörü.",
+    "description": "Meme kanseri için rölatif riski >4.0 olan risk faktörü.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-a4d80876b3"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Patoloji/33) Memenin Benign Hastalıkları.pdf",
+        "ders": "Tıbbi Patoloji",
+        "kurul": 1,
+        "sayfa": 52,
+        "alinti": "Güçlü aile öyküsü (birden fazla birinci derece akraba, genç yaş, çoklu kanser) • Meme kanseri kişisel öyküsü • Yüksek meme dansitesi >4.0"
+      }
+    ]
+  },
+  "nulliparite": {
+    "term": "Nulliparite",
+    "category": "terim",
+    "definition": "Hiç doğum yapmamış olmak; meme kanseri için rölatif riski 1.1–2.0 olan risk faktörü.",
+    "description": "Hiç doğum yapmamış olmak; meme kanseri için rölatif riski 1.1–2.0 olan risk faktörü.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-a4d80876b3"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Patoloji/33) Memenin Benign Hastalıkları.pdf",
+        "ders": "Tıbbi Patoloji",
+        "kurul": 1,
+        "sayfa": 52,
+        "alinti": "Erken menarş (yaş <12) • Geç menopoz (yaş >55) • Geç ilk gebelik (yaş >35) • Nulliparite (hiç doğum yapmamış olmak) • Emzirmeme • Egzojen hormon tedavisi • Postmenopozal obezite • Fiziksel inaktivite • Yüksek alkol tüketimi"
       }
     ]
   }
