@@ -190,7 +190,9 @@ class RealtimeEventService {
         let payload: any = null;
         try { if (e.data) payload = JSON.parse(e.data); } catch (_) {}
         try {
-          const { pullDeltaNotes } = await import('./notesSync');
+          // Yalnız bu cihazın defteri değiştiyse çek (olay tüm ziyaretçilere gider)
+          const { pullDeltaNotes, isOwnNotebook } = await import('./notesSync');
+          if (!(await isOwnNotebook(payload?.codeHash))) return;
           void pullDeltaNotes();
         } catch (_) {}
         if (typeof window !== 'undefined') {

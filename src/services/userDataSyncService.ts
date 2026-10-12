@@ -57,6 +57,8 @@ export interface FullUserDataBundle {
     emailEnabled: boolean;
   };
   notes: StudyNote[];
+  /** Silinen notların mezar taşları (id → silinme zamanı); birleştirmede silinen not geri gelmesin */
+  notesDeleted?: Record<string, string>;
   comments?: Array<{ questionId: string; text: string; at?: string }>;
   clientUpdatedAt: string;
   lastBackupAt?: string;
@@ -64,6 +66,7 @@ export interface FullUserDataBundle {
 
 const LAST_BACKUP_KEY = 'medsoru_last_user_data_backup_at';
 const LAST_RESTORE_KEY = 'medsoru_last_user_data_restore_at';
+const NOTES_DELETED_KEY = 'medsoru_notes_deleted_v1'; // notesSync ile ortak
 
 const readJson = <T>(key: string, fallback: T): T => {
   try {
@@ -121,6 +124,7 @@ export function collectLocalUserData(): FullUserDataBundle {
 
   // Notlar
   const notes = readJson<StudyNote[]>('medsoru_notes_v1', []);
+  const notesDeleted = readJson<Record<string, string>>(NOTES_DELETED_KEY, {});
 
   return {
     uid,
@@ -144,8 +148,102 @@ export function collectLocalUserData(): FullUserDataBundle {
       emailEnabled,
     },
     notes,
+    notesDeleted,
     clientUpdatedAt: new Date().toISOString(),
   };
+}
+
+/**
+ * Sunucudan gelen (birleştirilmiş) paketi yerel veriye uygular. Hiçbir şey ezilmez:
+ * listeler birleşir, sayaçlarda büyük olan, kayıtlarda yeni olan kazanır; silinen notlar geri gelmez,
+ * cihazda daha yeni düzenlenmiş not korunur. Hem yedek yanıtında hem elle geri yüklemede kullanılır.
+ */
+export function applyBundleToLocal(bundle: FullUserDataBundle): void {
+  const st = bundle?.stats || {};
+  const keyOf = (x: any) => (x && typeof x === 'object' ? String(x.id ?? x.at ?? x.date ?? x.timestamp ?? JSON.stringify(x)) : String(x));
+  const union = (local: any[], remote: any[], pick: (l: any, r: any) => any = (l) => l) => {
+    const m = new Map<string, any>();
+    for (const x of remote || []) if (x != null) m.set(keyOf(x), x);
+    for (const x of local || []) {
+      if (x == null) continue;
+      const k = keyOf(x);
+      m.set(k, m.has(k) ? pick(x, m.get(k)) : x);
+    }
+    return Array.from(m.values());
+  };
+
+  if (Array.isArray(st.activityLog)) {
+    const k = (a: any) => `${a?.at}|${a?.kind}|${a?.text}`;
+    const m = new Map<string, any>();
+    for (const a of [...st.activityLog, ...readJson<any[]>('medsoru_activity_v1', [])]) if (a) m.set(k(a), a);
+    writeJson('medsoru_activity_v1', Array.from(m.values()).sort((x, y) => String(x.at).localeCompare(String(y.at))).slice(-600));
+  }
+  if (st.studySeconds) {
+    const sec = readJson<Record<string, number>>('medsoru_study_seconds_v1', {});
+    for (const [day, v] of Object.entries(st.studySeconds)) sec[day] = Math.max(Number(sec[day]) || 0, Number(v) || 0);
+    writeJson('medsoru_study_seconds_v1', sec);
+  }
+  if (Array.isArray(st.selftestHistory)) {
+    writeJson(
+      'medsoru_selftest_history_v1',
+      union(readJson<any[]>('medsoru_selftest_history_v1', []), st.selftestHistory).sort((x, y) => String(x?.at || '').localeCompare(String(y?.at || '')))
+    );
+  }
+  if (st.studyProgress) {
+    const prog = readJson<Record<string, any>>('medsoru_study_progress_v1', {});
+    for (const [id, r] of Object.entries(st.studyProgress as Record<string, any>)) {
+      if (!prog[id] || String(r?.at || '') > String(prog[id]?.at || '')) prog[id] = r;
+    }
+    writeJson('medsoru_study_progress_v1', prog);
+  }
+  if (Array.isArray(st.studyReview)) writeJson('medsoru_study_review_v1', union(readJson<any[]>('medsoru_study_review_v1', []), st.studyReview));
+  if (st.flashcards && typeof st.flashcards === 'object') {
+    const cards = readJson<Record<string, any>>('medsoru_flashcards_v1', {});
+    for (const [id, r] of Object.entries(st.flashcards as Record<string, any>)) {
+      const l = cards[id];
+      if (!l || (Number(r?.seen) || 0) > (Number(l?.seen) || 0)) cards[id] = r;
+    }
+    writeJson('medsoru_flashcards_v1', cards);
+  }
+  if (Array.isArray(st.favorites)) writeJson('medsoru_study_favorites_v1', union(readJson<any[]>('medsoru_study_favorites_v1', []), st.favorites).filter(Boolean));
+  if (Array.isArray(st.cardFavorites)) writeJson('medsoru_flashcard_favorites_v1', union(readJson<any[]>('medsoru_flashcard_favorites_v1', []), st.cardFavorites));
+  if (Array.isArray(st.bookmarkedEncyclopedia)) {
+    writeJson('medsoru_bookmarked_encyclopedia', union(readJson<any[]>('medsoru_bookmarked_encyclopedia', []), st.bookmarkedEncyclopedia).filter(Boolean));
+  }
+
+  if (Array.isArray(bundle.notifications)) {
+    const merged = union(readJson<UserNotificationItem[]>('medsoru_user_notifications_v1', []), bundle.notifications, (l, r) => ({ ...r, ...l, read: Boolean(l?.read || r?.read) }));
+    writeJson('medsoru_user_notifications_v1', merged.sort((a, b) => String(b.createdAt || '').localeCompare(String(a.createdAt || ''))));
+  }
+
+  // Notlar: mezar taşlarıyla birleşim (silinen geri gelmez, yerelde daha yeni düzenlenen korunur)
+  if (Array.isArray(bundle.notes)) {
+    const deleted = { ...readJson<Record<string, string>>(NOTES_DELETED_KEY, {}) };
+    for (const [id, at] of Object.entries(bundle.notesDeleted || {})) if (!deleted[id] || deleted[id] < at) deleted[id] = at;
+    const byId = new Map<string, StudyNote>();
+    for (const n of bundle.notes) if (n?.id) byId.set(n.id, n);
+    for (const n of readJson<StudyNote[]>('medsoru_notes_v1', [])) {
+      const r = byId.get(n.id);
+      if (!r || n.updatedAt > r.updatedAt) byId.set(n.id, n);
+    }
+    for (const [id, at] of Object.entries(deleted)) {
+      const n = byId.get(id);
+      if (n && n.updatedAt <= at) byId.delete(id);
+    }
+    replaceNotesFromSync(Array.from(byId.values()).sort((a, b) => b.updatedAt.localeCompare(a.updatedAt)));
+    writeJson(NOTES_DELETED_KEY, deleted);
+  }
+
+  if (bundle.displayName && typeof localStorage !== 'undefined' && !localStorage.getItem(SAVED_NAME_KEY)) {
+    localStorage.setItem(SAVED_NAME_KEY, bundle.displayName);
+  }
+  if (bundle.studentNumber && typeof localStorage !== 'undefined' && !localStorage.getItem(SAVED_STUDENT_NUMBER_KEY)) {
+    localStorage.setItem(SAVED_STUDENT_NUMBER_KEY, bundle.studentNumber);
+  }
+  if (typeof window !== 'undefined') {
+    window.dispatchEvent(new CustomEvent('medsoru:notes-synced'));
+    window.dispatchEvent(new Event('storage'));
+  }
 }
 
 /**
@@ -198,6 +296,15 @@ export async function backupUserDataToDatabase(): Promise<{
 
     const data = await res.json();
     const nowIso = data.backedUpAt || new Date().toISOString();
+    // Sunucu birleştirdi: diğer cihazlardan gelenleri de buraya uygula (cihazlar yakınsar)
+    if (data?.data) {
+      try {
+        applyBundleToLocal(data.data);
+        lastBackedUpFingerprint = fingerprint();
+      } catch (e) {
+        console.warn('[UserDataSync] Birleştirilmiş paket uygulanamadı:', e);
+      }
+    }
 
     if (typeof localStorage !== 'undefined') {
       localStorage.setItem(LAST_BACKUP_KEY, nowIso);
@@ -251,108 +358,7 @@ export async function restoreUserDataFromDatabase(): Promise<{
     }
 
     const bundle: FullUserDataBundle = json.data;
-
-    // 1. İstatistikleri ve Çalışma Sürelerini Birleştir
-    if (bundle.stats) {
-      // Aktivite günlüğü (birleştir ve tarihe göre sırala)
-      if (Array.isArray(bundle.stats.activityLog)) {
-        const localAct = readJson<Array<{ kind: string; text: string; at: string }>>('medsoru_activity_v1', []);
-        const actMap = new Map<string, { kind: string; text: string; at: string }>();
-        bundle.stats.activityLog.forEach((a) => {
-          const k = `${a.at}_${a.text}`;
-          actMap.set(k, a);
-        });
-        localAct.forEach((a) => {
-          const k = `${a.at}_${a.text}`;
-          actMap.set(k, a);
-        });
-        const mergedAct = Array.from(actMap.values())
-          .sort((x, y) => x.at.localeCompare(y.at))
-          .slice(-600);
-        writeJson('medsoru_activity_v1', mergedAct);
-      }
-
-      // Çalışma süreleri (en yüksek olanı koru)
-      if (bundle.stats.studySeconds) {
-        const localSec = readJson<Record<string, number>>('medsoru_study_seconds_v1', {});
-        const mergedSec: Record<string, number> = { ...localSec };
-        for (const [day, sec] of Object.entries(bundle.stats.studySeconds)) {
-          mergedSec[day] = Math.max(Number(mergedSec[day]) || 0, Number(sec) || 0);
-        }
-        writeJson('medsoru_study_seconds_v1', mergedSec);
-      }
-
-      // Deneme sınavı geçmişi
-      if (Array.isArray(bundle.stats.selftestHistory)) {
-        const localTests = readJson<any[]>('medsoru_selftest_history_v1', []);
-        const testMap = new Map<string, any>();
-        bundle.stats.selftestHistory.forEach((rawT) => {
-          const t = rawT as Record<string, any>;
-          if (t && (t.id || t.date || t.timestamp)) {
-            testMap.set(String(t.id || t.date || t.timestamp), t);
-          }
-        });
-        localTests.forEach((t) => {
-          if (t && (t.id || t.date || t.timestamp)) {
-            testMap.set(String(t.id || t.date || t.timestamp), t);
-          }
-        });
-        writeJson('medsoru_selftest_history_v1', Array.from(testMap.values()));
-      }
-
-      // Deste ilerlemeleri
-      if (bundle.stats.studyProgress) {
-        const localProg = readJson<Record<string, any>>('medsoru_study_progress_v1', {});
-        const mergedProg = { ...bundle.stats.studyProgress, ...localProg };
-        writeJson('medsoru_study_progress_v1', mergedProg);
-      }
-
-      // Flaş kartlar
-      if (bundle.stats.flashcards) {
-        writeJson('medsoru_flashcards_v1', bundle.stats.flashcards);
-      }
-
-      // Favoriler
-      if (Array.isArray(bundle.stats.favorites)) {
-        const localFav = new Set(readJson<string[]>('medsoru_study_favorites_v1', []));
-        bundle.stats.favorites.forEach((f: any) => localFav.add(typeof f === 'string' ? f : f?.id));
-        writeJson('medsoru_study_favorites_v1', Array.from(localFav).filter(Boolean));
-      }
-
-      // Sözlük imleri
-      if (Array.isArray(bundle.stats.bookmarkedEncyclopedia)) {
-        const localBmk = new Set(readJson<string[]>('medsoru_bookmarked_encyclopedia', []));
-        bundle.stats.bookmarkedEncyclopedia.forEach((id) => localBmk.add(id));
-        writeJson('medsoru_bookmarked_encyclopedia', Array.from(localBmk).filter(Boolean));
-      }
-    }
-
-    // 2. Bildirimleri Birleştir
-    if (Array.isArray(bundle.notifications)) {
-      const localNotifs = readJson<UserNotificationItem[]>('medsoru_user_notifications_v1', []);
-      const notifMap = new Map<string, UserNotificationItem>();
-      bundle.notifications.forEach((n) => {
-        if (n && n.id) notifMap.set(n.id, n);
-      });
-      localNotifs.forEach((n) => {
-        if (n && n.id) notifMap.set(n.id, n);
-      });
-      const mergedNotifs = Array.from(notifMap.values()).sort((a, b) => b.createdAt.localeCompare(a.createdAt));
-      writeJson('medsoru_user_notifications_v1', mergedNotifs);
-    }
-
-    // 3. Notları Birleştir
-    if (Array.isArray(bundle.notes) && bundle.notes.length > 0) {
-      replaceNotesFromSync(bundle.notes);
-    }
-
-    // 4. Profil Bilgilerini Güncelle (eğer yerelde eksikse)
-    if (bundle.displayName && typeof localStorage !== 'undefined' && !localStorage.getItem(SAVED_NAME_KEY)) {
-      localStorage.setItem(SAVED_NAME_KEY, bundle.displayName);
-    }
-    if (bundle.studentNumber && typeof localStorage !== 'undefined' && !localStorage.getItem(SAVED_STUDENT_NUMBER_KEY)) {
-      localStorage.setItem(SAVED_STUDENT_NUMBER_KEY, bundle.studentNumber);
-    }
+    applyBundleToLocal(bundle);
 
     const nowIso = new Date().toISOString();
     if (typeof localStorage !== 'undefined') {
@@ -388,6 +394,34 @@ export function getLastBackupTime(): string {
   }
 }
 
+/** Yerel verinin parmak izi (zaman damgası hariç): değişmediyse otomatik yedek gönderilmez. */
+let lastBackedUpFingerprint = '';
+function fingerprint(): string {
+  try {
+    const { clientUpdatedAt: _t, ...rest } = collectLocalUserData();
+    const str = JSON.stringify(rest);
+    let h = 0;
+    for (let i = 0; i < str.length; i++) h = (Math.imul(31, h) + str.charCodeAt(i)) | 0;
+    return `${str.length}:${h}`;
+  } catch {
+    return '';
+  }
+}
+
+let autoBackupRunning = false;
+async function autoBackupIfChanged(): Promise<void> {
+  if (autoBackupRunning || getNetState() === 'offline') return;
+  const fp = fingerprint();
+  if (!fp || fp === lastBackedUpFingerprint) return;
+  autoBackupRunning = true;
+  try {
+    const r = await backupUserDataToDatabase();
+    if (r.success) lastBackedUpFingerprint = fingerprint();
+  } finally {
+    autoBackupRunning = false;
+  }
+}
+
 /**
  * Kullanıcı verileri değiştiğinde sessiz arka plan yedekleme zamanlayıcısı.
  */
@@ -398,6 +432,22 @@ export function triggerAutoBackup(): void {
   if (autoBackupTimer) clearTimeout(autoBackupTimer);
 
   autoBackupTimer = window.setTimeout(() => {
-    backupUserDataToDatabase().catch(() => {});
+    void autoBackupIfChanged();
   }, 10_000); // 10 saniye boşta bekleme sonrası sessiz yedekleme
+}
+
+let autoInstalled = false;
+/**
+ * İstatistik ve notların sürekli yedeklenmesi: sekme arka plana geçince ve açıkken 15 dk'da bir, yalnız veri
+ * değiştiyse. Sunucu birleştirdiği için sık yedek veri kaybettirmez; yanıt diğer cihazların verisini de getirir.
+ */
+export function installUserDataAutoBackup(): void {
+  if (autoInstalled || typeof window === 'undefined') return;
+  autoInstalled = true;
+  document.addEventListener('visibilitychange', () => {
+    if (document.visibilityState === 'hidden') void autoBackupIfChanged();
+  });
+  window.setInterval(() => {
+    if (document.visibilityState === 'visible') void autoBackupIfChanged();
+  }, 15 * 60 * 1000);
 }

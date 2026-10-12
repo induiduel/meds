@@ -24,6 +24,8 @@ import fs from 'fs';
 import path from 'path';
 import crypto from 'crypto';
 import type express from 'express';
+import { requestUser, accountNotesCode } from './firebaseIdentity';
+import { mergeNotes, type NotesStore } from './userNotesService';
 
 export interface UserDataBackupDeps {
   dataDir: string;
@@ -31,8 +33,8 @@ export interface UserDataBackupDeps {
   saveUsers: (users: any[]) => void;
   mirrorUserToDb: (user: any) => Promise<void>;
   getPastQuestions: () => any[];
-  /** Firebase web API anahtarı (herkese açık); ID jetonunu accounts:lookup ile doğrulamak için. */
-  firebaseApiKey?: string;
+  /** Hesaba bağlı not defteri (/api/notes ile aynı depo). */
+  notesStore: NotesStore;
 }
 
 type Identity = { uid: string; email: string; verified: boolean };
@@ -40,49 +42,105 @@ type Identity = { uid: string; email: string; verified: boolean };
 // Cihaz jetonu: src/utils/voterId.ts → `dev-<uuid>` (ya da eski tarayıcılarda `dev-<zaman>-<rastgele>`)
 const DEVICE_TOKEN_RE = /^dev-[a-z0-9-]{16,64}$/i;
 
+// ---------------- Sunucu tarafı birleştirme ----------------
+// Yedek artık üzerine yazılmaz: gelen paket mevcut yedekle birleştirilir ve sonuç istemciye döner. Böylece yeni/
+// sıfırlanmış bir cihazın boş paketi hesabın verisini silemez; cihazlar her yedekte birbirine yakınsar.
+// Not: favori/tekrar listesi gibi kümelerde birleşim kullanılır (bir cihazda kaldırılan öğe diğerinden geri gelebilir).
+
+const arr = (v: unknown): any[] => (Array.isArray(v) ? v : []);
+const obj = (v: unknown): Record<string, any> => (v && typeof v === 'object' && !Array.isArray(v) ? (v as Record<string, any>) : {});
+const itemKey = (x: any): string => (x && typeof x === 'object' ? String(x.id ?? x.at ?? x.date ?? x.timestamp ?? JSON.stringify(x)) : String(x));
+
+/** Kimliğe göre birleşim; aynı kimlikte `pick(eski, yeni)` kazanır (varsayılan: gelen). */
+function unionBy<T>(a: T[], b: T[], pick: (oldV: T, newV: T) => T = (_o, n) => n, keyOf: (x: T) => string = itemKey): T[] {
+  const m = new Map<string, T>();
+  for (const x of a) if (x != null) m.set(keyOf(x), x);
+  for (const x of b) {
+    if (x == null) continue;
+    const k = keyOf(x);
+    const cur = m.get(k);
+    m.set(k, cur === undefined ? x : pick(cur, x));
+  }
+  return Array.from(m.values());
+}
+const newerAt = (o: any, n: any) => (String(n?.at || n?.updatedAt || '') >= String(o?.at || o?.updatedAt || '') ? n : o);
+
+export function mergeUserBundle(existing: any, incoming: any): any {
+  const e = obj(existing);
+  const i = obj(incoming);
+  const es = obj(e.stats);
+  const is = obj(i.stats);
+
+  const studySeconds: Record<string, number> = { ...obj(es.studySeconds) };
+  for (const [day, sec] of Object.entries(obj(is.studySeconds))) studySeconds[day] = Math.max(Number(studySeconds[day]) || 0, Number(sec) || 0);
+
+  const studyProgress: Record<string, any> = { ...obj(es.studyProgress) };
+  for (const [id, rec] of Object.entries(obj(is.studyProgress))) studyProgress[id] = studyProgress[id] ? newerAt(studyProgress[id], rec) : rec;
+
+  // Kart kutusu: daha çok tekrar edilmiş (seen) durum güncel kabul edilir
+  const flashcards: Record<string, any> = { ...obj(es.flashcards) };
+  for (const [id, st] of Object.entries(obj(is.flashcards))) {
+    const cur = flashcards[id];
+    flashcards[id] = !cur || (Number(st?.seen) || 0) > (Number(cur?.seen) || 0) || ((Number(st?.seen) || 0) === (Number(cur?.seen) || 0) && (Number(st?.due) || 0) > (Number(cur?.due) || 0)) ? st : cur;
+  }
+
+  const activityKey = (a: any) => `${a?.at}|${a?.kind}|${a?.text}`;
+  const stats = {
+    activityLog: unionBy(arr(es.activityLog), arr(is.activityLog), undefined, activityKey)
+      .sort((x: any, y: any) => String(x?.at).localeCompare(String(y?.at)))
+      .slice(-600),
+    studySeconds,
+    selftestHistory: unionBy(arr(es.selftestHistory), arr(is.selftestHistory))
+      .sort((x: any, y: any) => String(x?.at || '').localeCompare(String(y?.at || '')))
+      .slice(-500),
+    studyProgress,
+    studyReview: unionBy(arr(es.studyReview), arr(is.studyReview)),
+    flashcards,
+    favorites: unionBy(arr(es.favorites), arr(is.favorites)),
+    cardFavorites: unionBy(arr(es.cardFavorites), arr(is.cardFavorites), newerAt),
+    bookmarkedEncyclopedia: unionBy(arr(es.bookmarkedEncyclopedia), arr(is.bookmarkedEncyclopedia)),
+  };
+
+  // Bildirim bir cihazda okunduysa okunmuş sayılır
+  const notifications = unionBy(arr(e.notifications), arr(i.notifications), (o: any, n: any) => ({ ...o, ...n, read: Boolean(o?.read || n?.read) }))
+    .sort((x: any, y: any) => String(y?.createdAt || '').localeCompare(String(x?.createdAt || '')))
+    .slice(0, 300);
+
+  return {
+    ...e,
+    ...i,
+    displayName: i.displayName || e.displayName || null,
+    studentNumber: i.studentNumber || e.studentNumber || null,
+    stats,
+    notifications,
+    notificationPrefs: { ...obj(e.notificationPrefs), ...obj(i.notificationPrefs) },
+  };
+}
+
 export function registerUserDataBackupRoutes(app: express.Express, deps: UserDataBackupDeps) {
   const backupsDir = path.join(deps.dataDir, 'user_backups');
   if (!fs.existsSync(backupsDir)) {
     fs.mkdirSync(backupsDir, { recursive: true });
   }
 
-  // Doğrulanmış jetonlar kısa süre önbellekte (her yedekte Firebase'e gidilmesin)
-  const tokenCache = new Map<string, { uid: string; email: string; exp: number }>();
-  async function verifyIdToken(token: string): Promise<{ uid: string; email: string } | null> {
-    if (!token || !deps.firebaseApiKey) return null;
-    const key = crypto.createHash('sha256').update(token).digest('hex');
-    const hit = tokenCache.get(key);
-    if (hit && hit.exp > Date.now()) return { uid: hit.uid, email: hit.email };
-    try {
-      const r = await fetch(`https://identitytoolkit.googleapis.com/v1/accounts:lookup?key=${encodeURIComponent(deps.firebaseApiKey)}`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ idToken: token }),
-        signal: AbortSignal.timeout(5000),
-      });
-      if (!r.ok) return null;
-      const u = (await r.json())?.users?.[0];
-      if (!u?.localId) return null;
-      const out = { uid: String(u.localId), email: String(u.email || '').toLowerCase() };
-      if (tokenCache.size > 2000) tokenCache.clear();
-      tokenCache.set(key, { ...out, exp: Date.now() + 10 * 60 * 1000 });
-      return out;
-    } catch {
-      return null;
-    }
-  }
-
-  /** İstek sahibinin kimliği; geçersizse null ve hata iletisi. */
+  /** İstek sahibinin kimliği; geçersizse hata iletisi. */
   async function resolveIdentity(req: express.Request, claimedUid: string): Promise<{ id?: Identity; error?: string; status?: number }> {
-    const auth = String(req.headers.authorization || '');
-    const token = auth.toLowerCase().startsWith('bearer ') ? auth.slice(7).trim() : '';
-    if (token) {
-      const v = await verifyIdToken(token);
-      if (!v) return { error: 'Oturum doğrulanamadı; lütfen yeniden giriş yapın.', status: 401 };
-      return { id: { uid: v.uid, email: v.email, verified: true } };
-    }
+    const who = await requestUser(req);
+    if (who.invalid) return { error: 'Oturum doğrulanamadı; lütfen yeniden giriş yapın.', status: 401 };
+    if (who.user) return { id: { uid: who.user.uid, email: who.user.email, verified: true } };
     if (DEVICE_TOKEN_RE.test(claimedUid)) return { id: { uid: claimedUid, email: '', verified: false } };
     return { error: 'Bu hesabın yedeği için giriş yapılmalıdır.', status: 401 };
+  }
+
+  /** Notlar: hesapta hesap defteri (/api/notes ile ortak), cihazda yedeğin kendi içinde mezar taşlı birleşim. */
+  function mergeBundleNotes(id: Identity, existing: any, incoming: any): { notes: any[]; notesDeleted: Record<string, string> } {
+    const inc = { notes: arr(incoming?.notes), deleted: obj(incoming?.notesDeleted) };
+    if (id.verified) {
+      const st = deps.notesStore.merge(accountNotesCode(id.uid), inc);
+      return { notes: st.notes, notesDeleted: st.deleted };
+    }
+    const st = mergeNotes({ notes: arr(existing?.notes), deleted: obj(existing?.notesDeleted), updatedAt: '' }, inc);
+    return { notes: st.notes, notesDeleted: st.deleted };
   }
 
   // Basit hız sınırı (IP başına dakikada 20 yazma)
@@ -132,9 +190,14 @@ export function registerUserDataBackupRoutes(app: express.Express, deps: UserDat
         return res.status(401).json({ error: 'Bu hesabın yedeği için giriş yapılmalıdır.' });
       }
 
+      // Hesabın ilk uid'li yedeği yoksa eski e-posta kopyası taban alınır (eski kayıtlar kaybolmasın)
+      let existing = readBackup(backupFile);
+      if (!existing && verified && email) existing = readBackup(getBackupFilePath(email));
+
       const savedAt = new Date().toISOString();
       const bundleToSave = {
-        ...body,
+        ...mergeUserBundle(existing, body),
+        ...mergeBundleNotes(who.id, existing, body),
         uid,
         email: email || undefined,
         verified,
@@ -165,12 +228,12 @@ export function registerUserDataBackupRoutes(app: express.Express, deps: UserDat
         );
 
         const statsSummary = {
-          selftestCount: Array.isArray(body.stats?.selftestHistory) ? body.stats.selftestHistory.length : 0,
-          notesCount: Array.isArray(body.notes) ? body.notes.length : 0,
-          notificationsCount: Array.isArray(body.notifications) ? body.notifications.length : 0,
-          favoritesCount: Array.isArray(body.stats?.favorites) ? body.stats.favorites.length : 0,
-          activityCount: Array.isArray(body.stats?.activityLog) ? body.stats.activityLog.length : 0,
-          studySecondsTotal: Object.values(body.stats?.studySeconds || {}).reduce(
+          selftestCount: Array.isArray(bundleToSave.stats?.selftestHistory) ? bundleToSave.stats.selftestHistory.length : 0,
+          notesCount: Array.isArray(bundleToSave.notes) ? bundleToSave.notes.length : 0,
+          notificationsCount: Array.isArray(bundleToSave.notifications) ? bundleToSave.notifications.length : 0,
+          favoritesCount: Array.isArray(bundleToSave.stats?.favorites) ? bundleToSave.stats.favorites.length : 0,
+          activityCount: Array.isArray(bundleToSave.stats?.activityLog) ? bundleToSave.stats.activityLog.length : 0,
+          studySecondsTotal: Object.values(bundleToSave.stats?.studySeconds || {}).reduce(
             (acc: number, val: any) => acc + (Number(val) || 0),
             0
           ),
@@ -221,10 +284,10 @@ export function registerUserDataBackupRoutes(app: express.Express, deps: UserDat
         console.warn('[UserDataBackup] users.json sync non-fatal warning:', dbErr);
       }
 
-      const selftestCount = Array.isArray(body.stats?.selftestHistory) ? body.stats.selftestHistory.length : 0;
-      const notesCount = Array.isArray(body.notes) ? body.notes.length : 0;
-      const notificationsCount = Array.isArray(body.notifications) ? body.notifications.length : 0;
-      const favoritesCount = Array.isArray(body.stats?.favorites) ? body.stats.favorites.length : 0;
+      const selftestCount = Array.isArray(bundleToSave.stats?.selftestHistory) ? bundleToSave.stats.selftestHistory.length : 0;
+      const notesCount = Array.isArray(bundleToSave.notes) ? bundleToSave.notes.length : 0;
+      const notificationsCount = Array.isArray(bundleToSave.notifications) ? bundleToSave.notifications.length : 0;
+      const favoritesCount = Array.isArray(bundleToSave.stats?.favorites) ? bundleToSave.stats.favorites.length : 0;
 
       res.json({
         success: true,
@@ -236,6 +299,8 @@ export function registerUserDataBackupRoutes(app: express.Express, deps: UserDat
           notificationsCount,
           favoritesCount,
         },
+        // Birleştirilmiş paket: istemci bunu yerel verisine uygular (cihazlar yakınsar)
+        data: bundleToSave,
       });
     } catch (err: any) {
       console.error('[UserDataBackup] POST /api/user-data/backup error:', err);
@@ -268,6 +333,14 @@ export function registerUserDataBackupRoutes(app: express.Express, deps: UserDat
         try {
           const raw = fs.readFileSync(backupFile, 'utf8');
           const data = JSON.parse(raw);
+          // Hesapta notların güncel hâli hesap defterindedir (başka cihazdan /api/notes ile eklenmiş olabilir)
+          if (verified) {
+            const st = deps.notesStore.read(accountNotesCode(uid));
+            if (st.updatedAt) {
+              data.notes = st.notes;
+              data.notesDeleted = st.deleted;
+            }
+          }
           return res.json({
             success: true,
             found: true,

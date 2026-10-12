@@ -136,7 +136,7 @@ import {
 } from './src/services/notebooklmManageService.ts';
 import { censorProfanity } from './src/utils/profanityFilter.ts';
 import { registerDataCatalogRoutes } from './src/services/dataCatalogService.ts';
-import { registerUserNotesRoutes } from './src/services/userNotesService.ts';
+import { registerUserNotesRoutes, createNotesStore } from './src/services/userNotesService.ts';
 import { createQuestionIntake, formatUnitsForPrompt, applyIntakeToQuestion } from './src/services/questionIntake.ts';
 import { createPoolClusterService } from './src/services/poolClusterService.ts';
 import { registerUserDataBackupRoutes } from './src/services/userDataBackupService.ts';
@@ -303,6 +303,15 @@ export async function deleteFromDb(
 ): Promise<{ local: boolean; localError?: string }> {
   const { error } = await pgDb.from(table).delete().eq(table === 'users' ? 'uid' : 'id', id);
   return error ? { local: false, localError: error.message } : { local: true };
+}
+
+/** Çok kayıtlı silme (toplu işlemler): 500'lük parçalar halinde. */
+async function deleteManyFromDb(table: 'questions' | 'past_questions', ids: string[]): Promise<{ local: boolean; localError?: string }> {
+  for (let i = 0; i < ids.length; i += 500) {
+    const { error } = await pgDb.from(table).delete().in('id', ids.slice(i, i + 500));
+    if (error) return { local: false, localError: error.message };
+  }
+  return { local: true };
 }
 
 const app = express();
@@ -1958,6 +1967,24 @@ function getDeletedPastQuestions(): Set<string> {
     }
   }
   return cachedDeletedPastQuestions || new Set();
+}
+
+function writeDeletedPastQuestions(s: Set<string>) {
+  cachedDeletedPastQuestions = s;
+  fs.writeFileSync(DELETED_PAST_QUESTIONS_FILE, JSON.stringify(Array.from(s), null, 2), 'utf-8');
+  lastDeletedPastQuestionsMtime = fs.statSync(DELETED_PAST_QUESTIONS_FILE).mtimeMs;
+}
+/** Toplu silme: tek yazımla mezar taşı ekler (her kimlik için dosyayı yeniden yazmaz). */
+function addDeletedPastQuestions(ids: string[]) {
+  const s = new Set(getDeletedPastQuestions());
+  ids.forEach((id) => s.add(id));
+  writeDeletedPastQuestions(s);
+}
+/** Çöp kutusundan geri yükleme: mezar taşlarını kaldırır. */
+function removeDeletedPastQuestions(ids: string[]) {
+  const s = new Set(getDeletedPastQuestions());
+  ids.forEach((id) => s.delete(id));
+  writeDeletedPastQuestions(s);
 }
 
 function addDeletedPastQuestion(id: string) {
@@ -6268,9 +6295,12 @@ function getDecksDb(): any[] {
 }
 
 // Kullanıcı notları yedeği / cihazlar arası eşitleme (src/services/userNotesService.ts)
-registerUserNotesRoutes(app, DATA_DIR, (codeHash, store) => {
+// Not defteri deposu: /api/notes ve hesap yedeği ortak kullanır. SSE olayı yalnız defterin özetini taşır;
+// istemci kendi defterinin özetiyle eşleşmiyorsa yeniden çekmez (her not değişikliğinde tüm ziyaretçiler istek atmasın).
+const notesStore = createNotesStore(DATA_DIR, (codeHash, store) => {
   broadcastRealtimeEvent('notes_changed', { codeHash, count: store.notes.length, updatedAt: store.updatedAt, time: Date.now() });
 });
+registerUserNotesRoutes(app, notesStore);
 
 // Serbest metin soru girişi: ham kayıt + ücretsiz Gemini ile ayrıştırma kuyruğu (src/services/questionIntake.ts).
 // Ayrıştırma bitince sonuç soru kaydına `intake` alanı olarak yazılır ve kümeler yeniden hesaplanır.
@@ -6306,13 +6336,7 @@ registerUserDataBackupRoutes(app, {
   saveUsers,
   mirrorUserToDb,
   getPastQuestions: getPastQuestionsDb,
-  firebaseApiKey: (() => {
-    try {
-      return JSON.parse(fs.readFileSync(path.join(__dirname, 'firebase-applet-config.json'), 'utf8')).apiKey;
-    } catch {
-      return undefined;
-    }
-  })(),
+  notesStore,
 });
 
 // Yönetim · veri kataloğu: tüm veri türleri tek arayüzde (liste/ara/süz, düzenle, değerlendir-sınıfla, ilişkiler)
@@ -6322,6 +6346,55 @@ registerDataCatalogRoutes(app, requireAdmin, {
   getPastQuestions: getPastQuestionsDb,
   savePastQuestions: savePastQuestionsDb,
   getDecks: getDecksDb,
+  // Toplu silme / geri yükleme: bellekte tutulan veriler (çıkmış, havuz, Öğren bildirimleri) sunucunun kendi
+  // kayıt yollarından geçer; meds-pg'den de silinir, geri yüklenince yeniden eşitlenir.
+  removePast: async (ids) => {
+    const set = new Set(ids.map(String));
+    addDeletedPastQuestions(Array.from(set));
+    const list = getPastQuestionsDb();
+    const removed = list.filter((q) => set.has(String(q.id)));
+    savePastQuestionsDb(list.filter((q) => !set.has(String(q.id))));
+    let reviews: any[] = [];
+    try {
+      const all = readPhase14Reviews();
+      reviews = all.filter((r) => set.has(String(r.question_id)));
+      if (reviews.length) writePhase14Reviews(all.filter((r) => !set.has(String(r.question_id))), set);
+    } catch (_) {}
+    await deleteManyFromDb('past_questions', Array.from(set));
+    return removed.map((q) => ({ ...q, _phase14Reviews: reviews.filter((r) => String(r.question_id) === String(q.id)) }));
+  },
+  restorePast: async (records) => {
+    const ids = records.map((r) => String(r.id));
+    removeDeletedPastQuestions(ids);
+    const list = getPastQuestionsDb();
+    const have = new Set(list.map((q) => String(q.id)));
+    const reviews: any[] = [];
+    for (const { _phase14Reviews, ...q } of records) {
+      if (Array.isArray(_phase14Reviews)) reviews.push(..._phase14Reviews);
+      if (!have.has(String(q.id))) list.push(q);
+    }
+    savePastQuestionsDb(list);
+    if (reviews.length) { try { writePhase14Reviews([...readPhase14Reviews(), ...reviews]); } catch (_) {} }
+    resyncLocalToDb().catch(() => {});
+  },
+  removePool: async (ids) => {
+    const set = new Set(ids.map(String));
+    const removed = db.questions.filter((q: any) => set.has(String(q.id)));
+    if (removed.length) {
+      db.questions = db.questions.filter((q: any) => !set.has(String(q.id)));
+      saveDatabase();
+    }
+    await deleteManyFromDb('questions', Array.from(set));
+    return removed;
+  },
+  restorePool: async (records) => {
+    const have = new Set(db.questions.map((q: any) => String(q.id)));
+    for (const q of records) if (!have.has(String(q.id))) db.questions.push(q);
+    saveDatabase();
+    resyncLocalToDb().catch(() => {});
+  },
+  removeLearnFeedback: (ids) => ids.map((id) => { const f = learnFeedback.get(id); if (f) { learnFeedback.delete(id); try { autoRepairStore.banAndRemove(id); } catch (_) {} } return f; }).filter(Boolean),
+  restoreLearnFeedback: (records) => records.forEach((r) => learnFeedback.restore(r)),
 });
 
 app.get(['/api/decks', '/api/ogren', '/api/interactive-decks'], (req, res) => {

@@ -1,17 +1,22 @@
 /**
  * Not eşitleme (istemci). Notlar tarayıcıda (studyStore, medsoru_notes_v1) yaşar; her değişiklikten ~4 sn
- * sonra ve açılışta sunucu yedeğiyle (PUT /api/notes) birleştirilir. Kimlik = eşitleme kodu: varsayılan
- * cihaz belirteci; kullanıcı kodu başka cihaza girerek aynı not defterini paylaşır.
+ * sonra ve açılışta sunucu yedeğiyle (PUT /api/notes) birleştirilir. Kimlik:
+ * - Oturum açık: Firebase ID jetonu → defter hesaba bağlıdır, her cihazda aynı defter gelir. İlk girişte
+ *   cihazdaki notlar hesabın defterine birleştirilir (kaybolmaz).
+ * - Girişsiz: eşitleme kodu (varsayılan cihaz belirteci; kullanıcı kodu başka cihaza girerek defteri paylaşır).
  * Çevrimdışıyken sessizce bekler; bağlantı gelince tekrar dener. Ekranlar 'medsoru:notes-synced' olayını dinler.
  */
 import { getNotes, onNotesChanged, replaceNotesFromSync, StudyNote } from './studyStore';
 import { getDeviceToken } from '../utils/voterId';
 import { getCustomApiUrl } from './api';
 import { getNetState, onNetChange } from './net';
+import { auth } from './auth';
 
 const CODE_KEY = 'medsoru_notes_sync_code';
 const DEL_KEY = 'medsoru_notes_deleted_v1';
 const LAST_KEY = 'medsoru_notes_synced_at';
+// Son eşitlemenin hangi deftere (hesap/kod) yapıldığı: değişince delta yerine tam eşitleme gerekir
+const IDENT_KEY = 'medsoru_notes_synced_identity';
 
 const readJson = <T,>(k: string, f: T): T => {
   try { const r = localStorage.getItem(k); return r ? (JSON.parse(r) as T) : f; } catch { return f; }
@@ -25,10 +30,39 @@ export const getSyncCode = () => {
 export const setSyncCode = (code: string) => {
   const c = code.trim();
   if (c.length < 12) throw new Error('Kod en az 12 karakter olmalı');
+  if (c.toLowerCase().startsWith('acct:')) throw new Error('Bu kod biçimi kullanılamaz');
   try { localStorage.setItem(CODE_KEY, c); } catch { /* yok */ }
   void syncNotes();
 };
 export const lastSyncedAt = () => { try { return localStorage.getItem(LAST_KEY) || ''; } catch { return ''; } };
+
+/** İstek başlıkları ve defter kimliği: oturum açıksa hesap, değilse eşitleme kodu. */
+async function notesIdentity(): Promise<{ headers: Record<string, string>; ident: string }> {
+  const code = getSyncCode();
+  const user = auth.currentUser;
+  if (user) {
+    try {
+      const token = await user.getIdToken();
+      return { headers: { Authorization: `Bearer ${token}`, 'x-user-id': code }, ident: `acct:${user.uid}` };
+    } catch {
+      /* jeton alınamadı: cihaz koduyla devam */
+    }
+  }
+  return { headers: { 'x-user-id': code }, ident: code };
+}
+
+/** Sunucunun SSE 'notes_changed' olayındaki defter özeti (sha256(kimlik) ilk 16 hane) bu cihazın defteri mi? */
+export async function isOwnNotebook(codeHash: string | undefined): Promise<boolean> {
+  if (!codeHash) return true;
+  try {
+    const { ident } = await notesIdentity();
+    const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(ident));
+    const hex = Array.from(new Uint8Array(buf), (b) => b.toString(16).padStart(2, '0')).join('');
+    return hex.slice(0, 16) === codeHash;
+  } catch {
+    return true; // karşılaştırılamıyorsa güvenli taraf: çek
+  }
+}
 
 let timer: number | undefined;
 let running: Promise<boolean> | null = null;
@@ -40,9 +74,10 @@ export function syncNotes(): Promise<boolean> {
     const base = (getCustomApiUrl() || '').replace(/\/$/, '');
     const deleted = readJson<Record<string, string>>(DEL_KEY, {});
     try {
+      const who = await notesIdentity();
       const res = await fetch(`${base}/api/notes`, {
         method: 'PUT',
-        headers: { 'Content-Type': 'application/json', 'x-user-id': getSyncCode() },
+        headers: { 'Content-Type': 'application/json', ...who.headers },
         body: JSON.stringify({ notes: getNotes(), deleted }),
       });
       if (!res.ok) return false;
@@ -56,7 +91,11 @@ export function syncNotes(): Promise<boolean> {
       for (const [id, n] of local) if (!out.some((o) => o.id === id) && !(merged.deleted || {})[id]) out.unshift(n);
       replaceNotesFromSync(out);
       writeJson(DEL_KEY, merged.deleted || {});
-      try { localStorage.setItem(LAST_KEY, new Date().toISOString()); } catch { /* yok */ }
+      try {
+        localStorage.setItem(LAST_KEY, new Date().toISOString());
+        localStorage.setItem(IDENT_KEY, who.ident);
+      } catch { /* yok */ }
+      window.dispatchEvent(new CustomEvent('medsoru:notes-synced'));
       return true;
     } catch {
       return false;
@@ -74,13 +113,17 @@ export function syncNotes(): Promise<boolean> {
 export async function pullDeltaNotes(): Promise<boolean> {
   if (getNetState() === 'offline') return false;
   const since = lastSyncedAt();
-  if (!since) return syncNotes(); // İlk kez ise tam senkronizasyon yap
+  const who = await notesIdentity();
+  let lastIdent = '';
+  try { lastIdent = localStorage.getItem(IDENT_KEY) || ''; } catch { /* yok */ }
+  // İlk kez ya da defter değiştiyse (giriş/çıkış, kod girme) tam eşitleme: cihazdaki notlar yeni deftere birleşir
+  if (!since || lastIdent !== who.ident) return syncNotes();
 
   const base = (getCustomApiUrl() || '').replace(/\/$/, '');
   try {
     const res = await fetch(`${base}/api/notes?since=${encodeURIComponent(since)}`, {
       method: 'GET',
-      headers: { 'x-user-id': getSyncCode() },
+      headers: who.headers,
     });
     if (!res.ok) return false;
     const data = await res.json();

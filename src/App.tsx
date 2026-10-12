@@ -34,6 +34,7 @@ import { offlineDatabaseService } from './services/offlineDatabaseService';
 import { pwaService, PWA_WELCOME_STORAGE_KEY } from './services/pwaService';
 import { userNotificationService } from './services/userNotificationService';
 import { backupUserDataToDatabase } from './services/userDataSyncService';
+import { syncNotes } from './services/notesSync';
 import { buildDeepLinkUrl, executeDeepLinkFocus, initDeepLinkAutoScroll } from './services/universalRedirectService';
 
 function wrapLazy<T extends { default: React.ComponentType<any> }>(
@@ -540,8 +541,10 @@ export default function App() {
       (user, token) => {
         setCurrentUser(user);
         setAccessToken(token);
-        // Oturum açıldığında veya yenilendiğinde veritabanına otomatik arka plan yedekleme
+        // Oturum açılınca: cihazdaki notlar hesabın defterine birleşir, istatistikler hesap yedeğiyle birleştirilir
+        // (sunucu birleştirir; yeni/boş cihaz hesabın verisini silmez, diğer cihazlardaki veri buraya gelir).
         setTimeout(() => {
+          void syncNotes();
           backupUserDataToDatabase().catch(() => {});
         }, 3000);
       },
