@@ -6,7 +6,7 @@
 import { semanticSearch, fuseRRF } from './vectorSearch';
 import { GoogleGenAI } from '@google/genai';
 import { supabase } from './supabaseClient.ts';
-import { searchLocalRag, foldTurkish, findChunksById, type RagDocumentType } from './localRagEngine.ts';
+import { searchLocalRag, foldTurkish, findChunksById, findCardsByName, cardNameKey, type RagDocumentType } from './localRagEngine.ts';
 import { generateResilientMedicalAi, getTieredGeminiKeys } from './aiProvider.ts';
 import { getCachedLectureNotes } from '../serverLectureNotes.ts';
 
@@ -224,6 +224,8 @@ export async function searchRagChunks(
   for (const r of results) {
     if (r.documentType === 'lecture_slide' && examDumps.has(r.documentId)) continue;
     const keys = dedupeKeys(r);
+    // Aynı adlı sözlük kartları ("sifiliz" ve "Sifiliz (Frengi)") tek sonuçta toplanır
+    if (r.documentType === 'glossary_term') keys.push(`gl:${cardNameKey(r.title.replace(/^Sözlük:\s*/, '').replace(/\([^)]*\)/g, ' '))}`);
     if (keys.some((k) => seen.has(k))) continue;
     keys.forEach((k) => seen.add(k));
     unique.push(r);
@@ -550,6 +552,17 @@ export async function searchEverything(
       if (!prev || prev.matchScore < sc) byId.set(r.id, { ...r, matchScore: sc });
     }
   }
+  // Ad eşleşmesi: sorgu (niyet sözcükleri atılmış hâli de) bir hastalık/sözlük kartının adı ya da
+  // eşanlamlısıysa kart havuza kesin girer ve sıralamada öne alınır ("Hiperlipidemi" → kendi kartı).
+  const intentCut = (v: string) => cardNameKey(v).split(' ').filter((w) => !(EVIDENCE_CUES.some((x) => x.stems.some((st: string) => w.startsWith(st))))).join(' ');
+  const nameHit = new Map<string, 'name' | 'alias'>();
+  for (const v of new Set([base, q.replace(/^"|"$/g, ''), ...variants].flatMap((v) => [v, intentCut(v)]))) {
+    for (const { chunk, kind } of findCardsByName(v)) {
+      if (options.committeeId && chunk.committeeId && chunk.committeeId !== options.committeeId && chunk.documentType !== 'disease') continue;
+      if (nameHit.get(chunk.id) !== 'name') nameHit.set(chunk.id, kind);
+      if (!byId.has(chunk.id)) byId.set(chunk.id, { ...chunk, similarity: 1, matchScore: 60, snippet: '', source: 'local' as const } as any);
+    }
+  }
   const pooled = [...byId.values()];
   // Yeniden sıralama: kapsama yuva bazında ölçülür (yuvadaki herhangi bir eşdeğer kök yeter);
   // uzun tıbbi terimlerde 5 harf kök fazla geniş (tromboksan ≠ trombosit): 8+ harfte 7 harf kullanılır.
@@ -600,7 +613,11 @@ export async function searchEverything(
     }
     // Niyet: "tedavisi" aranıyorsa tedavi anlatan parça öne
     const intentBonus = intentStems.length && intentStems.some((st) => body.includes(st)) ? 18 : 0;
-    return cover * 100 + inTitle * 30 + inTitleFull * 60 + dens * 4 + vecBonus + conceptBonus + intentBonus + Math.min(r.matchScore, 120) * 0.25;
+    // Kartın kendi adı/eşanlamlısı sorguyla birebir: en güçlü sinyal. Hastalık ana kartı > alt bölüm > sözlük
+    const nh = nameHit.get(r.id);
+    const section = r.documentType === 'disease' && r.title.includes(' — ');
+    const nameBonus = !nh ? 0 : (r.documentType === 'disease' ? (section ? (intentStems.length ? 150 : 70) : 170) : 90) - (nh === 'alias' ? 15 : 0);
+    return cover * 100 + inTitle * 30 + inTitleFull * 60 + dens * 4 + vecBonus + conceptBonus + intentBonus + nameBonus + Math.min(r.matchScore, 120) * 0.25;
   };
   const ranked = pooled
     .map((r) => ({ r, k: rank(r) }))

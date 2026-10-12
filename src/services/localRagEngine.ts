@@ -1858,6 +1858,36 @@ export function findChunksById(term: string, limit = 50): RagChunk[] {
 }
 
 // ------------------------------------------------------------------
+// Kart adı dizini: hastalık ve sözlük kartları adıyla, parantez içi kısaltmasıyla
+// ve "Diğer adlar"/"Eşanlamlı" satırlarıyla doğrudan bulunur. BM25 kısa kartları
+// uzun soru metinlerinin altında havuz dışına itebildiği için ad eşleşmesi ayrı yoldan gelir.
+// ------------------------------------------------------------------
+export const cardNameKey = (s: string) => foldTurkish(s).replace(/[^a-z0-9]+/g, ' ').trim();
+let cardNames: { size: number; map: Map<string, Array<{ chunk: RagChunk; kind: 'name' | 'alias' }>> } | null = null;
+export function findCardsByName(name: string): Array<{ chunk: RagChunk; kind: 'name' | 'alias' }> {
+  if (!indexReady) return [];
+  if (!cardNames || cardNames.size !== memoryChunks.size) {
+    const map = new Map<string, Array<{ chunk: RagChunk; kind: 'name' | 'alias' }>>();
+    const add = (k: string, chunk: RagChunk, kind: 'name' | 'alias') => {
+      if (k.length < 3) return;
+      const list = map.get(k) || [];
+      if (!list.some((e) => e.chunk.id === chunk.id)) list.push({ chunk, kind });
+      map.set(k, list);
+    };
+    for (const c of memoryChunks.values()) {
+      if (c.documentType !== 'disease' && c.documentType !== 'glossary_term') continue;
+      const t = (c.title || '').replace(/^(Hastalık|Sözlük):\s*/, '').split(' — ')[0];
+      add(cardNameKey(t.replace(/\([^)]*\)/g, ' ')), c, 'name');
+      for (const m of t.matchAll(/\(([^)]+)\)/g)) for (const a of m[1].split(/[,;/]/)) add(cardNameKey(a), c, 'alias');
+      const al = (c.content || '').match(/^(?:Diğer adlar|Eşanlamlı):\s*(.+)$/m);
+      if (al) for (const a of al[1].split(/[,;]/)) add(cardNameKey(a.replace(/\([^)]*\)/g, ' ')), c, 'alias');
+    }
+    cardNames = { size: memoryChunks.size, map };
+  }
+  return cardNames.map.get(cardNameKey(name)) || [];
+}
+
+// ------------------------------------------------------------------
 // "Bunu mu kastettiniz?": indeks sözlüğünden yazım önerisi.
 // Sözlük katlanmış (aksansız) tutulur; öneri gösterilirken her terimin
 // derlemde en sık geçen Türkçe yazımı kullanılır (tumoru → tümörü).
