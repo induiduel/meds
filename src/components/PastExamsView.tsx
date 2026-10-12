@@ -79,6 +79,16 @@ const provenanceNoteFor = (q: any): string | undefined => {
   return `${added.join(', ')} ${added.length > 1 ? 'şıkları' : 'şıkkı'} özgün sınavda yoktu (eksik ya da okunamazdı); soru tamamlansın diye sonradan eklenmiştir. Diğer şıklar özgün sınavdandır.`;
 };
 
+export const editedTags = (q: any, ts: number): string[] => {
+  const age = Date.now() - ts;
+  const out: string[] = [];
+  if (ts && age <= 864e5) out.push('son24');
+  if (ts && age <= 7 * 864e5) out.push('son7');
+  if (q?.checkSolve?.cevapDegisti) out.push('cevap');
+  if ((q?.checkSolve?.eklenenSiklar?.length || 0) >= 3) out.push('kurulan');
+  return out;
+};
+
 export const isDenetleyiciQuestion = (q: any): boolean =>
   Boolean(q?.denetleyiciOnayi || q?.denetleyici_onayi || q?.surum === 'denetleyici' || (Array.isArray(q?.tags) && q.tags.includes('denetleyici_onayi')));
 
@@ -133,7 +143,7 @@ const isNewQ = (q: QuestionItem): boolean =>
       (q.createdAt ? new Date(q.createdAt).getTime() > Date.now() - 30 * 86400000 : false),
   );
 
-type FacetKey = 'pool' | 'committee' | 'year' | 'discipline' | 'topic' | 'answer' | 'explanation' | 'source' | 'p14' | 'denetleyici' | 'newness' | 'manual' | 'repeated' | 'quarantine';
+type FacetKey = 'pool' | 'committee' | 'year' | 'discipline' | 'topic' | 'answer' | 'explanation' | 'source' | 'p14' | 'denetleyici' | 'newness' | 'manual' | 'repeated' | 'quarantine' | 'edited';
 interface Prep {
   q: QuestionItem;
   disc: string;
@@ -273,6 +283,8 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
   const [deepseekFilter, setDeepseekFilter] = useState<'all' | 'deepseek_only' | 'standard_only'>('all');
   const [sourceFilter, setSourceFilter] = useState<'all' | 'gemini_v3' | 'existing'>('all');
   const [phase14Filter, setPhase14Filter] = useState<'all' | 'faz14' | 'faz14_onayli' | 'faz14_bekleyen'>('all');
+  // Yönetim: son değiştirilen sorular (düzenlenme zamanı / check-solve sonucu)
+  const [editedFilter, setEditedFilter] = useState<'all' | 'son24' | 'son7' | 'cevap' | 'kurulan'>('all');
   const [denetleyiciFilter, setDenetleyiciFilter] = useState<'all' | 'denetleyici_only' | 'standard_only'>('all');
   const [versionViewOverrides, setVersionViewOverrides] = useState<Record<string, 'denetleyici' | 'eski' | 'karsilastir'>>({});
   const [analysisOpen, setAnalysisOpen] = useState<Record<string, boolean>>({});
@@ -1054,6 +1066,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
       repeatedFilter === 'all' ||
       (repeatedFilter === 'repeated_only' && p.isRepeated) ||
       (repeatedFilter === 'unique_only' && !p.isRepeated),
+    edited: (p) => editedFilter === 'all' || editedTags(p.q, p.updatedTimestamp).includes(editedFilter),
     quarantine: (p) => {
       if (quarantineFilter === 'standard') {
         return !p.isQuarantined && p.isDonem3 && (!((p.q as any).hidden || (p.q as any).data?.hidden) || isAdminUser);
@@ -1084,6 +1097,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
     newness: (p) => [p.isNew ? 'new_only' : 'archived_only'],
     manual: (p) => [p.isManual ? 'manual_only' : 'standard_only'],
     repeated: (p) => [p.isRepeated ? 'repeated_only' : 'unique_only'],
+    edited: (p) => editedTags(p.q, p.updatedTimestamp),
     quarantine: (p) => [
       !p.isQuarantined && p.isDonem3 && (!((p.q as any).hidden || (p.q as any).data?.hidden) || isAdminUser) ? 'standard' : null,
       p.isQuarantined ? 'karantina' : null,
@@ -1131,7 +1145,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
     const list = hits.map((p) => p.q);
     return { filteredQuestions: list, facetCounts: counts };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [prepared, searchScores, ambiguityTab, selectedCommittee, selectedYear, selectedDiscipline, selectedTopic, answerFilter, explanationFilter, sourceFilter, phase14Filter, denetleyiciFilter, newnessFilter, manualFilter, repeatedFilter, quarantineFilter, sortOrder]);
+  }, [prepared, searchScores, ambiguityTab, selectedCommittee, selectedYear, selectedDiscipline, selectedTopic, answerFilter, explanationFilter, sourceFilter, phase14Filter, denetleyiciFilter, newnessFilter, manualFilter, repeatedFilter, quarantineFilter, editedFilter, sortOrder]);
   const fc = (k: FacetKey, v = 'all') => facetCounts[k].get(v) || 0;
 
   // Seçili kurul/ders artık sonuç vermiyorsa (başka seçim yüzünden) seçimi düşürme: kullanıcı neyi seçtiyse o kalır,
@@ -1217,6 +1231,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
     newness: { new_only: 'Yeni sorular', archived_only: 'Arşiv' } as Record<string, string>,
     manual: { manual_only: 'Manuel Eklenenler', standard_only: 'Otomatik Havuz' } as Record<string, string>,
     repeated: { repeated_only: 'Tekrarlayan Sorular', unique_only: 'Tekil Sorular' } as Record<string, string>,
+    edited: { son24: 'Son 24 saatte değişen', son7: 'Son 7 günde değişen', cevap: 'Cevabı düzeltilen', kurulan: 'Şıkları sonradan kurulan' } as Record<string, string>,
     sort: { newest: 'Yeniden eskiye', oldest: 'Eskiden yeniye', number: 'Soru numarası', quality_desc: 'Kalite: en iyi önce', quality_asc: 'Kalite: en sorunlu önce', popular: 'En popüler', discipline: 'Derse göre', updated: 'Son güncellenen', default: searchQuery.trim() ? 'En ilgili' : 'Varsayılan' } as Record<string, string>,
     view: { raw: 'Ham metin', split: 'Karşılaştır' } as Record<string, string>,
   };
@@ -1232,6 +1247,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
     ...(sourceFilter !== 'all' ? [{ label: LABELS.source[sourceFilter], clear: () => setSourceFilter('all') }] : []),
     ...(denetleyiciFilter !== 'all' ? [{ label: LABELS.denetleyici[denetleyiciFilter], clear: () => setDenetleyiciFilter('all') }] : []),
     ...(phase14Filter !== 'all' ? [{ label: LABELS.p14[phase14Filter], clear: () => setPhase14Filter('all') }] : []),
+    ...(editedFilter !== 'all' ? [{ label: LABELS.edited[editedFilter], clear: () => setEditedFilter('all') }] : []),
     ...(newnessFilter !== 'all' ? [{ label: LABELS.newness[newnessFilter], clear: () => setNewnessFilter('all') }] : []),
     ...(manualFilter !== 'all' ? [{ label: LABELS.manual[manualFilter], clear: () => setManualFilter('all') }] : []),
     ...(repeatedFilter !== 'all' ? [{ label: LABELS.repeated[repeatedFilter], clear: () => setRepeatedFilter('all') }] : []),
@@ -1257,6 +1273,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
     setAnswerFilter('all');
     setExplanationFilter('all');
     setPhase14Filter('all');
+    setEditedFilter('all');
     setSortOrder('default');
     setCurrentPage(1);
   };
@@ -1610,6 +1627,13 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                   ['faz14', 'Faz 14', fc('p14', 'faz14')],
                   ['faz14_onayli', 'Onaylı', fc('p14', 'faz14_onayli')],
                   ['faz14_bekleyen', 'Onay bekliyor', fc('p14', 'faz14_bekleyen')],
+                ])}
+                {segRow('Son değişiklik', editedFilter, setEditedFilter, [
+                  ['all', 'Tümü', fc('edited')],
+                  ['son24', 'Son 24 saat', fc('edited', 'son24')],
+                  ['son7', 'Son 7 gün', fc('edited', 'son7')],
+                  ['cevap', 'Cevabı düzeltilen', fc('edited', 'cevap')],
+                  ['kurulan', 'Şıkları sonradan kurulan', fc('edited', 'kurulan')],
                 ])}
                 {segRow('Yükleme', manualFilter, setManualFilter, [
                   ['all', 'Tümü', fc('manual')],
