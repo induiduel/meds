@@ -69,6 +69,16 @@ import {
 } from '../data/curriculumData';
 
 /** Denetleyici Onayı almış (altın standart, doğrulanmış) soru */
+// Check-solve sırasında özgün sınavda olmayıp sonradan yazılan şıklar (checkSolve.eklenenSiklar) Hakkında'da açıkça belirtilir
+const provenanceNoteFor = (q: any): string | undefined => {
+  const added: string[] = Array.isArray(q?.checkSolve?.eklenenSiklar) ? q.checkSolve.eklenenSiklar : [];
+  if (!added.length) return undefined;
+  if (added.length >= 3) {
+    return 'Bu sorunun şıkları özgün sınavdan alınmamıştır. Kayıtta sınavın şıkları eksik ya da okunamaz olduğu için soru, özgün sınavdaki bilgi korunarak şıkları sonradan yazılıp yeniden kurulmuştur.';
+  }
+  return `${added.join(', ')} ${added.length > 1 ? 'şıkları' : 'şıkkı'} özgün sınavda yoktu (eksik ya da okunamazdı); soru tamamlansın diye sonradan eklenmiştir. Diğer şıklar özgün sınavdandır.`;
+};
+
 export const isDenetleyiciQuestion = (q: any): boolean =>
   Boolean(q?.denetleyiciOnayi || q?.denetleyici_onayi || q?.surum === 'denetleyici' || (Array.isArray(q?.tags) && q.tags.includes('denetleyici_onayi')));
 
@@ -2309,7 +2319,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
         const expl = q.reconstruction?.explanation || q.explanation;
         const p14 = isPhase14Fixed(q) && String(q.phase14Original?.explanation || '').trim() !== String(expl || '').trim();
         const hidden = quizMode && !picks[q.id];
-        const isLegacyView = (versionViewOverrides[q.id] || (isDenetleyiciQuestion(q) ? 'denetleyici' : 'eski')) === 'eski';
+        const isLegacyView = (versionViewOverrides[q.id] || (isDenetleyiciQuestion(q) || q.checkSolve?.status === 'onayli' ? 'denetleyici' : 'eski')) === 'eski';
         const p14Note = isPhase14Pending(q)
           ? 'Faz 14 yapay zekâ incelemesinden geçti; düzeltme yönetici onayı bekliyor (doğrulanmadı).'
           : isPhase14Fixed(q)
@@ -2354,6 +2364,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
             denetleyiciOnayi={isDenetleyiciQuestion(q)}
             learnMatch={lm}
             p14StatusNote={p14Note}
+            provenanceNote={provenanceNoteFor(q)}
             isEskiView={isLegacyView}
             answerKey={ans ? String(ans) : undefined}
             options={(q.reconstruction?.options || q.options || []) as { key: string; text: string }[]}

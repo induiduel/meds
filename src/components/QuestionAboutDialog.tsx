@@ -40,6 +40,8 @@ interface Props {
   denetleyiciOnayi?: boolean;
   learnMatch?: QuestionLearnMatch | null;
   p14StatusNote?: string;
+  /** Şıkları (kısmen ya da tamamen) özgün sınavda olmayan, sonradan kurulmuş soru notu */
+  provenanceNote?: string;
   isEskiView?: boolean;
   /** Doğru şık ve metni (cevap özeti için) */
   answerKey?: string;
@@ -81,6 +83,7 @@ export const QuestionAboutDialog: React.FC<Props> = ({
   options,
   learnMatch,
   p14StatusNote,
+  provenanceNote,
   isEskiView,
   question,
   onOpenSlide,
@@ -188,6 +191,12 @@ export const QuestionAboutDialog: React.FC<Props> = ({
         <div className="p-3 bg-warn/10 border border-warn/20 rounded-xl text-sm text-warn flex items-start gap-2.5 mb-1">
           <History className="w-4 h-4 shrink-0 text-warn mt-0.5" />
           <span><b>Eski Sınav Arşiv Sürümü:</b> Doğrulanmış ve gerekçelendirilmiş hâl için Denetleyici Sürümüne geçebilirsiniz.</span>
+        </div>
+      )}
+      {provenanceNote && (
+        <div role="note" className="p-3 bg-warn-soft border border-warn/30 rounded-xl text-sm text-ink flex items-start gap-2.5 mb-1">
+          <AlertCircle className="w-4 h-4 shrink-0 text-warn mt-0.5" />
+          <span>{provenanceNote}</span>
         </div>
       )}
       {p14StatusNote && (
