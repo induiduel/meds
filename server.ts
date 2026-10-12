@@ -2072,6 +2072,7 @@ function sendPastListBody(req: express.Request, res: express.Response, cache: Pa
   }).catch((err) => res.status(500).json({ error: 'Çıkmış listesi hazırlanamadı: ' + err.message }));
 }
 
+let pastFilteredFor: Set<string> | null = null;
 function getPastQuestionsDb(): any[] {
   const deletedSet = getDeletedPastQuestions();
   if (fs.existsSync(PAST_QUESTIONS_FILE)) {
@@ -2085,8 +2086,13 @@ function getPastQuestionsDb(): any[] {
         list.forEach((q: any) => normalizeQuestionVotes(q));
         cachedPastQuestionsDb = deletedSet.size > 0 ? list.filter((q: any) => !deletedSet.has(q.id)) : list;
         lastPastQuestionsMtime = stat.mtimeMs;
+        pastFilteredFor = deletedSet;
       }
-      return (cachedPastQuestionsDb || []).filter((q: any) => !deletedSet.has(q.id));
+      // Önbellek aynı silinmiş kümesiyle süzüldüyse yeniden Set taraması yapma; yalnız sığ kopya ver.
+      if (pastFilteredFor === deletedSet && cachedPastQuestionsDb) return cachedPastQuestionsDb.slice();
+      if (cachedPastQuestionsDb && deletedSet.size > 0) cachedPastQuestionsDb = cachedPastQuestionsDb.filter((q: any) => !deletedSet.has(q.id));
+      pastFilteredFor = deletedSet;
+      return (cachedPastQuestionsDb || []).slice();
     } catch (e) {
       console.error('Error reading pastQuestions.json:', e);
     }
@@ -2104,6 +2110,7 @@ function savePastQuestionsDb(list: any[]) {
     const deletedSet = getDeletedPastQuestions();
     const cleanList = deletedSet.size > 0 ? list.filter((q: any) => !deletedSet.has(q.id)) : list;
     cachedPastQuestionsDb = cleanList;
+    pastFilteredFor = deletedSet;
     pastQuestionsVersion++;
     pastSaveDirty = true;
     broadcastRealtimeEvent('past_questions_changed', { version: pastQuestionsVersion, count: cleanList.length, time: Date.now() });
@@ -2192,19 +2199,23 @@ export function initLocalSupabaseRealtimeSync() {
         const id = payload.new?.id || payload.old?.id;
         pastListCache = null;
 
-        if (payload.new && id) {
+        // Satır snake_case sütunlar taşır; soru nesnesinin kendisi `data` sütunundadır. Satırı soruya
+        // karıştırmak exam_year/data alanlarını ekler ve her yazım yankısında `data` iç içe büyürdü.
+        const incoming = payload.new?.data;
+        if (incoming && typeof incoming === 'object' && id) {
           try {
             const list = getPastQuestionsDb();
             const idx = list.findIndex((q: any) => q.id === id);
-            if (idx >= 0) {
-              list[idx] = { ...list[idx], ...payload.new };
+            if (idx >= 0 && JSON.stringify(list[idx]) !== JSON.stringify(incoming)) {
+              const { data: _nested, ...clean } = incoming as any;
+              list[idx] = { ...list[idx], ...clean };
             }
           } catch (_) {}
         }
 
         broadcastRealtimeEvent('past_questions_changed', { id, eventType: payload.eventType, time: Date.now() });
         if (payload.new) {
-          broadcastRealtimeEvent('past_question_updated', { id, question: payload.new, eventType: payload.eventType });
+          if (payload.new.data) broadcastRealtimeEvent('past_question_updated', { id, question: payload.new.data, eventType: payload.eventType });
         }
         broadcastRealtimeEvent('database_sync', { table: 'past_questions', eventType: payload.eventType, time: Date.now() });
       }
@@ -2221,7 +2232,8 @@ export function initLocalSupabaseRealtimeSync() {
 
         broadcastRealtimeEvent('questions_changed', { id, eventType: payload.eventType, time: Date.now() });
         if (payload.new) {
-          broadcastRealtimeEvent('question_updated', { id, question: payload.new, eventType: payload.eventType });
+          // Satırın `data` sütunu soru nesnesidir; snake_case satır istemci önbelleğine yazılmamalı
+          if (payload.new.data) broadcastRealtimeEvent('question_updated', { id, question: payload.new.data, eventType: payload.eventType });
         }
         broadcastRealtimeEvent('database_sync', { table: 'questions', eventType: payload.eventType, time: Date.now() });
       }
