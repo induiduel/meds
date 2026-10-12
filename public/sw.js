@@ -1,5 +1,5 @@
 // MedSoru Service Worker - PWA v8: Yüksek Hızlı Açılış, Optimize Edilmiş Bellek & Modül Parçalama
-const CACHE_VERSION = 'medsoru-pwa-v8';
+const CACHE_VERSION = 'medsoru-pwa-v9';
 const STATIC_CACHE = `medsoru-static-${CACHE_VERSION}`;
 const RUNTIME_CACHE = `medsoru-runtime-${CACHE_VERSION}`;
 const DATA_CACHE = `medsoru-data-${CACHE_VERSION}`;

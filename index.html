@@ -45,17 +45,40 @@
       })();
     </script>
     <script>
+      // Dağıtımdan sonra service worker eski index.html'i (artık sunucuda olmayan /assets/ parçalarıyla) verirse
+      // uygulama açılış ekranında kalıyordu: eski kabuk parçası yüklenemeyince önbellekteki kabuğu sil ve yenile.
+      window.__medsoruTazeYukle = function () {
+        if (!navigator.onLine) return false;
+        var son = Number(sessionStorage.getItem('medsoru_chunk_reload') || 0);
+        if (Date.now() - son < 8000) return false;
+        sessionStorage.setItem('medsoru_chunk_reload', String(Date.now()));
+        var bitti = function () { window.location.reload(); };
+        try {
+          if (!window.caches) return bitti(), true;
+          caches.keys().then(function (keys) {
+            return Promise.all(keys.map(function (k) {
+              return caches.open(k).then(function (c) {
+                return Promise.all(['/', '/index.html', location.pathname].map(function (u) { return c.delete(u, { ignoreSearch: true }); }));
+              });
+            }));
+          }).then(bitti, bitti);
+        } catch (e) { bitti(); }
+        return true;
+      };
+      window.addEventListener('error', function (e) {
+        var t = e.target;
+        var src = t && (t.src || t.href) || '';
+        if ((t && (t.tagName === 'SCRIPT' || t.tagName === 'LINK')) && src.indexOf('/assets/') !== -1) window.__medsoruTazeYukle();
+      }, true);
+    </script>
+    <script>
       // Sürüm güncellemesi sonrası eski chunk önbellek hatasını otomatik yenile
       window.addEventListener('vite:preloadError', function(event) {
         if (!navigator.onLine) {
           event.preventDefault();
           return;
         }
-        var lastReload = sessionStorage.getItem('medsoru_chunk_reload');
-        if (!lastReload || (Date.now() - Number(lastReload) > 8000)) {
-          sessionStorage.setItem('medsoru_chunk_reload', String(Date.now()));
-          window.location.reload();
-        }
+        window.__medsoruTazeYukle();
       });
       window.addEventListener('unhandledrejection', function(event) {
         var msg = event.reason ? (event.reason.message || String(event.reason)) : '';
@@ -68,11 +91,7 @@
             // Çevrimdışıyken sayfayı yenileyip tarayıcının çevrimdışı hata sayfasına düşmesini engelle
             return;
           }
-          var lastReload = sessionStorage.getItem('medsoru_chunk_reload');
-          if (!lastReload || (Date.now() - Number(lastReload) > 8000)) {
-            sessionStorage.setItem('medsoru_chunk_reload', String(Date.now()));
-            window.location.reload();
-          }
+          window.__medsoruTazeYukle();
           return;
         }
         if (msg.indexOf('WebSocket') !== -1 || msg.indexOf('vite') !== -1) {

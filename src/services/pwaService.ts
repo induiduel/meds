@@ -117,7 +117,7 @@ class PwaService {
     try {
       // Sürüm sorgusu Cloudflare önbelleğini atlatır: /sw.js eskiden "immutable, 1 yıl" başlığıyla CDN'de
       // takılı kalmıştı (yeni SW hiç inmiyordu). public/sw.js içindeki CACHE_VERSION değişince bunu da artır.
-      const swUrl = '/sw.js?v=8';
+      const swUrl = '/sw.js?v=9';
       const reg = await navigator.serviceWorker.register(swUrl, { scope: '/' });
       this.registration = reg;
       this.state.isRegistered = true;
