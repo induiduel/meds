@@ -154,21 +154,62 @@ export const ManageDersRevizeSection: React.FC<{ adminEmail: string }> = ({ admi
     if (ad) dosyaAl(ad);
   }, [sekme, secili]);
 
-  const uygula = async (islem: Islem) => {
-    if (!ayr) return;
+  const uygula = async (islem: Islem, hedef?: Taslak | null) => {
+    const t = hedef || ayr;
+    if (!t) return;
     const soru: Record<Islem, string> = {
-      degistir: `Yayındaki "${ayr.konu}" dersi bu revize sürümle değiştirilsin mi? Ders notu, örnek sorular ve sözlük de güncellenir.`,
-      ekle: `"${ayr.konu}" yeni ders olarak eklensin mi?`,
+      degistir: `Yayındaki "${t.konu}" dersi bu revize sürümle değiştirilsin mi? Ders notu, örnek sorular ve sözlük de güncellenir.`,
+      ekle: `"${t.konu}" yeni ders olarak eklensin mi?`,
       ikisini_tut: `İki sürüm de tutulsun mu? Yayındaki ders V1, revize ders V2 olur; öğrenci dersi açarken hangisini istediğini seçer.`,
       kaldir: `Bu revize taslak kaldırılsın mı? Yayındaki ders değişmez.`,
     };
     if (!window.confirm(soru[islem])) return;
     setBusy(true);
-    const r = await api(`/taslak/${ayr.is_id}/islem`, { method: 'POST', body: JSON.stringify({ islem }) });
+    const r = await api(`/taslak/${t.is_id}/islem`, { method: 'POST', body: JSON.stringify({ islem }) });
     setBusy(false);
     if (!r.ok) return toast.error((r.data as any)?.hata || 'İşlem başlatılamadı.');
-    toast.success(islem === 'kaldir' ? 'Taslak kaldırıldı.' : 'Yayın başladı; kaynaklara yazılıp site derlenecek (birkaç dakika).');
+    toast.success(islem === 'kaldir' ? 'Taslak kaldırıldı.' : 'Sıraya alındı; kaynaklara yazılıp site derlenecek (birkaç dakika).');
     yukle();
+  };
+
+  const topluGonder = async () => {
+    const bek = (liste || []).filter(bekliyor).filter((t) => !t.denetim_hata);
+    if (!bek.length) return toast.error('Gönderilecek bekleyen taslak yok.');
+    const iki = bek.filter((t) => t.alternatif).length;
+    if (
+      !window.confirm(
+        `${bek.length} taslak gönderilsin mi?\n• ${iki} ders: Her ikisini tut (yayındaki V1 kalır, revize V2 olur)\n• ${bek.length - iki} ders: Ekle (yayında sürümü yok)\nSite en sonda bir kez derlenir.`,
+      )
+    )
+      return;
+    setBusy(true);
+    const r = await api('/toplu', { method: 'POST', body: '{}' });
+    setBusy(false);
+    if (!r.ok) return toast.error((r.data as any)?.hata || 'Toplu gönderim başlatılamadı.');
+    const d = r.data || {};
+    toast.success(`${(d.alinan || []).length} taslak sıraya alındı${d.atlanan?.length ? `, ${d.atlanan.length} atlandı` : ''}.`);
+    yukle();
+  };
+
+  const Dugmeler: React.FC<{ t: Taslak; kucuk?: boolean }> = ({ t, kucuk }) => {
+    const k = kucuk ? ' is-sm' : '';
+    const kapali = busy || !!t.denetim_hata;
+    return (
+      <div className="flex flex-wrap gap-2">
+        <button type="button" disabled={kapali || !t.alternatif} className={`ms-btn is-ok${k}`} onClick={() => uygula('degistir', t)}>
+          <ArrowLeftRight aria-hidden /> Yer değiştir / Güncelle
+        </button>
+        <button type="button" disabled={kapali || t.alternatif} className={`ms-btn is-ok${k}`} onClick={() => uygula('ekle', t)}>
+          <FilePlus2 aria-hidden /> Ekle
+        </button>
+        <button type="button" disabled={kapali || !t.alternatif} className={`ms-btn${k}`} onClick={() => uygula('ikisini_tut', t)}>
+          <Copy aria-hidden /> Her ikisini tut
+        </button>
+        <button type="button" disabled={busy} className={`ms-btn is-bad${k}`} onClick={() => uygula('kaldir', t)}>
+          <Trash2 aria-hidden /> Kaldır
+        </button>
+      </div>
+    );
   };
 
   const gorunen = (liste || []).filter((t) => (filtre === 'hepsi' ? true : filtre === 'bekleyen' ? bekliyor(t) : !bekliyor(t)));
@@ -182,9 +223,14 @@ export const ManageDersRevizeSection: React.FC<{ adminEmail: string }> = ({ admi
         count={liste ? liste.length : undefined}
         desc="Yayındaki derslerin 2026-27 PDF'inden yeniden üretilmiş sürümleri. Karşılaştır, önizle; yer değiştir, ekle, ikisini tut ya da kaldır."
         tools={
-          <button type="button" className="ms-btn is-sm" onClick={yukle}>
-            <RefreshCw aria-hidden /> Yenile
-          </button>
+          <div className="flex flex-wrap gap-2">
+            <button type="button" className="ms-btn is-sm is-primary" disabled={busy || !(liste || []).some(bekliyor)} onClick={topluGonder}>
+              <Copy aria-hidden /> Tümünü ikili gönder
+            </button>
+            <button type="button" className="ms-btn is-sm" onClick={yukle}>
+              <RefreshCw aria-hidden /> Yenile
+            </button>
+          </div>
         }
       >
         {calisan && (
@@ -208,13 +254,8 @@ export const ManageDersRevizeSection: React.FC<{ adminEmail: string }> = ({ admi
           {gorunen.map((t) => {
             const d = durumEtiketi(t);
             return (
-              <li key={t.is_id}>
-                <button
-                  type="button"
-                  onClick={() => setSecili(t.is_id)}
-                  aria-pressed={secili === t.is_id}
-                  className={`ms-panel w-full text-left p-3 ${secili === t.is_id ? 'is-on' : ''}`}
-                >
+              <li key={t.is_id} className={`ms-panel p-3 ${secili === t.is_id ? 'is-on' : ''}`}>
+                <button type="button" onClick={() => setSecili(t.is_id)} aria-pressed={secili === t.is_id} className="w-full text-left cursor-pointer">
                   <div className="flex flex-wrap items-center gap-2">
                     <b className="min-w-0">{t.konu || t.ders_id}</b>
                     <span className="ms-tag">{t.ders}</span>
@@ -228,6 +269,11 @@ export const ManageDersRevizeSection: React.FC<{ adminEmail: string }> = ({ admi
                     <b>{t.yeni?.etkilesim ?? '?'}</b> etkileşim · {t.sayilar?.soru ?? 0} soru · {t.referans ?? 0} kitaptan
                   </p>
                 </button>
+                {bekliyor(t) && (
+                  <div className="mt-2">
+                    <Dugmeler t={t} kucuk />
+                  </div>
+                )}
               </li>
             );
           })}
@@ -312,20 +358,7 @@ export const ManageDersRevizeSection: React.FC<{ adminEmail: string }> = ({ admi
                         ? 'Bu dersin yayında bir sürümü var: yer değiştirebilir ya da ikisini birden tutabilirsin.'
                         : 'Bu dersin yayında sürümü yok: doğrudan eklenir.'}
                     </p>
-                    <div className="flex flex-wrap gap-2">
-                      <button type="button" disabled={busy || !ayr.alternatif || !!ayr.denetim_hata} className="ms-btn is-ok" onClick={() => uygula('degistir')}>
-                        <ArrowLeftRight aria-hidden /> Yer değiştir / Güncelle
-                      </button>
-                      <button type="button" disabled={busy || ayr.alternatif || !!ayr.denetim_hata} className="ms-btn is-ok" onClick={() => uygula('ekle')}>
-                        <FilePlus2 aria-hidden /> Ekle
-                      </button>
-                      <button type="button" disabled={busy || !ayr.alternatif || !!ayr.denetim_hata} className="ms-btn" onClick={() => uygula('ikisini_tut')}>
-                        <Copy aria-hidden /> Her ikisini tut
-                      </button>
-                      <button type="button" disabled={busy} className="ms-btn is-bad" onClick={() => uygula('kaldir')}>
-                        <Trash2 aria-hidden /> Kaldır
-                      </button>
-                    </div>
+                    <Dugmeler t={ayr} />
                   </>
                 ) : null}
               </div>

@@ -144,6 +144,8 @@ class Yayin:
             self.hata.append("bu dersin yayında bir sürümü var: 'Yer değiştir' ya da 'Her ikisini tut' seç")
         if self.kip in ("degistir", "ikisini_tut") and not var and b.get("revize"):
             self.hata.append("yayında alternatif yok: 'Ekle' seç")
+        if any(x.get("revizeIsId") == self.d.name for x in oku(DECKS, [])):
+            self.hata.append("bu revize zaten yayında (aynı revize ikinci kez gönderilemez)")
         if k.get("karar") != "onayla":
             self.hata.append(f"karar onayla değil ({k.get('karar')})")
         if b.get("kurul") != 1:
@@ -222,12 +224,14 @@ class Yayin:
             grup = self.deste_id
             mevcut = [x for x in oku(DECKS, []) if x.get("id") == grup or x.get("versionGroup") == grup]
             n = max([int(str(x.get("versionLabel") or "V1")[1:] or 1) for x in mevcut] or [1]) + 1
-            d.update({"id": f"{grup}-v{n}", "deckId": f"{grup}-v{n}", "versionGroup": grup, "versionLabel": f"V{n}",
+            d.update({"id": f"{grup}-v{n}", "deckId": f"{grup}-v{n}", "versionGroup": grup, "versionLabel": f"V{n}", "revizeIsId": self.d.name,
                       "versionNote": "Revize ders işçisi (2026-27 PDF'inden yeniden üretildi)"})
         elif self.kip == "degistir":
             eski = next((x for x in oku(DECKS, []) if x.get("id") == self.deste_id), None)
             if eski and eski.get("versionGroup"):
                 d.update({k: eski[k] for k in ("versionGroup", "versionLabel") if eski.get(k)})
+            if self.b.get("revize"):
+                d["revizeIsId"] = self.d.name
         return d
 
     # ------------------------------------------------------------------ 2. yazım
