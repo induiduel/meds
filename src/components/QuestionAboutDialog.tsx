@@ -4,6 +4,7 @@ import { Dialog } from './ui/Dialog';
 import { SourceText } from './ui/SourceText';
 import { QuestionInsightsPanel } from './QuestionInsightsPanel';
 import { QuestionLearnMatch } from '../services/learnMatcher';
+import { RelatedContentPanel } from './rag/RelatedContentPanel';
 
 export const normalizeRefList = (raw: any): string[] => {
   if (!raw) return [];
@@ -380,6 +381,9 @@ export const QuestionAboutDialog: React.FC<Props> = ({
           </div>
         </section>
       )}
+
+      {/* Anlamca ilişkili ders materyali ve benzer sorular (bge-m3 vektörleri) */}
+      {!hidden && <RelatedContentPanel questionId={questionId} />}
 
       <section className="flex flex-col gap-2">
         <div className="flex items-center justify-between">

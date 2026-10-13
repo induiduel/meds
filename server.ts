@@ -38,6 +38,7 @@ import {
 
 import {
   initLocalRagEngine,
+  setPastQuestionsProvider,
   warmSpellIndex,
   searchLocalRag,
   runAutoChunking,
@@ -61,6 +62,7 @@ import { getQuestionInsights, getInsightsSummary, getRawQuestionInsights, getPha
 import { applyCleanOverlay } from './src/services/lectureCleanOverlay.ts';
 import { applyQuarantine, quarantineMtime } from './src/services/questionQuarantine.ts';
 import { ServerNotificationService } from './src/services/serverNotificationService.ts';
+import { notificationLinkFor, universalReportLink } from './src/services/notificationLinks.ts';
 import { CloudNotificationBridge } from './src/services/cloudNotificationBridge.ts';
 import {
   autoRepairStore,
@@ -137,10 +139,12 @@ import {
 } from './src/services/notebooklmManageService.ts';
 import { censorProfanity } from './src/utils/profanityFilter.ts';
 import { registerDataCatalogRoutes } from './src/services/dataCatalogService.ts';
+import { registerRagRelatedRoutes } from './src/services/ragRelatedRoutes.ts';
 import { registerUserNotesRoutes, createNotesStore } from './src/services/userNotesService.ts';
 import { createQuestionIntake, formatUnitsForPrompt, applyIntakeToQuestion } from './src/services/questionIntake.ts';
 import { createPoolClusterService } from './src/services/poolClusterService.ts';
-import { registerUserDataBackupRoutes } from './src/services/userDataBackupService.ts';
+import { createRecallFeedback } from './src/services/recall/feedback.ts';
+import { registerUserDataBackupRoutes, userEventHash, type ServerUserNotification } from './src/services/userDataBackupService.ts';
 import { initContentOverlay, resolveContent, markContentChanged, contentManifest } from './src/services/contentOverlay.ts';
 
 // @ts-ignore - dynamic ES module runner
@@ -867,10 +871,13 @@ let db = initializeDatabase();
 // Oy sayıları likedBy'dan türer; varsayılan "1" oylar ve tekrarlı oylar ayıklanır.
 (db.questions || []).forEach((q: any) => normalizeQuestionVotes(q));
 
+let onQuestionsSaved: (() => void) | null = null;
 function saveDatabase() {
   try {
     fs.writeFileSync(DB_FILE, JSON.stringify(db, null, 2), 'utf-8');
     broadcastRealtimeEvent('questions_changed', { count: (db.questions || []).length, time: Date.now() });
+    // Havuz kümeleri: her soru kaydında artımlı güncelleme (2 sn), 10 dk sonra toplu düzeltme (poolClusterService)
+    onQuestionsSaved?.();
   } catch (e) {
     console.error('Error saving db:', e);
   }
@@ -1331,6 +1338,18 @@ app.post('/api/recall/match', async (req, res) => {
   } catch (e: any) {
     res.status(500).json({ error: e?.message || 'Eşleştirme yapılamadı.' });
   }
+});
+
+// Soru ekle: öğrencinin önerilen havuz kaydı için kararı ("aynı soru" bağladı/birleştirdi, "farklı soru" reddetti).
+// Haftalık öğrenme (scripts/recall/learn.mts) bu kararlarla çift modelini yeniden eğitir.
+app.post('/api/recall/feedback', (req, res) => {
+  const { text, committeeId, questionId, decision, prob } = req.body || {};
+  const t = typeof text === 'string' ? text.trim() : '';
+  if (!t || !committeeId || !questionId || (decision !== 'ayni' && decision !== 'farkli')) return res.status(400).json({ error: 'Eksik alan.' });
+  const q = (db.questions || []).find((x: any) => String(x.id) === String(questionId));
+  if (!q || q.committeeId !== committeeId) return res.status(404).json({ error: 'Kayıt bulunamadı.' });
+  const ok = recallFeedback.record({ text: t, committeeId: String(committeeId), questionId: String(questionId), decision, prob: Number(prob), engine: poolClusters.engineVersion(), ip: req.ip });
+  res.status(ok ? 200 : 429).json({ success: ok });
 });
 
 // Kümeleri yeniden hesapla (sunucu içinde, dilimli; yapay zekâ birleştirmesi arka planda sırayla)
@@ -2025,7 +2044,9 @@ function addDeletedPastQuestion(id: string) {
 // Tam çıkmış listesi (~61MB JSON) her istekte yeniden örtülüp gzip'lenince Oracle'da ~1.9 sn CPU
 // harcıyor ve bu sırada tüm diğer istekler bekliyordu. Örtülü liste + gzip gövdesi kaynak değişene
 // kadar (en çok 30 sn; Faz 14 kaydı kendi önbelleğinde) bellekte tutulur, gzip iş parçacığında yapılır.
-type PastListCache = { key: string; at: number; list: any[]; listJson: string; bodies: Map<string, Promise<{ raw: string; gz: Buffer }>> };
+// Gövdelerin yalnız gzip'i tutulur (ham gövde ~170 MB'lık ikinci bir dize demekti); gzip desteklemeyen
+// nadir istemciye anında açılır.
+type PastListCache = { key: string; at: number; list: any[]; listJson: string; bodies: Map<string, Promise<Buffer>> };
 let pastListCache: PastListCache | null = null;
 function getServedPastList(): PastListCache {
   const base = getPastQuestionsDb();
@@ -2040,16 +2061,18 @@ function sendPastListBody(req: express.Request, res: express.Response, cache: Pa
   let p = cache.bodies.get(name);
   if (!p) {
     const raw = build();
-    p = new Promise((resolve, reject) => zlib.gzip(raw, { level: 6 }, (err, gz) => (err ? reject(err) : resolve({ raw, gz }))));
+    p = new Promise((resolve, reject) => zlib.gzip(raw, { level: 6 }, (err, gz) => (err ? reject(err) : resolve(gz))));
     cache.bodies.set(name, p);
+    // Eşitleme gövdesi anahtarı her değişiklikte farklıdır; eskiler birikmesin
+    if (cache.bodies.size > 4) cache.bodies.delete(cache.bodies.keys().next().value as string);
   }
-  p.then(({ raw, gz }) => {
+  p.then((gz) => {
     res.type('application/json');
     res.vary('Accept-Encoding');
     if (/\bgzip\b/.test(String(req.headers['accept-encoding'] || ''))) {
       res.setHeader('Content-Encoding', 'gzip');
       res.end(gz);
-    } else res.end(raw);
+    } else zlib.gunzip(gz, (err, raw) => (err ? res.status(500).end() : res.end(raw)));
   }).catch((err) => res.status(500).json({ error: 'Çıkmış listesi hazırlanamadı: ' + err.message }));
 }
 
@@ -2628,6 +2651,27 @@ app.post('/api/past-exams/:id/comment', (req, res) => {
     savePastQuestionsDb(list);
     mirrorPastQuestionToDb(q);
 
+    // Yanıtsa: üst yorumun sahibine (kendisi değilse) profil bildirimi
+    if (parent && (parent.authorUid || parent.authorEmail)) {
+      const self =
+        (authorUid && parent.authorUid && String(authorUid) === String(parent.authorUid)) ||
+        (authorEmail && parent.authorEmail && String(authorEmail).toLowerCase() === String(parent.authorEmail).toLowerCase());
+      if (!self) {
+        notifyStudent(
+          { uid: parent.authorUid, email: parent.authorEmail },
+          {
+            type: 'comment_added',
+            title: `${newComment.author} yorumuna yanıt verdi`,
+            message: newComment.text.slice(0, 200),
+            deepLinkUrl: `/cikmis/${encodeURIComponent(q.id)}?sec=comments#comm-${newComment.id}`,
+            targetType: 'past_question',
+            targetId: String(q.id),
+            dedupeKey: `comment_reply:${newComment.id}`,
+          }
+        );
+      }
+    }
+
     // Yalnızca yöneticiye anında e-posta ve telefon push bildirimi gönder
     triggerAdminNotification({
       type: 'comment',
@@ -2636,6 +2680,7 @@ app.post('/api/past-exams/:id/comment', (req, res) => {
       author: newComment.author,
       discipline: q.discipline,
       topic: q.topic,
+      link: notificationLinkFor({ kind: 'past_question', id: String(req.params.id), commentId: String(newComment.id || '') || undefined }),
     });
 
     res.json({ success: true, comment: newComment, updatedReconstruction: q.reconstruction });
@@ -4529,7 +4574,6 @@ app.put('/api/questions/:id', (req, res) => {
       db.questions.push(newQ);
       saveDatabase();
       mirrorQuestionToDb(newQ);
-      poolClusters.schedule();
       return res.json({ success: true, question: newQ, created: true });
     }
     db.questions[idx] = keepIntakeFields(db.questions[idx], {
@@ -4540,7 +4584,6 @@ app.put('/api/questions/:id', (req, res) => {
     });
     saveDatabase();
     mirrorQuestionToDb(db.questions[idx]);
-    poolClusters.schedule();
     res.json({ success: true, question: db.questions[idx] });
   } catch (err: any) {
     res.status(500).json({ error: 'Soru güncellenemedi: ' + err.message });
@@ -4973,6 +5016,7 @@ app.post('/api/ornek-sorular/:id/report', (req, res) => {
     reason: report.reason,
     details: report.details,
     author: report.reportedBy,
+    link: notificationLinkFor({ kind: 'ornek_question', id }),
   });
 
   res.json({ success: true, report });
@@ -5111,6 +5155,7 @@ app.post('/api/questions/:id/report', (req, res) => {
     author: report.reportedBy,
     discipline: question.discipline,
     topic: question.topic,
+    link: notificationLinkFor({ kind: 'pool_question', id: String(req.params.id) }),
   });
 
   try {
@@ -5162,6 +5207,7 @@ app.post('/api/terms/:id/report', (req, res) => {
     author: reportedBy,
     discipline: 'Tıbbi Sözlük',
     topic: termId,
+    link: notificationLinkFor({ kind: 'term', id: termId }),
   });
 
   try {
@@ -5212,6 +5258,7 @@ app.post('/api/cards/:id/report', (req, res) => {
     author: reportedBy,
     discipline: 'Akıl Kartı',
     topic: cardId,
+    link: notificationLinkFor({ kind: 'flashcard', id: cardId }),
   });
 
   try {
@@ -5264,6 +5311,7 @@ app.post('/api/universal-report', (req, res) => {
     author: reportedBy,
     discipline: targetType,
     topic: targetId,
+    link: universalReportLink(targetType, targetId, req.body?.link),
   });
 
   res.json({ success: true, report });
@@ -5360,6 +5408,7 @@ app.post('/api/questions/:id/fragments', (req, res) => {
     author: newFragment.author,
     discipline: question.discipline,
     topic: question.topic,
+    link: notificationLinkFor({ kind: 'pool_question', id: String(req.params.id) }),
   });
 
   res.json({ fragment: newFragment, question });
@@ -6408,18 +6457,61 @@ const poolClusters = createPoolClusterService({
   getPastQuestions: () => getPastQuestionsDb(),
 });
 questionIntake.onProcessed(() => poolClusters.schedule());
+onQuestionsSaved = () => poolClusters.schedule();
+const recallFeedback = createRecallFeedback(DATA_DIR);
+// Haftalık öğrenme: son öğrenmeden bu yana ≥20 yeni öğrenci kararı varsa ayrı süreçte (düşük öncelik) yeniden eğit;
+// yeni ağırlıklar yalnız sınama setinde gerileme yoksa yazılır, sonra motor yeniden yüklenir ve kümeler baştan hesaplanır.
+{
+  let learnedAt = recallFeedback.count();
+  let learning = false;
+  const tryLearn = () => {
+    if (learning || recallFeedback.count() - learnedAt < 20) return;
+    learning = true;
+    const child = spawn('nice', ['-n', '15', path.join(__dirname, 'node_modules/.bin/tsx'), 'scripts/recall/learn.mts', '--write'], {
+      cwd: __dirname, env: { ...process.env, CUDA_VISIBLE_DEVICES: '' }, stdio: ['ignore', 'pipe', 'pipe'],
+    });
+    let log = '';
+    child.stdout?.on('data', (d) => { log += d; });
+    child.stderr?.on('data', (d) => { log += d; });
+    child.on('close', (code) => {
+      learning = false;
+      learnedAt = recallFeedback.count();
+      console.log(`[Öğrenme] çift modeli (çıkış ${code}):`, log.trim().split('\n').slice(-3).join(' | '));
+      if (code === 0) poolClusters.reloadWeights();
+    });
+    child.on('error', (e) => { learning = false; console.warn('[Öğrenme] başlatılamadı:', e?.message); });
+  };
+  setInterval(tryLearn, 7 * 24 * 3_600_000).unref?.();
+  setTimeout(tryLearn, 10 * 60_000).unref?.();
+}
 // Açılışta hemen değil: arama motoru yüklenirken yük bindirmemek için 90 sn sonra
 setTimeout(() => poolClusters.runNow(), 90_000).unref?.();
 
 // Kullanıcı veri, istatistik, bildirim ve yorum yedeği / Supabase senkronizasyonu
-registerUserDataBackupRoutes(app, {
+const userDataRoutes = registerUserDataBackupRoutes(app, {
   dataDir: DATA_DIR,
   loadUsers,
   saveUsers,
   mirrorUserToDb,
   getPastQuestions: getPastQuestionsDb,
   notesStore,
+  // Profil her kaydedildiğinde: meds-pg `user_data` satırı + kullanıcının diğer cihazlarına anında haber
+  onSaved: ({ uid, email, verified, bundle, origin }) => {
+    broadcastRealtimeEvent('user_data_changed', { who: userEventHash(uid), origin, at: Date.now() });
+    if (!pgOnline) return;
+    void (async () => {
+      try {
+        const row = { uid, email: email || null, verified, data: bundle, rev: Date.now(), updated_at: new Date().toISOString() };
+        const { error } = await pgDb.from('user_data').upsert([row], { onConflict: 'uid' });
+        if (error) console.warn('[UserData] meds-pg yansıtma uyarısı:', error.message);
+      } catch (e: any) {
+        console.warn('[UserData] meds-pg yansıtma uyarısı:', e?.message || e);
+      }
+    })();
+  },
 });
+/** Sunucu olayını öğrencinin profil bildirimlerine yazar (tüm cihazlarında canlı görünür). */
+const notifyStudent = (target: { uid?: string | null; email?: string | null }, n: ServerUserNotification) => userDataRoutes.pushUserNotification(target, n);
 
 // Yönetim · veri kataloğu: tüm veri türleri tek arayüzde (liste/ara/süz, düzenle, değerlendir-sınıfla, ilişkiler)
 registerDataCatalogRoutes(app, requireAdmin, {
@@ -7137,6 +7229,23 @@ app.post('/api/admin/reports/:id/resolve', requireAdmin, async (req, res) => {
               ? { ...r, status: 'resolved', resolvedAt: new Date().toISOString(), resolvedBy: 'Admin' }
               : r
           );
+          // Bildiren öğrenciye: profil bildirim geçmişine + cihazlarına canlı
+          for (const r of curReports) {
+            if (!(!reportId || r?.id === reportId || r?.id?.includes(reportId))) continue;
+            if (!r?.reporterUid && !r?.reporterEmail) continue;
+            notifyStudent(
+              { uid: r.reporterUid, email: r.reporterEmail },
+              {
+                type: 'report_resolved',
+                title: 'Bildirdiğin hata çözüldü',
+                message: `${q.discipline || 'Çıkmış soru'}${q.topic ? ` · ${q.topic}` : ''}: "${String(r.reason || 'Hata bildirimi').slice(0, 80)}" incelendi ve düzeltildi.`,
+                deepLinkUrl: `/cikmis/${encodeURIComponent(questionId)}#q-${questionId}`,
+                targetType: 'past_question',
+                targetId: questionId,
+                dedupeKey: `report_resolved:${questionId}:${r.id}`,
+              }
+            );
+          }
           q.qualityIssues = (Array.isArray(q.qualityIssues) ? q.qualityIssues : []).filter(
             (issue: string) => !issue.startsWith('sikayet-')
           );
@@ -7669,7 +7778,7 @@ app.post('/api/admin/push/test', requireAdmin, async (_req, res) => {
     const result = await serverNotificationService.sendAdminWebPush({
       title: '🧪 MedSoru Test Bildirimi',
       body: 'Tebrikler! Telefonunuzda anlık admin bildirimleri kusursuz çalışıyor.',
-      url: 'https://nofrostlife.com.tr/#past-exams',
+      url: 'https://nofrostlife.com.tr/cikmis',
     });
     res.json({
       success: true,
@@ -9462,6 +9571,9 @@ app.post('/api/rag/ask', async (req, res) => {
 });
 
 // 3. RAG Stats: Current indexing and database state
+// Saklanan vektörlerden ilgili/benzer/kopya içerik (embed servisi gerekmez)
+registerRagRelatedRoutes(app);
+
 app.get('/api/rag/stats', async (req, res) => {
   try {
     let cloudChunksCount = 0;
@@ -10826,6 +10938,7 @@ async function startServer() {
     // system_status komut kuyruğu (yönetici komutları, Postgres üzerinden)
     startDbCommandPoller();
     // Initialize Local & Hybrid RAG Engine (49,000+ medical chunks)
+    setPastQuestionsProvider(getPastQuestionsDb); // RAG 90 MB'lık dosyayı ikinci kez ayrıştırmasın
     initLocalRagEngine();
     warmSpellIndex();
     import('./src/services/queryIntel/server.ts').then((m) => m.startQueryIntel()).catch((e) => console.warn('[query-intel] başlatılamadı:', e?.message));

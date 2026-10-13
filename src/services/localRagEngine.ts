@@ -181,11 +181,25 @@ function getNextGeminiClient(): GoogleGenAI | null {
 // In-Memory Index State (High-Performance BM25 Engine)
 // ==============================================================================
 let memoryChunks: Map<string, RagChunk> = new Map();
-// token -> Map<chunkId, termFrequency> for exact BM25 calculation
-let invertedIndex: Map<string, Map<string, number>> = new Map();
+// Sıkıştırılmış ters dizin: terim -> (belge no, terim sıklığı) tipli dizileri. Eski iç içe
+// Map<terim, Map<parçaId, tf>> 73k parçada ~1 GB tutuyor, yeniden kurulumda iki kopya bir arada
+// 2 GB yığın tavanını aşıp sunucuyu çökertiyordu (2026-10-13). Belge no -> parça kimliği docIds'te.
+type Postings = { docs: Int32Array; tfs: Uint16Array };
+let invertedIndex: Map<string, Postings> = new Map();
+let docIds: string[] = [];
+let docLens: Uint32Array = new Uint32Array(0);
+// Dizin kurulduktan sonra tek tek eklenen parçalar (AI etkileşimleri); bir sonraki kurulumda ana dizine geçer
+let pendingIndex: Map<string, Map<string, number>> = new Map();
+let pendingLengths: Map<string, number> = new Map();
 let fuzzyVocab = new FastFuzzyVocab();
-let docLengths: Map<string, number> = new Map();
 let avgDocLength = 110;
+
+function termDf(t: string): number {
+  return (invertedIndex.get(t)?.docs.length || 0) + (pendingIndex.get(t)?.size || 0);
+}
+function hasTerm(t: string): boolean {
+  return invertedIndex.has(t) || pendingIndex.has(t);
+}
 let isInitialized = false;
 let isIndexingInProgress = false;
 let saveDebounceTimer: NodeJS.Timeout | null = null;
@@ -307,57 +321,100 @@ export async function saveLocalChunksToFile(forceImmediate: boolean = false): Pr
 let rebuildSeq = 0;
 async function rebuildInvertedIndex(): Promise<void> {
   const seq = ++rebuildSeq;
-  const nextIndex: Map<string, Map<string, number>> = new Map();
-  const nextLengths: Map<string, number> = new Map();
-  const nextVocab = new FastFuzzyVocab();
+  // Kurulum sırasında terim başına [belgeNo, tf, belgeNo, tf, ...] düz dizisi tutulur
+  const build: Map<string, number[]> = new Map();
+  const ids: string[] = [];
+  const lens: number[] = [];
   const slice = makeSlicer();
+  const addDoc = (chunk: RagChunk) => {
+    const docNo = ids.length;
+    ids.push(chunk.id);
+    const freq = chunkTermFreqs(chunk);
+    let len = 0;
+    for (const [t, f] of freq) {
+      len += f;
+      let arr = build.get(t);
+      if (!arr) { arr = []; build.set(t, arr); }
+      arr.push(docNo, f);
+    }
+    lens.push(len);
+  };
+  const seen = new Set<string>();
   for (const chunk of Array.from(memoryChunks.values())) {
-    indexChunkTokens(chunk, nextIndex, nextLengths);
+    seen.add(chunk.id);
+    addDoc(chunk);
     await slice();
     if (seq !== rebuildSeq) return;
   }
   // Kurulum sırasında eklenen parçalar (ör. yeni AI etkileşimi) da yeni indekse girsin
   for (const chunk of memoryChunks.values()) {
-    if (!nextLengths.has(chunk.id)) indexChunkTokens(chunk, nextIndex, nextLengths);
+    if (!seen.has(chunk.id)) { seen.add(chunk.id); addDoc(chunk); }
+  }
+
+  // Tipli dizilere dönüştür; dönüştürülen düz dizi hemen bırakılır (tepe bellek düşük kalır)
+  const nextIndex: Map<string, Postings> = new Map();
+  const nextVocab = new FastFuzzyVocab();
+  for (const [t, arr] of build) {
+    const n = arr.length >> 1;
+    const docs = new Int32Array(n);
+    const tfs = new Uint16Array(n);
+    for (let k = 0, m = 0; k < n; k++, m += 2) { docs[k] = arr[m]; tfs[k] = Math.min(arr[m + 1], 65535); }
+    nextIndex.set(t, { docs, tfs });
+    build.delete(t);
+    if (!t.endsWith('*') && t.length >= 4) nextVocab.add(t);
+    await slice();
+    if (seq !== rebuildSeq) return;
   }
   let totalDocLen = 0;
-  for (const len of nextLengths.values()) totalDocLen += len;
+  for (const l of lens) totalDocLen += l;
 
-  // Build fuzzy vocabulary once from unique index keys
-  for (const k of nextIndex.keys()) {
-    if (!k.endsWith('*') && k.length >= 4) {
-      nextVocab.add(k);
-    }
-  }
   invertedIndex = nextIndex;
-  docLengths = nextLengths;
+  docIds = ids;
+  docLens = Uint32Array.from(lens);
+  // Kurulumdan sonra eklenenler bekleyen dizinde kalır; kurulumda olanlar oradan çıkar
+  if (pendingLengths.size) {
+    const nextPending: Map<string, Map<string, number>> = new Map();
+    const nextPendingLens: Map<string, number> = new Map();
+    for (const [id, l] of pendingLengths) if (!seen.has(id)) nextPendingLens.set(id, l);
+    if (nextPendingLens.size) {
+      for (const [t, posting] of pendingIndex) {
+        for (const [id, f] of posting) {
+          if (!nextPendingLens.has(id)) continue;
+          let p = nextPending.get(t);
+          if (!p) { p = new Map(); nextPending.set(t, p); }
+          p.set(id, f);
+        }
+      }
+    }
+    pendingIndex = nextPending;
+    pendingLengths = nextPendingLens;
+  }
   fuzzyVocab = nextVocab;
-  avgDocLength = nextLengths.size > 0 ? totalDocLen / nextLengths.size : 110;
+  avgDocLength = ids.length > 0 ? totalDocLen / ids.length : 110;
 }
 
-function indexChunkTokens(
-  chunk: RagChunk,
-  index: Map<string, Map<string, number>> = invertedIndex,
-  lengths: Map<string, number> = docLengths,
-): void {
+function chunkTermFreqs(chunk: RagChunk): Map<string, number> {
   // Boost title and discipline by repeating in text representation
   const textToScan = `${chunk.title} ${chunk.title} ${chunk.discipline || ''} ${chunk.content}`;
-  const tokens = cleanTextForTokens(textToScan);
-  lengths.set(chunk.id, tokens.length);
-
   const freqMap = new Map<string, number>();
-  for (const t of tokens) {
+  for (const t of cleanTextForTokens(textToScan)) {
     freqMap.set(t, (freqMap.get(t) || 0) + 1);
   }
+  return freqMap;
+}
 
-  for (const [t, freq] of freqMap.entries()) {
-    let posting = index.get(t);
-    if (!posting) {
-      posting = new Map<string, number>();
-      index.set(t, posting);
-    }
-    posting.set(chunk.id, freq);
+// Dizin kurulduktan sonra gelen tek parçayı bekleyen dizine ekler (aramada ana dizinle birleşir)
+function indexChunkTokens(chunk: RagChunk): void {
+  const freq = chunkTermFreqs(chunk);
+  let len = 0;
+  for (const [t, f] of freq) {
+    len += f;
+    let posting = pendingIndex.get(t);
+    if (!posting) { posting = new Map(); pendingIndex.set(t, posting); }
+    posting.set(chunk.id, f);
+    if (!t.endsWith('*') && t.length >= 4 && !invertedIndex.has(t)) fuzzyVocab.add(t);
   }
+  pendingLengths.set(chunk.id, len);
 }
 
 // ==============================================================================
@@ -421,11 +478,30 @@ function cosineSimilarity(vecA: number[], vecB: number[]): number {
 // 8 Data Sources Chunk Builders
 // ==============================================================================
 
+// Bir parçalama turunda pastQuestions.json (~90 MB) yalnız bir kez ayrıştırılır (çıkmış + AI düzeltmeleri)
+let pastQuestionsRunCache: { mtimeMs: number; list: any[] } | null = null;
+// Sunucu süreci listeyi zaten bellekte tutuyorsa (getPastQuestionsDb) ikinci kopya ayrıştırılmaz
+let pastQuestionsProvider: (() => any[]) | null = null;
+export function setPastQuestionsProvider(fn: (() => any[]) | null): void {
+  pastQuestionsProvider = fn;
+}
+function readPastQuestionsList(): any[] | null {
+  if (pastQuestionsProvider) {
+    try { return pastQuestionsProvider(); } catch (err: any) { console.warn('[LocalRagEngine] çıkmış listesi sağlayıcıdan alınamadı:', err?.message || err); }
+  }
+  const pqPath = path.resolve(DATA_DIR, 'pastQuestions.json');
+  if (!fs.existsSync(pqPath)) return null;
+  const mtimeMs = fs.statSync(pqPath).mtimeMs;
+  if (pastQuestionsRunCache?.mtimeMs === mtimeMs) return pastQuestionsRunCache.list;
+  const list = JSON.parse(fs.readFileSync(pqPath, 'utf-8'));
+  pastQuestionsRunCache = { mtimeMs, list };
+  return list;
+}
+
 // 1. Çıkmış Sorular (past_question)
 export function chunkPastQuestions(): RagChunk[] {
-  const pqPath = path.resolve(DATA_DIR, 'pastQuestions.json');
-  if (!fs.existsSync(pqPath)) return [];
-  const list = JSON.parse(fs.readFileSync(pqPath, 'utf-8'));
+  const list = readPastQuestionsList();
+  if (!list) return [];
   const chunks: RagChunk[] = [];
   const now = new Date().toISOString();
 
@@ -854,9 +930,8 @@ ${c.text}`.trim();
 
 // 7. Yapay Zeka Düzeltmeleri & Revizyonları (ai_refinement)
 export function chunkAiRefinements(): RagChunk[] {
-  const pqPath = path.resolve(DATA_DIR, 'pastQuestions.json');
-  if (!fs.existsSync(pqPath)) return [];
-  const list = JSON.parse(fs.readFileSync(pqPath, 'utf-8'));
+  const list = readPastQuestionsList();
+  if (!list) return [];
   const chunks: RagChunk[] = [];
   const now = new Date().toISOString();
 
@@ -1408,91 +1483,91 @@ export async function runAutoChunking(options: { limit?: number; syncToCloud?: b
   console.log('======================================================');
 
   try {
-    const allChunks: RagChunk[] = [];
+    // Her kaynak üretilir üretilmez birleştirilir; tüm kaynakların yeni parçaları aynı anda bellekte tutulmaz
+    let newlyIndexed = 0;
+    const merge = (list: RagChunk[]) => {
+      for (const chunk of list) {
+        const existing = memoryChunks.get(chunk.id);
+        if (!existing || existing.hash !== chunk.hash) {
+          memoryChunks.set(chunk.id, chunk);
+          newlyIndexed++;
+        }
+      }
+    };
+    pastQuestionsRunCache = null;
 
     // 1. Past questions
     const pq = chunkPastQuestions();
     console.log(`✓ 1/8 Çıkmış Sorular: ${pq.length} parça`);
-    allChunks.push(...pq);
+    merge(pq);
 
     // 2. Active questions
     const aq = chunkActiveQuestions();
     console.log(`✓ 2/8 Aktif Sorular: ${aq.length} parça`);
-    allChunks.push(...aq);
+    merge(aq);
 
     // 3. Lecture slides
     const ls = chunkLectureNotes();
     console.log(`✓ 3/8 Ders Slaytları: ${ls.length} sayfa/parça`);
-    allChunks.push(...ls);
+    merge(ls);
 
     // 3b. Ortak RAG deposu (yeni hat ders materyali, temiz metin)
     const um = chunkUnifiedMaterial();
     console.log(`✓ 3b Ortak Ders Materyali (yeni hat): ${um.length} parça`);
-    allChunks.push(...um);
+    merge(um);
 
     // 4. Summaries & spots
     const sm = chunkLectureSummaries();
     console.log(`✓ 4/8 Ders Özetleri & Spotlar: ${sm.length} bölüm`);
-    allChunks.push(...sm);
+    merge(sm);
 
     // 5. Transcripts
     const tr = chunkAudioTranscripts();
     console.log(`✓ 5/8 Ses Transkriptleri: ${tr.length} parça`);
-    allChunks.push(...tr);
+    merge(tr);
 
     // 6. User contributions
     const uc = chunkUserContributions();
     console.log(`✓ 6/8 Kullanıcı Katkı & Yorumları: ${uc.length} parça`);
-    allChunks.push(...uc);
+    merge(uc);
 
     // 7. AI Refinements
     const ar = chunkAiRefinements();
     console.log(`✓ 7/8 AI Düzeltmeleri & Revizyonları: ${ar.length} parça`);
-    allChunks.push(...ar);
+    merge(ar);
+    pastQuestionsRunCache = null; // büyük liste artık gerekmiyor
 
     // 8. AI Chat interactions
     const aiq = chunkAiInteractions();
     console.log(`✓ 8/9 AI Soru Sohbetleri: ${aiq.length} parça`);
-    allChunks.push(...aiq);
+    merge(aiq);
 
     // 9. DeepSeek Katkı & Düzenlenmiş Verileri
     const dsc = chunkDeepSeekData();
     console.log(`✓ 9/9 DeepSeek Katkıları: ${dsc.length} parça`);
-    allChunks.push(...dsc);
+    merge(dsc);
 
     // 10. Örnek sorular (k1 ders dosyaları)
     const os = chunkOrnekSorular();
     console.log(`✓ 10/12 Örnek Sorular: ${os.length} parça`);
-    allChunks.push(...os);
+    merge(os);
 
     // 11. İnteraktif öğrenme desteleri (slayt başına 1 chunk)
     const dk = chunkInteractiveDecks();
     console.log(`✓ 11/12 İnteraktif Deste Slaytları: ${dk.length} parça`);
-    allChunks.push(...dk);
+    merge(dk);
 
     // 12. Sözlük terimleri + hastalıklar
     const gl = chunkGlossaryTerms();
     console.log(`✓ 12/12 Sözlük Terimleri: ${gl.length} parça`);
-    allChunks.push(...gl);
+    merge(gl);
     const dz = chunkDiseases();
     console.log(`✓ 12/12 Hastalıklar: ${dz.length} parça`);
-    allChunks.push(...dz);
-
-    let newlyIndexed = 0;
-    for (const chunk of allChunks) {
-      const existing = memoryChunks.get(chunk.id);
-      if (!existing || existing.hash !== chunk.hash) {
-        // Keep existing embedding if hash did not change
-        if (existing?.embedding && existing.hash === chunk.hash) {
-          chunk.embedding = existing.embedding;
-        }
-        memoryChunks.set(chunk.id, chunk);
-        newlyIndexed++;
-      }
-    }
+    merge(dz);
 
     // Çıkmış soru parçaları kaynak dosyanın tam yansımasıdır: artık üretilmeyen (silinen, birleştirilen, karantinaya alınan) soru parçası atılır
     const pqIds = new Set(pq.map((c) => c.id));
+    pastQuestionsRunCache = null;
     let pruned = 0;
     for (const [id, c] of memoryChunks) {
       if (c.documentType === 'past_question' && !pqIds.has(id)) { memoryChunks.delete(id); pruned++; }
@@ -1521,6 +1596,7 @@ export async function runAutoChunking(options: { limit?: number; syncToCloud?: b
     };
   } finally {
     isIndexingInProgress = false;
+    pastQuestionsRunCache = null;
   }
 }
 
@@ -1613,11 +1689,11 @@ export async function searchLocalRag(
   // tek başına tüm sendromları getirir).
   const tokenBase = new Map<string, string>();
   for (const w of rawWords) {
-    if (fuzzyVocab.size() > 0 && !invertedIndex.has(w)) {
+    if (fuzzyVocab.size() > 0 && !hasTerm(w)) {
       const hits = fuzzyVocab.findMatches(w, 2);
       if (hits.length > 0) {
         // En düşük mesafe ve en yüksek doküman frekansına göre sırala
-        hits.sort((a, b) => a.dist - b.dist || (invertedIndex.get(b.term)?.size || 0) - (invertedIndex.get(a.term)?.size || 0));
+        hits.sort((a, b) => a.dist - b.dist || termDf(b.term) - termDf(a.term));
         if (hits[0].dist <= (w.length >= 6 ? 2 : 1)) {
           const best = hits[0].term;
           effectiveTokens.push(best);
@@ -1648,14 +1724,13 @@ export async function searchLocalRag(
   const avgdl = avgDocLength || 110;
 
   // 1. Calculate IDF for each query token present in the index
-  const tokenInfo: Array<{ token: string; idf: number; postings: Map<string, number> }> = [];
+  const tokenInfo: Array<{ token: string; idf: number }> = [];
 
   for (const t of cleanTokens) {
-    const postings = invertedIndex.get(t);
-    if (postings && postings.size > 0) {
-      const df = postings.size;
+    const df = termDf(t);
+    if (df > 0) {
       const idf = Math.log(1 + (N - df + 0.5) / (df + 0.5));
-      tokenInfo.push({ token: t, idf, postings });
+      tokenInfo.push({ token: t, idf });
     }
   }
 
@@ -1675,10 +1750,11 @@ export async function searchLocalRag(
   const matchedTokensCount = new Map<string, number>();
   const matchedBases = new Map<string, Set<string>>();
 
-  for (const { token, idf, postings } of tokensToScore) {
+  const ids = docIds;
+  const lens = docLens;
+  for (const { token, idf } of tokensToScore) {
     const base = tokenBase.get(token) || token;
-    for (const [chunkId, tf] of postings.entries()) {
-      const docLen = docLengths.get(chunkId) || avgdl;
+    const add = (chunkId: string, tf: number, docLen: number) => {
       const tfNorm = (tf * (k1 + 1)) / (tf + k1 * (1 - b + b * (docLen / avgdl)));
       const termScore = idf * tfNorm;
 
@@ -1690,7 +1766,14 @@ export async function searchLocalRag(
         matchedBases.set(chunkId, set);
       }
       set.add(base);
+    };
+    const postings = invertedIndex.get(token);
+    if (postings) {
+      const { docs, tfs } = postings;
+      for (let k = 0; k < docs.length; k++) add(ids[docs[k]], tfs[k], lens[docs[k]] || avgdl);
     }
+    const pending = pendingIndex.get(token);
+    if (pending) for (const [chunkId, tf] of pending) add(chunkId, tf, pendingLengths.get(chunkId) || avgdl);
   }
 
   // 3. Score and rank candidates
@@ -1955,7 +2038,7 @@ export function suggestSpelling(text: string): SpellSuggestion {
   // Sözlük hazır değilken öneri yok (kurulumu tetikler, isteği bekletmez)
   if (!indexReady || !surfaceForms) { void warmSurfaceForms(); return { text: null, changes: [] }; }
   const changes: Array<{ from: string; to: string }> = [];
-  const df = (t: string) => invertedIndex.get(t)?.size || 0;
+  const df = termDf;
   const prefix = (x: string, y: string) => { let i = 0; while (i < x.length && i < y.length && x[i] === y[i]) i++; return i; };
   const fixed = text.replace(/[\p{L}]{4,}/gu, (word) => {
     const f = foldTurkish(word);

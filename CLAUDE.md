@@ -84,10 +84,23 @@ Current tokenizer: Turkish case/character folding + full word + 5-char stem. Las
 partial stem words 95%, suffix-changed words 91%, topic only 58% (98% same-topic; topics are shared
 by many questions, so exact match is not expected). Stem-only and word-only were both worse.
 
-Hybrid BM25 + e5 vectors (`src/services/vectorSearch.ts`, meds-pg `match_rag_chunks_e5`, embed service
-`meds-embed` on 127.0.0.1:8091) is OFF by default (`MEDS_VECTOR_SEARCH=1` to enable): `HYBRID=1` eval gave
-94/93/41 (weight 0.8) and 95/93/43 (0.3) vs BM25 96/92/44. Vectors live in meds-pg
-(`rag_vector_build.py` defaults to `--hedef yerel`).
+Hybrid BM25 + vectors (`src/services/vectorSearch.ts`): query → embed service (`MEDS_EMBED_URL`, bge-m3 :8094 on
+both machines) → meds-pg `match_rag_chunks_bge_m3` (HNSW) → RRF with BM25. Enabled when `MEDS_EMBED_URL` is set
+(`MEDS_VECTOR_SEARCH=0` disables). Older `HYBRID=1` eval (e5): 94/93/41 (w 0.8) vs BM25 96/92/44.
+
+Vector pipeline (2026-10-13): `scripts/advanced_ai/rag_vektor_hatti.py` is the only writer of `rag_chunks`
+(`rag_vector_build.py` is a compat wrapper). It reads `data/local_rag_chunks.json`, embeds only new/changed chunks
+through the CPU services (no in-process model), writes meds-pg with COPY, deletes rows no longer in the source, and
+with `--oracle` sends only the diff (id + hashes + vector fingerprint) to Oracle over ssh (gzip). `--denetle` finds and
+repairs bge vectors stored under the wrong chunk. Cron every 3 h on the device. Never restore `rag_chunks` with a full
+dump without re-running `deploy/pg/sql/rag_chunks_indexes.sql` (Oracle lost every index that way → 1.7 s queries).
+SQL functions live in `deploy/pg/sql/rag_vektor_islevleri.sql` (dynamic plpgsql so HNSW is used with/without filters).
+`GET /api/rag/related` (`src/services/ragRelatedRoutes.ts`) uses stored vectors (no embed call): `mod=ilgili` lecture
+material, `benzer` similar questions, `kopya` near-duplicates; `GET /api/rag/vectors/health` shows coverage.
+
+The in-memory BM25 index stores postings as typed arrays (`Int32Array` doc numbers + `Uint16Array` tf); chunks added
+after a rebuild go to a small pending map. The old nested `Map<term, Map<chunkId, tf>>` (~1 GB) made `meds-web` hit the
+2 GB heap limit during re-chunking.
 
 ## Known gaps
 

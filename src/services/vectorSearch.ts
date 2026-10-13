@@ -53,6 +53,9 @@ export function expandMedicalQuery(query: string): string {
 
 type Row = Record<string, any> & { id: string };
 
+// Aynı sorgu (ör. öneri + arama, sayfa yenileme) embed servisine yeniden gitmesin
+const queryVecCache = new Map<string, number[]>();
+
 let downUntil = 0; // servis düşükse bir süre denenmez (her aramada zaman aşımı beklenmesin)
 
 async function withTimeout<T>(p: (signal: AbortSignal) => Promise<T>): Promise<T> {
@@ -82,12 +85,22 @@ export function vectorSearchEnabled(): boolean {
 export async function semanticSearch(query: string, opts: { documentTypes?: string[]; committeeId?: string; limit?: number } = {}): Promise<Row[]> {
   if (!vectorSearchEnabled() || !query.trim()) return [];
   try {
-    const vecQuery = expandMedicalQuery(query);
-    const vec = await withTimeout(async (signal) => {
-      const r = await fetch(EMBED_URL, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ texts: [vecQuery.slice(0, 1500)] }), signal });
-      if (!r.ok) throw new Error(`embed ${r.status}`);
-      return (await r.json()).vectors?.[0] as number[];
-    });
+    const vecQuery = expandMedicalQuery(query).slice(0, 1500);
+    let vec = queryVecCache.get(vecQuery);
+    if (vec) {
+      queryVecCache.delete(vecQuery);
+      queryVecCache.set(vecQuery, vec);
+    } else {
+      vec = await withTimeout(async (signal) => {
+        const r = await fetch(EMBED_URL, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ texts: [vecQuery] }), signal });
+        if (!r.ok) throw new Error(`embed ${r.status}`);
+        return (await r.json()).vectors?.[0] as number[];
+      });
+      if (Array.isArray(vec)) {
+        queryVecCache.set(vecQuery, vec);
+        if (queryVecCache.size > 500) queryVecCache.delete(queryVecCache.keys().next().value as string);
+      }
+    }
     if (!Array.isArray(vec) || (vec.length !== 384 && vec.length !== 1024)) return [];
     // bge-m3 (1024) test kolonu; 384 varsayılan yol aynen korunur.
     const rpcFn = vec.length === 1024 ? 'match_rag_chunks_bge_m3' : 'match_rag_chunks_e5';
@@ -134,4 +147,65 @@ export function fuseRRF<T extends { id: string }>(bm25: T[], vector: Row[], toIt
     .slice(0, limit)
     .map(([id]) => item.get(id)!)
     .filter(Boolean);
+}
+
+/**
+ * Saklanan vektörden anlamsal olarak ilişkili parçalar (embed servisi gerekmez; meds-pg related_rag_chunks).
+ * Çok işlevli: soru → ilgili slayt/özet/deste, benzer çıkmış soru, kopya adayı (similarity ≥ ~0.95).
+ * Aynı belgeden en çok `perDocument` parça döner (tek destenin 10 slaytı listeyi doldurmasın). Hata → boş liste.
+ */
+const relatedCache = new Map<string, { at: number; rows: Row[] }>();
+const RELATED_TTL_MS = 10 * 60_000;
+
+export async function relatedChunks(
+  sourceChunkId: string,
+  opts: { documentTypes?: string[]; committeeId?: string; limit?: number; minSim?: number; perDocument?: number } = {},
+): Promise<Row[]> {
+  if (!sourceChunkId) return [];
+  const limit = Math.min(Math.max(opts.limit || 8, 1), 30);
+  const perDoc = Math.max(opts.perDocument ?? 2, 1);
+  const key = JSON.stringify([sourceChunkId, opts.documentTypes || null, opts.committeeId || null, limit, opts.minSim ?? null, perDoc]);
+  const hit = relatedCache.get(key);
+  if (hit && Date.now() - hit.at < RELATED_TTL_MS) return hit.rows;
+  try {
+    const { data, error } = await pgDb.rpc('related_rag_chunks', {
+      source_id: sourceChunkId,
+      match_count: limit * 4,
+      filter_types: opts.documentTypes?.length ? opts.documentTypes : null,
+      filter_committee: opts.committeeId || null,
+      exclude_same_document: true,
+    });
+    if (error) throw new Error(error.message);
+    const minSim = opts.minSim ?? 0.5;
+    const perDocCount = new Map<string, number>();
+    const rows: Row[] = [];
+    for (const r of (data || []) as Row[]) {
+      if ((Number(r.similarity) || 0) < minSim) continue;
+      const d = `${r.document_type}:${r.document_id}`;
+      const n = perDocCount.get(d) || 0;
+      if (n >= perDoc) continue;
+      perDocCount.set(d, n + 1);
+      rows.push(r);
+      if (rows.length >= limit) break;
+    }
+    relatedCache.set(key, { at: Date.now(), rows });
+    if (relatedCache.size > 2000) relatedCache.delete(relatedCache.keys().next().value as string);
+    return rows;
+  } catch (err: any) {
+    console.warn('[vectorSearch] related_rag_chunks:', err?.message || err);
+    return [];
+  }
+}
+
+/** Belge kimliğinden (ör. çıkmış soru id'si) o belgenin ilk parçasının kimliği. */
+export async function chunkIdForDocument(documentType: string, documentId: string): Promise<string | null> {
+  try {
+    const r = await pgDb.query(
+      'select id from rag_chunks where document_type = $1 and document_id = $2 order by page_number nulls first, id limit 1',
+      [documentType, documentId],
+    );
+    return r.rows[0]?.id || null;
+  } catch {
+    return null;
+  }
 }
