@@ -1,0 +1,152 @@
+[
+  {
+    "kume_id": 1,
+    "soru_id": 1,
+    "klinik_konu": "Neonatal Kolestaz Acil Nedenleri",
+    "ifade_sayisi": 37,
+    "orijinal_soru": "Aşağıdakilerden hangisi acil tanı gerektiren neonatal kolestaz nedenlerinden biri değildir? A) Tirozinemi B) Biliyer atrezi C) Galaktozemi D) Hipotroidi E) Down sendromu",
+    "orijinal_cevap": "Down sendromu",
+    "substages": {
+      "4.1_spacy": "Aşağıdakilerden hangisi acil tanı gerektiren neonatal kolestaz nedenlerinden biri değildir?",
+      "4.2_stanza": "Aşağıdakilerden hangisi yenidoğanda acil tanı ve tedavi gerektiren kolestaz nedenlerinden değildir?",
+      "4.3_nltk": "Aşağıdakilerden hangisi acil cerrahi veya medikal tanı gerektiren neonatal kolestaz nedeni değildir?",
+      "4.4_distilbart": "Aşağıdakilerden hangisi acil cerrahi veya medikal tanı gerektiren neonatal kolestaz nedenlerinden biri değildir?"
+    },
+    "elapsed_ms": 1850.7390022277832
+  },
+  {
+    "kume_id": 2,
+    "soru_id": 10,
+    "klinik_konu": "MSS Penetrasyonu Yüksek III. Kuşak Sefalosporin",
+    "ifade_sayisi": 45,
+    "orijinal_soru": "MSS penetrasyonu çok iyi olan III. Kuşak sefalosporin aşağıdakilerden hangisidir? A) Sefaleksin B) Sefodroksil C) Seftriakson D) Sefazolin E) Sefradin",
+    "orijinal_cevap": "Seftriakson",
+    "substages": {
+      "4.1_spacy": "Santral sinir sistemine (MSS) penetrasyonu çok iyi olan III. kuşak sefalosporin aşağıdakilerden hangisidir?",
+      "4.2_stanza": "Aşağıdakilerden hangisi MSS penetrasyonu yüksek olan 3. kuşak bir sefalosporindir?",
+      "4.3_nltk": "Santral sinir sistemi penetrasyonu en yüksek olan 3. kuşak sefalosporin grubu antibiyotik hangisidir?",
+      "4.4_distilbart": "Santral sinir sistemi penetrasyonu çok iyi olan III. kuşak sefalosporin aşağıdakilerden hangisidir?"
+    },
+    "elapsed_ms": 2043.6697006225586
+  },
+  {
+    "kume_id": 3,
+    "soru_id": 7,
+    "klinik_konu": "Primer Biliyer Kolanjit Tanısal Kriterleri",
+    "ifade_sayisi": 25,
+    "orijinal_soru": "Asemptomatik olgularda primer biliyer kolanjit tanısına aşağıdakilerden hangisi yardımcı olmaz? A) Alkalen fosfataz yüksekliği B) ALT/AST karaciğer enzimlerinin oranı 2 kattır C) Hiperkolesterolemi D) Serum IgM yüksekliği E) AMA (+)'liği",
+    "orijinal_cevap": "ALT/AST karaciğer enzimlerinin oranı 2 kattır",
+    "substages": {
+      "4.1_spacy": "Asemptomatik olgularda primer biliyer kolanjit tanısına aşağıdakilerden hangisi yardımcı olmaz?",
+      "4.2_stanza": "Asemptomatik seyreden primer biliyer kolanjit (PBK) tanısında hangisi tanı koydurucu veya yardımcı bir kriter değildir?",
+      "4.3_nltk": "Asemptomatik primer biliyer kolanjit hastalarının tanı sürecinde yol gösterici olmayan bulgu aşağıdakilerden hangisidir?",
+      "4.4_distilbart": "Asemptomatik seyreden primer biliyer kolanjit (PBK) tanısında hangisi tançu veya yardımcı bir kriter değildir?"
+    },
+    "elapsed_ms": 1755.9154033660889
+  },
+  {
+    "kume_id": 4,
+    "soru_id": 3,
+    "klinik_konu": "FMF Livneh Tanı Kriterleri Majör Bulgular",
+    "ifade_sayisi": 42,
+    "orijinal_soru": "Ailevi Akdeniz Ateşi (FMF)' te LİVNEH tanı kriterlerine göre majör bulgu olmayan aşağıdakilerden hangisidir? A) Karın ağrısı B) Perikardit C) Peritonit D) Göğüs ağrısı E) Ateş",
+    "orijinal_cevap": "Perikardit",
+    "substages": {
+      "4.1_spacy": "Aşağıdakilerden hangisi Ailevi Akdeniz Ateşi (FMF) Livneh tanı kriterlerine göre majör bulgulardan biri değildir?",
+      "4.2_stanza": "Ailevi Akdeniz Ateşi (FMF)'te Livneh tanı kriterlerine göre majör kriter olmayan aşağıdakilerden hangisidir?",
+      "4.3_nltk": "Aşağıdakilerden hangisi Ailevi Akdeniz Ateşi Livneh kriterlerinde yer alan majör bulgulardan biri değildir?",
+      "4.4_distilbart": "Aşağıdakilerden hangisi Ailevi Akdeniz Ateşi (FMF) Livneh tanı kriterlerine göre majör bulgulardan biri değildir?"
+    },
+    "elapsed_ms": 1686.2289905548096
+  },
+  {
+    "kume_id": 5,
+    "soru_id": 9,
+    "klinik_konu": "Mikrotübül İnhibitörü Antifungal İlaç",
+    "ifade_sayisi": 45,
+    "orijinal_soru": "Bu ilaç mantar hücrelerinde mikrotübüllere bağlanarak mitoz bölünmeyi inhibe eder. Keratinden zengin dokularda biriktiği için saçlı deri, kıl, tırnak, el ve ayaklarda yerleşen dermatofit mantarlar enfeksiyonlarının tedavisinde kullanılır. Yukarıdaki tanımlamada özellikleri verilen bu ilaç aşağıdakilerden hangisidir? A) Amfoterisin B B) Griseofulvin C) Permetrin D) Kaspofungin E) Flukonazol",
+    "orijinal_cevap": "Griseofulvin",
+    "substages": {
+      "4.1_spacy": "Mantar hücrelerinde mikrotübüllere bağlanarak mitoz bölünmeyi inhibe eden ve dermatofit tedavisinde kullanılan ilaç hangisidir?",
+      "4.2_stanza": "Keratinden zengin dokularda birikerek dermatofit mantar enfeksiyonlarında mitozu inhibe eden ilaç aşağıdakilerden hangisidir?",
+      "4.3_nltk": "Mantar hücrelerinde mikrotübül fonksiyonunu bozarak mitozu engelleyen ve keratinize dokularda biriken antifungal ilaç hangisidir?",
+      "4.4_distilbart": "Mantar hücrelerinde mikrotübüllere bağlanarak mitoz bölünmeyi inhibe eden ve dermatofit tedavisindede kullanılan ilaç hangisidir?"
+    },
+    "elapsed_ms": 1768.4686183929443
+  },
+  {
+    "kume_id": 6,
+    "soru_id": 8,
+    "klinik_konu": "N-Asetil Sistein (NAC) Endikasyonları",
+    "ifade_sayisi": 37,
+    "orijinal_soru": "Aşağıdaki ilaçlardan hangisiyle olan zehirlenmelerde tedavi amacıyla N-asetil sistein kullanılabilir? I-Siyanür II-Talyum III-Morfin IV-Asetaminofen",
+    "orijinal_cevap": "Yalnız IV (Asetaminofen)",
+    "substages": {
+      "4.1_spacy": "Aşağıdaki ilaçlardan hangisiyle olan zehirlenmelerde tedavi amacıyla N-asetil sistein kullanılır?",
+      "4.2_stanza": "Tedavi amacıyla N-asetil sistein (NAC) kullanımı endike olan akut ilaç zehirlenmesi aşağıdakilerden hangisidir?",
+      "4.3_nltk": "Aşağıdaki toksik maddelerden hangisinin zehirlenmesinde antidot olarak N-asetil sistein tercih edilir?",
+      "4.4_distilbart": "Tedavi amacıyla N-asetil sistein (NAC) kullanımı endike olan akut ilaç zehirlenmesi aşağıdakilerden hangisidir?"
+    },
+    "elapsed_ms": 1710.6149196624756
+  },
+  {
+    "kume_id": 7,
+    "soru_id": 4,
+    "klinik_konu": "Akut Pankreatit Etiyolojisi",
+    "ifade_sayisi": 51,
+    "orijinal_soru": "Aşağıdakilerden hangisi akut pankreatitin en sık nedenidir? A) Kistik fibrozis B) Gebelik C) Pankreatik tümörler D) Safra taşı E) Hiperkalsemi",
+    "orijinal_cevap": "Safra taşı",
+    "substages": {
+      "4.1_spacy": "Aşağıdakilerden hangisi akut pankreatitin en sık görülen etiyolojik nedenidir?",
+      "4.2_stanza": "Aşağıdakilerden hangisi akut pankreatit tablosuna en sık yol açan nedendir?",
+      "4.3_nltk": "Aşağıdakilerden hangisi akut pankreatit olgularında en sık görülen etiyolojik nedenidir?",
+      "4.4_distilbart": "Aşağıdakilerden hangisi akut pankreatit olgularında en sık görülen etiyolojik nedenidir?"
+    },
+    "elapsed_ms": 1513.1301879882812
+  },
+  {
+    "kume_id": 8,
+    "soru_id": 5,
+    "klinik_konu": "Akalazya Klinik Semptomları",
+    "ifade_sayisi": 43,
+    "orijinal_soru": "Aşağıdakilerden hangi Akalazya hastasındaki tipik semptom değildir? A) Ses kısıklığı B) Disfaji C) Regurjitasyon D) Retrosternal ağrı E) Kilo kaybı",
+    "orijinal_cevap": "Ses kısıklığı",
+    "substages": {
+      "4.1_spacy": "Aşağıdakilerden hangisi akalazya hastalarında görülen tipik semptomlardan biri değildir?",
+      "4.2_stanza": "Aşağıdakilerden hangisi akalazya hastalığında beklenen klinik belirti ve semptomlardan değildir?",
+      "4.3_nltk": "Akalazya hastalarında tipik semptomlar arasında yer almayan bulgu aşağıdakilerden hangisidir?",
+      "4.4_distilbart": "Aşağıdakilerden hangisi akalazya hastalarında beklenen klinik belirti ve semptomlardan değildir?"
+    },
+    "elapsed_ms": 1809.8082542419434
+  },
+  {
+    "kume_id": 9,
+    "soru_id": 6,
+    "klinik_konu": "HBsAg Teması ve Sağlık Personeli Yönetimi",
+    "ifade_sayisi": 46,
+    "orijinal_soru": "Bir hemşirenin eline HbsAg(+) olduğu bilinen bir hastadan kan alınırken iğne batıyor. Hemşirenin 1 yıl önce 3 doz Hepatit B aşısı yaptırdığı öğreniliyor. Yapılan tetkiklerinde AntiHbs 20 mMol/ml ise bu hemşire için en uygun yaklaşım hangisidir? A) Hepatit B hiperimmünglobulin yapılmalıdır B) Tek doz aşı yapılmalıdır C) Tek doz aşı ve immünglobülin yapılmalıdır D) Tekrar 3 doz aşı yapılmalıdır E) İlave önleme gerek yoktur",
+    "orijinal_cevap": "İlave önleme gerek yoktur",
+    "substages": {
+      "4.1_spacy": "HBsAg pozitif hastadan kan alırken eline iğne batan ve Anti-HBs titresi koruyucu olan hemşire için en uygun yaklaşım hangisidir?",
+      "4.2_stanza": "Bir sağlık çalışanının eline HBsAg pozitif kanlı iğne batması durumunda Anti-HBs 20 mIU/mL ise en uygun yaklaşım hangisidir?",
+      "4.3_nltk": "HBsAg pozitif hastayla temas eden ve aşılı olup Anti-HBs düzeyi 20 olan personele yaklaşım aşağıdakilerden hangisidir?",
+      "4.4_distilbart": "HBsAg pozitif hastadan kan alırken eline iğne batan ve Anti-HBs titresi koruyucu olan hemşire için en uygun yaklaşım hangisidir?"
+    },
+    "elapsed_ms": 1877.448558807373
+  },
+  {
+    "kume_id": 10,
+    "soru_id": 2,
+    "klinik_konu": "Akut Apandisit Fizik Muayene Bulguları",
+    "ifade_sayisi": 43,
+    "orijinal_soru": "Aşağıdakilerden hangisi akut apandisite ait özel bulgu ya da belirtilerden değildir? A) Rowsing Belirtisi B) Duphy Belirtisi C) Obturator Bulgusu D) Topuk Belirtisi E) Murphy Belirtisi",
+    "orijinal_cevap": "Murphy Belirtisi",
+    "substages": {
+      "4.1_spacy": "Aşağıdakilerden hangisi akut apandisite ait özel bulgu ya da belirtilerden biri değildir?",
+      "4.2_stanza": "Aşağıdakilerden hangisi akut apandisit tanısında kullanılan özel fizik muayene bulgularından değildir?",
+      "4.3_nltk": "Aşağıdakilerden hangisi akut apandisite ait özel klinik muayene bulgusu veya belirtisi değildir?",
+      "4.4_distilbart": "Aşağıdakilerden hangisi akut apandisite ait özel bulgu ya da belirtilden biri değildir?"
+    },
+    "elapsed_ms": 1609.0779304504395
+  }
+]
