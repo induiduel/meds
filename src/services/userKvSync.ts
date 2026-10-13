@@ -17,7 +17,7 @@ export type KvMap = Record<string, KvRecord>;
 /** Profilde tutulan anahtarlar (desen). Eşitleme servisinin özel birleştirdiği anahtarlar ayrı listededir. */
 const SYNC_PATTERNS: RegExp[] = [
   // Öğren
-  /^medsoru_learn_(progress|done|recent|layout|mode|toc|zoom|social)(_v1)?$/,
+  /^medsoru_learn_(progress|done|recent|layout|mode|toc|zoom|social|review|sessions)(_v1)?$/,
   /^medsoru_learn_feedback_local_v1$/,
   /^medsoru_slide_drawings_v2(:.*)?$/,
   /^medsoru_annotations:.+$/,
@@ -75,7 +75,7 @@ const BUNDLE_KEYS = new Set([
 /** Sık yazılan sayaçlar: profile girer ama anlık gönderim tetiklemez (dönemsel/arka plana geçişte gider). */
 const QUIET_KEYS = new Set(['medsoru_study_seconds_v1', 'medsoru_activity_v1']);
 /** Ders okurken her adımda/harekette yazılan profil anahtarları: damgalanır ama dönemsel gönderime kalır. */
-const QUIET_PROFILE = /^medsoru_learn_(progress|done|zoom)(_v1)?$/;
+const QUIET_PROFILE = /^medsoru_learn_(progress|done|zoom|review)(_v1)?$/;
 
 const META_KEY = 'medsoru_kv_meta_v1'; // anahtar → son yerel değişiklik zamanı
 const DIRTY_KEY = 'medsoru_kv_dirty_v1'; // henüz sunucuya gitmemiş anahtarlar

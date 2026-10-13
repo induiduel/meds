@@ -21,6 +21,16 @@ export type PracticeItem =
   | { kind: 'cards'; cards: LessonCard[] }
   | { kind: 'question'; q: LessonQuestion };
 
+/** Bir etkileşimin sonucu (doğruluğu ölçülebilen türlerde): hata defteri ve odak seansı bunu kullanır */
+export interface IxResult {
+  ok: boolean;
+  score?: number;
+  total?: number;
+  /** Kart açılışından sonuca geçen süre (PracticeCard ekler) */
+  ms?: number;
+}
+export type IxDone = (r?: IxResult) => void;
+
 export interface LessonStep {
   index: number;
   slide: SlideItem;
@@ -100,6 +110,13 @@ const repairInteractive = (e: any, s: any) => {
   const cands = slideCandidates(s);
   return { ...e, steps: e.steps.map((x: any) => (typeof x === 'string' ? repairTruncated(x, cands) : x)) };
 };
+
+/** Adımın Pekiştir listesi (sıra hata defterindeki `ix` kimliğidir; değiştirme) */
+export const practiceOf = (s: LessonStep): PracticeItem[] => [
+  ...s.interactives.map((data) => ({ kind: 'ix' as const, data })),
+  ...(s.cards.length ? [{ kind: 'cards' as const, cards: s.cards }] : []),
+  ...s.questions.map((q) => ({ kind: 'question' as const, q })),
+];
 
 export function buildSteps(deck: InteractiveDeck): LessonStep[] {
   const rawSlides = (Array.isArray(deck.slides) && deck.slides.length ? deck.slides : (Array.isArray((deck as any).steps) ? (deck as any).steps : [])) as any[];

@@ -21,6 +21,8 @@ import {
   Bot,
 } from 'lucide-react';
 import { DECK_CATALOG, loadDeck } from '../../data/deckStore';
+import { OPEN_REVIEW_FLAG } from '../../services/learnReview';
+const LearnReview = React.lazy(() => import('./LearnReview').then((m) => ({ default: m.LearnReview })));
 import {
   RenderWithGlossaryTerms,
 } from './MedicalGlossaryPopover';
@@ -699,6 +701,19 @@ export const InteractiveDeckView: React.FC<InteractiveDeckViewProps> = ({ initia
     });
     return m;
   }, [versionGroups]);
+  /** Hata defteri tekrar ekranı (deckId: yalnız o ders) ve "Kaynağa git" ile açılacak adım */
+  const [review, setReview] = useState<{ deckId?: string } | null>(null);
+  // Bugün ekranındaki "Tekrara başla": bayrak mount sonrası okunur (başlatıcıda okumak StrictMode çift çağrısında kayboluyordu)
+  useEffect(() => {
+    try {
+      if (!sessionStorage.getItem(OPEN_REVIEW_FLAG)) return;
+      sessionStorage.removeItem(OPEN_REVIEW_FLAG);
+      setReview({});
+    } catch {
+      /* gizli pencere */
+    }
+  }, []);
+  const [openAt, setOpenAt] = useState<{ id: string; slide: number; n: number } | null>(null);
   const [versionPick, setVersionPick] = useState<{ list: DeckCatalogEntry[]; pdf?: boolean; selected: string } | null>(null);
   const versionsOf = (id: string) => {
     const g = allDecks.find((d) => d.id === id)?.versionGroup;
@@ -762,6 +777,7 @@ export const InteractiveDeckView: React.FC<InteractiveDeckViewProps> = ({ initia
       <LearnLibrary
         decks={hubDecks}
         versions={versionLabels}
+        onOpenReview={(id) => setReview({ deckId: id })}
         progress={progress}
         isAdmin={isAdmin}
         archive={adminArchiveFilter}
@@ -813,12 +829,34 @@ export const InteractiveDeckView: React.FC<InteractiveDeckViewProps> = ({ initia
         />
       )}
 
+      {review && (
+        <React.Suspense fallback={null}>
+          <LearnReview
+            deckId={review.deckId}
+            onClose={() => setReview(null)}
+            onOpenSource={(id, slide) => {
+              setReview(null);
+              setOpenAt({ id, slide, n: Date.now() });
+              touchRecent(id);
+              setPlayerViewMode('interactive');
+              setDeckId(id);
+              onDeckChange?.(id);
+            }}
+          />
+        </React.Suspense>
+      )}
+
       {activeDeck && activeDeck.id === deckId && gateOk && (
         <LessonPlayer
-          key={`${activeDeck.id}:${linkNonce}`}
+          key={`${activeDeck.id}:${linkNonce}:${openAt?.n ?? 0}`}
           deck={activeDeck}
           initialViewMode={playerViewMode}
-          startAt={initialSlideNumber != null && initialSlideNumber > 0 ? initialSlideNumber - 1 : (progress[activeDeck.id]?.last ?? 0)}
+          startAt={openAt?.id === activeDeck.id ? openAt.slide - 1 : initialSlideNumber != null && initialSlideNumber > 0 ? initialSlideNumber - 1 : (progress[activeDeck.id]?.last ?? 0)}
+          onOpenReview={(id) => {
+            setDeckId(null);
+            onDeckChange?.(null);
+            setReview({ deckId: id });
+          }}
           onProgress={(index) => {
             setProgress((prev) => {
               const cur = prev[activeDeck.id] || { last: 0, seen: [] };

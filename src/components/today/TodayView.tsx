@@ -5,6 +5,8 @@ import { NAV_ITEMS, openSearch } from '../shell/navModel';
 import { dayKey, getActivity, getStudySeconds } from '../../services/activityLog';
 import { getProgress } from '../../services/studyStore';
 import { KAT, Zengin, okuOgrenilen, type Spot, type Veri } from '../spots/spotsShared';
+import { useReviewCounts } from '../../hooks/useReviewCounts';
+import { OPEN_REVIEW_FLAG } from '../../services/learnReview';
 import '../../styles/today.css';
 
 /**
@@ -247,6 +249,7 @@ export const TodayView: React.FC<TodayViewProps> = ({ committeeLabel, onGo }) =>
     return rows;
   }, [activity, seconds, today]);
 
+  const review = useReviewCounts();
   const dueCards = useMemo(() => {
     const store = readJson<Record<string, CardState>>('medsoru_flashcards_v1', {});
     const now = Date.now();
@@ -358,6 +361,22 @@ export const TodayView: React.FC<TodayViewProps> = ({ committeeLabel, onGo }) =>
             <p className="td-spot-x"><Zengin metin={spotOfDay.s.spot} /></p>
           </section>
         ) : null}
+        {review.total.due > 0 && (
+          <section className="td-due bt-side" aria-labelledby="td-rev-h">
+            <h2 id="td-rev-h" className="td-due-t">Hata defteri</h2>
+            <span className="td-due-x">Derste yanlış yaptığın {review.total.due.toLocaleString('tr-TR')} etkileşim bugün tekrar bekliyor (~{Math.max(1, Math.round(review.total.due * 0.5))} dk).</span>
+            <a
+              className="ui-btn is-primary td-due-go"
+              href={pathFor('learn')}
+              onClick={linkClick(() => {
+                try { sessionStorage.setItem(OPEN_REVIEW_FLAG, '1'); } catch { /* yok say */ }
+                onGo('learn');
+              })}
+            >
+              Tekrara başla <ArrowRight aria-hidden />
+            </a>
+          </section>
+        )}
         {dueCards > 0 && (
           <section className="td-due bt-side" aria-labelledby="td-due-h">
             <h2 id="td-due-h" className="td-due-t">Tekrar zamanı</h2>

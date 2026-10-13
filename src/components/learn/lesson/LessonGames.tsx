@@ -12,9 +12,10 @@
  */
 import React, { useMemo, useState } from 'react';
 import { ArrowDown, ArrowUp, Check, Equal, RotateCcw, X } from 'lucide-react';
+import type { IxDone } from './lessonModel';
 import '../../../styles/learn-games.css';
 
-type Done = (() => void) | undefined;
+type Done = IxDone | undefined;
 
 const shuffle = <T,>(a: T[], seed: number): T[] => {
   // Tohumlu karıştırma: aynı oyun her açılışta aynı karışık sırayla gelir (yeniden denemede tohum değişir)
@@ -94,7 +95,8 @@ export const SequenceOrder: React.FC<{ e: any; onDone?: Done }> = ({ e, onDone }
             disabled={!full}
             onClick={() => {
               setChecked(true);
-              onDone?.();
+              const right = picked.filter((v, i) => v === i).length;
+              onDone?.({ ok: right === steps.length, score: right, total: steps.length });
             }}
           >
             <Check aria-hidden /> Kontrol et
@@ -177,7 +179,10 @@ export const EstimateSlider: React.FC<{ e: any; onDone?: Done }> = ({ e, onDone 
             onClick={() => {
               setShown(true);
               if (ok) setScore((s) => s + 1);
-              if (r + 1 >= rounds.length) onDone?.();
+              if (r + 1 >= rounds.length) {
+                const right = score + (ok ? 1 : 0);
+                onDone?.({ ok: right === rounds.length, score: right, total: rounds.length });
+              }
             }}
           >
             <Check aria-hidden /> Tahmini kilitle
@@ -260,7 +265,7 @@ export const Perturbation: React.FC<{ e: any; onDone?: Done }> = ({ e, onDone })
             disabled={!all}
             onClick={() => {
               setChecked(true);
-              onDone?.();
+              onDone?.({ ok: correct === params.length, score: correct, total: params.length });
             }}
           >
             <Check aria-hidden /> Kontrol et
@@ -315,7 +320,10 @@ export const FixTheText: React.FC<{ e: any; onDone?: Done }> = ({ e, onDone }) =
     const next = { ...fixed, [i]: { pick, ok } };
     setFixed(next);
     setOpen(null);
-    if (Object.keys(next).length === errs.length) onDone?.();
+    if (Object.keys(next).length === errs.length) {
+      const right = Object.values(next).filter((x) => x.ok).length;
+      onDone?.({ ok: right === errs.length && misses === 0, score: right, total: errs.length });
+    }
   };
   const ok = errs.filter((_, i) => fixed[i]?.ok).length;
   return (

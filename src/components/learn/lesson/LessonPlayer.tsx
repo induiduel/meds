@@ -36,6 +36,7 @@ import {
   RotateCcw,
   Type,
   Users,
+  Timer,
 } from 'lucide-react';
 import type { InteractiveDeck } from '../InteractiveDeckView';
 import { AskAi, GlobalTopicSearchModal, SpotList } from '../InteractiveDeckView';
@@ -54,7 +55,7 @@ import { deckName } from '../../../data/deckStore';
 import {
   buildSections, buildSteps, DeckKazanim, LessonSection, LessonStep, loadKazanimIndex, matchKazanim, PracticeItem, readDone, writeDone,
 } from './lessonModel';
-import { stripEmoji, withGlossaryTerms } from './lessonModel';
+import { practiceOf, stripEmoji, withGlossaryTerms } from './lessonModel';
 import { setLessonZoom, stepZoom, useLessonZoom, useLessonZoomGestures, ZOOM_MAX, ZOOM_MIN } from './lessonZoom';
 import { FeedbackItem, FeedbackTarget, listFeedback } from './lessonFeedback';
 import { FeedbackDialog, FeedbackFlag, FeedbackProvider, groupFeedback } from './LessonFeedbackUI';
@@ -65,6 +66,9 @@ import { registerSelectionActions } from '../../../utils/selectionShare';
 import { selectionContext, useLearnSocial } from './learnSocial';
 import { ComposerReq, ReportReq, ReportSheet, setSocialVisible, SocialProvider, StepSocial, ThreadSheet, useSocialVisible } from './LearnSocialUI';
 import '../../../styles/learn-v10.css';
+import { FocusSession, IX_EVENT, IxEventDetail } from './FocusSession';
+import { recordResult } from '../../../services/learnReview';
+import type { IxResult } from './lessonModel';
 
 type Layout = 'A' | 'B';
 
@@ -162,11 +166,6 @@ const isTyping = (t: EventTarget | null) => {
   return !!el && (el.isContentEditable || ['INPUT', 'TEXTAREA', 'SELECT'].includes(el.tagName));
 };
 
-const practiceOf = (s: LessonStep): PracticeItem[] => [
-  ...s.interactives.map((data) => ({ kind: 'ix' as const, data })),
-  ...(s.cards.length ? [{ kind: 'cards' as const, cards: s.cards }] : []),
-  ...s.questions.map((q) => ({ kind: 'question' as const, q })),
-];
 
 /* Bölüm/slayt listesi v10'da LessonRail.tsx'te (düz numaralı ray; telefon/tablette Sheet). */
 
@@ -238,7 +237,7 @@ const practiceTarget = (step: LessonStep, p: PracticeItem, i: number) => {
     : fbTarget(step, p.kind === 'cards' ? 'cards' : `ix-${p.data.type}`, i, label, undefined, location);
 };
 
-const PracticeSet: React.FC<{ step: LessonStep; items: PracticeItem[]; jump?: { to: number; at: number } | null; onAllDone: () => void }> = ({ step, items, jump, onAllDone }) => {
+const PracticeSet: React.FC<{ step: LessonStep; items: PracticeItem[]; jump?: { to: number; at: number } | null; onAllDone: () => void; onResult?: (i: number, item: PracticeItem, r: IxResult) => void }> = ({ step, items, jump, onAllDone, onResult }) => {
   const [cur, setCur] = useState(0);
   const [dir, setDir] = useState<1 | -1>(1);
   const [doneSet, setDoneSet] = useState<Set<number>>(new Set());
@@ -288,14 +287,15 @@ const PracticeSet: React.FC<{ step: LessonStep; items: PracticeItem[]; jump?: { 
         item={item}
         target={practiceTarget(step, item, at)}
         done={doneSet.has(at)}
-        onDone={() =>
+        onDone={(r) => {
+          if (r) onResult?.(at, item, r);
           setDoneSet((d) => {
             if (d.has(at)) return d;
             const nd = new Set(d).add(at);
             if (nd.size >= items.length) onAllDone();
             return nd;
-          })
-        }
+          });
+        }}
       />
       {doneSet.has(at) && nextIdx >= 0 && (
         <button type="button" className="ls-pnext" onClick={() => go(nextIdx)}>
@@ -323,9 +323,11 @@ export interface LessonPlayerProps {
   /** Dersin sürümleri (V1, V2…); varsa üst çubukta sürüm anahtarı çıkar, açık olan vurgulanır */
   versions?: { id: string; label: string; note?: string }[];
   onSwitchVersion?: (id: string) => void;
+  /** Hata defterini (bu deste) tekrar ekranında aç */
+  onOpenReview?: (deckId: string) => void;
 }
 
-export const LessonPlayer: React.FC<LessonPlayerProps> = ({ deck, startAt, initialViewMode = 'interactive', onProgress, onClose, onExportPdf, focus, onClearFocus, versions, onSwitchVersion }) => {
+export const LessonPlayer: React.FC<LessonPlayerProps> = ({ deck, startAt, initialViewMode = 'interactive', onProgress, onClose, onExportPdf, focus, onClearFocus, versions, onSwitchVersion, onOpenReview }) => {
   const steps = useMemo(() => buildSteps(deck), [deck]);
   const sections = useMemo(() => buildSections(steps), [steps]);
   const n = steps.length;
@@ -365,6 +367,17 @@ export const LessonPlayer: React.FC<LessonPlayerProps> = ({ deck, startAt, initi
   const [done, setDone] = useState<Set<number>>(() => readDone(deck.id));
   const [kazIndex, setKazIndex] = useState<Record<string, DeckKazanim[]>>({});
   const [doneIx, setDoneIx] = useState<Set<string>>(new Set());
+  const [focusSetup, setFocusSetup] = useState(false);
+  const [focusOn, setFocusOn] = useState(false);
+  /** Ölçülebilir etkileşim sonucu → hata defteri + odak seansı nabzı */
+  const recordIx = useCallback(
+    (s: LessonStep, i: number, item: PracticeItem, r: IxResult) => {
+      recordResult({ deckId: deck.id, deckTitle: deckName(deck), slide: s.number, stepTitle: s.title, ix: i, item }, r);
+      const detail: IxEventDetail = { deckId: deck.id, slide: s.number, title: s.title, ok: r.ok, ms: r.ms };
+      window.dispatchEvent(new CustomEvent(IX_EVENT, { detail }));
+    },
+    [deck]
+  );
   const [feedback, setFeedback] = useState<FeedbackItem[]>([]);
   const [fbOpen, setFbOpen] = useState<FeedbackTarget | null>(null);
   useEffect(() => {
@@ -647,7 +660,7 @@ export const LessonPlayer: React.FC<LessonPlayerProps> = ({ deck, startAt, initi
       if (isTyping(e.target)) return;
       // Ders dışındaki bir pencere (PDF oluştur, sözlük vb.) açıkken kısayollar o pencereye aittir
       const foreign = [...document.querySelectorAll<HTMLElement>('[role="dialog"]')].some((d) => d !== rootRef.current && !rootRef.current?.contains(d) && d.getClientRects().length > 0);
-      if (foreign || fbOpen) return;
+      if (foreign || fbOpen || rootRef.current?.querySelector('.lf-overlay')) return; // odak molası / seans fişi açıkken
       if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k') {
         e.preventDefault();
         setSearchOpen((v) => !v);
@@ -666,6 +679,7 @@ export const LessonPlayer: React.FC<LessonPlayerProps> = ({ deck, startAt, initi
       } else if (e.key === 'Home') goTo(0);
       else if (e.key === 'End') goTo(n - 1);
       else if (e.key.toLowerCase() === 'f') toggleFullscreen();
+      else if (e.key.toLowerCase() === 'o' && !focusOn) setFocusSetup(true);
       else if (e.key === 'Escape') {
         if (searchOpen) setSearchOpen(false);
         else if (toolsOpen) setToolsOpen(false);
@@ -910,6 +924,9 @@ export const LessonPlayer: React.FC<LessonPlayerProps> = ({ deck, startAt, initi
                 <button type="button" role="menuitem" className="ls-tt" onClick={() => pickTool(() => setIsDrawerOpen(true))} title={`${glossaryList.length} terim`}>
                   <BookOpen aria-hidden /><span>Sözlük</span>
                 </button>
+                <button type="button" role="menuitem" className={`ls-tt ${focusOn ? 'is-on' : ''}`} onClick={() => pickTool(() => setFocusSetup(true))} disabled={focusOn} title="Süreli, hedefli çalışma; arayüz sadeleşir (kısayol: O)">
+                  <Timer aria-hidden /><span>Odak seansı</span>
+                </button>
                 <button type="button" role="menuitem" className={`ls-tt ${fsOn ? 'is-on' : ''}`} onClick={() => pickTool(toggleFullscreen)} title="Kısayol: F">
                   {fsOn ? <Minimize2 aria-hidden /> : <Maximize2 aria-hidden />}<span>{fsOn ? 'Küçült' : 'Tam ekran'}</span>
                 </button>
@@ -1091,7 +1108,7 @@ export const LessonPlayer: React.FC<LessonPlayerProps> = ({ deck, startAt, initi
       <StepHead step={s} total={n} />
       <StepBody step={s} deckId={deck.id} />
       <StepSocial step={s} />
-      {withPractice && <PracticeSet step={s} items={s.index === index ? practice : practiceOf(s)} jump={s.index === index ? practiceJump : null} onAllDone={() => markDone(s.number)} />}
+      {withPractice && <PracticeSet step={s} items={s.index === index ? practice : practiceOf(s)} jump={s.index === index ? practiceJump : null} onAllDone={() => markDone(s.number)} onResult={(i, item, r) => recordIx(s, i, item, r)} />}
     </>
   );
 
@@ -1179,7 +1196,7 @@ export const LessonPlayer: React.FC<LessonPlayerProps> = ({ deck, startAt, initi
                 const qAnchor = p.kind === 'question' ? p.q.id : undefined;
                 const i = practice.indexOf(p);
                 const k = ixKey(p, i);
-                return <div key={k} data-q={qAnchor} className="ls-anchor"><PracticeCard item={p} target={practiceTarget(step, p, i)} done={doneIx.has(k)} onDone={() => onIxDone(k, practice.length)} className="ls-enter-up" style={{ animationDelay: `${Math.min(i, 6) * 50}ms` }} /></div>;
+                return <div key={k} data-q={qAnchor} className="ls-anchor"><PracticeCard item={p} target={practiceTarget(step, p, i)} done={doneIx.has(k)} onDone={(r) => { if (r) recordIx(step, i, p, r); onIxDone(k, practice.length); }} className="ls-enter-up" style={{ animationDelay: `${Math.min(i, 6) * 50}ms` }} /></div>;
               })}
             </div>
           </aside>
@@ -1216,7 +1233,7 @@ export const LessonPlayer: React.FC<LessonPlayerProps> = ({ deck, startAt, initi
       role="dialog"
       aria-modal="true"
       aria-label={`${deckName(deck, false)} dersi`}
-      className={`ls-root ${marking ? 'is-marking' : ''} ${recall ? 'ms-recall' : ''} ${immersive ? 'is-immersive' : ''} ${layout === 'B' ? 'is-B' : 'is-A'} ${zoom.scale !== 1 ? 'is-zoomed' : ''} ${zoom.gestures ? 'has-pinch' : ''}`}
+      className={`ls-root ${marking ? 'is-marking' : ''} ${recall ? 'ms-recall' : ''} ${immersive ? 'is-immersive' : ''} ${focusOn ? 'is-focus' : ''} ${layout === 'B' ? 'is-B' : 'is-A'} ${zoom.scale !== 1 ? 'is-zoomed' : ''} ${zoom.gestures ? 'has-pinch' : ''}`}
       style={{ ['--ls-zoom' as string]: zoom.scale }}
       onClickCapture={(e) => {
         if (!recall) return;
@@ -1233,6 +1250,22 @@ export const LessonPlayer: React.FC<LessonPlayerProps> = ({ deck, startAt, initi
         <button type="button" className="ls-exit-immersive" onClick={() => setImmersive(false)} aria-label="Tam ekrandan çık"><Minimize2 aria-hidden /></button>
       )}
       {topBar}
+      <FocusSession
+        deckId={deck.id}
+        deckTitle={deckName(deck)}
+        steps={steps}
+        sections={sections}
+        index={index}
+        done={done}
+        setupOpen={focusSetup}
+        onSetupClose={() => setFocusSetup(false)}
+        onActiveChange={setFocusOn}
+        onJump={(num) => {
+          const i = steps.findIndex((x) => x.number === num);
+          if (i >= 0) goTo(i);
+        }}
+        onReview={onOpenReview ? () => onOpenReview(deck.id) : undefined}
+      />
       {markingBar}
       {zoomBadge > 0 && <div className="ls-zoom-badge" aria-hidden key={zoomBadge}>%{Math.round(zoom.scale * 100)}</div>}
       <div className="ls-stage" ref={stageRef}>

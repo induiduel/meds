@@ -5,7 +5,7 @@ import {
   ShieldAlert, Zap, Scale, Columns, Award, RotateCcw, ListOrdered, Gauge, ArrowUpDown, SpellCheck,
 } from 'lucide-react';
 import { EstimateSlider, FixTheText, Perturbation, SequenceOrder } from './LessonGames';
-import type { LessonCard, LessonQuestion, LessonStep, PracticeItem, DeckKazanim } from './lessonModel';
+import type { LessonCard, LessonQuestion, LessonStep, PracticeItem, DeckKazanim, IxDone } from './lessonModel';
 import { inline, mdToHtml, spotTone, stripEmoji } from './lessonModel';
 import type { FeedbackTarget } from './lessonFeedback';
 import { FeedbackFlag } from './LessonFeedbackUI';
@@ -279,7 +279,7 @@ export const cleanWhy = (t?: string): string => {
 
   return s;
 };
-const OptionList: React.FC<{ question: string; options: OptLike[]; onDone?: () => void; extraWhy?: string; context?: string }> = ({ question, options, onDone, extraWhy, context }) => {
+const OptionList: React.FC<{ question: string; options: OptLike[]; onDone?: IxDone; extraWhy?: string; context?: string }> = ({ question, options, onDone, extraWhy, context }) => {
   const [first, setFirst] = useState<string | null>(null);
   const [opened, setOpened] = useState<Set<string>>(new Set());
   const right = options.find((o) => o.ok);
@@ -288,7 +288,7 @@ const OptionList: React.FC<{ question: string; options: OptLike[]; onDone?: () =
   const pick = (o: OptLike) => {
     if (!first) {
       setFirst(o.key);
-      onDone?.();
+      onDone?.({ ok: o.ok });
       setOpened(new Set(o.why ? [o.key] : []));
       return;
     }
@@ -373,7 +373,7 @@ export const safeHint = (hint: string | undefined, answer: string): string => {
   return words.some((w) => h.includes(w.length > 5 ? w.slice(0, 5) : w)) ? '' : hint;
 };
 
-const Cloze: React.FC<{ e: any; onDone?: () => void }> = ({ e, onDone }) => {
+const Cloze: React.FC<{ e: any; onDone?: IxDone }> = ({ e, onDone }) => {
   const [open, setOpen] = useState(false);
   const s = String(e.sentence || '');
   const term = String(e.maskedTerm || '');
@@ -407,7 +407,7 @@ const Cloze: React.FC<{ e: any; onDone?: () => void }> = ({ e, onDone }) => {
   );
 };
 
-const Chain: React.FC<{ e: any; onDone?: () => void }> = ({ e, onDone }) => {
+const Chain: React.FC<{ e: any; onDone?: IxDone }> = ({ e, onDone }) => {
   const steps: [string, string][] = (e.steps || []).map((x: any) => {
     const t = String(typeof x === 'string' ? x : x?.text || x?.label || '').replace(/^\d+[.)]\s*/, '');
     const k = t.indexOf(':');
@@ -441,7 +441,7 @@ const Chain: React.FC<{ e: any; onDone?: () => void }> = ({ e, onDone }) => {
   );
 };
 
-const Compare: React.FC<{ e: any; onDone?: () => void }> = ({ e, onDone }) => {
+const Compare: React.FC<{ e: any; onDone?: IxDone }> = ({ e, onDone }) => {
   const [side, setSide] = useState<'L' | 'R' | null>(null);
   const L: string[] = e.leftPoints || [];
   const R: string[] = e.rightPoints || [];
@@ -469,7 +469,7 @@ const Compare: React.FC<{ e: any; onDone?: () => void }> = ({ e, onDone }) => {
   );
 };
 
-const Recall: React.FC<{ e: any; onDone?: () => void }> = ({ e, onDone }) => {
+const Recall: React.FC<{ e: any; onDone?: IxDone }> = ({ e, onDone }) => {
   const [open, setOpen] = useState(false);
   const [rate, setRate] = useState<string | null>(null);
   return (
@@ -492,7 +492,8 @@ const Recall: React.FC<{ e: any; onDone?: () => void }> = ({ e, onDone }) => {
                 className={`ls-btn is-sm ${rate === r ? 'is-on' : ''}`}
                 onClick={() => {
                   setRate(r);
-                  onDone?.();
+                  // Öz değerlendirme: yalnız ilk derecelendirme sayılır ("Kısmen" de hata defterine girer)
+                  onDone?.({ ok: r === 'Tam' });
                 }}
               >
                 {r}
@@ -529,7 +530,7 @@ const Pips: React.FC<{ total: number; at: number; results?: boolean[]; label: st
   </span>
 );
 
-export const SpotTheLie: React.FC<{ e: any; onDone?: () => void }> = ({ e, onDone }) => {
+export const SpotTheLie: React.FC<{ e: any; onDone?: IxDone }> = ({ e, onDone }) => {
   const items: any[] = Array.isArray(e.items) ? e.items : [];
   const topic = e.topic || e.question || 'Hangisi yanıltıcı?';
   const lieIdx = items.findIndex((it) => !!(it.isLie || it.isTrap));
@@ -540,7 +541,7 @@ export const SpotTheLie: React.FC<{ e: any; onDone?: () => void }> = ({ e, onDon
     if (picked === null) {
       setPicked(i);
       setOpen(new Set([i, lieIdx].filter((x) => x >= 0)));
-      onDone?.();
+      onDone?.({ ok: i === lieIdx });
       return;
     }
     setOpen((s) => {
@@ -597,7 +598,7 @@ export const SpotTheLie: React.FC<{ e: any; onDone?: () => void }> = ({ e, onDon
 };
 
 type Side = 'left' | 'right';
-export const SwipeMatching: React.FC<{ e: any; onDone?: () => void }> = ({ e, onDone }) => {
+export const SwipeMatching: React.FC<{ e: any; onDone?: IxDone }> = ({ e, onDone }) => {
   const cards: any[] = Array.isArray(e.cards) ? e.cards : [];
   const labelOf = (c: any, d: string) => (typeof c === 'object' && c ? c.label || c.name || d : String(c || d));
   const L = labelOf(e.leftCategory, 'Sol');
@@ -631,13 +632,17 @@ export const SwipeMatching: React.FC<{ e: any; onDone?: () => void }> = ({ e, on
     timers.current.push(
       window.setTimeout(() => setFly(dir), 520),
       window.setTimeout(() => {
-        setLog((l) => [...l, { card, chosen: dir, ok }]);
+        setLog((l) => {
+          const nl = [...l, { card, chosen: dir, ok }];
+          if (nl.length >= cards.length) {
+            const right = nl.filter((x) => x.ok).length;
+            queueMicrotask(() => onDone?.({ ok: right === cards.length, score: right, total: cards.length }));
+          }
+          return nl;
+        });
         setVerdict(null);
         setFly(null);
-        setIdx((i) => {
-          if (i + 1 >= cards.length) onDone?.();
-          return i + 1;
-        });
+        setIdx((i) => i + 1);
       }, 800),
     );
   };
@@ -755,7 +760,7 @@ const CONF = [
   { m: 3, t: 'Çok eminim' },
 ] as const;
 
-export const FeatureBidding: React.FC<{ e: any; onDone?: () => void }> = ({ e, onDone }) => {
+export const FeatureBidding: React.FC<{ e: any; onDone?: IxDone }> = ({ e, onDone }) => {
   const A = e.optionA || 'A';
   const B = e.optionB || 'B';
   const rounds: any[] = Array.isArray(e.rounds) && e.rounds.length ? e.rounds : [{ feature: e.feature || '', correct: e.correct || e.correctOption || 'A', explanation: e.explanation }];
@@ -776,7 +781,10 @@ export const FeatureBidding: React.FC<{ e: any; onDone?: () => void }> = ({ e, o
     setPick(c);
     setScore((s) => s + delta);
     setLog((l) => [...l, { round, picked: c, mult, delta, ok }]);
-    if (r + 1 >= rounds.length) onDone?.();
+    if (r + 1 >= rounds.length) {
+      const right = log.filter((x) => x.ok).length + (ok ? 1 : 0);
+      onDone?.({ ok: right === rounds.length, score: right, total: rounds.length });
+    }
   };
   const next = () => {
     setPick(null);
@@ -890,7 +898,7 @@ const normVenn = (t: string): VennKey => {
   return s === 'b' ? 'b' : 'a';
 };
 
-export const VennGrid: React.FC<{ e: any; onDone?: () => void }> = ({ e, onDone }) => {
+export const VennGrid: React.FC<{ e: any; onDone?: IxDone }> = ({ e, onDone }) => {
   const A = e.labelA || 'A';
   const B = e.labelB || 'B';
   const items: any[] = Array.isArray(e.items) ? e.items : [];
@@ -907,7 +915,10 @@ export const VennGrid: React.FC<{ e: any; onDone?: () => void }> = ({ e, onDone 
     setAns((prev) => {
       if (prev[i]) return prev;
       const next = { ...prev, [i]: k };
-      if (Object.keys(next).length === items.length) queueMicrotask(() => onDone?.());
+      if (Object.keys(next).length === items.length) {
+        const right = items.reduce((acc, it, j) => (next[j] === normVenn(it.correct) ? acc + 1 : acc), 0);
+        queueMicrotask(() => onDone?.({ ok: right === items.length, score: right, total: items.length }));
+      }
       return next;
     });
 
@@ -978,7 +989,7 @@ export const VennGrid: React.FC<{ e: any; onDone?: () => void }> = ({ e, onDone 
   );
 };
 
-export const FlipCards: React.FC<{ cards: LessonCard[]; onDone?: () => void }> = ({ cards, onDone }) => {
+export const FlipCards: React.FC<{ cards: LessonCard[]; onDone?: IxDone }> = ({ cards, onDone }) => {
   const [i, setI] = useState(0);
   const [turned, setTurned] = useState(false);
   const c = cards[i];
@@ -1021,7 +1032,7 @@ export const FlipCards: React.FC<{ cards: LessonCard[]; onDone?: () => void }> =
   );
 };
 
-export const QuestionCard: React.FC<{ q: LessonQuestion; onDone?: () => void }> = ({ q, onDone }) => {
+export const QuestionCard: React.FC<{ q: LessonQuestion; onDone?: IxDone }> = ({ q, onDone }) => {
   const { perOption, rest } = useMemo(() => splitExplanation(q.explanation, q.options.map((o) => o.key)), [q]);
   return (
     <OptionList
@@ -1033,7 +1044,7 @@ export const QuestionCard: React.FC<{ q: LessonQuestion; onDone?: () => void }> 
   );
 };
 
-const IxBody: React.FC<{ item: PracticeItem; onDone?: () => void }> = ({ item, onDone }) => {
+const IxBody: React.FC<{ item: PracticeItem; onDone?: IxDone }> = ({ item, onDone }) => {
   if (item.kind === 'cards') return <FlipCards cards={item.cards} onDone={onDone} />;
   if (item.kind === 'question') return <QuestionCard q={item.q} onDone={onDone} />;
   const e = item.data;
@@ -1106,8 +1117,16 @@ const IxBody: React.FC<{ item: PracticeItem; onDone?: () => void }> = ({ item, o
   }
 };
 
-export const PracticeCard: React.FC<{ item: PracticeItem; done?: boolean; onDone?: () => void; style?: React.CSSProperties; className?: string; target?: FeedbackTarget }> = ({ item, done, onDone, style, className = '', target }) => {
+export const PracticeCard: React.FC<{ item: PracticeItem; done?: boolean; onDone?: IxDone; style?: React.CSSProperties; className?: string; target?: FeedbackTarget }> = ({ item, done, onDone, style, className = '', target }) => {
   const [Icon, label] = practiceMeta(item);
+  // Sonuç bir kez bildirilir (StrictMode'da güncelleyiciler iki kez çalışabiliyor); süre kart açılışından ölçülür
+  const t0 = useRef(Date.now());
+  const sent = useRef(false);
+  const report: IxDone = (r) => {
+    if (sent.current) return;
+    sent.current = true;
+    onDone?.(r ? { ...r, ms: Date.now() - t0.current } : undefined);
+  };
   return (
     <section className={`ls-ix ${className}`} style={style} aria-label={label} data-fb-key={target?.key}>
       <header className="ls-ix-head">
@@ -1117,7 +1136,7 @@ export const PracticeCard: React.FC<{ item: PracticeItem; done?: boolean; onDone
         {done && <span className="ls-tag is-ok"><Check aria-hidden /> Tamam</span>}
         {target && <FeedbackFlag target={target} />}
       </header>
-      <IxBody item={item} onDone={onDone} />
+      <IxBody item={item} onDone={report} />
     </section>
   );
 };

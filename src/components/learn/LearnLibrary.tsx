@@ -9,7 +9,9 @@
  * Stil: styles/learn-v10.css (.lv-*).
  */
 import React, { useEffect, useMemo, useRef, useState } from 'react';
-import { ArrowRight, Check, FileQuestionMark, FileText, LayoutGrid, Layers, Rows3, Search } from 'lucide-react';
+import { ArrowRight, Check, FileQuestionMark, FileText, LayoutGrid, Layers, RotateCcw, Rows3, Search } from 'lucide-react';
+import { useReviewCounts } from '../../hooks/useReviewCounts';
+import '../../styles/learn-focus.css';
 import { deckName, type DeckCatalogEntry } from '../../data/deckStore';
 import { useDeckPdfIds, useDeckPdfMissing } from '../../services/deckPdfService';
 import { disciplineClass, disciplineLabel } from '../../utils/discipline';
@@ -114,7 +116,10 @@ export const LearnLibrary: React.FC<{
   onOpen: (id: string, pdf?: boolean) => void;
   /** Sürümlü dersler: listede gösterilen (en yeni) sürümün kimliği → sürüm etiketleri (["V1", "V2"]) */
   versions?: Record<string, string[]>;
-}> = ({ decks: all, progress, isAdmin, archive, onArchive, onOpen, versions }) => {
+  /** Hata defteri (tekrar ekranı); deckId verilirse yalnız o ders */
+  onOpenReview?: (deckId?: string) => void;
+}> = ({ decks: all, progress, isAdmin, archive, onArchive, onOpen, versions, onOpenReview }) => {
+  const review = useReviewCounts();
   const [query, setQuery] = useState('');
   const [branch, setBranch] = useState('all');
   const [kurul, setKurul] = useState('all');
@@ -316,6 +321,17 @@ export const LearnLibrary: React.FC<{
         onClearChips={() => { setBranch('all'); setKurul('all'); onArchive('new_only'); }}
       />
 
+      {onOpenReview && review.total.open > 0 && !filtered && (
+        <button type="button" className="lr-due-card" onClick={() => onOpenReview()}>
+          <span className="ico"><RotateCcw aria-hidden /></span>
+          <span className="tx">
+            <b>{review.total.due > 0 ? `Bugün ${review.total.due} öge tekrar zamanı` : 'Hata defteri'}</b>
+            <small>{review.total.due > 0 ? `~${Math.max(1, Math.round(review.total.due * 0.5))} dk · derste yanlış yaptıkların aralıklarla geri gelir` : `${review.total.open} öge defterde; vadeleri henüz gelmedi`}</small>
+          </span>
+          <span className="go">{review.total.due > 0 ? 'Başla' : 'Aç'}</span>
+        </button>
+      )}
+
       {resume.length > 0 && !filtered && (
         <section className="lv-resume bento is-duo is-list" aria-label="Devam et">
           {resume.map((d) => {
@@ -368,7 +384,7 @@ export const LearnLibrary: React.FC<{
                       <span className="lv-row-date">{sc?.t ? trDate(sc.t) : ''}</span>
                       <span className="lv-row-t">
                         <b>{deckName(d, false)}</b>
-                        <small>{[branchOf(d), versions?.[d.id] ? versions[d.id].join('/') : ''].filter(Boolean).join(' · ')}</small>
+                        <small>{[branchOf(d), versions?.[d.id] ? versions[d.id].join('/') : '', (review.counts[d.id]?.due ?? 0) > 0 ? `${review.counts[d.id].due} tekrar` : ''].filter(Boolean).join(' · ')}</small>
                       </span>
                       <span className="lv-row-sl">{d.slideCount} slayt</span>
                       <span className="lv-row-st">
@@ -413,6 +429,7 @@ export const LearnLibrary: React.FC<{
                         </span>
                       )}
                       {noSrc && <span className="lv-nosrc" title={noSrcTip}><FileQuestionMark aria-hidden /><span className="sr-only">Uyarı: kaynak PDF bilinmiyor</span></span>}
+                      {(review.counts[d.id]?.due ?? 0) > 0 && <span className="lr-badge" title="Bu derste tekrar zamanı gelen hata defteri ögeleri"><RotateCcw aria-hidden width={11} height={11} />{review.counts[d.id].due}</span>}
                       <span className="lv-n">{d.slideCount} slayt</span>
                     </span>
                     <strong className="lv-card-t">{deckName(d, false)}</strong>
