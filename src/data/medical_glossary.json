@@ -2243,7 +2243,7 @@
     "description": "Zarsız, çift iplikli dairesel DNA virüsü. Deri ve mukozalarda siğil (kondilom) ve malign neoplazilere yol açar.",
     "discipline": "Viroloji",
     "committee": "",
-    "clinicalPearl": "Tip 6 ve 11 benign genital siğil (kondiloma akuminata); Tip 16 ve 18 yüksek riskli olup E6 (p53 inhibisyonu) ve E7 (pRb inhibisyonu) onkogenleriyle serviks kanserine neden olur. Histopatolojide halo içeren koilositler tanı koydurucudur. · Yüksek riskli tipler 16, 18, 31, 33, 35, 39, 45, 51, 52, 56, 58; düşük riskli 6 ve 11. Aşı şeması 0-2-6; gebelere uygulanmaz. · E6 p53'ü yıkıma uğratır ve TERT'i uyarır; E7 RB'den E2F'yi serbest bırakır ve p21'i inhibe eder; invaziv kanserde viral DNA konak genomuna entegredir. · E6 p53'ü yıkar ve telomerazı artırır, E7 RB'ye bağlanıp E2F'yi serbest bırakır; HPV 16 ve 18 CIN ve servikal karsinomların ~%70'inden sorumludur.",
+    "clinicalPearl": "Tip 6 ve 11 benign genital siğil (kondiloma akuminata); Tip 16 ve 18 yüksek riskli olup E6 (p53 inhibisyonu) ve E7 (pRb inhibisyonu) onkogenleriyle serviks kanserine neden olur. Histopatolojide halo içeren koilositler tanı koydurucudur. · Yüksek riskli tipler 16, 18, 31, 33, 35, 39, 45, 51, 52, 56, 58; düşük riskli 6 ve 11. Aşı şeması 0-2-6; gebelere uygulanmaz. · E6 p53'ü yıkıma uğratır ve TERT'i uyarır; E7 RB'den E2F'yi serbest bırakır ve p21'i inhibe eder; invaziv kanserde viral DNA konak genomuna entegredir. · E6 p53'ü yıkar ve telomerazı artırır, E7 RB'ye bağlanıp E2F'yi serbest bırakır; HPV 16 ve 18 CIN ve servikal karsinomların ~%70'inden sorumludur. · Yüksek riskli tipler 16, 18, 31, 33, 35, 39, 45, 51, 52, 56, 58; düşük riskli 6 ve 11. Aşı şeması 0-2-6, gebelere uygulanmaz.",
     "aliases": [
       "HPV",
       "Human Papillomavirus"
@@ -3191,7 +3191,7 @@
     "description": "Serviks ve vajinadan asendan yolla (en sık N. gonorrhoeae ve C. trachomatis) endometriyum, tuba uterina ve overleri tutan süpüratif enfeksiyon tablosu.",
     "discipline": "Klinik Hastalık / Kadın Doğum",
     "committee": "",
-    "clinicalPearl": "Tuba skarlaşması sonucu tuba tıkanıklığı, tubal infertilite ve ektopik gebelik (dış gebelik) riskini katbekat artırır. · Yatış endikasyonları: tuboovaryan abse, gebelik, bulantı-kusma/ateş, oral tedaviye yanıtsızlık; dört rejim, toplam 14 gün; abse → klindamisin. · Süpüratif salpingit PİH'in parçasıdır; en sık etken N. gonorrhoeae (>%60), ardından C. trachomatis; komplikasyonlar yapışıklık, ektopik gebelik ve kalıcı infertilite.",
+    "clinicalPearl": "Tuba skarlaşması sonucu tuba tıkanıklığı, tubal infertilite ve ektopik gebelik (dış gebelik) riskini katbekat artırır. · Yatış endikasyonları: tuboovaryan abse, gebelik, bulantı-kusma/ateş, oral tedaviye yanıtsızlık; dört rejim, toplam 14 gün; abse → klindamisin. · Süpüratif salpingit PİH'in parçasıdır; en sık etken N. gonorrhoeae (>%60), ardından C. trachomatis; komplikasyonlar yapışıklık, ektopik gebelik ve kalıcı infertilite. · Gonore ve klamidyanın komplikasyonudur; ektopik gebelik ve infertiliteye yol açar.",
     "aliases": [
       "PID",
       "Pelvik İnflamatuar Hastalık"
@@ -9732,7 +9732,7 @@
     "description": "Karaciğer parankiminin enflamasyonu ve hepatosit hasarı ile karakterize durum. Karaciğer fonksiyon testlerinin normalleşmesi altı aydan kısa sürerse akut, altı aydan uzun sürerse kronik hepatit denir.",
     "discipline": "İç Hastalıkları",
     "committee": "",
-    "clinicalPearl": "Akut hepatitin en yaygın nedeni viral enfeksiyonlardır; ilaçlar, alkol, otoimmün hepatit ve primer biliyer kolanjit de neden olabilir.",
+    "clinicalPearl": "Akut hepatitin en yaygın nedeni viral enfeksiyonlardır; ilaçlar, alkol, otoimmün hepatit ve primer biliyer kolanjit de neden olabilir. · Hepatit B aşıyla (0-1-6) önlenir; HCV'de temas sonrası profilaksi yoktur, 1-3-6. aylarda izlem yapılır.",
     "dogrulama": {
       "durum": "kaynakli",
       "destek": 0.9,
@@ -59076,7 +59076,8 @@
         "sayfa": 82,
         "alinti": "İntramural: – Miyometriyum içine gömülü • Submukozal: – Endometriyumun hemen altında"
       }
-    ]
+    ],
+    "clinicalPearl": "Kaviteyi bozmayan intramural miyomun düşükle ilişkisi her durumda aynı güçte değildir."
   },
   "submukozal leiomyom": {
     "term": "Submukozal leiomyom",
@@ -70294,7 +70295,7 @@
     "description": "Gebeliğin fetüsün yaşayabilirlik sınırına (20–24. hafta ya da 500 g) ulaşmadan spontan olarak sonlanması; düşük.",
     "discipline": "Kadın Hastalıkları ve Doğum",
     "committee": "",
-    "clinicalPearl": "Viabilite sınırından sonraki kayıp ölü doğumdur.",
+    "clinicalPearl": "Viabilite sınırından sonraki kayıp ölü doğumdur. · Derste viabilite sınırı 20.–24. hafta öncesi ya da 500 g altı fetüs olarak verilir; tüm gebeliklerin %15–20'si, klinik gebeliklerin %10–12'si düşükle sonuçlanır.",
     "aliases": [
       "Düşük",
       "Spontan abortus"
@@ -70352,7 +70353,7 @@
     "description": "20. haftadan önce vajinal kanama, kapalı serviks ve USG'de kalp atımı olan intrauterin gebelikle giden düşük tehdidi.",
     "discipline": "Kadın Hastalıkları ve Doğum",
     "committee": "",
-    "clinicalPearl": "Gebeliğin devam edebildiği tek abortus tipidir; tedavi medikaldir.",
+    "clinicalPearl": "Gebeliğin devam edebildiği tek abortus tipidir; tedavi medikaldir. · Tüm gebeliklerin en az %20'sinde görülür; ilk trimester kanaması düşük (OR 4,3), ölü doğum, PROM, dekolman ve previa riskini artırır.",
     "aliases": [
       "Düşük tehdidi"
     ],
@@ -70464,7 +70465,7 @@
     "description": "16. kromozomun üç kopya bulunduğu, canlı doğumla bağdaşmayan otozomal trizomi.",
     "discipline": "Tıbbi Genetik",
     "committee": "",
-    "clinicalPearl": "Abortus materyalinde sık saptanan trizomilerdendir.",
+    "clinicalPearl": "Abortus materyalinde sık saptanan trizomilerdendir. · Abortus materyalinde sık saptanan trizomilerden biridir; canlı doğumla sonuçlanmaz.",
     "dogrulama": {
       "durum": "ders_isci",
       "destek": 1.0,
@@ -70546,7 +70547,7 @@
     "description": "Uterus kavitesinin bir septumla bölündüğü konjenital Müllerian anomali.",
     "discipline": "Kadın Hastalıkları ve Doğum",
     "committee": "",
-    "clinicalPearl": "Düşükle belirgin ilişkili anatomik durumlardandır.",
+    "clinicalPearl": "Düşükle belirgin ilişkili anatomik durumlardandır. · Düşükle en belirgin ilişkili Müllerian anomalidir; dış fundus konturu düzdür.",
     "dogrulama": {
       "durum": "ders_isci",
       "destek": 1.0,
@@ -70795,7 +70796,7 @@
     "description": "Gestasyonel kese içinde ortası anekoik yüzük şeklinde görülen, 5. haftadan itibaren izlenen yapı.",
     "discipline": "Kadın Hastalıkları ve Doğum",
     "committee": "",
-    "clinicalPearl": "7 mm'den büyük yolk sak gebelik kaybı için şüpheli bulgudur.",
+    "clinicalPearl": "7 mm'den büyük yolk sak gebelik kaybı için şüpheli bulgudur. · 5. haftadan itibaren görülür; 7 mm'den büyük olması gebelik kaybı için şüpheli bulgudur.",
     "aliases": [
       "Yolk sac",
       "Vitellin kese"
@@ -70852,7 +70853,7 @@
     "description": "Embriyonun yolk sak ve ekstremiteler dahil edilmeden ölçülen uzun ekseni; 7-14. haftalarda gebelik yaşı ölçümünde kullanılır.",
     "discipline": "Kadın Hastalıkları ve Doğum",
     "committee": "",
-    "clinicalPearl": "Gebelik yaşı ≈ 6 hafta + CRL(mm) gün; CRL ≥7 mm ve kalp atımı yoksa gebelik kaybı kesindir.",
+    "clinicalPearl": "Gebelik yaşı ≈ 6 hafta + CRL(mm) gün; CRL ≥7 mm ve kalp atımı yoksa gebelik kaybı kesindir. · Gebelik yaşı ≈ 6 hafta + CRL (mm) gün; CRL ≥7 mm iken kalp atımı yoksa gebelik kaybı tanısaldır.",
     "aliases": [
       "CRL",
       "Crown-rump length"
@@ -70963,7 +70964,7 @@
     "description": "Pozitif gebelik testine karşın TVUS'ta gebeliğin yerinin gösterilemediği durum.",
     "discipline": "Kadın Hastalıkları ve Doğum",
     "committee": "",
-    "clinicalPearl": "Ektopik dışlanana kadar klinik + seri β-hCG + tekrar TVUS ile izlenir; tek β-hCG yer belirlemez.",
+    "clinicalPearl": "Ektopik dışlanana kadar klinik + seri β-hCG + tekrar TVUS ile izlenir; tek β-hCG yer belirlemez. · Ektopik dışlanana kadar seri β-hCG ve tekrar TVUS ile izlenir; tek β-hCG değeri yer belirlemez.",
     "aliases": [
       "PUL",
       "Pregnancy of unknown location"
@@ -71208,7 +71209,7 @@
     "description": "Rh negatif annede fetal Rh pozitif eritrositlere karşı sensitizasyonu önleyen hazır anti-D antikoru.",
     "discipline": "Kadın Hastalıkları ve Doğum",
     "committee": "",
-    "clinicalPearl": "En az 50 μg; ülkemizde 300 μg uygulanır.",
+    "clinicalPearl": "En az 50 μg; ülkemizde 300 μg uygulanır. · Doz en az 50 μg; ülkemizde 300 μg kullanılır.",
     "aliases": [
       "Anti-D immün globulin",
       "Anti-D"
@@ -75742,7 +75743,7 @@
     "description": "Düşük (abortus) sonrasında gelişen, maternal ölüme yol açabilen ve acil müdahale gerektiren enfeksiyon ve sepsis tablosudur.",
     "discipline": "Kadın Hastalıkları ve Doğum",
     "committee": "",
-    "clinicalPearl": "Septik düşükte önce acil IV antimikrobiyal tedavi verilir, rest varsa ardından uterus cerrahi olarak boşaltılır.",
+    "clinicalPearl": "Septik düşükte önce acil IV antimikrobiyal tedavi verilir, rest varsa ardından uterus cerrahi olarak boşaltılır. · Etkenler C. perfringens, C. sordellii ve grup A streptokok; acil IV antibiyotik sonrası rest varsa cerrahi boşaltma.",
     "aliases": [
       "Septik abortus"
     ],
@@ -75780,7 +75781,7 @@
     "description": "Viabilite sınırına ulaşmadan önce birden fazla klinik gebeliğin kaybedilmesidir; kaç kayıp gerektiği derneğe göre değişir ve ektopik gebelik, GTH ile implantasyon başarısızlığı tanıma girmez.",
     "discipline": "Kadın Hastalıkları ve Doğum",
     "committee": "",
-    "clinicalPearl": "Tüm değerlendirmelere karşın tekrarlayan gebelik kaybı olgularının %33'ünden fazlası açıklanamaz.",
+    "clinicalPearl": "Tüm değerlendirmelere karşın tekrarlayan gebelik kaybı olgularının %33'ünden fazlası açıklanamaz. · ASRM 2026 ve ESHRE 2023 ≥2 kayıp, RCOG 2023 ≥3 ilk trimester kaybı; kalıtsal trombofili paneli rutin önerilmez.",
     "aliases": [
       "Rekürren abortus",
       "TGK"
@@ -75828,7 +75829,7 @@
     "description": "Canlılığını yitirmiş gebelik ürününün dışarı atılmadan birden fazla hafta uterus içinde kalmasıyla tanımlanan abortus tipidir.",
     "discipline": "Kadın Hastalıkları ve Doğum",
     "committee": "",
-    "clinicalPearl": "CRL ≥7 mm ve kalp atımı yokluğu ya da ortalama kese çapı ≥25 mm ve embriyo yokluğu gebelik kaybı için tanısaldır.",
+    "clinicalPearl": "CRL ≥7 mm ve kalp atımı yokluğu ya da ortalama kese çapı ≥25 mm ve embriyo yokluğu gebelik kaybı için tanısaldır. · Önceden embriyo görülmemişse 2 hafta arayla USG ölçümlerinin aynı kalması tanıyı destekler.",
     "aliases": [
       "Gecikmiş düşük"
     ],
@@ -86438,6 +86439,526 @@
         "kurul": 1,
         "sayfa": 82,
         "alinti": "Kızamık, kabakulak, suçiçeği gibi hastalıkları bir kez geçiren kişilerin"
+      }
+    ]
+  },
+  "cinsel yolla bulaşan infeksiyon (cybi)": {
+    "term": "Cinsel Yolla Bulaşan İnfeksiyon (CYBİ)",
+    "category": "terim",
+    "definition": "Heteroseksüel ya da homoseksüel genital, genital-oral, oral-anal ve genital-anal temasla bulaşan infeksiyonların ortak adı.",
+    "description": "Heteroseksüel ya da homoseksüel genital, genital-oral, oral-anal ve genital-anal temasla bulaşan infeksiyonların ortak adı.",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "",
+    "clinicalPearl": "Sessiz seyreder, bağışıklık bırakmaz; en sık 15-45 yaş.",
+    "aliases": [
+      "CYBE",
+      "CYBH",
+      "STD",
+      "STI"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-9985ac7ab9"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Enfeksiyon Hastalıkları/6)'Cinsel yolla bulaşan enfeksiyonlarda profilaksi ve korunma' .pdf",
+        "ders": "Enfeksiyon Hastalıkları",
+        "kurul": 1,
+        "sayfa": 2,
+        "alinti": "Heteroseksüel ya da homoseksüel temas olmak üzere genital, genital-oral, oral-anal, genital-anal yolla bulaşan tüm infeksiyonları içerir"
+      }
+    ]
+  },
+  "gardnerella vaginalis": {
+    "term": "Gardnerella vaginalis",
+    "category": "patojen",
+    "definition": "Bakteriyel vajinozla ilişkili, derste cinsel yolla ilişkili bakteriler arasında sayılan etken.",
+    "description": "Bakteriyel vajinozla ilişkili, derste cinsel yolla ilişkili bakteriler arasında sayılan etken.",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-9985ac7ab9"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Enfeksiyon Hastalıkları/6)'Cinsel yolla bulaşan enfeksiyonlarda profilaksi ve korunma' .pdf",
+        "ders": "Enfeksiyon Hastalıkları",
+        "kurul": 1,
+        "sayfa": 3,
+        "alinti": "Klebsiella granulomatis • Gardnerella vaginalis • Mycoplasma hominis • Mycoplasma urealyticum"
+      }
+    ]
+  },
+  "trichomonas vaginalis": {
+    "term": "Trichomonas vaginalis",
+    "category": "patojen",
+    "definition": "Cinsel yolla bulaşan kamçılı protozoon; trikomoniyazis etkeni.",
+    "description": "Cinsel yolla bulaşan kamçılı protozoon; trikomoniyazis etkeni.",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "",
+    "clinicalPearl": "Derste tek paraziter CYBİ etkenidir.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-9985ac7ab9"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Enfeksiyon Hastalıkları/6)'Cinsel yolla bulaşan enfeksiyonlarda profilaksi ve korunma' .pdf",
+        "ders": "Enfeksiyon Hastalıkları",
+        "kurul": 1,
+        "sayfa": 3,
+        "alinti": "Molluscum Contagiosum etkeni • Enterik virüsler Parazitler • Trichomonas vaginalis"
+      }
+    ]
+  },
+  "erkeklerle seks yapan erkekler (msm)": {
+    "term": "Erkeklerle Seks Yapan Erkekler (MSM)",
+    "category": "terim",
+    "definition": "Cinsel kimliğinden bağımsız olarak erkeklerle cinsel ilişkiye giren erkekler; CYBİ açısından riskli grup.",
+    "description": "Cinsel kimliğinden bağımsız olarak erkeklerle cinsel ilişkiye giren erkekler; CYBİ açısından riskli grup.",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "",
+    "clinicalPearl": "HBV aşısı hedef grubudur; aşısız MSM 45 yaşa kadar HPV aşısı olabilir.",
+    "aliases": [
+      "MSM"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-9985ac7ab9"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Enfeksiyon Hastalıkları/6)'Cinsel yolla bulaşan enfeksiyonlarda profilaksi ve korunma' .pdf",
+        "ders": "Enfeksiyon Hastalıkları",
+        "kurul": 1,
+        "sayfa": 5,
+        "alinti": "Erkeklerle seks yapan erkekler • İlaç ve uyuşturucu bağımlıları, paralı ilişkiye girenler"
+      }
+    ]
+  },
+  "abstinens": {
+    "term": "Abstinens",
+    "category": "terim",
+    "definition": "Cinsel ilişkiden kaçınma; CYBİ'den korunmanın en kesin yolu.",
+    "description": "Cinsel ilişkiden kaçınma; CYBİ'den korunmanın en kesin yolu.",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-9985ac7ab9"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Enfeksiyon Hastalıkları/6)'Cinsel yolla bulaşan enfeksiyonlarda profilaksi ve korunma' .pdf",
+        "ders": "Enfeksiyon Hastalıkları",
+        "kurul": 1,
+        "sayfa": 6,
+        "alinti": "The surest way to avoid STDs is to not have sex."
+      }
+    ]
+  },
+  "eş (partner) taraması": {
+    "term": "Eş (Partner) Taraması",
+    "category": "tani",
+    "definition": "CYBİ saptanan kişinin cinsel eşinin değerlendirilip taranması.",
+    "description": "CYBİ saptanan kişinin cinsel eşinin değerlendirilip taranması.",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "",
+    "clinicalPearl": "Reinfeksiyonu ve başka partnerlere bulaşı önler.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-9985ac7ab9"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Enfeksiyon Hastalıkları/6)'Cinsel yolla bulaşan enfeksiyonlarda profilaksi ve korunma' .pdf",
+        "ders": "Enfeksiyon Hastalıkları",
+        "kurul": 1,
+        "sayfa": 9,
+        "alinti": "Cinsel eşin taranması ✓Reinfeksiyonu önler ✓Başka partnerlere bulaşı önler"
+      }
+    ]
+  },
+  "temas sonrası profilaksi (tsp/pep)": {
+    "term": "Temas Sonrası Profilaksi (TSP/PEP)",
+    "category": "tedavi",
+    "definition": "Enfeksiyon riskli temas sonrası hastalığın gelişmesini önlemek için yapılan uygulama.",
+    "description": "Enfeksiyon riskli temas sonrası hastalığın gelişmesini önlemek için yapılan uygulama.",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "",
+    "clinicalPearl": "HIV'de 28 gün, en geç 72 saatte başlanır.",
+    "aliases": [
+      "PEP",
+      "TSP",
+      "Post-exposure prophylaxis"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-9985ac7ab9"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Enfeksiyon Hastalıkları/6)'Cinsel yolla bulaşan enfeksiyonlarda profilaksi ve korunma' .pdf",
+        "ders": "Enfeksiyon Hastalıkları",
+        "kurul": 1,
+        "sayfa": 18,
+        "alinti": "Temas sonrası profilaksi (Post-exposure prophylaxis (PEP)) HIV ile infekte olan veya olma olasılığı bulunan kişiye ait kan, doku ya da vücut sıvıları ile temas sonrasında"
+      }
+    ]
+  },
+  "anti-hcv": {
+    "term": "Anti-HCV",
+    "category": "tani",
+    "definition": "HCV'ye karşı antikor; temas sonrası 2-6 ayda pozitifleşir.",
+    "description": "HCV'ye karşı antikor; temas sonrası 2-6 ayda pozitifleşir.",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-9985ac7ab9"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Enfeksiyon Hastalıkları/6)'Cinsel yolla bulaşan enfeksiyonlarda profilaksi ve korunma' .pdf",
+        "ders": "Enfeksiyon Hastalıkları",
+        "kurul": 1,
+        "sayfa": 16,
+        "alinti": "Temas sonrası anti-HCV 2-6 ayda, HCV RNA 1-3 hafta içinde pozitifleşir • ALT düzeyi ise temastan ortalama 45 gün sonra yükselir"
+      }
+    ]
+  },
+  "hcv rna": {
+    "term": "HCV RNA",
+    "category": "tani",
+    "definition": "Kanda HCV genomunun saptanması; temas sonrası 1-3 haftada pozitifleşir.",
+    "description": "Kanda HCV genomunun saptanması; temas sonrası 1-3 haftada pozitifleşir.",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "",
+    "clinicalPearl": "En erken belirteçtir.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-9985ac7ab9"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Enfeksiyon Hastalıkları/6)'Cinsel yolla bulaşan enfeksiyonlarda profilaksi ve korunma' .pdf",
+        "ders": "Enfeksiyon Hastalıkları",
+        "kurul": 1,
+        "sayfa": 16,
+        "alinti": "Temas sonrası anti-HCV 2-6 ayda, HCV RNA 1-3 hafta içinde pozitifleşir • ALT düzeyi ise temastan ortalama 45 gün sonra yükselir"
+      }
+    ]
+  },
+  "erken düşük": {
+    "term": "Erken düşük",
+    "category": "terim",
+    "definition": "İlk trimesterde gerçekleşen spontan gebelik kaybı.",
+    "description": "İlk trimesterde gerçekleşen spontan gebelik kaybı.",
+    "discipline": "Kadın Hastalıkları ve Doğum",
+    "committee": "",
+    "clinicalPearl": "Çoğunlukla embriyonik kromozomal anomaliye bağlıdır.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-640a304e6f"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Kadın Hastalıkları ve Doğum/1)Abortus_2026.pdf",
+        "ders": "Kadın Hastalıkları ve Doğum",
+        "kurul": 1,
+        "sayfa": 3,
+        "alinti": "Erken düşük: ilk trimester • Geç düşük: ilk trimesterden sonra viabilite sınırına kadar"
+      }
+    ]
+  },
+  "geç düşük": {
+    "term": "Geç düşük",
+    "category": "terim",
+    "definition": "İlk trimesterden sonra viabilite sınırına kadar olan dönemde gerçekleşen spontan gebelik kaybı.",
+    "description": "İlk trimesterden sonra viabilite sınırına kadar olan dönemde gerçekleşen spontan gebelik kaybı.",
+    "discipline": "Kadın Hastalıkları ve Doğum",
+    "committee": "",
+    "clinicalPearl": "Maternal/anatomik nedenler göreceli olarak öne çıkar.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-640a304e6f"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Kadın Hastalıkları ve Doğum/1)Abortus_2026.pdf",
+        "ders": "Kadın Hastalıkları ve Doğum",
+        "kurul": 1,
+        "sayfa": 3,
+        "alinti": "Erken düşük: ilk trimester • Geç düşük: ilk trimesterden sonra viabilite sınırına kadar"
+      }
+    ]
+  },
+  "viabilite sınırı": {
+    "term": "Viabilite sınırı",
+    "category": "terim",
+    "definition": "Fetüsün uterus dışında yaşayabildiği en erken gebelik dönemi; abortusu erken doğumdan ayırır.",
+    "description": "Fetüsün uterus dışında yaşayabildiği en erken gebelik dönemi; abortusu erken doğumdan ayırır.",
+    "discipline": "Kadın Hastalıkları ve Doğum",
+    "committee": "",
+    "clinicalPearl": "Derste 20.–24. hafta öncesi ya da 500 g altı fetüs olarak verilir.",
+    "aliases": [
+      "Yaşayabilirlik sınırı"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-640a304e6f"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Kadın Hastalıkları ve Doğum/1)Abortus_2026.pdf",
+        "ders": "Kadın Hastalıkları ve Doğum",
+        "kurul": 1,
+        "sayfa": 3,
+        "alinti": "20.-24 gebelik haftası öncesi veya 500gr altı fetüs"
+      }
+    ]
+  },
+  "oosit anöploidisi": {
+    "term": "Oosit anöploidisi",
+    "category": "genetik",
+    "definition": "Oositte mayoz ayrılmama hatasıyla oluşan sayısal kromozom anomalisi.",
+    "description": "Oositte mayoz ayrılmama hatasıyla oluşan sayısal kromozom anomalisi.",
+    "discipline": "Kadın Hastalıkları ve Doğum",
+    "committee": "",
+    "clinicalPearl": "Maternal yaş arttıkça artar ve düşük riskini yükseltir.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-640a304e6f"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Kadın Hastalıkları ve Doğum/1)Abortus_2026.pdf",
+        "ders": "Kadın Hastalıkları ve Doğum",
+        "kurul": 1,
+        "sayfa": 8,
+        "alinti": "Maternal yaş arttıkça oosit anöploidisi ve buna bağlı düşük riski artar"
+      }
+    ]
+  },
+  "fıgo leiomiyom sınıflaması": {
+    "term": "FIGO leiomiyom sınıflaması",
+    "category": "patoloji",
+    "definition": "Miyomları endometrium ve serozayla ilişkisine göre 0–8 arasında sınıflayan sistem; hibrid miyomlar iki rakamla yazılır.",
+    "description": "Miyomları endometrium ve serozayla ilişkisine göre 0–8 arasında sınıflayan sistem; hibrid miyomlar iki rakamla yazılır.",
+    "discipline": "Kadın Hastalıkları ve Doğum",
+    "committee": "",
+    "clinicalPearl": "İlk rakam endometrium, ikinci rakam seroza ilişkisini gösterir (ör. 2-5).",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-640a304e6f"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Kadın Hastalıkları ve Doğum/1)Abortus_2026.pdf",
+        "ders": "Kadın Hastalıkları ve Doğum",
+        "kurul": 1,
+        "sayfa": 13,
+        "alinti": "By convention, the first refers to the relationship with the endometrium while the second refers to the relationship to the serosa"
+      }
+    ]
+  },
+  "histeroskopi": {
+    "term": "Histeroskopi",
+    "category": "tani",
+    "definition": "Uterus kavitesinin endoskopla doğrudan görüntülenmesi.",
+    "description": "Uterus kavitesinin endoskopla doğrudan görüntülenmesi.",
+    "discipline": "Kadın Hastalıkları ve Doğum",
+    "committee": "",
+    "clinicalPearl": "RPL'de kavite değerlendirmesi ve septum/sineşi tedavisinde kullanılır.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-640a304e6f"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Kadın Hastalıkları ve Doğum/1)Abortus_2026.pdf",
+        "ders": "Kadın Hastalıkları ve Doğum",
+        "kurul": 1,
+        "sayfa": 41,
+        "alinti": "Tüm RPL olgularında değerlendir Salin infüzyon sonografi / HSG / histeroskopi"
+      }
+    ]
+  },
+  "ayrım (diskriminatuvar) zonu": {
+    "term": "Ayrım (diskriminatuvar) zonu",
+    "category": "tani",
+    "definition": "Üzerinde intrauterin gebelik kesesinin TVUS'ta görülmesi beklenen serum hCG düzeyi.",
+    "description": "Üzerinde intrauterin gebelik kesesinin TVUS'ta görülmesi beklenen serum hCG düzeyi.",
+    "discipline": "Kadın Hastalıkları ve Doğum",
+    "committee": "",
+    "clinicalPearl": "Derste hCG >2000 mIU/mL; güncel kılavuzlar tek değerle karar verilmemesini önerir.",
+    "aliases": [
+      "Diskriminatuvar zon"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-640a304e6f"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Kadın Hastalıkları ve Doğum/1)Abortus_2026.pdf",
+        "ders": "Kadın Hastalıkları ve Doğum",
+        "kurul": 1,
+        "sayfa": 29,
+        "alinti": "ÖNEMLİ hCG >2000 mIU/ml ise mutlaka gebelik kesesi görülmeli"
+      }
+    ]
+  },
+  "clostridium sordellii": {
+    "term": "Clostridium sordellii",
+    "category": "patojen",
+    "definition": "Toksin üreten anaerop gram pozitif basil.",
+    "description": "Toksin üreten anaerop gram pozitif basil.",
+    "discipline": "Kadın Hastalıkları ve Doğum",
+    "committee": "",
+    "clinicalPearl": "Septik düşükte ağır, hızlı seyirli toksik şok etkenlerindendir.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-640a304e6f"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Kadın Hastalıkları ve Doğum/1)Abortus_2026.pdf",
+        "ders": "Kadın Hastalıkları ve Doğum",
+        "kurul": 1,
+        "sayfa": 27,
+        "alinti": "C. Perfringens, C. Sordellii ve Grup A Streptokoklar"
+      }
+    ]
+  },
+  "dilatasyon ve küretaj": {
+    "term": "Dilatasyon ve küretaj",
+    "category": "tedavi",
+    "definition": "Serviksin genişletilip uterus içeriğinin küretle boşaltılması.",
+    "description": "Serviksin genişletilip uterus içeriğinin küretle boşaltılması.",
+    "discipline": "Kadın Hastalıkları ve Doğum",
+    "committee": "",
+    "clinicalPearl": "EPL'de cerrahi seçenektir; sonrasında Asherman sendromu gelişebilir.",
+    "aliases": [
+      "D&K"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-640a304e6f"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Kadın Hastalıkları ve Doğum/1)Abortus_2026.pdf",
+        "ders": "Kadın Hastalıkları ve Doğum",
+        "kurul": 1,
+        "sayfa": 37,
+        "alinti": "Mifepriston(antiprogesteron), • Cerrahi (dilatasyon ve küretaj, vakum aspirasyon)"
+      }
+    ]
+  },
+  "sperm dna fragmantasyonu": {
+    "term": "Sperm DNA fragmantasyonu",
+    "category": "tani",
+    "definition": "Sperm DNA'sındaki kırık oranını ölçen test.",
+    "description": "Sperm DNA'sındaki kırık oranını ölçen test.",
+    "discipline": "Kadın Hastalıkları ve Doğum",
+    "committee": "",
+    "clinicalPearl": "Açıklanamayan RPL'de seçilmiş olgularda düşünülebilir.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-640a304e6f"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Kadın Hastalıkları ve Doğum/1)Abortus_2026.pdf",
+        "ders": "Kadın Hastalıkları ve Doğum",
+        "kurul": 1,
+        "sayfa": 41,
+        "alinti": "sperm DNA fragmantasyonu düşünülebilir. Genetik bulguda → genetik danışmanlık"
+      }
+    ]
+  },
+  "parental karyotip": {
+    "term": "Parental karyotip",
+    "category": "tani",
+    "definition": "Ebeveynlerin kromozom analizi.",
+    "description": "Ebeveynlerin kromozom analizi.",
+    "discipline": "Kadın Hastalıkları ve Doğum",
+    "committee": "",
+    "clinicalPearl": "Düşük materyalinde dengesiz translokasyon varsa ya da materyal test edilemediyse istenir; rutin değildir.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-640a304e6f"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Kadın Hastalıkları ve Doğum/1)Abortus_2026.pdf",
+        "ders": "Kadın Hastalıkları ve Doğum",
+        "kurul": 1,
+        "sayfa": 41,
+        "alinti": "düşük materyalinde dengesiz translokasyon saptanırsa veya düşük materyali kromozom testi yapılamadıysa düşünülür"
       }
     ]
   }

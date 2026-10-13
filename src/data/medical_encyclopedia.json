@@ -78811,5 +78811,402 @@
       "accuracyScore": 100,
       "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
     }
+  },
+  {
+    "id": "s13-cinsel_yolla_bulasan_infeksiyon_cybi",
+    "term": "Cinsel Yolla Bulaşan İnfeksiyon (CYBİ)",
+    "aliases": [
+      "CYBE",
+      "CYBH",
+      "STD",
+      "STI"
+    ],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "instructorAndSource": "Ders notu: 6)'Cinsel yolla bulaşan enfeksiyonlarda profilaksi ve korunma'  s.2",
+    "definition": "Heteroseksüel ya da homoseksüel genital, genital-oral, oral-anal ve genital-anal temasla bulaşan infeksiyonların ortak adı.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Sessiz seyreder, bağışıklık bırakmaz; en sık 15-45 yaş.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-gardnerella_vaginalis",
+    "term": "Gardnerella vaginalis",
+    "aliases": [],
+    "category": "patojen",
+    "kurul": "Kurul 1",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "instructorAndSource": "Ders notu: 6)'Cinsel yolla bulaşan enfeksiyonlarda profilaksi ve korunma'  s.3",
+    "definition": "Bakteriyel vajinozla ilişkili, derste cinsel yolla ilişkili bakteriler arasında sayılan etken.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-trichomonas_vaginalis",
+    "term": "Trichomonas vaginalis",
+    "aliases": [],
+    "category": "patojen",
+    "kurul": "Kurul 1",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "instructorAndSource": "Ders notu: 6)'Cinsel yolla bulaşan enfeksiyonlarda profilaksi ve korunma'  s.3",
+    "definition": "Cinsel yolla bulaşan kamçılı protozoon; trikomoniyazis etkeni.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Derste tek paraziter CYBİ etkenidir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-erkeklerle_seks_yapan_erkekler_msm",
+    "term": "Erkeklerle Seks Yapan Erkekler (MSM)",
+    "aliases": [
+      "MSM"
+    ],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "instructorAndSource": "Ders notu: 6)'Cinsel yolla bulaşan enfeksiyonlarda profilaksi ve korunma'  s.5",
+    "definition": "Cinsel kimliğinden bağımsız olarak erkeklerle cinsel ilişkiye giren erkekler; CYBİ açısından riskli grup.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "HBV aşısı hedef grubudur; aşısız MSM 45 yaşa kadar HPV aşısı olabilir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-abstinens",
+    "term": "Abstinens",
+    "aliases": [],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "instructorAndSource": "Ders notu: 6)'Cinsel yolla bulaşan enfeksiyonlarda profilaksi ve korunma'  s.6",
+    "definition": "Cinsel ilişkiden kaçınma; CYBİ'den korunmanın en kesin yolu.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-es_partner_taramasi",
+    "term": "Eş (Partner) Taraması",
+    "aliases": [],
+    "category": "tani",
+    "kurul": "Kurul 1",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "instructorAndSource": "Ders notu: 6)'Cinsel yolla bulaşan enfeksiyonlarda profilaksi ve korunma'  s.9",
+    "definition": "CYBİ saptanan kişinin cinsel eşinin değerlendirilip taranması.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Reinfeksiyonu ve başka partnerlere bulaşı önler.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-temas_sonrasi_profilaksi_tsp_pep",
+    "term": "Temas Sonrası Profilaksi (TSP/PEP)",
+    "aliases": [
+      "PEP",
+      "TSP",
+      "Post-exposure prophylaxis"
+    ],
+    "category": "tedavi",
+    "kurul": "Kurul 1",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "instructorAndSource": "Ders notu: 6)'Cinsel yolla bulaşan enfeksiyonlarda profilaksi ve korunma'  s.18",
+    "definition": "Enfeksiyon riskli temas sonrası hastalığın gelişmesini önlemek için yapılan uygulama.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "HIV'de 28 gün, en geç 72 saatte başlanır.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-anti_hcv",
+    "term": "Anti-HCV",
+    "aliases": [],
+    "category": "tani",
+    "kurul": "Kurul 1",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "instructorAndSource": "Ders notu: 6)'Cinsel yolla bulaşan enfeksiyonlarda profilaksi ve korunma'  s.16",
+    "definition": "HCV'ye karşı antikor; temas sonrası 2-6 ayda pozitifleşir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-hcv_rna",
+    "term": "HCV RNA",
+    "aliases": [],
+    "category": "tani",
+    "kurul": "Kurul 1",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "instructorAndSource": "Ders notu: 6)'Cinsel yolla bulaşan enfeksiyonlarda profilaksi ve korunma'  s.16",
+    "definition": "Kanda HCV genomunun saptanması; temas sonrası 1-3 haftada pozitifleşir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "En erken belirteçtir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-erken_dusuk",
+    "term": "Erken düşük",
+    "aliases": [],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Kadın Hastalıkları ve Doğum",
+    "instructorAndSource": "Ders notu: 1)Abortus_2026 s.3",
+    "definition": "İlk trimesterde gerçekleşen spontan gebelik kaybı.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Çoğunlukla embriyonik kromozomal anomaliye bağlıdır.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-gec_dusuk",
+    "term": "Geç düşük",
+    "aliases": [],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Kadın Hastalıkları ve Doğum",
+    "instructorAndSource": "Ders notu: 1)Abortus_2026 s.3",
+    "definition": "İlk trimesterden sonra viabilite sınırına kadar olan dönemde gerçekleşen spontan gebelik kaybı.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Maternal/anatomik nedenler göreceli olarak öne çıkar.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-viabilite_siniri",
+    "term": "Viabilite sınırı",
+    "aliases": [
+      "Yaşayabilirlik sınırı"
+    ],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Kadın Hastalıkları ve Doğum",
+    "instructorAndSource": "Ders notu: 1)Abortus_2026 s.3",
+    "definition": "Fetüsün uterus dışında yaşayabildiği en erken gebelik dönemi; abortusu erken doğumdan ayırır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Derste 20.–24. hafta öncesi ya da 500 g altı fetüs olarak verilir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-oosit_anoploidisi",
+    "term": "Oosit anöploidisi",
+    "aliases": [],
+    "category": "genetik",
+    "kurul": "Kurul 1",
+    "discipline": "Kadın Hastalıkları ve Doğum",
+    "instructorAndSource": "Ders notu: 1)Abortus_2026 s.8",
+    "definition": "Oositte mayoz ayrılmama hatasıyla oluşan sayısal kromozom anomalisi.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Maternal yaş arttıkça artar ve düşük riskini yükseltir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-figo_leiomiyom_siniflamasi",
+    "term": "FIGO leiomiyom sınıflaması",
+    "aliases": [],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Kadın Hastalıkları ve Doğum",
+    "instructorAndSource": "Ders notu: 1)Abortus_2026 s.13",
+    "definition": "Miyomları endometrium ve serozayla ilişkisine göre 0–8 arasında sınıflayan sistem; hibrid miyomlar iki rakamla yazılır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "İlk rakam endometrium, ikinci rakam seroza ilişkisini gösterir (ör. 2-5).",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-histeroskopi",
+    "term": "Histeroskopi",
+    "aliases": [],
+    "category": "tani",
+    "kurul": "Kurul 1",
+    "discipline": "Kadın Hastalıkları ve Doğum",
+    "instructorAndSource": "Ders notu: 1)Abortus_2026 s.41",
+    "definition": "Uterus kavitesinin endoskopla doğrudan görüntülenmesi.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "RPL'de kavite değerlendirmesi ve septum/sineşi tedavisinde kullanılır.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-ayrim_diskriminatuvar_zonu",
+    "term": "Ayrım (diskriminatuvar) zonu",
+    "aliases": [
+      "Diskriminatuvar zon"
+    ],
+    "category": "tani",
+    "kurul": "Kurul 1",
+    "discipline": "Kadın Hastalıkları ve Doğum",
+    "instructorAndSource": "Ders notu: 1)Abortus_2026 s.29",
+    "definition": "Üzerinde intrauterin gebelik kesesinin TVUS'ta görülmesi beklenen serum hCG düzeyi.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Derste hCG >2000 mIU/mL; güncel kılavuzlar tek değerle karar verilmemesini önerir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-clostridium_sordellii",
+    "term": "Clostridium sordellii",
+    "aliases": [],
+    "category": "patojen",
+    "kurul": "Kurul 1",
+    "discipline": "Kadın Hastalıkları ve Doğum",
+    "instructorAndSource": "Ders notu: 1)Abortus_2026 s.27",
+    "definition": "Toksin üreten anaerop gram pozitif basil.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Septik düşükte ağır, hızlı seyirli toksik şok etkenlerindendir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-dilatasyon_ve_kuretaj",
+    "term": "Dilatasyon ve küretaj",
+    "aliases": [
+      "D&K"
+    ],
+    "category": "tedavi",
+    "kurul": "Kurul 1",
+    "discipline": "Kadın Hastalıkları ve Doğum",
+    "instructorAndSource": "Ders notu: 1)Abortus_2026 s.37",
+    "definition": "Serviksin genişletilip uterus içeriğinin küretle boşaltılması.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "EPL'de cerrahi seçenektir; sonrasında Asherman sendromu gelişebilir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-sperm_dna_fragmantasyonu",
+    "term": "Sperm DNA fragmantasyonu",
+    "aliases": [],
+    "category": "tani",
+    "kurul": "Kurul 1",
+    "discipline": "Kadın Hastalıkları ve Doğum",
+    "instructorAndSource": "Ders notu: 1)Abortus_2026 s.41",
+    "definition": "Sperm DNA'sındaki kırık oranını ölçen test.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Açıklanamayan RPL'de seçilmiş olgularda düşünülebilir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-parental_karyotip",
+    "term": "Parental karyotip",
+    "aliases": [],
+    "category": "tani",
+    "kurul": "Kurul 1",
+    "discipline": "Kadın Hastalıkları ve Doğum",
+    "instructorAndSource": "Ders notu: 1)Abortus_2026 s.41",
+    "definition": "Ebeveynlerin kromozom analizi.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Düşük materyalinde dengesiz translokasyon varsa ya da materyal test edilemediyse istenir; rutin değildir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
   }
 ]
