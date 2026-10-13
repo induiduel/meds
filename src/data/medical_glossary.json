@@ -6320,7 +6320,7 @@
     "description": "T lenfosit yüzeyinde CD28 ile yarışarak APC'deki B7 moleküllerine çok daha yüksek afiniteyle bağlanan inhibitör kontrol noktası molekülü.",
     "discipline": "Tıbbi Patoloji",
     "committee": "",
-    "clinicalPearl": "T hücresine negatif sinyal göndererek anerji ve periferik tolerans sağlar; İpilimumab kanserde bu molekülü bloke eder. · Derste T hücre aktivasyonunu negatif regüle eden immün kontrol noktası olarak tanımlanır; CTLA-4'e karşı monoklonal antikorlar kontrol noktası inhibitörüdür.",
+    "clinicalPearl": "T hücresine negatif sinyal göndererek anerji ve periferik tolerans sağlar; İpilimumab kanserde bu molekülü bloke eder. · Derste T hücre aktivasyonunu negatif regüle eden immün kontrol noktası olarak tanımlanır; CTLA-4'e karşı monoklonal antikorlar kontrol noktası inhibitörüdür. · CTLA-4–IgG1 füzyon proteini abatasept, CD80/86'ya bağlanarak CD28 eş-uyarısını engeller.",
     "aliases": [
       "CD152",
       "CTLA-4"
@@ -6640,7 +6640,7 @@
     "description": "Nakilden dakikalar-saatler sonra alıcıdaki önceden var olan antikorlarla gelişen fulminan trombotik iskemik greft nekrozu.",
     "discipline": "Tıbbi Patoloji",
     "committee": "",
-    "clinicalPearl": "Ameliyat masasında greft siyanotik ve yumuşak hale gelir; damar duvarında fibrinoid nekroz saptanır. · Endotelde antikor birikimi ve kompleman aktivasyonu tromboza yol açar; böbrekte trombosit kaynaklı trombüsler ve glomerülde iskemik hasar görülür.",
+    "clinicalPearl": "Ameliyat masasında greft siyanotik ve yumuşak hale gelir; damar duvarında fibrinoid nekroz saptanır. · Endotelde antikor birikimi ve kompleman aktivasyonu tromboza yol açar; böbrekte trombosit kaynaklı trombüsler ve glomerülde iskemik hasar görülür. · Önceden var olan antikorlarla saatler içinde gelişir; immünosupresiflerle durdurulamaz.",
     "dogrulama": {
       "durum": "editor_onay",
       "destek": 0.0,
@@ -6668,7 +6668,7 @@
     "description": "Kök hücre nakli sonrası donör T lenfositlerinin immünkompromize alıcının dokularına saldırması.",
     "discipline": "Tıbbi Patoloji",
     "committee": "",
-    "clinicalPearl": "Akut GVHD'de hedef organlar Cilt (döküntü), Karaciğer (sarılık) ve Bağırsaktır (kanlı ishal); ortak bulgu epitel apoptozudur. · Akut GVHD deri, karaciğer, GİS epiteli; kronik GVHD sistemik skleroz benzeri değişiklikler. · Deride akut GVHD: vakuolizasyon, diskeratoz, apoptotik keratinositler; kronik GVHD: epidermal atrofi ve dermiste skleroz.",
+    "clinicalPearl": "Akut GVHD'de hedef organlar Cilt (döküntü), Karaciğer (sarılık) ve Bağırsaktır (kanlı ishal); ortak bulgu epitel apoptozudur. · Akut GVHD deri, karaciğer, GİS epiteli; kronik GVHD sistemik skleroz benzeri değişiklikler. · Deride akut GVHD: vakuolizasyon, diskeratoz, apoptotik keratinositler; kronik GVHD: epidermal atrofi ve dermiste skleroz. · Akut GVHH ilk 100 günde deri döküntüsü, ağır diyare ve hepatotoksisiteyle gelir; tedavi yüksek doz kortikosteroidle başlar.",
     "aliases": [
       "GVHD",
       "Graft-versus-Host Hastalığı"
@@ -6736,7 +6736,7 @@
     "description": "Hem hücresel (T) hem humoral (B) immün yanıtın çöktüğü, erken bebeklikte ölümcül fırsatçı enfeksiyonlara yol açan sendrom.",
     "discipline": "Tıbbi Patoloji",
     "committee": "",
-    "clinicalPearl": "En sık tipi X'e bağlı IL-2R gama zinciri defekti; resesif tipi ADA eksikliğidir. Timus hipoplaziktir.",
+    "clinicalPearl": "En sık tipi X'e bağlı IL-2R gama zinciri defekti; resesif tipi ADA eksikliğidir. Timus hipoplaziktir. · ADA eksikliğinde toksik deoksi-ATP birikir; T ve B lenfositleri ölür.",
     "aliases": [
       "Ağır Kombine İmmün Yetmezlik",
       "SCID"
@@ -8632,7 +8632,8 @@
         "kurul": 1,
         "sayfa": 59
       }
-    ]
+    ],
+    "clinicalPearl": "Böcek sokması, gıda ve ilaçlarla tetiklenen sistemik IgE aracılı reaksiyondur; acil müdahale gerekir."
   },
   "Şok Böbreği (İskemik ATN)": {
     "term": "Şok Böbreği (İskemik ATN)",
@@ -11696,7 +11697,7 @@
         "sayfa": 12
       }
     ],
-    "clinicalPearl": "TGF-β üretimini ve kollajen sentezini inhibe ederek yara iyileşmesini geciktirir."
+    "clinicalPearl": "TGF-β üretimini ve kollajen sentezini inhibe ederek yara iyileşmesini geciktirir. · Hücresel immüniteyi humoral immüniteden daha fazla baskılar; lenf düğümü ve dalaktaki lenfoid hücreleri azaltır, kemik iliği kök hücrelerine belirgin toksik değildir."
   },
   "bradiaritmiler": {
     "term": "Bradiaritmiler",
@@ -12078,7 +12079,8 @@
         "kurul": 5,
         "sayfa": 72
       }
-    ]
+    ],
+    "clinicalPearl": "TNF-α blokajı IL-1, IL-6 ve adezyon moleküllerinin baskılanmasıyla sonuçlanır; başlamadan önce latent tüberküloz taranmalıdır."
   },
   "tümör nekroz faktörü (tnf)": {
     "term": "Tümör nekroz faktörü (TNF)",
@@ -14429,7 +14431,8 @@
         "kurul": 4,
         "sayfa": 78
       }
-    ]
+    ],
+    "clinicalPearl": "IgE'nin mast hücresi/bazofil reseptörüne bağlanmasını önler; inhale steroide dirençli alerjik astımda kullanılır."
   },
   "ustekinumab": {
     "term": "Ustekinumab",
@@ -14451,7 +14454,8 @@
         "kurul": 1,
         "sayfa": 76
       }
-    ]
+    ],
+    "clinicalPearl": "IL-12 ve IL-23'ün ortak p40 alt birimini bloke eder; orta-ağır plak psoriasiste endikedir."
   },
   "monoklonal antikor": {
     "term": "Monoklonal antikor",
@@ -16781,7 +16785,8 @@
         "kurul": 1,
         "sayfa": 44
       }
-    ]
+    ],
+    "clinicalPearl": "İmmünosupresiflerin en güçlülerindendir; hemorajik sistit mesna ile önlenir; GVHH'yi engellemez."
   },
   "cushing hastalığı": {
     "term": "Cushing hastalığı",
@@ -17241,7 +17246,7 @@
     "description": "Dihidrofolat redüktaz enziminin aktif bölgesine yüksek afiniteyle bağlanan folik asit analoğu antimetabolit; timidilat ve purin nükleotidlerinin sentezini engeller.",
     "discipline": "Tıbbi Farmakoloji",
     "committee": "",
-    "clinicalPearl": "Yan etki olarak özellikle beyaz cevherde nekroz, demiyelinizasyon, gliozis ve kalsifikasyonla MSS hasarı yapabilir.",
+    "clinicalPearl": "Yan etki olarak özellikle beyaz cevherde nekroz, demiyelinizasyon, gliozis ve kalsifikasyonla MSS hasarı yapabilir. · Siklosporinle birlikte allojenik kök hücre naklinde GVHH profilaksisinde standart rejimdir.",
     "aliases": [
       "MTX"
     ],
@@ -19486,7 +19491,8 @@
         "kurul": 5,
         "sayfa": 73
       }
-    ]
+    ],
+    "clinicalPearl": "İntravenöz uygulanan kimerik anti-TNF-α IgG1 antikorudur."
   },
   "bleomisin": {
     "term": "Bleomisin",
@@ -21669,7 +21675,7 @@
     "description": "Kanlı idrarla seyreden mesane iltihabı.",
     "discipline": "Üroloji",
     "committee": "",
-    "clinicalPearl": "Çocuklarda Adenovirus tip 11 ile ilişkilidir. · Siklofosfamidin akrolein metaboliti ve adenovirus enfeksiyonları hemorajik sistit yapar.",
+    "clinicalPearl": "Çocuklarda Adenovirus tip 11 ile ilişkilidir. · Siklofosfamidin akrolein metaboliti ve adenovirus enfeksiyonları hemorajik sistit yapar. · Siklofosfamid kaynaklı hemorajik sistit mesna ile önlenir/tedavi edilir.",
     "dogrulama": {
       "durum": "ders_isci",
       "destek": 1.0,
@@ -24246,7 +24252,7 @@
     "description": "HER2'ye karşı geliştirilmiş anti-HER2 hedefli tedavi ajanı.",
     "discipline": "Tıbbi Patoloji",
     "committee": "",
-    "clinicalPearl": "HER2 pozitif meme kanserinde kullanılır.",
+    "clinicalPearl": "HER2 pozitif meme kanserinde kullanılır. · Tek başına meme kanserinde yaklaşık %15–20 remisyon sağlar; HER-2 pozitif mide/gastroözofageal bileşke adenokarsinomunda da onaylıdır.",
     "dogrulama": {
       "durum": "ders_isci",
       "destek": 1.0,
@@ -45261,7 +45267,7 @@
     "description": "VEGF'yi nötralize eden monoklonal antikor; kolorektal, akciğer ve böbrek hücreli karsinomda kombinasyon tedavilerinde kullanılır.",
     "discipline": "Tıbbi Patoloji",
     "committee": "",
-    "clinicalPearl": "Yaşamı genellikle aylar düzeyinde uzatır.",
+    "clinicalPearl": "Yaşamı genellikle aylar düzeyinde uzatır. · Cerrahi sonrası yara iyileşene kadar verilmez; hemoraji, GİS perforasyonu ve yara iyileşme sorunları açısından izlenir.",
     "dogrulama": {
       "durum": "ders_isci",
       "destek": 1.0,
@@ -51539,7 +51545,8 @@
         "sayfa": 34,
         "alinti": "Antiviral savunmada önemli – Enflamasyonun bazı sistemik belirtilerine katkıda bulunur"
       }
-    ]
+    ],
+    "clinicalPearl": "IFN-α: kıllı hücreli lösemi, KML, malign melanom, Kaposi sarkomu, hepatit B/C; IFN-β: multipl skleroz."
   },
   "kemokinler": {
     "term": "Kemokinler",
@@ -52466,7 +52473,8 @@
         "sayfa": 23,
         "alinti": "Transfüzyon reaksiyonları – Fetüs ve yenidoğanın hemolitik anemisi – Otoimmün hemolitik anemi"
       }
-    ]
+    ],
+    "clinicalPearl": "Sensitizasyon düşük veya ektopik gebelikte de olabilir; anti-D profilaksisi sonraki gebeliklerde hastalığı önler."
   },
   "otoimmün hemolitik anemi": {
     "term": "Otoimmün hemolitik anemi",
@@ -52689,7 +52697,8 @@
         "sayfa": 39,
         "alinti": "Prototip Tip IV reaksiyondur • Örnek: – Tüberkülin deri testi (PPD)"
       }
-    ]
+    ],
+    "clinicalPearl": "Antijene maruziyetten 2–3 gün sonra gelişir; tüberkülin testinde endürasyon ve kırmızılık oluşturur."
   },
   "tüberkülin deri testi (ppd)": {
     "term": "Tüberkülin deri testi (PPD)",
@@ -53390,7 +53399,8 @@
         "sayfa": 67,
         "alinti": "Rapamisin (sirolimus): • IL-2’ye T hücre proliferatif yanıtını engeller"
       }
-    ]
+    ],
+    "clinicalPearl": "Yalnız oral formu vardır (yarılanma ömrü yaklaşık 60 saat); nefrotoksik olmadığından transplantasyonda sık tercih edilir; ilaçlı koroner stentlerde kullanılır."
   },
   "siklosporin": {
     "term": "Siklosporin",
@@ -53414,7 +53424,8 @@
         "sayfa": 67,
         "alinti": "Siklosporin, takrolimus: • İnterlökin 2 (IL-2) gen transkripsiyonunu inhibe eder"
       }
-    ]
+    ],
+    "clinicalPearl": "Toksisiteleri: nefrotoksisite, hipertansiyon, hiperglisemi, hiperkalemi, hirsutizm, nöbet; metotreksatla birlikte GVHH profilaksisinde standart rejimdir."
   },
   "hiper-ıgm sendromu": {
     "term": "Hiper-IgM sendromu",
@@ -53534,7 +53545,8 @@
         "sayfa": 71,
         "alinti": "Azalmış oksidatif patlama; fagosit oksidazın membran bileşeninde defekt"
       }
-    ]
+    ],
+    "clinicalPearl": "Tedavide IFN-γ onaylıdır."
   },
   "miyeloperoksidaz eksikliği": {
     "term": "Miyeloperoksidaz eksikliği",
@@ -62814,7 +62826,8 @@
         "sayfa": 21,
         "alinti": "mTOR inhibitörü(Sirolimus/Everolimus) oEpilepsi tedavisinde antiepileptikler"
       }
-    ]
+    ],
+    "clinicalPearl": "Sirolimus ve everolimus FKBP-12'ye bağlanır ve oluşan kompleks mTOR'u inhibe ederek T hücre çoğalmasını azaltır."
   },
   "aksitinib": {
     "term": "Aksitinib",
@@ -69354,7 +69367,7 @@
     "description": "En az 6 ay kuru kaldıktan sonra yeniden başlayan noktürnal enürezis.",
     "discipline": "Üroloji",
     "committee": "",
-    "clinicalPearl": "Eşik 6 aylık kuru dönemdir; yaşam olayları, uyku apnesi ve yeni başlayan hastalıklar sorgulanır.",
+    "clinicalPearl": "Eşik 6 aylık kuru dönemdir; yaşam olayları, uyku apnesi ve yeni başlayan hastalıklar sorgulanır. · Aile bölünmesi, ayrılık, kardeş doğumu, taşınma, kaza gibi stres etkenleriyle ilişkilidir; yeni başlayan SNE'de idrar glukozu bakılır.",
     "aliases": [
       "SNE",
       "Sekonder enürezis"
@@ -69470,7 +69483,7 @@
     "description": "Çocukta yaşa göre tahmin edilen mesane kapasitesi: (yaş × 30) + 30 mL.",
     "discipline": "Üroloji",
     "committee": "",
-    "clinicalPearl": "Formül 400 mL yetişkin kapasitesine ulaşılana kadar geçerlidir.",
+    "clinicalPearl": "Formül 400 mL yetişkin kapasitesine ulaşılana kadar geçerlidir. · Formül: (yaş [yıl] × 30) + 30 mL; erişkin kapasitesi olan 400 mL'ye ulaşılana kadar geçerlidir.",
     "dogrulama": {
       "durum": "ders_isci",
       "destek": 1.0,
@@ -69495,7 +69508,7 @@
     "description": "Gece idrar hacminin yaşa göre beklenen mesane kapasitesinin en az %130'u olması.",
     "discipline": "Üroloji",
     "committee": "",
-    "clinicalPearl": "Gece idrarı = ıslak bez/çarşaf ağırlığı + sabah ilk idrar; desmopressin yanıtını öngörür.",
+    "clinicalPearl": "Gece idrarı = ıslak bez/çarşaf ağırlığı + sabah ilk idrar; desmopressin yanıtını öngörür. · Enürezisli bir gecede idrar hacminin (ıslak çarşaf/bez ağırlığı + sabah ilk idrar) yaşa göre beklenen mesane kapasitesinin ≥%130'u olmasıdır.",
     "aliases": [
       "Gece poliürisi"
     ],
@@ -69552,7 +69565,7 @@
     "description": "Mesanenin kasılma başlamadan önce gerçekte tuttuğu idrar hacmi.",
     "discipline": "Üroloji",
     "committee": "",
-    "clinicalPearl": "Enüreziste total kapasite normal, FMK düşüktür.",
+    "clinicalPearl": "Enüreziste total kapasite normal, FMK düşüktür. · Normal çocukta gece kapasitesi gündüzden fazladır (uykunun işeme merkezine inhibitör etkisi); enüreziste FMK düşüktür.",
     "aliases": [
       "FMK"
     ],
@@ -69814,7 +69827,7 @@
     "description": "Kabızlık için en az 4 hafta süreyle en az iki kriter: haftada ≤2 dışkılama, aşırı dışkı tutma, ağrılı/sert dışkılama, geniş çaplı dışkı, haftada ≥1 fekal inkontinans, rektumda büyük fekal kitle.",
     "discipline": "Üroloji",
     "committee": "",
-    "clinicalPearl": "Rektal kitle yalnız tanısal şüphede değerlendirilir.",
+    "clinicalPearl": "Rektal kitle yalnız tanısal şüphede değerlendirilir. · Enüretik çocukta bağırsak öyküsünde kullanılır; en az 4 hafta süreyle en az iki ölçüt gerekir.",
     "aliases": [
       "Roma IV"
     ],
@@ -69842,7 +69855,7 @@
     "description": "ICCS tarafından tanımlanan; sıvı alımı, işeme sıklığı, işeme hacimleri ve ek mesane semptomlarının kaydı.",
     "discipline": "Üroloji",
     "committee": "",
-    "clinicalPearl": "Tüm enüretiklerde önerilir, MoNE şüphesinde zorunludur; pratikte ardışık 2 gün tutulur.",
+    "clinicalPearl": "Tüm enüretiklerde önerilir, MoNE şüphesinde zorunludur; pratikte ardışık 2 gün tutulur. · İdeali 1 hafta, pratikte ardışık 2 gün tutulur; dışkılama alışkanlıkları en az 1 hafta kaydedilir; MoNE göstergesi varsa zorunludur.",
     "aliases": [
       "İşeme günlüğü",
       "Mesane günlüğü"
@@ -69899,7 +69912,7 @@
     "description": "İdrar yatak ya da giysideki dedektörü tetiklediğinde genellikle akustik uyarı veren cihaz.",
     "discipline": "Üroloji",
     "committee": "",
-    "clinicalPearl": "MNE'de birinci basamak (kanıt Ia); başarı %50–70; 6 haftada ilerleme yoksa bırakılır, 14 ardışık kuru geceye kadar sürdürülür.",
+    "clinicalPearl": "MNE'de birinci basamak (kanıt Ia); başarı %50–70; 6 haftada ilerleme yoksa bırakılır, 14 ardışık kuru geceye kadar sürdürülür. · Başarı oranı %50–70; 6 haftada ilerleme yoksa durdurulur, ilerleme varsa ardışık 14 kuru gece elde edilene kadar sürdürülür.",
     "aliases": [
       "Alarm tedavisi",
       "Enüretik alarm"
@@ -69928,7 +69941,7 @@
     "description": "Arginin vazopressinin sentetik analoğu; idrar üretimini azaltıp konsantrasyonunu artıran antidiüretik ilaç.",
     "discipline": "Üroloji",
     "committee": "",
-    "clinicalPearl": "MNE'de birinci basamak (kanıt Ia); habitüel polidipside kontrendike; aşırı sıvıda dilüsyonel hiponatremi; 1–2 haftada yanıt yoksa kesilir.",
+    "clinicalPearl": "MNE'de birinci basamak (kanıt Ia); habitüel polidipside kontrendike; aşırı sıvıda dilüsyonel hiponatremi; 1–2 haftada yanıt yoksa kesilir. · Standart doz tablet 0,2–0,4 mg, liyofilizat (melt) 120–240 µg; 1–2 hafta içinde yanıt yoksa kesilir.",
     "aliases": [
       "DDAVP"
     ],
@@ -69956,7 +69969,7 @@
     "description": "Alışkanlık haline gelmiş aşırı su içme.",
     "discipline": "Üroloji",
     "committee": "",
-    "clinicalPearl": "Desmopressin kullanımının kontrendikasyonudur.",
+    "clinicalPearl": "Desmopressin kullanımının kontrendikasyonudur. · Desmopressin habitüel polidipside kontrendikedir.",
     "dogrulama": {
       "durum": "ders_isci",
       "destek": 1.0,
@@ -70009,7 +70022,7 @@
     "description": "Dil altında eriyen, dondurularak kurutulmuş ilaç formu.",
     "discipline": "Üroloji",
     "committee": "",
-    "clinicalPearl": "Desmopressin liyofilizat dozu 120–240 µg; şemada başlangıç 120 mcg.",
+    "clinicalPearl": "Desmopressin liyofilizat dozu 120–240 µg; şemada başlangıç 120 mcg. · Başlangıç 120 mcg; 2 haftada kuruluk yoksa en fazla 240 mcg'a çıkılır; tam yanıtta 3 ay sürdürülür.",
     "aliases": [
       "Melt"
     ],
@@ -70037,7 +70050,7 @@
     "description": "Detrüsör aşırı aktivitesini baskılayan antikolinerjik ilaç.",
     "discipline": "Üroloji",
     "committee": "",
-    "clinicalPearl": "Enüreziste 2,5–5 mg, yatmadan 1 saat önce; desmopressinle kombine ikinci basamak.",
+    "clinicalPearl": "Enüreziste 2,5–5 mg, yatmadan 1 saat önce; desmopressinle kombine ikinci basamak. · Enüreziste yatmadan 1 saat önce oral 2,5–5 mg; desmopressinle kombinasyonda ikinci basamak.",
     "dogrulama": {
       "durum": "ders_isci",
       "destek": 1.0,
@@ -70062,7 +70075,7 @@
     "description": "Antikolinerjik ilaç; enüreziste önerilen doz 2–4 mg.",
     "discipline": "Üroloji",
     "committee": "",
-    "clinicalPearl": "Henüz çocuklarda kullanım için onaylanmamıştır.",
+    "clinicalPearl": "Henüz çocuklarda kullanım için onaylanmamıştır. · Enürezis için önerilen doz 2–4 mg; henüz çocuklarda kullanım onayı yoktur.",
     "dogrulama": {
       "durum": "ders_isci",
       "destek": 1.0,
@@ -70162,7 +70175,7 @@
     "description": "Trisiklik antidepresan; enüreziste diğer tüm tedaviler başarısız/kontrendike olduğunda uzman eliyle üçüncü basamak tedavi.",
     "discipline": "Üroloji",
     "committee": "",
-    "clinicalPearl": "Kullanımı kısıtlayan en önemli faktör kardiyotoksisite; 25–50 mg yatmadan 1 saat önce, yanıt 1 ayda değerlendirilir.",
+    "clinicalPearl": "Kullanımı kısıtlayan en önemli faktör kardiyotoksisite; 25–50 mg yatmadan 1 saat önce, yanıt 1 ayda değerlendirilir. · Enüreziste üçüncü basamak; yatmadan ~1 saat önce 25–50 mg; dirençli olguların %30–50'si yararlanır, yanıt 1 ay sonra değerlendirilir.",
     "dogrulama": {
       "durum": "ders_isci",
       "destek": 1.0,
@@ -70215,7 +70228,7 @@
     "description": "Uykuda üst hava yolunun tekrarlayan tıkanması.",
     "discipline": "Üroloji",
     "committee": "",
-    "clinicalPearl": "Gece ANP artışıyla noktürnal poliüri ve sıklıkla sekonder enürezis yapar; ağır horlamada KBB'ye yönlendirilir.",
+    "clinicalPearl": "Gece ANP artışıyla noktürnal poliüri ve sıklıkla sekonder enürezis yapar; ağır horlamada KBB'ye yönlendirilir. · Gece ANP salınımını artırıp natriürez ve noktürnal poliüri yaparak sekonder enürezise neden olabilir; ağır horlamada KBB'ye yönlendirilir.",
     "aliases": [
       "Uyku apnesi"
     ],
@@ -72756,7 +72769,7 @@
     "description": "22q11.2 bölgesindeki interstisyel mikrodelesyona bağlı, timusun gelişmemesi sonucu T hücre yetmezliğiyle seyreden kalıtsal primer immün yetmezlik sendromudur.",
     "discipline": "Tıbbi Patoloji",
     "committee": "",
-    "clinicalPearl": "DiGeorge: 22q11.2 delesyonu; timus hipoplazisi, T hücre yetmezliği.",
+    "clinicalPearl": "DiGeorge: 22q11.2 delesyonu; timus hipoplazisi, T hücre yetmezliği. · 22. kromozom bozukluğu → timus gelişmez → T hücreleri azalır; B hücreleri kısmen korunur ama T yardımı yetersizdir.",
     "dogrulama": {
       "durum": "sozluk_v2",
       "destek": 1.0,
@@ -75434,7 +75447,7 @@
     "description": "İmmünofilinlere bağlanarak sitoplazmik fosfataz kalsinörini inhibe eden ve T hücre aktivasyonunu erken aşamada bloke eden, siklosporin ve takrolimustan oluşan immünosupresif ilaç grubudur.",
     "discipline": "Tıbbi Farmakoloji",
     "committee": "",
-    "clinicalPearl": "Takrolimus immün yanıtları inhibe etmede siklosporinden 10-100 kat daha etkindir.",
+    "clinicalPearl": "Takrolimus immün yanıtları inhibe etmede siklosporinden 10-100 kat daha etkindir. · Takrolimus siklosporinden 10–100 kat güçlüdür; her ikisinin ana endişesi nefrotoksisitedir.",
     "dogrulama": {
       "durum": "sozluk_v2",
       "destek": 1.0,
@@ -75507,7 +75520,7 @@
     "description": "Penicillium glaucus küfünden elde edilen mikofenolik asidin semisentetik türevi olup pürinlerin de novo sentezini inhibe ederek T ve B lenfosit yanıtlarını baskılayan immünosupresif ilaçtır.",
     "discipline": "Tıbbi Farmakoloji",
     "committee": "",
-    "clinicalPearl": "Mikofenolat mofetil antiproliferatif etkisiyle kardiyak transplantta kronik allograft vaskülopatiyi azaltmada ilk seçenektir.",
+    "clinicalPearl": "Mikofenolat mofetil antiproliferatif etkisiyle kardiyak transplantta kronik allograft vaskülopatiyi azaltmada ilk seçenektir. · Kardiyak transplantta kronik allograft vaskülopatisini önlemede ilk seçenektir; geçici miyelosupresyon (özellikle nötropeni) yapar.",
     "aliases": [
       "MMF"
     ],
@@ -75545,7 +75558,7 @@
     "description": "Gebelikteki yıkıcı teratojenik etkileri nedeniyle 1960'larda piyasadan çekilen sedatif talidomid ile ondan türeyen lenalidomid ve pomalidomidi kapsayan, başta multipl miyelomda kullanılan immünomodülatör ilaçlardır.",
     "discipline": "Tıbbi Farmakoloji",
     "committee": "",
-    "clinicalPearl": "Talidomid + deksametazon multipl miyelomda yaklaşık %90 yanıt oranı sağlar.",
+    "clinicalPearl": "Talidomid + deksametazon multipl miyelomda yaklaşık %90 yanıt oranı sağlar. · Deksametazonla multipl miyelomda yanıt yaklaşık %90; yan etkiler: teratojenite, periferik nöropati, konstipasyon, hipotiroidi, DVT riski.",
     "aliases": [
       "Talidomid"
     ],
@@ -75621,7 +75634,7 @@
     "description": "Binlerce sağlıklı vericinin plazma havuzundan hazırlanan, tek bir spesifik hedefi olmayan poliklonal insan IgG preparatının damar yoluyla yüksek dozda uygulanmasıdır.",
     "discipline": "Tıbbi Farmakoloji",
     "committee": "",
-    "clinicalPearl": "Yüksek doz IGIV (2 g/kg) SLE ve refrakter ITP'de iyi klinik yanıt sağlar.",
+    "clinicalPearl": "Yüksek doz IGIV (2 g/kg) SLE ve refrakter ITP'de iyi klinik yanıt sağlar. · Yüksek dozda (2 g/kg) kullanılır; refrakter İTP ve SLE'de iyi yanıt verir; tek bir spesifik hedefi yoktur.",
     "aliases": [
       "IGIV",
       "İmmün globulin intravenöz"
@@ -75708,7 +75721,7 @@
     "description": "IL-1 ve TNF-α gibi proinflamatuvar sitokinlerin ya da reseptörlerinin etkisini bloke ederek septik şok ve inflamatuvar hastalıklarda immünomodülasyon sağlayan biyolojik ilaçlardır.",
     "discipline": "Tıbbi Farmakoloji",
     "committee": "",
-    "clinicalPearl": "Kanakinumab anti-IL-1β antikorudur; dirençli FMF ve akut gutta kullanılır, yalnız cilt altına uygulanır.",
+    "clinicalPearl": "Kanakinumab anti-IL-1β antikorudur; dirençli FMF ve akut gutta kullanılır, yalnız cilt altına uygulanır. · Anakinra (IL-1) DMARD'a yanıtsız RA'da; kanakinumab (anti-IL-1β) kolşisine dirençli FMF ve akut gutta kullanılır.",
     "dogrulama": {
       "durum": "sozluk_v2",
       "destek": 1.0,
@@ -76886,7 +76899,7 @@
     "description": "Virüs veya toksin gibi belirli ajanlara karşı yüksek titrede antikoru olan seçilmiş insan ya da hayvan vericilerinden hazırlanan, pasif bağışıklama sağlayan IGIV preparatlarıdır.",
     "discipline": "Tıbbi Farmakoloji",
     "committee": "",
-    "clinicalPearl": "Kuduz hiperimmünoglobulini yara çevresine de uygulanır.",
+    "clinicalPearl": "Kuduz hiperimmünoglobulini yara çevresine de uygulanır. · RSV, CMV, VZV, hepatit B, kuduz, tetanoz ve digoksin zehirlenmesinde kullanılır; kuduz hiperimmünoglobulini yara çevresine de uygulanır.",
     "aliases": [
       "Hiperimmün immünglobulin"
     ],
@@ -78071,7 +78084,7 @@
     "description": "Tek bir antijene yüksek afinite ve özgüllükle bağlanan, moleküler biyoloji ile üretilen antikorlar ve fragmanlarıdır; antitümör, antianjiyojenik ve immünomodülatör amaçlarla kullanılır.",
     "discipline": "Tıbbi Farmakoloji",
     "committee": "",
-    "clinicalPearl": "-zumab/-umab insansılaştırılmış, -ksimab/-imab kimerik antikoru gösterir.",
+    "clinicalPearl": "-zumab/-umab insansılaştırılmış, -ksimab/-imab kimerik antikoru gösterir. · \"-umab/-zumab\" insansılaştırılmış, \"-imab/-ksimab\" kimerik antikorları gösterir; fare antikorları HAMA oluşturur.",
     "aliases": [
       "MAB"
     ],
@@ -82994,7 +83007,7 @@
     "description": "Rh0(D) antijenine karşı yüksek titrede antikor içeren konsantre insan IgG solüsyonudur; Rh-negatif annenin sensitizasyonunu önleyerek yenidoğanın Rh hemolitik hastalığını engeller.",
     "discipline": "Tıbbi Farmakoloji",
     "committee": "",
-    "clinicalPearl": "Anti-D, Rh-pozitif bebeğin doğumundan sonra 24-72 saat içinde Rh-negatif anneye verilir.",
+    "clinicalPearl": "Anti-D, Rh-pozitif bebeğin doğumundan sonra 24-72 saat içinde Rh-negatif anneye verilir. · Doğumdan sonraki 24–72 saatte verilir; fetal eritrositleri anne B hücre yanıtı oluşmadan temizler; %15'lik IgG solüsyonudur.",
     "aliases": [
       "Anti-D immünoglobulin"
     ],
@@ -88136,6 +88149,3271 @@
         "kurul": 1,
         "sayfa": 23,
         "alinti": "pürülan, kirli koyu yeşil, sarı renkli"
+      }
+    ]
+  },
+  "noktürnal detrusor hiperaktivitesi": {
+    "term": "Noktürnal detrusor hiperaktivitesi",
+    "category": "fizyoloji",
+    "definition": "Uyku sırasında mesane dolum evresinde istemsiz detrusor kontraksiyonlarının ortaya çıkmasıdır; fonksiyonel mesane kapasitesini düşürerek gece ıslatmaya yol açar.",
+    "description": "Uyku sırasında mesane dolum evresinde istemsiz detrusor kontraksiyonlarının ortaya çıkmasıdır; fonksiyonel mesane kapasitesini düşürerek gece ıslatmaya yol açar.",
+    "discipline": "Üroloji",
+    "committee": "",
+    "clinicalPearl": "Ürodinamide total kapasite normal, fonksiyonel kapasite düşüktür; bu hastalarda desmopressine yanıt zayıftır ve antikolinerjik eklenmesi düşünülür.",
+    "aliases": [
+      "gece detrusor aşırı aktivitesi"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261012-16d68a2d76"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Üroloji/6)Enürezis.pdf",
+        "ders": "Üroloji",
+        "kurul": 1,
+        "sayfa": 13,
+        "alinti": "Enürezisli çocukların büyük bir kısmında detrusor instabilitesi ve uzun süreli ve yüksek basınçta kontraksiyonlara bağlı olarak FMK’de azalma olduğu bildirilmiştir"
+      }
+    ]
+  },
+  "işeme disfonksiyonu": {
+    "term": "İşeme disfonksiyonu",
+    "category": "terim",
+    "definition": "İşeme sırasında pelvik taban/eksternal sfinkterin gevşeyememesi sonucu kesik kesik, zorlanarak işeme ile seyreden fonksiyonel gündüz inkontinansı tipidir.",
+    "description": "İşeme sırasında pelvik taban/eksternal sfinkterin gevşeyememesi sonucu kesik kesik, zorlanarak işeme ile seyreden fonksiyonel gündüz inkontinansı tipidir.",
+    "discipline": "Üroloji",
+    "committee": "",
+    "clinicalPearl": "Rezidü idrar ve kabızlıkla birliktelik sıktır; antikolinerjik vermeden önce rezidü dışlanmalıdır.",
+    "aliases": [
+      "disfonksiyonel işeme"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261012-16d68a2d76"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Üroloji/6)Enürezis.pdf",
+        "ders": "Üroloji",
+        "kurul": 1,
+        "sayfa": 4,
+        "alinti": "Detrusor hiperaktivitesi \\ Uyanma güçlüğü 1 | lseme disfonksiyonu"
+      }
+    ]
+  },
+  "işemeyi erteleme": {
+    "term": "İşemeyi erteleme",
+    "category": "terim",
+    "definition": "Çocuğun işeme ihtiyacını tutma manevralarıyla (çömelme, bacak çaprazlama) alışkanlık hâlinde geciktirmesiyle oluşan fonksiyonel inkontinans tipidir.",
+    "description": "Çocuğun işeme ihtiyacını tutma manevralarıyla (çömelme, bacak çaprazlama) alışkanlık hâlinde geciktirmesiyle oluşan fonksiyonel inkontinans tipidir.",
+    "discipline": "Üroloji",
+    "committee": "",
+    "clinicalPearl": "Öyküde çömelme ve tutma manevraları sorgulanmalıdır.",
+    "aliases": [
+      "tutma manevrası",
+      "voiding postponement"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261012-16d68a2d76"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Üroloji/6)Enürezis.pdf",
+        "ders": "Üroloji",
+        "kurul": 1,
+        "sayfa": 4,
+        "alinti": "Detrusor hiperaktivitesi \\ Uyanma güçlüğü 1 | lseme disfonksiyonu / İşemeyi erteleme(tutma manevrası)"
+      }
+    ]
+  },
+  "gündüz inkontinansı": {
+    "term": "Gündüz inkontinansı",
+    "category": "terim",
+    "definition": "Uyanıkken istemsiz idrar kaçırmadır; varlığı enürezisi monosemptomatik olmayan (MoNE) gruba sokar.",
+    "description": "Uyanıkken istemsiz idrar kaçırmadır; varlığı enürezisi monosemptomatik olmayan (MoNE) gruba sokar.",
+    "discipline": "Üroloji",
+    "committee": "",
+    "clinicalPearl": "Gündüz alt üriner sistem semptomları gece ıslatmaya yönelmeden önce tedavi edilmelidir.",
+    "aliases": [
+      "diürnal inkontinans"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261012-16d68a2d76"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Üroloji/6)Enürezis.pdf",
+        "ders": "Üroloji",
+        "kurul": 1,
+        "sayfa": 21,
+        "alinti": "Ayrıca, gündüz inkontinansının daha erken yaşlarda tedavi edilmesi gerekebilir"
+      }
+    ]
+  },
+  "uyarılma eşiği": {
+    "term": "Uyarılma eşiği",
+    "category": "fizyoloji",
+    "definition": "Uyuyan bireyi uyandırmak için gereken uyaran şiddetidir; enüretik çocuklarda artmıştır ve mesane doluluk sinyaline uyanılamaz.",
+    "description": "Uyuyan bireyi uyandırmak için gereken uyaran şiddetidir; enüretik çocuklarda artmıştır ve mesane doluluk sinyaline uyanılamaz.",
+    "discipline": "Üroloji",
+    "committee": "",
+    "clinicalPearl": "Artmış uyarılma eşiği iyi uyku anlamına gelmez; enüretik çocukların uyku kalitesi genellikle kötüdür.",
+    "aliases": [
+      "arousal eşiği"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261012-16d68a2d76"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Üroloji/6)Enürezis.pdf",
+        "ders": "Üroloji",
+        "kurul": 1,
+        "sayfa": 11,
+        "alinti": "Artan uyarılma eşikleri, bu çocukların iyi uyudukları anlamına gelmez"
+      }
+    ]
+  },
+  "total mesane kapasitesi": {
+    "term": "Total mesane kapasitesi",
+    "category": "fizyoloji",
+    "definition": "Mesanenin anestezi ya da ürodinamik dolum altında alabildiği en yüksek hacimdir; günlük işemelerle ölçülen fonksiyonel kapasiteden farklıdır.",
+    "description": "Mesanenin anestezi ya da ürodinamik dolum altında alabildiği en yüksek hacimdir; günlük işemelerle ölçülen fonksiyonel kapasiteden farklıdır.",
+    "discipline": "Üroloji",
+    "committee": "",
+    "clinicalPearl": "Enüreziste total kapasite normal, fonksiyonel kapasite düşüktür.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261012-16d68a2d76"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Üroloji/6)Enürezis.pdf",
+        "ders": "Üroloji",
+        "kurul": 1,
+        "sayfa": 13,
+        "alinti": "total mesane kapasitesinin normal ancak fonksiyonel mesane kapasitesinin (FMK) düşük olduğu gösterilmiştir"
+      }
+    ]
+  },
+  "ürodinami": {
+    "term": "Ürodinami",
+    "category": "tani",
+    "definition": "Mesanenin dolum ve boşaltım evrelerinde basınç, hacim ve akım ilişkisini ölçen fonksiyonel inceleme yöntemidir.",
+    "description": "Mesanenin dolum ve boşaltım evrelerinde basınç, hacim ve akım ilişkisini ölçen fonksiyonel inceleme yöntemidir.",
+    "discipline": "Üroloji",
+    "committee": "",
+    "clinicalPearl": "MNE'de gerekmez; gündüz semptomu olan seçilmiş olgularda yapılır.",
+    "aliases": [
+      "ürodinamik çalışma"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261012-16d68a2d76"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Üroloji/6)Enürezis.pdf",
+        "ders": "Üroloji",
+        "kurul": 1,
+        "sayfa": 13,
+        "alinti": "Enürezis noktürnalı hastalarda yapılan ürodinamik çalışmalarda total mesane kapasitesinin normal"
+      }
+    ]
+  },
+  "işeme sistogramı": {
+    "term": "İşeme sistogramı",
+    "category": "tani",
+    "definition": "Mesaneye kontrast verilerek işeme sırasında mesane ve üretranın floroskopik görüntülendiği incelemedir; reflü ve üretral obstrüksiyonu gösterir.",
+    "description": "Mesaneye kontrast verilerek işeme sırasında mesane ve üretranın floroskopik görüntülendiği incelemedir; reflü ve üretral obstrüksiyonu gösterir.",
+    "discipline": "Üroloji",
+    "committee": "",
+    "clinicalPearl": "Enüreziste rutin değildir; yalnız gerektiğinde, gündüz semptomlu olgularda yapılır.",
+    "aliases": [
+      "işeme sistoüretrografisi",
+      "VCUG"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261012-16d68a2d76"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Üroloji/6)Enürezis.pdf",
+        "ders": "Üroloji",
+        "kurul": 1,
+        "sayfa": 20,
+        "alinti": "işeme sonrası rezidüel idrar bakılması, gerektiğinde işeme sistogramı, sistoskopi, ürodinami"
+      }
+    ]
+  },
+  "mesane duvar kalınlığı": {
+    "term": "Mesane duvar kalınlığı",
+    "category": "tani",
+    "definition": "Ultrasonografi ile ölçülen detrusor duvarı kalınlığıdır; artışı detrusor aşırı aktivitesi veya çıkım obstrüksiyonunu düşündürür.",
+    "description": "Ultrasonografi ile ölçülen detrusor duvarı kalınlığıdır; artışı detrusor aşırı aktivitesi veya çıkım obstrüksiyonunu düşündürür.",
+    "discipline": "Üroloji",
+    "committee": "",
+    "clinicalPearl": "Gündüz semptomları olan enüretik çocukta ultrasonografik olarak değerlendirilir.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261012-16d68a2d76"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Üroloji/6)Enürezis.pdf",
+        "ders": "Üroloji",
+        "kurul": 1,
+        "sayfa": 20,
+        "alinti": "Gündüz semptomları olanlarda ultrasonografi ile mesane duvar kalınlığının ölçülmesi"
+      }
+    ]
+  },
+  "lökositüri": {
+    "term": "Lökositüri",
+    "category": "tani",
+    "definition": "İdrarda artmış lökosit bulunmasıdır; idrar yolu enfeksiyonunu düşündürür.",
+    "description": "İdrarda artmış lökosit bulunmasıdır; idrar yolu enfeksiyonunu düşündürür.",
+    "discipline": "Üroloji",
+    "committee": "",
+    "clinicalPearl": "Klinik İYE şüphesinde lökositüri veya pozitif nitrit idrar kültürüne yönlendirir.",
+    "aliases": [
+      "piyüri"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261012-16d68a2d76"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Üroloji/6)Enürezis.pdf",
+        "ders": "Üroloji",
+        "kurul": 1,
+        "sayfa": 20,
+        "alinti": "Klinik İYE şüphesi durumunda, lökositüri veya pozitif nitrit testi idrar kültürüne yönlendirmelidir"
+      }
+    ]
+  },
+  "glukozüri": {
+    "term": "Glukozüri",
+    "category": "tani",
+    "definition": "İdrarda glukoz saptanmasıdır; çocukta poliüri ve sekonder enürezisle birlikteyse diabetes mellitusu düşündürür.",
+    "description": "İdrarda glukoz saptanmasıdır; çocukta poliüri ve sekonder enürezisle birlikteyse diabetes mellitusu düşündürür.",
+    "discipline": "Üroloji",
+    "committee": "",
+    "clinicalPearl": "Enüreziste kan tetkiki yalnız glukozüri veya poliürik böbrek yetmezliğini düşündüren uyarı işaretleri varsa yapılır.",
+    "aliases": [
+      "glikozüri"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261012-16d68a2d76"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Üroloji/6)Enürezis.pdf",
+        "ders": "Üroloji",
+        "kurul": 1,
+        "sayfa": 20,
+        "alinti": "Kan örnekleri yalnızca glukozüri veya poliürik böbrek yetmezliğini düşündüren genel uyarı işaretleri varsa endikedir"
+      }
+    ]
+  },
+  "poliürik böbrek yetmezliği": {
+    "term": "Poliürik böbrek yetmezliği",
+    "category": "hastalik",
+    "definition": "İdrar konsantrasyon yeteneğinin kaybıyla fazla miktarda dilüe idrar üretilen kronik böbrek yetmezliği tablosudur.",
+    "description": "İdrar konsantrasyon yeteneğinin kaybıyla fazla miktarda dilüe idrar üretilen kronik böbrek yetmezliği tablosudur.",
+    "discipline": "Üroloji",
+    "committee": "",
+    "clinicalPearl": "Kilo kaybı, büyüme geriliği ve bulantı varsa kreatinin bakılmalıdır.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261012-16d68a2d76"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Üroloji/6)Enürezis.pdf",
+        "ders": "Üroloji",
+        "kurul": 1,
+        "sayfa": 20,
+        "alinti": "Kan örnekleri yalnızca glukozüri veya poliürik böbrek yetmezliğini düşündüren genel uyarı işaretleri varsa endikedir"
+      }
+    ]
+  },
+  "tam idrar tetkiki": {
+    "term": "Tam idrar tetkiki",
+    "category": "tani",
+    "definition": "İdrarın fiziksel, kimyasal (dansite, glukoz, nitrit, lökosit esteraz) ve mikroskobik incelemesidir.",
+    "description": "İdrarın fiziksel, kimyasal (dansite, glukoz, nitrit, lökosit esteraz) ve mikroskobik incelemesidir.",
+    "discipline": "Üroloji",
+    "committee": "",
+    "clinicalPearl": "MNE'li çocukta önerilen tek laboratuvar incelemesidir; DM, Dİ, İYE ve kronik böbrek yetmezliği ayırıcı tanısını sağlar.",
+    "aliases": [
+      "tam idrar bakısı"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261012-16d68a2d76"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Üroloji/6)Enürezis.pdf",
+        "ders": "Üroloji",
+        "kurul": 1,
+        "sayfa": 20,
+        "alinti": "MNE’ li çocuklarda tam idrar bakısı gerek uluslararası gerekse ulusal rehberde tek önerilen laboratuvar incelemesidir"
+      }
+    ]
+  },
+  "idrar kültürü": {
+    "term": "İdrar kültürü",
+    "category": "tani",
+    "definition": "İdrar örneğinin besiyerine ekilerek üreyen bakterinin tür ve koloni sayısının belirlenmesidir.",
+    "description": "İdrar örneğinin besiyerine ekilerek üreyen bakterinin tür ve koloni sayısının belirlenmesidir.",
+    "discipline": "Üroloji",
+    "committee": "",
+    "clinicalPearl": "Lökositüri veya nitrit pozitifliği enüretik çocukta kültür istemini gerektirir.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261012-16d68a2d76"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Üroloji/6)Enürezis.pdf",
+        "ders": "Üroloji",
+        "kurul": 1,
+        "sayfa": 20,
+        "alinti": "lökositüri veya pozitif nitrit testi idrar kültürüne yönlendirmelidir"
+      }
+    ]
+  },
+  "sakral refleks arkı": {
+    "term": "Sakral refleks arkı",
+    "category": "anatomi",
+    "definition": "S2–S4 segmentleri üzerinden işleyen, anal sfinkter tonusu, perianal ve bulbokavernöz refleksleri sağlayan refleks yoludur.",
+    "description": "S2–S4 segmentleri üzerinden işleyen, anal sfinkter tonusu, perianal ve bulbokavernöz refleksleri sağlayan refleks yoludur.",
+    "discipline": "Üroloji",
+    "committee": "",
+    "clinicalPearl": "Enüretik çocukta nörolojik muayenede anal tonus ve perianal refleks ile sakral arkın sağlamlığı değerlendirilir.",
+    "aliases": [
+      "perianal refleks",
+      "anal refleks"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261012-16d68a2d76"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Üroloji/6)Enürezis.pdf",
+        "ders": "Üroloji",
+        "kurul": 1,
+        "sayfa": 18,
+        "alinti": "Nörolojik muayene ile sakral refleks arkının sağlamlığı (anal sfinkter tonusu, perianal refleks), yürüyüş değerlendirilmelidir"
+      }
+    ]
+  },
+  "gergin omurilik sendromu": {
+    "term": "Gergin omurilik sendromu",
+    "category": "hastalik",
+    "definition": "Konus medullarisin kalınlaşmış filum terminale veya lipom gibi yapılarla aşağıya fikse olması sonucu ilerleyici nörolojik ve mesane işlev bozukluğudur.",
+    "description": "Konus medullarisin kalınlaşmış filum terminale veya lipom gibi yapılarla aşağıya fikse olması sonucu ilerleyici nörolojik ve mesane işlev bozukluğudur.",
+    "discipline": "Üroloji",
+    "committee": "",
+    "clinicalPearl": "Sırtta kıllanma veya cilt renk değişikliği gizli spinal disrafizmi düşündürür; nörolojik bulgu varsa spinal MRG yapılır.",
+    "aliases": [
+      "tethered cord"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261012-16d68a2d76"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Üroloji/6)Enürezis.pdf",
+        "ders": "Üroloji",
+        "kurul": 1,
+        "sayfa": 4,
+        "alinti": "Spina Bifida, Gergin omurilik, sakral malformasyon,"
+      }
+    ]
+  },
+  "imperfore anüs": {
+    "term": "İmperfore anüs",
+    "category": "hastalik",
+    "definition": "Anal açıklığın doğumsal yokluğu ile seyreden anorektal malformasyondur; sakral anomali ve nörojenik mesaneyle birlikte olabilir.",
+    "description": "Anal açıklığın doğumsal yokluğu ile seyreden anorektal malformasyondur; sakral anomali ve nörojenik mesaneyle birlikte olabilir.",
+    "discipline": "Üroloji",
+    "committee": "",
+    "clinicalPearl": "Nörojenik mesane nedenleri arasında sayılır.",
+    "aliases": [
+      "anorektal malformasyon"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261012-16d68a2d76"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Üroloji/6)Enürezis.pdf",
+        "ders": "Üroloji",
+        "kurul": 1,
+        "sayfa": 4,
+        "alinti": "serebral palsi, spinal kord tümörleri, imperfore anüs, travma"
+      }
+    ]
+  },
+  "ekstrofi-epispadias kompleksi": {
+    "term": "Ekstrofi-epispadias kompleksi",
+    "category": "hastalik",
+    "definition": "Mesane ve/veya üretranın ön duvarının kapanmaması ile karakterize, mesane ekstrofisi ve epispadiası içeren doğumsal anomali yelpazesidir.",
+    "description": "Mesane ve/veya üretranın ön duvarının kapanmaması ile karakterize, mesane ekstrofisi ve epispadiası içeren doğumsal anomali yelpazesidir.",
+    "discipline": "Üroloji",
+    "committee": "",
+    "clinicalPearl": "Çocuklarda yapısal (anatomik) inkontinans nedenidir.",
+    "aliases": [
+      "mesane ekstrofisi"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261012-16d68a2d76"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Üroloji/6)Enürezis.pdf",
+        "ders": "Üroloji",
+        "kurul": 1,
+        "sayfa": 4,
+        "alinti": "Spina Bifida, Gergin omurilik, sakral malformasyon, Anatomik anomaliler Ekstrofi epispadias kompleksi"
+      }
+    ]
+  },
+  "kloaka anomalisi": {
+    "term": "Kloaka anomalisi",
+    "category": "hastalik",
+    "definition": "Kız çocuklarda üretra, vajina ve rektumun tek ortak kanala açıldığı ağır doğumsal anomalidir.",
+    "description": "Kız çocuklarda üretra, vajina ve rektumun tek ortak kanala açıldığı ağır doğumsal anomalidir.",
+    "discipline": "Üroloji",
+    "committee": "",
+    "clinicalPearl": "Yapısal inkontinans nedenleri arasında yer alır.",
+    "aliases": [
+      "persistan kloaka"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261012-16d68a2d76"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Üroloji/6)Enürezis.pdf",
+        "ders": "Üroloji",
+        "kurul": 1,
+        "sayfa": 4,
+        "alinti": "Ektopik üreter ve üreterosel Kloaka anomalileri"
+      }
+    ]
+  },
+  "siringosel": {
+    "term": "Siringosel",
+    "category": "hastalik",
+    "definition": "Cowper (bulboüretral) bezi kanalının kistik genişlemesidir; erkek çocukta üretral obstrüksiyon ve işeme yakınması yapabilir.",
+    "description": "Cowper (bulboüretral) bezi kanalının kistik genişlemesidir; erkek çocukta üretral obstrüksiyon ve işeme yakınması yapabilir.",
+    "discipline": "Üroloji",
+    "committee": "",
+    "clinicalPearl": "Üretral valv ile birlikte yapısal inkontinans nedenleri arasında sayılır.",
+    "aliases": [
+      "Cowper kanalı kisti"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261012-16d68a2d76"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Üroloji/6)Enürezis.pdf",
+        "ders": "Üroloji",
+        "kurul": 1,
+        "sayfa": 4,
+        "alinti": "Ektopik üreter ve üreterosel Kloaka anomalileri Üretral valv, siringosel"
+      }
+    ]
+  },
+  "uluslararası çocuk kontinans derneği (ıccs)": {
+    "term": "Uluslararası Çocuk Kontinans Derneği (ICCS)",
+    "category": "terim",
+    "definition": "Çocukluk çağı alt üriner sistem bozukluklarının terminoloji ve tedavi kılavuzlarını yayımlayan uluslararası bilimsel kuruluştur.",
+    "description": "Çocukluk çağı alt üriner sistem bozukluklarının terminoloji ve tedavi kılavuzlarını yayımlayan uluslararası bilimsel kuruluştur.",
+    "discipline": "Üroloji",
+    "committee": "",
+    "clinicalPearl": "ICCS işeme çizelgesini tüm enüretik çocuklarda önerir, MoNE şüphesinde zorunlu tutar.",
+    "aliases": [
+      "ICCS",
+      "International Children's Continence Society"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261012-16d68a2d76"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Üroloji/6)Enürezis.pdf",
+        "ders": "Üroloji",
+        "kurul": 1,
+        "sayfa": 19,
+        "alinti": "Uluslararası Çocuk Kontinans Derneği (ICCS) tarafından tanımlanan işeme çizelgesi, tüm enüretik çocukların ilk değerlendirmesinde tavsiye edilir"
+      }
+    ]
+  },
+  "kanıt düzeyi ıa": {
+    "term": "Kanıt düzeyi Ia",
+    "category": "terim",
+    "definition": "Randomize kontrollü çalışmaların meta-analizine dayanan en yüksek kanıt düzeyidir.",
+    "description": "Randomize kontrollü çalışmaların meta-analizine dayanan en yüksek kanıt düzeyidir.",
+    "discipline": "Üroloji",
+    "committee": "",
+    "clinicalPearl": "Enürezis alarmı, desmopressin ve imipramin kanıt düzeyi Ia olan tedavilerdir.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261012-16d68a2d76"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Üroloji/6)Enürezis.pdf",
+        "ders": "Üroloji",
+        "kurul": 1,
+        "sayfa": 26,
+        "alinti": "Enürezis alarmı (kanıt düzeyi Ia) Desmopressin (kanıt düzeyi Ia)"
+      }
+    ]
+  },
+  "su intoksikasyonu": {
+    "term": "Su intoksikasyonu",
+    "category": "patoloji",
+    "definition": "Böbreğin atabileceğinden fazla su alımı sonucu gelişen, dilüsyonel hiponatremi ve beyin ödemiyle seyreden tablodur.",
+    "description": "Böbreğin atabileceğinden fazla su alımı sonucu gelişen, dilüsyonel hiponatremi ve beyin ödemiyle seyreden tablodur.",
+    "discipline": "Üroloji",
+    "committee": "",
+    "clinicalPearl": "Desmopressin kullanan çocukta aşırı sıvı alımı su intoksikasyonuna yol açabilir; akşam sıvı kısıtlanmalıdır.",
+    "aliases": [
+      "suya bağlı zehirlenme"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261012-16d68a2d76"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Üroloji/6)Enürezis.pdf",
+        "ders": "Üroloji",
+        "kurul": 1,
+        "sayfa": 31,
+        "alinti": "Aşırı sıvı alımı durumunda dilisyonel hiponatremi ile su intoksikasyonu ortaya çıkabilir, sıvı alımı kısıtlanmalı"
+      }
+    ]
+  },
+  "kardiyotoksisite": {
+    "term": "Kardiyotoksisite",
+    "category": "patoloji",
+    "definition": "İlaç ya da maddenin kalpte ileti bozukluğu, aritmi veya kontraktil işlev kaybı yapan toksik etkisidir.",
+    "description": "İlaç ya da maddenin kalpte ileti bozukluğu, aritmi veya kontraktil işlev kaybı yapan toksik etkisidir.",
+    "discipline": "Üroloji",
+    "committee": "",
+    "clinicalPearl": "Trisiklik antidepresanların enüreziste kullanımını kısıtlayan en önemli faktördür.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261012-16d68a2d76"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Üroloji/6)Enürezis.pdf",
+        "ders": "Üroloji",
+        "kurul": 1,
+        "sayfa": 37,
+        "alinti": "Enüreziste trisikliklerin kullanımını kısıtlayan en önemli faktör kardiyotoksisitedir"
+      }
+    ]
+  },
+  "antienüretik tedavi": {
+    "term": "Antienüretik tedavi",
+    "category": "tedavi",
+    "definition": "Gece yatak ıslatmayı doğrudan hedefleyen spesifik tedavilerdir; alarm, desmopressin, antikolinerjikler ve imipramin bu gruptadır.",
+    "description": "Gece yatak ıslatmayı doğrudan hedefleyen spesifik tedavilerdir; alarm, desmopressin, antikolinerjikler ve imipramin bu gruptadır.",
+    "discipline": "Üroloji",
+    "committee": "",
+    "clinicalPearl": "Gündüz semptomları önemsiz çocukta spesifik antienüretik tedavi geciktirilmeden başlanmalıdır.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261012-16d68a2d76"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Üroloji/6)Enürezis.pdf",
+        "ders": "Üroloji",
+        "kurul": 1,
+        "sayfa": 25,
+        "alinti": "olan çocukta spesifik antienüretik tedavi geciktirmeden başlanmalıdır"
+      }
+    ]
+  },
+  "spontan remisyon": {
+    "term": "Spontan remisyon",
+    "category": "terim",
+    "definition": "Bir hastalığın tedavisiz kendiliğinden düzelmesidir.",
+    "description": "Bir hastalığın tedavisiz kendiliğinden düzelmesidir.",
+    "discipline": "Üroloji",
+    "committee": "",
+    "clinicalPearl": "Enüreziste yıllık spontan remisyon oranı %15'tir; sık ıslatanda tedavisiz kuruluk şansı daha düşüktür.",
+    "aliases": [
+      "kendiliğinden düzelme"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261012-16d68a2d76"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Üroloji/6)Enürezis.pdf",
+        "ders": "Üroloji",
+        "kurul": 1,
+        "sayfa": 6,
+        "alinti": "Yıllık spontan remisyon oranı % 15 Enürezis sıklığı fazla ise"
+      }
+    ]
+  },
+  "fekal inkontinans": {
+    "term": "Fekal inkontinans",
+    "category": "terim",
+    "definition": "İstemsiz dışkı kaçırmadır; çocuklarda sıklıkla kronik kabızlığa bağlı taşma inkontinansı şeklindedir.",
+    "description": "İstemsiz dışkı kaçırmadır; çocuklarda sıklıkla kronik kabızlığa bağlı taşma inkontinansı şeklindedir.",
+    "discipline": "Üroloji",
+    "committee": "",
+    "clinicalPearl": "Haftada en az bir kez fekal inkontinans Roma IV kabızlık ölçütlerinden biridir.",
+    "aliases": [
+      "dışkı kaçırma"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261012-16d68a2d76"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Üroloji/6)Enürezis.pdf",
+        "ders": "Üroloji",
+        "kurul": 1,
+        "sayfa": 17,
+        "alinti": "Haftada en az bir kez fekal inkontinans"
+      }
+    ]
+  },
+  "kabızlık (fonksiyonel)": {
+    "term": "Kabızlık (fonksiyonel)",
+    "category": "hastalik",
+    "definition": "Organik neden olmaksızın seyrek, ağrılı veya sert dışkılama ve dışkı tutma ile seyreden durumdur; çocukta Roma IV ölçütleriyle tanımlanır.",
+    "description": "Organik neden olmaksızın seyrek, ağrılı veya sert dışkılama ve dışkı tutma ile seyreden durumdur; çocukta Roma IV ölçütleriyle tanımlanır.",
+    "discipline": "Üroloji",
+    "committee": "",
+    "clinicalPearl": "Detrusor aşırı aktivitesiyle güçlü ilişkilidir; MoNE'de kabızlık tedavi edilmeden enürezis tedavisi başlatılmaz.",
+    "aliases": [
+      "konstipasyon"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261012-16d68a2d76"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Üroloji/6)Enürezis.pdf",
+        "ders": "Üroloji",
+        "kurul": 1,
+        "sayfa": 14,
+        "alinti": "kabızlık ve detrüsör aşırı aktivitesi birbiriyle güçlü bir şekilde ilişkilidir"
+      }
+    ]
+  },
+  "üst hava yolu obstrüksiyonu": {
+    "term": "Üst hava yolu obstrüksiyonu",
+    "category": "hastalik",
+    "definition": "Adenotonsiller hipertrofi gibi nedenlerle uykuda hava akımının daralmasıdır; horlama ve uyku apnesine yol açar.",
+    "description": "Adenotonsiller hipertrofi gibi nedenlerle uykuda hava akımının daralmasıdır; horlama ve uyku apnesine yol açar.",
+    "discipline": "Üroloji",
+    "committee": "",
+    "clinicalPearl": "ANP salınımını artırarak noktürnal poliüri ve sekonder enürezis yapabilir; ağır horlamada KBB'ye yönlendirilir.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261012-16d68a2d76"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Üroloji/6)Enürezis.pdf",
+        "ders": "Üroloji",
+        "kurul": 1,
+        "sayfa": 14,
+        "alinti": "Üst hava yolu obstrüksiyonu ve uyku apnesinin, atrial natriüretik peptidin gece salınımını artırarak"
+      }
+    ]
+  },
+  "işeme güçlüğü": {
+    "term": "İşeme güçlüğü",
+    "category": "terim",
+    "definition": "Zayıf akım, tereddüt ve ıkınarak işeme ihtiyacı gibi boşaltım evresi yakınmalarıdır.",
+    "description": "Zayıf akım, tereddüt ve ıkınarak işeme ihtiyacı gibi boşaltım evresi yakınmalarıdır.",
+    "discipline": "Üroloji",
+    "committee": "",
+    "clinicalPearl": "Enüretik çocukta işeme güçlüğü uyarı işaretidir; üroflow ve rezidü idrar kontrol edilir.",
+    "aliases": [
+      "işeme tereddüdü",
+      "zayıf akım"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261012-16d68a2d76"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Üroloji/6)Enürezis.pdf",
+        "ders": "Üroloji",
+        "kurul": 1,
+        "sayfa": 3,
+        "alinti": "İşeme güçlükleri - zayıf akış, tereddüt, zorlu işeme ihtiyacı"
+      }
+    ]
+  },
+  "takrolimus": {
+    "term": "Takrolimus",
+    "category": "ilac",
+    "definition": "Streptomyces tsukubaensis kaynaklı makrolid immünosupresiftir; FK-bağlayıcı proteine (FKBP) bağlanarak kalsinörini inhibe eder ve NF-AT aktivasyonunu engeller.",
+    "description": "Streptomyces tsukubaensis kaynaklı makrolid immünosupresiftir; FK-bağlayıcı proteine (FKBP) bağlanarak kalsinörini inhibe eder ve NF-AT aktivasyonunu engeller.",
+    "discipline": "Tıbbi Farmakoloji",
+    "committee": "",
+    "clinicalPearl": "İmmün yanıtı inhibe etmede siklosporinden 10–100 kat daha güçlüdür; merhemi atopik dermatit ve psoriasiste kullanılır.",
+    "aliases": [
+      "FK506"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-cf37211634"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Farmakoloji/1)İmmunofarmakoloji.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 1,
+        "sayfa": 33,
+        "alinti": "Takrolimus (FK 506) Streptomyces tsukubaensis tarafından sentezlenen immunosupresif bir makrolid antibiyotiktir"
+      }
+    ]
+  },
+  "everolimus": {
+    "term": "Everolimus",
+    "category": "ilac",
+    "definition": "FKBP-12'ye bağlanarak mTOR'u inhibe eden proliferasyon sinyal inhibitörü immünosupresiftir.",
+    "description": "FKBP-12'ye bağlanarak mTOR'u inhibe eden proliferasyon sinyal inhibitörü immünosupresiftir.",
+    "discipline": "Tıbbi Farmakoloji",
+    "committee": "",
+    "clinicalPearl": "Yarılanma ömrü yaklaşık 43 saattir (sirolimus yaklaşık 60 saat).",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-cf37211634"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Farmakoloji/1)İmmunofarmakoloji.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 1,
+        "sayfa": 35,
+        "alinti": "Bu grupta: sirolimus (rapamisin), everolimus bulunur"
+      }
+    ]
+  },
+  "proliferasyon sinyal inhibitörleri (psi)": {
+    "term": "Proliferasyon sinyal inhibitörleri (PSİ)",
+    "category": "ilac",
+    "definition": "mTOR'u inhibe ederek T hücre çoğalmasını baskılayan yeni nesil immünosupresif grup; sirolimus ve everolimusu içerir.",
+    "description": "mTOR'u inhibe ederek T hücre çoğalmasını baskılayan yeni nesil immünosupresif grup; sirolimus ve everolimusu içerir.",
+    "discipline": "Tıbbi Farmakoloji",
+    "committee": "",
+    "aliases": [
+      "PSİ"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-cf37211634"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Farmakoloji/1)İmmunofarmakoloji.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 1,
+        "sayfa": 35,
+        "alinti": "Proliferasyon sinyal inhibitörleri (PSİ'ler), yeni nesil immunosupresif ilaç grubudur"
+      }
+    ]
+  },
+  "siklofilin": {
+    "term": "Siklofilin",
+    "category": "fizyoloji",
+    "definition": "Siklosporinin bağlandığı immünofilin sınıfından hücre içi proteindir; siklosporin–siklofilin kompleksi kalsinörini inhibe eder.",
+    "description": "Siklosporinin bağlandığı immünofilin sınıfından hücre içi proteindir; siklosporin–siklofilin kompleksi kalsinörini inhibe eder.",
+    "discipline": "İmmünoloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-cf37211634"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Farmakoloji/1)İmmunofarmakoloji.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 1,
+        "sayfa": 29,
+        "alinti": "Siklosporin, immunofilinler olarak adlandırılan bir hücre içi protein sınıfının üyesi olan siklofiline bağlanır"
+      }
+    ]
+  },
+  "immünofilinler": {
+    "term": "İmmünofilinler",
+    "category": "fizyoloji",
+    "definition": "Siklosporin, takrolimus ve sirolimus gibi immünosupresiflerin bağlandığı hücre içi protein ailesidir (siklofilin, FKBP).",
+    "description": "Siklosporin, takrolimus ve sirolimus gibi immünosupresiflerin bağlandığı hücre içi protein ailesidir (siklofilin, FKBP).",
+    "discipline": "İmmünoloji",
+    "committee": "",
+    "aliases": [
+      "immunofilin"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-cf37211634"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Farmakoloji/1)İmmunofarmakoloji.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 1,
+        "sayfa": 29,
+        "alinti": "immunofilinler olarak adlandırılan bir hücre içi protein sınıfının üyesi"
+      }
+    ]
+  },
+  "fk-bağlayıcı protein (fkbp-12)": {
+    "term": "FK-bağlayıcı protein (FKBP-12)",
+    "category": "fizyoloji",
+    "definition": "Takrolimus, sirolimus ve everolimusun bağlandığı immünofilindir.",
+    "description": "Takrolimus, sirolimus ve everolimusun bağlandığı immünofilindir.",
+    "discipline": "İmmünoloji",
+    "committee": "",
+    "aliases": [
+      "FKBP"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-cf37211634"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Farmakoloji/1)İmmunofarmakoloji.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 1,
+        "sayfa": 35,
+        "alinti": "Sirolimus ve everolimus, hücre içindeki immunofilin (FK 506 bağlayıcı protein 12) adlı proteine bağlanır"
+      }
+    ]
+  },
+  "kalsinörin": {
+    "term": "Kalsinörin",
+    "category": "fizyoloji",
+    "definition": "T hücre aktivasyonunda NF-AT'nin aktivasyonu için gerekli hücre içi fosfatazdır; siklosporin ve takrolimusun hedefidir.",
+    "description": "T hücre aktivasyonunda NF-AT'nin aktivasyonu için gerekli hücre içi fosfatazdır; siklosporin ve takrolimusun hedefidir.",
+    "discipline": "İmmünoloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-cf37211634"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Farmakoloji/1)İmmunofarmakoloji.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 1,
+        "sayfa": 29,
+        "alinti": "Siklosporin-siklofilin kompleksi, hücre içi bir fosfataz olan kalsinörini inhibe ederek T hücrelerinin aktivasyonunu engeller"
+      }
+    ]
+  },
+  "nf-at (aktive t hücrelerinin nükleer faktörü)": {
+    "term": "NF-AT (aktive T hücrelerinin nükleer faktörü)",
+    "category": "fizyoloji",
+    "definition": "Kalsinörin tarafından aktive edilen ve başta IL-2 olmak üzere sitokin genlerinin transkripsiyonunu sağlayan transkripsiyon faktörüdür.",
+    "description": "Kalsinörin tarafından aktive edilen ve başta IL-2 olmak üzere sitokin genlerinin transkripsiyonunu sağlayan transkripsiyon faktörüdür.",
+    "discipline": "İmmünoloji",
+    "committee": "",
+    "aliases": [
+      "NFAT"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-cf37211634"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Farmakoloji/1)İmmunofarmakoloji.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 1,
+        "sayfa": 30,
+        "alinti": "NF-AT, özellikle IL-2 olmak üzere bazı sitokinlerin üretiminde rol oynar"
+      }
+    ]
+  },
+  "lenalidomid": {
+    "term": "Lenalidomid",
+    "category": "ilac",
+    "definition": "Talidomide benzer etkili, ancak daha az toksik ve daha az teratojenik immünomodülatör ilaçtır.",
+    "description": "Talidomide benzer etkili, ancak daha az toksik ve daha az teratojenik immünomodülatör ilaçtır.",
+    "discipline": "Tıbbi Farmakoloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-cf37211634"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Farmakoloji/1)İmmunofarmakoloji.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 1,
+        "sayfa": 42,
+        "alinti": "Lenalidomid hayvan ve in vitro çalışmalarda talidomide benzer etkileri gösterir"
+      }
+    ]
+  },
+  "pomalidomid": {
+    "term": "Pomalidomid",
+    "category": "ilac",
+    "definition": "Multipl miyelom ve miyelodisplazi tedavisinde kullanılan talidomid türevi immünomodülatördür.",
+    "description": "Multipl miyelom ve miyelodisplazi tedavisinde kullanılan talidomid türevi immünomodülatördür.",
+    "discipline": "Tıbbi Farmakoloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-cf37211634"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Farmakoloji/1)İmmunofarmakoloji.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 1,
+        "sayfa": 42,
+        "alinti": "Pomalidomid multipl miyelom ve miyelodisplazi tedavisinde kullanılır"
+      }
+    ]
+  },
+  "azatioprin": {
+    "term": "Azatioprin",
+    "category": "ilac",
+    "definition": "Merkaptopurinin ön ilacı olan antimetabolit immünosupresiftir; pürin metabolizmasını bozarak lenfoid hücre proliferasyonunu engeller.",
+    "description": "Merkaptopurinin ön ilacı olan antimetabolit immünosupresiftir; pürin metabolizmasını bozarak lenfoid hücre proliferasyonunu engeller.",
+    "discipline": "Tıbbi Farmakoloji",
+    "committee": "",
+    "clinicalPearl": "İnaktivasyonu ksantin oksidaza bağlı olduğundan allopurinol kullananlarda doz 1/4–1/3'e düşürülür; ana toksisitesi kemik iliği baskılanmasıdır.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-cf37211634"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Farmakoloji/1)İmmunofarmakoloji.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 1,
+        "sayfa": 43,
+        "alinti": "Azatioprin merkaptopurinin ön ilacıdır ve merkaptopurin gibi bir antimetabolit olarak işlev gösterir"
+      }
+    ]
+  },
+  "merkaptopurin": {
+    "term": "Merkaptopurin",
+    "category": "ilac",
+    "definition": "Pürin nükleik asit metabolizmasına müdahale eden antimetabolit sitotoksik ajandır; azatioprinin aktif metabolitidir.",
+    "description": "Pürin nükleik asit metabolizmasına müdahale eden antimetabolit sitotoksik ajandır; azatioprinin aktif metabolitidir.",
+    "discipline": "Tıbbi Farmakoloji",
+    "committee": "",
+    "aliases": [
+      "6-merkaptopurin",
+      "6-MP"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-cf37211634"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Farmakoloji/1)İmmunofarmakoloji.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 1,
+        "sayfa": 43,
+        "alinti": "Azatioprin gastrointestinal yoldan iyi absorbe edilir ve primer olarak merkaptopurine metabolize edilir"
+      }
+    ]
+  },
+  "mesna": {
+    "term": "Mesna",
+    "category": "ilac",
+    "definition": "Siklofosfamide bağlı hemorajik sistiti önlemek veya tedavi etmek için kullanılan koruyucu ajandır.",
+    "description": "Siklofosfamide bağlı hemorajik sistiti önlemek veya tedavi etmek için kullanılan koruyucu ajandır.",
+    "discipline": "Tıbbi Farmakoloji",
+    "committee": "",
+    "aliases": [
+      "Uromitexan"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-cf37211634"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Farmakoloji/1)İmmunofarmakoloji.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 1,
+        "sayfa": 46,
+        "alinti": "bu durum mesna (Uromitexan®) ile önlenebilir veya tedavi edilebilir"
+      }
+    ]
+  },
+  "leflunomid": {
+    "term": "Leflunomid",
+    "category": "ilac",
+    "definition": "Dihidroorotat dehidrojenazı inhibe ederek pirimidin sentezini engelleyen oral ön ilaçtır; romatoid artrit için onaylıdır.",
+    "description": "Dihidroorotat dehidrojenazı inhibe ederek pirimidin sentezini engelleyen oral ön ilaçtır; romatoid artrit için onaylıdır.",
+    "discipline": "Tıbbi Farmakoloji",
+    "committee": "",
+    "clinicalPearl": "Toksisiteleri: karaciğer hasarı, böbrek bozukluğu ve teratojenite.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-cf37211634"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Farmakoloji/1)İmmunofarmakoloji.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 1,
+        "sayfa": 47,
+        "alinti": "Leflunomid pirimidin sentezi inhibitörünün (purin sentezinden ziyade) bir ön ilacıdır"
+      }
+    ]
+  },
+  "teriflunomid": {
+    "term": "Teriflunomid",
+    "category": "ilac",
+    "definition": "Leflunomidin başlıca aktif metabolitidir; dihidroorotat dehidrojenazı geri dönüşümlü inhibe eder.",
+    "description": "Leflunomidin başlıca aktif metabolitidir; dihidroorotat dehidrojenazı geri dönüşümlü inhibe eder.",
+    "discipline": "Tıbbi Farmakoloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-cf37211634"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Farmakoloji/1)İmmunofarmakoloji.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 1,
+        "sayfa": 47,
+        "alinti": "Teriflunomid, leflunomidin başlıca aktif metabolitidir. Her ikisi de primidin sentezinde yer alan"
+      }
+    ]
+  },
+  "dihidroorotat dehidrojenaz (dhodh)": {
+    "term": "Dihidroorotat dehidrojenaz (DHODH)",
+    "category": "fizyoloji",
+    "definition": "Pirimidin sentezinde görev alan mitokondriyal enzimdir; leflunomid ve teriflunomidin hedefidir.",
+    "description": "Pirimidin sentezinde görev alan mitokondriyal enzimdir; leflunomid ve teriflunomidin hedefidir.",
+    "discipline": "Tıbbi Farmakoloji",
+    "committee": "",
+    "aliases": [
+      "DHODH"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-cf37211634"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Farmakoloji/1)İmmunofarmakoloji.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 1,
+        "sayfa": 47,
+        "alinti": "mitokondriyal enzim dihidroorotat dehidrojenazı geri dönüşümlü olarak inhibe eder"
+      }
+    ]
+  },
+  "hidroksiklorokin": {
+    "term": "Hidroksiklorokin",
+    "category": "ilac",
+    "definition": "Lizozom ve endozom pH'sını yükselterek antijen işlenmesini ve MHC sınıf II yüklenmesini baskılayan antimalaryal immünosupresiftir.",
+    "description": "Lizozom ve endozom pH'sını yükselterek antijen işlenmesini ve MHC sınıf II yüklenmesini baskılayan antimalaryal immünosupresiftir.",
+    "discipline": "Tıbbi Farmakoloji",
+    "committee": "",
+    "clinicalPearl": "Romatoid artrit ve SLE tedavisinde kullanılır.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-cf37211634"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Farmakoloji/1)İmmunofarmakoloji.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 1,
+        "sayfa": 48,
+        "alinti": "Hidroksiklorokin immunosupresif özellikler gösteren antimalaryal bir ajandır"
+      }
+    ]
+  },
+  "vinkristin": {
+    "term": "Vinkristin",
+    "category": "ilac",
+    "definition": "İmmünosupresif etkisi de olan vinka alkaloidi sitotoksik ajandır; prednizona dirençli İTP'de yararlıdır.",
+    "description": "İmmünosupresif etkisi de olan vinka alkaloidi sitotoksik ajandır; prednizona dirençli İTP'de yararlıdır.",
+    "discipline": "Tıbbi Farmakoloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-cf37211634"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Farmakoloji/1)İmmunofarmakoloji.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 1,
+        "sayfa": 49,
+        "alinti": "Vinkristin kullanımının prednizona dirençli idiopati trombositopenik purpurada yararlı olduğu gözükmektedir"
+      }
+    ]
+  },
+  "vinblastin": {
+    "term": "Vinblastin",
+    "category": "ilac",
+    "definition": "Mikrotübüllere bağlanan vinka alkaloididir; in vitro mast hücre degranülasyonunu ve histamin salınımını engeller.",
+    "description": "Mikrotübüllere bağlanan vinka alkaloididir; in vitro mast hücre degranülasyonunu ve histamin salınımını engeller.",
+    "discipline": "Tıbbi Farmakoloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-cf37211634"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Farmakoloji/1)İmmunofarmakoloji.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 1,
+        "sayfa": 49,
+        "alinti": "Vinblastin hücre içinde mikrotubul ünitelerine bağlanarak in vitro mast hücre degranülasyonunu"
+      }
+    ]
+  },
+  "sitarabin": {
+    "term": "Sitarabin",
+    "category": "ilac",
+    "definition": "İmmünosupresif etkisi de bulunan antimetabolit sitotoksik ajandır.",
+    "description": "İmmünosupresif etkisi de bulunan antimetabolit sitotoksik ajandır.",
+    "discipline": "Tıbbi Farmakoloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-cf37211634"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Farmakoloji/1)İmmunofarmakoloji.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 1,
+        "sayfa": 48,
+        "alinti": "Vinkristin, metotreksat ve sitarabin içeren diğer sitotoksik ajanların da immunosupresif etkileri mevcuttur"
+      }
+    ]
+  },
+  "daktinomisin": {
+    "term": "Daktinomisin",
+    "category": "ilac",
+    "definition": "Renal transplant reddinin gelişme döneminde sınırlı başarıyla kullanılan antitümör antibiyotiktir.",
+    "description": "Renal transplant reddinin gelişme döneminde sınırlı başarıyla kullanılan antitümör antibiyotiktir.",
+    "discipline": "Tıbbi Farmakoloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-cf37211634"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Farmakoloji/1)İmmunofarmakoloji.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 1,
+        "sayfa": 49,
+        "alinti": "Antibiyotik daktinomisin de olası renal transplantasyon reddinin gelişme döneminde belli ölçüde başarı ile kullanılmaktadır"
+      }
+    ]
+  },
+  "pentostatin": {
+    "term": "Pentostatin",
+    "category": "ilac",
+    "definition": "Lenfoid malignitelerde kullanılan adenozin deaminaz inhibitörüdür; derin lenfopeniye neden olur.",
+    "description": "Lenfoid malignitelerde kullanılan adenozin deaminaz inhibitörüdür; derin lenfopeniye neden olur.",
+    "discipline": "Tıbbi Farmakoloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-cf37211634"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Farmakoloji/1)İmmunofarmakoloji.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 1,
+        "sayfa": 49,
+        "alinti": "Pentostatin lenfoid malignitelerde antineoplastik ajan olarak öncelikle kullanılan bir adenozin deaminaz inhibitörüdür"
+      }
+    ]
+  },
+  "adenozin deaminaz (ada)": {
+    "term": "Adenozin deaminaz (ADA)",
+    "category": "fizyoloji",
+    "definition": "Lenfositler için toksik olan deoksi-ATP birikimini önleyen pürin metabolizması enzimidir; eksikliği SCID'e yol açar.",
+    "description": "Lenfositler için toksik olan deoksi-ATP birikimini önleyen pürin metabolizması enzimidir; eksikliği SCID'e yol açar.",
+    "discipline": "İmmünoloji",
+    "committee": "",
+    "aliases": [
+      "ADA"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-cf37211634"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Farmakoloji/1)İmmunofarmakoloji.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 1,
+        "sayfa": 25,
+        "alinti": "Adenozin deaminaz (ADA) enzimi, hücrelerde özellikle lenfositler için toksik olan deoksi-ATP birikimini önler"
+      }
+    ]
+  },
+  "dimetil fumarat": {
+    "term": "Dimetil fumarat",
+    "category": "ilac",
+    "definition": "NRF-2 yolunu aktive ederek oksidatif stresi azaltan, tekrarlayan multipl sklerozda kullanılan oral ilaçtır.",
+    "description": "NRF-2 yolunu aktive ederek oksidatif stresi azaltan, tekrarlayan multipl sklerozda kullanılan oral ilaçtır.",
+    "discipline": "Tıbbi Farmakoloji",
+    "committee": "",
+    "clinicalPearl": "Lenfopeni yapabileceğinden kan sayımı düzenli izlenir; tedavi başında kızarma (flushing) sıktır.",
+    "aliases": [
+      "DMF"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-cf37211634"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Farmakoloji/1)İmmunofarmakoloji.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 1,
+        "sayfa": 50,
+        "alinti": "Dimetil fumarat (DMF), fumarik asidin metil esteridir"
+      }
+    ]
+  },
+  "nrf-2 (nükleer faktör eritroid 2 ilişkili faktör 2)": {
+    "term": "NRF-2 (nükleer faktör eritroid 2 ilişkili faktör 2)",
+    "category": "fizyoloji",
+    "definition": "Antioksidan yanıtı düzenleyen transkripsiyon faktörüdür; dimetil fumarat bu yolu aktive eder.",
+    "description": "Antioksidan yanıtı düzenleyen transkripsiyon faktörüdür; dimetil fumarat bu yolu aktive eder.",
+    "discipline": "Tıbbi Farmakoloji",
+    "committee": "",
+    "aliases": [
+      "NRF2"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-cf37211634"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Farmakoloji/1)İmmunofarmakoloji.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 1,
+        "sayfa": 50,
+        "alinti": "ilişkili faktör 2 (Nuclear factor erythroid 2–related factor 2, NRF-2) transkripsiyonel yolunu aktive ettiği görülmektedir"
+      }
+    ]
+  },
+  "glatiramer asetat": {
+    "term": "Glatiramer asetat",
+    "category": "ilac",
+    "definition": "Dört amino asitten oluşan sentetik polipeptit karışımıdır; baskılayıcı T hücrelerini indükleyerek multipl sklerozda miyelin antijenlerine yanıtı düzenler.",
+    "description": "Dört amino asitten oluşan sentetik polipeptit karışımıdır; baskılayıcı T hücrelerini indükleyerek multipl sklerozda miyelin antijenlerine yanıtı düzenler.",
+    "discipline": "Tıbbi Farmakoloji",
+    "committee": "",
+    "clinicalPearl": "Yalnız deri altı verilir; enjeksiyon yerinde lipoatrofi ve cilt nekrozu görülebilir.",
+    "aliases": [
+      "GA"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-cf37211634"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Farmakoloji/1)İmmunofarmakoloji.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 1,
+        "sayfa": 51,
+        "alinti": "Glatiramer asetat (GA), sabit bir mol oranında sentetik polipeptitler"
+      }
+    ]
+  },
+  "fingolimod": {
+    "term": "Fingolimod",
+    "category": "ilac",
+    "definition": "Fingolimod fosfata dönüşerek S1P reseptörlerini modüle eden ve lenfositleri lenf düğümlerinde tutarak dolaşan lenfosit sayısını azaltan oral MS ilacıdır.",
+    "description": "Fingolimod fosfata dönüşerek S1P reseptörlerini modüle eden ve lenfositleri lenf düğümlerinde tutarak dolaşan lenfosit sayısını azaltan oral MS ilacıdır.",
+    "discipline": "Tıbbi Farmakoloji",
+    "committee": "",
+    "clinicalPearl": "İlk dozdan sonra 6 saat kardiyak izlem gerekir (bradikardi, QT uzaması); MI veya kalp yetmezliği öyküsünde kontrendikedir.",
+    "aliases": [
+      "fingolimod hidroklorür"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-cf37211634"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Farmakoloji/1)İmmunofarmakoloji.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 1,
+        "sayfa": 52,
+        "alinti": "Fingolimod hidroklorür (FH), fungal metabolit miriosinden türetilen oral yoldan aktif bir sfingozin 1-fosfat (S1P) reseptör"
+      }
+    ]
+  },
+  "sfingozin 1-fosfat (s1p) reseptörü": {
+    "term": "Sfingozin 1-fosfat (S1P) reseptörü",
+    "category": "fizyoloji",
+    "definition": "Lenf düğümlerinden ve timustan lenfosit çıkışını kontrol eden reseptördür; fingolimod ve siponimodun hedefidir.",
+    "description": "Lenf düğümlerinden ve timustan lenfosit çıkışını kontrol eden reseptördür; fingolimod ve siponimodun hedefidir.",
+    "discipline": "Tıbbi Farmakoloji",
+    "committee": "",
+    "aliases": [
+      "S1P1"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-cf37211634"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Farmakoloji/1)İmmunofarmakoloji.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 1,
+        "sayfa": 52,
+        "alinti": "S1P reseptörü (alt tip 1), lenf düğümlerinden ve timustan lenfosit salınımını kontrol eder"
+      }
+    ]
+  },
+  "siponimod": {
+    "term": "Siponimod",
+    "category": "ilac",
+    "definition": "S1P reseptörlerine bağlanarak lenfositlerin MSS'ye göçünü engelleyen, sekonder progresif MS'te kullanılan oral ajandır.",
+    "description": "S1P reseptörlerine bağlanarak lenfositlerin MSS'ye göçünü engelleyen, sekonder progresif MS'te kullanılan oral ajandır.",
+    "discipline": "Tıbbi Farmakoloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-cf37211634"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Farmakoloji/1)İmmunofarmakoloji.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 1,
+        "sayfa": 53,
+        "alinti": "Siponimod, sekonder progresif multipl sklerozun (SPMS) tedavisi için yeni bir oral ajandır"
+      }
+    ]
+  },
+  "insan anti-fare antikoru (hama)": {
+    "term": "İnsan anti-fare antikoru (HAMA)",
+    "category": "terim",
+    "definition": "Fare kaynaklı monoklonal antikorlara karşı insanda gelişen antikorlardır; ilacın hızla yıkılmasına yol açar.",
+    "description": "Fare kaynaklı monoklonal antikorlara karşı insanda gelişen antikorlardır; ilacın hızla yıkılmasına yol açar.",
+    "discipline": "İmmünoloji",
+    "committee": "",
+    "aliases": [
+      "HAMA"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-cf37211634"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Farmakoloji/1)İmmunofarmakoloji.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 1,
+        "sayfa": 55,
+        "alinti": "İnsanlara uygulanan fare antikorları insan anti-fare antikorlarının (HAMAs) oluşmasına neden olur"
+      }
+    ]
+  },
+  "kimerik monoklonal antikor": {
+    "term": "Kimerik monoklonal antikor",
+    "category": "terim",
+    "definition": "Fare değişken bölgeleriyle insan sabit bölgelerinin birleştirildiği antikordur; adı \"-ksimab/-imab\" ile biter.",
+    "description": "Fare değişken bölgeleriyle insan sabit bölgelerinin birleştirildiği antikordur; adı \"-ksimab/-imab\" ile biter.",
+    "discipline": "Tıbbi Farmakoloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-cf37211634"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Farmakoloji/1)İmmunofarmakoloji.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 1,
+        "sayfa": 55,
+        "alinti": "\"-imab\" veya \"-ksimab\" kimerik ürünler için kullanılmaktadır"
+      }
+    ]
+  },
+  "insansılaştırılmış monoklonal antikor": {
+    "term": "İnsansılaştırılmış monoklonal antikor",
+    "category": "terim",
+    "definition": "Yalnız antijene özgü fare bölgelerinin korunup gerisinin insan dizileriyle değiştirildiği antikordur; adı \"-zumab\" ile biter.",
+    "description": "Yalnız antijene özgü fare bölgelerinin korunup gerisinin insan dizileriyle değiştirildiği antikordur; adı \"-zumab\" ile biter.",
+    "discipline": "Tıbbi Farmakoloji",
+    "committee": "",
+    "aliases": [
+      "humanize antikor"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-cf37211634"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Farmakoloji/1)İmmunofarmakoloji.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 1,
+        "sayfa": 55,
+        "alinti": "Günümüzde bu mühendislik ürünleri değişik son eklerle isimlendirilmektedir: \"-umab\" veya \"-zumab\" insansılaştırılmış antikorlar"
+      }
+    ]
+  },
+  "antilenfosit globulin (alg)": {
+    "term": "Antilenfosit globulin (ALG)",
+    "category": "ilac",
+    "definition": "At, koyun veya tavşanın insan lenfoid hücreleriyle immünizasyonuyla elde edilen ve başlıca dolaşan T lenfositlere etki eden poliklonal antiserumdur.",
+    "description": "At, koyun veya tavşanın insan lenfoid hücreleriyle immünizasyonuyla elde edilen ve başlıca dolaşan T lenfositlere etki eden poliklonal antiserumdur.",
+    "discipline": "Tıbbi Farmakoloji",
+    "committee": "",
+    "clinicalPearl": "Yan etkileri yabancı proteine bağlıdır; enjeksiyon yerinde ağrı ve eritem (tip III aşırı duyarlılık) sıktır.",
+    "aliases": [
+      "ALG"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-cf37211634"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Farmakoloji/1)İmmunofarmakoloji.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 1,
+        "sayfa": 56,
+        "alinti": "ALG primer olarak kan ve lenf arasında dolaşan küçük, uzun ömürlü periferik lenfositler üzerine etki gösterir"
+      }
+    ]
+  },
+  "antitimosit globulin (atg)": {
+    "term": "Antitimosit globulin (ATG)",
+    "category": "ilac",
+    "definition": "Transplantasyonda indüksiyon ve rejeksiyon tedavisinde kullanılan poliklonal anti-T hücre antikor preparatıdır.",
+    "description": "Transplantasyonda indüksiyon ve rejeksiyon tedavisinde kullanılan poliklonal anti-T hücre antikor preparatıdır.",
+    "discipline": "Tıbbi Farmakoloji",
+    "committee": "",
+    "aliases": [
+      "ATG"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-cf37211634"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Farmakoloji/1)İmmunofarmakoloji.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 1,
+        "sayfa": 56,
+        "alinti": "ALG ve antitimosit globulin (ATG) günümüzde pek çok tıbbi merkezde özellikle transplantasyon programlarında"
+      }
+    ]
+  },
+  "alemtuzumab": {
+    "term": "Alemtuzumab",
+    "category": "ilac",
+    "definition": "Lenfositler, NK hücreleri ve monositlerdeki CD52'ye bağlanan insansılaştırılmış IgG1 antikorudur; dirençli B-KLL'de onaylıdır.",
+    "description": "Lenfositler, NK hücreleri ve monositlerdeki CD52'ye bağlanan insansılaştırılmış IgG1 antikorudur; dirençli B-KLL'de onaylıdır.",
+    "discipline": "Tıbbi Farmakoloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-cf37211634"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Farmakoloji/1)İmmunofarmakoloji.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 1,
+        "sayfa": 64,
+        "alinti": "Alemtuzumab normal ve malign B ve T lenfositleri, NK hücreleri, monosit, makrofaj ve küçük bir granülosit popülasyonunda bulunan"
+      }
+    ]
+  },
+  "daratumumab": {
+    "term": "Daratumumab",
+    "category": "ilac",
+    "definition": "Miyelom hücrelerinde aşırı eksprese edilen CD38'e bağlanan monoklonal antikordur; dirençli multipl miyelomda kullanılır.",
+    "description": "Miyelom hücrelerinde aşırı eksprese edilen CD38'e bağlanan monoklonal antikordur; dirençli multipl miyelomda kullanılır.",
+    "discipline": "Tıbbi Farmakoloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-cf37211634"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Farmakoloji/1)İmmunofarmakoloji.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 1,
+        "sayfa": 64,
+        "alinti": "Daratumumab, miyelom hücrelerinde aşırı eksprese edilen CD38'e bağlanır"
+      }
+    ]
+  },
+  "elotuzumab": {
+    "term": "Elotuzumab",
+    "category": "ilac",
+    "definition": "SLAMF7'ye bağlanıp antikor bağımlı hücresel sitotoksisite ile miyelom hücrelerini öldüren monoklonal antikordur.",
+    "description": "SLAMF7'ye bağlanıp antikor bağımlı hücresel sitotoksisite ile miyelom hücrelerini öldüren monoklonal antikordur.",
+    "discipline": "Tıbbi Farmakoloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-cf37211634"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Farmakoloji/1)İmmunofarmakoloji.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 1,
+        "sayfa": 65,
+        "alinti": "Bu Mab, miyelom hücrelerinde sinyal veren lenfositik aktivasyon molekülü F7'ye (SLAMF7) bağlanır"
+      }
+    ]
+  },
+  "dinutuksimab": {
+    "term": "Dinutuksimab",
+    "category": "ilac",
+    "definition": "Gangliozid GD2'ye bağlanan monoklonal antikordur; yüksek riskli pediatrik nöroblastomda GM-CSF, IL-2 ve 13-cis-retinoik asitle birlikte kullanılır.",
+    "description": "Gangliozid GD2'ye bağlanan monoklonal antikordur; yüksek riskli pediatrik nöroblastomda GM-CSF, IL-2 ve 13-cis-retinoik asitle birlikte kullanılır.",
+    "discipline": "Tıbbi Farmakoloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-cf37211634"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Farmakoloji/1)İmmunofarmakoloji.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 1,
+        "sayfa": 65,
+        "alinti": "halinde yüksek riskli nöroblastoma olan ve tedavisine kısmi yanıt alan pediatrik hastalar için onaylanmış bir gangliosid D2 (GD2) bağlayıcı"
+      }
+    ]
+  },
+  "ranibizumab": {
+    "term": "Ranibizumab",
+    "category": "ilac",
+    "definition": "VEGF-A'ya bağlanan rekombinant humanize IgG1 antikorudur; yaşa bağlı makula dejenerasyonu ve makula ödeminde intravitreal kullanılır.",
+    "description": "VEGF-A'ya bağlanan rekombinant humanize IgG1 antikorudur; yaşa bağlı makula dejenerasyonu ve makula ödeminde intravitreal kullanılır.",
+    "discipline": "Tıbbi Farmakoloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-cf37211634"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Farmakoloji/1)İmmunofarmakoloji.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 1,
+        "sayfa": 68,
+        "alinti": "Ranibizumab, VEGF-A'ya bağlanan rekombinant humanize IgG1’dir"
+      }
+    ]
+  },
+  "pegaptanib": {
+    "term": "Pegaptanib",
+    "category": "ilac",
+    "definition": "Ekstraselüler VEGF'ye bağlanan ve makula dejenerasyonunu yavaşlatmak için intravitreal verilen ajandır.",
+    "description": "Ekstraselüler VEGF'ye bağlanan ve makula dejenerasyonunu yavaşlatmak için intravitreal verilen ajandır.",
+    "discipline": "Tıbbi Farmakoloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-cf37211634"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Farmakoloji/1)İmmunofarmakoloji.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 1,
+        "sayfa": 68,
+        "alinti": "Pegaptanib, ekstraselüler VEGF'ye bağlanır ve ayrıca makula dejenerasyonunu yavaşlatmak için intravitreal enjeksiyonla verilir"
+      }
+    ]
+  },
+  "ramusirumab": {
+    "term": "Ramusirumab",
+    "category": "ilac",
+    "definition": "VEGFR2'ye bağlanarak VEGF'nin reseptörüne bağlanmasını engelleyen insan monoklonal antikorudur.",
+    "description": "VEGFR2'ye bağlanarak VEGF'nin reseptörüne bağlanmasını engelleyen insan monoklonal antikorudur.",
+    "discipline": "Tıbbi Farmakoloji",
+    "committee": "",
+    "aliases": [
+      "ramucirumab"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-cf37211634"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Farmakoloji/1)İmmunofarmakoloji.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 1,
+        "sayfa": 68,
+        "alinti": "Ramusirumab, tümör hücrelerindeki VEGF reseptörü 2'ye reseptör antagonisti olarak bağlanan"
+      }
+    ]
+  },
+  "setuksimab": {
+    "term": "Setuksimab",
+    "category": "ilac",
+    "definition": "EGFR'yi hedefleyen insan-fare kimerik monoklonal antikorudur; EGFR-pozitif metastatik kolorektal kanser ve baş-boyun kanserinde kullanılır.",
+    "description": "EGFR'yi hedefleyen insan-fare kimerik monoklonal antikorudur; EGFR-pozitif metastatik kolorektal kanser ve baş-boyun kanserinde kullanılır.",
+    "discipline": "Tıbbi Farmakoloji",
+    "committee": "",
+    "aliases": [
+      "cetuximab"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-cf37211634"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Farmakoloji/1)İmmunofarmakoloji.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 1,
+        "sayfa": 69,
+        "alinti": "Setuksimab epidermal büyüme faktörü reseptörünü (EGFR) hedefleyen bir insan-fare kimerik monoklonal antikorudur"
+      }
+    ]
+  },
+  "necitumumab": {
+    "term": "Necitumumab",
+    "category": "ilac",
+    "definition": "Tamamen insan kaynaklı EGFR antikorudur; gemsitabin ve sisplatinle metastatik skuamöz KHDAK'de kullanılır.",
+    "description": "Tamamen insan kaynaklı EGFR antikorudur; gemsitabin ve sisplatinle metastatik skuamöz KHDAK'de kullanılır.",
+    "discipline": "Tıbbi Farmakoloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-cf37211634"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Farmakoloji/1)İmmunofarmakoloji.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 1,
+        "sayfa": 69,
+        "alinti": "Necitumumab, gemsitabin ve sisplatin ile kombinasyon halinde metastatik skuamöz küçük hücreli olmayan akciğer kanseri"
+      }
+    ]
+  },
+  "panitumumab": {
+    "term": "Panitumumab",
+    "category": "ilac",
+    "definition": "EGFR'ye bağlanan tam insan IgG2 kappa monoklonal antikorudur; metastatik kolorektal karsinomda onaylıdır.",
+    "description": "EGFR'ye bağlanan tam insan IgG2 kappa monoklonal antikorudur; metastatik kolorektal karsinomda onaylıdır.",
+    "discipline": "Tıbbi Farmakoloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-cf37211634"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Farmakoloji/1)İmmunofarmakoloji.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 1,
+        "sayfa": 70,
+        "alinti": "Panitumumab tam bir insan IgG2 kappa hafif zincir monoklonal antikorudur"
+      }
+    ]
+  },
+  "rituksimab": {
+    "term": "Rituksimab",
+    "category": "ilac",
+    "definition": "B lenfositlerindeki CD20'ye bağlanan kimerik fare-insan IgG1 antikorudur; anti-TNF'ye yanıtsız romatoid artritte metotreksatla kullanılır.",
+    "description": "B lenfositlerindeki CD20'ye bağlanan kimerik fare-insan IgG1 antikorudur; anti-TNF'ye yanıtsız romatoid artritte metotreksatla kullanılır.",
+    "discipline": "Tıbbi Farmakoloji",
+    "committee": "",
+    "aliases": [
+      "rituximab"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-cf37211634"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Farmakoloji/1)İmmunofarmakoloji.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 1,
+        "sayfa": 70,
+        "alinti": "Rituksimab normal ve malign B lenfositleri yüzeyindeki CD20 molekülüne bağlanan kimerik bir fare-insan monoklonal IgG1’dir"
+      }
+    ]
+  },
+  "cd20": {
+    "term": "CD20",
+    "category": "genetik",
+    "definition": "Normal ve malign B lenfositlerinin yüzeyinde bulunan moleküldür; rituksimab ve ibritumomabın hedefidir.",
+    "description": "Normal ve malign B lenfositlerinin yüzeyinde bulunan moleküldür; rituksimab ve ibritumomabın hedefidir.",
+    "discipline": "İmmünoloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-cf37211634"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Farmakoloji/1)İmmunofarmakoloji.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 1,
+        "sayfa": 70,
+        "alinti": "Rituksimab normal ve malign B lenfositleri yüzeyindeki CD20 molekülüne bağlanan"
+      }
+    ]
+  },
+  "arkitumomab": {
+    "term": "Arkitumomab",
+    "category": "tani",
+    "definition": "Tc-99m ile işaretli anti-CEA fare Fab fragmanıdır; metastatik kolorektal karsinomda immünosintigrafi için kullanılır.",
+    "description": "Tc-99m ile işaretli anti-CEA fare Fab fragmanıdır; metastatik kolorektal karsinomda immünosintigrafi için kullanılır.",
+    "discipline": "Tıbbi Farmakoloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-cf37211634"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Farmakoloji/1)İmmunofarmakoloji.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 1,
+        "sayfa": 71,
+        "alinti": "Arkitumomab metastatik kolorektal karsinoma hastalarında hastalığın yayılımının saptanmasında görüntüleme amaçlı kullanılan"
+      }
+    ]
+  },
+  "kapromab pendetid": {
+    "term": "Kapromab pendetid",
+    "category": "tani",
+    "definition": "Prostat spesifik membran antijenine özgü fare antikorudur; prostat kanserinin yaygınlığını immünosintigrafiyle belirlemede kullanılır.",
+    "description": "Prostat spesifik membran antijenine özgü fare antikorudur; prostat kanserinin yaygınlığını immünosintigrafiyle belirlemede kullanılır.",
+    "discipline": "Tıbbi Farmakoloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-cf37211634"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Farmakoloji/1)İmmunofarmakoloji.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 1,
+        "sayfa": 71,
+        "alinti": "Kapromab pendetid prostat spesifik membran antijenine özgül bir fare monoklonal antikorudur"
+      }
+    ]
+  },
+  "ibritumomab tiyuksetan": {
+    "term": "İbritumomab tiyuksetan",
+    "category": "ilac",
+    "definition": "İtriyum-90 veya indiyum-111 ile işaretli anti-CD20 fare monoklonal antikorudur.",
+    "description": "İtriyum-90 veya indiyum-111 ile işaretli anti-CD20 fare monoklonal antikorudur.",
+    "discipline": "Tıbbi Farmakoloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-cf37211634"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Farmakoloji/1)İmmunofarmakoloji.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 1,
+        "sayfa": 71,
+        "alinti": "İbritumomab tiyuksetan itriyum (90Y) veya indiyum (111In) ile işaretlenmiş bir anti-CD20 fare monoklonal antikorudur"
+      }
+    ]
+  },
+  "immünosintigrafi": {
+    "term": "İmmünosintigrafi",
+    "category": "tani",
+    "definition": "Radyoizotopla işaretli antikorlarla tümör yayılımının görüntülenmesidir.",
+    "description": "Radyoizotopla işaretli antikorlarla tümör yayılımının görüntülenmesidir.",
+    "discipline": "Tıbbi Farmakoloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-cf37211634"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Farmakoloji/1)İmmunofarmakoloji.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 1,
+        "sayfa": 71,
+        "alinti": "görüntüleme amaçlı kullanılan (immunosintigrafi) teknesyum 99m (Tc-99m) ile işaretlenmiş bir anti"
+      }
+    ]
+  },
+  "adalimumab": {
+    "term": "Adalimumab",
+    "category": "ilac",
+    "definition": "TNF-α'yı bağlayan tamamen insan IgG1 antikorudur; RA, JİA, psoriatik artrit, ankilozan spondilit, Crohn ve plak psoriasiste onaylıdır.",
+    "description": "TNF-α'yı bağlayan tamamen insan IgG1 antikorudur; RA, JİA, psoriatik artrit, ankilozan spondilit, Crohn ve plak psoriasiste onaylıdır.",
+    "discipline": "Tıbbi Farmakoloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-cf37211634"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Farmakoloji/1)İmmunofarmakoloji.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 1,
+        "sayfa": 72,
+        "alinti": "Adalimumab romatoid artrit, juvenil idyopatik artrit, psoriatik artrit"
+      }
+    ]
+  },
+  "sertolizumab pegol": {
+    "term": "Sertolizumab pegol",
+    "category": "ilac",
+    "definition": "TNF-α aktivitesini nötralize eden pegile antikordur; Crohn hastalığı ve romatoid artritte endikedir.",
+    "description": "TNF-α aktivitesini nötralize eden pegile antikordur; Crohn hastalığı ve romatoid artritte endikedir.",
+    "discipline": "Tıbbi Farmakoloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-cf37211634"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Farmakoloji/1)İmmunofarmakoloji.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 1,
+        "sayfa": 73,
+        "alinti": "Sertolizumab pegol TNF-α'nın aktivitesini nötralize eder"
+      }
+    ]
+  },
+  "etanersept": {
+    "term": "Etanersept",
+    "category": "ilac",
+    "definition": "TNF reseptörünün insan IgG1 sabit bölgesiyle füzyonundan oluşan dimerik füzyon proteinidir; RA, poliartiküler JİA, ankilozan spondilit ve psoriatik artritte kullanılır.",
+    "description": "TNF reseptörünün insan IgG1 sabit bölgesiyle füzyonundan oluşan dimerik füzyon proteinidir; RA, poliartiküler JİA, ankilozan spondilit ve psoriatik artritte kullanılır.",
+    "discipline": "Tıbbi Farmakoloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-cf37211634"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Farmakoloji/1)İmmunofarmakoloji.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 1,
+        "sayfa": 73,
+        "alinti": "Etanersept insan IgG1 sabit bölgelerinin TNF reseptörü ile füzyonu ile oluşturulmuş dimerik bir füzyon proteinidir"
+      }
+    ]
+  },
+  "golimumab": {
+    "term": "Golimumab",
+    "category": "ilac",
+    "definition": "Çözünür ve membrana bağlı TNF-α'ya bağlanan insan IgG antikorudur; RA, ankilozan spondilit ve psoriatik artritte endikedir.",
+    "description": "Çözünür ve membrana bağlı TNF-α'ya bağlanan insan IgG antikorudur; RA, ankilozan spondilit ve psoriatik artritte endikedir.",
+    "discipline": "Tıbbi Farmakoloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-cf37211634"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Farmakoloji/1)İmmunofarmakoloji.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 1,
+        "sayfa": 73,
+        "alinti": "Golimumab çözünür ve membran-eşlikçi TNF-α'ya bağlanan bir insan IgG monoklonal antikorudur"
+      }
+    ]
+  },
+  "abatasept": {
+    "term": "Abatasept",
+    "category": "ilac",
+    "definition": "CTLA-4 hücre dışı bölgesi ile IgG1'in füzyon proteinidir; CD80/CD86'ya bağlanarak CD28 eş-uyarısını ve T hücre aktivasyonunu engeller.",
+    "description": "CTLA-4 hücre dışı bölgesi ile IgG1'in füzyon proteinidir; CD80/CD86'ya bağlanarak CD28 eş-uyarısını ve T hücre aktivasyonunu engeller.",
+    "discipline": "Tıbbi Farmakoloji",
+    "committee": "",
+    "clinicalPearl": "Başlamadan önce latent tüberküloz taranmalı ve tedavi edilmelidir.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-cf37211634"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Farmakoloji/1)İmmunofarmakoloji.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 1,
+        "sayfa": 74,
+        "alinti": "Abatasept sitotoksik T-lenfosit-eşlikçi antijen 4 (CTLA-4)'ün hücre dışı"
+      }
+    ]
+  },
+  "alefasept": {
+    "term": "Alefasept",
+    "category": "ilac",
+    "definition": "LFA-3'ün CD2-bağlayan kısmı ile IgG1 Fc bölgesinin füzyon proteinidir; plak psoriasiste kullanılır.",
+    "description": "LFA-3'ün CD2-bağlayan kısmı ile IgG1 Fc bölgesinin füzyon proteinidir; plak psoriasiste kullanılır.",
+    "discipline": "Tıbbi Farmakoloji",
+    "committee": "",
+    "clinicalPearl": "CD4 sayısı 250 hücre/µL altına düşerse ilaç kesilir.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-cf37211634"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Farmakoloji/1)İmmunofarmakoloji.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 1,
+        "sayfa": 75,
+        "alinti": "Alefasept lökosit-fonksiyon-eşlikçi antijen-3 (LFA-3)'ün CD2-bağlayan parçası ile"
+      }
+    ]
+  },
+  "basiliksimab": {
+    "term": "Basiliksimab",
+    "category": "ilac",
+    "definition": "Aktive T lenfositlerdeki IL-2 reseptörü alfa zinciri CD25'e bağlanan kimerik IgG1'dir; renal transplantta akut rejeksiyon profilaksisinde kullanılır.",
+    "description": "Aktive T lenfositlerdeki IL-2 reseptörü alfa zinciri CD25'e bağlanan kimerik IgG1'dir; renal transplantta akut rejeksiyon profilaksisinde kullanılır.",
+    "discipline": "Tıbbi Farmakoloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-cf37211634"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Farmakoloji/1)İmmunofarmakoloji.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 1,
+        "sayfa": 75,
+        "alinti": "Basiliksimab aktive T lenfositleri yüzeyindeki IL-2 reseptörü alfa zinciri CD25'e"
+      }
+    ]
+  },
+  "daklizumab": {
+    "term": "Daklizumab",
+    "category": "ilac",
+    "definition": "IL-2 reseptörünün alfa alt birimine bağlanan insansılaştırılmış IgG1'dir; renal transplantta akut rejeksiyon profilaksisinde kullanılır.",
+    "description": "IL-2 reseptörünün alfa alt birimine bağlanan insansılaştırılmış IgG1'dir; renal transplantta akut rejeksiyon profilaksisinde kullanılır.",
+    "discipline": "Tıbbi Farmakoloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-cf37211634"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Farmakoloji/1)İmmunofarmakoloji.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 1,
+        "sayfa": 75,
+        "alinti": "Daklizumab da IL-2 reseptörünün alfa alt ünitesine bağlanan insansılaştırılmış bir IgG1'dir"
+      }
+    ]
+  },
+  "cd25 (ıl-2 reseptörü alfa zinciri)": {
+    "term": "CD25 (IL-2 reseptörü alfa zinciri)",
+    "category": "genetik",
+    "definition": "Aktive T lenfositlerin yüzeyindeki IL-2 reseptörünün alfa zinciridir; basiliksimab ve daklizumabın hedefidir.",
+    "description": "Aktive T lenfositlerin yüzeyindeki IL-2 reseptörünün alfa zinciridir; basiliksimab ve daklizumabın hedefidir.",
+    "discipline": "İmmünoloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-cf37211634"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Farmakoloji/1)İmmunofarmakoloji.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 1,
+        "sayfa": 75,
+        "alinti": "Basiliksimab aktive T lenfositleri yüzeyindeki IL-2 reseptörü alfa zinciri CD25'e bağlanan"
+      }
+    ]
+  },
+  "natalizumab": {
+    "term": "Natalizumab",
+    "category": "ilac",
+    "definition": "Nötrofiller dışındaki lökositlerde eksprese edilen integrinlere bağlanan insansılaştırılmış IgG4 antikorudur; MS ve Crohn hastalığında kullanılır.",
+    "description": "Nötrofiller dışındaki lökositlerde eksprese edilen integrinlere bağlanan insansılaştırılmış IgG4 antikorudur; MS ve Crohn hastalığında kullanılır.",
+    "discipline": "Tıbbi Farmakoloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-cf37211634"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Farmakoloji/1)İmmunofarmakoloji.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 1,
+        "sayfa": 76,
+        "alinti": "Natalizumab geleneksel tedaviye tolerans gösteren veya yetersiz yanıt veren multipl sklerozlu ve Crohn hastalığı"
+      }
+    ]
+  },
+  "tosilizumab": {
+    "term": "Tosilizumab",
+    "category": "ilac",
+    "definition": "Çözünür ve membrana bağlı IL-6 reseptörüne bağlanarak IL-6 sinyalini inhibe eden insansılaştırılmış IgG1'dir.",
+    "description": "Çözünür ve membrana bağlı IL-6 reseptörüne bağlanarak IL-6 sinyalini inhibe eden insansılaştırılmış IgG1'dir.",
+    "discipline": "Tıbbi Farmakoloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-cf37211634"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Farmakoloji/1)İmmunofarmakoloji.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 1,
+        "sayfa": 76,
+        "alinti": "Tosilizumab çözünür veya membran-eşlikçi lL-6 reseptörüne bağlanan"
+      }
+    ]
+  },
+  "absiksimab": {
+    "term": "Absiksimab",
+    "category": "ilac",
+    "definition": "Trombositlerdeki GP IIb/IIIa integrin reseptörüne bağlanan fare-insan antikor Fab fragmanıdır; perkütan koroner girişimde iskemik komplikasyonları önler.",
+    "description": "Trombositlerdeki GP IIb/IIIa integrin reseptörüne bağlanan fare-insan antikor Fab fragmanıdır; perkütan koroner girişimde iskemik komplikasyonları önler.",
+    "discipline": "Tıbbi Farmakoloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-cf37211634"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Farmakoloji/1)İmmunofarmakoloji.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 1,
+        "sayfa": 77,
+        "alinti": "Absiksimab perkutanöz koroner müdahalede kardiyak iskemik komplikasyonların önlenmesinde yardımcı olarak endikedir"
+      }
+    ]
+  },
+  "denosumab": {
+    "term": "Denosumab",
+    "category": "ilac",
+    "definition": "RANKL'ye bağlanarak osteoklast olgunlaşmasını inhibe eden insan IgG2 antikorudur; yüksek kırık riskli postmenopozal osteoporozda kullanılır.",
+    "description": "RANKL'ye bağlanarak osteoklast olgunlaşmasını inhibe eden insan IgG2 antikorudur; yüksek kırık riskli postmenopozal osteoporozda kullanılır.",
+    "discipline": "Tıbbi Farmakoloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-cf37211634"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Farmakoloji/1)İmmunofarmakoloji.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 1,
+        "sayfa": 78,
+        "alinti": "Denosumab yüksek kırık riski taşıyan ve osteoporozu olan postmenapozal kadınların tedavisinde endikedir"
+      }
+    ]
+  },
+  "rankl": {
+    "term": "RANKL",
+    "category": "fizyoloji",
+    "definition": "Osteoklast olgunlaşmasını uyaran nükleer faktör kappa-B reseptör aktivatörü ligandıdır; denosumabın hedefidir.",
+    "description": "Osteoklast olgunlaşmasını uyaran nükleer faktör kappa-B reseptör aktivatörü ligandıdır; denosumabın hedefidir.",
+    "discipline": "Tıbbi Farmakoloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-cf37211634"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Farmakoloji/1)İmmunofarmakoloji.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 1,
+        "sayfa": 78,
+        "alinti": "Denosumab insan nükleer faktör kappa-B ligandı aktivatör reseptörü (RANKL) için"
+      }
+    ]
+  },
+  "ekulizumab": {
+    "term": "Ekulizumab",
+    "category": "ilac",
+    "definition": "Kompleman C5'e bağlanan insansılaştırılmış antikordur; damar içi hemolizi inhibe ederek anemi, tromboz ve hemoglobinemiyi önler.",
+    "description": "Kompleman C5'e bağlanan insansılaştırılmış antikordur; damar içi hemolizi inhibe ederek anemi, tromboz ve hemoglobinemiyi önler.",
+    "discipline": "Tıbbi Farmakoloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-cf37211634"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Farmakoloji/1)İmmunofarmakoloji.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 1,
+        "sayfa": 78,
+        "alinti": "Ekulizumab komplemanın C5 komponentine bağlanan insansılaştırılmış bir IgG"
+      }
+    ]
+  },
+  "palivizumab": {
+    "term": "Palivizumab",
+    "category": "ilac",
+    "definition": "RSV'ye bağlı ciddi hastalığı önlemek için yüksek riskli bebeklerde kullanılan monoklonal antikordur.",
+    "description": "RSV'ye bağlı ciddi hastalığı önlemek için yüksek riskli bebeklerde kullanılan monoklonal antikordur.",
+    "discipline": "Tıbbi Farmakoloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-cf37211634"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Farmakoloji/1)İmmunofarmakoloji.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 1,
+        "sayfa": 79,
+        "alinti": "Palivizumab rekombinant DNA teknolojisiyle üretilen, solunum sinsityal virus (RSV) enfeksiyonlarının neden olduğu ciddi"
+      }
+    ]
+  },
+  "anakinra": {
+    "term": "Anakinra",
+    "category": "ilac",
+    "definition": "IL-1 inhibitörü sitokin antagonistidir; DMARD'lara yanıtsız erişkin romatoid artritte onaylıdır.",
+    "description": "IL-1 inhibitörü sitokin antagonistidir; DMARD'lara yanıtsız erişkin romatoid artritte onaylıdır.",
+    "discipline": "Tıbbi Farmakoloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-cf37211634"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Farmakoloji/1)İmmunofarmakoloji.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 1,
+        "sayfa": 87,
+        "alinti": "Anakinra tek veya çoklu hastalık modülasyonu yapan antiromatizmal ilaçlara yanıt vermeyen erişkin romatoid artrit"
+      }
+    ]
+  },
+  "kanakinumab": {
+    "term": "Kanakinumab",
+    "category": "ilac",
+    "definition": "İnsan rekombinant anti-IL-1β monoklonal antikorudur; dirençli ailevi Akdeniz ateşi, periyodik ateş sendromları ve akut gutta deri altı kullanılır.",
+    "description": "İnsan rekombinant anti-IL-1β monoklonal antikorudur; dirençli ailevi Akdeniz ateşi, periyodik ateş sendromları ve akut gutta deri altı kullanılır.",
+    "discipline": "Tıbbi Farmakoloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-cf37211634"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Farmakoloji/1)İmmunofarmakoloji.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 1,
+        "sayfa": 87,
+        "alinti": "Kanakinumab bir insan rekombinant lL-1β monoklonal antikorudur"
+      }
+    ]
+  },
+  "tofasitinib": {
+    "term": "Tofasitinib",
+    "category": "ilac",
+    "definition": "JAK enzimlerini inhibe eden oral ilaçtır; orta-şiddetli romatoid artritte onaylıdır.",
+    "description": "JAK enzimlerini inhibe eden oral ilaçtır; orta-şiddetli romatoid artritte onaylıdır.",
+    "discipline": "Tıbbi Farmakoloji",
+    "committee": "",
+    "aliases": [
+      "Xeljanz"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-cf37211634"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Farmakoloji/1)İmmunofarmakoloji.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 1,
+        "sayfa": 37,
+        "alinti": "Tofasitinib (Xeljanz), sitokin veya büyüme faktörü sinyallemesine"
+      }
+    ]
+  },
+  "janus kinaz (jak)": {
+    "term": "Janus kinaz (JAK)",
+    "category": "fizyoloji",
+    "definition": "Sitokin ve büyüme faktörü reseptör sinyalini ileterek hematopoez ve bağışıklık hücre işlevini uyaran kinaz ailesidir.",
+    "description": "Sitokin ve büyüme faktörü reseptör sinyalini ileterek hematopoez ve bağışıklık hücre işlevini uyaran kinaz ailesidir.",
+    "discipline": "Tıbbi Farmakoloji",
+    "committee": "",
+    "aliases": [
+      "JAK"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-cf37211634"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Farmakoloji/1)İmmunofarmakoloji.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 1,
+        "sayfa": 37,
+        "alinti": "hematopoiez ve bağışıklık hücresi fonksiyonunu uyaran Janus kinazı (JAK enzimleri) inhibe eder"
+      }
+    ]
+  },
+  "prednizon": {
+    "term": "Prednizon",
+    "category": "ilac",
+    "definition": "Otoimmün hastalıklarda ve transplantasyonda sık kullanılan sentetik glukokortikoiddir.",
+    "description": "Otoimmün hastalıklarda ve transplantasyonda sık kullanılan sentetik glukokortikoiddir.",
+    "discipline": "Tıbbi Farmakoloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-cf37211634"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Farmakoloji/1)İmmunofarmakoloji.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 1,
+        "sayfa": 28,
+        "alinti": "Prednizon,' siklofosfamid, klorambusil, merkaptopurin, azatioprin, yüksek doz"
+      }
+    ]
+  },
+  "intravenöz immünoglobulin (ıvıg)": {
+    "term": "İntravenöz immünoglobulin (IVIG)",
+    "category": "tedavi",
+    "definition": "Binlerce sağlıklı vericiden hazırlanan poliklonal insan IgG preparatıdır; immün yetmezlik, otoimmün hastalık ve refrakter İTP'de yüksek dozda (2 g/kg) kullanılır.",
+    "description": "Binlerce sağlıklı vericiden hazırlanan poliklonal insan IgG preparatıdır; immün yetmezlik, otoimmün hastalık ve refrakter İTP'de yüksek dozda (2 g/kg) kullanılır.",
+    "discipline": "Tıbbi Farmakoloji",
+    "committee": "",
+    "aliases": [
+      "IGIV",
+      "IVIG"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-cf37211634"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Farmakoloji/1)İmmunofarmakoloji.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 1,
+        "sayfa": 59,
+        "alinti": "Bu immunoglobulin preparatı (sıklıkla IgG) binlerce sağlıklı vericiden elde edilen havuzdan"
+      }
+    ]
+  },
+  "antivenom": {
+    "term": "Antivenom",
+    "category": "tedavi",
+    "definition": "Yılan zehrine karşı at veya küçükbaş kökenli hiperimmün immünoglobulin preparatıdır.",
+    "description": "Yılan zehrine karşı at veya küçükbaş kökenli hiperimmün immünoglobulin preparatıdır.",
+    "discipline": "Tıbbi Farmakoloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-cf37211634"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Farmakoloji/1)İmmunofarmakoloji.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 1,
+        "sayfa": 63,
+        "alinti": "Yılan hiperimmunglobulinleri (antivenomlar) at veya küçükbaş kökenlidir"
+      }
+    ]
+  },
+  "öldürücü hücre immünoglobulin benzeri reseptörleri (kır)": {
+    "term": "Öldürücü hücre immünoglobulin benzeri reseptörleri (KIR)",
+    "category": "fizyoloji",
+    "definition": "NK hücrelerinde MHC sınıf I'i tanıyarak aktiviteyi düzenleyen reseptörlerdir.",
+    "description": "NK hücrelerinde MHC sınıf I'i tanıyarak aktiviteyi düzenleyen reseptörlerdir.",
+    "discipline": "İmmünoloji",
+    "committee": "",
+    "aliases": [
+      "KIR"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-cf37211634"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Farmakoloji/1)İmmunofarmakoloji.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 1,
+        "sayfa": 7,
+        "alinti": "öldürücü hücre immunoglobulin benzeri reseptörler (KIR) aracılığıyla düzenlenir"
+      }
+    ]
+  },
+  "nkt hücreleri": {
+    "term": "NKT hücreleri",
+    "category": "fizyoloji",
+    "definition": "Doğal immün yanıta katkıda bulunan, IFN-γ ve IL-17 salgılayan doğal öldürücü-T hücreleridir.",
+    "description": "Doğal immün yanıta katkıda bulunan, IFN-γ ve IL-17 salgılayan doğal öldürücü-T hücreleridir.",
+    "discipline": "İmmünoloji",
+    "committee": "",
+    "aliases": [
+      "doğal öldürücü-T hücre"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-cf37211634"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Farmakoloji/1)İmmunofarmakoloji.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 1,
+        "sayfa": 7,
+        "alinti": "doğal öldürücü (NK), doğal öldürücü-T (NKT) ve gamma-delta (γδ) T hücreleri de de doğal"
+      }
+    ]
+  },
+  "gama-delta (γδ) t hücreleri": {
+    "term": "Gama-delta (γδ) T hücreleri",
+    "category": "fizyoloji",
+    "definition": "Doğal immün yanıta katkıda bulunan, IFN-γ ve IL-17 salgılayarak dendritik hücre ve makrofajları aktive eden T hücre alt grubudur.",
+    "description": "Doğal immün yanıta katkıda bulunan, IFN-γ ve IL-17 salgılayarak dendritik hücre ve makrofajları aktive eden T hücre alt grubudur.",
+    "discipline": "İmmünoloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-cf37211634"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Farmakoloji/1)İmmunofarmakoloji.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 1,
+        "sayfa": 7,
+        "alinti": "gamma-delta (γδ) T hücreleri de de doğal immun yanıta katkıda bulunur"
+      }
+    ]
+  },
+  "t hücre reseptörü (tcr)": {
+    "term": "T hücre reseptörü (TCR)",
+    "category": "fizyoloji",
+    "definition": "MHC üzerinde sunulan peptidi tanıyarak T hücre aktivasyonunun birinci sinyalini sağlayan reseptördür.",
+    "description": "MHC üzerinde sunulan peptidi tanıyarak T hücre aktivasyonunun birinci sinyalini sağlayan reseptördür.",
+    "discipline": "İmmünoloji",
+    "committee": "",
+    "aliases": [
+      "TCR"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-cf37211634"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Farmakoloji/1)İmmunofarmakoloji.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 1,
+        "sayfa": 10,
+        "alinti": "Birincil sinyal TCR ve peptit bağlanmış MHC moleküllerinin birleşmesi ile sağlanır"
+      }
+    ]
+  },
+  "eş-uyaran moleküller (cd40, cd80, cd86)": {
+    "term": "Eş-uyaran moleküller (CD40, CD80, CD86)",
+    "category": "fizyoloji",
+    "definition": "Antijen sunan hücrede T hücre aktivasyonunun ikinci sinyalini sağlayan yüzey molekülleridir.",
+    "description": "Antijen sunan hücrede T hücre aktivasyonunun ikinci sinyalini sağlayan yüzey molekülleridir.",
+    "discipline": "İmmünoloji",
+    "committee": "",
+    "aliases": [
+      "kostimülatör moleküller"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-cf37211634"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Farmakoloji/1)İmmunofarmakoloji.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 1,
+        "sayfa": 10,
+        "alinti": "üzerindeki eş-uyaran moleküllerin (CD40, CD80 ve CD86) uygun ligandları ile bağlanmasını içerir"
+      }
+    ]
+  },
+  "antijen sunan hücre (apc)": {
+    "term": "Antijen sunan hücre (APC)",
+    "category": "fizyoloji",
+    "definition": "Antijeni işleyip MHC molekülleri üzerinde T hücrelerine sunan dendritik hücre, makrofaj ve B lenfositleridir.",
+    "description": "Antijeni işleyip MHC molekülleri üzerinde T hücrelerine sunan dendritik hücre, makrofaj ve B lenfositleridir.",
+    "discipline": "İmmünoloji",
+    "committee": "",
+    "aliases": [
+      "APC"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-cf37211634"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Farmakoloji/1)İmmunofarmakoloji.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 1,
+        "sayfa": 10,
+        "alinti": "ve B lenfositlerini içeren profesyonel antijen sunan hücrelere katılır"
+      }
+    ]
+  },
+  "th2 yanıtı": {
+    "term": "Th2 yanıtı",
+    "category": "fizyoloji",
+    "definition": "IL-4, IL-5, IL-6, IL-10 ve IL-13 ile B hücre çoğalması ve antikor üretimini destekleyen yardımcı T yanıtıdır; hücre dışı bakteriler uyarır.",
+    "description": "IL-4, IL-5, IL-6, IL-10 ve IL-13 ile B hücre çoğalması ve antikor üretimini destekleyen yardımcı T yanıtıdır; hücre dışı bakteriler uyarır.",
+    "discipline": "İmmünoloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-cf37211634"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Farmakoloji/1)İmmunofarmakoloji.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 1,
+        "sayfa": 12,
+        "alinti": "TH2 hücreleri, başlıca IL-4, IL-5, IL-6, IL-10 ve IL-13 gibi sitokinleri üretir"
+      }
+    ]
+  },
+  "plazma hücresi": {
+    "term": "Plazma hücresi",
+    "category": "fizyoloji",
+    "definition": "B lenfositlerinin farklılaşmasıyla oluşan antikor üreten hücredir.",
+    "description": "B lenfositlerinin farklılaşmasıyla oluşan antikor üreten hücredir.",
+    "discipline": "İmmünoloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-cf37211634"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Farmakoloji/1)İmmunofarmakoloji.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 1,
+        "sayfa": 13,
+        "alinti": "B hücreleri bu uyarı sonucunda bellek B hücrelerine ve antikor üreten plazma hücrelerine dönüşür"
+      }
+    ]
+  },
+  "moleküler benzeşme": {
+    "term": "Moleküler benzeşme",
+    "category": "patoloji",
+    "definition": "Patojen epitoplarına yönelen immün yanıtın benzer epitopları taşıyan konak hücrelerini hedeflemesiyle otoimmünite gelişmesidir.",
+    "description": "Patojen epitoplarına yönelen immün yanıtın benzer epitopları taşıyan konak hücrelerini hedeflemesiyle otoimmünite gelişmesidir.",
+    "discipline": "İmmünoloji",
+    "committee": "",
+    "aliases": [
+      "moleküler mimikri"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-cf37211634"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Farmakoloji/1)İmmunofarmakoloji.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 1,
+        "sayfa": 22,
+        "alinti": "Moleküler benzeşme durumunda patojenlerin antijenik determinantlarına karşı yönlenen immun yanıtlar"
+      }
+    ]
+  },
+  "anafilaksi": {
+    "term": "Anafilaksi",
+    "category": "hastalik",
+    "definition": "IgE aracılı ağır sistemik tip I aşırı duyarlılık reaksiyonudur; böcek sokması, gıda veya ilaçla tetiklenir ve acil müdahale gerektirir.",
+    "description": "IgE aracılı ağır sistemik tip I aşırı duyarlılık reaksiyonudur; böcek sokması, gıda veya ilaçla tetiklenir ve acil müdahale gerektirir.",
+    "discipline": "İmmünoloji",
+    "committee": "",
+    "aliases": [
+      "sistemik anafilaksi"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-cf37211634"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Farmakoloji/1)İmmunofarmakoloji.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 1,
+        "sayfa": 16,
+        "alinti": "Sistemik anaflaksi (örn. böcek sokması, bazı gıdaların yutulması veya ilaç aşırı"
+      }
+    ]
+  },
+  "yenidoğanın hemolitik hastalığı (eritroblastozis fetalis)": {
+    "term": "Yenidoğanın hemolitik hastalığı (eritroblastozis fetalis)",
+    "category": "hastalik",
+    "definition": "Rh-negatif annenin anti-Rh IgG antikorlarının plasentayı geçerek Rh-pozitif fetusun eritrositlerini yıkmasıyla oluşan tip II aşırı duyarlılık hastalığıdır.",
+    "description": "Rh-negatif annenin anti-Rh IgG antikorlarının plasentayı geçerek Rh-pozitif fetusun eritrositlerini yıkmasıyla oluşan tip II aşırı duyarlılık hastalığıdır.",
+    "discipline": "Tıbbi Farmakoloji",
+    "committee": "",
+    "clinicalPearl": "Doğumdan sonraki 24–72 saat içinde anneye Rh0(D) immünoglobulin yapılarak önlenir.",
+    "aliases": [
+      "eritroblastozis fetalis"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-cf37211634"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Farmakoloji/1)İmmunofarmakoloji.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 1,
+        "sayfa": 61,
+        "alinti": "üçüncü trimesterde fetusa transfer olur ve eritroblastozis fetalis'e"
+      }
+    ]
+  },
+  "akselere rejeksiyon": {
+    "term": "Akselere rejeksiyon",
+    "category": "patoloji",
+    "definition": "Transplantasyondan 2–7 gün sonra antikor ve T hücre aracılı gelişen, immünosupresiflerle durdurulamayan rejeksiyon tipidir.",
+    "description": "Transplantasyondan 2–7 gün sonra antikor ve T hücre aracılı gelişen, immünosupresiflerle durdurulamayan rejeksiyon tipidir.",
+    "discipline": "Tıbbi Farmakoloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-cf37211634"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Farmakoloji/1)İmmunofarmakoloji.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 1,
+        "sayfa": 81,
+        "alinti": "Akselere rejeksiyon 2-7 gün sonra ortaya çıkar, hem antikorlar hem de T hücreleri aracılığı ile gelişir"
+      }
+    ]
+  },
+  "akut rejeksiyon": {
+    "term": "Akut rejeksiyon",
+    "category": "patoloji",
+    "definition": "Günler-aylar içinde gelişen, esas olarak hücresel immüniteye bağlı ve genel immünosupresiflerle geri döndürülebilen rejeksiyondur.",
+    "description": "Günler-aylar içinde gelişen, esas olarak hücresel immüniteye bağlı ve genel immünosupresiflerle geri döndürülebilen rejeksiyondur.",
+    "discipline": "Tıbbi Farmakoloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-cf37211634"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Farmakoloji/1)İmmunofarmakoloji.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 1,
+        "sayfa": 81,
+        "alinti": "Akut rejeksiyon günler, aylar içinde gelişir ve esas olarak hücresel immuniteyi ilgilendirir"
+      }
+    ]
+  },
+  "kronik rejeksiyon": {
+    "term": "Kronik rejeksiyon",
+    "category": "patoloji",
+    "definition": "Aylar-yıllar sonra greft damarlarında kalınlaşma ve fibrozla seyreden, hücresel ve humoral bağışıklığa bağlı rejeksiyondur.",
+    "description": "Aylar-yıllar sonra greft damarlarında kalınlaşma ve fibrozla seyreden, hücresel ve humoral bağışıklığa bağlı rejeksiyondur.",
+    "discipline": "Tıbbi Farmakoloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-cf37211634"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Farmakoloji/1)İmmunofarmakoloji.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 1,
+        "sayfa": 82,
+        "alinti": "Kronik rejeksiyon aktarılan organın damar yapısında kalınlaşma ve fibroz ile karakterizedir"
+      }
+    ]
+  },
+  "kronik allograft vaskülopatisi": {
+    "term": "Kronik allograft vaskülopatisi",
+    "category": "patoloji",
+    "definition": "Kalp transplant alıcılarında greft damarlarını tutan kronik değişikliktir; mikofenolat mofetil azaltmada ilk seçenektir.",
+    "description": "Kalp transplant alıcılarında greft damarlarını tutan kronik değişikliktir; mikofenolat mofetil azaltmada ilk seçenektir.",
+    "discipline": "Tıbbi Farmakoloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-cf37211634"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Farmakoloji/1)İmmunofarmakoloji.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 1,
+        "sayfa": 39,
+        "alinti": "kardiyak transplant alıcılarında kronik allograft vaskulopatiyi azaltmak ve engellemek için ilk tedavi"
+      }
+    ]
+  },
+  "psoriasis": {
+    "term": "Psoriasis",
+    "category": "hastalik",
+    "definition": "Otoimmün kronik inflamatuvar deri hastalığıdır (sedef); siklosporin, topikal takrolimus, adalimumab, alefasept ve ustekinumab ile tedavi edilir.",
+    "description": "Otoimmün kronik inflamatuvar deri hastalığıdır (sedef); siklosporin, topikal takrolimus, adalimumab, alefasept ve ustekinumab ile tedavi edilir.",
+    "discipline": "Tıbbi Farmakoloji",
+    "committee": "",
+    "aliases": [
+      "sedef hastalığı"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-cf37211634"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Farmakoloji/1)İmmunofarmakoloji.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 1,
+        "sayfa": 32,
+        "alinti": "Siklosporinin ayrıca üveit, romatoid artrit, psoriasis (sedef hastalığı)"
+      }
+    ]
+  },
+  "idiyopatik trombositopenik purpura (itp)": {
+    "term": "İdiyopatik trombositopenik purpura (İTP)",
+    "category": "hastalik",
+    "definition": "Trombositlere karşı otoimmün yıkımla seyreden hastalıktır; prednizon, IVIG ve dirençli olguda vinkristin kullanılır.",
+    "description": "Trombositlere karşı otoimmün yıkımla seyreden hastalıktır; prednizon, IVIG ve dirençli olguda vinkristin kullanılır.",
+    "discipline": "Tıbbi Farmakoloji",
+    "committee": "",
+    "aliases": [
+      "İTP"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-cf37211634"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Farmakoloji/1)İmmunofarmakoloji.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 1,
+        "sayfa": 59,
+        "alinti": "lGlV ile sistemik lupus eritematozus ve refrakter idyopatik trombositopenik purpurada da iyi klinik yanıtlara ulaşılmaktadır"
+      }
+    ]
+  },
+  "ankilozan spondilit": {
+    "term": "Ankilozan spondilit",
+    "category": "hastalik",
+    "definition": "Omurgayı tutan kronik inflamatuvar artrittir; adalimumab, etanersept ve golimumab gibi TNF-α inhibitörleriyle tedavi edilir.",
+    "description": "Omurgayı tutan kronik inflamatuvar artrittir; adalimumab, etanersept ve golimumab gibi TNF-α inhibitörleriyle tedavi edilir.",
+    "discipline": "Tıbbi Farmakoloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-cf37211634"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Farmakoloji/1)İmmunofarmakoloji.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 1,
+        "sayfa": 73,
+        "alinti": "Golimumab romatoid artrit, ankilozan spondilit ve psoriatik artritli hastalarda endikedir"
+      }
+    ]
+  },
+  "yaşa bağlı makula dejenerasyonu": {
+    "term": "Yaşa bağlı makula dejenerasyonu",
+    "category": "hastalik",
+    "definition": "Neovasküler formunda anti-VEGF ajanların (ranibizumab, pegaptanib) intravitreal uygulandığı retina hastalığıdır.",
+    "description": "Neovasküler formunda anti-VEGF ajanların (ranibizumab, pegaptanib) intravitreal uygulandığı retina hastalığıdır.",
+    "discipline": "Tıbbi Farmakoloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-cf37211634"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Farmakoloji/1)İmmunofarmakoloji.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 1,
+        "sayfa": 68,
+        "alinti": "Yaşa bağlı makula dejenerasyonu, retinal ven tıkanıklığı sonrası makula ödemi, diyabetik makula ödemi"
+      }
+    ]
+  },
+  "kuru göz sendromu": {
+    "term": "Kuru göz sendromu",
+    "category": "hastalik",
+    "definition": "Ciddi formunda oftalmik siklosporinle tedavi edilen gözyaşı film bozukluğudur.",
+    "description": "Ciddi formunda oftalmik siklosporinle tedavi edilen gözyaşı film bozukluğudur.",
+    "discipline": "Tıbbi Farmakoloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-cf37211634"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Farmakoloji/1)İmmunofarmakoloji.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 1,
+        "sayfa": 31,
+        "alinti": "Oftalmik siklosporin, ciddi kuru göz sendromu ve oküler graft"
+      }
+    ]
+  },
+  "lenfopeni": {
+    "term": "Lenfopeni",
+    "category": "patoloji",
+    "definition": "Kandaki lenfosit sayısının azalmasıdır; dimetil fumarat, fingolimod ve pentostatin gibi ilaçlarla gelişebilir.",
+    "description": "Kandaki lenfosit sayısının azalmasıdır; dimetil fumarat, fingolimod ve pentostatin gibi ilaçlarla gelişebilir.",
+    "discipline": "Tıbbi Farmakoloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-cf37211634"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Farmakoloji/1)İmmunofarmakoloji.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 1,
+        "sayfa": 50,
+        "alinti": "Lenfopeni önemli olabilir, bu nedenle kan sayımları düzenli olarak izlenmelidir"
+      }
+    ]
+  },
+  "teratojenite": {
+    "term": "Teratojenite",
+    "category": "terim",
+    "definition": "İlacın gebelikte fetusta yapısal anomaliye yol açma özelliğidir; talidomid ve leflunomidin önemli toksisitesidir.",
+    "description": "İlacın gebelikte fetusta yapısal anomaliye yol açma özelliğidir; talidomid ve leflunomidin önemli toksisitesidir.",
+    "discipline": "Tıbbi Farmakoloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-cf37211634"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Farmakoloji/1)İmmunofarmakoloji.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 1,
+        "sayfa": 42,
+        "alinti": "Talidomidin yan etki profili geniştir. En önemli toksisitesi teratojenik olmasıdır"
+      }
+    ]
+  },
+  "endürasyon": {
+    "term": "Endürasyon",
+    "category": "tani",
+    "definition": "Tüberkülin deri testinde makrofaj ve T hücre birikimine bağlı yumuşak dokunun lokal sertleşmesidir.",
+    "description": "Tüberkülin deri testinde makrofaj ve T hücre birikimine bağlı yumuşak dokunun lokal sertleşmesidir.",
+    "discipline": "Tıbbi Farmakoloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-cf37211634"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Farmakoloji/1)İmmunofarmakoloji.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 1,
+        "sayfa": 20,
+        "alinti": "endurasyon (yumuşak dokunun lokal olarak sertleşmesi) ve kırmızılık gözlenir"
+      }
+    ]
+  },
+  "lizozim": {
+    "term": "Lizozim",
+    "category": "fizyoloji",
+    "definition": "Patojenlerin ortadan kaldırılmasında rol oynayan doğal immünitenin biyokimyasal bileşenidir.",
+    "description": "Patojenlerin ortadan kaldırılmasında rol oynayan doğal immünitenin biyokimyasal bileşenidir.",
+    "discipline": "İmmünoloji",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-cf37211634"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Farmakoloji/1)İmmunofarmakoloji.pdf",
+        "ders": "Tıbbi Farmakoloji",
+        "kurul": 1,
+        "sayfa": 4,
+        "alinti": "Patojenlerin ortadan kaldırılmasında lizozim gibi biyokimyasal maddeler ve kompleman sistemi önemli rol oynar"
       }
     ]
   }
