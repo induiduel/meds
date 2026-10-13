@@ -307,7 +307,7 @@ class Yayin:
     def _not_kayitlari(self, md: str):
         k = self.kayit
         rec = {"id": self.ders_id, "kurul": 1, "committeeId": "donem3-kurul1", "discipline": k["ders"], "title": k["konu"],
-               "instructor": k["hoca"], "fileName": f"{self.n:02d}_{s14._slug(k['konu'])}.md", "keyPoints": s14._key_points(md),
+               "instructor": k["hoca"] or "", "fileName": f"{self.n:02d}_{s14._slug(k['konu'])}.md", "keyPoints": s14._key_points(md),
                "charCount": len(md), "readingTimeMinutes": max(1, round(len(md.split()) / 180)), "content": md}
         meta_f = ("id", "kurul", "committeeId", "discipline", "title", "instructor", "fileName", "keyPoints",
                   "charCount", "readingTimeMinutes")
@@ -324,7 +324,7 @@ class Yayin:
         self._yaz(s14.SUMMARY_JSON, sorted(upsert(oku(s14.SUMMARY_JSON, []), rec), key=sira))
         self._yaz(s14.META_JSON, sorted(upsert(oku(s14.META_JSON, []), {f: rec[f] for f in meta_f}), key=sira))
         en = oku(s14.ENRICH_JSON, {})
-        en[self.ders_id] = {"lessonTitle": k["konu"], "discipline": k["ders"], "instructor": k["hoca"],
+        en[self.ders_id] = {"lessonTitle": k["konu"], "discipline": k["ders"], "instructor": k["hoca"] or "",
                             "programDate": k["tarih"] or None}
         self._yaz(s14.ENRICH_JSON, en)
         for cat in s14.CATALOG_JSONS:
