@@ -204,13 +204,21 @@ function getTermToConceptMap(): Map<string, MedicalConceptBank[]> {
     void loadMedicalConcepts();
     return new Map();
   }
+  // 69,6 bin terimin yalnız ~24 bini benzersiz; her terim iki turda ayrı ayrı normalleştirilince
+  // indeks kurulumu tek seferde ~300 ms ana iş parçacığını kilitliyordu (telefonda 1-2 sn)
+  const normCache = new Map<string, string>();
+  const norm = (term: string) => {
+    let v = normCache.get(term);
+    if (v === undefined) { v = normalizeMedicalText(term); normCache.set(term, v); }
+    return v;
+  };
   // 1. tur: her terimin kaç farklı bankada geçtiğini say (df)
   const df = new Map<string, number>();
   for (const concept of MEDICAL_CONCEPT_BANKS) {
     if (!concept.terms) continue;
     const seen = new Set<string>();
     for (const term of concept.terms) {
-      const cleanTerm = normalizeMedicalText(term);
+      const cleanTerm = norm(term);
       if (cleanTerm.length < 3 || MEDICAL_STOP_WORDS.has(cleanTerm)) continue;
       seen.add(cleanTerm);
     }
@@ -222,7 +230,7 @@ function getTermToConceptMap(): Map<string, MedicalConceptBank[]> {
   for (const concept of MEDICAL_CONCEPT_BANKS) {
     if (!concept.terms) continue;
     for (const term of concept.terms) {
-      const cleanTerm = normalizeMedicalText(term);
+      const cleanTerm = norm(term);
       if (cleanTerm.length < 3 || MEDICAL_STOP_WORDS.has(cleanTerm)) continue;
       // Jenerik terim ("sendromu" gibi): kavram eşleşmesinde kullanılmaz
       if ((df.get(cleanTerm) || 0) > GENERIC_CONCEPT_DF_THRESHOLD) continue;

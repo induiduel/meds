@@ -54,6 +54,8 @@ export interface GlossaryContextValue {
   setIsDrawerOpen: (open: boolean) => void;
   currentSlideText?: string;
   setCurrentSlideText?: (text: string) => void;
+  /** Sözlüğü (2,5 MB) yükle — yalnız onu kullanan ekran (Öğren) açılınca çağrılır */
+  ensureLoaded?: () => void;
 }
 
 // ---------------------------------------------------------------------------
@@ -80,8 +82,13 @@ const fallbackGlossaryContext: GlossaryContextValue = {
 
 export const useGlossary = () => {
   const ctx = useContext(GlossaryContext);
+  const ensure = ctx?.ensureLoaded;
+  useEffect(() => { ensure?.(); }, [ensure]);
   return ctx || fallbackGlossaryContext;
 };
+
+/** Her sayfada takılı katman (açılır kutu, çekmece) için: sözlüğü kendiliğinden yükletmez */
+const useGlossaryPassive = () => useContext(GlossaryContext) || fallbackGlossaryContext;
 
 // ---------------------------------------------------------------------------
 // Helper: Category Badge Styling
@@ -128,8 +135,13 @@ export const GlossaryProvider: React.FC<{ children: React.ReactNode }> = ({ chil
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const [currentSlideText, setCurrentSlideText] = useState<string>('');
   const hideTimeoutRef = useRef<number | null>(null);
+  // Sağlayıcı tüm uygulamayı sarar; sözlük eskiden her sayfada boşta yükleniyordu (2,5 MB ayrıştırma,
+  // telefonda ana sayfada donma). Artık yalnız useGlossary kullanan ekran açılınca yüklenir.
+  const [wanted, setWanted] = useState(false);
+  const ensureLoaded = useCallback(() => setWanted(true), []);
 
   useEffect(() => {
+    if (!wanted) return;
     if (cachedGlossary) {
       if (glossaryList.length === 0) setGlossaryList(cachedGlossary);
       return;
@@ -153,7 +165,7 @@ export const GlossaryProvider: React.FC<{ children: React.ReactNode }> = ({ chil
         clearTimeout(t);
       };
     }
-  }, [glossaryList.length]);
+  }, [glossaryList.length, wanted]);
 
   // Panelden sözlük değişince (canlı içerik) liste yeniden kurulur
   useEffect(() => {
@@ -181,19 +193,19 @@ export const GlossaryProvider: React.FC<{ children: React.ReactNode }> = ({ chil
     return map;
   }, [glossaryList]);
 
-  const lookupTerm = (text: string): GlossaryItem | undefined => {
+  const lookupTerm = useCallback((text: string): GlossaryItem | undefined => {
     return lookupMap.get(text.toLowerCase().trim());
-  };
+  }, [lookupMap]);
 
-  const showTerm = (item: GlossaryItem, rect?: DOMRect, source: TermTriggerSource = 'tap') => {
+  const showTerm = useCallback((item: GlossaryItem, rect?: DOMRect, source: TermTriggerSource = 'tap') => {
     if (hideTimeoutRef.current) {
       window.clearTimeout(hideTimeoutRef.current);
       hideTimeoutRef.current = null;
     }
     setActiveState({ item, triggerRect: rect, source });
-  };
+  }, []);
 
-  const hideTerm = (immediate: boolean = false) => {
+  const hideTerm = useCallback((immediate: boolean = false) => {
     if (immediate) {
       if (hideTimeoutRef.current) {
         window.clearTimeout(hideTimeoutRef.current);
@@ -211,22 +223,24 @@ export const GlossaryProvider: React.FC<{ children: React.ReactNode }> = ({ chil
       setActiveState(null);
       hideTimeoutRef.current = null;
     }, 450);
-  };
+  }, []);
+
+  // Değer her App çiziminde yeni nesne olunca tüm tüketiciler (Öğren oynatıcısı) yeniden çiziliyordu
+  const value = useMemo<GlossaryContextValue>(() => ({
+    activeState,
+    showTerm,
+    hideTerm,
+    lookupTerm,
+    glossaryList,
+    isDrawerOpen,
+    setIsDrawerOpen: handleSetDrawerOpen,
+    currentSlideText,
+    setCurrentSlideText,
+    ensureLoaded,
+  }), [activeState, showTerm, hideTerm, lookupTerm, glossaryList, isDrawerOpen, handleSetDrawerOpen, currentSlideText, ensureLoaded]);
 
   return (
-    <GlossaryContext.Provider
-      value={{
-        activeState,
-        showTerm,
-        hideTerm,
-        lookupTerm,
-        glossaryList,
-        isDrawerOpen,
-        setIsDrawerOpen: handleSetDrawerOpen,
-        currentSlideText,
-        setCurrentSlideText,
-      }}
-    >
+    <GlossaryContext.Provider value={value}>
       {children}
       <GlossaryLayer />
     </GlossaryContext.Provider>
@@ -328,7 +342,7 @@ export function extractSlideKnowledge(item: GlossaryItem, slideText?: string): s
 // Floating Popover / Toast Component (Supports Touch Tap + Desktop Hover)
 // ---------------------------------------------------------------------------
 export const FloatingGlossaryToast: React.FC = () => {
-  const { activeState, hideTerm, showTerm, setIsDrawerOpen, currentSlideText } = useGlossary();
+  const { activeState, hideTerm, showTerm, setIsDrawerOpen, currentSlideText } = useGlossaryPassive();
   const [isSpeaking, setIsSpeaking] = useState(false);
   const cardRef = useRef<HTMLDivElement>(null);
 
@@ -856,7 +870,7 @@ export const RenderWithGlossaryTerms: React.FC<{
 // Medical Glossary Drawer / Reference Modal
 // ---------------------------------------------------------------------------
 export const MedicalGlossaryDrawer: React.FC = () => {
-  const { glossaryList, isDrawerOpen, setIsDrawerOpen, showTerm } = useGlossary();
+  const { glossaryList, isDrawerOpen, setIsDrawerOpen, showTerm } = useGlossaryPassive();
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('Tümü');
 

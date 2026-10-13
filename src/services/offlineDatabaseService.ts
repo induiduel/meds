@@ -302,8 +302,8 @@ class OfflineDatabaseService {
     const savedStats = await this.getMeta<OfflineDbStats>(KEY_STATS);
 
     // IndexedDB'deki çıkmış soruları oku
-    const pq = await pastQuestionsCache.getCachedQuestions();
-    const pqCount = pq.length;
+    // Yalnız sayı gerekiyor: getCachedQuestions açılışta ~85 MB'ı belleğe açıyordu (telefonda donma)
+    const pqCount = await pastQuestionsCache.getCachedCount();
 
     // Diğer store sayılarını oku
     const db = await this.initDb();

@@ -67,6 +67,11 @@ class PastQuestionsCacheService {
   private isMemoryInitialized = false;
   private listeners: Set<CacheListener> = new Set();
   private syncInProgress = false;
+  /** Son başarılı ağ eşitlemesinin zamanı (aynı açılışta art arda tetiklemeleri birleştirmek için) */
+  private lastSyncAt = 0;
+  /** Bellek doldurulmadan bilinen soru kimlikleri (IndexedDB anahtarları). Eşitleme tüm soruları
+   * (~85 MB) belleğe açmadan sayı ve fazlalık denetimini bununla yapar; ekranlar getCachedQuestions ister. */
+  private cachedIds: Set<string> | null = null;
 
   private currentStatus: CacheSyncStatus = {
     isSyncing: false,
@@ -145,8 +150,40 @@ class PastQuestionsCacheService {
     return () => this.listeners.delete(listener);
   }
 
+  /** Cihazdaki soru sayısı (bellek henüz doldurulmadıysa anahtar kümesinden) */
+  private cachedCount(): number {
+    if (this.isMemoryInitialized || !this.cachedIds) return this.memoryMap.size;
+    return this.cachedIds.size;
+  }
+
+  /** Tüm soruları açmadan cihazdaki kimlikler (IndexedDB getAllKeys: yapılandırılmış kopya yok, ucuz) */
+  private async getCachedIdSet(): Promise<Set<string>> {
+    if (this.isMemoryInitialized) return new Set(this.memoryMap.keys());
+    if (this.cachedIds) return this.cachedIds;
+    const db = await this.initDb();
+    if (!db) return new Set(this.memoryMap.keys());
+    const keys = await new Promise<string[]>((resolve) => {
+      try {
+        const req = db.transaction(STORE_QUESTIONS, 'readonly').objectStore(STORE_QUESTIONS).getAllKeys();
+        req.onsuccess = () => resolve((req.result || []).map(String));
+        req.onerror = () => resolve([]);
+      } catch {
+        resolve([]);
+      }
+    });
+    // Bu arada belleğe tam yükleme yapıldıysa o yetkilidir
+    if (this.isMemoryInitialized) return new Set(this.memoryMap.keys());
+    this.cachedIds = new Set(keys);
+    return this.cachedIds;
+  }
+
+  /** Cihazdaki soru sayısı — soruları belleğe açmadan (istatistik/durum ekranları için) */
+  public async getCachedCount(): Promise<number> {
+    return (await this.getCachedIdSet()).size;
+  }
+
   private notifyListeners(updatedQuestions?: QuestionItem[]) {
-    this.currentStatus.totalCached = this.memoryMap.size;
+    this.currentStatus.totalCached = this.cachedCount();
     for (const listener of this.listeners) {
       try {
         listener({ ...this.currentStatus }, updatedQuestions);
@@ -184,6 +221,7 @@ class PastQuestionsCacheService {
             }
           }
           this.isMemoryInitialized = true;
+          this.cachedIds = null;
           this.currentStatus.totalCached = this.memoryMap.size;
           resolve(items);
         };
@@ -226,6 +264,7 @@ class PastQuestionsCacheService {
   public async saveQuestion(question: QuestionItem): Promise<void> {
     if (!question || !question.id) return;
     this.memoryMap.set(question.id, question);
+    this.cachedIds?.add(question.id);
 
     const db = await this.initDb();
     if (db) {
@@ -252,12 +291,20 @@ class PastQuestionsCacheService {
   public async saveBatch(questions: QuestionItem[]): Promise<void> {
     if (!questions || questions.length === 0) return;
 
+    // Bellek henüz IndexedDB'den doldurulmadıysa (ör. arka plan eşitlemesi) yalnız kimlikler izlenir;
+    // memoryMap'e kısmi kayıt girip "doldu" işaretlenirse getCachedQuestions eksik liste dönerdi.
+    const wasLoaded = this.isMemoryInitialized || (!this.cachedIds && this.memoryMap.size === 0 && questions.length > 1000);
     for (const q of questions) {
       if (q && q.id) {
-        this.memoryMap.set(q.id, q);
+        if (wasLoaded) this.memoryMap.set(q.id, q);
+        else this.memoryMap.delete(q.id);
+        this.cachedIds?.add(q.id);
       }
     }
-    this.isMemoryInitialized = true;
+    if (wasLoaded) {
+      this.isMemoryInitialized = true;
+      this.cachedIds = null;
+    }
 
     const db = await this.initDb();
     if (!db) {
@@ -295,8 +342,9 @@ class PastQuestionsCacheService {
 
     for (const id of ids) {
       this.memoryMap.delete(id);
+      this.cachedIds?.delete(id);
     }
-    this.currentStatus.totalCached = this.memoryMap.size;
+    this.currentStatus.totalCached = this.cachedCount();
 
     const db = await this.initDb();
     if (db) {
@@ -408,6 +456,7 @@ class PastQuestionsCacheService {
     this.memoryMap.clear();
     this.memoryMeta.clear();
     this.isMemoryInitialized = false;
+    this.cachedIds = new Set();
 
     if (typeof window !== 'undefined' && window.localStorage) {
       try {
@@ -472,9 +521,15 @@ class PastQuestionsCacheService {
           success: true,
           updatedCount: 0,
           isUpToDate: this.currentStatus.isUpToDate,
-          totalCount: this.memoryMap.size,
+          totalCount: this.cachedCount(),
         };
       }
+    }
+
+    // Açılışta getPastQuestions, SSE bağlanması ve sayfa geçişleri eşitlemeyi saniyeler içinde birkaç kez
+    // tetikliyor; zorunlu olmayanlar 20 sn içinde tekrar ağa çıkmaz.
+    if (!options.forceFull && this.lastSyncAt > 0 && Date.now() - this.lastSyncAt < 20_000) {
+      return { success: true, updatedCount: 0, isUpToDate: this.currentStatus.isUpToDate, totalCount: this.cachedCount() };
     }
 
     this.syncInProgress = true;
@@ -484,8 +539,8 @@ class PastQuestionsCacheService {
 
     try {
       // 1. Mevcut yerel soruları ve son senkronizasyon zamanını oku
-      const localQuestions = await this.getCachedQuestions();
-      const localCount = localQuestions.length;
+      const localIds = await this.getCachedIdSet();
+      const localCount = localIds.size;
       let lastSyncTime = await this.getLastSyncTime();
 
       // Çevrimdışı Kontrolü: Cihaz internetsizse doğrudan cihaz hafızasını sun, ağı bekleme
@@ -534,15 +589,20 @@ class PastQuestionsCacheService {
 
           if (res.ok) {
             const data = await res.json();
+            this.lastSyncAt = Date.now();
             // Sunucuda silinmiş soruları doğrudan yerel önbellekten kaldır
             if (Array.isArray(data.deletedIds) && data.deletedIds.length > 0) {
-              const toRemove = data.deletedIds.filter((id: string) => this.memoryMap.has(id));
+              const toRemove = data.deletedIds.filter((id: string) => localIds.has(String(id)) || this.memoryMap.has(id));
               if (toRemove.length) await this.removeQuestions(toRemove);
             }
             // Sunucuda artık olmayan (ör. karantinaya alınan) soruları cihaz önbelleğinden kaldır
-            if (Array.isArray(data.allIds) && data.allIds.length > 0) {
-              const keep = new Set<string>(data.allIds.map(String));
-              const stale = Array.from(this.memoryMap.keys()).filter((id) => !keep.has(String(id)));
+            // Tam liste geldiyse o liste yetkilidir (eski sunucu allIds göndermiyordu → fazlalık hiç silinmiyordu)
+            const authoritativeIds: any[] | null = Array.isArray(data.allIds) && data.allIds.length > 0
+              ? data.allIds
+              : (Array.isArray(data.questions) && data.questions.length > 0 ? data.questions.map((q: any) => q?.id).filter(Boolean) : null);
+            if (authoritativeIds) {
+              const keep = new Set<string>(authoritativeIds.map(String));
+              const stale = Array.from(this.isMemoryInitialized ? this.memoryMap.keys() : localIds).filter((id) => !keep.has(String(id)));
               if (stale.length) await this.removeQuestions(stale);
             }
             if (data.upToDate) {
@@ -562,7 +622,7 @@ class PastQuestionsCacheService {
             if (incomingQuestions && incomingQuestions.length > 0) {
               await this.saveBatch(incomingQuestions);
               if (data.lastModified) {
-                await this.setLastSyncTime(data.lastModified, data.count || incomingQuestions.length);
+                await this.setLastSyncTime(data.lastModified, this.cachedCount() || data.count || incomingQuestions.length);
                 this.currentStatus.lastSyncTime = data.lastModified;
               }
               options.onUpdate?.(incomingQuestions);
@@ -577,13 +637,13 @@ class PastQuestionsCacheService {
                 success: true,
                 updatedCount: incomingQuestions.length,
                 isUpToDate: true,
-                totalCount: this.memoryMap.size,
+                totalCount: this.cachedCount(),
               };
             }
 
             // Yerel sunucu yanıt verdi, silinenler kaldırıldı; güncellenecek yeni soru yok
             if (data.lastModified) {
-              await this.setLastSyncTime(data.lastModified, data.count || this.memoryMap.size);
+              await this.setLastSyncTime(data.lastModified, data.count || this.cachedCount());
               this.currentStatus.lastSyncTime = data.lastModified;
             }
             this.syncInProgress = false;
@@ -596,7 +656,7 @@ class PastQuestionsCacheService {
               success: true,
               updatedCount: 0,
               isUpToDate: true,
-              totalCount: this.memoryMap.size,
+              totalCount: this.cachedCount(),
             };
           }
         } catch {
@@ -654,7 +714,7 @@ class PastQuestionsCacheService {
               success: true,
               updatedCount: deltaQuestions.length,
               isUpToDate: true,
-              totalCount: this.memoryMap.size,
+              totalCount: this.cachedCount(),
             };
           } else {
             // Zaman damgası hafif ileride olsa bile delta boş ise zamanı güncelle
@@ -685,7 +745,7 @@ class PastQuestionsCacheService {
       this.currentStatus.isSyncing = false;
       this.currentStatus.statusMessage = 'Senkronizasyon hatası: ' + (err.message || '');
       this.notifyListeners();
-      return { success: false, updatedCount: 0, isUpToDate: false, totalCount: this.memoryMap.size };
+      return { success: false, updatedCount: 0, isUpToDate: false, totalCount: this.cachedCount() };
     }
   }
 
@@ -744,7 +804,7 @@ class PastQuestionsCacheService {
   }
 
   public getStatus(): CacheSyncStatus {
-    return { ...this.currentStatus, totalCached: this.memoryMap.size };
+    return { ...this.currentStatus, totalCached: this.cachedCount() };
   }
 }
 

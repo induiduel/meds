@@ -37,19 +37,24 @@ export function prefetchIdle() {
   if (typeof window === 'undefined') return;
   const conn = (navigator as any).connection;
   if (conn?.saveData || /2g/.test(conn?.effectiveType || '') || getNetState() !== 'online') return;
-  const order: AppRoute[] = [
-    'past_exams',
-    'learn',
-    'flashcards',
-    'diseases',
-    'glossary',
-    'study',
-    'summaries',
-    'kazanimlar',
-    'practice',
-    'stats',
-    'settings',
-  ];
+  // Kartlar sözlüğü (2,5 MB) doğrudan içe aktarıyor: boşta önden yüklenmez, sekmeye basınca yüklenir.
+  // Telefonda/az bellekli cihazda her parça indirilip çalıştırılınca birkaç saniyede bir takılma oluyordu;
+  // orada yalnız en sık iki sayfa önden yüklenir.
+  const lowEnd = window.matchMedia?.('(pointer: coarse)').matches || ((navigator as any).deviceMemory ?? 8) <= 4;
+  const order: AppRoute[] = lowEnd
+    ? ['past_exams', 'learn']
+    : [
+        'past_exams',
+        'learn',
+        'diseases',
+        'glossary',
+        'study',
+        'summaries',
+        'kazanimlar',
+        'practice',
+        'stats',
+        'settings',
+      ];
   let i = 0;
   const step = () => {
     if (i >= order.length || getNetState() !== 'online') return;

@@ -2487,8 +2487,11 @@ app.get('/api/past-exams/sync', (req, res) => {
       });
     }
 
-    // 2. If client provided 'since' and count matches, only send questions modified since then
-    if (since && clientCount === list.length) {
+    // 2. since + sayı eşit ya da istemcide fazlası var (karantina/birleştirmeyle gizlenen eski kopyalar):
+    // yalnız değişenler + allIds gönderilir, istemci fazlalığı siler. Eskiden sayı tutmayınca tam liste
+    // (~85 MB) iniyor, istemci fazlalığı silmediği için sayı hiç eşitlenmiyor ve her açılışta/SSE
+    // yeniden bağlanmasında tam liste yeniden iniyordu (mobilde donma).
+    if (since && clientCount !== undefined && clientCount >= list.length) {
       const sinceDate = new Date(since).getTime();
       const updated = list.filter(q => {
         if (!q.updatedAt) return false;
@@ -2520,8 +2523,9 @@ app.get('/api/past-exams/sync', (req, res) => {
     }
 
     // Hazır gövde (önbellekli JSON + gzip)
+    // allIds: istemci bu listede olmayan yerel kopyaları siler (sayı bir sonraki eşitlemede tutar)
     sendPastListBody(req, res, served, `sync:${maxUpdatedAt}:${deletedIds.length}`, () =>
-      `{"success":true,"upToDate":false,"count":${list.length},"lastModified":${JSON.stringify(maxUpdatedAt)},"questions":${served.listJson}${deletedIds.length > 0 ? `,"deletedIds":${JSON.stringify(deletedIds)}` : ''}}`);
+      `{"success":true,"upToDate":false,"count":${list.length},"lastModified":${JSON.stringify(maxUpdatedAt)},"questions":${served.listJson},"allIds":${JSON.stringify(list.map((q: any) => q.id))}${deletedIds.length > 0 ? `,"deletedIds":${JSON.stringify(deletedIds)}` : ''}}`);
   } catch (err: any) {
     res.status(500).json({ error: 'Delta senkronizasyonu başarısız: ' + err.message });
   }
