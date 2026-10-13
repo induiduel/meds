@@ -62,6 +62,50 @@ yönetici onayından sonra yayınlanır.
 - Kazanımlar: varsa `baglam.kazanimlar`'ı aynen kullan; yoksa dersten 4–8 ölçülebilir kazanım yaz.
 - `bilgi_paketi`: dersteki tüm önemli bilgiler, 30–120 madde, her biri kanıtlı.
 
+### 1b. `sayfa_haritasi.json` — başlık yapısı + teyitli sayfa kaydı (ZORUNLU; deck.json'dan ÖNCE yaz)
+Dersin omurgasıdır: ders başlıklara bölünür, PDF'in **her sayfası** kayda geçer, her sayfanın hangi başlıkta, hangi
+adımlarda ve hangi özet (bilgi_paketi) maddelerinde anlatıldığı yazılır. Öğren'deki "PDF'te bu sayfa" eşlemesi ve ders
+özeti doğrudan bu kayıttan üretilir (tahmin yok).
+```json
+{"basliklar": [
+   {"no": "1", "baslik": "Doğal İmmün Sistem", "sayfalar": [3, 8], "adimlar": [1, 7],
+    "ozet": ["Başlığın 2–5 maddelik özeti (her madde tek cümle, ders bilgisi)"]},
+   {"no": "1.1", "ust": "1", "baslik": "NK Hücreleri", "sayfalar": [7, 8], "adimlar": [6, 7], "ozet": ["..."]}],
+ "sayfalar": [
+   {"sayfa": 1, "tur": "kapak", "ne_anlatiliyor": "Ders adı ve öğretim üyesi"},
+   {"sayfa": 8, "tur": "icerik", "baslik": "1.1", "ne_anlatiliyor": "1–2 cümle: bu sayfada ne anlatılıyor",
+    "adimlar": [7], "bilgi": [12, 13], "kanit": {"sayfa": 8, "alinti": "kaynaktan 6–30 kelime"}},
+   {"sayfa": 9, "tur": "sekil", "baslik": "1.1", "ne_anlatiliyor": "...", "adimlar": [7], "bilgi": [14],
+    "sekiller": ["Şekil 55-2: NK hücresinin MHC-I ile inhibisyonu — ne gösteriyor, önemli bulgusu ne"]}]}
+```
+- **Başlıklar:** dersin akışına göre ana başlıklar (`"1"`, `"2"` …) ve gerekirse alt başlıklar (`"1.1"`, `ust` ile).
+  Her **ana başlık 1–20 içerik adımından** oluşur (tekrar/oyun sayfaları sayılmaz); ana başlıkların `adimlar`
+  aralıkları içerik adımlarını sırayla, boşluksuz ve çakışmasız böler. Alt başlık aralığı üst başlığın içinde kalır.
+  20 adımı aşacak başlık alt başlıklara değil, ayrı ana başlıklara bölünür. Destedeki checkpoint'ler ana başlık
+  sonlarına konur ve checkpoint başlığı ana başlığın adını taşır.
+- **Sayfalar:** `kaynak.md`'deki HER `=== SAYFA n ===` tam bir kez yazılır. `tur`: `icerik` | `sekil` | `tablo` |
+  `kapak` | `icindekiler` | `kaynakca` | `bos` | `uyari` (hoca uyarısı/telif). Yalnız gerçekten içeriksiz sayfa
+  `kapak/icindekiler/kaynakca/bos/uyari` olabilir.
+- **PDF'teki her içerik anlatılır:** `icerik`, `sekil`, `tablo` sayfalarının her biri en az bir adımda (`adimlar`) ve en
+  az bir `bilgi_paketi` maddesinde (`bilgi`, madde `no`'ları) karşılık bulur. Sayfadaki her madde, tablo satırı ve
+  sayı o adımların anlatımında geçer; "özetle geç" yok.
+- **Şekil ve resimler atlanamaz:** görseli olan her sayfa (`sekil`/`tablo`, ya da görsel içeren `icerik`) için
+  `sekiller[]` doldurulur: görselin adı/numarası + neyi gösterdiği + önemli bulgusu (en az 8 kelime). Görsel
+  (`baglam.gorsel_klasoru` varsa sayfa_NNN.png'yi Read ile incele) ilgili adımda anlatılır; histoloji, şema, grafik,
+  algoritma, tablo resmi hep anlatılır. Yalnız logo/süs atlanır ve `sekiller`'e "süs görseli" diye yazılır.
+- **Teyit:** metni olan (≥15 kelime) içerik sayfasının `kanit.alinti`'sı o sayfadan kelimesi kelimesine alınır
+  (denetleyici kaynakta arar). Her `bilgi_paketi` maddesinin `kanit.sayfa`'sı, o maddeyi `bilgi` listesinde gösteren
+  sayfayla aynıdır (±1). Her içerik adımı en az bir sayfada geçer; adımın sayfaları ardışıktır.
+- **Destede karşılığı:** her içerik slaytına `"bolum": "<başlık no, en alt düzey>"` ve
+  `"pdfSayfalari": [ilk, son]` (kaynak.md numarasıyla; bu adımı listeleyen sayfaların en küçüğü/en büyüğü) yazılır;
+  `sourcePdf` = `{"fileName": ..., "primaryPage": ilk, "startPage": ilk, "endPage": son}` (o PDF'teki gerçek sayfa).
+  Deste nesnesine `"sayfaHaritasi": "teyitli"` eklenir — denetleyici 0 HATA vermezse bu alan yazılamaz.
+
+### 1c. `ders_ozeti.md` — ders özeti (ek maliyet yok)
+Ayrı yazma: `python3 /app/scripts/ders_isci/ozet_derle.py .` `ders_paketi.ders_ozeti` + başlıkların `ozet`
+maddeleri + sayfa aralıklarından derler (denetleyici de sonda çalıştırır). Özet ayrıca üretilmez; başlık özetlerini
+iyi yazman yeterli.
+
 ### 2. `ders_notu.md` — okunabilir, redakte ders notu (mevcut notlarla aynı biçim)
 ```
 📘 <Konu>: Detaylı Çalışma Metni
@@ -72,7 +116,8 @@ yönetici onayından sonra yayınlanır.
 ## N. SPOT BİLGİLER
 ```
 - Bitişik blok paragraf yok: 1–2 cümle giriş + `- **Kavram:** açıklama` maddeleri + vurgu kutusu.
-- Her `##` bölümünün sonunda `<sub>Kaynak: s. 3–7</sub>` gibi sayfa aralığı.
+- Her `##` bölümünün sonunda `<sub>Kaynak: s. 3–7</sub>` gibi sayfa aralığı. `##` bölümleri `sayfa_haritasi`
+  ana başlıklarıyla aynı sırada ve aynı adla.
 
 ### 3. `deck.json` — Öğren destesi (TEK deste nesnesi)
 Şemanın ve kuralların tamamı: `/app/docs/OGREN_ETKILESIM_REHBERI.md` — **yazmadan önce oku.** Özet:
@@ -154,7 +199,8 @@ yönetici onayından sonra yayınlanır.
 ## İş sırası
 
 1. `baglam.json` ve `kaynak.md`'yi oku; `/app/docs/OGREN_ETKILESIM_REHBERI.md`'yi oku.
-2. `ders_paketi.json` → `ders_notu.md` → `deck.json` (+doğrulayıcı) → `ornek_sorular.json` → `sozluk.json` →
+2. `ders_paketi.json` → `sayfa_haritasi.json` (başlıklar + sayfa kaydı; adım numaraları planlanır) → `ders_notu.md`
+   (bölümleri haritanın ana başlıklarıyla aynı) → `deck.json` (+doğrulayıcı; slayt `bolum`/`pdfSayfalari`) → `ornek_sorular.json` → `sozluk.json` →
    `hastaliklar.json` → `bilgi_havuzu.jsonl` → `cikmis_baglantilari.json` → `rapor.md`.
 3. Büyük dosyaları parça parça yaz (önce iskelet, sonra bölüm bölüm Edit) — tek seferde çok büyük yazma.
 4. Sonda: `python3 /app/scripts/ders_isci/denetle.py .` → **0 HATA** olana kadar düzelt.

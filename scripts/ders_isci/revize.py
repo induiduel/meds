@@ -104,7 +104,9 @@ LISTE_KALAN = [  # deste_id, [(PDF, (ilk, son) | None), ...], ders
 
 HAFIF_KURALLAR = """
 HAFİF REVİZE (baglam.hafif = true) — bu ders yayında V1 olarak KALACAK; senin çıktın yanına V2 olarak eklenecek.
-- Yalnız şunları üret: ders_paketi.json (bilgi_paketi kanıtlı, tüm önemli bilgiler) → deck.json → sozluk.json →
+- Yalnız şunları üret: ders_paketi.json (bilgi_paketi kanıtlı, tüm önemli bilgiler) → sayfa_haritasi.json
+  (TALIMAT §1b: başlıklar 1–20 adım, her sayfa teyitli, şekiller anlatılır) → deck.json (`bolum`, `pdfSayfalari`,
+  `sayfaHaritasi: "teyitli"`) → sozluk.json →
   cikmis_baglantilari.json → rapor.md. ders_notu.md, ornek_sorular.json, hastaliklar.json, bilgi_havuzu.jsonl ÜRETME
   (V1'inkiler kullanılır). denetle.py bu dosyaların yokluğunu yalnız UYARI sayar.
 - `baglam.kaynak_dosyalari` birden çok PDF ya da sayfa aralığı verebilir: kaynak.md YALNIZ bu dersin sayfalarını içerir.

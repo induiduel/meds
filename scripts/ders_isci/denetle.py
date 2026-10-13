@@ -6,6 +6,10 @@ Denetimler:
   - KANIT: her `kanit.alinti` `kaynak.md`'nin belirtilen sayfasında (±1 sayfa) kelimesi kelimesine geçiyor
     (Türkçe katlama + boşluk normalize). Geçmeyen kayıt HATA'dır (uydurma bilgi reddedilir).
   - deck.json: /app/scripts/validate_learning_decks.py --oyun-zorunlu 0 HATA (son slayt ders sonu oyunları).
+  - sayfa_haritasi.json: her kaynak sayfası tam bir kez; içerik/şekil/tablo sayfası ≥1 adım + ≥1 bilgi_paketi maddesi;
+    şekil sayfalarında görsel anlatımı; ana başlık 1–20 içerik adımı, aralıklar sıralı/boşluksuz; her içerik adımı
+    bir sayfada; slayt `pdfSayfalari`/`bolum` haritayla tutarlı; `sayfaHaritasi: "teyitli"` yalnız HATA yoksa.
+    Sonda ders_ozeti.md derlenir (ozet_derle.py).
   - ornek_sorular: kazanım başına 3–10 soru (kolay/orta/zor ≥1, fazlası çoğunlukla orta), A–E tam, doğru A–E,
     her şık ≥20 karakter gerekçeli açıklama, kanıtlı (yayın aracı s16 ile aynı kurallar).
 Sonuç ayrıca <klasör>/denetim.json'a yazılır.
@@ -110,6 +114,126 @@ class Denetim:
         self.hata(f"{yer}: alıntı kaynakta YOK → \"{k['alinti'][:70]}\"")
         return False
 
+    ICERIK = {"icerik", "sekil", "tablo"}
+    BOS = {"kapak", "icindekiler", "kaynakca", "bos", "uyari"}
+
+    def harita_denetle(self, paket: dict, deck):
+        """sayfa_haritasi.json: başlık yapısı + teyitli sayfa kaydı (TALIMAT §1b)."""
+        h = self.json_oku("sayfa_haritasi.json")
+        if not isinstance(h, dict):
+            return
+        n0 = len(self.hatalar)
+        bilgi_no = {b.get("no") for b in paket.get("bilgi_paketi") or []}
+        slides = (deck or {}).get("slides") or [] if isinstance(deck, dict) else []
+        sn = {s.get("slideNumber"): s for s in slides}
+        icerik_adim = [s.get("slideNumber") for s in slides
+                       if not (s.get("isCheckpoint") or s.get("isGameFinale") or str(s.get("title", "")).startswith("["))]
+        basliklar = h.get("basliklar") or []
+        bno = {str(b.get("no")): b for b in basliklar}
+        # sayfalar
+        goruldu, adim_sayfa, bilgi_sayfa = {}, {}, {}
+        for i, s in enumerate(h.get("sayfalar") or []):
+            p, tur = s.get("sayfa"), s.get("tur")
+            yer = f"sayfa_haritasi s.{p}"
+            if p in goruldu:
+                self.hata(f"{yer}: iki kez yazılmış")
+            goruldu[p] = s
+            if tur not in self.ICERIK | self.BOS:
+                self.hata(f"{yer}: tur geçersiz ({tur})")
+                continue
+            if not str(s.get("ne_anlatiliyor") or "").strip():
+                self.hata(f"{yer}: ne_anlatiliyor boş")
+            if tur in self.BOS:
+                if tur in ("bos", "kapak") and len(self.sp.get(p, "").split()) > 60:
+                    self.uyarilar.append(f"{yer}: '{tur}' dendi ama sayfada {len(self.sp.get(p, '').split())} kelime var")
+                continue
+            if str(s.get("baslik")) not in bno:
+                self.hata(f"{yer}: baslik '{s.get('baslik')}' basliklar'da yok")
+            ad = s.get("adimlar") or []
+            if not ad:
+                self.hata(f"{yer}: içerik sayfası hiçbir adımda anlatılmıyor (adimlar boş)")
+            for a in ad:
+                if slides and a not in sn:
+                    self.hata(f"{yer}: adım {a} destede yok")
+                adim_sayfa.setdefault(a, []).append(p)
+            bl = s.get("bilgi") or []
+            if not bl:
+                self.hata(f"{yer}: hiçbir bilgi_paketi maddesiyle eşlenmemiş (bilgi boş)")
+            for b in bl:
+                if b not in bilgi_no:
+                    self.hata(f"{yer}: bilgi #{b} bilgi_paketi'nde yok")
+                bilgi_sayfa.setdefault(b, []).append(p)
+            if tur in ("sekil", "tablo"):
+                sk = [g for g in s.get("sekiller") or [] if len(str(g).split()) >= 8 or "süs görseli" in str(g).lower()]
+                if not sk:
+                    self.hata(f"{yer}: şekil/tablo sayfası — sekiller[] boş ya da anlatım <8 kelime (görseller atlanamaz)")
+            if len(self.sp.get(p, "").split()) >= 15:
+                self.kanit(s.get("kanit"), yer)
+        eksik = sorted(set(self.sp) - set(goruldu))
+        if eksik:
+            self.hata(f"sayfa_haritasi: kayıtsız sayfa(lar): {eksik[:30]}")
+        fazla = sorted(set(goruldu) - set(self.sp)) if self.sp else []
+        if fazla:
+            self.hata(f"sayfa_haritasi: kaynakta olmayan sayfa(lar): {fazla[:30]}")
+        # bilgi_paketi ↔ sayfa
+        for b in paket.get("bilgi_paketi") or []:
+            no, ks = b.get("no"), int((b.get("kanit") or {}).get("sayfa") or 0)
+            ps = bilgi_sayfa.get(no)
+            if not ps:
+                self.hata(f"bilgi_paketi #{no}: hiçbir sayfada eşlenmemiş")
+            elif ks and not any(abs(ks - p) <= 1 for p in ps):
+                self.hata(f"bilgi_paketi #{no}: kanıt s.{ks} ama harita s.{ps} diyor")
+        # başlıklar
+        ana = [b for b in basliklar if not b.get("ust")]
+        if not ana:
+            self.hata("sayfa_haritasi: başlık yok")
+        if slides:
+            sira = {a: i for i, a in enumerate(icerik_adim)}
+            beklenen = 0
+            for b in ana:
+                ar = b.get("adimlar") or []
+                if len(ar) != 2 or ar[0] not in sira or ar[1] not in sira:
+                    self.hata(f"başlık {b.get('no')}: adimlar [ilk, son] içerik adımı olmalı ({ar})")
+                    continue
+                i0, i1 = sira[ar[0]], sira[ar[1]]
+                if i0 != beklenen:
+                    self.hata(f"başlık {b.get('no')}: aralık {ar} öncekinin hemen ardından başlamıyor (boşluk/çakışma)")
+                k = i1 - i0 + 1
+                if not 1 <= k <= 20:
+                    self.hata(f"başlık {b.get('no')} '{b.get('baslik')}': {k} içerik adımı (1–20 olmalı)")
+                beklenen = i1 + 1
+            if beklenen != len(icerik_adim):
+                self.hata(f"sayfa_haritasi: ana başlıklar içerik adımlarının hepsini kapsamıyor ({beklenen}/{len(icerik_adim)})")
+            for b in basliklar:
+                u = bno.get(str(b.get("ust"))) if b.get("ust") else None
+                if b.get("ust") and not u:
+                    self.hata(f"başlık {b.get('no')}: üst başlık '{b.get('ust')}' yok")
+                if not (b.get("ozet") or []):
+                    self.hata(f"başlık {b.get('no')}: ozet maddeleri yok (ders özeti bundan derlenir)")
+            # adım ↔ sayfa
+            for a in icerik_adim:
+                s = sn[a]
+                ps = sorted(adim_sayfa.get(a, []))
+                if not ps:
+                    self.hata(f"adım {a}: hiçbir PDF sayfasında anlatıldığı yazılmamış")
+                    continue
+                ex = s.get("pdfSayfalari")
+                if ex != [ps[0], ps[-1]]:
+                    self.hata(f"adım {a}: pdfSayfalari {ex} ama harita [{ps[0]}, {ps[-1]}] diyor")
+                bol = str(s.get("bolum") or "")
+                if bol not in bno:
+                    self.hata(f"adım {a}: bolum '{bol}' basliklar'da yok")
+                sp_ = s.get("sourcePdf") or {}
+                if sp_.get("startPage") != ps[0] % 1000 or sp_.get("endPage") != ps[-1] % 1000:
+                    self.hata(f"adım {a}: sourcePdf startPage/endPage haritayla aynı değil")
+        teyit = isinstance(deck, dict) and deck.get("sayfaHaritasi") == "teyitli"
+        if len(self.hatalar) > n0 and teyit:
+            self.hata("deck.json: sayfaHaritasi 'teyitli' yazılmış ama harita denetimi HATA veriyor")
+        elif len(self.hatalar) == n0 and isinstance(deck, dict) and not teyit:
+            self.hata("deck.json: harita denetimi temiz — deste nesnesine \"sayfaHaritasi\": \"teyitli\" ekle")
+        self.sayilar["harita_sayfa"] = len(goruldu)
+        self.sayilar["baslik"] = len(basliklar)
+
     def calistir(self):
         paket = self.json_oku("ders_paketi.json")
         if paket:
@@ -144,6 +268,10 @@ class Denetim:
                 self.sayilar["slayt"] = len(deck.get("slides") or [])
         else:
             self.hata("deck.json yok")
+
+        if not self.yenileme:
+            self.harita_denetle(paket if isinstance(paket, dict) else {},
+                                self.json_oku("deck.json", False) if (self.d / "deck.json").exists() else None)
 
         os_ = self.json_oku("ornek_sorular.json", not self.hafif or bool(self.yenileme))
         if os_:
@@ -224,6 +352,11 @@ class Denetim:
         sonuc = {"hata": len(self.hatalar), "uyari": len(self.uyarilar), "sayilar": self.sayilar,
                  "hatalar": self.hatalar[:200], "uyarilar": self.uyarilar[:200],
                  "referansla_tamamlanan": self.referanslar[:500]}
+        try:  # ders özeti (maliyetsiz derleme)
+            from ozet_derle import derle
+            derle(self.d)
+        except Exception as e:  # noqa: BLE001
+            self.uyarilar.append(f"ders_ozeti.md derlenemedi: {e}")
         (self.d / "denetim.json").write_text(json.dumps(sonuc, ensure_ascii=False, indent=1), encoding="utf-8")
         return sonuc
 

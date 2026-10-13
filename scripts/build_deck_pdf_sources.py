@@ -463,6 +463,15 @@ def main():
                         hit += 1
             for i, s in enumerate(slides):
                 res.setdefault(str(s.get('slideNumber', i + 1)), [1, corpus.n_pages[files[0]]])
+            if deck.get('sayfaHaritasi') == 'teyitli':  # ders işçisinin denetlenmiş sayfa haritası: tahmin yerine bu
+                adlar = [nfc(os.path.basename(r)) for r in files]
+                for s in slides:
+                    sp = s.get('sourcePdf') or {}
+                    fn = nfc(os.path.basename(str(sp.get('fileName') or '')))
+                    if sp.get('startPage') and fn in adlar:
+                        j = adlar.index(fn)
+                        res[str(s.get('slideNumber'))] = [sp['startPage'], sp.get('endPage') or sp['startPage']] + ([j] if j else [])
+                        n_fix += 1
             for k, fx in (fixes.get(did) or {}).items():
                 s = next((s for s in slides if str(s.get('slideNumber')) == k), None)
                 r = fx.get('r') or []

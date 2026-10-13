@@ -105,6 +105,19 @@ Kurallar:
 
 Ana içerikte yalnız ders anlatılır; kaynak, terim listesi, kazanım ve sayılar bilgi bölmesine aittir. Anlatıma "PDF'te aç", "Panelde oku", "Kapsamlı ders notu" gibi başlığa ait olmayan satırlar **yazılmaz**.
 
+## 3b. Başlık yapısı ve teyitli PDF sayfa haritası (ders işçisi · 2026-10-13'ten itibaren yeni desteler)
+
+- Ders **başlıklara** bölünür (gerekirse alt başlıklar). Her ana başlık **1–20 içerik adımı**; checkpoint'ler ana
+  başlık sonlarında. Slaytta `"bolum": "2.1"` (en alt başlık no).
+- PDF'teki **her içerik** anlatılır; **şekil ve resimler atlanamaz** (görsel ne gösteriyor + önemli bulgusu ilgili
+  adımda anlatılır).
+- Hangi sayfada ne anlatıldığı `sayfa_haritasi.json`'da tutulur: sayfa → tür, ne anlatılıyor, başlık, adımlar,
+  bilgi_paketi (özet verisi) maddeleri, kaynaktan birebir alıntı. Slaytta `"pdfSayfalari": [ilk, son]` ve
+  `sourcePdf.startPage/endPage`; deste `"sayfaHaritasi": "teyitli"`. Öğren'deki PDF eşlemesi bu desteler için tahmin
+  yerine doğrudan bu aralıkları kullanır (`build_deck_pdf_sources.py`).
+- Ders özeti (`ders_ozeti.md`) başlık özetlerinden maliyetsiz derlenir (`scripts/ders_isci/ozet_derle.py`).
+- Şema ve denetim: `scripts/ders_isci/TALIMAT.md` §1b–1c, `scripts/ders_isci/denetle.py`.
+
 ## 4. Metin Biçimi, Sayfa Düzeni ve Tekrarı Önleme Kuralları
 
 - **Bitişik Blok Metin Yasağı & Madde İmleri:** Asla 80-130 kelimelik tek bir bitişik blok paragraf yazılmamalıdır. İçerik gözü dinlendiren, nefes alan bir sayfa mimarisine sahip olmalıdır:
