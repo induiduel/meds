@@ -258,7 +258,8 @@
   :root.ms-v9 .ms-ctop { gap: 4px; padding: 6px 8px; }
   :root.ms-v9 .ms-ctop .ms-menu-btn { flex: 1 1 auto; justify-content: flex-start; }
   :root.ms-v9 .ms-ctop :is(.msv-src, .msv-theme) { display: none !important; }
-  :root.ms-v9 .ms-ctop .ms-select-chip { max-width: 30vw; }
+  :root.ms-v9 .ms-ctop .ms-select-chip { max-width: 24vw; }
+  :root.ms-v9 .ms-ctop .ms-menu-btn .msv-title { font-size: 17px; }
   :root.ms-v9 .ms-ctop > .flex-1 { display: none; }
 }
 :root.ms-v9 .msv-drawer-tools { display: none; }
