@@ -1,12 +1,19 @@
 /**
  * Kullanıcı Bildirim ve AI Kuyruk Takip Servisi (User Notification & AI Queue Service)
- * 
+ *
  * Kullanıcıların soruları, katkıları, yorumları ve AI geliştirme istekleri hakkındaki
  * tüm güncellemeleri yönetir.
- * 
+ *
+ * Bildirim geçmişi profile kayıtlıdır (userDataSyncService): uygulama içi her toast (kısa onaylar hariç) okunmuş
+ * olarak, sunucunun öğrenciye yazdığı olaylar (raporun çözüldü, yorumuna yanıt…) okunmamış olarak gelir.
+ * Silme/temizleme mezar taşıyla tüm cihazlara geçer.
+ *
  * Deep Linking ile tam uyumludur: Her bildirimin tıklandığında hedef elemana
  * odaklanan bir deepLinkUrl'i vardır.
  */
+import { setToastRecorder, toast, type ToastKind } from '../components/ui/Toast';
+
+import { openDeepLink } from './universalRedirectService';
 
 export interface UserNotification {
   id: string;
@@ -20,19 +27,29 @@ export interface UserNotification {
     | 'report_filed'
     | 'report_resolved'
     | 'question_revised'
-    | 'comment_deleted';
+    | 'comment_deleted'
+    | 'app_success'
+    | 'app_info'
+    | 'app_error';
   title: string;
   message: string;
   deepLinkUrl: string;
-  targetType: 'pool_question' | 'past_question' | 'term' | 'flashcard';
+  targetType: 'pool_question' | 'past_question' | 'term' | 'flashcard' | 'app';
   targetId: string;
   read: boolean;
   createdAt: string;
+  /** 'server': sunucunun öğrenciye yazdığı olay */
+  source?: string;
 }
+
+const MAX_ITEMS = 300;
+/** Geçmişe yazılmayan kısa onaylar (kopyalandı vb.) */
+const TRIVIAL_TOAST = /kopyaland|^bağlantı$|^tamam$/i;
 
 const STORAGE_KEY = 'medsoru_user_notifications_v1';
 const PUSH_PERM_KEY = 'medsoru_push_notifications_enabled';
 const EMAIL_PERM_KEY = 'medsoru_email_notifications_enabled';
+const DELETED_KEY = 'medsoru_user_notifications_deleted_v1'; // userDataSyncService ile ortak
 
 class UserNotificationService {
   private notifications: UserNotification[] = [];
@@ -40,13 +57,58 @@ class UserNotificationService {
 
   constructor() {
     this.loadFromStorage();
-    // Başka sekmede okundu/silindi işaretlenirse bu sekme de güncellenir.
     if (typeof window !== 'undefined') {
+      // Başka sekmede okundu/silindi işaretlenirse bu sekme de güncellenir.
       window.addEventListener('storage', (e) => {
         if (e.key !== STORAGE_KEY) return;
         this.loadFromStorage();
         this.notifyListeners();
       });
+      // Profil eşitlemesi (diğer cihaz / sunucu) bildirim getirdiyse: listeyi tazele, yeni okunmamışları duyur
+      window.addEventListener('medsoru:user-data-applied', () => this.reloadFromSync());
+      setToastRecorder((kind, title, message) => this.recordToast(kind, title, message));
+    }
+  }
+
+  private reloadFromSync() {
+    const before = new Set(this.notifications.map((n) => n.id));
+    this.loadFromStorage();
+    const fresh = this.notifications.filter(
+      (n) => !before.has(n.id) && !n.read && Date.now() - new Date(n.createdAt).getTime() < 15 * 60_000
+    );
+    this.notifyListeners();
+    for (const n of fresh.slice(0, 3)) {
+      toast.show(n.type === 'app_error' ? 'error' : 'info', n.title.replace(/^✓\s*/, ''), n.message);
+      this.triggerSystemPush(n);
+    }
+  }
+
+  /** Uygulama içi toast'ı geçmişe yazar (görüldüğü için okunmuş; anlık tarayıcı bildirimi yok). */
+  private recordToast(kind: ToastKind, title: string, message?: string) {
+    if (!title || TRIVIAL_TOAST.test(title)) return;
+    this.addNotification(
+      {
+        type: kind === 'error' ? 'app_error' : kind === 'success' ? 'app_success' : 'app_info',
+        title,
+        message: message || '',
+        deepLinkUrl: '',
+        targetType: 'app',
+        targetId: typeof window !== 'undefined' ? window.location.pathname : '',
+      },
+      { read: true, silent: true }
+    );
+  }
+
+  private tombstone(ids: string[], clearedAt?: string) {
+    try {
+      const raw = localStorage.getItem(DELETED_KEY);
+      const t = (raw ? JSON.parse(raw) : {}) as { ids?: Record<string, string>; clearedAt?: string };
+      const now = new Date().toISOString();
+      const map = { ...(t.ids || {}) };
+      for (const id of ids) map[id] = now;
+      localStorage.setItem(DELETED_KEY, JSON.stringify({ ids: map, clearedAt: clearedAt || t.clearedAt || '' }));
+    } catch {
+      /* yoksay */
     }
   }
 
@@ -68,7 +130,7 @@ class UserNotificationService {
   private saveToStorage() {
     try {
       if (typeof window !== 'undefined') {
-        localStorage.setItem(STORAGE_KEY, JSON.stringify(this.notifications.slice(0, 100)));
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(this.notifications.slice(0, MAX_ITEMS)));
       }
     } catch (e) {
       console.error('Bildirimler kaydedilirken hata:', e);
@@ -119,7 +181,10 @@ class UserNotificationService {
   public remove(id: string) {
     const before = this.notifications.length;
     this.notifications = this.notifications.filter((n) => n.id !== id);
-    if (this.notifications.length !== before) this.saveToStorage();
+    if (this.notifications.length !== before) {
+      this.tombstone([id]);
+      this.saveToStorage();
+    }
   }
 
   public markAllAsRead() {
@@ -136,19 +201,24 @@ class UserNotificationService {
   }
 
   public clearAll() {
+    const newest = this.notifications.reduce((m, n) => (n.createdAt > m ? n.createdAt : m), new Date().toISOString());
     this.notifications = [];
+    this.tombstone([], newest);
     this.saveToStorage();
   }
 
   /**
    * Yeni bir bildirim ekle ve izin verildiyse sistem anlık bildirimi (Web Push / Notification) fırlat
    */
-  public addNotification(notification: Omit<UserNotification, 'id' | 'createdAt' | 'read'>) {
+  public addNotification(
+    notification: Omit<UserNotification, 'id' | 'createdAt' | 'read'>,
+    opts: { read?: boolean; silent?: boolean } = {}
+  ) {
     const newNotif: UserNotification = {
       ...notification,
       id: 'notif-' + Date.now() + '-' + Math.random().toString(36).substring(2, 7),
       createdAt: new Date().toISOString(),
-      read: false,
+      read: Boolean(opts.read),
     };
 
     // Başa ekle
@@ -156,7 +226,7 @@ class UserNotificationService {
     this.saveToStorage();
 
     // Sistem anlık bildirimi tetikle
-    this.triggerSystemPush(newNotif);
+    if (!opts.silent) this.triggerSystemPush(newNotif);
 
     return newNotif;
   }
@@ -206,9 +276,10 @@ class UserNotificationService {
 
       systemNotif.onclick = () => {
         window.focus();
-        if (notif.deepLinkUrl) {
-          window.location.href = notif.deepLinkUrl;
-        }
+        systemNotif.close();
+        this.markAsRead(notif.id);
+        // Sayfayı yenilemeden hedef ekrana geç ve öğeye odaklan
+        if (notif.deepLinkUrl) openDeepLink(notif.deepLinkUrl);
       };
     } catch (e) {
       console.warn('System notification error:', e);

@@ -137,22 +137,29 @@ export const AiThinking: React.FC<{ steps?: string[]; className?: string }> = ({
 };
 
 /**
- * Sayfa yükleme katmanı (lazy ekranların Suspense yedeği): ekranı bulanık bir perdeyle örter, ortada
- * marka işaretli halka ve etiket. 150 ms'den kısa yüklemelerde hiç görünmez (yanıp sönme olmaz).
+ * Sayfa yükleme iskeleti (v10; lazy ekranların Suspense yedeği): perde ve halka yerine sayfanın kendi biçimi —
+ * kompakt başlık çubuğu, çip satırı ve kart satırları — gri iskelet olarak çizilir. 300 ms'den kısa yüklemelerde
+ * hiç görünmez (gecikmeli belirir), veri gelince yerini aynı ölçüdeki gerçek içerik alır. Stil: styles/toolbar.css (.pgs-*).
  */
 export const PageLoader: React.FC<{ label?: string }> = ({ label = 'Yükleniyor' }) => (
-  <div className="pl-veil" role="status" aria-live="polite">
-    <div className="pl-box">
-      <span className="pl-ring" aria-hidden>
-        <svg viewBox="0 0 64 64">
-          <circle className="pl-track" cx="32" cy="32" r="28" />
-          <circle className="pl-arc" cx="32" cy="32" r="28" />
-        </svg>
-        <svg className="pl-mark" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M3 12h4l3-8 4 16 3-8h4" />
-        </svg>
-      </span>
-      <span className="pl-label">{label}<i aria-hidden>.</i><i aria-hidden>.</i><i aria-hidden>.</i></span>
+  <div className="pgs" role="status" aria-live="polite" aria-busy="true">
+    <span className="sr-only">{label}</span>
+    <div className="pgs-bar" aria-hidden="true">
+      <span className="ui-skel pgs-title" />
+      <span className="ui-skel pgs-search" />
+      <span className="ui-skel pgs-btn" />
+    </div>
+    <div className="pgs-chips" aria-hidden="true">
+      {[56, 72, 64, 80, 60].map((w, i) => <span key={i} className="ui-skel" style={{ width: w }} />)}
+    </div>
+    <div className="pgs-list" aria-hidden="true">
+      {[92, 84, 96, 78, 88, 70].map((w, i) => (
+        <div key={i} className="pgs-card">
+          <span className="ui-skel" style={{ width: '28%', height: 10 }} />
+          <span className="ui-skel" style={{ width: `${w}%`, height: 13 }} />
+          <span className="ui-skel" style={{ width: `${w - 30}%`, height: 13 }} />
+        </div>
+      ))}
     </div>
   </div>
 );

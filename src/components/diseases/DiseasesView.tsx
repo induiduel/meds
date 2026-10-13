@@ -1,6 +1,5 @@
 import React, { useState, useMemo, useEffect, useRef, useCallback, memo } from 'react';
 import {
-  Search,
   BookOpenText,
   Activity,
   Heart,
@@ -9,16 +8,15 @@ import {
   Copy,
   Plus,
   ChevronRight,
+  ChevronLeft,
   Stethoscope,
   Pill,
   Sparkles,
   ExternalLink,
   Edit2,
   Trash2,
-  X,
   Zap,
   Flag,
-  Highlighter,
   Microscope,
   ScanLine,
   FlaskConical,
@@ -28,8 +26,10 @@ import {
   Tags,
   Library,
   ShieldCheck,
+  Play,
+  Star,
 } from 'lucide-react';
-import { PageHeader } from '../ui/PageHeader';
+import { PageToolbar, FilterPills, type ToolbarChip } from '../ui/PageToolbar';
 import type { DiseaseFact, DiseaseKind, DiseaseProfile, DiseaseSectionId } from '../../types/disease';
 import { DiseaseService } from '../../services/diseaseService';
 import {
@@ -41,9 +41,22 @@ import { toast } from '../ui/Toast';
 import { Sheet } from '../ui/Sheet';
 import { AppUser, ADMIN_EMAIL } from '../../services/auth';
 import { safeJsonFetch } from '../../services/api';
-import { writeLocation } from '../../router';
+import { pathFor, writeLocation } from '../../router';
 import { foldText } from '../../services/searchText';
-import { RelatedPanel, useDiseaseInsights } from './DiseaseInsights';
+import { useAppearance } from '../../utils/appearance';
+import { ConceptsCard, RelatedDiseasesCard, WhereCard, linkedQuestionCount, useDiseaseInsights } from './DiseaseInsights';
+import './diseasesAtlas.css';
+
+/**
+ * Hastalıklar atlası (v10 kompakt).
+ *  - Liste: ortak PageToolbar (başlık · sayaç · arama · tür segmenti · Süzgeç sayfasında uzmanlık/favori) + kompakt satırlar;
+ *    470 profil kaydırdıkça 40'ar çizilir.
+ *  - Ayrıntı: konum yolu, büyük başlık + tek satır tanım, Kaydet / "Soruları çöz · n", bölüm sekmeleri;
+ *    Özet sekmesinde bölümler iki sütunlu kompakt kartlar + "Sınav spotu" kutusu; sağ panelde ilişkili tablolar,
+ *    geçtiği yerler (deste, çıkmış, örnek, ders notu), kavramlar ve kaynaklar.
+ *  - Görüntüleme modu "Odak" ve ≥1024 px: liste + ayrıntı yan yana; diğer modlarda ayrıntı ayrı sayfa (?id=, geri tuşu çalışır).
+ * Sınıf öneki `hx-` (diseasesAtlas.css); madde biçimleri `dz-` (rebuild.css) paylaşılır.
+ */
 
 interface DiseasesViewProps {
   currentUser?: AppUser | null;
@@ -68,6 +81,18 @@ const SECTION_META: Record<DiseaseSectionId, { icon: React.ElementType; tone: st
   lecture: { icon: Sparkles, tone: 'ai' },
 };
 
+/** Hastalık kaydında sekme etiketleri kısa; diğer türlerde türün kendi bölüm başlığı kullanılır */
+const SHORT_TAB: Record<DiseaseSectionId, string> = {
+  definition: 'Tanım', etiology: 'Etiyoloji', physiology: 'Patogenez', pathology: 'Morfoloji', symptoms: 'Klinik',
+  pathognomonic: 'Ayırıcı tanı', diagnosis: 'Tanı', imaging: 'Görüntüleme', treatment: 'Tedavi', complications: 'Komplikasyon',
+  epidemiology: 'Epidemiyoloji', lecture: 'Ders notu',
+};
+const tabLabel = (d: DiseaseProfile, sec: DiseaseSectionId) => (d.kind === 'hastalik' ? SHORT_TAB[sec] : sectionTitle(d.kind, sec) || SHORT_TAB[sec]);
+
+/** Özet sekmesinde kart başına gösterilen madde sayısı (fazlası bölüm sekmesinde) */
+const CARD_LIMIT = 4;
+
+type DetailTab = 'ozet' | DiseaseSectionId | 'siniflama';
 
 /** ==terim== → fosforlu kalem vurgusu */
 const FactText: React.FC<{ text: string }> = ({ text }) => {
@@ -85,6 +110,27 @@ function linesToFacts(str: string, prev: DiseaseFact[] | undefined): DiseaseFact
 
 const FORM_KEYS: Array<DiseaseSectionId | 'hallmarks'> = ['hallmarks', ...SECTION_ORDER];
 
+function useMedia(q: string) {
+  const [on, setOn] = useState(() => typeof window !== 'undefined' && !!window.matchMedia?.(q).matches);
+  useEffect(() => {
+    const m = window.matchMedia?.(q);
+    if (!m) return;
+    const f = () => setOn(m.matches);
+    f();
+    m.addEventListener('change', f);
+    return () => m.removeEventListener('change', f);
+  }, [q]);
+  return on;
+}
+
+const urlId = () => {
+  try { return new URLSearchParams(window.location.search).get('id'); } catch { return null; }
+};
+/** Adreste profil var mı (?id= ya da /hastaliklar/<kimlik>) */
+const urlHasDisease = () => {
+  try { return Boolean(urlId()) || !/^\/hastaliklar\/?$/.test(window.location.pathname.replace(/^\/meds(?=\/|$)/, '')); } catch { return false; }
+};
+
 export const DiseasesView: React.FC<DiseasesViewProps> = ({
   currentUser,
   onOpenReportModal,
@@ -99,6 +145,13 @@ export const DiseasesView: React.FC<DiseasesViewProps> = ({
   const [onlyFavorites, setOnlyFavorites] = useState(false);
   const [selectedDisease, setSelectedDisease] = useState<DiseaseProfile | null>(null);
   const [favoriteIds, setFavoriteIds] = useState<Set<string>>(new Set());
+  const [tab, setTab] = useState<DetailTab>('ozet');
+
+  // Görüntüleme modu: Odak + geniş ekran → liste ve ayrıntı yan yana
+  const { layout } = useAppearance();
+  const isWide = useMedia('(min-width: 1024px)');
+  const split = isWide && layout === 'odak';
+  const rootRef = useRef<HTMLDivElement>(null);
 
   // Ekleme / Düzenleme
   const [showAddEditModal, setShowAddEditModal] = useState(false);
@@ -126,15 +179,22 @@ export const DiseasesView: React.FC<DiseasesViewProps> = ({
   }, []);
 
   /** Kimlik ya da birleştirilmiş eski kimlik */
-  const findById = (id: string) => diseases.find((d) => d.id === id) || diseases.find((d) => (d.aliases || []).includes(id));
+  const findById = useCallback(
+    (id: string) => diseases.find((d) => d.id === id) || diseases.find((d) => (d.aliases || []).includes(id)),
+    [diseases],
+  );
 
   // URL derin bağlantısı (/hastaliklar?id=… ya da #disease-<kimlik>[-bölüm])
+  const handledPropRef = useRef<string | null>(null);
   useEffect(() => {
     if (typeof window === 'undefined' || !diseases.length) return;
     const params = new URLSearchParams(window.location.search);
     const hash = window.location.hash;
     let target: DiseaseProfile | undefined;
-    const direct = initialDiseaseId || params.get('id');
+    // Uygulamadan gelen kimlik yalnız ilk kez (ya da değişince) uygulanır; sonra adres çubuğu esastır
+    const fromProp = initialDiseaseId && initialDiseaseId !== handledPropRef.current ? initialDiseaseId : null;
+    if (initialDiseaseId) handledPropRef.current = initialDiseaseId;
+    const direct = params.get('id') || fromProp;
     if (direct) target = findById(direct);
     if (!target && hash.startsWith('#disease-')) {
       // Kimlikler tire içerir: önce tam kimlik, sonra bölüm son eki atılarak denenir
@@ -143,10 +203,24 @@ export const DiseasesView: React.FC<DiseasesViewProps> = ({
     }
     if (target) {
       setSelectedDisease(target);
+      setTab('ozet');
       const t = target;
       setTimeout(() => triggerDomHighlightAndScroll(hash || `disease-${t.id}`), 300);
     }
   }, [diseases, initialDiseaseId]);
+
+  // Geri / ileri: adresteki ?id= ayrıntıyı açar ya da kapatır
+  useEffect(() => {
+    const onPop = () => {
+      if (!/\/hastaliklar\/?$/.test(window.location.pathname.replace(/^\/meds(?=\/|$)/, ''))) return;
+      const id = urlId();
+      if (!id) { setSelectedDisease(null); return; }
+      const d = findById(id);
+      if (d) { setSelectedDisease(d); setTab('ozet'); }
+    };
+    window.addEventListener('popstate', onPop);
+    return () => window.removeEventListener('popstate', onPop);
+  }, [findById]);
 
   // Sorgu zekâsı: yazım hatası / eşanlamlı / kısaltma ("kansizlik", "ttp") → hastalık kimlikleri
   const [conceptIds, setConceptIds] = useState<string[]>([]);
@@ -218,25 +292,69 @@ export const DiseasesView: React.FC<DiseasesViewProps> = ({
     return scored.map((x) => x.d);
   }, [diseases, searchQuery, selectedCategory, selectedKind, onlyFavorites, favoriteIds, conceptIds, activeEntity, entityIds, searchTexts]);
 
-  // Kaydırdıkça yükleme: ilk 40 kart, alt uca yaklaşınca 40'ar eklenir (470 kartın tek seferde çizilmesi donma yapıyordu)
+  // Kaydırdıkça yükleme: ilk 40 satır, alt uca yaklaşınca 40'ar eklenir (470 kaydın tek seferde çizilmesi donma yapıyordu)
   const PAGE = 40;
   const [limit, setLimit] = useState(PAGE);
   useEffect(() => { setLimit(PAGE); }, [searchQuery, selectedCategory, selectedKind, onlyFavorites, entityFilter]);
-  const sentinelRef = useRef<HTMLDivElement | null>(null);
+  const [sentinel, setSentinel] = useState<HTMLDivElement | null>(null);
   useEffect(() => {
-    const el = sentinelRef.current;
-    if (!el || typeof IntersectionObserver === 'undefined') return;
+    if (!sentinel || typeof IntersectionObserver === 'undefined') return;
     const io = new IntersectionObserver((es) => { if (es.some((e) => e.isIntersecting)) setLimit((n) => n + PAGE); }, { rootMargin: '600px 0px' });
-    io.observe(el);
+    io.observe(sentinel);
     return () => io.disconnect();
-  }, [limit, filteredDiseases.length]);
+  }, [sentinel, limit, filteredDiseases.length]);
+
+  // Üst çubuğun yüksekliği: bölmeli düzende ayrıntı bölmesi bunun altına yapışır
+  useEffect(() => {
+    const root = rootRef.current;
+    const bar = root?.querySelector('.pt-root') as HTMLElement | null;
+    if (!root || !bar || typeof ResizeObserver === 'undefined') return;
+    const ro = new ResizeObserver(() => root.style.setProperty('--hx-bar', `${Math.round(bar.getBoundingClientRect().height)}px`));
+    ro.observe(bar);
+    return () => ro.disconnect();
+  }, [dataReady, selectedDisease == null, split]);
+
+  /* ---------------- Ayrıntıyı açma / kapama (adres çubuğuyla eş) ---------------- */
+  const pushedRef = useRef(false);
+  const lastOpenRef = useRef<string | null>(null);
+
+  const openDisease = useCallback((d: DiseaseProfile) => {
+    setSelectedDisease(d);
+    setTab('ozet');
+    lastOpenRef.current = d.id;
+    try {
+      if (urlId() !== d.id) {
+        const next = `${pathFor('diseases')}?id=${encodeURIComponent(d.id)}`;
+        // Bölmeli düzende her seçim yeni geçmiş kaydı açmaz; ayrı sayfada geri tuşu listeye döner
+        if (split || urlId()) window.history.replaceState(window.history.state, '', next);
+        else { window.history.pushState({ route: 'diseases' }, '', next); pushedRef.current = true; }
+      }
+    } catch { /* adres yazılamadıysa yalnız durum */ }
+    if (!split) requestAnimationFrame(() => window.scrollTo({ top: 0 }));
+    else requestAnimationFrame(() => document.querySelector('.hx-pane')?.scrollTo({ top: 0 }));
+  }, [split]);
+
+  const closeDisease = useCallback(() => {
+    const id = selectedDisease?.id || lastOpenRef.current;
+    setSelectedDisease(null);
+    try {
+      if (urlHasDisease()) {
+        if (pushedRef.current && urlId()) { pushedRef.current = false; window.history.back(); }
+        else window.history.replaceState(window.history.state, '', pathFor('diseases'));
+      }
+    } catch { /* yoksay */ }
+    // Listeye dönünce açılan satır görünür olsun
+    if (id) requestAnimationFrame(() => document.getElementById(`hx-item-${id}`)?.scrollIntoView({ block: 'center' }));
+  }, [selectedDisease]);
+
+  const openById = useCallback((id: string) => { const d = findById(id); if (d) openDisease(d); }, [findById, openDisease]);
 
   const handleToggleFavorite = useCallback((id: string, e?: React.MouseEvent) => {
     e?.stopPropagation();
     const isNow = DiseaseService.toggleFavorite(id);
     setFavoriteIds(DiseaseService.getFavoriteIds());
-    if (isNow) toast.success('Favorilere eklendi', 'Profil favorilere kaydedildi.');
-    else toast.info('Favorilerden çıkarıldı', 'Profil favorilerinden kaldırıldı.');
+    if (isNow) toast.success('Kaydedildi', 'Profil favorilere eklendi.');
+    else toast.info('Kayıttan çıkarıldı', 'Profil favorilerden kaldırıldı.');
   }, []);
 
   const handleShare = useCallback(async (disease: DiseaseProfile, section?: string, e?: React.MouseEvent) => {
@@ -282,7 +400,6 @@ export const DiseasesView: React.FC<DiseasesViewProps> = ({
     setFormSecs(secs);
     setShowAddEditModal(true);
   };
-
 
   const handleOpenAdd = () => {
     setEditingDisease(null);
@@ -339,20 +456,22 @@ export const DiseasesView: React.FC<DiseasesViewProps> = ({
     if (!window.confirm('Bu kaydı silmek istediğine emin misin?')) return;
     DiseaseService.deleteDisease(id);
     reloadDiseases();
-    if (selectedDisease?.id === id) setSelectedDisease(null);
+    if (selectedDisease?.id === id) closeDisease();
     toast.info('Silindi', 'Kayıt silindi.');
   };
 
   const applyEntity = (key: string) => {
     setEntityFilter(key);
-    setSelectedDisease(null);
+    if (!split) closeDisease();
     setSearchQuery('');
     setSelectedCategory('all');
     setSelectedKind('all');
   };
 
+  const goSearch = (q: string) => { writeLocation('search', q); window.dispatchEvent(new PopStateEvent('popstate')); };
+
   const sel = selectedDisease;
-  const { data: insights } = useDiseaseInsights(sel);
+  const { data: insights, loading: insightsLoading } = useDiseaseInsights(sel);
   const canEdit = Boolean(sel && (isAdmin || sel.isCustom));
   const counts = useMemo(() => {
     const cat = new Map<string, number>(); const kind = new Map<string, number>();
@@ -361,7 +480,7 @@ export const DiseasesView: React.FC<DiseasesViewProps> = ({
   }, [diseases]);
   const catCount = (c: string) => (c === 'all' ? diseases.length : counts.cat.get(c) || 0);
 
-  /** Seçili profilin varlıkları türlerine göre (sınıflandırma paneli) */
+  /** Seçili profilin varlıkları türlerine göre (sınıflandırma sekmesi) */
   const selEntities = useMemo(() => {
     if (!sel) return [];
     const groups = new Map<string, Array<{ key: string; name: string; n: number }>>();
@@ -396,212 +515,135 @@ export const DiseasesView: React.FC<DiseasesViewProps> = ({
   const filtersOn = Boolean(searchQuery || selectedCategory !== 'all' || selectedKind !== 'all' || onlyFavorites || entityFilter);
   const clearFilters = () => { setSearchQuery(''); setSelectedCategory('all'); setSelectedKind('all'); setOnlyFavorites(false); setEntityFilter(null); };
 
-  return (
-    <div className="dz-page">
-      <PageHeader
-        title="Hastalıklar"
-        description="Ders notları, Robbins düzeyi ders kitabı bilgisi ve resmi kılavuzlarla doğrulanmış profiller: tanımdan tedaviye, madde madde."
-        stats={[
-          { label: 'Profil', value: diseases.length.toLocaleString('tr-TR') },
-          { label: 'Hastalık', value: diseases.filter((d) => d.kind === 'hastalik').length.toLocaleString('tr-TR'), tone: 'ok' },
-          ...(favoriteIds.size ? [{ label: 'Favori', value: favoriteIds.size, tone: 'warn' as const }] : []),
-        ]}
-        actions={
-          <button type="button" className="ui-btn is-primary is-sm" onClick={handleOpenAdd}>
-            <Plus aria-hidden /> Profil ekle
-          </button>
-        }
-      />
+  const chips: ToolbarChip[] = [
+    ...(selectedCategory !== 'all' ? [{ id: 'cat', label: selectedCategory, onRemove: () => setSelectedCategory('all') }] : []),
+    ...(onlyFavorites ? [{ id: 'fav', label: 'Kaydedilenler', onRemove: () => setOnlyFavorites(false) }] : []),
+    ...(activeEntity ? [{ id: 'ent', label: `${ENTITY_TYPE_LABEL[activeEntity.entity.type]}: ${activeEntity.entity.name}`, onRemove: () => setEntityFilter(null) }] : []),
+  ];
 
-      <div className="cx-dock dz-dock">
-        <div className="cx-search">
-          <Search aria-hidden />
-          <input
-            type="search"
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            placeholder="Hastalık, belirti (ateş), ilaç, gen ya da bulgu ara"
-            aria-label="Hastalıklarda ara"
-          />
-          {searchQuery && (
-            <button type="button" className="dz-x" onClick={() => setSearchQuery('')} aria-label="Aramayı temizle"><X aria-hidden /></button>
-          )}
-          <button
-            type="button"
-            className={`dz-fav-btn ${onlyFavorites ? 'is-on' : ''}`}
-            aria-pressed={onlyFavorites}
-            onClick={() => setOnlyFavorites((v) => !v)}
-            title="Yalnız favorileri göster"
-          >
-            <Bookmark className={onlyFavorites ? 'fill-current' : ''} aria-hidden />
-            <span>Favoriler</span>
-            {favoriteIds.size > 0 && <b>{favoriteIds.size}</b>}
-          </button>
-        </div>
-        {kinds.length > 1 && (
-          <nav className="cx-tabs" aria-label="Kayıt türü" onWheel={(e) => { if (e.deltaY) e.currentTarget.scrollLeft += e.deltaY; }}>
-            {(['all', ...kinds] as Array<DiseaseKind | 'all'>).map((k) => (
-              <button key={k} type="button" aria-pressed={selectedKind === k} className={`cx-tab ${selectedKind === k ? 'is-on' : ''}`} onClick={() => setSelectedKind(k)}>
-                {k === 'all' ? 'Tüm türler' : KIND_LABEL[k]}
-                <small>{k === 'all' ? diseases.length : counts.kind.get(k) || 0}</small>
-              </button>
-            ))}
-          </nav>
-        )}
-        <nav className="cx-tabs" aria-label="Uzmanlık" onWheel={(e) => { if (e.deltaY) e.currentTarget.scrollLeft += e.deltaY; }}>
-          {categories.map((cat) => (
-            <button
-              key={cat}
-              type="button"
-              aria-pressed={selectedCategory === cat}
-              className={`cx-tab ${selectedCategory === cat ? 'is-on' : ''}`}
-              onClick={() => setSelectedCategory(cat)}
-            >
-              {cat === 'all' ? 'Tüm uzmanlıklar' : cat}
-              <small>{catCount(cat)}</small>
-            </button>
-          ))}
-        </nav>
-      </div>
+  /** Ayrı sayfa düzeninde ayrıntı açıkken liste ve araç çubuğu gizlenir (konum yolundan dönülür) */
+  const detailPage = Boolean(sel) && !split;
 
-      {(activeEntity || entitySuggestions.length > 0) && (
-        <div className="dz-entbar" role="status">
-          {activeEntity ? (
-            <span className="dz-entchip is-on">
-              <Tags aria-hidden />
-              <span><b>{ENTITY_TYPE_LABEL[activeEntity.entity.type]}:</b> {activeEntity.entity.name} — {entityIds.size} profilde geçiyor</span>
-              <button type="button" onClick={() => setEntityFilter(null)} aria-label="Sınıflandırma süzgecini kaldır"><X aria-hidden /></button>
-            </span>
-          ) : (
-            <>
-              <span className="dz-entbar-h">Sınıflandır:</span>
-              {entitySuggestions.map((s) => (
-                <button key={s.key} type="button" className="dz-entchip" onClick={() => applyEntity(s.key)}>
-                  <Tags aria-hidden /><span>{s.label} <small>{s.n} profil</small></span>
-                </button>
-              ))}
-            </>
-          )}
-        </div>
-      )}
-
+  const list = (
+    <div className="hx-listwrap">
       {!dataReady ? (
-        <p className="dz-result" aria-live="polite">Profiller yükleniyor…</p>
+        <ul className="hx-list" aria-busy="true" aria-label="Profiller yükleniyor">
+          {Array.from({ length: 8 }, (_, i) => (
+            <li key={i} className="hx-item is-skel">
+              <span className="ui-skel" style={{ width: 110, height: 10 }} />
+              <span className="ui-skel" style={{ width: `${50 + ((i * 17) % 40)}%`, height: 15 }} />
+              <span className="ui-skel" style={{ width: '85%', height: 10 }} />
+            </li>
+          ))}
+        </ul>
       ) : filteredDiseases.length === 0 ? (
-        <div className="dz-empty">
-          <span className="dz-empty-ic" aria-hidden><BookOpenText /></span>
+        <div className="hx-empty">
+          <span className="hx-empty-ic" aria-hidden><BookOpenText /></span>
           <b>Eşleşen kayıt yok</b>
           <p>Aramayı kısalt ya da süzgeçleri kaldır.</p>
           {filtersOn && <button type="button" className="ui-btn is-tonal is-sm" onClick={clearFilters}>Süzgeçleri temizle</button>}
         </div>
       ) : (
         <>
-          <p className="dz-result" aria-live="polite">{filteredDiseases.length.toLocaleString('tr-TR')} kayıt</p>
-          <ul className="dz-grid">
+          <ul className="hx-list" data-layout-grid={split ? undefined : ''}>
             {filteredDiseases.slice(0, limit).map((d) => {
               const hit = activeEntity?.hits.find((h) => h.diseaseId === d.id);
               return (
-                <DiseaseCard key={d.id} d={d} isFav={favoriteIds.has(d.id)} onOpen={setSelectedDisease} onFav={handleToggleFavorite}
+                <DiseaseRow key={d.id} d={d} isFav={favoriteIds.has(d.id)} active={sel?.id === d.id} onOpen={openDisease} onFav={handleToggleFavorite}
                   hitLabel={hit && activeEntity ? `${sectionTitle(d.kind, hit.section as DiseaseSectionId) || 'Karakteristik özellik'}|${activeEntity.entity.name}${hit.qualifier ? ` (${hit.qualifier})` : ''}` : undefined} />
               );
             })}
           </ul>
-          {filteredDiseases.length > limit && <div ref={sentinelRef} className="dz-more-sentinel" aria-hidden />}
+          {filteredDiseases.length > limit && <div ref={setSentinel} className="hx-more-sentinel" aria-hidden><span className="ui-skel" /></div>}
         </>
       )}
+    </div>
+  );
 
-      <Sheet
-        open={Boolean(sel)}
-        onClose={() => setSelectedDisease(null)}
-        title={sel?.name || 'Hastalık'}
-        subtitle={sel ? [KIND_LABEL[sel.kind], sel.category, sel.icd_code ? `ICD-10 ${sel.icd_code}` : null].filter(Boolean).join(' · ') : undefined}
-        width={680}
-        actions={sel && (
-          <span className="dz-sheet-tools">
-            <button type="button" className={`qk-ib ${favoriteIds.has(sel.id) ? 'is-fav' : ''}`} aria-pressed={favoriteIds.has(sel.id)} onClick={() => handleToggleFavorite(sel.id)} aria-label="Favori" title="Favori">
-              <Bookmark className={favoriteIds.has(sel.id) ? 'fill-current' : ''} aria-hidden />
+  return (
+    <div className={`hx-page ${split ? 'is-split' : ''}`} ref={rootRef}>
+      {!detailPage && (
+        <PageToolbar
+          title="Hastalıklar"
+          count={dataReady ? (filtersOn ? `${filteredDiseases.length.toLocaleString('tr-TR')} / ${diseases.length.toLocaleString('tr-TR')} profil` : `${diseases.length.toLocaleString('tr-TR')} profil`) : undefined}
+          search={{ value: searchQuery, onChange: setSearchQuery, placeholder: 'Hastalık, belirti, ilaç, gen ara' }}
+          segments={kinds.length > 1 ? {
+            label: 'Kayıt türü',
+            value: selectedKind,
+            onChange: (v) => setSelectedKind(v),
+            options: [{ id: 'all' as const, label: 'Tümü', count: diseases.length }, ...kinds.map((k) => ({ id: k, label: KIND_LABEL[k], count: counts.kind.get(k) || 0 }))],
+          } : undefined}
+          filters={(
+            <>
+              <FilterPills
+                label="Uzmanlık / sistem"
+                value={selectedCategory}
+                onChange={setSelectedCategory}
+                options={categories.map((c) => ({ id: c, label: c === 'all' ? 'Tümü' : c, count: catCount(c) }))}
+              />
+              <FilterPills
+                label="Göster"
+                value={onlyFavorites ? 'fav' : 'all'}
+                onChange={(v) => setOnlyFavorites(v === 'fav')}
+                options={[{ id: 'all', label: 'Tüm profiller' }, { id: 'fav', label: 'Kaydedilenler', count: favoriteIds.size }]}
+              />
+            </>
+          )}
+          filterCount={(selectedCategory !== 'all' ? 1 : 0) + (onlyFavorites ? 1 : 0)}
+          filterTitle="Hastalık süzgeci"
+          chips={chips}
+          onClearChips={() => { setSelectedCategory('all'); setOnlyFavorites(false); setEntityFilter(null); }}
+          tools={(
+            <button type="button" className="ui-btn is-primary is-sm hx-add" onClick={handleOpenAdd} aria-label="Profil ekle">
+              <Plus aria-hidden /> <span>Profil ekle</span>
             </button>
-            <button type="button" className="qk-ib" onClick={() => handleShare(sel)} aria-label="Paylaş" title="Paylaş"><Share2 aria-hidden /></button>
-            <button type="button" className="qk-ib" onClick={() => handleCopySummary(sel)} aria-label="Kopyala" title="Özeti kopyala"><Copy aria-hidden /></button>
-            {canEdit && <button type="button" className="qk-ib" onClick={() => handleOpenEdit(sel)} aria-label="Düzenle" title="Düzenle"><Edit2 aria-hidden /></button>}
-          </span>
-        )}
-      >
-        {sel && (
-          <div className="dz-detail">
-            {sel.verification && (
-              <p className="dz-verif">
-                <ShieldCheck aria-hidden />
-                <span><b>Web kaynaklarıyla madde madde doğrulandı</b> · {sel.verification.checked} madde denetlendi
-                  {sel.verification.fixed + sel.verification.conflict > 0 ? `, ${sel.verification.fixed + sel.verification.conflict} düzeltildi` : ''}
-                  {` · ${new Date(sel.verification.at).toLocaleDateString('tr-TR')}`}</span>
-              </p>
-            )}
-            {sel.latinName && sel.latinName !== sel.name && <p className="dz-latin dz-latin-d"><span>Latince / İngilizce</span>{sel.latinName}</p>}
+          )}
+        >
+          {entitySuggestions.length > 0 && (
+            <div className="hx-entbar" role="status">
+              <span className="hx-entbar-h">Sınıflandır:</span>
+              {entitySuggestions.map((s) => (
+                <button key={s.key} type="button" className="dz-entchip" onClick={() => applyEntity(s.key)}>
+                  <Tags aria-hidden /><span>{s.label} <small>{s.n} profil</small></span>
+                </button>
+              ))}
+            </div>
+          )}
+        </PageToolbar>
+      )}
 
-            {sel.hallmarks.length > 0 && (
-              <section id={`disease-${sel.id}-hallmarks`} className="dz-hallbox" aria-label="Karakteristik özellik">
-                <p className="dz-hallbox-h"><Highlighter aria-hidden /> Karakteristik özellik</p>
-                <div className="dz-hallrow">
-                  {sel.hallmarks.map((h, k) => <mark key={k} className="dz-hall">{plainText(h.text)}</mark>)}
-                </div>
-              </section>
-            )}
-
-            {SECTION_ORDER.map((sec) => <DiseaseSection key={sec} d={sel} sec={sec} onShare={handleShare} />)}
-
-            {selEntities.length > 0 && (
-              <section className="dz-sec is-ai" id={`disease-${sel.id}-entities`}>
-                <header className="dz-sec-h">
-                  <span className="dz-sec-ic" aria-hidden><Tags /></span>
-                  <h4>Sınıflandırma</h4>
-                </header>
-                <p className="dz-ent-intro">Bir öğeye dokun: aynı belirti, ilaç, gen ya da bulguyu içeren tüm profiller listelenir.</p>
-                {selEntities.map((g) => (
-                  <div key={g.type} className="dz-entgroup">
-                    <h5 className="dz-sub">{ENTITY_TYPE_LABEL[g.type as keyof typeof ENTITY_TYPE_LABEL]}</h5>
-                    <div className="dz-chips">
-                      {g.items.map((it) => (
-                        <button key={it.key} type="button" className="dz-chip" disabled={it.n < 2} onClick={() => applyEntity(it.key)}
-                          title={it.n >= 2 ? `${it.name} geçen ${it.n} profili listele` : 'Yalnız bu profilde geçiyor'}>
-                          {it.name}{it.n >= 2 && <em>{it.n}</em>}
-                        </button>
-                      ))}
-                    </div>
-                  </div>
-                ))}
-              </section>
-            )}
-
-            {(sel.references || []).length > 0 && (
-              <section className="dz-sec is-ok" id={`disease-${sel.id}-references`}>
-                <header className="dz-sec-h">
-                  <span className="dz-sec-ic" aria-hidden><Library /></span>
-                  <h4>Kaynaklar</h4>
-                </header>
-                <ul className="dz-list dz-refs">
-                  {(sel.references || []).map((r, k) => (
-                    <li key={k} id={`disease-${sel.id}-ref-${k}`}>
-                      {r.url ? <a href={r.url} target="_blank" rel="noreferrer">{r.label} <ExternalLink aria-hidden /></a> : r.label}
-                    </li>
-                  ))}
-                </ul>
-              </section>
-            )}
-
-            <RelatedPanel
-              data={insights}
-              onOpenDisease={(id) => { const d = findById(id); if (d) setSelectedDisease(d); }}
-              onSearch={(q) => { writeLocation('search', q); window.dispatchEvent(new PopStateEvent('popstate')); }}
-            />
-            {onOpenReportModal && (
-              <button type="button" className="ui-btn is-ghost is-sm dz-report" onClick={() => onOpenReportModal({ type: 'disease', id: sel.id, title: sel.name })}>
-                <Flag aria-hidden /> Bu profilde hata bildir
-              </button>
+      {split ? (
+        <div className="hx-split">
+          <div className="hx-split-list">{list}</div>
+          <div className="hx-pane">
+            {sel ? (
+              <DiseaseDetail
+                d={sel} split tab={tab} setTab={setTab} isFav={favoriteIds.has(sel.id)} canEdit={canEdit}
+                insights={insights} insightsLoading={insightsLoading} entities={selEntities}
+                onClose={closeDisease} onFav={() => handleToggleFavorite(sel.id)} onShare={handleShare} onCopy={() => handleCopySummary(sel)}
+                onEdit={() => handleOpenEdit(sel)} onDelete={sel.isCustom ? () => handleDelete(sel.id) : undefined}
+                onOpenDisease={openById} canOpen={(id) => Boolean(findById(id))} onEntity={applyEntity} onSearch={goSearch}
+                onReport={onOpenReportModal ? () => onOpenReportModal({ type: 'disease', id: sel.id, title: sel.name }) : undefined}
+              />
+            ) : (
+              <div className="hx-pane-empty">
+                <BookOpenText aria-hidden />
+                <b>Bir profil seç</b>
+                <p>Soldaki listeden bir hastalığa dokun; tanımdan tedaviye bölümleri burada açılır.</p>
+              </div>
             )}
           </div>
-        )}
-      </Sheet>
+        </div>
+      ) : sel ? (
+        <DiseaseDetail
+          d={sel} split={false} tab={tab} setTab={setTab} isFav={favoriteIds.has(sel.id)} canEdit={canEdit}
+          insights={insights} insightsLoading={insightsLoading} entities={selEntities}
+          onClose={closeDisease} onFav={() => handleToggleFavorite(sel.id)} onShare={handleShare} onCopy={() => handleCopySummary(sel)}
+          onEdit={() => handleOpenEdit(sel)} onDelete={sel.isCustom ? () => handleDelete(sel.id) : undefined}
+          onOpenDisease={openById} canOpen={(id) => Boolean(findById(id))} onEntity={applyEntity} onSearch={goSearch}
+          onReport={onOpenReportModal ? () => onOpenReportModal({ type: 'disease', id: sel.id, title: sel.name }) : undefined}
+        />
+      ) : list}
 
       <Sheet
         open={showAddEditModal}
@@ -647,6 +689,229 @@ export const DiseasesView: React.FC<DiseasesViewProps> = ({
   );
 };
 
+/* ================================================================================================
+ * Ayrıntı
+ * ============================================================================================== */
+
+interface DetailProps {
+  d: DiseaseProfile;
+  split: boolean;
+  tab: DetailTab;
+  setTab: (t: DetailTab) => void;
+  isFav: boolean;
+  canEdit: boolean;
+  insights: ReturnType<typeof useDiseaseInsights>['data'];
+  insightsLoading: boolean;
+  entities: Array<{ type: string; items: Array<{ key: string; name: string; n: number }> }>;
+  onClose: () => void;
+  onFav: () => void;
+  onShare: (d: DiseaseProfile, sec?: string) => void;
+  onCopy: () => void;
+  onEdit: () => void;
+  onDelete?: () => void;
+  onOpenDisease: (id: string) => void;
+  canOpen: (id: string) => boolean;
+  onEntity: (key: string) => void;
+  onSearch: (q: string) => void;
+  onReport?: () => void;
+}
+
+const DiseaseDetail: React.FC<DetailProps> = ({
+  d, split, tab, setTab, isFav, canEdit, insights, insightsLoading, entities,
+  onClose, onFav, onShare, onCopy, onEdit, onDelete, onOpenDisease, canOpen, onEntity, onSearch, onReport,
+}) => {
+  const defFacts = sectionFacts(d, 'definition');
+  const def = defFacts[0];
+  const secs = SECTION_ORDER.filter((s) => sectionTitle(d.kind, s) && sectionFacts(d, s).length > 0);
+  const tabs: Array<{ id: DetailTab; label: string; n?: number }> = [
+    { id: 'ozet', label: 'Özet' },
+    ...secs.map((s) => ({ id: s as DetailTab, label: tabLabel(d, s), n: sectionFacts(d, s).length })),
+    ...(entities.length ? [{ id: 'siniflama' as DetailTab, label: 'Sınıflandırma' }] : []),
+  ];
+  const active: DetailTab = tabs.some((t) => t.id === tab) ? tab : 'ozet';
+  // Sınav spotu: kritik (key) işaretli maddelerden ilk üçü
+  const spots = useMemo(() => SECTION_ORDER.flatMap((s) => sectionFacts(d, s).filter((f) => f.key)).slice(0, 3), [d]);
+  const qCount = linkedQuestionCount(insights);
+  const plainName = d.name.replace(/\s*\([^)]*\)/g, '');
+  const H = split ? 'h2' : 'h1';
+  const tabsRef = useRef<HTMLDivElement>(null);
+
+  // Sekme klavye gezintisi (ok tuşları)
+  const onTabKey = (e: React.KeyboardEvent) => {
+    if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
+    const i = tabs.findIndex((t) => t.id === active);
+    const n = tabs[(i + (e.key === 'ArrowRight' ? 1 : tabs.length - 1)) % tabs.length];
+    setTab(n.id);
+    requestAnimationFrame(() => tabsRef.current?.querySelector<HTMLButtonElement>(`[data-tab="${n.id}"]`)?.focus());
+    e.preventDefault();
+  };
+
+  return (
+    <article className="hx-detail" id={`disease-${d.id}`} aria-labelledby={`hx-title-${d.id}`}>
+      <header className="hx-dh">
+        <nav className="hx-crumb" aria-label="Konum">
+          <button type="button" onClick={onClose}>
+            {!split && <ChevronLeft aria-hidden />}Hastalıklar
+          </button>
+          <span aria-hidden>›</span>
+          <span className="hx-crumb-cat">{d.category}</span>
+        </nav>
+        <div className="hx-dh-row">
+          <div className="hx-dh-main">
+            <H id={`hx-title-${d.id}`} className="hx-dh-title">{d.name}</H>
+            {def && <p className="hx-dh-def">{plainText(def.text)}</p>}
+            <p className="hx-dh-meta">
+              <span className="hx-kind">{KIND_LABEL[d.kind]}</span>
+              {d.icd_code && <span className="hx-icd">ICD-10 {d.icd_code}</span>}
+              {d.latinName && d.latinName !== d.name && <span className="hx-latin">{d.latinName}</span>}
+            </p>
+          </div>
+          <div className="hx-dh-acts">
+            <button type="button" className={`ui-btn is-sm ${isFav ? 'is-tonal' : 'is-ghost'} hx-save`} aria-pressed={isFav} onClick={onFav}>
+              <Bookmark className={isFav ? 'fill-current' : ''} aria-hidden /> {isFav ? 'Kaydedildi' : 'Kaydet'}
+            </button>
+            {qCount > 0 && (
+              <button type="button" className="ui-btn is-primary is-sm" onClick={() => onSearch(plainName)}>
+                <Play aria-hidden /> Soruları çöz · {qCount.toLocaleString('tr-TR')}
+              </button>
+            )}
+            <span className="hx-dh-icons">
+              <button type="button" className="qk-ib" onClick={() => onShare(d)} aria-label="Paylaş" title="Paylaş"><Share2 aria-hidden /></button>
+              <button type="button" className="qk-ib" onClick={onCopy} aria-label="Özeti kopyala" title="Özeti kopyala"><Copy aria-hidden /></button>
+              {canEdit && <button type="button" className="qk-ib" onClick={onEdit} aria-label="Düzenle" title="Düzenle"><Edit2 aria-hidden /></button>}
+              {canEdit && onDelete && <button type="button" className="qk-ib hx-del" onClick={onDelete} aria-label="Sil" title="Sil"><Trash2 aria-hidden /></button>}
+            </span>
+          </div>
+        </div>
+        {d.hallmarks.length > 0 && (
+          <div className="hx-hall" id={`disease-${d.id}-hallmarks`} aria-label="Karakteristik özellik">
+            <span className="hx-hall-h">Karakteristik</span>
+            {d.hallmarks.map((h, k) => <mark key={k} className="dz-hall is-sm"><span>{plainText(h.text)}</span></mark>)}
+          </div>
+        )}
+        <div className="hx-tabs" role="tablist" aria-label="Profil bölümleri" ref={tabsRef} onKeyDown={onTabKey}>
+          {tabs.map((t) => (
+            <button
+              key={t.id}
+              type="button"
+              role="tab"
+              data-tab={t.id}
+              id={`hx-tab-${d.id}-${t.id}`}
+              aria-selected={active === t.id}
+              aria-controls={`hx-panel-${d.id}`}
+              tabIndex={active === t.id ? 0 : -1}
+              className={active === t.id ? 'is-on' : ''}
+              onClick={() => setTab(t.id)}
+            >
+              {t.label}
+            </button>
+          ))}
+        </div>
+      </header>
+
+      <div className="hx-dbody">
+        <div className="hx-dmain" role="tabpanel" id={`hx-panel-${d.id}`} aria-labelledby={`hx-tab-${d.id}-${active}`}>
+          {active === 'ozet' ? (
+            <div className="hx-grid">
+              {secs.map((sec) => {
+                // Tanımın ilk maddesi başlıkta; kartta yalnız kalanlar
+                const facts = sec === 'definition' ? defFacts.slice(1) : sectionFacts(d, sec);
+                if (!facts.length) return null;
+                return <SectionCard key={sec} d={d} sec={sec} facts={facts} limit={CARD_LIMIT} onMore={() => setTab(sec)} onShare={onShare} />;
+              })}
+              {spots.length > 0 && (
+                <aside className="hx-spot" aria-label="Sınav spotu">
+                  <p className="hx-spot-h"><Star aria-hidden /> Sınav spotu</p>
+                  <ul>
+                    {spots.map((f, k) => <li key={k}>{f.label && <b>{f.label}: </b>}<FactText text={f.text} /></li>)}
+                  </ul>
+                </aside>
+              )}
+            </div>
+          ) : active === 'siniflama' ? (
+            <section className="hx-card hx-sec is-wide" aria-label="Sınıflandırma">
+              <p className="hx-ent-intro">Bir öğeye dokun: aynı belirti, ilaç, gen ya da bulguyu içeren tüm profiller listelenir.</p>
+              {entities.map((g) => (
+                <div key={g.type} className="hx-entgroup">
+                  <h3 className="hx-sec-h">{ENTITY_TYPE_LABEL[g.type as keyof typeof ENTITY_TYPE_LABEL]}</h3>
+                  <div className="dz-chips hx-chips">
+                    {g.items.map((it) => (
+                      <button key={it.key} type="button" className="dz-chip" disabled={it.n < 2} onClick={() => onEntity(it.key)}
+                        title={it.n >= 2 ? `${it.name} geçen ${it.n} profili listele` : 'Yalnız bu profilde geçiyor'}>
+                        {it.name}{it.n >= 2 && <em>{it.n}</em>}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </section>
+          ) : (
+            <SectionCard d={d} sec={active} facts={sectionFacts(d, active)} wide onShare={onShare} />
+          )}
+        </div>
+
+        <aside className="hx-aside" aria-label="Bağlantılar">
+          {d.verification && (
+            <p className="dz-verif">
+              <ShieldCheck aria-hidden />
+              <span><b>Web kaynaklarıyla madde madde doğrulandı</b> · {d.verification.checked} madde denetlendi
+                {d.verification.fixed + d.verification.conflict > 0 ? `, ${d.verification.fixed + d.verification.conflict} düzeltildi` : ''}
+                {` · ${new Date(d.verification.at).toLocaleDateString('tr-TR')}`}</span>
+            </p>
+          )}
+          <RelatedDiseasesCard data={insights} loading={insightsLoading} onOpenDisease={onOpenDisease} canOpen={canOpen} />
+          <WhereCard data={insights} loading={insightsLoading} lectures={d.relatedLectures} onSearch={() => onSearch(plainName)} />
+          <ConceptsCard data={insights} onSearch={onSearch} />
+          {(d.references || []).length > 0 && (
+            <section className="hx-card hx-aside-card" aria-labelledby={`hx-refs-${d.id}`} id={`disease-${d.id}-references`}>
+              <h2 id={`hx-refs-${d.id}`} className="hx-aside-h"><Library aria-hidden /> Kaynaklar</h2>
+              <ol className="hx-refs">
+                {(d.references || []).map((r, k) => (
+                  <li key={k} id={`disease-${d.id}-ref-${k}`}>
+                    {r.url ? <a href={r.url} target="_blank" rel="noreferrer">{r.label} <ExternalLink aria-hidden /></a> : r.label}
+                  </li>
+                ))}
+              </ol>
+            </section>
+          )}
+          {onReport && (
+            <button type="button" className="ui-btn is-ghost is-sm hx-report" onClick={onReport}>
+              <Flag aria-hidden /> Bu profilde hata bildir
+            </button>
+          )}
+        </aside>
+      </div>
+    </article>
+  );
+};
+
+/** Bölüm kartı: başlık (türe göre) + madde listesi; Özet'te ilk `limit` madde, fazlası bölüm sekmesinde */
+const SectionCard = memo(function SectionCard({ d, sec, facts, limit, wide, onMore, onShare }: {
+  d: DiseaseProfile; sec: DiseaseSectionId; facts: DiseaseFact[]; limit?: number; wide?: boolean; onMore?: () => void; onShare: (d: DiseaseProfile, sec?: string) => void;
+}) {
+  const title = sectionTitle(d.kind, sec);
+  if (!title || !facts.length) return null;
+  const { tone } = SECTION_META[sec];
+  const shown = limit ? facts.slice(0, limit) : facts;
+  const rest = facts.length - shown.length;
+  return (
+    <section id={`disease-${d.id}-${sec}`} className={`hx-card hx-sec is-${tone} ${wide ? 'is-wide' : ''}`} aria-labelledby={`hx-sec-${d.id}-${sec}`}>
+      <header className="hx-sec-top">
+        <h3 id={`hx-sec-${d.id}-${sec}`} className="hx-sec-h">{title}</h3>
+        <button type="button" className="hx-sec-link" onClick={() => onShare(d, sec)} aria-label={`${title} bölümünün bağlantısını paylaş`} title="Bu bölümün bağlantısını paylaş">
+          <Share2 aria-hidden />
+        </button>
+      </header>
+      <ul className="dz-list hx-list-facts">{shown.map((f, k) => <FactItem key={k} f={f} d={d} />)}</ul>
+      {rest > 0 && onMore && (
+        <button type="button" className="hx-sec-more" onClick={onMore}>
+          {rest} madde daha <ChevronRight aria-hidden />
+        </button>
+      )}
+    </section>
+  );
+});
+
 /** Ders notu dosya adını okunur başlığa çevirir ("D4_D5_hiper_hipo_tiroid_260427_085228.md (Kurul 6)" → "hiper hipo tiroid (Kurul 6)") */
 function lectureLabel(src: string): string {
   return src.replace(/_/g, ' ').replace(/\.md\b/g, '').replace(/\b\d{6}\b/g, '').replace(/\b[A-Z]\d+\b/g, '')
@@ -670,58 +935,30 @@ const FactItem = memo(function FactItem({ f, d }: { f: DiseaseFact; d: DiseasePr
   );
 });
 
-/** Ayrıntı bölümü: başlık türe göre; boş bölüm gösterilmez */
-const DiseaseSection = memo(function DiseaseSection({ d, sec, onShare }: { d: DiseaseProfile; sec: DiseaseSectionId; onShare: (d: DiseaseProfile, sec?: string) => void }) {
-  const title = sectionTitle(d.kind, sec);
-  const shown = title ? sectionFacts(d, sec) : [];
-  if (!title || !shown.length) return null;
-  const { icon: Icon, tone } = SECTION_META[sec];
-  return (
-    <section id={`disease-${d.id}-${sec}`} className={`dz-sec is-${tone}`}>
-      <header className="dz-sec-h">
-        <span className="dz-sec-ic" aria-hidden><Icon /></span>
-        <h4>{title}</h4>
-        <button type="button" className="dz-sec-link" onClick={() => onShare(d, sec)} title="Bu bölümün bağlantısını paylaş">
-          <Share2 aria-hidden /><span>Bağlantı</span>
-        </button>
-      </header>
-      <ul className="dz-list">{shown.map((f, k) => <FactItem key={k} f={f} d={d} />)}</ul>
-    </section>
-  );
-});
-
-/** Liste kartı: yalnız kendi verisi değişince yeniden çizilir (paylaş/kopyala/düzenle ayrıntı panelinde) */
-const DiseaseCard = memo(function DiseaseCard({ d, isFav, hitLabel, onOpen, onFav }: {
-  d: DiseaseProfile; isFav: boolean; hitLabel?: string; onOpen: (d: DiseaseProfile) => void; onFav: (id: string, e?: React.MouseEvent) => void;
+/** Liste satırı: yalnız kendi verisi değişince yeniden çizilir */
+const DiseaseRow = memo(function DiseaseRow({ d, isFav, active, hitLabel, onOpen, onFav }: {
+  d: DiseaseProfile; isFav: boolean; active: boolean; hitLabel?: string; onOpen: (d: DiseaseProfile) => void; onFav: (id: string, e?: React.MouseEvent) => void;
 }) {
   const def = sectionFacts(d, 'definition')[0];
   const [hitTitle, hitText] = hitLabel ? hitLabel.split('|') : [];
+  const hall = d.hallmarks[0];
   return (
-    <li id={`disease-${d.id}`} className="dz-card" data-tone={toneOf(d.category)}>
-      <button type="button" className="dz-card-main" onClick={() => onOpen(d)}>
-        <span className="dz-card-top">
-          <span className="dz-cat"><i aria-hidden />{d.category}</span>
-          {d.kind !== 'hastalik' && <span className="dz-kind">{KIND_LABEL[d.kind]}</span>}
-          {d.icd_code && <span className="dz-icd">{d.icd_code}</span>}
+    <li id={`hx-item-${d.id}`} className={`hx-item ${active ? 'is-on' : ''}`} data-tone={toneOf(d.category)}>
+      <button type="button" className="hx-item-main" onClick={() => onOpen(d)} aria-current={active ? 'true' : undefined}>
+        <span className="hx-item-top">
+          <span className="hx-cat"><i aria-hidden />{d.category}</span>
+          {d.kind !== 'hastalik' && <span className="hx-kind">{KIND_LABEL[d.kind]}</span>}
+          {d.icd_code && <span className="hx-icd">{d.icd_code}</span>}
         </span>
-        <span className="dz-name">{d.name}</span>
-        {d.latinName && d.latinName !== d.name && <span className="dz-latin">{d.latinName}</span>}
-        {d.hallmarks.length > 0 && (
-          <span className="dz-hallrow">
-            {d.hallmarks.slice(0, 2).map((h, k) => (
-              <mark key={k} className="dz-hall is-sm" title={plainText(h.text)}><span>{plainText(h.text)}</span></mark>
-            ))}
-          </span>
-        )}
-        {hitTitle ? <span className="dz-clin"><b>{hitTitle}</b>{hitText}</span> : def && <span className="dz-clin">{plainText(def.text)}</span>}
+        <span className="hx-item-name">{d.name}</span>
+        {hitTitle
+          ? <span className="hx-item-def"><b>{hitTitle}</b> {hitText}</span>
+          : def ? <span className="hx-item-def">{plainText(def.text)}</span>
+            : hall ? <span className="hx-item-def">{plainText(hall.text)}</span> : null}
       </button>
-      <div className="dz-card-f">
-        <button type="button" className={`qk-ib ${isFav ? 'is-fav' : ''}`} aria-pressed={isFav} onClick={(e) => { e.stopPropagation(); onFav(d.id, e); }} aria-label={isFav ? 'Favorilerden çıkar' : 'Favorilere ekle'} title={isFav ? 'Favorilerden çıkar' : 'Favorilere ekle'}>
-          <Bookmark className={isFav ? 'fill-current' : ''} aria-hidden />
-        </button>
-        <span className="qk-sp" />
-        <button type="button" className="dz-more" onClick={() => onOpen(d)}>Ayrıntı <ChevronRight aria-hidden /></button>
-      </div>
+      <button type="button" className={`qk-ib hx-item-fav ${isFav ? 'is-fav' : ''}`} aria-pressed={isFav} onClick={(e) => { e.stopPropagation(); onFav(d.id, e); }} aria-label={isFav ? 'Kayıttan çıkar' : 'Kaydet'} title={isFav ? 'Kayıttan çıkar' : 'Kaydet'}>
+        <Bookmark className={isFav ? 'fill-current' : ''} aria-hidden />
+      </button>
     </li>
   );
 });

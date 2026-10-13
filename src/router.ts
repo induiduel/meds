@@ -2,6 +2,7 @@
  * Path-based routing for the app's top-level pages.
  *
  *   /            → soru ekle (home)
+ *   /bugun       → Bugün: kaldığın yer, hızlı erişim, günün spotu, haftalık çalışma
  *   /ogren       → learn catalogue, /ogren/<deckId> opens a deck
  *   /sorular     → soru havuzu
  *   /cikmis      → çıkmış sorular
@@ -17,6 +18,7 @@ import type React from 'react';
 
 export type AppRoute =
   | 'quick_add'
+  | 'today'
   | 'learn'
   | 'glossary'
   | 'flashcards'
@@ -47,6 +49,7 @@ export type AppRoute =
 
 export const ROUTE_PATHS: Record<AppRoute, string> = {
   quick_add: '/',
+  today: '/bugun',
   learn: '/ogren',
   glossary: '/sozluk',
   flashcards: '/kartlar',
@@ -78,6 +81,7 @@ export const ROUTE_PATHS: Record<AppRoute, string> = {
 
 export const ROUTE_TITLES: Record<AppRoute, string> = {
   quick_add: 'Soru ekle',
+  today: 'Bugün',
   learn: 'Öğren',
   glossary: 'Sözlük',
   diseases: 'Hastalıklar',
@@ -116,6 +120,9 @@ const BY_SEGMENT: Record<string, AppRoute> = Object.fromEntries(
 // Legacy aliases (old hash ids, English slugs) so shared links never 404 into the home page silently.
 const ALIASES: Record<string, AppRoute> = {
   quick_add: 'quick_add',
+  today: 'today',
+  bugun: 'today',
+  'bugün': 'today',
   learn: 'learn',
   spotlar: 'spots',
   spots: 'spots',

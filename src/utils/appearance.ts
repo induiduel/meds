@@ -3,22 +3,30 @@ import { PALETTES, findPalette, installPaletteStyles, type ThemeMode } from './p
 
 /**
  * Görünüm tercihleri: tema (açık / sarı / koyu), her temada dört palet (a–d, utils/palettes.ts) ve yerleşim yoğunluğu.
- * Kök öğeye `data-mode`, `data-palette`, `data-density` yazılır; koyu temada eski `theme-dark` sınıfı da kalır
+ * Kök öğeye `data-mode`, `data-palette`, `data-density`, `data-layout` yazılır; koyu temada eski `theme-dark` sınıfı da kalır
  * (index.css ve health.css'teki koyu kurallar onu kullanır). Token değerleri styles/appearance.css'tedir.
  */
 export type { ThemeMode } from './palettes';
 /** Palet kimliği: utils/palettes.ts kaydındaki `id` (a, b, c, …) — yeni palet eklemek için o listeye bakın. */
 export type Palette = string;
 export type Density = 'compact' | 'normal' | 'wide';
+/**
+ * Görüntüleme modu (v10) — sayfa iskeleti: Akış (tek sütun, dar okuma genişliği, menü şeridi), Pano (geniş ızgara,
+ * açık menü), Odak (tam genişlik, menü şeridi; liste + ayrıntı bölmeli sayfalar için). Telefonda üçü de tek sütundur.
+ * Kök öğeye `data-layout` yazılır; kurallar styles/layout-modes.css.
+ */
+export type LayoutMode = 'akis' | 'pano' | 'odak';
 
 export interface Appearance {
   mode: ThemeMode;
   /** Her tema kendi palet seçimini hatırlar: koyuya geçip dönünce açık tema paleti kaybolmaz. */
   palettes: Record<ThemeMode, Palette>;
   density: Density;
+  layout: LayoutMode;
 }
 
 export const MODE_LABELS: Record<ThemeMode, string> = { light: 'Açık', sepia: 'Sarı', dark: 'Koyu' };
+export const LAYOUT_LABELS: Record<LayoutMode, string> = { akis: 'Akış', pano: 'Pano', odak: 'Odak' };
 export const DENSITY_LABELS: Record<Density, string> = { compact: 'Kompakt', normal: 'Normal', wide: 'Geniş' };
 /** Geriye dönük uyumluluk: tema → palet kimliği → bilgi (kayıttan üretilir). */
 export const PALETTE_INFO: Record<ThemeMode, Record<string, { name: string; hint: string; swatch: [string, string, string] }>> =
@@ -33,7 +41,7 @@ const listeners = new Set<() => void>();
 
 function read(): Appearance {
   // İlk açılış her zaman açık temadır (sistem koyu olsa bile); kullanıcı Ayarlar'dan değiştirir.
-  const fallback: Appearance = { mode: 'light', palettes: { light: 'a', sepia: 'a', dark: 'a' }, density: 'normal' };
+  const fallback: Appearance = { mode: 'light', palettes: { light: 'a', sepia: 'a', dark: 'a' }, density: 'normal', layout: 'pano' };
   try {
     const raw = localStorage.getItem(KEY);
     if (raw) {
@@ -46,6 +54,7 @@ function read(): Appearance {
           return acc;
         }, {} as Record<ThemeMode, Palette>),
         density: p.density === 'compact' || p.density === 'wide' || p.density === 'normal' ? p.density : 'normal',
+        layout: p.layout === 'akis' || p.layout === 'odak' || p.layout === 'pano' ? p.layout : 'pano',
       };
     }
     // Eski açık/koyu tercihi bir kez taşınır
@@ -58,30 +67,110 @@ function read(): Appearance {
 }
 
 let current: Appearance = typeof window === 'undefined'
-  ? { mode: 'light', palettes: { light: 'a', sepia: 'a', dark: 'a' }, density: 'normal' }
+  ? { mode: 'light', palettes: { light: 'a', sepia: 'a', dark: 'a' }, density: 'normal', layout: 'pano' }
   : read();
 
+/** Kök öğeye tercihleri yazar (anında, geçişsiz). Açılışta ve örtü altındaki geçişte kullanılır. */
 export function applyAppearance(a: Appearance = current) {
   installPaletteStyles();
   const el = document.documentElement;
-  el.classList.add('theme-switching');
   el.dataset.mode = a.mode;
   el.dataset.palette = a.palettes[a.mode];
   el.dataset.density = a.density;
+  el.dataset.layout = a.layout;
   el.classList.toggle('theme-dark', a.mode === 'dark');
   el.style.colorScheme = a.mode === 'dark' ? 'dark' : 'light';
   // Tarayıcı çubuğu rengi zemine uysun
   const meta = document.querySelector('meta[name="theme-color"]');
   const bg = getComputedStyle(el).getPropertyValue('--color-canvas').trim();
   if (meta && bg) meta.setAttribute('content', bg);
-  window.setTimeout(() => el.classList.remove('theme-switching'), 300);
+}
+
+/*
+ * Tema geçişi: eskiden her öğeye (`*`) renk geçişi veriliyordu; binlerce öğede aynı anda geçiş hem takılıyor hem de
+ * kendi geçişi olan / satır içi renkli öğeler yarım kalıyordu. Şimdi: örtü (yükleniyor ekranı) eski zeminle açılır →
+ * altında tema geçişsiz, tek seferde uygulanır ve React dinleyicileri o anda bildirilir → örtünün zemini yeni temaya
+ * akar → örtü söner. Dönen halka transform animasyonu olduğundan stil hesabı sırasında da akıcı kalır.
+ */
+const COVER_IN = 180;
+const COVER_HOLD = 340;
+const COVER_OUT = 280;
+let pendingApply: Appearance | null = null;
+let switching = false;
+const wait = (ms: number) => new Promise<void>((r) => window.setTimeout(r, ms));
+const nextFrame = () => new Promise<void>((r) => requestAnimationFrame(() => requestAnimationFrame(() => r())));
+
+function coverLabel(a: Appearance) {
+  return `${MODE_LABELS[a.mode]} · ${findPalette(a.mode, a.palettes[a.mode]).name}`;
+}
+
+function ensureCover(): HTMLElement {
+  let cover = document.getElementById('theme-cover');
+  if (cover) return cover;
+  cover = document.createElement('div');
+  cover.id = 'theme-cover';
+  cover.className = 'theme-cover';
+  cover.setAttribute('role', 'status');
+  cover.setAttribute('aria-live', 'polite');
+  cover.innerHTML = '<div class="theme-cover-box"><span class="theme-cover-ring" aria-hidden="true"></span><b>Tema uygulanıyor</b><small></small></div>';
+  document.body.appendChild(cover);
+  return cover;
+}
+
+function commit(a: Appearance) {
+  const el = document.documentElement;
+  el.classList.add('theme-switching');
+  applyAppearance(a);
+  listeners.forEach((l) => l());
+}
+
+async function switchAppearance(next: Appearance) {
+  pendingApply = next;
+  if (switching) return; // Sürmekte olan geçiş en son seçimi örtü altında uygular
+  const reduce = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
+  if (reduce || !document.body) {
+    pendingApply = null;
+    commit(next);
+    requestAnimationFrame(() => document.documentElement.classList.remove('theme-switching'));
+    return;
+  }
+  switching = true;
+  const el = document.documentElement;
+  const cover = ensureCover();
+  const small = cover.querySelector('small');
+  try {
+    if (small) small.textContent = coverLabel(next);
+    cover.hidden = false;
+    void cover.offsetWidth;
+    cover.classList.add('is-on');
+    await wait(COVER_IN);
+    while (pendingApply) {
+      const a = pendingApply;
+      pendingApply = null;
+      if (small) small.textContent = coverLabel(a);
+      commit(a);
+      void getComputedStyle(el).getPropertyValue('--color-canvas'); // stil hesabını örtü altında bitir
+      await nextFrame();
+      await wait(COVER_HOLD);
+    }
+    el.classList.remove('theme-switching');
+    cover.classList.remove('is-on');
+    await wait(COVER_OUT);
+    if (!pendingApply) cover.hidden = true;
+  } finally {
+    switching = false;
+    el.classList.remove('theme-switching');
+    if (pendingApply) void switchAppearance(pendingApply);
+  }
 }
 
 export function setAppearance(patch: Partial<Omit<Appearance, 'palettes'>> & { palette?: Palette }) {
   const next: Appearance = { ...current, palettes: { ...current.palettes } };
   if (patch.mode) next.mode = patch.mode;
   if (patch.density) next.density = patch.density;
+  if (patch.layout) next.layout = patch.layout;
   if (patch.palette) next.palettes[next.mode] = patch.palette;
+  const same = next.mode === current.mode && next.density === current.density && next.palettes[next.mode] === current.palettes[current.mode];
   current = next;
   try {
     localStorage.setItem(KEY, JSON.stringify(next));
@@ -89,8 +178,9 @@ export function setAppearance(patch: Partial<Omit<Appearance, 'palettes'>> & { p
   } catch {
     /* ignore */
   }
-  applyAppearance(next);
-  listeners.forEach((l) => l());
+  // Görünen bir şey değişmediyse (aynı düğmeye yeniden basıldı) örtü açılmaz
+  if (same) listeners.forEach((l) => l());
+  else void switchAppearance(next);
 }
 
 export function getAppearance() {

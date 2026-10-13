@@ -24,12 +24,27 @@ const listeners = new Set<Listener>();
 const emit = () => listeners.forEach((l) => l(items));
 const recent = new Map<string, number>();
 
-const push = (kind: ToastKind, title: string, message?: string, action?: ToastItem['action']) => {
+// Bildirim geçmişi: her toast (kısa onaylar hariç) kullanıcının profil bildirimlerine de yazılır.
+// Kaydedici userNotificationService tarafından bağlanır (içe aktarma döngüsü olmasın diye).
+type ToastRecorder = (kind: ToastKind, title: string, message?: string) => void;
+let recorder: ToastRecorder | null = null;
+export const setToastRecorder = (fn: ToastRecorder | null) => {
+  recorder = fn;
+};
+
+const push = (kind: ToastKind, title: string, message?: string, action?: ToastItem['action'], record = true) => {
   // Same message within 4 s is shown once
   const key = `${kind}|${title}|${message || ''}`;
   const now = Date.now();
   if ((recent.get(key) || 0) > now - 4000) return -1;
   recent.set(key, now);
+  if (record && recorder) {
+    try {
+      recorder(kind, title, message);
+    } catch {
+      /* geçmiş yazılamazsa toast yine görünür */
+    }
+  }
   const id = nextId++;
   items = [...items, { id, kind, title, message, action }].slice(-4);
   emit();
@@ -46,6 +61,8 @@ export const toast = {
   error: (title: string, message?: string, action?: ToastItem['action']) => push('error', title, message, action),
   success: (title: string, message?: string) => push('success', title, message),
   info: (title: string, message?: string) => push('info', title, message),
+  /** Geçmişe yazmadan göster (zaten bildirim geçmişinde olan bir kaydı duyurmak için). */
+  show: (kind: ToastKind, title: string, message?: string) => push(kind, title, message, undefined, false),
 };
 
 /** Mount once (App). Renders inside the fullscreen element when one is active. */

@@ -17,7 +17,7 @@ import {
 } from 'lucide-react';
 import { Committee, QuestionItem, QuestionLectureMatch } from './types';
 import { MetricsBar } from './components/MetricsBar';
-import { QuestionCard } from './components/QuestionCard';
+import { PoolView } from './components/pool/PoolView';
 import { QuickAddHero, committeeShortLabel, questionStemText } from './components/QuickAddHero';
 import { MusicPlayerProvider } from './components/music/MusicPlayerContext';
 import { MiniMusicPlayer } from './components/music/MiniMusicPlayer';
@@ -36,7 +36,7 @@ import { pwaService, PWA_WELCOME_STORAGE_KEY } from './services/pwaService';
 import { userNotificationService } from './services/userNotificationService';
 import { backupUserDataToDatabase } from './services/userDataSyncService';
 import { syncNotes } from './services/notesSync';
-import { buildDeepLinkUrl, executeDeepLinkFocus, initDeepLinkAutoScroll } from './services/universalRedirectService';
+import { buildDeepLinkUrl, executeDeepLinkFocus, initDeepLinkAutoScroll, openDeepLink } from './services/universalRedirectService';
 
 function wrapLazy<T extends { default: React.ComponentType<any> }>(
   promise: Promise<T>
@@ -104,6 +104,7 @@ const StudyHub = React.lazy(() => wrapLazy(import('./components/study/StudyHub')
 const BookletView = React.lazy(() => wrapLazy(import('./components/BookletView').then(m => ({ default: m.BookletView }))));
 const LeaderboardView = React.lazy(() => wrapLazy(import('./components/LeaderboardView').then(m => ({ default: m.LeaderboardView }))));
 const StatsView = React.lazy(() => wrapLazy(import('./components/stats/StatsView').then(m => ({ default: m.StatsView }))));
+const TodayView = React.lazy(() => wrapLazy(import('./components/today/TodayView').then(m => ({ default: m.TodayView }))));
 const MusicView = React.lazy(() => wrapLazy(import('./components/MusicView').then(m => ({ default: m.MusicView }))));
 const LectureNotesView = React.lazy(() => wrapLazy(import('./components/LectureNotesView').then(m => ({ default: m.LectureNotesView }))));
 const PastExamsView = React.lazy(() => wrapLazy(import('./components/PastExamsView').then(m => ({ default: m.PastExamsView }))));
@@ -277,6 +278,7 @@ export default function App() {
   const [showOnboarding, setShowOnboarding] = useState(() => isAuthModalOpen);
   const [isPwaWelcomeOpen, setIsPwaWelcomeOpen] = useState(false);
   const [showClusterModal, setShowClusterModal] = useState(false);
+  const [clusterFocusId, setClusterFocusId] = useState<string | null>(null);
 
   useEffect(() => {
     const el = document.getElementById('app-splash');
@@ -374,6 +376,7 @@ export default function App() {
   );
   // Kart / ders notu ekranları derin bağlantıyı açılışta okur; uygulama içi gezinmede yeniden kurulsunlar.
   const [deepLinkNonce, setDeepLinkNonce] = useState(0);
+  const [learnLinkNonce, setLearnLinkNonce] = useState(0);
   clearDeepLinkTargets.current = () => {
     setSelectedGlossaryTermId(undefined);
     setSelectedDiseaseId(undefined);
@@ -422,6 +425,19 @@ export default function App() {
   // Derin bağlantı odağı: ilk açılışta, geri/ileri ve çapa değişiminde hedef öğeye kaydırıp vurgular.
   useEffect(() => initDeepLinkAutoScroll(), []);
 
+  // Push bildirimine tıklanınca servis çalışanı açık pencereye hedef yolu yollar (public/sw.js): sayfa
+  // yenilenmeden rota kurulur ve öğeye odaklanılır. Yanıt portu, mesajın işlendiğini servis çalışanına bildirir.
+  useEffect(() => {
+    if (typeof navigator === 'undefined' || !('serviceWorker' in navigator)) return;
+    const onMessage = (e: MessageEvent) => {
+      if (e.data?.type !== 'MEDSORU_NAVIGATE' || typeof e.data.url !== 'string') return;
+      e.ports?.[0]?.postMessage({ ok: true });
+      openDeepLink(e.data.url);
+    };
+    navigator.serviceWorker.addEventListener('message', onMessage);
+    return () => navigator.serviceWorker.removeEventListener('message', onMessage);
+  }, []);
+
   // Normalise legacy #tab links to their path once, then follow back / forward
   useEffect(() => {
     // Yol normalleştirilirken derin bağlantının sorgu (?opt, ?sec, ?highlight) ve çapası (#…) korunur.
@@ -458,6 +474,8 @@ export default function App() {
         const sp = new URLSearchParams(window.location.search);
         const s = sp.get('slide');
         setSelectedLearnSlideNumber(s ? parseInt(s, 10) : undefined);
+        // Aynı ders açıkken gelen adım/öğe bağlantısı (bildirim) oynatıcıyı o adımda yeniden kurar.
+        if (/[?&](adim|hedef|slide|target)=/.test(window.location.search)) setLearnLinkNonce((n) => n + 1);
       }
     };
     window.addEventListener('popstate', onPop);
@@ -1515,6 +1533,7 @@ export default function App() {
               isAdmin={isAdmin}
               initialDeckId={selectedLearnDeckId}
               initialSlideNumber={selectedLearnSlideNumber}
+              linkNonce={learnLinkNonce}
               questionFocus={learnQuestionFocus}
               onClearQuestionFocus={() => setLearnQuestionFocus(null)}
               onDeckChange={(id) => {
@@ -1580,178 +1599,65 @@ export default function App() {
           </Suspense>
         )}
 
-        {/* TAB 1: Questions List */}
+        {/* TAB 1: Soru havuzu (v11: components/pool/PoolView) */}
         {activeTab === 'questions' && (
-          <div className="flex flex-col gap-3 sm:gap-5">
-            <PageHeader
-              eyebrow="Kolektif arşiv"
-              title="Soru havuzu"
-              description="Herkesin hatırladığı parçalar burada birleşir; kaynaklarla tamamlanan sorular doğrulanır."
-              stats={loading ? undefined : [{ label: 'soru', value: poolQuestions.length.toLocaleString('tr-TR') }]}
-              actions={
-                <>
-                  <label className="sr-only" htmlFor="pool-committee">Kurul</label>
-                  <select
-                    id="pool-committee"
-                    value={selectedCommitteeId}
-                    onChange={(e) => setSelectedCommitteeId(e.target.value)}
-                    className="ms-select h-10 font-semibold w-full sm:w-auto sm:max-w-[360px] truncate"
-                  >
-                    {committees.map((c) => (
-                      <option key={c.id} value={c.id}>
-                        {c.name}
-                      </option>
-                    ))}
-                  </select>
-                  <button
-                    type="button"
-                    onClick={() => setShowClusterModal(true)}
-                    className="inline-flex h-10 px-3.5 rounded-[10px] bg-accent-soft hover:brightness-95 text-accent font-semibold text-base items-center gap-2 cursor-pointer transition-[filter]"
-                    title="Aynı soruyu hatırlayan parçaların birleştirildiği öneri taslakları"
-                  >
-                    <Combine className="w-4 h-4" strokeWidth={2.2} />
-                    <span>Öneri Taslak Havuzu</span>
-                  </button>
-                  <button
-                    type="button"
-                    onClick={() => {
-                      setContributeDefaultNumber(undefined);
-                      setIsContributeModalOpen(true);
-                    }}
-                    className="hidden sm:inline-flex h-10 px-4 rounded-[10px] bg-accent hover:bg-accent-hover text-white font-semibold text-base items-center gap-2 cursor-pointer shadow-sm"
-                  >
-                    <Plus className="w-4 h-4" strokeWidth={2.2} />
-                    Soru ekle
-                  </button>
-                </>
-              }
-            >
-              {searchQuery && (
-                <div className="flex flex-wrap items-center gap-2 text-base text-ink-2">
-                  <span>Arama:</span>
-                  <span className="text-ink font-semibold">“{searchQuery}”</span>
-                  <button type="button" onClick={() => setSearchQuery('')} className="h-8 px-2.5 rounded-lg text-accent font-semibold cursor-pointer hover:bg-accent-soft">
-                    Aramayı temizle
-                  </button>
-                </div>
-              )}
-            </PageHeader>
-
-            {/* Filter and Stats Bar */}
-            <MetricsBar
-              totalTarget={targetCount}
-              totalGathered={questions.filter((q) => q.fragments.length > 0).length}
-              completedCount={completedQuestions.length}
-              gatheringCount={gatheringQuestions.length}
-              emptyCount={emptyQuestions.length}
-              selectedDiscipline={selectedDiscipline}
-              onSelectDiscipline={setSelectedDiscipline}
-              selectedStatus={selectedStatus}
-              onSelectStatus={setSelectedStatus}
-              searchQuery={searchQuery}
-              onSearchChange={setSearchQuery}
-              onGenerateSlots={handleGenerateSlots}
-              isGeneratingSlots={isGeneratingSlots}
-              isAdmin={isAdmin}
-              myQuestionsCount={myQuestions.length}
-              filterMyQuestionsOnly={filterMyQuestionsOnly}
-              onToggleMyQuestionsOnly={() => setFilterMyQuestionsOnly(!filterMyQuestionsOnly)}
-            />
-
-            {/* Questions Stream */}
-            {loading ? (
-              <div className="flex flex-col gap-3" aria-busy="true" aria-label="Soru havuzu yükleniyor">
-                {[0, 1, 2].map((i) => (
-                  <div key={i} className="ui-card flex flex-col gap-2.5">
-                    <div className="ui-skel" style={{ width: '32%', height: 10 }} />
-                    <div className="ui-skel" style={{ height: 14 }} />
-                    <div className="ui-skel" style={{ width: '78%', height: 14 }} />
-                    <div className="ui-skel" style={{ width: '54%', height: 10, marginTop: 6 }} />
-                  </div>
-                ))}
-              </div>
-            ) : poolQuestions.length === 0 ? (
-              <div className="ui-card flex flex-col items-center text-center gap-3" style={{ paddingBlock: 40 }}>
-                <span className="ui-ico is-soft" style={{ width: 44, height: 44, borderRadius: 12 }}><Plus className="w-5 h-5" /></span>
-                <div className="flex flex-col gap-1">
-                  <h3 className="m-0 font-display text-xl font-bold tracking-[-0.02em]">
-                    {filterMyQuestionsOnly ? 'Henüz katkıda bulunduğun soru yok' : 'Bu süzgeçlere uyan soru yok'}
-                  </h3>
-                  <p className="m-0 text-base text-ink-2 max-w-[420px]">
-                    {filterMyQuestionsOnly
-                      ? 'Aklında kalan tek bir kelime bile işe yarar; parçayı ekle, kaynaklarla tamamlansın.'
-                      : 'Branşı ya da durumu değiştir, veya aramayı kısalt.'}
-                  </p>
-                </div>
-                <div className="flex flex-wrap items-center justify-center gap-2">
-                  {filterMyQuestionsOnly && (
-                    <button type="button" onClick={() => setFilterMyQuestionsOnly(false)} className="ui-btn">
-                      Tüm soruları göster
-                    </button>
-                  )}
-                  <button
-                    type="button"
-                    onClick={() => {
-                      setContributeDefaultNumber(undefined);
-                      setIsContributeModalOpen(true);
-                    }}
-                    className="ui-btn is-primary"
-                  >
-                    Soru parçası ekle
-                  </button>
-                </div>
-              </div>
-            ) : (
-              <div className="flex flex-col gap-3 sm:gap-5">
-                {poolFocusQuestion && (
-                  <div className="ms-shared-band" role="status">
-                    <Share2 className="w-4 h-4 shrink-0" aria-hidden />
-                    <span className="min-w-0 flex-1">Paylaşılan soru gösteriliyor</span>
-                    <button type="button" onClick={() => { setPoolFocusId(undefined); writeLocation('questions'); }} className="ms-btn is-ghost is-sm">Tüm sorular <ChevronRight className="w-4 h-4" /></button>
-                  </div>
-                )}
-                {displayedQuestions.map((q) => (
-                  <div key={q.id} data-qid={q.id} className="scroll-mt-20 min-w-0">
-                  <QuestionCard
-                    key={q.id}
-                    question={q}
-                    currentUser={currentUser}
-                    isAdmin={isAdmin}
-                    onEditQuestion={(targetQ) => {
-                      setSelectedQuestionToEdit(targetQ);
-                      setIsEditQuestionModalOpen(true);
-                    }}
-                    onDeleteQuestion={handleDeleteQuestion}
-                    onOpenHistory={(targetQ) => {
-                      setSelectedQuestionForHistory(targetQ);
-                      setIsHistoryModalOpen(true);
-                    }}
-                    onAddFragment={handleAddFragment}
-                    onUpvoteFragment={handleUpvoteFragment}
-                    onAddOption={handleAddOption}
-                    onUpvoteOption={handleUpvoteOption}
-                    onUpvoteQuestion={handleUpvoteQuestion}
-                    onReconstructWithAi={handleReconstructWithAi}
-                    onOpenAiOptimizer={(targetQ) => setOptimizeQuestion(targetQ)}
-                    onSetClaimedAnswer={handleSetClaimedAnswer}
-                    isReconstructing={!!reconstructingMap[q.id]}
-                  />
-                  </div>
-                ))}
-                {poolQuestions.length > visibleCount && (
-                  <div className="text-center py-4">
-                    <button
-                      type="button"
-                      onClick={() => setVisibleCount((prev) => prev + 30)}
-                      className="h-11 px-6 rounded-xl bg-white border border-line-2 text-ink font-semibold text-base hover:bg-field cursor-pointer shadow-xs inline-flex items-center gap-2"
-                    >
-                      Daha fazla soru göster ({poolQuestions.length - visibleCount} soru daha)
-                    </button>
-                  </div>
-                )}
-              </div>
-            )}
-          </div>
+          <PoolView
+            loading={loading}
+            allQuestions={standaloneQuestions}
+            poolQuestions={poolQuestions}
+            focusQuestion={poolFocusQuestion}
+            onClearFocus={() => { setPoolFocusId(undefined); writeLocation('questions'); }}
+            visibleCount={visibleCount}
+            setVisibleCount={setVisibleCount}
+            committees={committees}
+            selectedCommitteeId={selectedCommitteeId}
+            onSelectCommittee={setSelectedCommitteeId}
+            selectedDiscipline={selectedDiscipline}
+            onSelectDiscipline={setSelectedDiscipline}
+            selectedStatus={selectedStatus}
+            onSelectStatus={setSelectedStatus}
+            searchQuery={searchQuery}
+            onSearchChange={setSearchQuery}
+            mineOnly={filterMyQuestionsOnly}
+            onSetMineOnly={setFilterMyQuestionsOnly}
+            myCount={myQuestions.length}
+            stats={{
+              target: targetCount,
+              gathered: questions.filter((q) => q.fragments.length > 0).length,
+              completed: completedQuestions.length,
+              gathering: gatheringQuestions.length,
+              empty: emptyQuestions.length,
+            }}
+            isAdmin={isAdmin}
+            onGenerateSlots={handleGenerateSlots}
+            isGeneratingSlots={isGeneratingSlots}
+            onOpenClusters={(clusterId?: string) => { setClusterFocusId(clusterId || null); setShowClusterModal(true); }}
+            onContribute={() => {
+              setContributeDefaultNumber(undefined);
+              setIsContributeModalOpen(true);
+            }}
+            currentUser={currentUser}
+            reconstructingMap={reconstructingMap}
+            card={{
+              onEditQuestion: (targetQ) => {
+                setSelectedQuestionToEdit(targetQ);
+                setIsEditQuestionModalOpen(true);
+              },
+              onDeleteQuestion: handleDeleteQuestion,
+              onOpenHistory: (targetQ) => {
+                setSelectedQuestionForHistory(targetQ);
+                setIsHistoryModalOpen(true);
+              },
+              onAddFragment: handleAddFragment,
+              onUpvoteFragment: handleUpvoteFragment,
+              onAddOption: handleAddOption,
+              onUpvoteOption: handleUpvoteOption,
+              onUpvoteQuestion: handleUpvoteQuestion,
+              onReconstructWithAi: handleReconstructWithAi,
+              onOpenAiOptimizer: (targetQ) => setOptimizeQuestion(targetQ),
+              onSetClaimedAnswer: handleSetClaimedAnswer,
+            }}
+          />
         )}
 
         {/* Study workspace: solve, self-test, notes */}
@@ -1844,6 +1750,7 @@ export default function App() {
             <QuestionMatrix
               questions={questions}
               targetCount={targetCount}
+              committee={currentCommittee}
               onSelectQuestion={(q) => {
                 setActiveTab('questions');
                 setSearchQuery(q.questionNumber.toString());
@@ -1868,6 +1775,12 @@ export default function App() {
         )}
 
         {/* TAB 5: Leaderboard / Katkı Sıralaması */}
+        {/* /bugun — günlük giriş: kaldığın yer, hızlı erişim, günün spotu, haftalık çalışma */}
+        {activeTab === 'today' && (
+          <Suspense fallback={<ViewFallback />}>
+            <TodayView committeeLabel={currentCommittee ? committeeShortLabel(currentCommittee) : undefined} onGo={(r) => setActiveTab(r)} />
+          </Suspense>
+        )}
         {activeTab === 'stats' && (
           <Suspense fallback={<ViewFallback />}>
             <StatsView questions={questions} currentUser={currentUser} onGo={(r) => setActiveTab(r)} />
@@ -2225,6 +2138,7 @@ export default function App() {
             currentUser={currentUser}
             isAdmin={isAdmin}
             committeeId={activeTab === 'questions' ? selectedCommitteeId : undefined}
+            focusClusterId={clusterFocusId}
           />
         </Suspense>
       )}

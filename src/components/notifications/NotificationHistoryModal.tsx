@@ -13,9 +13,11 @@ import {
   PenLine,
   Users,
   ChevronRight,
+  Info,
+  XCircle,
 } from 'lucide-react';
 import { userNotificationService, UserNotification } from '../../services/userNotificationService';
-import { executeDeepLinkFocus } from '../../services/universalRedirectService';
+import { openDeepLink } from '../../services/universalRedirectService';
 import { Sheet } from '../ui/Sheet';
 import { Segmented, Switch } from '../ui/kit';
 import { confirmDialog } from '../ui/ConfirmDialog';
@@ -23,7 +25,8 @@ import { toast } from '../ui/Toast';
 
 /**
  * Bildirimler — ortak Sheet üzerinde (Escape, odak tuzağı, telefonda alttan sayfa).
- *  - Süzgeç: Tümü / Okunmamış; gün gruplu liste (Bugün, Dün, tarih); göreli zaman.
+ *  - Süzgeç: Tümü / Okunmamış / Etkinlik (uygulama içi toast geçmişi); gün gruplu liste (Bugün, Dün, tarih); göreli zaman.
+ *  - Geçmiş profile kayıtlıdır: tüm cihazlarda aynı liste, diğer cihazdan/sunucudan gelen bildirim açıkken canlı düşer.
  *  - Satır: tür ikon karosu · başlık · ileti · zaman; tıklayınca okundu + uygulama içinde hedefe gider (sayfa yenilenmez).
  *  - Satır menüsü: okundu/okunmadı, sil. Toplu: tümünü okundu say, geçmişi temizle (onaylı).
  *  - Ayar: anlık (tarayıcı) bildirim; izin reddedilirse nasıl açılacağı yazılır.
@@ -33,7 +36,8 @@ interface NotificationHistoryModalProps {
   onClose: () => void;
 }
 
-type Filter = 'all' | 'unread';
+type Filter = 'all' | 'unread' | 'app';
+const isApp = (n: UserNotification) => n.type.startsWith('app_');
 
 const TYPE_META: Record<UserNotification['type'], { icon: React.ElementType; tone: string; label: string }> = {
   ai_reconstruction_complete: { icon: Sparkles, tone: 'ai', label: 'Yapay zekâ' },
@@ -44,6 +48,9 @@ const TYPE_META: Record<UserNotification['type'], { icon: React.ElementType; ton
   report_filed: { icon: AlertTriangle, tone: 'warn', label: 'Bildirim' },
   report_resolved: { icon: CheckCircle2, tone: 'ok', label: 'Çözüldü' },
   question_revised: { icon: PenLine, tone: 'ok', label: 'Revizyon' },
+  app_success: { icon: CheckCircle2, tone: 'ok', label: 'Etkinlik' },
+  app_info: { icon: Info, tone: 'muted', label: 'Etkinlik' },
+  app_error: { icon: XCircle, tone: 'warn', label: 'Hata' },
 };
 
 const startOfDay = (d: Date) => new Date(d.getFullYear(), d.getMonth(), d.getDate()).getTime();
@@ -66,30 +73,6 @@ function relTime(iso: string) {
   if (s < 3600) return `${Math.floor(s / 60)} dk önce`;
   if (s < 86_400) return `${Math.floor(s / 3600)} sa önce`;
   return new Date(t).toLocaleTimeString('tr-TR', { hour: '2-digit', minute: '2-digit' });
-}
-
-/** Uygulama içi gezinme: adres değişir, App popstate ile rotayı kurar, ardından hedef öğeye odaklanılır. */
-function openDeepLink(url: string) {
-  if (!url) return;
-  try {
-    const u = new URL(url, window.location.origin);
-    if (u.origin !== window.location.origin) {
-      window.open(u.href, '_blank', 'noopener');
-      return;
-    }
-    window.history.pushState({}, '', u.pathname + u.search + u.hash);
-    window.dispatchEvent(new PopStateEvent('popstate'));
-    const anchor = u.hash ? decodeURIComponent(u.hash.slice(1)) : '';
-    // Hedef ekran ve liste yüklenene kadar birkaç kez dene.
-    let n = 0;
-    const tick = () => {
-      if (executeDeepLinkFocus(anchor || undefined) || ++n > 8) return;
-      window.setTimeout(tick, 350);
-    };
-    window.setTimeout(tick, 250);
-  } catch {
-    executeDeepLinkFocus(url);
-  }
 }
 
 export const NotificationHistoryModal: React.FC<NotificationHistoryModalProps> = ({ isOpen, onClose }) => {
@@ -121,7 +104,8 @@ export const NotificationHistoryModal: React.FC<NotificationHistoryModalProps> =
   }, [menuFor]);
 
   const unread = notifications.filter((n) => !n.read).length;
-  const shown = filter === 'unread' ? notifications.filter((n) => !n.read) : notifications;
+  const appCount = notifications.filter(isApp).length;
+  const shown = filter === 'unread' ? notifications.filter((n) => !n.read) : filter === 'app' ? notifications.filter(isApp) : notifications;
 
   const groups = useMemo(() => {
     const out: { label: string; items: UserNotification[] }[] = [];
@@ -170,7 +154,7 @@ export const NotificationHistoryModal: React.FC<NotificationHistoryModalProps> =
   const clearAll = async () => {
     const ok = await confirmDialog({
       title: 'Bildirim geçmişi silinsin mi?',
-      message: `${notifications.length} bildirim bu cihazdan kalıcı olarak silinecek.`,
+      message: `${notifications.length} bildirim profilinden ve tüm cihazlarından kalıcı olarak silinecek.`,
       confirmLabel: 'Hepsini sil',
       tone: 'danger',
     });
@@ -203,6 +187,7 @@ export const NotificationHistoryModal: React.FC<NotificationHistoryModalProps> =
             options={[
               { value: 'all', label: <>Tümü <span className="nf-n">{notifications.length}</span></> },
               { value: 'unread', label: <>Okunmamış <span className="nf-n">{unread}</span></> },
+              { value: 'app', label: <>Etkinlik <span className="nf-n">{appCount}</span></> },
             ]}
           />
         </div>
@@ -210,11 +195,13 @@ export const NotificationHistoryModal: React.FC<NotificationHistoryModalProps> =
         {shown.length === 0 ? (
           <div className="nf-empty">
             <span className="nf-empty-ic" aria-hidden>{filter === 'unread' ? <CheckCheck /> : <Bell />}</span>
-            <b>{filter === 'unread' ? 'Okunmamış bildirim yok' : 'Henüz bildirim yok'}</b>
+            <b>{filter === 'unread' ? 'Okunmamış bildirim yok' : filter === 'app' ? 'Henüz etkinlik yok' : 'Henüz bildirim yok'}</b>
             <p>
               {filter === 'unread'
                 ? 'Hepsini gördün.'
-                : 'Sorun yapay zekâyla yeniden kurulduğunda, bildirdiğin hata çözüldüğünde ya da sorulara yorum geldiğinde burada görünür.'}
+                : filter === 'app'
+                  ? 'Uygulamada gördüğün kısa bildirimler (kaydedildi, gönderildi, hata…) burada birikir.'
+                  : 'Bildirdiğin hata çözüldüğünde, yorumuna yanıt geldiğinde ya da uygulamada bir işlem tamamlandığında burada görünür.'}
             </p>
           </div>
         ) : (
@@ -291,7 +278,7 @@ export const NotificationHistoryModal: React.FC<NotificationHistoryModalProps> =
             </span>
             <Switch checked={pushEnabled} onChange={handleTogglePush} label="Anlık bildirim" />
           </div>
-          <p className="nf-note">Hata bildirimlerinin sonucu ayrıca hesabındaki e-posta adresine gönderilir.</p>
+          <p className="nf-note">Bildirim geçmişin profiline kayıtlıdır; giriş yaptığın tüm cihazlarda aynı liste görünür. Hata bildirimlerinin sonucu ayrıca hesabındaki e-posta adresine gönderilir.</p>
           {notifications.length > 0 && (
             <button type="button" className="ui-btn is-danger is-sm nf-clear" onClick={clearAll}>
               <Trash2 aria-hidden /> Geçmişi temizle

@@ -59,7 +59,7 @@ export const CardExtras: React.FC<Props> = ({ card }) => {
     } else if (card.id.startsWith('g:')) {
       await ApiService.reportTerm(card.id.slice(2), reason, details);
     } else {
-      await ApiService.reportTerm(card.id, reason, `${details}\nKart: ${card.front}`);
+      await ApiService.reportFlashcard(card.id, reason, `${details}\nKart: ${card.front}`);
     }
     toast.success('Bildirim alındı', 'Kart incelemeye gönderildi.');
   };

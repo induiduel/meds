@@ -1,8 +1,9 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { confirmDialog } from './ui/ConfirmDialog';
 import { SourceText } from './ui/SourceText';
-import { PageHeader } from './ui/PageHeader';
-import { Segmented } from './ui/kit';
+import { FilterPills, PageToolbar, type ToolbarChip } from './ui/PageToolbar';
+import { Sheet } from './ui/Sheet';
+import { useReaderPrefs } from './summary/readerStore';
 import {
   BookMarked,
   Search,
@@ -21,6 +22,9 @@ import {
   BookOpen,
   FolderOpen,
   X,
+  ListTree,
+  FileText,
+  ChevronRight,
 } from 'lucide-react';
 import { LectureNote, QuestionItem, QuestionLectureMatch, UserProfile, Committee } from '../types';
 import {
@@ -34,6 +38,14 @@ import { ApiService } from '../services/api';
 import { multiDbManager } from '../services/multiDbManager';
 import { triggerDomHighlightAndScroll } from '../services/universalRedirectService';
 
+/**
+ * Ders notları (v10 kompakt; ders özetleriyle aynı okuyucu dili). Yapı:
+ *   PageToolbar (başlık · sayaç · arama · Slayt kataloğu / İşlenmiş notlar · Süzgeç: anabilim dalı + durum · araçlar)
+ *   + tek satır işleme ilerlemesi → katalog: kompakt slayt listesi (no · başlık · dal/sayfa · durum · eylemler)
+ *   → işlenmiş notlar: sol ray (not listesi; telefonda/akış düzeninde alt sayfa) + orta okuma sütunu (~660 px,
+ *   A− / A+ özetlerle ortak tercih, Slayt PDF'i, tam ekran okuyucu) ve sayfa sayfa metin.
+ * Stil: styles/summary.css (.nr-*, liste satırı .sl-list ile ortak).
+ */
 interface LectureNotesViewProps {
   committee?: Committee;
   committees: Committee[];
@@ -133,6 +145,8 @@ export const LectureNotesView: React.FC<LectureNotesViewProps> = ({
   const [isUploadingPdf, setIsUploadingPdf] = useState(false);
   const [pdfUploadStatus, setPdfUploadStatus] = useState<string | null>(null);
   const [isSyncingDesktop, setIsSyncingDesktop] = useState(false);
+  const [railSheet, setRailSheet] = useState(false);
+  const [prefs, setPrefs] = useReaderPrefs();
 
   // Notes are managed in memory and synced via multiDbManager & Supabase Realtime
 
@@ -548,254 +562,345 @@ export const LectureNotesView: React.FC<LectureNotesViewProps> = ({
     }, 2000);
   };
 
-  return (
-    <div className="ln-page">
-      <PageHeader
-        eyebrow="Kaynak kütüphanesi"
-        title="Ders notları ve slaytlar"
-        description="Drive'daki ders slaytları sayfa sayfa, yorumsuz metin olarak işlenir. Sorular bu sayfalarla eşleştirilir."
-        actions={
-          <div className="ln-head-tools">
-            {isAdmin && (
-              <button
-                type="button"
-                onClick={handleTriggerDesktopSync}
-                disabled={isSyncingDesktop}
-                className="ui-btn is-sm"
-                title="Yerel ders notu klasörünü şimdi tara"
-              >
-                {isSyncingDesktop ? <RefreshCw className="w-4 h-4 animate-spin" /> : <FolderOpen className="w-4 h-4" />}
-                {isSyncingDesktop ? 'Taranıyor…' : 'Klasörü tara'}
-              </button>
-            )}
-            <a
-              href={DRIVE_FOLDER_URL}
-              target="_blank"
-              rel="noreferrer"
-              className="ui-btn is-sm"
-            >
-              <ExternalLink className="w-4 h-4" />
-              Drive klasörü
-            </a>
-            {isAdmin && (
-              <button
-                type="button"
-                onClick={() => setIsAddingNote(true)}
-                className="ui-btn is-primary is-sm"
-              >
-                <Plus className="w-4 h-4" />
-                Not yükle
-              </button>
-            )}
-          </div>
-        }
-      />
-      <section className="ln-prog" aria-label="Slayt işleme durumu">
-        <div className="ln-prog-row">
-          <span><b>{renderedSlidesCount} / {TOTAL_CATALOG_SLIDES}</b> slayt işlendi · {renderedPagesCount.toLocaleString('tr-TR')} / {TOTAL_CATALOG_PAGES.toLocaleString('tr-TR')} sayfa</span>
-          <span className="ln-prog-pct">%{progressPercent}</span>
-        </div>
-        <div className="ln-bar" role="progressbar" aria-valuenow={progressPercent} aria-valuemin={0} aria-valuemax={100} aria-label="Slayt işleme ilerlemesi">
-          <i style={{ width: `${Math.max(2, progressPercent)}%` }} />
-        </div>
-        <div className="ln-prog-row is-sub">
-          <span>Kalan {(TOTAL_CATALOG_PAGES - renderedPagesCount).toLocaleString('tr-TR')} sayfa</span>
-          {isAdmin && notes.length > 0 && (
-            <button type="button" onClick={handlePurgeMockNotes} title="Önbellekte kalan örnek notları temizler" className="ln-link is-bad">Örnekleri temizle</button>
-          )}
-        </div>
-        {feedbackMessage && (
-          <div role="status" className="ln-feedback">
-            <CheckCircle2 aria-hidden />
-            <span>{feedbackMessage}</span>
-            <button type="button" onClick={() => setFeedbackMessage(null)} aria-label="Bildirimi kapat"><X aria-hidden /></button>
-          </div>
-        )}
-        <Segmented<'drive_catalog' | 'rendered_notes'>
-          className="ln-seg"
-          label="Ders notu görünümü"
-          value={activeTab}
-          onChange={setActiveTab}
-          options={[
-            { value: 'drive_catalog', label: <><FolderGit2 aria-hidden /> Slayt kataloğu <span className="ln-n">{TOTAL_CATALOG_SLIDES}</span></> },
-            { value: 'rendered_notes', label: <><BookOpen aria-hidden /> İşlenmiş notlar <span className="ln-n">{notes.length}</span></> },
-          ]}
-        />
-      </section>
+  const onCatalog = activeTab === 'drive_catalog';
+  const notesDisciplines = useMemo(() => {
+    const m = new Map<string, number>();
+    notes.forEach((n) => m.set(n.discipline, (m.get(n.discipline) || 0) + 1));
+    return [['Tümü', notes.length] as [string, number], ...[...m.entries()].sort((x, y) => y[1] - x[1])];
+  }, [notes]);
+  const discipline = onCatalog ? catalogDiscipline : notesDiscipline;
+  const setDiscipline = onCatalog ? setCatalogDiscipline : setNotesDiscipline;
+  const chips: ToolbarChip[] = [
+    ...(discipline !== 'Tümü' ? [{ id: 'd', label: discipline, onRemove: () => setDiscipline('Tümü') }] : []),
+    ...(onCatalog && catalogStatusFilter !== 'all'
+      ? [{ id: 's', label: catalogStatusFilter === 'rendered' ? 'İşlenen' : 'Bekleyen', onRemove: () => setCatalogStatusFilter('all') }]
+      : []),
+  ];
+  // Okunan notun özgün slaydı: notun kendi Drive kimliği, yoksa katalogdaki eşi
+  const activeSlide = activeNote ? DRIVE_SLIDES_CATALOG.find((sl) => isSlideRendered(sl)?.id === activeNote.id) : undefined;
+  const activeDriveId = activeNote?.driveFileId || activeSlide?.fileId;
+  const activePdfHref = activeNote?.driveFileUrl || (activeDriveId ? `https://drive.google.com/file/d/${activeDriveId}/view?usp=sharing` : undefined);
 
-      {activeTab === 'drive_catalog' && (
-        <>
-          <div className="cx-dock ln-dock">
-            <div className="cx-search">
-              <Search aria-hidden />
-              <input
-                type="search"
-                placeholder="Slayt adı ya da konu ara (Nekroz, Glomerül…)"
-                aria-label="Slaytlarda ara"
-                value={catalogSearch}
-                onChange={(e) => setCatalogSearch(e.target.value)}
-              />
-              {catalogSearch && <button type="button" className="dz-x" onClick={() => setCatalogSearch('')} aria-label="Aramayı temizle"><X aria-hidden /></button>}
-            </div>
-            <div className="ln-filters">
-              <nav className="cx-tabs" aria-label="Anabilim dalı" onWheel={(e) => { if (e.deltaY) e.currentTarget.scrollLeft += e.deltaY; }}>
-                {catalogDisciplines.map(([name, count]) => (
-                  <button key={name} type="button" aria-pressed={catalogDiscipline === name} className={`cx-tab ${catalogDiscipline === name ? 'is-on' : ''}`} onClick={() => setCatalogDiscipline(name)}>
-                    {name}<small>{count}</small>
-                  </button>
-                ))}
-              </nav>
-              <Segmented<'all' | 'unrendered' | 'rendered'>
-                className="ln-status"
+  const NotesRail = (
+    <nav className="nr-rail-in" aria-label="İşlenmiş notlar">
+      <ol className="nr-list">
+        {filteredRenderedNotes.map((note) => {
+          const on = activeNote?.id === note.id;
+          const { no, title } = splitSlideTitle(note.title);
+          return (
+            <li key={note.id}>
+              <button
+                type="button"
+                className={on ? 'is-on' : ''}
+                aria-current={on ? 'true' : undefined}
+                onClick={() => {
+                  setActiveNote(note);
+                  setRailSheet(false);
+                }}
+              >
+                {no && <span className="nr-no">{no}</span>}
+                <span className="nr-list-t">
+                  <b>{title}</b>
+                  <small>
+                    {note.discipline} · {note.totalSlides} sayfa
+                  </small>
+                </span>
+              </button>
+            </li>
+          );
+        })}
+        {filteredRenderedNotes.length === 0 && <li className="nr-none">Eşleşen not yok.</li>}
+      </ol>
+      <button type="button" className="nr-railfoot" onClick={() => setActiveTab('drive_catalog')}>
+        <Plus aria-hidden /> Katalogdan slayt işle
+      </button>
+    </nav>
+  );
+
+  return (
+    <div className="nr-page">
+      <PageToolbar<'drive_catalog' | 'rendered_notes'>
+        title="Ders notları"
+        count={
+          onCatalog
+            ? `${renderedSlidesCount} / ${TOTAL_CATALOG_SLIDES} işlendi`
+            : `${filteredRenderedNotes.length === notes.length ? notes.length : `${filteredRenderedNotes.length} / ${notes.length}`} not`
+        }
+        search={
+          onCatalog
+            ? { value: catalogSearch, onChange: setCatalogSearch, placeholder: 'Slayt adı ya da konu ara' }
+            : { value: notesSearch, onChange: setNotesSearch, placeholder: 'Notlarda ara' }
+        }
+        segments={{
+          label: 'Ders notu görünümü',
+          value: activeTab,
+          onChange: setActiveTab,
+          options: [
+            { id: 'drive_catalog', label: 'Slayt kataloğu', count: TOTAL_CATALOG_SLIDES },
+            { id: 'rendered_notes', label: 'İşlenmiş notlar', count: notes.length },
+          ],
+        }}
+        filters={
+          <>
+            <FilterPills
+              label="Anabilim dalı"
+              value={discipline}
+              onChange={setDiscipline}
+              options={(onCatalog ? catalogDisciplines : notesDisciplines).map(([name, count]) => ({ id: name, label: name, count }))}
+            />
+            {onCatalog && (
+              <FilterPills<'all' | 'unrendered' | 'rendered'>
                 label="Durum"
                 value={catalogStatusFilter}
                 onChange={setCatalogStatusFilter}
                 options={[
-                  { value: 'all', label: <>Tümü <span className="ln-n">{TOTAL_CATALOG_SLIDES}</span></> },
-                  { value: 'unrendered', label: <>Bekleyen <span className="ln-n">{TOTAL_CATALOG_SLIDES - renderedSlidesCount}</span></> },
-                  { value: 'rendered', label: <>İşlenen <span className="ln-n">{renderedSlidesCount}</span></> },
+                  { id: 'all', label: 'Tümü', count: TOTAL_CATALOG_SLIDES },
+                  { id: 'unrendered', label: 'Bekleyen', count: TOTAL_CATALOG_SLIDES - renderedSlidesCount },
+                  { id: 'rendered', label: 'İşlenen', count: renderedSlidesCount },
                 ]}
               />
-            </div>
-          </div>
-
-          {filteredCatalog.length === 0 ? (
-            <div className="dz-empty">
-              <span className="dz-empty-ic" aria-hidden><Search /></span>
-              <b>Aramana uygun slayt yok</b>
-              <p>Başka bir anabilim dalı ya da anahtar kelime dene.</p>
-            </div>
-          ) : (
-            <ul className="ln-grid">
-              {filteredCatalog.map((slide) => {
-                const renderedNote = isSlideRendered(slide);
-                const isRendered = Boolean(renderedNote);
-                const isProcessing = renderingSlideId === slide.id;
-                const { no, title } = splitSlideTitle(slide.title);
-                const topics = slide.keyTopics.map((t) => splitSlideTitle(t).title).filter((t) => t && t.toLocaleLowerCase('tr-TR') !== title.toLocaleLowerCase('tr-TR'));
-                return (
-                  <li key={slide.id} className={`ln-card ${isRendered ? 'is-done' : ''}`} data-tone={disciplineTone(slide.discipline)}>
-                    <div className="ln-card-top">
-                      <span className="dz-cat"><i aria-hidden />{slide.discipline}</span>
-                      <span className="ln-pages">{slide.totalRealPages} sayfa</span>
-                      <span className={`ln-state ${isRendered ? 'is-ok' : ''}`}>
-                        {isRendered ? <><CheckCircle2 aria-hidden /> İşlendi</> : 'Bekliyor'}
-                      </span>
-                    </div>
-                    <h3 className="ln-title">{no && <span className="ln-no">{no}</span>}{title}</h3>
-                    {topics.length > 0 && (
-                      <ul className="ln-topics" aria-label="Kapsadığı konular">
-                        {topics.slice(0, 6).map((t, i) => <li key={i}>{t}</li>)}
-                        {topics.length > 6 && <li className="is-more">+{topics.length - 6}</li>}
-                      </ul>
-                    )}
-                    <div className="ln-card-f">
-                      <a className="qk-ib" href={`https://drive.google.com/file/d/${slide.fileId}/view?usp=sharing`} target="_blank" rel="noreferrer" aria-label="Drive'da aç" title="Drive'da aç">
-                        <ExternalLink aria-hidden />
-                      </a>
-                      {isRendered && (
-                        <button type="button" className="qk-ib" onClick={() => handleRenderSlide(slide)} disabled={isProcessing} aria-label="Yeniden işle" title="Tüm sayfaları yeniden işler">
-                          <RefreshCw className={isProcessing ? 'animate-spin' : ''} aria-hidden />
-                        </button>
-                      )}
-                      {isRendered && isAdmin && (
-                        <button type="button" className="qk-ib is-danger" onClick={() => handleDeleteNote(slide.id, slide.title)} aria-label="İşlenmiş notu sil" title="İşlenmiş notu sil">
-                          <Trash2 aria-hidden />
-                        </button>
-                      )}
-                      <span className="qk-sp" />
-                      {isRendered ? (
-                        <button type="button" className="ui-btn is-tonal is-sm" onClick={() => { if (renderedNote) { setActiveNote(renderedNote); setActiveTab('rendered_notes'); } }}>
-                          <Eye aria-hidden /> Sayfaları oku
-                        </button>
-                      ) : (
-                        <button type="button" className={`ui-btn is-primary is-sm ${isProcessing ? 'is-busy' : ''}`} onClick={() => handleRenderSlide(slide)} disabled={isProcessing}>
-                          {isProcessing ? <><RefreshCw className="animate-spin" aria-hidden /> İşleniyor…</> : <><Play aria-hidden /> İşle</>}
-                        </button>
-                      )}
-                    </div>
-                  </li>
-                );
-              })}
-            </ul>
+            )}
+          </>
+        }
+        filterCount={chips.length}
+        chips={chips}
+        onClearChips={() => {
+          setDiscipline('Tümü');
+          setCatalogStatusFilter('all');
+        }}
+        tools={
+          <>
+            {isAdmin && (
+              <button type="button" onClick={handleTriggerDesktopSync} disabled={isSyncingDesktop} className="pt-icon" aria-label="Yerel ders notu klasörünü tara" title="Yerel ders notu klasörünü şimdi tara">
+                {isSyncingDesktop ? <RefreshCw className="animate-spin" aria-hidden /> : <FolderOpen aria-hidden />}
+              </button>
+            )}
+            <a href={DRIVE_FOLDER_URL} target="_blank" rel="noreferrer" className="pt-icon" aria-label="Drive klasörü" title="Drive klasörü">
+              <ExternalLink aria-hidden />
+            </a>
+            {isAdmin && (
+              <button type="button" onClick={() => setIsAddingNote(true)} className="pt-icon" aria-label="Not yükle" title="Not yükle">
+                <Plus aria-hidden />
+              </button>
+            )}
+          </>
+        }
+      >
+        <div className="nr-prog" aria-label="Slayt işleme durumu">
+          <span className="nr-prog-t">
+            <b>%{progressPercent}</b> · {renderedPagesCount.toLocaleString('tr-TR')} / {TOTAL_CATALOG_PAGES.toLocaleString('tr-TR')} sayfa işlendi
+          </span>
+          <span className="nr-prog-bar" role="progressbar" aria-valuenow={progressPercent} aria-valuemin={0} aria-valuemax={100} aria-label="Slayt işleme ilerlemesi">
+            <i style={{ transform: `scaleX(${progressPercent / 100})` }} />
+          </span>
+          {isAdmin && notes.length > 0 && (
+            <button type="button" onClick={handlePurgeMockNotes} title="Önbellekte kalan örnek notları temizler" className="nr-link is-bad">
+              Örnekleri temizle
+            </button>
           )}
-        </>
+        </div>
+      </PageToolbar>
+
+      {feedbackMessage && (
+        <div role="status" className="nr-feedback">
+          <CheckCircle2 aria-hidden />
+          <span>{feedbackMessage}</span>
+          <button type="button" onClick={() => setFeedbackMessage(null)} aria-label="Bildirimi kapat">
+            <X aria-hidden />
+          </button>
+        </div>
       )}
 
-      {activeTab === 'rendered_notes' && (
-        notes.length === 0 ? (
-          <div className="dz-empty">
-            <span className="dz-empty-ic" aria-hidden><BookMarked /></span>
-            <b>Henüz işlenmiş ders notu yok</b>
-            <p>Slayt kataloğundan bir slaytı işle ya da kendi notunu yükle.</p>
-            <button type="button" className="ui-btn is-tonal is-sm" onClick={() => setActiveTab('drive_catalog')}><FolderGit2 aria-hidden /> Slayt kataloğuna git</button>
+      {onCatalog &&
+        (filteredCatalog.length === 0 ? (
+          <div className="sl-empty">
+            <Search aria-hidden />
+            <h3>Aramana uygun slayt yok</h3>
+            <p>Başka bir anabilim dalı ya da anahtar kelime dene.</p>
           </div>
         ) : (
-          <div className="ln-read">
-            <aside className="ln-side" aria-label="İşlenmiş notlar">
-              <div className="cx-search ln-side-search">
-                <Search aria-hidden />
-                <input type="search" placeholder="Notlarda ara" aria-label="Notlarda ara" value={notesSearch} onChange={(e) => setNotesSearch(e.target.value)} />
-              </div>
-              <ul className="ln-list">
-                {filteredRenderedNotes.map((note) => {
-                  const on = activeNote?.id === note.id;
-                  const { no, title } = splitSlideTitle(note.title);
-                  return (
-                    <li key={note.id}>
-                      <button type="button" className={`ln-item ${on ? 'is-on' : ''}`} aria-current={on ? 'true' : undefined} onClick={() => setActiveNote(note)}>
-                        <span className="ln-item-top"><span className="ln-item-d">{note.discipline}</span><span>{note.totalSlides} sayfa</span></span>
-                        <b>{no && <span className="ln-no">{no}</span>}{title}</b>
-                        <span className="ln-item-m">{[note.instructor, fmtDate(note.uploadedAt)].filter(Boolean).join(' · ') || 'Ders slaytı'}</span>
+          <ul className="sl-list">
+            {filteredCatalog.map((slide, i) => {
+              const renderedNote = isSlideRendered(slide);
+              const isRendered = Boolean(renderedNote);
+              const isProcessing = renderingSlideId === slide.id;
+              const { no, title } = splitSlideTitle(slide.title);
+              const topics = slide.keyTopics
+                .map((t) => splitSlideTitle(t).title)
+                .filter((t) => t && t.toLocaleLowerCase('tr-TR') !== title.toLocaleLowerCase('tr-TR'));
+              return (
+                <li key={slide.id} className={`sl-item nr-row ${isRendered ? 'is-done' : ''}`} data-tone={disciplineTone(slide.discipline)}>
+                  <span className="sl-no" aria-hidden>
+                    {(no || String(i + 1)).padStart(2, '0')}
+                  </span>
+                  <span className="sl-row-main">
+                    <span className="sl-row-t">{title}</span>
+                    <span className="sl-row-m">
+                      <i className="nr-dot" aria-hidden />
+                      <span>{slide.discipline}</span>
+                      <span>· {slide.totalRealPages} sayfa</span>
+                      {topics.length > 0 && <span className="sl-row-who">· {topics.slice(0, 4).join(', ')}</span>}
+                    </span>
+                  </span>
+                  <span className={`sl-state ${isRendered ? 'is-done' : ''}`}>
+                    {isRendered ? (
+                      <>
+                        <CheckCircle2 aria-hidden /> İşlendi
+                      </>
+                    ) : (
+                      'Bekliyor'
+                    )}
+                  </span>
+                  <span className="nr-acts">
+                    <a className="nr-ib" href={`https://drive.google.com/file/d/${slide.fileId}/view?usp=sharing`} target="_blank" rel="noreferrer" aria-label="Drive'da aç" title="Drive'da aç">
+                      <ExternalLink aria-hidden />
+                    </a>
+                    {isRendered && (
+                      <button type="button" className="nr-ib" onClick={() => handleRenderSlide(slide)} disabled={isProcessing} aria-label="Yeniden işle" title="Tüm sayfaları yeniden işler">
+                        <RefreshCw className={isProcessing ? 'animate-spin' : ''} aria-hidden />
                       </button>
-                    </li>
-                  );
-                })}
-                {filteredRenderedNotes.length === 0 && <li className="ln-none">Eşleşen not yok.</li>}
-              </ul>
-              <button type="button" className="ln-link" onClick={() => setActiveTab('drive_catalog')}><Plus aria-hidden /> Katalogdan slayt işle</button>
-            </aside>
+                    )}
+                    {isRendered && isAdmin && (
+                      <button type="button" className="nr-ib is-danger" onClick={() => handleDeleteNote(slide.id, slide.title)} aria-label="İşlenmiş notu sil" title="İşlenmiş notu sil">
+                        <Trash2 aria-hidden />
+                      </button>
+                    )}
+                    {isRendered ? (
+                      <button
+                        type="button"
+                        className="nr-btn"
+                        onClick={() => {
+                          if (renderedNote) {
+                            setActiveNote(renderedNote);
+                            setActiveTab('rendered_notes');
+                          }
+                        }}
+                      >
+                        <Eye aria-hidden /> Oku
+                      </button>
+                    ) : (
+                      <button type="button" className={`nr-btn is-primary ${isProcessing ? 'is-busy' : ''}`} onClick={() => handleRenderSlide(slide)} disabled={isProcessing}>
+                        {isProcessing ? (
+                          <>
+                            <RefreshCw className="animate-spin" aria-hidden /> İşleniyor…
+                          </>
+                        ) : (
+                          <>
+                            <Play aria-hidden /> İşle
+                          </>
+                        )}
+                      </button>
+                    )}
+                  </span>
+                </li>
+              );
+            })}
+          </ul>
+        ))}
 
-            <section className="ln-doc" aria-label="Not sayfaları">
+      {!onCatalog &&
+        (notes.length === 0 ? (
+          <div className="sl-empty">
+            <BookMarked aria-hidden />
+            <h3>Henüz işlenmiş ders notu yok</h3>
+            <p>Slayt kataloğundan bir slaytı işle ya da kendi notunu yükle.</p>
+            <button type="button" className="ui-btn is-sm" onClick={() => setActiveTab('drive_catalog')}>
+              <FolderGit2 aria-hidden /> Slayt kataloğuna git
+            </button>
+          </div>
+        ) : (
+          <div className="nr-read">
+            <aside className="nr-rail">{NotesRail}</aside>
+
+            <section className="nr-doc" aria-label="Not sayfaları" style={{ '--sr-scale': prefs.scale / 100 } as React.CSSProperties}>
+              <div className="sr-tools nr-tools">
+                <button type="button" className="sr-tool nr-railbtn" onClick={() => setRailSheet(true)}>
+                  <ListTree aria-hidden /> Notlar · {filteredRenderedNotes.length}
+                </button>
+                <div className="sr-fs" role="group" aria-label="Yazı boyutu">
+                  <button type="button" onClick={() => setPrefs({ scale: prefs.scale - 10 })} disabled={prefs.scale <= 80} aria-label="Yazıyı küçült" title={`Yazı %${prefs.scale}`}>
+                    A−
+                  </button>
+                  <button type="button" onClick={() => setPrefs({ scale: prefs.scale + 10 })} disabled={prefs.scale >= 150} aria-label="Yazıyı büyüt" title={`Yazı %${prefs.scale}`}>
+                    A+
+                  </button>
+                </div>
+                {activeNote && activePdfHref && (
+                  <a className="sr-tool" href={activePdfHref} target="_blank" rel="noreferrer">
+                    <FileText aria-hidden /> Slayt PDF’i
+                  </a>
+                )}
+                {activeNote && (
+                  <button type="button" className="sr-tool" onClick={() => setReaderNote(activeNote)}>
+                    <BookOpen aria-hidden /> Tam ekran
+                  </button>
+                )}
+                {activeNote && isAdmin && (
+                  <button type="button" className="nr-ib is-danger" onClick={() => handleDeleteNote(activeNote.id, activeNote.title)} aria-label="Bu notu sil" title="Bu notu sil">
+                    <Trash2 aria-hidden />
+                  </button>
+                )}
+              </div>
+
               {activeNote ? (
-                <>
-                  <header className="ln-doc-h">
-                    <div className="min-w-0">
-                      <span className="ln-doc-meta"><span className="dz-cat" data-tone={disciplineTone(activeNote.discipline)}><i aria-hidden />{activeNote.discipline}</span>{activeNote.totalSlides} sayfa</span>
-                      <h3>{splitSlideTitle(activeNote.title).title}</h3>
-                      {(activeNote.instructor || activeNote.uploadedBy) && <p>{[activeNote.instructor, activeNote.uploadedBy ? `Yükleyen: ${activeNote.uploadedBy}` : null].filter(Boolean).join(' · ')}</p>}
-                    </div>
-                    <div className="ln-doc-tools">
-                      <button type="button" className="ui-btn is-primary is-sm" onClick={() => setReaderNote(activeNote)}><BookOpen aria-hidden /> Tam ekran oku</button>
-                      {isAdmin && (
-                        <button type="button" className="qk-ib is-danger" onClick={() => handleDeleteNote(activeNote.id, activeNote.title)} aria-label="Bu notu sil" title="Bu notu sil"><Trash2 aria-hidden /></button>
-                      )}
-                    </div>
+                <article className="nr-article">
+                  <header className="nr-head">
+                    <span className="nr-crumb">
+                      Ders notları <ChevronRight aria-hidden /> {activeNote.discipline}
+                    </span>
+                    <h1>{splitSlideTitle(activeNote.title).title}</h1>
+                    <p>
+                      {[`${activeNote.totalSlides} sayfa`, activeNote.instructor, activeNote.uploadedBy ? `Yükleyen: ${activeNote.uploadedBy}` : null, fmtDate(activeNote.uploadedAt)]
+                        .filter(Boolean)
+                        .join(' · ')}
+                    </p>
                   </header>
-                  <ol className="ln-pages-list">
+                  <ol className="nr-pages">
                     {activeNote.pages.map((page) => (
-                      <li key={page.pageNumber} id={`ln-page-${page.pageNumber}`} className="ln-page">
-                        <div className="ln-page-h">
-                          <span className="ln-page-no">Sayfa {page.pageNumber}<small>/{activeNote.totalSlides}</small></span>
-                          <button type="button" className={`ln-copy ${copySuccess[page.pageNumber] ? 'is-done' : ''}`} onClick={() => copyPageContent(page.content, page.pageNumber)}>
-                            {copySuccess[page.pageNumber] ? <><Check aria-hidden /> Kopyalandı</> : <><Copy aria-hidden /> Kopyala</>}
+                      <li key={page.pageNumber} id={`ln-page-${page.pageNumber}`} className="nr-pg">
+                        <div className="nr-pg-h">
+                          <span>
+                            Sayfa {page.pageNumber}
+                            <small> / {activeNote.totalSlides}</small>
+                          </span>
+                          <button type="button" className={`nr-copy ${copySuccess[page.pageNumber] ? 'is-done' : ''}`} onClick={() => copyPageContent(page.content, page.pageNumber)}>
+                            {copySuccess[page.pageNumber] ? (
+                              <>
+                                <Check aria-hidden /> Kopyalandı
+                              </>
+                            ) : (
+                              <>
+                                <Copy aria-hidden /> Kopyala
+                              </>
+                            )}
                           </button>
                         </div>
-                        <div className="ln-page-b"><SourceText text={String(page.content || '')} size="sm" /></div>
+                        <SourceText text={String(page.content || '')} />
                         {page.keywords && page.keywords.length > 0 && (
-                          <ul className="ln-topics is-kw" aria-label="Kavramlar">{page.keywords.map((kw, i) => <li key={i}>{kw}</li>)}</ul>
+                          <ul className="nr-kw" aria-label="Kavramlar">
+                            {page.keywords.map((kw, i) => (
+                              <li key={i}>{kw}</li>
+                            ))}
+                          </ul>
                         )}
                       </li>
                     ))}
                   </ol>
-                </>
+                </article>
               ) : (
-                <div className="ln-doc-empty">Okumak için soldaki listeden bir not seç.</div>
+                <div className="sl-empty">
+                  <BookOpen aria-hidden />
+                  <h3>Bir not seç</h3>
+                  <p>Okumak için listeden bir ders notu seç.</p>
+                </div>
               )}
             </section>
           </div>
-        )
-      )}
+        ))}
+
+      <Sheet open={railSheet} onClose={() => setRailSheet(false)} title="İşlenmiş notlar" subtitle={`${filteredRenderedNotes.length} not`} size="full">
+        {NotesRail}
+      </Sheet>
 
       {/* MODAL: ADD MANUAL / CUSTOM LECTURE NOTE */}
       {isAddingNote && (

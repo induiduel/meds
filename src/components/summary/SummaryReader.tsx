@@ -9,6 +9,7 @@ import {
   Copy,
   Expand,
   FileQuestion,
+  FileText,
   GraduationCap,
   ListTree,
   Printer,
@@ -33,13 +34,18 @@ import { toast } from '../ui/Toast';
 import { MODE_LABELS, useAppearance, type ThemeMode } from '../../utils/appearance';
 import { lockScroll, unlockScroll } from '../../utils/scrollLock';
 import { disciplineClass, disciplineLabel } from '../../utils/discipline';
+import { driveViewUrl, resolveDeckPdf, type DeckPdfInfo } from '../../services/deckPdfService';
+import { ReaderPanel, useLessonSpots, useScopeMarks, type ScopeMark } from './ReaderPanel';
 
 /**
- * Ders özeti okuyucusu (v9, sıfırdan). Uygulamanın temasını ve paletini kullanır — ayrı okuyucu teması yok;
- * Aa panelindeki tema düğmesi tüm uygulamanın temasını değiştirir. Yapı:
- *   üst çubuk (kapat · içindekiler · başlık/etkin bölüm · ara · kalem · Aa) + ilerleme çizgisi
- *   geniş ekranda sol içindekiler sütunu, dar ekranda alt sayfa
- *   kapak (ders rengi, okuma süresi, bölüm/tablo/spot/soru sayıları) → bölümler → bitiş kartı (sonraki ders)
+ * Ders özeti okuyucusu (v10 kompakt). Uygulamanın temasını ve paletini kullanır — ayrı okuyucu teması yok;
+ * Aa panelindeki tema düğmesi tüm uygulamanın temasını değiştirir. Masaüstünde uygulamanın kenar menüsü açık kalır
+ * (okuyucu --sh-side-w kadar sağdan başlar). Yapı:
+ *   ince üst çubuk (kapat · içindekiler · başlık/etkin bölüm · ara · kalem · Aa) + ilerleme çizgisi
+ *   ≥1024: sol içindekiler rayı (kırıntı, ders adı, bölümler, "Okuma: 6 / 14 dk") · dar ekranda alt sayfa
+ *   orta okuma sütunu (~660 px, 16/1.7): araç satırı (A− / A+ · Slayt PDF'i) → kapak → bölümler → bitiş kartı
+ *   ≥1180: sağ panel (Spotlar · n / Notlarım · n); daha dar ekranda ve akış düzeninde makalenin altında.
+ * html[data-layout="akis"]: yalnız okuma sütunu (raylar kapanır; içindekiler alt sayfadan).
  * Hareket: açılış/kapanış kayması, bölümler görünür oldukça yükselir, ilerleme çizgisi, çözüm kayarak açılır.
  * prefers-reduced-motion'da hepsi kapanır. Stil: styles/summary.css (.sr-*).
  */
@@ -86,7 +92,11 @@ export const SummaryReader: React.FC<Props> = ({ summary, onClose, onOpenPdfModa
   const [progress, setProgress] = useState(0);
   const [activeSec, setActiveSec] = useState('');
   const [activeSub, setActiveSub] = useState('');
-  const [wide, setWide] = useState(() => typeof window !== 'undefined' && window.matchMedia('(min-width: 1100px)').matches);
+  const [railMq, setRailMq] = useState(() => typeof window !== 'undefined' && window.matchMedia('(min-width: 1024px)').matches);
+  const [panelMq, setPanelMq] = useState(() => typeof window !== 'undefined' && window.matchMedia('(min-width: 1180px)').matches);
+  const akis = appearance.layout === 'akis';
+  const wide = railMq && !akis;
+  const panelSide = panelMq && !akis;
   const [sideOpen, setSideOpen] = useState(true);
   const [tocSheet, setTocSheet] = useState(false);
   const [aaOpen, setAaOpen] = useState(false);
@@ -107,11 +117,64 @@ export const SummaryReader: React.FC<Props> = ({ summary, onClose, onOpenPdfModa
   }, []);
 
   useEffect(() => {
-    const mq = window.matchMedia('(min-width: 1100px)');
-    const on = () => setWide(mq.matches);
-    mq.addEventListener('change', on);
-    return () => mq.removeEventListener('change', on);
+    const a = window.matchMedia('(min-width: 1024px)');
+    const b = window.matchMedia('(min-width: 1180px)');
+    const on = () => {
+      setRailMq(a.matches);
+      setPanelMq(b.matches);
+    };
+    a.addEventListener('change', on);
+    b.addEventListener('change', on);
+    return () => {
+      a.removeEventListener('change', on);
+      b.removeEventListener('change', on);
+    };
   }, []);
+
+  // Sağ panel: bu dersin sınav spotları + bu özetteki kalem işaretleri
+  const scope = `summary:${summary.id}`;
+  const lessonSpots = useLessonSpots(summary);
+  const [marks, refreshMarks] = useScopeMarks(scope);
+  const markTimer = useRef(0);
+  const refreshMarksSoon = () => {
+    window.clearTimeout(markTimer.current);
+    markTimer.current = window.setTimeout(refreshMarks, 260);
+  };
+  useEffect(() => () => window.clearTimeout(markTimer.current), []);
+  const jumpToMark = (m: ScopeMark) => {
+    const root = scrollRef.current?.querySelector<HTMLElement>('.sr-col');
+    if (!root) return;
+    const text = root.textContent || '';
+    let at = text.slice(m.start, m.end) === m.text ? m.start : text.indexOf(m.text);
+    if (at < 0) at = m.start;
+    const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+    let pos = 0;
+    let node: Node | null;
+    while ((node = walker.nextNode())) {
+      const len = node.textContent?.length || 0;
+      if (pos + len > at) {
+        const el = node.parentElement;
+        el?.closest('.sr-reveal')?.classList.add('is-in');
+        el?.scrollIntoView({ behavior: reduceMotion() ? 'auto' : 'smooth', block: 'center' });
+        break;
+      }
+      pos += len;
+    }
+  };
+
+  // Slayt PDF'i: Kurul 1 dersleri Öğren'deki "k1p-<ders>" destesiyle aynı, içerikle doğrulanmış eşlemeyi kullanır
+  const [pdfInfo, setPdfInfo] = useState<DeckPdfInfo | null>(null);
+  useEffect(() => {
+    setPdfInfo(null);
+    if (summary.kurul !== 1) return;
+    let live = true;
+    resolveDeckPdf(`k1p-${summary.id}`).then((r) => live && setPdfInfo(r));
+    return () => {
+      live = false;
+    };
+  }, [summary.id, summary.kurul]);
+  const pdfFile = pdfInfo?.files[0];
+  const pdfHref = pdfFile ? pdfFile.url || (pdfFile.fileId ? driveViewUrl(pdfFile.fileId) : undefined) : undefined;
 
   const saveNow = useCallback(() => {
     const el = scrollRef.current;
@@ -305,8 +368,9 @@ export const SummaryReader: React.FC<Props> = ({ summary, onClose, onOpenPdfModa
   const allQuestions = useMemo(() => doc.sections.flatMap((s) => s.questions), [doc]);
   const answered = allQuestions.filter((q) => picked[q.id]);
   const correct = answered.filter((q) => q.answer && picked[q.id] === q.answer).length;
-  const minutesLeft = Math.max(1, Math.round((summary.readingTimeMinutes || 1) * (1 - progress / 100)));
   const showSide = wide && sideOpen;
+  const totalMin = Math.max(1, summary.readingTimeMinutes || 1);
+  const readMin = Math.min(totalMin, Math.round(totalMin * (progress / 100)));
   const activeSection = doc.sections.find((s) => s.id === activeSec);
   const instructor = summary.instructor || doc.meta.instructor;
   const realSource = doc.meta.sources && /ders notu/i.test(doc.meta.sources) ? doc.meta.sources.replace(/^ders notu:\s*/i, '') : '';
@@ -315,14 +379,11 @@ export const SummaryReader: React.FC<Props> = ({ summary, onClose, onOpenPdfModa
 
   const Toc = (
     <nav className="sr-toc" aria-label="İçindekiler">
-      <div className="sr-toc-meter">
-        <span className="sr-ring" style={{ '--p': progress } as React.CSSProperties} aria-hidden />
-        <div>
-          <b>%{Math.round(progress)} okundu</b>
-          <span>{progress >= 99 ? 'Tamamlandı' : `~${minutesLeft} dk kaldı`}</span>
-        </div>
+      <div className="sr-toc-head">
+        <span className="sr-toc-crumb">Ders özetleri › {disciplineLabel(summary.discipline)}</span>
+        <strong className="sr-toc-title">{summary.title}</strong>
       </div>
-      <ol>
+      <ol className="sr-toc-list">
         {doc.sections.map((s, i) => {
           const on = activeSec === s.id;
           const count = s.kind === 'questions' ? s.questions.length : s.kind === 'spot' ? s.spots.length : 0;
@@ -353,6 +414,19 @@ export const SummaryReader: React.FC<Props> = ({ summary, onClose, onOpenPdfModa
           );
         })}
       </ol>
+      <div className="sr-toc-foot">
+        <span>{progress >= 99 ? `Tamamlandı · ${totalMin} dk` : `Okuma: ${readMin} / ${totalMin} dk`}</span>
+        <span
+          className="sr-toc-bar"
+          role="progressbar"
+          aria-label="Okuma ilerlemesi"
+          aria-valuemin={0}
+          aria-valuemax={100}
+          aria-valuenow={Math.round(progress)}
+        >
+          <i style={{ transform: `scaleX(${progress / 100})` }} />
+        </span>
+      </div>
     </nav>
   );
 
@@ -383,9 +457,8 @@ export const SummaryReader: React.FC<Props> = ({ summary, onClose, onOpenPdfModa
   return (
     <div
       ref={rootRef}
-      className={`sr-root ${disciplineClass(summary.discipline)} ${closing ? 'is-closing' : ''}`}
+      className={`sr-root ${disciplineClass(summary.discipline)} ${closing ? 'is-closing' : ''} ${panelSide ? 'has-panel' : ''}`}
       role="dialog"
-      aria-modal="true"
       aria-label={summary.title}
     >
       {/* ── Üst çubuk ── */}
@@ -511,17 +584,38 @@ export const SummaryReader: React.FC<Props> = ({ summary, onClose, onOpenPdfModa
       <div className="sr-body">
         {wide && (
           <aside className={`sr-side ${showSide ? 'is-open' : ''}`} aria-hidden={!showSide} inert={!showSide ? true : undefined}>
-            {ready && Toc}
+            {ready ? Toc : <div className="sr-toc-skel" aria-hidden>{[0, 1, 2, 3, 4].map((k) => <span key={k} className="ui-skel" />)}</div>}
           </aside>
         )}
 
-        <div ref={scrollRef} className="sr-scroll" onScroll={onScroll}>
+        <div ref={scrollRef} className="sr-scroll" onScroll={onScroll} onPointerUp={refreshMarksSoon} onKeyUp={refreshMarksSoon}>
+          {/* Araç satırı Highlightable dışında: PDF düğmesi sonradan gelince işaret konumları kaymasın */}
+          <div className={`sr-tools m-${prefs.measure}`}>
+            <div className="sr-fs" role="group" aria-label="Yazı boyutu">
+              <button type="button" onClick={() => setPrefs({ scale: prefs.scale - 10 })} disabled={prefs.scale <= 80} aria-label="Yazıyı küçült" title={`Yazı %${prefs.scale}`}>
+                A−
+              </button>
+              <button type="button" onClick={() => setPrefs({ scale: prefs.scale + 10 })} disabled={prefs.scale >= 150} aria-label="Yazıyı büyüt" title={`Yazı %${prefs.scale}`}>
+                A+
+              </button>
+            </div>
+            {pdfHref && (
+              <a className="sr-tool" href={pdfHref} target="_blank" rel="noopener noreferrer" title={pdfFile?.name}>
+                <FileText aria-hidden /> Slayt PDF’i
+              </a>
+            )}
+            {onOpenPdfModal && (
+              <button type="button" className="sr-tool" onClick={onOpenPdfModal}>
+                PDF indir
+              </button>
+            )}
+          </div>
           <Highlightable
-            scope={`summary:${summary.id}`}
+            scope={scope}
             className={`sr-col m-${prefs.measure} ${prefs.serif ? 'is-serif' : ''}`}
             style={{ '--sr-scale': prefs.scale / 100 } as React.CSSProperties}
           >
-            {/* ── Kapak ── */}
+            {/* ── Kapak (kompakt) ── */}
             <header className="sr-hero">
               <div className="sr-hero-eyebrow">
                 <i className="hk-dot" aria-hidden />
@@ -536,12 +630,12 @@ export const SummaryReader: React.FC<Props> = ({ summary, onClose, onOpenPdfModa
                 )}
               </div>
               <h1>{summary.title}</h1>
-              {instructor && (
-                <p className="sr-hero-who">
-                  <GraduationCap aria-hidden /> {instructor}
-                </p>
-              )}
               <ul className="sr-hero-stats" aria-label="Özet bilgileri">
+                {instructor && (
+                  <li>
+                    <GraduationCap aria-hidden /> {instructor}
+                  </li>
+                )}
                 <li>
                   <Clock aria-hidden />
                   <b>{summary.readingTimeMinutes}</b> dk okuma
@@ -665,7 +759,18 @@ export const SummaryReader: React.FC<Props> = ({ summary, onClose, onOpenPdfModa
               </>
             )}
           </Highlightable>
+          {!panelSide && ready && (
+            <div className={`sr-after m-${prefs.measure}`}>
+              <ReaderPanel spots={lessonSpots} marks={marks} onJump={jumpToMark} inline />
+            </div>
+          )}
         </div>
+
+        {panelSide && (
+          <aside className="sr-rpanel" aria-label="Ders paneli">
+            <ReaderPanel spots={lessonSpots} marks={marks} onJump={jumpToMark} />
+          </aside>
+        )}
       </div>
 
       {/* ── Yüzen düğmeler ── */}

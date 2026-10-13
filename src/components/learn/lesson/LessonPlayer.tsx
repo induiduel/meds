@@ -56,6 +56,9 @@ import { setLessonZoom, stepZoom, useLessonZoom, useLessonZoomGestures, ZOOM_MAX
 import { FeedbackItem, FeedbackTarget, listFeedback } from './lessonFeedback';
 import { FeedbackDialog, FeedbackFlag, FeedbackProvider, groupFeedback } from './LessonFeedbackUI';
 import { Formula, hideTermTip, InfoId, InfoPane, Infographic, infoTabsFor, KeyPoints, LessonTable, PracticeCard, practiceMeta, Prose } from './LessonBlocks';
+import { LessonRail } from './LessonRail';
+import { Sheet } from '../../ui/Sheet';
+import '../../../styles/learn-v10.css';
 
 type Layout = 'A' | 'B';
 
@@ -89,17 +92,21 @@ const fbTarget = (step: LessonStep, kind: string, i: number | string, label: str
 });
 
 /**
- * Yönetici bağlantısı: /ogren/<deste>?adim=5&hedef=<targetKey>. İlk açılışta bir kez okunur,
- * adres çubuğu temizlenir; ders o adımda açılır ve öğe vurgulanır.
+ * Yönetici bağlantısı: /ogren/<deste>?adim=5&hedef=<targetKey> (paylaşım biçimi ?slide=5&target=… da okunur).
+ * Oynatıcı kurulurken bir kez okunur, adres çubuğu temizlenir; ders o adımda açılır ve öğe vurgulanır.
  */
 const readDeepLink = (): { adim?: number; hedef?: string } | null => {
   try {
     const sp = new URLSearchParams(window.location.search);
-    const adim = Number(sp.get('adim')) || undefined;
-    const hedef = sp.get('hedef') || undefined;
+    const adim = Number(sp.get('adim')) || Number(sp.get('slide')) || undefined;
+    // Paylaşım bağlantısındaki target yalnız öğe anahtarıysa (ör. "s12:q:0") hedef sayılır.
+    const target = sp.get('target');
+    const hedef = sp.get('hedef') || (target && target.includes(':') ? target : undefined);
     if (!adim && !hedef) return null;
     sp.delete('adim');
     sp.delete('hedef');
+    sp.delete('slide');
+    sp.delete('target');
     const q = sp.toString();
     window.history.replaceState(window.history.state, '', window.location.pathname + (q ? `?${q}` : '') + window.location.hash);
     return { adim, hedef };
@@ -128,17 +135,19 @@ const pref = {
   },
 };
 
-const useIsPhone = () => {
-  const q = '(max-width: 767px)';
+const useMedia = (q: string) => {
   const [m, setM] = useState(() => typeof window !== 'undefined' && window.matchMedia(q).matches);
   useEffect(() => {
     const mq = window.matchMedia(q);
     const on = () => setM(mq.matches);
     mq.addEventListener('change', on);
     return () => mq.removeEventListener('change', on);
-  }, []);
+  }, [q]);
   return m;
 };
+const useIsPhone = () => useMedia('(max-width: 767px)');
+/** v10: slayt rayı yalnız ≥1024 px'te solda durur; altında Sheet olarak açılır */
+const useIsWide = () => useMedia('(min-width: 1024px)');
 
 const isTyping = (t: EventTarget | null) => {
   const el = t as HTMLElement | null;
@@ -151,89 +160,7 @@ const practiceOf = (s: LessonStep): PracticeItem[] => [
   ...s.questions.map((q) => ({ kind: 'question' as const, q })),
 ];
 
-/* ---------------------------------------------------------------------------
- * Bölüm listesi: bölüm → adım (konu + alt başlık); ilerleme halkası, arama
- * ------------------------------------------------------------------------- */
-const Ring: React.FC<{ pct: number }> = ({ pct }) => (
-  <svg className="ls-ring" viewBox="0 0 22 22" aria-hidden>
-    <circle cx="11" cy="11" r="8.5" fill="none" stroke="var(--color-line)" strokeWidth="2.5" />
-    <circle cx="11" cy="11" r="8.5" fill="none" stroke="var(--color-ok)" strokeWidth="2.5" strokeLinecap="round" strokeDasharray={`${(pct * 53.4).toFixed(1)} 60`} transform="rotate(-90 11 11)" />
-  </svg>
-);
-
-const Outline: React.FC<{
-  steps: LessonStep[];
-  sections: LessonSection[];
-  current: number;
-  done: Set<number>;
-  onPick: (i: number) => void;
-}> = ({ steps, sections, current, done, onPick }) => {
-  const curSec = steps[current]?.section ?? 0;
-  const [open, setOpen] = useState<Set<number>>(() => new Set([curSec]));
-  const [q, setQ] = useState('');
-  useEffect(() => setOpen((o) => (o.has(curSec) ? o : new Set(o).add(curSec))), [curSec]);
-  const listRef = useRef<HTMLDivElement>(null);
-  useEffect(() => {
-    scrollInto(listRef.current?.querySelector('[aria-current="step"]'), 'nearest');
-  }, [current]);
-  const nq = q.trim().toLocaleLowerCase('tr-TR');
-  return (
-    <div className="ls-outline" ref={listRef}>
-      <label className="ls-search">
-        <Search aria-hidden />
-        <input value={q} onChange={(e) => setQ(e.target.value)} placeholder="Adımlarda ara" aria-label="Adımlarda ara" />
-        {q && <button type="button" onClick={() => setQ('')} aria-label="Aramayı temizle"><X aria-hidden /></button>}
-      </label>
-      {sections.map((sec) => {
-        const items = sec.steps.filter((i) => !nq || steps[i].title.toLocaleLowerCase('tr-TR').includes(nq));
-        if (!items.length) return null;
-        const isOpen = !!nq || open.has(sec.index);
-        const pct = sec.steps.filter((i) => done.has(steps[i].number)).length / sec.steps.length;
-        return (
-          <div key={sec.index} className={`ls-ol-sec ${isOpen ? 'is-open' : ''}`}>
-            <button
-              type="button"
-              className="ls-ol-head"
-              aria-expanded={isOpen}
-              onClick={() => setOpen((o) => { const n = new Set(o); n.has(sec.index) ? n.delete(sec.index) : n.add(sec.index); return n; })}
-            >
-              <ChevronDown className="chev" aria-hidden />
-              <span className="nm">
-                <small>Bölüm {sec.index + 1} · {sec.steps.length} adım</small>
-                <span>{sec.name}</span>
-              </span>
-              <Ring pct={pct} />
-            </button>
-            <div className="ls-ol-list">
-              <div>
-                {items.map((i) => {
-                  const s = steps[i];
-                  const isDone = done.has(s.number);
-                  return (
-                    <button
-                      key={i}
-                      type="button"
-                      className={`ls-ol-item ${i === current ? 'is-cur' : ''} ${isDone ? 'is-done' : ''}`}
-                      aria-current={i === current ? 'step' : undefined}
-                      onClick={() => onPick(i)}
-                    >
-                      <span className="no">{isDone ? <Check aria-label="Tamamlandı" /> : s.number}</span>
-                      <span className="tx">
-                        {s.topic}
-                        {s.subtopic && <em>{s.subtopic}</em>}
-                      </span>
-                      {s.checkpoint > 0 && <span className="ls-tag is-accent">Tekrar</span>}
-                    </button>
-                  );
-                })}
-              </div>
-            </div>
-          </div>
-        );
-      })}
-    </div>
-  );
-};
+/* Bölüm/slayt listesi v10'da LessonRail.tsx'te (düz numaralı ray; telefon/tablette Sheet). */
 
 /* ---------------------------------------------------------------------------
  * Adım içeriği (başlık + anlatım + tablo); kalem ve çizim katmanları bu kutuya bağlı
@@ -369,7 +296,9 @@ export const LessonPlayer: React.FC<LessonPlayerProps> = ({ deck, startAt, initi
   const steps = useMemo(() => buildSteps(deck), [deck]);
   const sections = useMemo(() => buildSections(steps), [steps]);
   const n = steps.length;
-  const deepLink = useRef(readDeepLink());
+  // Yalnız ilk çizimde okunur (useRef(readDeepLink()) her çizimde adresi temizleyip yeni bağlantıyı yutuyordu).
+  const [initialLink] = useState(readDeepLink);
+  const deepLink = useRef(initialLink);
   const [index, setIndex] = useState(() => {
     const byLink = deepLink.current?.adim ? steps.findIndex((s) => s.number === deepLink.current!.adim) : -1;
     return byLink >= 0 ? byLink : Math.min(Math.max(0, startAt), n - 1);
@@ -380,9 +309,12 @@ export const LessonPlayer: React.FC<LessonPlayerProps> = ({ deck, startAt, initi
   const step = useMemo(() => withGlossaryTerms(steps[index], glossaryList as any), [steps, index, glossaryList]);
 
   const isPhone = useIsPhone();
+  const isWide = useIsWide();
   const [layoutPref, setLayoutPref] = useState<Layout>(() => pref.get('medsoru_learn_layout', 'A', ['A', 'B'] as const));
   const layout: Layout = isPhone ? 'A' : layoutPref;
   const [viewMode, setViewMode] = useState<DeckViewMode>(initialViewMode);
+  /** Slayt rayı solda mı (≥1024, Akış, ders görünümü) yoksa Sheet olarak mı açılır */
+  const railInline = layout === 'A' && isWide && viewMode === 'interactive';
   const [readMode, setReadMode] = useState<ReadMode>(() => pref.get('medsoru_learn_mode', 'paged', ['paged', 'scroll'] as const));
   const [recall, setRecall] = useState(false);
   const [outlineOpen, setOutlineOpen] = useState(() => pref.get('medsoru_learn_toc', typeof window !== 'undefined' && window.innerWidth >= 1100 ? '1' : '0', ['1', '0'] as const) === '1');
@@ -732,14 +664,15 @@ export const LessonPlayer: React.FC<LessonPlayerProps> = ({ deck, startAt, initi
   };
 
   const topBar = (
-    <header className={`ls-top ${immersive ? 'is-hidden' : ''}`}>
-      <button type="button" className="ls-btn is-icon is-ghost" onClick={onClose} aria-label="Dersi kapat" title="Kapat (Esc)"><X aria-hidden /></button>
+    <header className={`ls-top lv-top ${immersive ? 'is-hidden' : ''}`}>
+      <button type="button" className="ls-btn is-icon is-ghost" onClick={onClose} aria-label="Kitaplığa dön" title="Kitaplığa dön (Esc)"><ChevronLeft aria-hidden /></button>
       <button
         type="button"
-        className={`ls-btn is-icon is-ghost ${(isPhone ? outlineMobile : layout === 'A' ? outlineOpen : outlineMobile) ? 'is-on' : ''}`}
-        onClick={() => (layout === 'A' && !isPhone && viewMode === 'interactive' ? setOutlineOpen((v) => !v) : setOutlineMobile((v) => !v))}
-        aria-label="Bölümler"
-        title="Bölümler"
+        className={`ls-btn is-icon is-ghost lv-rail-btn ${(railInline ? outlineOpen : outlineMobile) ? 'is-on' : ''}`}
+        onClick={() => (railInline ? setOutlineOpen((v) => !v) : setOutlineMobile((v) => !v))}
+        aria-label="Slaytlar"
+        {...(railInline ? { 'aria-expanded': outlineOpen, 'aria-controls': 'lv-rail' } : { 'aria-haspopup': 'dialog' as const })}
+        title="Slaytlar"
       >
         <ListTree aria-hidden />
       </button>
@@ -747,6 +680,9 @@ export const LessonPlayer: React.FC<LessonPlayerProps> = ({ deck, startAt, initi
         <small>{deck.discipline}{deck.instructor ? ` · ${deck.instructor}` : ''}</small>
         <b title={deck.title}>{deckName(deck)}</b>
       </div>
+      {layout === 'A' && (
+        <span className="lv-top-prog" aria-hidden><i style={{ width: `${((index + 1) / n) * 100}%` }} /></span>
+      )}
       {layout === 'B' && !isPhone && (
         <div className="ls-segbar" aria-label="Bölüm ilerlemesi">
           {sections.map((sec) => {
@@ -768,6 +704,16 @@ export const LessonPlayer: React.FC<LessonPlayerProps> = ({ deck, startAt, initi
         </div>
       )}
       <span className="ls-count" aria-live="polite">{index + 1}<i>/</i>{n}</span>
+      <button
+        type="button"
+        className={`ls-btn lv-pdf-btn ${viewMode !== 'interactive' ? 'is-on' : ''}`}
+        aria-pressed={viewMode !== 'interactive'}
+        onClick={() => (viewMode !== 'interactive' ? setViewMode('interactive') : isPhone ? (setPdfPage(pdfLoc.primaryPage), setViewMode('pdf')) : openPdf())}
+        title={viewMode !== 'interactive' ? 'Derse dön' : 'Bu adımın ders PDF sayfasını aç'}
+        aria-label="Ders PDF'i"
+      >
+        <FileText aria-hidden /><span className="lv-hide-sm">Ders PDF’i</span>
+      </button>
       <button type="button" className="ls-btn is-icon is-ghost" onClick={() => setSearchOpen(true)} aria-label="Derste ara" title="Derste ara (Ctrl+K)"><Search aria-hidden /></button>
       <div className="ls-tools" ref={zoomRef}>
         <button
@@ -1020,7 +966,7 @@ export const LessonPlayer: React.FC<LessonPlayerProps> = ({ deck, startAt, initi
   const nextStep = steps[index + 1];
   const FlowNav = (
     <nav className="ls-flownav" aria-label="Adım gezinme">
-      <button type="button" className="ls-btn is-icon" onClick={prev} disabled={index === 0} aria-label="Önceki adım"><ChevronLeft aria-hidden /></button>
+      <button type="button" className="ls-btn lv-prev" onClick={prev} disabled={index === 0} aria-label="Önceki adım"><ChevronLeft aria-hidden /><span className="lv-hide-sm">Önceki</span></button>
       <span className={`ls-stepdots ${(section?.steps.length ?? 0) > 7 ? 'is-many' : ''}`} aria-label={`Bölüm ${step.section + 1}, adım ${secPos + 1} / ${section?.steps.length ?? 1}`}>
         {section?.steps.length <= 16 && section.steps.map((i) => <button key={i} type="button" className={`${i === index ? 'is-on' : ''} ${done.has(steps[i].number) ? 'is-done' : ''}`} onClick={() => goTo(i)} aria-label={`Adım ${steps[i].number}`} />)}
         <small className={section?.steps.length <= 16 ? 'alt' : ''}>{secPos + 1} / {section?.steps.length}</small>
@@ -1073,10 +1019,10 @@ export const LessonPlayer: React.FC<LessonPlayerProps> = ({ deck, startAt, initi
         </div>
       </div>
     ) : layout === 'A' ? (
-      <div className={`ls-A ${outlineOpen && !isPhone ? 'has-outline' : ''}`}>
-        {outlineOpen && !isPhone && (
-          <nav className="ls-A-outline" aria-label="Ders bölümleri">
-            <Outline steps={steps} sections={sections} current={index} done={done} onPick={goTo} />
+      <div className={`ls-A ${outlineOpen && railInline ? 'has-outline' : ''}`}>
+        {outlineOpen && railInline && (
+          <nav id="lv-rail" className="ls-A-outline lv-rail" aria-label="Slaytlar">
+            <LessonRail steps={steps} sections={sections} current={index} done={done} onPick={goTo} />
           </nav>
         )}
         <main className="ls-A-main" ref={mainRef} onTouchStart={onTouchStart} onTouchEnd={onTouchEnd}>
@@ -1185,16 +1131,25 @@ export const LessonPlayer: React.FC<LessonPlayerProps> = ({ deck, startAt, initi
         {focusBand}
         {stage}
       </div>
-
-      {outlineMobile && (
-        <>
-          <button type="button" className="ls-scrim" aria-label="Bölümleri kapat" onClick={() => setOutlineMobile(false)} />
-          <nav className="ls-drawer" aria-label="Ders bölümleri">
-            <div className="ls-drawer-h"><b>Bölümler</b><button type="button" className="ls-btn is-icon is-ghost" onClick={() => setOutlineMobile(false)} aria-label="Kapat"><X aria-hidden /></button></div>
-            <Outline steps={steps} sections={sections} current={index} done={done} onPick={goTo} />
-          </nav>
-        </>
+      {isPhone && !immersive && (
+        <nav className="lv-bottombar" aria-label="Slayt gezinme">
+          <button type="button" className="lv-bb-btn" onClick={prev} disabled={index === 0} aria-label="Önceki slayt"><ChevronLeft aria-hidden />Önceki</button>
+          <button type="button" className="lv-bb-count" onClick={() => setOutlineMobile(true)} aria-label={`Slayt ${index + 1} / ${n} — slayt listesini aç`} aria-haspopup="dialog">
+            <b>{index + 1}</b><i>/</i>{n}
+          </button>
+          {index < n - 1 ? (
+            <button type="button" className="lv-bb-btn is-primary" onClick={next} aria-label="Sonraki slayt">Sonraki<ChevronRight aria-hidden /></button>
+          ) : (
+            <button type="button" className="lv-bb-btn is-ok" onClick={() => { markDone(step.number); toast.success('Ders tamamlandı', `${deckName(deck)} bitti.`); }}>Bitir<Check aria-hidden /></button>
+          )}
+        </nav>
       )}
+
+      <Sheet open={outlineMobile} onClose={() => setOutlineMobile(false)} title="Slaytlar" subtitle={`${index + 1} / ${n} · ${deckName(deck)}`} size="full" width={480}>
+        <nav className="lv-rail is-sheet" aria-label="Slaytlar">
+          <LessonRail steps={steps} sections={sections} current={index} done={done} onPick={goTo} />
+        </nav>
+      </Sheet>
 
       {sheet && (
         <>

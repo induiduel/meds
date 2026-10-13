@@ -39,6 +39,7 @@
           d.dataset.mode = mode;
           d.dataset.palette = (a && a.palettes && a.palettes[mode]) || 'a';
           d.dataset.density = (a && a.density) || 'normal';
+          d.dataset.layout = (a && a.layout) || 'pano';
           if (mode === 'dark') d.classList.add('theme-dark');
           if (matchMedia('(display-mode: standalone)').matches || navigator.standalone) d.classList.add('is-standalone');
         } catch (e) {}

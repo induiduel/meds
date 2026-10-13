@@ -39,6 +39,7 @@ import { getSmartQuestionAssistant, SmartQuestionAssistantResult } from '../serv
 import { Colored, WordLegend, ContextBadge, sharedWordColors } from './draftHighlight';
 import { LoveNote } from './home/LoveNote';
 import { MetaPicker } from './ui/MetaPicker';
+import './quickadd/quickadd.css';
 
 const AiQuestionOptimizerModal = React.lazy(() =>
   import('./AiQuestionOptimizerModal').then((m) => ({ default: m.AiQuestionOptimizerModal }))
@@ -920,6 +921,418 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
   useEffect(() => {
     if (full === 'open' && successMessage && !texts.stem.trim() && !texts.clue.trim()) closeFull();
   }, [successMessage, texts]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  // v10 kompakt (2026-10-13, "SoruEkle-Masaustu"): ≥768 px'te iki bölmeli form (solda künye + kök + A–E şıklar,
+  // sağda "Benzer sorular · tekrar riski" ve öneri kutusu). Telefonda yukarıdaki tam ekran sihirbaz aynen kalır.
+  const [isWide, setIsWide] = useState(() => typeof window !== 'undefined' && window.matchMedia('(min-width: 768px)').matches);
+  useEffect(() => {
+    const mq = window.matchMedia('(min-width: 768px)');
+    const on = () => setIsWide(mq.matches);
+    mq.addEventListener('change', on);
+    return () => mq.removeEventListener('change', on);
+  }, []);
+  useEffect(() => {
+    if (!isWide) return;
+    // Geniş ekranda kök ve şıklar aynı anda görünür: tek kip (kök); telefondan büyütülürse tam ekran kapanır
+    if (mode !== 'stem') setMode('stem');
+    if (fullRef.current) setFull(false);
+  }, [isWide, mode]);
+
+  // Taslak kaydet: form bu cihazda saklanır, gönderim başarılı olunca silinir
+  type QhDraft = {
+    at: string; stem: string; clue: string; options: Record<OptionKey, string>; answer?: OptionKey; reason: string;
+    discipline: string; questionNumber: string; examYear: string;
+  };
+  const QH_DRAFT_KEY = 'medsoru_quickadd_draft_v1';
+  const [savedDraft, setSavedDraft] = useState<QhDraft | null>(() => {
+    try { const raw = localStorage.getItem(QH_DRAFT_KEY); return raw ? (JSON.parse(raw) as QhDraft) : null; } catch { return null; }
+  });
+  const [clueOpen, setClueOpen] = useState(false);
+  const saveDraft = () => {
+    const d: QhDraft = {
+      at: new Date().toISOString(), stem: texts.stem, clue: texts.clue, options, answer: claimedAnswer, reason: answerReason,
+      discipline, questionNumber, examYear,
+    };
+    try { localStorage.setItem(QH_DRAFT_KEY, JSON.stringify(d)); } catch { /* yok */ }
+    setSavedDraft(d);
+    toast.success('Taslak kaydedildi', 'Bu cihazda saklanır; havuza gönderince silinir.');
+  };
+  const dropDraft = () => {
+    try { localStorage.removeItem(QH_DRAFT_KEY); } catch { /* yok */ }
+    setSavedDraft(null);
+  };
+  const restoreDraft = () => {
+    if (!savedDraft) return;
+    setTexts({ stem: savedDraft.stem || '', clue: savedDraft.clue || '' });
+    setOptions(KEYS.reduce((acc, k) => ({ ...acc, [k]: (savedDraft.options || {})[k] || '' }), {} as Record<OptionKey, string>));
+    setOptionCount(Math.max(1, KEYS.reduce((n, k, i) => ((savedDraft.options || {})[k]?.trim() ? i + 1 : n), 1)));
+    setClaimedAnswer(savedDraft.answer);
+    setAnswerReason(savedDraft.reason || '');
+    if (savedDraft.discipline && disciplines.includes(savedDraft.discipline)) { setDiscipline(savedDraft.discipline); setUserManualDiscipline(true); }
+    if (savedDraft.questionNumber) { setQuestionNumber(savedDraft.questionNumber); setUserManualNumber(true); }
+    if (savedDraft.examYear !== undefined) setExamYear(savedDraft.examYear);
+    if (savedDraft.clue) setClueOpen(true);
+  };
+  useEffect(() => {
+    if (successMessage) dropDraft();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [successMessage]);
+  const formEmpty = !hasAnyText && filledOptionCount === 0 && !claimedAnswer;
+
+  if (isWide) {
+    const riskCls = (s: number) => (s >= 80 ? 'is-bad' : s >= 65 ? 'is-warn' : 'is-mid');
+    const yearLabel = (y: string) => `${y.slice(0, 4)}–${y.slice(7, 9)}`;
+    const hasSuggest = !!smartAssistant && (!!smartAssistant.crossCommitteeWarning || smartAssistant.suggestedTopics.length > 0);
+    const noResults = realtimeMatches.length === 0 && similar.length === 0;
+    return (
+      <div className="qh">
+        <LoveNote />
+        <form
+          onSubmit={handleSubmit}
+          onKeyDown={(e) => {
+            if (e.key === 'Enter' && (e.target as HTMLElement).tagName === 'INPUT') {
+              e.preventDefault();
+            }
+          }}
+          aria-busy={isSubmitting}
+          className="qh-grid"
+        >
+          <div className="qh-main">
+            <BlurOverlay show={isSubmitting} label="Havuza ekleniyor…" hint="Benzer parçalar varsa aynı soruya bağlıyoruz" />
+            <header className="qh-head">
+              <h1>Soru ekle</h1>
+              <p>Hatırladığın parçayı yaz; gerisini birlikte tamamlarız.</p>
+              <span className={`qh-live ${isCollecting ? 'is-on' : ''}`}>
+                <i aria-hidden />{committee ? titleCase(committee) : 'Kurul'}{isCollecting ? ' · toplama açık' : ''}
+              </span>
+            </header>
+            {isLocked && (
+              <div className="qh-note is-warn" role="status">
+                <Lock aria-hidden />
+                <span>Ders programına göre sınav tamamlanmadan bu kurula soru yazılamaz.</span>
+              </div>
+            )}
+            {savedDraft && formEmpty && (
+              <div className="qh-note is-draft" role="status">
+                <FileText aria-hidden />
+                <span>Kaydedilmiş taslağın var · {new Date(savedDraft.at).toLocaleString('tr-TR', { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' })}</span>
+                <button type="button" onClick={restoreDraft}>Geri yükle</button>
+                <button type="button" className="is-quiet" onClick={dropDraft}>Sil</button>
+              </div>
+            )}
+
+            <div className="qh-meta">
+              <label className="qh-field">
+                <span>Kurul</span>
+                <select value={committee?.id || ''} onChange={(e) => onSelectCommittee(e.target.value)}>
+                  {!committee && <option value="">Seç</option>}
+                  {sortedCommittees.map((c) => {
+                    const locked = isCommitteeLocked(c.id);
+                    return (
+                      <option key={c.id} value={c.id} disabled={locked}>
+                        {titleCase(c)}{locked ? ' · açılmadı' : c.id === activeCommitteeId ? ' · toplama açık' : ''}
+                      </option>
+                    );
+                  })}
+                </select>
+              </label>
+              <label className="qh-field">
+                <span>Ders{autoDisc && !userManualDiscipline && <em className="qh-auto"><Sparkles aria-hidden /> otomatik</em>}</span>
+                <select
+                  value={discipline}
+                  onChange={(e) => { setDiscipline(e.target.value); setUserManualDiscipline(true); setAutoDisc(false); }}
+                >
+                  {disciplines.map((d) => <option key={d} value={d}>{d}</option>)}
+                </select>
+              </label>
+              <label className="qh-field">
+                <span>Sınav yılı</span>
+                <select value={examYear} onChange={(e) => setExamYear(e.target.value)}>
+                  <option value="">Bilmiyorum</option>
+                  {academicYears().map((y) => (
+                    <option key={y} value={y}>{yearLabel(y)}{y === currentAcademicYear() ? ' · bu yıl' : ''}</option>
+                  ))}
+                </select>
+              </label>
+              <label className="qh-field is-num">
+                <span>Soru no{autoNum && !userManualNumber && <em className="qh-auto"><Sparkles aria-hidden /> otomatik</em>}</span>
+                <input
+                  type="text"
+                  inputMode="numeric"
+                  value={questionNumber}
+                  onChange={(e) => { setQuestionNumber(e.target.value.replace(/[^0-9]/g, '').slice(0, 3)); setUserManualNumber(true); setAutoNum(false); }}
+                  placeholder="—"
+                  aria-label="Soru numarası (bilmiyorsan boş bırak)"
+                />
+              </label>
+            </div>
+
+            <div className="qh-block">
+              <label htmlFor="hatira" className="qh-label">Soru kökü</label>
+              <div className="ms-composer qh-stem">
+                <textarea
+                  id="hatira"
+                  rows={3}
+                  value={text}
+                  onChange={(e) => setText(e.target.value)}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter' && (e.ctrlKey || e.metaKey)) {
+                      e.preventDefault();
+                      e.currentTarget.form?.requestSubmit();
+                    }
+                  }}
+                  placeholder={PLACEHOLDERS.stem}
+                  className="ms-bare-input w-full block resize-none px-3 pt-2.5 pb-2 text-md leading-[1.55] text-ink placeholder:text-ink-3 bg-transparent border-0 outline-0 min-h-[96px]"
+                />
+                {/* Akıllı soru tamamlama ve yazım yardımcısı (Web Worker, composerClient) */}
+                <ComposerAssist active={mode === 'stem'} value={text} onChange={setText} textareaId="hatira" committeeId={committee?.id} />
+              </div>
+              {linkedQuestion && (
+                <div className="qh-note is-ok" role="status">
+                  <Link2 aria-hidden />
+                  <span>{linkedQuestion.questionNumber ? `Soru #${linkedQuestion.questionNumber} ile bağlandı` : 'Mevcut taslakla bağlandı'} · yazdıkların bu sorunun katkılarına eklenecek</span>
+                  <button type="button" className="is-quiet" onClick={() => { setLinkedQuestion(null); setQuestionNumber(''); }} aria-label="Bağlantıyı kaldır"><X aria-hidden /></button>
+                </div>
+              )}
+            </div>
+
+            <fieldset className="qh-opts">
+              <legend>Şıklar · doğruyu işaretle</legend>
+              {KEYS.map((k, i) => (
+                <div key={k} className={`qh-opt ${claimedAnswer === k ? 'is-ok' : ''}`}>
+                  <input
+                    type="radio"
+                    name="qh-dogru"
+                    checked={claimedAnswer === k}
+                    onChange={() => setClaimedAnswer(k)}
+                    aria-label={`${k} doğru cevap`}
+                  />
+                  <span className="k" aria-hidden>{k}</span>
+                  <input
+                    className="t bg-transparent"
+                    value={options[k]}
+                    onChange={(e) => {
+                      const v = e.target.value;
+                      setOptions((p) => ({ ...p, [k]: v }));
+                      if (v.trim() && i + 1 > optionCount) setOptionCount(i + 1);
+                    }}
+                    onKeyDown={(e) => {
+                      if (e.key === 'Enter') {
+                        e.preventDefault();
+                        const all = e.currentTarget.closest('fieldset')?.querySelectorAll<HTMLInputElement>('input.t');
+                        all?.[i + 1]?.focus();
+                      }
+                    }}
+                    enterKeyHint={i < 4 ? 'next' : 'done'}
+                    placeholder="Şık yaz"
+                    aria-label={`${k} şıkkı`}
+                  />
+                </div>
+              ))}
+              {claimedAnswer && (
+                <div className="qh-why">
+                  <input
+                    value={answerReason}
+                    onChange={(e) => setAnswerReason(e.target.value)}
+                    placeholder={`Neden ${claimedAnswer}? (isteğe bağlı)`}
+                    aria-label="Cevap gerekçesi (isteğe bağlı)"
+                  />
+                  <button type="button" onClick={() => { setClaimedAnswer(undefined); setAnswerReason(''); }}>Cevabı bilmiyorum</button>
+                </div>
+              )}
+            </fieldset>
+
+            <div className="qh-block">
+              <button
+                type="button"
+                className="qh-disc"
+                aria-expanded={clueOpen || !!texts.clue.trim()}
+                aria-controls="qh-clue"
+                onClick={() => setClueOpen((v) => !v)}
+              >
+                <ChevronDown aria-hidden className={clueOpen || texts.clue.trim() ? 'is-open' : ''} />
+                İpucu <small>isteğe bağlı · hocanın vurgusu, vaka ayrıntısı</small>
+              </button>
+              <div id="qh-clue" hidden={!(clueOpen || !!texts.clue.trim())}>
+                <textarea
+                  className="qh-clue"
+                  rows={2}
+                  value={texts.clue}
+                  onChange={(e) => setTexts((prev) => ({ ...prev, clue: e.target.value }))}
+                  placeholder={PLACEHOLDERS.clue}
+                  aria-label="İpucu"
+                />
+              </div>
+            </div>
+
+            {formError && <div role="alert" className="ms-shake qh-note is-bad"><AlertCircle aria-hidden /><span>{formError}</span></div>}
+            {successMessage && <div role="status" className="ms-pop-in qh-note is-ok"><CheckCircle2 aria-hidden /><span>Teşekkürler! {successMessage}</span></div>}
+            {intakeId && <IntakeEcho key={intakeId} intakeId={intakeId} onClose={() => setIntakeId(null)} />}
+
+            <div className="qh-actions">
+              <button type="button" className="qh-btn" onClick={saveDraft} disabled={formEmpty}>Taslak kaydet</button>
+              <button type="submit" className="qh-btn is-primary" disabled={isSubmitting || isLocked}>
+                {isSubmitting ? 'Gönderiliyor…' : 'Havuza gönder'}
+              </button>
+              <span className="qh-kbd">Ctrl + Enter ile gönder</span>
+            </div>
+          </div>
+
+          <aside className="qh-side" aria-label="Benzer sorular ve öneriler">
+            <section className="qh-sec" aria-labelledby="qh-sim-h" aria-busy={isSearching}>
+              <div className="qh-sec-h">
+                <h2 id="qh-sim-h">Benzer sorular · tekrar riski</h2>
+                {realtimeMatches.length > 1 && (
+                  <button type="button" onClick={selectedMatchIds.size === realtimeMatches.length ? clearSelection : selectAllMatches}>
+                    {selectedMatchIds.size === realtimeMatches.length ? 'Seçimi bırak' : 'Tümünü seç'}
+                  </button>
+                )}
+              </div>
+
+              {isSearching && noResults && text.trim().length >= 6 && (
+                <div className="qh-skels" aria-hidden>
+                  {[0, 1, 2].map((i) => <div key={i} className="qh-skel"><span className="ui-skel" /><span className="ui-skel" /><span className="ui-skel" /></div>)}
+                </div>
+              )}
+              {!isSearching && noResults && (
+                <p className="qh-empty">Yazdıkça havuzdaki benzer taslaklar ve çıkmış sorular burada belirir; aynı soruyu ikinci kez eklemeyi önler.</p>
+              )}
+
+              {realtimeMatches.map((m, idx) => {
+                const q = m.question;
+                const isSelected = selectedMatchIds.has(q.id);
+                const score = m.compatibility.score;
+                return (
+                  <article key={q.id} className={`qh-sim ${isSelected ? 'is-sel' : ''}`}>
+                    <div className="qh-sim-top">
+                      <button
+                        type="button"
+                        className="qh-check"
+                        onClick={() => toggleSelectMatch(q.id)}
+                        aria-pressed={isSelected}
+                        aria-label={`Soru ${q.questionNumber || 'taslak'} seç`}
+                      >
+                        {isSelected ? <CheckSquare aria-hidden /> : <Square aria-hidden />}
+                      </button>
+                      <span className={`qh-risk ${riskCls(score)}`}>%{score} benzer</span>
+                      {idx === 0 && <span className="qh-tag">En yakın</span>}
+                      {m.isCrossCommittee && <span className="qh-tag is-ai">Farklı kurul</span>}
+                      {m.contextHashtag && score >= HIGHLIGHT_MIN_SCORE && <ContextBadge hashtag={m.contextHashtag} colorIndex={idx} />}
+                      <span className="qh-num">{q.questionNumber ? `#${q.questionNumber}` : 'Numarasız'}</span>
+                    </div>
+                    <p className="qh-sim-t"><Colored text={questionStemText(q)} colors={sharedColors} /></p>
+                    <div className="qh-sim-act">
+                      <button type="button" onClick={() => handleLinkToQuestion(q)}>
+                        <CheckCircle2 aria-hidden />{q.questionNumber ? `S.${q.questionNumber} ile bağla` : 'Bu taslakla bağla'}
+                      </button>
+                      <button type="button" className="is-ai" onClick={() => setOptimizingQuestion(q)} title="Taslağı amfi slaytları ve AI ile tam soruya dönüştür">
+                        <Wand2 aria-hidden />AI ile dönüştür
+                      </button>
+                      {q.discipline && <span className="qh-sim-d">{q.discipline}</span>}
+                    </div>
+                  </article>
+                );
+              })}
+              {realtimeMatches.length > 0 && (
+                <WordLegend texts={[text, ...realtimeMatches.map((m) => questionStemText(m.question))]} colors={sharedColors} />
+              )}
+
+              {selectedMatchIds.size > 0 && (
+                <div className="qh-merge">
+                  <span className="n">{selectedMatchIds.size}</span>
+                  <span className="t">{selectedMatchIds.size} soru seçildi</span>
+                  <button type="button" onClick={clearSelection}>İptal</button>
+                  <button type="button" className="is-primary" disabled={isMergingSelected} onClick={handleMergeAndGroupSelected}>
+                    <Layers aria-hidden />
+                    {isMergingSelected ? 'Birleştiriliyor…' : selectedMatchIds.size === 1 ? 'Bu soruyla birleştir' : `Birleştir (${selectedMatchIds.size})`}
+                  </button>
+                </div>
+              )}
+
+              {similar.length > 0 && (
+                <>
+                  <h3 className="qh-sub">Çıkmış sorularda</h3>
+                  {similar.map((s) => (
+                    <article key={s.id} className="qh-sim is-past">
+                      <p className="qh-sim-t">{s.stem}</p>
+                      {s.options && s.options.length > 0 && (
+                        <ol className="qh-past-opts">
+                          {s.options.map((o) => (
+                            <li key={o.key} className={o.key === s.claimedAnswer ? 'is-ok' : ''}><b>{o.key})</b> {o.text}</li>
+                          ))}
+                        </ol>
+                      )}
+                      <span className="qh-sim-d">{[s.discipline, s.examYear ? `Çıkmış ${s.examYear}` : 'Çıkmış', s.claimedAnswer ? `Cevap: ${s.claimedAnswer}` : ''].filter(Boolean).join(' · ')}</span>
+                      <div className="qh-sim-act">
+                        <button type="button" onClick={() => handleTransferEntireQuestion(s)} title="Sorunun kökünü, branşını ve şıklarını forma aktar">
+                          <FileText aria-hidden />{s.options && s.options.length ? 'Kök + şıkları aktar' : 'Soruyu aktar'}
+                        </button>
+                        <button type="button" onClick={() => handleCopyQuestionStem(s.stem)} title="Yalnızca soru kökünü forma yaz ve panoya kopyala">
+                          <Copy aria-hidden />Yalnızca kökü al
+                        </button>
+                      </div>
+                    </article>
+                  ))}
+                </>
+              )}
+            </section>
+
+            {hasSuggest && smartAssistant && (
+              <section className="qh-tip" aria-label="Öneri">
+                <strong><Sparkles aria-hidden /> Öneri</strong>
+                {smartAssistant.crossCommitteeWarning && smartAssistant.predictedCommittee && (
+                  <>
+                    <span><b>Kurul uyuşmazlığı olabilir:</b> {smartAssistant.crossCommitteeWarning}</span>
+                    <button
+                      type="button"
+                      className="qh-tip-btn"
+                      onClick={() => {
+                        if (smartAssistant.predictedCommittee) {
+                          onSelectCommittee(smartAssistant.predictedCommittee.committeeId);
+                          if (smartAssistant.predictedDiscipline) setDiscipline(smartAssistant.predictedDiscipline.discipline);
+                          toast.success('Kurul Değiştirildi', `${smartAssistant.predictedCommittee.committeeName} kuruluna geçildi.`);
+                        }
+                      }}
+                    >
+                      Bu kurula geç <ArrowRight aria-hidden />
+                    </button>
+                  </>
+                )}
+                {smartAssistant.suggestedTopics.length > 0 && (
+                  <span className="qh-topics">
+                    İlişkili konular:
+                    {smartAssistant.suggestedTopics.slice(0, 3).map((st, i) => <em key={i}>{st.topic}</em>)}
+                  </span>
+                )}
+                {smartAssistant.predictedDiscipline && discipline !== smartAssistant.predictedDiscipline.discipline && (
+                  <button type="button" className="qh-tip-btn" onClick={() => setDiscipline(smartAssistant.predictedDiscipline!.discipline)}>
+                    Dersi “{smartAssistant.predictedDiscipline.discipline}” yap
+                  </button>
+                )}
+              </section>
+            )}
+          </aside>
+        </form>
+
+        {optimizingQuestion && (
+          <AiQuestionOptimizerModal
+            question={optimizingQuestion}
+            isOpen={Boolean(optimizingQuestion)}
+            onClose={() => setOptimizingQuestion(null)}
+            currentUser={currentUser}
+            onSaved={async (updated) => {
+              setOptimizingQuestion(null);
+              toast.success('Taslak Geliştirildi', `Soru #${updated.questionNumber || 'taslak'} başarıyla güncellendi.`);
+              if (onQuestionsUpdated) {
+                await onQuestionsUpdated();
+              }
+            }}
+          />
+        )}
+      </div>
+    );
+  }
+
 
       return (
     <div className="w-full max-w-[760px] mx-auto lg:mx-0 flex flex-col gap-5 pt-4 sm:pt-8">

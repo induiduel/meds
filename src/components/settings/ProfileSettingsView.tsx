@@ -8,18 +8,17 @@ import {
   Camera,
   Check,
   CheckCircle2,
+  ChevronDown,
   Database,
   LogIn,
   LogOut,
   Moon,
   Palette as PaletteIcon,
-  Rows3,
   ShieldCheck,
   Sun,
   SunMedium,
   Trash2,
   UserRound,
-  Crosshair,
   ChevronRight,
 } from 'lucide-react';
 import { AppUser, updateUserProfileData } from '../../services/auth';
@@ -27,18 +26,21 @@ import { QuestionItem } from '../../types';
 import { validateNamePolicy } from '../../utils/namePolicy';
 import {
   DENSITY_LABELS,
+  LAYOUT_LABELS,
   MODE_LABELS,
   PALETTE_INFO,
   type Density,
+  type LayoutMode,
   type ThemeMode,
   useAppearance,
 } from '../../utils/appearance';
-import { palettesFor } from '../../utils/palettes';
+import { findPalette, palettesFor } from '../../utils/palettes';
 import { AvatarCropper } from '../ui/AvatarCropper';
 import { Row, Section, Segmented, Switch } from '../ui/kit';
 import { toast } from '../ui/Toast';
 import { NotesSyncRow } from './NotesSyncRow';
 import { UserDataSyncRow } from './UserDataSyncRow';
+import './settings.css';
 
 interface Props {
   currentUser: AppUser | null;
@@ -51,11 +53,15 @@ interface Props {
   onOpenOffline: () => void;
 }
 
+const LAYOUT_CHOICES: { id: LayoutMode; hint: string }[] = [
+  { id: 'akis', hint: 'Tek sütun, okumaya uygun genişlik; menü ince şerit.' },
+  { id: 'pano', hint: 'Geniş ızgara: kartlar sütunlara dizilir, menü açık.' },
+  { id: 'odak', hint: 'Tam genişlik: liste solda, ayrıntı sağda açılır.' },
+];
+
 const SECTIONS = [
+  { id: 'gorunum', label: 'Görünüm', icon: PaletteIcon },
   { id: 'profil', label: 'Profil', icon: UserRound },
-  { id: 'gorunum', label: 'Tema ve palet', icon: PaletteIcon },
-  { id: 'yogunluk', label: 'Yoğunluk', icon: Rows3 },
-  { id: 'calisma', label: 'Çalışma', icon: Crosshair },
   { id: 'hesap', label: 'Hesap ve veri', icon: ShieldCheck },
 ] as const;
 
@@ -68,15 +74,18 @@ const initialsOf = (u: AppUser | null) => {
 };
 
 /**
- * Profil ve Ayarlar tek sayfada (/ayarlar, /profil): kimlik, görünüm (tema × palet), yoğunluk, hesap.
+ * Profil ve Ayarlar tek sayfada (/ayarlar, /profil) — v10 kompakt yeniden kurulum (2026-10-13, "Ayarlar-Masaustu").
+ * Masaüstünde solda kullanıcı kartı + bölüm menüsü; sağda Görünüm (tema kartları, palet ızgarası, görüntüleme modu,
+ * kompakt ayar listesi), Profil ve Hesap ve veri. Tablet/telefonda menü üstte yatay çip satırına döner.
  * Görünüm ayarları girişsiz de çalışır; profil bölümü girişte açılır.
  */
 export const ProfileSettingsView: React.FC<Props> = ({ currentUser, isAdmin, questions, onUpdateUser, onOpenAuth, onLogout, onOpenAdmin, onOpenOffline }) => {
   const look = useAppearance();
-  const [active, setActive] = useState<string>('profil');
+  const [active, setActive] = useState<string>('gorunum');
   const [autoReveal, setAutoReveal] = useState(autoRevealEnabled);
+  const [preview, setPreview] = useState(false);
 
-  // Kısa yol listesinde etkin bölüm: kaydırmayla izlenir
+  // Bölüm menüsünde etkin bölüm: kaydırmayla izlenir
   useEffect(() => {
     const els = SECTIONS.map((s) => document.getElementById(s.id)).filter(Boolean) as HTMLElement[];
     const io = new IntersectionObserver(
@@ -90,155 +99,167 @@ export const ProfileSettingsView: React.FC<Props> = ({ currentUser, isAdmin, que
     return () => io.disconnect();
   }, []);
 
+  const modeName = MODE_LABELS[look.mode];
+
   return (
     <div className="ui-page is-wide">
-      <div className="ui-page-head">
-        <h1>Profil ve ayarlar</h1>
-        <p>Kimliğin, görünüm ve yerleşim tercihlerin. Görünüm ayarları bu cihazda saklanır.</p>
-      </div>
-
-      <div className="ui-split">
-        <nav className="ui-toc" aria-label="Ayar bölümleri">
+    <div className="ayr">
+      <nav className="ayr-nav" aria-label="Ayar bölümleri">
+        <div className="ayr-me">
+          <span className="ayr-av" aria-hidden="true">
+            {currentUser?.photoURL ? <img src={currentUser.photoURL} alt="" /> : currentUser ? initialsOf(currentUser) : <UserRound />}
+          </span>
+          <span className="ayr-me-t">
+            <strong>{currentUser ? currentUser.displayName || currentUser.email?.split('@')[0] : 'Misafir'}</strong>
+            <span>{currentUser ? currentUser.email : 'Giriş yapmadın'}</span>
+          </span>
+        </div>
+        <div className="ayr-links">
           {SECTIONS.map(({ id, label, icon: Icon }) => (
             <a
               key={id}
               href={`#${id}`}
-              aria-current={active === id}
+              aria-current={active === id ? 'true' : undefined}
               onClick={(e) => {
                 e.preventDefault();
                 document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 setActive(id);
               }}
             >
-              <Icon strokeWidth={2} />
+              <Icon strokeWidth={2} aria-hidden />
               {label}
             </a>
           ))}
-        </nav>
+        </div>
+      </nav>
 
-        <div className="flex flex-col min-w-0" style={{ gap: 'calc(var(--dn-gap) * 2.25)' }}>
-          <ProfileSection currentUser={currentUser} questions={questions} onUpdateUser={onUpdateUser} onOpenAuth={onOpenAuth} />
+      <div className="ayr-main">
+        <header className="ayr-head">
+          <h1>Profil ve ayarlar</h1>
+          <p>Görünüm ayarları bu cihazda saklanır; her temanın paleti ayrı hatırlanır.</p>
+        </header>
 
-          <Section id="gorunum" title="Tema ve palet" foot="Sarı tema uzun okuma için: kâğıt tonu, düşük mavi ışık. Her temanın paleti ayrı hatırlanır.">
-            <div className="ui-group">
-              <Row
-                stack
-                title="Tema"
-                sub={`${MODE_LABELS[look.mode]} · ${PALETTE_INFO[look.mode][look.palette].name}`}
-              >
-                <Segmented<ThemeMode>
-                  label="Tema"
-                  value={look.mode}
-                  onChange={(m) => look.set({ mode: m })}
-                  options={(['light', 'sepia', 'dark'] as ThemeMode[]).map((m) => {
-                    const Icon = MODE_ICONS[m];
-                    return {
-                      value: m,
-                      label: (
-                        <span className="inline-flex items-center gap-1.5">
-                          <Icon className="w-4 h-4" strokeWidth={2} />
-                          {MODE_LABELS[m]}
-                        </span>
-                      ),
-                    };
-                  })}
-                />
-              </Row>
-              <Row stack title="Palet">
-                <div role="radiogroup" aria-label={`${MODE_LABELS[look.mode]} tema paleti`} className="grid gap-2.5" style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 140px), 1fr))' }}>
-                  {palettesFor(look.mode).map(({ id: p }) => {
-                    const info = PALETTE_INFO[look.mode][p];
-                    const on = look.palette === p;
-                    return (
-                      <button key={p} type="button" role="radio" aria-checked={on} className="ui-choice" onClick={() => look.set({ palette: p })}>
-                        <PaletteSwatch colors={info.swatch} dark={look.mode === 'dark'} />
-                        <span className="flex flex-col gap-0.5 min-w-0">
-                          <b>{info.name}</b>
-                          <span>{info.hint}</span>
-                        </span>
-                        {on && (
-                          <span className="ui-choice-check" aria-hidden="true">
-                            <Check strokeWidth={3} />
-                          </span>
-                        )}
-                      </button>
-                    );
-                  })}
-                </div>
-              </Row>
+        <section id="gorunum" className="ayr-sec" aria-labelledby="ayr-gorunum-h">
+          <h2 id="ayr-gorunum-h" className="ayr-h1">Görünüm</h2>
+
+          <div className="ayr-block">
+            <h3 id="ayr-tema-h">Tema</h3>
+            <div role="radiogroup" aria-labelledby="ayr-tema-h" className="ayr-themes">
+              {(['light', 'sepia', 'dark'] as ThemeMode[]).map((m) => {
+                const Icon = MODE_ICONS[m];
+                const sw = findPalette(m, look.palettes[m]).swatch;
+                const on = look.mode === m;
+                return (
+                  <button key={m} type="button" role="radio" aria-checked={on} className="ayr-opt ayr-theme" onClick={() => look.set({ mode: m })}>
+                    <span className="ayr-dot" aria-hidden="true" style={{ '--sw-bg': sw[0], '--sw-accent': sw[2] } as React.CSSProperties} />
+                    <Icon aria-hidden strokeWidth={2} />
+                    {MODE_LABELS[m]}
+                  </button>
+                );
+              })}
             </div>
-          </Section>
+            {look.mode === 'sepia' && <p className="ayr-foot">Sarı tema uzun okuma için: kâğıt tonu, düşük mavi ışık.</p>}
+          </div>
 
-          <Section id="yogunluk" title="Yoğunluk" foot="Kompakt soru çözümünde daha çok bilgi gösterir; Geniş, yazıyı büyütür ve kartları ferahlatır. Dokunmatik ekranda düğmeler parmak boyutunun altına inmez.">
-            <div className="ui-group">
-              <Row stack title="Yerleşim" sub="Yazı ölçeği, boşluklar, satır ve kontrol yükseklikleri, ızgara kolonları birlikte değişir.">
-                <Segmented<Density>
-                  label="Yoğunluk"
-                  value={look.density}
-                  onChange={(d) => look.set({ density: d })}
-                  options={(['compact', 'normal', 'wide'] as Density[]).map((d) => ({ value: d, label: DENSITY_LABELS[d] }))}
-                />
-              </Row>
-              <div className="ui-row ui-row-stack">
-                <DensityPreview />
-              </div>
+          <div className="ayr-block">
+            <h3 id="ayr-palet-h">Palet · {modeName}</h3>
+            <div role="radiogroup" aria-labelledby="ayr-palet-h" className="ayr-pals">
+              {palettesFor(look.mode).map(({ id: p }) => {
+                const info = PALETTE_INFO[look.mode][p];
+                const on = look.palette === p;
+                return (
+                  <button key={p} type="button" role="radio" aria-checked={on} title={info.hint} className="ayr-opt ayr-pal" onClick={() => look.set({ palette: p })}>
+                    <PaletteSwatch colors={info.swatch} />
+                    <span className="n">{info.name}</span>
+                    {on && <Check className="ayr-tick" strokeWidth={3} aria-hidden />}
+                  </button>
+                );
+              })}
             </div>
-          </Section>
+            <p className="ayr-foot">{PALETTE_INFO[look.mode][look.palette]?.hint}</p>
+          </div>
 
-          <Section
-            id="calisma"
-            title="Çalışma"
-            foot="Bir şıkka ya da etkileşime dokunduğunda açılan açıklama ekranın altında kalırsa kart görünür alanın ortasına kaydırılır."
-          >
-            <div className="ui-group">
-              <Row
-                icon={Crosshair}
-                iconBg="#1E4FD8"
-                title="Açıklamaya otomatik kaydır"
-                sub={autoReveal ? 'Açık' : 'Kapalı'}
-                end={<Switch label="Açıklamaya otomatik kaydır" checked={autoReveal} onChange={(on) => { setAutoReveal(on); setAutoRevealEnabled(on); }} />}
+          <div className="ayr-block">
+            <h3 id="ayr-duzen-h">Görüntüleme modu</h3>
+            <div role="radiogroup" aria-labelledby="ayr-duzen-h" className="ayr-modes">
+              {LAYOUT_CHOICES.map((c) => {
+                const on = look.layout === c.id;
+                return (
+                  <button key={c.id} type="button" role="radio" aria-checked={on} className="ayr-opt ayr-mode" onClick={() => look.set({ layout: c.id })}>
+                    <span className={`lm-thumb is-${c.id}`} aria-hidden="true"><i /><i /><i /><i /></span>
+                    <strong>{LAYOUT_LABELS[c.id]}</strong>
+                    <span>{c.hint}</span>
+                  </button>
+                );
+              })}
+            </div>
+            <p className="ayr-foot">Menünün yeri, içerik genişliği ve kartların yerleşimi değişir. Telefonda üç mod da tek sütundur.</p>
+          </div>
+
+          <div className="ayr-list">
+            <div className="ayr-row">
+              <span className="ayr-row-t">
+                <b id="ayr-yog-h">Yoğunluk</b>
+                <span>Yazı ölçeği, boşluklar ve satır yükseklikleri birlikte değişir; dokunmatikte düğmeler küçülmez.</span>
+              </span>
+              <Segmented<Density>
+                label="Yoğunluk"
+                value={look.density}
+                onChange={(d) => look.set({ density: d })}
+                options={(['compact', 'normal', 'wide'] as Density[]).map((d) => ({ value: d, label: DENSITY_LABELS[d] }))}
               />
             </div>
-          </Section>
-
-          <Section id="hesap" title="Hesap ve veri">
-            <div className="ui-group">
-              <UserDataSyncRow />
-              <Row icon={Database} iconBg="#30B0C7" title="Çevrimdışı veritabanı" sub="Soruları, sözlüğü ve kartları cihaza indir" onClick={onOpenOffline} />
-              <NotesSyncRow />
-              {isAdmin && <Row icon={ShieldCheck} iconBg="#FF9500" title="Yönetim konsolu" sub="Taslaklar, moderasyon, sistem" onClick={onOpenAdmin} />}
-              {currentUser ? (
-                <button type="button" className="ui-row has-icon" onClick={onLogout}>
-                  <span className="ui-ico" style={{ '--ico-bg': 'var(--color-bad)', '--ico-fg': '#fff' } as React.CSSProperties}>
-                    <LogOut strokeWidth={2.1} />
-                  </span>
-                  <span className="ui-row-main">
-                    <b style={{ color: 'var(--color-bad-text)' }}>Çıkış yap</b>
-                  </span>
-                </button>
-              ) : (
-                <Row icon={LogIn} title="Giriş yap" sub="Katkıların adınla görünsün" onClick={onOpenAuth} />
-              )}
+            <div className="ayr-row is-sub">
+              <button type="button" className="ayr-disc" aria-expanded={preview} aria-controls="ayr-yog-pv" onClick={() => setPreview((v) => !v)}>
+                <ChevronDown aria-hidden className={preview ? 'is-open' : ''} />
+                {preview ? 'Önizlemeyi gizle' : 'Yoğunluk önizlemesi'}
+              </button>
             </div>
-          </Section>
-        </div>
+            <div id="ayr-yog-pv" className="ayr-pv" hidden={!preview}>
+              <DensityPreview />
+            </div>
+            <div className="ayr-row">
+              <span className="ayr-row-t">
+                <b>Açılan öğeye otomatik kaydır</b>
+                <span>Açılan içerik (açıklama, kart, menü bölümü) ekran dışında kalırsa görünür alana getirir.</span>
+              </span>
+              <Switch label="Açılan öğeye otomatik kaydır" checked={autoReveal} onChange={(on) => { setAutoReveal(on); setAutoRevealEnabled(on); }} />
+            </div>
+          </div>
+        </section>
+
+        <ProfileSection currentUser={currentUser} questions={questions} onUpdateUser={onUpdateUser} onOpenAuth={onOpenAuth} />
+
+        <Section id="hesap" title="Hesap ve veri">
+          <div className="ui-group">
+            <UserDataSyncRow />
+            <Row icon={Database} iconBg="var(--color-clinic)" title="Çevrimdışı veritabanı" sub="Soruları, sözlüğü ve kartları cihaza indir" onClick={onOpenOffline} />
+            <NotesSyncRow />
+            {isAdmin && <Row icon={ShieldCheck} iconBg="var(--color-warn)" title="Yönetim konsolu" sub="Taslaklar, moderasyon, sistem" onClick={onOpenAdmin} />}
+            {currentUser ? (
+              <button type="button" className="ui-row has-icon" onClick={onLogout}>
+                <span className="ui-ico" style={{ '--ico-bg': 'var(--color-bad)', '--ico-fg': 'var(--color-on-solid)' } as React.CSSProperties}>
+                  <LogOut strokeWidth={2.1} />
+                </span>
+                <span className="ui-row-main">
+                  <b style={{ color: 'var(--color-bad-text)' }}>Çıkış yap</b>
+                </span>
+              </button>
+            ) : (
+              <Row icon={LogIn} title="Giriş yap" sub="Katkıların adınla görünsün" onClick={onOpenAuth} />
+            )}
+          </div>
+        </Section>
       </div>
+    </div>
     </div>
   );
 };
 
-const PaletteSwatch: React.FC<{ colors: [string, string, string]; dark: boolean }> = ({ colors: [bg, card, accent], dark }) => (
-  <span
-    className="ui-swatch"
-    aria-hidden="true"
-    style={{ '--sw-bg': bg, '--sw-card': card, '--sw-accent': accent, '--sw-ink': dark ? '#E6E9EF' : '#2A2622' } as React.CSSProperties}
-  >
-    <i />
-    <i />
-    <em>
-      <s />
-      <s />
-    </em>
+/** Palet önizlemesi: zemin · yüzey · vurgu üç küçük kare (renkler palet kaydından gelir). */
+const PaletteSwatch: React.FC<{ colors: [string, string, string] }> = ({ colors }) => (
+  <span className="ayr-sw" aria-hidden="true">
+    {colors.map((c, i) => <i key={i} style={{ '--sw': c } as React.CSSProperties} />)}
   </span>
 );
 

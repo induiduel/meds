@@ -1,4 +1,5 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
+import { useStorageRefresh } from '../../hooks/useStorageRefresh';
 import {
   Search,
   X,
@@ -28,7 +29,8 @@ import { toast } from '../ui/Toast';
 import { safeJsonFetch } from '../../services/api';
 import { QuestionFocus } from '../../services/questionFocus';
 import { LessonPlayer } from './lesson/LessonPlayer';
-import { LearnHub, touchRecent } from './LearnHub';
+import { touchRecent } from './LearnHub';
+import { LearnLibrary, LessonSkeleton } from './LearnLibrary';
 import { Dialog } from '../ui/Dialog';
 import type { DeckCatalogEntry } from '../../data/deckStore';
 import { triggerDomHighlightAndScroll } from '../../services/universalRedirectService';
@@ -192,6 +194,8 @@ export interface InteractiveDeck {
 interface InteractiveDeckViewProps {
   initialDeckId?: string;
   initialSlideNumber?: number;
+  /** Adım/öğe derin bağlantısı her geldiğinde artar; açık oynatıcı o adımda yeniden kurulur */
+  linkNonce?: number;
   /** Fired when a deck is opened (id) or closed (null) so the URL can follow. */
   onDeckChange?: (deckId: string | null) => void;
   /** Opens the PDF dialog; with a target it starts on that deck's slide. */
@@ -639,7 +643,7 @@ export const FlashcardComponent: React.FC<{ card: SlideFlashcard }> = ({ card })
 // Hub (deck catalogue)
 // ---------------------------------------------------------------------------
 
-export const InteractiveDeckView: React.FC<InteractiveDeckViewProps> = ({ initialDeckId, initialSlideNumber, onDeckChange, onOpenPdfModal, questionFocus, onClearQuestionFocus, isAdmin = false }) => {
+export const InteractiveDeckView: React.FC<InteractiveDeckViewProps> = ({ initialDeckId, initialSlideNumber, linkNonce = 0, onDeckChange, onOpenPdfModal, questionFocus, onClearQuestionFocus, isAdmin = false }) => {
   // Yeni ders ekranı varsayılan; klasik slayt ekranı Araçlar menüsünden açılır ve deste kapanınca sıfırlanır
   // Liste hafif katalogdan gelir; slaytlar yalnızca açılan deste için yüklenir (12 MB tek parça yerine)
   const [deckId, setDeckId] = useState<string | null>(initialDeckId || null);
@@ -655,6 +659,7 @@ export const InteractiveDeckView: React.FC<InteractiveDeckViewProps> = ({ initia
   }, [initialDeckId]);
 
   const [progress, setProgress] = useState<DeckProgress>(readProgress);
+  useStorageRefresh([PROGRESS_KEY], () => setProgress(readProgress()));
 
   const [activeDeck, setActiveDeck] = useState<InteractiveDeck | null>(null);
   const [deckLoading, setDeckLoading] = useState(false);
@@ -724,7 +729,7 @@ export const InteractiveDeckView: React.FC<InteractiveDeckViewProps> = ({ initia
 
   return (
     <div className="flex flex-col gap-3 sm:gap-4 min-w-0">
-      <LearnHub
+      <LearnLibrary
         decks={hubDecks}
         versions={versionLabels}
         progress={progress}
@@ -761,21 +766,12 @@ export const InteractiveDeckView: React.FC<InteractiveDeckViewProps> = ({ initia
       )}
 
       {deckId && deckLoading && !activeDeck && (
-        <div className="fixed inset-0 z-[60] bg-canvas flex items-center justify-center" role="status" aria-live="polite">
-          <div className="flex flex-col items-center gap-4">
-            <span className="flex items-center gap-3 text-md text-ink-2">
-              <span className="w-5 h-5 rounded-full border-2 border-accent border-t-transparent animate-spin" aria-hidden="true" />
-              Ders açılıyor…
-            </span>
-            <button type="button" className="ui-btn is-sm is-ghost" onClick={() => { setDeckId(null); onDeckChange?.(null); }}>
-              Vazgeç
-            </button>
-          </div>
-        </div>
+        <LessonSkeleton onCancel={() => { setDeckId(null); onDeckChange?.(null); }} />
       )}
 
       {activeDeck && activeDeck.id === deckId && (
         <LessonPlayer
+          key={`${activeDeck.id}:${linkNonce}`}
           deck={activeDeck}
           initialViewMode={playerViewMode}
           startAt={initialSlideNumber != null && initialSlideNumber > 0 ? initialSlideNumber - 1 : (progress[activeDeck.id]?.last ?? 0)}

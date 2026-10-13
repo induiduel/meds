@@ -1,0 +1,145 @@
+/* Soru ekle — v10 kompakt iki bölmeli form (qh- öneki; yalnız ≥768 px'te çizilir, telefonda sihirbaz).
+   Renkler yalnız tema değişkenleriyle. */
+.qh { display: flex; flex-direction: column; gap: 12px; width: 100%; min-width: 0; padding-top: 8px; }
+.qh-grid { position: relative; display: grid; grid-template-columns: minmax(0, 1fr) 380px; align-items: start; background: var(--color-canvas); border: 1px solid var(--color-line); border-radius: 16px; overflow: clip; }
+.qh-main { position: relative; display: flex; flex-direction: column; gap: 14px; min-width: 0; padding: 20px 24px; }
+.qh-side { display: flex; flex-direction: column; gap: 14px; min-width: 0; align-self: stretch; padding: 20px 18px; background: var(--color-white); border-left: 1px solid var(--color-line); }
+
+.qh-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px; }
+.qh-head h1 { margin: 0; font-size: 22px; line-height: 28px; font-weight: 700; color: var(--color-ink); letter-spacing: -0.01em; }
+.qh-head p { margin: 0; font-size: 12.5px; color: var(--color-ink-2); }
+.qh-live { margin-left: auto; display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; color: var(--color-ink-3); }
+.qh-live i { width: 7px; height: 7px; border-radius: 99px; background: var(--color-line-2); }
+.qh-live.is-on i { background: var(--color-ok); }
+
+/* Künye: Kurul / Ders / Sınav yılı / Soru no */
+.qh-meta { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr) minmax(0, 1fr) 88px; gap: 10px; }
+.qh-field { display: flex; flex-direction: column; gap: 4px; min-width: 0; font-size: 12px; font-weight: 600; color: var(--color-ink-2); }
+.qh-field > span { display: flex; align-items: center; gap: 6px; min-height: 16px; }
+.qh-field select, .qh-field input { width: 100%; height: 38px; min-width: 0; padding: 0 8px; border: 1px solid var(--color-line); border-radius: 9px; background: var(--color-white); color: var(--color-ink); font: inherit; font-size: 14px; font-weight: 500; color-scheme: light dark; }
+.qh-field input { font-variant-numeric: tabular-nums; }
+.qh-field select:focus-visible, .qh-field input:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 1px; border-color: var(--color-accent); }
+.qh-auto { display: inline-flex; align-items: center; gap: 3px; font-style: normal; font-size: 11px; font-weight: 600; color: var(--color-accent); }
+.qh-auto svg { width: 11px; height: 11px; }
+
+.qh-block { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.qh-label { font-size: 12px; font-weight: 600; color: var(--color-ink-2); }
+.ms-composer.qh-stem { border-radius: 10px; border: 1.5px solid var(--color-line); background: var(--color-white); }
+.ms-composer.qh-stem:focus-within { border-color: var(--color-accent); }
+
+/* Şıklar A–E, doğru olan radyo ile */
+.qh-opts { display: flex; flex-direction: column; gap: 6px; min-width: 0; margin: 0; padding: 0; border: 0; }
+.qh-opts legend { padding: 0 0 6px; font-size: 12px; font-weight: 600; color: var(--color-ink-2); }
+.qh-opt { display: flex; align-items: center; gap: 10px; min-height: 46px; padding: 0 12px; border: 1px solid var(--color-line); border-radius: 10px; background: var(--color-white); }
+.qh-opt:focus-within { border-color: var(--color-accent); }
+.qh-opt.is-ok { border: 1.5px solid var(--color-ok); background: var(--color-ok-soft); }
+.qh-opt input[type="radio"] { width: 18px; height: 18px; flex-shrink: 0; margin: 0; accent-color: var(--color-ok); cursor: pointer; }
+.qh-opt .k { width: 18px; flex-shrink: 0; font-weight: 700; color: var(--color-ink-3); }
+.qh-opt.is-ok .k { color: var(--color-ok); }
+.qh-opt input.t { flex: 1; min-width: 0; height: 40px; padding: 0; border: 0; outline: none; background: transparent; color: var(--color-ink); font: inherit; font-size: 14px; font-weight: 500; }
+.qh-opt input.t::placeholder { color: var(--color-ink-3); font-weight: 400; }
+.qh-why { display: flex; gap: 8px; align-items: center; }
+.qh-why input { flex: 1; min-width: 0; height: 38px; padding: 0 10px; border: 1px solid var(--color-line); border-radius: 9px; background: var(--color-white); color: var(--color-ink); font: inherit; font-size: 13.5px; }
+.qh-why button { flex-shrink: 0; min-height: 36px; padding: 0 10px; border: 0; border-radius: 8px; background: transparent; color: var(--color-ink-2); font: inherit; font-size: 12.5px; font-weight: 600; cursor: pointer; }
+.qh-why button:hover { background: var(--color-field); }
+
+.qh-disc { display: inline-flex; align-items: center; gap: 6px; align-self: flex-start; min-height: 32px; padding: 0 6px 0 0; border: 0; background: transparent; color: var(--color-ink-2); font: inherit; font-size: 12.5px; font-weight: 600; cursor: pointer; }
+.qh-disc small { font-size: 11.5px; font-weight: 400; color: var(--color-ink-3); }
+.qh-disc svg { width: 15px; height: 15px; transition: transform var(--mo-fast, 120ms); }
+.qh-disc svg.is-open { transform: rotate(180deg); }
+.qh-clue { width: 100%; min-height: 64px; padding: 8px 10px; border: 1px solid var(--color-line); border-radius: 10px; background: var(--color-white); color: var(--color-ink); font: inherit; font-size: 14px; line-height: 1.5; resize: vertical; }
+
+.qh-note { display: flex; align-items: center; gap: 8px; padding: 8px 12px; border-radius: 10px; font-size: 13px; line-height: 1.4; background: var(--color-field); color: var(--color-ink-2); }
+.qh-note > svg { width: 15px; height: 15px; flex-shrink: 0; }
+.qh-note > span { flex: 1; min-width: 0; }
+.qh-note.is-warn { background: var(--color-warn-soft); color: var(--color-warn); }
+.qh-note.is-bad { background: var(--color-bad-soft); color: var(--color-bad-text); }
+.qh-note.is-ok { background: var(--color-ok-soft); color: var(--color-ok); }
+.qh-note.is-draft { background: var(--color-accent-soft); color: var(--color-ink); }
+.qh-note button { flex-shrink: 0; min-height: 30px; padding: 0 10px; border: 0; border-radius: 8px; background: var(--color-accent); color: var(--color-on-accent); font: inherit; font-size: 12.5px; font-weight: 600; cursor: pointer; }
+.qh-note button.is-quiet { background: transparent; color: inherit; }
+.qh-note button.is-quiet:hover { background: color-mix(in srgb, var(--color-ink) 8%, transparent); }
+.qh-note button svg { width: 14px; height: 14px; }
+
+.qh-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 2px; }
+.qh-btn { height: 42px; padding: 0 16px; border: 1px solid var(--color-line); border-radius: 10px; background: var(--color-white); color: var(--color-ink); font: inherit; font-size: 14px; font-weight: 600; cursor: pointer; }
+.qh-btn:hover:not(:disabled) { background: var(--color-field); }
+.qh-btn.is-primary { padding: 0 20px; border-color: transparent; background: var(--color-accent); color: var(--color-on-accent); font-weight: 700; }
+.qh-btn.is-primary:hover:not(:disabled) { background: var(--color-accent-hover); }
+.qh-btn:disabled { opacity: .55; cursor: not-allowed; }
+.qh-kbd { margin-left: auto; font-size: 11.5px; color: var(--color-ink-3); }
+
+/* Sağ bölme: benzer sorular */
+.qh-sec { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+.qh-sec-h { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.qh-sec-h h2 { margin: 0; font-size: 14px; font-weight: 650; color: var(--color-ink); }
+.qh-sec-h button { min-height: 28px; padding: 0 6px; border: 0; background: transparent; color: var(--color-accent); font: inherit; font-size: 12px; font-weight: 600; cursor: pointer; }
+.qh-sub { margin: 8px 0 0; font-size: 12px; font-weight: 650; color: var(--color-ink-2); }
+.qh-empty { margin: 0; padding: 12px; border: 1px dashed var(--color-line); border-radius: 10px; font-size: 12.5px; line-height: 1.5; color: var(--color-ink-3); }
+.qh-skels { display: flex; flex-direction: column; gap: 8px; }
+.qh-skel { display: flex; flex-direction: column; gap: 6px; padding: 10px 12px; border: 1px solid var(--color-line); border-radius: 10px; }
+.qh-skel span { display: block; height: 10px; }
+.qh-skel span:first-child { width: 72px; height: 14px; }
+.qh-skel span:last-child { width: 60%; }
+
+.qh-sim { display: flex; flex-direction: column; gap: 6px; min-width: 0; padding: 10px 12px; border: 1px solid var(--color-line); border-radius: 10px; background: var(--color-white); }
+.qh-sim.is-sel { border-color: var(--color-accent); box-shadow: 0 0 0 1px var(--color-accent); }
+.qh-sim.is-past { background: var(--color-canvas); }
+.qh-sim-top { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
+.qh-check { display: inline-grid; place-items: center; width: 28px; height: 28px; margin: -4px -2px -4px -6px; border: 0; border-radius: 7px; background: transparent; color: var(--color-ink-3); cursor: pointer; }
+.qh-check[aria-pressed="true"] { color: var(--color-accent); }
+.qh-check svg { width: 16px; height: 16px; }
+.qh-risk { font-size: 11px; font-weight: 700; padding: 1px 7px; border-radius: 6px; }
+.qh-risk.is-bad { background: var(--color-bad-soft); color: var(--color-bad-text); }
+.qh-risk.is-warn { background: var(--color-warn-soft); color: var(--color-warn); }
+.qh-risk.is-mid { background: var(--color-field); color: var(--color-ink-2); }
+.qh-tag { font-size: 10.5px; font-weight: 700; padding: 1px 6px; border-radius: 6px; background: var(--color-accent-soft); color: var(--color-accent); }
+.qh-tag.is-ai { background: var(--color-ai-soft); color: var(--color-ai); }
+.qh-num { margin-left: auto; font-size: 11.5px; font-weight: 600; font-variant-numeric: tabular-nums; color: var(--color-ink-3); }
+.qh-sim-t { margin: 0; font-size: 13px; line-height: 1.45; color: var(--color-ink); display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; overflow-wrap: anywhere; }
+.qh-past-opts { margin: 0; padding: 0; list-style: none; display: grid; gap: 1px; font-size: 12px; color: var(--color-ink-2); }
+.qh-past-opts li { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.qh-past-opts li b { font-weight: 600; color: var(--color-ink-3); }
+.qh-past-opts li.is-ok { color: var(--color-ok); font-weight: 600; }
+.qh-sim-act { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
+.qh-sim-act button { display: inline-flex; align-items: center; gap: 4px; min-height: 30px; padding: 0 9px; border: 1px solid var(--color-line); border-radius: 8px; background: var(--color-white); color: var(--color-ink); font: inherit; font-size: 12px; font-weight: 600; cursor: pointer; }
+.qh-sim-act button:hover { background: var(--color-field); }
+.qh-sim-act button.is-ai { border-color: transparent; background: var(--color-accent-soft); color: var(--color-accent); }
+.qh-sim-act button svg { width: 13px; height: 13px; }
+.qh-sim-d { margin-left: auto; font-size: 11.5px; color: var(--color-ink-3); min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.qh-sim.is-past .qh-sim-d { margin-left: 0; }
+
+.qh-merge { position: sticky; bottom: 12px; z-index: 5; display: flex; align-items: center; gap: 8px; padding: 8px 10px; border-radius: 12px; background: var(--color-ink); color: var(--color-canvas); box-shadow: var(--shadow-lg); }
+.qh-merge .n { display: inline-grid; place-items: center; width: 22px; height: 22px; border-radius: 99px; background: var(--color-accent); color: var(--color-on-accent); font-size: 11.5px; font-weight: 700; }
+.qh-merge .t { flex: 1; min-width: 0; font-size: 12.5px; font-weight: 600; }
+.qh-merge button { display: inline-flex; align-items: center; gap: 4px; min-height: 30px; padding: 0 10px; border: 0; border-radius: 8px; background: transparent; color: inherit; font: inherit; font-size: 12.5px; font-weight: 600; cursor: pointer; }
+.qh-merge button.is-primary { background: var(--color-accent); color: var(--color-on-accent); }
+.qh-merge button:disabled { opacity: .55; }
+.qh-merge button svg { width: 13px; height: 13px; }
+
+/* Öneri kutusu */
+.qh-tip { display: flex; flex-direction: column; gap: 6px; padding: 12px 14px; border-radius: 12px; background: var(--color-accent-soft); color: var(--color-ink); font-size: 13px; line-height: 1.5; }
+.qh-tip strong { display: inline-flex; align-items: center; gap: 6px; color: var(--color-accent); }
+.qh-tip strong svg { width: 14px; height: 14px; }
+.qh-topics { display: flex; flex-wrap: wrap; align-items: center; gap: 4px; color: var(--color-ink-2); font-size: 12.5px; }
+.qh-topics em { font-style: normal; padding: 1px 8px; border-radius: 99px; background: var(--color-white); color: var(--color-ink); font-size: 12px; font-weight: 600; }
+.qh-tip-btn { align-self: flex-start; display: inline-flex; align-items: center; gap: 4px; min-height: 32px; padding: 0 12px; border: 0; border-radius: 8px; background: var(--color-accent); color: var(--color-on-accent); font: inherit; font-size: 12.5px; font-weight: 600; cursor: pointer; }
+.qh-tip-btn svg { width: 13px; height: 13px; }
+
+/* Akış modu ve tablet: tek sütun, benzerler formun altında */
+html[data-layout="akis"] .qh-grid { grid-template-columns: minmax(0, 1fr); }
+html[data-layout="akis"] .qh-side { border-left: 0; border-top: 1px solid var(--color-line); }
+@media (max-width: 1099px) {
+  .qh-grid { grid-template-columns: minmax(0, 1fr); }
+  .qh-side { border-left: 0; border-top: 1px solid var(--color-line); }
+  .qh-meta { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 1099px) and (min-width: 900px) {
+  .qh-meta { grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr) minmax(0, 1fr) 88px; }
+}
+html[data-layout="odak"] .qh-grid { grid-template-columns: minmax(0, 1fr) 420px; }
+@media (max-width: 1099px) { html[data-layout="odak"] .qh-grid { grid-template-columns: minmax(0, 1fr); } }
+@media (pointer: coarse) {
+  .qh-field select, .qh-field input, .qh-btn { min-height: 44px; }
+  .qh-sim-act button, .qh-why button, .qh-note button { min-height: 40px; }
+}

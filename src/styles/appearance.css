@@ -88,12 +88,38 @@ html.ui-v7 .cx-q { padding: calc(var(--dn-pad) * .75) var(--dn-pad) calc(var(--d
 html.ui-v7 .cx-q .ms-stem { font-size: calc(var(--dn-read) - 0px); }
 html.ui-v7 .cx-opt { font-size: calc(var(--dn-read) - 1px); }
 
-/* Tema geçişi: renkler yumuşak akar, düzen zıplamaz */
-html.theme-switching, html.theme-switching *, html.theme-switching *::before, html.theme-switching *::after {
-  transition: background-color .28s var(--ms-ease, ease), color .28s var(--ms-ease, ease), border-color .28s var(--ms-ease, ease), fill .28s, stroke .28s !important;
+/* Tema geçişi (utils/appearance.ts → switchAppearance): örtü altında tema geçişsiz ve tek seferde uygulanır;
+ * yalnız örtünün zemini/yazısı yeni temaya akar. Her öğeye geçiş verilmez (takılma + yarım kalan renkler). */
+html.theme-switching *:not(.theme-cover, .theme-cover *),
+html.theme-switching *:not(.theme-cover, .theme-cover *)::before,
+html.theme-switching *:not(.theme-cover, .theme-cover *)::after { transition: none !important; }
+.theme-cover {
+  position: fixed; inset: 0; z-index: 2147483000;
+  display: grid; place-items: center;
+  background: var(--color-canvas); color: var(--color-ink);
+  opacity: 0; pointer-events: none;
+  transition: opacity 180ms var(--mo-ease, ease), background-color 300ms var(--mo-ease, ease), color 300ms var(--mo-ease, ease);
 }
+.theme-cover[hidden] { display: none; }
+.theme-cover.is-on { opacity: 1; pointer-events: auto; }
+.theme-cover:not(.is-on) { transition-duration: 280ms, 300ms, 300ms; }
+.theme-cover-box {
+  display: grid; justify-items: center; gap: 6px; text-align: center;
+  transform: translateY(6px) scale(.97); opacity: 0;
+  transition: transform 320ms var(--mo-spring, ease), opacity 200ms ease;
+}
+.theme-cover.is-on .theme-cover-box { transform: none; opacity: 1; }
+.theme-cover-ring {
+  width: 34px; height: 34px; margin-bottom: 8px; border-radius: 50%;
+  border: 3px solid color-mix(in srgb, var(--color-accent) 22%, transparent);
+  border-top-color: var(--color-accent);
+  animation: ui-spin .75s linear infinite;
+  transition: border-color 300ms ease;
+}
+.theme-cover-box b { font-size: 15px; font-weight: 600; letter-spacing: -.01em; }
+.theme-cover-box small { font-size: 12.5px; color: var(--color-ink-3); transition: color 300ms ease; }
 @media (prefers-reduced-motion: reduce) {
-  html.theme-switching, html.theme-switching * { transition: none !important; }
+  .theme-cover, .theme-cover-box, .theme-cover-ring { transition: none !important; }
 }
 
 /* ---------- 3. v8 bileşenleri (.ui-*) ----------

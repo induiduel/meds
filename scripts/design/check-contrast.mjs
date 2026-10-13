@@ -24,6 +24,7 @@ for (const p of PALETTES) {
   fails += bad.length;
   console.log(`${bad.length ? '✗' : '✓'} ${key.padEnd(8)} ${p.name.padEnd(14)} ${bad.join(', ')}`);
 }
-for (const m of ['light', 'sepia', 'dark']) { const n = PALETTES.filter((p) => p.mode === m).length; if (n !== 4) { console.log(`✗ ${m}: ${n} palet (4 olmalı)`); fails++; } }
+// Tema başına en az 4 palet (v10: açıkta X serisiyle 7, koyuda 6); kimlikler tema içinde benzersiz olmalı
+for (const m of ['light', 'sepia', 'dark']) { const ps = PALETTES.filter((p) => p.mode === m); if (ps.length < 4) { console.log(`✗ ${m}: ${ps.length} palet (en az 4)`); fails++; } if (new Set(ps.map((p) => p.id)).size !== ps.length) { console.log(`✗ ${m}: yinelenen palet kimliği`); fails++; } }
 console.log(fails ? `\n${fails} sorun` : `\n${PALETTES.length} palet × ${PAIRS.length} çift: tümü eşiğin üstünde`);
 process.exit(fails ? 1 : 0);

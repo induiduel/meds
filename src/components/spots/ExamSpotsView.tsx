@@ -1,146 +1,81 @@
-import React, { useEffect, useMemo, useState } from 'react';
-import { AlertTriangle, BookMarked, Check, ChevronDown, Eye, EyeOff, Search, Star, X } from 'lucide-react';
-import { PageHeader } from '../ui/PageHeader';
-import { disciplineClass } from '../../utils/discipline';
+import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { Search, X } from 'lucide-react';
+import { useStorageRefresh } from '../../hooks/useStorageRefresh';
+import { SpotCard } from './SpotCard';
+import { ANAHTAR, KATEGORILER, Kategori, Spot, Veri, azHareket, kucuk, okuOgrenilen, yazOgrenilen } from './spotsShared';
+
+export { KATEGORILER };
 
 /**
  * Sınav spotları (Kurul 1). Veri: src/data/exam_spots_k1.json — scripts/sinav_spotlari/birlestir.py üretir;
  * her spotun ders notundan birebir alıntısı dogrula.py ile denetlenir. Sayfa yalnız gösterir.
- * Yapı: başlık · Oku/Kendini sına · arama + ders/disiplin süzgeci · kategori şeridi · ders ders (ya da kategori
- * kategori) gruplanmış spot kartları. "Öğrendim" işareti tarayıcıda (medsoru_spot_ogrendim) tutulur.
- * Stil: styles/spots.css (.xs-*).
+ * Yerleşim (kapsayıcı genişliğine göre, styles/spots.css .xs-*):
+ *  - telefon: başlık (ilerleme halkası) · Oku/Kendini sına · ders hapları · kategori çipleri · tek sütun kart
+ *  - tablet: aynı şeritler, kartlar 2 sütun
+ *  - masaüstü: ders rayı (260) | 2 sütun kart | süzgeç paneli (280: arama, kategori, önem)
+ * Kartlar 30'ar 30'ar çizilir (IntersectionObserver). ?id=<spotId> ile gelen spota kaydırılır ve vurgulanır.
+ * "Öğrendim" işareti tarayıcıda (medsoru_spot_ogrendim) tutulur; profil eşitlemesi useStorageRefresh ile gelir.
  */
 
-type Kategori = 'en_sik' | 'karakteristik' | 'sayi' | 'eslesme' | 'tani_tedavi' | 'mekanizma' | 'tuzak' | 'siniflama';
-
-interface Spot {
-  id: string;
-  ders: number;
-  kategori: Kategori;
-  onem: 1 | 2 | 3;
-  baslik: string;
-  spot: string;
-  maddeler?: string[];
-  soru?: string;
-  cevap?: string;
-  tuzak?: string;
-  karsilastir?: { basliklar: string[]; satirlar: string[][] } | null;
-  etiketler?: string[];
-  kaynak: { satir?: number; alinti: string }[];
-}
-interface Ders { no: number; id: string; baslik: string; disiplin: string; hoca?: string; sayi: number }
-interface Veri { dersler: Ders[]; spotlar: Spot[] }
-
-export const KATEGORILER: { id: Kategori; ad: string; kisa: string; aciklama: string }[] = [
-  { id: 'en_sik', ad: 'En sık · en az · tek', kisa: 'En sık', aciklama: 'En sık, en az, en çok, tek, ilk ifadeleri' },
-  { id: 'karakteristik', ad: 'Karakteristik bulgu', kisa: 'Karakteristik', aciklama: 'Patognomonik, tipik görünüm, triad' },
-  { id: 'tuzak', ad: 'Tuzak & çeldirici', kisa: 'Tuzak', aciklama: 'Karıştırılan kavramlar, klasik çeldiriciler' },
-  { id: 'eslesme', ad: 'Eşleştir', kisa: 'Eşleştir', aciklama: 'Etken → hastalık, gen → sendrom, belirteç → tümör' },
-  { id: 'sayi', ad: 'Sayı & oran', kisa: 'Sayı', aciklama: 'Yüzde, eşik, süre, doz' },
-  { id: 'tani_tedavi', ad: 'Tanı & tedavi', kisa: 'Tanı/Tedavi', aciklama: 'İlk tercih, altın standart, tanı testi' },
-  { id: 'mekanizma', ad: 'Mekanizma', kisa: 'Mekanizma', aciklama: 'Sınavda sorulan neden–sonuç' },
-  { id: 'siniflama', ad: 'Sınıflama', kisa: 'Sınıflama', aciklama: 'Tip, evre, derece ayrımı' },
+const SAYFA = 30;
+type OnemSuzgec = 'hepsi' | 'yuksek' | 'ogrenilmemis';
+const ONEM_SECENEK: { id: OnemSuzgec; ad: string }[] = [
+  { id: 'hepsi', ad: 'Hepsi' },
+  { id: 'yuksek', ad: 'Yüksek' },
+  { id: 'ogrenilmemis', ad: 'Öğrenilmemiş' },
 ];
-const KAT = Object.fromEntries(KATEGORILER.map((k) => [k.id, k])) as Record<Kategori, (typeof KATEGORILER)[number]>;
 
-const ANAHTAR = 'medsoru_spot_ogrendim';
-const okuOgrenilen = (): Set<string> => {
-  try { return new Set(JSON.parse(localStorage.getItem(ANAHTAR) || '[]')); } catch { return new Set(); }
-};
-const yazOgrenilen = (s: Set<string>) => {
-  try { localStorage.setItem(ANAHTAR, JSON.stringify([...s])); } catch { /* özel pencere */ }
-};
+const tr = (n: number) => n.toLocaleString('tr-TR');
 
-const kucuk = (s: string) => s.toLocaleLowerCase('tr-TR');
-
-/** **kalın** → <strong>; başka biçim yok */
-const Zengin: React.FC<{ metin: string }> = ({ metin }) => (
-  <>
-    {metin.split(/(\*\*[^*]+\*\*)/g).map((p, i) =>
-      p.startsWith('**') && p.endsWith('**') ? <strong key={i}>{p.slice(2, -2)}</strong> : <React.Fragment key={i}>{p}</React.Fragment>
-    )}
-  </>
-);
-
-const Yildiz: React.FC<{ n: number }> = ({ n }) => (
-  <span className="xs-stars" aria-label={`Önem ${n}/3`} title={n === 3 ? 'Kesin sorulur' : n === 2 ? 'Sık sorulur' : 'Destekleyici'}>
-    {[1, 2, 3].map((i) => <Star key={i} size={11} className={i <= n ? 'is-on' : ''} aria-hidden />)}
-  </span>
-);
-
-const SpotKart: React.FC<{ s: Spot; sinav: boolean; ogrenildi: boolean; onOgren: () => void; dersAdi?: string }> = ({ s, sinav, ogrenildi, onOgren, dersAdi }) => {
-  const [acik, setAcik] = useState(false);
-  const gizli = sinav && !acik;
+/** Öğrenilen yüzdesi halkası */
+const Halka: React.FC<{ oran: number }> = ({ oran }) => {
+  const r = 17;
+  const c = 2 * Math.PI * r;
+  const yuzde = Math.round(oran * 100);
   return (
-    <article className={`xs-card is-${s.kategori} ${ogrenildi ? 'is-done' : ''}`}>
-      <header className="xs-card-h">
-        <span className={`xs-pill is-${s.kategori}`}>{KAT[s.kategori]?.kisa}</span>
-        <Yildiz n={s.onem} />
-        {dersAdi && <span className="xs-card-ders">{dersAdi}</span>}
-        <button type="button" className={`xs-done ${ogrenildi ? 'is-on' : ''}`} onClick={onOgren} aria-pressed={ogrenildi} title="Öğrendim">
-          <Check size={14} aria-hidden /><span>{ogrenildi ? 'Öğrendim' : 'Öğren'}</span>
-        </button>
-      </header>
-      <h3 className="xs-title">{s.baslik}</h3>
-      {gizli ? (
-        <button type="button" className="xs-ask" onClick={() => setAcik(true)}>
-          <span>{s.soru || 'Bu spotu hatırlıyor musun?'}</span>
-          <span className="xs-ask-btn"><Eye size={14} aria-hidden /> Cevabı göster</span>
-        </button>
-      ) : (
-        <div className="xs-body">
-          {sinav && s.cevap && <p className="xs-answer"><span>Cevap</span> {s.cevap}</p>}
-          <p className="xs-spot"><Zengin metin={s.spot} /></p>
-          {!!s.maddeler?.length && (
-            <ul className="xs-list">{s.maddeler.map((m, i) => <li key={i}><Zengin metin={m} /></li>)}</ul>
-          )}
-          {s.karsilastir && s.karsilastir.basliklar?.length > 0 && (
-            <div className="xs-table-wrap">
-              <table className="xs-table">
-                <thead><tr><th scope="col" />{s.karsilastir.basliklar.map((b) => <th key={b} scope="col">{b}</th>)}</tr></thead>
-                <tbody>
-                  {s.karsilastir.satirlar.map((r, i) => (
-                    <tr key={i}><th scope="row">{r[0]}</th>{r.slice(1).map((c, j) => <td key={j}><Zengin metin={c} /></td>)}</tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          )}
-          {s.tuzak && (
-            <div className="xs-trap" role="note">
-              <AlertTriangle size={15} aria-hidden />
-              <p><b>Tuzak:</b> <Zengin metin={s.tuzak} /></p>
-            </div>
-          )}
-          {!!s.kaynak?.length && (
-            <details className="xs-src">
-              <summary><BookMarked size={13} aria-hidden /> Ders notundaki yeri</summary>
-              {s.kaynak.map((k, i) => (
-                <blockquote key={i}>“{k.alinti}”{k.satir ? <cite> · satır {k.satir}</cite> : null}</blockquote>
-              ))}
-            </details>
-          )}
-        </div>
-      )}
-    </article>
+    <span className="xs-ring" role="img" aria-label={`Yüzde ${yuzde} öğrenildi`}>
+      <svg viewBox="0 0 40 40" aria-hidden>
+        <circle cx="20" cy="20" r={r} className="xs-ring-bg" />
+        <circle cx="20" cy="20" r={r} className="xs-ring-fg" strokeDasharray={c} strokeDashoffset={c * (1 - oran)} />
+      </svg>
+      <b aria-hidden>%{yuzde}</b>
+    </span>
   );
 };
 
-const SAYFA = 40;
+/** Yüklenirken gerçek kart biçiminde iskelet */
+const IskeletKart: React.FC<{ i: number }> = ({ i }) => (
+  <div className="xs-card xs-card-skel" aria-hidden>
+    <div className="xs-card-top"><span className="ui-skel" style={{ width: 64, height: 18 }} /><span className="ui-skel" style={{ width: 18, height: 12 }} /></div>
+    <span className="ui-skel" style={{ width: `${55 + (i % 3) * 12}%`, height: 17 }} />
+    <span className="ui-skel" style={{ width: '100%', height: 13 }} />
+    <span className="ui-skel" style={{ width: `${70 + (i % 2) * 18}%`, height: 13 }} />
+    {i % 2 === 0 && <span className="ui-skel" style={{ width: '100%', height: 36, borderRadius: 10 }} />}
+    <div className="xs-card-f"><span className="ui-skel" style={{ width: 96, height: 30, borderRadius: 8 }} /><span className="ui-skel" style={{ width: 70, height: 30, borderRadius: 8 }} /></div>
+  </div>
+);
 
 export const ExamSpotsView: React.FC = () => {
   const [veri, setVeri] = useState<Veri | null>(null);
   const [hata, setHata] = useState(false);
   const [q, setQ] = useState('');
-  const [kat, setKat] = useState<Kategori | 'hepsi'>('hepsi');
-  const [ders, setDers] = useState<number | 0>(0);
-  const [disiplin, setDisiplin] = useState('');
-  const [yalnizOnemli, setYalnizOnemli] = useState(false);
-  const [gizleOgrenilen, setGizleOgrenilen] = useState(false);
+  const [aramaAcik, setAramaAcik] = useState(false);
+  const [ders, setDers] = useState(0); // 0 = tüm dersler
+  const [katlar, setKatlar] = useState<Set<Kategori>>(() => new Set()); // boş = hepsi
+  const [onemS, setOnemS] = useState<OnemSuzgec>('hepsi');
   const [sinav, setSinav] = useState(false);
-  const [grup, setGrup] = useState<'ders' | 'kategori'>('ders');
   const [ogrenilen, setOgrenilen] = useState<Set<string>>(okuOgrenilen);
+  useStorageRefresh([ANAHTAR], () => setOgrenilen(okuOgrenilen()));
   const [limit, setLimit] = useState(SAYFA);
+  const [odak, setOdak] = useState<string | null>(() => {
+    try { return new URLSearchParams(window.location.search).get('id'); } catch { return null; }
+  });
+  const [vurgu, setVurgu] = useState<string | null>(null);
+
+  const sayfaRef = useRef<HTMLDivElement>(null);
+  const seritRef = useRef<HTMLDivElement>(null);
+  const bekciRef = useRef<HTMLDivElement>(null);
+  const aramaRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
     let iptal = false;
@@ -150,147 +85,328 @@ export const ExamSpotsView: React.FC = () => {
     return () => { iptal = true; };
   }, []);
 
-  useEffect(() => { setLimit(SAYFA); }, [q, kat, ders, disiplin, yalnizOnemli, gizleOgrenilen, grup]);
+  // Arama için her spotun küçük harfli metni bir kez hazırlanır
+  const aramaMetni = useMemo(() => {
+    const m = new Map<string, string>();
+    for (const s of veri?.spotlar || []) {
+      m.set(s.id, kucuk([s.baslik, s.spot, s.tuzak, s.cevap, s.soru, ...(s.maddeler || []), ...(s.etiketler || [])].filter(Boolean).join(' ')));
+    }
+    return m;
+  }, [veri]);
 
   const dersMap = useMemo(() => new Map((veri?.dersler || []).map((d) => [d.no, d])), [veri]);
-  const disiplinler = useMemo(() => [...new Set((veri?.dersler || []).map((d) => d.disiplin))].sort((a, b) => a.localeCompare(b, 'tr')), [veri]);
 
-  const temelSuzgec = useMemo(() => {
-    if (!veri) return [];
-    const qq = kucuk(q.trim());
+  // Ders başına toplam / öğrenilen (ray ilerleme çubukları)
+  const dersToplam = useMemo(() => {
+    const m = new Map<number, number>();
+    for (const s of veri?.spotlar || []) m.set(s.ders, (m.get(s.ders) || 0) + 1);
+    return m;
+  }, [veri]);
+  const dersOgrenilen = useMemo(() => {
+    const m = new Map<number, number>();
+    for (const s of veri?.spotlar || []) if (ogrenilen.has(s.id)) m.set(s.ders, (m.get(s.ders) || 0) + 1);
+    return m;
+  }, [veri, ogrenilen]);
+
+  // Kategori dışındaki süzgeçler (kategori sayıları buradan)
+  const temel = useMemo(() => {
+    if (!veri) return [] as Spot[];
+    const kelimeler = kucuk(q.trim()).split(/\s+/).filter(Boolean);
     return veri.spotlar.filter((s) => {
       if (ders && s.ders !== ders) return false;
-      if (disiplin && dersMap.get(s.ders)?.disiplin !== disiplin) return false;
-      if (yalnizOnemli && s.onem < 3) return false;
-      if (gizleOgrenilen && ogrenilen.has(s.id)) return false;
-      if (qq) {
-        const t = kucuk([s.baslik, s.spot, s.tuzak, s.cevap, ...(s.maddeler || []), ...(s.etiketler || [])].join(' '));
-        if (!qq.split(/\s+/).every((w) => t.includes(w))) return false;
+      if (onemS === 'yuksek' && s.onem < 3) return false;
+      if (onemS === 'ogrenilmemis' && ogrenilen.has(s.id)) return false;
+      if (kelimeler.length) {
+        const t = aramaMetni.get(s.id) || '';
+        if (!kelimeler.every((w) => t.includes(w))) return false;
       }
       return true;
     });
-  }, [veri, q, ders, disiplin, yalnizOnemli, gizleOgrenilen, ogrenilen, dersMap]);
+  }, [veri, ders, onemS, ogrenilen, q, aramaMetni]);
 
   const katSayi = useMemo(() => {
-    const m: Record<string, number> = {};
-    for (const s of temelSuzgec) m[s.kategori] = (m[s.kategori] || 0) + 1;
+    const m: Partial<Record<Kategori, number>> = {};
+    for (const s of temel) m[s.kategori] = (m[s.kategori] || 0) + 1;
     return m;
-  }, [temelSuzgec]);
+  }, [temel]);
 
-  const liste = useMemo(() => (kat === 'hepsi' ? temelSuzgec : temelSuzgec.filter((s) => s.kategori === kat))
-    .slice().sort((a, b) => (grup === 'ders' ? a.ders - b.ders : 0) || (grup === 'kategori' ? KATEGORILER.findIndex((k) => k.id === a.kategori) - KATEGORILER.findIndex((k) => k.id === b.kategori) : 0) || b.onem - a.onem),
-  [temelSuzgec, kat, grup]);
+  const liste = useMemo(
+    () => (katlar.size ? temel.filter((s) => katlar.has(s.kategori)) : temel).slice().sort((a, b) => a.ders - b.ders),
+    [temel, katlar],
+  );
 
-  const gorunen = liste.slice(0, limit);
-  const gruplar = useMemo(() => {
-    const out: { anahtar: string; baslik: string; alt?: string; disiplin?: string; ogeler: Spot[] }[] = [];
-    for (const s of gorunen) {
-      const anahtar = grup === 'ders' ? `d${s.ders}` : s.kategori;
-      let g = out[out.length - 1];
-      if (!g || g.anahtar !== anahtar) {
-        const d = dersMap.get(s.ders);
-        g = grup === 'ders'
-          ? { anahtar, baslik: `${s.ders}. ${d?.baslik || 'Ders'}`, alt: d?.disiplin, disiplin: d?.disiplin, ogeler: [] }
-          : { anahtar, baslik: KAT[s.kategori].ad, alt: KAT[s.kategori].aciklama, ogeler: [] };
-        out.push(g);
-      }
-      g.ogeler.push(s);
+  // Süzgeç değişince çizim sınırı başa döner
+  const katAnahtar = [...katlar].sort().join(',');
+  useEffect(() => { setLimit(SAYFA); }, [ders, katAnahtar, onemS, q]);
+
+  // Sona yaklaşınca 30 kart daha
+  useEffect(() => {
+    const el = bekciRef.current;
+    if (!el || liste.length <= limit) return;
+    const io = new IntersectionObserver((e) => {
+      if (e.some((x) => x.isIntersecting)) setLimit((l) => l + SAYFA);
+    }, { rootMargin: '800px 0px' });
+    io.observe(el);
+    return () => io.disconnect();
+  }, [limit, liste.length]);
+
+  // Derin bağlantı: önce spotun dersine geç, süzgeçleri aç ...
+  const odakHazir = useRef(false);
+  useEffect(() => {
+    if (!veri || !odak || odakHazir.current) return;
+    odakHazir.current = true;
+    const s = veri.spotlar.find((x) => x.id === odak);
+    if (!s) { setOdak(null); return; }
+    setDers(s.ders);
+    setKatlar(new Set());
+    setOnemS('hepsi');
+    setQ('');
+  }, [veri, odak]);
+  // ... sonra kart çizilene kadar sınırı büyüt, kaydır ve kısa süre vurgula
+  useEffect(() => {
+    if (!veri || !odak || !odakHazir.current) return;
+    const i = liste.findIndex((x) => x.id === odak);
+    if (i < 0) return;
+    if (i >= limit) { setLimit(i + SAYFA); return; }
+    const id = odak;
+    const raf = requestAnimationFrame(() => {
+      document.getElementById(`xs-${id}`)?.scrollIntoView({ block: 'center', behavior: azHareket() ? 'auto' : 'smooth' });
+      setVurgu(id);
+      setOdak(null);
+    });
+    return () => cancelAnimationFrame(raf);
+  }, [veri, odak, liste, limit]);
+  useEffect(() => {
+    if (!vurgu) return;
+    const t = window.setTimeout(() => setVurgu(null), 2400);
+    return () => window.clearTimeout(t);
+  }, [vurgu]);
+
+  // Seçili ders hapı şeritte görünür kalsın (sayfa dikey kaymadan)
+  useEffect(() => {
+    const serit = seritRef.current;
+    const hap = serit?.querySelector<HTMLElement>('[aria-selected="true"]');
+    if (!serit || !hap || !serit.clientWidth) return;
+    const sol = hap.offsetLeft - serit.offsetLeft;
+    if (sol < serit.scrollLeft || sol + hap.offsetWidth > serit.scrollLeft + serit.clientWidth) {
+      serit.scrollTo({ left: Math.max(0, sol - 16), behavior: azHareket() ? 'auto' : 'smooth' });
     }
-    return out;
-  }, [gorunen, grup, dersMap]);
+  }, [ders, veri]);
 
-  const ogren = (id: string) => setOgrenilen((p) => {
+  useEffect(() => { if (aramaAcik) aramaRef.current?.focus(); }, [aramaAcik]);
+
+  const ogren = useCallback((id: string) => setOgrenilen((p) => {
     const n = new Set(p);
     if (n.has(id)) n.delete(id); else n.add(id);
     yazOgrenilen(n);
     return n;
+  }), []);
+
+  const dersSec = (no: number) => {
+    setDers(no);
+    const el = sayfaRef.current;
+    if (el && el.getBoundingClientRect().top < 0) el.scrollIntoView({ block: 'start', behavior: azHareket() ? 'auto' : 'smooth' });
+  };
+  const katDegistir = (k: Kategori) => setKatlar((p) => {
+    const n = new Set(p);
+    if (n.has(k)) n.delete(k); else n.add(k);
+    return n;
   });
+  // Panel onay kutuları: boş küme "hepsi işaretli" görünür; birini kaldırmak = diğerlerini seç
+  const katKutu = (k: Kategori) => setKatlar((p) => {
+    if (p.size === 0) return new Set(KATEGORILER.map((x) => x.id).filter((x) => x !== k));
+    const n = new Set(p);
+    if (n.has(k)) n.delete(k); else n.add(k);
+    return n.size === KATEGORILER.length ? new Set() : n;
+  });
+  const temizle = () => { setKatlar(new Set()); setOnemS('hepsi'); setQ(''); };
 
   const toplam = veri?.spotlar.length || 0;
-  const ogrenilenSayi = veri ? veri.spotlar.filter((s) => ogrenilen.has(s.id)).length : 0;
+  const ogrenilenSayi = useMemo(() => [...dersOgrenilen.values()].reduce((a, b) => a + b, 0), [dersOgrenilen]);
+  const seciliDers = ders ? dersMap.get(ders) : undefined;
+  const suzgecVar = katlar.size > 0 || onemS !== 'hepsi' || !!q.trim();
+  const gorunen = liste.slice(0, limit);
+  const kapsamToplam = seciliDers ? dersToplam.get(seciliDers.no) || 0 : toplam;
+
+  const aramaKutusu = (cls: string, ref?: React.Ref<HTMLInputElement>) => (
+    <label className={`xs-search ${cls}`}>
+      <Search size={15} aria-hidden />
+      <input ref={ref} type="search" value={q} onChange={(e) => setQ(e.target.value)} placeholder="Spot ara (ör. en sık, Turner)" aria-label="Spotlarda ara"
+        onKeyDown={(e) => { if (e.key === 'Escape') { setQ(''); setAramaAcik(false); } }} />
+      {q && <button type="button" onClick={() => setQ('')} aria-label="Aramayı temizle"><X size={14} /></button>}
+    </label>
+  );
+
+  const onemGrubu = (cls: string) => (
+    <div className={`xs-seg xs-onem-seg ${cls}`} role="group" aria-label="Önem süzgeci">
+      {ONEM_SECENEK.map((o) => (
+        <button key={o.id} type="button" aria-pressed={onemS === o.id} className={onemS === o.id ? 'is-on' : ''} onClick={() => setOnemS(o.id)}>{o.ad}</button>
+      ))}
+    </div>
+  );
 
   return (
-    <div className="xs-page">
-      <PageHeader
-        title="Sınav spotları"
-        description="Ders notlarından birebir: en sık sorulanlar, ayırıcı bulgular, sayılar ve tuzaklar."
-        stats={veri ? [
-          { label: 'spot', value: toplam.toLocaleString('tr-TR') },
-          { label: 'ders', value: veri.dersler.length },
-          { label: 'öğrendim', value: ogrenilenSayi, tone: 'ok' },
-        ] : undefined}
-        actions={
-          <div className="xs-mode" role="group" aria-label="Görünüm">
-            <button type="button" aria-pressed={!sinav} className={!sinav ? 'is-on' : ''} onClick={() => setSinav(false)}><Eye size={14} aria-hidden /> Oku</button>
-            <button type="button" aria-pressed={sinav} className={sinav ? 'is-on' : ''} onClick={() => setSinav(true)}><EyeOff size={14} aria-hidden /> Kendini sına</button>
-          </div>
-        }
-      />
-
-      {hata && <p className="xs-empty">Spot verisi yüklenemedi. Sayfayı yenileyip tekrar dene.</p>}
-      {!veri && !hata && <p className="xs-empty">Yükleniyor…</p>}
-
-      {veri && (
-        <>
-          <div className="xs-filters">
-            <label className="xs-search">
-              <Search size={16} aria-hidden />
-              <input value={q} onChange={(e) => setQ(e.target.value)} placeholder="Spotlarda ara (ör. en sık, Turner, nefrotik)" aria-label="Spotlarda ara" />
-              {q && <button type="button" onClick={() => setQ('')} aria-label="Aramayı temizle"><X size={14} /></button>}
-            </label>
-            <select className="xs-select" value={disiplin} onChange={(e) => { setDisiplin(e.target.value); setDers(0); }} aria-label="Disiplin">
-              <option value="">Tüm disiplinler</option>
-              {disiplinler.map((d) => <option key={d} value={d}>{d}</option>)}
-            </select>
-            <select className="xs-select" value={ders} onChange={(e) => setDers(Number(e.target.value))} aria-label="Ders">
-              <option value={0}>Tüm dersler</option>
-              {veri.dersler.filter((d) => !disiplin || d.disiplin === disiplin).map((d) => <option key={d.no} value={d.no}>{d.no}. {d.baslik} ({d.sayi})</option>)}
-            </select>
-          </div>
-
-          <div className="xs-cats" role="tablist" aria-label="Kategori">
-            <button type="button" role="tab" aria-selected={kat === 'hepsi'} className={kat === 'hepsi' ? 'is-on' : ''} onClick={() => setKat('hepsi')}>
-              Tümü <b>{temelSuzgec.length}</b>
-            </button>
-            {KATEGORILER.map((k) => (
-              <button key={k.id} type="button" role="tab" aria-selected={kat === k.id} title={k.aciklama}
-                className={`is-${k.id} ${kat === k.id ? 'is-on' : ''}`} onClick={() => setKat(k.id)} disabled={!katSayi[k.id]}>
-                {k.kisa} <b>{katSayi[k.id] || 0}</b>
+    <div className="xs-page" ref={sayfaRef}>
+      <div className="xs-layout">
+        {/* ---------- Ders rayı (masaüstü) ---------- */}
+        <aside className="xs-rail" aria-label="Dersler">
+          <span className="xs-cap">Dersler · Kurul {veri?.kurul ?? 1}</span>
+          <div className="xs-rail-list" role="tablist" aria-orientation="vertical" aria-label="Ders seç">
+            {!veri && Array.from({ length: 8 }, (_, i) => <span key={i} className="ui-skel xs-rail-skel" />)}
+            {veri && (
+              <button type="button" role="tab" aria-selected={ders === 0} aria-controls="xs-grid" className={`xs-rail-i${ders === 0 ? ' is-on' : ''}`} onClick={() => dersSec(0)}>
+                <span className="xs-rail-no" aria-hidden>∑</span>
+                <span className="xs-rail-mid">
+                  <span className="xs-rail-t">Tüm dersler</span>
+                  <span className="xs-bar" aria-hidden><span style={{ width: `${toplam ? (ogrenilenSayi / toplam) * 100 : 0}%` }} /></span>
+                </span>
+                <span className="xs-rail-n">{tr(toplam)}</span>
               </button>
-            ))}
+            )}
+            {veri?.dersler.map((d) => {
+              const n = dersToplam.get(d.no) || 0;
+              const o = dersOgrenilen.get(d.no) || 0;
+              return (
+                <button key={d.no} type="button" role="tab" aria-selected={ders === d.no} aria-controls="xs-grid" title={`${d.baslik} · ${d.disiplin}`}
+                  className={`xs-rail-i${ders === d.no ? ' is-on' : ''}`} onClick={() => dersSec(d.no)}>
+                  <span className="xs-rail-no">{d.no}</span>
+                  <span className="xs-rail-mid">
+                    <span className="xs-rail-t">{d.baslik}</span>
+                    <span className="xs-bar" aria-hidden><span style={{ width: `${n ? (o / n) * 100 : 0}%` }} /></span>
+                  </span>
+                  <span className="xs-rail-n"><span className="sr-only">{o} / </span>{n}<span className="sr-only"> öğrenildi</span></span>
+                </button>
+              );
+            })}
           </div>
+        </aside>
 
-          <div className="xs-toggles">
-            <label><input type="checkbox" checked={yalnizOnemli} onChange={(e) => setYalnizOnemli(e.target.checked)} /> Yalnız ★★★ (kesin sorulur)</label>
-            <label><input type="checkbox" checked={gizleOgrenilen} onChange={(e) => setGizleOgrenilen(e.target.checked)} /> Öğrendiklerimi gizle</label>
-            <span className="xs-group-by">
-              Grupla:
-              <button type="button" className={grup === 'ders' ? 'is-on' : ''} onClick={() => setGrup('ders')}>Ders</button>
-              <button type="button" className={grup === 'kategori' ? 'is-on' : ''} onClick={() => setGrup('kategori')}>Kategori</button>
-            </span>
-          </div>
-
-          {liste.length === 0 && <p className="xs-empty">Bu süzgeçle spot yok.</p>}
-
-          {gruplar.map((g) => (
-            <section key={g.anahtar} className={`xs-group ${g.disiplin ? disciplineClass(g.disiplin) : `is-${g.anahtar}`}`}>
-              <h2 className="xs-group-h"><span>{g.baslik}</span>{g.alt && <small>{g.alt}</small>}</h2>
-              <div className="xs-grid">
-                {g.ogeler.map((s) => (
-                  <SpotKart key={s.id} s={s} sinav={sinav} ogrenildi={ogrenilen.has(s.id)} onOgren={() => ogren(s.id)}
-                    dersAdi={grup === 'kategori' ? dersMap.get(s.ders)?.baslik : undefined} />
-                ))}
+        {/* ---------- Orta sütun ---------- */}
+        <div className="xs-main">
+          <header className="xs-head">
+            <div className="xs-head-row">
+              <Halka oran={toplam ? ogrenilenSayi / toplam : 0} />
+              <div className="xs-head-t">
+                <h1>Sınav spotları</h1>
+                <span>{veri ? `${tr(ogrenilenSayi)} / ${tr(toplam)} öğrenildi · Kurul ${veri.kurul ?? 1}` : 'Yükleniyor…'}</span>
               </div>
-            </section>
-          ))}
+              <button type="button" className={`xs-icon-btn xs-search-toggle${aramaAcik || q ? ' is-on' : ''}`} aria-label="Ara" aria-expanded={aramaAcik || !!q}
+                onClick={() => setAramaAcik((v) => !v)}>
+                <Search size={17} aria-hidden />
+              </button>
+            </div>
+            {(aramaAcik || !!q) && aramaKutusu('xs-search-top', aramaRef)}
+            <div className="xs-seg xs-mode" role="tablist" aria-label="Mod">
+              <button type="button" role="tab" aria-selected={!sinav} className={!sinav ? 'is-on' : ''} onClick={() => setSinav(false)}>Oku</button>
+              <button type="button" role="tab" aria-selected={sinav} className={sinav ? 'is-on' : ''} onClick={() => setSinav(true)}>Kendini sına</button>
+            </div>
+          </header>
 
-          {liste.length > limit && (
-            <button type="button" className="xs-more" onClick={() => setLimit((l) => l + SAYFA * 2)}>
-              <ChevronDown size={16} aria-hidden /> Daha fazla göster ({liste.length - limit} kaldı)
-            </button>
+          {/* Ders hapları (telefon/tablet) */}
+          <div className="xs-strip" ref={seritRef} role="tablist" aria-label="Ders seç">
+            {!veri && Array.from({ length: 9 }, (_, i) => <span key={i} className="ui-skel xs-pill-skel" />)}
+            {veri && (
+              <button type="button" role="tab" aria-selected={ders === 0} aria-controls="xs-grid" className={`xs-pill${ders === 0 ? ' is-on' : ''}`} onClick={() => dersSec(0)}>Tümü</button>
+            )}
+            {veri?.dersler.map((d) => {
+              const tamam = (dersOgrenilen.get(d.no) || 0) >= (dersToplam.get(d.no) || 1);
+              return (
+                <button key={d.no} type="button" role="tab" aria-selected={ders === d.no} aria-controls="xs-grid" aria-label={`Ders ${d.no}: ${d.baslik}${tamam ? ' (tamamlandı)' : ''}`} title={d.baslik}
+                  className={`xs-pill${ders === d.no ? ' is-on' : ''}${tamam ? ' is-full' : ''}`} onClick={() => dersSec(d.no)}>
+                  {d.no}
+                </button>
+              );
+            })}
+          </div>
+
+          {/* Kategori çipleri (telefon/tablet) */}
+          {veri && (
+            <div className="xs-chips" role="group" aria-label="Kategori süzgeci">
+              <button type="button" aria-pressed={katlar.size === 0} className={`xs-chip${katlar.size === 0 ? ' is-on' : ''}`} onClick={() => setKatlar(new Set())}>
+                Tümü <span>{temel.length}</span>
+              </button>
+              {KATEGORILER.map((k) => (
+                <button key={k.id} type="button" aria-pressed={katlar.has(k.id)} title={k.aciklama} disabled={!katSayi[k.id] && !katlar.has(k.id)}
+                  className={`xs-chip k-${k.id}${katlar.has(k.id) ? ' is-on' : ''}`} onClick={() => katDegistir(k.id)}>
+                  <i className="xs-dot" aria-hidden />{k.kisa} <span>{katSayi[k.id] || 0}</span>
+                </button>
+              ))}
+            </div>
           )}
-        </>
-      )}
+
+          {/* Bağlam satırı: seçili ders + önem (önem grubu masaüstünde panelde) */}
+          {veri && (
+            <div className="xs-ctx">
+              <div className="xs-ctx-t">
+                <h2>{seciliDers ? <><span>Ders {seciliDers.no} ·</span> {seciliDers.baslik}</> : 'Tüm dersler'}</h2>
+                <span aria-live="polite">
+                  {seciliDers ? `${seciliDers.disiplin} · ` : ''}
+                  {liste.length === kapsamToplam ? `${tr(liste.length)} spot` : `${tr(liste.length)} / ${tr(kapsamToplam)} spot`}
+                  {seciliDers ? ` · ${dersOgrenilen.get(seciliDers.no) || 0} öğrenildi` : ''}
+                </span>
+              </div>
+              {onemGrubu('xs-onem-inline')}
+            </div>
+          )}
+
+          {hata && (
+            <div className="xs-empty" role="alert">
+              <p>Spot verisi yüklenemedi.</p>
+              <button type="button" className="xs-act" onClick={() => window.location.reload()}>Sayfayı yenile</button>
+            </div>
+          )}
+
+          <div className="xs-grid" id="xs-grid" aria-busy={!veri && !hata}>
+            {!veri && !hata && Array.from({ length: 6 }, (_, i) => <IskeletKart key={i} i={i} />)}
+            {gorunen.map((s, i) => {
+              const yeniDers = !ders && (i === 0 || gorunen[i - 1].ders !== s.ders);
+              const d = dersMap.get(s.ders);
+              return (
+                <React.Fragment key={s.id}>
+                  {yeniDers && (
+                    <h3 className="xs-sec"><b>{s.ders}</b><span>{d?.baslik || 'Ders'}</span>{d?.disiplin && <small>{d.disiplin}</small>}</h3>
+                  )}
+                  <SpotCard s={s} sinav={sinav} ogrenildi={ogrenilen.has(s.id)} vurgulu={vurgu === s.id} onOgren={ogren} />
+                </React.Fragment>
+              );
+            })}
+          </div>
+
+          {veri && liste.length === 0 && (
+            <div className="xs-empty">
+              <p>Bu süzgeçle spot yok.</p>
+              {suzgecVar && <button type="button" className="xs-act" onClick={temizle}>Süzgeçleri temizle</button>}
+            </div>
+          )}
+          {liste.length > limit && (
+            <div ref={bekciRef} className="xs-more" aria-hidden><span className="ui-skel" /></div>
+          )}
+          {veri && liste.length > SAYFA && liste.length <= limit && (
+            <p className="xs-end">{tr(liste.length)} spotun hepsi gösterildi</p>
+          )}
+        </div>
+
+        {/* ---------- Süzgeç paneli (masaüstü) ---------- */}
+        <aside className="xs-panel" aria-label="Süzgeçler">
+          {aramaKutusu('xs-search-panel')}
+          <fieldset className="xs-panel-sec">
+            <legend className="xs-cap">Kategori</legend>
+            {KATEGORILER.map((k) => (
+              <label key={k.id} className={`xs-check k-${k.id}`} title={k.aciklama}>
+                <input type="checkbox" checked={katlar.size === 0 || katlar.has(k.id)} disabled={!veri} onChange={() => katKutu(k.id)} />
+                <i className="xs-dot" aria-hidden />
+                <span className="xs-check-t">{k.kisa}</span>
+                <span className="xs-check-n">{katSayi[k.id] || 0}</span>
+              </label>
+            ))}
+          </fieldset>
+          <div className="xs-panel-sec">
+            <span className="xs-cap" id="xs-onem-cap">Önem</span>
+            {onemGrubu('xs-onem-panel')}
+          </div>
+          {suzgecVar && <button type="button" className="xs-link" onClick={temizle}>Süzgeçleri temizle</button>}
+        </aside>
+      </div>
     </div>
   );
 };

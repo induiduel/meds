@@ -10,6 +10,8 @@ import './styles/screens.css';
 import './styles/rebuild.css';
 import './styles/summary.css';
 import './styles/spots.css';
+import './styles/toolbar.css';
+import './styles/layout-modes.css';
 import './styles/motion.css';
 import './styles/mobile.css';
 import { installToastBridge } from './components/ui/Toast';
@@ -19,6 +21,7 @@ import { installNotesSync } from './services/notesSync';
 import { installUserDataAutoBackup } from './services/userDataSyncService';
 import { prefetchIdle } from './routePrefetch';
 import { installAutoReveal } from './utils/autoReveal';
+import { installSelectionShare } from './utils/selectionShare';
 import { installStudyTimer } from './services/activityLog';
 import { applyTheme, readTheme } from './utils/theme';
 import { applyUiVersion } from './utils/uiVersion';
@@ -69,6 +72,7 @@ installNotesSync();
 installUserDataAutoBackup();
 prefetchIdle();
 installAutoReveal();
+installSelectionShare();
 installStudyTimer();
 
 // Auto reload on stale Vite chunk after a new deployment

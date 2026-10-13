@@ -1,0 +1,84 @@
+/* Ortak kompakt sayfa başlığı (components/ui/PageToolbar.tsx). Masaüstü tek satır, tablet iki, telefon üç satır. */
+html { --pt-top: calc(var(--sh-top-h, 52px) + env(safe-area-inset-top, 0px)); }
+.pt-root { position: sticky; top: var(--pt-top); z-index: 20; display: flex; flex-direction: column; gap: 6px; margin: 0 0 10px; padding: 8px 0 8px; background: color-mix(in srgb, var(--color-canvas) 94%, transparent); backdrop-filter: saturate(1.4) blur(10px); -webkit-backdrop-filter: saturate(1.4) blur(10px); border-bottom: 1px solid var(--color-line); }
+.pt-row { display: grid; grid-template-columns: auto minmax(160px, 1fr) auto auto auto; grid-template-areas: "title search seg filter tools"; align-items: center; gap: 8px; min-height: 36px; }
+.pt-title { grid-area: title; display: flex; align-items: baseline; gap: 8px; min-width: 0; }
+.pt-h { margin: 0; font: 700 19px/1.2 var(--font-display); letter-spacing: -0.015em; color: var(--color-ink); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.pt-count { font: 500 12.5px var(--font-round); font-variant-numeric: tabular-nums; color: var(--color-ink-3); white-space: nowrap; }
+.pt-search { grid-area: search; position: relative; display: flex; align-items: center; gap: 8px; height: 36px; padding: 0 8px 0 10px; border-radius: 10px; background: var(--color-field); color: var(--color-ink-3); min-width: 0; }
+.pt-search > svg { width: 16px; height: 16px; flex-shrink: 0; }
+.pt-search input { flex: 1; min-width: 0; height: 100%; border: 0; background: transparent; outline: none; font: 400 14.5px var(--font-sans); color: var(--color-ink); }
+.pt-search input::-webkit-search-cancel-button { display: none; }
+.pt-search:focus-within { box-shadow: 0 0 0 2px var(--ui-focus, var(--color-accent)); background: var(--color-white); }
+.pt-clear { width: 26px; height: 26px; border-radius: 99px; display: grid; place-items: center; color: var(--color-ink-3); cursor: pointer; }
+.pt-clear svg { width: 14px; height: 14px; }
+.pt-seg { grid-area: seg; display: flex; gap: 2px; padding: 3px; height: 36px; box-sizing: border-box; border-radius: 10px; background: var(--color-field); overflow-x: auto; scrollbar-width: none; max-width: 100%; }
+.pt-seg::-webkit-scrollbar { display: none; }
+.pt-seg button { flex-shrink: 0; display: inline-flex; align-items: center; gap: 5px; height: 30px; padding: 0 11px; border-radius: 8px; font: 600 13px var(--font-sans); color: var(--color-ink-3); white-space: nowrap; cursor: pointer; transition: background var(--mo-fast, .15s), color var(--mo-fast, .15s); }
+.pt-seg button.is-on { background: var(--color-white); color: var(--color-ink); box-shadow: var(--shadow-sm, 0 1px 2px rgb(0 0 0 / .1)); }
+.pt-seg-n { font: 500 11.5px var(--font-round); font-variant-numeric: tabular-nums; opacity: .7; }
+.pt-filter { grid-area: filter; position: relative; display: inline-flex; align-items: center; gap: 6px; height: 36px; padding: 0 11px; border-radius: 10px; border: 1px solid var(--color-line); background: var(--color-white); color: var(--color-ink); font: 600 13px var(--font-sans); cursor: pointer; white-space: nowrap; }
+.pt-filter svg { width: 16px; height: 16px; }
+.pt-badge { min-width: 18px; height: 18px; padding: 0 5px; box-sizing: border-box; border-radius: 99px; display: grid; place-items: center; background: var(--color-accent); color: var(--color-on-accent); font: 700 11px var(--font-round); }
+.pt-tools { grid-area: tools; display: flex; align-items: center; gap: 4px; }
+.pt-tools .pt-icon { width: 36px; height: 36px; border-radius: 10px; display: grid; place-items: center; color: var(--color-ink-2); cursor: pointer; }
+.pt-tools .pt-icon:hover { background: var(--color-field); }
+.pt-tools .pt-icon svg { width: 18px; height: 18px; }
+.pt-chips { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
+.pt-chip { display: inline-flex; align-items: center; gap: 4px; height: 26px; padding: 0 6px 0 9px; border-radius: 7px; background: var(--color-accent-soft); color: var(--color-accent); font: 600 12.5px var(--font-sans); cursor: pointer; }
+.pt-chip svg { width: 13px; height: 13px; }
+.pt-chip-clear { height: 26px; padding: 0 6px; font: 600 12.5px var(--font-sans); color: var(--color-ink-2); cursor: pointer; }
+/* Görünüm seçici (Kart / Kompakt gibi) — araç bölmesinde */
+.pt-view { display: flex; gap: 2px; padding: 3px; height: 36px; box-sizing: border-box; border-radius: 10px; background: var(--color-field); }
+.pt-view button { height: 30px; min-width: 32px; padding: 0 9px; border-radius: 8px; display: inline-flex; align-items: center; justify-content: center; gap: 5px; font: 600 12.5px var(--font-sans); color: var(--color-ink-3); cursor: pointer; }
+.pt-view button.is-on { background: var(--color-white); color: var(--color-ink); box-shadow: var(--shadow-sm, 0 1px 2px rgb(0 0 0 / .1)); }
+.pt-view button svg { width: 15px; height: 15px; }
+/* Süzgeç sayfası */
+.pt-sheet { display: flex; flex-direction: column; gap: 16px; }
+.pt-fgroup { border: 0; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+.pt-fgroup > legend { padding: 0 0 6px; font: 700 12px var(--font-sans); letter-spacing: .04em; text-transform: uppercase; color: var(--color-ink-3); }
+.pt-pills { display: flex; flex-wrap: wrap; gap: 6px; }
+.pt-pills button { display: inline-flex; align-items: center; gap: 6px; min-height: 36px; padding: 0 12px; border-radius: 999px; border: 1px solid var(--color-line); background: var(--color-white); color: var(--color-ink-2); font: 600 13.5px var(--font-sans); cursor: pointer; }
+.pt-pills button span { font: 500 12px var(--font-round); opacity: .65; font-variant-numeric: tabular-nums; }
+.pt-pills button.is-on { border-color: var(--color-accent); background: var(--color-accent); color: var(--color-on-accent); }
+.pt-pills select, .pt-fgroup select { height: 40px; border-radius: 10px; border: 1px solid var(--color-line); background: var(--color-white); padding: 0 10px; font: 500 14px var(--font-sans); color: var(--color-ink); }
+
+/* Tablet: iki satır */
+@media (max-width: 1023px) {
+  .pt-row { grid-template-columns: minmax(0, 1fr) auto auto; grid-template-areas: "title filter tools" "search search seg"; }
+}
+/* Telefon: üç satır — başlık · arama + Süzgeç · kayan segment */
+@media (max-width: 767px) {
+  .pt-root { gap: 6px; padding: 6px 0 6px; margin-bottom: 8px; }
+  .pt-row { grid-template-columns: minmax(0, 1fr) auto; grid-template-areas: "title tools" "search filter" "seg seg"; gap: 6px; }
+  .pt-h { font-size: 18px; }
+  .pt-seg { background: transparent; padding: 0; height: 32px; gap: 6px; }
+  .pt-seg button { height: 32px; border-radius: 999px; background: var(--color-field); color: var(--color-ink-2); }
+  .pt-seg button.is-on { background: var(--color-accent); color: var(--color-on-accent); box-shadow: none; }
+  .pt-filter-l { display: none; }
+  .pt-filter { width: 40px; padding: 0; justify-content: center; }
+  .pt-filter .pt-badge { position: absolute; top: -4px; right: -4px; }
+}
+
+/* Sayfa yükleme iskeleti (components/ui/Animations.tsx · PageLoader) — 300 ms gecikmeyle belirir */
+.pgs { display: flex; flex-direction: column; gap: 10px; animation: pgs-in .2s ease .3s both; }
+@keyframes pgs-in { from { opacity: 0; } to { opacity: 1; } }
+.pgs-bar { display: flex; align-items: center; gap: 8px; height: 52px; border-bottom: 1px solid var(--color-line); }
+.pgs-title { width: 140px; height: 18px; }
+.pgs-search { flex: 1; height: 36px; border-radius: 10px; }
+.pgs-btn { width: 92px; height: 36px; border-radius: 10px; }
+.pgs-chips { display: flex; gap: 6px; overflow: hidden; }
+.pgs-chips .ui-skel { height: 30px; border-radius: 999px; flex-shrink: 0; }
+.pgs-list { display: flex; flex-direction: column; gap: 8px; }
+.pgs-card { display: flex; flex-direction: column; gap: 8px; padding: 14px; border-radius: 12px; background: var(--color-white); border: 1px solid var(--color-line); }
+@media (min-width: 1180px) { html[data-layout="pano"] .pgs-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 767px) { .pgs-btn { width: 40px; } .pgs-title { width: 110px; } }
+@media (prefers-reduced-motion: reduce) { .pgs { animation-duration: .01s; } }
+/* Telefonda araçlar başlığı kesmesin: sayaç başlığın altına iner */
+@media (max-width: 767px) {
+  .pt-title { flex-direction: column; align-items: flex-start; gap: 0; }
+  .pt-count { font-size: 11.5px; line-height: 1.2; }
+  .pt-h { max-width: 100%; }
+  .pt-tools { gap: 2px; }
+  .pt-tools .pt-icon { width: 34px; height: 34px; }
+}

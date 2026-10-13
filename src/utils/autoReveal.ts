@@ -7,7 +7,8 @@
  * büyüdüyse ve alt kenarı görünür alanın dışına taştıysa kart, görünür alanın ortasına kaydırılır.
  * Kart ekrandan uzunsa başı üst çubuğun hemen altına getirilir.
  *
- * Kapsam: `.ms-qcard`, `.ls-ix`, `[data-auto-reveal]` kapları. Kullanıcı Ayarlar'dan kapatabilir
+ * Kapsam: `.ms-qcard`, `.ls-ix`, `[data-auto-reveal]` kapları ve (v10) sitedeki her açılır öğe:
+ * `aria-expanded` taşıyan düğmeler, `<summary>`, `aria-controls` hedefleri. Kullanıcı Ayarlar'dan kapatabilir
  * (`medsoru_auto_reveal = '0'`). "Hareketi azalt" açıkken kaydırma anlık yapılır.
  */
 const ROOTS = '.ms-qcard, .ls-ix, [data-auto-reveal]';
@@ -52,6 +53,23 @@ export function revealIntoView(el: Element | null, opts: { force?: boolean } = {
   }
 }
 
+/** Kart dışı açılır öğeler (v10): aria-expanded taşıyan her düğme, <summary> ve aria-controls hedefi. */
+const EXPANDERS = '[aria-expanded], summary';
+const CONTAINERS = 'li, article, details, [role="region"], [data-reveal-root], .ui-card, .ui-group, section';
+
+/** Tıklamadan sonra büyüyen ya da yeni beliren içeriği bulur: önce aria-controls, sonra en yakın kap. */
+function resolveRoot(trigger: Element): { root: () => HTMLElement | null; lazy: boolean } | null {
+  const fixedRoot = trigger.closest(ROOTS) as HTMLElement | null;
+  if (fixedRoot) return { root: () => fixedRoot, lazy: false };
+  if (!trigger.matches(EXPANDERS)) return null;
+  // Menü/açılır pencere (aria-haspopup) konumlu katmandadır; sayfayı kaydırmak çapayı da kaydırır.
+  if (trigger.getAttribute('aria-haspopup') && trigger.getAttribute('aria-haspopup') !== 'false') return null;
+  const controls = trigger.getAttribute('aria-controls');
+  if (controls) return { root: () => document.getElementById(controls) || (trigger.closest(CONTAINERS) as HTMLElement | null), lazy: true };
+  const box = (trigger.closest(CONTAINERS) as HTMLElement | null) || trigger.parentElement;
+  return box ? { root: () => box, lazy: false } : null;
+}
+
 export function installAutoReveal() {
   if (installed || typeof document === 'undefined') return;
   installed = true;
@@ -61,24 +79,36 @@ export function installAutoReveal() {
       if (!autoRevealEnabled()) return;
       const target = e.target as Element | null;
       const trigger = target?.closest?.(TRIGGERS);
-      const root = trigger?.closest?.(ROOTS) as HTMLElement | null;
-      if (!trigger || !root) return;
-      // Yazı alanlarında ve bağlantılarda tetiklenmez.
-      if (target?.closest('input[type="text"], textarea, [contenteditable="true"], a[href]')) return;
-      const before = root.getBoundingClientRect().height;
-      // İçerik gecikmeli (animasyonlu) açılabilir: kartın yüksekliği 900 ms boyunca izlenir,
-      // büyüyüp alt kenarı ekrandan taşarsa bir kez kaydırılır.
+      if (!trigger) return;
+      // Yazı alanlarında, bağlantılarda ve kendi kaydırma alanı olan pencerelerde tetiklenmez.
+      if (target?.closest('input[type="text"], input[type="search"], textarea, [contenteditable="true"], a[href], [role="dialog"], [role="menu"]')) return;
+      const found = resolveRoot(trigger);
+      if (!found) return;
+      // Kapanan bir öğe (aria-expanded="true" → false) kaydırma gerektirmez.
+      const wasOpen = trigger.getAttribute('aria-expanded') === 'true' || (trigger.tagName === 'SUMMARY' && (trigger.parentElement as HTMLDetailsElement | null)?.open);
+      if (wasOpen && !trigger.closest(ROOTS)) return;
+      const first = found.root();
+      const before = first ? first.getBoundingClientRect().height : 0;
+      // İçerik gecikmeli (animasyonlu ya da tembel) açılabilir: 900 ms boyunca izlenir,
+      // büyüyüp/belirip alt kenarı ekrandan taşarsa bir kez kaydırılır.
       let done = false;
+      let observed: HTMLElement | null = null;
       const check = () => {
-        if (done || !root.isConnected) return;
+        if (done) return;
+        const root = found.root();
+        if (!root || !root.isConnected) return;
+        if (ro && observed !== root) { ro.observe(root); observed = root; }
         const r = root.getBoundingClientRect();
-        if (r.height - before > 24 && r.bottom > window.innerHeight - 12) {
+        const grew = found.lazy && root !== first ? r.height > 0 : r.height - before > 24;
+        if (grew && r.bottom > window.innerHeight - 12) {
           done = true;
           revealIntoView(root);
         }
       };
       const ro = typeof ResizeObserver !== 'undefined' ? new ResizeObserver(check) : null;
-      ro?.observe(root);
+      if (first && ro) { ro.observe(first); observed = first; }
+      // aria-controls hedefi tıklamadan sonra DOM'a eklenebilir: birkaç karede yeniden ara.
+      if (found.lazy) [60, 180, 360].forEach((ms) => window.setTimeout(check, ms));
       window.setTimeout(() => { check(); ro?.disconnect(); }, 900);
     },
     // Yakalama evresi: React kökündeki işleyiciler DOM'u güncellemeden önce yükseklik ölçülür.

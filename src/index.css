@@ -317,10 +317,6 @@ html.theme-dark {
   --color-fuchsia-950: oklch(97.7% 0.017 320.058);
   --color-black: #F3F6FA;
 }
-html.theme-switching, html.theme-switching * {
-  transition: background-color .25s ease, border-color .25s ease, color .2s ease !important;
-}
-
 html, body {
   overflow-x: hidden;
   max-width: 100vw;

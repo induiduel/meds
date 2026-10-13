@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useState } from 'react';
-import { Check, ChevronRight, Clock, Download, GraduationCap, Search, X } from 'lucide-react';
-import { PageHeader } from './ui/PageHeader';
+import { Check, ChevronRight, Download, Search } from 'lucide-react';
+import { FilterPills, PageToolbar, type ToolbarChip } from './ui/PageToolbar';
 import { disciplineClass, disciplineLabel } from '../utils/discipline';
 import summariesMetaData from '../data/summaries_meta.json';
 // Resmi ders programı + kaynak PDF eşleşmesi: scripts/pipeline/10-enrich-summaries.mjs üretir
@@ -14,10 +14,11 @@ import { queryClient } from '../queryClient';
 import { offlineDatabaseService } from '../services/offlineDatabaseService';
 
 /**
- * Ders özetleri (v9, sıfırdan). Yapı:
- *   başlık + PDF · "Okumaya devam" şeridi (yarım kalan özetler) · arama + ders süzgeci · kurul şeridi
- *   → Tümü'nde kurul kurul, bir kurulda ders ders gruplanmış kartlar; aramada düz sonuç listesi.
- * Kart: ders rengi (--d), başlık, öğretim üyesi, okuma süresi ve okuma durumu (yeni / %ilerleme / bitti).
+ * Ders özetleri (v10 kompakt). Yapı:
+ *   PageToolbar (başlık · sayaç · arama · Tümü / Kurul 1–6 · Süzgeç sayfası: ders + okuma durumu · PDF indir)
+ *   → "Okumaya devam" (yarım kalan özetler, en çok 3 satır) → Tümü'nde kurul kurul, bir kurulda ders ders
+ *   gruplanmış kompakt ders listesi; aramada/süzgeçte düz liste.
+ * Satır: ders no · başlık · ders + öğretim üyesi · okuma süresi ve durumu (yeni / %ilerleme / bitti).
  * Okuyucu: summary/SummaryReader (uygulama temasıyla, ayrı tema yok). Stil: styles/summary.css (.sl-*).
  */
 
@@ -106,51 +107,52 @@ async function loadSummaryDetail(meta: SummaryMeta): Promise<SummaryDetail | nul
   }
 }
 
-const ReadState: React.FC<{ mark?: ReadingMark }> = ({ mark }) => {
-  if (!mark || mark.p < 2) return null;
-  if (mark.p >= 97)
+/** "k1-07-…" → 7 (ders programı sırası); yoksa liste sırası */
+const lessonNo = (id: string, fallback: number) => {
+  const m = id.match(/^k\d+-(\d{1,3})-/);
+  return m ? Number(m[1]) : fallback;
+};
+
+type ReadFilter = 'all' | 'new' | 'reading' | 'done';
+const READ_LABEL: Record<ReadFilter, string> = { all: 'Tümü', new: 'Okunmadı', reading: 'Yarım kalan', done: 'Bitti' };
+const readStateOf = (m?: ReadingMark): Exclude<ReadFilter, 'all'> => (!m || m.p < 2 ? 'new' : m.p >= 97 ? 'done' : 'reading');
+
+const ReadState: React.FC<{ mark?: ReadingMark; minutes: number }> = ({ mark, minutes }) => {
+  if (mark && mark.p >= 97)
     return (
       <span className="sl-state is-done">
         <Check aria-hidden /> Bitti
       </span>
     );
-  return (
-    <span className="sl-state">
-      <i className="sr-ring is-xs" style={{ '--p': mark.p } as React.CSSProperties} aria-hidden />%{Math.round(mark.p)}
-    </span>
-  );
-};
-
-const Card: React.FC<{ s: SummaryMeta; i: number; mark?: ReadingMark; showKurul: boolean; onOpen: () => void }> = ({ s, i, mark, showKurul, onOpen }) => (
-  <li className={`sl-item ${disciplineClass(s.discipline)}`} style={{ '--i': Math.min(i, 14) } as React.CSSProperties}>
-    <button type="button" className="sl-card" onClick={onOpen}>
-      <span className="sl-card-top">
-        <span className="hk-eyebrow">
-          <i className="hk-dot" aria-hidden />
-          <span>{disciplineLabel(s.discipline)}</span>
-        </span>
-        {showKurul && <span className="sl-kurul">K{s.kurul}</span>}
-        <ReadState mark={mark} />
-      </span>
-      <span className="sl-card-t">{s.title}</span>
-      {s.instructor && (
-        <span className="sl-card-who">
-          <GraduationCap aria-hidden />
-          <span>{s.instructor}</span>
-        </span>
-      )}
-      <span className="sl-card-foot">
-        <span>
-          <Clock aria-hidden /> {s.readingTimeMinutes} dk
-        </span>
-        {s.sourceYear && <span title={s.pdfName ? `${s.pdfName} · ${s.sourceDate || ''}` : s.sourceDate}>{s.sourceYear}</span>}
-        <ChevronRight className="sl-card-go" aria-hidden />
-      </span>
-      {mark && mark.p >= 2 && mark.p < 97 && (
-        <span className="sl-card-bar" aria-hidden>
+  if (mark && mark.p >= 2)
+    return (
+      <span className="sl-state is-reading" aria-label={`%${Math.round(mark.p)} okundu`}>
+        <span className="sl-bar" aria-hidden>
           <i style={{ transform: `scaleX(${mark.p / 100})` }} />
         </span>
-      )}
+        %{Math.round(mark.p)}
+      </span>
+    );
+  return <span className="sl-state">{minutes} dk</span>;
+};
+
+const Row: React.FC<{ s: SummaryMeta; no: number; mark?: ReadingMark; showKurul: boolean; onOpen: () => void }> = ({ s, no, mark, showKurul, onOpen }) => (
+  <li className={`sl-item ${disciplineClass(s.discipline)}`}>
+    <button type="button" className="sl-row" onClick={onOpen}>
+      <span className="sl-no" aria-hidden>
+        {String(no).padStart(2, '0')}
+      </span>
+      <span className="sl-row-main">
+        <span className="sl-row-t">{s.title}</span>
+        <span className="sl-row-m">
+          <i className="hk-dot" aria-hidden />
+          <span>{disciplineLabel(s.discipline)}</span>
+          {showKurul && <span className="sl-kurul">K{s.kurul}</span>}
+          {s.instructor && <span className="sl-row-who">· {s.instructor}</span>}
+        </span>
+      </span>
+      <ReadState mark={mark} minutes={s.readingTimeMinutes} />
+      <ChevronRight className="sl-go" aria-hidden />
     </button>
   </li>
 );
@@ -159,6 +161,7 @@ export const LectureSummariesView: React.FC<LectureSummariesViewProps> = ({ onOp
   const [kurul, setKurul] = useState<number | 'all'>('all');
   const [discipline, setDiscipline] = useState('all');
   const [query, setQuery] = useState('');
+  const [readFilter, setReadFilter] = useState<ReadFilter>('all');
   const [active, setActive] = useState<SummaryDetail | null>(null);
   const progress = useReadingProgress();
 
@@ -199,15 +202,16 @@ export const LectureSummariesView: React.FC<LectureSummariesViewProps> = ({ onOp
       summaries.filter((s) => {
         if (kurul !== 'all' && s.kurul !== kurul) return false;
         if (discipline !== 'all' && s.discipline !== discipline) return false;
+        if (readFilter !== 'all' && readStateOf(progress[s.id]) !== readFilter) return false;
         if (!q) return true;
         return [s.title, s.discipline, s.instructor || '', ...(s.keyPoints || [])].some((f) => fold(f).includes(q));
       }),
-    [summaries, kurul, discipline, q]
+    [summaries, kurul, discipline, q, readFilter, progress]
   );
 
   // Gruplar: arama → düz liste; Tümü → kurul; kurul seçili → ders
   const groups = useMemo(() => {
-    if (q || discipline !== 'all') return [{ key: 'flat', title: '', sub: '', items: filtered }];
+    if (q || discipline !== 'all' || readFilter !== 'all') return [{ key: 'flat', title: '', sub: '', items: filtered }];
     if (kurul === 'all') {
       return KURULS.map((k) => ({ key: `k${k}`, title: `Kurul ${k}`, sub: KURUL_LABELS[k], items: filtered.filter((s) => s.kurul === k) })).filter((g) => g.items.length);
     }
@@ -216,7 +220,7 @@ export const LectureSummariesView: React.FC<LectureSummariesViewProps> = ({ onOp
     return Array.from(map.entries())
       .sort((a, b) => b[1].length - a[1].length || a[0].localeCompare(b[0], 'tr'))
       .map(([d, items]) => ({ key: d, title: disciplineLabel(d), sub: d !== disciplineLabel(d) ? d : '', items, d }));
-  }, [filtered, kurul, discipline, q]);
+  }, [filtered, kurul, discipline, q, readFilter]);
   const ordered = useMemo(() => groups.flatMap((g) => g.items), [groups]);
 
   // Yarım kalan özetler (son okunan önce)
@@ -225,7 +229,7 @@ export const LectureSummariesView: React.FC<LectureSummariesViewProps> = ({ onOp
       Object.entries(progress)
         .filter(([id, m]) => m.p >= 2 && m.p < 97 && byId.has(id))
         .sort((a, b) => b[1].t - a[1].t)
-        .slice(0, 8)
+        .slice(0, 3)
         .map(([id, m]) => ({ s: byId.get(id)!, m })),
     [progress, byId]
   );
@@ -267,44 +271,86 @@ export const LectureSummariesView: React.FC<LectureSummariesViewProps> = ({ onOp
   };
   const next = active ? nextOf(active.id) : undefined;
 
+  const chips: ToolbarChip[] = [
+    ...(discipline !== 'all' ? [{ id: 'd', label: discipline, onRemove: () => setDiscipline('all') }] : []),
+    ...(readFilter !== 'all' ? [{ id: 'r', label: READ_LABEL[readFilter], onRemove: () => setReadFilter('all') }] : []),
+  ];
+  const kurulCount = (k: number) => summaries.filter((s) => s.kurul === k).length;
+
   let idx = 0;
   return (
     <div className="sl-page">
-      <PageHeader
+      <PageToolbar<string>
         title="Ders özetleri"
-        description="Amfi notlarından derlenmiş özetler: mekanizmalar, tablolar, sınav tuzakları ve çıkmış sorular."
-        stats={[
-          { label: 'özet', value: summaries.length },
-          ...(doneCount ? [{ label: 'bitti', value: doneCount, tone: 'ok' as const }] : []),
-        ]}
-        actions={
+        count={
+          filtered.length === summaries.length
+            ? `${summaries.length} özet${doneCount ? ` · ${doneCount} bitti` : ''}`
+            : `${filtered.length} / ${summaries.length}`
+        }
+        search={{ value: query, onChange: setQuery, placeholder: 'Ders, konu ya da hoca ara' }}
+        segments={{
+          label: 'Kurul',
+          value: String(kurul),
+          onChange: (v) => setKurul(v === 'all' ? 'all' : Number(v)),
+          options: [
+            { id: 'all', label: 'Tümü', count: summaries.length },
+            ...KURULS.filter((k) => kurulCount(k) > 0).map((k) => ({ id: String(k), label: `Kurul ${k}`, count: kurulCount(k) })),
+          ],
+        }}
+        filters={
+          <>
+            <FilterPills
+              label={kurul === 'all' ? 'Ders' : `Kurul ${kurul} dersleri`}
+              value={discipline}
+              onChange={setDiscipline}
+              options={[
+                { id: 'all', label: 'Tüm dersler', count: summaries.filter((s) => kurul === 'all' || s.kurul === kurul).length },
+                ...disciplines.map((d) => ({ id: d, label: d, count: summaries.filter((s) => s.discipline === d && (kurul === 'all' || s.kurul === kurul)).length })),
+              ]}
+            />
+            <FilterPills<ReadFilter>
+              label="Okuma durumu"
+              value={readFilter}
+              onChange={setReadFilter}
+              options={(Object.keys(READ_LABEL) as ReadFilter[]).map((id) => ({ id, label: READ_LABEL[id] }))}
+            />
+          </>
+        }
+        filterCount={chips.length}
+        chips={chips}
+        onClearChips={() => {
+          setDiscipline('all');
+          setReadFilter('all');
+        }}
+        tools={
           onOpenPdfModal && (
-            <button type="button" onClick={onOpenPdfModal} className="ms-btn" aria-label="PDF indir">
+            <button type="button" onClick={onOpenPdfModal} className="pt-icon" aria-label="PDF indir" title="PDF indir">
               <Download aria-hidden />
-              <span className="hidden sm:inline">PDF indir</span>
             </button>
           )
         }
       />
 
-      {inProgress.length > 0 && !q && (
-        <section className="sl-continue" aria-label="Okumaya devam">
-          <h2 className="sl-h">Okumaya devam</h2>
-          <ul className="sl-continue-rail">
-            {inProgress.map(({ s, m }, i) => (
-              <li key={s.id} className={disciplineClass(s.discipline)} style={{ '--i': i } as React.CSSProperties}>
-                <button type="button" className="sl-cont" onClick={() => open(s)}>
-                  <span className="sr-ring is-lg" style={{ '--p': m.p } as React.CSSProperties} aria-hidden>
-                    <b>%{Math.round(m.p)}</b>
-                  </span>
-                  <span className="sl-cont-txt">
-                    <span className="hk-eyebrow">
+      {inProgress.length > 0 && !q && readFilter === 'all' && (
+        <section className="sl-group sl-continue" aria-label="Okumaya devam">
+          <header className="sl-group-h">
+            <h2 className="sl-h">Okumaya devam</h2>
+          </header>
+          <ul className="sl-list">
+            {inProgress.map(({ s, m }) => (
+              <li key={s.id} className={`sl-item ${disciplineClass(s.discipline)}`}>
+                <button type="button" className="sl-row" onClick={() => open(s)}>
+                  <span className="sr-ring is-sm" style={{ '--p': m.p } as React.CSSProperties} aria-hidden />
+                  <span className="sl-row-main">
+                    <span className="sl-row-t">{s.title}</span>
+                    <span className="sl-row-m">
                       <i className="hk-dot" aria-hidden />
                       <span>{disciplineLabel(s.discipline)}</span>
+                      <span>· ~{Math.max(1, Math.round(s.readingTimeMinutes * (1 - m.p / 100)))} dk kaldı</span>
                     </span>
-                    <b>{s.title}</b>
-                    <small>~{Math.max(1, Math.round(s.readingTimeMinutes * (1 - m.p / 100)))} dk kaldı</small>
                   </span>
+                  <span className="sl-state is-reading">%{Math.round(m.p)}</span>
+                  <ChevronRight className="sl-go" aria-hidden />
                 </button>
               </li>
             ))}
@@ -312,65 +358,27 @@ export const LectureSummariesView: React.FC<LectureSummariesViewProps> = ({ onOp
         </section>
       )}
 
-      <div className="sl-filters">
-        <label className="cx-search sl-search">
-          <Search aria-hidden />
-          <span className="sr-only">Özetlerde ara</span>
-          <input type="search" value={query} onChange={(e) => setQuery(e.target.value)} placeholder="Ders, konu ya da hoca ara" />
-          {query && (
-            <button type="button" className="cx-search-x" onClick={() => setQuery('')} aria-label="Aramayı temizle">
-              <X />
-            </button>
-          )}
-        </label>
-        <label className="sr-only" htmlFor="sl-discipline">
-          Ders
-        </label>
-        <select id="sl-discipline" value={discipline} onChange={(e) => setDiscipline(e.target.value)} className="ms-select sl-select">
-          <option value="all">
-            {kurul === 'all' ? 'Tüm dersler' : `Kurul ${kurul} dersleri`} ({disciplines.length})
-          </option>
-          {disciplines.map((d) => (
-            <option key={d} value={d}>
-              {d}
-            </option>
-          ))}
-        </select>
-      </div>
-
-      <nav className="cx-tabs sl-tabs" aria-label="Kurul" role="radiogroup">
-        {(['all', ...KURULS] as const).map((k) => {
-          const on = kurul === k;
-          const count = k === 'all' ? summaries.length : summaries.filter((s) => s.kurul === k).length;
-          return (
-            <button
-              key={String(k)}
-              type="button"
-              role="radio"
-              aria-checked={on}
-              title={k === 'all' ? undefined : `Kurul ${k}: ${KURUL_LABELS[k]}`}
-              onClick={() => setKurul(k)}
-              className={`cx-tab ${on ? 'is-on' : ''} ${count === 0 ? 'is-zero' : ''}`}
-            >
-              {k === 'all' ? 'Tümü' : `Kurul ${k}`} <small>{count}</small>
-            </button>
-          );
-        })}
-      </nav>
-
       {filtered.length === 0 ? (
         <div className="sl-empty">
           <Search aria-hidden />
           <h3>Bu süzgeçte özet yok</h3>
           <p>Aramayı temizle ya da başka bir kurul seç.</p>
-          {(query || discipline !== 'all') && (
-            <button type="button" className="ms-btn" onClick={() => { setQuery(''); setDiscipline('all'); }}>
+          {(query || discipline !== 'all' || readFilter !== 'all') && (
+            <button
+              type="button"
+              className="ui-btn is-sm"
+              onClick={() => {
+                setQuery('');
+                setDiscipline('all');
+                setReadFilter('all');
+              }}
+            >
               Süzgeçleri temizle
             </button>
           )}
         </div>
       ) : (
-        <div className="sl-groups" key={`${kurul}|${discipline}`}>
+        <div className="sl-groups" key={`${kurul}|${discipline}|${readFilter}`}>
           {groups.map((g) => (
             <section key={g.key} className={`sl-group ${'d' in g && g.d ? disciplineClass(g.d as string) : ''}`} aria-label={g.title || 'Sonuçlar'}>
               {g.title ? (
@@ -381,15 +389,15 @@ export const LectureSummariesView: React.FC<LectureSummariesViewProps> = ({ onOp
                   <small>{g.items.length}</small>
                 </header>
               ) : (
-                q && (
+                (q || discipline !== 'all' || readFilter !== 'all') && (
                   <p className="sl-result" aria-live="polite">
                     {g.items.length} sonuç
                   </p>
                 )
               )}
-              <ul className="sl-grid">
+              <ul className="sl-list">
                 {g.items.map((s) => (
-                  <Card key={s.id} s={s} i={idx++} mark={progress[s.id]} showKurul={kurul === 'all' && !g.title} onOpen={() => open(s)} />
+                  <Row key={s.id} s={s} no={lessonNo(s.id, ++idx)} mark={progress[s.id]} showKurul={kurul === 'all' && !g.title} onOpen={() => open(s)} />
                 ))}
               </ul>
             </section>

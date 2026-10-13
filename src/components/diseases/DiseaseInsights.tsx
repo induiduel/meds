@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { ArrowUpRight, BookOpen, ClipboardPlus, GitBranch, Loader2, ShieldAlert, ShieldCheck } from 'lucide-react';
+import { ArrowUpRight, BookOpen, ChevronRight, ClipboardPlus, GitBranch, Loader2, ShieldAlert, ShieldCheck } from 'lucide-react';
 import { safeJsonFetch } from '../../services/api';
 import type { DiseaseProfile } from '../../types/disease';
 import { ConceptIcon, CONCEPT_META } from '../search/QueryIntelUi';
@@ -176,6 +176,118 @@ export const RelatedPanel: React.FC<{
           </div>
         </>
       )}
+    </section>
+  );
+};
+
+/* ------------------------------------------------------------------------------------------------
+ * v10 atlas sağ paneli (DiseasesView ayrıntısı): ilişkili tablolar · geçtiği yerler · birlikte geçen kavramlar.
+ * Sınıflar `hx-` önekli (diseasesAtlas.css).
+ * ---------------------------------------------------------------------------------------------- */
+
+/** Bağlı soru sayısı (çıkmış + örnek soru geçişi); "Soruları çöz" düğmesi için */
+export function linkedQuestionCount(data: DiseaseInsightsData | null): number {
+  if (!data) return 0;
+  return (data.byType.past_question || 0) + (data.byType.ornek_question || 0);
+}
+
+const AsideSkeleton: React.FC<{ rows?: number }> = ({ rows = 3 }) => (
+  <div className="hx-aside-skel" aria-hidden>
+    <span className="ui-skel" style={{ width: '45%', height: 12 }} />
+    {Array.from({ length: rows }, (_, i) => <span key={i} className="ui-skel" style={{ height: 30, borderRadius: 8 }} />)}
+  </div>
+);
+
+export const RelatedDiseasesCard: React.FC<{
+  data: DiseaseInsightsData | null;
+  loading: boolean;
+  onOpenDisease: (id: string) => void;
+  canOpen: (id: string) => boolean;
+}> = ({ data, loading, onOpenDisease, canOpen }) => {
+  if (loading && !data) return <section className="hx-card hx-aside-card"><AsideSkeleton rows={4} /></section>;
+  const dis = (data?.relatedDiseases || []).filter((r) => canOpen(r.id)).slice(0, 6);
+  if (!dis.length) return null;
+  return (
+    <section className="hx-card hx-aside-card" aria-labelledby="hx-rel-h">
+      <h2 id="hx-rel-h" className="hx-aside-h"><GitBranch aria-hidden /> İlişkili tablolar</h2>
+      <ul className="hx-rel">
+        {dis.map((r) => (
+          <li key={r.id}>
+            <button type="button" className="hx-rel-row" onClick={() => onOpenDisease(r.id)}>
+              <span className="hx-rel-t">{r.name}</span>
+              {r.ddx && <em>ayırıcı tanı</em>}
+              <ChevronRight aria-hidden />
+            </button>
+          </li>
+        ))}
+      </ul>
+    </section>
+  );
+};
+
+const WHERE_ROWS: Array<{ keys: string[]; label: string; unit: string }> = [
+  { keys: ['deck_slide'], label: 'Öğren', unit: 'slayt' },
+  { keys: ['past_question'], label: 'Çıkmış', unit: 'soru' },
+  { keys: ['ornek_question'], label: 'Örnek soru', unit: 'soru' },
+  { keys: ['lecture_slide', 'summary', 'transcript'], label: 'Ders notu ve özet', unit: 'geçiş' },
+];
+
+export const WhereCard: React.FC<{
+  data: DiseaseInsightsData | null;
+  loading: boolean;
+  lectures?: string[];
+  onSearch: () => void;
+}> = ({ data, loading, lectures, onSearch }) => {
+  if (loading && !data) return <section className="hx-card hx-aside-card"><AsideSkeleton rows={3} /></section>;
+  const rows = WHERE_ROWS.map((r) => ({ ...r, n: r.keys.reduce((a, k) => a + (data?.byType[k] || 0), 0) })).filter((r) => r.n > 0);
+  // En çok geçtiği deste/ders kaynağı (başlık) — "Öğren · Üriner Sistem Enfeksiyonları" gibi
+  const topDeck = data?.sources.find((s) => s.type === 'deck_slide')?.title.split(' — ')[0];
+  const topPast = data?.sources.find((s) => s.type === 'past_question')?.title;
+  const lec = (lectures || []).slice(0, 3);
+  if (!rows.length && !lec.length) return null;
+  return (
+    <section className="hx-card hx-aside-card" aria-labelledby="hx-where-h">
+      <h2 id="hx-where-h" className="hx-aside-h"><BookOpen aria-hidden /> Geçtiği yerler</h2>
+      <ul className="hx-where">
+        {rows.map((r) => (
+          <li key={r.label}>
+            <span className="hx-where-k">{r.label}</span>
+            <span className="hx-where-v">
+              <b>{r.n.toLocaleString('tr-TR')}</b> {r.unit}
+              {r.keys[0] === 'deck_slide' && topDeck && <small>{topDeck}</small>}
+              {r.keys[0] === 'past_question' && topPast && <small>{topPast}</small>}
+            </span>
+          </li>
+        ))}
+        {lec.map((l) => (
+          <li key={l}>
+            <span className="hx-where-k">Ders</span>
+            <span className="hx-where-v"><small>{l}</small></span>
+          </li>
+        ))}
+      </ul>
+      {rows.length > 0 && (
+        <button type="button" className="hx-aside-link" onClick={onSearch}>
+          Tüm kaynaklarda ara <ArrowUpRight aria-hidden />
+        </button>
+      )}
+    </section>
+  );
+};
+
+export const ConceptsCard: React.FC<{ data: DiseaseInsightsData | null; onSearch: (q: string) => void }> = ({ data, onSearch }) => {
+  const con = (data?.related || []).filter((r) => r.type !== 'topic').slice(0, 8);
+  if (!con.length || !data) return null;
+  return (
+    <section className="hx-card hx-aside-card" aria-labelledby="hx-con-h">
+      <h2 id="hx-con-h" className="hx-aside-h">Sık birlikte geçen kavramlar</h2>
+      <div className="dz-chips hx-chips">
+        {con.map((r) => (
+          <button key={r.ref} type="button" className="dz-chip" onClick={() => onSearch(`${data.name.replace(/\s*\([^)]*\)/g, '')} ${r.label}`)} title={`${CONCEPT_META[r.type]?.label || 'Kavram'} — ikisini birlikte ara`}>
+            {r.label}
+          </button>
+        ))}
+      </div>
     </section>
   );
 };

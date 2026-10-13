@@ -21,6 +21,13 @@ export interface PwaState {
 
 export type PwaListener = (state: PwaState) => void;
 
+/**
+ * Sürüm sorgusu Cloudflare önbelleğini atlatır: /sw.js eskiden "immutable, 1 yıl" başlığıyla CDN'de takılı
+ * kalmıştı (yeni SW hiç inmiyordu). public/sw.js değişince (CACHE_VERSION ile birlikte) bunu da artır.
+ * Tüm kayıtlar bu adresi kullanır; sorgusuz /sw.js kaydı CDN'deki eski sürüme dönebilir.
+ */
+export const SW_URL = '/sw.js?v=10';
+
 export const PWA_WELCOME_STORAGE_KEY = 'medsoru_pwa_welcome_dismissed_v1';
 
 class PwaService {
@@ -115,10 +122,7 @@ class PwaService {
     }
 
     try {
-      // Sürüm sorgusu Cloudflare önbelleğini atlatır: /sw.js eskiden "immutable, 1 yıl" başlığıyla CDN'de
-      // takılı kalmıştı (yeni SW hiç inmiyordu). public/sw.js içindeki CACHE_VERSION değişince bunu da artır.
-      const swUrl = '/sw.js?v=9';
-      const reg = await navigator.serviceWorker.register(swUrl, { scope: '/' });
+      const reg = await navigator.serviceWorker.register(SW_URL, { scope: '/' });
       this.registration = reg;
       this.state.isRegistered = true;
 

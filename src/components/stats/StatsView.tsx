@@ -1,19 +1,23 @@
 import React, { useEffect, useMemo, useState } from 'react';
-import { BookmarkCheck, Check, Clock3, Flag, MessageSquare, NotebookPen, PenLine, Plus, RotateCcw, Star, X } from 'lucide-react';
+import { BookmarkCheck, Check, ChevronRight, Clock3, Flag, MessageSquare, NotebookPen, PenLine, Plus, RotateCcw, Star, Trophy, X } from 'lucide-react';
 import type { QuestionItem } from '../../types';
 import type { AppUser } from '../../services/auth';
 import type { AppRoute } from '../../router';
-import { PageHeader } from '../ui/PageHeader';
 import {
   getFavoriteCards, getFavorites, getNotes, getProgress, getReview, getTestHistory, loadArchiveBank, type StudyQuestion,
 } from '../../services/studyStore';
 import { dayKey, getActivity, getStudySeconds, type ActivityKind } from '../../services/activityLog';
 import { computeContributorStats } from '../../utils/contributionScore';
+import './stats.css';
 
 /**
- * İstatistiklerim (yeniden kurulum 2026-10-11, canvas "Stats" artboard'u).
+ * İstatistiklerim (v10 kompakt yeniden kurulum 2026-10-13, "Istatistik-Masaustu" artboard'u).
+ * Üstte dönem seçici (7 gün / 30 gün / Kurul), 4 KPI kutusu (önceki döneme göre fark), derslere göre
+ * doğruluk çubukları, 12 haftalık etkinlik ısı haritası ve zayıf konular; altında ayrıntılar
+ * (puan değişimi, günlük çözülen, soru durumu, katkılar, kaydettiklerin, etkinlik akışı).
  * Tüm sayılar gerçek kaynaklardan gelir: çözüm geçmişi, çalışma süresi ve etkinlik günlüğü bu cihazdadır
  * (localStorage); katkı puanı ve sıralama Sıralama sayfasıyla aynı hesapla havuz verisinden çıkar.
+ * Verisi olmayan bileşen gösterilmez.
  */
 interface Props {
   questions: QuestionItem[];
@@ -21,7 +25,7 @@ interface Props {
   onGo: (r: AppRoute) => void;
 }
 
-type Period = 'hafta' | 'ay' | 'tum';
+type Period = 'hafta' | 'ay' | 'kurul';
 const DAY = 86_400_000;
 const nf = new Intl.NumberFormat('tr-TR');
 const fmtDur = (sec: number) => {
@@ -50,24 +54,63 @@ const relTime = (iso: string) => {
 const readCardNotes = (): number => {
   try { return Object.keys(JSON.parse(localStorage.getItem('medsoru_card_notes_v1') || '{}')).length; } catch { return 0; }
 };
+/** "kurul-3", "k3", "3" → "Kurul 3"; tanınmazsa kimliğin kendisi. */
+const kurulLabel = (id: string) => {
+  const n = /(\d+)/.exec(id)?.[1];
+  return n ? `Kurul ${n}` : id;
+};
+/** Doğruluk eşikleri: ≥%70 iyi, ≥%55 orta, altı zayıf. */
+const tone = (acc: number) => (acc >= 70 ? 'is-good' : acc >= 55 ? 'is-mid' : 'is-bad');
+const signed = (n: number) => (n > 0 ? `+${nf.format(n)}` : n < 0 ? `−${nf.format(-n)}` : '±0');
 
 export const StatsView: React.FC<Props> = ({ questions, currentUser, onGo }) => {
   const [period, setPeriod] = useState<Period>('hafta');
   const [tab, setTab] = useState<'fav' | 'kart' | 'not' | 'tekrar'>('fav');
   const [bank, setBank] = useState<StudyQuestion[]>([]);
-  useEffect(() => { loadArchiveBank().then(setBank).catch(() => setBank([])); }, []);
+  const [bankReady, setBankReady] = useState(false);
+  useEffect(() => {
+    loadArchiveBank().then(setBank).catch(() => setBank([])).finally(() => setBankReady(true));
+  }, []);
 
-  const since = period === 'hafta' ? Date.now() - 7 * DAY : period === 'ay' ? Date.now() - 30 * DAY : 0;
   const progress = useMemo(() => getProgress(), []);
   const attempts = useMemo(() => Object.entries(progress), [progress]);
-  const inPeriod = attempts.filter(([, a]) => Date.parse(a.at) >= since);
-  const correct = inPeriod.filter(([, a]) => a.correct).length;
+  const bankById = useMemo(() => new Map(bank.map((q) => [q.id, q])), [bank]);
   const wrongAll = attempts.filter(([, a]) => !a.correct).length;
+
+  // "Kurul" dönemi: en son çözülen sorunun kurulu (şu an çalışılan kurul)
+  const currentKurul = useMemo(() => {
+    let best: { at: number; kid: string } | null = null;
+    attempts.forEach(([id, a]) => {
+      const kid = bankById.get(id)?.committeeId;
+      const at = Date.parse(a.at);
+      if (kid && (!best || at > best.at)) best = { at, kid };
+    });
+    return (best as { at: number; kid: string } | null)?.kid || null;
+  }, [attempts, bankById]);
+
+  // Dönem penceresi ve karşılaştırma için bir önceki eşit pencere
+  const win = period === 'hafta' ? 7 * DAY : period === 'ay' ? 30 * DAY : 7 * DAY;
+  const now = Date.now();
+  const since = now - win;
+  const prevSince = now - 2 * win;
+  const inScope = (id: string, at: string, from: number, to = Infinity) => {
+    if (period === 'kurul') return bankById.get(id)?.committeeId === currentKurul;
+    const t = Date.parse(at);
+    return t >= from && t < to;
+  };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const inPeriod = useMemo(() => attempts.filter(([id, a]) => inScope(id, a.at, since)), [attempts, bankById, period, currentKurul]);
+  const prevPeriod = period === 'kurul' ? [] : attempts.filter(([id, a]) => inScope(id, a.at, prevSince, since));
+  const correct = inPeriod.filter(([, a]) => a.correct).length;
   const accuracy = inPeriod.length ? Math.round((correct / inPeriod.length) * 100) : 0;
+  const prevAcc = prevPeriod.length ? Math.round((prevPeriod.filter(([, a]) => a.correct).length / prevPeriod.length) * 100) : null;
+  const kurulWeek = period === 'kurul' ? inPeriod.filter(([, a]) => Date.parse(a.at) >= now - 7 * DAY).length : 0;
 
   const seconds = useMemo(() => getStudySeconds(), []);
-  const periodSec = Object.entries(seconds).filter(([d]) => Date.parse(d) >= since - DAY).reduce((a, [, s]) => a + s, 0);
+  const secBetween = (from: number, to: number) => Object.entries(seconds).filter(([d]) => { const t = Date.parse(d); return t >= from - DAY && t < to - DAY; }).reduce((a, [, s]) => a + s, 0);
   const totalSec = Object.values(seconds).reduce((a, s) => a + s, 0);
+  const periodSec = period === 'kurul' ? totalSec : secBetween(since, now + DAY);
+  const prevSec = period === 'kurul' ? 0 : secBetween(prevSince, since);
 
   // Seri: bugünden geriye kesintisiz çalışılan günler
   const streak = useMemo(() => {
@@ -111,33 +154,41 @@ export const StatsView: React.FC<Props> = ({ questions, currentUser, onGo }) => 
     return out;
   }, [attempts]);
   const dayMax = Math.max(4, ...days.map((d) => d.ok + d.bad));
-  const dayAvg = Math.round(days.reduce((a, d) => a + d.ok + d.bad, 0) / 14);
+  const dayTotal = days.reduce((a, d) => a + d.ok + d.bad, 0);
+  const dayAvg = Math.round(dayTotal / 14);
 
-  // 12 haftalık çalışma takvimi (süre)
+  // 12 haftalık etkinlik (çalışma süresi; süre yoksa o gün çözülen soru da etkinlik sayılır)
   const heat = useMemo(() => {
+    const solvedByDay = new Map<string, number>();
+    attempts.forEach(([, a]) => { const k = dayKey(new Date(a.at)); solvedByDay.set(k, (solvedByDay.get(k) || 0) + 1); });
     const today = new Date();
     const start = new Date(today.getTime() - (83 + ((today.getDay() + 6) % 7)) * DAY);
     return Array.from({ length: 84 + ((today.getDay() + 6) % 7) + 1 }, (_, i) => {
       const d = new Date(start.getTime() + i * DAY);
-      const s = seconds[dayKey(d)] || 0;
-      return { key: dayKey(d), s, lvl: s === 0 ? 0 : s < 900 ? 1 : s < 1800 ? 2 : s < 3600 ? 3 : 4 };
+      const k = dayKey(d);
+      const s = seconds[k] || 0;
+      const n = solvedByDay.get(k) || 0;
+      const lvl = s >= 3600 || n >= 40 ? 4 : s >= 1800 || n >= 20 ? 3 : s >= 900 || n >= 8 ? 2 : s > 0 || n > 0 ? 1 : 0;
+      return { key: k, s, n, lvl };
     }).slice(-84);
-  }, [seconds]);
+  }, [seconds, attempts]);
+  const heatActive = heat.some((h) => h.lvl > 0);
 
-  // Ders bazında
+  // Derslere göre doğruluk (seçili dönem)
   const byLesson = useMemo(() => {
-    const disc = new Map(bank.map((q) => [q.id, q.discipline]));
     const m = new Map<string, { n: number; ok: number }>();
-    attempts.forEach(([id, a]) => {
-      const d = disc.get(id);
+    inPeriod.forEach(([id, a]) => {
+      const d = bankById.get(id)?.discipline;
       if (!d) return;
       const e = m.get(d) || { n: 0, ok: 0 };
       e.n++; if (a.correct) e.ok++;
       m.set(d, e);
     });
-    return [...m.entries()].sort((a, b) => b[1].n - a[1].n).slice(0, 6);
-  }, [bank, attempts]);
-  const lessonMax = Math.max(1, ...byLesson.map(([, v]) => v.n));
+    return [...m.entries()].map(([d, v]) => ({ d, n: v.n, acc: Math.round((v.ok / v.n) * 100) }));
+  }, [bankById, inPeriod]);
+  const bars = [...byLesson].sort((a, b) => b.acc - a.acc || b.n - a.n).slice(0, 10);
+  // Zayıf konular: en az 3 çözüm, doğruluk %60 altı, en zayıf 3
+  const weak = byLesson.filter((l) => l.n >= 3 && l.acc < 60).sort((a, b) => a.acc - b.acc).slice(0, 3);
 
   const favorites = useMemo(() => [...getFavorites()], []);
   const favCards = useMemo(() => getFavoriteCards(), []);
@@ -146,7 +197,6 @@ export const StatsView: React.FC<Props> = ({ questions, currentUser, onGo }) => 
   const tests = useMemo(() => getTestHistory(), []);
   const cardNotes = useMemo(readCardNotes, []);
   const activity = useMemo(() => getActivity().slice(-40).reverse(), []);
-  const bankById = useMemo(() => new Map(bank.map((q) => [q.id, q])), [bank]);
   const contribCount = activity.filter((a) => a.kind === 'katki').length;
 
   // Puan grafiği (8 hafta, kümülatif)
@@ -159,6 +209,7 @@ export const StatsView: React.FC<Props> = ({ questions, currentUser, onGo }) => 
   const line = series.map((v, i) => `${px(i)},${Math.round(py(v))}`).join(' ');
   const area = `M${px(0)},160 L${line.replace(/ /g, ' L')} L${px(7)},160 Z`;
   const weekDelta = contrib.weeks[7];
+  const hasPoints = (contrib.me?.totalPoints || 0) > 0;
 
   const savedTabs = [
     { id: 'fav' as const, label: 'Favori sorular', n: favorites.length, rows: favorites.slice(0, 5).map((id) => ({ t: bankById.get(id)?.stem || id, m: [bankById.get(id)?.discipline, bankById.get(id)?.year].filter(Boolean).join(' · ') || 'Soru' })) },
@@ -168,83 +219,153 @@ export const StatsView: React.FC<Props> = ({ questions, currentUser, onGo }) => 
   ];
   const curTab = savedTabs.find((s) => s.id === tab)!;
 
+  // KPI farkları: 7/30 gün → bir önceki eşit dönem; Kurul → son 7 gün
+  const prevLabel = period === 'hafta' ? 'önceki 7 güne göre' : 'önceki 30 güne göre';
+  const solvedDelta = period === 'kurul'
+    ? { t: kurulWeek ? `+${nf.format(kurulWeek)} bu hafta` : 'bu hafta çözüm yok', dir: kurulWeek ? 'up' : '' }
+    : { t: `${signed(inPeriod.length - prevPeriod.length)} ${prevLabel}`, dir: inPeriod.length > prevPeriod.length ? 'up' : inPeriod.length < prevPeriod.length ? 'down' : '' };
+  const accDelta = prevAcc === null || !inPeriod.length
+    ? { t: inPeriod.length ? `${nf.format(correct)} doğru · ${nf.format(inPeriod.length - correct)} yanlış` : 'bu dönemde çözüm yok', dir: '' }
+    : { t: `${signed(accuracy - prevAcc)} puan`, dir: accuracy > prevAcc ? 'up' : accuracy < prevAcc ? 'down' : '' };
+  const secDelta = period === 'kurul'
+    ? { t: 'tüm zamanlar', dir: '' }
+    : { t: periodSec === prevSec ? 'önceki dönemle aynı' : `${periodSec > prevSec ? '+' : '−'}${fmtDur(Math.abs(periodSec - prevSec))}`, dir: periodSec > prevSec ? 'up' : periodSec < prevSec ? 'down' : '' };
+
+  const kpis = [
+    { l: 'Çözülen soru', v: nf.format(inPeriod.length), d: solvedDelta },
+    { l: 'Doğruluk', v: inPeriod.length ? `%${accuracy}` : '—', d: accDelta },
+    { l: 'Çalışma süresi', v: fmtDur(periodSec), d: secDelta },
+    { l: 'Seri', v: `${streak} gün`, d: { t: streak ? 'arka arkaya çalışılan' : 'bugün çalışınca başlar', dir: '' } },
+  ];
+
+  const lessonsLoading = !bankReady && inPeriod.length > 0;
+  const showBars = lessonsLoading || bars.length > 0;
+  const showSide = heatActive || weak.length > 0;
+
   return (
-    <div className="st flex flex-col gap-3 min-w-0 pb-12">
-      <PageHeader title="İstatistiklerim" description="Çözdüğün sorular, çalışma süren, katkıların ve kaydettiklerin. Çözüm ve süre verisi bu cihazda tutulur." />
-
-      <div className="st-bar">
-        <span className="st-seg" role="radiogroup" aria-label="Dönem">
-          {([['hafta', 'Bu hafta'], ['ay', 'Bu ay'], ['tum', 'Tümü']] as const).map(([id, l]) => (
-            <button key={id} type="button" role="radio" aria-checked={period === id} onClick={() => setPeriod(id)}>{l}</button>
+    <div className="stv flex flex-col min-w-0 pb-12">
+      <header className="stv-head">
+        <div className="stv-title">
+          <h1>İstatistiklerim</h1>
+          <p>Çözüm ve süre verisi bu cihazda tutulur.</p>
+        </div>
+        <div className="stv-seg" role="tablist" aria-label="Dönem">
+          {([['hafta', '7 gün'], ['ay', '30 gün'], ['kurul', 'Kurul']] as const).map(([id, l]) => (
+            <button
+              key={id}
+              type="button"
+              role="tab"
+              aria-selected={period === id}
+              disabled={id === 'kurul' && !currentKurul}
+              title={id === 'kurul' ? (currentKurul ? `${kurulLabel(currentKurul)} · en son çalıştığın kurul` : 'Kurul sorusu çözünce açılır') : undefined}
+              onClick={() => setPeriod(id)}
+            >{id === 'kurul' && currentKurul ? kurulLabel(currentKurul) : l}</button>
           ))}
-        </span>
-      </div>
+        </div>
+      </header>
 
-      <section className="st-card st-kpis" aria-label="Özet">
-        <div className="st-kpi"><span className="l">Toplam puan</span><span className="v">{nf.format(contrib.me?.totalPoints || 0)}</span><span className={`d ${weekDelta > 0 ? 'up' : ''}`}>{weekDelta > 0 ? `+${weekDelta} bu hafta` : 'bu hafta katkı yok'}</span></div>
-        <div className="st-kpi"><span className="l">Sıralamadaki yerin</span><span className="v">{contrib.rank ? `${contrib.rank}.` : '—'}</span><span className="d">{contrib.rank ? 'katkı sıralamasında' : 'katkı yapınca görünür'}</span></div>
-        <div className="st-kpi"><span className="l">Çözülen soru</span><span className="v">{nf.format(inPeriod.length)}</span><span className="d">toplam {nf.format(attempts.length)}</span></div>
-        <div className="st-kpi"><span className="l">Doğruluk</span><span className="v">%{accuracy}</span><span className="d">{correct} doğru · {inPeriod.length - correct} yanlış</span></div>
-        <div className="st-kpi"><span className="l">Çalışma süresi</span><span className="v">{fmtDur(periodSec)}</span><span className="d">toplam {fmtDur(totalSec)}</span></div>
-        <div className="st-kpi"><span className="l">Seri</span><span className="v">{streak} gün</span><span className="d">arka arkaya çalışılan</span></div>
+      <section className="stv-kpis" aria-label="Özet">
+        {kpis.map((k) => (
+          <div key={k.l} className="stv-kpi">
+            <span className="l">{k.l}</span>
+            <strong className="v">{k.v}</strong>
+            <span className={`d ${k.d.dir === 'up' ? 'is-up' : k.d.dir === 'down' ? 'is-down' : ''}`}>{k.d.t}</span>
+          </div>
+        ))}
       </section>
 
-      <div className="st-grid">
-        <section className="st-card" aria-label="Puan değişimi">
-          <div className="st-h"><b>Puan değişimi</b><span>son 8 hafta</span></div>
-          <svg viewBox="0 0 560 176" role="img" aria-label={`Son 8 haftada puan ${series[0]} → ${series[7]}`} className="st-line">
-            {[20, 70, 120].map((y) => <line key={y} x1="36" x2="548" y1={y} y2={y} className="st-grid-l" />)}
-            <line x1="36" x2="548" y1="160" y2="160" className="st-axis" />
-            <path d={area} className="st-area" />
-            <polyline points={line} className="st-poly" />
-            {series.map((v, i) => <circle key={i} cx={px(i)} cy={py(v)} r={i === 7 ? 5 : 3} className="st-dot" />)}
-            <text x={px(7)} y={py(series[7]) - 12} textAnchor="middle" className="st-last">{series[7]}</text>
-          </svg>
-          <div className="st-xl">{series.map((_, i) => <span key={i}>{i === 7 ? 'Bu hf' : `H-${7 - i}`}</span>)}</div>
-        </section>
+      {(showBars || showSide) && (
+        <div className={`stv-main ${showBars && showSide ? '' : 'is-one'}`}>
+          {showBars && (
+            <section className="stv-card" aria-labelledby="stv-acc-h">
+              <div className="stv-h"><h2 id="stv-acc-h">Derslere göre doğruluk</h2><span>{period === 'kurul' && currentKurul ? kurulLabel(currentKurul) : period === 'hafta' ? 'son 7 gün' : 'son 30 gün'}</span></div>
+              {lessonsLoading ? (
+                <div className="stv-bars" aria-busy="true">
+                  {Array.from({ length: 5 }, (_, i) => <div key={i} className="stv-bar"><span className="ui-skel stv-skel-t" /><span className="ui-skel stv-skel-b" /><span /></div>)}
+                </div>
+              ) : (
+                <ul className="stv-bars">
+                  {bars.map((b) => (
+                    <li key={b.d} className="stv-bar">
+                      <span className="t" title={b.d}>{b.d}</span>
+                      <span className="tr" role="img" aria-label={`%${b.acc} doğru, ${b.n} soru`}><span className={`f ${tone(b.acc)}`} style={{ width: `${Math.max(2, b.acc)}%` }} /></span>
+                      <span className="v">%{b.acc}<small>{b.n}</small></span>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </section>
+          )}
 
-        <section className="st-card" aria-label="Günlük çözülen soru">
-          <div className="st-h"><b>Günlük çözülen soru</b><span>son 14 gün · ort. {dayAvg}</span><span className="st-lg"><i className="is-ok" />Doğru <i className="is-bad" />Yanlış</span></div>
-          <div className="st-bars" role="img" aria-label="Son 14 günde günlük çözülen soru sayısı">
-            {days.map((d) => (
-              <div key={d.key} className={`st-col ${d.today ? 'is-today' : ''}`} title={`${d.ok + d.bad} soru · ${d.ok} doğru · ${d.bad} yanlış`}>
-                <span className="n">{d.ok + d.bad || ''}</span>
-                <span className="bad" style={{ height: `${(d.bad / dayMax) * 112}px` }} />
-                <span className="ok" style={{ height: `${(d.ok / dayMax) * 112}px` }} />
+          {showSide && (
+            <section className="stv-card stv-side" aria-label="Etkinlik ve zayıf konular">
+              {heatActive && (
+                <>
+                  <div className="stv-h"><h2>Etkinlik</h2><span>son 12 hafta · {fmtDur(totalSec)}</span></div>
+                  <div className="stv-heat" role="img" aria-label="Son 12 haftada günlük etkinlik">
+                    {heat.map((h) => <i key={h.key} className={h.lvl ? `l${h.lvl}` : ''} title={`${new Date(h.key).toLocaleDateString('tr-TR')} · ${fmtDur(h.s)}${h.n ? ` · ${h.n} soru` : ''}`} />)}
+                  </div>
+                  <div className="stv-legend"><span>Az</span><i /><i className="l1" /><i className="l2" /><i className="l3" /><i className="l4" /><span>Çok</span></div>
+                  <p className="stv-note"><Clock3 aria-hidden /> Süre, sekme açıkken ve son bir dakikada etkileşim varken sayılır.</p>
+                </>
+              )}
+              {weak.length > 0 && (
+                <>
+                  <div className="stv-h"><h2>Zayıf konular</h2><span>%60 altı</span></div>
+                  <div className="stv-weak">
+                    {weak.map((w) => (
+                      <button key={w.d} type="button" onClick={() => onGo('study')} title={`${w.d} · Çalış sayfasında yanlışlarını yeniden çöz`}>
+                        <span className="t">{w.d}</span><span className="v">%{w.acc}</span><ChevronRight aria-hidden />
+                      </button>
+                    ))}
+                  </div>
+                </>
+              )}
+            </section>
+          )}
+        </div>
+      )}
+
+      {!attempts.length && !heatActive && (
+        <p className="stv-empty-all">Çalış sayfasında soru çözdükçe doğruluk, ders dökümü ve etkinlik burada belirir.</p>
+      )}
+
+      <h2 className="stv-sec">Ayrıntılar</h2>
+
+      {(hasPoints || dayTotal > 0) && (
+        <div className="st-grid">
+          {hasPoints && (
+            <section className="st-card" aria-label="Puan değişimi">
+              <div className="st-h"><b>Puan değişimi</b><span>son 8 hafta</span></div>
+              <svg viewBox="0 0 560 176" role="img" aria-label={`Son 8 haftada puan ${series[0]} → ${series[7]}`} className="st-line">
+                {[20, 70, 120].map((y) => <line key={y} x1="36" x2="548" y1={y} y2={y} className="st-grid-l" />)}
+                <line x1="36" x2="548" y1="160" y2="160" className="st-axis" />
+                <path d={area} className="st-area" />
+                <polyline points={line} className="st-poly" />
+                {series.map((v, i) => <circle key={i} cx={px(i)} cy={py(v)} r={i === 7 ? 5 : 3} className="st-dot" />)}
+                <text x={px(7)} y={py(series[7]) - 12} textAnchor="middle" className="st-last">{series[7]}</text>
+              </svg>
+              <div className="st-xl">{series.map((_, i) => <span key={i}>{i === 7 ? 'Bu hf' : `H-${7 - i}`}</span>)}</div>
+            </section>
+          )}
+
+          {dayTotal > 0 && (
+            <section className="st-card" aria-label="Günlük çözülen soru">
+              <div className="st-h"><b>Günlük çözülen soru</b><span>son 14 gün · ort. {dayAvg}</span><span className="st-lg"><i className="is-ok" />Doğru <i className="is-bad" />Yanlış</span></div>
+              <div className="st-bars" role="img" aria-label="Son 14 günde günlük çözülen soru sayısı">
+                {days.map((d) => (
+                  <div key={d.key} className={`st-col ${d.today ? 'is-today' : ''}`} title={`${d.ok + d.bad} soru · ${d.ok} doğru · ${d.bad} yanlış`}>
+                    <span className="n">{d.ok + d.bad || ''}</span>
+                    <span className="bad" style={{ height: `${(d.bad / dayMax) * 112}px` }} />
+                    <span className="ok" style={{ height: `${(d.ok / dayMax) * 112}px` }} />
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
-          <div className="st-xl is-14">{days.map((d) => <span key={d.key} className={d.today ? 'is-today' : ''}>{d.lab}</span>)}</div>
-        </section>
-      </div>
-
-      <div className="st-grid">
-        <section className="st-card" aria-label="Ders bazında">
-          <div className="st-h"><b>Ders bazında</b><span>çözdüğün çıkmış sorular</span></div>
-          {byLesson.length ? byLesson.map(([d, v]) => {
-            const acc = Math.round((v.ok / v.n) * 100);
-            return (
-              <div key={d} className="st-row">
-                <span className="t">{d}</span>
-                <span className="n">{v.n}</span>
-                <span className={`n ${acc >= 75 ? 'is-ok' : acc < 60 ? 'is-bad' : ''}`}>%{acc}</span>
-                <span className="st-meter"><span style={{ width: `${(v.n / lessonMax) * 100}%` }} /></span>
-              </div>
-            );
-          }) : <p className="st-empty">Çalış sayfasında soru çözdükçe ders dökümü burada belirir.</p>}
-        </section>
-
-        <section className="st-card" aria-label="Çalışma takvimi">
-          <div className="st-h"><b>Çalışma takvimi</b><span>son 12 hafta</span><span className="st-sp" /><span className="st-mono">{fmtDur(totalSec)}</span></div>
-          <div className="st-heat-wrap">
-            <div className="st-heat" role="img" aria-label="Son 12 haftada günlük çalışma süresi">
-              {heat.map((h) => <i key={h.key} className={h.lvl ? `l${h.lvl}` : ''} title={`${new Date(h.key).toLocaleDateString('tr-TR')} · ${fmtDur(h.s)}`} />)}
-            </div>
-          </div>
-          <div className="st-legend">Az <span className="st-heat is-legend"><i /><i className="l1" /><i className="l2" /><i className="l3" /><i className="l4" /></span> Çok</div>
-          <p className="st-note"><Clock3 aria-hidden /> Süre, sekme açıkken ve son bir dakikada etkileşim varken sayılır.</p>
-        </section>
-      </div>
+              <div className="st-xl is-14">{days.map((d) => <span key={d.key} className={d.today ? 'is-today' : ''}>{d.lab}</span>)}</div>
+            </section>
+          )}
+        </div>
+      )}
 
       <div className="st-grid is-3">
         <section className="st-card" aria-label="Soru durumu">
@@ -257,7 +378,8 @@ export const StatsView: React.FC<Props> = ({ questions, currentUser, onGo }) => 
         </section>
 
         <section className="st-card" aria-label="Katkıların">
-          <div className="st-h"><b>Katkıların</b></div>
+          <div className="st-h"><b>Katkıların</b><span className="st-sp" /><span className="st-mono">{weekDelta > 0 ? `+${weekDelta} bu hafta` : ''}</span></div>
+          <button type="button" className="st-li" onClick={() => onGo('leaderboard')}><span className="ic is-accent"><Trophy /></span>Toplam puan{contrib.rank ? ` · ${contrib.rank}. sırada` : ''}<span className="n">{nf.format(contrib.me?.totalPoints || 0)}</span></button>
           <button type="button" className="st-li" onClick={() => onGo('questions')}><span className="ic is-accent"><Plus /></span>Eklediğin sorular<span className="n">{contrib.me?.questionsCount || 0}</span></button>
           <button type="button" className="st-li" onClick={() => onGo('questions')}><span className="ic is-clinic"><PenLine /></span>Önerdiğin şıklar<span className="n">{contrib.me?.optionsCount || 0}</span></button>
           <button type="button" className="st-li" onClick={() => onGo('questions')}><span className="ic"><RotateCcw /></span>Düzeltmelerin<span className="n">{contrib.me?.revisionsCount || 0}</span></button>
@@ -279,12 +401,14 @@ export const StatsView: React.FC<Props> = ({ questions, currentUser, onGo }) => 
         </section>
       </div>
 
-      <section className="st-card" aria-label="Etkinlik akışı">
-        <div className="st-h"><b>Etkinlik akışı</b><span>bu cihazda yaptığın işlemler</span></div>
-        {activity.length ? activity.slice(0, 12).map((a, i) => (
-          <div key={i} className="st-feed"><span className={`kind ${KIND[a.kind]?.cls || ''}`}>{KIND[a.kind]?.label || a.kind}</span><span className="t">{a.text}</span><span className="w">{relTime(a.at)}</span></div>
-        )) : <p className="st-empty">Soru çözdükçe, not aldıkça ve katkı yaptıkça işlemlerin burada listelenir.</p>}
-      </section>
+      {activity.length > 0 && (
+        <section className="st-card" aria-label="Etkinlik akışı">
+          <div className="st-h"><b>Etkinlik akışı</b><span>bu cihazda yaptığın işlemler</span></div>
+          {activity.slice(0, 12).map((a, i) => (
+            <div key={i} className="st-feed"><span className={`kind ${KIND[a.kind]?.cls || ''}`}>{KIND[a.kind]?.label || a.kind}</span><span className="t">{a.text}</span><span className="w">{relTime(a.at)}</span></div>
+          ))}
+        </section>
+      )}
     </div>
   );
 };

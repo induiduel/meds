@@ -1,5 +1,5 @@
 // MedSoru Service Worker - PWA v8: Yüksek Hızlı Açılış, Optimize Edilmiş Bellek & Modül Parçalama
-const CACHE_VERSION = 'medsoru-pwa-v9';
+const CACHE_VERSION = 'medsoru-pwa-v10';
 const STATIC_CACHE = `medsoru-static-${CACHE_VERSION}`;
 const RUNTIME_CACHE = `medsoru-runtime-${CACHE_VERSION}`;
 const DATA_CACHE = `medsoru-data-${CACHE_VERSION}`;
@@ -376,34 +376,65 @@ self.addEventListener('push', (event) => {
 });
 
 // 8. Bildirime tıklandığında ilgili sayfayı aç
+// Hedef her zaman bu kökenin yoluna çevrilir (bildirim nofrostlife.com.tr adresini taşısa da abone olunan
+// uygulamada açılsın). Açık bir pencere varsa içine MEDSORU_NAVIGATE mesajı gider: uygulama sayfayı
+// yenilemeden rotayı kurar ve hedef öğeye odaklanır. Pencere mesajı almazsa navigate(), o da olmazsa yeni pencere.
+const APP_HOST_RE = /(^|\.)nofrostlife\.com\.tr$/i;
+
+function notificationTargetPath(data) {
+  let raw = data.url || data.link || '';
+  if (!raw && data.questionId) raw = `/cikmis/${encodeURIComponent(data.questionId)}`;
+  if (!raw) return { path: '/', external: false };
+  try {
+    const u = new URL(raw, self.location.origin);
+    if (u.origin === self.location.origin || APP_HOST_RE.test(u.hostname)) {
+      return { path: u.pathname + u.search + u.hash, external: false };
+    }
+    return { path: u.href, external: true };
+  } catch (_) {
+    return { path: '/', external: false };
+  }
+}
+
 self.addEventListener('notificationclick', (event) => {
   event.notification.close();
+  if (event.action === 'close') return;
 
-  if (event.action === 'close') {
-    return;
-  }
+  const target = notificationTargetPath(event.notification.data || {});
+  const path = target.path;
+  const absolute = new URL(path, self.location.origin).href;
 
-  const notificationData = event.notification.data || {};
-  let targetUrl = '/cikmis';
-  if (notificationData.url) {
-    targetUrl = notificationData.url;
-  } else if (notificationData.questionId) {
-    targetUrl = `/cikmis/${encodeURIComponent(notificationData.questionId)}`;
-  }
-
-  event.waitUntil(
-    self.clients.matchAll({ type: 'window', includeUncontrolled: true }).then((clientList) => {
-      for (const client of clientList) {
-        if ('focus' in client) {
-          if (client.url && client.url.includes(self.location.origin)) {
-            client.navigate(targetUrl);
-            return client.focus();
-          }
+  event.waitUntil((async () => {
+    if (target.external) {
+      if (self.clients.openWindow) await self.clients.openWindow(absolute);
+      return;
+    }
+    const list = await self.clients.matchAll({ type: 'window', includeUncontrolled: true });
+    const same = list.filter((c) => c.url && new URL(c.url).origin === self.location.origin);
+    // Odaktaki / görünür pencere önce
+    same.sort((a, b) => Number(b.focused) - Number(a.focused) || Number(b.visibilityState === 'visible') - Number(a.visibilityState === 'visible'));
+    const client = same[0];
+    if (client) {
+      try { await client.focus(); } catch (_) { /* odak izni yoksa da gezinme denensin */ }
+      // Uygulama mesajı alınca yanıt verir; eski bir sürüm (dinleyicisiz) açıksa 1,5 sn sonra tam gezinme yapılır.
+      const handled = await new Promise((resolve) => {
+        try {
+          const ch = new MessageChannel();
+          const timer = setTimeout(() => resolve(false), 1500);
+          ch.port1.onmessage = () => { clearTimeout(timer); resolve(true); };
+          client.postMessage({ type: 'MEDSORU_NAVIGATE', url: path }, [ch.port2]);
+        } catch (_) {
+          resolve(false);
         }
-      }
-      if (self.clients.openWindow) {
-        return self.clients.openWindow(targetUrl);
-      }
-    })
-  );
+      });
+      if (handled) return;
+      try {
+        if (client.navigate) {
+          await client.navigate(absolute);
+          return;
+        }
+      } catch (_) { /* denetlenmeyen pencere: yeni pencere aç */ }
+    }
+    if (self.clients.openWindow) await self.clients.openWindow(absolute);
+  })());
 });

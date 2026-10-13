@@ -19,6 +19,8 @@ import { ApiService } from '../services/api';
 import { FirestoreDbService } from '../services/firestoreDb';
 import { getSupabaseClient } from '../services/supabaseDb';
 import { realtimeEventService } from '../services/realtimeEvents';
+import { inAppPath } from '../services/universalRedirectService';
+import { SW_URL } from '../services/pwaService';
 
 const ADMIN_EMAIL = 'nofrostlife@gmail.com';
 
@@ -38,16 +40,8 @@ interface AdminMobileNotificationCardProps {
   onOpenQuestion?: (questionId: string) => void;
 }
 
-/** Öğren bildirimi: kayıttaki tam adresten (/ogren/<deste>?adim&hedef) bu sitenin yolunu çıkarır */
-const learnPath = (url?: string): string | null => {
-  if (!url) return null;
-  try {
-    const u = new URL(url, window.location.origin);
-    return u.pathname.startsWith('/ogren/') ? `${u.pathname}${u.search}` : null;
-  } catch {
-    return null;
-  }
-};
+/** Bildirim kaydındaki etiket ("Tıbbi Terim: x", "Ders · Adım 3") soru kimliği değildir; yalnız gerçek kimlik soruya gider. */
+const isQuestionId = (id?: string) => Boolean(id && !/[:·\s]/.test(id));
 
 export const AdminMobileNotificationCard: React.FC<AdminMobileNotificationCardProps> = ({
   onClose,
@@ -84,8 +78,7 @@ export const AdminMobileNotificationCard: React.FC<AdminMobileNotificationCardPr
       if ('serviceWorker' in navigator && 'PushManager' in window) {
         let reg = await navigator.serviceWorker.getRegistration();
         if (!reg) {
-          const swPath = (import.meta.env.BASE_URL || '/').replace(/\/$/, '') + '/sw.js';
-          try { reg = await navigator.serviceWorker.register(swPath, { scope: '/' }); } catch (_) {}
+          try { reg = await navigator.serviceWorker.register(SW_URL, { scope: '/' }); } catch (_) {}
         }
         if (reg) {
           activeSub = await reg.pushManager.getSubscription();
@@ -193,8 +186,7 @@ export const AdminMobileNotificationCard: React.FC<AdminMobileNotificationCardPr
       let reg: ServiceWorkerRegistration | undefined;
       if ('serviceWorker' in navigator) {
         try {
-          const swPath = (import.meta.env.BASE_URL || '/').replace(/\/$/, '') + '/sw.js';
-          reg = await navigator.serviceWorker.register(swPath, { scope: '/' });
+          reg = await navigator.serviceWorker.register(SW_URL, { scope: '/' });
           await navigator.serviceWorker.ready;
         } catch (swErr) {
           console.warn('Service Worker kayıt uyarısı:', swErr);
@@ -613,18 +605,18 @@ export const AdminMobileNotificationCard: React.FC<AdminMobileNotificationCardPr
                   </p>
                 </div>
 
-                {learnPath(notif.url) ? (
+                {inAppPath(notif.url) ? (
                   <a
-                    href={learnPath(notif.url)!}
+                    href={inAppPath(notif.url)!}
                     className="shrink-0 bg-accent-soft hover:bg-accent hover:text-white text-accent text-2xs font-bold px-2 py-1 rounded flex items-center gap-1 cursor-pointer transition-colors"
-                    title="Derste bildirilen yere git"
+                    title="Bildirilen yere git"
                   >
-                    <span>Derste gör</span>
+                    <span>{inAppPath(notif.url)!.startsWith('/ogren/') ? 'Derste gör' : 'Gör'}</span>
                     <ExternalLink className="w-3 h-3" />
                   </a>
-                ) : notif.questionId && onOpenQuestion && (
+                ) : isQuestionId(notif.questionId) && onOpenQuestion && (
                   <button
-                    onClick={() => onOpenQuestion(notif.questionId)}
+                    onClick={() => onOpenQuestion(notif.questionId!)}
                     className="shrink-0 bg-accent-soft hover:bg-accent hover:text-white text-accent text-2xs font-bold px-2 py-1 rounded flex items-center gap-1 cursor-pointer transition-colors"
                     title="Soruyu incele"
                   >

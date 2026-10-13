@@ -20,6 +20,16 @@ import { getNetState } from './net';
 import { getDeviceToken, getVoterId } from '../utils/voterId';
 import { auth, SAVED_NAME_KEY, SAVED_STUDENT_NUMBER_KEY } from './auth';
 import { replaceNotesFromSync, StudyNote } from './studyStore';
+import {
+  applyKv,
+  collectKv,
+  hasDirtyKv,
+  installProfileKvWatcher,
+  markKvSent,
+  onProfileDataChange,
+  withoutTracking,
+  type KvMap,
+} from './userKvSync';
 
 export interface UserStatsPayload {
   activityLog?: Array<{ kind: string; text: string; at: string }>;
@@ -56,6 +66,12 @@ export interface FullUserDataBundle {
     pushEnabled: boolean;
     emailEnabled: boolean;
   };
+  /** Silinen bildirimler + "geçmişi temizle" zamanı (birleşimde geri gelmesinler) */
+  notificationsDeleted?: { ids?: Record<string, string>; clearedAt?: string };
+  /** Profil anahtar deposu (userKvSync): Öğren ilerlemesi, vurgular, çizimler, tercihler… */
+  kv?: KvMap;
+  /** Sunucu yanıtında: kv'deki en yeni kayıt zamanı (sonraki istekte yalnız bundan yenileri gelir) */
+  kvRev?: string;
   notes: StudyNote[];
   /** Silinen notların mezar taşları (id → silinme zamanı); birleştirmede silinen not geri gelmesin */
   notesDeleted?: Record<string, string>;
@@ -67,6 +83,10 @@ export interface FullUserDataBundle {
 const LAST_BACKUP_KEY = 'medsoru_last_user_data_backup_at';
 const LAST_RESTORE_KEY = 'medsoru_last_user_data_restore_at';
 const NOTES_DELETED_KEY = 'medsoru_notes_deleted_v1'; // notesSync ile ortak
+const NOTIF_DELETED_KEY = 'medsoru_user_notifications_deleted_v1'; // userNotificationService ile ortak
+const KV_SINCE_KEY = 'medsoru_kv_since_v1'; // kimlik → sunucudan alınan son kv zamanı
+/** Bu sayfanın kimliği: kendi gönderimimizin SSE yankısını yeniden çekmeyelim. */
+const ORIGIN = `tab-${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 8)}`;
 
 const readJson = <T>(key: string, fallback: T): T => {
   try {
@@ -122,6 +142,8 @@ export function collectLocalUserData(): FullUserDataBundle {
   const pushEnabled = (typeof localStorage !== 'undefined' ? localStorage.getItem('medsoru_push_notifications_enabled') : 'false') === 'true';
   const emailEnabled = (typeof localStorage !== 'undefined' ? localStorage.getItem('medsoru_email_notifications_enabled') : 'false') === 'true';
 
+  const notificationsDeleted = readJson<{ ids?: Record<string, string>; clearedAt?: string }>(NOTIF_DELETED_KEY, {});
+
   // Notlar
   const notes = readJson<StudyNote[]>('medsoru_notes_v1', []);
   const notesDeleted = readJson<Record<string, string>>(NOTES_DELETED_KEY, {});
@@ -147,6 +169,7 @@ export function collectLocalUserData(): FullUserDataBundle {
       pushEnabled,
       emailEnabled,
     },
+    notificationsDeleted,
     notes,
     notesDeleted,
     clientUpdatedAt: new Date().toISOString(),
@@ -158,7 +181,22 @@ export function collectLocalUserData(): FullUserDataBundle {
  * listeler birleşir, sayaçlarda büyük olan, kayıtlarda yeni olan kazanır; silinen notlar geri gelmez,
  * cihazda daha yeni düzenlenmiş not korunur. Hem yedek yanıtında hem elle geri yüklemede kullanılır.
  */
-export function applyBundleToLocal(bundle: FullUserDataBundle): void {
+export function applyBundleToLocal(bundle: FullUserDataBundle, uid?: string): void {
+  withoutTracking(() => applyBundleInner(bundle));
+  const kvChanged = applyKv(bundle?.kv);
+  if (uid && bundle?.kvRev) {
+    const since = readJson<Record<string, string>>(KV_SINCE_KEY, {});
+    if (!since[uid] || bundle.kvRev > since[uid]) {
+      since[uid] = bundle.kvRev;
+      writeJson(KV_SINCE_KEY, since);
+    }
+  }
+  if (typeof window !== 'undefined') {
+    window.dispatchEvent(new CustomEvent('medsoru:user-data-applied', { detail: { kvChanged } }));
+  }
+}
+
+function applyBundleInner(bundle: FullUserDataBundle): void {
   const st = bundle?.stats || {};
   const keyOf = (x: any) => (x && typeof x === 'object' ? String(x.id ?? x.at ?? x.date ?? x.timestamp ?? JSON.stringify(x)) : String(x));
   const union = (local: any[], remote: any[], pick: (l: any, r: any) => any = (l) => l) => {
@@ -211,9 +249,18 @@ export function applyBundleToLocal(bundle: FullUserDataBundle): void {
     writeJson('medsoru_bookmarked_encyclopedia', union(readJson<any[]>('medsoru_bookmarked_encyclopedia', []), st.bookmarkedEncyclopedia).filter(Boolean));
   }
 
+  // Bildirim silme kayıtları birleşir; silinen/temizlenen bildirim hiçbir cihazda geri gelmez
+  const localTomb = readJson<{ ids?: Record<string, string>; clearedAt?: string }>(NOTIF_DELETED_KEY, {});
+  const remoteTomb = bundle.notificationsDeleted || {};
+  const tombIds: Record<string, string> = { ...(localTomb.ids || {}) };
+  for (const [id, at] of Object.entries(remoteTomb.ids || {})) if (!tombIds[id] || at > tombIds[id]) tombIds[id] = at;
+  const clearedAt = [localTomb.clearedAt || '', remoteTomb.clearedAt || ''].sort().pop() || '';
+  if (remoteTomb.ids || remoteTomb.clearedAt) writeJson(NOTIF_DELETED_KEY, { ids: tombIds, clearedAt });
+
   if (Array.isArray(bundle.notifications)) {
-    const merged = union(readJson<UserNotificationItem[]>('medsoru_user_notifications_v1', []), bundle.notifications, (l, r) => ({ ...r, ...l, read: Boolean(l?.read || r?.read) }));
-    writeJson('medsoru_user_notifications_v1', merged.sort((a, b) => String(b.createdAt || '').localeCompare(String(a.createdAt || ''))));
+    const merged = union(readJson<UserNotificationItem[]>('medsoru_user_notifications_v1', []), bundle.notifications, (l, r) => ({ ...r, ...l, read: Boolean(l?.read || r?.read) }))
+      .filter((n) => n && !tombIds[n.id] && !(clearedAt && String(n.createdAt || '') <= clearedAt));
+    writeJson('medsoru_user_notifications_v1', merged.sort((a, b) => String(b.createdAt || '').localeCompare(String(a.createdAt || ''))).slice(0, 300));
   }
 
   // Notlar: mezar taşlarıyla birleşim (silinen geri gelmez, yerelde daha yeni düzenlenen korunur)
@@ -282,7 +329,10 @@ export async function backupUserDataToDatabase(): Promise<{
 
   try {
     const who = await backupIdentity();
-    const payload = { ...collectLocalUserData(), uid: who.uid };
+    const since = readJson<Record<string, string>>(KV_SINCE_KEY, {})[who.uid] || '';
+    // Bu kimlikle ilk eşitlemede tüm profil anahtarları, sonra yalnız değişenler gider
+    const { kv } = collectKv(!since);
+    const payload = { ...collectLocalUserData(), uid: who.uid, kv, kvSince: since, origin: ORIGIN };
     const res = await fetch(`${base}/api/user-data/backup`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', ...who.headers },
@@ -297,9 +347,10 @@ export async function backupUserDataToDatabase(): Promise<{
     const data = await res.json();
     const nowIso = data.backedUpAt || new Date().toISOString();
     // Sunucu birleştirdi: diğer cihazlardan gelenleri de buraya uygula (cihazlar yakınsar)
+    markKvSent(kv);
     if (data?.data) {
       try {
-        applyBundleToLocal(data.data);
+        applyBundleToLocal(data.data, who.uid);
         lastBackedUpFingerprint = fingerprint();
       } catch (e) {
         console.warn('[UserDataSync] Birleştirilmiş paket uygulanamadı:', e);
@@ -329,7 +380,7 @@ export async function backupUserDataToDatabase(): Promise<{
 /**
  * Veritabanındaki yedeği çeker ve yerel depolama ile birleştirir (Restore).
  */
-export async function restoreUserDataFromDatabase(): Promise<{
+export async function restoreUserDataFromDatabase(opts: { kvSince?: boolean; quiet?: boolean } = {}): Promise<{
   success: boolean;
   message?: string;
   restoredAt?: string;
@@ -344,6 +395,10 @@ export async function restoreUserDataFromDatabase(): Promise<{
   try {
     const who = await backupIdentity();
     const query = new URLSearchParams({ uid: who.uid });
+    if (opts.kvSince) {
+      const since = readJson<Record<string, string>>(KV_SINCE_KEY, {})[who.uid];
+      if (since) query.set('kvSince', since);
+    }
     const res = await fetch(`${base}/api/user-data/backup?${query.toString()}`, {
       headers: who.headers,
     });
@@ -358,10 +413,11 @@ export async function restoreUserDataFromDatabase(): Promise<{
     }
 
     const bundle: FullUserDataBundle = json.data;
-    applyBundleToLocal(bundle);
+    applyBundleToLocal(bundle, who.uid);
+    lastBackedUpFingerprint = fingerprint();
 
     const nowIso = new Date().toISOString();
-    if (typeof localStorage !== 'undefined') {
+    if (typeof localStorage !== 'undefined' && !opts.quiet) {
       localStorage.setItem(LAST_RESTORE_KEY, nowIso);
     }
 
@@ -378,7 +434,7 @@ export async function restoreUserDataFromDatabase(): Promise<{
       restoredAt: nowIso,
     };
   } catch (err: any) {
-    console.error('[UserDataSync] Restore failed:', err);
+    if (!opts.quiet) console.error('[UserDataSync] Restore failed:', err);
     return { success: false, error: err.message || 'Veritabanı geri yükleme hatası' };
   }
 }
@@ -409,16 +465,25 @@ function fingerprint(): string {
 }
 
 let autoBackupRunning = false;
-async function autoBackupIfChanged(): Promise<void> {
-  if (autoBackupRunning || getNetState() === 'offline') return;
+let rerun = false;
+async function autoBackupIfChanged(force = false): Promise<void> {
+  if (getNetState() === 'offline') return;
+  if (autoBackupRunning) {
+    rerun = true; // gönderim sürerken gelen değişiklik kaybolmasın
+    return;
+  }
   const fp = fingerprint();
-  if (!fp || fp === lastBackedUpFingerprint) return;
+  if (!force && (!fp || (fp === lastBackedUpFingerprint && !hasDirtyKv()))) return;
   autoBackupRunning = true;
   try {
     const r = await backupUserDataToDatabase();
     if (r.success) lastBackedUpFingerprint = fingerprint();
   } finally {
     autoBackupRunning = false;
+  }
+  if (rerun) {
+    rerun = false;
+    void autoBackupIfChanged();
   }
 }
 
@@ -438,16 +503,68 @@ export function triggerAutoBackup(): void {
 
 let autoInstalled = false;
 /**
- * İstatistik ve notların sürekli yedeklenmesi: sekme arka plana geçince ve açıkken 15 dk'da bir, yalnız veri
- * değiştiyse. Sunucu birleştirdiği için sık yedek veri kaybettirmez; yanıt diğer cihazların verisini de getirir.
+ * Profilin canlı eşitlenmesi:
+ *  - Profil verisi değişince 2,5 sn içinde sunucuya gider (sık yazılan sayaçlar dönemsel gönderime kalır).
+ *  - Sunucu kaydedince SSE `user_data_changed` yayınlar; aynı kullanıcının diğer cihazları anında çeker.
+ *  - Açılışta, sekme öne gelince, çevrimiçi olunca ve açıkken 2 dakikada bir (yalnız veri değiştiyse) eşitlenir;
+ *    sekme arka plana geçerken bekleyen değişiklik hemen gönderilir.
  */
 export function installUserDataAutoBackup(): void {
   if (autoInstalled || typeof window === 'undefined') return;
   autoInstalled = true;
+  installProfileKvWatcher();
+
+  let quick: number | undefined;
+  onProfileDataChange((immediate) => {
+    if (!immediate) return;
+    if (quick) clearTimeout(quick);
+    quick = window.setTimeout(() => void autoBackupIfChanged(), 2500);
+  });
+
   document.addEventListener('visibilitychange', () => {
     if (document.visibilityState === 'hidden') void autoBackupIfChanged();
+    else void pullFromServer();
   });
+  window.addEventListener('online', () => void autoBackupIfChanged());
   window.setInterval(() => {
     if (document.visibilityState === 'visible') void autoBackupIfChanged();
-  }, 15 * 60 * 1000);
+  }, 2 * 60 * 1000);
+
+  // Diğer cihazdaki değişiklik (ya da sunucunun yazdığı bildirim): yalnız bu kullanıcıya aitse çek
+  void import('./realtimeEvents').then(({ realtimeEventService }) => {
+    realtimeEventService.connect();
+    realtimeEventService.on('user_data_changed', (p: any) => {
+      if (!p?.who || p.origin === ORIGIN) return;
+      void isOwnUserEvent(p.who).then((own) => own && void pullFromServer());
+    });
+  });
+
+  // Açılış: bu cihazda bekleyen değişiklikler gider, hesabın diğer cihazlardaki verisi gelir
+  window.setTimeout(() => void autoBackupIfChanged(true), 4000);
+}
+
+async function isOwnUserEvent(who: string): Promise<boolean> {
+  try {
+    const { uid } = await backupIdentity();
+    const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(`ud:${uid}`));
+    const hex = Array.from(new Uint8Array(buf), (b) => b.toString(16).padStart(2, '0')).join('');
+    return hex.slice(0, 16) === who;
+  } catch {
+    return false;
+  }
+}
+
+let pulling: Promise<unknown> | null = null;
+/** Sunucudaki profili (yalnız yeni kv kayıtlarıyla) çekip uygular; bekleyen yerel değişiklik varsa önce gönderir. */
+async function pullFromServer(): Promise<void> {
+  if (getNetState() === 'offline') return;
+  if (hasDirtyKv() || fingerprint() !== lastBackedUpFingerprint) {
+    await autoBackupIfChanged(); // gönderim yanıtı birleştirilmiş profili zaten getirir
+    return;
+  }
+  if (pulling) return;
+  pulling = restoreUserDataFromDatabase({ kvSince: true, quiet: true }).finally(() => {
+    pulling = null;
+  });
+  await pulling;
 }

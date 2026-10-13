@@ -1,6 +1,10 @@
 import React, { useCallback, useState, useMemo, useEffect, useDeferredValue, useRef } from 'react';
 import { useAnswerDoubtfulQuery, useAiReviewQueueQuery } from '../hooks/useMedicalQueries';
 import { CikmisCard } from '../screens/cikmis/CikmisCard';
+import { PastQuestionRichCard, PastQuestionRichCardProps, RichCardSkeleton, LoadMoreSentinel } from './cikmis/PastQuestionRichCard';
+import { CikmisViewSwitch, useCikmisGorunum } from './cikmis/CikmisViewSwitch';
+import { PageToolbar, FilterPills, ToolbarChip } from './ui/PageToolbar';
+import { getProgress, recordAttempt, getFavorites, setFavorite, OptionKey, AttemptRecord } from '../services/studyStore';
 import { logActivity } from '../services/activityLog';
 import { FilterGroup } from './ui/FilterGroup';
 import { copyQuestion } from '../utils/copyQuestion';
@@ -135,6 +139,10 @@ export const getQualityTier = (q: any): string => {
   const s = getQualityScore(q);
   return s >= 90 ? 'altin' : s >= 75 ? 'saglam' : s >= 60 ? 'orta' : s >= 40 ? 'zayif' : 'kritik';
 };
+
+/** Çözülmemiş hata bildirimi var mı (çözülen/geçersiz sayılan bildirim "Hata bildirilen" süzgecinde tutulmaz). */
+const hasOpenReport = (q: QuestionItem): boolean =>
+  (q.reports || []).some((r: any) => !['resolved', 'verified_correct', 'rejected', 'dismissed'].includes(r?.status));
 
 const isNewQ = (q: QuestionItem): boolean =>
   Boolean(
@@ -305,6 +313,16 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
     try { return localStorage.getItem('cikmis_quiz') === '1'; } catch { return false; }
   });
   const [picks, setPicks] = useState<Record<string, string>>({});
+  // Kart / Kompakt görünüm (cihazda hatırlanır) ve Kart görünümünde kademeli çizim sınırı
+  const [gorunum, setGorunum] = useCikmisGorunum();
+  const RICH_STEP = 20;
+  const [richLimit, setRichLimit] = useState(RICH_STEP);
+  // Çözüm durumu (studyStore: bu cihazdaki cevaplar) ve kaydedilen sorular
+  const [attempts, setAttempts] = useState<Record<string, AttemptRecord>>(() => getProgress());
+  const [savedIds, setSavedIds] = useState<Set<string>>(() => getFavorites());
+  const [statusFilter, setStatusFilter] = useState<'all' | 'unsolved' | 'wrong' | 'saved'>('all');
+  // Liste, segment seçildiği andaki duruma göre süzülür: cevaplanan kart "Çözülmedi" listesinden anında kaybolmasın
+  const [statusSnap, setStatusSnap] = useState<{ attempts: Record<string, AttemptRecord>; saved: Set<string> }>(() => ({ attempts: getProgress(), saved: getFavorites() }));
   // "Hakkında" penceresi ve şıkka itiraz
   const [aboutQuestion, setAboutQuestion] = useState<QuestionItem | null>(null);
   const [objection, setObjection] = useState<{ question: QuestionItem; option: { key: string; text: string } } | null>(null);
@@ -417,7 +435,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
       const t = e.target as HTMLElement;
       if (e.key !== '/' || e.metaKey || e.ctrlKey || t.closest('input, textarea, select, [contenteditable="true"]')) return;
       e.preventDefault();
-      searchRef.current?.focus();
+      (document.querySelector('[data-page-search]') as HTMLInputElement | null)?.focus();
     };
     document.addEventListener('keydown', onKey);
     return () => document.removeEventListener('keydown', onKey);
@@ -471,6 +489,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
 
   // Active Comments Drawer State
   const [expandedCommentsQuestionId, setExpandedCommentsQuestionId] = useState<string | null>(null);
+  const [focusCommentId, setFocusCommentId] = useState<string | null>(null);
   // Derin bağlantı: /cikmis/<id>?sec=comments yorumları açar. Bildirimden uygulama içinde gelinince (popstate)
   // paylaşılan soru ve bölüm yeniden okunur; sayfa yenilenmez.
   useEffect(() => {
@@ -481,6 +500,9 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
         if (id) setSharedId(id);
         const sec = new URLSearchParams(window.location.search).get('sec');
         if (id && sec === 'comments') setExpandedCommentsQuestionId(id);
+        // #comm-<yorum> çapası: yorum kapalı bir yanıt zincirindeyse zincir açılır.
+        const anchor = decodeURIComponent(window.location.hash.slice(1));
+        setFocusCommentId(anchor.startsWith('comm-') ? anchor.slice(5) : null);
       } catch { /* yoksay */ }
     };
     apply();
@@ -1035,7 +1057,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
       ambiguityTab === 'all' ||
       (ambiguityTab === 'valid' && !p.q.isAmbiguous) ||
       (ambiguityTab === 'ambiguous' && !!p.q.isAmbiguous) ||
-      (ambiguityTab === 'reported' && !!p.q.reports?.length) ||
+      (ambiguityTab === 'reported' && hasOpenReport(p.q)) ||
       (ambiguityTab === 'quarantined' && p.isQuarantined),
     committee: (p) => selectedCommittee === 'all' || p.comms.includes(selectedCommittee),
     year: (p) => selectedYear === 'all' || p.year === selectedYear,
@@ -1084,7 +1106,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
     },
   };
   const facetValues: Record<FacetKey, (p: Prep) => (string | null)[]> = {
-    pool: (p) => [p.q.isAmbiguous ? 'ambiguous' : 'valid', p.q.reports?.length ? 'reported' : null, p.isQuarantined ? 'quarantined' : null],
+    pool: (p) => [p.q.isAmbiguous ? 'ambiguous' : 'valid', hasOpenReport(p.q) ? 'reported' : null, p.isQuarantined ? 'quarantined' : null],
     committee: (p) => p.comms,
     year: (p) => [p.year],
     discipline: (p) => [p.disc],
@@ -1106,7 +1128,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
     ],
   };
 
-  const { filteredQuestions, facetCounts } = useMemo(() => {
+  const { filteredQuestions, facetCounts, statusCounts } = useMemo(() => {
     const keys = Object.keys(facetPass) as FacetKey[];
     const counts = Object.fromEntries(keys.map((k) => [k, new Map<string, number>()])) as Record<FacetKey, Map<string, number>>;
     const bump = (k: FacetKey, p: Prep) => {
@@ -1142,10 +1164,26 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
     else if (sortOrder === 'popular') hits.sort((a, b) => b.popularityScore - a.popularityScore);
     else if (sortOrder === 'discipline') hits.sort((a, b) => a.disc.localeCompare(b.disc, 'tr') || (a.q.questionNumber || 0) - (b.q.questionNumber || 0));
     else if (sortOrder === 'updated') hits.sort((a, b) => b.updatedTimestamp - a.updatedTimestamp);
-    const list = hits.map((p) => p.q);
-    return { filteredQuestions: list, facetCounts: counts };
+    const all = hits.map((p) => p.q);
+    // Durum segmenti (Tümü / Çözülmedi / Yanlışlar / Kaydedilenler): sayılar canlı, liste seçim anındaki duruma göre
+    const statusCounts = { all: all.length, unsolved: 0, wrong: 0, saved: 0 };
+    for (const q of all) {
+      const a = attempts[q.id];
+      if (!a) statusCounts.unsolved++;
+      else if (!a.correct) statusCounts.wrong++;
+      if (savedIds.has(q.id)) statusCounts.saved++;
+    }
+    const list = statusFilter === 'all'
+      ? all
+      : all.filter((q) => {
+          const a = statusSnap.attempts[q.id];
+          if (statusFilter === 'unsolved') return !a;
+          if (statusFilter === 'wrong') return Boolean(a && !a.correct);
+          return statusSnap.saved.has(q.id);
+        });
+    return { filteredQuestions: list, facetCounts: counts, statusCounts };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [prepared, searchScores, ambiguityTab, selectedCommittee, selectedYear, selectedDiscipline, selectedTopic, answerFilter, explanationFilter, sourceFilter, phase14Filter, denetleyiciFilter, newnessFilter, manualFilter, repeatedFilter, quarantineFilter, editedFilter, sortOrder]);
+  }, [statusFilter, statusSnap, attempts, savedIds, prepared, searchScores, ambiguityTab, selectedCommittee, selectedYear, selectedDiscipline, selectedTopic, answerFilter, explanationFilter, sourceFilter, phase14Filter, denetleyiciFilter, newnessFilter, manualFilter, repeatedFilter, quarantineFilter, editedFilter, sortOrder]);
   const fc = (k: FacetKey, v = 'all') => facetCounts[k].get(v) || 0;
 
   // Seçili kurul/ders artık sonuç vermiyorsa (başka seçim yüzünden) seçimi düşürme: kullanıcı neyi seçtiyse o kalır,
@@ -1211,9 +1249,12 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
   }, [mergedTarget]);
   const paginatedQuestions = useMemo(() => {
     if (sharedId) return questions.filter((q) => String(q.id) === sharedId);
+    if (gorunum === 'kart') return filteredQuestions.slice(0, richLimit);
     const start = (currentPage - 1) * itemsPerPage;
     return filteredQuestions.slice(start, start + itemsPerPage);
-  }, [filteredQuestions, currentPage, sharedId, questions]);
+  }, [filteredQuestions, currentPage, sharedId, questions, gorunum, richLimit]);
+  // Süzgeç sonucu değişince Kart görünümü yeniden ilk 20 kartla başlar
+  useEffect(() => { setRichLimit(RICH_STEP); }, [filteredQuestions]);
 
   const resetPage = () => setCurrentPage(1);
   const LABELS = {
@@ -1275,8 +1316,43 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
     setPhase14Filter('all');
     setEditedFilter('all');
     setSortOrder('default');
+    setStatusFilter('all');
     setCurrentPage(1);
   };
+  const pickCommittee = (c: string) => {
+    setSelectedCommittee(c);
+    resetPage();
+    if (c !== 'all' && selectedDiscipline !== 'all') {
+      const commObj = OFFICIAL_CURRICULUM_COMMITTEES.find((x) => x.id === c);
+      if (commObj && !commObj.allDisciplineNames.map((d) => normalizeDonem3Discipline(d) || d).includes(selectedDiscipline)) setSelectedDiscipline('all');
+    }
+  };
+  const pickStatus = (v: 'all' | 'unsolved' | 'wrong' | 'saved') => {
+    setStatusSnap({ attempts: getProgress(), saved: getFavorites() });
+    setStatusFilter(v);
+    resetPage();
+  };
+  // Kart görünümü: cevap bu cihazın çalışma kaydına yazılır (studyStore → Çalış ekranı, yanlışlar tekrar listesine)
+  const handleRichAnswer = (q: QuestionItem, key: string, correct: boolean) => {
+    setAttempts({ ...recordAttempt(String(q.id), key as OptionKey, correct) });
+  };
+  const toggleSave = (id: string) => {
+    setSavedIds((prev) => {
+      const s = setFavorite(id, !prev.has(id));
+      toast.success(s.has(id) ? 'Kaydedildi' : 'Kayıttan çıkarıldı');
+      return new Set(s);
+    });
+  };
+  // Ders notunda aç: mevcut slayt/sayfa eşleştiricisi; eşleşme yoksa "Hakkında" penceresi (kaynak ve kanıt)
+  const openNoteFor = (q: QuestionItem) => {
+    const m = getQuestionSlideMatch(q);
+    if (m && onOpenNote) onOpenNote(m.note.id, m.page.pageNumber);
+    else {
+      toast.info('Ders notu eşleşmesi yok', 'Soru hakkındaki kaynak bilgisi açıldı.');
+      setAboutQuestion(q);
+    }
+  };
+  const CardView: React.FC<PastQuestionRichCardProps> = gorunum === 'kart' ? PastQuestionRichCard : CikmisCard;
   const isAdminUser = currentUser?.email === ADMIN_EMAIL || !!currentUser?.isAdmin;
   const n = (v: number) => v.toLocaleString('tr-TR');
 
@@ -1305,14 +1381,40 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
 
   return (
     <div className="cx">
-      {/* Başlık: ad + canlı sayı; yönetici araçları sağda */}
-      <header className="cx-head">
-        <h1 className="ms-page-title cx-title">Çıkmış sorular</h1>
-        <span className="cx-count" aria-live="polite">{n(filteredQuestions.length)} <small>soru</small></span>
-        <span className="cx-head-tools">
+      {/* Ortak kompakt araç çubuğu: başlık · sayı · arama · durum segmenti · Süzgeç (sayfa) · görünüm seçici */}
+      <div
+        style={{ display: 'contents' }}
+        onFocus={(e) => { if ((e.target as HTMLElement).matches?.('[data-page-search]')) setSuggestOpen(true); }}
+        onBlur={(e) => { if ((e.target as HTMLElement).matches?.('[data-page-search]')) window.setTimeout(() => setSuggestOpen(false), 120); }}
+      >
+      <PageToolbar
+        className="cx-pt"
+        title="Çıkmış sorular"
+        count={`${n(filteredQuestions.length)} soru`}
+        search={{ value: searchQuery, onChange: (v) => { setSearchQuery(v); resetPage(); setSuggestOpen(true); }, placeholder: 'Soru kökü ara' }}
+        segments={{
+          label: 'Çözüm durumu',
+          value: statusFilter,
+          onChange: pickStatus,
+          options: [
+            { id: 'all', label: 'Tümü', count: statusCounts.all },
+            { id: 'unsolved', label: 'Çözülmedi', count: statusCounts.unsolved },
+            { id: 'wrong', label: 'Yanlışlar', count: statusCounts.wrong },
+            { id: 'saved', label: 'Kaydedilenler', count: statusCounts.saved },
+          ],
+        }}
+        filterTitle="Süzgeçler"
+        filterCount={advancedCount + (selectedCommittee !== 'all' ? 1 : 0) + (sortOrder !== 'default' ? 1 : 0)}
+        chips={[
+          ...(selectedCommittee !== 'all' ? [{ id: 'kurul', label: committeeShort(selectedCommittee), onRemove: () => pickCommittee('all') }] : []),
+          ...activeFilterChips.map((c, i) => ({ id: `f${i}-${c.label}`, label: c.label, onRemove: () => { c.clear(); resetPage(); } })),
+          ...(sortOrder !== 'default' ? [{ id: 'sort', label: LABELS.sort[sortOrder], onRemove: () => { setSortOrder('default'); resetPage(); } }] : []),
+        ] as ToolbarChip[]}
+        onClearChips={clearAllFilters}
+        tools={<>
           {isAdminUser && (
-            <a href={pathFor('test_cikmis')} className="cx-iconbtn" title="Faz 14 düzeltme önerilerini incele" aria-label="Faz 14 incelemesi">
-              <Sparkles />
+            <a href={pathFor('test_cikmis')} className="pt-icon" title="Faz 14 düzeltme önerilerini incele" aria-label="Faz 14 incelemesi">
+              <Sparkles aria-hidden />
             </a>
           )}
           <button
@@ -1321,170 +1423,47 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
             disabled={cacheStatus.isSyncing}
             aria-label="Güncellemeleri denetle"
             title={`Cihazda ${n(questions.length)} soru · güncellemeleri denetle`}
-            className="cx-iconbtn"
+            className="pt-icon"
           >
-            <RefreshCw className={cacheStatus.isSyncing ? 'animate-spin' : ''} />
+            <RefreshCw aria-hidden className={cacheStatus.isSyncing ? 'animate-spin' : ''} />
           </button>
-        </span>
-      </header>
-
-      {/* Kontrol yuvası: arama, kurul sekmeleri ve etkin süzgeçler; kaydırınca üst çubuğun altına yapışır */}
-      <div className="cx-dock">
-      {/* Arama ve filtre tek kontrol */}
-      <div className="cx-search">
-        <Search aria-hidden />
-        <input
-          ref={searchRef}
-          type="search"
-          value={searchQuery}
-          onChange={(e) => { setSearchQuery(e.target.value); resetPage(); setSuggestOpen(true); }}
-          onFocus={() => setSuggestOpen(true)}
-          onBlur={() => window.setTimeout(() => setSuggestOpen(false), 120)}
-          onKeyDown={(e) => {
-            if (e.key === 'Escape') { if (searchQuery) setSearchQuery(''); else (e.target as HTMLInputElement).blur(); }
-            if (e.key === 'Enter') setSuggestOpen(false);
-          }}
-          placeholder="Kök, şık, konu ya da #numara"
-          aria-label="Çıkmış sorularda ara"
-          autoComplete="off"
-        />
-        {searchQuery ? (
-          <button type="button" onClick={() => { setSearchQuery(''); searchRef.current?.focus(); }} aria-label="Aramayı temizle" className="cx-search-x">
-            <X />
-          </button>
-        ) : (
-          <kbd className="ms-kbd cx-kbd" aria-hidden>/</kbd>
-        )}
-        <span className="cx-search-sep" aria-hidden />
-        <button
-          type="button"
-          onClick={() => setFiltersOpen(true)}
-          aria-haspopup="dialog"
-          aria-label={`Filtreler${advancedCount ? `, ${advancedCount} etkin` : ''}`}
-          title="Ders, konu, yıl, cevap ve diğer filtreler"
-          className={`cx-filterbtn ${advancedCount ? 'is-on' : ''}`}
-        >
-          <SlidersHorizontal />
-          <span className="cx-filterbtn-l">Filtre</span>
-          {advancedCount > 0 && <b>{advancedCount}</b>}
-        </button>
-        {suggestOpen && searchQuery.trim().length >= 2 && (
-          <div className="ms-suggest" role="listbox" aria-label="Arama önerileri" onMouseDown={(e) => e.preventDefault()}>
-            <button type="button" className="ms-suggest-row is-active" onClick={() => setSuggestOpen(false)}>
-              <Search aria-hidden />
-              <span className="min-w-0 truncate">“{searchQuery.trim()}” için sonuçlar</span>
-              <span className="n">{n(filteredQuestions.length)}</span>
-            </button>
-            {suggestions.disciplines.length > 0 && <div className="ms-suggest-label">Ders olarak süz</div>}
-            {suggestions.disciplines.map(([d, c]) => (
-              <button key={d} type="button" className="ms-suggest-row" onClick={() => { setSelectedDiscipline(d); setSelectedTopic('all'); setSearchQuery(''); setSuggestOpen(false); resetPage(); }}>
-                <BookOpen aria-hidden /> <span className="min-w-0 truncate">{d}</span> <span className="n">{n(c)}</span>
-              </button>
-            ))}
-            {suggestions.topics.length > 0 && <div className="ms-suggest-label">Konu olarak süz</div>}
-            {suggestions.topics.map(([t, c]) => (
-              <button key={t} type="button" className="ms-suggest-row" onClick={() => { setSelectedTopic(t); setSearchQuery(''); setSuggestOpen(false); resetPage(); }}>
-                <Tag aria-hidden /> <span className="min-w-0 truncate">{t}</span> <span className="n">{n(c)}</span>
-              </button>
-            ))}
-            <p className="ms-suggest-tip m-0">
-              <code>"tam ifade"</code> · <code>-hariç</code> · <code>#12</code> soru numarası. Türkçe karakter fark etmez.
-            </p>
-          </div>
-        )}
-      </div>
-
-      {/* Kurul sekmeleri + sıralama/kendini sına aynı rayda (telefonda alt alta) */}
-      <div className="cx-rail">
-      <nav className="cx-tabs" aria-label="Kurul" onWheel={(e) => { if (e.deltaY) e.currentTarget.scrollLeft += e.deltaY; }}>
-        {[['all', 'Tümü'] as [string, string], ...committeeList.map((c) => [c, committeeShort(c)] as [string, string])].map(([c, label]) => {
-          const on = selectedCommittee === c;
-          const cnt = c === 'all' ? fc('committee') : fc('committee', c);
-          return (
+          <CikmisViewSwitch value={gorunum} onChange={setGorunum} />
+        </>}
+        filters={<>
+          <FilterPills
+            label="Kurul"
+            value={selectedCommittee}
+            onChange={pickCommittee}
+            options={[{ id: 'all', label: 'Tümü', count: fc('committee') }, ...committeeList.map((c) => ({ id: c, label: committeeShort(c), count: fc('committee', c) }))]}
+          />
+          <fieldset className="pt-fgroup">
+            <legend>Sıralama</legend>
+            <select value={sortOrder} onChange={(e) => { setSortOrder(e.target.value as any); resetPage(); }} aria-label="Sırala">
+              <option value="default">{LABELS.sort.default}</option>
+              <option value="quality_desc">Kalite: en iyi önce</option>
+              <option value="quality_asc">Kalite: en sorunlu önce</option>
+              <option value="newest">Yeniden eskiye</option>
+              <option value="oldest">Eskiden yeniye</option>
+              <option value="number">Soru numarası</option>
+              <option value="discipline">Derse göre</option>
+              <option value="popular">En popüler</option>
+              <option value="updated">Son güncellenen</option>
+            </select>
+          </fieldset>
+          <fieldset className="pt-fgroup">
+            <legend>Kompakt görünüm</legend>
             <button
-              key={c}
               type="button"
-              aria-pressed={on}
-              title={c === 'all' ? 'Tüm kurullar' : formatCommitteeName(c)}
-              className={`cx-tab ${on ? 'is-on' : ''} ${cnt === 0 && !on ? 'is-zero' : ''}`}
-              onClick={() => {
-                setSelectedCommittee(c);
-                resetPage();
-                if (c !== 'all' && selectedDiscipline !== 'all') {
-                  const commObj = OFFICIAL_CURRICULUM_COMMITTEES.find((x) => x.id === c);
-                  if (commObj && !commObj.allDisciplineNames.map((d) => normalizeDonem3Discipline(d) || d).includes(selectedDiscipline)) setSelectedDiscipline('all');
-                }
-              }}
+              role="switch"
+              aria-checked={quizMode}
+              onClick={() => setQuizMode((v) => !v)}
+              className="cx-pt-quiz"
+              title="Kompakt kartlarda cevaplar gizlenir; şıkkı işaretleyince doğru cevap görünür (Kart görünümü her zaman böyledir)"
             >
-              {label.replace(/^Kurul\s*/i, 'K')}
-              <small>{n(cnt)}</small>
+              <span className="cx-switch" aria-hidden><i /></span>
+              Kendini sına: cevapları gizle
             </button>
-          );
-        })}
-      </nav>
-
-      {/* Etkin filtreler + sıralama + kendini sına */}
-      <div className="cx-bar">
-        <span className="cx-bar-sp" />
-        <label className="cx-sort" title="Sırala">
-          <ArrowUpDown aria-hidden />
-          <span>{LABELS.sort[sortOrder]}</span>
-          <select value={sortOrder} onChange={(e) => { setSortOrder(e.target.value as any); resetPage(); }} aria-label="Sırala">
-            <option value="default">{LABELS.sort.default}</option>
-            <option value="quality_desc">Kalite: en iyi önce</option>
-            <option value="quality_asc">Kalite: en sorunlu önce</option>
-            <option value="newest">Yeniden eskiye</option>
-            <option value="oldest">Eskiden yeniye</option>
-            <option value="number">Soru numarası</option>
-            <option value="discipline">Derse göre</option>
-            <option value="popular">En popüler</option>
-            <option value="updated">Son güncellenen</option>
-          </select>
-        </label>
-        <button
-          type="button"
-          role="switch"
-          aria-checked={quizMode}
-          onClick={() => setQuizMode((v) => !v)}
-          title={quizMode ? 'Cevaplar gizli: şıkkı işaretleyince doğru cevap görünür' : 'Cevapları gizleyip kendini sına'}
-          className={`cx-quiz ${quizMode ? 'is-on' : ''}`}
-        >
-          <span className="cx-switch" aria-hidden><i /></span>
-          Kendini sına
-        </button>
-      </div>
-      </div>
-      {activeFilterChips.length > 0 && (
-        <div className="cx-chips">
-          {activeFilterChips.map((c) => (
-            <button key={c.label} type="button" onClick={() => { c.clear(); resetPage(); }} className="cx-chip" aria-label={`${c.label} filtresini kaldır`}>
-              <span>{c.label}</span>
-              <X aria-hidden />
-            </button>
-          ))}
-          {anyFilter && <button type="button" onClick={clearAllFilters} className="cx-clear">Temizle</button>}
-        </div>
-      )}
-
-      </div>
-
-      {/* Süzgeçler: ortak alt sayfa (geniş ekranda pencere). Öğrenci süzgeçleri önde, yönetim süzgeçleri ayrı bölümde */}
-      <Sheet
-        open={filtersOpen}
-        onClose={() => setFiltersOpen(false)}
-        title="Süzgeçler"
-        subtitle={anyFilter ? `${advancedCount} süzgeç etkin` : 'Ders, konu, yıl ve cevap durumuna göre daralt'}
-        size="full"
-        width={560}
-        footer={
-          <>
-            <button type="button" onClick={clearAllFilters} className="ui-btn is-ghost" disabled={!anyFilter}>Sıfırla</button>
-            <button type="button" onClick={() => setFiltersOpen(false)} className="ui-btn is-primary" style={{ flex: 1, maxWidth: 260 }}>
-              {n(filteredQuestions.length)} soruyu göster
-            </button>
-          </>
-        }
-      >
+          </fieldset>
         <div className="cx-filters">
           <FilterGroup
             title="Ders"
@@ -1645,7 +1624,37 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
           )}
           </>)}
         </div>
-      </Sheet>
+          <button type="button" onClick={clearAllFilters} className="ui-btn is-ghost" disabled={!anyFilter && statusFilter === 'all'}>Tüm süzgeçleri sıfırla</button>
+        </>}
+      >
+        {suggestOpen && searchQuery.trim().length >= 2 && (
+          <div className="cx-pt-suggest">
+          <div className="ms-suggest" role="listbox" aria-label="Arama önerileri" onMouseDown={(e) => e.preventDefault()}>
+            <button type="button" className="ms-suggest-row is-active" onClick={() => setSuggestOpen(false)}>
+              <Search aria-hidden />
+              <span className="min-w-0 truncate">“{searchQuery.trim()}” için sonuçlar</span>
+              <span className="n">{n(filteredQuestions.length)}</span>
+            </button>
+            {suggestions.disciplines.length > 0 && <div className="ms-suggest-label">Ders olarak süz</div>}
+            {suggestions.disciplines.map(([d, c]) => (
+              <button key={d} type="button" className="ms-suggest-row" onClick={() => { setSelectedDiscipline(d); setSelectedTopic('all'); setSearchQuery(''); setSuggestOpen(false); resetPage(); }}>
+                <BookOpen aria-hidden /> <span className="min-w-0 truncate">{d}</span> <span className="n">{n(c)}</span>
+              </button>
+            ))}
+            {suggestions.topics.length > 0 && <div className="ms-suggest-label">Konu olarak süz</div>}
+            {suggestions.topics.map(([t, c]) => (
+              <button key={t} type="button" className="ms-suggest-row" onClick={() => { setSelectedTopic(t); setSearchQuery(''); setSuggestOpen(false); resetPage(); }}>
+                <Tag aria-hidden /> <span className="min-w-0 truncate">{t}</span> <span className="n">{n(c)}</span>
+              </button>
+            ))}
+            <p className="ms-suggest-tip m-0">
+              <code>"tam ifade"</code> · <code>-hariç</code> · <code>#12</code> soru numarası. Türkçe karakter fark etmez.
+            </p>
+          </div>
+          </div>
+        )}
+      </PageToolbar>
+      </div>
 
       {/* Derslere göz at (Apple Sağlık "Göz at" listesi): süzgeç yokken ders renkli kısa yol */}
       {!isLoading && !sharedId && selectedDiscipline === 'all' && !searchQuery.trim() && currentPage === 1 && (() => {
@@ -1688,7 +1697,11 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
       })()}
 
       {/* Questions Listing */}
-      {isLoading ? (
+      {isLoading && gorunum === 'kart' ? (
+        <div className="cx-list ck-list" aria-busy="true" aria-label="Çıkmış sorular yükleniyor">
+          {[0, 1, 2].map((i) => <RichCardSkeleton key={i} />)}
+        </div>
+      ) : isLoading ? (
         <div className="bg-white rounded-2xl border border-line">
           <SectionLoader label="Çıkmış sorular yükleniyor…" />
         </div>
@@ -1709,7 +1722,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
           <button type="button" onClick={clearAllFilters} className="ms-btn is-tonal">Filtreleri temizle</button>
         </div>
       ) : (
-        <div className="cx-list" key={`${currentPage}-${filteredQuestions.length}-${sharedId || ''}`}>
+        <div className={`cx-list ${gorunum === 'kart' ? 'ck-list' : ''}`} key={`${gorunum}-${currentPage}-${filteredQuestions.length}-${sharedId || ''}`}>
           {sharedId && (
             <div className="ms-shared-band" role="status">
               <Share2 className="w-4 h-4 shrink-0" aria-hidden />
@@ -1978,9 +1991,27 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                       />
                 ) : undefined;
 
+            const cmts: any[] = (q as any).comments || [];
+            const lastCm = cmts.length ? cmts[cmts.length - 1] : null;
+            const att = attempts[q.id];
             return (
-              <CikmisCard
+              <CardView
                 key={q.id}
+                rich={gorunum === 'kart' ? {
+                  number: q.questionNumber || '',
+                  year: q.examYear,
+                  status: isDenetleyici || (q as any).checkSolve?.status === 'onayli' || (q as any).answerStatus === 'dogrulandi'
+                    ? { label: 'Onaylı', tone: 'ok' }
+                    : p14Fixed && !isPhase14Pending(q) ? { label: 'Düzeltildi', tone: 'info' } : null,
+                  saved: savedIds.has(q.id),
+                  onToggleSave: () => toggleSave(q.id),
+                  onInfo: () => setAboutQuestion(q),
+                  onOpenNote: onOpenNote ? () => openNoteFor(q) : undefined,
+                  attempt: att ? { picked: att.picked, correct: att.correct } : null,
+                  onAnswer: (k, ok) => handleRichAnswer(q, k, ok),
+                  voterUid: userUid,
+                  commentPreview: lastCm ? { author: String(lastCm.author || 'Tıp öğrencisi'), text: censorProfanity(String(lastCm.text || '')), more: cmts.length - 1 } : null,
+                } : undefined}
                 id={String(q.id)}
                 anchorId={`q-${q.id}`}
                 className={disciplineClass(q.discipline)}
@@ -2124,7 +2155,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                         {roots.length > 0 ? (
                           roots.map((r) => {
                             const reps = repliesOf(r);
-                            const open = openThreads[r.id] || reps.length <= 2;
+                            const open = openThreads[r.id] || reps.length <= 2 || reps.some((c) => c.id === focusCommentId);
                             return (
                               <div key={r.id} className="cm-thread">
                                 {renderOne(r, false)}
@@ -2178,7 +2209,10 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
             );
           })}
 
-          {totalPages > 1 && !sharedId && (
+          {gorunum === 'kart' && !sharedId && (
+            <LoadMoreSentinel remaining={filteredQuestions.length - paginatedQuestions.length} onMore={() => setRichLimit((l) => l + RICH_STEP)} />
+          )}
+          {gorunum === 'kompakt' && totalPages > 1 && !sharedId && (
             <nav aria-label="Sayfalar" className="cx-pager">
               <button type="button" onClick={() => { setCurrentPage((prev) => Math.max(1, prev - 1)); window.scrollTo({ top: 0, behavior: 'smooth' }); }} disabled={currentPage === 1} className="ms-btn is-outline">
                 <ChevronLeft /> <span className="hidden sm:inline">Önceki</span>

@@ -18,7 +18,7 @@ import { NotificationHistoryModal } from '../notifications/NotificationHistoryMo
 const MODE_ICONS: Record<ThemeMode, React.ElementType> = { light: Sun, sepia: SunMedium, dark: Moon };
 
 /**
- * v9 alt gezinme (<768px): ekranın altında yüzen "ada". Öğren · Kartlar · [+ Ekle] · Çıkmış · Daha.
+ * v9 alt gezinme (<768px): ekranın altında yüzen "ada". Öğren · Havuz · [+ Ekle] · Çıkmış · Daha.
  * Etkin sekmenin simgesi kendi renginde bir hapa oturur (yaylanarak), ortada yükseltilmiş ekle düğmesi.
  * Dokunuşta kısa titreşim, basılı tutunca sayfanın kodu önden yüklenir. Klavye açıkken gizlenir (html.kb-open).
  * "Daha" ortak Sheet'te: gruplu liste, hızlı tema, araçlar.
@@ -50,7 +50,7 @@ export const TabBar: React.FC<{
     setMore(false);
     onGo(r);
   };
-  const [addTab, learnTab, cardsTab, pastTab] = TAB_ITEMS;
+  const [addTab, learnTab, poolTab, pastTab] = TAB_ITEMS;
   const tabLink = ({ id, short, label, icon: Icon, tint }: (typeof TAB_ITEMS)[number]) => {
     const on = active === id;
     return (
@@ -73,7 +73,7 @@ export const TabBar: React.FC<{
     <>
       <nav aria-label="Alt gezinme" className="sh-tabs ms-hide-on-kb print:hidden">
         <div className="sh-tabs-in">
-          {[learnTab, cardsTab].map((t) => tabLink(t))}
+          {[learnTab, poolTab].map((t) => tabLink(t))}
           {/* Ortadaki birincil eylem: soru ekle (yükseltilmiş yuvarlak düğme) */}
           <a
             href={pathFor(addTab.id)}

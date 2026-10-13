@@ -21,6 +21,40 @@
  */
 
 import { toast } from '../components/ui/Toast';
+import { navigateTo } from '../router';
+
+const APP_HOST_RE = /(^|\.)nofrostlife\.com\.tr$/i;
+
+/**
+ * Bildirim / paylaşım bağlantısını sayfayı yenilemeden açar: adres yazılır, App popstate ile rotayı kurar,
+ * initDeepLinkAutoScroll hedef öğe çizilince ona kaydırıp vurgular. nofrostlife.com.tr bağlantıları
+ * (push ve e-posta mutlak adres taşır) hangi hostta açılırsa açılsın bu uygulamanın yoluna çevrilir.
+ */
+export function openDeepLink(url: string): void {
+  if (!url || typeof window === 'undefined') return;
+  try {
+    const u = new URL(url, window.location.origin);
+    if (u.origin !== window.location.origin && !APP_HOST_RE.test(u.hostname)) {
+      window.open(u.href, '_blank', 'noopener');
+      return;
+    }
+    navigateTo(u.pathname + u.search + u.hash);
+  } catch {
+    window.location.assign(url);
+  }
+}
+
+/** Mutlak bildirim adresinden bu sitenin yolunu çıkarır (bağlantı href'i için); dış adreste null. */
+export function inAppPath(url?: string): string | null {
+  if (!url || typeof window === 'undefined') return null;
+  try {
+    const u = new URL(url, window.location.origin);
+    if (u.origin !== window.location.origin && !APP_HOST_RE.test(u.hostname)) return null;
+    return u.pathname + u.search + u.hash;
+  } catch {
+    return null;
+  }
+}
 
 export type UniversalReportType =
   | 'past_question'

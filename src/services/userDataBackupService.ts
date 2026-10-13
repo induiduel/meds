@@ -35,7 +35,12 @@ export interface UserDataBackupDeps {
   getPastQuestions: () => any[];
   /** Hesaba bağlı not defteri (/api/notes ile aynı depo). */
   notesStore: NotesStore;
+  /** Kayıttan sonra: meds-pg `user_data` yansısı + kullanıcının diğer cihazlarına SSE (`user_data_changed`). */
+  onSaved?: (info: { uid: string; email: string; verified: boolean; bundle: any; origin: string }) => void;
 }
+
+/** Kullanıcının SSE olay anahtarı: olay tüm ziyaretçilere gider, yalnız bu özeti kendi uid'sinden üreten cihaz çeker. */
+export const userEventHash = (uid: string): string => crypto.createHash('sha256').update(`ud:${uid}`).digest('hex').slice(0, 16);
 
 type Identity = { uid: string; email: string; verified: boolean };
 
@@ -101,8 +106,18 @@ export function mergeUserBundle(existing: any, incoming: any): any {
     bookmarkedEncyclopedia: unionBy(arr(es.bookmarkedEncyclopedia), arr(is.bookmarkedEncyclopedia)),
   };
 
+  // Silinen bildirimler (mezar taşı) ve "geçmişi temizle" zamanı: birleşim silineni geri getirmesin
+  const eTomb = obj(e.notificationsDeleted);
+  const iTomb = obj(i.notificationsDeleted);
+  const deletedIds: Record<string, string> = { ...obj(eTomb.ids) };
+  for (const [id, at] of Object.entries(obj(iTomb.ids))) if (!deletedIds[id] || String(at) > deletedIds[id]) deletedIds[id] = String(at);
+  const clearedAt = [String(eTomb.clearedAt || ''), String(iTomb.clearedAt || '')].sort().pop() || '';
+  // En eski mezar taşları budanır (bildirim listesi zaten 300 ile sınırlı)
+  const tombIds = Object.fromEntries(Object.entries(deletedIds).sort((a, b) => b[1].localeCompare(a[1])).slice(0, 600));
+
   // Bildirim bir cihazda okunduysa okunmuş sayılır
   const notifications = unionBy(arr(e.notifications), arr(i.notifications), (o: any, n: any) => ({ ...o, ...n, read: Boolean(o?.read || n?.read) }))
+    .filter((n: any) => n && !tombIds[n.id] && !(clearedAt && String(n.createdAt || '') <= clearedAt))
     .sort((x: any, y: any) => String(y?.createdAt || '').localeCompare(String(x?.createdAt || '')))
     .slice(0, 300);
 
@@ -113,8 +128,57 @@ export function mergeUserBundle(existing: any, incoming: any): any {
     studentNumber: i.studentNumber || e.studentNumber || null,
     stats,
     notifications,
+    notificationsDeleted: { ids: tombIds, clearedAt },
     notificationPrefs: { ...obj(e.notificationPrefs), ...obj(i.notificationPrefs) },
+    kv: mergeKv(e.kv, i.kv),
   };
+}
+
+// ---------------- Profil anahtar deposu (kv) ----------------
+// İstemcideki her kullanıcı verisi anahtarı (Öğren ilerlemesi, vurgular, çizimler, kart notları, tercihler…)
+// `{ v: localStorage değeri | null (silindi), at: ISO }` olarak taşınır; anahtar başına son yazan kazanır.
+const KV_MAX_KEYS = 600;
+const KV_MAX_VALUE = 2_000_000;
+const KV_KEY_RE = /^[A-Za-z0-9_.:\-]{1,160}$/;
+
+export function mergeKv(existing: unknown, incoming: unknown): Record<string, { v: string | null; at: string }> {
+  const out: Record<string, { v: string | null; at: string }> = {};
+  for (const src of [obj(existing), obj(incoming)]) {
+    for (const [k, rec] of Object.entries(src)) {
+      if (!KV_KEY_RE.test(k) || !rec || typeof rec !== 'object') continue;
+      const v = (rec as any).v;
+      const at = String((rec as any).at || '');
+      if (v !== null && typeof v !== 'string') continue;
+      if (typeof v === 'string' && v.length > KV_MAX_VALUE) continue;
+      const cur = out[k];
+      if (!cur || at > cur.at) out[k] = { v, at };
+    }
+  }
+  const keys = Object.keys(out);
+  if (keys.length <= KV_MAX_KEYS) return out;
+  // Sınır aşılırsa önce eski silinmiş kayıtlar, sonra en eskiler düşer
+  keys.sort((a, b) => Number(out[a].v === null) - Number(out[b].v === null) || out[b].at.localeCompare(out[a].at));
+  return Object.fromEntries(keys.slice(0, KV_MAX_KEYS).map((k) => [k, out[k]]));
+}
+
+/** Yanıtta yalnız istemcinin henüz görmediği kv kayıtları gider (her kayıtta tüm çizim/vurgu verisi dönmesin). */
+function withKvSince(bundle: any, since: unknown): any {
+  const s = typeof since === 'string' ? since : '';
+  const kv = obj(bundle?.kv);
+  const sent = s ? Object.fromEntries(Object.entries(kv).filter(([, r]: any) => String(r?.at || '') > s)) : kv;
+  const kvRev = Object.values(kv).reduce((m: string, r: any) => (String(r?.at || '') > m ? String(r.at) : m), '');
+  return { ...bundle, kv: sent, kvRev };
+}
+
+export interface ServerUserNotification {
+  type: string;
+  title: string;
+  message: string;
+  deepLinkUrl?: string;
+  targetType?: string;
+  targetId?: string;
+  /** Aynı olay iki kez bildirilmesin (ör. `report_resolved:<raporId>`). */
+  dedupeKey?: string;
 }
 
 export function registerUserDataBackupRoutes(app: express.Express, deps: UserDataBackupDeps) {
@@ -143,19 +207,20 @@ export function registerUserDataBackupRoutes(app: express.Express, deps: UserDat
     return { notes: st.notes, notesDeleted: st.deleted };
   }
 
-  // Basit hız sınırı (IP başına dakikada 20 yazma)
+  // Hız sınırı: profil artık her değişiklikte birkaç saniye içinde eşitlenir. IP başına dakikada 240 (yurt/okul ağında
+  // pek çok öğrenci aynı IP'yi paylaşır), kimlik başına dakikada 40 yazma.
   const writeRate = new Map<string, { n: number; at: number }>();
-  const rateLimited = (req: express.Request) => {
-    const ip = String(req.headers['cf-connecting-ip'] || req.ip || '');
+  const overLimit = (key: string, max: number) => {
     const now = Date.now();
-    const r = writeRate.get(ip);
+    const r = writeRate.get(key);
     if (!r || now - r.at > 60_000) {
-      if (writeRate.size > 5000) writeRate.clear();
-      writeRate.set(ip, { n: 1, at: now });
+      if (writeRate.size > 10_000) writeRate.clear();
+      writeRate.set(key, { n: 1, at: now });
       return false;
     }
-    return ++r.n > 20;
+    return ++r.n > max;
   };
+  const rateLimited = (req: express.Request) => overLimit(`ip:${String(req.headers['cf-connecting-ip'] || req.ip || '')}`, 240);
 
   const readBackup = (file: string): any | null => {
     try {
@@ -170,6 +235,13 @@ export function registerUserDataBackupRoutes(app: express.Express, deps: UserDat
     return path.join(backupsDir, `${hash}.json`);
   };
 
+  /** Atomik dosya yazımı (girintisiz: kv içinde çizim/vurgu verisi büyüyebilir). */
+  const writeBackup = (file: string, bundle: any) => {
+    const tmpFile = `${file}.${process.pid}.${Date.now()}.tmp`;
+    fs.writeFileSync(tmpFile, JSON.stringify(bundle), 'utf8');
+    fs.renameSync(tmpFile, file);
+  };
+
   /**
    * POST /api/user-data/backup
    * Kullanıcının tüm tarayıcı verilerini sunucu ve Supabase veritabanına kaydeder.
@@ -182,6 +254,7 @@ export function registerUserDataBackupRoutes(app: express.Express, deps: UserDat
       const who = await resolveIdentity(req, claimed);
       if (!who.id) return res.status(who.status || 401).json({ error: who.error });
       const { uid, email, verified } = who.id;
+      if (overLimit(`id:${uid}`, 40)) return res.status(429).json({ error: 'Çok sık yedekleme isteği; biraz sonra tekrar deneyin.' });
 
       const primaryId = uid;
       const backupFile = getBackupFilePath(primaryId);
@@ -195,8 +268,9 @@ export function registerUserDataBackupRoutes(app: express.Express, deps: UserDat
       if (!existing && verified && email) existing = readBackup(getBackupFilePath(email));
 
       const savedAt = new Date().toISOString();
+      const { kvSince: _kvSince, origin: _origin, ...incoming } = body;
       const bundleToSave = {
-        ...mergeUserBundle(existing, body),
+        ...mergeUserBundle(existing, incoming),
         ...mergeBundleNotes(who.id, existing, body),
         uid,
         email: email || undefined,
@@ -204,10 +278,12 @@ export function registerUserDataBackupRoutes(app: express.Express, deps: UserDat
         serverSavedAt: savedAt,
       };
 
-      // Atomik dosya yazımı
-      const tmpFile = `${backupFile}.${process.pid}.${Date.now()}.tmp`;
-      fs.writeFileSync(tmpFile, JSON.stringify(bundleToSave, null, 2), 'utf8');
-      fs.renameSync(tmpFile, backupFile);
+      writeBackup(backupFile, bundleToSave);
+      try {
+        deps.onSaved?.({ uid, email, verified, bundle: bundleToSave, origin: String(body.origin || '').slice(0, 64) });
+      } catch (e: any) {
+        console.warn('[UserDataBackup] onSaved uyarısı:', e?.message || e);
+      }
 
       // E-posta üzerinden de erişilebilmesi için ikincil kopya (yalnız Firebase'in doğruladığı e-posta)
       if (verified && email && email !== primaryId) {
@@ -299,8 +375,8 @@ export function registerUserDataBackupRoutes(app: express.Express, deps: UserDat
           notificationsCount,
           favoritesCount,
         },
-        // Birleştirilmiş paket: istemci bunu yerel verisine uygular (cihazlar yakınsar)
-        data: bundleToSave,
+        // Birleştirilmiş paket: istemci bunu yerel verisine uygular (cihazlar yakınsar); kv yalnız yeni kayıtlar
+        data: withKvSince(bundleToSave, body.kvSince),
       });
     } catch (err: any) {
       console.error('[UserDataBackup] POST /api/user-data/backup error:', err);
@@ -345,7 +421,7 @@ export function registerUserDataBackupRoutes(app: express.Express, deps: UserDat
             success: true,
             found: true,
             backedUpAt: data.serverSavedAt || data.clientUpdatedAt,
-            data,
+            data: withKvSince(data, req.query.kvSince),
           });
         } catch (readErr: any) {
           console.error('[UserDataBackup] Backup file read error:', readErr);
@@ -419,4 +495,46 @@ export function registerUserDataBackupRoutes(app: express.Express, deps: UserDat
       res.status(500).json({ error: err.message || 'Yorumlar taranırken hata oluştu.' });
     }
   });
+
+  /**
+   * Sunucu olayını (raporun çözüldü, yorumuna yanıt…) öğrencinin profil bildirimlerine yazar ve cihazlarına SSE ile
+   * duyurur. Kullanıcı uid ya da e-postayla bulunur; hiç yedeği yoksa yeni profil dosyası açılır.
+   */
+  function pushUserNotification(target: { uid?: string | null; email?: string | null }, n: ServerUserNotification): boolean {
+    try {
+      let uid = String(target.uid || '').trim();
+      const email = String(target.email || '').trim().toLowerCase();
+      if (!uid && email) {
+        const u = deps.loadUsers().find((x: any) => x?.email && String(x.email).toLowerCase() === email);
+        uid = String(u?.uid || '').trim();
+      }
+      if (!uid || uid.length > 128) return false;
+      const file = getBackupFilePath(uid);
+      const existing = readBackup(file) || { uid, email: email || undefined, verified: !DEVICE_TOKEN_RE.test(uid), stats: {}, notifications: [] };
+      const list = arr(existing.notifications);
+      const id = `srv-${crypto.createHash('sha1').update(n.dedupeKey || `${n.type}|${n.targetId}|${Date.now()}`).digest('hex').slice(0, 16)}`;
+      if (list.some((x: any) => x?.id === id) || obj(obj(existing.notificationsDeleted).ids)[id]) return false;
+      const item = {
+        id,
+        type: n.type,
+        title: n.title.slice(0, 160),
+        message: n.message.slice(0, 600),
+        deepLinkUrl: n.deepLinkUrl,
+        targetType: n.targetType,
+        targetId: n.targetId,
+        read: false,
+        createdAt: new Date().toISOString(),
+        source: 'server',
+      };
+      const bundle = { ...existing, notifications: [item, ...list].slice(0, 300), serverSavedAt: item.createdAt };
+      writeBackup(file, bundle);
+      deps.onSaved?.({ uid, email: String(bundle.email || email || ''), verified: Boolean(bundle.verified), bundle, origin: 'server' });
+      return true;
+    } catch (e: any) {
+      console.warn('[UserDataBackup] Kullanıcı bildirimi yazılamadı:', e?.message || e);
+      return false;
+    }
+  }
+
+  return { pushUserNotification };
 }

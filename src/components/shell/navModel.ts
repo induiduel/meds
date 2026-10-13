@@ -16,6 +16,7 @@ import {
   Timer,
   Settings2,
   SquarePen,
+  Sun,
   Target,
   Trophy,
 } from 'lucide-react';
@@ -40,6 +41,7 @@ export interface NavGroup {
 }
 
 const I: Record<string, NavItem> = {
+  today: { id: 'today', label: 'Bugün', hint: 'Kaldığın yer, günün spotu, haftan', icon: Sun, tint: '#FF9F0A' },
   quick_add: { id: 'quick_add', label: 'Soru ekle', short: 'Ekle', hint: 'Hatırladığın parçayı gir', icon: SquarePen, tint: '#FF2D55' },
   past_exams: { id: 'past_exams', label: 'Çıkmış sorular', short: 'Çıkmış', hint: 'Kurullara göre çıkmışlar', icon: Archive, tint: '#007AFF' },
   ornek_sorular: { id: 'ornek_sorular', label: 'Örnek sorular', short: 'Örnek', hint: 'Kazanım temelli sorular', icon: Target, tint: '#FF9500' },
@@ -69,15 +71,15 @@ export const NAV_ITEMS = I;
  * başına duran birincil düğmedir (SideNav); telefonda alt gezinmenin ortasındadır.
  */
 export const NAV_TREE: NavGroup[] = [
-  { label: 'Öğren', items: [I.learn, I.spots, I.flashcards, I.summaries] },
+  { label: 'Öğren', items: [I.today, I.learn, I.spots, I.flashcards, I.summaries] },
   { label: 'Soru çöz', items: [I.past_exams, I.ornek_sorular, I.study, I.practice] },
   { label: 'Başvuru', items: [I.glossary, I.diseases, I.kazanimlar] },
   { label: 'Topluluk', items: [I.questions, I.matrix, I.leaderboard] },
   { label: 'Kişisel', items: [I.stats, I.music] },
 ];
 
-/** Telefonda alt gezinmede doğrudan duran sayfalar (sıra: Ekle · Öğren · Kartlar · Çıkmış); gerisi "Daha" sayfasında */
-export const TAB_ITEMS: NavItem[] = [I.quick_add, I.learn, I.flashcards, I.past_exams];
+/** Telefonda alt gezinmede doğrudan duran sayfalar (v10 sıra: Ekle · Öğren · Havuz · Çıkmış; Kartlar "Daha"ya taşındı); gerisi "Daha" sayfasında */
+export const TAB_ITEMS: NavItem[] = [I.quick_add, I.learn, I.questions, I.past_exams];
 
 /** "Daha" sayfası: alt gezinmede olmayanlar, aynı gruplar ve sırayla */
 export const MORE_TREE: NavGroup[] = NAV_TREE.map((g) => ({ ...g, items: g.items.filter((it) => !TAB_ITEMS.includes(it)) })).filter((g) => g.items.length > 0);

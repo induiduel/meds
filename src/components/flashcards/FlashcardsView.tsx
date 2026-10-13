@@ -1,14 +1,15 @@
-import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import { CardExtras } from './CardExtras';
-import { PageHeader } from '../ui/PageHeader';
-import { BookA, GraduationCap, Search, Shuffle, Repeat2, X, RotateCcw, Play, Check, Layers, Volume2, ChevronLeft, ChevronRight, ChevronDown, Star, Share2, AlertCircle } from 'lucide-react';
-import { getFavoriteCards, toggleFavoriteCard } from '../../services/studyStore';
+import React, { useCallback, useEffect, useMemo, useState } from 'react';
+import { FlashcardStudy, FlashcardDeckPanel, FcDeck } from './FlashcardStudy';
+import { PageToolbar } from '../ui/PageToolbar';
+import { Shuffle, Repeat2, X, Play, Layers, ChevronDown, Share2, AlertCircle } from 'lucide-react';
+import { getFavoriteCards } from '../../services/studyStore';
 import { GLOSSARY } from '../../data/glossary';
-import { EmptySearch, SectionLoader, SuccessCheck } from '../ui/Animations';
+import { EmptySearch, SectionLoader } from '../ui/Animations';
 import { shareDeepLink, executeDeepLinkFocus } from '../../services/universalRedirectService';
 import { ApiService } from '../../services/api';
 import { toast } from '../ui/Toast';
 import './fcHero.css';
+import '../../styles/flashcards-v10.css';
 
 // ---------------------------------------------------------------------------
 // Card model + spaced repetition (Leitner boxes, stored per device)
@@ -66,6 +67,18 @@ const statusOf = (s: CardState | undefined, now: number): Status => {
   if (!s) return 'new';
   if (s.due <= now) return 'due';
   return s.box >= MASTERED_BOX ? 'mastered' : 'learning';
+};
+
+/** Zorlanılan: en az iki kez görülmüş ama hâlâ ilk kutularda kalan kart (tekrar/zor puanları) */
+const isStruggling = (s: CardState | undefined) => !!s && s.seen >= 2 && s.box <= 1;
+
+/** Puan düğmesindeki "sonraki geliş" etiketi (nextState'in gerçek aralığından) */
+const gapLabel = (ms: number) => {
+  if (ms < 60_000) return 'oturum sonu';
+  if (ms < 3_600_000) return `${Math.round(ms / 60_000)} dk`;
+  if (ms < DAY) return `${Math.round(ms / 3_600_000)} sa`;
+  if (ms < 30 * DAY) return `${Math.round(ms / DAY)} gün`;
+  return `${Math.round(ms / (30 * DAY))} ay`;
 };
 
 // ---------------------------------------------------------------------------
@@ -179,14 +192,57 @@ export const FlashcardsView: React.FC = () => {
     return c;
   }, [inGroup, store, now]);
 
-  /** Due cards first, then new ones, then (if nothing left) everything. */
-  const buildSession = (forceAll = false) => {
-    const due = inGroup.filter((c) => statusOf(store[c.id], now) === 'due');
-    const fresh = inGroup.filter((c) => statusOf(store[c.id], now) === 'new');
-    let pool = forceAll ? inGroup : [...(doShuffle ? shuffle(due) : due), ...(doShuffle ? shuffle(fresh) : fresh)];
-    if (!pool.length) pool = inGroup;
+  /** Due cards first, then new ones, then (if nothing left) everything. `forGroup`: oturum sırasında deste değişimi */
+  const buildSession = (forceAll = false, forGroup?: string) => {
+    const src = forGroup === undefined ? inGroup : all.filter((c) => forGroup === 'all' || c.group === forGroup);
+    const due = src.filter((c) => statusOf(store[c.id], now) === 'due');
+    const fresh = src.filter((c) => statusOf(store[c.id], now) === 'new');
+    let pool = forceAll ? src : [...(doShuffle ? shuffle(due) : due), ...(doShuffle ? shuffle(fresh) : fresh)];
+    if (!pool.length) pool = src;
     if (forceAll && doShuffle) pool = shuffle(pool);
     setSession(pool.slice(0, limit > 0 ? limit : pool.length));
+  };
+
+  // v10 sol panel: deste listesi (bekleyen tekrar rozetli) + Zorlanılan sayısı
+  const decks = useMemo<FcDeck[]>(() => {
+    const due: Record<string, number> = {};
+    let dueAll = 0;
+    all.forEach((c) => {
+      if (statusOf(store[c.id], now) !== 'due') return;
+      due[c.group] = (due[c.group] || 0) + 1;
+      dueAll++;
+    });
+    return [
+      { id: 'all', label: 'Tümü', total: all.length, due: dueAll },
+      ...groups.map(([g, n]) => ({ id: g, label: g, total: n, due: due[g] || 0 })),
+    ];
+  }, [all, groups, store, now]);
+  const struggling = useMemo(() => inGroup.filter((c) => isStruggling(store[c.id])), [inGroup, store]);
+
+  const intervalLabel = useCallback(
+    (c: { id: string }, g: Grade) => {
+      const t = Date.now();
+      return gapLabel(nextState(store[c.id], g, t).due - t);
+    },
+    [store]
+  );
+
+  /** Panelden deste seçimi: oturum açıksa o destenin oturumu hemen başlar */
+  const pickDeck = (id: string) => {
+    setGroup(id);
+    if (session) {
+      setNow(Date.now());
+      buildSession(false, id);
+    }
+  };
+  const onStat = (k: 'due' | 'fresh' | 'hard') => {
+    if (k === 'hard') {
+      if (struggling.length) setSession(doShuffle ? shuffle(struggling) : struggling);
+      return;
+    }
+    setSession(null);
+    setView(k === 'due' ? 'due' : 'new');
+    window.setTimeout(() => document.getElementById('fv-browse')?.scrollIntoView({ behavior: 'smooth', block: 'start' }), 60);
   };
 
   const grade = (card: StudyCard, g: Grade) => {
@@ -235,7 +291,7 @@ export const FlashcardsView: React.FC = () => {
   useEffect(() => {
     if (typeof window === 'undefined') return;
     const sp = new URLSearchParams(window.location.search);
-    const targetId = sp.get('id') || (window.location.hash.startsWith('#card-') ? window.location.hash.slice(6) : null);
+    const targetId = sp.get('id') || (window.location.hash.startsWith('#card-') ? decodeURIComponent(window.location.hash.slice(6)) : null);
     if (targetId && all.length > 0) {
       const found = all.find((c) => c.id === targetId || c.id === `g:${targetId}` || c.front.toLowerCase() === targetId.toLowerCase());
       if (found) {
@@ -245,291 +301,204 @@ export const FlashcardsView: React.FC = () => {
     }
   }, [all]);
 
-  if (session) {
-    return (
-      <>
-        <StudySession
-          cards={session}
-          reverse={reverse}
-          onGrade={grade}
-          onExit={() => {
-            setSession(null);
-            setNow(Date.now());
-            setFavCards(getFavoriteCards());
-          }}
-          onRestart={() => {
-            setNow(Date.now());
-            buildSession(true);
-          }}
-          onShare={handleShare}
-          onReport={handleReport}
-        />
-        {reportingCard && (
-          <div className="cf-root" role="dialog" aria-modal="true">
-            <div className="cf max-w-md w-full !text-left">
-              <div className="flex items-center justify-between w-full border-b border-line pb-2 mb-2">
-                <div className="flex items-center gap-2">
-                  <div className="cf-ic !w-8 !h-8 !mb-0 bg-bad-soft text-bad-text">
-                    <AlertCircle className="w-4 h-4" />
-                  </div>
-                  <h3 className="font-bold text-base m-0 text-ink">Kart Hata Bildirimi</h3>
-                </div>
-                <button
-                  type="button"
-                  onClick={() => setReportingCard(null)}
-                  className="ms-btn is-icon is-ghost !w-7 !h-7"
-                >
-                  <X className="w-4 h-4" />
-                </button>
-              </div>
-
-              <div className="bg-canvas p-2.5 rounded-xl border border-line text-xs space-y-1 mb-2">
-                <div className="font-semibold text-ink line-clamp-1">{plain(reportingCard.front)}</div>
-                <div className="text-ink-3 line-clamp-2">{plain(reportingCard.back)}</div>
-              </div>
-
-              <label className="text-xs font-semibold text-ink-2 mb-1 block">Bildirim Sebebi</label>
-              <select
-                value={reportReason}
-                onChange={(e) => setReportReason(e.target.value)}
-                className="w-full h-10 px-3 rounded-lg border border-line bg-canvas text-sm text-ink mb-3"
-              >
-                <option value="Hatalı Tanım / Cevap">Hatalı Tanım / Cevap</option>
-                <option value="İmla / Yazım Yanlışı">İmla / Yazım Yanlışı</option>
-                <option value="Ders Notu Uyuşmazlığı">Ders Notu Uyuşmazlığı</option>
-                <option value="Eksik Kilit Bilgi">Eksik Kilit Bilgi</option>
-                <option value="Diğer">Diğer</option>
-              </select>
-
-              <label className="text-xs font-semibold text-ink-2 mb-1 block">Detay / Doğru Bilgi (Opsiyonel)</label>
-              <textarea
-                value={reportDetails}
-                onChange={(e) => setReportDetails(e.target.value)}
-                placeholder="Düzeltilmesi gereken noktayı açıklayabilirsiniz…"
-                rows={3}
-                className="w-full p-2.5 rounded-lg border border-line bg-canvas text-sm text-ink mb-4 resize-none"
-              />
-
-              <div className="flex justify-end gap-2 w-full">
-                <button
-                  type="button"
-                  onClick={() => setReportingCard(null)}
-                  className="ms-btn is-ghost is-sm"
-                >
-                  Vazgeç
-                </button>
-                <button
-                  type="button"
-                  disabled={isSubmittingReport}
-                  onClick={submitCardReport}
-                  className="ms-btn is-primary is-sm bg-bad hover:bg-bad-hover text-white font-semibold"
-                >
-                  {isSubmittingReport ? 'Gönderiliyor…' : 'Bildirimi Gönder'}
-                </button>
-              </div>
-            </div>
-          </div>
-        )}
-      </>
-    );
-  }
-
   const loading = source === 'lessons' && !deckCards;
   const startCount = Math.min(limit > 0 ? limit : inGroup.length, counts.due + counts.new || inGroup.length);
 
+  // v10 yerleşim: solda deste paneli (telefon/tablette üstte kompakt seçim), sağda oturum ya da başlangıç + göz at
   return (
-    <div className="ds-page">
-      <PageHeader
-        title="Kartlar"
-        stats={[{ label: 'kart', value: inGroup.length.toLocaleString('tr-TR') }]}
-        description="Kartı çevir, bildiğini işaretle; bildiklerin giderek daha seyrek gelir."
+    <div className={`ds-page fv ${session ? 'is-study' : ''}`}>
+      <FlashcardDeckPanel
+        source={source}
+        onSource={(s) => {
+          setSession(null);
+          setSource(s);
+        }}
+        sourceCounts={{ terms: termCards.length, lessons: deckCards?.length }}
+        total={all.length}
+        stats={{ due: counts.due, fresh: counts.new, hard: struggling.length }}
+        onStat={onStat}
+        decks={decks}
+        active={group}
+        onPick={pickDeck}
+        loading={loading}
       />
 
-      {/* Kaynak ve konu */}
-      <div className="ds-toolbar">
-        <div role="radiogroup" aria-label="Kaynak" className="ds-seg">
-          {(
-            [
-              ['terms', BookA, 'Terimler', termCards.length],
-              ['lessons', GraduationCap, 'Ders kartları', deckCards?.length],
-            ] as const
-          ).map(([id, Icon, label, n]) => (
-            <button key={id} type="button" role="radio" aria-checked={source === id} onClick={() => setSource(id)}>
-              <Icon aria-hidden />
-              {label}
-              {n ? <small>{n}</small> : null}
-            </button>
-          ))}
-        </div>
-        {!loading && (
-          <label className="ds-select">
-            <span>{source === 'terms' ? 'Konu' : 'Ders'}</span>
-            <select value={group} onChange={(e) => setGroup(e.target.value)} aria-label={source === 'terms' ? 'Konu' : 'Ders'}>
-              <option value="all">Tümü · {all.length}</option>
-              {groups.map(([g, n]) => <option key={g} value={g}>{g} · {n}</option>)}
-            </select>
-            <ChevronDown aria-hidden />
-          </label>
+      <div className="fv-main">
+        {session ? (
+          <FlashcardStudy
+            cards={session}
+            reverse={reverse}
+            onGrade={grade}
+            intervalLabel={intervalLabel}
+            onExit={() => {
+              setSession(null);
+              setNow(Date.now());
+              setFavCards(getFavoriteCards());
+            }}
+            onRestart={() => {
+              setNow(Date.now());
+              buildSession(true);
+            }}
+            onShare={handleShare}
+            onReport={handleReport}
+          />
+        ) : loading ? (
+          <SectionLoader label="Ders kartları yükleniyor…" />
+        ) : (
+          <>
+            {/* Bugünkü oturum (v9): ilerleme halkası + durum hapları + tek satır ayar + tek birincil eylem */}
+            <section className="fc-hero" aria-label="Bugünkü oturum">
+              <div className="fc-hero-top">
+                <Ring value={inGroup.length ? counts.mastered / inGroup.length : 0} />
+                <div className="fc-hero-t">
+                  <b>{counts.due + counts.new > 0 ? `Bugün ${counts.due + counts.new} kart seni bekliyor` : 'Bugünlük hepsi tamam'}</b>
+                  <div className="fc-pills">
+                    {(
+                      [
+                        ['tekrar', counts.due, 'is-warn'],
+                        ['yeni', counts.new, ''],
+                        ['öğreniliyor', counts.learning, 'is-acc'],
+                        ['ezber', counts.mastered, 'is-ok'],
+                      ] as const
+                    ).map(([label, n, tone]) => (
+                      <span key={label} className={`fc-pill ${tone}`}><b>{n.toLocaleString('tr-TR')}</b> {label}</span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+              <div className="fc-hero-ctl">
+                <div role="radiogroup" aria-label="Kart sayısı" className="ds-seg is-compact fc-count">
+                  {[10, 20, 50, 0].map((n) => (
+                    <button key={n} type="button" role="radio" aria-checked={limit === n} onClick={() => setLimit(n)}>
+                      {n === 0 ? 'Hepsi' : n}
+                    </button>
+                  ))}
+                </div>
+                <ToggleChip on={doShuffle} onClick={() => setDoShuffle((v) => !v)} icon={Shuffle} label="Karıştır" />
+                <ToggleChip on={reverse} onClick={() => setReverse((v) => !v)} icon={Repeat2} label="Ters çevir" />
+                {counts.due + counts.new > 0 && counts.learning + counts.mastered > 0 && (
+                  <button type="button" onClick={() => buildSession(true)} className="fc-ibtn" aria-label="Tüm kartlarla başla" title="Tüm kartlar">
+                    <Layers aria-hidden />
+                  </button>
+                )}
+              </div>
+              <button type="button" onClick={() => buildSession(false)} disabled={inGroup.length === 0} className="fc-go">
+                <Play className="fill-current" aria-hidden />
+                {counts.due + counts.new > 0 ? `Başla · ${startCount} kart` : 'Hepsini tekrar et'}
+              </button>
+            </section>
+
+            {/* Göz at: durum ve favori süzgeci (ortak kompakt başlık) */}
+            <section className="fv-browse" id="fv-browse" aria-label="Kartlara göz at">
+              <PageToolbar
+                className="fv-toolbar"
+                title="Göz at"
+                count={`${visible.length.toLocaleString('tr-TR')} kart`}
+                search={{ value: query, onChange: setQuery, placeholder: 'Terim ya da tanım ara' }}
+                segments={{
+                  label: 'Kart süzgeci',
+                  value: view,
+                  onChange: setView,
+                  options: [
+                    { id: 'all', label: 'Tümü', count: inGroup.length },
+                    { id: 'due', label: 'Tekrar', count: counts.due },
+                    { id: 'new', label: 'Yeni', count: counts.new },
+                    { id: 'learning', label: 'Öğreniliyor', count: counts.learning },
+                    { id: 'mastered', label: 'Ezber', count: counts.mastered },
+                    { id: 'fav', label: 'Favoriler', count: favCards.length },
+                  ],
+                }}
+                tools={
+                  view !== 'all' && visible.length > 0 ? (
+                    <button
+                      type="button"
+                      onClick={() => setSession(doShuffle ? shuffle(visible) : visible)}
+                      className="ms-btn is-tonal is-sm"
+                      title="Yalnızca bu süzgeçteki kartları çalış"
+                    >
+                      <Play className="fill-current" aria-hidden /> Bunları çalış
+                    </button>
+                  ) : undefined
+                }
+              />
+              <BrowseList
+                cards={visible}
+                store={store}
+                now={now}
+                onShare={handleShare}
+                onReport={handleReport}
+              />
+            </section>
+          </>
         )}
       </div>
 
-      {loading ? (
-        <SectionLoader label="Ders kartları yükleniyor…" />
-      ) : (
-        <>
-          {/* Bugünkü oturum (v9): ilerleme halkası + durum hapları + tek satır ayar + tek birincil eylem */}
-          <section className="fc-hero" aria-label="Bugünkü oturum">
-            <div className="fc-hero-top">
-              <Ring value={inGroup.length ? counts.mastered / inGroup.length : 0} />
-              <div className="fc-hero-t">
-                <b>{counts.due + counts.new > 0 ? `Bugün ${counts.due + counts.new} kart seni bekliyor` : 'Bugünlük hepsi tamam'}</b>
-                <div className="fc-pills">
-                  {(
-                    [
-                      ['tekrar', counts.due, 'is-warn'],
-                      ['yeni', counts.new, ''],
-                      ['öğreniliyor', counts.learning, 'is-acc'],
-                      ['ezber', counts.mastered, 'is-ok'],
-                    ] as const
-                  ).map(([label, n, tone]) => (
-                    <span key={label} className={`fc-pill ${tone}`}><b>{n.toLocaleString('tr-TR')}</b> {label}</span>
-                  ))}
+      {reportingCard && (
+        <div className="cf-root" role="dialog" aria-modal="true">
+          <div className="cf max-w-md w-full !text-left">
+            <div className="flex items-center justify-between w-full border-b border-line pb-2 mb-2">
+              <div className="flex items-center gap-2">
+                <div className="cf-ic !w-8 !h-8 !mb-0 bg-bad-soft text-bad-text">
+                  <AlertCircle className="w-4 h-4" />
                 </div>
+                <h3 className="font-bold text-base m-0 text-ink">Kart Hata Bildirimi</h3>
               </div>
+              <button
+                type="button"
+                onClick={() => setReportingCard(null)}
+                className="ms-btn is-icon is-ghost !w-7 !h-7"
+                aria-label="Kapat"
+              >
+                <X className="w-4 h-4" />
+              </button>
             </div>
-            <div className="fc-hero-ctl">
-              <div role="radiogroup" aria-label="Kart sayısı" className="ds-seg is-compact fc-count">
-                {[10, 20, 50, 0].map((n) => (
-                  <button key={n} type="button" role="radio" aria-checked={limit === n} onClick={() => setLimit(n)}>
-                    {n === 0 ? 'Hepsi' : n}
-                  </button>
-                ))}
-              </div>
-              <ToggleChip on={doShuffle} onClick={() => setDoShuffle((v) => !v)} icon={Shuffle} label="Karıştır" />
-              <ToggleChip on={reverse} onClick={() => setReverse((v) => !v)} icon={Repeat2} label="Ters çevir" />
-              {counts.due + counts.new > 0 && counts.learning + counts.mastered > 0 && (
-                <button type="button" onClick={() => buildSession(true)} className="fc-ibtn" aria-label="Tüm kartlarla başla" title="Tüm kartlar">
-                  <Layers aria-hidden />
-                </button>
-              )}
-            </div>
-            <button type="button" onClick={() => buildSession(false)} disabled={inGroup.length === 0} className="fc-go">
-              <Play className="fill-current" aria-hidden />
-              {counts.due + counts.new > 0 ? `Başla · ${startCount} kart` : 'Hepsini tekrar et'}
-            </button>
-          </section>
 
-          {/* Göz at: durum ve favori süzgeci */}
-          <section className="ds-section">
-            <div className="ds-tabrail">
-              <div role="tablist" aria-label="Kart süzgeci" className="cx-tabs">
-                {(
-                  [
-                    ['all', 'Tümü', inGroup.length],
-                    ['due', 'Tekrar', counts.due],
-                    ['new', 'Yeni', counts.new],
-                    ['learning', 'Öğreniliyor', counts.learning],
-                    ['mastered', 'Ezber', counts.mastered],
-                    ['fav', 'Favoriler', favCards.length],
-                  ] as const
-                ).map(([id, label, n]) => (
-                  <button key={id} type="button" role="tab" aria-selected={view === id} onClick={() => setView(id)} className={`cx-tab ${view === id ? 'is-on' : ''} ${n ? '' : 'is-zero'}`}>
-                    {label} <small>{n}</small>
-                  </button>
-                ))}
-              </div>
-              {view !== 'all' && visible.length > 0 && (
-                <button
-                  type="button"
-                  onClick={() => setSession(doShuffle ? shuffle(visible) : visible)}
-                  className="ms-btn is-tonal is-sm"
-                  title="Yalnızca bu süzgeçteki kartları çalış"
-                >
-                  <Play className="fill-current" aria-hidden /> Bunları çalış
-                </button>
-              )}
+            <div className="bg-canvas p-2.5 rounded-xl border border-line text-xs space-y-1 mb-2">
+              <div className="font-semibold text-ink line-clamp-1">{plain(reportingCard.front)}</div>
+              <div className="text-ink-3 line-clamp-2">{plain(reportingCard.back)}</div>
             </div>
-            <label className="cx-search">
-              <Search aria-hidden />
-              <span className="sr-only">Kartlarda ara</span>
-              <input type="search" value={query} onChange={(e) => setQuery(e.target.value)} placeholder="Terim ya da tanım ara" />
-              <span className="ds-count">{visible.length} kart</span>
-            </label>
-            <BrowseList
-              cards={visible}
-              store={store}
-              now={now}
-              onShare={handleShare}
-              onReport={handleReport}
+
+            <label className="text-xs font-semibold text-ink-2 mb-1 block">Bildirim Sebebi</label>
+            <select
+              value={reportReason}
+              onChange={(e) => setReportReason(e.target.value)}
+              className="w-full h-10 px-3 rounded-lg border border-line bg-canvas text-sm text-ink mb-3"
+            >
+              <option value="Hatalı Tanım / Cevap">Hatalı Tanım / Cevap</option>
+              <option value="İmla / Yazım Yanlışı">İmla / Yazım Yanlışı</option>
+              <option value="Ders Notu Uyuşmazlığı">Ders Notu Uyuşmazlığı</option>
+              <option value="Eksik Kilit Bilgi">Eksik Kilit Bilgi</option>
+              <option value="Diğer">Diğer</option>
+            </select>
+
+            <label className="text-xs font-semibold text-ink-2 mb-1 block">Detay / Doğru Bilgi (Opsiyonel)</label>
+            <textarea
+              value={reportDetails}
+              onChange={(e) => setReportDetails(e.target.value)}
+              placeholder="Düzeltilmesi gereken noktayı açıklayabilirsiniz…"
+              rows={3}
+              className="w-full p-2.5 rounded-lg border border-line bg-canvas text-sm text-ink mb-4 resize-none"
             />
-          </section>
-          {reportingCard && (
-            <div className="cf-root" role="dialog" aria-modal="true">
-              <div className="cf max-w-md w-full !text-left">
-                <div className="flex items-center justify-between w-full border-b border-line pb-2 mb-2">
-                  <div className="flex items-center gap-2">
-                    <div className="cf-ic !w-8 !h-8 !mb-0 bg-bad-soft text-bad-text">
-                      <AlertCircle className="w-4 h-4" />
-                    </div>
-                    <h3 className="font-bold text-base m-0 text-ink">Kart Hata Bildirimi</h3>
-                  </div>
-                  <button
-                    type="button"
-                    onClick={() => setReportingCard(null)}
-                    className="ms-btn is-icon is-ghost !w-7 !h-7"
-                  >
-                    <X className="w-4 h-4" />
-                  </button>
-                </div>
 
-                <div className="bg-canvas p-2.5 rounded-xl border border-line text-xs space-y-1 mb-2">
-                  <div className="font-semibold text-ink line-clamp-1">{plain(reportingCard.front)}</div>
-                  <div className="text-ink-3 line-clamp-2">{plain(reportingCard.back)}</div>
-                </div>
-
-                <label className="text-xs font-semibold text-ink-2 mb-1 block">Bildirim Sebebi</label>
-                <select
-                  value={reportReason}
-                  onChange={(e) => setReportReason(e.target.value)}
-                  className="w-full h-10 px-3 rounded-lg border border-line bg-canvas text-sm text-ink mb-3"
-                >
-                  <option value="Hatalı Tanım / Cevap">Hatalı Tanım / Cevap</option>
-                  <option value="İmla / Yazım Yanlışı">İmla / Yazım Yanlışı</option>
-                  <option value="Ders Notu Uyuşmazlığı">Ders Notu Uyuşmazlığı</option>
-                  <option value="Eksik Kilit Bilgi">Eksik Kilit Bilgi</option>
-                  <option value="Diğer">Diğer</option>
-                </select>
-
-                <label className="text-xs font-semibold text-ink-2 mb-1 block">Detay / Doğru Bilgi (Opsiyonel)</label>
-                <textarea
-                  value={reportDetails}
-                  onChange={(e) => setReportDetails(e.target.value)}
-                  placeholder="Düzeltilmesi gereken noktayı açıklayabilirsiniz…"
-                  rows={3}
-                  className="w-full p-2.5 rounded-lg border border-line bg-canvas text-sm text-ink mb-4 resize-none"
-                />
-
-                <div className="flex justify-end gap-2 w-full">
-                  <button
-                    type="button"
-                    onClick={() => setReportingCard(null)}
-                    className="ms-btn is-ghost is-sm"
-                  >
-                    Vazgeç
-                  </button>
-                  <button
-                    type="button"
-                    disabled={isSubmittingReport}
-                    onClick={submitCardReport}
-                    className="ms-btn is-primary is-sm bg-bad hover:bg-bad-hover text-white font-semibold"
-                  >
-                    {isSubmittingReport ? 'Gönderiliyor…' : 'Bildirimi Gönder'}
-                  </button>
-                </div>
-              </div>
+            <div className="flex justify-end gap-2 w-full">
+              <button
+                type="button"
+                onClick={() => setReportingCard(null)}
+                className="ms-btn is-ghost is-sm"
+              >
+                Vazgeç
+              </button>
+              <button
+                type="button"
+                disabled={isSubmittingReport}
+                onClick={submitCardReport}
+                className="ms-btn is-primary is-sm bg-bad hover:bg-bad-hover text-white font-semibold"
+              >
+                {isSubmittingReport ? 'Gönderiliyor…' : 'Bildirimi Gönder'}
+              </button>
             </div>
-          )}
-        </>
+          </div>
+        </div>
       )}
     </div>
   );
@@ -641,258 +610,5 @@ const BrowseList: React.FC<{
         </button>
       )}
     </>
-  );
-};
-
-// ---------------------------------------------------------------------------
-// Study session: flip card + again / hard / good, swipe and keyboard
-// ---------------------------------------------------------------------------
-const StudySession: React.FC<{
-  cards: StudyCard[];
-  reverse: boolean;
-  onGrade: (c: StudyCard, g: Grade) => void;
-  onExit: () => void;
-  onRestart: () => void;
-  onShare?: (c: StudyCard) => void;
-  onReport?: (c: StudyCard) => void;
-}> = ({ cards, reverse, onGrade, onExit, onRestart, onShare, onReport }) => {
-  const [queue, setQueue] = useState<StudyCard[]>(cards);
-  const [idx, setIdx] = useState(0);
-  const [flipped, setFlipped] = useState(false);
-  const [tally, setTally] = useState({ good: 0, hard: 0, again: 0 });
-  const [leaving, setLeaving] = useState<Grade | null>(null);
-  const [favIds, setFavIds] = useState(() => new Set(getFavoriteCards().map((c) => c.id)));
-  const touch = useRef<{ x: number; y: number } | null>(null);
-
-  // İleri/geri: puan vermeden kartlar arasında gezinme
-  const goPrev = useCallback(() => {
-    if (leaving) return;
-    setIdx((i) => Math.max(0, i - 1));
-    setFlipped(false);
-  }, [leaving]);
-  const goNext = useCallback(() => {
-    if (leaving) return;
-    setIdx((i) => Math.min(queue.length, i + 1));
-    setFlipped(false);
-  }, [leaving, queue.length]);
-  const toggleFav = useCallback((c: StudyCard) => {
-    const next = toggleFavoriteCard({ id: c.id, front: plain(c.front), back: plain(c.back), group: c.group });
-    setFavIds(new Set(next.map((x) => x.id)));
-  }, []);
-
-  const card = queue[idx];
-  const done = !card;
-  const total = cards.length;
-  const answered = tally.good + tally.hard;
-
-  const answer = useCallback(
-    (g: Grade) => {
-      if (!card || !flipped || leaving) return;
-      onGrade(card, g);
-      setTally((t) => ({ ...t, [g]: t[g] + 1 }));
-      setLeaving(g);
-      window.setTimeout(() => {
-        // "Tekrar" cards come back at the end of this session
-        if (g === 'again') setQueue((q) => [...q, card]);
-        setIdx((i) => i + 1);
-        setFlipped(false);
-        setLeaving(null);
-      }, 220);
-    },
-    [card, flipped, leaving, onGrade]
-  );
-
-  useEffect(() => {
-    const onKey = (e: KeyboardEvent) => {
-      const t = e.target as HTMLElement;
-      if (['INPUT', 'TEXTAREA', 'SELECT'].includes(t.tagName)) return;
-      if (e.key === 'Escape') return onExit();
-      if (e.key === ' ' || e.key === 'Enter') {
-        e.preventDefault();
-        if (!done) setFlipped((f) => !f);
-        return;
-      }
-      if (e.key === 'ArrowLeft') return goPrev();
-      if (e.key === 'ArrowRight') return goNext();
-      if ((e.key === 'f' || e.key === 'F') && card) return toggleFav(card);
-      if (e.key === '1') answer('again');
-      if (e.key === '2') answer('hard');
-      if (e.key === '3') answer('good');
-    };
-    document.addEventListener('keydown', onKey);
-    return () => document.removeEventListener('keydown', onKey);
-  }, [answer, done, onExit, goPrev, goNext, toggleFav, card]);
-
-  const speak = (text: string) => {
-    if (!('speechSynthesis' in window)) return;
-    try {
-      window.speechSynthesis.cancel();
-      const u = new SpeechSynthesisUtterance(text);
-      u.lang = 'tr-TR';
-      u.rate = 0.9;
-      window.speechSynthesis.speak(u);
-    } catch {
-      /* no voice available */
-    }
-  };
-
-  if (done) {
-    return (
-      <div className="ds-panel ds-fc-done ms-pop-in">
-        <SuccessCheck size={72} />
-        <h1 className="m-0 font-display font-bold text-xl tracking-[-0.02em]">Oturum bitti</h1>
-        <p className="m-0 text-base text-ink-2">{total} kart çalıştın. Bildiklerin bir sonraki tekrara kadar dinlenecek.</p>
-        <div className="grid grid-cols-3 gap-2 w-full mt-1">
-          {(
-            [
-              ['Biliyorum', tally.good, 'text-ok', 'bg-ok-soft'],
-              ['Zor', tally.hard, 'text-warn', 'bg-warn-soft'],
-              ['Tekrar', tally.again, 'text-bad-text', 'bg-bad-soft'],
-            ] as const
-          ).map(([label, n, fg, bg]) => (
-            <div key={label} className={`rounded-lg ${bg} py-2`}>
-              <div className={`font-mono text-lg font-semibold ${fg}`}>{n}</div>
-              <div className="text-sm text-ink-2">{label}</div>
-            </div>
-          ))}
-        </div>
-        <div className="flex gap-2 w-full mt-2">
-          <button type="button" onClick={onExit} className="ms-btn is-outline flex-1">
-            Kartlara dön
-          </button>
-          <button
-            type="button"
-            onClick={onRestart}
-            className="ms-btn is-primary flex-1"
-          >
-            <RotateCcw aria-hidden />
-            Yeniden çalış
-          </button>
-        </div>
-      </div>
-    );
-  }
-
-  const front = reverse ? card.back : card.front;
-  const back = reverse ? card.front : card.back;
-  const pct = Math.min(100, (answered / total) * 100);
-  const leaveCls = leaving === 'good' ? 'translate-x-[40%] rotate-6 opacity-0' : leaving === 'again' ? '-translate-x-[40%] -rotate-6 opacity-0' : leaving === 'hard' ? 'translate-y-6 opacity-0' : '';
-
-  return (
-    <div className="ds-fc-session">
-      {/* Üst çubuk: çıkış · deste adı ve sayaç · gezinme · paylaş · bildir (canvas "Cards") */}
-      <div className="fcx-top">
-        <button type="button" onClick={onExit} aria-label="Oturumu bitir" className="qk-ib"><X aria-hidden /></button>
-        <span className="fcx-title">
-          <b>{card?.group || 'Ezber kartları'}</b>
-          <span>{reverse ? 'Ters yön · ' : ''}{Math.min(idx + 1, queue.length)} / {queue.length}</span>
-        </span>
-        <button type="button" onClick={goPrev} disabled={idx === 0} aria-label="Önceki kart" className="qk-ib"><ChevronLeft aria-hidden /></button>
-        <button type="button" onClick={goNext} aria-label="Sonraki kart" className="qk-ib"><ChevronRight aria-hidden /></button>
-        {card && onShare && <button type="button" onClick={() => onShare(card)} aria-label="Kartı paylaş" title="Kartı paylaş" className="qk-ib"><Share2 aria-hidden /></button>}
-        {card && onReport && <button type="button" onClick={() => onReport(card)} aria-label="Hata bildir" title="Hata bildir" className="qk-ib"><AlertCircle aria-hidden /></button>}
-      </div>
-      <div className="fcx-seg" aria-label={`İlerleme: ${answered} / ${total}`}>
-        {Array.from({ length: Math.min(total, 40) }, (_, i) => {
-          const at = Math.floor((i / Math.min(total, 40)) * total);
-          return <span key={i} className={at < answered ? 'is-done' : at === answered ? 'is-cur' : ''} />;
-        })}
-      </div>
-
-      {/* Kart: arkada iki hayalet kart, 3B çevirme */}
-      <div
-        id={card ? `card-${card.id}` : undefined}
-        className="fcx-stack"
-        onTouchStart={(e) => (touch.current = { x: e.touches[0].clientX, y: e.touches[0].clientY })}
-        onTouchEnd={(e) => {
-          if (!touch.current) return;
-          const dx = e.changedTouches[0].clientX - touch.current.x;
-          const dy = e.changedTouches[0].clientY - touch.current.y;
-          touch.current = null;
-          if (!flipped || Math.abs(dx) < 70 || Math.abs(dx) < Math.abs(dy) * 1.4) return;
-          answer(dx > 0 ? 'good' : 'again');
-        }}
-      >
-        <span className="fcx-ghost is-2" aria-hidden />
-        <span className="fcx-ghost is-1" aria-hidden />
-        <button
-          type="button"
-          onClick={() => setFlipped((f) => !f)}
-          aria-label={flipped ? 'Kartın ön yüzüne dön' : 'Kartı çevir'}
-          className={`ds-flip fcx-flip ${flipped ? 'is-back' : ''} ${leaveCls}`}
-        >
-          <span className="fcx-face" style={{ opacity: flipped ? 0 : 1, transition: 'opacity 0s linear 0.25s' }} aria-hidden={flipped}>
-            <span className="fcx-row">
-              <span className="fcx-tag">{card.group}</span>
-              <span className="fcx-side">{card.id.startsWith('q:') ? (reverse ? 'CEVAP' : 'SORU') : reverse ? 'TANIM' : 'TERİM'}</span>
-            </span>
-            <span className={`fcx-main ${reverse || plain(front).length > 60 ? 'is-long' : ''}`}>
-              {plain(front)}
-              {!reverse && card.sub && <small>{card.sub}</small>}
-            </span>
-            <span className="fcx-hint">Çevirmek için dokun · boşluk</span>
-          </span>
-          <span className="fcx-face is-b" style={{ opacity: flipped ? 1 : 0, transition: 'opacity 0s linear 0.25s' }} aria-hidden={!flipped}>
-            <span className="fcx-row">
-              <span className="fcx-tag is-ok">Cevap</span>
-              <span className="fcx-side">{plain(reverse ? card.back : card.front).slice(0, 40)}</span>
-            </span>
-            <span className="fcx-ans">
-              <b className={reverse ? 'is-big' : ''}>{plain(back)}</b>
-              {card.pearl && <span className="fcx-pearl"><b>Akılda tut</b>{plain(card.pearl)}</span>}
-            </span>
-            <span className="fcx-hint">Kendini puanla</span>
-          </span>
-        </button>
-        <span className="fcx-corner">
-          <button type="button" onClick={() => toggleFav(card)} aria-pressed={favIds.has(card.id)} aria-label={favIds.has(card.id) ? 'Favorilerden çıkar' : 'Favorilere ekle'} className={`qk-ib ${favIds.has(card.id) ? 'is-fav' : ''}`}>
-            <Star fill={favIds.has(card.id) ? 'currentColor' : 'none'} aria-hidden />
-          </button>
-          {!reverse && (
-            <button type="button" onClick={() => speak(plain(card.front))} aria-label="Terimi seslendir" className="qk-ib"><Volume2 aria-hidden /></button>
-          )}
-        </span>
-      </div>
-
-      {card && <CardExtras card={card} />}
-
-      {/* Actions */}
-      {flipped ? (
-        <div className="grid grid-cols-3 gap-2 ms-pop-in">
-          {(
-            [
-              ['again', 'Tekrar', '1', 'is-again'],
-              ['hard', 'Zor', '2', 'is-hard'],
-              ['good', 'Biliyorum', '3', 'is-good'],
-            ] as const
-          ).map(([g, label, key, cls]) => (
-            <button
-              key={g}
-              type="button"
-              onClick={() => answer(g)}
-              className={`ds-grade ${cls}`}
-            >
-              <span className="inline-flex items-center gap-1.5">
-                {g === 'good' && <Check className="w-4 h-4" strokeWidth={3} />}
-                {label}
-              </span>
-              <span className="hidden md:block text-2xs opacity-70 font-mono">{key}</span>
-            </button>
-          ))}
-        </div>
-      ) : (
-        <button
-          type="button"
-          onClick={() => setFlipped(true)}
-          className="ds-grade is-reveal"
-        >
-          Cevabı göster
-        </button>
-      )}
-      <p className="m-0 text-center text-sm text-ink-3">
-        <span className="md:hidden">Çevirdikten sonra sağa kaydır: biliyorum · sola: tekrar</span>
-        <span className="hidden md:inline">Boşluk: çevir · ← → gezin · F favori · 1 tekrar · 2 zor · 3 biliyorum</span>
-      </p>
-    </div>
   );
 };
