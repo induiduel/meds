@@ -1,6 +1,6 @@
-# Deste → PDF eşleşme raporu (2026-10-12T19:08:38)
+# Deste → PDF eşleşme raporu (2026-10-13T03:10:01)
 
-Drive ders PDF'i: 58 · deste: 173 · OK: 165 · KANIT YOK: 8
+Drive ders PDF'i: 58 · deste: 174 · OK: 166 · KANIT YOK: 8
 
 ## KANIT YOK (8)
 
@@ -13,7 +13,7 @@ Drive ders PDF'i: 58 · deste: 173 · OK: 165 · KANIT YOK: 8
 - `k1p-k1-66-erkek-genital-sistem-ve-prostat-hastaliklari` — PDF yok — en iyi aday 5) Üriner Sistemin Spesifik Enfeksiyonları.pdf yalnız 2/18 slayt; ders tarihi 2026-10-16
 - `k1p-k1-47-bagisikligi-baskili-hastalarda-enfeksiyon` — PDF yok — en iyi aday 4)Enfeksiyon Hastalıklarında Temel Kavramlar ve Genel Özellikler.pdf yalnız 4/90 slayt; ders tarihi 2026-10-05
 
-## OK (165)
+## OK (166)
 
 - `deck-urinary-obstruction` — 1)Üriner Obstrüksiyon; Patofizyoloji, Klinik ve Tedavi.pdf — ad (eski_katalog) + içerik: 24/34 slayt
 - `deck-urolithiasis-pathophysiology` — 2)Ürolitiyazis Patofizyolojisi.pdf + 1)Üriner Obstrüksiyon; Patofizyoloji, Klinik ve Tedavi.pdf — ad (eski_katalog) + içerik: 23/32 slayt
@@ -180,3 +180,4 @@ Drive ders PDF'i: 58 · deste: 173 · OK: 165 · KANIT YOK: 8
 - `k1p-k1-46-mesane-hastaliklari-ve-tumorleri-v2` — 26)Mesane Hastalıkları ve Tümörleri.pdf — ad (slayt_kaynagi) + içerik: 60/61 slayt
 - `k1p-k1-38-glomeruler-hastaliklar-nefritik-sendrom-v2` — 22)Glomeruler Hastalıklar_ Nefritik Sendrom.pdf — ad (slayt_kaynagi) + içerik: 49/51 slayt
 - `k1p-k1-49-invaziv-serviks-kanseri-ve-endometriyozis-v2` — 39)İnvaziv Serviks Kanseri ve Endometriyozis.pdf — ad (slayt_kaynagi) + içerik: 60/60 slayt
+- `k1p-k1-68-enfeksiyon-hastaliklarinin-epidemiyolojisi` — 5)Enfeksiyon Hastalıklarının Genel Epidemiyolojik Özellikleri.pdf — ad (slayt_kaynagi) + içerik: 56/56 slayt

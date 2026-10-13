@@ -9,16 +9,16 @@
   "fileName": "01_dismorfolojide_genetik_terminoloji.md",
   "keyPoints": [
    "Öğrenim Hedefleri",
-   "Genetik ve Tıbbi Genetiğin Alt Alanları",
+   "Genetik, Tıbbi Genetik ve Kromozomal Düzensizlikler",
    "Dismorfoloji: Tanım ve Temel Kavramlar",
    "Konjenital Anomalilerin Sınıflandırılması",
+   "Oluşum Şekline Göre Anomaliler (Etiyopatogeneze Göre)",
    "Birlikte Görülmelerine Göre Anomaliler",
-   "Dismorfik Hastaya Yaklaşım",
-   "Dismorfik Hastada Genetik Tanı Yöntemleri",
-   "Genetik Danışma ve Tanı Sonrası"
+   "Konjenital Anomalilerin Sıklığı ve Etiyolojisi",
+   "Dismorfik Hastaya Yaklaşım: Endikasyonlar, Anamnez ve Aile Öyküsü"
   ],
-  "charCount": 18070,
-  "readingTimeMinutes": 14
+  "charCount": 45031,
+  "readingTimeMinutes": 33
  },
  {
   "id": "k1-02-patolojiye-giris",
@@ -26,20 +26,20 @@
   "committeeId": "donem3-kurul1",
   "discipline": "Tıbbi Patoloji",
   "title": "Patolojiye Giriş",
-  "instructor": "Prof. Dr. Hikmet Keleş",
+  "instructor": "Prof. Dr. Hikmet KELEŞ",
   "fileName": "02_patolojiye_giris.md",
   "keyPoints": [
    "Öğrenim Hedefleri",
-   "Patolojinin Tanımı ve Tıptaki Yeri",
+   "Patolojinin Tanımı, Kapsamı ve Tıptaki Yeri",
    "Hastalık Sürecinin Dört Temel Öğesi",
    "Patolojinin Klinik Önemi ve Patoloğun Rolü",
-   "Patolojinin Alt Dalları",
-   "Tarihçe",
-   "Tanısal Araçlar",
-   "Patoloji Laboratuvarı: Materyal ve Yönetimi"
+   "Patolojinin Ana Alt Dalları",
+   "Tarihçe — Dünyada Patolojinin Gelişimi",
+   "Türkiye'de Patolojinin Gelişimi ve Kurumsallaşma",
+   "Patolojide Başlıca Tanısal Araçlar"
   ],
-  "charCount": 19347,
-  "readingTimeMinutes": 14
+  "charCount": 46883,
+  "readingTimeMinutes": 34
  },
  {
   "id": "k1-03-hucresel-adaptasyonlar",
@@ -52,15 +52,15 @@
   "keyPoints": [
    "Öğrenim Hedefleri",
    "Hücre, Homeostaz ve Hücresel Stres",
-   "Adaptasyonun Tanımı",
-   "Başlıca Hücresel Adaptasyon Tipleri",
+   "Adaptasyonun Tanımı, Amacı ve Tipleri",
    "Hipertrofi",
+   "Kalp Hipertrofisi: Patolojik Hipertrofi ve Kalp Yetmezliğine Geçiş",
    "Hiperplazi",
    "Atrofi",
    "Metaplazi"
   ],
-  "charCount": 10046,
-  "readingTimeMinutes": 8
+  "charCount": 21697,
+  "readingTimeMinutes": 16
  },
  {
   "id": "k1-04-hucre-hasari-ve-nekroz-i",
@@ -68,20 +68,20 @@
   "committeeId": "donem3-kurul1",
   "discipline": "Tıbbi Patoloji",
   "title": "Hücre Hasarı ve Nekroz - I",
-  "instructor": "Prof. Dr. Hikmet Keleş",
+  "instructor": "Prof. Dr. Hikmet KELEŞ",
   "fileName": "04_hucre_hasari_ve_nekroz_i.md",
   "keyPoints": [
    "Öğrenim Hedefleri",
-   "Hücre Hasarı Kavramı",
+   "Hücre Hasarı Kavramı ve Strese Hücresel Yanıt",
    "Hücre Hasarının Başlıca Nedenleri",
    "Hücre Hasarında Genel İlkeler",
    "Geri Dönüşümlü Hücre Hasarı",
-   "Geri Dönüşümlü Hasardan Geri Dönüşümsüze",
-   "Hücre Ölümü Tipleri",
-   "Nekrozun Morfolojisi"
+   "Geri Dönüşümlü Hasardan Geri Dönüşümsüze Geçiş",
+   "Hücre Ölümü Tipleri – Genel Bakış",
+   "Nekroz: Temel Özellikler ve Hücresel Değişiklikler"
   ],
-  "charCount": 10302,
-  "readingTimeMinutes": 8
+  "charCount": 20450,
+  "readingTimeMinutes": 15
  },
  {
   "id": "k1-05-hucre-hasari-ve-nekroz-ii",
@@ -89,20 +89,20 @@
   "committeeId": "donem3-kurul1",
   "discipline": "Tıbbi Patoloji",
   "title": "Hücre Hasarı ve Nekroz - II",
-  "instructor": "Prof. Dr. Hikmet Keleş",
+  "instructor": "Prof. Dr. Hikmet KELEŞ",
   "fileName": "05_hucre_hasari_ve_nekroz_ii.md",
   "keyPoints": [
    "Öğrenim Hedefleri",
-   "Nekroz Kalıplarına Devam",
+   "Nekroz Kalıplarına Devam ve Kazeöz Nekroz",
+   "Yağ Nekrozu",
+   "Fibrinoid Nekroz",
    "Nekroz ve Serum Biyobelirteçleri",
-   "Apoptoz",
-   "Apoptozun Biyokimyasal Temeli",
-   "Nekroz ve Apoptoz Karşılaştırması",
-   "Diğer Hücre Ölümü Biçimleri ve Otofaji",
-   "Hücre Hasarının Biyokimyasal Mekanizmaları"
+   "Hücre Ölümü: Nekroz ve Apoptoz – Temel Ayrım",
+   "Apoptozun Fizyolojik ve Patolojik Durumları",
+   "Apoptozun Morfolojik Özellikleri"
   ],
-  "charCount": 13323,
-  "readingTimeMinutes": 10
+  "charCount": 32929,
+  "readingTimeMinutes": 24
  },
  {
   "id": "k1-06-gebelik-ve-emzirme-doneminde-beslenme",
@@ -131,20 +131,20 @@
   "committeeId": "donem3-kurul1",
   "discipline": "Tıbbi Patoloji",
   "title": "Hücre İçi Birikimler ve Kalsifikasyonlar",
-  "instructor": "Prof. Dr. Hikmet Keleş",
+  "instructor": "Prof. Dr. Hikmet KELEŞ",
   "fileName": "07_hucre_ici_birikimler_ve_kalsifikasyonlar.md",
   "keyPoints": [
    "Öğrenim Hedefleri",
    "Hücre İçi Birikimlere Genel Bakış",
+   "Hücre İçi Birikim Mekanizmaları",
    "Lipid Birikimleri",
    "Protein Birikimleri",
    "Glikojen Birikimleri",
    "Pigment Birikimleri",
-   "Hücre Dışı Birikimler",
-   "Patolojik Kalsifikasyon"
+   "Hücre Dışı Birikimler"
   ],
-  "charCount": 10819,
-  "readingTimeMinutes": 8
+  "charCount": 27074,
+  "readingTimeMinutes": 19
  },
  {
   "id": "k1-08-hucresel-yaslanma",
@@ -173,20 +173,20 @@
   "committeeId": "donem3-kurul1",
   "discipline": "Tıbbi Patoloji",
   "title": "Akut Enflamasyon: Vasküler Değişiklikler ve Hücresel Olaylar",
-  "instructor": "Prof. Dr. Hikmet Keleş",
+  "instructor": "Prof. Dr. Hikmet KELEŞ",
   "fileName": "09_akut_enflamasyon_vaskuler_degisiklikler_ve_hucrese.md",
   "keyPoints": [
    "Öğrenim Hedefleri",
-   "Enflamasyonun Tanımı ve Rolü",
-   "Akut ve Kronik Enflamasyon",
-   "Nedenler ve Tanıma",
-   "Akut Enflamasyonun Üç Ana Bileşeni",
-   "Lökosit Göçü (Alımı)",
-   "Fagositoz ve Hücre İçi Öldürme",
-   "Akut Enflamasyonun Morfolojik Kalıpları"
+   "Enflamasyon: Tanım, Amaç ve Temel Öğeler",
+   "Akut ve Kronik Enflamasyon, Beş Ana Bulgu",
+   "Enflamatuvar Yanıtın Basamakları, Nedenleri ve Tanıma",
+   "Akut Enflamasyonun Ana Bileşenleri ve Vasküler Değişiklikler",
+   "Lökosit Göçü (Alımı) ve Adezyon Molekülleri",
+   "Kemotaksi, Lökosit Kinetiği ve Lökosit Aktivasyonu",
+   "Fagositoz ve Hücre İçi Öldürme"
   ],
-  "charCount": 13239,
-  "readingTimeMinutes": 10
+  "charCount": 36889,
+  "readingTimeMinutes": 27
  },
  {
   "id": "k1-10-kromozomal-hastaliklar-ve-genetik-danisma",
@@ -198,16 +198,16 @@
   "fileName": "10_kromozomal_hastaliklar_ve_genetik_danisma.md",
   "keyPoints": [
    "Öğrenim Hedefleri",
-   "Genel Bilgiler",
-   "Sayısal Anomaliler",
-   "Yapısal Anomaliler",
-   "Otozomal Kromozom Hastalıkları",
-   "Gonozomal Kromozom Hastalıkları",
-   "Genomik İmprinting ve Uniparental Dizomi",
-   "Genetik Danışma"
+   "Kromozomal Hastalıklara Giriş",
+   "Kromozom Anomalilerinin Sınıflandırılması",
+   "Sayısal Düzensizlikler: Öploidi ve Poliploidi",
+   "Anöploidi: Oluş Nedenleri ve Tipleri",
+   "Yapısal Kromozom Anomalileri: Genel Özellikler",
+   "Delesyon ve Mikrodelesyon Sendromları",
+   "Duplikasyon ve İnversiyon"
   ],
-  "charCount": 18073,
-  "readingTimeMinutes": 14
+  "charCount": 50175,
+  "readingTimeMinutes": 37
  },
  {
   "id": "k1-11-uriner-obstruksiyonun-fizyopatolojisi",
@@ -236,20 +236,20 @@
   "committeeId": "donem3-kurul1",
   "discipline": "Tıbbi Patoloji",
   "title": "Enflamasyonun Kimyasal Mediyatörleri",
-  "instructor": "Prof. Dr. Hikmet Keleş",
+  "instructor": "Prof. Dr. Hikmet KELEŞ",
   "fileName": "12_enflamasyonun_kimyasal_mediyatorleri.md",
   "keyPoints": [
    "Öğrenim Hedefleri",
-   "Mediyatörlerin Tanımı ve Özellikleri",
-   "Vazoaktif Aminler",
-   "Araşidonik Asit Metabolitleri (Eikozanoidler)",
-   "Sitokinler",
-   "Kompleman Sistemi",
-   "Diğer Mediyatörler",
-   "Mediyatörlerin Fazlalığı ve Sinerjisi"
+   "Enflamasyon Mediyatörleri: Tanım ve Ortak Özellikler",
+   "Hücre Kaynaklı ve Plazma Kaynaklı Mediyatörler",
+   "Başlıca Mediyatörler ve Enflamasyon Reaksiyonlarındaki Rolleri",
+   "Vazoaktif Aminler: Histamin ve Serotonin",
+   "Araşidonik Asit Metabolizması ve Eikozanoidler",
+   "Prostaglandinler ve Tromboksan",
+   "Lökotrienler ve Lipoksinler"
   ],
-  "charCount": 13514,
-  "readingTimeMinutes": 10
+  "charCount": 34617,
+  "readingTimeMinutes": 24
  },
  {
   "id": "k1-13-kronik-ve-granulomatoz-enflamasyon",
@@ -257,20 +257,20 @@
   "committeeId": "donem3-kurul1",
   "discipline": "Tıbbi Patoloji",
   "title": "Kronik ve Granülomatöz Enflamasyon",
-  "instructor": "Prof. Dr. Hikmet Keleş",
+  "instructor": "Prof. Dr. Hikmet KELEŞ",
   "fileName": "13_kronik_ve_granulomatoz_enflamasyon.md",
   "keyPoints": [
    "Öğrenim Hedefleri",
-   "Tanım ve Akut Enflamasyonla Karşılaştırma",
-   "Kronik Enflamasyonun Nedenleri",
-   "Morfolojik Özellikler",
+   "Kronik Enflamasyon: Tanım",
+   "Kronik ve Akut Enflamasyonun Karşılaştırılması",
+   "Kronik Enflamasyonun Başlıca Nedenleri",
+   "Kronik Enflamasyonun Morfolojik Özellikleri",
    "Makrofajlar",
-   "Lenfositler",
-   "Diğer Hücreler",
-   "Granülomatöz Enflamasyon"
+   "Makrofaj Aktivasyon Yolları",
+   "Lenfositlerin Rolü"
   ],
-  "charCount": 9834,
-  "readingTimeMinutes": 7
+  "charCount": 26356,
+  "readingTimeMinutes": 19
  },
  {
   "id": "k1-14-salgin-hastaliklarda-kontrol-ve-korunma-yontemleri",
@@ -278,19 +278,20 @@
   "committeeId": "donem3-kurul1",
   "discipline": "Halk Sağlığı",
   "title": "Salgın Hastalıklarda Kontrol ve Korunma Yöntemleri",
-  "instructor": "Halk Sağlığı ABD",
+  "instructor": "Uzm. Dr. Erkay Nacar",
   "fileName": "14_salgin_hastaliklarda_kontrol_ve_korunma_yontemleri.md",
   "keyPoints": [
    "Öğrenim Hedefleri",
-   "Bulaşıcı Hastalıkların Yeniden Ortaya Çıkışı",
+   "Bulaşıcı Hastalıkların Yeniden Ortaya Çıkması: Tehdit Devam Ediyor",
+   "Daha Büyük Etkiyle, Daha Hızlı ve Daha İleri",
    "Bir Sonraki Salgına Hazırlık",
-   "Epidemik Fazlar ve Müdahaleler",
-   "Salgın Yanıtının Özellikleri",
-   "Salgın Yönetiminde Temel İlkeler",
-   "Hastalıklara Göre Başlıca Bulaş Yolları (DSÖ)"
+   "Epidemik Fazlar ve Salgına Müdahaleler",
+   "Salgını Bekleme ve Erken Teşhis",
+   "Sınırlama, Etkisini Azaltma ve Kontrol Altına Alma",
+   "Eliminasyon veya Eradikasyon"
   ],
-  "charCount": 9197,
-  "readingTimeMinutes": 7
+  "charCount": 27237,
+  "readingTimeMinutes": 22
  },
  {
   "id": "k1-15-doku-onarimi-ve-yara-iyilesmesi",
@@ -298,20 +299,20 @@
   "committeeId": "donem3-kurul1",
   "discipline": "Tıbbi Patoloji",
   "title": "Doku Onarımı ve Yara İyileşmesi",
-  "instructor": "Prof. Dr. Hikmet Keleş",
+  "instructor": "Prof. Dr. Hikmet KELEŞ",
   "fileName": "15_doku_onarimi_ve_yara_iyilesmesi.md",
   "keyPoints": [
    "Öğrenim Hedefleri",
-   "Doku Onarımı: Tanım ve İki Temel Yol",
+   "Doku Onarımı: Tanım ve Dersin Kapsamı",
+   "Onarımın İki Temel Yolu: Rejenerasyon ve Yara İzi (Skar)",
+   "Rejenerasyon: Ne Zaman Mümkün?",
    "Hücre Çoğalma Kapasitesine Göre Dokular",
    "Kök Hücreler ve Rejenerasyon",
-   "Skarla Onarımın Aşamaları",
-   "Büyüme Faktörleri",
-   "Anjiyogenez",
-   "Fibroblast Aktivasyonu ve ECM"
+   "Rejenerasyonun Örnekleri",
+   "Karaciğer Rejenerasyonu"
   ],
-  "charCount": 13629,
-  "readingTimeMinutes": 10
+  "charCount": 33706,
+  "readingTimeMinutes": 25
  },
  {
   "id": "k1-16-odem-hiperemi-konjesyon-ve-kanama",
@@ -323,13 +324,16 @@
   "fileName": "16_odem_hiperemi_konjesyon_ve_kanama.md",
   "keyPoints": [
    "Öğrenim Hedefleri",
-   "Hemodinamik Denge",
+   "Hemodinamik Denge ve Klinik Önemi",
    "Hiperemi ve Konjesyon",
-   "Ödem",
-   "Kanama (Hemoraji)"
+   "Kronik Konjesyon ve Hiperemi/Konjesyonun Morfolojisi",
+   "Akciğer ve Karaciğer Konjesyonu",
+   "Ödem: Tanım, Sıvı Dağılımı ve Starling Kuvvetleri",
+   "Ödeme Yol Açan Temel Mekanizmalar ve Nedenler",
+   "Artmış Hidrostatik Basınç ve Kalp Yetmezliği"
   ],
-  "charCount": 10545,
-  "readingTimeMinutes": 8
+  "charCount": 30587,
+  "readingTimeMinutes": 23
  },
  {
   "id": "k1-17-cinsel-yolla-bulasan-enfeksiyonlarda-tedavi",
@@ -359,15 +363,16 @@
   "fileName": "18_halk_sagligi_tarihcesi.md",
   "keyPoints": [
    "Öğrenim Hedefleri",
-   "Halk Sağlığının Tanımı",
-   "Tarihsel Gelişim",
-   "Sosyal Hekimlik ve Halk Sağlığı Anlayışı",
-   "Halk Sağlığının Temel İlkeleri",
-   "Sağlığı Etkileyen Faktörler",
-   "Korunma Düzeyleri"
+   "Halk Sağlığının Tanımı (Winslow, 1920)",
+   "Antik Çağ: Gılgamış, Hipokrat ve Galenos",
+   "İslam Hekimliği: Razi, İbn-ül Habib ve İbn-i Sina",
+   "Mikrobiyoloji ve Aşılama Dönemi",
+   "Su, Çevre ve Vektörle İlişkili Hastalıklar",
+   "Beslenme Eksikliği Hastalıkları: Skorbüt",
+   "Sosyal Hekimlik: Grotjahn (1869–1931)"
   ],
-  "charCount": 15029,
-  "readingTimeMinutes": 11
+  "charCount": 32939,
+  "readingTimeMinutes": 24
  },
  {
   "id": "k1-19-dogumsal-kadin-erkek-genital-gelisim-anomalileri",
@@ -379,16 +384,16 @@
   "fileName": "19_dogumsal_kadin_erkek_genital_gelisim_anomalileri.md",
   "keyPoints": [
    "Öğrenim Hedefleri",
-   "Fertilizasyon ve Erken Gelişim",
-   "Normal Cinsiyet Farklılaşması",
-   "Gonadal Farklılaşmada Rol Alan Genler",
-   "İç ve Dış Genital Organların Gelişimi",
-   "Cinsiyet Gelişim Bozuklukları (CGB)",
-   "Cinsiyet Kromozom Bozuklukları",
-   "5α-Redüktaz 2 Eksikliği"
+   "Fertilizasyon (Döllenme) ve Erken Embriyonik Gelişim",
+   "Normal Cinsiyet Farklılaşması ve Kromozomal Cinsiyet",
+   "Genital Sistemin Embriyolojik Gelişimi ve Ortak Organlar",
+   "Gonadal Farklılaşma ve Rol Alan Genler",
+   "Gonadal Disgenezis Genetiği",
+   "Eksternal Genitalya Farklılaşması",
+   "Cinsiyet Gelişiminde Rol Alan Genler ve Bozuklukları"
   ],
-  "charCount": 16414,
-  "readingTimeMinutes": 12
+  "charCount": 49477,
+  "readingTimeMinutes": 37
  },
  {
   "id": "k1-20-tromboz-patofizyolojisi",
@@ -396,20 +401,20 @@
   "committeeId": "donem3-kurul1",
   "discipline": "Tıbbi Patoloji",
   "title": "Tromboz Patofizyolojisi",
-  "instructor": "Prof. Dr. Hikmet Keleş",
+  "instructor": "Prof. Dr. Hikmet KELEŞ",
   "fileName": "20_tromboz_patofizyolojisi.md",
   "keyPoints": [
    "Öğrenim Hedefleri",
-   "Hemostaz ve Tromboz",
-   "Normal Hemostazın Basamakları",
-   "Trombositler",
+   "Hemostaz ve Tromboz – Giriş",
+   "Normal Hemostazın Bileşenleri ve Basamakları",
+   "Trombositler: Yapı, Yapışma, Aktivasyon ve Agregasyon",
    "Koagülasyon Kaskadı",
+   "Trombin – Merkezî Rol",
    "Pıhtılaşmayı Sınırlayan Mekanizmalar ve Fibrinoliz",
-   "Endotel: Antitrombotik ve Protrombotik Yüz",
-   "Virchow Üçlüsü"
+   "Endotel: Antitrombotik ve Protrombotik Özellikler"
   ],
-  "charCount": 13763,
-  "readingTimeMinutes": 10
+  "charCount": 33900,
+  "readingTimeMinutes": 25
  },
  {
   "id": "k1-21-enfeksiyon-hastaliklarinda-genel-kavramlar-ve-teme",
@@ -441,15 +446,16 @@
   "fileName": "22_bebek_beslenmesi.md",
   "keyPoints": [
    "Öğrenim Hedefleri",
-   "Dünyada ve Türkiye'de Durum",
-   "Bebeklikte Büyüme ve Sindirim",
-   "Bebeğin Besin Ögesi Gereksinimleri",
-   "Anne Sütü",
-   "Emzirmede Dikkat Edilecek Noktalar",
-   "Tamamlayıcı (Ek) Beslenme"
+   "Doğum ve Nüfus Göstergeleri",
+   "DSÖ Verileri ve Beslenme Önerileri",
+   "Bebek Ölüm Hızı",
+   "Türkiye'de Durum (TNSA-2018)",
+   "Bebek Beslenmesinin Amacı",
+   "Genel Bilgiler: Bebeklikte Büyüme ve Sindirim",
+   "Yenidoğanın Besin Ögeleri Gereksinimi: Enerji, Makro Besinler ve Su"
   ],
-  "charCount": 11341,
-  "readingTimeMinutes": 10
+  "charCount": 32189,
+  "readingTimeMinutes": 27
  },
  {
   "id": "k1-23-ana-cocuk-sagligi-duzeyinin-izlenmesi",
@@ -503,16 +509,16 @@
   "fileName": "25_asiri_duyarlilik_ve_otoimmunite.md",
   "keyPoints": [
    "Öğrenim Hedefleri",
-   "Aşırı Duyarlılık: Tanım ve Sınıflama",
+   "Aşırı Duyarlılık: Tanım ve Genel Sınıflama",
    "Tip I (Ani) Aşırı Duyarlılık",
-   "Tip II (Antikor Aracılı) Aşırı Duyarlılık",
-   "Tip III (İmmün Kompleks Aracılı) Aşırı Duyarlılık",
-   "Tip IV (T Hücre Aracılı) Aşırı Duyarlılık",
-   "İmmünolojik Tolerans ve Otoimmünite",
-   "Sistemik Otoimmün Hastalıklar ve Otoantikorlar"
+   "Tip I: Klinik Örnekler, Atopi ve Tedavi",
+   "Tip II (Antikor-Aracılı) Aşırı Duyarlılık",
+   "Tip III (İmmün Kompleks-Aracılı) Aşırı Duyarlılık",
+   "Tip IV (T Hücre-Aracılı) Aşırı Duyarlılık",
+   "İmmünolojik Tolerans ve Otoimmünite"
   ],
-  "charCount": 24339,
-  "readingTimeMinutes": 18
+  "charCount": 49140,
+  "readingTimeMinutes": 36
  },
  {
   "id": "k1-26-genetik-pediatrik-ve-cevresel-patoloji",
@@ -520,19 +526,20 @@
   "committeeId": "donem3-kurul1",
   "discipline": "Tıbbi Patoloji",
   "title": "Genetik, Pediatrik ve Çevresel Patoloji",
-  "instructor": "Prof. Dr. Hikmet Keleş",
+  "instructor": "Prof. Dr. Hikmet KELEŞ",
   "fileName": "26_genetik_pediatrik_ve_cevresel_patoloji.md",
   "keyPoints": [
    "Öğrenim Hedefleri",
-   "Hastalıkta \"Üçlü Çerçeve\"",
-   "İnsan Genomu ve Genetik Varyasyon",
-   "Mendel Tipi Tek Gen Hastalıkları",
-   "Çevresel Hastalıklar",
-   "Beslenme Bozuklukları",
-   "Moleküler Tanı ve Hedefe Yönelik Tedavi"
+   "Dersin Çerçevesi: Genetik, Çevre, Beslenme ve Hastalık",
+   "İnsan Genomunun Temel Özellikleri ve Kodlamayan DNA",
+   "Genetik Varyasyon Türleri: SNP ve CNV",
+   "Epigenetik Düzenleme",
+   "Mendel Tipi Tek Gen Hastalıkları ve Kalıtım Paternleri",
+   "Otozomal Dominant Örnek: Marfan Sendromu",
+   "Otozomal Resesif Örnek: Kistik Fibrozis"
   ],
-  "charCount": 13695,
-  "readingTimeMinutes": 10
+  "charCount": 36379,
+  "readingTimeMinutes": 27
  },
  {
   "id": "k1-27-uriner-sistem-tas-hastaliklari-fizyopatolojisi",
@@ -559,20 +566,20 @@
   "committeeId": "donem3-kurul1",
   "discipline": "Tıbbi Patoloji",
   "title": "Tümör Biyolojisi ve Terminolojisi",
-  "instructor": "Prof. Dr. Hikmet Keleş",
+  "instructor": "Prof. Dr. Hikmet KELEŞ",
   "fileName": "28_tumor_biyolojisi_ve_terminolojisi.md",
   "keyPoints": [
    "Öğrenim Hedefleri",
-   "Temel Kavramlar",
-   "Benign ve Malign Neoplazm",
-   "Tümörlerin Adlandırılması",
+   "Neoplazi ve Kanser: Temel Kavramlar",
+   "Kanserin Ayırt Edici Özellikleri ve Büyüme Sinyal Yolları",
+   "Terminoloji: Temel Tanımlar, Benign ve Malign Neoplazm",
+   "Tümörlerin İsimlendirilmesi",
    "Diferansiyasyon ve Anaplazi",
-   "Metastaz",
-   "Kanser Epidemiyolojisi",
-   "Kanser Genleri ve Karsinogenez"
+   "Displazi ve Karsinoma in Situ",
+   "Lokal Büyüme ve Lokal İnvazyon"
   ],
-  "charCount": 19047,
-  "readingTimeMinutes": 15
+  "charCount": 47850,
+  "readingTimeMinutes": 35
  },
  {
   "id": "k1-29-karsinojenezin-molekuler-temeli",
@@ -626,16 +633,16 @@
   "fileName": "31_urogenital_sistem_tumorlerinde_genetik_belirtecler.md",
   "keyPoints": [
    "Öğrenim Hedefleri",
-   "Genel Bilgiler",
-   "Böbrek Tümörleri",
-   "Mesane Tümörleri",
-   "Prostat Tümörleri",
-   "Testis Tümörleri",
-   "Endometrium Kanseri",
-   "Vulva Tümörleri"
+   "Ürogenital Tümörlere Genel Bakış",
+   "Böbrek Tümörleri: Epidemiyoloji, Sınıflama ve Renal Hücreli Karsinom",
+   "Böbrek Tümörlerinde Prognostik Faktörler, Metastaz ve Kanserin Böbreğe Etkisi",
+   "Herediter RCC: Genetik Risk Değerlendirmesi ve Sendromlar",
+   "von Hippel-Lindau Sendromu (VHL)",
+   "BAP1 Tümör Yatkınlık Sendromu (BAP1-TPDS)",
+   "Birt-Hogg-Dubé Sendromu (BHDS)"
   ],
-  "charCount": 14519,
-  "readingTimeMinutes": 11
+  "charCount": 63434,
+  "readingTimeMinutes": 48
  },
  {
   "id": "k1-32-tumor-immunolojisi-ve-metastaz-mekanizmalari",
@@ -647,13 +654,16 @@
   "fileName": "32_tumor_immunolojisi_ve_metastaz_mekanizmalari.md",
   "keyPoints": [
    "Öğrenim Hedefleri",
-   "Tümör İmmünolojisi",
-   "Bağışıklıktan Kaçış",
+   "Tümör İmmünolojisine Giriş: Bağışıklık Gözetimi",
+   "Tümör Antijenleri",
+   "Etkili Antitümör Bağışıklık",
+   "Tümörlerin Bağışıklıktan Kaçışı",
    "İmmünoterapi",
-   "Metastaz"
+   "Metastaz: Klinik Önemi ve Basamakları",
+   "İnvazyonun Moleküler Mekanizmaları"
   ],
-  "charCount": 9385,
-  "readingTimeMinutes": 7
+  "charCount": 29033,
+  "readingTimeMinutes": 21
  },
  {
   "id": "k1-33-tumor-evrelemesi-derecelendirme-ve-laboratuvar-tan",
@@ -668,11 +678,13 @@
    "Tümörün Konak Üzerindeki Etkileri",
    "Kanser Kaşeksisi",
    "Paraneoplastik Sendromlar",
-   "Derecelendirme (Grading) ve Evreleme (Staging)",
-   "Laboratuvar Tanısı"
+   "Kanser Derecelendirme (Grading)",
+   "Kanser Evreleme (Staging) ve TNM Sistemi",
+   "Kanserin Laboratuvar Tanısı — Genel Yaklaşım ve Morfolojik Yöntemler",
+   "İmmünohistokimya ve Akış Sitometrisi"
   ],
-  "charCount": 12937,
-  "readingTimeMinutes": 10
+  "charCount": 29912,
+  "readingTimeMinutes": 22
  },
  {
   "id": "k1-34-genital-enfeksiyonlar",
@@ -741,16 +753,16 @@
   "fileName": "37_glomeruler_hastaliklar_nefrotik_sendrom.md",
   "keyPoints": [
    "Öğrenim Hedefleri",
-   "Nefrotik Sendrom - Klinik Tanım",
-   "Nefrotik Sendrom - Patofizyoloji",
-   "Nefrotik Sendromun Sık Nedenleri",
+   "Dersin Kapsamı ve Amacı",
+   "Normal Glomerül ve Glomerüler Hasar Mekanizmaları",
+   "Böbrek Hastalıklarının Klinik Bulguları (Tablo 12.1)",
+   "Nefrotik Sendrom – Klinik Tanım ve Patofizyoloji",
+   "Nefrotik Sendromun Nedenleri (Tablo 12.3)",
    "Minimal Değişiklik Hastalığı",
-   "Fokal Segmental Glomeruloskleroz (FSGS)",
-   "Membranöz Nefropati",
-   "Membranoproliferatif Glomerulonefrit (MPGN) ve C3 Glomerulopatisi"
+   "Fokal Segmental Glomeruloskleroz (FSGS)"
   ],
-  "charCount": 14496,
-  "readingTimeMinutes": 10
+  "charCount": 31405,
+  "readingTimeMinutes": 22
  },
  {
   "id": "k1-38-glomeruler-hastaliklar-nefritik-sendrom",
@@ -758,20 +770,20 @@
   "committeeId": "donem3-kurul1",
   "discipline": "Tıbbi Patoloji",
   "title": "Glomerüler Hastalıklar: Nefritik Sendrom",
-  "instructor": "Prof. Dr. Hikmet Keleş",
+  "instructor": "Prof. Dr. Hikmet KELEŞ",
   "fileName": "38_glomeruler_hastaliklar_nefritik_sendrom.md",
   "keyPoints": [
    "Öğrenim Hedefleri",
-   "Nefritik Sendrom - Klinik Tanım",
-   "Nefritik Sendrom - Patofizyoloji",
-   "Nefritik Sendrom - Başlıca Nedenler (Tablo 12.2)",
+   "Nefritik Sendrom – Klinik Tanım",
+   "Nefritik Sendrom – Patofizyoloji",
+   "Nefritik Sendrom – Başlıca Nedenler (Tablo 12.2)",
+   "Başlıca Primer Glomerüler Hastalıkların Özeti (Tablo 12.2, Robbins'e göre)",
    "Akut Enfeksiyon Sonrası Glomerulonefrit",
    "Hızlı İlerleyen (Hilal) Glomerulonefrit (RPGN)",
-   "Lupus Nefriti",
-   "IgA Nefropatisi"
+   "Lupus Nefriti"
   ],
-  "charCount": 20188,
-  "readingTimeMinutes": 14
+  "charCount": 34031,
+  "readingTimeMinutes": 25
  },
  {
   "id": "k1-39-uriner-sistem-enfeksiyonlarinin-epidemiyoloji-etiy",
@@ -825,16 +837,16 @@
   "fileName": "41_sistemik_hastaliklarda_bobrek_hasari.md",
   "keyPoints": [
    "Öğrenim Hedefleri",
+   "Dersin Çerçevesi: Sistemik Hastalıkların Böbrek Üzerindeki Etkileri",
    "Sistemik Hastalıklarda Glomerüler Tutulum – Özet",
    "Lupus Nefriti – Sistemik Hastalık Bağlamında",
-   "Diyabetik Nefropati – Kısa Özet",
-   "Amiloid Nefropatisi – Kısa Özet",
+   "Diyabetik Nefropati – Kısa Özet (Bölüm 18'e Atıf)",
+   "Amiloid Nefropatisi – Kısa Özet (Bölüm 5'e Atıf)",
    "Sistemik Vaskülitler ve ANCA İlişkili GN",
-   "Trombotik Mikroanjiyopatiler (TMA) – Giriş",
-   "Şiga Toksini-Aracılı Hemolitik Üremik Sendrom (HUS)"
+   "Trombotik Mikroanjiyopatiler (TMA)"
   ],
-  "charCount": 15467,
-  "readingTimeMinutes": 10
+  "charCount": 27100,
+  "readingTimeMinutes": 19
  },
  {
   "id": "k1-42-tubulointerstisyel-hastaliklar",
@@ -848,14 +860,14 @@
    "Öğrenim Hedefleri",
    "Tübülointerstisyel Hastalıklar – Genel Çerçeve",
    "Akut Piyelonefrit",
+   "Papiller Nekroz – Özel Bir Akut Piyelonefrit Formu",
    "Kronik Piyelonefrit",
    "Tubulointerstisyel Nefrit (TIN)",
    "Akut Tubüler Hasar (ATI)",
-   "Tübülointerstisyel Hastalıkların Klinik Önemi",
-   "Genel Özet"
+   "Tübülointerstisyel Hastalıkların Klinik Önemi"
   ],
-  "charCount": 14600,
-  "readingTimeMinutes": 10
+  "charCount": 22185,
+  "readingTimeMinutes": 16
  },
  {
   "id": "k1-43-uriner-sistemin-spesifik-enfeksiyonlari",
@@ -883,20 +895,20 @@
   "committeeId": "donem3-kurul1",
   "discipline": "Tıbbi Patoloji",
   "title": "Vasküler ve Kistik Böbrek Hastalıkları",
-  "instructor": "Prof. Dr. Hikmet Keleş",
+  "instructor": "Prof. Dr. Hikmet KELEŞ",
   "fileName": "44_vaskuler_ve_kistik_bobrek_hastaliklari.md",
   "keyPoints": [
    "Öğrenim Hedefleri",
-   "Hipertansif Böbrek Hastalığı",
-   "Trombotik Mikroanjiyopati (TMA)",
+   "Dersin Çerçevesi",
+   "Hipertansif Böbrek Hastalığı – Hatırlatma",
+   "Benign Nefroskleroz",
+   "Malign Nefroskleroz",
+   "Trombotik Mikroanjiyopati (TMA) – Böbrek Üzerindeki Etki",
    "Kronik Böbrek Hastalığı ve Son Dönem Böbrek",
-   "Kistik Böbrek Hastalıkları - Genel Bakış",
-   "Basit Kistler",
-   "Edinilmiş Kistik Böbrek Hastalığı",
-   "Otozomal Dominant (Yetişkin) Polikistik Böbrek Hastalığı (ADPKD)"
+   "Kistik Böbrek Hastalıkları – Genel Bakış"
   ],
-  "charCount": 17551,
-  "readingTimeMinutes": 12
+  "charCount": 33818,
+  "readingTimeMinutes": 25
  },
  {
   "id": "k1-45-bobrek-tumorleri",
@@ -908,16 +920,16 @@
   "fileName": "45_bobrek_tumorleri.md",
   "keyPoints": [
    "Öğrenim Hedefleri",
-   "İdrar Yolu Neoplazmlarına Giriş",
-   "Böbrek ve Alt İdrar Yolu Tümör Sıklığı",
-   "Renal Hücreli Karsinom: Genel Bilgiler",
-   "Renal Hücreli Karsinom: Risk Faktörleri",
-   "Moleküler Sınıflama",
-   "Berrak Hücreli Karsinom",
-   "Papiller Böbrek Hücreli Karsinom"
+   "İdrar Yolu Neoplazmlarına Giriş ve Tümör Sıklığı",
+   "Renal Hücreli Karsinom: Genel Bilgiler, Epidemiyoloji ve Risk Faktörleri",
+   "Renal Hücreli Karsinomun Moleküler Sınıflaması",
+   "Berrak Hücreli Karsinom: Tanım ve VHL Geni",
+   "Von Hippel–Lindau Hastalığı",
+   "İki Vuruş Hipotezi ve Sporadik Berrak Hücreli Karsinom",
+   "VHL Proteini, HIF, VEGF, MYC ve Epigenetik Değişiklikler"
   ],
-  "charCount": 12065,
-  "readingTimeMinutes": 9
+  "charCount": 28230,
+  "readingTimeMinutes": 21
  },
  {
   "id": "k1-46-mesane-hastaliklari-ve-tumorleri",
@@ -925,20 +937,20 @@
   "committeeId": "donem3-kurul1",
   "discipline": "Tıbbi Patoloji",
   "title": "Mesane Hastalıkları ve Tümörleri",
-  "instructor": "Prof. Dr. Hikmet Keleş",
+  "instructor": "Prof. Dr. Hikmet KELEŞ",
   "fileName": "46_mesane_hastaliklari_ve_tumorleri.md",
   "keyPoints": [
    "Öğrenim Hedefleri",
-   "Alt İdrar Yolu: Ürotelyum",
+   "Dersin Hedefi, İçeriği ve Alt İdrar Yolunun Yapısı",
    "Üreter Bozuklukları",
    "Mesane Divertikülleri",
    "Sistit",
-   "Kronik İrritasyon, Metaplazi ve Skuamöz Hücreli Karsinom",
+   "Kronik İrritasyon, Skuamöz Metaplazi ve Skuamöz Hücreli Karsinom",
    "Ürotelyal Karsinom",
    "Cinsel Yolla Bulaşan Enfeksiyonlar: Giriş"
   ],
-  "charCount": 16514,
-  "readingTimeMinutes": 12
+  "charCount": 36270,
+  "readingTimeMinutes": 26
  },
  {
   "id": "k1-47-bagisikligi-baskili-hastalarda-enfeksiyon",
@@ -967,20 +979,20 @@
   "committeeId": "donem3-kurul1",
   "discipline": "Tıbbi Patoloji",
   "title": "Vulva, Vajen ve Serviks Hastalıkları",
-  "instructor": "Prof. Dr. Hikmet Keleş",
+  "instructor": "Prof. Dr. Hikmet KELEŞ",
   "fileName": "48_vulva_vajen_ve_serviks_hastaliklari.md",
   "keyPoints": [
    "Öğrenim Hedefleri",
-   "Vulvanın Tanımı, İçeriği ve Klinik Önemi",
-   "Vulvit: Tanım ve Nedenler",
-   "Vulvit: Enfeksiyöz Nedenler ve Etkenler",
-   "Vulvit: Bartholin Bezi Komplikasyonları",
+   "Vulva: Tanım, İçerik ve Klinik Önem",
+   "Vulvit",
    "Vulvada Non-Neoplastik Epitel Bozuklukları",
    "Vulvada Tümörler: Kondilomlar",
-   "Vulvar Karsinom"
+   "Vulva Karsinomu",
+   "Ekstramammary Paget Hastalığı",
+   "Vajina: Genel Özellikler ve Non-Neoplastik Hastalıklar"
   ],
-  "charCount": 16512,
-  "readingTimeMinutes": 12
+  "charCount": 26202,
+  "readingTimeMinutes": 20
  },
  {
   "id": "k1-49-invaziv-serviks-kanseri-ve-endometriyozis",
@@ -988,20 +1000,20 @@
   "committeeId": "donem3-kurul1",
   "discipline": "Tıbbi Patoloji",
   "title": "İnvaziv Serviks Kanseri ve Endometriyozis",
-  "instructor": "Prof. Dr. Hikmet Keleş",
+  "instructor": "Prof. Dr. Hikmet KELEŞ",
   "fileName": "49_invaziv_serviks_kanseri_ve_endometriyozis.md",
   "keyPoints": [
    "Öğrenim Hedefleri",
    "Servisit",
    "Endoservikal Polip",
-   "Serviks Neoplazisi ve Transformasyon Bölgesi",
+   "Serviks Epiteli, Skuamo-kolumnar Bileşke ve Transformasyon Bölgesi",
    "HPV ve Servikal Karsinogenez",
-   "Skuamöz İntraepitelyal Lezyon (SIL) / CIN",
-   "Pap Testi ve HPV Taraması",
-   "HPV Aşılaması"
+   "HPV Onkoproteinleri: E6 ve E7",
+   "Yüksek ve Düşük Riskli HPV Tipleri",
+   "Skuamöz İntraepitelyal Lezyon (SIL) / Servikal İntraepiteliyal Neoplazi (CIN)"
   ],
-  "charCount": 14779,
-  "readingTimeMinutes": 11
+  "charCount": 30262,
+  "readingTimeMinutes": 23
  },
  {
   "id": "k1-50-sifilis",
@@ -1072,20 +1084,20 @@
   "committeeId": "donem3-kurul1",
   "discipline": "Tıbbi Patoloji",
   "title": "Endometriyal Hiperplazi ve Kanserleri",
-  "instructor": "Prof. Dr. Hikmet Keleş",
+  "instructor": "Prof. Dr. Hikmet KELEŞ",
   "fileName": "53_endometriyal_hiperplazi_ve_kanserleri.md",
   "keyPoints": [
    "Öğrenim Hedefleri",
-   "Menstrual Siklus ve Hormonal Düzenleme",
-   "Endometriumun Histolojisi ve Siklus Fazları",
-   "Hormonal Etkiler ve Metaplastik Değişiklikler",
-   "Anormal Uterin Kanamalar",
-   "Düzensiz Proliferatif Endometrium",
-   "Endometrial Polip",
-   "Endometrial Hiperplazi"
+   "Uterus Korpusu: Genel Bakış ve Dersin İçeriği",
+   "Endometrit",
+   "Adenomyoz",
+   "Endometriozis",
+   "Endometriozis: Patogenez ve Biyoloji",
+   "Endometriozis: Morfoloji, Tanı ve Klinik",
+   "Anormal Uterin Kanama"
   ],
-  "charCount": 29549,
-  "readingTimeMinutes": 21
+  "charCount": 36229,
+  "readingTimeMinutes": 26
  },
  {
   "id": "k1-54-uterus-duz-kas-ve-trofoblastik-tumorleri",
@@ -1097,16 +1109,16 @@
   "fileName": "54_uterus_duz_kas_ve_trofoblastik_tumorleri.md",
   "keyPoints": [
    "Öğrenim Hedefleri",
-   "Leiomyom (Myometriumun Düz Kas Tümörü)",
+   "Uterus Leiomyomu: Genel Özellikler, Hormonal Etki ve Genetik",
+   "Leiomyom: Morfoloji, Yerleşim ve Klinik",
    "Leiomyosarkom",
-   "Gestasyonel Trofoblastik Hastalıklar (Genel)",
-   "Mol Hidatiform",
-   "İnvaziv Mol",
-   "Koryokarsinom",
-   "Plasenta Anatomisi"
+   "Gebelik Trofoblastik Hastalıkları: Genel",
+   "Hidatiform Mol",
+   "Tam ve Kısmi Mol: Temel Farklar ve Genetik Köken",
+   "Tam ve Kısmi Mol: Klinik, Morfoloji, Tedavi ve İzlem"
   ],
-  "charCount": 17991,
-  "readingTimeMinutes": 13
+  "charCount": 23928,
+  "readingTimeMinutes": 18
  },
  {
   "id": "k1-55-over-tumorleri",
@@ -1139,16 +1151,16 @@
   "fileName": "56_memenin_benign_hastaliklari.md",
   "keyPoints": [
    "Öğrenim Hedefleri",
-   "Meme Hastalıklarının Klinik Yüzü",
+   "Meme Hastalıklarının Başlıca Semptomları ve Genel Kurallar",
+   "Semptomlar Tek Tek: Ağrı, Akıntı, Nodülerlik, Kitle",
    "İnflamatuvar Süreçler",
    "Mamografik Tarama",
+   "Jinekomasti (Erkekte Meme Büyümesi)",
    "Stromal Neoplazmalar",
-   "İyi Huylu Epitel Lezyonları ve Kanser Riski",
-   "Meme Karsinomu: Alt Tipler ve Epidemiyoloji",
-   "Patogenez ve Genetik"
+   "İyi Huylu Epitel Lezyonları ve Kanser Riski"
   ],
-  "charCount": 18665,
-  "readingTimeMinutes": 14
+  "charCount": 21478,
+  "readingTimeMinutes": 16
  },
  {
   "id": "k1-57-intrauterin-enfeksiyonlar",
@@ -1260,20 +1272,20 @@
   "committeeId": "donem3-kurul1",
   "discipline": "Enfeksiyon Hastalıkları",
   "title": "Üretral Akıntı",
-  "instructor": "Uz. Dr. Merve Kaçar",
+  "instructor": "Dr. Merve Kaçar",
   "fileName": "62_uretral_akinti.md",
   "keyPoints": [
    "Öğrenim Hedefleri",
-   "CYBE/GSE Semptomları ve Normal Üretra Florası",
-   "Sendromik Yaklaşım",
-   "Üretrit: Tanım ve Etiyoloji",
+   "Üretrit: Tanım, Etkenler ve Üretra Florası",
+   "CYBE'de Tutulum Bölgeleri ve Sendromik Yaklaşım",
+   "Üretral Akıntının Etiyolojisi",
+   "Klinik Değerlendirme: Cinsel Öykü ve Muayene",
+   "Üretrit Tanısı: Ölçütler ve Mikroskopi",
    "Gonore (Gonokoksik Üretrit)",
-   "Nongonokoksik Üretrit (NGU)",
-   "Tedavi",
-   "GU - NGU Ayrımı"
+   "Gonore Tanısı"
   ],
-  "charCount": 15138,
-  "readingTimeMinutes": 11
+  "charCount": 30090,
+  "readingTimeMinutes": 23
  },
  {
   "id": "k1-63-turkiye-de-saglik-hizmetleri",
@@ -1327,16 +1339,16 @@
   "fileName": "65_meme_kanseri_ve_molekuler_tipleri.md",
   "keyPoints": [
    "Öğrenim Hedefleri",
-   "Epidemiyoloji ve Risk Faktörleri",
-   "Risk Faktörleri ve Göreceli Risk",
-   "Patogenez",
-   "Moleküler Alt Tipler",
-   "Morfoloji ve Sınıflandırma",
-   "Noninvaziv (in situ) Karsinomlar",
-   "İnvaziv Karsinomlar"
+   "Meme Karsinomu: Epidemiyoloji",
+   "Temel Alt Gruplar: ER, PR ve HER2",
+   "Üç Biyolojik Tipin Karşılaştırması (Tablo 17.7)",
+   "Yaş, Irk ve Etnisite",
+   "Risk Faktörleri (Tablo 17.8)",
+   "Meme Karsinogenezi: Genel İlkeler ve Moleküler Yollar",
+   "İn Situ Karsinom (Şekil 17.29)"
   ],
-  "charCount": 22644,
-  "readingTimeMinutes": 16
+  "charCount": 27549,
+  "readingTimeMinutes": 21
  },
  {
   "id": "k1-66-erkek-genital-sistem-ve-prostat-hastaliklari",
@@ -1375,6 +1387,27 @@
   ],
   "charCount": 13631,
   "readingTimeMinutes": 10
+ },
+ {
+  "id": "k1-68-enfeksiyon-hastaliklarinin-epidemiyolojisi",
+  "kurul": 1,
+  "committeeId": "donem3-kurul1",
+  "discipline": "Halk Sağlığı",
+  "title": "Enfeksiyon Hastalıklarının Epidemiyolojisi",
+  "instructor": null,
+  "fileName": "68_enfeksiyon_hastaliklarinin_epidemiyolojisi.md",
+  "keyPoints": [
+   "Öğrenim Hedefleri",
+   "Enfeksiyon Hastalıklarının Önemi",
+   "Temel Tanımlar",
+   "Dezenfeksiyon, Sterilizasyon ve İlgili İşlemler",
+   "Bulaşma (Enfeksiyon) Zinciri",
+   "Kaynak ve Çıkış Yolları",
+   "Bulaşma Yolları",
+   "Yeni Konakçı ve Zinciri Kırma"
+  ],
+  "charCount": 17185,
+  "readingTimeMinutes": 12
  },
  {
   "id": "sum-k2-peri_yodi_k_muayeneler_md",

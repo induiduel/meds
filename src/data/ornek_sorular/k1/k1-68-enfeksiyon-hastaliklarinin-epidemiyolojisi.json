@@ -1,0 +1,1078 @@
+{
+ "id": "k1-68-enfeksiyon-hastaliklarinin-epidemiyolojisi",
+ "sira": 68,
+ "kurul": 1,
+ "ders": "Halk Sağlığı",
+ "konu": "Enfeksiyon Hastalıklarının Epidemiyolojisi",
+ "ogretim_uyesi": null,
+ "tarih": "2026-09-23",
+ "kazanimlar": [
+  {
+   "no": 1,
+   "metin": "Enfeksiyon hastalıklarının halk sağlığı açısından önemini ve enfeksiyon, enfestasyon, konak, kaynak, portör, inkübasyon periyodu, kontaminasyon, bakteriyemi ve sepsis kavramlarını açıklar.",
+   "sorular": [
+    {
+     "id": "k1-68-enfeksiyon-hastaliklarinin-epidemiyolojisi-q01",
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "Bulaşıcı hastalık epidemiyolojisinde 'enfeksiyon etkeninin yerleştiği makroorganizma' hangi terimle ifade edilir?",
+     "secenekler": {
+      "A": "Kaynak (rezervuar)",
+      "B": "Konak (konakçı)",
+      "C": "Vektör",
+      "D": "Portör",
+      "E": "Ara konak"
+     },
+     "dogru": "B",
+     "aciklama": "Konak, enfeksiyon etkeninin yerleştiği makroorganizmadır (s. 10).",
+     "sik_aciklamalari": {
+      "A": "Yanlış. Kaynak, etkenin üreyip çoğaldığı canlı ve cansız ortamdır; cansız da olabilir (s. 12).",
+      "B": "Doğru. Konak, enfeksiyon etkeninin yerleştiği makroorganizma olarak tanımlanır (s. 10).",
+      "C": "Yanlış. Vektör, bulaşmada rol oynayan eklem bacaklıdır; yerleşim yeri tanımı değildir (s. 41).",
+      "D": "Yanlış. Portör, etkeni taşıyıp bulaştıran ama belirti göstermeyen kişidir (s. 13).",
+      "E": "Yanlış. Ara konak yalnız parazitin erişkin dışı formlarının yaşadığı canlıdır; genel tanım değildir (s. 11)."
+     },
+     "bilgi": [
+      10,
+      11,
+      12
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 10,
+      "alinti": "Enfeksiyon etkeninin yerleştiği makroorganizmadır"
+     }
+    },
+    {
+     "id": "k1-68-enfeksiyon-hastaliklarinin-epidemiyolojisi-q02",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Bir kişinin hepatit B virüsü ile enfekte olup hiçbir belirti göstermeden etkeni ömür boyu taşıması aşağıdaki ifadelerden hangisini en iyi destekler?",
+     "secenekler": {
+      "A": "Her enfeksiyon hastalığı bir enfeksiyon olmadan da gelişebilir",
+      "B": "Her enfeksiyonun sonucunda bir enfeksiyon hastalığı meydana gelmesi gerekmez",
+      "C": "Hepatit B bir enfestasyon örneğidir",
+      "D": "Belirtisiz kişiler hiçbir zaman bulaştırıcı değildir",
+      "E": "Hepatit B kaynağı toprak olan bir hastalıktır"
+     },
+     "dogru": "B",
+     "aciklama": "Derste her enfeksiyonun klinik tabloya dönüşmediği hepatit B örneğiyle açıklanır (s. 7).",
+     "sik_aciklamalari": {
+      "A": "Yanlış. Enfeksiyon hastalığından söz etmek için önce enfeksiyon bulunmalıdır (s. 7).",
+      "B": "Doğru. Etken yerleşip çoğalmış (enfeksiyon), ancak klinik tablo oluşmamıştır (s. 7).",
+      "C": "Yanlış. Enfestasyon helmint ve ektoparazit gibi makroparazitlerin yerleşimidir; virüs mikroorganizmadır (s. 8).",
+      "D": "Yanlış. Portörler belirti göstermeden bulaştırabilir; hepatit B kronik portörlük örneğidir (s. 13, 15).",
+      "E": "Yanlış. Derste kaynağı toprak olarak kabul edilen hastalık tetanozdur (s. 29)."
+     },
+     "bilgi": [
+      5,
+      6,
+      7
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 6,
+      "alinti": "Bir patojen mikroorganizmanın, daha büyük bir organizmaya (konak) girip yerleşmesi ve üreyip çoğalmasıdır"
+     }
+    },
+    {
+     "id": "k1-68-enfeksiyon-hastaliklarinin-epidemiyolojisi-q03",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Bulaşıcı hastalık epidemiyolojisine ait aşağıdaki tanımlardan hangisi YANLIŞTIR?",
+     "secenekler": {
+      "A": "Portör: Etkeni taşıyıp bulaştırabildiği hâlde belirti göstermeyen kişidir",
+      "B": "İnkübasyon periyodu: Etkenin alınmasından belirtilerin ortaya çıkışına kadar geçen süredir",
+      "C": "Kontaminasyon: Ortamların ve canlı yüzeylerinin mikroorganizmalarla kirlenmesidir",
+      "D": "Sepsis: Bakterilerin kanda yalnızca bulunma durumudur",
+      "E": "Konvalesan dönem portörlüğü: Hastalık iyileştikten sonra bir süre daha bulaştırıcılığın sürmesidir"
+     },
+     "dogru": "D",
+     "aciklama": "Bakterilerin kanda bulunması bakteriyemidir; sepsis mikroorganizmaların kanda çoğalmasıdır (s. 18–19).",
+     "sik_aciklamalari": {
+      "A": "Yanlış seçenek; ifade doğrudur: portör etkeni taşıyıp bulaştırır, belirti göstermez (s. 13).",
+      "B": "Yanlış seçenek; ifade doğrudur: kuluçka süresi etkenin alınmasından belirtilere kadar geçen süredir (s. 17).",
+      "C": "Yanlış seçenek; ifade doğrudur: kontaminasyon ortam ve canlı yüzeylerin kirlenmesidir (s. 18).",
+      "D": "Doğru cevap. Kanda bulunma bakteriyemidir; sepsis kanda çoğalmadır ve genellikle ağır tablo yapar (s. 18–19).",
+      "E": "Yanlış seçenek; ifade doğrudur: iyileşme sonrası bulaştırıcılık konvalesan dönem portörlüğüdür (s. 14)."
+     },
+     "bilgi": [
+      15,
+      16,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26
+     ],
+     "benzer_cikmis": [
+      "k1-2021-2022-q025"
+     ],
+     "kanit": {
+      "sayfa": 13,
+      "alinti": "kendisi hastalık belirtisi göstermeyen kişilerdir"
+     }
+    },
+    {
+     "id": "k1-68-enfeksiyon-hastaliklarinin-epidemiyolojisi-q04",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "Bir hastalığın kontrolünde yalnızca belirti gösteren hastaların tedavi edildiği bir programın, derste anlatılan bilgilere göre yetersiz kalmasının en önemli nedeni hangisidir?",
+     "secenekler": {
+      "A": "Hastaların tedavisi kaynağı ortadan kaldırmaz",
+      "B": "Portörler tanınmadığı için kontrol, tedavi ve korunma önlemlerinin dışında kalır ve bulaşmayı sürdürür",
+      "C": "Kuluçka süresi bütün vakalarda aynıdır",
+      "D": "Hastalar hiçbir zaman bulaştırıcı değildir",
+      "E": "Enfeksiyon hastalıklarının kaynağı her zaman topraktır"
+     },
+     "dogru": "B",
+     "aciklama": "Portörler hastalardan daha önemli olabilir; çünkü hastaların kontrolü, tedavisi ve onlardan korunma daha kolaydır (s. 16).",
+     "sik_aciklamalari": {
+      "A": "Yanlış. Hastaların tedavisi kaynağa yönelik bir müdahaledir; sorun portörlerin gözden kaçmasıdır (s. 16, 44).",
+      "B": "Doğru. Belirti göstermeyen portörler tanınmaz; hastalığı fark edilmeden yayar (s. 16).",
+      "C": "Yanlış. Kuluçka süresi aynı hastalıkta vakalar arasında da farklıdır (s. 17).",
+      "D": "Yanlış. Hastalar da bulaştırabilir; fark kontrol edilebilirliktedir (s. 16).",
+      "E": "Yanlış. Hastalıkların çoğunluğunda kaynak insandır; toprak tetanoz için kabul edilir (s. 29)."
+     },
+     "bilgi": [
+      15,
+      16,
+      18,
+      19,
+      20
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 13,
+      "alinti": "kendisi hastalık belirtisi göstermeyen kişilerdir"
+     }
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "k1-2021-2022-q025",
+     "soru": "Aşağıdaki bulaşıcı hastalık epidemiyolojisine ait terimlerden hangisinin tanımı yanlıştır?",
+     "secenekler": {
+      "A": "Konak (konakçı): Enfeksiyon etkeninin yerleştiği makroorganizmadır.",
+      "B": "Portör: Hastalık etkenini taşıyıp başka konakçılara bulaştırabildiği hâlde kendisi hastalık belirtisi göstermeyen kişidir.",
+      "C": "İnkübasyon periyodu (kuluçka süresi): Enfeksiyon etkeninin konakçı tarafından alınmasından hastalık belirtilerinin ortaya çıkışına kadar geçen süredir.",
+      "D": "Dezenfeksiyon: Cansız ortamların sporlar dâhil bütün patojen mikroorganizmalardan temizlenme işlemidir.",
+      "E": "Pastörizasyon: Çeşitli ortamlardaki mikroorganizma yoğunluğunu azaltmak için hızlı ısıtma ve soğutmaya dayalı bir işlemdir."
+     },
+     "cevap": "D"
+    }
+   ]
+  },
+  {
+   "no": 2,
+   "metin": "Dezenfeksiyon, sterilizasyon, pastörizasyon, tindalizasyon, asepsi ve antisepsi kavramlarını ayırt eder.",
+   "sorular": [
+    {
+     "id": "k1-68-enfeksiyon-hastaliklarinin-epidemiyolojisi-q05",
+     "kazanim": 2,
+     "zorluk": "kolay",
+     "soru": "Ortamların sporlar dâhil bütün mikroorganizmalardan arındırılması işlemi hangisidir?",
+     "secenekler": {
+      "A": "Dezenfeksiyon",
+      "B": "Sterilizasyon",
+      "C": "Pastörizasyon",
+      "D": "Antisepsi",
+      "E": "Asepsi"
+     },
+     "dogru": "B",
+     "aciklama": "Sterilizasyon sporlar dâhil bütün mikroorganizmalardan arındırmadır (s. 20).",
+     "sik_aciklamalari": {
+      "A": "Yanlış. Dezenfeksiyon cansız ortamların yalnız patojenlerden temizlenmesidir (s. 19).",
+      "B": "Doğru. Sterilizasyonun tanımıdır ve daha etkili yöntem gerektirir (s. 20).",
+      "C": "Yanlış. Pastörizasyon yalnız mikroorganizma yoğunluğunu azaltır; tam sterilizasyon beklenmez (s. 21).",
+      "D": "Yanlış. Antisepsi vücut yüzeyi ve lezyonlardaki patojenlerin yok edilmesidir (s. 23).",
+      "E": "Yanlış. Asepsi kirlenmeyi önleyen çalışma koşuludur (s. 23)."
+     },
+     "bilgi": [
+      27,
+      28
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 20,
+      "alinti": "Ortamların, sporlar dahil bütün mikroorganizmalardan arındırılması"
+     }
+    },
+    {
+     "id": "k1-68-enfeksiyon-hastaliklarinin-epidemiyolojisi-q06",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Bulaşıcı hastalık epidemiyolojisine ait aşağıdaki terim tanımlarından hangisi YANLIŞTIR?",
+     "secenekler": {
+      "A": "Konak: Enfeksiyon etkeninin yerleştiği makroorganizmadır",
+      "B": "Portör: Etkeni taşıyıp bulaştırabildiği hâlde belirti göstermeyen kişidir",
+      "C": "Dezenfeksiyon: Cansız ortamların sporlar dâhil bütün mikroorganizmalardan arındırılmasıdır",
+      "D": "Pastörizasyon: Mikroorganizma yoğunluğunu azaltmak için hızlı ısıtma ve hızlı soğutmaya dayalı işlemdir",
+      "E": "Antisepsi: Vücut yüzeyi ve lezyonlardaki patojen mikroorganizmaların yok edilmesidir"
+     },
+     "dogru": "C",
+     "aciklama": "Dezenfeksiyon cansız ortamların patojen mikroorganizmalardan temizlenmesidir; sporları kapsayan tanım sterilizasyondur (s. 19–20).",
+     "sik_aciklamalari": {
+      "A": "Yanlış seçenek; ifade doğrudur: konak etkenin yerleştiği makroorganizmadır (s. 10).",
+      "B": "Yanlış seçenek; ifade doğrudur: portör belirti göstermeden bulaştırır (s. 13).",
+      "C": "Doğru cevap. 'Sporlar dâhil bütün' ifadesi sterilizasyona aittir; dezenfeksiyon yalnız patojenleri hedefler (s. 19–20).",
+      "D": "Yanlış seçenek; ifade doğrudur: pastörizasyon hızlı ısıtma ve soğutmaya dayanır (s. 21).",
+      "E": "Yanlış seçenek; ifade doğrudur: antisepsi vücut yüzeyi ve lezyonlarda uygulanır (s. 23)."
+     },
+     "bilgi": [
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      33,
+      34
+     ],
+     "benzer_cikmis": [
+      "k1-2021-2022-q025",
+      "past-1790877034961-168421"
+     ],
+     "kanit": {
+      "sayfa": 19,
+      "alinti": "Mikroorganizmaların kanda çoğalma durumunu ifade eder"
+     }
+    },
+    {
+     "id": "k1-68-enfeksiyon-hastaliklarinin-epidemiyolojisi-q07",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Süt gibi ısıya duyarlı bir sıvıya uygulanan pastörizasyon için hangisi doğrudur?",
+     "secenekler": {
+      "A": "Sıvı 55–100 °C'de yarım saat bekletilip işlem üç gün tekrarlanır",
+      "B": "Sıvı 63 °C'de 30 dakika ya da 72 °C'de 15 saniye tutulup hızla 10 °C'ye soğutulur",
+      "C": "İşlem sonunda sporlar dâhil bütün mikroorganizmalar yok edilir",
+      "D": "Yalnız kimyasal yöntemlerle uygulanır",
+      "E": "Vücut yüzeyindeki patojenleri yok etmek için kullanılır"
+     },
+     "dogru": "B",
+     "aciklama": "Pastörizasyonda 63 °C/30 dk ya da 72 °C/15 sn uygulanır, ardından hızla 10 °C'ye inilir (s. 21).",
+     "sik_aciklamalari": {
+      "A": "Yanlış. Bu tindalizasyonun uygulamasıdır (s. 22).",
+      "B": "Doğru. Derste verilen sıcaklık–süre değerleridir (s. 21).",
+      "C": "Yanlış. Pastörizasyonda tam sterilizasyon beklenmez (s. 21).",
+      "D": "Yanlış. Pastörizasyon ısıtma–soğutmaya dayalı fiziksel bir işlemdir (s. 21).",
+      "E": "Yanlış. Bu antisepsinin tanımıdır (s. 23)."
+     },
+     "bilgi": [
+      29,
+      30,
+      31,
+      32
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 21,
+      "alinti": "hızlı ısıtma ve hızlı soğutmaya dayalı bir işlemdir"
+     }
+    },
+    {
+     "id": "k1-68-enfeksiyon-hastaliklarinin-epidemiyolojisi-q08",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "100 °C'nin üzerinde bozulan bir sıvının sterilizasyonu gerekiyor. Aşağıdaki yaklaşımlardan hangisi derste anlatılan bilgilere göre en uygundur?",
+     "secenekler": {
+      "A": "72 °C'de 15 saniye tutup hızla 10 °C'ye soğutmak",
+      "B": "Sıvıyı 55–100 °C arasında yarım saat bekletip oda sıcaklığına düşürmek ve bunu üst üste en az üç gün tekrarlamak",
+      "C": "Sıvıya antisepsi uygulamak",
+      "D": "Sıvıyı yalnız asepsi koşullarında saklamak",
+      "E": "Sıvıyı bir kez 63 °C'de 30 dakika tutmak"
+     },
+     "dogru": "B",
+     "aciklama": "Tindalizasyon 100 °C üstünde zarar görebilecek sıvılar için uygulanan bir sterilizasyon yöntemidir (s. 22).",
+     "sik_aciklamalari": {
+      "A": "Yanlış. Bu pastörizasyondur ve sterilizasyon sağlamaz (s. 21).",
+      "B": "Doğru. Tindalizasyonun uygulama biçimidir ve sterilizasyon yöntemidir (s. 22).",
+      "C": "Yanlış. Antisepsi vücut yüzeyi ve lezyonlara uygulanır (s. 23).",
+      "D": "Yanlış. Asepsi kirlenmeyi önler, var olan mikroorganizmaları yok etmez (s. 23).",
+      "E": "Yanlış. Tek seferlik 63 °C/30 dk pastörizasyondur; sterilizasyon sağlamaz (s. 21)."
+     },
+     "bilgi": [
+      29,
+      30,
+      31,
+      32,
+      33,
+      34
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 21,
+      "alinti": "hızlı ısıtma ve hızlı soğutmaya dayalı bir işlemdir"
+     }
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "k1-2021-2022-q025",
+     "soru": "Aşağıdaki bulaşıcı hastalık epidemiyolojisine ait terimlerden hangisinin tanımı yanlıştır?",
+     "secenekler": {
+      "A": "Konak (konakçı): Enfeksiyon etkeninin yerleştiği makroorganizmadır.",
+      "B": "Portör: Hastalık etkenini taşıyıp başka konakçılara bulaştırabildiği hâlde kendisi hastalık belirtisi göstermeyen kişidir.",
+      "C": "İnkübasyon periyodu (kuluçka süresi): Enfeksiyon etkeninin konakçı tarafından alınmasından hastalık belirtilerinin ortaya çıkışına kadar geçen süredir.",
+      "D": "Dezenfeksiyon: Cansız ortamların sporlar dâhil bütün patojen mikroorganizmalardan temizlenme işlemidir.",
+      "E": "Pastörizasyon: Çeşitli ortamlardaki mikroorganizma yoğunluğunu azaltmak için hızlı ısıtma ve soğutmaya dayalı bir işlemdir."
+     },
+     "cevap": "D"
+    },
+    {
+     "id": "past-1790877034961-168421",
+     "soru": "Bulaşıcı hastalık epidemiyolojisine ait aşağıdaki terim tanımlarından hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Konak (konakçı): Enfeksiyon etkeninin yerleştiği makroorganizmadır.",
+      "B": "Portör: Hastalık etkenini taşıyıp başka konakçılara bulaştırabildiği hâlde kendisi hastalık belirtisi göstermeyen kişidir.",
+      "C": "İnkübasyon periyodu (kuluçka süresi): Enfeksiyon etkeninin konakçı tarafından alınmasından hastalık belirtilerinin ortaya çıkışına kadar geçen süredir.",
+      "D": "Dezenfeksiyon: Cansız ortamların sporlar dahil bütün patojen mikroorganizmalardan temizlenme işlemidir.",
+      "E": "Pastörizasyon: Çeşitli ortamlardaki mikroorganizma yoğunluğunu azaltmak için hızlı ısıtma ve soğutmaya dayalı bir işlemdir."
+     },
+     "cevap": "D"
+    }
+   ]
+  },
+  {
+   "no": 3,
+   "metin": "Enfeksiyon zincirinin halkalarını, zincirin döngüsel yapısını ve kırılma ilkelerini açıklar.",
+   "sorular": [
+    {
+     "id": "k1-68-enfeksiyon-hastaliklarinin-epidemiyolojisi-q09",
+     "kazanim": 3,
+     "zorluk": "kolay",
+     "soru": "Enfeksiyon zincirinin halkaları aşağıdakilerin hangisinde doğru verilmiştir?",
+     "secenekler": {
+      "A": "Kaynak – bulaşma yolu – yeni konakçı",
+      "B": "Konak – ana konak – ara konak",
+      "C": "Portör – hasta – kuluçka süresi",
+      "D": "Dezenfeksiyon – sterilizasyon – antisepsi",
+      "E": "Patojenite – virulans – enfektivite"
+     },
+     "dogru": "A",
+     "aciklama": "Enfeksiyon zinciri kaynak, bulaşma yolu ve yeni konakçılardan oluşur (s. 24).",
+     "sik_aciklamalari": {
+      "A": "Doğru. Derste zincirin üç halkası olarak verilir (s. 24).",
+      "B": "Yanlış. Bunlar konak türleridir (s. 10–11).",
+      "C": "Yanlış. Bunlar zincirin halkaları değil, enfeksiyonun seyri ve taşıyıcılıkla ilgili kavramlardır (s. 13, 17).",
+      "D": "Yanlış. Bunlar mikroorganizmalarla mücadele yöntemleridir (s. 19–23).",
+      "E": "Yanlış. Bunlar etkenin epidemiyolojik özellikleridir (s. 48–51)."
+     },
+     "bilgi": [
+      35
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 24,
+      "alinti": "enfeksiyon kaynağı, bulaşma yolu ve yeni konakçılardan oluşan zincire enfeksiyon zinciri"
+     }
+    },
+    {
+     "id": "k1-68-enfeksiyon-hastaliklarinin-epidemiyolojisi-q10",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Derste Şekil 1 olarak verilen enfeksiyon zinciri şemasında yeni konakçıdan kaynağa dönen okun anlamı hangisidir?",
+     "secenekler": {
+      "A": "Yeni konakçının bulaşma yoluna dönüşmesi",
+      "B": "Enfekte olan yeni konakçının bir süre sonra kaynak hâline gelmesi",
+      "C": "Kaynağın yok edilmesi",
+      "D": "Yeni konakçının ara konak olması",
+      "E": "Etkenin konakçıda yok olması"
+     },
+     "dogru": "B",
+     "aciklama": "Zincir döngüseldir; etkeni alan konakçılar bir süre sonra kaynak hâline gelip bulaşmayı sürdürür (s. 26, 28).",
+     "sik_aciklamalari": {
+      "A": "Yanlış. Konakçı kaynağa dönüşür; bulaşma yolu ayrı bir halkadır (s. 24).",
+      "B": "Doğru. Şemadaki dönüş oku konakçının kaynak olmasını gösterir (s. 26, 28).",
+      "C": "Yanlış. Ok bir yok etmeyi değil döngünün sürmesini gösterir (s. 26).",
+      "D": "Yanlış. Ara konak parazit formlarıyla ilgilidir (s. 11).",
+      "E": "Yanlış. Ok etkenin yok olmasını değil, yeni kaynak oluşmasını anlatır (s. 26)."
+     },
+     "bilgi": [
+      37,
+      38,
+      39
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 28,
+      "alinti": "Şekil 1:Enfeksiyon zinciri"
+     }
+    },
+    {
+     "id": "k1-68-enfeksiyon-hastaliklarinin-epidemiyolojisi-q11",
+     "kazanim": 3,
+     "zorluk": "orta",
+     "soru": "Zincirin kırılmasıyla ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Zincirin kırılması için üç halkanın aynı anda kaldırılması gerekir",
+      "B": "Halkalardan birinin ortadan kaldırılması zinciri kırar ve bulaşma sona erer",
+      "C": "Zincir yalnız kaynak ortadan kaldırılarak kırılabilir",
+      "D": "Zincirin halkaları her hastalıkta tamamen aynı özellikleri taşır",
+      "E": "Mücadele edilmezse kaynak sayısı azalır"
+     },
+     "dogru": "B",
+     "aciklama": "Halkalardan birinin ortadan kaldırılması hâlinde zincir kırılır, bulaşma sona erer (s. 26).",
+     "sik_aciklamalari": {
+      "A": "Yanlış. Tek halkanın kaldırılması yeterlidir (s. 26).",
+      "B": "Doğru. Derste verilen temel ilkedir (s. 26).",
+      "C": "Yanlış. Bulaşma yolu ya da yeni konakçı halkası da kırılabilir (s. 44).",
+      "D": "Yanlış. Temel halkalar aynı, özellikleri farklıdır (s. 25).",
+      "E": "Yanlış. Mücadele edilmezse kaynak sayısı giderek artar (s. 27)."
+     },
+     "bilgi": [
+      36,
+      38,
+      39,
+      40,
+      41
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 25,
+      "alinti": "Bütün enfeksiyon hastalıklarında bu zincirin temel halkaları aynı olmakla birlikte"
+     }
+    },
+    {
+     "id": "k1-68-enfeksiyon-hastaliklarinin-epidemiyolojisi-q12",
+     "kazanim": 3,
+     "zorluk": "zor",
+     "soru": "Toplumun hemen tamamının duyarlı olduğu, hastalığı geçirmenin kalıcı bağışıklık bıraktığı ve etkili aşısı bulunan bir hastalıkta, kaynakların tespiti güçtür. Derste anlatılan ilkelere göre en uygun stratejik yaklaşım hangisidir?",
+     "secenekler": {
+      "A": "Yalnız belirti gösteren hastaları tedavi etmek",
+      "B": "Tüm toplumu aşılayarak yeni konakçı halkasını kırmak",
+      "C": "Zincir kırılamayacağı için müdahale etmemek",
+      "D": "Kaynağın toprak olduğunu varsaymak",
+      "E": "Yalnız pastörizasyon uygulamak"
+     },
+     "dogru": "B",
+     "aciklama": "Zincir, kaynakların tedavi/izolasyonu, bulaşma yolunun kaldırılması veya tüm toplumun aşılanmasıyla kırılır; en uygun halka seçilir (s. 27, 43–44).",
+     "sik_aciklamalari": {
+      "A": "Yanlış. Portörler ve kuluçka dönemindekiler gözden kaçar; kaynak tespiti zaten güçtür (s. 16).",
+      "B": "Doğru. Yeterli bağışıklıkta enfeksiyon gelişmez; aşılama yeni konakçı halkasını kırar (s. 43–44).",
+      "C": "Yanlış. Halkalardan biri kırılarak bulaşma durdurulabilir (s. 26).",
+      "D": "Yanlış. Hastalıkların çoğunda kaynak insandır (s. 29).",
+      "E": "Yanlış. Pastörizasyon besinlerde mikroorganizma azaltır; zincir stratejisi değildir (s. 21)."
+     },
+     "bilgi": [
+      40,
+      41,
+      58,
+      59,
+      60
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 27,
+      "alinti": "mücadele edilmemesi durumunda, giderek kaynak sayısı artacaktır"
+     }
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 4,
+   "metin": "Enfeksiyon kaynaklarını, etkenin kaynaktan çıkış yollarını ve doğrudan/dolaylı bulaşma yollarını örnekleriyle sınıflandırır.",
+   "sorular": [
+    {
+     "id": "k1-68-enfeksiyon-hastaliklarinin-epidemiyolojisi-q13",
+     "kazanim": 4,
+     "zorluk": "kolay",
+     "soru": "Derste kaynağı toprak olarak kabul edilen hastalık hangisidir?",
+     "secenekler": {
+      "A": "Kuduz",
+      "B": "Şarbon",
+      "C": "Ruam",
+      "D": "Tetanoz",
+      "E": "Sifiliz"
+     },
+     "dogru": "D",
+     "aciklama": "Tetanozda hastalık kaynağı toprak olarak kabul edilir (s. 29).",
+     "sik_aciklamalari": {
+      "A": "Yanlış. Kuduzun kaynağı omurgalı hayvanlardır (s. 29).",
+      "B": "Yanlış. Şarbonun kaynağı omurgalı hayvanlardır (s. 29).",
+      "C": "Yanlış. Ruamın kaynağı omurgalı hayvanlardır (s. 29).",
+      "D": "Doğru. Derste tetanoz için kaynak toprak olarak verilir (s. 29).",
+      "E": "Yanlış. Sifiliz direkt temasla bulaşan, insan kaynaklı bir hastalıktır (s. 34)."
+     },
+     "bilgi": [
+      42,
+      43,
+      44
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 29,
+      "alinti": "çoğunluğunda enfeksiyon kaynağı insandır"
+     }
+    },
+    {
+     "id": "k1-68-enfeksiyon-hastaliklarinin-epidemiyolojisi-q14",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Aşağıdakilerden hangisi doğrudan bulaşma örneğidir?",
+     "secenekler": {
+      "A": "Kirlenmiş suyla etkenin taşınması",
+      "B": "Ortak kullanılan tarakla bulaşma",
+      "C": "Cinsel temasla gonore bulaşması",
+      "D": "Damlacık çekirdeklerinin hava akımıyla uzağa taşınması",
+      "E": "Etkenin vektörün vücudunda çoğalıp aktarılması"
+     },
+     "dogru": "C",
+     "aciklama": "Direkt temas, cilt veya mukozalar yoluyla aracısız bulaşmadır; gonore örnektir (s. 33–34).",
+     "sik_aciklamalari": {
+      "A": "Yanlış. Su dolaylı bulaşmanın aracısıdır (s. 36).",
+      "B": "Yanlış. Tarak bireysel eşyadır; cansız aracıyla dolaylı bulaşmadır (s. 42).",
+      "C": "Doğru. Cinsel yolla bulaşan hastalıklar direkt temasla bulaşır (s. 34).",
+      "D": "Yanlış. Bu hava yoluyla dolaylı bulaşmadır (s. 38).",
+      "E": "Yanlış. Bu biyolojik vektörlüktür; vektör canlı aracıdır (s. 41)."
+     },
+     "bilgi": [
+      48,
+      49,
+      51
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 33,
+      "alinti": "hiçbir aracı olmadan, kaynaktan çıkıp, yeni konakçıya bulaşmasıdır"
+     }
+    },
+    {
+     "id": "k1-68-enfeksiyon-hastaliklarinin-epidemiyolojisi-q15",
+     "kazanim": 4,
+     "zorluk": "orta",
+     "soru": "Hava yoluyla bulaşmayı direkt damlacıkla bulaşmadan ayıran özellik hangisidir?",
+     "secenekler": {
+      "A": "Damlacıkların öksürük ve hapşırıkla oluşması",
+      "B": "Damlacıkların kaynaktan çıkarken kazandıkları hızla belli bir mesafeye ulaşması",
+      "C": "Suyunu kaybederek hafifleyen damlacık çekirdeklerinin havada asılı kalıp hava hareketleriyle uzaklara taşınması",
+      "D": "Bulaşmanın cilt ve mukoza teması gerektirmesi",
+      "E": "Etkenin ağızdan girmesi"
+     },
+     "dogru": "C",
+     "aciklama": "Hava yolunda damlacık çekirdekleri havada asılı kalır ve uzağa taşınır; direkt damlacıkta havanın aracılığı yoktur (s. 37–38).",
+     "sik_aciklamalari": {
+      "A": "Yanlış. Öksürük ve hapşırık direkt damlacığın tanımında yer alır (s. 35).",
+      "B": "Yanlış. Bu direkt damlacığın özelliğidir (s. 35, 37).",
+      "C": "Doğru. Hava yolunun ayırt edici mekanizmasıdır (s. 38).",
+      "D": "Yanlış. Bu direkt temastır (s. 34).",
+      "E": "Yanlış. Ağızdan giriş fekal–oral yola özgüdür (s. 40)."
+     },
+     "bilgi": [
+      50,
+      52,
+      53
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 35,
+      "alinti": "kaynaktan çıkarken kazandıkları hızla belli bir mesafeye ulaşmaları"
+     }
+    },
+    {
+     "id": "k1-68-enfeksiyon-hastaliklarinin-epidemiyolojisi-q16",
+     "kazanim": 4,
+     "zorluk": "zor",
+     "soru": "Kaynağı anal yolla terk eden bir etkenin yayılımı için aşağıdakilerden hangisi derste anlatılan bilgilerle en uyumludur?",
+     "secenekler": {
+      "A": "Direkt damlacık veya hava yoluyla ulaşıp solunum yoluyla girer",
+      "B": "Su ve besinler ya da el ve eşyalar yardımıyla ulaşıp ağız yoluyla girer",
+      "C": "Yalnız çok yakın cinsel temasla bulaşır",
+      "D": "Etken mekanik vektörün vücudunda çoğalarak taşınır",
+      "E": "Hiçbir aracı olmadan cilt yoluyla girer"
+     },
+     "dogru": "B",
+     "aciklama": "Anal yolla çıkan etkenler su ve besinler ya da el ve eşyalarla yeni konakçıya ulaşır ve ağızdan girer: fekal–oral yol (s. 40).",
+     "sik_aciklamalari": {
+      "A": "Yanlış. Bu solunum yoluyla çıkan etkenlerin yoludur (s. 39).",
+      "B": "Doğru. Fekal–oral yolun tanımıdır (s. 40).",
+      "C": "Yanlış. Yakın temas gereksinimi genital yoldan atılan etkenler için verilir (s. 31).",
+      "D": "Yanlış. Mekanik vektörlükte etken çoğalmaz, dış yüzeyde taşınır (s. 41).",
+      "E": "Yanlış. Fekal–oral yolda aracılar vardır ve giriş ağızdandır (s. 40)."
+     },
+     "bilgi": [
+      54,
+      55,
+      56
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 39,
+      "alinti": "yine solunum yoluyla yeni konakçıya girerler"
+     }
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 5,
+   "metin": "Enfeksiyon etkeninin intrensek ve epidemiyolojik özelliklerini (patojenite, virulans, enfektivite, tropizm, transmisibilite, immünojenite, antibiyotik direnci) ve ölçütlerini açıklar.",
+   "sorular": [
+    {
+     "id": "k1-68-enfeksiyon-hastaliklarinin-epidemiyolojisi-q17",
+     "kazanim": 5,
+     "zorluk": "kolay",
+     "soru": "Bir enfeksiyon etkeninin konakçıda belli organ ve dokulara yönelme özelliğine ne ad verilir?",
+     "secenekler": {
+      "A": "Virulans",
+      "B": "Enfektivite",
+      "C": "Tropizm",
+      "D": "Transmisibilite",
+      "E": "İmmünojenite"
+     },
+     "dogru": "C",
+     "aciklama": "Tropizm, etkenin konakçıda belli organ ve dokulara yönelmesidir (s. 53).",
+     "sik_aciklamalari": {
+      "A": "Yanlış. Virulans ağır hastalık yapabilme özelliğidir (s. 50).",
+      "B": "Yanlış. Enfektivite enfeksiyon oluşturabilme gücüdür (s. 51).",
+      "C": "Doğru. Polio ve kuduz nörotrop, hepatit virüsleri hepatotroptur (s. 53).",
+      "D": "Yanlış. Transmisibilite konakçıdan konakçıya taşınabilmedir (s. 55).",
+      "E": "Yanlış. İmmünojenite immün cevap oluşturabilmedir (s. 57)."
+     },
+     "bilgi": [
+      72
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 53,
+      "alinti": "polio ve kuduz virüsleri sinir sistemine"
+     }
+    },
+    {
+     "id": "k1-68-enfeksiyon-hastaliklarinin-epidemiyolojisi-q18",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Bir etkenle enfekte olduğu kanıtlanan bireyler içinde klinik belirti verenlerin oranı, etkenin hangi özelliğini ölçmek için kullanılır?",
+     "secenekler": {
+      "A": "Patojenite",
+      "B": "Virulans",
+      "C": "Enfektivite",
+      "D": "Transmisibilite",
+      "E": "Antibiyotik direnci"
+     },
+     "dogru": "A",
+     "aciklama": "Patojenlik derecesi, enfekte olanlar içinde klinik belirti verenlerin oranıyla belirlenebilir (s. 49).",
+     "sik_aciklamalari": {
+      "A": "Doğru. Patojenitenin ölçütüdür (s. 49).",
+      "B": "Yanlış. Virulans vaka fatalite hızı ve ağır hastalık oranıyla ölçülür (s. 50).",
+      "C": "Yanlış. Enfektivite enfeksiyona neden olan mikroorganizma sayısıyla ölçülür (s. 51).",
+      "D": "Yanlış. Transmisibilite çıkış yolu ve dış ortama dayanıklılıkla ilişkilidir (s. 56).",
+      "E": "Yanlış. Direnç antibiyotik duyarlılığıyla ilgilidir (s. 59)."
+     },
+     "bilgi": [
+      65,
+      66,
+      67,
+      68
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 48,
+      "alinti": "Enfeksiyon etkeninin hastalık yapabilme özelliğini ifade eder"
+     }
+    },
+    {
+     "id": "k1-68-enfeksiyon-hastaliklarinin-epidemiyolojisi-q19",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Enfektivite ile ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Enfeksiyon için gereken mikroorganizma sayısı arttıkça enfektivite artar",
+      "B": "Vaka fatalite hızıyla ölçülür",
+      "C": "Az sayıda mikroorganizmanın enfeksiyon yapabildiği durumlarda enfektivite daha yüksektir",
+      "D": "Yalnız konakçının özelliklerine bağlıdır",
+      "E": "Konakçıdan bağımsız intrensek bir özelliktir"
+     },
+     "dogru": "C",
+     "aciklama": "Enfektivite enfeksiyona neden olan mikroorganizma sayısıyla ölçülür; az sayıda mikroorganizma yeterliyse enfektivite yüksektir (s. 51).",
+     "sik_aciklamalari": {
+      "A": "Yanlış. İlişki terstir (s. 51).",
+      "B": "Yanlış. Vaka fatalite hızı virulans ölçütüdür (s. 50).",
+      "C": "Doğru. Derste açıkça belirtilir (s. 51).",
+      "D": "Yanlış. Hem mikroorganizmanın intrensek özelliklerine hem konakçıya bağlıdır (s. 52).",
+      "E": "Yanlış. Enfektivite epidemiyolojik bir özelliktir ve konakçıya da bağlıdır (s. 47, 52)."
+     },
+     "bilgi": [
+      69,
+      70,
+      71
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 51,
+      "alinti": "Az sayıda mikroorganizmanın enfeksiyon yapabildiği durumlarda enfektivitenin daha yüksek olduğu söylenebilir"
+     }
+    },
+    {
+     "id": "k1-68-enfeksiyon-hastaliklarinin-epidemiyolojisi-q20",
+     "kazanim": 5,
+     "zorluk": "orta",
+     "soru": "Kızamık, suçiçeği ve kızamıkçık etkenlerinin çok sayıda konakçıya ulaşabilirken sifilizin ancak yakın temasla bulaşabilmesi, etkenin hangi özelliğiyle açıklanır?",
+     "secenekler": {
+      "A": "Tropizm",
+      "B": "Transmisibilite",
+      "C": "İmmünojenite",
+      "D": "Patojenite",
+      "E": "Virulans"
+     },
+     "dogru": "B",
+     "aciklama": "Transmisibilite, kaynaktan çıkma yolu ve dış ortama dayanma gücüyle ilişkilidir; solunum yoluyla çıkanlar çok sayıda konakçıya ulaşır (s. 55–56).",
+     "sik_aciklamalari": {
+      "A": "Yanlış. Tropizm organ ve doku yönelimidir (s. 53).",
+      "B": "Doğru. Derste transmisibilite için verilen örnektir (s. 56).",
+      "C": "Yanlış. İmmünojenite immün cevap oluşturabilmedir (s. 57).",
+      "D": "Yanlış. Patojenite hastalık yapabilmedir (s. 48).",
+      "E": "Yanlış. Virulans ağır hastalık yapabilmedir (s. 50)."
+     },
+     "bilgi": [
+      74,
+      75
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 56,
+      "alinti": "enfeksiyon etkeninin kaynaktan çıkma yolu ve dış ortam koşullarına dayanma gücü ile yakından ilişkilidir"
+     }
+    },
+    {
+     "id": "k1-68-enfeksiyon-hastaliklarinin-epidemiyolojisi-q21",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "Bir salgında 1000 kişi enfekte olmuş, bunların 100'ünde klinik hastalık gelişmiş ve hastalananların 20'si ölmüştür. Bu verilere göre aşağıdaki yorumlardan hangisi doğrudur?",
+     "secenekler": {
+      "A": "Patojenite ölçüsü %20'dir",
+      "B": "Vaka fatalite hızı %20'dir ve virulansı yansıtır",
+      "C": "Vaka fatalite hızı %2'dir",
+      "D": "Patojenite ölçüsü %2'dir",
+      "E": "Bu verilerle enfektivite doğrudan hesaplanır"
+     },
+     "dogru": "B",
+     "aciklama": "Hastalananlar içinde ölenlerin oranı (20/100 = %20) vaka fatalite hızıdır ve virulansı ölçer; patojenite enfekte olanlarda belirti oranıdır (100/1000 = %10) (s. 49–50).",
+     "sik_aciklamalari": {
+      "A": "Yanlış. Patojenite ölçüsü 100/1000 = %10'dur (s. 49).",
+      "B": "Doğru. Vaka fatalite hızı virulans ölçütüdür (s. 50).",
+      "C": "Yanlış. %2, ölenlerin enfekte olanlara oranıdır; vaka fatalite hızı hastalananlar üzerinden hesaplanır (s. 50).",
+      "D": "Yanlış. %2 ölüm/enfekte oranıdır; patojenite belirti verenlerin oranıdır (s. 49).",
+      "E": "Yanlış. Enfektivite enfeksiyona neden olan mikroorganizma sayısıyla ölçülür (s. 51–52)."
+     },
+     "bilgi": [
+      66,
+      67,
+      68,
+      69
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 49,
+      "alinti": "etkenle enfekte olan bireyler içerisinde klinik belirti verenlerin oranı kullanılabilir"
+     }
+    },
+    {
+     "id": "k1-68-enfeksiyon-hastaliklarinin-epidemiyolojisi-q22",
+     "kazanim": 5,
+     "zorluk": "zor",
+     "soru": "Antibiyotik direnci ile ilgili aşağıdaki ifadelerden hangisi YANLIŞTIR?",
+     "secenekler": {
+      "A": "Bir mikroorganizmanın bazı suşlarının bazı antibiyotiklere dirençli olması antibiyotik direnci olarak ifade edilir",
+      "B": "Beta-laktamaz enzimi salgılanması intrensek bir direnç özelliğidir",
+      "C": "Direnç insanların antibiyotik kullanma durumuna da bağlıdır",
+      "D": "Antibiyotiklerin uygunsuz kullanımı dirençli mikroorganizmaların yaygınlaşmasını kolaylaştırır",
+      "E": "Direnç yalnız mikroorganizmanın özelliğidir; insan davranışından etkilenmez"
+     },
+     "dogru": "E",
+     "aciklama": "Direnç hem intrensek özelliklere hem de insanların antibiyotik kullanma durumuna bağlıdır (s. 60).",
+     "sik_aciklamalari": {
+      "A": "Yanlış seçenek; ifade doğrudur: derste antibiyotik direnci böyle tanımlanır (s. 59).",
+      "B": "Yanlış seçenek; ifade doğrudur: beta-laktamaz salgılama intrensek özellik örneğidir (s. 60).",
+      "C": "Yanlış seçenek; ifade doğrudur: direnç antibiyotik kullanma durumuna da bağlıdır (s. 60).",
+      "D": "Yanlış seçenek; ifade doğrudur: uygunsuz kullanım dirençlilerin yaygınlaşmasını kolaylaştırır (s. 60).",
+      "E": "Doğru cevap. Direnç insanların antibiyotik kullanımına da bağlıdır; ifade yanlıştır (s. 60)."
+     },
+     "bilgi": [
+      78,
+      79
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 59,
+      "alinti": "çeşitli mekanizmalarla direnç geliştirmesi antibiyotik direnci olarak ifade edilir"
+     }
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 6,
+   "metin": "Konakçının enfeksiyon etkenlerine karşı kademeli savunma mekanizmalarını ve bu savunmayı etkileyen hormon ve beslenme faktörlerini açıklar.",
+   "sorular": [
+    {
+     "id": "k1-68-enfeksiyon-hastaliklarinin-epidemiyolojisi-q23",
+     "kazanim": 6,
+     "zorluk": "kolay",
+     "soru": "Derse göre konakçı savunmasının ilk kademesini hangi yapılar oluşturur?",
+     "secenekler": {
+      "A": "İmmünoglobulinler",
+      "B": "Deri ve mukozalar",
+      "C": "Fagositer hücreler",
+      "D": "Lenf dolaşımı",
+      "E": "Kortikosteroidler"
+     },
+     "dogru": "B",
+     "aciklama": "Etkenlerin ilk temas ettiği dokular deri ve mukozalar olduğundan savunmanın ilk kademesini bunlar oluşturur (s. 62).",
+     "sik_aciklamalari": {
+      "A": "Yanlış. İmmünoglobulinler sistemik aşamada en önemli faktördür (s. 68).",
+      "B": "Doğru. Derste ilk kademe olarak verilir (s. 62).",
+      "C": "Yanlış. Fagositoz bariyeri aşan etkenlere karşı doku düzeyinde devreye girer (s. 67).",
+      "D": "Yanlış. Lenf dolaşımı enfeksiyonun sistemikleştiği yoldur (s. 68).",
+      "E": "Yanlış. Kortikosteroidler savunmayı düzenleyen hormonlardır (s. 70)."
+     },
+     "bilgi": [
+      81,
+      82
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 62,
+      "alinti": "Bu nedenle savunmanın ilk kademesini de deri ve mukozalar oluşturur"
+     }
+    },
+    {
+     "id": "k1-68-enfeksiyon-hastaliklarinin-epidemiyolojisi-q24",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Deri ve mukoza bariyerini aşan bir mikroorganizmaya karşı savunmanın sırası hangisinde doğru verilmiştir?",
+     "secenekler": {
+      "A": "İltihap → fagositoz → asit manto",
+      "B": "Fagositoz → iltihap (lokalizasyon) → kan ve lenf yoluyla sistemik savunma",
+      "C": "Sistemik humoral savunma → fagositoz → iltihap",
+      "D": "Asit manto → immünoglobulin → fagositoz",
+      "E": "Refleksler → iltihap → deri bütünlüğü"
+     },
+     "dogru": "B",
+     "aciklama": "Bariyeri aşan etken önce fagosite edilir; yetmezse iltihapla lokalize edilir; lokalize edilemezse sistemik savunma devreye girer (s. 67–68).",
+     "sik_aciklamalari": {
+      "A": "Yanlış. İltihap fagositoz yetersiz kalınca gelişir; asit manto yüzey mekanizmasıdır (s. 65, 67).",
+      "B": "Doğru. Derste anlatılan kademeli sıradır (s. 67–68).",
+      "C": "Yanlış. Sistemik savunma en son aşamadır (s. 68).",
+      "D": "Yanlış. Asit manto bariyer aşılmadan önceki yüzey mekanizmasıdır (s. 65).",
+      "E": "Yanlış. Refleksler ve deri bütünlüğü ilk kademededir (s. 63, 65)."
+     },
+     "bilgi": [
+      85,
+      86
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 67,
+      "alinti": "daha organize bir savunma mekanizması olan iltihap olayı gelişir"
+     }
+    },
+    {
+     "id": "k1-68-enfeksiyon-hastaliklarinin-epidemiyolojisi-q25",
+     "kazanim": 6,
+     "zorluk": "orta",
+     "soru": "Derinin savunması ile ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Aşırı temizleme asit mantoyu güçlendirir",
+      "B": "Derinin kirlenmesi pH'yı değiştirip asit mantoyu bozabilir",
+      "C": "Asit manto mukozal sekresyonlarca oluşturulur",
+      "D": "Bütünlüğü bozulmuş deriden etken girişi zorlaşır",
+      "E": "Deri savunması tamamen pasiftir"
+     },
+     "dogru": "B",
+     "aciklama": "Derinin kirlenmesi pH'yı değiştirip asit mantoyu bozabilir; aşırı temizleme de asit mantoyu ve deri bütünlüğünü bozar (s. 66).",
+     "sik_aciklamalari": {
+      "A": "Yanlış. Aşırı temizleme asit mantoyu ve deri bütünlüğünü bozabilir (s. 66).",
+      "B": "Doğru. Derste belirtilir (s. 66).",
+      "C": "Yanlış. Asit mantoyu ter ve yağ bezleri oluşturur (s. 65).",
+      "D": "Yanlış. Bütünlüğü bozulmuş deriden giriş çok daha kolaydır (s. 63).",
+      "E": "Yanlış. Pasif savunma aktif mekanizmalarla desteklenir (s. 64)."
+     },
+     "bilgi": [
+      82,
+      83,
+      84
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 63,
+      "alinti": "Bütünlüğü bozulmuş deri ve mukozalardan enfeksiyon etkenlerinin girişi çok daha kolaydır"
+     }
+    },
+    {
+     "id": "k1-68-enfeksiyon-hastaliklarinin-epidemiyolojisi-q26",
+     "kazanim": 6,
+     "zorluk": "zor",
+     "soru": "Ateş ve ishal gelişen, genel durumu iyi bir hastada derste anlatılan ilkelere göre hangi yaklaşım doğrudur?",
+     "secenekler": {
+      "A": "Bütün belirtiler hemen baskılanmalıdır",
+      "B": "Belirtiler savunmanın parçası olabileceğinden zorunlu olmadıkça müdahale edilmez",
+      "C": "Hormon dengesine rutin olarak müdahale edilmelidir",
+      "D": "Ateş savunmaya hiçbir katkı sağlamaz",
+      "E": "Beslenme desteğinin savunmaya etkisi yoktur"
+     },
+     "dogru": "B",
+     "aciklama": "Öksürük, ishal ve ateş gibi belirtilerin bazıları savunmanın parçasıdır; zorunlu olmadıkça müdahale edilmez (s. 72).",
+     "sik_aciklamalari": {
+      "A": "Yanlış. Zorunlu olmadıkça müdahale edilmemelidir (s. 72).",
+      "B": "Doğru. Derste verilen ilkedir (s. 72).",
+      "C": "Yanlış. Zorunlu olmadıkça hormon ve beslenme dengesine de müdahale edilmez (s. 73).",
+      "D": "Yanlış. Vücut ısısı gibi mekanizmalar savunmaya yardımcı olur (s. 69).",
+      "E": "Yanlış. Protein, enerji, vitamin ve minerallerin dengeli alınması savunma için önemlidir (s. 71)."
+     },
+     "bilgi": [
+      87,
+      89,
+      90,
+      91
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 69,
+      "alinti": "vücut ısısı gibi mekanizmalar da savunmaya yardımcı olur"
+     }
+    }
+   ],
+   "ilgili_cikmis": []
+  },
+  {
+   "no": 7,
+   "metin": "Bağışıklığı meydana geliş biçimine göre (doğal; aktif ve pasif kazanılmış) sınıflandırır ve örneklendirir.",
+   "sorular": [
+    {
+     "id": "k1-68-enfeksiyon-hastaliklarinin-epidemiyolojisi-q27",
+     "kazanim": 7,
+     "zorluk": "kolay",
+     "soru": "Aşılama ile elde edilen bağışıklık hangi türdür?",
+     "secenekler": {
+      "A": "Doğal aktif bağışıklık",
+      "B": "Yapay aktif bağışıklık",
+      "C": "Doğal pasif bağışıklık",
+      "D": "Yapay pasif bağışıklık",
+      "E": "Türe has bağışıklık"
+     },
+     "dogru": "B",
+     "aciklama": "Etkene ait antijenlerin yapay olarak uygulanması, yani aşılama ile elde edilen bağışıklık yapay aktif bağışıklıktır (s. 83).",
+     "sik_aciklamalari": {
+      "A": "Yanlış. Doğal aktif bağışıklık etkenin doğal yolla alınmasıyla kazanılır (s. 82).",
+      "B": "Doğru. Aşılama yapay aktif bağışıklık sağlar (s. 83).",
+      "C": "Yanlış. Doğal pasif bağışıklık plasenta ve anne sütüyle oluşur (s. 85).",
+      "D": "Yanlış. Yapay pasif bağışıklık serum ve immünoglobulin uygulamasıyla sağlanır (s. 86).",
+      "E": "Yanlış. Türe has bağışıklık doğal bağışıklığın bir düzeyidir (s. 77)."
+     },
+     "bilgi": [
+      101
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 83,
+      "alinti": "yapay olarak konakçılara uygulanması yani aşılama ile elde edilen bağışıklıktır"
+     }
+    },
+    {
+     "id": "k1-68-enfeksiyon-hastaliklarinin-epidemiyolojisi-q28",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Anne sütü ile bebeğe geçen immünoglobulinlerin sağladığı bağışıklık hangisidir?",
+     "secenekler": {
+      "A": "Doğal aktif",
+      "B": "Yapay aktif",
+      "C": "Doğal pasif",
+      "D": "Yapay pasif",
+      "E": "Bireysel bağışıklık"
+     },
+     "dogru": "C",
+     "aciklama": "İmmünoglobulinlerin intrauterin dönemde plasentayla, doğumdan sonra anne sütüyle geçmesi doğal pasif bağışıklıktır (s. 85).",
+     "sik_aciklamalari": {
+      "A": "Yanlış. Bebek bağışıklık ürününü kendisi üretmemektedir (s. 81–82).",
+      "B": "Yanlış. Aşılama söz konusu değildir (s. 83).",
+      "C": "Doğru. Derste örnek olarak verilir (s. 85).",
+      "D": "Yanlış. Ürünler yapay olarak değil, doğal koşullarda geçmektedir (s. 86).",
+      "E": "Yanlış. Bireysel bağışıklık doğal bağışıklığın bir düzeyidir (s. 79)."
+     },
+     "bilgi": [
+      102,
+      103,
+      104
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 84,
+      "alinti": "bağışıklık ürünlerinin bir başka konakçıya verilmesi sonucunda ortaya çıkan bağışıklıktır"
+     }
+    },
+    {
+     "id": "k1-68-enfeksiyon-hastaliklarinin-epidemiyolojisi-q29",
+     "kazanim": 7,
+     "zorluk": "orta",
+     "soru": "Tarih boyunca görülen salgınlarda çok sayıda insan etkilenirken bazı bireylerin etkilenmemesinde rolü olan bağışıklık türü hangisidir?",
+     "secenekler": {
+      "A": "Türe has bağışıklık",
+      "B": "Irka has bağışıklık",
+      "C": "Bireysel bağışıklık",
+      "D": "Yapay aktif bağışıklık",
+      "E": "Yapay pasif bağışıklık"
+     },
+     "dogru": "C",
+     "aciklama": "Aynı ırkın bireylerinin aynı etkene farklı düzeyde bağışık olması bireysel bağışıklıktır ve salgınlardaki bu gözlemi açıklar (s. 79).",
+     "sik_aciklamalari": {
+      "A": "Yanlış. Farklı canlı türleri arasındaki farkı anlatır (s. 77).",
+      "B": "Yanlış. Aynı türün farklı ırkları arasındaki farkı anlatır (s. 78).",
+      "C": "Doğru. Derste bu gözlem bireysel bağışıklığa bağlanır (s. 79).",
+      "D": "Yanlış. Aşılamayla ilgilidir (s. 83).",
+      "E": "Yanlış. Serum ve immünoglobulin uygulamasıyla ilgilidir (s. 86)."
+     },
+     "bilgi": [
+      95,
+      96,
+      97
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 77,
+      "alinti": "Farklı canlı türlerinin bazı mikroorganizmalara karşı bağışık olmasıdır"
+     }
+    },
+    {
+     "id": "k1-68-enfeksiyon-hastaliklarinin-epidemiyolojisi-q30",
+     "kazanim": 7,
+     "zorluk": "zor",
+     "soru": "Aşağıdaki bağışıklık türü–örnek eşleştirmelerinden hangisi YANLIŞTIR?",
+     "secenekler": {
+      "A": "Kabakulak geçirme – doğal aktif bağışıklık",
+      "B": "Aşılama – yapay aktif bağışıklık",
+      "C": "Plasenta yoluyla immünoglobulin geçişi – doğal pasif bağışıklık",
+      "D": "Serum uygulaması – yapay aktif bağışıklık",
+      "E": "Vücut ısısı – doğal bağışıklık"
+     },
+     "dogru": "D",
+     "aciklama": "Serum ve immünoglobulin uygulamasıyla sağlanan bağışıklık yapay pasif bağışıklıktır (s. 86).",
+     "sik_aciklamalari": {
+      "A": "Yanlış seçenek; ifade doğrudur: kızamık, kabakulak, suçiçeği geçirme doğal aktif bağışıklık sağlar (s. 82).",
+      "B": "Yanlış seçenek; ifade doğrudur: aşılama yapay aktif bağışıklıktır (s. 83).",
+      "C": "Yanlış seçenek; ifade doğrudur: plasenta ile immünoglobulin geçişi doğal pasif bağışıklıktır (s. 85).",
+      "D": "Doğru cevap. Serum uygulaması hazır bağışıklık ürünü verdiği için yapay pasiftir (s. 86).",
+      "E": "Yanlış seçenek; ifade doğrudur: vücut ısısı doğal bağışıklığı sağlayan faktörlerdendir (s. 75)."
+     },
+     "bilgi": [
+      93,
+      100,
+      101,
+      103,
+      104
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 75,
+      "alinti": "Enfeksiyon etkenleri ile karşılaşma söz konusu olmaksızın"
+     }
+    }
+   ],
+   "ilgili_cikmis": []
+  }
+ ],
+ "soru_sayisi": 30
+}

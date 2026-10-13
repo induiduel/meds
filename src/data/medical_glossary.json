@@ -10987,7 +10987,7 @@
         "sayfa": 9
       }
     ],
-    "clinicalPearl": "Ağır enfeksiyon/sepsiste taşikardiye hipotansiyon ve dolaşım bozukluğu eklenir."
+    "clinicalPearl": "Ağır enfeksiyon/sepsiste taşikardiye hipotansiyon ve dolaşım bozukluğu eklenir. · Derste mikroorganizmaların kanda çoğalması olarak tanımlanır; bakteriyemi ve viremiden farklıdır."
   },
   "kıvrım (loop) diüretikleri": {
     "term": "Kıvrım (loop) diüretikleri",
@@ -22507,7 +22507,8 @@
         "sayfa": 5,
         "alinti": "bölünme/kuruma ile kütlede meydana gelen değişim (damlacık çekirdeği)"
       }
-    ]
+    ],
+    "clinicalPearl": "Suyunu kaybederek hafifleyen, havada asılı kalıp hava hareketleriyle uzağa taşınabilen damlacık kalıntısı."
   },
   "zarflı virüs": {
     "term": "Zarflı virüs",
@@ -22725,7 +22726,7 @@
     "description": "Mikroorganizmanın hastalık oluşturma gücünün derecesi.",
     "discipline": "Enfeksiyon Hastalıkları",
     "committee": "",
-    "clinicalPearl": "Etkene ait özelliktir, konak faktörü değildir.",
+    "clinicalPearl": "Etkene ait özelliktir, konak faktörü değildir. · Vaka fatalite hızı ve ağır hastalık oranıyla ölçülür; suşlar arasında farklıdır (influenza).",
     "dogrulama": {
       "durum": "ders_isci",
       "destek": 1.0,
@@ -27349,7 +27350,7 @@
     "description": "Bir mikroorganizmanın konağa girmesi, yerleşmesi ve/veya çoğalmasıdır; klinik belirti ve bulgu zorunlu değildir.",
     "discipline": "Enfeksiyon Hastalıkları",
     "committee": "",
-    "clinicalPearl": "Her enfeksiyon, enfeksiyon hastalığı ile sonuçlanmaz.",
+    "clinicalPearl": "Her enfeksiyon, enfeksiyon hastalığı ile sonuçlanmaz. · Derste: patojenin konağa girip yerleşmesi ve üreyip çoğalması; her enfeksiyon hastalık yapmaz (belirtisiz hepatit B taşıyıcılığı).",
     "dogrulama": {
       "durum": "ders_isci",
       "destek": 1.0,
@@ -28338,7 +28339,8 @@
         "sayfa": 26,
         "alinti": "Vektörler, patojen mikroorganizmaları enfekte konak veya rezervuardan alarak duyarlı"
       }
-    ]
+    ],
+    "clinicalPearl": "Bulaşmada rol oynayan eklem bacaklı; biyolojik ve mekanik vektörlük."
   },
   "kırım-kongo kanamalı ateşi": {
     "term": "Kırım-Kongo kanamalı ateşi",
@@ -28426,7 +28428,7 @@
     "description": "Bir mikroorganizmanın konakta hastalık oluşturabilme kapasitesidir.",
     "discipline": "Enfeksiyon Hastalıkları",
     "committee": "",
-    "clinicalPearl": "Patojenle enfekte her bireyde hastalık gelişmeyebilir.",
+    "clinicalPearl": "Patojenle enfekte her bireyde hastalık gelişmeyebilir. · Enfekte olanlarda klinik belirti verenlerin oranıyla ölçülür.",
     "dogrulama": {
       "durum": "ders_isci",
       "destek": 1.0,
@@ -28603,7 +28605,7 @@
     "description": "Patojen mikroorganizmanın insan dışında yaşadığı ekolojik ortamdır.",
     "discipline": "Enfeksiyon Hastalıkları",
     "committee": "",
-    "clinicalPearl": "Legionella için tatlı sular, Borrelia için küçük kemiriciler.",
+    "clinicalPearl": "Legionella için tatlı sular, Borrelia için küçük kemiriciler. · Etkenin üreyip çoğaldığı canlı (insan, hayvan) ve cansız (toprak, yiyecek) ortam; kaynak.",
     "dogrulama": {
       "durum": "ders_isci",
       "destek": 1.0,
@@ -28628,7 +28630,7 @@
     "description": "Bir patojeni taşıyan ve klinik bulgu göstermeden etkeni başkalarına bulaştırabilen kişidir.",
     "discipline": "Enfeksiyon Hastalıkları",
     "committee": "",
-    "clinicalPearl": "Salmonella Typhi kronik taşıyıcılığı örnektir.",
+    "clinicalPearl": "Salmonella Typhi kronik taşıyıcılığı örnektir. · Etkeni taşıyıp bulaştırabildiği hâlde belirti göstermeyen kişi; inkübasyon dönemi, konvalesan dönem ve kronik portörlük türleri vardır.",
     "aliases": [
       "Taşıyıcı"
     ],
@@ -28698,7 +28700,8 @@
         "sayfa": 51,
         "alinti": "Bu dönemde semptom ve bulgu yoktur"
       }
-    ]
+    ],
+    "clinicalPearl": "Etkenin alınmasından belirtilerin ortaya çıkışına kadar geçen süre; hastalıklar ve vakalar arasında farklıdır."
   },
   "prodromal dönem": {
     "term": "Prodromal dönem",
@@ -31454,7 +31457,7 @@
     "description": "Temiz bir ortama herhangi bir yolla kir ve/veya mikroorganizmaların bulaşması ya da bulaştırılması.",
     "discipline": "Üroloji",
     "committee": "",
-    "clinicalPearl": "Olasılığı idrar alma tekniğinin güvenilirliğine bağlıdır.",
+    "clinicalPearl": "Olasılığı idrar alma tekniğinin güvenilirliğine bağlıdır. · Ortamların ve canlı yüzeylerinin mikroorganizmalarla kirlenmesi.",
     "dogrulama": {
       "durum": "ders_isci",
       "destek": 1.0,
@@ -43576,7 +43579,7 @@
     "description": "Tümör hücresindeki kemokin reseptörlerinin hedef organ stromasının kemokinlerine yanıt vermesiyle metastazın belirli organları tercih etmesi.",
     "discipline": "Tıbbi Patoloji",
     "committee": "",
-    "clinicalPearl": "Tohum ve toprak hipoteziyle açıklanır.",
+    "clinicalPearl": "Tohum ve toprak hipoteziyle açıklanır. · Polio ve kuduz virüsleri nörotrop, hepatit virüsleri hepatotroptur.",
     "dogrulama": {
       "durum": "ders_isci",
       "destek": 1.0,
@@ -58376,7 +58379,7 @@
     "description": "Hastalık etkeninin kişiden kişiye ya da eşyadan kişiye geçtiği yol; İbn-ül Habib vebada temas, giysi ve kap-kacakla geçişi gözlemlemiştir.",
     "discipline": "Halk Sağlığı",
     "committee": "",
-    "clinicalPearl": "İbn-ül Habib korunmanın önemini vurguladı.",
+    "clinicalPearl": "İbn-ül Habib korunmanın önemini vurguladı. · Etkenin kaynaktan çıkışı, yeni konakçıya taşınması ve girişini kapsar.",
     "dogrulama": {
       "durum": "ders_isci",
       "destek": 1.0,
@@ -72630,7 +72633,7 @@
     "description": "Bir enfeksiyonun oluşabilmesi için etkenden duyarlı konağa kadar art arda bulunması gereken halkaları tanımlayan modeldir; enfeksiyon kontrol önlemlerinin hedeflerini belirler.",
     "discipline": "Enfeksiyon Hastalıkları",
     "committee": "",
-    "clinicalPearl": "Ortaya çıkan insan patojenlerinin %70'i hayvan kaynaklıdır; sağlıklı çevre salgınların önlenmesinde gereklidir.",
+    "clinicalPearl": "Ortaya çıkan insan patojenlerinin %70'i hayvan kaynaklıdır; sağlıklı çevre salgınların önlenmesinde gereklidir. · Kaynak, bulaşma yolu ve yeni konakçıdan oluşur; tek halkanın kaldırılması zinciri kırar.",
     "dogrulama": {
       "durum": "sozluk_v2",
       "destek": 1.0,
@@ -85362,6 +85365,1079 @@
         "kurul": 1,
         "sayfa": 46,
         "alinti": "Dört değerlikli aşı HPV 6, 11, 16, 18"
+      }
+    ]
+  },
+  "enfestasyon": {
+    "term": "Enfestasyon",
+    "category": "terim",
+    "definition": "Helmint ve ektoparazit gibi makroparazitlerin konakçıda yerleşimi.",
+    "description": "Helmint ve ektoparazit gibi makroparazitlerin konakçıda yerleşimi.",
+    "discipline": "Halk Sağlığı",
+    "committee": "",
+    "clinicalPearl": "Derste enfeksiyon başlığı altında incelenir.",
+    "aliases": [
+      "İnfestasyon"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261012-04ec5a51bd"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "drive_root/Kurul 1/Halk Sağlığı/5)Enfeksiyon Hastalıklarının Genel Epidemiyolojik Özellikleri.pdf",
+        "ders": "Halk Sağlığı",
+        "kurul": 1,
+        "sayfa": 8,
+        "alinti": "Bu parazitlerin konakçıda yerleşimi enfestasyon olarak isimlendirilir"
+      }
+    ]
+  },
+  "konak (konakçı)": {
+    "term": "Konak (konakçı)",
+    "category": "terim",
+    "definition": "Enfeksiyon etkeninin yerleştiği makroorganizma.",
+    "description": "Enfeksiyon etkeninin yerleştiği makroorganizma.",
+    "discipline": "Halk Sağlığı",
+    "committee": "",
+    "clinicalPearl": "Çıkmış soruda doğru tanım olarak yer almıştır.",
+    "aliases": [
+      "Konakçı"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261012-04ec5a51bd"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "drive_root/Kurul 1/Halk Sağlığı/5)Enfeksiyon Hastalıklarının Genel Epidemiyolojik Özellikleri.pdf",
+        "ders": "Halk Sağlığı",
+        "kurul": 1,
+        "sayfa": 10,
+        "alinti": "Enfeksiyon etkeninin yerleştiği makroorganizmadır"
+      }
+    ]
+  },
+  "ana konak": {
+    "term": "Ana konak",
+    "category": "terim",
+    "definition": "Parazitin erişkin formunun yaşadığı canlı.",
+    "description": "Parazitin erişkin formunun yaşadığı canlı.",
+    "discipline": "Halk Sağlığı",
+    "committee": "",
+    "clinicalPearl": "Ara konakla karıştırılmamalı.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261012-04ec5a51bd"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "drive_root/Kurul 1/Halk Sağlığı/5)Enfeksiyon Hastalıklarının Genel Epidemiyolojik Özellikleri.pdf",
+        "ders": "Halk Sağlığı",
+        "kurul": 1,
+        "sayfa": 11,
+        "alinti": "Parazitlerin erişkin formunun yaşadığı canlıya ana konak"
+      }
+    ]
+  },
+  "ara konak": {
+    "term": "Ara konak",
+    "category": "terim",
+    "definition": "Parazitin erişkin dışındaki formlarının yaşadığı canlı.",
+    "description": "Parazitin erişkin dışındaki formlarının yaşadığı canlı.",
+    "discipline": "Halk Sağlığı",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261012-04ec5a51bd"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "drive_root/Kurul 1/Halk Sağlığı/5)Enfeksiyon Hastalıklarının Genel Epidemiyolojik Özellikleri.pdf",
+        "ders": "Halk Sağlığı",
+        "kurul": 1,
+        "sayfa": 11,
+        "alinti": "Parazitlerin erişkin formunun yaşadığı canlıya ana konak"
+      }
+    ]
+  },
+  "inkübasyon dönemi portörlüğü": {
+    "term": "İnkübasyon dönemi portörlüğü",
+    "category": "terim",
+    "definition": "Kişinin hastalığın kuluçka döneminde, belirti göstermeden bulaştırıcı olması.",
+    "description": "Kişinin hastalığın kuluçka döneminde, belirti göstermeden bulaştırıcı olması.",
+    "discipline": "Halk Sağlığı",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261012-04ec5a51bd"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "drive_root/Kurul 1/Halk Sağlığı/5)Enfeksiyon Hastalıklarının Genel Epidemiyolojik Özellikleri.pdf",
+        "ders": "Halk Sağlığı",
+        "kurul": 1,
+        "sayfa": 13,
+        "alinti": "Bu duruma inkubasyon dönemi portörlüğü adı verilir"
+      }
+    ]
+  },
+  "konvalesan dönem portörlüğü": {
+    "term": "Konvalesan dönem portörlüğü",
+    "category": "terim",
+    "definition": "Hastalık iyileştikten sonra bir süre daha bulaştırıcılığın sürmesi.",
+    "description": "Hastalık iyileştikten sonra bir süre daha bulaştırıcılığın sürmesi.",
+    "discipline": "Halk Sağlığı",
+    "committee": "",
+    "aliases": [
+      "İyileşme dönemi portörlüğü"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261012-04ec5a51bd"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "drive_root/Kurul 1/Halk Sağlığı/5)Enfeksiyon Hastalıklarının Genel Epidemiyolojik Özellikleri.pdf",
+        "ders": "Halk Sağlığı",
+        "kurul": 1,
+        "sayfa": 14,
+        "alinti": "Buna da konvelasan dönem portörlüğü adı"
+      }
+    ]
+  },
+  "kronik portörlük": {
+    "term": "Kronik portörlük",
+    "category": "terim",
+    "definition": "Etkenin uzun süre taşınıp bulaştırılması; belirtisiz ya da hastalık sonrası gelişebilir.",
+    "description": "Etkenin uzun süre taşınıp bulaştırılması; belirtisiz ya da hastalık sonrası gelişebilir.",
+    "discipline": "Halk Sağlığı",
+    "committee": "",
+    "clinicalPearl": "Örnekler: hepatit B, tifo.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261012-04ec5a51bd"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "drive_root/Kurul 1/Halk Sağlığı/5)Enfeksiyon Hastalıklarının Genel Epidemiyolojik Özellikleri.pdf",
+        "ders": "Halk Sağlığı",
+        "kurul": 1,
+        "sayfa": 15,
+        "alinti": "uzun sure portörlüğe (kronik portörlük) neden olurlar (hepatit B, tifo"
+      }
+    ]
+  },
+  "bakteriyemi": {
+    "term": "Bakteriyemi",
+    "category": "tani",
+    "definition": "Bakterilerin kanda bulunması.",
+    "description": "Bakterilerin kanda bulunması.",
+    "discipline": "Halk Sağlığı",
+    "committee": "",
+    "clinicalPearl": "Kanda çoğalma sepsistir.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261012-04ec5a51bd"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "drive_root/Kurul 1/Halk Sağlığı/5)Enfeksiyon Hastalıklarının Genel Epidemiyolojik Özellikleri.pdf",
+        "ders": "Halk Sağlığı",
+        "kurul": 1,
+        "sayfa": 18,
+        "alinti": "Bakterilerin kanda bulunma durumunu ifade eder"
+      }
+    ]
+  },
+  "viremi": {
+    "term": "Viremi",
+    "category": "tani",
+    "definition": "Virüslerin kanda bulunması.",
+    "description": "Virüslerin kanda bulunması.",
+    "discipline": "Halk Sağlığı",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261012-04ec5a51bd"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "drive_root/Kurul 1/Halk Sağlığı/5)Enfeksiyon Hastalıklarının Genel Epidemiyolojik Özellikleri.pdf",
+        "ders": "Halk Sağlığı",
+        "kurul": 1,
+        "sayfa": 18,
+        "alinti": "Bakterilerin kanda bulunma durumunu ifade eder"
+      }
+    ]
+  },
+  "fungemi": {
+    "term": "Fungemi",
+    "category": "tani",
+    "definition": "Mantarların kanda bulunması.",
+    "description": "Mantarların kanda bulunması.",
+    "discipline": "Halk Sağlığı",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261012-04ec5a51bd"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "drive_root/Kurul 1/Halk Sağlığı/5)Enfeksiyon Hastalıklarının Genel Epidemiyolojik Özellikleri.pdf",
+        "ders": "Halk Sağlığı",
+        "kurul": 1,
+        "sayfa": 18,
+        "alinti": "Bakterilerin kanda bulunma durumunu ifade eder"
+      }
+    ]
+  },
+  "dezenfeksiyon": {
+    "term": "Dezenfeksiyon",
+    "category": "terim",
+    "definition": "Cansız ortamların patojen mikroorganizmalardan fiziksel ve kimyasal yöntemlerle temizlenmesi.",
+    "description": "Cansız ortamların patojen mikroorganizmalardan fiziksel ve kimyasal yöntemlerle temizlenmesi.",
+    "discipline": "Halk Sağlığı",
+    "committee": "",
+    "clinicalPearl": "Tanımda 'sporlar dâhil' yoktur.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261012-04ec5a51bd"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "drive_root/Kurul 1/Halk Sağlığı/5)Enfeksiyon Hastalıklarının Genel Epidemiyolojik Özellikleri.pdf",
+        "ders": "Halk Sağlığı",
+        "kurul": 1,
+        "sayfa": 19,
+        "alinti": "Cansız ortamların patojen mikroorganizmalardan temizlenmesi işlemidir"
+      }
+    ]
+  },
+  "sterilizasyon": {
+    "term": "Sterilizasyon",
+    "category": "terim",
+    "definition": "Ortamların sporlar dâhil bütün mikroorganizmalardan arındırılması.",
+    "description": "Ortamların sporlar dâhil bütün mikroorganizmalardan arındırılması.",
+    "discipline": "Halk Sağlığı",
+    "committee": "",
+    "clinicalPearl": "Dezenfeksiyondan daha etkili yöntem gerektirir.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261012-04ec5a51bd"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "drive_root/Kurul 1/Halk Sağlığı/5)Enfeksiyon Hastalıklarının Genel Epidemiyolojik Özellikleri.pdf",
+        "ders": "Halk Sağlığı",
+        "kurul": 1,
+        "sayfa": 20,
+        "alinti": "Ortamların, sporlar dahil bütün mikroorganizmalardan arındırılması"
+      }
+    ]
+  },
+  "pastörizasyon": {
+    "term": "Pastörizasyon",
+    "category": "terim",
+    "definition": "Mikroorganizma yoğunluğunu azaltmak için hızlı ısıtma ve hızlı soğutmaya dayalı işlem; tam sterilizasyon sağlamaz.",
+    "description": "Mikroorganizma yoğunluğunu azaltmak için hızlı ısıtma ve hızlı soğutmaya dayalı işlem; tam sterilizasyon sağlamaz.",
+    "discipline": "Halk Sağlığı",
+    "committee": "",
+    "clinicalPearl": "63 °C/30 dk ya da 72 °C/15 sn, ardından hızla 10 °C.",
+    "aliases": [
+      "Pastorizasyon"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261012-04ec5a51bd"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "drive_root/Kurul 1/Halk Sağlığı/5)Enfeksiyon Hastalıklarının Genel Epidemiyolojik Özellikleri.pdf",
+        "ders": "Halk Sağlığı",
+        "kurul": 1,
+        "sayfa": 21,
+        "alinti": "hızlı ısıtma ve hızlı soğutmaya dayalı bir işlemdir"
+      }
+    ]
+  },
+  "tindalizasyon": {
+    "term": "Tindalizasyon",
+    "category": "terim",
+    "definition": "100 °C üstünde bozulan sıvılar için 55–100 °C'de yarım saat, üst üste en az üç gün uygulanan sterilizasyon yöntemi.",
+    "description": "100 °C üstünde bozulan sıvılar için 55–100 °C'de yarım saat, üst üste en az üç gün uygulanan sterilizasyon yöntemi.",
+    "discipline": "Halk Sağlığı",
+    "committee": "",
+    "aliases": [
+      "Aralıklı sterilizasyon"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261012-04ec5a51bd"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "drive_root/Kurul 1/Halk Sağlığı/5)Enfeksiyon Hastalıklarının Genel Epidemiyolojik Özellikleri.pdf",
+        "ders": "Halk Sağlığı",
+        "kurul": 1,
+        "sayfa": 22,
+        "alinti": "sıvılar için uygulanan bir sterilizasyon yöntemidir"
+      }
+    ]
+  },
+  "asepsi": {
+    "term": "Asepsi",
+    "category": "terim",
+    "definition": "Tıbbi ve cerrahi işlemlerin kirlenmeyi önleyecek koşullarda yapılması ve ortamda mikroorganizma bulunmaması.",
+    "description": "Tıbbi ve cerrahi işlemlerin kirlenmeyi önleyecek koşullarda yapılması ve ortamda mikroorganizma bulunmaması.",
+    "discipline": "Halk Sağlığı",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261012-04ec5a51bd"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "drive_root/Kurul 1/Halk Sağlığı/5)Enfeksiyon Hastalıklarının Genel Epidemiyolojik Özellikleri.pdf",
+        "ders": "Halk Sağlığı",
+        "kurul": 1,
+        "sayfa": 23,
+        "alinti": "mikroorganizmalarla kirlenmeyi önleyecek koşullarda gerçekleştirilmesini"
+      }
+    ]
+  },
+  "antisepsi": {
+    "term": "Antisepsi",
+    "category": "terim",
+    "definition": "Vücut yüzeyi ve lezyonlardaki patojen mikroorganizmaların yok edilmesi.",
+    "description": "Vücut yüzeyi ve lezyonlardaki patojen mikroorganizmaların yok edilmesi.",
+    "discipline": "Halk Sağlığı",
+    "committee": "",
+    "clinicalPearl": "Cansız ortam için dezenfeksiyon kullanılır.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261012-04ec5a51bd"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "drive_root/Kurul 1/Halk Sağlığı/5)Enfeksiyon Hastalıklarının Genel Epidemiyolojik Özellikleri.pdf",
+        "ders": "Halk Sağlığı",
+        "kurul": 1,
+        "sayfa": 23,
+        "alinti": "vücut yüzeyinde ve lezyonlarda bulunan patojen mikroorganizmaların yok edilmesi"
+      }
+    ]
+  },
+  "doğrudan bulaşma": {
+    "term": "Doğrudan bulaşma",
+    "category": "terim",
+    "definition": "Etkenin hiçbir aracı olmadan kaynaktan yeni konakçıya geçmesi; direkt temas ve direkt damlacık.",
+    "description": "Etkenin hiçbir aracı olmadan kaynaktan yeni konakçıya geçmesi; direkt temas ve direkt damlacık.",
+    "discipline": "Halk Sağlığı",
+    "committee": "",
+    "aliases": [
+      "Direkt bulaşma"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261012-04ec5a51bd"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "drive_root/Kurul 1/Halk Sağlığı/5)Enfeksiyon Hastalıklarının Genel Epidemiyolojik Özellikleri.pdf",
+        "ders": "Halk Sağlığı",
+        "kurul": 1,
+        "sayfa": 33,
+        "alinti": "hiçbir aracı olmadan, kaynaktan çıkıp, yeni konakçıya bulaşmasıdır"
+      }
+    ]
+  },
+  "dolaylı bulaşma": {
+    "term": "Dolaylı bulaşma",
+    "category": "terim",
+    "definition": "Etkenin canlı veya cansız bir aracıyla taşınması; hava, su ve besinler, vektörler, eşyalar.",
+    "description": "Etkenin canlı veya cansız bir aracıyla taşınması; hava, su ve besinler, vektörler, eşyalar.",
+    "discipline": "Halk Sağlığı",
+    "committee": "",
+    "aliases": [
+      "İndirekt bulaşma"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261012-04ec5a51bd"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "drive_root/Kurul 1/Halk Sağlığı/5)Enfeksiyon Hastalıklarının Genel Epidemiyolojik Özellikleri.pdf",
+        "ders": "Halk Sağlığı",
+        "kurul": 1,
+        "sayfa": 36,
+        "alinti": "hava, su ve besinler, vektörler ve eşyalardır"
+      }
+    ]
+  },
+  "hava yoluyla bulaşma": {
+    "term": "Hava yoluyla bulaşma",
+    "category": "terim",
+    "definition": "Damlacık çekirdeklerinin havada asılı kalıp hava hareketleriyle uzağa taşınması.",
+    "description": "Damlacık çekirdeklerinin havada asılı kalıp hava hareketleriyle uzağa taşınması.",
+    "discipline": "Halk Sağlığı",
+    "committee": "",
+    "clinicalPearl": "Direkt damlacıktan farklıdır.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261012-04ec5a51bd"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "drive_root/Kurul 1/Halk Sağlığı/5)Enfeksiyon Hastalıklarının Genel Epidemiyolojik Özellikleri.pdf",
+        "ders": "Halk Sağlığı",
+        "kurul": 1,
+        "sayfa": 38,
+        "alinti": "damlacık çekirdeklerinin belli bir sure havada asılı olarak kalmaları"
+      }
+    ]
+  },
+  "fekal–oral yol": {
+    "term": "Fekal–oral yol",
+    "category": "terim",
+    "definition": "Anal yolla çıkan etkenin su ve besinler ya da el ve eşyalarla taşınıp ağızdan alınması.",
+    "description": "Anal yolla çıkan etkenin su ve besinler ya da el ve eşyalarla taşınıp ağızdan alınması.",
+    "discipline": "Halk Sağlığı",
+    "committee": "",
+    "aliases": [
+      "Fekal-oral bulaşma"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261012-04ec5a51bd"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "drive_root/Kurul 1/Halk Sağlığı/5)Enfeksiyon Hastalıklarının Genel Epidemiyolojik Özellikleri.pdf",
+        "ders": "Halk Sağlığı",
+        "kurul": 1,
+        "sayfa": 40,
+        "alinti": "Bu yol, fekal – oral yol olarak ifade edilir"
+      }
+    ]
+  },
+  "biyolojik vektörlük": {
+    "term": "Biyolojik vektörlük",
+    "category": "terim",
+    "definition": "Etkenin vektörün vücudunda gelişip çoğalarak bulaştırılması.",
+    "description": "Etkenin vektörün vücudunda gelişip çoğalarak bulaştırılması.",
+    "discipline": "Halk Sağlığı",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261012-04ec5a51bd"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "drive_root/Kurul 1/Halk Sağlığı/5)Enfeksiyon Hastalıklarının Genel Epidemiyolojik Özellikleri.pdf",
+        "ders": "Halk Sağlığı",
+        "kurul": 1,
+        "sayfa": 41,
+        "alinti": "Vektörler, enfeksiyon etkenlerinin bulaşmasında rol oynayan eklem bacaklılardır"
+      }
+    ]
+  },
+  "mekanik vektörlük": {
+    "term": "Mekanik vektörlük",
+    "category": "terim",
+    "definition": "Etkenin vektörün dış yüzeyinde taşınarak bulaştırılması.",
+    "description": "Etkenin vektörün dış yüzeyinde taşınarak bulaştırılması.",
+    "discipline": "Halk Sağlığı",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261012-04ec5a51bd"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "drive_root/Kurul 1/Halk Sağlığı/5)Enfeksiyon Hastalıklarının Genel Epidemiyolojik Özellikleri.pdf",
+        "ders": "Halk Sağlığı",
+        "kurul": 1,
+        "sayfa": 41,
+        "alinti": "Vektörler, enfeksiyon etkenlerinin bulaşmasında rol oynayan eklem bacaklılardır"
+      }
+    ]
+  },
+  "intrensek özellik": {
+    "term": "İntrensek özellik",
+    "category": "terim",
+    "definition": "Etkende doğal olarak var olan büyüklük, şekil, hareket, yapı, enzim, toksin, üreme ve beslenme özellikleri.",
+    "description": "Etkende doğal olarak var olan büyüklük, şekil, hareket, yapı, enzim, toksin, üreme ve beslenme özellikleri.",
+    "discipline": "Halk Sağlığı",
+    "committee": "",
+    "aliases": [
+      "Mikrobiyolojik özellik"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261012-04ec5a51bd"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "drive_root/Kurul 1/Halk Sağlığı/5)Enfeksiyon Hastalıklarının Genel Epidemiyolojik Özellikleri.pdf",
+        "ders": "Halk Sağlığı",
+        "kurul": 1,
+        "sayfa": 46,
+        "alinti": "büyüklük, şekil, hareket, yapı, enzimler, toksinler"
+      }
+    ]
+  },
+  "enfektivite": {
+    "term": "Enfektivite",
+    "category": "terim",
+    "definition": "Etkenin konakçıda enfeksiyon oluşturabilme gücü; gereken mikroorganizma sayısıyla ölçülür.",
+    "description": "Etkenin konakçıda enfeksiyon oluşturabilme gücü; gereken mikroorganizma sayısıyla ölçülür.",
+    "discipline": "Halk Sağlığı",
+    "committee": "",
+    "clinicalPearl": "Az sayıda mikroorganizma yeterliyse enfektivite yüksektir.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261012-04ec5a51bd"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "drive_root/Kurul 1/Halk Sağlığı/5)Enfeksiyon Hastalıklarının Genel Epidemiyolojik Özellikleri.pdf",
+        "ders": "Halk Sağlığı",
+        "kurul": 1,
+        "sayfa": 51,
+        "alinti": "Az sayıda mikroorganizmanın enfeksiyon yapabildiği durumlarda enfektivitenin daha yüksek olduğu söylenebilir"
+      }
+    ]
+  },
+  "median enfektif doz (ıd50)": {
+    "term": "Median enfektif doz (ID50)",
+    "category": "terim",
+    "definition": "Deney konakçılarının yarısında enfeksiyon oluşturan doz; enfektivite ölçütü.",
+    "description": "Deney konakçılarının yarısında enfeksiyon oluşturan doz; enfektivite ölçütü.",
+    "discipline": "Halk Sağlığı",
+    "committee": "",
+    "aliases": [
+      "ID50"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261012-04ec5a51bd"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "drive_root/Kurul 1/Halk Sağlığı/5)Enfeksiyon Hastalıklarının Genel Epidemiyolojik Özellikleri.pdf",
+        "ders": "Halk Sağlığı",
+        "kurul": 1,
+        "sayfa": 52,
+        "alinti": "median enfektif doz (ID50), median lethal doz"
+      }
+    ]
+  },
+  "median letal doz (ld50)": {
+    "term": "Median letal doz (LD50)",
+    "category": "terim",
+    "definition": "Deney konakçılarının yarısını öldüren doz.",
+    "description": "Deney konakçılarının yarısını öldüren doz.",
+    "discipline": "Halk Sağlığı",
+    "committee": "",
+    "aliases": [
+      "LD50"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261012-04ec5a51bd"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "drive_root/Kurul 1/Halk Sağlığı/5)Enfeksiyon Hastalıklarının Genel Epidemiyolojik Özellikleri.pdf",
+        "ders": "Halk Sağlığı",
+        "kurul": 1,
+        "sayfa": 52,
+        "alinti": "median enfektif doz (ID50), median lethal doz"
+      }
+    ]
+  },
+  "vaka fatalite hızı": {
+    "term": "Vaka fatalite hızı",
+    "category": "terim",
+    "definition": "Hastalananlar içinde ölenlerin oranı; virulans ölçütü.",
+    "description": "Hastalananlar içinde ölenlerin oranı; virulans ölçütü.",
+    "discipline": "Halk Sağlığı",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261012-04ec5a51bd"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "drive_root/Kurul 1/Halk Sağlığı/5)Enfeksiyon Hastalıklarının Genel Epidemiyolojik Özellikleri.pdf",
+        "ders": "Halk Sağlığı",
+        "kurul": 1,
+        "sayfa": 50,
+        "alinti": "Virulansı ölçmek için, vaka fatalite hızları veya ağır hastalık oranları kullanılabilir"
+      }
+    ]
+  },
+  "hepatotrop": {
+    "term": "Hepatotrop",
+    "category": "terim",
+    "definition": "Karaciğere yönelen (hepatit virüsleri).",
+    "description": "Karaciğere yönelen (hepatit virüsleri).",
+    "discipline": "Halk Sağlığı",
+    "committee": "",
+    "aliases": [
+      "Hepatotropik"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261012-04ec5a51bd"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "drive_root/Kurul 1/Halk Sağlığı/5)Enfeksiyon Hastalıklarının Genel Epidemiyolojik Özellikleri.pdf",
+        "ders": "Halk Sağlığı",
+        "kurul": 1,
+        "sayfa": 53,
+        "alinti": "polio ve kuduz virüsleri sinir sistemine"
+      }
+    ]
+  },
+  "transmisibilite": {
+    "term": "Transmisibilite",
+    "category": "terim",
+    "definition": "Etkenin bir konakçıdan diğerine taşınabilme özelliği (bulaşıcılık).",
+    "description": "Etkenin bir konakçıdan diğerine taşınabilme özelliği (bulaşıcılık).",
+    "discipline": "Halk Sağlığı",
+    "committee": "",
+    "clinicalPearl": "Çıkış yolu ve dış ortama dayanıklılıkla ilişkilidir.",
+    "aliases": [
+      "Bulaşıcılık"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261012-04ec5a51bd"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "drive_root/Kurul 1/Halk Sağlığı/5)Enfeksiyon Hastalıklarının Genel Epidemiyolojik Özellikleri.pdf",
+        "ders": "Halk Sağlığı",
+        "kurul": 1,
+        "sayfa": 56,
+        "alinti": "enfeksiyon etkeninin kaynaktan çıkma yolu ve dış ortam koşullarına dayanma gücü ile yakından ilişkilidir"
+      }
+    ]
+  },
+  "immünojenite": {
+    "term": "İmmünojenite",
+    "category": "terim",
+    "definition": "Etkenin konakçıda immün cevap oluşturabilme özelliği.",
+    "description": "Etkenin konakçıda immün cevap oluşturabilme özelliği.",
+    "discipline": "Halk Sağlığı",
+    "committee": "",
+    "clinicalPearl": "Antijenik yapı ve konakçı yanıtına bağlıdır.",
+    "aliases": [
+      "İmmunogenite"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261012-04ec5a51bd"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "drive_root/Kurul 1/Halk Sağlığı/5)Enfeksiyon Hastalıklarının Genel Epidemiyolojik Özellikleri.pdf",
+        "ders": "Halk Sağlığı",
+        "kurul": 1,
+        "sayfa": 57,
+        "alinti": "bağışıklama yapılarak, hastalığın tamamen önlenmesi mümkün olmaktadır"
+      }
+    ]
+  },
+  "antibiyotik direnci": {
+    "term": "Antibiyotik direnci",
+    "category": "terim",
+    "definition": "Mikroorganizma suşlarının antibiyotiklere dirençli olması veya direnç geliştirmesi.",
+    "description": "Mikroorganizma suşlarının antibiyotiklere dirençli olması veya direnç geliştirmesi.",
+    "discipline": "Halk Sağlığı",
+    "committee": "",
+    "clinicalPearl": "Uygunsuz kullanım dirençlileri yaygınlaştırır.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261012-04ec5a51bd"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "drive_root/Kurul 1/Halk Sağlığı/5)Enfeksiyon Hastalıklarının Genel Epidemiyolojik Özellikleri.pdf",
+        "ders": "Halk Sağlığı",
+        "kurul": 1,
+        "sayfa": 59,
+        "alinti": "çeşitli mekanizmalarla direnç geliştirmesi antibiyotik direnci olarak ifade edilir"
+      }
+    ]
+  },
+  "direnç faktörleri": {
+    "term": "Direnç faktörleri",
+    "category": "terim",
+    "definition": "Konakçının enfeksiyon etkenlerine karşı savunmasında rol oynayan faktörler.",
+    "description": "Konakçının enfeksiyon etkenlerine karşı savunmasında rol oynayan faktörler.",
+    "discipline": "Halk Sağlığı",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261012-04ec5a51bd"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "drive_root/Kurul 1/Halk Sağlığı/5)Enfeksiyon Hastalıklarının Genel Epidemiyolojik Özellikleri.pdf",
+        "ders": "Halk Sağlığı",
+        "kurul": 1,
+        "sayfa": 61,
+        "alinti": "bu direnç faktörlerinin oluşturduğu savunmaya ise bağışıklık adı verilir"
+      }
+    ]
+  },
+  "asit manto": {
+    "term": "Asit manto",
+    "category": "fizyoloji",
+    "definition": "Deri üzerindeki ter ve yağ bezlerinin oluşturduğu asidik koruyucu tabaka.",
+    "description": "Deri üzerindeki ter ve yağ bezlerinin oluşturduğu asidik koruyucu tabaka.",
+    "discipline": "Halk Sağlığı",
+    "committee": "",
+    "clinicalPearl": "Kirlenme ve aşırı temizlik bozabilir.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261012-04ec5a51bd"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "drive_root/Kurul 1/Halk Sağlığı/5)Enfeksiyon Hastalıklarının Genel Epidemiyolojik Özellikleri.pdf",
+        "ders": "Halk Sağlığı",
+        "kurul": 1,
+        "sayfa": 65,
+        "alinti": "ter ve yağ bezlerinin oluşturduğu asit manto"
+      }
+    ]
+  },
+  "türe has bağışıklık": {
+    "term": "Türe has bağışıklık",
+    "category": "terim",
+    "definition": "Farklı canlı türlerinin bazı mikroorganizmalara bağışık olması.",
+    "description": "Farklı canlı türlerinin bazı mikroorganizmalara bağışık olması.",
+    "discipline": "Halk Sağlığı",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261012-04ec5a51bd"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "drive_root/Kurul 1/Halk Sağlığı/5)Enfeksiyon Hastalıklarının Genel Epidemiyolojik Özellikleri.pdf",
+        "ders": "Halk Sağlığı",
+        "kurul": 1,
+        "sayfa": 77,
+        "alinti": "Farklı canlı türlerinin bazı mikroorganizmalara karşı bağışık olmasıdır"
+      }
+    ]
+  },
+  "ırka has bağışıklık": {
+    "term": "Irka has bağışıklık",
+    "category": "terim",
+    "definition": "Aynı türün farklı ırklarının bir mikroorganizmaya farklı düzeyde bağışık olması.",
+    "description": "Aynı türün farklı ırklarının bir mikroorganizmaya farklı düzeyde bağışık olması.",
+    "discipline": "Halk Sağlığı",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261012-04ec5a51bd"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "drive_root/Kurul 1/Halk Sağlığı/5)Enfeksiyon Hastalıklarının Genel Epidemiyolojik Özellikleri.pdf",
+        "ders": "Halk Sağlığı",
+        "kurul": 1,
+        "sayfa": 78,
+        "alinti": "Aynı canlı turunun farklı ırklarının bir mikroorganizmaya karşı farklı düzeyde bağışık olmasıdır"
+      }
+    ]
+  },
+  "bireysel bağışıklık": {
+    "term": "Bireysel bağışıklık",
+    "category": "terim",
+    "definition": "Aynı ırkın bireylerinin aynı etkene farklı düzeyde bağışık olması.",
+    "description": "Aynı ırkın bireylerinin aynı etkene farklı düzeyde bağışık olması.",
+    "discipline": "Halk Sağlığı",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261012-04ec5a51bd"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "drive_root/Kurul 1/Halk Sağlığı/5)Enfeksiyon Hastalıklarının Genel Epidemiyolojik Özellikleri.pdf",
+        "ders": "Halk Sağlığı",
+        "kurul": 1,
+        "sayfa": 79,
+        "alinti": "Aynı ırkın farklı bireylerinin aynı enfeksiyon etkenine farklı düzeylerde bağışık"
+      }
+    ]
+  },
+  "doğal aktif bağışıklık": {
+    "term": "Doğal aktif bağışıklık",
+    "category": "terim",
+    "definition": "Etkenin doğal yolla alınmasıyla kazanılan bağışıklık.",
+    "description": "Etkenin doğal yolla alınmasıyla kazanılan bağışıklık.",
+    "discipline": "Halk Sağlığı",
+    "committee": "",
+    "clinicalPearl": "Kızamık, kabakulak, suçiçeği geçirme.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261012-04ec5a51bd"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "drive_root/Kurul 1/Halk Sağlığı/5)Enfeksiyon Hastalıklarının Genel Epidemiyolojik Özellikleri.pdf",
+        "ders": "Halk Sağlığı",
+        "kurul": 1,
+        "sayfa": 82,
+        "alinti": "Kızamık, kabakulak, suçiçeği gibi hastalıkları bir kez geçiren kişilerin"
+      }
+    ]
+  },
+  "yapay aktif bağışıklık": {
+    "term": "Yapay aktif bağışıklık",
+    "category": "terim",
+    "definition": "Antijenlerin yapay olarak uygulanmasıyla (aşılama) kazanılan bağışıklık.",
+    "description": "Antijenlerin yapay olarak uygulanmasıyla (aşılama) kazanılan bağışıklık.",
+    "discipline": "Halk Sağlığı",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261012-04ec5a51bd"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "drive_root/Kurul 1/Halk Sağlığı/5)Enfeksiyon Hastalıklarının Genel Epidemiyolojik Özellikleri.pdf",
+        "ders": "Halk Sağlığı",
+        "kurul": 1,
+        "sayfa": 83,
+        "alinti": "yapay olarak konakçılara uygulanması yani aşılama ile elde edilen bağışıklıktır"
+      }
+    ]
+  },
+  "doğal pasif bağışıklık": {
+    "term": "Doğal pasif bağışıklık",
+    "category": "terim",
+    "definition": "Bağışıklık ürünlerinin doğal koşullarda (plasenta, anne sütü) başka konakçıya geçmesi.",
+    "description": "Bağışıklık ürünlerinin doğal koşullarda (plasenta, anne sütü) başka konakçıya geçmesi.",
+    "discipline": "Halk Sağlığı",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261012-04ec5a51bd"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "drive_root/Kurul 1/Halk Sağlığı/5)Enfeksiyon Hastalıklarının Genel Epidemiyolojik Özellikleri.pdf",
+        "ders": "Halk Sağlığı",
+        "kurul": 1,
+        "sayfa": 85,
+        "alinti": "plasenta aracılığıyla, doğumdan sonra ise anne sütü ile geçmesi"
+      }
+    ]
+  },
+  "yapay pasif bağışıklık": {
+    "term": "Yapay pasif bağışıklık",
+    "category": "terim",
+    "definition": "Bağışıklık ürünlerinin yapay olarak (serum, immünoglobulin) verilmesiyle oluşan bağışıklık.",
+    "description": "Bağışıklık ürünlerinin yapay olarak (serum, immünoglobulin) verilmesiyle oluşan bağışıklık.",
+    "discipline": "Halk Sağlığı",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261012-04ec5a51bd"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "drive_root/Kurul 1/Halk Sağlığı/5)Enfeksiyon Hastalıklarının Genel Epidemiyolojik Özellikleri.pdf",
+        "ders": "Halk Sağlığı",
+        "kurul": 1,
+        "sayfa": 86,
+        "alinti": "Serum ve immunoglobulin uygulaması ile sağlanan bağışıklık yapay pasif bağışıklıktır"
+      }
+    ]
+  },
+  "ruam": {
+    "term": "Ruam",
+    "category": "hastalik",
+    "definition": "Kaynağı omurgalı hayvanlar olan bulaşıcı hastalık.",
+    "description": "Kaynağı omurgalı hayvanlar olan bulaşıcı hastalık.",
+    "discipline": "Halk Sağlığı",
+    "committee": "",
+    "clinicalPearl": "Derste kuduz ve şarbonla birlikte hayvan kaynaklı örnek.",
+    "aliases": [
+      "Glanders"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261012-04ec5a51bd"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "drive_root/Kurul 1/Halk Sağlığı/5)Enfeksiyon Hastalıklarının Genel Epidemiyolojik Özellikleri.pdf",
+        "ders": "Halk Sağlığı",
+        "kurul": 1,
+        "sayfa": 29,
+        "alinti": "Bazı hastalıkların kaynağı omurgalı hayvanlardır (kuduz, şarbon, ruam vb)"
+      }
+    ]
+  },
+  "kabakulak": {
+    "term": "Kabakulak",
+    "category": "hastalik",
+    "definition": "Bir kez geçirildiğinde doğal aktif bağışıklık bırakan viral hastalık.",
+    "description": "Bir kez geçirildiğinde doğal aktif bağışıklık bırakan viral hastalık.",
+    "discipline": "Halk Sağlığı",
+    "committee": "",
+    "aliases": [
+      "Parotit"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261012-04ec5a51bd"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "drive_root/Kurul 1/Halk Sağlığı/5)Enfeksiyon Hastalıklarının Genel Epidemiyolojik Özellikleri.pdf",
+        "ders": "Halk Sağlığı",
+        "kurul": 1,
+        "sayfa": 82,
+        "alinti": "Kızamık, kabakulak, suçiçeği gibi hastalıkları bir kez geçiren kişilerin"
       }
     ]
   }

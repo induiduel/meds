@@ -77981,5 +77981,835 @@
       "accuracyScore": 100,
       "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
     }
+  },
+  {
+    "id": "s13-enfestasyon",
+    "term": "Enfestasyon",
+    "aliases": [
+      "İnfestasyon"
+    ],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Halk Sağlığı",
+    "instructorAndSource": "Ders notu: 5)Enfeksiyon Hastalıklarının Genel Epidemiyolojik Özellikleri s.8",
+    "definition": "Helmint ve ektoparazit gibi makroparazitlerin konakçıda yerleşimi.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Derste enfeksiyon başlığı altında incelenir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-konak_konakci",
+    "term": "Konak (konakçı)",
+    "aliases": [
+      "Konakçı"
+    ],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Halk Sağlığı",
+    "instructorAndSource": "Ders notu: 5)Enfeksiyon Hastalıklarının Genel Epidemiyolojik Özellikleri s.10",
+    "definition": "Enfeksiyon etkeninin yerleştiği makroorganizma.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Çıkmış soruda doğru tanım olarak yer almıştır.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-ana_konak",
+    "term": "Ana konak",
+    "aliases": [],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Halk Sağlığı",
+    "instructorAndSource": "Ders notu: 5)Enfeksiyon Hastalıklarının Genel Epidemiyolojik Özellikleri s.11",
+    "definition": "Parazitin erişkin formunun yaşadığı canlı.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Ara konakla karıştırılmamalı.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-ara_konak",
+    "term": "Ara konak",
+    "aliases": [],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Halk Sağlığı",
+    "instructorAndSource": "Ders notu: 5)Enfeksiyon Hastalıklarının Genel Epidemiyolojik Özellikleri s.11",
+    "definition": "Parazitin erişkin dışındaki formlarının yaşadığı canlı.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-inkubasyon_donemi_portorlugu",
+    "term": "İnkübasyon dönemi portörlüğü",
+    "aliases": [],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Halk Sağlığı",
+    "instructorAndSource": "Ders notu: 5)Enfeksiyon Hastalıklarının Genel Epidemiyolojik Özellikleri s.13",
+    "definition": "Kişinin hastalığın kuluçka döneminde, belirti göstermeden bulaştırıcı olması.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-konvalesan_donem_portorlugu",
+    "term": "Konvalesan dönem portörlüğü",
+    "aliases": [
+      "İyileşme dönemi portörlüğü"
+    ],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Halk Sağlığı",
+    "instructorAndSource": "Ders notu: 5)Enfeksiyon Hastalıklarının Genel Epidemiyolojik Özellikleri s.14",
+    "definition": "Hastalık iyileştikten sonra bir süre daha bulaştırıcılığın sürmesi.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-kronik_portorluk",
+    "term": "Kronik portörlük",
+    "aliases": [],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Halk Sağlığı",
+    "instructorAndSource": "Ders notu: 5)Enfeksiyon Hastalıklarının Genel Epidemiyolojik Özellikleri s.15",
+    "definition": "Etkenin uzun süre taşınıp bulaştırılması; belirtisiz ya da hastalık sonrası gelişebilir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Örnekler: hepatit B, tifo.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-bakteriyemi",
+    "term": "Bakteriyemi",
+    "aliases": [],
+    "category": "tani",
+    "kurul": "Kurul 1",
+    "discipline": "Halk Sağlığı",
+    "instructorAndSource": "Ders notu: 5)Enfeksiyon Hastalıklarının Genel Epidemiyolojik Özellikleri s.18",
+    "definition": "Bakterilerin kanda bulunması.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Kanda çoğalma sepsistir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-viremi",
+    "term": "Viremi",
+    "aliases": [],
+    "category": "tani",
+    "kurul": "Kurul 1",
+    "discipline": "Halk Sağlığı",
+    "instructorAndSource": "Ders notu: 5)Enfeksiyon Hastalıklarının Genel Epidemiyolojik Özellikleri s.18",
+    "definition": "Virüslerin kanda bulunması.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-fungemi",
+    "term": "Fungemi",
+    "aliases": [],
+    "category": "tani",
+    "kurul": "Kurul 1",
+    "discipline": "Halk Sağlığı",
+    "instructorAndSource": "Ders notu: 5)Enfeksiyon Hastalıklarının Genel Epidemiyolojik Özellikleri s.18",
+    "definition": "Mantarların kanda bulunması.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-dezenfeksiyon",
+    "term": "Dezenfeksiyon",
+    "aliases": [],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Halk Sağlığı",
+    "instructorAndSource": "Ders notu: 5)Enfeksiyon Hastalıklarının Genel Epidemiyolojik Özellikleri s.19",
+    "definition": "Cansız ortamların patojen mikroorganizmalardan fiziksel ve kimyasal yöntemlerle temizlenmesi.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Tanımda 'sporlar dâhil' yoktur.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-sterilizasyon",
+    "term": "Sterilizasyon",
+    "aliases": [],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Halk Sağlığı",
+    "instructorAndSource": "Ders notu: 5)Enfeksiyon Hastalıklarının Genel Epidemiyolojik Özellikleri s.20",
+    "definition": "Ortamların sporlar dâhil bütün mikroorganizmalardan arındırılması.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Dezenfeksiyondan daha etkili yöntem gerektirir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-pastorizasyon",
+    "term": "Pastörizasyon",
+    "aliases": [
+      "Pastorizasyon"
+    ],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Halk Sağlığı",
+    "instructorAndSource": "Ders notu: 5)Enfeksiyon Hastalıklarının Genel Epidemiyolojik Özellikleri s.21",
+    "definition": "Mikroorganizma yoğunluğunu azaltmak için hızlı ısıtma ve hızlı soğutmaya dayalı işlem; tam sterilizasyon sağlamaz.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "63 °C/30 dk ya da 72 °C/15 sn, ardından hızla 10 °C.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-tindalizasyon",
+    "term": "Tindalizasyon",
+    "aliases": [
+      "Aralıklı sterilizasyon"
+    ],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Halk Sağlığı",
+    "instructorAndSource": "Ders notu: 5)Enfeksiyon Hastalıklarının Genel Epidemiyolojik Özellikleri s.22",
+    "definition": "100 °C üstünde bozulan sıvılar için 55–100 °C'de yarım saat, üst üste en az üç gün uygulanan sterilizasyon yöntemi.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-asepsi",
+    "term": "Asepsi",
+    "aliases": [],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Halk Sağlığı",
+    "instructorAndSource": "Ders notu: 5)Enfeksiyon Hastalıklarının Genel Epidemiyolojik Özellikleri s.23",
+    "definition": "Tıbbi ve cerrahi işlemlerin kirlenmeyi önleyecek koşullarda yapılması ve ortamda mikroorganizma bulunmaması.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-antisepsi",
+    "term": "Antisepsi",
+    "aliases": [],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Halk Sağlığı",
+    "instructorAndSource": "Ders notu: 5)Enfeksiyon Hastalıklarının Genel Epidemiyolojik Özellikleri s.23",
+    "definition": "Vücut yüzeyi ve lezyonlardaki patojen mikroorganizmaların yok edilmesi.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Cansız ortam için dezenfeksiyon kullanılır.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-dogrudan_bulasma",
+    "term": "Doğrudan bulaşma",
+    "aliases": [
+      "Direkt bulaşma"
+    ],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Halk Sağlığı",
+    "instructorAndSource": "Ders notu: 5)Enfeksiyon Hastalıklarının Genel Epidemiyolojik Özellikleri s.33",
+    "definition": "Etkenin hiçbir aracı olmadan kaynaktan yeni konakçıya geçmesi; direkt temas ve direkt damlacık.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-dolayli_bulasma",
+    "term": "Dolaylı bulaşma",
+    "aliases": [
+      "İndirekt bulaşma"
+    ],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Halk Sağlığı",
+    "instructorAndSource": "Ders notu: 5)Enfeksiyon Hastalıklarının Genel Epidemiyolojik Özellikleri s.36",
+    "definition": "Etkenin canlı veya cansız bir aracıyla taşınması; hava, su ve besinler, vektörler, eşyalar.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-hava_yoluyla_bulasma",
+    "term": "Hava yoluyla bulaşma",
+    "aliases": [],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Halk Sağlığı",
+    "instructorAndSource": "Ders notu: 5)Enfeksiyon Hastalıklarının Genel Epidemiyolojik Özellikleri s.38",
+    "definition": "Damlacık çekirdeklerinin havada asılı kalıp hava hareketleriyle uzağa taşınması.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Direkt damlacıktan farklıdır.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-fekal_oral_yol",
+    "term": "Fekal–oral yol",
+    "aliases": [
+      "Fekal-oral bulaşma"
+    ],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Halk Sağlığı",
+    "instructorAndSource": "Ders notu: 5)Enfeksiyon Hastalıklarının Genel Epidemiyolojik Özellikleri s.40",
+    "definition": "Anal yolla çıkan etkenin su ve besinler ya da el ve eşyalarla taşınıp ağızdan alınması.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-biyolojik_vektorluk",
+    "term": "Biyolojik vektörlük",
+    "aliases": [],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Halk Sağlığı",
+    "instructorAndSource": "Ders notu: 5)Enfeksiyon Hastalıklarının Genel Epidemiyolojik Özellikleri s.41",
+    "definition": "Etkenin vektörün vücudunda gelişip çoğalarak bulaştırılması.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-mekanik_vektorluk",
+    "term": "Mekanik vektörlük",
+    "aliases": [],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Halk Sağlığı",
+    "instructorAndSource": "Ders notu: 5)Enfeksiyon Hastalıklarının Genel Epidemiyolojik Özellikleri s.41",
+    "definition": "Etkenin vektörün dış yüzeyinde taşınarak bulaştırılması.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-intrensek_ozellik",
+    "term": "İntrensek özellik",
+    "aliases": [
+      "Mikrobiyolojik özellik"
+    ],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Halk Sağlığı",
+    "instructorAndSource": "Ders notu: 5)Enfeksiyon Hastalıklarının Genel Epidemiyolojik Özellikleri s.46",
+    "definition": "Etkende doğal olarak var olan büyüklük, şekil, hareket, yapı, enzim, toksin, üreme ve beslenme özellikleri.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-enfektivite",
+    "term": "Enfektivite",
+    "aliases": [],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Halk Sağlığı",
+    "instructorAndSource": "Ders notu: 5)Enfeksiyon Hastalıklarının Genel Epidemiyolojik Özellikleri s.51",
+    "definition": "Etkenin konakçıda enfeksiyon oluşturabilme gücü; gereken mikroorganizma sayısıyla ölçülür.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Az sayıda mikroorganizma yeterliyse enfektivite yüksektir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-median_enfektif_doz_id50",
+    "term": "Median enfektif doz (ID50)",
+    "aliases": [
+      "ID50"
+    ],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Halk Sağlığı",
+    "instructorAndSource": "Ders notu: 5)Enfeksiyon Hastalıklarının Genel Epidemiyolojik Özellikleri s.52",
+    "definition": "Deney konakçılarının yarısında enfeksiyon oluşturan doz; enfektivite ölçütü.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-median_letal_doz_ld50",
+    "term": "Median letal doz (LD50)",
+    "aliases": [
+      "LD50"
+    ],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Halk Sağlığı",
+    "instructorAndSource": "Ders notu: 5)Enfeksiyon Hastalıklarının Genel Epidemiyolojik Özellikleri s.52",
+    "definition": "Deney konakçılarının yarısını öldüren doz.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-vaka_fatalite_hizi",
+    "term": "Vaka fatalite hızı",
+    "aliases": [],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Halk Sağlığı",
+    "instructorAndSource": "Ders notu: 5)Enfeksiyon Hastalıklarının Genel Epidemiyolojik Özellikleri s.50",
+    "definition": "Hastalananlar içinde ölenlerin oranı; virulans ölçütü.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-hepatotrop",
+    "term": "Hepatotrop",
+    "aliases": [
+      "Hepatotropik"
+    ],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Halk Sağlığı",
+    "instructorAndSource": "Ders notu: 5)Enfeksiyon Hastalıklarının Genel Epidemiyolojik Özellikleri s.53",
+    "definition": "Karaciğere yönelen (hepatit virüsleri).",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-transmisibilite",
+    "term": "Transmisibilite",
+    "aliases": [
+      "Bulaşıcılık"
+    ],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Halk Sağlığı",
+    "instructorAndSource": "Ders notu: 5)Enfeksiyon Hastalıklarının Genel Epidemiyolojik Özellikleri s.56",
+    "definition": "Etkenin bir konakçıdan diğerine taşınabilme özelliği (bulaşıcılık).",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Çıkış yolu ve dış ortama dayanıklılıkla ilişkilidir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-immunojenite",
+    "term": "İmmünojenite",
+    "aliases": [
+      "İmmunogenite"
+    ],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Halk Sağlığı",
+    "instructorAndSource": "Ders notu: 5)Enfeksiyon Hastalıklarının Genel Epidemiyolojik Özellikleri s.57",
+    "definition": "Etkenin konakçıda immün cevap oluşturabilme özelliği.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Antijenik yapı ve konakçı yanıtına bağlıdır.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-antibiyotik_direnci",
+    "term": "Antibiyotik direnci",
+    "aliases": [],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Halk Sağlığı",
+    "instructorAndSource": "Ders notu: 5)Enfeksiyon Hastalıklarının Genel Epidemiyolojik Özellikleri s.59",
+    "definition": "Mikroorganizma suşlarının antibiyotiklere dirençli olması veya direnç geliştirmesi.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Uygunsuz kullanım dirençlileri yaygınlaştırır.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-direnc_faktorleri",
+    "term": "Direnç faktörleri",
+    "aliases": [],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Halk Sağlığı",
+    "instructorAndSource": "Ders notu: 5)Enfeksiyon Hastalıklarının Genel Epidemiyolojik Özellikleri s.61",
+    "definition": "Konakçının enfeksiyon etkenlerine karşı savunmasında rol oynayan faktörler.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-asit_manto",
+    "term": "Asit manto",
+    "aliases": [],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Halk Sağlığı",
+    "instructorAndSource": "Ders notu: 5)Enfeksiyon Hastalıklarının Genel Epidemiyolojik Özellikleri s.65",
+    "definition": "Deri üzerindeki ter ve yağ bezlerinin oluşturduğu asidik koruyucu tabaka.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Kirlenme ve aşırı temizlik bozabilir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-ture_has_bagisiklik",
+    "term": "Türe has bağışıklık",
+    "aliases": [],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Halk Sağlığı",
+    "instructorAndSource": "Ders notu: 5)Enfeksiyon Hastalıklarının Genel Epidemiyolojik Özellikleri s.77",
+    "definition": "Farklı canlı türlerinin bazı mikroorganizmalara bağışık olması.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-irka_has_bagisiklik",
+    "term": "Irka has bağışıklık",
+    "aliases": [],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Halk Sağlığı",
+    "instructorAndSource": "Ders notu: 5)Enfeksiyon Hastalıklarının Genel Epidemiyolojik Özellikleri s.78",
+    "definition": "Aynı türün farklı ırklarının bir mikroorganizmaya farklı düzeyde bağışık olması.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-bireysel_bagisiklik",
+    "term": "Bireysel bağışıklık",
+    "aliases": [],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Halk Sağlığı",
+    "instructorAndSource": "Ders notu: 5)Enfeksiyon Hastalıklarının Genel Epidemiyolojik Özellikleri s.79",
+    "definition": "Aynı ırkın bireylerinin aynı etkene farklı düzeyde bağışık olması.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-dogal_aktif_bagisiklik",
+    "term": "Doğal aktif bağışıklık",
+    "aliases": [],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Halk Sağlığı",
+    "instructorAndSource": "Ders notu: 5)Enfeksiyon Hastalıklarının Genel Epidemiyolojik Özellikleri s.82",
+    "definition": "Etkenin doğal yolla alınmasıyla kazanılan bağışıklık.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Kızamık, kabakulak, suçiçeği geçirme.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-yapay_aktif_bagisiklik",
+    "term": "Yapay aktif bağışıklık",
+    "aliases": [],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Halk Sağlığı",
+    "instructorAndSource": "Ders notu: 5)Enfeksiyon Hastalıklarının Genel Epidemiyolojik Özellikleri s.83",
+    "definition": "Antijenlerin yapay olarak uygulanmasıyla (aşılama) kazanılan bağışıklık.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-dogal_pasif_bagisiklik",
+    "term": "Doğal pasif bağışıklık",
+    "aliases": [],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Halk Sağlığı",
+    "instructorAndSource": "Ders notu: 5)Enfeksiyon Hastalıklarının Genel Epidemiyolojik Özellikleri s.85",
+    "definition": "Bağışıklık ürünlerinin doğal koşullarda (plasenta, anne sütü) başka konakçıya geçmesi.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-yapay_pasif_bagisiklik",
+    "term": "Yapay pasif bağışıklık",
+    "aliases": [],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Halk Sağlığı",
+    "instructorAndSource": "Ders notu: 5)Enfeksiyon Hastalıklarının Genel Epidemiyolojik Özellikleri s.86",
+    "definition": "Bağışıklık ürünlerinin yapay olarak (serum, immünoglobulin) verilmesiyle oluşan bağışıklık.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-ruam",
+    "term": "Ruam",
+    "aliases": [
+      "Glanders"
+    ],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Halk Sağlığı",
+    "instructorAndSource": "Ders notu: 5)Enfeksiyon Hastalıklarının Genel Epidemiyolojik Özellikleri s.29",
+    "definition": "Kaynağı omurgalı hayvanlar olan bulaşıcı hastalık.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Derste kuduz ve şarbonla birlikte hayvan kaynaklı örnek.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-kabakulak",
+    "term": "Kabakulak",
+    "aliases": [
+      "Parotit"
+    ],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Halk Sağlığı",
+    "instructorAndSource": "Ders notu: 5)Enfeksiyon Hastalıklarının Genel Epidemiyolojik Özellikleri s.82",
+    "definition": "Bir kez geçirildiğinde doğal aktif bağışıklık bırakan viral hastalık.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
   }
 ]
