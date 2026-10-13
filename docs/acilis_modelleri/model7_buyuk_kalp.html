@@ -1,0 +1,75 @@
+<!doctype html><html><head><meta charset=utf-8><title>Açılış · Model 7 · Büyük kalp</title>    <style>
+      /* Açılış ekranı (v18) — Model 7 "Büyük kalp": Model 6'dan — kalp ve hale %15 daha büyük (toplam ×1,32), A %5 kısa
+         (tepe 124→134), dış EKG kalpten uzak kalsın diye iki yana 80 birim kaydı; kalp iki kat sık atar (1,3 sn,
+         ilk vuruş ışık yıldızı bitirince), dış EKG uçları 40'ar birim kısa, A'nın ayakları EKG çizgisine 12 birim yakın. Model 6: Model 5'in devamı — A daha belirgin (yüksek tepe, uzun açık bacaklar,
+         dar ve alçak kollar), çizgi %10 + %20 kalın, kalp ve hale %15 büyük. Temel Model 5: "Kalp içi yıldız-A, dış EKG" (kullanıcının Lottie dosyası ve iki referans görseli temel alındı).
+         Tek çizgi: EKG kalpten uzakta başlar (iki P-QRS-T), düz hatla kalbe girer; kalbin içinde kavisli yıldız-A çizer —
+         kavisle sağ kola → düz çizgiyle sol kola → kavisle sağ ayağa → tepeye → sol ayağa → kavisle kalpten çıkar — ve sağda
+         yine kalpten uzakta iki P-QRS-T ile biter. Çizgi iki tonlu (kırmızı kontür + açık pembe çekirdek); ışık beyaz çekirdek
+         + pembe hale. Hız: yıldızın dışında 5, içinde 10 birim (dış 876 + yıldız 1092 + dış 886 birim; hareket
+         döngünün ilk %85'i). Kalp ve arkasındaki hale ışık yıldızı bitirince atar; mini kalpler uçuşur. En az ~5 sn (App.tsx). */
+      #app-splash {
+        --sp-bg: #F6F4F6; --sp-glow: rgba(242,61,94,.10);
+        position: fixed; inset: 0; z-index: 99999; display: grid; place-items: center; overflow: hidden;
+        background: radial-gradient(60vmax 60vmax at 50% 46%, var(--sp-glow), transparent 62%), var(--sp-bg);
+        transition: opacity .35s ease, transform .35s ease, visibility .35s;
+      }
+      html[data-mode="sepia"] #app-splash { --sp-bg: #F3ECDD; --sp-glow: rgba(184,50,79,.10); }
+      html[data-mode="dark"] #app-splash { --sp-bg: #0D1420; --sp-glow: rgba(255,92,134,.14); }
+      #app-splash.is-leaving { opacity: 0; transform: scale(1.03); visibility: hidden; pointer-events: none; }
+      .sp-logo { position: relative; width: min(600px, 96vw); aspect-ratio: 1192 / 466; animation: sp-pop .6s cubic-bezier(.34,1.56,.64,1) both; }
+      html.is-standalone .sp-logo { animation: none; }
+      .sp-logo > svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+      .sp-hg, .sp-aura { transform-box: view-box; transform-origin: 256px 215px; will-change: transform; animation: sp-beat 1.3s .3s ease-out infinite; }
+      .sp-hg path { filter: drop-shadow(0 10px 18px rgba(242,61,94,.38)); }
+      .sp-aura { animation-name: sp-aura; }
+      .sp-d { stroke-dasharray: 1 1; animation: sp-draw 2.6s .3s linear both; }
+      .sp-c { stroke-dasharray: 0.12 2; stroke-dashoffset: 0.12; animation: sp-comet 2.6s .3s linear infinite; }
+      .sp-c.is-core { filter: drop-shadow(0 0 3px #fff); }
+      .sp-p { position: absolute; width: 18px; height: 15px; opacity: 0; will-change: transform, opacity; animation: sp-up 2.8s ease-in infinite; }
+      .sp-p svg { display: block; width: 100%; height: 100%; }
+      .sp-p:nth-child(1) { left: 30%; bottom: 62%; width: 16px; height: 14px; animation-delay: 0.4s; }
+      .sp-p:nth-child(2) { left: 33%; bottom: 8%; width: 22px; height: 19px; animation-delay: 1.5s; }
+      .sp-p:nth-child(3) { left: 42%; bottom: 74%; width: 14px; height: 12px; animation-delay: 0.9s; }
+      .sp-p:nth-child(4) { left: 47%; bottom: 2%; width: 18px; height: 15px; animation-delay: 2.0s; }
+      .sp-p:nth-child(5) { left: 55%; bottom: 70%; width: 20px; height: 17px; animation-delay: 1.2s; }
+      .sp-p:nth-child(6) { left: 60%; bottom: 6%; width: 14px; height: 12px; animation-delay: 0.6s; }
+      .sp-p:nth-child(7) { left: 66%; bottom: 58%; width: 18px; height: 15px; animation-delay: 1.8s; }
+      .sp-p:nth-child(8) { left: 69%; bottom: 14%; width: 22px; height: 19px; animation-delay: 1.0s; }
+      @keyframes sp-pop { 0% { opacity: 0; transform: scale(.7); } 100% { opacity: 1; transform: none; } }
+      /* Uzaklık (pathLength=1) ↔ zaman: yıldıza giriş %30.7 → %32.3 · yıldızdan çıkış %69.0 → %52.4 · son %100 → %85 */
+      @keyframes sp-draw { 0% { stroke-dashoffset: 1; } 32.3% { stroke-dashoffset: 0.693; } 52.4% { stroke-dashoffset: 0.310; } 85%, 100% { stroke-dashoffset: 0; } }
+      @keyframes sp-comet { 0% { stroke-dashoffset: 0.12; } 32.3% { stroke-dashoffset: -0.187; } 52.4% { stroke-dashoffset: -0.570; } 85% { stroke-dashoffset: -0.88; } 92%, 100% { stroke-dashoffset: -1; } }
+      @keyframes sp-beat { 0%, 100% { transform: none; } 99% { transform: none; } 5% { transform: scale(1.11); } 12% { transform: scale(1.01); } 18% { transform: scale(1.06); } 29% { transform: none; } }
+      @keyframes sp-aura { 0%, 100% { transform: scale(1); opacity: .8; } 99% { transform: scale(1); opacity: .8; } 7% { transform: scale(1.12); opacity: 1; } 35% { transform: scale(1); opacity: .8; } }
+      @keyframes sp-up { 0% { opacity: 0; transform: translateY(0) scale(.8); } 20% { opacity: .9; } 100% { opacity: 0; transform: translateY(-90px) scale(1.1) rotate(15deg); } }
+      @media (prefers-reduced-motion: reduce) {
+        #app-splash * { animation: none !important; transform: none !important; }
+        .sp-logo { opacity: 1 !important; } .sp-d { stroke-dashoffset: 0; } .sp-p, .sp-c { display: none; }
+      }
+    </style>
+</head><body style="margin:0">    <div id="app-splash" aria-hidden="true">
+      <div class="sp-logo">
+        <div class="sp-parts">
+          <span class="sp-p"><svg viewBox="0 0 120 100" aria-hidden="true"><path d="M60 88 C20 62 8 42 18 26 C27 12 46 13 60 30 C74 13 93 12 102 26 C112 42 100 62 60 88 Z" fill="#FA5A7A"/></svg></span>
+          <span class="sp-p"><svg viewBox="0 0 120 100" aria-hidden="true"><path d="M60 88 C20 62 8 42 18 26 C27 12 46 13 60 30 C74 13 93 12 102 26 C112 42 100 62 60 88 Z" fill="#FA5A7A"/></svg></span>
+          <span class="sp-p"><svg viewBox="0 0 120 100" aria-hidden="true"><path d="M60 88 C20 62 8 42 18 26 C27 12 46 13 60 30 C74 13 93 12 102 26 C112 42 100 62 60 88 Z" fill="#FA5A7A"/></svg></span>
+          <span class="sp-p"><svg viewBox="0 0 120 100" aria-hidden="true"><path d="M60 88 C20 62 8 42 18 26 C27 12 46 13 60 30 C74 13 93 12 102 26 C112 42 100 62 60 88 Z" fill="#FA5A7A"/></svg></span>
+          <span class="sp-p"><svg viewBox="0 0 120 100" aria-hidden="true"><path d="M60 88 C20 62 8 42 18 26 C27 12 46 13 60 30 C74 13 93 12 102 26 C112 42 100 62 60 88 Z" fill="#FA5A7A"/></svg></span>
+          <span class="sp-p"><svg viewBox="0 0 120 100" aria-hidden="true"><path d="M60 88 C20 62 8 42 18 26 C27 12 46 13 60 30 C74 13 93 12 102 26 C112 42 100 62 60 88 Z" fill="#FA5A7A"/></svg></span>
+          <span class="sp-p"><svg viewBox="0 0 120 100" aria-hidden="true"><path d="M60 88 C20 62 8 42 18 26 C27 12 46 13 60 30 C74 13 93 12 102 26 C112 42 100 62 60 88 Z" fill="#FA5A7A"/></svg></span>
+          <span class="sp-p"><svg viewBox="0 0 120 100" aria-hidden="true"><path d="M60 88 C20 62 8 42 18 26 C27 12 46 13 60 30 C74 13 93 12 102 26 C112 42 100 62 60 88 Z" fill="#FA5A7A"/></svg></span>
+        </div>
+        <svg viewBox="-340 -18 1192 466" aria-hidden="true">
+          <defs><linearGradient id="sph-g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FF6B8A"/><stop offset=".55" stop-color="#F23D5E"/><stop offset="1" stop-color="#D21F48"/></linearGradient></defs>
+          <g class="sp-aura" fill="#FA4D70"><path d="M60 88 C20 62 8 42 18 26 C27 12 46 13 60 30 C74 13 93 12 102 26 C112 42 100 62 60 88 Z" transform="translate(-116.9 -97.8) scale(6.216)" opacity=".05"/><path d="M60 88 C20 62 8 42 18 26 C27 12 46 13 60 30 C74 13 93 12 102 26 C112 42 100 62 60 88 Z" transform="translate(-101.1 -84.6) scale(5.951)" opacity=".09"/><path d="M60 88 C20 62 8 42 18 26 C27 12 46 13 60 30 C74 13 93 12 102 26 C112 42 100 62 60 88 Z" transform="translate(-90.8 -76.0) scale(5.779)" opacity=".14"/></g>
+          <g class="sp-hg"><path d="M60 88 C20 62 8 42 18 26 C27 12 46 13 60 30 C74 13 93 12 102 26 C112 42 100 62 60 88 Z" fill="url(#sph-g)" transform="translate(-82.6 -69.2) scale(5.643)"/></g>
+          <path class="sp-d" d="M-330 252 H-312 Q-300 238 -288 252 H-276 L-270 261 L-260 180 L-248 282 L-240 252 H-222 Q-206 234 -190 252 H-122 L-116 261 L-106 180 L-94 282 L-86 252 H-72 Q-56 236 -40 252 H150 C225 250 300 236 338 202 L178 206 C232 222 290 262 312 320 L256 134 L202 318 C232 286 290 252 350 252 H552 Q568 236 584 252 H598 L606 261 L616 180 L628 282 L636 252 H702 Q718 234 734 252 H752 L760 261 L770 180 L782 282 L790 252 H802 Q814 238 826 252 H842" pathLength="1" fill="none" stroke="#EE3357" stroke-opacity="1" stroke-width="9.2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path class="sp-d" d="M-330 252 H-312 Q-300 238 -288 252 H-276 L-270 261 L-260 180 L-248 282 L-240 252 H-222 Q-206 234 -190 252 H-122 L-116 261 L-106 180 L-94 282 L-86 252 H-72 Q-56 236 -40 252 H150 C225 250 300 236 338 202 L178 206 C232 222 290 262 312 320 L256 134 L202 318 C232 286 290 252 350 252 H552 Q568 236 584 252 H598 L606 261 L616 180 L628 282 L636 252 H702 Q718 234 734 252 H752 L760 261 L770 180 L782 282 L790 252 H802 Q814 238 826 252 H842" pathLength="1" fill="none" stroke="#FFD6E0" stroke-opacity="1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+          <path class="sp-c" d="M-330 252 H-312 Q-300 238 -288 252 H-276 L-270 261 L-260 180 L-248 282 L-240 252 H-222 Q-206 234 -190 252 H-122 L-116 261 L-106 180 L-94 282 L-86 252 H-72 Q-56 236 -40 252 H150 C225 250 300 236 338 202 L178 206 C232 222 290 262 312 320 L256 134 L202 318 C232 286 290 252 350 252 H552 Q568 236 584 252 H598 L606 261 L616 180 L628 282 L636 252 H702 Q718 234 734 252 H752 L760 261 L770 180 L782 282 L790 252 H802 Q814 238 826 252 H842" pathLength="1" fill="none" stroke="#FF7399" stroke-opacity="0.18" stroke-width="30.4" stroke-linecap="round" stroke-linejoin="round"/>
+          <path class="sp-c" d="M-330 252 H-312 Q-300 238 -288 252 H-276 L-270 261 L-260 180 L-248 282 L-240 252 H-222 Q-206 234 -190 252 H-122 L-116 261 L-106 180 L-94 282 L-86 252 H-72 Q-56 236 -40 252 H150 C225 250 300 236 338 202 L178 206 C232 222 290 262 312 320 L256 134 L202 318 C232 286 290 252 350 252 H552 Q568 236 584 252 H598 L606 261 L616 180 L628 282 L636 252 H702 Q718 234 734 252 H752 L760 261 L770 180 L782 282 L790 252 H802 Q814 238 826 252 H842" pathLength="1" fill="none" stroke="#FFF0F5" stroke-opacity="0.47" stroke-width="16.7" stroke-linecap="round" stroke-linejoin="round"/>
+          <path class="sp-c is-core" d="M-330 252 H-312 Q-300 238 -288 252 H-276 L-270 261 L-260 180 L-248 282 L-240 252 H-222 Q-206 234 -190 252 H-122 L-116 261 L-106 180 L-94 282 L-86 252 H-72 Q-56 236 -40 252 H150 C225 250 300 236 338 202 L178 206 C232 222 290 262 312 320 L256 134 L202 318 C232 286 290 252 350 252 H552 Q568 236 584 252 H598 L606 261 L616 180 L628 282 L636 252 H702 Q718 234 734 252 H752 L760 261 L770 180 L782 282 L790 252 H802 Q814 238 826 252 H842" pathLength="1" fill="none" stroke="#fff" stroke-opacity="1" stroke-width="7.4" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+    </div>
+</body></html>
