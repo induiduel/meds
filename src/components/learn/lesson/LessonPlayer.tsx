@@ -40,6 +40,7 @@ import type { InteractiveDeck } from '../InteractiveDeckView';
 import { AskAi, GlobalTopicSearchModal, SpotList } from '../InteractiveDeckView';
 import type { DeckViewMode } from '../InteractiveDeckView';
 import { DeckPdfViewer } from '../DeckPdfViewer';
+import { SplitPane } from './SplitPane';
 import { useGlossary } from '../MedicalGlossaryPopover';
 import { HL_COLORS, Highlightable, isPenActive, setHighlighterTool, stopPen, useHighlighterTool, usePenActive } from '../../ui/Highlighter';
 import { resetPenDevice, usePenDevice } from '../../ui/penInput';
@@ -1085,17 +1086,21 @@ export const LessonPlayer: React.FC<LessonPlayerProps> = ({ deck, startAt, initi
         <DeckPdfViewer deck={deck} currentSlideNumber={step.slide.slideNumber} currentSlide={step.slide} targetPage={pdfPage} targetPageRange={pdfLoc.pageRange} onToggleSplitView={() => setViewMode('split')} onPageChange={setPdfPage} />
       </div>
     ) : viewMode === 'split' ? (
-      <div className="ls-split">
-        <div className="ls-split-l" ref={mainRef} onTouchStart={onTouchStart} onTouchEnd={onTouchEnd}>
-          <article className={`ls-col ${dir > 0 ? 'ls-enter-r' : 'ls-enter-l'}`} key={index} data-step={index}>
-            {FlowArticle(step, true)}
-            {FlowNav}
-          </article>
-        </div>
-        <div className="ls-split-r">
-          <DeckPdfViewer deck={deck} currentSlideNumber={step.slide.slideNumber} currentSlide={step.slide} targetPage={pdfPage} targetPageRange={pdfLoc.pageRange} isSplitView onToggleSplitView={() => setViewMode('interactive')} onPageChange={setPdfPage} />
-        </div>
-      </div>
+      <SplitPane
+        left={
+          <div className="ls-split-l" ref={mainRef} onTouchStart={onTouchStart} onTouchEnd={onTouchEnd}>
+            <article className={`ls-col ${dir > 0 ? 'ls-enter-r' : 'ls-enter-l'}`} key={index} data-step={index}>
+              {FlowArticle(step, true)}
+              {FlowNav}
+            </article>
+          </div>
+        }
+        right={
+          <div className="ls-split-r">
+            <DeckPdfViewer deck={deck} currentSlideNumber={step.slide.slideNumber} currentSlide={step.slide} targetPage={pdfPage} targetPageRange={pdfLoc.pageRange} isSplitView onToggleSplitView={() => setViewMode('pdf')} onPageChange={setPdfPage} />
+          </div>
+        }
+      />
     ) : layout === 'A' ? (
       <div className={`ls-A ${outlineOpen && railInline ? 'has-outline' : ''}`}>
         {outlineOpen && railInline && (

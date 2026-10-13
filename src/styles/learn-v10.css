@@ -322,4 +322,30 @@ html[data-layout="akis"] .lv-grid, html[data-layout="akis"] .lv-resume { grid-te
 .lv-vswitch button { height: 26px; min-width: 32px; padding: 0 8px; border: 0; border-radius: 7px; background: transparent; color: var(--color-ink-3); font: 700 12px var(--font-sans); cursor: pointer; }
 .lv-vswitch button:hover { color: var(--color-ink); }
 .lv-vswitch button[aria-pressed="true"] { background: var(--color-accent); color: var(--color-on-accent); box-shadow: var(--shadow-sm, 0 1px 2px rgb(0 0 0 / .12)); }
+
+/* Yan yana · sürüklenebilir ayraç (SplitPane). Ayraç kendi sütununu alır; boşluk onun içinde. */
+.ls-split.has-handle { gap: 0; }
+.ls-split-handle { position: relative; display: flex; align-items: center; justify-content: center; cursor: col-resize; touch-action: none; outline: none; z-index: 2; }
+.ls-split.is-rows .ls-split-handle { cursor: row-resize; }
+.ls-split-grip { width: 4px; height: 44px; border-radius: 99px; background: var(--color-line); transition: background .15s, height .15s, width .15s; }
+.ls-split.is-rows .ls-split-grip { width: 44px; height: 4px; }
+.ls-split-handle:hover .ls-split-grip, .ls-split-handle:focus-visible .ls-split-grip, .ls-split.is-dragging .ls-split-grip { background: var(--color-accent); height: 72px; }
+.ls-split.is-rows .ls-split-handle:hover .ls-split-grip, .ls-split.is-rows .ls-split-handle:focus-visible .ls-split-grip, .ls-split.is-rows.is-dragging .ls-split-grip { height: 4px; width: 72px; }
+.ls-split.is-dragging { cursor: col-resize; user-select: none; }
+.ls-split.is-rows.is-dragging { cursor: row-resize; }
+.ls-split.is-dragging :is(.ls-split-l, .ls-split-r) { pointer-events: none; }
+.ls-split-val { position: absolute; top: 50%; left: 50%; transform: translate(-50%, calc(-50% - 56px)); padding: 3px 8px; border-radius: 8px; background: var(--color-ink); color: var(--color-canvas); font-size: 11.5px; font-weight: 700; white-space: nowrap; font-variant-numeric: tabular-nums; pointer-events: none; }
+.ls-split.is-rows .ls-split-val { transform: translate(calc(-50% - 74px), -50%); }
+.ls-split-presets { position: absolute; top: 50%; left: 50%; transform: translate(-50%, 46px); display: flex; flex-direction: column; gap: 3px; padding: 3px; border-radius: 10px; background: var(--color-white); border: 1px solid var(--color-line); box-shadow: var(--shadow-sm); opacity: 0; pointer-events: none; transition: opacity .15s; }
+.ls-split.is-rows .ls-split-presets { flex-direction: row; transform: translate(46px, -50%); }
+.ls-split-handle:hover .ls-split-presets, .ls-split-handle:focus-within .ls-split-presets { opacity: 1; pointer-events: auto; }
+.ls-split.is-dragging .ls-split-presets { opacity: 0; pointer-events: none; }
+.ls-split-presets button { width: 26px; height: 22px; display: grid; place-items: center; border: 0; border-radius: 6px; background: transparent; cursor: pointer; }
+.ls-split-presets button:hover { background: var(--color-field); }
+.ls-split-presets button.is-on { background: var(--color-accent-soft); }
+.ls-split-presets i { width: 18px; height: 12px; border-radius: 3px; border: 1.5px solid var(--color-ink-3); background: linear-gradient(90deg, var(--color-ink-3) 0 var(--r), transparent var(--r)); background-clip: padding-box; opacity: .8; }
+.ls-split.is-rows .ls-split-presets i { width: 12px; height: 18px; background: linear-gradient(180deg, var(--color-ink-3) 0 var(--r), transparent var(--r)); }
+.ls-split-presets button.is-on i { border-color: var(--color-accent); background-image: linear-gradient(90deg, var(--color-accent) 0 var(--r), transparent var(--r)); opacity: 1; }
+.ls-split.is-rows .ls-split-presets button.is-on i { background-image: linear-gradient(180deg, var(--color-accent) 0 var(--r), transparent var(--r)); }
+@media (hover: none) { .ls-split-presets { opacity: 1; pointer-events: auto; } }
 .lv-vswitch button:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 1px; }

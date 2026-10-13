@@ -32,7 +32,23 @@ export interface PdfDocViewProps {
   onVisiblePage?: (p: number) => void;
   onLoaded?: (numPages: number) => void;
   onError?: (message: string) => void;
+  /** width: sayfa genişliğe sığar; page: sayfanın tamamı görünür */
+  fit?: 'width' | 'page';
+  /** Ek döndürme (0/90/180/270) */
+  rotation?: number;
+  /** Solda küçük sayfa önizlemeleri */
+  thumbs?: boolean;
+  /** Metin araması (≥2 harf); eşleşen sayfalar onSearch ile bildirilir, görünen sayfalarda vurgulanır */
+  query?: string;
+  onSearch?: (r: { hits: PdfSearchHit[]; done: boolean } | null) => void;
 }
+
+export interface PdfSearchHit {
+  page: number;
+  snippet: string;
+}
+
+const norm = (t: string) => t.toLocaleLowerCase('tr').replace(/\s+/g, ' ');
 
 const GAP = 12;
 const PAD = 12;
@@ -44,14 +60,21 @@ interface Slot {
   text?: HTMLDivElement;
   scale?: number; // çizildiği ölçek
   task?: RenderTask | null;
-  textFor?: number; // metin katmanı kuruldu
+  textFor?: number; // metin katmanı kuruldu (döndürme)
 }
 
-export default function PdfDocView({ src, page, highlight, zoom, onZoom, onVisiblePage, onLoaded, onError }: PdfDocViewProps) {
+export default function PdfDocView({ src, page, highlight, zoom, onZoom, onVisiblePage, onLoaded, onError, fit = 'width', rotation = 0, thumbs = false, query = '', onSearch }: PdfDocViewProps) {
   const scrollRef = useRef<HTMLDivElement>(null);
   const [doc, setDoc] = useState<PDFDocumentProxy | null>(null);
   const [sizes, setSizes] = useState<{ w: number; h: number }[]>([]);
   const [width, setWidth] = useState(0);
+  const [height, setHeight] = useState(0);
+  const [current, setCurrent] = useState(1);
+  const rot = ((rotation % 360) + 360) % 360;
+  const texts = useRef(new Map<number, string>());
+  const q = query.trim().length >= 2 ? norm(query.trim()) : '';
+  const qRef = useRef(q);
+  qRef.current = q;
   const [progress, setProgress] = useState<number | null>(0);
   const slots = useRef(new Map<number, Slot>());
   const slotEls = useRef(new Map<number, HTMLDivElement>());
@@ -61,8 +84,9 @@ export default function PdfDocView({ src, page, highlight, zoom, onZoom, onVisib
   /** Programatik kaydırma sürerken ara sayfalar "görünen sayfa" diye geri bildirilmez (hedefi ezmesin). */
   const seeking = useRef<{ page: number; until: number } | null>(null);
   const raf = useRef(0);
-  const cb = useRef({ onVisiblePage, onLoaded, onError, onZoom });
-  cb.current = { onVisiblePage, onLoaded, onError, onZoom };
+  const anchor = useRef<{ i: number; frac: number } | null>(null);
+  const cb = useRef({ onVisiblePage, onLoaded, onError, onZoom, onSearch });
+  cb.current = { onVisiblePage, onLoaded, onError, onZoom, onSearch };
 
   /* ---- belge ---- */
   useEffect(() => {
@@ -72,7 +96,9 @@ export default function PdfDocView({ src, page, highlight, zoom, onZoom, onVisib
     setProgress(0);
     slots.current.clear();
     pages.current.clear();
+    texts.current.clear();
     lastTarget.current = null;
+    anchor.current = null;
     const base = `${getCustomApiUrl() || ''}/vendor/pdfjs/`;
     const task = pdfjs.getDocument({
       url: src,
@@ -151,23 +177,35 @@ export default function PdfDocView({ src, page, highlight, zoom, onZoom, onVisib
   useLayoutEffect(() => {
     const el = scrollRef.current;
     if (!el) return;
-    const ro = new ResizeObserver(() => setWidth(el.clientWidth));
+    const ro = new ResizeObserver(() => {
+      setWidth(el.clientWidth);
+      setHeight(el.clientHeight);
+    });
     ro.observe(el);
     setWidth(el.clientWidth);
+    setHeight(el.clientHeight);
     return () => ro.disconnect();
   }, []);
 
   const avail = Math.max(120, width - PAD * 2);
-  const scaleOf = (i: number) => (sizes[i] ? (avail / sizes[i].w) * zoom : 1);
+  const availH = Math.max(120, height - PAD * 2);
+  // Döndürülmüş boyutlar (90/270'te en ve boy yer değiştirir)
+  const dims = rot % 180 ? sizes.map((s) => ({ w: s.h, h: s.w })) : sizes;
+  const scaleOf = (i: number) => {
+    const d = dims[i];
+    if (!d) return 1;
+    const base = fit === 'page' ? Math.min(avail / d.w, availH / d.h) : avail / d.w;
+    return base * zoom;
+  };
   const tops: number[] = [];
   let acc = PAD;
-  sizes.forEach((s, i) => {
+  dims.forEach((s, i) => {
     tops.push(acc);
     acc += s.h * scaleOf(i) + GAP;
   });
   const totalH = acc + PAD - GAP;
-  const geo = useRef({ tops, sizes, scaleOf });
-  geo.current = { tops, sizes, scaleOf };
+  const geo = useRef({ tops, sizes: dims, scaleOf, rot });
+  geo.current = { tops, sizes: dims, scaleOf, rot };
 
   /* ---- çizim ---- */
   const renderSlot = useCallback(
@@ -175,12 +213,14 @@ export default function PdfDocView({ src, page, highlight, zoom, onZoom, onVisib
       const host = slotEls.current.get(n);
       if (!host || !doc) return;
       const scale = geo.current.scaleOf(n - 1);
+      const r = geo.current.rot;
+      const key = scale * 1000 + r; // ölçek + döndürme
       const slot = slots.current.get(n) || {};
       slots.current.set(n, slot);
-      if (slot.scale !== scale && !slot.task) {
+      if (slot.scale !== key && !slot.task) {
         const pg = await getPage(n);
         if (slots.current.get(n) !== slot) return; // bu arada bırakıldı
-        const vp = pg.getViewport({ scale });
+        const vp = pg.getViewport({ scale, rotation: (pg.rotate + r) % 360 });
         const dpr = Math.min(window.devicePixelRatio || 1, 2);
         const out = Math.min(dpr, Math.sqrt(MAX_CANVAS_PX / (vp.width * vp.height)));
         const canvas = document.createElement('canvas');
@@ -199,7 +239,7 @@ export default function PdfDocView({ src, page, highlight, zoom, onZoom, onVisib
           if (slot.canvas) slot.canvas.width = 0;
           host.prepend(canvas);
           slot.canvas = canvas;
-          slot.scale = scale;
+          slot.scale = key;
           host.classList.add('is-drawn');
         } catch {
           canvas.width = 0; // iptal edildi
@@ -207,19 +247,22 @@ export default function PdfDocView({ src, page, highlight, zoom, onZoom, onVisib
           slot.task = null;
         }
         // Ölçek bu arada değiştiyse yeniden
-        if (geo.current.scaleOf(n - 1) !== slot.scale) return renderSlot(n, withText);
+        if (geo.current.scaleOf(n - 1) * 1000 + geo.current.rot !== slot.scale) return renderSlot(n, withText);
       }
-      // Metin katmanı bir kez kurulur: konumları yüzde, yazı boyutu --scale-factor ile ölçeklenir (yakınlaştırmada yeniden kurulmaz).
-      if (withText && slot.textFor == null && slot.scale) {
-        slot.textFor = slot.scale;
+      // Metin katmanı döndürme başına bir kez kurulur: konumları yüzde, yazı boyutu --scale-factor ile ölçeklenir (yakınlaştırmada yeniden kurulmaz).
+      if (withText && slot.textFor !== r && slot.scale) {
+        slot.textFor = r;
+        slot.text?.remove();
+        slot.text = undefined;
         const pg = await getPage(n);
         const div = document.createElement('div');
         div.className = 'textLayer';
         try {
-          await new pdfjs.TextLayer({ textContentSource: pg.streamTextContent(), container: div, viewport: pg.getViewport({ scale: 1 }) }).render();
-          if (slots.current.get(n) !== slot) return;
+          await new pdfjs.TextLayer({ textContentSource: pg.streamTextContent(), container: div, viewport: pg.getViewport({ scale: 1, rotation: (pg.rotate + r) % 360 }) }).render();
+          if (slots.current.get(n) !== slot || slot.textFor !== r) return;
           host.appendChild(div);
           slot.text = div;
+          markHits(div, qRef.current);
         } catch {
           /* metinsiz sayfa */
         }
@@ -260,12 +303,15 @@ export default function PdfDocView({ src, page, highlight, zoom, onZoom, onVisib
     };
     const first = find(top);
     const last = find(bottom);
+    const ph = (sz[first]?.h ?? 1) * geo.current.scaleOf(first);
+    anchor.current = { i: first, frac: Math.max(0, (top - t[first]) / (ph + GAP)) };
     const atEnd = top + el.clientHeight >= el.scrollHeight - 4;
     const cur = atEnd ? t.length : find(top + el.clientHeight * 0.35) + 1;
     const sk = seeking.current;
     if (sk && (cur === sk.page || Date.now() > sk.until)) seeking.current = null;
     if (!seeking.current && cur !== visible.current) {
       visible.current = cur;
+      setCurrent(cur);
       lastTarget.current = cur;
       cb.current.onVisiblePage?.(cur);
     }
@@ -284,7 +330,7 @@ export default function PdfDocView({ src, page, highlight, zoom, onZoom, onVisib
   // Ölçek/genişlik değişince yeniden çiz (eski tuval yeni çizim bitene dek CSS ile ölçeklenir).
   useEffect(() => {
     schedule();
-  }, [schedule, width, zoom, sizes]);
+  }, [schedule, width, height, zoom, sizes, fit, rot]);
 
   /* ---- hedef sayfaya git ---- */
   const goTo = useCallback((p: number, smooth: boolean) => {
@@ -302,16 +348,61 @@ export default function PdfDocView({ src, page, highlight, zoom, onZoom, onVisib
     const far = Math.abs(p - visible.current) > 2 || lastTarget.current == null || !!seeking.current;
     lastTarget.current = p;
     visible.current = p;
+    setCurrent(p);
     goTo(p, !far);
   }, [page, doc, goTo]);
 
   // Yakınlaştırma değişince görünen sayfa yerinde kalsın
-  const prevZoom = useRef(zoom);
+  // Yakınlaştırma, sığdırma, döndürme ya da alan genişliği (yan yana ayraç) değişince okunan yer kaymasın:
+  // en üstteki sayfa ve o sayfadaki oransal konum korunur.
+  const prevGeo = useRef('');
   useLayoutEffect(() => {
-    if (prevZoom.current === zoom || !doc) return;
-    prevZoom.current = zoom;
-    goTo(visible.current, false);
-  }, [zoom, doc, goTo]);
+    const k = `${zoom}|${fit}|${rot}|${width}|${height}|${sizes.length}`;
+    const was = prevGeo.current;
+    prevGeo.current = k;
+    const el = scrollRef.current;
+    const a = anchor.current;
+    if (!was || was === k || !doc || !el || !a) return;
+    const t = tops[a.i];
+    if (t == null) return;
+    const ph = dims[a.i].h * scaleOf(a.i);
+    el.scrollTop = t + a.frac * (ph + GAP);
+  });
+
+  /* ---- arama ---- */
+  useEffect(() => {
+    for (const s of slots.current.values()) if (s.text) markHits(s.text, q);
+    if (!doc || !q) {
+      cb.current.onSearch?.(null);
+      return;
+    }
+    let dead = false;
+    (async () => {
+      const hits: PdfSearchHit[] = [];
+      for (let i = 1; i <= doc.numPages && !dead; i++) {
+        let str = texts.current.get(i);
+        if (str == null) {
+          try {
+            const tc = await (await getPage(i)).getTextContent();
+            str = (tc.items as any[]).map((it) => ('str' in it ? it.str : '')).join(' ').replace(/\s+/g, ' ');
+          } catch {
+            str = '';
+          }
+          texts.current.set(i, str);
+        }
+        const at = norm(str).indexOf(q);
+        if (at >= 0) {
+          const a = Math.max(0, at - 36);
+          hits.push({ page: i, snippet: (a > 0 ? '…' : '') + str.slice(a, at + q.length + 64).trim() });
+        }
+        if (i % 8 === 0 && !dead) cb.current.onSearch?.({ hits: [...hits], done: false });
+      }
+      if (!dead) cb.current.onSearch?.({ hits, done: true });
+    })();
+    return () => {
+      dead = true;
+    };
+  }, [q, doc, getPage]);
 
   // Ctrl/⌘ + tekerlek (ve dokunmatik yüzey kıstırma) ile yakınlaştırma
   const zoomRef = useRef(zoom);
@@ -322,7 +413,7 @@ export default function PdfDocView({ src, page, highlight, zoom, onZoom, onVisib
     const onWheel = (e: WheelEvent) => {
       if (!e.ctrlKey && !e.metaKey) return;
       e.preventDefault();
-      const z = Math.max(0.5, Math.min(3, zoomRef.current * (e.deltaY < 0 ? 1.1 : 1 / 1.1)));
+      const z = Math.max(0.5, Math.min(4, zoomRef.current * (e.deltaY < 0 ? 1.1 : 1 / 1.1)));
       cb.current.onZoom?.(Math.round(z * 100) / 100);
     };
     el.addEventListener('wheel', onWheel, { passive: false });
@@ -332,6 +423,10 @@ export default function PdfDocView({ src, page, highlight, zoom, onZoom, onVisib
   const [hs, he] = highlight || [0, -1];
 
   return (
+    <>
+    {thumbs && doc && (
+      <PdfThumbs doc={doc} getPage={getPage} dims={dims} rot={rot} current={current} onPick={(p) => { lastTarget.current = p; visible.current = p; setCurrent(p); goTo(p, false); cb.current.onVisiblePage?.(p); }} />
+    )}
     <div className="pdv" ref={scrollRef} onScroll={schedule} tabIndex={0} aria-label="PDF sayfaları">
       {progress !== null && (
         <div className="pdv-loading" role="status">
@@ -361,6 +456,90 @@ export default function PdfDocView({ src, page, highlight, zoom, onZoom, onVisib
           );
         })}
       </div>
+    </div>
+    </>
+  );
+}
+
+/** Metin katmanında aranan ifadeyi içeren parçaları işaretler (parça içi; satırlar arası eşleşmeler sayfa düzeyinde bulunur). */
+function markHits(layer: HTMLElement, q: string) {
+  let first: HTMLElement | null = null;
+  layer.querySelectorAll<HTMLElement>('span').forEach((sp) => {
+    const hit = !!q && !sp.children.length && norm(sp.textContent || '').includes(q);
+    sp.classList.toggle('is-hit', hit);
+    if (hit && !first) first = sp;
+  });
+  return first;
+}
+
+const THUMB_W = 92;
+
+/** Küçük sayfa önizlemeleri: görünür olanlar düşük çözünürlükte bir kez çizilir. */
+function PdfThumbs({ doc, getPage, dims, rot, current, onPick }: {
+  doc: PDFDocumentProxy;
+  getPage: (n: number) => Promise<PDFPageProxy>;
+  dims: { w: number; h: number }[];
+  rot: number;
+  current: number;
+  onPick: (p: number) => void;
+}) {
+  const listRef = useRef<HTMLDivElement>(null);
+  const drawn = useRef(new Map<number, number>()); // sayfa → çizildiği döndürme
+
+  useEffect(() => {
+    const list = listRef.current;
+    if (!list) return;
+    const io = new IntersectionObserver(
+      (ents) => {
+        for (const e of ents) {
+          if (!e.isIntersecting) continue;
+          const host = e.target as HTMLElement;
+          const n = Number(host.dataset.page);
+          if (drawn.current.get(n) === rot) continue;
+          drawn.current.set(n, rot);
+          getPage(n).then(async (pg) => {
+            const vp1 = pg.getViewport({ scale: 1, rotation: (pg.rotate + rot) % 360 });
+            const dpr = Math.min(window.devicePixelRatio || 1, 2);
+            const vp = pg.getViewport({ scale: (THUMB_W / vp1.width) * dpr, rotation: (pg.rotate + rot) % 360 });
+            const c = document.createElement('canvas');
+            c.width = Math.floor(vp.width);
+            c.height = Math.floor(vp.height);
+            try {
+              await pg.render({ canvas: c, viewport: vp }).promise;
+              host.querySelector('canvas')?.remove();
+              host.prepend(c);
+            } catch {
+              drawn.current.delete(n);
+            }
+          });
+        }
+      },
+      { root: list, rootMargin: '200px 0px' },
+    );
+    list.querySelectorAll('.pdv-thumb-c').forEach((el) => io.observe(el));
+    return () => io.disconnect();
+  }, [doc, getPage, rot, dims.length]);
+
+  // Geçerli sayfa önizlemesi görünür kalsın
+  useEffect(() => {
+    const el = listRef.current?.querySelector<HTMLElement>(`[data-thumb="${current}"]`);
+    const list = listRef.current;
+    if (!el || !list) return;
+    const top = el.offsetTop - list.offsetTop;
+    if (top < list.scrollTop || top + el.offsetHeight > list.scrollTop + list.clientHeight) list.scrollTo({ top: top - list.clientHeight / 3 });
+  }, [current]);
+
+  return (
+    <div className="pdv-thumbs" ref={listRef} aria-label="Sayfa önizlemeleri">
+      {dims.map((d, i) => {
+        const n = i + 1;
+        return (
+          <button key={n} type="button" data-thumb={n} className={`pdv-thumb${n === current ? ' is-on' : ''}`} onClick={() => onPick(n)} aria-label={`Sayfa ${n}`} aria-current={n === current ? 'page' : undefined}>
+            <span className="pdv-thumb-c" data-page={n} style={{ width: THUMB_W, height: Math.round((THUMB_W * d.h) / d.w) }} />
+            <small>{n}</small>
+          </button>
+        );
+      })}
     </div>
   );
 }

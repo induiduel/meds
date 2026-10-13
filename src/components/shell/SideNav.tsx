@@ -12,20 +12,46 @@ const COLLAPSE_KEY = 'medsoru_rail_collapsed';
  * Altta: yönetim (yöneticiye) ve kullanıcı kartı → Profil ve ayarlar.
  */
 export const SideNav: React.FC<{ active: AppRoute; onGo: (r: AppRoute) => void; isAdmin: boolean; user: AppUser | null }> = ({ active, onGo, isAdmin, user }) => {
-  const [collapsed, setCollapsed] = useState(() => {
+  // Kullanıcının seçimi (null: seçim yok). Seçim yoksa Akış/Odak düzeninde menü daralmış başlar; düzen
+  // değişince seçim sıfırlanır. Eskiden bu düzenlerde CSS menüyü zorla daraltıyordu ve düğme işe yaramıyordu.
+  const [pref, setPref] = useState<boolean | null>(() => {
     try {
-      return localStorage.getItem(COLLAPSE_KEY) === '1';
+      const v = localStorage.getItem(COLLAPSE_KEY);
+      return v === '1' ? true : v === '0' ? false : null;
     } catch {
-      return false;
+      return null;
     }
   });
+  const [compactLayout, setCompactLayout] = useState(() => /^(akis|odak)$/.test(document.documentElement.dataset.layout || ''));
   useEffect(() => {
-    document.documentElement.dataset.side = collapsed ? 'collapsed' : 'open';
+    const el = document.documentElement;
+    let last = el.dataset.layout;
+    const mo = new MutationObserver(() => {
+      if (el.dataset.layout === last) return;
+      last = el.dataset.layout;
+      setCompactLayout(/^(akis|odak)$/.test(last || ''));
+      setPref(null);
+      try {
+        localStorage.removeItem(COLLAPSE_KEY);
+      } catch {
+        /* ignore */
+      }
+    });
+    mo.observe(el, { attributes: true, attributeFilter: ['data-layout'] });
+    return () => mo.disconnect();
+  }, []);
+  const collapsed = pref ?? compactLayout;
+  const setCollapsed = (f: (c: boolean) => boolean) => {
+    const next = f(collapsed);
+    setPref(next);
     try {
-      localStorage.setItem(COLLAPSE_KEY, collapsed ? '1' : '0');
+      localStorage.setItem(COLLAPSE_KEY, next ? '1' : '0');
     } catch {
       /* ignore */
     }
+  };
+  useEffect(() => {
+    document.documentElement.dataset.side = collapsed ? 'collapsed' : 'open';
   }, [collapsed]);
   useEffect(() => () => void delete document.documentElement.dataset.side, []);
 

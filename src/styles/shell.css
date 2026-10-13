@@ -7,7 +7,7 @@ html { --sh-side-w: 0px; --sh-top-h: 52px; --sh-tabs-h: 62px; }
 @media (min-width: 768px) { html { --sh-side-w: 76px; } }
 @media (min-width: 1024px) {
   html { --sh-side-w: 236px; }
-  html:is([data-side="collapsed"], [data-layout="akis"], [data-layout="odak"]) { --sh-side-w: 76px; }
+  html[data-side="collapsed"] { --sh-side-w: 76px; }
 }
 
 /* ---------- Uygulama sütunu ---------- */
@@ -75,15 +75,15 @@ html { --sh-side-w: 0px; --sh-top-h: 52px; --sh-tabs-h: 62px; }
 }
 @media (min-width: 1024px) {
   .sh-side-collapse { display: grid; }
-  html:is([data-side="collapsed"], [data-layout="akis"], [data-layout="odak"]) .sh-side { padding-inline: 6px; }
-  html:is([data-side="collapsed"], [data-layout="akis"], [data-layout="odak"]) .sh-side :is(.sh-brand-word, .sh-side-label, .sh-side-gl) { display: none; }
-  html:is([data-side="collapsed"], [data-layout="akis"], [data-layout="odak"]) .sh-side-top { flex-direction: column; height: auto; gap: 6px; padding: 0; }
-  html:is([data-side="collapsed"], [data-layout="akis"], [data-layout="odak"]) .sh-side-search { justify-content: center; padding: 0; }
-  html:is([data-side="collapsed"], [data-layout="akis"], [data-layout="odak"]) .sh-side-link { flex-direction: column; justify-content: center; height: auto; min-height: 52px; gap: 3px; padding: 6px 2px; font-size: 10.5px; }
-  html:is([data-side="collapsed"], [data-layout="akis"], [data-layout="odak"]) .sh-side-short { display: block; max-width: 100%; overflow: hidden; text-overflow: ellipsis; }
-  html:is([data-side="collapsed"], [data-layout="akis"], [data-layout="odak"]) .sh-side-link > svg { width: 21px; height: 21px; }
-  html:is([data-side="collapsed"], [data-layout="akis"], [data-layout="odak"]) .sh-side-user { justify-content: center; padding: 6px 0; }
-  html:is([data-side="collapsed"], [data-layout="akis"], [data-layout="odak"]) .sh-side-group + .sh-side-group { margin-top: 4px; padding-top: 4px; border-top: 1px solid var(--color-line); }
+  html[data-side="collapsed"] .sh-side { padding-inline: 6px; }
+  html[data-side="collapsed"] .sh-side :is(.sh-brand-word, .sh-side-label, .sh-side-gl) { display: none; }
+  html[data-side="collapsed"] .sh-side-top { flex-direction: column; height: auto; gap: 6px; padding: 0; }
+  html[data-side="collapsed"] .sh-side-search { justify-content: center; padding: 0; }
+  html[data-side="collapsed"] .sh-side-link { flex-direction: column; justify-content: center; height: auto; min-height: 52px; gap: 3px; padding: 6px 2px; font-size: 10.5px; }
+  html[data-side="collapsed"] .sh-side-short { display: block; max-width: 100%; overflow: hidden; text-overflow: ellipsis; }
+  html[data-side="collapsed"] .sh-side-link > svg { width: 21px; height: 21px; }
+  html[data-side="collapsed"] .sh-side-user { justify-content: center; padding: 6px 0; }
+  html[data-side="collapsed"] .sh-side-group + .sh-side-group { margin-top: 4px; padding-top: 4px; border-top: 1px solid var(--color-line); }
 }
 
 /* ---------- Üst çubuk ---------- */
