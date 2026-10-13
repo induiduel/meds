@@ -72,6 +72,8 @@ const BUNDLE_KEYS = new Set([
 ]);
 /** Sık yazılan sayaçlar: profile girer ama anlık gönderim tetiklemez (dönemsel/arka plana geçişte gider). */
 const QUIET_KEYS = new Set(['medsoru_study_seconds_v1', 'medsoru_activity_v1']);
+/** Ders okurken her adımda/harekette yazılan profil anahtarları: damgalanır ama dönemsel gönderime kalır. */
+const QUIET_PROFILE = /^medsoru_learn_(progress|done|zoom)(_v1)?$/;
 
 const META_KEY = 'medsoru_kv_meta_v1'; // anahtar → son yerel değişiklik zamanı
 const DIRTY_KEY = 'medsoru_kv_dirty_v1'; // henüz sunucuya gitmemiş anahtarlar
@@ -125,7 +127,8 @@ function onWrite(key: string) {
   if (applying) return;
   if (isProfileKey(key)) {
     stamp(key);
-    changeListeners.forEach((fn) => fn(true));
+    const immediate = !QUIET_PROFILE.test(key);
+    changeListeners.forEach((fn) => fn(immediate));
   } else if (BUNDLE_KEYS.has(key)) {
     changeListeners.forEach((fn) => fn(true));
   } else if (QUIET_KEYS.has(key)) {
@@ -147,8 +150,10 @@ export function installProfileKvWatcher(): void {
     origRemove.call(this, k);
   } as any;
   proto.setItem = function (this: Storage, k: string, v: string) {
+    // Ekran açılışında aynı değerle yeniden yazılan tercihler değişiklik sayılmaz (gereksiz gönderim + SSE yayını)
+    const same = this === s && proto.getItem.call(this, k) === String(v);
     origSet.call(this, k, v);
-    if (this === s) {
+    if (this === s && !same) {
       try {
         onWrite(String(k));
       } catch {
@@ -157,8 +162,9 @@ export function installProfileKvWatcher(): void {
     }
   };
   proto.removeItem = function (this: Storage, k: string) {
+    const absent = this === s && proto.getItem.call(this, k) === null;
     origRemove.call(this, k);
-    if (this === s) {
+    if (this === s && !absent) {
       try {
         onWrite(String(k));
       } catch {
