@@ -79208,5 +79208,895 @@
       "accuracyScore": 100,
       "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
     }
+  },
+  {
+    "id": "s13-graaf_folikulu",
+    "term": "Graaf folikülü",
+    "aliases": [
+      "Olgun folikül",
+      "Tersiyer folikül"
+    ],
+    "category": "anatomi",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 31)Ovidukt ve Ovaryum Patolojisi s.13",
+    "definition": "Ovulasyondan hemen önceki, antrumlu olgun over folikülü.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Yırtılmayan Graaf folikülleri folikül kistlerinin kaynağıdır.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-korpus_luteum",
+    "term": "Korpus luteum",
+    "aliases": [
+      "Corpus luteum",
+      "Sarı cisim"
+    ],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 31)Ovidukt ve Ovaryum Patolojisi s.19",
+    "definition": "Ovulasyondan sonra rüptüre folikülden gelişen, progesteron salgılayan geçici endokrin yapı.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "PCOS'ta kronik anovülasyon nedeniyle overde belirgin korpus luteum bulunmaz.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-luteinize_teka_interna_hiperplazisi",
+    "term": "Luteinize teka interna hiperplazisi",
+    "aliases": [
+      "Teka interna hiperplazisi"
+    ],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 31)Ovidukt ve Ovaryum Patolojisi s.19",
+    "definition": "Folikül çevresindeki teka interna hücrelerinin luteinizasyonla birlikte çoğalması; androjen üretimi artar.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "PCOS'un tipik histolojik bulgularından biridir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-subkortikal_over_kistleri",
+    "term": "Subkortikal over kistleri",
+    "aliases": [],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 31)Ovidukt ve Ovaryum Patolojisi s.19",
+    "definition": "Over kapsülünün hemen altında dizilen, 0,5–1,5 cm çaplı çok sayıda kistik folikül.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "PCOS'ta overler genellikle normalin iki katı boyuttadır ve kalın fibrotik kapsül altında subkortikal kistler bulunur.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-basinc_atrofisi",
+    "term": "Basınç atrofisi",
+    "aliases": [],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 31)Ovidukt ve Ovaryum Patolojisi s.15",
+    "definition": "Büyüyen bir lezyonun çevre dokuya yaptığı basınç sonucu hücrelerin küçülmesi ve kaybı.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Büyüyen folikül/luteal kistlerde döşeyici granüloza ve luteal hücreler basınç atrofisine uğrar.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-hiperandrojenizm",
+    "term": "Hiperandrojenizm",
+    "aliases": [
+      "Androjen fazlalığı"
+    ],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 31)Ovidukt ve Ovaryum Patolojisi s.16",
+    "definition": "Kanda androjen düzeyinin ya da androjen etkisinin artması; hirsutizm, akne ve adet düzensizliğine yol açar.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Androjen fazlalığı ve ovulasyon bozukluğu PCOS'un iki temel bileşenidir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-metabolik_sendrom",
+    "term": "Metabolik sendrom",
+    "aliases": [],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 31)Ovidukt ve Ovaryum Patolojisi s.18",
+    "definition": "Santral obezite, insülin direnci, dislipidemi ve hipertansiyonun bir arada bulunduğu kardiyometabolik risk tablosu.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "PCOS'lu kadınlarda metabolik sendrom, tip 2 diyabet ve serebrovasküler olay riski artar; uzun dönem izlem gerekir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-fimbriya_fallop_tupu",
+    "term": "Fimbriya (Fallop tüpü)",
+    "aliases": [
+      "Fimbriyal uç",
+      "Fimbriae"
+    ],
+    "category": "anatomi",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 31)Ovidukt ve Ovaryum Patolojisi s.11",
+    "definition": "Fallop tüpünün overe yakın, periton boşluğuna açılan parmaksı uç çıkıntıları.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Yüksek dereceli seröz karsinomların çoğunun öncüsü olan STIC fimbriyal uçta gelişir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-ooforektomi",
+    "term": "Ooforektomi",
+    "aliases": [
+      "Ooferektomi",
+      "Oophorectomy"
+    ],
+    "category": "tedavi",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 31)Ovidukt ve Ovaryum Patolojisi s.10",
+    "definition": "Overin (bir veya iki taraflı) cerrahi olarak çıkarılması.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "BRCA taşıyıcılarında profilaktik salpingo-ooforektomi örneklerinde STIC sık saptanır.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-kras",
+    "term": "KRAS",
+    "aliases": [
+      "K-ras"
+    ],
+    "category": "genetik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 31)Ovidukt ve Ovaryum Patolojisi s.44",
+    "definition": "RAS ailesine ait proto-onkogen; aktive edici mutasyonları MAPK sinyalini sürekli açık tutar.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "KRAS mutasyonu müsinöz over tümörlerinde ve düşük dereceli seröz karsinomda sıktır; berrak hücreli karsinomda da görülür.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-mullerian_epitel",
+    "term": "Müllerian epitel",
+    "aliases": [
+      "Müller epiteli"
+    ],
+    "category": "anatomi",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 31)Ovidukt ve Ovaryum Patolojisi s.23",
+    "definition": "Müller kanalından köken alan; tuba, endometriyum ve endoserviks tipi epitele farklılaşabilen epitel.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Seröz (tubal), endometrioid (endometriyal) ve müsinöz (endoservikal) tipler Müllerian farklılaşmayı yansıtır.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-seroz_kistadenokarsinom",
+    "term": "Seröz kistadenokarsinom",
+    "aliases": [],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 31)Ovidukt ve Ovaryum Patolojisi s.24",
+    "definition": "Seröz epitelin kistik yapı içinde malign proliferasyonu ve stromal invazyonu ile karakterize over karsinomu.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Serozada nodüler düzensizlik ve yüzey invazyon odakları malignite lehinedir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-musinoz_karsinom_over",
+    "term": "Müsinöz karsinom (over)",
+    "aliases": [],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 31)Ovidukt ve Ovaryum Patolojisi s.52",
+    "definition": "Müsin üreten epitelden köken alan, katı alanlar, tabakalaşma, atipi ve stromal invazyon gösteren over karsinomu.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Prognozu belirleyen ana faktör histolojik tipten çok evredir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-peritoneal_implant",
+    "term": "Peritoneal implant",
+    "aliases": [],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 31)Ovidukt ve Ovaryum Patolojisi s.38",
+    "definition": "Over tümörü hücrelerinin periton yüzeyine yerleşmesiyle oluşan odaklar.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Borderline seröz tümörlerin periton implantları genellikle invaziv değildir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-seks_kord_stromal_hucreler",
+    "term": "Seks kord-stromal hücreler",
+    "aliases": [
+      "Seks kordon–stroma hücreleri"
+    ],
+    "category": "anatomi",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 31)Ovidukt ve Ovaryum Patolojisi s.21",
+    "definition": "Overin granüloza, teka, Sertoli, Leydig hücreleri ve fibroblastlarını içeren stromal hücre grubu.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Over tümörlerinin üç köken hücre grubundan biridir; tümörleri hormon üretebilir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-leydig_hucreli_tumor",
+    "term": "Leydig hücreli tümör",
+    "aliases": [],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 31)Ovidukt ve Ovaryum Patolojisi s.78",
+    "definition": "Androjen salgılayan Leydig hücrelerinden oluşan seks kord-stromal over tümörü.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Androjen fazlalığı virilizasyona yol açar.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-virilizasyon",
+    "term": "Virilizasyon",
+    "aliases": [
+      "Maskülinizasyon"
+    ],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 31)Ovidukt ve Ovaryum Patolojisi s.78",
+    "definition": "Kadında androjen fazlalığına bağlı erkek tipi özelliklerin (ses kalınlaşması, klitoromegali, hirsutizm) gelişmesi.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Androjen üreten seks kord-stromal tümörlerin klinik ipucudur.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-defeminizasyon",
+    "term": "Defeminizasyon",
+    "aliases": [],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 31)Ovidukt ve Ovaryum Patolojisi s.64",
+    "definition": "Kadında meme atrofisi, amenore gibi kadın sekonder seks özelliklerinin kaybı.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Sertoli–Leydig hücreli tümörlerin tipik etkisidir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-olgunlasmamis_noroepitel",
+    "term": "Olgunlaşmamış nöroepitel",
+    "aliases": [
+      "İlkel nöroepitel"
+    ],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 31)Ovidukt ve Ovaryum Patolojisi s.73",
+    "definition": "İmmatür teratomda görülen embriyonel/ilkel sinir dokusu (nöroepitelyal rozet ve tübüller).",
+    "lectureContextNotes": "",
+    "examSpotPearls": "İmmatür teratomun derecelendirmesi ve metastaz riski nöroepitel miktarına dayanır.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-karsinoid_sendrom",
+    "term": "Karsinoid sendrom",
+    "aliases": [],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 31)Ovidukt ve Ovaryum Patolojisi s.75",
+    "definition": "Nöroendokrin tümörün salgıladığı serotonin vb. aminlere bağlı flaşing, diyare ve bronkospazm tablosu.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Over karsinoidi venöz drenajı doğrudan sistemik dolaşıma verdiği için karaciğer metastazı olmadan karsinoid sendrom yapabilir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-ailesel_meme_over_kanseri_sendromu",
+    "term": "Ailesel meme-over kanseri sendromu",
+    "aliases": [
+      "HBOC",
+      "Herediter meme-over kanseri sendromu"
+    ],
+    "category": "genetik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 31)Ovidukt ve Ovaryum Patolojisi s.31",
+    "definition": "BRCA1/BRCA2 germ hattı mutasyonlarına bağlı, meme ve over kanseri riskinin belirgin arttığı kalıtsal sendrom.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Bu hastalarda over karsinomlarının neredeyse tamamı TP53 mutasyonlu yüksek dereceli seröz karsinomdur.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-asit",
+    "term": "Asit",
+    "aliases": [
+      "Assit"
+    ],
+    "category": "tani",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 31)Ovidukt ve Ovaryum Patolojisi s.40",
+    "definition": "Periton boşluğunda serbest sıvı birikmesi.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Malign seröz tümörlerin metastatik yayılımında asit sık görülür.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-omentum",
+    "term": "Omentum",
+    "aliases": [],
+    "category": "anatomi",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 31)Ovidukt ve Ovaryum Patolojisi s.11",
+    "definition": "Midenin büyük kurvaturundan sarkan, yağ ve damardan zengin periton katlantısı (büyük omentum).",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Seröz karsinomların sık yayıldığı yerdir (omental kek).",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-germ_yapraklari_ektoderm_endoderm_mezoderm",
+    "term": "Germ yaprakları (ektoderm, endoderm, mezoderm)",
+    "aliases": [
+      "Ektoderm",
+      "Endoderm",
+      "Mezoderm"
+    ],
+    "category": "anatomi",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 31)Ovidukt ve Ovaryum Patolojisi s.67",
+    "definition": "Embriyonun tüm doku ve organlarını oluşturan üç temel hücre tabakası.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Teratomlar üç germ yaprağının dokularını içerir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-over_metastazi",
+    "term": "Over metastazı",
+    "aliases": [
+      "Metastatik over tümörü"
+    ],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 31)Ovidukt ve Ovaryum Patolojisi s.65",
+    "definition": "Başka organ kanserlerinin overe yayılması; çoğunlukla iki taraflıdır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Primer odak çoğunlukla gastrointestinal sistemdir; ayrıca meme ve akciğer.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-musinoz_peritoneal_implant",
+    "term": "Müsinöz peritoneal implant",
+    "aliases": [],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 31)Ovidukt ve Ovaryum Patolojisi s.50",
+    "definition": "Müsin üreten tümör hücrelerinin periton yüzeyine yerleşen kümeleri.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Over müsinöz tümörlerinin rüptüründeki implantların çoğu kendiliğinden geriler.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-hipersekretuar_gebelik_endometriyumu",
+    "term": "Hipersekretuar gebelik endometriyumu",
+    "aliases": [],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 31)Ovidukt ve Ovaryum Patolojisi s.59",
+    "definition": "Gebelikte endometriyum bezlerinin bol berrak sitoplazmalı, salgısı artmış görünümü.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Berrak hücreli over karsinomunun histolojisi bu görünüme benzer.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-silyali_kolumnar_epitel_seroz_tumor",
+    "term": "Silyalı kolumnar epitel (seröz tümör)",
+    "aliases": [],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 31)Ovidukt ve Ovaryum Patolojisi s.36",
+    "definition": "Benign seröz tümörlerin kisti çevreleyen, tuba epiteline benzer tek katlı silyalı kolumnar döşeyici epiteli.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Tuba epiteline benzerlik, seröz tümörlerin tubal (Müllerian) farklılaşmasını gösterir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-koagulaz_negatif_stafilokok_kns",
+    "term": "Koagülaz negatif stafilokok (KNS)",
+    "aliases": [
+      "KNS"
+    ],
+    "category": "patojen",
+    "kurul": "Kurul 1",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "instructorAndSource": "Ders notu: 8)ÜRETRAL AKINTI s.4",
+    "definition": "Koagülaz enzimi üretmeyen, deri ve mukoza florasında bulunan stafilokoklar; distal üretra florasının üyeleridir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Üretral kültürde KNS üremesi tek başına üretrit etkeni sayılmaz.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-pelvik_peritonit",
+    "term": "Pelvik peritonit",
+    "aliases": [],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "instructorAndSource": "Ders notu: 8)ÜRETRAL AKINTI s.22",
+    "definition": "Pelvik inflamatuvar hastalığın pelvis periton yüzeyine yayılmasıyla oluşan inflamasyon.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Gonokokal PİH'in ağır formlarından biridir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-skrotal_abse",
+    "term": "Skrotal abse",
+    "aliases": [],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "instructorAndSource": "Ders notu: 8)ÜRETRAL AKINTI s.14",
+    "definition": "Skrotum içinde, çoğunlukla epididimit ya da epididimoorşitin ilerlemesiyle gelişen irin birikimi.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Ateş ve testis ağrısı olan üretritli hastada epididimit ve epididimoorşitle birlikte düşünülür.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-hasta_basi_tani",
+    "term": "Hasta başı tanı",
+    "aliases": [
+      "Hasta başı test",
+      "Point-of-care test"
+    ],
+    "category": "tani",
+    "kurul": "Kurul 1",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "instructorAndSource": "Ders notu: 8)ÜRETRAL AKINTI s.15",
+    "definition": "Gram boyama, ilk idrar mikroskobisi ve lökosit esteraz gibi aynı vizitte sonuç veren testlerle tanı konması.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Mümkünse üretritte hasta başı tanı yapılmalıdır; aynı vizitte tedaviye olanak verir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-endouretral_kultur",
+    "term": "Endoüretral kültür",
+    "aliases": [],
+    "category": "tani",
+    "kurul": "Kurul 1",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "instructorAndSource": "Ders notu: 8)ÜRETRAL AKINTI s.16",
+    "definition": "Üretra içinden alınan sürüntü örneğinin etken üretmek amacıyla besiyerine ekilmesi.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Gonokokta antibiyotik duyarlılık testine olanak verir; klamidya için pratik değildir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-gram_boyama_uretral_akinti",
+    "term": "Gram boyama (üretral akıntı)",
+    "aliases": [
+      "Gram boyama"
+    ],
+    "category": "tani",
+    "kurul": "Kurul 1",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "instructorAndSource": "Ders notu: 8)ÜRETRAL AKINTI s.18",
+    "definition": "Üretral akıntı yaymasının Gram yöntemiyle boyanarak lökosit ve hücre içi Gram-negatif diplokok aranması.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Semptomatik erkekte gonore için duyarlılık >%95, özgüllük >%99.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-hucre_ici_gram_negatif_diplokok",
+    "term": "Hücre içi Gram-negatif diplokok",
+    "aliases": [
+      "İntraselüler Gram-negatif diplokok"
+    ],
+    "category": "tani",
+    "kurul": "Kurul 1",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "instructorAndSource": "Ders notu: 8)ÜRETRAL AKINTI s.15",
+    "definition": "Polimorfonükleer lökositlerin sitoplazmasında görülen, çift halinde dizilmiş Gram-negatif koklar; gonokokun mikroskopik görünümüdür.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Görülmesi gonokokal üretrit, yokluğu (lökosit varken) NGÜ tanısı koydurur.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-pmnl_hpf",
+    "term": "PMNL/HPF",
+    "aliases": [
+      "Polimorfonükleer lökosit/yüksek büyütme alanı"
+    ],
+    "category": "tani",
+    "kurul": "Kurul 1",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "instructorAndSource": "Ders notu: 8)ÜRETRAL AKINTI s.17",
+    "definition": "Yüksek büyütme alanında (HPF) sayılan polimorfonükleer lökosit sayısı; üretral inflamasyonun ölçüsüdür.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Üretral yaymada BASHH 2026 eşiği ortalama ≥5, CDC ortama göre ≥2 veya ≥5; ilk idrar sedimentinde ≥10.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-penil_odem",
+    "term": "Penil ödem",
+    "aliases": [],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "instructorAndSource": "Ders notu: 8)ÜRETRAL AKINTI s.22",
+    "definition": "Penis dokusunda sıvı birikimine bağlı şişlik.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Erkekte gonokok enfeksiyonunun lokal komplikasyonları arasında sayılır.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-kornea_perforasyonu",
+    "term": "Kornea perforasyonu",
+    "aliases": [],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "instructorAndSource": "Ders notu: 8)ÜRETRAL AKINTI s.24",
+    "definition": "Kornea dokusunun tam kat delinmesi; ağır keratit ve konjonktivitin sonucu olabilir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Gonokokal oftalmia neonatorum kornea perforasyonu ve körlüğe yol açabilir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-persistan_uretrit",
+    "term": "Persistan üretrit",
+    "aliases": [
+      "Tekrarlayan üretrit"
+    ],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "instructorAndSource": "Ders notu: 8)ÜRETRAL AKINTI s.11",
+    "definition": "Tedaviye rağmen süren ya da kısa sürede yineleyen üretrit tablosu.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "M. genitalium persistan ve tekrarlayan üretritte önemlidir; 2 haftadan uzun semptomda yeniden değerlendirilir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-cinsel_perhiz",
+    "term": "Cinsel perhiz",
+    "aliases": [],
+    "category": "tedavi",
+    "kurul": "Kurul 1",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "instructorAndSource": "Ders notu: 8)ÜRETRAL AKINTI s.40",
+    "definition": "Tedavi süresince ve sonrasında cinsel ilişkiden kaçınılması.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Akut üretritte antibiyotik bitiminden sonra en az 1 hafta; semptom sürerse daha uzun.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-partner_tedavisi",
+    "term": "Partner tedavisi",
+    "aliases": [
+      "Partner yönetimi"
+    ],
+    "category": "tedavi",
+    "kurul": "Kurul 1",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "instructorAndSource": "Ders notu: 8)ÜRETRAL AKINTI s.36",
+    "definition": "CYBE tanısı alan hastanın cinsel eşlerinin değerlendirilmesi, test edilmesi ve tedavi edilmesi.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "NGÜ'de tanıdan önceki 60 gün içindeki tüm eşler klamidyaya karşı tedavi edilir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-etkeni_belirlenemeyen_ngu",
+    "term": "Etkeni belirlenemeyen NGÜ",
+    "aliases": [],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "instructorAndSource": "Ders notu: 8)ÜRETRAL AKINTI s.11",
+    "definition": "Kapsamlı mikrobiyolojik incelemeye rağmen etkenin saptanamadığı nongonokoksik üretrit.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Olguların yaklaşık yarısında etken belirlenemeyebilir; negatif testler NGÜ'yü dışlamaz.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-uretral_enstrumantasyon",
+    "term": "Üretral enstrümantasyon",
+    "aliases": [],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "instructorAndSource": "Ders notu: 8)ÜRETRAL AKINTI s.11",
+    "definition": "Üretraya tanı ya da tedavi amacıyla alet (sonda, sistoskop vb.) sokulması.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Kateterizasyon ve enstrümantasyon enfeksiyon dışı üretrit nedenidir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-purulan_uretral_akinti",
+    "term": "Pürülan üretral akıntı",
+    "aliases": [
+      "Mukopürülan akıntı"
+    ],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "instructorAndSource": "Ders notu: 8)ÜRETRAL AKINTI s.23",
+    "definition": "İrin niteliğinde, lökositten zengin, sarı-yeşil renkli üretral akıntı.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Gonokokta sık görülür; ancak görünüm etkeni kesin ayırmaz.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
   }
 ]
