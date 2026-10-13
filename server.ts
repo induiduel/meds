@@ -10827,6 +10827,42 @@ app.use((err: any, req: express.Request, res: express.Response, next: express.Ne
 });
 
 // Vite middleware for dev or static serving for prod
+/**
+ * dist/assets → kalıcı arşiv (yalnız arşivde olmayanlar kopyalanır; hash'li adlar değişmez). Güncel sürümde
+ * olmayıp 21 günden eski parçalar budanır. Açılışı bekletmez; hata sunucuyu etkilemez.
+ */
+async function archiveDistAssets(srcDir: string, archiveDir: string) {
+  try {
+    await fs.promises.mkdir(archiveDir, { recursive: true });
+    const current = new Set(await fs.promises.readdir(srcDir));
+    const archived = new Set(await fs.promises.readdir(archiveDir));
+    let copied = 0;
+    const now = new Date();
+    for (const name of current) {
+      // Güncel parçanın zamanı tazelenir: budama süresi sürümden kalktığı andan sayılır
+      if (archived.has(name)) await fs.promises.utimes(path.join(archiveDir, name), now, now).catch(() => {});
+      else {
+        await fs.promises.copyFile(path.join(srcDir, name), path.join(archiveDir, name));
+        copied++;
+      }
+    }
+    const cutoff = Date.now() - 21 * 24 * 3600 * 1000;
+    let pruned = 0;
+    for (const name of archived) {
+      if (current.has(name)) continue;
+      const p = path.join(archiveDir, name);
+      const st = await fs.promises.stat(p).catch(() => null);
+      if (st && st.mtimeMs < cutoff) {
+        await fs.promises.unlink(p).catch(() => {});
+        pruned++;
+      }
+    }
+    if (copied || pruned) console.log(`[Assets] Sürüm arşivi: ${copied} yeni parça, ${pruned} eski parça budandı`);
+  } catch (e: any) {
+    console.warn('[Assets] Sürüm arşivi güncellenemedi:', e?.message || e);
+  }
+}
+
 async function startServer() {
   const hasDist = fs.existsSync(path.resolve(__dirname, 'dist', 'index.html'));
   const isProd = process.env.NODE_ENV === 'production' || (hasDist && process.env.VITE_DEV !== '1');
@@ -10905,6 +10941,16 @@ async function startServer() {
     };
     app.use('/meds', express.static(path.resolve(__dirname, 'dist'), staticOptions));
     app.use(express.static(path.resolve(__dirname, 'dist'), staticOptions));
+    // Önceki sürümlerin JS/CSS parçaları: Oracle her dağıtımda imajı yeniden kurduğundan eski hash'li parçalar
+    // dist'ten kalkar; açık sekme yeni bir parça (PDF görüntüleyici vb.) isteyince 404 alıp kendini yeniliyor,
+    // öğrenci dersten/PDF'ten düşüyordu. Parçalar kalıcı data/ biriminde birikir, bulunamayan istek buradan sunulur.
+    // Cihazda vite build eski parçaları dist'te bırakır (emptyOutDir: false); arşiv yalnız konteynerde gerekir.
+    const assetArchive = path.join(DATA_DIR, 'asset-archive');
+    const archiveOn = process.env.MEDS_ASSET_ARCHIVE ? process.env.MEDS_ASSET_ARCHIVE === '1' : fs.existsSync('/.dockerenv');
+    if (archiveOn) void archiveDistAssets(path.resolve(__dirname, 'dist', 'assets'), assetArchive);
+    const archiveOptions = { maxAge: '1y', immutable: true, index: false as const };
+    app.use('/assets', express.static(assetArchive, archiveOptions));
+    app.use('/meds/assets', express.static(assetArchive, archiveOptions));
     app.use('/meds', express.static(path.resolve(__dirname, 'public'), publicStaticOptions));
     app.use(express.static(path.resolve(__dirname, 'public'), publicStaticOptions));
     app.get('*', (req, res) => {

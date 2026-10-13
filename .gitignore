@@ -26,6 +26,7 @@ data/nested_fix_report.json
 data/local_rag_chunks.json
 # Sorgu zekâsı + hastalık grafiği: derlemden üretilir (scripts/search/build-query-intel.mts; sunucu açılışta kendisi derler)
 data/search/
+data/asset-archive/
 data/knowledge/
 data/_write_probe/
 data/ds_work/
