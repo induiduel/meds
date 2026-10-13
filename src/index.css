@@ -3652,3 +3652,16 @@ html.ui-v3 .ms-select-chip:focus-within { box-shadow: 0 0 0 3px var(--color-acce
 html.ui-v3 :is(.ms-menu, [role="menu"], .ms-popover, .ms-menu-pop) { border-radius: 12px !important; box-shadow: var(--shadow-md) !important; border-color: var(--color-line) !important; }
 html.ui-v3 [role="menu"] :is([role="menuitem"], button) { border-radius: 8px; }
 html.ui-v3 .ms-tooltip { border-radius: 8px; font-size: 12px; }
+
+/* Mekanizma zinciri: alt halkalar + alt çubuk (2026-10-14, tüm tasarımlar) */
+.ls-chain-foot { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.ls-chain-count { margin-left: auto; font: 500 12px var(--font-mono); color: var(--color-ink-3); }
+.ls-chain-subt { display: inline-flex; align-items: center; gap: 4px; margin-top: 6px; height: 26px; padding: 0 8px 0 4px; border: 0; border-radius: 7px; background: var(--color-field); color: var(--color-ink-2); font: inherit; font-size: 12px; font-weight: 600; cursor: pointer; }
+.ls-chain-subt:hover { color: var(--color-ink); }
+.ls-chain-subt svg { width: 14px; height: 14px; transition: transform .2s; }
+.ls-chain-subt svg.is-open { transform: rotate(90deg); }
+.ls-chain.is-sub { margin-top: 8px; }
+.ls-chain.is-sub li { padding-bottom: 10px; gap: 10px; }
+.ls-chain.is-sub .n { width: 24px; height: 20px; font-size: 10.5px; background: var(--color-accent-soft); color: var(--color-accent); }
+.ls-chain.is-sub li:not(:last-child)::after { left: 11px; top: 20px; width: 1px; }
+.ls-chain.is-sub .t { font-size: 13px; }

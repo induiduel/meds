@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState, startTransition } from 'react';
 import { CornerDownLeft, Sparkles, Wand2, ArrowRight, HelpCircle, Type } from 'lucide-react';
 import { ApiService } from '../../services/api';
 import { smartComposerService, AssistOption, AssistResult } from '../../services/smartComposerService';
@@ -142,7 +142,9 @@ export const ComposerAssist: React.FC<{
     // İmleç konumu (seçim varsa önerilere gerek yok: imleç sonu sayılmaz)
     const syncCaret = () => {
       if (document.activeElement !== ta && document.activeElement !== document.body) return;
-      setCaret(ta.selectionStart !== ta.selectionEnd ? -1 : ta.selectionStart >= ta.value.length ? Infinity : ta.selectionStart);
+      const c = ta.selectionStart !== ta.selectionEnd ? -1 : ta.selectionStart >= ta.value.length ? Infinity : ta.selectionStart;
+      // Geçiş önceliği: her tuşta öneri motorunun yeniden çizimi yazmayı bloklamasın
+      startTransition(() => setCaret(c));
     };
     syncCaret();
     document.addEventListener('selectionchange', syncCaret);

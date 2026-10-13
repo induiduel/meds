@@ -84,6 +84,17 @@ export function installFetchGuard() {
     if (!/^(https?:|\/)/i.test(url) || url.includes('/@vite') || url.includes('/node_modules/')) return nativeFetch(input, init);
     const method = String(init?.method || req?.method || 'GET').toUpperCase();
     const headers = new Headers(init?.headers || req?.headers || undefined);
+    // Yazma isteklerinde herkese açık cihaz kimliği (yönetim › Kişiler eylem günlüğü). GET'e eklenmez: çapraz kökende
+    // her GET'e ön-kontrol binmesin. Kimlik presence.ts'te türetilir; henüz yoksa eklenmez.
+    let sendInit = init;
+    if (method !== 'GET' && method !== 'HEAD' && url.includes('/api/') && !headers.has('x-device-id')) {
+      let pub = '';
+      try { pub = localStorage.getItem('medsoru_device_pub') || ''; } catch { /* gizli pencere */ }
+      if (pub) {
+        headers.set('x-device-id', pub);
+        sendInit = { ...init, headers };
+      }
+    }
 
     const run = async () => {
       const timer = new AbortController();
@@ -96,7 +107,7 @@ export function installFetchGuard() {
       const callerSignal = init?.signal || req?.signal || null;
       const signal = callerSignal ? anySignal([callerSignal, timer.signal]) : timer.signal;
       try {
-        const res = await nativeFetch(input, { ...init, signal });
+        const res = await nativeFetch(input, { ...sendInit, signal });
         reportOk();
         return res;
       } catch (err: any) {

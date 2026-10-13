@@ -1,9 +1,12 @@
 import React, { useEffect, useId, useRef, useState } from 'react';
 import {
-  Bookmark, BookOpen, Check, ChevronDown, Eye, FileText, Flag, History, Info, MessageSquare, RotateCcw, Share2, ThumbsDown, ThumbsUp, X,
+  Bookmark, BookOpen, Check, ChevronDown, Eye, FileText, Flag, History, Info, MessageSquare, RotateCcw, Share2, Strikethrough, ThumbsDown, ThumbsUp, X,
 } from 'lucide-react';
+import { CopyQuestionButton } from '../ui/CopyQuestionButton';
+import { useAppearance } from '../../utils/appearance';
 import type { CikmisCardProps } from '../../screens/cikmis/CikmisCard';
 import { Highlight } from '../ui/StemText';
+import { useLiveEvent } from '../../hooks/useLiveEvent';
 import { SourceText } from '../ui/SourceText';
 import { ActionMenu, ActionItem } from '../ui/ActionMenu';
 import { ApiService, AnswerVotes } from '../../services/api';
@@ -51,16 +54,24 @@ const TONE_CLS: Record<string, string> = { ok: 'is-ok', warn: 'is-warn', bad: 'i
 export const PastQuestionRichCard: React.FC<PastQuestionRichCardProps> = (p) => {
   const r = p.rich;
   const uid = useId();
+  // v12: şık satırında hızlı düğme (cevaplamadan önce ele, sonra şıkkı bildir) + alt çubukta kopyala
+  const v12 = useAppearance().design === 'v12';
+  const [elim, setElim] = useState<Set<string>>(() => new Set());
   const key = p.correctAnswer ? String(p.correctAnswer).toUpperCase() : '';
   const [picked, setPicked] = useState<string | null>(() => (r?.attempt?.picked ? String(r.attempt.picked).toUpperCase() : null));
   const [peek, setPeek] = useState(false); // cevaplamadan "cevabı göster"
   const revealed = Boolean(picked) || peek;
   const hasExplain = Boolean(p.explanation?.trim()) || p.analysis.length > 0 || p.refs.length > 0 || Boolean(p.kazanim) || Boolean(r?.onOpenNote);
   const [explOpen, setExplOpen] = useState(() => Boolean(r?.attempt?.picked));
+  const [explMounted, setExplMounted] = useState(() => Boolean(r?.attempt?.picked));
   const [histOpen, setHistOpen] = useState(false);
   const [infoKey, setInfoKey] = useState<string | null>(null);
   const [votes, setVotes] = useState<AnswerVotes | null>(null);
   const explRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (explOpen && !explMounted) setExplMounted(true);
+  }, [explOpen, explMounted]);
 
   // Yeni cevap kaydı (ör. başka sekmede çözüldü) gelirse yansıt
   useEffect(() => {
@@ -79,9 +90,19 @@ export const PastQuestionRichCard: React.FC<PastQuestionRichCardProps> = (p) => 
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [revealed, p.special, p.id]);
 
+  // Açık dağılım başka öğrencinin oyuyla canlı güncellenir
+  useLiveEvent(
+    'votes_changed',
+    (e) => {
+      if (e?.resync || e?.questionId === p.id) ApiService.getAnswerVotes(p.id, r?.voterUid || '').then(setVotes).catch(() => {});
+    },
+    { enabled: !!votes },
+  );
+
   // Kaydırma: aria-expanded + aria-controls taşıyan düğmeleri utils/autoReveal.ts zaten görünür alana getirir
   // (çift kaydırma olmasın diye burada yalnız düğmesiz açılış — şık seçince açıklamanın açılması — kaydırılır).
   const openExpl = (v: boolean, scroll = false) => {
+    if (v && !explMounted) setExplMounted(true);
     setExplOpen(v);
     if (v) {
       if (!revealed) setPeek(true);
@@ -98,6 +119,7 @@ export const PastQuestionRichCard: React.FC<PastQuestionRichCardProps> = (p) => 
   };
 
   const reset = () => {
+    setElim(new Set());
     setPicked(null);
     setPeek(false);
     setExplOpen(false);
@@ -142,7 +164,7 @@ export const PastQuestionRichCard: React.FC<PastQuestionRichCardProps> = (p) => 
               const info = revealed ? p.optionInfo?.(k) ?? null : null;
               const st = isKey ? 'is-ok' : isWrong ? 'is-bad' : revealed ? 'is-dim' : '';
               return (
-                <li key={k} className="ck-opt-li">
+                <li key={k} className={`ck-opt-li ${v12 ? 'has-quick' : ''} ${!revealed && elim.has(k) ? 'is-elim' : ''}`}>
                   <div className={`ck-opt ${st} ${picked === k ? 'is-picked' : ''}`}>
                     <button
                       type="button"
@@ -160,6 +182,17 @@ export const PastQuestionRichCard: React.FC<PastQuestionRichCardProps> = (p) => 
                       <span className="ck-opt-t" aria-hidden><Highlight text={String(o.text ?? '')} terms={p.terms} /></span>
                       {showDist && <span className="ck-pct" aria-hidden>%{pct}</span>}
                     </button>
+                    {v12 && (!revealed ? (
+                      <button type="button" className={`ck-oq ${elim.has(k) ? 'is-on' : ''}`} aria-pressed={elim.has(k)}
+                        onClick={() => setElim((m) => { const n = new Set(m); if (n.has(k)) n.delete(k); else n.add(k); return n; })}
+                        aria-label={elim.has(k) ? `${k} şıkkını geri al` : `${k} şıkkını ele`} title={elim.has(k) ? 'Geri al' : 'Bu şıkkı ele (üstünü çiz)'}>
+                        <Strikethrough aria-hidden />
+                      </button>
+                    ) : !info && (
+                      <button type="button" className="ck-oq is-flag" onClick={() => p.onObject(k, String(o.text ?? ''))} aria-label={`${k} şıkkını bildir`} title="Bu şıkkı bildir">
+                        <Flag aria-hidden />
+                      </button>
+                    ))}
                     {info && (
                       <button type="button" className="ck-opt-i" onClick={() => setInfoKey((v) => (v === k ? null : k))} aria-expanded={infoKey === k} aria-label={`${k} şıkkında yapılan değişiklik`} title="Bu şıkta yapılan değişiklik">
                         <Info aria-hidden />
@@ -208,35 +241,37 @@ export const PastQuestionRichCard: React.FC<PastQuestionRichCardProps> = (p) => 
           </button>
           <div className="ck-rev" id={`${uid}-expl`} ref={explRef}>
             <div className="ck-rev-in" inert={!explOpen ? true : undefined}>
-              <div className="ck-expl-b">
-                {p.explanation?.trim() ? <SourceText text={p.explanation} size="sm" /> : <p className="ck-muted">Bu soruya henüz açıklama yazılmadı.</p>}
-                {p.analysis.length > 0 && (
-                  <dl className="ck-analysis">
-                    {p.analysis.map(([k, v]) => (
-                      <div key={k} className={String(k).toUpperCase() === key ? 'is-ok' : ''}>
-                        <dt>{k}</dt>
-                        <dd>{String(v)}</dd>
-                      </div>
-                    ))}
-                  </dl>
-                )}
-                {p.kazanim && <p className="ck-kaz"><b>{p.kazanim.baslik}</b>{p.kazanim.metin}</p>}
-                {(p.refs.length > 0 || r?.onOpenNote) && (
-                  <p className="ck-refs">
-                    <FileText aria-hidden />
-                    <span>{p.refs.length > 0 ? p.refs.join(' · ') : 'Ders notu'}</span>
-                    {r?.onOpenNote && <button type="button" className="ck-link" onClick={r.onOpenNote}>Ders notunda aç</button>}
-                  </p>
-                )}
-                {p.history && (
-                  <>
-                    <button type="button" className="ck-link" aria-expanded={histOpen} aria-controls={`${uid}-hist`} onClick={() => setHistOpen((v) => !v)}>
-                      <History aria-hidden />Değişiklik geçmişi{p.historyBadge ? ` · ${p.historyBadge}` : ''}
-                    </button>
-                    <div id={`${uid}-hist`} className="ck-hist" hidden={!histOpen}>{histOpen && p.history}</div>
-                  </>
-                )}
-              </div>
+              {explMounted ? (
+                <div className="ck-expl-b">
+                  {p.explanation?.trim() ? <SourceText text={p.explanation} size="sm" /> : <p className="ck-muted">Bu soruya henüz açıklama yazılmadı.</p>}
+                  {p.analysis.length > 0 && (
+                    <dl className="ck-analysis">
+                      {p.analysis.map(([k, v]) => (
+                        <div key={k} className={String(k).toUpperCase() === key ? 'is-ok' : ''}>
+                          <dt>{k}</dt>
+                          <dd>{String(v)}</dd>
+                        </div>
+                      ))}
+                    </dl>
+                  )}
+                  {p.kazanim && <p className="ck-kaz"><b>{p.kazanim.baslik}</b>{p.kazanim.metin}</p>}
+                  {(p.refs.length > 0 || r?.onOpenNote) && (
+                    <p className="ck-refs">
+                      <FileText aria-hidden />
+                      <span>{p.refs.length > 0 ? p.refs.join(' · ') : 'Ders notu'}</span>
+                      {r?.onOpenNote && <button type="button" className="ck-link" onClick={r.onOpenNote}>Ders notunda aç</button>}
+                    </p>
+                  )}
+                  {p.history && (
+                    <>
+                      <button type="button" className="ck-link" aria-expanded={histOpen} aria-controls={`${uid}-hist`} onClick={() => setHistOpen((v) => !v)}>
+                        <History aria-hidden />Değişiklik geçmişi{p.historyBadge ? ` · ${p.historyBadge}` : ''}
+                      </button>
+                      <div id={`${uid}-hist`} className="ck-hist" hidden={!histOpen}>{histOpen && p.history}</div>
+                    </>
+                  )}
+                </div>
+              ) : null}
             </div>
           </div>
         </section>
@@ -259,6 +294,7 @@ export const PastQuestionRichCard: React.FC<PastQuestionRichCardProps> = (p) => 
           <Flag aria-hidden />
         </button>
         <span className="ck-sp" />
+        {v12 && <CopyQuestionButton stem={p.copy.stem} options={p.copy.options} className="ck-act ck-copy" />}
         <button type="button" className="ck-act" onClick={p.social.onShare} aria-label="Soruyu paylaş" title="Soru bağlantısını paylaş">
           <Share2 aria-hidden />
         </button>

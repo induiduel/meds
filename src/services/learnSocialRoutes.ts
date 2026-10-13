@@ -121,8 +121,14 @@ export function registerLearnSocialRoutes(app: express.Express, deps: LearnSocia
   const censor = deps.censor || ((s: string) => s);
   const uidOf = (req: express.Request) => clip(req.body?.author?.id || req.body?.uid || req.query?.uid || req.headers['x-user-uid'], 120);
   const nameOf = (req: express.Request) => clip(req.body?.author?.name, LIMITS.name) || 'Anonim öğrenci';
-  const emit = (deckId: string, type: 'note' | 'thread' | 'message', op: 'insert' | 'update' | 'delete', payload: Record<string, any>) =>
+  // Aynı derste gezinen veya sekmeler arası geçiş yapan öğrenciler için 8 sn'lik satır önbelleği + singleflight
+  const deckSocialCache = new Map<string, { expiresAt: number; notes: any[]; threads: any[] }>();
+  const deckSocialInflight = new Map<string, Promise<{ notes: any[]; threads: any[] }>>();
+
+  const emit = (deckId: string, type: 'note' | 'thread' | 'message', op: 'insert' | 'update' | 'delete', payload: Record<string, any>) => {
+    deckSocialCache.delete(deckId);
     deps.broadcast('learn_social', { deckId, type, op, ...payload, time: Date.now() });
+  };
   const fail = (res: express.Response, status: number, error: string) => res.status(status).json({ error });
   const dbFail = (res: express.Response, e: any) => {
     console.warn('[learnSocial] veritabanı hatası:', e?.message || e);
@@ -148,14 +154,32 @@ export function registerLearnSocialRoutes(app: express.Express, deps: LearnSocia
     const uid = clip(req.query.uid, 120);
     const admin = deps.isAdmin(req);
     try {
-      const [notes, threads] = await Promise.all([
-        pgPool.query('select * from learn_notes where deck_id = $1 order by step_number, created_at limit 2000', [deckId]),
-        pgPool.query('select * from learn_threads where deck_id = $1 order by step_number, created_at limit 1000', [deckId]),
-      ]);
+      let cached = deckSocialCache.get(deckId);
+      if (!cached || cached.expiresAt <= Date.now()) {
+        let pending = deckSocialInflight.get(deckId);
+        if (!pending) {
+          pending = Promise.all([
+            pgPool.query('select * from learn_notes where deck_id = $1 order by step_number, created_at limit 2000', [deckId]),
+            pgPool.query('select * from learn_threads where deck_id = $1 order by step_number, created_at limit 1000', [deckId]),
+          ]).then(([nRes, tRes]) => {
+            const data = { notes: nRes.rows, threads: tRes.rows };
+            if (deckSocialCache.size >= 150) {
+              const oldest = deckSocialCache.keys().next().value;
+              if (oldest) deckSocialCache.delete(oldest);
+            }
+            deckSocialCache.set(deckId, { expiresAt: Date.now() + 8_000, ...data });
+            return data;
+          }).finally(() => {
+            deckSocialInflight.delete(deckId);
+          });
+          deckSocialInflight.set(deckId, pending);
+        }
+        cached = { expiresAt: Date.now() + 8_000, ...(await pending) };
+      }
       res.setHeader('Cache-Control', 'no-store');
       res.json({
-        notes: notes.rows.map((r) => noteView(r, uid, admin)),
-        threads: threads.rows.map((r) => threadView(r, uid, admin)),
+        notes: cached.notes.map((r) => noteView(r, uid, admin)),
+        threads: cached.threads.map((r) => threadView(r, uid, admin)),
         isAdmin: admin,
       });
     } catch (e) {

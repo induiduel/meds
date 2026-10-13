@@ -62,6 +62,7 @@ export interface GlossaryContextValue {
 // Context
 // ---------------------------------------------------------------------------
 export const GlossaryContext = createContext<GlossaryContextValue | null>(null);
+const GlossaryOverlayContext = createContext<GlossaryContextValue | null>(null);
 
 const fallbackGlossaryContext: GlossaryContextValue = {
   activeState: null,
@@ -88,7 +89,7 @@ export const useGlossary = () => {
 };
 
 /** Her sayfada takılı katman (açılır kutu, çekmece) için: sözlüğü kendiliğinden yükletmez */
-const useGlossaryPassive = () => useContext(GlossaryContext) || fallbackGlossaryContext;
+const useGlossaryPassive = () => useContext(GlossaryOverlayContext) || useContext(GlossaryContext) || fallbackGlossaryContext;
 
 // ---------------------------------------------------------------------------
 // Helper: Category Badge Styling
@@ -225,24 +226,35 @@ export const GlossaryProvider: React.FC<{ children: React.ReactNode }> = ({ chil
     }, 450);
   }, []);
 
-  // Değer her App çiziminde yeni nesne olunca tüm tüketiciler (Öğren oynatıcısı) yeniden çiziliyordu
-  const value = useMemo<GlossaryContextValue>(() => ({
-    activeState,
+  // Ana bağlam (GlossaryContext) activeState veya currentSlideText değiştiğinde YENİLENMEZ:
+  // böylece bir kelimenin üzerine gelindiğinde veya slayt değiştiğinde 200+ GlossaryTermSpan ve
+  // 40+ RenderWithGlossaryTerms bileşeni boşu boşuna yeniden çizilmez.
+  const stableValue = useMemo<GlossaryContextValue>(() => ({
+    activeState: null,
     showTerm,
     hideTerm,
     lookupTerm,
     glossaryList,
-    isDrawerOpen,
+    isDrawerOpen: false,
     setIsDrawerOpen: handleSetDrawerOpen,
-    currentSlideText,
+    currentSlideText: '',
     setCurrentSlideText,
     ensureLoaded,
-  }), [activeState, showTerm, hideTerm, lookupTerm, glossaryList, isDrawerOpen, handleSetDrawerOpen, currentSlideText, ensureLoaded]);
+  }), [showTerm, hideTerm, lookupTerm, glossaryList, handleSetDrawerOpen, ensureLoaded]);
+
+  const overlayValue = useMemo<GlossaryContextValue>(() => ({
+    ...stableValue,
+    activeState,
+    isDrawerOpen,
+    currentSlideText,
+  }), [stableValue, activeState, isDrawerOpen, currentSlideText]);
 
   return (
-    <GlossaryContext.Provider value={value}>
+    <GlossaryContext.Provider value={stableValue}>
       {children}
-      <GlossaryLayer />
+      <GlossaryOverlayContext.Provider value={overlayValue}>
+        <GlossaryLayer />
+      </GlossaryOverlayContext.Provider>
     </GlossaryContext.Provider>
   );
 };
@@ -579,7 +591,7 @@ export const FloatingGlossaryToast: React.FC = () => {
 export const GlossaryTermSpan: React.FC<{
   text: string;
   item: GlossaryItem;
-}> = ({ text, item }) => {
+}> = React.memo(({ text, item }) => {
   const { showTerm, hideTerm } = useGlossary();
   const spanRef = useRef<HTMLSpanElement>(null);
 
@@ -628,69 +640,70 @@ export const GlossaryTermSpan: React.FC<{
       <span className="text-2xs text-ok opacity-70 select-none"></span>
     </span>
   );
-};
+});
 
 // ---------------------------------------------------------------------------
 // Text Parser: Scans plain or markdown text and wraps matching terms
 // ---------------------------------------------------------------------------
+const STOP_WORDS = new Set(['ile', 've', 'bir', 'için', 'gibi', 'daha', 'çok', 'tip', 'her', 'bu', 'şu', 'veya', 'olan', 'göre']);
+const compiledMatcherCache = new WeakMap<GlossaryItem[], { regex: RegExp; aliasToItem: Map<string, GlossaryItem> }>();
+
+function getCompiledGlossaryMatcher(glossaryList: GlossaryItem[]) {
+  if (!glossaryList || glossaryList.length === 0) {
+    return { regex: /(?!x)x/, aliasToItem: new Map<string, GlossaryItem>() };
+  }
+  const hit = compiledMatcherCache.get(glossaryList);
+  if (hit) return hit;
+
+  const map = new Map<string, GlossaryItem>();
+  const patterns: string[] = [];
+
+  const addPattern = (raw: string, item: GlossaryItem) => {
+    const clean = raw.trim();
+    if (clean.length < 3) return;
+    const lower = clean.toLowerCase();
+    if (STOP_WORDS.has(lower)) return;
+    patterns.push(clean);
+    map.set(lower, item);
+    map.set(clean.toLocaleLowerCase('tr-TR'), item);
+  };
+
+  glossaryList.forEach((item) => {
+    addPattern(item.term, item);
+    const cleanTerm = item.term.replace(/\s*\([^)]*\)/g, '').trim();
+    addPattern(cleanTerm, item);
+    const parenMatch = item.term.match(/^(.+?)\s*\((.+?)\)$/);
+    if (parenMatch) {
+      addPattern(parenMatch[1], item);
+      addPattern(parenMatch[2], item);
+    }
+    item.aliases?.forEach((alias) => {
+      addPattern(alias, item);
+    });
+  });
+
+  const unique = Array.from(new Set(patterns)).sort((a, b) => b.length - a.length);
+  if (unique.length === 0) {
+    const empty = { regex: /(?!x)x/, aliasToItem: map };
+    compiledMatcherCache.set(glossaryList, empty);
+    return empty;
+  }
+
+  const escaped = unique.map((p) => p.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|');
+  const reg = new RegExp(`(?<![\\p{L}\\p{N}])(${escaped})(?![\\p{L}\\p{N}])`, 'giu');
+  const built = { regex: reg, aliasToItem: map };
+  compiledMatcherCache.set(glossaryList, built);
+  return built;
+}
+
 export const RenderWithGlossaryTerms: React.FC<{
   text: string;
   className?: string;
-}> = ({ text, className }) => {
+}> = React.memo(({ text, className }) => {
   const { glossaryList } = useGlossary();
 
-  // Build sorted regex of all terms and aliases (longest first to avoid greedy substring collisions)
-  const { regex, aliasToItem } = useMemo(() => {
-    const map = new Map<string, GlossaryItem>();
-    const patterns: string[] = [];
-    const STOP_WORDS = new Set(['ile', 've', 'bir', 'için', 'gibi', 'daha', 'çok', 'tip', 'her', 'bu', 'şu', 'veya', 'olan', 'göre']);
-
-    const addPattern = (raw: string, item: GlossaryItem) => {
-      const clean = raw.trim();
-      if (clean.length < 3) return;
-      const lower = clean.toLowerCase();
-      if (STOP_WORDS.has(lower)) return;
-      patterns.push(clean);
-      map.set(lower, item);
-      map.set(clean.toLocaleLowerCase('tr-TR'), item);
-    };
-
-    glossaryList.forEach((item) => {
-      // Add term directly
-      addPattern(item.term, item);
-
-      // Add clean term without parentheses
-      const cleanTerm = item.term.replace(/\s*\([^)]*\)/g, '').trim();
-      addPattern(cleanTerm, item);
-
-      // Add parenthetical contents if any
-      const parenMatch = item.term.match(/^(.+?)\s*\((.+?)\)$/);
-      if (parenMatch) {
-        addPattern(parenMatch[1], item);
-        addPattern(parenMatch[2], item);
-      }
-
-      // Add aliases
-      item.aliases?.forEach((alias) => {
-        addPattern(alias, item);
-      });
-    });
-
-    // Unique and sort by descending length
-    const unique = Array.from(new Set(patterns)).sort((a, b) => b.length - a.length);
-
-    if (unique.length === 0) {
-      return { regex: /(?!x)x/, aliasToItem: map };
-    }
-
-    // Escape regex special chars
-    const escaped = unique.map((p) => p.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|');
-
-    // Use unicode character boundaries (?<![\p{L}\p{N}]) and (?![\p{L}\p{N}])
-    const reg = new RegExp(`(?<![\\p{L}\\p{N}])(${escaped})(?![\\p{L}\\p{N}])`, 'giu');
-
-    return { regex: reg, aliasToItem: map };
-  }, [glossaryList]);
+  // Modül düzeyinde WeakMap önbelleği: 6.000 terimli RegExp her örnekte değil yalnız 1 kez derlenir
+  const { regex, aliasToItem } = useMemo(() => getCompiledGlossaryMatcher(glossaryList), [glossaryList]);
 
   // Multi-token parser: Bold (*** / **), Markers (==...== or <mark>...</mark>), Italics (*...* or _..._)
   const cleanText = useMemo(() => {
@@ -864,7 +877,7 @@ export const RenderWithGlossaryTerms: React.FC<{
       })}
     </span>
   );
-};
+});
 
 // ---------------------------------------------------------------------------
 // Medical Glossary Drawer / Reference Modal

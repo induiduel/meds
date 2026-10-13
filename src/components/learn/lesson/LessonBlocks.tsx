@@ -238,6 +238,19 @@ export const IX_META: Record<string, [React.ElementType, string]> = {
   cards: [Layers, 'Çevir kartları'],
   question: [Archive, 'Soru'],
 };
+/**
+ * Yeni etkileşim türü kaydı (rehber §8). Yerleşik türler aşağıdaki IxBody switch'indedir; yeni tür ise tek çağrıyla eklenir:
+ *   registerIx('yeni_tur', { icon: Puzzle, label: 'Kısa ad', render: (e, onDone) => <YeniTur e={e} onDone={onDone} /> });
+ * Kabuk (başlık, simge, bayrak, "Tamam" etiketi, süre ölçümü, hata bildirimi) PracticeCard'dan otomatik gelir;
+ * bileşen yalnız gövdesini çizer ve bitince onDone({ ok, score?, total? }) der. Stil: .ls-ix[data-ix="yeni_tur"].
+ */
+export interface IxDef { icon: React.ElementType; label: string; render: (e: any, onDone?: IxDone) => React.ReactNode }
+const IX_PLUGINS = new Map<string, IxDef>();
+export const registerIx = (type: string, def: IxDef) => {
+  IX_PLUGINS.set(type, def);
+  IX_META[type] = [def.icon, def.label];
+};
+
 export const practiceMeta = (p: PracticeItem): [React.ElementType, string] =>
   p.kind === 'cards' ? IX_META.cards : p.kind === 'question' ? [Archive, p.q.practice ? 'Çalışma sorusu' : 'Çıkmış soru'] : IX_META[p.data.type] || [Sparkles, 'Alıştırma'];
 
@@ -407,36 +420,71 @@ const Cloze: React.FC<{ e: any; onDone?: IxDone }> = ({ e, onDone }) => {
   );
 };
 
+/** Basamak metnini "Etiket: açıklama" olarak ayırır (etiket ≤ 48 karakter, rehber §5.5). */
+const splitChainStep = (x: any): [string, string] => {
+  const t = String(typeof x === 'string' ? x : x?.text || x?.label || '').replace(/^\d+[a-z]?[.)]\s*/i, '');
+  const k = t.indexOf(':');
+  return k > 0 && k < 48 ? [t.slice(0, k), t.slice(k + 1).trim()] : ['', t];
+};
+
+/**
+ * Mekanizma zinciri: basamaklar sırayla açılır (bağlantı çizgisi aşağı doğru çizilir).
+ * İsteğe bağlı alt zincir: bir basamak `{ text, substeps: [...] }` ise altında "Alt halkalar" açılır —
+ * yalnız basamak kendi içinde ayrışan bir mekanizma içeriyorsa kullanılır (rehber §5.5).
+ */
 const Chain: React.FC<{ e: any; onDone?: IxDone }> = ({ e, onDone }) => {
-  const steps: [string, string][] = (e.steps || []).map((x: any) => {
-    const t = String(typeof x === 'string' ? x : x?.text || x?.label || '').replace(/^\d+[.)]\s*/, '');
-    const k = t.indexOf(':');
-    return k > 0 && k < 48 ? [t.slice(0, k), t.slice(k + 1).trim()] : ['', t];
-  });
+  const raw: any[] = e.steps || [];
+  const steps = raw.map((x) => ({
+    parts: splitChainStep(x),
+    subs: (x && typeof x === 'object' && Array.isArray(x.substeps) ? x.substeps : []).map(splitChainStep) as [string, string][],
+  }));
   const [n, setN] = useState(1);
+  const [openSub, setOpenSub] = useState<number | null>(null);
+  const total = steps.length;
+  const reveal = (next: number) => {
+    const v = Math.min(total, next);
+    setN(v);
+    if (v >= total) onDone?.();
+  };
   return (
     <div className="ls-ix-body">
       {e.chainTitle && <p className="ls-ix-q">{e.chainTitle}</p>}
       <ol className="ls-chain">
-        {steps.map(([a, b], i) => (
+        {steps.map(({ parts: [a, b], subs }, i) => (
           <li key={i} className={i < n ? 'is-on' : ''}>
             <span className="n">{i + 1}</span>
-            <span className="t">{a && <b>{a}</b>}<Inline text={b} /></span>
+            <span className="t">
+              {a && <b>{a}</b>}<Inline text={b} />
+              {subs.length > 0 && i < n && (
+                <>
+                  <button type="button" className="ls-chain-subt" aria-expanded={openSub === i} onClick={() => setOpenSub((v) => (v === i ? null : i))}>
+                    <ChevronRight aria-hidden className={openSub === i ? 'is-open' : ''} /> Alt halkalar · {subs.length}
+                  </button>
+                  {openSub === i && (
+                    <ol className="ls-chain is-sub">
+                      {subs.map(([sa, sb], j) => (
+                        <li key={j} className="is-on">
+                          <span className="n">{i + 1}{String.fromCharCode(97 + j)}</span>
+                          <span className="t">{sa && <b>{sa}</b>}<Inline text={sb} /></span>
+                        </li>
+                      ))}
+                    </ol>
+                  )}
+                </>
+              )}
+            </span>
           </li>
         ))}
       </ol>
-      <button
-        type="button"
-        className="ls-btn is-primary self-start"
-        disabled={n >= steps.length}
-        onClick={() => {
-          const next = n + 1;
-          setN(next);
-          if (next >= steps.length) onDone?.();
-        }}
-      >
-        {n >= steps.length ? <><Check aria-hidden /> Zincir tamam</> : <>Sonraki basamak <ChevronRight aria-hidden /></>}
-      </button>
+      <div className="ls-chain-foot">
+        <button type="button" className="ls-btn is-primary" disabled={n >= total} onClick={() => reveal(n + 1)}>
+          {n >= total ? <><Check aria-hidden /> Zincir tamam</> : <>Sonraki basamak <ChevronRight aria-hidden /></>}
+        </button>
+        {n < total && total > 2 && (
+          <button type="button" className="ls-btn" onClick={() => reveal(total)}>Tümünü göster</button>
+        )}
+        <span className="ls-chain-count" aria-live="polite">{Math.min(n, total)} / {total}</span>
+      </div>
     </div>
   );
 };
@@ -1112,8 +1160,16 @@ const IxBody: React.FC<{ item: PracticeItem; onDone?: IxDone }> = ({ item, onDon
       return <Perturbation e={e} onDone={onDone} />;
     case 'fix_the_text':
       return <FixTheText e={e} onDone={onDone} />;
-    default:
-      return null;
+    default: {
+      const plug = IX_PLUGINS.get(e.type);
+      if (plug) return <>{plug.render(e, onDone)}</>;
+      // Bilinmeyen tür (yeni veri, eski istemci): boş kart yerine açıklama
+      return (
+        <div className="ls-ix-body">
+          <p className="ls-ix-unknown">Bu etkileşim türü ({String(e.type || 'adsız')}) bu sürümde henüz gösterilemiyor. Sayfayı yenilemek genellikle düzeltir.</p>
+        </div>
+      );
+    }
   }
 };
 
@@ -1128,7 +1184,7 @@ export const PracticeCard: React.FC<{ item: PracticeItem; done?: boolean; onDone
     onDone?.(r ? { ...r, ms: Date.now() - t0.current } : undefined);
   };
   return (
-    <section className={`ls-ix ${className}`} style={style} aria-label={label} data-fb-key={target?.key}>
+    <section className={`ls-ix ${className}`} style={style} aria-label={label} data-fb-key={target?.key} data-ix={item.kind === 'cards' ? 'cards' : item.kind === 'question' ? 'question' : item.data.type}>
       <header className="ls-ix-head">
         <Icon aria-hidden />
         <span className="ls-ix-label" title={label}>{label}</span>

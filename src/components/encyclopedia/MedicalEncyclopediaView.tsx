@@ -34,7 +34,7 @@ import './glossary.css';
  *    araç çubuğu ve iskelet satırlar hemen görünür.
  *  - Liste 40'ar madde çizilir; sondaki iskelet satır görünür olunca 40 daha eklenir (IntersectionObserver).
  *  - Satırlar React.memo; açılan maddenin ayrıntısı yalnız o satırda çizilir (aynı anda tek madde açık).
- *  - "Odak" görünümünde ve geniş ekranda (≥1024) satır seçilir, ayrıntı sağdaki yapışkan panelde okunur;
+ *  - geniş ekranda (≥1024, Akış dışı) satır seçilir, ayrıntı sağdaki yapışkan panelde okunur;
  *    diğer görünümlerde her genişlikte tek sütun akordeon.
  *  - Açılan içeriğin görünür alana kaydırılması utils/autoReveal.ts'tedir (aria-expanded + aria-controls);
  *    burada yalnız üstte kapanan maddenin yarattığı kayma düzeltilir.
@@ -815,9 +815,9 @@ export const MedicalEncyclopediaView: React.FC<MedicalEncyclopediaViewProps> = (
   /* ---------------- Açma/kapama, hedefe gitme ---------------- */
 
   const isWide = useWide();
-  const { layout } = useAppearance();
-  /** Ana-ayrıntı düzeni: yalnız "Odak" görünümünde ve geniş ekranda */
-  const wide = isWide && layout === 'odak';
+  const { layout, design } = useAppearance();
+  // v11: geniş ekranda liste + ayrıntı bölmesi varsayılan (Akış modunda tek sütun akordeon kalır)
+  const wide = isWide && (design === 'v10' ? layout === 'odak' : layout !== 'akis');
   const wideRef = useRef(wide);
   wideRef.current = wide;
   const anchorRef = useRef<{ id: string; top: number } | null>(null);

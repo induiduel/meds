@@ -115,7 +115,7 @@
           "changeSummary": "5 adet benzer taslak bu ana soru altında birleştirildi."
         }
       ],
-      "updatedAt": "2026-10-03T00:03:23.726Z",
+      "updatedAt": "2026-10-13T22:30:23.631Z",
       "discipline": "Tıbbi Patoloji",
       "committeeId": "donem3-kurul1",
       "questionNumber": 0,
@@ -10453,7 +10453,8 @@
           "text": "fdjefgv",
           "type": "stem",
           "timestamp": "2026-10-11T15:03:51.379Z",
-          "upvotes": 0
+          "upvotes": 0,
+          "likedBy": []
         },
         {
           "id": "f-opt-1791731031404-A",
@@ -10461,7 +10462,8 @@
           "text": "A) dfd",
           "type": "option",
           "timestamp": "2026-10-11T15:03:51.404Z",
-          "upvotes": 0
+          "upvotes": 0,
+          "likedBy": []
         },
         {
           "id": "f-opt-1791731031404-C",
@@ -10469,7 +10471,8 @@
           "text": "C) sdsd",
           "type": "option",
           "timestamp": "2026-10-11T15:03:51.404Z",
-          "upvotes": 0
+          "upvotes": 0,
+          "likedBy": []
         },
         {
           "id": "f-opt-1791731031404-D",
@@ -10477,7 +10480,8 @@
           "text": "D) dsd",
           "type": "option",
           "timestamp": "2026-10-11T15:03:51.404Z",
-          "upvotes": 0
+          "upvotes": 0,
+          "likedBy": []
         },
         {
           "id": "f-opt-1791731031404-E",
@@ -10485,7 +10489,8 @@
           "text": "E) sdsdsd",
           "type": "option",
           "timestamp": "2026-10-11T15:03:51.404Z",
-          "upvotes": 0
+          "upvotes": 0,
+          "likedBy": []
         }
       ],
       "options": [
@@ -10493,25 +10498,29 @@
           "key": "A",
           "text": "dfd",
           "suggestedBy": "Dönem 3 Öğrencisi",
-          "upvotes": 0
+          "upvotes": 0,
+          "likedBy": []
         },
         {
           "key": "C",
           "text": "sdsd",
           "suggestedBy": "Dönem 3 Öğrencisi",
-          "upvotes": 0
+          "upvotes": 0,
+          "likedBy": []
         },
         {
           "key": "D",
           "text": "dsd",
           "suggestedBy": "Dönem 3 Öğrencisi",
-          "upvotes": 0
+          "upvotes": 0,
+          "likedBy": []
         },
         {
           "key": "E",
           "text": "sdsdsd",
           "suggestedBy": "Dönem 3 Öğrencisi",
-          "upvotes": 0
+          "upvotes": 0,
+          "likedBy": []
         }
       ],
       "claimedAnswer": "B",
@@ -10557,7 +10566,9 @@
       ],
       "createdAt": "2026-10-11T15:03:51.404Z",
       "updatedAt": "2026-10-11T15:03:51.425Z",
-      "examYear": "2026-2027"
+      "examYear": "2026-2027",
+      "upvotes": 0,
+      "likedBy": []
     }
   ]
 }

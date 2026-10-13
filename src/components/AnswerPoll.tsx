@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { BarChart3, Check, ShieldCheck, Users } from 'lucide-react';
 import { ApiService, AnswerVotes } from '../services/api';
 import { Highlight } from './ui/StemText';
+import { useLiveEvent } from '../hooks/useLiveEvent';
 
 const KEYS = ['A', 'B', 'C', 'D', 'E'];
 
@@ -82,6 +83,15 @@ export const AnswerPoll: React.FC<Props> = ({ questionId, options, voterUid, hin
       .catch(() => alive && setError('load'));
     return () => { alive = false; };
   }, [visible, questionId, voterUid, retryN]);
+
+  // Başka öğrencinin oyu: dağılım canlı güncellenir (meds-pg answer_votes → SSE votes_changed)
+  useLiveEvent(
+    'votes_changed',
+    (p) => {
+      if (p?.resync || p?.questionId === questionId) ApiService.getAnswerVotes(questionId, voterUid || '').then(setVotes).catch(() => {});
+    },
+    { enabled: visible },
+  );
 
   useEffect(() => {
     if (!votes) return;

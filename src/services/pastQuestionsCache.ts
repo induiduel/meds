@@ -194,6 +194,58 @@ class PastQuestionsCacheService {
   }
 
   /**
+   * İstemci arayüzünde hiç kullanılmayan sunucu/pipeline alanlarını (checkSolveOriginal, ragChunk,
+   * embeddingText, grounding, yinelenen denetleyiciSurumu/reconstruction açıklamaları) bellekten ve
+   * IndexedDB'den arındırarak RAM kullanımını %50+ düşürür.
+   */
+  private slimQuestion(raw: QuestionItem): QuestionItem {
+    if (!raw || typeof raw !== 'object') return raw;
+    const q: any = { ...raw };
+    delete q.checkSolveOriginal;
+    delete q.ragChunk;
+    delete q.embeddingText;
+    delete q.grounding;
+    if (q.explanation && q.tibbi_aciklama) {
+      delete q.tibbi_aciklama;
+    }
+    if (q.checkSolve && typeof q.checkSolve === 'object') {
+      const cs = q.checkSolve;
+      q.checkSolve = {
+        status: cs.status,
+        ...(cs.cevapDegisti ? { cevapDegisti: cs.cevapDegisti } : {}),
+        ...(cs.cevapGerekcesi ? { cevapGerekcesi: cs.cevapGerekcesi } : {}),
+        ...(cs.eklenenSiklar ? { eklenenSiklar: cs.eklenenSiklar } : {}),
+        ...(cs.mufredat ? { mufredat: cs.mufredat } : {}),
+        ...(cs.at ? { at: cs.at } : {}),
+      };
+    }
+    if (q.denetleyiciSurumu && typeof q.denetleyiciSurumu === 'object') {
+      const ds = q.denetleyiciSurumu;
+      q.denetleyiciSurumu = {
+        ...(ds.stem ? { stem: ds.stem } : {}),
+        ...(ds.options ? { options: ds.options } : {}),
+        ...(ds.onayTarihi ? { onayTarihi: ds.onayTarihi } : {}),
+        ...(!q.sik_analizi && ds.sik_analizi ? { sik_analizi: ds.sik_analizi } : {}),
+        ...(!q.referans_kaynaklar && ds.referans_kaynaklar ? { referans_kaynaklar: ds.referans_kaynaklar } : {}),
+      };
+    }
+    if (q.reconstruction && typeof q.reconstruction === 'object') {
+      const rc = { ...q.reconstruction };
+      if (q.explanation && rc.explanation === q.explanation) delete rc.explanation;
+      if (q.stem && rc.stem === q.stem) delete rc.stem;
+      if (Array.isArray(q.options) && Array.isArray(rc.options) && rc.options.length === q.options.length) {
+        let same = true;
+        for (let i = 0; i < q.options.length; i++) {
+          if (q.options[i] !== rc.options[i]) { same = false; break; }
+        }
+        if (same) delete rc.options;
+      }
+      q.reconstruction = rc;
+    }
+    return q as QuestionItem;
+  }
+
+  /**
    * Cihaz hafızasındaki (IndexedDB) tüm çıkmış soruları getirir (< 20ms)
    */
   public async getCachedQuestions(): Promise<QuestionItem[]> {
@@ -213,17 +265,20 @@ class PastQuestionsCacheService {
         const req = store.getAll();
 
         req.onsuccess = () => {
-          const items: QuestionItem[] = req.result || [];
+          const rawItems: QuestionItem[] = req.result || [];
           this.memoryMap.clear();
-          for (const item of items) {
+          const slimmed: QuestionItem[] = [];
+          for (const item of rawItems) {
             if (item && item.id) {
-              this.memoryMap.set(item.id, item);
+              const s = this.slimQuestion(item);
+              this.memoryMap.set(s.id, s);
+              slimmed.push(s);
             }
           }
           this.isMemoryInitialized = true;
           this.cachedIds = null;
           this.currentStatus.totalCached = this.memoryMap.size;
-          resolve(items);
+          resolve(slimmed);
         };
 
         req.onerror = () => {
@@ -250,7 +305,7 @@ class PastQuestionsCacheService {
         const tx = db.transaction(STORE_QUESTIONS, 'readonly');
         const store = tx.objectStore(STORE_QUESTIONS);
         const req = store.get(id);
-        req.onsuccess = () => resolve(req.result || null);
+        req.onsuccess = () => resolve(req.result ? this.slimQuestion(req.result) : null);
         req.onerror = () => resolve(null);
       } catch {
         resolve(null);
@@ -263,8 +318,11 @@ class PastQuestionsCacheService {
    */
   public async saveQuestion(question: QuestionItem): Promise<void> {
     if (!question || !question.id) return;
-    this.memoryMap.set(question.id, question);
-    this.cachedIds?.add(question.id);
+    const slim = this.slimQuestion(question);
+    if (this.isMemoryInitialized) {
+      this.memoryMap.set(slim.id, slim);
+    }
+    this.cachedIds?.add(slim.id);
 
     const db = await this.initDb();
     if (db) {
@@ -272,7 +330,7 @@ class PastQuestionsCacheService {
         try {
           const tx = db.transaction([STORE_QUESTIONS, STORE_META], 'readwrite');
           const qStore = tx.objectStore(STORE_QUESTIONS);
-          qStore.put(question);
+          qStore.put(slim);
 
           tx.oncomplete = () => resolve();
           tx.onerror = () => resolve();
@@ -282,7 +340,7 @@ class PastQuestionsCacheService {
       });
     }
 
-    this.notifyListeners([question]);
+    this.notifyListeners([slim]);
   }
 
   /**
@@ -291,31 +349,39 @@ class PastQuestionsCacheService {
   public async saveBatch(questions: QuestionItem[]): Promise<void> {
     if (!questions || questions.length === 0) return;
 
-    // Bellek henüz IndexedDB'den doldurulmadıysa (ör. arka plan eşitlemesi) yalnız kimlikler izlenir;
-    // memoryMap'e kısmi kayıt girip "doldu" işaretlenirse getCachedQuestions eksik liste dönerdi.
-    const wasLoaded = this.isMemoryInitialized || (!this.cachedIds && this.memoryMap.size === 0 && questions.length > 1000);
-    for (const q of questions) {
+    const slimList: QuestionItem[] = new Array(questions.length);
+    for (let i = 0; i < questions.length; i++) {
+      slimList[i] = this.slimQuestion(questions[i]);
+    }
+
+    // Bellek yalnızca getCachedQuestions() çağrılmışsa (isMemoryInitialized === true) doldurulur.
+    // Arka plan eşitlemesinde 5.400 soruyu JS yığınına (RAM) açmayız; yalnız kimlik kümesi güncellenir.
+    if (!this.isMemoryInitialized && !this.cachedIds) {
+      this.cachedIds = new Set();
+    }
+    for (const q of slimList) {
       if (q && q.id) {
-        if (wasLoaded) this.memoryMap.set(q.id, q);
+        if (this.isMemoryInitialized) this.memoryMap.set(q.id, q);
         else this.memoryMap.delete(q.id);
         this.cachedIds?.add(q.id);
       }
     }
-    if (wasLoaded) {
-      this.isMemoryInitialized = true;
-      this.cachedIds = null;
-    }
 
     const db = await this.initDb();
     if (!db) {
-      this.notifyListeners(questions);
+      // IndexedDB desteklenmeyen ortamda mecburi bellek yedeği
+      for (const q of slimList) {
+        if (q && q.id) this.memoryMap.set(q.id, q);
+      }
+      this.isMemoryInitialized = true;
+      this.notifyListeners(slimList);
       return;
     }
 
     // Parça parça (500'lük gruplar halinde) yazarak tarayıcı transaction zaman aşımını önle
     const CHUNK_SIZE = 500;
-    for (let i = 0; i < questions.length; i += CHUNK_SIZE) {
-      const chunk = questions.slice(i, i + CHUNK_SIZE);
+    for (let i = 0; i < slimList.length; i += CHUNK_SIZE) {
+      const chunk = slimList.slice(i, i + CHUNK_SIZE);
       await new Promise<void>((resolve) => {
         try {
           const tx = db.transaction(STORE_QUESTIONS, 'readwrite');
@@ -331,7 +397,7 @@ class PastQuestionsCacheService {
       });
     }
 
-    this.notifyListeners(questions);
+    this.notifyListeners(slimList);
   }
 
   /**
@@ -499,6 +565,7 @@ class PastQuestionsCacheService {
    */
   public async syncWithRemote(options: {
     forceFull?: boolean;
+    onlyIfCached?: boolean;
     onUpdate?: (updated: QuestionItem[]) => void;
   } = {}): Promise<{
     success: boolean;
@@ -542,6 +609,20 @@ class PastQuestionsCacheService {
       const localIds = await this.getCachedIdSet();
       const localCount = localIds.size;
       let lastSyncTime = await this.getLastSyncTime();
+
+      // Arka plan SSE tetiklemesi: Kullanıcı henüz Çıkmış Sorular'ı açmamışsa ve yerel önbellek boşsa
+      // tam veritabanını arka planda indirip ağ ve RAM'i meşgul etme
+      if (options.onlyIfCached && (localCount === 0 || !lastSyncTime) && !this.isMemoryInitialized) {
+        this.syncInProgress = false;
+        this.currentStatus.isSyncing = false;
+        this.notifyListeners();
+        return {
+          success: true,
+          updatedCount: 0,
+          isUpToDate: false,
+          totalCount: localCount,
+        };
+      }
 
       // Çevrimdışı Kontrolü: Cihaz internetsizse doğrudan cihaz hafızasını sun, ağı bekleme
       if (typeof navigator !== 'undefined' && !navigator.onLine) {

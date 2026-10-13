@@ -11,22 +11,82 @@ import type { Plugin } from 'vite';
 
 export const safeDeckFile = (id: string) => id.replace(/[^a-zA-Z0-9_-]+/g, '_');
 
+const deckGroup = (raw: string) => (raw || 'Diğer').split(/\s*(?:\/|&|,|\sve\s)\s*/)[0].trim() || 'Diğer';
+
 export function splitLearningDecks(root: string): Plugin {
   const src = path.resolve(root, 'src/data/interactive_learning_decks.json');
   const outDir = path.resolve(root, 'src/data/decks');
   const itemsDir = path.join(outDir, 'items');
   const catalogFile = path.join(outDir, 'catalog.json');
+  const flashcardsFile = path.join(outDir, 'flashcards.json');
+  const kzDir = path.resolve(root, 'src/data/kazanimlar');
+  const kzLiteDir = path.join(kzDir, 'lite');
+  const kzQuestionsDir = path.join(kzDir, 'questions');
+
+  const splitKazanimlar = () => {
+    if (!fs.existsSync(kzDir)) return;
+    fs.mkdirSync(kzLiteDir, { recursive: true });
+    fs.mkdirSync(kzQuestionsDir, { recursive: true });
+    for (let k = 1; k <= 6; k++) {
+      const kFile = path.join(kzDir, `k${k}.json`);
+      if (!fs.existsSync(kFile)) continue;
+      const liteFile = path.join(kzLiteDir, `k${k}.json`);
+      const qFile = path.join(kzQuestionsDir, `k${k}.json`);
+      const srcMtime = fs.statSync(kFile).mtimeMs;
+      if (fs.existsSync(liteFile) && fs.existsSync(qFile)) {
+        try {
+          if (fs.statSync(liteFile).mtimeMs >= srcMtime && fs.statSync(qFile).mtimeMs >= srcMtime) continue;
+        } catch {}
+      }
+      try {
+        const raw = JSON.parse(fs.readFileSync(kFile, 'utf8'));
+        const qMap: Record<string, { cikmisSorular?: any[]; ornekSorular?: any[] }> = {};
+        const lite = {
+          ...raw,
+          dersler: (raw.dersler || []).map((d: any) => ({
+            ...d,
+            konular: (d.konular || []).map((konu: any) => ({
+              ...konu,
+              kazanimlar: (konu.kazanimlar || []).map((kz: any) => {
+                const cList = Array.isArray(kz.cikmisSorular) ? kz.cikmisSorular : [];
+                const oList = Array.isArray(kz.ornekSorular) ? kz.ornekSorular : [];
+                if (kz.id && (cList.length > 0 || oList.length > 0)) {
+                  qMap[kz.id] = {
+                    ...(cList.length > 0 ? { cikmisSorular: cList } : {}),
+                    ...(oList.length > 0 ? { ornekSorular: oList } : {}),
+                  };
+                }
+                return {
+                  ...kz,
+                  totalCikmisCount: cList.length,
+                  totalOrnekCount: kz.totalOrnekCount ?? oList.length,
+                  firstOrnekKazanimNo: oList[0]?.kazanimNo,
+                  cikmisSorular: [],
+                  ornekSorular: [],
+                };
+              }),
+            })),
+          })),
+        };
+        fs.writeFileSync(liteFile, JSON.stringify(lite));
+        fs.writeFileSync(qFile, JSON.stringify(qMap));
+      } catch (e) {
+        console.warn(`[kazanimlar] k${k}.json bölünemedi:`, e);
+      }
+    }
+  };
 
   const run = () => {
+    splitKazanimlar();
     if (!fs.existsSync(src)) return;
     const srcTime = fs.statSync(src).mtimeMs;
     const decks: any[] = JSON.parse(fs.readFileSync(src, 'utf8'));
     const valid = decks.filter((d) => d && d.id && Array.isArray(d.slides) && d.slides.length > 0);
     // Katalog kaynaktan yeniyse VE parça sayısı tutuyorsa bölmeyi atla; aksi halde yeniden üret
     // (yalnız mtime'a bakmak, parçalar silinmiş/eksikken tüm destelerin açılmamasına yol açıyordu).
-    if (fs.existsSync(catalogFile)) {
+    if (fs.existsSync(catalogFile) && fs.existsSync(flashcardsFile)) {
       try {
-        if (fs.statSync(catalogFile).mtimeMs >= srcTime) {
+        if (fs.statSync(catalogFile).mtimeMs >= srcTime && fs.statSync(flashcardsFile).mtimeMs >= srcTime) {
           let itemCount = 0;
           try {
             itemCount = fs.existsSync(itemsDir) ? fs.readdirSync(itemsDir).filter((f) => f.endsWith('.json')).length : 0;
@@ -38,6 +98,7 @@ export function splitLearningDecks(root: string): Plugin {
     fs.rmSync(itemsDir, { recursive: true, force: true });
     fs.mkdirSync(itemsDir, { recursive: true });
     const catalog = [];
+    const extractedCards: any[] = [];
     for (const d of decks) {
       if (!d || !d.id || !Array.isArray(d.slides) || d.slides.length === 0) continue;
       fs.writeFileSync(path.join(itemsDir, `${safeDeckFile(d.id)}.json`), JSON.stringify(d));
@@ -55,10 +116,27 @@ export function splitLearningDecks(root: string): Plugin {
       // Sürüm seçimi (V1/V2) için öğrenciye gösterilen ölçüler
       let interactiveCount = 0;
       let wordCount = 0;
+      const grp = d.shortTitle || d.title;
+      const dGrp = deckGroup(d.discipline);
       for (const s of slides) {
         const els = s.interactiveElements || s.elements || (s.interactiveElement ? [s.interactiveElement] : []);
         interactiveCount += Array.isArray(els) ? els.length : 0;
         wordCount += String(s.synthesisNarrative || s.content || '').split(/\s+/).filter(Boolean).length;
+        if (Array.isArray(s.flashcards)) {
+          s.flashcards.forEach((c: any, i: number) => {
+            const front = c?.front || c?.question;
+            const back = c?.back || c?.answer;
+            if (!front || !back) return;
+            extractedCards.push({
+              id: `d:${d.id}:${s.slideNumber}:${c.id || i}`,
+              group: grp,
+              front,
+              back,
+              sub: `${dGrp} · slayt ${s.slideNumber}`,
+              ...(c.hint ? { pearl: c.hint } : {}),
+            });
+          });
+        }
       }
       catalog.push({
         ...meta,
@@ -72,7 +150,8 @@ export function splitLearningDecks(root: string): Plugin {
       });
     }
     fs.writeFileSync(catalogFile, JSON.stringify(catalog, null, 2));
-    console.log(`[decks] ${catalog.length} deste bölündü (Yayınlanan: ${catalog.filter((x: any) => x.isNew || String(x.version || '').startsWith('2') || x.slideCount >= 50).length}) → src/data/decks/`);
+    fs.writeFileSync(flashcardsFile, JSON.stringify(extractedCards));
+    console.log(`[decks] ${catalog.length} deste bölündü (${extractedCards.length} kart ayrıştırıldı) → src/data/decks/`);
   };
 
   return {

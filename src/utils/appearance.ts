@@ -16,6 +16,18 @@ export type Density = 'compact' | 'normal' | 'wide';
  * Kök öğeye `data-layout` yazılır; kurallar styles/layout-modes.css.
  */
 export type LayoutMode = 'akis' | 'pano' | 'odak';
+/** v11 okuma ve kullanım tercihleri (kök öğeye data-* olarak yazılır; kurallar styles/v11.css) */
+export type ReadingFont = 'serif' | 'sans';
+export type TextSize = 's' | 'm' | 'l';
+/** Basit: yalnız hızlı süzgeç hapları; Gelişmiş: "Süzgeç" sayfası da görünür */
+export type FilterMode = 'basit' | 'gelismis';
+export type MotionPref = 'full' | 'reduced';
+/** Tasarım dili: v12 Net (varsayılan), v11 Sade, v10 Klasik — eski tasarımlar silinmez, profilden geri dönülebilir.
+ *  v12, v11'in sayfa yapısını devralır (CSS `:root:is([data-design='v11'],[data-design='v12'])`) ve üstüne styles/v12.css katmanını koyar. */
+export type DesignVersion = 'v12' | 'v11' | 'v10';
+export const DESIGN_ORDER: DesignVersion[] = ['v12', 'v11', 'v10'];
+/** v11 yapısını kullanan tasarımlar (v11 ve v12) */
+export const isSadeFamily = (d: DesignVersion) => d !== 'v10';
 
 export interface Appearance {
   mode: ThemeMode;
@@ -23,12 +35,24 @@ export interface Appearance {
   palettes: Record<ThemeMode, Palette>;
   density: Density;
   layout: LayoutMode;
+  reading: ReadingFont;
+  textSize: TextSize;
+  filters: FilterMode;
+  /** Çıkmış/örnek soru kartlarında işaret etiketleri (varsayılan gizli) */
+  qtags: boolean;
+  motion: MotionPref;
+  design: DesignVersion;
   /** Vurgu rengi seçimi, "<tema>:<palet>" anahtarıyla (yalnız `accents` tanımlı paletler; utils/palettes.ts) */
   accents?: Record<string, string>;
 }
 
 export const MODE_LABELS: Record<ThemeMode, string> = { light: 'Açık', sepia: 'Sarı', dark: 'Koyu' };
 export const LAYOUT_LABELS: Record<LayoutMode, string> = { akis: 'Akış', pano: 'Pano', odak: 'Odak' };
+export const READING_LABELS: Record<ReadingFont, string> = { serif: 'Serif', sans: 'Sans' };
+export const TEXT_SIZE_LABELS: Record<TextSize, string> = { s: 'Küçük', m: 'Orta', l: 'Büyük' };
+export const FILTER_MODE_LABELS: Record<FilterMode, string> = { basit: 'Basit', gelismis: 'Gelişmiş' };
+const V11_DEFAULTS = { reading: 'serif' as ReadingFont, textSize: 'm' as TextSize, filters: 'basit' as FilterMode, qtags: false, motion: 'full' as MotionPref, design: 'v12' as DesignVersion };
+export const DESIGN_LABELS: Record<DesignVersion, string> = { v12: 'Net (v12)', v11: 'Sade (v11)', v10: 'Klasik (v10)' };
 export const DENSITY_LABELS: Record<Density, string> = { compact: 'Kompakt', normal: 'Normal', wide: 'Geniş' };
 /** Geriye dönük uyumluluk: tema → palet kimliği → bilgi (kayıttan üretilir). */
 export const PALETTE_INFO: Record<ThemeMode, Record<string, { name: string; hint: string; swatch: [string, string, string] }>> =
@@ -41,14 +65,28 @@ const KEY = 'medsoru_appearance';
 const LEGACY_THEME_KEY = 'medsoru_theme';
 const listeners = new Set<() => void>();
 
+/** v11 önceki varsayılandı: kayıtlı 'v11' bir kez v12'ye taşınır (bilerek Klasik seçen v10'da kalır). */
+const DESIGN_MIGRATION_KEY = 'medsoru_design_v12_migrated';
+function migrateDesign(d: unknown): DesignVersion {
+  if (d === 'v10' || d === 'v12') return d;
+  if (d === 'v11') {
+    try {
+      if (localStorage.getItem(DESIGN_MIGRATION_KEY)) return 'v11';
+      localStorage.setItem(DESIGN_MIGRATION_KEY, '1');
+    } catch { return 'v11'; }
+    return 'v12';
+  }
+  return 'v12';
+}
+
 function read(): Appearance {
   // İlk açılış her zaman açık temadır (sistem koyu olsa bile); kullanıcı Ayarlar'dan değiştirir.
-  const fallback: Appearance = { mode: 'light', palettes: { light: 'a', sepia: 'a', dark: 'a' }, density: 'normal', layout: 'pano' };
+  const fallback: Appearance = { mode: 'light', palettes: { light: 'a', sepia: 'a', dark: 'a' }, density: 'normal', layout: 'pano', ...V11_DEFAULTS };
   try {
     const raw = localStorage.getItem(KEY);
     if (raw) {
       const p = JSON.parse(raw) as Partial<Appearance>;
-      return {
+      const out: Appearance = {
         mode: p.mode === 'light' || p.mode === 'sepia' || p.mode === 'dark' ? p.mode : fallback.mode,
         // Kayıtta olmayan (silinmiş) palet seçimi temanın ilk paletine döner
         palettes: (['light', 'sepia', 'dark'] as ThemeMode[]).reduce((acc, m) => {
@@ -57,8 +95,17 @@ function read(): Appearance {
         }, {} as Record<ThemeMode, Palette>),
         density: p.density === 'compact' || p.density === 'wide' || p.density === 'normal' ? p.density : 'normal',
         layout: p.layout === 'akis' || p.layout === 'odak' || p.layout === 'pano' ? p.layout : 'pano',
+        reading: p.reading === 'sans' ? 'sans' : 'serif',
+        textSize: p.textSize === 's' || p.textSize === 'l' ? p.textSize : 'm',
+        filters: p.filters === 'gelismis' ? 'gelismis' : 'basit',
+        qtags: p.qtags === true,
+        motion: p.motion === 'reduced' ? 'reduced' : 'full',
+        design: migrateDesign(p.design),
         accents: p.accents && typeof p.accents === 'object' ? { ...p.accents } : {},
       };
+      // Taşınan tasarım seçimi kalıcı olsun (aksi halde sonraki açılışta v11'e döner)
+      if (out.design !== p.design) { try { localStorage.setItem(KEY, JSON.stringify(out)); } catch { /* ignore */ } }
+      return out;
     }
     // Eski açık/koyu tercihi bir kez taşınır
     const legacy = localStorage.getItem(LEGACY_THEME_KEY);
@@ -70,7 +117,7 @@ function read(): Appearance {
 }
 
 let current: Appearance = typeof window === 'undefined'
-  ? { mode: 'light', palettes: { light: 'a', sepia: 'a', dark: 'a' }, density: 'normal', layout: 'pano' }
+  ? { mode: 'light', palettes: { light: 'a', sepia: 'a', dark: 'a' }, density: 'normal', layout: 'pano', ...V11_DEFAULTS }
   : read();
 
 /** Kök öğeye tercihleri yazar (anında, geçişsiz). Açılışta ve örtü altındaki geçişte kullanılır. */
@@ -83,6 +130,12 @@ export function applyAppearance(a: Appearance = current) {
   if (acc) el.dataset.accent = acc.id; else delete el.dataset.accent;
   el.dataset.density = a.density;
   el.dataset.layout = a.layout;
+  el.dataset.reading = a.reading;
+  el.dataset.textSize = a.textSize;
+  el.dataset.filters = a.filters;
+  el.dataset.qtags = a.qtags ? 'on' : 'off';
+  el.dataset.motion = a.motion;
+  el.dataset.design = a.design;
   el.classList.toggle('theme-dark', a.mode === 'dark');
   el.style.colorScheme = a.mode === 'dark' ? 'dark' : 'light';
   // Tarayıcı çubuğu rengi zemine uysun
@@ -174,6 +227,12 @@ export function setAppearance(patch: Partial<Omit<Appearance, 'palettes' | 'acce
   if (patch.mode) next.mode = patch.mode;
   if (patch.density) next.density = patch.density;
   if (patch.layout) next.layout = patch.layout;
+  if (patch.reading) next.reading = patch.reading;
+  if (patch.textSize) next.textSize = patch.textSize;
+  if (patch.filters) next.filters = patch.filters;
+  if (typeof patch.qtags === 'boolean') next.qtags = patch.qtags;
+  if (patch.motion) next.motion = patch.motion;
+  if (patch.design) next.design = patch.design;
   if (patch.palette) next.palettes[next.mode] = patch.palette;
   // Vurgu rengi: örtüsüz, anında (yalnız 4 token değişir)
   if (patch.accent) {
@@ -192,8 +251,11 @@ export function setAppearance(patch: Partial<Omit<Appearance, 'palettes' | 'acce
   } catch {
     /* ignore */
   }
-  // Görünen bir şey değişmediyse (aynı düğmeye yeniden basıldı) örtü açılmaz
-  if (same) listeners.forEach((l) => l());
+  // Renk değişmediyse örtü açılmaz; düzen/okuma/süzgeç tercihleri anında uygulanır
+  if (same) {
+    applyAppearance(next);
+    listeners.forEach((l) => l());
+  }
   else void switchAppearance(next);
 }
 

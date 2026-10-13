@@ -377,3 +377,17 @@ html[data-mode="dark"] .deep-link-highlight-pulse,
     outline: 3px solid var(--color-accent) !important;
   }
 }
+
+/* ---------- Marka yazısı: MeDSor ⇄ Doktora Sor (BrandWord.tsx, 10 dk'da bir) ----------
+ * Açılış: "Me" kayıp kapanır, ardından "oktora" ve boşluk açılır. Kapanış: önce "oktora" kapanır, sonra "Me" geri açılır. */
+.bw { display: inline-flex; align-items: baseline; white-space: nowrap; }
+.bw > span, .bw > b { display: inline-block; }
+.bw-me, .bw-x { overflow: hidden; vertical-align: bottom; }
+.bw-me { max-width: 1.7em; opacity: 1; transition: max-width .38s cubic-bezier(.4, 0, .2, 1) .34s, opacity .24s ease .4s; }
+.bw-x { max-width: 0; opacity: 0; transition: max-width .42s cubic-bezier(.4, 0, .2, 1), opacity .2s ease; }
+.bw.is-open .bw-me { max-width: 0; opacity: 0; transition: max-width .36s cubic-bezier(.4, 0, .2, 1), opacity .18s ease; }
+.bw.is-open .bw-oktora { max-width: 4.2em; opacity: 1; transition: max-width .52s cubic-bezier(.2, .8, .2, 1) .22s, opacity .3s ease .3s; }
+.bw.is-open .bw-sp { max-width: .4em; opacity: 1; transition: max-width .4s cubic-bezier(.2, .8, .2, 1) .22s, opacity .2s ease .22s; }
+.bw > b { transition: transform .4s cubic-bezier(.2, .8, .2, 1); }
+.bw.is-open > b { transform: translateY(-1px); }
+@media (prefers-reduced-motion: reduce) { .bw-me, .bw-x, .bw > b { transition: none !important; } }

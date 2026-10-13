@@ -88,6 +88,7 @@ Kurallar:
 ```
 
 ### Bölümler (sol liste)
+- **Alt başlık (isteğe bağlı, 2026-10-14):** slayta `"altBaslik": "Proksimal tübül"` yazılırsa v12 rayında bölüm içinde, değiştiği yerde girintili alt başlık çizilir; ardışık aynı değer tek alt başlıktır. Yazılmazsa ray eskisi gibi görünür. v12'de bölüm başlıkları katlanır (güncel adımın bölümü hep açık).
 - **Tekrar sayfası varsa** (`isCheckpoint: true`, başlık `"[TEKRAR SAYFASI - CHECKPOINT n] Bölüm adı"`), her tekrar sayfası bir bölümü kapatır ve bölümün adı olur. Önerilen yol budur: her 6–12 adımda bir tekrar sayfası.
 - Yoksa ardışık aynı `badge` değerleri bir bölüm olur. Badge'ler her slaytta farklıysa 8–10 adımlık gruplar oluşur ve grubun ilk konusu bölüm adı olur.
 
@@ -183,6 +184,7 @@ Her slaytta 4–6 etkileşim kullanılır (tek tipe yığılma yok; 11 model den
   "steps": [ "1. Tetikleyici: …tam cümle…", "2. Patofizyolojik ilerleme: …", "3. Klinik sonuç: …" ] }
 ```
 - 3–6 basamak; biçim `"N. Etiket: açıklama"` (etiket 48 karakteri geçmez, ekranda küçük başlık olur).
+- **İsteğe bağlı alt zincir (2026-10-14):** bir basamak kendi içinde ayrışan bir mekanizma içeriyorsa nesne olarak yazılabilir: `{ "text": "2. Patofizyolojik ilerleme: …", "substeps": ["2a. …", "2b. …"] }` (2–6 alt basamak). Ekranda o basamak açılınca altında "Alt halkalar · n" düğmesi çıkar. Her zincirde kullanılmaz; düz metin basamak varsayılandır. Doğrulayıcı `alt-zincir` kuralıyla denetler.
 - **Uzunluk sınırı yok, kesme yasak.** Metin ekranda tamamen ve satır kırılarak gösterilir. (24 basamak "…" ile kesilmişti; `--duzelt` ile slayttaki tam metinden tamamlandı.)
 
 ### 5.6 `before_after_slider` — Karşılaştır
@@ -379,7 +381,8 @@ Dosyalar: `src/components/learn/lesson/`
 1. **Şema:** bu rehberde §5'e yeni alt başlık ekle (alanlar, kurallar, örnek JSON).
 2. **Doğrulayıcı:** `scripts/validate_learning_decks.py` → `TYPES` kümesine ekle, `check_deck` içinde zorunlu alanları denetle.
 3. **Veri katmanı:** `lessonModel.ts` → gerekiyorsa `repairInteractive` içinde eski/bozuk biçimleri normalleştir.
-4. **Görünüm:** `LessonBlocks.tsx` → `IX_META` (ikon + kısa Türkçe ad, ≤ 18 karakter), yeni bileşen, `IxBody` içindeki `switch`. Bileşen tamamlanınca `onDone()` çağırır (adım ilerlemesi ve "Tamam" etiketi buna bağlı).
+4. **Görünüm:** `LessonBlocks.tsx` → `IX_META` (ikon + kısa Türkçe ad, ≤ 18 karakter), yeni bileşen, `IxBody` içindeki `switch`.
+   - **Kısa yol (2026-10-14, v12):** switch'e dokunmadan `registerIx('yeni_tur', { icon, label, render: (e, onDone) => <YeniTur e={e} onDone={onDone} /> })` çağır. Kabuk (başlık, bayrak, "Tamam", süre, hata bildirimi) PracticeCard'dan gelir; kart `data-ix="yeni_tur"` taşır (türe özgü stil için). Bilinmeyen tür boş kalmaz, açıklama notu gösterir. Blok anatomisi ve 15 türün v12 çizimi: https://claude.ai/artifact/V5HG3rKvwM1FBd4AWA8VW1 (Etkileşim blokları kataloğu). Bileşen tamamlanınca `onDone()` çağırır (adım ilerlemesi ve "Tamam" etiketi buna bağlı).
 5. **Stil:** `src/index.css` sonundaki `ls-*` bloklarına; renkler yalnız `--color-*` token'larıyla (açık/koyu tema), dar ekran için `@container ls-col` / `@media (max-width: 767px)`.
 6. **Hata bildirimi:** `PracticeCard` hedefi otomatik `"<adım>:ix-<tür>:<sıra>"` olur; ek iş gerekmez.
 7. **Doğrulama:** `npm run lint` 0 hata; tarayıcıda 1440 px ve 375 px genişlikte Akış + Stüdyo, koyu tema, etiketlerin taşmaması, `onDone` sonrası adımın ✓ olması.

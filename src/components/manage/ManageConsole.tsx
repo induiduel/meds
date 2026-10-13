@@ -28,6 +28,8 @@ import {
   Boxes,
   BookOpenCheck,
   MessageSquareText,
+  Archive,
+  UserSearch,
 } from 'lucide-react';
 import type { QuestionItem, Committee, AdminNotification } from '../../types';
 import { ApiService } from '../../services/api';
@@ -43,11 +45,13 @@ import { ManageDataSection } from './ManageDataSection';
 import { ManageCatalogSection } from './ManageCatalogSection';
 import { ManagePhasesSection } from './ManagePhasesSection';
 import { ManageMergesSection } from './ManageMergesSection';
+import { ManageRawPoolSection } from './ManageRawPoolSection';
 import { ManageDersIsciSection } from './ManageDersIsciSection';
 import { ManageInboxSection } from './ManageInboxSection';
 import { ManageIntakeSection } from './ManageIntakeSection';
 import { ManageModerationSection } from './ManageModerationSection';
 import { ManageUsersSection } from './ManageUsersSection';
+import { ManagePeopleSection } from './ManagePeopleSection';
 import { ManageSystemSection } from './ManageSystemSection';
 import { ManageAutomationSection } from './ManageAutomationSection';
 import { ManageDataCoreSection } from './ManageDataCoreSection';
@@ -78,7 +82,7 @@ import {
   deleteDraftEverywhere,
 } from '../../services/manageConsoleService';
 
-export type ManageSection = 'pending' | 'inbox' | 'intake' | 'pool' | 'catalog' | 'data' | 'phases' | 'merges' | 'ders_isci' | 'drafts' | 'studio' | 'moderation' | 'users' | 'scripts' | 'system' | 'automation' | 'datacore' | 'notebooklm' | 'database';
+export type ManageSection = 'pending' | 'inbox' | 'intake' | 'pool' | 'catalog' | 'data' | 'phases' | 'merges' | 'raw_pool' | 'ders_isci' | 'drafts' | 'studio' | 'moderation' | 'people' | 'users' | 'scripts' | 'system' | 'automation' | 'datacore' | 'notebooklm' | 'database';
 
 interface ManageConsoleProps {
   adminEmail: string;
@@ -105,18 +109,33 @@ const SECTIONS: { id: ManageSection; slug: string; label: string; hint: string; 
   { id: 'data', slug: 'tum-veriler', label: 'Tüm veriler', hint: 'Her veri kümesi tek tabloda: ara, sırala, seç, toplu işlem yap, CSV al.', icon: Table2, group: 'İçerik', keywords: 'tablo csv toplu' },
   { id: 'phases', slug: 'fazlar', label: 'Faz verileri', hint: 'Soru bazında faz çıktıları: gez, elle düzelt, arama testini çalıştır.', icon: FlaskConical, group: 'İçerik', keywords: 'faz 14 faz 15' },
   { id: 'ders_isci', slug: 'yeni-dersler', label: 'Yeni dersler', hint: 'Drive\'a eklenen ders PDF\'lerinden ders işçisinin ürettiği paketler: incele, önizle, onayla; 2026-27 checklist durumu.', icon: BookOpenCheck, group: 'İçerik', keywords: 'ders işçisi drive pdf onay taslak deste checklist yeni ders' },
+  { id: 'raw_pool', slug: 'ham-havuz', label: 'Ham soru havuzu', hint: 'Kullanıcı soruları ve katkıları (ipucu, şık, itiraz, yorum, oy) soru başına tek kümede; silinmez. Görüntüle, sınıflandır, düzenle, JSON/CSV al.', icon: Archive, group: 'İçerik', keywords: 'ham veri defter küme kullanıcı katkı ipucu şık itiraz dışa aktar json' },
   { id: 'merges', slug: 'birlesenler', label: 'Birleştirilen sorular', hint: 'Kopya çıkmış sorular: yan yana karşılaştır, asıl soruyu seç ya da ayır.', icon: GitMerge, group: 'İçerik', keywords: 'kopya birleştir' },
   { id: 'datacore', slug: 'veri-merkezi', label: 'Veri Merkezi (v2)', hint: 'Bağımsız Core v2 hattı: sorular, kazanım, ders notu bağları, kavram grafı, toplu tamamlama.', icon: Database, group: 'İçerik', keywords: 'core kazanım graf' },
   { id: 'notebooklm', slug: 'notebooklm', label: 'NotebookLM Stüdyosu', hint: 'NotebookLM JSON/MD çıktılarını yükle, alternatif olarak sakla, orijinalle karşılaştır ve tercihi seç.', icon: Brain, group: 'İçerik', keywords: 'notebooklm ai json alternatif rag soru deste spot' },
   { id: 'intake', slug: 'serbest-girdiler', label: 'Serbest girdiler', hint: 'Öğrencilerin tek kutuya yazdığı metinler ve ücretsiz Gemini ajanlarının ayrıştırması: kanıt, güven, olumsuz kök, yeniden ayrıştır.', icon: MessageSquareText, group: 'İçerik', keywords: 'serbest metin girdi ayrıştır ajan gemini hatırlanan şık kök kanıt' },
   { id: 'drafts', slug: 'taslaklar', label: 'Taslaklar', hint: 'Öğrenci taslaklarını kümele, birleştir, düzenle ya da AI ile tam soruya dönüştür.', icon: Layers, group: 'İçerik', keywords: 'parça taslak' },
   { id: 'studio', slug: 'studyo', label: 'Taslak stüdyosu', hint: 'Parçaları elle eşle: ağaç, pano, akış ve terim görünümleri.', icon: Workflow, group: 'İçerik', keywords: 'eşle pano' },
+  { id: 'people', slug: 'kisiler', label: 'Kişiler', hint: 'Her kullanıcının tüm izi: cihazlar, kullanım süresi, skorlar, etkinlik, yorumlar, notlar, sorular, şıklar, beğeniler ve bildirimler — canlı.', icon: UserSearch, group: 'Topluluk', keywords: 'kişi kullanıcı cihaz süre skor yorum not bildirim şikayet beğeni öneri etkinlik geçmiş çevrimiçi' },
   { id: 'users', slug: 'kullanicilar', label: 'Kullanıcılar', hint: 'Katkılar, hesaplar, roller ve e-posta.', icon: Users, group: 'Topluluk', keywords: 'öğrenci hesap rol smtp e-posta' },
   { id: 'scripts', slug: 'betikler', label: 'Betikler', hint: 'Veri hattı betiklerini ve zincirleri çalıştır, çıktıyı canlı izle.', icon: Terminal, group: 'Sistem', keywords: 'script görev zincir' },
   { id: 'system', slug: 'sistem', label: 'Sistem ve günlükler', hint: 'Veritabanı ve AI sağlığı, servisler, tarayıcı konsolu.', icon: Activity, group: 'Sistem', keywords: 'log sağlık servis' },
   { id: 'automation', slug: 'otomasyon', label: 'Otomasyon', hint: 'Zamanlanmış işler, AI pencereleri, anahtarlar; Drive eşitlemesi ve masaüstü servisleri.', icon: Settings, group: 'Sistem', keywords: 'drive yedek anahtar zamanla' },
   { id: 'database', slug: 'veritabani', label: 'Veritabanı ve yedek', hint: 'Etkin veritabanı, eşitleme, dışa ve içe aktarım.', icon: HardDrive, group: 'Sistem', keywords: 'supabase firebase yedek dışa aktar' },
 ];
+/** v12 "Net": bölümler işe göre gruplanır (v10/v11 yukarıdaki sırayı ve grup adlarını korur). */
+const V12_GROUPS: { label: string; ids: ManageSection[] }[] = [
+  { label: 'Gelen', ids: ['inbox', 'pending', 'moderation'] },
+  { label: 'Sorular', ids: ['pool', 'raw_pool', 'intake', 'drafts', 'studio', 'merges'] },
+  { label: 'Öğrenme içeriği', ids: ['ders_isci', 'catalog', 'notebooklm'] },
+  { label: 'Veri', ids: ['data', 'phases', 'datacore', 'database'] },
+  { label: 'Kişiler ve denetim', ids: ['people', 'users'] },
+  { label: 'Sistem', ids: ['system', 'automation', 'scripts'] },
+];
+const V12_SECTIONS = V12_GROUPS.flatMap((g) => g.ids.map((id) => {
+  const sec = SECTIONS.find((x) => x.id === id)!;
+  return { ...sec, group: g.label };
+})).concat(SECTIONS.filter((x) => !V12_GROUPS.some((g) => g.ids.includes(x.id))));
 const foldTr = (t: string) => t.toLocaleLowerCase('tr-TR').normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/ı/g, 'i');
 const sectionBySlug = (slug?: string) => SECTIONS.find((x) => x.slug === slug || x.id === slug);
 
@@ -222,7 +241,9 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
 
   // Adres bölümü taşır: açılışta normalize et, geri/ileri ile bölüm değişsin
   useEffect(() => {
-    setSection(section, { replace: true });
+    // Alt derin bağlantı (/manage/kisiler/<kişi>) korunur; yalnız bölüm adresi normalize edilir
+    const slug = SECTIONS.find((x) => x.id === section)?.slug;
+    if (!(slug && window.location.pathname.startsWith(`/manage/${slug}/`))) setSection(section, { replace: true });
     const onPop = () => {
       const hit = sectionBySlug(window.location.pathname.split('/').filter(Boolean)[1]);
       if (hit) setSectionState(hit.id);
@@ -325,13 +346,19 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
     }, 60000);
 
     // 3. Canlı kanal durumu: kopup yeniden bağlanınca arada kaçan olaylar için kuyruğu tazele
-    let prevStatus = realtimeEventService.getStatus();
-    setLiveStatus(prevStatus);
+    // (durum her zaman 'connecting' üzerinden geçer: bir kez bağlandıktan sonra düşüp yeniden bağlanmak aranır)
+    let seenUp = realtimeEventService.getStatus() === 'connected';
+    let wentDown = false;
+    setLiveStatus(realtimeEventService.getStatus());
     const unsubStatus = realtimeEventService.onStatusChange((st) => {
       setLiveStatus(st);
-      if (st === 'connected' && prevStatus === 'disconnected') void reloadInbox();
-      prevStatus = st;
+      if (st === 'connected') {
+        if (seenUp && wentDown) void reloadInbox();
+        seenUp = true;
+        wentDown = false;
+      } else if (seenUp) wentDown = true;
     });
+    const unsubResync = realtimeEventService.on('resync', () => void reloadInbox());
 
     // 4. Sekmeye geri dönülünce veri bayatsa tazele
     const onVisible = () => {
@@ -343,6 +370,7 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
       unsubInbox();
       unsubNotif();
       stopInterval();
+      unsubResync();
       unsubStatus();
       document.removeEventListener('visibilitychange', onVisible);
     };
@@ -491,7 +519,8 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
 
   const renderNav = (filter = '', grid = false) => {
     const q = foldTr(filter.trim());
-    const list = SECTIONS.filter((x) => !q || foldTr(`${x.label} ${x.hint} ${x.keywords || ''} ${x.group}`).includes(q));
+    const source = look.design === 'v12' ? V12_SECTIONS : SECTIONS;
+    const list = source.filter((x) => !q || foldTr(`${x.label} ${x.hint} ${x.keywords || ''} ${x.group}`).includes(q));
     if (!list.length) return <span className="msv-mgrid-empty">Eşleşen bölüm yok</span>;
     return list.map((sec, i) => {
       const on = section === sec.id;
@@ -709,6 +738,7 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
             )}
             {section === 'phases' && <ManagePhasesSection adminEmail={adminEmail} />}
             {section === 'merges' && <ManageMergesSection adminEmail={adminEmail} />}
+            {section === 'raw_pool' && <ManageRawPoolSection adminEmail={adminEmail} />}
             {section === 'intake' && <ManageIntakeSection adminEmail={adminEmail} />}
             {section === 'ders_isci' && <ManageDersIsciSection adminEmail={adminEmail} />}
 
@@ -792,6 +822,7 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
               />
             )}
 
+            {section === 'people' && <ManagePeopleSection adminEmail={adminEmail} notify={notify} />}
             {section === 'scripts' && <AdminScriptsTab adminEmail={adminEmail} onRefreshAllData={onRefreshData} />}
             {section === 'system' && <ManageSystemSection notify={notify} />}
             {section === 'datacore' && <ManageDataCoreSection notify={notify} />}

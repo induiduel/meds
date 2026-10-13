@@ -586,7 +586,8 @@ export const SupabaseDbService = {
         // Tablo yoksa birincil depo past_questions.reports kolonudur
       }
 
-      broadcastLiveEvent('past_question_reported', { questionId, report: reportObj });
+      // Canlı duyuru veritabanı tetikleyicisinden gelir (past_question_reports → inbox_update); ayrı istemci yayını
+      // sunucuda geçersiz olay adıyla 400 alıyordu.
       return { success: !updateError, report: reportObj };
     } catch (err: any) {
       console.warn('[SupabaseDbService.reportPastQuestion] Beklenmeyen hata:', err);

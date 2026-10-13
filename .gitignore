@@ -48,8 +48,11 @@ training_data/
 linux/
 \# raw DeepSeek exports to ingest/
 
-# Öğrenme desteleri derlemede bölünür (scripts/vite/splitLearningDecks.ts)
+# Öğrenme desteleri ve kazanımlar derlemede bölünür (scripts/vite/splitLearningDecks.ts)
 src/data/decks/items/
+src/data/decks/flashcards.json
+src/data/kazanimlar/lite/
+src/data/kazanimlar/questions/
 
 # kişisel veri — herkese açık repoya girmez
 data/users.json

@@ -375,3 +375,15 @@
   .lv-row-st .lv-bar { display: none; }
 }
 .lv-row-pad { flex-shrink: 0; width: 32px; margin-right: 6px; }
+
+/* ── v11 Sade (2026-10-14): "Devam et" + hata defteri tek düz panelde, satır görünümü varsayılan ── */
+:root:is([data-design='v11'],[data-design='v12']) {
+.lv-cont { display: flex; flex-direction: column; border: 1px solid var(--color-line); border-radius: 14px; background: var(--color-white); padding: 4px; min-width: 0; }
+.lv-cont .lv-resume { display: flex; flex-direction: column; gap: 0; }
+.lv-cont .lv-res, .lv-cont .lr-due-card { border: 0; border-radius: 10px; background: transparent; padding: 10px; box-shadow: none; gap: 12px; }
+.lv-cont .lv-res:hover, .lv-cont .lr-due-card:hover { background: var(--color-field); box-shadow: none; }
+.lv-cont > * + *, .lv-cont .lv-res + .lv-res { border-top: 1px solid var(--color-line-soft); }
+.lv-cont .lv-res-body b { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: block; }
+.lv-cont .lv-res-body { min-width: 0; }
+}
+.lv-cont-v10 { display: contents; }

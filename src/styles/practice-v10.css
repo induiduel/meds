@@ -178,3 +178,23 @@ html[data-layout="akis"] .tx { --tx-max: 880px; }
   html[data-layout="akis"] .tx-foot { display: block; }
 }
 @media (prefers-reduced-motion: reduce) { .tx-q { transition: none; } }
+
+/* ── v11 Sade sonuç ekranı (2026-10-14): halka + özet + ders dökümü ── */
+:root:is([data-design='v11'],[data-design='v12']) {
+.tx-res-head { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
+.tx-ring { --p: 0; width: 96px; height: 96px; flex: 0 0 96px; border-radius: 50%; display: grid; place-items: center;
+  background: radial-gradient(closest-side, var(--color-white) 78%, transparent 79%), conic-gradient(var(--color-ok) calc(var(--p) * 1%), var(--color-field) 0); }
+.tx-ring b { font-size: 22px; font-weight: 750; color: var(--color-ink); }
+.tx-res-sum { flex: 1 1 220px; min-width: 0; display: flex; flex-direction: column; gap: 4px; }
+.tx-res-sum h2 { margin: 0; font-size: 18px; font-weight: 650; color: var(--color-ink); overflow-wrap: break-word; }
+.tx-res-sum p { margin: 0; font-size: 13px; color: var(--color-ink-3); font-variant-numeric: tabular-nums; }
+.tx-res-disc { display: flex; flex-direction: column; gap: 8px; }
+.tx-res-dr { display: grid; grid-template-columns: minmax(0, 1fr) minmax(80px, 160px) 44px; align-items: center; gap: 10px; font-size: 13px; }
+.tx-res-dn { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: var(--color-ink); }
+.tx-res-bar { height: 6px; border-radius: 9px; background: var(--color-field); overflow: hidden; }
+.tx-res-bar i { display: block; height: 100%; border-radius: inherit; background: var(--color-accent); }
+.tx-res-bar i.is-ok { background: var(--color-ok); }
+.tx-res-bar i.is-bad { background: var(--color-bad); }
+.tx-res-dv { text-align: right; color: var(--color-ink-3); font-variant-numeric: tabular-nums; }
+.tx-res-act { flex-wrap: wrap; }
+}

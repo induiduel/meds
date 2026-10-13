@@ -35,7 +35,9 @@ import './kazanimlar.css';
 interface KazanimItem {
   id: string;
   metin: string;
+  totalCikmisCount?: number;
   totalOrnekCount?: number;
+  firstOrnekKazanimNo?: number;
   slaytlar: Array<{ kaynak: string; sayfa: number; alinti?: string; deckId?: string }>;
   cikmisSorular: Array<{
     id: string;
@@ -68,14 +70,8 @@ interface KurulData { kurul: number; name: string; totalCount: number; dersler: 
 /** Sınav spotları (yalnız Kurul 1): deste → spot sayısı ve ilk spot (derin bağlantı için) */
 interface SpotOzet { n: number; ilk: string }
 
-const loaders: Record<number, () => Promise<{ default: any }>> = {
-  1: () => import('../data/kazanimlar/k1.json'),
-  2: () => import('../data/kazanimlar/k2.json'),
-  3: () => import('../data/kazanimlar/k3.json'),
-  4: () => import('../data/kazanimlar/k4.json'),
-  5: () => import('../data/kazanimlar/k5.json'),
-  6: () => import('../data/kazanimlar/k6.json'),
-};
+const liteLoaders = import.meta.glob('../data/kazanimlar/lite/k*.json', { import: 'default' }) as Record<string, () => Promise<any>>;
+const questionLoaders = import.meta.glob('../data/kazanimlar/questions/k*.json', { import: 'default' }) as Record<string, () => Promise<any>>;
 
 /** Kurul adları (index.json ile aynı; hap ipucunda gösterilir) */
 const KURUL_AD: Record<number, string> = {
@@ -106,9 +102,10 @@ interface Ders {
   items: Array<{ k: KazanimItem; no: number }>;
 }
 
+const cikmisSayisi = (k: KazanimItem) => k.totalCikmisCount ?? (k.cikmisSorular ? k.cikmisSorular.length : 0);
 const ornekSayisi = (k: KazanimItem) => k.totalOrnekCount ?? (k.ornekSorular ? k.ornekSorular.length : 0);
 const kapsamOf = (k: KazanimItem): Kapsam =>
-  (Number(k.slaytlar.length > 0) + Number(k.cikmisSorular.length > 0 || ornekSayisi(k) > 0)) as Kapsam;
+  (Number(k.slaytlar.length > 0) + Number(cikmisSayisi(k) > 0 || ornekSayisi(k) > 0)) as Kapsam;
 const KAPSAM_AD: Record<Kapsam, string> = { 2: 'Tam kapsam', 1: 'Kısmi kapsam', 0: 'İçerik yok' };
 const KAPSAM_KISA: Record<Kapsam, string> = { 2: 'tam', 1: 'kısmi', 0: 'içerik yok' };
 
@@ -157,6 +154,7 @@ export const KazanimlarView: React.FC<Props> = ({ onNavigateToLearn, onNavigateT
   const [kapsamFiltre, setKapsamFiltre] = useState<KapsamFiltre>('all');
   const [searchQuery, setSearchQuery] = useState('');
   const [kurulData, setKurulData] = useState<KurulData | null>(null);
+  const [questionMap, setQuestionMap] = useState<Record<string, { cikmisSorular?: KazanimItem['cikmisSorular']; ornekSorular?: KazanimItem['ornekSorular'] }> | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
   const [loadError, setLoadError] = useState(false);
   const [reloadTick, setReloadTick] = useState(0);
@@ -179,15 +177,33 @@ export const KazanimlarView: React.FC<Props> = ({ onNavigateToLearn, onNavigateT
     setLoadError(false);
     setSelectedDers('all');
     setOpenKz(null);
+    setQuestionMap(null);
     // İlk yüklemede adresteki konu korunur; kurul değişince seçim sıfırlanır
     if (prevKurul.current !== selectedKurul) { setSelectedKey(null); setPhoneDetail(false); }
     prevKurul.current = selectedKurul;
-    const loader = loaders[selectedKurul];
-    loader?.()
+    const liteFn = liteLoaders[`../data/kazanimlar/lite/k${selectedKurul}.json`];
+    if (!liteFn) {
+      setLoadError(true);
+      setLoading(false);
+      return;
+    }
+    liteFn()
       .then((m) => { if (alive) { setKurulData(m ? (m.default || m) : null); setLoading(false); } })
       .catch(() => { if (alive) { setLoadError(true); setLoading(false); } });
     return () => { alive = false; };
   }, [selectedKurul, reloadTick]);
+
+  // Bir kazanım satırı açılınca o kurulun soru havuzunu (questions/k*.json) isteğe bağlı yükle
+  useEffect(() => {
+    if (!openKz || questionMap) return;
+    const qFn = questionLoaders[`../data/kazanimlar/questions/k${selectedKurul}.json`];
+    if (!qFn) return;
+    let alive = true;
+    qFn()
+      .then((m) => { if (alive && m) setQuestionMap(m.default || m); })
+      .catch(() => {});
+    return () => { alive = false; };
+  }, [openKz, selectedKurul, questionMap]);
 
   // Sınav spotları yalnız Kurul 1'de var: deste kimliğine göre konu başına sayı (kazanım verisinden sonra yüklenir)
   useEffect(() => {
@@ -485,6 +501,7 @@ export const KazanimlarView: React.FC<Props> = ({ onNavigateToLearn, onNavigateT
               onBack={backToList}
               openKz={openKz}
               setOpenKz={setOpenKz}
+              questionMap={questionMap}
               spot={current.l.deckId ? spots?.get(current.l.deckId) : undefined}
               ornekAnswers={ornekAnswers}
               setOrnekAnswer={(id, key) => setOrnekAnswers((p) => ({ ...p, [id]: key }))}
@@ -527,6 +544,7 @@ interface DetailProps {
   onBack: () => void;
   openKz: string | null;
   setOpenKz: React.Dispatch<React.SetStateAction<string | null>>;
+  questionMap: Record<string, { cikmisSorular?: KazanimItem['cikmisSorular']; ornekSorular?: KazanimItem['ornekSorular'] }> | null;
   spot?: SpotOzet;
   ornekAnswers: Record<string, string>;
   setOrnekAnswer: (id: string, key: string) => void;
@@ -536,13 +554,13 @@ interface DetailProps {
 }
 
 const LessonDetail = React.forwardRef<HTMLElement, DetailProps>(function LessonDetail({
-  kurul, lesson, hits, narrowing, onClearNarrowing, isPhone, onBack, openKz, setOpenKz, spot, ornekAnswers, setOrnekAnswer,
+  kurul, lesson, hits, narrowing, onClearNarrowing, isPhone, onBack, openKz, setOpenKz, questionMap, spot, ornekAnswers, setOrnekAnswer,
   onNavigateToLearn, onNavigateToPastExams, onNavigateToOrnek,
 }, ref) {
   const all = lesson.items.map((x) => x.k);
   const n = kapsamSay(all);
   const hasOrnek = all.some((k) => ornekSayisi(k) > 0);
-  const hasCikmis = all.some((k) => k.cikmisSorular.length > 0);
+  const hasCikmis = all.some((k) => cikmisSayisi(k) > 0);
 
   return (
     <section className="kz-detail" ref={ref} aria-labelledby="kz-detail-h">
@@ -603,21 +621,31 @@ const LessonDetail = React.forwardRef<HTMLElement, DetailProps>(function LessonD
       )}
 
       <ol className="kz-rows">
-        {hits.map(({ k, no }) => (
-          <KazanimRow
-            key={k.id || no}
-            k={k}
-            no={no}
-            konu={lesson.konu}
-            open={openKz === k.id}
-            onToggle={() => setOpenKz((cur) => (cur === k.id ? null : k.id))}
-            ornekAnswers={ornekAnswers}
-            setOrnekAnswer={setOrnekAnswer}
-            onNavigateToLearn={onNavigateToLearn}
-            onNavigateToPastExams={onNavigateToPastExams}
-            onNavigateToOrnek={onNavigateToOrnek}
-          />
-        ))}
+        {hits.map(({ k, no }) => {
+          const qExtra = openKz === k.id && questionMap ? questionMap[k.id] : undefined;
+          const mergedK = qExtra
+            ? {
+                ...k,
+                cikmisSorular: qExtra.cikmisSorular || k.cikmisSorular,
+                ornekSorular: qExtra.ornekSorular || k.ornekSorular,
+              }
+            : k;
+          return (
+            <KazanimRow
+              key={k.id || no}
+              k={mergedK}
+              no={no}
+              konu={lesson.konu}
+              open={openKz === k.id}
+              onToggle={() => setOpenKz((cur) => (cur === k.id ? null : k.id))}
+              ornekAnswers={ornekAnswers}
+              setOrnekAnswer={setOrnekAnswer}
+              onNavigateToLearn={onNavigateToLearn}
+              onNavigateToPastExams={onNavigateToPastExams}
+              onNavigateToOrnek={onNavigateToOrnek}
+            />
+          );
+        })}
       </ol>
     </section>
   );
@@ -635,7 +663,7 @@ const srcCounts = (k: KazanimItem): Array<[SrcKind, number]> => ([
   ['slayt', k.slaytlar.length],
   ['ozet', k.ozetler.length],
   ['sozluk', k.sozlukTerimleri.length],
-  ['cikmis', k.cikmisSorular.length],
+  ['cikmis', cikmisSayisi(k)],
   ['ornek', ornekSayisi(k)],
 ] as Array<[SrcKind, number]>).filter(([, n]) => n > 0);
 
@@ -737,6 +765,7 @@ const Kaynaklar: React.FC<{
   onNavigateToOrnek?: Props['onNavigateToOrnek'];
 }> = ({ k, no, konu, ornekAnswers, setOrnekAnswer, onNavigateToLearn, onNavigateToPastExams, onNavigateToOrnek }) => {
   const firstDeck = k.slaytlar.find((s) => s.deckId);
+  const cikmisN = cikmisSayisi(k);
   const ornekN = ornekSayisi(k);
   return (
     <div className="kz-src">
@@ -795,15 +824,16 @@ const Kaynaklar: React.FC<{
         </Group>
       )}
 
-      {k.cikmisSorular.length > 0 && (
+      {cikmisN > 0 && (
         <Group
           kind="cikmis"
-          n={k.cikmisSorular.length}
+          n={cikmisN}
+          listN={(k.cikmisSorular || []).length}
           action={onNavigateToPastExams ? { label: "Çıkmış'ta aç", onClick: () => onNavigateToPastExams(konu) } : undefined}
         >
           {(limit) => (
             <ul className="kz-qs">
-              {k.cikmisSorular.slice(0, limit).map((q) => (
+              {(k.cikmisSorular || []).slice(0, limit).map((q) => (
                 <li key={q.id} className="kz-q">
                   <p className="kz-q-meta">
                     <b>{q.year || 'Arşiv'}</b>{q.questionNumber ? ` · Soru ${q.questionNumber}` : ''}
@@ -839,7 +869,7 @@ const Kaynaklar: React.FC<{
           listN={(k.ornekSorular || []).length}
           action={onNavigateToOrnek ? {
             label: 'Örnek sorularda çöz',
-            onClick: () => onNavigateToOrnek(firstDeck?.deckId, k.ornekSorular?.[0]?.kazanimNo || no),
+            onClick: () => onNavigateToOrnek(firstDeck?.deckId, k.firstOrnekKazanimNo || k.ornekSorular?.[0]?.kazanimNo || no),
           } : undefined}
         >
           {(limit) => (

@@ -32,14 +32,14 @@ Genel bir soru bankası değil: sorular **bu fakültenin kendi ders materyalleri
 - Öğrenme ve çalışma telefon, tablet (kalemle işaretleme) ve bilgisayarda yapılır; uzun okuma oturumları olur.
 - Kaynaklar Google Drive'dan iner, yerelde okunur ve doğrulanarak `meds_database`'e girer (bkz. `../PROJE_TANITIMI.md`).
 - Arka uç yönetici bilgisayarında çalışır (Express, port 3000), Cloudflare tüneliyle dışarı açılır; ön yüz GitHub Pages'te de yayınlanır. Yönetim konsolu `manage.nofrostlife.com.tr/manage` adresindedir.
-- Yönetici yerel AI ajanları (Ollama: medgemma, qwen3, qwen3-vl, deepseek-r1, bge-m3) ve bulut AI (Gemini → Groq) kullanır.
+- Yerel GPU kullanılmaz (2026-10-11'den beri). Vektörleme yalnız CPU servisleriyle (bge-m3, e5-small); LLM gereken her iş ücretsiz bulut zincirine gider.
 
 ## Capabilities and Constraints
 
 - Soru ekle (parça girişi, yazarken benzer çıkmış sorular ve kaynaklar), Öğren (slayt okuyucu, işaretleme, kendini sına), Sözlük, Ezber kartları, Çıkmış sorular, Soru havuzu, Çalış/Test, Sıralama, Ders özetleri, Ders notları, Soru haritası, A4 kitapçık, Ses kayıtları.
 - Yönetim konsolu: gelen kutusu, tüm veriler, taslaklar, taslak stüdyosu (parçaları elle eşleme, AI ile dönüştürme), moderasyon, kullanıcılar, betikler, sistem, otomasyon.
 - Kaynak dayanağı zorunludur: soru yazan ya da düzelten her özellik kaynakları bulur, isteme koyar ve kullanılan kaynakları gösterir. AI çıktısı kaynak sayılmaz.
-- Arayüzün iki tasarım sürümü vardır: v3 (varsayılan) ve v2 (yedek); kullanıcı geçiş yapabilir.
+- Arayüzün seçilebilir tasarım sürümleri vardır: v12 "Net" (varsayılan, 2026-10-14), v11 "Sade" ve v10 "Klasik". Eski sürümler silinmez; kullanıcı Profil › Görünüm'den geçiş yapar. Tema (açık/sarı/koyu) × palet seçimi her sürümde aynı token'larla çalışır.
 - Açık konu: kimlik doğrulama zayıf (yönetici kontrolü başlık ve yerel IP'ye güveniyor).
 
 ## Brand Commitments

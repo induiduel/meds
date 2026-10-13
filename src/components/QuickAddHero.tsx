@@ -1,3 +1,4 @@
+import { FastTextarea } from './ui/FastTextarea';
 import React, { useEffect, useMemo, useState } from 'react';
 import {
   ArrowRight,
@@ -235,6 +236,7 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
   onNavigateTab,
   currentUser,
   onQuestionsUpdated,
+  isAdmin = false,
 }) => {
   const disciplines =
     committee?.disciplines && committee.disciplines.length > 0
@@ -1149,11 +1151,11 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
             <div className="qh-block">
               <label htmlFor="hatira" className="qh-label">Soru kökü</label>
               <div className="ms-composer qh-stem">
-                <textarea
+                <FastTextarea
                   id="hatira"
                   rows={3}
                   value={text}
-                  onChange={(e) => setText(e.target.value)}
+                  onValue={setText}
                   onKeyDown={(e) => {
                     if (e.key === 'Enter' && (e.ctrlKey || e.metaKey)) {
                       e.preventDefault();
@@ -1373,9 +1375,11 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
                       <button type="button" onClick={() => handleLinkToQuestion(q)}>
                         <CheckCircle2 aria-hidden />{q.questionNumber ? `S.${q.questionNumber} ile bağla` : 'Bu taslakla bağla'}
                       </button>
-                      <button type="button" className="is-ai" onClick={() => setOptimizingQuestion(q)} title="Taslağı amfi slaytları ve AI ile tam soruya dönüştür">
-                        <Wand2 aria-hidden />AI ile dönüştür
-                      </button>
+                      {isAdmin && (
+                        <button type="button" className="is-ai" onClick={() => setOptimizingQuestion(q)} title="Taslağı amfi slaytları ve AI ile tam soruya dönüştür">
+                          <Wand2 aria-hidden />AI ile dönüştür
+                        </button>
+                      )}
                       <button type="button" onClick={() => rejectMatch(q.id)} title="Bu öneri benim hatırladığım soru değil (öneriler bundan öğrenir)">
                         <X aria-hidden />Farklı soru
                       </button>
@@ -1385,7 +1389,7 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
                 );
               })}
               {realtimeMatches.length > 0 && (
-                <WordLegend texts={[text, ...realtimeMatches.map((m) => questionStemText(m.question))]} colors={sharedColors} />
+                <WordLegend texts={[debouncedText || text, ...realtimeMatches.map((m) => questionStemText(m.question))]} colors={sharedColors} />
               )}
 
               {selectedMatchIds.size > 0 && (
@@ -1554,13 +1558,13 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
                   <div className="wz-progress" aria-hidden><i style={{ width: `${((wizSteps.indexOf(wiz) + 1) / (qType ? wizSteps.length : 4.5)) * 100}%` }} /></div>
                 </>
               )}
-              <textarea
+              <FastTextarea
                 id="hatira"
                 hidden={!!full && wiz !== 'kok'}
                 rows={4}
                 value={text}
                 onFocus={openFull}
-                onChange={(e) => setText(e.target.value)}
+                onValue={setText}
                 onKeyDown={(e) => {
                   if (e.key === 'Enter' && (e.ctrlKey || e.metaKey)) {
                     e.preventDefault();
@@ -2045,7 +2049,7 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
                           <CheckCircle2 className="w-3.5 h-3.5 text-accent" />
                           {q.questionNumber ? `S.${q.questionNumber} ile Bağla` : 'Bu Taslakla Bağla'}
                         </button>
-                        <button
+                        {isAdmin && <button
                           type="button"
                           onClick={() => setOptimizingQuestion(q)}
                           className="h-7 px-2.5 rounded-lg bg-accent-soft hover:bg-accent/20 text-accent text-xs font-semibold inline-flex items-center gap-1 cursor-pointer transition-colors shadow-2xs"
@@ -2053,7 +2057,7 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
                         >
                           <Wand2 className="w-3.5 h-3.5" />
                           AI ile Dönüştür
-                        </button>
+                        </button>}
                         <button
                           type="button"
                           onClick={() => rejectMatch(q.id)}
@@ -2074,7 +2078,7 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
             </div>
 
             {/* Ortak kelimeler renk kılavuzu */}
-            <WordLegend texts={[text, ...realtimeMatches.map((m) => questionStemText(m.question))]} colors={sharedColors} />
+            <WordLegend texts={[debouncedText || text, ...realtimeMatches.map((m) => questionStemText(m.question))]} colors={sharedColors} />
 
             {/* Seçim yapıldığında ortaya çıkan bağlamsal çubuk */}
             {selectedMatchIds.size > 0 && (

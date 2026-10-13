@@ -1,11 +1,10 @@
 // MedSoru Service Worker - PWA v8: Yüksek Hızlı Açılış, Optimize Edilmiş Bellek & Modül Parçalama
-const CACHE_VERSION = 'medsoru-pwa-v10';
+const CACHE_VERSION = 'medsoru-pwa-v11';
 const STATIC_CACHE = `medsoru-static-${CACHE_VERSION}`;
 const RUNTIME_CACHE = `medsoru-runtime-${CACHE_VERSION}`;
 const DATA_CACHE = `medsoru-data-${CACHE_VERSION}`;
 
 const PRECACHE_ASSETS = [
-  '/',
   '/index.html',
   '/manifest.json',
   '/favicon.ico',
@@ -15,17 +14,6 @@ const PRECACHE_ASSETS = [
   '/icons/icon-512x512.png',
   '/icons/maskable-icon-192x192.png',
   '/icons/maskable-icon-512x512.png',
-  '/cikmis',
-  '/ogren',
-  '/kartlar',
-  '/hastaliklar',
-  '/sozluk',
-  '/calis',
-  '/ozetler',
-  '/kazanimlar',
-  '/test',
-  '/istatistik',
-  '/ayarlar',
 ];
 
 // Varsayılan komiteler (çevrimdışıyken sunucuya hiç ulaşılamasa dahi arayüzün boş kalmasını önler)
@@ -38,7 +26,7 @@ const DEFAULT_OFFLINE_COMMITTEES = [
   { id: 'donem3-kurul6', name: 'Dönem 3 Kurul 6', targetCount: 100 }
 ];
 
-// 1. Kurulum (Install) - Statik çekirdek dosyaları önbelleğe al
+// 1. Kurulum (Install) - Statik çekirdek dosyaları önbelleğe al (SPA rotaları için index.html tek kez çekilir)
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches
@@ -46,9 +34,12 @@ self.addEventListener('install', (event) => {
       .then((cache) => {
         return Promise.all(
           PRECACHE_ASSETS.map((url) =>
-            fetch(url, { cache: 'no-cache' })
-              .then((res) => {
+            fetch(url)
+              .then(async (res) => {
                 if (res.ok) {
+                  if (url === '/index.html') {
+                    await cache.put('/', res.clone());
+                  }
                   return cache.put(url, res);
                 }
               })
@@ -175,28 +166,27 @@ self.addEventListener('fetch', (event) => {
   }
 
   // B. Statik Varlıklar (JS, CSS, Fontlar, İkonlar, Resimler)
-  // Stale-While-Revalidate / Cache-First stratejisi (ASLA undefined dönmez)
+  // İçerik özetli (/assets/) dosyalar değişmez (immutable) olduğundan tam Cache-First uygulanır (gereksiz arka plan ağ trafiği sıfırlanır)
   if (
     url.pathname.startsWith('/assets/') ||
     url.pathname.startsWith('/icons/') ||
     url.pathname.startsWith('/fonts/') ||
     /\.(js|css|woff2?|ttf|png|jpe?g|gif|svg|ico)$/i.test(url.pathname)
   ) {
+    const isImmutableAsset = url.pathname.startsWith('/assets/');
     event.respondWith(
       (async () => {
-        // Önce tam eşleşen veya arama parametresi yok sayılan önbellek kaydına bak
-        const cached =
-          (await caches.match(req, { ignoreSearch: true })) ||
-          (await caches.match(url.pathname, { ignoreSearch: true }));
+        const cached = await caches.match(req, { ignoreSearch: true });
+        if (cached && isImmutableAsset) {
+          return cached;
+        }
 
-        // Arka planda güncelleme (network)
         const fetchPromise = fetch(req)
           .then((networkRes) => {
             if (networkRes && networkRes.status === 200) {
               const clone = networkRes.clone();
               caches.open(RUNTIME_CACHE).then((cache) => {
-                cache.put(req, clone.clone());
-                cache.put(url.pathname, clone);
+                cache.put(req, clone);
               });
             }
             return networkRes;

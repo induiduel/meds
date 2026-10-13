@@ -28,8 +28,19 @@ const catalogModules = import.meta.glob('./decks/catalog.json', { eager: true, i
 export const DECK_CATALOG = ((Object.values(catalogModules)[0] as DeckCatalogEntry[] | undefined) || []);
 
 const loaders = import.meta.glob('./decks/items/*.json', { import: 'default' }) as Record<string, () => Promise<any>>;
+const flashcardModules = import.meta.glob('./decks/flashcards.json', { import: 'default' }) as Record<string, () => Promise<any>>;
 const safe = (id: string) => id.replace(/[^a-zA-Z0-9_-]+/g, '_');
 const cache = new Map<string, Promise<any>>();
+const MAX_CACHED_DECKS = 8;
+
+function touchDeckCache(id: string, p: Promise<any>) {
+  if (cache.has(id)) cache.delete(id);
+  else if (cache.size >= MAX_CACHED_DECKS) {
+    const oldest = cache.keys().next().value;
+    if (oldest) cache.delete(oldest);
+  }
+  cache.set(id, p);
+}
 
 async function loadFromIndexedDb(id: string): Promise<any> {
   if (typeof window === 'undefined' || !('indexedDB' in window)) return null;
@@ -103,45 +114,59 @@ async function loadFromApi<T>(id: string): Promise<T | null> {
 /** Bir destenin tam içeriğini (slaytlarla) yükler; ağ hatasında IndexedDB çevrimdışı yedeğine düşer. */
 export function loadDeck<T = any>(id: string): Promise<T | null> {
   let p = cache.get(id);
-  if (!p) {
-    const loader = loaders[`./decks/items/${safe(id)}.json`];
-    p = (async () => {
-      // 0. Panelden değiştirilen deste paketteki kopyadan yenidir: önce sunucudan
-      await contentReady();
-      if (isContentChanged('decks', id) && (typeof navigator === 'undefined' || navigator.onLine)) {
-        const fresh = await loadFromApi<T>(id);
-        if (fresh) return fresh;
-      }
-
-      // 1. Önce Vite derlenmiş modülünü dene (RAM / hızlı chunk)
-      if (loader) {
-        try {
-          const res = await loader();
-          if (res) return res;
-        } catch (_) {}
-      }
-
-      // 2. Cihaz hafızasındaki (IndexedDB) tam desteye bak (< 5ms - sıfır ağ gecikmesi)
-      try {
-        const fromDb = await loadFromIndexedDb(id);
-        if (fromDb) return fromDb;
-      } catch (_) {}
-
-      // 3. Cihazda yoksa ve internete bağlıysak sunucudan dene
-      if (typeof navigator === 'undefined' || navigator.onLine) {
-        try {
-          const viaApi = await loadFromApi<T>(id);
-          if (viaApi) return viaApi;
-        } catch (_) {}
-      }
-
-      return null;
-    })();
-    cache.set(id, p);
-    // Başarısız yükleme önbellekte kalmasın: bağlantı dönünce aynı deste yeniden denenebilsin
-    p.then((v) => { if (!v) cache.delete(id); }, () => cache.delete(id));
+  if (p) {
+    touchDeckCache(id, p);
+    return p as Promise<T | null>;
   }
+  const loader = loaders[`./decks/items/${safe(id)}.json`];
+  p = (async () => {
+    // 0. Panelden değiştirilen deste paketteki kopyadan yenidir: önce sunucudan
+    await contentReady();
+    if (isContentChanged('decks', id) && (typeof navigator === 'undefined' || navigator.onLine)) {
+      const fresh = await loadFromApi<T>(id);
+      if (fresh) return fresh;
+    }
+
+    // 1. Önce Vite derlenmiş modülünü dene (RAM / hızlı chunk)
+    if (loader) {
+      try {
+        const res = await loader();
+        if (res) return res;
+      } catch (_) {}
+    }
+
+    // 2. Cihaz hafızasındaki (IndexedDB) tam desteye bak (< 5ms - sıfır ağ gecikmesi)
+    try {
+      const fromDb = await loadFromIndexedDb(id);
+      if (fromDb) return fromDb;
+    } catch (_) {}
+
+    // 3. Cihazda yoksa ve internete bağlıysak sunucudan dene
+    if (typeof navigator === 'undefined' || navigator.onLine) {
+      try {
+        const viaApi = await loadFromApi<T>(id);
+        if (viaApi) return viaApi;
+      } catch (_) {}
+    }
+
+    return null;
+  })();
+  touchDeckCache(id, p);
+  // Başarısız yükleme önbellekte kalmasın: bağlantı dönünce aynı deste yeniden denenebilsin
+  p.then((v) => { if (!v) cache.delete(id); }, () => cache.delete(id));
   return p as Promise<T | null>;
+}
+
+/** Derlemede ayrıştırılmış hafif ders kartları listesini (~300 KB) tek parçada yükler (118 desteyi indirmeden). */
+export async function loadDeckFlashcards(): Promise<any[] | null> {
+  const fn = Object.values(flashcardModules)[0];
+  if (!fn) return null;
+  try {
+    const list = await fn();
+    return Array.isArray(list) ? list : null;
+  } catch {
+    return null;
+  }
 }
 
 /** Tüm desteleri sırayla yükler; her desteden sonra ana iş parçacığına nefes aldırır. */

@@ -102,7 +102,9 @@ const glossaryCards = (): StudyCard[] => GLOSSARY.map((g) => ({
 const deckGroup = (raw: string) => (raw || 'Diğer').split(/\s*(?:\/|&|,|\sve\s)\s*/)[0].trim() || 'Diğer';
 
 const loadDeckCards = async (): Promise<StudyCard[]> => {
-  const { loadAllDecks } = await import('../../data/deckStore');
+  const { loadDeckFlashcards, loadAllDecks } = await import('../../data/deckStore');
+  const prebuilt = await loadDeckFlashcards();
+  if (prebuilt && prebuilt.length > 0) return prebuilt as StudyCard[];
   const decks: any[] = await loadAllDecks();
   const out: StudyCard[] = [];
   decks.forEach((d) =>

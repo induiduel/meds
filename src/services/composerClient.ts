@@ -40,12 +40,24 @@ function getWorker(): Worker | null {
   return worker;
 }
 
-async function runLocal(op: Op, payload: any): Promise<any> {
-  const { smartComposerService, loadComposerModel } = await import('./smartComposerService');
-  await loadComposerModel();
-  return op === 'assist'
-    ? smartComposerService.getAssist(payload.text, payload.sources)
-    : smartComposerService.getSpellingCorrection(payload.text);
+async function runRemoteFallback(op: Op, payload: any): Promise<any> {
+  try {
+    if (op === 'assist') {
+      const res = await fetch('/api/text/assist', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ text: payload.text, sources: payload.sources }),
+      });
+      return res.ok ? await res.json() : null;
+    } else {
+      const res = await fetch(`/api/search/spell?q=${encodeURIComponent(String(payload.text || ''))}`);
+      if (!res.ok) return null;
+      const d = await res.json();
+      return d?.corrected && d.corrected !== payload.text ? { text: d.corrected, changes: [] } : null;
+    }
+  } catch {
+    return null;
+  }
 }
 
 function send(op: Op, payload: any, resolve: (v: any) => void): void {
@@ -57,7 +69,7 @@ function send(op: Op, payload: any, resolve: (v: any) => void): void {
     const next = queued[op];
     if (next) { delete queued[op]; send(op, next.payload, next.resolve); }
   };
-  if (!w) { runLocal(op, payload).then(done, () => done(null)); return; }
+  if (!w) { runRemoteFallback(op, payload).then(done, () => done(null)); return; }
   const id = ++seq;
   waiting.set(id, (m) => done(m.ok ? m.result : null));
   w.postMessage({ id, op, ...payload });

@@ -61,7 +61,9 @@ import { ApiService } from '../services/api';
 import { pastQuestionsCache, CacheSyncStatus } from '../services/pastQuestionsCache';
 import { AdminCustomRedactModal } from './AdminCustomRedactModal';
 import { learnMatcher, QuestionLearnMatch, isReliableLearnMatch } from '../services/learnMatcher';
-import { FlashcardComponent } from './learn/InteractiveDeckView';
+const LazyFlashcardComponent = React.lazy(() =>
+  import('./learn/InteractiveDeckView').then((m) => ({ default: m.FlashcardComponent })),
+);
 import { pathFor, parseLocation, writeLocation } from '../router';
 import { censorProfanity } from '../utils/profanityFilter';
 import {
@@ -779,13 +781,21 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
       }
     });
 
-    ApiService.getLectureNotes()
-      .then(notes => {
-        if (notes && notes.length > 0) setInternalNotes(notes);
-      })
-      .catch(err => console.warn('Could not fetch lecture notes for past exams:', err));
+    let idleTimer: any = null;
+    if ((onOpenNote || currentUser?.email === ADMIN_EMAIL || currentUser?.isAdmin) && (!lectureNotes || lectureNotes.length === 0)) {
+      idleTimer = setTimeout(() => {
+        ApiService.getLectureNotes()
+          .then(notes => {
+            if (notes && notes.length > 0) setInternalNotes(notes);
+          })
+          .catch(err => console.warn('Could not fetch lecture notes for past exams:', err));
+      }, 1500);
+    }
 
-    return () => unsubscribe();
+    return () => {
+      unsubscribe();
+      if (idleTimer) clearTimeout(idleTimer);
+    };
   }, []);
 
   // Upvote / Like toggle — kişi başı tek oy, ikinci basış geri çeker
@@ -2103,6 +2113,11 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                         <div className="cm-main">
                           <div className="cm-head">
                             <b>{c.author || 'Tıp öğrencisi'}</b>
+                            {isAdminUser && (c.authorUid || c.authorEmail) && (
+                              <a className="cm-to" href={`/manage/kisiler/${encodeURIComponent(c.authorUid ? `u:${c.authorUid}` : c.authorEmail)}`} target="_blank" rel="noreferrer" title="Yönetimde bu kişinin tüm izini aç">
+                                kişi ↗
+                              </a>
+                            )}
                             {parent && rootOf(c)?.id !== parent.id && <span className="cm-to">↳ {parent.author || 'Tıp öğrencisi'}</span>}
                             <span className="cm-time">{c.timestamp || c.createdAt ? new Date(c.timestamp || c.createdAt).toLocaleDateString('tr-TR', { day: 'numeric', month: 'short' }) : ''}</span>
                             {c.isEdited && <span className="cm-time">· düzenlendi</span>}
@@ -2292,11 +2307,13 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
           {selectedLearnMatch.match.flashcards && selectedLearnMatch.match.flashcards.length > 0 && (
             <section className="flex flex-col gap-1.5">
               <h4 className="m-0 text-sm font-semibold text-ink-3">İlgili kartlar · {selectedLearnMatch.match.flashcards.length}</h4>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                {selectedLearnMatch.match.flashcards.map((card) => (
-                  <FlashcardComponent key={card.id} card={card} />
-                ))}
-              </div>
+              <React.Suspense fallback={null}>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                  {selectedLearnMatch.match.flashcards.map((card) => (
+                    <LazyFlashcardComponent key={card.id} card={card} />
+                  ))}
+                </div>
+              </React.Suspense>
             </section>
           )}
         </Dialog>

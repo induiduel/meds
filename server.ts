@@ -15,7 +15,8 @@ import { fileURLToPath } from 'url';
 import { createRequire } from 'module';
 import { exec, execFile, execSync, spawn, spawnSync } from 'child_process';
 import { pgDb, pgHealth, pgListen } from './src/services/pgDb';
-import { registerDbQueryRoute } from './src/services/dbQueryRoute';
+import * as rawLedger from './src/services/rawQuestionLedger';
+import { registerDbQueryRoute, invalidateDbQueryCache } from './src/services/dbQueryRoute';
 import { registerTtsRoute } from './src/services/ttsRoute';
 import crypto from 'crypto';
 
@@ -147,6 +148,7 @@ import { createQuestionIntake, formatUnitsForPrompt, applyIntakeToQuestion } fro
 import { createPoolClusterService } from './src/services/poolClusterService.ts';
 import { createRecallFeedback } from './src/services/recall/feedback.ts';
 import { registerUserDataBackupRoutes, userEventHash, type ServerUserNotification } from './src/services/userDataBackupService.ts';
+import { registerPeopleInsights } from './src/services/peopleInsights.ts';
 import { initContentOverlay, resolveContent, markContentChanged, contentManifest } from './src/services/contentOverlay.ts';
 
 // @ts-ignore - dynamic ES module runner
@@ -417,7 +419,7 @@ function requireWritePassword(req: express.Request, res: express.Response, next:
   // /api/db/query kendi yetkisini denetler (yazma yalnız yönetici); /api/live/* yalnız SSE'ye sınırlı, hız sınırlı yayın.
   // /api/user-data/backup sahipliği kendisi doğrular (Firebase ID jetonu ya da gizli cihaz jetonu);
   // /api/notes kimliği gizli eşitleme kodudur (yalnız SHA-256 özeti saklanır, kodu bilmeyen erişemez).
-  const readOnlyPosts = ['/api/past-questions/similar', '/api/sources/for-fragment', '/api/db/query', '/api/live/broadcast', '/api/live/ping', '/api/user-data/backup', '/api/notes', '/api/tts'];
+  const readOnlyPosts = ['/api/past-questions/similar', '/api/sources/for-fragment', '/api/db/query', '/api/live/broadcast', '/api/live/ping', '/api/user-data/backup', '/api/notes', '/api/tts', '/api/presence'];
   const reqPath = String(req.originalUrl || req.path || '').split('?')[0];
   if (readOnlyPosts.some((p) => reqPath === p || reqPath.endsWith(p))) return next();
   // Öğren ortak notları / metin bildirimleri: kimliği ve hız sınırını kendisi denetler (learnSocialRoutes.ts)
@@ -447,6 +449,20 @@ function requireWritePassword(req: express.Request, res: express.Response, next:
 }
 
 app.use('/api', requireWritePassword);
+
+// Kişiler (yönetim): cihaz/kullanım varlığı + öğrenci eylem günlüğü (meds-pg user_devices/user_events → SSE people_changed).
+// Ara katmanı rotalardan ÖNCE kaydedilir (yazma yanıtı bitince eylemi günlüğe yazar).
+const peopleInsights = registerPeopleInsights(app, {
+  rootDir: __dirname,
+  dataDir: path.resolve(__dirname, 'data'),
+  adminEmail: 'nofrostlife@gmail.com',
+  isPgOnline: () => pgOnline,
+  loadUsers: () => loadUsers() as any[],
+  getPastQuestions: () => getPastQuestionsDb(),
+  getPoolQuestions: () => (db?.questions || []) as any[],
+  broadcastAdmin: (event, data) => broadcastRealtimeEvent(event, data, true),
+  oracleApiUrl: process.env.MEDS_ORACLE_API_URL || 'https://api.nofrostlife.com.tr',
+});
 
 // Public, read-only API directory and versioned aliases for the site's public datasets.
 // Keep this allowlist explicit: `/v1/admin`, write routes, user records and raw AI data
@@ -593,24 +609,63 @@ const realtimeClients = new Map<string, RealtimeClient>();
 // yeniden bağlanıp delta eşitlemesiyle kaçanları alır (sunucu belleği tek yavaş istemci yüzünden şişmez).
 const SSE_MAX_BUFFERED_BYTES = 2 * 1024 * 1024;
 
+// Kaçan olay telafisi: her olaya artan kimlik (id: <açılış>-<sıra>) verilir ve son 10 dakikanın 2.000 olayı halkada
+// tutulur. İstemci yeniden bağlanırken son aldığı kimliği gönderir (?lastEventId=); aradaki olaylar sırayla yeniden
+// yollanır. Halka yetmezse ya da sunucu yeniden başladıysa `resync` gider, istemci tüm canlı verisini tazeler.
+const SSE_BOOT = Date.now().toString(36);
+let sseSeq = 0;
+type SseRecord = { n: number; at: number; adminOnly: boolean; exclude?: string; only?: string; payload: string };
+const sseRing: SseRecord[] = [];
+const SSE_RING_MAX = 2000;
+const SSE_RING_MS = 10 * 60_000;
+
+function writeSse(client: RealtimeClient, payload: string): boolean {
+  try {
+    if (client.res.writableLength > SSE_MAX_BUFFERED_BYTES) {
+      realtimeClients.delete(client.id);
+      client.res.end();
+      return false;
+    }
+    client.res.write(payload);
+    return true;
+  } catch {
+    realtimeClients.delete(client.id);
+    return false;
+  }
+}
+
 export function broadcastRealtimeEvent(event: string, data: any, adminOnly = false, excludeClient?: string, onlyClient?: string) {
+  const n = ++sseSeq;
+  const payload = `id: ${SSE_BOOT}-${n}\nevent: ${event}\ndata: ${JSON.stringify(data)}\n\n`;
+  // Tek istemciye giden yanıtlar (pong) halkaya girmez
+  if (!onlyClient) {
+    const now = Date.now();
+    sseRing.push({ n, at: now, adminOnly, exclude: excludeClient, payload });
+    while (sseRing.length > SSE_RING_MAX || (sseRing.length && now - sseRing[0].at > SSE_RING_MS)) sseRing.shift();
+  }
   if (realtimeClients.size === 0) return;
-  const payload = `event: ${event}\ndata: ${JSON.stringify(data)}\n\n`;
   for (const [id, client] of realtimeClients.entries()) {
     if (adminOnly && !client.isAdmin) continue;
     if (excludeClient && id === excludeClient) continue;
     if (onlyClient && id !== onlyClient) continue;
-    try {
-      if (client.res.writableLength > SSE_MAX_BUFFERED_BYTES) {
-        realtimeClients.delete(id);
-        client.res.end();
-        continue;
-      }
-      client.res.write(payload);
-    } catch {
-      realtimeClients.delete(id);
-    }
+    writeSse(client, payload);
   }
+}
+
+/** Yeniden bağlanan istemciye kaçırdıklarını yollar; telafi edilemiyorsa false (istemci tam tazeleme yapmalı). */
+function replayRealtimeEvents(client: RealtimeClient, lastEventId: string): boolean {
+  const m = /^([a-z0-9]+)-(\d+)$/.exec(lastEventId || '');
+  if (!m || m[1] !== SSE_BOOT) return false;
+  const last = Number(m[2]);
+  if (last >= sseSeq) return true;
+  const oldest = sseRing[0]?.n ?? sseSeq + 1;
+  if (last + 1 < oldest) return false;
+  for (const r of sseRing) {
+    if (r.n <= last) continue;
+    if (r.adminOnly && !client.isAdmin) continue;
+    if (!writeSse(client, r.payload)) return true;
+  }
+  return true;
 }
 
 // ServerNotificationService olaylarını dinle -> bağlı SSE istemcilerine anında ilet
@@ -929,16 +984,84 @@ let db = initializeDatabase();
 // Oy sayıları likedBy'dan türer; varsayılan "1" oylar ve tekrarlı oylar ayıklanır.
 (db.questions || []).forEach((q: any) => normalizeQuestionVotes(q));
 
+// Ham soru defteri: her havuz sorusunun kullanıcı katkıları append-only kümede (data/question_ledger).
+// Postgres'e de silinemez tabloya yansıtılır (question_raw_events; UPDATE/DELETE tetikleyiciyle yasak).
+const ledgerMirrorQueue: any[] = [];
+let ledgerMirrorBusy = false;
+async function flushLedgerMirror() {
+  if (ledgerMirrorBusy) return;
+  ledgerMirrorBusy = true;
+  try {
+    while (ledgerMirrorQueue.length) {
+      const ev = ledgerMirrorQueue[0];
+      try {
+        await pgDb.query(
+          `insert into question_raw_events (event_id, qid, seq, ts, type, actor, payload, prev_hash, hash)
+           values ($1,$2,$3,$4,$5,$6,$7,$8,$9) on conflict (event_id) do nothing`,
+          [ev.eventId, ev.qid, ev.seq, ev.ts, ev.type, JSON.stringify(ev.actor), JSON.stringify(ev.payload), ev.prevHash, ev.hash],
+        );
+      } catch { break; } // pg yoksa dosya defteri asıl kaynaktır; sonraki olayda yeniden denenir
+      ledgerMirrorQueue.shift();
+    }
+  } finally { ledgerMirrorBusy = false; }
+}
+rawLedger.initLedger(DATA_DIR, (ev) => { ledgerMirrorQueue.push(ev); if (ledgerMirrorQueue.length > 5000) ledgerMirrorQueue.shift(); flushLedgerMirror(); });
+(async () => {
+  try {
+    await pgDb.query(`create table if not exists question_raw_events (
+      event_id text primary key, qid text not null, seq int not null, ts timestamptz not null,
+      type text not null, actor jsonb, payload jsonb, prev_hash text, hash text not null)`);
+    await pgDb.query(`create index if not exists question_raw_events_qid on question_raw_events (qid, seq)`);
+    await pgDb.query(`create or replace function question_raw_events_immutable() returns trigger language plpgsql as $$
+      begin raise exception 'question_raw_events append-only: % yasak', tg_op; end $$`);
+    await pgDb.query(`drop trigger if exists question_raw_events_no_change on question_raw_events`);
+    await pgDb.query(`create trigger question_raw_events_no_change before update or delete or truncate on question_raw_events
+      for each statement execute function question_raw_events_immutable()`);
+    // Dosya defteri asıl kaynak: açılışta tümü pg'ye eşitlenir (var olanlar atlanır).
+    for (const qid of rawLedger.listLedgerIds()) for (const ev of rawLedger.readEvents(qid)) ledgerMirrorQueue.push(ev);
+    await flushLedgerMirror();
+  } catch (e: any) { console.warn('[ledger] pg tablosu hazırlanamadı (dosya defteri yine çalışır):', e?.message); }
+})();
+try {
+  const n = rawLedger.seedBaselines(db.questions || []);
+  if (n) console.log(`[ledger] ${n} soru için başlangıç anlık görüntüsü yazıldı`);
+} catch (e: any) { console.error('[ledger] başlangıç kaydı hatası:', e?.message); }
+
 let onQuestionsSaved: (() => void) | null = null;
 function saveDatabase() {
   try {
-    fs.writeFileSync(DB_FILE, JSON.stringify(db, null, 2), 'utf-8');
+    // Önce ham deftere yaz ve kaybolan kullanıcı katkılarını geri koy; defter yazılamazsa kayıt yapılmaz.
+    db.questions = rawLedger.recordAndGuard(db.questions || []);
+    const tmp = DB_FILE + '.tmp';
+    fs.writeFileSync(tmp, JSON.stringify(db, null, 2), 'utf-8');
+    fs.renameSync(tmp, DB_FILE);
     broadcastRealtimeEvent('questions_changed', { count: (db.questions || []).length, time: Date.now() });
     // Havuz kümeleri: her soru kaydında artımlı güncelleme (2 sn), 10 dk sonra toplu düzeltme (poolClusterService)
     onQuestionsSaved?.();
   } catch (e) {
     console.error('Error saving db:', e);
   }
+}
+
+/**
+ * Tek havuz sorusu değişti: dosyaya yazar + meds-pg'ye yansıtır. Tetikleyici → hub → tüm istemcilere
+ * `question_updated` / `db_change` (satır içeriğiyle) gider; açık ekranlar soruyu yerinde günceller.
+ * Veritabanı kapalıysa olay doğrudan yayımlanır (canlılık veritabanına bağlı kalmasın).
+ */
+function saveQuestionLive(question: any) {
+  saveDatabase();
+  if (!question?.id) return;
+  if (pgOnline) {
+    void mirrorQuestionToDb(question);
+    return;
+  }
+  broadcastRealtimeEvent('question_updated', { id: question.id, question, eventType: 'UPDATE', time: Date.now() });
+  broadcastRealtimeEvent('db_change', {
+    table: 'questions',
+    eventType: 'UPDATE',
+    new: { id: question.id, committee_id: question.committeeId, data: question },
+    old: null,
+  });
 }
 
 // Admin Middleware: Ensures caller is nofrostlife@gmail.com
@@ -986,6 +1109,10 @@ function canUserManageReport(report: any, req: express.Request): boolean {
   if (reportedBy && report.reportedBy && String(reportedBy).trim().toLowerCase() === String(report.reportedBy).trim().toLowerCase()) return true;
   if (token && report.ownershipToken && String(token) === String(report.ownershipToken)) return true;
   return false;
+}
+
+function ledgerAdminActor(req: express.Request): rawLedger.LedgerActor {
+  return { kind: 'admin', email: String(req.headers['x-admin-email'] || req.body?.adminEmail || ADMIN_EMAIL) };
 }
 
 function requireAdmin(req: express.Request, res: express.Response, next: express.NextFunction) {
@@ -1044,18 +1171,24 @@ app.get(['/api/realtime/events', '/api/admin/events/stream'], (req, res) => {
 
   realtimeClients.set(clientId, client);
 
-  // İlk bağlantı teyidi (handshake); retry: tarayıcının yeniden bağlanma bekleme süresi
-  res.write(`retry: 3000\nevent: connected\ndata: ${JSON.stringify({ clientId, isAdmin, time: Date.now(), clientsCount: realtimeClients.size })}\n\n`);
+  // İlk bağlantı teyidi (handshake); retry: tarayıcının yeniden bağlanma bekleme süresi.
+  // `id` taşır: istemci ilk bağlantıda da son kimliği bilir (sonraki kopuklukta telafi buradan başlar).
+  const lastEventId = String(req.query.lastEventId || req.headers['last-event-id'] || '');
+  res.write(`retry: 3000\nid: ${SSE_BOOT}-${sseSeq}\nevent: connected\ndata: ${JSON.stringify({ clientId, isAdmin, time: Date.now(), clientsCount: realtimeClients.size, boot: SSE_BOOT })}\n\n`);
+  if (lastEventId && !replayRealtimeEvents(client, lastEventId)) {
+    res.write(`event: resync\ndata: ${JSON.stringify({ reason: 'gap', time: Date.now() })}\n\n`);
+  }
 
-  // Proxy'lerin (Caddy, Nginx, Cloudflare) bağlantıyı kapatmasını önlemek için 25 saniyede bir keep-alive
+  // Kalp atışı (20 sn): proxy'ler (Caddy, Cloudflare) boşta bağlantıyı kapatmasın; istemci 45 sn veri almazsa
+  // bağlantıyı ölü sayıp yeniden kurar (uyku/ağ değişiminden sonra "bağlı görünüp olay almayan" akışlar için).
   const keepAlive = setInterval(() => {
     try {
-      res.write(': keep-alive\n\n');
+      res.write(`event: hb\ndata: ${Date.now()}\n\n`);
     } catch {
       clearInterval(keepAlive);
       realtimeClients.delete(clientId);
     }
-  }, 25000);
+  }, 20000);
 
   req.on('close', () => {
     clearInterval(keepAlive);
@@ -2125,13 +2258,60 @@ function addDeletedPastQuestion(id: string) {
 // kadar (en çok 30 sn; Faz 14 kaydı kendi önbelleğinde) bellekte tutulur, gzip iş parçacığında yapılır.
 // Gövdelerin yalnız gzip'i tutulur (ham gövde ~170 MB'lık ikinci bir dize demekti); gzip desteklemeyen
 // nadir istemciye anında açılır.
+function toClientPastQuestion(raw: any): any {
+  if (!raw || typeof raw !== 'object') return raw;
+  const q: any = { ...raw };
+  delete q.checkSolveOriginal;
+  delete q.ragChunk;
+  delete q.embeddingText;
+  delete q.grounding;
+  if (q.explanation && q.tibbi_aciklama) {
+    delete q.tibbi_aciklama;
+  }
+  if (q.checkSolve && typeof q.checkSolve === 'object') {
+    const cs = q.checkSolve;
+    q.checkSolve = {
+      status: cs.status,
+      ...(cs.cevapDegisti ? { cevapDegisti: cs.cevapDegisti } : {}),
+      ...(cs.cevapGerekcesi ? { cevapGerekcesi: cs.cevapGerekcesi } : {}),
+      ...(cs.eklenenSiklar ? { eklenenSiklar: cs.eklenenSiklar } : {}),
+      ...(cs.mufredat ? { mufredat: cs.mufredat } : {}),
+      ...(cs.at ? { at: cs.at } : {}),
+    };
+  }
+  if (q.denetleyiciSurumu && typeof q.denetleyiciSurumu === 'object') {
+    const ds = q.denetleyiciSurumu;
+    q.denetleyiciSurumu = {
+      ...(ds.stem ? { stem: ds.stem } : {}),
+      ...(ds.options ? { options: ds.options } : {}),
+      ...(ds.onayTarihi ? { onayTarihi: ds.onayTarihi } : {}),
+      ...(!q.sik_analizi && ds.sik_analizi ? { sik_analizi: ds.sik_analizi } : {}),
+      ...(!q.referans_kaynaklar && ds.referans_kaynaklar ? { referans_kaynaklar: ds.referans_kaynaklar } : {}),
+    };
+  }
+  if (q.reconstruction && typeof q.reconstruction === 'object') {
+    const rc = { ...q.reconstruction };
+    if (q.explanation && rc.explanation === q.explanation) delete rc.explanation;
+    if (q.stem && rc.stem === q.stem) delete rc.stem;
+    if (Array.isArray(q.options) && Array.isArray(rc.options) && rc.options.length === q.options.length) {
+      let same = true;
+      for (let i = 0; i < q.options.length; i++) {
+        if (q.options[i] !== rc.options[i]) { same = false; break; }
+      }
+      if (same) delete rc.options;
+    }
+    q.reconstruction = rc;
+  }
+  return q;
+}
+
 type PastListCache = { key: string; at: number; list: any[]; listJson: string; bodies: Map<string, Promise<Buffer>> };
 let pastListCache: PastListCache | null = null;
 function getServedPastList(): PastListCache {
   const base = getPastQuestionsDb();
   const key = `${lastPastQuestionsMtime}:${pastQuestionsVersion}:${base.length}:${quarantineMtime()}:${mergeMtime()}:${getDeletedPastQuestions().size}`;
   if (!pastListCache || pastListCache.key !== key || Date.now() - pastListCache.at > 30_000) {
-    const list = applyMergeOverlay(applyQuarantine(applyPhase14Overlay(base)));
+    const list = applyMergeOverlay(applyQuarantine(applyPhase14Overlay(base))).map(toClientPastQuestion);
     pastListCache = { key, at: Date.now(), list, listJson: JSON.stringify(list), bodies: new Map() };
   }
   return pastListCache;
@@ -2332,6 +2512,7 @@ async function flushDbChanges() {
         continue;
       }
       try {
+        invalidateDbQueryCache(table);
         await applyDbChanges(table, changes, time);
       } catch (e: any) {
         console.warn(`[Realtime DB Hub] ${table} işlenemedi:`, e?.message || e);
@@ -2339,7 +2520,7 @@ async function flushDbChanges() {
       broadcastRealtimeEvent(
         'database_sync',
         { table, eventType: changes.length === 1 ? changes[0].op : 'BULK', id: changes.length === 1 ? changes[0].id : undefined, count: changes.length, time },
-        table === 'users' || table === 'past_question_reports'
+        PERSONAL_TABLES.has(table)
       );
     }
   } finally {
@@ -2347,7 +2528,14 @@ async function flushDbChanges() {
   }
 }
 
+// Kişisel veri tabloları: genel `database_sync` olayı yalnız yöneticilere gider
+const PERSONAL_TABLES = new Set(['users', 'past_question_reports', 'user_devices', 'user_events', 'user_data']);
+
 async function applyDbChanges(table: string, changes: DbChange[], time: number) {
+  if (table === 'user_devices' || table === 'user_events') {
+    peopleInsights.onDbChanges(table, changes);
+    return;
+  }
   const perRow = changes.length <= DB_PER_ROW_EVENT_LIMIT;
 
   if (table === 'past_questions') {
@@ -3135,7 +3323,7 @@ app.put('/api/reports/:reportId', async (req, res) => {
         rep.updatedAt = new Date().toISOString();
         rep.isEdited = true;
         q.updatedAt = new Date().toISOString();
-        saveDatabase();
+        saveQuestionLive(q);
         return res.json({ success: true, message: 'Hata bildirimi güncellendi.', report: rep });
       }
     }
@@ -3179,7 +3367,7 @@ app.delete('/api/reports/:reportId', async (req, res) => {
           }
           qAny.reports = (qAny.reports || []).filter((r: any) => r.id !== req.params.reportId);
           q.updatedAt = new Date().toISOString();
-          saveDatabase();
+          saveQuestionLive(q);
           found = true;
           break;
         }
@@ -4123,9 +4311,37 @@ function pastQuestionHasNoAnswer(questionId: string): boolean {
   return !(q.correctAnswer || q.claimedAnswer || q.reconstruction?.correctAnswer);
 }
 
+// Kullanıcının açtığı anketler: cevabı olan soruda da topluluk oylaması (kabul edilen cevapla karşılaştırılır)
+const USER_POLLS_FILE = path.join(DATA_DIR, 'user_answer_polls.json');
+let cachedUserPolls: { mtime: number; data: Record<string, { by: string; at: string }> } | null = null;
+function readUserPolls(): Record<string, { by: string; at: string }> {
+  try {
+    const st = fs.statSync(USER_POLLS_FILE);
+    if (cachedUserPolls && cachedUserPolls.mtime === st.mtimeMs) {
+      return { ...cachedUserPolls.data };
+    }
+    const data = JSON.parse(fs.readFileSync(USER_POLLS_FILE, 'utf-8')) || {};
+    cachedUserPolls = { mtime: st.mtimeMs, data };
+    return { ...data };
+  } catch {
+    return {};
+  }
+}
+
+let answerDoubtfulCache: { key: string; payload: { success: true; ids: string[]; options: Record<string, Record<string, string>>; resolved: Record<string, { answer: string; by: string }> } } | null = null;
+
 // Cevabı belirsiz (anketi açık) soruların güncel listesi: /cikmis önbellekten yüklense de anket bu listeye göre açılır.
 app.get('/api/past-question-reviews/answer-doubtful', (_req, res) => {
   try {
+    let revMtime = 0;
+    try { revMtime = fs.statSync(PHASE14_REVIEWS_FILE).mtimeMs; } catch {}
+    let pollsMtime = 0;
+    try { pollsMtime = fs.statSync(USER_POLLS_FILE).mtimeMs; } catch {}
+    const cacheKey = `${lastPastQuestionsMtime}:${pastQuestionsVersion}:${revMtime}:${pollsMtime}`;
+    if (answerDoubtfulCache && answerDoubtfulCache.key === cacheKey) {
+      return res.set('Cache-Control', 'no-store').json(answerDoubtfulCache.payload);
+    }
+
     const latest = latestReviews();
     const ids: string[] = [];
     const options: Record<string, Record<string, string>> = {};
@@ -4133,7 +4349,8 @@ app.get('/api/past-question-reviews/answer-doubtful', (_req, res) => {
     const resolved: Record<string, { answer: string; by: string }> = {};
     // Check-solve ile cevabı literatürden doğrulanmış sorularda eski Faz 14 cevap şüphesi kapanmıştır
     const csAt = new Map<string, number>();
-    for (const q of getPastQuestionsDb()) if (q?.checkSolve?.status === 'onayli') csAt.set(String(q.id), Date.parse(q.checkSolve.at || '') || 0);
+    const fullDb = getPastQuestionsDb();
+    for (const q of fullDb) if (q?.checkSolve?.status === 'onayli') csAt.set(String(q.id), Date.parse(q.checkSolve.at || '') || 0);
     for (const [id, r] of latest) {
       if (csAt.has(id) && (Date.parse(r?.last_edited_at || r?.processed_at || '') || 0) <= (csAt.get(id) || 0)) continue;
       const doubtful = r?.answer_doubtful && r.status === 'review_required';
@@ -4146,28 +4363,24 @@ app.get('/api/past-question-reviews/answer-doubtful', (_req, res) => {
     }
     // Kullanıcıların açtığı anketler: cevap anahtarı kabul edilen cevap olarak gösterilir
     const userPolls = readUserPolls();
-    const db = Object.keys(userPolls).length ? getPastQuestionsDb() : [];
-    for (const id of Object.keys(userPolls)) {
-      if (ids.includes(id) || resolved[id]) continue;
-      const q: any = db.find((x: any) => String(x.id) === id);
-      const ans = String(q?.reconstruction?.correctAnswer || q?.correctAnswer || q?.claimedAnswer || '');
-      if (ans) resolved[id] = { answer: ans, by: 'kullanici' };
+    const pollKeys = Object.keys(userPolls);
+    if (pollKeys.length) {
+      const byId = new Map<string, any>();
+      for (const q of fullDb) byId.set(String(q.id), q);
+      for (const id of pollKeys) {
+        if (ids.includes(id) || resolved[id]) continue;
+        const q: any = byId.get(id);
+        const ans = String(q?.reconstruction?.correctAnswer || q?.correctAnswer || q?.claimedAnswer || '');
+        if (ans) resolved[id] = { answer: ans, by: 'kullanici' };
+      }
     }
-    res.set('Cache-Control', 'no-store').json({ success: true, ids, options, resolved });
+    const payload = { success: true as const, ids, options, resolved };
+    answerDoubtfulCache = { key: cacheKey, payload };
+    res.set('Cache-Control', 'no-store').json(payload);
   } catch (err: any) {
     res.status(500).json({ error: 'Liste okunamadı: ' + err.message });
   }
 });
-
-// Kullanıcının açtığı anketler: cevabı olan soruda da topluluk oylaması (kabul edilen cevapla karşılaştırılır)
-const USER_POLLS_FILE = path.join(DATA_DIR, 'user_answer_polls.json');
-function readUserPolls(): Record<string, { by: string; at: string }> {
-  try {
-    return JSON.parse(fs.readFileSync(USER_POLLS_FILE, 'utf-8')) || {};
-  } catch {
-    return {};
-  }
-}
 app.post('/api/past-question-reviews/:id/open-poll', (req, res) => {
   try {
     const qId = String(req.params.id);
@@ -5071,7 +5284,7 @@ app.post('/api/questions/:id/upvote', (req, res) => {
   const liked = toggleVote(question, userId);
 
   question.updatedAt = new Date().toISOString();
-  saveDatabase();
+  saveQuestionLive(question);
   res.json({ success: true, upvotes: question.upvotes, liked, likedBy: question.likedBy, question });
 });
 
@@ -5111,6 +5324,17 @@ app.post('/api/ornek-sorular/:id/report', (req, res) => {
 
 // Öğren ders ekranı geri bildirimleri: hata bildirimi + beğen/reddet (data/learn_feedback.json)
 const learnFeedback = createLearnFeedbackStore(DATA_DIR);
+// Her başarılı yazımdan sonra (oluştur, oy, düzenle, sil, çöz) açık ders ekranları listeyi yeniden çeker
+app.use(['/api/learn/feedback', '/api/admin/learn-feedback'], (req, res, next) => {
+  if (req.method === 'GET' || req.method === 'OPTIONS') return next();
+  res.on('finish', () => {
+    if (res.statusCode >= 400) return;
+    const id = String(req.path || '').split('/').filter(Boolean)[0] || '';
+    const deckId = String(req.body?.deckId || (id ? learnFeedback.get(id)?.deckId : '') || '');
+    broadcastRealtimeEvent('learn_feedback_changed', { id: id || undefined, deckId: deckId || undefined, time: Date.now() });
+  });
+  next();
+});
 app.get('/api/learn/feedback', (req, res) => {
   const deckId = String(req.query.deckId || '');
   if (!deckId) return res.status(400).json({ error: 'Ders belirtilmedi.' });
@@ -5238,7 +5462,7 @@ app.post('/api/questions/:id/report', (req, res) => {
   question.reports = Array.isArray(question.reports) ? question.reports : [];
   if (!question.reports.some((r: any) => r.id === report.id)) question.reports.push(report);
   question.updatedAt = report.timestamp;
-  saveDatabase();
+  saveQuestionLive(question);
 
   // Yalnızca yöneticiye anında e-posta ve telefon push bildirimi gönder
   triggerAdminNotification({
@@ -5430,7 +5654,7 @@ app.put('/api/questions/:id/reports/:reportId', (req, res) => {
     report.updatedAt = new Date().toISOString();
     report.isEdited = true;
     question.updatedAt = report.updatedAt;
-    saveDatabase();
+    saveQuestionLive(question);
 
     res.json({ success: true, message: 'Bildirim güncellendi.', report });
   } catch (err: any) {
@@ -5453,7 +5677,7 @@ app.delete('/api/questions/:id/reports/:reportId', (req, res) => {
 
     question.reports = (question.reports || []).filter((r: any) => r.id !== req.params.reportId);
     question.updatedAt = new Date().toISOString();
-    saveDatabase();
+    saveQuestionLive(question);
 
     try {
       autoRepairStore.banAndRemove(req.params.reportId);
@@ -5492,7 +5716,7 @@ app.post('/api/questions/:id/fragments', (req, res) => {
     question.status = 'gathering';
   }
   question.updatedAt = new Date().toISOString();
-  saveDatabase();
+  saveQuestionLive(question);
 
   // Yalnızca yöneticiye anında e-posta ve telefon push bildirimi gönder
   triggerAdminNotification({
@@ -5521,7 +5745,7 @@ app.post('/api/questions/:id/fragments/:fragmentId/upvote', (req, res) => {
   const liked = toggleVote(fragment, userId);
 
   question.updatedAt = new Date().toISOString();
-  saveDatabase();
+  saveQuestionLive(question);
 
   res.json({ fragment, liked, upvotes: fragment.upvotes });
 });
@@ -5553,7 +5777,7 @@ app.post('/api/questions/:id/options', (req, res) => {
   // Keep options sorted A to E
   question.options.sort((a, b) => a.key.localeCompare(b.key));
   question.updatedAt = new Date().toISOString();
-  saveDatabase();
+  saveQuestionLive(question);
 
   res.json({ options: question.options, question });
 });
@@ -5571,7 +5795,7 @@ app.post('/api/questions/:id/options/:key/upvote', (req, res) => {
   const liked = toggleVote(opt, userId);
 
   question.updatedAt = new Date().toISOString();
-  saveDatabase();
+  saveQuestionLive(question);
 
   res.json({ option: opt, liked, upvotes: opt.upvotes });
 });
@@ -5584,13 +5808,13 @@ app.post('/api/questions/:id/claimed-answer', (req, res) => {
 
   question.claimedAnswer = answer;
   question.updatedAt = new Date().toISOString();
-  saveDatabase();
+  saveQuestionLive(question);
 
   res.json({ claimedAnswer: question.claimedAnswer });
 });
 
 // AI Reconstruction Endpoint using Gemini 3.8 Flash
-app.post('/api/questions/:id/ai-reconstruct', async (req, res) => {
+app.post('/api/questions/:id/ai-reconstruct', requireAdmin, async (req, res) => {
   // The question may live only in Firebase/Supabase on the client; accept it from the body too.
   const stored = db.questions.find((q) => q.id === req.params.id);
   const question: any = stored || req.body?.question;
@@ -5604,7 +5828,7 @@ app.post('/api/questions/:id/ai-reconstruct', async (req, res) => {
 
   if (stored) {
     stored.status = 'reconstructing';
-    saveDatabase();
+    saveQuestionLive(stored);
   }
 
   try {
@@ -5697,16 +5921,17 @@ YALNIZCA ŞU JSON'U DÖN:
       lastUpdated: new Date().toISOString(),
     };
 
+    // YZ çıktısı yalnız kendi katmanına (reconstruction) yazılır; kullanıcının cevap iddiası ezilmez.
     const updated = {
       ...question,
       reconstruction,
       status: 'completed',
-      claimedAnswer: reconstruction.correctAnswer,
       updatedAt: new Date().toISOString(),
     };
     if (stored) {
+      rawLedger.appendEvent(stored.id, 'ai_suggestion', { kind: 'ai', name: String(aiResult.planUsed || 'ai-reconstruct') }, { kind: 'reconstruction', result: reconstruction, requestedBy: ledgerAdminActor(req) });
       Object.assign(stored, updated);
-      saveDatabase();
+      saveQuestionLive(stored);
     }
     mirrorQuestionToDb(updated);
 
@@ -5715,7 +5940,7 @@ YALNIZCA ŞU JSON'U DÖN:
     console.error('AI Reconstruction Error:', error);
     if (stored) {
       stored.status = 'gathering';
-      saveDatabase();
+      saveQuestionLive(stored);
     }
     const errMsg = error?.message || 'Bilinmeyen hata';
     const isQuota = /429|RESOURCE_EXHAUSTED|spending cap|quota/i.test(errMsg);
@@ -6593,6 +6818,7 @@ const userDataRoutes = registerUserDataBackupRoutes(app, {
   // Profil her kaydedildiğinde: meds-pg `user_data` satırı + kullanıcının diğer cihazlarına anında haber
   onSaved: ({ uid, email, verified, bundle, origin }) => {
     broadcastRealtimeEvent('user_data_changed', { who: userEventHash(uid), origin, at: Date.now() });
+    peopleInsights.onProfileSaved(uid);
     if (!pgOnline) return;
     void (async () => {
       try {
@@ -6656,6 +6882,7 @@ registerDataCatalogRoutes(app, requireAdmin, {
   removePool: async (ids) => {
     const set = new Set(ids.map(String));
     const removed = db.questions.filter((q: any) => set.has(String(q.id)));
+    for (const q of removed) rawLedger.allowRemoval(q.id, { kind: 'admin', name: 'katalog-çöp' }, q, 'katalogdan çöpe');
     if (removed.length) {
       db.questions = db.questions.filter((q: any) => !set.has(String(q.id)));
       saveDatabase();
@@ -7530,6 +7757,7 @@ app.delete('/api/questions/:id', requireAdmin, async (req, res) => {
   const idx = db.questions.findIndex((q) => q.id === req.params.id);
   let localDeleted = false;
   if (idx !== -1) {
+    rawLedger.allowRemoval(db.questions[idx].id, ledgerAdminActor(req), db.questions[idx], 'yönetici silmesi');
     db.questions.splice(idx, 1);
     saveDatabase();
     localDeleted = true;
@@ -8404,12 +8632,97 @@ app.delete('/api/admin/questions/:id', requireAdmin, async (req, res) => {
   const idx = db.questions.findIndex((q) => q.id === req.params.id);
   let deleted: unknown = null;
   if (idx !== -1) {
+    rawLedger.allowRemoval(db.questions[idx].id, ledgerAdminActor(req), db.questions[idx], 'yönetici silmesi');
     deleted = db.questions.splice(idx, 1)[0];
     saveDatabase();
   }
   // Yerel JSON'da yoksa bile Supabase fan-out yapılır (havuz Supabase'te yaşar).
   const cloud = await deleteFromDb('questions', req.params.id);
   res.json({ success: true, deletedQuestion: deleted, localDeleted: idx !== -1, cloud });
+});
+
+// ---------------------------------------------------------------------------
+// Ham soru havuzu (append-only defter) — yalnız yönetici. Hiçbir uç olay silmez/değiştirmez.
+// ---------------------------------------------------------------------------
+function ledgerSummary(qid: string) {
+  const q: any = (db.questions || []).find((x: any) => String(x.id) === qid);
+  const c = rawLedger.buildCluster(qid, q);
+  const { events, ...rest } = c;
+  return {
+    ...rest,
+    title: q?.reconstruction?.stem || q?.fragments?.find((f: any) => f.type === 'stem')?.text || c.original?.fragments?.[0]?.text || q?.topic || qid,
+    committeeId: q?.committeeId || c.original?.committeeId,
+    questionNumber: q?.questionNumber ?? c.original?.questionNumber,
+    discipline: q?.discipline || c.original?.discipline,
+    deleted: !q,
+    counts: Object.fromEntries(Object.entries(c.contributions).map(([k, v]: any) => [k, v.length])),
+    aiCount: c.ai.length,
+  };
+}
+
+app.get('/api/admin/raw-pool', requireAdmin, (_req, res) => {
+  const ids = rawLedger.listLedgerIds();
+  const items = ids.map((id) => { const { contributions, ai, admin, guard, current, original, ...s } = ledgerSummary(id) as any; return s; });
+  res.json({ items });
+});
+
+app.get('/api/admin/raw-pool/export', requireAdmin, (req, res) => {
+  const fmt = String(req.query.format || 'json');
+  const ids = req.query.ids ? String(req.query.ids).split(',') : rawLedger.listLedgerIds();
+  const stamp = new Date().toISOString().slice(0, 19).replace(/[:T]/g, '-');
+  if (fmt === 'jsonl') {
+    res.setHeader('Content-Type', 'application/x-ndjson; charset=utf-8');
+    res.setHeader('Content-Disposition', `attachment; filename="ham_havuz_olaylar_${stamp}.jsonl"`);
+    for (const id of ids) for (const ev of rawLedger.readEvents(id)) res.write(JSON.stringify(ev) + '\n');
+    return res.end();
+  }
+  if (fmt === 'csv') {
+    const esc = (v: any) => `"${String(v ?? '').replace(/"/g, '""')}"`;
+    const rows = ['qid,seq,ts,type,actor_kind,actor_name,payload'];
+    for (const id of ids) for (const ev of rawLedger.readEvents(id)) rows.push([ev.qid, ev.seq, ev.ts, ev.type, ev.actor?.kind, ev.actor?.name || ev.actor?.uid || '', JSON.stringify(ev.payload)].map(esc).join(','));
+    res.setHeader('Content-Type', 'text/csv; charset=utf-8');
+    res.setHeader('Content-Disposition', `attachment; filename="ham_havuz_${stamp}.csv"`);
+    return res.send('\ufeff' + rows.join('\n'));
+  }
+  res.setHeader('Content-Type', 'application/json; charset=utf-8');
+  res.setHeader('Content-Disposition', `attachment; filename="ham_havuz_kumeler_${stamp}.json"`);
+  res.send(JSON.stringify({ exportedAt: new Date().toISOString(), clusters: ids.map((id) => rawLedger.buildCluster(id, (db.questions || []).find((x: any) => String(x.id) === id))) }, null, 2));
+});
+
+app.get('/api/admin/raw-pool/:id', requireAdmin, (req, res) => {
+  const q: any = (db.questions || []).find((x: any) => String(x.id) === req.params.id);
+  if (!q && !rawLedger.readEvents(req.params.id).length) return res.status(404).json({ error: 'Kayıt yok.' });
+  res.json(rawLedger.buildCluster(req.params.id, q));
+});
+
+// Sınıflandırma: yalnız deftere yeni olay (ders/konu/durum/etiketler/not). Ham veri değişmez.
+app.post('/api/admin/raw-pool/:id/classify', requireAdmin, (req, res) => {
+  const { discipline, topic, category, quality, tags, note } = req.body || {};
+  const payload = Object.fromEntries(Object.entries({ discipline, topic, category, quality, tags, note }).filter(([, v]) => v !== undefined));
+  if (!Object.keys(payload).length) return res.status(400).json({ error: 'Boş sınıflandırma.' });
+  const ev = rawLedger.appendEvent(req.params.id, 'admin_classify', ledgerAdminActor(req), payload);
+  res.json({ success: true, event: ev });
+});
+
+// Yönetici düzenlemesi: çalışma kopyasına uygulanır; önceki hal ve düzenleme deftere ayrı olay olarak yazılır.
+app.post('/api/admin/raw-pool/:id/edit', requireAdmin, (req, res) => {
+  const q: any = (db.questions || []).find((x: any) => String(x.id) === req.params.id);
+  if (!q) return res.status(404).json({ error: 'Soru yok.' });
+  const allowed = ['discipline', 'topic', 'claimedAnswer', 'tags', 'status', 'committeeId', 'questionNumber', 'examYear', 'adminNote'];
+  const patch = Object.fromEntries(Object.entries(req.body?.patch || {}).filter(([k]) => allowed.includes(k)));
+  if (!Object.keys(patch).length) return res.status(400).json({ error: 'Düzenlenebilir alan yok.' });
+  const before = Object.fromEntries(Object.keys(patch).map((k) => [k, q[k] ?? null]));
+  rawLedger.appendEvent(q.id, 'admin_edit', ledgerAdminActor(req), { before, after: patch, reason: String(req.body?.reason || '') });
+  Object.assign(q, patch, { updatedAt: new Date().toISOString() });
+  saveDatabase();
+  mirrorQuestionToDb(q);
+  res.json({ success: true, question: q });
+});
+
+app.post('/api/admin/raw-pool/:id/note', requireAdmin, (req, res) => {
+  const text = String(req.body?.text || '').trim();
+  if (!text) return res.status(400).json({ error: 'Not boş.' });
+  res.json({ success: true, event: rawLedger.appendEvent(req.params.id, 'admin_note', ledgerAdminActor(req), { text }) });
 });
 
 // Admin: Export complete database JSON
@@ -8436,6 +8749,8 @@ app.post('/api/admin/db/import', requireAdmin, (req, res) => {
 
 // Admin: Reset database to seed
 app.post('/api/admin/db/reset', requireAdmin, (req, res) => {
+  // Ham veri korunur: havuzu toptan silen sıfırlama kapatıldı.
+  return res.status(410).json({ error: 'Sıfırlama kapalı: kullanıcı kaynaklı ham veri silinemez.' });
   if (fs.existsSync(DB_FILE)) {
     fs.unlinkSync(DB_FILE);
   }
@@ -8736,7 +9051,7 @@ app.post('/api/ai/match-lecture-notes', async (req, res) => {
 });
 
 // Student & User AI Question Optimizer: Grounds question in lecture notes and internet medical knowledge
-app.post('/api/ai/optimize-question', async (req, res) => {
+app.post('/api/ai/optimize-question', requireAdmin, async (req, res) => {
   try {
     const {
       question,
@@ -9094,7 +9409,7 @@ TEMEL İLKELER VE YANIT KURALLARI:
 });
 
 // Apply AI Optimization to Question across Local DB, Past Exams, Supabase and Revisions
-app.post('/api/questions/:id/apply-ai-optimization', async (req, res) => {
+app.post('/api/questions/:id/apply-ai-optimization', requireAdmin, async (req, res) => {
   try {
     const qId = req.params.id;
     const { optimizedData, matchedLecture, refinementSummary, userEmail, userName, studentNumber } = req.body;
@@ -9125,9 +9440,9 @@ app.post('/api/questions/:id/apply-ai-optimization', async (req, res) => {
         explanation: optimizedData.explanation
       };
 
-      q.discipline = optimizedData.discipline || q.discipline;
-      q.topic = optimizedData.topic || q.topic;
-      q.claimedAnswer = optimizedData.correctAnswer || q.claimedAnswer;
+      // Havuz sorusu ham veridir: ders/konu/cevap iddiası YZ ile ezilmez; öneri ayrı kayda ve YZ katmanına gider.
+      rawLedger.appendEvent(q.id, 'ai_suggestion', { kind: 'ai', name: 'apply-ai-optimization' }, { kind: 'optimization', optimizedData, matchedLecture: matchedLecture || null, refinementSummary: refinementSummary || '', requestedBy: ledgerAdminActor(req) });
+      (q as any).aiSuggestion = { discipline: optimizedData.discipline, topic: optimizedData.topic, correctAnswer: optimizedData.correctAnswer, at: now };
       q.reconstruction = {
         stem: optimizedData.stem,
         options: optimizedData.options,

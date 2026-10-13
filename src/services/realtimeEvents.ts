@@ -30,15 +30,27 @@ class RealtimeEventService {
   // Genel olay dinleyicileri (db_change, live, pong, votes_changed): olay adı → işleyiciler
   private genericListeners = new Map<string, Set<(data: any) => void>>();
   private boundGenericEvents = new Set<string>();
+  // Kaçan olay telafisi: son alınan olay kimliği yeniden bağlanırken sunucuya verilir (sunucu aradakileri yollar)
+  private lastEventId = '';
+  private lastDataAt = 0;
+  private watchdog: any = null;
+  private everConnected = false;
+  private connectedAdmin = false;
 
   constructor() {
     if (typeof window !== 'undefined') {
       // Sekme arka plandan ön plana geldiğinde bağlantıyı tazele
       document.addEventListener('visibilitychange', () => {
-        if (!document.hidden && this.status === 'disconnected' && !this.isExplicitlyClosed) {
+        if (document.hidden || this.isExplicitlyClosed) return;
+        // Uykudan/arka plandan dönüş: bağlı görünen ama sessiz kalmış akış ölü sayılır
+        if (this.status === 'connected' && Date.now() - this.lastDataAt > 30_000) this.restart();
+        else if (this.status === 'disconnected') {
+          this.reconnectAttempts = 0;
           this.connect();
         }
       });
+      // Yönetici girişi/çıkışı: yönetici olayları için akış yeni yetkiyle yeniden kurulur
+      window.addEventListener('medsoru:admin-session', () => this.refreshAuth());
       // Ağ çevrimiçi olduğunda anında bağlan
       window.addEventListener('online', () => {
         if (this.status === 'disconnected' && !this.isExplicitlyClosed) {
@@ -65,11 +77,14 @@ class RealtimeEventService {
       const adminSession = getLocalAdminSession();
       // Yerel panel Oracle'a bağlıysa olaylar da Oracle'dan (gelen kutusu, canlı içerik)
       const base = panelApiBase('/api/realtime/events');
-      const url = adminSession?.email
-        ? `${base}/api/realtime/events?adminEmail=${encodeURIComponent(adminSession.email)}`
-        : `${base}/api/realtime/events`;
+      const qs = new URLSearchParams();
+      if (adminSession?.email) qs.set('adminEmail', adminSession.email);
+      if (this.lastEventId) qs.set('lastEventId', this.lastEventId);
+      const url = `${base}/api/realtime/events${qs.toString() ? `?${qs}` : ''}`;
+      this.connectedAdmin = !!adminSession?.email;
 
       const es = new EventSource(url);
+      this.lastDataAt = Date.now();
       this.eventSource = es;
       this.boundGenericEvents.clear();
       for (const ev of this.genericListeners.keys()) this.bindGeneric(ev);
@@ -78,8 +93,21 @@ class RealtimeEventService {
         try {
           this.clientId = JSON.parse(e.data)?.clientId || null;
         } catch (_) {}
+        // İlk bağlantıda kimlik yoksa sunucunun verdiği güncel kimlikten başlanır (telafi bundan sonrası için)
+        if (!this.lastEventId && e.lastEventId) this.lastEventId = e.lastEventId;
         this.reconnectAttempts = 0;
         this.setStatus('connected');
+        this.everConnected = true;
+      });
+
+      // Sunucu kaçan olayları telafi edemedi (yeniden başladı ya da kopukluk uzun sürdü): herkes tazelesin
+      es.addEventListener('resync', (e: MessageEvent) => {
+        let payload: any = null;
+        try { if (e.data) payload = JSON.parse(e.data); } catch (_) {}
+        this.emitResync(payload?.reason || 'gap');
+      });
+      es.addEventListener('hb', () => {
+        this.lastDataAt = Date.now();
       });
 
       es.addEventListener('admin_notification', (e: MessageEvent) => {
@@ -196,8 +224,11 @@ class RealtimeEventService {
           // Yalnız bu cihazın defteri değiştiyse çek (olay tüm ziyaretçilere gider)
           const { pullDeltaNotes, isOwnNotebook } = await import('./notesSync');
           if (!(await isOwnNotebook(payload?.codeHash))) return;
-          void pullDeltaNotes();
-        } catch (_) {}
+          // Ekranlar notları çekme bittikten sonra yeniden okusun (önceden bitmeden haber veriliyordu)
+          await pullDeltaNotes();
+        } catch (_) {
+          return;
+        }
         if (typeof window !== 'undefined') {
           window.dispatchEvent(new CustomEvent('medsoru:notes-synced', { detail: payload }));
         }
@@ -212,17 +243,67 @@ class RealtimeEventService {
         }
       });
 
+      // Son olay kimliği: dinleyicisi olmayan olaylar da kimliği ilerletsin
+      for (const ev of KNOWN_EVENTS) es.addEventListener(ev, (e: MessageEvent) => this.track(e));
+
       es.onerror = () => {
         es.close();
         this.eventSource = null;
         this.setStatus('disconnected');
         this.scheduleReconnect();
       };
+      this.startWatchdog();
     } catch (err) {
       console.warn('[RealtimeEvents] Bağlantı başlatılamadı:', err);
       this.setStatus('disconnected');
       this.scheduleReconnect();
     }
+  }
+
+  private track(e: MessageEvent) {
+    this.lastDataAt = Date.now();
+    if (e?.lastEventId) this.lastEventId = e.lastEventId;
+  }
+
+  /** 45 sn hiç veri (kalp atışı dahil) gelmezse akış ölüdür: kapat, yeniden kur. */
+  private startWatchdog() {
+    if (this.watchdog) return;
+    this.watchdog = setInterval(() => {
+      if (this.isExplicitlyClosed || !this.eventSource) return;
+      if (typeof document !== 'undefined' && document.hidden) return;
+      if (Date.now() - this.lastDataAt > 45_000) this.restart();
+    }, 10_000);
+  }
+
+  private emitResync(reason: string) {
+    if (typeof window !== 'undefined') window.dispatchEvent(new CustomEvent('medsoru:realtime-resync', { detail: { reason } }));
+    this.genericListeners.get('resync')?.forEach((fn) => { try { fn({ reason }); } catch (_) {} });
+  }
+
+  /** Bağlantıyı hemen yeniden kur (kimlik/yetki değişti ya da akış sessiz kaldı); kaçanlar lastEventId ile gelir. */
+  public restart() {
+    if (this.eventSource) {
+      this.eventSource.close();
+      this.eventSource = null;
+    }
+    if (this.reconnectTimer) {
+      clearTimeout(this.reconnectTimer);
+      this.reconnectTimer = null;
+    }
+    this.isExplicitlyClosed = false;
+    this.setStatus('disconnected');
+    this.reconnectAttempts = 0;
+    this.connect();
+  }
+
+  /** Yönetici oturumu açıldı/kapandı: yönetici olaylarını almak için akış yeni yetkiyle kurulur. */
+  public refreshAuth() {
+    const isAdmin = !!getLocalAdminSession()?.email;
+    if (isAdmin !== this.connectedAdmin && this.eventSource) this.restart();
+  }
+
+  public hasConnectedBefore(): boolean {
+    return this.everConnected;
   }
 
   private scheduleReconnect() {
@@ -248,9 +329,11 @@ class RealtimeEventService {
 
   private bindGeneric(event: string) {
     const es = this.eventSource;
-    if (!es || this.boundGenericEvents.has(event)) return;
+    // 'resync' sunucu olayı yukarıda emitResync ile dağıtılır (çift çağrı olmasın)
+    if (!es || event === 'resync' || this.boundGenericEvents.has(event)) return;
     this.boundGenericEvents.add(event);
     es.addEventListener(event, (e: MessageEvent) => {
+      this.track(e);
       let payload: any = null;
       try { if (e.data) payload = JSON.parse(e.data); } catch (_) {}
       this.genericListeners.get(event)?.forEach((fn) => { try { fn(payload); } catch (_) {} });
@@ -365,5 +448,12 @@ class RealtimeEventService {
     this.setStatus('disconnected');
   }
 }
+
+// Kimlik takibi için baştan dinlenen olaylar (dinleyicisi olmasa da son kimlik ilerlesin)
+const KNOWN_EVENTS = [
+  'questions_changed', 'past_questions_changed', 'database_sync', 'db_change', 'votes_changed', 'live', 'notes_changed',
+  'user_data_changed', 'content_changed', 'learn_social', 'learn_feedback_changed', 'people_changed', 'admin_notification',
+  'inbox_update', 'auto_repair_update', 'question_updated', 'past_question_updated',
+];
 
 export const realtimeEventService = new RealtimeEventService();

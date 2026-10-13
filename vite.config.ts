@@ -73,6 +73,15 @@ export default defineConfig(({ mode }) => {
                 return `local-data-summaries-${match[0]}`;
               }
             }
+            if (normalized.includes('/src/data/kazanimlar/lite/')) {
+              return 'local-data-kazanimlar-lite';
+            }
+            if (normalized.includes('/src/data/kazanimlar/questions/')) {
+              const match = normalized.match(/k\d+/);
+              if (match) {
+                return `local-data-kazanimlar-q-${match[0]}`;
+              }
+            }
             if (normalized.includes('/src/data/kazanimlar/')) {
               const match = normalized.match(/k\d+/);
               if (match) {

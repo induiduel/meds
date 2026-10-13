@@ -1,3 +1,4 @@
+import { useAppearance } from '../utils/appearance';
 import React, { useEffect, useMemo, useState } from 'react';
 import { X, ArrowLeft, ArrowRight, BookOpen, Sparkles, LayoutGrid, RotateCcw, Pause, Play, Bookmark, Timer, Flag } from 'lucide-react';
 import { QuestionItem } from '../types';
@@ -447,7 +448,14 @@ export const PracticeMode: React.FC<PracticeModeProps> = ({
 };
 
 /** Bitir sonrası sonuç ekranı: puan, döküm ve yanlış / işaretli / boş sorulara dönüş */
-const TestResults: React.FC<{
+/** Sonuç ekranı: tasarım seçimine göre v11 Sade ya da Klasik v10 */
+const TestResults: React.FC<React.ComponentProps<typeof TestResultsV11>> = (props) => {
+  const { design } = useAppearance();
+  return design === 'v10' ? <TestResultsV10 {...props} /> : <TestResultsV11 {...props} />;
+};
+
+/** Klasik v10 sonuç ekranı (Ayarlar › Tasarım: Klasik) — değiştirilmeden korunur */
+const TestResultsV10: React.FC<{
   items: QuestionItem[];
   answers: Record<string, string>;
   marked: Set<string>;
@@ -506,6 +514,99 @@ const TestResults: React.FC<{
             <RotateCcw aria-hidden /> Yeniden başla
           </button>
           {onExit && <button type="button" onClick={onExit} className="ui-btn is-primary">Çalış'a dön</button>}
+        </div>
+      </section>
+    </main>
+  );
+};
+
+const TestResultsV11: React.FC<{
+  items: QuestionItem[];
+  answers: Record<string, string>;
+  marked: Set<string>;
+  elapsed: number;
+  onGo: (i: number) => void;
+  onReview: () => void;
+  onRestart: () => void;
+  onExit?: () => void;
+}> = ({ items, answers, marked, elapsed, onGo, onReview, onRestart, onExit }) => {
+  const total = items.length;
+  const wrong: number[] = [];
+  const empty: number[] = [];
+  const flagged: number[] = [];
+  let correct = 0;
+  items.forEach((q, i) => {
+    const a = answers[q.id];
+    if (!a) empty.push(i);
+    else if (a === q.reconstruction?.correctAnswer) correct++;
+    else wrong.push(i);
+    if (marked.has(q.id)) flagged.push(i);
+  });
+  const pct = total ? Math.round((correct / total) * 100) : 0;
+  const net = correct - wrong.length / 4;
+  const answered = total - empty.length;
+  const perQ = answered ? Math.round(elapsed / answered) : 0;
+  // Derslere göre doğruluk (en zayıf önce; en çok 5 satır)
+  const byDisc = new Map<string, { ok: number; n: number }>();
+  items.forEach((q) => {
+    const a = answers[q.id];
+    if (!a) return;
+    const k = q.discipline || 'Diğer';
+    const r = byDisc.get(k) || { ok: 0, n: 0 };
+    r.n++;
+    if (a === q.reconstruction?.correctAnswer) r.ok++;
+    byDisc.set(k, r);
+  });
+  const discRows = [...byDisc].map(([k, r]) => ({ k, ...r, p: Math.round((r.ok / r.n) * 100) })).sort((x, y) => x.p - y.p).slice(0, 5);
+  const groups: [string, number[], string][] = [
+    ['Yanlışlar', wrong, 'is-bad'],
+    ['İşaretliler', flagged, 'is-mark'],
+    ['Boş bırakılanlar', empty, ''],
+  ];
+  return (
+    <main className="tx-res">
+      <section className="tx-res-card" aria-label="Test sonucu">
+        <div className="tx-res-head">
+          <span className="tx-ring" style={{ '--p': pct } as React.CSSProperties} role="img" aria-label={`Yüzde ${pct} doğru`}>
+            <b className="hk-num">%{pct}</b>
+          </span>
+          <div className="tx-res-sum">
+            <h2>{correct} doğru · {wrong.length} yanlış · {empty.length} boş</h2>
+            <p>Net {net.toLocaleString('tr-TR', { maximumFractionDigits: 2 })} · {formatElapsed(elapsed)}{perQ ? ` · ortalama ${perQ} sn/soru` : ''}</p>
+          </div>
+        </div>
+        {discRows.length > 1 && (
+          <div className="tx-res-disc">
+            <span className="tx-res-k">Derslere göre</span>
+            {discRows.map((d) => (
+              <div key={d.k} className="tx-res-dr">
+                <span className="tx-res-dn">{d.k}</span>
+                <span className="tx-res-bar" aria-hidden><i className={d.p < 50 ? 'is-bad' : d.p >= 75 ? 'is-ok' : ''} style={{ width: `${d.p}%` }} /></span>
+                <span className="tx-res-dv">{d.ok}/{d.n}</span>
+              </div>
+            ))}
+          </div>
+        )}
+        {groups.map(([label, list, tone]) =>
+          list.length ? (
+            <div key={label} className="tx-res-g">
+              <span>{label} · {list.length}</span>
+              <div>
+                {list.map((i) => (
+                  <button key={i} type="button" onClick={() => onGo(i)} className={`tx-res-chip ${tone}`} aria-label={`Soru ${i + 1}`}>
+                    {i + 1}
+                  </button>
+                ))}
+              </div>
+            </div>
+          ) : null
+        )}
+        <div className="tx-res-act">
+          <button type="button" onClick={wrong.length ? () => onGo(wrong[0]) : onReview} className="ui-btn is-primary">{wrong.length ? 'Yanlışları gözden geçir' : 'Soruları incele'}</button>
+          <button type="button" onClick={onRestart} className="ui-btn">
+            <RotateCcw aria-hidden /> Yeniden başla
+          </button>
+          {onExit && <button type="button" onClick={onExit} className="ui-btn is-ghost">Çalış'a dön</button>}
         </div>
       </section>
     </main>

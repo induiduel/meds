@@ -1,4 +1,5 @@
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { useLiveEvent } from '../../../hooks/useLiveEvent';
 import { observeScrollReveal } from '../../../utils/scrollReveal';
 import { DeckNotePanel } from './DeckNotePanel';
 import { onSpeakingChange, speak, stopSpeaking } from '../../../utils/tts';
@@ -387,6 +388,12 @@ export const LessonPlayer: React.FC<LessonPlayerProps> = ({ deck, startAt, initi
       alive = false;
     };
   }, [deck.id]);
+  // Başka öğrencinin bildirimi / oyu / yönetici çözümü canlı yansısın
+  useLiveEvent('learn_feedback_changed', (p) => {
+    if (p?.resync || !p?.deckId || p.deckId === deck.id || feedback.some((f) => f.id === p.id)) {
+      listFeedback(deck.id).then(setFeedback).catch(() => {});
+    }
+  });
   const fbCtx = useMemo(() => ({ byKey: groupFeedback(feedback), open: (t: FeedbackTarget) => setFbOpen(t) }), [feedback]);
 
   /* --- ortak katman: herkese açık notlar + metin bildirimi tartışmaları (canlı) --- */

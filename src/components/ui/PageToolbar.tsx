@@ -1,7 +1,8 @@
-import React, { useLayoutEffect, useRef, useState } from 'react';
+import React, { startTransition, useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { Check, ChevronDown, Search, SlidersHorizontal, X } from 'lucide-react';
 import { Sheet } from './Sheet';
+import { useAppearance } from '../../utils/appearance';
 
 /**
  * Ortak kompakt sayfa başlığı (v10) — Sözlük, Çıkmış sorular ve Soru havuzu aynı iskeleti kullanır.
@@ -63,6 +64,21 @@ export function PageToolbar<T extends string = string>({
 }: PageToolbarProps<T>) {
   const [open, setOpen] = useState(false);
   const rootRef = useRef<HTMLElement>(null);
+  const look = useAppearance();
+  // v11 basit süzgeç modu: "Süzgeç" sayfası yalnız etkin süzgeç varsa ya da kullanıcı açarsa görünür
+  const [advOnce, setAdvOnce] = useState(false);
+  const showFilterBtn = !!filters && (look.design === 'v10' || look.filters === 'gelismis' || filterCount > 0 || advOnce || !quick?.length);
+  // Yazarken takılma olmasın: kutu yerel durumla anında güncellenir, ağır liste süzmesi geçiş önceliğinde koşar
+  const [q, setQ] = useState(search?.value ?? '');
+  const sentRef = useRef(search?.value ?? '');
+  useEffect(() => {
+    if (search && search.value !== sentRef.current) { sentRef.current = search.value; setQ(search.value); }
+  }, [search?.value]);
+  const typeQ = (v: string) => {
+    setQ(v);
+    sentRef.current = v;
+    startTransition(() => search?.onChange(v));
+  };
   // Başlık satırının yüksekliği: kompakt hâlde çubuk bu kadar yukarı kayar (arama satırı üst çubuğun hemen altına gelir).
   useLayoutEffect(() => {
     const root = rootRef.current;
@@ -91,14 +107,14 @@ export function PageToolbar<T extends string = string>({
             <input
               type="search"
               data-page-search
-              value={search.value}
-              onChange={(e) => search.onChange(e.target.value)}
+              value={q}
+              onChange={(e) => typeQ(e.target.value)}
               placeholder={search.placeholder || 'Ara'}
               aria-label={search.placeholder || 'Ara'}
               enterKeyHint="search"
             />
-            {search.value && (
-              <button type="button" className="pt-clear" onClick={() => search.onChange('')} aria-label="Aramayı temizle">
+            {q && (
+              <button type="button" className="pt-clear" onClick={() => typeQ('')} aria-label="Aramayı temizle">
                 <X aria-hidden />
               </button>
             )}
@@ -121,7 +137,7 @@ export function PageToolbar<T extends string = string>({
             ))}
           </div>
         )}
-        {filters && (
+        {showFilterBtn && (
           <button type="button" className="pt-filter" onClick={() => setOpen(true)} aria-haspopup="dialog">
             <SlidersHorizontal aria-hidden />
             <span className="pt-filter-l">Süzgeç</span>
@@ -132,7 +148,12 @@ export function PageToolbar<T extends string = string>({
       </div>
       {quick && quick.length > 0 && (
         <div className="pt-quick" role="toolbar" aria-label="Hızlı süzgeçler">
-          {quick.map((q) => <QuickPill key={q.id} q={q} />)}
+          {quick.map((qp) => <QuickPill key={qp.id} q={qp} />)}
+          {filters && !showFilterBtn && (
+            <button type="button" className="pt-more" onClick={() => { setAdvOnce(true); setOpen(true); }} aria-haspopup="dialog">
+              <SlidersHorizontal aria-hidden />Daha fazla
+            </button>
+          )}
         </div>
       )}
       {chips && chips.length > 0 && (

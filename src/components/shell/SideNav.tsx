@@ -3,6 +3,7 @@ import { Activity, PanelLeftClose, PanelLeftOpen, Search, ShieldCheck } from 'lu
 import { linkClick, pathFor, type AppRoute } from '../../router';
 import type { AppUser } from '../../services/auth';
 import { NAV_ITEMS, NAV_TREE, initialsOf, openSearch } from './navModel';
+import { BrandWord } from './BrandWord';
 
 const COLLAPSE_KEY = 'medsoru_rail_collapsed';
 
@@ -92,7 +93,7 @@ export const SideNav: React.FC<{ active: AppRoute; onGo: (r: AppRoute) => void; 
       <div className="sh-side-top">
         <a href={pathFor('quick_add')} onClick={linkClick(() => onGo('quick_add'))} className="sh-brand" aria-label="MeDSor ana sayfa">
           <span className="sh-brand-mark"><Activity strokeWidth={2.4} /></span>
-          <span className="sh-brand-word">Me<b>DS</b>or</span>
+          <BrandWord />
         </a>
         <button
           type="button"

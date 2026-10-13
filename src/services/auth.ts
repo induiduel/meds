@@ -183,6 +183,7 @@ export const setLocalAdminSession = (email: string = ADMIN_EMAIL, token?: string
     congratsSentCommittees: [],
   };
   safeStorage.setItem(LOCAL_ADMIN_KEY, JSON.stringify(user));
+  try { window.dispatchEvent(new Event('medsoru:admin-session')); } catch { /* sunucu */ }
   if (token) {
     cachedAccessToken = token;
     safeStorage.setItem(LOCAL_TOKEN_KEY, token);
@@ -202,6 +203,7 @@ export const getLocalAdminSession = (): AppUser | null => {
 
 export const clearLocalAdminSession = () => {
   safeStorage.removeItem(LOCAL_ADMIN_KEY);
+  try { window.dispatchEvent(new Event('medsoru:admin-session')); } catch { /* sunucu */ }
   safeStorage.removeItem(LOCAL_TOKEN_KEY);
   cachedAccessToken = null;
 };

@@ -10,7 +10,7 @@ import {
   RefreshCw,
 } from 'lucide-react';
 import { QuestionItem, Committee } from '../types';
-import { AppUser } from '../services/auth';
+import { AppUser, ADMIN_EMAIL, getLocalAdminSession } from '../services/auth';
 import { ApiService } from '../services/api';
 
 interface EditMyQuestionModalProps {
@@ -36,6 +36,8 @@ const EditMyQuestionModalContent: React.FC<EditMyQuestionModalProps & { question
   onSaveSuccess,
   onOpenHistory,
 }) => {
+  // Yapay zekâ dönüşümü yalnız yönetici içindir; kullanıcı sorusu YZ'ye dönüştürtemez.
+  const isAdminViewer = currentUser?.email?.toLowerCase() === ADMIN_EMAIL || !!getLocalAdminSession();
   const currentStem = question.reconstruction?.stem || question.fragments[0]?.text || '';
   const disciplines = committee?.disciplines && committee.disciplines.length > 0
     ? committee.disciplines
@@ -168,7 +170,7 @@ const EditMyQuestionModalContent: React.FC<EditMyQuestionModalProps & { question
           </div>
 
           <div className="flex items-center gap-2">
-            <button
+            {isAdminViewer && <button
               type="button"
               onClick={handleAutoOptimizeWithAi}
               disabled={isAiOptimizing}
@@ -181,7 +183,7 @@ const EditMyQuestionModalContent: React.FC<EditMyQuestionModalProps & { question
                 <Sparkles className="w-3.5 h-3.5 text-ok" />
               )}
               <span>{isAiOptimizing ? 'İnceleniyor...' : 'AI ile Otomatik Düzenle'}</span>
-            </button>
+            </button>}
 
             {revisionCount > 0 && (
               <button

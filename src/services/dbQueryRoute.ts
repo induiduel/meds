@@ -31,6 +31,25 @@ type Body = {
   onConflict?: string;
 };
 
+const CACHEABLE_READ = new Set(['committees', 'questions', 'past_questions', 'lecture_notes', 'practice_questions', 'system_status']);
+const SELECT_CACHE_TTL_MS = 15_000;
+const MAX_CACHE_ENTRIES = 250;
+
+type CacheEntry = { expiresAt: number; payload: any };
+const selectCache = new Map<string, CacheEntry>();
+const inflightSelects = new Map<string, Promise<any>>();
+
+export function invalidateDbQueryCache(table?: string) {
+  if (!table) {
+    selectCache.clear();
+    return;
+  }
+  const prefix = `${table}:`;
+  for (const key of selectCache.keys()) {
+    if (key.startsWith(prefix)) selectCache.delete(key);
+  }
+}
+
 export function registerDbQueryRoute(app: express.Express, isRequestAdmin: (req: express.Request) => boolean) {
   app.post('/api/db/query', async (req, res) => {
     const b = (req.body || {}) as Body;
@@ -44,34 +63,78 @@ export function registerDbQueryRoute(app: express.Express, isRequestAdmin: (req:
     }
 
     try {
-      let q: any = pgDb.from(table);
-      if (action === 'select') q = q.select(b.columns || '*', { count: b.count, head: b.head });
-      else if (action === 'insert') q = q.insert(b.rows || []);
-      else if (action === 'upsert') q = q.upsert(b.rows || [], { onConflict: b.onConflict });
-      else if (action === 'update') q = q.update(b.patch || {});
-      else if (action === 'delete') {
-        // Filtresiz toplu silme engellenir
-        if (!b.filters?.length) return res.status(400).json({ data: null, count: null, error: { message: 'Filtresiz silme yapılamaz.' } });
-        q = q.delete();
-      } else return res.status(400).json({ data: null, count: null, error: { message: 'Geçersiz işlem.' } });
+      if (action !== 'select') {
+        invalidateDbQueryCache(table);
+      }
 
-      if (action === 'update' && !b.filters?.length) {
-        return res.status(400).json({ data: null, count: null, error: { message: 'Filtresiz güncelleme yapılamaz.' } });
+      const canCache = action === 'select' && CACHEABLE_READ.has(table);
+      const cacheKey = canCache
+        ? `${table}:${b.columns || '*'}:${b.count || ''}:${b.head ? 1 : 0}:${JSON.stringify(b.filters || [])}:${JSON.stringify(b.order || [])}:${JSON.stringify(b.range || [])}:${b.limit ?? ''}:${b.single || ''}`
+        : '';
+
+      if (canCache) {
+        const hit = selectCache.get(cacheKey);
+        if (hit && hit.expiresAt > Date.now()) {
+          return res.status(200).json(hit.payload);
+        }
+        const pending = inflightSelects.get(cacheKey);
+        if (pending) {
+          const shared = await pending;
+          return res.status(shared.error ? 400 : 200).json(shared);
+        }
       }
-      for (const [op, col, val] of b.filters || []) {
-        if (!FILTER_OPS.has(op)) return res.status(400).json({ data: null, count: null, error: { message: `Geçersiz filtre: ${op}` } });
-        q = op === 'not' ? q.not(col, val?.[0], val?.[1]) : q[op](col, val);
+
+      const runQuery = async () => {
+        let q: any = pgDb.from(table);
+        if (action === 'select') q = q.select(b.columns || '*', { count: b.count, head: b.head });
+        else if (action === 'insert') q = q.insert(b.rows || []);
+        else if (action === 'upsert') q = q.upsert(b.rows || [], { onConflict: b.onConflict });
+        else if (action === 'update') q = q.update(b.patch || {});
+        else if (action === 'delete') {
+          if (!b.filters?.length) return { __badRequest: true, payload: { data: null, count: null, error: { message: 'Filtresiz silme yapılamaz.' } } };
+          q = q.delete();
+        } else return { __badRequest: true, payload: { data: null, count: null, error: { message: 'Geçersiz işlem.' } } };
+
+        if (action === 'update' && !b.filters?.length) {
+          return { __badRequest: true, payload: { data: null, count: null, error: { message: 'Filtresiz güncelleme yapılamaz.' } } };
+        }
+        for (const [op, col, val] of b.filters || []) {
+          if (!FILTER_OPS.has(op)) return { __badRequest: true, payload: { data: null, count: null, error: { message: `Geçersiz filtre: ${op}` } } };
+          q = op === 'not' ? q.not(col, val?.[0], val?.[1]) : q[op](col, val);
+        }
+        if (action === 'select') {
+          for (const [col, asc] of b.order || []) q = q.order(col, { ascending: asc });
+          const from = Math.max(0, Number(b.range?.[0] ?? 0));
+          const to = b.range ? Number(b.range[1]) : from + Math.min(Number(b.limit ?? MAX_ROWS), MAX_ROWS) - 1;
+          q = q.range(from, Math.min(to, from + MAX_ROWS - 1));
+          if (b.single === 'one') q = q.single();
+          else if (b.single === 'maybe') q = q.maybeSingle();
+        }
+        const result = await q;
+        return { __badRequest: false, payload: result };
+      };
+
+      if (canCache) {
+        const p = runQuery().then((r) => r.payload);
+        inflightSelects.set(cacheKey, p);
+        try {
+          const result = await p;
+          if (!result?.error) {
+            if (selectCache.size >= MAX_CACHE_ENTRIES) {
+              const oldest = selectCache.keys().next().value;
+              if (oldest) selectCache.delete(oldest);
+            }
+            selectCache.set(cacheKey, { expiresAt: Date.now() + SELECT_CACHE_TTL_MS, payload: result });
+          }
+          return res.status(result?.error ? 400 : 200).json(result);
+        } finally {
+          inflightSelects.delete(cacheKey);
+        }
       }
-      if (action === 'select') {
-        for (const [col, asc] of b.order || []) q = q.order(col, { ascending: asc });
-        const from = Math.max(0, Number(b.range?.[0] ?? 0));
-        const to = b.range ? Number(b.range[1]) : from + Math.min(Number(b.limit ?? MAX_ROWS), MAX_ROWS) - 1;
-        q = q.range(from, Math.min(to, from + MAX_ROWS - 1));
-        if (b.single === 'one') q = q.single();
-        else if (b.single === 'maybe') q = q.maybeSingle();
-      }
-      const result = await q;
-      res.status(result.error ? 400 : 200).json(result);
+
+      const out = await runQuery();
+      if (out.__badRequest) return res.status(400).json(out.payload);
+      res.status(out.payload.error ? 400 : 200).json(out.payload);
     } catch (e: any) {
       res.status(400).json({ data: null, count: null, error: { message: e?.message || String(e) } });
     }

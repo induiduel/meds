@@ -28,6 +28,14 @@ import { validateNamePolicy } from '../../utils/namePolicy';
 import {
   DENSITY_LABELS,
   LAYOUT_LABELS,
+  READING_LABELS,
+  DESIGN_LABELS, DESIGN_ORDER,
+  type DesignVersion,
+  TEXT_SIZE_LABELS,
+  FILTER_MODE_LABELS,
+  type ReadingFont,
+  type TextSize,
+  type FilterMode,
   MODE_LABELS,
   PALETTE_INFO,
   type Density,
@@ -83,7 +91,7 @@ const initialsOf = (u: AppUser | null) => {
  */
 export const ProfileSettingsView: React.FC<Props> = ({ currentUser, isAdmin, questions, onUpdateUser, onOpenAuth, onLogout, onOpenAdmin, onOpenOffline }) => {
   const look = useAppearance();
-  const [active, setActive] = useState<string>('gorunum');
+  const [active, setActive] = useState<string>(() => (look.design === 'v12' ? 'profil' : 'gorunum'));
   const [autoReveal, setAutoReveal] = useState(autoRevealEnabled);
   const [preview, setPreview] = useState(false);
 
@@ -102,6 +110,9 @@ export const ProfileSettingsView: React.FC<Props> = ({ currentUser, isAdmin, que
   }, []);
 
   const modeName = MODE_LABELS[look.mode];
+  // v12: profil önce gelir (kim olduğun → nasıl göründüğü → hesap); v10/v11 eski sırayı korur
+  const profileFirst = look.design === 'v12';
+  const sections = profileFirst ? [SECTIONS[1], SECTIONS[0], SECTIONS[2]] : SECTIONS;
 
   return (
     <div className="ui-page is-wide">
@@ -117,7 +128,7 @@ export const ProfileSettingsView: React.FC<Props> = ({ currentUser, isAdmin, que
           </span>
         </div>
         <div className="ayr-links">
-          {SECTIONS.map(({ id, label, icon: Icon }) => (
+          {sections.map(({ id, label, icon: Icon }) => (
             <a
               key={id}
               href={`#${id}`}
@@ -141,6 +152,7 @@ export const ProfileSettingsView: React.FC<Props> = ({ currentUser, isAdmin, que
           <p>Görünüm ayarları bu cihazda saklanır; her temanın paleti ayrı hatırlanır.</p>
         </header>
 
+        {profileFirst && <ProfileSection currentUser={currentUser} questions={questions} onUpdateUser={onUpdateUser} onOpenAuth={onOpenAuth} />}
         <section id="gorunum" className="ayr-sec" aria-labelledby="ayr-gorunum-h">
           <h2 id="ayr-gorunum-h" className="ayr-h1">Görünüm</h2>
 
@@ -224,6 +236,27 @@ export const ProfileSettingsView: React.FC<Props> = ({ currentUser, isAdmin, que
           <div className="ayr-list">
             <div className="ayr-row">
               <span className="ayr-row-t">
+                <b>Tasarım</b>
+                <span>Net (v12): sade, kompakt, tek ekranda bilgi. Sade (v11) ve Klasik (v10) önceki tasarımlardır; istediğin an geçebilirsin.</span>
+              </span>
+              {look.design !== 'v12' && (
+                <Segmented<DesignVersion> label="Tasarım" value={look.design} onChange={(v) => look.set({ design: v })}
+                  options={DESIGN_ORDER.map((v) => ({ value: v, label: DESIGN_LABELS[v] }))} />
+              )}
+            </div>
+            {look.design === 'v12' && (
+              <div className="ayr-designs" role="radiogroup" aria-label="Tasarım">
+                {DESIGN_ORDER.map((v) => (
+                  <button key={v} type="button" role="radio" aria-checked={look.design === v} className={`ayr-design is-${v} ${look.design === v ? 'is-on' : ''}`} onClick={() => look.set({ design: v })}>
+                    <span className="ayr-design-pv" aria-hidden><i /><i /><i /><i /></span>
+                    <span className="ayr-design-t"><b>{DESIGN_LABELS[v].replace(/ \(.*\)$/, '')}</b><small>{v}</small></span>
+                    <span className="ayr-design-h">{v === 'v12' ? 'Sade, kompakt, tek ekranda bilgi' : v === 'v11' ? 'Geniş boşluk, okuma odaklı' : 'Kart ızgaraları, renkli bölümler'}</span>
+                  </button>
+                ))}
+              </div>
+            )}
+            <div className="ayr-row">
+              <span className="ayr-row-t">
                 <b id="ayr-yog-h">Yoğunluk</b>
                 <span>Yazı ölçeği, boşluklar ve satır yükseklikleri birlikte değişir; dokunmatikte düğmeler küçülmez.</span>
               </span>
@@ -243,6 +276,40 @@ export const ProfileSettingsView: React.FC<Props> = ({ currentUser, isAdmin, que
             <div id="ayr-yog-pv" className="ayr-pv" hidden={!preview}>
               <DensityPreview />
             </div>
+            <div className="ayr-row" hidden={look.design === 'v10'}>
+              <span className="ayr-row-t">
+                <b>Okuma yazısı</b>
+                <span>Soru kökü, ders anlatımı ve notlar bu yazıyla ve boyutla gösterilir.</span>
+              </span>
+              <span style={{ display: 'flex', gap: 8, flexWrap: 'wrap', justifyContent: 'flex-end' }}>
+                <Segmented<ReadingFont> label="Okuma yazısı" value={look.reading} onChange={(v) => look.set({ reading: v })}
+                  options={(['serif', 'sans'] as ReadingFont[]).map((v) => ({ value: v, label: READING_LABELS[v] }))} />
+                <Segmented<TextSize> label="Okuma boyutu" value={look.textSize} onChange={(v) => look.set({ textSize: v })}
+                  options={(['s', 'm', 'l'] as TextSize[]).map((v) => ({ value: v, label: TEXT_SIZE_LABELS[v] }))} />
+              </span>
+            </div>
+            <div className="ayr-row" hidden={look.design === 'v10'}>
+              <span className="ayr-row-t">
+                <b>Süzgeç modu</b>
+                <span>Basit: yalnız hızlı süzgeç hapları. Gelişmiş: tüm süzgeçler ve sıralamalar her zaman görünür.</span>
+              </span>
+              <Segmented<FilterMode> label="Süzgeç modu" value={look.filters} onChange={(v) => look.set({ filters: v })}
+                options={(['basit', 'gelismis'] as FilterMode[]).map((v) => ({ value: v, label: FILTER_MODE_LABELS[v] }))} />
+            </div>
+            <div className="ayr-row" hidden={look.design === 'v10'}>
+              <span className="ayr-row-t">
+                <b>Soru etiketlerini göster</b>
+                <span>Çıkmış ve örnek soru kartlarındaki işaret etiketleri. Kapalıyken yalnız soru ve şıklar görünür.</span>
+              </span>
+              <Switch label="Soru etiketlerini göster" checked={look.qtags} onChange={(on) => look.set({ qtags: on })} />
+            </div>
+            <div className="ayr-row">
+              <span className="ayr-row-t">
+                <b>Hareketi azalt</b>
+                <span>Geçiş ve canlandırmalar kapanır; sayfalar anında değişir.</span>
+              </span>
+              <Switch label="Hareketi azalt" checked={look.motion === 'reduced'} onChange={(on) => look.set({ motion: on ? 'reduced' : 'full' })} />
+            </div>
             <div className="ayr-row">
               <span className="ayr-row-t">
                 <b>Açılan öğeye otomatik kaydır</b>
@@ -253,7 +320,7 @@ export const ProfileSettingsView: React.FC<Props> = ({ currentUser, isAdmin, que
           </div>
         </section>
 
-        <ProfileSection currentUser={currentUser} questions={questions} onUpdateUser={onUpdateUser} onOpenAuth={onOpenAuth} />
+        {!profileFirst && <ProfileSection currentUser={currentUser} questions={questions} onUpdateUser={onUpdateUser} onOpenAuth={onOpenAuth} />}
 
         <Section id="hesap" title="Hesap ve veri">
           <div className="ui-group">

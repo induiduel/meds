@@ -680,14 +680,16 @@ const QuestionCardComponent: React.FC<QuestionCardProps> = ({
                 <ActionMenu
                   title={question.isUnassignedNumber ? 'Soru işlemleri' : `Soru ${question.questionNumber}`}
                   items={[
+                    ...(isAdmin ? [
                     {
                       label: isReconstructing ? 'Kuruluyor…' : hasReconstruction ? 'AI ile yeniden kur' : 'AI ile kur',
                       icon: isReconstructing ? RefreshCw : Sparkles,
                       group: 'Yapay zekâ',
-                      tone: 'accent',
+                      tone: 'accent' as const,
                       disabled: isReconstructing || (question.fragments.length === 0 && question.options.length === 0),
                       onClick: () => onReconstructWithAi(question.id),
                     },
+                    ] : []),
                     {
                       label: 'Soruyu Paylaş (Deep Link)',
                       icon: Share2,

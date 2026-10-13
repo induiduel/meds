@@ -11,6 +11,7 @@ import { AccountMenu, type AccountActions } from './AccountMenu';
 import { initialsOf } from './navModel';
 import { userNotificationService } from '../../services/userNotificationService';
 import { NotificationHistoryModal } from '../notifications/NotificationHistoryModal';
+import { BrandWord } from './BrandWord';
 
 const usePhone = () =>
   useSyncExternalStore(
@@ -95,7 +96,7 @@ export const TopBar: React.FC<{
         <div className="sh-top-lead">
           <a href={pathFor('quick_add')} onClick={linkClick(() => onGo('quick_add'))} className="sh-brand sh-top-brand" aria-label="MeDSor ana sayfa">
             <span className="sh-brand-mark"><Activity strokeWidth={2.4} /></span>
-            <span className="sh-brand-word">Me<b>DS</b>or</span>
+            <BrandWord />
           </a>
           <span className="sh-top-title" aria-hidden={scrolled !== 2}>{title}</span>
         </div>

@@ -12,11 +12,11 @@ import { startContentLive } from './contentLive';
 let started = false;
 let pastTimer: ReturnType<typeof setTimeout> | null = null;
 
-function schedulePastSync(delay = 800) {
+function schedulePastSync(delay = 800, onlyIfCached = false) {
   if (pastTimer) clearTimeout(pastTimer);
   pastTimer = setTimeout(() => {
     pastTimer = null;
-    pastQuestionsCache.syncWithRemote().catch(() => {});
+    pastQuestionsCache.syncWithRemote({ onlyIfCached }).catch(() => {});
   }, delay);
 }
 
@@ -39,7 +39,7 @@ export function startLiveDataSync() {
   realtimeEventService.connect();
   startContentLive();
 
-  window.addEventListener('medsoru:past-questions-changed', () => schedulePastSync());
+  window.addEventListener('medsoru:past-questions-changed', () => schedulePastSync(800, true));
 
   window.addEventListener('medsoru:database-sync', (e: Event) => {
     const table = (e as CustomEvent).detail?.table;
@@ -47,6 +47,9 @@ export function startLiveDataSync() {
       void clientCache.invalidate('committees').then(() => purgeSwCache('/api/committees')).then(() => {
         window.dispatchEvent(new CustomEvent('medsoru:committees-changed'));
       });
+    } else if ((table === 'questions' || table === 'practice_questions') && ['RESYNC', 'BULK'].includes(String((e as CustomEvent).detail?.eventType))) {
+      // Toplu değişiklik ya da veritabanı dinleyicisinin kopukluğu: açık kurul havuzu baştan çekilir
+      window.dispatchEvent(new CustomEvent('medsoru:pool-resync'));
     } else if (table === 'lecture_notes') {
       void purgeSwCache('/api/lecture-notes').then(() => {
         window.dispatchEvent(new CustomEvent('medsoru:lecture-notes-changed'));
@@ -54,8 +57,18 @@ export function startLiveDataSync() {
     }
   });
 
-  // Bağlantı koptuğu sırada kaçan değişiklikleri yakala
+  // Sunucu kaçan olayları telafi edemedi (yeniden başladı / uzun kopukluk): tüm canlı veriler tazelenir
+  window.addEventListener('medsoru:realtime-resync', () => {
+    schedulePastSync(300, true);
+    window.dispatchEvent(new CustomEvent('medsoru:pool-resync'));
+    window.dispatchEvent(new CustomEvent('medsoru:committees-changed'));
+    window.dispatchEvent(new CustomEvent('medsoru:lecture-notes-changed'));
+    void import('./notesSync').then((m) => m.pullDeltaNotes()).catch(() => {});
+    void import('./userDataSyncService').then((m) => m.pullFromServer()).catch(() => {});
+  });
+
+  // Bağlantı koptuğu sırada kaçan değişiklikleri yakala (yalnızca önbellekte veri varsa delta çek; ilk açılışta 85 MB indirme yapma)
   realtimeEventService.onStatusChange((s) => {
-    if (s === 'connected') schedulePastSync(2000);
+    if (s === 'connected') schedulePastSync(2000, true);
   });
 }

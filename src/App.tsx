@@ -1,3 +1,4 @@
+import { getAppearance } from './utils/appearance';
 import React, { useState, useEffect, useMemo, useCallback, useRef, Suspense } from 'react';
 import { startLiveDataSync } from './services/liveDataSync';
 import { logActivity } from './services/activityLog';
@@ -289,7 +290,11 @@ export default function App() {
       const reduce = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
       // Atan kalp açılışın başından itibaren en az ~5 sn görünür (imza-A çizimi + EKG taraması); uygulama daha geç
       // hazır olursa hazır olduğu an kalkar.
-      const wait = Math.max(0, 5000 - performance.now());
+      // v11: 5 sn'lik gösteri yalnız oturumun ilk açılışında; yenilemelerde uygulama hazır olunca hemen kalkar (Klasik: her açılışta)
+      let seen = false;
+      try { seen = sessionStorage.getItem('medsoru_splash_seen') === '1'; sessionStorage.setItem('medsoru_splash_seen', '1'); } catch { /* yok say */ }
+      const quick = seen && getAppearance().design !== 'v10';
+      const wait = quick ? 0 : Math.max(0, 5000 - performance.now());
       const t = setTimeout(() => {
         el.classList.add('is-leaving');
         setTimeout(() => {
@@ -451,7 +456,10 @@ export default function App() {
       const sp = new URLSearchParams(window.location.search);
       sp.delete('questionId');
       const qs = sp.toString();
-      if (window.location.pathname.replace(/^\/meds(?=\/|$)/, '') !== next || window.location.search.includes('questionId')) {
+      const cur = window.location.pathname.replace(/^\/meds(?=\/|$)/, '');
+      // Yönetim alt derin bağlantısı (/manage/kisiler/<kişi>) üçüncü parçayı taşır; kırpılmaz
+      const deeperManage = initialRoute.route === 'manage' && cur.startsWith(`${next}/`);
+      if ((cur !== next && !deeperManage) || window.location.search.includes('questionId')) {
         window.history.replaceState({ route: initialRoute.route, param: initialRoute.param }, '', next + (qs ? `?${qs}` : '') + window.location.hash);
       }
     } catch {
@@ -488,6 +496,15 @@ export default function App() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  // v11: sayfa değişiminde yumuşak giriş (yalnız saydamlık + 4 px; styles/v11.css)
+  const mainRef = useRef<HTMLElement>(null);
+  useEffect(() => {
+    const el = mainRef.current;
+    if (!el) return;
+    el.classList.remove('v11-enter');
+    void el.offsetWidth;
+    el.classList.add('v11-enter');
+  }, [activeTab]);
   useEffect(() => {
     document.title = activeTab === 'quick_add' ? 'MeDSor · Soru ekle' : `${ROUTE_TITLES[activeTab]} · MeDSor`;
   }, [activeTab]);
@@ -668,6 +685,25 @@ export default function App() {
 
     return () => {
       unsub();
+    };
+  }, [selectedCommitteeId]);
+
+  // Toplu değişiklik / kaçan olay telafisi: açık kurulun havuzu sessizce yeniden çekilir (yükleniyor göstergesi yok)
+  useEffect(() => {
+    if (!selectedCommitteeId) return;
+    let timer: ReturnType<typeof setTimeout> | null = null;
+    const onResync = () => {
+      if (timer) clearTimeout(timer);
+      timer = setTimeout(() => {
+        ApiService.getQuestions({ committeeId: selectedCommitteeId })
+          .then((data) => { if (Array.isArray(data)) setQuestions(data); })
+          .catch(() => {});
+      }, 600);
+    };
+    window.addEventListener('medsoru:pool-resync', onResync);
+    return () => {
+      window.removeEventListener('medsoru:pool-resync', onResync);
+      if (timer) clearTimeout(timer);
     };
   }, [selectedCommitteeId]);
 
@@ -1488,7 +1524,7 @@ export default function App() {
         </div>
       )}
       {/* Main Container */}
-      <main className={`sh-main ${activeTab === 'ai_chat' ? 'ms-chat-main' : ''}`}>
+      <main ref={mainRef} className={`sh-main ${activeTab === 'ai_chat' ? 'ms-chat-main' : ''}`}>
 
         {/* Drive Upload Notification Banner if successful */}
         {driveUploadSuccess && (

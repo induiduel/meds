@@ -6,7 +6,7 @@ import { CapsuleLoader, SuccessCheck } from './ui/Animations';
 import { sharedWordColors, Colored, WordLegend } from './draftHighlight';
 import { QuestionItem, Committee, ClusterAnalysisSummary, DraftCluster } from '../types';
 import { ApiService } from '../services/api';
-import { AppUser } from '../services/auth';
+import { AppUser, ADMIN_EMAIL, getLocalAdminSession } from '../services/auth';
 import { AiQuestionOptimizerModal } from './AiQuestionOptimizerModal';
 
 interface DraftDeduplicationModalProps {
@@ -536,7 +536,7 @@ export const DraftDeduplicationModal: React.FC<DraftDeduplicationModalProps> = (
                             </span>
                           </div>
                           <div className="flex items-center gap-1.5 shrink-0">
-                            <button
+                            {(currentUser?.email?.toLowerCase() === ADMIN_EMAIL || !!getLocalAdminSession()) && <button
                               type="button"
                               onClick={() => setOptimizingQuestion(q)}
                               className="h-8 px-2.5 rounded-lg bg-accent-soft hover:bg-accent/20 text-accent text-sm font-semibold inline-flex items-center gap-1 cursor-pointer transition-colors"
@@ -544,7 +544,7 @@ export const DraftDeduplicationModal: React.FC<DraftDeduplicationModalProps> = (
                             >
                               <Wand2 className="w-3.5 h-3.5" />
                               <span>AI ile Geliştir</span>
-                            </button>
+                            </button>}
                             <button
                               type="button"
                               onClick={() => setInspectingMergedId(isInspecting ? null : q.id)}

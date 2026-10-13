@@ -230,8 +230,18 @@ def check_deck(d, out):
                 if len(steps) < 2:
                     add('HATA', 'zincir', n, 'en az 2 basamak gerekli')
                 for st in steps:
-                    if TRUNC.search(str(st)):
-                        add('HATA', 'kesik-metin', n, f'zincir basamağı kesilmiş: {str(st)[:70]!r}')
+                    # İsteğe bağlı alt zincir: {"text": "2. …", "substeps": ["2a. …", "2b. …"]} (rehber §5.5)
+                    txt = st.get('text') if isinstance(st, dict) else st
+                    if isinstance(st, dict) and not str(txt or '').strip():
+                        add('HATA', 'zincir', n, 'nesne biçimli basamakta "text" gerekli')
+                    if TRUNC.search(str(txt)):
+                        add('HATA', 'kesik-metin', n, f'zincir basamağı kesilmiş: {str(txt)[:70]!r}')
+                    subs = st.get('substeps') if isinstance(st, dict) else None
+                    if subs is not None:
+                        if not isinstance(subs, list) or not 2 <= len(subs) <= 6 or any(not str(x).strip() for x in subs):
+                            add('HATA', 'alt-zincir', n, 'substeps 2–6 dolu basamak olmalı')
+                        elif any(TRUNC.search(str(x)) for x in subs):
+                            add('HATA', 'kesik-metin', n, 'alt zincir basamağı kesilmiş')
             elif t == 'before_after_slider':
                 if not (e.get('leftTitle') and e.get('rightTitle') and e.get('leftPoints') and e.get('rightPoints')):
                     add('HATA', 'karsilastir', n, 'leftTitle/rightTitle/leftPoints/rightPoints gerekli')

@@ -8,6 +8,7 @@
  * son açılma zamanı LearnHub'daki `medsoru_learn_recent_v1` (touchRecent) kaydındadır.
  * Stil: styles/learn-v10.css (.lv-*).
  */
+import { getAppearance, useAppearance } from '../../utils/appearance';
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { ArrowRight, Check, FileQuestionMark, FileText, LayoutGrid, Layers, RotateCcw, Rows3, Search } from 'lucide-react';
 import { useReviewCounts } from '../../hooks/useReviewCounts';
@@ -126,7 +127,8 @@ export const LearnLibrary: React.FC<{
   const [status, setStatus] = useState<Status>('all');
   const [limit, setLimit] = useState(PAGE);
   const [recent] = useState(readRecent);
-  const [view, setViewState] = useState<View>(() => readPref<View>(VIEW_KEY, ['grid', 'list'], 'grid'));
+  const isV11 = useAppearance().design !== 'v10';
+  const [view, setViewState] = useState<View>(() => readPref<View>(VIEW_KEY, ['grid', 'list'], getAppearance().design === 'v10' ? 'grid' : 'list'));
   const [sort, setSortState] = useState<Sort>(() => readPref<Sort>(SORT_KEY, Object.keys(SORT_LABEL) as Sort[], 'program'));
   const setView = (v: View) => { setViewState(v); writePref(VIEW_KEY, v); };
   const setSort = (v: Sort) => { setSortState(v); writePref(SORT_KEY, v); };
@@ -321,7 +323,9 @@ export const LearnLibrary: React.FC<{
         onClearChips={() => { setBranch('all'); setKurul('all'); onArchive('new_only'); }}
       />
 
-      {onOpenReview && review.total.open > 0 && !filtered && (
+      {!filtered && ((onOpenReview && review.total.open > 0) || resume.length > 0) && (
+      <div className={isV11 ? 'lv-cont' : 'lv-cont-v10'}>
+      {onOpenReview && review.total.open > 0 && (
         <button type="button" className="lr-due-card" onClick={() => onOpenReview()}>
           <span className="ico"><RotateCcw aria-hidden /></span>
           <span className="tx">
@@ -332,8 +336,8 @@ export const LearnLibrary: React.FC<{
         </button>
       )}
 
-      {resume.length > 0 && !filtered && (
-        <section className="lv-resume bento is-duo is-list" aria-label="Devam et">
+      {resume.length > 0 && (
+        <section className={isV11 ? 'lv-resume' : 'lv-resume bento is-duo is-list'} aria-label="Devam et">
           {resume.map((d) => {
             const s = stateOf(d, progress);
             return (
@@ -349,6 +353,8 @@ export const LearnLibrary: React.FC<{
             );
           })}
         </section>
+      )}
+      </div>
       )}
 
       {branches.length > 1 && (

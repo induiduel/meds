@@ -1502,7 +1502,8 @@ export async function runAutoChunking(options: { limit?: number; syncToCloud?: b
     merge(pq);
 
     // 2. Active questions
-    const aq = chunkActiveQuestions();
+    // Havuz (kullanıcı kaynaklı) soruları ham veridir ve sürekli değişir: RAG'e alınmaz.
+    const aq: any[] = [];
     console.log(`✓ 2/8 Aktif Sorular: ${aq.length} parça`);
     merge(aq);
 
@@ -1527,7 +1528,7 @@ export async function runAutoChunking(options: { limit?: number; syncToCloud?: b
     merge(tr);
 
     // 6. User contributions
-    const uc = chunkUserContributions();
+    const uc: any[] = []; // kullanıcı katkıları ham veri olarak kalır, RAG'e alınmaz
     console.log(`✓ 6/8 Kullanıcı Katkı & Yorumları: ${uc.length} parça`);
     merge(uc);
 

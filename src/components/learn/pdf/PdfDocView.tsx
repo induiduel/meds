@@ -155,24 +155,6 @@ export default function PdfDocView({ src, page, highlight, zoom, onZoom, onVisib
     [doc],
   );
 
-  // Sayfa boyutları: slayt PDF'lerinde hepsi aynıdır; farklı olanlar boşta düzeltilir (yerleşim kaymasın diye toplu).
-  useEffect(() => {
-    if (!doc || doc.numPages < 2) return;
-    let dead = false;
-    const idle = (window as any).requestIdleCallback || ((f: () => void) => setTimeout(f, 200));
-    idle(async () => {
-      const next: { w: number; h: number }[] = [];
-      for (let i = 1; i <= doc.numPages && !dead; i++) {
-        const v = (await getPage(i)).getViewport({ scale: 1 });
-        next.push({ w: v.width, h: v.height });
-      }
-      if (!dead) setSizes((old) => (old.length === next.length && old.every((o, i) => o.w === next[i].w && o.h === next[i].h) ? old : next));
-    });
-    return () => {
-      dead = true;
-    };
-  }, [doc, getPage]);
-
   /* ---- yerleşim ---- */
   useLayoutEffect(() => {
     const el = scrollRef.current;
@@ -220,6 +202,14 @@ export default function PdfDocView({ src, page, highlight, zoom, onZoom, onVisib
       if (slot.scale !== key && !slot.task) {
         const pg = await getPage(n);
         if (slots.current.get(n) !== slot) return; // bu arada bırakıldı
+        const rawVp = pg.getViewport({ scale: 1 });
+        setSizes((old) => {
+          const cur = old[n - 1];
+          if (!cur || (Math.abs(cur.w - rawVp.width) < 0.5 && Math.abs(cur.h - rawVp.height) < 0.5)) return old;
+          const next = old.slice();
+          next[n - 1] = { w: rawVp.width, h: rawVp.height };
+          return next;
+        });
         const vp = pg.getViewport({ scale, rotation: (pg.rotate + r) % 360 });
         const dpr = Math.min(window.devicePixelRatio || 1, 2);
         const out = Math.min(dpr, Math.sqrt(MAX_CANVAS_PX / (vp.width * vp.height)));
@@ -282,7 +272,11 @@ export default function PdfDocView({ src, page, highlight, zoom, onZoom, onVisib
     s.text?.remove();
     slotEls.current.get(n)?.classList.remove('is-drawn');
     slots.current.delete(n);
-    pages.current.get(n)?.then((p) => p.cleanup());
+    const p = pages.current.get(n);
+    if (p) {
+      p.then((pg) => pg.cleanup()).catch(() => {});
+      if (n !== 1) pages.current.delete(n);
+    }
   };
 
   const update = useCallback(() => {

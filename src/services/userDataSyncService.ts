@@ -556,7 +556,7 @@ async function isOwnUserEvent(who: string): Promise<boolean> {
 
 let pulling: Promise<unknown> | null = null;
 /** Sunucudaki profili (yalnız yeni kv kayıtlarıyla) çekip uygular; bekleyen yerel değişiklik varsa önce gönderir. */
-async function pullFromServer(): Promise<void> {
+export async function pullFromServer(): Promise<void> {
   if (getNetState() === 'offline') return;
   if (hasDirtyKv() || fingerprint() !== lastBackedUpFingerprint) {
     await autoBackupIfChanged(); // gönderim yanıtı birleştirilmiş profili zaten getirir

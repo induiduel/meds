@@ -1,6 +1,7 @@
 import React, { useLayoutEffect, useCallback, useEffect, useId, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
-import { BookOpen, Check, Flag, History, Info, MessageSquare, Share2, ThumbsDown, ThumbsUp, X } from 'lucide-react';
+import { BookOpen, Check, Flag, History, Info, MessageSquare, Share2, Strikethrough, ThumbsDown, ThumbsUp, X } from 'lucide-react';
+import { useAppearance } from '../../utils/appearance';
 import { Highlight } from '../../components/ui/StemText';
 import { SourceText } from '../../components/ui/SourceText';
 import { ActionMenu, ActionItem } from '../../components/ui/ActionMenu';
@@ -65,12 +66,18 @@ const wantsSection = (qid: string, sec: string) => {
   return forThis && (new URLSearchParams(search).get('sec') === sec || (sec === 'explanation' && hash.startsWith(`#expl-${qid}`)));
 };
 
-/** Yükseklik canlandırmalı açılır bölüm (grid-template-rows 0fr → 1fr); kapalıyken içerik odak almaz. */
-const Reveal: React.FC<{ open: boolean; id?: string; className?: string; children: React.ReactNode }> = ({ open, id, className = '', children }) => (
-  <div id={id} className={`qk-rev ${open ? 'is-open' : ''} ${className}`}>
-    <div className="qk-rev-in" inert={!open ? true : undefined}>{children}</div>
-  </div>
-);
+/** Yükseklik canlandırmalı açılır bölüm (grid-template-rows 0fr → 1fr); kapalıyken içerik odak almaz ve ilk açılışa kadar DOM'a bağlanmaz. */
+const Reveal: React.FC<{ open: boolean; id?: string; className?: string; children: React.ReactNode }> = ({ open, id, className = '', children }) => {
+  const [mounted, setMounted] = useState(open);
+  useEffect(() => {
+    if (open && !mounted) setMounted(true);
+  }, [open, mounted]);
+  return (
+    <div id={id} className={`qk-rev ${open ? 'is-open' : ''} ${className}`}>
+      <div className="qk-rev-in" inert={!open ? true : undefined}>{mounted ? children : null}</div>
+    </div>
+  );
+};
 
 /**
  * Şık satırı — iki etkileşim (Çıkmış):
@@ -96,7 +103,11 @@ const OptRow: React.FC<{
   canObject: boolean;
   onObject: () => void;
   onInfo: (info: CikmisOptionInfo) => void;
-}> = ({ qid, k, cls, inner, pickable, onPick, lifted, setLifted, onTap, info, canObject, onObject, onInfo }) => {
+  /** v12: satırın sağında görünür hızlı düğmeler (şıkkı bildir; cevaplamadan önce şıkkı ele) */
+  quick?: boolean;
+  eliminated?: boolean;
+  onEliminate?: () => void;
+}> = ({ qid, k, cls, inner, pickable, onPick, lifted, setLifted, onTap, info, canObject, onObject, onInfo, quick, eliminated, onEliminate }) => {
   const [dx, setDx] = useState<number | null>(null);
   const start = useRef<{ x: number; y: number; locked: boolean | null } | null>(null);
   const moved = useRef(false);
@@ -141,7 +152,7 @@ const OptRow: React.FC<{
   };
 
   return (
-    <li id={`opt-${qid}-${k}`} className={`qk-opt-li qk-lift ${lifted ? 'is-lifted' : ''} ${dx !== null ? 'is-drag' : ''}`}>
+    <li id={`opt-${qid}-${k}`} className={`qk-opt-li qk-lift ${lifted ? 'is-lifted' : ''} ${dx !== null ? 'is-drag' : ''} ${quick ? 'has-quick' : ''} ${eliminated ? 'is-elim' : ''}`}>
       <div className="qk-lift-row" style={dx !== null ? { transform: `translate3d(${dx}px,0,0)` } : undefined}>
         <button
           type="button"
@@ -173,6 +184,19 @@ const OptRow: React.FC<{
           </div>
         )}
       </div>
+      {quick && !lifted && (pickable ? onEliminate : canObject) && (
+        <span className="qk-oquick">
+          {pickable && onEliminate ? (
+            <button type="button" className={`qk-oq ${eliminated ? 'is-on' : ''}`} onClick={onEliminate} aria-pressed={eliminated} aria-label={eliminated ? `${k} şıkkını geri al` : `${k} şıkkını ele`} title={eliminated ? 'Geri al' : 'Bu şıkkı ele (üstünü çiz)'}>
+              <Strikethrough aria-hidden />
+            </button>
+          ) : (
+            <button type="button" className="qk-oq is-flag" onClick={onObject} aria-label={`${k} şıkkını bildir`} title="Bu şıkkı bildir">
+              <Flag aria-hidden />
+            </button>
+          )}
+        </span>
+      )}
     </li>
   );
 };
@@ -275,7 +299,11 @@ const InfoToast: React.FC<{ info: CikmisOptionInfo; onClose: () => void }> = ({ 
 };
 
 export const CikmisCard: React.FC<CikmisCardProps> = (p) => {
+  const v12 = useAppearance().design === 'v12';
   const [flagsOpen, setFlagsOpen] = useState(false);
+  // Şık eleme (yalnız cevaplamadan önce, v12): üstü çizilen şıklar; yeniden denemede sıfırlanır
+  const [elim, setElim] = useState<Set<string>>(() => new Set());
+  useEffect(() => { if (!p.quiz.picked) return; setElim(new Set()); }, [p.quiz.picked]);
   const [liftedOpt, setLiftedOpt] = useState<string | null>(null);
   const [pop, setPop] = useState<{ key: string; x: number; y: number } | null>(null);
   const closePop = useCallback(() => setPop(null), []);
@@ -327,8 +355,8 @@ export const CikmisCard: React.FC<CikmisCardProps> = (p) => {
         )}
         <span className="qk-sp" />
         {p.headExtra}
-        <CopyQuestionButton stem={p.copy.stem} options={p.copy.options} className="qk-ib" />
-        <button type="button" className="qk-ib" onClick={p.onReport} aria-label="Hata bildir" title="Hata bildir"><Flag aria-hidden /></button>
+        {!v12 && <CopyQuestionButton stem={p.copy.stem} options={p.copy.options} className="qk-ib" />}
+        {!v12 && <button type="button" className="qk-ib" onClick={p.onReport} aria-label="Hata bildir" title="Hata bildir"><Flag aria-hidden /></button>}
         <ActionMenu items={p.actions} title={`Soru ${p.numberLabel}`} highlight={p.menuHighlight} />
       </header>
 
@@ -370,6 +398,9 @@ export const CikmisCard: React.FC<CikmisCardProps> = (p) => {
                   canObject={!hideAnswer}
                   onObject={() => p.onObject(key, String(o.text ?? ''))}
                   onInfo={setInfoToast}
+                  quick={v12}
+                  eliminated={elim.has(key)}
+                  onEliminate={p.quiz.on && !p.quiz.picked ? () => setElim((m) => { const n = new Set(m); if (n.has(key)) n.delete(key); else n.add(key); return n; }) : undefined}
                 />
               );
             })}
@@ -436,6 +467,8 @@ export const CikmisCard: React.FC<CikmisCardProps> = (p) => {
           </button>
         )}
         <button type="button" onClick={p.social.onShare} className="qk-act" aria-label="Soruyu paylaş" title="Soru bağlantısını paylaş"><Share2 aria-hidden /></button>
+        {v12 && <CopyQuestionButton stem={p.copy.stem} options={p.copy.options} className="qk-act" />}
+        {v12 && <button type="button" className="qk-act qk-act-rep" onClick={p.onReport} aria-label="Soruyu bildir" title="Soruyu bildir"><Flag aria-hidden /></button>}
       </footer>
 
       {p.comments && <div id={`comments-${p.id}`}>{p.comments}</div>}
