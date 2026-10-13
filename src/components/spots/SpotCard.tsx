@@ -5,8 +5,8 @@ import { KAT, Spot, Zengin } from './spotsShared';
 
 /**
  * Tek spot kartı: kategori etiketi · önem çubukları · başlık · spot metni · maddeler · karşılaştırma tablosu ·
- * tuzak kutusu · alt eylemler (Öğrendim / Kaynak / Paylaş). "Kendini sına" modunda soru görünür, gövde
- * "Cevabı göster" ile açılır. Açılan içeriği görünür alana kaydırma işini utils/autoReveal.ts üstlenir
+ * tuzak kutusu · alt eylemler (Öğrendim / Kaynak / Paylaş). Soru-cevap her modda kartın başında yazılıdır;
+ * "Kendini sına" modunda yalnız soru görünür, gövde "Cevabı göster" ile açılır. Açılan içeriği görünür alana kaydırma işini utils/autoReveal.ts üstlenir
  * (aria-expanded + aria-controls taşıyan düğmeler); burada ayrıca scrollIntoView yazılmaz, çift kaydırma olmasın.
  */
 
@@ -75,7 +75,12 @@ const SpotCardBase: React.FC<Props> = ({ s, sinav, ogrenildi, vurgulu, onOgren }
         </div>
       ) : (
         <div className="xs-card-b" id={govdeId}>
-          {sinav && s.cevap && <p className="xs-answer"><span>Cevap</span><Zengin metin={s.cevap} /></p>}
+          {s.soru && s.cevap && (
+            <div className="xs-qa">
+              <p className="xs-qa-q"><span>Soru</span><Zengin metin={s.soru} /></p>
+              <p className="xs-answer"><span>Cevap</span><Zengin metin={s.cevap} /></p>
+            </div>
+          )}
           <p className="xs-text"><Zengin metin={s.spot} /></p>
           {!!s.maddeler?.length && (
             <ul className="xs-list">{s.maddeler.map((m, i) => <li key={i}><Zengin metin={m} /></li>)}</ul>

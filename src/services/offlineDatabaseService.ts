@@ -87,6 +87,8 @@ export interface OfflineState {
   queuedActionsCount: number;
 }
 
+export type OfflineStoreKind = 'past' | 'pool' | 'committees' | 'decks' | 'summaries' | 'glossary' | 'flashcards';
+
 export type OfflineListener = (state: OfflineState) => void;
 
 class OfflineDatabaseService {
@@ -991,6 +993,36 @@ class OfflineDatabaseService {
       window.setTimeout(() => void this.syncOfflineQueue(), Math.max(1000, soonest - Date.now()));
     }
     return { synced, failed };
+  }
+
+  /** Tek bir çevrimdışı depoyu boşaltır (Cihazdaki veriler › tek tek silme). */
+  public async clearStore(kind: OfflineStoreKind): Promise<void> {
+    if (kind === 'past') {
+      await pastQuestionsCache.clearCache();
+    } else {
+      const name = {
+        pool: STORE_QUESTIONS,
+        committees: STORE_COMMITTEES,
+        decks: STORE_DECKS,
+        summaries: STORE_SUMMARIES,
+        glossary: STORE_GLOSSARY,
+        flashcards: STORE_FLASHCARDS,
+      }[kind];
+      const db = await this.initDb();
+      if (db && db.objectStoreNames.contains(name)) {
+        await new Promise<void>((resolve) => {
+          try {
+            const tx = db.transaction(name, 'readwrite');
+            tx.objectStore(name).clear();
+            tx.oncomplete = () => resolve();
+            tx.onerror = () => resolve();
+          } catch {
+            resolve();
+          }
+        });
+      }
+    }
+    await this.loadStats();
   }
 
   /**

@@ -5,6 +5,7 @@ import {
 import { offlineDatabaseService, OfflineState } from '../../services/offlineDatabaseService';
 import { pwaService, PwaState } from '../../services/pwaService';
 import { Dialog } from '../ui/Dialog';
+import { DeviceStorageSection } from './DeviceStorageSection';
 
 interface OfflineDatabaseModalProps {
   isOpen: boolean;
@@ -158,6 +159,7 @@ const StudentView: React.FC<{ o: OfflineState; p: PwaState }> = ({ o, p }) => {
       )}
       {!o.isOnline && !o.isDownloading && <p className="of-note">İndirmek için internete bağlan.</p>}
       <InstallRow p={p} />
+      <DeviceStorageSection o={o} />
       {o.isDatabaseDownloaded && !o.isDownloading && (
         <div className="of-foot"><ClearButton label="Cihazdan kaldır" /></div>
       )}
@@ -210,6 +212,7 @@ const AdminView: React.FC<{ o: OfflineState; p: PwaState }> = ({ o, p }) => {
           <li className={o.queuedActionsCount ? 'is-warn' : 'is-ok'}><i aria-hidden />Bekleyen işlem<b>{nf(o.queuedActionsCount)}</b></li>
         </ul>
       </section>
+      <DeviceStorageSection o={o} />
       {syncMsg && <p className="of-note">{syncMsg}</p>}
       <div className="of-actions">
         <button type="button" className="ms-btn is-primary is-sm" disabled={o.isDownloading || !o.isOnline} onClick={() => offlineDatabaseService.downloadEntireDatabase()}>

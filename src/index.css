@@ -2937,6 +2937,26 @@ button.cx-opt:focus-visible { outline: 2px solid var(--color-accent); outline-of
 .of-sys li.is-warn i { background: var(--color-warn); }
 .of-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; padding-top: 12px; border-top: 1px solid var(--color-line-soft); }
 
+/* Cihazdaki veriler (indirilmiş PDF'ler, depolar, önbellekler) */
+.ds-head { display: flex; align-items: center; gap: 8px; }
+.ds-head h3 { flex: 1; }
+.ds-usage { font-size: 12px; color: var(--color-ink-3); font-variant-numeric: tabular-nums; }
+.ds-group { border: 1px solid var(--color-line); border-radius: 12px; overflow: hidden; }
+.ds-row { display: flex; align-items: center; gap: 8px; width: 100%; padding: 10px 12px; border: 0; background: transparent; font: inherit; font-size: 13.5px; color: var(--color-ink); cursor: pointer; text-align: left; }
+.ds-row svg { width: 16px; height: 16px; flex-shrink: 0; color: var(--color-ink-3); }
+.ds-row span { flex: 1; font-weight: 600; }
+.ds-row b { font-size: 12px; font-weight: 600; color: var(--color-ink-3); font-variant-numeric: tabular-nums; }
+.ds-row .ds-chev { transition: transform .15s; }
+.ds-row[aria-expanded="true"] .ds-chev { transform: rotate(180deg); }
+.ds-list { list-style: none; margin: 0; padding: 0; max-height: 260px; overflow-y: auto; border-top: 1px solid var(--color-line-soft); }
+.ds-list.is-rows { max-height: none; border: 1px solid var(--color-line); border-radius: 12px; }
+.ds-list li { display: flex; align-items: center; gap: 8px; min-height: 40px; padding: 2px 6px 2px 12px; border-bottom: 1px solid var(--color-line-soft); font-size: 13px; color: var(--color-ink-2); }
+.ds-list li:last-child { border-bottom: 0; }
+.ds-list li > span { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.ds-list li > small { font-size: 12px; color: var(--color-ink-3); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.ds-list li.is-all { justify-content: flex-end; padding: 6px; }
+.ds-empty { margin: 0; padding: 10px 12px; border-top: 1px solid var(--color-line-soft); font-size: 12.5px; color: var(--color-ink-3); }
+
 /* Üst çubuk göstergesi */
 .of-badge { position: relative; flex-shrink: 0; display: inline-flex; align-items: center; justify-content: center; gap: 6px; height: 36px; min-width: 36px; padding: 0 10px; border: 0; border-radius: 12px; background: transparent; color: var(--color-ink-3); font: inherit; font-size: 12.5px; font-weight: 600; cursor: pointer; transition: background-color .15s, color .15s; }
 .of-badge svg { width: 18px; height: 18px; flex-shrink: 0; }

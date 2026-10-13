@@ -32,6 +32,7 @@ import { LessonPlayer } from './lesson/LessonPlayer';
 import { touchRecent } from './LearnHub';
 import { LearnLibrary, LessonSkeleton } from './LearnLibrary';
 import { Dialog } from '../ui/Dialog';
+import { NoPdfNotice, useNoPdfGate } from './NoPdfNotice';
 import type { DeckCatalogEntry } from '../../data/deckStore';
 import { triggerDomHighlightAndScroll } from '../../services/universalRedirectService';
 
@@ -736,6 +737,14 @@ export const InteractiveDeckView: React.FC<InteractiveDeckViewProps> = ({ initia
     return () => { alive = false; };
   }, [deckId, liveTick]); // eslint-disable-line react-hooks/exhaustive-deps
 
+  // PDF'i Drive'da olmayan ders: önce uyarı, onaydan sonra ders (kontrol sürerken iskelet)
+  const [pdfGate, acceptNoPdf] = useNoPdfGate(deckId);
+  const gateOk = pdfGate?.id === deckId && pdfGate.state === 'ok';
+  const closeDeck = () => {
+    setDeckId(null);
+    onDeckChange?.(null);
+  };
+
   // Cümle/Metin odaklama (?highlight=...) kontrolü
   useEffect(() => {
     if (typeof window !== 'undefined' && activeDeck) {
@@ -788,11 +797,23 @@ export const InteractiveDeckView: React.FC<InteractiveDeckViewProps> = ({ initia
         />
       )}
 
-      {deckId && deckLoading && !activeDeck && (
-        <LessonSkeleton onCancel={() => { setDeckId(null); onDeckChange?.(null); }} />
+      {deckId && ((deckLoading && !activeDeck) || pdfGate?.state === 'checking') && (
+        <LessonSkeleton onCancel={closeDeck} />
       )}
 
-      {activeDeck && activeDeck.id === deckId && (
+      {deckId && pdfGate?.id === deckId && pdfGate.state === 'warn' && (
+        <NoPdfNotice
+          title={allDecks.find((d) => d.id === deckId)?.title || activeDeck?.title || ''}
+          date={pdfGate.date}
+          onBack={closeDeck}
+          onContinue={(mute) => {
+            setPlayerViewMode('interactive');
+            acceptNoPdf(mute);
+          }}
+        />
+      )}
+
+      {activeDeck && activeDeck.id === deckId && gateOk && (
         <LessonPlayer
           key={`${activeDeck.id}:${linkNonce}`}
           deck={activeDeck}

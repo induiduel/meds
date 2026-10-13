@@ -234,3 +234,8 @@
 /* Kurul · Ders · Konu · Kazanım hızlı süzgeçleri (ExamSpotsView) — akışta, yapışkan değil */
 .xs-quick { margin: 2px 0 0; }
 .xs-ctx-kz { display: block; margin-top: 2px; font-size: 12.5px; line-height: 1.35; color: var(--color-accent); overflow-wrap: anywhere; }
+
+/* Soru-cevap kartın başında (Oku modunda da) */
+.xs-qa { display: flex; flex-direction: column; gap: 6px; margin-bottom: 4px; }
+.xs-qa-q { margin: 0; display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 8px; font-size: 14px; line-height: 1.45; color: var(--color-ink-2); }
+.xs-qa-q > span { font-size: 11px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; color: var(--color-accent, var(--color-ink-3)); }

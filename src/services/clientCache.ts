@@ -344,6 +344,39 @@ class ClientCacheService {
     });
   }
 
+  /** Kalıcı kayıt sayısı (Ayarlar › Cihazdaki veriler). */
+  public async count(): Promise<number> {
+    const db = await this.initDb();
+    if (!db) return this.memoryCache.size;
+    return new Promise((resolve) => {
+      try {
+        const req = db.transaction(STORE_CACHE, 'readonly').objectStore(STORE_CACHE).count();
+        req.onsuccess = () => resolve(req.result || 0);
+        req.onerror = () => resolve(0);
+      } catch {
+        resolve(0);
+      }
+    });
+  }
+
+  /** Bellek + IndexedDB önbelleğinin tamamını siler; veri sonraki istekte sunucudan yeniden gelir. */
+  public async clearAll(): Promise<void> {
+    this.memoryCache.clear();
+    const db = await this.initDb();
+    if (!db) return;
+    await new Promise<void>((resolve) => {
+      try {
+        const tx = db.transaction([STORE_CACHE, STORE_ETAG], 'readwrite');
+        tx.objectStore(STORE_CACHE).clear();
+        tx.objectStore(STORE_ETAG).clear();
+        tx.oncomplete = () => resolve();
+        tx.onerror = () => resolve();
+      } catch {
+        resolve();
+      }
+    });
+  }
+
   /**
    * Önbellekteki bir dizi öğesini yerinde günceller (Push/Realtime mutasyonları için).
    */

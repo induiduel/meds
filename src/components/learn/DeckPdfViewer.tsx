@@ -5,12 +5,14 @@
  */
 import React, { Suspense, lazy, useEffect, useMemo, useRef, useState } from 'react';
 import {
-  ChevronLeft, ChevronRight, Columns2, Download, ExternalLink, FileText, FileX, MapPin, Maximize, Maximize2, Minimize, Moon, MoreHorizontal,
-  MoveHorizontal, MoveVertical, PanelLeft, RotateCw, Search, Upload, ZoomIn, ZoomOut, X,
+  ChevronDown, ChevronLeft, ChevronRight, ChevronUp, Columns2, Download, ExternalLink, FileText, FileX, MapPin, Maximize, Maximize2, Minimize, Moon, MoreHorizontal,
+  CloudDownload, CloudOff, MoveHorizontal, MoveVertical, PanelLeft, RotateCw, Search, Upload, ZoomIn, ZoomOut, X,
 } from 'lucide-react';
 import type { InteractiveDeck, SlideItem } from './InteractiveDeckView';
 import { getSlidePdfLocation } from '../../services/slidePdfMappingService';
 import { drivePreviewUrl, driveViewUrl, useDeckPdf, type DeckPdfFile } from '../../services/deckPdfService';
+import { PDF_SAVED_EVENT, removeSavedPdf, savePdfOffline, savedPdfObjectUrl } from '../../services/deviceStorage';
+import { toast } from '../ui/Toast';
 import './pdf/pdfDoc.css';
 
 const PdfDocView = lazy(() => import('./pdf/PdfDocView'));
@@ -22,9 +24,11 @@ interface ViewPrefs {
   fit: 'width' | 'page';
   thumbs: boolean;
   night: boolean;
+  /** Başlık şeridi (ad · Tam PDF · Tam ekran) gizli */
+  hideBar: boolean;
 }
 const loadPrefs = (): ViewPrefs => {
-  const d: ViewPrefs = { fit: 'width', thumbs: false, night: false };
+  const d: ViewPrefs = { fit: 'width', thumbs: false, night: false, hideBar: false };
   try {
     return { ...d, ...JSON.parse(localStorage.getItem(PREF_KEY) || '{}') };
   } catch {
@@ -188,7 +192,51 @@ export const DeckPdfViewer: React.FC<DeckPdfViewerProps> = ({
   }, [wanted, currentSlideNumber, fileIdx]);
 
   const file: DeckPdfFile | undefined = info?.files[fileIdx];
-  const appSrc = custom?.url || file?.url;
+  // Çevrimdışı için indirilmiş kopya: varsa görüntüleyici cihazdan (blob) açar
+  const [offline, setOffline] = useState<{ src: string; url: string } | null>(null);
+  const [saving, setSaving] = useState(false);
+  useEffect(() => {
+    const u = file?.url;
+    let alive = true;
+    let made: string | null = null;
+    const check = () => {
+      if (!u) return setOffline(null);
+      void savedPdfObjectUrl(u).then((b) => {
+        if (!alive) { if (b) URL.revokeObjectURL(b); return; }
+        made = b;
+        setOffline((prev) => {
+          if (prev && prev.url === u && b) { URL.revokeObjectURL(b); made = prev.src; return prev; }
+          return b ? { src: b, url: u } : null;
+        });
+      });
+    };
+    check();
+    window.addEventListener(PDF_SAVED_EVENT, check);
+    return () => {
+      alive = false;
+      window.removeEventListener(PDF_SAVED_EVENT, check);
+      if (made) URL.revokeObjectURL(made);
+    };
+  }, [file?.url]);
+  const isSaved = !!offline && offline.url === file?.url;
+  const toggleOffline = async () => {
+    if (!file?.url || saving) return;
+    setSaving(true);
+    try {
+      if (isSaved) {
+        await removeSavedPdf(file.url);
+        toast.success('PDF cihazdan kaldırıldı.');
+      } else {
+        await savePdfOffline(file.url);
+        toast.success('PDF çevrimdışı kullanım için indirildi.');
+      }
+    } catch {
+      toast.error('PDF indirilemedi', 'Bağlantını kontrol edip tekrar dene.');
+    } finally {
+      setSaving(false);
+    }
+  };
+  const appSrc = custom?.url || (isSaved ? offline!.src : file?.url);
   const driveId = !custom && !file?.url ? file?.fileId : undefined;
   const openHref = custom?.url || (file?.url ? `${file.url}#page=${page}` : file?.fileId ? driveViewUrl(file.fileId) : undefined);
   const name = custom?.name || file?.name || `${deck.title}.pdf`;
@@ -225,7 +273,7 @@ export const DeckPdfViewer: React.FC<DeckPdfViewerProps> = ({
   const subtitle = custom
     ? 'Cihazınızdan seçilen dosya'
     : file?.url
-      ? [file?.folder, numPages ? `${numPages} sayfa` : file?.pages ? `${file.pages} sayfa` : '', fmtMb(file?.size)].filter(Boolean).join(' · ')
+      ? [file?.folder, numPages ? `${numPages} sayfa` : file?.pages ? `${file.pages} sayfa` : '', fmtMb(file?.size), isSaved ? 'cihazda' : ''].filter(Boolean).join(' · ')
       : driveId
         ? 'Google Drive önizlemesi'
         : deck.discipline || '';
@@ -350,6 +398,11 @@ export const DeckPdfViewer: React.FC<DeckPdfViewerProps> = ({
     >
       <input ref={fileInput} type="file" accept="application/pdf,.pdf" onChange={pickFile} hidden />
 
+      {prefs.hideBar ? (
+        <button type="button" className="dpv-bar-show" onClick={() => setPref('hideBar', false)} title="Başlığı göster" aria-label="PDF başlığını göster">
+          <ChevronDown aria-hidden />
+        </button>
+      ) : (
       <header className="dpv-bar">
         <div className="dpv-title">
           <FileText aria-hidden />
@@ -378,6 +431,9 @@ export const DeckPdfViewer: React.FC<DeckPdfViewerProps> = ({
           <button type="button" className={`dpv-ib${fsOn ? ' is-on' : ''}`} onClick={toggleFs} title={fsOn ? 'Tam ekrandan çık (Esc)' : 'Tam ekran (F)'} aria-pressed={fsOn}>
             {fsOn ? <Minimize aria-hidden /> : <Maximize aria-hidden />}
             <span className="dpv-lbl">{fsOn ? 'Küçült' : 'Tam ekran'}</span>
+          </button>
+          <button type="button" className="dpv-ib" onClick={() => { setMoreOpen(false); setPref('hideBar', true); }} title="Başlığı gizle" aria-label="PDF başlığını gizle">
+            <ChevronUp aria-hidden />
           </button>
           <div className="dpv-more">
             <button type="button" className={`dpv-ib${moreOpen ? ' is-on' : ''}`} onClick={() => setMoreOpen((v) => !v)} aria-haspopup="menu" aria-expanded={moreOpen} title="Diğer ayarlar">
@@ -411,6 +467,11 @@ export const DeckPdfViewer: React.FC<DeckPdfViewerProps> = ({
                 <button type="button" role="menuitem" className="dpv-mi" onClick={() => { setMoreOpen(false); fileInput.current?.click(); }}>
                   <Upload aria-hidden /> Cihazdan PDF aç
                 </button>
+                {!custom && file?.url && (
+                  <button type="button" role="menuitem" className="dpv-mi" disabled={saving} onClick={() => { setMoreOpen(false); void toggleOffline(); }}>
+                    {isSaved ? <><CloudOff aria-hidden /> Cihazdan kaldır</> : <><CloudDownload aria-hidden /> {saving ? 'İndiriliyor…' : 'Çevrimdışı için indir'}</>}
+                  </button>
+                )}
                 {downloadHref && (
                   <a role="menuitem" className="dpv-mi" href={downloadHref} download={name} onClick={() => setMoreOpen(false)}>
                     <Download aria-hidden /> İndir
@@ -436,6 +497,7 @@ export const DeckPdfViewer: React.FC<DeckPdfViewerProps> = ({
           )}
         </div>
       </header>
+      )}
 
       {searchOpen && canNav && (
         <div className="dpv-search">

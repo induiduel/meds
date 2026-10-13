@@ -70,7 +70,7 @@ self.addEventListener('activate', (event) => {
       .then((keys) => {
         return Promise.all(
           keys.map((key) => {
-            if (key !== STATIC_CACHE && key !== RUNTIME_CACHE && key !== DATA_CACHE) {
+            if (key !== STATIC_CACHE && key !== RUNTIME_CACHE && key !== DATA_CACHE && key !== 'medsoru-pdf-offline') {
               console.log('[SW] Eski önbellek temizleniyor:', key);
               return caches.delete(key);
             }
