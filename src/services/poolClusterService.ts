@@ -102,6 +102,12 @@ export function questionToItems(q: QuestionLike, eng: RecallEngine, known?: { nu
   const assignedNo = !q.isUnassignedNumber && Number(q.questionNumber) > 0 ? Number(q.questionNumber) : null;
   const dersPrior = known && assignedNo ? numberDersPrior(known.filter((k) => k.number !== assignedNo), assignedNo) : null;
   const a = eng.analyze(text, { committeeId: q.committeeId, options: options.map((o) => ({ key: o.harf, text: o.text })), claimed, dersPrior });
+  const allOptions: PoolOption[] = [...options];
+  for (const ao of a.options) {
+    if (!allOptions.some((x) => normalizationOk(ao.metin, x.text) || normalizationOk(x.text, ao.metin))) {
+      allOptions.push({ harf: ao.harf, text: ao.metin, votes: 1 });
+    }
+  }
   const ozet = q.intake?.ozet;
   const discipline = q.discipline && !GENERIC_DISC.test(q.discipline) ? q.discipline
     : ozet?.ders && ozet.ders !== 'Belirsiz' && (ozet.dersGuveni ?? 0) >= 0.7 ? ozet.ders : null;
@@ -115,7 +121,7 @@ export function questionToItems(q: QuestionLike, eng: RecallEngine, known?: { nu
     pool: {
       key, questionId: q.id, committeeId: q.committeeId, number,
       disciplines: discipline ? [discipline] : a.ders[0] && a.ders[0].p >= 0.75 ? [a.ders[0].name] : [],
-      konu, text: text.trim().slice(0, 600), terms, options, claimed: claimed || a.claimedLetter,
+      konu, text: text.trim().slice(0, 600), terms, options: allOptions, claimed: claimed || a.claimedLetter,
       negative: Math.max(ozet?.olumsuzKok ?? 0, a.negative), createdAt: q.createdAt || '',
     },
   };
@@ -125,6 +131,12 @@ export function unitToItems(girdiId: string, n: number, committeeId: string, cre
   const text = [u.soru_odagi?.metin, ...u.soru_koku_bulgulari.map((b) => b.metin)].filter(Boolean).join('; ') || u.metin_parcasi;
   const options: PoolOption[] = u.hatirlanan_siklar.map((s) => ({ harf: s.harf, text: s.metin, votes: 1 }));
   const a = eng.analyze(u.metin_parcasi || text, { committeeId, options: options.map((o) => ({ key: o.harf, text: o.text })), claimed: u.iddia_edilen_cevap?.harf || null });
+  const allOptions: PoolOption[] = [...options];
+  for (const ao of a.options) {
+    if (!allOptions.some((x) => normalizationOk(ao.metin, x.text) || normalizationOk(x.text, ao.metin))) {
+      allOptions.push({ harf: ao.harf, text: ao.metin, votes: 1 });
+    }
+  }
   const discipline = u.ders_tahmini !== 'Belirsiz' && u.ders_guveni >= 0.7 ? u.ders_tahmini : null;
   const key = `u:${girdiId}#${n}`;
   return {
@@ -134,7 +146,7 @@ export function unitToItems(girdiId: string, n: number, committeeId: string, cre
       disciplines: discipline ? [discipline, ...(u.ikincil_ders ? [u.ikincil_ders] : [])] : [],
       konu: u.konu_tahmini || a.konu?.name || null, text: text.slice(0, 600),
       terms: [...new Set([...a.terms, ...u.tibbi_varliklar.map((v) => v.ad)])],
-      options, claimed: u.iddia_edilen_cevap?.harf || a.claimedLetter, negative: Math.max(u.olumsuz_soru_koku_ihtimali, a.negative), createdAt,
+      options: allOptions, claimed: u.iddia_edilen_cevap?.harf || a.claimedLetter, negative: Math.max(u.olumsuz_soru_koku_ihtimali, a.negative), createdAt,
     },
   };
 }

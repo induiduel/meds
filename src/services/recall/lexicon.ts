@@ -20,9 +20,10 @@ export interface Lexicon {
 }
 
 const SUFFIXES = [
-  'larindaki', 'lerindeki', 'larinda', 'lerinde', 'larin', 'lerin', 'lari', 'leri', 'lardan', 'lerden', 'larda', 'lerde',
-  'lar', 'ler', 'ndaki', 'ndeki', 'daki', 'deki', 'taki', 'teki', 'nda', 'nde', 'dan', 'den', 'tan', 'ten',
-  'nin', 'nun', 'in', 'un', 'da', 'de', 'ta', 'te', 'yla', 'yle', 'la', 'le', 'si', 'su', 'i', 'u', 'e', 'a',
+  'larindaki', 'lerindeki', 'larindan', 'lerinden', 'larinda', 'lerinde', 'larin', 'lerin', 'lari', 'leri', 'lardan', 'lerden', 'larda', 'lerde',
+  'sindaki', 'sindeki', 'sindan', 'sinden', 'sinda', 'sinde', 'sinin', 'sunun', 'sini', 'sunu', 'sina', 'sine',
+  'ndaki', 'ndeki', 'ndan', 'nden', 'daki', 'deki', 'taki', 'teki', 'nda', 'nde', 'dan', 'den', 'tan', 'ten',
+  'lar', 'ler', 'nin', 'nun', 'lik', 'luk', 'in', 'un', 'da', 'de', 'ta', 'te', 'yla', 'yle', 'la', 'le', 'li', 'lu', 'si', 'su', 'ya', 'ye', 'yi', 'yu', 'na', 'ne', 'ni', 'nu', 'i', 'u', 'e', 'a',
 ];
 
 function damerau(a: string, b: string, max: number): number {
@@ -56,20 +57,34 @@ const deletes1 = (w: string) => {
   return out;
 };
 
-/** Bankada az geçen gündelik sözcükler: düzeltme hedefi değil, bilinen sözcük ("buldu" → "bulgu" olmasın). */
+/** Bankada az geçen gündelik sözcükler: düzeltme hedefi değil, bilinen sözcük ("buldu" → "bulgu", "diye" → "diyet" olmasın). */
 export const COMMON_TR_LIST = (
   'buldu bulmus bulamadim bitti biter bitmedi sonunda sukur kimse herkes hepsi hepimiz geldi gelmis gitti gitmis aldim aldi ' +
-  'verdi vermis cikti cikmis girdi girmis yazdi yazmis okudu okumus sordu sormus dedi demis gordu gormus bildi bilmis ' +
-  'oldu olmus kaldi kalmis dustu dusmus sectim secti biliyor bilmiyor istiyor yapiyor geliyor gidiyor ' +
+  'verdi vermis cikti cikmis girdi girmis giriyor girerken yazdi yazmis okudu okumus sordu sormus dedi demis gordu gormus bildi bilmis ' +
+  'oldu olmus kaldi kalmis dustu dusmus sectim secti biliyor bilmiyor istiyor yapiyor geliyor gidiyor gotururken ' +
   'uzun kisa buyuk kucuk yeni eski guzel kotu iyi zor kolay agir hafif hizli yavas erken gec ' +
   'bugun yarin dun simdi sonra once hemen zaten tekrar yine bile sadece yalnizca belki aslinda ' +
   'sabah aksam gece hafta saat dakika saniye yil ay gun ' +
   'nasildi nasil neden niye cunku ama fakat ancak ayrica hatta oysa yoksa ' +
   'tane adet kez kere kisim kismi kisminda bolum bolumu yer yerde yeri sey seyi seyler ' +
-  'anlat anlatti anladim anlamadim dusundum dusunuyorum sanmistim inandim diye diyen soruyordu soruyor yardim isaretlemisim'
+  'asama asamada parca parcasi parcasini baski baskili eslik esliginde yaka papil bana sana buna ' +
+  'anlat anlatti anladim anlamadim dusundum dusunuyorum sanmistim inandim diye diyen soruyordu soruyor yardim isaretlemisim ' +
+  'karisti karistirdim karismis eledim elemistim sandim kaldim kalmistim celdirici celdiriciydi oncul onculu onculleri ' +
+  'onerme onermeler onermede ifade ifadeler ifadelerden birlikte arasinda sonucunda nedeniyle ozellikle'
 ).split(' ');
 
 export const COMMON_TR = new Set(COMMON_TR_LIST);
+
+/** Yabancı/Latince yazılışları Türkçe tıbbi karşılığına yaklaştırır ("sexuel" → "seksuel", "lizensefali" → "lissensefali"). */
+export function phoneticFold(w: string): string {
+  if (!/x|ph|th|^lizen|^holoproz/.test(w)) return w;
+  return w
+    .replace(/x/g, 'ks')
+    .replace(/ph/g, 'f')
+    .replace(/th/g, 't')
+    .replace(/^lizen/, 'lissen')
+    .replace(/^holoproz/, 'holopros');
+}
 
 /** Ham metinlerden sözlük kurar. `extra` (sözlük/hastalık terimleri) en az 3 sıklıkla eklenir. */
 /** Olay döngüsünü kilitlememek için ~8 ms'de bir sıra verir (sunucuda motor kurulumu dilimli yapılır). */
@@ -102,7 +117,7 @@ export async function buildLexicon(texts: Iterable<string>, extra: Iterable<stri
     if ((++n0 & 255) === 0) await tick();
   }
   for (const t of extra) for (const m of String(t || '').matchAll(re)) addWord(m[0], 3);
-  for (const w of COMMON_TR_LIST) if (!freq.has(w)) freq.set(w, 3);
+  for (const w of COMMON_TR_LIST) if ((freq.get(w) || 0) < 3) freq.set(w, 3);
 
   // Düzeltme hedefleri: yeterince sık (≥2) ve ≥4 harfli sözcükler
   const dels = new Map<string, string[]>();
@@ -135,9 +150,12 @@ export async function buildLexicon(texts: Iterable<string>, extra: Iterable<stri
   const cache = new Map<string, string>();
   const fq = (w: string) => freq.get(w) || 0;
 
+  const NEG_MORPH = /(?:m[iıuü]yor|m[ae]z|m[ae]y[aeiı]n|m[ae]d[iıuü]|m[ae]m[iıuü]s|s[iıuü]z)/;
+
   const lookup = (w: string): string | null => {
     const own = fq(w);
     const maxd = w.length >= 8 ? 2 : 1;
+    const wNeg = NEG_MORPH.test(w);
     const cands = new Set<string>();
     for (const x of dels.get(w) || []) cands.add(x); // öğrenci bir harf atlamış
     for (const d of deletes1(w)) {
@@ -147,6 +165,7 @@ export async function buildLexicon(texts: Iterable<string>, extra: Iterable<stri
     let best: string | null = null, bd = maxd + 1, bf = 0;
     for (const c of cands) {
       if (c === w) continue;
+      if (wNeg !== NEG_MORPH.test(c)) continue; // olumlu ↔ olumsuz fiil/sıfat çevrilmesin ("verilmiyor" ≠ "veriliyor")
       const dd = damerau(w, c, maxd);
       if (dd > maxd) continue;
       const cf = fq(c);
@@ -155,11 +174,11 @@ export async function buildLexicon(texts: Iterable<string>, extra: Iterable<stri
       if (dd < bd || (dd === bd && cf > bf)) { best = c; bd = dd; bf = cf; }
     }
     // Ünlüsü atılmış yazım: ünlü oranı düşükse ünsüz iskeletiyle dene (ilk harf aynı kalır)
-    if (!best && own === 0 && w.length >= 4) {
+    if (!best && own === 0 && w.length >= 4 && !wNeg) {
       const vowels = (w.match(VOWELS) || []).length;
       if (vowels / w.length <= (w.length >= 6 ? 0.34 : 0.25)) {
         const hit = skel.get(skeleton(w));
-        if (hit && hit[1] >= 3) return hit[0];
+        if (hit && hit[1] >= 3 && !NEG_MORPH.test(hit[0])) return hit[0];
       }
     }
     // Sözlükte zaten olan bir sözcük yalnız çok daha sık bir yakın biçime çekilir (yaygın yazım hatası)
@@ -174,15 +193,31 @@ export async function buildLexicon(texts: Iterable<string>, extra: Iterable<stri
     if (hit !== undefined) return hit;
     let out = w;
     if (fq(w) < 3) {
-      const direct = lookup(w);
-      if (direct) out = direct;
+      const pf = phoneticFold(w);
+      if (pf !== w && fq(pf) >= 2) out = pf;
       else {
+        // Önce sözcüğün zaten bilinen bir kök + ek olup olmadığını kontrol et ("impetigoda" = "impetigo" + "da", "kırığında" = "kırık" + "ında")
+        let knownInflected = false;
         for (const s of SUFFIXES) {
           if (!w.endsWith(s) || w.length - s.length < 4) continue;
           const base = w.slice(0, -s.length);
-          if (fq(base) >= 3) break; // kök sözlükte: ekli biçim doğru yazılmış
-          const fixed = lookup(base);
-          if (fixed) { out = fixed + s; break; }
+          const pbase = phoneticFold(base);
+          if (fq(base) >= 1 || (base.endsWith('g') && /^[aeiou]/.test(s) && fq(`${base.slice(0, -1)}k`) >= 1)) { knownInflected = true; break; }
+          if (pbase !== base && fq(pbase) >= 1) { out = pbase + s; knownInflected = true; break; }
+        }
+        if (!knownInflected) {
+          const direct = lookup(w) || (pf !== w ? lookup(pf) : null);
+          if (direct) out = direct;
+          else {
+            for (const s of SUFFIXES) {
+              // Tek ünlü eklerinde ('i','u','e','a') önceki ünsüzün silinip bozulmasını önle ("ilkesi" → "ilkei" olmasın)
+              if (s.length < 2 || !w.endsWith(s) || w.length - s.length < 4) continue;
+              const base = w.slice(0, -s.length);
+              const pbase = phoneticFold(base);
+              const fixed = lookup(base) || (pbase !== base ? lookup(pbase) : null);
+              if (fixed) { out = fixed + s; break; }
+            }
+          }
         }
       }
     }

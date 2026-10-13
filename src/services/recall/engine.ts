@@ -12,10 +12,10 @@
 import fs from 'fs';
 import path from 'path';
 import {
-  fold, words, isStop, DERS_HINT, claimedLetter, claimedText, questionNumber, letteredOptions, unletteredOptions,
-  negativeLikelihood, cleanSentence, type Letter,
+  fold, words, isStop, ABBREV, VALID_SHORT_MED, DERS_HINT, claimedLetter, claimedText, questionNumber, letteredOptions, unletteredOptions,
+  negativeLikelihood, cleanSentence, classifyRecallRole, extractStemClause, type Letter, type RecallRole,
 } from './normalize.ts';
-import { buildLexicon, buildTermIndex, matchTermsInWords, makeTicker, COMMON_TR, type Lexicon, type TermIndex } from './lexicon.ts';
+import { buildLexicon, buildTermIndex, matchTermsInWords, makeTicker, COMMON_TR, phoneticFold, type Lexicon, type TermIndex } from './lexicon.ts';
 
 export const RECALL_ENGINE_VERSION = 'hatirlama-v1';
 
@@ -36,10 +36,19 @@ export interface BankDoc {
 export interface Analysis {
   /** Düzeltilmiş içerik sözcükleri (katlanmış). */
   words: string[];
+  /** Yalnız soru kökü cümlesinden gelen düzeltilmiş içerik sözcükleri (şık/iddia yorumu hariç). */
+  stemWords: string[];
   /** Okunur temiz metin (aksanlı, sohbetsiz, düzeltilmiş). */
   clean: string;
   stems: string[];
+  /** Yalnız soru kökü cümlesinin 5-harfli kökleri (çekirdek-çekirdek eşleştirmesi ve taslak kök seçimi için). */
+  stemStems: string[];
   vec: Vec;
+  stemVec: Vec;
+  /** Birimin yapısal rolü: 'stem' | 'mixed' | 'options' | 'claim'. */
+  role: RecallRole;
+  /** Romen rakamlı öncül/şık ("I, II ve III", "yalnız II") içeriyor mu. */
+  isRoman: boolean;
   terms: string[];
   number: number | null;
   claimedLetter: Letter | null;
@@ -58,11 +67,50 @@ export interface Analysis {
 /** Ders/alan adları ("hematoloji soruları ağırdı") soru içeriği sayılmaz (yalnız gürültü ayıklamada). */
 const AREA_RE = /^(acil|hematolo|geriatri|onkolo|nefrolo|gastro|endokrin|romatolo|kardiyo|halk|saglig|dahiliye|cerrahi|pediatri|noroloji|psikiyatri|ortopedi|radyoloji|anestezi|dermatoloji|uroloji|enfeksiyon|farmakoloji|patoloji|genetik|biyokimya|mikrobiyoloji|fizyoloji|anatomi|histoloji)/;
 /**
- * Kök: ilk 5 harf. Yokluk eki (-sız/-siz/-suz/-süz) anlamı tersine çevirir; "geri dönüşümlü" ile "geri dönüşümsüz"
- * aynı köke inerse zıt iki soru aynı soru sayılır (canlıda yanlış birleştirme, 2026-10-13) → ayrı kök ("donus~").
+ * Kök: fonetik hizalamadan sonra ilk 5 harf ("toxoplasma" ve "toksoplazma" → "tokso"),
+ * ancak Greko-Latin bileşik ön ekleriyle ("hiper-", "hipo-", "osteo-", "makro-", "mikro-", "inter-", "intra-",
+ * "gluta-", "aseta-", "strep-", "enter-", "anti-", "poli-" vb.) başlayan uzun tıbbi terimlerde ön ek sonrası
+ * ayırt edici kökü korumak için 7–9 harf alınır ("glutaraldehit" ≠ "glutatyon", "hipertansiyon" ≠ "hipertrofi").
+ * Yokluk eki (-sız/-siz/-suz/-süz) anlamı tersine çevirir → ayrı kök ("donus~").
  */
 const PRIVATIVE = /(?:siz|suz)(?:l[ae]r|l[iu]k|d[ae]n?|[iu]n|[iu])?$/;
-const stemOf = (w: string) => (/^\d/.test(w) ? w : w.length >= 7 && PRIVATIVE.test(w.slice(5)) ? `${w.slice(0, 5)}~` : w.slice(0, 5));
+const FOUR_CHAR_ROOT_RE = /^(gebe|meme|deri|doku|inme|koma|vaka|olgu|kafa|mide|kalp|risk|test|kist|ates|agri|odem|atak|ilac|urun|yara|renk|genc|uyku|hava|odak|ayak)(?:l[ae]r|l[iu]k|l[iu]|d[ae]n?|t[ae]n?|n?[iu]n|s?[iu]|y?[ae]|y?l[ae])/;
+const SOFTENED_K_RE = /^(bebe|cocu|kemi|kiri|kope|kapa|kula|baca|kabu|yata|yure|solu)g[aeiou]/;
+const COMPOUND_9_RE = /^(?:elektro[lfkm]|hip(?:er|o)kal[se])/;
+const COMPOUND_8_RE = /^(?:strepto[km]|entero[kbtp]|immun[oghl])/;
+const COMPOUND_7_RE = /^(?:hiper|hipo[tkgnp]|osteo|kondr|makro|mikro|inter|intra|ekstr|endok|gluta|aseta|pnomo|lenfo|paras|parat|hepat|antid|antip|antik|antib|antim|antih|polim|polin)/;
+const stemCache = new Map<string, string>();
+const stemOf = (w0: string): string => {
+  const hit = stemCache.get(w0);
+  if (hit !== undefined) return hit;
+  const w = phoneticFold(w0);
+  let out: string;
+  if (/^\d/.test(w)) out = w;
+  else if (w.length >= 7 && (w.includes('siz') || w.includes('suz')) && PRIVATIVE.test(w.slice(5))) out = `${w.slice(0, 5)}~`;
+  else if (w.length >= 9 && COMPOUND_9_RE.test(w)) out = w.slice(0, 9);
+  else if (w.length >= 8 && COMPOUND_8_RE.test(w)) out = w.slice(0, 8);
+  else if (w.length >= 7 && COMPOUND_7_RE.test(w)) out = w.slice(0, 7);
+  else {
+    const m4 = w.length >= 5 ? w.match(FOUR_CHAR_ROOT_RE) : null;
+    if (m4) out = m4[1];
+    else {
+      const mk = w.length >= 6 && w.charCodeAt(4) === 103 ? w.match(SOFTENED_K_RE) : null;
+      if (mk) out = `${mk[1]}k`;
+      else if (w.startsWith('boyan')) out = 'boyam';
+      else out = w.slice(0, 5);
+    }
+  }
+  if (stemCache.size < 60_000) stemCache.set(w0, out);
+  return out;
+};
+
+const GENERIC_CONCEPT_STEM = new Set([
+  'hasta', 'hastal', 'sendr', 'bulgu', 'belir', 'klini', 'tablo', 'tedav', 'tanis', 'tani', 'etken', 'neden',
+  'hucre', 'doku', 'organ', 'akut', 'kroni', 'prime', 'sekon', 'benig', 'malig', 'tipi', 'grubu', 'oran',
+  'test', 'testi', 'yonte', 'ilacl', 'ilac', 'etki', 'etkis', 'reaks', 'enfek', 'infla', 'neopl', 'karsi',
+  'mekan', 'fakto', 'resep', 'prote', 'enzim', 'vitam', 'hormo', 'arter', 'venoz', 'sinir', 'kemik', 'eklem',
+  'bolge', 'evre', 'derec', 'gorul', 'olusa', 'sonuc', 'artar', 'azali', 'yukse', 'dusuk', 'oneml', 'temel',
+]);
 
 function l2(v: Vec): Vec {
   let s = 0;
@@ -99,6 +147,8 @@ export interface RecallEngine {
   disciplinesOf: (committeeId: string) => string[];
   bankDoc: (id: string) => BankDoc | undefined;
   idf: (stem: string) => number;
+  /** Tıbbi kavram/hastalık/ilaç kökünün sözlük ve ders notu tanımında geçen ayırt edici kökler (kök ↔ cevap köprüsü). */
+  conceptDefs: (stem: string) => Set<string> | undefined;
 }
 
 export interface LoadOptions {
@@ -134,13 +184,24 @@ function loadSources(rootDir: string, opts: LoadOptions) {
   const glossary = readJson<Record<string, any>>(path.join(rootDir, 'src/data/medical_glossary.json'), {});
   const diseases = readJson<any[]>(path.join(rootDir, 'src/data/disease_entities.json'), []);
   const termNames: { name: string; latin?: string }[] = [];
-  for (const v of Object.values<any>(glossary)) if (v?.term) termNames.push({ name: String(v.term) });
-  for (const d of diseases) if (d?.name) termNames.push({ name: String(d.name), latin: d.latinName ? String(d.latinName) : undefined });
+  const conceptPairs: { head: string; body: string }[] = [];
+  for (const v of Object.values<any>(glossary)) {
+    if (!v?.term) continue;
+    termNames.push({ name: String(v.term) });
+    if (v.definition || v.clinicalPearl) conceptPairs.push({ head: String(v.term), body: `${v.definition || ''} ${v.clinicalPearl || ''}` });
+  }
+  for (const d of diseases) {
+    if (!d?.name) continue;
+    termNames.push({ name: String(d.name), latin: d.latinName ? String(d.latinName) : undefined });
+    if (d.definition || d.morphologyOrMechanism || d.examSpotPearls) {
+      conceptPairs.push({ head: `${d.name} ${d.latinName || ''}`, body: `${d.definition || ''} ${d.morphologyOrMechanism || ''} ${d.examSpotPearls || ''}` });
+    }
+  }
   const summaries: SummaryRow[] = (opts.lectureSummaries || readJson<any[]>(path.join(rootDir, 'data/lectureSummariesCatalog.json'), []))
     .filter((sm: any) => sm?.committeeId && sm.discipline && typeof sm.content === 'string')
     .map((sm: any) => ({ committeeId: String(sm.committeeId), discipline: String(sm.discipline), title: String(sm.title || ''), content: String(sm.content) }));
   const curriculum = readJson<Record<string, string[]>>(path.join(rootDir, 'src/data/curriculum_disciplines.json'), {});
-  return { bank, termNames, summaries, curriculum };
+  return { bank, termNames, conceptPairs, summaries, curriculum };
 }
 
 export async function createRecallEngine(rootDir: string, opts: LoadOptions = {}): Promise<RecallEngine> {
@@ -169,7 +230,7 @@ export async function createRecallEngine(rootDir: string, opts: LoadOptions = {}
     for (const w of words(text)) {
       if (isStop(w)) continue;
       const c = lexicon.correct(w);
-      if (isStop(c) || (c.length < 3 && !/\d/.test(c))) continue;
+      if (isStop(c) || (c.length < 3 && !/\d/.test(c) && !VALID_SHORT_MED.has(c))) continue;
       if (c !== w && corrections) corrections.push([w, c]);
       out.push(c);
     }
@@ -208,18 +269,89 @@ export async function createRecallEngine(rootDir: string, opts: LoadOptions = {}
   const byId = new Map(docs.map((d) => [d.id, d]));
   docStems.length = 0;
 
-  // Ders özetleri (her ders bir belge: ders + kurul + ders başlığı = konu). Sınıflayıcının ikinci bilgi kaynağı.
+  // Tıbbi kavram–tanım köprü dizini (medical_glossary + disease_entities + ders özeti tanım satırları)
+  const rawConcepts = new Map<string, Map<string, number>>();
+  const linkConcept = (heads: string[], body: string[], weight: number) => {
+    for (const h of heads) {
+      let m = rawConcepts.get(h);
+      if (!m) rawConcepts.set(h, (m = new Map()));
+      for (const b of body) {
+        if (b === h) continue;
+        m.set(b, (m.get(b) || 0) + weight * idf(b));
+      }
+    }
+  };
+  const extractConceptStems = (txt: string): string[] => {
+    const out = new Set<string>();
+    const f = /\d/.test(txt) ? fold(txt).replace(/(\d)([a-z]{2,})/g, '$1 $2') : fold(txt);
+    for (const w0 of f.split(' ')) {
+      if (w0.length < 3 || isStop(w0) || COMMON_TR.has(w0) || /^\d+$/.test(w0)) continue;
+      const w = ABBREV[w0] || w0;
+      const st = stemOf(w);
+      if (st.length >= 4 && !GENERIC_CONCEPT_STEM.has(st)) out.add(st);
+    }
+    return [...out];
+  };
+  for (let i = 0; i < src.conceptPairs.length; i++) {
+    if ((i & 255) === 0) await tick();
+    const cp = src.conceptPairs[i];
+    const hs = extractConceptStems(cp.head).filter((s) => idf(s) >= 3.3);
+    const bs = extractConceptStems(cp.body).slice(0, 28);
+    if (hs.length && bs.length >= 2) linkConcept(hs, bs, 3);
+  }
+  src.conceptPairs.length = 0;
+
+  // Ders özetleri: tek geçişte hem ders vektörü (LectureDoc) hem de nadir kavram tanım bağları çıkarılır.
+  // Özet metni temiz müfredat verisi olduğu için tekil sözcük sıklığı üzerinden hızlı köklenir (1,4M sözcükte Levenshtein aranmaz).
   type LectureDoc = { discipline: string; title: string; vec: Vec };
   const lectures = new Map<string, LectureDoc[]>();
   for (const sm of src.summaries) {
-    // Ders başına tek vektör (en ağırlıklı 150 kök): sınıflama için ders merkezi, konu için ders başlığı
     await tick();
-    const st = contentWords(sm.content).map(stemOf);
-    if (st.length < 20) continue;
-    const top = [...vectorize(st)].sort((a, b) => b[1] - a[1]).slice(0, 150);
+    const tf = new Map<string, number>();
+    let totalStems = 0;
+    const foldedLines = sm.content
+      .replace(/:\s*\n+\s*/g, ': ')
+      .toLocaleLowerCase('tr')
+      .replace(/[ığüşöç]/g, (ch) => ({ ı: 'i', ğ: 'g', ü: 'u', ş: 's', ö: 'o', ç: 'c' }[ch] || ch))
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .replace(/(\d)([a-z]{2,})/g, '$1 $2')
+      .replace(/[^a-z0-9\n]+/g, ' ')
+      .split('\n');
+    for (const fl of foldedLines) {
+      if (!fl) continue;
+      const lineSet = new Set<string>();
+      for (const w0 of fl.split(' ')) {
+        if (w0.length < 2 || isStop(w0)) continue;
+        const w = ABBREV[w0] || w0;
+        if (w.length < 3 && !/\d/.test(w) && !VALID_SHORT_MED.has(w)) continue;
+        const s = stemOf(w);
+        tf.set(s, (tf.get(s) || 0) + 1);
+        totalStems++;
+        if (w.length >= 3 && !COMMON_TR.has(w) && !/^\d+$/.test(w) && s.length >= 4 && !GENERIC_CONCEPT_STEM.has(s)) {
+          lineSet.add(s);
+        }
+      }
+      if (fl.length >= 25 && fl.length <= 420 && lineSet.size >= 3 && lineSet.size <= 26) {
+        const sts = [...lineSet];
+        const heads = sts.filter((s) => idf(s) >= 4.2);
+        if (heads.length >= 1 && heads.length <= 6) linkConcept(heads, sts, 1);
+      }
+    }
+    if (totalStems < 20) continue;
+    const v: Vec = new Map();
+    for (const [s, c] of tf) v.set(s, (1 + Math.log(c)) * idf(s));
+    const top = [...l2(v)].sort((a, b) => b[1] - a[1]).slice(0, 150);
     const list = lectures.get(sm.committeeId) || lectures.set(sm.committeeId, []).get(sm.committeeId)!;
     list.push({ discipline: sm.discipline, title: sm.title, vec: l2(new Map(top)) });
   }
+
+  const conceptDefMap = new Map<string, Set<string>>();
+  for (const [h, m] of rawConcepts) {
+    const top = [...m.entries()].sort((a, b) => b[1] - a[1]).slice(0, 22).map(([k]) => k);
+    if (top.length >= 3) conceptDefMap.set(h, new Set(top));
+  }
+  rawConcepts.clear();
 
   // Kurul başına ters dizinler + ders merkezleri
   type Postings = Map<string, [number, number][]>;
@@ -343,6 +475,11 @@ export async function createRecallEngine(rootDir: string, opts: LoadOptions = {}
     const w = contentWords(all, corrections);
     const stems = w.map(stemOf);
     const vec = vectorize(stems);
+    const role = classifyRecallRole(text);
+    const stemClause = role === 'options' || role === 'claim' ? '' : extractStemClause(text);
+    const stemWords = stemClause ? contentWords(stemClause) : role === 'stem' ? w : [];
+    const stemStems = stemWords.map(stemOf);
+    const stemVec = stemStems.length ? vectorize(stemStems) : new Map();
     const tset = matchTermsInWords(w, terms);
     // Bilgi taşıyan: bankada geçen (df ≥ 1), yaygın olmayan sözcük ya da tıbbi terim; bilinmeyen sözcük sayılmaz
     const informative = w.filter((x) => {
@@ -351,16 +488,22 @@ export async function createRecallEngine(rootDir: string, opts: LoadOptions = {}
     }).length;
     // Yalnız cevap ("C dedim", "II ve IV C") ya da kısaltma ("MS sorusu") taşıyan mesaj gürültü değildir
     const hasAbbr = /\b[A-ZÇĞİÖŞÜ]{2,6}\b/.test(text.replace(/\b(?:I{1,3}|IV|V)\b/g, ''));
-    const claimAny = !!(claimedLetter(text) || claimedText(text) || /\b(?:I{1,3}|IV|V)\b(?:\s*(?:,|ve)\s*(?:I{1,3}|IV|V)\b)+/.test(text));
-    const isNoise = !tset.length && informative === 0 && !hasAbbr && !claimAny && !questionNumber(text);
+    const isRoman = /\b(?:I{1,3}|IV)\b(?:\s*(?:,|ve|veya|-|\.)\s*\b(?:I{1,3}|IV)\b)+|\b(?:yaln[ıi]z|yalniz)\s+(?:I{1,3}|IV)\b|\b(?:I\.\s+\S[\s\S]*II\.\s+\S)|\b(?:[uü][cç]l[uü]|d[oö]rtl[uü])\s+(?:[oö]nc[uü]l|[oö]nerme)\b/i.test(text);
+    const claimAny = !!(claimedLetter(text) || claimedText(text) || isRoman);
+    const isNoise = !tset.length && informative === 0 && !hasAbbr && !claimAny && !options.length && !questionNumber(text);
     const cm = committees.get(o.committeeId);
     const cls = isNoise ? { ders: [], konu: null, bank: [] } : classify(cm, vec, words(text), o.dersPrior);
     const claimL = (/^[A-E]$/.test(String(o.claimed || '')) ? (o.claimed as Letter) : null) || claimedLetter(text);
     return {
       words: w,
+      stemWords,
       clean: w.map((x) => lexicon.display(x)).join(' '),
       stems,
+      stemStems,
       vec,
+      stemVec,
+      role,
+      isRoman,
       terms: tset,
       number: questionNumber(text),
       claimedLetter: claimL,
@@ -395,6 +538,7 @@ export async function createRecallEngine(rootDir: string, opts: LoadOptions = {}
     disciplinesOf: (cid) => committees.get(cid)?.disciplines || [],
     bankDoc: (id) => byId.get(id),
     idf,
+    conceptDefs: (stem) => conceptDefMap.get(stem),
   };
 }
 
