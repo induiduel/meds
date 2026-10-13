@@ -60,3 +60,7 @@ data/user_notes/
 data/user_backups/
 data/backups/
 data/question_intake/
+
+# Çıkmış soru bankası git dışında (GitHub 100 MiB sınırı); günlük yedek: scripts/yedek/cikmis_yedek.sh → ~/medsor-yedek/cikmis/
+data/pastQuestions.json
+src/data/pastQuestions.json
