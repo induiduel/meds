@@ -1,4 +1,5 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
+import { speak } from '../../utils/tts';
 import { X, RotateCcw, Volume2, ChevronLeft, ChevronRight, ChevronDown, Star, Share2, AlertCircle, BookA, GraduationCap } from 'lucide-react';
 import { CardExtras } from './CardExtras';
 import { getFavoriteCards, toggleFavoriteCard } from '../../services/studyStore';
@@ -211,17 +212,12 @@ export const FlashcardStudy: React.FC<{
     return () => document.removeEventListener('keydown', onKey);
   }, [answer, done, onExit, goPrev, goNext, toggleFav, card]);
 
-  const speak = (text: string) => {
-    if (!('speechSynthesis' in window)) return;
-    try {
-      window.speechSynthesis.cancel();
-      const u = new SpeechSynthesisUtterance(text);
-      u.lang = 'tr-TR';
-      u.rate = 0.9;
-      window.speechSynthesis.speak(u);
-    } catch {
-      /* no voice available */
-    }
+  // Ön yüz her zaman; kart açıksa cevap ve "Akılda tut" da okunur.
+  const speakCard = () => {
+    if (!card) return;
+    const parts = [plain(front)];
+    if (flipped) parts.push(plain(back), card.pearl ? `Akılda tut: ${plain(card.pearl)}` : '');
+    speak(parts.filter(Boolean).join('. '));
   };
 
   if (done) {
@@ -308,9 +304,7 @@ export const FlashcardStudy: React.FC<{
           <button type="button" onClick={() => toggleFav(card)} aria-pressed={isFav} aria-label={isFav ? 'Favorilerden çıkar' : 'Favorilere ekle'} title="Favori (F)" className={`fv-ib ${isFav ? 'is-fav' : ''}`}>
             <Star fill={isFav ? 'currentColor' : 'none'} aria-hidden />
           </button>
-          {!reverse && (
-            <button type="button" onClick={() => speak(plain(card.front))} aria-label="Terimi seslendir" className="fv-ib"><Volume2 aria-hidden /></button>
-          )}
+          <button type="button" onClick={speakCard} aria-label={flipped ? 'Kartı seslendir' : 'Soruyu seslendir'} title={flipped ? 'Soru + cevabı oku' : 'Soruyu oku'} className="fv-ib"><Volume2 aria-hidden /></button>
           {onShare && <button type="button" onClick={() => onShare(card)} aria-label="Kartı paylaş" title="Kartı paylaş" className="fv-ib"><Share2 aria-hidden /></button>}
           {onReport && <button type="button" onClick={() => onReport(card)} aria-label="Hata bildir" title="Hata bildir" className="fv-ib"><AlertCircle aria-hidden /></button>}
         </div>

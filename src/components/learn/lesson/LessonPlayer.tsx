@@ -1,6 +1,7 @@
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { observeScrollReveal } from '../../../utils/scrollReveal';
 import { DeckNotePanel } from './DeckNotePanel';
+import { onSpeakingChange, speak, stopSpeaking } from '../../../utils/tts';
 import {
   BookOpen,
   Check,
@@ -172,6 +173,26 @@ const practiceOf = (s: LessonStep): PracticeItem[] => [
 /* ---------------------------------------------------------------------------
  * Adım içeriği (başlık + anlatım + tablo); kalem ve çizim katmanları bu kutuya bağlı
  * ------------------------------------------------------------------------- */
+// Adımı Edge "Emel" sesiyle okur: başlık, anlatım, (anlatım yoksa) anahtar maddeler.
+const ListenButton: React.FC<{ step: LessonStep }> = ({ step }) => {
+  const [on, setOn] = useState(false);
+  useEffect(() => onSpeakingChange(setOn), []);
+  useEffect(() => () => stopSpeaking(), [step.number]);
+  const text = () => {
+    const keys = step.bullets.length > 1 || !step.narrative.trim() ? step.bullets.map((b) => `${b.title}: ${b.desc}`) : [];
+    return [step.title, step.slide.subtitle, step.narrative, ...keys]
+      .filter(Boolean)
+      .join('. ')
+      .replace(/\[\[([^\]|]+)(\|[^\]]+)?\]\]/g, '$1')
+      .replace(/^\s*[-*•]\s+/gm, '');
+  };
+  return (
+    <button type="button" className={`ls-tag ${on ? 'is-accent' : 'is-plain'}`} onClick={() => (on ? stopSpeaking() : speak(text()))} aria-pressed={on} title={on ? 'Okumayı durdur' : 'Bu adımı sesli dinle'}>
+      {on ? '■ Durdur' : '▶ Dinle'}
+    </button>
+  );
+};
+
 const StepHead: React.FC<{ step: LessonStep; total: number }> = ({ step, total }) => (
   <header className="ls-head" data-fb-key={`${step.number}:text:0`}>
     <div className="ls-eyebrow-row">
@@ -182,6 +203,7 @@ const StepHead: React.FC<{ step: LessonStep; total: number }> = ({ step, total }
       {step.game && <span className="ls-tag is-ok">Ders sonu oyunları</span>}
       {step.badge && !step.checkpoint && !step.game && <span className="ls-tag is-plain">{step.badge}</span>}
       {step.questions.length > 0 && <span className="ls-tag is-warn">{step.questions.length} soru</span>}
+      <ListenButton step={step} />
       <FeedbackFlag target={fbTarget(step, 'text', 0, 'Anlatım', step.title, 'Ana içerik › Başlık ve anlatım')} className="ls-head-flag" />
     </div>
     <h1 className="ls-title"><span>{step.title}</span></h1>

@@ -16,6 +16,7 @@ import { createRequire } from 'module';
 import { exec, execFile, execSync, spawn, spawnSync } from 'child_process';
 import { pgDb, pgHealth, pgListen } from './src/services/pgDb';
 import { registerDbQueryRoute } from './src/services/dbQueryRoute';
+import { registerTtsRoute } from './src/services/ttsRoute';
 import crypto from 'crypto';
 
 const require = createRequire(import.meta.url);
@@ -2500,6 +2501,7 @@ app.post('/api/live/broadcast', (req, res) => {
 
 // Tarayıcının veritabanı erişimi yalnız bu kapıdan (beyaz liste + yönetici denetimi)
 registerDbQueryRoute(app, isRequestAdmin);
+registerTtsRoute(app);
 
 // Gidiş-dönüş testi: NOTIFY → LISTEN → SSE zincirinin tamamını ölçer (Sistem Tanılama ekranı).
 app.post('/api/live/ping', async (req, res) => {
