@@ -490,7 +490,8 @@ export interface RecallMatchResult {
   number: number | null;
   negative: boolean;
   corrections: [string, string][];
-  matches: { questionId: string; prob: number }[];
+  /** `question`: kaydın hafif kopyası (istemcide havuz yüklü değilse gösterim için) */
+  matches: { questionId: string; prob: number; question?: QuestionItem }[];
 }
 
 export interface SimilarPastQuestion {
@@ -1681,6 +1682,15 @@ export const ApiService = {
       signal,
     });
     return res.ok ? res.data || null : null;
+  },
+
+  /** Öğrencinin öneri kararı (öğrenme verisi): "ayni" bağladı/birleştirdi, "farkli" reddetti. Hata sessizce yutulur. */
+  recallFeedback(input: { text: string; committeeId: string; questionId: string; decision: 'ayni' | 'farkli'; prob?: number }): void {
+    void safeJsonFetch('/api/recall/feedback', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(input),
+    }).catch(() => {});
   },
 
   async findSimilarPastQuestions(text: string, committeeId?: string): Promise<SimilarPastQuestion[]> {

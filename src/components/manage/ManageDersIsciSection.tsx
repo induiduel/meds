@@ -1,5 +1,5 @@
 import React, { Suspense, useEffect, useMemo, useState } from 'react';
-import { BookOpenCheck, CheckCircle2, ClipboardList, Eye, FileWarning, RefreshCw, XCircle, PenLine, Library } from 'lucide-react';
+import { BookOpenCheck, CheckCircle2, ClipboardList, Eye, FileWarning, RefreshCw, RotateCcw, XCircle, PenLine, Library } from 'lucide-react';
 import { safeJsonFetch } from '../../services/api';
 import { toast } from '../ui/Toast';
 import { NoteMarkdown } from '../ui/NoteMarkdown';
@@ -161,6 +161,17 @@ const OtomatikDersIsci: React.FC<{ adminEmail: string }> = ({ adminEmail }) => {
     api(`/taslak/${secili}`).then((x) => x.ok && setAyr(x.data));
   };
 
+  const yenidenGonder = async () => {
+    if (!secili) return;
+    setBusy(true);
+    const r = await api(`/taslak/${secili}/yeniden`, { method: 'POST', body: '{}' });
+    setBusy(false);
+    if (!r.ok) return toast.error((r.data as any)?.hata || 'Yeniden gönderilemedi.');
+    toast.success('Yeniden gönderildi; sunucu en geç 10 dakika içinde yeniden dener.');
+    await yukle();
+    api(`/taslak/${secili}`).then((x) => x.ok && setAyr(x.data));
+  };
+
   // yayınlanan taslak (scripts/ders_isci/yayinla.py) kararın önüne geçer; onaylı ama aktarılmamışsa "Onaylandı"
   const durumAnahtari = (t: Taslak) => (t.durum === 'yayinlandi' ? t.durum : t.karar?.karar ? t.karar.karar : t.durum);
   const gorunen = (liste || []).filter((t) =>
@@ -305,7 +316,9 @@ const OtomatikDersIsci: React.FC<{ adminEmail: string }> = ({ adminEmail }) => {
                       {ayr.karar.not ? ` — ${ayr.karar.not}` : ''}
                       {ayr.karar.kim ? ` (${ayr.karar.kim})` : ''}
                       {ayr.karar.karar === 'onayla' &&
-                        (ayr.durum === 'yayinlandi'
+                        (ayr.yayin?.durum === 'yayinlandi' && ayr.yayin.site_derlendi === false
+                          ? ' · Kaynaklara yazıldı ama site derlenemedi.'
+                          : ayr.durum === 'yayinlandi'
                           ? ' · Sitede yayında.'
                           : ayr.yayin?.durum === 'denetim_hatasi'
                             ? ' · Yayınlanamadı (yayın denetimi):'
@@ -318,6 +331,13 @@ const OtomatikDersIsci: React.FC<{ adminEmail: string }> = ({ adminEmail }) => {
                         ))}
                       </ul>
                     )}
+                    {ayr.karar.karar === 'onayla' &&
+                      ayr.yayin &&
+                      (ayr.yayin.durum !== 'yayinlandi' || ayr.yayin.site_derlendi === false) && (
+                        <button type="button" disabled={busy} className="ms-btn is-bad self-start" onClick={yenidenGonder}>
+                          <RotateCcw aria-hidden /> {ayr.yayin.durum === 'yayinlandi' ? 'Siteyi yeniden derle' : 'Yeniden gönder'}
+                        </button>
+                      )}
                   </>
                 ) : ayr.durum === 'onay_bekliyor' ? (
                   <>

@@ -134,11 +134,28 @@ export async function clusterRecall(items: RecallItem[], eng: RecallEngine, opts
   const out: { members: RecallItem[]; cohesion: number }[] = [];
   for (const group of byCommittee.values()) {
     const n = group.length;
-    const sim: Float32Array[] = Array.from({ length: n }, () => new Float32Array(n));
+    // Aday çiftler ters dizinle: ortak kök, terim ya da ilk 2 çıkmış soru komşusu olmayan çift hesaplanmaz (olasılık 0
+    // sayılır). Sık kökler (grubun %20'sinden fazlasında) aday üretmez; bunlar tek başına ayırt edici değildir.
+    // Hesaplanmayan çift = "ortak hiçbir şeyi yok" taban olasılığı (0 değil; 0 ortalama bağlantıyı yapay biçimde düşürür)
+    const base = 1 / (1 + Math.exp(-PAIR_WEIGHTS.bias));
+    const sim: Float32Array[] = Array.from({ length: n }, () => new Float32Array(n).fill(base));
+    const post = new Map<string, number[]>();
+    const keysOf = (it: RecallItem) => new Set([...it.a.stems.map((s) => `s:${s}`), ...it.a.terms.map((t) => `t:${t}`), ...it.a.bank.slice(0, 2).map((b) => `b:${b.id}`)]);
+    const keySets = group.map(keysOf);
+    keySets.forEach((ks, i) => { for (const k of ks) (post.get(k) || post.set(k, []).get(k)!).push(i); });
+    const maxDf = Math.max(20, Math.ceil(n * 0.2));
+    const seen = new Uint8Array(n);
     for (let i = 0; i < n; i++) {
-      for (let j = 0; j < i; j++) {
-        const p = pairProb(pairFeatures(group[i], group[j], eng, cache));
-        sim[i][j] = p; sim[j][i] = p;
+      seen.fill(0);
+      for (const k of keySets[i]) {
+        const list = post.get(k)!;
+        if (list.length > maxDf && !k.startsWith('b:')) continue;
+        for (const j of list) {
+          if (j >= i || seen[j]) continue;
+          seen[j] = 1;
+          const p = pairProb(pairFeatures(group[i], group[j], eng, cache));
+          sim[i][j] = p; sim[j][i] = p;
+        }
       }
       await yieldIfBusy();
     }
@@ -281,3 +298,29 @@ export function draftCluster(members: RecallItem[], eng: RecallEngine): RecallDr
 }
 
 export type { Letter };
+
+/**
+ * Artımlı kümeleme: yeni hatırlamayı mevcut kümelere ortalama bağlantıyla atar (kümenin en çok `cap` üyesiyle;
+ * en yenileri). En iyi küme eşiği geçmezse null → kendi tekil kümesini açar. Maliyet: küme × cap, havuz boyundan bağımsız
+ * değil ama O(n) (toplu hesap O(n²)). Yuva numarası çelişen kümeye atanmaz.
+ */
+export function assignToGroup<G extends { members: RecallItem[] }>(item: RecallItem, groups: Iterable<G>, eng: RecallEngine, opts: { linkProb?: number; cap?: number } = {}): { group: G; prob: number } | null {
+  const thr = opts.linkProb ?? LINK_PROB;
+  const cap = opts.cap ?? 12;
+  if (item.a.isNoise) return null;
+  let best: { group: G; prob: number } | null = null;
+  for (const g of groups) {
+    const ms = g.members;
+    if (!ms.length || ms[0].committeeId !== item.committeeId) continue;
+    if (item.numberAssigned && item.number && ms.some((m) => m.numberAssigned && m.number && m.number !== item.number)) continue;
+    const sample = ms.length > cap ? ms.slice(-cap) : ms;
+    // Ucuz ön eleme: hiçbir üyeyle ortak kök/terim yoksa geç
+    const st = new Set(item.a.stems);
+    if (!sample.some((m) => m.a.stems.some((s) => st.has(s)) || m.a.terms.some((t) => item.a.terms.includes(t)))) continue;
+    let sum = 0;
+    for (const m of sample) sum += pairProb(pairFeatures(item, m, eng));
+    const p = sum / sample.length;
+    if (p >= thr && (!best || p > best.prob)) best = { group: g, prob: p };
+  }
+  return best;
+}

@@ -1,5 +1,5 @@
 import React, { Suspense, useEffect, useMemo, useRef, useState } from 'react';
-import { ArrowLeftRight, ClipboardList, Copy, Eye, FilePlus2, FileWarning, Library, RefreshCw, Trash2, Wrench } from 'lucide-react';
+import { ArrowLeftRight, ClipboardList, Copy, Eye, FilePlus2, FileWarning, Library, RefreshCw, RotateCcw, Trash2, Wrench } from 'lucide-react';
 import { safeJsonFetch } from '../../services/api';
 import { toast } from '../ui/Toast';
 import { NoteMarkdown } from '../ui/NoteMarkdown';
@@ -30,6 +30,7 @@ type Taslak = {
   yeni: (Olcu & { baslik?: string }) | null;
   yayindakiler: (Olcu & { id: string; baslik?: string; surum: string })[];
   alternatif: boolean;
+  yayinda?: boolean;
   karar: { karar: string; islem?: Islem; kim?: string } | null;
   yayin: { durum?: string; hatalar?: string[]; kip?: Islem; deste_id?: string; site_derlendi?: boolean; yayin_zamani?: string } | null;
   calisiyor: { asama: string; gunluk: string } | null;
@@ -48,11 +49,20 @@ const ISLEM_AD: Record<Islem, string> = {
 const durumEtiketi = (t: Taslak): { label: string; cls: string } => {
   if (t.calisiyor) return { label: `Yayınlanıyor · ${t.calisiyor.asama}`, cls: 'is-warn' };
   if (t.yayin?.durum === 'yayinlandi') return { label: ISLEM_AD[t.yayin.kip || 'degistir'], cls: 'is-ok' };
+  if (t.yayin?.durum === 'yayinlandi' && t.yayin.site_derlendi === false) return { label: 'Yayında · site derlenemedi', cls: 'is-bad' };
+  if (t.yayin?.durum === 'kesildi') return { label: 'Yayın kesildi', cls: 'is-bad' };
   if (t.yayin?.durum && t.yayin.durum !== 'yayinlandi') return { label: 'Yayınlanamadı', cls: 'is-bad' };
   if (t.karar?.islem === 'kaldir' || t.durum === 'reddedildi') return { label: 'Kaldırıldı', cls: 'is-bad' };
   if (t.durum === 'onay_bekliyor') return { label: 'Onay bekliyor', cls: 'is-warn' };
   return { label: 'İşleniyor', cls: '' };
 };
+/** Gönderilmiş ama siteye geçmemiş (hata, kesilme ya da derleme düşmesi): yeniden gönderilebilir. */
+const yenidenGonderilebilir = (t: Taslak) =>
+  !t.calisiyor &&
+  t.karar?.karar === 'onayla' &&
+  t.karar?.islem !== 'kaldir' &&
+  !!t.yayin &&
+  (t.yayin.durum !== 'yayinlandi' || t.yayin.site_derlendi === false);
 const bekliyor = (t: Taslak) => t.durum === 'onay_bekliyor' && !t.yayin && !t.calisiyor && t.karar?.islem !== 'kaldir';
 
 const Karsilastir: React.FC<{ t: Taslak }> = ({ t }) => {
@@ -172,6 +182,18 @@ export const ManageDersRevizeSection: React.FC<{ adminEmail: string }> = ({ admi
     yukle();
   };
 
+  const yenidenGonder = async (t?: Taslak) => {
+    const hedefler = t ? [t] : (liste || []).filter(yenidenGonderilebilir);
+    if (!hedefler.length) return toast.error('Yeniden gönderilecek taslak yok.');
+    if (!t && !window.confirm(`${hedefler.length} taslak yeniden gönderilsin mi? Site en sonda bir kez derlenir.`)) return;
+    setBusy(true);
+    const r = t ? await api(`/taslak/${t.is_id}/yeniden`, { method: 'POST', body: '{}' }) : await api('/yeniden', { method: 'POST', body: '{}' });
+    setBusy(false);
+    if (!r.ok) return toast.error((r.data as any)?.hata || 'Yeniden gönderilemedi.');
+    toast.success(t ? 'Yeniden sıraya alındı.' : `${(r.data?.alinan || []).length} taslak yeniden sıraya alındı.`);
+    yukle();
+  };
+
   const topluGonder = async () => {
     const bek = (liste || []).filter(bekliyor).filter((t) => !t.denetim_hata);
     if (!bek.length) return toast.error('Gönderilecek bekleyen taslak yok.');
@@ -227,6 +249,11 @@ export const ManageDersRevizeSection: React.FC<{ adminEmail: string }> = ({ admi
             <button type="button" className="ms-btn is-sm is-primary" disabled={busy || !(liste || []).some(bekliyor)} onClick={topluGonder}>
               <Copy aria-hidden /> Tümünü ikili gönder
             </button>
+            {(liste || []).some(yenidenGonderilebilir) && (
+              <button type="button" className="ms-btn is-sm is-bad" disabled={busy} onClick={() => yenidenGonder()}>
+                <RotateCcw aria-hidden /> Hatalıları yeniden gönder ({(liste || []).filter(yenidenGonderilebilir).length})
+              </button>
+            )}
             <button type="button" className="ms-btn is-sm" onClick={yukle}>
               <RefreshCw aria-hidden /> Yenile
             </button>
@@ -272,6 +299,13 @@ export const ManageDersRevizeSection: React.FC<{ adminEmail: string }> = ({ admi
                 {bekliyor(t) && (
                   <div className="mt-2">
                     <Dugmeler t={t} kucuk />
+                  </div>
+                )}
+                {yenidenGonderilebilir(t) && (
+                  <div className="mt-2">
+                    <button type="button" disabled={busy} className="ms-btn is-sm is-bad" onClick={() => yenidenGonder(t)}>
+                      <RotateCcw aria-hidden /> Yeniden gönder
+                    </button>
                   </div>
                 )}
               </li>
@@ -351,7 +385,12 @@ export const ManageDersRevizeSection: React.FC<{ adminEmail: string }> = ({ admi
                     )}
                   </>
                 ) : null}
-                {bekliyor(ayr) || (ayr.yayin && ayr.yayin.durum !== 'yayinlandi' && !ayr.calisiyor) ? (
+                {yenidenGonderilebilir(ayr) && (
+                  <button type="button" disabled={busy} className="ms-btn is-bad self-start" onClick={() => yenidenGonder(ayr)}>
+                    <RotateCcw aria-hidden /> {ayr.yayin?.durum === 'yayinlandi' ? 'Siteyi yeniden derle' : 'Yeniden gönder'}
+                  </button>
+                )}
+                {bekliyor(ayr) ? (
                   <>
                     <p className="text-sm text-ink-2">
                       {ayr.alternatif

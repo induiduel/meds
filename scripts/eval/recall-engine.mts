@@ -9,8 +9,9 @@
 // Veri: scripts/eval/datasets/hatirlama/{hedef,hatirlama}_k*.json
 import fs from 'fs';
 import { createRecallEngine } from '../../src/services/recall/engine.ts';
-import { clusterRecall, draftCluster, setBankMatch, pairFeatures, PAIR_FEATURES, PAIR_WEIGHTS, setPairWeights, LINK_PROB, setLinkProb, type RecallItem } from '../../src/services/recall/cluster.ts';
+import { clusterRecall, assignToGroup, draftCluster, setBankMatch, pairFeatures, PAIR_FEATURES, PAIR_WEIGHTS, setPairWeights, LINK_PROB, setLinkProb, type RecallItem } from '../../src/services/recall/cluster.ts';
 import { splitRecall } from '../../src/services/recall/normalize.ts';
+import { fitPairModel } from '../../src/services/recall/fit.ts';
 import { fold } from '../../src/services/questionIntake.ts';
 
 const root = new URL('../../', import.meta.url).pathname;
@@ -116,45 +117,13 @@ if (FIT) {
     const a = dev[i], b = dev[j];
     if (a.committeeId !== b.committeeId || a.key.split('#')[0] === b.key.split('#')[0]) continue;
     const f = pairFeatures(a, b, engine);
-    X.push(PAIR_FEATURES.map((k) => (DROP.includes(k) ? 0 : (f as any)[k])));
+    X.push(PAIR_FEATURES.map((k) => (DROP.includes(k) && k !== 'opt' ? 0 : (f as any)[k])));
     Y.push(a.gold.some((g) => b.gold.includes(g)) ? 1 : 0);
   }
   if (arg('dump-pairs')) { fs.writeFileSync(arg('dump-pairs')!, JSON.stringify({ features: PAIR_FEATURES, X, Y })); console.log('çiftler yazıldı'); process.exit(0); }
   const pos = Y.filter(Boolean).length;
-  // Standartlaştırılmış özelliklerle Adam (L2), sonra ağırlıklar özgün ölçeğe geri çevrilir
-  const D = PAIR_FEATURES.length;
-  const mu = new Array(D).fill(0), sd = new Array(D).fill(1);
-  for (let k = 1; k < D; k++) {
-    let m = 0; for (const x of X) m += x[k]; m /= X.length;
-    let v = 0; for (const x of X) v += (x[k] - m) ** 2; v = Math.sqrt(v / X.length) || 1;
-    mu[k] = m; sd[k] = v;
-  }
-  const Z = X.map((x) => x.map((v, k) => (k ? (v - mu[k]) / sd[k] : 1)));
-  const wz = new Array(D).fill(0), m1 = new Array(D).fill(0), m2 = new Array(D).fill(0);
-  const l2 = Number(arg('l2', '0.0001')), b1 = 0.9, b2 = 0.999, lr = 0.05;
-  // İşaret kısıtı: benzerlik ≥ 0, ceza ≤ 0 (ilişkili özelliklerde anlamsız negatif ağırlıkları önler); sınıf dengesi
-  const SIGN: Record<string, number> = { cos: 1, contain: 1, chr: 1, term: 1, anchor: 1, nbr: 1, opt: 1, sameNo: 1, diffNo: -1, dersConflict: -1 };
-  const wPos = (Y.length - pos) / Math.max(1, pos);
-  for (let ep = 1; ep <= 1500; ep++) {
-    const g = new Array(D).fill(0);
-    for (let i = 0; i < Z.length; i++) {
-      const z = Z[i].reduce((s2, x, k) => s2 + x * wz[k], 0);
-      const p = 1 / (1 + Math.exp(-z));
-      const sw = Y[i] ? wPos : 1;
-      for (let k = 0; k < D; k++) g[k] += sw * (p - Y[i]) * Z[i][k];
-    }
-    for (let k = 0; k < D; k++) {
-      const gk = g[k] / Z.length + (k ? l2 * wz[k] : 0);
-      m1[k] = b1 * m1[k] + (1 - b1) * gk; m2[k] = b2 * m2[k] + (1 - b2) * gk * gk;
-      wz[k] -= (lr * (m1[k] / (1 - b1 ** ep))) / (Math.sqrt(m2[k] / (1 - b2 ** ep)) + 1e-8);
-      const sg = SIGN[PAIR_FEATURES[k]];
-      if (sg && wz[k] * sg < 0) wz[k] = 0;
-    }
-  }
-  const w = wz.map((v, k) => (k ? v / sd[k] : v));
-  w[0] = wz[0] - wz.slice(1).reduce((s2, v, k) => s2 + (v * mu[k + 1]) / sd[k + 1], 0);
-  // Dengeli eğitim olasılığı kaydırır: yanlış birleşme pahalı olduğundan eşik dev'de F1'e göre seçilir
-  const learned = Object.fromEntries(PAIR_FEATURES.map((k, i) => [k, Math.round(w[i] * 100) / 100])) as typeof PAIR_WEIGHTS;
+  const learned = fitPairModel(X, Y, { l2: Number(arg('l2', '0.5')), fixed: DROP.includes('opt') ? { opt: PAIR_WEIGHTS.opt } : {} });
+  // Dengeli eğitim olasılığı kaydırır: yanlış birleşme pahalı olduğundan eşik dev'de F0.5'e göre seçilir
   setPairWeights(learned);
   console.log(`dev çiftleri ${X.length} (pozitif ${pos}) · öğrenilen ağırlıklar:`, JSON.stringify(learned));
   let bestThr = LINK_PROB, bestF = -1;
@@ -175,8 +144,24 @@ if (FIT) {
 const split = arg('split', 'test')!;
 const items = itemsFor(splitOf(split));
 const t1 = performance.now();
-const groups = await clusterRecall(items, engine);
-const clusterMs = performance.now() - t1;
+let groups = await clusterRecall(items, engine);
+let clusterMs = performance.now() - t1;
+// --incremental f: ilk f oranı toplu kümelenir, kalanlar geliş sırasıyla tek tek mevcut kümelere atanır (sunucudaki artımlı yol)
+if (arg('incremental')) {
+  const f = Number(arg('incremental')) || 0.3;
+  const order = [...items].sort((a, b) => (a.createdAt < b.createdAt ? -1 : 1));
+  const cut = Math.floor(order.length * f);
+  const t2 = performance.now();
+  const gs: { members: RecallItem[]; cohesion: number }[] = cut ? await clusterRecall(order.slice(0, cut), engine) : [];
+  for (const it of order.slice(cut)) {
+    if (it.a.isNoise) continue;
+    const hit = assignToGroup(it, gs, engine, { linkProb: Number(arg('assign-p', '0.6')), cap: Number(arg('cap', '12')) });
+    if (hit) hit.group.members.push(it); else gs.push({ members: [it], cohesion: 1 });
+  }
+  clusterMs = performance.now() - t2;
+  groups = gs;
+  console.log(`(artımlı: ilk %${Math.round(f * 100)} toplu, ${order.length - cut} öge tek tek atandı)`);
+}
 
 // Gürültü
 const noiseGold = items.filter((x) => !x.gold.length), noisePred = items.filter((x) => x.a.isNoise);

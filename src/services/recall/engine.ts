@@ -74,14 +74,19 @@ export function dot(a: Vec, b: Vec): number {
 }
 
 /** Ders sınıflayıcı birleşim ağırlıkları (scripts/eval/recall-engine.mts --fit-ders ile seçildi). */
-export const CLASSIFY = { bankCentroid: 0.4, bankKnn: 0.4, lecCentroid: 0.2, lecKnn: 0, priorPenalty: 0, hint: 0.25, temperature: 0.06 };
+export const CLASSIFY = { bankCentroid: 0.4, bankKnn: 0.4, lecCentroid: 0.2, lecKnn: 0, priorPenalty: 0, hint: 0.25, temperature: 0.06, numberPrior: 0.15 };
+// numberPrior: scripts/eval/recall-number-prior.mts (15 gerçek sınav; 0 → %77,6, 0,15 → %81,3, 0,3 → %78,4)
 
 export interface RecallEngine {
   version: string;
   bankSize: number;
   lexicon: Lexicon;
   terms: TermIndex;
-  analyze: (text: string, opts: { committeeId: string; options?: { key?: string | null; text: string }[]; claimed?: string | null }) => Analysis;
+  /**
+   * `dersPrior`: sınavın kendi sırasından ders ön bilgisi (aynı sınavda bu numaranın komşu sorularının dersleri;
+   * `numberDersPrior`). Toplamı ≤ 1.
+   */
+  analyze: (text: string, opts: { committeeId: string; options?: { key?: string | null; text: string }[]; claimed?: string | null; dersPrior?: Record<string, number> | null }) => Analysis;
   /** Öğrenci metnini okunur cümleye çevirir (sohbet/iddia/no atılır, yazım düzeltilir; bilgi eklenmez). */
   cleanSentence: (text: string) => string;
   /** Kurul içinde çıkmış soru araması (küme merkezi vb. için). */
@@ -271,7 +276,7 @@ export async function createRecallEngine(rootDir: string, opts: LoadOptions = {}
   };
 
   const P = CLASSIFY;
-  const classify = (cm: CommitteeModel | undefined, v: Vec, hintWords: string[]) => {
+  const classify = (cm: CommitteeModel | undefined, v: Vec, hintWords: string[], prior?: Record<string, number> | null) => {
     if (!cm || !v.size) return { ders: [] as { name: string; p: number }[], konu: null, bank: [] as { id: string; score: number }[] };
     const knn = search(cm.docs.length, cm.postings, v, 25);
     const lknn = search(cm.lec.length, cm.lecPostings, v, 5);
@@ -296,6 +301,7 @@ export async function createRecallEngine(rootDir: string, opts: LoadOptions = {}
       sc -= P.priorPenalty * ((cm.prior.get(name) || 0) / totalPrior);
       raw.set(name, sc);
     }
+    if (prior) for (const [name, w] of Object.entries(prior)) if (raw.has(name)) raw.set(name, raw.get(name)! + P.numberPrior * w);
     for (const w of hintWords) for (const [wre, dre] of DERS_HINT) if (wre.test(w)) {
       for (const name of cm.disciplines) if (dre.test(name)) raw.set(name, (raw.get(name) || 0) + P.hint);
     }
@@ -343,7 +349,7 @@ export async function createRecallEngine(rootDir: string, opts: LoadOptions = {}
     const claimAny = !!(claimedLetter(text) || claimedText(text) || /\b(?:I{1,3}|IV|V)\b(?:\s*(?:,|ve)\s*(?:I{1,3}|IV|V)\b)+/.test(text));
     const isNoise = !tset.length && informative === 0 && !hasAbbr && !claimAny && !questionNumber(text);
     const cm = committees.get(o.committeeId);
-    const cls = isNoise ? { ders: [], konu: null, bank: [] } : classify(cm, vec, words(text));
+    const cls = isNoise ? { ders: [], konu: null, bank: [] } : classify(cm, vec, words(text), o.dersPrior);
     const claimL = (/^[A-E]$/.test(String(o.claimed || '')) ? (o.claimed as Letter) : null) || claimedLetter(text);
     return {
       words: w,
@@ -404,4 +410,27 @@ export function getRecallEngine(rootDir: string, getPastQuestions?: () => any[])
   // Kurulum bitene kadar eskisi
   if (prev) return prev.then((p) => p, () => next);
   return shared.engine;
+}
+
+/**
+ * Sınavın kendi sırasından ders ön bilgisi. Kurullar soruları ders blokları hâlinde sorar ama blok sırası yıldan yıla
+ * değişir; bu yüzden aynı sınavın (havuzun) numarası bilinen sorularına bakılır. Ölçüm (15 gerçek sınav dökümü,
+ * numaralı soruların yalnız %20'si biliniyorken): komşu oyu %74, iki yandaki en yakın komşu aynı dersse %90 isabet.
+ */
+export function numberDersPrior(known: { number: number; ders: string }[], n: number | null | undefined): Record<string, number> | null {
+  if (!n || !known.length) return null;
+  let lo: { number: number; ders: string } | null = null, hi: { number: number; ders: string } | null = null;
+  const w = new Map<string, number>();
+  for (const k of known) {
+    const d = Math.abs(k.number - n);
+    if (!d || d > 3) continue;
+    w.set(k.ders, (w.get(k.ders) || 0) + 1 / d);
+    if (k.number < n && (!lo || k.number > lo.number)) lo = k;
+    if (k.number > n && (!hi || k.number < hi.number)) hi = k;
+  }
+  if (lo && hi && lo.ders === hi.ders) return { [lo.ders]: 1 };
+  const tot = [...w.values()].reduce((a, b) => a + b, 0);
+  if (!tot) return null;
+  // Tek yandan ya da karışık komşuluk: daha zayıf (ölçümde %74)
+  return Object.fromEntries([...w].map(([d, x]) => [d, (0.6 * x) / tot]));
 }

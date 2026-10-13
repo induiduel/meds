@@ -2,8 +2,21 @@ import fs from 'fs';
 import path from 'path';
 import webpush from 'web-push';
 import type { Transporter } from 'nodemailer';
+import { repairLegacyNotificationPath } from './notificationLinks.ts';
 
 export const ADMIN_EMAIL = 'nofrostlife@gmail.com';
+
+/** Eski kayıtların /cikmis/<etiket> adresini hedefin gerçek yoluna çevirir (bkz. notificationLinks). */
+function withRepairedUrl(item: AdminNotificationItem): AdminNotificationItem {
+  if (!item?.url || !/\/cikmis\/([^/?#]*(%3A|%C2%B7|:)|k\d+-\d+-q\d+(?=$|[?#]))/i.test(item.url)) return item;
+  const fixed = repairLegacyNotificationPath(item.questionId);
+  if (!fixed) return item;
+  try {
+    return { ...item, url: new URL(fixed, item.url).href };
+  } catch {
+    return item;
+  }
+}
 
 export interface AdminPushSubscription {
   endpoint: string;
@@ -146,7 +159,7 @@ export class ServerNotificationService {
       if (!fs.existsSync(this.notifsFile)) return [];
       const content = fs.readFileSync(this.notifsFile, 'utf-8');
       const list = JSON.parse(content);
-      return (Array.isArray(list) ? list : []).slice(0, limit);
+      return (Array.isArray(list) ? list : []).slice(0, limit).map(withRepairedUrl);
     } catch {
       return [];
     }

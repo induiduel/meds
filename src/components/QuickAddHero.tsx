@@ -284,6 +284,25 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
   const [simOpen, setSimOpen] = useState(false);
   const [sources, setSources] = useState<SourceRefLite[]>([]);
   const [realtimeMatches, setRealtimeMatches] = useState<RealtimeMatchItem[]>([]);
+  // Öğrenci kararları (öğrenme verisi): son eşleşme sorgusunun metni ve bu yazımda reddedilen öneriler
+  const lastMatchTextRef = React.useRef('');
+  const [dismissedMatchIds, setDismissedMatchIds] = useState<Set<string>>(new Set());
+  // Yeni soruya geçilince (kutu boşalınca) reddedilenler sıfırlanır
+  useEffect(() => { if (!text.trim()) setDismissedMatchIds(new Set()); }, [text]);
+  const dismissedRef = React.useRef(dismissedMatchIds);
+  dismissedRef.current = dismissedMatchIds;
+  const rejectMatch = (id: string) => {
+    sendDecision(id, 'farkli');
+    setDismissedMatchIds((prev) => new Set(prev).add(id));
+    setRealtimeMatches((prev) => prev.filter((x) => x.question.id !== id));
+    setSelectedMatchIds((prev) => { const n = new Set(prev); n.delete(id); return n; });
+  };
+  const sendDecision = (questionId: string, decision: 'ayni' | 'farkli') => {
+    const text = lastMatchTextRef.current;
+    const m = realtimeMatches.find((x) => x.question.id === questionId);
+    if (!text || !committee?.id) return;
+    ApiService.recallFeedback({ text, committeeId: committee.id, questionId, decision, prob: m ? m.compatibility.score / 100 : undefined });
+  };
   const [selectedMatchIds, setSelectedMatchIds] = useState<Set<string>>(new Set());
   const [isMergingSelected, setIsMergingSelected] = useState(false);
   const [smartAssistant, setSmartAssistant] = useState<SmartQuestionAssistantResult | null>(null);
@@ -371,6 +390,7 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
         // (src/services/recall/; ölçüm scripts/eval/recall-realtime.mts: ilk öneri doğru %83, ders %63 —
         // eski tarayıcı algoritması %54,5 / %36 ve yazarken 39 ms ana iş parçacığı yükü).
         const local = getSmartQuestionAssistant(q, optionsList, committee.id);
+        lastMatchTextRef.current = q;
         const r = await ApiService.recallMatch({
           text: q,
           committeeId: committee.id,
@@ -400,7 +420,7 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
         const byId = new Map(questions.map((x) => [String(x.id), x]));
         const matches: RealtimeMatchItem[] = (r?.matches || [])
           .map((m) => {
-            const question = byId.get(String(m.questionId));
+            const question = byId.get(String(m.questionId)) || m.question;
             if (!question) return null;
             return {
               question,
@@ -419,7 +439,7 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
               contextHashtag: r!.konu?.name ? toContextHashtag(r!.konu.name) : undefined,
             } as RealtimeMatchItem;
           })
-          .filter((m): m is RealtimeMatchItem => !!m);
+          .filter((m): m is RealtimeMatchItem => !!m && !dismissedRef.current.has(m.question.id));
         setRealtimeMatches(matches);
 
         // Geçersiz kalan seçili id'leri temizle
@@ -508,6 +528,7 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
 
   // Bir soruya doğrudan bağlama aksiyonu
   const handleLinkToQuestion = (targetQ: QuestionItem) => {
+    sendDecision(targetQ.id, 'ayni');
     setLinkedQuestion(targetQ);
     if (targetQ.questionNumber) {
       setQuestionNumber(String(targetQ.questionNumber));
@@ -530,6 +551,7 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
     if (selectedMatchIds.size === 0) return;
     const selectedList = realtimeMatches.filter((m) => selectedMatchIds.has(m.question.id));
     if (selectedList.length === 0) return;
+    for (const m of selectedList) sendDecision(m.question.id, 'ayni');
 
     setIsMergingSelected(true);
     try {
@@ -1228,6 +1250,9 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
                       <button type="button" className="is-ai" onClick={() => setOptimizingQuestion(q)} title="Taslağı amfi slaytları ve AI ile tam soruya dönüştür">
                         <Wand2 aria-hidden />AI ile dönüştür
                       </button>
+                      <button type="button" onClick={() => rejectMatch(q.id)} title="Bu öneri benim hatırladığım soru değil (öneriler bundan öğrenir)">
+                        <X aria-hidden />Farklı soru
+                      </button>
                       {q.discipline && <span className="qh-sim-d">{q.discipline}</span>}
                     </div>
                   </article>
@@ -1903,6 +1928,15 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
                         >
                           <Wand2 className="w-3.5 h-3.5" />
                           AI ile Dönüştür
+                        </button>
+                        <button
+                          type="button"
+                          onClick={() => rejectMatch(q.id)}
+                          className="h-7 px-2.5 rounded-lg text-ink-2 hover:text-ink hover:bg-canvas text-xs font-medium inline-flex items-center gap-1 cursor-pointer transition-colors"
+                          title="Bu öneri benim hatırladığım soru değil (öneriler bundan öğrenir)"
+                        >
+                          <X className="w-3.5 h-3.5" />
+                          Farklı soru
                         </button>
                       </div>
                       {q.discipline && (

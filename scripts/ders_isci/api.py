@@ -100,6 +100,9 @@ class H(BaseHTTPRequestHandler):
         return self._json(404, {"hata": "yol yok"})
 
     def do_POST(self):  # noqa: N802
+        y = re.match(r"^/taslak/([^/]+)/yeniden$", self.path.split("?")[0].rstrip("/"))
+        if y:
+            return self._yeniden(y.group(1))
         m = re.match(r"^/taslak/([^/]+)/karar$", self.path.split("?")[0].rstrip("/"))
         d = self._taslak(m.group(1)) if m else None
         if not d:
@@ -120,6 +123,28 @@ class H(BaseHTTPRequestHandler):
             yaz(d / "durum.json", oku(d / "durum.json", {}) | {"durum": "reddedildi", "zaman": time.time()})
         log(f"karar: {d.name} → {karar}" + (f" ({k['not'][:80]})" if k["not"] else ""))
         return self._json(200, {"ok": True, "karar": k})
+
+
+    def _yeniden(self, is_id: str):
+        """Onaylanıp siteye geçmeyen taslağı yeniden gönder: yayın hatasında yayin.json silinir (yayın zamanlayıcısı
+        ≤10 dk içinde yeniden dener); yayınlanıp site derlenemediyse derleme isteği bırakılır."""
+        d = self._taslak(is_id)
+        if not d:
+            return self._json(404, {"hata": "taslak yok"})
+        if (oku(d / "karar.json", {}) or {}).get("karar") != "onayla":
+            return self._json(409, {"hata": "taslak onaylanmamış"})
+        y = oku(d / "yayin.json", None)
+        if not y:
+            return self._json(409, {"hata": "taslak zaten yayın sırasında"})
+        if y.get("durum") == "yayinlandi":
+            if y.get("site_derlendi") is not False:
+                return self._json(409, {"hata": "taslak sitede yayında"})
+            yaz(d.parent / "derle_iste.json", {"is_id": d.name, "zaman": time.time()})
+            log(f"yeniden derleme istendi: {d.name}")
+            return self._json(200, {"ok": True, "is": "derle"})
+        (d / "yayin.json").unlink(missing_ok=True)
+        log(f"yeniden gönderildi: {d.name} (önceki: {y.get('durum')})")
+        return self._json(200, {"ok": True, "is": "yayinla"})
 
 
 def baslat(port: int = 8095):

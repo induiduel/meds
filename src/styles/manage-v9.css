@@ -1,0 +1,265 @@
+/* =============================================================
+ * Yönetim konsolu · v9 (Admin Panel v9 canvas'ı)
+ * https://claude.ai/artifact/AsTKddshKd6Qhf3A4iCsuE
+ * Konsol açıkken <html> "ms-v9" sınıfını taşır; kurallar :root.ms-v9 ile
+ * başlar ki health.css'teki html.ui-v7 kurallarını ve index.css'teki v3
+ * konsol kurallarını yük sırasından bağımsız ezsin. Renkler palettes.ts
+ * token'larından gelir: tema/palet seçimi konsolda da geçerlidir.
+ * Dil: beyaz yüzey + 1px çizgi, 12px köşe, 9–10px köşeli denetimler,
+ * büyük harfli grup başlıkları, sıkı satırlar.
+ * ============================================================= */
+
+:root.ms-v9 { --msv-r: 12px; --msv-r-ctl: 10px; --msv-ctl: 34px; --msv-ctl-sm: 28px; }
+@media (pointer: coarse) { :root.ms-v9 { --msv-ctl: 44px; --msv-ctl-sm: 36px; } }
+
+/* ---------- Kabuk ---------- */
+:root.ms-v9 .ms-console { background: var(--color-canvas); }
+:root.ms-v9 .ms-side {
+  width: 248px; padding: 14px 10px 12px; gap: 1px;
+  background: var(--color-white); border-right: 1px solid var(--color-line);
+}
+:root.ms-v9 .msv-brand {
+  display: flex; align-items: center; gap: 9px; width: 100%; padding: 2px 8px 12px; border: 0; background: transparent;
+  color: var(--color-ink); cursor: pointer; text-align: left; border-radius: 10px; font: inherit;
+}
+:root.ms-v9 .msv-brand:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+:root.ms-v9 .msv-logo {
+  width: 30px; height: 30px; border-radius: 9px; flex-shrink: 0; display: grid; place-items: center;
+  background: var(--color-accent); color: var(--color-on-accent, #fff); font: 800 14px/1 var(--font-sans);
+}
+:root.ms-v9 .msv-word { font-size: 16px; font-weight: 700; letter-spacing: -.02em; }
+:root.ms-v9 .msv-role {
+  margin-left: auto; height: 22px; padding: 0 8px; border-radius: 99px; display: inline-flex; align-items: center; gap: 4px;
+  background: var(--color-accent-soft); color: var(--color-accent); font-size: 11.5px; font-weight: 650;
+}
+:root.ms-v9 .msv-role > svg { width: 12px; height: 12px; }
+:root.ms-v9 .ms-side .ms-cpal-btn {
+  display: flex; flex: 0 0 auto; width: auto; max-width: none; height: 34px; margin: 0 2px 8px; padding: 0 8px 0 10px;
+  border-radius: 9px; border: 1px solid var(--color-line); background: var(--color-canvas); box-shadow: none;
+  color: var(--color-ink-3); font-size: 13px;
+}
+:root.ms-v9 .ms-side .ms-cpal-btn :is(span, kbd) { display: inline-flex; }
+:root.ms-v9 .ms-side .ms-cpal-btn:hover { border-color: var(--color-line-2); color: var(--color-ink-2); }
+:root.ms-v9 .ms-side-group {
+  padding: 12px 10px 4px; font-size: 11px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--color-ink-3);
+}
+:root.ms-v9 .ms-side-item {
+  min-height: 32px; gap: 10px; padding: 0 10px; border-radius: 9px; font-size: 13.5px; font-weight: 500; color: var(--color-ink-2);
+}
+:root.ms-v9 .ms-side-item > svg { width: 17px; height: 17px; }
+:root.ms-v9 .ms-side-item:hover { background: var(--color-canvas); color: var(--color-ink); }
+:root.ms-v9 .ms-side-item.is-on { background: var(--color-accent-soft); color: var(--color-accent); font-weight: 650; }
+:root.ms-v9 .ms-side-item:focus-visible { outline: 2px solid var(--color-accent); outline-offset: -2px; }
+:root.ms-v9 .ms-side-item .n {
+  min-width: 20px; height: 20px; padding: 0 6px; font-size: 11.5px; font-weight: 700; background: var(--color-field); color: var(--color-ink-2);
+}
+:root.ms-v9 .ms-side-item.is-on .n { background: var(--color-white); color: var(--color-accent); }
+:root.ms-v9 .ms-side-item .n.is-alert { background: var(--color-bad); color: var(--color-on-solid, #fff); }
+:root.ms-v9 .ms-side-item .n.is-bump { animation: msv-bump .9s var(--ms-ease, ease) both; }
+@keyframes msv-bump { 0% { transform: scale(1); } 25% { transform: scale(1.35); } 60% { transform: scale(.94); } 100% { transform: scale(1); } }
+:root.ms-v9 .msv-me {
+  display: flex; align-items: center; gap: 8px; padding: 8px 10px 2px; margin-top: 4px; border-top: 1px solid var(--color-line-soft);
+  font-size: 12px; color: var(--color-ink-3); min-width: 0;
+}
+:root.ms-v9 .msv-me > span:last-child { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+/* Üst çubuk: sayfa başlığı burada; gövdede ikinci büyük başlık yok */
+:root.ms-v9 .ms-ctop {
+  height: auto; min-height: 56px; padding: 8px 12px; gap: 8px; flex-wrap: nowrap;
+  background: var(--color-white); border-bottom: 1px solid var(--color-line);
+}
+@media (min-width: 640px) { :root.ms-v9 .ms-ctop { padding: 8px 20px; } }
+:root.ms-v9 .msv-titlebox { display: flex; align-items: center; gap: 8px; min-width: 0; flex: 0 1 auto; }
+:root.ms-v9 .msv-titlebox > .msv-title { flex-shrink: 0; max-width: 32ch; }
+/* Dar masaüstünde üst çubuk kalabalıklaşmasın: yoğunluk ve eşitleme saati geniş ekranda */
+@media (max-width: 1279px) { :root.ms-v9 .ms-ctop .ms-density { display: none !important; } :root.ms-v9 .msv-live small { display: none; } }
+:root.ms-v9 .msv-title { margin: 0; font-family: var(--font-sans); font-size: 19px; font-weight: 700; letter-spacing: -.015em; color: var(--color-ink); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+:root.ms-v9 .msv-count {
+  height: 22px; padding: 0 8px; border-radius: 99px; display: inline-flex; align-items: center; flex-shrink: 0;
+  background: var(--color-accent-soft); color: var(--color-accent); font-size: 12px; font-weight: 700; font-variant-numeric: tabular-nums;
+}
+:root.ms-v9 .msv-count.is-alert { background: var(--color-bad-soft); color: var(--color-bad-text); }
+:root.ms-v9 .msv-hint { font-size: 12.5px; color: var(--color-ink-3); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0; display: none; }
+@media (min-width: 1280px) { :root.ms-v9 .msv-hint { display: block; max-width: 420px; } }
+:root.ms-v9 .ms-ctop .ms-menu-btn { height: 44px; gap: 6px; padding: 0 8px; border-radius: 10px; background: transparent; color: var(--color-ink); }
+:root.ms-v9 .ms-ctop .ms-menu-btn .msv-title { font-size: 18px; }
+:root.ms-v9 .ms-ctop > .ms-cpal-btn { display: none; }
+@media (max-width: 1023px) {
+  :root.ms-v9 .ms-ctop > .msv-titlebox { display: none; }
+  :root.ms-v9 .ms-ctop > .ms-cpal-btn { display: inline-flex; flex: 0 0 auto; width: 44px; height: 44px; padding: 0; justify-content: center; background: transparent; box-shadow: none; }
+  :root.ms-v9 .ms-ctop > .ms-cpal-btn :is(span, kbd) { display: none; }
+}
+
+/* Canlı bağlantı göstergesi */
+:root.ms-v9 .msv-live {
+  display: inline-flex; align-items: center; gap: 6px; height: 28px; padding: 0 10px; border-radius: 99px; flex-shrink: 0;
+  font-size: 12px; font-weight: 600; color: var(--color-ink-2); background: var(--color-canvas); border: 1px solid var(--color-line);
+  white-space: nowrap;
+}
+:root.ms-v9 .msv-live i { width: 7px; height: 7px; border-radius: 50%; background: var(--color-line-2); flex-shrink: 0; }
+:root.ms-v9 .msv-live.is-connected i { background: var(--color-ok-bright, var(--color-ok)); box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-ok) 18%, transparent); }
+:root.ms-v9 .msv-live.is-connecting i { background: var(--color-warn); animation: msv-blink 1s ease-in-out infinite; }
+:root.ms-v9 .msv-live.is-disconnected { color: var(--color-bad-text); background: var(--color-bad-soft); border-color: transparent; }
+:root.ms-v9 .msv-live.is-disconnected i { background: var(--color-bad); }
+:root.ms-v9 .msv-live small { font-size: 11.5px; font-weight: 500; color: var(--color-ink-3); }
+@keyframes msv-blink { 50% { opacity: .3; } }
+@media (max-width: 767px) { :root.ms-v9 .msv-live { padding: 0; width: 28px; justify-content: center; } :root.ms-v9 .msv-live :is(span, small) { display: none; } }
+@media (prefers-reduced-motion: reduce) { :root.ms-v9 .msv-live.is-connecting i, :root.ms-v9 .ms-side-item .n.is-bump { animation: none; } }
+
+/* Gövde */
+:root.ms-v9 .ms-cinner { max-width: 1440px; padding: 16px 14px 48px; gap: 12px; }
+@media (min-width: 640px) { :root.ms-v9 .ms-cinner { padding: 16px 20px 56px; } }
+:root.ms-v9 .msv-mhead { display: flex; flex-direction: column; gap: 2px; }
+:root.ms-v9 .msv-mhead p { margin: 0; font-size: 13px; color: var(--color-ink-3); }
+@media (min-width: 1024px) { :root.ms-v9 .msv-mhead { display: none; } }
+
+/* ---------- Ortak parçalar ---------- */
+:root.ms-v9 :is(.ms-panel, .ms-table-wrap, .ms-ders-acc) {
+  background: var(--color-white); border: 1px solid var(--color-line) !important; border-radius: var(--msv-r); box-shadow: none;
+}
+:root.ms-v9 .ms-panel-head { min-height: 48px; padding: 10px 14px; border-bottom: 1px solid var(--color-line-soft); }
+:root.ms-v9 .ms-panel-title { font-size: 14px; font-weight: 650; }
+:root.ms-v9 .ms-panel-body { padding: 14px; gap: 12px; }
+:root.ms-v9 .ms-actionbar { border-radius: 0 0 var(--msv-r) var(--msv-r); background: color-mix(in srgb, var(--color-canvas) 92%, transparent); }
+
+:root.ms-v9 .ms-row { padding: 10px 14px; gap: 10px; border-top-color: var(--color-line-soft); }
+:root.ms-v9 .ms-row.is-button:hover { background: var(--color-canvas); }
+:root.ms-v9 .ms-row.is-on { background: color-mix(in srgb, var(--color-accent-soft) 70%, var(--color-white)); box-shadow: inset 3px 0 0 var(--color-accent); }
+:root.ms-v9 .ms-row-title { font-size: 13.5px; font-weight: 650; }
+:root.ms-v9 .ms-row-text { font-size: 12.5px; color: var(--color-ink-2); }
+:root.ms-v9 .ms-row-meta { font-size: 11.5px; }
+:root.ms-v9 .ms-ricon { width: 28px; height: 28px; border-radius: 8px; }
+:root.ms-v9 .ms-ricon > svg { width: 15px; height: 15px; }
+:root.ms-v9 .ms-day {
+  padding: 8px 14px 6px; font-size: 11px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase;
+  color: var(--color-ink-3); background: var(--color-canvas); border-top: 1px solid var(--color-line-soft); border-bottom: 1px solid var(--color-line-soft);
+}
+
+/* Düğmeler: hap yerine 10px köşe; ikincil düğme çizgili beyaz */
+:root.ms-v9 .ms-btn {
+  height: var(--msv-ctl); padding: 0 13px; border-radius: var(--msv-r-ctl); font-size: 13px; font-weight: 650;
+  border: 1px solid var(--color-line-2); background: var(--color-white); color: var(--color-ink);
+}
+:root.ms-v9 .ms-btn:hover { background: var(--color-canvas); }
+:root.ms-v9 .ms-btn > svg { width: 16px; height: 16px; }
+:root.ms-v9 .ms-btn.is-primary { background: var(--color-accent); border-color: var(--color-accent); color: var(--color-on-accent, #fff); }
+:root.ms-v9 .ms-btn.is-primary:hover { background: var(--color-accent-hover); border-color: var(--color-accent-hover); }
+:root.ms-v9 .ms-btn.is-ok { background: var(--color-ok); border-color: var(--color-ok); color: var(--color-on-solid, #fff); }
+:root.ms-v9 .ms-btn:is(.is-tonal, .is-on) { background: var(--color-accent-soft); border-color: transparent; color: var(--color-accent); }
+:root.ms-v9 .ms-btn.is-warn { background: var(--color-warn-soft); border-color: transparent; color: var(--color-warn); }
+:root.ms-v9 .ms-btn.is-ghost { background: transparent; border-color: transparent; color: var(--color-ink-2); }
+:root.ms-v9 .ms-btn.is-ghost:hover { background: var(--color-field); color: var(--color-ink); }
+:root.ms-v9 .ms-btn.is-danger { background: var(--color-white); border-color: color-mix(in srgb, var(--color-bad) 30%, var(--color-white)); color: var(--color-bad-text); }
+:root.ms-v9 .ms-btn.is-danger:hover { background: var(--color-bad-soft); }
+:root.ms-v9 .ms-btn.is-armed { background: var(--color-bad); border-color: var(--color-bad); color: var(--color-on-solid, #fff); }
+:root.ms-v9 .ms-btn.is-outline { background: var(--color-white); border-color: var(--color-line-2); color: var(--color-ink); }
+:root.ms-v9 .ms-btn.is-sm { height: var(--msv-ctl-sm); padding: 0 10px; border-radius: 8px; font-size: 12.5px; }
+:root.ms-v9 .ms-btn.is-icon { width: var(--msv-ctl); padding: 0; }
+:root.ms-v9 .ms-btn.is-icon.is-sm { width: var(--msv-ctl-sm); }
+:root.ms-v9 .ms-btn:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+:root.ms-v9 .ms-bulkbar .ms-btn { border-color: transparent; background: color-mix(in srgb, currentColor 14%, transparent); color: inherit; }
+:root.ms-v9 .ms-bulkbar .ms-btn.is-primary { background: var(--color-accent); color: var(--color-on-accent, #fff); }
+:root.ms-v9 .ms-bulkbar .ms-btn:is(.is-armed, .is-danger) { background: var(--color-bad); color: var(--color-on-solid, #fff); }
+:root.ms-v9 .ms-bulkbar { border-radius: var(--msv-r); padding: 5px 6px 5px 14px; }
+
+:root.ms-v9 .ms-tag { height: 22px; padding: 0 8px; font-size: 11.5px; font-weight: 700; }
+
+/* Çipler ve bölümlü seçici */
+:root.ms-v9 .ms-fchip,
+:root.ms-v9 .ms-chipbar:not(.is-wrap) > :is(.ms-chip, .ms-fchip) {
+  height: 30px; padding: 0 10px 0 12px; border-radius: 99px !important; border: 1px solid var(--color-line);
+  background: var(--color-white); color: var(--color-ink-2); font-size: 12.5px; font-weight: 600;
+}
+:root.ms-v9 .ms-fchip:hover { border-color: var(--color-line-2); color: var(--color-ink); background: var(--color-white); }
+:root.ms-v9 :is(.ms-fchip.is-on, .ms-fchip[aria-checked="true"], .ms-chipbar:not(.is-wrap) > :is(.ms-chip, .ms-fchip):is(.is-on, [aria-checked="true"])) {
+  background: var(--color-accent); border-color: var(--color-accent); color: var(--color-on-accent, #fff);
+}
+:root.ms-v9 .ms-fchip .n { font-weight: 700; opacity: .75; }
+:root.ms-v9 :is(.ms-seg, .ds-seg, .ms-f-seg) { padding: 3px; gap: 2px; border-radius: var(--msv-r-ctl); background: var(--color-field); }
+:root.ms-v9 :is(.ms-seg, .ds-seg, .ms-f-seg) > button { height: calc(var(--msv-ctl) - 6px); padding: 0 10px; border-radius: 8px; font-size: 12.5px; font-weight: 600; color: var(--color-ink-3); background: transparent; }
+:root.ms-v9 :is(.ds-seg > button:is([aria-checked="true"], [aria-pressed="true"], [aria-selected="true"], .is-on), .ms-seg > button:is([aria-checked="true"], [aria-pressed="true"], .is-on), .ms-f-seg button.is-on) {
+  background: var(--color-white); color: var(--color-ink); font-weight: 650; box-shadow: 0 1px 2px rgb(14 22 38 / .08);
+}
+:root.ms-v9.theme-dark :is(.ds-seg > button:is([aria-checked="true"], [aria-pressed="true"], [aria-selected="true"], .is-on), .ms-seg > button:is([aria-checked="true"], [aria-pressed="true"], .is-on)) { background: var(--color-line); }
+
+/* Alanlar */
+:root.ms-v9 .ms-input { border-radius: var(--msv-r-ctl); border: 1px solid var(--color-line-2); background: var(--color-white); }
+:root.ms-v9 .ms-input:hover { border-color: var(--color-ink-3); }
+:root.ms-v9 .ms-field > .lbl { font-size: 12.5px; font-weight: 650; }
+:root.ms-v9 :is(.ms-qsearch, .ms-search-field) {
+  height: var(--msv-ctl); padding: 0 6px 0 10px; border-radius: var(--msv-r-ctl); border: 1px solid var(--color-line); background: var(--color-white); box-shadow: none;
+}
+:root.ms-v9 :is(.ms-qsearch, .ms-search-field):focus-within { border-color: var(--color-accent); box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-accent) 16%, transparent); }
+:root.ms-v9 .ms-qsearch > svg { width: 15px; height: 15px; }
+:root.ms-v9 .ms-qsearch input { font-size: 13px; }
+@media (max-width: 639px) { :root.ms-v9 .ms-qsearch input { font-size: 16px; } }
+:root.ms-v9 .ms-select-chip { height: var(--msv-ctl); border-radius: var(--msv-r-ctl); border: 1px solid var(--color-line); background: var(--color-white); box-shadow: none; }
+:root.ms-v9 .ms-select-chip select { font-weight: 600; color: var(--color-ink-2); }
+
+/* Tablolar */
+:root.ms-v9 .ms-console-body table { border-radius: 0; }
+:root.ms-v9 .ms-table thead th {
+  background: var(--color-canvas); color: var(--color-ink-3); font-size: 11.5px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase;
+}
+:root.ms-v9 .ms-table tbody tr.is-on td { background: color-mix(in srgb, var(--color-accent-soft) 60%, var(--color-white)); }
+
+/* Eski Tailwind kutuları da aynı dile: çizgili beyaz kart, 12px köşe; düğmeler hap değil */
+:root.ms-v9 .ms-console-body :is(div, section, article, li, aside, form, details).border:is(.rounded-xl, .rounded-2xl, .rounded-\[10px\]) {
+  background-color: var(--color-white); border-color: var(--color-line); box-shadow: none; border-radius: var(--msv-r);
+}
+:root.ms-v9 .ms-console-body :is(button, a):is(.rounded-\[10px\], .rounded-lg, .rounded-xl) { border-radius: var(--msv-r-ctl); }
+:root.ms-v9 .ms-console-body :is(button, a).border:not(.bg-accent):not([class*="bg-bad"]):not([class*="bg-ok"]) { background-color: var(--color-white); border-color: var(--color-line-2); }
+:root.ms-v9 .ms-console-body :is(button, a).border:not(.bg-accent):hover { background-color: var(--color-canvas); }
+:root.ms-v9 .ms-console-body :is(input, select, textarea).border { background-color: var(--color-white); border-color: var(--color-line-2); }
+
+/* Pano kartları (ManageMetrics) */
+:root.ms-v9 .ms-console .mm { gap: 10px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 160px), 1fr)); }
+:root.ms-v9 .ms-console .mm-card { gap: 2px; padding: 10px 12px; border-radius: var(--msv-r); border: 1px solid var(--color-line); box-shadow: none; }
+:root.ms-v9 .ms-console button.mm-card:hover { border-color: var(--color-accent); box-shadow: none; }
+:root.ms-v9 .ms-console .mm-card .mm-ic { display: none; }
+:root.ms-v9 .ms-console .mm-card .mm-l { font-size: 12px; font-weight: 600; color: var(--color-ink-3); }
+:root.ms-v9 .ms-console .mm-card .mm-v { font-size: 22px; font-weight: 700; letter-spacing: -.02em; }
+:root.ms-v9 .ms-console .mm-card.is-alert .mm-v { color: var(--color-bad-text); }
+:root.ms-v9 .ms-console .mm-card .mm-d { font-size: 11.5px; }
+
+/* Günlük ekranı */
+:root.ms-v9 .ms-term { border-radius: var(--msv-r); background: #0D1420; color: #C9D6EA; }
+
+/* Çekmece ve bölüm paleti */
+:root.ms-v9 .ms-drawer { background: var(--color-white); }
+:root.ms-v9 .ms-drawer-head { background: var(--color-white); border-bottom: 1px solid var(--color-line-soft); }
+:root.ms-v9 .ms-drawer-foot { background: var(--color-white); border-top: 1px solid var(--color-line-soft); }
+:root.ms-v9 .ms-drawer-title { font-size: 17px; font-weight: 700; }
+:root.ms-v9 .ms-cpal { width: min(600px, 100%); border-radius: 16px; background: var(--color-white); -webkit-backdrop-filter: none; backdrop-filter: none; box-shadow: 0 24px 60px rgb(14 22 38 / .28); }
+:root.ms-v9 .ms-cpal-in { height: 54px; padding: 0 16px; border-bottom: 1px solid var(--color-line); }
+:root.ms-v9 .ms-cpal-in input { font-size: 16px; }
+:root.ms-v9 .ms-cpal-list { padding: 6px; }
+:root.ms-v9 .ms-cpal-list button { padding: 8px 10px; gap: 12px; }
+:root.ms-v9 .ms-cpal-list button.is-on { background: var(--color-accent-soft); color: var(--color-ink); }
+:root.ms-v9 .ms-cpal-list button.is-on small { color: var(--color-ink-3); opacity: 1; }
+:root.ms-v9 .ms-cpal-list .hk-tile { width: 34px; height: 34px; border-radius: 9px; background: var(--color-field); color: var(--color-ink-2); display: grid; place-items: center; }
+:root.ms-v9 .ms-cpal-list .hk-tile svg { width: 17px; height: 17px; }
+:root.ms-v9 .ms-cpal-list button.is-on .hk-tile { background: var(--color-accent); color: var(--color-on-accent, #fff); }
+:root.ms-v9 .ms-cpal-list .msv-cpal-group { padding: 8px 10px 4px; font-size: 11px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--color-ink-3); }
+:root.ms-v9 .msv-cpal-g { font-size: 11.5px; color: var(--color-ink-3); flex-shrink: 0; }
+:root.ms-v9 .msv-cpal-foot { display: flex; flex-wrap: wrap; gap: 6px 14px; padding: 8px 16px; border-top: 1px solid var(--color-line-soft); font-size: 11.5px; color: var(--color-ink-3); }
+:root.ms-v9 .msv-cpal-foot kbd { font: 600 10.5px var(--font-mono); padding: 1px 5px; border-radius: 5px; border: 1px solid var(--color-line); background: var(--color-canvas); color: var(--color-ink-2); margin-right: 4px; }
+
+/* Telefon bölüm menüsü: iki sütunlu ızgara */
+:root.ms-v9 .msv-mgrid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; }
+:root.ms-v9 .msv-mgrid .ms-side-group { grid-column: 1 / -1; padding: 8px 6px 0; }
+:root.ms-v9 .msv-mgrid .ms-side-item { min-height: 48px; border-radius: 12px; background: var(--color-canvas); color: var(--color-ink); font-size: 14px; }
+:root.ms-v9 .msv-mgrid .ms-side-item.is-on { background: var(--color-accent-soft); color: var(--color-accent); }
+:root.ms-v9 .msv-mgrid-empty { grid-column: 1 / -1; padding: 18px; text-align: center; font-size: 13px; color: var(--color-ink-3); }
+:root.ms-v9 .ms-cpal-wrap { background: rgb(14 22 38 / .42) !important; }
+
+/* Telefon üst çubuğu: menü (bölüm adı) + arama + canlı noktası + kurul; kaynak/tema seçimi menüde ve masaüstünde */
+@media (max-width: 639px) {
+  :root.ms-v9 .ms-ctop { gap: 4px; padding: 6px 8px; }
+  :root.ms-v9 .ms-ctop .ms-menu-btn { flex: 1 1 auto; justify-content: flex-start; }
+  :root.ms-v9 .ms-ctop :is(.msv-src, .msv-theme) { display: none !important; }
+  :root.ms-v9 .ms-ctop .ms-select-chip { max-width: 30vw; }
+  :root.ms-v9 .ms-ctop > .flex-1 { display: none; }
+}
+:root.ms-v9 .msv-drawer-tools { display: none; }
+@media (max-width: 639px) { :root.ms-v9 .msv-drawer-tools { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 10px; } }

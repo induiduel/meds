@@ -14,9 +14,10 @@ import fs from 'fs';
 import crypto from 'crypto';
 import { fold, normalizationOk, sameTerm, type ParsedUnit } from './questionIntake.ts';
 import { callFreeGeminiJson, AiRetryLaterError } from './aiProvider.ts';
-import { getRecallEngine, RECALL_ENGINE_VERSION, type RecallEngine } from './recall/engine.ts';
-import { clusterRecall, draftCluster, pairFeatures, pairProb, LINK_PROB, type RecallItem, type RecallDraft } from './recall/cluster.ts';
+import { getRecallEngine, numberDersPrior, RECALL_ENGINE_VERSION, type RecallEngine } from './recall/engine.ts';
+import { clusterRecall, assignToGroup, draftCluster, pairFeatures, pairProb, LINK_PROB, type RecallItem, type RecallDraft } from './recall/cluster.ts';
 import { makeTicker } from './recall/lexicon.ts';
+import { loadLearnedWeights, type LearnedWeights } from './recall/fit.ts';
 
 export const CLUSTER_VERSION = `kume-v3/${RECALL_ENGINE_VERSION}`;
 const MISSING_OPTION = '[EKSİK ŞIK]';
@@ -64,7 +65,25 @@ export interface QuestionLike {
 }
 
 /** Havuz kaydı → motor ögesi + taslak ögesi. Öğrenci metni önce; yeniden kurulmuş (AI) kök yalnız başka metin yoksa. */
-export function questionToItems(q: QuestionLike, eng: RecallEngine): { recall: RecallItem; pool: PoolItem } | null {
+/** Eşleşme yanıtı için kaydın hafif kopyası (düzenleme geçmişi, ayrıştırma ve uydular hariç). */
+function slimQuestion(q: any) {
+  const { revisions, intake, mergedSatellites, history, comments, ...rest } = q || {};
+  void revisions; void intake; void mergedSatellites; void history; void comments;
+  return rest;
+}
+
+/** Havuzdaki numarası ve dersi bilinen sorular (sınavın kendi sırası; `numberDersPrior` için). */
+export function knownNumbered(questions: QuestionLike[], committeeId: string, excludeId?: string): { number: number; ders: string }[] {
+  const out: { number: number; ders: string }[] = [];
+  for (const q of questions) {
+    if (q.committeeId !== committeeId || q.id === excludeId || q.isMerged || q.isUnassignedNumber) continue;
+    const n = Number(q.questionNumber);
+    if (n > 0 && q.discipline && !GENERIC_DISC.test(q.discipline)) out.push({ number: n, ders: q.discipline });
+  }
+  return out;
+}
+
+export function questionToItems(q: QuestionLike, eng: RecallEngine, known?: { number: number; ders: string }[]): { recall: RecallItem; pool: PoolItem } | null {
   if (!q?.id || !q.committeeId) return null;
   const own = [
     ...(q.fragments || []).filter((f) => f?.type !== 'option' && f?.text).map((f) => String(f.text)),
@@ -80,12 +99,14 @@ export function questionToItems(q: QuestionLike, eng: RecallEngine): { recall: R
     .map((o: any) => ({ harf: LETTERS.includes(String(o.key)) ? String(o.key) : null, text: String(o.text).trim(), votes: 1 + Math.max(0, Number(o.upvotes) || 0) }));
   if (!text.trim() && !options.length) return null;
   const claimed = LETTERS.includes(String(q.claimedAnswer)) ? String(q.claimedAnswer) : null;
-  const a = eng.analyze(text, { committeeId: q.committeeId, options: options.map((o) => ({ key: o.harf, text: o.text })), claimed });
+  const assignedNo = !q.isUnassignedNumber && Number(q.questionNumber) > 0 ? Number(q.questionNumber) : null;
+  const dersPrior = known && assignedNo ? numberDersPrior(known.filter((k) => k.number !== assignedNo), assignedNo) : null;
+  const a = eng.analyze(text, { committeeId: q.committeeId, options: options.map((o) => ({ key: o.harf, text: o.text })), claimed, dersPrior });
   const ozet = q.intake?.ozet;
   const discipline = q.discipline && !GENERIC_DISC.test(q.discipline) ? q.discipline
     : ozet?.ders && ozet.ders !== 'Belirsiz' && (ozet.dersGuveni ?? 0) >= 0.7 ? ozet.ders : null;
-  const assigned = !q.isUnassignedNumber && Number(q.questionNumber) > 0;
-  const number = assigned ? Number(q.questionNumber) : a.number;
+  const assigned = !!assignedNo;
+  const number = assignedNo || a.number;
   const konu = ozet?.konu || (q.topic && !GENERIC_TOPIC.test(q.topic) ? q.topic : null) || a.konu?.name || null;
   const terms = [...new Set([...a.terms, ...(ozet?.varliklar || [])])];
   const key = `q:${q.id}`;
@@ -334,13 +355,16 @@ export function createPoolClusterService(opts: {
 }) {
   let clusters: PoolCluster[] = [];
   try { clusters = JSON.parse(fs.readFileSync(opts.file, 'utf8')); } catch { clusters = []; }
+  // Öğrenci kararlarından öğrenilmiş ağırlıklar (data/recall_weights.json; yoksa kod içi ağırlıklar)
+  let learned: LearnedWeights | null = loadLearnedWeights(opts.rootDir);
+  if (learned) console.log(`[Küme] öğrenilmiş ağırlıklar (${learned.fittedAt}, ${learned.feedbackPairs} öğrenci kararı)`);
   const aiCache = new Map<string, Partial<PoolCluster>>(); // membershipHash → AI sonucu
   for (const c of clusters) if (c.aiMerged && c.membershipHash && String(c.version || '').startsWith('kume-')) aiCache.set(c.membershipHash, { aiMerged: true, stemSource: 'yapay_zeka', mergedStem: c.mergedStem, mergedOptions: c.mergedOptions, explanation: c.explanation, aiAnswerSuggestion: c.aiAnswerSuggestion, sources: c.sources });
 
   let running: Promise<void> | null = null;
   let again = false;
   let timer: ReturnType<typeof setTimeout> | null = null;
-  let lastRun: { at: string; ms: number; items: number; clusters: number } | null = null;
+  let lastRun: { at: string; mode: 'full' | 'incremental'; ms: number; items: number; clusters: number } | null = null;
   const aiQueue: string[] = [];
   let aiRunning = false;
   let aiRetryAt = 0;
@@ -356,23 +380,90 @@ export function createPoolClusterService(opts: {
     return writeChain;
   };
 
-  async function recompute() {
-    const t0 = Date.now();
+  // Analiz önbelleği (anahtar → imza + öge): kayıt değişmedikçe yeniden analiz edilmez; anlık eşleşme de bunu kullanır
+  const pairCache = new Map<string, { sig: string; eng: RecallEngine; pair: { recall: RecallItem; pool: PoolItem } }>();
+  const sigOf = (q: QuestionLike, known?: { number: number; ders: string }[]) => {
+    const n = !q.isUnassignedNumber && Number(q.questionNumber) > 0 ? Number(q.questionNumber) : 0;
+    // Sınav sırası ön bilgisi komşulara bağlı: ±3 komşunun dersi değişirse yeniden analiz
+    const near = n && known ? known.filter((k) => k.number !== n && Math.abs(k.number - n) <= 3).map((k) => `${k.number}:${k.ders}`).sort() : [];
+    return JSON.stringify([q.committeeId, q.questionNumber, q.isUnassignedNumber, q.discipline, q.topic, q.intake?.updatedAt,
+      (q.fragments || []).map((f) => f?.text), (q.revisions || []).map((r) => r?.stem), q.stem, (q.options || []).map((o) => [o?.key, o?.text, o?.upvotes]), q.claimedAnswer, near]);
+  };
+  function pairFor(q: QuestionLike, eng: RecallEngine, known?: { number: number; ders: string }[]) {
+    const key = `q:${q.id}`;
+    const sig = sigOf(q, known);
+    const hit = pairCache.get(key);
+    if (hit && hit.sig === sig && hit.eng === eng) return hit.pair;
+    const pair = questionToItems(q, eng, known);
+    if (pair) pairCache.set(key, { sig, eng, pair }); else pairCache.delete(key);
+    return pair;
+  }
+
+  async function collect(eng: RecallEngine) {
     const tick = makeTicker();
-    const eng = await getRecallEngine(opts.rootDir, opts.getPastQuestions);
     const pairs: { recall: RecallItem; pool: PoolItem }[] = [];
-    for (const q of opts.getQuestions()) {
+    const all = opts.getQuestions();
+    const knownBy = new Map<string, { number: number; ders: string }[]>();
+    const knownFor = (cid: string) => knownBy.get(cid) || knownBy.set(cid, knownNumbered(all, cid)).get(cid)!;
+    for (const q of all) {
       if (q.isMerged) continue;
-      const it = questionToItems(q, eng);
+      const it = pairFor(q, eng, q.committeeId ? knownFor(q.committeeId) : undefined);
       if (it) pairs.push(it);
       await tick();
     }
     for (const o of opts.getOrphanUnits()) {
-      pairs.push(unitToItems(o.girdiId, o.n, o.committeeId, o.createdAt, o.unit, eng));
+      const key = `u:${o.girdiId}#${o.n}`;
+      const hit = pairCache.get(key);
+      if (hit && hit.eng === eng) pairs.push(hit.pair);
+      else {
+        const pair = unitToItems(o.girdiId, o.n, o.committeeId, o.createdAt, o.unit, eng);
+        pairCache.set(key, { sig: key, eng, pair });
+        pairs.push(pair);
+      }
       await tick();
     }
+    const live = new Set(pairs.map((x) => x.recall.key));
+    for (const k of pairCache.keys()) if (!live.has(k)) pairCache.delete(k);
+    return pairs;
+  }
+
+  /**
+   * Karma kümeleme: "artımlı" yalnız yeni/değişen kayıtları mevcut kümelere atar (ms; ekran hemen güncellenir);
+   * "toplu" ortalama bağlantıyı baştan kurar (kalite: iki yarım kümeyi de birleştirir). Artımlı tek başına F1'i
+   * %65 → %58'e düşürdüğü için (scripts/eval/recall-engine.mts --incremental) her değişiklikten 10 dk sonra toplu düzeltme.
+   */
+  let state: { eng: RecallEngine; groups: { members: RecallItem[]; cohesion: number }[] } | null = null;
+  async function recompute(mode: 'full' | 'incremental' = 'full') {
+    const t0 = Date.now();
+    const eng = await getRecallEngine(opts.rootDir, opts.getPastQuestions);
+    const pairs = await collect(eng);
     const poolOf = new Map(pairs.map((x) => [x.recall.key, x.pool]));
-    const groups = (await clusterRecall(pairs.map((x) => x.recall), eng)).filter((g) => g.members.length >= 2);
+    let all: { members: RecallItem[]; cohesion: number }[];
+    if (mode === 'incremental' && state && state.eng === eng) {
+      const cur = new Map(pairs.map((x) => [x.recall.key, x.recall]));
+      const placed = new Set<string>();
+      all = [];
+      for (const g of state.groups) {
+        // Değişen öge yeni nesnedir (önbellek imzası): eski kümeden düşer, yeniden atanır
+        const members = g.members.filter((m) => cur.get(m.key) === m);
+        if (!members.length) continue;
+        members.forEach((m) => placed.add(m.key));
+        all.push({ members, cohesion: members.length === g.members.length ? g.cohesion : g.cohesion });
+      }
+      const fresh = pairs.map((x) => x.recall).filter((r) => !placed.has(r.key) && !r.a.isNoise).sort((x, y) => (x.createdAt < y.createdAt ? -1 : 1));
+      for (const r of fresh) {
+        const hit = assignToGroup(r, all, eng);
+        if (hit) {
+          const n = hit.group.members.length;
+          hit.group.cohesion = (hit.group.cohesion * ((n * (n - 1)) / 2) + hit.prob * n) / (((n + 1) * n) / 2);
+          hit.group.members.push(r);
+        } else all.push({ members: [r], cohesion: 1 });
+      }
+    } else {
+      all = await clusterRecall(pairs.map((x) => x.recall), eng);
+    }
+    state = { eng, groups: all };
+    const groups = all.filter((g) => g.members.length >= 2);
     const now = new Date().toISOString();
     const old = clusters;
     const drafts = groups.map((g) => {
@@ -425,7 +516,7 @@ export function createPoolClusterService(opts: {
     next.push(...orphaned);
     next.sort((a, b) => b.mergedQuestionCount - a.mergedQuestionCount || (a.updatedAt < b.updatedAt ? 1 : -1));
     clusters = next;
-    lastRun = { at: now, ms: Date.now() - t0, items: pairs.length, clusters: next.filter((c) => c.mergedQuestionCount > 0).length };
+    lastRun = { at: now, mode, ms: Date.now() - t0, items: pairs.length, clusters: next.filter((c) => c.mergedQuestionCount > 0).length };
     await persist();
     runAi().catch(() => {});
   }
@@ -457,12 +548,19 @@ export function createPoolClusterService(opts: {
     }
   }
 
-  /** Tek seferde tek hesap; çalışırken gelen istek bir sonraki tura birleştirilir. */
-  function runNow(): Promise<void> {
+  /** Tek seferde tek hesap; çalışırken gelen istek bir sonraki tura birleştirilir (toplu istek artımlıyı kapsar). */
+  let pendingMode: 'full' | 'incremental' | null = null;
+  function runNow(mode: 'full' | 'incremental' = 'full'): Promise<void> {
+    pendingMode = pendingMode === 'full' || mode === 'full' ? 'full' : 'incremental';
     if (running) { again = true; return running; }
     running = (async () => {
       try {
-        do { again = false; await recompute(); } while (again);
+        do {
+          again = false;
+          const m = pendingMode || 'full';
+          pendingMode = null;
+          await recompute(m);
+        } while (again);
       } catch (e: any) {
         console.warn('[Küme] yeniden hesap hatası:', e?.message);
       } finally {
@@ -472,19 +570,22 @@ export function createPoolClusterService(opts: {
     return running;
   }
 
-  function schedule(delayMs = 15_000) {
+  // Değişiklik: 2 sn sonra artımlı (anında görünür), son değişiklikten 10 dk sonra (en geç 30 dk) toplu düzeltme
+  let fullTimer: ReturnType<typeof setTimeout> | null = null;
+  let fullDue = 0;
+  function schedule(delayMs = 2_000) {
     if (timer) clearTimeout(timer);
-    timer = setTimeout(() => { timer = null; runNow(); }, delayMs);
+    timer = setTimeout(() => { timer = null; runNow(state ? 'incremental' : 'full'); }, delayMs);
     timer.unref?.();
+    const nowMs = Date.now();
+    if (!fullDue) fullDue = nowMs + 30 * 60_000;
+    if (fullTimer) clearTimeout(fullTimer);
+    fullTimer = setTimeout(() => { fullTimer = null; fullDue = 0; runNow('full'); }, Math.max(1_000, Math.min(10 * 60_000, fullDue - nowMs)));
+    fullTimer.unref?.();
   }
 
   const retryTimer = setInterval(() => { if (aiQueue.length) runAi().catch(() => {}); }, 10 * 60_000);
   retryTimer.unref?.();
-
-  // Anlık eşleşme için havuz kayıtlarının analiz önbelleği (kayıt metni/şıkları değişince yenilenir)
-  const itemCache = new Map<string, { sig: string; item: RecallItem }>();
-  const sigOf = (q: QuestionLike) => JSON.stringify([q.committeeId, q.questionNumber, q.isUnassignedNumber, q.discipline,
-    (q.fragments || []).map((f) => f?.text), (q.revisions || []).length, q.stem, (q.options || []).map((o) => o?.text), q.claimedAnswer]);
 
   /**
    * "Soru ekle" sırasında: yazılan metni analiz eder ve havuzda aynı soruyu anlatan kayıtları olasılıkla döndürür.
@@ -492,36 +593,35 @@ export function createPoolClusterService(opts: {
    */
   async function matchText(input: { text: string; committeeId: string; discipline?: string | null; options?: { key?: string | null; text: string }[]; questionNumber?: number | null; excludeId?: string; limit?: number }) {
     const eng = await getRecallEngine(opts.rootDir, opts.getPastQuestions);
-    const a = eng.analyze(input.text, { committeeId: input.committeeId, options: input.options });
+    const textNo = input.questionNumber && input.questionNumber > 0 ? input.questionNumber : null;
+    const known = knownNumbered(opts.getQuestions(), input.committeeId, input.excludeId);
+    let a = eng.analyze(input.text, { committeeId: input.committeeId, options: input.options });
+    const n0 = textNo || a.number;
+    const dersPrior = numberDersPrior(known, n0);
+    if (dersPrior) a = eng.analyze(input.text, { committeeId: input.committeeId, options: input.options, dersPrior });
     const me: RecallItem = {
       key: 'yeni', committeeId: input.committeeId, createdAt: '', text: input.text, a,
       discipline: input.discipline && !GENERIC_DISC.test(input.discipline) ? input.discipline : null,
       number: input.questionNumber && input.questionNumber > 0 ? input.questionNumber : a.number,
       numberAssigned: !!(input.questionNumber && input.questionNumber > 0),
     };
-    const out: { questionId: string; prob: number }[] = [];
+    const out: { questionId: string; prob: number; q: QuestionLike }[] = [];
     if (!a.isNoise) {
       const tick = makeTicker();
       for (const q of opts.getQuestions()) {
         if (q.isMerged || q.committeeId !== input.committeeId || q.id === input.excludeId) continue;
-        const sig = sigOf(q);
-        let hit = itemCache.get(q.id);
-        if (!hit || hit.sig !== sig) {
-          const it = questionToItems(q, eng);
-          if (!it) continue;
-          hit = { sig, item: it.recall };
-          itemCache.set(q.id, hit);
-        }
-        const it = hit.item;
+        const pair = pairFor(q, eng, known);
+        if (!pair) continue;
+        const it = pair.recall;
         if (me.numberAssigned && it.numberAssigned && me.number !== it.number) continue;
         const p = pairProb(pairFeatures(me, it, eng));
-        if (p >= LINK_PROB) out.push({ questionId: q.id, prob: Math.round(p * 100) / 100 });
+        if (p >= LINK_PROB) out.push({ questionId: q.id, prob: Math.round(p * 100) / 100, q });
         await tick();
       }
     }
     out.sort((x, y) => y.prob - x.prob);
     return {
-      engine: eng.version,
+      engine: `${eng.version}${learned ? `+${learned.fittedAt.slice(0, 10)}` : ''}`,
       noise: a.isNoise,
       clean: eng.cleanSentence(input.text),
       ders: a.ders.slice(0, 3),
@@ -532,15 +632,24 @@ export function createPoolClusterService(opts: {
       number: a.number,
       negative: a.negative >= 0.5,
       corrections: a.corrections.slice(0, 12),
-      matches: out.slice(0, Math.max(1, Math.min(8, input.limit || 4))),
+      // Kaydın hafif kopyası: istemcide havuz henüz yüklenmemiş olabilir (Soru ekle açılışta yalnız birkaç kayıt tutar)
+      matches: out.slice(0, Math.max(1, Math.min(8, input.limit || 4))).map(({ questionId, prob, q }) => ({ questionId, prob, question: slimQuestion(q) })),
     };
   }
 
   return {
     matchText,
+    engineVersion: () => `${RECALL_ENGINE_VERSION}${learned ? `+${learned.fittedAt.slice(0, 10)}` : ''}`,
+    /** Öğrenilmiş ağırlıkları yeniden yükle ve kümeleri baştan hesapla (haftalık öğrenmeden sonra). */
+    reloadWeights() {
+      learned = loadLearnedWeights(opts.rootDir) || learned;
+      pairCache.clear();
+      state = null;
+      return runNow('full');
+    },
     list: () => clusters,
     get: (id: string) => clusters.find((c) => c.id === id),
-    status: () => ({ running: !!running, scheduled: !!timer, lastRun, aiQueue: aiQueue.length, aiRunning }),
+    status: () => ({ running: !!running, scheduled: !!timer, fullScheduled: !!fullTimer, lastRun, aiQueue: aiQueue.length, aiRunning }),
     runNow,
     schedule,
     contribute(id: string, contrib: any) {

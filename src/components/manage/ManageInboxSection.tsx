@@ -4,6 +4,7 @@ import type { QuestionItem, AdminNotification } from '../../types';
 import type { InboxReport, InboxComment } from '../../services/manageConsoleService';
 import { Panel, EmptyState, SearchBox, ChipBar, Switch, ConfirmButton, dayLabel, timeLabel } from './consoleUi';
 import { AdminMobileNotificationCard } from '../AdminMobileNotificationCard';
+import { inAppPath } from '../../services/universalRedirectService';
 
 /**
  * Gelen kutusu: bildirim, yorum, taslak ve sistem uyarıları tek iş kuyruğunda, en yenisi üstte.
@@ -21,6 +22,8 @@ interface QueueItem {
   sender?: string;
   reason?: string;
   questionId?: string;
+  /** Bildirimin hedefi (sitedeki yol); varsa satırda "Sitede gör" bağlantısı çıkar */
+  url?: string;
   meta: string[];
   done?: boolean;
   unread?: boolean;
@@ -139,7 +142,9 @@ export const ManageInboxSection: React.FC<Props> = ({
         text: n.message,
         sender: n.author || 'Sistem',
         reason: n.type === 'new_fragment' ? 'Yeni hafıza parçası eklendi' : n.type === 'unassigned_question' ? 'Numarasız soru girildi' : 'Sistem bildirimi',
-        questionId: n.questionId,
+        // Etiketler ("Tıbbi Terim: x", "Ders · Adım 3") soru kimliği değildir; veri ekranına götürülmez.
+        questionId: n.questionId && !/[:·\s]/.test(n.questionId) ? n.questionId : undefined,
+        url: inAppPath(n.url) || undefined,
         meta: [n.author ? `Kaynak: ${n.author}` : ''].filter(Boolean) as string[],
         unread: !n.isRead,
       });
@@ -429,6 +434,18 @@ const QueueRow: React.FC<QueueRowProps> = ({
               <span>{item.questionId.startsWith('past-') ? 'Çıkmış Soru' : 'Soru'} #{item.questionId.replace(/^q-|^past-/, '')}</span>
               <ExternalLink className="w-3 h-3" />
             </button>
+          )}
+          {item.url && (
+            <a
+              href={item.url}
+              target="_blank"
+              rel="noopener"
+              className="text-accent hover:underline inline-flex items-center gap-0.5 text-xs font-semibold ml-1"
+              title="Bildirilen yeri sitede yeni sekmede aç"
+            >
+              <span>Sitede gör</span>
+              <ExternalLink className="w-3 h-3" />
+            </a>
           )}
         </div>
 

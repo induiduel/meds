@@ -572,8 +572,21 @@ def sunucu() -> int:
                 shutil.rmtree(hedef)
             shutil.copytree(d, hedef, ignore=shutil.ignore_patterns("oturum.json"))
             yeni.append(hedef)
+    derle_iste = L_TASLAK / "derle_iste.json"
     if not yeniden and not yeni:
-        return 0
+        if not derle_iste.exists():
+            return 0
+        # panelden "Siteyi yeniden derle": yayınlanmış ama site derlemesi düşmüş taslaklar
+        derle_iste.unlink(missing_ok=True)
+        derlendi = _site_derle()
+        for t in L_TASLAK.glob("*"):
+            yp = t / "yayin.json"
+            yv = oku(yp, None) if t.is_dir() else None
+            if yv and yv.get("durum") == "yayinlandi" and yv.get("site_derlendi") is False:
+                yaz_json(yp, yv | {"site_derlendi": derlendi})
+        _bildir("Site yeniden derlendi" if derlendi else "Site yine derlenemedi", "Panelden istenen yeniden derleme.")
+        return 0 if derlendi else 4
+    derle_iste.unlink(missing_ok=True)
     manifest = oku(L_MANIFEST, {})
     print(time.strftime("[%Y-%m-%d %H:%M:%S]"), "yeniden uygulanacak:", [d.name for d in yeniden],
           "yeni:", [d.name for d in yeni])

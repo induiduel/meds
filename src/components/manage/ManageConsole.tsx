@@ -18,7 +18,6 @@ import {
   FlaskConical,
   Menu,
   ChevronDown,
-  GraduationCap,
   Database,
   Library,
   HardDrive,
@@ -58,10 +57,11 @@ import { consoleLogBuffer } from './ConsoleLogBuffer';
 import { ManageMetrics } from './ManageMetrics';
 import { useAppearance, DENSITY_LABELS, type Density as AppDensity } from '../../utils/appearance';
 import { guardedInterval } from '../../services/net';
-import { realtimeEventService } from '../../services/realtimeEvents';
+import { realtimeEventService, type RealtimeConnectionStatus } from '../../services/realtimeEvents';
+import '../../styles/manage-v9.css';
 import { Segmented } from '../ui/kit';
 import { isLocalHost, getPanelTarget, PANEL_TARGET_KEY, PANEL_ON_ORACLE_AT_BOOT } from '../../config/deployment';
-import { Drawer, classifyNotice } from './consoleUi';
+import { Drawer, SearchBox, classifyNotice } from './consoleUi';
 import {
   InboxReport,
   InboxComment,
@@ -117,11 +117,29 @@ const SECTIONS: { id: ManageSection; slug: string; label: string; hint: string; 
   { id: 'automation', slug: 'otomasyon', label: 'Otomasyon', hint: 'Zamanlanmış işler, AI pencereleri, anahtarlar; Drive eşitlemesi ve masaüstü servisleri.', icon: Settings, group: 'Sistem', keywords: 'drive yedek anahtar zamanla' },
   { id: 'database', slug: 'veritabani', label: 'Veritabanı ve yedek', hint: 'Etkin veritabanı, eşitleme, dışa ve içe aktarım.', icon: HardDrive, group: 'Sistem', keywords: 'supabase firebase yedek dışa aktar' },
 ];
+const foldTr = (t: string) => t.toLocaleLowerCase('tr-TR').normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/ı/g, 'i');
 const sectionBySlug = (slug?: string) => SECTIONS.find((x) => x.slug === slug || x.id === slug);
 
 // Yoğunluk: uygulamanın görünüm ayarından gelir (Profil ve ayarlar → Kompakt/Normal/Geniş)
 type Density = 'comfy' | 'compact' | 'tight';
 const SECTION_KEY = 'medsoru_manage_section';
+const RECENT_KEY = 'medsoru_manage_recent';
+const readRecent = (): ManageSection[] => {
+  try {
+    const v = JSON.parse(localStorage.getItem(RECENT_KEY) || '[]');
+    return Array.isArray(v) ? v.filter((x) => SECTIONS.some((s) => s.id === x)).slice(0, 5) : [];
+  } catch {
+    return [];
+  }
+};
+const pushRecent = (id: ManageSection) => {
+  try {
+    localStorage.setItem(RECENT_KEY, JSON.stringify([id, ...readRecent().filter((x) => x !== id)].slice(0, 5)));
+  } catch {
+    /* gizli pencere */
+  }
+};
+const SYNC_STALE_MS = 60_000;
 const readSection = (entry: 'manage' | 'admin', slug?: string): ManageSection => {
   const fromUrl = sectionBySlug(slug);
   if (fromUrl) return fromUrl.id;
@@ -147,6 +165,8 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
   initialSlug,
 }) => {
   const [section, setSectionState] = useState<ManageSection>(() => readSection(entry, initialSlug));
+  const sectionRef = useRef(section);
+  sectionRef.current = section;
   // v8: konsol uygulamanın tek yoğunluk ayarını kullanır (Profil ve ayarlar ile aynı)
   const look = useAppearance();
   const density: Density = look.density === 'compact' ? 'tight' : 'comfy';
@@ -159,12 +179,26 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
     setMenuOpen(false);
     setPaletteOpen(false);
     writeLocation(entry, SECTIONS.find((x) => x.id === s)?.slug, opts.replace);
+    pushRecent(s);
     try {
       localStorage.setItem(SECTION_KEY, s);
     } catch {
       /* gizli pencere: bu ziyaretlik */
     }
   };
+  const [lastSync, setLastSync] = useState<number | null>(null);
+  const lastSyncRef = useRef(0);
+  const markSynced = () => {
+    lastSyncRef.current = Date.now();
+    setLastSync(lastSyncRef.current);
+  };
+  const [liveStatus, setLiveStatus] = useState<RealtimeConnectionStatus>(() => realtimeEventService.getStatus());
+
+  // v9 görünümü: konsol açıkken <html> ms-v9 taşır (manage-v9.css bu sınıfa bağlı)
+  useEffect(() => {
+    document.documentElement.classList.add('ms-v9');
+    return () => document.documentElement.classList.remove('ms-v9');
+  }, []);
   const [loading, setLoading] = useState(false);
 
   // Yerel panel → Oracle: sayfadaki tüm veri tek kaynaktan gelsin diye kaynak açılışta seçilir. Panele uygulama
@@ -201,6 +235,13 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
       if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k') {
         e.preventDefault();
         setPaletteOpen((v) => !v);
+        return;
+      }
+      // Alt + ↑/↓: önceki / sonraki bölüm (yazı alanındayken de çalışır; Alt+ok metinde iş görmez)
+      if (e.altKey && !e.ctrlKey && !e.metaKey && (e.key === 'ArrowUp' || e.key === 'ArrowDown')) {
+        e.preventDefault();
+        const i = SECTIONS.findIndex((x) => x.id === sectionRef.current);
+        setSection(SECTIONS[(i + (e.key === 'ArrowDown' ? 1 : SECTIONS.length - 1)) % SECTIONS.length].id);
       }
     };
     document.addEventListener('keydown', onKey);
@@ -241,6 +282,7 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
       setNotifications(data.notifications);
       setDrafts(data.drafts.length > 0 ? data.drafts : questions.filter((q) => q.status !== 'completed'));
       setRegisteredUsers((await loadManageUsers(adminEmail).catch(() => [])) || []);
+      markSynced();
     } catch (e) {
       notify(e instanceof Error ? e.message : 'Gelen kutusu yüklenemedi.');
     } finally {
@@ -259,6 +301,7 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
           setComments(data.comments);
           setNotifications(data.notifications);
           if (data.drafts.length > 0) setDrafts(data.drafts);
+          markSynced();
         })
         .catch(() => {});
     });
@@ -275,13 +318,31 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
         setComments(data.comments);
         setNotifications(data.notifications);
         if (data.drafts.length > 0) setDrafts(data.drafts);
+        markSynced();
       } catch (_) {}
     }, 60000);
+
+    // 3. Canlı kanal durumu: kopup yeniden bağlanınca arada kaçan olaylar için kuyruğu tazele
+    let prevStatus = realtimeEventService.getStatus();
+    setLiveStatus(prevStatus);
+    const unsubStatus = realtimeEventService.onStatusChange((st) => {
+      setLiveStatus(st);
+      if (st === 'connected' && prevStatus === 'disconnected') void reloadInbox();
+      prevStatus = st;
+    });
+
+    // 4. Sekmeye geri dönülünce veri bayatsa tazele
+    const onVisible = () => {
+      if (!document.hidden && Date.now() - lastSyncRef.current > SYNC_STALE_MS) void reloadInbox();
+    };
+    document.addEventListener('visibilitychange', onVisible);
 
     return () => {
       unsubInbox();
       unsubNotif();
       stopInterval();
+      unsubStatus();
+      document.removeEventListener('visibilitychange', onVisible);
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selectedCommitteeId]);
@@ -397,73 +458,129 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
     return undefined;
   };
 
-  const nav = (
-    <>
-      {SECTIONS.map((sec, i) => {
-        const on = section === sec.id;
-        const groupStart = i === 0 || SECTIONS[i - 1].group !== sec.group;
-        const Icon = sec.icon;
-        const badge = badgeOf(sec.id);
-        return (
-          <React.Fragment key={sec.id}>
-            {groupStart && <span className="ms-side-group">{sec.group}</span>}
-            <button type="button" onClick={() => setSection(sec.id)} aria-current={on ? 'page' : undefined} className={`ms-side-item ${on ? 'is-on' : ''}`}>
-              <Icon strokeWidth={on ? 2.3 : 2} aria-hidden="true" />
-              <span className="truncate">{sec.label}</span>
-              {badge && badge.n > 0 && <span className={`n ${badge.alert && !on ? 'is-alert' : ''}`}>{badge.n}</span>}
-            </button>
-          </React.Fragment>
-        );
-      })}
-    </>
-  );
+  // Rozet artınca kısa bir sıçrama (yeni öge geldi)
+  const prevBadges = useRef<Partial<Record<ManageSection, number>>>({});
+  const bumped = (id: ManageSection, n: number) => {
+    const prev = prevBadges.current[id];
+    return prev !== undefined && n > prev;
+  };
+  useEffect(() => {
+    for (const s of SECTIONS) {
+      const b = badgeOf(s.id);
+      prevBadges.current[s.id] = b?.n ?? 0;
+    }
+  });
 
-  const brand = (
-    <>
-      <span className="ms-rail-mark w-[28px] h-[28px] flex items-center justify-center shrink-0">
-        <Activity className="w-[17px] h-[17px]" strokeWidth={2.4} />
-      </span>
-      <span className="ms-rail-word font-display font-bold text-lg tracking-[-0.02em] text-ink">
-        Me<span className="text-accent">DS</span>or
-      </span>
-      <span className="ms-tag is-accent">
-        <ShieldCheck /> Yönetim
-      </span>
-    </>
-  );
+  // Sekme başlığı: bölüm + bekleyen bildirim sayısı
+  useEffect(() => {
+    const prev = document.title;
+    return () => {
+      document.title = prev;
+    };
+  }, []);
+  useEffect(() => {
+    const n = pendingReports.length;
+    document.title = `${n ? `(${n}) ` : ''}${current.label} · Yönetim`;
+  }, [current.label, pendingReports.length]);
+
+  const syncLabel = lastSync ? new Date(lastSync).toLocaleTimeString('tr-TR', { hour: '2-digit', minute: '2-digit' }) : '';
+  const liveText = liveStatus === 'connected' ? 'Canlı' : liveStatus === 'connecting' ? 'Bağlanıyor' : 'Bağlantı yok';
+  const headBadge = badgeOf(section);
+
+  const renderNav = (filter = '', grid = false) => {
+    const q = foldTr(filter.trim());
+    const list = SECTIONS.filter((x) => !q || foldTr(`${x.label} ${x.hint} ${x.keywords || ''} ${x.group}`).includes(q));
+    if (!list.length) return <span className="msv-mgrid-empty">Eşleşen bölüm yok</span>;
+    return list.map((sec, i) => {
+      const on = section === sec.id;
+      const groupStart = i === 0 || list[i - 1].group !== sec.group;
+      const Icon = sec.icon;
+      const badge = badgeOf(sec.id);
+      return (
+        <React.Fragment key={sec.id}>
+          {groupStart && <span className="ms-side-group">{sec.group}</span>}
+          <button
+            type="button"
+            onClick={() => setSection(sec.id)}
+            aria-current={on ? 'page' : undefined}
+            className={`ms-side-item ${on ? 'is-on' : ''}`}
+            title={grid ? undefined : sec.hint}
+          >
+            <Icon strokeWidth={on ? 2.3 : 1.9} aria-hidden="true" />
+            <span className="truncate">{sec.label}</span>
+            {badge && badge.n > 0 && (
+              <span key={`${sec.id}-${badge.n}`} className={`n ${badge.alert && !on ? 'is-alert' : ''} ${bumped(sec.id, badge.n) ? 'is-bump' : ''}`}>
+                {badge.n}
+              </span>
+            )}
+          </button>
+        </React.Fragment>
+      );
+    });
+  };
+  const [menuQuery, setMenuQuery] = useState('');
+  const sideNavRef = useRef<HTMLElement>(null);
+  useEffect(() => {
+    sideNavRef.current?.querySelector('.ms-side-item.is-on')?.scrollIntoView({ block: 'nearest' });
+  }, [section]);
 
   return (
     <div className={`ms-console w-full bg-canvas overflow-hidden flex text-ink ${fullscreen ? 'h-[var(--vvh,100dvh)]' : 'rounded-2xl min-h-[560px] h-[calc(100dvh-150px)] lg:h-[calc(100dvh-120px)]'}`}>
-      {/* Kenar menüsü: öğrenci sayfalarındaki gibi beyaz, gruplu */}
-      <aside className="ms-side" aria-label="Yönetim menüsü">
-        <button type="button" onClick={onExit} className="ms-side-brand hover:bg-canvas" title="Siteye dön">
-          {brand}
+      {/* Kenar menüsü (v9): marka, bölüm arama, gruplu bölümler */}
+      <aside className="ms-side" aria-label="Yönetim menüsü" ref={sideNavRef}>
+        <button type="button" onClick={onExit} className="msv-brand" title="Öğrenci sitesine dön">
+          <span className="msv-logo" aria-hidden="true">M</span>
+          <span className="msv-word">MedSoru</span>
+          <span className="msv-role"><ShieldCheck aria-hidden="true" /> Yönetim</span>
         </button>
-        <nav aria-label="Yönetim bölümleri" className="flex flex-col gap-0.5">
-          {nav}
+        <button type="button" onClick={() => setPaletteOpen(true)} className="ms-cpal-btn" aria-label="Bölüme git (Ctrl+K)">
+          <Search aria-hidden />
+          <span>Bölüme git…</span>
+          <kbd>Ctrl K</kbd>
+        </button>
+        <nav aria-label="Yönetim bölümleri" className="flex flex-col gap-px">
+          {renderNav()}
         </nav>
         <span className="flex-1 min-h-4" aria-hidden="true" />
         <button type="button" onClick={onExit} className="ms-side-item">
-          <GraduationCap aria-hidden="true" /> Öğrenci sitesine dön
+          <ArrowLeft aria-hidden="true" /> Öğrenci sitesine dön
         </button>
+        <div className="msv-me" title={adminEmail}>
+          <span className="ms-avatar is-accent !w-6 !h-6 !text-[11px]">{(adminEmail || 'Y').charAt(0).toUpperCase()}</span>
+          <span>{adminEmail || 'Yönetici'}</span>
+        </div>
       </aside>
 
       <div className="flex-1 flex flex-col min-h-0 min-w-0">
         <header className="ms-ctop">
-          <button type="button" onClick={() => setMenuOpen(true)} className="ms-btn is-ghost ms-menu-btn !px-2.5 min-w-0" aria-label="Bölüm menüsünü aç" aria-expanded={menuOpen}>
+          <button type="button" onClick={() => setMenuOpen(true)} className="ms-btn is-ghost ms-menu-btn min-w-0" aria-label={`Bölüm menüsünü aç · ${current.label}`} aria-expanded={menuOpen}>
             <Menu />
-            <span className="truncate text-base">{current.label}</span>
+            <span className="msv-title truncate">{current.label}</span>
             <ChevronDown className="!w-3.5 !h-3.5 text-ink-3" />
           </button>
+          <div className="msv-titlebox">
+            <h1 className="msv-title">{current.label}</h1>
+            {headBadge && headBadge.n > 0 && <span className={`msv-count ${headBadge.alert ? 'is-alert' : ''}`}>{headBadge.n.toLocaleString('tr-TR')}</span>}
+            <span className="msv-hint" title={current.hint}>{current.hint}</span>
+          </div>
+          <span className="flex-1" />
           <button type="button" onClick={() => setPaletteOpen(true)} className="ms-cpal-btn" aria-label="Bölüm ara (Ctrl+K)">
             <Search aria-hidden />
             <span>Bölüme git…</span>
             <kbd>Ctrl K</kbd>
           </button>
-          <span className="flex-1" />
+          <span
+            className={`msv-live is-${liveStatus}`}
+            role="status"
+            title={`Canlı kanal: ${liveText}${syncLabel ? ` · son eşitleme ${syncLabel}` : ''}`}
+          >
+            <i aria-hidden="true" />
+            <span>{liveText}</span>
+            {syncLabel && <small>{syncLabel}</small>}
+          </span>
           {localHost && (
             <Segmented<'oracle' | 'yerel'>
-              className="shrink-0"
+              className="msv-src shrink-0"
               label="Veri kaynağı"
               value={panelTarget}
               onChange={choosePanelTarget}
@@ -473,7 +590,7 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
               ]}
             />
           )}
-          <label className="ms-select-chip !h-9 min-w-0 max-w-[46vw] sm:max-w-[300px]" title={committeeName}>
+          <label className="ms-select-chip min-w-0 max-w-[40vw] sm:max-w-[280px]" title={committeeName}>
             <span className="sr-only">Kurul</span>
             <select value={selectedCommitteeId} onChange={(e) => onSelectCommittee(e.target.value)} className="!text-sm">
               {committees.map((c) => (
@@ -482,22 +599,20 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
             </select>
             <ChevronDown className="w-3.5 h-3.5 text-ink-3 shrink-0 pointer-events-none" aria-hidden="true" />
           </label>
-          {(
-            <Segmented<AppDensity>
-              className="ms-density shrink-0"
-              label="Yoğunluk"
-              value={look.density}
-              onChange={(d) => look.set({ density: d })}
-              options={(['compact', 'normal', 'wide'] as AppDensity[]).map((d) => ({ value: d, label: DENSITY_LABELS[d] }))}
-            />
-          )}
+          <Segmented<AppDensity>
+            className="ms-density shrink-0"
+            label="Yoğunluk"
+            value={look.density}
+            onChange={(d) => look.set({ density: d })}
+            options={(['compact', 'normal', 'wide'] as AppDensity[]).map((d) => ({ value: d, label: DENSITY_LABELS[d] }))}
+          />
           <button type="button" onClick={() => void refreshAll()} disabled={loading} className="ms-btn is-ghost is-icon shrink-0" title="Verileri yenile" aria-label="Verileri yenile">
             <RefreshCw className={loading ? 'animate-spin' : ''} />
           </button>
-          <button type="button" onClick={toggleTheme} className="ms-btn is-ghost is-icon shrink-0" title={theme === 'dark' ? 'Açık tema' : 'Koyu tema'} aria-label="Temayı değiştir">
+          <button type="button" onClick={toggleTheme} className="ms-btn is-ghost is-icon shrink-0 msv-theme" title={theme === 'dark' ? 'Açık tema' : 'Koyu tema'} aria-label="Temayı değiştir">
             {theme === 'dark' ? <Sun /> : <Moon />}
           </button>
-          <span className="ms-avatar ms-me" title={adminEmail}>
+          <span className="ms-avatar is-accent ms-me" title={adminEmail}>
             {(adminEmail || 'Y').charAt(0).toUpperCase()}
           </span>
         </header>
@@ -506,13 +621,12 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
           key={section}
           className="ms-console-body ms-view-enter overscroll-contain flex-1 min-h-0 overflow-y-auto"
           data-density={density}
+          aria-label={current.label}
         >
           <div className={`ms-cinner ${section === 'studio' ? '!max-w-none' : ''}`}>
-            <div className="ms-chead">
-              <div className="min-w-0">
-                <h1 className="ms-page-title m-0 text-ink">{current.label}</h1>
-                <p>{current.hint}</p>
-              </div>
+            {/* Telefon/tablet: başlık üst çubukta menü düğmesinde; kısa açıklama burada */}
+            <div className="msv-mhead">
+              <p>{current.hint}</p>
             </div>
 
             {section === 'pending' && (
@@ -701,14 +815,33 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
         </main>
       </div>
 
-      {paletteOpen && <SectionPalette onPick={(id) => setSection(id)} onClose={() => setPaletteOpen(false)} badgeOf={badgeOf} />}
+      {paletteOpen && <SectionPalette current={section} onPick={(id) => setSection(id)} onClose={() => setPaletteOpen(false)} badgeOf={badgeOf} />}
 
       {/* Telefon ve tablet: bölüm menüsü alttan açılır */}
-      <Drawer open={menuOpen} onClose={() => setMenuOpen(false)} title="Yönetim" label="Yönetim bölümleri">
-        <nav aria-label="Yönetim bölümleri" className="ms-msec -mt-2">
-          {nav}
+      <Drawer open={menuOpen} onClose={() => { setMenuOpen(false); setMenuQuery(''); }} title="Yönetim" label="Yönetim bölümleri">
+        <div className="-mt-1 mb-2">
+          <SearchBox value={menuQuery} onChange={setMenuQuery} placeholder="Bölüm ara" label="Bölüm ara" />
+        </div>
+        <nav aria-label="Yönetim bölümleri" className="msv-mgrid">
+          {renderNav(menuQuery, true)}
         </nav>
-        <button type="button" onClick={onExit} className="ms-side-item">
+        <div className="msv-drawer-tools">
+          {localHost && (
+            <Segmented<'oracle' | 'yerel'>
+              label="Veri kaynağı"
+              value={panelTarget}
+              onChange={choosePanelTarget}
+              options={[
+                { value: 'oracle', label: 'Canlı' },
+                { value: 'yerel', label: 'Yerel' },
+              ]}
+            />
+          )}
+          <button type="button" onClick={toggleTheme} className="ms-btn is-sm">
+            {theme === 'dark' ? <Sun /> : <Moon />} {theme === 'dark' ? 'Açık tema' : 'Koyu tema'}
+          </button>
+        </div>
+        <button type="button" onClick={onExit} className="ms-side-item mt-2">
           <ArrowLeft aria-hidden="true" /> Öğrenci sitesine dön
         </button>
       </Drawer>
@@ -744,19 +877,30 @@ function SubTabs<T extends string>({ value, onChange, items }: { value: T; onCha
   );
 }
 
-/** Ctrl/⌘+K bölüm paleti: yaz, ok tuşlarıyla seç, Enter ile git */
+/** Ctrl/⌘+K bölüm paleti: yaz, ok tuşlarıyla seç, Enter ile git. Boşken son açılanlar üstte. */
 const SectionPalette: React.FC<{
+  current: ManageSection;
   onPick: (id: ManageSection) => void;
   onClose: () => void;
   badgeOf: (id: ManageSection) => { n: number; alert?: boolean } | undefined;
-}> = ({ onPick, onClose, badgeOf }) => {
+}> = ({ current, onPick, onClose, badgeOf }) => {
   const [q, setQ] = useState('');
   const [idx, setIdx] = useState(0);
   const inputRef = useRef<HTMLInputElement>(null);
-  const fold = (t: string) => t.toLocaleLowerCase('tr-TR').normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/ı/g, 'i');
-  const list = SECTIONS.filter((x) => !q.trim() || fold(`${x.label} ${x.hint} ${x.keywords || ''} ${x.group}`).includes(fold(q.trim())));
+  const listRef = useRef<HTMLUListElement>(null);
+  const query = foldTr(q.trim());
+  const recent = query ? [] : readRecent().filter((id) => id !== current).slice(0, 4);
+  const rows: { sec: (typeof SECTIONS)[number]; head?: string }[] = query
+    ? SECTIONS.filter((x) => foldTr(`${x.label} ${x.hint} ${x.keywords || ''} ${x.group}`).includes(query)).map((sec) => ({ sec }))
+    : [
+        ...recent.map((id, i) => ({ sec: SECTIONS.find((x) => x.id === id)!, head: i === 0 ? 'Son açılanlar' : undefined })),
+        ...SECTIONS.filter((x) => !recent.includes(x.id)).map((sec, i, arr) => ({ sec, head: i === 0 || arr[i - 1].group !== sec.group ? sec.group : undefined })),
+      ];
   useEffect(() => inputRef.current?.focus(), []);
   useEffect(() => setIdx(0), [q]);
+  useEffect(() => {
+    listRef.current?.querySelector('button.is-on')?.scrollIntoView({ block: 'nearest' });
+  }, [idx]);
   return (
     <div className="ms-overlay ms-cpal-wrap fixed inset-0 z-[90] flex items-start justify-center p-4 pt-[12vh]" onMouseDown={(e) => e.target === e.currentTarget && onClose()}>
       <div className="ms-cpal ms-keep-shell" role="dialog" aria-modal="true" aria-label="Bölüme git">
@@ -767,32 +911,45 @@ const SectionPalette: React.FC<{
             value={q}
             onChange={(e) => setQ(e.target.value)}
             placeholder="Bölüm ya da iş ara: taslak, yedek, e-posta…"
+            aria-label="Bölüm ara"
+            aria-controls="msv-cpal-list"
+            aria-activedescendant={rows[idx] ? `msv-cpal-${rows[idx].sec.id}` : undefined}
             onKeyDown={(e) => {
               if (e.key === 'Escape') onClose();
-              if (e.key === 'ArrowDown') { e.preventDefault(); setIdx((i) => Math.min(list.length - 1, i + 1)); }
+              if (e.key === 'ArrowDown') { e.preventDefault(); setIdx((i) => Math.min(rows.length - 1, i + 1)); }
               if (e.key === 'ArrowUp') { e.preventDefault(); setIdx((i) => Math.max(0, i - 1)); }
-              if (e.key === 'Enter' && list[idx]) onPick(list[idx].id);
+              if (e.key === 'Enter' && rows[idx]) onPick(rows[idx].sec.id);
             }}
           />
           <kbd>Esc</kbd>
         </label>
-        <ul className="ms-cpal-list" role="listbox" aria-label="Bölümler">
-          {list.map((x, i) => {
+        <ul ref={listRef} id="msv-cpal-list" className="ms-cpal-list" role="listbox" aria-label="Bölümler">
+          {rows.map(({ sec: x, head }, i) => {
             const Icon = x.icon;
             const b = badgeOf(x.id);
             return (
-              <li key={x.id} role="option" aria-selected={i === idx}>
-                <button type="button" onMouseEnter={() => setIdx(i)} onClick={() => onPick(x.id)} className={i === idx ? 'is-on' : ''}>
-                  <span className="hk-tile is-sm"><Icon aria-hidden /></span>
-                  <span className="ms-cpal-t"><b>{x.label}</b><small>{x.hint}</small></span>
-                  {b && b.n > 0 && <span className={`ms-cpal-n ${b.alert ? 'is-alert' : ''}`}>{b.n}</span>}
-                  {i === idx && <CornerDownLeft className="ms-cpal-enter" aria-hidden />}
-                </button>
-              </li>
+              <React.Fragment key={`${head || ''}${x.id}`}>
+                {head && <li role="presentation" className="msv-cpal-group">{head}</li>}
+                <li role="option" id={`msv-cpal-${x.id}`} aria-selected={i === idx}>
+                  <button type="button" tabIndex={-1} onMouseEnter={() => setIdx(i)} onClick={() => onPick(x.id)} className={i === idx ? 'is-on' : ''}>
+                    <span className="hk-tile is-sm"><Icon aria-hidden /></span>
+                    <span className="ms-cpal-t"><b>{x.label}</b><small>{x.hint}</small></span>
+                    {b && b.n > 0 && <span className={`ms-cpal-n ${b.alert ? 'is-alert' : ''}`}>{b.n}</span>}
+                    {x.id === current ? <span className="msv-cpal-g">Açık</span> : query ? <span className="msv-cpal-g">{x.group}</span> : null}
+                    {i === idx && <CornerDownLeft className="ms-cpal-enter" aria-hidden />}
+                  </button>
+                </li>
+              </React.Fragment>
             );
           })}
-          {list.length === 0 && <li className="ms-cpal-empty">Eşleşen bölüm yok</li>}
+          {rows.length === 0 && <li className="ms-cpal-empty">Eşleşen bölüm yok</li>}
         </ul>
+        <div className="msv-cpal-foot" aria-hidden="true">
+          <span><kbd>↑</kbd><kbd>↓</kbd>seç</span>
+          <span><kbd>Enter</kbd>git</span>
+          <span><kbd>Alt</kbd><kbd>↑↓</kbd>bölümler arası</span>
+          <span><kbd>Ctrl</kbd><kbd>K</kbd>aç/kapat</span>
+        </div>
       </div>
     </div>
   );

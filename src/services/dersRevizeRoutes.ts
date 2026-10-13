@@ -6,6 +6,8 @@
  *   GET  /taslak/:id                   → rapor, denetim, karşılaştırma
  *   GET  /taslak/:id/dosya/:ad         → çıktı dosyası
  *   POST /taslak/:id/islem {islem}     ← degistir | ekle | kaldir | ikisini_tut
+ *   POST /taslak/:id/yeniden           ← yayınlanamayan / kesilen / site derlemesi düşen taslağı yeniden gönder
+ *   POST /yeniden                      ← bunların hepsini yeniden gönder
  *
  * İşlem: karar.json yazılır, `yayinla.py --yerel --is <id>` (deste/not/soru/sözlük kanonik kaynaklara) ve ardından
  * `npx vite build` arka planda çalışır; ilerleme taslağın yayin.json'unda ve bu modüldeki iş durumunda görünür.
@@ -91,10 +93,25 @@ export function dersRevizeRouter(appDir: string): express.Router {
       alternatif: yayindakiler.length > 0,
       karar: oku(path.join(d, 'karar.json'), null),
       yayin: oku(path.join(d, 'yayin.json'), null),
+      yayinda: desteler().some((x) => x.revizeIsId === id),
       calisiyor: is?.id === id ? is : sira.some((x) => x.id === id) ? { asama: 'sırada', gunluk: '' } : null,
       zaman: durum.zaman || fs.statSync(d).mtimeMs / 1000,
     };
   };
+
+  // Sıra bellekte durur: sunucu yayın sürerken yeniden başladıysa (ör. bellek taşması) onaylanıp yayınlanmamış taslaklar
+  // sessizce kaybolmasın — "kesildi" diye işaretlenir, panelde "Yeniden gönder" çıkar.
+  try {
+    for (const id of fs.existsSync(taslakKok) ? fs.readdirSync(taslakKok).filter((x) => ID.test(x)) : []) {
+      const d = path.join(taslakKok, id);
+      const k = oku(path.join(d, 'karar.json'), null);
+      if (!oku(path.join(d, 'durum.json'), {})?.revize || k?.karar !== 'onayla' || k?.islem === 'kaldir' || fs.existsSync(path.join(d, 'yayin.json'))) continue;
+      fs.writeFileSync(
+        path.join(d, 'yayin.json'),
+        JSON.stringify({ durum: 'kesildi', kip: k.islem, hatalar: ['Sunucu yayın sırasında yeniden başladı; iş tamamlanmadı. "Yeniden gönder" ile tekrar dene.'] }, null, 1),
+      );
+    }
+  } catch {}
 
   const r = express.Router();
   r.use((_req, res, next) => {
@@ -171,16 +188,22 @@ export function dersRevizeRouter(appDir: string): express.Router {
     if (isliyor) return;
     isliyor = true;
     const yayinlananlar: string[] = [];
+    const derlenecek: string[] = [];
     while (sira.length) {
       const { id, islem } = sira.shift()!;
       const d = path.join(taslakKok, id);
+      if (islem === 'derle') {
+        derlenecek.push(id);
+        continue;
+      }
       is = { id, islem, asama: 'kaynaklara yazılıyor', basla: Date.now(), gunluk: '' };
       const kod = await calistir(python, ['scripts/ders_isci/yayinla.py', '--yerel', '--is', id], `kaynaklara yazılıyor (${sira.length} sırada)`);
       desteOnbellek = null;
       if (kod === 0) yayinlananlar.push(id);
       else if (!fs.existsSync(path.join(d, 'yayin.json')))
-        fs.writeFileSync(path.join(d, 'yayin.json'), JSON.stringify({ durum: 'hata', hatalar: [is.gunluk.slice(-1500)] }, null, 1));
+        fs.writeFileSync(path.join(d, 'yayin.json'), JSON.stringify({ durum: 'hata', kip: islem, hatalar: [is.gunluk.slice(-1500)] }, null, 1));
     }
+    yayinlananlar.push(...derlenecek);
     if (yayinlananlar.length) {
       is = { id: yayinlananlar[yayinlananlar.length - 1], islem: 'derleme', asama: 'site derleniyor', basla: Date.now(), gunluk: '' };
       const b = await calistir('npx', ['vite', 'build'], 'site derleniyor');
@@ -217,6 +240,68 @@ export function dersRevizeRouter(appDir: string): express.Router {
     sirayaAl(id, islem, String(req.headers['x-admin-email'] || ''));
     isle();
     res.json({ ok: true, durum: islem === 'kaldir' ? 'reddedildi' : 'sirada' });
+  });
+
+  /**
+   * Yeniden gönderilebilir mi: yayın hatası / denetim hatası / sunucu yeniden başlarken kesilen yayın / site derlemesi düşen.
+   * Dönüş: yapılacak iş ('yayinla' | 'derle' | 'onar') ya da engel metni.
+   */
+  const yenidenNe = (o: any): { is: 'yayinla' | 'derle' | 'onar' } | { engel: string } => {
+    if (!o) return { engel: 'taslak yok' };
+    if (bekleyenIds().has(o.is_id)) return { engel: 'Bu taslak zaten sırada.' };
+    if (o.karar?.karar !== 'onayla' || o.karar?.islem === 'kaldir') return { engel: 'Bu taslak gönderilmemiş; önce bir işlem seç.' };
+    // revize zaten destelerde: yayın aslında olmuş (ör. eşzamanlı ikinci gönderim "zaten yayında" diye düştü) → kaydı düzelt
+    if (o.yayinda) return o.yayin?.durum === 'yayinlandi' && o.yayin?.site_derlendi === false ? { is: 'derle' } : o.yayin?.durum === 'yayinlandi' ? { engel: 'Bu revize sitede yayında.' } : { is: 'onar' };
+    if (o.yayin?.durum === 'yayinlandi') return o.yayin.site_derlendi === false ? { is: 'derle' } : { engel: 'Bu revize sitede yayında.' };
+    if (o.denetim_hata) return { engel: `İşçi denetiminde ${o.denetim_hata} HATA var; taslak yeniden üretilmeli.` };
+    return { is: 'yayinla' };
+  };
+
+  const yenidenGonder = (o: any, kim: string): string | null => {
+    const n = yenidenNe(o);
+    if ('engel' in n) return n.engel;
+    const d = path.join(taslakKok, o.is_id);
+    const islem = o.karar?.islem || o.yayin?.kip || (o.alternatif ? 'ikisini_tut' : 'ekle');
+    if (n.is === 'onar') {
+      const deste = desteler().find((x) => x.revizeIsId === o.is_id);
+      fs.writeFileSync(
+        path.join(d, 'yayin.json'),
+        JSON.stringify({ ...(o.yayin || {}), hatalar: undefined, durum: 'yayinlandi', kip: islem, deste_id: deste?.id, yayin_zamani: new Date().toISOString(), onarildi: true }, null, 1),
+      );
+      return null;
+    }
+    if (n.is === 'derle') {
+      sira.push({ id: o.is_id, islem: 'derle', kim });
+      return null;
+    }
+    try {
+      fs.unlinkSync(path.join(d, 'yayin.json'));
+    } catch {}
+    fs.writeFileSync(path.join(d, 'karar.json'), JSON.stringify({ ...o.karar, kim: kim || o.karar?.kim, zaman: Date.now() / 1000, yeniden: true }, null, 1));
+    sira.push({ id: o.is_id, islem, kim });
+    return null;
+  };
+
+  r.post('/taslak/:id/yeniden', express.json(), (req, res) => {
+    const id = req.params.id;
+    if (!ID.test(id)) return res.status(400).json({ hata: 'geçersiz kimlik' });
+    const o = ozet(id);
+    const e = yenidenGonder(o, String(req.headers['x-admin-email'] || ''));
+    if (e) return res.status(e === 'taslak yok' ? 404 : 409).json({ hata: e });
+    isle();
+    res.json({ ok: true });
+  });
+
+  r.post('/yeniden', express.json(), (req, res) => {
+    const kim = String(req.headers['x-admin-email'] || '');
+    const alinan: string[] = [];
+    for (const id of fs.existsSync(taslakKok) ? fs.readdirSync(taslakKok).filter((x) => ID.test(x)) : []) {
+      const o: any = ozet(id);
+      if (!o || 'engel' in yenidenNe(o)) continue;
+      if (!yenidenGonder(o, kim)) alinan.push(id);
+    }
+    if (alinan.length) isle();
+    res.json({ ok: true, alinan });
   });
 
   /** Toplu gönderim: bekleyen tüm taslaklar — alternatifi olan "Her ikisini tut", olmayan "Ekle". */
