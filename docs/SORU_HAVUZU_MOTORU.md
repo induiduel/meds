@@ -15,6 +15,26 @@ Yapay zekâ birleştirmesi (Gemini, ders notu kaynaklı) bunun üstünde, arka p
 | 4. Gruplama | `cluster.ts` | Öğrenilmiş çift olasılığı (TF-IDF kosinüs, kapsama, 4'lü harf dizisi, terim, aynı çıkmış soruya yaslanma, şık, soru no, ders çelişkisi) + ortalama bağlantılı kümeleme; yuva numarası farklıysa kesin ayrı |
 | 5. Taslak | `cluster.ts` `draftCluster` | Ortak ögeleri en çok kapsayan hatırlamanın temizlenmiş cümlesi, ders/konu oyu, cevap oyları, "önceki yıllarda çıkmış" eşleşmesi (küme merkezi + birinci/ikinci aday farkı) |
 
+## Sürekli iyileşme (2026-10-13, ikinci tur)
+
+- **Sınavın kendi sırası (`numberDersPrior`):** kurullar soruları ders blokları hâlinde sorar, blok sırası yıldan yıla
+  değişir. Çıkmış bankasındaki numaralar sınavlar arası tutarsız olduğundan (genel numara→ders tablosu %13–42) havuzun
+  numarası bilinen sorularına bakılır: iki yandaki en yakın komşu aynı dersse o ders, değilse komşu oyu (ağırlık 0,15).
+  15 gerçek sınav dökümünde ders isabeti %77,6 → %81,3 (`scripts/eval/recall-number-prior.mts`).
+- **Karma kümeleme:** her soru kaydında (server.ts `saveDatabase` → `schedule`) 2 sn sonra artımlı atama (yalnız yeni/
+  değişen kayıt mevcut kümelere; analiz önbellekli, ms), son değişiklikten 10 dk (en geç 30 dk) sonra toplu düzeltme.
+  Saf artımlı atama F1'i %65 → %58'e düşürdüğü için (açgözlü atama iki yarım kümeyi birleştiremez) toplu düzeltme şart.
+  Toplu hesap ters dizinle yalnız ortak kök/terim/çıkmış komşusu olan çiftleri hesaplar (diğerleri taban olasılık):
+  5.000 kayıtta 13,5 → 3,5 sn, test F1 %65,7 → %68,6.
+- **Öğrenci kararlarından öğrenme:** Soru ekle'de "bağla"/"birleştir" = aynı soru, yeni "Farklı soru" düğmesi = farklı
+  soru (`POST /api/recall/feedback` → `data/recall_feedback.jsonl`, metin maskeli, IP başına saatte 120). Sunucu
+  haftada bir, ≥20 yeni kararla `scripts/recall/learn.mts --write`'ı düşük öncelikle çalıştırır: sentetik dev çiftleri
+  + kararların %75'i (3 kat ağırlık); kararların %25'i ayrılır. Kapı: ayrılan kararlarda doğruluk düşmemeli ve test F1
+  en çok 1 puan düşebilir; geçerse `data/recall_weights.json` yazılır, motor yeniden yükler, kümeler baştan hesaplanır.
+  Şık ağırlığı, iki tarafında şık olan ≥50 karar yoksa sabit kalır. Her iki dosya git dışında (makineye özgü).
+- Eşleşme yanıtı kaydın hafif kopyasını da döner: Soru ekle açılışta havuzu yüklemediği için önceden (eski algoritmada
+  da) havuz eşleşmeleri ekranda hiç görünmüyordu.
+
 Bağlantılar: `poolClusterService.ts` (havuz kümeleri, `POST /api/recall/match`), `QuickAddHero.tsx` (yazarken eşleşme ve
 ders tahmini sunucudan), `pool/PoolView.tsx` (öneri bandı, satırda "n benzer"), `admin/QuestionClusterAutomationModal.tsx`.
 
@@ -29,7 +49,7 @@ biri için 4–10 öğrenci tarzı mesaj: %40–75 aksansız, kısaltma/harf hat
 
 | Ölçüt | Eski | Yeni |
 |---|---|---|
-| Gruplama, test (k4–k6), çift F1 · ARI | %37,5 · 0,371 (kume-v2) | **%65,7 · 0,656** |
+| Gruplama, test (k4–k6), çift F1 · ARI | %37,5 · 0,371 (kume-v2) | **%68,6 · 0,686** |
 | Gruplama, tüm set, banka soruyu içeriyorsa | — | %74,8 · 0,749 |
 | Soru ekle anlık eşleşme: ilk öneri doğru · yanlış alarm (963 mesaj akışı) | %54,5 · 326 (tarayıcı, 39 ms/mesaj) | **%83,0 · 78** (0,4 ms) |
 | Ders tahmini | %36,4 (medicalPredictorService) | **%63,2**; güven ≥0,75'te %88,5 isabet |
@@ -51,6 +71,9 @@ npm run eval:recall                       # test kümesi (k4–k6)
 npx tsx scripts/eval/recall-engine.mts --split all --bank include
 npx tsx scripts/eval/recall-engine.mts --fit --l2 0.5 --drop opt   # çift modelini yeniden öğren (dev), eşik seç
 npm run eval:recall:realtime              # Soru ekle anlık eşleşme: eski ↔ yeni
+npx tsx scripts/eval/recall-engine.mts --split all --incremental 0.3   # artımlı atama (sunucudaki anlık yol)
+npx tsx scripts/eval/recall-number-prior.mts                          # sınav sırası ön bilgisi
+npx tsx scripts/recall/learn.mts [--write] [--data <klasör>]          # öğrenci kararlarıyla yeniden öğren
 npx tsx scripts/eval/pool-cluster-check.mts   # gerçek data/questions.json üzerinde kümeler
 ```
 
