@@ -1,4 +1,4 @@
-import React, { Suspense, useEffect, useRef, useState } from 'react';
+import React, { Suspense, useEffect, useMemo, useRef, useState } from 'react';
 import { ArrowUpRight, ChevronDown, LayoutGrid, List as ListIcon, Loader2, Search, X } from 'lucide-react';
 import { safeJsonFetch } from '../../services/api';
 import type { LectureNote } from '../../types';
@@ -6,6 +6,8 @@ import { PageHeader } from '../ui/PageHeader';
 import { fetchSearch, Highlight, TypeTag, TYPE_META, TYPE_ORDER, type SearchDocType, type SearchHit, type SearchResponse } from './searchShared';
 import { rememberSearch } from './SearchPalette';
 import { UnderstandingBar } from './QueryIntelUi';
+import { formatHit } from './hitFormat';
+import { HitDetail, HitPreview } from './HitView';
 
 const PAGE = 20;
 
@@ -109,6 +111,12 @@ export const SearchView: React.FC<SearchViewProps> = ({ initialQuery, focusId, c
     setLoadingMore(false);
   };
 
+  // Düz dizin metni → yapılandırılmış kart (üst bilgi hapları, soru/şık/cevap, başlıklı maddeler)
+  const formatted = useMemo(() => items.map((hit) => ({ hit, f: formatHit(hit, query) })), [items, query]);
+  const sorted = sortBy === 'discipline'
+    ? [...formatted].sort((a, b) => String(a.hit.discipline || '~').localeCompare(String(b.hit.discipline || '~'), 'tr'))
+    : formatted;
+
   const allCount = Object.values(byType).reduce((a, b) => a + (b || 0), 0);
   const chips = TYPE_ORDER.filter((t) => byType[t]);
   const total = data?.total ?? 0;
@@ -199,22 +207,27 @@ export const SearchView: React.FC<SearchViewProps> = ({ initialQuery, focusId, c
             </span>
           </div>
           <ol className={`m-0 p-0 list-none rb-hits ${view === 'grid' ? 'is-grid' : ''}`}>
-            {(sortBy === 'discipline' ? [...items].sort((a, b) => String(a.discipline || '~').localeCompare(String(b.discipline || '~'), 'tr')) : items).map((r) => {
+            {sorted.map(({ hit: r, f }) => {
               const open = openId === r.id;
               return (
                 <li key={r.id} data-hit={r.id} className={`ms-hit ${open ? 'is-open' : ''}`}>
                   <button type="button" className="ms-hit-head" aria-expanded={open} onClick={() => setOpenId(open ? undefined : r.id)}>
-                    <span className="flex items-center gap-2 min-w-0 flex-wrap">
+                    <span className="rb-hit-meta">
                       <TypeTag type={r.documentType} />
-                      {r.discipline && <span className="text-xs text-ink-3 truncate max-w-full">{r.discipline}</span>}
-                      {r.pageNumber ? <span className="text-xs text-ink-3">· s. {r.pageNumber}</span> : null}
+                      {r.discipline && r.discipline !== 'Tıp' && <span className="rb-hit-disc">{r.discipline}</span>}
+                      {r.pageNumber ? <span className="rb-hit-pill">s. {r.pageNumber}</span> : null}
+                      {f.tags.map((t) => <span key={t} className="rb-hit-pill">{t}</span>)}
                     </span>
-                    <span className="ms-hit-title"><Highlight text={r.title} query={query} /></span>
-                    {!open && <span className="ms-hit-snippet"><Highlight text={r.snippet} query={query} /></span>}
+                    <span className="ms-hit-title"><Highlight text={f.title} query={query} /></span>
+                    {f.subtitle && <span className="rb-hit-sub"><Highlight text={f.subtitle} query={query} /></span>}
+                    {!open && <HitPreview f={f} query={query} />}
                     <ChevronDown className="ms-hit-chev w-4 h-4" aria-hidden="true" />
                   </button>
                   <div className="ms-collapsible-body">
                     <div className="min-h-0 overflow-hidden">
+                      <div className="ms-hit-full rb-hit-full">
+                        <HitDetail f={f} query={query} />
+                      </div>
                       {SOURCE_ACTION[r.documentType] && (
                         <div className="ms-hit-actions">
                           <button type="button" onClick={() => openSource(r)} disabled={openingId === r.id} className="h-10 px-4 rounded-full bg-accent-soft text-accent text-base font-semibold inline-flex items-center gap-1.5 cursor-pointer hover:bg-accent hover:text-white transition-colors disabled:opacity-60">
@@ -223,7 +236,6 @@ export const SearchView: React.FC<SearchViewProps> = ({ initialQuery, focusId, c
                           </button>
                         </div>
                       )}
-                      <div className="ms-hit-full"><Highlight text={r.content} query={query} /></div>
                     </div>
                   </div>
                 </li>

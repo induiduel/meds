@@ -17,6 +17,27 @@ const MIN = 6;
 const MAX = 600;
 let installed = false;
 
+/**
+ * Ekrana özel ek düğmeler (ör. Öğren: "Not ekle", "Bildir"). Sağlayıcı seçim bağlamına bakıp düğme listesi döner;
+ * döndürmezse çubuk yalnız paylaşım düğmelerini gösterir. Düğme çubuğun başına, paylaşımdan önce eklenir.
+ */
+export interface SelectionAction {
+  id: string;
+  label: string;
+  /** 24×24 görünüm kutusunda çizgi SVG yolu (path d) */
+  icon: string;
+  tone?: 'danger' | 'accent';
+  run: (sel: { text: string; range: Range }) => void;
+}
+export type SelectionActionProvider = (ctx: { text: string; range: Range; host: Element }) => SelectionAction[] | null | undefined;
+const providers = new Set<SelectionActionProvider>();
+let extra: SelectionAction[] = [];
+let extraRange: Range | null = null;
+export function registerSelectionActions(p: SelectionActionProvider): () => void {
+  providers.add(p);
+  return () => void providers.delete(p);
+}
+
 const norm = (s: string) => s.replace(/\s+/g, ' ').trim();
 
 /** Seçimden paylaşılacak adres: ?vurgu= + yerel metin parçası */
@@ -31,15 +52,15 @@ export function buildDeepLink(text: string): string {
   return url.toString();
 }
 
-function selectionText(): { text: string; rect: DOMRect | null } | null {
+function selectionText(): { text: string; rect: DOMRect | null; range: Range; host: Element } | null {
   const sel = window.getSelection();
   if (!sel || sel.isCollapsed || sel.rangeCount === 0) return null;
   const range = sel.getRangeAt(0);
   const host = (range.commonAncestorContainer.nodeType === 1 ? range.commonAncestorContainer : range.commonAncestorContainer.parentElement) as Element | null;
-  if (!host?.closest('.sh-main') || host.closest('input, textarea, [contenteditable="true"], .ss-bar')) return null;
+  if (!host?.closest('.sh-main, .ls-root') || host.closest('input, textarea, [contenteditable="true"], .ss-bar')) return null;
   const text = norm(sel.toString());
   if (text.length < MIN || text.length > MAX) return null;
-  return { text, rect: range.getBoundingClientRect() };
+  return { text, rect: range.getBoundingClientRect(), range, host };
 }
 
 async function share(text: string) {
@@ -73,6 +94,7 @@ function makeBar() {
   bar.setAttribute('aria-label', 'Seçili metin');
   bar.hidden = true;
   bar.innerHTML = `
+    <span class="ss-x" data-x></span>
     <button type="button" data-a="share" class="is-primary"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7 8l5-5 5 5M5 14v6h14v-6"/></svg>Paylaş</button>
     <button type="button" data-a="copy"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 14a4 4 0 0 0 6 0l3-3a4 4 0 0 0-6-6l-1 1M14 10a4 4 0 0 0-6 0l-3 3a4 4 0 0 0 6 6l1-1"/></svg>Bağlantı</button>
     <button type="button" data-a="close" aria-label="Kapat" class="is-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>`;
@@ -170,8 +192,27 @@ export function installSelectionShare() {
   let timer = 0;
   const place = () => {
     const s = selectionText();
-    if (!s) { bar.hidden = true; current = ''; return; }
+    if (!s) { bar.hidden = true; current = ''; extra = []; extraRange = null; return; }
     current = s.text;
+    extra = [];
+    for (const p of providers) {
+      try { extra.push(...(p({ text: s.text, range: s.range, host: s.host }) || [])); } catch { /* sağlayıcı hatası çubuğu bozmasın */ }
+    }
+    extraRange = extra.length ? s.range.cloneRange() : null;
+    const slot = bar.querySelector<HTMLElement>('[data-x]');
+    if (slot) {
+      slot.innerHTML = '';
+      for (const a of extra) {
+        const b = document.createElement('button');
+        b.type = 'button';
+        b.dataset.x = a.id;
+        if (a.tone) b.className = `is-${a.tone}`;
+        b.innerHTML = `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="${a.icon}"/></svg>`;
+        b.append(a.label);
+        slot.appendChild(b);
+      }
+      slot.hidden = !extra.length;
+    }
     bar.hidden = false;
     if (coarse.matches || !s.rect) {
       bar.classList.add('is-dock');
@@ -194,7 +235,16 @@ export function installSelectionShare() {
   // Düğmeye basınca seçim kaybolmasın
   bar.addEventListener('mousedown', (e) => e.preventDefault());
   bar.addEventListener('click', (e) => {
-    const a = (e.target as Element).closest('button')?.getAttribute('data-a');
+    const btn = (e.target as Element).closest('button');
+    const xid = btn?.getAttribute('data-x');
+    if (xid) {
+      const act = extra.find((x) => x.id === xid);
+      const range = extraRange;
+      bar.hidden = true;
+      if (act && range && current) act.run({ text: current, range });
+      return;
+    }
+    const a = btn?.getAttribute('data-a');
     if (!a) return;
     const text = current;
     if (a === 'close' || !text) { bar.hidden = true; window.getSelection()?.removeAllRanges(); return; }

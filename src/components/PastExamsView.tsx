@@ -3,7 +3,7 @@ import { useAnswerDoubtfulQuery, useAiReviewQueueQuery } from '../hooks/useMedic
 import { CikmisCard } from '../screens/cikmis/CikmisCard';
 import { PastQuestionRichCard, PastQuestionRichCardProps, RichCardSkeleton, LoadMoreSentinel } from './cikmis/PastQuestionRichCard';
 import { CikmisViewSwitch, useCikmisGorunum } from './cikmis/CikmisViewSwitch';
-import { PageToolbar, FilterPills, ToolbarChip } from './ui/PageToolbar';
+import { PageToolbar, QuickOptions, type ToolbarChip, type ToolbarQuick } from './ui/PageToolbar';
 import { getProgress, recordAttempt, getFavorites, setFavorite, OptionKey, AttemptRecord } from '../services/studyStore';
 import { logActivity } from '../services/activityLog';
 import { FilterGroup } from './ui/FilterGroup';
@@ -304,7 +304,6 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
   const [filtersOpen, setFiltersOpen] = useState(false);
   const [answerFilter, setAnswerFilter] = useState<'all' | 'with' | 'without' | 'doubtful'>('all');
   const [selectedTopic, setSelectedTopic] = useState<string>('all');
-  const [facetQuery, setFacetQuery] = useState('');
   const [suggestOpen, setSuggestOpen] = useState(false);
   const [advFiltersOpen, setAdvFiltersOpen] = useState(false);
   const searchRef = useRef<HTMLInputElement>(null);
@@ -1295,6 +1294,9 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
     ...(viewMode !== 'redacted' ? [{ label: LABELS.view[viewMode], clear: () => setViewMode('redacted') }] : []),
   ];
   const advancedCount = activeFilterChips.length;
+  // Ders ve konu hızlı süzgeç haplarında görünür; çip satırında ve Süzgeç rozetinde yalnız sayfadaki süzgeçler sayılır
+  const sheetChips = activeFilterChips.filter((c) => c.label !== selectedDiscipline && c.label !== selectedTopic);
+  const STATUS_LABEL: Record<string, string> = { unsolved: 'Çözülmedi', wrong: 'Yanlışlar', saved: 'Kaydedilenler' };
   const anyFilter = advancedCount > 0 || selectedCommittee !== 'all' || searchQuery.trim() !== '';
   const clearAllFilters = () => {
     setSearchQuery('');
@@ -1392,24 +1394,89 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
         title="Çıkmış sorular"
         count={`${n(filteredQuestions.length)} soru`}
         search={{ value: searchQuery, onChange: (v) => { setSearchQuery(v); resetPage(); setSuggestOpen(true); }, placeholder: 'Soru kökü ara' }}
-        segments={{
-          label: 'Çözüm durumu',
-          value: statusFilter,
-          onChange: pickStatus,
-          options: [
-            { id: 'all', label: 'Tümü', count: statusCounts.all },
-            { id: 'unsolved', label: 'Çözülmedi', count: statusCounts.unsolved },
-            { id: 'wrong', label: 'Yanlışlar', count: statusCounts.wrong },
-            { id: 'saved', label: 'Kaydedilenler', count: statusCounts.saved },
-          ],
-        }}
+        quick={[
+          {
+            id: 'durum',
+            label: 'Durum',
+            value: statusFilter !== 'all' ? STATUS_LABEL[statusFilter] : undefined,
+            onClear: () => pickStatus('all'),
+            content: (close) => (
+              <QuickOptions close={close} value={statusFilter} onPick={(v) => pickStatus(v as typeof statusFilter)} options={[
+                { id: 'all', label: 'Tümü', count: statusCounts.all },
+                { id: 'unsolved', label: STATUS_LABEL.unsolved, count: statusCounts.unsolved },
+                { id: 'wrong', label: STATUS_LABEL.wrong, count: statusCounts.wrong },
+                { id: 'saved', label: STATUS_LABEL.saved, count: statusCounts.saved },
+              ]} />
+            ),
+          },
+          ...(committeeList.length > 1 ? [{
+            id: 'kurul',
+            label: 'Kurul',
+            value: selectedCommittee !== 'all' ? committeeShort(selectedCommittee) : undefined,
+            onClear: () => pickCommittee('all'),
+            content: (close: () => void) => (
+              <QuickOptions close={close} value={selectedCommittee} onPick={pickCommittee} options={[
+                { id: 'all', label: 'Tüm kurullar', count: fc('committee') },
+                ...committeeList.map((c) => ({ id: c, label: committeeShort(c), count: fc('committee', c) })),
+              ]} />
+            ),
+          }] : []),
+          {
+            id: 'ders',
+            label: 'Ders',
+            wide: true,
+            value: selectedDiscipline !== 'all' ? disciplineLabel(selectedDiscipline) || selectedDiscipline : undefined,
+            onClear: () => { setSelectedDiscipline('all'); setSelectedTopic('all'); resetPage(); },
+            content: (close) => (
+              <QuickOptions
+                close={close}
+                searchable={disciplineList.length > 8}
+                placeholder="Ders ara"
+                value={selectedDiscipline}
+                onPick={(d) => { setSelectedDiscipline(d); setSelectedTopic('all'); resetPage(); }}
+                options={[
+                  { id: 'all', label: 'Tüm dersler', count: fc('discipline') },
+                  ...groupDisciplines(
+                    disciplineList.filter((d) => fc('discipline', d) > 0 || selectedDiscipline === d),
+                    (d) => d,
+                    (d) => fc('discipline', d),
+                  ).flatMap((g) => g.items.map((d) => ({ id: d, label: disciplineLabel(d) || d, count: fc('discipline', d), group: g.label }))),
+                ]}
+              />
+            ),
+          },
+          ...(selectedDiscipline !== 'all' && (topicList.length > 0 || selectedTopic !== 'all') ? [{
+            id: 'konu',
+            label: 'Konu',
+            wide: true,
+            value: selectedTopic !== 'all' ? selectedTopic : undefined,
+            onClear: () => { setSelectedTopic('all'); resetPage(); },
+            content: (close: () => void) => (
+              <QuickOptions
+                close={close}
+                searchable={topicList.length > 8}
+                placeholder="Konu ara"
+                value={selectedTopic}
+                onPick={(t) => { setSelectedTopic(t); resetPage(); }}
+                options={[{ id: 'all', label: 'Tüm konular' }, ...topicList.map(([t, cnt]) => ({ id: t, label: t, count: cnt }))]}
+              />
+            ),
+          }] : []),
+          {
+            id: 'sira',
+            label: 'Sırala',
+            value: sortOrder !== 'default' ? LABELS.sort[sortOrder] : undefined,
+            onClear: () => { setSortOrder('default'); resetPage(); },
+            content: (close) => (
+              <QuickOptions close={close} value={sortOrder} onPick={(v) => { setSortOrder(v as any); resetPage(); }} options={
+                (['default', 'newest', 'oldest', 'number', 'discipline', 'popular', 'updated', 'quality_desc', 'quality_asc'] as const).map((k) => ({ id: k, label: LABELS.sort[k] }))
+              } />
+            ),
+          },
+        ] as ToolbarQuick[]}
         filterTitle="Süzgeçler"
-        filterCount={advancedCount + (selectedCommittee !== 'all' ? 1 : 0) + (sortOrder !== 'default' ? 1 : 0)}
-        chips={[
-          ...(selectedCommittee !== 'all' ? [{ id: 'kurul', label: committeeShort(selectedCommittee), onRemove: () => pickCommittee('all') }] : []),
-          ...activeFilterChips.map((c, i) => ({ id: `f${i}-${c.label}`, label: c.label, onRemove: () => { c.clear(); resetPage(); } })),
-          ...(sortOrder !== 'default' ? [{ id: 'sort', label: LABELS.sort[sortOrder], onRemove: () => { setSortOrder('default'); resetPage(); } }] : []),
-        ] as ToolbarChip[]}
+        filterCount={sheetChips.length}
+        chips={sheetChips.map((c, i) => ({ id: `f${i}-${c.label}`, label: c.label, onRemove: () => { c.clear(); resetPage(); } })) as ToolbarChip[]}
         onClearChips={clearAllFilters}
         tools={<>
           {isAdminUser && (
@@ -1417,39 +1484,9 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
               <Sparkles aria-hidden />
             </a>
           )}
-          <button
-            type="button"
-            onClick={handleManualSync}
-            disabled={cacheStatus.isSyncing}
-            aria-label="Güncellemeleri denetle"
-            title={`Cihazda ${n(questions.length)} soru · güncellemeleri denetle`}
-            className="pt-icon"
-          >
-            <RefreshCw aria-hidden className={cacheStatus.isSyncing ? 'animate-spin' : ''} />
-          </button>
           <CikmisViewSwitch value={gorunum} onChange={setGorunum} />
         </>}
         filters={<>
-          <FilterPills
-            label="Kurul"
-            value={selectedCommittee}
-            onChange={pickCommittee}
-            options={[{ id: 'all', label: 'Tümü', count: fc('committee') }, ...committeeList.map((c) => ({ id: c, label: committeeShort(c), count: fc('committee', c) }))]}
-          />
-          <fieldset className="pt-fgroup">
-            <legend>Sıralama</legend>
-            <select value={sortOrder} onChange={(e) => { setSortOrder(e.target.value as any); resetPage(); }} aria-label="Sırala">
-              <option value="default">{LABELS.sort.default}</option>
-              <option value="quality_desc">Kalite: en iyi önce</option>
-              <option value="quality_asc">Kalite: en sorunlu önce</option>
-              <option value="newest">Yeniden eskiye</option>
-              <option value="oldest">Eskiden yeniye</option>
-              <option value="number">Soru numarası</option>
-              <option value="discipline">Derse göre</option>
-              <option value="popular">En popüler</option>
-              <option value="updated">Son güncellenen</option>
-            </select>
-          </fieldset>
           <fieldset className="pt-fgroup">
             <legend>Kompakt görünüm</legend>
             <button
@@ -1465,64 +1502,6 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
             </button>
           </fieldset>
         <div className="cx-filters">
-          <FilterGroup
-            title="Ders"
-            defaultOpen={false}
-            summary={selectedDiscipline === 'all' ? 'Tümü' : disciplineLabel(selectedDiscipline) || selectedDiscipline}
-            action={selectedDiscipline !== 'all' ? <button type="button" className="ui-btn is-ghost is-sm" onClick={() => { setSelectedDiscipline('all'); setSelectedTopic('all'); resetPage(); }}>Temizle</button> : undefined}
-          >
-            <div className="ui-group">
-              {disciplineList.length > 10 && (
-                <div className="ui-row">
-                  <Search className="w-4 h-4 shrink-0" style={{ color: 'var(--color-ink-3)' }} aria-hidden />
-                  <input className="cx-facet-q" value={facetQuery} onChange={(e) => setFacetQuery(e.target.value)} placeholder="Ders ara" aria-label="Ders ara" />
-                </div>
-              )}
-              <div className="cx-facet-list">
-                {groupDisciplines(
-                  disciplineList.filter((d) => (!facetQuery || foldText(d).includes(foldText(facetQuery))) && (fc('discipline', d) > 0 || selectedDiscipline === d)),
-                  (d) => d,
-                  (d) => fc('discipline', d),
-                ).flatMap((g) => [
-                  <div key={`gl-${g.id}`} className="cx-facet-gl">{g.label}</div>,
-                  ...g.items.map((d) => {
-                    const on = selectedDiscipline === d;
-                    const cnt = fc('discipline', d);
-                    return (
-                      <button key={d} type="button" role="checkbox" aria-checked={on} onClick={() => { setSelectedDiscipline(on ? 'all' : d); setSelectedTopic('all'); resetPage(); }} className={`ui-row cx-facet-opt ${disciplineClass(d)}`}>
-                        <span className="hk-dot" aria-hidden />
-                        <span className="ui-row-main"><b>{disciplineLabel(d) || d}</b></span>
-                        <span className="ui-row-end hk-num">{n(cnt)}</span>
-                        <span className="cx-facet-check" aria-hidden>{on && <Check strokeWidth={3} />}</span>
-                      </button>
-                    );
-                  }),
-                ])}
-              </div>
-            </div>
-          </FilterGroup>
-
-          {(selectedDiscipline !== 'all' || selectedTopic !== 'all') && topicList.length > 0 && (
-            <FilterGroup
-              title="Konu"
-              summary={selectedTopic === 'all' ? 'Tümü' : selectedTopic}
-              action={selectedTopic !== 'all' ? <button type="button" className="ui-btn is-ghost is-sm" onClick={() => { setSelectedTopic('all'); resetPage(); }}>Temizle</button> : undefined}
-            >
-              <div className="ui-group cx-facet-list">
-                {topicList.map(([t, cnt]) => {
-                  const on = selectedTopic === t;
-                  return (
-                    <button key={t} type="button" role="checkbox" aria-checked={on} onClick={() => { setSelectedTopic(on ? 'all' : t); resetPage(); }} className="ui-row cx-facet-opt">
-                      <span className="ui-row-main"><b>{t}</b></span>
-                      <span className="ui-row-end hk-num">{n(cnt)}</span>
-                      <span className="cx-facet-check" aria-hidden>{on && <Check strokeWidth={3} />}</span>
-                    </button>
-                  );
-                })}
-              </div>
-            </FilterGroup>
-          )}
-
           <FilterGroup
             title="Sınav ve cevap"
             summary={[selectedYear !== 'all' ? selectedYear : '', answerFilter !== 'all' ? 'cevap süzgeci' : ''].filter(Boolean).join(' · ') || 'Tümü'}
@@ -1624,7 +1603,12 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
           )}
           </>)}
         </div>
-          <button type="button" onClick={clearAllFilters} className="ui-btn is-ghost" disabled={!anyFilter && statusFilter === 'all'}>Tüm süzgeçleri sıfırla</button>
+          <div className="cx-sheet-end">
+            <button type="button" onClick={clearAllFilters} className="ui-btn is-ghost" disabled={!anyFilter && statusFilter === 'all'}>Tüm süzgeçleri sıfırla</button>
+            <button type="button" onClick={handleManualSync} disabled={cacheStatus.isSyncing} className="ui-btn is-ghost" title={`Cihazda ${n(questions.length)} soru`}>
+              <RefreshCw aria-hidden className={`w-4 h-4 ${cacheStatus.isSyncing ? 'animate-spin' : ''}`} /> Güncellemeleri denetle
+            </button>
+          </div>
         </>}
       >
         {suggestOpen && searchQuery.trim().length >= 2 && (

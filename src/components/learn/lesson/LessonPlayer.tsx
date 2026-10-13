@@ -34,6 +34,7 @@ import {
   ZoomOut,
   RotateCcw,
   Type,
+  Users,
 } from 'lucide-react';
 import type { InteractiveDeck } from '../InteractiveDeckView';
 import { AskAi, GlobalTopicSearchModal, SpotList } from '../InteractiveDeckView';
@@ -58,6 +59,9 @@ import { FeedbackDialog, FeedbackFlag, FeedbackProvider, groupFeedback } from '.
 import { Formula, hideTermTip, InfoId, InfoPane, Infographic, infoTabsFor, KeyPoints, LessonTable, PracticeCard, practiceMeta, Prose } from './LessonBlocks';
 import { LessonRail } from './LessonRail';
 import { Sheet } from '../../ui/Sheet';
+import { registerSelectionActions } from '../../../utils/selectionShare';
+import { selectionContext, useLearnSocial } from './learnSocial';
+import { ComposerReq, ReportReq, ReportSheet, setSocialVisible, SocialProvider, StepSocial, ThreadSheet, useSocialVisible } from './LearnSocialUI';
 import '../../../styles/learn-v10.css';
 
 type Layout = 'A' | 'B';
@@ -95,21 +99,23 @@ const fbTarget = (step: LessonStep, kind: string, i: number | string, label: str
  * Yönetici bağlantısı: /ogren/<deste>?adim=5&hedef=<targetKey> (paylaşım biçimi ?slide=5&target=… da okunur).
  * Oynatıcı kurulurken bir kez okunur, adres çubuğu temizlenir; ders o adımda açılır ve öğe vurgulanır.
  */
-const readDeepLink = (): { adim?: number; hedef?: string } | null => {
+const readDeepLink = (): { adim?: number; hedef?: string; tartisma?: string } | null => {
   try {
     const sp = new URLSearchParams(window.location.search);
     const adim = Number(sp.get('adim')) || Number(sp.get('slide')) || undefined;
     // Paylaşım bağlantısındaki target yalnız öğe anahtarıysa (ör. "s12:q:0") hedef sayılır.
     const target = sp.get('target');
     const hedef = sp.get('hedef') || (target && target.includes(':') ? target : undefined);
-    if (!adim && !hedef) return null;
+    const tartisma = sp.get('tartisma') || undefined;
+    if (!adim && !hedef && !tartisma) return null;
+    sp.delete('tartisma');
     sp.delete('adim');
     sp.delete('hedef');
     sp.delete('slide');
     sp.delete('target');
     const q = sp.toString();
     window.history.replaceState(window.history.state, '', window.location.pathname + (q ? `?${q}` : '') + window.location.hash);
-    return { adim, hedef };
+    return { adim, hedef, tartisma };
   } catch {
     return null;
   }
@@ -290,9 +296,12 @@ export interface LessonPlayerProps {
   onExportPdf?: (slideNumber: number) => void;
   focus?: QuestionFocus | null;
   onClearFocus?: () => void;
+  /** Dersin sürümleri (V1, V2…); varsa üst çubukta sürüm anahtarı çıkar, açık olan vurgulanır */
+  versions?: { id: string; label: string; note?: string }[];
+  onSwitchVersion?: (id: string) => void;
 }
 
-export const LessonPlayer: React.FC<LessonPlayerProps> = ({ deck, startAt, initialViewMode = 'interactive', onProgress, onClose, onExportPdf, focus, onClearFocus }) => {
+export const LessonPlayer: React.FC<LessonPlayerProps> = ({ deck, startAt, initialViewMode = 'interactive', onProgress, onClose, onExportPdf, focus, onClearFocus, versions, onSwitchVersion }) => {
   const steps = useMemo(() => buildSteps(deck), [deck]);
   const sections = useMemo(() => buildSections(steps), [steps]);
   const n = steps.length;
@@ -342,6 +351,56 @@ export const LessonPlayer: React.FC<LessonPlayerProps> = ({ deck, startAt, initi
     };
   }, [deck.id]);
   const fbCtx = useMemo(() => ({ byKey: groupFeedback(feedback), open: (t: FeedbackTarget) => setFbOpen(t) }), [feedback]);
+
+  /* --- ortak katman: herkese açık notlar + metin bildirimi tartışmaları (canlı) --- */
+  const social = useLearnSocial(deck.id);
+  const socialVisible = useSocialVisible();
+  const [composer, setComposer] = useState<ComposerReq | null>(null);
+  const [reportReq, setReportReq] = useState<ReportReq | null>(null);
+  const [threadOpen, setThreadOpen] = useState<string | null>(() => initialLink?.tartisma || null);
+  const socialCtx = useMemo(
+    () => ({ social, deckId: deck.id, deckTitle: deckName(deck), visible: socialVisible, composer, openComposer: setComposer, openThread: setThreadOpen }),
+    [social, deck, socialVisible, composer]
+  );
+  const indexRef = useRef(index);
+  indexRef.current = index;
+  // Seçim çubuğu: ders metninde seçim yapılınca "Not ekle" ve "Bildir" düğmeleri (utils/selectionShare)
+  useEffect(
+    () =>
+      registerSelectionActions(({ host }) => {
+        const root = rootRef.current;
+        if (!root || !root.contains(host) || !host.closest('.ls-content')) return null;
+        const at = host.closest('[data-step]')?.getAttribute('data-step');
+        const st = steps[at != null ? Number(at) : indexRef.current] || steps[indexRef.current];
+        if (!st) return null;
+        return [
+          {
+            id: 'ls-note',
+            label: 'Not ekle',
+            icon: 'M12 5v14M5 12h14',
+            tone: 'accent',
+            run: ({ text }) => {
+              setSocialVisible(true);
+              setComposer({ stepNumber: st.number, anchor: text.slice(0, 300), at: Date.now() });
+              window.getSelection()?.removeAllRanges();
+            },
+          },
+          {
+            id: 'ls-report',
+            label: 'Bildir',
+            icon: 'M12 2a10 10 0 1 0 0 20a10 10 0 1 0 0-20M12 8v4M12 16h.01',
+            tone: 'danger',
+            run: ({ range }) => {
+              const c = selectionContext(range);
+              if (c.quote.length < 4) return;
+              setReportReq({ stepNumber: st.number, ...c });
+              window.getSelection()?.removeAllRanges();
+            },
+          },
+        ];
+      }),
+    [steps]
+  );
 
   useEffect(() => pref.set('medsoru_learn_layout', layoutPref), [layoutPref]);
   useEffect(() => pref.set('medsoru_learn_mode', readMode), [readMode]);
@@ -680,6 +739,21 @@ export const LessonPlayer: React.FC<LessonPlayerProps> = ({ deck, startAt, initi
         <small>{deck.discipline}{deck.instructor ? ` · ${deck.instructor}` : ''}</small>
         <b title={deck.title}>{deckName(deck)}</b>
       </div>
+      {versions && versions.length > 1 && onSwitchVersion && (
+        <span className="lv-vswitch" role="group" aria-label="Ders sürümü">
+          {versions.map((v) => (
+            <button
+              key={v.id}
+              type="button"
+              aria-pressed={v.id === deck.id}
+              onClick={() => v.id !== deck.id && onSwitchVersion(v.id)}
+              title={v.id === deck.id ? `${v.label} açık${v.note ? ` · ${v.note}` : ''}` : `${v.label} sürümüne geç${v.note ? ` · ${v.note}` : ''}`}
+            >
+              {v.label}
+            </button>
+          ))}
+        </span>
+      )}
       {layout === 'A' && (
         <span className="lv-top-prog" aria-hidden><i style={{ width: `${((index + 1) / n) * 100}%` }} /></span>
       )}
@@ -799,6 +873,9 @@ export const LessonPlayer: React.FC<LessonPlayerProps> = ({ deck, startAt, initi
                 </button>
                 <button type="button" role="menuitem" className={`ls-tt ${sheet === 'mine' ? 'is-on' : ''}`} onClick={() => pickTool(() => setSheet('mine'))} title="Biçimli kişisel not">
                   <NotebookPen aria-hidden /><span>Notlarım</span>
+                </button>
+                <button type="button" role="menuitemcheckbox" aria-checked={socialVisible} className={`ls-tt ${socialVisible ? 'is-on' : ''}`} onClick={() => pickTool(() => setSocialVisible(!socialVisible))} title="Herkesin SPOT / ÖNEMLİ / VURGU notlarını göster ya da gizle">
+                  <Users aria-hidden /><span>Ortak notlar</span>
                 </button>
                 <button type="button" role="menuitem" className={`ls-tt ${sheet === 'notes' ? 'is-on' : ''}`} onClick={() => pickTool(() => setSheet('notes'))} title="Dersin özeti ve spotları">
                   <NotebookText aria-hidden /><span>Ders notu</span>
@@ -989,6 +1066,7 @@ export const LessonPlayer: React.FC<LessonPlayerProps> = ({ deck, startAt, initi
     <>
       <StepHead step={s} total={n} />
       <StepBody step={s} deckId={deck.id} />
+      <StepSocial step={s} />
       {withPractice && <PracticeSet step={s} items={s.index === index ? practice : practiceOf(s)} jump={s.index === index ? practiceJump : null} onAllDone={() => markDone(s.number)} />}
     </>
   );
@@ -1050,6 +1128,7 @@ export const LessonPlayer: React.FC<LessonPlayerProps> = ({ deck, startAt, initi
             <div className="ls-B-head"><StepHead step={step} total={n} /></div>
             <div className="ls-B-body" ref={mainRef} onTouchStart={onTouchStart} onTouchEnd={onTouchEnd}>
               <StepBody step={step} deckId={deck.id} />
+              <StepSocial step={step} />
             </div>
             <footer className="ls-B-foot">
               <button type="button" className="ls-btn" onClick={prev} disabled={index === 0}><ChevronLeft aria-hidden /> Önceki</button>
@@ -1121,6 +1200,7 @@ export const LessonPlayer: React.FC<LessonPlayerProps> = ({ deck, startAt, initi
       }}
     >
       <FeedbackProvider value={fbCtx}>
+      <SocialProvider value={socialCtx}>
       {immersive && (
         <button type="button" className="ls-exit-immersive" onClick={() => setImmersive(false)} aria-label="Tam ekrandan çık"><Minimize2 aria-hidden /></button>
       )}
@@ -1213,6 +1293,28 @@ export const LessonPlayer: React.FC<LessonPlayerProps> = ({ deck, startAt, initi
           onClose={() => setSearchOpen(false)}
         />
       )}
+      <ReportSheet
+        req={reportReq}
+        onClose={() => setReportReq(null)}
+        onCreated={(t) => {
+          setReportReq(null);
+          setThreadOpen(t.id);
+        }}
+      />
+      <ThreadSheet
+        threadId={threadOpen}
+        onClose={() => setThreadOpen(null)}
+        onJump={(num) => {
+          const i = steps.findIndex((x) => x.number === num);
+          setThreadOpen(null);
+          if (i >= 0 && i !== index) goTo(i);
+          window.setTimeout(() => {
+            const el = rootRef.current?.querySelector<HTMLElement>(`${i >= 0 ? `[data-step="${i}"] ` : ''}.ls-sx-flag`);
+            if (el) scrollInto(el, 'center', true);
+          }, 450);
+        }}
+      />
+      </SocialProvider>
       </FeedbackProvider>
     </div>
   );

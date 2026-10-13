@@ -44,7 +44,9 @@ export interface UserNotification {
 
 const MAX_ITEMS = 300;
 /** Geçmişe yazılmayan kısa onaylar (kopyalandı vb.) */
-const TRIVIAL_TOAST = /kopyaland|^bağlantı$|^tamam$/i;
+// Geçmişe yazılmayan anlık mesajlar: kopyalama/onay, çevrimdışı kuyruğun "sıraya alındı"/"Gönderildi"
+// adımları (sunucu yeniden başlarken her işlem için ayrı satır biriktiriyordu) ve kendi işlemini doğrulayan iletiler.
+const TRIVIAL_TOAST = /kopyaland|^bağlantı$|^tamam$|^bağlantı yok|^gönderildi$|olarak işaretlendi|^anlık bildirim açık$/i;
 
 const STORAGE_KEY = 'medsoru_user_notifications_v1';
 const PUSH_PERM_KEY = 'medsoru_push_notifications_enabled';

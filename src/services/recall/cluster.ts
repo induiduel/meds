@@ -38,6 +38,18 @@ export const setPairWeights = (w: typeof PAIR_WEIGHTS) => { PAIR_WEIGHTS = w; };
 /** Ortalama bağlantı eşiği (olasılık). */
 export let LINK_PROB = 0.6;
 export const setLinkProb = (p: number) => { LINK_PROB = p; };
+/**
+ * Belirsizlik payı: numarasız bir hatırlama, numaraları farklı (yani kesin ayrı) iki soruya eşiği geçip bu paydan
+ * yakın olasılıkla uyuyorsa hiçbirine bağlanmaz. Canlı örnek: "geri dönüşümlü hücre hasarı" parçası #6'ya 0,94,
+ * #7'ye 0,96 → #7'ye yanlış birleşmişti. Hangisi olduğu kanıtla ayrışana kadar tekil kalır.
+ */
+export const AMBIG_GAP = 0.1;
+
+/** Numarasız ögenin, farklı yuvalardaki adaylar arasında kararsız olup olmadığı (yuva → en yüksek olasılık). */
+function ambiguousAcrossSlots(bySlot: Map<number, number>, thr: number): boolean {
+  const top = [...bySlot.values()].filter((p) => p >= thr).sort((a, b) => b - a);
+  return top.length >= 2 && top[0] - top[1] < AMBIG_GAP;
+}
 
 const sumW = (stems: Set<string>, idf: (s: string) => number) => { let s = 0; for (const t of stems) s += idf(t); return s; };
 
@@ -121,7 +133,10 @@ async function yieldIfBusy() {
 }
 
 /** Ortalama bağlantılı kümeleme (kurul içinde). Tekil kalanlar da döner (members.length === 1). */
-export async function clusterRecall(items: RecallItem[], eng: RecallEngine, opts: { linkProb?: number } = {}) {
+/** Yöneticinin "farklı soru" diye ayırdığı çiftler (anahtar çifti, sıralı "a|b"); bu çiftler asla aynı kümeye girmez. */
+export const pairKey = (a: string, b: string) => (a < b ? `${a}|${b}` : `${b}|${a}`);
+
+export async function clusterRecall(items: RecallItem[], eng: RecallEngine, opts: { linkProb?: number; cannotLink?: Set<string> } = {}) {
   const thr = opts.linkProb ?? LINK_PROB;
   sliceStart = Date.now();
   const byCommittee = new Map<string, RecallItem[]>();
@@ -162,6 +177,18 @@ export async function clusterRecall(items: RecallItem[], eng: RecallEngine, opts
     // Yuva numaraları farklı iki küme asla birleşmez (aynı sınavın iki ayrı sorusu)
     const slot = group.map((g) => (g.numberAssigned && g.number ? g.number : 0));
     for (let i = 0; i < n; i++) for (let j = 0; j < i; j++) if (slot[i] && slot[j] && slot[i] !== slot[j]) { sim[i][j] = -1; sim[j][i] = -1; }
+    // Yönetici ayırması: kesin engel (yuva çelişkisi gibi birleşmeyle de yayılır)
+    if (opts.cannotLink?.size) {
+      for (let i = 0; i < n; i++) for (let j = 0; j < i; j++) if (opts.cannotLink.has(pairKey(group[i].key, group[j].key))) { sim[i][j] = -1; sim[j][i] = -1; }
+    }
+    // Numarasız öge iki ayrı numaralı soruya neredeyse eşit uyuyorsa numaralı sorulara bağlanmaz (bkz. AMBIG_GAP)
+    for (let i = 0; i < n; i++) {
+      if (slot[i]) continue;
+      const bySlot = new Map<number, number>();
+      for (let j = 0; j < n; j++) if (slot[j] && sim[i][j] > (bySlot.get(slot[j]) ?? -1)) bySlot.set(slot[j], sim[i][j]);
+      if (!ambiguousAcrossSlots(bySlot, thr)) continue;
+      for (let j = 0; j < n; j++) if (slot[j] && sim[i][j] > base) { sim[i][j] = base; sim[j][i] = base; }
+    }
     const alive = new Uint8Array(n).fill(1);
     const members = group.map((_, i) => [i]);
     const internal = new Float64Array(n);
@@ -304,15 +331,17 @@ export type { Letter };
  * en yenileri). En iyi küme eşiği geçmezse null → kendi tekil kümesini açar. Maliyet: küme × cap, havuz boyundan bağımsız
  * değil ama O(n) (toplu hesap O(n²)). Yuva numarası çelişen kümeye atanmaz.
  */
-export function assignToGroup<G extends { members: RecallItem[] }>(item: RecallItem, groups: Iterable<G>, eng: RecallEngine, opts: { linkProb?: number; cap?: number } = {}): { group: G; prob: number } | null {
+export function assignToGroup<G extends { members: RecallItem[] }>(item: RecallItem, groups: Iterable<G>, eng: RecallEngine, opts: { linkProb?: number; cap?: number; cannotLink?: Set<string> } = {}): { group: G; prob: number } | null {
   const thr = opts.linkProb ?? LINK_PROB;
   const cap = opts.cap ?? 12;
   if (item.a.isNoise) return null;
   let best: { group: G; prob: number } | null = null;
+  const bySlot = new Map<number, number>();
   for (const g of groups) {
     const ms = g.members;
     if (!ms.length || ms[0].committeeId !== item.committeeId) continue;
     if (item.numberAssigned && item.number && ms.some((m) => m.numberAssigned && m.number && m.number !== item.number)) continue;
+    if (opts.cannotLink?.size && ms.some((m) => opts.cannotLink!.has(pairKey(item.key, m.key)))) continue;
     const sample = ms.length > cap ? ms.slice(-cap) : ms;
     // Ucuz ön eleme: hiçbir üyeyle ortak kök/terim yoksa geç
     const st = new Set(item.a.stems);
@@ -320,7 +349,11 @@ export function assignToGroup<G extends { members: RecallItem[] }>(item: RecallI
     let sum = 0;
     for (const m of sample) sum += pairProb(pairFeatures(item, m, eng));
     const p = sum / sample.length;
+    const gs = ms.find((m) => m.numberAssigned && m.number)?.number;
+    if (gs) bySlot.set(gs, Math.max(bySlot.get(gs) ?? -1, p));
     if (p >= thr && (!best || p > best.prob)) best = { group: g, prob: p };
   }
+  // Numarasız öge iki ayrı numaralı soruya neredeyse eşit uyuyorsa hiçbirine atanmaz
+  if (best && !(item.numberAssigned && item.number) && ambiguousAcrossSlots(bySlot, thr)) return null;
   return best;
 }

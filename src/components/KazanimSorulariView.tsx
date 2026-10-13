@@ -187,7 +187,7 @@ function useSoruSocial(id: string): [SoruSocial, { toggleLike: () => void; toggl
         [id]: { ...prev, comments: [...(prev.comments || []), newComment] }
       };
       notifySocial();
-      try { ApiService.commentPastQuestion(id, author, text.trim()); } catch {}
+      ApiService.commentPastQuestion(id, author, text.trim()).catch((e) => console.warn('[yorum] gönderilemedi:', e?.message));
     }
   }), [id]);
 

@@ -28,6 +28,8 @@ import { ConfirmHost, confirmDialog } from './components/ui/ConfirmDialog';
 import { PageHeader } from './components/ui/PageHeader';
 import { LearnFab } from './components/learn/LearnFab';
 import { Onboarding } from './components/onboarding/Onboarding';
+import { tourSeen } from './components/onboarding/tourState';
+const WelcomeTour = React.lazy(() => import('./components/onboarding/WelcomeTour'));
 import { PageLoader } from './components/ui/Animations';
 import { ToastHost, toast } from './components/ui/Toast';
 import { TooltipHost } from './components/ui/TooltipHost';
@@ -274,7 +276,7 @@ export default function App() {
       return false;
     }
   });
-  // İlk açılış: HTML splash ekranı (MeDSor nabız animasyonu) ilk andan itibaren görünür; React hazır olunca tek hamlede solar
+  // İlk açılış: HTML splash ekranı (metinsiz atan kalp + EKG "A") ilk andan itibaren görünür; React hazır olunca tek hamlede solar
   const [showOnboarding, setShowOnboarding] = useState(() => isAuthModalOpen);
   const [isPwaWelcomeOpen, setIsPwaWelcomeOpen] = useState(false);
   const [showClusterModal, setShowClusterModal] = useState(false);
@@ -284,13 +286,15 @@ export default function App() {
     const el = document.getElementById('app-splash');
     if (el) {
       const reduce = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
-      // Uygulama hazır olur olmaz kalkar; animasyon bitsin diye bekletmek her yenilemeye ~1,5 sn ekliyordu.
+      // Atan kalp açılışın başından itibaren en az ~5 sn görünür (imza-A çizimi + EKG taraması); uygulama daha geç
+      // hazır olursa hazır olduğu an kalkar.
+      const wait = Math.max(0, 5000 - performance.now());
       const t = setTimeout(() => {
         el.classList.add('is-leaving');
         setTimeout(() => {
           try { el.remove(); } catch {}
-        }, reduce ? 0 : 220);
-      });
+        }, reduce ? 0 : 360);
+      }, wait);
       return () => clearTimeout(t);
     }
   }, []);
@@ -740,6 +744,36 @@ export default function App() {
   const currentCommittee = (committees || []).find((c) => c.id === selectedCommitteeId);
   const targetCount = currentCommittee?.targetCount || 100;
   const isAdmin = isAdminUser(currentUser);
+
+  // Hoş geldin turu: kayıt/girişten sonra bir kez (profilde `medsoru_tour_v1`); Ayarlar'dan `medsoru:tour` ile yeniden
+  const [showTour, setShowTour] = useState(false);
+  const justAuthedRef = useRef(false);
+  const activeTabRef = useRef(activeTab);
+  activeTabRef.current = activeTab;
+  useEffect(() => {
+    const on = () => setShowTour(true);
+    window.addEventListener('medsoru:tour', on);
+    return () => window.removeEventListener('medsoru:tour', on);
+  }, []);
+  useEffect(() => {
+    if (!currentUser || isAdmin || showOnboarding || tourSeen()) return;
+    // Başka cihazda turu görmüş öğrencinin profili gelsin diye kısa bekle (eşitleme `medsoru_tour_v1`'i getirir)
+    let fired = false;
+    const check = () => {
+      if (fired) return;
+      fired = true;
+      const busy = document.querySelector('.sh-sheet-root, .ls-root, .cf-root, [role="dialog"][aria-modal="true"]');
+      if (!tourSeen() && !busy && !['manage', 'practice', 'admin'].includes(activeTabRef.current)) setShowTour(true);
+    };
+    const onRestored = () => window.setTimeout(check, 250);
+    window.addEventListener('medsoru:user-data-restored', onRestored);
+    const t = window.setTimeout(check, justAuthedRef.current ? 900 : 4000);
+    justAuthedRef.current = false;
+    return () => {
+      window.clearTimeout(t);
+      window.removeEventListener('medsoru:user-data-restored', onRestored);
+    };
+  }, [currentUser?.uid, isAdmin, showOnboarding]);
 
   // Real-time health monitoring: only for admin (saves student network and battery)
   useEffect(() => {
@@ -1290,6 +1324,7 @@ export default function App() {
   };
 
   const handleAuthSuccess = (user: AppUser, token?: string | null) => {
+    justAuthedRef.current = true;
     setCurrentUser(user);
     if (token) setAccessToken(token);
     safeStorage.setItem('medsoru_user_registered', 'true');
@@ -1322,6 +1357,11 @@ export default function App() {
     <GlossaryProvider>
     <MusicPlayerProvider>
       {showOnboarding && !currentUser && <Onboarding onAuthSuccess={handleAuthSuccess} />}
+      {showTour && (
+        <Suspense fallback={null}>
+          <WelcomeTour name={currentUser?.displayName} onGo={setActiveTab} onClose={() => setShowTour(false)} />
+        </Suspense>
+      )}
       <div className="min-h-dvh bg-canvas text-ink flex flex-col font-sans antialiased">
       <ToastHost />
       <ConfirmHost />

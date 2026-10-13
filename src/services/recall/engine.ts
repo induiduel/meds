@@ -57,7 +57,12 @@ export interface Analysis {
 
 /** Ders/alan adları ("hematoloji soruları ağırdı") soru içeriği sayılmaz (yalnız gürültü ayıklamada). */
 const AREA_RE = /^(acil|hematolo|geriatri|onkolo|nefrolo|gastro|endokrin|romatolo|kardiyo|halk|saglig|dahiliye|cerrahi|pediatri|noroloji|psikiyatri|ortopedi|radyoloji|anestezi|dermatoloji|uroloji|enfeksiyon|farmakoloji|patoloji|genetik|biyokimya|mikrobiyoloji|fizyoloji|anatomi|histoloji)/;
-const stemOf = (w: string) => (/^\d/.test(w) ? w : w.slice(0, 5));
+/**
+ * Kök: ilk 5 harf. Yokluk eki (-sız/-siz/-suz/-süz) anlamı tersine çevirir; "geri dönüşümlü" ile "geri dönüşümsüz"
+ * aynı köke inerse zıt iki soru aynı soru sayılır (canlıda yanlış birleştirme, 2026-10-13) → ayrı kök ("donus~").
+ */
+const PRIVATIVE = /(?:siz|suz)(?:l[ae]r|l[iu]k|d[ae]n?|[iu]n|[iu])?$/;
+const stemOf = (w: string) => (/^\d/.test(w) ? w : w.length >= 7 && PRIVATIVE.test(w.slice(5)) ? `${w.slice(0, 5)}~` : w.slice(0, 5));
 
 function l2(v: Vec): Vec {
   let s = 0;

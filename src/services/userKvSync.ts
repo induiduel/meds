@@ -17,7 +17,7 @@ export type KvMap = Record<string, KvRecord>;
 /** Profilde tutulan anahtarlar (desen). Eşitleme servisinin özel birleştirdiği anahtarlar ayrı listededir. */
 const SYNC_PATTERNS: RegExp[] = [
   // Öğren
-  /^medsoru_learn_(progress|done|recent|layout|mode|toc|zoom)(_v1)?$/,
+  /^medsoru_learn_(progress|done|recent|layout|mode|toc|zoom|social)(_v1)?$/,
   /^medsoru_learn_feedback_local_v1$/,
   /^medsoru_slide_drawings_v2(:.*)?$/,
   /^medsoru_annotations:.+$/,
@@ -53,6 +53,8 @@ const SYNC_PATTERNS: RegExp[] = [
   /^medsoru_pdf_(page|q|l|s)_v2$/,
   /^tc_layout$/,
   /^medsor_love_note_hidden_v1$/,
+  // Hoş geldin turu görüldü mü
+  /^medsoru_tour_v1$/,
 ];
 
 /** userDataSyncService'in kendi alanlarında taşıdığı anahtarlar: değişince yine anında gönderim tetiklenir. */

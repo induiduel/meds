@@ -132,7 +132,7 @@ function usePqSocial(id: string): [PQSocial, { toggleLike: () => void; toggleDis
         [id]: { ...prev, comments: [...(prev.comments || []), newComment] }
       };
       notifyPqSocial();
-      try { ApiService.commentPastQuestion(id, author, text.trim()); } catch {}
+      ApiService.commentPastQuestion(id, author, text.trim()).catch((e) => console.warn('[yorum] gönderilemedi:', e?.message));
     }
   }), [id]);
 

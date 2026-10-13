@@ -10,7 +10,7 @@ import { useCallback, useEffect, useRef, useState } from 'react';
  * Dönüş: yuva saklı mı (üst çubuk bu durumda sayfa aramasını kendisi gösterir).
  */
 /** Kaydırınca saklanan yapışkan kontrol şeritleri: liste yuvaları ve `data-autohide` işaretli şeritler. */
-export const DOCK_SEL = '.cx-dock, [data-autohide]';
+export const DOCK_SEL = '.cx-dock, .pt-root, [data-autohide]';
 
 export function useDockAutoHide(routeKey: string) {
   const [hidden, setHidden] = useState(false);
@@ -25,21 +25,34 @@ export function useDockAutoHide(routeKey: string) {
     const DOWN = 24;
     const UP = 40;
 
+    // Kaydırılmış ama yuva görünürken `data-dock="compact"`: telefonda PageToolbar başlık satırını bırakır
+    // (başlık üst çubukta zaten yazar), yalnız arama + süzgeç + segment kalır.
+    let compact = false;
+    const sync = () => {
+      if (state) root.dataset.dock = 'hidden';
+      else if (compact) root.dataset.dock = 'compact';
+      else delete root.dataset.dock;
+    };
     const apply = (v: boolean) => {
       if (state === v) return;
       state = v;
-      if (v) root.dataset.dock = 'hidden';
-      else delete root.dataset.dock;
+      sync();
       setHidden(v);
+    };
+    const setCompact = (v: boolean) => {
+      if (compact === v) return;
+      compact = v;
+      sync();
     };
 
     const check = () => {
       raf = 0;
       const dock = document.querySelector<HTMLElement>(DOCK_SEL);
       const y = window.scrollY;
-      if (!dock) { apply(false); extreme = y; return; }
+      if (!dock) { apply(false); setCompact(false); extreme = y; return; }
       // Sayfanın ilk ekranında (başlık + yuva) saklama. Yapışkan öğenin offsetTop'u kaydırmayla değiştiği için sabit eşik.
       const threshold = 220;
+      setCompact(y >= threshold);
       const ae = document.activeElement;
       // Üst çubuktaki vekil aramaya yazılırken yuva geri gelip vekili kaldırmasın.
       if (ae && ae.closest('.sh-pq')) { extreme = y; return; }
@@ -78,7 +91,7 @@ export function useDockAutoHide(routeKey: string) {
 
 /** Sayfa yuvasındaki ilk arama alanı (üst çubuk vekili bunu yansıtır). */
 export const findDockSearchInput = (): HTMLInputElement | null =>
-  document.querySelector<HTMLInputElement>('.cx-dock input[type="search"], .cx-dock .cx-search input, .cx-dock input[type="text"]');
+  document.querySelector<HTMLInputElement>('.cx-dock input[type="search"], .cx-dock .cx-search input, .cx-dock input[type="text"], .pt-root input[data-page-search]');
 
 /** React kontrollü input'a dışarıdan değer yazar (native setter + input olayı). */
 export function setReactInputValue(el: HTMLInputElement, value: string) {

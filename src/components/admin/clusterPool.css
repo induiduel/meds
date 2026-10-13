@@ -68,6 +68,9 @@
 .qpool-frags { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 6px; }
 .qpool-frags li { padding-left: 10px; border-left: 2px solid var(--d, var(--color-line-2)); font-size: 13px; line-height: 1.45; color: var(--color-ink-2); overflow-wrap: anywhere; }
 .qpool-frags em { font-style: normal; color: var(--color-ink-3); }
+.qpool-frags li.has-act { display: flex; align-items: flex-start; gap: 8px; }
+.qpool-frags li.has-act > span { flex: 1; min-width: 0; }
+.qpool-frags li.has-act .ui-btn { flex-shrink: 0; }
 .qpool-muted { margin: 0; font-size: 12.5px; line-height: 1.45; color: var(--color-ink-3); overflow-wrap: anywhere; }
 
 /* Katkılar */

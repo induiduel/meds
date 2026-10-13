@@ -200,6 +200,40 @@ html.ui-v7 :is(.cx-search, .ms-qsearch, .lh-search, .ms-search-field, .sr-find):
 .rb-hits.is-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr)); align-items: start; }
 .rb-hits.is-grid > .ms-hit.is-open { grid-column: 1 / -1; }
 
+/* 14b · Sonuç kartı içeriği: düz dizin metni yerine yapı (üst bilgi hapları, soru kartı, başlıklı maddeler). */
+.rb-hit-meta { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; min-width: 0; }
+.rb-hit-disc { font-size: 12px; color: var(--color-ink-2); font-weight: 600; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 100%; }
+.rb-hit-pill { font-size: 11.5px; line-height: 18px; padding: 0 7px; border-radius: 999px; background: var(--color-field); color: var(--color-ink-2); white-space: nowrap; }
+.rb-hit-sub { font-size: 13px; color: var(--color-ink-3); line-height: 1.4; overflow-wrap: anywhere; }
+.rb-hit-answer { display: inline-flex; align-items: center; gap: 6px; max-width: 100%; align-self: flex-start; margin-top: 2px; padding: 3px 10px; border-radius: 8px; background: var(--color-ok-soft); color: var(--color-ok); font-size: 13.5px; font-weight: 600; }
+.ms-hit-full.rb-hit-full { white-space: normal; padding-top: 2px; }
+.rb-hit-detail { display: flex; flex-direction: column; gap: 14px; min-width: 0; }
+.rb-hit-context { margin: 0; font-size: 13.5px; line-height: 1.5; color: var(--color-ink-2); padding: 8px 10px; border-radius: 8px; background: var(--color-canvas); }
+.rb-hit-context b { display: block; font-size: 11px; letter-spacing: .05em; text-transform: uppercase; color: var(--color-ink-3); font-weight: 650; margin-bottom: 2px; }
+.rb-hit-keys { margin: 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 6px; }
+.rb-hit-keys li { font-size: 13.5px; line-height: 1.4; padding: 5px 10px; border-radius: 8px; background: var(--color-warn-soft); color: var(--color-ink); }
+.rb-hit-md { font-size: 15px; }
+.rb-hit-md .nm-h2, .rb-q-exp .nm-h2 { font-size: 13px; text-transform: uppercase; letter-spacing: .04em; color: var(--color-ink-3); margin-top: 1em; }
+.rb-hit-md > .nm-h2:first-child, .rb-q-exp .nm > .nm-h2:first-child { margin-top: 0; }
+.rb-q { display: flex; flex-direction: column; gap: 10px; }
+.rb-q-stem { margin: 0; font-size: 15.5px; line-height: 1.6; font-weight: 500; white-space: pre-line; }
+.rb-q-opts { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 6px; }
+.rb-q-opts li { display: flex; align-items: flex-start; gap: 10px; padding: 8px 10px; border: 1px solid var(--color-line); border-radius: 10px; font-size: 14.5px; line-height: 1.45; }
+.rb-q-key { flex-shrink: 0; width: 22px; height: 22px; border-radius: 6px; background: var(--color-field); color: var(--color-ink-2); font-size: 12.5px; font-weight: 700; display: inline-flex; align-items: center; justify-content: center; }
+.rb-q-opts li.is-right { border-color: color-mix(in srgb, var(--color-ok) 45%, transparent); background: var(--color-ok-soft); font-weight: 600; }
+.rb-q-opts li.is-right .rb-q-key { background: var(--color-ok); color: #fff; }
+.rb-q-bar { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.rb-q-answer { font-size: 14px; color: var(--color-ok); }
+.rb-q-toggle { margin-left: auto; display: inline-flex; align-items: center; gap: 6px; height: 32px; padding: 0 10px; border: 1px solid var(--color-line); border-radius: 8px; background: var(--color-white); color: var(--color-ink-2); font: inherit; font-size: 13px; font-weight: 600; cursor: pointer; }
+.rb-q-toggle:hover { background: var(--color-canvas); color: var(--color-ink); }
+.rb-q-exp { border-top: 1px solid var(--color-line-soft); padding-top: 12px; }
+.rb-q-exp-h { margin: 0 0 6px; font-size: 13px; font-weight: 650; letter-spacing: .04em; text-transform: uppercase; color: var(--color-ink-3); }
+@media (max-width: 640px) {
+  .rb-q-stem { font-size: 15px; }
+  .rb-q-opts li { font-size: 14px; padding: 8px; }
+  .ms-hit-full.rb-hit-full { max-height: 65vh; }
+}
+
 /* 15 · Kenar menüsü: kategoriler, ikon karoları, tepede tek "Soru ekle". */
 .sh-side-gl { display: flex; align-items: center; gap: 6px; padding: 10px 10px 4px; font-size: 11px; font-weight: 650; letter-spacing: .06em; text-transform: uppercase; color: var(--color-ink-3); }
 .sh-side-gl::after { content: ""; flex: 1; height: 1px; background: var(--color-line-soft); }

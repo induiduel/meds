@@ -15,7 +15,7 @@ import crypto from 'crypto';
 import { fold, normalizationOk, sameTerm, type ParsedUnit } from './questionIntake.ts';
 import { callFreeGeminiJson, AiRetryLaterError } from './aiProvider.ts';
 import { getRecallEngine, numberDersPrior, RECALL_ENGINE_VERSION, type RecallEngine } from './recall/engine.ts';
-import { clusterRecall, assignToGroup, draftCluster, pairFeatures, pairProb, LINK_PROB, type RecallItem, type RecallDraft } from './recall/cluster.ts';
+import { clusterRecall, assignToGroup, draftCluster, pairFeatures, pairProb, pairKey, LINK_PROB, type RecallItem, type RecallDraft } from './recall/cluster.ts';
 import { makeTicker } from './recall/lexicon.ts';
 import { loadLearnedWeights, type LearnedWeights } from './recall/fit.ts';
 
@@ -352,12 +352,19 @@ export function createPoolClusterService(opts: {
   getOrphanUnits: () => { girdiId: string; n: number; committeeId: string; createdAt: string; unit: ParsedUnit }[];
   /** Sunucu belleğindeki çıkmış soru listesi (motor bankası; verilmezse dosyadan okunur). */
   getPastQuestions?: () => any[];
+  /** Yöneticinin ayırdığı çiftler (data/pool_cluster_splits.json); verilmezse ayırma kalıcı olmaz. */
+  splitsFile?: string;
 }) {
   let clusters: PoolCluster[] = [];
   try { clusters = JSON.parse(fs.readFileSync(opts.file, 'utf8')); } catch { clusters = []; }
   // Öğrenci kararlarından öğrenilmiş ağırlıklar (data/recall_weights.json; yoksa kod içi ağırlıklar)
   let learned: LearnedWeights | null = loadLearnedWeights(opts.rootDir);
   if (learned) console.log(`[Küme] öğrenilmiş ağırlıklar (${learned.fittedAt}, ${learned.feedbackPairs} öğrenci kararı)`);
+  // Yönetici ayırmaları: { a, b, at, by } — kümelemede kesin "birleşemez" kısıtı
+  type SplitRow = { a: string; b: string; at: string; by?: string };
+  let splits: SplitRow[] = [];
+  try { if (opts.splitsFile) splits = JSON.parse(fs.readFileSync(opts.splitsFile, 'utf8')); } catch { splits = []; }
+  let cannotLink = new Set(splits.map((x) => pairKey(x.a, x.b)));
   const aiCache = new Map<string, Partial<PoolCluster>>(); // membershipHash → AI sonucu
   for (const c of clusters) if (c.aiMerged && c.membershipHash && String(c.version || '').startsWith('kume-')) aiCache.set(c.membershipHash, { aiMerged: true, stemSource: 'yapay_zeka', mergedStem: c.mergedStem, mergedOptions: c.mergedOptions, explanation: c.explanation, aiAnswerSuggestion: c.aiAnswerSuggestion, sources: c.sources });
 
@@ -452,7 +459,7 @@ export function createPoolClusterService(opts: {
       }
       const fresh = pairs.map((x) => x.recall).filter((r) => !placed.has(r.key) && !r.a.isNoise).sort((x, y) => (x.createdAt < y.createdAt ? -1 : 1));
       for (const r of fresh) {
-        const hit = assignToGroup(r, all, eng);
+        const hit = assignToGroup(r, all, eng, { cannotLink });
         if (hit) {
           const n = hit.group.members.length;
           hit.group.cohesion = (hit.group.cohesion * ((n * (n - 1)) / 2) + hit.prob * n) / (((n + 1) * n) / 2);
@@ -460,7 +467,7 @@ export function createPoolClusterService(opts: {
         } else all.push({ members: [r], cohesion: 1 });
       }
     } else {
-      all = await clusterRecall(pairs.map((x) => x.recall), eng);
+      all = await clusterRecall(pairs.map((x) => x.recall), eng, { cannotLink });
     }
     state = { eng, groups: all };
     const groups = all.filter((g) => g.members.length >= 2);
@@ -652,6 +659,28 @@ export function createPoolClusterService(opts: {
     status: () => ({ running: !!running, scheduled: !!timer, fullScheduled: !!fullTimer, lastRun, aiQueue: aiQueue.length, aiRunning }),
     runNow,
     schedule,
+    /**
+     * Yönetici: kümedeki bir parçayı "farklı soru" diye ayırır. Parça kümenin diğer üyeleriyle bir daha birleşmez
+     * (kalıcı kısıt); kümeler hemen baştan hesaplanır. Dönen `pairs` öğrenme kaydı için (parça ↔ diğer üyeler).
+     */
+    async split(id: string, key: string, by?: string) {
+      const c = clusters.find((x) => x.id === id);
+      if (!c) return null;
+      const keys = [...c.sourceQuestionIds.map((x) => `q:${x}`), ...(c.sourceIntakeUnits || []).map((x) => `u:${x}`)];
+      if (!keys.includes(key) || keys.length < 2) return null;
+      const at = new Date().toISOString();
+      const others = keys.filter((k) => k !== key);
+      for (const o of others) if (!cannotLink.has(pairKey(key, o))) splits.push({ a: key, b: o, at, by });
+      cannotLink = new Set(splits.map((x) => pairKey(x.a, x.b)));
+      if (opts.splitsFile) {
+        const tmp = `${opts.splitsFile}.tmp`;
+        await fs.promises.writeFile(tmp, JSON.stringify(splits, null, 1), 'utf8');
+        await fs.promises.rename(tmp, opts.splitsFile);
+      }
+      state = null; // artımlı durum eski üyelikleri taşır; baştan kur
+      await runNow('full');
+      return { key, others, text: c.stemFragments.find((f) => f.key === key)?.text || '' };
+    },
     contribute(id: string, contrib: any) {
       const c = clusters.find((x) => x.id === id);
       if (!c) return null;

@@ -942,28 +942,6 @@ html.theme-dark :is(.bg-amber-300, .bg-amber-400, .bg-amber-500, .bg-amber-600, 
   color: #1f1300 !important;
 }
 
-/* --- Ana ekran sevgi notu (Lottie benzeri kalp animasyonu) --- */
-.ms-love {
-  position: relative; display: flex; align-items: center; gap: 14px; padding: 14px 44px 14px 14px; border-radius: 18px;
-  background: linear-gradient(135deg, #fff1f4, #ffe4ec); border: 1px solid #fbcfe0; overflow: hidden;
-  animation: ms-pop-in .5s var(--ease-out-soft) both;
-}
-html.theme-dark .ms-love { background: linear-gradient(135deg, #3a1622, #2a1020); border-color: #5b2236; }
-.ms-love-art { position: relative; width: 84px; height: 70px; flex-shrink: 0; }
-.ms-love-svg { width: 100%; height: 100%; overflow: visible; }
-.ms-love-big { fill: #f43f5e; transform-origin: 60px 52px; animation: ms-heartbeat 1.4s ease-in-out infinite; filter: drop-shadow(0 4px 8px rgb(244 63 94 / .35)); }
-.ms-love-line { fill: none; stroke: #fff; stroke-width: 3.5; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 160; stroke-dashoffset: 160; animation: ms-love-draw 2.8s ease-in-out infinite; }
-.ms-love-float { position: absolute; bottom: 0; color: #fb7185; font-size: 12px; opacity: 0; animation: ms-love-up 3.3s ease-in infinite; }
-.ms-love-to { margin: 0; font-family: var(--font-display); font-weight: 700; font-size: 15px; color: #be123c; }
-html.theme-dark .ms-love-to { color: #fda4af; }
-.ms-love-msg { margin: 4px 0 0; font-size: 14px; line-height: 1.55; color: #4c0519; }
-html.theme-dark .ms-love-msg { color: #fecdd3; }
-.ms-love-close { position: absolute; top: 8px; right: 8px; width: 30px; height: 30px; border-radius: 999px; display: grid; place-items: center; color: #be123c; cursor: pointer; }
-.ms-love-close:hover { background: rgb(244 63 94 / .12); }
-@keyframes ms-heartbeat { 0%, 100% { transform: scale(1); } 14% { transform: scale(1.12); } 28% { transform: scale(1); } 42% { transform: scale(1.08); } 70% { transform: scale(1); } }
-@keyframes ms-love-draw { 0% { stroke-dashoffset: 160; } 45%, 70% { stroke-dashoffset: 0; } 100% { stroke-dashoffset: -160; } }
-@keyframes ms-love-up { 0% { transform: translateY(0) scale(.6); opacity: 0; } 20% { opacity: .9; } 100% { transform: translateY(-70px) scale(1.1) rotate(15deg); opacity: 0; } }
-@media (prefers-reduced-motion: reduce) { .ms-love-big, .ms-love-line, .ms-love-float { animation: none; } .ms-love-line { stroke-dashoffset: 0; } }
 
 /* =============================================================
  * v5 · Kompakt Material — ortak bileşenler
@@ -1686,9 +1664,11 @@ html.theme-dark .ls-root { --ls-mark: #4A3B0B; --ls-mark-ink: #FFE7A0; }
 .ls-zoom-switch small { display: block; font-size: 11.5px; font-weight: 400; color: var(--color-ink-3); }
 .ls-zoom-badge { position: absolute; z-index: 70; left: 50%; top: 72px; translate: -50% 0; padding: 6px 12px; border-radius: 99px; background: var(--color-ink); color: var(--color-white); font: 700 13px/1 var(--font-mono); pointer-events: none; box-shadow: var(--shadow-md); animation: ls-zoom-badge .9s var(--ease-out-soft) both; }
 @keyframes ls-zoom-badge { 0% { opacity: 0; transform: scale(.85); } 15%, 70% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(.96); } }
-/* İçerik ölçeği: sütunun görsel genişliği sabit kalır, metin büyür (yatay kaydırma yok) */
+/* İçerik ölçeği: sütunun görsel genişliği sabit kalır, metin büyür (yatay kaydırma yok).
+ * Genişlik yüzdesi ölçeğe BÖLÜNMEZ: CSS zoom yüzdeleri büyütmez, "100% / zoom" küçültünce sütunu kaptan taşırıyordu.
+ * Yalnız piksel üst sınırı bölünür (zoom pikselleri çarpar). Ayrıntı: styles/learn-v10.css sonu. */
 .ls-root.is-zoomed :is(.ls-col, .ls-B-body > *, .ls-B-side-body > *) { zoom: var(--ls-zoom, 1); }
-.ls-root.is-zoomed .ls-col { width: calc(100% / var(--ls-zoom, 1)); max-width: calc(820px / var(--ls-zoom, 1)); }
+.ls-root.is-zoomed .ls-col { width: 100%; max-width: calc(820px / var(--ls-zoom, 1)); }
 .ls-root.has-pinch .ls-stage { touch-action: pan-x pan-y; }
 .ls-count i { font-style: normal; opacity: .5; padding: 0 2px; }
 @media (prefers-reduced-motion: reduce) { .ls-tools-v2 .ls-tools-grp, .ls-zoom-badge { animation: none; } .ls-tt, .ls-tt > svg { transition: none; } }

@@ -1,5 +1,47 @@
 [
   {
+    "id": "ntf-1791901399565-i3k6",
+    "type": "report",
+    "title": "📘 MedSoru Öğren: Hata Bildirimi (Patolojiye Giriş · Adım 3)",
+    "message": "Dr House: Öğren: metin bildirildi - Bildirilen metin: “Bilimsel rol: Hastalık ve sağlık kavrayışına katkı sağlar; hastalıkların neden ve nasıl oluştuğunu açıklar.”\n\nDeneme bildirimidir",
+    "questionId": "Patolojiye Giriş · Adım 3",
+    "author": "Dr House",
+    "reason": "Öğren: metin bildirildi",
+    "details": "Bildirilen metin: “Bilimsel rol: Hastalık ve sağlık kavrayışına katkı sağlar; hastalıkların neden ve nasıl oluştuğunu açıklar.”\n\nDeneme bildirimidir",
+    "topic": "Öğren › Metin bildirimi",
+    "url": "https://nofrostlife.com.tr/ogren/k1p-k1-02-patolojiye-giris-v2?adim=3&tartisma=lt-mv6rtsse-722bde93",
+    "timestamp": "2026-10-13T14:23:19.565Z",
+    "read": false
+  },
+  {
+    "id": "ntf-1791897965899-kjh1",
+    "type": "comment",
+    "title": "💬 MedSoru: Yeni Öğrenci Yorumu (#d3-b-001)",
+    "message": "Deneme: claude deneme yorumu",
+    "questionId": "d3-b-001",
+    "author": "Deneme",
+    "text": "claude deneme yorumu",
+    "discipline": "Acil Tıp",
+    "topic": "Multitravmaya Yaklaşım",
+    "url": "https://nofrostlife.com.tr/cikmis/d3-b-001?sec=comments#comm-c-1791897965897-xyd6",
+    "timestamp": "2026-10-13T13:26:05.899Z",
+    "read": false
+  },
+  {
+    "id": "ntf-1791894773936-zt88",
+    "type": "report",
+    "title": "📘 MedSoru Öğren: Hata Bildirimi (Test · Adım 3)",
+    "message": "Deneme: Öğren: metin bildirildi - Bildirilen metin: “hatalı metin parçası”\n\nBu bilgi yanlış görünüyor",
+    "questionId": "Test · Adım 3",
+    "author": "Deneme",
+    "reason": "Öğren: metin bildirildi",
+    "details": "Bildirilen metin: “hatalı metin parçası”\n\nBu bilgi yanlış görünüyor",
+    "topic": "Öğren › Metin bildirimi",
+    "url": "https://nofrostlife.com.tr/ogren/zz-test-deck?adim=3&tartisma=lt-mv6nvsct-bd2b3120",
+    "timestamp": "2026-10-13T12:32:53.936Z",
+    "read": false
+  },
+  {
     "id": "ntf-1791758281253-38d3",
     "type": "report",
     "title": "🚨 MedSoru: Yeni Hata Bildirimi (#5defe4cac878)",
@@ -23,7 +65,7 @@
     "author": "Anonim Öğrenci",
     "reason": "Şık D yazım hatası",
     "details": "",
-    "url": "https://nofrostlife.com.tr/cikmis/k1-02-q01",
+    "url": "https://nofrostlife.com.tr/ornek-sorular/k1-02-q01",
     "timestamp": "2026-10-11T19:59:27.411Z",
     "read": false
   },
@@ -496,7 +538,7 @@
     "author": "Tıp Öğrencisi",
     "reason": "Hatalı Soru Kökü",
     "details": "sdsd\nKaynak: Örnek sorular · Enfeksiyon Hastalıkları · K1",
-    "url": "https://nofrostlife.com.tr/cikmis/k1-21-q02",
+    "url": "https://nofrostlife.com.tr/ornek-sorular/k1-21-q02",
     "timestamp": "2026-10-08T22:07:58.612Z",
     "read": false
   },

@@ -82,7 +82,7 @@ export const LearnLibrary: React.FC<{
   archive: ArchiveFilter;
   onArchive: (f: ArchiveFilter) => void;
   onOpen: (id: string, pdf?: boolean) => void;
-  /** Sürümlü dersler: grup (V1) kimliği → sürüm etiketleri (["V1", "V2"]) */
+  /** Sürümlü dersler: listede gösterilen (en yeni) sürümün kimliği → sürüm etiketleri (["V1", "V2"]) */
   versions?: Record<string, string[]>;
 }> = ({ decks: all, progress, isAdmin, archive, onArchive, onOpen, versions }) => {
   const [query, setQuery] = useState('');
@@ -303,7 +303,14 @@ export const LearnLibrary: React.FC<{
                   >
                     <span className="lv-card-top">
                       <span className="lv-tag">{branchOf(d)}</span>
-                      {ver && <span className="lv-ver" title={`Bu dersin ${ver.length} sürümü var (${ver.join(', ')}) — açınca seçersin`}><Layers aria-hidden />{ver.length} sürüm</span>}
+                      {ver && (
+                        <span className="lv-ver" title={`Bu dersin ${ver.length} sürümü var (${ver.join(', ')}); listede ${d.versionLabel || ver[ver.length - 1]} gösteriliyor — açınca seçersin`}>
+                          <Layers aria-hidden />
+                          {ver.map((l) => (
+                            <i key={l} className={l === (d.versionLabel || 'V1') ? 'is-on' : ''}>{l}</i>
+                          ))}
+                        </span>
+                      )}
                       {noSrc && <span className="lv-nosrc" title={noSrcTip}><FileQuestionMark aria-hidden /><span className="sr-only">Uyarı: kaynak PDF bilinmiyor</span></span>}
                       <span className="lv-n">{d.slideCount} slayt</span>
                     </span>

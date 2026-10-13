@@ -20,6 +20,7 @@ import {
   Trash2,
   UserRound,
   ChevronRight,
+  Compass,
 } from 'lucide-react';
 import { AppUser, updateUserProfileData } from '../../services/auth';
 import { QuestionItem } from '../../types';
@@ -40,6 +41,7 @@ import { Row, Section, Segmented, Switch } from '../ui/kit';
 import { toast } from '../ui/Toast';
 import { NotesSyncRow } from './NotesSyncRow';
 import { UserDataSyncRow } from './UserDataSyncRow';
+import { startWelcomeTour } from '../onboarding/tourState';
 import './settings.css';
 
 interface Props {
@@ -235,6 +237,7 @@ export const ProfileSettingsView: React.FC<Props> = ({ currentUser, isAdmin, que
             <UserDataSyncRow />
             <Row icon={Database} iconBg="var(--color-clinic)" title="Çevrimdışı veritabanı" sub="Soruları, sözlüğü ve kartları cihaza indir" onClick={onOpenOffline} />
             <NotesSyncRow />
+            <Row icon={Compass} iconBg="var(--color-accent)" title="Tanıtım turu" sub="Sayfaları ve özellikleri yeniden gez" onClick={startWelcomeTour} />
             {isAdmin && <Row icon={ShieldCheck} iconBg="var(--color-warn)" title="Yönetim konsolu" sub="Taslaklar, moderasyon, sistem" onClick={onOpenAdmin} />}
             {currentUser ? (
               <button type="button" className="ui-row has-icon" onClick={onLogout}>

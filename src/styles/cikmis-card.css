@@ -144,3 +144,5 @@ html.ui-v7 .cx-pt-quiz[aria-checked="true"] .cx-switch i { transform: translateX
 /* v10 düzeltme: ⋯ menüsü üst sağ köşede sabit; meta satırı sığmazsa menü alt satıra düşmez */
 .ck-meta { padding-right: 40px; }
 .ck > .ck-meta .ck-menu { position: absolute; top: 8px; right: 6px; }
+.cx-sheet-end { display: flex; flex-wrap: wrap; gap: 8px; justify-content: space-between; }
+.cx-sheet-end .ui-btn { display: inline-flex; align-items: center; gap: 6px; }

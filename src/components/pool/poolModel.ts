@@ -177,3 +177,11 @@ export function activityIn(sums: PoolSummary[], windowMs: number, now: number) {
   }
   return { newQ, parts, people: people.size };
 }
+
+/** Satırdaki tek durum göstergesi: Doğrulanan (onaylı) · Eksik (kök ya da şık eksik) · Taslak */
+export type PoolStatus = 'verified' | 'missing' | 'draft';
+export const POOL_STATUS_LABEL: Record<PoolStatus, string> = { verified: 'Doğrulanan', missing: 'Eksik', draft: 'Taslak' };
+export function statusOf(s: PoolSummary): PoolStatus {
+  if (s.q.status === 'completed') return 'verified';
+  return isMissing(s) ? 'missing' : 'draft';
+}

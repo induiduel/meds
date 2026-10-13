@@ -667,17 +667,38 @@ export const InteractiveDeckView: React.FC<InteractiveDeckViewProps> = ({ initia
   const [liveTick, setLiveTick] = useState(0);
   const [catalogTick, setCatalogTick] = useState(0);
   const allDecks = useMemo(() => [...DECK_CATALOG], [catalogTick]);
-  // Sürümlü dersler (V1, V2…): listede yalnız grubun ilk sürümü görünür; açarken öğrenci sürümü seçer
-  const hubDecks = useMemo(() => allDecks.filter((d) => !d.versionGroup || d.versionGroup === d.id), [allDecks]);
-  const versionLabels = useMemo(() => {
-    const m: Record<string, string[]> = {};
+  // Sürümlü dersler (V1, V2…): listede grubun EN YENİ sürümü (V2) görünür — adı, slayt sayısı ve ilerlemesiyle;
+  // açarken sürüm penceresinde en yeni sürüm seçili/vurgulu gelir, ders ekranında da sürüm anahtarı vardır.
+  const versionGroups = useMemo(() => {
+    const m = new Map<string, DeckCatalogEntry[]>();
     allDecks.forEach((d) => {
-      if (d.versionGroup) (m[d.versionGroup] ||= []).push(String(d.versionLabel || 'V1'));
+      if (!d.versionGroup) return;
+      const l = m.get(d.versionGroup) || [];
+      l.push(d);
+      m.set(d.versionGroup, l);
     });
-    Object.keys(m).forEach((k) => (m[k].length > 1 ? m[k].sort((x, y) => x.localeCompare(y, 'tr', { numeric: true })) : delete m[k]));
+    m.forEach((l) => l.sort((a, b) => String(a.versionLabel || 'V1').localeCompare(String(b.versionLabel || 'V1'), 'tr', { numeric: true })));
     return m;
   }, [allDecks]);
-  const [versionPick, setVersionPick] = useState<{ list: DeckCatalogEntry[]; pdf?: boolean } | null>(null);
+  const hubDecks = useMemo(
+    () =>
+      allDecks
+        .filter((d) => !d.versionGroup || d.versionGroup === d.id)
+        .map((d) => {
+          const l = d.versionGroup ? versionGroups.get(d.versionGroup) : undefined;
+          return l && l.length > 1 ? l[l.length - 1] : d;
+        }),
+    [allDecks, versionGroups]
+  );
+  /** Listede gösterilen (en yeni) sürümün kimliği → grubun sürüm etiketleri */
+  const versionLabels = useMemo(() => {
+    const m: Record<string, string[]> = {};
+    versionGroups.forEach((l) => {
+      if (l.length > 1) m[l[l.length - 1].id] = l.map((d) => String(d.versionLabel || 'V1'));
+    });
+    return m;
+  }, [versionGroups]);
+  const [versionPick, setVersionPick] = useState<{ list: DeckCatalogEntry[]; pdf?: boolean; selected: string } | null>(null);
   const versionsOf = (id: string) => {
     const g = allDecks.find((d) => d.id === id)?.versionGroup;
     if (!g) return [];
@@ -739,7 +760,8 @@ export const InteractiveDeckView: React.FC<InteractiveDeckViewProps> = ({ initia
         onOpen={(id, pdf) => {
           const versions = versionsOf(id);
           if (versions.length > 1) {
-            setVersionPick({ list: versions, pdf });
+            // Tıklanan kart en yeni sürümdür; pencerede o sürüm seçili ve vurgulu gelir
+            setVersionPick({ list: versions, pdf, selected: versions.some((v) => v.id === id) ? id : versions[versions.length - 1].id });
             return;
           }
           touchRecent(id);
@@ -752,12 +774,13 @@ export const InteractiveDeckView: React.FC<InteractiveDeckViewProps> = ({ initia
       {versionPick && (
         <VersionPicker
           versions={versionPick.list}
+          selectedId={versionPick.selected}
           progress={progress}
           onClose={() => setVersionPick(null)}
           onPick={(id) => {
             const pdf = versionPick.pdf;
             setVersionPick(null);
-            touchRecent(versionPick.list[0].id);
+            touchRecent(id);
             setPlayerViewMode(pdf ? 'pdf' : 'interactive');
             setDeckId(id);
             onDeckChange?.(id);
@@ -789,6 +812,16 @@ export const InteractiveDeckView: React.FC<InteractiveDeckViewProps> = ({ initia
             onDeckChange?.(null);
           }}
           onExportPdf={onOpenPdfModal ? (slideNumber) => onOpenPdfModal({ deckId: activeDeck.id, slideNumber }) : undefined}
+          versions={(() => {
+            const l = versionsOf(activeDeck.id);
+            return l.length > 1 ? l.map((v) => ({ id: v.id, label: String(v.versionLabel || 'V1'), note: v.versionNote || undefined })) : undefined;
+          })()}
+          onSwitchVersion={(id) => {
+            if (id === activeDeck.id) return;
+            touchRecent(id);
+            setDeckId(id);
+            onDeckChange?.(id);
+          }}
           focus={questionFocus && (!questionFocus.deckId || questionFocus.deckId === activeDeck.id) ? questionFocus : null}
           onClearFocus={onClearQuestionFocus}
         />
@@ -1658,15 +1691,26 @@ export const AskAi: React.FC<{ deck: InteractiveDeck; slide: SlideItem }> = ({ d
 /** Bir dersin birden çok sürümü varsa (V1, V2…) öğrenci hangisini açacağını ölçülere bakarak seçer. */
 const VersionPicker: React.FC<{
   versions: DeckCatalogEntry[];
+  /** Seçili gelen sürüm (en yeni): vurgulu çerçeve + "Seçili" etiketi, odak onda */
+  selectedId?: string;
   progress: DeckProgress;
   onClose: () => void;
   onPick: (id: string) => void;
-}> = ({ versions, progress, onClose, onPick }) => {
+}> = ({ versions, selectedId, progress, onClose, onPick }) => {
   const base = versions[0];
+  const newest = versions[versions.length - 1]?.id;
+  // En yeni sürüm üstte
+  const ordered = [...versions].reverse();
+  const selRef = useRef<HTMLButtonElement>(null);
+  useEffect(() => {
+    const t = window.setTimeout(() => selRef.current?.focus({ preventScroll: true }), 220);
+    return () => window.clearTimeout(t);
+  }, []);
   return (
-    <Dialog title={base.shortTitle || base.title} subtitle="Bu dersin birden çok sürümü var. Hangisini açmak istersin?" onClose={onClose}>
+    <Dialog title={base.shortTitle || base.title} subtitle="Bu dersin birden çok sürümü var. En yeni sürüm seçili; istersen diğerini açabilirsin." onClose={onClose}>
       <ul className="flex flex-col gap-3">
-        {versions.map((v) => {
+        {ordered.map((v) => {
+          const isSel = v.id === (selectedId || newest);
           const adim = v.slideCount || 0;
           const etk = v.interactiveCount ?? 0;
           const kelime = v.wordCount ?? 0;
@@ -1677,13 +1721,17 @@ const VersionPicker: React.FC<{
             <li key={v.id}>
               <button
                 type="button"
+                ref={isSel ? selRef : undefined}
                 onClick={() => onPick(v.id)}
-                className="w-full text-left rounded-xl border border-line-soft hover:border-accent p-4 transition-colors cursor-pointer"
+                aria-current={isSel ? 'true' : undefined}
+                className={`lv-vpick w-full text-left rounded-xl border p-4 transition-colors cursor-pointer ${isSel ? 'is-selected' : 'border-line-soft hover:border-accent'}`}
               >
-                <div className="flex items-center gap-2">
-                  <span className="ui-tag is-accent font-semibold">{v.versionLabel || 'V1'}</span>
+                <div className="flex items-center gap-2 flex-wrap">
+                  <span className={`ui-tag font-semibold ${isSel ? 'lv-vpick-label' : 'is-accent'}`}>{v.versionLabel || 'V1'}</span>
                   <b className="min-w-0 truncate">{v.versionNote || (v.versionLabel && v.versionLabel !== 'V1' ? 'Yeni sürüm' : 'İlk sürüm')}</b>
-                  {seen > 0 && <span className="ui-tag ml-auto">{seen}/{adim} adım görüldü</span>}
+                  {v.id === newest && <span className="ui-tag is-accent">En yeni</span>}
+                  {isSel && <span className="lv-vpick-sel ml-auto"><Check aria-hidden /> Seçili</span>}
+                  {seen > 0 && <span className={`ui-tag ${isSel ? '' : 'ml-auto'}`}>{seen}/{adim} adım görüldü</span>}
                 </div>
                 <dl className="grid grid-cols-2 sm:grid-cols-4 gap-2 mt-3 text-sm">
                   <div><dt className="text-ink-3 text-xs">Adım</dt><dd className="font-semibold">{adim}</dd></div>

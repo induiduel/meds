@@ -37,7 +37,6 @@ import { RealtimeMatchItem, warmMedicalIndex } from '../services/draftClustering
 import { toContextHashtag } from '../utils/fuzzyMatching';
 import { getSmartQuestionAssistant, SmartQuestionAssistantResult } from '../services/medicalPredictorService';
 import { Colored, WordLegend, ContextBadge, sharedWordColors } from './draftHighlight';
-import { LoveNote } from './home/LoveNote';
 import { MetaPicker } from './ui/MetaPicker';
 import './quickadd/quickadd.css';
 
@@ -1008,7 +1007,6 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
     const noResults = realtimeMatches.length === 0 && similar.length === 0;
     return (
       <div className="qh">
-        <LoveNote />
         <form
           onSubmit={handleSubmit}
           onKeyDown={(e) => {
@@ -1361,7 +1359,6 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
 
       return (
     <div className="w-full max-w-[760px] mx-auto lg:mx-0 flex flex-col gap-5 pt-4 sm:pt-8">
-      <LoveNote />
       <div className="flex flex-col items-center text-center lg:items-start lg:text-left gap-2">
         <span className="inline-flex items-center text-sm text-ink-3">
           <span className={`w-1.5 h-1.5 rounded-full mr-2 ${isCollecting ? 'bg-ok-bright' : 'bg-line-2'}`} aria-hidden="true" />

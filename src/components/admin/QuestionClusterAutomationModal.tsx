@@ -3,6 +3,7 @@ import { ChevronLeft, ChevronRight, Combine, RefreshCw, Send, ShieldCheck, Spark
 import { ApiService } from '../../services/api';
 import { toast } from '../ui/Toast';
 import { Sheet } from '../ui/Sheet';
+import { confirmDialog } from '../ui/ConfirmDialog';
 import { AppUser } from '../../services/auth';
 import { disciplineClass, disciplineLabel } from '../../utils/discipline';
 import './clusterPool.css';
@@ -154,6 +155,30 @@ export const QuestionClusterAutomationModal: React.FC<QuestionClusterAutomationM
     }
   };
 
+  // Yönetici: yanlış birleşmiş parçayı ayır (kalıcı "farklı soru" kısıtı; kümeler sunucuda baştan kurulur)
+  const [splittingKey, setSplittingKey] = useState<string | null>(null);
+  const handleSplit = async (clusterId: string, key: string, text: string) => {
+    const ok = await confirmDialog({
+      title: 'Bu parça farklı bir soru mu?',
+      message: `“${text.slice(0, 160)}” bu kümeden çıkarılır ve kümedeki diğer parçalarla bir daha birleştirilmez.`,
+      confirmLabel: 'Ayır',
+    });
+    if (!ok) return;
+    setSplittingKey(key);
+    try {
+      const all: QuestionClusterItem[] = await ApiService.splitPoolClusterMember(clusterId, key);
+      const list = committeeId ? all.filter((c) => c.committeeId === committeeId) : all;
+      setClusters(list);
+      // Küme ikiye bölünüp tekile düştüyse ayrıntı kapanır
+      if (!list.some((c) => c.id === clusterId && c.mergedQuestionCount >= 2)) setOpenId(null);
+      toast.success('Parça ayrıldı', 'Bu parça artık bu kümedeki diğer parçalarla birleştirilmeyecek.');
+    } catch (e: any) {
+      toast.error('Hata', e.message || 'Parça ayrılamadı.');
+    } finally {
+      setSplittingKey(null);
+    }
+  };
+
   const current = openId ? clusters.find((c) => c.id === openId) || null : null;
   const pending = clusters.filter((c) => clusterState(c).tone !== 'is-accent').length;
 
@@ -193,6 +218,8 @@ export const QuestionClusterAutomationModal: React.FC<QuestionClusterAutomationM
             onDraft={(v) => setDraft((p) => ({ ...p, [current.id]: v }))}
             onSubmit={() => handleAddContribution(current.id)}
             onBack={() => setOpenId(null)}
+            onSplit={isAdmin && current.mergedQuestionCount >= 2 ? (key, text) => handleSplit(current.id, key, text) : undefined}
+            splittingKey={splittingKey}
           />
         ) : (
           <>
@@ -270,7 +297,10 @@ const ClusterDetail: React.FC<{
   onDraft: (v: string) => void;
   onSubmit: () => void;
   onBack: () => void;
-}> = ({ cluster: c, draft, submitting, onDraft, onSubmit, onBack }) => {
+  /** Yalnız yöneticide: parçayı "farklı soru" diye ayır. */
+  onSplit?: (key: string, text: string) => void;
+  splittingKey?: string | null;
+}> = ({ cluster: c, draft, submitting, onDraft, onSubmit, onBack, onSplit, splittingKey }) => {
   const st = clusterState(c);
   const failed = FAILED.test(c.mergedStem || '');
   const stem = (c.mergedStem || '').replace(FAILED, '');
@@ -409,8 +439,19 @@ const ClusterDetail: React.FC<{
           {c.stemFragments && c.stemFragments.length > 0 ? (
             <ul className="qpool-frags">
               {c.stemFragments.map((f) => (
-                <li key={f.key}>
-                  “{f.text}”{f.key.startsWith('u:') && <em> · serbest girdi</em>}
+                <li key={f.key} className={onSplit ? 'has-act' : undefined}>
+                  <span>“{f.text}”{f.key.startsWith('u:') && <em> · serbest girdi</em>}</span>
+                  {onSplit && (
+                    <button
+                      type="button"
+                      className={`ui-btn is-ghost is-sm ${splittingKey === f.key ? 'is-loading' : ''}`}
+                      disabled={!!splittingKey}
+                      onClick={() => onSplit(f.key, f.text)}
+                      title="Bu parça farklı bir soruyu anlatıyor: kümeden çıkar, bir daha birleştirme"
+                    >
+                      Farklı soru
+                    </button>
+                  )}
                 </li>
               ))}
             </ul>

@@ -108,6 +108,7 @@ import {
   getGeminiV3ApprovedSynonyms,
 } from './src/services/geminiV3DataService.ts';
 import { createLearnFeedbackStore } from './src/services/learnFeedbackService.ts';
+import { registerLearnSocialRoutes } from './src/services/learnSocialRoutes.ts';
 import { createPhase14UserQueue, type QueueItem } from './src/services/phase14UserQueue.ts';
 import { questionUpdatedEmail } from './src/services/phase14Mail.ts';
 import { renderHtmlToPdf, findChrome } from './src/services/pdfRenderService.ts';
@@ -358,6 +359,55 @@ function hasValidWritePassword(req: express.Request): boolean {
   return Buffer.from(supplied).equals(Buffer.from(expected));
 }
 
+// Öğrencinin parolasız yazabildiği uçlar (öğrenciye parola verilmez; eskiden hepsi 401 alıyordu).
+// Ekleme-yalnız uçlar ya da sahipliği kendisi denetleyen düzenleme/silme uçları buraya girer.
+// Soruyu bütünüyle yazan uçlar (PUT/PATCH /api/questions/:id) ve kimlik uçları (/api/users/sync) GİRMEZ.
+// Sınıf başına IP sınırı: [dakikada, saatte].
+const STUDENT_WRITE_LIMITS = { icerik: [6, 60], oy: [30, 300], esles: [60, 600] } as const;
+type StudentWriteKind = keyof typeof STUDENT_WRITE_LIMITS;
+const STUDENT_WRITE_ROUTES: Array<[string, RegExp, StudentWriteKind]> = [
+  // Çıkmış sorular: yorum, bildirim, beğeni, cevap anketi
+  ['POST', /^\/api\/past-exams\/[^/]+\/comment$/, 'icerik'],
+  ['PUT|DELETE', /^\/api\/past-exams\/[^/]+\/comments\/[^/]+$/, 'icerik'], // canUserManageComment
+  ['POST', /^\/api\/past-exams\/[^/]+\/report$/, 'icerik'],
+  ['PUT|DELETE', /^\/api\/past-exams\/[^/]+\/reports\/[^/]+$/, 'icerik'], // canUserManageReport
+  ['POST', /^\/api\/past-exams\/[^/]+\/(upvote|downvote)$/, 'oy'],
+  ['POST|DELETE', /^\/api\/past-question-reviews\/[^/]+\/answer-votes$/, 'oy'], // x-voter-uid başına
+  // Soru havuzu: soru ekle, parça/şık/cevap önerisi, oy, bildirim, eşleşme
+  ['POST', /^\/api\/question-intake$/, 'icerik'],
+  ['POST', /^\/api\/questions$/, 'icerik'],
+  ['POST', /^\/api\/questions\/[^/]+\/(fragments|options|claimed-answer|report)$/, 'icerik'],
+  ['PUT|DELETE', /^\/api\/questions\/[^/]+\/reports\/[^/]+$/, 'icerik'], // canUserManageReport
+  ['POST', /^\/api\/questions\/[^/]+\/(upvote|fragments\/[^/]+\/upvote|options\/[^/]+\/upvote)$/, 'oy'],
+  ['POST', /^\/api\/pool-clusters\/[^/]+\/contribute$/, 'icerik'],
+  ['POST', /^\/api\/recall\/match$/, 'esles'],
+  ['POST', /^\/api\/recall\/feedback$/, 'oy'],
+  // Diğer bildirimler (örnek soru, kart, sözlük, genel) ve Öğren hata bildirimi
+  ['POST', /^\/api\/(ornek-sorular|cards|terms)\/[^/]+\/report$/, 'icerik'],
+  ['POST', /^\/api\/universal-report$/, 'icerik'],
+  ['PUT|DELETE', /^\/api\/reports\/[^/]+$/, 'icerik'], // canUserManageReport
+  ['POST', /^\/api\/learn\/feedback$/, 'icerik'],
+  ['PUT|DELETE', /^\/api\/learn\/feedback\/[^/]+$/, 'icerik'], // yazar kimliği denetlenir
+  ['POST', /^\/api\/learn\/feedback\/[^/]+\/vote$/, 'oy'],
+];
+const studentWriteHits = new Map<string, number[]>();
+/** Eşleşen uç sırası (sayaç uç başına ayrı tutulur) ya da -1 */
+function studentWriteRoute(method: string, reqPath: string): number {
+  return STUDENT_WRITE_ROUTES.findIndex(([methods, re]) => methods.split('|').includes(method) && re.test(reqPath));
+}
+function studentWriteLimited(req: express.Request, route: number): boolean {
+  const [perMin, perHour] = STUDENT_WRITE_LIMITS[STUDENT_WRITE_ROUTES[route][2]];
+  const ip = String(req.headers['cf-connecting-ip'] || req.ip || '').split(',')[0].trim();
+  const key = `${route}:${ip}`;
+  const now = Date.now();
+  const arr = (studentWriteHits.get(key) || []).filter((t) => now - t < 3_600_000);
+  if (arr.length >= perHour || arr.filter((t) => now - t < 60_000).length >= perMin) { studentWriteHits.set(key, arr); return true; }
+  arr.push(now);
+  studentWriteHits.set(key, arr);
+  if (studentWriteHits.size > 10000) studentWriteHits.clear();
+  return false;
+}
+
 function requireWritePassword(req: express.Request, res: express.Response, next: express.NextFunction) {
   if (req.method === 'GET' || req.method === 'HEAD' || req.method === 'OPTIONS') return next();
 
@@ -369,13 +419,20 @@ function requireWritePassword(req: express.Request, res: express.Response, next:
   const readOnlyPosts = ['/api/past-questions/similar', '/api/sources/for-fragment', '/api/db/query', '/api/live/broadcast', '/api/live/ping', '/api/user-data/backup', '/api/notes'];
   const reqPath = String(req.originalUrl || req.path || '').split('?')[0];
   if (readOnlyPosts.some((p) => reqPath === p || reqPath.endsWith(p))) return next();
-
+  // Öğren ortak notları / metin bildirimleri: kimliği ve hız sınırını kendisi denetler (learnSocialRoutes.ts)
+  if (reqPath.startsWith('/api/learn/social/') || reqPath === '/api/learn/social') return next();
   // Yönetici (nofrostlife@gmail.com) veya yerel loopback admin istekleri şifre sorgusundan muaf tutulur
   const adminEmail = (req.headers['x-admin-email'] || req.body?.adminEmail || req.query?.adminEmail) as string;
   const ip = req.ip || req.socket?.remoteAddress || '';
   const isLoopback = ip.includes('127.0.0.1') || ip.includes('::1') || ip.includes('localhost') || ip.includes('::ffff:127.0.0.1');
   const isAdminCaller = (adminEmail && adminEmail.toLowerCase() === 'nofrostlife@gmail.com') || (isLoopback && (!adminEmail || adminEmail.toLowerCase() === 'nofrostlife@gmail.com'));
   if (isAdminCaller) {
+    return next();
+  }
+
+  const studentRoute = studentWriteRoute(req.method, reqPath);
+  if (studentRoute >= 0) {
+    if (studentWriteLimited(req, studentRoute)) return res.status(429).json({ error: 'Çok hızlı gönderiyorsun; biraz bekleyip yeniden dene.' });
     return next();
   }
 
@@ -1350,6 +1407,27 @@ app.post('/api/recall/feedback', (req, res) => {
   if (!q || q.committeeId !== committeeId) return res.status(404).json({ error: 'Kayıt bulunamadı.' });
   const ok = recallFeedback.record({ text: t, committeeId: String(committeeId), questionId: String(questionId), decision, prob: Number(prob), engine: poolClusters.engineVersion(), ip: req.ip });
   res.status(ok ? 200 : 429).json({ success: ok });
+});
+
+// Yönetici: öneri taslağındaki bir parçayı "farklı soru" diye ayır. Parça o kümenin diğer üyeleriyle bir daha birleşmez;
+// soru↔soru çiftleri öğrenme kaydına "farklı" olarak yazılır (haftalık öğrenme yanlış birleşmeden ders çıkarır).
+app.post('/api/pool-clusters/:id/split', requireAdmin, async (req, res) => {
+  const key = typeof req.body?.key === 'string' ? req.body.key : '';
+  if (!/^[qu]:/.test(key)) return res.status(400).json({ error: 'Geçersiz parça.' });
+  try {
+    const r = await poolClusters.split(req.params.id, key, 'yonetici');
+    if (!r) return res.status(404).json({ error: 'Küme ya da parça bulunamadı.' });
+    const c0 = (db.questions || []).find((x: any) => `q:${x.id}` === key);
+    if (r.text && c0) {
+      for (const o of r.others) {
+        if (!o.startsWith('q:')) continue;
+        recallFeedback.record({ text: r.text, committeeId: c0.committeeId, questionId: o.slice(2), decision: 'farkli', prob: null, engine: poolClusters.engineVersion(), ip: 'yonetici' });
+      }
+    }
+    res.json({ success: true, clusters: poolClusters.list() });
+  } catch (e: any) {
+    res.status(500).json({ error: e?.message || 'Ayrılamadı.' });
+  }
 });
 
 // Kümeleri yeniden hesapla (sunucu içinde, dilimli; yapay zekâ birleştirmesi arka planda sırayla)
@@ -2604,6 +2682,9 @@ app.post('/api/past-exams/:id/comment', (req, res) => {
     const { author, text, authorUid, authorEmail, ownershipToken, parentId } = req.body;
     if (!text || !text.trim()) {
       return res.status(400).json({ error: 'Yorum metni zorunludur.' });
+    }
+    if (String(text).length > 4000) {
+      return res.status(413).json({ error: 'Yorum en fazla 4000 karakter olabilir.' });
     }
 
     const list = getPastQuestionsDb();
@@ -5073,6 +5154,13 @@ app.post('/api/learn/feedback', (req, res) => {
 
   res.json({ success: true, item: r.item });
 });
+// Öğren ortak katmanı: herkese açık SPOT/ÖNEMLİ/VURGU notları + metin bildirimi tartışmaları (meds-pg, SSE learn_social)
+registerLearnSocialRoutes(app, {
+  isAdmin: isRequestAdmin,
+  broadcast: (event, data) => broadcastRealtimeEvent(event, data),
+  censor: censorProfanity,
+  notifyAdmin: (p) => triggerAdminNotification({ type: 'report', ...p }),
+});
 app.post('/api/learn/feedback/:id/vote', (req, res) => {
   const r = learnFeedback.vote(String(req.params.id), String(req.body?.voterId || ''), Number(req.body?.vote) || 0);
   if (!r.ok) return res.status(r.status).json({ error: r.error });
@@ -6459,6 +6547,7 @@ const poolClusters = createPoolClusterService({
   getQuestions: () => db.questions as any[],
   getOrphanUnits: () => questionIntake.orphanUnits(),
   getPastQuestions: () => getPastQuestionsDb(),
+  splitsFile: path.join(DATA_DIR, 'pool_cluster_splits.json'),
 });
 questionIntake.onProcessed(() => poolClusters.schedule());
 onQuestionsSaved = () => poolClusters.schedule();

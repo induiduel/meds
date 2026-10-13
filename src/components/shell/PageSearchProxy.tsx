@@ -31,7 +31,7 @@ export const PageSearchProxy: React.FC<{ onReveal: () => void }> = ({ onReveal }
     // Sonuçlar listenin başından gösterilir: liste yukarıda kaldıysa oraya kayılır (yuva saklı kalır).
     window.clearTimeout(t.current);
     t.current = window.setTimeout(() => {
-      const first = document.querySelector<HTMLElement>('.cx-list, .qk');
+      const first = document.querySelector<HTMLElement>('.cx-list, .qk') || (document.querySelector('.pt-root')?.nextElementSibling as HTMLElement | null);
       if (!first) return;
       const top = first.getBoundingClientRect().top + window.scrollY - 72;
       if (window.scrollY > top + 8) window.scrollTo({ top: Math.max(0, top), behavior: 'auto' });

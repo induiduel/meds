@@ -83,11 +83,12 @@ export const Prose: React.FC<{ text: string; terms?: LessonStep['terms']; classN
     if (ref.current) wireTerms(ref.current, terms);
     return hideTermTip;
   }, [html, terms]);
-  return <div ref={ref} className={`ls-prose ${className}`} dangerouslySetInnerHTML={{ __html: html }} />;
+  // data-ls-html: ham HTML adacığı (React çocuk düğümlerini yönetmez) → ortak not/bildirim işaretleri buraya eklenebilir
+  return <div ref={ref} className={`ls-prose ${className}`} data-ls-html="" dangerouslySetInnerHTML={{ __html: html }} />;
 };
 
 const Inline: React.FC<{ text: string; as?: 'span' | 'p' | 'div'; className?: string }> = ({ text, as = 'span', className }) =>
-  React.createElement(as, { className, dangerouslySetInnerHTML: { __html: inline(text) } });
+  React.createElement(as, { className, 'data-ls-html': '', dangerouslySetInnerHTML: { __html: inline(text) } });
 
 /* ---------------------------------------------------------------------------
  * Tablo: ekrana sığar (sabit düzen, kelime kırma); dar ekranda satırlar karta dönüşür

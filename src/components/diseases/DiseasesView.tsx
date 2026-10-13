@@ -28,8 +28,9 @@ import {
   ShieldCheck,
   Play,
   Star,
+  GraduationCap,
 } from 'lucide-react';
-import { PageToolbar, FilterPills, type ToolbarChip } from '../ui/PageToolbar';
+import { PageToolbar, FilterPills, QuickOptions, type ToolbarChip, type ToolbarQuick } from '../ui/PageToolbar';
 import type { DiseaseFact, DiseaseKind, DiseaseProfile, DiseaseSectionId } from '../../types/disease';
 import { DiseaseService } from '../../services/diseaseService';
 import {
@@ -45,6 +46,7 @@ import { pathFor, writeLocation } from '../../router';
 import { foldText } from '../../services/searchText';
 import { useAppearance } from '../../utils/appearance';
 import { ConceptsCard, RelatedDiseasesCard, WhereCard, linkedQuestionCount, useDiseaseInsights } from './DiseaseInsights';
+import { lessonFlagText, lessonSelOn, topicMatches, useDiseaseLessons, type LessonSel } from './diseaseLessons';
 import './diseasesAtlas.css';
 
 /**
@@ -54,6 +56,8 @@ import './diseasesAtlas.css';
  *  - Ayrıntı: konum yolu, büyük başlık + tek satır tanım, Kaydet / "Soruları çöz · n", bölüm sekmeleri;
  *    Özet sekmesinde bölümler iki sütunlu kompakt kartlar + "Sınav spotu" kutusu; sağ panelde ilişkili tablolar,
  *    geçtiği yerler (deste, çıkmış, örnek, ders notu), kavramlar ve kaynaklar.
+ *  - Ders programı süzgeci (Kurul ▾ · Ders ▾ · Konu ▾ hızlı hapları): profilin adı o konunun ders özeti, kazanımı,
+ *    çıkmış sorusu ya da başlığında geçiyorsa listelenir (veri: diseaseLessons.ts → disease_lessons.json).
  *  - Görüntüleme modu "Odak" ve ≥1024 px: liste + ayrıntı yan yana; diğer modlarda ayrıntı ayrı sayfa (?id=, geri tuşu çalışır).
  * Sınıf öneki `hx-` (diseasesAtlas.css); madde biçimleri `dz-` (rebuild.css) paylaşılır.
  */
@@ -143,6 +147,8 @@ export const DiseasesView: React.FC<DiseasesViewProps> = ({
   const [selectedKind, setSelectedKind] = useState<DiseaseKind | 'all'>('all');
   const [entityFilter, setEntityFilter] = useState<string | null>(null);
   const [onlyFavorites, setOnlyFavorites] = useState(false);
+  const [lessonSel, setLessonSel] = useState<LessonSel>({});
+  const lessonData = useDiseaseLessons();
   const [selectedDisease, setSelectedDisease] = useState<DiseaseProfile | null>(null);
   const [favoriteIds, setFavoriteIds] = useState<Set<string>>(new Set());
   const [tab, setTab] = useState<DetailTab>('ozet');
@@ -268,6 +274,46 @@ export const DiseasesView: React.FC<DiseasesViewProps> = ({
     return (Object.keys(KIND_LABEL) as DiseaseKind[]).filter((k) => present.has(k));
   }, [diseases]);
 
+  // Ders programı süzgeci: seçime uyan konularda geçen profiller (en güçlü konu + toplam geçiş)
+  const lessonOn = lessonSelOn(lessonSel);
+  const lessonMatch = useMemo(() => {
+    const out = new Map<string, { n: number; flags: number; best: number; bestN: number }>();
+    if (!lessonData || !lessonOn) return out;
+    for (const [id, rows] of Object.entries(lessonData.hastaliklar)) {
+      for (const [ti, n, f] of rows) {
+        if (!topicMatches(lessonData.konular[ti], ti, lessonSel)) continue;
+        const cur = out.get(id);
+        if (!cur) out.set(id, { n, flags: f, best: ti, bestN: n });
+        else { cur.n += n; cur.flags |= f; if (n > cur.bestN) { cur.best = ti; cur.bestN = n; } }
+      }
+    }
+    return out;
+  }, [lessonData, lessonOn, lessonSel]);
+
+  /** Seçenek sayıları: her kurul / ders / konuda geçen (yüklü) profil sayısı */
+  const lessonCounts = useMemo(() => {
+    const kurul = new Map<number, Set<string>>();
+    const ders = new Map<string, Set<string>>();
+    const konu = new Map<number, number>();
+    const all = new Set<string>();
+    if (!lessonData) return { kurul, ders, konu, all };
+    const present = new Set(diseases.map((d) => d.id));
+    for (const [id, rows] of Object.entries(lessonData.hastaliklar)) {
+      if (!present.has(id)) continue;
+      all.add(id);
+      for (const [ti] of rows) {
+        const x = lessonData.konular[ti];
+        const dk = `${x.k}|${x.d}`;
+        if (!kurul.has(x.k)) kurul.set(x.k, new Set());
+        kurul.get(x.k)!.add(id);
+        if (!ders.has(dk)) ders.set(dk, new Set());
+        ders.get(dk)!.add(id);
+        konu.set(ti, (konu.get(ti) || 0) + 1);
+      }
+    }
+    return { kurul, ders, konu, all };
+  }, [lessonData, diseases]);
+
   // Süzme: Türkçe karakter/büyük-küçük harf duyarsız; ad eşleşmesi ve sorgu zekâsının tanıdığı hastalıklar öne
   const filteredDiseases = useMemo(() => {
     const q = foldText(searchQuery.trim());
@@ -279,7 +325,8 @@ export const DiseasesView: React.FC<DiseasesViewProps> = ({
       if (selectedCategory !== 'all' && d.category !== selectedCategory) continue;
       if (selectedKind !== 'all' && d.kind !== selectedKind) continue;
       if (activeEntity && !entityIds.has(d.id)) continue;
-      if (!terms.length) { scored.push({ d, s: 0 }); continue; }
+      if (lessonOn && !lessonMatch.has(d.id)) continue;
+      if (!terms.length) { scored.push({ d, s: lessonOn ? lessonMatch.get(d.id)!.n : 0 }); continue; }
       const name = foldText(`${d.name} ${d.latinName || ''} ${d.icd_code || ''} ${(d.altNames || []).join(' ')}`);
       let s = 0;
       if (pinned.has(d.id)) s += 100;
@@ -287,15 +334,16 @@ export const DiseasesView: React.FC<DiseasesViewProps> = ({
       else if (terms.every((t) => searchTexts.get(d.id)?.includes(t))) s += 10;
       if (s > 0) scored.push({ d, s });
     }
-    if (terms.length) scored.sort((a, b) => b.s - a.s);
+    // Ders süzgecinde konuda en çok geçen profiller öne gelir
+    if (terms.length || lessonOn) scored.sort((a, b) => b.s - a.s || a.d.name.localeCompare(b.d.name, 'tr'));
     else scored.sort((a, b) => a.d.name.localeCompare(b.d.name, 'tr'));
     return scored.map((x) => x.d);
-  }, [diseases, searchQuery, selectedCategory, selectedKind, onlyFavorites, favoriteIds, conceptIds, activeEntity, entityIds, searchTexts]);
+  }, [diseases, searchQuery, selectedCategory, selectedKind, onlyFavorites, favoriteIds, conceptIds, activeEntity, entityIds, searchTexts, lessonOn, lessonMatch]);
 
   // Kaydırdıkça yükleme: ilk 40 satır, alt uca yaklaşınca 40'ar eklenir (470 kaydın tek seferde çizilmesi donma yapıyordu)
   const PAGE = 40;
   const [limit, setLimit] = useState(PAGE);
-  useEffect(() => { setLimit(PAGE); }, [searchQuery, selectedCategory, selectedKind, onlyFavorites, entityFilter]);
+  useEffect(() => { setLimit(PAGE); }, [searchQuery, selectedCategory, selectedKind, onlyFavorites, entityFilter, lessonSel]);
   const [sentinel, setSentinel] = useState<HTMLDivElement | null>(null);
   useEffect(() => {
     if (!sentinel || typeof IntersectionObserver === 'undefined') return;
@@ -512,8 +560,102 @@ export const DiseasesView: React.FC<DiseasesViewProps> = ({
     </label>
   );
 
-  const filtersOn = Boolean(searchQuery || selectedCategory !== 'all' || selectedKind !== 'all' || onlyFavorites || entityFilter);
-  const clearFilters = () => { setSearchQuery(''); setSelectedCategory('all'); setSelectedKind('all'); setOnlyFavorites(false); setEntityFilter(null); };
+  const filtersOn = Boolean(searchQuery || selectedCategory !== 'all' || selectedKind !== 'all' || onlyFavorites || entityFilter || lessonOn);
+  const clearFilters = () => { setSearchQuery(''); setSelectedCategory('all'); setSelectedKind('all'); setOnlyFavorites(false); setEntityFilter(null); setLessonSel({}); };
+
+  /** Profil ayrıntısından "bu konudakileri göster": süzgeci kurar, ayrı sayfa düzeninde listeye döner */
+  const applyLesson = (sel: LessonSel) => {
+    setLessonSel(sel);
+    setSearchQuery('');
+    setEntityFilter(null);
+    if (!split) closeDisease();
+  };
+
+  /* Ders programı hızlı hapları: Kurul ▾ · Ders ▾ (aranabilir, kurula göre gruplu) · Konu ▾ (ders seçilince) */
+  const lessonQuick: ToolbarQuick[] = [];
+  if (lessonData) {
+    const kName = (k: number) => lessonData.kurullar.find((x) => x.k === k)?.ad || '';
+    const dersOpts = [...lessonCounts.ders.entries()]
+      .map(([key, set]) => { const [k, d] = key.split('|'); return { key, k: Number(k), d, n: set.size }; })
+      .filter((x) => lessonSel.k == null || x.k === lessonSel.k)
+      .sort((a, b) => a.k - b.k || a.d.localeCompare(b.d, 'tr'));
+    const konuOpts = lessonSel.d != null
+      ? lessonData.konular.map((x, i) => ({ x, i })).filter(({ x, i }) => x.k === lessonSel.k && x.d === lessonSel.d && lessonCounts.konu.has(i))
+      : [];
+    const short = (t: string, n = 26) => (t.length > n ? `${t.slice(0, n - 1)}…` : t);
+    lessonQuick.push({
+      id: 'kurul',
+      label: 'Kurul',
+      value: lessonSel.k != null ? `Kurul ${lessonSel.k}` : undefined,
+      onClear: () => setLessonSel({}),
+      content: (close) => (
+        <QuickOptions
+          close={close}
+          value={lessonSel.k != null ? String(lessonSel.k) : 'all'}
+          onPick={(id) => setLessonSel(id === 'all' ? {} : { k: Number(id) })}
+          options={[
+            { id: 'all', label: 'Tüm kurullar', count: lessonCounts.all.size },
+            ...lessonData.kurullar.filter((k) => lessonCounts.kurul.has(k.k)).map((k) => ({
+              id: String(k.k), label: `Kurul ${k.k}`, hint: k.ad, count: lessonCounts.kurul.get(k.k)!.size,
+            })),
+          ]}
+        />
+      ),
+    });
+    lessonQuick.push({
+      id: 'ders',
+      label: 'Ders',
+      wide: true,
+      value: lessonSel.d != null ? short(lessonSel.d, 22) : undefined,
+      onClear: () => setLessonSel((s) => ({ k: s.k })),
+      content: (close) => (
+        <QuickOptions
+          close={close}
+          searchable
+          placeholder="Ders ara"
+          value={lessonSel.d != null ? `${lessonSel.k}|${lessonSel.d}` : 'all'}
+          onPick={(id) => {
+            if (id === 'all') { setLessonSel((s) => ({ k: s.k })); return; }
+            const [k, d] = id.split('|');
+            setLessonSel({ k: Number(k), d });
+          }}
+          options={[
+            { id: 'all', label: lessonSel.k != null ? `Kurul ${lessonSel.k} · tüm dersler` : 'Tüm dersler', count: lessonSel.k != null ? lessonCounts.kurul.get(lessonSel.k)?.size : lessonCounts.all.size },
+            ...dersOpts.map((x) => ({ id: x.key, label: x.d, count: x.n, group: lessonSel.k == null ? `Kurul ${x.k} · ${kName(x.k)}` : undefined })),
+          ]}
+        />
+      ),
+    });
+    if (lessonSel.d != null) {
+      const cur = lessonSel.t != null ? lessonData.konular[lessonSel.t] : null;
+      lessonQuick.push({
+        id: 'konu',
+        label: 'Konu',
+        wide: true,
+        value: cur ? short(cur.t) : undefined,
+        onClear: () => setLessonSel((s) => ({ k: s.k, d: s.d })),
+        content: (close) => (
+          <QuickOptions
+            close={close}
+            searchable={konuOpts.length > 8}
+            placeholder="Konu ara"
+            value={lessonSel.t != null ? String(lessonSel.t) : 'all'}
+            onPick={(id) => setLessonSel((s) => ({ k: s.k, d: s.d, ...(id === 'all' ? {} : { t: Number(id) }) }))}
+            options={[
+              { id: 'all', label: `${lessonSel.d} · tüm konular`, count: lessonCounts.ders.get(`${lessonSel.k}|${lessonSel.d}`)?.size },
+              ...konuOpts.map(({ x, i }) => ({ id: String(i), label: x.t, count: lessonCounts.konu.get(i) || 0 })),
+            ]}
+          />
+        ),
+      });
+    }
+  }
+
+  /** Seçili profilin ders programındaki yerleri (ayrıntı yan paneli) */
+  const selLessons = useMemo(() => {
+    if (!sel || !lessonData) return [];
+    return (lessonData.hastaliklar[sel.id] || []).map(([ti, n, f]) => ({ ti, n, f, x: lessonData.konular[ti] }));
+  }, [sel, lessonData]);
 
   const chips: ToolbarChip[] = [
     ...(selectedCategory !== 'all' ? [{ id: 'cat', label: selectedCategory, onRemove: () => setSelectedCategory('all') }] : []),
@@ -548,9 +690,13 @@ export const DiseasesView: React.FC<DiseasesViewProps> = ({
           <ul className="hx-list" data-layout-grid={split ? undefined : ''}>
             {filteredDiseases.slice(0, limit).map((d) => {
               const hit = activeEntity?.hits.find((h) => h.diseaseId === d.id);
+              const lm = lessonOn && !hit ? lessonMatch.get(d.id) : undefined;
+              const lessonLabel = lm && lessonData
+                ? `${lessonSel.t != null ? 'Bu konuda' : lessonData.konular[lm.best].t}|${lm.n} kez · ${lessonFlagText(lm.flags)}`
+                : undefined;
               return (
                 <DiseaseRow key={d.id} d={d} isFav={favoriteIds.has(d.id)} active={sel?.id === d.id} onOpen={openDisease} onFav={handleToggleFavorite}
-                  hitLabel={hit && activeEntity ? `${sectionTitle(d.kind, hit.section as DiseaseSectionId) || 'Karakteristik özellik'}|${activeEntity.entity.name}${hit.qualifier ? ` (${hit.qualifier})` : ''}` : undefined} />
+                  hitLabel={hit && activeEntity ? `${sectionTitle(d.kind, hit.section as DiseaseSectionId) || 'Karakteristik özellik'}|${activeEntity.entity.name}${hit.qualifier ? ` (${hit.qualifier})` : ''}` : lessonLabel} />
               );
             })}
           </ul>
@@ -593,12 +739,24 @@ export const DiseasesView: React.FC<DiseasesViewProps> = ({
           filterTitle="Hastalık süzgeci"
           chips={chips}
           onClearChips={() => { setSelectedCategory('all'); setOnlyFavorites(false); setEntityFilter(null); }}
+          quick={lessonQuick.length ? lessonQuick : undefined}
           tools={(
             <button type="button" className="ui-btn is-primary is-sm hx-add" onClick={handleOpenAdd} aria-label="Profil ekle">
               <Plus aria-hidden /> <span>Profil ekle</span>
             </button>
           )}
         >
+          {lessonOn && lessonData && (
+            <p className="hx-lessonnote" role="status">
+              <GraduationCap aria-hidden />
+              <span>
+                {lessonSel.t != null
+                  ? <>Bu konunun ders özeti, kazanımları ya da çıkmış sorularında adı geçen profiller; en çok geçen üstte.</>
+                  : <>Seçili {lessonSel.d != null ? 'dersin' : 'kurulun'} konularında adı geçen profiller; satırda en çok geçtiği konu yazar.</>}
+                {' '}<button type="button" onClick={() => setLessonSel({})}>Kaldır</button>
+              </span>
+            </p>
+          )}
           {entitySuggestions.length > 0 && (
             <div className="hx-entbar" role="status">
               <span className="hx-entbar-h">Sınıflandır:</span>
@@ -624,6 +782,7 @@ export const DiseasesView: React.FC<DiseasesViewProps> = ({
                 onEdit={() => handleOpenEdit(sel)} onDelete={sel.isCustom ? () => handleDelete(sel.id) : undefined}
                 onOpenDisease={openById} canOpen={(id) => Boolean(findById(id))} onEntity={applyEntity} onSearch={goSearch}
                 onReport={onOpenReportModal ? () => onOpenReportModal({ type: 'disease', id: sel.id, title: sel.name }) : undefined}
+                lessons={selLessons} onLesson={applyLesson}
               />
             ) : (
               <div className="hx-pane-empty">
@@ -642,6 +801,7 @@ export const DiseasesView: React.FC<DiseasesViewProps> = ({
           onEdit={() => handleOpenEdit(sel)} onDelete={sel.isCustom ? () => handleDelete(sel.id) : undefined}
           onOpenDisease={openById} canOpen={(id) => Boolean(findById(id))} onEntity={applyEntity} onSearch={goSearch}
           onReport={onOpenReportModal ? () => onOpenReportModal({ type: 'disease', id: sel.id, title: sel.name }) : undefined}
+          lessons={selLessons} onLesson={applyLesson}
         />
       ) : list}
 
@@ -714,12 +874,16 @@ interface DetailProps {
   onEntity: (key: string) => void;
   onSearch: (q: string) => void;
   onReport?: () => void;
+  lessons: Array<{ ti: number; n: number; f: number; x: { k: number; d: string; t: string } }>;
+  onLesson: (sel: LessonSel) => void;
 }
 
 const DiseaseDetail: React.FC<DetailProps> = ({
   d, split, tab, setTab, isFav, canEdit, insights, insightsLoading, entities,
-  onClose, onFav, onShare, onCopy, onEdit, onDelete, onOpenDisease, canOpen, onEntity, onSearch, onReport,
+  onClose, onFav, onShare, onCopy, onEdit, onDelete, onOpenDisease, canOpen, onEntity, onSearch, onReport, lessons, onLesson,
 }) => {
+  const [allLessons, setAllLessons] = useState(false);
+  useEffect(() => { setAllLessons(false); }, [d.id]);
   const defFacts = sectionFacts(d, 'definition');
   const def = defFacts[0];
   const secs = SECTION_ORDER.filter((s) => sectionTitle(d.kind, s) && sectionFacts(d, s).length > 0);
@@ -860,6 +1024,27 @@ const DiseaseDetail: React.FC<DetailProps> = ({
             </p>
           )}
           <RelatedDiseasesCard data={insights} loading={insightsLoading} onOpenDisease={onOpenDisease} canOpen={canOpen} />
+          {lessons.length > 0 && (
+            <section className="hx-card hx-aside-card" aria-labelledby={`hx-prog-${d.id}`}>
+              <h2 id={`hx-prog-${d.id}`} className="hx-aside-h"><GraduationCap aria-hidden /> Ders programında</h2>
+              <ul className="hx-prog">
+                {(allLessons ? lessons : lessons.slice(0, 5)).map((l) => (
+                  <li key={l.ti}>
+                    <button type="button" onClick={() => onLesson({ k: l.x.k, d: l.x.d, t: l.ti })} title="Bu konuda geçen tüm profilleri listele">
+                      <span className="hx-prog-t">{l.x.t}</span>
+                      <span className="hx-prog-s">Kurul {l.x.k} · {l.x.d}</span>
+                      <span className="hx-prog-s">{l.n} kez · {lessonFlagText(l.f)}</span>
+                    </button>
+                  </li>
+                ))}
+              </ul>
+              {lessons.length > 5 && (
+                <button type="button" className="hx-aside-link" onClick={() => setAllLessons((v) => !v)}>
+                  {allLessons ? 'Daha az göster' : `${lessons.length - 5} konu daha`}
+                </button>
+              )}
+            </section>
+          )}
           <WhereCard data={insights} loading={insightsLoading} lectures={d.relatedLectures} onSearch={() => onSearch(plainName)} />
           <ConceptsCard data={insights} onSearch={onSearch} />
           {(d.references || []).length > 0 && (

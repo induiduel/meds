@@ -21,9 +21,13 @@ const COLOR_CLASS: Record<NoteColor, string> = {
   mor: 'nm-c-purple',
 };
 
+/** Düz metin parçalarını özelleştirmek için (ör. aramada sorgu vurgusu). Varsayılan: metin olduğu gibi. */
+export const NoteLeafContext = React.createContext<((text: string) => React.ReactNode) | null>(null);
+
 const INLINE = /(\*\*[^*\n]+\*\*|==[^=\n]+==|\*[^*\s\n][^*\n]*\*|\[(?:kırmızı|yeşil|mavi|turuncu|mor)\][^\n]*?\[\/\])/g;
 
 export const NoteInline: React.FC<{ text: string }> = ({ text }) => {
+  const leaf = React.useContext(NoteLeafContext);
   const parts = text.split(INLINE).filter((p) => p !== '' && p !== undefined);
   return (
     <>
@@ -33,7 +37,7 @@ export const NoteInline: React.FC<{ text: string }> = ({ text }) => {
         if (/^\*[^*]+\*$/.test(p)) return <em key={i}><NoteInline text={p.slice(1, -1)} /></em>;
         const c = p.match(/^\[(kırmızı|yeşil|mavi|turuncu|mor)\]([\s\S]*)\[\/\]$/);
         if (c) return <span key={i} className={COLOR_CLASS[c[1] as NoteColor]}><NoteInline text={c[2]} /></span>;
-        return <React.Fragment key={i}>{p}</React.Fragment>;
+        return <React.Fragment key={i}>{leaf ? leaf(p) : p}</React.Fragment>;
       })}
     </>
   );

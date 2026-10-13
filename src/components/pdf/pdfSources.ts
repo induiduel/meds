@@ -29,6 +29,8 @@ export interface PdfQuestion {
   year?: string;
   /** Gruplama etiketi: kazanım, slayt ya da deste */
   group?: string;
+  /** Müfredat kazanımı (çıkmışta eşleme, örnek soruda kendi kazanımı, mini soruda deste dizini) */
+  kazanim?: PdfKazanim;
   difficulty?: 'kolay' | 'orta' | 'zor';
   stem: string;
   options: PdfOption[];
@@ -36,6 +38,12 @@ export interface PdfQuestion {
   explanation?: string;
   refs: string[];
   badges: { label: string; tone: 'ok' | 'warn' | 'bad' | 'accent' | 'ai' }[];
+}
+
+export interface PdfKazanim {
+  /** Müfredat kimliği (ör. k3-d5-c7-kz-1); sıralamada kullanılır */
+  id?: string;
+  text: string;
 }
 
 export const COMMITTEE_NAME: Record<string, string> = {
@@ -106,6 +114,9 @@ export function fromPastQuestion(q: any): PdfQuestion | null {
   }
   const expl = s(rec.explanation || q.explanation) || undefined;
   const spread = attachWhy(options, expl);
+  const muf = q.checkSolve?.mufredat || {};
+  const kz = q.kazanim && typeof q.kazanim === 'object' ? q.kazanim : null;
+  const kzText = s(kz?.metin || kz?.text || muf.kazanim);
   const badges: PdfQuestion['badges'] = [];
   const tags: string[] = Array.isArray(q.tags) ? q.tags : [];
   if (q.denetleyiciOnayi || q.denetleyici_onayi || q.surum === 'denetleyici' || tags.includes('denetleyici_onayi')) badges.push({ label: 'Denetleyici onaylı', tone: 'ok' });
@@ -119,8 +130,9 @@ export function fromPastQuestion(q: any): PdfQuestion | null {
     number: Number(q.questionNumber) || undefined,
     committeeId: s(q.contentCommitteeId || q.committeeId) || undefined,
     discipline: s(q.discipline) || 'Tıp',
-    topic: s(q.topic) || undefined,
+    topic: s(q.topic) || s(muf.konu) || undefined,
     year: s(q.examYear) || undefined,
+    kazanim: kzText ? { id: s(kz?.id || muf.kazanimId) || undefined, text: kzText } : undefined,
     stem,
     options: spread.options,
     answer: answer || undefined,
@@ -182,6 +194,7 @@ export async function loadOrnekQuestions(dersId: string): Promise<PdfQuestion[]>
         discipline: s(ders.ders) || 'Tıp',
         topic: s(ders.konu),
         group: `Kazanım ${k.no} · ${s(k.metin)}`,
+        kazanim: { id: `${dersId}-kz-${String(k.no).padStart(3, '0')}`, text: s(k.metin) },
         difficulty: q.zorluk,
         stem: s(q.soru),
         options,

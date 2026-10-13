@@ -203,7 +203,9 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
 
   // Yerel panel → Oracle: sayfadaki tüm veri tek kaynaktan gelsin diye kaynak açılışta seçilir. Panele uygulama
   // içinden girilip hedef açılıştakinden farklıysa ya da panelden çıkılınca sayfa bir kez yenilenir.
-  const localHost = isLocalHost();
+  // Oracle hedefi yalnız /manage girişinde geçerli (PANEL_ON_ORACLE_AT_BOOT yolu /manage ister); /yonetim hep yereldir,
+  // yoksa açılış bayrağı hiç tutmaz ve sayfa sonsuz yenilenir.
+  const localHost = isLocalHost() && entry === 'manage';
   const panelTarget = getPanelTarget();
   useEffect(() => {
     if (!localHost) return;

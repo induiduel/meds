@@ -1,33 +1,43 @@
 /**
  * PDF Stüdyosu: çıkmış sorular, soru havuzu, örnek sorular, Öğren dersleri, mini sorular ve ders özetleri
- * için dinamik PDF. İçerik uygulamanın kendi bileşen sınıflarıyla çizilir (bkz. pdfDocument.ts), filtreler
- * neyin PDF'e gireceğini belirler; sağdaki önizleme indirilecek belgenin aynısıdır.
+ * için dinamik PDF. Ayarlar dört adımda toplanır: Kaynak (ne basılacak) → Düzen (gruplama, sıralama, cevapların
+ * yeri, içindekiler) → Görünüm (şablon, yazı, sütun, sayfaya sığdırma) → Sayfa (kâğıt, yön, kenar boşluğu).
+ * Sağdaki önizleme indirilecek belgenin aynısıdır (bkz. pdfDocument.ts). Telefonda tek sütun: Ayarlar /
+ * Önizleme arasında alttaki çubuktan geçilir, "PDF indir" her zaman altta durur.
+ *
+ * Sınıf öneki `ps-` (pdf.css). Belge içindeki bloklar `pd-` önekini kullanır.
  */
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import {
   X, Download, FileText, FileDown, FileCode, GraduationCap, RefreshCw, EyeOff, BookOpenCheck, Grid3x3, Check, ChevronDown,
-  Archive, Users, Target, HelpCircle, BookMarked, Printer, Zap, Eye, MonitorSmartphone,
+  Archive, Users, Target, HelpCircle, BookMarked, Printer, Zap, Eye, MonitorSmartphone, ChevronLeft, ChevronRight, Shuffle,
+  RectangleVertical, RectangleHorizontal, SlidersHorizontal, Minus, Plus,
 } from 'lucide-react';
 import type { Committee, QuestionItem } from '../../types';
 import { ApiService, getCustomApiUrl } from '../../services/api';
 import { normalizeDonem3Discipline, isDonem3Question } from '../../data/curriculumData';
 import { DECK_CATALOG, loadDeck, deckName } from '../../data/deckStore';
 import type { InteractiveDeck } from '../learn/InteractiveDeckView';
-import { buildSteps, buildSections } from '../learn/lesson/lessonModel';
+import { buildSteps, buildSections, loadKazanimIndex, type DeckKazanim } from '../learn/lesson/lessonModel';
 import { IX_META } from '../learn/lesson/LessonBlocks';
 import { BlurOverlay, PaperLoader } from '../ui/Animations';
 import { toast } from '../ui/Toast';
 import summariesMeta from '../../data/summaries_meta.json';
 import {
   buildDocument, renderMarkup, serverPdfAvailable, renderPdfOnServer, downloadBlob, printDocument, downloadHtml, safeFileName,
-  PAGE_SIZE, type PageFormat, type FontScale, type DocumentOptions,
+  computeFitZoom, estimatePages, normalizePage, pageGeometry, pageLabel,
+  PAPER, PAPER_ORDER, MARGINS, TEMPLATES, DEFAULT_PAGE, ZOOM,
+  type PageSettings, type FontScale, type DocumentOptions, type TemplateId, type MarginPreset, type FitMode, type PaperSize,
 } from './pdfDocument';
 import {
   fromPastQuestion, fromPoolQuestion, loadOrnekQuestions, miniQuestionsFromDeck, ORNEK_INDEX, COMMITTEE_NAME, sortYears,
   type PdfQuestion,
 } from './pdfSources';
-import { QuestionDoc, type QuestionDocOptions, type GroupBy, type OptionNotes, type BookletMode } from './PdfQuestionDoc';
+import { arrangeQuestions, attachDeckKazanim, GROUP_LABEL, SORT_LABEL, type GroupBy, type GroupOrder, type SortBy } from './pdfOrder';
+import {
+  QuestionDoc, normalizeQ, type QuestionDocOptions, type OptionNotes, type BookletMode, type AnswersAt, type Numbering,
+} from './PdfQuestionDoc';
 import { LessonDoc, IX_TYPES, type LessonDocOptions, type IxType, type AnswerMode } from './PdfLessonDoc';
 import { SummaryDoc, type SummaryDocOptions, type SummaryForPdf, type SummaryQuestions } from './PdfSummaryDoc';
 import type { CoverInfo } from './PdfParts';
@@ -47,34 +57,35 @@ export interface PdfStudioProps {
   initialContent?: PdfContentKind;
 }
 
-const KINDS: { id: PdfContentKind; label: string; icon: React.ElementType }[] = [
-  { id: 'past', label: 'Çıkmış', icon: Archive },
-  { id: 'pool', label: 'Havuz', icon: Users },
-  { id: 'ornek', label: 'Örnek soru', icon: Target },
-  { id: 'learn', label: 'Öğren', icon: GraduationCap },
-  { id: 'mini', label: 'Mini soru', icon: HelpCircle },
-  { id: 'summary', label: 'Ders özeti', icon: BookMarked },
+const KINDS: { id: PdfContentKind; label: string; hint: string; icon: React.ElementType }[] = [
+  { id: 'past', label: 'Çıkmış', hint: 'Geçmiş sınav soruları', icon: Archive },
+  { id: 'pool', label: 'Havuz', hint: 'Öğrencilerin topladığı', icon: Users },
+  { id: 'ornek', label: 'Örnek soru', hint: 'Kazanım temelli', icon: Target },
+  { id: 'learn', label: 'Öğren', hint: 'Ders adımları', icon: GraduationCap },
+  { id: 'mini', label: 'Mini soru', hint: 'Destedeki sorular', icon: HelpCircle },
+  { id: 'summary', label: 'Ders özeti', hint: 'Kurul özetleri', icon: BookMarked },
 ];
 const isQuestionKind = (k: PdfContentKind) => k === 'past' || k === 'pool' || k === 'ornek' || k === 'mini';
 
-/* ---------------------------------------------------------------------------
- * Ayarlar: her içerik türü kendi ayarını cihazda hatırlar
- * ------------------------------------------------------------------------- */
-interface PageSettings { format: PageFormat; fontScale: FontScale; pageNumbers: boolean; runningHeader: boolean }
-const DEFAULT_PAGE: PageSettings = { format: 'a4', fontScale: 'md', pageNumbers: true, runningHeader: true };
+type StepId = 'source' | 'layout' | 'look' | 'page';
+const STEPS: { id: StepId; label: string }[] = [
+  { id: 'source', label: 'Kaynak' },
+  { id: 'layout', label: 'Düzen' },
+  { id: 'look', label: 'Görünüm' },
+  { id: 'page', label: 'Sayfa' },
+];
 
-const DEFAULT_Q: QuestionDocOptions = {
-  mode: 'solution', markCorrect: true, explanation: true, optionNotes: 'inline', refs: false, meta: true, badges: false,
-  solutionsAtEnd: false, answerKey: true, opticForm: false, columns: 1, compact: false, questionPerPage: false, groupBy: 'none', groupNewPage: false,
-  writeSpace: false, numbering: 'sequential', cover: false,
-};
+/* ---------------------------------------------------------------------------
+ * Ayarlar: belge ayarları (profil eşitlemesine giren v2 anahtarları) ve seçim (yalnız bu cihaz)
+ * ------------------------------------------------------------------------- */
 const PRESETS: { id: string; label: string; hint: string; icon: React.ElementType; apply: Partial<QuestionDocOptions> }[] = [
-  { id: 'student', label: 'Öğrenci', hint: 'Cevapsız, optik form', icon: EyeOff, apply: { mode: 'student', answerKey: false, opticForm: true, cover: true, columns: 2, solutionsAtEnd: false, writeSpace: false } },
-  { id: 'solution', label: 'Çözümlü', hint: 'Cevap + açıklama + şıklar', icon: BookOpenCheck, apply: { mode: 'solution', markCorrect: true, explanation: true, optionNotes: 'inline', solutionsAtEnd: false, answerKey: true, opticForm: false, columns: 1 } },
-  { id: 'review', label: 'Hızlı tekrar', hint: 'Doğru şık işaretli, sıkı', icon: Zap, apply: { mode: 'solution', markCorrect: true, explanation: false, optionNotes: 'off', refs: false, solutionsAtEnd: false, answerKey: false, opticForm: false, columns: 2, compact: true, cover: false, questionPerPage: false } },
-  { id: 'exam', label: 'Deneme', hint: 'Sorular, çözüm sonda', icon: FileText, apply: { mode: 'solution', markCorrect: true, explanation: true, optionNotes: 'analysis', solutionsAtEnd: true, answerKey: true, opticForm: true, columns: 2, cover: true } },
+  { id: 'student', label: 'Öğrenci', hint: 'Cevapsız, optik form', icon: EyeOff, apply: { mode: 'student', answerKey: false, opticForm: true, cover: true, columns: 2, writeSpace: false, questionPerPage: false } },
+  { id: 'solution', label: 'Çözümlü', hint: 'Cevap ve açıklama altında', icon: BookOpenCheck, apply: { mode: 'solution', markCorrect: true, explanation: true, optionNotes: 'inline', answersAt: 'inline', answerKey: true, opticForm: false, columns: 1 } },
+  { id: 'review', label: 'Hızlı tekrar', hint: 'Doğru şık işaretli, sıkı', icon: Zap, apply: { mode: 'solution', markCorrect: true, explanation: false, optionNotes: 'off', refs: false, answersAt: 'inline', answerKey: false, opticForm: false, columns: 2, cover: false, questionPerPage: false } },
+  { id: 'exam', label: 'Deneme', hint: 'Sorular önde, çözüm sonda', icon: FileText, apply: { mode: 'solution', markCorrect: true, explanation: true, optionNotes: 'analysis', answersAt: 'end', answerKey: true, opticForm: true, columns: 2, cover: true, links: true } },
   { id: 'key', label: 'Anahtar', hint: 'Yalnız cevaplar', icon: Grid3x3, apply: { mode: 'key', answerKey: true, opticForm: false, cover: false } },
 ];
+const matchesPreset = (o: QuestionDocOptions, p: Partial<QuestionDocOptions>) => (Object.keys(p) as (keyof QuestionDocOptions)[]).every((k) => o[k] === p[k]);
 
 const DEFAULT_L: LessonDocOptions = {
   narrative: true, keyPoints: true, tables: true, visuals: true, teacher: true, spots: true, tips: true, terms: false, cards: true,
@@ -82,15 +93,35 @@ const DEFAULT_L: LessonDocOptions = {
 };
 const DEFAULT_S: SummaryDocOptions = { keyPoints: true, tables: true, callouts: true, questions: 'answered', toc: true, cover: false };
 
-function usePersisted<T extends object>(key: string, initial: T): [T, (patch: Partial<T>) => void] {
-  const [v, setV] = useState<T>(() => {
-    try {
-      const raw = localStorage.getItem(key);
-      return raw ? { ...initial, ...JSON.parse(raw) } : initial;
-    } catch {
-      return initial;
-    }
-  });
+interface Selection {
+  kind: PdfContentKind;
+  committeeId: string;
+  year: string;
+  discipline: string;
+  topic: string;
+  kazanim: string;
+  onlyAnswered: boolean;
+  onlyExplained: boolean;
+  onlyAudited: boolean;
+  limit: number;
+  ornekDers: string;
+  ornekLevels: string[];
+  includeBranching: boolean;
+  deckId: string;
+  sumKurul: number;
+}
+const SEL_KEY = 'medsoru_pdf_sel_v1';
+const readSaved = <T,>(key: string): Partial<T> | null => {
+  try {
+    const raw = localStorage.getItem(key);
+    return raw ? (JSON.parse(raw) as Partial<T>) : null;
+  } catch {
+    return null;
+  }
+};
+
+function usePersisted<T extends object>(key: string, normalize: (raw: any) => T): [T, (patch: Partial<T>) => void] {
+  const [v, setV] = useState<T>(() => normalize(readSaved<T>(key)));
   const set = useCallback((patch: Partial<T>) => setV((p) => ({ ...p, ...patch })), []);
   useEffect(() => {
     try {
@@ -131,41 +162,70 @@ async function loadSummary(meta: SummaryMeta): Promise<SummaryForPdf | null> {
   return content ? { id: meta.id, title: meta.title, discipline: meta.discipline, kurul: meta.kurul, instructor: meta.instructor, keyPoints: meta.keyPoints || [], content } : null;
 }
 
-/** Yılı olmayan ya da "Kategorisiz" etiketli sorular sona düşer. */
-const yearKey = (y?: string) => (y && /\d{4}/.test(y) ? y : '');
 const fold = (t: string) => t.toLocaleLowerCase('tr-TR').normalize('NFKD').replace(/[̀-ͯ]/g, '');
 
-/* =========================================================================== */
-export const PdfStudio: React.FC<PdfStudioProps> = ({ isOpen, onClose, committee, committees = [], questions = [], initialSlide = null, initialContent }) => {
-  const [kind, setKind] = useState<PdfContentKind>(() => (initialSlide ? 'learn' : initialContent || 'past'));
-  const [page, setPage] = usePersisted<PageSettings>('medsoru_pdf_page_v2', DEFAULT_PAGE);
-  const [qopt, setQopt] = usePersisted<QuestionDocOptions>('medsoru_pdf_q_v2', DEFAULT_Q);
-  const [lopt, setLopt] = usePersisted<LessonDocOptions>('medsoru_pdf_l_v2', DEFAULT_L);
-  const [sopt, setSopt] = usePersisted<SummaryDocOptions>('medsoru_pdf_s_v2', DEFAULT_S);
+/** İçerik türüne göre anlamlı gruplama ölçütleri */
+const groupChoices = (kind: PdfContentKind): GroupBy[] =>
+  kind === 'past'
+    ? ['committee', 'discipline', 'topic', 'kazanim', 'year']
+    : kind === 'pool'
+      ? ['committee', 'discipline', 'topic', 'kazanim', 'year']
+      : kind === 'ornek'
+        ? ['discipline', 'topic', 'kazanim', 'difficulty']
+        : ['group', 'kazanim'];
+const GROUP_QUICK: Record<'q' | 'ornek' | 'mini', [GroupBy, GroupBy, string][]> = {
+  q: [['none', 'none', 'Yok'], ['discipline', 'none', 'Ders'], ['topic', 'none', 'Konu'], ['kazanim', 'none', 'Kazanım'], ['discipline', 'topic', 'Ders › Konu'], ['topic', 'kazanim', 'Konu › Kazanım'], ['year', 'none', 'Yıl'], ['discipline', 'year', 'Ders › Yıl']],
+  ornek: [['none', 'none', 'Yok'], ['topic', 'none', 'Ders'], ['kazanim', 'none', 'Kazanım'], ['topic', 'kazanim', 'Ders › Kazanım'], ['difficulty', 'none', 'Zorluk'], ['kazanim', 'difficulty', 'Kazanım › Zorluk']],
+  mini: [['none', 'none', 'Yok'], ['group', 'none', 'Adım'], ['kazanim', 'none', 'Kazanım'], ['kazanim', 'group', 'Kazanım › Adım']],
+};
+const sortChoices = (kind: PdfContentKind): SortBy[] =>
+  kind === 'past' ? ['source', 'year', 'number', 'discipline', 'topic', 'random'] : kind === 'pool' ? ['source', 'year', 'number', 'discipline', 'topic', 'random'] : kind === 'ornek' ? ['source', 'difficulty', 'random'] : ['source', 'random'];
 
-  // Soru seçimi
-  const [committeeId, setCommitteeId] = useState<string>(committee?.id || 'all');
-  const [year, setYear] = useState('all');
-  const [discipline, setDiscipline] = useState('all');
-  const [topic, setTopic] = useState('all');
+/* =========================================================================== */
+export const PdfStudio: React.FC<PdfStudioProps> = ({ isOpen, onClose, committee, questions = [], initialSlide = null, initialContent }) => {
+  const saved = useMemo(() => readSaved<Selection>(SEL_KEY) || {}, []);
+  const [kind, setKind] = useState<PdfContentKind>(() => (initialSlide ? 'learn' : initialContent || (saved.kind as PdfContentKind) || 'past'));
+  const [page, setPage] = usePersisted<PageSettings>('medsoru_pdf_page_v2', normalizePage);
+  const [qopt, setQopt] = usePersisted<QuestionDocOptions>('medsoru_pdf_q_v2', normalizeQ);
+  const [lopt, setLopt] = usePersisted<LessonDocOptions>('medsoru_pdf_l_v2', (r) => ({ ...DEFAULT_L, ...(r || {}) }));
+  const [sopt, setSopt] = usePersisted<SummaryDocOptions>('medsoru_pdf_s_v2', (r) => ({ ...DEFAULT_S, ...(r || {}) }));
+  const [step, setStep] = useState<StepId>('source');
+  const [mobileView, setMobileView] = useState<'options' | 'preview'>('options');
+
+  // Soru seçimi (açıldığı kurul bağlamı kayıttan önce gelir)
+  const [committeeId, setCommitteeId] = useState<string>(committee?.id || saved.committeeId || 'all');
+  const [year, setYear] = useState(saved.year || 'all');
+  const [discipline, setDiscipline] = useState(saved.discipline || 'all');
+  const [topic, setTopic] = useState(saved.topic || 'all');
+  const [kazanimFilter, setKazanimFilter] = useState(saved.kazanim || 'all');
   const [search, setSearch] = useState('');
-  const [onlyAnswered, setOnlyAnswered] = useState(false);
-  const [onlyExplained, setOnlyExplained] = useState(false);
-  const [onlyAudited, setOnlyAudited] = useState(false);
-  const [sortBy, setSortBy] = useState<'number' | 'year' | 'discipline'>('year');
-  const [limit, setLimit] = useState(100);
-  const [ornekDers, setOrnekDers] = useState<string>(ORNEK_INDEX[0]?.id || '');
-  const [ornekLevels, setOrnekLevels] = useState<string[]>(['kolay', 'orta', 'zor']);
-  const [includeBranching, setIncludeBranching] = useState(false);
+  const [onlyAnswered, setOnlyAnswered] = useState(!!saved.onlyAnswered);
+  const [onlyExplained, setOnlyExplained] = useState(!!saved.onlyExplained);
+  const [onlyAudited, setOnlyAudited] = useState(!!saved.onlyAudited);
+  const [limit, setLimit] = useState<number>(typeof saved.limit === 'number' ? saved.limit : 100);
+  const [ornekDers, setOrnekDers] = useState<string>(saved.ornekDers && (saved.ornekDers === 'all' || ORNEK_INDEX.some((r) => r.id === saved.ornekDers)) ? saved.ornekDers : ORNEK_INDEX[0]?.id || '');
+  const [ornekLevels, setOrnekLevels] = useState<string[]>(Array.isArray(saved.ornekLevels) && saved.ornekLevels.length ? saved.ornekLevels : ['kolay', 'orta', 'zor']);
+  const [includeBranching, setIncludeBranching] = useState(!!saved.includeBranching);
 
   // Öğren
-  const [deckId, setDeckId] = useState<string>(initialSlide?.deckId || DECK_CATALOG[0]?.id || '');
+  const [deckId, setDeckId] = useState<string>(
+    initialSlide?.deckId || (saved.deckId && DECK_CATALOG.some((d) => d.id === saved.deckId) ? saved.deckId : DECK_CATALOG[0]?.id || '')
+  );
   const [deck, setDeck] = useState<InteractiveDeck | null>(null);
   const [pickedSteps, setPickedSteps] = useState<number[]>(initialSlide ? [initialSlide.slideNumber] : []);
+  const [kazIndex, setKazIndex] = useState<Record<string, DeckKazanim[]> | null>(null);
 
   // Özet
-  const [sumKurul, setSumKurul] = useState<number>(() => Number(String(committee?.id || '').match(/kurul(\d)/)?.[1]) || 1);
+  const [sumKurul, setSumKurul] = useState<number>(() => Number(String(committee?.id || '').match(/kurul(\d)/)?.[1]) || saved.sumKurul || 1);
   const [sumIds, setSumIds] = useState<string[]>([]);
+
+  // Seçimi hatırla
+  useEffect(() => {
+    try {
+      const sel: Selection = { kind, committeeId, year, discipline, topic, kazanim: kazanimFilter, onlyAnswered, onlyExplained, onlyAudited, limit, ornekDers, ornekLevels, includeBranching, deckId, sumKurul };
+      localStorage.setItem(SEL_KEY, JSON.stringify(sel));
+    } catch {}
+  }, [kind, committeeId, year, discipline, topic, kazanimFilter, onlyAnswered, onlyExplained, onlyAudited, limit, ornekDers, ornekLevels, includeBranching, deckId, sumKurul]);
 
   // Veriler
   const [past, setPast] = useState<any[] | null>(null);
@@ -179,10 +239,11 @@ export const PdfStudio: React.FC<PdfStudioProps> = ({ isOpen, onClose, committee
   const [previewHtml, setPreviewHtml] = useState('');
   const [previewMode, setPreviewMode] = useState<'html' | 'pdf'>('html');
   const [pdfPreviewUrl, setPdfPreviewUrl] = useState<string | null>(null);
-  const [pageCount, setPageCount] = useState<number | null>(null);
+  const [pageCount, setPageCount] = useState<{ n: number; exact: boolean } | null>(null);
+  const [fitInfo, setFitInfo] = useState<{ zoom: number; pages: number; basePages: number } | null>(null);
   const [building, setBuilding] = useState(false);
-  const [settingsOpenMobile, setSettingsOpenMobile] = useState(true);
   const frameBox = useRef<HTMLDivElement>(null);
+  const panelRef = useRef<HTMLDivElement>(null);
   const [frameW, setFrameW] = useState(800);
 
   useEffect(() => {
@@ -209,7 +270,11 @@ export const PdfStudio: React.FC<PdfStudioProps> = ({ isOpen, onClose, committee
     ro.observe(el);
     setFrameW(el.clientWidth);
     return () => ro.disconnect();
-  }, [isOpen]);
+  }, [isOpen, mobileView]);
+
+  useEffect(() => {
+    panelRef.current?.scrollTo({ top: 0 });
+  }, [step, kind]);
 
   /* ---- Veri yükleme ---- */
   useEffect(() => {
@@ -267,58 +332,19 @@ export const PdfStudio: React.FC<PdfStudioProps> = ({ isOpen, onClose, committee
     };
   }, [isOpen, kind, deckId]);
 
+  useEffect(() => {
+    if (!isOpen || kind !== 'mini' || kazIndex) return;
+    let alive = true;
+    loadKazanimIndex().then((m) => alive && setKazIndex(m));
+    return () => {
+      alive = false;
+    };
+  }, [isOpen, kind, kazIndex]);
+
   const kurulSummaries = useMemo(() => SUMMARY_META.filter((m) => m.kurul === sumKurul), [sumKurul]);
   useEffect(() => {
     setSumIds((ids) => (ids.some((id) => kurulSummaries.some((m) => m.id === id)) ? ids : kurulSummaries.slice(0, 1).map((m) => m.id)));
   }, [kurulSummaries]);
-
-  /* ---- Soru havuzu (türe göre) ---- */
-  const baseQuestions = useMemo<PdfQuestion[]>(() => {
-    if (kind === 'past') return (past || []).map(fromPastQuestion).filter(Boolean) as PdfQuestion[];
-    if (kind === 'pool') return questions.map(fromPoolQuestion).filter(Boolean) as PdfQuestion[];
-    if (kind === 'ornek') return (ornek || []).filter((q) => !q.difficulty || ornekLevels.includes(q.difficulty));
-    if (kind === 'mini') return deck ? miniQuestionsFromDeck(deck, includeBranching) : [];
-    return [];
-  }, [kind, past, questions, ornek, ornekLevels, deck, includeBranching]);
-
-  const inCommittee = useCallback((q: PdfQuestion) => committeeId === 'all' || q.committeeId === committeeId, [committeeId]);
-  const years = useMemo(() => sortYears(baseQuestions.filter(inCommittee).map((q) => q.year || '')), [baseQuestions, inCommittee]);
-  const disciplines = useMemo(
-    () => [...new Set(baseQuestions.filter(inCommittee).map((q) => q.discipline))].sort((a, b) => a.localeCompare(b, 'tr')),
-    [baseQuestions, inCommittee]
-  );
-  const topics = useMemo(
-    () =>
-      [...new Set(baseQuestions.filter((q) => inCommittee(q) && (discipline === 'all' || q.discipline === discipline)).map((q) => q.topic || ''))]
-        .filter(Boolean)
-        .sort((a, b) => a.localeCompare(b, 'tr')),
-    [baseQuestions, inCommittee, discipline]
-  );
-
-  const filtered = useMemo(() => {
-    const needle = fold(search.trim());
-    let list = baseQuestions.filter((q) => {
-      if ((kind === 'past' || kind === 'pool') && !inCommittee(q)) return false;
-      if (kind === 'past' && year !== 'all' && q.year !== year) return false;
-      if ((kind === 'past' || kind === 'pool') && discipline !== 'all' && q.discipline !== discipline) return false;
-      if (kind === 'past' && topic !== 'all' && q.topic !== topic) return false;
-      if (onlyAnswered && !q.answer) return false;
-      if (onlyExplained && !q.explanation && !q.options.some((o) => o.why)) return false;
-      if (kind === 'past' && onlyAudited && !q.badges.some((b) => b.label.startsWith('Denetleyici'))) return false;
-      if (needle && !fold(`${q.stem} ${q.options.map((o) => o.text).join(' ')} ${q.topic || ''}`).includes(needle)) return false;
-      return true;
-    });
-    if (kind === 'past' || kind === 'pool') {
-      list = [...list].sort((a, b) =>
-        sortBy === 'discipline'
-          ? a.discipline.localeCompare(b.discipline, 'tr') || (a.number || 0) - (b.number || 0)
-          : sortBy === 'year'
-            ? yearKey(b.year).localeCompare(yearKey(a.year), 'tr', { numeric: true }) || (a.number || 0) - (b.number || 0)
-            : (a.number || 0) - (b.number || 0)
-      );
-    }
-    return limit > 0 ? list.slice(0, limit) : list;
-  }, [baseQuestions, kind, inCommittee, year, discipline, topic, onlyAnswered, onlyExplained, onlyAudited, search, sortBy, limit]);
 
   /* ---- Öğren adımları ---- */
   const steps = useMemo(() => (deck ? buildSteps(deck) : []), [deck]);
@@ -332,6 +358,92 @@ export const PdfStudio: React.FC<PdfStudioProps> = ({ isOpen, onClose, committee
     return c;
   }, [steps]);
   const chosenStepCount = pickedSteps.length || steps.length;
+
+  /* ---- Soru havuzu (türe göre) ---- */
+  const baseQuestions = useMemo<PdfQuestion[]>(() => {
+    if (kind === 'past') return (past || []).map(fromPastQuestion).filter(Boolean) as PdfQuestion[];
+    if (kind === 'pool') return questions.map(fromPoolQuestion).filter(Boolean) as PdfQuestion[];
+    if (kind === 'ornek') return (ornek || []).filter((q) => !q.difficulty || ornekLevels.includes(q.difficulty));
+    if (kind === 'mini' && deck) return attachDeckKazanim(miniQuestionsFromDeck(deck, includeBranching), deck.id, `${deck.title} ${deck.discipline || ''}`, steps, kazIndex);
+    return [];
+  }, [kind, past, questions, ornek, ornekLevels, deck, includeBranching, steps, kazIndex]);
+
+  const crossKind = kind === 'past' || kind === 'pool';
+  const inCommittee = useCallback((q: PdfQuestion) => committeeId === 'all' || q.committeeId === committeeId, [committeeId]);
+  const years = useMemo(() => sortYears(baseQuestions.filter(inCommittee).map((q) => q.year || '')), [baseQuestions, inCommittee]);
+  const disciplines = useMemo(
+    () => [...new Set(baseQuestions.filter(inCommittee).map((q) => q.discipline))].sort((a, b) => a.localeCompare(b, 'tr')),
+    [baseQuestions, inCommittee]
+  );
+  const topics = useMemo(
+    () =>
+      [...new Set(baseQuestions.filter((q) => inCommittee(q) && (discipline === 'all' || q.discipline === discipline)).map((q) => q.topic || ''))]
+        .filter(Boolean)
+        .sort((a, b) => a.localeCompare(b, 'tr')),
+    [baseQuestions, inCommittee, discipline]
+  );
+  const kazanimlar = useMemo(() => {
+    const m = new Map<string, { text: string; rank: string; n: number }>();
+    baseQuestions
+      .filter((q) => (!crossKind || inCommittee(q)) && (discipline === 'all' || !crossKind || q.discipline === discipline) && (topic === 'all' || kind !== 'past' || q.topic === topic))
+      .forEach((q) => {
+        if (!q.kazanim?.text) return;
+        const key = q.kazanim.id || q.kazanim.text;
+        const cur = m.get(key);
+        if (cur) cur.n++;
+        else m.set(key, { text: q.kazanim.text, rank: q.kazanim.id || `~${q.kazanim.text}`, n: 1 });
+      });
+    return [...m.entries()].sort((a, b) => a[1].rank.localeCompare(b[1].rank, 'tr', { numeric: true })).map(([key, v]) => ({ key, ...v }));
+  }, [baseQuestions, crossKind, inCommittee, discipline, topic, kind]);
+
+  const filtered = useMemo(() => {
+    const needle = fold(search.trim());
+    return baseQuestions.filter((q) => {
+      if (crossKind && !inCommittee(q)) return false;
+      if (kind === 'past' && year !== 'all' && q.year !== year) return false;
+      if (crossKind && discipline !== 'all' && q.discipline !== discipline) return false;
+      if (kind === 'past' && topic !== 'all' && q.topic !== topic) return false;
+      if (kazanimFilter !== 'all') {
+        const key = q.kazanim ? q.kazanim.id || q.kazanim.text : '';
+        if (kazanimFilter === '?' ? !!key : key !== kazanimFilter) return false;
+      }
+      if (onlyAnswered && !q.answer) return false;
+      if (onlyExplained && !q.explanation && !q.options.some((o) => o.why)) return false;
+      if (kind === 'past' && onlyAudited && !q.badges.some((b) => b.label.startsWith('Denetleyici'))) return false;
+      if (needle && !fold(`${q.stem} ${q.options.map((o) => o.text).join(' ')} ${q.topic || ''} ${q.kazanim?.text || ''}`).includes(needle)) return false;
+      return true;
+    });
+  }, [baseQuestions, crossKind, kind, inCommittee, year, discipline, topic, kazanimFilter, onlyAnswered, onlyExplained, onlyAudited, search]);
+
+  // Önce yıl yeniden eskiye ve soru no (kaynak sırası), sonra seçilen gruplama/sıralama; en sonda ilk N
+  const arranged = useMemo(() => {
+    const base = crossKind
+      ? [...filtered].sort((a, b) => {
+          const ya = a.year && /\d{4}/.test(a.year) ? a.year : '';
+          const yb = b.year && /\d{4}/.test(b.year) ? b.year : '';
+          return yb.localeCompare(ya, 'tr', { numeric: true }) || (a.number || 0) - (b.number || 0);
+        })
+      : filtered;
+    const allowed = new Set(groupChoices(kind));
+    const out = arrangeQuestions(base, {
+      group1: allowed.has(qopt.group1) ? qopt.group1 : 'none',
+      group2: allowed.has(qopt.group2) ? qopt.group2 : 'none',
+      groupOrder: qopt.groupOrder,
+      sortBy: sortChoices(kind).includes(qopt.sortBy) ? qopt.sortBy : 'source',
+      sortDir: qopt.sortDir,
+      seed: qopt.seed,
+    });
+    return limit > 0 ? out.slice(0, limit) : out;
+  }, [filtered, crossKind, kind, qopt.group1, qopt.group2, qopt.groupOrder, qopt.sortBy, qopt.sortDir, qopt.seed, limit]);
+  const effectiveQ = useMemo<QuestionDocOptions>(() => {
+    const allowed = new Set(groupChoices(kind));
+    return {
+      ...qopt,
+      group1: allowed.has(qopt.group1) ? qopt.group1 : 'none',
+      group2: allowed.has(qopt.group2) ? qopt.group2 : 'none',
+      numbering: qopt.numbering === 'original' && !crossKind ? 'sequential' : qopt.numbering,
+    };
+  }, [qopt, kind, crossKind]);
 
   /* ---- Kapak / başlık bilgisi ---- */
   const coverInfo = useMemo<CoverInfo>(() => {
@@ -362,21 +474,27 @@ export const PdfStudio: React.FC<PdfStudioProps> = ({ isOpen, onClose, committee
         : kind === 'mini'
           ? deck ? deckName(deck, false) : 'Mini sorular'
           : [discipline !== 'all' ? discipline : '', kurul.split(' · ')[1] || ''].filter(Boolean).join(' · ') || 'Tüm kurullar';
-    const tags = [kurul && kind !== 'ornek' && kind !== 'mini' ? kurul : '', year !== 'all' && kind === 'past' ? year : '', topic !== 'all' && kind === 'past' ? topic : '', search ? `“${search}”` : '']
-      .filter(Boolean);
+    const kzLabel = kazanimFilter === 'all' ? '' : kazanimFilter === '?' ? 'Kazanımı belirsiz' : kazanimlar.find((k) => k.key === kazanimFilter)?.text || '';
+    const tags = [
+      kurul && crossKind ? kurul : '',
+      year !== 'all' && kind === 'past' ? year : '',
+      topic !== 'all' && kind === 'past' ? topic : '',
+      kzLabel ? (kzLabel.length > 60 ? `${kzLabel.slice(0, 58)}…` : kzLabel) : '',
+      search ? `“${search}”` : '',
+    ].filter(Boolean);
     return {
       kicker: label,
       title,
       subtitle: kind === 'ornek' ? ORNEK_INDEX.find((r) => r.id === ornekDers)?.ogretim_uyesi : undefined,
       stats: [
-        { value: filtered.length, label: 'Soru' },
-        ...(qopt.mode !== 'key' ? [{ value: `~${Math.max(1, Math.round(filtered.length * 1.1))} dk`, label: 'Süre' }] : []),
-        { value: filtered.filter((q) => q.answer).length, label: 'Cevaplı' },
+        { value: arranged.length, label: 'Soru' },
+        ...(qopt.mode !== 'key' ? [{ value: `~${Math.max(1, Math.round(arranged.length * 1.1))} dk`, label: 'Süre' }] : []),
+        { value: arranged.filter((x) => x.q.answer).length, label: 'Cevaplı' },
       ],
       tags,
       studentFields: qopt.mode === 'student',
     };
-  }, [kind, deck, steps, pickedSteps, chosenStepCount, lopt.answers, sumKurul, sumIds, committeeId, discipline, year, topic, search, filtered, qopt.mode, ornekDers]);
+  }, [kind, deck, steps, pickedSteps, chosenStepCount, lopt.answers, sumKurul, sumIds, committeeId, discipline, year, topic, kazanimFilter, kazanimlar, search, arranged, qopt.mode, ornekDers, crossKind]);
 
   const docOptions: DocumentOptions = useMemo(
     () => ({ title: coverInfo.title, runningHead: `${coverInfo.kicker} · ${coverInfo.title}`, ...page }),
@@ -387,9 +505,9 @@ export const PdfStudio: React.FC<PdfStudioProps> = ({ isOpen, onClose, committee
   const buildBody = useCallback(
     async (preview: boolean): Promise<string | null> => {
       if (isQuestionKind(kind)) {
-        if (!filtered.length) return null;
-        const qs = preview ? filtered.slice(0, PREVIEW_Q) : filtered;
-        return renderMarkup(<QuestionDoc questions={qs} options={qopt} cover={coverInfo} />);
+        if (!arranged.length) return null;
+        const items = preview ? arranged.slice(0, PREVIEW_Q) : arranged;
+        return renderMarkup(<QuestionDoc items={items} options={effectiveQ} cover={coverInfo} />);
       }
       if (kind === 'learn') {
         if (!deck) return null;
@@ -406,15 +524,16 @@ export const PdfStudio: React.FC<PdfStudioProps> = ({ isOpen, onClose, committee
       }
       return null;
     },
-    [kind, filtered, qopt, coverInfo, deck, pickedSteps, steps, lopt, sumIds, sopt]
+    [kind, arranged, effectiveQ, coverInfo, deck, pickedSteps, steps, lopt, sumIds, sopt]
   );
 
   const previewTruncated =
-    isQuestionKind(kind) ? filtered.length > PREVIEW_Q : kind === 'learn' ? chosenStepCount > PREVIEW_STEPS : kind === 'summary' ? sumIds.length > PREVIEW_SUMMARIES : false;
+    isQuestionKind(kind) ? arranged.length > PREVIEW_Q : kind === 'learn' ? chosenStepCount > PREVIEW_STEPS : kind === 'summary' ? sumIds.length > PREVIEW_SUMMARIES : false;
 
   /* ---- Önizleme ---- */
-  const pageWidthPx = (PAGE_SIZE[page.format].w / 25.4) * 96 + 48;
-  const previewZoom = Math.min(1, Math.max(0.3, (frameW - 8) / pageWidthPx));
+  const geo = pageGeometry(page);
+  const pageWidthPx = (geo.w / 25.4) * 96 + 48;
+  const previewZoom = Math.min(1, Math.max(0.22, (frameW - 8) / pageWidthPx));
   useEffect(() => {
     if (!isOpen || loading) return;
     let alive = true;
@@ -426,9 +545,19 @@ export const PdfStudio: React.FC<PdfStudioProps> = ({ isOpen, onClose, committee
         if (!body) {
           setPreviewHtml('');
           setPageCount(null);
+          setFitInfo(null);
           return;
         }
-        const html = buildDocument(body, docOptions);
+        let opts = docOptions;
+        if (page.fit === 'pages') {
+          const full = previewTruncated ? await buildBody(false) : body;
+          if (!alive || !full) return;
+          const r = await computeFitZoom(full, docOptions);
+          if (!alive) return;
+          setFitInfo(r);
+          opts = { ...docOptions, fitZoom: r.zoom };
+        } else setFitInfo(null);
+        const html = buildDocument(body, opts);
         setPreviewHtml(html);
         if (previewMode === 'pdf' && serverOk) {
           const blob = await renderPdfOnServer(html, docOptions.title, 'onizleme.pdf');
@@ -438,19 +567,23 @@ export const PdfStudio: React.FC<PdfStudioProps> = ({ isOpen, onClose, committee
             return URL.createObjectURL(blob);
           });
           const raw = await blob.text();
-          setPageCount((raw.match(/\/Type\s*\/Page[^s]/g) || []).length || null);
+          const n = (raw.match(/\/Type\s*\/Page[^s]/g) || []).length;
+          setPageCount(n ? { n, exact: !previewTruncated } : null);
+        } else if (!previewTruncated) {
+          const n = await estimatePages(body, opts);
+          if (alive) setPageCount({ n, exact: false });
         } else setPageCount(null);
       } catch (e) {
         console.warn('PDF önizlemesi oluşturulamadı', e);
       } finally {
         if (alive) setBuilding(false);
       }
-    }, previewMode === 'pdf' ? 700 : 260);
+    }, previewMode === 'pdf' ? 700 : page.fit === 'pages' ? 500 : 260);
     return () => {
       alive = false;
       clearTimeout(t);
     };
-  }, [isOpen, loading, buildBody, docOptions, previewMode, serverOk]);
+  }, [isOpen, loading, buildBody, docOptions, previewMode, serverOk, page.fit, previewTruncated]);
 
   useEffect(() => () => {
     if (pdfPreviewUrl) URL.revokeObjectURL(pdfPreviewUrl);
@@ -462,10 +595,15 @@ export const PdfStudio: React.FC<PdfStudioProps> = ({ isOpen, onClose, committee
   );
 
   /* ---- Çıktı ---- */
-  const fileName = `${safeFileName(`${coverInfo.kicker}_${coverInfo.title}`)}${page.format === 'tablet' ? '_Tablet' : ''}.pdf`;
+  const fileName = `${safeFileName(`${coverInfo.kicker}_${coverInfo.title}`)}_${PAPER[page.paper].label}${page.orientation === 'landscape' ? '_yatay' : ''}.pdf`;
   const fullDocument = async () => {
     const body = await buildBody(false);
     if (!body) throw new Error('Seçimde içerik yok');
+    if (page.fit === 'pages') {
+      setBusy('Sayfaya sığdırılıyor…');
+      const r = await computeFitZoom(body, docOptions);
+      return buildDocument(body, { ...docOptions, fitZoom: r.zoom });
+    }
     return buildDocument(body, docOptions);
   };
 
@@ -473,6 +611,7 @@ export const PdfStudio: React.FC<PdfStudioProps> = ({ isOpen, onClose, committee
     setBusy('PDF hazırlanıyor…');
     try {
       const html = await fullDocument();
+      setBusy('PDF hazırlanıyor…');
       if (serverOk) {
         try {
           const blob = await renderPdfOnServer(html, docOptions.title, fileName);
@@ -505,195 +644,199 @@ export const PdfStudio: React.FC<PdfStudioProps> = ({ isOpen, onClose, committee
       downloadHtml(await fullDocument(), fileName.replace(/\.pdf$/, '.html'));
     } catch (err: any) {
       toast.error('HTML oluşturulamadı', err?.message || '');
+    } finally {
+      setBusy(null);
     }
   };
 
   if (!isOpen) return null;
 
+  /* ---- Adım özetleri ---- */
   const canInlinePdf = typeof navigator === 'undefined' || (navigator as any).pdfViewerEnabled !== false;
-  const itemCount = isQuestionKind(kind) ? filtered.length : kind === 'learn' ? (deck ? chosenStepCount : 0) : sumIds.length;
-  const summaryLine = loading
-    ? 'Yükleniyor…'
-    : isQuestionKind(kind)
-      ? `${filtered.length} soru · ${PRESETS.find((p) => matchesPreset(qopt, p.apply))?.label || 'Özel'} · ${PAGE_SIZE[page.format].label}`
-      : kind === 'learn'
-        ? deck ? `${chosenStepCount} adım · ${deckName(deck)} · ${PAGE_SIZE[page.format].label}` : 'Ders seç'
-        : `${sumIds.length} özet · ${PAGE_SIZE[page.format].label}`;
+  const itemCount = isQuestionKind(kind) ? arranged.length : kind === 'learn' ? (deck ? chosenStepCount : 0) : sumIds.length;
+  const unit = isQuestionKind(kind) ? 'soru' : kind === 'learn' ? 'adım' : 'özet';
+  const kindLabel = KINDS.find((k) => k.id === kind)?.label || '';
+  const groupText = isQuestionKind(kind)
+    ? [effectiveQ.group1, effectiveQ.group2].filter((g) => g !== 'none').map((g) => GROUP_LABEL[g]).join(' › ') || 'Gruplama yok'
+    : kind === 'learn'
+      ? lopt.answers === 'end' ? 'Cevaplar sonda' : lopt.answers === 'hidden' ? 'Çalışma kâğıdı' : 'Cevaplar açık'
+      : sopt.toc ? 'İçindekilerle' : 'Düz';
+  const stepSummary: Record<StepId, string> = {
+    source: loading ? 'Yükleniyor…' : `${kindLabel} · ${itemCount} ${unit}`,
+    layout: groupText,
+    look: `${TEMPLATES[page.template].label}${page.fit === 'pages' ? ` · ${page.fitPages} sayfaya` : page.fit === 'width' ? ' · genişliğe' : ''}`,
+    page: `${pageLabel(page)} · ${MARGINS[page.margins].label.toLocaleLowerCase('tr-TR')}`,
+  };
+  const stepIndex = STEPS.findIndex((s) => s.id === step);
+  const pagesText = pageCount ? `${pageCount.exact ? '' : '≈ '}${pageCount.n} sayfa${previewTruncated && previewMode === 'pdf' ? ' (önizleme)' : ''}` : '';
 
   return createPortal(
-    <div
-      className="ms-overlay fixed inset-0 z-[80] bg-[var(--color-scrim)] flex items-stretch sm:items-center justify-center sm:p-5"
-      onMouseDown={(e) => e.target === e.currentTarget && onClose()}
-    >
-      <div
-        role="dialog"
-        aria-modal="true"
-        aria-labelledby="pdf-studio-title"
-        aria-busy={!!busy}
-        className="relative bg-white w-full max-w-[1320px] h-full sm:h-[min(94vh,960px)] sm:rounded-2xl shadow-xl overflow-hidden grid grid-rows-[auto_minmax(0,1fr)_auto] text-ink"
-      >
-        {/* ---------- Üst: başlık + içerik türü ---------- */}
-        <header className="flex flex-wrap items-center gap-x-4 gap-y-3 px-4 sm:px-6 py-3.5 border-b border-line">
-          <span className="w-10 h-10 rounded-xl bg-accent text-white flex items-center justify-center shrink-0 shadow-md">
-            <FileDown className="w-5 h-5" />
-          </span>
-          <div className="min-w-0 flex-1 lg:flex-none lg:w-[220px]">
-            <h2 id="pdf-studio-title" className="m-0 font-display font-bold text-[19px] tracking-[-0.02em] leading-tight">PDF stüdyosu</h2>
-            <p className="m-0 text-[13px] text-ink-3 truncate">
-              {serverOk === false ? 'Tarayıcıdan kaydedilir' : 'Ekrandaki tasarımla, birebir'}
-            </p>
+    <div className="ms-overlay ps-overlay" onMouseDown={(e) => e.target === e.currentTarget && onClose()}>
+      <div role="dialog" aria-modal="true" aria-labelledby="ps-title" aria-busy={!!busy} className="ps-dialog ms-keep-shell" data-view={mobileView}>
+        {/* ---------- Üst ---------- */}
+        <header className="ps-head">
+          <span className="ps-logo" aria-hidden="true"><FileDown /></span>
+          <div className="ps-head-t">
+            <h2 id="ps-title">PDF stüdyosu</h2>
+            <p>{serverOk === false ? 'Tarayıcının yazdırma penceresiyle kaydedilir' : 'Ekrandaki tasarımla, tıklanabilir bağlantılarla'}</p>
           </div>
-          <button
-            type="button"
-            onClick={onClose}
-            aria-label="PDF stüdyosunu kapat"
-            className="lg:order-last w-10 h-10 rounded-full flex items-center justify-center text-ink-2 hover:text-ink hover:bg-canvas cursor-pointer shrink-0"
-          >
-            <X className="w-5 h-5" />
+          <button type="button" className="ps-icon-btn" onClick={onClose} aria-label="PDF stüdyosunu kapat">
+            <X />
           </button>
-          <div className="w-full lg:w-auto lg:flex-1 min-w-0 flex lg:justify-center">
-            <div role="radiogroup" aria-label="İçerik" className="flex gap-1 bg-canvas rounded-xl p-1 overflow-x-auto max-w-full [scrollbar-width:none]">
-              {KINDS.map(({ id, label, icon: Icon }) => {
-                const on = kind === id;
-                return (
-                  <button
-                    key={id}
-                    type="button"
-                    role="radio"
-                    aria-checked={on}
-                    onClick={() => setKind(id)}
-                    className={`h-10 px-3.5 rounded-[11px] inline-flex items-center justify-center gap-2 text-[14px] whitespace-nowrap cursor-pointer transition-all ${
-                      on ? 'bg-white text-ink font-semibold shadow-xs' : 'text-ink-2 hover:text-ink'
-                    }`}
-                  >
-                    <Icon className={`w-4 h-4 ${on ? 'text-accent' : ''}`} />
-                    {label}
-                  </button>
-                );
-              })}
-            </div>
-          </div>
         </header>
 
-        {/* ---------- Gövde ---------- */}
-        <div className="min-h-0 overflow-y-auto lg:overflow-hidden grid grid-cols-1 lg:grid-cols-[400px_minmax(0,1fr)]">
-          <aside className="lg:overflow-y-auto bg-blue-50 lg:border-r border-line px-4 sm:px-6 py-5 flex flex-col gap-6 min-w-0">
-            <button
-              type="button"
-              onClick={() => setSettingsOpenMobile((v) => !v)}
-              aria-expanded={settingsOpenMobile}
-              className="lg:hidden -mb-2 self-start text-[13px] font-semibold text-accent inline-flex items-center gap-1 cursor-pointer"
-            >
-              <ChevronDown className={`w-4 h-4 transition-transform ${settingsOpenMobile ? 'rotate-180' : ''}`} />
-              {settingsOpenMobile ? 'Ayarları gizle' : 'Ayarları göster'}
-            </button>
-            <div className={`${settingsOpenMobile ? 'flex' : 'hidden'} lg:flex flex-col gap-6 min-w-0`}>
-              {isQuestionKind(kind) && (
-                <QuestionSettings
-                  kind={kind}
-                  o={qopt}
-                  set={setQopt}
-                  sel={{
-                    committees, committeeId, setCommitteeId, years, year, setYear, disciplines, discipline, setDiscipline, topics, topic, setTopic,
-                    search, setSearch, onlyAnswered, setOnlyAnswered, onlyExplained, setOnlyExplained, onlyAudited, setOnlyAudited,
-                    sortBy, setSortBy, limit, setLimit, ornekDers, setOrnekDers, ornekLevels, setOrnekLevels, includeBranching, setIncludeBranching,
-                    deckId, setDeckId, total: baseQuestions.length,
-                  }}
-                />
+        <div className="ps-body">
+          {/* ---------- Ayarlar ---------- */}
+          <aside className="ps-side" aria-label="PDF ayarları">
+            <nav className="ps-steps" aria-label="Adımlar">
+              {STEPS.map((s, i) => (
+                <button key={s.id} type="button" className={`ps-step ${step === s.id ? 'is-on' : ''}`} aria-current={step === s.id ? 'step' : undefined} onClick={() => setStep(s.id)}>
+                  <span className="ps-step-n">{i + 1}</span>
+                  <span className="ps-step-t">
+                    <b>{s.label}</b>
+                    <small>{stepSummary[s.id]}</small>
+                  </span>
+                </button>
+              ))}
+            </nav>
+
+            <div className="ps-panel" ref={panelRef}>
+              {step === 'source' && (
+                <>
+                  <Group title="İçerik">
+                    <div className="ps-kinds" role="radiogroup" aria-label="İçerik türü">
+                      {KINDS.map(({ id, label, hint, icon: Icon }) => (
+                        <button key={id} type="button" role="radio" aria-checked={kind === id} className={`ps-choice ${kind === id ? 'is-on' : ''}`} onClick={() => setKind(id)}>
+                          <span className="ps-choice-ic"><Icon /></span>
+                          <span className="ps-choice-t"><b>{label}</b><small>{hint}</small></span>
+                        </button>
+                      ))}
+                    </div>
+                  </Group>
+                  {isQuestionKind(kind) && (
+                    <QuestionSource
+                      kind={kind}
+                      sel={{
+                        committeeId, setCommitteeId, years, year, setYear, disciplines, discipline, setDiscipline, topics, topic, setTopic,
+                        kazanimlar, kazanim: kazanimFilter, setKazanim: setKazanimFilter,
+                        search, setSearch, onlyAnswered, setOnlyAnswered, onlyExplained, setOnlyExplained, onlyAudited, setOnlyAudited,
+                        limit, setLimit, ornekDers, setOrnekDers, ornekLevels, setOrnekLevels, includeBranching, setIncludeBranching,
+                        deckId, setDeckId, total: baseQuestions.length, matched: filtered.length,
+                      }}
+                    />
+                  )}
+                  {kind === 'learn' && (
+                    <LessonSource
+                      deckId={deckId}
+                      setDeckId={(id) => {
+                        setDeckId(id);
+                        setPickedSteps([]);
+                      }}
+                      steps={steps.map((s) => ({ number: s.number, title: s.title, section: s.section, checkpoint: s.checkpoint }))}
+                      sections={sections.map((s) => ({ index: s.index, name: s.name, numbers: s.steps.map((i) => steps[i].number) }))}
+                      picked={pickedSteps}
+                      setPicked={setPickedSteps}
+                    />
+                  )}
+                  {kind === 'summary' && <SummarySource kurul={sumKurul} setKurul={setSumKurul} list={kurulSummaries} picked={sumIds} setPicked={setSumIds} />}
+                  {loadError && <p className="ps-error">{loadError}</p>}
+                </>
               )}
-              {kind === 'learn' && (
-                <LessonSettings
-                  o={lopt}
-                  set={setLopt}
-                  deckId={deckId}
-                  setDeckId={(id) => {
-                    setDeckId(id);
-                    setPickedSteps([]);
-                  }}
-                  steps={steps.map((s) => ({ number: s.number, title: s.title, section: s.section, checkpoint: s.checkpoint }))}
-                  sections={sections.map((s) => ({ index: s.index, name: s.name, numbers: s.steps.map((i) => steps[i].number) }))}
-                  picked={pickedSteps}
-                  setPicked={setPickedSteps}
-                  ixCounts={ixCounts}
-                />
+
+              {step === 'layout' && (
+                <>
+                  {isQuestionKind(kind) && <QuestionLayout kind={kind} o={qopt} set={setQopt} />}
+                  {kind === 'learn' && <LessonLayout o={lopt} set={setLopt} />}
+                  {kind === 'summary' && <SummaryLayout o={sopt} set={setSopt} />}
+                </>
               )}
-              {kind === 'summary' && (
-                <SummarySettings o={sopt} set={setSopt} kurul={sumKurul} setKurul={setSumKurul} list={kurulSummaries} picked={sumIds} setPicked={setSumIds} />
+
+              {step === 'look' && (
+                <>
+                  <LookCommon page={page} setPage={setPage} fitInfo={fitInfo} unit={unit} />
+                  {isQuestionKind(kind) && <QuestionLook o={qopt} set={setQopt} />}
+                  {kind === 'learn' && <LessonLook o={lopt} set={setLopt} ixCounts={ixCounts} />}
+                  {kind === 'summary' && <SummaryLook o={sopt} set={setSopt} />}
+                </>
               )}
-              <PageSection page={page} setPage={setPage} landscapeHint={kind === 'learn'} />
-              {loadError && <p className="m-0 text-[13px] text-warn bg-warn-soft rounded-xl px-3 py-2.5">{loadError}</p>}
+
+              {step === 'page' && <PageStep page={page} setPage={setPage} />}
+
+              <div className="ps-panel-nav">
+                <button type="button" className="ps-btn" disabled={stepIndex === 0} onClick={() => setStep(STEPS[stepIndex - 1].id)}>
+                  <ChevronLeft /> Geri
+                </button>
+                {stepIndex < STEPS.length - 1 ? (
+                  <button type="button" className="ps-btn is-soft" onClick={() => setStep(STEPS[stepIndex + 1].id)}>
+                    Sonraki: {STEPS[stepIndex + 1].label} <ChevronRight />
+                  </button>
+                ) : (
+                  <button type="button" className="ps-btn is-soft ps-only-mobile" onClick={() => setMobileView('preview')}>
+                    Önizlemeye geç <Eye />
+                  </button>
+                )}
+              </div>
             </div>
           </aside>
 
-          {/* Önizleme */}
-          <section aria-label="Önizleme" className="bg-blue-100 flex flex-col min-w-0 min-h-[70dvh] lg:min-h-0 p-3 sm:p-5 gap-3">
-            <div className="flex items-center gap-2 px-1 flex-wrap">
-              <span className="text-[12px] font-semibold uppercase tracking-[0.08em] text-ink-3">Önizleme</span>
+          {/* ---------- Önizleme ---------- */}
+          <section className="ps-preview" aria-label="Önizleme">
+            <div className="ps-pv-bar">
+              <span className="ps-pv-h">Önizleme</span>
+              <span className="ps-pill">{pageLabel(page)}</span>
               {building ? (
-                <span className="h-6 px-2 rounded-full bg-white text-[12px] text-accent font-medium inline-flex items-center gap-1.5">
-                  <RefreshCw className="w-3 h-3 animate-spin" /> Güncelleniyor
-                </span>
+                <span className="ps-pill is-accent"><RefreshCw className="ps-spin" /> Güncelleniyor</span>
               ) : (
-                pageCount != null && previewMode === 'pdf' && (
-                  <span className="h-6 px-2 rounded-full bg-white text-[12px] text-ink-2 font-medium inline-flex items-center">
-                    {previewTruncated ? `Önizleme ${pageCount} sayfa` : `${pageCount} sayfa`}
-                  </span>
-                )
+                pagesText && <span className="ps-pill">{pagesText}</span>
               )}
-              <span className="flex-1" />
+              <span className="ps-grow" />
               {serverOk && canInlinePdf && (
-                <div role="radiogroup" aria-label="Önizleme türü" className="grid grid-cols-2 gap-1 bg-white/70 rounded-lg p-0.5">
+                <div role="radiogroup" aria-label="Önizleme türü" className="ps-seg is-small">
                   {(
                     [
                       ['html', 'Hızlı', MonitorSmartphone],
                       ['pdf', 'Gerçek PDF', FileText],
                     ] as const
                   ).map(([id, label, Icon]) => (
-                    <button
-                      key={id}
-                      type="button"
-                      role="radio"
-                      aria-checked={previewMode === id}
-                      onClick={() => setPreviewMode(id)}
-                      className={`h-7 px-2.5 rounded-md text-[12.5px] inline-flex items-center gap-1.5 cursor-pointer ${previewMode === id ? 'bg-white font-semibold text-ink shadow-xs' : 'text-ink-2'}`}
-                    >
-                      <Icon className="w-3.5 h-3.5" /> {label}
+                    <button key={id} type="button" role="radio" aria-checked={previewMode === id} className={previewMode === id ? 'is-on' : ''} onClick={() => setPreviewMode(id)}>
+                      <Icon /> {label}
                     </button>
                   ))}
                 </div>
               )}
             </div>
 
-            <div ref={frameBox} className="relative flex-1 min-h-[460px] rounded-2xl overflow-hidden bg-[#E9EDF4] ring-1 ring-[rgba(14,26,38,0.06)]">
+            <div ref={frameBox} className="ps-frame">
               {previewMode === 'pdf' && pdfPreviewUrl && serverOk ? (
-                <iframe key={pdfPreviewUrl} title="PDF önizlemesi" src={`${pdfPreviewUrl}#view=FitH&toolbar=0&navpanes=0`} className="absolute inset-0 w-full h-full border-0 bg-white" />
+                <iframe key={pdfPreviewUrl} title="PDF önizlemesi" src={`${pdfPreviewUrl}#view=FitH&toolbar=0&navpanes=0`} />
               ) : previewDoc ? (
-                <iframe title="Belge önizlemesi" srcDoc={previewDoc} sandbox="allow-same-origin" className="absolute inset-0 w-full h-full border-0" />
+                <iframe title="Belge önizlemesi" srcDoc={previewDoc} sandbox="allow-same-origin" />
               ) : null}
-              <BlurOverlay show={building && !!previewDoc} icon={<PaperLoader size={72} />} label="Önizleme güncelleniyor…" />
+              <BlurOverlay show={building && !!previewDoc} icon={<PaperLoader size={72} />} label={page.fit === 'pages' ? 'Sayfaya sığdırılıyor…' : 'Önizleme güncelleniyor…'} />
               {!previewDoc && (
-                <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 text-center px-8 ms-fade-in">
+                <div className="ps-empty ms-fade-in">
                   {loading || building ? (
                     <>
                       <PaperLoader />
-                      <p className="m-0 text-[15px] font-semibold text-ink">Sayfalar diziliyor…</p>
-                      <p className="m-0 text-[13px] text-ink-3">Önizleme birazdan burada</p>
+                      <b>Sayfalar diziliyor…</b>
+                      <span>Önizleme birazdan burada</span>
                     </>
                   ) : (
                     <>
-                      <span className="w-14 h-14 rounded-2xl bg-white text-ink-3 flex items-center justify-center">
-                        <Eye className="w-7 h-7" />
-                      </span>
-                      <p className="m-0 text-[16px] font-semibold text-ink">Bu seçimde içerik yok</p>
-                      <p className="m-0 text-[14px] text-ink-2 max-w-[340px]">Soldaki filtreleri gevşet ya da başka bir ders seç.</p>
+                      <span className="ps-empty-ic"><Eye /></span>
+                      <b>Bu seçimde içerik yok</b>
+                      <span>Kaynak adımındaki süzgeçleri gevşet ya da başka bir ders seç.</span>
+                      <button type="button" className="ps-btn is-soft" onClick={() => { setStep('source'); setMobileView('options'); }}>Kaynağa dön</button>
                     </>
                   )}
                 </div>
               )}
             </div>
-            {previewTruncated && previewDoc && (
-              <p className="m-0 px-1 text-[12.5px] text-ink-3">
-                Önizleme hızlı olsun diye kısaltıldı; indirilen PDF seçimin tamamını ({itemCount} {isQuestionKind(kind) ? 'soru' : kind === 'learn' ? 'adım' : 'özet'}) içerir.
+            {previewDoc && (
+              <p className="ps-note">
+                {previewTruncated
+                  ? `Önizleme hızlı olsun diye kısaltıldı; indirilen PDF seçimin tamamını (${itemCount} ${unit}) içerir.`
+                  : 'Soru numaraları, cevaplar ve içindekiler önizlemede de tıklanabilir.'}
               </p>
             )}
           </section>
@@ -701,38 +844,28 @@ export const PdfStudio: React.FC<PdfStudioProps> = ({ isOpen, onClose, committee
 
         <BlurOverlay show={!!busy} fixed={false} icon={<PaperLoader size={96} />} label={busy || ''} hint="Büyük seçimlerde yarım dakikayı bulabilir" />
 
-        {/* ---------- Alt: özet + işlemler ---------- */}
-        <footer className="border-t border-line bg-white px-4 sm:px-6 py-3 pb-[max(env(safe-area-inset-bottom),12px)] sm:pb-3 flex flex-wrap sm:flex-nowrap items-center gap-x-3 gap-y-2">
-          <p className="m-0 min-w-0 flex-1 basis-full sm:basis-auto text-[14px] text-ink-2 truncate" role="status">
-            <span className="font-semibold text-ink">{summaryLine}</span>
+        {/* ---------- Alt çubuk ---------- */}
+        <footer className="ps-foot">
+          <div className="ps-seg ps-only-mobile ps-viewseg" role="radiogroup" aria-label="Görünüm">
+            <button type="button" role="radio" aria-checked={mobileView === 'options'} className={mobileView === 'options' ? 'is-on' : ''} onClick={() => setMobileView('options')}>
+              <SlidersHorizontal /> Ayarlar
+            </button>
+            <button type="button" role="radio" aria-checked={mobileView === 'preview'} className={mobileView === 'preview' ? 'is-on' : ''} onClick={() => setMobileView('preview')}>
+              <Eye /> Önizleme
+            </button>
+          </div>
+          <p className="ps-foot-sum" role="status">
+            <b>{loading ? 'Yükleniyor…' : `${itemCount} ${unit}`}</b>
+            <span>{[groupText, TEMPLATES[page.template].label, pageLabel(page), pagesText].filter(Boolean).join(' · ')}</span>
           </p>
-          <button
-            type="button"
-            onClick={handlePrint}
-            disabled={!itemCount || !!busy}
-            title="Tarayıcının yazdırma penceresini açar"
-            className="h-11 px-3.5 rounded-xl border border-line bg-white text-ink text-[14px] font-semibold inline-flex items-center gap-2 cursor-pointer hover:border-line-2 disabled:opacity-50"
-          >
-            <Printer className="w-4 h-4" />
-            <span className="hidden sm:inline">Yazdır</span>
+          <button type="button" className="ps-btn ps-hide-mobile" onClick={handlePrint} disabled={!itemCount || !!busy} title="Tarayıcının yazdırma penceresini açar">
+            <Printer /> Yazdır
           </button>
-          <button
-            type="button"
-            onClick={handleHtml}
-            disabled={!itemCount || !!busy}
-            title="İnternetsiz açılabilen tek dosya HTML"
-            className="h-11 px-3.5 rounded-xl border border-line bg-white text-ink text-[14px] font-semibold inline-flex items-center gap-2 cursor-pointer hover:border-line-2 disabled:opacity-50"
-          >
-            <FileCode className="w-4 h-4" />
-            <span className="hidden sm:inline">HTML</span>
+          <button type="button" className="ps-btn ps-hide-mobile" onClick={handleHtml} disabled={!itemCount || !!busy} title="İnternetsiz açılabilen tek dosya HTML">
+            <FileCode /> HTML
           </button>
-          <button
-            type="button"
-            onClick={handleDownload}
-            disabled={!itemCount || !!busy || loading}
-            className="flex-1 sm:flex-none h-11 px-6 rounded-xl bg-accent hover:bg-accent-hover text-white text-[15px] font-semibold inline-flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed shadow-md"
-          >
-            {busy ? <RefreshCw className="w-4 h-4 animate-spin" /> : <Download className="w-4 h-4" />}
+          <button type="button" className="ps-btn is-primary" onClick={handleDownload} disabled={!itemCount || !!busy || loading}>
+            {busy ? <RefreshCw className="ps-spin" /> : <Download />}
             {busy ? 'Hazırlanıyor…' : 'PDF indir'}
           </button>
         </footer>
@@ -742,72 +875,43 @@ export const PdfStudio: React.FC<PdfStudioProps> = ({ isOpen, onClose, committee
   );
 };
 
-const matchesPreset = (o: QuestionDocOptions, p: Partial<QuestionDocOptions>) =>
-  (Object.keys(p) as (keyof QuestionDocOptions)[]).every((k) => o[k] === p[k]);
-
 /* ===========================================================================
- * Soru ayarları
+ * 1 · Kaynak
  * ========================================================================= */
 interface QSel {
-  committees: Committee[]; committeeId: string; setCommitteeId: (v: string) => void;
+  committeeId: string; setCommitteeId: (v: string) => void;
   years: string[]; year: string; setYear: (v: string) => void;
   disciplines: string[]; discipline: string; setDiscipline: (v: string) => void;
   topics: string[]; topic: string; setTopic: (v: string) => void;
+  kazanimlar: { key: string; text: string; n: number }[]; kazanim: string; setKazanim: (v: string) => void;
   search: string; setSearch: (v: string) => void;
   onlyAnswered: boolean; setOnlyAnswered: (v: boolean) => void;
   onlyExplained: boolean; setOnlyExplained: (v: boolean) => void;
   onlyAudited: boolean; setOnlyAudited: (v: boolean) => void;
-  sortBy: 'number' | 'year' | 'discipline'; setSortBy: (v: 'number' | 'year' | 'discipline') => void;
   limit: number; setLimit: (v: number) => void;
   ornekDers: string; setOrnekDers: (v: string) => void;
   ornekLevels: string[]; setOrnekLevels: (v: string[]) => void;
   includeBranching: boolean; setIncludeBranching: (v: boolean) => void;
   deckId: string; setDeckId: (v: string) => void;
   total: number;
+  matched: number;
 }
 
-const QuestionSettings: React.FC<{ kind: PdfContentKind; o: QuestionDocOptions; set: (p: Partial<QuestionDocOptions>) => void; sel: QSel }> = ({ kind, o, set, sel }) => {
-  const sol = o.mode === 'solution';
-  const committeeOptions = Object.entries(COMMITTEE_NAME);
+const QuestionSource: React.FC<{ kind: PdfContentKind; sel: QSel }> = ({ kind, sel }) => {
+  const cross = kind === 'past' || kind === 'pool';
+  const kzShort = (t: string) => (t.length > 80 ? `${t.slice(0, 78)}…` : t);
   return (
     <>
-      <Section title="Hazır ayar">
-        <div role="radiogroup" aria-label="Hazır ayar" className="grid grid-cols-3 gap-2">
-          {PRESETS.map((p) => {
-            const on = matchesPreset(o, p.apply);
-            const Icon = p.icon;
-            return (
-              <button
-                key={p.id}
-                type="button"
-                role="radio"
-                aria-checked={on}
-                onClick={() => set(p.apply)}
-                className={`min-h-[86px] px-1.5 py-2.5 rounded-2xl border flex flex-col items-center justify-center gap-1 text-center cursor-pointer transition-all ${
-                  on ? 'border-accent bg-accent-soft/60 shadow-xs' : 'border-line bg-white hover:border-line-2'
-                }`}
-              >
-                <span className={`w-8 h-8 rounded-[10px] flex items-center justify-center ${on ? 'bg-accent text-white' : 'bg-canvas text-ink-2'}`}>
-                  <Icon className="w-4 h-4" />
-                </span>
-                <span className={`text-[13px] leading-tight ${on ? 'font-semibold' : 'font-medium'} text-ink`}>{p.label}</span>
-                <span className="text-[11.5px] leading-tight text-ink-3">{p.hint}</span>
-              </button>
-            );
-          })}
-        </div>
-      </Section>
-
-      <Section title="Seçim" aside={<span className="text-[12.5px] text-ink-3">{sel.total} soru</span>}>
+      <Group title="Seçim" aside={<span className="ps-count">{sel.matched} / {sel.total} soru</span>}>
         {kind === 'ornek' && (
           <>
-            <SelectField label="Ders" value={sel.ornekDers} onChange={sel.setOrnekDers}>
+            <Field label="Ders" value={sel.ornekDers} onChange={(v) => { sel.setOrnekDers(v); sel.setKazanim('all'); }}>
               <option value="all">Kurul 1 · tüm dersler</option>
               {ORNEK_INDEX.map((r) => (
                 <option key={r.id} value={r.id}>{r.sira}. {r.konu} · {r.soru_sayisi}</option>
               ))}
-            </SelectField>
-            <ChipToggle
+            </Field>
+            <Chips
               label="Zorluk"
               options={[['kolay', 'Kolay'], ['orta', 'Orta'], ['zor', 'Zor']]}
               value={sel.ornekLevels}
@@ -817,15 +921,15 @@ const QuestionSettings: React.FC<{ kind: PdfContentKind; o: QuestionDocOptions; 
         )}
         {kind === 'mini' && (
           <>
-            <DeckSelect value={sel.deckId} onChange={sel.setDeckId} />
-            <SwitchGroup>
-              <SwitchRow label="Klinik karar soruları" hint="Vaka senaryolu karar sorularını da ekle" checked={sel.includeBranching} onChange={sel.setIncludeBranching} />
-            </SwitchGroup>
+            <DeckSelect value={sel.deckId} onChange={(v) => { sel.setDeckId(v); sel.setKazanim('all'); }} />
+            <Switches>
+              <Toggle label="Klinik karar soruları" hint="Vaka senaryolu karar sorularını da ekle" checked={sel.includeBranching} onChange={sel.setIncludeBranching} />
+            </Switches>
           </>
         )}
-        {(kind === 'past' || kind === 'pool') && (
+        {cross && (
           <>
-            <SelectField
+            <Field
               label="Kurul"
               value={sel.committeeId}
               onChange={(v) => {
@@ -833,212 +937,95 @@ const QuestionSettings: React.FC<{ kind: PdfContentKind; o: QuestionDocOptions; 
                 sel.setYear('all');
                 sel.setDiscipline('all');
                 sel.setTopic('all');
+                sel.setKazanim('all');
               }}
             >
               <option value="all">Tüm kurullar</option>
-              {committeeOptions.map(([id, name]) => <option key={id} value={id}>{name}</option>)}
-            </SelectField>
-            <div className="grid grid-cols-2 gap-2">
+              {Object.entries(COMMITTEE_NAME).map(([id, name]) => <option key={id} value={id}>{name}</option>)}
+            </Field>
+            <div className="ps-row2">
               {kind === 'past' && (
-                <SelectField label="Yıl" value={sel.year} onChange={sel.setYear} disabled={!sel.years.length}>
+                <Field label="Yıl" value={sel.year} onChange={sel.setYear} disabled={!sel.years.length}>
                   <option value="all">Tüm yıllar</option>
                   {sel.years.map((y) => <option key={y} value={y}>{y}</option>)}
-                </SelectField>
+                </Field>
               )}
-              <SelectField label="Ders" value={sel.discipline} onChange={(v) => { sel.setDiscipline(v); sel.setTopic('all'); }} disabled={!sel.disciplines.length}>
+              <Field label="Ders" value={sel.discipline} onChange={(v) => { sel.setDiscipline(v); sel.setTopic('all'); sel.setKazanim('all'); }} disabled={!sel.disciplines.length}>
                 <option value="all">Tüm dersler</option>
                 {sel.disciplines.map((d) => <option key={d} value={d}>{d}</option>)}
-              </SelectField>
+              </Field>
             </div>
             {kind === 'past' && sel.topics.length > 0 && (
-              <SelectField label="Konu" value={sel.topic} onChange={sel.setTopic}>
+              <Field label="Konu" value={sel.topic} onChange={(v) => { sel.setTopic(v); sel.setKazanim('all'); }}>
                 <option value="all">Tüm konular</option>
                 {sel.topics.map((t) => <option key={t} value={t}>{t}</option>)}
-              </SelectField>
+              </Field>
             )}
           </>
         )}
-        <label className="relative flex flex-col min-w-0">
-          <span className="pointer-events-none absolute left-3.5 top-2 text-[11px] font-semibold text-ink-3">Metinde ara</span>
-          <input
-            type="search"
-            value={sel.search}
-            onChange={(e) => sel.setSearch(e.target.value)}
-            placeholder="ör. nefrotik, ADAMTS13"
-            className="w-full h-[54px] pt-4 px-3.5 rounded-xl border border-line bg-white text-[14.5px] text-ink outline-0 focus:border-accent"
-          />
-        </label>
-        {(kind === 'past' || kind === 'pool') && (
-          <Segmented
-            label="Sıralama"
-            value={sel.sortBy}
-            onChange={sel.setSortBy}
-            options={[['year', 'Yıl'], ['discipline', 'Ders'], ['number', 'Soru no']]}
-          />
+        {sel.kazanimlar.length > 0 && (
+          <Field label={`Kazanım · ${sel.kazanimlar.length}`} value={sel.kazanim} onChange={sel.setKazanim}>
+            <option value="all">Tüm kazanımlar</option>
+            {sel.kazanimlar.map((k) => <option key={k.key} value={k.key}>{kzShort(k.text)} · {k.n}</option>)}
+            <option value="?">Kazanımı belirsiz olanlar</option>
+          </Field>
         )}
-        <Segmented
-          label="Soru sayısı"
+        <label className="ps-field">
+          <span>Metinde ara</span>
+          <input type="search" value={sel.search} onChange={(e) => sel.setSearch(e.target.value)} placeholder="ör. nefrotik, ADAMTS13" />
+        </label>
+        <Seg
+          label="En çok"
           value={String(sel.limit)}
           onChange={(v) => sel.setLimit(Number(v))}
           options={[['50', '50'], ['100', '100'], ['200', '200'], ['500', '500'], ['0', 'Hepsi']]}
         />
-        <SwitchGroup>
-          <SwitchRow label="Yalnız cevabı belli olanlar" checked={sel.onlyAnswered} onChange={sel.setOnlyAnswered} />
-          <SwitchRow label="Yalnız açıklamalı olanlar" hint="Açıklaması ya da şık analizi olan" checked={sel.onlyExplained} onChange={sel.setOnlyExplained} />
-          {kind === 'past' && <SwitchRow label="Yalnız denetleyici onaylı" checked={sel.onlyAudited} onChange={sel.setOnlyAudited} />}
-        </SwitchGroup>
-      </Section>
-
-      <Section title="Kitapçık türü">
-        <Segmented<BookletMode>
-          label="Cevaplar"
-          value={o.mode}
-          onChange={(v) => set({ mode: v, ...(v === 'student' ? { answerKey: false } : {}) })}
-          options={[['student', 'Gizli'], ['solution', 'Çözümlü'], ['key', 'Yalnız anahtar']]}
-        />
-      </Section>
-
-      <Section title="PDF'e girecekler">
-        <SwitchGroup>
-          <SwitchRow label="Doğru şıkkı işaretle" hint="Ekrandaki gibi yeşil ve ✓" checked={sol && o.markCorrect} disabled={!sol} onChange={(v) => set({ markCorrect: v })} />
-          <SwitchRow label="Soru açıklaması" hint="Hakkında penceresindeki açıklama" checked={sol && o.explanation} disabled={!sol} onChange={(v) => set({ explanation: v })} />
-          <SwitchRow label="Referans kaynaklar" checked={sol && o.refs} disabled={!sol} onChange={(v) => set({ refs: v })} />
-          <SwitchRow label="Üst bilgi" hint="Ders · kurul · yıl satırı" checked={o.meta} onChange={(v) => set({ meta: v })} />
-          <SwitchRow label="Rozetler" hint="Denetleyici, Faz 14, tartışmalı cevap" checked={o.badges} onChange={(v) => set({ badges: v })} />
-          <SwitchRow label="Not alanı" hint="Her sorunun altında yazma satırları" checked={o.writeSpace} onChange={(v) => set({ writeSpace: v })} />
-        </SwitchGroup>
-        <Segmented<OptionNotes>
-          label="Şık açıklamaları"
-          value={o.optionNotes}
-          onChange={(v) => set({ optionNotes: v })}
-          disabled={!sol}
-          options={[['off', 'Yok'], ['inline', 'Şık altında'], ['analysis', 'Analiz tablosu']]}
-        />
-        <Segmented<'inline' | 'end'>
-          label="Çözümün yeri"
-          value={o.solutionsAtEnd ? 'end' : 'inline'}
-          onChange={(v) => set({ solutionsAtEnd: v === 'end' })}
-          disabled={!sol}
-          options={[['inline', 'Soru altında'], ['end', 'Kitapçık sonunda']]}
-        />
-        <SwitchGroup>
-          <SwitchRow label="Kapak sayfası" hint="Başlık, istatistik, ad-no alanı" checked={o.cover} onChange={(v) => set({ cover: v })} />
-          <SwitchRow label="Cevap anahtarı" hint="Son sayfada tablo" checked={o.answerKey || o.mode === 'key'} disabled={o.mode === 'key'} onChange={(v) => set({ answerKey: v })} />
-          <SwitchRow label="Optik form" hint="Kurşun kalemle doldurmak için" checked={o.opticForm} onChange={(v) => set({ opticForm: v })} />
-        </SwitchGroup>
-      </Section>
-
-      <Section title="Düzen">
-        <div role="radiogroup" aria-label="Sütun" aria-disabled={!!o.questionPerPage} className={`grid grid-cols-2 gap-2 ${o.questionPerPage ? 'opacity-50 pointer-events-none' : ''}`}>
-          {(
-            [
-              [1, 'Tek sütun', 'Geniş satırlar'],
-              [2, '2 sütun', 'Kitapçık gibi'],
-            ] as const
-          ).map(([n, label, hint]) => {
-            const on = o.columns === n;
-            return (
-              <button
-                key={n}
-                type="button"
-                role="radio"
-                aria-checked={on}
-                disabled={!!o.questionPerPage}
-                onClick={() => set({ columns: n })}
-                className={`flex items-center gap-3 px-3 py-2.5 rounded-xl border text-left cursor-pointer transition-all ${on ? 'border-accent bg-accent-soft/60 shadow-xs' : 'border-line bg-white hover:border-line-2'}`}
-              >
-                <PageGlyph cols={n} on={on} />
-                <span className="min-w-0">
-                  <span className={`block text-[13.5px] ${on ? 'font-semibold' : 'font-medium'} text-ink`}>{label}</span>
-                  <span className="block text-[12px] text-ink-3">{hint}</span>
-                </span>
-              </button>
-            );
-          })}
-        </div>
-        <SelectField label="Gruplama" value={o.groupBy} onChange={(v) => set({ groupBy: v as GroupBy })}>
-          <option value="none">Gruplama yok</option>
-          {(kind === 'past' || kind === 'pool') && <option value="discipline">Derse göre</option>}
-          {kind === 'past' && <option value="year">Yıla göre</option>}
-          {(kind === 'past' || kind === 'pool') && <option value="committee">Kurula göre</option>}
-          {kind === 'past' && <option value="topic">Konuya göre</option>}
-          {kind === 'ornek' && <option value="group">Kazanıma göre</option>}
-          {kind === 'ornek' && <option value="topic">Derse göre</option>}
-          {kind === 'mini' && <option value="group">Adıma göre</option>}
-        </SelectField>
-        <SwitchGroup>
-          <SwitchRow label="Her grup yeni sayfada" checked={o.groupNewPage} disabled={o.groupBy === 'none'} onChange={(v) => set({ groupNewPage: v })} />
-          <SwitchRow
-            label="Her soru ayrı sayfada"
-            hint={o.solutionsAtEnd ? 'Sonda çözümler de birer sayfa' : 'Soru ve çözümü tek sayfada'}
-            checked={!!o.questionPerPage}
-            onChange={(v) => set({ questionPerPage: v })}
-          />
-          <SwitchRow label="Sıkı yerleşim" hint="Daha az boşluk, daha çok soru" checked={o.compact} disabled={!!o.questionPerPage} onChange={(v) => set({ compact: v })} />
-          {(kind === 'past' || kind === 'pool') && (
-            <SwitchRow label="Orijinal soru numaraları" hint="Kapalıyken 1'den başlar" checked={o.numbering === 'original'} onChange={(v) => set({ numbering: v ? 'original' : 'sequential' })} />
-          )}
-        </SwitchGroup>
-      </Section>
+        <Switches>
+          <Toggle label="Yalnız cevabı belli olanlar" checked={sel.onlyAnswered} onChange={sel.setOnlyAnswered} />
+          <Toggle label="Yalnız açıklamalı olanlar" hint="Açıklaması ya da şık analizi olan" checked={sel.onlyExplained} onChange={sel.setOnlyExplained} />
+          {kind === 'past' && <Toggle label="Yalnız denetleyici onaylı" checked={sel.onlyAudited} onChange={sel.setOnlyAudited} />}
+        </Switches>
+      </Group>
     </>
   );
 };
 
-/* ===========================================================================
- * Öğren ayarları
- * ========================================================================= */
-const LessonSettings: React.FC<{
-  o: LessonDocOptions;
-  set: (p: Partial<LessonDocOptions>) => void;
+const LessonSource: React.FC<{
   deckId: string;
   setDeckId: (v: string) => void;
   steps: { number: number; title: string; section: number; checkpoint: number }[];
   sections: { index: number; name: string; numbers: number[] }[];
   picked: number[];
   setPicked: (v: number[] | ((p: number[]) => number[])) => void;
-  ixCounts: Record<string, number>;
-}> = ({ o, set, deckId, setDeckId, steps, sections, picked, setPicked, ixCounts }) => {
+}> = ({ deckId, setDeckId, steps, sections, picked, setPicked }) => {
   const all = !picked.length;
   const has = (n: number) => all || picked.includes(n);
   const toggleSection = (nums: number[]) => {
     const base = all ? steps.map((s) => s.number) : picked;
     const allIn = nums.every((n) => base.includes(n));
     const next = allIn ? base.filter((n) => !nums.includes(n)) : [...new Set([...base, ...nums])].sort((a, b) => a - b);
-    setPicked(next.length === steps.length ? [] : next.length ? next : []);
+    setPicked(next.length === steps.length ? [] : next);
   };
   return (
     <>
-      <Section title="Ders">
+      <Group title="Ders">
         <DeckSelect value={deckId} onChange={setDeckId} />
-      </Section>
-
+      </Group>
       {steps.length > 0 && (
-        <Section
+        <Group
           title={`Adımlar · ${all ? steps.length : picked.length}/${steps.length}`}
-          aside={
-            !all && (
-              <button type="button" onClick={() => setPicked([])} className="text-[13px] font-semibold text-accent cursor-pointer">
-                Tümünü seç
-              </button>
-            )
-          }
+          aside={!all && <button type="button" className="ps-link-btn" onClick={() => setPicked([])}>Tümünü seç</button>}
         >
-          <ul className="list-none m-0 p-1.5 bg-white border border-line rounded-2xl max-h-[320px] overflow-y-auto flex flex-col gap-0.5">
+          <ul className="ps-list">
             {sections.map((sec) => {
               const secOn = sec.numbers.every(has);
               const secSome = sec.numbers.some(has);
               return (
-                <li key={sec.index} className="flex flex-col gap-0.5">
-                  <button
-                    type="button"
-                    role="checkbox"
-                    aria-checked={secOn ? true : secSome ? 'mixed' : false}
-                    onClick={() => toggleSection(sec.numbers)}
-                    className="w-full flex items-center gap-3 min-h-10 px-2.5 rounded-[11px] text-left cursor-pointer hover:bg-canvas"
-                  >
+                <li key={sec.index}>
+                  <button type="button" role="checkbox" aria-checked={secOn ? true : secSome ? 'mixed' : false} className="ps-li is-head" onClick={() => toggleSection(sec.numbers)}>
                     <CheckBox on={secOn} mixed={!secOn && secSome} />
-                    <span className="text-[12px] font-semibold uppercase tracking-[0.06em] text-ink-3 shrink-0">Bölüm {sec.index + 1}</span>
-                    <span className="text-[13.5px] font-semibold text-ink truncate">{sec.name}</span>
+                    <small>Bölüm {sec.index + 1}</small>
+                    <b>{sec.name}</b>
                   </button>
                   {sec.numbers.map((n) => {
                     const st = steps.find((s) => s.number === n)!;
@@ -1049,17 +1036,17 @@ const LessonSettings: React.FC<{
                         type="button"
                         role="checkbox"
                         aria-checked={on}
+                        className={`ps-li is-sub ${on ? 'is-on' : ''}`}
                         onClick={() => {
                           const base = all ? steps.map((s) => s.number) : picked;
                           const next = on ? base.filter((x) => x !== n) : [...base, n].sort((a, b) => a - b);
                           setPicked(next.length === steps.length ? [] : next);
                         }}
-                        className={`w-full flex items-center gap-3 min-h-10 pl-7 pr-2.5 rounded-[11px] text-left cursor-pointer transition-colors ${on ? 'bg-accent-soft/50' : 'hover:bg-canvas'}`}
                       >
                         <CheckBox on={on} />
-                        <span className={`font-mono text-[12px] w-6 shrink-0 ${on ? 'text-accent' : 'text-ink-3'}`}>{n}</span>
-                        <span className={`text-[13.5px] truncate ${on ? 'text-ink' : 'text-ink-2'}`}>{st?.title}</span>
-                        {st?.checkpoint > 0 && <span className="ms-tag is-accent shrink-0">Tekrar</span>}
+                        <code>{n}</code>
+                        <span>{st?.title}</span>
+                        {st?.checkpoint > 0 && <span className="ms-tag is-accent">Tekrar</span>}
                       </button>
                     );
                   })}
@@ -1067,107 +1054,28 @@ const LessonSettings: React.FC<{
               );
             })}
           </ul>
-        </Section>
+        </Group>
       )}
-
-      <Section title="Adım içeriği">
-        <SwitchGroup>
-          <SwitchRow label="Anlatım" checked={o.narrative} onChange={(v) => set({ narrative: v })} />
-          <SwitchRow label="Anahtar maddeler" checked={o.keyPoints} onChange={(v) => set({ keyPoints: v })} />
-          <SwitchRow label="Tablolar" checked={o.tables} onChange={(v) => set({ tables: v })} />
-          <SwitchRow label="İnfografik ve formüller" checked={o.visuals} onChange={(v) => set({ visuals: v })} />
-          <SwitchRow label="Hocanın vurgusu" checked={o.teacher} onChange={(v) => set({ teacher: v })} />
-          <SwitchRow label="Sınav spotları" checked={o.spots} onChange={(v) => set({ spots: v })} />
-          <SwitchRow label="Önemli nokta ve sınav ipucu" checked={o.tips} onChange={(v) => set({ tips: v })} />
-          <SwitchRow label="Terimler sözlüğü" hint="Adımdaki tıbbi terimler ve tanımları" checked={o.terms} onChange={(v) => set({ terms: v })} />
-          <SwitchRow label="Akıl kartları" checked={o.cards} onChange={(v) => set({ cards: v })} />
-        </SwitchGroup>
-      </Section>
-
-      <Section
-        title="Etkileşimler"
-        aside={
-          <button
-            type="button"
-            onClick={() => set({ interactives: o.interactives.length ? [] : [...IX_TYPES] })}
-            className="text-[13px] font-semibold text-accent cursor-pointer"
-          >
-            {o.interactives.length ? 'Hiçbiri' : 'Hepsi'}
-          </button>
-        }
-      >
-        <div className="flex flex-wrap gap-1.5">
-          {IX_TYPES.map((t) => {
-            const on = o.interactives.includes(t);
-            const [Icon, label] = IX_META[t];
-            const n = ixCounts[t] || 0;
-            return (
-              <button
-                key={t}
-                type="button"
-                role="checkbox"
-                aria-checked={on}
-                onClick={() => set({ interactives: on ? o.interactives.filter((x) => x !== t) : [...o.interactives, t] as IxType[] })}
-                className={`h-9 pl-2.5 pr-3 rounded-full border inline-flex items-center gap-1.5 text-[13px] cursor-pointer transition-all ${
-                  on ? 'border-accent bg-accent-soft text-accent font-semibold' : 'border-line bg-white text-ink-2 hover:border-line-2'
-                } ${n ? '' : 'opacity-50'}`}
-              >
-                <Icon className="w-3.5 h-3.5" /> {label}
-                <span className="font-mono text-[11px] opacity-70">{n}</span>
-              </button>
-            );
-          })}
-        </div>
-        <Segmented<AnswerMode>
-          label="Cevaplar"
-          value={o.answers}
-          onChange={(v) => set({ answers: v })}
-          options={[['shown', 'Açık'], ['end', 'Belge sonunda'], ['hidden', 'Çalışma kâğıdı']]}
-        />
-        <SwitchGroup>
-          <SwitchRow label="Şık açıklamaları" hint="Mini soru ve klinik kararda neden doğru / yanlış" checked={o.optionNotes && o.answers !== 'hidden'} disabled={o.answers === 'hidden'} onChange={(v) => set({ optionNotes: v })} />
-        </SwitchGroup>
-      </Section>
-
-      <Section title="Düzen">
-        <SwitchGroup>
-          <SwitchRow label="Her adım yeni sayfada" hint="Kapalıyken adımlar akarak dizilir" checked={o.stepPerPage} onChange={(v) => set({ stepPerPage: v })} />
-          <SwitchRow label="Bölüm başlıkları" checked={o.sectionTitles} onChange={(v) => set({ sectionTitles: v })} />
-          <SwitchRow label="İçindekiler" checked={o.toc} onChange={(v) => set({ toc: v })} />
-          <SwitchRow label="Kapak sayfası" checked={o.cover} onChange={(v) => set({ cover: v })} />
-        </SwitchGroup>
-      </Section>
     </>
   );
 };
 
-/* ===========================================================================
- * Özet ayarları
- * ========================================================================= */
-const SummarySettings: React.FC<{
-  o: SummaryDocOptions;
-  set: (p: Partial<SummaryDocOptions>) => void;
-  kurul: number;
-  setKurul: (k: number) => void;
-  list: SummaryMeta[];
-  picked: string[];
-  setPicked: (v: string[]) => void;
-}> = ({ o, set, kurul, setKurul, list, picked, setPicked }) => (
+const SummarySource: React.FC<{ kurul: number; setKurul: (k: number) => void; list: SummaryMeta[]; picked: string[]; setPicked: (v: string[]) => void }> = ({ kurul, setKurul, list, picked, setPicked }) => (
   <>
-    <Section title="Kurul">
-      <SelectField label="Kurul" value={String(kurul)} onChange={(v) => setKurul(Number(v))}>
+    <Group title="Kurul">
+      <Field label="Kurul" value={String(kurul)} onChange={(v) => setKurul(Number(v))}>
         {[1, 2, 3, 4, 5, 6].map((k) => <option key={k} value={k}>{COMMITTEE_NAME[`donem3-kurul${k}`]}</option>)}
-      </SelectField>
-    </Section>
-    <Section
+      </Field>
+    </Group>
+    <Group
       title={`Özetler · ${picked.length}/${list.length}`}
       aside={
-        <button type="button" onClick={() => setPicked(picked.length === list.length ? list.slice(0, 1).map((m) => m.id) : list.map((m) => m.id))} className="text-[13px] font-semibold text-accent cursor-pointer">
+        <button type="button" className="ps-link-btn" onClick={() => setPicked(picked.length === list.length ? list.slice(0, 1).map((m) => m.id) : list.map((m) => m.id))}>
           {picked.length === list.length ? 'Seçimi sıfırla' : 'Tümünü seç'}
         </button>
       }
     >
-      <ul className="list-none m-0 p-1.5 bg-white border border-line rounded-2xl max-h-[320px] overflow-y-auto flex flex-col gap-0.5">
+      <ul className="ps-list">
         {list.map((m) => {
           const on = picked.includes(m.id);
           return (
@@ -1176,76 +1084,413 @@ const SummarySettings: React.FC<{
                 type="button"
                 role="checkbox"
                 aria-checked={on}
+                className={`ps-li ${on ? 'is-on' : ''}`}
                 onClick={() => setPicked(on ? picked.filter((x) => x !== m.id) : list.filter((x) => x.id === m.id || picked.includes(x.id)).map((x) => x.id))}
-                className={`w-full flex items-center gap-3 min-h-11 px-2.5 rounded-[11px] text-left cursor-pointer transition-colors ${on ? 'bg-accent-soft/50' : 'hover:bg-canvas'}`}
               >
                 <CheckBox on={on} />
-                <span className="min-w-0">
-                  <span className={`block text-[13.5px] truncate ${on ? 'text-ink font-medium' : 'text-ink-2'}`}>{m.title}</span>
-                  <span className="block text-[12px] text-ink-3 truncate">{m.discipline}</span>
-                </span>
+                <span className="ps-li-2"><b>{m.title}</b><small>{m.discipline}</small></span>
               </button>
             </li>
           );
         })}
       </ul>
-    </Section>
-    <Section title="PDF'e girecekler">
-      <SwitchGroup>
-        <SwitchRow label="Konu başlıkları" hint="Özetin başında başlık kartları" checked={o.keyPoints} onChange={(v) => set({ keyPoints: v })} />
-        <SwitchRow label="Tablolar" checked={o.tables} onChange={(v) => set({ tables: v })} />
-        <SwitchRow label="Not kutuları" hint="Önemli, sınav spotu, klinik ipucu" checked={o.callouts} onChange={(v) => set({ callouts: v })} />
-        <SwitchRow label="İçindekiler" checked={o.toc} onChange={(v) => set({ toc: v })} />
-        <SwitchRow label="Kapak sayfası" checked={o.cover} onChange={(v) => set({ cover: v })} />
-      </SwitchGroup>
-      <Segmented<SummaryQuestions>
-        label="Özetteki sorular"
-        value={o.questions}
-        onChange={(v) => set({ questions: v })}
-        options={[['answered', 'Cevaplı'], ['plain', 'Cevapsız'], ['none', 'Çıkar']]}
-      />
-    </Section>
+    </Group>
   </>
 );
 
 /* ===========================================================================
- * Sayfa ayarları ve küçük yapı taşları
+ * 2 · Düzen
  * ========================================================================= */
-const PageSection: React.FC<{ page: PageSettings; setPage: (p: Partial<PageSettings>) => void; landscapeHint?: boolean }> = ({ page, setPage }) => (
-  <Section title="Sayfa">
-    <div role="radiogroup" aria-label="Sayfa boyutu" className="grid grid-cols-2 gap-2">
-      {(['a4', 'a4-landscape', 'tablet', 'letter'] as PageFormat[]).map((id) => {
-        const on = page.format === id;
-        const sz = PAGE_SIZE[id];
-        const scale = 34 / Math.max(sz.w, sz.h);
-        return (
-          <button
-            key={id}
-            type="button"
-            role="radio"
-            aria-checked={on}
-            onClick={() => setPage({ format: id })}
-            className={`flex items-center gap-3 px-3 py-2.5 rounded-xl border text-left cursor-pointer transition-all ${on ? 'border-accent bg-accent-soft/60 shadow-xs' : 'border-line bg-white hover:border-line-2'}`}
-          >
-            <span className="w-9 h-10 flex items-center justify-center shrink-0" aria-hidden="true">
-              <span className={`border-[1.5px] bg-white ${on ? 'border-accent' : 'border-line-2'} ${id === 'tablet' ? 'rounded-md' : 'rounded-sm'}`} style={{ width: sz.w * scale, height: sz.h * scale }} />
-            </span>
-            <span className="min-w-0">
-              <span className={`block text-[13.5px] ${on ? 'font-semibold' : 'font-medium'} text-ink`}>{sz.label}</span>
-              <span className="block text-[12px] text-ink-3 leading-snug">{id === 'tablet' ? 'Ekranı doldurur' : id === 'a4-landscape' ? 'Geniş tablolar' : id === 'letter' ? 'ABD kâğıdı' : 'Yazdırmak için'}</span>
-            </span>
-          </button>
-        );
-      })}
-    </div>
-    <Segmented<FontScale> label="Yazı boyutu" value={page.fontScale} onChange={(v) => setPage({ fontScale: v })} options={[['sm', 'Küçük'], ['md', 'Orta'], ['lg', 'Büyük']]} />
-    <SwitchGroup>
-      <SwitchRow label="Sayfa numarası" hint="Sağ altta 3 / 12" checked={page.pageNumbers} onChange={(v) => setPage({ pageNumbers: v })} />
-      <SwitchRow label="Üst bilgi" hint="Her sayfada belge adı" checked={page.runningHeader} onChange={(v) => setPage({ runningHeader: v })} />
-    </SwitchGroup>
-  </Section>
+const QuestionLayout: React.FC<{ kind: PdfContentKind; o: QuestionDocOptions; set: (p: Partial<QuestionDocOptions>) => void }> = ({ kind, o, set }) => {
+  const sol = o.mode === 'solution';
+  const choices = groupChoices(kind);
+  const quick = GROUP_QUICK[kind === 'ornek' ? 'ornek' : kind === 'mini' ? 'mini' : 'q'];
+  const g1 = choices.includes(o.group1) ? o.group1 : 'none';
+  const g2 = choices.includes(o.group2) ? o.group2 : 'none';
+  const sorts = sortChoices(kind);
+  const sortBy = sorts.includes(o.sortBy) ? o.sortBy : 'source';
+  return (
+    <>
+      <Group title="Hazır kitapçık">
+        <div className="ps-presets" role="radiogroup" aria-label="Hazır kitapçık">
+          {PRESETS.map((p) => {
+            const on = matchesPreset(o, p.apply);
+            const Icon = p.icon;
+            return (
+              <button key={p.id} type="button" role="radio" aria-checked={on} className={`ps-preset ${on ? 'is-on' : ''}`} onClick={() => set(p.apply)}>
+                <Icon />
+                <b>{p.label}</b>
+                <small>{p.hint}</small>
+              </button>
+            );
+          })}
+        </div>
+      </Group>
+
+      <Group title="Gruplama">
+        <div className="ps-chips" role="radiogroup" aria-label="Hızlı gruplama">
+          {quick.map(([a, b, label]) => {
+            const on = g1 === a && g2 === b;
+            return (
+              <button key={label} type="button" role="radio" aria-checked={on} className={on ? 'is-on' : ''} onClick={() => set({ group1: a, group2: b })}>
+                {on && <Check />} {label}
+              </button>
+            );
+          })}
+        </div>
+        <div className="ps-row2">
+          <Field label="1. kademe" value={g1} onChange={(v) => set({ group1: v as GroupBy, ...(v === 'none' || v === g2 ? { group2: 'none' } : {}) })}>
+            <option value="none">Yok</option>
+            {choices.map((c) => <option key={c} value={c}>{GROUP_LABEL[c]}</option>)}
+          </Field>
+          <Field label="2. kademe" value={g2} onChange={(v) => set({ group2: v as GroupBy })} disabled={g1 === 'none'}>
+            <option value="none">Yok</option>
+            {choices.filter((c) => c !== g1).map((c) => <option key={c} value={c}>{GROUP_LABEL[c]}</option>)}
+          </Field>
+        </div>
+        <Seg<GroupOrder>
+          label="Grupların sırası"
+          value={o.groupOrder}
+          onChange={(v) => set({ groupOrder: v })}
+          disabled={g1 === 'none'}
+          options={[['natural', 'Müfredat'], ['alpha', 'A → Z'], ['count', 'Soru sayısı']]}
+        />
+        {g1 !== 'none' && (
+          <p className="ps-hint">
+            {[g1, g2].includes('kazanim')
+              ? 'Kazanımı eşlenmemiş sorular en sonda “Kazanımı belirsiz” başlığında toplanır.'
+              : 'Belirsiz değerli sorular her zaman en sonda toplanır.'}
+          </p>
+        )}
+      </Group>
+
+      <Group title="Sıralama">
+        <div className="ps-row2 is-grow">
+          <Field label={g1 === 'none' ? 'Sorular' : 'Grup içinde'} value={sortBy} onChange={(v) => set({ sortBy: v as SortBy })}>
+            {sorts.map((s) => <option key={s} value={s}>{SORT_LABEL[s]}</option>)}
+          </Field>
+          {sortBy === 'random' ? (
+            <button type="button" className="ps-btn is-tall" onClick={() => set({ seed: (o.seed % 9973) + 1 + Math.floor(Math.random() * 1000) })}>
+              <Shuffle /> Yeniden karıştır
+            </button>
+          ) : (
+            <Seg label="Yön" value={o.sortDir} onChange={(v) => set({ sortDir: v })} options={[['asc', 'Artan'], ['desc', 'Azalan']]} />
+          )}
+        </div>
+        <Seg<Numbering>
+          label="Numaralandırma"
+          value={o.numbering === 'original' && kind !== 'past' && kind !== 'pool' ? 'sequential' : o.numbering}
+          onChange={(v) => set({ numbering: v })}
+          options={[
+            ['sequential', 'Baştan sona'],
+            ['group', 'Her grupta 1’den'],
+            ...((kind === 'past' || kind === 'pool' ? [['original', 'Orijinal no']] : []) as [Numbering, string][]),
+          ]}
+        />
+      </Group>
+
+      <Group title="Cevaplar">
+        <Seg<BookletMode>
+          label="Kitapçık türü"
+          value={o.mode}
+          onChange={(v) => set({ mode: v, ...(v === 'student' ? { answerKey: false } : {}) })}
+          options={[['student', 'Cevapsız'], ['solution', 'Çözümlü'], ['key', 'Yalnız anahtar']]}
+        />
+        <Seg<AnswersAt>
+          label="Çözümün yeri"
+          value={o.answersAt}
+          onChange={(v) => set({ answersAt: v })}
+          disabled={!sol}
+          options={[['inline', 'Soru altında'], ['group', 'Bölüm sonunda'], ['end', 'Kitapçık sonunda']]}
+        />
+        <Switches>
+          <Toggle
+            label="Cevap anahtarı"
+            hint={o.answersAt === 'group' ? 'Her bölümün sonunda tablo' : 'Belgenin sonunda tablo'}
+            checked={o.answerKey || o.mode === 'key'}
+            disabled={o.mode === 'key'}
+            onChange={(v) => set({ answerKey: v })}
+          />
+          <Toggle label="Optik form" hint="Kurşun kalemle doldurmak için" checked={o.opticForm} onChange={(v) => set({ opticForm: v })} />
+        </Switches>
+      </Group>
+
+      <Group title="Belge yapısı">
+        <Switches>
+          <Toggle label="Kapak sayfası" hint="Başlık, istatistik, ad-no alanı" checked={o.cover} onChange={(v) => set({ cover: v })} />
+          <Toggle label="İçindekiler" hint="Bölümlere, çözümlere ve anahtara tıklanır" checked={o.toc} onChange={(v) => set({ toc: v })} />
+          <Toggle label="Tıklanabilir bağlantılar" hint="Soru no → cevabı, cevap → soruya dön" checked={o.links} onChange={(v) => set({ links: v })} />
+          <Toggle label="Her grup yeni sayfada" checked={o.groupNewPage} disabled={g1 === 'none'} onChange={(v) => set({ groupNewPage: v })} />
+          <Toggle
+            label="Her soru ayrı sayfada"
+            hint={o.answersAt !== 'inline' ? 'Çözümler de birer sayfa' : 'Soru ve çözümü tek sayfada'}
+            checked={o.questionPerPage}
+            onChange={(v) => set({ questionPerPage: v })}
+          />
+        </Switches>
+      </Group>
+    </>
+  );
+};
+
+const LessonLayout: React.FC<{ o: LessonDocOptions; set: (p: Partial<LessonDocOptions>) => void }> = ({ o, set }) => (
+  <>
+    <Group title="Cevaplar">
+      <Seg<AnswerMode> label="Etkileşim cevapları" value={o.answers} onChange={(v) => set({ answers: v })} options={[['shown', 'Açık'], ['end', 'Belge sonunda'], ['hidden', 'Çalışma kâğıdı']]} />
+      {o.answers === 'end' && <p className="ps-hint">Her adımdaki “Cevaplar →” bağlantısı sondaki cevabına, cevaptaki adım numarası adıma geri götürür.</p>}
+    </Group>
+    <Group title="Belge yapısı">
+      <Switches>
+        <Toggle label="Kapak sayfası" checked={o.cover} onChange={(v) => set({ cover: v })} />
+        <Toggle label="İçindekiler" hint="Bölüm ve adımlara tıklanır" checked={o.toc} onChange={(v) => set({ toc: v })} />
+        <Toggle label="Bölüm başlıkları" checked={o.sectionTitles} onChange={(v) => set({ sectionTitles: v })} />
+        <Toggle label="Her adım yeni sayfada" hint="Kapalıyken adımlar akarak dizilir" checked={o.stepPerPage} onChange={(v) => set({ stepPerPage: v })} />
+      </Switches>
+    </Group>
+  </>
 );
 
+const SummaryLayout: React.FC<{ o: SummaryDocOptions; set: (p: Partial<SummaryDocOptions>) => void }> = ({ o, set }) => (
+  <>
+    <Group title="Belge yapısı">
+      <Switches>
+        <Toggle label="Kapak sayfası" checked={o.cover} onChange={(v) => set({ cover: v })} />
+        <Toggle label="İçindekiler" hint="Birden çok özet seçiliyse; başlığa tıklanır" checked={o.toc} onChange={(v) => set({ toc: v })} />
+      </Switches>
+    </Group>
+    <Group title="Özetteki sorular">
+      <Seg<SummaryQuestions> label="Sorular" value={o.questions} onChange={(v) => set({ questions: v })} options={[['answered', 'Cevaplı'], ['plain', 'Cevapsız'], ['none', 'Çıkar']]} />
+    </Group>
+  </>
+);
+
+/* ===========================================================================
+ * 3 · Görünüm
+ * ========================================================================= */
+const TEMPLATE_ORDER: TemplateId[] = ['modern', 'sade', 'klasik', 'kompakt', 'sinav'];
+
+const LookCommon: React.FC<{ page: PageSettings; setPage: (p: Partial<PageSettings>) => void; fitInfo: { zoom: number; pages: number; basePages: number } | null; unit: string }> = ({ page, setPage, fitInfo }) => (
+  <>
+    <Group title="Şablon">
+      <div className="ps-tpls" role="radiogroup" aria-label="Şablon">
+        {TEMPLATE_ORDER.map((id) => {
+          const on = page.template === id;
+          return (
+            <button key={id} type="button" role="radio" aria-checked={on} className={`ps-tpl ${on ? 'is-on' : ''}`} onClick={() => setPage({ template: id })}>
+              <TemplateGlyph id={id} />
+              <b>{TEMPLATES[id].label}</b>
+              <small>{TEMPLATES[id].hint}</small>
+            </button>
+          );
+        })}
+      </div>
+    </Group>
+    <Group title="Yazı ve renk">
+      <Seg<FontScale> label="Yazı boyutu" value={page.fontScale} onChange={(v) => setPage({ fontScale: v })} options={[['xs', 'En küçük'], ['sm', 'Küçük'], ['md', 'Orta'], ['lg', 'Büyük'], ['xl', 'En büyük']]} />
+      <Seg label="Renk" value={page.ink} onChange={(v) => setPage({ ink: v })} options={[['color', 'Renkli'], ['mono', 'Siyah-beyaz']]} />
+    </Group>
+    <Group title="Sayfaya sığdır">
+      <Seg<FitMode>
+        label="Sığdırma"
+        value={page.fit}
+        onChange={(v) => setPage({ fit: v })}
+        options={[['off', 'Kapalı'], ['width', 'Genişliğe'], ['pages', 'Sayfa sayısına']]}
+      />
+      {page.fit === 'width' && <p className="ps-hint">Geniş tablolar, görseller ve uzun satırlar sayfa kenarından taşmaz; yazı boyutu değişmez.</p>}
+      {page.fit === 'pages' && (
+        <>
+          <div className="ps-stepper">
+            <span>En çok</span>
+            <button type="button" aria-label="Bir sayfa azalt" onClick={() => setPage({ fitPages: Math.max(1, page.fitPages - 1) })}><Minus /></button>
+            <input
+              type="number"
+              min={1}
+              max={500}
+              inputMode="numeric"
+              aria-label="Hedef sayfa sayısı"
+              value={page.fitPages}
+              onChange={(e) => setPage({ fitPages: Math.max(1, Math.min(500, Math.round(Number(e.target.value) || 1))) })}
+            />
+            <button type="button" aria-label="Bir sayfa artır" onClick={() => setPage({ fitPages: Math.min(500, page.fitPages + 1) })}><Plus /></button>
+            <span>sayfa</span>
+          </div>
+          <p className="ps-hint">
+            {fitInfo
+              ? fitInfo.basePages <= page.fitPages
+                ? `Zaten sığıyor: yaklaşık ${fitInfo.basePages} sayfa, yazı küçültülmedi.`
+                : `Yaklaşık ${fitInfo.basePages} sayfa → ${fitInfo.pages} sayfa; yazı %${Math.round((fitInfo.zoom / ZOOM[page.fontScale]) * 100)} ölçekte.${fitInfo.pages > page.fitPages ? ' En küçük yazıda bile sığmadı; daha az içerik seç ya da sayfa sayısını artır.' : ''}`
+              : 'Yazı, içerik hedef sayfaya sığana dek küçültülür (en çok yarıya). Tahmindir, ±1 sayfa sapabilir.'}
+          </p>
+        </>
+      )}
+    </Group>
+  </>
+);
+
+const QuestionLook: React.FC<{ o: QuestionDocOptions; set: (p: Partial<QuestionDocOptions>) => void }> = ({ o, set }) => {
+  const sol = o.mode === 'solution';
+  return (
+    <>
+      <Group title="Sütun">
+        <div className="ps-cols" role="radiogroup" aria-label="Sütun" aria-disabled={o.questionPerPage}>
+          {([1, 2, 3] as const).map((n) => {
+            const on = o.columns === n && !o.questionPerPage;
+            return (
+              <button key={n} type="button" role="radio" aria-checked={on} disabled={o.questionPerPage} className={`ps-choice is-col ${on ? 'is-on' : ''}`} onClick={() => set({ columns: n })}>
+                <ColumnGlyph cols={n} />
+                <span className="ps-choice-t"><b>{n === 1 ? 'Tek sütun' : `${n} sütun`}</b><small>{n === 1 ? 'Geniş satırlar' : n === 2 ? 'Kitapçık gibi' : 'A3 / yatay için'}</small></span>
+              </button>
+            );
+          })}
+        </div>
+        {o.questionPerPage && <p className="ps-hint">“Her soru ayrı sayfada” açıkken tek sütun kullanılır.</p>}
+      </Group>
+      <Group title="Soruda görünenler">
+        <Switches>
+          <Toggle label="Doğru şıkkı işaretle" hint="Yeşil ve ✓ (çözüm soru altındayken)" checked={sol && o.markCorrect} disabled={!sol || o.answersAt !== 'inline'} onChange={(v) => set({ markCorrect: v })} />
+          <Toggle label="Soru açıklaması" checked={sol && o.explanation} disabled={!sol} onChange={(v) => set({ explanation: v })} />
+          <Toggle label="Referans kaynaklar" checked={sol && o.refs} disabled={!sol} onChange={(v) => set({ refs: v })} />
+          <Toggle label="Üst bilgi" hint="Ders · kurul · yıl satırı" checked={o.meta} onChange={(v) => set({ meta: v })} />
+          <Toggle label="Rozetler" hint="Denetleyici, Faz 14, tartışmalı cevap" checked={o.badges} onChange={(v) => set({ badges: v })} />
+          <Toggle label="Not alanı" hint="Her sorunun altında yazma satırları" checked={o.writeSpace} onChange={(v) => set({ writeSpace: v })} />
+        </Switches>
+        <Seg<OptionNotes>
+          label="Şık açıklamaları"
+          value={o.optionNotes}
+          onChange={(v) => set({ optionNotes: v })}
+          disabled={!sol}
+          options={[['off', 'Yok'], ['inline', 'Şık altında'], ['analysis', 'Analiz tablosu']]}
+        />
+      </Group>
+    </>
+  );
+};
+
+const LessonLook: React.FC<{ o: LessonDocOptions; set: (p: Partial<LessonDocOptions>) => void; ixCounts: Record<string, number> }> = ({ o, set, ixCounts }) => (
+  <>
+    <Group title="Adım içeriği">
+      <Switches>
+        <Toggle label="Anlatım" checked={o.narrative} onChange={(v) => set({ narrative: v })} />
+        <Toggle label="Anahtar maddeler" checked={o.keyPoints} onChange={(v) => set({ keyPoints: v })} />
+        <Toggle label="Tablolar" checked={o.tables} onChange={(v) => set({ tables: v })} />
+        <Toggle label="İnfografik ve formüller" checked={o.visuals} onChange={(v) => set({ visuals: v })} />
+        <Toggle label="Hocanın vurgusu" checked={o.teacher} onChange={(v) => set({ teacher: v })} />
+        <Toggle label="Sınav spotları" checked={o.spots} onChange={(v) => set({ spots: v })} />
+        <Toggle label="Önemli nokta ve sınav ipucu" checked={o.tips} onChange={(v) => set({ tips: v })} />
+        <Toggle label="Terimler sözlüğü" hint="Adımdaki tıbbi terimler ve tanımları" checked={o.terms} onChange={(v) => set({ terms: v })} />
+        <Toggle label="Akıl kartları" checked={o.cards} onChange={(v) => set({ cards: v })} />
+      </Switches>
+    </Group>
+    <Group
+      title="Etkileşimler"
+      aside={
+        <button type="button" className="ps-link-btn" onClick={() => set({ interactives: o.interactives.length ? [] : [...IX_TYPES] })}>
+          {o.interactives.length ? 'Hiçbiri' : 'Hepsi'}
+        </button>
+      }
+    >
+      <div className="ps-chips">
+        {IX_TYPES.map((t) => {
+          const on = o.interactives.includes(t);
+          const [Icon, label] = IX_META[t];
+          const n = ixCounts[t] || 0;
+          return (
+            <button
+              key={t}
+              type="button"
+              role="checkbox"
+              aria-checked={on}
+              className={`${on ? 'is-on' : ''} ${n ? '' : 'is-dim'}`}
+              onClick={() => set({ interactives: on ? o.interactives.filter((x) => x !== t) : ([...o.interactives, t] as IxType[]) })}
+            >
+              <Icon /> {label} <code>{n}</code>
+            </button>
+          );
+        })}
+      </div>
+      <Switches>
+        <Toggle label="Şık açıklamaları" hint="Mini soru ve klinik kararda neden doğru / yanlış" checked={o.optionNotes && o.answers !== 'hidden'} disabled={o.answers === 'hidden'} onChange={(v) => set({ optionNotes: v })} />
+      </Switches>
+    </Group>
+  </>
+);
+
+const SummaryLook: React.FC<{ o: SummaryDocOptions; set: (p: Partial<SummaryDocOptions>) => void }> = ({ o, set }) => (
+  <Group title="Özette görünenler">
+    <Switches>
+      <Toggle label="Konu başlıkları" hint="Özetin başında başlık kartları" checked={o.keyPoints} onChange={(v) => set({ keyPoints: v })} />
+      <Toggle label="Tablolar" checked={o.tables} onChange={(v) => set({ tables: v })} />
+      <Toggle label="Not kutuları" hint="Önemli, sınav spotu, klinik ipucu" checked={o.callouts} onChange={(v) => set({ callouts: v })} />
+    </Switches>
+  </Group>
+);
+
+/* ===========================================================================
+ * 4 · Sayfa
+ * ========================================================================= */
+const PageStep: React.FC<{ page: PageSettings; setPage: (p: Partial<PageSettings>) => void }> = ({ page, setPage }) => {
+  const land = page.orientation === 'landscape';
+  return (
+    <>
+      <Group title="Kâğıt boyutu">
+        <div className="ps-papers" role="radiogroup" aria-label="Kâğıt boyutu">
+          {PAPER_ORDER.map((id: PaperSize) => {
+            const on = page.paper === id;
+            const p = PAPER[id];
+            const w = land ? p.h : p.w;
+            const h = land ? p.w : p.h;
+            const scale = 30 / 420;
+            return (
+              <button key={id} type="button" role="radio" aria-checked={on} className={`ps-paper ${on ? 'is-on' : ''}`} onClick={() => setPage({ paper: id, ...(id === 'tablet' ? { margins: 'narrow' as MarginPreset } : {}) })}>
+                <span className="ps-paper-box" aria-hidden="true">
+                  <i style={{ width: Math.max(9, w * scale * 1.25), height: Math.max(9, h * scale * 1.25) }} className={id === 'tablet' ? 'is-round' : ''} />
+                </span>
+                <b>{p.label}</b>
+                <small>{p.hint}</small>
+              </button>
+            );
+          })}
+        </div>
+      </Group>
+      <Group title="Yön">
+        <div className="ps-orient" role="radiogroup" aria-label="Sayfa yönü">
+          {(
+            [
+              ['portrait', 'Dikey', RectangleVertical, 'Soru kitapçığı, okuma'],
+              ['landscape', 'Yatay', RectangleHorizontal, 'Geniş tablo, 2–3 sütun'],
+            ] as const
+          ).map(([id, label, Icon, hint]) => (
+            <button key={id} type="button" role="radio" aria-checked={page.orientation === id} className={`ps-choice ${page.orientation === id ? 'is-on' : ''}`} onClick={() => setPage({ orientation: id })}>
+              <span className="ps-choice-ic"><Icon /></span>
+              <span className="ps-choice-t"><b>{label}</b><small>{hint}</small></span>
+            </button>
+          ))}
+        </div>
+      </Group>
+      <Group title="Kenar boşluğu">
+        <Seg<MarginPreset>
+          label="Boşluk"
+          value={page.margins}
+          onChange={(v) => setPage({ margins: v })}
+          options={(Object.keys(MARGINS) as MarginPreset[]).map((k) => [k, `${MARGINS[k].label} · ${MARGINS[k].mm[1]} mm`])}
+        />
+      </Group>
+      <Group title="Sayfa bilgileri">
+        <Switches>
+          <Toggle label="Sayfa numarası" hint="Sağ altta 3 / 12" checked={page.pageNumbers} onChange={(v) => setPage({ pageNumbers: v })} />
+          <Toggle label="Üst bilgi" hint="Her sayfada belge adı" checked={page.runningHeader} onChange={(v) => setPage({ runningHeader: v })} />
+        </Switches>
+        <button type="button" className="ps-link-btn is-start" onClick={() => setPage({ ...DEFAULT_PAGE, template: page.template, fontScale: page.fontScale, ink: page.ink, fit: page.fit, fitPages: page.fitPages })}>
+          Sayfa ayarlarını sıfırla (A4 dikey, normal)
+        </button>
+      </Group>
+    </>
+  );
+};
+
+/* ===========================================================================
+ * Yapı taşları
+ * ========================================================================= */
 const DeckSelect: React.FC<{ value: string; onChange: (v: string) => void }> = ({ value, onChange }) => {
   const groups = useMemo(() => {
     const m = new Map<string, typeof DECK_CATALOG>();
@@ -1257,84 +1502,60 @@ const DeckSelect: React.FC<{ value: string; onChange: (v: string) => void }> = (
     return [...m.entries()].sort((a, b) => a[0].localeCompare(b[0], 'tr'));
   }, []);
   return (
-    <SelectField label="Ders" value={value} onChange={onChange}>
+    <Field label="Ders" value={value} onChange={onChange}>
       {groups.map(([g, list]) => (
         <optgroup key={g} label={g}>
           {list.map((d) => <option key={d.id} value={d.id}>{deckName(d)} · {d.slideCount} adım</option>)}
         </optgroup>
       ))}
-    </SelectField>
+    </Field>
   );
 };
 
-const Section: React.FC<{ title: string; aside?: React.ReactNode; children: React.ReactNode }> = ({ title, aside, children }) => (
-  <section className="flex flex-col gap-2.5">
-    <div className="flex items-baseline justify-between gap-2 px-0.5">
-      <h3 className="m-0 text-[12px] font-semibold uppercase tracking-[0.08em] text-ink-3">{title}</h3>
+const Group: React.FC<{ title: string; aside?: React.ReactNode; children: React.ReactNode }> = ({ title, aside, children }) => (
+  <section className="ps-group">
+    <div className="ps-group-h">
+      <h3>{title}</h3>
       {aside}
     </div>
     {children}
   </section>
 );
 
-const SelectField: React.FC<{ label: string; value: string; onChange: (v: string) => void; disabled?: boolean; children: React.ReactNode }> = ({ label, value, onChange, disabled, children }) => (
-  <label className={`relative flex flex-col min-w-0 ${disabled ? 'opacity-50' : ''}`}>
-    <span className="sr-only">{label}</span>
-    <span className="pointer-events-none absolute left-3.5 top-2 text-[11px] font-semibold text-ink-3">{label}</span>
-    <select
-      value={value}
-      disabled={disabled}
-      onChange={(e) => onChange(e.target.value)}
-      className="appearance-none w-full h-[54px] pt-4 pl-3.5 pr-9 rounded-xl border border-line bg-white text-[14.5px] text-ink cursor-pointer outline-0 focus:border-accent focus:shadow-xs truncate disabled:cursor-not-allowed"
-    >
+const Field: React.FC<{ label: string; value: string; onChange: (v: string) => void; disabled?: boolean; children: React.ReactNode }> = ({ label, value, onChange, disabled, children }) => (
+  <label className={`ps-field is-select ${disabled ? 'is-off' : ''}`}>
+    <span>{label}</span>
+    <select value={value} disabled={disabled} onChange={(e) => onChange(e.target.value)}>
       {children}
     </select>
-    <ChevronDown className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-ink-3" />
+    <ChevronDown aria-hidden="true" />
   </label>
 );
 
-function Segmented<T extends string>({ label, value, onChange, options, disabled }: { label: string; value: T; onChange: (v: T) => void; options: [T, string][]; disabled?: boolean }) {
+function Seg<T extends string>({ label, value, onChange, options, disabled }: { label: string; value: T; onChange: (v: T) => void; options: [T, string][]; disabled?: boolean }) {
   return (
-    <div className={`flex flex-col gap-1.5 ${disabled ? 'opacity-50 pointer-events-none' : ''}`}>
-      <span className="px-0.5 text-[12.5px] font-medium text-ink-2">{label}</span>
-      <div role="radiogroup" aria-label={label} aria-disabled={disabled} className="grid gap-1 bg-blue-100 rounded-xl p-1" style={{ gridTemplateColumns: `repeat(${options.length}, minmax(0, 1fr))` }}>
-        {options.map(([id, text]) => {
-          const on = value === id;
-          return (
-            <button
-              key={id}
-              type="button"
-              role="radio"
-              aria-checked={on}
-              disabled={disabled}
-              onClick={() => onChange(id)}
-              className={`h-9 px-1 rounded-lg text-[13px] leading-tight cursor-pointer transition-all ${on ? 'bg-white text-ink font-semibold shadow-xs' : 'text-ink-2 hover:text-ink'}`}
-            >
-              {text}
-            </button>
-          );
-        })}
+    <div className={`ps-segwrap ${disabled ? 'is-off' : ''}`}>
+      <span className="ps-seg-l">{label}</span>
+      <div role="radiogroup" aria-label={label} aria-disabled={disabled} className="ps-seg" style={{ gridTemplateColumns: `repeat(${options.length}, minmax(0, 1fr))` }}>
+        {options.map(([id, text]) => (
+          <button key={id} type="button" role="radio" aria-checked={value === id} disabled={disabled} className={value === id ? 'is-on' : ''} onClick={() => onChange(id)}>
+            {text}
+          </button>
+        ))}
       </div>
     </div>
   );
 }
 
-const ChipToggle: React.FC<{ label: string; options: [string, string][]; value: string[]; onChange: (v: string[]) => void }> = ({ label, options, value, onChange }) => (
-  <div className="flex flex-col gap-1.5">
-    <span className="px-0.5 text-[12.5px] font-medium text-ink-2">{label}</span>
-    <div className="flex flex-wrap gap-1.5">
+const Chips: React.FC<{ label: string; options: [string, string][]; value: string[]; onChange: (v: string[]) => void }> = ({ label, options, value, onChange }) => (
+  <div className="ps-segwrap">
+    <span className="ps-seg-l">{label}</span>
+    <div className="ps-chips">
       {options.map(([id, text]) => {
         const on = value.includes(id);
         return (
-          <button
-            key={id}
-            type="button"
-            role="checkbox"
-            aria-checked={on}
-            onClick={() => onChange(on ? value.filter((x) => x !== id) : [...value, id])}
-            className={`h-9 px-3.5 rounded-full border inline-flex items-center gap-1.5 text-[13px] cursor-pointer ${on ? 'border-accent bg-accent-soft text-accent font-semibold' : 'border-line bg-white text-ink-2'}`}
-          >
-            {on && <Check className="w-3.5 h-3.5" strokeWidth={3} />} {text}
+          <button key={id} type="button" role="checkbox" aria-checked={on} className={on ? 'is-on' : ''} onClick={() => onChange(on ? value.filter((x) => x !== id) : [...value, id])}>
+            {on && <Check />} {text}
           </button>
         );
       })}
@@ -1342,43 +1563,39 @@ const ChipToggle: React.FC<{ label: string; options: [string, string][]; value: 
   </div>
 );
 
-const SwitchGroup: React.FC<{ children: React.ReactNode }> = ({ children }) => (
-  <div className="bg-white border border-line rounded-2xl divide-y divide-line-soft overflow-hidden">{children}</div>
-);
+const Switches: React.FC<{ children: React.ReactNode }> = ({ children }) => <div className="ps-switches">{children}</div>;
 
-const SwitchRow: React.FC<{ label: string; hint?: string; checked: boolean; onChange: (v: boolean) => void; disabled?: boolean }> = ({ label, hint, checked, onChange, disabled }) => (
-  <button
-    type="button"
-    role="switch"
-    aria-checked={checked}
-    disabled={disabled}
-    onClick={() => onChange(!checked)}
-    className="w-full flex items-center gap-3 min-h-[54px] px-4 py-2 text-left cursor-pointer disabled:cursor-not-allowed disabled:opacity-50 hover:bg-blue-50"
-  >
-    <span className="flex-1 min-w-0">
-      <span className="block text-[14px] font-medium text-ink">{label}</span>
-      {hint && <span className="block text-[12.5px] text-ink-3 leading-snug">{hint}</span>}
+const Toggle: React.FC<{ label: string; hint?: string; checked: boolean; onChange: (v: boolean) => void; disabled?: boolean }> = ({ label, hint, checked, onChange, disabled }) => (
+  <button type="button" role="switch" aria-checked={checked} disabled={disabled} className="ps-switch" onClick={() => onChange(!checked)}>
+    <span className="ps-switch-t">
+      <b>{label}</b>
+      {hint && <small>{hint}</small>}
     </span>
-    <span className={`relative w-[42px] h-[26px] rounded-full shrink-0 transition-colors ${checked ? 'bg-accent' : 'bg-line-2'}`} aria-hidden="true">
-      <span className={`absolute top-[3px] left-[3px] w-5 h-5 rounded-full bg-white shadow-xs transition-transform ${checked ? 'translate-x-4' : ''}`} />
-    </span>
+    <span className={`ps-knob ${checked ? 'is-on' : ''}`} aria-hidden="true"><i /></span>
   </button>
 );
 
 const CheckBox: React.FC<{ on: boolean; mixed?: boolean }> = ({ on, mixed }) => (
-  <span className={`w-5 h-5 rounded-md flex items-center justify-center shrink-0 transition-colors ${on || mixed ? 'bg-accent text-white' : 'bg-white border border-line-2'}`}>
-    {on ? <Check className="w-3.5 h-3.5" strokeWidth={3} /> : mixed ? <span className="w-2.5 h-[2px] rounded bg-white" /> : null}
+  <span className={`ps-check ${on || mixed ? 'is-on' : ''}`} aria-hidden="true">
+    {on ? <Check strokeWidth={3} /> : mixed ? <i /> : null}
   </span>
 );
 
-const PageGlyph: React.FC<{ cols: 1 | 2; on: boolean }> = ({ cols, on }) => (
-  <span className={`w-8 h-10 rounded-sm border flex gap-[3px] p-[5px] shrink-0 ${on ? 'border-accent bg-white' : 'border-line-2 bg-white'}`} aria-hidden="true">
+const ColumnGlyph: React.FC<{ cols: 1 | 2 | 3 }> = ({ cols }) => (
+  <span className="ps-glyph" aria-hidden="true">
     {Array.from({ length: cols }).map((_, i) => (
-      <span key={i} className="flex-1 flex flex-col gap-[3px]">
-        {[0, 1, 2, 3, 4].map((j) => (
-          <span key={j} className={`h-[2px] rounded-full ${on ? 'bg-accent/60' : 'bg-line-2'}`} style={{ width: j === 4 ? '60%' : '100%' }} />
-        ))}
+      <span key={i}>
+        {[0, 1, 2, 3, 4].map((j) => <i key={j} style={{ width: j === 4 ? '60%' : '100%' }} />)}
       </span>
     ))}
+  </span>
+);
+
+/** Şablonun küçük çizimi: kart / çizgi / tırnaklı / sıkı / sınav */
+const TemplateGlyph: React.FC<{ id: TemplateId }> = ({ id }) => (
+  <span className={`ps-tglyph is-${id}`} aria-hidden="true">
+    <em>{id === 'klasik' ? 'Aa' : id === 'sinav' ? '1.' : ''}</em>
+    <span><i /><i /><i /></span>
+    {id !== 'kompakt' && <span><i /><i /></span>}
   </span>
 );

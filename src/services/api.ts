@@ -2638,7 +2638,12 @@ export const ApiService = {
       if (res.ok) {
         return await res.json();
       }
-    } catch (e) {
+      // Sunucu yanıt verdi ama reddetti (429, 413, 404…): yedeğe düşmeden hatayı göster —
+      // eskiden 401 sessizce Firestore'a/yerel sahte kayda düşüyor, yorum kayboluyordu.
+      const body = await res.json().catch(() => null);
+      throw Object.assign(new Error(body?.error || `HTTP ${res.status}`), { serverRejected: true });
+    } catch (e: any) {
+      if (e?.serverRejected) throw e;
       console.warn('[commentPastQuestion] Server çağrısı başarısız, Firestore yedeğine geçiliyor:', e);
     }
 
@@ -2662,17 +2667,8 @@ export const ApiService = {
       });
       return { success: true, comment: commentObj };
     } catch (err: any) {
-      console.warn('[commentPastQuestion] Firestore kaydı da yapılamadı, yerel nesne dönülüyor:', err.message);
-      return {
-        success: true,
-        comment: {
-          id: `c-local-${Date.now()}`,
-          author: author || 'Tıp Öğrencisi',
-          text: text.trim(),
-          createdAt: new Date().toISOString(),
-          upvotes: 0
-        }
-      };
+      console.warn('[commentPastQuestion] Firestore kaydı da yapılamadı:', err.message);
+      throw new Error('Sunucuya ulaşılamadı; yorum gönderilemedi. Bağlantını kontrol edip yeniden dene.');
     }
   },
 
@@ -4628,6 +4624,17 @@ export const ApiService = {
     );
     if (!res.ok || !res.data) throw new Error(res.error || 'Katkı eklenemedi.');
     return res.data;
+  },
+
+  /** Yönetici: öneri taslağından bir parçayı "farklı soru" diye ayırır (kalıcı); güncel küme listesini döner. */
+  async splitPoolClusterMember(clusterId: string, key: string): Promise<any[]> {
+    const res = await safeJsonFetch<{ success: boolean; clusters: any[] }>(`/api/pool-clusters/${encodeURIComponent(clusterId)}/split`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ key }),
+    });
+    if (!res.ok || !res.data) throw new Error(res.error || 'Parça ayrılamadı.');
+    return res.data.clusters || [];
   },
 
   async runPoolQuestionClusterPipeline(): Promise<{ success: boolean; message: string }> {

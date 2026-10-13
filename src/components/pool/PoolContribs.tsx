@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { ChevronDown } from 'lucide-react';
 import { PoolEvent, PoolSummary, fullTime, initials, relTime, shortName, toneOf } from './poolModel';
 
 /** Tek katkı satırı: baş harf · kim · ne yaptı · ne zaman · metin */
@@ -20,33 +21,28 @@ export const PoolEventItem: React.FC<{ e: PoolEvent; now: number; showQ?: boolea
 };
 
 /**
- * Katkılar şeridi: sorunun kimden, ne zaman, hangi parçayla büyüdüğü.
- * Varsayılan son 3 katkı; "Tümü" ile hepsi. Metinler QuestionCard'ın üstünde, kısa ve okunur.
+ * Katkılar: varsayılan kapalı tek satırlık açılır öğe ("Katkılar · 3 kişi · 7 kayıt").
+ * Açılınca yeniden eskiye tüm katkılar. Soru kartının önünde yer kaplamaz.
  */
 export const PoolContribs: React.FC<{ sum: PoolSummary; now: number }> = ({ sum, now }) => {
-  const [all, setAll] = useState(false);
+  const [open, setOpen] = useState(false);
   const ev = sum.events;
-  if (!ev.length) {
-    return <p className="pv-contrib-empty">Henüz katkı yok. İlk parçayı aşağıdan ekleyebilirsin.</p>;
-  }
-  const list = all ? ev : ev.slice(0, 3);
   const listId = `pv-contrib-${sum.q.id}`;
+  if (!ev.length) return <p className="pv-note">Henüz katkı yok — ilk parçayı aşağıdaki karttan ekleyebilirsin.</p>;
   return (
-    <section className="pv-contrib" aria-label="Katkılar">
-      <div className="pv-contrib-h">
-        <h3>Katkılar <span>{ev.length}</span></h3>
-        <span className="pv-contrib-sub">{sum.people.length} kişi</span>
-        {ev.length > 3 && (
-          <button type="button" className="pv-link" aria-expanded={all} aria-controls={listId} onClick={() => setAll((v) => !v)}>
-            {all ? 'Daralt' : `Tümü (${ev.length})`}
-          </button>
-        )}
-      </div>
-      <ol className="pv-ev-list" id={listId}>
-        {list.map((e) => (
-          <li key={e.id} className="pv-ev"><PoolEventItem e={e} now={now} /></li>
-        ))}
-      </ol>
+    <section className={`pv-contrib ${open ? 'is-open' : ''}`} aria-label="Katkılar">
+      <button type="button" className="pv-contrib-h" aria-expanded={open} aria-controls={listId} onClick={() => setOpen((v) => !v)}>
+        <span className="pv-contrib-t">Katkılar</span>
+        <span className="pv-contrib-sub">{sum.people.length} kişi · {ev.length} kayıt</span>
+        <ChevronDown className="pv-chev" aria-hidden />
+      </button>
+      {open && (
+        <ol className="pv-ev-list" id={listId}>
+          {ev.map((e) => (
+            <li key={e.id} className="pv-ev"><PoolEventItem e={e} now={now} /></li>
+          ))}
+        </ol>
+      )}
     </section>
   );
 };

@@ -283,6 +283,9 @@ const Step: React.FC<{ step: LessonStep; total: number; o: LessonDocOptions }> =
           <span>Adım {step.number} / {total}</span>
           {step.checkpoint > 0 && <span className="ls-tag is-accent">Tekrar {step.checkpoint}</span>}
           {step.badge && !step.checkpoint && <span className="ls-tag is-plain">{step.badge}</span>}
+          {o.answers === 'end' && stepAnswers(step, o).length > 0 && (
+            <a className="pd-jump" href={`#cevap-adim-${step.number}`}>Cevaplar →</a>
+          )}
         </div>
         <h1 className="ls-title"><span>{step.title}</span></h1>
         {step.slide.subtitle && <p className="ls-sub">{step.slide.subtitle}</p>}
@@ -382,7 +385,7 @@ export const LessonDoc: React.FC<LessonDocProps> = ({ deck, slideNumbers, option
       const sec = sections[st.section];
       const count = sec ? sec.steps.filter((i) => picked.size === 0 || picked.has(steps[i].number)).length : 0;
       blocks.push(
-        <div key={`sec-${st.section}`} className="pd-sec-title">
+        <div key={`sec-${st.section}`} className="pd-sec-title" id={`bolum-${st.section + 1}`}>
           <small>Bölüm {st.section + 1}</small>
           <b>{sec?.name || st.topic}</b>
           <span>{count} adım</span>
@@ -397,25 +400,40 @@ export const LessonDoc: React.FC<LessonDocProps> = ({ deck, slideNumbers, option
     <>
       {o.cover ? <Cover info={cover} /> : <Masthead info={cover} />}
       {o.toc && chosen.length > 1 && (
-        <section className="pd-box" style={{ marginBottom: 22 }}>
-          <div className="ls-sec-h">İçindekiler <span>{chosen.length}</span></div>
-          <ol className="pd-toc">
-            {chosen.map((s) => (
-              <li key={s.number}>
-                <small>{s.number}</small>
-                <span>{s.title}</span>
-              </li>
-            ))}
+        <nav className="pd-box pd-tocbox" aria-label="İçindekiler" style={{ marginBottom: 22 }}>
+          <div className="ls-sec-h">İçindekiler <span>{chosen.length} adım</span></div>
+          <ol className="pd-toc is-linked">
+            {chosen.map((s, i) => {
+              const newSec = o.sectionTitles && (i === 0 || chosen[i - 1].section !== s.section);
+              return (
+                <React.Fragment key={s.number}>
+                  {newSec && (
+                    <li className="is-head">
+                      <a href={`#bolum-${s.section + 1}`}><span>Bölüm {s.section + 1} · {sections[s.section]?.name || s.topic}</span></a>
+                    </li>
+                  )}
+                  <li className={o.sectionTitles ? 'is-sub' : ''}>
+                    <a href={`#adim-${s.number}`}>
+                      <small>{s.number}</small>
+                      <span>{s.title}</span>
+                    </a>
+                  </li>
+                </React.Fragment>
+              );
+            })}
+            {o.answers === 'end' && answers.length > 0 && (
+              <li className="is-head"><a href="#cevaplar"><span>Cevaplar</span><small>{answers.length}</small></a></li>
+            )}
           </ol>
-        </section>
+        </nav>
       )}
       {blocks}
       {o.answers === 'end' && answers.length > 0 && (
-        <section className="pd-section">
+        <section className="pd-section" id="cevaplar">
           <h2 className="pd-section-h">Cevaplar <span>{answers.length} etkinlik</span></h2>
           {answers.map((a, i) => (
-            <div key={i} className="pd-ans">
-              <small>Adım {a.step}</small>
+            <div key={i} className="pd-ans" id={i === answers.findIndex((x) => x.step === a.step) ? `cevap-adim-${a.step}` : undefined}>
+              <small><a className="pd-link" href={`#adim-${a.step}`}>Adım {a.step}</a></small>
               <span><span className="ls-tag is-accent">{a.label}</span><Html html={a.html} /></span>
             </div>
           ))}

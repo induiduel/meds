@@ -83,22 +83,24 @@ export const SummaryDoc: React.FC<{ summaries: SummaryForPdf[]; options: Summary
   <>
     {o.cover ? <Cover info={cover} /> : summaries.length > 1 ? <Masthead info={cover} /> : null}
     {o.toc && summaries.length > 1 && (
-      <section className="pd-box" style={{ marginBottom: 22 }}>
+      <nav className="pd-box pd-tocbox" aria-label="İçindekiler" style={{ marginBottom: 22 }}>
         <div className="ls-sec-h">İçindekiler <span>{summaries.length}</span></div>
-        <ol className="pd-toc">
+        <ol className="pd-toc is-linked">
           {summaries.map((s, i) => (
             <li key={s.id}>
-              <small>{i + 1}</small>
-              <span>{s.title}</span>
+              <a href={`#ozet-${i + 1}`}>
+                <small>{i + 1}</small>
+                <span>{s.title}</span>
+              </a>
             </li>
           ))}
         </ol>
-      </section>
+      </nav>
     )}
-    {summaries.map((s) => {
+    {summaries.map((s, si) => {
       const { meta, body } = splitMeta(prepareSummary(s.content, o));
       return (
-        <article key={s.id} className="pd-sum">
+        <article key={s.id} className="pd-sum" id={`ozet-${si + 1}`}>
           <header className="ls-head">
             <div className="ls-eyebrow-row">
               <span>Kurul {s.kurul}</span>

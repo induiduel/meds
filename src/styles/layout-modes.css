@@ -40,4 +40,14 @@
 .ss-bar.is-dock { left: 50% !important; transform: translateX(-50%); top: auto !important; bottom: calc(var(--sh-tabs-h, 62px) + env(safe-area-inset-bottom, 0px) + 18px); }
 @media (min-width: 768px) { .ss-bar.is-dock { bottom: 24px; } }
 html.theme-dark .ss-bar button:not(.is-primary) { color: var(--color-ink); }
+.ss-bar .ss-x { display: contents; }
+.ss-bar .ss-x[hidden] { display: none; }
+.ss-bar button.is-danger { color: #FF9A8F; }
+.ss-bar button.is-accent { color: #9CC3FF; }
+html.theme-dark .ss-bar button.is-danger { color: var(--color-bad); }
+html.theme-dark .ss-bar button.is-accent { color: var(--color-accent); }
+@media (max-width: 520px) {
+  .ss-bar { max-width: calc(100vw - 16px); overflow-x: auto; scrollbar-width: none; }
+  .ss-bar button { padding: 0 9px; gap: 5px; flex-shrink: 0; }
+}
 ::highlight(ss-vurgu) { background-color: color-mix(in srgb, var(--color-accent) 30%, transparent); color: inherit; }

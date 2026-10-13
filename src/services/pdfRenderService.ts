@@ -6,6 +6,10 @@
  * kapalıdır ve tüm ağ istekleri yakalanır: yalnızca Google Fonts'a izin verilir. Böylece gönderilen HTML iç
  * ağdaki adreslere ya da yerel dosyalara ulaşamaz. Bağımlılık yok: Chrome DevTools Protocol, Node'un yerleşik
  * WebSocket'i ile konuşulur. Chrome yolu `CHROME_PATH` ile verilebilir.
+ *
+ * Sayfa boyutu/yönü belgedeki `@page size` kuralından gelir (`preferCSSPageSize`). Belge about:blank'e yazıldığı
+ * için `href="#kimlik"` bağlantıları aynı belgeye çözülür ve PDF'te iç bağlantı (GoTo) olur; `generateDocumentOutline`
+ * başlıklardan (h1–h3) PDF yer imlerini kurar.
  */
 import { spawn, type ChildProcess } from 'child_process';
 import fs from 'fs';
@@ -194,12 +198,16 @@ export async function renderHtmlToPdf(html: string, opts: RenderOptions = {}): P
     await new Promise<void>((r) => queue.push(r));
   }
   running++;
+  let timer: ReturnType<typeof setTimeout> | undefined;
   try {
     return await Promise.race([
       render(html, opts),
-      new Promise<never>((_, rej) => setTimeout(() => rej(Object.assign(new Error('PDF oluşturma zaman aşımına uğradı'), { status: 504 })), TIMEOUT_MS)),
+      new Promise<never>((_, rej) => {
+        timer = setTimeout(() => rej(Object.assign(new Error('PDF oluşturma zaman aşımına uğradı'), { status: 504 })), TIMEOUT_MS);
+      }),
     ]);
   } finally {
+    if (timer) clearTimeout(timer);
     running--;
     queue.shift()?.();
   }
