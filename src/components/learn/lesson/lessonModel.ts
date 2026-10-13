@@ -30,6 +30,8 @@ export interface LessonStep {
   topic: string;
   subtopic: string;
   checkpoint: number;
+  /** Ders sonu oyun sayfası (son slayt, `isGameFinale` ya da başlık "[OYUN SAYFASI] …") */
+  game: boolean;
   badge?: string;
   narrative: string;
   bullets: { title: string; desc: string; isKey?: boolean }[];
@@ -50,6 +52,7 @@ export interface LessonStep {
 export interface LessonSection { index: number; name: string; steps: number[] }
 
 const CP_RE = /^\[TEKRAR SAYFASI\s*-\s*CHECKPOINT\s*(\d+)\]\s*/i;
+const GAME_RE = /^\[OYUN SAYFASI\]\s*/i;
 
 const splitTitle = (t: string): [string, string] => {
   const i = t.indexOf(':');
@@ -113,7 +116,8 @@ export function buildSteps(deck: InteractiveDeck): LessonStep[] {
   return rawSlides.map((slide, index) => {
     const s: any = slide;
     const cpMatch = String(slide.title || '').match(CP_RE);
-    const title = cpMatch ? String(slide.title).slice(cpMatch[0].length) : String(slide.title || `Adım ${index + 1}`);
+    const gameMatch = String(slide.title || '').match(GAME_RE);
+    const title = cpMatch ? String(slide.title).slice(cpMatch[0].length) : gameMatch ? String(slide.title).slice(gameMatch[0].length) : String(slide.title || `Adım ${index + 1}`);
     const [topic, subtopic] = splitTitle(title);
     const cc = s.coreContent && !Array.isArray(s.coreContent) ? s.coreContent : {};
     const bullets = Array.isArray(cc.keyBullets) ? cc.keyBullets.filter((b: any) => b && (b.title || b.desc)) : [];
@@ -142,6 +146,7 @@ export function buildSteps(deck: InteractiveDeck): LessonStep[] {
       topic,
       subtopic,
       checkpoint: cpMatch ? Number(cpMatch[1]) : s.isCheckpoint ? Number(s.checkpointNumber) || 1 : 0,
+      game: !!(gameMatch || s.isGameFinale),
       badge: slide.badge,
       narrative: narrativeText,
       bullets,

@@ -53,20 +53,21 @@ export const LessonRail: React.FC<{
                 const isDone = done.has(s.number);
                 const isCur = i === current;
                 const cp = s.checkpoint > 0;
+                const game = s.game;
                 return (
                   <button
                     key={i}
                     type="button"
-                    className={`lr-item ${isCur ? 'is-cur' : ''} ${isDone ? 'is-done' : ''} ${cp ? 'is-cp' : ''}`}
+                    className={`lr-item ${isCur ? 'is-cur' : ''} ${isDone ? 'is-done' : ''} ${cp ? 'is-cp' : ''} ${game ? 'is-game' : ''}`}
                     aria-current={isCur ? 'step' : undefined}
                     onClick={() => onPick(i)}
                     title={s.title}
                   >
                     <span className="lr-no" aria-hidden>{isDone && !isCur && !cp ? <Check /> : s.number}</span>
                     <span className="lr-tx">
-                      {cp ? `Tekrar · ${s.topic}` : s.topic}
+                      {cp ? `Tekrar · ${s.topic}` : game ? `Oyun · ${s.topic}` : s.topic}
                     </span>
-                    <span className="sr-only">{isDone ? ' (tamamlandı)' : ''}{cp ? ' (tekrar sayfası)' : ''}</span>
+                    <span className="sr-only">{isDone ? ' (tamamlandı)' : ''}{cp ? ' (tekrar sayfası)' : ''}{game ? ' (ders sonu oyunları)' : ''}</span>
                   </button>
                 );
               })}

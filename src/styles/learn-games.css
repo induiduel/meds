@@ -1,0 +1,95 @@
+/* Ders sonu oyunları (lesson/LessonGames.tsx · rehber §5.14). Yalnız --color-* token'ları; açık/koyu tema. */
+
+.lg-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+.lg-count { font-size: 12.5px; color: var(--color-ink-3); font-variant-numeric: tabular-nums; }
+.lg-case { margin: 0; padding: 10px 12px; border-radius: 11px; background: var(--color-field); font-size: 13.5px; line-height: 1.55; color: var(--color-ink-2); }
+.lg-chip {
+  display: inline-flex; align-items: center; gap: 4px; min-height: 36px; padding: 6px 12px; border: 1px solid var(--color-line);
+  border-radius: 10px; background: var(--color-canvas); color: var(--color-ink); font: inherit; font-size: 13.5px; line-height: 1.35;
+  text-align: left; cursor: pointer; overflow-wrap: anywhere; transition: border-color .15s, background-color .15s, transform .15s;
+}
+.lg-chip:hover { border-color: var(--color-accent); }
+.lg-chip:active { transform: scale(.98); }
+.lg-chip.is-ghost { border-color: transparent; background: transparent; color: var(--color-ink-3); padding: 6px 8px; }
+.lg-chip svg { width: 15px; height: 15px; }
+
+/* Sırala */
+.lg-seq { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 6px; }
+.lg-seq-slot { display: grid; grid-template-columns: 26px 1fr; align-items: center; column-gap: 10px; row-gap: 4px; }
+.lg-seq-slot .n {
+  width: 26px; height: 26px; border-radius: 99px; display: inline-flex; align-items: center; justify-content: center;
+  background: var(--color-field); color: var(--color-ink-2); font-family: var(--font-mono); font-size: 12px; font-weight: 600;
+}
+.lg-seq-slot .t {
+  min-height: 38px; padding: 8px 12px; border: 1px solid var(--color-line); border-radius: 10px; background: var(--color-canvas);
+  color: var(--color-ink); font: inherit; font-size: 13.5px; line-height: 1.4; text-align: left; overflow-wrap: anywhere; cursor: pointer;
+}
+.lg-seq-slot .t:disabled { cursor: default; }
+.lg-seq-slot .t.is-ph { display: flex; align-items: center; border-style: dashed; background: transparent; color: var(--color-ink-3); font-size: 12.5px; cursor: default; }
+.lg-seq-slot.is-ok .n { background: var(--color-ok); color: var(--color-on-accent, #fff); }
+.lg-seq-slot.is-ok .t { border-color: var(--color-ok); background: var(--color-ok-soft); }
+.lg-seq-slot.is-bad .n { background: var(--color-bad); color: var(--color-on-accent, #fff); }
+.lg-seq-slot.is-bad .t { border-color: var(--color-bad); background: var(--color-bad-soft); }
+.lg-seq-fix { grid-column: 2; font-size: 12.5px; color: var(--color-ink-3); }
+.lg-pool { display: flex; flex-wrap: wrap; gap: 6px; padding: 10px; border-radius: 12px; background: var(--color-field); }
+
+/* Değeri tahmin et */
+.lg-est { display: flex; flex-direction: column; gap: 6px; }
+.lg-est-val { align-self: center; font-size: 26px; font-weight: 700; font-variant-numeric: tabular-nums; color: var(--color-ink); }
+.lg-est-val small { font-size: 14px; font-weight: 600; color: var(--color-ink-3); }
+.lg-est-track { position: relative; padding: 8px 0; }
+.lg-est-track input[type='range'] { position: relative; z-index: 1; width: 100%; accent-color: var(--color-accent); }
+.lg-est-band { position: absolute; top: 50%; height: 12px; transform: translateY(-50%); border-radius: 6px; background: var(--color-ok-soft); outline: 1px solid var(--color-ok); }
+.lg-est-ans { position: absolute; top: 0; bottom: 0; width: 2px; margin-left: -1px; background: var(--color-ok); }
+.lg-est-scale { display: flex; justify-content: space-between; font-size: 12px; color: var(--color-ink-3); font-variant-numeric: tabular-nums; }
+
+/* Ne değişir? */
+.lg-pert { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 6px; }
+.lg-pert li {
+  display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 6px 10px; padding: 8px 10px;
+  border: 1px solid var(--color-line); border-radius: 11px;
+}
+.lg-pert li.is-ok { border-color: var(--color-ok); background: var(--color-ok-tint, var(--color-ok-soft)); }
+.lg-pert li.is-bad { border-color: var(--color-bad); background: var(--color-bad-soft); }
+.lg-pert-name { min-width: 0; font-size: 14px; font-weight: 600; color: var(--color-ink); overflow-wrap: anywhere; }
+.lg-pert-btns { display: inline-flex; gap: 4px; }
+.lg-dir {
+  width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center; border: 1px solid var(--color-line);
+  border-radius: 10px; background: var(--color-canvas); color: var(--color-ink-2); cursor: pointer; transition: background-color .15s, border-color .15s;
+}
+.lg-dir svg { width: 18px; height: 18px; }
+.lg-dir.is-on { border-color: var(--color-accent); background: var(--color-accent); color: var(--color-on-accent, #fff); }
+.lg-dir.is-target:not(.is-on) { border-color: var(--color-ok); color: var(--color-ok); border-width: 2px; }
+.lg-dir:disabled { cursor: default; }
+.lg-pert-why { grid-column: 1 / -1; font-size: 12.5px; line-height: 1.5; color: var(--color-ink-2); }
+
+/* Hatayı düzelt */
+.lg-fix { margin: 0; font-size: 15px; line-height: 2; color: var(--color-ink); }
+.lg-w {
+  display: inline; padding: 1px 1px; border: 0; border-radius: 5px; background: transparent; color: inherit; font: inherit;
+  cursor: pointer; transition: background-color .15s;
+}
+.lg-w:hover:not(:disabled) { background: var(--color-field); }
+.lg-w:disabled { cursor: default; }
+.lg-w.is-miss { background: var(--color-bad-soft); animation: lg-shake .35s; }
+.lg-err.is-open { background: var(--color-accent-soft); }
+.lg-err.is-ok { background: var(--color-ok-soft); color: var(--color-ok); font-weight: 600; }
+.lg-err.is-bad { background: var(--color-bad-soft); }
+.lg-err.is-bad s { color: var(--color-bad); }
+.lg-err-wrap { position: relative; }
+.lg-fix-pop {
+  display: flex; flex-wrap: wrap; gap: 6px; margin: 6px 0; padding: 8px; border: 1px solid var(--color-line); border-radius: 12px;
+  background: var(--color-canvas); box-shadow: 0 6px 20px rgb(0 0 0 / .12); line-height: 1.4;
+}
+.lg-fix-why { margin: 0; padding-left: 18px; font-size: 13px; line-height: 1.55; color: var(--color-ink-2); }
+.lg-fix-why s { color: var(--color-bad); }
+
+@keyframes lg-shake { 25% { transform: translateX(-3px); } 75% { transform: translateX(3px); } }
+@media (prefers-reduced-motion: reduce) {
+  .lg-w.is-miss { animation: none; }
+  .lg-chip, .lg-dir, .lg-w { transition: none; }
+}
+@media (max-width: 767px) {
+  .lg-dir { width: 44px; height: 44px; }
+  .lg-pert li { grid-template-columns: 1fr; }
+}

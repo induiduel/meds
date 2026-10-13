@@ -1,0 +1,49 @@
+{
+ "slideNumber": 65,
+ "title": "[OYUN SAYFASI] Ders Sonu Oyunları: Dezenfeksiyon, sterilizasyon ve enfektivite",
+ "subtitle": "Dersin tamamını dört kısa oyunla sına: sırala, tahmin et, yönü bul, hatayı düzelt.",
+ "badge": "Ders Sonu Oyunları",
+ "isGameFinale": true,
+ "synthesisNarrative": "Ders burada bitiyor; bu sayfa yeni bilgi vermez, ders boyunca öğrendiklerini dört oyunla geri çağırmanı ister.\n\n- **Sırala:** Bir işlemin basamaklarını doğru sıraya diz; sıra mantığı mekanizmayı gösterir.\n- **Değeri tahmin et:** Derste geçen sıcaklık, süre ve gün sayılarını kaydırıcıyla bul; yakın tahmin aralık içinde doğru sayılır.\n- **Ne değişir?:** Bir değişikliğin her parametreyi artırıp azalttığını ya da değiştirmediğini seç.\n- **Hatayı düzelt:** Ders cümlelerine benzeyen bir paragraftaki yanlış ifadeleri bul ve doğrusunu seç.\n\n> [!NOTE]\n> Oyunlarda yanıldığın yerler, tekrar etmen gereken slaytları gösterir; yanlışın gerekçesini okuyup ilgili adıma dön.",
+ "sourcePdf": {"fileName": "", "primaryPage": 1},
+ "interactiveElements": [
+  {
+   "type": "sequence_order",
+   "prompt": "Tindalizasyon basamaklarını doğru sıraya diz.",
+   "steps": [
+    "Sıvı, dayanabileceği sıcaklığa göre 55–100 °C arasına ısıtılır",
+    "Bu sıcaklıkta yarım saat bekletilir",
+    "Oda sıcaklığına düşürülür",
+    "İşlem üst üste üç gün ya da daha uzun süre tekrarlanır"
+   ],
+   "explanation": "Tindalizasyon tek seferlik değildir: ısıtma–bekletme–soğutma döngüsü günlerce yinelendiği için pastörizasyondan farklı olarak sterilizasyon yöntemi sayılır."
+  },
+  {
+   "type": "estimate_slider",
+   "items": [
+    {"prompt": "Kısa süreli pastörizasyonda süt kaç °C'de tutulur?", "unit": "°C", "min": 40, "max": 100, "step": 1, "answer": 72, "tolerance": 2, "explanation": "Yüksek sıcaklık–kısa süre: 72 °C'de 15 saniye, ardından hızla 10 °C'ye soğutma."},
+    {"prompt": "Uzun süreli pastörizasyonda sıvı 63 °C'de kaç dakika tutulur?", "unit": "dk", "min": 0, "max": 60, "step": 1, "answer": 30, "tolerance": 3, "explanation": "Düşük sıcaklık–uzun süre: 63 °C'de 30 dakika; amaç aynı, mikroorganizma yoğunluğunu azaltmak."},
+    {"prompt": "Tindalizasyonda işlem en az kaç gün üst üste tekrarlanır?", "unit": "gün", "min": 1, "max": 7, "step": 1, "answer": 3, "tolerance": 0, "explanation": "Isıtma döngüsü üst üste üç gün ya da daha uzun süre yinelenir."}
+   ]
+  },
+  {
+   "type": "perturbation",
+   "scenario": "Deneysel bir çalışmada bir etkenin ID50 değeri, başka bir etkenden belirgin biçimde küçük bulunuyor.",
+   "question": "Bu etken için aşağıdakiler nasıl değişir?",
+   "parameters": [
+    {"name": "Enfeksiyon oluşturmak için gereken etken miktarı", "correct": "down", "explanation": "ID50 konakçıların yarısında enfeksiyon oluşturan dozdur; küçük ID50 daha az etkenin yettiğini gösterir."},
+    {"name": "Etkenin enfektivitesi", "correct": "up", "explanation": "ID50 ne kadar küçükse enfektivite o kadar yüksektir."},
+    {"name": "Aynı dozda enfekte olan konakçı oranı", "correct": "up", "explanation": "Daha az etken yettiğine göre aynı doz deney grubunda daha çok konakçıyı enfekte eder."}
+   ]
+  },
+  {
+   "type": "fix_the_text",
+   "text": "Sterilizasyon, ortamların yalnız patojen mikroorganizmalardan arındırılmasıdır. Pastörizasyon ise süt ve meyve suyu gibi sıvıları 72 °C'de 15 dakika tutup hızla soğutarak tam sterilizasyon sağlar.",
+   "errors": [
+    {"wrong": "yalnız patojen", "correct": "sporlar dâhil bütün", "options": ["yalnız sporlu", "vejetatif"], "explanation": "Yalnız patojenleri hedefleyen işlem dezenfeksiyondur; sterilizasyon sporlar dâhil bütün mikroorganizmaları yok eder."},
+    {"wrong": "15 dakika", "correct": "15 saniye", "options": ["30 dakika", "15 saat"], "explanation": "Kısa süreli pastörizasyon 72 °C'de 15 saniyedir; 30 dakika 63 °C'lik uzun yöntemin süresidir."},
+    {"wrong": "tam sterilizasyon sağlar", "correct": "mikroorganizma yoğunluğunu azaltır", "options": ["sporları yok eder"], "explanation": "Pastörizasyondan tam sterilizasyon beklenmez; ısıya duyarlı sıvıyı steril etmek gerekirse tindalizasyon kullanılır."}
+   ]
+  }
+ ]
+}

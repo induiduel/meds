@@ -2,8 +2,9 @@ import React, { useEffect, useMemo, useRef, useState } from 'react';
 import {
   Archive, BookOpenText, Brain, Check, ChevronDown, ChevronLeft, ChevronRight, X, Eye, FileText, Flag, GitBranch, HelpCircle, Info,
   Layers, Link2, Mic, Quote, Sparkles, SplitSquareHorizontal, Table2, Tag, Target,
-  ShieldAlert, Zap, Scale, Columns, Award, RotateCcw,
+  ShieldAlert, Zap, Scale, Columns, Award, RotateCcw, ListOrdered, Gauge, ArrowUpDown, SpellCheck,
 } from 'lucide-react';
+import { EstimateSlider, FixTheText, Perturbation, SequenceOrder } from './LessonGames';
 import type { LessonCard, LessonQuestion, LessonStep, PracticeItem, DeckKazanim } from './lessonModel';
 import { inline, mdToHtml, spotTone, stripEmoji } from './lessonModel';
 import type { FeedbackTarget } from './lessonFeedback';
@@ -229,6 +230,11 @@ export const IX_META: Record<string, [React.ElementType, string]> = {
   swipe_matching: [Zap, 'Hızlı eşleme'],
   feature_bidding: [Scale, 'Puan bahsi'],
   venn_grid: [Columns, 'Çapraz tablo'],
+  // Ders sonu oyunları (yalnız son slayt, rehber §5.14)
+  sequence_order: [ListOrdered, 'Sırala'],
+  estimate_slider: [Gauge, 'Değeri tahmin et'],
+  perturbation: [ArrowUpDown, 'Ne değişir?'],
+  fix_the_text: [SpellCheck, 'Hatayı düzelt'],
   cards: [Layers, 'Çevir kartları'],
   question: [Archive, 'Soru'],
 };
@@ -1087,6 +1093,14 @@ const IxBody: React.FC<{ item: PracticeItem; onDone?: () => void }> = ({ item, o
       return <FeatureBidding e={e} onDone={onDone} />;
     case 'venn_grid':
       return <VennGrid e={e} onDone={onDone} />;
+    case 'sequence_order':
+      return <SequenceOrder e={e} onDone={onDone} />;
+    case 'estimate_slider':
+      return <EstimateSlider e={e} onDone={onDone} />;
+    case 'perturbation':
+      return <Perturbation e={e} onDone={onDone} />;
+    case 'fix_the_text':
+      return <FixTheText e={e} onDone={onDone} />;
     default:
       return null;
   }

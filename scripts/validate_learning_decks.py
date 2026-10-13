@@ -5,6 +5,7 @@ Kullanım:
     python3 scripts/validate_learning_decks.py yeni_deste.json  # tek dosya (deste ya da deste listesi)
     python3 scripts/validate_learning_decks.py --ozet           # yalnız kural başına sayılar
     python3 scripts/validate_learning_decks.py --duzelt         # kesik zincir basamaklarını tamamla, sızdıran ipuçlarını sil (dosyaya yazar)
+    python3 scripts/validate_learning_decks.py deck.json --oyun-zorunlu  # yeni ders: son slayt "ders sonu oyunları" olmalı (§5.14)
 
 Çıkış kodu: HATA varsa 1, yalnız UYARI varsa 0. Yeni deste eklemeden önce HATA sayısı 0 olmalı.
 """
@@ -19,6 +20,88 @@ TYPES = {
     'branching_logic', 'before_after_slider', 'active_recall',
     'spot_the_lie', 'swipe_matching', 'feature_bidding', 'venn_grid'
 }
+# Ders sonu oyunları (rehber §5.14): yalnız destenin SON slaytında, "[OYUN SAYFASI] …" başlıklı oyun sayfasında
+GAME_TYPES = {'sequence_order', 'estimate_slider', 'perturbation', 'fix_the_text'}
+GAME_RE = re.compile(r'^\[OYUN SAYFASI\]', re.I)
+DIRS = {'up', 'down', 'same', 'artar', 'azalır', 'azalir', 'değişmez', 'degismez'}
+OYUN_ZORUNLU = '--oyun-zorunlu' in sys.argv
+
+def is_game_slide(s):
+    return bool(s.get('isGameFinale')) or bool(GAME_RE.match(str(s.get('title', ''))))
+
+def num(x):
+    try:
+        return float(x)
+    except (TypeError, ValueError):
+        return None
+
+def check_game(e, n, add):
+    t = e.get('type')
+    if t == 'sequence_order':
+        steps = [str(x.get('text') if isinstance(x, dict) else x).strip() for x in (e.get('steps') or [])]
+        if not e.get('prompt') or not 3 <= len(steps) <= 8:
+            add('HATA', 'sirala', n, 'prompt ve 3–8 steps (doğru sırada) gerekli')
+        if len({fold(x) for x in steps}) != len(steps) or any(not x for x in steps):
+            add('HATA', 'sirala-tekrar', n, 'basamaklar boş olamaz ve birbirinden farklı olmalı')
+        if any(TRUNC.search(x) for x in steps):
+            add('HATA', 'kesik-metin', n, 'sıralama basamağı kesilmiş')
+        if not e.get('explanation'):
+            add('UYARI', 'sirala-aciklama', n, 'explanation (sıranın gerekçesi) önerilir')
+    elif t == 'estimate_slider':
+        rounds = e.get('items') if isinstance(e.get('items'), list) and e.get('items') else [e]
+        for r in rounds:
+            lo, hi, ans, tol = num(r.get('min')), num(r.get('max')), num(r.get('answer')), num(r.get('tolerance', 0))
+            if not r.get('prompt') or None in (lo, hi, ans, tol):
+                add('HATA', 'tahmin', n, 'her turda prompt, min, max, answer, tolerance (sayı) gerekli')
+                continue
+            if not lo < hi or not lo <= ans <= hi:
+                add('HATA', 'tahmin-aralik', n, f'min < max ve min ≤ answer ≤ max olmalı ({lo}, {hi}, {ans})')
+            if tol < 0 or tol * 2 >= hi - lo:
+                add('HATA', 'tahmin-tolerans', n, 'tolerance ≥ 0 ve aralığın yarısından küçük olmalı (yoksa her tahmin doğru)')
+            if r.get('step') is not None and (num(r.get('step')) or 0) <= 0:
+                add('HATA', 'tahmin-adim', n, 'step pozitif sayı olmalı')
+            if not r.get('explanation'):
+                add('UYARI', 'tahmin-aciklama', n, 'her turda explanation önerilir')
+    elif t == 'perturbation':
+        ps = e.get('parameters') or []
+        if not e.get('scenario') or len(ps) < 3:
+            add('HATA', 'ne-degisir', n, 'scenario (müdahale) ve en az 3 parameters gerekli')
+        dirs = set()
+        for p in ps:
+            c = fold(p.get('correct') if isinstance(p, dict) else '')
+            if not isinstance(p, dict) or not p.get('name') or c not in DIRS:
+                add('HATA', 'ne-degisir-param', n, 'her parametrede name ve correct (up/down/same) gerekli')
+                continue
+            dirs.add({'artar': 'up', 'azalır': 'down', 'azalir': 'down', 'değişmez': 'same', 'degismez': 'same'}.get(c, c))
+            if not p.get('explanation'):
+                add('UYARI', 'ne-degisir-aciklama', n, 'her parametrede fizyopatolojik explanation önerilir')
+        if len(ps) >= 3 and len(dirs) < 2:
+            add('HATA', 'ne-degisir-tek-yon', n, 'tüm parametreler aynı yönde olamaz (en az 2 farklı yön)')
+    elif t == 'fix_the_text':
+        text = str(e.get('text') or '')
+        errs = e.get('errors') or []
+        if len(text.split()) < 15 or not 1 <= len(errs) <= 3:
+            add('HATA', 'hata-duzelt', n, 'text (≥15 kelime) ve 1–3 errors gerekli')
+        seen = []
+        for er in errs:
+            if not isinstance(er, dict) or not er.get('wrong') or not er.get('correct'):
+                add('HATA', 'hata-duzelt-madde', n, 'her hatada wrong ve correct gerekli')
+                continue
+            w, c = str(er['wrong']), str(er['correct'])
+            at = fold(text).find(fold(w))
+            if at < 0:
+                add('HATA', 'hata-duzelt-yok', n, f'yanlış ifade metinde geçmiyor: {w!r}')
+            elif any(a < at + len(w) and at < b for a, b in seen):
+                add('HATA', 'hata-duzelt-cakisma', n, f'yanlış ifadeler metinde çakışıyor: {w!r}')
+            else:
+                seen.append((at, at + len(w)))
+            if fold(w) == fold(c):
+                add('HATA', 'hata-duzelt-ayni', n, f'wrong ile correct aynı: {w!r}')
+            others = [o for o in er.get('options') or [] if fold(o) != fold(c)]
+            if len(others) < 1:
+                add('HATA', 'hata-duzelt-secenek', n, 'options en az 1 çeldirici içermeli (doğru cevap otomatik eklenir)')
+            if not er.get('explanation'):
+                add('UYARI', 'hata-duzelt-aciklama', n, 'her hatada explanation önerilir')
 
 def fold(s):
     return str(s or '').lower().replace('ı', 'i').replace('İ', 'i')
@@ -42,6 +125,13 @@ def check_deck(d, out):
     if not d.get('discipline'):
         add('UYARI', 'deste-disiplin', 0, '"discipline" eksik (bölüm üst bilgisinde boş görünür)')
     slides = d.get('slides') or []
+    games = [i for i, s in enumerate(slides) if is_game_slide(s)]
+    if len(games) > 1:
+        add('HATA', 'oyun-sayfasi-tek', 0, 'destede en fazla 1 oyun sayfası olabilir')
+    if games and games[-1] != len(slides) - 1:
+        add('HATA', 'oyun-sayfasi-yer', slides[games[-1]].get('slideNumber'), 'oyun sayfası destenin SON slaytı olmalı')
+    if OYUN_ZORUNLU and not games:
+        add('HATA', 'oyun-sayfasi-yok', 0, 'yeni derste son slayt "[OYUN SAYFASI] Ders sonu oyunları" olmalı (rehber §5.14)')
     nums = [s.get('slideNumber') for s in slides]
     if nums != list(range(1, len(slides) + 1)):
         add('UYARI', 'slayt-sira', 0, 'slideNumber 1\'den başlayıp kesintisiz artmalı')
@@ -81,10 +171,22 @@ def check_deck(d, out):
                 add('HATA', 'soru-cevap', n, f'correctAnswer tek harf (A-E) olmalı; şu an: {ans!r}')
         # Ekranla aynı kaynak sırası (lesson/lessonModel.ts buildSteps): interactiveElements > elements > interactiveElement
         shown = s.get('interactiveElements') or s.get('elements') or ([s['interactiveElement']] if isinstance(s.get('interactiveElement'), dict) else [])
+        game_slide = is_game_slide(s)
+        if game_slide:
+            gt = [e.get('type') for e in shown if isinstance(e, dict)]
+            if not 4 <= len(gt) <= 6 or any(t not in GAME_TYPES for t in gt):
+                add('HATA', 'oyun-sayfasi-oge', n, 'oyun sayfasında 4–6 öge olmalı ve hepsi oyun türü olmalı (sequence_order, estimate_slider, perturbation, fix_the_text)')
+            elif len(set(gt)) < 4:
+                add('UYARI', 'oyun-sayfasi-cesit', n, f'dört oyun türünün hepsi kullanılmalı (şu an {len(set(gt))})')
         for e in shown:
             if not isinstance(e, dict) or not e.get('type'):
                 continue
             t = e.get('type')
+            if t in GAME_TYPES:
+                if not game_slide:
+                    add('HATA', 'oyun-yeri', n, f'{t} yalnız son slayttaki oyun sayfasında kullanılır')
+                check_game(e, n, add)
+                continue
             if t not in TYPES:
                 add('HATA', 'tur', n, f'bilinmeyen etkileşim türü: {t}')
                 continue

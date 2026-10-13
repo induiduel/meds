@@ -5,7 +5,7 @@ Denetimler:
   - Her çıktı dosyası var ve şemaya uygun.
   - KANIT: her `kanit.alinti` `kaynak.md`'nin belirtilen sayfasında (±1 sayfa) kelimesi kelimesine geçiyor
     (Türkçe katlama + boşluk normalize). Geçmeyen kayıt HATA'dır (uydurma bilgi reddedilir).
-  - deck.json: /app/scripts/validate_learning_decks.py 0 HATA.
+  - deck.json: /app/scripts/validate_learning_decks.py --oyun-zorunlu 0 HATA (son slayt ders sonu oyunları).
   - ornek_sorular: kazanım başına 3–10 soru (kolay/orta/zor ≥1, fazlası çoğunlukla orta), A–E tam, doğru A–E,
     her şık ≥20 karakter gerekçeli açıklama, kanıtlı (yayın aracı s16 ile aynı kurallar).
 Sonuç ayrıca <klasör>/denetim.json'a yazılır.
@@ -132,7 +132,8 @@ class Denetim:
                 self.uyarilar.append("ders_notu.md: SPOT BİLGİLER bölümü yok")
 
         if (self.d / "deck.json").exists():
-            r = subprocess.run([sys.executable, str(APP / "scripts" / "validate_learning_decks.py"), str(self.d / "deck.json")],
+            r = subprocess.run([sys.executable, str(APP / "scripts" / "validate_learning_decks.py"), str(self.d / "deck.json")]
+                               + ([] if self.yenileme else ["--oyun-zorunlu"]),  # yenilemede deste önceden üretilmiş
                                capture_output=True, text=True)
             ozet = (r.stdout.strip().splitlines() or [""])[-1]
             if r.returncode != 0 or " 0 HATA" not in ozet:

@@ -262,6 +262,54 @@ Her slaytta 4–6 etkileşim kullanılır (tek tipe yığılma yok; 11 model den
 ### 5.12 Kartlar (`flashcards`)
 - `front` ≤ 140 karakter tek soru; `back` 1–2 cümle; `category` kısa etiket. Eski `question/answer` alanları da okunur ama yeni içerikte `front/back` kullanılır.
 
+### 5.14 Ders Sonu Oyunları (son slayt · 2026-10-13'ten itibaren yeni derslerde ZORUNLU)
+
+Yeni üretilen her destenin **son slaytı** bir oyun sayfasıdır. Dersin tamamını dört oyunla geri çağırır. Son slaytta olduğu için kronoloji kuralı (§5.13) kendiliğinden sağlanır, ama oyunlar **yalnız derste anlatılan bilgiyle** kurulur; sayılar ders notundakiyle birebir olmalıdır.
+
+- **Slayt:** `"title": "[OYUN SAYFASI] Ders Sonu Oyunları: <konu>"`, `"isGameFinale": true`, `"badge": "Ders Sonu Oyunları"`. `synthesisNarrative` 60–150 kelime, yeni bilgi vermez; oyunları tanıtır.
+- **Öğeler:** 4–6 öge, **yalnız** aşağıdaki dört tür; dördü de en az bir kez kullanılır. Bu türler başka hiçbir slaytta kullanılamaz (`oyun-yeri` HATA).
+- **Ekran:** rayda mor "Oyun ·" satırı, başlıkta "Ders sonu oyunları" etiketi. Bileşenler `lesson/LessonGames.tsx`, stil `styles/learn-games.css`.
+- **Doğrulama:** yeni deste `validate_learning_decks.py deck.json --oyun-zorunlu` ile 0 HATA vermeli. Ders işçisinin denetleyicisi bu bayrakla çalışır. Bayraksız çalıştırmada eski desteler oyun sayfası olmadan geçerlidir.
+- **Örnek:** `scripts/fixtures/oyun_sayfasi_ornek.json` (k1-68 Enfeksiyon Epidemiyolojisi için tam bir oyun sayfası).
+
+#### `sequence_order` — Sırala
+Öğrenci karışık basamaklara sırayla dokunarak dizer, "Kontrol et" ile yanlış yerdekiler kırmızı ve doğrusu gösterilir.
+```json
+{ "type": "sequence_order", "prompt": "Tindalizasyon basamaklarını doğru sıraya diz.",
+  "steps": ["1. basamak (doğru sırada)", "2. basamak", "3. basamak", "4. basamak"],
+  "explanation": "Sıranın mekanizma gerekçesi." }
+```
+Kural: 3–8 basamak, birbirinden farklı, kesik değil. `steps` **doğru sırada** yazılır; ekran karıştırır.
+
+#### `estimate_slider` — Değeri tahmin et
+Kaydırıcıyla sayı tahmini; `answer ± tolerance` aralığı doğru sayılır. Birden çok tur `items[]` ile verilir.
+```json
+{ "type": "estimate_slider", "items": [
+  { "prompt": "Kısa süreli pastörizasyonda süt kaç °C'de tutulur?", "unit": "°C",
+    "min": 40, "max": 100, "step": 1, "answer": 72, "tolerance": 2, "explanation": "…" } ] }
+```
+Kural: `min < answer ≤ max`; `tolerance` ≥ 0 ve aralığın yarısından küçük. Yalnız derste geçen sayılar.
+
+#### `perturbation` — Ne değişir?
+Bir müdahale/durum verilir; öğrenci her parametre için Artar / Azalır / Değişmez seçer.
+```json
+{ "type": "perturbation", "scenario": "Bir etkenin ID50 değeri belirgin biçimde küçük bulunuyor.",
+  "question": "Aşağıdakiler nasıl değişir?",
+  "parameters": [ { "name": "Etkenin enfektivitesi", "correct": "up", "explanation": "…" },
+                  { "name": "Gereken etken miktarı", "correct": "down", "explanation": "…" },
+                  { "name": "…", "correct": "same", "explanation": "…" } ] }
+```
+Kural: en az 3 parametre; `correct` = `up` | `down` | `same`; en az iki farklı yön; her parametrede fizyopatolojik gerekçe.
+
+#### `fix_the_text` — Hatayı düzelt
+Ders cümlelerine benzeyen paragrafta 1–3 yanlış ifade vardır. Öğrenci hatalı kelimeye dokunur, doğrusunu seçer; yanlış kelimeye dokunuş sayılır.
+```json
+{ "type": "fix_the_text",
+  "text": "Pastörizasyon sütü 72 °C'de 15 dakika tutup tam sterilizasyon sağlar …",
+  "errors": [ { "wrong": "15 dakika", "correct": "15 saniye", "options": ["30 dakika", "15 saat"], "explanation": "…" } ] }
+```
+Kural: `text` ≥ 15 kelime; her `wrong` metinde birebir geçer ve çakışmaz; `options` en az 1 çeldirici (doğru cevap ekranda otomatik eklenir); `wrong` ≠ `correct`. Hatalar klasik sınav tuzaklarından seçilir (sayı, yön, kavram karışıklığı).
+
 ### 5.13 Katı Kronoloji ve Sıfır İleriye Sızıntı Kuralı (KESİNLİKLE ZORUNLU)
 
 Öğren modülündeki **11 etkileşim türünün tamamı** (`micro_quiz`, `branching_logic`, `cloze_masking`, `interactive_table`, `causal_chain`, `before_after_slider`, `active_recall`, `spot_the_lie`, `swipe_matching`, `feature_bidding`, `venn_grid`) için katı kronoloji kuralı esastır:
@@ -361,6 +409,7 @@ Dosyalar: `src/components/learn/lesson/`
 - [ ] Zincir basamakları "N. Etiket: tam cümle"; karşılaştırmada sol/sağ eşit.
 - [ ] `correctAnswer` tek harf; şıklarda `key` A–E.
 - [ ] Her 6–12 adımda bir tekrar sayfası ya da tutarlı `badge` ile bölümleme.
+- [ ] Yeni destede son slayt ders sonu oyun sayfası (§5.14); `--oyun-zorunlu` ile 0 HATA.
 - [ ] `python3 scripts/build_kazanim_deck_index.py` çalıştırıldı.
 - [ ] Yeni deste ya da Drive'a yeni PDF geldiyse `.venv-ocr/bin/python scripts/build_deck_pdf_sources.py` çalıştırıldı (PDF eşleşmesi + sayfa hizalaması).
 - [ ] `npm run lint` 0 hata; ekranda Akış ve Stüdyo'da göz kontrolü.

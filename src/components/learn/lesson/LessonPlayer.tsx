@@ -179,7 +179,8 @@ const StepHead: React.FC<{ step: LessonStep; total: number }> = ({ step, total }
       <span className="dot" aria-hidden />
       <span>Adım {step.number} / {total}</span>
       {step.checkpoint > 0 && <span className="ls-tag is-accent">Tekrar {step.checkpoint}</span>}
-      {step.badge && !step.checkpoint && <span className="ls-tag is-plain">{step.badge}</span>}
+      {step.game && <span className="ls-tag is-ok">Ders sonu oyunları</span>}
+      {step.badge && !step.checkpoint && !step.game && <span className="ls-tag is-plain">{step.badge}</span>}
       {step.questions.length > 0 && <span className="ls-tag is-warn">{step.questions.length} soru</span>}
       <FeedbackFlag target={fbTarget(step, 'text', 0, 'Anlatım', step.title, 'Ana içerik › Başlık ve anlatım')} className="ls-head-flag" />
     </div>

@@ -88,7 +88,12 @@ yönetici onayından sonra yayınlanır.
 - `spot_the_lie`: 3–4 önerme, tam 1 `isLie: true`, her önermeye gerekçe. Sorular orta-zor, en az 2 güçlü çeldirici.
 - Her 6–12 adımda bir `[TEKRAR SAYFASI - CHECKPOINT n] Bölüm adı` (yalnız o bölüme kadar işleneni pekiştirir).
 - Slaytta `sourcePdf: {"fileName": <baglam.pdf_adi>, "primaryPage": n}`. `relatedQuestions` EKLEME (gösterim kaldırıldı).
-- Yazınca doğrula: `python3 /app/scripts/validate_learning_decks.py deck.json` → **0 HATA** olana kadar düzelt
+- **Ders sonu oyunları (ZORUNLU, rehber §5.14):** destenin SON slaytı `"[OYUN SAYFASI] Ders Sonu Oyunları: <konu>"`
+  başlıklı, `"isGameFinale": true` olan oyun sayfasıdır. İçinde YALNIZ dört oyun türü (her biri en az bir kez, toplam 4–6):
+  `sequence_order` (Sırala), `estimate_slider` (Değeri tahmin et), `perturbation` (Ne değişir?), `fix_the_text`
+  (Hatayı düzelt). Oyunlar dersin TAMAMINDAN, yalnız derste geçen bilgiyle kurulur; sayılar ders notundakiyle birebir.
+  Bu dört tür başka hiçbir slaytta kullanılmaz. Doğrulama `--oyun-zorunlu` ile yapılır (denetleyici de böyle çalıştırır).
+- Yazınca doğrula: `python3 /app/scripts/validate_learning_decks.py deck.json --oyun-zorunlu` → **0 HATA** olana kadar düzelt
   (`--duzelt` yalnız kesik zincir ve sızan ipucunu onarır; diğerlerini sen düzelt).
 
 ### 4. `ornek_sorular.json`

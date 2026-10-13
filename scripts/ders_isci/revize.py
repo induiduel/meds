@@ -111,6 +111,7 @@ HAFİF REVİZE (baglam.hafif = true) — bu ders yayında V1 olarak KALACAK; sen
   Sayfa no ≥ 1000 ise ikinci PDF'tir (1035 → o PDF'in 35. sayfası). Slayt `sourcePdf` = {"fileName": <o PDF'in adı>,
   "primaryPage": <o PDF'teki GERÇEK sayfa>} — kanıt `sayfa` ise kaynak.md'deki numara.
 - Slayt sayısı içerikle orantılı (kısa ders ~40–60, uzun/yoğun ders 80–150); dolgu yok, her slayt yeni bilgi.
+- SON slayt ders sonu oyun sayfasıdır (TALIMAT.md deck.json maddesi, rehber §5.14); doğrulama `--oyun-zorunlu` ile.
 """
 
 EK_KURALLAR = """

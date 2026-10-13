@@ -146,6 +146,7 @@
 .lr-no svg { width: 12px; height: 12px; }
 .lr-item.is-done .lr-no { background: var(--color-ok-soft); color: var(--color-ok); }
 .lr-item.is-cp .lr-no { background: var(--color-warn-soft); color: var(--color-warn); }
+.lr-item.is-game .lr-no { background: var(--color-ai-soft); color: var(--color-ai); }
 .lr-item.is-cur .lr-no { background: var(--color-accent); color: var(--color-on-accent); }
 .lr-tx { flex: 1; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 /* Sheet içinde (telefon / tablet): satırlar ≥44 px, kendi kaydırıcısı yok (Sheet gövdesi kayar) */
