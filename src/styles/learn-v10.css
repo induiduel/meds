@@ -100,7 +100,7 @@ html[data-layout="akis"] .lv-grid, html[data-layout="akis"] .lv-resume { grid-te
 .ls-top.lv-top { min-height: 52px; gap: 6px; padding-block: 6px; }
 .lv-top .ls-deck { line-height: 1.2; }
 .lv-top .ls-deck small { font-size: 11.5px; }
-.lv-top-prog { flex: 1 1 120px; max-width: 420px; height: 5px; margin: 0 8px; border-radius: 99px; background: var(--color-field); overflow: hidden; }
+.lv-top-prog { flex: 1 1 160px; max-width: none; height: 5px; margin: 0 12px; border-radius: 99px; background: var(--color-field); overflow: hidden; }
 .lv-top-prog i { display: block; height: 100%; border-radius: inherit; background: var(--color-accent); transition: width .45s var(--ease-out-soft, ease); }
 .lv-top:has(.lv-top-prog) .ls-deck { flex: 0 1 auto; max-width: min(520px, 42%); }
 .lv-top:has(.lv-top-prog) .ls-prog { display: none; }
@@ -191,3 +191,135 @@ html[data-layout="akis"] .lv-grid, html[data-layout="akis"] .lv-resume { grid-te
 @media (prefers-reduced-motion: reduce) {
   .lv-res, .lv-card, .lv-bar i, .lv-top-prog i, .lr-item { transition: none; }
 }
+
+/* ---------------- Ortak katman: herkese açık notlar (SPOT / ÖNEMLİ / VURGU) + metin bildirimleri ---------------- */
+.ls-sx { --sx-spot: var(--color-warn); --sx-spot-soft: var(--color-warn-soft); --sx-onemli: var(--color-bad); --sx-onemli-soft: var(--color-bad-soft); --sx-vurgu: var(--color-accent); --sx-vurgu-soft: var(--color-accent-soft); display: flex; flex-direction: column; gap: 10px; min-width: 0; padding-top: 12px; border-top: 1px dashed var(--color-line); }
+.ls-sx-h { display: flex; align-items: center; gap: 6px; min-width: 0; }
+.ls-sx-h .sp { flex: 1; }
+.ls-sx-title { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; color: var(--color-ink-3); }
+.ls-sx-title small { min-width: 20px; height: 18px; padding: 0 6px; border-radius: 99px; background: var(--color-field); color: var(--color-ink-2); font-size: 11px; letter-spacing: 0; display: inline-grid; place-items: center; }
+.ls-sx-add { display: inline-flex; align-items: center; gap: 4px; height: 30px; padding: 0 10px; border: 1px solid var(--color-line); border-radius: 9px; background: var(--color-white); color: var(--color-ink-2); font: inherit; font-size: 12.5px; font-weight: 600; cursor: pointer; }
+.ls-sx-add:hover:not(:disabled) { color: var(--color-accent); border-color: var(--color-accent); }
+.ls-sx-add:disabled { opacity: .5; cursor: default; }
+.ls-sx-add svg { width: 14px; height: 14px; }
+.ls-sx-iconbtn { width: 30px; height: 30px; flex-shrink: 0; display: inline-grid; place-items: center; border: 0; border-radius: 8px; background: transparent; color: var(--color-ink-3); cursor: pointer; }
+.ls-sx-iconbtn:hover { background: var(--color-field); color: var(--color-ink); }
+.ls-sx-iconbtn.is-del:hover { color: var(--color-bad-text, var(--color-bad)); background: var(--color-bad-soft); }
+.ls-sx-iconbtn svg { width: 15px; height: 15px; }
+.ls-sx-iconbtn:focus-visible, .ls-sx-add:focus-visible, .ls-sx-thread:focus-visible, .ls-sx-badge:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+.ls-sx-empty { margin: 0; font-size: 12.5px; color: var(--color-ink-3); }
+.ls-sx-hidden { align-self: flex-start; display: inline-flex; align-items: center; gap: 6px; height: 30px; padding: 0 10px; border: 0; border-radius: 9px; background: var(--color-field); color: var(--color-ink-2); font: inherit; font-size: 12.5px; cursor: pointer; }
+.ls-sx-hidden svg { width: 14px; height: 14px; }
+
+/* Rozet: tür rengi; formda seçici olarak da kullanılır */
+.ls-sx-badge { display: inline-flex; align-items: center; height: 22px; padding: 0 8px; border: 1px solid transparent; border-radius: 6px; font: 800 10.5px/1 var(--font-sans); letter-spacing: .06em; flex-shrink: 0; background: var(--sx-c-soft); color: var(--sx-c); }
+.ls-sx-badge.is-spot { --sx-c: var(--sx-spot); --sx-c-soft: var(--sx-spot-soft); }
+.ls-sx-badge.is-onemli { --sx-c: var(--sx-onemli); --sx-c-soft: var(--sx-onemli-soft); }
+.ls-sx-badge.is-vurgu { --sx-c: var(--sx-vurgu); --sx-c-soft: var(--sx-vurgu-soft); }
+
+.ls-sx-notes { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+.ls-sx-note { position: relative; display: flex; flex-direction: column; gap: 6px; min-width: 0; padding: 10px 12px 10px 14px; border-radius: 12px; border: 1px solid var(--color-line); background: var(--color-white); animation: ls-rise .3s var(--ease-out-soft) both; }
+.ls-sx-note::before { content: ''; position: absolute; left: 0; top: 10px; bottom: 10px; width: 3px; border-radius: 0 3px 3px 0; background: var(--sx-c); }
+.ls-sx-note.is-spot { --sx-c: var(--sx-spot); }
+.ls-sx-note.is-onemli { --sx-c: var(--sx-onemli); }
+.ls-sx-note.is-vurgu { --sx-c: var(--sx-vurgu); }
+.ls-sx-note .top { display: flex; align-items: center; gap: 8px; min-width: 0; }
+.ls-sx-note .who { flex: 1; min-width: 0; font-size: 12px; color: var(--color-ink-3); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.ls-sx-note .who em { font-style: normal; color: var(--color-accent); font-weight: 600; }
+.ls-sx-note .body { margin: 0; font-size: 14px; line-height: 1.55; color: var(--color-ink); white-space: pre-wrap; overflow-wrap: anywhere; }
+.ls-sx-anchor { margin: 0; padding: 4px 10px; border-left: 2px solid var(--color-line-2, var(--color-line)); font-size: 12.5px; line-height: 1.45; color: var(--color-ink-2); font-style: italic; overflow-wrap: anywhere; }
+
+/* Not yazma formu */
+.ls-sx-form { display: flex; flex-direction: column; gap: 8px; padding: 12px; border-radius: 14px; border: 1px solid var(--color-accent); background: var(--color-white); box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-accent) 12%, transparent); }
+.ls-sx-kinds { display: flex; gap: 6px; flex-wrap: wrap; }
+.ls-sx-kinds .ls-sx-badge { height: 30px; padding: 0 12px; cursor: pointer; background: transparent; border-color: var(--color-line); color: var(--color-ink-3); }
+.ls-sx-kinds .ls-sx-badge.is-on { background: var(--sx-c-soft); border-color: var(--sx-c); color: var(--sx-c); }
+.ls-sx-anchor-row { display: flex; align-items: flex-start; gap: 6px; }
+.ls-sx-anchor-row .ls-sx-anchor { flex: 1; min-width: 0; }
+.ls-sx-form textarea, .ls-sx-ta { width: 100%; min-width: 0; resize: vertical; padding: 9px 11px; border-radius: 10px; border: 1px solid transparent; background: var(--color-field); color: var(--color-ink); font: inherit; font-size: 14px; line-height: 1.5; outline: 0; }
+.ls-sx-form textarea:focus, .ls-sx-ta:focus { background: var(--color-white); border-color: var(--color-accent); }
+.ls-sx-form-f { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+.ls-sx-form-f small { font-size: 11.5px; color: var(--color-ink-3); min-width: 0; }
+.ls-sx-form-f .sp { flex: 1; }
+@media (max-width: 639px) { .ls-sx-form textarea, .ls-sx-ta { font-size: 16px; } }
+
+/* Adımdaki bildirilmiş metinler */
+.ls-sx-threads { display: flex; flex-direction: column; gap: 6px; }
+.ls-sx-thread { display: flex; align-items: center; gap: 8px; min-width: 0; width: 100%; padding: 8px 10px; border: 1px solid color-mix(in srgb, var(--color-bad) 30%, var(--color-line)); border-radius: 10px; background: color-mix(in srgb, var(--color-bad-soft) 55%, var(--color-white)); color: var(--color-ink); font: inherit; font-size: 13px; text-align: left; cursor: pointer; }
+.ls-sx-thread .ic { width: 16px; height: 16px; color: var(--color-bad); flex-shrink: 0; }
+.ls-sx-thread .q { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.ls-sx-thread .c { display: inline-flex; align-items: center; gap: 3px; flex-shrink: 0; font-size: 12px; color: var(--color-ink-3); font-variant-numeric: tabular-nums; }
+.ls-sx-thread .c svg { width: 13px; height: 13px; }
+.ls-sx-thread.is-resolved { border-color: var(--color-line); background: var(--color-white); color: var(--color-ink-2); }
+.ls-sx-thread.is-resolved .ic { color: var(--color-ok); }
+.ls-sx-resolved { display: flex; flex-direction: column; gap: 6px; }
+.ls-sx-resolved summary { font-size: 12px; color: var(--color-ink-3); cursor: pointer; padding: 2px 0; }
+.ls-sx-resolved[open] summary { margin-bottom: 6px; }
+
+/* Metin içi işaretler (CSS Highlight API) + kırmızı "!" düğmesi */
+::highlight(ls-sx-report) { text-decoration: underline wavy var(--color-bad); text-decoration-thickness: 1.5px; text-underline-offset: 3px; background-color: color-mix(in srgb, var(--color-bad) 10%, transparent); }
+::highlight(ls-sx-spot) { background-color: color-mix(in srgb, var(--color-warn) 22%, transparent); }
+::highlight(ls-sx-onemli) { background-color: color-mix(in srgb, var(--color-bad) 16%, transparent); }
+::highlight(ls-sx-vurgu) { background-color: color-mix(in srgb, var(--color-accent) 16%, transparent); }
+.ls-sx-flag { display: inline-grid; place-items: center; width: 1.25em; height: 1.25em; margin: 0 0 0 .15em; padding: 0; border: 0; border-radius: 99px; background: transparent; color: var(--color-bad); vertical-align: -.2em; cursor: pointer; line-height: 1; position: relative; }
+.ls-sx-flag::after { content: ''; position: absolute; inset: -9px; } /* dokunma alanı ≥ 36 px */
+.ls-sx-flag svg { width: 1.05em; height: 1.05em; fill: var(--color-bad); stroke: var(--color-white); stroke-width: 2.4; stroke-linecap: round; }
+.ls-sx-flag:hover svg, .ls-sx-flag:focus-visible svg { transform: scale(1.15); }
+.ls-sx-flag:focus-visible { outline: 2px solid var(--color-bad); outline-offset: 1px; }
+@media (prefers-reduced-motion: no-preference) { .ls-sx-flag svg { transition: transform .15s; animation: ls-sx-pop .4s var(--ease-out-soft) both; } }
+@keyframes ls-sx-pop { from { transform: scale(.4); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+
+/* Bildir / tartışma pencereleri (Sheet: gövdeye taşınır, .ls-root dışında) */
+.ls-sx-sheet { display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+.ls-sx-quote { margin: 0; display: flex; gap: 8px; align-items: flex-start; padding: 10px 12px; border-radius: 12px; background: var(--color-bad-soft); color: var(--color-ink); font-size: 14px; line-height: 1.5; overflow-wrap: anywhere; }
+.ls-sx-quote > svg { width: 18px; height: 18px; flex-shrink: 0; margin-top: 2px; color: var(--color-bad); }
+.ls-sx-quote.is-resolved { background: var(--color-ok-soft); }
+.ls-sx-quote.is-resolved > svg { color: var(--color-ok); }
+.ls-sx-quote .ctx { color: var(--color-ink-3); }
+.ls-sx-label { font-size: 13px; font-weight: 600; color: var(--color-ink); }
+.ls-sx-count { font-size: 11.5px; color: var(--color-ink-3); }
+.ls-sx-meta { display: flex; align-items: center; gap: 8px; }
+.ls-sx-status { display: inline-flex; align-items: center; height: 22px; padding: 0 8px; border-radius: 99px; font-size: 11.5px; font-weight: 700; }
+.ls-sx-status.is-open { background: var(--color-bad-soft); color: var(--color-bad-text, var(--color-bad)); }
+.ls-sx-status.is-resolved { background: var(--color-ok-soft); color: var(--color-ok); }
+.ls-sx-link { border: 0; background: none; padding: 0; color: var(--color-accent); font: inherit; font-size: 12.5px; font-weight: 600; cursor: pointer; }
+.ls-sx-msgs { display: flex; flex-direction: column; gap: 10px; min-height: 120px; }
+.ls-sx-msg { display: flex; gap: 8px; align-items: flex-start; min-width: 0; }
+.ls-sx-msg .bubble { flex: 1; min-width: 0; padding: 8px 10px; border-radius: 4px 12px 12px 12px; background: var(--color-field); }
+.ls-sx-msg.is-mine .bubble { background: var(--color-accent-soft); }
+.ls-sx-msg header { display: flex; align-items: center; gap: 6px; min-width: 0; }
+.ls-sx-msg header b { font-size: 13px; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.ls-sx-msg header small { font-size: 11.5px; color: var(--color-ink-3); white-space: nowrap; }
+.ls-sx-msg header .ls-sx-iconbtn { margin-left: auto; width: 26px; height: 26px; }
+.ls-sx-msg p { margin: 2px 0 0; font-size: 14px; line-height: 1.5; color: var(--color-ink); white-space: pre-wrap; overflow-wrap: anywhere; }
+.ls-sx-compose { display: flex; align-items: flex-end; gap: 8px; width: 100%; }
+.ls-sx-compose .ls-sx-ta { resize: none; max-height: 140px; field-sizing: content; }
+.ls-sx-compose .ms-btn { height: 40px; flex-shrink: 0; }
+
+/* ---------------- Yazı boyutu: her yakınlaştırmada metin sütuna sığar (yatay kaydırma yok) ----------------
+ * Sütun genişliği yüzdeyle telafi EDİLMEZ: CSS zoom'un standart (Chrome 128+, Firefox) ve eski (Safari) modellerinde
+ * yüzdeler farklı çözülür; "100% / zoom" küçültünce taşırıp büyütünce daraltıyordu. Genişlik kabın %100'ü kalır,
+ * yalnız piksel üst sınırı ölçeğe bölünür. Taşabilecek geniş öğeler (tablo, formül, görsel) kendi içinde kayar. */
+.ls-root.is-zoomed .ls-col { width: 100%; max-width: calc(760px / var(--ls-zoom, 1)); }
+.ls-root.is-immersive.is-zoomed .ls-col { max-width: calc(900px / var(--ls-zoom, 1)); }
+.ls-root :is(.ls-A-main, .ls-split-l, .ls-B-body, .ls-B-side-body) { overflow-x: hidden; overflow-x: clip; }
+.ls-root .ls-col, .ls-root .ls-col > *, .ls-root .ls-B-body > *, .ls-root .ls-content > * { min-width: 0; max-width: 100%; }
+.ls-root .ls-content :is(img, video) { max-width: 100%; height: auto; }
+.ls-root.is-zoomed .ls-table { overflow-x: auto; }
+.ls-root.is-zoomed .ls-table table { min-width: 0; }
+.ls-root.is-zoomed :is(.ls-prose, .ls-keys, .ls-ix, .ls-sx) { overflow-wrap: anywhere; }
+.ls-root.is-zoomed :is(.ls-prose pre, .ls-formula, .ls-metrics, .ls-chain) { max-width: 100%; overflow-x: auto; }
+
+/* ---------------- Sürümler (V1 / V2): kartta etiket şeridi, açılış penceresinde seçili sürüm, ders ekranında anahtar ---------------- */
+.lv-ver i { font-style: normal; padding: 0 3px; border-radius: 4px; opacity: .6; }
+.lv-ver i.is-on { opacity: 1; background: var(--color-accent); color: var(--color-on-accent); }
+.lv-vpick.is-selected { border-color: var(--color-accent); background: var(--color-accent-soft); box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-accent) 18%, transparent); }
+.lv-vpick:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+.lv-vpick-label { background: var(--color-accent); color: var(--color-on-accent); }
+.lv-vpick-sel { display: inline-flex; align-items: center; gap: 4px; height: 22px; padding: 0 8px; border-radius: 99px; background: var(--color-accent); color: var(--color-on-accent); font-size: 11.5px; font-weight: 700; }
+.lv-vpick-sel svg { width: 13px; height: 13px; }
+.lv-vswitch { flex-shrink: 0; display: inline-flex; gap: 2px; padding: 2px; border-radius: 9px; background: var(--color-field); }
+.lv-vswitch button { height: 26px; min-width: 32px; padding: 0 8px; border: 0; border-radius: 7px; background: transparent; color: var(--color-ink-3); font: 700 12px var(--font-sans); cursor: pointer; }
+.lv-vswitch button:hover { color: var(--color-ink); }
+.lv-vswitch button[aria-pressed="true"] { background: var(--color-accent); color: var(--color-on-accent); box-shadow: var(--shadow-sm, 0 1px 2px rgb(0 0 0 / .12)); }
+.lv-vswitch button:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 1px; }
