@@ -10960,6 +10960,8 @@ async function startServer() {
         req.path.startsWith('/meds/assets/') ||
         /\.(js|css|map|json|png|jpg|jpeg|svg|ico|woff|woff2)$/i.test(req.path)
       ) {
+        // Cloudflare 404'ü önbelleğe almasın (parça sonradan arşive/dist'e gelince sunulabilsin)
+        res.setHeader('Cache-Control', 'no-store');
         return res.status(404).send('Asset not found');
       }
       res.setHeader('Cache-Control', 'public, max-age=0, must-revalidate');
