@@ -432,7 +432,8 @@ export function chunkPastQuestions(): RagChunk[] {
   for (const q of list) {
     // Sitede gösterilmeyen kayıtlar dizinlenmez: birleştirmede gizlenen kopya, karantina (check-solve dahil)
     const cs = q.checkSolve?.status;
-    if (cs === 'karantina' || (!cs && (q.status === 'quarantined' || q.isQuarantined))) continue;
+    // Faz 17 'kaldirildi': soru olmayan/kopya kayıt çöp kutusunda (mezar taşı), sitede yok
+    if (cs === 'karantina' || cs === 'kaldirildi' || (!cs && (q.status === 'quarantined' || q.isQuarantined))) continue;
     if (q.id && mergedInto(String(q.id))) continue;
     // Check-solve (Faz 16) kaydı güncel ve doğrulanmış içeriktir; eski denetleyici sürümü onu ezmez
     const csOk = cs === 'onayli';
