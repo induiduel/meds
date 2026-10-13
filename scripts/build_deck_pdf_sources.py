@@ -416,6 +416,12 @@ def main():
             if st != 'OK' or len(files) > 1:
                 print(f'{st:9} {did[:50]:50} {" + ".join(f["name"][:26] for f in files) or "—"} | {note}')
         print('Yazıldı:', a.cikti, '·', rp)
+    # Öğren kitaplığının "Ders programı" sırası da aynı checklist'ten tazelenir
+    try:
+        import subprocess
+        subprocess.run([sys.executable, os.path.join(os.path.dirname(os.path.abspath(__file__)), 'build_deck_schedule.py')], check=False)
+    except Exception as e:  # sıralama dosyası eşleşmeyi bozmasın
+        print('Ders programı sırası yazılamadı:', e)
     return 3 if conflicts else 0
 
 

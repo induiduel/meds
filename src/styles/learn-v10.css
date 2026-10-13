@@ -348,3 +348,29 @@
 .ls-split-presets button.is-on i { border-color: var(--color-accent); background-image: linear-gradient(90deg, var(--color-accent) 0 var(--r), transparent var(--r)); opacity: 1; }
 .ls-split.is-rows .ls-split-presets button.is-on i { background-image: linear-gradient(180deg, var(--color-accent) 0 var(--r), transparent var(--r)); }
 @media (hover: none) { .ls-split-presets { opacity: 1; pointer-events: auto; } }
+
+/* Liste görünümü: her deste tek satır (Izgara ↔ Liste, LearnLibrary) */
+.lv-rows { list-style: none; margin: 0; padding: 0; border: 1px solid var(--color-line); border-radius: 14px; background: var(--color-white); overflow: hidden; }
+.lv-row { position: relative; display: flex; align-items: center; border-bottom: 1px solid var(--color-line-soft); }
+.lv-row:last-child { border-bottom: 0; }
+.lv-row-main { flex: 1; min-width: 0; display: grid; grid-template-columns: 30px 72px minmax(0, 1fr) 72px 110px; align-items: center; gap: 12px; padding: 9px 12px; border: 0; background: transparent; font: inherit; color: var(--color-ink); text-align: left; cursor: pointer; }
+.lv-row-main:hover { background: var(--color-field); }
+.lv-row-main:focus-visible { outline: 2px solid var(--color-accent); outline-offset: -2px; }
+.lv-row-n { font-size: 12px; font-weight: 600; color: var(--color-ink-3); font-variant-numeric: tabular-nums; text-align: right; }
+.lv-row-date { font-size: 12px; color: var(--color-ink-3); white-space: nowrap; }
+.lv-row-t { min-width: 0; display: flex; flex-direction: column; gap: 1px; }
+.lv-row-t b { font-size: 14px; font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.lv-row-t small { font-size: 11.5px; color: var(--color-ink-3); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.lv-row-sl { font-size: 12px; color: var(--color-ink-3); font-variant-numeric: tabular-nums; text-align: right; white-space: nowrap; }
+.lv-row-st { display: flex; align-items: center; gap: 6px; font-size: 11.5px; font-weight: 600; color: var(--color-ink-3); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.lv-row-st svg { width: 13px; height: 13px; }
+.lv-row.is-active .lv-row-st { color: var(--color-accent); }
+.lv-row.is-done .lv-row-st { color: var(--color-ok); }
+.lv-row.is-done .lv-bar i { background: var(--color-ok); }
+.lv-row .lv-card-pdf { position: static; flex-shrink: 0; margin-right: 6px; }
+@media (max-width: 640px) {
+  .lv-row-main { grid-template-columns: 24px minmax(0, 1fr) auto; gap: 10px; }
+  .lv-row-date, .lv-row-sl { display: none; }
+  .lv-row-st .lv-bar { display: none; }
+}
+.lv-row-pad { flex-shrink: 0; width: 32px; margin-right: 6px; }

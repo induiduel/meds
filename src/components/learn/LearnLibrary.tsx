@@ -9,17 +9,47 @@
  * Stil: styles/learn-v10.css (.lv-*).
  */
 import React, { useEffect, useMemo, useRef, useState } from 'react';
-import { ArrowRight, Check, FileQuestionMark, FileText, Layers, Search } from 'lucide-react';
+import { ArrowRight, Check, FileQuestionMark, FileText, LayoutGrid, Layers, Rows3, Search } from 'lucide-react';
 import { deckName, type DeckCatalogEntry } from '../../data/deckStore';
 import { useDeckPdfIds, useDeckPdfMissing } from '../../services/deckPdfService';
 import { disciplineClass, disciplineLabel } from '../../utils/discipline';
-import { FilterPills, PageToolbar, type ToolbarChip } from '../ui/PageToolbar';
+import { FilterPills, PageToolbar, QuickOptions, type ToolbarChip } from '../ui/PageToolbar';
+import SCHEDULE from '../../data/deckSchedule.json';
 import { disciplineGroup, type ArchiveFilter } from './LearnHub';
 import '../../styles/learn-v10.css';
 
 type Progress = Record<string, { last?: number; seen?: number[] } | undefined>;
 type Status = 'all' | 'active' | 'done';
 const PAGE = 24;
+
+/** Ders programı kaydı (scripts/build_deck_schedule.py): s sıra, t tarih, k kurul, h hoca */
+type Sched = { s: number; t?: string; k?: number; h?: string };
+const SCHED = SCHEDULE as Record<string, Sched>;
+/** V2 gibi sürümler ana dersin program yerini paylaşır */
+const schedOf = (d: DeckCatalogEntry): Sched | undefined => SCHED[d.id] || SCHED[d.id.replace(/-v\d+$/i, '')];
+
+type View = 'grid' | 'list';
+type Sort = 'program' | 'date_desc' | 'alpha' | 'alpha_desc' | 'progress' | 'recent' | 'slides';
+const SORT_LABEL: Record<Sort, string> = {
+  program: 'Ders programı',
+  date_desc: 'En yeni ders',
+  alpha: 'A → Z',
+  alpha_desc: 'Z → A',
+  progress: 'İlerleme',
+  recent: 'Son açılan',
+  slides: 'Slayt sayısı',
+};
+const VIEW_KEY = 'medsoru_learn_view';
+const SORT_KEY = 'medsoru_learn_sort';
+const readPref = <T extends string>(k: string, ok: readonly T[], def: T): T => {
+  try {
+    const v = localStorage.getItem(k) as T | null;
+    return v && ok.includes(v) ? v : def;
+  } catch {
+    return def;
+  }
+};
+const writePref = (k: string, v: string) => { try { localStorage.setItem(k, v); } catch { /* yok */ } };
 
 const RECENT_KEY = 'medsoru_learn_recent_v1';
 const readRecent = (): Record<string, number> => {
@@ -91,6 +121,10 @@ export const LearnLibrary: React.FC<{
   const [status, setStatus] = useState<Status>('all');
   const [limit, setLimit] = useState(PAGE);
   const [recent] = useState(readRecent);
+  const [view, setViewState] = useState<View>(() => readPref<View>(VIEW_KEY, ['grid', 'list'], 'grid'));
+  const [sort, setSortState] = useState<Sort>(() => readPref<Sort>(SORT_KEY, Object.keys(SORT_LABEL) as Sort[], 'program'));
+  const setView = (v: View) => { setViewState(v); writePref(VIEW_KEY, v); };
+  const setSort = (v: Sort) => { setSortState(v); writePref(SORT_KEY, v); };
   const rootRef = useRef<HTMLDivElement>(null);
   const pdfIds = useDeckPdfIds();
   const pdfMissing = useDeckPdfMissing();
@@ -152,13 +186,26 @@ export const LearnLibrary: React.FC<{
     byQuery.forEach((d) => { c[stateOf(d, progress).status] += 1; });
     return c;
   }, [byQuery, progress]);
-  const visible = useMemo(
-    () => (status === 'all' ? byQuery : byQuery.filter((d) => stateOf(d, progress).status === status)),
-    [byQuery, status, progress]
-  );
+  const visible = useMemo(() => {
+    const list = status === 'all' ? byQuery.slice() : byQuery.filter((d) => stateOf(d, progress).status === status);
+    const name = (d: DeckCatalogEntry) => deckName(d, false);
+    // Programda olmayan desteler program sıralamalarında sona, kendi aralarında eski sıra numarasıyla
+    const prog = (a: DeckCatalogEntry, b: DeckCatalogEntry) =>
+      (schedOf(a)?.s ?? 1e4 + orderOf(a)) - (schedOf(b)?.s ?? 1e4 + orderOf(b)) || name(a).localeCompare(name(b), 'tr');
+    const cmp: Record<Sort, (a: DeckCatalogEntry, b: DeckCatalogEntry) => number> = {
+      program: prog,
+      date_desc: (a, b) => (schedOf(b)?.t || '').localeCompare(schedOf(a)?.t || '') || prog(b, a),
+      alpha: (a, b) => name(a).localeCompare(name(b), 'tr', { numeric: true }),
+      alpha_desc: (a, b) => name(b).localeCompare(name(a), 'tr', { numeric: true }),
+      progress: (a, b) => stateOf(b, progress).pct - stateOf(a, progress).pct || prog(a, b),
+      recent: (a, b) => (recent[b.id] || 0) - (recent[a.id] || 0) || prog(a, b),
+      slides: (a, b) => (b.slideCount || 0) - (a.slideCount || 0) || prog(a, b),
+    };
+    return list.sort(cmp[sort]);
+  }, [byQuery, status, progress, sort, recent]);
 
   // Süzgeç değişince ilk sayfaya dön
-  useEffect(() => setLimit(PAGE), [q, branch, kurul, status, archive]);
+  useEffect(() => setLimit(PAGE), [q, branch, kurul, status, archive, sort]);
   const shown = visible.slice(0, limit);
   const hasMore = visible.length > limit;
   const sentinel = useRef<HTMLDivElement>(null);
@@ -242,6 +289,29 @@ export const LearnLibrary: React.FC<{
         filters={filters}
         filterCount={chips.length}
         filterTitle="Öğren süzgeci"
+        quick={[{
+          id: 'sirala',
+          label: 'Sırala',
+          value: sort !== 'program' ? SORT_LABEL[sort] : undefined,
+          onClear: () => setSort('program'),
+          content: (close) => (
+            <QuickOptions close={close} value={sort} onPick={(v) => setSort(v as Sort)} options={(Object.keys(SORT_LABEL) as Sort[]).map((id) => ({
+              id,
+              label: SORT_LABEL[id],
+              hint: id === 'program' ? 'kurul ve ders günü sırası' : undefined,
+            }))} />
+          ),
+        }]}
+        tools={
+          <div className="pt-view" role="radiogroup" aria-label="Görünüm">
+            {([['grid', 'Izgara', LayoutGrid], ['list', 'Liste', Rows3]] as const).map(([id, label, Icon]) => (
+              <button key={id} type="button" role="radio" aria-checked={view === id} className={view === id ? 'is-on' : ''} onClick={() => setView(id)} title={id === 'grid' ? 'Izgara: kartlar' : 'Liste: her deste tek satır'}>
+                <Icon aria-hidden />
+                <span className="ck-view-l">{label}</span>
+              </button>
+            ))}
+          </div>
+        }
         chips={chips}
         onClearChips={() => { setBranch('all'); setKurul('all'); onArchive('new_only'); }}
       />
@@ -285,6 +355,37 @@ export const LearnLibrary: React.FC<{
         </div>
       ) : (
         <>
+          {view === 'list' ? (
+            <ol className="lv-rows" aria-label="Desteler">
+              {shown.map((d) => {
+                const s = stateOf(d, progress);
+                const sc = schedOf(d);
+                const pdf = !!pdfIds?.has(d.id);
+                return (
+                  <li key={d.id} className={`lv-row ${disciplineClass(d.discipline)} is-${s.status}`}>
+                    <button type="button" className="lv-row-main" onClick={() => onOpen(d.id)} aria-label={`${deckName(d, false)} — ${s.status === 'done' ? 'tamamlandı' : s.status === 'active' ? `%${s.pct}, devam et` : 'başla'}`}>
+                      <span className="lv-row-n">{sc ? sc.s : '—'}</span>
+                      <span className="lv-row-date">{sc?.t ? trDate(sc.t) : ''}</span>
+                      <span className="lv-row-t">
+                        <b>{deckName(d, false)}</b>
+                        <small>{[branchOf(d), versions?.[d.id] ? versions[d.id].join('/') : ''].filter(Boolean).join(' · ')}</small>
+                      </span>
+                      <span className="lv-row-sl">{d.slideCount} slayt</span>
+                      <span className="lv-row-st">
+                        <span className="lv-bar" aria-hidden><i style={{ width: `${s.pct}%` }} /></span>
+                        {s.status === 'done' ? <><Check aria-hidden />Bitti</> : s.status === 'active' ? `%${s.pct}` : 'Başla'}
+                      </span>
+                    </button>
+                    {pdf ? (
+                      <button type="button" className="lv-card-pdf" onClick={() => onOpen(d.id, true)} title="Ders slaytını (PDF) aç" aria-label={`${deckName(d)} slayt PDF'ini aç`}>
+                        <FileText aria-hidden />
+                      </button>
+                    ) : <span className="lv-row-pad" aria-hidden />}
+                  </li>
+                );
+              })}
+            </ol>
+          ) : (
           <ul className="lv-grid bento is-rhythm is-list" aria-label="Desteler">
             {shown.map((d) => {
               const s = stateOf(d, progress);
@@ -332,6 +433,7 @@ export const LearnLibrary: React.FC<{
               );
             })}
           </ul>
+          )}
           {hasMore && (
             <div ref={sentinel} className="lv-more">
               <button type="button" className="ui-btn is-tonal" onClick={() => setLimit((v) => v + PAGE)}>
