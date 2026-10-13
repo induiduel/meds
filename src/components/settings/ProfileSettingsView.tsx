@@ -181,6 +181,29 @@ export const ProfileSettingsView: React.FC<Props> = ({ currentUser, isAdmin, que
             <p className="ayr-foot">{PALETTE_INFO[look.mode][look.palette]?.hint}</p>
           </div>
 
+          {(() => {
+            const accents = findPalette(look.mode, look.palette).accents;
+            if (!accents) return null;
+            return (
+              <div className="ayr-block">
+                <h3 id="ayr-vurgu-h">Vurgu rengi · {PALETTE_INFO[look.mode][look.palette]?.name}</h3>
+                <div role="radiogroup" aria-labelledby="ayr-vurgu-h" className="ayr-accents">
+                  {accents.map((a) => {
+                    const on = look.accent === a.id;
+                    return (
+                      <button key={a.id} type="button" role="radio" aria-checked={on} className="ayr-acc" onClick={() => look.set({ accent: a.id })}
+                        style={{ '--acc': a.accent, '--acc-on': a.on } as React.CSSProperties}>
+                        <span className="ayr-acc-dot" aria-hidden>{on && <Check strokeWidth={3.2} />}</span>
+                        <span className="ayr-acc-n">{a.name}</span>
+                      </button>
+                    );
+                  })}
+                </div>
+                <p className="ayr-foot">Düğmeler, seçili sekmeler ve vurgular bu renge geçer; zemin aynı kalır.</p>
+              </div>
+            );
+          })()}
+
           <div className="ayr-block">
             <h3 id="ayr-duzen-h">Görüntüleme modu</h3>
             <div role="radiogroup" aria-labelledby="ayr-duzen-h" className="ayr-modes">

@@ -1,0 +1,74 @@
+<!doctype html><html><head><meta charset=utf-8><title>Açılış · Model 4 · Çizgisel logo</title>    <style>
+      /* Açılış ekranı (v15) — çizgisel logo: [gri→kırmızı EKG] → [çizgi kalp + içinde el yazısı A] → [kırmızı→gri EKG],
+         kalbin çevresinde nabız yayları ve alt çapraz çizgiler (kullanıcının verdiği logo görseli temel alındı).
+         Akış soldan sağa: tek EKG çizgisi gelir (.3–.94 sn) → kalbin sol kenarında kollara ayrılır, aynı anda (.94–2,19 sn)
+         kalbin üstü ve alt V çizilir, A sağdan yazılmaya başlar (sağ ayak → tepe → sol bacak → altta ilmek → yatay
+         kıvrım → "~") → A'nın "~" ucundan sağ EKG çizilir (2,19–2,79 sn) → yaylar
+         belirir; kalp grubu atar, monitör ışığı önce sol sonra sağ EKG'den geçer. En az ~5 sn görünür (App.tsx).
+         Renkler tema değişkeni (açık/sepya/koyu). */
+      #app-splash {
+        --sp-bg: #F4F5F7; --sp-ink: #3B4048; --sp-red: #D7263D;
+        position: fixed; inset: 0; z-index: 99999; display: grid; place-items: center; overflow: hidden;
+        background: radial-gradient(70vmax 70vmax at 50% 46%, #fff 0%, transparent 60%), var(--sp-bg);
+        transition: opacity .35s ease, transform .35s ease, visibility .35s;
+      }
+      html[data-mode="sepia"] #app-splash { --sp-bg: #F3ECDD; --sp-ink: #4A3D30; --sp-red: #B8323F; background: var(--sp-bg); }
+      html[data-mode="dark"] #app-splash { --sp-bg: #0D1420; --sp-ink: #C3CAD4; --sp-red: #FF5A6E; background: radial-gradient(70vmax 70vmax at 50% 46%, #152033 0%, transparent 60%), var(--sp-bg); }
+      #app-splash.is-leaving { opacity: 0; transform: scale(1.03); visibility: hidden; pointer-events: none; }
+      .sp-logo { position: relative; width: min(520px, 92vw); aspect-ratio: 950 / 440; }
+      .sp-logo > svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+      .sp-d { stroke-dasharray: 1 1; stroke-dashoffset: 1; animation: sp-draw var(--dur) var(--del) cubic-bezier(.42,0,.35,1) both; }
+      .sp-c { stroke-dasharray: .06 2; stroke-dashoffset: .06; opacity: .95; filter: drop-shadow(0 0 3px #fff) drop-shadow(0 0 6px var(--sp-red));
+        animation: sp-comet var(--dur) var(--del) cubic-bezier(.42,0,.35,1) both; }
+      /* Monitör ışığı: tek döngüde önce sol EKG, ardından sağ EKG (öncekinden %10 hızlı) */
+      .sp-m { stroke-dasharray: .07 2; stroke-dashoffset: .07; opacity: .9; filter: drop-shadow(0 0 4px #fff);
+        animation: sp-mon-l 2.7s var(--del) linear infinite; }
+      .sp-m2 { animation-name: sp-mon-r; }
+      .sp-arc { opacity: 0; animation: sp-fade .45s 2.6s ease forwards; }
+      .sp-hg { transform-box: view-box; transform-origin: 510px 500px; will-change: transform; animation: sp-beat 1.5s 2.9s ease-out infinite; }
+      @keyframes sp-draw { to { stroke-dashoffset: 0; } }
+      @keyframes sp-comet { to { stroke-dashoffset: -1; } }
+      @keyframes sp-fade { to { opacity: 1; } }
+      @keyframes sp-mon-l { 0% { stroke-dashoffset: .07; } 50%, 100% { stroke-dashoffset: -1; } }
+      @keyframes sp-mon-r { 0%, 50% { stroke-dashoffset: .07; } 100% { stroke-dashoffset: -1; } }
+      @keyframes sp-beat { 0%, 100% { transform: none; } 12% { transform: scale(1.05); } 24% { transform: none; } 36% { transform: scale(1.03); } 50% { transform: none; } }
+      @media (prefers-reduced-motion: reduce) {
+        #app-splash * { animation: none !important; transform: none !important; }
+        .sp-d { stroke-dashoffset: 0; } .sp-arc { opacity: 1; } .sp-c, .sp-m { display: none; }
+      }
+    </style>
+</head><body style="margin:0">    <div id="app-splash" aria-hidden="true">
+      <div class="sp-logo">
+        <svg viewBox="40 280 950 440" aria-hidden="true">
+          <defs>
+            <linearGradient id="spgL" gradientUnits="userSpaceOnUse" x1="210" y1="0" x2="300" y2="0"><stop offset="0" style="stop-color:var(--sp-ink)"/><stop offset="1" style="stop-color:var(--sp-red)"/></linearGradient>
+            <linearGradient id="spgR" gradientUnits="userSpaceOnUse" x1="730" y1="0" x2="820" y2="0"><stop offset="0" style="stop-color:var(--sp-red)"/><stop offset="1" style="stop-color:var(--sp-ink)"/></linearGradient>
+          </defs>
+          <path class="sp-d" d="M50 528 H150 L165 490 L190 575 L215 370 L238 640 L262 478 L285 562 L298 532 C312 520 330 528 342 506" pathLength="1" fill="none" stroke="url(#spgL)" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" style="--del:0.3s;--dur:0.64s"/>
+          <path class="sp-c" d="M50 528 H150 L165 490 L190 575 L215 370 L238 640 L262 478 L285 562 L298 532 C312 520 330 528 342 506" pathLength="1" fill="none" stroke="#fff" stroke-width="7.0" stroke-linecap="round" stroke-linejoin="round" style="--del:0.3s;--dur:0.64s"/>
+          <path class="sp-d" d="M716 528 H745 L760 488 L782 600 L805 368 L828 628 L852 470 L875 560 L890 530 C902 524 922 528 975 528" pathLength="1" fill="none" stroke="url(#spgR)" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" style="--del:2.19s;--dur:0.6s"/>
+          <path class="sp-c" d="M716 528 H745 L760 488 L782 600 L805 368 L828 628 L852 470 L875 560 L890 530 C902 524 922 528 975 528" pathLength="1" fill="none" stroke="#fff" stroke-width="7.0" stroke-linecap="round" stroke-linejoin="round" style="--del:2.19s;--dur:0.6s"/>
+          <g class="sp-hg">
+            <path class="sp-d" d="M342 506 C318 448 322 368 384 342 C440 320 492 352 510 404 C528 352 580 320 636 342 C698 368 702 448 682 492" pathLength="1" fill="none" stroke="var(--sp-red)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" style="--del:0.94s;--dur:1.25s"/>
+            <path class="sp-c" d="M342 506 C318 448 322 368 384 342 C440 320 492 352 510 404 C528 352 580 320 636 342 C698 368 702 448 682 492" pathLength="1" fill="none" stroke="#fff" stroke-width="7.5" stroke-linecap="round" stroke-linejoin="round" style="--del:0.94s;--dur:1.25s"/>
+            <path class="sp-d" d="M362 546 L510 686 L658 546" pathLength="1" fill="none" stroke="var(--sp-red)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" style="--del:0.94s;--dur:1.25s"/>
+            <path class="sp-c" d="M362 546 L510 686 L658 546" pathLength="1" fill="none" stroke="#fff" stroke-width="7.5" stroke-linecap="round" stroke-linejoin="round" style="--del:0.94s;--dur:1.25s"/>
+            <path class="sp-d" d="M560 586 C548 540 544 480 540 424 C525 460 505 520 486 568 C476 592 428 600 422 576 C416 552 470 540 540 538 C580 537 588 512 608 514 C628 516 634 532 654 528 C670 524 682 510 694 516 C702 520 706 528 716 528" pathLength="1" fill="none" stroke="var(--sp-red)" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round" style="--del:0.94s;--dur:1.25s"/>
+            <path class="sp-c" d="M560 586 C548 540 544 480 540 424 C525 460 505 520 486 568 C476 592 428 600 422 576 C416 552 470 540 540 538 C580 537 588 512 608 514 C628 516 634 532 654 528 C670 524 682 510 694 516 C702 520 706 528 716 528" pathLength="1" fill="none" stroke="#fff" stroke-width="7.1" stroke-linecap="round" stroke-linejoin="round" style="--del:0.94s;--dur:1.25s"/>
+            <path class="sp-arc" d="M300 420 C300 360 340 312 402 298" fill="none" stroke="var(--sp-red)" stroke-width="2.6" stroke-linecap="round"/>
+            <path class="sp-arc" d="M326 432 C330 372 366 332 422 320" fill="none" stroke="var(--sp-red)" stroke-width="2.6" stroke-linecap="round"/>
+            <path class="sp-arc" d="M372 466 C368 420 392 382 432 372" fill="none" stroke="var(--sp-red)" stroke-width="2.6" stroke-linecap="round"/>
+            <path class="sp-arc" d="M720 420 C720 360 680 312 618 298" fill="none" stroke="var(--sp-red)" stroke-width="2.6" stroke-linecap="round"/>
+            <path class="sp-arc" d="M694 432 C690 372 654 332 598 320" fill="none" stroke="var(--sp-red)" stroke-width="2.6" stroke-linecap="round"/>
+            <path class="sp-arc" d="M648 466 C652 420 628 382 588 372" fill="none" stroke="var(--sp-red)" stroke-width="2.6" stroke-linecap="round"/>
+            <path class="sp-arc" d="M352 576 L452 686" fill="none" stroke="var(--sp-red)" stroke-width="2.6" stroke-linecap="round"/>
+            <path class="sp-arc" d="M376 612 L436 672" fill="none" stroke="var(--sp-red)" stroke-width="2.6" stroke-linecap="round"/>
+            <path class="sp-arc" d="M668 576 L568 686" fill="none" stroke="var(--sp-red)" stroke-width="2.6" stroke-linecap="round"/>
+            <path class="sp-arc" d="M644 612 L584 672" fill="none" stroke="var(--sp-red)" stroke-width="2.6" stroke-linecap="round"/>
+          </g>
+          <path class="sp-m" d="M50 528 H150 L165 490 L190 575 L215 370 L238 640 L262 478 L285 562 L298 532 C312 520 330 528 342 506" pathLength="1" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" style="--del:3.0s;--dur:0s"/>
+          <path class="sp-m sp-m2" d="M716 528 H745 L760 488 L782 600 L805 368 L828 628 L852 470 L875 560 L890 530 C902 524 922 528 975 528" pathLength="1" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" style="--del:3.0s;--dur:0s"/>
+        </svg>
+      </div>
+    </div>
+</body></html>

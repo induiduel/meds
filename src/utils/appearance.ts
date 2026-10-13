@@ -1,5 +1,5 @@
 import { useSyncExternalStore } from 'react';
-import { PALETTES, findPalette, installPaletteStyles, type ThemeMode } from './palettes';
+import { PALETTES, findAccent, findPalette, installPaletteStyles, type ThemeMode } from './palettes';
 
 /**
  * Görünüm tercihleri: tema (açık / sarı / koyu), her temada dört palet (a–d, utils/palettes.ts) ve yerleşim yoğunluğu.
@@ -23,6 +23,8 @@ export interface Appearance {
   palettes: Record<ThemeMode, Palette>;
   density: Density;
   layout: LayoutMode;
+  /** Vurgu rengi seçimi, "<tema>:<palet>" anahtarıyla (yalnız `accents` tanımlı paletler; utils/palettes.ts) */
+  accents?: Record<string, string>;
 }
 
 export const MODE_LABELS: Record<ThemeMode, string> = { light: 'Açık', sepia: 'Sarı', dark: 'Koyu' };
@@ -55,6 +57,7 @@ function read(): Appearance {
         }, {} as Record<ThemeMode, Palette>),
         density: p.density === 'compact' || p.density === 'wide' || p.density === 'normal' ? p.density : 'normal',
         layout: p.layout === 'akis' || p.layout === 'odak' || p.layout === 'pano' ? p.layout : 'pano',
+        accents: p.accents && typeof p.accents === 'object' ? { ...p.accents } : {},
       };
     }
     // Eski açık/koyu tercihi bir kez taşınır
@@ -76,6 +79,8 @@ export function applyAppearance(a: Appearance = current) {
   const el = document.documentElement;
   el.dataset.mode = a.mode;
   el.dataset.palette = a.palettes[a.mode];
+  const acc = findAccent(findPalette(a.mode, a.palettes[a.mode]), a.accents?.[`${a.mode}:${a.palettes[a.mode]}`]);
+  if (acc) el.dataset.accent = acc.id; else delete el.dataset.accent;
   el.dataset.density = a.density;
   el.dataset.layout = a.layout;
   el.classList.toggle('theme-dark', a.mode === 'dark');
@@ -164,12 +169,21 @@ async function switchAppearance(next: Appearance) {
   }
 }
 
-export function setAppearance(patch: Partial<Omit<Appearance, 'palettes'>> & { palette?: Palette }) {
-  const next: Appearance = { ...current, palettes: { ...current.palettes } };
+export function setAppearance(patch: Partial<Omit<Appearance, 'palettes' | 'accents'>> & { palette?: Palette; accent?: string }) {
+  const next: Appearance = { ...current, palettes: { ...current.palettes }, accents: { ...(current.accents || {}) } };
   if (patch.mode) next.mode = patch.mode;
   if (patch.density) next.density = patch.density;
   if (patch.layout) next.layout = patch.layout;
   if (patch.palette) next.palettes[next.mode] = patch.palette;
+  // Vurgu rengi: örtüsüz, anında (yalnız 4 token değişir)
+  if (patch.accent) {
+    next.accents![`${next.mode}:${next.palettes[next.mode]}`] = patch.accent;
+    current = next;
+    try { localStorage.setItem(KEY, JSON.stringify(next)); } catch { /* ignore */ }
+    applyAppearance(next);
+    listeners.forEach((l) => l());
+    return;
+  }
   const same = next.mode === current.mode && next.density === current.density && next.palettes[next.mode] === current.palettes[current.mode];
   current = next;
   try {
@@ -196,5 +210,6 @@ export function useAppearance() {
     () => current,
     () => current
   );
-  return { ...a, palette: a.palettes[a.mode], set: setAppearance };
+  const pal = findPalette(a.mode, a.palettes[a.mode]);
+  return { ...a, palette: a.palettes[a.mode], accent: findAccent(pal, a.accents?.[`${a.mode}:${pal.id}`])?.id, set: setAppearance };
 }

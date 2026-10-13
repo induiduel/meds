@@ -9,9 +9,8 @@ import { Sheet } from './Sheet';
  *  - Tablet (768–1023): 1. satır başlık + Süzgeç + araçlar, 2. satır arama + segment.
  *  - Telefon (<768): başlık satırı · arama + Süzgeç · yatay kayan segment (en çok ~128 px).
  *  - İkincil süzgeçler sayfada değil "Süzgeç" sayfasında (Sheet) durur; etkin olanlar tek çip satırında görünür.
- *  - Kaydırınca (shell/useDockAutoHide): aşağı kaydırmada çubuk üst çubuğun arkasına çekilir, arama üst çubuğa taşınır;
- *    yukarı kaydırmada telefonda kompakt döner — başlık satırı üst çubuğun arkasında kalır (--pt-lead kadar kayar,
- *    yerleşim yüksekliği değişmez → kaydırma çapası titremesi olmaz).
+ *  - Yapışkan DEĞİL: sayfayla birlikte kayar, kaydırınca ekranda yer kaplamaz. Aşağıda kalınca
+ *    shell/ScrollTopFab ile tek dokunuşta başa dönülür (arama odaklanır).
  * Stil: styles/toolbar.css (.pt-*). Arama "/" kısayoluyla odaklanır (input'a data-page-search verilir).
  */
 export interface ToolbarSegment<T extends string = string> {
@@ -184,7 +183,7 @@ export function FilterPills<T extends string>({ label, options, value, onChange 
 
 const isPhone = () => typeof window !== 'undefined' && window.matchMedia('(max-width: 767px)').matches;
 
-function QuickPill({ q }: { q: ToolbarQuick }) {
+export function QuickPill({ q }: { q: ToolbarQuick }) {
   const [open, setOpen] = useState(false);
   const [phone, setPhone] = useState(false);
   const [pos, setPos] = useState<{ left: number; top: number; width: number } | null>(null);

@@ -135,7 +135,7 @@ export const TranscriptionsView: React.FC<TranscriptionsViewProps> = ({ onAskAiW
           <p className="text-xs text-ink-3">Arama kelimelerini veya branş filtresini değiştirmeyi deneyebilirsiniz.</p>
         </div>
       ) : (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="bento bento-host is-rhythm is-list">
           {filteredTranscriptions.map(item => {
             const color = DISCIPLINE_COLORS[item.discipline] || { bg: 'bg-field', text: 'text-ink-2', border: 'border-line' };
             return (

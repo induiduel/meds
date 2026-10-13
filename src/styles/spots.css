@@ -20,7 +20,7 @@
 /* ---------- sayfa iskeleti ---------- */
 .xs-page { container: xs / inline-size; min-width: 0; scroll-margin-top: calc(var(--sh-top-h, 52px) + 8px); }
 .xs-layout { display: block; min-width: 0; }
-.xs-main { display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+.xs-main { container-type: inline-size; display: flex; flex-direction: column; gap: 10px; min-width: 0; }
 .xs-rail, .xs-panel { display: none; }
 
 .xs-cap { display: block; padding: 0; margin: 0; font-size: 11px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; color: var(--color-ink-3); }
@@ -92,8 +92,9 @@
 .xs-onem-seg button { height: 30px; font-size: 12.5px; padding: 0 8px; }
 
 /* ---------- kart ızgarası ---------- */
-.xs-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 10px; align-items: start; }
-.xs-sec { grid-column: 1 / -1; display: flex; align-items: baseline; gap: 8px; margin: 10px 0 0; min-width: 0; font-size: 14px; font-weight: 700; color: var(--color-ink); }
+/* Bento ikili ritim (styles/bento.css): 7/5 zikzak; ders başlıkları (.xs-sec.bt-full) ritme sayılmaz */
+.xs-grid.bento { --bt-gap: 10px; --bt-big: 7; --bt-small: 5; }
+.xs-sec { display: flex; align-items: baseline; gap: 8px; margin: 10px 0 0; min-width: 0; font-size: 14px; font-weight: 700; color: var(--color-ink); }
 .xs-sec:first-child { margin-top: 0; }
 .xs-sec b { flex-shrink: 0; min-width: 24px; height: 22px; padding: 0 6px; border-radius: 7px; display: inline-grid; place-items: center; background: var(--color-accent-soft); color: var(--color-accent); font-size: 12px; font-variant-numeric: tabular-nums; }
 .xs-sec span { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
@@ -201,7 +202,7 @@
 
 /* ---------- tablet: iki sütun kart ---------- */
 @container xs (min-width: 640px) {
-  .xs-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+  .xs-grid.bento { --bt-gap: 12px; }
   .xs-head-row { gap: 14px; }
   .xs-head-t h1 { font-size: 22px; }
   .xs-head { flex-direction: row; flex-wrap: wrap; align-items: center; }
@@ -224,9 +225,12 @@
   html:not([data-layout="akis"]):not([data-layout="pano"]) .xs-ctx-t h2 { font-size: 18px; }
 }
 
-/* ---------- görüntüleme modu: Akış = tek sütun okuma ---------- */
-html[data-layout="akis"] .xs-grid { grid-template-columns: minmax(0, 1fr); }
+/* ---------- görüntüleme modu: Akış = tek sütun okuma (bento .is-list) ---------- */
 
 @media (prefers-reduced-motion: reduce) {
   .xs-page *, .xs-page *::before, .xs-page *::after { transition: none !important; }
 }
+
+/* Kurul · Ders · Konu · Kazanım hızlı süzgeçleri (ExamSpotsView) — akışta, yapışkan değil */
+.xs-quick { margin: 2px 0 0; }
+.xs-ctx-kz { display: block; margin-top: 2px; font-size: 12.5px; line-height: 1.35; color: var(--color-accent); overflow-wrap: anywhere; }

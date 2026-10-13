@@ -199,8 +199,10 @@ services:
       - MEDS_ISCI_API=http://meds-server:3000
       - MEDS_EMBED_URL=http://meds-embed:8094/embed
       - MEDS_EMBED_BGE_URL=http://meds-embed:8094/embed
-      - MEDS_ISCI_GUNLUK=2
-      - MEDS_ISCI_SAATLER=01-08
+      - MEDS_ISCI_GUNLUK=4
+      - MEDS_ISCI_SAATLER=00-24
+      - MEDS_ISCI_ARALIK=7200
+      - MEDS_ISCI_DERS_ARASI=10800
       # kullanıcı kararı (2026-10-12): ders işçisi Opus 5.5, düşük efor (claude -p --model … --effort low)
       - MEDS_ISCI_MODEL=claude-opus-5-5
       - MEDS_ISCI_EFFORT=low

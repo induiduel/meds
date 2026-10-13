@@ -2,6 +2,8 @@ import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { Search, X } from 'lucide-react';
 import { useStorageRefresh } from '../../hooks/useStorageRefresh';
 import { SpotCard } from './SpotCard';
+import { QuickOptions, QuickPill, type QuickOption, type ToolbarQuick } from '../ui/PageToolbar';
+import kurulIndex from '../../data/kazanimlar/index.json';
 import { ANAHTAR, KATEGORILER, Kategori, Spot, Veri, azHareket, kucuk, okuOgrenilen, yazOgrenilen } from './spotsShared';
 
 export { KATEGORILER };
@@ -24,6 +26,10 @@ const ONEM_SECENEK: { id: OnemSuzgec; ad: string }[] = [
   { id: 'yuksek', ad: 'Yüksek' },
   { id: 'ogrenilmemis', ad: 'Öğrenilmemiş' },
 ];
+
+/** Spot → kazanım eşlemesi (scripts/sinav_spotlari/kazanim_esle.py, bge-m3 ile en yakın kazanım) */
+interface KazanimEsleme { dersler: Record<string, string[]>; spotlar: Record<string, number> }
+const KURULLAR = (kurulIndex as { kurul: number; name: string }[]).map((k) => ({ no: k.kurul, ad: k.name }));
 
 const tr = (n: number) => n.toLocaleString('tr-TR');
 
@@ -60,7 +66,11 @@ export const ExamSpotsView: React.FC = () => {
   const [hata, setHata] = useState(false);
   const [q, setQ] = useState('');
   const [aramaAcik, setAramaAcik] = useState(false);
-  const [ders, setDers] = useState(0); // 0 = tüm dersler
+  const [ders, setDers] = useState(0); // 0 = tüm konular (tek ders notu = konu)
+  const [disiplin, setDisiplin] = useState(''); // '' = tüm dersler (Tıbbi Patoloji, Üroloji…)
+  const [kazanim, setKazanim] = useState(''); // '' | "<konu no>:<kazanım sırası>"
+  const [kurulS, setKurulS] = useState(0); // 0 = tüm kurullar
+  const [esleme, setEsleme] = useState<KazanimEsleme | null>(null);
   const [katlar, setKatlar] = useState<Set<Kategori>>(() => new Set()); // boş = hepsi
   const [onemS, setOnemS] = useState<OnemSuzgec>('hepsi');
   const [sinav, setSinav] = useState(false);
@@ -82,6 +92,9 @@ export const ExamSpotsView: React.FC = () => {
     import('../../data/exam_spots_k1.json')
       .then((m) => { if (!iptal) setVeri((m.default ?? m) as unknown as Veri); })
       .catch(() => { if (!iptal) setHata(true); });
+    import('../../data/exam_spots_k1_kazanim.json')
+      .then((m) => { if (!iptal) setEsleme((m.default ?? m) as unknown as KazanimEsleme); })
+      .catch(() => { /* kazanım süzgeci boş kalır */ });
     return () => { iptal = true; };
   }, []);
 
@@ -113,7 +126,10 @@ export const ExamSpotsView: React.FC = () => {
     if (!veri) return [] as Spot[];
     const kelimeler = kucuk(q.trim()).split(/\s+/).filter(Boolean);
     return veri.spotlar.filter((s) => {
+      if (kurulS && kurulS !== (veri.kurul ?? 1)) return false;
       if (ders && s.ders !== ders) return false;
+      if (disiplin && dersMap.get(s.ders)?.disiplin !== disiplin) return false;
+      if (kazanim && `${s.ders}:${esleme?.spotlar[s.id]}` !== kazanim) return false;
       if (onemS === 'yuksek' && s.onem < 3) return false;
       if (onemS === 'ogrenilmemis' && ogrenilen.has(s.id)) return false;
       if (kelimeler.length) {
@@ -122,7 +138,7 @@ export const ExamSpotsView: React.FC = () => {
       }
       return true;
     });
-  }, [veri, ders, onemS, ogrenilen, q, aramaMetni]);
+  }, [veri, ders, disiplin, kazanim, kurulS, esleme, dersMap, onemS, ogrenilen, q, aramaMetni]);
 
   const katSayi = useMemo(() => {
     const m: Partial<Record<Kategori, number>> = {};
@@ -137,7 +153,7 @@ export const ExamSpotsView: React.FC = () => {
 
   // Süzgeç değişince çizim sınırı başa döner
   const katAnahtar = [...katlar].sort().join(',');
-  useEffect(() => { setLimit(SAYFA); }, [ders, katAnahtar, onemS, q]);
+  useEffect(() => { setLimit(SAYFA); }, [ders, disiplin, kazanim, kurulS, katAnahtar, onemS, q]);
 
   // Sona yaklaşınca 30 kart daha
   useEffect(() => {
@@ -158,6 +174,7 @@ export const ExamSpotsView: React.FC = () => {
     const s = veri.spotlar.find((x) => x.id === odak);
     if (!s) { setOdak(null); return; }
     setDers(s.ders);
+    setDisiplin(''); setKazanim(''); setKurulS(0);
     setKatlar(new Set());
     setOnemS('hepsi');
     setQ('');
@@ -204,6 +221,7 @@ export const ExamSpotsView: React.FC = () => {
 
   const dersSec = (no: number) => {
     setDers(no);
+    if (!kazanim.startsWith(`${no}:`)) setKazanim('');
     const el = sayfaRef.current;
     if (el && el.getBoundingClientRect().top < 0) el.scrollIntoView({ block: 'start', behavior: azHareket() ? 'auto' : 'smooth' });
   };
@@ -219,14 +237,65 @@ export const ExamSpotsView: React.FC = () => {
     if (n.has(k)) n.delete(k); else n.add(k);
     return n.size === KATEGORILER.length ? new Set() : n;
   });
-  const temizle = () => { setKatlar(new Set()); setOnemS('hepsi'); setQ(''); };
+  const temizle = () => { setKatlar(new Set()); setOnemS('hepsi'); setQ(''); setDisiplin(''); setKazanim(''); setKurulS(0); setDers(0); };
 
   const toplam = veri?.spotlar.length || 0;
   const ogrenilenSayi = useMemo(() => [...dersOgrenilen.values()].reduce((a, b) => a + b, 0), [dersOgrenilen]);
   const seciliDers = ders ? dersMap.get(ders) : undefined;
-  const suzgecVar = katlar.size > 0 || onemS !== 'hepsi' || !!q.trim();
+  const suzgecVar = katlar.size > 0 || onemS !== 'hepsi' || !!q.trim() || !!disiplin || !!kazanim || !!kurulS;
   const gorunen = liste.slice(0, limit);
   const kapsamToplam = seciliDers ? dersToplam.get(seciliDers.no) || 0 : toplam;
+
+  // ---------- Kurul · Ders · Konu · Kazanım hızlı süzgeçleri (sayfayla birlikte kayar, yapışkan değil) ----------
+  const disiplinler = useMemo(() => {
+    const m = new Map<string, number>();
+    for (const d of veri?.dersler || []) m.set(d.disiplin, (m.get(d.disiplin) || 0) + (dersToplam.get(d.no) || 0));
+    return [...m.entries()].sort((a, b) => b[1] - a[1]);
+  }, [veri, dersToplam]);
+  const konular = useMemo(() => (veri?.dersler || []).filter((d) => !disiplin || d.disiplin === disiplin), [veri, disiplin]);
+  const kazanimSayi = useMemo(() => {
+    const m = new Map<string, number>();
+    if (esleme) for (const [id, i] of Object.entries(esleme.spotlar)) { const no = id.match(/^k\d+-(\d+)-/)?.[1]; if (no) { const k = `${+no}:${i}`; m.set(k, (m.get(k) || 0) + 1); } }
+    return m;
+  }, [esleme]);
+  const kazanimSecenek: QuickOption[] = useMemo(() => {
+    if (!esleme) return [];
+    const kaynak = ders ? konular.filter((d) => d.no === ders) : konular;
+    return kaynak.flatMap((d) => (esleme.dersler[String(d.no)] || []).map((m, i) => ({
+      id: `${d.no}:${i}`, label: m, count: kazanimSayi.get(`${d.no}:${i}`) || 0, group: ders ? undefined : `${d.no} · ${d.baslik}`,
+    })));
+  }, [esleme, konular, ders, kazanimSayi]);
+  const kazanimMetni = kazanim && esleme ? esleme.dersler[kazanim.split(':')[0]]?.[+kazanim.split(':')[1]] : undefined;
+  const kisalt = (t: string, n = 26) => (t.length > n ? `${t.slice(0, n - 1)}…` : t);
+  const quick: ToolbarQuick[] = [
+    {
+      id: 'kurul', label: 'Kurul', value: kurulS ? `Kurul ${kurulS}` : undefined, onClear: () => setKurulS(0),
+      content: (close) => <QuickOptions close={close} value={String(kurulS)} onPick={(id) => setKurulS(+id)}
+        options={[{ id: '0', label: 'Tüm kurullar', count: toplam }, ...KURULLAR.map((k) => ({ id: String(k.no), label: `Kurul ${k.no}`, hint: k.ad, count: k.no === (veri?.kurul ?? 1) ? toplam : 0 }))]} />,
+    },
+    {
+      id: 'ders', label: 'Ders', value: disiplin ? kisalt(disiplin, 22) : undefined, onClear: () => setDisiplin(''),
+      content: (close) => <QuickOptions close={close} value={disiplin} onPick={(id) => {
+        setDisiplin(id);
+        if (id && ders && dersMap.get(ders)?.disiplin !== id) { setDers(0); setKazanim(''); }
+      }} options={[{ id: '', label: 'Tüm dersler', count: toplam }, ...disiplinler.map(([ad, n]) => ({ id: ad, label: ad, count: n }))]} />,
+    },
+    {
+      id: 'konu', label: 'Konu', value: seciliDers ? kisalt(`${seciliDers.no} · ${seciliDers.baslik}`) : undefined, onClear: () => dersSec(0), wide: true,
+      content: (close) => <QuickOptions close={close} searchable placeholder="Konu ara" value={String(ders)} onPick={(id) => dersSec(+id)}
+        options={[{ id: '0', label: 'Tüm konular' }, ...konular.map((d) => ({ id: String(d.no), label: `${d.no} · ${d.baslik}`, hint: disiplin ? undefined : d.disiplin, count: dersToplam.get(d.no) || 0 }))]} />,
+    },
+    {
+      id: 'kazanim', label: 'Kazanım', value: kazanimMetni ? kisalt(kazanimMetni, 30) : undefined, onClear: () => setKazanim(''), wide: true,
+      content: (close) => kazanimSecenek.length
+        ? <QuickOptions close={close} searchable placeholder="Kazanım ara" value={kazanim} onPick={(id) => {
+            setKazanim(id);
+            const no = +id.split(':')[0];
+            if (no && no !== ders) setDers(no);
+          }} options={kazanimSecenek} />
+        : <p className="pt-qo-empty">{esleme ? 'Bu seçim için kazanım yok' : 'Kazanımlar yükleniyor…'}</p>,
+    },
+  ];
 
   const aramaKutusu = (cls: string, ref?: React.Ref<HTMLInputElement>) => (
     <label className={`xs-search ${cls}`}>
@@ -250,20 +319,20 @@ export const ExamSpotsView: React.FC = () => {
       <div className="xs-layout">
         {/* ---------- Ders rayı (masaüstü) ---------- */}
         <aside className="xs-rail" aria-label="Dersler">
-          <span className="xs-cap">Dersler · Kurul {veri?.kurul ?? 1}</span>
+          <span className="xs-cap">{disiplin || 'Konular'} · Kurul {veri?.kurul ?? 1}</span>
           <div className="xs-rail-list" role="tablist" aria-orientation="vertical" aria-label="Ders seç">
             {!veri && Array.from({ length: 8 }, (_, i) => <span key={i} className="ui-skel xs-rail-skel" />)}
             {veri && (
               <button type="button" role="tab" aria-selected={ders === 0} aria-controls="xs-grid" className={`xs-rail-i${ders === 0 ? ' is-on' : ''}`} onClick={() => dersSec(0)}>
                 <span className="xs-rail-no" aria-hidden>∑</span>
                 <span className="xs-rail-mid">
-                  <span className="xs-rail-t">Tüm dersler</span>
+                  <span className="xs-rail-t">Tüm konular</span>
                   <span className="xs-bar" aria-hidden><span style={{ width: `${toplam ? (ogrenilenSayi / toplam) * 100 : 0}%` }} /></span>
                 </span>
                 <span className="xs-rail-n">{tr(toplam)}</span>
               </button>
             )}
-            {veri?.dersler.map((d) => {
+            {konular.map((d) => {
               const n = dersToplam.get(d.no) || 0;
               const o = dersOgrenilen.get(d.no) || 0;
               return (
@@ -302,13 +371,20 @@ export const ExamSpotsView: React.FC = () => {
             </div>
           </header>
 
-          {/* Ders hapları (telefon/tablet) */}
+          {/* Kurul · Ders · Konu · Kazanım (akışta; kaydırınca yer kaplamaz) */}
+          {veri && (
+            <div className="pt-quick xs-quick" role="toolbar" aria-label="Kurul, ders, konu ve kazanım süzgeçleri">
+              {quick.map((x) => <QuickPill key={x.id} q={x} />)}
+            </div>
+          )}
+
+          {/* Konu hapları (telefon/tablet) */}
           <div className="xs-strip" ref={seritRef} role="tablist" aria-label="Ders seç">
             {!veri && Array.from({ length: 9 }, (_, i) => <span key={i} className="ui-skel xs-pill-skel" />)}
             {veri && (
               <button type="button" role="tab" aria-selected={ders === 0} aria-controls="xs-grid" className={`xs-pill${ders === 0 ? ' is-on' : ''}`} onClick={() => dersSec(0)}>Tümü</button>
             )}
-            {veri?.dersler.map((d) => {
+            {konular.map((d) => {
               const tamam = (dersOgrenilen.get(d.no) || 0) >= (dersToplam.get(d.no) || 1);
               return (
                 <button key={d.no} type="button" role="tab" aria-selected={ders === d.no} aria-controls="xs-grid" aria-label={`Ders ${d.no}: ${d.baslik}${tamam ? ' (tamamlandı)' : ''}`} title={d.baslik}
@@ -338,12 +414,13 @@ export const ExamSpotsView: React.FC = () => {
           {veri && (
             <div className="xs-ctx">
               <div className="xs-ctx-t">
-                <h2>{seciliDers ? <><span>Ders {seciliDers.no} ·</span> {seciliDers.baslik}</> : 'Tüm dersler'}</h2>
+                <h2>{seciliDers ? <><span>Konu {seciliDers.no} ·</span> {seciliDers.baslik}</> : (disiplin || 'Tüm konular')}</h2>
                 <span aria-live="polite">
                   {seciliDers ? `${seciliDers.disiplin} · ` : ''}
                   {liste.length === kapsamToplam ? `${tr(liste.length)} spot` : `${tr(liste.length)} / ${tr(kapsamToplam)} spot`}
                   {seciliDers ? ` · ${dersOgrenilen.get(seciliDers.no) || 0} öğrenildi` : ''}
                 </span>
+                {kazanimMetni && <span className="xs-ctx-kz">Kazanım: {kazanimMetni}</span>}
               </div>
               {onemGrubu('xs-onem-inline')}
             </div>
@@ -356,7 +433,7 @@ export const ExamSpotsView: React.FC = () => {
             </div>
           )}
 
-          <div className="xs-grid" id="xs-grid" aria-busy={!veri && !hata}>
+          <div className="xs-grid bento is-duo is-rhythm is-list" id="xs-grid" aria-busy={!veri && !hata}>
             {!veri && !hata && Array.from({ length: 6 }, (_, i) => <IskeletKart key={i} i={i} />)}
             {gorunen.map((s, i) => {
               const yeniDers = !ders && (i === 0 || gorunen[i - 1].ders !== s.ders);
@@ -364,7 +441,7 @@ export const ExamSpotsView: React.FC = () => {
               return (
                 <React.Fragment key={s.id}>
                   {yeniDers && (
-                    <h3 className="xs-sec"><b>{s.ders}</b><span>{d?.baslik || 'Ders'}</span>{d?.disiplin && <small>{d.disiplin}</small>}</h3>
+                    <h3 className="xs-sec bt-full"><b>{s.ders}</b><span>{d?.baslik || 'Ders'}</span>{d?.disiplin && <small>{d.disiplin}</small>}</h3>
                   )}
                   <SpotCard s={s} sinav={sinav} ogrenildi={ogrenilen.has(s.id)} vurgulu={vurgu === s.id} onOgren={ogren} />
                 </React.Fragment>

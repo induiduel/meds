@@ -264,67 +264,60 @@ export const StatsView: React.FC<Props> = ({ questions, currentUser, onGo }) => 
         </div>
       </header>
 
-      <section className="stv-kpis" aria-label="Özet">
+      {/* Bento pano (styles/bento.css): dört sayı kutusu, altında geniş doğruluk kartı + yanda etkinlik / zayıf konular */}
+      <div className="stv-bento bento" role="group" aria-label="Özet">
         {kpis.map((k) => (
-          <div key={k.l} className="stv-kpi">
+          <div key={k.l} className="stv-kpi bt-mini">
             <span className="l">{k.l}</span>
             <strong className="v">{k.v}</strong>
             <span className={`d ${k.d.dir === 'up' ? 'is-up' : k.d.dir === 'down' ? 'is-down' : ''}`}>{k.d.t}</span>
           </div>
         ))}
-      </section>
 
-      {(showBars || showSide) && (
-        <div className={`stv-main ${showBars && showSide ? '' : 'is-one'}`}>
-          {showBars && (
-            <section className="stv-card" aria-labelledby="stv-acc-h">
-              <div className="stv-h"><h2 id="stv-acc-h">Derslere göre doğruluk</h2><span>{period === 'kurul' && currentKurul ? kurulLabel(currentKurul) : period === 'hafta' ? 'son 7 gün' : 'son 30 gün'}</span></div>
-              {lessonsLoading ? (
-                <div className="stv-bars" aria-busy="true">
-                  {Array.from({ length: 5 }, (_, i) => <div key={i} className="stv-bar"><span className="ui-skel stv-skel-t" /><span className="ui-skel stv-skel-b" /><span /></div>)}
-                </div>
-              ) : (
-                <ul className="stv-bars">
-                  {bars.map((b) => (
-                    <li key={b.d} className="stv-bar">
-                      <span className="t" title={b.d}>{b.d}</span>
-                      <span className="tr" role="img" aria-label={`%${b.acc} doğru, ${b.n} soru`}><span className={`f ${tone(b.acc)}`} style={{ width: `${Math.max(2, b.acc)}%` }} /></span>
-                      <span className="v">%{b.acc}<small>{b.n}</small></span>
-                    </li>
-                  ))}
-                </ul>
-              )}
-            </section>
-          )}
+        {showBars && (
+          <section className={`stv-card ${showSide ? 'bt-wide' : 'bt-full'} ${heatActive && weak.length > 0 ? 'bt-tall' : ''}`} aria-labelledby="stv-acc-h">
+            <div className="stv-h"><h2 id="stv-acc-h">Derslere göre doğruluk</h2><span>{period === 'kurul' && currentKurul ? kurulLabel(currentKurul) : period === 'hafta' ? 'son 7 gün' : 'son 30 gün'}</span></div>
+            {lessonsLoading ? (
+              <div className="stv-bars" aria-busy="true">
+                {Array.from({ length: 5 }, (_, i) => <div key={i} className="stv-bar"><span className="ui-skel stv-skel-t" /><span className="ui-skel stv-skel-b" /><span /></div>)}
+              </div>
+            ) : (
+              <ul className="stv-bars">
+                {bars.map((b) => (
+                  <li key={b.d} className="stv-bar">
+                    <span className="t" title={b.d}>{b.d}</span>
+                    <span className="tr" role="img" aria-label={`%${b.acc} doğru, ${b.n} soru`}><span className={`f ${tone(b.acc)}`} style={{ width: `${Math.max(2, b.acc)}%` }} /></span>
+                    <span className="v">%{b.acc}<small>{b.n}</small></span>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </section>
+        )}
 
-          {showSide && (
-            <section className="stv-card stv-side" aria-label="Etkinlik ve zayıf konular">
-              {heatActive && (
-                <>
-                  <div className="stv-h"><h2>Etkinlik</h2><span>son 12 hafta · {fmtDur(totalSec)}</span></div>
-                  <div className="stv-heat" role="img" aria-label="Son 12 haftada günlük etkinlik">
-                    {heat.map((h) => <i key={h.key} className={h.lvl ? `l${h.lvl}` : ''} title={`${new Date(h.key).toLocaleDateString('tr-TR')} · ${fmtDur(h.s)}${h.n ? ` · ${h.n} soru` : ''}`} />)}
-                  </div>
-                  <div className="stv-legend"><span>Az</span><i /><i className="l1" /><i className="l2" /><i className="l3" /><i className="l4" /><span>Çok</span></div>
-                  <p className="stv-note"><Clock3 aria-hidden /> Süre, sekme açıkken ve son bir dakikada etkileşim varken sayılır.</p>
-                </>
-              )}
-              {weak.length > 0 && (
-                <>
-                  <div className="stv-h"><h2>Zayıf konular</h2><span>%60 altı</span></div>
-                  <div className="stv-weak">
-                    {weak.map((w) => (
-                      <button key={w.d} type="button" onClick={() => onGo('study')} title={`${w.d} · Çalış sayfasında yanlışlarını yeniden çöz`}>
-                        <span className="t">{w.d}</span><span className="v">%{w.acc}</span><ChevronRight aria-hidden />
-                      </button>
-                    ))}
-                  </div>
-                </>
-              )}
-            </section>
-          )}
-        </div>
-      )}
+        {heatActive && (
+          <section className={`stv-card ${showBars ? 'bt-side' : 'bt-half'}`} aria-labelledby="stv-heat-h">
+            <div className="stv-h"><h2 id="stv-heat-h">Etkinlik</h2><span>son 12 hafta · {fmtDur(totalSec)}</span></div>
+            <div className="stv-heat" role="img" aria-label="Son 12 haftada günlük etkinlik">
+              {heat.map((h) => <i key={h.key} className={h.lvl ? `l${h.lvl}` : ''} title={`${new Date(h.key).toLocaleDateString('tr-TR')} · ${fmtDur(h.s)}${h.n ? ` · ${h.n} soru` : ''}`} />)}
+            </div>
+            <div className="stv-legend"><span>Az</span><i /><i className="l1" /><i className="l2" /><i className="l3" /><i className="l4" /><span>Çok</span></div>
+            <p className="stv-note"><Clock3 aria-hidden /> Süre, sekme açıkken ve son bir dakikada etkileşim varken sayılır.</p>
+          </section>
+        )}
+        {weak.length > 0 && (
+          <section className={`stv-card ${showBars ? 'bt-side' : 'bt-half'}`} aria-labelledby="stv-weak-h">
+            <div className="stv-h"><h2 id="stv-weak-h">Zayıf konular</h2><span>%60 altı</span></div>
+            <div className="stv-weak">
+              {weak.map((w) => (
+                <button key={w.d} type="button" onClick={() => onGo('study')} title={`${w.d} · Çalış sayfasında yanlışlarını yeniden çöz`}>
+                  <span className="t">{w.d}</span><span className="v">%{w.acc}</span><ChevronRight aria-hidden />
+                </button>
+              ))}
+            </div>
+          </section>
+        )}
+      </div>
 
       {!attempts.length && !heatActive && (
         <p className="stv-empty-all">Çalış sayfasında soru çözdükçe doğruluk, ders dökümü ve etkinlik burada belirir.</p>
@@ -332,42 +325,39 @@ export const StatsView: React.FC<Props> = ({ questions, currentUser, onGo }) => 
 
       <h2 className="stv-sec">Ayrıntılar</h2>
 
-      {(hasPoints || dayTotal > 0) && (
-        <div className="st-grid">
-          {hasPoints && (
-            <section className="st-card" aria-label="Puan değişimi">
-              <div className="st-h"><b>Puan değişimi</b><span>son 8 hafta</span></div>
-              <svg viewBox="0 0 560 176" role="img" aria-label={`Son 8 haftada puan ${series[0]} → ${series[7]}`} className="st-line">
-                {[20, 70, 120].map((y) => <line key={y} x1="36" x2="548" y1={y} y2={y} className="st-grid-l" />)}
-                <line x1="36" x2="548" y1="160" y2="160" className="st-axis" />
-                <path d={area} className="st-area" />
-                <polyline points={line} className="st-poly" />
-                {series.map((v, i) => <circle key={i} cx={px(i)} cy={py(v)} r={i === 7 ? 5 : 3} className="st-dot" />)}
-                <text x={px(7)} y={py(series[7]) - 12} textAnchor="middle" className="st-last">{series[7]}</text>
-              </svg>
-              <div className="st-xl">{series.map((_, i) => <span key={i}>{i === 7 ? 'Bu hf' : `H-${7 - i}`}</span>)}</div>
-            </section>
-          )}
+      {/* Ayrıntılar bento panosu: iki grafik yarım, üç liste kartı üçte bir, etkinlik akışı tam satır */}
+      <div className="st-bento bento">
+        {hasPoints && (
+          <section className={`st-card ${dayTotal > 0 ? 'bt-half' : 'bt-full'}`} aria-label="Puan değişimi">
+            <div className="st-h"><b>Puan değişimi</b><span>son 8 hafta</span></div>
+            <svg viewBox="0 0 560 176" role="img" aria-label={`Son 8 haftada puan ${series[0]} → ${series[7]}`} className="st-line">
+              {[20, 70, 120].map((y) => <line key={y} x1="36" x2="548" y1={y} y2={y} className="st-grid-l" />)}
+              <line x1="36" x2="548" y1="160" y2="160" className="st-axis" />
+              <path d={area} className="st-area" />
+              <polyline points={line} className="st-poly" />
+              {series.map((v, i) => <circle key={i} cx={px(i)} cy={py(v)} r={i === 7 ? 5 : 3} className="st-dot" />)}
+              <text x={px(7)} y={py(series[7]) - 12} textAnchor="middle" className="st-last">{series[7]}</text>
+            </svg>
+            <div className="st-xl">{series.map((_, i) => <span key={i}>{i === 7 ? 'Bu hf' : `H-${7 - i}`}</span>)}</div>
+          </section>
+        )}
 
-          {dayTotal > 0 && (
-            <section className="st-card" aria-label="Günlük çözülen soru">
-              <div className="st-h"><b>Günlük çözülen soru</b><span>son 14 gün · ort. {dayAvg}</span><span className="st-lg"><i className="is-ok" />Doğru <i className="is-bad" />Yanlış</span></div>
-              <div className="st-bars" role="img" aria-label="Son 14 günde günlük çözülen soru sayısı">
-                {days.map((d) => (
-                  <div key={d.key} className={`st-col ${d.today ? 'is-today' : ''}`} title={`${d.ok + d.bad} soru · ${d.ok} doğru · ${d.bad} yanlış`}>
-                    <span className="n">{d.ok + d.bad || ''}</span>
-                    <span className="bad" style={{ height: `${(d.bad / dayMax) * 112}px` }} />
-                    <span className="ok" style={{ height: `${(d.ok / dayMax) * 112}px` }} />
-                  </div>
-                ))}
-              </div>
-              <div className="st-xl is-14">{days.map((d) => <span key={d.key} className={d.today ? 'is-today' : ''}>{d.lab}</span>)}</div>
-            </section>
-          )}
-        </div>
-      )}
+        {dayTotal > 0 && (
+          <section className={`st-card ${hasPoints ? 'bt-half' : 'bt-full'}`} aria-label="Günlük çözülen soru">
+            <div className="st-h"><b>Günlük çözülen soru</b><span>son 14 gün · ort. {dayAvg}</span><span className="st-lg"><i className="is-ok" />Doğru <i className="is-bad" />Yanlış</span></div>
+            <div className="st-bars" role="img" aria-label="Son 14 günde günlük çözülen soru sayısı">
+              {days.map((d) => (
+                <div key={d.key} className={`st-col ${d.today ? 'is-today' : ''}`} title={`${d.ok + d.bad} soru · ${d.ok} doğru · ${d.bad} yanlış`}>
+                  <span className="n">{d.ok + d.bad || ''}</span>
+                  <span className="bad" style={{ height: `${(d.bad / dayMax) * 112}px` }} />
+                  <span className="ok" style={{ height: `${(d.ok / dayMax) * 112}px` }} />
+                </div>
+              ))}
+            </div>
+            <div className="st-xl is-14">{days.map((d) => <span key={d.key} className={d.today ? 'is-today' : ''}>{d.lab}</span>)}</div>
+          </section>
+        )}
 
-      <div className="st-grid is-3">
         <section className="st-card" aria-label="Soru durumu">
           <div className="st-h"><b>Soru durumu</b></div>
           <button type="button" className="st-li" onClick={() => onGo('study')}><span className="ic is-ok"><Check /></span>Doğru çözdüklerin<span className="n">{nf.format(attempts.length - wrongAll)}</span></button>
@@ -399,16 +389,16 @@ export const StatsView: React.FC<Props> = ({ questions, currentUser, onGo }) => 
           )) : <p className="st-empty">{tab === 'fav' ? 'Çalışırken yıldızladığın sorular burada.' : tab === 'kart' ? 'Ezber kartlarında yıldızladıkların burada.' : tab === 'not' ? 'Notlar ve kart notların burada.' : 'Yanlış yaptığın sorular burada toplanır.'}</p>}
           <div className="st-cta"><button type="button" className="st-link" onClick={() => onGo(tab === 'kart' ? 'flashcards' : 'study')}>{tab === 'kart' ? <BookmarkCheck /> : <NotebookPen />} Tümünü aç</button></div>
         </section>
-      </div>
 
-      {activity.length > 0 && (
-        <section className="st-card" aria-label="Etkinlik akışı">
-          <div className="st-h"><b>Etkinlik akışı</b><span>bu cihazda yaptığın işlemler</span></div>
-          {activity.slice(0, 12).map((a, i) => (
-            <div key={i} className="st-feed"><span className={`kind ${KIND[a.kind]?.cls || ''}`}>{KIND[a.kind]?.label || a.kind}</span><span className="t">{a.text}</span><span className="w">{relTime(a.at)}</span></div>
-          ))}
-        </section>
-      )}
+        {activity.length > 0 && (
+          <section className="st-card bt-full" aria-label="Etkinlik akışı">
+            <div className="st-h"><b>Etkinlik akışı</b><span>bu cihazda yaptığın işlemler</span></div>
+            {activity.slice(0, 12).map((a, i) => (
+              <div key={i} className="st-feed"><span className={`kind ${KIND[a.kind]?.cls || ''}`}>{KIND[a.kind]?.label || a.kind}</span><span className="t">{a.text}</span><span className="w">{relTime(a.at)}</span></div>
+            ))}
+          </section>
+        )}
+      </div>
     </div>
   );
 };

@@ -89,7 +89,7 @@ export const ManageAutomationSection: React.FC<{
 
   return (
     <div className="flex flex-col gap-3 min-w-0">
-      <div className="grid grid-cols-1 xl:grid-cols-2 gap-3 items-start">
+      <div className="bento bento-host is-duo is-rhythm" style={{ '--bt-big': 7, '--bt-small': 5 } as React.CSSProperties}>
         <Panel
           title="Yedekleme"
           icon={DatabaseBackup}

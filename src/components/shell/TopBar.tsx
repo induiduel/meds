@@ -11,8 +11,6 @@ import { AccountMenu, type AccountActions } from './AccountMenu';
 import { initialsOf } from './navModel';
 import { userNotificationService } from '../../services/userNotificationService';
 import { NotificationHistoryModal } from '../notifications/NotificationHistoryModal';
-import { useDockAutoHide, findDockSearchInput } from './useDockAutoHide';
-import { PageSearchProxy } from './PageSearchProxy';
 
 const usePhone = () =>
   useSyncExternalStore(
@@ -90,12 +88,9 @@ export const TopBar: React.FC<{
   }, []);
 
   const title = ROUTE_TITLES[active];
-  const dock = useDockAutoHide(active);
-  // Yuva saklıyken sayfanın kendi araması üst çubuğa taşınır (yalnız yuvasında arama alanı olan ekranlar).
-  const pageSearch = dock.hidden && Boolean(findDockSearchInput());
 
   return (
-    <header className={`sh-top print:hidden ${scrolled ? 'is-scrolled' : ''} ${scrolled === 2 ? 'show-title' : ''} ${pageSearch ? 'has-pq' : ''}`}>
+    <header className={`sh-top print:hidden ${scrolled ? 'is-scrolled' : ''} ${scrolled === 2 ? 'show-title' : ''}`}>
       <div className="sh-top-in">
         <div className="sh-top-lead">
           <a href={pathFor('quick_add')} onClick={linkClick(() => onGo('quick_add'))} className="sh-brand sh-top-brand" aria-label="MeDSor ana sayfa">
@@ -103,7 +98,6 @@ export const TopBar: React.FC<{
             <span className="sh-brand-word">Me<b>DS</b>or</span>
           </a>
           <span className="sh-top-title" aria-hidden={scrolled !== 2}>{title}</span>
-          {pageSearch && <PageSearchProxy key={active} onReveal={dock.reveal} />}
         </div>
 
         <button type="button" className="sh-top-search" onClick={() => setSearch(true)} title="Ara ( / ya da Ctrl+K )">

@@ -422,7 +422,7 @@ export const ManagePhasesSection: React.FC<{ adminEmail: string }> = ({ adminEma
               <div className={card}><h3 className={h3}>Diğer kayıtlar</h3><Json value={kay} /></div>
             </div>
           ) : (
-            <div id="ph-cards" className="grid gap-3 md:grid-cols-2 scroll-mt-14">
+            <div id="ph-cards" className="bento bento-host is-duo is-rhythm scroll-mt-14" style={{ '--bt-big': 7, '--bt-small': 5 } as React.CSSProperties}>
               <div className={card}>
                 <div className="flex items-center justify-between gap-2"><h3 className={h3}>Müfredat</h3><SecActions k="mufredat" /></div>
                 <p className="m-0 text-sm">

@@ -32,6 +32,9 @@ type Stop = {
 const href = (r: AppRoute) => `a[href="${ROUTE_PATHS[r]}"]`;
 
 const MORE_BTN = '.sh-tabs button[aria-haspopup="dialog"]';
+/** "Daha" sayfasındaki satır (telefon): tur sayfayı açar, satırı vurgular */
+const moreRow = (r: AppRoute) => `.sh-more a[href="${ROUTE_PATHS[r]}"]`;
+const setMoreSheet = (open: boolean) => window.dispatchEvent(new CustomEvent('medsoru:more', { detail: { open } }));
 
 const STOPS: Stop[] = [
   {
@@ -224,7 +227,13 @@ export const WelcomeTour: React.FC<{ name?: string | null; onGo: (r: AppRoute) =
     let el = phone ? firstVisible(stop.tab) : firstVisible(stop.side);
     let more = false;
     if (!el && phone) {
-      el = firstVisible(MORE_BTN);
+      // Sayfa "Daha" menüsünde: menü açık ve satır çizildiyse satırı, değilse (açılış animasyonu) şimdilik düğmeyi vurgula
+      const row = document.querySelector<HTMLElement>(moreRow(stop.route));
+      if (row && visible(row)) {
+        const r0 = row.getBoundingClientRect();
+        if (r0.top < 80 || r0.bottom > window.innerHeight - 200) row.scrollIntoView({ block: 'center' });
+        el = row;
+      } else el = firstVisible(MORE_BTN);
       more = !!el;
     }
     if (!el && !phone) el = firstVisible(stop.tab); // akış/odak modunda kenar menüsü şeritte olabilir
@@ -253,6 +262,30 @@ export const WelcomeTour: React.FC<{ name?: string | null; onGo: (r: AppRoute) =
     if (h.top + h.height / 2 > vh / 2) setPos({ top: Math.max(16, h.top - gap - ch), left, place: 'above' });
     else setPos({ top: Math.min(vh - ch - 16, h.top + h.height + gap), left, place: 'below' });
   }, [phase, stop]);
+
+  // Telefonda hedefi alt sekmelerde olmayan duraklar için "Daha" sayfasını aç; diğerlerinde ve tur bitince kapat
+  const needMore = phase === 'tour' && !firstVisible(stop.tab) && typeof window !== 'undefined' && window.innerWidth < 768;
+  useEffect(() => {
+    setMoreSheet(needMore);
+    if (!needMore) return;
+    // Sayfa kayarak açılır: animasyon boyunca (≈1 sn) her karede yeniden ölç
+    const t0 = performance.now();
+    let raf = 0;
+    const loop = () => { measure(); if (performance.now() - t0 < 1100) raf = requestAnimationFrame(loop); };
+    raf = requestAnimationFrame(loop);
+    // Sekme arka plandayken kare döngüsü durur: zamanlayıcı yedeği ve animasyon bitişi
+    const ts = [350, 700, 1150].map((ms) => window.setTimeout(measure, ms));
+    const onEnd = () => measure();
+    document.addEventListener('transitionend', onEnd, true);
+    document.addEventListener('animationend', onEnd, true);
+    return () => {
+      cancelAnimationFrame(raf);
+      ts.forEach(window.clearTimeout);
+      document.removeEventListener('transitionend', onEnd, true);
+      document.removeEventListener('animationend', onEnd, true);
+    };
+  }, [needMore, i, measure]);
+  useEffect(() => () => { setMoreSheet(false); }, []);
 
   useLayoutEffect(() => {
     measure();

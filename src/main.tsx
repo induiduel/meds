@@ -12,6 +12,7 @@ import './styles/summary.css';
 import './styles/spots.css';
 import './styles/toolbar.css';
 import './styles/layout-modes.css';
+import './styles/bento.css';
 import './styles/motion.css';
 import './styles/mobile.css';
 import { installToastBridge } from './components/ui/Toast';

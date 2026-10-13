@@ -197,8 +197,8 @@ export const SelfTestView: React.FC<SelfTestViewProps> = ({ bank, committees, lo
   if (phase === 'setup') {
     const effective = Math.min(count, pool.length);
     return (
-      <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)] gap-3 sm:gap-5 items-start">
-        <section className={`${cardCls} p-4 sm:p-6 flex flex-col gap-4`}>
+      <div className="bento bento-host">
+        <section className={`${cardCls} bt-wide p-4 sm:p-6 flex flex-col gap-4`}>
           <div>
             <h2 className="m-0 font-display text-2xl font-bold tracking-[-0.02em]">Deneme oluştur</h2>
             <p className="m-0 mt-1 text-base text-ink-2">Çıkmış ve kurulan sorulardan rastgele bir deneme. Bitirince ders ders sonucunu görürsün.</p>
@@ -293,7 +293,7 @@ export const SelfTestView: React.FC<SelfTestViewProps> = ({ bank, committees, lo
           </div>
         </section>
 
-        <section className={`${cardCls} p-4 sm:p-5 flex flex-col gap-3`}>
+        <section className={`${cardCls} bt-side p-4 sm:p-5 flex flex-col gap-3`}>
           <div className="flex items-center justify-between">
             <h2 className="m-0 text-md font-semibold">Geçmiş denemeler</h2>
             {history.length > 0 && (
@@ -499,8 +499,8 @@ const ResultView: React.FC<{
   const disc = Object.entries(result.byDiscipline).sort((a, b) => b[1].total - a[1].total);
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.5fr)] gap-3 sm:gap-5 items-start">
-      <section className="flex flex-col gap-3 sm:gap-4">
+    <div className="bento bento-host" style={{ '--bt-big': 7, '--bt-small': 5 } as React.CSSProperties}>
+      <section className="bt-side flex flex-col gap-3 sm:gap-4">
         <div className="bg-white border border-line rounded-2xl p-4 sm:p-5 flex flex-col gap-3">
           <div className="flex justify-between items-baseline gap-2">
             <h2 className="m-0 text-md font-semibold truncate text-ink">{result.title}</h2>
@@ -571,7 +571,7 @@ const ResultView: React.FC<{
         </div>
       </section>
 
-      <section className={`${cardCls} overflow-hidden`}>
+      <section className={`${cardCls} bt-wide overflow-hidden`}>
         <div className="flex flex-wrap items-center justify-between gap-2 px-4 py-3 border-b border-line">
           <h3 className="m-0 text-md font-semibold">Cevap anahtarı</h3>
           <Segmented

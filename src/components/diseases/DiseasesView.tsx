@@ -976,7 +976,7 @@ const DiseaseDetail: React.FC<DetailProps> = ({
       <div className="hx-dbody">
         <div className="hx-dmain" role="tabpanel" id={`hx-panel-${d.id}`} aria-labelledby={`hx-tab-${d.id}-${active}`}>
           {active === 'ozet' ? (
-            <div className="hx-grid">
+            <div className="hx-grid bento is-duo is-rhythm">
               {secs.map((sec) => {
                 // Tanımın ilk maddesi başlıkta; kartta yalnız kalanlar
                 const facts = sec === 'definition' ? defFacts.slice(1) : sectionFacts(d, sec);
@@ -984,7 +984,7 @@ const DiseaseDetail: React.FC<DetailProps> = ({
                 return <SectionCard key={sec} d={d} sec={sec} facts={facts} limit={CARD_LIMIT} onMore={() => setTab(sec)} onShare={onShare} />;
               })}
               {spots.length > 0 && (
-                <aside className="hx-spot" aria-label="Sınav spotu">
+                <aside className="hx-spot bt-full" aria-label="Sınav spotu">
                   <p className="hx-spot-h"><Star aria-hidden /> Sınav spotu</p>
                   <ul>
                     {spots.map((f, k) => <li key={k}>{f.label && <b>{f.label}: </b>}<FactText text={f.text} /></li>)}

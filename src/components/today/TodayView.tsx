@@ -255,7 +255,6 @@ export const TodayView: React.FC<TodayViewProps> = ({ committeeLabel, onGo }) =>
 
   const resume = [learnCard, solveCard, spotsCard].filter((c): c is ResumeCard => !!c);
   const resumeLoading = learnCard === undefined || (spots === undefined && learned.size > 0);
-  const showAside = goals.length > 0 || hasAnyStudy || dueCards > 0;
 
   return (
     <div className="td">
@@ -271,112 +270,102 @@ export const TodayView: React.FC<TodayViewProps> = ({ committeeLabel, onGo }) =>
         </button>
       </header>
 
-      <div className={`td-body ${showAside ? 'has-aside' : ''}`}>
-        <div className="td-main">
-          {(resume.length > 0 || resumeLoading) && (
-            <section className="td-sec" aria-labelledby="td-resume-h">
-              <h2 id="td-resume-h" className="td-sec-h">Kaldığın yerden</h2>
-              <div className="td-resume">
-                {resume.map((r) => (
-                  <a key={r.id} href={r.href} onClick={linkClick(r.go)} className={`td-card td-res is-${r.kind}`}>
-                    <span className="td-kick">{r.kicker}</span>
-                    <strong className="td-res-t">{r.title}</strong>
-                    <span className="td-res-sub">{r.sub}</span>
-                    <span className="td-bar" role="progressbar" aria-valuemin={0} aria-valuemax={100} aria-valuenow={r.pct} aria-label={`${r.kicker} ilerlemesi`}>
-                      <span style={{ width: `${r.pct}%` }} />
-                    </span>
-                  </a>
-                ))}
-                {resumeLoading && resume.length === 0 && (
-                  <>
-                    <span className="td-card td-res-skel ui-skel" aria-hidden />
-                    <span className="td-card td-res-skel ui-skel" aria-hidden />
-                  </>
-                )}
-              </div>
-            </section>
-          )}
-
-          <section className="td-sec" aria-labelledby="td-quick-h">
-            <h2 id="td-quick-h" className="td-sec-h">Hızlı erişim</h2>
-            <nav className="td-tiles" aria-label="Hızlı erişim">
-              {QUICK.map((id) => {
-                const it = NAV_ITEMS[id];
-                if (!it) return null;
-                const Icon = it.icon;
-                return (
-                  <a key={id} href={pathFor(id)} onClick={linkClick(() => onGo(id))} className="td-card td-tile" style={{ '--td-tint': it.tint } as React.CSSProperties}>
-                    <span className="td-tile-ic" aria-hidden><Icon /></span>
-                    <span className="td-tile-l">{it.label}</span>
-                  </a>
-                );
-              })}
-            </nav>
+      {/* Bento pano (styles/bento.css): geniş kutular solda, özet kutuları sağda eşleşir; telefonda öncelik sırasıyla tek sütun */}
+      <div className="td-body bento is-dense">
+        {(resume.length > 0 || resumeLoading) && (
+          <section className="td-sec bt-wide" aria-labelledby="td-resume-h">
+            <h2 id="td-resume-h" className="td-sec-h">Kaldığın yerden</h2>
+            <div className="td-resume">
+              {resume.map((r) => (
+                <a key={r.id} href={r.href} onClick={linkClick(r.go)} className={`td-card td-res is-${r.kind}`}>
+                  <span className="td-kick">{r.kicker}</span>
+                  <strong className="td-res-t">{r.title}</strong>
+                  <span className="td-res-sub">{r.sub}</span>
+                  <span className="td-bar" role="progressbar" aria-valuemin={0} aria-valuemax={100} aria-valuenow={r.pct} aria-label={`${r.kicker} ilerlemesi`}>
+                    <span style={{ width: `${r.pct}%` }} />
+                  </span>
+                </a>
+              ))}
+              {resumeLoading && resume.length === 0 && (
+                <>
+                  <span className="td-card td-res-skel ui-skel" aria-hidden />
+                  <span className="td-card td-res-skel ui-skel" aria-hidden />
+                </>
+              )}
+            </div>
           </section>
-
-          {spots === undefined ? (
-            <div className="td-card td-spot-skel ui-skel" aria-hidden />
-          ) : spotOfDay ? (
-            <section className="td-card td-spot" aria-labelledby="td-spot-h">
-              <div className="td-spot-top">
-                <span className="td-kick is-bad">Günün spotu · {KAT[spotOfDay.s.kategori]?.kisa || 'Spot'}</span>
-                {spotOfDay.ders && <span className="td-spot-src">Ders {spotOfDay.ders.no} · {spotOfDay.ders.baslik}</span>}
-                <a className="td-link" href={pathFor('spots')} onClick={linkClick(() => onGo('spots'))}>Tüm spotlar</a>
+        )}
+        {goals.length > 0 && (
+          <section className="td-card td-panel bt-side" aria-labelledby="td-goal-h">
+            <h2 id="td-goal-h" className="td-sec-h">Bugünün hedefi</h2>
+            {goals.map((g) => (
+              <div key={g.id} className="td-goal">
+                <div className="td-goal-row"><span>{g.label}</span><span className="td-num">{g.value}</span></div>
+                <span className="td-bar is-thick" role="progressbar" aria-valuemin={0} aria-valuemax={100} aria-valuenow={g.pct} aria-label={g.label}>
+                  <span style={{ width: `${g.pct}%` }} />
+                </span>
               </div>
-              <h2 id="td-spot-h" className="td-spot-t">
-                <a href={`${pathFor('spots')}?id=${encodeURIComponent(spotOfDay.s.id)}`} onClick={linkClick(() => navigateTo(`${pathFor('spots')}?id=${encodeURIComponent(spotOfDay.s.id)}`))}>
-                  {spotOfDay.s.baslik}
+            ))}
+            <span className="td-note">Hedef: son 14 günde çalıştığın günlerin ortalaması</span>
+          </section>
+        )}
+        <section className="td-sec bt-wide" aria-labelledby="td-quick-h">
+          <h2 id="td-quick-h" className="td-sec-h">Hızlı erişim</h2>
+          <nav className="td-tiles" aria-label="Hızlı erişim">
+            {QUICK.map((id) => {
+              const it = NAV_ITEMS[id];
+              if (!it) return null;
+              const Icon = it.icon;
+              return (
+                <a key={id} href={pathFor(id)} onClick={linkClick(() => onGo(id))} className="td-card td-tile" style={{ '--td-tint': it.tint } as React.CSSProperties}>
+                  <span className="td-tile-ic" aria-hidden><Icon /></span>
+                  <span className="td-tile-l">{it.label}</span>
                 </a>
-              </h2>
-              <p className="td-spot-x"><Zengin metin={spotOfDay.s.spot} /></p>
-            </section>
-          ) : null}
-        </div>
-
-        {showAside && (
-          <aside className="td-aside" aria-label="Günlük özet">
-            {goals.length > 0 && (
-              <section className="td-card td-panel" aria-labelledby="td-goal-h">
-                <h2 id="td-goal-h" className="td-sec-h">Bugünün hedefi</h2>
-                {goals.map((g) => (
-                  <div key={g.id} className="td-goal">
-                    <div className="td-goal-row"><span>{g.label}</span><span className="td-num">{g.value}</span></div>
-                    <span className="td-bar is-thick" role="progressbar" aria-valuemin={0} aria-valuemax={100} aria-valuenow={g.pct} aria-label={g.label}>
-                      <span style={{ width: `${g.pct}%` }} />
-                    </span>
-                  </div>
-                ))}
-                <span className="td-note">Hedef: son 14 günde çalıştığın günlerin ortalaması</span>
-              </section>
-            )}
-
-            {hasAnyStudy && (
-              <section className="td-card td-panel" aria-labelledby="td-week-h">
-                <div className="td-panel-top">
-                  <h2 id="td-week-h" className="td-sec-h">Bu hafta</h2>
-                  <span className="td-note">{week.streak > 1 ? `${week.streak} gün seri` : week.total ? fmtMin(week.total) : 'Henüz çalışma yok'}</span>
+              );
+            })}
+          </nav>
+        </section>
+        {hasAnyStudy && (
+          <section className="td-card td-panel bt-side" aria-labelledby="td-week-h">
+            <div className="td-panel-top">
+              <h2 id="td-week-h" className="td-sec-h">Bu hafta</h2>
+              <span className="td-note">{week.streak > 1 ? `${week.streak} gün seri` : week.total ? fmtMin(week.total) : 'Henüz çalışma yok'}</span>
+            </div>
+            <div className="td-week" role="img" aria-label={`Bu haftaki çalışma süresi: ${week.days.map((d) => `${d.label} ${fmtMin(d.sec)}`).join(', ')}`}>
+              {week.days.map((d) => (
+                <div key={d.key} className={`td-day ${d.isToday ? 'is-today' : ''} ${d.future ? 'is-future' : ''}`} title={`${d.label}: ${fmtMin(d.sec)}`}>
+                  <span className={`td-day-bar ${d.sec ? 'has' : ''}`} style={{ height: `${Math.max(4, Math.round((d.sec / week.max) * 100))}%` }} />
+                  <span className="td-day-l">{d.label}</span>
                 </div>
-                <div className="td-week" role="img" aria-label={`Bu haftaki çalışma süresi: ${week.days.map((d) => `${d.label} ${fmtMin(d.sec)}`).join(', ')}`}>
-                  {week.days.map((d) => (
-                    <div key={d.key} className={`td-day ${d.isToday ? 'is-today' : ''} ${d.future ? 'is-future' : ''}`} title={`${d.label}: ${fmtMin(d.sec)}`}>
-                      <span className={`td-day-bar ${d.sec ? 'has' : ''}`} style={{ height: `${Math.max(4, Math.round((d.sec / week.max) * 100))}%` }} />
-                      <span className="td-day-l">{d.label}</span>
-                    </div>
-                  ))}
-                </div>
-              </section>
-            )}
-
-            {dueCards > 0 && (
-              <section className="td-due" aria-labelledby="td-due-h">
-                <h2 id="td-due-h" className="td-due-t">Tekrar zamanı</h2>
-                <span className="td-due-x">{dueCards.toLocaleString('tr-TR')} kart bugün tekrar bekliyor.</span>
-                <a className="ui-btn is-primary td-due-go" href={pathFor('flashcards')} onClick={linkClick(() => onGo('flashcards'))}>
-                  Başlat <ArrowRight aria-hidden />
-                </a>
-              </section>
-            )}
-          </aside>
+              ))}
+            </div>
+          </section>
+        )}
+        {spots === undefined ? (
+          <div className="td-card td-spot-skel ui-skel bt-wide" aria-hidden />
+        ) : spotOfDay ? (
+          <section className="td-card td-spot bt-wide" aria-labelledby="td-spot-h">
+            <div className="td-spot-top">
+              <span className="td-kick is-bad">Günün spotu · {KAT[spotOfDay.s.kategori]?.kisa || 'Spot'}</span>
+              {spotOfDay.ders && <span className="td-spot-src">Ders {spotOfDay.ders.no} · {spotOfDay.ders.baslik}</span>}
+              <a className="td-link" href={pathFor('spots')} onClick={linkClick(() => onGo('spots'))}>Tüm spotlar</a>
+            </div>
+            <h2 id="td-spot-h" className="td-spot-t">
+              <a href={`${pathFor('spots')}?id=${encodeURIComponent(spotOfDay.s.id)}`} onClick={linkClick(() => navigateTo(`${pathFor('spots')}?id=${encodeURIComponent(spotOfDay.s.id)}`))}>
+                {spotOfDay.s.baslik}
+              </a>
+            </h2>
+            <p className="td-spot-x"><Zengin metin={spotOfDay.s.spot} /></p>
+          </section>
+        ) : null}
+        {dueCards > 0 && (
+          <section className="td-due bt-side" aria-labelledby="td-due-h">
+            <h2 id="td-due-h" className="td-due-t">Tekrar zamanı</h2>
+            <span className="td-due-x">{dueCards.toLocaleString('tr-TR')} kart bugün tekrar bekliyor.</span>
+            <a className="ui-btn is-primary td-due-go" href={pathFor('flashcards')} onClick={linkClick(() => onGo('flashcards'))}>
+              Başlat <ArrowRight aria-hidden />
+            </a>
+          </section>
         )}
       </div>
     </div>

@@ -247,7 +247,7 @@ export const LearnLibrary: React.FC<{
       />
 
       {resume.length > 0 && !filtered && (
-        <section className="lv-resume" aria-label="Devam et">
+        <section className="lv-resume bento is-duo is-list" aria-label="Devam et">
           {resume.map((d) => {
             const s = stateOf(d, progress);
             return (
@@ -285,7 +285,7 @@ export const LearnLibrary: React.FC<{
         </div>
       ) : (
         <>
-          <ul className="lv-grid" aria-label="Desteler">
+          <ul className="lv-grid bento is-rhythm is-list" aria-label="Desteler">
             {shown.map((d) => {
               const s = stateOf(d, progress);
               const pdf = !!pdfIds?.has(d.id);

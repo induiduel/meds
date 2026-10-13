@@ -115,7 +115,7 @@ export default function DataCoreView() {
         ] as const).map(([label, value]) => ({ label, value: Number(value ?? 0).toLocaleString('tr-TR') })) : undefined}
       />
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-4 items-start">
+      <div className="bento bento-host is-rhythm">
       {/* Toplu tamamlama: parça yaz → benzer sorular */}
       <section className="ms-panel ms-panel-body">
         <h2 className="ms-panel-title">Parça yaz → benzer soruları bul (birleştirme)</h2>
@@ -266,7 +266,7 @@ export default function DataCoreView() {
       {loading && <div className="opacity-70 text-sm">Yükleniyor…</div>}
       {error && <div className="text-bad-text text-sm">{error}</div>}
 
-      <ul className="m-0 p-0 list-none grid grid-cols-1 xl:grid-cols-2 gap-3 items-start">
+      <ul className="bento bento-host is-duo">
         {questions.map((qq) => (
           <li key={qq.question_id} className="ms-panel p-4 flex flex-col gap-1.5">
             <p className="m-0 text-md font-medium text-ink leading-snug">{qq.stem}</p>

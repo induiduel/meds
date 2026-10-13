@@ -93,8 +93,9 @@ export const UserDataSyncRow: React.FC = () => {
 
   return (
     <div className="ui-row has-icon ui-row-stack">
-      <div style={{ display: 'flex', alignItems: 'center', gap: 12, minWidth: 0, justifyContent: 'space-between' }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: 12, minWidth: 0 }}>
+      {/* Dar ekranda düğmeler başlığın altına iner (başlık tek harflik sütuna sıkışmasın) */}
+      <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '10px 12px', minWidth: 0, justifyContent: 'space-between' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 12, minWidth: 0, flex: '1 1 220px' }}>
           <span
             className="ui-ico"
             style={{ '--ico-bg': 'var(--color-accent)', '--ico-fg': 'var(--color-on-solid)' } as React.CSSProperties}
@@ -110,7 +111,7 @@ export const UserDataSyncRow: React.FC = () => {
             </span>
           </span>
         </div>
-        <div style={{ display: 'flex', gap: 8, flexShrink: 0 }}>
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8, marginLeft: 'auto' }}>
           <button
             type="button"
             className={`ui-btn is-sm is-tonal ${busyRestore ? 'is-loading' : ''}`}

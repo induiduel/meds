@@ -11,9 +11,8 @@
 .lv .pt-root { margin-bottom: 0; }
 
 /* Devam et şeridi */
-.lv-resume { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
-.lv-resume:has(> :only-child) { grid-template-columns: minmax(0, 1fr); }
-@container lv (min-width: 900px) { .lv-resume:has(> :only-child) { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); } }
+/* Bento (styles/bento.css): ikili; tek kart masaüstünde yarım genişlikte kalır */
+@container lv (min-width: 900px) { .lv-resume.bento > :only-child { grid-column: span 6; } }
 .lv-res { display: flex; align-items: center; gap: 14px; min-width: 0; padding: 14px; border-radius: 14px; border: 1px solid var(--color-line); background: var(--color-white); color: var(--color-ink); font: inherit; text-align: left; cursor: pointer; transition: border-color .15s, box-shadow .2s, transform .15s; }
 .lv-res:hover { border-color: color-mix(in srgb, var(--color-accent) 40%, var(--color-line)); box-shadow: var(--shadow-sm); }
 .lv-res:active { transform: scale(.99); }
@@ -35,11 +34,11 @@
 .lv-pills button:hover { border-color: color-mix(in srgb, var(--color-ink) 25%, var(--color-line)); }
 .lv-pills button.is-on { border-color: var(--color-ink); background: var(--color-ink); color: var(--color-white); }
 
-/* Deste kartları: 3 / 2 / 1 sütun (kapsayıcı genişliğine göre); Akış modunda tek sütun */
-.lv-grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: minmax(0, 1fr); gap: 12px; }
-@container lv (min-width: 560px) { .lv-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-@container lv (min-width: 900px) { .lv-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
-html[data-layout="akis"] .lv-grid, html[data-layout="akis"] .lv-resume { grid-template-columns: minmax(0, 1fr) !important; }
+/* Deste kartları: bento ritmi (styles/bento.css) — masaüstünde [geniş·dar][dar·dar·dar], tablette ikişer, telefonda tek; Akış modunda tek sütun */
+@container lv (min-width: 900px) {
+  .lv-grid.bento > :nth-child(5n + 1) .lv-card-t { font-size: 17px; }
+  .lv-grid.bento > :nth-child(5n + 1) .lv-card-m { -webkit-line-clamp: 2; }
+}
 .lv-card { position: relative; min-width: 0; display: flex; border-radius: 14px; border: 1px solid var(--color-line); background: var(--color-white); transition: border-color .15s, box-shadow .2s; }
 .lv-card:hover { border-color: color-mix(in srgb, var(--d, var(--color-accent)) 45%, var(--color-line)); box-shadow: var(--shadow-sm); }
 .lv-card-main { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 8px; padding: 14px; border: 0; border-radius: inherit; background: transparent; color: var(--color-ink); font: inherit; text-align: left; cursor: pointer; }
@@ -75,7 +74,7 @@ html[data-layout="akis"] .lv-grid, html[data-layout="akis"] .lv-resume { grid-te
 /* Telefon: ≥44 px dokunma alanları */
 @media (max-width: 767px) {
   .lv { gap: 12px; }
-  .lv-resume { grid-template-columns: minmax(0, 1fr); gap: 8px; }
+  .lv-resume.bento { --bt-gap: 8px; }
   .lv-res { padding: 12px; gap: 12px; }
   .lv-res-go { width: 44px; height: 44px; padding: 0; justify-content: center; font-size: 0; }
   .lv-res-go svg { width: 18px; height: 18px; }
@@ -322,6 +321,7 @@ html[data-layout="akis"] .lv-grid, html[data-layout="akis"] .lv-resume { grid-te
 .lv-vswitch button { height: 26px; min-width: 32px; padding: 0 8px; border: 0; border-radius: 7px; background: transparent; color: var(--color-ink-3); font: 700 12px var(--font-sans); cursor: pointer; }
 .lv-vswitch button:hover { color: var(--color-ink); }
 .lv-vswitch button[aria-pressed="true"] { background: var(--color-accent); color: var(--color-on-accent); box-shadow: var(--shadow-sm, 0 1px 2px rgb(0 0 0 / .12)); }
+.lv-vswitch button:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 1px; }
 
 /* Yan yana · sürüklenebilir ayraç (SplitPane). Ayraç kendi sütununu alır; boşluk onun içinde. */
 .ls-split.has-handle { gap: 0; }
@@ -348,4 +348,3 @@ html[data-layout="akis"] .lv-grid, html[data-layout="akis"] .lv-resume { grid-te
 .ls-split-presets button.is-on i { border-color: var(--color-accent); background-image: linear-gradient(90deg, var(--color-accent) 0 var(--r), transparent var(--r)); opacity: 1; }
 .ls-split.is-rows .ls-split-presets button.is-on i { background-image: linear-gradient(180deg, var(--color-accent) 0 var(--r), transparent var(--r)); }
 @media (hover: none) { .ls-split-presets { opacity: 1; pointer-events: auto; } }
-.lv-vswitch button:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 1px; }

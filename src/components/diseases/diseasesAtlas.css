@@ -85,8 +85,8 @@
 .hx-dbody { display: grid; grid-template-columns: minmax(0, 1fr); gap: 16px; align-items: start; }
 @container hxd (min-width: 860px) { .hx-dbody { grid-template-columns: minmax(0, 1fr) 300px; gap: 20px; } }
 .hx-dmain { container: hxm / inline-size; min-width: 0; }
-.hx-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 12px; align-content: start; }
-@container hxm (min-width: 560px) { .hx-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .hx-spot { grid-column: 1 / -1; } }
+/* Özet kartları: bento ikili ritim (styles/bento.css) — metin ağırlıklı olduğu için 7/5 zikzak; spot kutusu tam satır */
+.hx-grid.bento { --bt-big: 7; --bt-small: 5; align-content: start; }
 
 .hx-card { background: var(--color-white); border: 1px solid var(--color-line); border-radius: 14px; min-width: 0; }
 .hx-sec { padding: 12px 14px 12px; display: flex; flex-direction: column; gap: 6px; scroll-margin-top: calc(var(--pt-top, 52px) + 12px); }

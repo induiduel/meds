@@ -25,7 +25,7 @@ import time
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from ayarlar import (APP, ARALIK_SN, DOWNLOADS, GUNLUK_SINIR, IZLENEN_KOK, KAYIT, KUYRUK, STATE, oku, log,  # noqa: E402
+from ayarlar import (APP, ARALIK_SN, DERS_ARASI_SN, DOWNLOADS, GUNLUK_SINIR, IZLENEN_KOK, KAYIT, KUYRUK, STATE, oku, log,  # noqa: E402
                      saat_uygun, yaz, yil_sinifi)
 
 
@@ -170,6 +170,9 @@ def sira_isle(zorla_is_id: str | None = None):
             return
         if bugun_islenen() >= GUNLUK_SINIR:
             return
+        son = max((k.get("basladi", 0) for k in kuyruk), default=0)
+        if simdi - son < DERS_ARASI_SN:  # 3 saatte en çok 1 ders
+            return
     j = hazir[0]
     j_kayit = next(k for k in kuyruk if k["is_id"] == j["is_id"])
     j_kayit["durum"] = "isleniyor"          # aynı iş iki kez başlamasın (döngü + elle)
@@ -282,7 +285,7 @@ def main():
         return print(f"checklist: {len(v['konular'])} konu → {v['sayim']}")
     if a.bir_kez:
         return tur(not a.taramasiz)
-    log(f"ders işçisi başladı: kök={IZLENEN_KOK} aralık={ARALIK_SN}s günlük={GUNLUK_SINIR}")
+    log(f"ders işçisi başladı: kök={IZLENEN_KOK} aralık={ARALIK_SN}s günlük={GUNLUK_SINIR} ders_arası={DERS_ARASI_SN}s")
     yarim_kalanlari_geri_al()
     try:
         from api import baslat  # noqa: E402  (onay ekranı için iç API; yalnız compose iç ağı)

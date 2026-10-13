@@ -1,5 +1,5 @@
 /* İstatistiklerim — v10 kompakt (stv- öneki). Renkler yalnız tema değişkenleriyle. */
-.stv { gap: 14px; }
+.stv { container: stv / inline-size; gap: 14px; }
 .stv-head { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 12px; }
 .stv-title { flex: 1 1 220px; min-width: 0; }
 .stv-title h1 { margin: 0; font-size: 22px; line-height: 28px; font-weight: 700; color: var(--color-ink); letter-spacing: -0.01em; }
@@ -9,7 +9,6 @@
 .stv-seg button[aria-selected="true"] { background: var(--color-white); color: var(--color-ink); box-shadow: 0 1px 2px color-mix(in srgb, var(--color-ink) 12%, transparent); }
 .stv-seg button:disabled { opacity: .5; cursor: not-allowed; }
 
-.stv-kpis { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
 .stv-kpi { display: flex; flex-direction: column; gap: 4px; min-width: 0; padding: 14px 16px; background: var(--color-white); border: 1px solid var(--color-line); border-radius: 14px; }
 .stv-kpi .l { font-size: 12.5px; color: var(--color-ink-2); }
 .stv-kpi .v { font-size: 26px; line-height: 32px; font-weight: 700; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; color: var(--color-ink); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
@@ -17,14 +16,11 @@
 .stv-kpi .d.is-up { color: var(--color-ok); }
 .stv-kpi .d.is-down { color: var(--color-bad-text); }
 
-.stv-main { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 12px; align-items: start; }
-.stv-main.is-one { grid-template-columns: minmax(0, 1fr); }
+/* Özet bento pano (styles/bento.css): .stv-kpi bt-mini · doğruluk bt-wide (+bt-tall) · etkinlik / zayıf konular bt-side */
 .stv-card { display: flex; flex-direction: column; gap: 12px; min-width: 0; padding: 16px; background: var(--color-white); border: 1px solid var(--color-line); border-radius: 14px; }
 .stv-h { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; }
 .stv-h h2 { margin: 0; font-size: 14px; font-weight: 650; color: var(--color-ink); }
 .stv-h span { font-size: 12px; color: var(--color-ink-3); white-space: nowrap; }
-.stv-side .stv-h + .stv-weak { margin-top: -4px; }
-.stv-side > .stv-h:not(:first-child) { margin-top: 6px; }
 
 .stv-bars { display: flex; flex-direction: column; gap: 10px; margin: 0; padding: 0; list-style: none; }
 .stv-bar { display: grid; grid-template-columns: minmax(0, 200px) minmax(0, 1fr) 64px; gap: 10px; align-items: center; font-size: 13px; color: var(--color-ink); }
@@ -60,22 +56,14 @@
 .stv-empty-all { margin: 0; padding: 16px; border: 1px dashed var(--color-line); border-radius: 14px; font-size: 13px; color: var(--color-ink-3); text-align: center; }
 .stv-sec { margin: 8px 0 -4px; font-size: 13px; font-weight: 650; color: var(--color-ink-2); }
 
-/* Akış modu: dar okuma sütunu → tek sütun */
-html[data-layout="akis"] .stv-main { grid-template-columns: minmax(0, 1fr); }
-html[data-layout="akis"] .stv-kpis { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 
-/* Tablet */
-@media (max-width: 1023px) {
-  .stv-main { grid-template-columns: minmax(0, 1fr); }
-  .stv-kpis { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-}
 /* Telefon */
 @media (max-width: 767px) {
   .stv { gap: 12px; }
   .stv-head { align-items: stretch; }
   .stv-seg { width: 100%; }
   .stv-seg button { flex: 1; min-height: 40px; }
-  .stv-kpis { gap: 8px; }
+  .stv-bento.bento { --bt-gap: 8px; }
   .stv-kpi { padding: 12px; border-radius: 12px; }
   .stv-kpi .v { font-size: 22px; line-height: 28px; }
   .stv-card { padding: 14px 12px; border-radius: 12px; }

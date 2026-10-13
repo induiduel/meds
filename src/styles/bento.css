@@ -1,0 +1,85 @@
+/* =========================================================================
+ * Bento ızgara altyapısı — sayfalardaki kart / pano ızgaralarının ortak tabanı.
+ * Bileşen: components/ui/Bento.tsx (<Bento>, <BentoItem>) ya da düz sınıflar.
+ *
+ *  .bento                 12 izli ızgara; öğeler izleri genişlik sınıfına göre kaplar.
+ *                         Sütun eşikleri EN YAKIN kap sorgulu ataya göredir (container-type:
+ *                         inline-size — sayfa kökleri .lv, .td, .stv, .hx-dmain … zaten öyle).
+ *                         Kap yoksa telefon düzeni (tek sütun) geçerlidir.
+ *    .is-duo              geniş kapta da en çok 2 kart yan yana (varsayılan: 3).
+ *    .is-rhythm           eşit kartlı listelere bento ritmi: geniş/dar sırayla, satırlar tam dolar
+ *                         (yalnız boyut sınıfı olmayan öğeler sayılır; .bt-* kutular araya girebilir).
+ *                         üçlü: [büyük·küçük] [küçük·küçük·küçük]   ikili: [büyük·küçük] [küçük·büyük]
+ *    .is-list             Akış modunda (html[data-layout=akis]) tek sütuna iner.
+ *    --bt-big / --bt-small   ritimdeki büyük/küçük kart izi (8/4; metin ağırlıklıda 7/5).
+ *
+ *  Öğe sınıfları (yoksa: telefonda tam, ≥560 yarım, ≥900 üçte bir / ikili ızgarada yarım):
+ *    .bt-mini   sayı kutusu — telefonda ikişer, ≥560 dörder
+ *    .bt-half   ≥560 yarım (üçlü ızgarada da)
+ *    .bt-side   ≥900 dar sütun (4 iz), 560–899 yarım
+ *    .bt-wide   ≥900 geniş sütun (8 iz), 560–899 tam
+ *    .bt-full   her genişlikte tam satır
+ *    .bt-tall   ≥900 iki satır yüksekliğinde
+ *  Eşikler: 560 px (tablet / dar pano), 900 px (masaüstü).
+ * ========================================================================= */
+.bento {
+  --bt-gap: 12px;
+  --bt-big: 8;
+  --bt-small: 4;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-auto-flow: row;
+  gap: var(--bt-gap);
+  align-items: stretch;
+  min-width: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.bento > * { grid-column: span 12; min-width: 0; }
+.bento > .bt-mini { grid-column: span 6; }
+.bento > .bt-full { grid-column: 1 / -1; }
+.bento.is-dense { grid-auto-flow: row dense; }
+
+@container (min-width: 560px) {
+  .bento { --bt-gap: 12px; }
+  .bento > * { grid-column: span 6; }
+  .bento > .bt-mini { grid-column: span 3; }
+  .bento > :is(.bt-wide, .bt-full) { grid-column: 1 / -1; }
+  /* İkili ızgarada tek kalan son kart satırı doldurur */
+  .bento.is-duo > :nth-last-child(1 of :not([class^="bt-"], [class*=" bt-"])):nth-child(odd of :not([class^="bt-"], [class*=" bt-"])) { grid-column: 1 / -1; }
+}
+
+@container (min-width: 900px) {
+  .bento { --bt-gap: 14px; }
+  .bento > * { grid-column: span 4; }
+  .bento.is-duo > *, .bento > .bt-half { grid-column: span 6; }
+  .bento > .bt-mini { grid-column: span 3; }
+  .bento > .bt-side { grid-column: span var(--bt-small); }
+  .bento > .bt-wide { grid-column: span var(--bt-big); }
+  .bento > .bt-full { grid-column: 1 / -1; }
+  .bento > .bt-tall { grid-row: span 2; }
+
+  /* Ritim yalnız boyut sınıfı olmayan kartları sayar (:nth-child(… of S)); .bt-* kutular ritmi bozmaz.
+   * Üçlü — 5'li döngü: [büyük küçük] [küçük küçük küçük]; artık kartlar satırı doldurur */
+  .bento.is-rhythm:not(.is-duo) > :nth-child(5n + 1 of :not([class^="bt-"], [class*=" bt-"])) { grid-column: span var(--bt-big); }
+  .bento.is-rhythm:not(.is-duo) > :nth-child(5n + 2 of :not([class^="bt-"], [class*=" bt-"])) { grid-column: span var(--bt-small); }
+  .bento.is-rhythm:not(.is-duo) > :is(:nth-child(5n + 1 of :not([class^="bt-"], [class*=" bt-"])), :nth-child(5n + 3 of :not([class^="bt-"], [class*=" bt-"]))):nth-last-child(1 of :not([class^="bt-"], [class*=" bt-"])) { grid-column: 1 / -1; }
+  .bento.is-rhythm:not(.is-duo) > :nth-child(5n + 4 of :not([class^="bt-"], [class*=" bt-"])):nth-last-child(1 of :not([class^="bt-"], [class*=" bt-"])) { grid-column: span 8; }
+
+  /* İkili — 4'lü döngü: [büyük küçük] [küçük büyük] (zikzak) */
+  .bento.is-duo.is-rhythm > :is(:nth-child(4n + 1 of :not([class^="bt-"], [class*=" bt-"])), :nth-child(4n of :not([class^="bt-"], [class*=" bt-"]))) { grid-column: span var(--bt-big); }
+  .bento.is-duo.is-rhythm > :is(:nth-child(4n + 2 of :not([class^="bt-"], [class*=" bt-"])), :nth-child(4n + 3 of :not([class^="bt-"], [class*=" bt-"]))) { grid-column: span var(--bt-small); }
+  .bento.is-duo.is-rhythm > :is(:nth-child(4n + 1 of :not([class^="bt-"], [class*=" bt-"])), :nth-child(4n + 3 of :not([class^="bt-"], [class*=" bt-"]))):nth-last-child(1 of :not([class^="bt-"], [class*=" bt-"])) { grid-column: 1 / -1; }
+}
+
+/* Akış modu: dar okuma sütununda liste ızgaraları tek sütun */
+html[data-layout="akis"] .bento.is-list > * { grid-column: 1 / -1 !important; }
+html[data-layout="akis"] .bento.is-list > .bt-mini { grid-column: span 6 !important; }
+
+/* Kap: bento'nun kendisi ya da atası kap değilse eklenir (öğeler kendi bento'larının genişliğine göre açılır).
+ * Not: kap, konumlanan (fixed) torunlar için içerme bloğu olur — kart içinde portalsız açılır menü varsa ataya koy. */
+.bento-host { container-type: inline-size; }
+
+/* Genel bento kutusu (yeni sayfalar için; mevcut sayfalar kendi kart yüzeyini kullanır) */
+.bt-tile { display: flex; flex-direction: column; gap: 10px; min-width: 0; padding: 16px; border-radius: 14px; border: 1px solid var(--color-line); background: var(--color-white); color: var(--color-ink); }

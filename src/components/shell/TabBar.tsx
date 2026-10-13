@@ -45,6 +45,12 @@ export const TabBar: React.FC<{
   const look = useAppearance();
   const inMore = !TAB_ITEMS.some((t) => t.id === active) && active !== 'practice';
   useEffect(() => setMore(false), [active]);
+  // Tanıtım turu "Daha" menüsündeki sayfaları gösterirken sayfayı açıp kapatır (WelcomeTour → medsoru:more)
+  useEffect(() => {
+    const on = (e: Event) => setMore(Boolean((e as CustomEvent<{ open?: boolean }>).detail?.open));
+    window.addEventListener('medsoru:more', on);
+    return () => window.removeEventListener('medsoru:more', on);
+  }, []);
 
   const go = (r: AppRoute) => {
     setMore(false);

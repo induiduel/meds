@@ -110,7 +110,7 @@ export const ListsView: React.FC<ListsViewProps> = ({ bank, onChange }) => {
         cards.length === 0 ? (
           <EmptyState title="Favori kartın yok" body="Kartlar bölümünde yıldıza dokunarak ekleyebilirsin." />
         ) : (
-          <ul className="m-0 p-0 list-none grid grid-cols-1 md:grid-cols-2 gap-2">
+          <ul className="bento bento-host is-duo is-rhythm is-list" style={{ '--bt-gap': '8px', '--bt-big': 7, '--bt-small': 5 } as React.CSSProperties}>
             {cards.map((c) => (
               <li key={c.id} className="bg-white border border-line rounded-2xl p-4 flex flex-col gap-1.5 min-w-0">
                 <div className="flex items-start gap-2 min-w-0">

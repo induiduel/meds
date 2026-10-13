@@ -23,6 +23,7 @@ import { MusicPlayerProvider } from './components/music/MusicPlayerContext';
 import { MiniMusicPlayer } from './components/music/MiniMusicPlayer';
 import { SideNav } from './components/shell/SideNav';
 import { TopBar } from './components/shell/TopBar';
+import { ScrollTopFab } from './components/shell/ScrollTopFab';
 import { TabBar } from './components/shell/TabBar';
 import { ConfirmHost, confirmDialog } from './components/ui/ConfirmDialog';
 import { PageHeader } from './components/ui/PageHeader';
@@ -1435,6 +1436,7 @@ export default function App() {
       {/* v8 kabuğu: masaüstü/tablette yan menü, telefonda alt sekmeler */}
       <SideNav active={activeTab} onGo={setActiveTab} isAdmin={isAdmin} user={currentUser} />
       <div className="sh-app">
+        <ScrollTopFab routeKey={activeTab} />
         <TopBar
           active={activeTab}
           onGo={setActiveTab}

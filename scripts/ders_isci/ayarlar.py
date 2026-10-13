@@ -21,9 +21,10 @@ GUNLUK = STATE / "gunluk.log"
 
 IZLENEN_KOK = os.environ.get("MEDS_ISCI_KOK", "drive_root")   # yalnız kullanıcının bu yılki klasörü
 BU_YIL_BASLANGIC = int(os.environ.get("MEDS_ISCI_YIL", "2026"))  # 2026-27 akademik yılı
-GUNLUK_SINIR = int(os.environ.get("MEDS_ISCI_GUNLUK", "2"))      # Max 5x: günde en çok 2 ders
-SAATLER = os.environ.get("MEDS_ISCI_SAATLER", "01-08")           # Claude işi yalnız bu saatlerde (TR saati)
-ARALIK_SN = int(os.environ.get("MEDS_ISCI_ARALIK", "1800"))      # Drive tarama aralığı (30 dk)
+GUNLUK_SINIR = int(os.environ.get("MEDS_ISCI_GUNLUK", "4"))      # kullanıcı kararı (2026-10-13): günde en çok 4 ders
+DERS_ARASI_SN = int(os.environ.get("MEDS_ISCI_DERS_ARASI", "10800"))  # iki ders başlangıcı arası en az 3 saat
+SAATLER = os.environ.get("MEDS_ISCI_SAATLER", "00-24")           # Claude işi yalnız bu saatlerde (TR saati); 00-24 = tüm gün
+ARALIK_SN = int(os.environ.get("MEDS_ISCI_ARALIK", "7200"))      # Drive tarama aralığı (2 saat → günde 12 kontrol)
 CLAUDE_BIN = os.environ.get("MEDS_ISCI_CLAUDE", "claude")
 CLAUDE_MODEL = os.environ.get("MEDS_ISCI_MODEL", "claude-opus-5-5")  # kullanıcı kararı (2026-10-12): Opus 5.5
 CLAUDE_EFFORT = os.environ.get("MEDS_ISCI_EFFORT", "low")            # düşük efor; boş: CLI varsayılanı

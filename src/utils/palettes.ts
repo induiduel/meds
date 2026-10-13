@@ -29,7 +29,34 @@ export interface PaletteDef {
   swatch: [string, string, string];
   /** --color-* token değerleri (anahtarlar "--" olmadan) */
   vars: Record<TokenKey, string>;
+  /** İsteğe bağlı vurgu rengi seçenekleri (Ayarlar → "Vurgu rengi"). İlki paletin kendi rengidir.
+   *  Seçim kök öğeye `data-accent` olarak yazılır; yalnız accent/accent-hover/accent-soft/on-accent değişir. */
+  accents?: AccentDef[];
 }
+
+export interface AccentDef { id: string; name: string; accent: string; hover: string; soft: string; on: string }
+
+/** Koyu zeminde ≥4.5:1 kontrastlı açık tonlar; `on` vurgu zemininde yazı rengi. */
+const OLED_ACCENTS: AccentDef[] = [
+  { id: 'mavi', name: 'Mavi', accent: '#7AB4FF', hover: '#9BC7FF', soft: '#0E1F36', on: '#000000' },
+  { id: 'turkuaz', name: 'Turkuaz', accent: '#4FD8E0', hover: '#7BE3E9', soft: '#082A2D', on: '#000000' },
+  { id: 'yesil', name: 'Yeşil', accent: '#5EE08F', hover: '#84E9AA', soft: '#0B2617', on: '#000000' },
+  { id: 'mor', name: 'Mor', accent: '#B49CFF', hover: '#C9B8FF', soft: '#1E1638', on: '#000000' },
+  { id: 'pembe', name: 'Pembe', accent: '#FF7EB6', hover: '#FF9DC8', soft: '#33101F', on: '#000000' },
+  { id: 'turuncu', name: 'Turuncu', accent: '#FFA54F', hover: '#FFBB78', soft: '#2E1B08', on: '#000000' },
+  { id: 'sari', name: 'Sarı', accent: '#F5D04A', hover: '#F8DC74', soft: '#2A2306', on: '#000000' },
+  { id: 'beyaz', name: 'Beyaz', accent: '#E8E8EC', hover: '#FFFFFF', soft: '#1E1E22', on: '#000000' },
+];
+const GECE_MERCAN_ACCENTS: AccentDef[] = [
+  { id: 'mercan', name: 'Mercan', accent: '#FF8F8F', hover: '#FFAAAA', soft: '#3D1E22', on: '#1E0809' },
+  { id: 'gul', name: 'Gül', accent: '#FF7FAE', hover: '#FF9EC2', soft: '#3D1828', on: '#1E0810' },
+  { id: 'seftali', name: 'Şeftali', accent: '#FFB088', hover: '#FFC6A8', soft: '#3A2218', on: '#1E0D06' },
+  { id: 'altin', name: 'Altın', accent: '#F4C76A', hover: '#F7D68F', soft: '#352812', on: '#1A1204' },
+  { id: 'nane', name: 'Nane', accent: '#6FDDB5', hover: '#93E7C8', soft: '#12302A', on: '#04140F' },
+  { id: 'gok', name: 'Gök', accent: '#8EC5FF', hover: '#AED5FF', soft: '#172638', on: '#06101C' },
+  { id: 'lavanta', name: 'Lavanta', accent: '#C7A6FF', hover: '#D8C0FF', soft: '#2A1E40', on: '#140A24' },
+  { id: 'fusya', name: 'Fuşya', accent: '#F08BE6', hover: '#F5AAEE', soft: '#3A1838', on: '#1C0619' },
+];
 
 export const PALETTES: PaletteDef[] = [
   // ── Açık ──
@@ -178,6 +205,7 @@ export const PALETTES: PaletteDef[] = [
   {
     id: 'b', mode: 'dark', name: 'OLED siyah', hint: 'Saf siyah zemin, kılçizgi ayrımı, mavi vurgu',
     swatch: ['#000000', '#0E0E10', '#7AB4FF'],
+    accents: OLED_ACCENTS,
     vars: {
       canvas: '#000000', white: '#0E0E10', field: '#18181B', line: '#252529', 'line-soft': '#18181B', 'line-2': '#3A3A40',
       ink: '#F2F2F4', 'ink-2': '#C5C5CB', 'ink-3': '#9A9AA2', 'ink-surface': '#18181B', accent: '#7AB4FF', 'accent-hover': '#9BC7FF',
@@ -224,6 +252,7 @@ export const PALETTES: PaletteDef[] = [
   {
     id: 'f', mode: 'dark', name: 'Gece mercanı', hint: 'Mürdüm-siyah zemin, mercan vurgu',
     swatch: ['#150F12', '#1F171B', '#FF8F8F'],
+    accents: GECE_MERCAN_ACCENTS,
     vars: {
       canvas: '#150F12', white: '#1F171B', field: '#2A1F25', line: '#33262D', 'line-soft': '#2A1F25', 'line-2': '#4A3841',
       ink: '#F3E9EC', 'ink-2': '#CDBDC3', 'ink-3': '#B7A3AA', 'ink-surface': '#2A1F25', accent: '#FF8F8F',
@@ -234,6 +263,9 @@ export const PALETTES: PaletteDef[] = [
     },
   },
 ];
+
+/** Paletin geçerli vurgu seçeneği (yoksa/silinmişse ilk seçenek); vurgu seçeneği olmayan palette undefined. */
+export const findAccent = (p: PaletteDef, id: string | undefined) => (p.accents ? p.accents.find((a) => a.id === id) || p.accents[0] : undefined);
 
 export const palettesFor = (mode: ThemeMode) => PALETTES.filter((p) => p.mode === mode);
 export const findPalette = (mode: ThemeMode, id: string | undefined) =>
@@ -264,7 +296,10 @@ export function buildPaletteCss(): string {
     // (0,4,1): appearance.css (0,3,1) ve health.css/index.css eski token bloklarını her zaman ezer
     return `html:root.ui-v7[data-mode="${p.mode}"][data-palette="${p.id}"] { ${body} --ui-focus: ${p.vars.accent}; --color-teal-600: ${p.vars.accent}; }`;
   });
-  return blocks.join('\n') + MODE_CSS;
+  // Vurgu seçenekleri (0,5,1): palet bloğunu ezer; ilk seçenek paletin kendisi olduğu için blok üretilmez
+  const accents = PALETTES.flatMap((p) => (p.accents || []).slice(1).map((a) =>
+    `html:root.ui-v7[data-mode="${p.mode}"][data-palette="${p.id}"][data-accent="${a.id}"] { --color-accent: ${a.accent}; --color-accent-hover: ${a.hover}; --color-accent-soft: ${a.soft}; --color-on-accent: ${a.on}; --ui-focus: ${a.accent}; --color-teal-600: ${a.accent}; }`));
+  return [...blocks, ...accents].join('\n') + MODE_CSS;
 }
 
 /** Palet CSS'ini belgeye bir kez ekler (yeniden çağrılırsa dokunmaz). */
