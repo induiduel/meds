@@ -297,7 +297,15 @@ def main():
             tur()
         except Exception as e:  # noqa: BLE001
             log(f"tur hatası: {e!r}")
-        time.sleep(ARALIK_SN)
+        # Turlar arasında deste değişirse (yayın) PDF sayfa eşlemesi beklemeden tazelenir; imza aynıysa iş yapmaz
+        kalan = ARALIK_SN
+        while kalan > 0:
+            time.sleep(min(600, kalan))
+            kalan -= 600
+            try:
+                pdf_eslesme_guncelle()
+            except Exception as e:  # noqa: BLE001
+                log(f"PDF eşleşmesi hatası: {e!r}")
 
 
 if __name__ == "__main__":

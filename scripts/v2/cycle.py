@@ -7,6 +7,7 @@ Kilit (süreçler arası), checkpoint (`CORE_DIR/_state/cycle.json`) ve adım g�
 from __future__ import annotations
 
 import argparse
+import hashlib
 import time
 from pathlib import Path
 
@@ -16,6 +17,9 @@ from .core import store
 LOCK_NAME = "cycle.lock"
 STATE_NAME = "cycle"
 LOG_NAME = "cycle.log"
+# Boş turda (yeni dosya yok, girdiler aynı, cevap dolmadı) tam son işlem en geç bu kadar
+# saniyede bir koşar; aradaki turlarda yalnız cevap tamamlama denenir.
+FULL_POST_EVERY = 6 * 3600
 
 
 class _Logger:
@@ -38,6 +42,23 @@ def _pending_files(roots: list[str | Path]) -> list[Path]:
     for root in roots:
         files.extend(pipeline._supported_files(Path(root)))
     return sorted(set(files))
+
+
+def _input_fingerprint() -> str:
+    """Son işlem girdilerinin (temiz notlar + ders özetleri) ucuz parmak izi: ad, boyut, mtime."""
+    parts: list[str] = []
+    bases = [(config.DATABASE_DIR / "derived" / "clean_notes", "*.jsonl"),
+             (config.MEDS_DIR / "src" / "data" / "summaries", "kurul*.json")]
+    for base, pat in bases:
+        if not base.exists():
+            continue
+        for f in sorted(base.glob(pat)):
+            try:
+                st = f.stat()
+            except OSError:
+                continue
+            parts.append(f"{f.name}:{st.st_size}:{st.st_mtime_ns}")
+    return hashlib.sha1("\n".join(parts).encode("utf-8")).hexdigest()
 
 
 def run_post_stages(*, dataset: str, answers_limit: int, log) -> dict:
@@ -102,7 +123,26 @@ def run_once(roots: list[str | Path], *, dataset: str = "archive", limit: int | 
                 counts["hata"] += 1
                 logger(f"HATA {f.name}: {exc}")
         if post:
-            counts["post"] = run_post_stages(dataset=dataset, answers_limit=answers_limit, log=logger)
+            fp = _input_fingerprint()
+            last_fp = state.data.get("post_fp")
+            last_full = float(state.data.get("post_full_at") or 0)
+            idle = (counts["islenen"] == 0 and fp == last_fp
+                    and time.time() - last_full < FULL_POST_EVERY)
+            filled = 0
+            if idle and answers_limit > 0:
+                try:
+                    ans = pipeline.run_answers(dataset, limit=answers_limit, log=logger)
+                    filled = int(ans.get("dolduruldu") or 0)
+                    counts["post"] = {"cevaplar": ans}
+                except Exception as exc:  # noqa: BLE001
+                    logger(f"cevaplar hatası: {exc}")
+            if not idle or filled:
+                counts["post"] = run_post_stages(dataset=dataset, answers_limit=answers_limit, log=logger)
+                state.data["post_fp"] = fp
+                state.data["post_full_at"] = time.time()
+                state.save()
+            else:
+                counts["post_atlandi"] = "girdiler değişmedi"
     logger(f"tur bitti: {counts}")
     return counts
 

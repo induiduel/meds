@@ -51,7 +51,8 @@ export interface DeckPdfViewerProps {
   isSplitView?: boolean;
   onToggleSplitView?: () => void;
   compact?: boolean;
-  onPageChange?: (page: number) => void;
+  /** Görünen sayfa değişince (dosya sırası: deckPdfService; userScroll: kullanıcı kaydırdı/atladı) */
+  onPageChange?: (page: number, fileIndex: number, userScroll?: boolean) => void;
 }
 
 const fmtMb = (b?: number) => (b ? `${(b / 1048576).toFixed(b < 10485760 ? 1 : 0)} MB` : '');
@@ -254,12 +255,12 @@ export const DeckPdfViewer: React.FC<DeckPdfViewerProps> = ({
     setTarget(c);
     setPage(c);
     setPageInput(String(c));
-    onPageChange?.(c);
+    onPageChange?.(c, fileIdx, true);
   };
   const onVisible = (p: number) => {
     setPage(p);
     setPageInput(String(p));
-    onPageChange?.(p);
+    onPageChange?.(p, fileIdx, true);
   };
 
   const pickFile = (e: React.ChangeEvent<HTMLInputElement>) => {

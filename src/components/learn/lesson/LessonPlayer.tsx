@@ -476,6 +476,37 @@ export const LessonPlayer: React.FC<LessonPlayerProps> = ({ deck, startAt, initi
   const pdfLoc = useMemo(() => getSlidePdfLocation(deck.id, step.slide.slideNumber, step.slide, n, pdfInfo?.slides), [deck.id, step, n, pdfInfo?.slides]);
   const [pdfPage, setPdfPage] = useState(pdfLoc.primaryPage);
   useEffect(() => setPdfPage(pdfLoc.primaryPage), [pdfLoc.primaryPage]);
+  // PDF'te kaydırılan sayfa başka bir adımın bölümüne düşerse ders o adıma geçer (özet/tekrar adımları tüm PDF'i
+  // kapsadığı için hedef olmaz). Adım değişiminden hemen sonraki programlı kaydırma sayılmaz; kısa bekleme ile süzülür.
+  const stepPdfRanges = useMemo(() => steps.map((s) => {
+    const al = pdfInfo?.slides?.[String(s.slide.slideNumber)];
+    if (!al) return null;
+    const [a, b, f = 0] = al;
+    const total = pdfInfo?.files[f]?.pages;
+    if (a === 1 && (total ? b >= total : b - a >= 20)) return null;
+    return { a, b, f };
+  }), [steps, pdfInfo]);
+  const pdfSyncAt = useRef(0);
+  const pdfSyncTimer = useRef<number | undefined>(undefined);
+  useEffect(() => { pdfSyncAt.current = Date.now(); }, [index]);
+  useEffect(() => () => window.clearTimeout(pdfSyncTimer.current), []);
+  const onPdfPage = useCallback((page: number, fileIndex: number, userScroll?: boolean) => {
+    setPdfPage(page);
+    window.clearTimeout(pdfSyncTimer.current);
+    if (!userScroll) return;
+    pdfSyncTimer.current = window.setTimeout(() => {
+      if (Date.now() - pdfSyncAt.current < 1500) return;
+      const cur = stepPdfRanges[index];
+      const inside = (r: { a: number; b: number; f: number } | null) => !!r && r.f === fileIndex && page >= r.a && page <= r.b;
+      if (cur ? inside(cur) : !stepPdfRanges.some(inside)) return;
+      // en yakın eşleşen adım (ileri/geri), birden çoksa güncel adıma en yakını
+      let best = -1;
+      stepPdfRanges.forEach((r, i) => {
+        if (inside(r) && (best < 0 || Math.abs(i - index) < Math.abs(best - index))) best = i;
+      });
+      if (best >= 0 && best !== index) goToRef.current(best);
+    }, 650);
+  }, [stepPdfRanges, index]);
   const kaz = useMemo(() => matchKazanim(step, kazIndex[deck.id], pdfLoc.primaryPage, `${deck.title} ${deck.discipline || ''}`), [step, kazIndex, deck.id, deck.title, deck.discipline, pdfLoc.primaryPage]);
   const practice = useMemo(() => practiceOf(step), [step]);
   const infoTabs = useMemo(() => infoTabsFor(step, kaz), [step, kaz]);
@@ -578,6 +609,8 @@ export const LessonPlayer: React.FC<LessonPlayerProps> = ({ deck, startAt, initi
     },
     [n, index, layout, readMode, viewMode]
   );
+  const goToRef = useRef(goTo);
+  goToRef.current = goTo;
   const next = () => {
     if (index < n - 1) {
       markDone(step.number);
@@ -1123,7 +1156,7 @@ export const LessonPlayer: React.FC<LessonPlayerProps> = ({ deck, startAt, initi
   const stage =
     viewMode === 'pdf' ? (
       <div className="ls-pdf">
-        <DeckPdfViewer deck={deck} currentSlideNumber={step.slide.slideNumber} currentSlide={step.slide} targetPage={pdfPage} targetPageRange={pdfLoc.pageRange} onToggleSplitView={() => setViewMode('split')} onPageChange={setPdfPage} />
+        <DeckPdfViewer deck={deck} currentSlideNumber={step.slide.slideNumber} currentSlide={step.slide} targetPage={pdfPage} targetPageRange={pdfLoc.pageRange} onToggleSplitView={() => setViewMode('split')} onPageChange={onPdfPage} />
       </div>
     ) : viewMode === 'split' ? (
       <SplitPane
@@ -1137,7 +1170,7 @@ export const LessonPlayer: React.FC<LessonPlayerProps> = ({ deck, startAt, initi
         }
         right={
           <div className="ls-split-r">
-            <DeckPdfViewer deck={deck} currentSlideNumber={step.slide.slideNumber} currentSlide={step.slide} targetPage={pdfPage} targetPageRange={pdfLoc.pageRange} isSplitView onToggleSplitView={() => setViewMode('pdf')} onPageChange={setPdfPage} />
+            <DeckPdfViewer deck={deck} currentSlideNumber={step.slide.slideNumber} currentSlide={step.slide} targetPage={pdfPage} targetPageRange={pdfLoc.pageRange} isSplitView onToggleSplitView={() => setViewMode('pdf')} onPageChange={onPdfPage} />
           </div>
         }
       />

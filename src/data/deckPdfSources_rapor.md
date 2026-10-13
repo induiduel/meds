@@ -1,19 +1,17 @@
-# Deste → PDF eşleşme raporu (2026-10-13T03:10:01)
+# Deste → PDF eşleşme raporu (2026-10-13T21:20:00)
 
-Drive ders PDF'i: 58 · deste: 174 · OK: 166 · KANIT YOK: 8
+Drive ders PDF'i: 60 · deste: 174 · OK: 168 · KANIT YOK: 6
 
-## KANIT YOK (8)
+## KANIT YOK (6)
 
 - `k1p-k1-06-gebelik-ve-emzirme-doneminde-beslenme` — PDF yok — en iyi aday 3)BEBEK BESLENMESİ.pdf yalnız 13/90 slayt; ders tarihi 2026-09-15
 - `k1p-k1-57-intrauterin-enfeksiyonlar` — PDF yok — en iyi aday 32)Gebelik Hastalıkları .pdf yalnız 5/18 slayt; ders tarihi 2026-10-12
-- `k1p-k1-59-immunofarmakoloji` — PDF yok — en iyi aday 19)Tümör İmmünolojisi ve Metastaz Mekanizmaları.pdf yalnız 2/18 slayt; ders tarihi 2026-10-13
-- `k1p-k1-60-preimplantasyon-genetik-tani-pgt` — PDF yok — en iyi aday 2)KROMOZOMAL HASTALIKLAR VE GENETİK DANIŞMA.pdf yalnız 2/16 slayt; ders tarihi 2026-10-14
 - `k1p-k1-63-turkiye-de-saglik-hizmetleri` — PDF yok — en iyi aday 2)Ana çocuk sağ.izleme .pdf yalnız 4/14 slayt; ders tarihi 2026-10-15
 - `k1p-k1-64-gebelik-terminolojisi-ve-kavramlari` — PDF yok — en iyi aday 2)Ana çocuk sağ.izleme .pdf yalnız 2/15 slayt; ders tarihi 2026-10-16
 - `k1p-k1-66-erkek-genital-sistem-ve-prostat-hastaliklari` — PDF yok — en iyi aday 5) Üriner Sistemin Spesifik Enfeksiyonları.pdf yalnız 2/18 slayt; ders tarihi 2026-10-16
 - `k1p-k1-47-bagisikligi-baskili-hastalarda-enfeksiyon` — PDF yok — en iyi aday 4)Enfeksiyon Hastalıklarında Temel Kavramlar ve Genel Özellikler.pdf yalnız 4/90 slayt; ders tarihi 2026-10-05
 
-## OK (166)
+## OK (168)
 
 - `deck-urinary-obstruction` — 1)Üriner Obstrüksiyon; Patofizyoloji, Klinik ve Tedavi.pdf — ad (eski_katalog) + içerik: 24/34 slayt
 - `deck-urolithiasis-pathophysiology` — 2)Ürolitiyazis Patofizyolojisi.pdf + 1)Üriner Obstrüksiyon; Patofizyoloji, Klinik ve Tedavi.pdf — ad (eski_katalog) + içerik: 23/32 slayt
@@ -24,20 +22,20 @@ Drive ders PDF'i: 58 · deste: 174 · OK: 166 · KANIT YOK: 8
 - `learn-dismorfoloji-terminolojisi` — 1)DİSMORFOLOJİDE GENETİK TERMİNOLOJİ.pdf — ad (eski_katalog) + içerik: 23/31 slayt
 - `learn-enfeksiyon-hastaliklari` — 3)İzolasyon yöntemleri.pdf + 4)Enfeksiyon Hastalıklarında Temel Kavramlar ve Genel Özellikler.pdf — ad (eski_katalog) + içerik: 12/20 slayt
 - `learn-halk-sagligi-salgin-has` — 4)'Salgın Hastalıklarda Kontrol ve Korunma'.pdf — ad (eski_katalog) + içerik: 11/32 slayt
-- `learn-hucre-hasari-hucre-olumu` — 2)Hücre Hasarı ve Nekroz.pdf + 3)Hücre Hasarı ve Nekroz 2.pdf — ad (eski_katalog) + içerik: 16/40 slayt
+- `learn-hucre-hasari-hucre-olumu` — 2)Hücre Hasarı ve Nekroz.pdf + 3)Hücre Hasarı ve Nekroz 2.pdf — ad (eski_katalog) + içerik: 17/40 slayt
 - `learn-hucresel-adaptasyon-ve-hu` — 4)Hücresel Adaptasyonlar.pdf — ad (eski_katalog) + içerik: 23/24 slayt
 - `learn-hucresel-yaslanma-ve-hucr` — 6)Hücresel Yaşlanma.pdf — ad (eski_katalog) + içerik: 17/31 slayt
 - `learn-izolasyon-yontemleri` — 3)İzolasyon yöntemleri.pdf + 4)Enfeksiyon Hastalıklarında Temel Kavramlar ve Genel Özellikler.pdf — ad (eski_katalog) + içerik: 12/20 slayt
-- `k1p-k1-10-kromozomal-hastaliklar-ve-genetik-danisma` — 2)KROMOZOMAL HASTALIKLAR VE GENETİK DANIŞMA.pdf — ad (checklist) + içerik: 59/90 slayt
+- `k1p-k1-10-kromozomal-hastaliklar-ve-genetik-danisma` — 2)KROMOZOMAL HASTALIKLAR VE GENETİK DANIŞMA.pdf — ad (checklist) + içerik: 54/90 slayt
 - `deck-acute-inflammation-pathology` — 7)Akut Enflamasyon.pdf — ad (eski_katalog) + içerik: 33/38 slayt
 - `learn-kronik-enflamasyon` — 9)Kronik ve Granülamatöz Enflamasyon .pdf + 8)Enflamasyonun Kimyasal Mediyatörleri.pdf — ad (eski_katalog) + içerik: 19/40 slayt
 - `learn-intraseluler-birikimler` — 5)Hücre İçi Birikimler ve Kalsifikasyonlar.pdf — ad (eski_katalog) + içerik: 23/24 slayt
 - `learn-enfeksiyon-izolasyon` — 3)İzolasyon yöntemleri.pdf + 4)Enfeksiyon Hastalıklarında Temel Kavramlar ve Genel Özellikler.pdf — ad (eski_katalog) + içerik: 12/20 slayt
 - `learn-patolojiye-giris` — 1)Patolojiye Giriş.pdf — ad (eski_katalog) + içerik: 19/24 slayt
 - `learn-genital-enfeksiyonlar` — 2)Genital enfeksiyonlar.pdf — ad (eski_katalog) + içerik: 11/24 slayt
-- `learn-dogumsal-genital-anomaliler` — 3)'DOĞUMSAL KADIN-ERKEK GELİŞİM ANOMALİLERİ'.pdf — ad (eski_katalog) + içerik: 20/24 slayt
+- `learn-dogumsal-genital-anomaliler` — 3)'DOĞUMSAL KADIN-ERKEK GELİŞİM ANOMALİLERİ'.pdf — ad (eski_katalog) + içerik: 19/24 slayt
 - `learn-doku-onarimi-yara-iyilesmesi` — 10)Doku Onarımı ve Yara İyileşmesi.pdf — ad (eski_katalog) + içerik: 24/35 slayt
-- `learn-prenatal-tani` — 5)PRENATAL TANI ve UYGULAMA ALANLARI.pdf — ad (eski_katalog) + içerik: 8/24 slayt
+- `learn-prenatal-tani` — 5)PRENATAL TANI ve UYGULAMA ALANLARI.pdf — ad (eski_katalog) + içerik: 7/24 slayt
 - `learn-glomeruler-hastaliklar-nefrotik` — 21)Glomerüler Hastalıklar_ Nefrotik Sendrom.pdf + 22)Glomeruler Hastalıklar_ Nefritik Sendrom.pdf — ad (eski_katalog) + içerik: 15/24 slayt
 - `learn-glomeruler-hastaliklar-nefritik` — 22)Glomeruler Hastalıklar_ Nefritik Sendrom.pdf + 21)Glomerüler Hastalıklar_ Nefrotik Sendrom.pdf — ad (elle) + içerik: 17/24 slayt
 - `learn-tubulointerstisyel-hastaliklar` — 24) Tübülointerstisyel Hastalıklar.pdf — ad (eski_katalog) + içerik: 17/24 slayt
@@ -46,7 +44,7 @@ Drive ders PDF'i: 58 · deste: 174 · OK: 166 · KANIT YOK: 8
 - `learn-mesane-hastaliklari-tumorleri` — 26)Mesane Hastalıkları ve Tümörleri.pdf — ad (eski_katalog) + içerik: 10/24 slayt
 - `learn-tumor-biyolojisi-terminolojisi` — 16)Tümör Biyolojisi ve Terminolojisi.pdf — ad (eski_katalog) + içerik: 25/35 slayt
 - `learn-enflamasyon-kimyasal-mediyatorleri` — 8)Enflamasyonun Kimyasal Mediyatörleri.pdf — ad (eski_katalog) + içerik: 21/24 slayt
-- `learn-asiri-duyarlilik-ve-otoimmunite` — 14)Aşırı duyarlılık ve otoimmünite.pdf — ad (eski_katalog) + içerik: 37/44 slayt
+- `learn-asiri-duyarlilik-ve-otoimmunite` — 14)Aşırı duyarlılık ve otoimmünite.pdf — ad (eski_katalog) + içerik: 33/44 slayt
 - `learn-genetik-pediatrik-cevresel-patoloji` — 15)Genetik,pediatrik ve çevresel patoloji.pdf — ad (eski_katalog) + içerik: 20/24 slayt
 - `learn-tromboz-patofizyolojisi-tam` — 12) Tromboz Patofizyolojisi.pdf — ad (eski_katalog) + içerik: 32/34 slayt
 - `learn-iskemi-infarktus-ve-sok` — 13) Emboli,enfarktüs ve şok.pdf — ad (eski_katalog) + içerik: 30/34 slayt
@@ -64,60 +62,62 @@ Drive ders PDF'i: 58 · deste: 174 · OK: 166 · KANIT YOK: 8
 - `learn-uriner-sistem-enfeksiyonlari-epidemiyoloji` — 4)'Üriner Sistem Enfeksiyonlarının Epidemiyoloji, Etyoloji ve Semptomatolojisi'.pdf — ad (elle) + içerik: 22/24 slayt
 - `learn-uriner-sistemin-spesifik-enfeksiyonlari` — 5) Üriner Sistemin Spesifik Enfeksiyonları.pdf — ad (eski_katalog) + içerik: 8/24 slayt
 - `learn-donem3-kurul1-mufredat-rehberi` — 2026-27 D3 ders programı.pdf — program belgesi (içerik denetimi yok)
-- `k1p-k1-01-dismorfolojide-genetik-terminoloji` — 1)DİSMORFOLOJİDE GENETİK TERMİNOLOJİ.pdf + 2)KROMOZOMAL HASTALIKLAR VE GENETİK DANIŞMA.pdf — ad (checklist) + içerik: 25/89 slayt
-- `k1p-k1-02-patolojiye-giris` — 1)Patolojiye Giriş.pdf — ad (checklist) + içerik: 75/90 slayt
+- `k1p-k1-01-dismorfolojide-genetik-terminoloji` — 1)DİSMORFOLOJİDE GENETİK TERMİNOLOJİ.pdf + 2)KROMOZOMAL HASTALIKLAR VE GENETİK DANIŞMA.pdf — ad (checklist) + içerik: 27/89 slayt
+- `k1p-k1-02-patolojiye-giris` — 1)Patolojiye Giriş.pdf — ad (checklist) + içerik: 76/90 slayt
 - `k1p-k1-03-hucresel-adaptasyonlar` — 4)Hücresel Adaptasyonlar.pdf — ad (checklist) + içerik: 58/90 slayt
-- `k1p-k1-04-hucre-hasari-ve-nekroz-i` — 2)Hücre Hasarı ve Nekroz.pdf — ad (checklist) + içerik: 55/90 slayt
-- `k1p-k1-05-hucre-hasari-ve-nekroz-ii` — 3)Hücre Hasarı ve Nekroz 2.pdf — ad (checklist) + içerik: 58/90 slayt
+- `k1p-k1-04-hucre-hasari-ve-nekroz-i` — 2)Hücre Hasarı ve Nekroz.pdf — ad (checklist) + içerik: 54/90 slayt
+- `k1p-k1-05-hucre-hasari-ve-nekroz-ii` — 3)Hücre Hasarı ve Nekroz 2.pdf — ad (checklist) + içerik: 57/90 slayt
 - `k1p-k1-07-hucre-ici-birikimler-ve-kalsifikasyonlar` — 5)Hücre İçi Birikimler ve Kalsifikasyonlar.pdf — ad (checklist) + içerik: 67/90 slayt
-- `k1p-k1-08-hucresel-yaslanma` — 6)Hücresel Yaşlanma.pdf — ad (checklist) + içerik: 45/90 slayt
-- `k1p-k1-09-akut-enflamasyon-vaskuler-degisiklikler-ve-hucrese` — 7)Akut Enflamasyon.pdf — ad (checklist) + içerik: 47/90 slayt
+- `k1p-k1-08-hucresel-yaslanma` — 6)Hücresel Yaşlanma.pdf — ad (checklist) + içerik: 46/90 slayt
+- `k1p-k1-09-akut-enflamasyon-vaskuler-degisiklikler-ve-hucrese` — 7)Akut Enflamasyon.pdf — ad (checklist) + içerik: 48/90 slayt
 - `k1p-k1-11-uriner-obstruksiyonun-fizyopatolojisi` — 1)Üriner Obstrüksiyon; Patofizyoloji, Klinik ve Tedavi.pdf — ad (checklist) + içerik: 47/90 slayt
 - `k1p-k1-12-enflamasyonun-kimyasal-mediyatorleri` — 8)Enflamasyonun Kimyasal Mediyatörleri.pdf — ad (checklist) + içerik: 69/100 slayt
 - `k1p-k1-13-kronik-ve-granulomatoz-enflamasyon` — 9)Kronik ve Granülamatöz Enflamasyon .pdf — ad (checklist) + içerik: 52/100 slayt
-- `k1p-k1-14-salgin-hastaliklarda-kontrol-ve-korunma-yontemleri` — 4)'Salgın Hastalıklarda Kontrol ve Korunma'.pdf — ad (checklist) + içerik: 40/100 slayt
-- `k1p-k1-15-doku-onarimi-ve-yara-iyilesmesi` — 10)Doku Onarımı ve Yara İyileşmesi.pdf — ad (checklist) + içerik: 66/100 slayt
-- `k1p-k1-16-odem-hiperemi-konjesyon-ve-kanama` — 11)Ödem, Hiperemi, Konjesyon ve Kanama.pdf — ad (checklist) + içerik: 74/100 slayt
-- `k1p-k1-17-cinsel-yolla-bulasan-enfeksiyonlarda-tedavi` — 1)Cinsel yolla bulaşan hastalıklarda tedavi.pdf + 26)Mesane Hastalıkları ve Tümörleri.pdf + 8)ÜRETRAL AKINTI.pdf — ad (checklist) + içerik: 32/100 slayt
+- `k1p-k1-14-salgin-hastaliklarda-kontrol-ve-korunma-yontemleri` — 4)'Salgın Hastalıklarda Kontrol ve Korunma'.pdf — ad (checklist) + içerik: 41/100 slayt
+- `k1p-k1-15-doku-onarimi-ve-yara-iyilesmesi` — 10)Doku Onarımı ve Yara İyileşmesi.pdf — ad (checklist) + içerik: 64/100 slayt
+- `k1p-k1-16-odem-hiperemi-konjesyon-ve-kanama` — 11)Ödem, Hiperemi, Konjesyon ve Kanama.pdf — ad (checklist) + içerik: 73/100 slayt
+- `k1p-k1-17-cinsel-yolla-bulasan-enfeksiyonlarda-tedavi` — 1)Cinsel yolla bulaşan hastalıklarda tedavi.pdf + 26)Mesane Hastalıkları ve Tümörleri.pdf + 8)ÜRETRAL AKINTI.pdf — ad (checklist) + içerik: 31/100 slayt
 - `k1p-k1-18-halk-sagligi-tarihcesi` — 1)Halk SağlığıTarihçesi.pdf — ad (checklist) + içerik: 77/100 slayt
-- `k1p-k1-19-dogumsal-kadin-erkek-genital-gelisim-anomalileri` — 3)'DOĞUMSAL KADIN-ERKEK GELİŞİM ANOMALİLERİ'.pdf — ad (checklist) + içerik: 63/100 slayt
-- `k1p-k1-20-tromboz-patofizyolojisi` — 12) Tromboz Patofizyolojisi.pdf — ad (checklist) + içerik: 85/100 slayt
+- `k1p-k1-19-dogumsal-kadin-erkek-genital-gelisim-anomalileri` — 3)'DOĞUMSAL KADIN-ERKEK GELİŞİM ANOMALİLERİ'.pdf — ad (checklist) + içerik: 62/100 slayt
+- `k1p-k1-20-tromboz-patofizyolojisi` — 12) Tromboz Patofizyolojisi.pdf — ad (checklist) + içerik: 86/100 slayt
 - `k1p-k1-21-enfeksiyon-hastaliklarinda-genel-kavramlar-ve-teme` — 4)Enfeksiyon Hastalıklarında Temel Kavramlar ve Genel Özellikler.pdf — ad (checklist) + içerik: 58/100 slayt
 - `k1p-k1-22-bebek-beslenmesi` — 3)BEBEK BESLENMESİ.pdf — ad (checklist) + içerik: 76/100 slayt
-- `k1p-k1-23-ana-cocuk-sagligi-duzeyinin-izlenmesi` — 2)Ana çocuk sağ.izleme .pdf — ad (elle) + içerik: 69/100 slayt
-- `k1p-k1-24-emboli-enfarktus-ve-sok` — 13) Emboli,enfarktüs ve şok.pdf — ad (checklist) + içerik: 71/100 slayt
-- `k1p-k1-25-asiri-duyarlilik-ve-otoimmunite` — 14)Aşırı duyarlılık ve otoimmünite.pdf — ad (checklist) + içerik: 75/100 slayt
+- `k1p-k1-23-ana-cocuk-sagligi-duzeyinin-izlenmesi` — 2)Ana çocuk sağ.izleme .pdf — ad (elle) + içerik: 67/100 slayt
+- `k1p-k1-24-emboli-enfarktus-ve-sok` — 13) Emboli,enfarktüs ve şok.pdf — ad (checklist) + içerik: 73/100 slayt
+- `k1p-k1-25-asiri-duyarlilik-ve-otoimmunite` — 14)Aşırı duyarlılık ve otoimmünite.pdf — ad (checklist) + içerik: 72/100 slayt
 - `k1p-k1-26-genetik-pediatrik-ve-cevresel-patoloji` — 15)Genetik,pediatrik ve çevresel patoloji.pdf — ad (checklist) + içerik: 74/100 slayt
-- `k1p-k1-27-uriner-sistem-tas-hastaliklari-fizyopatolojisi` — 2)Ürolitiyazis Patofizyolojisi.pdf — ad (checklist) + içerik: 83/100 slayt
-- `k1p-k1-28-tumor-biyolojisi-ve-terminolojisi` — 16)Tümör Biyolojisi ve Terminolojisi.pdf — ad (checklist) + içerik: 63/100 slayt
+- `k1p-k1-27-uriner-sistem-tas-hastaliklari-fizyopatolojisi` — 2)Ürolitiyazis Patofizyolojisi.pdf — ad (checklist) + içerik: 82/100 slayt
+- `k1p-k1-28-tumor-biyolojisi-ve-terminolojisi` — 16)Tümör Biyolojisi ve Terminolojisi.pdf — ad (checklist) + içerik: 62/100 slayt
 - `k1p-k1-29-karsinojenezin-molekuler-temeli` — 17)Karsinojenezin Moleküler Temeli.pdf — ad (checklist) + içerik: 60/100 slayt
-- `k1p-k1-30-ileri-tumor-genetigi-ve-metabolizmasi` — 18)İleri Tümör Genetiği ve Metabolizması.pdf — ad (checklist) + içerik: 55/100 slayt
-- `k1p-k1-31-urogenital-sistem-tumorlerinde-genetik-belirtecler` — 4)'ÜROGENİTAL SİSTEM TÜMÖRLERİNDE GENETİK BELİRTEÇLER.'.pdf — ad (elle) + içerik: 38/100 slayt
-- `k1p-k1-32-tumor-immunolojisi-ve-metastaz-mekanizmalari` — 19)Tümör İmmünolojisi ve Metastaz Mekanizmaları.pdf — ad (checklist) + içerik: 53/100 slayt
-- `k1p-k1-33-tumor-evrelemesi-derecelendirme-ve-laboratuvar-tan` — 20)Tümör Evrelemesi, Derecelendirme ve LaboratuvarTanısı.pdf — ad (checklist) + içerik: 68/100 slayt
+- `k1p-k1-30-ileri-tumor-genetigi-ve-metabolizmasi` — 18)İleri Tümör Genetiği ve Metabolizması.pdf — ad (checklist) + içerik: 53/100 slayt
+- `k1p-k1-31-urogenital-sistem-tumorlerinde-genetik-belirtecler` — 4)'ÜROGENİTAL SİSTEM TÜMÖRLERİNDE GENETİK BELİRTEÇLER.'.pdf — ad (elle) + içerik: 37/100 slayt
+- `k1p-k1-32-tumor-immunolojisi-ve-metastaz-mekanizmalari` — 19)Tümör İmmünolojisi ve Metastaz Mekanizmaları.pdf — ad (checklist) + içerik: 52/100 slayt
+- `k1p-k1-33-tumor-evrelemesi-derecelendirme-ve-laboratuvar-tan` — 20)Tümör Evrelemesi, Derecelendirme ve LaboratuvarTanısı.pdf — ad (checklist) + içerik: 67/100 slayt
 - `k1p-k1-34-genital-enfeksiyonlar` — 2)Genital enfeksiyonlar.pdf — ad (checklist) + içerik: 56/100 slayt
 - `k1p-k1-35-prenatal-tani-yontemleri` — 5)PRENATAL TANI ve UYGULAMA ALANLARI.pdf — ad (checklist) + içerik: 71/100 slayt
-- `k1p-k1-36-izolasyon-yontemleri` — 3)İzolasyon yöntemleri.pdf — ad (checklist) + içerik: 76/100 slayt
+- `k1p-k1-36-izolasyon-yontemleri` — 3)İzolasyon yöntemleri.pdf — ad (checklist) + içerik: 75/100 slayt
 - `k1p-k1-37-glomeruler-hastaliklar-nefrotik-sendrom` — 21)Glomerüler Hastalıklar_ Nefrotik Sendrom.pdf — ad (elle) + içerik: 80/100 slayt
-- `k1p-k1-38-glomeruler-hastaliklar-nefritik-sendrom` — 22)Glomeruler Hastalıklar_ Nefritik Sendrom.pdf — ad (elle) + içerik: 81/100 slayt
+- `k1p-k1-38-glomeruler-hastaliklar-nefritik-sendrom` — 22)Glomeruler Hastalıklar_ Nefritik Sendrom.pdf — ad (elle) + içerik: 80/100 slayt
 - `k1p-k1-39-uriner-sistem-enfeksiyonlarinin-epidemiyoloji-etiy` — 4)'Üriner Sistem Enfeksiyonlarının Epidemiyoloji, Etyoloji ve Semptomatolojisi'.pdf — ad (checklist) + içerik: 91/100 slayt
-- `k1p-k1-40-cinsel-yolla-bulasan-hastaliklarda-profilaksi-ve-k` — 6)'Cinsel yolla bulaşan enfeksiyonlarda profilaksi ve korunma' .pdf — yalnız içerik: 59/100 slayt (ikinci 3)
+- `k1p-k1-40-cinsel-yolla-bulasan-hastaliklarda-profilaksi-ve-k` — 6)'Cinsel yolla bulaşan enfeksiyonlarda profilaksi ve korunma' .pdf — ad (checklist) + içerik: 29/37 slayt
 - `k1p-k1-41-sistemik-hastaliklarda-bobrek-hasari` — 23)Sistemik Hastalıklarda Böbrek Hasarı.pdf — ad (checklist) + içerik: 65/100 slayt
 - `k1p-k1-42-tubulointerstisyel-hastaliklar` — 24) Tübülointerstisyel Hastalıklar.pdf — ad (checklist) + içerik: 59/90 slayt
-- `k1p-k1-48-vulva-vajen-ve-serviks-hastaliklari` — 28)Vulva, Vajen ve Serviks Hastalıkları.pdf — ad (checklist) + içerik: 59/100 slayt
+- `k1p-k1-48-vulva-vajen-ve-serviks-hastaliklari` — 28)Vulva, Vajen ve Serviks Hastalıkları.pdf — ad (checklist) + içerik: 58/100 slayt
 - `k1p-k1-49-invaziv-serviks-kanseri-ve-endometriyozis` — 39)İnvaziv Serviks Kanseri ve Endometriyozis.pdf — ad (checklist) + içerik: 82/100 slayt
 - `k1p-k1-50-sifilis` — 7)Sifiliz .pdf — ad (elle) + içerik: 30/30 slayt
-- `k1p-k1-51-uriner-sistem-enfeksiyonlari-laboratuvar-bulgulari` — 3)Üriner Sistem Enfeksiyonları.pdf — yalnız içerik: 80/100 slayt (ikinci 3)
+- `k1p-k1-51-uriner-sistem-enfeksiyonlari-laboratuvar-bulgulari` — 3)Üriner Sistem Enfeksiyonları.pdf — yalnız içerik: 80/100 slayt (ikinci 4)
 - `k1p-k1-52-uriner-sistem-enfeksiyonlari` — 5)Üriner Sistem Enfeksiyonlari.pdf — ad (checklist) + içerik: 84/100 slayt
 - `k1p-k1-53-endometriyal-hiperplazi-ve-kanserleri` — 30)Endometrial Hiperplazi ve Kanserleri.pdf — ad (elle) + içerik: 51/90 slayt
-- `k1p-k1-54-uterus-duz-kas-ve-trofoblastik-tumorleri` — 32)Gebelik Hastalıkları .pdf + 30)Endometrial Hiperplazi ve Kanserleri.pdf — yalnız içerik: 44/90 slayt (ikinci 14)
-- `k1p-k1-55-over-tumorleri` — 31)Ovidukt ve Ovaryum Patolojisi.pdf — yalnız içerik: 10/15 slayt (ikinci 1)
+- `k1p-k1-54-uterus-duz-kas-ve-trofoblastik-tumorleri` — 32)Gebelik Hastalıkları .pdf + 30)Endometrial Hiperplazi ve Kanserleri.pdf — yalnız içerik: 44/90 slayt (ikinci 17)
+- `k1p-k1-55-over-tumorleri` — 31)Ovidukt ve Ovaryum Patolojisi.pdf — ad (checklist) + içerik: 65/65 slayt
 - `k1p-k1-56-memenin-benign-hastaliklari` — 33) Memenin Benign Hastalıkları.pdf — ad (elle) + içerik: 60/60 slayt
-- `k1p-k1-58-enurezis-nokturna` — 6)Enürezis.pdf — ad (elle) + içerik: 14/17 slayt
-- `k1p-k1-61-abortus` — 1)Abortus_2026.pdf — ad (elle) + içerik: 63/90 slayt
-- `k1p-k1-62-uretral-akinti` — 8)ÜRETRAL AKINTI.pdf — ad (elle) + içerik: 12/16 slayt
+- `k1p-k1-58-enurezis-nokturna` — 6)Enürezis.pdf — ad (elle) + içerik: 51/59 slayt
+- `k1p-k1-59-immunofarmakoloji` — 1)İmmunofarmakoloji.pdf — ad (checklist) + içerik: 58/60 slayt
+- `k1p-k1-60-preimplantasyon-genetik-tani-pgt` — 6)PREİMPLANTASYON GENETİK TANI (2).pdf — yalnız içerik: 16/16 slayt (ikinci 0)
+- `k1p-k1-61-abortus` — 1)Abortus_2026.pdf — ad (elle) + içerik: 62/64 slayt
+- `k1p-k1-62-uretral-akinti` — 8)ÜRETRAL AKINTI.pdf — ad (elle) + içerik: 55/57 slayt
 - `k1p-k1-65-meme-kanseri-ve-molekuler-tipleri` — 33) Memenin Benign Hastalıkları.pdf — yalnız içerik: 6/15 slayt (ikinci 1)
-- `k1p-k1-43-uriner-sistemin-spesifik-enfeksiyonlari` — 5) Üriner Sistemin Spesifik Enfeksiyonları.pdf — ad (checklist) + içerik: 84/90 slayt
+- `k1p-k1-43-uriner-sistemin-spesifik-enfeksiyonlari` — 5) Üriner Sistemin Spesifik Enfeksiyonları.pdf — ad (checklist) + içerik: 83/90 slayt
 - `k1p-k1-46-mesane-hastaliklari-ve-tumorleri` — 26)Mesane Hastalıkları ve Tümörleri.pdf — ad (elle) + içerik: 72/90 slayt
 - `k1p-k1-44-vaskuler-ve-kistik-bobrek-hastaliklari` — 25) Vasküler ve Kistik Böbrek Hastalıkları.pdf — ad (checklist) + içerik: 66/90 slayt
 - `k1p-k1-45-bobrek-tumorleri` — 26)Böbrek Tümörleri.pdf — ad (checklist) + içerik: 89/90 slayt
@@ -126,7 +126,7 @@ Drive ders PDF'i: 58 · deste: 174 · OK: 166 · KANIT YOK: 8
 - `k1p-k1-36-izolasyon-yontemleri-v2` — 3)İzolasyon yöntemleri.pdf — ad (slayt_kaynagi) + içerik: 40/47 slayt
 - `k1p-k1-50-sifilis-v2` — 7)Sifiliz .pdf — ad (slayt_kaynagi) + içerik: 48/48 slayt
 - `k1p-k1-17-cinsel-yolla-bulasan-enfeksiyonlarda-tedavi-v2` — 1)Cinsel yolla bulaşan hastalıklarda tedavi.pdf — ad (slayt_kaynagi) + içerik: 43/47 slayt
-- `k1p-k1-40-cinsel-yolla-bulasan-hastaliklarda-profilaksi-ve-k-v2` — 6)'Cinsel yolla bulaşan enfeksiyonlarda profilaksi ve korunma' .pdf — ad (slayt_kaynagi) + içerik: 35/50 slayt
+- `k1p-k1-40-cinsel-yolla-bulasan-hastaliklarda-profilaksi-ve-k-v2` — 6)'Cinsel yolla bulaşan enfeksiyonlarda profilaksi ve korunma' .pdf — ad (slayt_kaynagi) + içerik: 34/50 slayt
 - `k1p-k1-11-uriner-obstruksiyonun-fizyopatolojisi-v2` — 1)Üriner Obstrüksiyon; Patofizyoloji, Klinik ve Tedavi.pdf — ad (slayt_kaynagi) + içerik: 43/54 slayt
 - `k1p-k1-52-uriner-sistem-enfeksiyonlari-v2` — 5)Üriner Sistem Enfeksiyonlari.pdf — ad (slayt_kaynagi) + içerik: 47/56 slayt
 - `k1p-k1-21-enfeksiyon-hastaliklarinda-genel-kavramlar-ve-teme-v2` — 4)Enfeksiyon Hastalıklarında Temel Kavramlar ve Genel Özellikler.pdf — ad (slayt_kaynagi) + içerik: 60/65 slayt
@@ -180,4 +180,4 @@ Drive ders PDF'i: 58 · deste: 174 · OK: 166 · KANIT YOK: 8
 - `k1p-k1-46-mesane-hastaliklari-ve-tumorleri-v2` — 26)Mesane Hastalıkları ve Tümörleri.pdf — ad (slayt_kaynagi) + içerik: 60/61 slayt
 - `k1p-k1-38-glomeruler-hastaliklar-nefritik-sendrom-v2` — 22)Glomeruler Hastalıklar_ Nefritik Sendrom.pdf — ad (slayt_kaynagi) + içerik: 49/51 slayt
 - `k1p-k1-49-invaziv-serviks-kanseri-ve-endometriyozis-v2` — 39)İnvaziv Serviks Kanseri ve Endometriyozis.pdf — ad (slayt_kaynagi) + içerik: 60/60 slayt
-- `k1p-k1-68-enfeksiyon-hastaliklarinin-epidemiyolojisi` — 5)Enfeksiyon Hastalıklarının Genel Epidemiyolojik Özellikleri.pdf — ad (slayt_kaynagi) + içerik: 56/56 slayt
+- `k1p-k1-68-enfeksiyon-hastaliklarinin-epidemiyolojisi` — 5)Enfeksiyon Hastalıklarının Genel Epidemiyolojik Özellikleri.pdf — ad (checklist) + içerik: 56/56 slayt

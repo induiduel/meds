@@ -13,8 +13,9 @@ Kural: doğru ders ↔ doğru PDF; şüpheli eşleşme gösterilmez.
      PDF'siz kalır (raporda "KANIT YOK" + ders programındaki tarih).
   4. Dersin ≥%12'sini (en az 3 slayt) kapsayan başka PDF'ler ek dosya olur (bir PDF birden çok ders, bir ders birden
      çok PDF içerebilir: ör. "26)Mesane…" = Mesane + CYBE patolojisi).
-  5. Slayt → (dosya, sayfa): seçilen dosyaların sayfaları sırayla birleştirilip sıra korumalı Viterbi ile hizalanır
-     (0–2 sayfa ileri cezasız, büyük sıçrama ve geri dönüş cezalı).
+  5. Slayt → (dosya, sayfa aralığı): her adım önce en benzer dosyaya atanır; dosya başına sayfalar sıra korumalı
+     bölütlenir (her içerik adımı ardışık bir bölüm; adım atlanabilir, hiçbir adıma benzemeyen sayfalar boşluk olur,
+     metinsiz şekil sayfaları bölümüne katılır). Özet/tekrar/oyun/çıkmış adımları tüm PDF'i gösterir.
 
 Çalıştırma:  .venv-ocr/bin/python scripts/build_deck_pdf_sources.py [--cikti yol] [--rapor yol] [--sessiz]
 Çıkış kodu: 0 = tüm eşleşmeler doğrulandı; 3 = raporda ÇELİŞKİ var (çıktı yine yazılır, içerik kazanır);
@@ -29,6 +30,9 @@ ROOT = os.path.normpath(os.path.join(APP, '..'))
 DECKS = os.path.join(APP, 'src', 'data', 'interactive_learning_decks.json')
 LEGACY = os.path.join(APP, 'src', 'data', 'deckPdfCatalog.ts')
 OUT = os.path.join(APP, 'src', 'data', 'deckPdfSources.json')
+# Denetimde elle doğrulanmış adım aralıkları: {deste: {slideNumber: {"r": [baş, son, dosya], "t": başlık}}}.
+# Yalnız adım başlığı hâlâ aynıysa ve dosya sayısı yetiyorsa uygulanır (deste değişince kendiliğinden düşer).
+FIXES = os.path.join(HERE, 'deck_pdf_slide_duzeltme.json')
 DL = os.environ.get('MEDS_DOWNLOADS_DIR') or os.path.join(ROOT, 'meds_downloads')
 DRIVE = os.path.join(DL, 'drive_root')
 ISCI = os.environ.get('MEDS_ISCI_DIR') or os.path.join(ROOT, 'ders_isci')
@@ -138,11 +142,13 @@ class Corpus:
     def __init__(self, files):  # files: {rel: [sayfa metni]}
         self.files = list(files)
         self.pages = []  # (dosya_idx, sayfa_idx)
+        self.page_len = []
         counts = []
         for fi, rel in enumerate(self.files):
             for pi, t in enumerate(files[rel]):
                 self.pages.append((fi, pi))
                 counts.append(Counter(toks(t)))
+                self.page_len.append(sum(counts[-1].values()))
         n = len(counts)
         df = Counter(w for c in counts for w in c)
         self.idf = {w: math.log(n / d) for w, d in df.items()}
@@ -219,46 +225,86 @@ def name_candidates(deck, inv, by_key, checklist, legacy):
 
 
 # ---------------------------------------------------------------- hizalama
-def viterbi(rows):
-    """rows: slayt başına sayfa puanları. Sıra korumalı en iyi yol (sütun indeksleri). Geçiş O(n)."""
-    n = len(rows[0])
-    J, BACK = 0.012, 0.08
+OVERVIEW_RE = re.compile(r'ozet|bilgi paketi|cikmis soru|tekrar sayfasi|checkpoint|oyun sayfasi|sinav spot')
+
+
+def is_overview(s):
+    """Tüm dersi özetleyen adımlar (PDF'te tek bölüme denk gelmez)."""
+    return bool(s.get('isCheckpoint') or s.get('isGameFinale') or OVERVIEW_RE.search(fold(s.get('title', ''))))
+
+
+def segment(rows, plen):
+    """rows: içerik adımı × sayfa benzerliği; plen: sayfa başına sözcük sayısı.
+    Sayfaları sırayla adımlara böler (her adım ardışık bir aralık; adım atlanabilir). Dönen: adım başına (ilk, son) sütun.
+    Puan: sayfanın o adıma göreli benzerliği (sayfadaki en iyi adıma oranı; mutlak benzerlik düşükse indirimli).
+    Hiçbir adıma benzemeyen sayfalar (başka ders, kaynakça) "boşluk" durumuna düşer; metinsiz sayfalar (şekil) bulunduğu
+    bölüme katılır."""
+    m, n = len(rows), len(rows[0])
+    NEW, SKIP, GAP = 0.6, 0.8, 0.3
+    z, gz = [], []
+    for j in range(n):
+        col = [rows[i][j] for i in range(m)]
+        mx = max(col)
+        if plen[j] < 15 or mx < 0.01:  # metinsiz: kimseye puan yok, bulunduğu yerde kalır
+            z.append([0.0] * m)
+            gz.append(0.0)
+        else:
+            w = min(1.0, mx / 0.15)
+            z.append([c / mx * w for c in col])
+            gz.append(GAP)
     NEG = -1e18
-    prev = [rows[0][q] - 0.002 * q for q in range(n)]
+    # durumlar: 0..m-1 = adım i, m..2m-1 = adım i'den sonra boşluk; başta boşluk = adım -1 sonrası (sanal, i=-1)
+    dp = [z[0][i] - SKIP * i for i in range(m)] + [NEG] * m
+    pre = gz[0]  # ilk adımdan önceki boşluk
     backs = []
-    for row in rows[1:]:
-        # p ≤ q-3: prev[p] + J·p − J·(q−2) ; q-2 ≤ p ≤ q: prev[p] ; p > q: prev[p] − J·p − BACK + J·q
-        pre_v, pre_a = [NEG] * n, [0] * n
-        bv, ba = NEG, 0
-        for q in range(n):
-            if q - 3 >= 0 and prev[q - 3] + J * (q - 3) > bv:
-                bv, ba = prev[q - 3] + J * (q - 3), q - 3
-            pre_v[q], pre_a[q] = bv, ba
-        suf_v, suf_a = [NEG] * n, [0] * n
-        bv, ba = NEG, 0
-        for q in range(n - 1, -1, -1):
-            suf_v[q], suf_a[q] = bv, ba
-            if prev[q] - J * q > bv:
-                bv, ba = prev[q] - J * q, q
-        cur, bk = [0.0] * n, [0] * n
-        for q in range(n):
-            best, arg = NEG, q
-            for p in range(max(0, q - 2), q + 1):
-                if prev[p] > best:
-                    best, arg = prev[p], p
-            if pre_v[q] - J * (q - 2) > best:
-                best, arg = pre_v[q] - J * (q - 2), pre_a[q]
-            if suf_v[q] - BACK + J * q > best:
-                best, arg = suf_v[q] - BACK + J * q, suf_a[q]
-            cur[q], bk[q] = row[q] + best, arg
+    for j in range(1, n):
+        cur, bk = [NEG] * (2 * m), [0] * (2 * m)
+        best_prev, arg_prev = pre - SKIP, -1  # i=0 için: baştaki boşluktan
+        for i in range(m):
+            if i > 0:
+                c = max(dp[i - 1], dp[m + i - 1])
+                a = i - 1 if dp[i - 1] >= dp[m + i - 1] else m + i - 1
+                if c >= best_prev - SKIP:
+                    best_prev, arg_prev = c, a
+                else:
+                    best_prev -= SKIP
+            jump = best_prev - NEW + SKIP  # best_prev bir adım fazla cezalı tutuluyor
+            stay = dp[i]
+            if stay >= jump:
+                cur[i], bk[i] = z[j][i] + stay, i
+            else:
+                cur[i], bk[i] = z[j][i] + jump, arg_prev
+            g_stay, g_from = dp[m + i], dp[i]
+            if g_stay >= g_from:
+                cur[m + i], bk[m + i] = gz[j] + g_stay, m + i
+            else:
+                cur[m + i], bk[m + i] = gz[j] + g_from, i
+        pre += gz[j]
         backs.append(bk)
-        prev = cur
-    q = max(range(n), key=lambda i: prev[i])
-    path = [q]
+        dp = cur
+    st = max(range(2 * m), key=lambda k: dp[k] - SKIP * (m - 1 - (k % m)))
+    owner = [st]
     for bk in reversed(backs):
-        q = bk[q]
-        path.append(q)
-    return path[::-1]
+        st = bk[st] if st >= 0 else -1  # -1: ilk adımdan önceki boşluk
+        owner.append(st)
+    owner.reverse()
+    owner = [o if 0 <= o < m else None for o in owner]
+    first, last = {}, {}
+    for j, i in enumerate(owner):
+        if i is None:
+            continue
+        first.setdefault(i, j)
+        last[i] = j
+    out = []
+    for i in range(m):
+        if i in first:
+            out.append((first[i], last[i]))
+        else:  # atlanan adım: komşu bölümler arasında en benzer sayfa
+            lo = max([last[k] for k in last if k < i], default=0)
+            hi = min([first[k] for k in first if k > i], default=n - 1)
+            j = max(range(lo, hi + 1), key=lambda q: rows[i][q])
+            out.append((j, j))
+    return out
 
 
 # ---------------------------------------------------------------- ana akış
@@ -293,6 +339,8 @@ def main():
     corpus = Corpus(texts)
 
     out, report, conflicts = {}, [], 0
+    fixes = json.load(open(FIXES, encoding='utf-8')) if os.path.exists(FIXES) else {}
+    n_fix = 0
     for deck in decks:
         did = deck['id']
         entry = {'title': deck.get('title', ''), 'files': []}
@@ -367,25 +415,61 @@ def main():
                 f['fileId'] = inv[rel]['fileId']
             entry['files'].append(f)
 
-        # Slayt → (dosya, sayfa): seçilen dosyaların sayfaları birleştirilip hizalanır.
+        # Slayt → (dosya, sayfa aralığı): seçilen dosyaların sayfaları birleştirilip sıra korumalı bölütlenir;
+        # her içerik adımı PDF'te ardışık bir bölüme (başlangıç–bitiş) denk gelir. Özet/tekrar/oyun adımları tüm dersi gösterir.
         if files:
             fidx = {corpus.files.index(r): j for j, r in enumerate(files)}
             cols = [k for k, (fi, _) in enumerate(corpus.pages) if fi in fidx]
-            rows_all = [[scores[i].get(k, 0.0) for k in cols] for i in range(len(slides))]
-            path = viterbi([rows_all[i] for i in body])
-            chosen = dict(zip(body, path))
-            res, last, hit = {}, path[0], 0
+            content = [i for i in body if not is_overview(slides[i])] or body
+            # Önce her adımın dosyası (en benzer sayfanın dosyası; ana dosyaya hafif öncelik), sonra dosya başına bölütleme:
+            # ders sırası dosyalar arasında gidip gelebilir, tek dosya içinde ise PDF sırası korunur.
+            fcols = {j: [k for k in cols if fidx[corpus.pages[k][0]] == j] for j in range(len(files))}
+            own = {}
+            for i in content:
+                best = [max((scores[i].get(k, 0.0) for k in fcols[j]), default=0.0) * (1.1 if j == 0 else 1.0)
+                        for j in range(len(files))]
+                if max(best) >= 0.08:
+                    j = max(range(len(files)), key=lambda j: best[j])
+                    # ek dosyaya ancak açık üstünlükle geçilir (zayıf benzerlik dersi başka dosyaya sıçratmasın)
+                    own[i] = j if j == 0 or (best[j] >= STRONG and best[j] >= 1.3 * best[0]) else 0
+            last = next((own[i] for i in content if i in own), 0)
+            for i in content:  # eşleşmeyen adım önceki adımın dosyasında kalır
+                last = own.setdefault(i, last)
+            res, hit = {}, 0
+            for j, fc in fcols.items():
+                mine = [i for i in content if own[i] == j]
+                if not mine:
+                    continue
+                rows = [[scores[i].get(k, 0.0) for k in fc] for i in mine]
+                for i, row, (s0, s1) in zip(mine, rows, segment(rows, [corpus.page_len[k] for k in fc])):
+                    # Bölüm kenarındaki ilgisiz sayfalar (kapak, başka konu) atılır
+                    top = max(row[s0:s1 + 1])
+                    while s0 < s1 and row[s0] < 0.3 * top:
+                        s0 += 1
+                    while s1 > s0 and row[s1] < 0.3 * top and corpus.page_len[fc[s1]] >= 15:
+                        s1 -= 1
+                    edge = i in (mine[0], mine[-1])
+                    if j or edge:  # ek dosyada ve dosyanın ilk/son bölümünde kapsam taşabilir: en benzer sayfanın çevresiyle sınırla
+                        pk = max(range(s0, s1 + 1), key=lambda q: row[q])
+                        ok = lambda q: row[q] >= 0.4 * top or corpus.page_len[fc[q]] < 15
+                        a0 = a1 = pk
+                        while a0 > s0 and ok(a0 - 1):
+                            a0 -= 1
+                        while a1 < s1 and ok(a1 + 1):
+                            a1 += 1
+                        s0, s1 = a0, a1
+                    res[str(slides[i].get('slideNumber', i + 1))] = [s0 + 1, s1 + 1] + ([j] if j else [])
+                    if max(row[s0:s1 + 1]) >= STRONG:
+                        hit += 1
             for i, s in enumerate(slides):
-                q = chosen.get(i, last)
-                last = q
-                fi, pi = corpus.pages[cols[q]]
-                row = rows_all[i]
-                end = pi + 1
-                if q + 1 < len(cols) and corpus.pages[cols[q + 1]][0] == fi and row[q] > 0 and row[q + 1] >= 0.8 * row[q]:
-                    end = pi + 2
-                res[str(s.get('slideNumber', i + 1))] = [pi + 1, end] + ([fidx[fi]] if fidx[fi] else [])
-                if i in chosen and row[q] >= STRONG:
-                    hit += 1
+                res.setdefault(str(s.get('slideNumber', i + 1)), [1, corpus.n_pages[files[0]]])
+            for k, fx in (fixes.get(did) or {}).items():
+                s = next((s for s in slides if str(s.get('slideNumber')) == k), None)
+                r = fx.get('r') or []
+                if s and s.get('title', '') == fx.get('t') and len(r) >= 2 and (r[2] if len(r) > 2 else 0) < len(files):
+                    res[k] = [r[0], r[1]] + ([r[2]] if len(r) > 2 and r[2] else [])
+                    n_fix += 1
+            res = {k: res[k] for k in sorted(res, key=lambda x: int(x) if x.isdigit() else 0)}
             entry['slides'] = res
             entry['check'] = {'slides': n, 'covered': sum(cover.get(r, 0) for r in files), 'aligned': hit}
         out[did] = entry
@@ -415,7 +499,7 @@ def main():
         for did, st, note, files in report:
             if st != 'OK' or len(files) > 1:
                 print(f'{st:9} {did[:50]:50} {" + ".join(f["name"][:26] for f in files) or "—"} | {note}')
-        print('Yazıldı:', a.cikti, '·', rp)
+        print('Yazıldı:', a.cikti, '·', rp, '· elle düzeltilmiş adım:', n_fix)
     # Öğren kitaplığının "Ders programı" sırası da aynı checklist'ten tazelenir
     try:
         import subprocess

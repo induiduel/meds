@@ -718,7 +718,7 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
     }
 
     const optionsList = KEYS.filter((k) => options[k].trim()).map((k) => ({ key: k, text: options[k].trim() }));
-    if (!hasAnyText && optionsList.length === 0 && !claimedAnswer) {
+    if (!hasAnyText && optionsList.length === 0 && !claimedAnswer && !(qType === 'onculu' && premises.some((p) => p.trim()))) {
       setFormError('Sorudan aklında kalan en az bir kelime, şık ya da cevap yaz.');
       return;
     }
@@ -774,6 +774,8 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
       setUserManualDiscipline(false);
       setUserManualNumber(false);
       setLinkedQuestion(null);
+      setQType(null);
+      setPremises(['', '', '']);
       setSuccessMessage(
         linkedQuestion
           ? `Parçan Soru #${linkedQuestion.questionNumber || 'taslak'} katkılarına eklendi.`
@@ -882,6 +884,60 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
     setOptions((p) => ({ ...p, [k]: text }));
   };
 
+  // Masaüstü öncül düzenleyici yardımcıları
+  const PREMISE_MAX = 6;
+  const premiseLineRe = /^\s*(VI|IV|V|I{1,3})\s*[.)\-:]\s+(.+)$/;
+  const splitPremiseLines = (raw: string) =>
+    raw.split(/\r?\n/).map((l) => l.trim()).filter(Boolean).map((l) => l.replace(premiseLineRe, '$2').replace(/^[-•*]\s+/, ''));
+  // Kökte "I. … II. …" satırları varsa öncüllere ayrılabilir
+  const stemPremiseLines = texts.stem.split(/\r?\n/).filter((l) => premiseLineRe.test(l));
+  const looksOnculu = qType === null && (stemPremiseLines.length >= 2 || /hangiler/i.test(texts.stem));
+  const extractPremisesFromStem = () => {
+    const lines = texts.stem.split(/\r?\n/);
+    const prem = lines.filter((l) => premiseLineRe.test(l)).map((l) => l.replace(premiseLineRe, '$2').trim());
+    const rest = lines.filter((l) => !premiseLineRe.test(l)).join('\n').replace(/\n{2,}/g, '\n').trim();
+    setTexts((p) => ({ ...p, stem: rest }));
+    setPremises(prem.slice(0, PREMISE_MAX));
+    setQType('onculu');
+  };
+  const setPremiseAt = (i: number, v: string) => setPremises((p) => p.map((x, j) => (j === i ? v : x)));
+  const focusPremise = (i: number) => window.setTimeout(() => document.getElementById(`qh-prem-${i}`)?.focus(), 0);
+  const addPremise = (after?: number) => {
+    if (premises.length >= PREMISE_MAX) return;
+    const at = after === undefined ? premises.length : after + 1;
+    setPremises((p) => [...p.slice(0, at), '', ...p.slice(at)]);
+    focusPremise(at);
+  };
+  const removePremise = (i: number) => {
+    if (premises.length <= 2) { setPremiseAt(i, ''); return; }
+    setPremises((p) => p.filter((_, j) => j !== i));
+    focusPremise(Math.max(0, i - 1));
+  };
+  const pastePremises = (i: number, e: React.ClipboardEvent<HTMLInputElement>) => {
+    const raw = e.clipboardData.getData('text');
+    if (!/\n/.test(raw.trim())) return;
+    e.preventDefault();
+    const parts = splitPremiseLines(raw);
+    setPremises((p) => [...p.slice(0, i), ...parts, ...p.slice(i + 1).filter((x) => x.trim())].slice(0, PREMISE_MAX));
+  };
+  const filledPremiseCount = premises.filter((p) => p.trim()).length;
+  // Öncül sayısına göre sınavlarda en sık görülen beş şık
+  const standardCombos = (n: number): string[] => {
+    if (n <= 2) return ['Yalnız I', 'Yalnız II', 'I ve II', 'Hiçbiri', 'Belirlenemez'].slice(0, 3);
+    if (n === 3) return ['Yalnız I', 'Yalnız II', 'I ve II', 'II ve III', 'I, II ve III'];
+    if (n === 4) return ['I ve II', 'I ve III', 'II ve IV', 'I, II ve III', 'I, II, III ve IV'];
+    return ['I ve II', 'II ve IV', 'I, III ve V', 'II, III ve IV', 'I, II, III, IV ve V'];
+  };
+  const fillStandardOptions = () => {
+    const set = standardCombos(Math.max(2, filledPremiseCount));
+    setOptions(KEYS.reduce((acc, k, i) => ({ ...acc, [k]: set[i] || '' }), {} as Record<OptionKey, string>));
+    setOptionCount(set.length);
+    setClaimedAnswer(undefined);
+  };
+  const romansIn = (t: string) => new Set((t.match(/\b(VI|IV|V|I{1,3})\b/g) || []) as string[]);
+  // Doğru şık işaretliyse hangi öncüllerin doğru sayıldığı
+  const truePremises = qType === 'onculu' && claimedAnswer && options[claimedAnswer].trim() ? romansIn(options[claimedAnswer]) : null;
+
   // Telefonda yazma alanı tam ekran açılır (animasyonla), kapatınca yerine animasyonla döner; geri tuşu da kapatır
   const [full, setFull] = useState<false | 'open' | 'closing'>(false);
   const fullRef = React.useRef(full);
@@ -963,6 +1019,7 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
   type QhDraft = {
     at: string; stem: string; clue: string; options: Record<OptionKey, string>; answer?: OptionKey; reason: string;
     discipline: string; questionNumber: string; examYear: string;
+    qType?: 'klasik' | 'onculu' | null; premises?: string[];
   };
   const QH_DRAFT_KEY = 'medsoru_quickadd_draft_v1';
   const [savedDraft, setSavedDraft] = useState<QhDraft | null>(() => {
@@ -972,7 +1029,7 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
   const saveDraft = () => {
     const d: QhDraft = {
       at: new Date().toISOString(), stem: texts.stem, clue: texts.clue, options, answer: claimedAnswer, reason: answerReason,
-      discipline, questionNumber, examYear,
+      discipline, questionNumber, examYear, qType, premises,
     };
     try { localStorage.setItem(QH_DRAFT_KEY, JSON.stringify(d)); } catch { /* yok */ }
     setSavedDraft(d);
@@ -993,12 +1050,14 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
     if (savedDraft.questionNumber) { setQuestionNumber(savedDraft.questionNumber); setUserManualNumber(true); }
     if (savedDraft.examYear !== undefined) setExamYear(savedDraft.examYear);
     if (savedDraft.clue) setClueOpen(true);
+    if (savedDraft.qType !== undefined) setQType(savedDraft.qType);
+    if (savedDraft.premises?.length) setPremises(savedDraft.premises);
   };
   useEffect(() => {
     if (successMessage) dropDraft();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [successMessage]);
-  const formEmpty = !hasAnyText && filledOptionCount === 0 && !claimedAnswer;
+  const formEmpty = !hasAnyText && filledOptionCount === 0 && !claimedAnswer && !premises.some((p) => p.trim());
 
   if (isWide) {
     const riskCls = (s: number) => (s >= 80 ? 'is-bad' : s >= 65 ? 'is-warn' : 'is-mid');
@@ -1116,8 +1175,76 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
               )}
             </div>
 
+            <div className="qh-block">
+              <div className="qh-type" role="radiogroup" aria-label="Soru tipi">
+                <span className="qh-label">Soru tipi</span>
+                <div className="qh-seg">
+                  <button type="button" role="radio" aria-checked={qType !== 'onculu'} className={qType !== 'onculu' ? 'is-on' : ''} onClick={() => setQType('klasik')}>Klasik</button>
+                  <button type="button" role="radio" aria-checked={qType === 'onculu'} className={qType === 'onculu' ? 'is-on' : ''} onClick={() => { setQType('onculu'); if (!premises.some((x) => x.trim())) focusPremise(0); }}>Öncüllü <small>I · II · III</small></button>
+                </div>
+                {looksOnculu && (
+                  <button type="button" className="qh-hint" onClick={() => (stemPremiseLines.length >= 2 ? extractPremisesFromStem() : (setQType('onculu'), focusPremise(0)))}>
+                    <Sparkles aria-hidden />
+                    {stemPremiseLines.length >= 2 ? `Kökteki ${stemPremiseLines.length} öncülü ayır` : 'Öncüllü soruya benziyor · öncülleri ekle'}
+                  </button>
+                )}
+              </div>
+              {qType === 'onculu' && (
+                <div className="qh-prem" aria-label="Öncüller">
+                  {premises.map((pr, i) => {
+                    const r = ROMAN[i];
+                    const verdict = truePremises ? (truePremises.has(r) ? 'is-true' : 'is-false') : '';
+                    return (
+                      <div key={i} className={`qh-prem-row ${verdict}`}>
+                        <span className="r" aria-hidden>{r}</span>
+                        <input
+                          id={`qh-prem-${i}`}
+                          value={pr}
+                          onChange={(e) => setPremiseAt(i, e.target.value)}
+                          onPaste={(e) => pastePremises(i, e)}
+                          onKeyDown={(e) => {
+                            if (e.key === 'Enter') {
+                              e.preventDefault();
+                              if (i + 1 < premises.length) focusPremise(i + 1);
+                              else if (pr.trim() && premises.length < PREMISE_MAX) addPremise(i);
+                              else document.querySelector<HTMLInputElement>('.qh-opts input.t')?.focus();
+                            } else if (e.key === 'Backspace' && !pr && premises.length > 2) {
+                              e.preventDefault();
+                              removePremise(i);
+                            } else if (e.key === 'ArrowDown') { e.preventDefault(); focusPremise(i + 1); }
+                            else if (e.key === 'ArrowUp') { e.preventDefault(); focusPremise(i - 1); }
+                          }}
+                          placeholder={i === 0 ? 'Öncül yaz · Enter ile sonrakine, çok satır yapıştırınca bölünür' : `${r}. öncül`}
+                          aria-label={`${r}. öncül`}
+                        />
+                        {verdict && <em className="v">{verdict === 'is-true' ? 'doğru' : 'yanlış'}</em>}
+                        <button type="button" className="x" onClick={() => removePremise(i)} aria-label={`${r}. öncülü sil`} tabIndex={-1}><X aria-hidden /></button>
+                      </div>
+                    );
+                  })}
+                  {premises.length < PREMISE_MAX && (
+                    <button type="button" className="qh-prem-add" onClick={() => addPremise()}><Plus aria-hidden />{ROMAN[premises.length]}. öncülü ekle</button>
+                  )}
+                </div>
+              )}
+            </div>
+
             <fieldset className="qh-opts">
               <legend>Şıklar · doğruyu işaretle</legend>
+              {qType === 'onculu' && (
+                <div className="qh-combos">
+                  <button type="button" className="qh-combo is-fill" onClick={fillStandardOptions} disabled={filledPremiseCount < 2} title="A–E'yi öncül sayısına uygun sık kalıplarla doldur">
+                    <Wand2 aria-hidden />Kalıp şıkları doldur
+                  </button>
+                  {comboChips.map((c) => (
+                    <button key={c} type="button" className="qh-combo" onMouseDown={(e) => e.preventDefault()} onClick={() => {
+                      const el = document.activeElement as HTMLInputElement | null;
+                      const fk = el?.classList.contains('t') ? (el.getAttribute('data-k') as OptionKey | null) : null;
+                      if (fk) setOptions((p) => ({ ...p, [fk]: c })); else fillNextOption(c);
+                    }}>{c}</button>
+                  ))}
+                </div>
+              )}
               {KEYS.map((k, i) => (
                 <div key={k} className={`qh-opt ${claimedAnswer === k ? 'is-ok' : ''}`}>
                   <input
@@ -1144,7 +1271,8 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
                       }
                     }}
                     enterKeyHint={i < 4 ? 'next' : 'done'}
-                    placeholder="Şık yaz"
+                    data-k={k}
+                    placeholder={qType === 'onculu' ? 'örn. I ve III' : 'Şık yaz'}
                     aria-label={`${k} şıkkı`}
                   />
                 </div>
