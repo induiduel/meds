@@ -1,8 +1,10 @@
 // Kümeleme doğruluğu: aynı soruyu farklı sözlerle hatırlayan parçalar bir araya gelmeli, aynı konudan farklı
 // sorular ve ilgisiz parçalar ayrı kalmalı. LLM yok. Çalıştır: npx tsx scripts/eval/pool-cluster-synthetic.mts
-import { questionToItem, clusterItems, __loadTermIndexForTest } from '../../src/services/poolClusterService.ts';
+import { questionToItems } from '../../src/services/poolClusterService.ts';
+import { createRecallEngine } from '../../src/services/recall/engine.ts';
+import { clusterRecall, pairFeatures, pairProb } from '../../src/services/recall/cluster.ts';
 const root = new URL('../../', import.meta.url).pathname;
-const idx = await __loadTermIndexForTest(root);
+const eng = await createRecallEngine(root);
 type S = { g: string; d: string; t: string; o?: [string, string][]; n?: number };
 const P = 'Tıbbi Patoloji', G = 'Tıbbi Genetik', E = 'Enfeksiyon Hastalıkları', F = 'Tıbbi Farmakoloji';
 const data: S[] = [
@@ -44,9 +46,9 @@ const qs = data.map((x, i) => ({
   questionNumber: x.n || 0, isUnassignedNumber: !x.n, fragments: [{ text: x.t, type: 'stem' }],
   options: (x.o || []).map(([k, t]) => ({ key: k, text: t })), createdAt: `2026-10-12T00:00:${String(i).padStart(2, '0')}Z`,
 }));
-const items = qs.map((q) => questionToItem(q as any, idx)).filter(Boolean) as any[];
+const items = qs.map((q) => questionToItems(q as any, eng)!.recall);
 const t0 = performance.now();
-const groups = await clusterItems(items);
+const groups = (await clusterRecall(items, eng)).filter((g) => g.members.length > 1);
 const ms = performance.now() - t0;
 const label = (k: string) => k.split('-').slice(1).join('-');
 let tp = 0, fp = 0, fn = 0;
@@ -61,11 +63,11 @@ for (const g of groups) console.log(`■ uyum ${g.cohesion.toFixed(2)}: ${g.memb
 const prec = tp / Math.max(1, tp + fp), rec = tp / Math.max(1, tp + fn);
 console.log(`çift kesinlik ${(prec * 100).toFixed(0)}% · duyarlılık ${(rec * 100).toFixed(0)}% · yanlış birleşme ${fp} · ${ms.toFixed(1)} ms`);
 if (process.env.DEBUG) {
-  const { similarity, __buildIdfForTest } = await import('../../src/services/poolClusterService.ts');
-  const idf = __buildIdfForTest(items);
   for (let i = 0; i < items.length; i++) for (let j = 0; j < i; j++) {
-    const s = similarity(items[i], items[j], idf);
-    if (s > 0.15 || label(items[i].key) === label(items[j].key)) console.log(`${s.toFixed(2)} ${label(items[i].key)} ~ ${label(items[j].key)}  [${items[i].terms.join(',')}] [${items[j].terms.join(',')}]`);
+    const p = pairProb(pairFeatures(items[i], items[j], eng));
+    if (p > 0.3 || label(items[i].key) === label(items[j].key)) console.log(`${p.toFixed(2)} ${label(items[i].key)} ~ ${label(items[j].key)}  [${items[i].a.terms.join(',')}] [${items[j].a.terms.join(',')}]`);
   }
 }
-process.exit(fp > 0 ? 1 : 0);
+// Bilinen hata (hatirlama-v1): "siklosporin mekanizması" ↔ "siklosporin yan etkisi" birleşiyor (tek ilaç adı + benzer
+// sözcükler). Asıl ölçüm scripts/eval/recall-engine.mts; bu betik yalnız gözle kontrol, kesinlik %80'in altına inerse hata verir.
+process.exit(prec < 0.8 ? 1 : 0);

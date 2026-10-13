@@ -2,6 +2,7 @@ import React, { useState, useEffect, useMemo, useCallback, useRef, Suspense } fr
 import { startLiveDataSync } from './services/liveDataSync';
 import { logActivity } from './services/activityLog';
 import { getVoterId, toggledVote } from './utils/voterId';
+import { foldTurkish } from './utils/fuzzyMatching';
 import type { SearchHit } from './components/search/searchShared';
 import { AppRoute, parseLocation, writeLocation, pathFor, ROUTE_TITLES, deepLinkIdFor, navigateTo } from './router';
 import {
@@ -1151,31 +1152,27 @@ export default function App() {
   const filteredQuestions = useMemo(() => {
     let result = standaloneQuestions;
     if (selectedDiscipline && selectedDiscipline !== 'Tümü') {
-      const discLower = selectedDiscipline.toLowerCase();
-      result = result.filter((q) => q.discipline?.toLowerCase() === discLower);
+      const discFold = foldTurkish(selectedDiscipline);
+      result = result.filter((q) => foldTurkish(q.discipline || '') === discFold);
     }
     if (selectedStatus && selectedStatus !== 'Tümü') {
       result = result.filter((q) => q.status === selectedStatus);
     }
     if (searchQuery && searchQuery.trim()) {
-      const q = searchQuery.toLowerCase().trim();
-      result = result.filter(
-        (item) =>
-          item.topic?.toLowerCase().includes(q) ||
-          item.discipline?.toLowerCase().includes(q) ||
-          item.reconstruction?.stem?.toLowerCase().includes(q) ||
-          item.questionNumber?.toString() === q ||
-          item.tags?.some((t) => t.toLowerCase().includes(q)) ||
-          item.fragments?.some((f) => f.text.toLowerCase().includes(q)) ||
-          item.options?.some((o) => o.text.toLowerCase().includes(q)) ||
-          item.mergedSatellites?.some((sat) =>
-            sat.topic?.toLowerCase().includes(q) ||
-            sat.reconstruction?.stem?.toLowerCase().includes(q) ||
-            sat.stem?.toLowerCase().includes(q) ||
-            sat.fragments?.some((f) => f.text.toLowerCase().includes(q)) ||
-            sat.options?.some((o) => o.text.toLowerCase().includes(q))
-          )
-      );
+      // Türkçe/aksansız: "sifiliz" = "Sifiliz", "ozofagus" = "özofagus"; "12", "#12", "s12" soru numarası
+      const q = foldTurkish(searchQuery.trim());
+      const numM = /^(?:#|s(?:oru)?\s*)?(\d{1,3})$/.exec(q);
+      const words = q.split(/\s+/).filter(Boolean);
+      const hit = (t?: string | null) => !!t && words.every((w) => foldTurkish(t).includes(w));
+      result = result.filter((item) => {
+        if (numM) return item.questionNumber?.toString() === numM[1];
+        const hay = [
+          item.topic, item.discipline, item.reconstruction?.stem, item.stem,
+          ...(item.tags || []), ...(item.fragments || []).map((f) => f.text), ...(item.options || []).map((o) => o.text),
+          ...(item.mergedSatellites || []).flatMap((sat) => [sat.topic, sat.reconstruction?.stem, sat.stem, ...(sat.fragments || []).map((f) => f.text), ...(sat.options || []).map((o) => o.text)]),
+        ].filter(Boolean).join(' \n ');
+        return hit(hay);
+      });
     }
     return result;
   }, [standaloneQuestions, selectedDiscipline, selectedStatus, searchQuery]);
@@ -2227,6 +2224,7 @@ export default function App() {
             onClose={() => setShowClusterModal(false)}
             currentUser={currentUser}
             isAdmin={isAdmin}
+            committeeId={activeTab === 'questions' ? selectedCommitteeId : undefined}
           />
         </Suspense>
       )}

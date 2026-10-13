@@ -31,6 +31,15 @@ export interface QuestionClusterItem {
   aiMerged?: boolean;
   aiAnswerSuggestion?: string;
   sources?: { title?: string; documentTitle?: string; source?: string }[];
+  // kume-v3 (src/services/recall/): temsilci öğrenci cümlesi, ders güveni, önceki yıllarda çıkmış eşleşme
+  stemSource?: 'ogrenci' | 'yapay_zeka';
+  draft?: {
+    stem: string;
+    discipline?: { name: string; p: number } | null;
+    konu?: string | null;
+    answerTextVotes?: { text: string; votes: number }[];
+    bankMatch?: { id: string; score: number; margin: number; support: number; stem: string; options: { key: string; text: string }[]; correctAnswer: string } | null;
+  };
   status: 'proposal';
   isLockedForDeletion: boolean;
   studentContributions: Array<{
@@ -49,6 +58,10 @@ interface QuestionClusterAutomationModalProps {
   onClose: () => void;
   currentUser?: AppUser | null;
   isAdmin?: boolean;
+  /** Yalnız bu kurulun kümeleri (soru havuzunda seçili kurul) */
+  committeeId?: string;
+  /** Açılınca doğrudan bu kümenin ayrıntısı */
+  focusClusterId?: string | null;
 }
 
 const FAILED = /^\s*\[BİRLEŞTİRİLEMEDİ\]\s*/i;
@@ -73,7 +86,7 @@ const initials = (name: string) =>
  * kümeler listelenir; birine dokununca sayfa içinde ayrıntıya geçilir (kök, şıklar ve oylar, birleştirme gerekçesi,
  * öğrenci katkıları). Öğrenci yalnız katkı ekler; silme/onay yöneticidedir. Renkler yalnız token + ders rengi (.d-*).
  */
-export const QuestionClusterAutomationModal: React.FC<QuestionClusterAutomationModalProps> = ({ isOpen, onClose, currentUser, isAdmin }) => {
+export const QuestionClusterAutomationModal: React.FC<QuestionClusterAutomationModalProps> = ({ isOpen, onClose, currentUser, isAdmin, committeeId, focusClusterId }) => {
   const [clusters, setClusters] = useState<QuestionClusterItem[]>([]);
   const [loading, setLoading] = useState(true);
   const [runningPipeline, setRunningPipeline] = useState(false);
@@ -85,7 +98,8 @@ export const QuestionClusterAutomationModal: React.FC<QuestionClusterAutomationM
   const fetchClusters = async () => {
     setLoading(true);
     try {
-      setClusters(await ApiService.getPoolQuestionClusters());
+      const all: QuestionClusterItem[] = await ApiService.getPoolQuestionClusters();
+      setClusters(committeeId ? all.filter((c) => c.committeeId === committeeId) : all);
     } catch (e: any) {
       toast.error('Hata', 'Kümeler yüklenemedi: ' + (e.message || ''));
     } finally {
@@ -95,10 +109,11 @@ export const QuestionClusterAutomationModal: React.FC<QuestionClusterAutomationM
 
   useEffect(() => {
     if (isOpen) {
-      setOpenId(null);
+      setOpenId(focusClusterId || null);
       fetchClusters();
     }
-  }, [isOpen]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isOpen, committeeId, focusClusterId]);
 
   // Liste ↔ ayrıntı geçişinde kaydırmayı başa al
   useEffect(() => {
@@ -293,8 +308,42 @@ const ClusterDetail: React.FC<{
 
       {!failed && (
         <section className="ui-section">
-          <div className="ui-section-h"><h2>{c.aiMerged ? 'Önerilen kök · ders notuyla birleştirildi' : 'Önerilen kök · birleştirme bekliyor'}</h2></div>
+          <div className="ui-section-h">
+            <h2>
+              {c.aiMerged && c.stemSource !== 'ogrenci'
+                ? 'Önerilen kök · ders notuyla birleştirildi'
+                : c.stemSource === 'ogrenci'
+                  ? 'En kapsamlı hatırlama · yazımı düzeltildi'
+                  : 'Önerilen kök · birleştirme bekliyor'}
+            </h2>
+          </div>
           <div className="ui-card qpool-stem">{stem}</div>
+          {c.draft?.discipline && (
+            <p className="ui-section-foot">
+              Ders tahmini: {c.draft.discipline.name} (%{Math.round(c.draft.discipline.p * 100)})
+              {c.draft.konu ? ` · konu: ${c.draft.konu}` : ''}
+            </p>
+          )}
+        </section>
+      )}
+
+      {c.draft?.bankMatch && (
+        <section className="ui-section">
+          <div className="ui-section-h"><h2>Önceki yıllarda çıkmış benzer soru</h2></div>
+          <div className="ui-card qpool-bank">
+            <p className="qpool-bank-stem">{c.draft.bankMatch.stem}</p>
+            {c.draft.bankMatch.options.length > 0 && (
+              <ol className="qpool-bank-opts">
+                {c.draft.bankMatch.options.map((o) => (
+                  <li key={o.key} className={o.key === c.draft!.bankMatch!.correctAnswer ? 'is-ok' : ''}><i>{o.key}</i>{o.text}</li>
+                ))}
+              </ol>
+            )}
+            <p className="qpool-bank-note">
+              Hatırlamaların %{Math.round(c.draft.bankMatch.support * 100)}'i bu soruya yaslanıyor (benzerlik {c.draft.bankMatch.score.toFixed(2)}).
+              Aynı soru tekrar sorulmuş olabilir; şıkları ve cevabı öğrencilerin hatırladıklarıyla karşılaştır.
+            </p>
+          </div>
         </section>
       )}
 

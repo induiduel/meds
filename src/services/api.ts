@@ -477,6 +477,22 @@ export interface SourceRefLite {
   snippet: string;
 }
 
+/** POST /api/recall/match yanıtı (src/services/poolClusterService.ts → matchText). */
+export interface RecallMatchResult {
+  engine: string;
+  noise: boolean;
+  clean: string;
+  ders: { name: string; p: number }[];
+  konu: { name: string; p: number } | null;
+  terms: string[];
+  claimedLetter: string | null;
+  claimedText: string | null;
+  number: number | null;
+  negative: boolean;
+  corrections: [string, string][];
+  matches: { questionId: string; prob: number }[];
+}
+
 export interface SimilarPastQuestion {
   id: string;
   title: string;
@@ -1652,6 +1668,17 @@ export const ApiService = {
     const res = await safeJsonFetch<QuestionIntakeSummary>(`/api/question-intake/${encodeURIComponent(id)}`, {
       method: 'GET',
       headers: { Accept: 'application/json' },
+    });
+    return res.ok ? res.data || null : null;
+  },
+
+  /** Soru ekle: hatırlamayı sunucudaki motorla analiz et + havuzda aynı soruyu anlatan kayıtlar (POST /api/recall/match). */
+  async recallMatch(input: { text: string; committeeId: string; discipline?: string; options?: { key: string; text: string }[]; questionNumber?: number; limit?: number }, signal?: AbortSignal): Promise<RecallMatchResult | null> {
+    const res = await safeJsonFetch<RecallMatchResult>('/api/recall/match', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(input),
+      signal,
     });
     return res.ok ? res.data || null : null;
   },

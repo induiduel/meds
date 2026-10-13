@@ -33,7 +33,8 @@ import { BlurOverlay } from './ui/Animations';
 import { toast } from './ui/Toast';
 import { ApiService, SimilarPastQuestion, SourceRefLite } from '../services/api';
 import { validateNamePolicy } from '../utils/namePolicy';
-import { findRealtimeMatchingDrafts, RealtimeMatchItem, warmMedicalIndex } from '../services/draftClusteringService';
+import { RealtimeMatchItem, warmMedicalIndex } from '../services/draftClusteringService';
+import { toContextHashtag } from '../utils/fuzzyMatching';
 import { getSmartQuestionAssistant, SmartQuestionAssistantResult } from '../services/medicalPredictorService';
 import { Colored, WordLegend, ContextBadge, sharedWordColors } from './draftHighlight';
 import { LoveNote } from './home/LoveNote';
@@ -335,24 +336,6 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
     return () => window.clearTimeout(idleTimer);
   }, [text]);
 
-  // 2. Havuz Chunking ve Ön Filtreleme:
-  // Mevcut soru listesini aranabilir hafif token indekslerine dönüştürür.
-  const indexedPool = useMemo(() => {
-    if (!questions || questions.length === 0) return [];
-    return questions.map((q) => {
-      const stem = (q.reconstruction?.stem || q.stem || q.rawStem || q.fragments?.[0]?.text || q.topic || '').toLowerCase();
-      const optionsText = (q.options || []).map((o) => o.text.toLowerCase()).join(' ');
-      const tokens = new Set([...stem.split(/\s+/), ...optionsText.split(/\s+/)].filter((w) => w.length > 2));
-      return {
-        question: q,
-        committeeId: q.committeeId,
-        discipline: (q.discipline || '').toLowerCase(),
-        stem,
-        tokens,
-      };
-    });
-  }, [questions]);
-
   // Taslak aramasına şıklar da katılır: öğrenci yalnızca şık hatırlıyor olabilir
   const optionsText = KEYS.map((k) => options[k].trim()).filter(Boolean).join(' ');
   // Ders, eşleştirmeye ref ile verilir: ders değişince arama yeniden tetiklenmesin (aksi halde
@@ -375,64 +358,67 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
     }
 
     let isCancelled = false;
+    const ctrl = new AbortController();
     setIsSearching(true);
 
     const optionsList = KEYS.filter((k) => options[k].trim()).map((k) => ({ key: k, text: options[k].trim() }));
 
-    // Chunking: İşlemi bir sonraki frame'e bırakarak textarea render döngüsünü %100 akıcı tutar
-    const chunkTimer = window.setTimeout(() => {
+    const timer = window.setTimeout(async () => {
       if (isCancelled) return;
-
       try {
-        // 1. Akıllı Asistan Analizi (Kurul, Ders, Tıbbi Kavram & Çapraz Kurul Tespiti)
-        const assistantRes = getSmartQuestionAssistant(q, optionsList, committee.id);
+        // Kurul uyuşmazlığı uyarısı yerel ve hafif; ders/konu tahmini ve havuz eşleşmesi sunucudaki motordan
+        // (src/services/recall/; ölçüm scripts/eval/recall-realtime.mts: ilk öneri doğru %83, ders %63 —
+        // eski tarayıcı algoritması %54,5 / %36 ve yazarken 39 ms ana iş parçacığı yükü).
+        const local = getSmartQuestionAssistant(q, optionsList, committee.id);
+        const r = await ApiService.recallMatch({
+          text: q,
+          committeeId: committee.id,
+          discipline: userManualDiscipline ? disciplineRef.current : undefined,
+          options: optionsList,
+          questionNumber: userManualNumber && Number(questionNumber) > 0 ? Number(questionNumber) : undefined,
+          limit: 4,
+        }, ctrl.signal);
         if (isCancelled) return;
+        const top = r?.ders?.[0];
+        const assistantRes: SmartQuestionAssistantResult = {
+          ...local,
+          predictedDiscipline: top && top.p >= 0.5 && disciplines.includes(top.name)
+            ? { discipline: top.name, confidence: Math.round(top.p * 100), sampleKeywords: r!.terms }
+            : undefined,
+          suggestedTopics: r ? [r.konu?.name, ...r.terms].filter((t): t is string => !!t).slice(0, 3).map((topic) => ({ topic, confidence: 1 })) : [],
+        };
         setSmartAssistant(assistantRes);
 
-        // Kullanıcı elle ders seçmediyse ve tahmin edilen ders bu kurula aitse otomatik uygula
+        // Kullanıcı elle ders seçmediyse ve motor güvenliyse (p ≥ 0.75, ölçümde %89 isabet) dersi uygula
         // (eşleşen taslaktan gelen ders önceliklidir; tahmin onu ezmez)
-        if (!userManualDiscipline && !matchedDiscRef.current && assistantRes.predictedDiscipline) {
-          const predDisc = assistantRes.predictedDiscipline.discipline;
-          if (disciplines.includes(predDisc) && predDisc !== disciplineRef.current) {
-            setDiscipline(predDisc);
-            setAutoDisc(true);
-          }
+        if (!userManualDiscipline && !matchedDiscRef.current && top && top.p >= 0.75 && disciplines.includes(top.name) && top.name !== disciplineRef.current) {
+          setDiscipline(top.name);
+          setAutoDisc(true);
         }
 
-        // 2. Chunk / Hızlı Ön Filtreleme ile Aday Havuzu Daraltma
-        const qWords = q.toLowerCase().split(/\s+/).filter((w) => w.length > 2);
-        // Sadece soru metninde veya şıklarında ortak token içeren ya da aynı kurul/ders olanları al.
-        // Çapraz kurulda tek yaygın kelime ("sendromu") yeterli değildir: ≥2 kelimelik
-        // sorguda en az 2 farklı kelime örtüşmelidir, yoksa Alport/Down karışır.
-        const filteredCandidateQuestions = indexedPool.length > 0
-          ? indexedPool
-              .filter((item) => {
-                if (item.committeeId === committee.id) return true;
-                // Çapraz kurul için kelime benzerliği şartı
-                if (qWords.length >= 2) {
-                  return qWords.filter((w) => item.tokens.has(w) || item.stem.includes(w)).length >= 2;
-                }
-                return qWords.some((w) => item.tokens.has(w) || item.stem.includes(w));
-              })
-              .map((item) => item.question)
-          : questions;
-
-        // 3. Taslak Eşleme (optimize edilmiş aday kümesi üzerinde)
-        const matches = findRealtimeMatchingDrafts(
-          {
-            committeeId: committee.id,
-            discipline: disciplineRef.current,
-            topic: `${disciplineRef.current} Hatırlanan Soru`,
-            text: q,
-            options: optionsList.length > 0 ? optionsList : undefined,
-          },
-          filteredCandidateQuestions,
-          35, // En az %35 benzerlik
-          4,  // En fazla 4 aday göster
-          true // Çapraz kurul taslaklarını da göster
-        );
-
-        if (isCancelled) return;
+        const byId = new Map(questions.map((x) => [String(x.id), x]));
+        const matches: RealtimeMatchItem[] = (r?.matches || [])
+          .map((m) => {
+            const question = byId.get(String(m.questionId));
+            if (!question) return null;
+            return {
+              question,
+              compatibility: {
+                score: Math.round(m.prob * 100),
+                recommendation: m.prob >= 0.85 ? 'suggest_merge' : 'distinct',
+                reasons: [],
+                stemSimilarity: m.prob,
+                optionSetSimilarity: 0,
+                sharedMedicalEntities: r!.terms,
+                sharedConcepts: [],
+                contextHashtag: r!.konu?.name ? toContextHashtag(r!.konu.name) : undefined,
+                targetQuestionAlignment: 'matching',
+                matchedOptionAlignments: [],
+              },
+              contextHashtag: r!.konu?.name ? toContextHashtag(r!.konu.name) : undefined,
+            } as RealtimeMatchItem;
+          })
+          .filter((m): m is RealtimeMatchItem => !!m);
         setRealtimeMatches(matches);
 
         // Geçersiz kalan seçili id'leri temizle
@@ -445,17 +431,16 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
           return next;
         });
       } finally {
-        if (!isCancelled) {
-          setIsSearching(false);
-        }
+        if (!isCancelled) setIsSearching(false);
       }
     }, 20);
 
     return () => {
       isCancelled = true;
-      window.clearTimeout(chunkTimer);
+      ctrl.abort();
+      window.clearTimeout(timer);
     };
-  }, [debouncedText, mode, committee?.id, optionsText, questions, indexedPool]);
+  }, [debouncedText, mode, committee?.id, optionsText, questions]);
 
   const toggleSelectMatch = (id: string) => {
     setSelectedMatchIds((prev) => {

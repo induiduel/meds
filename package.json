@@ -34,10 +34,12 @@
     "glossary:build": "python scripts/generate_medical_glossary.py",
     "git:sync": "node scripts/auto-git-sync.mjs --once",
     "git:watch": "node scripts/auto-git-sync.mjs --interval=20",
+    "eval:recall": "tsx scripts/eval/recall-engine.mts",
+    "eval:recall:realtime": "tsx scripts/eval/recall-realtime.mts --split all",
     "eval:pool": "tsx scripts/eval/pool-cluster-check.mts",
     "eval:pool:scale": "tsx scripts/eval/pool-cluster-scale.mts",
     "eval:intake": "tsx scripts/eval/question-intake-unit.mts",
-    "eval:all": "tsx scripts/eval/question-intake-unit.mts && tsx scripts/eval/pool-cluster-synthetic.mts && tsx scripts/eval/pool-cluster-check.mts",
+    "eval:all": "tsx scripts/eval/question-intake-unit.mts && tsx scripts/eval/pool-cluster-synthetic.mts && tsx scripts/eval/pool-cluster-check.mts && tsx scripts/eval/recall-engine.mts",
     "composer:model": "python3 scripts/composer/build_composer_model.py",
     "composer:sim": "tsx scripts/composer/simulate.mts"
   },

@@ -1314,6 +1314,25 @@ app.post('/api/pool-clusters/:id/accept', (_req, res) => {
   });
 });
 
+// Soru ekle: yazılan hatırlamayı analiz et (ders, konu, terim, cevap iddiası) ve havuzda aynı soruyu anlatan kayıtları bul
+app.post('/api/recall/match', async (req, res) => {
+  const { text, committeeId, discipline, options, questionNumber, excludeId, limit } = req.body || {};
+  const t = typeof text === 'string' ? text.trim() : '';
+  if (!t || !committeeId) return res.status(400).json({ error: 'Metin ve kurul gerekli.' });
+  try {
+    const r = await poolClusters.matchText({
+      text: t.slice(0, 4000), committeeId: String(committeeId), discipline: discipline ? String(discipline) : null,
+      options: Array.isArray(options) ? options.slice(0, 5).filter((o: any) => o && typeof o.text === 'string').map((o: any) => ({ key: o.key ? String(o.key) : null, text: String(o.text).slice(0, 300) })) : [],
+      questionNumber: Number(questionNumber) > 0 ? Number(questionNumber) : null,
+      excludeId: excludeId ? String(excludeId) : undefined,
+      limit: Number(limit) || 4,
+    });
+    res.json(r);
+  } catch (e: any) {
+    res.status(500).json({ error: e?.message || 'Eşleştirme yapılamadı.' });
+  }
+});
+
 // Kümeleri yeniden hesapla (sunucu içinde, dilimli; yapay zekâ birleştirmesi arka planda sırayla)
 app.post('/api/pool-clusters/run-pipeline', requireAdmin, (_req, res) => {
   poolClusters.runNow();
@@ -6386,6 +6405,7 @@ const poolClusters = createPoolClusterService({
   file: POOL_CLUSTERS_FILE,
   getQuestions: () => db.questions as any[],
   getOrphanUnits: () => questionIntake.orphanUnits(),
+  getPastQuestions: () => getPastQuestionsDb(),
 });
 questionIntake.onProcessed(() => poolClusters.schedule());
 // Açılışta hemen değil: arama motoru yüklenirken yük bindirmemek için 90 sn sonra
