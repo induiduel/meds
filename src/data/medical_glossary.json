@@ -10682,7 +10682,7 @@
         "sayfa": 46
       }
     ],
-    "clinicalPearl": "Prenatal kültürde üç düzey: gerçek mozaisizm (farklı primer kültürlerde), pseudomozaisizm (tek hücre), tek kültürle sınırlı koloni (genellikle pseudo)."
+    "clinicalPearl": "Prenatal kültürde üç düzey: gerçek mozaisizm (farklı primer kültürlerde), pseudomozaisizm (tek hücre), tek kültürle sınırlı koloni (genellikle pseudo). · Embriyoda mayotik kökenli anöploidi tüm hücreleri etkiler; mitotik kökenli mozaisizm laboratuvarlar arasında %30'a kadar değişir."
   },
   "sekonder hiperparatiroidizm": {
     "term": "Sekonder hiperparatiroidizm",
@@ -37071,7 +37071,8 @@
         "sayfa": 41,
         "alinti": "Floresan İn Situ Hibridizasyon (Fluorescence In Situ Hybridization (FISH))"
       }
-    ]
+    ],
+    "clinicalPearl": "PGD'de 13, 18, 21, X ve Y için anöploidi taraması; anöploidi taramasında yerini microarray almıştır."
   },
   "ki-67 proliferasyon indeksi": {
     "term": "Ki-67 proliferasyon indeksi",
@@ -38284,7 +38285,7 @@
     "description": "Kromozom sayısının haploid takımın tam katı (ör. triploidi 3n, tetraploidi 4n) olduğu sayısal düzensizlik.",
     "discipline": "Tıbbi Genetik",
     "committee": "",
-    "clinicalPearl": "Anöploididen farkı bütün takımın değişmesidir.",
+    "clinicalPearl": "Anöploididen farkı bütün takımın değişmesidir. · PGS'de öploid embriyolar endometriyuma transfer edilir.",
     "aliases": [
       "Euploidi"
     ],
@@ -38340,7 +38341,7 @@
     "description": "Kökeni standart sitogenetik yöntemle belirlenemeyen ek yapısal kromozom.",
     "discipline": "Tıbbi Genetik",
     "committee": "",
-    "clinicalPearl": "Yapısal düzensizlikler listesinin son öğesidir.",
+    "clinicalPearl": "Yapısal düzensizlikler listesinin son öğesidir. · PGD'de set-up (ön hazırlık) aşaması gerektiren durumlardandır.",
     "dogrulama": {
       "durum": "ders_isci",
       "destek": 1.0,
@@ -45769,7 +45770,7 @@
     "description": "Translokasyon taşıyıcısında mayozda eşleşen kromozomların kutuplara dağılımıdır; 2:2 (en sık), 3:1 ve 4:0 tipleri vardır.",
     "discipline": "Tıbbi Genetik",
     "committee": "",
-    "clinicalPearl": "Yalnız alternate 2:2 segregasyon normal ya da dengeli gamet üretir.",
+    "clinicalPearl": "Yalnız alternate 2:2 segregasyon normal ya da dengeli gamet üretir. · Yalnız alternate segregasyon dengeli embriyo verir; adjacent-1/2 ve 3:1 dengesizdir.",
     "aliases": [
       "2:2 segregasyon"
     ],
@@ -45797,7 +45798,7 @@
     "description": "Sentromeri bir uca çok yakın, kısa kolu çok küçük kromozomdur (13, 14, 15, 21, 22).",
     "discipline": "Tıbbi Genetik",
     "committee": "",
-    "clinicalPearl": "Robertsonian translokasyon yalnız akrosentrik kromozomlarda görülür.",
+    "clinicalPearl": "Robertsonian translokasyon yalnız akrosentrik kromozomlarda görülür. · Robertsonian translokasyon iki akrosentrik kromozom arasında oluşur.",
     "dogrulama": {
       "durum": "ders_isci",
       "destek": 1.0,
@@ -60482,7 +60483,8 @@
         "sayfa": 27,
         "alinti": "Kordosentez(KS) oPreimplantasyon genetik tanı(PGD)"
       }
-    ]
+    ],
+    "clinicalPearl": "En önemli yararı medikal abortustan korunmadır; PGD'de ICSI mutlak tercih edilir."
   },
   "metilmalonik asidemi (b12'ye duyarlı)": {
     "term": "Metilmalonik asidemi (B12'ye duyarlı)",
@@ -60679,7 +60681,7 @@
     "description": "Kromozomlar arasında materyal değişimi olduğu hâlde toplam genetik materyalin değişmediği yapısal anomalidir; taşıyıcı fenotipik olarak normaldir.",
     "discipline": "Tıbbi Genetik",
     "committee": "",
-    "clinicalPearl": "Taşıyıcıda teorik risk %30–100.",
+    "clinicalPearl": "Taşıyıcıda teorik risk %30–100. · Taşıyıcılık: yenidoğan %0.2, infertil çift %0.6, ilk trimester kaybı %6; dengesiz embriyo oranı %20–100.",
     "dogrulama": {
       "durum": "ders_isci",
       "destek": 1.0,
@@ -75794,7 +75796,7 @@
     "description": "Viabilite sınırına ulaşmadan önce birden fazla klinik gebeliğin kaybedilmesidir; kaç kayıp gerektiği derneğe göre değişir ve ektopik gebelik, GTH ile implantasyon başarısızlığı tanıma girmez.",
     "discipline": "Kadın Hastalıkları ve Doğum",
     "committee": "",
-    "clinicalPearl": "Tüm değerlendirmelere karşın tekrarlayan gebelik kaybı olgularının %33'ünden fazlası açıklanamaz. · ASRM 2026 ve ESHRE 2023 ≥2 kayıp, RCOG 2023 ≥3 ilk trimester kaybı; kalıtsal trombofili paneli rutin önerilmez.",
+    "clinicalPearl": "Tüm değerlendirmelere karşın tekrarlayan gebelik kaybı olgularının %33'ünden fazlası açıklanamaz. · ASRM 2026 ve ESHRE 2023 ≥2 kayıp, RCOG 2023 ≥3 ilk trimester kaybı; kalıtsal trombofili paneli rutin önerilmez. · Doğurganlık çağındaki kadınların %5'i; abort materyalinin %50'sinde kromozom anomalisi; eşlerde %5 dengeli translokasyon.",
     "aliases": [
       "Rekürren abortus",
       "TGK"
@@ -79076,7 +79078,7 @@
     "description": "Ağır kan hastalığı olan bir çocuğa kök hücre verebilecek, hem HLA uyumlu hem de hastalık mutasyonu taşımayan embriyonun preimplantasyon genetik tanıyla seçilmesidir.",
     "discipline": "Tıbbi Genetik",
     "committee": "",
-    "clinicalPearl": "PGD ile ilk HLA tiplemesi 2001'de Verlinsky ve ark. tarafından Fanconi aplastik anemisi için yapılmıştır.",
+    "clinicalPearl": "PGD ile ilk HLA tiplemesi 2001'de Verlinsky ve ark. tarafından Fanconi aplastik anemisi için yapılmıştır. · İlk uygulama 2001'de Verlinsky ve ark., Fanconi aplastik anemisi; uyumlu donör yoksa tek alternatif ve ICSI zorunlu.",
     "aliases": [
       "HLA uyumlu kardeş amaçlı PGD"
     ],
@@ -91414,6 +91416,1131 @@
         "kurul": 1,
         "sayfa": 4,
         "alinti": "Patojenlerin ortadan kaldırılmasında lizozim gibi biyokimyasal maddeler ve kompleman sistemi önemli rol oynar"
+      }
+    ]
+  },
+  "preimplantasyon genetik tarama (pgs)": {
+    "term": "Preimplantasyon genetik tarama (PGS)",
+    "category": "tani",
+    "definition": "IVF'te transfer edilecek aday embriyolarda anöploidi taraması yapılarak öploid embriyoların seçilmesi; güncel adı PGT-A'dır.",
+    "description": "IVF'te transfer edilecek aday embriyolarda anöploidi taraması yapılarak öploid embriyoların seçilmesi; güncel adı PGT-A'dır.",
+    "discipline": "Tıbbi Genetik",
+    "committee": "",
+    "clinicalPearl": "PGD bilinen hastalığı arar, PGS kromozom sayısını tarar.",
+    "aliases": [
+      "PGS",
+      "PGT-A"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-5604fd54d5"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Genetik/6)PREİMPLANTASYON GENETİK TANI (2).pdf",
+        "ders": "Tıbbi Genetik",
+        "kurul": 1,
+        "sayfa": 5,
+        "alinti": "Anneye transfer edilecek aday embriyoların anöploidi taraması yapılarak öploid embriyo/embriyoların endometriyuma transfer edilmesi"
+      }
+    ]
+  },
+  "pgt-a": {
+    "term": "PGT-A",
+    "category": "tani",
+    "definition": "Sayısal kromozom anomalilerine (anöploidi) yönelik preimplantasyon genetik test.",
+    "description": "Sayısal kromozom anomalilerine (anöploidi) yönelik preimplantasyon genetik test.",
+    "discipline": "Tıbbi Genetik",
+    "committee": "",
+    "clinicalPearl": "Eski adı PGS'dir.",
+    "aliases": [
+      "Anöploidi için preimplantasyon genetik test"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-5604fd54d5"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Genetik/6)PREİMPLANTASYON GENETİK TANI (2).pdf",
+        "ders": "Tıbbi Genetik",
+        "kurul": 1,
+        "sayfa": 69,
+        "alinti": "PGT-A: Sayısal kromozom anomalilerinin tespiti"
+      }
+    ]
+  },
+  "pgt-sr": {
+    "term": "PGT-SR",
+    "category": "tani",
+    "definition": "Translokasyon gibi yapısal kromozom anomalilerine yönelik preimplantasyon genetik test.",
+    "description": "Translokasyon gibi yapısal kromozom anomalilerine yönelik preimplantasyon genetik test.",
+    "discipline": "Tıbbi Genetik",
+    "committee": "",
+    "clinicalPearl": "Dengeli translokasyon taşıyıcılarında uygulanır.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-5604fd54d5"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Genetik/6)PREİMPLANTASYON GENETİK TANI (2).pdf",
+        "ders": "Tıbbi Genetik",
+        "kurul": 1,
+        "sayfa": 69,
+        "alinti": "PGT-SR: Yapısal kromozom anomalilerin tespiti"
+      }
+    ]
+  },
+  "pgt-m": {
+    "term": "PGT-M",
+    "category": "tani",
+    "definition": "Monogenik (tek gen) hastalıklara yönelik preimplantasyon genetik test.",
+    "description": "Monogenik (tek gen) hastalıklara yönelik preimplantasyon genetik test.",
+    "discipline": "Tıbbi Genetik",
+    "committee": "",
+    "clinicalPearl": "En sık yöntemi linkage analizidir.",
+    "aliases": [
+      "Monogenik hastalık için PGT"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-5604fd54d5"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Genetik/6)PREİMPLANTASYON GENETİK TANI (2).pdf",
+        "ders": "Tıbbi Genetik",
+        "kurul": 1,
+        "sayfa": 89,
+        "alinti": "Tek gen hastalık taşıyıcılığında en sık kullanılan PGT-M yöntemi"
+      }
+    ]
+  },
+  "preimplantasyon genetik haplotipleme (pgh)": {
+    "term": "Preimplantasyon genetik haplotipleme (PGH)",
+    "category": "tani",
+    "definition": "Mutasyon doğrudan analiz edilmeden hastalık genine komşu STR allelleri izlenerek yapılan PGD.",
+    "description": "Mutasyon doğrudan analiz edilmeden hastalık genine komşu STR allelleri izlenerek yapılan PGD.",
+    "discipline": "Tıbbi Genetik",
+    "committee": "",
+    "clinicalPearl": "En az 8 STR; akraba evliliği olumsuz etkiler.",
+    "aliases": [
+      "PGH"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-5604fd54d5"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Genetik/6)PREİMPLANTASYON GENETİK TANI (2).pdf",
+        "ders": "Tıbbi Genetik",
+        "kurul": 1,
+        "sayfa": 19,
+        "alinti": "Bu yöntem; ilgili gene komşu olan allellerin takip edilerek aynı kromozom bölgesinin referans kişiden aktarılıp aktarılmadığı kontrol edilir"
+      }
+    ]
+  },
+  "karyomapping": {
+    "term": "Karyomapping",
+    "category": "tani",
+    "definition": "STR yerine SNP kullanarak tüm genom boyunca linkage analizi yapan haplotipleme platformu.",
+    "description": "STR yerine SNP kullanarak tüm genom boyunca linkage analizi yapan haplotipleme platformu.",
+    "discipline": "Tıbbi Genetik",
+    "committee": "",
+    "clinicalPearl": "300.000 SNP; hastaya özgü set-up gerektirmez.",
+    "aliases": [
+      "SNP tabanlı haplotip analizi"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-5604fd54d5"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Genetik/6)PREİMPLANTASYON GENETİK TANI (2).pdf",
+        "ders": "Tıbbi Genetik",
+        "kurul": 1,
+        "sayfa": 20,
+        "alinti": "Karyomapping bölgesel değil, tüm genom boyunca SNP taraması yapar"
+      }
+    ]
+  },
+  "short tandem repeat (str)": {
+    "term": "Short tandem repeat (STR)",
+    "category": "genetik",
+    "definition": "Birkaç bazlık dizilerin ardışık tekrarından oluşan, bireyler arasında uzunluğu değişen polimorfik belirteç.",
+    "description": "Birkaç bazlık dizilerin ardışık tekrarından oluşan, bireyler arasında uzunluğu değişen polimorfik belirteç.",
+    "discipline": "Tıbbi Genetik",
+    "committee": "",
+    "clinicalPearl": "PGH'de hedef gene yakın ve bilgi verici STR seçilir.",
+    "aliases": [
+      "STR",
+      "Kısa ardışık tekrar"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-5604fd54d5"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Genetik/6)PREİMPLANTASYON GENETİK TANI (2).pdf",
+        "ders": "Tıbbi Genetik",
+        "kurul": 1,
+        "sayfa": 19,
+        "alinti": "Burada STR seçimi önemli ve en az 8 adet STR oluşturulmalı"
+      }
+    ]
+  },
+  "haplotip": {
+    "term": "Haplotip",
+    "category": "genetik",
+    "definition": "Aynı kromozom üzerinde birlikte kalıtılan allel kombinasyonu.",
+    "description": "Aynı kromozom üzerinde birlikte kalıtılan allel kombinasyonu.",
+    "discipline": "Tıbbi Genetik",
+    "committee": "",
+    "clinicalPearl": "Hastalık geniyle birlikte kalıtılan haplotip embriyoda izlenir.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-5604fd54d5"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Genetik/6)PREİMPLANTASYON GENETİK TANI (2).pdf",
+        "ders": "Tıbbi Genetik",
+        "kurul": 1,
+        "sayfa": 19,
+        "alinti": "Akraba evliliği haplotip ve STR oluşturmada uygulamayı olumsuz etkiler"
+      }
+    ]
+  },
+  "linkage (bağlantı) analizi": {
+    "term": "Linkage (bağlantı) analizi",
+    "category": "tani",
+    "definition": "Hastalık genine yakın polimorfik belirteçlerin aile içinde birlikte kalıtımının izlenmesi.",
+    "description": "Hastalık genine yakın polimorfik belirteçlerin aile içinde birlikte kalıtımının izlenmesi.",
+    "discipline": "Tıbbi Genetik",
+    "committee": "",
+    "clinicalPearl": "Tek gen taşıyıcılığında en sık PGT-M yöntemi.",
+    "aliases": [
+      "Bağlantı analizi"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-5604fd54d5"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Genetik/6)PREİMPLANTASYON GENETİK TANI (2).pdf",
+        "ders": "Tıbbi Genetik",
+        "kurul": 1,
+        "sayfa": 89,
+        "alinti": "Tek gen hastalık taşıyıcılığında en sık kullanılan PGT-M yöntemi"
+      }
+    ]
+  },
+  "informatif marker": {
+    "term": "İnformatif marker",
+    "category": "genetik",
+    "definition": "Anne ve babanın allellerini birbirinden ayırabilen, bilgi verici polimorfik belirteç.",
+    "description": "Anne ve babanın allellerini birbirinden ayırabilen, bilgi verici polimorfik belirteç.",
+    "discipline": "Tıbbi Genetik",
+    "committee": "",
+    "clinicalPearl": "Yeterli sayıda informatif marker ADO kaynaklı hatayı telafi eder.",
+    "aliases": [
+      "Bilgi verici belirteç"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-5604fd54d5"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Genetik/6)PREİMPLANTASYON GENETİK TANI (2).pdf",
+        "ders": "Tıbbi Genetik",
+        "kurul": 1,
+        "sayfa": 25,
+        "alinti": "informatif marker dizaynlarının yapılması ve yeterli sayıda test platformuna eklenmesi gerekir"
+      }
+    ]
+  },
+  "allel drop-out (ado)": {
+    "term": "Allel drop-out (ADO)",
+    "category": "genetik",
+    "definition": "Tek hücre PCR'da heterozigot lokustaki iki allelden birinin çoğaltılamaması.",
+    "description": "Tek hücre PCR'da heterozigot lokustaki iki allelden birinin çoğaltılamaması.",
+    "discipline": "Tıbbi Genetik",
+    "committee": "",
+    "clinicalPearl": "Heterozigot embriyo homozigot görünebilir; yanlış tanının başlıca nedeni.",
+    "aliases": [
+      "ADO"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-5604fd54d5"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Genetik/6)PREİMPLANTASYON GENETİK TANI (2).pdf",
+        "ders": "Tıbbi Genetik",
+        "kurul": 1,
+        "sayfa": 39,
+        "alinti": "Allel Drop-out (ADO), oDNA kontaminasyonu, oAmplifikasyon kaybı(sonuca ulaşamama)"
+      }
+    ]
+  },
+  "amplifikasyon kaybı": {
+    "term": "Amplifikasyon kaybı",
+    "category": "genetik",
+    "definition": "Tek hücre analizinde DNA'nın hiç çoğaltılamaması ve sonuca ulaşılamaması.",
+    "description": "Tek hücre analizinde DNA'nın hiç çoğaltılamaması ve sonuca ulaşılamaması.",
+    "discipline": "Tıbbi Genetik",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-5604fd54d5"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Genetik/6)PREİMPLANTASYON GENETİK TANI (2).pdf",
+        "ders": "Tıbbi Genetik",
+        "kurul": 1,
+        "sayfa": 39,
+        "alinti": "Allel Drop-out (ADO), oDNA kontaminasyonu, oAmplifikasyon kaybı(sonuca ulaşamama)"
+      }
+    ]
+  },
+  "tüm genom amplifikasyonu (wga)": {
+    "term": "Tüm genom amplifikasyonu (WGA)",
+    "category": "tani",
+    "definition": "Çok az miktardaki DNA'nın analiz öncesinde tüm genom boyunca çoğaltılması.",
+    "description": "Çok az miktardaki DNA'nın analiz öncesinde tüm genom boyunca çoğaltılması.",
+    "discipline": "Tıbbi Genetik",
+    "committee": "",
+    "aliases": [
+      "WGA"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-5604fd54d5"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Genetik/6)PREİMPLANTASYON GENETİK TANI (2).pdf",
+        "ders": "Tıbbi Genetik",
+        "kurul": 1,
+        "sayfa": 66,
+        "alinti": "Tüm genom amplifikasyonu (WGA), oÇok az miktardaki DNA örneğinden genomik analiz yapılacağı"
+      }
+    ]
+  },
+  "tek hücre pcr": {
+    "term": "Tek hücre PCR",
+    "category": "tani",
+    "definition": "Biyopsiyle alınan tek ya da birkaç hücrenin lizis sonrası DNA'sında hedef bölgenin çoğaltılıp mutasyon analizi yapılması.",
+    "description": "Biyopsiyle alınan tek ya da birkaç hücrenin lizis sonrası DNA'sında hedef bölgenin çoğaltılıp mutasyon analizi yapılması.",
+    "discipline": "Tıbbi Genetik",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-5604fd54d5"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Genetik/6)PREİMPLANTASYON GENETİK TANI (2).pdf",
+        "ders": "Tıbbi Genetik",
+        "kurul": 1,
+        "sayfa": 68,
+        "alinti": "Biyopsi yapılarak alınan blastomer hücreleri, içerisinde lysis (eritme) solüsyonu bulunan PCR tüplerine aktarılmaktadır"
+      }
+    ]
+  },
+  "minisequencing": {
+    "term": "Minisequencing",
+    "category": "tani",
+    "definition": "Mutasyon noktasında tek baz uzatımıyla allelin belirlenmesine dayanan analiz yöntemi.",
+    "description": "Mutasyon noktasında tek baz uzatımıyla allelin belirlenmesine dayanan analiz yöntemi.",
+    "discipline": "Tıbbi Genetik",
+    "committee": "",
+    "clinicalPearl": "PGT-M'de mutasyona özgü minisequencing primerleri tasarlanır.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-5604fd54d5"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Genetik/6)PREİMPLANTASYON GENETİK TANI (2).pdf",
+        "ders": "Tıbbi Genetik",
+        "kurul": 1,
+        "sayfa": 67,
+        "alinti": "Mutasyon spesifik minisequencing primerler dizayn edilir"
+      }
+    ]
+  },
+  "interfaz fısh": {
+    "term": "İnterfaz FISH",
+    "category": "tani",
+    "definition": "Bölünmeyen hücre çekirdeğinde floresan problarla hedef bölgeye özgü kromozom analizi.",
+    "description": "Bölünmeyen hücre çekirdeğinde floresan problarla hedef bölgeye özgü kromozom analizi.",
+    "discipline": "Tıbbi Genetik",
+    "committee": "",
+    "clinicalPearl": "Dezavantajları: sinyal binmesi, 10 Mb altı ve subtelomerik bölgelerde güçlük.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-5604fd54d5"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Genetik/6)PREİMPLANTASYON GENETİK TANI (2).pdf",
+        "ders": "Tıbbi Genetik",
+        "kurul": 1,
+        "sayfa": 72,
+        "alinti": "Subtelomerik bölgeler ve 10mb altı analiz güçlüğü"
+      }
+    ]
+  },
+  "sanger dizileme": {
+    "term": "Sanger dizileme",
+    "category": "tani",
+    "definition": "Zincir sonlandırıcı nükleotidlerle hedef DNA parçasının baz sırasının okunması.",
+    "description": "Zincir sonlandırıcı nükleotidlerle hedef DNA parçasının baz sırasının okunması.",
+    "discipline": "Tıbbi Genetik",
+    "committee": "",
+    "clinicalPearl": "PGD'de yalnız tek gen patolojilerine bakar; anöploidi taramaz.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-5604fd54d5"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Genetik/6)PREİMPLANTASYON GENETİK TANI (2).pdf",
+        "ders": "Tıbbi Genetik",
+        "kurul": 1,
+        "sayfa": 76,
+        "alinti": "Sanger dizi analizi sadece tek gen hastalıklarındaki patolojiler için analiz imkanı verirken"
+      }
+    ]
+  },
+  "polar cisim biyopsisi": {
+    "term": "Polar cisim biyopsisi",
+    "category": "tani",
+    "definition": "Oositin mayozda attığı birinci ve/veya ikinci polar cismin genetik analiz için alınması.",
+    "description": "Oositin mayozda attığı birinci ve/veya ikinci polar cismin genetik analiz için alınması.",
+    "discipline": "Tıbbi Genetik",
+    "committee": "",
+    "clinicalPearl": "Yalnız maternal katkıyı gösterir; paternal ve mitotik hataları göremez.",
+    "aliases": [
+      "Polar body biyopsisi",
+      "Polar hücre biyopsisi"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-5604fd54d5"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Genetik/6)PREİMPLANTASYON GENETİK TANI (2).pdf",
+        "ders": "Tıbbi Genetik",
+        "kurul": 1,
+        "sayfa": 52,
+        "alinti": "Birinci polar hücre biyopsisi metafaz II aşamasındaki oositten ve ikinci polar cisim biyopsisi 2PN"
+      }
+    ]
+  },
+  "polar cisim": {
+    "term": "Polar cisim",
+    "category": "fizyoloji",
+    "definition": "Oositin mayoz bölünmeleri sırasında attığı, az sitoplazmalı küçük hücre.",
+    "description": "Oositin mayoz bölünmeleri sırasında attığı, az sitoplazmalı küçük hücre.",
+    "discipline": "Tıbbi Genetik",
+    "committee": "",
+    "clinicalPearl": "Birinci polar cisim MII oositte, ikinci polar cisim döllenmeden sonra bulunur.",
+    "aliases": [
+      "Polar body",
+      "Polar cisimcik"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-5604fd54d5"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Genetik/6)PREİMPLANTASYON GENETİK TANI (2).pdf",
+        "ders": "Tıbbi Genetik",
+        "kurul": 1,
+        "sayfa": 53,
+        "alinti": "Polar hücreler yumurta hücresinin olgunlaşması ve döllenmesi ile mayoz bölünme esnasında atılan yan ürünlerdir"
+      }
+    ]
+  },
+  "blastomer biyopsisi": {
+    "term": "Blastomer biyopsisi",
+    "category": "tani",
+    "definition": "Klivaj evresindeki (3. gün, 6–8 hücreli) embriyodan çekirdekli bir blastomerin alınması.",
+    "description": "Klivaj evresindeki (3. gün, 6–8 hücreli) embriyodan çekirdekli bir blastomerin alınması.",
+    "discipline": "Tıbbi Genetik",
+    "committee": "",
+    "clinicalPearl": "Yerini blastokist biyopsisine bırakmıştır.",
+    "aliases": [
+      "Klivaj evresi biyopsisi"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-5604fd54d5"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Genetik/6)PREİMPLANTASYON GENETİK TANI (2).pdf",
+        "ders": "Tıbbi Genetik",
+        "kurul": 1,
+        "sayfa": 57,
+        "alinti": "fertilizasyondan itibaren 3.günde(68-72.saatler) embriyonun 6-8 hücreli aşamasında gerçekleştirilir"
+      }
+    ]
+  },
+  "blastomer": {
+    "term": "Blastomer",
+    "category": "anatomi",
+    "definition": "Klivaj evresindeki embriyonun her bir hücresi.",
+    "description": "Klivaj evresindeki embriyonun her bir hücresi.",
+    "discipline": "Tıbbi Genetik",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-5604fd54d5"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Genetik/6)PREİMPLANTASYON GENETİK TANI (2).pdf",
+        "ders": "Tıbbi Genetik",
+        "kurul": 1,
+        "sayfa": 58,
+        "alinti": "Zona pellucida açıklığından biyopsi pipetinin yerleştirilir ve çekirdek içeren ve hedeflenen blastomer, pipete aspire"
+      }
+    ]
+  },
+  "trofoektoderm biyopsisi": {
+    "term": "Trofoektoderm biyopsisi",
+    "category": "tani",
+    "definition": "Blastokist evresinde (5. gün) plasentayı oluşturacak trofoektoderm hücrelerinden birkaçının alınması.",
+    "description": "Blastokist evresinde (5. gün) plasentayı oluşturacak trofoektoderm hücrelerinden birkaçının alınması.",
+    "discipline": "Tıbbi Genetik",
+    "committee": "",
+    "clinicalPearl": "En az zararlı ve en fazla DNA sağlayan yöntem; dondurma gerektirir.",
+    "aliases": [
+      "Blastokist biyopsisi",
+      "TE biyopsisi"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-5604fd54d5"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Genetik/6)PREİMPLANTASYON GENETİK TANI (2).pdf",
+        "ders": "Tıbbi Genetik",
+        "kurul": 1,
+        "sayfa": 60,
+        "alinti": "Döllenme oluşumunu takiben 5. günde yapılan biyopsidir"
+      }
+    ]
+  },
+  "trofoektoderm": {
+    "term": "Trofoektoderm",
+    "category": "anatomi",
+    "definition": "Blastokistin plasentayı oluşturacak dış hücre tabakası.",
+    "description": "Blastokistin plasentayı oluşturacak dış hücre tabakası.",
+    "discipline": "Tıbbi Genetik",
+    "committee": "",
+    "aliases": [
+      "Trofektoderm"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-5604fd54d5"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Genetik/6)PREİMPLANTASYON GENETİK TANI (2).pdf",
+        "ders": "Tıbbi Genetik",
+        "kurul": 1,
+        "sayfa": 62,
+        "alinti": "Trofoektoderm tabakası plasentayı oluşturur, o Bu nedenle fetus oluşumunda yer almayan dokuların örneklenmesinin"
+      }
+    ]
+  },
+  "zona pellucida": {
+    "term": "Zona pellucida",
+    "category": "anatomi",
+    "definition": "Oosit ve erken embriyoyu saran glikoprotein kılıf.",
+    "description": "Oosit ve erken embriyoyu saran glikoprotein kılıf.",
+    "discipline": "Tıbbi Genetik",
+    "committee": "",
+    "clinicalPearl": "Biyopsi öncesi lazer, asit Tyrode ya da cam pipetle açılır.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-5604fd54d5"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Genetik/6)PREİMPLANTASYON GENETİK TANI (2).pdf",
+        "ders": "Tıbbi Genetik",
+        "kurul": 1,
+        "sayfa": 58,
+        "alinti": "Zona pellucida açıklığından biyopsi pipetinin yerleştirilir ve çekirdek içeren ve hedeflenen blastomer, pipete aspire"
+      }
+    ]
+  },
+  "asit tyrode solüsyonu": {
+    "term": "Asit Tyrode solüsyonu",
+    "category": "terim",
+    "definition": "Zona pellucidayı kimyasal olarak açmak için kullanılan asidik solüsyon.",
+    "description": "Zona pellucidayı kimyasal olarak açmak için kullanılan asidik solüsyon.",
+    "discipline": "Tıbbi Genetik",
+    "committee": "",
+    "aliases": [
+      "Asit Tirod"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-5604fd54d5"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Genetik/6)PREİMPLANTASYON GENETİK TANI (2).pdf",
+        "ders": "Tıbbi Genetik",
+        "kurul": 1,
+        "sayfa": 63,
+        "alinti": "lazer, asid tirod, keskin cam pipetle aspirasyon"
+      }
+    ]
+  },
+  "intrasitoplazmik sperm enjeksiyonu (ıcsı)": {
+    "term": "İntrasitoplazmik sperm enjeksiyonu (ICSI)",
+    "category": "tedavi",
+    "definition": "Tek bir spermin mikromanipülatör ve cam mikropipetle oosit sitoplazmasına mekanik olarak yerleştirilmesi.",
+    "description": "Tek bir spermin mikromanipülatör ve cam mikropipetle oosit sitoplazmasına mekanik olarak yerleştirilmesi.",
+    "discipline": "Tıbbi Genetik",
+    "committee": "",
+    "clinicalPearl": "PGD uygulanacak her olguda mutlak tercih edilir.",
+    "aliases": [
+      "ICSI",
+      "Mikroenjeksiyon"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-5604fd54d5"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Genetik/6)PREİMPLANTASYON GENETİK TANI (2).pdf",
+        "ders": "Tıbbi Genetik",
+        "kurul": 1,
+        "sayfa": 47,
+        "alinti": "İnfertilite;1 yıl boyunca korunmaksızın çocuk sahibi olunamaması"
+      }
+    ]
+  },
+  "in vitro fertilizasyon (ıvf)": {
+    "term": "İn vitro fertilizasyon (IVF)",
+    "category": "tedavi",
+    "definition": "Oosit ve spermin vücut dışında, laboratuvarda döllenmesi ve embriyonun uterusa transferi.",
+    "description": "Oosit ve spermin vücut dışında, laboratuvarda döllenmesi ve embriyonun uterusa transferi.",
+    "discipline": "Tıbbi Genetik",
+    "committee": "",
+    "clinicalPearl": "PGD her zaman bir IVF döngüsünün parçasıdır.",
+    "aliases": [
+      "IVF",
+      "Tüp bebek"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-5604fd54d5"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Genetik/6)PREİMPLANTASYON GENETİK TANI (2).pdf",
+        "ders": "Tıbbi Genetik",
+        "kurul": 1,
+        "sayfa": 4,
+        "alinti": "uterusa yerleştirilecek embriyoların seçimi sırasında, obelirli genetik hastalıkları taşıyıp taşımadıklarını anlamak için"
+      }
+    ]
+  },
+  "ovulasyon indüksiyonu": {
+    "term": "Ovulasyon indüksiyonu",
+    "category": "tedavi",
+    "definition": "IVF'te metafaz II evresinde yeterli sayıda olgun oosit elde etmek için yumurtlamanın hormonal uyarılması.",
+    "description": "IVF'te metafaz II evresinde yeterli sayıda olgun oosit elde etmek için yumurtlamanın hormonal uyarılması.",
+    "discipline": "Tıbbi Genetik",
+    "committee": "",
+    "aliases": [
+      "Ovülasyon indüksiyonu"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-5604fd54d5"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Genetik/6)PREİMPLANTASYON GENETİK TANI (2).pdf",
+        "ders": "Tıbbi Genetik",
+        "kurul": 1,
+        "sayfa": 44,
+        "alinti": "IVF tedavisi sırasında metafaz 2 aşamasında, uygun sayıda ve sağlıklı oositlerin elde edilmesi"
+      }
+    ]
+  },
+  "oosit toplama (opu)": {
+    "term": "Oosit toplama (OPU)",
+    "category": "tedavi",
+    "definition": "Transvaginal USG eşliğinde foliküllerden oosit aspirasyonu; hCG'den 35–36 saat sonra yapılır.",
+    "description": "Transvaginal USG eşliğinde foliküllerden oosit aspirasyonu; hCG'den 35–36 saat sonra yapılır.",
+    "discipline": "Tıbbi Genetik",
+    "committee": "",
+    "clinicalPearl": "İdeal 8–13 oosit.",
+    "aliases": [
+      "OPU",
+      "Oocyte pick-up"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-5604fd54d5"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Genetik/6)PREİMPLANTASYON GENETİK TANI (2).pdf",
+        "ders": "Tıbbi Genetik",
+        "kurul": 1,
+        "sayfa": 44,
+        "alinti": "OPU(Oocyte Pick Up) işlemi ile hCG enjeksiyonundan 35-36 saat sonrasına planlanır"
+      }
+    ]
+  },
+  "over hiperstimülasyon sendromu (ohss)": {
+    "term": "Over hiperstimülasyon sendromu (OHSS)",
+    "category": "hastalik",
+    "definition": "Ovulasyon indüksiyonuna aşırı over yanıtı sonucu gelişen tablo.",
+    "description": "Ovulasyon indüksiyonuna aşırı over yanıtı sonucu gelişen tablo.",
+    "discipline": "Tıbbi Genetik",
+    "committee": "",
+    "clinicalPearl": "OPU'da 20'nin üzerinde oosit OHSS'ye neden olabilir.",
+    "aliases": [
+      "OHSS"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-5604fd54d5"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Genetik/6)PREİMPLANTASYON GENETİK TANI (2).pdf",
+        "ders": "Tıbbi Genetik",
+        "kurul": 1,
+        "sayfa": 44,
+        "alinti": "OPU sırasında alınan oosit sayısının ideali 8-13, oOosit sayısının 5 altında olması gebelik oranını azaltır"
+      }
+    ]
+  },
+  "denüdasyon": {
+    "term": "Denüdasyon",
+    "category": "terim",
+    "definition": "Oositin hiyalüronidaz ve cam pipetle kümülüs-korona hücrelerinden ayrılması.",
+    "description": "Oositin hiyalüronidaz ve cam pipetle kümülüs-korona hücrelerinden ayrılması.",
+    "discipline": "Tıbbi Genetik",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-5604fd54d5"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Genetik/6)PREİMPLANTASYON GENETİK TANI (2).pdf",
+        "ders": "Tıbbi Genetik",
+        "kurul": 1,
+        "sayfa": 46,
+        "alinti": "Hyalunoridaz enzimi içeren solüsyon ve cam Pasteur pipetleri kullanılır"
+      }
+    ]
+  },
+  "germinal vezikül (gv)": {
+    "term": "Germinal vezikül (GV)",
+    "category": "fizyoloji",
+    "definition": "Profaz I'de duraklamış olgunlaşmamış oositin büyük çekirdeği.",
+    "description": "Profaz I'de duraklamış olgunlaşmamış oositin büyük çekirdeği.",
+    "discipline": "Tıbbi Genetik",
+    "committee": "",
+    "aliases": [
+      "GV"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-5604fd54d5"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Genetik/6)PREİMPLANTASYON GENETİK TANI (2).pdf",
+        "ders": "Tıbbi Genetik",
+        "kurul": 1,
+        "sayfa": 46,
+        "alinti": "polar cisimciğin varlığı(Metafaz II) veya yokluğu(Metafaz I) ya da germinal vezikül varlığı(GV)"
+      }
+    ]
+  },
+  "infertilite": {
+    "term": "İnfertilite",
+    "category": "terim",
+    "definition": "1 yıl korunmasız ilişkiye rağmen çocuk sahibi olunamaması.",
+    "description": "1 yıl korunmasız ilişkiye rağmen çocuk sahibi olunamaması.",
+    "discipline": "Tıbbi Genetik",
+    "committee": "",
+    "clinicalPearl": "Kadın ya da erkek kaynaklı olabilir.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-5604fd54d5"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Genetik/6)PREİMPLANTASYON GENETİK TANI (2).pdf",
+        "ders": "Tıbbi Genetik",
+        "kurul": 1,
+        "sayfa": 47,
+        "alinti": "İnfertilite;1 yıl boyunca korunmaksızın çocuk sahibi olunamaması"
+      }
+    ]
+  },
+  "tekrarlayan implantasyon başarısızlığı (rıf)": {
+    "term": "Tekrarlayan implantasyon başarısızlığı (RIF)",
+    "category": "terim",
+    "definition": "İyi kalite embriyo transferine rağmen 3 veya daha fazla IVF başarısızlığı.",
+    "description": "İyi kalite embriyo transferine rağmen 3 veya daha fazla IVF başarısızlığı.",
+    "discipline": "Tıbbi Genetik",
+    "committee": "",
+    "clinicalPearl": "Endikasyon listesindeki ≥2 IVF başarısızlığıyla karıştırılmamalıdır.",
+    "aliases": [
+      "RIF"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-5604fd54d5"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Genetik/6)PREİMPLANTASYON GENETİK TANI (2).pdf",
+        "ders": "Tıbbi Genetik",
+        "kurul": 1,
+        "sayfa": 33,
+        "alinti": "İyi kalite embriyo transferine rağmen 3 veya daha fazla IVF başarısızlığı durumu"
+      }
+    ]
+  },
+  "hidrosalpenks": {
+    "term": "Hidrosalpenks",
+    "category": "hastalik",
+    "definition": "Tuba uterinanın distal tıkanıklık sonucu sıvıyla dolup genişlemesi.",
+    "description": "Tuba uterinanın distal tıkanıklık sonucu sıvıyla dolup genişlemesi.",
+    "discipline": "Tıbbi Genetik",
+    "committee": "",
+    "clinicalPearl": "RIF'in tubal nedenidir.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-5604fd54d5"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Genetik/6)PREİMPLANTASYON GENETİK TANI (2).pdf",
+        "ders": "Tıbbi Genetik",
+        "kurul": 1,
+        "sayfa": 33,
+        "alinti": "Tubal bozukluk(hidrosalpenks) ve olası genetik, hormonal, metabolik, hematolojik, immünolojik sebepler"
+      }
+    ]
+  },
+  "hemizigot": {
+    "term": "Hemizigot",
+    "category": "genetik",
+    "definition": "Bir genin yalnız tek kopyasının bulunması; erkekte X'e bağlı genler için geçerlidir.",
+    "description": "Bir genin yalnız tek kopyasının bulunması; erkekte X'e bağlı genler için geçerlidir.",
+    "discipline": "Tıbbi Genetik",
+    "committee": "",
+    "clinicalPearl": "XR hastalıklarda erkek hemizigot ve hastadır.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-5604fd54d5"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Genetik/6)PREİMPLANTASYON GENETİK TANI (2).pdf",
+        "ders": "Tıbbi Genetik",
+        "kurul": 1,
+        "sayfa": 27,
+        "alinti": "XR kalıtılan hastalıklarda kadınlar taşıyıcı heterozigot, oErkekler hemizigot ve hasta"
+      }
+    ]
+  },
+  "gonadal mozaisizm": {
+    "term": "Gonadal mozaisizm",
+    "category": "genetik",
+    "definition": "Mutasyonun yalnız germ hücre dizisinde bulunması; sağlıklı ebeveynden birden fazla etkilenmiş çocuk doğabilir.",
+    "description": "Mutasyonun yalnız germ hücre dizisinde bulunması; sağlıklı ebeveynden birden fazla etkilenmiş çocuk doğabilir.",
+    "discipline": "Tıbbi Genetik",
+    "committee": "",
+    "clinicalPearl": "OD hastalıkta de novo görünse de tekrarlama riski vardır.",
+    "aliases": [
+      "Germinal mozaisizm"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-5604fd54d5"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Genetik/6)PREİMPLANTASYON GENETİK TANI (2).pdf",
+        "ders": "Tıbbi Genetik",
+        "kurul": 1,
+        "sayfa": 22,
+        "alinti": "Ancak gonadal mozaisizm göz ardı edilmemeli, oAyrıca değişken ekspressivite ve penetrans kaybı durumları incelenmeli"
+      }
+    ]
+  },
+  "genokopi": {
+    "term": "Genokopi",
+    "category": "genetik",
+    "definition": "Farklı genlerdeki mutasyonların benzer fenotip oluşturması.",
+    "description": "Farklı genlerdeki mutasyonların benzer fenotip oluşturması.",
+    "discipline": "Tıbbi Genetik",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-5604fd54d5"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Genetik/6)PREİMPLANTASYON GENETİK TANI (2).pdf",
+        "ders": "Tıbbi Genetik",
+        "kurul": 1,
+        "sayfa": 42,
+        "alinti": "azalmış penetrans, değişken ekspressivite, mt kondisyonlar, trinükleotid hastalıkları, de novo mutasyonlar, genetik heterojenite, fenokopi, genokopi"
+      }
+    ]
+  },
+  "allojenik kök hücre transplantasyonu": {
+    "term": "Allojenik kök hücre transplantasyonu",
+    "category": "tedavi",
+    "definition": "Başka bir bireyden alınan hematopoetik kök hücrelerin nakli.",
+    "description": "Başka bir bireyden alınan hematopoetik kök hücrelerin nakli.",
+    "discipline": "Tıbbi Genetik",
+    "committee": "",
+    "clinicalPearl": "En iyi sonuç tam HLA uyumlu kardeş vericiden.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-5604fd54d5"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Genetik/6)PREİMPLANTASYON GENETİK TANI (2).pdf",
+        "ders": "Tıbbi Genetik",
+        "kurul": 1,
+        "sayfa": 35,
+        "alinti": "en etkili tedavi yöntemi allojenik kök hücre transplantasyonudur"
+      }
+    ]
+  },
+  "non-invaziv pgt (ni-pgt)": {
+    "term": "Non-invaziv PGT (ni-PGT)",
+    "category": "tani",
+    "definition": "Embriyoya biyopsi müdahalesi yapmadan genetik analiz yapmayı hedefleyen preimplantasyon test yaklaşımı.",
+    "description": "Embriyoya biyopsi müdahalesi yapmadan genetik analiz yapmayı hedefleyen preimplantasyon test yaklaşımı.",
+    "discipline": "Tıbbi Genetik",
+    "committee": "",
+    "aliases": [
+      "ni-PGT"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-5604fd54d5"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Genetik/6)PREİMPLANTASYON GENETİK TANI (2).pdf",
+        "ders": "Tıbbi Genetik",
+        "kurul": 1,
+        "sayfa": 84,
+        "alinti": "embriyoya müdahalenin azaltılmasına veya tamamen önlenmesine artan bir ilgi vardır"
+      }
+    ]
+  },
+  "embriyonik mozaisizm": {
+    "term": "Embriyonik mozaisizm",
+    "category": "genetik",
+    "definition": "Embriyoda farklı kromozom içeriğine sahip hücre dizilerinin birlikte bulunması; çoğunlukla mitotik hatalardan kaynaklanır.",
+    "description": "Embriyoda farklı kromozom içeriğine sahip hücre dizilerinin birlikte bulunması; çoğunlukla mitotik hatalardan kaynaklanır.",
+    "discipline": "Tıbbi Genetik",
+    "committee": "",
+    "clinicalPearl": "Bazı laboratuvarlarda %30'a kadar çıkabilir.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-5604fd54d5"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Genetik/6)PREİMPLANTASYON GENETİK TANI (2).pdf",
+        "ders": "Tıbbi Genetik",
+        "kurul": 1,
+        "sayfa": 86,
+        "alinti": "Bazılarında bu oran %30’a kadar çıkabilmektedir"
+      }
+    ]
+  },
+  "spinal müsküler atrofi (sma)": {
+    "term": "Spinal müsküler atrofi (SMA)",
+    "category": "hastalik",
+    "definition": "Omurilik ön boynuz motor nöronlarının kaybıyla seyreden otozomal resesif hastalık.",
+    "description": "Omurilik ön boynuz motor nöronlarının kaybıyla seyreden otozomal resesif hastalık.",
+    "discipline": "Tıbbi Genetik",
+    "committee": "",
+    "clinicalPearl": "PGD uygulanan OR hastalıklardandır.",
+    "aliases": [
+      "SMA"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261013-5604fd54d5"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Genetik/6)PREİMPLANTASYON GENETİK TANI (2).pdf",
+        "ders": "Tıbbi Genetik",
+        "kurul": 1,
+        "sayfa": 25,
+        "alinti": "PGD önce, detaylı pedigri çizilmeli, riskler iyi tespit edilmeli"
       }
     ]
   }

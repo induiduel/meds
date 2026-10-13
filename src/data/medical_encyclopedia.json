@@ -82630,5 +82630,863 @@
       "accuracyScore": 100,
       "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
     }
+  },
+  {
+    "id": "s13-preimplantasyon_genetik_tarama_pgs",
+    "term": "Preimplantasyon genetik tarama (PGS)",
+    "aliases": [
+      "PGS",
+      "PGT-A"
+    ],
+    "category": "tani",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 6)PREİMPLANTASYON GENETİK TANI (2) s.5",
+    "definition": "IVF'te transfer edilecek aday embriyolarda anöploidi taraması yapılarak öploid embriyoların seçilmesi; güncel adı PGT-A'dır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "PGD bilinen hastalığı arar, PGS kromozom sayısını tarar.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-pgt_a",
+    "term": "PGT-A",
+    "aliases": [
+      "Anöploidi için preimplantasyon genetik test"
+    ],
+    "category": "tani",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 6)PREİMPLANTASYON GENETİK TANI (2) s.69",
+    "definition": "Sayısal kromozom anomalilerine (anöploidi) yönelik preimplantasyon genetik test.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Eski adı PGS'dir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-pgt_sr",
+    "term": "PGT-SR",
+    "aliases": [],
+    "category": "tani",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 6)PREİMPLANTASYON GENETİK TANI (2) s.69",
+    "definition": "Translokasyon gibi yapısal kromozom anomalilerine yönelik preimplantasyon genetik test.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Dengeli translokasyon taşıyıcılarında uygulanır.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-pgt_m",
+    "term": "PGT-M",
+    "aliases": [
+      "Monogenik hastalık için PGT"
+    ],
+    "category": "tani",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 6)PREİMPLANTASYON GENETİK TANI (2) s.89",
+    "definition": "Monogenik (tek gen) hastalıklara yönelik preimplantasyon genetik test.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "En sık yöntemi linkage analizidir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-preimplantasyon_genetik_haplotipleme_pgh",
+    "term": "Preimplantasyon genetik haplotipleme (PGH)",
+    "aliases": [
+      "PGH"
+    ],
+    "category": "tani",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 6)PREİMPLANTASYON GENETİK TANI (2) s.19",
+    "definition": "Mutasyon doğrudan analiz edilmeden hastalık genine komşu STR allelleri izlenerek yapılan PGD.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "En az 8 STR; akraba evliliği olumsuz etkiler.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-karyomapping",
+    "term": "Karyomapping",
+    "aliases": [
+      "SNP tabanlı haplotip analizi"
+    ],
+    "category": "tani",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 6)PREİMPLANTASYON GENETİK TANI (2) s.20",
+    "definition": "STR yerine SNP kullanarak tüm genom boyunca linkage analizi yapan haplotipleme platformu.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "300.000 SNP; hastaya özgü set-up gerektirmez.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-short_tandem_repeat_str",
+    "term": "Short tandem repeat (STR)",
+    "aliases": [
+      "STR",
+      "Kısa ardışık tekrar"
+    ],
+    "category": "genetik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 6)PREİMPLANTASYON GENETİK TANI (2) s.19",
+    "definition": "Birkaç bazlık dizilerin ardışık tekrarından oluşan, bireyler arasında uzunluğu değişen polimorfik belirteç.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "PGH'de hedef gene yakın ve bilgi verici STR seçilir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-haplotip",
+    "term": "Haplotip",
+    "aliases": [],
+    "category": "genetik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 6)PREİMPLANTASYON GENETİK TANI (2) s.19",
+    "definition": "Aynı kromozom üzerinde birlikte kalıtılan allel kombinasyonu.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Hastalık geniyle birlikte kalıtılan haplotip embriyoda izlenir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-linkage_baglanti_analizi",
+    "term": "Linkage (bağlantı) analizi",
+    "aliases": [
+      "Bağlantı analizi"
+    ],
+    "category": "tani",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 6)PREİMPLANTASYON GENETİK TANI (2) s.89",
+    "definition": "Hastalık genine yakın polimorfik belirteçlerin aile içinde birlikte kalıtımının izlenmesi.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Tek gen taşıyıcılığında en sık PGT-M yöntemi.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-informatif_marker",
+    "term": "İnformatif marker",
+    "aliases": [
+      "Bilgi verici belirteç"
+    ],
+    "category": "genetik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 6)PREİMPLANTASYON GENETİK TANI (2) s.25",
+    "definition": "Anne ve babanın allellerini birbirinden ayırabilen, bilgi verici polimorfik belirteç.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Yeterli sayıda informatif marker ADO kaynaklı hatayı telafi eder.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-allel_drop_out_ado",
+    "term": "Allel drop-out (ADO)",
+    "aliases": [
+      "ADO"
+    ],
+    "category": "genetik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 6)PREİMPLANTASYON GENETİK TANI (2) s.39",
+    "definition": "Tek hücre PCR'da heterozigot lokustaki iki allelden birinin çoğaltılamaması.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Heterozigot embriyo homozigot görünebilir; yanlış tanının başlıca nedeni.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-amplifikasyon_kaybi",
+    "term": "Amplifikasyon kaybı",
+    "aliases": [],
+    "category": "genetik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 6)PREİMPLANTASYON GENETİK TANI (2) s.39",
+    "definition": "Tek hücre analizinde DNA'nın hiç çoğaltılamaması ve sonuca ulaşılamaması.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-tum_genom_amplifikasyonu_wga",
+    "term": "Tüm genom amplifikasyonu (WGA)",
+    "aliases": [
+      "WGA"
+    ],
+    "category": "tani",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 6)PREİMPLANTASYON GENETİK TANI (2) s.66",
+    "definition": "Çok az miktardaki DNA'nın analiz öncesinde tüm genom boyunca çoğaltılması.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-tek_hucre_pcr",
+    "term": "Tek hücre PCR",
+    "aliases": [],
+    "category": "tani",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 6)PREİMPLANTASYON GENETİK TANI (2) s.68",
+    "definition": "Biyopsiyle alınan tek ya da birkaç hücrenin lizis sonrası DNA'sında hedef bölgenin çoğaltılıp mutasyon analizi yapılması.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-minisequencing",
+    "term": "Minisequencing",
+    "aliases": [],
+    "category": "tani",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 6)PREİMPLANTASYON GENETİK TANI (2) s.67",
+    "definition": "Mutasyon noktasında tek baz uzatımıyla allelin belirlenmesine dayanan analiz yöntemi.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "PGT-M'de mutasyona özgü minisequencing primerleri tasarlanır.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-interfaz_fish",
+    "term": "İnterfaz FISH",
+    "aliases": [],
+    "category": "tani",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 6)PREİMPLANTASYON GENETİK TANI (2) s.72",
+    "definition": "Bölünmeyen hücre çekirdeğinde floresan problarla hedef bölgeye özgü kromozom analizi.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Dezavantajları: sinyal binmesi, 10 Mb altı ve subtelomerik bölgelerde güçlük.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-sanger_dizileme",
+    "term": "Sanger dizileme",
+    "aliases": [],
+    "category": "tani",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 6)PREİMPLANTASYON GENETİK TANI (2) s.76",
+    "definition": "Zincir sonlandırıcı nükleotidlerle hedef DNA parçasının baz sırasının okunması.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "PGD'de yalnız tek gen patolojilerine bakar; anöploidi taramaz.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-polar_cisim_biyopsisi",
+    "term": "Polar cisim biyopsisi",
+    "aliases": [
+      "Polar body biyopsisi",
+      "Polar hücre biyopsisi"
+    ],
+    "category": "tani",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 6)PREİMPLANTASYON GENETİK TANI (2) s.52",
+    "definition": "Oositin mayozda attığı birinci ve/veya ikinci polar cismin genetik analiz için alınması.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Yalnız maternal katkıyı gösterir; paternal ve mitotik hataları göremez.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-polar_cisim",
+    "term": "Polar cisim",
+    "aliases": [
+      "Polar body",
+      "Polar cisimcik"
+    ],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 6)PREİMPLANTASYON GENETİK TANI (2) s.53",
+    "definition": "Oositin mayoz bölünmeleri sırasında attığı, az sitoplazmalı küçük hücre.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Birinci polar cisim MII oositte, ikinci polar cisim döllenmeden sonra bulunur.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-blastomer_biyopsisi",
+    "term": "Blastomer biyopsisi",
+    "aliases": [
+      "Klivaj evresi biyopsisi"
+    ],
+    "category": "tani",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 6)PREİMPLANTASYON GENETİK TANI (2) s.57",
+    "definition": "Klivaj evresindeki (3. gün, 6–8 hücreli) embriyodan çekirdekli bir blastomerin alınması.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Yerini blastokist biyopsisine bırakmıştır.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-blastomer",
+    "term": "Blastomer",
+    "aliases": [],
+    "category": "anatomi",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 6)PREİMPLANTASYON GENETİK TANI (2) s.58",
+    "definition": "Klivaj evresindeki embriyonun her bir hücresi.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-trofoektoderm_biyopsisi",
+    "term": "Trofoektoderm biyopsisi",
+    "aliases": [
+      "Blastokist biyopsisi",
+      "TE biyopsisi"
+    ],
+    "category": "tani",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 6)PREİMPLANTASYON GENETİK TANI (2) s.60",
+    "definition": "Blastokist evresinde (5. gün) plasentayı oluşturacak trofoektoderm hücrelerinden birkaçının alınması.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "En az zararlı ve en fazla DNA sağlayan yöntem; dondurma gerektirir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-trofoektoderm",
+    "term": "Trofoektoderm",
+    "aliases": [
+      "Trofektoderm"
+    ],
+    "category": "anatomi",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 6)PREİMPLANTASYON GENETİK TANI (2) s.62",
+    "definition": "Blastokistin plasentayı oluşturacak dış hücre tabakası.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-zona_pellucida",
+    "term": "Zona pellucida",
+    "aliases": [],
+    "category": "anatomi",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 6)PREİMPLANTASYON GENETİK TANI (2) s.58",
+    "definition": "Oosit ve erken embriyoyu saran glikoprotein kılıf.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Biyopsi öncesi lazer, asit Tyrode ya da cam pipetle açılır.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-asit_tyrode_solusyonu",
+    "term": "Asit Tyrode solüsyonu",
+    "aliases": [
+      "Asit Tirod"
+    ],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 6)PREİMPLANTASYON GENETİK TANI (2) s.63",
+    "definition": "Zona pellucidayı kimyasal olarak açmak için kullanılan asidik solüsyon.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-intrasitoplazmik_sperm_enjeksiyonu_icsi",
+    "term": "İntrasitoplazmik sperm enjeksiyonu (ICSI)",
+    "aliases": [
+      "ICSI",
+      "Mikroenjeksiyon"
+    ],
+    "category": "tedavi",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 6)PREİMPLANTASYON GENETİK TANI (2) s.47",
+    "definition": "Tek bir spermin mikromanipülatör ve cam mikropipetle oosit sitoplazmasına mekanik olarak yerleştirilmesi.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "PGD uygulanacak her olguda mutlak tercih edilir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-in_vitro_fertilizasyon_ivf",
+    "term": "İn vitro fertilizasyon (IVF)",
+    "aliases": [
+      "IVF",
+      "Tüp bebek"
+    ],
+    "category": "tedavi",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 6)PREİMPLANTASYON GENETİK TANI (2) s.4",
+    "definition": "Oosit ve spermin vücut dışında, laboratuvarda döllenmesi ve embriyonun uterusa transferi.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "PGD her zaman bir IVF döngüsünün parçasıdır.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-ovulasyon_induksiyonu",
+    "term": "Ovulasyon indüksiyonu",
+    "aliases": [
+      "Ovülasyon indüksiyonu"
+    ],
+    "category": "tedavi",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 6)PREİMPLANTASYON GENETİK TANI (2) s.44",
+    "definition": "IVF'te metafaz II evresinde yeterli sayıda olgun oosit elde etmek için yumurtlamanın hormonal uyarılması.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-oosit_toplama_opu",
+    "term": "Oosit toplama (OPU)",
+    "aliases": [
+      "OPU",
+      "Oocyte pick-up"
+    ],
+    "category": "tedavi",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 6)PREİMPLANTASYON GENETİK TANI (2) s.44",
+    "definition": "Transvaginal USG eşliğinde foliküllerden oosit aspirasyonu; hCG'den 35–36 saat sonra yapılır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "İdeal 8–13 oosit.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-over_hiperstimulasyon_sendromu_ohss",
+    "term": "Over hiperstimülasyon sendromu (OHSS)",
+    "aliases": [
+      "OHSS"
+    ],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 6)PREİMPLANTASYON GENETİK TANI (2) s.44",
+    "definition": "Ovulasyon indüksiyonuna aşırı over yanıtı sonucu gelişen tablo.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "OPU'da 20'nin üzerinde oosit OHSS'ye neden olabilir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-denudasyon",
+    "term": "Denüdasyon",
+    "aliases": [],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 6)PREİMPLANTASYON GENETİK TANI (2) s.46",
+    "definition": "Oositin hiyalüronidaz ve cam pipetle kümülüs-korona hücrelerinden ayrılması.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-germinal_vezikul_gv",
+    "term": "Germinal vezikül (GV)",
+    "aliases": [
+      "GV"
+    ],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 6)PREİMPLANTASYON GENETİK TANI (2) s.46",
+    "definition": "Profaz I'de duraklamış olgunlaşmamış oositin büyük çekirdeği.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-infertilite",
+    "term": "İnfertilite",
+    "aliases": [],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 6)PREİMPLANTASYON GENETİK TANI (2) s.47",
+    "definition": "1 yıl korunmasız ilişkiye rağmen çocuk sahibi olunamaması.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Kadın ya da erkek kaynaklı olabilir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-tekrarlayan_implantasyon_basarisizligi_rif",
+    "term": "Tekrarlayan implantasyon başarısızlığı (RIF)",
+    "aliases": [
+      "RIF"
+    ],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 6)PREİMPLANTASYON GENETİK TANI (2) s.33",
+    "definition": "İyi kalite embriyo transferine rağmen 3 veya daha fazla IVF başarısızlığı.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Endikasyon listesindeki ≥2 IVF başarısızlığıyla karıştırılmamalıdır.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-hidrosalpenks",
+    "term": "Hidrosalpenks",
+    "aliases": [],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 6)PREİMPLANTASYON GENETİK TANI (2) s.33",
+    "definition": "Tuba uterinanın distal tıkanıklık sonucu sıvıyla dolup genişlemesi.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "RIF'in tubal nedenidir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-hemizigot",
+    "term": "Hemizigot",
+    "aliases": [],
+    "category": "genetik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 6)PREİMPLANTASYON GENETİK TANI (2) s.27",
+    "definition": "Bir genin yalnız tek kopyasının bulunması; erkekte X'e bağlı genler için geçerlidir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "XR hastalıklarda erkek hemizigot ve hastadır.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-gonadal_mozaisizm",
+    "term": "Gonadal mozaisizm",
+    "aliases": [
+      "Germinal mozaisizm"
+    ],
+    "category": "genetik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 6)PREİMPLANTASYON GENETİK TANI (2) s.22",
+    "definition": "Mutasyonun yalnız germ hücre dizisinde bulunması; sağlıklı ebeveynden birden fazla etkilenmiş çocuk doğabilir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "OD hastalıkta de novo görünse de tekrarlama riski vardır.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-genokopi",
+    "term": "Genokopi",
+    "aliases": [],
+    "category": "genetik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 6)PREİMPLANTASYON GENETİK TANI (2) s.42",
+    "definition": "Farklı genlerdeki mutasyonların benzer fenotip oluşturması.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-allojenik_kok_hucre_transplantasyonu",
+    "term": "Allojenik kök hücre transplantasyonu",
+    "aliases": [],
+    "category": "tedavi",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 6)PREİMPLANTASYON GENETİK TANI (2) s.35",
+    "definition": "Başka bir bireyden alınan hematopoetik kök hücrelerin nakli.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "En iyi sonuç tam HLA uyumlu kardeş vericiden.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-non_invaziv_pgt_ni_pgt",
+    "term": "Non-invaziv PGT (ni-PGT)",
+    "aliases": [
+      "ni-PGT"
+    ],
+    "category": "tani",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 6)PREİMPLANTASYON GENETİK TANI (2) s.84",
+    "definition": "Embriyoya biyopsi müdahalesi yapmadan genetik analiz yapmayı hedefleyen preimplantasyon test yaklaşımı.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-embriyonik_mozaisizm",
+    "term": "Embriyonik mozaisizm",
+    "aliases": [],
+    "category": "genetik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 6)PREİMPLANTASYON GENETİK TANI (2) s.86",
+    "definition": "Embriyoda farklı kromozom içeriğine sahip hücre dizilerinin birlikte bulunması; çoğunlukla mitotik hatalardan kaynaklanır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Bazı laboratuvarlarda %30'a kadar çıkabilir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-spinal_muskuler_atrofi_sma",
+    "term": "Spinal müsküler atrofi (SMA)",
+    "aliases": [
+      "SMA"
+    ],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Genetik",
+    "instructorAndSource": "Ders notu: 6)PREİMPLANTASYON GENETİK TANI (2) s.25",
+    "definition": "Omurilik ön boynuz motor nöronlarının kaybıyla seyreden otozomal resesif hastalık.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "PGD uygulanan OR hastalıklardandır.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-13",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
   }
 ]
