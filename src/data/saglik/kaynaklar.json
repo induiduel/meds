@@ -2,13 +2,30 @@
  "guncelleme": "2026-10-14",
  "kaynaklar": [
   {
+   "id": "adseah_iletisim",
+   "kurum": "Karabük Ağız ve Diş Sağlığı Eğitim ve Araştırma Hastanesi",
+   "belge": "İletişim",
+   "yil": 2025,
+   "url": "https://karabukadsh.saglik.gov.tr/TR-120895/iletisim.html",
+   "erisim": "2026-10-14",
+   "not": "Sayfa tarihi 08.01.2025; e-posta karabuk.adsm@ (eski ADSM adı)"
+  },
+  {
    "id": "adseah_site",
    "kurum": "Karabük Ağız ve Diş Sağlığı Eğitim ve Araştırma Hastanesi",
    "belge": "Kurumsal web sitesi (site tanımı, Evde Sağlık Hizmetleri Birimi sayfası)",
    "yil": null,
    "url": "https://karabukadsh.saglik.gov.tr/",
+   "erisim": "2026-10-14"
+  },
+  {
+   "id": "aile_karabuk_2026",
+   "kurum": "Aile ve Sosyal Hizmetler Bakanlığı Karabük İl Müdürlüğü",
+   "belge": "Haberler (566)(149): Safranbolu ilçe müdürlerinin il müdürüne ziyareti",
+   "yil": 2026,
+   "url": "https://aile.gov.tr/karabuk/haberler/haberler-566-149/",
    "erisim": "2026-10-14",
-   "not": ""
+   "not": "30.09.2026"
   },
   {
    "id": "ankara_acikders_nufus",
@@ -482,6 +499,15 @@
    "url": ""
   },
   {
+   "id": "diyanet_hac_asi_2022",
+   "kurum": "Diyanet İşleri Başkanlığı Hac ve Umre Hizmetleri",
+   "belge": "İl ilçe sağlık merkezi isimleri iletişim (hac aşı merkezleri listesi)",
+   "yil": 2022,
+   "url": "https://hacumre.diyanet.gov.tr/Documents/asimerkezleri.pdf",
+   "erisim": "2026-10-14",
+   "not": "PDF oluşturma 13.06.2022; Karabük satırlarında her ilçe için ad '5000Evler Toplum Sağlığı Merkezi' yazılmış (kopyalama hatası olduğu anlaşılıyor), telefonlar ilçeye göre farklı."
+  },
+  {
    "id": "edu_ank_se",
    "tur": "resmi",
    "kurum": "Ankara Üniversitesi Açık Ders",
@@ -511,13 +537,21 @@
    "erisim": "2026-10-14"
   },
   {
+   "id": "eflani_iletisim",
+   "kurum": "Eflani İlçe Devlet Hastanesi",
+   "belge": "İletişim",
+   "yil": 2026,
+   "url": "https://eflanidh.saglik.gov.tr/TR-966025/iletisim.html",
+   "erisim": "2026-10-14",
+   "not": "Sayfa tarihi 23.09.2026"
+  },
+  {
    "id": "eflani_tarihce",
    "kurum": "Karabük Eflani İlçe Entegre Devlet Hastanesi",
    "belge": "Tarihçemiz",
    "yil": null,
    "url": "https://eflanidh.saglik.gov.tr/TR-965728/tarihcemiz.html",
-   "erisim": "2026-10-14",
-   "not": ""
+   "erisim": "2026-10-14"
   },
   {
    "id": "enabiz_site",
@@ -529,13 +563,21 @@
    "not": ""
   },
   {
+   "id": "eskipazar_adres",
+   "kurum": "Eskipazar İlçe Devlet Hastanesi",
+   "belge": "Hastane Adresi",
+   "yil": 2026,
+   "url": "https://eskipazardh.saglik.gov.tr/TR-397119/hastane-adresi.html",
+   "erisim": "2026-10-14",
+   "not": "Sayfa tarihi 28.09.2026"
+  },
+  {
    "id": "eskipazar_site",
    "kurum": "Eskipazar İlçe Devlet Hastanesi",
    "belge": "Kurumsal web sitesi (site tanımı)",
    "yil": null,
    "url": "https://eskipazardh.saglik.gov.tr/",
-   "erisim": "2026-10-14",
-   "not": ""
+   "erisim": "2026-10-14"
   },
   {
    "id": "havuz-ders-k1-salgin",
@@ -647,6 +689,15 @@
    "not": ""
   },
   {
+   "id": "hsgm_shhd_karabuk_2025",
+   "kurum": "Sağlık Bakanlığı Halk Sağlığı Genel Müdürlüğü – Sağlıklı Beslenme ve Hareketli Hayat Dairesi Başkanlığı",
+   "belge": "Karabük (ilçe–birim–adres tablosu)",
+   "yil": 2025,
+   "url": "https://hsgm.saglik.gov.tr/tr/karabuk",
+   "erisim": "2026-10-14",
+   "not": "Sayfa tarihi 05.05.2025"
+  },
+  {
    "id": "hsgm_verem2018",
    "kurum": "T.C. Sağlık Bakanlığı – HSGM Tüberküloz Dairesi",
    "belge": "Türkiye'de Verem Savaşı 2018 Raporu",
@@ -672,6 +723,42 @@
    "url": "https://fs.hacettepe.edu.tr/hips/dosyalar/Ara%C5%9Ft%C4%B1rmalar%20-%20raporlar/2018%20TNSA/TNSA2018_ana_Rapor_compressed.pdf",
    "erisim": "2026-10-14",
    "not": "Not: Raporda araştırma Cumhurbaşkanlığı Strateji ve Bütçe Başkanlığı ve TÜBİTAK desteğiyle yapılmıştır (SB adına değil). Türkçe PDF'te yazı tipi kodlaması bozuk; sayılar İngilizce rapordan teyit edildi."
+  },
+  {
+   "id": "iasb_8nolu_2024",
+   "kurum": "Karabük İl Ambulans Servisi Başhekimliği",
+   "belge": "112 ASHİ ziyareti (haber)",
+   "yil": 2024,
+   "url": "https://karabukiasb.saglik.gov.tr/TR-319890/112-ashi-ziyareti.html",
+   "erisim": "2026-10-14",
+   "not": "27.08.2024"
+  },
+  {
+   "id": "iasb_ekmekci_2024",
+   "kurum": "Karabük İl Ambulans Servisi Başhekimliği",
+   "belge": "Merhum Dr. Engin EKMEKCİ'nin İsminin 112 ASH İstasyonuna Verilmesi (haber)",
+   "yil": 2024,
+   "url": "https://karabukiasb.saglik.gov.tr/TR-309920/merhum-dr-engin-ekmekcinin-isminin-112-ash-istasyonuna-verilmesi.html",
+   "erisim": "2026-10-14",
+   "not": "26.04.2024"
+  },
+  {
+   "id": "iasb_iletisim",
+   "kurum": "Karabük İl Ambulans Servisi Başhekimliği",
+   "belge": "İletişim ve Konum",
+   "yil": 2024,
+   "url": "https://karabukiasb.saglik.gov.tr/TR-151112/iletisim-ve-konum.html",
+   "erisim": "2026-10-14",
+   "not": "Sayfa tarihi 08.01.2024; ayrıca İletişim (TR-144114, 10.10.2019): 'İl Sağlık Müdürlüğü Ek Hizmet Binası 1. Kat'"
+  },
+  {
+   "id": "iasb_org_2022",
+   "kurum": "Karabük İl Ambulans Servisi Başhekimliği",
+   "belge": "Organizasyon Şeması (DOK.KOD.KU.ŞM.01, Rev. 02, 02.04.2022)",
+   "yil": 2022,
+   "url": "https://dosyaism.saglik.gov.tr/Eklenti/180223/0/karabukiasborganizasyonsemasipdf.pdf",
+   "erisim": "2026-10-14",
+   "not": "6 sayfa"
   },
   {
    "id": "ism_ah_2026_09",
@@ -764,6 +851,24 @@
    "not": ""
   },
   {
+   "id": "ism_entegre_hsm",
+   "kurum": "Karabük İl Sağlık Müdürlüğü",
+   "belge": "Entegre Hastaneler (Halk Sağlığı Müdürlüğü aktarım bölümü)",
+   "yil": 2017,
+   "url": "https://karabukism.saglik.gov.tr/TR-28283/entegre-hastaneler.html",
+   "erisim": "2026-10-14",
+   "not": "Sayfa tarihi 09.10.2017"
+  },
+  {
+   "id": "ism_gezici_2022",
+   "kurum": "Karabük İl Sağlık Müdürlüğü",
+   "belge": "Gezici sağlık hizmetlerinden Karabük'te yıl içerisinde 7 bin kişi faydalandı (haber)",
+   "yil": 2022,
+   "url": "https://karabukism.saglik.gov.tr/TR-267054/gezici-saglik-hizmetlerinden-karabukte-yil-icerisinde-7-bin-kisi-faydalandi.html",
+   "erisim": "2026-10-14",
+   "not": "14.12.2022"
+  },
+  {
    "id": "ism_hk_2025",
    "kurum": "Karabük İl Sağlık Müdürlüğü / İl Hıfzıssıhha Meclisi",
    "belge": "2025 Yılı Hıfzıssıhha Kurul Kararları (karar PDF'leri; taranmış olanlar OCR ile okundu)",
@@ -800,6 +905,24 @@
    "not": "12.05.2026"
   },
   {
+   "id": "ism_hsl_sayfalar",
+   "kurum": "Karabük İl Sağlık Müdürlüğü",
+   "belge": "Halk Sağlığı Laboratuvarı sayfaları (Merkez Laboratuvar, Tüberküloz, Kan Parazitleri/Sıtma, Klinik Dışı Su Analizi)",
+   "yil": 2026,
+   "url": "https://karabukism.saglik.gov.tr/TR-125963/halk-sagligi-merkezi-laboratuvar.html",
+   "erisim": "2026-10-14",
+   "not": "Merkez Laboratuvar 09.01.2026; Tüberküloz Lab. (TR-125965) 30.01.2024; diğerleri TR-125964, TR-125961"
+  },
+  {
+   "id": "ism_hsm_sube",
+   "kurum": "Karabük İl Sağlık Müdürlüğü",
+   "belge": "Şubeler ve 'Aile Hekimliği ve Toplum Sağlığı Şube Müdürlüğü' görev tanımı (Halk Sağlığı Müdürlüğü aktarım bölümü)",
+   "yil": 2017,
+   "url": "https://karabukism.saglik.gov.tr/TR-28385/aile-hekimligi-ve-toplum-sagligi-sube-mudurlugu.html",
+   "erisim": "2026-10-14",
+   "not": "Sayfa tarihi 09.10.2017; şube listesi: https://karabukism.saglik.gov.tr/TR-28287/subeler.html"
+  },
+  {
    "id": "ism_kanser_tarama_2024",
    "kurum": "Karabük İl Sağlık Müdürlüğü",
    "belge": "Halk Sağlığı Haftası Etkinlikleri Kapsamında Kanser Tarama Etkinliği Düzenlendi (haber)",
@@ -818,6 +941,15 @@
    "not": "14.07.2025"
   },
   {
+   "id": "ism_kuduz_2019",
+   "kurum": "Karabük İl Sağlık Müdürlüğü",
+   "belge": "İlimiz Kuduz Aşı Uygulama Merkezleri (metin tablo)",
+   "yil": 2019,
+   "url": "https://karabukism.saglik.gov.tr/TR-138638/ilimiz-kuduz-asi-uygulama-merkezleri.html",
+   "erisim": "2026-10-14",
+   "not": "Sayfa tarihi 28.05.2019"
+  },
+  {
    "id": "ism_kuduz_2023",
    "kurum": "Karabük İl Sağlık Müdürlüğü",
    "belge": "Kuduz Aşı Uygulama Merkezleri (görsel tablo)",
@@ -827,6 +959,15 @@
    "not": "Sayfa tarihi 24.07.2023; tablo görseli: https://dosyaism.saglik.gov.tr/Resim/455256/0/ekran-alintisipng.png"
   },
   {
+   "id": "ism_kurumlar_hsm",
+   "kurum": "Karabük İl Sağlık Müdürlüğü",
+   "belge": "Kurumlar (sitedeki 'Karabük Halk Sağlığı Müdürlüğü (Aktarım)' arşiv bölümü; TSM ve Verem Savaş Dispanseri adres-telefon tablosu)",
+   "yil": 2017,
+   "url": "https://karabukism.saglik.gov.tr/TR-28291/kurumlar.html",
+   "erisim": "2026-10-14",
+   "not": "Sayfada tarih yok; aynı arşiv bölümünün sayfaları 09.10.2017 tarihli (mülga Halk Sağlığı Müdürlüğü içeriği). Güncel durumu yansıtmayabilir."
+  },
+  {
    "id": "ism_organ_2026",
    "kurum": "Karabük İl Sağlık Müdürlüğü",
    "belge": "'Her Organ Bağışı, Yeni Bir Hayattır' (haber)",
@@ -834,6 +975,24 @@
    "url": "https://karabukism.saglik.gov.tr/TR-389892/her-organ-bagisi-yeni-bir-hayattir.html",
    "erisim": "2026-10-14",
    "not": "06.08.2026"
+  },
+  {
+   "id": "ism_ovacuma_112",
+   "kurum": "Karabük İl Sağlık Müdürlüğü",
+   "belge": "Safranbolu Ovacuma Acil Sağlık Hizmetleri İstasyonu Açılışı (haber)",
+   "yil": 2017,
+   "url": "https://karabukism.saglik.gov.tr/TR-16991/safranbolu-ovacuma-acil-saglik-hizmetleri-istasyonu-acilisi.html",
+   "erisim": "2026-10-14",
+   "not": "Sayfa tarihi 18.05.2017"
+  },
+  {
+   "id": "ism_saglik_evi_2017",
+   "kurum": "Karabük İl Sağlık Müdürlüğü",
+   "belge": "Sağlık Evi Risk Analizleri devam ediyor (haber, HSM aktarım bölümü)",
+   "yil": 2017,
+   "url": "https://karabukism.saglik.gov.tr/TR-28374/saglik-evi-risk-analizleri-devam-ediyor.html",
+   "erisim": "2026-10-14",
+   "not": "Sayfa tarihi 09.10.2017"
   },
   {
    "id": "ism_saglik_hiz_bsk",
@@ -863,13 +1022,39 @@
    "not": "07.09.2026"
   },
   {
+   "id": "ism_telefon",
+   "kurum": "Karabük İl Sağlık Müdürlüğü",
+   "belge": "Telefon sayfası (santral, KEP, e-posta)",
+   "yil": 2024,
+   "url": "https://karabukism.saglik.gov.tr/TR-17074/telefon.html",
+   "erisim": "2026-10-14",
+   "not": "Sayfa tarihi 29.02.2024"
+  },
+  {
+   "id": "ism_teskilat_2024",
+   "kurum": "Karabük İl Sağlık Müdürlüğü",
+   "belge": "Karabük İl Sağlık Müdürlüğü Teşkilat Şeması (Rev. 02, 15.03.2024)",
+   "yil": 2024,
+   "url": "https://dosyaism.saglik.gov.tr/Eklenti/223095/0/karabuk-il-saglik-mudurlugu-teskilat-semasi-spdf.pdf",
+   "erisim": "2026-10-14",
+   "not": "Organizasyon Şeması sayfası (TR-171252, 01.07.2024) eki"
+  },
+  {
    "id": "ism_teskilat_2026",
    "kurum": "Karabük İl Sağlık Müdürlüğü",
    "belge": "Karabük İli Teşkilat Şeması (Rev. 03, 04.11.2025)",
    "yil": 2025,
    "url": "https://dosyaism.saglik.gov.tr/Eklenti/279211/0/karabuk-ili-teskilat-semasi-2026pdf.pdf",
+   "erisim": "2026-10-14"
+  },
+  {
+   "id": "ism_tsm_ketem_2020",
+   "kurum": "Karabük İl Sağlık Müdürlüğü",
+   "belge": "TSM / SHM / KETEM ve ASM'lerle Kansere Hayır (haber)",
+   "yil": 2020,
+   "url": "https://karabukism.saglik.gov.tr/TR-169568/tsm--shm--ketem-ve-asmlerle-kansere-hayir.html",
    "erisim": "2026-10-14",
-   "not": ""
+   "not": "24.01.2020"
   },
   {
    "id": "ism_tsm_shm_2022",
@@ -899,13 +1084,30 @@
    "not": "03.10.2025"
   },
   {
+   "id": "kay_ovacik_tsm",
+   "kurum": "T.C. Ovacık (Karabük) Kaymakamlığı",
+   "belge": "İlçe Toplum Sağlığı Merkezi (hizmet birimi sayfası)",
+   "yil": null,
+   "url": "https://www.ovacik.gov.tr/ilce-toplum-sagligi-merkezi",
+   "erisim": "2026-10-14",
+   "not": "Tarihsiz; sayfa başlığı TSM, görev metni 'İlçe Sağlık Müdürü' kalıbıyla yazılmış, imza 'Toplum Sağlığı Merkezi Başkanı'. Adres satırı: Ovacık 78500 Karabük."
+  },
+  {
+   "id": "kay_safranbolu_2020",
+   "kurum": "T.C. Safranbolu Kaymakamlığı",
+   "belge": "Safranbolu İlçe Sağlık Müdürlüğünden Kaymakam Türköz'e Ziyaret (haber)",
+   "yil": 2020,
+   "url": "http://www.safranbolu.gov.tr/safranbolu-ilce-saglik-mudurlugunden-kaymakam-turkoze-ziyaret",
+   "erisim": "2026-10-14",
+   "not": "05.08.2020"
+  },
+  {
    "id": "kbu_tip_hakkimizda",
    "kurum": "Karabük Üniversitesi Tıp Fakültesi",
    "belge": "Hakkımızda",
    "yil": null,
    "url": "https://tip.karabuk.edu.tr/icerikGoster.aspx?K=S&id=29&BA=index.aspx",
-   "erisim": "2026-10-14",
-   "not": ""
+   "erisim": "2026-10-14"
   },
   {
    "id": "kbu_tip_hastane",
@@ -913,8 +1115,7 @@
    "belge": "Hastane",
    "yil": null,
    "url": "https://tip.karabuk.edu.tr/icerikGoster.aspx?K=S&id=31&BA=index.aspx",
-   "erisim": "2026-10-14",
-   "not": ""
+   "erisim": "2026-10-14"
   },
   {
    "id": "kbu_tip_tarihce",
@@ -944,6 +1145,15 @@
    "not": "Sayfa tarihi 06.02.2026"
   },
   {
+   "id": "keah_iletisim",
+   "kurum": "Karabük Eğitim ve Araştırma Hastanesi",
+   "belge": "İletişim & Ulaşım",
+   "yil": 2026,
+   "url": "https://karabukeah.saglik.gov.tr/TR-71736/iletisim--ulasim.html",
+   "erisim": "2026-10-14",
+   "not": "Sayfa tarihi 18.06.2026"
+  },
+  {
    "id": "keah_ozellikli",
    "kurum": "Karabük Eğitim ve Araştırma Hastanesi",
    "belge": "Özellikli Hizmetler",
@@ -951,6 +1161,24 @@
    "url": "https://karabukeah.saglik.gov.tr/TR-1436769/--ozellikli-hizmetler.html",
    "erisim": "2026-10-14",
    "not": "19.01.2026"
+  },
+  {
+   "id": "kyenice_evde",
+   "kurum": "Karabük Yenice İlçe Devlet Hastanesi",
+   "belge": "Evde Sağlık Hizmetleri",
+   "yil": 2026,
+   "url": "https://karabukyenicedh.saglik.gov.tr/TR-244815/evde-saglik-hizmetleri.html",
+   "erisim": "2026-10-14",
+   "not": "Sayfa tarihi 12.01.2026; sitede ayrıca 'Diyaliz Ünitesi' sayfası (TR-244638, 19.12.2022) var, metni boş."
+  },
+  {
+   "id": "kyenice_iletisim",
+   "kurum": "Karabük Yenice İlçe Devlet Hastanesi",
+   "belge": "İletişim (karabukyenicedh.saglik.gov.tr)",
+   "yil": 2026,
+   "url": "https://karabukyenicedh.saglik.gov.tr/TR-115797/iletisim.html",
+   "erisim": "2026-10-14",
+   "not": "Sayfa tarihi 24.08.2026. DİKKAT: yenicedh.saglik.gov.tr Çanakkale Yenice'ye aittir."
   },
   {
    "id": "mevzuat_1219",
@@ -1260,8 +1488,7 @@
    "belge": "Toplum Sağlığı Merkezi ve Bağlı Birimler Yönetmeliği (RG 5/2/2015-29258; değ. 25/5/2018-30431)",
    "yil": 2015,
    "url": "https://www.mevzuat.gov.tr/File/GeneratePdf?mevzuatNo=20507&mevzuatTur=KurumVeKurulusYonetmeligi&mevzuatTertip=5",
-   "erisim": "2026-10-14",
-   "not": ""
+   "erisim": "2026-10-14"
   },
   {
    "id": "mevzuat_turizm2025",
@@ -1282,13 +1509,58 @@
    "not": ""
   },
   {
-   "id": "ovacik_tarihce",
-   "kurum": "Ovacık İlçe Devlet Hastanesi",
-   "belge": "Tarihçemiz",
-   "yil": 2025,
-   "url": "https://ovacikidh.saglik.gov.tr/TR-718871/tarihcemiz.html",
+   "id": "osym_kpss_2022_11",
+   "kurum": "ÖSYM",
+   "belge": "KPSS-2022/11 Sağlık Bakanlığı sözleşmeli pozisyon tabloları (Tablo-1/2/3)",
+   "yil": 2022,
+   "url": "https://dokuman.osym.gov.tr/pdfdokuman/2022/KPSS/TERCIH11/tablo2_28112022.pdf",
    "erisim": "2026-10-14",
-   "not": "Sayfa tarihi 09.04.2025"
+   "not": "28.11.2022; Tablo-1: ttablo1_28112022.pdf, Tablo-3: tablo3_28112022.pdf"
+  },
+  {
+   "id": "osym_kpss_2022_5",
+   "kurum": "ÖSYM",
+   "belge": "KPSS-2022/5 Sağlık Bakanlığı sözleşmeli pozisyon tabloları (Tablo-1/2/3)",
+   "yil": 2022,
+   "url": "https://dokuman.osym.gov.tr/pdfdokuman/2022/KPSS/TERCIH5/tablo_215032022.pdf",
+   "erisim": "2026-10-14",
+   "not": "15.03.2022; Tablo-1: tablo1_15032022.pdf, Tablo-3: tablo_315032022.pdf"
+  },
+  {
+   "id": "osym_kpss_2023_5",
+   "kurum": "ÖSYM",
+   "belge": "KPSS-2023/5 Sağlık Bakanlığı sözleşmeli pozisyon tabloları (Tablo-1/2/3)",
+   "yil": 2023,
+   "url": "https://dokuman.osym.gov.tr/pdfdokuman/2023/KPSS/TERCIH5/tablo2-28032023.pdf",
+   "erisim": "2026-10-14",
+   "not": "28.03.2023; Tablo-1: tablo1_28032023.pdf, Tablo-3: tablo3_28032023.pdf"
+  },
+  {
+   "id": "osym_kpss_2024_5",
+   "kurum": "ÖSYM",
+   "belge": "KPSS-2024/5 Sağlık Bakanlığı sözleşmeli pozisyon tabloları (Tablo-1/2/3)",
+   "yil": 2024,
+   "url": "https://dokuman.osym.gov.tr/pdfdokuman/2024/KPSS/TERCIH5/tablo2_ssd21022024.pdf",
+   "erisim": "2026-10-14",
+   "not": "21.02.2024; Tablo-1: tablo1_ssd21022024.pdf, Tablo-3: tablo3_ssd21022024.pdf"
+  },
+  {
+   "id": "osym_kpss_2025_4",
+   "kurum": "ÖSYM",
+   "belge": "KPSS-2025/4 Sağlık Bakanlığı sözleşmeli pozisyon tabloları (Tablo-1/2/3)",
+   "yil": 2025,
+   "url": "https://dokuman.osym.gov.tr/pdfdokuman/2025/KPSS/TERCIH4/tablo2_sb4d02052025.pdf",
+   "erisim": "2026-10-14",
+   "not": "02.05.2025; Tablo-1: tablo1_sb4d02052025.pdf, Tablo-3: tablo3_sb4d02052025.pdf"
+  },
+  {
+   "id": "osym_kpss_2025_5",
+   "kurum": "ÖSYM",
+   "belge": "KPSS-2025/5 Sağlık Bakanlığı sözleşmeli pozisyon tabloları (Tablo-1/2/3)",
+   "yil": 2025,
+   "url": "https://dokuman.osym.gov.tr/pdfdokuman/2025/KPSS/TERCIH5/tablo3_sbpd29092025.pdf",
+   "erisim": "2026-10-14",
+   "not": "29.09.2025; Tablo-1: tablo1_sbpd29092025.pdf, Tablo-2: tablo2-sbpd29092025.pdf"
   },
   {
    "id": "rg_2019_bhske_ek",
@@ -1362,8 +1634,7 @@
    "yil": 2018,
    "url": "https://www.resmigazete.gov.tr/eskiler/2018/05/20180525-1.htm",
    "erisim": "2026-10-14",
-   "not": "Bu derlemede kullanılan kısım: md. 4/m (SHM birimi tanımı) ve md. 19 ile değişik md. 41 (SHM görevleri a–ğ); RG metni 2026-10-14'te okundu.",
-   "tur": "resmi"
+   "not": "Bu derlemede kullanılan kısım: md. 4/m (SHM birimi tanımı) ve md. 19 ile değişik md. 41 (SHM görevleri a–ğ); RG metni 2026-10-14'te okundu."
   },
   {
    "id": "sabim_site",
@@ -1380,8 +1651,7 @@
    "belge": "Diyaliz Hizmetleri",
    "yil": null,
    "url": "https://safranboludh.saglik.gov.tr/TR-539079/diyaliz-hizmetleri.html",
-   "erisim": "2026-10-14",
-   "not": ""
+   "erisim": "2026-10-14"
   },
   {
    "id": "safranbolu_tarihce",
@@ -1389,8 +1659,7 @@
    "belge": "Tarihçemiz",
    "yil": null,
    "url": "https://safranboludh.saglik.gov.tr/TR-608190/tarihcemiz.html",
-   "erisim": "2026-10-14",
-   "not": ""
+   "erisim": "2026-10-14"
   },
   {
    "id": "sb-asi-karti-2025",
@@ -1654,8 +1923,7 @@
    "yil": 2025,
    "url": "https://dosyamerkez.saglik.gov.tr/Eklenti/52859/0/siy2024tr31122025pdf.pdf",
    "erisim": "2026-10-14",
-   "not": "Yayın: 31.12.2025. Tablo 3.1 (s.44) enfeksiyon hastalıkları vaka sayıları; Tablo 5.1 (s.94) aşı kapsayıcılığı; Şekil 5.6 antijen sayısı. Veri kaynağı HSGM.",
-   "tur": "resmi"
+   "not": "Yayın: 31.12.2025. Tablo 3.1 (s.44) enfeksiyon hastalıkları vaka sayıları; Tablo 5.1 (s.94) aşı kapsayıcılığı; Şekil 5.6 antijen sayısı. Veri kaynağı HSGM."
   },
   {
    "id": "sb-siy-2025-bulten",
@@ -2054,8 +2322,7 @@
    "belge": "Sağlık Bakanlığı Taşra Teşkilatı Kadro Standartları ile Çalışma Usul ve Esaslarına Dair Yönerge (7/11/2017-51275 Bakan Onayı; değ. 2018, 2019, 2020, 2022) – Yönergeler ve Genelgeler Kitabı 9.2.6, OCR ile okundu",
    "yil": 2017,
    "url": "https://www.saglik.gov.tr/TR-103815/saglik-bakanligi-tasra-teskilati-kadro-standartlari-ile-calisma-usul-ve-esaslarina-dair-yonerge.html",
-   "erisim": "2026-10-14",
-   "not": ""
+   "erisim": "2026-10-14"
   },
   {
    "id": "sb_kanser_ist_2020",
@@ -2926,15 +3193,6 @@
    "url": "https://veriportali.tuik.gov.tr/tr/press/58231",
    "erisim": "2026-10-14",
    "not": ""
-  },
-  {
-   "id": "yenice_site",
-   "kurum": "Yenice Devlet Hastanesi",
-   "belge": "Kurumsal web sitesi ve Özellikli Hizmetler sayfası",
-   "yil": 2021,
-   "url": "https://yenicedh.saglik.gov.tr/TR-167248/ozellikli-hizmetler.html",
-   "erisim": "2026-10-14",
-   "not": "Özellikli hizmetler sayfası 26.08.2021"
   }
  ]
 }

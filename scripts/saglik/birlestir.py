@@ -101,6 +101,7 @@ def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--kaynak", required=True, type=Path)
     ap.add_argument("--kaynak2", type=Path, help="2. tur klasörü (kavramlar.json, mevzuat_teskilat.json, havuz/*.json, karabuk_tarihsel.json)")
+    ap.add_argument("--karabuk-kurumlar", type=Path, help="Karabük sağlık kurumları envanteri (karabuk_kurumlar.json) → karabuk.json › envanter")
     ap.add_argument("--deneme", action="store_true", help="yazmadan rapor ver")
     a = ap.parse_args()
 
@@ -157,6 +158,28 @@ def main() -> int:
         d = yeniden_adlandir(d, harita)
         d.pop("kaynaklar", None)
         veriler[ad] = d
+
+    # Karabük kurum envanteri (ayrı araştırma): kaynakları birleştir, karabuk.json'a `envanter` olarak ekle
+    if a.karabuk_kurumlar and a.karabuk_kurumlar.exists() and veriler.get("karabuk") is not None:
+        e = json.loads(a.karabuk_kurumlar.read_text(encoding="utf-8"))
+        harita = {}
+        for k in e.get("kaynaklar", []):
+            kid = k.get("id")
+            if not kid or not k.get("url"):
+                continue
+            ayni = next((x for x in tum_kaynak.values() if x.get("url") == k.get("url") and x["id"] != kid), None)
+            if ayni:
+                harita[kid] = ayni["id"]
+                continue
+            if kid in tum_kaynak and tum_kaynak[kid].get("url") != k.get("url"):
+                harita[kid] = f"kbk-{kid}"
+                k = {**k, "id": harita[kid]}
+            tum_kaynak[k["id"]] = k
+        e = yeniden_adlandir(e, harita)
+        veriler["karabuk"]["envanter"] = {x: e.get(x, []) for x in ("ozet", "kurumlar", "ilce_ozeti", "tarihce")}
+        veriler["karabuk"].setdefault("dogrulanamayan", [])
+        veriler["karabuk"]["dogrulanamayan"] = [x for x in veriler["karabuk"]["dogrulanamayan"] if "İlçe Sağlık Müdürlükleri" not in x] + e.get("dogrulanamayan", [])
+        print("[karabük envanteri] eklendi:", len(e.get("kurumlar", [])), "kurum")
 
     gecersiz = {kid for kid, k in tum_kaynak.items() if not ders_mi(k) and not devlet_mi(k["url"])}
     for kid in sorted(gecersiz):

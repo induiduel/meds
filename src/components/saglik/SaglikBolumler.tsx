@@ -17,6 +17,7 @@ import { degerBirim, seriMaddeleri, useGecmis, type MaddeOge } from './saglikBag
 import { GelistirmeBolum, KavramBolum, KorumaBolum } from './SaglikKavram';
 import { MevzuatBolum, SistemBolum, TeskilatBolum } from './SaglikSistem';
 import { HavuzBolum } from './SaglikHavuz';
+import { KarabukKurumRehberi } from './SaglikKarabukKurum';
 
 export interface BolumProps { v: SaglikVeri; bag?: BolumBaglanti; git: (b: BolumId) => void }
 
@@ -388,6 +389,8 @@ export const KarabukBolum: React.FC<BolumProps> = ({ v, git }) => {
           </div>
         ))}
       </Blok>
+
+      <KarabukKurumRehberi e={kb.envanter} />
 
       {ilceler.length > 0 && (
         <Blok

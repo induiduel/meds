@@ -4703,7 +4703,7 @@
    "yontem": "Sağlık İstatistikleri Yıllığı il tablosu",
    "kaynak": "sb-siy-2024",
    "konum": "Tablo 7.20, PDF s. 192",
-   "not": "Yıllık hastane adlarını vermiyor. Bakanlık alan adları altında doğrulanan genel hastaneler: KEAH, Safranbolu DH, Eskipazar İDH, Yenice DH, Eflani İEDH, Ovacık İDH (6). Ağız ve Diş Sağlığı EAH bu sayının içinde mi, ayrıca mı sayıldığı yıllıktan teyit edilemedi.",
+   "not": "Yıllık hastane adlarını vermiyor. Bakanlık alan adları ve ÖSYM kurum tablolarıyla doğrulanan 6 hastane: KEAH, Karabük Ağız ve Diş Sağlığı EAH, Safranbolu DH, Yenice İDH, Eskipazar İDH, Eflani İDH. Ovacık'ta hastane yok (Ovacık TSM).",
    "seri": [
     {
      "yil": 2012,
@@ -5685,12 +5685,11 @@
    ]
   },
   {
-   "ad": "Yenice Devlet Hastanesi",
+   "ad": "Karabük Yenice İlçe Devlet Hastanesi",
    "ilce": "Yenice",
-   "tur": "Devlet hastanesi (ilçe)",
-   "not": "Diyaliz ünitesi: 4+1 cihaz, 1 hekim, 2 sağlık personeli (sayfa tarihi 2021).",
-   "url": "https://yenicedh.saglik.gov.tr/",
-   "kaynak": "yenice_site"
+   "tur": "İlçe devlet hastanesi",
+   "url": "https://karabukyenicedh.saglik.gov.tr/",
+   "kaynak": "kyenice_iletisim"
   },
   {
    "ad": "Karabük Eflani İlçe Entegre Devlet Hastanesi",
@@ -5699,17 +5698,6 @@
    "not": "Haziran 2015'te yeni binaya geçti. Acil servis, uzman aile hekimliği polikliniği, aile sağlığı merkezi, görüntüleme, laboratuvar, ağız ve diş polikliniği; evde sağlık.",
    "url": "https://eflanidh.saglik.gov.tr/",
    "kaynak": "eflani_tarihce"
-  },
-  {
-   "ad": "Ovacık İlçe Devlet Hastanesi",
-   "ilce": "Ovacık",
-   "tur": "İlçe devlet hastanesi (il sağlık müdürlüğü 2023 kuduz listesinde 'Ovacık Entegre İlçe Sağlık Merkezi')",
-   "not": "1964-1968'de yapılan binada (Pulur Mah.) hizmet veriyor. Acil, uzman aile hekimi polikliniği, ASM, toplum sağlığı birimi, diş, laboratuvar, röntgen, 112 birimi, çevre sağlığı, evde sağlık.",
-   "url": "https://ovacikidh.saglik.gov.tr/",
-   "kaynak": "ovacik_tarihce",
-   "ek_kaynaklar": [
-    "ism_kuduz_2023"
-   ]
   }
  ],
  "ilceler": [
@@ -5782,7 +5770,7 @@
    ],
    "aile_hekimi_birimi": 7,
    "ahb_basina_nufus": 2712,
-   "hastane": "Yenice Devlet Hastanesi",
+   "hastane": "Karabük Yenice İlçe Devlet Hastanesi",
    "kaynak": "ism_ah_2026_09",
    "yontem": "ASM ve AHB Eylül 2026 listesinden sayıldı; AHB başına nüfus = ADNKS 2025 ilçe nüfusu / AHB sayısı (hesaplandı)",
    "ek_kaynaklar": [
@@ -5830,7 +5818,7 @@
    ],
    "aile_hekimi_birimi": 1,
    "ahb_basina_nufus": 3986,
-   "hastane": "Ovacık İlçe Devlet Hastanesi",
+   "hastane": "Yok — Ovacık Toplum Sağlığı Merkezi (entegre ilçe sağlık merkezi)",
    "kaynak": "ism_ah_2026_09",
    "yontem": "ASM ve AHB Eylül 2026 listesinden sayıldı; AHB başına nüfus = ADNKS 2025 ilçe nüfusu / AHB sayısı (hesaplandı)",
    "ek_kaynaklar": [
@@ -5887,18 +5875,16 @@
    "ek_kaynaklar": [
     "safranbolu_tarihce",
     "eflani_tarihce",
-    "ovacik_tarihce",
     "adseah_site"
    ]
   },
   {
    "ad": "Hemodiyaliz",
    "adres_ilce": "Merkez, Safranbolu, Yenice",
-   "aciklama": "KEAH özellikli hizmetlerinde hemodiyaliz; Safranbolu DH'de 7 yataklı ünite (6+1 cihaz); Yenice DH'de 4+1 cihaz.",
+   "aciklama": "KEAH özellikli hizmetlerinde hemodiyaliz; Safranbolu DH'de 7 yataklı ünite (6+1 cihaz).",
    "kaynak": "keah_ozellikli",
    "ek_kaynaklar": [
-    "safranbolu_diyaliz",
-    "yenice_site"
+    "safranbolu_diyaliz"
    ]
   },
   {
@@ -6815,8 +6801,900 @@
    "keah_hastanemiz"
   ]
  },
+ "envanter": {
+  "ozet": [
+   {
+    "tur": "İl sağlık müdürlüğü",
+    "sayi": 1,
+    "yil": 2026,
+    "yontem": "Teşkilat şeması (Rev. 03) tek il müdürlüğü gösteriyor; yönerge md. 6 'her ilde bir müdürlük'.",
+    "kaynak": "ism_teskilat_2026",
+    "konum": "şema s. 1; sb_kadro_yonerge md. 6/1",
+    "adlar": [
+     "Karabük İl Sağlık Müdürlüğü (İ9 grubu)"
+    ]
+   },
+   {
+    "tur": "İlçe sağlık müdürlüğü",
+    "sayi": 1,
+    "yil": 2026,
+    "yontem": "Resmî kaynaklarda adıyla geçen ilçe sağlık müdürlükleri sayıldı. Yalnız Safranbolu bulundu (2020 kaymakamlık haberi, 2025 HSGM adres tablosu, 2026 Aile ve Sosyal Hizmetler İl Müdürlüğü haberi). İl teşkilat şemasında ilçe müdürlükleri gösterilmiyor; diğer 4 ilçe ve Merkez için ilçe sağlık müdürlüğüne rastlanmadı.",
+    "kaynak": "hsgm_shhd_karabuk_2025",
+    "konum": "ilçe–birim–adres tablosu, Safranbolu satırı; kay_safranbolu_2020; aile_karabuk_2026",
+    "adlar": [
+     "Safranbolu İlçe Sağlık Müdürlüğü"
+    ]
+   },
+   {
+    "tur": "Toplum sağlığı merkezi (TSM)",
+    "sayi": 4,
+    "yil": 2025,
+    "yontem": "ÖSYM 2025 KPSS sağlık tablolarında Karabük'e ait kurum kodlu TSM satırları sayıldı: Merkez (282813), Yenice (282822), Eskipazar (97732), Ovacık (282817). Eflani TSM 2017 listesinde var ama 2022-2025 tablolarında ve güncel kaynakta yok; sayıya alınmadı.",
+    "kaynak": "osym_kpss_2025_5",
+    "konum": "Tablo-3 kadro 305019096 (Merkez), Tablo-1 kadro 105012894 (Ovacık); osym_kpss_2025_4 Tablo-2 kadro 204022701 (Eskipazar), 204022708 (Yenice)",
+    "adlar": [
+     "Karabük Merkez Toplum Sağlığı Merkezi",
+     "Karabük Yenice Toplum Sağlığı Merkezi",
+     "Karabük Eskipazar Toplum Sağlığı Merkezi",
+     "Karabük Ovacık Toplum Sağlığı Merkezi"
+    ]
+   },
+   {
+    "tur": "Toplum sağlığı merkezi (2017 arşiv listesi)",
+    "sayi": 5,
+    "yil": 2017,
+    "yontem": "Mülga Halk Sağlığı Müdürlüğü 'Kurumlar' tablosundaki T.S.M satırları sayıldı",
+    "kaynak": "ism_kurumlar_hsm",
+    "konum": "Kurumlar tablosu",
+    "adlar": [
+     "Merkez T.S.M",
+     "Safranbolu T.S.M",
+     "Eflani T.S.M",
+     "Ovacık T.S.M",
+     "Yenice T.S.M"
+    ],
+    "not": "Eskipazar'da 2017'de TSM yok, ilçe entegre hastanesi listeleniyor (ism_entegre_hsm)."
+   },
+   {
+    "tur": "Aile sağlığı merkezi (ASM)",
+    "sayi": 34,
+    "yil": 2026,
+    "yontem": "Eylül 2026 AH–ASÇ xlsx'inde A.S.M. adları bu çalışmada yeniden sayıldı (Merkez 20, Safranbolu 9, Yenice 2, Eskipazar 1, Eflani 1, Ovacık 1); karabuk.json ile aynı.",
+    "kaynak": "ism_ah_2026_09",
+    "konum": "AH-ASÇ BİLGİLERİ güncel.xlsx, sayfa 1"
+   },
+   {
+    "tur": "Aile hekimliği birimi (AHB)",
+    "sayi": 90,
+    "yil": 2026,
+    "yontem": "Aynı listede ÇKYS kodlu satırlar yeniden sayıldı (Merkez 50, Safranbolu 23, Yenice 7, Eskipazar 5, Eflani 4, Ovacık 1).",
+    "kaynak": "ism_ah_2026_09",
+    "konum": "AH-ASÇ BİLGİLERİ güncel.xlsx, sayfa 1"
+   },
+   {
+    "tur": "Sağlıklı hayat merkezi (SHM)",
+    "sayi": 1,
+    "yil": 2025,
+    "yontem": "İl sağlık müdürlüğü sitesinde ve HSGM tablosunda yalnız Merkez'deki SHM geçiyor (Merkez TSM ile aynı adreste).",
+    "kaynak": "hsgm_shhd_karabuk_2025",
+    "konum": "Merkez satırı 'Toplum Sağlığı Merkezi/Sağlıklı Hayat Merkezi'; ism_shm",
+    "adlar": [
+     "Karabük Sağlıklı Hayat Merkezi (Merkez)"
+    ]
+   },
+   {
+    "tur": "KETEM",
+    "sayi": 1,
+    "yil": 2022,
+    "yontem": "Ayrı kurum kodu bulunamadı; KETEM, Merkez TSM/SHM bünyesinde birim olarak geçiyor (2020: 'Merkez TSM-KETEM birimi'; 2022 SHM hizmet listesi).",
+    "kaynak": "ism_tsm_ketem_2020",
+    "konum": "haber metni; ism_shm hizmet listesi; ism_tsm_shm_2022"
+   },
+   {
+    "tur": "Verem savaş dispanseri",
+    "sayi": 1,
+    "yil": 2023,
+    "yontem": "2017 kurum tablosunda tek dispanser (Merkez); 2023 haberinde dispanser faaliyetleri geçiyor.",
+    "kaynak": "ism_verem_2023",
+    "konum": "haber; ism_kurumlar_hsm 'VEREM SAVAŞ D.' satırı"
+   },
+   {
+    "tur": "Halk sağlığı laboratuvarı",
+    "sayi": 1,
+    "yil": 2023,
+    "yontem": "ÖSYM tablosunda kurum kodlu tek satır (746384); il sitesinde 4 laboratuvar bölümü sayfası var.",
+    "kaynak": "osym_kpss_2023_5",
+    "konum": "Tablo-2 kadro 205028133; ism_hsl_sayfalar; ism_hsl_2026"
+   },
+   {
+    "tur": "Toplum ruh sağlığı merkezi (TRSM)",
+    "sayi": 1,
+    "yil": 2026,
+    "yontem": "KEAH tanıtımında 5000 Evler semt polikliniğinde TRSM hizmeti",
+    "kaynak": "keah_hastanemiz",
+    "konum": "Hastanemiz sayfası"
+   },
+   {
+    "tur": "İl ambulans servisi başhekimliği (112, KKM dahil)",
+    "sayi": 1,
+    "yil": 2026,
+    "yontem": "Kurum sitesi ve ÖSYM kurum kodu 284610",
+    "kaynak": "iasb_iletisim",
+    "konum": "İletişim ve Konum; iasb_org_2022 şema s. 1 (Komuta Kontrol Merkezi)"
+   },
+   {
+    "tur": "112 acil sağlık hizmetleri istasyonu",
+    "sayi": 17,
+    "yil": 2024,
+    "yontem": "SİY 2024 il tablosu (sayı). Adıyla teyit edilen 14 istasyon kurumlar listesinde (ÖSYM 2022-2024 kurum kodlu satırları + il/112 haberleri); kalan 3 istasyonun adı bulunamadı.",
+    "kaynak": "sb-siy-2024",
+    "konum": "Tablo 12.4, PDF s. 323"
+   },
+   {
+    "tur": "Hastane (Sağlık Bakanlığı)",
+    "sayi": 6,
+    "yil": 2026,
+    "yontem": "Bakanlık alan adında ve ÖSYM kurum kodlarıyla teyit edilen hastaneler sayıldı: KEAH (401), ADSEAH (187919), Safranbolu DH (372), Yenice İDH (14250), Eskipazar İDH (709240), Eflani İDH (842468). Karabük-Ovacık'ta hastane yok (ovacikidh.saglik.gov.tr Tunceli'ye ait).",
+    "kaynak": "osym_kpss_2024_5",
+    "konum": "Tablo-1/2/3 Karabük satırları; ayrıca SİY 2024 Tablo 7.20: 6 hastane (tüm sektörler)",
+    "adlar": [
+     "Karabük Eğitim ve Araştırma Hastanesi",
+     "Karabük Ağız ve Diş Sağlığı Eğitim ve Araştırma Hastanesi",
+     "Safranbolu Devlet Hastanesi",
+     "Karabük Yenice İlçe Devlet Hastanesi",
+     "Eskipazar İlçe Devlet Hastanesi",
+     "Eflani İlçe Devlet Hastanesi"
+    ]
+   },
+   {
+    "tur": "Ağız ve diş sağlığı hastanesi/merkezi",
+    "sayi": 1,
+    "yil": 2025,
+    "yontem": "Tek kurum: ADSEAH (eski Karabük ADSM; karabukadsm alan adı karabukadsh'a yönleniyor)",
+    "kaynak": "adseah_iletisim",
+    "konum": "İletişim"
+   },
+   {
+    "tur": "Kuduz aşı uygulama merkezi",
+    "sayi": 7,
+    "yil": 2023,
+    "yontem": "İl müdürlüğü listeleri sayıldı (2019 metin tablosu ve 2023 görsel tablo, ikisinde de 7)",
+    "kaynak": "ism_kuduz_2019",
+    "konum": "tablo; ism_kuduz_2023"
+   },
+   {
+    "tur": "Evde sağlık birimi (hastane tabanlı)",
+    "sayi": 6,
+    "yil": 2026,
+    "yontem": "Hastane sitelerinde evde sağlık birimi/başvuru sayfası olanlar sayıldı: KEAH, ADSEAH, Safranbolu DH, Yenice İDH, Eskipazar İDH, Eflani İDH",
+    "kaynak": "kyenice_evde",
+    "konum": "hastane siteleri; keah_ozellikli; adseah_site; eflani_tarihce; eskipazar_site"
+   },
+   {
+    "tur": "Yabancı uyruklular (göçmen) polikliniği",
+    "sayi": 1,
+    "yil": 2022,
+    "yontem": "SHM hizmet listesinde",
+    "kaynak": "ism_shm",
+    "konum": "hizmet listesi; ism_tsm_shm_2022 'Göçmen polikliniği'"
+   }
+  ],
+  "kurumlar": [
+   {
+    "ad": "Karabük İl Sağlık Müdürlüğü",
+    "tur": "İl sağlık müdürlüğü",
+    "ilce": "Merkez",
+    "bagli": "T.C. Sağlık Bakanlığı",
+    "adres": "5000 Evler, 75. Yıl Mah. (SHM/Merkez TSM aynı yerleşkede: 20. Cad. No:4; 112 başhekimliği ek hizmet binasında: 31. Sok.) – Merkez/Karabük",
+    "gorev": [
+     "Müdüre bağlı: Döner Sermaye Muhasebe Hizmetleri Birimi, İl Kalite Koordinatörlüğü, Mesleki Sorumluluk Kurulu İl Koordinatörlüğü, REDES İl Temsilciliği Birimi, Hukuk ve Muhakemat Birimi, Sivil Savunma ve Seferberlik Hizmetleri Birimi, Hasta Hakları İl Koordinatörlüğü",
+     "Sağlık Hizmetleri Başkanlığı: 1. başkan yardımcılığı (Halk Sağlığı Hizmetleri Birimi, Acil Sağlık Hizmetleri Birimi); 2. başkan yardımcılığı (Kamu Hastaneleri Hizmetleri Birimi, Sağlık Hizmetleri Birimi)",
+     "Destek Hizmetleri Başkanlığı: 1 başkan yardımcılığı (Personel Hizmetleri Birimi, Destek Hizmetleri Birimi)",
+     "2024 şemasında (Rev. 02) Sağlık Hizmetleri altında ayrıca 'Ağız ve Diş Sağlığı Hizmetleri Birimi' vardı; 2025 revizyonunda kaldırıldı, REDES İl Temsilciliği eklendi"
+    ],
+    "not": "İl grubu İ9. Santral 0370 433 31 26; KEP karabuk.ilsaglikmudurlugu@hs01.kep.tr; e-posta karabuk@saglik.gov.tr (ism_telefon, 29.02.2024). Adres metni il sitesinde yazılı değil; SHM'nin il müdürlüğü binasında olduğu bilgisi karabuk.json/ism_shm'den, adres HSGM 2025 tablosundan.",
+    "url": "https://karabukism.saglik.gov.tr/",
+    "kaynak": "ism_teskilat_2026",
+    "konum": "şema (Rev. 03, 04.11.2025)"
+   },
+   {
+    "ad": "Safranbolu İlçe Sağlık Müdürlüğü",
+    "tur": "İlçe sağlık müdürlüğü",
+    "ilce": "Safranbolu",
+    "bagli": "Karabük İl Sağlık Müdürlüğü",
+    "adres": "Atatürk Mahallesi, Hasan Polatkan Cad. No:20 Safranbolu/Karabük",
+    "gorev": [
+     "İlçede TSM kurulmadığı için birinci basamak/halk sağlığı hizmetlerini yürütür (yönerge md. 20/2; TSM Yön. md. 5/3)",
+     "Diyetisyen/sağlıklı beslenme hizmet noktası olarak HSGM listesinde yer alır"
+    ],
+    "not": "Aynı adres 2017 listesinde 'Safranbolu T.S.M' (tel. 0370 712 11 94) olarak geçiyor → eski Safranbolu TSM'nin yerini aldığı anlaşılıyor. Safranbolu 2025 nüfusu 69.592 (>30.000: TSM Yön. md. 5/2 gereği TSM kurulamaz). İlk resmî iz: 05.08.2020 kaymakamlık haberi; son: 30.09.2026 'Safranbolu İlçe Sağlık Müdürü' ziyareti (aile_karabuk_2026).",
+    "kaynak": "hsgm_shhd_karabuk_2025",
+    "konum": "Safranbolu satırı"
+   },
+   {
+    "ad": "Karabük Merkez Toplum Sağlığı Merkezi",
+    "tur": "Diğer",
+    "ilce": "Merkez",
+    "bagli": "Karabük İl Sağlık Müdürlüğü",
+    "adres": "5000 Evler 75. Yıl, 20. Cd. No:4 Merkez/Karabük (HSGM 2025, SHM ile aynı)",
+    "gorev": [
+     "Merkez ilçede ilçe sağlık müdürlüğü işlevini görür (TSM Yön. md. 5/6: TSM bulunan yerde ilçe SM hizmetlerini TSM yürütür)",
+     "KETEM birimi (2020), iş sağlığı/çalışan sağlığı ziyaretleri (2022), gezici sağlık hizmeti"
+    ],
+    "not": "Tür: TSM. Merkez ilçede ayrı ilçe sağlık müdürlüğü bulunamadı. 2017 adresi: Bayır Mah. Plevne Cad. No:2 (tel. 0370 415 64 80; ism_kurumlar_hsm) – eski adres.",
+    "kaynak": "osym_kpss_2025_5",
+    "konum": "Tablo-3 kadro 305019096 (kurum kodu 282813, diyetisyen); osym_kpss_2024_5 Tablo-3 kadro 305020440 (psikolog)"
+   },
+   {
+    "ad": "Karabük Yenice Toplum Sağlığı Merkezi",
+    "tur": "Diğer",
+    "ilce": "Yenice",
+    "bagli": "Karabük İl Sağlık Müdürlüğü",
+    "not": "Tür: TSM. 2017 adresi: Merkez Mah. Belediye Binası Altı, Yenice (tel. 0370 766 28 68; ism_kurumlar_hsm) – güncelliği teyit edilmedi. Yenice nüfusu 18.984 (15-30 bin bandı: ilçe SM kurulmamışsa TSM).",
+    "kaynak": "osym_kpss_2025_4",
+    "konum": "Tablo-2 kadro 204022708 (kurum kodu 282822); osym_kpss_2022_5 Tablo-3 kadro 320223689"
+   },
+   {
+    "ad": "Karabük Eskipazar Toplum Sağlığı Merkezi",
+    "tur": "Diğer",
+    "ilce": "Eskipazar",
+    "bagli": "Karabük İl Sağlık Müdürlüğü",
+    "not": "Tür: TSM. 2017 kurum listesinde Eskipazar TSM yoktu (ilçe entegre hastanesi vardı); 2025 ÖSYM tablosunda TSM olarak pozisyon açılmış. Adres bulunamadı.",
+    "kaynak": "osym_kpss_2025_4",
+    "konum": "Tablo-2 kadro 204022701 (kurum kodu 97732)"
+   },
+   {
+    "ad": "Karabük Ovacık Toplum Sağlığı Merkezi",
+    "tur": "Diğer",
+    "ilce": "Ovacık",
+    "bagli": "Karabük İl Sağlık Müdürlüğü",
+    "gorev": [
+     "Kaymakamlık sayfasındaki görev metni: bölgeyi tanımak, sağlık ölçütlerini değerlendirip öncelikleri saptamak, aile hekimliği birimlerini izlemek, bağışıklama plan ve programlarını hazırlamak, bildirimi zorunlu hastalık kayıtlarını müdürlüğe iletmek, altı aylık çalışma raporu hazırlamak, hizmet içi eğitim"
+    ],
+    "not": "Tür: TSM. 2017 adresi: Orta Mahalle, Ovacık (tel. 0370 877 10 24; ism_kurumlar_hsm). 2019 kuduz listesinde 'Ovacık Entegre Sağlık Merkezi', 2023 listesinde 'Ovacık Entegre İlçe Sağlık Merkezi' adı geçiyor.",
+    "url": "https://www.ovacik.gov.tr/ilce-toplum-sagligi-merkezi",
+    "kaynak": "osym_kpss_2025_5",
+    "konum": "Tablo-1 kadro 105012894 (kurum kodu 282817); 2022/5, 2022/11, 2023/5 tablolarında da var"
+   },
+   {
+    "ad": "Eflani T.S.M (2017 kaydı)",
+    "tur": "Diğer",
+    "ilce": "Eflani",
+    "bagli": "Karabük İl Sağlık Müdürlüğü",
+    "adres": "Merkez Hastane Cad., Eflani (2017)",
+    "not": "Tür: TSM. Güncel varlığı teyit edilemedi; 2022-2025 ÖSYM tablolarında Eflani TSM satırı yok, Eflani'de 'İlçe Devlet Hastanesi' (842468) var. TSM Yön. md. 5/3'e göre TSM ve ilçe SM yoksa hizmeti ilçe devlet hastanesi yürütür.",
+    "kaynak": "ism_kurumlar_hsm",
+    "konum": "Kurumlar tablosu, Eflani satırı"
+   },
+   {
+    "ad": "Karabük Sağlıklı Hayat Merkezi",
+    "tur": "SHM",
+    "ilce": "Merkez",
+    "bagli": "Karabük İl Sağlık Müdürlüğü",
+    "adres": "5000 Evler 75. Yıl, 20. Cd. No:4 Merkez/Karabük (HSGM 2025)",
+    "gorev": [
+     "Sigara bırakma polikliniği",
+     "Fizyoterapi/egzersiz ve sağlıklı beslenme danışmanlığı",
+     "KETEM ve üreme sağlığı (mamografi 40-69, HPV 30-65 yaş)",
+     "Bulaşıcı hastalıklar ve tüberküloz birimi",
+     "Yabancı uyruklular polikliniği",
+     "Psikolojik danışmanlık, çocuk gelişimi danışmanlığı (2022)"
+    ],
+    "kaynak": "ism_shm",
+    "konum": "hizmet listesi (25.12.2020)"
+   },
+   {
+    "ad": "KETEM (Kanser Erken Teşhis, Tarama ve Eğitim Merkezi) birimi",
+    "tur": "KETEM",
+    "ilce": "Merkez",
+    "bagli": "Merkez TSM / SHM",
+    "gorev": [
+     "Mamografi, HPV-DNA/smear taraması",
+     "ASM personeline uygulamalı kanser taraması eğitimi (2020)"
+    ],
+    "not": "Ayrı kurum kodu/binası bulunamadı; TSM Yön. tanımına göre TSM birimi.",
+    "kaynak": "ism_tsm_ketem_2020",
+    "konum": "haber metni ('Merkez TSM-KETEM birimi')"
+   },
+   {
+    "ad": "Verem Savaş Dispanseri",
+    "tur": "Verem savaş dispanseri",
+    "ilce": "Merkez",
+    "bagli": "Karabük İl Sağlık Müdürlüğü",
+    "adres": "Bayır Mah. Plevne Cad. No:2 Merkez (2017 kaydı; tel. 0370 424 17 18)",
+    "not": "Adres ism_kurumlar_hsm'den (2017). 2022'de 1.500'ü aşkın akciğer grafisi. SHM'de ayrıca 'Bulaşıcı Hastalıklar ve Tüberküloz Birimi' var; dispanserin güncel binası teyit edilemedi.",
+    "kaynak": "ism_verem_2023",
+    "konum": "haber (07.01.2023)"
+   },
+   {
+    "ad": "Karabük Halk Sağlığı Laboratuvarı",
+    "tur": "Halk sağlığı laboratuvarı",
+    "ilce": "Merkez",
+    "bagli": "Karabük İl Sağlık Müdürlüğü",
+    "gorev": [
+     "Merkez Laboratuvar (test rehberi, numune kabul)",
+     "Tüberküloz Laboratuvarı",
+     "Kan Parazitleri (Sıtma) Laboratuvarı",
+     "Klinik Dışı Su Analizi Laboratuvarları (içme-kullanma ve havuz suyu)"
+    ],
+    "not": "L2 tipi; TS EN ISO/IEC 17025 çalışmaları (ism_hsl_2026). Aile hekimliği lab. sonuç ekranı il sitesinde.",
+    "url": "https://karabukism.saglik.gov.tr/TR-125963/halk-sagligi-merkezi-laboratuvar.html",
+    "kaynak": "osym_kpss_2023_5",
+    "konum": "Tablo-2 kadro 205028133 (kurum kodu 746384)"
+   },
+   {
+    "ad": "Toplum Ruh Sağlığı Merkezi (KEAH 5000 Evler semt polikliniği)",
+    "tur": "TRSM",
+    "ilce": "Merkez",
+    "bagli": "Karabük Eğitim ve Araştırma Hastanesi",
+    "kaynak": "keah_hastanemiz",
+    "konum": "Hastanemiz sayfası"
+   },
+   {
+    "ad": "Karabük İl Ambulans Servisi Başhekimliği",
+    "tur": "Diğer",
+    "ilce": "Merkez",
+    "bagli": "Karabük İl Sağlık Müdürlüğü (Sağlık Hizmetleri Bşk. – Acil Sağlık Hizmetleri Birimi)",
+    "adres": "5000 Evler 75. Yıl Mah. 31. Sok. (İl Sağlık Müdürlüğü Ek Hizmet Binası 1. Kat) 78020 Merkez/Karabük",
+    "gorev": [
+     "Komuta Kontrol Merkezi (KKM)",
+     "Acil Sağlık Hizmetleri İstasyonları",
+     "Personel, Eğitim, ASOS, Ana Depo, Teknik Destek, Ayniyat birimleri; Kalite Yönetim Direktörlüğü",
+     "Hizmet araçları: acil yardım, kar paletli, obez/yoğun bakım, 4 yataklı ambulans"
+    ],
+    "not": "Tür: 112 başhekimliği. ÖSYM kurum kodu 284610 (2022/11, 2023/5). Tel. 0370 433 66 58; e-posta karabuk.iasb@saglik.gov.tr. 2024: 17 istasyon, 33 ambulans (SİY).",
+    "url": "https://karabukiasb.saglik.gov.tr/",
+    "kaynak": "iasb_iletisim",
+    "konum": "İletişim ve Konum (08.01.2024)"
+   },
+   {
+    "ad": "Karabük 1 Nolu Acil Sağlık Hizmetleri İstasyonu",
+    "tur": "112 istasyonu",
+    "ilce": "Merkez",
+    "bagli": "Karabük İl Ambulans Servisi Başhekimliği",
+    "kaynak": "osym_kpss_2022_11",
+    "konum": "Tablo-1 kadro 111016044 (kurum kodu 11222)"
+   },
+   {
+    "ad": "Karabük 2 Nolu Acil Sağlık Hizmetleri İstasyonu",
+    "tur": "112 istasyonu",
+    "ilce": "Merkez",
+    "bagli": "Karabük İl Ambulans Servisi Başhekimliği",
+    "kaynak": "osym_kpss_2023_5",
+    "konum": "Tablo-2 kadro 205028063 (kurum kodu 11223)"
+   },
+   {
+    "ad": "Karabük 4 Nolu Acil Sağlık Hizmetleri İstasyonu",
+    "tur": "112 istasyonu",
+    "ilce": "Merkez",
+    "bagli": "Karabük İl Ambulans Servisi Başhekimliği",
+    "kaynak": "osym_kpss_2023_5",
+    "konum": "Tablo-2 kadro 205028070 (kurum kodu 727305)"
+   },
+   {
+    "ad": "Karabük 5 Nolu Acil Sağlık Hizmetleri İstasyonu",
+    "tur": "112 istasyonu",
+    "ilce": "Merkez",
+    "bagli": "Karabük İl Ambulans Servisi Başhekimliği",
+    "kaynak": "osym_kpss_2024_5",
+    "konum": "Tablo-2 kadro 205025690 (kurum kodu 727306)"
+   },
+   {
+    "ad": "Karabük 6 Nolu Acil Sağlık Hizmetleri İstasyonu",
+    "tur": "112 istasyonu",
+    "ilce": "Merkez",
+    "bagli": "Karabük İl Ambulans Servisi Başhekimliği",
+    "kaynak": "osym_kpss_2024_5",
+    "konum": "Tablo-2 kadro 205025697 (kurum kodu 727307)"
+   },
+   {
+    "ad": "Karabük 8 Nolu Acil Sağlık Hizmetleri İstasyonu",
+    "tur": "112 istasyonu",
+    "ilce": "Merkez",
+    "bagli": "Karabük İl Ambulans Servisi Başhekimliği",
+    "not": "27.08.2024'te il sağlık müdürü ziyaret etti (iasb_8nolu_2024).",
+    "kaynak": "osym_kpss_2023_5",
+    "konum": "Tablo-2 kadro 205028077 (kurum kodu 48126)"
+   },
+   {
+    "ad": "Safranbolu 01 Nolu 112 Acil Sağlık Hizmetleri İstasyonu (Yenimahalle; Dr. Engin Ekmekci adı verildi)",
+    "tur": "112 istasyonu",
+    "ilce": "Safranbolu",
+    "bagli": "Karabük İl Ambulans Servisi Başhekimliği",
+    "not": "İl ambulans servisi başhekiminin adı Bakanlık oluruyla verildi.",
+    "kaynak": "iasb_ekmekci_2024",
+    "konum": "haber metni (26.04.2024)"
+   },
+   {
+    "ad": "Karabük Safranbolu 3 Nolu Acil Sağlık Hizmetleri İstasyonu (Ovacuma)",
+    "tur": "112 istasyonu",
+    "ilce": "Safranbolu",
+    "bagli": "Karabük İl Ambulans Servisi Başhekimliği",
+    "not": "Ovacuma'da açıldığı il müdürlüğü haberinde (ism_ovacuma_112, sayfa tarihi 18.05.2017).",
+    "kaynak": "osym_kpss_2022_11",
+    "konum": "Tablo-2 kadro 211031311 (kurum kodu 896749)"
+   },
+   {
+    "ad": "Karabük Safranbolu 4 Nolu Acil Sağlık Hizmetleri İstasyonu",
+    "tur": "112 istasyonu",
+    "ilce": "Safranbolu",
+    "bagli": "Karabük İl Ambulans Servisi Başhekimliği",
+    "kaynak": "osym_kpss_2024_5",
+    "konum": "Tablo-2 kadro 205025704 (kurum kodu 86577)"
+   },
+   {
+    "ad": "Karabük Yenice 1 Nolu Acil Sağlık Hizmetleri İstasyonu",
+    "tur": "112 istasyonu",
+    "ilce": "Yenice",
+    "bagli": "Karabük İl Ambulans Servisi Başhekimliği",
+    "kaynak": "osym_kpss_2022_5",
+    "konum": "Tablo-2 kadro 220224583 (kurum kodu 175697)"
+   },
+   {
+    "ad": "Karabük Yenice 3 Nolu (Çengeller) Acil Sağlık Hizmetleri İstasyonu",
+    "tur": "112 istasyonu",
+    "ilce": "Yenice",
+    "bagli": "Karabük İl Ambulans Servisi Başhekimliği",
+    "kaynak": "osym_kpss_2024_5",
+    "konum": "Tablo-2 kadro 205025711 (kurum kodu 727310); 2022/5 ve 2023/5'te de var"
+   },
+   {
+    "ad": "Karabük Eskipazar 2 Nolu Acil Sağlık Hizmetleri İstasyonu",
+    "tur": "112 istasyonu",
+    "ilce": "Eskipazar",
+    "bagli": "Karabük İl Ambulans Servisi Başhekimliği",
+    "kaynak": "osym_kpss_2023_5",
+    "konum": "Tablo-2 kadro 205028084 (kurum kodu 100814)"
+   },
+   {
+    "ad": "Karabük Eflani 1 Nolu Acil Sağlık Hizmetleri İstasyonu",
+    "tur": "112 istasyonu",
+    "ilce": "Eflani",
+    "bagli": "Karabük İl Ambulans Servisi Başhekimliği",
+    "kaynak": "osym_kpss_2022_11",
+    "konum": "Tablo-2 kadro 211031290 (kurum kodu 175695)"
+   },
+   {
+    "ad": "Karabük Ovacık 1 Nolu Acil Sağlık Hizmetleri İstasyonu",
+    "tur": "112 istasyonu",
+    "ilce": "Ovacık",
+    "bagli": "Karabük İl Ambulans Servisi Başhekimliği",
+    "kaynak": "osym_kpss_2022_11",
+    "konum": "Tablo-2 kadro 211031304 (kurum kodu 175696)"
+   },
+   {
+    "ad": "Karabük Eğitim ve Araştırma Hastanesi (KEAH)",
+    "tur": "Hastane",
+    "ilce": "Merkez",
+    "bagli": "Karabük İl Sağlık Müdürlüğü",
+    "adres": "Şirinevler Mah., Alpaslan Cad. No:1, 78200 Merkez/Karabük",
+    "gorev": [
+     "Üçüncü basamak eğitim ve araştırma hastanesi; Karabük Üniversitesi Tıp Fakültesi ortak kullanım protokolüyle uygulama hastanesi",
+     "550 yatak (Şirinevler ana bina 474 + 5000 Evler ek bina 76)",
+     "TRSM, evde sağlık, hemodiyaliz, onkoloji, nükleer tıp vb."
+    ],
+    "not": "ÖSYM kurum kodu 401. Santral 0370 415 80 00. 2019 kuduz listesinde eski adı 'Karabük Üniversitesi Eğitim ve Araştırma Hastanesi'.",
+    "url": "https://karabukeah.saglik.gov.tr/",
+    "kaynak": "keah_hastanemiz",
+    "konum": "Hastanemiz sayfası; adres keah_iletisim"
+   },
+   {
+    "ad": "Karabük Ağız ve Diş Sağlığı Eğitim ve Araştırma Hastanesi (ADSEAH)",
+    "tur": "ADSH/ADSM",
+    "ilce": "Merkez",
+    "bagli": "Karabük İl Sağlık Müdürlüğü",
+    "adres": "Bayır Mah. Fevzi Çakmak Cad. No:32-34 78100 Merkez/Karabük",
+    "gorev": [
+     "Ağız ve diş sağlığı ikinci/üçüncü basamak",
+     "Evde sağlık hizmetleri birimi"
+    ],
+    "not": "ÖSYM kurum kodu 187919. Eski adı Karabük Ağız ve Diş Sağlığı Merkezi (karabukadsm alan adı yönleniyor). Tel. 0370 424 20 96.",
+    "url": "https://karabukadsh.saglik.gov.tr/",
+    "kaynak": "adseah_iletisim",
+    "konum": "İletişim (08.01.2025)"
+   },
+   {
+    "ad": "Safranbolu Devlet Hastanesi",
+    "tur": "Hastane",
+    "ilce": "Safranbolu",
+    "bagli": "Karabük İl Sağlık Müdürlüğü",
+    "gorev": [
+     "İkinci basamak; 75 yataklı bina (2015)",
+     "7 yataklı hemodiyaliz ünitesi",
+     "Evde sağlık",
+     "Kuduz aşı merkezi"
+    ],
+    "not": "ÖSYM kurum kodu 372.",
+    "url": "https://safranboludh.saglik.gov.tr/",
+    "kaynak": "safranbolu_tarihce",
+    "konum": "Tarihçemiz"
+   },
+   {
+    "ad": "Karabük Yenice İlçe Devlet Hastanesi",
+    "tur": "Hastane",
+    "ilce": "Yenice",
+    "bagli": "Karabük İl Sağlık Müdürlüğü",
+    "adres": "İsmetpaşa Mah. Kıbrıs Sok. Yenice/Karabük",
+    "gorev": [
+     "İlçe devlet hastanesi",
+     "Evde sağlık birimi (hastane binasında)",
+     "Diyaliz ünitesi (sayfası var; ÖSYM 2025/4'te diyaliz teknikeri pozisyonu)",
+     "Kuduz aşı merkezi"
+    ],
+    "not": "ÖSYM kurum kodu 14250. Doğru site karabukyenicedh.saglik.gov.tr; yenicedh.saglik.gov.tr Çanakkale Yenice'nin hastanesidir.",
+    "url": "https://karabukyenicedh.saglik.gov.tr/",
+    "kaynak": "kyenice_iletisim",
+    "konum": "İletişim (24.08.2026)"
+   },
+   {
+    "ad": "Eskipazar İlçe Devlet Hastanesi",
+    "tur": "Hastane",
+    "ilce": "Eskipazar",
+    "bagli": "Karabük İl Sağlık Müdürlüğü",
+    "adres": "İstasyon Mah. Menderes Sok. No:1/3 78400 Eskipazar/Karabük",
+    "gorev": [
+     "Acil, dahiliye, ağız-diş polikliniği",
+     "Evde sağlık",
+     "Kuduz aşı merkezi"
+    ],
+    "not": "ÖSYM kurum kodu 709240. 2017'de 'Eskipazar İlçe Entegre Hastanesi' (Bahçepınar Mah. Hastane Cad.; ism_entegre_hsm) – yeni hizmet binasına taşınmış.",
+    "url": "https://eskipazardh.saglik.gov.tr/",
+    "kaynak": "eskipazar_adres",
+    "konum": "Hastane Adresi (28.09.2026)"
+   },
+   {
+    "ad": "Eflani İlçe Devlet Hastanesi",
+    "tur": "Hastane",
+    "ilce": "Eflani",
+    "bagli": "Karabük İl Sağlık Müdürlüğü",
+    "adres": "Candaroğulları Mah. Şehit Musa Üstün Cad. No:23 78300 Eflani/Karabük",
+    "gorev": [
+     "Acil, uzman aile hekimliği polikliniği, ASM, görüntüleme, laboratuvar, ağız-diş (entegre yapı)",
+     "Evde sağlık",
+     "Kuduz aşı merkezi"
+    ],
+    "not": "ÖSYM kurum kodu 842468. 2017 ve kuduz listelerinde 'Eflani İlçe Entegre (Devlet) Hastanesi'. Tel. 0370 461 32 44.",
+    "url": "https://eflanidh.saglik.gov.tr/",
+    "kaynak": "eflani_iletisim",
+    "konum": "İletişim (23.09.2026)"
+   },
+   {
+    "ad": "Karabük Üniversitesi Eğitim ve Araştırma Hastanesi (bugün KEAH)",
+    "tur": "Kuduz aşı merkezi",
+    "ilce": "Merkez",
+    "bagli": "Karabük İl Sağlık Müdürlüğü",
+    "not": "2023 görsel tablosunda da 7 merkez (ism_kuduz_2023).",
+    "kaynak": "ism_kuduz_2019",
+    "konum": "tablo (28.05.2019)"
+   },
+   {
+    "ad": "Safranbolu Devlet Hastanesi",
+    "tur": "Kuduz aşı merkezi",
+    "ilce": "Safranbolu",
+    "bagli": "Karabük İl Sağlık Müdürlüğü",
+    "not": "2023 görsel tablosunda da 7 merkez (ism_kuduz_2023).",
+    "kaynak": "ism_kuduz_2019",
+    "konum": "tablo (28.05.2019)"
+   },
+   {
+    "ad": "Ovacuma Aile Sağlığı Merkezi",
+    "tur": "Kuduz aşı merkezi",
+    "ilce": "Safranbolu",
+    "bagli": "Karabük İl Sağlık Müdürlüğü",
+    "not": "2023 görsel tablosunda da 7 merkez (ism_kuduz_2023).",
+    "kaynak": "ism_kuduz_2019",
+    "konum": "tablo (28.05.2019)"
+   },
+   {
+    "ad": "Yenice İlçe Devlet Hastanesi",
+    "tur": "Kuduz aşı merkezi",
+    "ilce": "Yenice",
+    "bagli": "Karabük İl Sağlık Müdürlüğü",
+    "not": "2023 görsel tablosunda da 7 merkez (ism_kuduz_2023).",
+    "kaynak": "ism_kuduz_2019",
+    "konum": "tablo (28.05.2019)"
+   },
+   {
+    "ad": "Eskipazar İlçe Entegre Devlet Hastanesi",
+    "tur": "Kuduz aşı merkezi",
+    "ilce": "Eskipazar",
+    "bagli": "Karabük İl Sağlık Müdürlüğü",
+    "not": "2023 görsel tablosunda da 7 merkez (ism_kuduz_2023).",
+    "kaynak": "ism_kuduz_2019",
+    "konum": "tablo (28.05.2019)"
+   },
+   {
+    "ad": "Eflani İlçe Entegre Devlet Hastanesi",
+    "tur": "Kuduz aşı merkezi",
+    "ilce": "Eflani",
+    "bagli": "Karabük İl Sağlık Müdürlüğü",
+    "not": "2023 görsel tablosunda da 7 merkez (ism_kuduz_2023).",
+    "kaynak": "ism_kuduz_2019",
+    "konum": "tablo (28.05.2019)"
+   },
+   {
+    "ad": "Ovacık Entegre Sağlık Merkezi",
+    "tur": "Kuduz aşı merkezi",
+    "ilce": "Ovacık",
+    "bagli": "Karabük İl Sağlık Müdürlüğü",
+    "not": "2023 görsel tablosunda da 7 merkez (ism_kuduz_2023).",
+    "kaynak": "ism_kuduz_2019",
+    "konum": "tablo (28.05.2019)"
+   },
+   {
+    "ad": "KEAH Evde Sağlık Birimi",
+    "tur": "Evde sağlık",
+    "ilce": "Merkez",
+    "bagli": "ilgili hastane",
+    "not": "Başvuru 444 38 33 (karabuk.json birimler).",
+    "kaynak": "keah_ozellikli",
+    "konum": "hastane sitesi menüsü/sayfası"
+   },
+   {
+    "ad": "ADSEAH Evde Sağlık Hizmetleri Birimi",
+    "tur": "Evde sağlık",
+    "ilce": "Merkez",
+    "bagli": "ilgili hastane",
+    "kaynak": "adseah_site",
+    "konum": "hastane sitesi menüsü/sayfası"
+   },
+   {
+    "ad": "Safranbolu DH Evde Sağlık",
+    "tur": "Evde sağlık",
+    "ilce": "Safranbolu",
+    "bagli": "ilgili hastane",
+    "kaynak": "safranbolu_tarihce",
+    "konum": "hastane sitesi menüsü/sayfası"
+   },
+   {
+    "ad": "Karabük Yenice İDH Evde Sağlık Hizmetleri Birimi",
+    "tur": "Evde sağlık",
+    "ilce": "Yenice",
+    "bagli": "ilgili hastane",
+    "kaynak": "kyenice_evde",
+    "konum": "hastane sitesi menüsü/sayfası"
+   },
+   {
+    "ad": "Eskipazar İDH Evde Sağlık Hizmetleri",
+    "tur": "Evde sağlık",
+    "ilce": "Eskipazar",
+    "bagli": "ilgili hastane",
+    "kaynak": "eskipazar_site",
+    "konum": "hastane sitesi menüsü/sayfası"
+   },
+   {
+    "ad": "Eflani İDH Evde Sağlık Hizmetleri",
+    "tur": "Evde sağlık",
+    "ilce": "Eflani",
+    "bagli": "ilgili hastane",
+    "kaynak": "eflani_tarihce",
+    "konum": "hastane sitesi menüsü/sayfası"
+   },
+   {
+    "ad": "Yabancı Uyruklular (Göçmen) Polikliniği",
+    "tur": "Diğer",
+    "ilce": "Merkez",
+    "bagli": "Karabük Sağlıklı Hayat Merkezi",
+    "not": "2022 tanıtımında 'Göçmen polikliniği' (ism_tsm_shm_2022). Ayrı Göç Sağlığı Merkezi bulunamadı.",
+    "kaynak": "ism_shm",
+    "konum": "hizmet listesi"
+   },
+   {
+    "ad": "Gezici Sağlık Tarama Aracı ve TSM gezici sağlık ekipleri",
+    "tur": "Diğer",
+    "ilce": "İl geneli",
+    "bagli": "Karabük İl Sağlık Müdürlüğü",
+    "not": "Araçta röntgen ve ultrason; 2021'de Japonya Büyükelçiliği projesiyle alındı. 2022'de yaklaşık 260 köyde 7 bin kişiye hizmet; 84 aile hekiminin 24'ü gezici hizmet veriyordu. Mobil hizmetin TSM hekim ve personeliyle yapıldığı belirtiliyor.",
+    "kaynak": "ism_gezici_2022",
+    "konum": "haber (14.12.2022)"
+   },
+   {
+    "ad": "Sağlık evi (Aşağıkızılcaören Köyü – 2017 haberi)",
+    "tur": "Diğer",
+    "ilce": "belirtilmemiş",
+    "bagli": "TSM/ilçe SM (yönerge md. 20/4)",
+    "not": "Haber başlığı 'Sağlık Evi Risk Analizleri'; metinde yalnız köyde risk analizi yapıldığı yazıyor. Güncel sağlık evi sayısı ve listesi bulunamadı.",
+    "kaynak": "ism_saglik_evi_2017",
+    "konum": "haber başlığı ve metni"
+   }
+  ],
+  "ilce_ozeti": [
+   {
+    "ilce": "Merkez",
+    "il_sm": 1,
+    "ilce_sm": 0,
+    "tsm": 1,
+    "asm": 20,
+    "ahb": 50,
+    "hastane": 2,
+    "istasyon_112": 6,
+    "kuduz": 1,
+    "evde_saglik": 2,
+    "diger": [
+     "SHM",
+     "KETEM (TSM/SHM birimi)",
+     "Verem Savaş Dispanseri",
+     "Halk Sağlığı Laboratuvarı",
+     "TRSM (KEAH)",
+     "İl Ambulans Servisi Başhekimliği + KKM",
+     "Yabancı uyruklular polikliniği",
+     "ADSEAH"
+    ],
+    "not": "Ayrı ilçe sağlık müdürlüğü yok; ilçe düzeyi işleri Merkez TSM ve il müdürlüğü yürütüyor. 112 sayısı adıyla teyit edilen istasyonlar (1,2,4,5,6,8 Nolu).",
+    "kaynak": "ism_ah_2026_09",
+    "ek_kaynaklar": [
+     "osym_kpss_2025_5",
+     "osym_kpss_2023_5",
+     "osym_kpss_2024_5",
+     "hsgm_shhd_karabuk_2025"
+    ]
+   },
+   {
+    "ilce": "Safranbolu",
+    "il_sm": 0,
+    "ilce_sm": 1,
+    "tsm": 0,
+    "asm": 9,
+    "ahb": 23,
+    "hastane": 1,
+    "istasyon_112": 3,
+    "kuduz": 2,
+    "evde_saglik": 1,
+    "diger": [],
+    "not": "112: 01 Nolu (Yenimahalle), 3 Nolu (Ovacuma), 4 Nolu. Kuduz: Safranbolu DH ve Ovacuma ASM.",
+    "kaynak": "hsgm_shhd_karabuk_2025",
+    "ek_kaynaklar": [
+     "ism_ah_2026_09",
+     "osym_kpss_2022_11",
+     "osym_kpss_2024_5",
+     "iasb_ekmekci_2024",
+     "ism_kuduz_2019"
+    ]
+   },
+   {
+    "ilce": "Yenice",
+    "il_sm": 0,
+    "ilce_sm": 0,
+    "tsm": 1,
+    "asm": 2,
+    "ahb": 7,
+    "hastane": 1,
+    "istasyon_112": 2,
+    "kuduz": 1,
+    "evde_saglik": 1,
+    "diger": [
+     "Diyaliz ünitesi (Yenice İDH)"
+    ],
+    "not": "112: 1 Nolu ve 3 Nolu (Çengeller).",
+    "kaynak": "osym_kpss_2025_4",
+    "ek_kaynaklar": [
+     "ism_ah_2026_09",
+     "osym_kpss_2022_5",
+     "osym_kpss_2024_5",
+     "kyenice_iletisim"
+    ]
+   },
+   {
+    "ilce": "Eskipazar",
+    "il_sm": 0,
+    "ilce_sm": 0,
+    "tsm": 1,
+    "asm": 1,
+    "ahb": 5,
+    "hastane": 1,
+    "istasyon_112": 1,
+    "kuduz": 1,
+    "evde_saglik": 1,
+    "diger": [],
+    "not": "112: 2 Nolu (1 Nolu adı bulunamadı).",
+    "kaynak": "osym_kpss_2025_4",
+    "ek_kaynaklar": [
+     "ism_ah_2026_09",
+     "osym_kpss_2023_5",
+     "eskipazar_adres"
+    ]
+   },
+   {
+    "ilce": "Eflani",
+    "il_sm": 0,
+    "ilce_sm": 0,
+    "tsm": null,
+    "asm": 1,
+    "ahb": 4,
+    "hastane": 1,
+    "istasyon_112": 1,
+    "kuduz": 1,
+    "evde_saglik": 1,
+    "diger": [],
+    "not": "TSM 2017'de vardı; güncel durumu teyit edilemedi (null). 112: 1 Nolu.",
+    "kaynak": "ism_kurumlar_hsm",
+    "ek_kaynaklar": [
+     "ism_ah_2026_09",
+     "osym_kpss_2022_11",
+     "eflani_iletisim"
+    ]
+   },
+   {
+    "ilce": "Ovacık",
+    "il_sm": 0,
+    "ilce_sm": 0,
+    "tsm": 1,
+    "asm": 1,
+    "ahb": 1,
+    "hastane": 0,
+    "istasyon_112": 1,
+    "kuduz": 1,
+    "evde_saglik": 0,
+    "diger": [],
+    "not": "Hastane yok; kuduz merkezi 'Ovacık Entegre (İlçe) Sağlık Merkezi'. 112: 1 Nolu. Evde sağlık birimi teyit edilemedi.",
+    "kaynak": "osym_kpss_2025_5",
+    "ek_kaynaklar": [
+     "kay_ovacik_tsm",
+     "ism_ah_2026_09",
+     "osym_kpss_2022_11",
+     "ism_kuduz_2019"
+    ]
+   }
+  ],
+  "tarihce": [
+   {
+    "yil": 2012,
+    "olay": "Karabük DH, Şirinevler DH ve Kadın Doğum ve Çocuk Hastanesi birleştirildi (16.07.2012); 2017'de adı KEAH olarak tescil edildi.",
+    "kaynak": "keah_hastanemiz"
+   },
+   {
+    "yil": 2015,
+    "olay": "Toplum Sağlığı Merkezi ve Bağlı Birimler Yönetmeliği yayımlandı (RG 05.02.2015/29258).",
+    "kaynak": "mevzuat_tsm"
+   },
+   {
+    "yil": 2017,
+    "olay": "Halk Sağlığı Müdürlüğü dönemindeki kurum listesi: 5 TSM (Merkez, Safranbolu, Eflani, Ovacık, Yenice) + Verem Savaş Dispanseri; Eflani ve Eskipazar'da ilçe entegre hastaneleri. Safranbolu 3 Nolu ASHİ Ovacuma'da açıldı (sayfa tarihi 18.05.2017).",
+    "kaynak": "ism_kurumlar_hsm"
+   },
+   {
+    "yil": 2017,
+    "olay": "Türkiye Halk Sağlığı Kurumu ve Kamu Hastaneleri Kurumu taşra teşkilatları kapatıldı; Halk Sağlığı Müdürlüğü görev, personel ve taşınırları 29.09.2017 itibarıyla il sağlık müdürlüğüne devredildi (Genelge 2017/17, 02.10.2017). İl sitesinde eski içerik 'Karabük Halk Sağlığı Müdürlüğü (Aktarım)' bölümünde (09.10.2017).",
+    "kaynak": "sb_genelge_2017_17"
+   },
+   {
+    "yil": 2018,
+    "olay": "TSM Yönetmeliği değişti (RG 25.05.2018): nüfusu 30.000 ve üzeri ilçelerde ve ilçe devlet hastanesi olan yerlerde TSM kurulmaz; 15-30 bin nüfuslu ilçelerde ilçe SM yoksa TSM kurulur.",
+    "kaynak": "rg_tsm2018"
+   },
+   {
+    "yil": 2020,
+    "olay": "Safranbolu İlçe Sağlık Müdürlüğü resmî kaynakta ilk kez görülüyor (05.08.2020 kaymakamlık haberi). 2017'deki Safranbolu TSM'nin yerini aldığı anlaşılıyor; dönüşüm onayının tarihi bulunamadı (2017-2020 arası).",
+    "kaynak": "kay_safranbolu_2020"
+   },
+   {
+    "yil": 2020,
+    "olay": "Merkez TSM/SHM'de KETEM birimi personeline ve ASM'lere uygulamalı serviks taraması eğitimi verildi (24.01.2020).",
+    "kaynak": "ism_tsm_ketem_2020"
+   },
+   {
+    "yil": 2022,
+    "olay": "Merkez TSM ve SHM işyeri tanıtım/iş sağlığı ziyaretleri (11.04.2022); TSM ekipleriyle yaklaşık 260 köyde gezici sağlık hizmeti (14.12.2022).",
+    "kaynak": "ism_tsm_shm_2022"
+   },
+   {
+    "yil": 2024,
+    "olay": "İl teşkilat şeması Rev. 02 (15.03.2024): 2 başkanlık, Ağız ve Diş Sağlığı Hizmetleri Birimi dahil. Safranbolu 01 Nolu ASHİ'ye Dr. Engin Ekmekci adı verildi (26.04.2024).",
+    "kaynak": "ism_teskilat_2024"
+   },
+   {
+    "yil": 2025,
+    "olay": "HSGM tablosu (05.05.2025): Merkez'de TSM/SHM, Safranbolu'da İlçe Sağlık Müdürlüğü. ÖSYM 2025 tablolarında Merkez, Yenice, Eskipazar ve Ovacık TSM'leri ayrı kurum kodlarıyla yer alıyor. Teşkilat şeması Rev. 03 (04.11.2025): REDES İl Temsilciliği eklendi, ADS birimi kaldırıldı.",
+    "kaynak": "hsgm_shhd_karabuk_2025"
+   },
+   {
+    "yil": 2026,
+    "olay": "Eylül 2026 listesi: 34 ASM, 90 AHB. Safranbolu İlçe Sağlık Müdürlüğü faal (30.09.2026 ziyaret haberi).",
+    "kaynak": "aile_karabuk_2026"
+   }
+  ]
+ },
  "dogrulanamayan": [
-  "İlçe Sağlık Müdürlükleri / Toplum Sağlığı Merkezleri: sayı, ad ve adresler il sağlık müdürlüğü sitesinde listelenmiyor. Yalnız 'Merkez TSM' (2022 haberi), Ovacık hastanesindeki 'toplum sağlığı birimi' ve kararlarda geçen 'Toplum Sağlığı Merkezleri' ifadesi var.",
   "KETEM'in ayrı bir birim olarak adresi: sitede KETEM hizmeti SHM bünyesinde tanımlanıyor; bağımsız KETEM binası teyit edilemedi.",
   "Verem Savaş Dispanserinin güncel adresi ve 2023 sonrası verileri (son resmî haber 07.01.2023).",
   "Ayrı bir Göç Sağlığı Merkezi: yalnız SHM'de 'yabancı uyruklular polikliniği' teyit edildi.",
@@ -6830,6 +7708,21 @@
   "İl bazında KETEM tarama sayıları, aşılama oranları, KKKA/tularemi vaka sayıları: resmî kaynakta sayısal veri bulunamadı. Kararlar yalnız önlem içeriyor.",
   "KARDEMİR kaynaklı mesleki maruziyet / meslek hastalığı tanı dağılımı il bazında: SGK tanı tablosu (3.1.10) il kırılımı vermiyor.",
   "Valilik (karabuk.gov.tr) ve Karabük Belediyesi sitelerinde güncel sağlık istatistiği bulunamadı.",
+  "Eflani TSM'nin güncel durumu: 2017 listesinde var (Merkez Hastane Cad.); 2022-2025 ÖSYM tablolarında ve güncel il kaynaklarında yok. Kapatıldı mı, Eflani İDH'ye mi bağlandı, teyit edilemedi. Eflani Kaymakamlığı menüsündeki 'İlçe Sağlık Müdürlüğü' bağlantısı boş (#) şablon öğesi; kanıt sayılmadı.",
+  "Safranbolu TSM'nin İlçe Sağlık Müdürlüğüne dönüşüm tarihi ve Bakanlık onayı: yalnız 2017 (TSM) ile 05.08.2020 (İlçe SM) arasında olduğu biliniyor.",
+  "Yenice, Eskipazar, Eflani ve Ovacık'ta ilçe sağlık müdürlüğü: hiçbir resmî kaynakta adı geçmiyor. Ovacık Kaymakamlığı sayfası 'İlçe Toplum Sağlığı Merkezi' başlıklı ama 'İlçe Sağlık Müdürü' görev kalıbı kullanıyor; kurum TSM olarak sayıldı.",
+  "Merkez ilçede ayrı 'Merkez İlçe Sağlık Müdürlüğü': bulunamadı; Merkez TSM görüyor.",
+  "TSM Yön. md. 5/2 ('ilçe devlet hastanesi olan yerde TSM kurulmaz') ile Yenice ve Eskipazar'da hem ilçe devlet hastanesi hem TSM'nin (ÖSYM 2025) birlikte görünmesi çelişkili. Yerel istisna ya da geçiş durumu teyit edilemedi.",
+  "TSM'lerin güncel adres ve telefonları: yalnız Merkez TSM (HSGM 2025) ve Safranbolu İlçe SM adresi güncel. Yenice, Ovacık, Eflani adresleri 2017 listesinden; Eskipazar TSM adresi yok. Diyanet 2022 listesindeki ilçe telefonları ad hatası içerdiği için kullanılmadı.",
+  "112: SİY 2024'teki 17 istasyonun 14'ü adıyla bulundu; kalan 3'ünün adı (muhtemelen Karabük 3/7 Nolu, Safranbolu 2, Yenice 2, Eskipazar 1 gibi boşluklar) ve istasyon adresleri resmî kaynakta yok. İl Ambulans Servisi sitesinde istasyon listesi yok.",
+  "Verem Savaş Dispanserinin güncel binası (2017: Bayır Mah. Plevne Cad. No:2) ve 2023 sonrası verisi.",
+  "KETEM'in ayrı kurum kodu veya binası: yalnız TSM/SHM birimi olarak geçiyor.",
+  "Sağlık evleri: 2017 haber başlığı dışında güncel sayı ve ad listesi yok.",
+  "Hastane yatak sayıları: yalnız KEAH (550) ve Safranbolu DH (75 yataklı bina) teyitli; Yenice, Eskipazar, Eflani ve ADSEAH için yok.",
+  "SİY 2024'teki 6 hastanenin içinde ADSEAH'ın sayılıp sayılmadığı: Ovacık'ta hastane olmadığı için 5 genel hastane + ADSEAH = 6 olabilir; yıllık ad vermediği için bu bir çıkarım.",
+  "Ovacık (Karabük) ve Ovacık TSM'de evde sağlık birimi: teyit edilemedi.",
+  "Yenice İDH diyaliz kapasitesi: karabukyenicedh sitesindeki diyaliz sayfasında metin yok. ÖSYM 2025/4'te diyaliz teknikeri pozisyonu var; cihaz sayısı bulunamadı.",
+  "İl sağlık müdürlüğü ana binasının tam adresi il sitesinin metninde yazmıyor; 5000 Evler 75. Yıl Mah. yerleşkesi HSGM ve 112 sayfalarından çıkarıldı.",
   "İlçe nüfusları: MEDAS sorgusu tarayıcıda yapıldı; dışa aktarılmış resmî dosya yok (değerler ekrandan alındı, her yıl il toplamıyla doğrulandı).",
   "Ölüm nedeni payları (dolaşım/neoplazm/solunum): TÜİK il tablosu yalnız 2018-2025; 2009-2017 il bazında indirilebilir resmî tablo bulunamadı (eski bülten bağlantıları güncel 2018-2025 tabloya yönleniyor).",
   "Doğuşta beklenen yaşam süresi: il düzeyinde yalnız 2013, 2013-2014, 2015-2017, 2018-2020, 2021-2023 dönemleri var; ara dönemler/yıllar yayımlanmamış.",

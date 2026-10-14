@@ -938,3 +938,16 @@ li.is-sec > button .sbk-gezgin-ok, li.is-acik > button .sbk-gezgin-ok { transfor
 /* Uzun boşluksuz diziler (formül, adres) ızgarayı genişletmesin */
 .sbk-bilgi-l, .sbk-havuz-ic, .sbk-agac { grid-template-columns: minmax(0, 1fr); }
 .sbk-bilgi-g, .sbk-havuz-konu, .sbk-agac li, .sbk-madde li, .sbk-okunur-kartlar dd { min-width: 0; overflow-wrap: anywhere; }
+/* Karabük kurum rehberi */
+.sbk-kpi-grup-ilk { margin-top: 0; }
+.sbk-ozet-kutu { display: flex; flex-direction: column; gap: 4px; }
+.sbk-ozet-kutu .sbk-link-btn { margin-left: 2px; align-self: flex-start; }
+.sbk-ozet-adlar { margin-top: 2px; }
+.sbk-kk-l { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); gap: 6px; align-items: start; }
+.sbk-kk-l > li.is-acik { grid-column: 1 / -1; }
+.sbk-kk > button { width: 100%; display: flex; align-items: center; gap: 10px; min-height: 48px; padding: 7px 10px; border-radius: 10px; border: 1px solid transparent; background: var(--color-canvas); color: var(--color-ink); font: inherit; text-align: left; cursor: pointer; }
+.sbk-kk > button:disabled { cursor: default; }
+.sbk-kk.is-acik > button { border-color: var(--color-accent); background: var(--color-accent-soft); }
+.sbk-kk .sbk-gezgin-t b { display: block; font-size: 13.5px; font-weight: 600; }
+.sbk-kk .sbk-gezgin-t small { display: block; color: var(--color-ink-3); font-size: 12px; }
+.sbk-kk-d { margin-top: 4px; padding: 10px 14px; border-radius: 10px; border: 1px solid var(--color-line-soft); font-size: 13.5px; display: grid; gap: 8px; }

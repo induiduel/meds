@@ -113,6 +113,13 @@ export interface KarabukVeri {
   is_sagligi?: { ad: string; deger: number | string; yil?: number | string; aciklama?: string; kaynak?: string; konum?: string; seri?: SeriNokta[] }[];
   programlar?: { ad: string; aciklama: string; tarih?: string; kaynak?: string }[];
   universite?: { aciklama: string; kaynak?: string; ek_kaynaklar?: string[] };
+  /** Sağlık kurumları envanteri (il/ilçe sağlık müdürlükleri ve bağlı birimler) */
+  envanter?: {
+    ozet?: { tur: string; sayi: number; yil?: number | string; yontem?: string; kaynak?: string; konum?: string; adlar?: string[] }[];
+    kurumlar?: { ad: string; tur: string; ilce?: string; bagli?: string; adres?: string; gorev?: string[]; not?: string; url?: string; kaynak?: string; konum?: string }[];
+    ilce_ozeti?: ({ ilce: string; diger?: string[]; kaynak?: string } & Record<string, unknown>)[];
+    tarihce?: { yil: number | string; olay: string; kaynak?: string }[];
+  };
 }
 
 export interface TurkiyeVeri {
