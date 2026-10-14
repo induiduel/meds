@@ -64,7 +64,7 @@ Telefon: üstte yatay bölüm şeridi; masaüstü: solda bölüm rayı, ortada i
 - [x] 3 Bağlar — `scripts/saglik/baglantilari_kur.py` (9 bölüm, ~840 çıkmış soru, kazanım, deste, slayt çapası, spot, müfredat haritası)
 - [x] 4 Arayüz — `components/saglik/` (SaglikView, SaglikBolumler, SaglikAraclar, SaglikOrtak, saglikVeri) + `styles/saglik.css`
 - [x] 5 Doğrulama — bağımsız denetim 156 kalem: 154 doğru, 0 yanlış, 1 yuvarlama (TDH 2025 → 1,42 düzeltildi), 1 kaynak eksik (topuk kanı zamanlaması → BCE 2026 eklendi); 5 göstergeye SİY 2025 bülteni değerleri eklendi. tsc 0, vite build; tarayıcı 375/800/1440 taşma taraması temiz
-- [x] 6 Kayıt — DEGISIKLIK_KAYDI, hafıza. Commit/Oracle dağıtımı YAPILMADI (kullanıcıya soruldu)
+- [x] 6 Kayıt — DEGISIKLIK_KAYDI, hafıza. commit 98c506a + Oracle dağıtımı yapıldı (2026-10-14)
 
 ## Veri güncelleme yolu
 
