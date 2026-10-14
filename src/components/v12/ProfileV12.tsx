@@ -69,6 +69,7 @@ import { toast } from '../ui/Toast';
 import { NotesSyncRow } from '../settings/NotesSyncRow';
 import { UserDataSyncRow } from '../settings/UserDataSyncRow';
 import { startWelcomeTour } from '../onboarding/tourState';
+import { onLearnTour } from '../onboarding/learnTourState';
 import '../../styles/v12/profile.css';
 
 /**
@@ -951,6 +952,7 @@ const AccountPanel: React.FC<{
       <section className="u12-panel">
         <NavRow icon={PaletteIcon} title="Görünüm ve tasarım (Net v12)" sub="Tasarım, tema, palet, yoğunluk, yazı, süzgeç modu" onClick={onAppearance} />
         <NavRow icon={Compass} title="Tanıtım turu" sub="Sayfaları ve özellikleri yeniden gez" onClick={startWelcomeTour} />
+        <NavRow icon={Compass} title="Öğren turu" sub="Ders kitaplığı ve etkileşim türleri" onClick={onLearnTour} />
         {isAdmin && <NavRow icon={ShieldCheck} title="Yönetim konsolu" sub="Taslaklar, moderasyon, sistem" onClick={onOpenAdmin} />}
         {currentUser && (
           <SetRow id="u12-oturum" title="Oturum" sub="Bu cihazda çıkış yaparsın. Eşitlenmiş ilerlemen hesabında kalır.">

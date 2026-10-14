@@ -39,6 +39,9 @@ import { Dialog } from '../ui/Dialog';
 import { NoPdfNotice, useNoPdfGate } from './NoPdfNotice';
 import type { DeckCatalogEntry } from '../../data/deckStore';
 import { triggerDomHighlightAndScroll } from '../../services/universalRedirectService';
+import { tourSeen } from '../onboarding/tourState';
+import { learnTourSeen, type LearnTourKind } from '../onboarding/learnTourState';
+const LearnTour = React.lazy(() => import('../onboarding/LearnTour'));
 
 // ---------------------------------------------------------------------------
 // Data types (shape of interactive_learning_decks.json)
@@ -764,6 +767,33 @@ export const InteractiveDeckView: React.FC<InteractiveDeckViewProps> = ({ initia
     onDeckChange?.(null);
   };
 
+  // Öğren turu: kitaplıkta ve ilk açılan derste birer kez (hoş geldin turu bittikten sonra); `medsoru:learn-tour` yeniden açar
+  const [learnTour, setLearnTour] = useState<{ kind: LearnTourKind; catalog?: boolean } | null>(null);
+  const playerOn = !!(activeDeck && activeDeck.id === deckId && gateOk);
+  const tourScene: LearnTourKind | null = playerOn ? 'lesson' : !deckId && !review && !versionPick ? 'library' : null;
+  useEffect(() => {
+    const on = (e: Event) => {
+      const d = (e as CustomEvent<{ kind: LearnTourKind; catalog?: boolean }>).detail;
+      if (d?.kind) setLearnTour({ kind: d.kind, catalog: d.catalog });
+    };
+    window.addEventListener('medsoru:learn-tour', on);
+    return () => window.removeEventListener('medsoru:learn-tour', on);
+  }, []);
+  useEffect(() => {
+    // Sahne değişince (ders açıldı/kapandı) açık tur kapanır
+    setLearnTour((t) => (t && t.kind !== tourScene ? null : t));
+    if (!tourScene || learnTourSeen(tourScene)) return;
+    let n = 0;
+    // Ekran çizilsin; hoş geldin turu ya da başka bir pencere açıksa bekle
+    const id = window.setInterval(() => {
+      if (++n > 40) return window.clearInterval(id);
+      if (!tourSeen() || document.querySelector('.wt-tour, .wt-full, [role="dialog"]:not(.ls-root)')) return;
+      window.clearInterval(id);
+      if (!learnTourSeen(tourScene)) setLearnTour({ kind: tourScene });
+    }, 1500);
+    return () => window.clearInterval(id);
+  }, [tourScene]);
+
   // Cümle/Metin odaklama (?highlight=...) kontrolü
   useEffect(() => {
     if (typeof window !== 'undefined' && activeDeck) {
@@ -888,6 +918,12 @@ export const InteractiveDeckView: React.FC<InteractiveDeckViewProps> = ({ initia
           focus={questionFocus && (!questionFocus.deckId || questionFocus.deckId === activeDeck.id) ? questionFocus : null}
           onClearFocus={onClearQuestionFocus}
         />
+      )}
+
+      {learnTour && learnTour.kind === tourScene && (
+        <React.Suspense fallback={null}>
+          <LearnTour key={`${learnTour.kind}:${learnTour.catalog ? 1 : 0}`} kind={learnTour.kind} startAtCatalog={learnTour.catalog} onClose={() => setLearnTour(null)} />
+        </React.Suspense>
       )}
       </div>
   );

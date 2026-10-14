@@ -1,4 +1,5 @@
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { startLearnTour } from '../../onboarding/learnTourState';
 import { useLiveEvent } from '../../../hooks/useLiveEvent';
 import { observeScrollReveal } from '../../../utils/scrollReveal';
 import { DeckNotePanel } from './DeckNotePanel';
@@ -39,6 +40,7 @@ import {
   Type,
   Users,
   Timer,
+  Compass,
 } from 'lucide-react';
 import type { InteractiveDeck } from '../InteractiveDeckView';
 import { AskAi, GlobalTopicSearchModal, SpotList } from '../InteractiveDeckView';
@@ -973,6 +975,9 @@ export const LessonPlayer: React.FC<LessonPlayerProps> = ({ deck, startAt, initi
               <FileDown aria-hidden /><span>PDF yap</span>
             </button>
           )}
+          <button type="button" role="menuitem" className="ls-tt" onClick={() => pickTool(() => startLearnTour('lesson'))} title="Ders ekranı ve etkileşim türleri turu">
+            <Compass aria-hidden /><span>Nasıl kullanılır?</span>
+          </button>
         </div>
       </div>
     </div>
