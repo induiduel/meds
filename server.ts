@@ -11306,7 +11306,19 @@ async function startServer() {
     if (fs.existsSync(manifestPath)) {
       res.setHeader('Content-Type', 'application/manifest+json; charset=utf-8');
       res.setHeader('Cache-Control', 'public, max-age=0, must-revalidate');
-      return res.sendFile(manifestPath);
+      // Tema renkleri istemciden gelir (utils/appearance.ts syncPwaChrome): ?tc= çubuk rengi, ?bg= açılış ekranı zemini
+      const hex = (v: unknown) => (typeof v === 'string' && /^[0-9a-f]{6}$/i.test(v) ? `#${v.toUpperCase()}` : '');
+      const tc = hex(req.query.tc);
+      const bg = hex(req.query.bg);
+      if (!tc && !bg) return res.sendFile(manifestPath);
+      try {
+        const m = JSON.parse(fs.readFileSync(manifestPath, 'utf-8'));
+        if (tc) m.theme_color = tc;
+        if (bg) m.background_color = bg;
+        return res.send(JSON.stringify(m));
+      } catch {
+        return res.sendFile(manifestPath);
+      }
     }
     res.status(404).send('Manifest not found');
   };

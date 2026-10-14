@@ -42,6 +42,13 @@
           d.dataset.layout = (a && a.layout) || 'pano';
           if (mode === 'dark') d.classList.add('theme-dark');
           if (matchMedia('(display-mode: standalone)').matches || navigator.standalone) d.classList.add('is-standalone');
+          // PWA kromu: son tema renkleri (utils/appearance.ts syncPwaChrome) — çubuk, manifesto, iOS durum çubuğu
+          var pc = JSON.parse(localStorage.getItem('medsoru_pwa_chrome') || 'null'), hx = /^[0-9A-F]{6}$/;
+          if (pc && hx.test(pc.tc) && hx.test(pc.bg)) {
+            document.querySelector('meta[name="theme-color"]').setAttribute('content', '#' + pc.tc);
+            document.querySelector('meta[name="apple-mobile-web-app-status-bar-style"]').setAttribute('content', pc.dark ? 'black-translucent' : 'default');
+            document.querySelector('link[rel="manifest"]').setAttribute('href', '/manifest.json?v=9&tc=' + pc.tc + '&bg=' + pc.bg);
+          }
         } catch (e) {}
       })();
     </script>

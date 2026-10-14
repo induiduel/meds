@@ -169,10 +169,36 @@ export function applyAppearance(a: Appearance = current) {
   el.dataset.design = a.design;
   el.classList.toggle('theme-dark', a.mode === 'dark');
   el.style.colorScheme = a.mode === 'dark' ? 'dark' : 'light';
-  // Tarayıcı çubuğu rengi zemine uysun
-  const meta = document.querySelector('meta[name="theme-color"]');
-  const bg = getComputedStyle(el).getPropertyValue('--color-canvas').trim();
-  if (meta && bg) meta.setAttribute('content', bg);
+  syncPwaChrome(a);
+}
+
+/*
+ * PWA kromu temayı izler: tarayıcı/durum çubuğu (meta theme-color) üst çubuğun rengini alır, kurulu uygulamanın
+ * manifestosu (theme_color = çubuk, background_color = açılış ekranı zemini) sunucuda bu renklerle üretilir
+ * (server.ts serveManifest ?tc=&bg=), iOS durum çubuğu yazısı koyu temada açık, açık/sarı temada koyu olur.
+ * Son renkler PWA_KEY'e yazılır; index.html'deki erken betik bunları boyamadan önce uygular (açılışta renk sıçraması yok).
+ */
+const PWA_KEY = 'medsoru_pwa_chrome';
+const hex6 = (v: string) => {
+  const m = v.trim().match(/^#([0-9a-f]{6})$/i) || v.trim().match(/^#([0-9a-f])([0-9a-f])([0-9a-f])$/i);
+  if (!m) return '';
+  return m.length === 4 ? `${m[1]}${m[1]}${m[2]}${m[2]}${m[3]}${m[3]}`.toUpperCase() : m[1].toUpperCase();
+};
+export const pwaManifestHref = (tc: string, bg: string) => `/manifest.json?v=9&tc=${tc}&bg=${bg}`;
+
+function syncPwaChrome(a: Appearance) {
+  const cs = getComputedStyle(document.documentElement);
+  // v12 üst/alt çubuğu yüzey rengindedir (--color-white); Klasik/Sade üst çubuğu zemin rengindedir
+  const tc = hex6(cs.getPropertyValue(a.design === 'v12' ? '--color-white' : '--color-canvas'));
+  const bg = hex6(cs.getPropertyValue('--color-canvas'));
+  if (!tc || !bg) return;
+  document.querySelector('meta[name="theme-color"]')?.setAttribute('content', `#${tc}`);
+  document.querySelector('meta[name="apple-mobile-web-app-status-bar-style"]')
+    ?.setAttribute('content', a.mode === 'dark' ? 'black-translucent' : 'default');
+  const link = document.querySelector<HTMLLinkElement>('link[rel="manifest"]');
+  const href = pwaManifestHref(tc, bg);
+  if (link && link.getAttribute('href') !== href) link.setAttribute('href', href);
+  try { localStorage.setItem(PWA_KEY, JSON.stringify({ tc, bg, dark: a.mode === 'dark' })); } catch { /* ignore */ }
 }
 
 /*
