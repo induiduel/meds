@@ -109,13 +109,11 @@
    * Okuyucu çerçevesi
    * ========================================================================= */
   & .r12-root {
-    --r12-fs: 17px;
+    --r12-fs: calc(var(--read-size, 16px) + 1px);
     position: fixed; inset: 0 0 0 var(--sh-side-w, 0px); z-index: 60; container: r12 / inline-size;
     display: flex; flex-direction: column; background: var(--color-canvas); color: var(--color-ink); font-family: var(--font-sans);
     animation: r12-in 200ms var(--mo-ease) backwards;
   }
-  &[data-text-size='s'] .r12-root { --r12-fs: 15px; }
-  &[data-text-size='l'] .r12-root { --r12-fs: 19px; }
   & .r12-root.is-focus { left: 0; }
   & .r12-root.is-closing { animation: r12-out 160ms var(--mo-ease) both; pointer-events: none; }
 

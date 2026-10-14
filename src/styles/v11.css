@@ -9,8 +9,10 @@
 /* ── Okuma yazısı: soru kökü, ders anlatımı, not/özet okuyucu ── */
 :root:is([data-design='v11'],[data-design='v12']) { --read-font: 'Literata', 'Iowan Old Style', Georgia, serif; --read-size: 16px; --read-lh: 1.68; }
 :root:is([data-design='v11'],[data-design='v12'])[data-reading='sans'] { --read-font: var(--font-sans); --read-lh: 1.6; }
+:root:is([data-design='v11'],[data-design='v12'])[data-text-size='xs'] { --read-size: 14px; }
 :root:is([data-design='v11'],[data-design='v12'])[data-text-size='s'] { --read-size: 15px; }
 :root:is([data-design='v11'],[data-design='v12'])[data-text-size='l'] { --read-size: 18px; }
+:root:is([data-design='v11'],[data-design='v12'])[data-text-size='xl'] { --read-size: 20px; }
 :root:is([data-design='v11'],[data-design='v12']) :is(.qk-stem, .ms-stem, .pv-stem, .ck-stem, .cx-stem, .tx-stem, .qm-stem, .ls-prose, .nr-read, .ln-read, .sr-body, .ms-narrative) {
   font-family: var(--read-font);
   font-size: var(--read-size);

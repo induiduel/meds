@@ -404,3 +404,42 @@
 /* Not düzenleyici araç çubuğu: dar bölmede (Notlarım 320 px, telefon) gizli yatay kaydırma simgeleri kesiyordu → satıra sarar */
 :root[data-design='v12'] .rt-bar { flex-wrap: wrap; overflow-x: visible; row-gap: 2px; }
 :root[data-design='v12'] .x12-notes .rt-tool { width: 32px; height: 32px; }
+
+/* =========================================================================
+ * Profil › Görünüm ayarlarının v12'deki etkisi
+ * (v12 sayfaları sabit px kullandığından eski text ve dn değişkenleri burada işlemiyordu)
+ * ========================================================================= */
+
+/* ── Yazı boyutu (data-text-size → --read-size 14–20 px, v11.css): kökle birlikte şıklar, test ve kartlar da izler ── */
+:root[data-design='v12'] {
+  & .c12 .ck-opt-b.ck-opt-b { font-size: calc(var(--read-size, 16px) - 2px); }
+  & .p12-stem.p12-stem { font-family: var(--read-font); font-size: calc(var(--read-size, 16px) + .5px); }
+  & .p12-opt.p12-opt { font-size: calc(var(--read-size, 16px) - 1px); }
+  & .f12-q.f12-q { font-size: calc(var(--read-size, 16px) + 3px); }
+  & .f12-a.f12-a { font-size: calc(var(--read-size, 16px) + 1px); }
+}
+
+/* ── Yoğunluk = arayüz ölçeği: sayfa içeriği (yazı, boşluk, satır yüksekliği) birlikte büyür/küçülür.
+ *    Kompakt yalnız fare/dokunmatik yüzey olmayan cihazlarda (telefonda dokunma alanları küçülmez).
+ *    Tam ekran katmanlar (ders oynatıcı, okuyucu, örtüler) ölçeği geri alır: ekranı tam doldurmaya devam eder. ── */
+:root[data-design='v12'][data-density='wide'] { --ui-zoom: 1.08; }
+@media (pointer: fine) { :root[data-design='v12'][data-density='compact'] { --ui-zoom: .92; } }
+:root[data-design='v12']:is([data-density='wide'], [data-density='compact']) .sh-main > * { zoom: var(--ui-zoom, 1); }
+:root[data-design='v12'] .sh-main :is(.ls-root, .r12-root, .sr-root, .ms-overlay, .wt-full, .cf-root, .lf-overlay, .p12-pause, .fixed.inset-0):not(:is(.ls-root, .r12-root, .sr-root, .ms-overlay, .wt-full, .cf-root, .lf-overlay, .p12-pause, .fixed.inset-0) *) {
+  zoom: calc(1 / var(--ui-zoom, 1));
+}
+
+/* ── Görüntüleme modu ── */
+@media (min-width: 768px) {
+  /* Odak = geniş ekran: sayfa başına konmuş genişlik sınırları kalkar; tek sütunluk okuma yüzeyleri biraz açılır */
+  :root[data-design='v12'][data-layout='odak'] :is(.u12-box, .l12, .q12-add, .m12-inner) { max-width: none; }
+  :root[data-design='v12'][data-layout='odak'] :is(.f12-col, .p12-q, .qa12) { max-width: 960px; }
+  /* Akış = sade: tek sütun, yan sütunlar akışın altına iner, sayfa açıklamaları gizlenir */
+  :root[data-design='v12'][data-layout='akis'] .td12-grid { grid-template-columns: minmax(0, 1fr) !important; }
+  :root[data-design='v12'][data-layout='akis'] .o12-page .cx-desc { display: none; }
+}
+/* Pano: Çıkmış kartları ancak her sütuna okunur genişlik kalınca iki sütun olur (eskiden 1180 px ekranda menü +
+   kenar boşluğu düşünce ~420 px sütun kalıyor, uzun kök ve şıklar 5-6 satıra kırılıyordu) */
+@media (min-width: 1180px) and (max-width: 1499px) {
+  :root[data-design='v12'][data-layout='pano'] .cx-list.ck-list { display: flex; flex-direction: column; }
+}

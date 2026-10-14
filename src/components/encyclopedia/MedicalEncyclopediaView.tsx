@@ -820,9 +820,9 @@ export const MedicalEncyclopediaView: React.FC<MedicalEncyclopediaViewProps> = (
   const isWide = useWide();
   const { layout, design } = useAppearance();
   // v11: geniş ekranda liste + ayrıntı bölmesi varsayılan (Akış modunda tek sütun akordeon kalır)
-  // v12: geniş ekranda her zaman liste + ayrıntı (dar ekranda ayrıntı tam görünüm, GlossaryV12)
+  // v12: geniş ekranda liste + ayrıntı; Akış (sade) modunda tek sütun, ayrıntı tam görünüm (GlossaryV12)
   const v12 = design === 'v12';
-  const wide = isWide && (v12 || (design === 'v10' ? layout === 'odak' : layout !== 'akis'));
+  const wide = isWide && (design === 'v10' ? layout === 'odak' : layout !== 'akis');
   const wideRef = useRef(wide);
   wideRef.current = wide;
   const anchorRef = useRef<{ id: string; top: number } | null>(null);

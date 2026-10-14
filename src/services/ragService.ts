@@ -494,7 +494,7 @@ const cleanTitle = (t: string) => t.replace(/\s*\[[^\]]*\]?\s*$/, '').replace(/\
 
 export async function searchEverything(
   query: string,
-  options: { types?: RagDocumentType[]; committeeId?: string; offset?: number; limit?: number } = {}
+  options: { types?: RagDocumentType[]; committeeId?: string; offset?: number; limit?: number; fast?: boolean } = {}
 ): Promise<SearchEverythingResult> {
   const q = query.trim();
   const offset = Math.max(0, options.offset || 0);
@@ -503,8 +503,9 @@ export async function searchEverything(
 
   // Sıralanmış havuz önbelleği: sayfalama ve aynı sorgunun tekrarı (palet → tüm sonuçlar) anında döner
   const cacheKey = `${q.toLocaleLowerCase('tr-TR')}|${options.committeeId || ''}`;
-  const cached = searchPoolCache.get(cacheKey);
-  if (cached && Date.now() - cached.at < 10 * 60_000) return finishSearch(cached, options, q, offset, limit);
+  // Hızlı (yazarken) aramada tam sonucun önbelleği de kullanılır; tersi değil
+  const cached = searchPoolCache.get(cacheKey) || (options.fast ? searchPoolCache.get(`${cacheKey}|hizli`) : undefined);
+  if (cached && Date.now() - cached.at < (cached.ttl ?? 10 * 60_000)) return finishSearch(cached, options, q, offset, limit);
 
   // Sorgu zekâsı: yazım düzeltme, kavramlar, niyet, eşdeğerlik yuvaları ("böbrek tümörü" ≈ "renal neoplazm")
   const { analyzeFor, getQueryIntel } = await import('./queryIntel/server.ts');
@@ -530,10 +531,14 @@ export async function searchEverything(
   }
   // Vektör kolu BM25 ile PARALEL başlar (eskiden sırayla: ~400 ms kayıp). Kavram etiketleri yoğun sorguya eklenir.
   const vecText = [base, ...u.concepts.filter((c) => c.strong !== false).map((c) => c.label.replace(/\s*\([^)]*\)/g, ''))].join(' ').slice(0, 500);
-  const vecPromise = Promise.race([
-    semanticSearch(vecText, { committeeId: options.committeeId, limit: 30 }),
-    new Promise<never>((_, rej) => setTimeout(() => rej(new Error('vec-zamanasimi')), 2500)),
-  ]).catch(() => [] as any[]);
+  // Hızlı aramada (palet, yazarken) vektör kolu hiç başlamaz: Oracle'ın 2 çekirdeğinde her tuşta CPU gömmesi
+  // hem o isteği hem BM25'i yavaşlatıyordu.
+  const vecPromise: Promise<any[]> = options.fast
+    ? Promise.resolve([])
+    : Promise.race([
+        semanticSearch(vecText, { committeeId: options.committeeId, limit: 30 }),
+        new Promise<never>((_, rej) => setTimeout(() => rej(new Error('vec-zamanasimi')), 2500)),
+      ]).catch(() => [] as any[]);
 
   // AI üretimi kayıtlar kaynak değildir (bkz. GROUNDING_DOC_TYPES): aramada gösterilmez
   const byId = new Map<string, Awaited<ReturnType<typeof searchLocalRag>>[number]>();
@@ -578,7 +583,12 @@ export async function searchEverything(
     .filter((c) => c.key.length >= 3);
   const intentStems = u.intent ? (EVIDENCE_CUES.find((x) => x.k === u.intent)?.stems || []) : [];
   const denseRank = new Map<string, number>();
-  ((await vecPromise) as any[]).forEach((r: any, i: number) => {
+  // Vektör kolu sonucu bekletmez: BM25 bittikten sonra en çok VEC_GRACE_MS beklenir. Yük altında Oracle'da sorgu
+  // gömmesi 1-2 sn sürüyor; eskiden her yeni sorgu 2,5 sn zaman aşımına kadar bekliyordu. Yetişmezse sonuç BM25 ile
+  // döner (kısa önbellekle), gömme arka planda bitip semanticSearch önbelleğine girer → aynı sorgu sonra vektörlü gelir.
+  const vecRows = await Promise.race([vecPromise, new Promise<null>((r) => setTimeout(() => r(null), VEC_GRACE_MS))]);
+  const vecMissed = vecRows === null && !options.fast;
+  ((vecRows || []) as any[]).forEach((r: any, i: number) => {
     if (r?.id && !denseRank.has(r.id)) denseRank.set(r.id, i);
   });
   const rank = (r: (typeof pooled)[number]) => {
@@ -668,15 +678,20 @@ export async function searchEverything(
     intent: u.intent,
     rewrites: u.rewrites.slice(0, 2),
   };
-  const entry = { at: Date.now(), pool, byType, capped: raw.length >= SEARCH_POOL, understanding };
+  const entry: PoolEntry = { at: Date.now(), pool, byType, capped: raw.length >= SEARCH_POOL, understanding, ttl: vecMissed ? 20_000 : undefined };
   // Motor henüz yüklenmemişken (açılışın ilk saniyeleri) yapılan anlamlandırmasız sonuç önbelleğe girmez
-  if (intelReady) searchPoolCache.set(cacheKey, entry);
+  if (intelReady) searchPoolCache.set(options.fast ? `${cacheKey}|hizli` : cacheKey, entry);
   if (searchPoolCache.size > 300) searchPoolCache.delete(searchPoolCache.keys().next().value as string);
   return finishSearch(entry, options, q, offset, limit);
 }
 
+/** Vektör kolu için BM25 sonrası en çok bekleme (ms) */
+const VEC_GRACE_MS = Math.max(0, Number(process.env.MEDS_VECTOR_GRACE_MS || 350));
+
 interface PoolEntry {
   at: number;
+  /** Önbellek ömrü (ms); vektörsüz dönen sonuç kısa tutulur */
+  ttl?: number;
   pool: SearchHit[];
   byType: Partial<Record<RagDocumentType, number>>;
   capped: boolean;

@@ -18,7 +18,10 @@ export type Density = 'compact' | 'normal' | 'wide';
 export type LayoutMode = 'akis' | 'pano' | 'odak';
 /** v11 okuma ve kullanım tercihleri (kök öğeye data-* olarak yazılır; kurallar styles/v11.css) */
 export type ReadingFont = 'serif' | 'sans';
-export type TextSize = 's' | 'm' | 'l';
+/** Okuma yazısı boyutu (soru kökü, şıklar, ders anlatımı, kartlar, okuyucular): 14 → 20 px, beş adım */
+export type TextSize = 'xs' | 's' | 'm' | 'l' | 'xl';
+export const TEXT_SIZE_ORDER: TextSize[] = ['xs', 's', 'm', 'l', 'xl'];
+export const TEXT_SIZE_PX: Record<TextSize, number> = { xs: 14, s: 15, m: 16, l: 18, xl: 20 };
 /** Basit: yalnız hızlı süzgeç hapları; Gelişmiş: "Süzgeç" sayfası da görünür */
 export type FilterMode = 'basit' | 'gelismis';
 export type MotionPref = 'full' | 'reduced';
@@ -53,7 +56,7 @@ export interface Appearance {
 export const MODE_LABELS: Record<ThemeMode, string> = { light: 'Açık', sepia: 'Sarı', dark: 'Koyu' };
 export const LAYOUT_LABELS: Record<LayoutMode, string> = { akis: 'Akış', pano: 'Pano', odak: 'Odak' };
 export const READING_LABELS: Record<ReadingFont, string> = { serif: 'Serif', sans: 'Sans' };
-export const TEXT_SIZE_LABELS: Record<TextSize, string> = { s: 'Küçük', m: 'Orta', l: 'Büyük' };
+export const TEXT_SIZE_LABELS: Record<TextSize, string> = { xs: 'En küçük', s: 'Küçük', m: 'Orta', l: 'Büyük', xl: 'En büyük' };
 export const FILTER_MODE_LABELS: Record<FilterMode, string> = { basit: 'Basit', gelismis: 'Gelişmiş' };
 const V11_DEFAULTS = { reading: 'serif' as ReadingFont, textSize: 'm' as TextSize, filters: 'basit' as FilterMode, qtags: false, motion: 'full' as MotionPref, design: 'v12' as DesignVersion };
 export const DESIGN_LABELS: Record<DesignVersion, string> = { v12: 'Net (v12)', v11: 'Sade (v11)', v10: 'Klasik (v10)' };
@@ -103,7 +106,7 @@ function read(): Appearance {
         density: p.density === 'compact' || p.density === 'wide' || p.density === 'normal' ? p.density : 'normal',
         layout: p.layout === 'akis' || p.layout === 'odak' || p.layout === 'pano' ? p.layout : 'pano',
         reading: p.reading === 'sans' ? 'sans' : 'serif',
-        textSize: p.textSize === 's' || p.textSize === 'l' ? p.textSize : 'm',
+        textSize: (TEXT_SIZE_ORDER as string[]).includes(String(p.textSize)) ? (p.textSize as TextSize) : 'm',
         filters: p.filters === 'gelismis' ? 'gelismis' : 'basit',
         qtags: p.qtags === true,
         motion: p.motion === 'reduced' ? 'reduced' : 'full',
@@ -307,7 +310,8 @@ export function setAppearance(patch: Partial<Omit<Appearance, 'palettes' | 'acce
     listeners.forEach((l) => l());
     return;
   }
-  const same = next.mode === current.mode && next.density === current.density && next.palettes[next.mode] === current.palettes[current.mode];
+  // Yoğunluk renk değiştirmez: örtüsüz, anında uygulanır (eskiden tam ekran "tema uygulanıyor" örtüsü açılıyordu)
+  const same = next.mode === current.mode && next.palettes[next.mode] === current.palettes[current.mode];
   current = next;
   try {
     localStorage.setItem(KEY, JSON.stringify(next));

@@ -10165,6 +10165,7 @@ app.get('/api/search/all', async (req, res) => {
       committeeId: req.query.committeeId && req.query.committeeId !== 'all' ? String(req.query.committeeId) : undefined,
       offset: parseInt(String(req.query.offset || '0'), 10) || 0,
       limit: parseInt(String(req.query.limit || '5'), 10) || 5,
+      fast: req.query.fast === '1',
     });
     // Anonim sorgu günlüğü: yalnız ilk sayfa ve süzgeçsiz arama (sayfalama/tür sekmesi aynı aramayı tekrar saymasın)
     if (req.query.log === '1' && (!req.query.offset || req.query.offset === '0')) {

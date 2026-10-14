@@ -180,7 +180,7 @@ function usePastCount(query: string | null) {
     if (!query) return;
     const ctrl = new AbortController();
     const t = window.setTimeout(async () => {
-      const r = await fetchSearch(query, { types: ['past_question'], limit: 1 }, ctrl.signal).catch(() => null);
+      const r = await fetchSearch(query, { types: ['past_question'], limit: 1, fast: true }, ctrl.signal).catch(() => null);
       if (!ctrl.signal.aborted && r) setRes({ q: query, n: r.total, capped: r.capped });
     }, 450);
     return () => { ctrl.abort(); window.clearTimeout(t); };

@@ -85,14 +85,14 @@ function setCachedSearch(key: string, res: SearchResponse) {
 
 export async function fetchSearch(
   q: string,
-  opts: { types?: SearchDocType[]; offset?: number; limit?: number; committeeId?: string; track?: boolean } = {},
+  opts: { types?: SearchDocType[]; offset?: number; limit?: number; committeeId?: string; track?: boolean; fast?: boolean } = {},
   signal?: AbortSignal
 ): Promise<SearchResponse | null> {
   const normalizedQ = q.trim();
   if (!normalizedQ) return null;
 
-  const cacheKey = `${normalizedQ.toLowerCase()}_${(opts.types || []).slice().sort().join(',')}_${opts.offset || 0}_${opts.limit || 5}_${opts.committeeId || ''}`;
-  const cached = getCachedSearch(cacheKey);
+  const cacheKey = `${normalizedQ.toLowerCase()}_${(opts.types || []).slice().sort().join(',')}_${opts.offset || 0}_${opts.limit || 5}_${opts.committeeId || ''}_${opts.fast ? 'f' : ''}`;
+  const cached = getCachedSearch(cacheKey) || (opts.fast ? getCachedSearch(cacheKey.slice(0, -1)) : null);
   if (cached) {
     return cached;
   }
@@ -102,20 +102,31 @@ export async function fetchSearch(
   if (opts.committeeId) params.set('committeeId', opts.committeeId);
   // Yalnız gerçek arama (arama sayfası) anonim günlüğe yazılır; paletin yazarken yaptığı istekler değil
   if (opts.track) params.set('log', '1');
+  // Yazarken (palet): sunucu vektör kolunu atlar, BM25 + sorgu zekâsı ile anında döner
+  if (opts.fast) params.set('fast', '1');
+  const includeV3 = !opts.types?.length || opts.types.some((type) => type.startsWith('gemini_v3_'));
+  // Gemini v3 istekleri ana aramayı beklemeden PARALEL gider (eskiden ana arama bitince ikinci tur: mobilde 2 gidiş-dönüş)
+  const v3Params = new URLSearchParams({ q: normalizedQ, limit: String(Math.max(opts.limit || 5, 20)) });
+  if (opts.committeeId) v3Params.set('committeeId', opts.committeeId);
+  const v3Promise = includeV3
+    ? Promise.all([
+        safeJsonFetch<any>(`/api/gemini-v3/questions?${v3Params}`, { signal }),
+        safeJsonFetch<any>(`/api/gemini-v3/lecture-notes?${v3Params}`, { signal }),
+        safeJsonFetch<any>(`/api/gemini-v3/thesaurus?q=${encodeURIComponent(normalizedQ)}`, { signal }),
+      ]).catch(() => null)
+    : null;
   const res = await safeJsonFetch<SearchResponse & { success: boolean }>(`/api/search/all?${params}`, { signal });
   if (!res.ok || !res.data?.success) return null;
-  const includeV3 = !opts.types?.length || opts.types.some((type) => type.startsWith('gemini_v3_'));
   if (!includeV3) {
     setCachedSearch(cacheKey, res.data);
     return res.data;
   }
-  const v3Params = new URLSearchParams({ q: normalizedQ, limit: String(Math.max(opts.limit || 5, 20)) });
-  if (opts.committeeId) v3Params.set('committeeId', opts.committeeId);
-  const [questions, lectures, terms] = await Promise.all([
-    safeJsonFetch<any>(`/api/gemini-v3/questions?${v3Params}`, { signal }),
-    safeJsonFetch<any>(`/api/gemini-v3/lecture-notes?${v3Params}`, { signal }),
-    safeJsonFetch<any>(`/api/gemini-v3/thesaurus?q=${encodeURIComponent(normalizedQ)}`, { signal }),
-  ]);
+  const v3 = await v3Promise;
+  if (!v3) {
+    setCachedSearch(cacheKey, res.data);
+    return res.data;
+  }
+  const [questions, lectures, terms] = v3;
   const v3Hits: SearchHit[] = [];
   if (questions.ok && questions.data?.items) for (const item of questions.data.items) v3Hits.push({
     id: `gemini-v3-question-${item.question_id}`, documentId: item.question_id, documentType: 'gemini_v3_question',

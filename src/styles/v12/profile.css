@@ -276,3 +276,8 @@
   & :is(.u12-btn, .u12-switch, .u12-switch-t, .u12-seg > button, .u12-tablist > button, .u12-design, .u12-sw, .u12-row, .u12-srow, .u12-av-edit, .u12-applink, .u12-field) { transition: none; }
   & .u12-toast { animation: none; }
 }
+
+/* Görünüm › Yazı boyutu önizlemesi: okuma yazısı ve boyutu canlı */
+:root[data-design='v12'] .u12-preview-read.u12-preview-read {
+  margin: 0; padding: 2px 16px 14px; font-family: var(--read-font); font-size: var(--read-size, 16px); line-height: var(--read-lh, 1.6); color: var(--color-ink);
+}

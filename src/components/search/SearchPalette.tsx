@@ -61,12 +61,12 @@ export const SearchPalette: React.FC<SearchPaletteProps> = ({ initialQuery = '',
     const ctrl = new AbortController();
     setLoading(true);
     const t = window.setTimeout(async () => {
-      const res = await fetchSearch(query, { limit: 5, committeeId }, ctrl.signal);
+      const res = await fetchSearch(query, { limit: 5, committeeId, fast: true }, ctrl.signal);
       if (ctrl.signal.aborted) return;
       setData(res);
       setFailed(!res);
       setLoading(false);
-    }, 300);
+    }, 220);
     return () => { ctrl.abort(); window.clearTimeout(t); };
   }, [q, committeeId]);
 

@@ -34,6 +34,8 @@ import {
   MODE_LABELS,
   PALETTE_INFO,
   TEXT_SIZE_LABELS,
+  TEXT_SIZE_ORDER,
+  TEXT_SIZE_PX,
   type Density,
   type DesignVersion,
   type FilterMode,
@@ -1016,9 +1018,14 @@ const DESIGN_INFO: Record<DesignVersion, { name: string; hint: string }> = {
 };
 
 const LAYOUT_HINTS: Record<LayoutMode, string> = {
-  akis: 'Tek sütun, okumaya uygun genişlik; menü ince şerit.',
-  pano: 'Geniş ızgara: kartlar sütunlara dizilir, menü açık.',
-  odak: 'Tam genişlik: liste solda, ayrıntı sağda açılır.',
+  akis: 'Sade: tek sütun, okumaya uygun dar genişlik; yan sütunlar ve açıklamalar gizlenir, menü ince şerit.',
+  pano: 'Dengeli: içerik 1320 px\'e kadar yayılır; çok geniş ekranda çıkmış kartları iki sütun olur.',
+  odak: 'Geniş ekran: sayfalar tüm genişliği kullanır; liste solda, ayrıntı sağda açılır.',
+};
+const DENSITY_HINTS: Record<Density, string> = {
+  compact: 'Arayüz %92: daha çok içerik sığar. Telefonda dokunma alanları küçülmesin diye uygulanmaz.',
+  normal: 'Arayüz %100.',
+  wide: 'Arayüz %108: menü, düğme, liste yazıları ve boşluklar birlikte büyür.',
 };
 
 const AppearancePanel: React.FC = () => {
@@ -1087,14 +1094,15 @@ const AppearancePanel: React.FC = () => {
             </div>
           </SetRow>
         )}
-        <SetRow id="u12-s-yog" title="Yoğunluk" sub="Yazı ölçeği, boşluklar ve satır yükseklikleri birlikte değişir; dokunmatikte düğmeler küçülmez.">
+        <SetRow id="u12-s-yog" title="Arayüz ölçeği" sub={DENSITY_HINTS[look.density]}>
           <Seg<Density> label="Yoğunluk" value={look.density} onChange={(d) => look.set({ density: d })}
             options={(['wide', 'normal', 'compact'] as Density[]).map((d) => ({ value: d, label: DENSITY_LABELS[d] }))} />
         </SetRow>
-        <SetRow id="u12-s-boyut" title="Yazı boyutu" sub="Soru kökü, ders anlatımı ve notlar bu boyutla gösterilir.">
+        <SetRow id="u12-s-boyut" title={`Yazı boyutu · ${TEXT_SIZE_PX[look.textSize]} px`} sub="Soru kökü ve şıklar, ders anlatımı, kartlar, notlar ve özetler bu boyutla gösterilir.">
           <Seg<TextSize> label="Yazı boyutu" value={look.textSize} onChange={(v) => look.set({ textSize: v })}
-            options={(['s', 'm', 'l'] as TextSize[]).map((v, i) => ({ value: v, label: 'A', aria: TEXT_SIZE_LABELS[v], style: { fontSize: 12 + i * 2 } }))} />
+            options={TEXT_SIZE_ORDER.map((v, i) => ({ value: v, label: 'A', aria: `${TEXT_SIZE_LABELS[v]} (${TEXT_SIZE_PX[v]} px)`, style: { fontSize: 11 + i * 2 } }))} />
         </SetRow>
+        <p className="u12-meta u12-preview-read" aria-hidden="true">Gebeliğin 20. haftasından sonra yeni başlayan hipertansiyon ve proteinüri preeklampsi düşündürür.</p>
         <SetRow id="u12-s-okuma" title="Okuma yazısı" sub="Soru kökü, ders anlatımı ve notlarda.">
           <Seg<ReadingFont> label="Okuma yazısı" value={look.reading} onChange={(v) => look.set({ reading: v })}
             options={[

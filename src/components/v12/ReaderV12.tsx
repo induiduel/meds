@@ -15,7 +15,7 @@
  */
 import React, { useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { AlignLeft, ChevronLeft, ChevronRight, Focus, MoreVertical } from 'lucide-react';
-import { useAppearance, type TextSize } from '../../utils/appearance';
+import { useAppearance, TEXT_SIZE_ORDER, TEXT_SIZE_PX, type TextSize } from '../../utils/appearance';
 import { lockScroll, unlockScroll } from '../../utils/scrollLock';
 import '../../styles/v12/reader.css';
 
@@ -68,8 +68,9 @@ export interface ReaderV12Props {
   children: React.ReactNode;
 }
 
-const SIZES: TextSize[] = ['s', 'm', 'l'];
-const SIZE_PX: Record<TextSize, number> = { s: 15, m: 17, l: 19 };
+const SIZES: TextSize[] = TEXT_SIZE_ORDER;
+/** Okuyucu gövdesi uygulamanın okuma boyutundan 1 px büyük (reader.css --r12-fs ile aynı) */
+const SIZE_PX = Object.fromEntries(TEXT_SIZE_ORDER.map((k) => [k, TEXT_SIZE_PX[k] + 1])) as Record<TextSize, number>;
 const PREF_KEY = 'medsoru_r12_reader';
 type Pref = { toc?: boolean; focus?: boolean };
 const readPref = (): Pref => {
