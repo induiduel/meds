@@ -59,12 +59,17 @@ export const PastQuestionRichCard: React.FC<PastQuestionRichCardProps> = (p) => 
   // v12: şık satırında hızlı düğme (cevaplamadan önce ele, sonra şıkkı bildir) + alt çubukta kopyala
   const look = useAppearance();
   const v12 = look.design === 'v12';
+  // Ayarlar › Görünüm › Çıkmış soru kartı: mod + açılıp kapanan alanlar
+  const qc = look.qcard;
+  const [folded, setFolded] = useState(true);
+  const collapsed = qc.mode === 'katlanir' && folded;
+  const analysis = qc.sikAciklama ? p.analysis : [];
   const [elim, setElim] = useState<Set<string>>(() => new Set());
   const key = p.correctAnswer ? String(p.correctAnswer).toUpperCase() : '';
   const [picked, setPicked] = useState<string | null>(() => (r?.attempt?.picked ? String(r.attempt.picked).toUpperCase() : null));
   const [peek, setPeek] = useState(false); // cevaplamadan "cevabı göster"
   const revealed = Boolean(picked) || peek;
-  const hasExplain = Boolean(p.explanation?.trim()) || p.analysis.length > 0 || p.refs.length > 0 || Boolean(p.kazanim) || Boolean(r?.onOpenNote);
+  const hasExplain = qc.aciklama && (Boolean(p.explanation?.trim()) || analysis.length > 0 || p.refs.length > 0 || Boolean(p.kazanim) || Boolean(r?.onOpenNote));
   const [explOpen, setExplOpen] = useState(() => Boolean(r?.attempt?.picked));
   const [explMounted, setExplMounted] = useState(() => Boolean(r?.attempt?.picked));
   const [histOpen, setHistOpen] = useState(false);
@@ -146,9 +151,9 @@ export const PastQuestionRichCard: React.FC<PastQuestionRichCardProps> = (p) => 
         {explMounted ? (
           <div className="ck-expl-b">
             {p.explanation?.trim() ? <SourceText text={p.explanation} size="sm" /> : <p className="ck-muted">Bu soruya henüz açıklama yazılmadı.</p>}
-            {p.analysis.length > 0 && (
+            {analysis.length > 0 && (
               <dl className="ck-analysis">
-                {p.analysis.map(([k, v]) => (
+                {analysis.map(([k, v]) => (
                   <div key={k} className={String(k).toUpperCase() === key ? 'is-ok' : ''}>
                     <dt>{k}</dt>
                     <dd>{String(v)}</dd>
@@ -179,12 +184,13 @@ export const PastQuestionRichCard: React.FC<PastQuestionRichCardProps> = (p) => 
   ) : null;
 
   return (
-    <article id={p.anchorId} className={`ck ${p.className || ''}`} aria-labelledby={`${uid}-stem`}>
+    <article id={p.anchorId} className={`ck ${qc.mode === 'dar' ? 'is-dar' : ''} ${collapsed ? 'is-folded' : ''} ${p.className || ''}`} aria-labelledby={`${uid}-stem`}>
       {v12 ? (
         <header className="ck-meta">
           <span className="ck-no">S {r?.number != null && r.number !== '' ? r.number : '?'}</span>
-          {r?.year && <span className="ck-m">{r.year}</span>}
-          {p.kurul && <span className="ck-m" title="Kurul">{p.kurul.replace(/^K(?=\d)/, 'Kurul ')}</span>}
+          {qc.yil && r?.year && <span className="ck-m">{r.year}</span>}
+          {qc.kurul && p.kurul && <span className="ck-m" title="Kurul">{p.kurul.replace(/^K(?=\d)/, 'Kurul ')}</span>}
+          {qc.ders && p.ders && <span className="ck-m ck-ders" title={p.ders}><i className="ck-dot" aria-hidden />{p.ders}</span>}
           {picked && key && <span className={`ck-badge ${picked === key ? 'is-ok' : 'is-bad'}`}>{picked === key ? 'Doğru' : 'Yanlış'}</span>}
           {r?.status && <span className={`ck-badge ${TONE_CLS[r.status.tone] || ''}`}>{r.status.label}</span>}
           <span className="ck-sp" />
@@ -198,9 +204,9 @@ export const PastQuestionRichCard: React.FC<PastQuestionRichCardProps> = (p) => 
       ) : (
       <header className="ck-meta">
         <span className="ck-no">{no}</span>
-        {r?.year && <span className="ck-m">{r.year}</span>}
-        {p.ders && <span className="ck-m ck-ders" title={p.ders}><i className="ck-dot" aria-hidden />{p.ders}</span>}
-        {p.kurul && <span className="ck-m" title="Kurul">{p.kurul}</span>}
+        {qc.yil && r?.year && <span className="ck-m">{r.year}</span>}
+        {qc.ders && p.ders && <span className="ck-m ck-ders" title={p.ders}><i className="ck-dot" aria-hidden />{p.ders}</span>}
+        {qc.kurul && p.kurul && <span className="ck-m" title="Kurul">{p.kurul}</span>}
         {p.flags.length > 0 && <span className="ck-flags">{p.flags.map((f, i) => <React.Fragment key={i}>{f}</React.Fragment>)}</span>}
         <span className="ck-sp" />
         {r?.status && <span className={`ck-badge ${TONE_CLS[r.status.tone] || ''}`}>{r.status.label}</span>}
@@ -210,6 +216,14 @@ export const PastQuestionRichCard: React.FC<PastQuestionRichCardProps> = (p) => 
 
       <div className="ck-stem" id={`${uid}-stem`}>{p.stem}</div>
 
+      {qc.mode === 'katlanir' && (
+        <button type="button" className="ck-fold" aria-expanded={!folded} aria-controls={`${uid}-body`} onClick={() => setFolded((v) => !v)}>
+          <ChevronDown aria-hidden className={folded ? '' : 'is-open'} />
+          {folded ? 'Şıkları göster' : 'Şıkları gizle'}
+        </button>
+      )}
+
+      {collapsed ? null : (<div className="ck-body" id={`${uid}-body`}>
       {p.special ? (
         <div className="ck-special">{p.special}</div>
       ) : p.options.length > 0 ? (
@@ -292,7 +306,6 @@ export const PastQuestionRichCard: React.FC<PastQuestionRichCardProps> = (p) => 
 
       {v12 && look.qtags && (
         <div className="c12-tags">
-          {p.ders && <span className="c12-tag" title={p.ders}><i className="ck-dot" aria-hidden />{p.ders}</span>}
           {r?.topic && r.topic !== p.ders && <span className="c12-tag" title={r.topic}>{r.topic}</span>}
           {p.flags.map((f, i) => <React.Fragment key={i}>{f}</React.Fragment>)}
           {p.kazanim && <span className="c12-tag is-acc" title={p.kazanim.metin}>Kazanım: {p.kazanim.metin}</span>}
@@ -359,8 +372,9 @@ export const PastQuestionRichCard: React.FC<PastQuestionRichCardProps> = (p) => 
       )}
 
       {v12 && explRev && <section className={`ck-expl c12-expl ${explOpen ? 'is-open' : ''}`} aria-label="Açıklama">{explRev}</section>}
+      </div>)}
 
-      {p.social.commentsOpen ? (
+      {collapsed ? null : p.social.commentsOpen ? (
         <div id={`${uid}-comm`} className="ck-comments">{p.comments}</div>
       ) : r?.commentPreview ? (
         <button type="button" className="ck-cprev" onClick={p.social.onComments} aria-label={`Yorumları aç: ${r.commentPreview.author}`}>

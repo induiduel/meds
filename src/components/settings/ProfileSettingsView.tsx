@@ -43,6 +43,9 @@ import {
   type LayoutMode,
   type ThemeMode,
   useAppearance,
+  QCARD_MODE_LABELS,
+  type QCardMode,
+  type QCardPrefs,
 } from '../../utils/appearance';
 import { findPalette, palettesFor } from '../../utils/palettes';
 import { AvatarCropper } from '../ui/AvatarCropper';
@@ -297,6 +300,20 @@ const ProfileSettingsClassic: React.FC<Props> = ({ currentUser, isAdmin, questio
               </span>
               <Switch label="Soru etiketlerini göster" checked={look.qtags} onChange={(on) => look.set({ qtags: on })} />
             </div>
+            <div className="ayr-row">
+              <span className="ayr-row-t">
+                <b>Çıkmış soru kartı</b>
+                <span>Tam: her şey açık. Katlanır: yalnız soru kökü ve künye, şıklar dokununca. Dar şıklar: sıkı satırlar.</span>
+              </span>
+              <Segmented<QCardMode> label="Çıkmış soru kartı" value={look.qcard.mode} onChange={(v) => look.set({ qcard: { mode: v } })}
+                options={(['tam', 'katlanir', 'dar'] as QCardMode[]).map((v) => ({ value: v, label: QCARD_MODE_LABELS[v] }))} />
+            </div>
+            {([['kurul', 'Kurul bilgisi'], ['ders', 'Ders bilgisi'], ['yil', 'Sene bilgisi'], ['aciklama', 'Açıklama'], ['sikAciklama', 'Şık açıklaması']] as [keyof Omit<QCardPrefs, 'mode'>, string][]).map(([k, l]) => (
+              <div key={k} className="ayr-row is-sub">
+                <span className="ayr-row-t"><b>{l}</b></span>
+                <Switch label={l} checked={look.qcard[k]} onChange={(on) => look.set({ qcard: { [k]: on } })} />
+              </div>
+            ))}
             <div className="ayr-row">
               <span className="ayr-row-t">
                 <b>Hareketi azalt</b>

@@ -146,3 +146,17 @@ html.ui-v7 .cx-pt-quiz[aria-checked="true"] .cx-switch i { transform: translateX
 .ck > .ck-meta .ck-menu { position: absolute; top: 8px; right: 6px; }
 .cx-sheet-end { display: flex; flex-wrap: wrap; gap: 8px; justify-content: space-between; }
 .cx-sheet-end .ui-btn { display: inline-flex; align-items: center; gap: 6px; }
+
+/* Ayarlar › Çıkmış soru kartı (appearance.qcard) */
+.ck-body { display: contents; }
+.ck-fold { align-self: flex-start; display: inline-flex; align-items: center; gap: 6px; min-height: 32px; padding: 4px 10px 4px 6px; border: 1px solid var(--color-line); border-radius: 8px; background: transparent; color: var(--color-ink-2); font: 500 13px var(--font-sans); cursor: pointer; }
+.ck-fold:hover { color: var(--color-ink); border-color: var(--color-line-2); }
+.ck-fold svg { width: 15px; height: 15px; transition: transform var(--mo-fast, .15s) ease; }
+.ck-fold svg.is-open { transform: rotate(180deg); }
+/* Dar şıklar: sıkı satırlar, genişse iki sütun (A B / C D / E) */
+.ck.is-dar .ck-opts { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 16rem), 1fr)); gap: 4px 8px; }
+.ck.is-dar .ck-opt-b { min-height: 32px; padding: 4px 8px; gap: 8px; font-size: 13.5px; line-height: 1.35; }
+.ck.is-dar .ck-key { width: 20px; height: 20px; font-size: 11px; }
+:root[data-design='v12'] .c12 .ck.is-dar .ck-opt-b { min-height: 32px; padding: 4px 8px; font-size: 13.5px; }
+.ck.is-folded { contain-intrinsic-size: auto 150px; padding-bottom: 12px; }
+:root[data-design='v12'] .c12 .ck.is-dar .ck-key { width: 20px; height: 20px; font-size: 11px; }

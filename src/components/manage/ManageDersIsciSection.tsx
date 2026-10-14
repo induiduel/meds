@@ -1,5 +1,6 @@
 import React, { Suspense, useEffect, useMemo, useState } from 'react';
 import { BookOpenCheck, CheckCircle2, ClipboardList, Eye, FileWarning, RefreshCw, RotateCcw, XCircle, PenLine, Library } from 'lucide-react';
+import { CalendarClock, Cpu, FileSearch, RefreshCcw, ShieldCheck, Hourglass, AlertTriangle, Ban, Wrench, Inbox, Layers } from 'lucide-react';
 import { safeJsonFetch } from '../../services/api';
 import { toast } from '../ui/Toast';
 import { NoteMarkdown } from '../ui/NoteMarkdown';
@@ -34,7 +35,137 @@ type Taslak = {
 };
 type Ayrinti = Taslak & { rapor: string; denetim: { hatalar?: string[]; uyarilar?: string[]; referansla_tamamlanan?: string[] }; dosyalar: string[] };
 type Sekme = 'rapor' | 'deste' | 'sorular' | 'sozluk' | 'hastaliklar' | 'havuz' | 'cikmis' | 'kaynak';
-type Filtre = 'bekleyen' | 'karar' | 'hepsi';
+/** Kuyruk kaydı (işçi /kuyruk ← kuyruk.json): durum bekliyor | isleniyor | taslak | hata. */
+type KuyrukIs = {
+  is_id: string;
+  yol: string;
+  durum: string;
+  eklendi?: number;
+  deneme?: number;
+  son_mesaj?: string;
+  sonra?: number;
+  basladi?: number;
+  uyari?: string;
+  konular?: string[];
+};
+/** İşçi /zamanlama: izle.sira_isle() kurallarıyla bekleyen işlerin tahmini başlama saati. */
+type Zamanlama = { gunluk_sinir: number; ders_arasi_sn: number; saatler: string; aralik_sn: number; bugun_islenen: number; plan: { is_id: string; tahmini: number }[] };
+/** Checklist satırı (işçi /checklist ← checklist.json konular[]). */
+type KonuSatiri = { kurul?: number; tarih?: string; ders?: string; konu?: string; hoca?: string; durum: string; deste_id?: string | null; pdf_2627?: { pdf: string; sayfa?: string }[] };
+
+/**
+ * Kategoriler — her biri yalnız gerçek durum alanlarından türetilir:
+ * programlandi: kuyruk.durum=bekliyor (saat: /zamanlama plan, yoksa kuyruk.sonra) · isleniyor: kuyruk.durum=isleniyor ya da
+ * taslak durum.json'u henüz yok · goruldu: checklist durum=islenmeli (26-27 PDF'i var, ders yok, henüz kuyrukta değil) ·
+ * yenilenmeli: checklist durum=yenilenmeli · onay: durum=onay_bekliyor ve karar yok · duzelt: karar=duzelt ·
+ * onaylandi: karar=onayla, yayin.json yok/beklemede · yayinda: durum=yayinlandi · hata: kuyruk.durum=hata, yayin.durum=
+ * denetim_hatasi ya da site_derlendi=false · reddedildi: karar=reddet / durum=reddedildi.
+ */
+type Filtre = 'hepsi' | 'onay' | 'programlandi' | 'isleniyor' | 'goruldu' | 'yenilenmeli' | 'duzelt' | 'onaylandi' | 'yayinda' | 'hata' | 'reddedildi';
+const KATEGORI: Record<Exclude<Filtre, 'hepsi'>, { label: string; cls: string; icon: React.ElementType }> = {
+  onay: { label: 'Onay bekliyor', cls: 'is-warn', icon: Inbox },
+  programlandi: { label: 'Zamanlayıcı programlandı', cls: '', icon: CalendarClock },
+  isleniyor: { label: 'İşleniyor', cls: '', icon: Cpu },
+  goruldu: { label: 'PDF görüldü, işlenmedi', cls: '', icon: FileSearch },
+  yenilenmeli: { label: 'Yenilenmeli', cls: 'is-warn', icon: RefreshCcw },
+  duzelt: { label: 'Düzeltme istendi', cls: 'is-warn', icon: Wrench },
+  onaylandi: { label: 'Onaylandı · yayın sırasında', cls: 'is-ok', icon: Hourglass },
+  yayinda: { label: 'Onaylandı · yayında', cls: 'is-ok', icon: ShieldCheck },
+  hata: { label: 'Hata', cls: 'is-bad', icon: AlertTriangle },
+  reddedildi: { label: 'Reddedildi', cls: 'is-bad', icon: Ban },
+};
+const SIRA: Exclude<Filtre, 'hepsi'>[] = ['onay', 'programlandi', 'isleniyor', 'goruldu', 'yenilenmeli', 'duzelt', 'onaylandi', 'yayinda', 'hata', 'reddedildi'];
+type Satir = {
+  anahtar: string;
+  kat: Exclude<Filtre, 'hepsi'>;
+  baslik: string;
+  etiketler: string[];
+  mesaj?: string;
+  uyari?: string;
+  zamanNot?: string;
+  taslak?: Taslak;
+};
+const saat = (t?: number) =>
+  t ? new Date(t * 1000).toLocaleString('tr-TR', { day: '2-digit', month: 'short', hour: '2-digit', minute: '2-digit' }) : '';
+const pdfAdi = (yol: string) => yol.split('/').pop()?.replace(/\.pdf$/i, '').replace(/^\s*\d+\s*\)\s*/, '') || yol;
+
+function taslakKategorisi(t: Taslak): Exclude<Filtre, 'hepsi'> {
+  if (t.yayin?.durum === 'denetim_hatasi' || (t.yayin?.durum === 'yayinlandi' && t.yayin.site_derlendi === false)) return 'hata';
+  if (t.durum === 'yayinlandi') return 'yayinda';
+  if (t.durum === 'reddedildi' || t.karar?.karar === 'reddet') return 'reddedildi';
+  if (t.karar?.karar === 'onayla') return 'onaylandi';
+  if (t.karar?.karar === 'duzelt') return 'duzelt';
+  if (t.durum === 'onay_bekliyor') return 'onay';
+  return 'isleniyor';
+}
+
+function satirlariKur(liste: Taslak[], kuyruk: KuyrukIs[], zam: Zamanlama | null, konular: KonuSatiri[]): Satir[] {
+  const taslakMap = new Map(liste.map((t) => [t.is_id, t]));
+  const plan = new Map((zam?.plan || []).map((p) => [p.is_id, p.tahmini]));
+  const out: Satir[] = [];
+  const kuyruktaAktif = new Set<string>();
+  const simdi = Date.now() / 1000;
+  for (const j of kuyruk) {
+    if (!['bekliyor', 'isleniyor', 'hata'].includes(j.durum)) continue; // 'taslak': taslak listesinden gelir
+    kuyruktaAktif.add(j.is_id);
+    const t = taslakMap.get(j.is_id);
+    const kat = j.durum === 'bekliyor' ? 'programlandi' : j.durum === 'isleniyor' ? 'isleniyor' : 'hata';
+    const tahmini = plan.get(j.is_id) ?? (j.sonra && j.sonra > simdi ? j.sonra : undefined);
+    out.push({
+      anahtar: 'k:' + j.is_id,
+      kat,
+      baslik: t?.program?.konu || (j.konular || []).filter(Boolean).join(' · ') || pdfAdi(j.yol),
+      etiketler: [j.yol.split('/').slice(-2, -1)[0] || '', t?.karar?.karar === 'duzelt' ? 'düzeltme turu' : '', j.deneme ? `deneme ${j.deneme}` : ''].filter(Boolean),
+      mesaj: j.son_mesaj,
+      uyari: j.uyari,
+      zamanNot:
+        kat === 'programlandi'
+          ? tahmini
+            ? `Planlanan başlama: ~${saat(tahmini)}${zam ? ` (günde ≤${zam.gunluk_sinir}, iki ders arası ${Math.round(zam.ders_arasi_sn / 3600)} sa; Drive turu ${Math.round(zam.aralik_sn / 3600)} sa'te bir)` : ''}`
+            : 'Bir sonraki işçi turunda başlar'
+          : kat === 'isleniyor'
+            ? `Başladı: ${saat(j.basladi)}`
+            : `Eklendi: ${saat(j.eklendi)}`,
+      taslak: t,
+    });
+  }
+  for (const t of liste) {
+    if (kuyruktaAktif.has(t.is_id)) continue;
+    const kat = taslakKategorisi(t);
+    out.push({
+      anahtar: 't:' + t.is_id,
+      kat,
+      baslik: t.program?.konu || t.ders_id || t.is_id,
+      etiketler: [t.program?.ders || '', t.program?.kurul ? `K${t.program.kurul}` : '', t.mod === 'guncelleme' ? `güncelleme · ${t.deste_id}` : 'yeni ders'].filter(Boolean),
+      mesaj: t.ozet,
+      uyari: t.uyari,
+      zamanNot:
+        kat === 'yayinda' && t.yayin?.yayin_zamani
+          ? `Yayın: ${t.yayin.yayin_zamani}`
+          : kat === 'onaylandi'
+            ? 'Sunucu en geç 10 dakika içinde siteye ekler'
+            : t.zaman
+              ? saat(t.zaman)
+              : undefined,
+      taslak: t,
+    });
+  }
+  for (const k of konular) {
+    if (k.durum !== 'islenmeli' && k.durum !== 'yenilenmeli') continue;
+    out.push({
+      anahtar: `c:${k.kurul}:${k.ders}:${k.konu}`,
+      kat: k.durum === 'islenmeli' ? 'goruldu' : 'yenilenmeli',
+      baslik: k.konu || '?',
+      etiketler: [k.ders || '', k.kurul ? `K${k.kurul}` : '', k.tarih || '', k.deste_id ? `deste · ${k.deste_id}` : ''].filter(Boolean),
+      mesaj:
+        k.durum === 'islenmeli'
+          ? '26-27 PDF\'i algılandı, ders henüz yok; işçi bir sonraki turda kuyruğa alır.'
+          : 'Ders geçen yılın kaynağıyla hazırlanmış; bu yılın PDF\'i geldi, yeniden üretilmeli.',
+      zamanNot: (k.pdf_2627 || []).map((p) => `PDF: ${p.pdf}${p.sayfa && p.sayfa !== 'tümü' ? ` (s. ${p.sayfa})` : ''}`).join(' · ') || undefined,
+    });
+  }
+  return out;
+}
 
 const DURUM: Record<string, { label: string; cls: string }> = {
   onay_bekliyor: { label: 'Onay bekliyor', cls: 'is-warn' },
@@ -95,7 +226,22 @@ const OtomatikDersIsci: React.FC<{ adminEmail: string }> = ({ adminEmail }) => {
   const [secili, setSecili] = useState<string | null>(null);
   const [ayr, setAyr] = useState<Ayrinti | null>(null);
   const [sekme, setSekme] = useState<Sekme>('rapor');
-  const [filtre, setFiltre] = useState<Filtre>('bekleyen');
+  const [filtre, setFiltreHam] = useState<Filtre>(() => {
+    try {
+      return (localStorage.getItem('manage:dersIsciFiltre') as Filtre) || 'onay';
+    } catch {
+      return 'onay';
+    }
+  });
+  const setFiltre = (f: Filtre) => {
+    setFiltreHam(f);
+    try {
+      localStorage.setItem('manage:dersIsciFiltre', f);
+    } catch {}
+  };
+  const [kuyruk, setKuyruk] = useState<KuyrukIs[]>([]);
+  const [zam, setZam] = useState<Zamanlama | null>(null);
+  const [konular, setKonular] = useState<KonuSatiri[]>([]);
   const [dosya, setDosya] = useState<Record<string, any>>({});
   const [onizle, setOnizle] = useState<any | null>(null);
   const [not, setNot] = useState('');
@@ -105,14 +251,20 @@ const OtomatikDersIsci: React.FC<{ adminEmail: string }> = ({ adminEmail }) => {
 
   const yukle = async () => {
     setHata(null);
-    const [t, c] = await Promise.all([api('/taslaklar'), api('/checklist')]);
+    // /kuyruk ve /zamanlama isteğe bağlı: eski işçi sürümünde yoksa yalnız taslak/checklist kategorileri dolar
+    const [t, c, k, z] = await Promise.all([api('/taslaklar'), api('/checklist'), api('/kuyruk'), api('/zamanlama')]);
     if (!t.ok) {
       setHata((t.data as any)?.hata || 'Ders işçisine ulaşılamıyor.');
       setListe([]);
       return;
     }
     setListe(t.data || []);
-    if (c.ok && c.data) setOzet({ sayim: c.data.sayim, uretim: c.data.uretim });
+    if (c.ok && c.data) {
+      setOzet({ sayim: c.data.sayim, uretim: c.data.uretim });
+      setKonular(Array.isArray(c.data.konular) ? c.data.konular : []);
+    }
+    setKuyruk(k.ok && Array.isArray(k.data) ? k.data : []);
+    setZam(z.ok && z.data && Array.isArray(z.data.plan) ? z.data : null);
   };
   useEffect(() => {
     yukle();
@@ -172,11 +324,15 @@ const OtomatikDersIsci: React.FC<{ adminEmail: string }> = ({ adminEmail }) => {
     api(`/taslak/${secili}`).then((x) => x.ok && setAyr(x.data));
   };
 
-  // yayınlanan taslak (scripts/ders_isci/yayinla.py) kararın önüne geçer; onaylı ama aktarılmamışsa "Onaylandı"
-  const durumAnahtari = (t: Taslak) => (t.durum === 'yayinlandi' ? t.durum : t.karar?.karar ? t.karar.karar : t.durum);
-  const gorunen = (liste || []).filter((t) =>
-    filtre === 'hepsi' ? true : filtre === 'bekleyen' ? !t.karar && t.durum === 'onay_bekliyor' : !!t.karar,
-  );
+  const satirlar = useMemo(() => satirlariKur(liste || [], kuyruk, zam, konular), [liste, kuyruk, zam, konular]);
+  const sayim = useMemo(() => {
+    const n: Partial<Record<Filtre, number>> = {};
+    for (const x of satirlar) n[x.kat] = (n[x.kat] || 0) + 1;
+    return n;
+  }, [satirlar]);
+  const gorunen = satirlar
+    .filter((x) => filtre === 'hepsi' || x.kat === filtre)
+    .sort((a, b) => (filtre === 'hepsi' ? SIRA.indexOf(a.kat) - SIRA.indexOf(b.kat) : 0));
 
   const s = ayr?.sayilar || {};
   return (
@@ -184,7 +340,7 @@ const OtomatikDersIsci: React.FC<{ adminEmail: string }> = ({ adminEmail }) => {
       <Panel
         title="Otomatik Ders İşçisi"
         icon={BookOpenCheck}
-        count={liste ? liste.length : undefined}
+        count={liste ? satirlar.length : undefined}
         desc="Drive'a eklenen ders PDF'lerinden ders işçisinin ürettiği paketler. İncele, önizle, karar ver; onaylananlar yayına birleştirilir."
         tools={
           <button type="button" className="ms-btn is-sm" onClick={yukle}>
@@ -200,38 +356,56 @@ const OtomatikDersIsci: React.FC<{ adminEmail: string }> = ({ adminEmail }) => {
           </p>
         )}
         <ChipBar<Filtre>
-          label="Taslak süzgeci"
+          label="Ders durumu süzgeci"
+          wrap
           value={filtre}
           onChange={setFiltre}
           options={[
-            { id: 'bekleyen', label: 'Onay bekleyen', n: (liste || []).filter((t) => !t.karar && t.durum === 'onay_bekliyor').length },
-            { id: 'karar', label: 'Karar verilen', n: (liste || []).filter((t) => !!t.karar).length },
-            { id: 'hepsi', label: 'Hepsi', n: (liste || []).length },
+            ...SIRA.filter((id) => sayim[id] || id === filtre || id === 'onay').map((id) => ({
+              id,
+              label: KATEGORI[id].label,
+              icon: KATEGORI[id].icon,
+              n: sayim[id] || 0,
+            })),
+            { id: 'hepsi' as Filtre, label: 'Hepsi', icon: Layers, n: satirlar.length },
           ]}
         />
         {hata && <EmptyState icon={FileWarning} title="Ders işçisine ulaşılamıyor">{hata}</EmptyState>}
-        {!hata && liste && gorunen.length === 0 && <EmptyState icon={ClipboardList} title="Bu süzgeçte taslak yok" />}
+        {!hata && liste && gorunen.length === 0 && <EmptyState icon={ClipboardList} title="Bu kategoride ders yok" />}
         <ul className="flex flex-col gap-2 mt-2">
-          {gorunen.map((t) => {
-            const d = DURUM[durumAnahtari(t)] || { label: t.durum, cls: '' };
+          {gorunen.map((x) => {
+            const d = KATEGORI[x.kat];
+            const icerik = (
+              <>
+                <div className="flex flex-wrap items-center gap-2">
+                  <b className="min-w-0">{x.baslik}</b>
+                  {x.etiketler.map((e) => (
+                    <span key={e} className="ms-tag">
+                      {e}
+                    </span>
+                  ))}
+                  <span className={`ms-tag ${d.cls}`}>{d.label}</span>
+                </div>
+                {x.mesaj && <p className="text-sm text-ink-2 mt-1">{x.mesaj}</p>}
+                {x.zamanNot && <p className="text-xs text-ink-3 mt-1">{x.zamanNot}</p>}
+                {x.uyari && <p className="text-sm text-warn mt-1">⚠ {x.uyari}</p>}
+              </>
+            );
+            const id = x.taslak?.is_id;
             return (
-              <li key={t.is_id}>
-                <button
-                  type="button"
-                  onClick={() => setSecili(t.is_id)}
-                  aria-pressed={secili === t.is_id}
-                  className={`ms-panel w-full text-left p-3 ${secili === t.is_id ? 'is-on' : ''}`}
-                >
-                  <div className="flex flex-wrap items-center gap-2">
-                    <b className="min-w-0">{t.program?.konu || t.ders_id}</b>
-                    <span className="ms-tag">{t.program?.ders}</span>
-                    <span className="ms-tag">K{t.program?.kurul}</span>
-                    <span className="ms-tag">{t.mod === 'guncelleme' ? `güncelleme · ${t.deste_id}` : 'yeni ders'}</span>
-                    <span className={`ms-tag ${d.cls}`}>{d.label}</span>
-                  </div>
-                  <p className="text-sm text-ink-2 mt-1">{t.ozet}</p>
-                  {t.uyari && <p className="text-sm text-warn mt-1">⚠ {t.uyari}</p>}
-                </button>
+              <li key={x.anahtar}>
+                {id ? (
+                  <button
+                    type="button"
+                    onClick={() => setSecili(id)}
+                    aria-pressed={secili === id}
+                    className={`ms-panel w-full text-left p-3 ${secili === id ? 'is-on' : ''}`}
+                  >
+                    {icerik}
+                  </button>
+                ) : (
+                  <div className="ms-panel w-full p-3">{icerik}</div>
+                )}
               </li>
             );
           })}

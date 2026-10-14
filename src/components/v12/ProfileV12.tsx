@@ -45,6 +45,9 @@ import {
   type TextSize,
   type ThemeMode,
   useAppearance,
+  QCARD_MODE_LABELS,
+  type QCardMode,
+  type QCardPrefs,
 } from '../../utils/appearance';
 import { findPalette, palettesFor } from '../../utils/palettes';
 import { autoRevealEnabled, setAutoRevealEnabled } from '../../utils/autoReveal';
@@ -199,6 +202,19 @@ function Seg<T extends string>({ label, value, options, onChange }: {
     </div>
   );
 }
+
+const QCARD_MODE_HINTS: Record<QCardMode, string> = {
+  tam: 'Soru, şıklar ve işlemler kartta açık.',
+  katlanir: 'Yalnız soru kökü ve künye; şıklar ve cevap dokununca açılır.',
+  dar: 'Soru ve şıklar açık; şıklar sıkı satırlarda, genişse iki sütun.',
+};
+const QCARD_FIELDS: [keyof Omit<QCardPrefs, 'mode'>, string, string][] = [
+  ['kurul', 'Kurul bilgisi', 'Kart başlığında kurul.'],
+  ['ders', 'Ders bilgisi', 'Kart başlığında ders adı.'],
+  ['yil', 'Sene bilgisi', 'Kart başlığında sınav yılı.'],
+  ['aciklama', 'Açıklama', 'Açıklama düğmesi ve gövdesi; kapalıyken yalnız doğru/yanlış görünür.'],
+  ['sikAciklama', 'Şık açıklaması', 'Açıklamadaki şık şık analiz.'],
+];
 
 const Toggle: React.FC<{ checked: boolean; onChange: (v: boolean) => void; labelledBy: string }> = ({ checked, onChange, labelledBy }) => (
   <button type="button" role="switch" aria-checked={checked} aria-labelledby={labelledBy} className="u12-switch" onClick={() => onChange(!checked)}>
@@ -1129,6 +1145,15 @@ const AppearancePanel: React.FC = () => {
         <SetRow id="u12-s-etiket" title="Soru etiketleri" sub="Çıkmış ve örnek soru kartlarındaki işaret etiketleri. Kapalıyken yalnız soru ve şıklar görünür.">
           <Toggle labelledBy="u12-s-etiket" checked={look.qtags} onChange={(on) => look.set({ qtags: on })} />
         </SetRow>
+        <SetRow id="u12-s-qcard" title="Çıkmış soru kartı" sub={QCARD_MODE_HINTS[look.qcard.mode]}>
+          <Seg<QCardMode> label="Çıkmış soru kartı" value={look.qcard.mode} onChange={(v) => look.set({ qcard: { mode: v } })}
+            options={(['tam', 'katlanir', 'dar'] as QCardMode[]).map((v) => ({ value: v, label: QCARD_MODE_LABELS[v] }))} />
+        </SetRow>
+        {QCARD_FIELDS.map(([k, title, sub]) => (
+          <SetRow key={k} id={`u12-s-qc-${k}`} title={title} sub={sub}>
+            <Toggle labelledBy={`u12-s-qc-${k}`} checked={look.qcard[k] as boolean} onChange={(on) => look.set({ qcard: { [k]: on } })} />
+          </SetRow>
+        ))}
         <SetRow id="u12-s-hareket" title="Hareket" sub="Az: geçiş ve canlandırmalar kapanır, sayfalar anında değişir. Sistem tercihi “azalt” ise her zaman uyulur.">
           <Seg<MotionPref> label="Hareket" value={look.motion} onChange={(v) => look.set({ motion: v })}
             options={[{ value: 'full', label: 'Tam' }, { value: 'reduced', label: 'Az' }]} />

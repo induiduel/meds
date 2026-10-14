@@ -8,7 +8,8 @@ yönetici yetkisiyle buraya vekil olur.
                                           bilgi_havuzu.jsonl, cikmis_baglantilari.json, ders_notu.md, ders_paketi.json)
   POST /taslak/<is_id>/karar           ← {"karar": "onayla"|"reddet"|"duzelt", "not": "...", "kim": "..."}
   GET  /checklist                      → checklist.json (2026-27 durum raporu verisi)
-  GET  /kuyruk                         → kuyruk.json özeti
+  GET  /kuyruk                         → kuyruk.json özeti (sonra/basladi dahil)
+  GET  /zamanlama                      → işçi zamanlaması + bekleyen işlerin tahmini başlama saatleri (plan)
 Kararlar taslak/<is_id>/karar.json'a yazılır; birleştirme (yayın) ayrı adımdır.
 """
 from __future__ import annotations
@@ -19,7 +20,8 @@ import threading
 import time
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 
-from ayarlar import KUYRUK, STATE, TASLAK, log, oku, yaz
+from ayarlar import (ARALIK_SN, DERS_ARASI_SN, GUNLUK_SINIR, KAYIT, KUYRUK, SAATLER, STATE, TASLAK, log, oku,
+                     yaz)
 
 DOSYALAR = {"deck.json", "ornek_sorular.json", "sozluk.json", "hastaliklar.json", "bilgi_havuzu.jsonl",
             "cikmis_baglantilari.json", "ders_notu.md", "ders_paketi.json", "rapor.md", "denetim.json"}
@@ -36,6 +38,46 @@ def taslak_ozeti(d) -> dict:
                                                   ("kurul", "ders", "konu", "ogretim_uyesi", "tarih", "guven", "skor")},
             "sayilar": den.get("sayilar", {}), "denetim_hata": den.get("hata"), "referans": len(den.get("referansla_tamamlanan", [])),
             "karar": oku(d / "karar.json", None), "yayin": oku(d / "yayin.json", None), "zaman": du.get("zaman")}
+
+
+def zamanlama() -> dict:
+    """izle.sira_isle() kurallarının (saat penceresi, günlük sınır, iki ders arası) bekleyen işlere uygulanmış tahmini.
+    İşçi döngüsü Drive taramasıyla birlikte ARALIK_SN'de bir döner; gerçek başlama, plan saatinden sonraki ilk turdur."""
+    kuyruk = oku(KUYRUK, [])
+    simdi = time.time()
+    a, b = (int(x) for x in SAATLER.split("-"))
+
+    def gun_bas(t):
+        return time.mktime(time.strptime(time.strftime("%Y-%m-%d", time.localtime(t)), "%Y-%m-%d"))
+
+    def pencereye_al(t):
+        for _ in range(48):  # saat penceresi dışındaysa bir sonraki uygun saate
+            h = time.localtime(t).tm_hour
+            if (a <= h < b) if a < b else (h >= a or h < b):
+                return t
+            t = gun_bas(t) + 3600 * (h + 1)
+        return t
+
+    islenen = {}  # gün başlangıcı → o gün taslağa dönen iş sayısı
+    for v in oku(KAYIT, {}).values():
+        if v.get("durum") == "taslak" and v.get("zaman"):
+            islenen[gun_bas(v["zaman"])] = islenen.get(gun_bas(v["zaman"]), 0) + 1
+    bugun = islenen.get(gun_bas(simdi), 0)
+    son = max((k.get("basladi", 0) or 0 for k in kuyruk), default=0)
+    plan = []
+    for j in [j for j in kuyruk if j.get("durum") == "bekliyor"]:
+        t = max(simdi, j.get("sonra", 0) or 0, son + DERS_ARASI_SN if son else 0)
+        for _ in range(60):
+            t = pencereye_al(t)
+            if islenen.get(gun_bas(t), 0) < GUNLUK_SINIR:
+                break
+            t = gun_bas(t) + 86400
+        islenen[gun_bas(t)] = islenen.get(gun_bas(t), 0) + 1
+        son = t
+        plan.append({"is_id": j["is_id"], "tahmini": t, "sonra": j.get("sonra", 0) or 0})
+    return {"gunluk_sinir": GUNLUK_SINIR, "ders_arasi_sn": DERS_ARASI_SN, "saatler": SAATLER, "aralik_sn": ARALIK_SN,
+            "bugun_islenen": bugun,
+            "plan": plan, "zaman": simdi}
 
 
 class H(BaseHTTPRequestHandler):
@@ -79,8 +121,11 @@ class H(BaseHTTPRequestHandler):
         if yol == "/checklist":
             return self._json(200, oku(STATE / "checklist.json", {}))
         if yol == "/kuyruk":
-            return self._json(200, [{k: j.get(k) for k in ("is_id", "yol", "durum", "eklendi", "deneme", "son_mesaj")}
+            return self._json(200, [{k: j.get(k) for k in ("is_id", "yol", "durum", "eklendi", "deneme", "son_mesaj",
+                                                                 "sonra", "basladi", "uyari")}
                                     | {"konular": [k.get("konu") for k in j.get("konular") or []]} for j in oku(KUYRUK, [])])
+        if yol == "/zamanlama":
+            return self._json(200, zamanlama())
         m = re.match(r"^/taslak/([^/]+)(?:/dosya/([^/]+))?$", yol)
         if m:
             d = self._taslak(m.group(1))
