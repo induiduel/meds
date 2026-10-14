@@ -140,6 +140,7 @@ BOLUMLER: dict[str, dict] = {
 KARABUK_BOLUMLERI = ["kurumlar", "cevre", "istatistik"]
 
 MUFREDAT_DERSLERI = {"Halk Sağlığı", "Aile Hekimliği"}
+HAVUZ: dict | None = None
 SORU_SINIRI = 80  # bölüm başına "Kendini sına" havuzu
 TIER_PUAN = {"altin": 4, "saglam": 3, "yuksek": 3, "orta": 2, "kritik": 0, "zayif": 0}
 
@@ -183,6 +184,8 @@ def kurul_no(q: dict):
 
 
 def main() -> None:
+    global HAVUZ
+    HAVUZ = yukle(OUT / "havuz.json") if (OUT / "havuz.json").exists() else None
     sorular = yukle(DATA / "pastQuestions.json")
     desteler = yukle(DATA / "interactive_learning_decks.json")
     spot_veri = yukle(DATA / "exam_spots_k1.json")
@@ -330,7 +333,12 @@ def main() -> None:
                     if "CHECKPOINT" in t or "OYUN SAYFASI" in t:
                         continue
                     if any(r.search(t) for r in rx):
-                        bulunan.append({"deste": d["id"], "kisa": d["kisa"], "slayt": i + 1, "baslik": t})
+                        # Slaytın anlatımı (Öğren destesi verisi) sayfada "Dersteki anlatım" olarak açılır
+                        anlatim = str(sl.get("synthesisNarrative") or sl.get("content") or "").strip()
+                        anlatim = re.sub(r"> \[!(IMPORTANT|NOTE|TIP|WARNING)\]\s*", "", anlatim)
+                        if len(anlatim) > 1400:
+                            anlatim = anlatim[:1400].rsplit("\n", 1)[0] + "\n…"
+                        bulunan.append({"deste": d["id"], "kisa": d["kisa"], "slayt": i + 1, "baslik": t, "anlatim": anlatim})
                         break
             if bulunan:
                 capalar[cid] = bulunan[:3]
@@ -344,6 +352,17 @@ def main() -> None:
                         spt.append({"id": s["id"], "baslik": s.get("baslik"), "spot": s.get("spot"), "onem": s.get("onem", 1), "ders": d["baslik"]})
         spt.sort(key=lambda x: -int(x.get("onem") or 0))
 
+        # ---- bilgi havuzu konuları: bölümün sorularını kapsayan havuz konuları (ortak soru sayısına göre)
+        havuz_bag = []
+        if HAVUZ:
+            soru_ids = {q["id"] for q, *_ in secilen}
+            for hk in HAVUZ.get("konular", []):
+                ids = {sid for hb in hk.get("basliklar", []) for b in hb.get("bilgiler", []) for sid in (b.get("sorular") or [])}
+                ortak = len(ids & soru_ids)
+                if ortak:
+                    havuz_bag.append({"id": hk["id"], "konu": hk["konu"], "ortak": ortak, "bilgi": sum(len(hb.get("bilgiler", [])) for hb in hk.get("basliklar", []))})
+            havuz_bag.sort(key=lambda x: -x["ortak"])
+
         sonuc["bolumler"][bid] = {
             "konular": konular,
             "soru_sayisi": len(secilen),
@@ -355,6 +374,7 @@ def main() -> None:
             "desteler": dst,
             "capalar": capalar,
             "spotlar": spt[:24],
+            "havuz_konulari": havuz_bag[:6],
         }
         print(f"{bid:13s} soru={len(secilen):4d} havuz={len(soru_dosya):3d} kazanım-konu={len(kz_list):2d} deste={len(dst):2d} çapa={len(capalar):2d} spot={len(spt):3d}")
 
@@ -372,6 +392,22 @@ def main() -> None:
     mufredat.sort(key=lambda x: (x["kurul"], x["ders"], -x["cikmis"]))
     sonuc["mufredat"] = mufredat
     print("müfredat konusu:", len(mufredat))
+
+    # ---- bilgi havuzu için: tüm Halk Sağlığı çıkmış soruları (hafif kopya; havuz sayfası konu konu süzer)
+    havuz_sorular = []
+    for q in sorular:
+        if q.get("status") == "quarantined" or q.get("discipline") not in MUFREDAT_DERSLERI:
+            continue
+        ops = secenekler(q)
+        dogru = (q.get("correctAnswer") or "").strip()
+        if len(ops) < 2 or dogru not in {o["k"] for o in ops}:
+            continue
+        havuz_sorular.append({"id": q["id"], "kok": soru_metin(q).strip(), "secenekler": ops, "dogru": dogru,
+                              "aciklama": (q.get("explanation") or "").strip()[:1600], "yil": q.get("examYear") or "",
+                              "kurul": kurul_no(q), "ders": q.get("discipline") or "", "konu": q.get("topic") or ""})
+    with (OUT / "sorular" / "havuz.json").open("w", encoding="utf-8") as f:
+        json.dump(havuz_sorular, f, ensure_ascii=False, separators=(",", ":"))
+    print("havuz soruları:", len(havuz_sorular))
 
     sonuc["karabuk_bolumleri"] = KARABUK_BOLUMLERI
     with (OUT / "baglantilar.json").open("w", encoding="utf-8") as f:

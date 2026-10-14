@@ -1,8 +1,10 @@
 import React, { createContext, useCallback, useContext, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import {
-  ArrowRight, BookOpenCheck, Check, ChevronDown, ChevronLeft, ChevronRight, Crosshair, ExternalLink, GraduationCap,
-  Presentation, RotateCcw, Shuffle, Table2, Target, X,
+  AlertTriangle, ArrowRight, BookOpenCheck, BrainCircuit, Check, CircleSlash, ChevronDown, ChevronLeft, ChevronRight, Copy, Crosshair, ExternalLink, GraduationCap, History,
+  LayoutGrid, List, Presentation, RotateCcw, Shuffle, Table2, Target, X,
 } from 'lucide-react';
+import { toast } from '../ui/Toast';
+import { maddeMetni, useGecmis, useGorunum, yillikMi, type GecmisIstek, type MaddeOge } from './saglikBaglam';
 import { linkClick, navigateTo, pathFor } from '../../router';
 import {
   bolumSorulari, sayi, type BaglantiCapa, type BolumBaglanti, type BolumId, type Kaynak, type SeriNokta, type SinavSorusu,
@@ -75,8 +77,9 @@ export const Kaynakca: React.FC<{ dogrulanamayan?: string[] }> = ({ dogrulanamay
       </ol>
       {temiz.length > 0 && (
         <details className="sbk-dogrulanamayan">
-          <summary>Resmî kaynakta teyit edilemediği için sayı yazılmayan konular ({temiz.length})</summary>
-          <ul>{temiz.map((x, i) => <li key={i}>{x}</li>)}</ul>
+          <summary><AlertTriangle aria-hidden /> Teyit edilemediği için sayı yazılmayan konular ({temiz.length})<ChevronDown aria-hidden className="sbk-dg-ok" /></summary>
+          <p>Bu konularda resmî kaynakta değer bulunamadı ya da kaynaklar çelişti; sayfaya tahmini değer yazılmadı.</p>
+          <ul>{temiz.map((x, i) => <li key={i}><CircleSlash aria-hidden /><span>{x}</span></li>)}</ul>
         </details>
       )}
     </section>
@@ -129,17 +132,36 @@ export const IcBag: React.FC<{ to: string; className?: string; children: React.R
 
 export const desteYolu = (id: string, slayt?: number) => `${pathFor('learn')}/${encodeURIComponent(id)}${slayt ? `?slide=${slayt}` : ''}`;
 
-/** Veri bloğunun dersteki karşılığı: "Derste · Ana Çocuk Sağlığı İzlemi · Slayt 26" */
+/** Veri bloğunun dersteki karşılığı: "Derste · Ana Çocuk Sağlığı İzlemi · Slayt 26" + slaytın anlatımı (açılır) */
 export const DersteCapa: React.FC<{ capalar?: BaglantiCapa[] }> = ({ capalar }) => {
+  const [acik, setAcik] = useState<number | null>(null);
   if (!capalar?.length) return null;
+  const liste = capalar.slice(0, 2);
+  const secili = acik != null ? liste[acik] : null;
   return (
-    <div className="sbk-capa" role="list" aria-label="Bu konunun işlendiği ders slaytları">
-      <span className="sbk-capa-l"><Presentation aria-hidden /> Derste</span>
-      {capalar.slice(0, 2).map((c) => (
-        <IcBag key={`${c.deste}-${c.slayt}`} to={desteYolu(c.deste, c.slayt)} className="sbk-capa-a" title={c.baslik}>
-          <span role="listitem">{c.kisa} · <b>Slayt {c.slayt}</b></span>
-        </IcBag>
-      ))}
+    <div className="sbk-capa-kap">
+      <div className="sbk-capa" role="list" aria-label="Bu konunun işlendiği ders slaytları">
+        <span className="sbk-capa-l"><Presentation aria-hidden /> Derste</span>
+        {liste.map((c, i) => (
+          <span key={`${c.deste}-${c.slayt}`} className="sbk-capa-oge" role="listitem">
+            <IcBag to={desteYolu(c.deste, c.slayt)} className="sbk-capa-a" title={`${c.baslik} — Öğren destesinde aç`}>
+              {c.kisa} · <b>Slayt {c.slayt}</b>
+            </IcBag>
+            {c.anlatim && (
+              <button type="button" className="sbk-capa-anlatim" aria-expanded={acik === i} onClick={() => setAcik(acik === i ? null : i)}>
+                {acik === i ? 'Anlatımı gizle' : 'Dersteki anlatım'} <ChevronDown aria-hidden />
+              </button>
+            )}
+          </span>
+        ))}
+      </div>
+      {secili?.anlatim && (
+        <div className="sbk-capa-metin">
+          <p className="sbk-capa-baslik"><Presentation aria-hidden /> {secili.kisa} · Slayt {secili.slayt}: <b>{secili.baslik}</b></p>
+          <MiniMetin metin={secili.anlatim} />
+          <IcBag to={desteYolu(secili.deste, secili.slayt)} className="sbk-bag">Öğren destesinde etkileşimli olarak aç <ArrowRight aria-hidden /></IcBag>
+        </div>
+      )}
     </div>
   );
 };
@@ -148,45 +170,119 @@ export const DersteCapa: React.FC<{ capalar?: BaglantiCapa[] }> = ({ capalar }) 
  * Yapı taşları: Blok (kart), Kpi (gösterge kutusu), Rozet
  * =============================================================================================================== */
 
+/** Madde ağacı (madde görünümü ve geçmiş yıllar listesi) */
+export const MaddeAgaci: React.FC<{ ogeler: MaddeOge[]; sik?: boolean }> = ({ ogeler, sik }) => (
+  <ul className={`sbk-agac ${sik ? 'is-sik' : ''}`}>
+    {ogeler.map((o, i) => (typeof o === 'string' ? (
+      <li key={i}><span>{satirIci(o)}</span></li>
+    ) : (
+      <li key={i}>
+        <span>{satirIci(o.metin)}<Atif id={o.kaynak} konum={o.konum} />{o.ek?.length ? <EkAtif ids={o.ek} /> : null}</span>
+        {o.alt?.length ? <MaddeAgaci ogeler={o.alt} sik /> : null}
+      </li>
+    )))}
+  </ul>
+);
+
+/** Maddeleri panoya düz metin (kaynak numaralarıyla) olarak kopyalar */
+export const useMaddeKopyala = () => {
+  const { sira } = useContext(AtifCtx);
+  return useCallback(async (baslik: string, ogeler: MaddeOge[]) => {
+    const metin = `${baslik}\n${maddeMetni(ogeler, (id) => (id ? sira.get(id) : undefined))}`;
+    try {
+      await navigator.clipboard.writeText(metin);
+      toast.show('success', 'Maddeler kopyalandı', baslik);
+    } catch {
+      toast.show('error', 'Kopyalanamadı', 'Tarayıcı panoya yazmaya izin vermedi');
+    }
+  }, [sira]);
+};
+
 export const Blok: React.FC<{
   baslik: React.ReactNode; ikon?: React.ElementType; alt?: React.ReactNode; capalar?: BaglantiCapa[];
   arac?: React.ReactNode; genis?: boolean; id?: string; children: React.ReactNode; className?: string;
-}> = ({ baslik, ikon: Ikon, alt, capalar, arac, genis, id, children, className }) => (
-  <section className={`sbk-blok ${genis ? 'is-genis' : ''} ${className || ''}`} id={id}>
-    <header className="sbk-blok-h">
-      <div className="sbk-blok-t">
-        {Ikon && <span className="sbk-blok-ic"><Ikon aria-hidden /></span>}
-        <div>
-          <h3>{baslik}</h3>
-          {alt && <p>{alt}</p>}
+  /** Madde görünümünün içeriği (verilirse blokta "Madde madde" düğmesi çıkar) */
+  maddeler?: MaddeOge[] | (() => MaddeOge[]);
+}> = ({ baslik, ikon: Ikon, alt, capalar, arac, genis, id, children, className, maddeler }) => {
+  const { mod } = useGorunum();
+  const [yerel, setYerel] = useState<'kart' | 'madde' | null>(null);
+  useEffect(() => { setYerel(null); }, [mod]);
+  const etkin = maddeler ? (yerel ?? mod) : 'kart';
+  const liste = useMemo(() => (etkin === 'madde' && maddeler ? (typeof maddeler === 'function' ? maddeler() : maddeler) : null), [etkin, maddeler]);
+  const kopyala = useMaddeKopyala();
+  const baslikMetni = typeof baslik === 'string' ? baslik : 'Sağlık Bakanlığı';
+  return (
+    <section className={`sbk-blok ${genis ? 'is-genis' : ''} ${className || ''}`} id={id}>
+      <header className="sbk-blok-h">
+        <div className="sbk-blok-t">
+          {Ikon && <span className="sbk-blok-ic"><Ikon aria-hidden /></span>}
+          <div>
+            <h3>{baslik}</h3>
+            {alt && <p>{alt}</p>}
+          </div>
         </div>
-      </div>
-      {arac && <div className="sbk-blok-arac">{arac}</div>}
-    </header>
-    <div className="sbk-blok-g">{children}</div>
-    <DersteCapa capalar={capalar} />
-  </section>
-);
+        {(arac || maddeler) && (
+          <div className="sbk-blok-arac">
+            {arac}
+            {maddeler && etkin === 'madde' && liste && (
+              <button type="button" className="sbk-ikon-btn" onClick={() => kopyala(baslikMetni, liste)} title="Maddeleri kopyala" aria-label="Maddeleri kopyala"><Copy aria-hidden /></button>
+            )}
+            {maddeler && (
+              <button
+                type="button" className="sbk-ikon-btn" aria-pressed={etkin === 'madde'}
+                onClick={() => setYerel(etkin === 'madde' ? 'kart' : 'madde')}
+                title={etkin === 'madde' ? 'Kart görünümü' : 'Madde madde göster'} aria-label={etkin === 'madde' ? 'Kart görünümü' : 'Madde madde göster'}
+              >
+                {etkin === 'madde' ? <LayoutGrid aria-hidden /> : <List aria-hidden />}
+              </button>
+            )}
+          </div>
+        )}
+      </header>
+      <div className="sbk-blok-g">{liste ? (liste.length ? <MaddeAgaci ogeler={liste} /> : <p className="sbk-bos">Bu blokta madde yok.</p>) : children}</div>
+      <DersteCapa capalar={capalar} />
+    </section>
+  );
+};
 
 export const Kpi: React.FC<{
   ad: string; deger: React.ReactNode; birim?: string; yil?: number | string; kaynak?: string; konum?: string;
   not?: React.ReactNode; seri?: SeriNokta[]; ton?: 'ok' | 'warn' | 'bad'; ipucu?: string; ek?: string[];
-}> = ({ ad, deger, birim, yil, kaynak, konum, not, seri, ton, ipucu, ek }) => (
-  <div className={`sbk-kpi ${ton ? `is-${ton}` : ''}`} title={ipucu}>
-    <span className="sbk-kpi-ad">{ad}</span>
-    <span className="sbk-kpi-d">
-      <b data-num>{deger}</b>
-      {birim && <small>{birim}</small>}
-      <Atif id={kaynak} konum={konum} />
-      {ek && ek.length > 0 && <EkAtif ids={ek} />}
-    </span>
-    <span className="sbk-kpi-alt">
-      {yil != null && <span>{yil}</span>}
-      {not && <span>{not}</span>}
-    </span>
-    {seri && seri.length > 2 && <Kivilcim seri={seri} />}
-  </div>
-);
+  /** Geçmiş yıllar penceresi için ek bilgi (karşılaştırma serisi, tanım…); seri ≥ 2 yıl ise kutu dokunulabilir */
+  gecmis?: Partial<GecmisIstek>;
+}> = ({ ad, deger, birim, yil, kaynak, konum, not, seri, ton, ipucu, ek, gecmis }) => {
+  const ac = useGecmis();
+  const yilSay = (seri || []).filter((p) => typeof p.deger === 'number').length;
+  const acilir = yilSay >= 2;
+  const ic = (
+    <>
+      <span className="sbk-kpi-ad">{ad}</span>
+      <span className="sbk-kpi-d">
+        <b data-num>{deger}</b>
+        {birim && <small>{birim}</small>}
+        <Atif id={kaynak} konum={konum} />
+        {ek && ek.length > 0 && <EkAtif ids={ek} />}
+      </span>
+      <span className="sbk-kpi-alt">
+        {yil != null && <span>{yil}</span>}
+        {not && <span>{not}</span>}
+      </span>
+      {seri && seri.filter(yillikMi).length > 2 && <Kivilcim seri={seri} />}
+      {acilir && <span className="sbk-kpi-gecmis"><History aria-hidden /> {yilSay} yıl</span>}
+    </>
+  );
+  if (!acilir) return <div className={`sbk-kpi ${ton ? `is-${ton}` : ''}`} title={ipucu}>{ic}</div>;
+  return (
+    <div
+      className={`sbk-kpi is-acilir ${ton ? `is-${ton}` : ''}`} title={ipucu || 'Geçmiş yılları göster'} role="button" tabIndex={0}
+      aria-label={`${ad}: geçmiş yılları göster`}
+      onClick={(e) => { if ((e.target as HTMLElement).closest('a')) return; ac({ baslik: ad, birim, seriler: [{ ad, seri: seri! }], kaynak, ek, konum, ...gecmis }); }}
+      onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); ac({ baslik: ad, birim, seriler: [{ ad, seri: seri! }], kaynak, ek, konum, ...gecmis }); } }}
+    >
+      {ic}
+    </div>
+  );
+};
 
 export const Rozet: React.FC<{ ton?: 'accent' | 'ok' | 'warn' | 'bad' | 'ai' | 'clinic' | 'nötr'; children: React.ReactNode }> = ({ ton = 'nötr', children }) => (
   <span className={`sbk-rozet t-${ton === 'nötr' ? 'n' : ton}`}>{children}</span>
@@ -196,19 +292,19 @@ export const Rozet: React.FC<{ ton?: 'accent' | 'ok' | 'warn' | 'bad' | 'ai' | '
  * Grafikler (tek seri vurgu rengi; iki seri vurgu + nötr). Üzerine gelince ipucu, klavyeyle gezinme, tablo görünümü.
  * =============================================================================================================== */
 
-function useGenislik<T extends HTMLElement>(): [React.RefObject<T | null>, number] {
-  const ref = useRef<T>(null);
+/** Kapsayıcı genişliği. Geri çağrımlı referans: öge sonradan (ör. veri yüklenince) bağlansa da ölçülür. */
+export function useGenislik<T extends HTMLElement>(): [(el: T | null) => void, number] {
+  const [el, setEl] = useState<T | null>(null);
   const [w, setW] = useState(0);
   useLayoutEffect(() => {
-    const el = ref.current;
     if (!el) return;
     setW(el.clientWidth);
     if (typeof ResizeObserver === 'undefined') return;
     const ro = new ResizeObserver(() => setW(el.clientWidth));
     ro.observe(el);
     return () => ro.disconnect();
-  }, []);
-  return [ref, w];
+  }, [el]);
+  return [setEl, w];
 }
 
 // Yalnız tek yıllık noktalar ("2002-2003" gibi dönem değerleri eksende yer tutmaz)
@@ -427,6 +523,24 @@ export const DersPaneli: React.FC<{ b?: BolumBaglanti; onSina?: () => void }> = 
         )}
       </section>
 
+      {(b.havuz_konulari?.length || 0) > 0 && (
+        <section className="sbk-ders-k sbk-ders-havuz">
+          <h3><BrainCircuit aria-hidden /> Bilgi havuzunda</h3>
+          <p className="sbk-muted">Bu konuların çıkmış sorularından çıkarılan bilinmesi gereken bilgiler</p>
+          <ul className="sbk-deste-l">
+            {b.havuz_konulari!.slice(0, 4).map((h) => (
+              <li key={h.id}>
+                <IcBag to={`${pathFor('health_ministry')}/bilgi-havuzu?konu=${encodeURIComponent(h.id)}`} className="sbk-deste-a">
+                  <span className="sbk-deste-t">{h.konu}</span>
+                  <span className="sbk-deste-m">{h.bilgi} bilgi · {h.ortak} ortak soru</span>
+                  <ChevronRight aria-hidden />
+                </IcBag>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
+
       {(anaDesteler.length > 0 || ekDesteler.length > 0) && (
         <section className="sbk-ders-k">
           <h3><GraduationCap aria-hidden /> Öğren desteleri</h3>
@@ -511,7 +625,7 @@ const karistir = <T,>(a: T[], tohum: number) => {
   return r;
 };
 
-export const KendiniSina: React.FC<{ bolum: BolumId; baslik: string; toplam: number }> = ({ bolum, baslik, toplam }) => {
+export const KendiniSina: React.FC<{ bolum: BolumId; baslik: string; toplam: number; idler?: string[] }> = ({ bolum, baslik, toplam, idler }) => {
   const [sorular, setSorular] = useState<SinavSorusu[] | null>(null);
   const [tohum, setTohum] = useState(0);
   const [i, setI] = useState(0);
@@ -520,9 +634,14 @@ export const KendiniSina: React.FC<{ bolum: BolumId; baslik: string; toplam: num
   useEffect(() => {
     let iptal = false;
     setSorular(null); setI(0); setKonu('');
-    bolumSorulari(bolum).then((s) => { if (!iptal) setSorular(s); });
+    bolumSorulari(bolum).then((s) => {
+      if (iptal) return;
+      // Bilgi havuzu: yalnız seçili konunun soruları
+      const kume = idler ? new Set(idler) : null;
+      setSorular(kume ? s.filter((q) => kume.has(q.id)) : s);
+    });
     return () => { iptal = true; };
-  }, [bolum]);
+  }, [bolum, idler?.join(',')]);
   const konular = useMemo(() => {
     const m = new Map<string, number>();
     for (const q of sorular || []) if (q.konu) m.set(q.konu, (m.get(q.konu) || 0) + 1);
@@ -557,7 +676,7 @@ export const KendiniSina: React.FC<{ bolum: BolumId; baslik: string; toplam: num
       <header className="sbk-sina-h">
         <div>
           <h3><Crosshair aria-hidden /> Kendini sına</h3>
-          <p>{baslik} konularından {toplam} çıkmış sorunun en sağlam {sorular.length} tanesi · çözülen {cozulen.length}, doğru {dogru}</p>
+          <p>{idler ? `${baslik}: ${sorular.length} çıkmış soru` : `${baslik} konularından ${toplam} çıkmış sorunun en sağlam ${sorular.length} tanesi`} · çözülen {cozulen.length}, doğru {dogru}</p>
         </div>
         <div className="sbk-sina-arac">
           {konular.length > 1 && (
@@ -605,5 +724,74 @@ export const KendiniSina: React.FC<{ bolum: BolumId; baslik: string; toplam: num
         </footer>
       </article>
     </section>
+  );
+};
+
+/* ===============================================================================================================
+ * Ders kaynağı bağlantısı: kaynak bir Öğren destesiyse "Slayt N" çipi destenin o slaytını açar
+ * =============================================================================================================== */
+
+export const SlaytBag: React.FC<{ kaynak?: string; slayt?: unknown }> = ({ kaynak, slayt }) => {
+  const { kaynaklar } = useContext(AtifCtx);
+  const k = kaynak ? kaynaklar[kaynak] : undefined;
+  // Veri sayı, dizi ya da {alt: no} nesnesi olabilir — yalnız tam sayılar alınır
+  const nolar = (typeof slayt === 'number' ? [slayt] : Array.isArray(slayt) ? slayt : slayt && typeof slayt === 'object' ? Object.values(slayt as Record<string, unknown>) : [])
+    .filter((x): x is number => typeof x === 'number' && Number.isFinite(x) && x > 0);
+  if (!k?.deste || !nolar.length) return null;
+  const etiket = [...new Set(nolar)].sort((x, y) => x - y).join('–');
+  return (
+    <IcBag to={desteYolu(k.deste, nolar[0])} className="sbk-slayt-bag" title={`${k.belge} — slayt ${etiket}`}>
+      <Presentation aria-hidden /> Slayt {etiket}
+    </IcBag>
+  );
+};
+
+/* ===============================================================================================================
+ * Okunur tablo: geniş kapta tablo; dar kapta (telefon) her satır bir kart ("Sütun: değer" satırlarıyla)
+ * =============================================================================================================== */
+
+export interface OkunurSutun { anahtar: string; ad: string }
+export const OkunurTablo: React.FC<{
+  sutunlar: OkunurSutun[];
+  /** İlk sütun satır başlığıdır (kartta başlık olur) */
+  satirlar: Record<string, React.ReactNode>[];
+  baslik?: string;
+  dar?: number;
+}> = ({ sutunlar, satirlar, baslik, dar = 640 }) => {
+  const [ref, w] = useGenislik<HTMLDivElement>();
+  const kart = w > 0 && w < dar;
+  const [ilk, ...diger] = sutunlar;
+  return (
+    <div ref={ref} className="sbk-okunur">
+      {kart ? (
+        <ul className="sbk-okunur-kartlar" aria-label={baslik}>
+          {satirlar.map((r, i) => (
+            <li key={i}>
+              <h4>{r[ilk.anahtar]}</h4>
+              <dl>
+                {diger.map((s) => (r[s.anahtar] != null && r[s.anahtar] !== '' ? (
+                  <div key={s.anahtar}><dt>{s.ad}</dt><dd>{r[s.anahtar]}</dd></div>
+                ) : null))}
+              </dl>
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <div className="sbk-tablo-kap">
+          <table className="sbk-tablo sbk-okunur-t">
+            {baslik && <caption className="sbk-gizli">{baslik}</caption>}
+            <thead><tr>{sutunlar.map((s) => <th key={s.anahtar} scope="col">{s.ad}</th>)}</tr></thead>
+            <tbody>
+              {satirlar.map((r, i) => (
+                <tr key={i}>
+                  <th scope="row">{r[ilk.anahtar]}</th>
+                  {diger.map((s) => <td key={s.anahtar}>{r[s.anahtar] ?? '—'}</td>)}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      )}
+    </div>
   );
 };

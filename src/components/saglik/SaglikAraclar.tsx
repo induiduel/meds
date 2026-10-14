@@ -1,6 +1,6 @@
 import React, { useMemo, useState } from 'react';
-import { Check, ChevronDown, Eye, EyeOff, Search } from 'lucide-react';
-import { Atif, MiniMetin } from './SaglikOrtak';
+import { Check, ChevronDown, Eye, EyeOff, LayoutList, Search, Table2 } from 'lucide-react';
+import { Atif, MiniMetin, useGenislik } from './SaglikOrtak';
 import { kucukHarf, sayi, sonDeger, type AnneVeri, type AsiVeri, type Gosterge, type TurkiyeVeri } from './saglikVeri';
 
 /* ===============================================================================================================
@@ -23,6 +23,10 @@ export const AsiTakvimi: React.FC<{ v: AsiVeri }> = ({ v }) => {
   const [secili, setSecili] = useState<string>(() => zamanlar.find((z) => z.ay === 2)?.id || zamanlar[0]?.id || '');
   const [ezber, setEzber] = useState(false);
   const [acik, setAcik] = useState<Set<string>>(() => new Set());
+  const [kapRef, genislik] = useGenislik<HTMLDivElement>();
+  const [secimGorunum, setSecimGorunum] = useState<'tablo' | 'liste' | null>(null);
+  // Dar kapta (telefon) tablo ekrana sığmaz → ziyaret listesi; kullanıcı isterse tabloya geçer
+  const gorunum = secimGorunum ?? (genislik && genislik < 620 ? 'liste' : 'tablo');
   if (!zamanlar.length || !asilar.length) return null;
   const hucre = (asiId: string, zId: string) => asilar.find((a) => a.id === asiId)?.dozlar.filter((d) => d.zaman === zId) || [];
   const zIndex = Math.max(0, zamanlar.findIndex((z) => z.id === secili));
@@ -30,7 +34,7 @@ export const AsiTakvimi: React.FC<{ v: AsiVeri }> = ({ v }) => {
   const buZiyaret = asilar.flatMap((a) => a.dozlar.filter((d) => d.zaman === secili).map((d) => ({ a, d })));
   const ac = (k: string) => setAcik((p) => new Set(p).add(k));
   return (
-    <div className="sbk-asi">
+    <div className="sbk-asi" ref={kapRef}>
       <div className="sbk-asi-arac">
         <label className="sbk-kaydir">
           <span>Ziyaret: <b>{seciliZ?.etiket}</b></span>
@@ -40,10 +44,40 @@ export const AsiTakvimi: React.FC<{ v: AsiVeri }> = ({ v }) => {
             aria-valuetext={seciliZ?.etiket}
           />
         </label>
-        <button type="button" className={`sbk-btn ${ezber ? 'is-dolu' : ''}`} onClick={() => { setEzber((x) => !x); setAcik(new Set()); }} aria-pressed={ezber}>
-          {ezber ? <EyeOff aria-hidden /> : <Eye aria-hidden />} {ezber ? 'Ezber modu açık' : 'Ezber modu'}
-        </button>
+        <div className="sbk-asi-dugmeler">
+          <div className="sbk-seg" role="radiogroup" aria-label="Takvim görünümü">
+            <button type="button" role="radio" aria-checked={gorunum === 'liste'} className={gorunum === 'liste' ? 'is-sec' : ''} onClick={() => setSecimGorunum('liste')}><LayoutList aria-hidden /> Ziyaret</button>
+            <button type="button" role="radio" aria-checked={gorunum === 'tablo'} className={gorunum === 'tablo' ? 'is-sec' : ''} onClick={() => setSecimGorunum('tablo')}><Table2 aria-hidden /> Tablo</button>
+          </div>
+          <button type="button" className={`sbk-btn ${ezber ? 'is-dolu' : ''}`} onClick={() => { setEzber((x) => !x); setAcik(new Set()); }} aria-pressed={ezber}>
+            {ezber ? <EyeOff aria-hidden /> : <Eye aria-hidden />} {ezber ? 'Ezber açık' : 'Ezber modu'}
+          </button>
+        </div>
       </div>
+      {gorunum === 'liste' ? (
+        <ol className="sbk-asi-liste" aria-label="Ziyaretlere göre aşılar">
+          {zamanlar.map((z) => {
+            const burada = asilar.flatMap((a) => a.dozlar.filter((d) => d.zaman === z.id).map((d) => ({ a, d })));
+            return (
+              <li key={z.id} className={z.id === secili ? 'is-sec' : ''}>
+                <button type="button" className="sbk-asi-liste-z" onClick={() => setSecili(z.id)} aria-pressed={z.id === secili}>
+                  <b>{z.etiket}</b><small>{burada.length ? `${burada.length} aşı` : 'rutin aşı yok'}</small>
+                </button>
+                <div className="sbk-asi-cipler">
+                  {burada.map(({ a, d }) => {
+                    const k = `${a.id}:${z.id}`;
+                    return ezber && !acik.has(k) ? (
+                      <button key={a.id} type="button" className="sbk-asi-cip is-gizli" onClick={() => ac(k)} aria-label={`${z.etiket}: gizli aşıyı göster`}>?</button>
+                    ) : (
+                      <span key={a.id} className="sbk-asi-cip" title={`${a.ad} — ${d.doz}`}><b>{a.kisa}</b><i>{dozKisa(d.doz)}</i></span>
+                    );
+                  })}
+                </div>
+              </li>
+            );
+          })}
+        </ol>
+      ) : (
       <div className="sbk-asi-kap" role="region" aria-label="Aşı takvimi tablosu" tabIndex={0}>
         <table className="sbk-asi-t">
           <thead>
@@ -81,7 +115,8 @@ export const AsiTakvimi: React.FC<{ v: AsiVeri }> = ({ v }) => {
           </tbody>
         </table>
       </div>
-      <p className="sbk-muted sbk-asi-lejant">Hücredeki sayı doz sırasıdır; R = rapel (pekiştirme), Ek = ek doz. Tabloyu yatay kaydırabilirsin.</p>
+      )}
+      <p className="sbk-muted sbk-asi-lejant">Sayı doz sırasıdır; R = rapel (pekiştirme), Ek = ek doz. Ziyarete dokun: o ziyaretin ayrıntısı aşağıda.</p>
       <div className="sbk-asi-ziyaret" aria-live="polite">
         <h4>
           {seciliZ?.etiket}: {buZiyaret.length ? `${buZiyaret.length} aşı` : 'bu ziyarette rutin aşı yok'}
@@ -108,10 +143,47 @@ export const AsiTakvimi: React.FC<{ v: AsiVeri }> = ({ v }) => {
  * =============================================================================================================== */
 
 export const GebeIzlemSeridi: React.FC<{ izlemler: NonNullable<AnneVeri['dob_izlemleri']> }> = ({ izlemler }) => {
+  const [kapRef, genislik] = useGenislik<HTMLDivElement>();
+  return <div ref={kapRef}><GebeIzlemIc izlemler={izlemler} dar={!!genislik && genislik < 560} /></div>;
+};
+
+const GebeIzlemIc: React.FC<{ izlemler: NonNullable<AnneVeri['dob_izlemleri']>; dar: boolean }> = ({ izlemler, dar }) => {
   const [sec, setSec] = useState(izlemler[0]?.no ?? 1);
   const s = izlemler.find((x) => x.no === sec) || izlemler[0];
   if (!izlemler.length || !s) return null;
   const MAX = 42;
+  // Dar kapta hafta şeridi okunmaz → dikey izlem kartları (her kartta 0–42 hafta içinde konumu gösteren ince çubuk)
+  if (dar) {
+    return (
+      <div className="sbk-gebe is-dar">
+        <ol className="sbk-gebe-kartlar" role="tablist" aria-label="Gebe izlemleri">
+          {izlemler.map((x) => {
+            const bas = x.hafta_bas ?? 0, son = x.hafta_son ?? bas + 2;
+            const acik = x.no === sec;
+            return (
+              <li key={x.no} className={acik ? 'is-sec' : ''}>
+                <button type="button" role="tab" aria-selected={acik} onClick={() => setSec(x.no)}>
+                  <span className="sbk-gebe-no">{x.no}</span>
+                  <span className="sbk-gebe-k">
+                    <b>{bas}–{son}. hafta</b>
+                    <small>{x.zaman}</small>
+                    <span className="sbk-gebe-mini" aria-hidden><i style={{ left: `${(bas / MAX) * 100}%`, width: `${Math.max(3, ((son - bas) / MAX) * 100)}%` }} /></span>
+                  </span>
+                  <ChevronDown aria-hidden />
+                </button>
+                {acik && x.icerik?.length ? (
+                  <div className="sbk-gebe-detay">
+                    <ul>{x.icerik.map((m, i) => <li key={i}><BaslikliMadde metin={m} /></li>)}</ul>
+                    <p className="sbk-grafik-k">Kaynak <Atif id={x.kaynak} /></p>
+                  </div>
+                ) : null}
+              </li>
+            );
+          })}
+        </ol>
+      </div>
+    );
+  }
   return (
     <div className="sbk-gebe">
       <div className="sbk-gebe-serit" role="tablist" aria-label="Gebe izlemleri">

@@ -74,3 +74,41 @@ Telefon: üstte yatay bölüm şeridi; masaüstü: solda bölüm rayı, ortada i
 3. `python3 scripts/saglik/baglantilari_kur.py` — çıkmış soru / kazanım / deste bağları → `baglantilar.json` + `sorular/<bölüm>.json`.
    Çıkmış sorular ya da desteler değişince yeniden çalıştır.
 4. `npx vite build` (sunucu yeniden başlatılmaz; veri ön yüzle derlenir).
+
+---
+
+# 2. tur (2026-10-14) — geçmiş yıllar, madde görünümü, mobil, sistem/mevzuat/kavram sayfaları
+
+Kullanıcı isteği: güncel değerlerin geçmiş yıllarını açılır pencerede madde madde görmek; her bilginin madde madde
+görüntülenebilmesi; gebe izlem ve aşı tablosunun telefona sığması; sağlık işleyişi, anayasal ve yönetmelik durumu,
+halk sağlığı merkezleri/müdürlükleri ve denetleyici kurumlar ayrı sayfalarda; halk sağlığı kavramı ve ilkeleri;
+sağlığın geliştirilmesi bileşenlerinin daha anlaşılır anlatımı; koruyucu yaklaşımın düzeyleri; tablolarda geçmiş yıllar.
+
+## Yapılacaklar
+
+1. **Geçmiş yıllar penceresi:** her gösterge kutusu dokununca pencere açar: grafik + yıl yıl madde listesi (değer, bir
+   önceki yıla göre değişim, kaynak). Karabük göstergeleri, kurum sayıları, hava kalitesi, iş kazaları için il serileri
+   (TÜİK il tabloları 2009–2025, SİY il tabloları 2017–2024, ÇDR yılları, SGK il tabloları) yeni araştırmayla eklenir.
+2. **Madde görünümü:** sayfa başında "Kart · Madde madde" seçimi (tarayıcıda hatırlanır) + her blokta "Madde madde"
+   düğmesi ve "Kopyala" (maddeleri düz metin olarak). Her blok kendi madde üreticisini taşır.
+3. **Mobil:** aşı takvimi dar kapta ziyaret listesine (ziyaret → aşı çipleri) döner; gebe izlem şeridi dar kapta
+   dikey izlem kartlarına döner.
+4. **Yeni bölümler** (gezinme iki grup: Veriler · Sistem ve kavramlar):
+   - `sistem` Sağlık sistemi ve işleyişi (finansman/GSS, hizmet basamakları ve sevk, aile hekimliği kaydı, MHRS, e-Nabız, 112)
+   - `mevzuat` Anayasa ve mevzuat (Anayasa md. 17, 56, 60…; kanunlar, CBK, yönetmelikler; ders bağları)
+   - `teskilat` Teşkilat ve denetim (merkez/taşra teşkilatı, İl/İlçe Sağlık Müdürlüğü, halk sağlığı birimleri, bağlı
+     kuruluşlar; denetleyici kurumlar: Rehberlik ve Teftiş, Sayıştay, DDK, Kamu Denetçiliği, TBMM, yargı, il hıfzıssıhha kurulu)
+   - `kavram` Halk sağlığı kavramı ve ilkeleri (tanımlar, 13 temel ilke, günümüz anlayışı, sosyal hekimlik)
+   - `gelistirme` Sağlığın geliştirilmesi (bileşenler: her biri "ne demek · neden · örnek · Türkiye'de hangi program · koruma düzeyi")
+   - `koruma` Koruyucu yaklaşım (doğal seyir şeridinde primordiyal → birincil → ikincil → üçüncül; amaç, örnekler, başarılı olduğu hastalıklar)
+   Kavram içeriği yalnız ders notlarından (Kurul 1 Halk Sağlığı Tarihçesi, Türkiye'de Sağlık Hizmetleri; Kurul 5 özetleri)
+   + resmî program/mevzuat kaynaklarından; ders kaynakları uygulama içi bağlantıyla (deste slaytı) atıflanır.
+
+## 2. tur durumu (2026-10-14)
+
+- [x] Geçmiş yıllar penceresi + Karabük geçmiş serileri · [x] Madde görünümü + kopyala · [x] Mobil (aşı ziyaret listesi, gebe
+  dikey kartlar, okunur tablolar) · [x] Kavram / geliştirme / koruma · [x] Sistem / mevzuat / teşkilat-denetim
+- [x] Sınav bilgi havuzu (`bilgi-havuzu`): 34 konu, 1.025 bilgi, 182 tablo, 430/430 Halk Sağlığı sorusu; konu başına Kendini sına
+- [x] Derste çapası slayt anlatımını açar · [x] 18 bölüm × 2 görünüm × 3 genişlik taraması temiz
+- Veri yenileme: `birlestir.py --kaynak <1. tur> --kaynak2 <2. tur>` (kavramlar, mevzuat_teskilat, havuz/*.json,
+  karabuk_tarihsel.json) → `baglantilari_kur.py` (havuz bağları ve `sorular/havuz.json` dahil) → `npx vite build`.

@@ -23,42 +23,738 @@
     "nufus": 135819,
     "ilce_merkezi": 123417,
     "belde_koy": 12402,
-    "yillik_artis_hizi_binde": 7.5
+    "yillik_artis_hizi_binde": 7.5,
+    "seri": [
+     {
+      "yil": 2007,
+      "deger": 119084,
+      "kaynak": "tuik_medas_adnks_ilce",
+      "konum": "MEDAS ADNKS — İl ve İlçe Nüfusları, ilçe düzeyi, Karabük(MERKEZ)"
+     },
+     {
+      "yil": 2008,
+      "deger": 116671,
+      "kaynak": "tuik_medas_adnks_ilce",
+      "konum": "MEDAS ADNKS — İl ve İlçe Nüfusları, ilçe düzeyi, Karabük(MERKEZ)"
+     },
+     {
+      "yil": 2009,
+      "deger": 118713,
+      "kaynak": "tuik_medas_adnks_ilce",
+      "konum": "MEDAS ADNKS — İl ve İlçe Nüfusları, ilçe düzeyi, Karabük(MERKEZ)"
+     },
+     {
+      "yil": 2010,
+      "deger": 119303,
+      "kaynak": "tuik_medas_adnks_ilce",
+      "konum": "MEDAS ADNKS — İl ve İlçe Nüfusları, ilçe düzeyi, Karabük(MERKEZ)"
+     },
+     {
+      "yil": 2011,
+      "deger": 119328,
+      "kaynak": "tuik_medas_adnks_ilce",
+      "konum": "MEDAS ADNKS — İl ve İlçe Nüfusları, ilçe düzeyi, Karabük(MERKEZ)"
+     },
+     {
+      "yil": 2012,
+      "deger": 123616,
+      "kaynak": "tuik_medas_adnks_ilce",
+      "konum": "MEDAS ADNKS — İl ve İlçe Nüfusları, ilçe düzeyi, Karabük(MERKEZ)"
+     },
+     {
+      "yil": 2013,
+      "deger": 124711,
+      "kaynak": "tuik_medas_adnks_ilce",
+      "konum": "MEDAS ADNKS — İl ve İlçe Nüfusları, ilçe düzeyi, Karabük(MERKEZ)"
+     },
+     {
+      "yil": 2014,
+      "deger": 127658,
+      "kaynak": "tuik_medas_adnks_ilce",
+      "konum": "MEDAS ADNKS — İl ve İlçe Nüfusları, ilçe düzeyi, Karabük(MERKEZ)"
+     },
+     {
+      "yil": 2015,
+      "deger": 132658,
+      "kaynak": "tuik_medas_adnks_ilce",
+      "konum": "MEDAS ADNKS — İl ve İlçe Nüfusları, ilçe düzeyi, Karabük(MERKEZ)"
+     },
+     {
+      "yil": 2016,
+      "deger": 134406,
+      "kaynak": "tuik_medas_adnks_ilce",
+      "konum": "MEDAS ADNKS — İl ve İlçe Nüfusları, ilçe düzeyi, Karabük(MERKEZ)"
+     },
+     {
+      "yil": 2017,
+      "deger": 135737,
+      "kaynak": "tuik_medas_adnks_ilce",
+      "konum": "MEDAS ADNKS — İl ve İlçe Nüfusları, ilçe düzeyi, Karabük(MERKEZ)"
+     },
+     {
+      "yil": 2018,
+      "deger": 131989,
+      "kaynak": "tuik_medas_adnks_ilce",
+      "konum": "MEDAS ADNKS — İl ve İlçe Nüfusları, ilçe düzeyi, Karabük(MERKEZ)"
+     },
+     {
+      "yil": 2019,
+      "deger": 133615,
+      "kaynak": "tuik_medas_adnks_ilce",
+      "konum": "MEDAS ADNKS — İl ve İlçe Nüfusları, ilçe düzeyi, Karabük(MERKEZ)"
+     },
+     {
+      "yil": 2020,
+      "deger": 131186,
+      "kaynak": "tuik_medas_adnks_ilce",
+      "konum": "MEDAS ADNKS — İl ve İlçe Nüfusları, ilçe düzeyi, Karabük(MERKEZ)"
+     },
+     {
+      "yil": 2021,
+      "deger": 135351,
+      "kaynak": "tuik_medas_adnks_ilce",
+      "konum": "MEDAS ADNKS — İl ve İlçe Nüfusları, ilçe düzeyi, Karabük(MERKEZ)"
+     },
+     {
+      "yil": 2022,
+      "deger": 137428,
+      "kaynak": "tuik_medas_adnks_ilce",
+      "konum": "MEDAS ADNKS — İl ve İlçe Nüfusları, ilçe düzeyi, Karabük(MERKEZ)"
+     },
+     {
+      "yil": 2023,
+      "deger": 134486,
+      "kaynak": "tuik_medas_adnks_ilce",
+      "konum": "MEDAS ADNKS — İl ve İlçe Nüfusları, ilçe düzeyi, Karabük(MERKEZ)"
+     },
+     {
+      "yil": 2024,
+      "deger": 134810,
+      "kaynak": "tuik_medas_adnks_ilce",
+      "konum": "MEDAS ADNKS — İl ve İlçe Nüfusları, ilçe düzeyi, Karabük(MERKEZ)"
+     },
+     {
+      "yil": 2025,
+      "deger": 135819,
+      "kaynak": "tuik_medas_adnks_ilce",
+      "konum": "MEDAS ADNKS — İl ve İlçe Nüfusları, ilçe düzeyi, Karabük(MERKEZ)"
+     }
+    ]
    },
    {
     "ad": "Safranbolu",
     "nufus": 69592,
     "ilce_merkezi": 52343,
     "belde_koy": 17249,
-    "yillik_artis_hizi_binde": 2.2
+    "yillik_artis_hizi_binde": 2.2,
+    "seri": [
+     {
+      "yil": 2007,
+      "deger": 49821,
+      "kaynak": "tuik_medas_adnks_ilce",
+      "konum": "MEDAS ADNKS — İl ve İlçe Nüfusları, ilçe düzeyi, Karabük(SAFRANBOLU)"
+     },
+     {
+      "yil": 2008,
+      "deger": 48814,
+      "kaynak": "tuik_medas_adnks_ilce",
+      "konum": "MEDAS ADNKS — İl ve İlçe Nüfusları, ilçe düzeyi, Karabük(SAFRANBOLU)"
+     },
+     {
+      "yil": 2009,
+      "deger": 51088,
+      "kaynak": "tuik_medas_adnks_ilce",
+      "konum": "MEDAS ADNKS — İl ve İlçe Nüfusları, ilçe düzeyi, Karabük(SAFRANBOLU)"
+     },
+     {
+      "yil": 2010,
+      "deger": 60358,
+      "kaynak": "tuik_medas_adnks_ilce",
+      "konum": "MEDAS ADNKS — İl ve İlçe Nüfusları, ilçe düzeyi, Karabük(SAFRANBOLU)"
+     },
+     {
+      "yil": 2011,
+      "deger": 53201,
+      "kaynak": "tuik_medas_adnks_ilce",
+      "konum": "MEDAS ADNKS — İl ve İlçe Nüfusları, ilçe düzeyi, Karabük(SAFRANBOLU)"
+     },
+     {
+      "yil": 2012,
+      "deger": 55170,
+      "kaynak": "tuik_medas_adnks_ilce",
+      "konum": "MEDAS ADNKS — İl ve İlçe Nüfusları, ilçe düzeyi, Karabük(SAFRANBOLU)"
+     },
+     {
+      "yil": 2013,
+      "deger": 58373,
+      "kaynak": "tuik_medas_adnks_ilce",
+      "konum": "MEDAS ADNKS — İl ve İlçe Nüfusları, ilçe düzeyi, Karabük(SAFRANBOLU)"
+     },
+     {
+      "yil": 2014,
+      "deger": 58295,
+      "kaynak": "tuik_medas_adnks_ilce",
+      "konum": "MEDAS ADNKS — İl ve İlçe Nüfusları, ilçe düzeyi, Karabük(SAFRANBOLU)"
+     },
+     {
+      "yil": 2015,
+      "deger": 59800,
+      "kaynak": "tuik_medas_adnks_ilce",
+      "konum": "MEDAS ADNKS — İl ve İlçe Nüfusları, ilçe düzeyi, Karabük(SAFRANBOLU)"
+     },
+     {
+      "yil": 2016,
+      "deger": 63965,
+      "kaynak": "tuik_medas_adnks_ilce",
+      "konum": "MEDAS ADNKS — İl ve İlçe Nüfusları, ilçe düzeyi, Karabük(SAFRANBOLU)"
+     },
+     {
+      "yil": 2017,
+      "deger": 65350,
+      "kaynak": "tuik_medas_adnks_ilce",
+      "konum": "MEDAS ADNKS — İl ve İlçe Nüfusları, ilçe düzeyi, Karabük(SAFRANBOLU)"
+     },
+     {
+      "yil": 2018,
+      "deger": 67042,
+      "kaynak": "tuik_medas_adnks_ilce",
+      "konum": "MEDAS ADNKS — İl ve İlçe Nüfusları, ilçe düzeyi, Karabük(SAFRANBOLU)"
+     },
+     {
+      "yil": 2019,
+      "deger": 68440,
+      "kaynak": "tuik_medas_adnks_ilce",
+      "konum": "MEDAS ADNKS — İl ve İlçe Nüfusları, ilçe düzeyi, Karabük(SAFRANBOLU)"
+     },
+     {
+      "yil": 2020,
+      "deger": 67245,
+      "kaynak": "tuik_medas_adnks_ilce",
+      "konum": "MEDAS ADNKS — İl ve İlçe Nüfusları, ilçe düzeyi, Karabük(SAFRANBOLU)"
+     },
+     {
+      "yil": 2021,
+      "deger": 69449,
+      "kaynak": "tuik_medas_adnks_ilce",
+      "konum": "MEDAS ADNKS — İl ve İlçe Nüfusları, ilçe düzeyi, Karabük(SAFRANBOLU)"
+     },
+     {
+      "yil": 2022,
+      "deger": 70409,
+      "kaynak": "tuik_medas_adnks_ilce",
+      "konum": "MEDAS ADNKS — İl ve İlçe Nüfusları, ilçe düzeyi, Karabük(SAFRANBOLU)"
+     },
+     {
+      "yil": 2023,
+      "deger": 70043,
+      "kaynak": "tuik_medas_adnks_ilce",
+      "konum": "MEDAS ADNKS — İl ve İlçe Nüfusları, ilçe düzeyi, Karabük(SAFRANBOLU)"
+     },
+     {
+      "yil": 2024,
+      "deger": 69441,
+      "kaynak": "tuik_medas_adnks_ilce",
+      "konum": "MEDAS ADNKS — İl ve İlçe Nüfusları, ilçe düzeyi, Karabük(SAFRANBOLU)"
+     },
+     {
+      "yil": 2025,
+      "deger": 69592,
+      "kaynak": "tuik_medas_adnks_ilce",
+      "konum": "MEDAS ADNKS — İl ve İlçe Nüfusları, ilçe düzeyi, Karabük(SAFRANBOLU)"
+     }
+    ]
    },
    {
     "ad": "Yenice",
     "nufus": 18984,
     "ilce_merkezi": 9194,
     "belde_koy": 9790,
-    "yillik_artis_hizi_binde": -24.0
+    "yillik_artis_hizi_binde": -24.0,
+    "seri": [
+     {
+      "yil": 2007,
+      "deger": 23342,
+      "kaynak": "tuik_medas_adnks_ilce",
+      "konum": "MEDAS ADNKS — İl ve İlçe Nüfusları, ilçe düzeyi, Karabük(YENICE)"
+     },
+     {
+      "yil": 2008,
+      "deger": 23744,
+      "kaynak": "tuik_medas_adnks_ilce",
+      "konum": "MEDAS ADNKS — İl ve İlçe Nüfusları, ilçe düzeyi, Karabük(YENICE)"
+     },
+     {
+      "yil": 2009,
+      "deger": 23009,
+      "kaynak": "tuik_medas_adnks_ilce",
+      "konum": "MEDAS ADNKS — İl ve İlçe Nüfusları, ilçe düzeyi, Karabük(YENICE)"
+     },
+     {
+      "yil": 2010,
+      "deger": 22632,
+      "kaynak": "tuik_medas_adnks_ilce",
+      "konum": "MEDAS ADNKS — İl ve İlçe Nüfusları, ilçe düzeyi, Karabük(YENICE)"
+     },
+     {
+      "yil": 2011,
+      "deger": 22156,
+      "kaynak": "tuik_medas_adnks_ilce",
+      "konum": "MEDAS ADNKS — İl ve İlçe Nüfusları, ilçe düzeyi, Karabük(YENICE)"
+     },
+     {
+      "yil": 2012,
+      "deger": 21539,
+      "kaynak": "tuik_medas_adnks_ilce",
+      "konum": "MEDAS ADNKS — İl ve İlçe Nüfusları, ilçe düzeyi, Karabük(YENICE)"
+     },
+     {
+      "yil": 2013,
+      "deger": 21671,
+      "kaynak": "tuik_medas_adnks_ilce",
+      "konum": "MEDAS ADNKS — İl ve İlçe Nüfusları, ilçe düzeyi, Karabük(YENICE)"
+     },
+     {
+      "yil": 2014,
+      "deger": 20750,
+      "kaynak": "tuik_medas_adnks_ilce",
+      "konum": "MEDAS ADNKS — İl ve İlçe Nüfusları, ilçe düzeyi, Karabük(YENICE)"
+     },
+     {
+      "yil": 2015,
+      "deger": 20421,
+      "kaynak": "tuik_medas_adnks_ilce",
+      "konum": "MEDAS ADNKS — İl ve İlçe Nüfusları, ilçe düzeyi, Karabük(YENICE)"
+     },
+     {
+      "yil": 2016,
+      "deger": 20186,
+      "kaynak": "tuik_medas_adnks_ilce",
+      "konum": "MEDAS ADNKS — İl ve İlçe Nüfusları, ilçe düzeyi, Karabük(YENICE)"
+     },
+     {
+      "yil": 2017,
+      "deger": 20057,
+      "kaynak": "tuik_medas_adnks_ilce",
+      "konum": "MEDAS ADNKS — İl ve İlçe Nüfusları, ilçe düzeyi, Karabük(YENICE)"
+     },
+     {
+      "yil": 2018,
+      "deger": 21625,
+      "kaynak": "tuik_medas_adnks_ilce",
+      "konum": "MEDAS ADNKS — İl ve İlçe Nüfusları, ilçe düzeyi, Karabük(YENICE)"
+     },
+     {
+      "yil": 2019,
+      "deger": 20310,
+      "kaynak": "tuik_medas_adnks_ilce",
+      "konum": "MEDAS ADNKS — İl ve İlçe Nüfusları, ilçe düzeyi, Karabük(YENICE)"
+     },
+     {
+      "yil": 2020,
+      "deger": 20116,
+      "kaynak": "tuik_medas_adnks_ilce",
+      "konum": "MEDAS ADNKS — İl ve İlçe Nüfusları, ilçe düzeyi, Karabük(YENICE)"
+     },
+     {
+      "yil": 2021,
+      "deger": 19854,
+      "kaynak": "tuik_medas_adnks_ilce",
+      "konum": "MEDAS ADNKS — İl ve İlçe Nüfusları, ilçe düzeyi, Karabük(YENICE)"
+     },
+     {
+      "yil": 2022,
+      "deger": 19371,
+      "kaynak": "tuik_medas_adnks_ilce",
+      "konum": "MEDAS ADNKS — İl ve İlçe Nüfusları, ilçe düzeyi, Karabük(YENICE)"
+     },
+     {
+      "yil": 2023,
+      "deger": 20592,
+      "kaynak": "tuik_medas_adnks_ilce",
+      "konum": "MEDAS ADNKS — İl ve İlçe Nüfusları, ilçe düzeyi, Karabük(YENICE)"
+     },
+     {
+      "yil": 2024,
+      "deger": 19446,
+      "kaynak": "tuik_medas_adnks_ilce",
+      "konum": "MEDAS ADNKS — İl ve İlçe Nüfusları, ilçe düzeyi, Karabük(YENICE)"
+     },
+     {
+      "yil": 2025,
+      "deger": 18984,
+      "kaynak": "tuik_medas_adnks_ilce",
+      "konum": "MEDAS ADNKS — İl ve İlçe Nüfusları, ilçe düzeyi, Karabük(YENICE)"
+     }
+    ]
    },
    {
     "ad": "Eskipazar",
     "nufus": 12570,
     "ilce_merkezi": 6231,
     "belde_koy": 6339,
-    "yillik_artis_hizi_binde": -41.2
+    "yillik_artis_hizi_binde": -41.2,
+    "seri": [
+     {
+      "yil": 2007,
+      "deger": 13217,
+      "kaynak": "tuik_medas_adnks_ilce",
+      "konum": "MEDAS ADNKS — İl ve İlçe Nüfusları, ilçe düzeyi, Karabük(ESKIPAZAR)"
+     },
+     {
+      "yil": 2008,
+      "deger": 13011,
+      "kaynak": "tuik_medas_adnks_ilce",
+      "konum": "MEDAS ADNKS — İl ve İlçe Nüfusları, ilçe düzeyi, Karabük(ESKIPAZAR)"
+     },
+     {
+      "yil": 2009,
+      "deger": 12583,
+      "kaynak": "tuik_medas_adnks_ilce",
+      "konum": "MEDAS ADNKS — İl ve İlçe Nüfusları, ilçe düzeyi, Karabük(ESKIPAZAR)"
+     },
+     {
+      "yil": 2010,
+      "deger": 12556,
+      "kaynak": "tuik_medas_adnks_ilce",
+      "konum": "MEDAS ADNKS — İl ve İlçe Nüfusları, ilçe düzeyi, Karabük(ESKIPAZAR)"
+     },
+     {
+      "yil": 2011,
+      "deger": 12527,
+      "kaynak": "tuik_medas_adnks_ilce",
+      "konum": "MEDAS ADNKS — İl ve İlçe Nüfusları, ilçe düzeyi, Karabük(ESKIPAZAR)"
+     },
+     {
+      "yil": 2012,
+      "deger": 12519,
+      "kaynak": "tuik_medas_adnks_ilce",
+      "konum": "MEDAS ADNKS — İl ve İlçe Nüfusları, ilçe düzeyi, Karabük(ESKIPAZAR)"
+     },
+     {
+      "yil": 2013,
+      "deger": 12717,
+      "kaynak": "tuik_medas_adnks_ilce",
+      "konum": "MEDAS ADNKS — İl ve İlçe Nüfusları, ilçe düzeyi, Karabük(ESKIPAZAR)"
+     },
+     {
+      "yil": 2014,
+      "deger": 12544,
+      "kaynak": "tuik_medas_adnks_ilce",
+      "konum": "MEDAS ADNKS — İl ve İlçe Nüfusları, ilçe düzeyi, Karabük(ESKIPAZAR)"
+     },
+     {
+      "yil": 2015,
+      "deger": 12493,
+      "kaynak": "tuik_medas_adnks_ilce",
+      "konum": "MEDAS ADNKS — İl ve İlçe Nüfusları, ilçe düzeyi, Karabük(ESKIPAZAR)"
+     },
+     {
+      "yil": 2016,
+      "deger": 12441,
+      "kaynak": "tuik_medas_adnks_ilce",
+      "konum": "MEDAS ADNKS — İl ve İlçe Nüfusları, ilçe düzeyi, Karabük(ESKIPAZAR)"
+     },
+     {
+      "yil": 2017,
+      "deger": 12144,
+      "kaynak": "tuik_medas_adnks_ilce",
+      "konum": "MEDAS ADNKS — İl ve İlçe Nüfusları, ilçe düzeyi, Karabük(ESKIPAZAR)"
+     },
+     {
+      "yil": 2018,
+      "deger": 13185,
+      "kaynak": "tuik_medas_adnks_ilce",
+      "konum": "MEDAS ADNKS — İl ve İlçe Nüfusları, ilçe düzeyi, Karabük(ESKIPAZAR)"
+     },
+     {
+      "yil": 2019,
+      "deger": 12996,
+      "kaynak": "tuik_medas_adnks_ilce",
+      "konum": "MEDAS ADNKS — İl ve İlçe Nüfusları, ilçe düzeyi, Karabük(ESKIPAZAR)"
+     },
+     {
+      "yil": 2020,
+      "deger": 12586,
+      "kaynak": "tuik_medas_adnks_ilce",
+      "konum": "MEDAS ADNKS — İl ve İlçe Nüfusları, ilçe düzeyi, Karabük(ESKIPAZAR)"
+     },
+     {
+      "yil": 2021,
+      "deger": 12550,
+      "kaynak": "tuik_medas_adnks_ilce",
+      "konum": "MEDAS ADNKS — İl ve İlçe Nüfusları, ilçe düzeyi, Karabük(ESKIPAZAR)"
+     },
+     {
+      "yil": 2022,
+      "deger": 12767,
+      "kaynak": "tuik_medas_adnks_ilce",
+      "konum": "MEDAS ADNKS — İl ve İlçe Nüfusları, ilçe düzeyi, Karabük(ESKIPAZAR)"
+     },
+     {
+      "yil": 2023,
+      "deger": 14343,
+      "kaynak": "tuik_medas_adnks_ilce",
+      "konum": "MEDAS ADNKS — İl ve İlçe Nüfusları, ilçe düzeyi, Karabük(ESKIPAZAR)"
+     },
+     {
+      "yil": 2024,
+      "deger": 13099,
+      "kaynak": "tuik_medas_adnks_ilce",
+      "konum": "MEDAS ADNKS — İl ve İlçe Nüfusları, ilçe düzeyi, Karabük(ESKIPAZAR)"
+     },
+     {
+      "yil": 2025,
+      "deger": 12570,
+      "kaynak": "tuik_medas_adnks_ilce",
+      "konum": "MEDAS ADNKS — İl ve İlçe Nüfusları, ilçe düzeyi, Karabük(ESKIPAZAR)"
+     }
+    ]
    },
    {
     "ad": "Eflani",
     "nufus": 8663,
     "ilce_merkezi": 2183,
     "belde_koy": 6480,
-    "yillik_artis_hizi_binde": -57.2
+    "yillik_artis_hizi_binde": -57.2,
+    "seri": [
+     {
+      "yil": 2007,
+      "deger": 9592,
+      "kaynak": "tuik_medas_adnks_ilce",
+      "konum": "MEDAS ADNKS — İl ve İlçe Nüfusları, ilçe düzeyi, Karabük(EFLANI)"
+     },
+     {
+      "yil": 2008,
+      "deger": 10187,
+      "kaynak": "tuik_medas_adnks_ilce",
+      "konum": "MEDAS ADNKS — İl ve İlçe Nüfusları, ilçe düzeyi, Karabük(EFLANI)"
+     },
+     {
+      "yil": 2009,
+      "deger": 9673,
+      "kaynak": "tuik_medas_adnks_ilce",
+      "konum": "MEDAS ADNKS — İl ve İlçe Nüfusları, ilçe düzeyi, Karabük(EFLANI)"
+     },
+     {
+      "yil": 2010,
+      "deger": 9440,
+      "kaynak": "tuik_medas_adnks_ilce",
+      "konum": "MEDAS ADNKS — İl ve İlçe Nüfusları, ilçe düzeyi, Karabük(EFLANI)"
+     },
+     {
+      "yil": 2011,
+      "deger": 9246,
+      "kaynak": "tuik_medas_adnks_ilce",
+      "konum": "MEDAS ADNKS — İl ve İlçe Nüfusları, ilçe düzeyi, Karabük(EFLANI)"
+     },
+     {
+      "yil": 2012,
+      "deger": 9108,
+      "kaynak": "tuik_medas_adnks_ilce",
+      "konum": "MEDAS ADNKS — İl ve İlçe Nüfusları, ilçe düzeyi, Karabük(EFLANI)"
+     },
+     {
+      "yil": 2013,
+      "deger": 9333,
+      "kaynak": "tuik_medas_adnks_ilce",
+      "konum": "MEDAS ADNKS — İl ve İlçe Nüfusları, ilçe düzeyi, Karabük(EFLANI)"
+     },
+     {
+      "yil": 2014,
+      "deger": 8918,
+      "kaynak": "tuik_medas_adnks_ilce",
+      "konum": "MEDAS ADNKS — İl ve İlçe Nüfusları, ilçe düzeyi, Karabük(EFLANI)"
+     },
+     {
+      "yil": 2015,
+      "deger": 8499,
+      "kaynak": "tuik_medas_adnks_ilce",
+      "konum": "MEDAS ADNKS — İl ve İlçe Nüfusları, ilçe düzeyi, Karabük(EFLANI)"
+     },
+     {
+      "yil": 2016,
+      "deger": 8307,
+      "kaynak": "tuik_medas_adnks_ilce",
+      "konum": "MEDAS ADNKS — İl ve İlçe Nüfusları, ilçe düzeyi, Karabük(EFLANI)"
+     },
+     {
+      "yil": 2017,
+      "deger": 8085,
+      "kaynak": "tuik_medas_adnks_ilce",
+      "konum": "MEDAS ADNKS — İl ve İlçe Nüfusları, ilçe düzeyi, Karabük(EFLANI)"
+     },
+     {
+      "yil": 2018,
+      "deger": 9088,
+      "kaynak": "tuik_medas_adnks_ilce",
+      "konum": "MEDAS ADNKS — İl ve İlçe Nüfusları, ilçe düzeyi, Karabük(EFLANI)"
+     },
+     {
+      "yil": 2019,
+      "deger": 8823,
+      "kaynak": "tuik_medas_adnks_ilce",
+      "konum": "MEDAS ADNKS — İl ve İlçe Nüfusları, ilçe düzeyi, Karabük(EFLANI)"
+     },
+     {
+      "yil": 2020,
+      "deger": 8576,
+      "kaynak": "tuik_medas_adnks_ilce",
+      "konum": "MEDAS ADNKS — İl ve İlçe Nüfusları, ilçe düzeyi, Karabük(EFLANI)"
+     },
+     {
+      "yil": 2021,
+      "deger": 8409,
+      "kaynak": "tuik_medas_adnks_ilce",
+      "konum": "MEDAS ADNKS — İl ve İlçe Nüfusları, ilçe düzeyi, Karabük(EFLANI)"
+     },
+     {
+      "yil": 2022,
+      "deger": 8352,
+      "kaynak": "tuik_medas_adnks_ilce",
+      "konum": "MEDAS ADNKS — İl ve İlçe Nüfusları, ilçe düzeyi, Karabük(EFLANI)"
+     },
+     {
+      "yil": 2023,
+      "deger": 10101,
+      "kaynak": "tuik_medas_adnks_ilce",
+      "konum": "MEDAS ADNKS — İl ve İlçe Nüfusları, ilçe düzeyi, Karabük(EFLANI)"
+     },
+     {
+      "yil": 2024,
+      "deger": 9173,
+      "kaynak": "tuik_medas_adnks_ilce",
+      "konum": "MEDAS ADNKS — İl ve İlçe Nüfusları, ilçe düzeyi, Karabük(EFLANI)"
+     },
+     {
+      "yil": 2025,
+      "deger": 8663,
+      "kaynak": "tuik_medas_adnks_ilce",
+      "konum": "MEDAS ADNKS — İl ve İlçe Nüfusları, ilçe düzeyi, Karabük(EFLANI)"
+     }
+    ]
    },
    {
     "ad": "Ovacık",
     "nufus": 3986,
     "ilce_merkezi": 553,
     "belde_koy": 3433,
-    "yillik_artis_hizi_binde": -123.3
+    "yillik_artis_hizi_binde": -123.3,
+    "seri": [
+     {
+      "yil": 2007,
+      "deger": 3407,
+      "kaynak": "tuik_medas_adnks_ilce",
+      "konum": "MEDAS ADNKS — İl ve İlçe Nüfusları, ilçe düzeyi, Karabük(OVACIK)"
+     },
+     {
+      "yil": 2008,
+      "deger": 3821,
+      "kaynak": "tuik_medas_adnks_ilce",
+      "konum": "MEDAS ADNKS — İl ve İlçe Nüfusları, ilçe düzeyi, Karabük(OVACIK)"
+     },
+     {
+      "yil": 2009,
+      "deger": 3498,
+      "kaynak": "tuik_medas_adnks_ilce",
+      "konum": "MEDAS ADNKS — İl ve İlçe Nüfusları, ilçe düzeyi, Karabük(OVACIK)"
+     },
+     {
+      "yil": 2010,
+      "deger": 3321,
+      "kaynak": "tuik_medas_adnks_ilce",
+      "konum": "MEDAS ADNKS — İl ve İlçe Nüfusları, ilçe düzeyi, Karabük(OVACIK)"
+     },
+     {
+      "yil": 2011,
+      "deger": 3270,
+      "kaynak": "tuik_medas_adnks_ilce",
+      "konum": "MEDAS ADNKS — İl ve İlçe Nüfusları, ilçe düzeyi, Karabük(OVACIK)"
+     },
+     {
+      "yil": 2012,
+      "deger": 3193,
+      "kaynak": "tuik_medas_adnks_ilce",
+      "konum": "MEDAS ADNKS — İl ve İlçe Nüfusları, ilçe düzeyi, Karabük(OVACIK)"
+     },
+     {
+      "yil": 2013,
+      "deger": 3446,
+      "kaynak": "tuik_medas_adnks_ilce",
+      "konum": "MEDAS ADNKS — İl ve İlçe Nüfusları, ilçe düzeyi, Karabük(OVACIK)"
+     },
+     {
+      "yil": 2014,
+      "deger": 3168,
+      "kaynak": "tuik_medas_adnks_ilce",
+      "konum": "MEDAS ADNKS — İl ve İlçe Nüfusları, ilçe düzeyi, Karabük(OVACIK)"
+     },
+     {
+      "yil": 2015,
+      "deger": 3107,
+      "kaynak": "tuik_medas_adnks_ilce",
+      "konum": "MEDAS ADNKS — İl ve İlçe Nüfusları, ilçe düzeyi, Karabük(OVACIK)"
+     },
+     {
+      "yil": 2016,
+      "deger": 3042,
+      "kaynak": "tuik_medas_adnks_ilce",
+      "konum": "MEDAS ADNKS — İl ve İlçe Nüfusları, ilçe düzeyi, Karabük(OVACIK)"
+     },
+     {
+      "yil": 2017,
+      "deger": 3080,
+      "kaynak": "tuik_medas_adnks_ilce",
+      "konum": "MEDAS ADNKS — İl ve İlçe Nüfusları, ilçe düzeyi, Karabük(OVACIK)"
+     },
+     {
+      "yil": 2018,
+      "deger": 5085,
+      "kaynak": "tuik_medas_adnks_ilce",
+      "konum": "MEDAS ADNKS — İl ve İlçe Nüfusları, ilçe düzeyi, Karabük(OVACIK)"
+     },
+     {
+      "yil": 2019,
+      "deger": 4274,
+      "kaynak": "tuik_medas_adnks_ilce",
+      "konum": "MEDAS ADNKS — İl ve İlçe Nüfusları, ilçe düzeyi, Karabük(OVACIK)"
+     },
+     {
+      "yil": 2020,
+      "deger": 3905,
+      "kaynak": "tuik_medas_adnks_ilce",
+      "konum": "MEDAS ADNKS — İl ve İlçe Nüfusları, ilçe düzeyi, Karabük(OVACIK)"
+     },
+     {
+      "yil": 2021,
+      "deger": 3674,
+      "kaynak": "tuik_medas_adnks_ilce",
+      "konum": "MEDAS ADNKS — İl ve İlçe Nüfusları, ilçe düzeyi, Karabük(OVACIK)"
+     },
+     {
+      "yil": 2022,
+      "deger": 3731,
+      "kaynak": "tuik_medas_adnks_ilce",
+      "konum": "MEDAS ADNKS — İl ve İlçe Nüfusları, ilçe düzeyi, Karabük(OVACIK)"
+     },
+     {
+      "yil": 2023,
+      "deger": 5677,
+      "kaynak": "tuik_medas_adnks_ilce",
+      "konum": "MEDAS ADNKS — İl ve İlçe Nüfusları, ilçe düzeyi, Karabük(OVACIK)"
+     },
+     {
+      "yil": 2024,
+      "deger": 4509,
+      "kaynak": "tuik_medas_adnks_ilce",
+      "konum": "MEDAS ADNKS — İl ve İlçe Nüfusları, ilçe düzeyi, Karabük(OVACIK)"
+     },
+     {
+      "yil": 2025,
+      "deger": 3986,
+      "kaynak": "tuik_medas_adnks_ilce",
+      "konum": "MEDAS ADNKS — İl ve İlçe Nüfusları, ilçe düzeyi, Karabük(OVACIK)"
+     }
+    ]
    }
   ],
   "yas_65_ustu_orani": {
@@ -68,7 +764,123 @@
    "yil": 2025,
    "kaynak": "tuik_adnks_2025",
    "konum": "İllere göre yaş bağımlılık oranı, 2007-2025 (65+ nüfus / toplam nüfus; oran hesaplandı)",
-   "turkiye": 11.1
+   "turkiye": 11.1,
+   "seri": [
+    {
+     "yil": 2007,
+     "deger": 10.7,
+     "kaynak": "tuik_adnks_2025",
+     "konum": "İllere göre yaş bağımlılık oranı, 2007-2025 — 65+ nüfus / toplam nüfus (oran hesaplandı)"
+    },
+    {
+     "yil": 2008,
+     "deger": 10.9,
+     "kaynak": "tuik_adnks_2025",
+     "konum": "İllere göre yaş bağımlılık oranı, 2007-2025 — 65+ nüfus / toplam nüfus (oran hesaplandı)"
+    },
+    {
+     "yil": 2009,
+     "deger": 11.1,
+     "kaynak": "tuik_adnks_2025",
+     "konum": "İllere göre yaş bağımlılık oranı, 2007-2025 — 65+ nüfus / toplam nüfus (oran hesaplandı)"
+    },
+    {
+     "yil": 2010,
+     "deger": 11.1,
+     "kaynak": "tuik_adnks_2025",
+     "konum": "İllere göre yaş bağımlılık oranı, 2007-2025 — 65+ nüfus / toplam nüfus (oran hesaplandı)"
+    },
+    {
+     "yil": 2011,
+     "deger": 11.7,
+     "kaynak": "tuik_adnks_2025",
+     "konum": "İllere göre yaş bağımlılık oranı, 2007-2025 — 65+ nüfus / toplam nüfus (oran hesaplandı)"
+    },
+    {
+     "yil": 2012,
+     "deger": 11.6,
+     "kaynak": "tuik_adnks_2025",
+     "konum": "İllere göre yaş bağımlılık oranı, 2007-2025 — 65+ nüfus / toplam nüfus (oran hesaplandı)"
+    },
+    {
+     "yil": 2013,
+     "deger": 11.7,
+     "kaynak": "tuik_adnks_2025",
+     "konum": "İllere göre yaş bağımlılık oranı, 2007-2025 — 65+ nüfus / toplam nüfus (oran hesaplandı)"
+    },
+    {
+     "yil": 2014,
+     "deger": 12.1,
+     "kaynak": "tuik_adnks_2025",
+     "konum": "İllere göre yaş bağımlılık oranı, 2007-2025 — 65+ nüfus / toplam nüfus (oran hesaplandı)"
+    },
+    {
+     "yil": 2015,
+     "deger": 12.4,
+     "kaynak": "tuik_adnks_2025",
+     "konum": "İllere göre yaş bağımlılık oranı, 2007-2025 — 65+ nüfus / toplam nüfus (oran hesaplandı)"
+    },
+    {
+     "yil": 2016,
+     "deger": 12.2,
+     "kaynak": "tuik_adnks_2025",
+     "konum": "İllere göre yaş bağımlılık oranı, 2007-2025 — 65+ nüfus / toplam nüfus (oran hesaplandı)"
+    },
+    {
+     "yil": 2017,
+     "deger": 12.5,
+     "kaynak": "tuik_adnks_2025",
+     "konum": "İllere göre yaş bağımlılık oranı, 2007-2025 — 65+ nüfus / toplam nüfus (oran hesaplandı)"
+    },
+    {
+     "yil": 2018,
+     "deger": 12.8,
+     "kaynak": "tuik_adnks_2025",
+     "konum": "İllere göre yaş bağımlılık oranı, 2007-2025 — 65+ nüfus / toplam nüfus (oran hesaplandı)"
+    },
+    {
+     "yil": 2019,
+     "deger": 13.2,
+     "kaynak": "tuik_adnks_2025",
+     "konum": "İllere göre yaş bağımlılık oranı, 2007-2025 — 65+ nüfus / toplam nüfus (oran hesaplandı)"
+    },
+    {
+     "yil": 2020,
+     "deger": 14.1,
+     "kaynak": "tuik_adnks_2025",
+     "konum": "İllere göre yaş bağımlılık oranı, 2007-2025 — 65+ nüfus / toplam nüfus (oran hesaplandı)"
+    },
+    {
+     "yil": 2021,
+     "deger": 14.2,
+     "kaynak": "tuik_adnks_2025",
+     "konum": "İllere göre yaş bağımlılık oranı, 2007-2025 — 65+ nüfus / toplam nüfus (oran hesaplandı)"
+    },
+    {
+     "yil": 2022,
+     "deger": 14.3,
+     "kaynak": "tuik_adnks_2025",
+     "konum": "İllere göre yaş bağımlılık oranı, 2007-2025 — 65+ nüfus / toplam nüfus (oran hesaplandı)"
+    },
+    {
+     "yil": 2023,
+     "deger": 14.6,
+     "kaynak": "tuik_adnks_2025",
+     "konum": "İllere göre yaş bağımlılık oranı, 2007-2025 — 65+ nüfus / toplam nüfus (oran hesaplandı)"
+    },
+    {
+     "yil": 2024,
+     "deger": 15.3,
+     "kaynak": "tuik_adnks_2025",
+     "konum": "İllere göre yaş bağımlılık oranı, 2007-2025 — 65+ nüfus / toplam nüfus (oran hesaplandı)"
+    },
+    {
+     "yil": 2025,
+     "deger": 16.0,
+     "kaynak": "tuik_adnks_2025",
+     "konum": "İllere göre yaş bağımlılık oranı, 2007-2025 — 65+ nüfus / toplam nüfus (oran hesaplandı)"
+    }
+   ]
   },
   "yas_0_14_orani": {
    "deger": 14.5,
@@ -100,7 +912,123 @@
    "yil": 2024,
    "kaynak": "sb-siy-2024",
    "konum": "Tablo 1.3 (TÜİK kaynaklı), PDF s. 46"
-  }
+  },
+  "seri": [
+   {
+    "yil": 2007,
+    "deger": 218463,
+    "kaynak": "tuik_adnks_2025",
+    "konum": "İllere göre yaş bağımlılık oranı, 2007-2025 — \"Toplam nüfus\" sütunu (31 Aralık)"
+   },
+   {
+    "yil": 2008,
+    "deger": 216248,
+    "kaynak": "tuik_adnks_2025",
+    "konum": "İllere göre yaş bağımlılık oranı, 2007-2025 — \"Toplam nüfus\" sütunu (31 Aralık)"
+   },
+   {
+    "yil": 2009,
+    "deger": 218564,
+    "kaynak": "tuik_adnks_2025",
+    "konum": "İllere göre yaş bağımlılık oranı, 2007-2025 — \"Toplam nüfus\" sütunu (31 Aralık)"
+   },
+   {
+    "yil": 2010,
+    "deger": 227610,
+    "kaynak": "tuik_adnks_2025",
+    "konum": "İllere göre yaş bağımlılık oranı, 2007-2025 — \"Toplam nüfus\" sütunu (31 Aralık)"
+   },
+   {
+    "yil": 2011,
+    "deger": 219728,
+    "kaynak": "tuik_adnks_2025",
+    "konum": "İllere göre yaş bağımlılık oranı, 2007-2025 — \"Toplam nüfus\" sütunu (31 Aralık)"
+   },
+   {
+    "yil": 2012,
+    "deger": 225145,
+    "kaynak": "tuik_adnks_2025",
+    "konum": "İllere göre yaş bağımlılık oranı, 2007-2025 — \"Toplam nüfus\" sütunu (31 Aralık)"
+   },
+   {
+    "yil": 2013,
+    "deger": 230251,
+    "kaynak": "tuik_adnks_2025",
+    "konum": "İllere göre yaş bağımlılık oranı, 2007-2025 — \"Toplam nüfus\" sütunu (31 Aralık)"
+   },
+   {
+    "yil": 2014,
+    "deger": 231333,
+    "kaynak": "tuik_adnks_2025",
+    "konum": "İllere göre yaş bağımlılık oranı, 2007-2025 — \"Toplam nüfus\" sütunu (31 Aralık)"
+   },
+   {
+    "yil": 2015,
+    "deger": 236978,
+    "kaynak": "tuik_adnks_2025",
+    "konum": "İllere göre yaş bağımlılık oranı, 2007-2025 — \"Toplam nüfus\" sütunu (31 Aralık)"
+   },
+   {
+    "yil": 2016,
+    "deger": 242347,
+    "kaynak": "tuik_adnks_2025",
+    "konum": "İllere göre yaş bağımlılık oranı, 2007-2025 — \"Toplam nüfus\" sütunu (31 Aralık)"
+   },
+   {
+    "yil": 2017,
+    "deger": 244453,
+    "kaynak": "tuik_adnks_2025",
+    "konum": "İllere göre yaş bağımlılık oranı, 2007-2025 — \"Toplam nüfus\" sütunu (31 Aralık)"
+   },
+   {
+    "yil": 2018,
+    "deger": 248014,
+    "kaynak": "tuik_adnks_2025",
+    "konum": "İllere göre yaş bağımlılık oranı, 2007-2025 — \"Toplam nüfus\" sütunu (31 Aralık)"
+   },
+   {
+    "yil": 2019,
+    "deger": 248458,
+    "kaynak": "tuik_adnks_2025",
+    "konum": "İllere göre yaş bağımlılık oranı, 2007-2025 — \"Toplam nüfus\" sütunu (31 Aralık)"
+   },
+   {
+    "yil": 2020,
+    "deger": 243614,
+    "kaynak": "tuik_adnks_2025",
+    "konum": "İllere göre yaş bağımlılık oranı, 2007-2025 — \"Toplam nüfus\" sütunu (31 Aralık)"
+   },
+   {
+    "yil": 2021,
+    "deger": 249287,
+    "kaynak": "tuik_adnks_2025",
+    "konum": "İllere göre yaş bağımlılık oranı, 2007-2025 — \"Toplam nüfus\" sütunu (31 Aralık)"
+   },
+   {
+    "yil": 2022,
+    "deger": 252058,
+    "kaynak": "tuik_adnks_2025",
+    "konum": "İllere göre yaş bağımlılık oranı, 2007-2025 — \"Toplam nüfus\" sütunu (31 Aralık)"
+   },
+   {
+    "yil": 2023,
+    "deger": 255242,
+    "kaynak": "tuik_adnks_2025",
+    "konum": "İllere göre yaş bağımlılık oranı, 2007-2025 — \"Toplam nüfus\" sütunu (31 Aralık)"
+   },
+   {
+    "yil": 2024,
+    "deger": 250478,
+    "kaynak": "tuik_adnks_2025",
+    "konum": "İllere göre yaş bağımlılık oranı, 2007-2025 — \"Toplam nüfus\" sütunu (31 Aralık)"
+   },
+   {
+    "yil": 2025,
+    "deger": 249614,
+    "kaynak": "tuik_adnks_2025",
+    "konum": "İllere göre yaş bağımlılık oranı, 2007-2025 — \"Toplam nüfus\" sütunu (31 Aralık)"
+   }
+  ]
  },
  "gostergeler": [
   {
@@ -111,7 +1039,198 @@
    "yil": 2025,
    "turkiye": 10.43,
    "kaynak": "tuik_dogum_2025",
-   "konum": "İllere göre kaba doğum hızı, 2009-2025"
+   "konum": "İllere göre kaba doğum hızı, 2009-2025",
+   "seri": [
+    {
+     "yil": 2009,
+     "deger": 12.48,
+     "kaynak": "tuik_dogum_2025",
+     "konum": "İllere göre kaba doğum hızı, 2009-2025 (‰)"
+    },
+    {
+     "yil": 2010,
+     "deger": 11.46,
+     "kaynak": "tuik_dogum_2025",
+     "konum": "İllere göre kaba doğum hızı, 2009-2025 (‰)"
+    },
+    {
+     "yil": 2011,
+     "deger": 11.42,
+     "kaynak": "tuik_dogum_2025",
+     "konum": "İllere göre kaba doğum hızı, 2009-2025 (‰)"
+    },
+    {
+     "yil": 2012,
+     "deger": 10.9,
+     "kaynak": "tuik_dogum_2025",
+     "konum": "İllere göre kaba doğum hızı, 2009-2025 (‰)"
+    },
+    {
+     "yil": 2013,
+     "deger": 11.07,
+     "kaynak": "tuik_dogum_2025",
+     "konum": "İllere göre kaba doğum hızı, 2009-2025 (‰)"
+    },
+    {
+     "yil": 2014,
+     "deger": 10.73,
+     "kaynak": "tuik_dogum_2025",
+     "konum": "İllere göre kaba doğum hızı, 2009-2025 (‰)"
+    },
+    {
+     "yil": 2015,
+     "deger": 10.7,
+     "kaynak": "tuik_dogum_2025",
+     "konum": "İllere göre kaba doğum hızı, 2009-2025 (‰)"
+    },
+    {
+     "yil": 2016,
+     "deger": 9.87,
+     "kaynak": "tuik_dogum_2025",
+     "konum": "İllere göre kaba doğum hızı, 2009-2025 (‰)"
+    },
+    {
+     "yil": 2017,
+     "deger": 10.21,
+     "kaynak": "tuik_dogum_2025",
+     "konum": "İllere göre kaba doğum hızı, 2009-2025 (‰)"
+    },
+    {
+     "yil": 2018,
+     "deger": 9.99,
+     "kaynak": "tuik_dogum_2025",
+     "konum": "İllere göre kaba doğum hızı, 2009-2025 (‰)"
+    },
+    {
+     "yil": 2019,
+     "deger": 9.45,
+     "kaynak": "tuik_dogum_2025",
+     "konum": "İllere göre kaba doğum hızı, 2009-2025 (‰)"
+    },
+    {
+     "yil": 2020,
+     "deger": 8.89,
+     "kaynak": "tuik_dogum_2025",
+     "konum": "İllere göre kaba doğum hızı, 2009-2025 (‰) — sütun \"2020(r)\""
+    },
+    {
+     "yil": 2021,
+     "deger": 9.18,
+     "kaynak": "tuik_dogum_2025",
+     "konum": "İllere göre kaba doğum hızı, 2009-2025 (‰) — sütun \"2021(r)\""
+    },
+    {
+     "yil": 2022,
+     "deger": 8.37,
+     "kaynak": "tuik_dogum_2025",
+     "konum": "İllere göre kaba doğum hızı, 2009-2025 (‰) — sütun \"2022(r)\""
+    },
+    {
+     "yil": 2023,
+     "deger": 7.61,
+     "kaynak": "tuik_dogum_2025",
+     "konum": "İllere göre kaba doğum hızı, 2009-2025 (‰) — sütun \"2023(r)\""
+    },
+    {
+     "yil": 2024,
+     "deger": 7.69,
+     "kaynak": "tuik_dogum_2025",
+     "konum": "İllere göre kaba doğum hızı, 2009-2025 (‰) — sütun \"2024(r)\""
+    },
+    {
+     "yil": 2025,
+     "deger": 7.31,
+     "kaynak": "tuik_dogum_2025",
+     "konum": "İllere göre kaba doğum hızı, 2009-2025 (‰)"
+    }
+   ],
+   "turkiye_seri": [
+    {
+     "yil": 2009,
+     "deger": 17.58,
+     "kaynak": "tuik_dogum_2025"
+    },
+    {
+     "yil": 2010,
+     "deger": 17.24,
+     "kaynak": "tuik_dogum_2025"
+    },
+    {
+     "yil": 2011,
+     "deger": 16.88,
+     "kaynak": "tuik_dogum_2025"
+    },
+    {
+     "yil": 2012,
+     "deger": 17.22,
+     "kaynak": "tuik_dogum_2025"
+    },
+    {
+     "yil": 2013,
+     "deger": 17.04,
+     "kaynak": "tuik_dogum_2025"
+    },
+    {
+     "yil": 2014,
+     "deger": 17.51,
+     "kaynak": "tuik_dogum_2025"
+    },
+    {
+     "yil": 2015,
+     "deger": 17.09,
+     "kaynak": "tuik_dogum_2025"
+    },
+    {
+     "yil": 2016,
+     "deger": 16.6,
+     "kaynak": "tuik_dogum_2025"
+    },
+    {
+     "yil": 2017,
+     "deger": 16.19,
+     "kaynak": "tuik_dogum_2025"
+    },
+    {
+     "yil": 2018,
+     "deger": 15.44,
+     "kaynak": "tuik_dogum_2025"
+    },
+    {
+     "yil": 2019,
+     "deger": 14.43,
+     "kaynak": "tuik_dogum_2025"
+    },
+    {
+     "yil": 2020,
+     "deger": 13.44,
+     "kaynak": "tuik_dogum_2025"
+    },
+    {
+     "yil": 2021,
+     "deger": 12.91,
+     "kaynak": "tuik_dogum_2025"
+    },
+    {
+     "yil": 2022,
+     "deger": 12.26,
+     "kaynak": "tuik_dogum_2025"
+    },
+    {
+     "yil": 2023,
+     "deger": 11.29,
+     "kaynak": "tuik_dogum_2025"
+    },
+    {
+     "yil": 2024,
+     "deger": 10.99,
+     "kaynak": "tuik_dogum_2025"
+    },
+    {
+     "yil": 2025,
+     "deger": 10.43,
+     "kaynak": "tuik_dogum_2025"
+    }
+   ]
   },
   {
    "kod": "tdh",
@@ -122,7 +1241,198 @@
    "turkiye": 1.42,
    "kaynak": "tuik_dogum_2025",
    "konum": "İllere göre toplam doğurganlık hızı, 2009-2025",
-   "not": "Karabük 2009'da 1,67 idi; nüfus yenilenme düzeyinin (2,1) belirgin altında."
+   "not": "Karabük 2009'da 1,67 idi; nüfus yenilenme düzeyinin (2,1) belirgin altında.",
+   "seri": [
+    {
+     "yil": 2009,
+     "deger": 1.67,
+     "kaynak": "tuik_dogum_2025",
+     "konum": "İllere göre toplam doğurganlık hızı, 2009-2025"
+    },
+    {
+     "yil": 2010,
+     "deger": 1.6,
+     "kaynak": "tuik_dogum_2025",
+     "konum": "İllere göre toplam doğurganlık hızı, 2009-2025"
+    },
+    {
+     "yil": 2011,
+     "deger": 1.62,
+     "kaynak": "tuik_dogum_2025",
+     "konum": "İllere göre toplam doğurganlık hızı, 2009-2025"
+    },
+    {
+     "yil": 2012,
+     "deger": 1.54,
+     "kaynak": "tuik_dogum_2025",
+     "konum": "İllere göre toplam doğurganlık hızı, 2009-2025"
+    },
+    {
+     "yil": 2013,
+     "deger": 1.59,
+     "kaynak": "tuik_dogum_2025",
+     "konum": "İllere göre toplam doğurganlık hızı, 2009-2025"
+    },
+    {
+     "yil": 2014,
+     "deger": 1.56,
+     "kaynak": "tuik_dogum_2025",
+     "konum": "İllere göre toplam doğurganlık hızı, 2009-2025"
+    },
+    {
+     "yil": 2015,
+     "deger": 1.57,
+     "kaynak": "tuik_dogum_2025",
+     "konum": "İllere göre toplam doğurganlık hızı, 2009-2025"
+    },
+    {
+     "yil": 2016,
+     "deger": 1.46,
+     "kaynak": "tuik_dogum_2025",
+     "konum": "İllere göre toplam doğurganlık hızı, 2009-2025"
+    },
+    {
+     "yil": 2017,
+     "deger": 1.51,
+     "kaynak": "tuik_dogum_2025",
+     "konum": "İllere göre toplam doğurganlık hızı, 2009-2025"
+    },
+    {
+     "yil": 2018,
+     "deger": 1.49,
+     "kaynak": "tuik_dogum_2025",
+     "konum": "İllere göre toplam doğurganlık hızı, 2009-2025"
+    },
+    {
+     "yil": 2019,
+     "deger": 1.42,
+     "kaynak": "tuik_dogum_2025",
+     "konum": "İllere göre toplam doğurganlık hızı, 2009-2025"
+    },
+    {
+     "yil": 2020,
+     "deger": 1.29,
+     "kaynak": "tuik_dogum_2025",
+     "konum": "İllere göre toplam doğurganlık hızı, 2009-2025 — sütun \"2020(r)\""
+    },
+    {
+     "yil": 2021,
+     "deger": 1.33,
+     "kaynak": "tuik_dogum_2025",
+     "konum": "İllere göre toplam doğurganlık hızı, 2009-2025 — sütun \"2021(r)\""
+    },
+    {
+     "yil": 2022,
+     "deger": 1.22,
+     "kaynak": "tuik_dogum_2025",
+     "konum": "İllere göre toplam doğurganlık hızı, 2009-2025 — sütun \"2022(r)\""
+    },
+    {
+     "yil": 2023,
+     "deger": 1.14,
+     "kaynak": "tuik_dogum_2025",
+     "konum": "İllere göre toplam doğurganlık hızı, 2009-2025 — sütun \"2023(r)\""
+    },
+    {
+     "yil": 2024,
+     "deger": 1.2,
+     "kaynak": "tuik_dogum_2025",
+     "konum": "İllere göre toplam doğurganlık hızı, 2009-2025 — sütun \"2024(r)\""
+    },
+    {
+     "yil": 2025,
+     "deger": 1.14,
+     "kaynak": "tuik_dogum_2025",
+     "konum": "İllere göre toplam doğurganlık hızı, 2009-2025"
+    }
+   ],
+   "turkiye_seri": [
+    {
+     "yil": 2009,
+     "deger": 2.1,
+     "kaynak": "tuik_dogum_2025"
+    },
+    {
+     "yil": 2010,
+     "deger": 2.08,
+     "kaynak": "tuik_dogum_2025"
+    },
+    {
+     "yil": 2011,
+     "deger": 2.05,
+     "kaynak": "tuik_dogum_2025"
+    },
+    {
+     "yil": 2012,
+     "deger": 2.11,
+     "kaynak": "tuik_dogum_2025"
+    },
+    {
+     "yil": 2013,
+     "deger": 2.11,
+     "kaynak": "tuik_dogum_2025"
+    },
+    {
+     "yil": 2014,
+     "deger": 2.19,
+     "kaynak": "tuik_dogum_2025"
+    },
+    {
+     "yil": 2015,
+     "deger": 2.16,
+     "kaynak": "tuik_dogum_2025"
+    },
+    {
+     "yil": 2016,
+     "deger": 2.11,
+     "kaynak": "tuik_dogum_2025"
+    },
+    {
+     "yil": 2017,
+     "deger": 2.08,
+     "kaynak": "tuik_dogum_2025"
+    },
+    {
+     "yil": 2018,
+     "deger": 2.0,
+     "kaynak": "tuik_dogum_2025"
+    },
+    {
+     "yil": 2019,
+     "deger": 1.89,
+     "kaynak": "tuik_dogum_2025"
+    },
+    {
+     "yil": 2020,
+     "deger": 1.77,
+     "kaynak": "tuik_dogum_2025"
+    },
+    {
+     "yil": 2021,
+     "deger": 1.71,
+     "kaynak": "tuik_dogum_2025"
+    },
+    {
+     "yil": 2022,
+     "deger": 1.63,
+     "kaynak": "tuik_dogum_2025"
+    },
+    {
+     "yil": 2023,
+     "deger": 1.52,
+     "kaynak": "tuik_dogum_2025"
+    },
+    {
+     "yil": 2024,
+     "deger": 1.49,
+     "kaynak": "tuik_dogum_2025"
+    },
+    {
+     "yil": 2025,
+     "deger": 1.42,
+     "kaynak": "tuik_dogum_2025"
+    }
+   ]
   },
   {
    "kod": "genel_dogurganlik_hizi",
@@ -132,7 +1442,198 @@
    "yil": 2025,
    "turkiye": 47.4,
    "kaynak": "tuik_dogum_2025",
-   "konum": "İllere göre genel doğurganlık hızı, 2009-2025"
+   "konum": "İllere göre genel doğurganlık hızı, 2009-2025",
+   "seri": [
+    {
+     "yil": 2009,
+     "deger": 55.6,
+     "kaynak": "tuik_dogum_2025",
+     "konum": "İllere göre genel doğurganlık hızı, 2009-2025 (‰)"
+    },
+    {
+     "yil": 2010,
+     "deger": 53.2,
+     "kaynak": "tuik_dogum_2025",
+     "konum": "İllere göre genel doğurganlık hızı, 2009-2025 (‰)"
+    },
+    {
+     "yil": 2011,
+     "deger": 53.8,
+     "kaynak": "tuik_dogum_2025",
+     "konum": "İllere göre genel doğurganlık hızı, 2009-2025 (‰)"
+    },
+    {
+     "yil": 2012,
+     "deger": 50.4,
+     "kaynak": "tuik_dogum_2025",
+     "konum": "İllere göre genel doğurganlık hızı, 2009-2025 (‰)"
+    },
+    {
+     "yil": 2013,
+     "deger": 50.8,
+     "kaynak": "tuik_dogum_2025",
+     "konum": "İllere göre genel doğurganlık hızı, 2009-2025 (‰)"
+    },
+    {
+     "yil": 2014,
+     "deger": 49.4,
+     "kaynak": "tuik_dogum_2025",
+     "konum": "İllere göre genel doğurganlık hızı, 2009-2025 (‰)"
+    },
+    {
+     "yil": 2015,
+     "deger": 48.6,
+     "kaynak": "tuik_dogum_2025",
+     "konum": "İllere göre genel doğurganlık hızı, 2009-2025 (‰)"
+    },
+    {
+     "yil": 2016,
+     "deger": 44.0,
+     "kaynak": "tuik_dogum_2025",
+     "konum": "İllere göre genel doğurganlık hızı, 2009-2025 (‰)"
+    },
+    {
+     "yil": 2017,
+     "deger": 45.5,
+     "kaynak": "tuik_dogum_2025",
+     "konum": "İllere göre genel doğurganlık hızı, 2009-2025 (‰)"
+    },
+    {
+     "yil": 2018,
+     "deger": 45.0,
+     "kaynak": "tuik_dogum_2025",
+     "konum": "İllere göre genel doğurganlık hızı, 2009-2025 (‰)"
+    },
+    {
+     "yil": 2019,
+     "deger": 42.9,
+     "kaynak": "tuik_dogum_2025",
+     "konum": "İllere göre genel doğurganlık hızı, 2009-2025 (‰)"
+    },
+    {
+     "yil": 2020,
+     "deger": 40.9,
+     "kaynak": "tuik_dogum_2025",
+     "konum": "İllere göre genel doğurganlık hızı, 2009-2025 (‰) — sütun \"2020(r)\""
+    },
+    {
+     "yil": 2021,
+     "deger": 42.5,
+     "kaynak": "tuik_dogum_2025",
+     "konum": "İllere göre genel doğurganlık hızı, 2009-2025 (‰) — sütun \"2021(r)\""
+    },
+    {
+     "yil": 2022,
+     "deger": 38.5,
+     "kaynak": "tuik_dogum_2025",
+     "konum": "İllere göre genel doğurganlık hızı, 2009-2025 (‰) — sütun \"2022(r)\""
+    },
+    {
+     "yil": 2023,
+     "deger": 35.6,
+     "kaynak": "tuik_dogum_2025",
+     "konum": "İllere göre genel doğurganlık hızı, 2009-2025 (‰) — sütun \"2023(r)\""
+    },
+    {
+     "yil": 2024,
+     "deger": 37.0,
+     "kaynak": "tuik_dogum_2025",
+     "konum": "İllere göre genel doğurganlık hızı, 2009-2025 (‰) — sütun \"2024(r)\""
+    },
+    {
+     "yil": 2025,
+     "deger": 36.1,
+     "kaynak": "tuik_dogum_2025",
+     "konum": "İllere göre genel doğurganlık hızı, 2009-2025 (‰)"
+    }
+   ],
+   "turkiye_seri": [
+    {
+     "yil": 2009,
+     "deger": 73.6,
+     "kaynak": "tuik_dogum_2025"
+    },
+    {
+     "yil": 2010,
+     "deger": 72.8,
+     "kaynak": "tuik_dogum_2025"
+    },
+    {
+     "yil": 2011,
+     "deger": 71.7,
+     "kaynak": "tuik_dogum_2025"
+    },
+    {
+     "yil": 2012,
+     "deger": 73.2,
+     "kaynak": "tuik_dogum_2025"
+    },
+    {
+     "yil": 2013,
+     "deger": 72.4,
+     "kaynak": "tuik_dogum_2025"
+    },
+    {
+     "yil": 2014,
+     "deger": 74.5,
+     "kaynak": "tuik_dogum_2025"
+    },
+    {
+     "yil": 2015,
+     "deger": 73.0,
+     "kaynak": "tuik_dogum_2025"
+    },
+    {
+     "yil": 2016,
+     "deger": 71.3,
+     "kaynak": "tuik_dogum_2025"
+    },
+    {
+     "yil": 2017,
+     "deger": 70.0,
+     "kaynak": "tuik_dogum_2025"
+    },
+    {
+     "yil": 2018,
+     "deger": 67.4,
+     "kaynak": "tuik_dogum_2025"
+    },
+    {
+     "yil": 2019,
+     "deger": 63.6,
+     "kaynak": "tuik_dogum_2025"
+    },
+    {
+     "yil": 2020,
+     "deger": 59.6,
+     "kaynak": "tuik_dogum_2025"
+    },
+    {
+     "yil": 2021,
+     "deger": 57.4,
+     "kaynak": "tuik_dogum_2025"
+    },
+    {
+     "yil": 2022,
+     "deger": 54.6,
+     "kaynak": "tuik_dogum_2025"
+    },
+    {
+     "yil": 2023,
+     "deger": 50.6,
+     "kaynak": "tuik_dogum_2025"
+    },
+    {
+     "yil": 2024,
+     "deger": 49.6,
+     "kaynak": "tuik_dogum_2025"
+    },
+    {
+     "yil": 2025,
+     "deger": 47.4,
+     "kaynak": "tuik_dogum_2025"
+    }
+   ]
   },
   {
    "kod": "bebek_olum_hizi",
@@ -143,7 +1644,198 @@
    "turkiye": 7.8,
    "kaynak": "tuik_olum_2025",
    "konum": "İllere göre bebek ölüm hızı, 2009-2025",
-   "not": "Küçük sayılarla hesaplandığı için yıldan yıla dalgalı: 2023(r) 11,91; 2024(r) 8,23."
+   "not": "Küçük sayılarla hesaplandığı için yıldan yıla dalgalı: 2023(r) 11,91; 2024(r) 8,23.",
+   "seri": [
+    {
+     "yil": 2009,
+     "deger": 12.16,
+     "kaynak": "tuik_olum_2025",
+     "konum": "İllere göre bebek ölüm hızı, 2009-2025 (‰)"
+    },
+    {
+     "yil": 2010,
+     "deger": 10.17,
+     "kaynak": "tuik_olum_2025",
+     "konum": "İllere göre bebek ölüm hızı, 2009-2025 (‰)"
+    },
+    {
+     "yil": 2011,
+     "deger": 8.22,
+     "kaynak": "tuik_olum_2025",
+     "konum": "İllere göre bebek ölüm hızı, 2009-2025 (‰)"
+    },
+    {
+     "yil": 2012,
+     "deger": 8.66,
+     "kaynak": "tuik_olum_2025",
+     "konum": "İllere göre bebek ölüm hızı, 2009-2025 (‰)"
+    },
+    {
+     "yil": 2013,
+     "deger": 7.14,
+     "kaynak": "tuik_olum_2025",
+     "konum": "İllere göre bebek ölüm hızı, 2009-2025 (‰)"
+    },
+    {
+     "yil": 2014,
+     "deger": 5.25,
+     "kaynak": "tuik_olum_2025",
+     "konum": "İllere göre bebek ölüm hızı, 2009-2025 (‰)"
+    },
+    {
+     "yil": 2015,
+     "deger": 5.59,
+     "kaynak": "tuik_olum_2025",
+     "konum": "İllere göre bebek ölüm hızı, 2009-2025 (‰)"
+    },
+    {
+     "yil": 2016,
+     "deger": 5.5,
+     "kaynak": "tuik_olum_2025",
+     "konum": "İllere göre bebek ölüm hızı, 2009-2025 (‰)"
+    },
+    {
+     "yil": 2017,
+     "deger": 5.63,
+     "kaynak": "tuik_olum_2025",
+     "konum": "İllere göre bebek ölüm hızı, 2009-2025 (‰)"
+    },
+    {
+     "yil": 2018,
+     "deger": 9.76,
+     "kaynak": "tuik_olum_2025",
+     "konum": "İllere göre bebek ölüm hızı, 2009-2025 (‰)"
+    },
+    {
+     "yil": 2019,
+     "deger": 2.98,
+     "kaynak": "tuik_olum_2025",
+     "konum": "İllere göre bebek ölüm hızı, 2009-2025 (‰)"
+    },
+    {
+     "yil": 2020,
+     "deger": 4.57,
+     "kaynak": "tuik_olum_2025",
+     "konum": "İllere göre bebek ölüm hızı, 2009-2025 (‰) — sütun \"2020(1)\""
+    },
+    {
+     "yil": 2021,
+     "deger": 5.3,
+     "kaynak": "tuik_olum_2025",
+     "konum": "İllere göre bebek ölüm hızı, 2009-2025 (‰) — sütun \"2021(1)\""
+    },
+    {
+     "yil": 2022,
+     "deger": 8.58,
+     "kaynak": "tuik_olum_2025",
+     "konum": "İllere göre bebek ölüm hızı, 2009-2025 (‰) — sütun \"2022(r)\""
+    },
+    {
+     "yil": 2023,
+     "deger": 11.91,
+     "kaynak": "tuik_olum_2025",
+     "konum": "İllere göre bebek ölüm hızı, 2009-2025 (‰) — sütun \"2023(r)\""
+    },
+    {
+     "yil": 2024,
+     "deger": 8.23,
+     "kaynak": "tuik_olum_2025",
+     "konum": "İllere göre bebek ölüm hızı, 2009-2025 (‰) — sütun \"2024(r)\""
+    },
+    {
+     "yil": 2025,
+     "deger": 6.01,
+     "kaynak": "tuik_olum_2025",
+     "konum": "İllere göre bebek ölüm hızı, 2009-2025 (‰)"
+    }
+   ],
+   "turkiye_seri": [
+    {
+     "yil": 2009,
+     "deger": 13.9,
+     "kaynak": "tuik_olum_2025"
+    },
+    {
+     "yil": 2010,
+     "deger": 12.02,
+     "kaynak": "tuik_olum_2025"
+    },
+    {
+     "yil": 2011,
+     "deger": 11.63,
+     "kaynak": "tuik_olum_2025"
+    },
+    {
+     "yil": 2012,
+     "deger": 11.57,
+     "kaynak": "tuik_olum_2025"
+    },
+    {
+     "yil": 2013,
+     "deger": 10.81,
+     "kaynak": "tuik_olum_2025"
+    },
+    {
+     "yil": 2014,
+     "deger": 11.07,
+     "kaynak": "tuik_olum_2025"
+    },
+    {
+     "yil": 2015,
+     "deger": 10.23,
+     "kaynak": "tuik_olum_2025"
+    },
+    {
+     "yil": 2016,
+     "deger": 9.81,
+     "kaynak": "tuik_olum_2025"
+    },
+    {
+     "yil": 2017,
+     "deger": 9.33,
+     "kaynak": "tuik_olum_2025"
+    },
+    {
+     "yil": 2018,
+     "deger": 9.32,
+     "kaynak": "tuik_olum_2025"
+    },
+    {
+     "yil": 2019,
+     "deger": 9.25,
+     "kaynak": "tuik_olum_2025"
+    },
+    {
+     "yil": 2020,
+     "deger": 8.71,
+     "kaynak": "tuik_olum_2025"
+    },
+    {
+     "yil": 2021,
+     "deger": 9.36,
+     "kaynak": "tuik_olum_2025"
+    },
+    {
+     "yil": 2022,
+     "deger": 9.28,
+     "kaynak": "tuik_olum_2025"
+    },
+    {
+     "yil": 2023,
+     "deger": 10.12,
+     "kaynak": "tuik_olum_2025"
+    },
+    {
+     "yil": 2024,
+     "deger": 9.02,
+     "kaynak": "tuik_olum_2025"
+    },
+    {
+     "yil": 2025,
+     "deger": 7.8,
+     "kaynak": "tuik_olum_2025"
+    }
+   ]
   },
   {
    "kod": "bes_yas_alti_olum_hizi",
@@ -153,7 +1845,198 @@
    "yil": 2025,
    "turkiye": 9.54,
    "kaynak": "tuik_olum_2025",
-   "konum": "İllere göre beş yaş altı ölüm hızı, 2009-2025"
+   "konum": "İllere göre beş yaş altı ölüm hızı, 2009-2025",
+   "seri": [
+    {
+     "yil": 2009,
+     "deger": 14.01,
+     "kaynak": "tuik_olum_2025",
+     "konum": "İllere göre beş yaş altı ölüm hızı, 2009-2025 (‰)"
+    },
+    {
+     "yil": 2010,
+     "deger": 12.51,
+     "kaynak": "tuik_olum_2025",
+     "konum": "İllere göre beş yaş altı ölüm hızı, 2009-2025 (‰)"
+    },
+    {
+     "yil": 2011,
+     "deger": 10.18,
+     "kaynak": "tuik_olum_2025",
+     "konum": "İllere göre beş yaş altı ölüm hızı, 2009-2025 (‰)"
+    },
+    {
+     "yil": 2012,
+     "deger": 10.72,
+     "kaynak": "tuik_olum_2025",
+     "konum": "İllere göre beş yaş altı ölüm hızı, 2009-2025 (‰)"
+    },
+    {
+     "yil": 2013,
+     "deger": 9.52,
+     "kaynak": "tuik_olum_2025",
+     "konum": "İllere göre beş yaş altı ölüm hızı, 2009-2025 (‰)"
+    },
+    {
+     "yil": 2014,
+     "deger": 6.86,
+     "kaynak": "tuik_olum_2025",
+     "konum": "İllere göre beş yaş altı ölüm hızı, 2009-2025 (‰)"
+    },
+    {
+     "yil": 2015,
+     "deger": 5.99,
+     "kaynak": "tuik_olum_2025",
+     "konum": "İllere göre beş yaş altı ölüm hızı, 2009-2025 (‰)"
+    },
+    {
+     "yil": 2016,
+     "deger": 5.92,
+     "kaynak": "tuik_olum_2025",
+     "konum": "İllere göre beş yaş altı ölüm hızı, 2009-2025 (‰)"
+    },
+    {
+     "yil": 2017,
+     "deger": 7.64,
+     "kaynak": "tuik_olum_2025",
+     "konum": "İllere göre beş yaş altı ölüm hızı, 2009-2025 (‰)"
+    },
+    {
+     "yil": 2018,
+     "deger": 10.98,
+     "kaynak": "tuik_olum_2025",
+     "konum": "İllere göre beş yaş altı ölüm hızı, 2009-2025 (‰)"
+    },
+    {
+     "yil": 2019,
+     "deger": 2.98,
+     "kaynak": "tuik_olum_2025",
+     "konum": "İllere göre beş yaş altı ölüm hızı, 2009-2025 (‰)"
+    },
+    {
+     "yil": 2020,
+     "deger": 5.49,
+     "kaynak": "tuik_olum_2025",
+     "konum": "İllere göre beş yaş altı ölüm hızı, 2009-2025 (‰) — sütun \"2020(1)\""
+    },
+    {
+     "yil": 2021,
+     "deger": 7.51,
+     "kaynak": "tuik_olum_2025",
+     "konum": "İllere göre beş yaş altı ölüm hızı, 2009-2025 (‰) — sütun \"2021(1)\""
+    },
+    {
+     "yil": 2022,
+     "deger": 9.06,
+     "kaynak": "tuik_olum_2025",
+     "konum": "İllere göre beş yaş altı ölüm hızı, 2009-2025 (‰) — sütun \"2022(r)\""
+    },
+    {
+     "yil": 2023,
+     "deger": 12.95,
+     "kaynak": "tuik_olum_2025",
+     "konum": "İllere göre beş yaş altı ölüm hızı, 2009-2025 (‰) — sütun \"2023(r)\""
+    },
+    {
+     "yil": 2024,
+     "deger": 8.74,
+     "kaynak": "tuik_olum_2025",
+     "konum": "İllere göre beş yaş altı ölüm hızı, 2009-2025 (‰) — sütun \"2024(r)\""
+    },
+    {
+     "yil": 2025,
+     "deger": 6.56,
+     "kaynak": "tuik_olum_2025",
+     "konum": "İllere göre beş yaş altı ölüm hızı, 2009-2025 (‰)"
+    }
+   ],
+   "turkiye_seri": [
+    {
+     "yil": 2009,
+     "deger": 17.65,
+     "kaynak": "tuik_olum_2025"
+    },
+    {
+     "yil": 2010,
+     "deger": 15.46,
+     "kaynak": "tuik_olum_2025"
+    },
+    {
+     "yil": 2011,
+     "deger": 14.85,
+     "kaynak": "tuik_olum_2025"
+    },
+    {
+     "yil": 2012,
+     "deger": 14.36,
+     "kaynak": "tuik_olum_2025"
+    },
+    {
+     "yil": 2013,
+     "deger": 13.39,
+     "kaynak": "tuik_olum_2025"
+    },
+    {
+     "yil": 2014,
+     "deger": 13.28,
+     "kaynak": "tuik_olum_2025"
+    },
+    {
+     "yil": 2015,
+     "deger": 12.35,
+     "kaynak": "tuik_olum_2025"
+    },
+    {
+     "yil": 2016,
+     "deger": 11.96,
+     "kaynak": "tuik_olum_2025"
+    },
+    {
+     "yil": 2017,
+     "deger": 11.35,
+     "kaynak": "tuik_olum_2025"
+    },
+    {
+     "yil": 2018,
+     "deger": 11.41,
+     "kaynak": "tuik_olum_2025"
+    },
+    {
+     "yil": 2019,
+     "deger": 11.35,
+     "kaynak": "tuik_olum_2025"
+    },
+    {
+     "yil": 2020,
+     "deger": 10.69,
+     "kaynak": "tuik_olum_2025"
+    },
+    {
+     "yil": 2021,
+     "deger": 11.39,
+     "kaynak": "tuik_olum_2025"
+    },
+    {
+     "yil": 2022,
+     "deger": 11.25,
+     "kaynak": "tuik_olum_2025"
+    },
+    {
+     "yil": 2023,
+     "deger": 14.67,
+     "kaynak": "tuik_olum_2025"
+    },
+    {
+     "yil": 2024,
+     "deger": 11.1,
+     "kaynak": "tuik_olum_2025"
+    },
+    {
+     "yil": 2025,
+     "deger": 9.54,
+     "kaynak": "tuik_olum_2025"
+    }
+   ]
   },
   {
    "kod": "kaba_olum_hizi",
@@ -164,7 +2047,198 @@
    "turkiye": 5.73,
    "kaynak": "tuik_olum_2025",
    "konum": "İllere göre kaba ölüm hızı, 2009-2025",
-   "not": "Yaşlı nüfus oranının yüksekliğiyle uyumlu; yaşa göre standardize değildir."
+   "not": "Yaşlı nüfus oranının yüksekliğiyle uyumlu; yaşa göre standardize değildir.",
+   "seri": [
+    {
+     "yil": 2009,
+     "deger": 7.38,
+     "kaynak": "tuik_olum_2025",
+     "konum": "İllere göre kaba ölüm hızı, 2009-2025 (‰)"
+    },
+    {
+     "yil": 2010,
+     "deger": 7.19,
+     "kaynak": "tuik_olum_2025",
+     "konum": "İllere göre kaba ölüm hızı, 2009-2025 (‰)"
+    },
+    {
+     "yil": 2011,
+     "deger": 7.53,
+     "kaynak": "tuik_olum_2025",
+     "konum": "İllere göre kaba ölüm hızı, 2009-2025 (‰)"
+    },
+    {
+     "yil": 2012,
+     "deger": 7.47,
+     "kaynak": "tuik_olum_2025",
+     "konum": "İllere göre kaba ölüm hızı, 2009-2025 (‰)"
+    },
+    {
+     "yil": 2013,
+     "deger": 6.86,
+     "kaynak": "tuik_olum_2025",
+     "konum": "İllere göre kaba ölüm hızı, 2009-2025 (‰)"
+    },
+    {
+     "yil": 2014,
+     "deger": 6.99,
+     "kaynak": "tuik_olum_2025",
+     "konum": "İllere göre kaba ölüm hızı, 2009-2025 (‰)"
+    },
+    {
+     "yil": 2015,
+     "deger": 7.14,
+     "kaynak": "tuik_olum_2025",
+     "konum": "İllere göre kaba ölüm hızı, 2009-2025 (‰)"
+    },
+    {
+     "yil": 2016,
+     "deger": 7.3,
+     "kaynak": "tuik_olum_2025",
+     "konum": "İllere göre kaba ölüm hızı, 2009-2025 (‰)"
+    },
+    {
+     "yil": 2017,
+     "deger": 7.17,
+     "kaynak": "tuik_olum_2025",
+     "konum": "İllere göre kaba ölüm hızı, 2009-2025 (‰)"
+    },
+    {
+     "yil": 2018,
+     "deger": 7.17,
+     "kaynak": "tuik_olum_2025",
+     "konum": "İllere göre kaba ölüm hızı, 2009-2025 (‰)"
+    },
+    {
+     "yil": 2019,
+     "deger": 7.07,
+     "kaynak": "tuik_olum_2025",
+     "konum": "İllere göre kaba ölüm hızı, 2009-2025 (‰)"
+    },
+    {
+     "yil": 2020,
+     "deger": 7.99,
+     "kaynak": "tuik_olum_2025",
+     "konum": "İllere göre kaba ölüm hızı, 2009-2025 (‰)"
+    },
+    {
+     "yil": 2021,
+     "deger": 9.34,
+     "kaynak": "tuik_olum_2025",
+     "konum": "İllere göre kaba ölüm hızı, 2009-2025 (‰)"
+    },
+    {
+     "yil": 2022,
+     "deger": 8.47,
+     "kaynak": "tuik_olum_2025",
+     "konum": "İllere göre kaba ölüm hızı, 2009-2025 (‰) — sütun \"2022(r)\""
+    },
+    {
+     "yil": 2023,
+     "deger": 7.72,
+     "kaynak": "tuik_olum_2025",
+     "konum": "İllere göre kaba ölüm hızı, 2009-2025 (‰) — sütun \"2023(r)\""
+    },
+    {
+     "yil": 2024,
+     "deger": 7.93,
+     "kaynak": "tuik_olum_2025",
+     "konum": "İllere göre kaba ölüm hızı, 2009-2025 (‰) — sütun \"2024(r)\""
+    },
+    {
+     "yil": 2025,
+     "deger": 8.13,
+     "kaynak": "tuik_olum_2025",
+     "konum": "İllere göre kaba ölüm hızı, 2009-2025 (‰)"
+    }
+   ],
+   "turkiye_seri": [
+    {
+     "yil": 2009,
+     "deger": 5.13,
+     "kaynak": "tuik_olum_2025"
+    },
+    {
+     "yil": 2010,
+     "deger": 5.01,
+     "kaynak": "tuik_olum_2025"
+    },
+    {
+     "yil": 2011,
+     "deger": 5.07,
+     "kaynak": "tuik_olum_2025"
+    },
+    {
+     "yil": 2012,
+     "deger": 5.01,
+     "kaynak": "tuik_olum_2025"
+    },
+    {
+     "yil": 2013,
+     "deger": 4.9,
+     "kaynak": "tuik_olum_2025"
+    },
+    {
+     "yil": 2014,
+     "deger": 5.07,
+     "kaynak": "tuik_olum_2025"
+    },
+    {
+     "yil": 2015,
+     "deger": 5.18,
+     "kaynak": "tuik_olum_2025"
+    },
+    {
+     "yil": 2016,
+     "deger": 5.34,
+     "kaynak": "tuik_olum_2025"
+    },
+    {
+     "yil": 2017,
+     "deger": 5.31,
+     "kaynak": "tuik_olum_2025"
+    },
+    {
+     "yil": 2018,
+     "deger": 5.24,
+     "kaynak": "tuik_olum_2025"
+    },
+    {
+     "yil": 2019,
+     "deger": 5.29,
+     "kaynak": "tuik_olum_2025"
+    },
+    {
+     "yil": 2020,
+     "deger": 6.11,
+     "kaynak": "tuik_olum_2025"
+    },
+    {
+     "yil": 2021,
+     "deger": 6.74,
+     "kaynak": "tuik_olum_2025"
+    },
+    {
+     "yil": 2022,
+     "deger": 5.95,
+     "kaynak": "tuik_olum_2025"
+    },
+    {
+     "yil": 2023,
+     "deger": 6.17,
+     "kaynak": "tuik_olum_2025"
+    },
+    {
+     "yil": 2024,
+     "deger": 5.73,
+     "kaynak": "tuik_olum_2025"
+    },
+    {
+     "yil": 2025,
+     "deger": 5.73,
+     "kaynak": "tuik_olum_2025"
+    }
+   ]
   },
   {
    "kod": "dogumda_beklenen_yasam",
@@ -175,7 +2249,66 @@
    "turkiye": 77.3,
    "kaynak": "tuik_hayat_2021_2023",
    "konum": "İllere ve cinsiyete göre doğuşta beklenen yaşam süreleri",
-   "not": "Erkek 75,3 (TR 74,7); kadın 80,8 (TR 80,0). İl düzeyinde yayımlanan en güncel dönem."
+   "not": "Erkek 75,3 (TR 74,7); kadın 80,8 (TR 80,0). İl düzeyinde yayımlanan en güncel dönem.",
+   "seri": [
+    {
+     "yil": "2013",
+     "deger": 78.44,
+     "kaynak": "tuik_hayat_2021_2023",
+     "konum": "İllere ve cinsiyete göre doğuşta beklenen yaşam süreleri — dönem 2013 (r)"
+    },
+    {
+     "yil": "2013-2014",
+     "deger": 78.55,
+     "kaynak": "tuik_hayat_2021_2023",
+     "konum": "İllere ve cinsiyete göre doğuşta beklenen yaşam süreleri — dönem 2013-2014"
+    },
+    {
+     "yil": "2015-2017",
+     "deger": 78.4,
+     "kaynak": "tuik_hayat_2021_2023",
+     "konum": "İllere ve cinsiyete göre doğuşta beklenen yaşam süreleri — dönem 2015-2017"
+    },
+    {
+     "yil": "2018-2020",
+     "deger": 79.07,
+     "kaynak": "tuik_hayat_2021_2023",
+     "konum": "İllere ve cinsiyete göre doğuşta beklenen yaşam süreleri — dönem 2018-2020"
+    },
+    {
+     "yil": "2021-2023",
+     "deger": 78.01,
+     "kaynak": "tuik_hayat_2021_2023",
+     "konum": "İllere ve cinsiyete göre doğuşta beklenen yaşam süreleri — dönem 2021-2023"
+    }
+   ],
+   "turkiye_seri": [
+    {
+     "yil": "2013",
+     "deger": 78,
+     "kaynak": "tuik_hayat_2021_2023"
+    },
+    {
+     "yil": "2013-2014",
+     "deger": 78,
+     "kaynak": "tuik_hayat_2021_2023"
+    },
+    {
+     "yil": "2015-2017",
+     "deger": 78,
+     "kaynak": "tuik_hayat_2021_2023"
+    },
+    {
+     "yil": "2018-2020",
+     "deger": 78.33,
+     "kaynak": "tuik_hayat_2021_2023"
+    },
+    {
+     "yil": "2021-2023",
+     "deger": 77.31,
+     "kaynak": "tuik_hayat_2021_2023"
+    }
+   ]
   },
   {
    "kod": "olum_dolasim_payi",
@@ -186,7 +2319,103 @@
    "turkiye": 34.7,
    "kaynak": "tuik_olum_2025",
    "konum": "İl ve seçilmiş ölüm nedenlerine göre ölümler, 2018-2025 (pay hesaplandı)",
-   "not": "Karabük 2025: toplam 2.032 ölüm; dolaşım 799, neoplazm 318, solunum 291, endokrin-metabolik 146, dışsal nedenler 71, sinir sistemi 63, diğer 281, bilinmeyen 63."
+   "not": "Karabük 2025: toplam 2.032 ölüm; dolaşım 799, neoplazm 318, solunum 291, endokrin-metabolik 146, dışsal nedenler 71, sinir sistemi 63, diğer 281, bilinmeyen 63.",
+   "seri": [
+    {
+     "yil": 2018,
+     "deger": 40.2,
+     "kaynak": "tuik_olum_2025",
+     "konum": "İl ve seçilmiş ölüm nedenlerine göre ölümler, 2018-2025 — Dolaşım sistemi hastalıkları / toplam (pay hesaplandı)"
+    },
+    {
+     "yil": 2019,
+     "deger": 39.3,
+     "kaynak": "tuik_olum_2025",
+     "konum": "İl ve seçilmiş ölüm nedenlerine göre ölümler, 2018-2025 — Dolaşım sistemi hastalıkları / toplam (pay hesaplandı)"
+    },
+    {
+     "yil": 2020,
+     "deger": 38.3,
+     "kaynak": "tuik_olum_2025",
+     "konum": "İl ve seçilmiş ölüm nedenlerine göre ölümler, 2018-2025 — Dolaşım sistemi hastalıkları / toplam (pay hesaplandı)",
+     "not": "Bu yıl 130 COVID-19 ölümü ayrı kodlanmıştır."
+    },
+    {
+     "yil": 2021,
+     "deger": 37.3,
+     "kaynak": "tuik_olum_2025",
+     "konum": "İl ve seçilmiş ölüm nedenlerine göre ölümler, 2018-2025 — Dolaşım sistemi hastalıkları / toplam (pay hesaplandı)",
+     "not": "Bu yıl 337 COVID-19 ölümü ayrı kodlanmıştır."
+    },
+    {
+     "yil": 2022,
+     "deger": 39.5,
+     "kaynak": "tuik_olum_2025",
+     "konum": "İl ve seçilmiş ölüm nedenlerine göre ölümler, 2018-2025 — Dolaşım sistemi hastalıkları / toplam (pay hesaplandı); 2022-2024 (r)",
+     "not": "Bu yıl 134 COVID-19 ölümü ayrı kodlanmıştır."
+    },
+    {
+     "yil": 2023,
+     "deger": 42.2,
+     "kaynak": "tuik_olum_2025",
+     "konum": "İl ve seçilmiş ölüm nedenlerine göre ölümler, 2018-2025 — Dolaşım sistemi hastalıkları / toplam (pay hesaplandı); 2022-2024 (r)",
+     "not": "Bu yıl 6 COVID-19 ölümü ayrı kodlanmıştır."
+    },
+    {
+     "yil": 2024,
+     "deger": 46.9,
+     "kaynak": "tuik_olum_2025",
+     "konum": "İl ve seçilmiş ölüm nedenlerine göre ölümler, 2018-2025 — Dolaşım sistemi hastalıkları / toplam (pay hesaplandı); 2022-2024 (r)"
+    },
+    {
+     "yil": 2025,
+     "deger": 39.3,
+     "kaynak": "tuik_olum_2025",
+     "konum": "İl ve seçilmiş ölüm nedenlerine göre ölümler, 2018-2025 — Dolaşım sistemi hastalıkları / toplam (pay hesaplandı)"
+    }
+   ],
+   "turkiye_seri": [
+    {
+     "yil": 2018,
+     "deger": 37.8,
+     "kaynak": "tuik_olum_2025"
+    },
+    {
+     "yil": 2019,
+     "deger": 37.3,
+     "kaynak": "tuik_olum_2025"
+    },
+    {
+     "yil": 2020,
+     "deger": 36.0,
+     "kaynak": "tuik_olum_2025"
+    },
+    {
+     "yil": 2021,
+     "deger": 33.5,
+     "kaynak": "tuik_olum_2025"
+    },
+    {
+     "yil": 2022,
+     "deger": 35.8,
+     "kaynak": "tuik_olum_2025"
+    },
+    {
+     "yil": 2023,
+     "deger": 33.6,
+     "kaynak": "tuik_olum_2025"
+    },
+    {
+     "yil": 2024,
+     "deger": 36.3,
+     "kaynak": "tuik_olum_2025"
+    },
+    {
+     "yil": 2025,
+     "deger": 34.7,
+     "kaynak": "tuik_olum_2025"
+    }
+   ]
   },
   {
    "kod": "olum_neoplazm_payi",
@@ -196,7 +2425,103 @@
    "yil": 2025,
    "turkiye": 16.1,
    "kaynak": "tuik_olum_2025",
-   "konum": "İl ve seçilmiş ölüm nedenlerine göre ölümler (pay hesaplandı)"
+   "konum": "İl ve seçilmiş ölüm nedenlerine göre ölümler (pay hesaplandı)",
+   "seri": [
+    {
+     "yil": 2018,
+     "deger": 16.5,
+     "kaynak": "tuik_olum_2025",
+     "konum": "İl ve seçilmiş ölüm nedenlerine göre ölümler, 2018-2025 — İyi ve kötü huylu tümörler (neoplazmlar) / toplam (pay hesaplandı)"
+    },
+    {
+     "yil": 2019,
+     "deger": 17.9,
+     "kaynak": "tuik_olum_2025",
+     "konum": "İl ve seçilmiş ölüm nedenlerine göre ölümler, 2018-2025 — İyi ve kötü huylu tümörler (neoplazmlar) / toplam (pay hesaplandı)"
+    },
+    {
+     "yil": 2020,
+     "deger": 16.6,
+     "kaynak": "tuik_olum_2025",
+     "konum": "İl ve seçilmiş ölüm nedenlerine göre ölümler, 2018-2025 — İyi ve kötü huylu tümörler (neoplazmlar) / toplam (pay hesaplandı)",
+     "not": "Bu yıl 130 COVID-19 ölümü ayrı kodlanmıştır."
+    },
+    {
+     "yil": 2021,
+     "deger": 13.1,
+     "kaynak": "tuik_olum_2025",
+     "konum": "İl ve seçilmiş ölüm nedenlerine göre ölümler, 2018-2025 — İyi ve kötü huylu tümörler (neoplazmlar) / toplam (pay hesaplandı)",
+     "not": "Bu yıl 337 COVID-19 ölümü ayrı kodlanmıştır."
+    },
+    {
+     "yil": 2022,
+     "deger": 13.4,
+     "kaynak": "tuik_olum_2025",
+     "konum": "İl ve seçilmiş ölüm nedenlerine göre ölümler, 2018-2025 — İyi ve kötü huylu tümörler (neoplazmlar) / toplam (pay hesaplandı); 2022-2024 (r)",
+     "not": "Bu yıl 134 COVID-19 ölümü ayrı kodlanmıştır."
+    },
+    {
+     "yil": 2023,
+     "deger": 15.5,
+     "kaynak": "tuik_olum_2025",
+     "konum": "İl ve seçilmiş ölüm nedenlerine göre ölümler, 2018-2025 — İyi ve kötü huylu tümörler (neoplazmlar) / toplam (pay hesaplandı); 2022-2024 (r)",
+     "not": "Bu yıl 6 COVID-19 ölümü ayrı kodlanmıştır."
+    },
+    {
+     "yil": 2024,
+     "deger": 13.7,
+     "kaynak": "tuik_olum_2025",
+     "konum": "İl ve seçilmiş ölüm nedenlerine göre ölümler, 2018-2025 — İyi ve kötü huylu tümörler (neoplazmlar) / toplam (pay hesaplandı); 2022-2024 (r)"
+    },
+    {
+     "yil": 2025,
+     "deger": 15.6,
+     "kaynak": "tuik_olum_2025",
+     "konum": "İl ve seçilmiş ölüm nedenlerine göre ölümler, 2018-2025 — İyi ve kötü huylu tümörler (neoplazmlar) / toplam (pay hesaplandı)"
+    }
+   ],
+   "turkiye_seri": [
+    {
+     "yil": 2018,
+     "deger": 19.3,
+     "kaynak": "tuik_olum_2025"
+    },
+    {
+     "yil": 2019,
+     "deger": 18.5,
+     "kaynak": "tuik_olum_2025"
+    },
+    {
+     "yil": 2020,
+     "deger": 15.7,
+     "kaynak": "tuik_olum_2025"
+    },
+    {
+     "yil": 2021,
+     "deger": 14.0,
+     "kaynak": "tuik_olum_2025"
+    },
+    {
+     "yil": 2022,
+     "deger": 15.2,
+     "kaynak": "tuik_olum_2025"
+    },
+    {
+     "yil": 2023,
+     "deger": 15.1,
+     "kaynak": "tuik_olum_2025"
+    },
+    {
+     "yil": 2024,
+     "deger": 16.4,
+     "kaynak": "tuik_olum_2025"
+    },
+    {
+     "yil": 2025,
+     "deger": 16.1,
+     "kaynak": "tuik_olum_2025"
+    }
+   ]
   },
   {
    "kod": "olum_solunum_payi",
@@ -207,7 +2532,103 @@
    "turkiye": 15.1,
    "kaynak": "tuik_olum_2025",
    "konum": "İl ve seçilmiş ölüm nedenlerine göre ölümler (pay hesaplandı)",
-   "not": "2024(r): 227/2.005; 2025'te artış var. Yorum için çok yıllı izlem gerekir."
+   "not": "2024(r): 227/2.005; 2025'te artış var. Yorum için çok yıllı izlem gerekir.",
+   "seri": [
+    {
+     "yil": 2018,
+     "deger": 13.0,
+     "kaynak": "tuik_olum_2025",
+     "konum": "İl ve seçilmiş ölüm nedenlerine göre ölümler, 2018-2025 — Solunum sistemi hastalıkları / toplam (pay hesaplandı)"
+    },
+    {
+     "yil": 2019,
+     "deger": 11.6,
+     "kaynak": "tuik_olum_2025",
+     "konum": "İl ve seçilmiş ölüm nedenlerine göre ölümler, 2018-2025 — Solunum sistemi hastalıkları / toplam (pay hesaplandı)"
+    },
+    {
+     "yil": 2020,
+     "deger": 12.7,
+     "kaynak": "tuik_olum_2025",
+     "konum": "İl ve seçilmiş ölüm nedenlerine göre ölümler, 2018-2025 — Solunum sistemi hastalıkları / toplam (pay hesaplandı)",
+     "not": "Bu yıl 130 COVID-19 ölümü ayrı kodlanmıştır."
+    },
+    {
+     "yil": 2021,
+     "deger": 9.7,
+     "kaynak": "tuik_olum_2025",
+     "konum": "İl ve seçilmiş ölüm nedenlerine göre ölümler, 2018-2025 — Solunum sistemi hastalıkları / toplam (pay hesaplandı)",
+     "not": "Bu yıl 337 COVID-19 ölümü ayrı kodlanmıştır."
+    },
+    {
+     "yil": 2022,
+     "deger": 12.0,
+     "kaynak": "tuik_olum_2025",
+     "konum": "İl ve seçilmiş ölüm nedenlerine göre ölümler, 2018-2025 — Solunum sistemi hastalıkları / toplam (pay hesaplandı); 2022-2024 (r)",
+     "not": "Bu yıl 134 COVID-19 ölümü ayrı kodlanmıştır."
+    },
+    {
+     "yil": 2023,
+     "deger": 11.1,
+     "kaynak": "tuik_olum_2025",
+     "konum": "İl ve seçilmiş ölüm nedenlerine göre ölümler, 2018-2025 — Solunum sistemi hastalıkları / toplam (pay hesaplandı); 2022-2024 (r)",
+     "not": "Bu yıl 6 COVID-19 ölümü ayrı kodlanmıştır."
+    },
+    {
+     "yil": 2024,
+     "deger": 11.3,
+     "kaynak": "tuik_olum_2025",
+     "konum": "İl ve seçilmiş ölüm nedenlerine göre ölümler, 2018-2025 — Solunum sistemi hastalıkları / toplam (pay hesaplandı); 2022-2024 (r)"
+    },
+    {
+     "yil": 2025,
+     "deger": 14.3,
+     "kaynak": "tuik_olum_2025",
+     "konum": "İl ve seçilmiş ölüm nedenlerine göre ölümler, 2018-2025 — Solunum sistemi hastalıkları / toplam (pay hesaplandı)"
+    }
+   ],
+   "turkiye_seri": [
+    {
+     "yil": 2018,
+     "deger": 12.2,
+     "kaynak": "tuik_olum_2025"
+    },
+    {
+     "yil": 2019,
+     "deger": 13.1,
+     "kaynak": "tuik_olum_2025"
+    },
+    {
+     "yil": 2020,
+     "deger": 15.8,
+     "kaynak": "tuik_olum_2025"
+    },
+    {
+     "yil": 2021,
+     "deger": 13.4,
+     "kaynak": "tuik_olum_2025"
+    },
+    {
+     "yil": 2022,
+     "deger": 13.6,
+     "kaynak": "tuik_olum_2025"
+    },
+    {
+     "yil": 2023,
+     "deger": 13.2,
+     "kaynak": "tuik_olum_2025"
+    },
+    {
+     "yil": 2024,
+     "deger": 15.0,
+     "kaynak": "tuik_olum_2025"
+    },
+    {
+     "yil": 2025,
+     "deger": 15.1,
+     "kaynak": "tuik_olum_2025"
+    }
+   ]
   },
   {
    "kod": "kaba_intihar_hizi",
@@ -217,7 +2638,198 @@
    "yil": 2025,
    "turkiye": 5.36,
    "kaynak": "tuik_olum_2025",
-   "konum": "İllere göre kaba intihar hızı, 2009-2025 (olay yerine göre)"
+   "konum": "İllere göre kaba intihar hızı, 2009-2025 (olay yerine göre)",
+   "seri": [
+    {
+     "yil": 2009,
+     "deger": 4.6,
+     "kaynak": "tuik_olum_2025",
+     "konum": "İllere göre kaba intihar hızı, 2009-2025 (yüz binde; olay yerine göre)"
+    },
+    {
+     "yil": 2010,
+     "deger": 1.79,
+     "kaynak": "tuik_olum_2025",
+     "konum": "İllere göre kaba intihar hızı, 2009-2025 (yüz binde; olay yerine göre)"
+    },
+    {
+     "yil": 2011,
+     "deger": 3.13,
+     "kaynak": "tuik_olum_2025",
+     "konum": "İllere göre kaba intihar hızı, 2009-2025 (yüz binde; olay yerine göre)"
+    },
+    {
+     "yil": 2012,
+     "deger": 6.29,
+     "kaynak": "tuik_olum_2025",
+     "konum": "İllere göre kaba intihar hızı, 2009-2025 (yüz binde; olay yerine göre)"
+    },
+    {
+     "yil": 2013,
+     "deger": 4.39,
+     "kaynak": "tuik_olum_2025",
+     "konum": "İllere göre kaba intihar hızı, 2009-2025 (yüz binde; olay yerine göre)"
+    },
+    {
+     "yil": 2014,
+     "deger": 1.73,
+     "kaynak": "tuik_olum_2025",
+     "konum": "İllere göre kaba intihar hızı, 2009-2025 (yüz binde; olay yerine göre)"
+    },
+    {
+     "yil": 2015,
+     "deger": 4.27,
+     "kaynak": "tuik_olum_2025",
+     "konum": "İllere göre kaba intihar hızı, 2009-2025 (yüz binde; olay yerine göre)"
+    },
+    {
+     "yil": 2016,
+     "deger": 3.34,
+     "kaynak": "tuik_olum_2025",
+     "konum": "İllere göre kaba intihar hızı, 2009-2025 (yüz binde; olay yerine göre)"
+    },
+    {
+     "yil": 2017,
+     "deger": 3.29,
+     "kaynak": "tuik_olum_2025",
+     "konum": "İllere göre kaba intihar hızı, 2009-2025 (yüz binde; olay yerine göre)"
+    },
+    {
+     "yil": 2018,
+     "deger": 4.06,
+     "kaynak": "tuik_olum_2025",
+     "konum": "İllere göre kaba intihar hızı, 2009-2025 (yüz binde; olay yerine göre)"
+    },
+    {
+     "yil": 2019,
+     "deger": 4.43,
+     "kaynak": "tuik_olum_2025",
+     "konum": "İllere göre kaba intihar hızı, 2009-2025 (yüz binde; olay yerine göre)"
+    },
+    {
+     "yil": 2020,
+     "deger": 2.44,
+     "kaynak": "tuik_olum_2025",
+     "konum": "İllere göre kaba intihar hızı, 2009-2025 (yüz binde; olay yerine göre)"
+    },
+    {
+     "yil": 2021,
+     "deger": 6.09,
+     "kaynak": "tuik_olum_2025",
+     "konum": "İllere göre kaba intihar hızı, 2009-2025 (yüz binde; olay yerine göre)"
+    },
+    {
+     "yil": 2022,
+     "deger": 7.98,
+     "kaynak": "tuik_olum_2025",
+     "konum": "İllere göre kaba intihar hızı, 2009-2025 (yüz binde; olay yerine göre)"
+    },
+    {
+     "yil": 2023,
+     "deger": 3.94,
+     "kaynak": "tuik_olum_2025",
+     "konum": "İllere göre kaba intihar hızı, 2009-2025 (yüz binde; olay yerine göre)"
+    },
+    {
+     "yil": 2024,
+     "deger": 7.12,
+     "kaynak": "tuik_olum_2025",
+     "konum": "İllere göre kaba intihar hızı, 2009-2025 (yüz binde; olay yerine göre) — sütun \"2024(r)\""
+    },
+    {
+     "yil": 2025,
+     "deger": 5.2,
+     "kaynak": "tuik_olum_2025",
+     "konum": "İllere göre kaba intihar hızı, 2009-2025 (yüz binde; olay yerine göre)"
+    }
+   ],
+   "turkiye_seri": [
+    {
+     "yil": 2009,
+     "deger": 4.02,
+     "kaynak": "tuik_olum_2025"
+    },
+    {
+     "yil": 2010,
+     "deger": 4.01,
+     "kaynak": "tuik_olum_2025"
+    },
+    {
+     "yil": 2011,
+     "deger": 3.61,
+     "kaynak": "tuik_olum_2025"
+    },
+    {
+     "yil": 2012,
+     "deger": 4.37,
+     "kaynak": "tuik_olum_2025"
+    },
+    {
+     "yil": 2013,
+     "deger": 4.27,
+     "kaynak": "tuik_olum_2025"
+    },
+    {
+     "yil": 2014,
+     "deger": 4.11,
+     "kaynak": "tuik_olum_2025"
+    },
+    {
+     "yil": 2015,
+     "deger": 4.15,
+     "kaynak": "tuik_olum_2025"
+    },
+    {
+     "yil": 2016,
+     "deger": 4.03,
+     "kaynak": "tuik_olum_2025"
+    },
+    {
+     "yil": 2017,
+     "deger": 3.94,
+     "kaynak": "tuik_olum_2025"
+    },
+    {
+     "yil": 2018,
+     "deger": 4.11,
+     "kaynak": "tuik_olum_2025"
+    },
+    {
+     "yil": 2019,
+     "deger": 4.21,
+     "kaynak": "tuik_olum_2025"
+    },
+    {
+     "yil": 2020,
+     "deger": 4.45,
+     "kaynak": "tuik_olum_2025"
+    },
+    {
+     "yil": 2021,
+     "deger": 4.98,
+     "kaynak": "tuik_olum_2025"
+    },
+    {
+     "yil": 2022,
+     "deger": 4.96,
+     "kaynak": "tuik_olum_2025"
+    },
+    {
+     "yil": 2023,
+     "deger": 4.79,
+     "kaynak": "tuik_olum_2025"
+    },
+    {
+     "yil": 2024,
+     "deger": 5.27,
+     "kaynak": "tuik_olum_2025"
+    },
+    {
+     "yil": 2025,
+     "deger": 5.36,
+     "kaynak": "tuik_olum_2025"
+    }
+   ]
   },
   {
    "kod": "yatak_10000",
@@ -228,7 +2840,173 @@
    "turkiye": 31.3,
    "kaynak": "sb-siy-2024",
    "konum": "Tablo 7.20, PDF s. 192",
-   "not": "İlde 6 hastane, 779 yatak (637 nitelikli, 131 yoğun bakım)."
+   "not": "İlde 6 hastane, 779 yatak (637 nitelikli, 131 yoğun bakım).",
+   "seri": [
+    {
+     "yil": 2012,
+     "deger": 29.9,
+     "kaynak": "sb-siy-2012",
+     "konum": "Tablo 6.16 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 112",
+     "not": "6 hastane, 673 yatak"
+    },
+    {
+     "yil": 2013,
+     "deger": 29.0,
+     "kaynak": "sb-siy-2013",
+     "konum": "Tablo 6.18 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 116",
+     "not": "6 hastane, 668 yatak"
+    },
+    {
+     "yil": 2014,
+     "deger": 27.3,
+     "kaynak": "sb-siy-2014",
+     "konum": "Tablo 6.17 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 120",
+     "not": "5 hastane, 632 yatak"
+    },
+    {
+     "yil": 2015,
+     "deger": 28.1,
+     "kaynak": "sb-siy-2015",
+     "konum": "Tablo 7.18 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 152 ve 154",
+     "not": "6 hastane, 665 yatak"
+    },
+    {
+     "yil": 2016,
+     "deger": 27.9,
+     "kaynak": "sb-siy-2016",
+     "konum": "Tablo 7.19 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 166 ve 168",
+     "not": "6 hastane, 676 yatak"
+    },
+    {
+     "yil": 2017,
+     "deger": 27.2,
+     "kaynak": "sb-siy-2017",
+     "konum": "Tablo 7.18 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 176 ve 178",
+     "not": "6 hastane, 666 yatak"
+    },
+    {
+     "yil": 2018,
+     "deger": 28.9,
+     "kaynak": "sb-siy-2018",
+     "konum": "Tablo 7.18 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 181 ve 183",
+     "not": "6 hastane, 716 yatak"
+    },
+    {
+     "yil": 2019,
+     "deger": 27.8,
+     "kaynak": "sb-siy-2019",
+     "konum": "Tablo 7.19 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 173",
+     "not": "6 hastane, 691 yatak"
+    },
+    {
+     "yil": 2020,
+     "deger": 30.8,
+     "kaynak": "sb_siy_2020",
+     "konum": "Tablo 7.19 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 172",
+     "not": "6 hastane, 751 yatak"
+    },
+    {
+     "yil": 2021,
+     "deger": 29.1,
+     "kaynak": "sb-siy-2021",
+     "konum": "Tablo 7.19 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 175",
+     "not": "6 hastane, 726 yatak"
+    },
+    {
+     "yil": 2022,
+     "deger": 29.8,
+     "kaynak": "sb_siy_2022",
+     "konum": "Tablo 7.19 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 175",
+     "not": "6 hastane, 751 yatak"
+    },
+    {
+     "yil": 2023,
+     "deger": 29.4,
+     "kaynak": "sb-siy-2023",
+     "konum": "Tablo 7.19 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 182",
+     "not": "6 hastane, 751 yatak"
+    },
+    {
+     "yil": 2024,
+     "deger": 31.1,
+     "kaynak": "sb-siy-2024",
+     "konum": "Tablo 7.20 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 192",
+     "not": "6 hastane, 779 yatak"
+    }
+   ],
+   "turkiye_seri": [
+    {
+     "yil": 2012,
+     "deger": 26.5,
+     "kaynak": "sb-siy-2012"
+    },
+    {
+     "yil": 2013,
+     "deger": 26.4,
+     "kaynak": "sb-siy-2013"
+    },
+    {
+     "yil": 2014,
+     "deger": 26.6,
+     "kaynak": "sb-siy-2014"
+    },
+    {
+     "yil": 2015,
+     "deger": 26.6,
+     "kaynak": "sb-siy-2015"
+    },
+    {
+     "yil": 2016,
+     "deger": 27.3,
+     "kaynak": "sb-siy-2016"
+    },
+    {
+     "yil": 2017,
+     "deger": 27.9,
+     "kaynak": "sb-siy-2017"
+    },
+    {
+     "yil": 2018,
+     "deger": 28.3,
+     "kaynak": "sb-siy-2018"
+    },
+    {
+     "yil": 2019,
+     "deger": 28.6,
+     "kaynak": "sb-siy-2019"
+    },
+    {
+     "yil": 2020,
+     "deger": 30.0,
+     "kaynak": "sb_siy_2020"
+    },
+    {
+     "yil": 2021,
+     "deger": 30.1,
+     "kaynak": "sb-siy-2021"
+    },
+    {
+     "yil": 2022,
+     "deger": 30.7,
+     "kaynak": "sb_siy_2022"
+    },
+    {
+     "yil": 2023,
+     "deger": 31.2,
+     "kaynak": "sb-siy-2023"
+    },
+    {
+     "yil": 2024,
+     "deger": 31.3,
+     "kaynak": "sb-siy-2024"
+    },
+    {
+     "yil": 2025,
+     "deger": 31.5,
+     "kaynak": "sb-siy-2025-bulten",
+     "konum": "Tablo 7 (sektörlere göre), PDF s. 7"
+    }
+   ]
   },
   {
    "kod": "yb_yatak_10000",
@@ -238,7 +3016,154 @@
    "yil": 2024,
    "turkiye": 5.7,
    "kaynak": "sb-siy-2024",
-   "konum": "Tablo 7.20, PDF s. 192"
+   "konum": "Tablo 7.20, PDF s. 192",
+   "seri": [
+    {
+     "yil": 2012,
+     "deger": 4.5,
+     "kaynak": "sb-siy-2012",
+     "konum": "Tablo 6.16 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 112; yoğun bakım yatak sayısı (102) / ADNKS 2012 nüfusu × 10.000 (hesaplandı; yıllıkta oran yok)"
+    },
+    {
+     "yil": 2013,
+     "deger": 4.5,
+     "kaynak": "sb-siy-2013",
+     "konum": "Tablo 6.18 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 116; yoğun bakım yatak sayısı (103) / ADNKS 2013 nüfusu × 10.000 (hesaplandı; yıllıkta oran yok)"
+    },
+    {
+     "yil": 2014,
+     "deger": 3.7,
+     "kaynak": "sb-siy-2014",
+     "konum": "Tablo 6.17 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 120; yoğun bakım yatak sayısı (85) / ADNKS 2014 nüfusu × 10.000 (hesaplandı; yıllıkta oran yok)"
+    },
+    {
+     "yil": 2015,
+     "deger": 4.0,
+     "kaynak": "sb-siy-2015",
+     "konum": "Tablo 7.18 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 152 ve 154"
+    },
+    {
+     "yil": 2016,
+     "deger": 3.8,
+     "kaynak": "sb-siy-2016",
+     "konum": "Tablo 7.19 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 166 ve 168"
+    },
+    {
+     "yil": 2017,
+     "deger": 3.9,
+     "kaynak": "sb-siy-2017",
+     "konum": "Tablo 7.18 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 176 ve 178"
+    },
+    {
+     "yil": 2018,
+     "deger": 4.6,
+     "kaynak": "sb-siy-2018",
+     "konum": "Tablo 7.18 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 181 ve 183"
+    },
+    {
+     "yil": 2019,
+     "deger": 4.6,
+     "kaynak": "sb-siy-2019",
+     "konum": "Tablo 7.19 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 173"
+    },
+    {
+     "yil": 2020,
+     "deger": 5.3,
+     "kaynak": "sb_siy_2020",
+     "konum": "Tablo 7.19 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 172"
+    },
+    {
+     "yil": 2021,
+     "deger": 5.3,
+     "kaynak": "sb-siy-2021",
+     "konum": "Tablo 7.19 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 175"
+    },
+    {
+     "yil": 2022,
+     "deger": 5.2,
+     "kaynak": "sb_siy_2022",
+     "konum": "Tablo 7.19 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 175"
+    },
+    {
+     "yil": 2023,
+     "deger": 5.1,
+     "kaynak": "sb-siy-2023",
+     "konum": "Tablo 7.19 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 182"
+    },
+    {
+     "yil": 2024,
+     "deger": 5.2,
+     "kaynak": "sb-siy-2024",
+     "konum": "Tablo 7.20 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 192"
+    }
+   ],
+   "turkiye_seri": [
+    {
+     "yil": 2012,
+     "deger": 3.1,
+     "kaynak": "sb-siy-2012"
+    },
+    {
+     "yil": 2013,
+     "deger": 3.4,
+     "kaynak": "sb-siy-2013"
+    },
+    {
+     "yil": 2014,
+     "deger": 3.7,
+     "kaynak": "sb-siy-2014"
+    },
+    {
+     "yil": 2015,
+     "deger": 4.0,
+     "kaynak": "sb-siy-2015"
+    },
+    {
+     "yil": 2016,
+     "deger": 4.1,
+     "kaynak": "sb-siy-2016"
+    },
+    {
+     "yil": 2017,
+     "deger": 4.5,
+     "kaynak": "sb-siy-2017"
+    },
+    {
+     "yil": 2018,
+     "deger": 4.6,
+     "kaynak": "sb-siy-2018"
+    },
+    {
+     "yil": 2019,
+     "deger": 4.8,
+     "kaynak": "sb-siy-2019"
+    },
+    {
+     "yil": 2020,
+     "deger": 5.7,
+     "kaynak": "sb_siy_2020"
+    },
+    {
+     "yil": 2021,
+     "deger": 5.8,
+     "kaynak": "sb-siy-2021"
+    },
+    {
+     "yil": 2022,
+     "deger": 5.7,
+     "kaynak": "sb_siy_2022"
+    },
+    {
+     "yil": 2023,
+     "deger": 5.7,
+     "kaynak": "sb-siy-2023"
+    },
+    {
+     "yil": 2024,
+     "deger": 5.7,
+     "kaynak": "sb-siy-2024"
+    }
+   ]
   },
   {
    "kod": "nitelikli_yatak_orani",
@@ -259,7 +3184,167 @@
    "turkiye": 2970,
    "kaynak": "sb-siy-2024",
    "konum": "Tablo 7.20, PDF s. 192",
-   "not": "2024'te 88 birim."
+   "not": "2024'te 88 birim.",
+   "seri": [
+    {
+     "yil": 2012,
+     "deger": 3411,
+     "kaynak": "sb-siy-2012",
+     "konum": "Tablo 6.16 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 112",
+     "not": "66 aile hekimliği birimi"
+    },
+    {
+     "yil": 2013,
+     "deger": 3386,
+     "kaynak": "sb-siy-2013",
+     "konum": "Tablo 6.18 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 116",
+     "not": "68 aile hekimliği birimi"
+    },
+    {
+     "yil": 2014,
+     "deger": 3353,
+     "kaynak": "sb-siy-2014",
+     "konum": "Tablo 6.17 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 120",
+     "not": "69 aile hekimliği birimi"
+    },
+    {
+     "yil": 2015,
+     "deger": 3338,
+     "kaynak": "sb-siy-2015",
+     "konum": "Tablo 7.18 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 152 ve 154",
+     "not": "71 aile hekimliği birimi"
+    },
+    {
+     "yil": 2016,
+     "deger": 3231,
+     "kaynak": "sb-siy-2016",
+     "konum": "Tablo 7.19 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 166 ve 168",
+     "not": "75 aile hekimliği birimi"
+    },
+    {
+     "yil": 2017,
+     "deger": 3134,
+     "kaynak": "sb-siy-2017",
+     "konum": "Tablo 7.18 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 176 ve 178",
+     "not": "78 aile hekimliği birimi"
+    },
+    {
+     "yil": 2018,
+     "deger": 3100,
+     "kaynak": "sb-siy-2018",
+     "konum": "Tablo 7.18 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 181 ve 183",
+     "not": "80 aile hekimliği birimi"
+    },
+    {
+     "yil": 2019,
+     "deger": 2958,
+     "kaynak": "sb-siy-2019",
+     "konum": "Tablo 7.19 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 173",
+     "not": "84 aile hekimliği birimi"
+    },
+    {
+     "yil": 2020,
+     "deger": 2833,
+     "kaynak": "sb_siy_2020",
+     "konum": "Tablo 7.19 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 172",
+     "not": "86 aile hekimliği birimi"
+    },
+    {
+     "yil": 2021,
+     "deger": 2899,
+     "kaynak": "sb-siy-2021",
+     "konum": "Tablo 7.19 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 175",
+     "not": "86 aile hekimliği birimi"
+    },
+    {
+     "yil": 2022,
+     "deger": 2931,
+     "kaynak": "sb_siy_2022",
+     "konum": "Tablo 7.19 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 175",
+     "not": "86 aile hekimliği birimi"
+    },
+    {
+     "yil": 2023,
+     "deger": 2900,
+     "kaynak": "sb-siy-2023",
+     "konum": "Tablo 7.19 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 182",
+     "not": "88 aile hekimliği birimi"
+    },
+    {
+     "yil": 2024,
+     "deger": 2846,
+     "kaynak": "sb-siy-2024",
+     "konum": "Tablo 7.20 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 192",
+     "not": "88 aile hekimliği birimi"
+    }
+   ],
+   "turkiye_seri": [
+    {
+     "yil": 2012,
+     "deger": 3634,
+     "kaynak": "sb-siy-2012"
+    },
+    {
+     "yil": 2013,
+     "deger": 3621,
+     "kaynak": "sb-siy-2013"
+    },
+    {
+     "yil": 2014,
+     "deger": 3633,
+     "kaynak": "sb-siy-2014"
+    },
+    {
+     "yil": 2015,
+     "deger": 3629,
+     "kaynak": "sb-siy-2015"
+    },
+    {
+     "yil": 2016,
+     "deger": 3267,
+     "kaynak": "sb-siy-2016"
+    },
+    {
+     "yil": 2017,
+     "deger": 3207,
+     "kaynak": "sb-siy-2017"
+    },
+    {
+     "yil": 2018,
+     "deger": 3124,
+     "kaynak": "sb-siy-2018"
+    },
+    {
+     "yil": 2019,
+     "deger": 3141,
+     "kaynak": "sb-siy-2019"
+    },
+    {
+     "yil": 2020,
+     "deger": 3144,
+     "kaynak": "sb_siy_2020"
+    },
+    {
+     "yil": 2021,
+     "deger": 3145,
+     "kaynak": "sb-siy-2021"
+    },
+    {
+     "yil": 2022,
+     "deger": 3072,
+     "kaynak": "sb_siy_2022"
+    },
+    {
+     "yil": 2023,
+     "deger": 3043,
+     "kaynak": "sb-siy-2023"
+    },
+    {
+     "yil": 2024,
+     "deger": 2970,
+     "kaynak": "sb-siy-2024"
+    }
+   ]
   },
   {
    "kod": "ahb_basina_nufus_2026",
@@ -280,7 +3365,160 @@
    "yil": 2024,
    "turkiye": 12.2,
    "kaynak": "sb-siy-2024",
-   "konum": "Tablo 8.26, PDF s. 234"
+   "konum": "Tablo 8.26, PDF s. 234",
+   "seri": [
+    {
+     "yil": 2012,
+     "deger": 9.8,
+     "kaynak": "sb-siy-2012",
+     "konum": "Tablo 7.25 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 151"
+    },
+    {
+     "yil": 2013,
+     "deger": 9.5,
+     "kaynak": "sb-siy-2013",
+     "konum": "Tablo 7.24 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 156"
+    },
+    {
+     "yil": 2014,
+     "deger": 9.7,
+     "kaynak": "sb-siy-2014",
+     "konum": "Tablo 7.24 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 160"
+    },
+    {
+     "yil": 2015,
+     "deger": 9.9,
+     "kaynak": "sb-siy-2015",
+     "konum": "Tablo 8.26 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 202 ve 204"
+    },
+    {
+     "yil": 2016,
+     "deger": 9.6,
+     "kaynak": "sb-siy-2016",
+     "konum": "Tablo 8.25 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 212 ve 214"
+    },
+    {
+     "yil": 2017,
+     "deger": 10.0,
+     "kaynak": "sb-siy-2017",
+     "konum": "Tablo 8.25 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 222 ve 224"
+    },
+    {
+     "yil": 2018,
+     "deger": 10.6,
+     "kaynak": "sb-siy-2018",
+     "konum": "Tablo 8.24 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 227 ve 229"
+    },
+    {
+     "yil": 2019,
+     "deger": 10.1,
+     "kaynak": "sb-siy-2019",
+     "konum": "Tablo 8.27 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 215 ve 217"
+    },
+    {
+     "yil": 2020,
+     "deger": 7.8,
+     "kaynak": "sb_siy_2020",
+     "konum": "Tablo 8.25 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 212 ve 214"
+    },
+    {
+     "yil": 2021,
+     "deger": 8.5,
+     "kaynak": "sb-siy-2021",
+     "konum": "Tablo 8.25 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 215 ve 217"
+    },
+    {
+     "yil": 2022,
+     "deger": 10.7,
+     "kaynak": "sb_siy_2022",
+     "konum": "Tablo 8.25 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 216 ve 218"
+    },
+    {
+     "yil": 2023,
+     "deger": 12.5,
+     "kaynak": "sb-siy-2023",
+     "konum": "Tablo 8.25 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 224 ve 226"
+    },
+    {
+     "yil": 2024,
+     "deger": 13.5,
+     "kaynak": "sb-siy-2024",
+     "konum": "Tablo 8.26 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 234 ve 236"
+    }
+   ],
+   "turkiye_seri": [
+    {
+     "yil": 2012,
+     "deger": 8.2,
+     "kaynak": "sb-siy-2012"
+    },
+    {
+     "yil": 2013,
+     "deger": 8.2,
+     "kaynak": "sb-siy-2013"
+    },
+    {
+     "yil": 2014,
+     "deger": 8.3,
+     "kaynak": "sb-siy-2014"
+    },
+    {
+     "yil": 2015,
+     "deger": 8.4,
+     "kaynak": "sb-siy-2015"
+    },
+    {
+     "yil": 2016,
+     "deger": 8.6,
+     "kaynak": "sb-siy-2016"
+    },
+    {
+     "yil": 2017,
+     "deger": 8.9,
+     "kaynak": "sb-siy-2017"
+    },
+    {
+     "yil": 2018,
+     "deger": 9.5,
+     "kaynak": "sb-siy-2018"
+    },
+    {
+     "yil": 2019,
+     "deger": 9.8,
+     "kaynak": "sb-siy-2019"
+    },
+    {
+     "yil": 2020,
+     "deger": 7.2,
+     "kaynak": "sb_siy_2020"
+    },
+    {
+     "yil": 2021,
+     "deger": 8.0,
+     "kaynak": "sb-siy-2021"
+    },
+    {
+     "yil": 2022,
+     "deger": 10.0,
+     "kaynak": "sb_siy_2022"
+    },
+    {
+     "yil": 2023,
+     "deger": 11.4,
+     "kaynak": "sb-siy-2023"
+    },
+    {
+     "yil": 2024,
+     "deger": 12.2,
+     "kaynak": "sb-siy-2024"
+    },
+    {
+     "yil": 2025,
+     "deger": 13.2,
+     "kaynak": "sb-siy-2025-bulten",
+     "konum": "Tablo 16, PDF s. 10"
+    }
+   ]
   },
   {
    "kod": "birinci_basamak_orani",
@@ -290,7 +3528,160 @@
    "yil": 2024,
    "turkiye": 43.3,
    "kaynak": "sb-siy-2024",
-   "konum": "Tablo 8.26, PDF s. 234 (oran hesaplandı: 1.381.066 birinci basamak / 3.380.418 toplam)"
+   "konum": "Tablo 8.26, PDF s. 234 (oran hesaplandı: 1.381.066 birinci basamak / 3.380.418 toplam)",
+   "seri": [
+    {
+     "yil": 2012,
+     "deger": 35.3,
+     "kaynak": "sb-siy-2012",
+     "konum": "Tablo 7.25 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 151; oran hesaplandı: 782.547 birinci basamak / 2.214.014 toplam başvuru"
+    },
+    {
+     "yil": 2013,
+     "deger": 32.9,
+     "kaynak": "sb-siy-2013",
+     "konum": "Tablo 7.24 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 156; oran hesaplandı: 722.194 birinci basamak / 2.193.487 toplam başvuru"
+    },
+    {
+     "yil": 2014,
+     "deger": 33.9,
+     "kaynak": "sb-siy-2014",
+     "konum": "Tablo 7.24 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 160; oran hesaplandı: 761.920 birinci basamak / 2.248.505 toplam başvuru"
+    },
+    {
+     "yil": 2015,
+     "deger": 31.6,
+     "kaynak": "sb-siy-2015",
+     "konum": "Tablo 8.26 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 202 ve 204; oran hesaplandı: 743.350 birinci basamak / 2.351.496 toplam başvuru"
+    },
+    {
+     "yil": 2016,
+     "deger": 31.3,
+     "kaynak": "sb-siy-2016",
+     "konum": "Tablo 8.25 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 212 ve 214; oran hesaplandı: 728.836 birinci basamak / 2.331.286 toplam başvuru"
+    },
+    {
+     "yil": 2017,
+     "deger": 33.2,
+     "kaynak": "sb-siy-2017",
+     "konum": "Tablo 8.25 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 222 ve 224; oran hesaplandı: 814.714 birinci basamak / 2.452.608 toplam başvuru"
+    },
+    {
+     "yil": 2018,
+     "deger": 34.3,
+     "kaynak": "sb-siy-2018",
+     "konum": "Tablo 8.24 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 227 ve 229; oran hesaplandı: 900.648 birinci basamak / 2.628.110 toplam başvuru"
+    },
+    {
+     "yil": 2019,
+     "deger": 38.0,
+     "kaynak": "sb-siy-2019",
+     "konum": "Tablo 8.27 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 215 ve 217; oran hesaplandı: 954.185 birinci basamak / 2.510.177 toplam başvuru"
+    },
+    {
+     "yil": 2020,
+     "deger": 45.0,
+     "kaynak": "sb_siy_2020",
+     "konum": "Tablo 8.25 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 212 ve 214; oran hesaplandı: 857.906 birinci basamak / 1.905.701 toplam başvuru"
+    },
+    {
+     "yil": 2021,
+     "deger": 38.2,
+     "kaynak": "sb-siy-2021",
+     "konum": "Tablo 8.25 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 215 ve 217; oran hesaplandı: 814.102 birinci basamak / 2.130.549 toplam başvuru"
+    },
+    {
+     "yil": 2022,
+     "deger": 41.3,
+     "kaynak": "sb_siy_2022",
+     "konum": "Tablo 8.25 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 216 ve 218; oran hesaplandı: 1.112.757 birinci basamak / 2.693.895 toplam başvuru"
+    },
+    {
+     "yil": 2023,
+     "deger": 41.0,
+     "kaynak": "sb-siy-2023",
+     "konum": "Tablo 8.25 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 224 ve 226; oran hesaplandı: 1.306.947 birinci basamak / 3.185.074 toplam başvuru"
+    },
+    {
+     "yil": 2024,
+     "deger": 40.9,
+     "kaynak": "sb-siy-2024",
+     "konum": "Tablo 8.26 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 234 ve 236; oran hesaplandı: 1.381.066 birinci basamak / 3.380.418 toplam başvuru"
+    }
+   ],
+   "turkiye_seri": [
+    {
+     "yil": 2012,
+     "deger": 37.8,
+     "kaynak": "sb-siy-2012"
+    },
+    {
+     "yil": 2013,
+     "deger": 34.9,
+     "kaynak": "sb-siy-2013"
+    },
+    {
+     "yil": 2014,
+     "deger": 34.0,
+     "kaynak": "sb-siy-2014"
+    },
+    {
+     "yil": 2015,
+     "deger": 32.5,
+     "kaynak": "sb-siy-2015"
+    },
+    {
+     "yil": 2016,
+     "deger": 31.5,
+     "kaynak": "sb-siy-2016"
+    },
+    {
+     "yil": 2017,
+     "deger": 32.7,
+     "kaynak": "sb-siy-2017"
+    },
+    {
+     "yil": 2018,
+     "deger": 33.9,
+     "kaynak": "sb-siy-2018"
+    },
+    {
+     "yil": 2019,
+     "deger": 35.4,
+     "kaynak": "sb-siy-2019"
+    },
+    {
+     "yil": 2020,
+     "deger": 42.2,
+     "kaynak": "sb_siy_2020"
+    },
+    {
+     "yil": 2021,
+     "deger": 36.3,
+     "kaynak": "sb-siy-2021"
+    },
+    {
+     "yil": 2022,
+     "deger": 39.9,
+     "kaynak": "sb_siy_2022"
+    },
+    {
+     "yil": 2023,
+     "deger": 43.3,
+     "kaynak": "sb-siy-2023"
+    },
+    {
+     "yil": 2024,
+     "deger": 43.3,
+     "kaynak": "sb-siy-2024"
+    },
+    {
+     "yil": 2025,
+     "deger": 41.3,
+     "kaynak": "sb-siy-2025-bulten",
+     "konum": "Tablo 15 metni, PDF s. 9"
+    }
+   ]
   },
   {
    "kod": "kisi_basi_dis_muracaat",
@@ -311,7 +3702,160 @@
    "turkiye": 59.8,
    "kaynak": "sb-siy-2024",
    "konum": "Tablo 8.26 (devamı), PDF s. 236",
-   "not": "Yatan hasta 45.431; ameliyat 12.889; yatak devir hızı 58,3."
+   "not": "Yatan hasta 45.431; ameliyat 12.889; yatak devir hızı 58,3.",
+   "seri": [
+    {
+     "yil": 2012,
+     "deger": 69.5,
+     "kaynak": "sb-siy-2012",
+     "konum": "Tablo 7.25 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 151"
+    },
+    {
+     "yil": 2013,
+     "deger": 74.7,
+     "kaynak": "sb-siy-2013",
+     "konum": "Tablo 7.24 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 156"
+    },
+    {
+     "yil": 2014,
+     "deger": 75.7,
+     "kaynak": "sb-siy-2014",
+     "konum": "Tablo 7.24 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 160"
+    },
+    {
+     "yil": 2015,
+     "deger": 71.4,
+     "kaynak": "sb-siy-2015",
+     "konum": "Tablo 8.26 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 202 ve 204"
+    },
+    {
+     "yil": 2016,
+     "deger": 72.1,
+     "kaynak": "sb-siy-2016",
+     "konum": "Tablo 8.25 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 212 ve 214"
+    },
+    {
+     "yil": 2017,
+     "deger": 74.7,
+     "kaynak": "sb-siy-2017",
+     "konum": "Tablo 8.25 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 222 ve 224"
+    },
+    {
+     "yil": 2018,
+     "deger": 68.1,
+     "kaynak": "sb-siy-2018",
+     "konum": "Tablo 8.24 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 227 ve 229"
+    },
+    {
+     "yil": 2019,
+     "deger": 71.3,
+     "kaynak": "sb-siy-2019",
+     "konum": "Tablo 8.27 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 215 ve 217"
+    },
+    {
+     "yil": 2020,
+     "deger": 58.3,
+     "kaynak": "sb_siy_2020",
+     "konum": "Tablo 8.25 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 212 ve 214"
+    },
+    {
+     "yil": 2021,
+     "deger": 59.9,
+     "kaynak": "sb-siy-2021",
+     "konum": "Tablo 8.25 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 215 ve 217"
+    },
+    {
+     "yil": 2022,
+     "deger": 56.7,
+     "kaynak": "sb_siy_2022",
+     "konum": "Tablo 8.25 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 216 ve 218"
+    },
+    {
+     "yil": 2023,
+     "deger": 61.4,
+     "kaynak": "sb-siy-2023",
+     "konum": "Tablo 8.25 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 224 ve 226"
+    },
+    {
+     "yil": 2024,
+     "deger": 58.5,
+     "kaynak": "sb-siy-2024",
+     "konum": "Tablo 8.26 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 234 ve 236"
+    }
+   ],
+   "turkiye_seri": [
+    {
+     "yil": 2012,
+     "deger": 65.1,
+     "kaynak": "sb-siy-2012"
+    },
+    {
+     "yil": 2013,
+     "deger": 66.0,
+     "kaynak": "sb-siy-2013"
+    },
+    {
+     "yil": 2014,
+     "deger": 68.7,
+     "kaynak": "sb-siy-2014"
+    },
+    {
+     "yil": 2015,
+     "deger": 69.6,
+     "kaynak": "sb-siy-2015"
+    },
+    {
+     "yil": 2016,
+     "deger": 68.1,
+     "kaynak": "sb-siy-2016"
+    },
+    {
+     "yil": 2017,
+     "deger": 68.1,
+     "kaynak": "sb-siy-2017"
+    },
+    {
+     "yil": 2018,
+     "deger": 66.9,
+     "kaynak": "sb-siy-2018"
+    },
+    {
+     "yil": 2019,
+     "deger": 66.3,
+     "kaynak": "sb-siy-2019"
+    },
+    {
+     "yil": 2020,
+     "deger": 52.5,
+     "kaynak": "sb_siy_2020"
+    },
+    {
+     "yil": 2021,
+     "deger": 55.7,
+     "kaynak": "sb-siy-2021"
+    },
+    {
+     "yil": 2022,
+     "deger": 58.1,
+     "kaynak": "sb_siy_2022"
+    },
+    {
+     "yil": 2023,
+     "deger": 58.2,
+     "kaynak": "sb-siy-2023"
+    },
+    {
+     "yil": 2024,
+     "deger": 59.8,
+     "kaynak": "sb-siy-2024"
+    },
+    {
+     "yil": 2025,
+     "deger": 54.5,
+     "kaynak": "sb-siy-2025-bulten",
+     "konum": "Tablo 16, PDF s. 10"
+    }
+   ]
   },
   {
    "kod": "ortalama_kalis",
@@ -321,7 +3865,160 @@
    "yil": 2024,
    "turkiye": 4.2,
    "kaynak": "sb-siy-2024",
-   "konum": "Tablo 8.26 (devamı), PDF s. 236"
+   "konum": "Tablo 8.26 (devamı), PDF s. 236",
+   "seri": [
+    {
+     "yil": 2012,
+     "deger": 3.8,
+     "kaynak": "sb-siy-2012",
+     "konum": "Tablo 7.25 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 151"
+    },
+    {
+     "yil": 2013,
+     "deger": 3.9,
+     "kaynak": "sb-siy-2013",
+     "konum": "Tablo 7.24 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 156"
+    },
+    {
+     "yil": 2014,
+     "deger": 3.6,
+     "kaynak": "sb-siy-2014",
+     "konum": "Tablo 7.24 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 160"
+    },
+    {
+     "yil": 2015,
+     "deger": 3.4,
+     "kaynak": "sb-siy-2015",
+     "konum": "Tablo 8.26 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 202 ve 204"
+    },
+    {
+     "yil": 2016,
+     "deger": 3.6,
+     "kaynak": "sb-siy-2016",
+     "konum": "Tablo 8.25 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 212 ve 214"
+    },
+    {
+     "yil": 2017,
+     "deger": 3.6,
+     "kaynak": "sb-siy-2017",
+     "konum": "Tablo 8.25 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 222 ve 224"
+    },
+    {
+     "yil": 2018,
+     "deger": 3.6,
+     "kaynak": "sb-siy-2018",
+     "konum": "Tablo 8.24 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 227 ve 229"
+    },
+    {
+     "yil": 2019,
+     "deger": 3.5,
+     "kaynak": "sb-siy-2019",
+     "konum": "Tablo 8.27 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 215 ve 217"
+    },
+    {
+     "yil": 2020,
+     "deger": 4.3,
+     "kaynak": "sb_siy_2020",
+     "konum": "Tablo 8.25 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 212 ve 214"
+    },
+    {
+     "yil": 2021,
+     "deger": 3.9,
+     "kaynak": "sb-siy-2021",
+     "konum": "Tablo 8.25 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 215 ve 217"
+    },
+    {
+     "yil": 2022,
+     "deger": 3.8,
+     "kaynak": "sb_siy_2022",
+     "konum": "Tablo 8.25 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 216 ve 218"
+    },
+    {
+     "yil": 2023,
+     "deger": 3.7,
+     "kaynak": "sb-siy-2023",
+     "konum": "Tablo 8.25 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 224 ve 226"
+    },
+    {
+     "yil": 2024,
+     "deger": 3.7,
+     "kaynak": "sb-siy-2024",
+     "konum": "Tablo 8.26 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 234 ve 236"
+    }
+   ],
+   "turkiye_seri": [
+    {
+     "yil": 2012,
+     "deger": 4.0,
+     "kaynak": "sb-siy-2012"
+    },
+    {
+     "yil": 2013,
+     "deger": 3.9,
+     "kaynak": "sb-siy-2013"
+    },
+    {
+     "yil": 2014,
+     "deger": 4.0,
+     "kaynak": "sb-siy-2014"
+    },
+    {
+     "yil": 2015,
+     "deger": 3.9,
+     "kaynak": "sb-siy-2015"
+    },
+    {
+     "yil": 2016,
+     "deger": 4.0,
+     "kaynak": "sb-siy-2016"
+    },
+    {
+     "yil": 2017,
+     "deger": 4.1,
+     "kaynak": "sb-siy-2017"
+    },
+    {
+     "yil": 2018,
+     "deger": 4.1,
+     "kaynak": "sb-siy-2018"
+    },
+    {
+     "yil": 2019,
+     "deger": 4.2,
+     "kaynak": "sb-siy-2019"
+    },
+    {
+     "yil": 2020,
+     "deger": 4.5,
+     "kaynak": "sb_siy_2020"
+    },
+    {
+     "yil": 2021,
+     "deger": 4.4,
+     "kaynak": "sb-siy-2021"
+    },
+    {
+     "yil": 2022,
+     "deger": 4.2,
+     "kaynak": "sb_siy_2022"
+    },
+    {
+     "yil": 2023,
+     "deger": 4.2,
+     "kaynak": "sb-siy-2023"
+    },
+    {
+     "yil": 2024,
+     "deger": 4.2,
+     "kaynak": "sb-siy-2024"
+    },
+    {
+     "yil": 2025,
+     "deger": 4.0,
+     "kaynak": "sb-siy-2025-bulten",
+     "konum": "Tablo 16, PDF s. 10"
+    }
+   ]
   },
   {
    "kod": "hekim_100000",
@@ -332,7 +4029,160 @@
    "turkiye": 258,
    "kaynak": "sb-siy-2024",
    "konum": "Tablo 10.12, PDF s. 291 (oran 2024 nüfusuyla hesaplandı)",
-   "not": "Karabük 2024: 571 hekim = 243 uzman + 183 pratisyen + 145 asistan."
+   "not": "Karabük 2024: 571 hekim = 243 uzman + 183 pratisyen + 145 asistan.",
+   "seri": [
+    {
+     "yil": 2012,
+     "deger": 148,
+     "kaynak": "sb-siy-2012",
+     "konum": "Tablo 8.12 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 176; 333 hekim / ADNKS 2012 nüfusu × 100.000 (hesaplandı)"
+    },
+    {
+     "yil": 2013,
+     "deger": 137,
+     "kaynak": "sb-siy-2013",
+     "konum": "Tablo 8.12 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 184; 316 hekim / ADNKS 2013 nüfusu × 100.000 (hesaplandı)"
+    },
+    {
+     "yil": 2014,
+     "deger": 147,
+     "kaynak": "sb-siy-2014",
+     "konum": "Tablo 8.12 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 188; 340 hekim / ADNKS 2014 nüfusu × 100.000 (hesaplandı)"
+    },
+    {
+     "yil": 2015,
+     "deger": 162,
+     "kaynak": "sb-siy-2015",
+     "konum": "Tablo 9.8 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 233; 383 hekim / ADNKS 2015 nüfusu × 100.000 (hesaplandı)"
+    },
+    {
+     "yil": 2016,
+     "deger": 155,
+     "kaynak": "sb-siy-2016",
+     "konum": "Tablo 10.8 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 258; 375 hekim / ADNKS 2016 nüfusu × 100.000 (hesaplandı)"
+    },
+    {
+     "yil": 2017,
+     "deger": 168,
+     "kaynak": "sb-siy-2017",
+     "konum": "Tablo 10.8 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 269; 410 hekim / ADNKS 2017 nüfusu × 100.000 (hesaplandı); Türkiye toplam satırı SİY 2017 s.269 (etiket kodlaması bozuk) ve 2017 haber bülteni ile teyitli"
+    },
+    {
+     "yil": 2018,
+     "deger": 171,
+     "kaynak": "sb-siy-2018",
+     "konum": "Tablo 10.10 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 279; 423 hekim / ADNKS 2018 nüfusu × 100.000 (hesaplandı)"
+    },
+    {
+     "yil": 2019,
+     "deger": 179,
+     "kaynak": "sb-siy-2019",
+     "konum": "Tablo 10.10 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 266; 444 hekim / ADNKS 2019 nüfusu × 100.000 (hesaplandı)"
+    },
+    {
+     "yil": 2020,
+     "deger": 194,
+     "kaynak": "sb_siy_2020",
+     "konum": "Tablo 10.11 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 264; 473 hekim / ADNKS 2020 nüfusu × 100.000 (hesaplandı)"
+    },
+    {
+     "yil": 2021,
+     "deger": 203,
+     "kaynak": "sb-siy-2021",
+     "konum": "Tablo 10.11 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 267; 506 hekim / ADNKS 2021 nüfusu × 100.000 (hesaplandı)"
+    },
+    {
+     "yil": 2022,
+     "deger": 212,
+     "kaynak": "sb_siy_2022",
+     "konum": "Tablo 10.11 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 268; 534 hekim / ADNKS 2022 nüfusu × 100.000 (hesaplandı)"
+    },
+    {
+     "yil": 2023,
+     "deger": 221,
+     "kaynak": "sb-siy-2023",
+     "konum": "Tablo 10.13 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 281; 563 hekim / ADNKS 2023 nüfusu × 100.000 (hesaplandı)"
+    },
+    {
+     "yil": 2024,
+     "deger": 228,
+     "kaynak": "sb-siy-2024",
+     "konum": "Tablo 10.12 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 291; 571 hekim / ADNKS 2024 nüfusu × 100.000 (hesaplandı)"
+    }
+   ],
+   "turkiye_seri": [
+    {
+     "yil": 2012,
+     "deger": 172,
+     "kaynak": "sb-siy-2012"
+    },
+    {
+     "yil": 2013,
+     "deger": 174,
+     "kaynak": "sb-siy-2013"
+    },
+    {
+     "yil": 2014,
+     "deger": 175,
+     "kaynak": "sb-siy-2014"
+    },
+    {
+     "yil": 2015,
+     "deger": 179,
+     "kaynak": "sb-siy-2015"
+    },
+    {
+     "yil": 2016,
+     "deger": 181,
+     "kaynak": "sb-siy-2016"
+    },
+    {
+     "yil": 2017,
+     "deger": 186,
+     "kaynak": "sb-siy-2017"
+    },
+    {
+     "yil": 2018,
+     "deger": 187,
+     "kaynak": "sb-siy-2018"
+    },
+    {
+     "yil": 2019,
+     "deger": 193,
+     "kaynak": "sb-siy-2019"
+    },
+    {
+     "yil": 2020,
+     "deger": 205,
+     "kaynak": "sb_siy_2020"
+    },
+    {
+     "yil": 2021,
+     "deger": 217,
+     "kaynak": "sb-siy-2021"
+    },
+    {
+     "yil": 2022,
+     "deger": 228,
+     "kaynak": "sb_siy_2022"
+    },
+    {
+     "yil": 2023,
+     "deger": 239,
+     "kaynak": "sb-siy-2023"
+    },
+    {
+     "yil": 2024,
+     "deger": 258,
+     "kaynak": "sb-siy-2024"
+    },
+    {
+     "yil": 2025,
+     "deger": 270,
+     "kaynak": "sb-siy-2025-bulten",
+     "konum": "Tablo 20, PDF s. 12"
+    }
+   ]
   },
   {
    "kod": "hemsire_ebe_100000",
@@ -343,7 +4193,160 @@
    "turkiye": 381,
    "kaynak": "sb-siy-2024",
    "konum": "Tablo 10.12, PDF s. 291 (oran hesaplandı)",
-   "not": "Karabük 2024: 807 hemşire, 250 ebe."
+   "not": "Karabük 2024: 807 hemşire, 250 ebe.",
+   "seri": [
+    {
+     "yil": 2012,
+     "deger": 322,
+     "kaynak": "sb-siy-2012",
+     "konum": "Tablo 8.12 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 176; (496 hemşire + 230 ebe) / ADNKS 2012 nüfusu × 100.000 (hesaplandı)"
+    },
+    {
+     "yil": 2013,
+     "deger": 313,
+     "kaynak": "sb-siy-2013",
+     "konum": "Tablo 8.12 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 184; (484 hemşire + 237 ebe) / ADNKS 2013 nüfusu × 100.000 (hesaplandı)"
+    },
+    {
+     "yil": 2014,
+     "deger": 305,
+     "kaynak": "sb-siy-2014",
+     "konum": "Tablo 8.12 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 188; (470 hemşire + 236 ebe) / ADNKS 2014 nüfusu × 100.000 (hesaplandı)"
+    },
+    {
+     "yil": 2015,
+     "deger": 332,
+     "kaynak": "sb-siy-2015",
+     "konum": "Tablo 9.8 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 233; (538 hemşire + 249 ebe) / ADNKS 2015 nüfusu × 100.000 (hesaplandı)"
+    },
+    {
+     "yil": 2016,
+     "deger": 319,
+     "kaynak": "sb-siy-2016",
+     "konum": "Tablo 10.8 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 258; (544 hemşire + 230 ebe) / ADNKS 2016 nüfusu × 100.000 (hesaplandı)"
+    },
+    {
+     "yil": 2017,
+     "deger": 343,
+     "kaynak": "sb-siy-2017",
+     "konum": "Tablo 10.8 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 269; (610 hemşire + 229 ebe) / ADNKS 2017 nüfusu × 100.000 (hesaplandı)"
+    },
+    {
+     "yil": 2018,
+     "deger": 367,
+     "kaynak": "sb-siy-2018",
+     "konum": "Tablo 10.10 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 279; (671 hemşire + 238 ebe) / ADNKS 2018 nüfusu × 100.000 (hesaplandı)"
+    },
+    {
+     "yil": 2019,
+     "deger": 375,
+     "kaynak": "sb-siy-2019",
+     "konum": "Tablo 10.10 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 266; (684 hemşire + 248 ebe) / ADNKS 2019 nüfusu × 100.000 (hesaplandı)"
+    },
+    {
+     "yil": 2020,
+     "deger": 404,
+     "kaynak": "sb_siy_2020",
+     "konum": "Tablo 10.11 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 264; (737 hemşire + 248 ebe) / ADNKS 2020 nüfusu × 100.000 (hesaplandı)"
+    },
+    {
+     "yil": 2021,
+     "deger": 390,
+     "kaynak": "sb-siy-2021",
+     "konum": "Tablo 10.11 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 267; (730 hemşire + 241 ebe) / ADNKS 2021 nüfusu × 100.000 (hesaplandı)"
+    },
+    {
+     "yil": 2022,
+     "deger": 393,
+     "kaynak": "sb_siy_2022",
+     "konum": "Tablo 10.11 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 268; (747 hemşire + 244 ebe) / ADNKS 2022 nüfusu × 100.000 (hesaplandı)"
+    },
+    {
+     "yil": 2023,
+     "deger": 396,
+     "kaynak": "sb-siy-2023",
+     "konum": "Tablo 10.13 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 281; (770 hemşire + 240 ebe) / ADNKS 2023 nüfusu × 100.000 (hesaplandı)"
+    },
+    {
+     "yil": 2024,
+     "deger": 422,
+     "kaynak": "sb-siy-2024",
+     "konum": "Tablo 10.12 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 291; (807 hemşire + 250 ebe) / ADNKS 2024 nüfusu × 100.000 (hesaplandı)"
+    }
+   ],
+   "turkiye_seri": [
+    {
+     "yil": 2012,
+     "deger": 249,
+     "kaynak": "sb-siy-2012"
+    },
+    {
+     "yil": 2013,
+     "deger": 252,
+     "kaynak": "sb-siy-2013"
+    },
+    {
+     "yil": 2014,
+     "deger": 251,
+     "kaynak": "sb-siy-2014"
+    },
+    {
+     "yil": 2015,
+     "deger": 261,
+     "kaynak": "sb-siy-2015"
+    },
+    {
+     "yil": 2016,
+     "deger": 257,
+     "kaynak": "sb-siy-2016"
+    },
+    {
+     "yil": 2017,
+     "deger": 272,
+     "kaynak": "sb-siy-2017"
+    },
+    {
+     "yil": 2018,
+     "deger": 301,
+     "kaynak": "sb-siy-2018"
+    },
+    {
+     "yil": 2019,
+     "deger": 306,
+     "kaynak": "sb-siy-2019"
+    },
+    {
+     "yil": 2020,
+     "deger": 342,
+     "kaynak": "sb_siy_2020"
+    },
+    {
+     "yil": 2021,
+     "deger": 343,
+     "kaynak": "sb-siy-2021"
+    },
+    {
+     "yil": 2022,
+     "deger": 356,
+     "kaynak": "sb_siy_2022"
+    },
+    {
+     "yil": 2023,
+     "deger": 361,
+     "kaynak": "sb-siy-2023"
+    },
+    {
+     "yil": 2024,
+     "deger": 381,
+     "kaynak": "sb-siy-2024"
+    },
+    {
+     "yil": 2025,
+     "deger": 378,
+     "kaynak": "sb-siy-2025-bulten",
+     "konum": "Tablo 20, PDF s. 12"
+    }
+   ]
   },
   {
    "kod": "acil_istasyon_basina_nufus",
@@ -353,7 +4356,173 @@
    "yil": 2024,
    "turkiye": 24490,
    "kaynak": "sb-siy-2024",
-   "konum": "Tablo 12.4, PDF s. 323"
+   "konum": "Tablo 12.4, PDF s. 323",
+   "seri": [
+    {
+     "yil": 2012,
+     "deger": 22515,
+     "kaynak": "sb-siy-2012",
+     "konum": "Tablo 6.16 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 112",
+     "not": "10 istasyon, 19 ambulans; ambulans başına 11.850 kişi"
+    },
+    {
+     "yil": 2013,
+     "deger": 19188,
+     "kaynak": "sb-siy-2013",
+     "konum": "Tablo 6.18 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 116",
+     "not": "12 istasyon, 21 ambulans; ambulans başına 10.964 kişi"
+    },
+    {
+     "yil": 2014,
+     "deger": 19278,
+     "kaynak": "sb-siy-2014",
+     "konum": "Tablo 6.17 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 120",
+     "not": "12 istasyon, 26 ambulans; ambulans başına 8.897 kişi"
+    },
+    {
+     "yil": 2015,
+     "deger": 15799,
+     "kaynak": "sb-siy-2015",
+     "konum": "Tablo 7.18 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 154",
+     "not": "15 istasyon, 28 ambulans; ambulans başına 8.464 kişi"
+    },
+    {
+     "yil": 2016,
+     "deger": 17311,
+     "kaynak": "sb-siy-2016",
+     "konum": "Tablo 7.19 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 168",
+     "not": "14 istasyon, 31 ambulans; ambulans başına 7.818 kişi"
+    },
+    {
+     "yil": 2017,
+     "deger": 16297,
+     "kaynak": "sb-siy-2017",
+     "konum": "Tablo 7.18 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 178",
+     "not": "15 istasyon, 32 ambulans; ambulans başına 7.639 kişi"
+    },
+    {
+     "yil": 2018,
+     "deger": 16534,
+     "kaynak": "sb-siy-2018",
+     "konum": "Tablo 7.18 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 183",
+     "not": "15 istasyon, 33 ambulans; ambulans başına 7.516 kişi"
+    },
+    {
+     "yil": 2019,
+     "deger": 16564,
+     "kaynak": "sb-siy-2019",
+     "konum": "Tablo 12.4 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 294",
+     "not": "15 istasyon, 39 ambulans; ambulans başına 6.371 kişi"
+    },
+    {
+     "yil": 2020,
+     "deger": 16241,
+     "kaynak": "sb_siy_2020",
+     "konum": "Tablo 12.4 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 295",
+     "not": "15 istasyon, 40 ambulans; ambulans başına 6.090 kişi"
+    },
+    {
+     "yil": 2021,
+     "deger": 15580,
+     "kaynak": "sb-siy-2021",
+     "konum": "Tablo 12.4 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 297",
+     "not": "16 istasyon, 41 ambulans; ambulans başına 6.080 kişi"
+    },
+    {
+     "yil": 2022,
+     "deger": 14827,
+     "kaynak": "sb_siy_2022",
+     "konum": "Tablo 12.4 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 299",
+     "not": "17 istasyon, 38 ambulans; ambulans başına 6.633 kişi"
+    },
+    {
+     "yil": 2023,
+     "deger": 15014,
+     "kaynak": "sb-siy-2023",
+     "konum": "Tablo 12.4 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 313",
+     "not": "17 istasyon, 40 ambulans; ambulans başına 6.381 kişi"
+    },
+    {
+     "yil": 2024,
+     "deger": 14734,
+     "kaynak": "sb-siy-2024",
+     "konum": "Tablo 12.4 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 323",
+     "not": "17 istasyon, 33 ambulans; ambulans başına 7.590 kişi"
+    }
+   ],
+   "turkiye_seri": [
+    {
+     "yil": 2012,
+     "deger": 40594,
+     "kaynak": "sb-siy-2012"
+    },
+    {
+     "yil": 2013,
+     "deger": 37002,
+     "kaynak": "sb-siy-2013"
+    },
+    {
+     "yil": 2014,
+     "deger": 35542,
+     "kaynak": "sb-siy-2014"
+    },
+    {
+     "yil": 2015,
+     "deger": 33896,
+     "kaynak": "sb-siy-2015"
+    },
+    {
+     "yil": 2016,
+     "deger": 33256,
+     "kaynak": "sb-siy-2016"
+    },
+    {
+     "yil": 2017,
+     "deger": 30867,
+     "kaynak": "sb-siy-2017"
+    },
+    {
+     "yil": 2018,
+     "deger": 29983,
+     "kaynak": "sb-siy-2018"
+    },
+    {
+     "yil": 2019,
+     "deger": 28813,
+     "kaynak": "sb-siy-2019"
+    },
+    {
+     "yil": 2020,
+     "deger": 27415,
+     "kaynak": "sb_siy_2020"
+    },
+    {
+     "yil": 2021,
+     "deger": 26713,
+     "kaynak": "sb-siy-2021"
+    },
+    {
+     "yil": 2022,
+     "deger": 25921,
+     "kaynak": "sb_siy_2022"
+    },
+    {
+     "yil": 2023,
+     "deger": 24963,
+     "kaynak": "sb-siy-2023"
+    },
+    {
+     "yil": 2024,
+     "deger": 24490,
+     "kaynak": "sb-siy-2024"
+    },
+    {
+     "yil": 2025,
+     "deger": 23974,
+     "kaynak": "sb-siy-2025-bulten",
+     "konum": "Tablo 13, PDF s. 9"
+    }
+   ]
   },
   {
    "kod": "acil_ambulans_basina_nufus",
@@ -429,7 +4598,94 @@
    "yontem": "Aynı listede ÇKYS kodlu AHB satırları sayıldı; 90 birimin tamamında hekim adı yazılı (boş birim görünmüyor)",
    "kaynak": "ism_ah_2026_09",
    "konum": "AH-ASÇ BİLGİLERİ güncel.xlsx",
-   "not": "2024 yıllığında 88 birim; 02.01.2026'da Vahdet ASM (Merkez) ve Yenimahalle ASM'de (Safranbolu) birer yeni birim açıldı (ism_ah_yerlestirme_2025_3) → 88+2=90, tutarlı."
+   "not": "2024 yıllığında 88 birim; 02.01.2026'da Vahdet ASM (Merkez) ve Yenimahalle ASM'de (Safranbolu) birer yeni birim açıldı (ism_ah_yerlestirme_2025_3) → 88+2=90, tutarlı.",
+   "seri": [
+    {
+     "yil": 2012,
+     "deger": 66,
+     "kaynak": "sb-siy-2012",
+     "konum": "Tablo 6.16 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 112"
+    },
+    {
+     "yil": 2013,
+     "deger": 68,
+     "kaynak": "sb-siy-2013",
+     "konum": "Tablo 6.18 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 116"
+    },
+    {
+     "yil": 2014,
+     "deger": 69,
+     "kaynak": "sb-siy-2014",
+     "konum": "Tablo 6.17 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 120"
+    },
+    {
+     "yil": 2015,
+     "deger": 71,
+     "kaynak": "sb-siy-2015",
+     "konum": "Tablo 7.18 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 152 ve 154"
+    },
+    {
+     "yil": 2016,
+     "deger": 75,
+     "kaynak": "sb-siy-2016",
+     "konum": "Tablo 7.19 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 166 ve 168"
+    },
+    {
+     "yil": 2017,
+     "deger": 78,
+     "kaynak": "sb-siy-2017",
+     "konum": "Tablo 7.18 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 176 ve 178"
+    },
+    {
+     "yil": 2018,
+     "deger": 80,
+     "kaynak": "sb-siy-2018",
+     "konum": "Tablo 7.18 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 181 ve 183"
+    },
+    {
+     "yil": 2019,
+     "deger": 84,
+     "kaynak": "sb-siy-2019",
+     "konum": "Tablo 7.19 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 173"
+    },
+    {
+     "yil": 2020,
+     "deger": 86,
+     "kaynak": "sb_siy_2020",
+     "konum": "Tablo 7.19 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 172"
+    },
+    {
+     "yil": 2021,
+     "deger": 86,
+     "kaynak": "sb-siy-2021",
+     "konum": "Tablo 7.19 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 175"
+    },
+    {
+     "yil": 2022,
+     "deger": 86,
+     "kaynak": "sb_siy_2022",
+     "konum": "Tablo 7.19 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 175"
+    },
+    {
+     "yil": 2023,
+     "deger": 88,
+     "kaynak": "sb-siy-2023",
+     "konum": "Tablo 7.19 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 182"
+    },
+    {
+     "yil": 2024,
+     "deger": 88,
+     "kaynak": "sb-siy-2024",
+     "konum": "Tablo 7.20 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 192"
+    },
+    {
+     "yil": 2026,
+     "deger": 90,
+     "kaynak": "ism_ah_2026_09",
+     "konum": "AH-ASÇ BİLGİLERİ güncel.xlsx (Eylül 2026) — ÇKYS kodlu AHB satırları sayıldı",
+     "not": "Mevcut karabuk.json değeri; yıllık değil, Eylül 2026 anlık sayımı."
+    }
+   ]
   },
   {
    "tur": "Aile hekimi (birimde görevli hekim)",
@@ -447,7 +4703,88 @@
    "yontem": "Sağlık İstatistikleri Yıllığı il tablosu",
    "kaynak": "sb-siy-2024",
    "konum": "Tablo 7.20, PDF s. 192",
-   "not": "Yıllık hastane adlarını vermiyor. Bakanlık alan adları altında doğrulanan genel hastaneler: KEAH, Safranbolu DH, Eskipazar İDH, Yenice DH, Eflani İEDH, Ovacık İDH (6). Ağız ve Diş Sağlığı EAH bu sayının içinde mi, ayrıca mı sayıldığı yıllıktan teyit edilemedi."
+   "not": "Yıllık hastane adlarını vermiyor. Bakanlık alan adları altında doğrulanan genel hastaneler: KEAH, Safranbolu DH, Eskipazar İDH, Yenice DH, Eflani İEDH, Ovacık İDH (6). Ağız ve Diş Sağlığı EAH bu sayının içinde mi, ayrıca mı sayıldığı yıllıktan teyit edilemedi.",
+   "seri": [
+    {
+     "yil": 2012,
+     "deger": 6,
+     "kaynak": "sb-siy-2012",
+     "konum": "Tablo 6.16 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 112"
+    },
+    {
+     "yil": 2013,
+     "deger": 6,
+     "kaynak": "sb-siy-2013",
+     "konum": "Tablo 6.18 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 116"
+    },
+    {
+     "yil": 2014,
+     "deger": 5,
+     "kaynak": "sb-siy-2014",
+     "konum": "Tablo 6.17 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 120",
+     "not": "2014 yıllığında Karabük için 5 hastane yazılıdır (diğer yıllar 6)."
+    },
+    {
+     "yil": 2015,
+     "deger": 6,
+     "kaynak": "sb-siy-2015",
+     "konum": "Tablo 7.18 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 152 ve 154"
+    },
+    {
+     "yil": 2016,
+     "deger": 6,
+     "kaynak": "sb-siy-2016",
+     "konum": "Tablo 7.19 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 166 ve 168"
+    },
+    {
+     "yil": 2017,
+     "deger": 6,
+     "kaynak": "sb-siy-2017",
+     "konum": "Tablo 7.18 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 176 ve 178"
+    },
+    {
+     "yil": 2018,
+     "deger": 6,
+     "kaynak": "sb-siy-2018",
+     "konum": "Tablo 7.18 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 181 ve 183"
+    },
+    {
+     "yil": 2019,
+     "deger": 6,
+     "kaynak": "sb-siy-2019",
+     "konum": "Tablo 7.19 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 173"
+    },
+    {
+     "yil": 2020,
+     "deger": 6,
+     "kaynak": "sb_siy_2020",
+     "konum": "Tablo 7.19 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 172"
+    },
+    {
+     "yil": 2021,
+     "deger": 6,
+     "kaynak": "sb-siy-2021",
+     "konum": "Tablo 7.19 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 175"
+    },
+    {
+     "yil": 2022,
+     "deger": 6,
+     "kaynak": "sb_siy_2022",
+     "konum": "Tablo 7.19 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 175"
+    },
+    {
+     "yil": 2023,
+     "deger": 6,
+     "kaynak": "sb-siy-2023",
+     "konum": "Tablo 7.19 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 182"
+    },
+    {
+     "yil": 2024,
+     "deger": 6,
+     "kaynak": "sb-siy-2024",
+     "konum": "Tablo 7.20 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 192"
+    }
+   ]
   },
   {
    "tur": "Hastane yatağı (tüm sektörler)",
@@ -456,7 +4793,100 @@
    "yontem": "Sağlık İstatistikleri Yıllığı il tablosu",
    "kaynak": "sb-siy-2024",
    "konum": "Tablo 7.20",
-   "not": "637 nitelikli, 131 yoğun bakım yatağı."
+   "not": "637 nitelikli, 131 yoğun bakım yatağı.",
+   "seri": [
+    {
+     "yil": 2012,
+     "deger": 673,
+     "kaynak": "sb-siy-2012",
+     "konum": "Tablo 6.16 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 112",
+     "not": "Nitelikli yatak 131, yoğun bakım yatağı 102"
+    },
+    {
+     "yil": 2013,
+     "deger": 668,
+     "kaynak": "sb-siy-2013",
+     "konum": "Tablo 6.18 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 116",
+     "not": "Nitelikli yatak 147, yoğun bakım yatağı 103"
+    },
+    {
+     "yil": 2014,
+     "deger": 632,
+     "kaynak": "sb-siy-2014",
+     "konum": "Tablo 6.17 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 120",
+     "not": "Nitelikli yatak 448, yoğun bakım yatağı 85"
+    },
+    {
+     "yil": 2015,
+     "deger": 665,
+     "kaynak": "sb-siy-2015",
+     "konum": "Tablo 7.18 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 152 ve 154",
+     "not": "Nitelikli yatak 515, yoğun bakım yatağı 95"
+    },
+    {
+     "yil": 2016,
+     "deger": 676,
+     "kaynak": "sb-siy-2016",
+     "konum": "Tablo 7.19 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 166 ve 168",
+     "not": "Nitelikli yatak 521, yoğun bakım yatağı 92"
+    },
+    {
+     "yil": 2017,
+     "deger": 666,
+     "kaynak": "sb-siy-2017",
+     "konum": "Tablo 7.18 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 176 ve 178",
+     "not": "Nitelikli yatak 525, yoğun bakım yatağı 96"
+    },
+    {
+     "yil": 2018,
+     "deger": 716,
+     "kaynak": "sb-siy-2018",
+     "konum": "Tablo 7.18 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 181 ve 183",
+     "not": "Nitelikli yatak 558, yoğun bakım yatağı 114"
+    },
+    {
+     "yil": 2019,
+     "deger": 691,
+     "kaynak": "sb-siy-2019",
+     "konum": "Tablo 7.19 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 173",
+     "not": "Nitelikli yatak 533, yoğun bakım yatağı 114"
+    },
+    {
+     "yil": 2020,
+     "deger": 751,
+     "kaynak": "sb_siy_2020",
+     "konum": "Tablo 7.19 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 172",
+     "not": "Nitelikli yatak 577, yoğun bakım yatağı 130"
+    },
+    {
+     "yil": 2021,
+     "deger": 726,
+     "kaynak": "sb-siy-2021",
+     "konum": "Tablo 7.19 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 175",
+     "not": "Nitelikli yatak 551, yoğun bakım yatağı 131"
+    },
+    {
+     "yil": 2022,
+     "deger": 751,
+     "kaynak": "sb_siy_2022",
+     "konum": "Tablo 7.19 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 175",
+     "not": "Nitelikli yatak 576, yoğun bakım yatağı 131"
+    },
+    {
+     "yil": 2023,
+     "deger": 751,
+     "kaynak": "sb-siy-2023",
+     "konum": "Tablo 7.19 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 182",
+     "not": "Nitelikli yatak 576, yoğun bakım yatağı 131"
+    },
+    {
+     "yil": 2024,
+     "deger": 779,
+     "kaynak": "sb-siy-2024",
+     "konum": "Tablo 7.20 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 192",
+     "not": "Nitelikli yatak 637, yoğun bakım yatağı 131"
+    }
+   ]
   },
   {
    "tur": "112 acil yardım istasyonu",
@@ -464,7 +4894,87 @@
    "yil": 2024,
    "yontem": "Sağlık İstatistikleri Yıllığı il tablosu",
    "kaynak": "sb-siy-2024",
-   "konum": "Tablo 12.4, PDF s. 323"
+   "konum": "Tablo 12.4, PDF s. 323",
+   "seri": [
+    {
+     "yil": 2012,
+     "deger": 10,
+     "kaynak": "sb-siy-2012",
+     "konum": "Tablo 6.16 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 112"
+    },
+    {
+     "yil": 2013,
+     "deger": 12,
+     "kaynak": "sb-siy-2013",
+     "konum": "Tablo 6.18 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 116"
+    },
+    {
+     "yil": 2014,
+     "deger": 12,
+     "kaynak": "sb-siy-2014",
+     "konum": "Tablo 6.17 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 120"
+    },
+    {
+     "yil": 2015,
+     "deger": 15,
+     "kaynak": "sb-siy-2015",
+     "konum": "Tablo 7.18 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 154"
+    },
+    {
+     "yil": 2016,
+     "deger": 14,
+     "kaynak": "sb-siy-2016",
+     "konum": "Tablo 7.19 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 168"
+    },
+    {
+     "yil": 2017,
+     "deger": 15,
+     "kaynak": "sb-siy-2017",
+     "konum": "Tablo 7.18 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 178"
+    },
+    {
+     "yil": 2018,
+     "deger": 15,
+     "kaynak": "sb-siy-2018",
+     "konum": "Tablo 7.18 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 183"
+    },
+    {
+     "yil": 2019,
+     "deger": 15,
+     "kaynak": "sb-siy-2019",
+     "konum": "Tablo 12.4 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 294"
+    },
+    {
+     "yil": 2020,
+     "deger": 15,
+     "kaynak": "sb_siy_2020",
+     "konum": "Tablo 12.4 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 295"
+    },
+    {
+     "yil": 2021,
+     "deger": 16,
+     "kaynak": "sb-siy-2021",
+     "konum": "Tablo 12.4 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 297"
+    },
+    {
+     "yil": 2022,
+     "deger": 17,
+     "kaynak": "sb_siy_2022",
+     "konum": "Tablo 12.4 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 299"
+    },
+    {
+     "yil": 2023,
+     "deger": 17,
+     "kaynak": "sb-siy-2023",
+     "konum": "Tablo 12.4 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 313"
+    },
+    {
+     "yil": 2024,
+     "deger": 17,
+     "kaynak": "sb-siy-2024",
+     "konum": "Tablo 12.4 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 323"
+    }
+   ]
   },
   {
    "tur": "112 acil yardım ambulansı",
@@ -472,7 +4982,87 @@
    "yil": 2024,
    "yontem": "Sağlık İstatistikleri Yıllığı il tablosu",
    "kaynak": "sb-siy-2024",
-   "konum": "Tablo 12.4, PDF s. 323"
+   "konum": "Tablo 12.4, PDF s. 323",
+   "seri": [
+    {
+     "yil": 2012,
+     "deger": 19,
+     "kaynak": "sb-siy-2012",
+     "konum": "Tablo 6.16 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 112"
+    },
+    {
+     "yil": 2013,
+     "deger": 21,
+     "kaynak": "sb-siy-2013",
+     "konum": "Tablo 6.18 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 116"
+    },
+    {
+     "yil": 2014,
+     "deger": 26,
+     "kaynak": "sb-siy-2014",
+     "konum": "Tablo 6.17 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 120"
+    },
+    {
+     "yil": 2015,
+     "deger": 28,
+     "kaynak": "sb-siy-2015",
+     "konum": "Tablo 7.18 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 154"
+    },
+    {
+     "yil": 2016,
+     "deger": 31,
+     "kaynak": "sb-siy-2016",
+     "konum": "Tablo 7.19 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 168"
+    },
+    {
+     "yil": 2017,
+     "deger": 32,
+     "kaynak": "sb-siy-2017",
+     "konum": "Tablo 7.18 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 178"
+    },
+    {
+     "yil": 2018,
+     "deger": 33,
+     "kaynak": "sb-siy-2018",
+     "konum": "Tablo 7.18 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 183"
+    },
+    {
+     "yil": 2019,
+     "deger": 39,
+     "kaynak": "sb-siy-2019",
+     "konum": "Tablo 12.4 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 294"
+    },
+    {
+     "yil": 2020,
+     "deger": 40,
+     "kaynak": "sb_siy_2020",
+     "konum": "Tablo 12.4 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 295"
+    },
+    {
+     "yil": 2021,
+     "deger": 41,
+     "kaynak": "sb-siy-2021",
+     "konum": "Tablo 12.4 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 297"
+    },
+    {
+     "yil": 2022,
+     "deger": 38,
+     "kaynak": "sb_siy_2022",
+     "konum": "Tablo 12.4 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 299"
+    },
+    {
+     "yil": 2023,
+     "deger": 40,
+     "kaynak": "sb-siy-2023",
+     "konum": "Tablo 12.4 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 313"
+    },
+    {
+     "yil": 2024,
+     "deger": 33,
+     "kaynak": "sb-siy-2024",
+     "konum": "Tablo 12.4 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 323"
+    }
+   ]
   },
   {
    "tur": "Toplam hekim",
@@ -481,7 +5071,100 @@
    "yontem": "Sağlık İstatistikleri Yıllığı il tablosu",
    "kaynak": "sb-siy-2024",
    "konum": "Tablo 10.12, PDF s. 291",
-   "not": "Uzman 243, pratisyen 183, asistan 145."
+   "not": "Uzman 243, pratisyen 183, asistan 145.",
+   "seri": [
+    {
+     "yil": 2012,
+     "deger": 333,
+     "kaynak": "sb-siy-2012",
+     "konum": "Tablo 8.12 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 176",
+     "not": "Uzman 182, pratisyen 151, asistan 0"
+    },
+    {
+     "yil": 2013,
+     "deger": 316,
+     "kaynak": "sb-siy-2013",
+     "konum": "Tablo 8.12 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 184",
+     "not": "Uzman 173, pratisyen 143, asistan 0"
+    },
+    {
+     "yil": 2014,
+     "deger": 340,
+     "kaynak": "sb-siy-2014",
+     "konum": "Tablo 8.12 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 188",
+     "not": "Uzman 198, pratisyen 142, asistan 0"
+    },
+    {
+     "yil": 2015,
+     "deger": 383,
+     "kaynak": "sb-siy-2015",
+     "konum": "Tablo 9.8 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 233",
+     "not": "Uzman 234, pratisyen 149, asistan 0"
+    },
+    {
+     "yil": 2016,
+     "deger": 375,
+     "kaynak": "sb-siy-2016",
+     "konum": "Tablo 10.8 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 258",
+     "not": "Uzman 222, pratisyen 153, asistan 0"
+    },
+    {
+     "yil": 2017,
+     "deger": 410,
+     "kaynak": "sb-siy-2017",
+     "konum": "Tablo 10.8 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 269",
+     "not": "Uzman 244, pratisyen 166, asistan 0"
+    },
+    {
+     "yil": 2018,
+     "deger": 423,
+     "kaynak": "sb-siy-2018",
+     "konum": "Tablo 10.10 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 279",
+     "not": "Uzman 236, pratisyen 156, asistan 31"
+    },
+    {
+     "yil": 2019,
+     "deger": 444,
+     "kaynak": "sb-siy-2019",
+     "konum": "Tablo 10.10 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 266",
+     "not": "Uzman 231, pratisyen 175, asistan 38"
+    },
+    {
+     "yil": 2020,
+     "deger": 473,
+     "kaynak": "sb_siy_2020",
+     "konum": "Tablo 10.11 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 264",
+     "not": "Uzman 230, pratisyen 198, asistan 45"
+    },
+    {
+     "yil": 2021,
+     "deger": 506,
+     "kaynak": "sb-siy-2021",
+     "konum": "Tablo 10.11 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 267",
+     "not": "Uzman 247, pratisyen 210, asistan 49"
+    },
+    {
+     "yil": 2022,
+     "deger": 534,
+     "kaynak": "sb_siy_2022",
+     "konum": "Tablo 10.11 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 268",
+     "not": "Uzman 251, pratisyen 196, asistan 87"
+    },
+    {
+     "yil": 2023,
+     "deger": 563,
+     "kaynak": "sb-siy-2023",
+     "konum": "Tablo 10.13 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 281",
+     "not": "Uzman 236, pratisyen 206, asistan 121"
+    },
+    {
+     "yil": 2024,
+     "deger": 571,
+     "kaynak": "sb-siy-2024",
+     "konum": "Tablo 10.12 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 291",
+     "not": "Uzman 243, pratisyen 183, asistan 145"
+    }
+   ]
   },
   {
    "tur": "Diş hekimi",
@@ -489,7 +5172,87 @@
    "yil": 2024,
    "yontem": "Sağlık İstatistikleri Yıllığı il tablosu",
    "kaynak": "sb-siy-2024",
-   "konum": "Tablo 10.12"
+   "konum": "Tablo 10.12",
+   "seri": [
+    {
+     "yil": 2012,
+     "deger": 65,
+     "kaynak": "sb-siy-2012",
+     "konum": "Tablo 8.12 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 176"
+    },
+    {
+     "yil": 2013,
+     "deger": 63,
+     "kaynak": "sb-siy-2013",
+     "konum": "Tablo 8.12 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 184"
+    },
+    {
+     "yil": 2014,
+     "deger": 66,
+     "kaynak": "sb-siy-2014",
+     "konum": "Tablo 8.12 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 188"
+    },
+    {
+     "yil": 2015,
+     "deger": 65,
+     "kaynak": "sb-siy-2015",
+     "konum": "Tablo 9.8 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 233"
+    },
+    {
+     "yil": 2016,
+     "deger": 69,
+     "kaynak": "sb-siy-2016",
+     "konum": "Tablo 10.8 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 258"
+    },
+    {
+     "yil": 2017,
+     "deger": 72,
+     "kaynak": "sb-siy-2017",
+     "konum": "Tablo 10.8 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 269"
+    },
+    {
+     "yil": 2018,
+     "deger": 68,
+     "kaynak": "sb-siy-2018",
+     "konum": "Tablo 10.10 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 279"
+    },
+    {
+     "yil": 2019,
+     "deger": 85,
+     "kaynak": "sb-siy-2019",
+     "konum": "Tablo 10.10 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 266"
+    },
+    {
+     "yil": 2020,
+     "deger": 102,
+     "kaynak": "sb_siy_2020",
+     "konum": "Tablo 10.11 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 264"
+    },
+    {
+     "yil": 2021,
+     "deger": 112,
+     "kaynak": "sb-siy-2021",
+     "konum": "Tablo 10.11 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 267"
+    },
+    {
+     "yil": 2022,
+     "deger": 124,
+     "kaynak": "sb_siy_2022",
+     "konum": "Tablo 10.11 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 268"
+    },
+    {
+     "yil": 2023,
+     "deger": 129,
+     "kaynak": "sb-siy-2023",
+     "konum": "Tablo 10.13 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 281"
+    },
+    {
+     "yil": 2024,
+     "deger": 134,
+     "kaynak": "sb-siy-2024",
+     "konum": "Tablo 10.12 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 291"
+    }
+   ]
   },
   {
    "tur": "Eczacı",
@@ -497,7 +5260,87 @@
    "yil": 2024,
    "yontem": "Sağlık İstatistikleri Yıllığı il tablosu",
    "kaynak": "sb-siy-2024",
-   "konum": "Tablo 10.12"
+   "konum": "Tablo 10.12",
+   "seri": [
+    {
+     "yil": 2012,
+     "deger": 89,
+     "kaynak": "sb-siy-2012",
+     "konum": "Tablo 8.12 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 176"
+    },
+    {
+     "yil": 2013,
+     "deger": 91,
+     "kaynak": "sb-siy-2013",
+     "konum": "Tablo 8.12 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 184"
+    },
+    {
+     "yil": 2014,
+     "deger": 88,
+     "kaynak": "sb-siy-2014",
+     "konum": "Tablo 8.12 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 188"
+    },
+    {
+     "yil": 2015,
+     "deger": 89,
+     "kaynak": "sb-siy-2015",
+     "konum": "Tablo 9.8 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 233"
+    },
+    {
+     "yil": 2016,
+     "deger": 89,
+     "kaynak": "sb-siy-2016",
+     "konum": "Tablo 10.8 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 258"
+    },
+    {
+     "yil": 2017,
+     "deger": 91,
+     "kaynak": "sb-siy-2017",
+     "konum": "Tablo 10.8 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 269"
+    },
+    {
+     "yil": 2018,
+     "deger": 98,
+     "kaynak": "sb-siy-2018",
+     "konum": "Tablo 10.10 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 279"
+    },
+    {
+     "yil": 2019,
+     "deger": 96,
+     "kaynak": "sb-siy-2019",
+     "konum": "Tablo 10.10 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 266"
+    },
+    {
+     "yil": 2020,
+     "deger": 98,
+     "kaynak": "sb_siy_2020",
+     "konum": "Tablo 10.11 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 264"
+    },
+    {
+     "yil": 2021,
+     "deger": 99,
+     "kaynak": "sb-siy-2021",
+     "konum": "Tablo 10.11 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 267"
+    },
+    {
+     "yil": 2022,
+     "deger": 100,
+     "kaynak": "sb_siy_2022",
+     "konum": "Tablo 10.11 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 268"
+    },
+    {
+     "yil": 2023,
+     "deger": 104,
+     "kaynak": "sb-siy-2023",
+     "konum": "Tablo 10.13 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 281"
+    },
+    {
+     "yil": 2024,
+     "deger": 107,
+     "kaynak": "sb-siy-2024",
+     "konum": "Tablo 10.12 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 291"
+    }
+   ]
   },
   {
    "tur": "Hemşire",
@@ -505,7 +5348,87 @@
    "yil": 2024,
    "yontem": "Sağlık İstatistikleri Yıllığı il tablosu",
    "kaynak": "sb-siy-2024",
-   "konum": "Tablo 10.12"
+   "konum": "Tablo 10.12",
+   "seri": [
+    {
+     "yil": 2012,
+     "deger": 496,
+     "kaynak": "sb-siy-2012",
+     "konum": "Tablo 8.12 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 176"
+    },
+    {
+     "yil": 2013,
+     "deger": 484,
+     "kaynak": "sb-siy-2013",
+     "konum": "Tablo 8.12 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 184"
+    },
+    {
+     "yil": 2014,
+     "deger": 470,
+     "kaynak": "sb-siy-2014",
+     "konum": "Tablo 8.12 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 188"
+    },
+    {
+     "yil": 2015,
+     "deger": 538,
+     "kaynak": "sb-siy-2015",
+     "konum": "Tablo 9.8 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 233"
+    },
+    {
+     "yil": 2016,
+     "deger": 544,
+     "kaynak": "sb-siy-2016",
+     "konum": "Tablo 10.8 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 258"
+    },
+    {
+     "yil": 2017,
+     "deger": 610,
+     "kaynak": "sb-siy-2017",
+     "konum": "Tablo 10.8 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 269"
+    },
+    {
+     "yil": 2018,
+     "deger": 671,
+     "kaynak": "sb-siy-2018",
+     "konum": "Tablo 10.10 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 279"
+    },
+    {
+     "yil": 2019,
+     "deger": 684,
+     "kaynak": "sb-siy-2019",
+     "konum": "Tablo 10.10 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 266"
+    },
+    {
+     "yil": 2020,
+     "deger": 737,
+     "kaynak": "sb_siy_2020",
+     "konum": "Tablo 10.11 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 264"
+    },
+    {
+     "yil": 2021,
+     "deger": 730,
+     "kaynak": "sb-siy-2021",
+     "konum": "Tablo 10.11 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 267"
+    },
+    {
+     "yil": 2022,
+     "deger": 747,
+     "kaynak": "sb_siy_2022",
+     "konum": "Tablo 10.11 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 268"
+    },
+    {
+     "yil": 2023,
+     "deger": 770,
+     "kaynak": "sb-siy-2023",
+     "konum": "Tablo 10.13 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 281"
+    },
+    {
+     "yil": 2024,
+     "deger": 807,
+     "kaynak": "sb-siy-2024",
+     "konum": "Tablo 10.12 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 291"
+    }
+   ]
   },
   {
    "tur": "Ebe",
@@ -513,7 +5436,87 @@
    "yil": 2024,
    "yontem": "Sağlık İstatistikleri Yıllığı il tablosu",
    "kaynak": "sb-siy-2024",
-   "konum": "Tablo 10.12"
+   "konum": "Tablo 10.12",
+   "seri": [
+    {
+     "yil": 2012,
+     "deger": 230,
+     "kaynak": "sb-siy-2012",
+     "konum": "Tablo 8.12 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 176"
+    },
+    {
+     "yil": 2013,
+     "deger": 237,
+     "kaynak": "sb-siy-2013",
+     "konum": "Tablo 8.12 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 184"
+    },
+    {
+     "yil": 2014,
+     "deger": 236,
+     "kaynak": "sb-siy-2014",
+     "konum": "Tablo 8.12 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 188"
+    },
+    {
+     "yil": 2015,
+     "deger": 249,
+     "kaynak": "sb-siy-2015",
+     "konum": "Tablo 9.8 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 233"
+    },
+    {
+     "yil": 2016,
+     "deger": 230,
+     "kaynak": "sb-siy-2016",
+     "konum": "Tablo 10.8 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 258"
+    },
+    {
+     "yil": 2017,
+     "deger": 229,
+     "kaynak": "sb-siy-2017",
+     "konum": "Tablo 10.8 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 269"
+    },
+    {
+     "yil": 2018,
+     "deger": 238,
+     "kaynak": "sb-siy-2018",
+     "konum": "Tablo 10.10 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 279"
+    },
+    {
+     "yil": 2019,
+     "deger": 248,
+     "kaynak": "sb-siy-2019",
+     "konum": "Tablo 10.10 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 266"
+    },
+    {
+     "yil": 2020,
+     "deger": 248,
+     "kaynak": "sb_siy_2020",
+     "konum": "Tablo 10.11 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 264"
+    },
+    {
+     "yil": 2021,
+     "deger": 241,
+     "kaynak": "sb-siy-2021",
+     "konum": "Tablo 10.11 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 267"
+    },
+    {
+     "yil": 2022,
+     "deger": 244,
+     "kaynak": "sb_siy_2022",
+     "konum": "Tablo 10.11 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 268"
+    },
+    {
+     "yil": 2023,
+     "deger": 240,
+     "kaynak": "sb-siy-2023",
+     "konum": "Tablo 10.13 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 281"
+    },
+    {
+     "yil": 2024,
+     "deger": 250,
+     "kaynak": "sb-siy-2024",
+     "konum": "Tablo 10.12 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 291"
+    }
+   ]
   },
   {
    "tur": "Diğer sağlık personeli",
@@ -521,7 +5524,87 @@
    "yil": 2024,
    "yontem": "Sağlık İstatistikleri Yıllığı il tablosu",
    "kaynak": "sb-siy-2024",
-   "konum": "Tablo 10.12"
+   "konum": "Tablo 10.12",
+   "seri": [
+    {
+     "yil": 2012,
+     "deger": 527,
+     "kaynak": "sb-siy-2012",
+     "konum": "Tablo 8.12 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 176"
+    },
+    {
+     "yil": 2013,
+     "deger": 562,
+     "kaynak": "sb-siy-2013",
+     "konum": "Tablo 8.12 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 184"
+    },
+    {
+     "yil": 2014,
+     "deger": 589,
+     "kaynak": "sb-siy-2014",
+     "konum": "Tablo 8.12 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 188"
+    },
+    {
+     "yil": 2015,
+     "deger": 593,
+     "kaynak": "sb-siy-2015",
+     "konum": "Tablo 9.8 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 233"
+    },
+    {
+     "yil": 2016,
+     "deger": 605,
+     "kaynak": "sb-siy-2016",
+     "konum": "Tablo 10.8 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 258"
+    },
+    {
+     "yil": 2017,
+     "deger": 695,
+     "kaynak": "sb-siy-2017",
+     "konum": "Tablo 10.8 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 269"
+    },
+    {
+     "yil": 2018,
+     "deger": 701,
+     "kaynak": "sb-siy-2018",
+     "konum": "Tablo 10.10 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 279"
+    },
+    {
+     "yil": 2019,
+     "deger": 726,
+     "kaynak": "sb-siy-2019",
+     "konum": "Tablo 10.10 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 266"
+    },
+    {
+     "yil": 2020,
+     "deger": 816,
+     "kaynak": "sb_siy_2020",
+     "konum": "Tablo 10.11 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 264"
+    },
+    {
+     "yil": 2021,
+     "deger": 826,
+     "kaynak": "sb-siy-2021",
+     "konum": "Tablo 10.11 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 267"
+    },
+    {
+     "yil": 2022,
+     "deger": 870,
+     "kaynak": "sb_siy_2022",
+     "konum": "Tablo 10.11 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 268"
+    },
+    {
+     "yil": 2023,
+     "deger": 1003,
+     "kaynak": "sb-siy-2023",
+     "konum": "Tablo 10.13 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 281"
+    },
+    {
+     "yil": 2024,
+     "deger": 1074,
+     "kaynak": "sb-siy-2024",
+     "konum": "Tablo 10.12 \"İllere Göre Bazı Sağlık Göstergeleri\", PDF s. 291"
+    }
+   ]
   },
   {
    "tur": "Kuduz aşı uygulama merkezi",
@@ -843,7 +5926,58 @@
    "istasyon": "Tören Alanı (Merkez; sanayi/trafik/ısınma)",
    "aciklama": "12 aylık ortalamanın aritmetik ortalaması (hesaplandı). Yıllık sınır değeri (40) aşıyor. Aylık en yüksek değer Aralık'ta 59,2. Tabloda toplam 99 PM10 aşım günü var (24 saatlik sınır: 50). Sınır değerler (ÇDR Çizelge 1): PM10 yıllık 40 µg/m³, 24 saatlik 50 µg/m³; SO2 24 saatlik 125 µg/m³.",
    "kaynak": "csb_cdr_2024",
-   "konum": "Çizelge 7 – 2024 aylık ortalamalar ve aşım gün sayıları (havaizleme.gov.tr)"
+   "konum": "Çizelge 7 – 2024 aylık ortalamalar ve aşım gün sayıları (havaizleme.gov.tr)",
+   "seri": [
+    {
+     "yil": 2018,
+     "deger": 43.3,
+     "kaynak": "csb_cdr_2018",
+     "konum": "Çizelge 10 – 2018 aylık ortalama değerler, PDF s. 26",
+     "not": "Yalnız Temmuz-Aralık (6 ay; kış ağırlıklı) ortalaması (hesaplandı); Ocak-Haziran \"Ölçüm Yok\"; temsiliyet sınırlı."
+    },
+    {
+     "yil": 2019,
+     "deger": 56.1,
+     "kaynak": "csb_cdr_2019",
+     "konum": "Çizelge 8 – 2019 yılı aylık ortalama değerler, PDF s. 30",
+     "not": "12 aylık ortalamanın aritmetik ortalaması (hesaplandı)"
+    },
+    {
+     "yil": 2020,
+     "deger": 45.5,
+     "kaynak": "csb_cdr_2020",
+     "konum": "Çizelge 8 – 2020 yılı aylık ortalama değerler, PDF s. 30",
+     "not": "12 aylık ortalamanın aritmetik ortalaması (hesaplandı)"
+    },
+    {
+     "yil": 2021,
+     "deger": 43.5,
+     "kaynak": "csb_cdr_2021",
+     "konum": "Çizelge A.7 – 2021 yılı aylık ortalama değerler, PDF s. 33",
+     "not": "12 aylık ortalamanın aritmetik ortalaması (hesaplandı)"
+    },
+    {
+     "yil": 2022,
+     "deger": 47.4,
+     "kaynak": "csb_cdr_2022",
+     "konum": "Çizelge A.7 – 2022 yılı aylık ortalama değerler, PDF s. 31",
+     "not": "12 aylık ortalamanın aritmetik ortalaması (hesaplandı)"
+    },
+    {
+     "yil": 2023,
+     "deger": 45.6,
+     "kaynak": "csb_cdr_2023",
+     "konum": "Çizelge 9 – 2023 yılı aylık ortalama değerler, PDF s. 30",
+     "not": "12 aylık ortalamanın aritmetik ortalaması (hesaplandı)"
+    },
+    {
+     "yil": 2024,
+     "deger": 43.4,
+     "kaynak": "csb_cdr_2024",
+     "konum": "Çizelge 7 – 2024 aylık ortalama değerler (karabuk.json ile aynı)",
+     "not": "12 aylık ortalamanın ortalaması (hesaplandı); 99 aşım günü"
+    }
+   ]
   },
   {
    "baslik": "PM10 yıllık ortalama",
@@ -853,7 +5987,93 @@
    "istasyon": "Kardemir-1 (sanayi)",
    "aciklama": "Ocak-Kasım (11 ay) aylık ortalamalarının ortalaması (hesaplandı; Aralık verisi yok). Ocak ayı ortalaması 71,2; toplam 55 aşım günü.",
    "kaynak": "csb_cdr_2024",
-   "konum": "Çizelge 7 – 2024 aylık ortalamalar ve aşım gün sayıları (havaizleme.gov.tr)"
+   "konum": "Çizelge 7 – 2024 aylık ortalamalar ve aşım gün sayıları (havaizleme.gov.tr)",
+   "seri": [
+    {
+     "yil": 2012,
+     "deger": 120,
+     "kaynak": "csb_cdr_2015",
+     "konum": "Göstergeler bölümü, \"Durum ve eğilimler\" yıllara göre PM10/SO2 ortalama tablosu (Ulusal Hava Kalitesi Ağı/Bülteni), PDF s. 205",
+     "not": "PM10 24 saatlik sınır değer aşım günü (AGS): 5"
+    },
+    {
+     "yil": 2013,
+     "deger": 96,
+     "kaynak": "csb_cdr_2015",
+     "konum": "Göstergeler bölümü, \"Durum ve eğilimler\" yıllara göre PM10/SO2 ortalama tablosu (Ulusal Hava Kalitesi Ağı/Bülteni), PDF s. 205",
+     "not": "PM10 24 saatlik sınır değer aşım günü (AGS): 115"
+    },
+    {
+     "yil": 2014,
+     "deger": 85,
+     "kaynak": "csb_cdr_2015",
+     "konum": "Göstergeler bölümü, \"Durum ve eğilimler\" yıllara göre PM10/SO2 ortalama tablosu (Ulusal Hava Kalitesi Ağı/Bülteni), PDF s. 205",
+     "not": "PM10 24 saatlik sınır değer aşım günü (AGS): 73"
+    },
+    {
+     "yil": 2015,
+     "deger": 69,
+     "kaynak": "csb_cdr_2015",
+     "konum": "Göstergeler bölümü, \"Durum ve eğilimler\" yıllara göre PM10/SO2 ortalama tablosu (Ulusal Hava Kalitesi Ağı/Bülteni), PDF s. 205",
+     "not": "PM10 24 saatlik sınır değer aşım günü (AGS): 44"
+    },
+    {
+     "yil": 2016,
+     "deger": 82.9,
+     "kaynak": "csb_cdr_2016",
+     "konum": "Çizelge A.9 – 2016 yılı aylık ortalama değerler, PDF s. 25",
+     "not": "9 aylık ortalamanın aritmetik ortalaması (hesaplandı); veri olmayan/kullanılmayan aylar: Ocak, Şubat, Mart"
+    },
+    {
+     "yil": 2017,
+     "deger": 62.0,
+     "kaynak": "csb_cdr_2017",
+     "konum": "Çizelge A.9 – 2017 yılı aylık ortalama değerler, PDF s. 24",
+     "not": "12 aylık ortalamanın aritmetik ortalaması (hesaplandı)"
+    },
+    {
+     "yil": 2018,
+     "deger": 36.5,
+     "kaynak": "csb_cdr_2018",
+     "konum": "Çizelge 10 – 2018 yılı aylık ortalama değerler, PDF s. 26",
+     "not": "12 aylık ortalamanın aritmetik ortalaması (hesaplandı)"
+    },
+    {
+     "yil": 2019,
+     "deger": 47.4,
+     "kaynak": "csb_cdr_2019",
+     "konum": "Çizelge 8 – 2019 yılı aylık ortalama değerler, PDF s. 30",
+     "not": "12 aylık ortalamanın aritmetik ortalaması (hesaplandı)"
+    },
+    {
+     "yil": 2020,
+     "deger": 78.6,
+     "kaynak": "csb_cdr_2020",
+     "konum": "Çizelge 8 – 2020 yılı aylık ortalama değerler, PDF s. 31",
+     "not": "12 aylık ortalamanın aritmetik ortalaması (hesaplandı)"
+    },
+    {
+     "yil": 2021,
+     "deger": 69.3,
+     "kaynak": "csb_cdr_2021",
+     "konum": "Çizelge A.7 – 2021 yılı aylık ortalama değerler, PDF s. 32",
+     "not": "12 aylık ortalamanın aritmetik ortalaması (hesaplandı)"
+    },
+    {
+     "yil": 2022,
+     "deger": 67.9,
+     "kaynak": "csb_cdr_2022",
+     "konum": "Çizelge A.7 – 2022 yılı aylık ortalama değerler, PDF s. 31",
+     "not": "9 aylık ortalamanın aritmetik ortalaması (hesaplandı); veri olmayan/kullanılmayan aylar: Ekim, Kasım, Aralık"
+    },
+    {
+     "yil": 2024,
+     "deger": 37.5,
+     "kaynak": "csb_cdr_2024",
+     "konum": "Çizelge 7 – 2024 aylık ortalama değerler (karabuk.json ile aynı)",
+     "not": "Ocak-Kasım 11 ay (Aralık yok); 55 aşım günü"
+    }
+   ]
   },
   {
    "baslik": "PM10 yıllık ortalama",
@@ -863,7 +6083,71 @@
    "istasyon": "Kardemir-2 (sanayi)",
    "aciklama": "Ocak-Kasım (11 ay) aylık ortalamalarının ortalaması (hesaplandı). Temmuz ortalaması 62,3; toplam 74 aşım günü.",
    "kaynak": "csb_cdr_2024",
-   "konum": "Çizelge 7 – 2024 aylık ortalamalar ve aşım gün sayıları (havaizleme.gov.tr)"
+   "konum": "Çizelge 7 – 2024 aylık ortalamalar ve aşım gün sayıları (havaizleme.gov.tr)",
+   "seri": [
+    {
+     "yil": 2014,
+     "deger": 99,
+     "kaynak": "csb_cdr_2015",
+     "konum": "Göstergeler bölümü, \"Durum ve eğilimler\" yıllara göre PM10/SO2 ortalama tablosu (Ulusal Hava Kalitesi Ağı/Bülteni), PDF s. 205"
+    },
+    {
+     "yil": 2015,
+     "deger": 71,
+     "kaynak": "csb_cdr_2015",
+     "konum": "Göstergeler bölümü, \"Durum ve eğilimler\" yıllara göre PM10/SO2 ortalama tablosu (Ulusal Hava Kalitesi Ağı/Bülteni), PDF s. 205",
+     "not": "PM10 24 saatlik sınır değer aşım günü (AGS): 65"
+    },
+    {
+     "yil": 2016,
+     "deger": 41.0,
+     "kaynak": "csb_cdr_2016",
+     "konum": "Çizelge A.9 – 2016 yılı aylık ortalama değerler, PDF s. 26",
+     "not": "12 aylık ortalamanın aritmetik ortalaması (hesaplandı)"
+    },
+    {
+     "yil": 2017,
+     "deger": 34.0,
+     "kaynak": "csb_cdr_2017",
+     "konum": "Çizelge A.9 – 2017 yılı aylık ortalama değerler, PDF s. 24",
+     "not": "12 aylık ortalamanın aritmetik ortalaması (hesaplandı)"
+    },
+    {
+     "yil": 2018,
+     "deger": 24.2,
+     "kaynak": "csb_cdr_2018",
+     "konum": "Çizelge 10 – 2018 yılı aylık ortalama değerler, PDF s. 26",
+     "not": "12 aylık ortalamanın aritmetik ortalaması (hesaplandı)"
+    },
+    {
+     "yil": 2020,
+     "deger": 52.3,
+     "kaynak": "csb_cdr_2020",
+     "konum": "Çizelge 8 – 2020 yılı aylık ortalama değerler, PDF s. 31",
+     "not": "9 aylık ortalamanın aritmetik ortalaması (hesaplandı); veri olmayan/kullanılmayan aylar: Temmuz, Ağustos, Eylül (Temmuz-Ağustos PM10 0,04 µg/m³ yazılı; cihaz/veri hatası olarak hesaba katılmadı); Nisan satırında AGS hücresi boş olduğundan PM10 19,61 olarak okundu"
+    },
+    {
+     "yil": 2021,
+     "deger": 50.2,
+     "kaynak": "csb_cdr_2021",
+     "konum": "Çizelge A.7 – 2021 yılı aylık ortalama değerler, PDF s. 33",
+     "not": "12 aylık ortalamanın aritmetik ortalaması (hesaplandı)"
+    },
+    {
+     "yil": 2022,
+     "deger": 51.0,
+     "kaynak": "csb_cdr_2022",
+     "konum": "Çizelge A.7 – 2022 yılı aylık ortalama değerler, PDF s. 31",
+     "not": "9 aylık ortalamanın aritmetik ortalaması (hesaplandı); veri olmayan/kullanılmayan aylar: Ekim, Kasım, Aralık"
+    },
+    {
+     "yil": 2024,
+     "deger": 37.6,
+     "kaynak": "csb_cdr_2024",
+     "konum": "Çizelge 7 – 2024 aylık ortalama değerler (karabuk.json ile aynı)",
+     "not": "Ocak-Kasım 11 ay; 74 aşım günü"
+    }
+   ]
   },
   {
    "baslik": "PM10 yıllık ortalama",
@@ -873,7 +6157,37 @@
    "istasyon": "Safranbolu (Emek Mah.; trafik/ısınma)",
    "aciklama": "12 aylık ortalamanın ortalaması (hesaplandı); toplam 30 aşım günü.",
    "kaynak": "csb_cdr_2024",
-   "konum": "Çizelge 7 – 2024 aylık ortalamalar ve aşım gün sayıları (havaizleme.gov.tr)"
+   "konum": "Çizelge 7 – 2024 aylık ortalamalar ve aşım gün sayıları (havaizleme.gov.tr)",
+   "seri": [
+    {
+     "yil": 2021,
+     "deger": 42.2,
+     "kaynak": "csb_cdr_2021",
+     "konum": "Çizelge A.7 – 2021 yılı aylık ortalama değerler, PDF s. 33",
+     "not": "12 aylık ortalamanın aritmetik ortalaması (hesaplandı)"
+    },
+    {
+     "yil": 2022,
+     "deger": 44.0,
+     "kaynak": "csb_cdr_2022",
+     "konum": "Çizelge A.7 – 2022 yılı aylık ortalama değerler, PDF s. 31",
+     "not": "12 aylık ortalamanın aritmetik ortalaması (hesaplandı)"
+    },
+    {
+     "yil": 2023,
+     "deger": 27.9,
+     "kaynak": "csb_cdr_2023",
+     "konum": "Çizelge 8 – 2023 yılı aylık ortalama değerler, PDF s. 30",
+     "not": "12 aylık ortalamanın aritmetik ortalaması (hesaplandı)"
+    },
+    {
+     "yil": 2024,
+     "deger": 32.9,
+     "kaynak": "csb_cdr_2024",
+     "konum": "Çizelge 7 – 2024 aylık ortalama değerler (karabuk.json ile aynı)",
+     "not": "12 ay; 30 aşım günü"
+    }
+   ]
   },
   {
    "baslik": "SO2 yıllık ortalama",
@@ -883,7 +6197,58 @@
    "istasyon": "Tören Alanı",
    "aciklama": "12 aylık ortalamanın ortalaması (hesaplandı); aylık en yüksek değer Şubat'ta 16,9. Tabloda SO2 aşım günü yok.",
    "kaynak": "csb_cdr_2024",
-   "konum": "Çizelge 7 – 2024 aylık ortalamalar ve aşım gün sayıları (havaizleme.gov.tr)"
+   "konum": "Çizelge 7 – 2024 aylık ortalamalar ve aşım gün sayıları (havaizleme.gov.tr)",
+   "seri": [
+    {
+     "yil": 2018,
+     "deger": 30.9,
+     "kaynak": "csb_cdr_2018",
+     "konum": "Çizelge 10 – 2018 aylık ortalama değerler, PDF s. 26",
+     "not": "Mart-Aralık 10 aylık ortalama (hesaplandı); Ocak-Şubat \"Ölçüm Yok\". İstasyon Ocak 2018'de taşınıp Tören Alanı adını aldı."
+    },
+    {
+     "yil": 2019,
+     "deger": 29.3,
+     "kaynak": "csb_cdr_2019",
+     "konum": "Çizelge 8 – 2019 yılı aylık ortalama değerler, PDF s. 30",
+     "not": "12 aylık ortalamanın aritmetik ortalaması (hesaplandı)"
+    },
+    {
+     "yil": 2020,
+     "deger": 17.0,
+     "kaynak": "csb_cdr_2020",
+     "konum": "Çizelge 8 – 2020 yılı aylık ortalama değerler, PDF s. 30",
+     "not": "12 aylık ortalamanın aritmetik ortalaması (hesaplandı)"
+    },
+    {
+     "yil": 2021,
+     "deger": 12.9,
+     "kaynak": "csb_cdr_2021",
+     "konum": "Çizelge A.7 – 2021 yılı aylık ortalama değerler, PDF s. 33",
+     "not": "12 aylık ortalamanın aritmetik ortalaması (hesaplandı)"
+    },
+    {
+     "yil": 2022,
+     "deger": 16.1,
+     "kaynak": "csb_cdr_2022",
+     "konum": "Çizelge A.7 – 2022 yılı aylık ortalama değerler, PDF s. 31",
+     "not": "12 aylık ortalamanın aritmetik ortalaması (hesaplandı)"
+    },
+    {
+     "yil": 2023,
+     "deger": 8.8,
+     "kaynak": "csb_cdr_2023",
+     "konum": "Çizelge 9 – 2023 yılı aylık ortalama değerler, PDF s. 30",
+     "not": "12 aylık ortalamanın aritmetik ortalaması (hesaplandı)"
+    },
+    {
+     "yil": 2024,
+     "deger": 9.5,
+     "kaynak": "csb_cdr_2024",
+     "konum": "Çizelge 7 – 2024 aylık ortalama değerler (karabuk.json ile aynı)",
+     "not": "12 ay"
+    }
+   ]
   },
   {
    "baslik": "SO2 yıllık ortalama",
@@ -893,7 +6258,37 @@
    "istasyon": "Safranbolu",
    "aciklama": "12 aylık ortalamanın ortalaması (hesaplandı).",
    "kaynak": "csb_cdr_2024",
-   "konum": "Çizelge 7 – 2024 aylık ortalamalar ve aşım gün sayıları (havaizleme.gov.tr)"
+   "konum": "Çizelge 7 – 2024 aylık ortalamalar ve aşım gün sayıları (havaizleme.gov.tr)",
+   "seri": [
+    {
+     "yil": 2021,
+     "deger": 17.3,
+     "kaynak": "csb_cdr_2021",
+     "konum": "Çizelge A.7 – 2021 yılı aylık ortalama değerler, PDF s. 33",
+     "not": "12 aylık ortalamanın aritmetik ortalaması (hesaplandı)"
+    },
+    {
+     "yil": 2022,
+     "deger": 15.6,
+     "kaynak": "csb_cdr_2022",
+     "konum": "Çizelge A.7 – 2022 yılı aylık ortalama değerler, PDF s. 31",
+     "not": "12 aylık ortalamanın aritmetik ortalaması (hesaplandı)"
+    },
+    {
+     "yil": 2023,
+     "deger": 7.1,
+     "kaynak": "csb_cdr_2023",
+     "konum": "Çizelge 8 – 2023 yılı aylık ortalama değerler, PDF s. 30",
+     "not": "12 aylık ortalamanın aritmetik ortalaması (hesaplandı)"
+    },
+    {
+     "yil": 2024,
+     "deger": 8.5,
+     "kaynak": "csb_cdr_2024",
+     "konum": "Çizelge 7 – 2024 aylık ortalama değerler (karabuk.json ile aynı)",
+     "not": "12 ay"
+    }
+   ]
   },
   {
    "baslik": "SO2 ortalama (eksik veri)",
@@ -943,7 +6338,87 @@
    "yil": 2025,
    "aciklama": "Erkek 2.822, kadın 321. Türkiye toplamı 766.039. 4-1/a kapsamında ilde 39.742 zorunlu sigortalı ve 5.687 iş yeri var (Tablo 1.10). Kaba oran ≈ 100 zorunlu sigortalıda 7,9 (hesaplandı; Türkiye için payda bu çalışmada alınmadı).",
    "kaynak": "sgk_2025",
-   "konum": "Bölüm 3-1, Tablo 3.1.4; Bölüm 1, Tablo 1.10"
+   "konum": "Bölüm 3-1, Tablo 3.1.4; Bölüm 1, Tablo 1.10",
+   "seri": [
+    {
+     "yil": 2013,
+     "deger": 1442,
+     "kaynak": "sgk_2013",
+     "konum": "Bölüm 3, Tablo 3.2 (il ve cinsiyete göre)"
+    },
+    {
+     "yil": 2014,
+     "deger": 1532,
+     "kaynak": "sgk_2014",
+     "konum": "Bölüm 3, Tablo 3.2 (il ve cinsiyete göre)"
+    },
+    {
+     "yil": 2015,
+     "deger": 1697,
+     "kaynak": "sgk_2015",
+     "konum": "Bölüm 3, Tablo 3.2 (il ve cinsiyete göre)"
+    },
+    {
+     "yil": 2016,
+     "deger": 1661,
+     "kaynak": "sgk_2016",
+     "konum": "Bölüm 3, Tablo 3.2 (il ve cinsiyete göre)"
+    },
+    {
+     "yil": 2017,
+     "deger": 1895,
+     "kaynak": "sgk_2017",
+     "konum": "Bölüm 3-1 (4a), Tablo 3.1.5 (il ve cinsiyete göre)"
+    },
+    {
+     "yil": 2018,
+     "deger": 1860,
+     "kaynak": "sgk_2018",
+     "konum": "Bölüm 3-1 (4a), Tablo 3.1.4 (il ve cinsiyete göre)"
+    },
+    {
+     "yil": 2019,
+     "deger": 1985,
+     "kaynak": "sgk_2019",
+     "konum": "Bölüm 3-1 (4a), Tablo 3.1.4 (il ve cinsiyete göre)"
+    },
+    {
+     "yil": 2020,
+     "deger": 1710,
+     "kaynak": "sgk_2020",
+     "konum": "Bölüm 3-1 (4a), Tablo 3.1.4 (il ve cinsiyete göre)"
+    },
+    {
+     "yil": 2021,
+     "deger": 2415,
+     "kaynak": "sgk_2021",
+     "konum": "Bölüm 3-1 (4a), Tablo 3.1.4 (il ve cinsiyete göre)"
+    },
+    {
+     "yil": 2022,
+     "deger": 2213,
+     "kaynak": "sgk_2022",
+     "konum": "Bölüm 3-1 (4a), Tablo 3.1.4 (il ve cinsiyete göre)"
+    },
+    {
+     "yil": 2023,
+     "deger": 2361,
+     "kaynak": "sgk_2023",
+     "konum": "Bölüm 3-1 (4a), Tablo 3.1.4 (il ve cinsiyete göre)"
+    },
+    {
+     "yil": 2024,
+     "deger": 2468,
+     "kaynak": "sgk_2024",
+     "konum": "Bölüm 3-1 (4a), Tablo 3.1.4 (il ve cinsiyete göre)"
+    },
+    {
+     "yil": 2025,
+     "deger": 3143,
+     "kaynak": "sgk_2025",
+     "konum": "Bölüm 3-1 (4a), Tablo 3.1.4 (il ve cinsiyete göre)"
+    }
+   ]
   },
   {
    "ad": "Meslek hastalığına tutulan sigortalı sayısı (4-1/a)",
@@ -951,7 +6426,87 @@
    "yil": 2025,
    "aciklama": "Erkek 2, kadın 0. Türkiye: 916. Meslek hastalıklarının Türkiye genelinde düşük bildirildiği bilinmektedir; il düzeyinde tanı dağılımı yayımlanmıyor.",
    "kaynak": "sgk_2025",
-   "konum": "Tablo 3.1.4"
+   "konum": "Tablo 3.1.4",
+   "seri": [
+    {
+     "yil": 2013,
+     "deger": 1,
+     "kaynak": "sgk_2013",
+     "konum": "Bölüm 3, Tablo 3.2"
+    },
+    {
+     "yil": 2014,
+     "deger": 0,
+     "kaynak": "sgk_2014",
+     "konum": "Bölüm 3, Tablo 3.2"
+    },
+    {
+     "yil": 2015,
+     "deger": 1,
+     "kaynak": "sgk_2015",
+     "konum": "Bölüm 3, Tablo 3.2"
+    },
+    {
+     "yil": 2016,
+     "deger": 1,
+     "kaynak": "sgk_2016",
+     "konum": "Bölüm 3, Tablo 3.2"
+    },
+    {
+     "yil": 2017,
+     "deger": 0,
+     "kaynak": "sgk_2017",
+     "konum": "Bölüm 3-1 (4a), Tablo 3.1.5"
+    },
+    {
+     "yil": 2018,
+     "deger": 2,
+     "kaynak": "sgk_2018",
+     "konum": "Bölüm 3-1 (4a), Tablo 3.1.4"
+    },
+    {
+     "yil": 2019,
+     "deger": 1,
+     "kaynak": "sgk_2019",
+     "konum": "Bölüm 3-1 (4a), Tablo 3.1.4"
+    },
+    {
+     "yil": 2020,
+     "deger": 0,
+     "kaynak": "sgk_2020",
+     "konum": "Bölüm 3-1 (4a), Tablo 3.1.4"
+    },
+    {
+     "yil": 2021,
+     "deger": 3,
+     "kaynak": "sgk_2021",
+     "konum": "Bölüm 3-1 (4a), Tablo 3.1.4"
+    },
+    {
+     "yil": 2022,
+     "deger": 1,
+     "kaynak": "sgk_2022",
+     "konum": "Bölüm 3-1 (4a), Tablo 3.1.4"
+    },
+    {
+     "yil": 2023,
+     "deger": 2,
+     "kaynak": "sgk_2023",
+     "konum": "Bölüm 3-1 (4a), Tablo 3.1.4"
+    },
+    {
+     "yil": 2024,
+     "deger": 1,
+     "kaynak": "sgk_2024",
+     "konum": "Bölüm 3-1 (4a), Tablo 3.1.4"
+    },
+    {
+     "yil": 2025,
+     "deger": 2,
+     "kaynak": "sgk_2025",
+     "konum": "Bölüm 3-1 (4a), Tablo 3.1.4"
+    }
+   ]
   },
   {
    "ad": "İş kazası sonucu ölen sigortalı sayısı (4-1/a)",
@@ -959,7 +6514,87 @@
    "yil": 2025,
    "aciklama": "Tamamı erkek. Türkiye: 1.931. Meslek hastalığı sonucu ölüm: 0.",
    "kaynak": "sgk_2025",
-   "konum": "Tablo 3.1.5"
+   "konum": "Tablo 3.1.5",
+   "seri": [
+    {
+     "yil": 2013,
+     "deger": 12,
+     "kaynak": "sgk_2013",
+     "konum": "Bölüm 3, Tablo 3.19 (iş kazası sonucu ölen; meslek hastalığı sonucu ölüm Karabük'te tüm yıllarda 0)"
+    },
+    {
+     "yil": 2014,
+     "deger": 9,
+     "kaynak": "sgk_2014",
+     "konum": "Bölüm 3, Tablo 3.19 (iş kazası sonucu ölen; meslek hastalığı sonucu ölüm Karabük'te tüm yıllarda 0)"
+    },
+    {
+     "yil": 2015,
+     "deger": 3,
+     "kaynak": "sgk_2015",
+     "konum": "Bölüm 3, Tablo 3.19 (iş kazası sonucu ölen; meslek hastalığı sonucu ölüm Karabük'te tüm yıllarda 0)"
+    },
+    {
+     "yil": 2016,
+     "deger": 7,
+     "kaynak": "sgk_2016",
+     "konum": "Bölüm 3, Tablo 3.19 (iş kazası sonucu ölen; meslek hastalığı sonucu ölüm Karabük'te tüm yıllarda 0)"
+    },
+    {
+     "yil": 2017,
+     "deger": 6,
+     "kaynak": "sgk_2017",
+     "konum": "Bölüm 3-1 (4a), Tablo 3.1.6 (iş kazası sonucu ölen; meslek hastalığı sonucu ölüm Karabük'te tüm yıllarda 0)"
+    },
+    {
+     "yil": 2018,
+     "deger": 14,
+     "kaynak": "sgk_2018",
+     "konum": "Bölüm 3-1 (4a), Tablo 3.1.5 (iş kazası sonucu ölen; meslek hastalığı sonucu ölüm Karabük'te tüm yıllarda 0)"
+    },
+    {
+     "yil": 2019,
+     "deger": 2,
+     "kaynak": "sgk_2019",
+     "konum": "Bölüm 3-1 (4a), Tablo 3.1.5 (iş kazası sonucu ölen; meslek hastalığı sonucu ölüm Karabük'te tüm yıllarda 0)"
+    },
+    {
+     "yil": 2020,
+     "deger": 2,
+     "kaynak": "sgk_2020",
+     "konum": "Bölüm 3-1 (4a), Tablo 3.1.5 (iş kazası sonucu ölen; meslek hastalığı sonucu ölüm Karabük'te tüm yıllarda 0)"
+    },
+    {
+     "yil": 2021,
+     "deger": 6,
+     "kaynak": "sgk_2021",
+     "konum": "Bölüm 3-1 (4a), Tablo 3.1.5 (iş kazası sonucu ölen; meslek hastalığı sonucu ölüm Karabük'te tüm yıllarda 0)"
+    },
+    {
+     "yil": 2022,
+     "deger": 7,
+     "kaynak": "sgk_2022",
+     "konum": "Bölüm 3-1 (4a), Tablo 3.1.5 (iş kazası sonucu ölen; meslek hastalığı sonucu ölüm Karabük'te tüm yıllarda 0)"
+    },
+    {
+     "yil": 2023,
+     "deger": 5,
+     "kaynak": "sgk_2023",
+     "konum": "Bölüm 3-1 (4a), Tablo 3.1.5 (iş kazası sonucu ölen; meslek hastalığı sonucu ölüm Karabük'te tüm yıllarda 0)"
+    },
+    {
+     "yil": 2024,
+     "deger": 4,
+     "kaynak": "sgk_2024",
+     "konum": "Bölüm 3-1 (4a), Tablo 3.1.5 (iş kazası sonucu ölen; meslek hastalığı sonucu ölüm Karabük'te tüm yıllarda 0)"
+    },
+    {
+     "yil": 2025,
+     "deger": 7,
+     "kaynak": "sgk_2025",
+     "konum": "Bölüm 3-1 (4a), Tablo 3.1.5 (iş kazası sonucu ölen; meslek hastalığı sonucu ölüm Karabük'te tüm yıllarda 0)"
+    }
+   ]
   },
   {
    "ad": "4-1/a kapsamında zorunlu sigortalı sayısı",
@@ -967,7 +6602,88 @@
    "yil": 2025,
    "aciklama": "İş yeri sayısı 5.687. 2024'te 37.680 sigortalı.",
    "kaynak": "sgk_2025",
-   "konum": "Bölüm 1, Tablo 1.10"
+   "konum": "Bölüm 1, Tablo 1.10",
+   "seri": [
+    {
+     "yil": 2013,
+     "deger": 35294,
+     "kaynak": "sgk_2013",
+     "konum": "Bölüm 1, Tablo 1.8 (4-1/a zorunlu sigortalı, toplam)"
+    },
+    {
+     "yil": 2014,
+     "deger": 36326,
+     "kaynak": "sgk_2014",
+     "konum": "Bölüm 1, Tablo 1.8 (4-1/a zorunlu sigortalı, toplam)"
+    },
+    {
+     "yil": 2015,
+     "deger": 39082,
+     "kaynak": "sgk_2015",
+     "konum": "Bölüm 1, Tablo 1.8 (4-1/a zorunlu sigortalı, toplam)"
+    },
+    {
+     "yil": 2016,
+     "deger": 34810,
+     "kaynak": "sgk_2025",
+     "konum": "Bölüm 1, Tablo 1.10 (4/1-a zorunlu sigortalı ve iş yeri sayıları, 2016-2025)",
+     "not": "SGK 2016 yıllığı Tablo 1.8'de 2016 için 37.029 yazılı; 2025 yıllığındaki seri (34.810) revize/tanım farkı içeriyor olabilir. Seri tutarlılığı için 2016-2025 tek tablodan alındı."
+    },
+    {
+     "yil": 2017,
+     "deger": 38457,
+     "kaynak": "sgk_2025",
+     "konum": "Bölüm 1, Tablo 1.10 (4/1-a zorunlu sigortalı ve iş yeri sayıları, 2016-2025)"
+    },
+    {
+     "yil": 2018,
+     "deger": 37251,
+     "kaynak": "sgk_2025",
+     "konum": "Bölüm 1, Tablo 1.10 (4/1-a zorunlu sigortalı ve iş yeri sayıları, 2016-2025)"
+    },
+    {
+     "yil": 2019,
+     "deger": 36459,
+     "kaynak": "sgk_2025",
+     "konum": "Bölüm 1, Tablo 1.10 (4/1-a zorunlu sigortalı ve iş yeri sayıları, 2016-2025)"
+    },
+    {
+     "yil": 2020,
+     "deger": 36960,
+     "kaynak": "sgk_2025",
+     "konum": "Bölüm 1, Tablo 1.10 (4/1-a zorunlu sigortalı ve iş yeri sayıları, 2016-2025)"
+    },
+    {
+     "yil": 2021,
+     "deger": 37951,
+     "kaynak": "sgk_2025",
+     "konum": "Bölüm 1, Tablo 1.10 (4/1-a zorunlu sigortalı ve iş yeri sayıları, 2016-2025)"
+    },
+    {
+     "yil": 2022,
+     "deger": 41001,
+     "kaynak": "sgk_2025",
+     "konum": "Bölüm 1, Tablo 1.10 (4/1-a zorunlu sigortalı ve iş yeri sayıları, 2016-2025)"
+    },
+    {
+     "yil": 2023,
+     "deger": 38042,
+     "kaynak": "sgk_2025",
+     "konum": "Bölüm 1, Tablo 1.10 (4/1-a zorunlu sigortalı ve iş yeri sayıları, 2016-2025)"
+    },
+    {
+     "yil": 2024,
+     "deger": 37680,
+     "kaynak": "sgk_2025",
+     "konum": "Bölüm 1, Tablo 1.10 (4/1-a zorunlu sigortalı ve iş yeri sayıları, 2016-2025)"
+    },
+    {
+     "yil": 2025,
+     "deger": 39742,
+     "kaynak": "sgk_2025",
+     "konum": "Bölüm 1, Tablo 1.10 (4/1-a zorunlu sigortalı ve iş yeri sayıları, 2016-2025)"
+    }
+   ]
   }
  ],
  "programlar": [
@@ -1113,6 +6829,18 @@
   "İl düzeyinde 2022-2024 ve 2023-2025 doğuşta beklenen yaşam süresi: TÜİK bu dönemlerde il tablosu yayımlamadı; en güncel il verisi 2021-2023.",
   "İl bazında KETEM tarama sayıları, aşılama oranları, KKKA/tularemi vaka sayıları: resmî kaynakta sayısal veri bulunamadı. Kararlar yalnız önlem içeriyor.",
   "KARDEMİR kaynaklı mesleki maruziyet / meslek hastalığı tanı dağılımı il bazında: SGK tanı tablosu (3.1.10) il kırılımı vermiyor.",
-  "Valilik (karabuk.gov.tr) ve Karabük Belediyesi sitelerinde güncel sağlık istatistiği bulunamadı."
+  "Valilik (karabuk.gov.tr) ve Karabük Belediyesi sitelerinde güncel sağlık istatistiği bulunamadı.",
+  "İlçe nüfusları: MEDAS sorgusu tarayıcıda yapıldı; dışa aktarılmış resmî dosya yok (değerler ekrandan alındı, her yıl il toplamıyla doğrulandı).",
+  "Ölüm nedeni payları (dolaşım/neoplazm/solunum): TÜİK il tablosu yalnız 2018-2025; 2009-2017 il bazında indirilebilir resmî tablo bulunamadı (eski bülten bağlantıları güncel 2018-2025 tabloya yönleniyor).",
+  "Doğuşta beklenen yaşam süresi: il düzeyinde yalnız 2013, 2013-2014, 2015-2017, 2018-2020, 2021-2023 dönemleri var; ara dönemler/yıllar yayımlanmamış.",
+  "SİY 2010 ve 2011 il tabloları alınamadı (2010 sayfasında dosya bağlantısı yok; 2011 PDF indirmesi yarım kaldı). Sağlık kurumu/personel serileri bu yüzden 2012'de başlıyor.",
+  "SİY 2025 il tabloları henüz yayımlanmadı; 2025 haber bülteni yalnız Türkiye ve İBBS-1 bölge değerleri veriyor (Karabük için 2025 sağlık hizmeti göstergesi yok).",
+  "Aile sağlığı merkezi (ASM) sayısının eski yıllara ait il değeri SİY il tablolarında ve il sağlık müdürlüğü sitesinde bulunamadı; yalnız Eylül 2026 sayımı (34) var.",
+  "ÇDR 2015 durum-eğilim tablosunda Kardemir-2 için 2012 (PM10 66 / SO2 66) ve 2013 (PM10 74 / SO2 74) değerleri iki parametrede birebir aynı yazılmış; aktarım hatası şüphesiyle seriye alınmadı.",
+  "ÇDR 2019 Çizelge 8'de Kardemir-2 tablosu Kardemir-1 tablosunun birebir kopyası; Kardemir-2 2019 değerleri alınmadı.",
+  "Karabük (eski merkez) istasyonu 2017 verisi yok (istasyon Ocak 2018'de taşındı, ÇDR 2017 Çizelge A.9 boş); Kardemir-1/2 için 2023 ÇDR'de tablo yok; 75. Yıl için 2019-2020 ve 2024 aylık tablo yok; Safranbolu 2020 öncesi tablo yok.",
+  "ÇDR 2013 ve 2014 raporlarındaki aylık tablolar ayrıca işlenmedi; 2006-2015 yıllık değerler ÇDR 2015 göstergeler tablosundan alındı.",
+  "SGK 2016 zorunlu sigortalı sayısında iki resmî değer var (2016 yıllığı 37.029; 2025 yıllığı Tablo 1.10: 34.810); seri 2025 tablosundan.",
+  "SİY 2018 metin katmanında \"Karabük 1.035.252\" gibi farklı bir katman değeri görünüyor; Tablo 8.24 değerleri PDF ham metin modundan (900.648 / 1.727.462) alındı ve kişi başı müracaat (10,6) ile tutarlılığı kontrol edildi."
  ]
 }

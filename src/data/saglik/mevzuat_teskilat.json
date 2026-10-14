@@ -1,0 +1,2153 @@
+{
+ "baslik": "Sağlık Bakanlığı sekmesi – sistem, mevzuat, teşkilat ve denetim (resmî kaynaklı derleme)",
+ "derleme_tarihi": "2026-10-14",
+ "sistem": {
+  "bolumler": [
+   {
+    "id": "basamaklar",
+    "baslik": "Hizmet basamakları",
+    "ozet": "Sağlık hizmeti sunucuları, ödeme ve sevk bakımından Sağlık Bakanlığınca birinci, ikinci ve üçüncü basamak olarak sınıflandırılır. Güncel liste SGK'nın Sağlık Uygulama Tebliği (SUT) 1.4 maddesindedir.",
+    "maddeler": [
+     {
+      "metin": "Basamaklandırma yetkisi Sağlık Bakanlığındadır; aile hekimleri birinci basamak içinde yer alır. Kanun: sağlık hizmeti sunucuları \"birinci, ikinci ve üçüncü basamak olarak Sağlık Bakanlığı tarafından basamaklandırılır.\"",
+      "kaynak": "mevzuat_5510",
+      "konum": "md. 70/1"
+     },
+     {
+      "metin": "Birinci basamak (resmî): birinci basamak sağlık kuruluşu bulunan ilçe sağlık müdürlüğü, toplum sağlığı merkezi (TSM), aile sağlığı merkezi (ASM), halk sağlığı laboratuvarı (L1-L2), kurum tabiplikleri, 112 acil sağlık birimleri, üniversite mediko-sosyal birimleri, belediye poliklinikleri ve E2-E3 rolündeki entegre ilçe devlet hastaneleri.",
+      "kaynak": "sgk_sut",
+      "konum": "SUT 1.4.1.A"
+     },
+     {
+      "metin": "Birinci basamak (özel): evde bakım merkezleri, işyeri sağlık ve güvenlik birimleri, özel poliklinikler, özel ağız-diş sağlığı kuruluşları ve serbest eczaneler.",
+      "kaynak": "sgk_sut",
+      "konum": "SUT 1.4.1.B"
+     },
+     {
+      "metin": "İkinci basamak: eğitim-araştırma hastanesi olmayan devlet ve dal hastaneleri, E1 entegre ilçe hastaneleri, ağız ve diş sağlığı merkezleri/hastaneleri; özel hastaneler, tıp ve dal merkezleri, diyaliz ve üremeye yardımcı tedavi merkezleri gibi ruhsatlı tanı-tedavi merkezleri.",
+      "kaynak": "sgk_sut",
+      "konum": "SUT 1.4.2"
+     },
+     {
+      "metin": "Üçüncü basamak: Sağlık Bakanlığı eğitim ve araştırma hastaneleri, tıp fakültesi olan devlet (U1) ve vakıf (U2) üniversitelerinin sağlık uygulama ve araştırma merkezleri, diş hekimliği fakültesi hastaneleri ve Bakanlıkça üçüncü basamak olarak basamaklandırılan kamu ve özel hastaneler.",
+      "kaynak": "sgk_sut",
+      "konum": "SUT 1.4.3"
+     },
+     {
+      "metin": "Ders notundaki pratik tanım aynı mantıktadır: 2. basamak uzman hekimin çalıştığı kurumlar, 3. basamak asistan yetiştirilen üniversite ya da eğitim hastaneleridir; 2010'dan beri birinci basamağın temel kurumu ASM'dir.",
+      "kaynak": "sgk_sut",
+      "konum": "SUT 1.4 (ders notu 63 ile uyumlu)"
+     }
+    ]
+   },
+   {
+    "id": "sevk",
+    "baslik": "Sevk zinciri – bugünkü durum",
+    "ozet": "Kanunda sevk zinciri öngörülür, ancak güncel SUT genel sağlık sigortalılarının sözleşmeli kurumlara doğrudan da başvurmasına izin verir. Sevk, bugün esas olarak katılım payı farkı üzerinden teşvik edilir; özel sevk kuralı yalnız bazı gruplara uygulanır.",
+    "maddeler": [
+     {
+      "metin": "Kanuni çerçeve: sevk zinciri kurallarını Sağlık Bakanlığının görüşüyle SGK belirler ve sigortalılar bu kurallara uymak zorundadır.",
+      "kaynak": "mevzuat_5510",
+      "konum": "md. 70/1-2"
+     },
+     {
+      "metin": "Güncel uygulama: kişiler, SUT'taki özel hükümler saklı kalmak kaydıyla SGK ile sözleşmeli ayakta ve yatarak tedavi kurumlarına \"doğrudan veya sevk edilmek suretiyle\" başvurabilir. Acil haller dışında sözleşmesiz kurumda alınan hizmetin bedeli ödenmez.",
+      "kaynak": "sgk_sut",
+      "konum": "SUT 1.5.2"
+     },
+     {
+      "metin": "Özel sevk kuralı: gelir testine göre primi devletçe ödenen GSS'liler (5510 md. 60/1-c-1), 2022 sayılı Kanuna göre aylık alanlar (60/1-c-3) ve 60. maddenin 12-14. fıkralarındakiler için başvuru ve sevk, SUT'ta tanımlı kurallara bağlıdır; kurala uymayan başvurunun bedelini SGK karşılamaz.",
+      "kaynak": "sgk_sut",
+      "konum": "SUT 1.5.1"
+     },
+     {
+      "metin": "Sevkin teşviki (1/7/2026'dan itibaren): birinci basamakta hekim ve diş hekimi muayenesinden katılım payı alınmaz; aile hekiminin sevkiyle gidilen kurumda muayene katılım payı %50 azaltılarak alınır.",
+      "kaynak": "rg_sut_2026",
+      "konum": "SUT 1.8.1/1 (değişik)"
+     },
+     {
+      "metin": "Aynı uzmanlık dalında 10 gün içinde farklı kuruma yapılan başvurularda katılım payı 30 TL artırılır; elektronik sevk formu ile sevk edilenler, kronik hastalıklar, birinci basamak ve acil haller bu artıştan muaftır.",
+      "kaynak": "rg_sut_2026",
+      "konum": "SUT 1.8.1/6 (\"5\" ibaresi \"30\" oldu)"
+     },
+     {
+      "metin": "Aile Hekimliği Kanunu: acil haller ve mücbir sebepler dışında, aile hekiminin sevki olmadan sağlık kurum ve kuruluşlarına başvuranlardan, sosyal güvenlik kurumu fark etmeksizin katkı payı alınır.",
+      "kaynak": "mevzuat_5258",
+      "konum": "md. 5/2"
+     },
+     {
+      "metin": "Hasta Hakları Yönetmeliği: acil vakalar dışında sevk zincirine uymayan sigortalılar \"aradaki ücret farkını kendileri karşılar.\"",
+      "kaynak": "mevzuat_hhy",
+      "konum": "md. 8/3"
+     },
+     {
+      "metin": "Aile hekimi sevk gerekçesini, tetkik sonuçlarını ve temel sağlık bilgilerini sevk formuna yazmak zorundadır; üst basamakta verilen hizmet aile hekimine elektronik ortamda geri bildirilir.",
+      "kaynak": "mevzuat_ahuy",
+      "konum": "md. 28/1-2, 6"
+     },
+     {
+      "metin": "Tarihsel karşılaştırma: 224 sayılı Kanunda acil vakalar hariç önce sağlık evine veya sağlık ocağına başvurmak esastı (kademeli hizmet).",
+      "kaynak": "mevzuat_224",
+      "konum": "md. 13"
+     }
+    ]
+   },
+   {
+    "id": "aile_hekimligi",
+    "baslik": "Aile hekimliği",
+    "ozet": "Aile hekimliği, 5258 sayılı Kanun ve Aile Hekimliği Uygulama Yönetmeliğiyle düzenlenen, kayıtlı nüfusa kişiye yönelik koruyucu ve birinci basamak tedavi hizmeti veren modeldir. Kişi aile hekimine kaydolur, hizmet ücretsizdir ve hekim belirli koşullarla değiştirilebilir.",
+    "maddeler": [
+     {
+      "metin": "Tanım: aile hekimi; koruyucu sağlık hizmetleri ile birinci basamak teşhis, tedavi ve rehabilitasyon hizmetlerini \"yaş, cinsiyet ve hastalık ayrımı yapmaksızın\" kapsamlı ve devamlı veren, tam gün çalışan hekimdir. Aile sağlığı çalışanı hemşire, ebe, sağlık memuru gibi elemandır.",
+      "kaynak": "mevzuat_5258",
+      "konum": "md. 2"
+     },
+     {
+      "metin": "Kayıt: ilk kaydı il sağlık müdürlüğü ikamete göre yapar; yenidoğanlar annenin kayıtlı olduğu aile hekimine kaydedilir. Başka bölgeye taşınıp bir ay içinde hekim seçmeyenler adrese yakın bir hekime kaydedilir.",
+      "kaynak": "mevzuat_ahuy",
+      "konum": "md. 8/1, 8/3"
+     },
+     {
+      "metin": "Hekim değiştirme: kişiler hekimini bölge sınırı olmadan serbestçe seçer; zorunlu haller dışında hekim üç aydan önce değiştirilemez. Değişiklik yazılı taleple aile hekiminde, TSM'de veya elektronik ortamda kişinin kendisince yapılır. Bakanlıkça kaydı değiştirilen kişi bir ay sonra yeniden değiştirebilir.",
+      "kaynak": "mevzuat_ahuy",
+      "konum": "md. 8/1, 8/9"
+     },
+     {
+      "metin": "Nüfus ve birim: aile hekimliği birimleri bölgede ortalama 2000 kişiye bir hekim düşecek şekilde planlanır; her hekimin yanında en az bir aile sağlığı çalışanı bulunur. Kayıt üst sınırı esas olarak 3.500 (entegre birimlerde 2.100, cezaevi birimlerinde 2.000) kişidir.",
+      "kaynak": "mevzuat_ahuy",
+      "konum": "md. 20/1, 20/3; md. 8/9"
+     },
+     {
+      "metin": "Ücretsizlik: yabancılara sunulan hizmetler, mesai dışı akupunktur-fitoterapi ve Bakanlıkça belirlenen özel amaçlı raporlar hariç \"aile hekimliği hizmetleri ücretsizdir.\" Aile hekimliği dışındaki birinci basamak hizmetleri toplum sağlığı merkezleri verir.",
+      "kaynak": "mevzuat_5258",
+      "konum": "md. 5/2"
+     },
+     {
+      "metin": "Görevler: kayıtlıların ilk değerlendirmesi için altı ay içinde ev ziyareti ya da iletişim, periyodik muayene, yaş-cinsiyet gruplarına göre izlem ve taramalar (gebe, lohusa, bebek, kanser, kronik hastalık), evde takibi gereken engelli/yaşlılara evde hizmet, kayıtları yılda en az bir kez güncelleme.",
+      "kaynak": "mevzuat_ahuy",
+      "konum": "md. 4/3"
+     },
+     {
+      "metin": "Bağışıklama aile hekimince yürütülür; aşılar TSM tarafından ulaştırılır ve ASM'de soğuk zincir sorumlusu belirlenir.",
+      "kaynak": "mevzuat_ahuy",
+      "konum": "md. 7"
+     },
+     {
+      "metin": "Misafir hasta: ikametinden uzakta olan kişi yakınındaki aile hekiminden misafir olarak hizmet alır; aile hekimi misafirden ücret isteyemez.",
+      "kaynak": "mevzuat_ahuy",
+      "konum": "md. 8/6"
+     },
+     {
+      "metin": "Denetim: aile hekimleri ve aile sağlığı çalışanları Bakanlık, mülki idare ve sağlık idaresinin denetimine tabidir ve görev suçlarında Devlet memuru gibi kabul edilir.",
+      "kaynak": "mevzuat_5258",
+      "konum": "md. 6"
+     }
+    ]
+   },
+   {
+    "id": "gss",
+    "baslik": "Genel Sağlık Sigortası (GSS)",
+    "ozet": "GSS, 5510 sayılı Kanunla kurulan ve Türkiye'de ikamet edenlerin büyük bölümünü kapsayan zorunlu sağlık sigortasıdır. Finansmanı primlerle ve devletin prim ödemeleriyle yapılır; hizmeti SGK satın alır.",
+    "maddeler": [
+     {
+      "metin": "Anayasal dayanak: \"Sağlık hizmetlerinin yaygın bir şekilde yerine getirilmesi için kanunla genel sağlık sigortası kurulabilir.\"",
+      "kaynak": "mevzuat_anayasa",
+      "konum": "md. 56/5"
+     },
+     {
+      "metin": "Kapsam: çalışanlar (4/a, 4/b, 4/c), isteğe bağlı sigortalılar, gelir veya aylık alanlar, işsizlik ödeneği alanlar ve başka bir ülkede sağlık sigortası olmayan vatandaşlar GSS'li sayılır. Aile içi kişi başı geliri asgari ücretin üçte birinden az olanlar ile 18 yaş altı çocuklar da kapsamdadır.",
+      "kaynak": "mevzuat_5510",
+      "konum": "md. 60/1"
+     },
+     {
+      "metin": "Prim oranı: kısa ve uzun vadeli sigortaya tabi olanlarda GSS primi prime esas kazancın %12,5'idir (%5 sigortalı, %7,5 işveren). Yalnız GSS'ye tabi olanlarda %12; 60/1-g kapsamındakilerde %3.",
+      "kaynak": "mevzuat_5510",
+      "konum": "md. 81/1-f"
+     },
+     {
+      "metin": "Devletçe ödenen prim: 60/1-c kapsamındakilerin (gelir testine göre düşük gelirliler, 2022 sayılı Kanun aylığı alanlar vb.) GSS primi merkezî yönetim bütçesinden karşılanmak üzere ilgili kamu idaresince ödenir.",
+      "kaynak": "mevzuat_5510",
+      "konum": "md. 87/1-c"
+     },
+     {
+      "metin": "Kapsanan hizmetler: kişiye yönelik koruyucu hizmetler; hastalıkta ayakta-yatarak muayene, tetkik, tedavi, rehabilitasyon, organ-doku nakli, acil sağlık hizmetleri; analık hizmetleri; ağız-diş tedavileri; koşullu olarak yardımcı üreme yöntemi tedavileri.",
+      "kaynak": "mevzuat_5510",
+      "konum": "md. 63/1"
+     },
+     {
+      "metin": "Hizmetin sağlanma yolu: SGK, yurt içi/dışı sağlık hizmeti sunucularıyla sözleşme yapar; kamu sağlık kurumları otelcilik ve istisnai hizmetler dışında ilave ücret alamaz, özel kurumlar Cumhurbaşkanınca belirlenen tavan içinde ilave ücret alabilir.",
+      "kaynak": "mevzuat_5510",
+      "konum": "md. 73"
+     },
+     {
+      "metin": "Ders bağlantısı: iş kazası tanımı (işyerinde, işveren adına iş yaparken, görevli gönderilmede, süt izninde, işveren servisinde) aynı Kanundadır ve iş kazası/meslek hastalığı hallerinde katılım payı alınmaz.",
+      "kaynak": "mevzuat_5510",
+      "konum": "md. 13; md. 69/1-a"
+     }
+    ]
+   },
+   {
+    "id": "katilim_payi",
+    "baslik": "Katılım payı ve Sağlık Uygulama Tebliği (SUT)",
+    "ozet": "Katılım payı, GSS'linin hizmetten yararlanırken kendisinin ödediği tutardır. Hangi hizmetten ne kadar alınacağını kanunun çizdiği sınırlar içinde SGK, SUT ile belirler.",
+    "maddeler": [
+     {
+      "metin": "Katılım payı alınan hizmetler: ayakta hekim ve diş hekimi muayenesi, vücut dışı protez-ortez, ayakta tedavide ilaç ve belirlenen yatarak tedaviler.",
+      "kaynak": "mevzuat_5510",
+      "konum": "md. 68/1"
+     },
+     {
+      "metin": "İlaç: SGK'nın ödediği ilaçlarda gelir/aylık alanlardan %10, diğerlerinden %20 katılım payı; ayrıca reçete başına kutu sayısına göre sabit tutar alınır.",
+      "kaynak": "sgk_sut",
+      "konum": "SUT 1.8.2"
+     },
+     {
+      "metin": "Muayene tutarları (1/7/2026 sonrası): birinci basamak 0 TL; ikinci basamak resmî 50 TL; Bakanlık eğitim-araştırma ve devlet üniversitesi hastaneleri 90 TL; vakıf üniversiteleri ile özel hastaneler 100 TL. Aile hekimi sevkiyle %50 indirim uygulanır.",
+      "kaynak": "rg_sut_2026",
+      "konum": "SUT 1.8.1/1"
+     },
+     {
+      "metin": "Katılım payı alınmayan haller: iş kazası ve meslek hastalığı, afet ve savaş, aile hekimi muayenesi ve kişiye yönelik koruyucu hizmetler, raporla belgelenen kronik hastalıklar, kontrol muayeneleri, harp-vazife malulleri ve benzeri gruplar.",
+      "kaynak": "mevzuat_5510",
+      "konum": "md. 69"
+     },
+     {
+      "metin": "Acil servislerde verilen hizmetlerde (\"yeşil alan muayenesi\" hariç) muayene katılım payı alınmaz.",
+      "kaynak": "sgk_sut",
+      "konum": "SUT 1.8.5/5"
+     },
+     {
+      "metin": "Düşük gelirli GSS'liler (60/1-c-1, 2, 3) ödedikleri katılım paylarını sosyal yardımlaşma ve dayanışma vakıflarından geri alabilir.",
+      "kaynak": "mevzuat_5510",
+      "konum": "md. 68"
+     }
+    ]
+   },
+   {
+    "id": "mhrs",
+    "baslik": "Randevu: Merkezi Hekim Randevu Sistemi (MHRS)",
+    "ozet": "MHRS, Sağlık Bakanlığına bağlı sağlık kurumlarında muayene randevusu veren ulusal sistemdir; web, mobil uygulama ve ALO 182 çağrı merkezi üzerinden çalışır.",
+    "maddeler": [
+     {
+      "metin": "MHRS 2010'dan beri tüm Türkiye'ye hizmet verir ve Bakanlığa bağlı sağlık kurumlarına muayene randevusu sağlar.",
+      "kaynak": "mhrs_site",
+      "konum": "Duyurular: 'MHRS'de cepten randevu hatırlatma dönemi'"
+     },
+     {
+      "metin": "Randevu üç kanaldan alınır (web, mobil, telefon); telefon kanalı 7/24 hizmet veren ALO 182 çağrı merkezidir.",
+      "kaynak": "mhrs_site",
+      "konum": "Duyuru: 'Erzincan lokasyonu açıldı'"
+     },
+     {
+      "metin": "Randevudan bir gün önce SMS veya sesli aramayla hatırlatma ve iptal imkânı sunulur; gidilmeyecek randevunun iptali başka hastaya yer açar.",
+      "kaynak": "mhrs_site",
+      "konum": "Duyuru: randevu hatırlatma"
+     },
+     {
+      "metin": "Hasta haklarıyla bağlantı: randevu tarih ve saatine uymak, değişikliği ilgili yere bildirmek hastanın uyması gereken kurallardandır.",
+      "kaynak": "mevzuat_hhy",
+      "konum": "md. 42/A-ç"
+     }
+    ]
+   },
+   {
+    "id": "enabiz",
+    "baslik": "e-Nabız ve sağlık kayıt sistemi",
+    "ozet": "e-Nabız, kişinin sağlık kayıtlarını görebildiği Sağlık Bakanlığı kişisel sağlık kaydı uygulamasıdır. Yasal dayanağı Bakanlığın ülke çapında kayıt ve bildirim sistemi kurma yetkisidir.",
+    "maddeler": [
+     {
+      "metin": "Kanun: herkesin sağlık durumunun takip edilebilmesi için Bakanlık kayıt ve bildirim sistemi kurar; sistem e-Devlet'e uygun elektronik ortamda oluşturulabilir.",
+      "kaynak": "mevzuat_3359",
+      "konum": "md. 3/1-f"
+     },
+     {
+      "metin": "e-Nabız kendini \"Türkiye'nin güvenilir kişisel sağlık kaydı sistemi\" olarak tanımlar; ücretsizdir ve iOS/Android uygulaması vardır.",
+      "kaynak": "enabiz_site",
+      "konum": "ana sayfa"
+     },
+     {
+      "metin": "Giriş e-Devlet, e-imza veya e-Nabız şifresiyle yapılır; ilk kez kullanacak kişi şifresini e-Devlet'ten oluşturabilir ya da aile hekiminden geçici şifre alabilir.",
+      "kaynak": "enabiz_site",
+      "konum": "giriş sayfası"
+     },
+     {
+      "metin": "Evde sağlık başvurusu da e-Nabız üzerinden elektronik olarak yapılabilir.",
+      "kaynak": "mevzuat_evde2026",
+      "konum": "md. 15/1"
+     },
+     {
+      "metin": "Kişisel sağlık verisi Anayasa ile korunur; veriler kanunda öngörülen hallerde veya kişinin açık rızasıyla işlenebilir.",
+      "kaynak": "mevzuat_anayasa",
+      "konum": "md. 20/3"
+     }
+    ]
+   },
+   {
+    "id": "acil_112",
+    "baslik": "112 Acil sağlık hizmetleri",
+    "ozet": "Hastane öncesi acil sağlık hizmeti 112 üzerinden ücretsiz çağrıyla başlar ve il ambulans servisi başhekimliğine bağlı komuta kontrol merkezi tarafından yönetilir.",
+    "maddeler": [
+     {
+      "metin": "Çağrı: acil sağlık yardımı çağrısı \"ücretsiz aranabilen 112 numaralı telefon\" veya diğer iletişim araçlarıyla merkeze yapılır; talebin acil olup olmadığını çağrıyı alan tabip değerlendirir.",
+      "kaynak": "mevzuat_acil",
+      "konum": "md. 18-19"
+     },
+     {
+      "metin": "Ücret: hastane öncesi ve hastaneler arası nakil bedeli hastanın sosyal güvenlik kurumuna fatura edilir; sosyal güvencesi ve ödeme gücü olmayandan ücret istenmez.",
+      "kaynak": "mevzuat_acil",
+      "konum": "md. 37/2"
+     },
+     {
+      "metin": "Merkezî düzeyde hastane öncesi acil birimlerini Acil Sağlık Hizmetleri Genel Müdürlüğü kurar ve işletir; kara, hava ve deniz ambulanslarının sevk ve idaresini sağlar.",
+      "kaynak": "mevzuat_cbk1",
+      "konum": "md. 356/1-b, c"
+     },
+     {
+      "metin": "İl düzeyinde il ambulans servisi başhekimliği temel hizmet birimidir; komuta kontrol merkezi başhekimliğe bağlı çalışır, istasyonlar destek birimidir.",
+      "kaynak": "sb_kadro_yonerge",
+      "konum": "md. 22-23"
+     },
+     {
+      "metin": "İl sağlık müdürü acil sağlık hizmetleri için kamu ve özel tüm sağlık kurumlarının sevk ve idaresinden sorumludur.",
+      "kaynak": "mevzuat_cbk1",
+      "konum": "md. 371/4"
+     }
+    ]
+   },
+   {
+    "id": "evde_saglik",
+    "baslik": "Evde sağlık ve palyatif bakım",
+    "ozet": "Evde sağlık hizmetleri 23/6/2026'dan beri yeni 'Evde Sağlık ve Palyatif Bakım Hizmetlerinin Sunumu ve Koordinasyonuna İlişkin Yönetmelik' ile yürütülür; 2023 tarihli eski yönetmelik kaldırılmıştır.",
+    "maddeler": [
+     {
+      "metin": "Kapsam: Bakanlık, üniversite, belediye ve özel tesislerdeki palyatif bakım ile kamu kurumlarınca sunulan evde sağlık hizmetleri.",
+      "kaynak": "mevzuat_evde2026",
+      "konum": "md. 2"
+     },
+     {
+      "metin": "Başvuru: hasta veya kanuni temsilcisi e-Nabız üzerinden, Evde Sağlık İletişim Merkezini (ESHİM) arayarak ya da doğrudan başvurabilir; ESHİM'e 08.00-22.00 arasında başvurulur.",
+      "kaynak": "mevzuat_evde2026",
+      "konum": "md. 15/1; md. 14/4"
+     },
+     {
+      "metin": "Değerlendirme: başvurular ESH Koordinasyon Merkezine (ESKOM) ve eş zamanlı olarak hastanın aile hekimine iletilir; ESKOM başvuruları en geç üç gün içinde sonuçlandırır ve hastayı evde sağlık, aile hekimliği, uzaktan sağlık, hastane veya palyatif bakımdan uygun olana yönlendirir.",
+      "kaynak": "mevzuat_evde2026",
+      "konum": "md. 14/9; md. 15/2-3"
+     },
+     {
+      "metin": "Yürürlükten kaldırılan düzenleme: 2/6/2023 tarihli Evde Sağlık Hizmeti Sunumu Hakkında Yönetmelik.",
+      "kaynak": "mevzuat_evde2026",
+      "konum": "md. 31"
+     },
+     {
+      "metin": "Evde takibi zorunlu engelli, yaşlı ve yatalak kayıtlılara evde veya uzaktan birinci basamak hizmet vermek aile hekiminin de görevidir.",
+      "kaynak": "mevzuat_ahuy",
+      "konum": "md. 4/3-g"
+     }
+    ]
+   },
+   {
+    "id": "saglik_turizmi",
+    "baslik": "Sağlık turizmi (kısa)",
+    "ozet": "Yurt dışından tedavi için gelenler ile Türkiye'de turistken hastalananlara verilen hizmetler 2025 tarihli yönetmelikle düzenlenir ve Sağlık Bakanlığınca denetlenir.",
+    "maddeler": [
+     {
+      "metin": "Yönetmelik; uluslararası sağlık turizmi hizmeti veren sağlık kuruluşları ile aracı kuruluşların yetkilendirilmesini, asgari standartları ve denetimi düzenler; 5510 ve ikili sosyal güvenlik anlaşmaları kapsamındakiler dışarıdadır.",
+      "kaynak": "mevzuat_turizm2025",
+      "konum": "md. 1-2"
+     },
+     {
+      "metin": "Sağlık turizmi uygulamalarının geliştirilmesi Sağlık Hizmetleri Genel Müdürlüğünün görevidir; genel müdürlükte Sağlık Turizmi Daire Başkanlığı bulunur.",
+      "kaynak": "mevzuat_cbk1",
+      "konum": "md. 355/1-ı"
+     },
+     {
+      "metin": "Sağlık hizmetine ilişkin tüm işlemler Bakanlıkça denetlenir; bu hüküm \"uluslararası sağlık turizmi kapsamındaki her türlü kuruluşun\" faaliyetlerini de kapsar.",
+      "kaynak": "mevzuat_3359",
+      "konum": "ek md. 11/1"
+     },
+     {
+      "metin": "Tanıtım ve koordinasyon için Sağlık Bakanlığıyla ilgili Uluslararası Sağlık Hizmetleri A.Ş. (USHAŞ) kurulmuştur; aracı kurumlara yetki belgesi verir.",
+      "kaynak": "mevzuat_khk663",
+      "konum": "ek md. 2"
+     }
+    ]
+   },
+   {
+    "id": "finansman",
+    "baslik": "Finansman kaynakları",
+    "ozet": "Türkiye'de sağlık harcamasının yaklaşık dörtte üçü kamu kaynaklıdır (genel bütçe ve SGK); kalanını cepten ödemeler ve özel sigortalar oluşturur.",
+    "maddeler": [
+     {
+      "metin": "2024'te toplam sağlık harcaması 2,36 trilyon TL ve GSYİH'nin %5,3'üdür (cari %4,9 + yatırım %0,4).",
+      "kaynak": "sb-siy-2024",
+      "konum": "Tablo 11.1, s. 266"
+     },
+     {
+      "metin": "Aynı yıl toplam kamu sağlık harcaması 1,79 trilyon TL'dir (GSYİH'nin %4,0'ı); bu, toplam sağlık harcamasının yaklaşık %76'sı demektir (1.794.227 / 2.359.151 milyon TL, hesaplanmış oran).",
+      "kaynak": "sb-siy-2024",
+      "konum": "Tablo 11.2, s. 267"
+     },
+     {
+      "metin": "Cepten yapılan sağlık harcamasının toplam sağlık harcaması içindeki payı 2024'te %18,8'dir (2002: %19,8).",
+      "kaynak": "sb-siy-2024",
+      "konum": "Şekil 11.17"
+     },
+     {
+      "metin": "Kamu kaynağının iki ana yolu: çalışan ve işverenlerin GSS primleri (md. 81) ile primi devletçe ödenen gruplar için merkezî bütçeden aktarılan primler (md. 87/1-c).",
+      "kaynak": "mevzuat_5510",
+      "konum": "md. 81, 87"
+     },
+     {
+      "metin": "Kişisel katkı araçları: katılım payları (md. 68) ve özel kurumların alabildiği ilave ücretler (md. 73).",
+      "kaynak": "mevzuat_5510",
+      "konum": "md. 68, 73"
+     },
+     {
+      "metin": "Bakanlık hastaneleri ayrıca döner sermaye gelirleriyle işler; bina ve tesisler bütçe ödeneği, döner sermaye veya kamu-özel ortaklığıyla yaptırılabilir.",
+      "kaynak": "mevzuat_cbk1",
+      "konum": "md. 379; md. 359/1-e"
+     }
+    ]
+   },
+   {
+    "id": "roller",
+    "baslik": "Sağlık Bakanlığı – SGK – üniversite – özel sektör rolleri",
+    "ozet": "Türkiye'de düzenleyici ve büyük ölçüde hizmet sunucusu olan Sağlık Bakanlığı, hizmet satın alan SGK, eğitim ve üçüncü basamak hizmet veren üniversiteler ile denetim altındaki özel sektörden oluşan karma bir yapı vardır.",
+    "maddeler": [
+     {
+      "metin": "Sağlık Bakanlığı: halk sağlığını korumak, teşhis-tedavi-rehabilitasyon hizmetlerini yürütmek, ilaç ve tıbbi cihaz piyasasını düzenlemek ve kamu-özel tüm sağlık kuruluşlarını planlamakla görevlidir.",
+      "kaynak": "mevzuat_cbk1",
+      "konum": "md. 352"
+     },
+     {
+      "metin": "Anayasa: Devlet sağlık kuruluşlarını \"tek elden planlayıp hizmet vermesini düzenler\" ve bu görevi kamu ve özel kesimdeki kurumları denetleyerek yerine getirir.",
+      "kaynak": "mevzuat_anayasa",
+      "konum": "md. 56/3-4"
+     },
+     {
+      "metin": "SGK: Çalışma ve Sosyal Güvenlik Bakanlığının ilgili kuruluşudur; GSS'yi yönetir, sağlık hizmetlerini sözleşmeyle satın alır, fatura ve hizmetleri denetler.",
+      "kaynak": "mevzuat_cbk4",
+      "konum": "md. 403/2; md. 416"
+     },
+     {
+      "metin": "Üniversiteler: tıp fakültesi hastaneleri üçüncü basamaktır; Bakanlık hastaneleri ile üniversiteler eğitim, araştırma ve hizmet için kaynakları ortak kullanabilir (büyükşehir dışı illerde tek eğitim kurumu ilkesi).",
+      "kaynak": "mevzuat_3359",
+      "konum": "ek md. 9; SUT 1.4.3"
+     },
+     {
+      "metin": "Özel sektör: özel hastaneler, tıp/dal merkezleri ve poliklinikler ruhsatlarını Bakanlıktan alır; SGK ile sözleşmeli olanlar ilave ücret alabilir.",
+      "kaynak": "mevzuat_cbk1",
+      "konum": "md. 355/1-c; 5510 md. 73"
+     },
+     {
+      "metin": "Belediyeler (ders notu): çöp toplama, mezarlık, içme suyu, kanalizasyon, yapı ruhsatı ve sahipsiz hayvanlar gibi çevre sağlığı görevleri; içme suyu analiz bedellerini de mahallî idare karşılar.",
+      "kaynak": "mevzuat_su",
+      "konum": "md. 10 (son fıkra)"
+     }
+    ]
+   },
+   {
+    "id": "hasta_haklari",
+    "baslik": "Hasta hakları",
+    "ozet": "Hasta Hakları Yönetmeliği (1998) kamu ve özel tüm sağlık kuruluşlarında geçerlidir. Temel hakları sayar, hasta hakları birimlerini ve il düzeyinde Hasta Hakları Kurulunu kurar.",
+    "maddeler": [
+     {
+      "metin": "Temel ilkeler: sağlık en temel insan hakkıdır; ırk, dil, din, cinsiyet, siyasi düşünce ve ekonomik durum gözetilmeden hizmet verilir; rızasız vücut bütünlüğüne dokunulamaz ve özel hayatın gizliliği korunur.",
+      "kaynak": "mevzuat_hhy",
+      "konum": "md. 5"
+     },
+     {
+      "metin": "Sayılan haklar: bilgi isteme, kuruluş ve personel seçme-değiştirme, öncelik sırasının tıbbi ölçütlerle belirlenmesi, tıbbi gereklere uygun tedavi, kayıtları inceleme ve düzeltme, mahremiyet, gizlilik, rıza, tedaviyi reddetme, güvenlik, dini vecibe, ziyaret ve refakatçi.",
+      "kaynak": "mevzuat_hhy",
+      "konum": "md. 6-41"
+     },
+     {
+      "metin": "Bilgilendirme kapsamı: hastalığın olası nedenleri ve seyri, müdahaleyi kimin nasıl yapacağı, diğer seçenekler, komplikasyonlar, reddin fayda-riskleri, ilaçlar ve yaşam tarzı önerileri.",
+      "kaynak": "mevzuat_hhy",
+      "konum": "md. 15"
+     },
+     {
+      "metin": "Tedaviyi reddetme: kanunen zorunlu haller dışında hasta tedaviyi reddedebilir; sonuçları anlatılır ve yazılı belge alınır. Bu hak tekrar başvuruda hasta aleyhine kullanılamaz. Ötenazi yasaktır.",
+      "kaynak": "mevzuat_hhy",
+      "konum": "md. 25; md. 13"
+     },
+     {
+      "metin": "Hasta hakları birimleri: kamu ve özel tüm sağlık kuruluşlarında hasta hakları birimi oluşturulur; eski 'hasta iletişim birimleri' bu birimlere dönüştürülmüştür.",
+      "kaynak": "mevzuat_hhy",
+      "konum": "md. 42/B-1; geçici md. 1"
+     },
+     {
+      "metin": "Hasta Hakları Kurulu: il sağlık müdürlüğünde kurulur, başkanı il sağlık müdürü veya temsilcisidir; meslek kuruluşu, sendika, kurum, hasta hakları/tüketici derneği, il insan hakları kurulu temsilcileri ve valilikçe belirlenen bir vatandaştan oluşur. Yerinde çözülemeyen başvurulara 30 gün içinde karar verir; tıbbi hata iddialarını değerlendirmez.",
+      "kaynak": "mevzuat_hhy",
+      "konum": "md. 42/B-C"
+     },
+     {
+      "metin": "Hastanın yükümlülükleri: sağlık bilgilerini doğru vermek, kontrollere ve randevulara uymak, personele sözlü ve fiziki saldırıda bulunmamak, sorun yaşarsa hasta hakları birimine başvurmak.",
+      "kaynak": "mevzuat_hhy",
+      "konum": "md. 42/A"
+     }
+    ]
+   },
+   {
+    "id": "basvuru_kanallari",
+    "baslik": "Şikâyet ve başvuru kanalları (SABİM, CİMER, hasta hakları)",
+    "ozet": "Hasta önce kurumdaki hasta hakları birimine, sonra il Hasta Hakları Kuruluna başvurabilir. Bakanlık düzeyinde SABİM (Alo 184) ve Cumhurbaşkanlığı düzeyinde CİMER kanalları vardır; idarenin işleyişine ilişkin şikâyetler için Kamu Denetçiliği Kurumu ve yargı yolu açıktır.",
+    "maddeler": [
+     {
+      "metin": "SABİM: Sağlık Bakanlığı İletişim Merkezi 01.01.2004'te çalışmaya başlamıştır; Bakanlık ve SHGM sitelerinde 'SABİM' ve 'Alo 184' bağlantıları güncel olarak yer alır.",
+      "kaynak": "sabim_site",
+      "konum": "tanıtım metni"
+     },
+     {
+      "metin": "SHGM ana sayfasında 'SABİM 184' ve 'CİMER' bağlantıları ile Hasta Hakları ve Tıbbi Sosyal Hizmetler Daire Başkanlığı bulunur.",
+      "kaynak": "shgm_site",
+      "konum": "ana sayfa menüsü"
+     },
+     {
+      "metin": "Anayasa: vatandaşlar dilek ve şikâyetleri için yetkili makamlara ve TBMM'ye yazıyla başvurabilir; \"Herkes, bilgi edinme ve kamu denetçisine başvurma hakkına sahiptir.\"",
+      "kaynak": "mevzuat_anayasa",
+      "konum": "md. 74"
+     },
+     {
+      "metin": "Hasta ve yakınlarının hak ihlalinde her türlü müracaat, şikâyet ve dava hakkı vardır.",
+      "kaynak": "mevzuat_hhy",
+      "konum": "md. 42"
+     },
+     {
+      "metin": "Hasta Hakları Kurulu kararlarının özeti, şikâyet edilen kişinin adı yazılmadan il sağlık müdürlüğü sitesinde duyurulur.",
+      "kaynak": "mevzuat_hhy",
+      "konum": "md. 42/C (son fıkra)"
+     }
+    ]
+   }
+  ]
+ },
+ "mevzuat": {
+  "hiyerarsi": [
+   {
+    "duzey": "Anayasa",
+    "aciklama": "En üst normdur; yasama, yürütme, yargı ve idareyi bağlar. Kanunlar Anayasaya aykırı olamaz.",
+    "kaynak": "mevzuat_anayasa",
+    "konum": "md. 11"
+   },
+   {
+    "duzey": "Kanun (ve kanun hükmünde kararname)",
+    "aciklama": "TBMM çıkarır. 2018 öncesi KHK'lar kanun gücündedir; 663 sayılı KHK gibi bazıları kısmen yürürlüktedir. Sağlıkta temel kanunlar 1593, 1219, 224, 3359, 5258, 5510'dur.",
+    "kaynak": "mevzuat_anayasa",
+    "konum": "md. 7, 11"
+   },
+   {
+    "duzey": "Cumhurbaşkanlığı Kararnamesi (CBK)",
+    "aciklama": "Yürütme yetkisine ilişkin konularda çıkarılır; bakanlıkların kuruluşu ve teşkilatı CBK ile düzenlenir. Temel haklar ve münhasıran kanunla düzenlenecek konular CBK ile düzenlenemez; CBK ile kanun çelişirse kanun uygulanır, aynı konuda kanun çıkarsa CBK hükümsüz kalır.",
+    "kaynak": "mevzuat_anayasa",
+    "konum": "md. 104 (CBK ile ilgili fıkralar); md. 106 (son fıkra)"
+   },
+   {
+    "duzey": "Yönetmelik",
+    "aciklama": "Cumhurbaşkanı, bakanlıklar ve kamu tüzel kişileri, kanunların ve CBK'ların uygulanmasını sağlamak için ve onlara aykırı olmamak şartıyla yönetmelik çıkarabilir (ör. Hasta Hakları Yönetmeliği, Aile Hekimliği Uygulama Yönetmeliği).",
+    "kaynak": "mevzuat_anayasa",
+    "konum": "md. 124; md. 104"
+   },
+   {
+    "duzey": "Tebliğ, genelge, yönerge",
+    "aciklama": "Resmî Gazete'de yayımlanacak yönetmelik dışındaki düzenleyici işlemler \"karar, tebliğ ve genelge\" olarak adlandırılır (ör. SGK Sağlık Uygulama Tebliği). Yönerge ve genelgeler idarenin iç işleyişine dair alt düzey düzenlemelerdir (ör. Taşra Teşkilatı Kadro Standartları Yönergesi, 2017/17 Genelgesi); üst normlara aykırı olamaz.",
+    "kaynak": "mevzuat_mhy",
+    "konum": "md. 11/4; md. 3/1-ç"
+   }
+  ],
+  "anayasa": [
+   {
+    "madde": "2",
+    "baslik": "Cumhuriyetin nitelikleri",
+    "ozet": "Türkiye'nin 'sosyal hukuk devleti' olması, sağlık ve sosyal güvenlik görevlerinin anayasal temelidir.",
+    "alinti": "…demokratik, laik ve sosyal bir hukuk Devletidir.",
+    "kaynak": "mevzuat_anayasa"
+   },
+   {
+    "madde": "5",
+    "baslik": "Devletin temel amaç ve görevleri",
+    "ozet": "Devlet, kişilerin ve toplumun refahını sağlamak ve insanın maddi-manevi varlığının gelişmesi için gerekli şartları hazırlamakla görevlidir.",
+    "alinti": "…insanın maddi ve manevi varlığının gelişmesi için gerekli şartları hazırlamaya çalışmaktır.",
+    "kaynak": "mevzuat_anayasa"
+   },
+   {
+    "madde": "17",
+    "baslik": "Kişinin dokunulmazlığı, maddi ve manevi varlığı",
+    "ozet": "Yaşam hakkı ve vücut bütünlüğü korunur. Tıbbi müdahale ve bilimsel deneyler için rıza esastır; aydınlatılmış onamın anayasal dayanağıdır.",
+    "alinti": "Tıbbi zorunluluklar ve kanunda yazılı haller dışında, kişinin vücut bütünlüğüne dokunulamaz; rızası olmadan bilimsel ve tıbbi deneylere tabi tutulamaz.",
+    "kaynak": "mevzuat_anayasa"
+   },
+   {
+    "madde": "20",
+    "baslik": "Özel hayatın gizliliği ve kişisel veriler",
+    "ozet": "Özel hayat gizlidir; herkes kişisel verilerinin korunmasını isteyebilir. Sağlık verisi ancak kanunda öngörülen hallerde veya açık rızayla işlenebilir.",
+    "alinti": "Kişisel veriler, ancak kanunda öngörülen hallerde veya kişinin açık rızasıyla işlenebilir.",
+    "kaynak": "mevzuat_anayasa"
+   },
+   {
+    "madde": "41",
+    "baslik": "Ailenin korunması ve çocuk hakları",
+    "ozet": "Devlet ananın ve çocukların korunması, aile planlamasının öğretimi ve uygulanması için tedbir alır ve teşkilat kurar; ana-çocuk sağlığı ve 2827 sayılı Kanunun dayanağıdır.",
+    "alinti": "…özellikle ananın ve çocukların korunması ve aile planlamasının öğretimi ile uygulanmasını sağlamak için gerekli tedbirleri alır, teşkilatı kurar.",
+    "kaynak": "mevzuat_anayasa"
+   },
+   {
+    "madde": "50",
+    "baslik": "Çalışma şartları ve dinlenme hakkı",
+    "ozet": "Kimse yaşına, cinsiyetine ve gücüne uymayan işte çalıştırılamaz; çocuklar, kadınlar ve engelliler çalışma şartları bakımından özel olarak korunur (iş sağlığı ile bağlantılı).",
+    "alinti": "Küçükler ve kadınlar ile bedeni ve ruhi yetersizliği olanlar çalışma şartları bakımından özel olarak korunurlar.",
+    "kaynak": "mevzuat_anayasa"
+   },
+   {
+    "madde": "56",
+    "baslik": "Sağlık hizmetleri ve çevrenin korunması",
+    "ozet": "Sağlıklı çevrede yaşama hakkı; Devletin sağlık kuruluşlarını tek elden planlaması, kamu ve özel kurumları denetlemesi ve genel sağlık sigortası kurulabilmesi bu maddededir. Sağlık mevzuatının ana maddesidir.",
+    "alinti": "Devlet, herkesin hayatını, beden ve ruh sağlığı içinde sürdürmesini sağlamak; … amacıyla sağlık kuruluşlarını tek elden planlayıp hizmet vermesini düzenler.",
+    "kaynak": "mevzuat_anayasa"
+   },
+   {
+    "madde": "58",
+    "baslik": "Gençliğin korunması",
+    "ozet": "Devlet gençleri alkol düşkünlüğü, uyuşturucu ve benzeri kötü alışkanlıklardan korumak için tedbir alır (bağımlılıkla mücadele, 4207 sayılı Kanunla bağlantılı).",
+    "alinti": "Devlet, gençleri alkol düşkünlüğünden, uyuşturucu maddelerden, … korumak için gerekli tedbirleri alır.",
+    "kaynak": "mevzuat_anayasa"
+   },
+   {
+    "madde": "59",
+    "baslik": "Sporun geliştirilmesi",
+    "ozet": "Devlet her yaştaki vatandaşın beden ve ruh sağlığını geliştirecek tedbirleri alır.",
+    "alinti": "Devlet, her yaştaki Türk vatandaşlarının beden ve ruh sağlığını geliştirecek tedbirleri alır…",
+    "kaynak": "mevzuat_anayasa"
+   },
+   {
+    "madde": "60",
+    "baslik": "Sosyal güvenlik hakkı",
+    "ozet": "Herkes sosyal güvenlik hakkına sahiptir; SGK ve 5510 sayılı Kanunun anayasal temelidir.",
+    "alinti": "Herkes, sosyal güvenlik hakkına sahiptir. Devlet, bu güvenliği sağlayacak gerekli tedbirleri alır ve teşkilatı kurar.",
+    "kaynak": "mevzuat_anayasa"
+   },
+   {
+    "madde": "61",
+    "baslik": "Sosyal güvenlik bakımından özel olarak korunması gerekenler",
+    "ozet": "Şehit yakınları, malul ve gaziler, engelliler, yaşlılar ve korunmaya muhtaç çocuklar Devletçe özel olarak korunur.",
+    "alinti": "Yaşlılar, Devletçe korunur…",
+    "kaynak": "mevzuat_anayasa"
+   },
+   {
+    "madde": "65",
+    "baslik": "Devletin iktisadi ve sosyal ödevlerinin sınırları",
+    "ozet": "Sağlık dahil sosyal ve ekonomik görevler, malî kaynakların yeterliliği ölçüsünde ve önceliklere göre yerine getirilir (2001 değişikliği).",
+    "alinti": "Devlet, sosyal ve ekonomik alanlarda Anayasa ile belirlenen görevlerini, bu görevlerin amaçlarına uygun öncelikleri gözeterek malî kaynaklarının yeterliliği ölçüsünde yerine getirir.",
+    "kaynak": "mevzuat_anayasa"
+   },
+   {
+    "madde": "74",
+    "baslik": "Dilekçe, bilgi edinme ve kamu denetçisine başvurma hakkı",
+    "ozet": "Vatandaş yetkili makamlara ve TBMM'ye yazılı başvurabilir; TBMM Başkanlığına bağlı Kamu Denetçiliği Kurumu idarenin işleyişine ilişkin şikâyetleri inceler.",
+    "alinti": "Herkes, bilgi edinme ve kamu denetçisine başvurma hakkına sahiptir.",
+    "kaynak": "mevzuat_anayasa"
+   },
+   {
+    "madde": "98",
+    "baslik": "TBMM'nin bilgi edinme ve denetim yolları",
+    "ozet": "TBMM; Meclis araştırması, genel görüşme, Meclis soruşturması ve yazılı soru yollarıyla bilgi edinir ve denetler. Yazılı soru en geç 15 gün içinde cevaplanır (2017 değişikliği).",
+    "alinti": "Yazılı soru, yazılı olarak en geç onbeş gün içinde cevaplanmak üzere milletvekillerinin, Cumhurbaşkanı yardımcıları ve bakanlara yazılı olarak soru sormalarından ibarettir.",
+    "kaynak": "mevzuat_anayasa"
+   },
+   {
+    "madde": "104",
+    "baslik": "Cumhurbaşkanı – kararname yetkisi",
+    "ozet": "Cumhurbaşkanı yürütme yetkisine ilişkin konularda CBK çıkarabilir; temel haklar CBK ile düzenlenemez ve kanunla çatışmada kanun uygulanır.",
+    "alinti": "Cumhurbaşkanlığı kararnamesi ile kanunlarda farklı hükümler bulunması halinde, kanun hükümleri uygulanır.",
+    "kaynak": "mevzuat_anayasa"
+   },
+   {
+    "madde": "106",
+    "baslik": "Bakanlıkların kuruluşu",
+    "ozet": "Bakanlıkların kurulması, görevleri ve merkez-taşra teşkilatı CBK ile düzenlenir; Sağlık Bakanlığının teşkilatı bu nedenle 1 sayılı CBK'dadır.",
+    "alinti": "Bakanlıkların kurulması, kaldırılması, görevleri ve yetkileri, teşkilat yapısı ile merkez ve taşra teşkilatlarının kurulması Cumhurbaşkanlığı kararnamesiyle düzenlenir.",
+    "kaynak": "mevzuat_anayasa"
+   },
+   {
+    "madde": "108",
+    "baslik": "Devlet Denetleme Kurulu",
+    "ozet": "Cumhurbaşkanlığına bağlı DDK, Cumhurbaşkanının isteğiyle tüm kamu kurumlarında ve kamu kurumu niteliğindeki meslek kuruluşlarında idari soruşturma, inceleme ve denetleme yapar; yargı organları kapsam dışıdır.",
+    "alinti": "…Cumhurbaşkanlığına bağlı olarak kurulan Devlet Denetleme Kurulu, Cumhurbaşkanının isteği üzerine, tüm kamu kurum ve kuruluşlarında … denetlemeleri yapar.",
+    "kaynak": "mevzuat_anayasa"
+   },
+   {
+    "madde": "123-124",
+    "baslik": "İdarenin bütünlüğü ve yönetmelikler",
+    "ozet": "İdare kuruluş ve görevleriyle bir bütündür, merkezden ve yerinden yönetim esasına dayanır; bakanlıklar kanun ve CBK'ları uygulamak üzere yönetmelik çıkarabilir.",
+    "alinti": "İdarenin kuruluş ve görevleri, merkezden yönetim ve yerinden yönetim esaslarına dayanır.",
+    "kaynak": "mevzuat_anayasa"
+   },
+   {
+    "madde": "125",
+    "baslik": "Yargı yolu",
+    "ozet": "İdarenin her türlü eylem ve işlemine karşı yargı yolu açıktır; yargı denetimi hukuka uygunlukla sınırlıdır, yerindelik denetimi yapılamaz. Kamu hastanesi işlemleri de buna dahildir.",
+    "alinti": "İdarenin her türlü eylem ve işlemlerine karşı yargı yolu açıktır.",
+    "kaynak": "mevzuat_anayasa"
+   },
+   {
+    "madde": "135",
+    "baslik": "Kamu kurumu niteliğindeki meslek kuruluşları",
+    "ozet": "Türk Tabipleri Birliği gibi meslek kuruluşları kanunla kurulan, organları üyelerce gizli oyla seçilen kamu tüzel kişileridir; meslek disiplini ve ahlakını korur. Kamuda asli ve sürekli görevde çalışanlara üyelik zorunluluğu aranmaz.",
+    "alinti": "…meslek disiplini ve ahlakını korumak maksadı ile kanunla kurulan … kamu tüzelkişilikleridir.",
+    "kaynak": "mevzuat_anayasa"
+   },
+   {
+    "madde": "155",
+    "baslik": "Danıştay",
+    "ozet": "Danıştay idare mahkemesi kararlarının son inceleme merciidir; bazı davalara ilk ve son derece bakar.",
+    "alinti": "Danıştay, idari mahkemelerce verilen ve kanunun başka bir idari yargı merciine bırakmadığı karar ve hükümlerin son inceleme merciidir.",
+    "kaynak": "mevzuat_anayasa"
+   },
+   {
+    "madde": "160",
+    "baslik": "Sayıştay",
+    "ozet": "Sayıştay, merkezî yönetim bütçesindeki idareler ile sosyal güvenlik kurumlarının (SGK dahil) gelir, gider ve mallarını TBMM adına denetler.",
+    "alinti": "Sayıştay, merkezî yönetim bütçesi kapsamındaki kamu idareleri ile sosyal güvenlik kurumlarının bütün gelir ve giderleri ile mallarını Türkiye Büyük Millet Meclisi adına denetlemek … ile görevlidir.",
+    "kaynak": "mevzuat_anayasa"
+   }
+  ],
+  "kanunlar": [
+   {
+    "no": "1593",
+    "ad": "Umumi Hıfzıssıhha Kanunu",
+    "tarih": "kabul 24/4/1930",
+    "rg": "6/5/1930 – 1489",
+    "durum": "yürürlükte (pek çok maddesi değişik/mülga; dili Osmanlıca kökenli)",
+    "maddeler": [
+     {
+      "metin": "Halk sağlığı devletin genel görevidir: memleketin sağlık şartlarını düzeltmek, hastalıklarla mücadele etmek, gelecek neslin sağlıklı yetişmesini sağlamak.",
+      "kaynak": "mevzuat_1593",
+      "konum": "md. 1"
+     },
+     {
+      "metin": "Bakanlığın doğrudan yürüteceği hizmetler arasında doğumu kolaylaştırma ve çocuk ölümlerini azaltma, gebe-lohusa sağlığı, salgın hastalıkların girişinin önlenmesi, bulaşıcı hastalıklarla mücadele ve tababetin denetimi sayılır.",
+      "kaynak": "mevzuat_1593",
+      "konum": "md. 3"
+     },
+     {
+      "metin": "İl umumi hıfzıssıhha meclisi: her il merkezinde valinin başkanlığında sağlık müdürü, belediye başkanı, bayındırlık, milli eğitim, veteriner müdürü, hükümet ve belediye tabibi, hastane baştabibi, serbest çalışan bir tabip ve bir eczacı vb. ile toplanır; ilçelerde kaymakamın başkanlığında kurulur.",
+      "kaynak": "mevzuat_1593",
+      "konum": "md. 23-24"
+     },
+     {
+      "metin": "Meclisler olağan olarak ayda bir toplanır; salgında ya da olağanüstü durumda valinin daveti veya Bakanlığın talebiyle daha sık toplanır. Seçilmiş üyeler üç yılda bir değişir.",
+      "kaynak": "mevzuat_1593",
+      "konum": "md. 25-26"
+     },
+     {
+      "metin": "Meclis yerel sağlık sorunlarını izler, sağlığı düzelten tedbirleri alır; kararlarını vali veya kaymakam uygular.",
+      "kaynak": "mevzuat_1593",
+      "konum": "md. 27-28"
+     },
+     {
+      "metin": "İhbarı zorunlu hastalıklar (kolera, veba, tifo, difteri, kızamık, şarbon vb. ve kuduz şüpheli ısırık) sayılır; her tabip vakayı ilk 24 saat içinde bildirir. Bakanlık başka hastalıkları da ihbarı zorunlu ilan edebilir.",
+      "kaynak": "mevzuat_1593",
+      "konum": "md. 57-58, 64"
+     },
+     {
+      "metin": "Salgında tedbirler: hastaların ve şüphelilerin tecrit ve gözlemi, aşı-serum uygulaması, dezenfeksiyon, vektör imhası, umumi yerlerin kapatılması.",
+      "kaynak": "mevzuat_1593",
+      "konum": "md. 72"
+     }
+    ],
+    "ders": "Halk sağlığı tarihçesi (Refik Saydam dönemi), bulaşıcı hastalık bildirimi, il hıfzıssıhha kurulu",
+    "kaynak": "mevzuat_1593"
+   },
+   {
+    "no": "1219",
+    "ad": "Tababet ve Şuabatı San'atlarının Tarzı İcrasına Dair Kanun",
+    "tarih": "kabul 11/4/1928",
+    "rg": "14/4/1928 – 863",
+    "durum": "yürürlükte (çok sayıda değişiklik)",
+    "maddeler": [
+     {
+      "metin": "Türkiye'de hekimlik yapmak ve hasta tedavi etmek için tıp fakültesi diploması şarttır.",
+      "kaynak": "mevzuat_1219",
+      "konum": "md. 1"
+     },
+     {
+      "metin": "Uzman unvanı kullanmak için ihtisas belgesi gerekir; diplomalı her hekim genel olarak hastalıkları tedavi edebilir.",
+      "kaynak": "mevzuat_1219",
+      "konum": "md. 8"
+     },
+     {
+      "metin": "Diploması olmadan hasta tedavi eden veya tabip unvanı kullanan kişi 2-5 yıl hapis ve adli para cezası alır.",
+      "kaynak": "mevzuat_1219",
+      "konum": "md. 25"
+     },
+     {
+      "metin": "Her türlü tıbbi işlem için hastanın, küçük veya kısıtlıysa veli/vasinin önceden onayı alınır; büyük cerrahi girişimlerde onay yazılı olmalıdır (2025'ten beri elektronik onay da mümkün).",
+      "kaynak": "mevzuat_1219",
+      "konum": "md. 70"
+     },
+     {
+      "metin": "Kamu ve özel kurumlarda çalışan hekimler tıbbi kötü uygulamaya karşı zorunlu mesleki sorumluluk sigortası yaptırır.",
+      "kaynak": "mevzuat_1219",
+      "konum": "ek md. 12"
+     }
+    ],
+    "ders": "Hekimliğin yasal çerçevesi, aydınlatılmış onam, sağlık meslek mensuplarının tanımları",
+    "kaynak": "mevzuat_1219"
+   },
+   {
+    "no": "224",
+    "ad": "Sağlık Hizmetlerinin Sosyalleştirilmesi Hakkında Kanun",
+    "tarih": "kabul 5/1/1961",
+    "rg": "12/1/1961 – 10705",
+    "durum": "yürürlükte (sağlık ocağı modelinin yerini 5258 ile aile hekimliği almıştır; md. 3 mülga)",
+    "maddeler": [
+     {
+      "metin": "Amaç: sağlık hizmetinden yararlanmanın sosyal adalete uygun şekilde sağlanması için tababetin bir program dahilinde sosyalleştirilmesi.",
+      "kaynak": "mevzuat_224",
+      "konum": "md. 1"
+     },
+     {
+      "metin": "Sağlık tanımı: \"yalnız hastalık ve malüliyetin yokluğu olmayıp bedenen, ruhen ve sosyal bakımdan tam bir iyilik halidir.\" Sağlık ocağı yaklaşık 5000-10000 kişilik bölgeye hizmet verir.",
+      "kaynak": "mevzuat_224",
+      "konum": "md. 2"
+     },
+     {
+      "metin": "Teşkilat: sağlık evleri, sağlık ocakları, sağlık merkezleri, hastaneler; ocak hizmeti en az bir hekim ve yardımcı personelden oluşan ekiple yürütülür; her ilçede en az bir sağlık ocağı bulunur.",
+      "kaynak": "mevzuat_224",
+      "konum": "md. 9-11"
+     },
+     {
+      "metin": "Kademeli hizmet: acil vakalar hariç önce sağlık evi/ocağına başvurulur, tedavi edilemeyen hasta üst kuruma sevk edilir.",
+      "kaynak": "mevzuat_224",
+      "konum": "md. 13"
+     },
+     {
+      "metin": "Toplum katılımı: halkla teşkilat arasındaki ilişki için sağlık ocaklarında, merkezlerde ve illerde sağlık kurulları kurulur.",
+      "kaynak": "mevzuat_224",
+      "konum": "md. 23"
+     }
+    ],
+    "ders": "Sağlığın sosyalleştirilmesi (Nusret Fişek, 1963 Muş, 1984 tüm Türkiye)",
+    "kaynak": "mevzuat_224"
+   },
+   {
+    "no": "3359",
+    "ad": "Sağlık Hizmetleri Temel Kanunu",
+    "tarih": "kabul 7/5/1987",
+    "rg": "15/5/1987 – 19461",
+    "durum": "yürürlükte (bazı hükümleri AYM'ce iptal edilmiş, md. 5-9 663 sayılı KHK ile mülga)",
+    "maddeler": [
+     {
+      "metin": "Sağlık kurumları yurt sathında eşit, kaliteli ve verimli hizmet verecek şekilde Bakanlıkça planlanır; koruyucu sağlık hizmetlerine öncelik verilir ve Bakanlık kamu-özel tüm sağlık kuruluşlarını denetler.",
+      "kaynak": "mevzuat_3359",
+      "konum": "md. 3/1-a, b"
+     },
+     {
+      "metin": "Kayıt ve bildirim sistemi kurulur (e-Nabız gibi bilişim sistemlerinin dayanağı); yenidoğan metabolik taramaları için tedbir alınır.",
+      "kaynak": "mevzuat_3359",
+      "konum": "md. 3/1-f, l"
+     },
+     {
+      "metin": "Sağlık hizmeti sunumuyla ilgili tüm işler Bakanlıkça denetlenir; ruhsatsız/yetkisiz sağlık hizmeti 1-3 yıl hapisle cezalandırılır.",
+      "kaynak": "mevzuat_3359",
+      "konum": "ek md. 11"
+     },
+     {
+      "metin": "Hekim ve diğer sağlık meslek mensuplarının tıbbi işlemleri nedeniyle soruşturma izni Bakanlıktaki Mesleki Sorumluluk Kurulunca verilir; kamu adına ödenen tazminatın rücuuna da bu kurul karar verir.",
+      "kaynak": "mevzuat_3359",
+      "konum": "ek md. 18"
+     },
+     {
+      "metin": "Bakanlık hastaneleri ile üniversiteler eğitim, araştırma ve hizmet için kaynakları ortak kullanabilir.",
+      "kaynak": "mevzuat_3359",
+      "konum": "ek md. 9"
+     }
+    ],
+    "ders": "Sağlığın sosyalleştirilmesi dersindeki 1987 Temel Kanun; Bakanlığın denetim yetkisi",
+    "kaynak": "mevzuat_3359"
+   },
+   {
+    "no": "5258",
+    "ad": "Aile Hekimliği Kanunu",
+    "tarih": "kabul 24/11/2004",
+    "rg": "9/12/2004 – 25665",
+    "durum": "yürürlükte (adı 663 sayılı KHK ile 'Aile Hekimliği Pilot Uygulaması Hakkında Kanun'dan değişti)",
+    "maddeler": [
+     {
+      "metin": "Aile hekimi ve aile sağlığı çalışanı tanımları; tam gün çalışma ve gezici hizmet yükümlülüğü.",
+      "kaynak": "mevzuat_5258",
+      "konum": "md. 2"
+     },
+     {
+      "metin": "Personel Bakanlıkça sözleşmeli çalıştırılır; ödeme kayıtlı kişi sayısı, risk grupları ve koruyucu hizmet başarısına göre yapılır, eksik koruyucu hizmette %20'ye kadar kesinti uygulanır.",
+      "kaynak": "mevzuat_5258",
+      "konum": "md. 3"
+     },
+     {
+      "metin": "Kişiler aile hekimine kaydedilir ve belirli süre sonunda hekimini değiştirebilir; hizmetler (sayılan istisnalar dışında) ücretsizdir; sevksiz başvuruda katkı payı alınır; aile hekimliği dışındaki birinci basamak hizmetleri TSM'ler yürütür.",
+      "kaynak": "mevzuat_5258",
+      "konum": "md. 5"
+     },
+     {
+      "metin": "Aile hekimleri Bakanlık, mülki idare ve sağlık idaresinin denetimine tabidir.",
+      "kaynak": "mevzuat_5258",
+      "konum": "md. 6"
+     }
+    ],
+    "ders": "Türkiye'de sağlık hizmetleri (Sağlıkta Dönüşüm, 2004 aile hekimliği)",
+    "kaynak": "mevzuat_5258"
+   },
+   {
+    "no": "5510",
+    "ad": "Sosyal Sigortalar ve Genel Sağlık Sigortası Kanunu",
+    "tarih": "kabul 31/5/2006",
+    "rg": "16/6/2006 – 26200",
+    "durum": "yürürlükte",
+    "maddeler": [
+     {
+      "metin": "İş kazası ve meslek hastalığı tanımları; iş kazası işveren tarafından kolluğa derhal, SGK'ya en geç üç iş günü içinde bildirilir.",
+      "kaynak": "mevzuat_5510",
+      "konum": "md. 13-14"
+     },
+     {
+      "metin": "GSS kapsamı (md. 60), finansmanı sağlanan hizmetler (md. 63), katılım payı (md. 68-69), basamaklandırma ve sevk zinciri (md. 70).",
+      "kaynak": "mevzuat_5510",
+      "konum": "md. 60, 63, 68-70"
+     },
+     {
+      "metin": "GSS primi prime esas kazancın %12,5'i (%5 sigortalı, %7,5 işveren); devletçe ödenen primler merkezî bütçeden karşılanır.",
+      "kaynak": "mevzuat_5510",
+      "konum": "md. 81/1-f; 87/1-c"
+     },
+     {
+      "metin": "Kanunun uygulanmasının denetimi SGK'nın denetim ve kontrolle görevli memurlarınca yapılır; tutanakları aksi ispatlanana kadar geçerlidir.",
+      "kaynak": "mevzuat_5510",
+      "konum": "md. 59"
+     }
+    ],
+    "ders": "Sağlığın sosyalleştirilmesi (2006 sağlık finansman sistemi), meslek hastalıkları, iş kazası sorusu",
+    "kaynak": "mevzuat_5510"
+   },
+   {
+    "no": "6331",
+    "ad": "İş Sağlığı ve Güvenliği Kanunu",
+    "tarih": "kabul 20/6/2012",
+    "rg": "30/6/2012 – 28339",
+    "durum": "yürürlükte",
+    "maddeler": [
+     {
+      "metin": "Kamu ve özel tüm işyerlerini ve çalışanları kapsar; TSK, kolluk, afet müdahalesi ve ev hizmetleri gibi istisnalar vardır.",
+      "kaynak": "mevzuat_6331",
+      "konum": "md. 2"
+     },
+     {
+      "metin": "İşveren iş güvenliği uzmanı ve işyeri hekimi görevlendirir; çok tehlikeli sınıfta 10 ve daha fazla çalışanı olan işyerinde diğer sağlık personeli de görevlendirilir.",
+      "kaynak": "mevzuat_6331",
+      "konum": "md. 6"
+     },
+     {
+      "metin": "Sağlık gözetimi: işe girişte, iş değişikliğinde, işe dönüşte ve düzenli aralıklarla muayene; tehlikeli ve çok tehlikeli işlerde sağlık raporu olmadan işe başlatılamaz.",
+      "kaynak": "mevzuat_6331",
+      "konum": "md. 15"
+     },
+     {
+      "metin": "Uygulamanın teftişini Çalışma ve Sosyal Güvenlik Bakanlığı iş müfettişleri yapar.",
+      "kaynak": "mevzuat_6331",
+      "konum": "md. 24"
+     }
+    ],
+    "ders": "Meslek hastalıkları / iş sağlığı (Kurul 5)",
+    "kaynak": "mevzuat_6331"
+   },
+   {
+    "no": "2827",
+    "ad": "Nüfus Planlaması Hakkında Kanun",
+    "tarih": "kabul 24/5/1983",
+    "rg": "27/5/1983 – 18059",
+    "durum": "yürürlükte (1965 tarihli 557 sayılı Nüfus Planlaması Hakkında Kanunu kaldırmıştır)",
+    "maddeler": [
+     {
+      "metin": "Nüfus planlaması \"fertlerin istedikleri sayıda ve istedikleri zaman çocuk sahibi olmaları demektir\"; gebeliği önleyici tedbirlerle sağlanır.",
+      "kaynak": "mevzuat_2827",
+      "konum": "md. 2"
+     },
+     {
+      "metin": "Gebeliği önleyici yöntemleri hekim, hemşire ve ebeler yönetmelikteki şartlarla uygular; kullanılacak ilaç ve araçları Bakanlık belirler.",
+      "kaynak": "mevzuat_2827",
+      "konum": "md. 3"
+     },
+     {
+      "metin": "Gebeliğin 10. haftası doluncaya kadar, tıbbi sakınca yoksa istek üzerine rahim tahliye edilir; sonrasında yalnız anne hayatını tehdit eden veya ağır maluliyet yapacak durumlarda uzman raporlarıyla.",
+      "kaynak": "mevzuat_2827",
+      "konum": "md. 5"
+     },
+     {
+      "metin": "İzin: gebenin izni; küçüklerde küçüğün rızası ve velinin izni; evlilerde eşin de rızası gerekir; acil hallerde izin şartı aranmaz.",
+      "kaynak": "mevzuat_2827",
+      "konum": "md. 6"
+     },
+     {
+      "metin": "Önceki kanun: \"1/4/1965 tarih ve 557 sayılı Nüfus Planlaması Hakkında Kanun\" yürürlükten kaldırılmıştır.",
+      "kaynak": "mevzuat_2827",
+      "konum": "md. 13"
+     }
+    ],
+    "ders": "Halk sağlığı tarihçesi (Nusret Fişek, nüfus planlaması), üreme sağlığı",
+    "kaynak": "mevzuat_2827"
+   },
+   {
+    "no": "3960",
+    "ad": "Kalıtsal Hastalıklarla Mücadele Kanunu",
+    "tarih": "kabul 28/12/1993",
+    "rg": "30/12/1993 – 21804",
+    "durum": "yürürlükte (md. 1, 2005'te 5378 sayılı Kanunla değişti)",
+    "maddeler": [
+     {
+      "metin": "Devlet talasemi ve orak hücreli anemi dahil bütün kalıtsal kan hastalıkları ve engelliliğe yol açan diğer kalıtsal hastalıklarla koruyucu sağlık hizmetleri kapsamında mücadele eder; ödenek Bakanlık bütçesine konur.",
+      "kaynak": "mevzuat_3960",
+      "konum": "md. 1/1"
+     },
+     {
+      "metin": "Mücadelenin usul ve esasları Bakanlık yönetmeliğiyle düzenlenir (Hemoglobinopati Kontrol Programı yönetmeliği).",
+      "kaynak": "mevzuat_3960",
+      "konum": "md. 1/2"
+     }
+    ],
+    "ders": "Evlilik öncesi hemoglobinopati taraması",
+    "kaynak": "mevzuat_3960"
+   },
+   {
+    "no": "4207",
+    "ad": "Tütün Ürünlerinin Zararlarının Önlenmesi ve Kontrolü Hakkında Kanun",
+    "tarih": "kabul 7/11/1996",
+    "rg": "26/11/1996 – 22829",
+    "durum": "yürürlükte (2008 ve sonrası kapsamlı değişiklikler)",
+    "maddeler": [
+     {
+      "metin": "Kamu binalarının ve birden fazla kişinin girdiği özel binaların kapalı alanlarında, toplu taşımada, okulların açık-kapalı alanlarında, lokanta ve kahvehanelerde tütün ürünü tüketilemez; tütün taklidi nargile ve sigara da tütün ürünü sayılır.",
+      "kaynak": "mevzuat_4207",
+      "konum": "md. 2"
+     },
+     {
+      "metin": "Tütün ürünlerinin reklamı, promosyonu ve 18 yaşından küçüklere satışı yasaktır; sağlık, eğitim, kültür ve spor yerlerinde satış yapılamaz.",
+      "kaynak": "mevzuat_4207",
+      "konum": "md. 3"
+     },
+     {
+      "metin": "Yasağa uymayan işletme sorumlularına ve kişilere idari para cezasını mahallî mülki amir verir.",
+      "kaynak": "mevzuat_4207",
+      "konum": "md. 5"
+     }
+    ],
+    "ders": "Sağlığın geliştirilmesi, risk faktörleri",
+    "kaynak": "mevzuat_4207"
+   },
+   {
+    "no": "5368",
+    "ad": "Verem Savaşı Hakkında Kanun",
+    "tarih": "kabul 11/4/1949",
+    "rg": "15/4/1949 – 7183",
+    "durum": "yürürlükte (md. 4 mülga)",
+    "maddeler": [
+     {
+      "metin": "Bakanlık gerekli yerlerde verem savaş teşkilatı kurar; sanatoryum, hastane, prevantoryum ve dispanser açar.",
+      "kaynak": "mevzuat_5368",
+      "konum": "md. 1"
+     },
+     {
+      "metin": "Bakanlık, özel idare, belediye ve verem savaş derneklerinin kurduğu dispanserlere ayni-nakdi yardım ve personel desteği verebilir.",
+      "kaynak": "mevzuat_5368",
+      "konum": "md. 2"
+     }
+    ],
+    "ders": "Verem savaş dispanserlerinin yasal dayanağı",
+    "kaynak": "mevzuat_5368"
+   },
+   {
+    "no": "6023",
+    "ad": "Türk Tabipleri Birliği Kanunu",
+    "tarih": "kabul 23/1/1953",
+    "rg": "31/1/1953 – 8323",
+    "durum": "yürürlükte (md. 39 disiplin cezaları AYM'nin 11/2/2025 tarihli kararıyla iptal)",
+    "maddeler": [
+     {
+      "metin": "TTB, tabipler arasında deontolojiyi ve dayanışmayı korumak ve meslek mensuplarının haklarını korumak amacıyla kurulmuş \"kamu kurumu niteliğinde mesleki bir kuruluştur.\"",
+      "kaynak": "mevzuat_6023",
+      "konum": "md. 1"
+     },
+     {
+      "metin": "Yapı: tabip odaları, Merkez Konseyi, Yüksek Haysiyet Divanı, Büyük Kongre; en az 100 kayıtlı tabibi olan ilde tabip odası kurulur.",
+      "kaynak": "mevzuat_6023",
+      "konum": "md. 2, 6"
+     },
+     {
+      "metin": "Serbest çalışan tabipler bir ay içinde odaya üye olmak zorundadır; kamuda asli ve sürekli görevde çalışanlar için üyelik isteğe bağlıdır.",
+      "kaynak": "mevzuat_6023",
+      "konum": "md. 7"
+     },
+     {
+      "metin": "Sağlık Bakanlığı TTB ve odalar üzerinde idari ve mali denetim ve gözetim hakkına sahiptir; amaç dışı faaliyette organların görevine mahkeme kararıyla son verilebilir.",
+      "kaynak": "mevzuat_6023",
+      "konum": "ek md. 2"
+     }
+    ],
+    "ders": "Meslek örgütleri; halk sağlığı tarihçesi (Nusret Fişek TTB başkanlığı); 1953 kanunları",
+    "kaynak": "mevzuat_6023"
+   }
+  ],
+  "kararnameler": [
+   {
+    "no": "CBK-1",
+    "ad": "Cumhurbaşkanlığı Teşkilatı Hakkında Cumhurbaşkanlığı Kararnamesi – Onüçüncü Bölüm: Sağlık Bakanlığı",
+    "tarih": "10/7/2018",
+    "rg": "10/7/2018 – 30474",
+    "durum": "yürürlükte (Sağlık Bakanlığı bölümü en son RG 16/10/2025-33049, CBK-189 ile değişti; md. 378 ve 384 AYM'ce iptal)",
+    "maddeler": [
+     {
+      "metin": "Bakanlığın görevleri: halk sağlığını korumak, teşhis-tedavi-rehabilitasyon, uluslararası halk sağlığı risklerinin girişini önlemek, ilaç-tıbbi cihaz piyasası, eşit ve verimli hizmet, sağlık kuruluşlarının planlanması.",
+      "kaynak": "mevzuat_cbk1",
+      "konum": "md. 352"
+     },
+     {
+      "metin": "Bakanlık merkez, taşra ve yurtdışı teşkilatından oluşur; 13 hizmet birimi sayılır (8 genel müdürlük, Teftiş Kurulu Başkanlığı, Strateji Geliştirme Başkanlığı, Acil Durumlar ve Savunma Planlaması Dairesi Başkanlığı, Basın ve Halkla İlişkiler Müşavirliği, Özel Kalem Müdürlüğü).",
+      "kaynak": "mevzuat_cbk1",
+      "konum": "md. 353-354"
+     },
+     {
+      "metin": "Taşra: il ve gerektiğinde ilçe sağlık müdürlükleri; il sağlık müdürlüğü bünyesinde halk sağlığı, kamu hastaneleri, ilaç-tıbbi cihaz, sağlık ve acil sağlık hizmetleri, personel ve destek hizmetleri başkanlıkları kurulabilir.",
+      "kaynak": "mevzuat_cbk1",
+      "konum": "md. 371"
+     },
+     {
+      "metin": "Hastaneler başhekim tarafından yönetilir; hastaneler kalite, hasta-çalışan güvenliği ve eğitim ölçütleriyle değerlendirilip A-E grubuna ayrılır.",
+      "kaynak": "mevzuat_cbk1",
+      "konum": "md. 372"
+     },
+     {
+      "metin": "Tıpta Uzmanlık Kurulu ve Sağlık Meslekleri Kurulu bu bölümde düzenlenir.",
+      "kaynak": "mevzuat_cbk1",
+      "konum": "md. 369-370"
+     }
+    ],
+    "ders": "Ders notundaki teşkilat bilgisinin güncel dayanağı (KHK 663 yerine)",
+    "kaynak": "mevzuat_cbk1"
+   },
+   {
+    "no": "CBK-4",
+    "ad": "Bakanlıklara Bağlı, İlgili, İlişkili Kurum ve Kuruluşlar ile Diğer Kurum ve Kuruluşların Teşkilatı Hakkında CBK",
+    "tarih": "15/7/2018",
+    "rg": "15/7/2018 – 30479",
+    "durum": "yürürlükte",
+    "maddeler": [
+     {
+      "metin": "Türkiye İlaç ve Tıbbi Cihaz Kurumu (TİTCK): Bakanlığa bağlı, özel bütçeli, kamu tüzel kişiliğine sahip düzenleyici ve denetleyici kurum.",
+      "kaynak": "mevzuat_cbk4",
+      "konum": "md. 506-508"
+     },
+     {
+      "metin": "Türkiye Hudut ve Sahiller Sağlık Genel Müdürlüğü: Bakanlığa bağlı, uluslararası giriş noktalarında sağlık tedbirlerinden sorumlu; taşrada sağlık denetleme merkezleriyle çalışır.",
+      "kaynak": "mevzuat_cbk4",
+      "konum": "md. 651-654"
+     },
+     {
+      "metin": "Türkiye Sağlık Enstitüleri Başkanlığı (TÜSEB): Bakanlıkla ilgili, bilimsel ve idari özerk, merkezi İstanbul olan Ar-Ge ve akreditasyon kuruluşu.",
+      "kaynak": "mevzuat_cbk4",
+      "konum": "md. 663-666"
+     },
+     {
+      "metin": "Sosyal Güvenlik Kurumu: Çalışma ve Sosyal Güvenlik Bakanlığının ilgili kuruluşu; Genel Sağlık Sigortası Genel Müdürlüğü ve Rehberlik ve Teftiş Başkanlığı bu kurumdadır.",
+      "kaynak": "mevzuat_cbk4",
+      "konum": "md. 403, 416, 418"
+     }
+    ],
+    "ders": "Bağlı/ilgili kuruluşlar",
+    "kaynak": "mevzuat_cbk4"
+   },
+   {
+    "no": "CBK-5",
+    "ad": "Devlet Denetleme Kurulu Hakkında Cumhurbaşkanlığı Kararnamesi",
+    "tarih": "15/7/2018",
+    "rg": "15/7/2018 – 30479",
+    "durum": "yürürlükte",
+    "maddeler": [
+     {
+      "metin": "DDK, Cumhurbaşkanlığına bağlı üst denetleme organıdır; Başkan ve sekiz üyeden oluşan Kurul Karar Organı vardır.",
+      "kaynak": "mevzuat_cbk5",
+      "konum": "md. 3"
+     },
+     {
+      "metin": "Kapsam: yargı organları dışındaki tüm kamu kurumları, bağlı/ilgili kuruluşlar ve kamu kurumu niteliğindeki meslek kuruluşları.",
+      "kaynak": "mevzuat_cbk5",
+      "konum": "md. 1/2"
+     }
+    ],
+    "ders": "Denetim kurumları",
+    "kaynak": "mevzuat_cbk5"
+   },
+   {
+    "no": "KHK-663",
+    "ad": "Sağlık Alanında Bazı Düzenlemeler Hakkında KHK (eski adı: Sağlık Bakanlığı ve Bağlı Kuruluşlarının Teşkilat ve Görevleri Hakkında KHK)",
+    "tarih": "11/10/2011",
+    "rg": "2/11/2011 – 28103 (Mükerrer)",
+    "durum": "kısmen yürürlükte: teşkilat ve görev maddeleri (md. 1-41'in büyük kısmı) 2/7/2018 tarihli 703 sayılı KHK ile mülga; personel, hukuki yardım, USHAŞ (ek md. 2) gibi hükümler yürürlükte",
+    "maddeler": [
+     {
+      "metin": "Adı 703 sayılı KHK ile 'Sağlık Alanında Bazı Düzenlemeler Hakkında KHK' olarak değiştirildi.",
+      "kaynak": "mevzuat_khk663",
+      "konum": "dipnot 1"
+     },
+     {
+      "metin": "Bakanlık, bakan, hizmet birimleri ve genel müdürlüklere ilişkin maddeler (ör. md. 1-14/A) \"Mülga: 2/7/2018-KHK-703/25 md.\" işaretlidir; bu konular artık 1 sayılı CBK'dadır.",
+      "kaynak": "mevzuat_khk663",
+      "konum": "md. 1-14/A"
+     },
+     {
+      "metin": "Yürürlükteki hükümlere örnek: başhekim nitelikleri ve sözleşmeli yönetici pozisyonları (md. 42), sağlık çalışanına karşı suçlarda hukuki yardım (md. 54), USHAŞ'ın kuruluşu (ek md. 2).",
+      "kaynak": "mevzuat_khk663",
+      "konum": "md. 42, 54, ek md. 2"
+     },
+     {
+      "metin": "Türkiye Halk Sağlığı Kurumu ve Türkiye Kamu Hastaneleri Kurumu 2017'de kaldırılmış, kadroları Bakanlığa aktarılmıştır.",
+      "kaynak": "mevzuat_khk663",
+      "konum": "ek md. 1"
+     }
+    ],
+    "ders": "Ders notu 63 KHK-663'ü teşkilat dayanağı olarak verir; güncel dayanak 1 sayılı CBK'dır",
+    "kaynak": "mevzuat_khk663"
+   },
+   {
+    "no": "KHK-694",
+    "ad": "694 sayılı KHK (Sağlık bölümü, md. 184-193)",
+    "tarih": "15/8/2017",
+    "rg": "25/8/2017 – 30165",
+    "durum": "kanunlaştı (7078 sayılı Kanun); 663'e eklediği maddelerin çoğu 2018'de 703 sayılı KHK ile mülga – tarihsel önem",
+    "maddeler": [
+     {
+      "metin": "Türkiye Halk Sağlığı Kurumu ve Türkiye Kamu Hastaneleri Kurumunu kaldırıp görevlerini Bakanlık merkezinde Halk Sağlığı GM ve Kamu Hastaneleri GM'ye, taşrada il sağlık müdürlüğüne verdi.",
+      "kaynak": "rg_khk694",
+      "konum": "md. 185, 192"
+     }
+    ],
+    "ders": "Ders notundaki '2017-KHK-694/184' değişikliği",
+    "kaynak": "rg_khk694"
+   }
+  ],
+  "yonetmelikler": [
+   {
+    "no": "RG 25/1/2013-28539",
+    "ad": "Aile Hekimliği Uygulama Yönetmeliği",
+    "tarih": "25/1/2013",
+    "rg": "25/1/2013 – 28539",
+    "durum": "yürürlükte (son değişiklik RG 9/4/2026-33219; 2010 tarihli eski yönetmeliği kaldırdı)",
+    "maddeler": [
+     {
+      "metin": "Aile hekiminin görev listesi (ev ziyareti, periyodik muayene, izlem-tarama, sevk, kayıt).",
+      "kaynak": "mevzuat_ahuy",
+      "konum": "md. 4"
+     },
+     {
+      "metin": "Kişi kaydı, hekim seçimi ve değiştirme (3 ay kuralı), misafir hasta, kayıt üst sınırları.",
+      "kaynak": "mevzuat_ahuy",
+      "konum": "md. 8"
+     },
+     {
+      "metin": "Ortalama 2000 kişiye bir aile hekimi; her hekime en az bir aile sağlığı çalışanı.",
+      "kaynak": "mevzuat_ahuy",
+      "konum": "md. 20"
+     },
+     {
+      "metin": "Sevk ve geri bildirim; resmî reçete ve rapor yetkisi aile hekimindedir.",
+      "kaynak": "mevzuat_ahuy",
+      "konum": "md. 28"
+     }
+    ],
+    "ders": "Aile hekimliği",
+    "kaynak": "mevzuat_ahuy"
+   },
+   {
+    "no": "RG 30/5/2007-26537",
+    "ad": "Bulaşıcı Hastalıklar Sürveyans ve Kontrol Esasları Yönetmeliği",
+    "tarih": "30/5/2007",
+    "rg": "30/5/2007 – 26537",
+    "durum": "yürürlükte (değ. 2011, 4/5/2019-30764, 22/4/2020-31107)",
+    "maddeler": [
+     {
+      "metin": "Dayanağı 1593 sayılı Kanunun 3, 57 ve 64. maddeleridir; bildirime esas hastalık listesi, vaka tanımları ve ihbar-bildirim sistemi kurulur.",
+      "kaynak": "mevzuat_bhske",
+      "konum": "md. 1, 3"
+     },
+     {
+      "metin": "100 ve üzeri yataklı hastanelerde hekim sorumluluğunda sürveyans birimi; ilde İl Bulaşıcı Hastalık Danışma Komisyonu kurulur.",
+      "kaynak": "mevzuat_bhske",
+      "konum": "md. 5-6"
+     },
+     {
+      "metin": "Sağlık hizmeti veren tüm kamu ve özel kişi/kuruluşlar bildirimden sorumludur ve bilgileri derhal yerel sağlık birimine bildirir.",
+      "kaynak": "mevzuat_bhske",
+      "konum": "md. 10"
+     },
+     {
+      "metin": "Hastalık listesi EK-I'de; 2020'de listeye 81. hastalık olarak Covid-19 eklendi. Bakanlık ulusal erken uyarı ve cevap sistemi kurar.",
+      "kaynak": "rg_2020_bhske",
+      "konum": "EK-I; md. 19-20"
+     },
+     {
+      "metin": "EK-I 'Bildirimi zorunlu hastalıklar' listesi 4/5/2019 tarihli değişiklikle yeniden düzenlendi.",
+      "kaynak": "rg_2019_bhske_ek",
+      "konum": "EK-I"
+     }
+    ],
+    "ders": "Enfeksiyon epidemiyolojisi, bildirimi zorunlu hastalıklar",
+    "kaynak": "mevzuat_bhske"
+   },
+   {
+    "no": "RG 1/8/1998-23420",
+    "ad": "Hasta Hakları Yönetmeliği",
+    "tarih": "1/8/1998",
+    "rg": "1/8/1998 – 23420",
+    "durum": "yürürlükte (değ. 2014, 2016, 2019)",
+    "maddeler": [
+     {
+      "metin": "Temel ilkeler ve hak listesi (bilgi, seçme, mahremiyet, rıza, reddetme vb.).",
+      "kaynak": "mevzuat_hhy",
+      "konum": "md. 5-41"
+     },
+     {
+      "metin": "Hasta hakları birimleri ve il Hasta Hakları Kurulu.",
+      "kaynak": "mevzuat_hhy",
+      "konum": "md. 42/B-C"
+     },
+     {
+      "metin": "Ötenazi yasağı; sevk zincirine uymayanın ücret farkını ödemesi.",
+      "kaynak": "mevzuat_hhy",
+      "konum": "md. 13; md. 8"
+     }
+    ],
+    "ders": "Hasta hakları, tıp etiği",
+    "kaynak": "mevzuat_hhy"
+   },
+   {
+    "no": "Taşra teşkilatı düzenlemesi",
+    "ad": "İl sağlık müdürlükleri: 1 sayılı CBK md. 371 + Taşra Teşkilatı Kadro Standartları ile Çalışma Usul ve Esaslarına Dair Yönerge (7/11/2017) + 2017/17 ve 2017/18 Genelgeleri",
+    "tarih": "2017",
+    "rg": "Yönerge ve genelgeler RG'de yayımlanmaz (Bakan onayı)",
+    "durum": "yürürlükte (yönerge 2018, 2019, 2020 ve 2022'de değişti)",
+    "maddeler": [
+     {
+      "metin": "Bakanlığın taşra teşkilatı il ve ilçe sağlık müdürlüğü ile sağlık tesislerinden oluşur; hastaneler il müdürlüğüne, diğer tesisler il veya ilçe müdürlüğüne bağlıdır.",
+      "kaynak": "sb_kadro_yonerge",
+      "konum": "md. 5"
+     },
+     {
+      "metin": "Her ilde bir müdürlük kurulur; başkanlık ve başkan yardımcısı sayıları il grubuna göre Ek-I'de, birimler Ek-III'te belirlenir ve bunlar dışında birim kurulamaz.",
+      "kaynak": "sb_kadro_yonerge",
+      "konum": "md. 6"
+     },
+     {
+      "metin": "2017/17 Genelgesi: 694 sayılı KHK ile Türkiye Halk Sağlığı Kurumu ve Türkiye Kamu Hastaneleri Kurumunun taşra teşkilatlarının faaliyeti sona erdi; halk sağlığı müdürlükleri ve kamu hastaneleri birliklerinin görevleri il sağlık müdürlüğüne geçti (29/9/2017 Bakan onayı).",
+      "kaynak": "sb_genelge_2017_17",
+      "konum": "md. 2-3, 5"
+     },
+     {
+      "metin": "İlçe düzeyinde il müdürlüğüne bağlı ilçe sağlık müdürlükleri kurulur; ilçe sağlık müdürlüğü olan ilçede TSM kurulmaz.",
+      "kaynak": "sb_kadro_yonerge",
+      "konum": "md. 7; md. 20/2"
+     },
+     {
+      "metin": "2017/18 Genelgesi, 2017/17'nin bütçe maddesini değiştirdi: hastane ve ADSM ödeneklerini Kamu Hastaneleri GM, birinci basamak tesislerinin ödeneklerini Strateji Geliştirme Başkanlığı, yatırım ödeneklerini Sağlık Yatırımları GM gönderir.",
+      "kaynak": "sb_genelge_2017_18",
+      "konum": "genelge md. 1 (2017/17 md. 6 değişik)"
+     }
+    ],
+    "ders": "Türkiye'de sağlık hizmetleri – taşra teşkilatı",
+    "kaynak": "sb_kadro_yonerge"
+   },
+   {
+    "no": "RG 5/2/2015-29258",
+    "ad": "Toplum Sağlığı Merkezi ve Bağlı Birimler Yönetmeliği",
+    "tarih": "5/2/2015",
+    "rg": "5/2/2015 – 29258",
+    "durum": "yürürlükte (25/5/2018-30431 değişikliğiyle 'Kurum' yerine 'Bakanlık', il sağlık müdürlüğü yapısına uyarlandı)",
+    "maddeler": [
+     {
+      "metin": "TSM nüfusu 15.000'e kadar olan ilçelerde ve büyükşehir olmayan il merkezlerinde kurulur; 30.000 ve üzeri nüfuslu ilçelerde ve ilçe devlet hastanesi olan yerlerde kurulmaz; bu yerlerde hizmeti ilçe sağlık müdürlüğü ya da ilçe devlet hastanesi yürütür.",
+      "kaynak": "mevzuat_tsm",
+      "konum": "md. 5 (2018 değişik)"
+     },
+     {
+      "metin": "TSM başkanlığına öncelikle halk sağlığı veya epidemiyoloji uzmanı hekim görevlendirilir.",
+      "kaynak": "mevzuat_tsm",
+      "konum": "md. 6/2"
+     },
+     {
+      "metin": "TSM bünyesinde SHM, KETEM, ÇEKÜS, Enfeksiyon Kontrol, İSG, Diyabet ve Obezite, Göçmen Sağlığı Merkezi, Sağlık Evi gibi bağlı birimler açılabilir.",
+      "kaynak": "mevzuat_tsm",
+      "konum": "md. 38"
+     },
+     {
+      "metin": "Eski 'Ana Çocuk Sağlığı ve Aile Planlaması Merkezleri' ve 'KETEM' yönetmelikleri bu yönetmelikle kaldırıldı.",
+      "kaynak": "mevzuat_tsm",
+      "konum": "md. 64"
+     }
+    ],
+    "ders": "Birinci basamak, TSM-ASM ilişkisi",
+    "kaynak": "mevzuat_tsm"
+   },
+   {
+    "no": "RG 17/2/2005-25730",
+    "ad": "İnsani Tüketim Amaçlı Sular Hakkında Yönetmelik",
+    "tarih": "17/2/2005",
+    "rg": "17/2/2005 – 25730",
+    "durum": "yürürlükte (son değ. 20/10/2016-29863)",
+    "maddeler": [
+     {
+      "metin": "Kaynak suyu, içme suyu ve içme-kullanma suyunu kapsar; doğal mineralli sular ve kaplıcalar kapsam dışıdır.",
+      "kaynak": "mevzuat_su",
+      "konum": "md. 1-2"
+     },
+     {
+      "metin": "Suların sağlığa uygun ve temiz olması zorunludur; kalite standartları Ek-1'deki parametrelerdir.",
+      "kaynak": "mevzuat_su",
+      "konum": "md. 6-7"
+     },
+     {
+      "metin": "Şebeke suyu Ek-2'deki sıklıkta denetleme izlemesine tabidir; numuneyi sağlık müdürlüğü alır, analiz bedelini mahallî idare öder.",
+      "kaynak": "mevzuat_su",
+      "konum": "md. 10"
+     },
+     {
+      "metin": "Parametre ihlalinde kullanım sınırlaması veya yasağına müdürlük karar verir ve halk bilgilendirilir.",
+      "kaynak": "mevzuat_su",
+      "konum": "md. 11"
+     }
+    ],
+    "ders": "Çevre sağlığı, su kaynaklı salgınlar",
+    "kaynak": "mevzuat_su"
+   },
+   {
+    "no": "RG 11/5/2000-24046",
+    "ad": "Acil Sağlık Hizmetleri Yönetmeliği",
+    "tarih": "11/5/2000",
+    "rg": "11/5/2000 – 24046",
+    "durum": "yürürlükte (değ. 2004, 2007)",
+    "maddeler": [
+     {
+      "metin": "Çağrı ücretsiz 112 ile merkeze yapılır; değerlendirmeyi çağrıyı alan tabip yapar.",
+      "kaynak": "mevzuat_acil",
+      "konum": "md. 18-19"
+     },
+     {
+      "metin": "Sosyal güvencesi ve ödeme gücü olmayandan ücret istenmez.",
+      "kaynak": "mevzuat_acil",
+      "konum": "md. 37"
+     }
+    ],
+    "ders": "112 / acil sağlık",
+    "kaynak": "mevzuat_acil"
+   },
+   {
+    "no": "RG 23/6/2026-33289",
+    "ad": "Evde Sağlık ve Palyatif Bakım Hizmetlerinin Sunumu ve Koordinasyonuna İlişkin Yönetmelik",
+    "tarih": "23/6/2026",
+    "rg": "23/6/2026 – 33289",
+    "durum": "yürürlükte (2/6/2023 tarihli Evde Sağlık Hizmeti Sunumu Hakkında Yönetmeliği kaldırdı)",
+    "maddeler": [
+     {
+      "metin": "Başvuru e-Nabız, ESHİM veya doğrudan; ESKOM üç gün içinde sonuçlandırır.",
+      "kaynak": "mevzuat_evde2026",
+      "konum": "md. 15"
+     },
+     {
+      "metin": "Mevcut birimler bir yıl içinde yeniden tescil edilir.",
+      "kaynak": "mevzuat_evde2026",
+      "konum": "geçici md. 2"
+     }
+    ],
+    "ders": "Evde sağlık, palyatif bakım",
+    "kaynak": "mevzuat_evde2026"
+   },
+   {
+    "no": "RG 27/6/2015-29399",
+    "ad": "Sağlıkta Kalitenin Geliştirilmesi ve Değerlendirilmesine Dair Yönetmelik",
+    "tarih": "27/6/2015",
+    "rg": "27/6/2015 – 29399",
+    "durum": "yürürlükte (değ. 26/5/2023-32202)",
+    "maddeler": [
+     {
+      "metin": "Kamu ve özel tüm sağlık kuruluşları Sağlıkta Kalite Standartlarına (SKS) uyar, öz değerlendirme yapar.",
+      "kaynak": "mevzuat_sks",
+      "konum": "md. 2, 5/1"
+     },
+     {
+      "metin": "İl sağlık müdürüne bağlı il kalite koordinatörlüğü ve kurumlarda kalite yönetim birimi kurulur.",
+      "kaynak": "mevzuat_sks",
+      "konum": "md. 5/5-6"
+     }
+    ],
+    "ders": "Sağlık yönetimi, kalite",
+    "kaynak": "mevzuat_sks"
+   },
+   {
+    "no": "RG 26/4/2025-32882",
+    "ad": "Uluslararası Sağlık Turizmi ve Turistin Sağlığı Hakkında Yönetmelik",
+    "tarih": "26/4/2025",
+    "rg": "26/4/2025 – 32882",
+    "durum": "yürürlükte",
+    "maddeler": [
+     {
+      "metin": "Sağlık turizmi yapan kuruluşların ve aracı kuruluşların yetkilendirilmesi ve denetimi.",
+      "kaynak": "mevzuat_turizm2025",
+      "konum": "md. 1"
+     }
+    ],
+    "ders": "Sağlık turizmi",
+    "kaynak": "mevzuat_turizm2025"
+   },
+   {
+    "no": "RG 24/3/2013-28597",
+    "ad": "Sosyal Güvenlik Kurumu Sağlık Uygulama Tebliği (SUT) – tebliğ",
+    "tarih": "24/3/2013",
+    "rg": "24/3/2013 – 28597",
+    "durum": "yürürlükte (sık değişir; son incelenen değişiklik RG 1/7/2026-33297)",
+    "maddeler": [
+     {
+      "metin": "Basamaklar (1.4), başvuru ve sevk kuralları (1.5), katılım payları (1.8).",
+      "kaynak": "sgk_sut",
+      "konum": "SUT 1.4, 1.5, 1.8"
+     },
+     {
+      "metin": "1/7/2026: birinci basamak muayene katılım payı kaldırıldı; aile hekimi sevkiyle %50 indirim.",
+      "kaynak": "rg_sut_2026",
+      "konum": "SUT 1.8.1"
+     }
+    ],
+    "ders": "GSS uygulaması",
+    "kaynak": "sgk_sut"
+   },
+   {
+    "no": "RG 18/4/2014-28976",
+    "ad": "Genel Sağlık Sigortası Uygulamaları Yönetmeliği",
+    "tarih": "18/4/2014",
+    "rg": "18/4/2014 – 28976",
+    "durum": "yürürlükte",
+    "maddeler": [
+     {
+      "metin": "SGK; sözleşmeli ve diğer sağlık hizmeti sunucularının hizmet ve işlemlerini kontrol eder, ihbar-şikâyet üzerine veya periyodik denetim yapar.",
+      "kaynak": "mevzuat_gssuy",
+      "konum": "md. 42"
+     },
+     {
+      "metin": "Hizmet sunulmadığı halde fatura etme, gerçeğe aykırı belge gibi hallerde idari yaptırım ve sözleşme feshi uygulanır.",
+      "kaynak": "mevzuat_gssuy",
+      "konum": "md. 43"
+     }
+    ],
+    "ders": "SGK denetimi",
+    "kaynak": "mevzuat_gssuy"
+   },
+   {
+    "no": "RG 23/8/2022-31932",
+    "ad": "Sağlık Bakanlığı Teftiş Kurulu Yönetmeliği",
+    "tarih": "23/8/2022",
+    "rg": "23/8/2022 – 31932",
+    "durum": "yürürlükte (değ. 8/10/2025-33041)",
+    "maddeler": [
+     {
+      "metin": "Teftiş Kurulu Başkanlığı; Bakanlık teşkilatını, bağlı-ilgili kuruluşları, Bakanlığın denetimine tabi kamu/özel sağlık kuruluşlarını ve kamu kurumu niteliğindeki meslek kuruluşlarını Bakan adına teftiş eder.",
+      "kaynak": "mevzuat_teftis",
+      "konum": "md. 6"
+     }
+    ],
+    "ders": "Bakanlık içi denetim",
+    "kaynak": "mevzuat_teftis"
+   }
+  ]
+ },
+ "teskilat": {
+  "merkez": [
+   {
+    "birim": "Bakan ve Bakan Yardımcıları",
+    "gorev": [
+     "Bakanlığın en üst amiri Bakandır (Ekim 2026 itibarıyla Prof. Dr. Kemal Memişoğlu); teşkilat şemasında dört Bakan Yardımcısı yer alır ve birimler bu yardımcılar arasında paylaştırılmıştır.",
+     "Sitenin bağlantı gezginindeki gruplamaya göre dağılım: 1. yardımcı – Halk Sağlığı GM, Sağlık Bilgi Sistemleri GM, TİTCK, TÜSEB, USHAŞ; 2. – Sağlık Hizmetleri GM, Kamu Hastaneleri GM, Acil Sağlık Hizmetleri GM, AB ve Dış İlişkiler GM; 3. – Yönetim Hizmetleri GM, Hukuk Hizmetleri GM, Sağlık Yatırımları GM, Proje Yönetimi Destek Birimi; 4. – Strateji Geliştirme Başkanlığı, Sağlığın Geliştirilmesi GM, Türkiye Hudut ve Sahiller Sağlık GM.",
+     "Bakan; bakan yardımcılarının, bakan yardımcıları da kurum başkanları, birim amirleri ve il müdürlerinin performansını değerlendirir."
+    ],
+    "kaynak": "sb_teskilat_semasi",
+    "konum": "Teşkilat şeması / site bağlantı gezgini (Ekim 2026); performans: 1 sayılı CBK md. 374"
+   },
+   {
+    "birim": "Sağlık Hizmetleri Genel Müdürlüğü (SHGM)",
+    "gorev": [
+     "Koruyucu, teşhis, tedavi ve rehabilitasyon hizmetlerini planlar, standartlarını belirler, hizmet sunucularını sınıflandırır.",
+     "Kamu ve özel sağlık kurumlarına izin ve ruhsat verir, ücret tarifelerini belirler/onaylar, mevzuata uyumu denetler ve yaptırım uygular.",
+     "Hasta hakları, hasta-çalışan güvenliği, kalite-akreditasyon, sağlık turizmi, tıpta uzmanlık eğitimi ve sağlık insan gücü planlaması.",
+     "Daire başkanlıkları arasında Hasta Hakları ve Tıbbi Sosyal Hizmetler, Denetim ve Değerlendirme, Sağlık Turizmi, Sağlıkta Kalite-Akreditasyon ve Çalışan Hakları daireleri bulunur."
+    ],
+    "kaynak": "mevzuat_cbk1",
+    "konum": "md. 355; daireler: shgm_site"
+   },
+   {
+    "birim": "Acil Sağlık Hizmetleri Genel Müdürlüğü",
+    "gorev": [
+     "Afet ve acil durumlarda sağlık hizmetlerini planlar ve yürütür.",
+     "Hastane öncesi acil birimleri (112) kurar ve işletir; kara, hava, deniz ambulanslarının sevk ve idaresini sağlar.",
+     "KBRN (kimyasal-biyolojik) tehditlere hazırlık ve toplumun ilk yardım eğitimini planlar."
+    ],
+    "kaynak": "mevzuat_cbk1",
+    "konum": "md. 356"
+   },
+   {
+    "birim": "Sağlığın Geliştirilmesi Genel Müdürlüğü",
+    "gorev": [
+     "Bireyin ve toplumun sağlık bilgisini, farkındalığını ve sağlığını kontrol yeteneğini artırır; sağlığın sosyal belirleyicilerine yönelik düzenlemeler yapar.",
+     "Kampanya ve eğitim programları hazırlar; Bakanlığın halkla ilişkiler ve bilgi edinme hizmetlerini yürütür."
+    ],
+    "kaynak": "mevzuat_cbk1",
+    "konum": "md. 357"
+   },
+   {
+    "birim": "Sağlık Bilgi Sistemleri Genel Müdürlüğü",
+    "gorev": [
+     "Sağlık bilişimi politika ve standartlarını belirler; kişisel sağlık verileri dahil ülke çapında bilgi sistemlerini kurar (e-Nabız, MHRS gibi uygulamalar bu alandadır).",
+     "Sağlık bilişimi alanında çalışan kişi ve firmaların uyacağı kuralları belirler, yazılımların uygunluğuna karar verir."
+    ],
+    "kaynak": "mevzuat_cbk1",
+    "konum": "md. 358"
+   },
+   {
+    "birim": "Sağlık Yatırımları Genel Müdürlüğü",
+    "gorev": [
+     "Bakanlık binalarının proje ve inşaatlarını yürütür, kamulaştırma yapar, sağlık yapılarının standartlarını belirler.",
+     "Tesisleri kamu-özel ortaklığı modeliyle de yaptırabilir; ileri teknoloji tıbbi cihaz yatırımlarını teşvik eder."
+    ],
+    "kaynak": "mevzuat_cbk1",
+    "konum": "md. 359"
+   },
+   {
+    "birim": "Avrupa Birliği ve Dış İlişkiler Genel Müdürlüğü",
+    "gorev": [
+     "Yabancı ülkeler ve uluslararası kuruluşlarla ilişkileri, ikili-çok taraflı anlaşmaları ve AB ile ilişkileri yürütür.",
+     "Not: kullanıcının listesindeki 'Dış İlişkiler' biriminin CBK'daki adı budur."
+    ],
+    "kaynak": "mevzuat_cbk1",
+    "konum": "md. 360"
+   },
+   {
+    "birim": "Halk Sağlığı Genel Müdürlüğü (HSGM)",
+    "gorev": [
+     "Halk sağlığını korur ve geliştirir; birinci basamak sağlık hizmetlerini yürütür ve birinci basamak kuruluşlarını kurar, işletir, birleştirir veya kapatır.",
+     "Bulaşıcı ve bulaşıcı olmayan hastalıklar, kanser ve anne-çocuk-ergen-yaşlı-engelli gibi risk grupları için izleme, sürveyans, bağışıklama ve kontrol programları yürütür.",
+     "Obezite, sigara gibi risklerle mücadele eder; ulusal referans laboratuvarını işletir, içme suyu ve biyosidal ürünlerde tüketici güvenliği tedbirleri alır.",
+     "Sağlık tehditlerine erken uyarı ve cevap organizasyonunu kurar; aşı-serum gibi biyolojik ürünleri temin eder veya üretir.",
+     "Tarihçe: 2017'de kaldırılan Türkiye Halk Sağlığı Kurumunun yerine 694 sayılı KHK ile kurulmuştur."
+    ],
+    "kaynak": "mevzuat_cbk1",
+    "konum": "md. 361; tarihçe: rg_khk694"
+   },
+   {
+    "birim": "Kamu Hastaneleri Genel Müdürlüğü",
+    "gorev": [
+     "Bakanlığa bağlı hastaneleri ve ağız-diş sağlığı merkezlerini kurar, işletir, birleştirir veya kapatır.",
+     "Hastanelerde hizmetlerin yürütülmesini izler, performans değerlendirmesi yapar, hasta ve çalışan güvenliğine yönelik iyileştirme yapar."
+    ],
+    "kaynak": "mevzuat_cbk1",
+    "konum": "md. 362"
+   },
+   {
+    "birim": "Hukuk Hizmetleri Genel Müdürlüğü",
+    "gorev": [
+     "659 sayılı KHK'ye göre hukuk birimlerine verilen görevleri (dava takibi, hukuki görüş) yapar."
+    ],
+    "kaynak": "mevzuat_cbk1",
+    "konum": "md. 363"
+   },
+   {
+    "birim": "Teftiş Kurulu Başkanlığı",
+    "gorev": [
+     "Bakanın emri veya onayıyla Bakanlık teşkilatı, bağlı-ilgili kuruluşlar ve bunların denetimindeki kurumlar hakkında teftiş, denetim, inceleme ve soruşturma yapar; denetim standart ve rehberlerini hazırlar.",
+     "Not: CBK'daki güncel adı 'Teftiş Kurulu Başkanlığı'dır (10/1/2019 tarihli 27 sayılı CBK ile değişti); 'Rehberlik ve Teftiş Başkanlığı' adı Sağlık Bakanlığı için geçerli değildir (bu ad SGK'daki birimin adıdır)."
+    ],
+    "kaynak": "mevzuat_cbk1",
+    "konum": "md. 354/1-ı; md. 364"
+   },
+   {
+    "birim": "Strateji Geliştirme Başkanlığı",
+    "gorev": [
+     "5018 sayılı Kamu Malî Yönetimi ve Kontrol Kanunu kapsamında strateji geliştirme ve mali hizmetler (bütçe, stratejik plan, faaliyet raporu) görevlerini yürütür."
+    ],
+    "kaynak": "mevzuat_cbk1",
+    "konum": "md. 365"
+   },
+   {
+    "birim": "Yönetim Hizmetleri Genel Müdürlüğü",
+    "gorev": [
+     "Personel planlaması ve atama-nakil-emeklilik gibi özlük işlemleri; satın alma, kiralama, taşınır-taşınmaz, evrak ve arşiv işleri."
+    ],
+    "kaynak": "mevzuat_cbk1",
+    "konum": "md. 366"
+   },
+   {
+    "birim": "Acil Durumlar ve Savunma Planlaması Dairesi Başkanlığı",
+    "gorev": [
+     "Afet-acil durum, sivil savunma ve seferberlik hazırlıklarını yürütür ve koordine eder; Bakanlığı AFAD Afet ve Acil Durum Yönetim Merkezinde temsil eder.",
+     "2019'da kaldırılan bu birim 16/10/2025 tarihli 189 sayılı CBK ile yeniden düzenlenmiştir."
+    ],
+    "kaynak": "mevzuat_cbk1",
+    "konum": "md. 354/1-j; md. 366/A"
+   },
+   {
+    "birim": "Basın ve Halkla İlişkiler Müşavirliği; Özel Kalem Müdürlüğü",
+    "gorev": [
+     "Basın faaliyetlerini planlar; Özel Kalem Bakanın çalışma programı, yazışma ve protokol işlerini yürütür."
+    ],
+    "kaynak": "mevzuat_cbk1",
+    "konum": "md. 367-368"
+   },
+   {
+    "birim": "Tıpta Uzmanlık Kurulu",
+    "gorev": [
+     "Tıpta ve diş hekimliğinde uzmanlık eğitimi verecek kurumlara eğitim yetkisi verilmesini ve kaldırılmasını karara bağlar, rotasyonları belirler.",
+     "Bakan yardımcısı, SHGM genel müdürü, eğitim hastaneleri, YÖK'ün seçtiği fakülte üyeleri ile TTB ve Türk Diş Hekimleri Birliğinin seçtiği birer üyeden oluşur."
+    ],
+    "kaynak": "mevzuat_cbk1",
+    "konum": "md. 369"
+   },
+   {
+    "birim": "Sağlık Meslekleri Kurulu",
+    "gorev": [
+     "Bakan yardımcısı başkanlığında genel müdürler, Milli Eğitim, YÖK, Mesleki Yeterlilik Kurumu temsilcileri ve kanunla kurulan sağlık meslek birliklerinin temsilcilerinden oluşur.",
+     "Hasta Hakları Kurulunda altı ayda ikiden fazla ihlal kararı alan sağlık meslek mensubunun dosyası bu kurula gönderilir."
+    ],
+    "kaynak": "mevzuat_cbk1",
+    "konum": "md. 370; HHY md. 42/C-b"
+   },
+   {
+    "birim": "İç Denetim Başkanlığı ve Proje Yönetim Destek Birimi",
+    "gorev": [
+     "Bakanlık sitesindeki birim listesinde yer alır; 1 sayılı CBK md. 354'teki hizmet birimleri listesinde sayılmaz (iç denetim 5018 sayılı Kanuna dayanır)."
+    ],
+    "kaynak": "sb_birimler",
+    "konum": "Bakanlık Birimleri listesi"
+   }
+  ],
+  "bagli": [
+   {
+    "birim": "Türkiye İlaç ve Tıbbî Cihaz Kurumu (TİTCK)",
+    "gorev": [
+     "Bakanlığa bağlı, özel bütçeli, kamu tüzel kişiliğine sahip kurum.",
+     "İlaçlar (beşeri tıbbi ürünler), tıbbi cihazlar, kozmetikler, insan vücuduna temas eden biyosidaller ve özel tıbbi amaçlı gıdaların klinik araştırması, ruhsatı, üretimi, satışı, reklamı ve piyasa sonrası izlemine dair kuralları koyar, denetler ve yaptırım uygular.",
+     "Ulusal ve uluslararası kontrole tabi maddeler ve yeni psikoaktif maddeler hakkında düzenleme yapar; Türk Farmakopesini hazırlar."
+    ],
+    "kaynak": "mevzuat_cbk4",
+    "konum": "md. 506, 508",
+    "statu": "bağlı kuruluş"
+   },
+   {
+    "birim": "Türkiye Hudut ve Sahiller Sağlık Genel Müdürlüğü",
+    "gorev": [
+     "Bakanlığa bağlı, özel bütçeli, kamu tüzel kişiliğine sahip; Türk boğazları, hudut ve sahillerle ilgili uluslararası yükümlülükleri yerine getirir.",
+     "Uluslararası giriş noktalarında halk sağlığı tedbirleri, hac ve göç gibi toplu hareketlerde sağlık tedbirleri, gemi sağlık resmi, seyahat sağlığı hizmeti; taşrada sağlık denetleme merkezleriyle çalışır.",
+     "Durum: 2026 itibarıyla 4 sayılı CBK'da ve Bakanlık teşkilat şemasında yer almaya devam ediyor."
+    ],
+    "kaynak": "mevzuat_cbk4",
+    "konum": "md. 651-654; sb_teskilat_semasi",
+    "statu": "bağlı kuruluş"
+   },
+   {
+    "birim": "Türkiye Sağlık Enstitüleri Başkanlığı (TÜSEB)",
+    "gorev": [
+     "Sağlık Bakanlığıyla ilgili; kamu tüzel kişiliğine, bilimsel ve idari özerkliğe sahip, özel bütçeli; merkezi İstanbul.",
+     "Sağlık bilimi ve teknolojilerinde Ar-Ge yapar ve destekler, aşı-ilaç-tıbbi cihaz geliştirme ve ticarileşmeyi destekler.",
+     "Sağlık hizmetlerinde kalite-akreditasyon kurallarının belirlenmesine bilimsel katkı verir ve sağlık kuruluşlarını akredite eder."
+    ],
+    "kaynak": "mevzuat_cbk4",
+    "konum": "md. 663-666",
+    "statu": "ilgili kuruluş"
+   },
+   {
+    "birim": "Uluslararası Sağlık Hizmetleri A.Ş. (USHAŞ)",
+    "gorev": [
+     "Sağlık turizmini tanıtmak, kamu ve özel sektörün sağlık turizmi faaliyetlerini desteklemek ve aracı kurumlara yetki belgesi vermek amacıyla kurulmuş, Sağlık Bakanlığıyla ilgili anonim şirket.",
+     "Bakanlık teşkilat şemasında bir bakan yardımcısına bağlı olarak gösterilir."
+    ],
+    "kaynak": "mevzuat_khk663",
+    "konum": "ek md. 2; sb_teskilat_semasi",
+    "statu": "ilgili şirket"
+   }
+  ],
+  "tasra": [
+   {
+    "birim": "İl Sağlık Müdürlüğü",
+    "gorev": [
+     "Her ilde bir il sağlık müdürlüğü kurulur ve Bakanlığın ildeki yönetim görevini yerine getirir.",
+     "İl sağlık müdürü Bakanlığın il düzeyindeki hizmetlerinden sorumludur; il içinde personel nakil ve görevlendirmelerini doğrudan yapar.",
+     "Acil sağlık hizmetleri için ildeki kamu ve özel tüm sağlık kurum ve kuruluşlarının sevk ve idaresinden sorumlu ve yetkilidir.",
+     "Kamu ve özel tüm sağlık kuruluşlarında hizmetin sunumunu sağlar, düzenlemelere uyumu denetler ve yaptırım uygular; döner sermaye işlemlerinde harcama yetkilisidir.",
+     "Birden fazla ilin hizmetlerini birlikte planlamak için müdürlerden biri koordinatör olarak görevlendirilebilir.",
+     "2017'de mülga Halk Sağlığı Müdürlükleri ile Kamu Hastaneleri Birliği Genel Sekreterliklerinin görev, personel, taşınır ve taşınmazları il sağlık müdürlüğüne devredildi."
+    ],
+    "kaynak": "mevzuat_cbk1",
+    "konum": "md. 371; sb_kadro_yonerge md. 6, 8; sb_genelge_2017_17 md. 2-5",
+    "alt_birimler": [
+     "Başkanlıklar (CBK md. 371/2'de sayılan alanlar, ihtiyaca göre): Halk Sağlığı; Kamu Hastaneleri; İlaç ve Tıbbi Cihaz; Sağlık ve Acil Sağlık Hizmetleri; Personel ve Destek Hizmetleri",
+     "Yönergede başkanlık adlarına örnek: Halk Sağlığı Başkanlığı, Sağlık Hizmetleri Başkanlığı, İlaç ve Tıbbi Cihaz Başkanlığı (Ek-II); başkanlık ve başkan yardımcısı sayısı il grubuna göre değişir (Ek-I). Küçük illerde (ör. İ9 grubu Karabük) 'Sağlık Hizmetleri' ve 'Destek Hizmetleri' olmak üzere iki başkanlık vardır",
+     "Müdüre doğrudan bağlı birimlere örnek: il kalite koordinatörlüğü (SKS Yön. md. 5/5), hasta hakları il koordinatörlüğü, Mesleki Sorumluluk Kurulu il koordinatörlüğü, hukuk ve muhakemat birimi, sivil savunma birimi",
+     "Bağlı tesisler: hastaneler, ağız ve diş sağlığı merkezleri, il ambulans servisi başhekimliği (112), halk sağlığı laboratuvarı, TSM'ler ve ASM'ler"
+    ]
+   },
+   {
+    "birim": "İlçe Sağlık Müdürlüğü",
+    "gorev": [
+     "Bakanlığın ilçe düzeyindeki hizmetleri için il sağlık müdürlüğüne bağlı olarak ihtiyaca göre kurulur; büyük ilçelerde nüfusa göre 2-5 birim kurulabilir.",
+     "İlçe sağlık müdürlüğünün kurulduğu ilçede TSM kurulmaz; TSM bulunmayan ilçelerde birinci basamak/halk sağlığı hizmetlerini ilçe sağlık müdürlüğü yürütür.",
+     "TSM Yönetmeliği (2018 değişikliği): TSM nüfusu 15.000'e kadar olan ilçelerde ve büyükşehir olmayan il merkezlerinde kurulur; 15.000-30.000 nüfuslu ilçede ilçe sağlık müdürlüğü yoksa TSM kurulur; 30.000 ve üzeri ilçelerde ve ilçe devlet hastanesi olan yerlerde TSM kurulmaz.",
+     "2017 dönüşümü: Türkiye Halk Sağlığı Kurumunun taşra görevleri ve mülga halk sağlığı müdürlüğü birimleri il sağlık müdürlüğüne devredildi; 2018'de TSM Yönetmeliğinin amacı 'Sağlık Bakanlığı taşra teşkilatı yapılanmasında yer alan' TSM'ler şeklinde değiştirildi."
+    ],
+    "kaynak": "sb_kadro_yonerge",
+    "konum": "md. 7, 20; mevzuat_tsm md. 5; rg_tsm2018",
+    "alt_birimler": [
+     "TSM (ilçe sağlık müdürlüğü olmayan yerlerde)",
+     "Sağlık evleri (500'ü aşkın nüfuslu köy/belde; idari olarak ilçe sağlık müdürlüğü/TSM'ye, hizmet olarak aile hekimine bağlı)"
+    ]
+   }
+  ],
+  "karabuk": [
+   {
+    "birim": "Karabük İl Sağlık Müdürlüğü (İ9 grubu)",
+    "aciklama": "Teşkilat şeması (yayın 01/01/2020, Rev. 03, 04/11/2025) ilin 'İ9' grubunda olduğunu gösterir; il grubu, taşra kadro standartlarında illerin sınıflandırmasıdır. Müdürlükte iki başkanlık vardır: Sağlık Hizmetleri Başkanlığı ve Destek Hizmetleri Başkanlığı.",
+    "kaynak": "ism_teskilat_2026",
+    "konum": "şema (tek sayfa); il grubu tanımı: sb_kadro_yonerge md. 3/1-h"
+   },
+   {
+    "birim": "Müdüre doğrudan bağlı birimler",
+    "aciklama": "Döner Sermaye Muhasebe Hizmetleri Birimi; İl Kalite Koordinatörlüğü; Mesleki Sorumluluk Kurulu İl Koordinatörlüğü; REDES İl Temsilciliği Birimi; Hukuk ve Muhakemat Birimi; Sivil Savunma ve Seferberlik Hizmetleri Birimi; Hasta Hakları İl Koordinatörlüğü.",
+    "kaynak": "ism_teskilat_2026",
+    "konum": "şema – üst blok"
+   },
+   {
+    "birim": "Sağlık Hizmetleri Başkanlığı",
+    "aciklama": "İki başkan yardımcılığı vardır. Birincisine Halk Sağlığı Hizmetleri Birimi ve Acil Sağlık Hizmetleri Birimi, ikincisine Kamu Hastaneleri Hizmetleri Birimi ve Sağlık Hizmetleri Birimi bağlıdır. Başkanlık sayfasında başkanın iç hastalıkları uzmanı olduğu belirtilir.",
+    "kaynak": "ism_teskilat_2026",
+    "konum": "şema; ism_saglik_hiz_bsk"
+   },
+   {
+    "birim": "Destek Hizmetleri Başkanlığı",
+    "aciklama": "Bir başkan yardımcılığı ve buna bağlı Personel Hizmetleri Birimi ile Destek Hizmetleri Birimi vardır. Personel birimi sayfasında atama-nakil, izin, mal bildirimi ve staj formları yayımlanır.",
+    "kaynak": "ism_teskilat_2026",
+    "konum": "şema; ism_destek_bsk"
+   },
+   {
+    "birim": "Arabuluculuk Başvuruları ve Beyaz Kod İl Koordinatörlüğü",
+    "aciklama": "Sitede ayrı bir sayfası vardır (12/5/2026); şemada ayrı kutu olarak görünmez, hukuk birimiyle ilişkili olduğu anlaşılıyor (sayfada avukatlar iletişim kişisi).",
+    "kaynak": "ism_arabuluculuk",
+    "konum": "birim sayfası"
+   },
+   {
+    "birim": "İstatistik ve Bilgi İşlem Birimi",
+    "aciklama": "Sitede 2018 tarihli bir sayfası (form indirme) bulunur; 2025 revizyonlu şemada ayrı kutu olarak yer almaz.",
+    "kaynak": "ism_bilgi_islem",
+    "konum": "birim sayfası"
+   },
+   {
+    "birim": "Sağlıklı Hayat Merkezi ve Merkez TSM",
+    "aciklama": "SHM il sağlık müdürlüğü binasında hizmet verir: sigara bırakma, fizyoterapi-egzersiz ve beslenme danışmanlığı, KETEM ve üreme sağlığı (mamografi 40-69, HPV 30-65 yaş), aile planlaması, okul ve ağız-diş sağlığı, yabancı uyruklular polikliniği, bulaşıcı hastalıklar ve tüberküloz birimi. Merkez TSM 2022'de SHM ile birlikte işyeri ziyaretleri yaptı.",
+    "kaynak": "ism_shm",
+    "konum": "SHM tanıtım sayfası; ism_tsm_shm_2022"
+   },
+   {
+    "birim": "Halk sağlığı birimleri (Karabük)",
+    "aciklama": "Karabük Halk Sağlığı Laboratuvarı (L2, TS EN ISO/IEC 17025 çalışmaları, su mikrobiyolojisi ve kimyası); Verem Savaş Dispanseri (2022'de 1.500'ü aşkın akciğer grafisi); TRSM (KEAH'a bağlı, 5000 Evler semt polikliniği).",
+    "kaynak": "ism_hsl_2026",
+    "konum": "haber; ism_verem_2023; keah_hastanemiz"
+   },
+   {
+    "birim": "Birinci basamak (Eylül 2026)",
+    "aciklama": "İl sağlık müdürlüğü listesine göre 34 ASM'de 90 aile hekimliği birimi vardır (Merkez 20, Safranbolu 9, Yenice 2, Eskipazar, Eflani ve Ovacık birer ASM).",
+    "kaynak": "ism_ah_2026_09",
+    "konum": "AH-ASÇ listesi (xlsx), sayımla"
+   },
+   {
+    "birim": "İl Hıfzıssıhha Meclisi/Kurulu (Karabük)",
+    "aciklama": "Kararlar sitede yıllara göre yayımlanır (2021-2026). Örnekler: 2026/3 kanser taramalarına yönlendirme, 2026/4 KKKA önlemleri, 2026/6 içme suyu klorlaması ve çevre sağlığı, 2026/7 aşırı sıcaklar; 2025 ve 2026'da kar-buzlanma nedeniyle eğitime ara kararları.",
+    "kaynak": "ism_hk_2026",
+    "konum": "karar PDF'leri; ism_hk_2025; ism_hk_liste"
+   },
+   {
+    "birim": "İl Ambulans Servisi (112)",
+    "aciklama": "Karabük, Eylül 2026'da Karabük, Zonguldak, Bolu, Düzce ve Bartın'ı kapsayan 10. Bölge ASKOM (afet-acil durum) toplantısına ev sahipliği yaptı.",
+    "kaynak": "ism_askom_2026",
+    "konum": "haber"
+   }
+  ],
+  "halk_sagligi_birimleri": [
+   {
+    "birim": "Toplum Sağlığı Merkezi (TSM)",
+    "gorev": [
+     "Bölgesindeki toplumun sağlık risklerini belirleyen, düzeltici-önleyici faaliyet yürüten, birinci basamak hizmetlerini koordine eden, izleyen ve denetleyen kuruluştur.",
+     "Görevleri: bulaşıcı hastalık, bağışıklama ve salgın kontrolü, tüberküloz, zoonoz ve vektör kontrolü, çevre sağlığı, okul ve toplu yaşam alanı sağlığı, adli tabiplik ve ölüm kaydı, kanser taramaları, evde sağlık ve ruh sağlığı programları.",
+     "Başkanı öncelikle halk sağlığı veya epidemiyoloji uzmanı hekimdir; aşıları aile hekimlerine ulaştırır."
+    ],
+    "kaynak": "mevzuat_tsm",
+    "konum": "md. 4/1-n, 6, 8-37"
+   },
+   {
+    "birim": "Sağlıklı Hayat Merkezi (SHM)",
+    "gorev": [
+     "Aile hekimliği ve TSM hizmetlerini güçlendirmek, sağlıklı yaşamı teşvik etmek için kurulan TSM bağlı birimidir.",
+     "Beslenme danışmanlığı ve obezite, bireye özel fiziksel aktivite programı, kronik hastalık risk danışmanlığı, sağlık okuryazarlığı, sigara bırakma ve koruyucu ruh sağlığı, kadın-üreme sağlığı ve KETEM hizmetleri, ağız-diş, okul sağlığı, laboratuvar-görüntüleme ve enfeksiyon kontrol hizmetleri."
+    ],
+    "kaynak": "mevzuat_tsm",
+    "konum": "md. 4/1-m; md. 41"
+   },
+   {
+    "birim": "KETEM (Kanser Erken Teşhis, Tarama ve Eğitim Merkezi)",
+    "gorev": [
+     "Kanser risk faktörleri ve erken teşhis eğitimi; aile hekimleriyle birlikte Ulusal Kanser Tarama Standartlarına göre toplum tabanlı taramalar.",
+     "Şüpheli olguların ileri tetkik ve tedavisini kayda alır, riskli kişileri izler; tütün-alkol mücadelesine destek verir.",
+     "Eski 'Kanser Erken Teşhis ve Tarama Merkezleri Yönetmeliği' 2015'te kaldırıldı; KETEM artık TSM bağlı birimidir."
+    ],
+    "kaynak": "mevzuat_tsm",
+    "konum": "md. 39; md. 64/2"
+   },
+   {
+    "birim": "Verem Savaş Dispanseri / enfeksiyon kontrol birimi",
+    "gorev": [
+     "Kanuni dayanak: Bakanlık gerekli yerlerde verem savaş teşkilatı kurar; sanatoryum, hastane ve dispanser açar.",
+     "TSM yapısında tüberküloz, HIV ve frengi gibi enfeksiyonlarda teşhis, tarama, takip ve tedavi faaliyetlerini 'enfeksiyon kontrol birimi' yürütür; yönerge TSM bünyesinde 'verem savaş' birimi kurulabileceğini belirtir."
+    ],
+    "kaynak": "mevzuat_5368",
+    "konum": "md. 1; mevzuat_tsm md. 4/1-ğ; sb_kadro_yonerge md. 20/3"
+   },
+   {
+    "birim": "Halk Sağlığı Laboratuvarı",
+    "gorev": [
+     "Fiziki, biyolojik ve çevresel etkenlerin analizini yapan, salgınların önlenmesi için gerekli analizleri ve su-gıda-ürün kontrol analizlerini yapan sağlık tesisidir.",
+     "Tipler: L1 (bazı özellikli analizlerde diğer illere de hizmet), L2 (il merkezi), L3 (ilçe).",
+     "Görevler: içme, yüzme, kaplıca ve deniz suyu analizleri; atık ve yüzey suları; iş sağlığı analizleri; gıda-oyuncak gibi ürünler; klinik laboratuvar ve aile hekimliğine tanı desteği."
+    ],
+    "kaynak": "sb_kadro_yonerge",
+    "konum": "md. 21"
+   },
+   {
+    "birim": "Toplum Ruh Sağlığı Merkezi (TRSM)",
+    "gorev": [
+     "Ağır ruhsal bozukluğu olan (psikotik bozukluk, bipolar bozukluk) hastalara toplum temelli modelde psikososyal destek, izlem ve rehabilitasyon veren, Bakanlık hastanelerine bağlı merkezdir.",
+     "Hizmetler: ilaç takibi, bireysel/grup terapi, hasta ve aileye psikoeğitim, gezici ekiple ev ziyareti, sosyal beceri eğitimi; başvuru için psikiyatri uzmanı raporu yeterlidir."
+    ],
+    "kaynak": "surmenedh_trsm",
+    "konum": "TRSM tanıtım sayfası"
+   },
+   {
+    "birim": "Aile Sağlığı Merkezi (ASM)",
+    "gorev": [
+     "Bir veya daha fazla aile hekimi ile aile sağlığı elemanının aile hekimliği hizmeti verdiği sağlık kuruluşudur; asgari fiziki şartları ve tıbbi donanımı yönetmelikte sayılır."
+    ],
+    "kaynak": "mevzuat_tsm",
+    "konum": "md. 4/1-ç; mevzuat_ahuy md. 22-24"
+   },
+   {
+    "birim": "Çocuk, Ergen, Kadın ve Üreme Sağlığı (ÇEKÜS) birimi",
+    "gorev": [
+     "TSM'nin kadın, ana, çocuk ve üreme sağlığı hizmetleri ile eğitimlerini yürüten bağlı birimi; eski AÇSAP merkezlerinin yerini almıştır (AÇSAP yönetmeliği 2015'te kaldırıldı)."
+    ],
+    "kaynak": "mevzuat_tsm",
+    "konum": "md. 4/1-g; md. 40; md. 64/1"
+   },
+   {
+    "birim": "İl Ambulans Servisi Başhekimliği ve 112 Komuta Kontrol Merkezi",
+    "gorev": [
+     "İl ambulans servisi başhekimliği il düzeyinde ambulans hizmetini organize eden sağlık tesisidir; merkez (komuta kontrol) başhekimliğe bağlıdır, istasyonlar destek birimidir."
+    ],
+    "kaynak": "sb_kadro_yonerge",
+    "konum": "md. 22-23"
+   }
+  ]
+ },
+ "denetim": [
+  {
+   "kurum": "Sağlık Bakanlığı Teftiş Kurulu Başkanlığı",
+   "tur": "bakanlık içi",
+   "neyi": "Bakanlık merkez-taşra teşkilatını, bağlı-ilgili kuruluşları, Bakanlığın denetimine tabi tüm kamu/özel sağlık kuruluşlarını ve kamu kurumu niteliğindeki meslek kuruluşlarını.",
+   "dayanak": "1 sayılı CBK md. 364; Sağlık Bakanlığı Teftiş Kurulu Yönetmeliği md. 6; müfettiş istihdamı CBK md. 376",
+   "nasil": [
+    "Bakanın emri veya onayıyla, Bakan adına teftiş, denetim, inceleme, soruşturma ve ön inceleme yapar.",
+    "Denetim rehberleri ve standartları hazırlar, bağlı kuruluşların denetim birimlerini koordine eder.",
+    "Sonuçlara göre alınacak önlemler için Bakanlığa öneri sunar."
+   ],
+   "kaynak": "mevzuat_teftis"
+  },
+  {
+   "kurum": "Sağlık Hizmetleri Genel Müdürlüğü ve il sağlık müdürlüğü (ruhsat ve mevzuata uyum denetimi)",
+   "tur": "bakanlık içi",
+   "neyi": "Kamu ve özel sağlık kurum ve kuruluşlarının ruhsat şartlarına, politika ve düzenlemelere uyumunu; ildeki tüm sağlık hizmetlerini.",
+   "dayanak": "3359 sayılı Kanun md. 3/1-b ve ek md. 11; 1 sayılı CBK md. 355/1-c, e; md. 371; Taşra Kadro Yönergesi md. 8",
+   "nasil": [
+    "SHGM izin ve ruhsat verir, gerektiğinde süreli/süresiz iptal eder; uyumu denetler ve yaptırım uygular (SHGM'de Denetim ve Değerlendirme Daire Başkanlığı vardır).",
+    "İl sağlık müdürü ildeki kamu ve özel tüm sağlık kuruluşlarında hizmetin sunumunu sağlar, düzenlemelere uyumu denetler ve gerekli yaptırımları uygular.",
+    "Ruhsatsız veya yetkisiz sağlık hizmeti suçtur (1-3 yıl hapis); izinsiz özel birim açmaya idari para cezası verilir."
+   ],
+   "kaynak": "mevzuat_3359"
+  },
+  {
+   "kurum": "Sağlıkta kalite (SKS) değerlendirmeleri ve hastane karnesi",
+   "tur": "bakanlık içi",
+   "neyi": "Kamu ve özel tüm sağlık kuruluşlarının Sağlıkta Kalite Standartlarına uyumunu; Bakanlık hastanelerinin performansını.",
+   "dayanak": "Sağlıkta Kalitenin Geliştirilmesi ve Değerlendirilmesine Dair Yönetmelik md. 5-6; 1 sayılı CBK md. 355/1-h, md. 372/5-6",
+   "nasil": [
+    "Kurumlar öz değerlendirme yapar ve verileri Bakanlık sistemine girer; Bakanlık değerlendiricileri yerinde ölçme-değerlendirme yapar, SHGM bu yetkiyi il sağlık müdürlüğüne verebilir.",
+    "İl sağlık müdürüne bağlı il kalite koordinatörlüğü ve her kurumda kalite yönetim birimi bulunur.",
+    "Hastaneler 6 ay veya 1 yılda bir değerlendirilip A-E gruplarına ayrılır; grup düşmesi gibi hallerde il sağlık müdürünün veya başhekimin görevine son verilir."
+   ],
+   "kaynak": "mevzuat_sks"
+  },
+  {
+   "kurum": "Mesleki Sorumluluk Kurulu",
+   "tur": "bakanlık içi",
+   "neyi": "Hekim, diş hekimi ve diğer sağlık meslek mensuplarının mesleğin icrasından (muayene, teşhis, tedavi) kaynaklanan soruşturmalarını ve tazminat rücuunu.",
+   "dayanak": "3359 sayılı Kanun ek md. 18",
+   "nasil": [
+    "Kamu ve özel kurumlarda (YÖK Kanunu md. 53'e tabi olanlar hariç) bu soruşturmalarda 4483 sayılı Kanun uygulanır; soruşturma iznini Bakanlıktaki Mesleki Sorumluluk Kurulu verir.",
+    "Özel kurum ve vakıf üniversitelerinde ön inceleme için il sağlık müdürlüğündeki başkan veya yardımcıları görevlendirilebilir; kararlara karşı Ankara Bölge İdare Mahkemesine itiraz edilir.",
+    "Kamuda ödenen tazminatın sağlık çalışanına rücu edilip edilmeyeceğine bir yıl içinde karar verir. İl sağlık müdürlüklerinde 'Mesleki Sorumluluk Kurulu İl Koordinatörlüğü' bulunur (ör. Karabük şeması)."
+   ],
+   "kaynak": "mevzuat_3359"
+  },
+  {
+   "kurum": "Hasta Hakları Birimleri ve İl Hasta Hakları Kurulu",
+   "tur": "bakanlık içi",
+   "neyi": "Hasta haklarının ihlali iddialarını ve etik ilkelere aykırı davranışları.",
+   "dayanak": "Hasta Hakları Yönetmeliği md. 42/A-C",
+   "nasil": [
+    "Başvuru önce kurumdaki hasta hakları birimine yapılır; yerinde çözülemeyen yazılı/elektronik başvurular il sağlık müdürlüğündeki Hasta Hakları Kuruluna gider.",
+    "Kurul 30 gün içinde karar verir; ihlal kararı kuruma ve personele tebliğ edilir, altı ayda ikiden fazla ihlal kararı alan meslek mensubunun dosyası Sağlık Meslekleri Kuruluna gönderilir.",
+    "Tıbbi hata iddiaları kurulda değerlendirilmez (bunlar adli/idari yargı ve Mesleki Sorumluluk Kurulu yollarına gider)."
+   ],
+   "kaynak": "mevzuat_hhy"
+  },
+  {
+   "kurum": "Sosyal Güvenlik Kurumu (GSS denetimi)",
+   "tur": "mali",
+   "neyi": "SGK ile sözleşmeli ve diğer sağlık hizmeti sunucularının fatura, reçete ve hizmetlerini; GSS hükümlerinin uygulanmasını.",
+   "dayanak": "5510 sayılı Kanun md. 59; GSS Uygulamaları Yönetmeliği md. 42-43; 4 sayılı CBK md. 416, 418 (GSS Genel Müdürlüğü, Rehberlik ve Teftiş Başkanlığı)",
+   "nasil": [
+    "SGK defter, belge ve kayıtları hasta mahremiyetini ihlal etmeden isteyebilir; provizyon sistemleri, belge üzerinden ya da kurumda yerinde denetim yapar (ihbar-şikâyet üzerine, gerekçeli veya periyodik).",
+    "Faturalar örnekleme yöntemiyle incelenebilir; hizmet sunulmadan fatura etme veya gerçeğe aykırı belge düzenleme hallerinde idari yaptırım ve sözleşme feshi uygulanır.",
+    "Rehberlik ve Teftiş Başkanlığı, SGK ile sözleşmeli gerçek ve tüzel kişiler hakkında inceleme ve soruşturma yapar.",
+    "Ders notu örneği: SGK'nın 24,4 milyon TL'lik usulsüz faturalandırmayı ortaya çıkarması bu denetimin sonucudur."
+   ],
+   "kaynak": "mevzuat_gssuy"
+  },
+  {
+   "kurum": "Devlet Denetleme Kurulu (DDK)",
+   "tur": "idari",
+   "neyi": "Cumhurbaşkanının isteğiyle; yargı organları dışındaki tüm kamu kurumları (Sağlık Bakanlığı, SGK, kamu hastaneleri dahil), bağlı-ilgili kuruluşlar ve kamu kurumu niteliğindeki meslek kuruluşları (ör. TTB).",
+   "dayanak": "Anayasa md. 108; 5 sayılı CBK md. 1, 3, 4",
+   "nasil": [
+    "Cumhurbaşkanlığına bağlı üst denetleme organıdır; Başkan ve sekiz üyeden oluşan Kurul Karar Organı vardır.",
+    "İdarenin hukuka uygunluğu, düzenli ve verimli işlemesi için idari soruşturma, inceleme, araştırma ve denetleme yapar.",
+    "Başkan ve üyeleri Cumhurbaşkanınca atanır ve Cumhurbaşkanına karşı sorumludur."
+   ],
+   "kaynak": "mevzuat_cbk5"
+  },
+  {
+   "kurum": "Sayıştay",
+   "tur": "mali",
+   "neyi": "Merkezî yönetim bütçesindeki idarelerin (Sağlık Bakanlığı), sosyal güvenlik kurumlarının (SGK) ve diğer kamu idarelerinin gelir, gider ve mallarını; kamu kurumu niteliğindeki meslek kuruluşları hariç.",
+   "dayanak": "Anayasa md. 160; 6085 sayılı Kanun md. 1, 4, 5, 35-36",
+   "nasil": [
+    "TBMM adına düzenlilik denetimi (mali denetim + uygunluk denetimi) ve performans denetimi yapar.",
+    "Kamu zararına yol açan hesap ve işlemleri kesin hükme bağlar; sonuçları TBMM'ye raporlar.",
+    "Yerindelik denetimi yapamaz; idarenin takdir yetkisini kaldıracak karar alamaz."
+   ],
+   "kaynak": "mevzuat_6085"
+  },
+  {
+   "kurum": "Türkiye Büyük Millet Meclisi",
+   "tur": "siyasi",
+   "neyi": "Bakanların ve Cumhurbaşkanı yardımcılarının faaliyetlerini; sağlık politikası ve uygulamalarını.",
+   "dayanak": "Anayasa md. 98; TBMM İçtüzüğü md. 96-97 (yazılı soru), 101-105 (genel görüşme, Meclis araştırması); Dilekçe Komisyonu; Anayasa md. 74",
+   "nasil": [
+    "Yazılı soru: tek milletvekili imzalı önergeyle Sağlık Bakanına sorulur; en geç 15 gün içinde yazılı cevaplanır.",
+    "Meclis araştırması: belli bir konuda bilgi edinmek için kurulan özel komisyon (ör. bir salgın veya sağlık sorunu üzerine) bakanlıklardan ve meslek kuruluşlarından bilgi isteyip yerinde inceleme yapabilir; süre üç ay + bir ay.",
+    "Genel görüşme ve Meclis soruşturması; sağlık alanındaki kanun teklifleri Sağlık, Aile, Çalışma ve Sosyal İşler Komisyonunda görüşülür.",
+    "Vatandaşın dilekçesi TBMM Dilekçe Komisyonunca incelenir."
+   ],
+   "kaynak": "mevzuat_ictuzuk"
+  },
+  {
+   "kurum": "Kamu Denetçiliği Kurumu (Ombudsman)",
+   "tur": "idari",
+   "neyi": "İdarenin (Sağlık Bakanlığı, kamu hastaneleri, SGK vb.) her türlü eylem ve işlemi ile tutum ve davranışlarını, insan haklarına dayalı adalet anlayışı içinde hukuka ve hakkaniyete uygunluk yönünden.",
+   "dayanak": "Anayasa md. 74; 6328 sayılı Kanun md. 1, 5, 17, 20-21",
+   "nasil": [
+    "TBMM Başkanlığına bağlıdır; gerçek ve tüzel kişiler ücretsiz başvurur (valilik/kaymakamlık aracılığıyla da). Başvuru sahibi isterse gizli tutulur.",
+    "Önce idari başvuru yolları tüketilmelidir; idarenin cevabından veya 60 günlük cevapsızlıktan itibaren altı ay içinde başvurulur. Telafisi güç zarar ihtimalinde bu şart aranmayabilir.",
+    "İnceleme en geç altı ayda bitirilir; Kurum idareye öneride bulunur, idare uygulamayacaksa gerekçesini 30 gün içinde bildirir. Başvuru dava açma süresini durdurur.",
+    "Yargı kararları, yasama işlemleri ve TSK'nın salt askerî faaliyetleri görev alanı dışındadır."
+   ],
+   "kaynak": "mevzuat_6328"
+  },
+  {
+   "kurum": "İdari yargı (idare mahkemeleri, bölge idare mahkemeleri, Danıştay)",
+   "tur": "yargısal",
+   "neyi": "İdarenin (Bakanlık, il sağlık müdürlüğü, kamu hastanesi, SGK) eylem ve işlemlerinin hukuka uygunluğunu; idarenin sebep olduğu zararları.",
+   "dayanak": "Anayasa md. 125, 155; 2577 sayılı İdari Yargılama Usulü Kanunu md. 2, 7, 11, 13, 27",
+   "nasil": [
+    "İptal davası: yetki, şekil, sebep, konu, maksat yönünden hukuka aykırı işlemler için; tam yargı davası: idari eylem ve işlemden doğan zararın tazmini için (kamu hastanesinde hizmet kusuru iddiaları dahil).",
+    "Dava açma süresi kural olarak 60 gündür; eylemden doğan zararda önce idareye bir yıl (her halde beş yıl) içinde başvurulur.",
+    "Yürütmenin durdurulması için telafisi güç zarar ve açık hukuka aykırılık birlikte aranır; yargı yerindelik denetimi yapamaz.",
+    "Danıştay idare mahkemesi kararlarının son inceleme merciidir; Mesleki Sorumluluk Kurulu kararlarına itiraz Ankara Bölge İdare Mahkemesinedir."
+   ],
+   "kaynak": "mevzuat_2577"
+  },
+  {
+   "kurum": "İl (ve ilçe) Umumi Hıfzıssıhha Meclisi / İl Hıfzıssıhha Kurulu",
+   "tur": "idari",
+   "neyi": "İldeki genel sağlık koşullarını, salgın ve bulaşıcı hastalıklara karşı alınacak tedbirleri, çevre sağlığını.",
+   "dayanak": "1593 sayılı Umumi Hıfzıssıhha Kanunu md. 23-28",
+   "nasil": [
+    "İlde vali, ilçede kaymakam başkanlığında; sağlık müdürü, belediye başkanı, ilgili il müdürleri, hekimler ve bir serbest eczacı gibi üyelerle toplanır.",
+    "Olağan olarak ayda bir, salgında veya olağanüstü durumda daha sık toplanır.",
+    "Aldığı kararları vali veya kaymakam uygular; kararlar uygulamada 'Hıfzıssıhha Kurulu kararı' olarak yayımlanır (ör. Karabük 2026: KKKA, içme suyu klorlaması, aşırı sıcak, kanser taraması kararları)."
+   ],
+   "kaynak": "mevzuat_1593"
+  },
+  {
+   "kurum": "Türk Tabipleri Birliği ve tabip odaları",
+   "tur": "meslek",
+   "neyi": "Tabiplerin meslek deontolojisine ve meslek ahlakına uygun davranışını; üyeler arası ilişkileri.",
+   "dayanak": "Anayasa md. 135; 6023 sayılı Kanun md. 1, 4, 7, 40; ek md. 2",
+   "nasil": [
+    "Kamu kurumu niteliğinde meslek kuruluşudur; serbest çalışan tabipler odaya üye olmak zorundadır.",
+    "Oda haysiyet divanları disiplin kararı verir; itiraz Yüksek Haysiyet Divanına yapılır. Not: disiplin cezalarını sayan md. 39 AYM'nin 11/2/2025 kararıyla iptal edilmiştir.",
+    "TTB'nin kendisi de denetlenir: Sağlık Bakanlığı idari ve mali denetim/gözetim hakkına sahiptir; DDK ve Bakanlık Teftiş Kurulu kamu kurumu niteliğindeki meslek kuruluşlarını denetleyebilir; Sayıştay denetimi dışındadır."
+   ],
+   "kaynak": "mevzuat_6023"
+  },
+  {
+   "kurum": "Çalışma ve Sosyal Güvenlik Bakanlığı iş müfettişleri (iş sağlığı ve güvenliği)",
+   "tur": "idari",
+   "neyi": "İşyerlerinde iş sağlığı ve güvenliği mevzuatına uyumu (sağlık kurumları da işyeri olarak dahil).",
+   "dayanak": "6331 sayılı Kanun md. 24",
+   "nasil": [
+    "İş sağlığı ve güvenliği yönünden yetkili Bakanlık iş müfettişleri izleme ve teftiş yapar; 4857 sayılı İş Kanununun teftiş hükümleri uygulanır."
+   ],
+   "kaynak": "mevzuat_6331"
+  }
+ ],
+ "dogrulanamayan": [
+  "Sevk zincirinin yeniden zorunlu hale getirilmesi / 'e-sevk' uygulaması: Temmuz 2026'da Ankara Tabip Odası açıklamasıyla basına yansıdı; Sağlık Bakanlığı veya SGK'nın bunu düzenleyen resmî metni (RG, genelge, duyuru) bulunamadı. SUT'ta yalnız 'elektronik sevk formu' ibaresi ve 1/7/2026 katılım payı değişikliği teyit edildi.",
+  "SABİM 'Alo 184' hattının bugünkü işleyişi ve CİMER ile ilişkisi: Bakanlık ve SHGM sitelerinde 'SABİM/Alo 184' ve 'CİMER' bağlantıları duruyor, SABİM'in 01.01.2004'te kurulduğu teyit edildi; hattın CİMER'e devredildiğine dair resmî bir metin bulunamadı.",
+  "Toplum Ruh Sağlığı Merkezleri Hakkında Yönerge (16/2/2011, Onay 7364) metni okunamadı: Bakanlığın eski alt alan adı (khgmsaglikhizmetleridb.saglik.gov.tr) DNS'te çözülmüyor. TRSM tanımı yalnız bir Bakanlık hastanesi sayfasından (Sürmene DH) alındı; nüfus ölçütü vb. teyit edilemedi.",
+  "3960 sayılı Kanunun özgün adı: mevzuat.gov.tr'de güncel adı 'Kalıtsal Hastalıklarla Mücadele Kanunu'; görevde 'Kalıtsal Kan Hastalıkları' olarak geçen adın 1993'teki özgün ad olup olmadığı ve değişiklik tarihi teyit edilemedi (md. 1, 2005'te 5378 ile değişti).",
+  "Karabük teşkilat şemasındaki 'REDES İl Temsilciliği Birimi'nin açılımı ve görevi resmî bir kaynakta bulunamadı.",
+  "Taşra Teşkilatı Kadro Standartları Yönergesinin Ek-I (il gruplarına göre başkanlık/başkan yardımcısı sayıları) ve Ek-II/III tabloları OCR ile okunamadı; Karabük'ün 'İ9' grubunda olması şemadan, iki başkanlık yapısı şemadan teyit edildi, grup ölçütleri teyit edilemedi.",
+  "'İl Hıfzıssıhha Kurulu' adı: 1593 sayılı Kanun md. 23 metni 'umumi hıfzıssıhha meclisi' der; uygulamadaki 'kurul' adlandırmasının ayrı bir mevzuat dayanağı bulunamadı (Karabük sitesinde iki ad birlikte kullanılıyor).",
+  "Bakan yardımcıları ile birimler arasındaki görev dağılımı yalnız saglik.gov.tr'nin 'bağlantı gezgini' gruplamasından çıkarıldı; bunu gösteren resmî görev dağılımı onayı görülmedi.",
+  "USHAŞ'ın güncel faaliyet durumu: 663 sayılı KHK ek md. 2 yürürlükte ve Bakanlık sitesinde bağlantısı var; şirketin fiilen faal olup olmadığı ayrıca teyit edilmedi.",
+  "Kurul 5 özetlerinde 'sağlık yönetimi' başlıklı bir ders bulunamadı (kurul5.json'da yalnız 'temel sağlık hizmetleri' ve 'SAĞLIĞIN SOSYALLEŞTİRİLMESİ-DERS' var).",
+  "Ders notu–mevzuat uyumsuzluğu (teyit için not): Kurul 5 özeti 1965 tarihli nüfus planlaması kanununu '554 sayılı' diye verir; mevzuat.gov.tr'deki 2827 sayılı Kanun md. 13 ve 1593 sayılı Kanun dipnotu bu kanunu '557 sayılı' olarak verir. Ders notu 63, Bakanlık teşkilatı için 663 sayılı KHK'yi gösterir; bu hükümler 2/7/2018'de 703 sayılı KHK ile mülga olmuş, güncel dayanak 1 sayılı CBK md. 352-384'tür.",
+  "Finansmanda kamu payı (%76): Sağlık İstatistikleri Yıllığı 2024 Tablo 11.1 ve 11.2'deki tutarlardan hesaplandı; yıllıkta oran olarak doğrudan yazmıyor."
+ ]
+}

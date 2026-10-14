@@ -1,6 +1,7 @@
 import type React from 'react';
 import {
-  Baby, Building2, Bug, Factory, HeartPulse, LayoutDashboard, LineChart, MapPin, ScanSearch, Syringe, Users,
+  Baby, Building2, Bug, Factory, Gavel, HeartPulse, LayoutDashboard, LineChart, MapPin, Network, ScanSearch, Shield, Sprout, Syringe, Users,
+  Workflow, Lightbulb, BrainCircuit,
 } from 'lucide-react';
 
 /**
@@ -10,7 +11,8 @@ import {
  */
 
 export type BolumId =
-  | 'genel' | 'karabuk' | 'asi' | 'yenidogan' | 'anne_kadin' | 'tarama' | 'salgin' | 'cevre' | 'kurumlar' | 'istatistik' | 'halk_sagligi';
+  | 'genel' | 'karabuk' | 'asi' | 'yenidogan' | 'anne_kadin' | 'tarama' | 'salgin' | 'cevre' | 'kurumlar' | 'istatistik' | 'halk_sagligi'
+  | 'kavram' | 'gelistirme' | 'koruma' | 'sistem' | 'mevzuat' | 'teskilat' | 'havuz';
 
 export interface BolumTanim {
   id: BolumId;
@@ -19,20 +21,35 @@ export interface BolumTanim {
   kisa: string;
   aciklama: string;
   icon: React.ElementType;
+  /** Gezinme grubu: resmî veriler ya da sistem/kavram sayfaları */
+  grup: 'sinav' | 'veri' | 'sistem';
 }
 
+export const BOLUM_GRUPLARI: { id: BolumTanim['grup']; ad: string }[] = [
+  { id: 'sinav', ad: 'Sınav' },
+  { id: 'veri', ad: 'Veriler' },
+  { id: 'sistem', ad: 'Sistem ve kavramlar' },
+];
+
 export const BOLUMLER: BolumTanim[] = [
-  { id: 'genel', slug: '', ad: 'Genel bakış', kisa: 'Genel', aciklama: 'Türkiye ve Karabük için kilit göstergeler, bölümler ve sınavda en çok sorulan konular.', icon: LayoutDashboard },
-  { id: 'karabuk', slug: 'karabuk', ad: 'Karabük', kisa: 'Karabük', aciklama: 'İlin nüfusu, sağlık kurumları, aile hekimliği, il göstergeleri ve çevre sağlığı.', icon: MapPin },
-  { id: 'asi', slug: 'asi', ad: 'Aşı', kisa: 'Aşı', aciklama: 'Genişletilmiş Bağışıklama Programı: aşı takvimi, aşılama hızları ve aşı ile önlenebilir hastalıklar.', icon: Syringe },
-  { id: 'yenidogan', slug: 'yenidogan', ad: 'Yenidoğan', kisa: 'Yenidoğan', aciklama: 'Ulusal yenidoğan taramaları, bebek-çocuk izlemi, destek programları ve bebek ölüm göstergeleri.', icon: Baby },
-  { id: 'anne_kadin', slug: 'anne-kadin', ad: 'Kadın / Anne Sağlığı', kisa: 'Anne-Kadın', aciklama: 'Doğum öncesi bakım, gebe ve lohusa izlemi, anne ölümü, doğurganlık ve üreme sağlığı.', icon: HeartPulse },
-  { id: 'tarama', slug: 'tarama', ad: 'Erken teşhis', kisa: 'Tarama', aciklama: 'Kanser taramaları (KETEM), prenatal ve yenidoğan taramaları, tarama testinin geçerliliği.', icon: ScanSearch },
-  { id: 'salgin', slug: 'salgin', ad: 'Salgın hastalıklar', kisa: 'Salgın', aciklama: 'Bildirimi zorunlu hastalıklar, sürveyans, salgın incelemesi ve güncel bulaşıcı hastalık verileri.', icon: Bug },
-  { id: 'cevre', slug: 'cevre', ad: 'Çevre ve sağlık', kisa: 'Çevre', aciklama: 'İçme suyu ve hava kalitesi standartları, Karabük hava kalitesi, iş kazası ve meslek hastalıkları.', icon: Factory },
-  { id: 'kurumlar', slug: 'kurumlar', ad: 'Sağlık kurumları', kisa: 'Kurumlar', aciklama: 'Basamaklar, kurum ve insan gücü sayıları, sevk zinciri ve Türkiye sağlık örgütlenmesinin tarihçesi.', icon: Building2 },
-  { id: 'istatistik', slug: 'istatistik', ad: 'İstatistikler', kisa: 'İstatistik', aciklama: 'Sağlık göstergelerinin tanımı, formülü ve Türkiye seyri; gösterge hesaplayıcı ve ölüm nedenleri.', icon: LineChart },
-  { id: 'halk_sagligi', slug: 'halk-sagligi', ad: 'Halk sağlığı', kisa: 'Halk sağlığı', aciklama: 'Halk sağlığı müfredat haritası, temel sağlık hizmetleri ve Türkiye halk sağlığı tarihçesi.', icon: Users },
+  { id: 'genel', slug: '', ad: 'Genel bakış', kisa: 'Genel', aciklama: 'Türkiye ve Karabük için kilit göstergeler, bölümler ve sınavda en çok sorulan konular.', icon: LayoutDashboard, grup: 'veri' },
+  { id: 'karabuk', slug: 'karabuk', ad: 'Karabük', kisa: 'Karabük', aciklama: 'İlin nüfusu, sağlık kurumları, aile hekimliği, il göstergeleri ve çevre sağlığı.', icon: MapPin, grup: 'veri' },
+  { id: 'asi', slug: 'asi', ad: 'Aşı', kisa: 'Aşı', aciklama: 'Genişletilmiş Bağışıklama Programı: aşı takvimi, aşılama hızları ve aşı ile önlenebilir hastalıklar.', icon: Syringe, grup: 'veri' },
+  { id: 'yenidogan', slug: 'yenidogan', ad: 'Yenidoğan', kisa: 'Yenidoğan', aciklama: 'Ulusal yenidoğan taramaları, bebek-çocuk izlemi, destek programları ve bebek ölüm göstergeleri.', icon: Baby, grup: 'veri' },
+  { id: 'anne_kadin', slug: 'anne-kadin', ad: 'Kadın / Anne Sağlığı', kisa: 'Anne-Kadın', aciklama: 'Doğum öncesi bakım, gebe ve lohusa izlemi, anne ölümü, doğurganlık ve üreme sağlığı.', icon: HeartPulse, grup: 'veri' },
+  { id: 'tarama', slug: 'tarama', ad: 'Erken teşhis', kisa: 'Tarama', aciklama: 'Kanser taramaları (KETEM), prenatal ve yenidoğan taramaları, tarama testinin geçerliliği.', icon: ScanSearch, grup: 'veri' },
+  { id: 'salgin', slug: 'salgin', ad: 'Salgın hastalıklar', kisa: 'Salgın', aciklama: 'Bildirimi zorunlu hastalıklar, sürveyans, salgın incelemesi ve güncel bulaşıcı hastalık verileri.', icon: Bug, grup: 'veri' },
+  { id: 'cevre', slug: 'cevre', ad: 'Çevre ve sağlık', kisa: 'Çevre', aciklama: 'İçme suyu ve hava kalitesi standartları, Karabük hava kalitesi, iş kazası ve meslek hastalıkları.', icon: Factory, grup: 'veri' },
+  { id: 'kurumlar', slug: 'kurumlar', ad: 'Sağlık kurumları', kisa: 'Kurumlar', aciklama: 'Basamaklar, kurum ve insan gücü sayıları, sevk zinciri ve Türkiye sağlık örgütlenmesinin tarihçesi.', icon: Building2, grup: 'veri' },
+  { id: 'istatistik', slug: 'istatistik', ad: 'İstatistikler', kisa: 'İstatistik', aciklama: 'Sağlık göstergelerinin tanımı, formülü ve Türkiye seyri; gösterge hesaplayıcı ve ölüm nedenleri.', icon: LineChart, grup: 'veri' },
+  { id: 'halk_sagligi', slug: 'halk-sagligi', ad: 'Halk sağlığı', kisa: 'Halk sağlığı', aciklama: 'Halk sağlığı müfredat haritası, temel sağlık hizmetleri ve Türkiye halk sağlığı tarihçesi.', icon: Users, grup: 'sistem' },
+  { id: 'havuz', slug: 'bilgi-havuzu', ad: 'Sınav bilgi havuzu', kisa: 'Bilgi havuzu', aciklama: 'Halk Sağlığı çıkmış sorularından çıkarılan bilinmesi gereken bilgiler: konu → başlık → madde; sorulanlar, muhtemel olanlar ve güncel resmî veriler.', icon: BrainCircuit, grup: 'sinav' },
+  { id: 'kavram', slug: 'halk-sagligi-kavrami', ad: 'Halk sağlığı kavramı', kisa: 'Kavram ve ilkeler', aciklama: 'Halk sağlığının tanımı, temel ilkeleri, günümüz anlayışı, sosyal hekimlik ve sağlığı etkileyen faktörler.', icon: Lightbulb, grup: 'sistem' },
+  { id: 'gelistirme', slug: 'sagligin-gelistirilmesi', ad: 'Sağlığın geliştirilmesi', kisa: 'Sağlığı geliştirme', aciklama: 'Sağlığın geliştirilmesinde üzerinde durulması gereken bileşenler: ne demek, neden önemli, örnek, Türkiye\'deki programı.', icon: Sprout, grup: 'sistem' },
+  { id: 'koruma', slug: 'koruyucu-yaklasim', ad: 'Koruyucu yaklaşım', kisa: 'Korunma düzeyleri', aciklama: 'Sağlık sorunlarına karşı korunma düzeyleri: primordial, birincil, ikincil, üçüncül — amaç, hedef ve örnekler.', icon: Shield, grup: 'sistem' },
+  { id: 'sistem', slug: 'saglik-sistemi', ad: 'Sağlık sistemi ve işleyişi', kisa: 'Sağlık sistemi', aciklama: 'Hizmet basamakları ve sevk, aile hekimliği, Genel Sağlık Sigortası, randevu, e-Nabız, 112 ve hasta hakları.', icon: Workflow, grup: 'sistem' },
+  { id: 'mevzuat', slug: 'mevzuat', ad: 'Anayasa ve mevzuat', kisa: 'Mevzuat', aciklama: 'Sağlık hakkının anayasal dayanağı, temel kanunlar, Cumhurbaşkanlığı kararnameleri ve yönetmelikler.', icon: Gavel, grup: 'sistem' },
+  { id: 'teskilat', slug: 'teskilat-ve-denetim', ad: 'Teşkilat ve denetim', kisa: 'Teşkilat ve denetim', aciklama: 'Sağlık Bakanlığı merkez ve taşra teşkilatı, il/ilçe sağlık müdürlükleri, halk sağlığı birimleri ve denetleyici kurumlar.', icon: Network, grup: 'sistem' },
 ];
 
 export const bolumBySlug = (slug?: string): BolumTanim =>
@@ -42,7 +59,7 @@ export const bolumBySlug = (slug?: string): BolumTanim =>
 // Veri türleri (alanlar araştırma şemasından; hepsi isteğe bağlı — eksik alan bileşende atlanır)
 // ---------------------------------------------------------------------------------------------------------------
 
-export interface Kaynak { id: string; kurum: string; belge: string; yil?: number | string; url: string; erisim?: string; not?: string }
+export interface Kaynak { id: string; kurum: string; belge: string; yil?: number | string; url: string; erisim?: string; not?: string; tur?: 'ders'; deste?: string }
 export interface SeriNokta { yil: number | string; deger: number }
 export interface Formul { pay?: string; payda?: string; katsayi?: number }
 export interface Gosterge {
@@ -75,20 +92,25 @@ export interface AnneVeri {
   ureme_sagligi?: { ad: string; deger: number | string; yil?: number | string; kaynak?: string; konum?: string; ek_kaynaklar?: string[] }[];
   evlilik_oncesi?: { maddeler: string[]; kaynak?: string };
   programlar?: { ad: string; aciklama: string; kaynak?: string }[];
-  kanser_taramalari?: { kanser: string; hedef: string; yontem: string; aralik: string; not?: string; kaynak?: string }[];
+  kanser_taramalari?: { kanser: string; hedef: string; yontem: string; aralik: string; not?: string; kaynak?: string; ek_kaynaklar?: string[] }[];
   ketem?: { sayi?: number; yil?: number | string; kaynak?: string; konum?: string; detay?: string; not?: string; seri?: SeriNokta[] };
 }
 
 export interface KarabukVeri {
   dogrulanamayan?: string[];
-  nufus?: { toplam?: number; yil?: number | string; kaynak?: string; ilceler?: { ad: string; nufus: number }[]; yas_65_ustu_orani?: { deger: number; yil?: number | string; kaynak?: string } };
-  gostergeler?: Gosterge[];
-  kurum_sayilari?: { tur: string; sayi: number; yil?: number | string; yontem?: string; not?: string; adlar?: string[]; kaynak?: string; konum?: string }[];
+  nufus?: {
+    toplam?: number; yil?: number | string; kaynak?: string; seri?: SeriNokta[];
+    ilceler?: { ad: string; nufus: number; seri?: SeriNokta[] }[];
+    yas_65_ustu_orani?: { deger: number; yil?: number | string; kaynak?: string; seri?: SeriNokta[] };
+  };
+  /** il göstergeleri: seri = il yıllara göre, turkiye_seri = aynı yılların Türkiye değeri */
+  gostergeler?: (Gosterge & { turkiye_seri?: SeriNokta[]; not?: string })[];
+  kurum_sayilari?: { tur: string; sayi: number; yil?: number | string; yontem?: string; not?: string; adlar?: string[]; kaynak?: string; konum?: string; seri?: SeriNokta[] }[];
   hastaneler?: { ad: string; ilce?: string; tur?: string; not?: string; url?: string; kaynak?: string }[];
   ilceler?: { ad: string; nufus?: number; asm?: number; asm_adlari?: string[]; aile_hekimi_birimi?: number; ahb_basina_nufus?: number; hastane?: string; kaynak?: string; ek_kaynaklar?: string[] }[];
   birimler?: { ad: string; adres_ilce?: string; aciklama?: string; kaynak?: string }[];
-  cevre?: { baslik: string; deger?: number | string; birim?: string; yil?: number | string; istasyon?: string; aciklama?: string; kaynak?: string }[];
-  is_sagligi?: { ad: string; deger: number | string; yil?: number | string; aciklama?: string; kaynak?: string; konum?: string }[];
+  cevre?: { baslik: string; deger?: number | string; birim?: string; yil?: number | string; istasyon?: string; aciklama?: string; kaynak?: string; konum?: string; seri?: SeriNokta[] }[];
+  is_sagligi?: { ad: string; deger: number | string; yil?: number | string; aciklama?: string; kaynak?: string; konum?: string; seri?: SeriNokta[] }[];
   programlar?: { ad: string; aciklama: string; tarih?: string; kaynak?: string }[];
   universite?: { aciklama: string; kaynak?: string; ek_kaynaklar?: string[] };
 }
@@ -101,7 +123,7 @@ export interface TurkiyeVeri {
     kalemler?: { ad: string; yuzde: number; onceki?: { yil: number | string; yuzde: number }; alt?: string }[];
     ilk_uc_seri?: { yil: number; dolasim?: number; tumor?: number; solunum?: number; kaynak?: string }[];
   };
-  kurumlar?: { ad: string; seri?: SeriNokta[]; alt?: { ad: string; deger: number }[]; kaynak?: string; konum?: string }[];
+  kurumlar?: { ad: string; seri?: SeriNokta[]; alt?: { ad: string; deger: number }[]; alt_seri?: Record<string, SeriNokta[]>; not?: string; kaynak?: string; konum?: string }[];
   insan_gucu?: { ad: string; seri?: SeriNokta[]; kaynak?: string; konum?: string }[];
   basamaklar?: { basamak: string; kurumlar?: string[]; aciklama?: string; kaynak?: string }[];
   tarihce?: { yil: number | string; olay: string; kaynak?: string }[];
@@ -117,8 +139,62 @@ export interface TurkiyeVeri {
   is_sagligi?: { ad: string; seri?: SeriNokta[]; kaynak?: string; konum?: string }[];
 }
 
+/** Kaynak maddesi (ders kaynağıysa `slayt` deste slaytına bağlanır) */
+export interface KMadde { metin: string; kaynak?: string; konum?: string; slayt?: unknown; ek_kaynaklar?: string[] }
+
+export interface KavramVeri {
+  kavram?: {
+    tanimlar?: { baslik: string; metin: string; kaynak?: string; slayt?: unknown }[];
+    ilkeler?: { no: number; ilke: string; ne_demek?: string; ornek?: string; kaynak?: string; slayt?: unknown }[];
+    gunumuz_anlayisi?: { ilke: string; aciklama?: string; kaynak?: string; slayt?: unknown }[];
+    sosyal_hekimlik?: (KMadde | string)[];
+    uzmanlik_gorevleri?: (KMadde | string)[];
+    etkileyen_faktorler?: { gecmis?: string[]; gunumuz?: string[]; kaynak?: string; slayt?: unknown };
+    tsh_ilkeleri?: (KMadde | { ilke: string; aciklama?: string; kaynak?: string; slayt?: unknown } | string)[];
+  };
+  gelistirme?: {
+    tanim?: KMadde;
+    vurgu?: KMadde[];
+    bilesenler?: { id: string; ad: string; ne_demek?: string; neden_onemli?: string; ornekler?: string[]; turkiyede?: KMadde[]; koruma_duzeyi?: string | null; kaynak?: string; slayt?: unknown }[];
+  };
+  koruma?: {
+    duzeyler?: { id: string; ad: string; evre?: string; amac?: string; hedef?: string; ornekler?: string[]; basarili_hastaliklar?: string[]; turkiyede?: KMadde[]; kaynak?: string; slayt?: unknown }[];
+    tarama_ilkeleri?: KMadde[];
+    notlar?: (KMadde | string)[];
+  };
+  sinav?: { konu: string; soru_id: string; ozet: string }[];
+  dogrulanamayan?: string[];
+}
+
+export interface MevzuatOge { no?: string; ad: string; tarih?: string; rg?: string; durum?: string; maddeler?: KMadde[]; ders?: string; kaynak?: string; ozet?: string }
+export interface MevzuatVeri {
+  sistem?: { bolumler?: { id: string; baslik: string; ozet?: string; maddeler?: KMadde[] }[] };
+  mevzuat?: {
+    hiyerarsi?: { duzey: string; aciklama?: string; kaynak?: string }[];
+    anayasa?: { madde: string; baslik?: string; ozet?: string; alinti?: string; kaynak?: string }[];
+    kanunlar?: MevzuatOge[];
+    kararnameler?: MevzuatOge[];
+    yonetmelikler?: MevzuatOge[];
+  };
+  teskilat?: {
+    merkez?: { birim: string; gorev?: string[]; kaynak?: string }[];
+    bagli?: { birim: string; gorev?: string[]; kaynak?: string }[];
+    tasra?: { birim: string; gorev?: string[]; alt_birimler?: string[]; kaynak?: string }[];
+    karabuk?: { birim: string; aciklama?: string; kaynak?: string }[];
+    halk_sagligi_birimleri?: { birim: string; gorev?: string[]; kaynak?: string }[];
+  };
+  denetim?: { kurum: string; tur?: string; neyi?: string; dayanak?: string; nasil?: string[]; kaynak?: string }[];
+  dogrulanamayan?: string[];
+}
+
+export interface HavuzBilgi { metin: string; durum?: 'soruldu' | 'muhtemel' | 'resmi'; sorular?: string[]; kaynak?: string; slayt?: unknown; onem?: number; ek_kaynaklar?: string[] }
+export interface HavuzTablo { baslik: string; sutunlar: string[]; satirlar: (string | number | null)[][]; kaynak?: string }
+export interface HavuzBaslik { id: string; baslik: string; bilgiler: HavuzBilgi[]; tablolar?: HavuzTablo[]; tuzaklar?: string[] }
+export interface HavuzKonu { id: string; konu: string; kurul?: number | string; soru_sayisi?: number; ozet?: string; basliklar: HavuzBaslik[] }
+export interface HavuzVeri { konular?: HavuzKonu[]; anahtar_suphesi?: { soru: string; kayitli?: string; olmasi_gereken?: string; gerekce?: string }[]; dogrulanamayan?: string[] }
+
 export interface BaglantiDeste { id: string; baslik: string; kisa: string; ders: string; kurul: string; hoca?: string; slayt: number; pdf: boolean; ozet?: string; ek?: boolean }
-export interface BaglantiCapa { deste: string; kisa: string; slayt: number; baslik: string }
+export interface BaglantiCapa { deste: string; kisa: string; slayt: number; baslik: string; anlatim?: string }
 export interface BaglantiKazanim { kurul: number; ders: string; konu: string; anahtar: string; kazanimlar: { id: string; metin: string }[]; cikmis: number }
 export interface BaglantiSpot { id: string; baslik: string; spot: string; onem: number; ders: string }
 export interface BolumBaglanti {
@@ -132,6 +208,8 @@ export interface BolumBaglanti {
   desteler: BaglantiDeste[];
   capalar: Record<string, BaglantiCapa[]>;
   spotlar: BaglantiSpot[];
+  /** Bu bölümün sorularını kapsayan bilgi havuzu konuları */
+  havuz_konulari?: { id: string; konu: string; ortak: number; bilgi: number }[];
 }
 export interface MufredatKonu { kurul: number; ders: string; konu: string; anahtar: string; kazanim: number; cikmis: number; deste?: string }
 export interface Baglantilar { uretildi: string; bolumler: Partial<Record<BolumId, BolumBaglanti>>; mufredat?: MufredatKonu[] }
@@ -148,6 +226,10 @@ export interface SaglikVeri {
   karabuk: KarabukVeri;
   turkiye: TurkiyeVeri;
   baglantilar: Baglantilar;
+  kavramlar: KavramVeri;
+  mevzuat: MevzuatVeri;
+  /** Bilgi havuzu yalnız gerektiğinde yüklenir (SaglikView ekler) */
+  havuz?: HavuzVeri;
   guncelleme?: string;
 }
 
@@ -164,7 +246,9 @@ export function saglikVeriYukle(): Promise<SaglikVeri> {
       import('../../data/saglik/karabuk.json'),
       import('../../data/saglik/turkiye.json'),
       import('../../data/saglik/baglantilar.json'),
-    ]).then(([k, a, an, kb, t, b]) => {
+      import('../../data/saglik/kavramlar.json'),
+      import('../../data/saglik/mevzuat_teskilat.json'),
+    ]).then(([k, a, an, kb, t, b, kv, mv]) => {
       const kaynakDosya = def(k) as unknown as { guncelleme?: string; kaynaklar: Kaynak[] };
       const kaynaklar: Record<string, Kaynak> = {};
       for (const x of kaynakDosya.kaynaklar || []) kaynaklar[x.id] = x;
@@ -176,10 +260,21 @@ export function saglikVeriYukle(): Promise<SaglikVeri> {
         karabuk: def(kb) as unknown as KarabukVeri,
         turkiye: def(t) as unknown as TurkiyeVeri,
         baglantilar: def(b) as unknown as Baglantilar,
+        kavramlar: def(kv) as unknown as KavramVeri,
+        mevzuat: def(mv) as unknown as MevzuatVeri,
       };
     }).catch((e) => { yukP = null; throw e; });
   }
   return yukP;
+}
+
+let havuzP: Promise<HavuzVeri> | null = null;
+/** Sınav bilgi havuzu (büyük) — yalnız havuz sayfası ya da bağlantısı açılınca yüklenir */
+export function havuzYukle(): Promise<HavuzVeri> {
+  if (!havuzP) {
+    havuzP = import('../../data/saglik/havuz.json').then((m) => def(m) as unknown as HavuzVeri).catch((e) => { havuzP = null; throw e; });
+  }
+  return havuzP;
 }
 
 const soruP = new Map<BolumId, Promise<SinavSorusu[]>>();

@@ -1,0 +1,1346 @@
+{
+ "meta": {
+  "olusturma": "2026-10-14",
+  "amac": "Sağlık Bakanlığı sekmesi kavram sayfaları: (1) Halk sağlığı kavramı ve ilkeleri, (2) Sağlığın geliştirilmesi ve bileşenleri, (3) Koruyucu yaklaşım ve korunma düzeyleri",
+  "kural": "Kavram içeriği yalnız fakülte ders notu/özetlerinden; 'turkiyede' alanları yalnız resmî devlet kaynağından."
+ },
+ "kavram": {
+  "tanimlar": [
+   {
+    "baslik": "Halk sağlığının amacı",
+    "metin": "Halk sağlığı anlayışı ve çalışmaları toplumun tümünün sağlığını korumayı ve geliştirmeyi amaçlar.",
+    "kaynak": "ders-k1-18",
+    "slayt": 1,
+    "pdf_sayfa": "2-4",
+    "ek_slayt": {
+     "deste": "learn-halk-sagligi-tarihcesi-ve",
+     "slayt": 1
+    }
+   },
+   {
+    "baslik": "Winslow (1920) tanımı",
+    "metin": "Halk sağlığı; organize edilmiş toplum çalışmaları sonunda çevre sağlık koşullarını düzelterek, bireylere sağlık bilgisi vererek, bulaşıcı hastalıkları önleyerek, hastalıkların erken tanı ve tedavisini sağlayarak, sağlık örgütleri kurarak ve toplumsal çalışmaları her bireyin sağlığını sürdürecek yaşam düzeyini sağlayacak biçimde geliştirerek hastalıklardan korunmayı, yaşamın uzatılmasını, beden ve ruh sağlığı ile çalışma gücünün artırılmasını sağlayan bir bilim ve sanattır.",
+    "kaynak": "ders-k1-18",
+    "slayt": 2,
+    "pdf_sayfa": "2-4"
+   },
+   {
+    "baslik": "Nusret Fişek tanımı",
+    "metin": "Halk sağlığı; kişiyi tüm çevresi ile ele alarak sağlığını ana rahmine düştüğü andan ölümüne kadar kendi sorumluluğu içinde gören, hastalıkların oluşumunda rol oynayan fiziki, biyolojik, sosyal, kültürel, ekonomik ve psikolojik çevredeki olumsuz etmenlerin giderilmesine ve olumlu bir çevre yaratılmasına uğraşan, hasta olanları olanakların elverdiği ölçüde erken dönemde bulup tanı koymaya ve tedavi etmeye çalışan bir hizmet dalı ve bunun öğretisini yapan bir bilim dalıdır.",
+    "kaynak": "ders-k1-18",
+    "slayt": 39,
+    "pdf_sayfa": "39-45"
+   },
+   {
+    "baslik": "Winslow ile Fişek tanımının farkı",
+    "metin": "Winslow halk sağlığını 'bilim ve sanat' olarak tanımlar; Fişek ise hem bir 'hizmet dalı' hem de bunun öğretisini yapan 'bilim dalı' olarak tanımlar.",
+    "kaynak": "ders-k1-18",
+    "slayt": 39,
+    "pdf_sayfa": "39-45"
+   },
+   {
+    "baslik": "'Halk Sağlığı anlayışı'",
+    "metin": "Hekimlik ve sağlık uygulamalarını halkın içine yaymak ilkesi demek olan anlayıştır; öncelik sağlığın korunmasına verilir. 1948'de kurulan DSÖ'nün Yunanistan deneyiminden doğmuştur: hastanede iyileştirilen kötü beslenmiş çocuklar ailelerine dönünce yeniden hastalanmış, asıl nedenin yaşadıkları ortam, topluluk ve aile olduğu anlaşılmıştır.",
+    "kaynak": "ders-k1-18",
+    "slayt": 33,
+    "pdf_sayfa": "33-38",
+    "ek_slayt": {
+     "deste": "learn-halk-sagligi-tarihcesi-ve",
+     "slayt": 15
+    }
+   },
+   {
+    "baslik": "Toplum hekimliği",
+    "metin": "Tanımı ilk kez Kentucky Üniversitesinde (kurucu K.W. Deuschle) yapılmıştır: sağlık personelinden oluşan bir ekiple toplum içinde koruyucu ve tedavi edici hekimliğin nasıl uygulanacağını, toplumun sağlık sorunlarının ve öncelik derecelerinin nasıl saptanacağını ve sonuçların nasıl değerlendirileceğini öğretmek.",
+    "kaynak": "ders-k1-18",
+    "slayt": 35,
+    "pdf_sayfa": "39-45",
+    "ek_slayt": {
+     "deste": "learn-halk-sagligi-tarihcesi-ve",
+     "slayt": 16
+    }
+   },
+   {
+    "baslik": "Günümüz halk sağlığının sloganı",
+    "metin": "20. yüzyılda en büyük katkı 'insan hakları ve eşitlik' ilkelerinin kabulü olmuştur; günümüzdeki en büyük slogan 'sağlığın korunması ve hastalıkların iyileştirilmesinde fırsat eşitliği'dir.",
+    "kaynak": "ders-k1-18",
+    "slayt": 30,
+    "pdf_sayfa": "33-38"
+   },
+   {
+    "baslik": "Sağlık (DSÖ)",
+    "metin": "Sağlık; yalnızca hastalık ve sakatlığın olmayışı değil, bedensel, ruhsal ve sosyal yönden tam bir iyilik durumudur. Bu tanımın tam olarak yerine getirilmesi için sağlık eğitiminin uygulanmasına ihtiyaç vardır.",
+    "kaynak": "ders-k5-sg",
+    "slayt": null
+   },
+   {
+    "baslik": "Temel sağlık hizmetleri (Alma-Ata tanımı)",
+    "metin": "TSH; bir toplumdaki birey ve ailelerin geneli tarafından kabul edilecek yollardan, onların tam katılımı ile, ülke ve toplumca karşılanabilir bir harcama karşılığında götürülen esas sağlık hizmetidir; insanların yaşadığı ve çalıştığı yerlere mümkün olduğunca yakın, ilk başvuru yeri olan, sağlık hizmeti zincirinin birinci halkasıdır.",
+    "kaynak": "ders-k5-tsh",
+    "slayt": null
+   },
+   {
+    "baslik": "Sağlık hizmetlerinin sosyalleştirilmesi",
+    "metin": "Vatandaşların sağlık hizmetlerinden ücretsiz veya kendisine yapılan masrafın bir kısmına iştirak suretiyle eşit şekilde faydalanmasıdır. Türkiye'de 1961'de 224 sayılı kanunla başlamış, 1963'te Muş'ta uygulamaya geçmiş, 1 Ocak 1984'te tüm ülke kapsama alınmıştır.",
+    "kaynak": "ders-k1-63",
+    "slayt": 4,
+    "ek_kaynak": "ders-k5-tsh"
+   }
+  ],
+  "ilkeler": [
+   {
+    "no": 1,
+    "ilke": "Sağlık bir insanlık hakkıdır",
+    "ne_demek": "Herkes ihtiyacı olduğunda ve ihtiyacı olduğu kadar sağlık hizmeti almalı, hizmete erişimde eşit şansa sahip olmalıdır.",
+    "ornek": "Bu ilke T.C. Anayasası, DSÖ Anayasası ve İnsan Hakları Evrensel Bildirisi'nde yer alır; Grotjahn da hizmetin yalnız seçkinlerin değil halk kitlelerinin hakkı olduğunu savunmuştur.",
+    "kaynak": "ders-k1-18",
+    "slayt": 41,
+    "pdf_sayfa": "46-59, 64"
+   },
+   {
+    "no": 2,
+    "ilke": "Koruma tedaviden üstündür",
+    "ne_demek": "Sağlık hizmetlerinin ve devletin temel sorumluluğu kişilerin hasta olmamalarını sağlamaktır.",
+    "ornek": "Yunanistan deneyiminden çıkan ders: kişiyi korumak iyileştirmekten çok daha ucuzdur; sınavda 'tedavi edici hizmetler koruyucudan önceliklidir' ifadesi yanlıştır.",
+    "kaynak": "ders-k1-18",
+    "slayt": 42,
+    "pdf_sayfa": "46-59, 64"
+   },
+   {
+    "no": 3,
+    "ilke": "Kişi çevresiyle bir bütündür",
+    "ne_demek": "Çevredeki olumsuz faktörler düzeltilmeden hastalıkların kontrol edilmesi mümkün değildir.",
+    "ornek": "Yunanistan'da hastanede iyileştirilen kötü beslenmiş çocuklar aynı ortama dönünce yeniden hastalanmıştır.",
+    "kaynak": "ders-k1-18",
+    "slayt": 42,
+    "pdf_sayfa": "46-59, 64"
+   },
+   {
+    "no": 4,
+    "ilke": "Hastalıkların nedenleri sosyal, biyolojik ve fiziktir",
+    "ne_demek": "Hastalığın tek bir nedeni yoktur; sosyal, biyolojik ve fizik etmenler birlikte rol oynar.",
+    "ornek": "Grotjahn'a göre biyolojik ve fizik çevre faktörlerini oluşturan ya da etkisini koşullayan etmenler sosyal ve ekonomik etkenlerdir.",
+    "kaynak": "ders-k1-18",
+    "slayt": 43,
+    "pdf_sayfa": "46-59, 64"
+   },
+   {
+    "no": 5,
+    "ilke": "Sağlık hizmetleri kişilerin en yakınına kadar götürülmelidir",
+    "ne_demek": "Hizmet, kişinin başvurmasını beklemeden yaşadığı yere ulaştırılmalıdır.",
+    "ornek": "Nusret Fişek'in 'köylere ebe, ilçelere doktor' ulaştırma çabası; sosyalleştirilmiş hizmette mobil (halkın ayağına giden) hizmet.",
+    "kaynak": "ders-k1-18",
+    "slayt": 43,
+    "pdf_sayfa": "46-59, 64"
+   },
+   {
+    "no": 6,
+    "ilke": "Kişinin hastalığı aynı zamanda ailenin sorunudur",
+    "ne_demek": "Bir kişinin hastalığı ailesini doğrudan etkiler; çözüm aileden başlar.",
+    "ornek": "Yunanistan deneyiminden sonra önce ailelere yardım yapmak gerektiği düşünülmüştür; Grotjahn: hastalık ailesinden başlayarak bütün toplumun sorunudur.",
+    "kaynak": "ders-k1-18",
+    "slayt": 44,
+    "pdf_sayfa": "46-59, 64"
+   },
+   {
+    "no": 7,
+    "ilke": "Kişilerin sağlığı ve hastalığı aynı zamanda toplumun sorunudur",
+    "ne_demek": "Sağlık sorunları bireysel değil toplumsaldır; önlem toplum içinde alınmalıdır.",
+    "ornek": "Bir kentin su şebekesi yoksa bunu yapmaya bireyin gücü yetmez ve ishal-barsak hastalıklarının önüne geçilemez.",
+    "kaynak": "ders-k1-18",
+    "slayt": 44,
+    "pdf_sayfa": "46-59, 64"
+   },
+   {
+    "no": 8,
+    "ilke": "Sağlık hizmeti bir ekip hizmetidir",
+    "ne_demek": "Sağlık hizmeti farklı sağlık meslek üyelerinin birlikte çalışmasıyla verilir.",
+    "ornek": "Deuschle'ye göre toplum hekimliği 'sağlık personelinden oluşan bir ekiple' uygulanır; sosyalleştirilmiş hizmette ekip: hekim, hemşire, ebe, sağlık memuru, tıbbi sekreter, şoför, hizmetli.",
+    "kaynak": "ders-k1-18",
+    "slayt": 45,
+    "pdf_sayfa": "46-59, 64"
+   },
+   {
+    "no": 9,
+    "ilke": "Sağlık hizmetleri multisektöryeldir",
+    "ne_demek": "Toplumun sağlık düzeyini yükseltmek yalnız sağlık sektörünün değil pek çok kişi ve kurumun sorumluluğudur.",
+    "ornek": "Ana-babalar, öğretmenler, din görevlileri, yöneticiler, belediye çalışanları, muhtarlar, planlamacılar, tarımcılar, gıda üretip satanlar, sendikacılar, polisler, kamuya açık yerleri işletenler.",
+    "kaynak": "ders-k1-18",
+    "slayt": 45,
+    "pdf_sayfa": "46-59, 64"
+   },
+   {
+    "no": 10,
+    "ilke": "Herkes kendi sağlığından sorumludur",
+    "ne_demek": "Bireyin kendi sağlığı üzerindeki sorumluluğu, toplumun ve devletin sorumluluğunu tamamlar.",
+    "ornek": "Kişiler kendi sağlıklarından sorumlu olurlarsa sağlık hizmetlerinden daha verimli yararlanabilirler.",
+    "kaynak": "ders-k1-18",
+    "slayt": 46,
+    "pdf_sayfa": "46-59, 64"
+   },
+   {
+    "no": 11,
+    "ilke": "Yaşam doğum öncesinden ölüme kadar bir bütündür",
+    "ne_demek": "Sağlık hizmeti doğumla başlamaz; doğum öncesinden ölüme kadar kesintisiz sürer.",
+    "ornek": "Fişek tanımında halk sağlığı kişinin sağlığını 'ana rahmine düştüğü andan ölümüne kadar' sorumluluğunda görür.",
+    "kaynak": "ders-k1-18",
+    "slayt": 46,
+    "pdf_sayfa": "46-59, 64"
+   },
+   {
+    "no": 12,
+    "ilke": "En çok görülen, sakat bırakan ve öldüren hastalık 'önemli hastalık'tır",
+    "ne_demek": "Sağlık hizmetleri planlanırken kaynaklar toplumda en çok zarar veren sorunlara yöneltilmelidir.",
+    "ornek": "Bu ilke parası az ve insan gücü sınırlı gelişmekte olan ülkeler için daha da önemlidir; Grotjahn'ın ilk sosyal hekimlik ilkesinden gelir.",
+    "kaynak": "ders-k1-18",
+    "slayt": 47,
+    "pdf_sayfa": "46-59, 64"
+   },
+   {
+    "no": 13,
+    "ilke": "Halkın sağlık hizmetlerine katılımı esastır",
+    "ne_demek": "Hizmeti kullanacak halkın görüşü planlama aşamasından başlayarak alınmalıdır.",
+    "ornek": "Halkın kültürüne ve beklentilerine uygun olmayan hizmetler halk tarafından kullanılmaz.",
+    "kaynak": "ders-k1-18",
+    "slayt": 47,
+    "pdf_sayfa": "46-59, 64"
+   }
+  ],
+  "gunumuz_anlayisi": [
+   {
+    "ilke": "Toplumsal eşitlik",
+    "aciklama": "Fırsat eşitliği sloganının karşılığı; TSH'de sağlık hizmetleri doğuştan kazanılmış bir insan hakkıdır ve en uzak yerleşim yerindekiler dahil herkese sosyal adalet anlayışı içinde eşit götürülmelidir.",
+    "kaynak": "ders-k5-tsh",
+    "liste_kaynagi": {
+     "kaynak": "ders-k1-18",
+     "slayt": 50,
+     "pdf_sayfa": "60-64"
+    }
+   },
+   {
+    "ilke": "Çevre ile bütünlük",
+    "aciklama": "Kişi çevresiyle bir bütündür (13 ilkenin 3.'sü).",
+    "kaynak": "ders-k1-18",
+    "liste_kaynagi": {
+     "kaynak": "ders-k1-18",
+     "slayt": 50,
+     "pdf_sayfa": "60-64"
+    }
+   },
+   {
+    "ilke": "Yaşamın bütünlüğü",
+    "aciklama": "Yaşam doğum öncesinden ölüme kadar bir bütündür (11. ilke).",
+    "kaynak": "ders-k1-18",
+    "liste_kaynagi": {
+     "kaynak": "ders-k1-18",
+     "slayt": 50,
+     "pdf_sayfa": "60-64"
+    }
+   },
+   {
+    "ilke": "Hizmetin boyutu",
+    "aciklama": "Sağlık sosyal bir olgudur; sağlık hizmetleri yalnızca sağlık sektörü tarafından yürütülemeyecek kadar geniş boyutludur, diğer sektörlerle işbirliği ve eşgüdüm gerekir.",
+    "kaynak": "ders-k5-tsh",
+    "liste_kaynagi": {
+     "kaynak": "ders-k1-18",
+     "slayt": 50,
+     "pdf_sayfa": "60-64"
+    }
+   },
+   {
+    "ilke": "Korumaya öncelik",
+    "aciklama": "Koruma tedaviden üstündür (2. ilke).",
+    "kaynak": "ders-k1-18",
+    "liste_kaynagi": {
+     "kaynak": "ders-k1-18",
+     "slayt": 50,
+     "pdf_sayfa": "60-64"
+    }
+   },
+   {
+    "ilke": "Risk gruplarına öncelik",
+    "aciklama": "Grotjahn'ın riskli grupları: küçük çocuklar ve anneleri, okul çağı çocukları, işçiler, kimsesiz çocuklar.",
+    "kaynak": "ders-k1-18",
+    "liste_kaynagi": {
+     "kaynak": "ders-k1-18",
+     "slayt": 50,
+     "pdf_sayfa": "60-64"
+    }
+   },
+   {
+    "ilke": "Önemli hastalıklara öncelik",
+    "aciklama": "En çok öldüren, en sık görülen ve en çok sakat bırakan hastalıklar önceliklidir (12. ilke).",
+    "kaynak": "ders-k1-18",
+    "liste_kaynagi": {
+     "kaynak": "ders-k1-18",
+     "slayt": 50,
+     "pdf_sayfa": "60-64"
+    }
+   },
+   {
+    "ilke": "Toplumsal etmenler",
+    "aciklama": "Sağlık düzeyini belirleyen biyolojik ve fizik etmenleri koşullayan sosyal ve ekonomik etkenlerdir.",
+    "kaynak": "ders-k1-18",
+    "liste_kaynagi": {
+     "kaynak": "ders-k1-18",
+     "slayt": 50,
+     "pdf_sayfa": "60-64"
+    }
+   },
+   {
+    "ilke": "Entegre hizmet",
+    "aciklama": "Korunma, tedavi, rehabilitasyon ve sağlığı geliştirici hizmetler bir bütün olarak ele alınmalıdır; entegre hizmet zaman, personel, araç, yakıt ve paradan tasarruf ettirir.",
+    "kaynak": "ders-k5-tsh",
+    "liste_kaynagi": {
+     "kaynak": "ders-k1-18",
+     "slayt": 50,
+     "pdf_sayfa": "60-64"
+    }
+   },
+   {
+    "ilke": "Ekip hizmeti",
+    "aciklama": "Ekip; bilgi, beceri, yetki ve sorumluluk yönünden birbirini tamamlayarak aynı amaç için çalışan meslek üyelerinin grubudur; gerekirse hekim dışı personele öncelik verilir.",
+    "kaynak": "ders-k5-tsh",
+    "liste_kaynagi": {
+     "kaynak": "ders-k1-18",
+     "slayt": 50,
+     "pdf_sayfa": "60-64"
+    }
+   },
+   {
+    "ilke": "Sağlık–kalkınma ilişkisi",
+    "aciklama": "Alma-Ata'ya göre sağlık ekonomik ve sosyal kalkınmanın temel ögesidir; ilişki çift yönlüdür: 'Bir ülkenin ekonomisinin sağlıklı oluşu, önce halkının sağlıklı oluşuna bağlıdır.'",
+    "kaynak": "ders-k5-tsh",
+    "liste_kaynagi": {
+     "kaynak": "ders-k1-18",
+     "slayt": 50,
+     "pdf_sayfa": "60-64"
+    }
+   },
+   {
+    "ilke": "Öz sorumluluk",
+    "aciklama": "Herkes kendi sağlığının değerini bilmeli ve kendinden sorumlu olmalıdır; bunun için bireyler eğitilmeli ve bilinçlendirilmelidir.",
+    "kaynak": "ders-k5-tsh",
+    "liste_kaynagi": {
+     "kaynak": "ders-k1-18",
+     "slayt": 50,
+     "pdf_sayfa": "60-64"
+    }
+   },
+   {
+    "ilke": "Halkın katılımı",
+    "aciklama": "Toplum sağlık hizmetlerinin planlama ve uygulamasına katılmalıdır; hizmeti alanlar bilgilendirilip motive edilmemişse başarı şansı azalır.",
+    "kaynak": "ders-k5-tsh",
+    "liste_kaynagi": {
+     "kaynak": "ders-k1-18",
+     "slayt": 50,
+     "pdf_sayfa": "60-64"
+    }
+   },
+   {
+    "ilke": "Evrensellik",
+    "aciklama": "Ders notunda ayrı açıklaması yok; TSH özetinde '2000 yılında herkese sağlık' stratejisi: herkese ulaşılabilecek hizmet ağı kurulmalıdır.",
+    "kaynak": "ders-k5-tsh",
+    "liste_kaynagi": {
+     "kaynak": "ders-k1-18",
+     "slayt": 50,
+     "pdf_sayfa": "60-64"
+    }
+   },
+   {
+    "ilke": "Koşullara uygunluk",
+    "aciklama": "Hizmet modeli o ülkenin toplumuna ve koşullarına uygun olmalı; hizmetlerin her kademesinde ülkeye uygun teknoloji kullanılmalıdır.",
+    "kaynak": "ders-k5-tsh",
+    "liste_kaynagi": {
+     "kaynak": "ders-k1-18",
+     "slayt": 50,
+     "pdf_sayfa": "60-64"
+    }
+   }
+  ],
+  "gunumuz_anlayisi_not": {
+   "metin": "Toplum hekimliği anlayışının temelini Toplumsal İyilik oluşturur ve 1978 Alma-Ata Bildirgesi ile ayrıntılı tanımlanmıştır; ilkeleri yalnız sağlık personeli değil herkes bilmeli ve uygulamalıdır. İlke adları ders notundan; açıklamalar ders notunda yalnız adıyla geçenler için K5 TSH özetinden alındı.",
+   "kaynak": "ders-k1-18",
+   "slayt": 49,
+   "ek_slayt": {
+    "deste": "learn-halk-sagligi-tarihcesi-ve",
+    "slayt": 20
+   }
+  },
+  "sosyal_hekimlik": [
+   {
+    "tur": "temel_gorus",
+    "metin": "Grotjahn (1869-1931): hekimlik ve halk sağlığı uygulamaları yalnız seçkinler için değil halk kitleleri için de bir gereksinim ve haktır; kamunun bu hizmetleri sağlaması zorunludur.",
+    "kaynak": "ders-k1-18",
+    "slayt": 27,
+    "pdf_sayfa": "30-32"
+   },
+   {
+    "tur": "riskli_gruplar",
+    "metin": "Küçük çocuklar ve anneleri, okul çağı çocukları, işçiler ve kimsesiz çocuklar için bulaşıcı hastalıklardan koruma önlemleri alınmasını önermiştir; bu görüşler günümüz halk sağlığının temel ilkeleridir.",
+    "kaynak": "ders-k1-18",
+    "slayt": 28,
+    "pdf_sayfa": "30-32"
+   },
+   {
+    "tur": "ilke",
+    "no": 1,
+    "metin": "En önemli hastalıklar bir toplumda en çok öldüren, en sık görülen ve en çok sakat bırakan hastalıklardır.",
+    "kaynak": "ders-k1-18",
+    "slayt": 29,
+    "pdf_sayfa": "30-32"
+   },
+   {
+    "tur": "ilke",
+    "no": 2,
+    "metin": "Kişinin veya toplumun sağlık düzeyini belirleyen, hastalanmasına veya ölümüne neden olan biyolojik ve fizik çevre faktörlerini oluşturan ya da etkisini koşullayan etmenler sosyal ve ekonomik etkenlerdir.",
+    "kaynak": "ders-k1-18",
+    "slayt": 29,
+    "pdf_sayfa": "30-32"
+   },
+   {
+    "tur": "ilke",
+    "no": 3,
+    "metin": "Bir kimsenin hasta oluşu yalnız o kişinin değil, ailesinden başlayarak bütün toplumun sorunudur.",
+    "kaynak": "ders-k1-18",
+    "slayt": 29,
+    "pdf_sayfa": "30-32"
+   }
+  ],
+  "uzmanlik_gorevleri": [
+   {
+    "grup": "Saptama",
+    "metin": "Toplumun sağlık düzeyini, mevcut ve gelişebilecek sorunlarını, bunların nedenlerini ve sağlık gereksinmelerini bilimsel teknikler kullanarak saptamak.",
+    "kaynak": "ders-k1-18",
+    "slayt": 52,
+    "pdf_sayfa": "65-68"
+   },
+   {
+    "grup": "Politika",
+    "metin": "Halk sağlığı politikaları geliştirerek çözümler üretmek.",
+    "kaynak": "ders-k1-18",
+    "slayt": 52,
+    "pdf_sayfa": "65-68"
+   },
+   {
+    "grup": "Program",
+    "metin": "Halk sağlığı programlarının kontrol ve değerlendirmesini yapmak, yürütülmesinde görev almak.",
+    "kaynak": "ders-k1-18",
+    "slayt": 52,
+    "pdf_sayfa": "65-68"
+   },
+   {
+    "grup": "Yöneticilik",
+    "metin": "Sağlık hizmetlerinin her kademesinde yöneticilik yapmak.",
+    "kaynak": "ders-k1-18",
+    "slayt": 52,
+    "pdf_sayfa": "65-68"
+   },
+   {
+    "grup": "Araçlar",
+    "metin": "Bilgi kaynaklarına erişmek, veri toplamak ve değerlendirmek; planlama, örgütleme, personel kullanımı, yürütme, denetleme, eşgüdüm, bütçe yapma ve hizmetleri değerlendirme.",
+    "kaynak": "ders-k1-18",
+    "slayt": 53,
+    "pdf_sayfa": "65-68"
+   },
+   {
+    "grup": "Doğrudan görev alanları",
+    "metin": "Araştırıcılık, danışmanlık ve yöneticilik; koruyucu ve iyileştirici sağlık hizmetlerinin sunumu; salgınların incelenmesi; halkın sağlık eğitimi; halk sağlığı laboratuvarlarının işletilmesi.",
+    "kaynak": "ders-k1-18",
+    "slayt": 53,
+    "pdf_sayfa": "65-68"
+   }
+  ],
+  "etkileyen_faktorler": {
+   "gecmis": [
+    "Salgın hastalıklar",
+    "Beslenme bozuklukları koşulları",
+    "Kazalar",
+    "Gebelik komplikasyonları",
+    "Çocuk hastalıkları",
+    "Bağışıklığın olmaması ya da yetersiz olması",
+    "Olumsuz çevre koşulları",
+    "Harpler"
+   ],
+   "gunumuz": [
+    "Örgütlenmiş sağlık hizmetleri",
+    "Değişen ve gelişen yaşam koşulları",
+    "Sosyal yardım olanakları",
+    "Yasalar ve düzenin değişmesi",
+    "Kıtlıkla savaş",
+    "Etkin ve düzenli bağışıklama",
+    "Çevreyi olumlu hale getirme",
+    "Ana çocuk sağlığı ve aile planlamasına verilen önem"
+   ],
+   "kaynak": "ders-k1-18",
+   "slayt": {
+    "gecmis": 55,
+    "gunumuz": 56
+   },
+   "pdf_sayfa": "69-70",
+   "not": "Sınav tuzağı: 'Etkin ve düzenli bağışıklama' ve 'değişen ve gelişen yaşam koşulları' günümüzün faktörleridir, geçmişte olumsuz etkileyenler arasında sayılmaz.",
+   "belirleyiciler_k5": {
+    "maddeler": [
+     "Biyolojik belirleyiciler: fiziksel ve zihinsel özellikler anne karnında genler tarafından belirlenir.",
+     "Davranışsal ve sosyokültürel koşullar (yaşam tarzı): koroner kalp hastalığı, obezite, akciğer kanseri, madde bağımlılığı yaşam tarzıyla ilişkilidir.",
+     "Çevre: iç ve dış (makro) çevre; dış çevre fiziksel, biyolojik ve psikososyal bileşenlere ayrılır.",
+     "Sosyoekonomik koşullar: ekonomik durum (kişi başına GSMH), eğitim (ikinci önemli faktör), iş durumu (işsizlik daha yüksek hastalık-ölüm riski).",
+     "Politik sistem, sağlık hizmetleri, nüfusun yaşlanması, cinsiyet ve bilgi-iletişim teknolojisi."
+    ],
+    "kaynak": "ders-k5-ef",
+    "slayt": null
+   }
+  },
+  "tsh_ilkeleri": [
+   {
+    "grup": "Sosyalleştirilmiş sağlık hizmetlerinin özellikleri (224 sayılı kanun)",
+    "kaynak": "ders-k1-63",
+    "slayt": 5,
+    "maddeler": [
+     "Birinci basamak sağlık kurumu sağlık ocağıdır (yaklaşık 6000).",
+     "Dar bölgede (yatay) geniş kapsamlı entegre hizmet: koruyucu ve tedavi edici hizmet, adli hizmet ve çevre sağlığı birlikte.",
+     "Basamaklı (kademeli) hizmet: sağlık ocağı hastaneye sevk eder, hastane geri bildirim yapar.",
+     "Ekip hizmeti: hekim, hemşire, ebe, sağlık memuru, tıbbi sekreter, şoför, hizmetli.",
+     "Mobil hizmet: halkın ayağına giden hizmet.",
+     "Ücretsiz hizmet (Türk vatandaşlarına).",
+     "Sürekli hizmet: 24 saat / 7 gün.",
+     "Toplum katılımını öngören hizmet."
+    ]
+   },
+   {
+    "grup": "TSH'nin dört anlamı",
+    "kaynak": "ders-k5-tsh",
+    "slayt": null,
+    "maddeler": [
+     "Sağlık hizmetlerinin genelini ilgilendiren bir görüştür (sosyal eşitlik, öz sorumluluk, hizmetin boyutu, uluslararası dayanışma).",
+     "Sağlık hizmetlerinin örgütlenmesinde anahtardır.",
+     "Bir faaliyetler grubudur.",
+     "Sağlık hizmetlerinin ilk basamağıdır (koruyucu hizmetlerle evde ve ayaktan iyileştirici hizmetlerin birlikte sunulduğu ilk başvuru basamağı)."
+    ]
+   },
+   {
+    "grup": "Örgütlenmede TSH'ye uyum ilkeleri",
+    "kaynak": "ders-k5-tsh",
+    "slayt": null,
+    "maddeler": [
+     "Toplum sağlık hizmetlerine katılmalıdır.",
+     "Hizmet değişik meslek üyelerinden oluşan bir ekip tarafından verilmelidir.",
+     "Toplum içinde halkın ilk başvuruları için hizmet birimleri kurulmalıdır.",
+     "Kademeli bir hasta sevk sistemi işletilmelidir.",
+     "Korunma, tedavi, rehabilitasyon ve sağlığı geliştirici hizmetler bir bütün olarak ele alınmalıdır.",
+     "Hizmetler sürekli olmalıdır.",
+     "Risk altındakileri belirlemek için evlere ve işyerlerine uzanan bir sistem kurulmalıdır.",
+     "Hizmet modeli kişilerin kendi sağlıklarından sorumlu olmalarını desteklemelidir.",
+     "Hizmet modeli ülkenin toplumuna ve koşullarına uygun olmalıdır."
+    ]
+   },
+   {
+    "grup": "TSH faaliyetleri (minimal care — 8 hizmet)",
+    "kaynak": "ders-k5-tsh",
+    "slayt": null,
+    "maddeler": [
+     "Halkın sağlık eğitimi",
+     "Beslenme durumunun geliştirilmesi",
+     "Temiz su sağlama ve sanitasyon",
+     "Ana-çocuk sağlığı ve aile planlaması",
+     "Başlıca hastalıklara karşı bağışıklama",
+     "Sık görülen hastalıkların uygun tedavisi",
+     "Endemik hastalıkların kontrolü",
+     "Temel ilaçların sağlanması"
+    ]
+   },
+   {
+    "grup": "Alma-Ata'nın TSH görüşünü belirleyen 6 temel önerisi (22 öneriden)",
+    "kaynak": "ders-k5-tsh",
+    "slayt": null,
+    "maddeler": [
+     "Sağlık, ekonomik ve sosyal kalkınmanın temel ögesidir (çift yönlü ilişki).",
+     "Toplum sağlık hizmetlerinin planlama ve uygulamasına katılmalıdır.",
+     "Sağlık hizmetlerinde sektörler arası işbirliği temeldir (Milli Eğitim, belediyeler, Tarım, Çevre, Diyanet, medya, DSİ vb.).",
+     "Hizmetler herkese kabul edebilecekleri biçimde ve entegre olarak verilmelidir.",
+     "Ekip anlayışı içinde hekim dışı personel kullanımına önem, gerekirse öncelik verilmelidir.",
+     "Hizmetlerin her kademesinde ülkeye uygun teknoloji kullanılmalıdır."
+    ]
+   }
+  ]
+ },
+ "gelistirme": {
+  "tanim": {
+   "metin": "Sağlığın geliştirilmesi; bireyin ve toplumun sağlığını korumak ya da iyileştirmek için hem bireylerin hem de sivil toplum kuruluşları, kamu kurum ve kuruluşlarının birlikte çaba sarf ederek toplumsal farkındalık oluşturduğu bir süreçtir.",
+   "kaynak": "ders-k5-sg",
+   "slayt": null,
+   "ottawa_tanimi": "Ottawa Sözleşmesine göre: 'Bireylerin sağlıkları üzerindeki kontrolünü artırmaya ve sağlıklarını geliştirmeye olanak sağlayan bir süreç'."
+  },
+  "vurgu": [
+   {
+    "metin": "Koruyucu hekimliğin biraz negatif anlamı vardır: insanları yararlı şeyleri yapmaya teşvikten çok, zararlı ama hoşlarına giden şeylerden alıkoymaya çalışır; bu nedenle halk sağlığının ya da koruyucu hekimliğin pozitif algılanması ve benimsetilmesi güçleşir.",
+    "kaynak": "ders-k1-18",
+    "slayt": 57,
+    "pdf_sayfa": "71-74"
+   },
+   {
+    "metin": "Sağlığı geliştirme programları sağlık sorunu ortaya çıkmadan önce sorunun sebebini önlemek veya gidişatını değiştirmek için eyleme geçer; sağlığı geliştirme bu seviyede birincil korunma adını alır, bunu ikincil ve üçüncül koruma izler.",
+    "kaynak": "ders-k5-sg"
+   },
+   {
+    "metin": "Diğer yaklaşımlardan farkı: insanların sağlığını ve refahını etkileyen ortamlara odaklanır, bu faktörleri koordine biçimde ele alır; bireyle birlikte toplumu, kamu kurumlarını ve sivil toplum örgütlerini işin içine katar.",
+    "kaynak": "ders-k5-sg"
+   },
+   {
+    "metin": "Sağlık eğitimi ile ayrımı: sağlık eğitimi birey bazındadır (sigara içmeme/bırakma eğitimi gibi); sağlığı geliştirme ise özellikle başkalarının sağlığı için tehlikeli davranışları (kamuya açık alanda sigara, tehlikeli araç kullanma) etkilemeye yönelik ekonomik ve yasal düzenlemeleri de kapsar.",
+    "kaynak": "ders-k5-sg"
+   },
+   {
+    "metin": "Sektörler arası işbirliği halk sağlığının temel ilkelerinden biridir; sağlık sorunlarında fiziksel, sosyal ve kültürel faktörler rol oynadığı için toplumun sağlık düzeyini yükseltmede her sektörün sorumluluğu vardır.",
+    "kaynak": "ders-k5-sg"
+   }
+  ],
+  "ottawa": {
+   "metin": "Sağlığın geliştirilmesi 1986'da Kanada'da (Ottawa, 17-21 Kasım 1986) düzenlenen ilk uluslararası konferansla dünya çapında kabul görmüştür; konferans '2000 yılına kadar herkes için sağlık' amacıyla toplanmış, kavram, ön koşullar, öncelikli eylem alanları, ilkeler ve yaklaşımlar açıklanmıştır.",
+   "eylem_alanlari": [
+    "Sağlıklı kamu politikası oluşturmak (mevzuat, mali tedbirler, vergilendirme, kurumsal değişim)",
+    "Destekleyici çevreler yaratmak",
+    "Topluluk eylemini güçlendirmek",
+    "Kişisel beceriler geliştirmek (merkezinde sağlık okuryazarlığı)",
+    "Sağlık hizmetlerini yeniden yönlendirmek (sorumluluk bireyler, topluluklar, sağlık çalışanları, kurumlar ve hükümetler arasında paylaşılır)"
+   ],
+   "kaynak": "ders-k5-sg"
+  },
+  "konferanslar": {
+   "maddeler": [
+    "1. Ottawa Sözleşmesi (1986)",
+    "2. Adelaide Tavsiyeleri (1988) — sağlıklı kamu politikaları",
+    "3. Sundsvall Bildirgesi (1991) — sağlığı destekleyen çevreler; 81 ülke",
+    "4. Jakarta Bildirgesi (1997) — ilk kez gelişmekte olan ülkede ve ilk kez özel sektör dahil",
+    "5. Meksika Bildirgesi (2000) — hakkaniyet boşluğunun kapatılması",
+    "6. Bangkok Şartı (2005) — sağlığın belirleyicileri",
+    "7. Nairobi Bildirisi (2009) — Afrika'da; ilk kez ağız sağlığına yüksek önem",
+    "8. Helsinki Bildirisi (2013) — 'Tüm politikalarda sağlık'",
+    "9. Şanghay Bildirisi (2016) — Sürdürülebilir Kalkınma Hedeflerinde sağlığın geliştirilmesi"
+   ],
+   "kaynak": "ders-k5-sg"
+  },
+  "ortaya_cikis_faktorleri": {
+   "maddeler": [
+    "Bulaşıcı olmayan hastalıkların artışı (DSÖ'ye göre Türkiye'de ölümlerin ~%85'i)",
+    "Yeni enfeksiyon hastalıklarının ortaya çıkışı ve kontrol altındakilerde tekrar epidemiler",
+    "Bazı bölgelerde doğuşta beklenen yaşam süresinin düşmesi",
+    "Çevresel değişimler (iklim değişikliği, biyoçeşitlilik kaybı)",
+    "Sağlığın sosyal belirleyicileri",
+    "Sağlık eğitimi programlarının etkisinin sınırlılığı"
+   ],
+   "kaynak": "ders-k5-sg"
+  },
+  "stratejiler": {
+   "maddeler": [
+    "Bireyleri güçlendirme (sağlık okuryazarlığı, sağlıklı davranış kazanma)",
+    "Toplumu güçlendirme",
+    "Sağlık sistemini güçlendirme",
+    "Kapasite geliştirme",
+    "Sektörler arası işbirliği"
+   ],
+   "kaynak": "ders-k5-sg"
+  },
+  "etkiler": {
+   "kisa_donem": [
+    "Sağlıkla ilgili risk faktörlerinin azalması"
+   ],
+   "orta_donem": [
+    "Koruyucu sağlık hizmetlerine talebin artması",
+    "Olumlu sağlık davranışlarının geliştirilmesi",
+    "Yaşam biçimlerinin düzenlenmesi",
+    "Bireylerin sağlıklarına sahip çıkma konusunda güvenlerinin artması",
+    "Sağlıklı çevre değişiklikleri"
+   ],
+   "uzun_donem": [
+    "Hastalıkların azalması",
+    "Yaşamın uzaması",
+    "Yaşam kalitesinin artması",
+    "Sağlık hizmetlerinde kalitenin artması",
+    "Sonuçta sağlıklı toplum"
+   ],
+   "kaynak": "ders-k5-sg",
+   "not": "Sınavda sık sorulur (kısa/orta/uzun dönem ayrımı)."
+  },
+  "bilesenler_baslik": {
+   "metin": "Sağlığın Geliştirilmesinde Üzerinde Durulması Gereken Komponentler",
+   "kaynak": "ders-k1-18",
+   "slayt": [
+    57,
+    58
+   ],
+   "pdf_sayfa": "71-74",
+   "not": "Başlık K1 Halk Sağlığı Tarihçesi ders özetinde (summaries/kurul1.json, bölüm 15) geçer; K5 'sağlığın gelştilmrsi 2026' özetinde bu başlık yoktur."
+  },
+  "bilesenler": [
+   {
+    "id": "guvenilir-cevre",
+    "no": 1,
+    "ad": "Güvenilir çevre",
+    "alt_maddeler": [
+     "Atıkların insan sağlığına zararsız hale getirilmesi",
+     "İçme ve kullanma suyunun steril olarak temin edilmesi",
+     "Beslenme hijyeninin geliştirilmesi",
+     "Sağlıklı konutlar ve güvenli ortam"
+    ],
+    "ne_demek": "İnsanın yaşadığı suyun, atığın, besinin ve konutun sağlığa zarar vermeyecek biçimde düzenlenmesidir.",
+    "neden_onemli": "Ders notuna göre kişi çevresiyle bir bütündür ve çevredeki olumsuz faktörler düzeltilmeden hastalıklar kontrol edilemez; su ile bulaşan salgınların en önemlileri kolera ve tifodur. Kentin su şebekesini birey kuramaz, önlem toplum içinde alınmalıdır.",
+    "neden_onemli_dayanak": "dolayli (ilke 3, Yunanistan/su şebekesi, kolera-tifo bölümü)",
+    "ornekler": [
+     "John Snow 1854 Broad Street kolera salgınında suyun önemini gösterdi ve 'çevre sağlığı' biliminin başlatıcısı oldu.",
+     "Belediyelerin sağlıkla ilgili görevleri: çöplerin toplanması, içme suyu temini, kanalizasyon veya foseptik sistemi, binalara ruhsat (ders-k1-63, slayt 9).",
+     "Ebubekir Razi Bağdat'ta hastane yerini, ağaç dallarına astırdığı etin en geç kokuştuğu yer olarak seçti."
+    ],
+    "turkiyede": [
+     {
+      "metin": "İçme-kullanma suyunun dezenfeksiyonu (serbest klor) ve parametre sınır değerleri Sağlık Bakanlığının İnsani Tüketim Amaçlı Sular Hakkında Yönetmeliği ve EK-1'i ile düzenlenir.",
+      "kaynak": "mevzuat_su"
+     },
+     {
+      "metin": "Tıbbi atıkların çevreye ve insan sağlığına zarar vermeden kaynağında ayrı toplanması, taşınması, geçici depolanması ve bertarafı Tıbbi Atıkların Kontrolü Yönetmeliği (RG 25/1/2017) ile düzenlenir.",
+      "kaynak": "rg_tibbiatik2017"
+     }
+    ],
+    "koruma_duzeyi": "birincil",
+    "koruma_dayanagi": "Ders notundaki birincil korunma önlemleri: 'çevreyi olumlu hale getirme', 'yiyecek ve içecekleri sağlığa uygun hale getirme', 'el ve beden temizliğinin sürdürülmesi' (slayt 63).",
+    "kaynak": "ders-k1-18",
+    "slayt": 57,
+    "pdf_sayfa": "71-74"
+   },
+   {
+    "id": "bagisikligin-artirilmasi",
+    "no": 2,
+    "ad": "Bağışıklığın artırılması",
+    "alt_maddeler": [],
+    "ne_demek": "Toplumun hastalıklara karşı bağışık hale getirilmesi, yani bağışıklamadır.",
+    "neden_onemli": "Ders notunda 'bağışıklığın olmaması ya da yetersiz olması' geçmişte sağlığı olumsuz etkileyen faktörlerdendir; günümüzde karşılığı 'etkin ve düzenli bağışıklama'dır.",
+    "neden_onemli_dayanak": "dolayli (sağlığı etkileyen faktörler tablosu)",
+    "ornekler": [
+     "Jenner, Osmanlıların uyguladığı çiçek bağışıklamasını geliştirerek 1797'de çiçek aşısını uyguladı.",
+     "Von Behring 1890'da difteri antitoksinini buldu.",
+     "Calmette ve Guérin'in BCG aşısı 1921'den sonra uygulanmaya başladı."
+    ],
+    "turkiyede": [
+     {
+      "metin": "Sağlık Bakanlığı Genişletilmiş Bağışıklama Programı (GBP) genelgeyle yürütülür (2009/17 sayılı Daimi Genelge).",
+      "kaynak": "sb-gbp-genelge-2009"
+     },
+     {
+      "metin": "Çocukluk dönemi aşı takviminde 13 hastalığa karşı rutin aşılama yapılır: difteri, boğmaca, tetanos, çocuk felci, hepatit B, hepatit A, Hib, tüberküloz, kızamık, kabakulak, kızamıkçık, suçiçeği ve pnömokok.",
+      "kaynak": "sb-portal-asi-takvimi"
+     }
+    ],
+    "koruma_duzeyi": "birincil",
+    "koruma_dayanagi": "Ders notu 'bağışıklama'yı birincil korunma önlemleri arasında açıkça sayar (slayt 63); sınavda 'aşı yapmak' birincil koruma olarak soruldu.",
+    "kaynak": "ders-k1-18",
+    "slayt": 58,
+    "pdf_sayfa": "71-74"
+   },
+   {
+    "id": "olumlu-saglik-davranisi",
+    "no": 3,
+    "ad": "Olumlu sağlık davranışı",
+    "alt_maddeler": [
+     "Dengeli beslenme",
+     "Sigara içmeme",
+     "Alkol kullanmama",
+     "Stresin denetlenmesi",
+     "Şiddetten kaçınılması"
+    ],
+    "ne_demek": "Kişinin günlük yaşamında sağlığını koruyan alışkanlıkları edinmesi ve zararlı olanlardan uzak durmasıdır.",
+    "neden_onemli": "Ders notuna göre herkes kendi sağlığından sorumludur ve sorumluluk alan kişi sağlık hizmetlerinden daha verimli yararlanır. K5 özetine göre bireyler zararlarını bildikleri halde sigara içmeye, tuzlu yemeye, spor yapmamaya devam ettiğinden yalnız bilgi vermeye dayalı eğitim sınırlı kalır.",
+    "neden_onemli_dayanak": "dolayli (ilke 10; K5 'sağlık eğitimi programlarının etkisinin sınırlılığı')",
+    "ornekler": [
+     "Primordial korunma örneği: çocukların sigara kullanmasını engellemek için okul eğitimleri.",
+     "K5: sağlığı geliştirme stratejileri orta dönemde olumlu sağlık davranışlarının geliştirilmesine ve yaşam biçimlerinin düzenlenmesine yol açar.",
+     "K5 TSH: DSÖ Avrupa hedeflerinde dengeli beslenme, sigaranın azaltılması, uygun fiziksel faaliyet ve stresin denetlenmesi 'olumlu sağlık davranışı' hedefidir."
+    ],
+    "turkiyede": [
+     {
+      "metin": "Sağlıklı Hayat Merkezi (SHM), aile ve toplum sağlığı merkezlerinin birinci basamak hizmetlerini güçlendirmek, sağlığa yönelik risklerden birey ve toplumu korumak ve sağlıklı yaşam tarzını teşvik etmek amacıyla kurulan birimdir.",
+      "kaynak": "rg_tsm2018"
+     },
+     {
+      "metin": "SHM görevleri arasında sağlıklı beslenme danışmanlığı, bireye özel fiziksel aktivite ve egzersiz programları, kronik hastalık risk faktörlerine yönelik danışmanlık, sağlık okuryazarlığı ve sigara bırakma dahil psikososyal destek faaliyetleri sayılır (md. 41).",
+      "kaynak": "rg_tsm2018"
+     },
+     {
+      "metin": "Türkiye Sağlıklı Beslenme ve Hareketli Hayat Programı 2010'dan beri güncellenerek uygulanır; güncel Obezite ile Mücadele ve Fiziksel Aktivite Eylem Planı 2025-2028'dir.",
+      "kaynak": "sb_obezite_eylem_2025"
+     }
+    ],
+    "koruma_duzeyi": "birincil",
+    "koruma_dayanagi": "Ders notundaki birincil önlemler: 'yeterli ve dengeli beslenme', 'sigara içme ve alkol alma gibi kötü alışkanlıklardan kaçınma' (slayt 63). Riskli yaşam özelliğinin toplumda hiç oluşmaması hedeflenirse (örn. çocuklara sigara karşıtı okul eğitimi) primordial korunmaya girer (slayt 62).",
+    "kaynak": "ders-k1-18",
+    "slayt": 58,
+    "pdf_sayfa": "71-74"
+   },
+   {
+    "id": "saglikli-beslenme",
+    "no": 4,
+    "ad": "Sağlıklı beslenme",
+    "alt_maddeler": [],
+    "ne_demek": "Yeterli ve dengeli beslenmenin topluma yaygınlaştırılmasıdır.",
+    "neden_onemli": "Ders notuna göre James Lind'in 1753'teki skorbüt deneyiyle taze meyve-sebze tüketiminin, yani dengeli beslenmenin hastalıklardan korunmadaki etkisi gündeme gelmiştir; DSÖ'nün Yunanistan deneyiminde en önemli sorun bebek ve çocuklarda kötü beslenmeydi.",
+    "neden_onemli_dayanak": "dolayli (skorbüt ve Yunanistan bölümleri)",
+    "ornekler": [
+     "James Lind (1753): limon ve portakalla skorbütün iyileştiğini klinik deneyle kanıtladı.",
+     "Kommodor Anson seferinde (1740) tayfaların %54'ü (1051 kişi) skorbütten öldü.",
+     "TSH 'minimal care' hizmetlerinden biri beslenme durumunun geliştirilmesidir (K5)."
+    ],
+    "turkiyede": [
+     {
+      "metin": "Türkiye Sağlıklı Beslenme ve Hareketli Hayat Programı ile toplumun her kesiminde sağlıklı beslenme ve fiziksel aktivitenin artırılması hedeflenir.",
+      "kaynak": "sb_obezite_eylem_2025"
+     },
+     {
+      "metin": "Demir Gibi Türkiye Programı: anemisi olmayan term bebeklere 4. aydan 12. aya kadar demir desteği (Nisan 2004'ten beri).",
+      "kaynak": "sb_demirgibi_web"
+     },
+     {
+      "metin": "D Vitamini Eksikliği Önleme ve Kontrol Programı: beslenme biçimine bakılmaksızın tüm yenidoğanlara günde 400 IU D vitamini; Mayıs 2005'ten beri ülke genelinde ücretsiz.",
+      "kaynak": "sb_dvit_web"
+     },
+     {
+      "metin": "İyot yetersizliğine karşı sofra tuzunun iyotlanması programı (1994'ten beri).",
+      "kaynak": "sb_iyot"
+     }
+    ],
+    "koruma_duzeyi": "birincil",
+    "koruma_dayanagi": "Ders notu 'yeterli ve dengeli beslenme'yi birincil korunma önlemleri arasında ilk sırada sayar (slayt 63); obezitenin engellenmesi ise primordial örnektir (slayt 62).",
+    "kaynak": "ders-k1-18",
+    "slayt": 58,
+    "pdf_sayfa": "71-74"
+   },
+   {
+    "id": "saglikli-dogum",
+    "no": 5,
+    "ad": "Bebeklere sağlıklı doğum sağlanması",
+    "alt_maddeler": [],
+    "ne_demek": "Gebeliğin ve doğumun anne ve bebek için güvenli geçmesinin sağlanmasıdır.",
+    "neden_onemli": "Ders notunda gebelik komplikasyonları ve çocuk hastalıkları geçmişte sağlığı olumsuz etkileyen faktörlerdendir; günümüzde karşılığı ana çocuk sağlığı ve aile planlamasına verilen önemdir. Yaşam doğum öncesinden ölüme kadar bir bütündür (11. ilke).",
+    "neden_onemli_dayanak": "dolayli (faktörler tablosu, ilke 11)",
+    "ornekler": [
+     "Birincil korunma önlemleri: gebelik ve doğum komplikasyonlarını önleme, düşük doğum ağırlıklı bebek doğumlarının azaltılması, akraba evliliklerinin önlenmesi, aile planlaması.",
+     "Fişek tanımında sağlık 'ana rahmine düştüğü andan' itibaren halk sağlığının sorumluluğundadır.",
+     "TSH 'minimal care' hizmetlerinden biri ana-çocuk sağlığı ve aile planlamasıdır (K5)."
+    ],
+    "turkiyede": [
+     {
+      "metin": "Gebe izlemleri Sağlık Bakanlığı Doğum Öncesi Bakım Yönetim Rehberi (SB Yayın No 1402) ile standartlaştırılmıştır.",
+      "kaynak": "sb_dob_2026"
+     },
+     {
+      "metin": "Gebe Okulu: gebelerin doğum öncesi, doğum ve doğum sonrası konularda bilgilenmesi ve bilinçli doğum yapması için birinci basamakta (SHM vb.) ve hastanelerde açılan okullar.",
+      "kaynak": "sb_gebe_okulu_web"
+     },
+     {
+      "metin": "Gebelere demir ve D vitamini desteği (2020/4 sayılı genelge).",
+      "kaynak": "sb_gebe_nutrisyonel"
+     },
+     {
+      "metin": "Anne Dostu Hastane Programı: normal doğumun desteklenmesi; 2018/27 sayılı genelge.",
+      "kaynak": "sb_anne_dostu_web"
+     },
+     {
+      "metin": "Misafir Anne Uygulaması: ulaşım veya iklim nedeniyle doğumda sağlık kuruluşuna ulaşamayabilecek gebeler doğumdan önce konaklatılıp hastanede doğum yapmaları sağlanır (2008/29 sayılı genelge).",
+      "kaynak": "sb_misafir_anne_web"
+     },
+     {
+      "metin": "Evlilik Öncesi Danışmanlık: akraba evliliği ve kalıtsal kan hastalıkları dahil danışmanlık; 1 Kasım 2018'den beri 81 ilde evlilik öncesi hemoglobinopati taraması.",
+      "kaynak": "sb_evlilik_oncesi_web"
+     }
+    ],
+    "koruma_duzeyi": "birincil",
+    "koruma_dayanagi": "Ders notundaki birincil önlemler: 'gebelik ve doğum komplikasyonlarını önleme', 'düşük doğum ağırlıklı bebek doğumlarının azaltılması', 'akraba evliliklerinin önlenmesi', 'aile planlaması' (slayt 63).",
+    "kaynak": "ders-k1-18",
+    "slayt": 58,
+    "pdf_sayfa": "71-74"
+   },
+   {
+    "id": "surekli-saglik-bakimi",
+    "no": 6,
+    "ad": "Sürekli ve dikkatli sağlık bakımı",
+    "alt_maddeler": [],
+    "ne_demek": "Kişinin sağlık bakımının kesintisiz ve özenli biçimde sürdürülmesidir.",
+    "neden_onemli": "Ders notunda bu bileşen için ayrı açıklama yok. İlgili ders bilgisi: sosyalleştirilmiş hizmetin özelliklerinden biri 24 saat/7 gün sürekli hizmettir (ders-k1-63); TSH örgütlenme ilkelerine göre hizmetler sürekli olmalıdır (K5).",
+    "neden_onemli_dayanak": "dolayli (K1-63 slayt 5; K5 TSH)",
+    "ornekler": [
+     "Sosyalleştirilmiş hizmette 'sürekli hizmet: 24 saat/7 gün' ve 'basamaklı hizmet: sevk ve geri bildirim' (ders-k1-63, slayt 5).",
+     "2010'dan beri birinci basamak kuruluşu aile sağlığı merkezleridir (ders-k1-63, slayt 12)."
+    ],
+    "turkiyede": [
+     {
+      "metin": "5258 sayılı Aile Hekimliği Kanunu (2004; adı 2011'de 'Aile Hekimliği Kanunu' oldu).",
+      "kaynak": "mevzuat_5258"
+     },
+     {
+      "metin": "Bebek, Çocuk ve Ergen İzlem Protokolleri (SB Yayın No 1417) doğumdan ergenliğe izlem takvimini belirler.",
+      "kaynak": "sb_bce_2026"
+     },
+     {
+      "metin": "15-49 Yaş Kadın İzlem Programı: aile hekimlerince doğurganlık çağındaki kadınların izlenmesi.",
+      "kaynak": "sb_1549_web"
+     },
+     {
+      "metin": "Doğum Sonu Bakım Programı: doğumdan 42. güne kadar; doğumun yapıldığı kuruluşta en az 3, taburculuk sonrası aile hekimince en az 3 izlem.",
+      "kaynak": "sb_dsb_program"
+     }
+    ],
+    "koruma_duzeyi": null,
+    "koruma_dayanagi": "Ders notu bu bileşeni bir korunma düzeyiyle eşleştirmez.",
+    "kaynak": "ders-k1-18",
+    "slayt": 58,
+    "pdf_sayfa": "71-74"
+   }
+  ]
+ },
+ "koruma": {
+  "giris": {
+   "metin": "Sağlık sorunlarına karşı koruyucu yaklaşım dört düzeyde ele alınır: primordial, birincil, ikincil ve üçüncül korunma.",
+   "kaynak": "ders-k1-18",
+   "slayt": 60
+  },
+  "duzeyler": [
+   {
+    "id": "primordial",
+    "ad": "Primordial korunma",
+    "evre": "Risk faktörü toplumda oluşmadan önce: hastalık riskini artıran sosyal, ekonomik ve kültürel yaşam özelliklerinin oluşması engellenir.",
+    "amac": "Hastalık riskini arttırıcı sosyal, ekonomik ve kültürel yaşam özelliklerinin oluşmasını önlemek.",
+    "hedef": "Tüm nüfus ve seçilmiş gruplar; mücadele hastalıklara yol açan altta yatan nedenlerle yapılır, sürekli devlet desteği şarttır.",
+    "ornekler": [
+     "Obezitenin engellenmesi",
+     "Çocukların sigara kullanmalarını engellemek için okul eğitimleri"
+    ],
+    "gerekce": [
+     "Son yıllarda tanımlanmıştır; kronik hastalıklarla ilişkili epidemiyolojik çalışmalar bu alanı öne çıkarmıştır.",
+     "Koroner kalp hastalığı büyük ölçüde doymuş hayvansal yağdan zengin diyet varlığında ortaya çıkar.",
+     "Çin ve Japonya'da sigaranın başlattığı akciğer kanseri artmakta, yüksek kan basıncına bağlı inme sık görülmektedir.",
+     "KKH, KOAH ve kanserlerin olumsuz etkenleri 'Etkili Bir Temel Koruma' için devlet desteğinin sürekli ve şart olduğunu gösterir."
+    ],
+    "basarili_hastaliklar": [],
+    "turkiyede": [
+     {
+      "metin": "Türkiye Sağlıklı Beslenme ve Hareketli Hayat Programı — Obezite ile Mücadele ve Fiziksel Aktivite Eylem Planı 2025-2028; 'Çocukluk Çağı Obezitesinin Önlenmesi' bölümünde 'Okul Öncesinde ve Okullarda Sağlıklı Çevrelerin Teşvik Edilmesi' stratejisi yer alır.",
+      "kaynak": "sb_obezite_eylem_2025"
+     }
+    ],
+    "kaynak": "ders-k1-18",
+    "slayt": [
+     60,
+     61,
+     62
+    ],
+    "pdf_sayfa": "75-91",
+    "ek_slayt": {
+     "deste": "learn-halk-sagligi-tarihcesi-ve",
+     "slayt": 22
+    }
+   },
+   {
+    "id": "birincil",
+    "ad": "Birincil korunma",
+    "evre": "Hastalık oluşmadan: hastalığın oluşmasını etkileyen etmenlerden kaçınılır (K1 özet tablosu: 'hastalık oluşmadan').",
+    "amac": "Hastalığın prevalans ve insidansını düşürmek, şiddetini değiştirmek, vakitsiz ölümleri önlemek ve sağlıkla ilgili tehditleri ortadan kaldırmak; böylece ailenin ve toplumun sağlıklı yaşam kalitesi yükselir.",
+    "hedef": "Henüz hastalanmamış kişi ve toplum (ders notu ayrı bir hedef grubu tanımlamaz; özet tablosunda 'hastalık oluşmadan').",
+    "ornekler": [
+     "Yeterli ve dengeli beslenme",
+     "Gebelik ve doğum komplikasyonlarını önleme",
+     "Yol, iş ve ev kazalarından korunma",
+     "Çevreyi olumlu hale getirme",
+     "Bağışıklama",
+     "Aile planlaması",
+     "Sigara ve alkol gibi kötü alışkanlıklardan kaçınma",
+     "El ve beden temizliğinin sürdürülmesi",
+     "Düşük doğum ağırlıklı bebek doğumlarının azaltılması",
+     "Akraba evliliklerinin önlenmesi",
+     "Yiyecek ve içecekleri sağlığa uygun hale getirme",
+     "İşçileri iş yerlerinde tehlikeli ve zehirli maddelere karşı korumak"
+    ],
+    "basarili_hastaliklar": [
+     "Alkolizm",
+     "Dejeneratif eklem hastalıkları",
+     "Diyabet",
+     "Romatizmal kalp hastalıkları",
+     "Diş çürükleri",
+     "Kanser",
+     "Arterioskleroz"
+    ],
+    "turkiyede": [
+     {
+      "metin": "Bağışıklama: Genişletilmiş Bağışıklama Programı; çocukluk dönemi aşı takviminde 13 hastalığa karşı rutin aşılama.",
+      "kaynak": "sb-portal-asi-takvimi"
+     },
+     {
+      "metin": "Akraba evliliğinin önlenmesi: Evlilik Öncesi Danışmanlık (akraba evliliği ve kalıtsal kan hastalıkları danışmanlığı).",
+      "kaynak": "sb_evlilik_oncesi_web"
+     },
+     {
+      "metin": "Gebelik komplikasyonları / DDA: gebelere demir ve D vitamini desteği (2020/4 sayılı genelge).",
+      "kaynak": "sb_gebe_nutrisyonel"
+     },
+     {
+      "metin": "Yiyecek-içeceklerin sağlığa uygun hale getirilmesi: İnsani Tüketim Amaçlı Sular Hakkında Yönetmelik (dezenfeksiyon, parametre sınır değerleri).",
+      "kaynak": "mevzuat_su"
+     },
+     {
+      "metin": "İşçilerin tehlikeli maddelerden korunması: 6331 sayılı İş Sağlığı ve Güvenliği Kanunu (2012).",
+      "kaynak": "mevzuat_6331"
+     }
+    ],
+    "kaynak": "ders-k1-18",
+    "slayt": [
+     63,
+     64
+    ],
+    "pdf_sayfa": "75-91",
+    "ek_slayt": {
+     "deste": "learn-halk-sagligi-tarihcesi-ve",
+     "slayt": 22
+    }
+   },
+   {
+    "id": "ikincil",
+    "ad": "İkincil korunma",
+    "evre": "Hastalık başlamış ama belirti vermemiş (pre-semptomatik) dönem: kronik hastalığın erken tanısıyla ilerlemesi durdurulur.",
+    "amac": "Kronik hastalığın pre-semptomatik dönemde erken tanısıyla ilerlemesini durdurmak; böylece komplikasyonları önlemek.",
+    "hedef": "Risk altındaki gruplar (taramaya en çok ihtiyaç duyanlar); araç: klinik taramalar.",
+    "ornekler": [
+     "Kan basıncı ölçümü",
+     "Serviks kanseri için smear alınması (servikal sürüntü)",
+     "Tüberkülin testi",
+     "Çocuklarda görme ve işitme taramaları"
+    ],
+    "basarili_hastaliklar": [
+     "Anemi",
+     "Akciğer kanseri",
+     "Diyabet",
+     "Glokom",
+     "Hipertansiyon",
+     "Venereal hastalıklar",
+     "Tüberküloz"
+    ],
+    "turkiyede": [
+     {
+      "metin": "Ulusal kanser taramaları KETEM'lerde ve birinci basamakta yapılır: serviks 30-65 yaş HPV-DNA testi 5 yılda bir (sitoloji algoritmada; 2014'te pap-smear tabanlı taramaya HPV-DNA eklendi).",
+      "kaynak": "sb_kanser_serviks"
+     },
+     {
+      "metin": "Meme kanseri taraması: 40-69 yaş kadınlarda 2 yılda bir mamografi.",
+      "kaynak": "sb_kanser_meme"
+     },
+     {
+      "metin": "Kolorektal kanser taraması: 50-70 yaşta 2 yılda bir gaitada gizli kan testi.",
+      "kaynak": "sb_kanser_kolorektal"
+     },
+     {
+      "metin": "2024'te 417 KETEM (95 sabit, 46 mobil, 276'sı Sağlıklı Hayat Merkezlerinde).",
+      "kaynak": "sb-siy-2024"
+     },
+     {
+      "metin": "Çocuklarda işitme taraması: Yenidoğan İşitme Taraması Programı (ilk test doğumdan sonraki 72 saat içinde).",
+      "kaynak": "sb_isitme"
+     },
+     {
+      "metin": "Çocuklarda görme taraması: Yenidoğan Görme Taraması (kırmızı refle testi).",
+      "kaynak": "sb_gorme_yd"
+     },
+     {
+      "metin": "Yenidoğan Tarama Programı (topuk kanı: fenilketonüri 1987'den, konjenital hipotiroidi 2006'dan beri).",
+      "kaynak": "sb_ytp"
+     }
+    ],
+    "kaynak": "ders-k1-18",
+    "slayt": [
+     65,
+     66,
+     67
+    ],
+    "pdf_sayfa": "75-91",
+    "ek_slayt": {
+     "deste": "learn-halk-sagligi-tarihcesi-ve",
+     "slayt": 23
+    }
+   },
+   {
+    "id": "ucuncul",
+    "ad": "Üçüncül korunma",
+    "evre": "Hastalık ilerlemiş, tanıda geç kalınmış: birincil ve ikincil koruma olanaklarından yararlanamamış hasta.",
+    "amac": "En iyi tedavi ve rehabilitasyon olanaklarını kullanarak kronik hastalıklı kişiyi rehabilite edip eski yaşamına döndürmek.",
+    "hedef": "Tanıda geç kalınmış, kronik hastalığı yerleşmiş kişiler.",
+    "ornekler": [
+     "Diyabeti olan hastanın göz komplikasyonlarının engellenmesi",
+     "Diyabetik hastada ayak amputasyonunun önlenmesi"
+    ],
+    "basarili_hastaliklar": [],
+    "turkiyede": [],
+    "kaynak": "ders-k1-18",
+    "slayt": 67,
+    "pdf_sayfa": "75-91",
+    "ek_slayt": {
+     "deste": "learn-halk-sagligi-tarihcesi-ve",
+     "slayt": 23
+    }
+   }
+  ],
+  "tarama_ilkeleri": [
+   {
+    "metin": "Taramaların nerede, kim tarafından, hangi yaş ve cins gruplarında, niçin, ne zaman ve hangi yöntemlerle yapılacağı ve finansmanını kimin sağlayacağı planlanmalıdır.",
+    "kaynak": "ders-k1-18",
+    "slayt": 66,
+    "pdf_sayfa": "75-91"
+   },
+   {
+    "metin": "Birinci basamak hekimleri ile ikinci basamak kuruluşlarındaki hekimlerin araştırmaları birlikte planlamaları ve sonuçlarını birlikte değerlendirmeleri hem halk sağlığı hem hekimler açısından daha yararlıdır.",
+    "kaynak": "ders-k1-18",
+    "slayt": 66,
+    "pdf_sayfa": "75-91"
+   },
+   {
+    "metin": "Taramalara en çok ihtiyaç duyan gruplar risk altındaki gruplardır.",
+    "kaynak": "ders-k1-18",
+    "slayt": 66,
+    "pdf_sayfa": "75-91"
+   },
+   {
+    "metin": "Kimileri hastalıkları çok ileri bir safhaya varmadıkça hekime gitmez; tarama bu kişileri erken yakalar.",
+    "kaynak": "ders-k1-18",
+    "slayt": 66,
+    "pdf_sayfa": "75-91"
+   },
+   {
+    "metin": "Taramalar para, zaman ve insan gücü kullanmadan yapılamaz; ancak taramanın ekonomik giderleri geri gelir.",
+    "kaynak": "ders-k1-18",
+    "slayt": 66,
+    "pdf_sayfa": "75-91"
+   }
+  ],
+  "notlar": [
+   {
+    "metin": "Diyabet hem birincil hem ikincil korunmanın başarılı olduğu hastalıklar listesinde yer alır; diyabetik hastada göz komplikasyonu ve amputasyonun önlenmesi ise üçüncül korunmadır.",
+    "kaynak": "ders-k1-18",
+    "slayt": 67
+   },
+   {
+    "metin": "Kan basıncı ölçümü bir tarama örneğidir ve ikincil korunmaya aittir; birincil koruma önlemi değildir (sınavda sık çeldirici).",
+    "kaynak": "ders-k1-18",
+    "slayt": 65
+   },
+   {
+    "metin": "Ayırt etme anahtarı: yaşam özelliği oluşmadan → primordial; hastalık oluşmadan → birincil; hastalık var, belirti yok → ikincil; hastalık ilerlemiş → üçüncül.",
+    "kaynak": "ders-k1-18",
+    "slayt": 68
+   },
+   {
+    "metin": "Halk sağlığı anlayışında öncelik sağlığın korunmasına verilir; kişiyi korumak iyileştirmekten çok daha ucuzdur.",
+    "kaynak": "ders-k1-18",
+    "slayt": 33
+   },
+   {
+    "metin": "Sağlığı geliştirme birincil korunma düzeyindedir; bunu ikincil ve üçüncül koruma izler.",
+    "kaynak": "ders-k5-sg"
+   },
+   {
+    "metin": "TSH örgütlenme ilkesi: korunma, tedavi, rehabilitasyon ve sağlığı geliştirici hizmetler birlikte, bir bütün olarak ele alınmalıdır.",
+    "kaynak": "ders-k5-tsh"
+   },
+   {
+    "metin": "Ders notundaki ikincil korunma örneği 'smear' iken Türkiye'nin güncel serviks kanseri programı 2014'ten beri HPV-DNA testi temellidir (sitoloji algoritma içinde).",
+    "kaynak": "sb_kanser_serviks"
+   }
+  ]
+ },
+ "sinav": [
+  {
+   "konu": "Halk sağlığı ilkeleri",
+   "soru_id": "d3-k1-hs-001",
+   "ozet": "13 ilkeden hangisinin yanlış olduğu soruldu; doğru cevap 'Tedavi edici hizmetler koruyucu hizmetlerden önceliklidir' (B)."
+  },
+  {
+   "konu": "Sağlığı etkileyen faktörler",
+   "soru_id": "past-1790877047917-133223",
+   "ozet": "Geçmişte sağlığı olumsuz etkileyen faktörler soruldu; anahtar C (salgın hastalıklar + 'düzensiz sağlık hizmetleri'); etkin bağışıklama ve gelişen yaşam koşulları günümüz faktörüdür.",
+   "uyari": "'Düzensiz sağlık hizmetleri' ifadesi ders notunun geçmiş listesinde birebir yok."
+  },
+  {
+   "konu": "Halk sağlığı tarihçesi",
+   "soru_id": "d3-k1-hs-003",
+   "ozet": "Tarih eşleştirmelerinden yanlış olan soruldu: kolera kaynağını su pompasıyla gösteren Robert Koch değil John Snow'dur (D)."
+  },
+  {
+   "konu": "Birincil korunma",
+   "soru_id": "d3-k1-hs-004",
+   "ayni_soru": [
+    "3629862139fc"
+   ],
+   "ozet": "Birincil koruma önlemi olmayan seçenek soruldu; cevap kan basıncı (tansiyon) ölçümü (ikincil korunma)."
+  },
+  {
+   "konu": "Birincil korunma",
+   "soru_id": "128e45b7f36b",
+   "ozet": "Aynı soru (birincil koruma olmayan); kayıtlı anahtar D 'yeterli ve dengeli beslenme'.",
+   "uyari": "ANAHTAR ŞÜPHELİ: ders notunda yeterli ve dengeli beslenme birincil önlemdir; doğru cevap B (kan basıncı ölçümü). Kopyaları d3-k1-hs-004 ve 3629862139fc B ile kayıtlı."
+  },
+  {
+   "konu": "Birincil korunma",
+   "soru_id": "c93eb39996bd",
+   "ozet": "Birincil koruma uygulaması soruldu; cevap 'aşı yapmak' (meme kanseri ve fenilketonüri taraması ikincil, rehabilitasyon üçüncül)."
+  },
+  {
+   "konu": "İkincil korunma",
+   "soru_id": "past-1790877039279-651335",
+   "ozet": "Sekonder koruma yöntemi soruldu; cevap mamografi (sigara bıraktırma, bağışıklama, egzersiz birincil; rehabilitasyon üçüncül)."
+  },
+  {
+   "konu": "İkincil korunma",
+   "soru_id": "d3-k5-hal-015",
+   "ozet": "İkincil koruma uygulaması soruldu; cevap yenidoğanlarda fenilketonüri ve konjenital hipotiroidi için topuk kanı taraması."
+  },
+  {
+   "konu": "Üçüncül korunma",
+   "soru_id": "d3-k1-hs-005",
+   "ozet": "Üçüncül koruma örneği soruldu; cevap diyabetik hastaların ayak bakımı."
+  },
+  {
+   "konu": "Korunma düzeyleri",
+   "soru_id": "past-1790877041995-894071",
+   "ozet": "Korunma düzeyleriyle ilgili doğru ifade soruldu; cevap 'davranış değişiklikleri hastalığın ortaya çıkmasını önler, hedef kitlesi sağlıklı kişilerdir' (D).",
+   "uyari": "Seçeneklerde ders notunda olmayan 'dördüncül koruma' geçiyor."
+  },
+  {
+   "konu": "Koruyucu sağlık hizmetleri",
+   "soru_id": "final-2018-2019-q064",
+   "ozet": "Bağışıklama, aile planlaması, erken teşhis ve besin kontrolünden kişiye yönelik olanlar soruldu; cevap I, II ve III (besin kontrolü çevreye yönelik).",
+   "uyari": "Kişiye/çevreye yönelik koruyucu hizmet ayrımı mevcut ders notlarında yok."
+  },
+  {
+   "konu": "Ottawa",
+   "soru_id": "6f865b5ee472",
+   "ozet": "Ottawa'nın beş öncelikli eylem alanında yer almayan seçenek soruldu; cevap 'birey merkezli katılımın güçlendirilmesi' (doğrusu topluluk eyleminin güçlendirilmesi)."
+  },
+  {
+   "konu": "Ottawa",
+   "soru_id": "1bb49d544bd0",
+   "ayni_soru": [
+    "f20168f1a179",
+    "6db31a6cc3d4"
+   ],
+   "ozet": "Birinci Uluslararası Sağlığı Geliştirme Konferansının belgesi soruldu; cevap Ottawa Sözleşmesi."
+  },
+  {
+   "konu": "Ottawa",
+   "soru_id": "b9e3dc647170",
+   "ozet": "Aynı soru (Birinci Sağlığı Geliştirme Konferansı); kayıtlı anahtar E 'Milano Bildirgesi'.",
+   "uyari": "ANAHTAR ŞÜPHELİ: K5 özetine göre doğru cevap Ottawa Sözleşmesi (B); kökte seçenekler bozuk biçimde tekrarlanmış."
+  },
+  {
+   "konu": "Ottawa",
+   "soru_id": "960db82b925b",
+   "ayni_soru": [
+    "f8ecc3f6f321",
+    "82afca9a5bea"
+   ],
+   "ozet": "Sağlığın geliştirilmesine ilişkin ilk uluslararası konferansın yılı soruldu; cevap 1986."
+  },
+  {
+   "konu": "Sağlığı geliştirme etkileri",
+   "soru_id": "d3-f-084",
+   "ayni_soru": [
+    "d3-b-041"
+   ],
+   "ozet": "Sağlığı geliştirme stratejilerinin kısa dönem etkisi soruldu; cevap 'sağlıkla ilgili risk faktörlerinin azalması'."
+  },
+  {
+   "konu": "Sağlığı geliştirme etkileri",
+   "soru_id": "66ef29f8d808",
+   "ozet": "Orta dönem etkisi soruldu; cevap 'sağlıklı çevre değişiklikleri oluşması'."
+  },
+  {
+   "konu": "Sağlığı geliştirme etkileri",
+   "soru_id": "past-1790877043309-788103",
+   "ozet": "Uzun dönem etkileri soruldu; cevap hastalıkların azalması, yaşamın uzaması, yaşam kalitesinin artması (III, IV, V)."
+  },
+  {
+   "konu": "Sağlığı geliştirme etkileri",
+   "soru_id": "past-q-22_final_230619_145249-49",
+   "ayni_soru": [
+    "q-22_final_230619_145249-49"
+   ],
+   "ozet": "Kısa dönem etkisi soruldu; kayıtlı anahtar A 'bireylerin sağlıklarına sahip çıkma konusunda güvenlerinin artması'.",
+   "uyari": "ANAHTAR ŞÜPHELİ: K5 ders özetinde bu madde orta dönem etkisidir; kısa dönem = risk faktörlerinin azalması (B). Aynı sorunun d3-f-084 kopyası B ile kayıtlı."
+  },
+  {
+   "konu": "Sağlığı geliştirme stratejilerinin ortaya çıkışı",
+   "soru_id": "butunleme-2026-saglikgelisme",
+   "ozet": "Ortaya çıkışında etkili faktörlerden olmayan soruldu; cevap 'bulaşıcı hastalıkların artışı' (özette 'bulaşıcı olmayan hastalıkların artışı' var)."
+  },
+  {
+   "konu": "Ottawa – savunuculuk",
+   "soru_id": "d3-k5-hal-010",
+   "ozet": "Savunuculuk (advocacy) kapsamındaki eylemler soruldu; cevap I, II ve III (bireysel klinik vaka yönetimi hariç).",
+   "uyari": "'Savunuculuk' K5 özetinin anlatım metninde yok, yalnız özetin içindeki çıkmış soru bloğunda geçiyor."
+  },
+  {
+   "konu": "Sosyalleştirme / TSH",
+   "soru_id": "d3-k5-hal-001",
+   "ozet": "224 sayılı kanunla ilgili ifadeler soruldu; cevap dördü de doğru (mimarı Fişek, birimi sağlık ocağı, ilk uygulama 1963 Muş, Alma-Ata ilkeleriyle uyumlu)."
+  },
+  {
+   "konu": "Aile hekimliği",
+   "soru_id": "777445c9f501",
+   "ayni_soru": [
+    "q-Kurul_II_S_nav_-89"
+   ],
+   "ozet": "Aile sağlığı elemanı olarak çalışamayacak meslek soruldu; anahtar C (paramedik).",
+   "uyari": "Aile sağlığı elemanı meslekleri mevcut ders notlarında listelenmiyor."
+  },
+  {
+   "konu": "Sağlık eğitimi",
+   "soru_id": "8b86f5b23e26",
+   "ayni_soru": [
+    "fe09e83f18e6"
+   ],
+   "ozet": "Sağlık eğiticisinde bulunması gerekmeyen özellik soruldu; cevap 'sadece hekim olmalı'."
+  },
+  {
+   "konu": "Sağlık eğitimi",
+   "soru_id": "d3-k5-hal-011",
+   "ozet": "Sağlık eğitimiyle ilgili doğru ifadeler soruldu; cevap I, II ve IV ('yalnız özel gün ve haftalarda yapılmalı' yanlış; eğitim süreklidir)."
+  },
+  {
+   "konu": "Sağlık eğitimi",
+   "soru_id": "past-1790877037374-989636",
+   "ozet": "Sağlık eğitiminde önemli noktalardan olmayan soruldu; cevap 'nadir görülen olaylara yer verilmeli' (doğrusu sık görülen olaylar)."
+  },
+  {
+   "konu": "Sağlık eğitimi",
+   "soru_id": "past-1790877037370-574577",
+   "ozet": "'Kişilerin hissettikleri, inandıkları ve fikirleriyle ilgili' amaç soruldu; cevap tutum değişikliği."
+  },
+  {
+   "konu": "Sağlık eğitimi",
+   "soru_id": "d3-f-054",
+   "ayni_soru": [
+    "q-22_final_230619_145249-51"
+   ],
+   "ozet": "Halk eğitiminin etkinliği için yanlış ifade soruldu; cevap 'sağlık eğitiminde sadece doktorlar görev almalıdır'."
+  }
+ ],
+ "dogrulanamayan": [
+  "'Sağlığın Geliştirilmesinde Üzerinde Durulması Gereken Komponentler' başlığı K5 özetlerinde (kurul5.json) YOK; başlık ve tam liste K1 'Halk Sağlığı Tarihçesi' ders özetinde (summaries/kurul1.json, bölüm 15, PDF s.71-74) ve v2 destesinin 57-58. slaytlarında bulundu. K5 'sağlığın gelştilmrsi 2026' özeti Ottawa, konferanslar, stratejiler ve etkileri anlatır.",
+  "18_halk_sagligi_tarihcesi.md dosyasının 5. bölümünde 8. ve 9. ilkeler eksik/birleşik (liste 7'den 10'a atlıyor, multisektöryel açıklaması numarasız); 13 ilkenin tam hâli K1 özetinden ve deste slayt 45'ten alındı.",
+  "Bileşenlerin 'neden_onemli' alanı: ders notunda yalnız 1. (güvenilir çevre alt maddeleri) ve 3. (olumlu sağlık davranışı alt maddeleri) bileşen açılmış; diğerleri için gerekçe ders notunun ilgili bölümlerinden dolaylı kuruldu ('neden_onemli_dayanak': 'dolayli').",
+  "'koruma_duzeyi' eşleştirmesi ders notunda bileşen bazında yapılmıyor; 1-5. bileşenler, ders notundaki birincil korunma önlem listesindeki birebir karşılıklarına dayanılarak 'birincil' yazıldı (dayanak her bileşende 'koruma_dayanagi'). 6. bileşen (sürekli ve dikkatli sağlık bakımı) eşleştirilmedi (null).",
+  "Alma-Ata ilkelerinden 'Evrensellik' için ders notunda ve K5 özetinde ayrı açıklama yok; verilen açıklama K5 '2000 yılında herkese sağlık' stratejisine dayanıyor.",
+  "Primordial ve birincil korunma için ders notu 'başarılı hastalıklar' listesi yalnız birincil ve ikincil için veriyor; primordial ve üçüncül için boş bırakıldı.",
+  "Üçüncül korunmanın Türkiye karşılığı (diyabetik göz/ayak komplikasyonlarının önlenmesine yönelik ulusal program) resmî kaynakla teyit edilmedi; boş bırakıldı.",
+  "Kan basıncı ölçümü ve tüberkülin testi için ayrı ulusal tarama programı karşılığı yazılmadı (resmî kaynak aranmadı/teyit edilmedi).",
+  "Türkiye Sağlıklı Beslenme ve Hareketli Hayat Programı'nın 29.09.2010 tarihli Başbakanlık genelgesi (RG 27714) bilgisi yalnız arama özetinde görüldü, belge metninden okunmadı; JSON'a yazılmadı.",
+  "SHM görevleri 2018 yönetmelik değişikliği metninden (RG 25/5/2018-30431, md. 41) aktarıldı; sonraki olası değişiklikler kontrol edilmedi.",
+  "Eski Öğren destesi (learn-halk-sagligi-tarihcesi-ve) slayt 21-24'te ders notunda olmayan içerik var (Ottawa ön koşulları, dördüncül korunma, Tek Sağlık, Omran epidemiyolojik geçiş); bu derlemede kullanılmadı.",
+  "k1p-k1-63-turkiye-de-saglik-hizmetleri destesi slayt 4-5 (ve benzerleri) konu dışı şablon cümleler içeriyor ('hücresel düzeyde gelişen reaksiyonlar', 'hücresel adaptasyon ve hasar yanıtı'); içerik düzeltmesi gerekebilir.",
+  "K1 kazanım listesindeki 'Koruyucu Sağlık Hizmetleri' konusu (k1-d4-c4) için ders notu, özet veya deste bulunamadı; final-2018-2019-q064 (kişiye/çevreye yönelik koruyucu hizmetler) bu dersten olabilir.",
+  "K6 özetlerinde korunma düzeyi veya sağlığın geliştirilmesiyle ilgili ders anlatımı bulunamadı (yalnız Mobbing özetinin çıkmış soru bloğunda 'ergonomik koltuk = birincil koruma' cümlesi var); K6 kullanılmadı.",
+  "Çıkmış soru anahtarı şüphesi (3 grup): past-q-22_final_230619_145249-49 ve q-22_final_230619_145249-49 (kısa dönem etkisi) A ile kayıtlı, K5 özetine göre doğrusu B; 128e45b7f36b (birincil koruma olmayan) D ile kayıtlı, ders notuna göre doğrusu B (kan basıncı ölçümü); b9e3dc647170 (ilk konferans) E 'Milano' ile kayıtlı, doğrusu B (Ottawa)."
+ ]
+}

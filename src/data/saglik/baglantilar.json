@@ -5,34 +5,34 @@
    "konular": [
     "Bağışıklama ve önemi"
    ],
-   "soru_sayisi": 68,
-   "havuz": 68,
+   "soru_sayisi": 70,
+   "havuz": 70,
    "yillar": {
-    "Kategorisiz": 3,
+    "Kategorisiz": 1,
     "Geçmiş Yıllar Çıkmışı (Arşiv)": 1,
-    "2023-2024": 20,
-    "2022-2023": 1,
+    "2023-2024": 3,
+    "2022-2023": 2,
     "2021-2026": 2,
-    "2021-2022": 15,
-    "2021": 1,
-    "2020-2021": 20,
+    "2021-2022": 13,
+    "2020-2021": 39,
     "2019-2020": 3,
-    "2018-2019": 2
+    "2018-2019": 6
    },
    "konu_dagilimi": {
     "Bağışıklama ve önemi": 36,
     "Ana-Çocuk Sağlığı Düzeyinin İzlenmesi": 11,
     "Cinsel yolla bulaşan hastalıklarda profilaksi ve korunma": 8,
     "İntrauterin Enfeksiyonlar": 7,
-    "Yaşlılık Döneminde Güvenli Yaşamın İlkeleri": 2,
+    "Yaşlılık Döneminde Güvenli Yaşamın İlkeleri": 3,
     "Çevre Sağlığına Giriş ve Genel Bilgiler": 2,
     "Halk Sağlığı Tarihçesi": 1,
-    "Salgın Hastalıklarda Kontrol ve Korunma Yöntemleri": 1
+    "Salgın Hastalıklarda Kontrol ve Korunma Yöntemleri": 1,
+    "Koruyucu Sağlık Hizmetleri": 1
    },
    "kurul_dagilimi": {
     "1": 28,
     "6": 33,
-    "?": 7
+    "?": 9
    },
    "kazanimlar": [
     {
@@ -62,7 +62,7 @@
        "metin": "2025 Aşı Takvimi (Güncellenmiş) mekanizmasını ve klinik önemini analiz eder."
       }
      ],
-     "cikmis": 36
+     "cikmis": 31
     }
    ],
    "desteler": [
@@ -121,13 +121,15 @@
       "deste": "learn-halk-sagligi-tarihcesi-ve",
       "kisa": "Halk Sağlığı Tarihçesi",
       "slayt": 8,
-      "baslik": "Bağışıklama Tarihinde Devrim: Çiçek Aşısı"
+      "baslik": "Bağışıklama Tarihinde Devrim: Çiçek Aşısı",
+      "anlatim": "Tarih boyunca milyonlarca insanın ölümüne, kör kalmasına veya yüzünde derin yara izleri bırakmasına neden olan çiçek hastalığı (Variola), halk sağlığı müdahalelerinin en büyük zaferine sahne olmuştur. Aşılama tarihinin kökleri Doğu ve Osmanlı tıbbına dayanır. Osmanlı toplumunda yüzyıllardır uygulanan 'variolasyon' (çiçekleme), hafif seyreden çiçek hastalarının püstüllerinden alınan sıvının sağlıklı kişilerin cildine çizik atılarak uygulanması tekniğiydi. İngiltere'nin İstanbul Büyükelçisi'nin eşi Lady Mary Wortley Montagu, 1717-1721 yıllarında Edirne ve İstanbul'da Osmanlı aşıcı kadınlarının bu başarılı uygulamasını gözlemlemiş, kendi çocuklarını aşılatmış ve yazdığı ünlü mektuplarla yöntemi Avrupa'ya tanıtmıştır.\n\nVariolasyon kısmi bağışıklık sağlasa da bazen tam çiçek hastalığına ve ölümlere yol açabiliyordu. Bu riski ortadan kaldıran devrimci adımı İngiliz kır hekimi Edward Jenner atmıştır. Jenner, kırsal bölgedeki sütçü kızların ineklerden geçen sığır çiçeği (cowpox) hastalığına yakalandıktan sonra insan çiçeğine (smallpox) asla yakalanmadıklarını fark etmiştir. 1796 yılında Sarah Nelmes adlı sütçü kadının elindeki lezyondan aldığı sıvıyı 8 yaşındaki James Phipps'in koluna aşılamış; çocuk hafif bir reaksiyon geçirdikten sonra, ona insan çiçeği mikrobu verdiğinde çocuğun hastalanmadığını görmüştür.\n\n…"
      },
      {
       "deste": "k1p-k1-23-ana-cocuk-sagligi-duzeyinin-izlenmesi-v2",
       "kisa": "Ana Çocuk Sağlığı İzlemi",
       "slayt": 29,
-      "baslik": "1. Gebe İzlemi: Laboratuvar, İlaç Desteği ve Bağışıklama"
+      "baslik": "1. Gebe İzlemi: Laboratuvar, İlaç Desteği ve Bağışıklama",
+      "anlatim": "Fizik muayeneyi tamamlayan laboratuvar testleri ve koruyucu uygulamalar ilk izlemin son teknik basamağıdır.\n\n**Laboratuvar testleri:**\n\n- **İdrar:** ==Bakteriüri ve proteinüri== araştırılır. Bakteriüri idrar yolu enfeksiyonunu, proteinüri böbrek hastalığı ya da preeklampsiyi düşündürür.\n- **Kan:** **Hb-Hct** (anemi taraması) ve **kan grubu** (Rh uyuşmazlığı riskinin belirlenmesi).\n- **HBsAg:** Hepatit B taşıyıcılığının saptanması; bebeğe bulaşın önlenmesi için önemlidir.\n\n**İlaç desteği, tedaviler ve bağışıklama:**\n\n- **Demir preparatı:** Gebelikte artan demir gereksinimini karşılar, anemiyi önler.\n- **D vitamini:** Gebeye destek olarak verilir.\n- **Tetanoz bağışıklaması:** Anne ve yenidoğanı korur.\n\n> İlk izlem laboratuvarı: idrar (bakteriüri, proteinüri) + Hb-Hct + kan grubu + HBsAg. Destek: demir + D vitamini + tetanoz."
      }
     ],
     "gebe_asi": [
@@ -135,13 +137,15 @@
       "deste": "learn-halk-sagligi-tarihcesi-ve",
       "kisa": "Halk Sağlığı Tarihçesi",
       "slayt": 8,
-      "baslik": "Bağışıklama Tarihinde Devrim: Çiçek Aşısı"
+      "baslik": "Bağışıklama Tarihinde Devrim: Çiçek Aşısı",
+      "anlatim": "Tarih boyunca milyonlarca insanın ölümüne, kör kalmasına veya yüzünde derin yara izleri bırakmasına neden olan çiçek hastalığı (Variola), halk sağlığı müdahalelerinin en büyük zaferine sahne olmuştur. Aşılama tarihinin kökleri Doğu ve Osmanlı tıbbına dayanır. Osmanlı toplumunda yüzyıllardır uygulanan 'variolasyon' (çiçekleme), hafif seyreden çiçek hastalarının püstüllerinden alınan sıvının sağlıklı kişilerin cildine çizik atılarak uygulanması tekniğiydi. İngiltere'nin İstanbul Büyükelçisi'nin eşi Lady Mary Wortley Montagu, 1717-1721 yıllarında Edirne ve İstanbul'da Osmanlı aşıcı kadınlarının bu başarılı uygulamasını gözlemlemiş, kendi çocuklarını aşılatmış ve yazdığı ünlü mektuplarla yöntemi Avrupa'ya tanıtmıştır.\n\nVariolasyon kısmi bağışıklık sağlasa da bazen tam çiçek hastalığına ve ölümlere yol açabiliyordu. Bu riski ortadan kaldıran devrimci adımı İngiliz kır hekimi Edward Jenner atmıştır. Jenner, kırsal bölgedeki sütçü kızların ineklerden geçen sığır çiçeği (cowpox) hastalığına yakalandıktan sonra insan çiçeğine (smallpox) asla yakalanmadıklarını fark etmiştir. 1796 yılında Sarah Nelmes adlı sütçü kadının elindeki lezyondan aldığı sıvıyı 8 yaşındaki James Phipps'in koluna aşılamış; çocuk hafif bir reaksiyon geçirdikten sonra, ona insan çiçeği mikrobu verdiğinde çocuğun hastalanmadığını görmüştür.\n\n…"
      },
      {
       "deste": "k1p-k1-23-ana-cocuk-sagligi-duzeyinin-izlenmesi-v2",
       "kisa": "Ana Çocuk Sağlığı İzlemi",
       "slayt": 29,
-      "baslik": "1. Gebe İzlemi: Laboratuvar, İlaç Desteği ve Bağışıklama"
+      "baslik": "1. Gebe İzlemi: Laboratuvar, İlaç Desteği ve Bağışıklama",
+      "anlatim": "Fizik muayeneyi tamamlayan laboratuvar testleri ve koruyucu uygulamalar ilk izlemin son teknik basamağıdır.\n\n**Laboratuvar testleri:**\n\n- **İdrar:** ==Bakteriüri ve proteinüri== araştırılır. Bakteriüri idrar yolu enfeksiyonunu, proteinüri böbrek hastalığı ya da preeklampsiyi düşündürür.\n- **Kan:** **Hb-Hct** (anemi taraması) ve **kan grubu** (Rh uyuşmazlığı riskinin belirlenmesi).\n- **HBsAg:** Hepatit B taşıyıcılığının saptanması; bebeğe bulaşın önlenmesi için önemlidir.\n\n**İlaç desteği, tedaviler ve bağışıklama:**\n\n- **Demir preparatı:** Gebelikte artan demir gereksinimini karşılar, anemiyi önler.\n- **D vitamini:** Gebeye destek olarak verilir.\n- **Tetanoz bağışıklaması:** Anne ve yenidoğanı korur.\n\n> İlk izlem laboratuvarı: idrar (bakteriüri, proteinüri) + Hb-Hct + kan grubu + HBsAg. Destek: demir + D vitamini + tetanoz."
      }
     ],
     "tarihce": [
@@ -149,23 +153,64 @@
       "deste": "learn-halk-sagligi-tarihcesi-ve",
       "kisa": "Halk Sağlığı Tarihçesi",
       "slayt": 8,
-      "baslik": "Bağışıklama Tarihinde Devrim: Çiçek Aşısı"
+      "baslik": "Bağışıklama Tarihinde Devrim: Çiçek Aşısı",
+      "anlatim": "Tarih boyunca milyonlarca insanın ölümüne, kör kalmasına veya yüzünde derin yara izleri bırakmasına neden olan çiçek hastalığı (Variola), halk sağlığı müdahalelerinin en büyük zaferine sahne olmuştur. Aşılama tarihinin kökleri Doğu ve Osmanlı tıbbına dayanır. Osmanlı toplumunda yüzyıllardır uygulanan 'variolasyon' (çiçekleme), hafif seyreden çiçek hastalarının püstüllerinden alınan sıvının sağlıklı kişilerin cildine çizik atılarak uygulanması tekniğiydi. İngiltere'nin İstanbul Büyükelçisi'nin eşi Lady Mary Wortley Montagu, 1717-1721 yıllarında Edirne ve İstanbul'da Osmanlı aşıcı kadınlarının bu başarılı uygulamasını gözlemlemiş, kendi çocuklarını aşılatmış ve yazdığı ünlü mektuplarla yöntemi Avrupa'ya tanıtmıştır.\n\nVariolasyon kısmi bağışıklık sağlasa da bazen tam çiçek hastalığına ve ölümlere yol açabiliyordu. Bu riski ortadan kaldıran devrimci adımı İngiliz kır hekimi Edward Jenner atmıştır. Jenner, kırsal bölgedeki sütçü kızların ineklerden geçen sığır çiçeği (cowpox) hastalığına yakalandıktan sonra insan çiçeğine (smallpox) asla yakalanmadıklarını fark etmiştir. 1796 yılında Sarah Nelmes adlı sütçü kadının elindeki lezyondan aldığı sıvıyı 8 yaşındaki James Phipps'in koluna aşılamış; çocuk hafif bir reaksiyon geçirdikten sonra, ona insan çiçeği mikrobu verdiğinde çocuğun hastalanmadığını görmüştür.\n\n…"
      },
      {
       "deste": "k1p-k1-06-gebelik-ve-emzirme-doneminde-beslenme",
       "kisa": "Gebelik ve Emzirme Beslenmesi",
       "slayt": 73,
-      "baslik": "D Vitamini Dengesi: Fetal Raşitizm vs Aşırılık Toksisitesi"
+      "baslik": "D Vitamini Dengesi: Fetal Raşitizm vs Aşırılık Toksisitesi",
+      "anlatim": "D vitamini anne karnındaki bebeğin iskelet sistemi mineralizasyonu ve kalsiyum homeostazının kilit yöneticisidir. Annenin D vitamini eksikliğinde fetüs yeterli kalsiyumu kemik matriksine gömemez; doğumda kraniyotabes (yumuşak kafatası), genişlemiş fontaneller, konjenital raşitizm ve yaşamın ilk günlerinde ölümcül konvülsiyonlara yol açan 'neonatal hipokalsemik tetani' tablosu gelişir.\n\n> [SINAV SPOTU] D vitamini eksikliği bebekte düşük kemik yoğunluğu, raşitizm ve hipokalsemiye yol açarken; D VİTAMİNİNİN KONTROLSÜZ AŞIRISI bebekte şiddetli hiperkalsemi, aort stenozu ve yumuşak doku kalsifikasyonuna neden olur!\n\nBu nedenle megadoz ampul D vitamini enjeksiyonları gebelikte kesinlikle kontrendikedir; fizyolojik 1200 IU günlük doz güvenli sınırdır."
      },
      {
       "deste": "k1p-k1-18-halk-sagligi-tarihcesi-v2",
       "kisa": "Halk Sağlığı Tarihçesi",
       "slayt": 15,
-      "baslik": "Edward Jenner: Çiçek Aşısı"
+      "baslik": "Edward Jenner: Çiçek Aşısı",
+      "anlatim": "Bağışıklama tarihinde ilk büyük adım çiçek hastalığına karşı atılmıştır. **Edward Jenner**, var olan bir uygulamayı geliştirerek aşıya dönüştürmüştür.\n\n- **Çıkış noktası:** ==Osmanlılarca uygulanan çiçek bağışıklaması==.\n- **Katkısı:** Bu bağışıklamayı geliştirerek **çiçek aşısını** bulmuştur.\n- **Tarih:** Derste Jenner'in çiçek aşısını ==1797'de== uyguladığı belirtilir. (Tıp tarihi kaynaklarında ilk aşılama genellikle 1796 olarak geçer; sınavda dersteki tarih esas alınır.)\n- **Halk sağlığındaki yeri:** Jenner bu uygulamayla halk sağlığında ==sağlığın korunmasında önemli bir adım== atmıştır.\n\n### Neden önemli?\n- Hasta olanı iyileştirmek yerine sağlıklı kişiyi hastalanmadan korumayı hedefler.\n- Bir kişinin bağışıklanması toplumda hastalığın yayılmasını da sınırlar.\n\n> Jenner, Osmanlı'daki çiçek bağışıklamasını geliştirerek çiçek aşısını buldu; aşılama sağlığın korunmasında dönüm noktasıdır."
      }
     ]
    },
-   "spotlar": []
+   "spotlar": [],
+   "havuz_konulari": [
+    {
+     "id": "k6-bagisiklama",
+     "konu": "Bağışıklama ve önemi",
+     "ortak": 36,
+     "bilgi": 105
+    },
+    {
+     "id": "k1-dob-gebe-izlemi",
+     "konu": "Doğum öncesi bakım ve gebe izlemi",
+     "ortak": 11,
+     "bilgi": 47
+    },
+    {
+     "id": "k6-cevre-sagligi",
+     "konu": "Çevre Sağlığına Giriş ve Genel Bilgiler",
+     "ortak": 2,
+     "bilgi": 40
+    },
+    {
+     "id": "k1-salgin-kontrol",
+     "konu": "Salgın Hastalıklarda Kontrol ve Korunma Yöntemleri",
+     "ortak": 1,
+     "bilgi": 43
+    },
+    {
+     "id": "k1-enfeksiyon-epidemiyolojisi",
+     "konu": "Enfeksiyon Hastalıklarının Epidemiyolojisi",
+     "ortak": 1,
+     "bilgi": 37
+    },
+    {
+     "id": "k1-hs-kavram-tarihce",
+     "konu": "Halk sağlığının tanımı, ilkeleri ve tarihçesi",
+     "ortak": 1,
+     "bilgi": 30
+    }
+   ]
   },
   "yenidogan": {
    "konular": [
@@ -175,27 +220,26 @@
     "Solunum sıkıntısı olan yeni doğana yaklaşım",
     "Neonatal Kolestaz"
    ],
-   "soru_sayisi": 71,
-   "havuz": 71,
+   "soru_sayisi": 72,
+   "havuz": 72,
    "yillar": {
     "Kategorisiz": 1,
     "Geçmiş Yıllar Çıkmışı (Arşiv)": 2,
     "2026": 1,
     "2025-2026": 1,
     "2024-2025": 1,
-    "2023-2024": 16,
+    "2023-2024": 2,
     "2023": 1,
-    "2022-2023": 4,
+    "2022-2023": 5,
     "2021-2026": 11,
-    "2021-2022": 12,
-    "2021": 1,
-    "2020-2021": 12,
+    "2021-2022": 11,
+    "2020-2021": 26,
     "2019-2020": 3,
-    "2018-2019": 5
+    "2018-2019": 7
    },
    "konu_dagilimi": {
     "Bebek Beslenmesi": 21,
-    "Neonatal Kolestaz": 9,
+    "Neonatal Kolestaz": 10,
     "Kalıtsal Metabolik Hastalıklar Genetiği": 6,
     "Fetal Dolaşım ve Neonatal adaptasyon": 5,
     "Solunum sıkıntısı olan yeni doğana yaklaşım": 5,
@@ -214,7 +258,7 @@
     "4": 9,
     "5": 7,
     "6": 6,
-    "?": 9
+    "?": 10
    },
    "kazanimlar": [
     {
@@ -272,7 +316,7 @@
        "metin": "Tamamlayıcı beslenmeye başlama zamanını, nedenlerini ve erken başlamanın sakıncalarını açıklar."
       }
      ],
-     "cikmis": 21
+     "cikmis": 15
     },
     {
      "kurul": 5,
@@ -335,7 +379,7 @@
        "metin": "Solunum sıkıntısı olan yeni doğana yaklaşım klinik yönetimini, farmakoterapi ilkelerini ve komplikasyonlardan korunma yaklaşımlarını sıralar."
       }
      ],
-     "cikmis": 5
+     "cikmis": 3
     },
     {
      "kurul": 3,
@@ -356,7 +400,7 @@
        "metin": "Neonatal Kolestaz klinik yönetimini, farmakoterapi ilkelerini ve komplikasyonlardan korunma yaklaşımlarını sıralar."
       }
      ],
-     "cikmis": 6
+     "cikmis": 7
     }
    ],
    "desteler": [
@@ -391,7 +435,8 @@
       "deste": "k1p-k1-23-ana-cocuk-sagligi-duzeyinin-izlenmesi-v2",
       "kisa": "Ana Çocuk Sağlığı İzlemi",
       "slayt": 53,
-      "baslik": "Bebek ve Çocuk İzlemlerinin Amaçları"
+      "baslik": "Bebek ve Çocuk İzlemlerinin Amaçları",
+      "anlatim": "Bebek ve çocuk izlemleri altı amaca hizmet eder:\n\n- **Doğuştan anomali ve patolojilerin tespiti:** Doğumda var olan sorunların erken yakalanması.\n- **Bebeklik ve çocukluk patolojilerine yönelik önlem:** Ortaya çıkabilecek hastalıkların önlenmesi ve ortaya çıkanların tespiti.\n- **Rutin aşılar:** Aşı takviminin eksiksiz uygulanması.\n- **Gelişimin izlenmesi:** Büyüme ve gelişmenin izlenip gerekli önlemlerin alınması.\n- **Beslenmenin düzenlenmesi:** ==Anne sütünün teşvik edilmesi==.\n- **Anneye destek:** Annenin bebek bakımı konusunda desteklenmesi.\n\nBu amaçlar, loğusa izlemindeki \"bebek bakımı ve anne sütü\" eğitimiyle doğrudan bağlantılıdır; anne ve bebek izlemleri birbirini tamamlar.\n\n> Bebek-çocuk izlemi yalnız hastalık aramak değildir; aşılama, beslenme ve gelişim izlemi koruyucu çekirdeği oluşturur."
      }
     ],
     "cocuk_izlem": [
@@ -399,7 +444,8 @@
       "deste": "k1p-k1-23-ana-cocuk-sagligi-duzeyinin-izlenmesi-v2",
       "kisa": "Ana Çocuk Sağlığı İzlemi",
       "slayt": 64,
-      "baslik": "Çocuk İzlem Takvimi"
+      "baslik": "Çocuk İzlem Takvimi",
+      "anlatim": "Bebek izlemi 9. ayda bitince çocuk izlemi başlar. Güncel takvim **7 izlem** öngörür:\n\n- **1. izlem:** ==1 yaş==\n- **2. izlem:** 1,5 yaş\n- **3. izlem:** 2 yaş\n- **4. izlem:** 2,5 yaş\n- **5. izlem:** 3 yaş\n- **6. izlem:** 4 yaş\n- **7. izlem:** ==5 yaş==\n\nTakvimin yapısı:\n\n- **1-3 yaş:** İzlemler **6 ayda bir** yapılır (1, 1,5, 2, 2,5, 3 yaş).\n- **3-5 yaş:** İzlemler **yılda bir** yapılır (4 ve 5 yaş).\n\nBu izlemlerde büyüme (tartı, boy, baş çevresi), gelişim basamakları ve diş gelişimi birlikte değerlendirilir; örneğin 2,5 yaş izlemi ==20 süt dişinin== tamamlanmasının kontrolüyle örtüşür.\n\n> Bebek izlemi 9 (hastaneden 9. aya), çocuk izlemi 7 (1-5 yaş) izlemden oluşur."
      }
     ],
     "yenidogan_muayene": [
@@ -407,7 +453,8 @@
       "deste": "k1p-k1-23-ana-cocuk-sagligi-duzeyinin-izlenmesi-v2",
       "kisa": "Ana Çocuk Sağlığı İzlemi",
       "slayt": 56,
-      "baslik": "Yenidoğanın İlk Ziyaret Muayenesi"
+      "baslik": "Yenidoğanın İlk Ziyaret Muayenesi",
+      "anlatim": "Bebeğin ilk ziyaret muayenesi, doğuştan anomali ve patolojilerin tespiti amacının uygulamaya geçtiği basamaktır. Baştan ayağa sistematik olarak değerlendirilir:\n\n- **Deri:** Sarılık, eritem, morarma.\n- **Fontanel:** Ön (büyük) ve arka (küçük) fontanel.\n- **Gözler:** Sarılık, iltihap, kanama.\n- **Ağız:** ==Yarık dudak-damak==.\n- **Boyun:** Tortikollis (kas içi hematom).\n- **Göbek:** Kanama, iltihap.\n- **Üreme organları:** İnmemiş testis, fimozis.\n- **Kalça çıkığı.**\n- **Refleksler:** ==Emme, Moro, yakalama==.\n\nBu liste, her bulgunun hangi organa ait olduğunu bilmeyi gerektirir; örneğin tortikollis boyunda, fimozis üreme organlarında aranır.\n\n> Sarılık hem deride hem gözlerde aranır; göbekte ise kanama ve iltihap değerlendirilir."
      }
     ],
     "k_vitamini": [
@@ -415,7 +462,8 @@
       "deste": "k1p-k1-22-bebek-beslenmesi-v2",
       "kisa": "Bebek Beslenmesi",
       "slayt": 33,
-      "baslik": "K Vitamini: Yenidoğanın Hemorajik Hastalığı ve Profilaksi"
+      "baslik": "K Vitamini: Yenidoğanın Hemorajik Hastalığı ve Profilaksi",
+      "anlatim": "K vitamini, yenidoğanın kanama riskine karşı doğumdan hemen sonra özel önlem gerektirir.\n\n- **Dikkat:** Yenidoğan bebeğin **K vitamini gereksiniminin karşılanmasına** dikkat edilmelidir.\n- **Yetersizliğin sonucu:** **Kanama** ya da **yenidoğanın hemorajik hastalığı**.\n\n### Profilaksi\n- **Zaman:** Doğumu takiben\n- **Doz:** **1 mg**\n- **Yol:** **İntramüsküler (IM)**\n\n### Diğer vitaminlerle fark\n- D vitamini desteği güneşlendirme ile de sağlanabilirken, K vitamini profilaksisi doğumdan hemen sonra **tek doz enjeksiyon** olarak yapılır.\n\n> Yenidoğanı kanamadan korumak için doğumu takiben 1 mg K vitamini IM uygulanır; bu, rutin yenidoğan bakımının parçasıdır."
      }
     ],
     "buyume": [
@@ -423,13 +471,15 @@
       "deste": "k1p-k1-22-bebek-beslenmesi-v2",
       "kisa": "Bebek Beslenmesi",
       "slayt": 16,
-      "baslik": "Büyüme Örüntüsü: Fizyolojik Kilo Kaybı ve Ağırlığın Katlanması"
+      "baslik": "Büyüme Örüntüsü: Fizyolojik Kilo Kaybı ve Ağırlığın Katlanması",
+      "anlatim": "Bebeğin büyümesi belirli bir takvimi izler; bu takvim beslenmenin yeterliliğini değerlendirmenin temelidir.\n\n- **İlk günler:** Bebekler yaşamlarının ilk birkaç gününde **ağırlık kaybederler**.\n- **10–14. gün:** Bebekler bu dönemde **tekrar doğum ağırlıklarına** ulaşırlar.\n- **Sonrası:** Büyüme hızlı devam eder, ancak **büyüme hızı giderek azalır**.\n\n### Ağırlığın katlanma noktaları\n- **4–6 ay:** Doğum ağırlığının **2 katı**\n- **1 yaş:** Doğum ağırlığının **3 katı**\n- **İkinci yıl:** Kazanılan ağırlık yaklaşık **doğum ağırlığı kadardır**.\n\n> 1 yaşında ağırlık doğum ağırlığının **3 katıdır**; \"4 katı\" ifadesi klasik sınav tuzağıdır. Örneğin 3 kg doğan bebek 4-6 ayda yaklaşık 6 kg, 1 yaşta yaklaşık 9 kg olur."
      },
      {
       "deste": "k1p-k1-23-ana-cocuk-sagligi-duzeyinin-izlenmesi-v2",
       "kisa": "Ana Çocuk Sağlığı İzlemi",
       "slayt": 58,
-      "baslik": "Büyüme ve Gelişme: Kavramlar ve Normal Yenidoğan"
+      "baslik": "Büyüme ve Gelişme: Kavramlar ve Normal Yenidoğan",
+      "anlatim": "Bebek-çocuk izleminin amaçlarından biri gelişimin izlenmesidir. Önce iki kavramı ayırmak gerekir:\n\n- **Büyüme:** Organ ve dokuların ==kitlesindeki artıştır==. Tartı, boy, baş çevresi gibi ölçümlerle değerlendirilir.\n- **Gelişme:** ==Fonksiyonel olgunlaşmayı== ifade eder. Motor, dil ve sosyal becerilerin kazanılmasıyla değerlendirilir.\n\nBir bebek normal büyüyüp gelişmede geri kalabilir ya da tersi olabilir; bu yüzden ikisi ayrı ayrı izlenir.\n\n**Normal yenidoğanın ölçüleri:**\n\n- **Ağırlık:** Genel olarak 3000-3500 gram.\n- **Boy:** 47-52 cm.\n\nBu değerler, sonraki aylarda büyümenin hesaplanacağı başlangıç noktasıdır.\n\n> Büyüme ölçülür (kg, cm), gelişme gözlenir (oturma, yürüme, konuşma). Sınavda \"fonksiyonel olgunlaşma\" ifadesi gelişmeyi tanımlar."
      }
     ],
     "anne_sutu": [
@@ -437,7 +487,8 @@
       "deste": "k1p-k1-22-bebek-beslenmesi-v2",
       "kisa": "Bebek Beslenmesi",
       "slayt": 6,
-      "baslik": "Önerilere Uyum: Yalnız Anne Sütüyle Beslenme Oranları"
+      "baslik": "Önerilere Uyum: Yalnız Anne Sütüyle Beslenme Oranları",
+      "anlatim": "Önerilerin açık olmasına karşın pek çok bebek ve çocuk ideal düzeyde beslenmemektedir.\n\n- **2018–2025 dönemi:** Dünya genelinde 0–6 aylık bebeklerin yalnızca yaklaşık **%47'si** sadece anne sütüyle beslenmiştir.\n- **2015–2020 dönemi:** Aynı oran yaklaşık **%44** idi.\n\n### Yorum\n- İki dönem arasında yalnız anne sütüyle beslenme oranı **yalnız birkaç puan** artmıştır.\n- Her iki dönemde de 0-6 aylık bebeklerin **yarısından fazlası** ilk 6 ayda anne sütü dışında besin ya da sıvı almaktadır.\n- Bu açık, bir önceki adımda sayılan önlenebilir ölümlerin neden hâlâ önlenemediğini açıklar.\n\n> Dünyada yalnız anne sütüyle beslenme oranı %44'ten (2015-2020) %47'ye (2018-2025) çıkmıştır; hâlâ yarının altındadır."
      }
     ],
     "tamamlayici": [
@@ -445,7 +496,8 @@
       "deste": "k1p-k1-22-bebek-beslenmesi-v2",
       "kisa": "Bebek Beslenmesi",
       "slayt": 13,
-      "baslik": "TNSA-2018: Eşitsizlikler, Biberon ve Ek Gıda Tercihleri"
+      "baslik": "TNSA-2018: Eşitsizlikler, Biberon ve Ek Gıda Tercihleri",
+      "anlatim": "TNSA-2018 verileri emzirme ve ek gıda uygulamalarında toplumsal farkları ortaya koyar.\n\n### Erken emzirmede eşitsizlik\n- **Kırsal alan:** İlk saatte emzirmeye başlama **%67**\n- **Kentsel alan:** **%73**\n- **Eğitim:** Erken emzirme anne eğitim düzeyi arttıkça **artmaktadır**.\n\n### Biberon ve ek gıdalar\n- **Biberon:** 0-23 aylık bebeklerin **%53'ü** biberonla beslenmiştir.\n- **En sık verilen ek gıdalar (sırasıyla):** yoğurt, peynir ve diğer süt ürünleri; ardından sebze ve meyveler.\n- **Et ve et ürünleri** daha az verilmektedir.\n- 6 aydan küçük çocukların **%41'i** yalnız anne sütü almıştır.\n\n> Kırsal yerleşim ve düşük eğitim, erken emzirmenin zayıf olduğu gruplardır; emzirme desteği bu gruplara öncelikli yönlendirilmelidir."
      }
     ],
     "destekler": [
@@ -453,7 +505,8 @@
       "deste": "k1p-k1-22-bebek-beslenmesi-v2",
       "kisa": "Bebek Beslenmesi",
       "slayt": 28,
-      "baslik": "Kalsiyum ve Demir Gereksinimi"
+      "baslik": "Kalsiyum ve Demir Gereksinimi",
+      "anlatim": "Mineraller arasında kalsiyum ve demir, bebeğin beslenme kaynağına göre farklı riskler taşır.\n\n### Kalsiyum\n- **Risk:** İnek sütü veya süt esaslı mamalarla beslenen bebeklerde **hipokalsemi** açısından dikkatli olunmalıdır.\n- **Anne sütü:** Anne sütünden sağlanan kalsiyumun yaklaşık **2/3'ü vücutta birikir**.\n\n### Demir\n- **Depolar:** Normal bebekler doğum ağırlıklarının **iki katı oluncaya kadar** yeterli demir depolarına sahiptir.\n- **Süre:** Zamanında doğanlarda bu yaklaşık **4 ay**dır; **prematürelerde daha erken** tükenir.\n- **Artan ihtiyaç:** Demir gereksinimi ilk 6 aylık dönemde **6 mg/gün**'den 3 yaşına kadar **10 mg/gün**'e yükselir.\n\n> Demir depoları, ağırlığın 2 katına çıktığı 4-6. ay civarında tükenmeye başlar; prematüre bebekte bu daha erken olur ve demir kaynağı daha önce gerekir."
      }
     ],
     "gostergeler": [
@@ -461,13 +514,15 @@
       "deste": "k1p-k1-22-bebek-beslenmesi-v2",
       "kisa": "Bebek Beslenmesi",
       "slayt": 1,
-      "baslik": "Demografik Göstergeler: Canlı Doğum Sayısı ve Toplam Doğurganlık Hızı"
+      "baslik": "Demografik Göstergeler: Canlı Doğum Sayısı ve Toplam Doğurganlık Hızı",
+      "anlatim": "Bebek beslenmesinin halk sağlığındaki ağırlığını anlamak için önce kaç bebeğin doğduğuna bakılır.\n\n### Canlı doğum sayısı (CDS)\n- **Dünya:** Yılda yaklaşık **130-132 milyon** canlı doğum olur.\n- **Türkiye (TÜİK 2025):** 2022'de **1.035.795**, 2024'te **940.273**, 2025'te **895.374** canlı doğum kaydedilmiştir.\n- **Eğilim:** Üç yılda yıllık doğum sayısı yaklaşık 140 bin azalmış, 1 milyonun altına inmiştir.\n\n### Toplam doğurganlık hızı (TDH)\n- **2013:** 2.1\n- **2022:** 1.69\n- **2024:** 1.49\n- **2025:** ==1.42==\n- **Karabük:** 1.11 ile ülke ortalamasının da belirgin altındadır.\n\n> TDH'nin 2.1 düzeyi nüfusun kendini yenileme eşiği olarak kabul edilir. Türkiye 2013'ten sonra bu eşiğin altına inmiştir; her doğan bebeğin sağlıklı büyümesi bu nedenle daha da değerlidir."
      },
      {
       "deste": "k1p-k1-23-ana-cocuk-sagligi-duzeyinin-izlenmesi-v2",
       "kisa": "Ana Çocuk Sağlığı İzlemi",
       "slayt": 14,
-      "baslik": "Türkiye'de Anne ve Bebek Ölüm Hızlarının Tarihsel Seyri"
+      "baslik": "Türkiye'de Anne ve Bebek Ölüm Hızlarının Tarihsel Seyri",
+      "anlatim": "Türkiye'de 2003'te başlatılan **Sağlıkta Dönüşüm Programı** ile anne ve çocuklara özel önem verilmesi vurgulanmıştır. Uzun dönem verileri bu politikaların etkisini gösterir.\n\n**Anne ölüm hızı (AÖH, yüz bin canlı doğumda):**\n\n- **1961:** ==520==\n- **2002:** 64\n- **2005:** 28,5\n- **2016:** 14,7\n\n**Bebek ölüm hızı (BÖH, bin canlı doğumda):**\n\n- **1963:** ==208==\n- **2002:** 31,5\n- **2022:** 9,2\n- **2023:** 10\n\nYorum: Altmış yılda anne ölüm hızı yaklaşık otuzda birine, bebek ölüm hızı yirmide birine inmiştir. 2002-2005 arasındaki keskin düşüş, Sağlıkta Dönüşüm Programı'nın ilk yıllarına denk gelir. 2023'te bebek ölüm hızı 9,2'den 10'a hafifçe yükselmiştir.\n\n> AÖH yüz binde, BÖH binde ifade edilir; iki göstergenin ölçekleri karıştırılmamalıdır."
      }
     ]
    },
@@ -640,6 +695,44 @@
      "onem": 2,
      "ders": "Bebek Beslenmesi"
     }
+   ],
+   "havuz_konulari": [
+    {
+     "id": "k1-bebek-beslenmesi",
+     "konu": "Bebek beslenmesi, anne sütü ve tamamlayıcı beslenme",
+     "ortak": 20,
+     "bilgi": 28
+    },
+    {
+     "id": "k1k5-bebek-cocuk-izlem",
+     "konu": "Bebek ve çocuk izlemi: büyüme-gelişme, doğumda yapılanlar, aşılar ve topuk kanı",
+     "ortak": 6,
+     "bilgi": 41
+    },
+    {
+     "id": "k5-cocuk-sagligi-olcutler",
+     "konu": "Çocuk sağlığı düzeyi ölçütleri ve çocuk sağlığı",
+     "ortak": 5,
+     "bilgi": 20
+    },
+    {
+     "id": "k1-gebelik-emzirme-beslenme",
+     "konu": "Gebelik ve emzirme döneminde beslenme",
+     "ortak": 1,
+     "bilgi": 17
+    },
+    {
+     "id": "k6-yeterli-dengeli-beslenme",
+     "konu": "Yeterli ve Dengeli Beslenme",
+     "ortak": 1,
+     "bilgi": 56
+    },
+    {
+     "id": "k6-onemli-beslenme-sorunlari",
+     "konu": "Önemli Beslenme Sorunları",
+     "ortak": 1,
+     "bilgi": 52
+    }
    ]
   },
   "anne_kadin": {
@@ -650,20 +743,20 @@
     "Gebelik Terminolojisi/Kavramları",
     "İntrauterin Enfeksiyonlar"
    ],
-   "soru_sayisi": 172,
+   "soru_sayisi": 173,
    "havuz": 80,
    "yillar": {
     "Kategorisiz": 2,
     "Geçmiş Yıllar Çıkmışı (Arşiv)": 5,
     "2025-2026": 4,
     "2024-2025": 2,
-    "2023-2024": 52,
-    "2022-2023": 4,
+    "2023-2024": 14,
+    "2022-2023": 5,
     "2021-2026": 7,
-    "2021-2022": 28,
-    "2020-2021": 49,
+    "2021-2022": 31,
+    "2020-2021": 86,
     "2019-2020": 16,
-    "2016-2017": 3
+    "2018-2019": 1
    },
    "konu_dagilimi": {
     "Ana-Çocuk Sağlığı Düzeyinin İzlenmesi": 56,
@@ -675,14 +768,15 @@
     "Doğumsal Kadın/Erkek Genital Gelişim Anomalileri": 4,
     "Siyanotik doğumsal kalp hastalıkları": 2,
     "Bağışıklama ve önemi": 1,
-    "Halk sağlığını etkileyen faktörler": 1
+    "Halk sağlığını etkileyen faktörler": 1,
+    "Koruyucu Sağlık Hizmetleri": 1
    },
    "kurul_dagilimi": {
     "1": 160,
     "4": 2,
     "5": 1,
     "6": 1,
-    "?": 8
+    "?": 9
    },
    "kazanimlar": [
     {
@@ -740,7 +834,7 @@
        "metin": "Bebeklikte büyüme ve gelişme basamakları ile diş gelişimini özetler."
       }
      ],
-     "cikmis": 50
+     "cikmis": 32
     },
     {
      "kurul": 1,
@@ -777,7 +871,7 @@
        "metin": "Emzirme döneminde beslenme ilkelerini ve kaçınılması gereken maddeleri açıklamak"
       }
      ],
-     "cikmis": 8
+     "cikmis": 4
     },
     {
      "kurul": 1,
@@ -846,7 +940,7 @@
        "metin": "Alloimmünizasyon ve Rh D immün globulin uygulamasını bilmek"
       }
      ],
-     "cikmis": 13
+     "cikmis": 9
     },
     {
      "kurul": 1,
@@ -863,7 +957,7 @@
        "metin": "Gebelik Terminolojisi/Kavramları klinik özelliklerini ve tanı yaklaşımlarını açıklar."
       }
      ],
-     "cikmis": 38
+     "cikmis": 23
     }
    ],
    "desteler": [
@@ -922,13 +1016,15 @@
       "deste": "k1p-k1-06-gebelik-ve-emzirme-doneminde-beslenme",
       "kisa": "Gebelik ve Emzirme Beslenmesi",
       "slayt": 2,
-      "baslik": "Anne Ölüm Oranı (MMR) Tanımı ve Epidemiyolojik Önemi"
+      "baslik": "Anne Ölüm Oranı (MMR) Tanımı ve Epidemiyolojik Önemi",
+      "anlatim": "Anne Ölüm Oranı (Maternal Mortality Ratio - MMR), bir toplumda anne sağlığı düzeyini değerlendirmede kullanılan uluslararası altın standart epidemiyolojik göstergedir. MMR formülü; belirli bir coğrafyada ve yılda gebelik, doğum veya doğum sonu 42 gün içerisinde gelişen maternal nedenli ölüm sayısının, aynı dönemdeki canlı doğum sayısına bölünüp 100.000 katsayısı ile çarpılmasıyla hesaplanır.\n\n> [SINAV SPOTU] Anne Ölüm Oranı (MMR) paydada canlı doğum sayısını alır ve 100.000 canlı doğum başına hesaplanır; Anne Ölüm Hızı (Maternal Mortality Rate) ise paydada doğurgan çağdaki kadın nüfusunu kullanır.\n\nMMR'nin paydasında toplam kadın nüfusu değil, doğrudan gebelik riskiyle karşılaşmış olan canlı doğum sayısı kullanıldığı için, doğurganlık düzeyindeki dalgalanmalardan etkilenmeksizin sağlık sisteminin obstetrik bakım yetkinliğini net olarak ortaya koyar."
      },
      {
       "deste": "k1p-k1-23-ana-cocuk-sagligi-duzeyinin-izlenmesi-v2",
       "kisa": "Ana Çocuk Sağlığı İzlemi",
       "slayt": 3,
-      "baslik": "Anne Ölüm Oranı: Bir Toplumun Aynası"
+      "baslik": "Anne Ölüm Oranı: Bir Toplumun Aynası",
+      "anlatim": "Kadın ve anne sağlığı ile obstetrik hizmetlerin en önemli göstergelerinden biri **anne ölüm oranıdır (AÖO)**. Bu gösterge yalnız tıbbi bakımın kalitesini değil, toplumsal yapıyı da yansıtır.\n\n- **Sağlık hizmeti göstergesi:** Gebelik, doğum ve doğum sonrası bakımın erişilebilirliğini ve niteliğini ölçer.\n- **Toplumsal cinsiyet bağlantısı:** Anne ölümü, ==toplumsal cinsiyet eşitliği/ayrımcılığı== ile yakından ilişkilidir.\n- **Kadının statüsü:** Kadının toplumdaki konumu, sağlık hizmetine erişimini ve kaynaklardan yararlanmasını doğrudan etkiler.\n\nBu nedenle iki ülke benzer tıbbi teknolojiye sahip olsa bile, kadının karar verme gücü ve kaynaklara ulaşımı farklıysa anne ölüm oranları belirgin biçimde ayrışabilir.\n\n> Anne ölümü özellikle sağlık hizmetlerine erişmede ve kaynaklardan yararlanmada son derece etkili olan toplumsal cinsiyet eşitliği ve kadının statüsü ile yakından ilişkilidir."
      }
     ],
     "dob": [
@@ -936,13 +1032,15 @@
       "deste": "k1p-k1-06-gebelik-ve-emzirme-doneminde-beslenme",
       "kisa": "Gebelik ve Emzirme Beslenmesi",
       "slayt": 26,
-      "baslik": "Doğum Öncesi Bakım (DÖB): Tanım, Amaç ve İzlem Standartları"
+      "baslik": "Doğum Öncesi Bakım (DÖB): Tanım, Amaç ve İzlem Standartları",
+      "anlatim": "Doğum Öncesi Bakım (DÖB); anne ve karnındaki bebeğin gebelik süresince düzenli aralıklarla, eğitilmiş ve vasıflı bir sağlık personeli (ebe veya hekim) tarafından muayene edilmesi, olası risk faktörlerinin erkenden saptanması, gerekli profilaktik desteklerin sunulması ve tavsiyelerde bulunulması sürecidir.\n\n> [SINAV SPOTU] DSÖ kılavuzlarına göre olumlu bir gebelik deneyimi ve komplikasyonların önlenmesi için gebelik boyunca EN AZ 8 KEZ sağlık personeli ile yüz yüze DÖB viziti önerilmektedir (Türkiye Sağlık Bakanlığı asgari 4 izlem şart koşar).\n\nDÖB yalnızca tansiyon ölçümü veya ultrasonografi değildir; anemi taraması, idrar proteini incelemesi, tetanoz aşısı, demir-D vitamini desteği ve doğum planının yapılmasını içeren kapsamlı bir koruyucu halk sağlığı paketidir."
      },
      {
       "deste": "k1p-k1-23-ana-cocuk-sagligi-duzeyinin-izlenmesi-v2",
       "kisa": "Ana Çocuk Sağlığı İzlemi",
       "slayt": 10,
-      "baslik": "Doğum Öncesi Bakım (DÖB): Tanım"
+      "baslik": "Doğum Öncesi Bakım (DÖB): Tanım",
+      "anlatim": "AÇS izlemleri içinde en çok üzerinde durulan hizmet, gebelere verilen **Doğum Öncesi Bakım'dır (DÖB)**.\n\nTanımın öğeleri tek tek ele alındığında:\n\n- **Kim izlenir:** Hem **anne** hem **fetüs**.\n- **Ne zaman:** **Tüm gebelik boyunca**; yalnız son aylarda değil.\n- **Nasıl:** Gerekli **muayene ve önerilerde** bulunularak.\n- **Kim tarafından:** ==Eğitimli bir sağlık personeli== tarafından.\n- **Hangi sıklıkta:** ==Düzenli aralıklarla==.\n\nBu öğelerden biri eksikse bakım tanım gereği eksik kalır. Örneğin yalnız doğuma yakın tek bir muayene ya da eğitimsiz kişilerce yapılan takip DÖB tanımını karşılamaz.\n\n> DÖB tanımındaki \"eğitimli sağlık personeli\" ve \"düzenli aralık\" öğeleri, ileride göreceğimiz yeterli bakım ölçütlerinin de temelini oluşturur."
      }
     ],
     "gebe_izlem": [
@@ -950,7 +1048,8 @@
       "deste": "k1p-k1-23-ana-cocuk-sagligi-duzeyinin-izlenmesi-v2",
       "kisa": "Ana Çocuk Sağlığı İzlemi",
       "slayt": 24,
-      "baslik": "Gebe İzleminin Amaçları I: Önceden Var Olan ve Gebeliğe Bağlı Sorunlar"
+      "baslik": "Gebe İzleminin Amaçları I: Önceden Var Olan ve Gebeliğe Bağlı Sorunlar",
+      "anlatim": "Gebe izleminin ilk iki amacı, patolojileri **kökenine göre** iki gruba ayırır.\n\n**1. Önceden var olan patolojilerin tespiti**\n\nGebe kadında daha önceden mevcut olup gebeliği olumsuz etkileyebilecek ya da ==gebelik nedeniyle ağırlaşabilecek== durumlar aranır:\n\n- **Pelvis darlığı:** Doğumun normal yolla gerçekleşmesini engelleyebilir.\n- **Anemi:** Gebelikte artan gereksinimle derinleşebilir.\n- **Hipertansiyon, kalp-böbrek hastalıkları, diyabet, tüberküloz:** Gebeliğin yüküyle ağırlaşabilir.\n\n**2. Gebeliğe bağlı olumsuz durumların önlenmesi veya erken tespiti**\n\nGebelik sırasında, gebeliğe bağlı olarak ortaya çıkabilecek durumlar:\n\n- **Hiperemezis:** Aşırı bulantı-kusma.\n- **Eklampsi-preeklampsi:** Gebeliğe özgü hipertansif tablo.\n- **Kanamalar** ve **hidramnios** (amniyon sıvısı fazlalığı).\n\n> Ayrım ölçütü köken: diyabet, anemi, tüberküloz gebelik öncesinden gelebilir; hiperemezis, preeklampsi ve hidramnios gebeliğin kendisiyle ortaya çıkar."
      }
     ],
     "kessner": [
@@ -958,7 +1057,8 @@
       "deste": "k1p-k1-23-ana-cocuk-sagligi-duzeyinin-izlenmesi-v2",
       "kisa": "Ana Çocuk Sağlığı İzlemi",
       "slayt": 15,
-      "baslik": "Yeterli Bakım ve Kessner İndeksi"
+      "baslik": "Yeterli Bakım ve Kessner İndeksi",
+      "anlatim": "DÖB'ün yalnız yapılmış olması yetmez; ==sayısal ve içerik olarak yeterli== yapılıp yapılmadığı önemlidir.\n\n1970'li yıllarda **Kessner** tarafından hazırlanan raporlarla yeterli bakım alma için **3 kriter** belirlenmiştir. Bu kriterlerden oluşan **Kessner indeksi**, bakımın kalitesini ölçmek amacıyla kullanılır:\n\n- **Başlangıç zamanı:** Doğum öncesi bakımın ==hangi gebelik ayında başladığı==.\n- **İzlem sayısı:** Doğuma kadar **kaç kez izlendiği**.\n- **Bakımın yeri:** Bakımın **yapıldığı yer**.\n\nBu üç ölçüt birlikte değerlendirilir: geç başlayan, az sayıda yapılan ya da uygun olmayan yerde verilen bakım yetersiz kabul edilir.\n\n> Kessner indeksi: başlangıç ayı + izlem sayısı + bakımın yapıldığı yer. Amaç bakımın kalitesini ölçmektir."
      }
     ],
     "tehlike": [
@@ -966,13 +1066,15 @@
       "deste": "k1p-k1-06-gebelik-ve-emzirme-doneminde-beslenme",
       "kisa": "Gebelik ve Emzirme Beslenmesi",
       "slayt": 27,
-      "baslik": "DÖB İçeriği: Danışmanlık ve Tehlike İşaretleri Eğitimi"
+      "baslik": "DÖB İçeriği: Danışmanlık ve Tehlike İşaretleri Eğitimi",
+      "anlatim": "Nitelikli bir doğum öncesi bakım vizitinin en kritik bileşenlerinden biri anne adayına verilen yapılandırılmış sağlık eğitimidir. Bu eğitim; dengeli beslenme ilkeleri, kilo kontrolü, kişisel ve dental hijyen, gebelikte güvenli fiziksel aktivite, sigara, alkol ve toksik maddelerin kesin zararları ile sık görülen gebelik yakınmalarının yönetimini kapsar.\n\n> [SINAV SPOTU] DÖB eğitiminin hayati parçası 'Obstetrik Tehlike İşaretleri'dir: Vajinal kanama, konvülsiyon, şiddetli baş ağrısı/bulanık görme, yüksek ateş, su gelmesi ve fetal hareketlerde azalma derhal hastaneye başvuruyu gerektirir.\n\nAnnenin bu belirtileri öğrenmesi, Üç Gecikme Modeli'nin ilk basamağı olan 'bakım aramaya karar verme gecikmesini' ortadan kaldırarak hayat kurtarır."
      },
      {
       "deste": "k1p-k1-23-ana-cocuk-sagligi-duzeyinin-izlenmesi-v2",
       "kisa": "Ana Çocuk Sağlığı İzlemi",
       "slayt": 31,
-      "baslik": "Gebelikte Tehlike İşaretleri"
+      "baslik": "Gebelikte Tehlike İşaretleri",
+      "anlatim": "Tehlike işaretleri, gebenin beklemeden sağlık kuruluşuna başvurmasını gerektiren belirtilerdir. Gebeye her izlemde öğretilir.\n\n- **Vajinal kanama:** Düşük, plasenta sorunları gibi ciddi durumların habercisi olabilir.\n- **Konvülsiyon:** Eklampsiyi düşündürür.\n- **Baş ağrısı ve görmede bozulma:** ==Preeklampsinin== uyarıcı belirtileri olabilir.\n- **Ateş ve/veya ciddi güçsüzlük:** Enfeksiyonu düşündürür.\n- **Ciddi karın ağrısı.**\n- **Solunum güçlüğü veya sık solunum.**\n- **Suyunun gelmesi:** Zarların erken açılmasını gösterir.\n- **Yüz, el ve bacaklarda şişme:** Özellikle ani gelişen ödem preeklampsi açısından uyarıcıdır.\n\nBu belirtilerden birinin varlığı, birinci basamakta ==sevk nedenidir==.\n\n> Baş ağrısı + görme bozukluğu + yüz-el şişliği birlikteliği gebelikte hipertansif tabloyu akla getirmeli ve acil değerlendirme gerektirir."
      }
     ],
     "lohusa": [
@@ -980,7 +1082,8 @@
       "deste": "k1p-k1-23-ana-cocuk-sagligi-duzeyinin-izlenmesi-v2",
       "kisa": "Ana Çocuk Sağlığı İzlemi",
       "slayt": 50,
-      "baslik": "Lohusa (Loğusa) İzleminin Amaçları"
+      "baslik": "Lohusa (Loğusa) İzleminin Amaçları",
+      "anlatim": "Doğumla AÇS izlemi bitmez; doğum sonrası (postpartum) dönem anne için ayrı bir risk dönemidir. Loğusa izleminin iki amacı vardır.\n\n**1. Loğusalıkta oluşabilecek patolojilerin tespiti:**\n\n- **Puerperal sepsis:** Doğum sonrası genital yol kaynaklı ciddi enfeksiyon.\n- **Mastit:** Meme dokusunun iltihabı; emzirmeyi olumsuz etkiler.\n- **İdrar yolu enfeksiyonları** ve benzeri durumlar.\n\n**2. Annenin eğitilip desteklenmesi:**\n\n- **Bebek bakımı.**\n- **Bebek beslenmesi ve ==anne sütü==.**\n- **Aile planlaması:** Doğum sonrası yeni ve sık aralıklı gebeliğin önlenmesi.\n\nDoğum sonrası aile planlaması, daha önce öğrenilen ==kısa doğum aralığı== riskini doğrudan azaltır.\n\n> Loğusa izlemi hem anneyi (enfeksiyonlar) hem bebeği (beslenme ve bakım) korumaya yöneliktir."
      }
     ],
     "kadin_izlem": [
@@ -988,7 +1091,8 @@
       "deste": "k1p-k1-23-ana-cocuk-sagligi-duzeyinin-izlenmesi-v2",
       "kisa": "Ana Çocuk Sağlığı İzlemi",
       "slayt": 52,
-      "baslik": "Gebe ve Lohusa Olmayan 15-49 Yaş Kadınların İzlemi"
+      "baslik": "Gebe ve Lohusa Olmayan 15-49 Yaş Kadınların İzlemi",
+      "anlatim": "Gebe ya da lohusa olmayan doğurganlık çağındaki kadınlar da izlenir; bu izlem bir sonraki gebeliği güvenli kılmanın ön koşuludur.\n\n**İzlemin amaçları:**\n\n- **Aile planlaması hizmetlerinin verilmesi:** İstenmeyen ve riskli gebeliklerin önlenmesi.\n- **Gebeliğin erken dönemde tespiti:** DÖB'ün ilk 3 ayda başlayabilmesi için.\n- **Riskli gebeliğe aday kadınların önceden tespiti:** Örneğin 18 yaş altı, çok doğum yapmış ya da kronik hastalığı olan kadınlar.\n\n**İzlem takvimi (15-49 yaş kadınlar):**\n\n- **Ocak-Haziran dönemi:** Bir kez.\n- **Temmuz-Aralık dönemi:** Bir kez.\n- **Toplam:** ==Yılda 2 kez==.\n\nBu izlem, gebeliğin erken tespiti yoluyla yeterli bakımın ==ilk 3 ayda başlama== kriterini doğrudan destekler.\n\n> Gebe ve lohusa olmayan kadının izlemi koruyucu bir köprüdür: önceki doğumdan sonraki aile planlamasını ve sonraki gebeliğin erken yakalanmasını sağlar."
      }
     ],
     "tnsa": [
@@ -996,7 +1100,8 @@
       "deste": "k1p-k1-23-ana-cocuk-sagligi-duzeyinin-izlenmesi-v2",
       "kisa": "Ana Çocuk Sağlığı İzlemi",
       "slayt": 21,
-      "baslik": "TNSA-2018: Doğum Öncesi Bakım Kapsamı"
+      "baslik": "TNSA-2018: Doğum Öncesi Bakım Kapsamı",
+      "anlatim": "Türkiye Nüfus ve Sağlık Araştırması (TNSA-2018), araştırmadan önceki son 5 yılda canlı doğum yapan 15-49 yaş kadınların DÖB durumunu ortaya koyar.\n\n- **DÖB alma:** Kadınların ==%96'sı== en son doğumunda **uzman sağlık personelinden** DÖB almıştır.\n- **İzlem sayısı:** Kadınların ==%90'ı== **4 ya da daha fazla** DÖB almıştır.\n- **Bileşenler:** Gebe kadınların çoğu DÖB'ün temel bileşenlerinden yararlanmıştır; birçok bileşen için oran **%92'nin üzerindedir**.\n- **Demir ve tetanoz:** Kadınların **%81'i** gebelik boyunca demir takviyesi ve tetanos aşısı yaptırmıştır.\n\nYorum: DÖB'e erişim çok yüksek olmasına karşın, **demir takviyesi ve tetanoz aşısı** diğer bileşenlerin gerisinde kalmaktadır; yaklaşık her beş gebeden biri bu iki koruyucu uygulamayı almamaktadır.\n\n> DÖB alma oranının yüksek olması, bakımın içeriğinin tam olduğu anlamına gelmez; bileşen bazında açıklar sürmektedir."
      }
     ],
     "beslenme": [
@@ -1004,7 +1109,8 @@
       "deste": "k1p-k1-06-gebelik-ve-emzirme-doneminde-beslenme",
       "kisa": "Gebelik ve Emzirme Beslenmesi",
       "slayt": 31,
-      "baslik": "Gebelikte Beslenmenin 4 Temel Amacı ve 'İki Canlı' Yanılgısı"
+      "baslik": "Gebelikte Beslenmenin 4 Temel Amacı ve 'İki Canlı' Yanılgısı",
+      "anlatim": "Gebelikte dengeli ve yeterli beslenme, rastgele bir kalori artışı değil; dört hayati biyolojik hedefe hizmet eden hassas bir planlamadır: 1) Annenin kendi artan fizyolojik gereksinimlerini karşılamak, 2) Annenin vücut besin depolarını tükenmekten koruyup dengede tutmak, 3) Bebeğin intrauterin büyüme, organogenez ve gelişimini eksiksiz sağlamak ve 4) Doğum sonrası emzirme döneminde salgılanacak anne sütünün enerji ve besin ögelerini depolamak.\n\n> [SINAV SPOTU] Halk arasında yaygın olan 'gebe kadın iki canlıdır, her şeyden iki kat yemelidir' anlayışı tamamen yanlış ve tehlikelidir; doğru olan her şeyden iki misli yemek değil, bazı besin ögelerinden belirli miktarda fazla tüketmektir.\n\nKontrolsüz kalori alımı kadında aşırı kilo kazanımı, gestasyonel diyabet ve makrozomiye zemin hazırlarken, niteliksiz beslenme ise kaloriye rağmen mikrobesin eksiklikleri (gizli açlık) doğurur."
      }
     ]
    },
@@ -1177,6 +1283,44 @@
      "onem": 3,
      "ders": "Gebelik ve Emzirme Döneminde Beslenme"
     }
+   ],
+   "havuz_konulari": [
+    {
+     "id": "k1-dob-gebe-izlemi",
+     "konu": "Doğum öncesi bakım ve gebe izlemi",
+     "ortak": 37,
+     "bilgi": 47
+    },
+    {
+     "id": "k1-lohusa-kadin-ap",
+     "konu": "Lohusa ve 15-49 yaş kadın izlemi, aile planlaması ve üreme sağlığı",
+     "ortak": 18,
+     "bilgi": 36
+    },
+    {
+     "id": "k5-cocuk-sagligi-olcutler",
+     "konu": "Çocuk sağlığı düzeyi ölçütleri ve çocuk sağlığı",
+     "ortak": 6,
+     "bilgi": 20
+    },
+    {
+     "id": "ab-en-sik-ilk",
+     "konu": "Özet: 'en sık' ve 'ilk' ifadeleri (anne-bebek-çocuk)",
+     "ortak": 4,
+     "bilgi": 1
+    },
+    {
+     "id": "k1-gebelik-emzirme-beslenme",
+     "konu": "Gebelik ve emzirme döneminde beslenme",
+     "ortak": 2,
+     "bilgi": 17
+    },
+    {
+     "id": "k1k5-bebek-cocuk-izlem",
+     "konu": "Bebek ve çocuk izlemi: büyüme-gelişme, doğumda yapılanlar, aşılar ve topuk kanı",
+     "ortak": 1,
+     "bilgi": 41
+    }
    ]
   },
   "tarama": {
@@ -1187,31 +1331,30 @@
     "Aile Hekimliğinde Periyodik Muayeneler 2",
     "Koruyucu Sağlık Hizmetleri"
    ],
-   "soru_sayisi": 67,
-   "havuz": 67,
+   "soru_sayisi": 70,
+   "havuz": 70,
    "yillar": {
     "Kategorisiz": 2,
     "Geçmiş Yıllar Çıkmışı (Arşiv)": 10,
     "2026": 1,
-    "2025-2026 (Geçen Sene)": 1,
-    "2025-2026": 3,
+    "2025-2026": 4,
     "2024-2025": 2,
-    "2023-2024": 21,
+    "2023-2024": 4,
     "2023": 2,
-    "2022-2023": 3,
+    "2022-2023": 4,
     "2021-2026": 7,
-    "2021-2022": 3,
-    "2020-2021": 9,
-    "2019-2020": 2,
-    "2016-2017": 1
+    "2021-2022": 2,
+    "2020-2021": 24,
+    "2019-2020": 3,
+    "2018-2019": 5
    },
    "konu_dagilimi": {
+    "Kanser Hastalıkları Epidemiyolojisi": 19,
     "Aile Hekimliğinde Periyodik Muayeneler 1": 19,
-    "Kanser Hastalıkları Epidemiyolojisi": 18,
     "Prenatal Tanı Yöntemleri": 14,
+    "Koruyucu Sağlık Hizmetleri": 5,
     "Aile Hekimliğinde Periyodik Muayeneler 2": 4,
-    "Koruyucu Sağlık Hizmetleri": 4,
-    "Yaşlılık Döneminde Güvenli Yaşamın İlkeleri": 2,
+    "Yaşlılık Döneminde Güvenli Yaşamın İlkeleri": 3,
     "Çocuk Sağlığı": 2,
     "Yaşlı Sağlığı Sorunları ve Sağlık Hizmetleri": 1,
     "Deneysel ve Kesitsel Çalışmalar": 1,
@@ -1224,7 +1367,7 @@
     "4": 16,
     "5": 2,
     "6": 6,
-    "?": 10
+    "?": 13
    },
    "kazanimlar": [
     {
@@ -1246,7 +1389,7 @@
        "metin": "Kanser Hastalıkları Epidemiyolojisi klinik yönetimini, farmakoterapi ilkelerini ve komplikasyonlardan korunma yaklaşımlarını sıralar."
       }
      ],
-     "cikmis": 18
+     "cikmis": 16
     },
     {
      "kurul": 2,
@@ -1267,7 +1410,7 @@
        "metin": "Aile Hekimliğinde Periyodik Muayeneler 1 klinik yönetimini, farmakoterapi ilkelerini ve komplikasyonlardan korunma yaklaşımlarını sıralar."
       }
      ],
-     "cikmis": 18
+     "cikmis": 16
     },
     {
      "kurul": 2,
@@ -1305,7 +1448,7 @@
        "metin": "Koruyucu Sağlık Hizmetleri klinik özelliklerini ve tanı yaklaşımlarını açıklar."
       }
      ],
-     "cikmis": 4
+     "cikmis": 3
     }
    ],
    "desteler": [
@@ -1352,19 +1495,22 @@
       "deste": "learn-prenatal-tani",
       "kisa": "Prenatal Tanı Yöntemleri, Tarama Testleri ve Klinik Uygulama Alanları",
       "slayt": 7,
-      "baslik": "Birinci Trimester Kombine Tarama Testi (İkili Test): Biyokimyasal Parametreler ve NT"
+      "baslik": "Birinci Trimester Kombine Tarama Testi (İkili Test): Biyokimyasal Parametreler ve NT",
+      "anlatim": "Birinci Trimester Kombine Tarama Testi (halk arasında 'İkili Test'); 11 hafta 0 gün ile 13 hafta 6 gün arasında (fötal Baş-Popo Uzunluğu / CRL 45-84 mm iken) uygulanan, Trizomi 21 ve diğer anöploidiler için en yüksek yakalama oranına sahip tarama modalitelerinden biridir. Bu test, ultrasonografik Fetal Ense Saydamlığı (Nuchal Translucency - NT) ölçümü ile maternal kanda iki biyokimyasal belirtecin kombinasyonundan oluşur.\n\n1. Biyokimyasal Belirteçler (Sinsisyotrofoblast Ürünleri):\n   - Serbest beta-hCG (Free beta-hCG): Gebeliğin devamını sağlayan trofoblastik hormon. Down Sendromunda (Trizomi 21) fötal/plasental dokulardaki gen dozajı dengesizliğine bağlı olarak maternal kanda BELİRGİN DÜZEYDE YÜKSELİR (ortalama ~2.0 MoM).\n   - PAPP-A (Pregnancy-Associated Plasma Protein A): Trofoblastik invazyon ve IGF aksında görev alan çinko metalloproteinazı. Trizomi 21 olgularında plasental fonksiyonel baskılanma nedeniyle BELİRGİN DÜZEYDE DÜŞER (ortalama ~0.4-0.5 MoM).\n\n2. Ultrasonografik Ense Saydamlığı (NT):\n   - Fetal boynun arkasında, cilt ile servikal vertebranın yumuşak dokusu arasında biriken fizyolojik sıvının ultrasonografik ekojenitesiz (sonolusen) alanıdır. Fetal lenfatik drenajın geçici gecikmesi, fötal kardiyak debi dinamikleri veya hücreler arası matriks değişiklikleri sıvıyı artırır.\n…"
      },
      {
       "deste": "k1p-k1-35-prenatal-tani-yontemleri-v2",
       "kisa": "Prenatal Tanı",
       "slayt": 35,
-      "baslik": "Üçlü Test: Bileşenler ve Zamanlama"
+      "baslik": "Üçlü Test: Bileşenler ve Zamanlama",
+      "anlatim": "Üçlü test, ikinci trimesterin temel anne serum taramasıdır. ==Down sendromu, trizomi 18 ve NTD== riskini değerlendirmek için kullanılır.\n\nAnne serumunda üç belirteç ölçülür:\n\n- **AFP:** Alfa-fetoprotein; fetal kaynaklıdır.\n- **uE3:** Unkonjuge (bağlı olmayan) estriol.\n- **hCG:** İnsan koryonik gonadotropini.\n\nZamanlama:\n\n- **Dönem:** 2. trimester, ==15–20. haftalar==.\n- **En uygun aralık:** ==16–18. haftalar==.\n\nÜç hastalık için ayrı mantık işler: Down ve trizomi 18 belirteç örüntüsüyle, NTD ise AFP yüksekliğiyle yakalanır.\n\n> Üçlü testin ideal zamanı 16–18. haftalardır; bu, AFP taramasının yapıldığı 16. haftayla örtüşür."
      },
      {
       "deste": "k1p-k1-23-ana-cocuk-sagligi-duzeyinin-izlenmesi-v2",
       "kisa": "Ana Çocuk Sağlığı İzlemi",
       "slayt": 32,
-      "baslik": "Üçlü Test ve Ense Kalınlığı"
+      "baslik": "Üçlü Test ve Ense Kalınlığı",
+      "anlatim": "Danışmanlık konularından biri olan fetal anomali taramasının en bilinen örneği **üçlü testtir**.\n\n**Neyi tarar?** Bebekte şu genetik/yapısal hastalıkların olma ==olasılığını== saptamaya yöneliktir:\n\n- **Down sendromu (trizomi 21)**\n- **Nöral tüp defekti**\n- **Trizomi 18**\n\n**Ölçülen üç belirteç (anne kanında):**\n\n- **Beta-hCG**\n- **Alfa-fetoprotein (AFP)**\n- **Estriol (E3)**\n\n**Zamanlama:** 15-22. haftalar arasında yapılabilir; ==en ideal sonuçlar 16-18. haftalarda== elde edilir.\n\n**Ense kalınlığı:** Ultrasonla ölçülen ense kalınlığı **kromozomal bozuklukların** taramasında değerlendirilir.\n\n> Üçlü test bir tarama testidir; tanı koymaz, yalnız riski (olasılığı) belirler. Yüksek riskli sonuçta tanısal incelemeye yönlendirilir."
      }
     ]
    },
@@ -1537,6 +1683,44 @@
      "onem": 2,
      "ders": "Prenatal Tanı Yöntemleri"
     }
+   ],
+   "havuz_konulari": [
+    {
+     "id": "k4-kanser-epidemiyolojisi",
+     "konu": "Kanser hastalıkları epidemiyolojisi",
+     "ortak": 19,
+     "bilgi": 39
+    },
+    {
+     "id": "k1-korunma-duzeyleri",
+     "konu": "Korunma düzeyleri ve koruyucu sağlık hizmetleri",
+     "ortak": 5,
+     "bilgi": 19
+    },
+    {
+     "id": "k1k5-bebek-cocuk-izlem",
+     "konu": "Bebek ve çocuk izlemi: büyüme-gelişme, doğumda yapılanlar, aşılar ve topuk kanı",
+     "ortak": 2,
+     "bilgi": 41
+    },
+    {
+     "id": "k6-onemli-beslenme-sorunlari",
+     "konu": "Önemli Beslenme Sorunları",
+     "ortak": 1,
+     "bilgi": 52
+    },
+    {
+     "id": "k6-yasli-sagligi",
+     "konu": "Yaşlı Sağlığı Sorunları ve Sağlık Hizmetleri",
+     "ortak": 1,
+     "bilgi": 45
+    },
+    {
+     "id": "k6-deneysel-kesitsel",
+     "konu": "Kesitsel ve deneysel (müdahale) araştırmalar",
+     "ortak": 1,
+     "bilgi": 11
+    }
    ]
   },
   "salgin": {
@@ -1551,29 +1735,28 @@
     "İnfluenza",
     "Cinsel yolla bulaşan hastalıklarda profilaksi ve korunma"
    ],
-   "soru_sayisi": 270,
+   "soru_sayisi": 277,
    "havuz": 80,
    "yillar": {
-    "Kategorisiz": 6,
+    "Kategorisiz": 5,
     "Geçmiş Yıllar Çıkmışı (Arşiv)": 15,
     "2024-2025": 4,
-    "2023-2024": 88,
-    "2022-2023": 1,
+    "2023-2024": 15,
+    "2022-2023": 6,
     "2021-2026": 11,
-    "2021-2022": 50,
-    "2020-2021": 72,
-    "2019-2020": 11,
-    "2018-2019": 4,
-    "2016-2017": 8
+    "2021-2022": 52,
+    "2020-2021": 139,
+    "2019-2020": 13,
+    "2018-2019": 17
    },
    "konu_dagilimi": {
-    "Enfeksiyon Hastalıklarında Genel Kavramlar ve Temel Özellikler": 55,
-    "Cinsel yolla bulaşan hastalıklarda profilaksi ve korunma": 49,
+    "Enfeksiyon Hastalıklarında Genel Kavramlar ve Temel Özellikler": 57,
+    "Cinsel yolla bulaşan hastalıklarda profilaksi ve korunma": 51,
     "İzolasyon Yöntemleri": 37,
+    "Zoonotik Enfeksiyonlar": 29,
     "Salgın Hastalıklarda Kontrol ve Korunma Yöntemleri": 28,
-    "Zoonotik Enfeksiyonlar": 28,
-    "İnfluenza": 25,
-    "Kırım-Kongo kanamalı ateşi": 22,
+    "İnfluenza": 26,
+    "Kırım-Kongo kanamalı ateşi": 23,
     "Enfeksiyon Hastalıklarının Epidemiyolojisi": 6,
     "Epidemiyolojiye Giriş": 6,
     "Kolera": 6,
@@ -1586,7 +1769,7 @@
     "4": 20,
     "5": 19,
     "6": 12,
-    "?": 15
+    "?": 22
    },
    "kazanimlar": [
     {
@@ -1652,7 +1835,7 @@
        "metin": "Hastalıklara göre başlıca bulaş yollarını ve müdahale bileşenlerini özetlemek"
       }
      ],
-     "cikmis": 27
+     "cikmis": 16
     },
     {
      "kurul": 1,
@@ -1709,7 +1892,7 @@
        "metin": "Enfeksiyon hastalıklarının seyrindeki temel basamakları (inkübasyon, prodrom, klinik, konvelesan) açıklar."
       }
      ],
-     "cikmis": 53
+     "cikmis": 45
     },
     {
      "kurul": 1,
@@ -1758,7 +1941,7 @@
        "metin": "Kişisel koruyucu ekipmanın giyilme ve çıkarılma sırasını açıklar."
       }
      ],
-     "cikmis": 34
+     "cikmis": 17
     },
     {
      "kurul": 5,
@@ -1779,7 +1962,7 @@
        "metin": "Kırım-Kongo kanamalı ateşi klinik yönetimini, farmakoterapi ilkelerini ve komplikasyonlardan korunma yaklaşımlarını sıralar."
       }
      ],
-     "cikmis": 18
+     "cikmis": 16
     },
     {
      "kurul": 3,
@@ -1808,7 +1991,7 @@
        "metin": "Kolera-Bulaşma Yolu kolera bulaşması temiz su ve sanitasyon uygulamalarının yetersizliğiyle yakından bağlantılıdır mekanizmasını ve klinik önemini analiz eder."
       }
      ],
-     "cikmis": 6
+     "cikmis": 5
     },
     {
      "kurul": 3,
@@ -1837,7 +2020,7 @@
        "metin": "Zoonotik Enfeksiyonlar (Zoonozlar) bulaş yolları; mekanizmasını ve klinik önemini analiz eder."
       }
      ],
-     "cikmis": 27
+     "cikmis": 22
     },
     {
      "kurul": 4,
@@ -1858,7 +2041,7 @@
        "metin": "İnfluenza klinik yönetimini, farmakoterapi ilkelerini ve komplikasyonlardan korunma yaklaşımlarını sıralar."
       }
      ],
-     "cikmis": 21
+     "cikmis": 19
     },
     {
      "kurul": 1,
@@ -1911,7 +2094,7 @@
        "metin": "HIV temas sonrası profilaksinin rejimini, zamanlamasını ve izlem takvimini açıklar."
       }
      ],
-     "cikmis": 45
+     "cikmis": 20
     }
    ],
    "desteler": [
@@ -1970,7 +2153,8 @@
       "deste": "k1p-k1-14-salgin-hastaliklarda-kontrol-ve-korunma-yontemleri-v2",
       "kisa": "Salgın Kontrolü ve Korunma",
       "slayt": 7,
-      "baslik": "Hazırlık: Sürveyans ve Klinisyenin Rolü"
+      "baslik": "Hazırlık: Sürveyans ve Klinisyenin Rolü",
+      "anlatim": "Bir sonraki salgını yakalayabilmek için hazırlığın ilk ayağı ==iyi bir sürveyans sistemi== kurmaktır. Sürveyans, vakaların sürekli ve sistematik olarak izlenmesidir.\n\n- **İlk halka klinisyendir:** Tanı ilk olarak klinisyenle başlar. Olağan dışı bir tabloyu fark eden hekimin şüphesi, sistemin harekete geçmesini sağlayan ilk sinyaldir.\n- **Gecikmenin bedeli:** Ebola virüsü Batı Afrika'da ==iki ay boyunca tanı almamıştır==. Bu süre boyunca hastalık fark edilmeden yayılmaya devam etmiştir.\n- **Sistem bütünlüğü:** Klinisyenin şüphesi ancak bu bilgiyi toplayan ve değerlendiren bir sürveyans ağına ulaşırsa salgın erken tanınır.\n\n> Batı Afrika Ebola salgınında iki aylık tanı gecikmesi, sürveyansın ilk halkası olan klinisyen farkındalığı zayıf olduğunda salgının sessizce büyüyebileceğini gösterir."
      }
     ],
     "kontrol": [
@@ -1978,19 +2162,22 @@
       "deste": "learn-izolasyon-yontemleri",
       "kisa": "İzolasyon Yöntemleri & Enfeksiyon Kontrolü",
       "slayt": 8,
-      "baslik": "Enfeksiyon Zinciri ve İzolasyonun Koruyucu Rolü"
+      "baslik": "Enfeksiyon Zinciri ve İzolasyonun Koruyucu Rolü",
+      "anlatim": "### Enfeksiyon Zinciri ve İzolasyonun Koruyucu Rolü\n#### Kaynak, çıkış kapısı, bulaş yolu, giriş kapısı, duyarlı konak ve zinciri kırma stratejisi\n\n• **Temel Enfeksiyon Kontrolü ve Mikrobiyolojik Çerçeve:** Bir enfeksiyonun yayılabilmesi için altı halkadan oluşan biyolojik bir zincirin kesintisiz tamamlanması gerekir; izolasyon önlemlerinin yegane hedefi bu zinciri en zayıf halkasından kırmaktır.\n\n• **Duyarlı Konak Faktörleri:** Diyabet, nötropeni, steroid kullanımı, kemoterapi ve yanık hastanın enfeksiyon zincirindeki duyarlılığını dramatik artırır.\n\n• **Çıkış Kapısı Yönetimi:** Öksüren hastaya cerrahi maske takılması çıkış kapısını kapatmanın en pratik örneğidir.\n\n• **El Hijyeninin Pozisyonu:** Sağlık personelinin elleri zincirdeki en kritik 'Taşınma Yolu' halkasıdır; el yıkamak zinciri anında parçalar.\n\n💡 **Enfeksiyon Hastalıkları Sentezi ve Fakülte Sınav İncileri (Dr. Rüveyda Korkmazer & Dr. Merve Kaçar):**\n• ZİNCİRİN HALKALARI: Kaynak (Rezervuar) → Çıkış Kapısı → Bulaş (Taşınma) Yolu → Giriş Kapısı → Duyarlı Konak.\n• CANLI KAYNAKLAR: Hasta birey, sağlık personeli, hasta yakını, ziyaretçiler ve asemptomatik kolonize taşıyıcılar.\n• CANSIZ KAYNAKLAR (FOMİTLER): Tıbbi cihazlar (stetoskop, tansiyon aleti), lavabolar, su şebekesi, klima santralleri, hasta yatağı ve komodin yüzeyleri.\n…"
      },
      {
       "deste": "k1p-k1-14-salgin-hastaliklarda-kontrol-ve-korunma-yontemleri-v2",
       "kisa": "Salgın Kontrolü ve Korunma",
       "slayt": 20,
-      "baslik": "Kontrol Altına Alma ve Etkiyi Azaltma"
+      "baslik": "Kontrol Altına Alma ve Etkiyi Azaltma",
+      "anlatim": "Sınırlama başarısız olursa patojen ==epidemi ya da pandemi== düzeyinde salgına yol açabilir. Bu durumda amplifikasyon fazındayız ve müdahalenin odağı değişir.\n\n- **Kontrol:** Büyüyen bulaşın yavaşlatılması ve denetim altına alınması hedeflenir.\n- **Etkiyi azaltma:** Salgının olası etkilerinin azaltılmasına çalışılır. Derste sayılan etkiler şunlardır:\n  - **Morbidite:** Hastalanan kişi sayısı ve hastalığın ağırlığı.\n  - **Mortalite:** Salgına bağlı ölümler.\n  - **Ekonomik etkiler:** İş gücü kaybı ve ekonomik zararlar.\n  - **Sosyal etkiler:** Toplum yaşamındaki bozulmalar.\n\nBu aşamada artık hastalığı bütünüyle durdurmak değil, toplumun göreceği zararı en aza indirmek hedeflenir.\n\n> Etkiyi azaltma yalnız sağlık sonuçlarını değil, ekonomik ve sosyal sonuçları da kapsar."
      },
      {
       "deste": "k1p-k1-36-izolasyon-yontemleri-v2",
       "kisa": "İzolasyon Yöntemleri",
       "slayt": 1,
-      "baslik": "Enfeksiyon Zinciri: Halkalar ve İzolasyonun Hedefi"
+      "baslik": "Enfeksiyon Zinciri: Halkalar ve İzolasyonun Hedefi",
+      "anlatim": "Bir enfeksiyonun hastadan hastaya geçebilmesi için birbirine bağlı beş halkanın kesintisiz işlemesi gerekir. Halkalardan biri kırıldığında bulaş durur.\n\n- **Kaynak:** Mikroorganizmanın barındığı canlı ya da cansız ortamdır.\n- **Çıkış kapısı:** Etkenin kaynaktan dışarı çıktığı yoldur; solunum yolu salgıları, kan veya vücut sıvıları buna örnektir.\n- **Taşınma:** Etkenin bir yerden diğerine aktarılma biçimidir; temas, damlacık, solunum ve vektör aracılı yollar vardır.\n- **Giriş kapısı:** Etkenin yeni konağa girdiği yoldur; mukozalar ve hasarlı deri gibi.\n- **Duyarlı kişi:** Etkene karşı savunması yetersiz kalan konaktır.\n\nİzolasyon önlemleri bu zincirin ==taşınma halkasını== hedef alır. Bariyer önlemleri, el hijyeni ve uygun oda düzeni mikroorganizmanın kaynaktan duyarlı kişiye ulaşmasını engeller.\n\n> Zincirin sırası: Kaynak → Çıkış kapısı → Taşınma → Giriş kapısı → Duyarlı kişi."
      }
     ],
     "zincir": [
@@ -1998,19 +2185,22 @@
       "deste": "learn-izolasyon-yontemleri",
       "kisa": "İzolasyon Yöntemleri & Enfeksiyon Kontrolü",
       "slayt": 8,
-      "baslik": "Enfeksiyon Zinciri ve İzolasyonun Koruyucu Rolü"
+      "baslik": "Enfeksiyon Zinciri ve İzolasyonun Koruyucu Rolü",
+      "anlatim": "### Enfeksiyon Zinciri ve İzolasyonun Koruyucu Rolü\n#### Kaynak, çıkış kapısı, bulaş yolu, giriş kapısı, duyarlı konak ve zinciri kırma stratejisi\n\n• **Temel Enfeksiyon Kontrolü ve Mikrobiyolojik Çerçeve:** Bir enfeksiyonun yayılabilmesi için altı halkadan oluşan biyolojik bir zincirin kesintisiz tamamlanması gerekir; izolasyon önlemlerinin yegane hedefi bu zinciri en zayıf halkasından kırmaktır.\n\n• **Duyarlı Konak Faktörleri:** Diyabet, nötropeni, steroid kullanımı, kemoterapi ve yanık hastanın enfeksiyon zincirindeki duyarlılığını dramatik artırır.\n\n• **Çıkış Kapısı Yönetimi:** Öksüren hastaya cerrahi maske takılması çıkış kapısını kapatmanın en pratik örneğidir.\n\n• **El Hijyeninin Pozisyonu:** Sağlık personelinin elleri zincirdeki en kritik 'Taşınma Yolu' halkasıdır; el yıkamak zinciri anında parçalar.\n\n💡 **Enfeksiyon Hastalıkları Sentezi ve Fakülte Sınav İncileri (Dr. Rüveyda Korkmazer & Dr. Merve Kaçar):**\n• ZİNCİRİN HALKALARI: Kaynak (Rezervuar) → Çıkış Kapısı → Bulaş (Taşınma) Yolu → Giriş Kapısı → Duyarlı Konak.\n• CANLI KAYNAKLAR: Hasta birey, sağlık personeli, hasta yakını, ziyaretçiler ve asemptomatik kolonize taşıyıcılar.\n• CANSIZ KAYNAKLAR (FOMİTLER): Tıbbi cihazlar (stetoskop, tansiyon aleti), lavabolar, su şebekesi, klima santralleri, hasta yatağı ve komodin yüzeyleri.\n…"
      },
      {
       "deste": "k1p-k1-36-izolasyon-yontemleri-v2",
       "kisa": "İzolasyon Yöntemleri",
       "slayt": 1,
-      "baslik": "Enfeksiyon Zinciri: Halkalar ve İzolasyonun Hedefi"
+      "baslik": "Enfeksiyon Zinciri: Halkalar ve İzolasyonun Hedefi",
+      "anlatim": "Bir enfeksiyonun hastadan hastaya geçebilmesi için birbirine bağlı beş halkanın kesintisiz işlemesi gerekir. Halkalardan biri kırıldığında bulaş durur.\n\n- **Kaynak:** Mikroorganizmanın barındığı canlı ya da cansız ortamdır.\n- **Çıkış kapısı:** Etkenin kaynaktan dışarı çıktığı yoldur; solunum yolu salgıları, kan veya vücut sıvıları buna örnektir.\n- **Taşınma:** Etkenin bir yerden diğerine aktarılma biçimidir; temas, damlacık, solunum ve vektör aracılı yollar vardır.\n- **Giriş kapısı:** Etkenin yeni konağa girdiği yoldur; mukozalar ve hasarlı deri gibi.\n- **Duyarlı kişi:** Etkene karşı savunması yetersiz kalan konaktır.\n\nİzolasyon önlemleri bu zincirin ==taşınma halkasını== hedef alır. Bariyer önlemleri, el hijyeni ve uygun oda düzeni mikroorganizmanın kaynaktan duyarlı kişiye ulaşmasını engeller.\n\n> Zincirin sırası: Kaynak → Çıkış kapısı → Taşınma → Giriş kapısı → Duyarlı kişi."
      },
      {
       "deste": "k1p-k1-68-enfeksiyon-hastaliklarinin-epidemiyolojisi",
       "kisa": "Enfeksiyon Epidemiyolojisi",
       "slayt": 22,
-      "baslik": "Bulaşma zinciri: Tanım ve temel halkalar"
+      "baslik": "Bulaşma zinciri: Tanım ve temel halkalar",
+      "anlatim": "Bir bulaşıcı hastalığın ortaya çıkması ve sürmesi, birbirine bağlı üç halkanın varlığına dayanır.\n\n- **Enfeksiyon zinciri:** Bir bulaşıcı hastalığın ==meydana gelmesi ve devam edebilmesi== için gerekli olan enfeksiyon kaynağı, bulaşma yolu ve yeni konakçılardan oluşan zincirdir.\n- **Halka 1 – Kaynak:** Etkenin üreyip çoğaldığı ve çıktığı yerdir.\n- **Halka 2 – Bulaşma yolu:** Etkenin kaynaktan yeni konakçıya taşındığı yoldur.\n- **Halka 3 – Yeni konakçı:** Etkenle enfekte olabilecek kişidir.\n\n### Ortaklık ve farklılık\n- **Ortak yapı:** Bütün enfeksiyon hastalıklarında zincirin ==temel halkaları aynıdır==.\n- **Hastalığa özgü ayrıntı:** Halkaların özellikleri her hastalıkta az çok farklılık gösterebilir; ör. kaynağın insan mı hayvan mı olduğu ya da bulaşmanın hangi yolla olduğu.\n\n> Bu yapı, dersin başında söz edilen iki düzeyli bilginin somut hâlidir: halkalar genel, halkaların içeriği hastalığa özgüdür."
      }
     ]
    },
@@ -2183,6 +2373,44 @@
      "onem": 3,
      "ders": "İzolasyon Yöntemleri"
     }
+   ],
+   "havuz_konulari": [
+    {
+     "id": "k1-salgin-kontrol",
+     "konu": "Salgın Hastalıklarda Kontrol ve Korunma Yöntemleri",
+     "ortak": 28,
+     "bilgi": 43
+    },
+    {
+     "id": "k1-enfeksiyon-epidemiyolojisi",
+     "konu": "Enfeksiyon Hastalıklarının Epidemiyolojisi",
+     "ortak": 7,
+     "bilgi": 37
+    },
+    {
+     "id": "k6-epidemiyolojiye-giris",
+     "konu": "Epidemiyolojiye giriş",
+     "ortak": 6,
+     "bilgi": 54
+    },
+    {
+     "id": "k6-kohort",
+     "konu": "Kohort (izlem, prospektif) araştırmaları",
+     "ortak": 4,
+     "bilgi": 13
+    },
+    {
+     "id": "k6-bagisiklama",
+     "konu": "Bağışıklama ve önemi",
+     "ortak": 1,
+     "bilgi": 105
+    },
+    {
+     "id": "k6-saglik-gostergeleri",
+     "konu": "Sağlık göstergeleri (oran, orantı, hız; mortalite, fertilite, morbidite)",
+     "ortak": 1,
+     "bilgi": 31
+    }
    ]
   },
   "cevre": {
@@ -2197,10 +2425,11 @@
    "yillar": {
     "Kategorisiz": 2,
     "Geçmiş Yıllar Çıkmışı (Arşiv)": 3,
-    "2023-2024": 14,
+    "2023-2024": 2,
     "2021-2026": 15,
-    "2021-2022": 2,
-    "2020-2021": 9
+    "2021-2022": 1,
+    "2020-2021": 20,
+    "2018-2019": 2
    },
    "konu_dagilimi": {
     "Çevre Sağlığına Giriş ve Genel Bilgiler": 16,
@@ -2235,7 +2464,7 @@
        "metin": "Çevre Sağlığına Giriş ve Genel Bilgiler klinik yönetimini, farmakoterapi ilkelerini ve komplikasyonlardan korunma yaklaşımlarını sıralar."
       }
      ],
-     "cikmis": 15
+     "cikmis": 13
     },
     {
      "kurul": 5,
@@ -2277,7 +2506,7 @@
        "metin": "İş kazaları klinik yönetimini, farmakoterapi ilkelerini ve komplikasyonlardan korunma yaklaşımlarını sıralar."
       }
      ],
-     "cikmis": 12
+     "cikmis": 10
     },
     {
      "kurul": 5,
@@ -2341,13 +2570,15 @@
       "deste": "learn-genetik-pediatrik-cevresel-patoloji",
       "kisa": "Genetik & Çevresel Patoloji",
       "slayt": 11,
-      "baslik": "Çevresel Patoloji ve Hava Kirliliği: Ozon ve Partikül Madde (PM)"
+      "baslik": "Çevresel Patoloji ve Hava Kirliliği: Ozon ve Partikül Madde (PM)",
+      "anlatim": "### 1. Çevresel Hastalıklar ve Hava Kirliliği\n\nDünya Sağlık Örgütü verilerine göre her yıl milyonlarca insan dış ortam ve ev içi hava kirliliğine bağlı kardiyorespiratuar nedenlerle hayatını kaybetmektedir.\n\nABD Çevre Koruma Ajansı (EPA) tarafından izlenen **6 Kriter Hava Kirleticisi**:\n1. **Ozon ($O_3$)**\n2. **Partikül Madde ($PM_{10}$ ve $PM_{2.5}$)**\n3. **Karbonmonoksit (CO)**\n4. **Azot Dioksit ($NO_2$)**\n5. **Kükürt Dioksit ($SO_2$)**\n6. **Kurşun ($Pb$)**\n\n### 2. Ozon ($O_3$) Toksisitesi\n\n- **Oluşumu**: Güneş ışığının (UV) azot oksitler ve uçucu organik bileşiklerle fotokimyasal reaksiyonu sonucu 'yer seviyesi dumanı (smog)' içinde oluşur.\n- **Mekanizma**: Alveol epitelinde lipit peroksidasyonunu tetikler, serbest oksijen radikalleri açığa çıkarır ve enflamatuar sitokin salınımını uyarır.\n- **Klinik**: Özellikle astımlı ve KOAH'lı hastalarda akut alevlenmelere, hava yolu epitel nekrozuna ve amfizem gelişimine katkıda bulunur.\n\n### 3. Partikül Madde: $PM_{10}$ vs. $PM_{2.5}$\n\n| Partikül Boyutu | Çapı | Solunum Sisteminde Ulaştığı Düzey | Patolojik Etkisi |\n| :--- | :--- | :--- | :--- |\n| **Kaba Partiküller ($PM_{10}$)** | $< 10\\ \\mu\text{m}$ | Burun, farenks ve ana bronşlarda tutulur; mukosiliyer eskalatörle temizlenir. | Üst solunum yolu irritasyonu, bronkospazm, öksürük. |\n…"
      },
      {
       "deste": "k1p-k1-26-genetik-pediatrik-ve-cevresel-patoloji-v2",
       "kisa": "Genetik ve Çevresel Patoloji",
       "slayt": 37,
-      "baslik": "Hava Kirliliği: Başlıca Kirleticiler ve Smog"
+      "baslik": "Hava Kirliliği: Başlıca Kirleticiler ve Smog",
+      "anlatim": "Şekil 7.1'de astım ve kardiyovasküler hastalıkla ilişkilendirilen hava kirliliği, belirli kirleticiler üzerinden izlenir.\n\n- **ABD Çevre Koruma Ajansı'nın (EPA) ana kirleticileri:**\n  - **Kükürt dioksit (SO₂)**\n  - **Karbon monoksit (CO)**\n  - **Azot dioksit (NO₂)**\n  - **Ozon (O₃)**\n  - **Partikül madde**\n- **Smog:**\n  - **Kökeni:** İngilizce 'smoke' (duman) ve 'fog' (sis) sözcüklerinin birleşimidir; ==duman + sis== anlamına gelir.\n  - **İlişkili kirleticiler:** Özellikle ozon ve ince partiküllerle ilişkilidir.\n\nBu beş kirletici hava kalitesinin izlenmesinde temel alınır; sonraki adımda ozon ve partikül maddenin akciğerdeki etkileri ayrıntılandırılacaktır.\n\n> Smog, kentlerde görülen kirli sis tabakasıdır ve ==ozon ile ince partiküllerle== ilişkilidir."
      }
     ],
     "cevre_patoloji": [
@@ -2355,17 +2586,57 @@
       "deste": "learn-genetik-pediatrik-cevresel-patoloji",
       "kisa": "Genetik & Çevresel Patoloji",
       "slayt": 11,
-      "baslik": "Çevresel Patoloji ve Hava Kirliliği: Ozon ve Partikül Madde (PM)"
+      "baslik": "Çevresel Patoloji ve Hava Kirliliği: Ozon ve Partikül Madde (PM)",
+      "anlatim": "### 1. Çevresel Hastalıklar ve Hava Kirliliği\n\nDünya Sağlık Örgütü verilerine göre her yıl milyonlarca insan dış ortam ve ev içi hava kirliliğine bağlı kardiyorespiratuar nedenlerle hayatını kaybetmektedir.\n\nABD Çevre Koruma Ajansı (EPA) tarafından izlenen **6 Kriter Hava Kirleticisi**:\n1. **Ozon ($O_3$)**\n2. **Partikül Madde ($PM_{10}$ ve $PM_{2.5}$)**\n3. **Karbonmonoksit (CO)**\n4. **Azot Dioksit ($NO_2$)**\n5. **Kükürt Dioksit ($SO_2$)**\n6. **Kurşun ($Pb$)**\n\n### 2. Ozon ($O_3$) Toksisitesi\n\n- **Oluşumu**: Güneş ışığının (UV) azot oksitler ve uçucu organik bileşiklerle fotokimyasal reaksiyonu sonucu 'yer seviyesi dumanı (smog)' içinde oluşur.\n- **Mekanizma**: Alveol epitelinde lipit peroksidasyonunu tetikler, serbest oksijen radikalleri açığa çıkarır ve enflamatuar sitokin salınımını uyarır.\n- **Klinik**: Özellikle astımlı ve KOAH'lı hastalarda akut alevlenmelere, hava yolu epitel nekrozuna ve amfizem gelişimine katkıda bulunur.\n\n### 3. Partikül Madde: $PM_{10}$ vs. $PM_{2.5}$\n\n| Partikül Boyutu | Çapı | Solunum Sisteminde Ulaştığı Düzey | Patolojik Etkisi |\n| :--- | :--- | :--- | :--- |\n| **Kaba Partiküller ($PM_{10}$)** | $< 10\\ \\mu\text{m}$ | Burun, farenks ve ana bronşlarda tutulur; mukosiliyer eskalatörle temizlenir. | Üst solunum yolu irritasyonu, bronkospazm, öksürük. |\n…"
      },
      {
       "deste": "k1p-k1-26-genetik-pediatrik-ve-cevresel-patoloji-v2",
       "kisa": "Genetik ve Çevresel Patoloji",
       "slayt": 28,
-      "baslik": "Çevresel Hastalık: Tanım ve Kapsam"
+      "baslik": "Çevresel Hastalık: Tanım ve Kapsam",
+      "anlatim": "Üçlü çerçevenin ikinci bileşeni çevredir. Çevresel hastalık, kişinin dışındaki ajanların yol açtığı klinik bozuklukları tanımlar.\n\n- **Tanım:** Ortam, işyeri veya kişisel çevredeki ==kimyasal veya fiziksel ajan maruziyeti== sonucu gelişen klinik bozukluktur.\n- **Üç maruziyet ortamı:**\n  - **Ortam (dış çevre):** Herkesin soluduğu hava, içtiği su, yaşadığı toprak.\n  - **İşyeri:** Mesleğe özgü toksinler ve fiziksel etkenler.\n  - **Kişisel çevre:** Bireyin kendi tercihleriyle oluşan maruziyetler.\n- **Kapsam:**\n  - **Hava, su ve toprak kirliliği**\n  - **Mesleki toksinler**\n  - **Radyasyon ve fiziksel ajanlar**\n\n> Çevresel hastalık tanısı, ayrıntılı ==maruziyet ve meslek öyküsü== olmadan konamaz; ajan çoğu zaman yalnız öyküyle ortaya çıkar."
      }
     ]
    },
-   "spotlar": []
+   "spotlar": [],
+   "havuz_konulari": [
+    {
+     "id": "k6-cevre-sagligi",
+     "konu": "Çevre Sağlığına Giriş ve Genel Bilgiler",
+     "ortak": 16,
+     "bilgi": 40
+    },
+    {
+     "id": "k5-is-sagligi-kazalar",
+     "konu": "İş sağlığı ve iş kazaları",
+     "ortak": 15,
+     "bilgi": 28
+    },
+    {
+     "id": "k5-meslek-hastaliklari",
+     "konu": "Meslek hastalıkları",
+     "ortak": 10,
+     "bilgi": 31
+    },
+    {
+     "id": "k5-etkileyen-faktorler",
+     "konu": "Halk sağlığını etkileyen faktörler",
+     "ortak": 3,
+     "bilgi": 9
+    },
+    {
+     "id": "k6-mobbing",
+     "konu": "Mobbing",
+     "ortak": 1,
+     "bilgi": 21
+    },
+    {
+     "id": "k6-vaka-kontrol",
+     "konu": "Vaka-kontrol (retrospektif) araştırmaları",
+     "ortak": 1,
+     "bilgi": 13
+    }
+   ]
   },
   "kurumlar": {
    "konular": [
@@ -2376,26 +2647,26 @@
     "Aile Hekimliğine Yaklaşım",
     "Koruyucu Sağlık Hizmetleri"
    ],
-   "soru_sayisi": 65,
-   "havuz": 65,
+   "soru_sayisi": 68,
+   "havuz": 68,
    "yillar": {
-    "Geçmiş Yıllar Çıkmışı (Arşiv)": 1,
     "2025-2026": 1,
     "2024-2025": 1,
-    "2023-2024": 34,
+    "2023-2024": 4,
     "2022-2023": 3,
     "2021-2026": 8,
-    "2021-2022": 6,
-    "2020-2021": 10,
-    "2019-2020": 1
+    "2021-2022": 5,
+    "2020-2021": 36,
+    "2019-2020": 1,
+    "2018-2019": 9
    },
    "konu_dagilimi": {
-    "Sağlık Yönetimi": 19,
+    "Sağlık Yönetimi": 21,
     "Aile Hekimliğine Yaklaşım": 13,
     "Halk Sağlığı Tarihçesi": 10,
     "Nikotin Bağımlılığı ve Tedavisi": 6,
+    "Koruyucu Sağlık Hizmetleri": 5,
     "Aile Hekimliğinde Periyodik Muayeneler 1": 4,
-    "Koruyucu Sağlık Hizmetleri": 4,
     "Sağlığın Sosyalleştirilmesi ve Temel Sağlık Hizmetleri (TSH)": 3,
     "Türkiye’de Sağlık Hizmetleri": 3,
     "Yaşlılık Döneminde Güvenli Yaşamın İlkeleri": 1,
@@ -2407,7 +2678,7 @@
     "2": 22,
     "5": 21,
     "6": 3,
-    "?": 2
+    "?": 5
    },
    "kazanimlar": [
     {
@@ -2486,7 +2757,7 @@
        "metin": "DSÖ 30. Genel Kurulunda (1977) “2000 Yılında Herkes İçin Sağlık” HEDEFİ olarak bilinen hareket başlatıldı mekanizmasını ve klinik önemini analiz eder."
       }
      ],
-     "cikmis": 3
+     "cikmis": 2
     },
     {
      "kurul": 5,
@@ -2515,7 +2786,7 @@
        "metin": "A.Planlama planlama, akla uygun bir yönetim biçiminin temelidir mekanizmasını ve klinik önemini analiz eder."
       }
      ],
-     "cikmis": 16
+     "cikmis": 13
     },
     {
      "kurul": 1,
@@ -2601,7 +2872,7 @@
        "metin": "Aile Hekimliğine Yaklaşım klinik yönetimini, farmakoterapi ilkelerini ve komplikasyonlardan korunma yaklaşımlarını sıralar."
       }
      ],
-     "cikmis": 13
+     "cikmis": 11
     },
     {
      "kurul": 1,
@@ -2618,7 +2889,7 @@
        "metin": "Koruyucu Sağlık Hizmetleri klinik özelliklerini ve tanı yaklaşımlarını açıklar."
       }
      ],
-     "cikmis": 4
+     "cikmis": 3
     }
    ],
    "desteler": [
@@ -2665,7 +2936,8 @@
       "deste": "k1p-k1-63-turkiye-de-saglik-hizmetleri",
       "kisa": "Türkiye'de Sağlık Hizmetleri",
       "slayt": 12,
-      "baslik": "Birinci Basamak ve Basamak Ayrımı"
+      "baslik": "Birinci Basamak ve Basamak Ayrımı",
+      "anlatim": "- **2010'dan beri** birinci basamak kuruluşu **ASM**'dir\n- 2016: aile hekimi **24.428**, ASM **7.636**, TSM **970**, sağlık evi **5.419**\n- Aile hekimi başına nüfus **3000-3500**, hedef **2000**\n- A tipi ASM en donanımlıdır; her hekimin yardımcısı bir aile sağlığı elemanı\n- Diğer: AÇSAP 181, Verem Savaş 180, KETEM 159, 112 istasyonu 2400, Halk Sağlığı Lab. 83\n- **2. basamak:** uzman hekimli kuruluşlar; **3. basamak:** eğitim/üniversite hastaneleri"
      }
     ],
     "tarihce": [
@@ -2673,13 +2945,15 @@
       "deste": "learn-halk-sagligi-tarihcesi-ve",
       "kisa": "Halk Sağlığı Tarihçesi",
       "slayt": 19,
-      "baslik": "Cumhuriyet Öncesi ve Erken Dönem Türk Sağlık Tarihi"
+      "baslik": "Cumhuriyet Öncesi ve Erken Dönem Türk Sağlık Tarihi",
+      "anlatim": "Türkiye'de kamusal sağlık örgütlenmesinin kökleri 19. yüzyıl Osmanlı modernleşmesine kadar uzanır. 1838 yılında II. Mahmud döneminde kolera ve veba salgınlarına karşı sınırları ve limanları denetlemek üzere 'Meclis-i Tahaffuz' (Karantina Meclisi) kurulmuştur. 1887'de Sultan II. Abdülhamid, Louis Pasteur'ün kuduz aşısını bulması üzerine Paris'e heyet göndermiş, bağışta bulunmuş ve heyetin dönüşüyle İstanbul'da dünyanın üçüncü kuduz merkezi olan 'Dârü'l-Kelb Tedavihânesi' ile 'Telkihhâne' (Çiçek Aşısı Üretim Merkezi) kurulmuştur. Osmanlı'da çiçek, kuduz ve difteri aşıları yerli olarak üretilmeye başlanmıştır.\n\nKurtuluş Savaşı'ndan çıkan genç Türkiye Cumhuriyeti'nin sağlık mimarı ise Mustafa Kemal Atatürk'ün yakın çalışma arkadaşı ve ilk Sağlık Bakanı olan Dr. Refik Saydam'dır (1881-1942). Dr. Refik Saydam; savaşlarla tükenmiş, sıtma, trahom, frengi, verem ve tifüsle kırılan Anadolu insanını kurtarmak için merkezi ve disiplinli bir ulusal sağlık politikası inşa etmiştir. 1928 yılında Ankara'da kurulan 'Refik Saydam Merkez Hıfzıssıhha Müessesesi', Türkiye'nin aşı, serum ve biyolojik ürün üretiminde kendi kendine yetmesini sağlamış; hatta komşu ülkelere kolera aşısı ihraç edecek düzeye ulaşmıştır.\n\n…"
      },
      {
       "deste": "k1p-k1-63-turkiye-de-saglik-hizmetleri",
       "kisa": "Türkiye'de Sağlık Hizmetleri",
       "slayt": 2,
-      "baslik": "Cumhuriyet Döneminde Sağlık Hizmetleri"
+      "baslik": "Cumhuriyet Döneminde Sağlık Hizmetleri",
+      "anlatim": "- 1923'te **554 hekim**, 1940'ta **2387 hekim**; bugün **140 bini aşkın** hekim\n- Hekim yetiştirmede parasız yatılı sistem ve mecburi hizmet\n- Kırsalda bayan personel zorluğu → **sağlık memuru** kadrosu\n\n- **Patofizyolojik Mekanizma:** Cumhuriyet Döneminde Sağlık Hizmetleri sürecinde hücresel düzeyde gelişen reaksiyonlar ve doku yanıtı klinik tablonun şiddetini belirler.\n- **Klinik ve Sınav Önemi:** Bu mekanizmanın detayları kurul sınavlarında ve klinik pratikte ayırıcı tanı basamaklarında sıkça sorgulanır.\n\n> Cumhuriyet Döneminde Sağlık Hizmetleri tablosunda hücresel adaptasyon ve hasar yanıtının takibi doğru tedavi planlamasında temel kılavuzdur."
      }
     ],
     "sosyalizasyon": [
@@ -2687,19 +2961,22 @@
       "deste": "learn-halk-sagligi-tarihcesi-ve",
       "kisa": "Halk Sağlığı Tarihçesi",
       "slayt": 18,
-      "baslik": "Türkiye'de Sağlık Devrimi: 224 Sayılı Kanun"
+      "baslik": "Türkiye'de Sağlık Devrimi: 224 Sayılı Kanun",
+      "anlatim": "Türkiye Cumhuriyeti sağlık tarihinin en parlak ve devrimci adımı, Prof. Dr. Nusret Fişek'in Sağlık Bakanlığı Müsteşarlığı döneminde hazırlanan ve 5 Ocak 1961 tarihinde kabul edilen '224 Sayılı Sağlık Hizmetlerinin Sosyalleştirilmesi Hakkında Kanun'dur. Sosyalleştirmenin temel felsefesi; sağlık hizmetlerinin vatandaşın ayağına kadar götürülmesi, hizmetin devlet eliyle eşit, sürekli, entegre ve ücretsiz olarak sunulmasıdır. İlk kez Muş ilinde pilot olarak başlatılan bu model, kademeli olarak tüm Türkiye'ye yayılmıştır.\n\n224 Sayılı Kanun, dünyada 1978 Alma-Ata Bildirgesi'nden tam 17 yıl önce Temel Sağlık Hizmetleri modelini kusursuz bir örgütlenme piramidiyle kurmuştur: 1) En uç birim: Köylerde görev yapan diplomalı bir ebenin bulunduğu 'Sağlık Evi'. 2) Temel omurga: 5.000-10.000 nüfusa hizmet veren, hekim, hemşire, ebe ve sağlık memurundan oluşan 'Sağlık Ocağı'. Burada koruyucu ve birinci basamak tedavi edici hizmetler entegre (birlikte) sunulur. 3) İkinci basamak: İlçe ve il merkezlerindeki Devlet Hastaneleri. Modelin en kritik ilkeleri: Bölge tabanlı nüfus kaydı (Ev halkı tespit fişleri / Form 01), Kademeli sevk zinciri ve Ekip hizmetidir.\n\n…"
      },
      {
       "deste": "k1p-k1-18-halk-sagligi-tarihcesi-v2",
       "kisa": "Halk Sağlığı Tarihçesi",
       "slayt": 38,
-      "baslik": "Nusret Fişek: Sosyalleştirme ve Nüfus Planlaması Kanunları"
+      "baslik": "Nusret Fişek: Sosyalleştirme ve Nüfus Planlaması Kanunları",
+      "anlatim": "Fişek'in kalıcı etkisi, düşüncelerini **yasalara** dönüştürmesinden gelir.\n\n### Sağlık Müsteşarlığı döneminde çıkarılmasını sağladığı kanunlar\n- ==“Sağlık Hizmetlerinin Sosyalleştirilmesi Hakkında Kanun”==: Hizmetin kamu eliyle, ülkenin her yerine eşit biçimde ulaştırılmasının yasal temeli.\n- ==“Nüfus Planlaması Kanunu”==.\n\n### Nüfus konusundaki öncülüğü\n- Türkiye'de ==hızlı nüfus artışı sorununu ilk fark edenlerden== biridir.\n- ==Hızlı nüfus artışıyla sağlık, sosyal ve ekonomik sorunlar arasındaki bağlantıyı== kurmuştur.\n- Bu sayede ülkede ==nüfus artırıcı politikaların değiştirilmesine== kaynaklık etmiştir.\n\nNüfus artışını bir sağlık sorunu olarak görmesi, Grotjahn'ın “sağlık düzeyini sosyal ve ekonomik etkenler belirler” ilkesinin Türkiye'ye uygulanmasıdır.\n\n> Fişek'in Müsteşarlık dönemi iki kanunu: Sağlık Hizmetlerinin Sosyalleştirilmesi Hakkında Kanun ve Nüfus Planlaması Kanunu."
      },
      {
       "deste": "k1p-k1-63-turkiye-de-saglik-hizmetleri",
       "kisa": "Türkiye'de Sağlık Hizmetleri",
       "slayt": 4,
-      "baslik": "Sosyalleştirme Dönemi"
+      "baslik": "Sosyalleştirme Dönemi",
+      "anlatim": "- **1961:** 224 sayılı Sağlık Hizmetlerinin Sosyalleştirilmesine Dair Kanun\n- **1963:** Muş'ta uygulama başladı\n- Doğudan başlayarak sosyalleştirilmiş il sayısı arttı\n- **1 Ocak 1984:** tüm Türkiye kapsama alındı\n\n- **Patofizyolojik Mekanizma:** Sosyalleştirme Dönemi sürecinde hücresel düzeyde gelişen reaksiyonlar ve doku yanıtı klinik tablonun şiddetini belirler.\n- **Klinik ve Sınav Önemi:** Bu mekanizmanın detayları kurul sınavlarında ve klinik pratikte ayırıcı tanı basamaklarında sıkça sorgulanır.\n\n> Sosyalleştirme Dönemi tablosunda hücresel adaptasyon ve hasar yanıtının takibi doğru tedavi planlamasında temel kılavuzdur."
      }
     ]
    },
@@ -2872,6 +3149,44 @@
      "onem": 3,
      "ders": "Halk Sağlığı Tarihçesi"
     }
+   ],
+   "havuz_konulari": [
+    {
+     "id": "k5-saglik-yonetimi",
+     "konu": "Sağlık yönetimi",
+     "ortak": 21,
+     "bilgi": 29
+    },
+    {
+     "id": "k1-korunma-duzeyleri",
+     "konu": "Korunma düzeyleri ve koruyucu sağlık hizmetleri",
+     "ortak": 12,
+     "bilgi": 19
+    },
+    {
+     "id": "k1-hs-kavram-tarihce",
+     "konu": "Halk sağlığının tanımı, ilkeleri ve tarihçesi",
+     "ortak": 3,
+     "bilgi": 30
+    },
+    {
+     "id": "k1-turkiye-saglik-hizmetleri",
+     "konu": "Türkiye'de sağlık hizmetleri: tarihçe, örgütlenme ve basamaklar",
+     "ortak": 3,
+     "bilgi": 21
+    },
+    {
+     "id": "k5-sosyallestirme-tsh",
+     "konu": "Sağlığın sosyalleştirilmesi ve temel sağlık hizmetleri (TSH)",
+     "ortak": 3,
+     "bilgi": 20
+    },
+    {
+     "id": "k6-onemli-beslenme-sorunlari",
+     "konu": "Önemli Beslenme Sorunları",
+     "ortak": 1,
+     "bilgi": 52
+    }
    ]
   },
   "istatistik": {
@@ -2885,24 +3200,24 @@
     "Yaşlı Sağlığı Sorunları ve Sağlık Hizmetleri",
     "Yaşlı Sağlığı Sorunları ve Sağlık"
    ],
-   "soru_sayisi": 86,
+   "soru_sayisi": 88,
    "havuz": 80,
    "yillar": {
-    "Geçmiş Yıllar Çıkmışı (Arşiv)": 3,
+    "Geçmiş Yıllar Çıkmışı (Arşiv)": 2,
     "2026": 1,
-    "2023-2024": 40,
+    "2023-2024": 3,
     "2022-2023": 2,
     "2021-2026": 8,
-    "2021-2022": 16,
-    "2020-2021": 13,
+    "2021-2022": 12,
+    "2020-2021": 46,
     "2019-2020": 1,
-    "2018-2019": 2
+    "2018-2019": 13
    },
    "konu_dagilimi": {
-    "Epidemiyolojiye Giriş": 20,
+    "Epidemiyolojiye Giriş": 21,
     "Sağlık Göstergeleri": 14,
     "Yaşlı Sağlığı Sorunları ve Sağlık Hizmetleri": 14,
-    "Vaka-Kontrol çalışmaları": 11,
+    "Vaka-Kontrol çalışmaları": 12,
     "Kohort Çalışmaları": 9,
     "Salgın Hastalıklarda Kontrol ve Korunma Yöntemleri": 4,
     "Deneysel ve Kesitsel Çalışmalar": 3,
@@ -2917,7 +3232,7 @@
     "4": 2,
     "5": 4,
     "6": 72,
-    "?": 1
+    "?": 3
    },
    "kazanimlar": [
     {
@@ -2947,7 +3262,7 @@
        "metin": "Öğrenim Hedefleri mekanizmasını ve klinik önemini analiz eder."
       }
      ],
-     "cikmis": 14
+     "cikmis": 9
     },
     {
      "kurul": 6,
@@ -2968,7 +3283,7 @@
        "metin": "Epidemiyolojiye Giriş klinik yönetimini, farmakoterapi ilkelerini ve komplikasyonlardan korunma yaklaşımlarını sıralar."
       }
      ],
-     "cikmis": 15
+     "cikmis": 14
     },
     {
      "kurul": 6,
@@ -3120,7 +3435,8 @@
       "deste": "k1p-k1-22-bebek-beslenmesi-v2",
       "kisa": "Bebek Beslenmesi",
       "slayt": 1,
-      "baslik": "Demografik Göstergeler: Canlı Doğum Sayısı ve Toplam Doğurganlık Hızı"
+      "baslik": "Demografik Göstergeler: Canlı Doğum Sayısı ve Toplam Doğurganlık Hızı",
+      "anlatim": "Bebek beslenmesinin halk sağlığındaki ağırlığını anlamak için önce kaç bebeğin doğduğuna bakılır.\n\n### Canlı doğum sayısı (CDS)\n- **Dünya:** Yılda yaklaşık **130-132 milyon** canlı doğum olur.\n- **Türkiye (TÜİK 2025):** 2022'de **1.035.795**, 2024'te **940.273**, 2025'te **895.374** canlı doğum kaydedilmiştir.\n- **Eğilim:** Üç yılda yıllık doğum sayısı yaklaşık 140 bin azalmış, 1 milyonun altına inmiştir.\n\n### Toplam doğurganlık hızı (TDH)\n- **2013:** 2.1\n- **2022:** 1.69\n- **2024:** 1.49\n- **2025:** ==1.42==\n- **Karabük:** 1.11 ile ülke ortalamasının da belirgin altındadır.\n\n> TDH'nin 2.1 düzeyi nüfusun kendini yenileme eşiği olarak kabul edilir. Türkiye 2013'ten sonra bu eşiğin altına inmiştir; her doğan bebeğin sağlıklı büyümesi bu nedenle daha da değerlidir."
      }
     ],
     "anne_olum": [
@@ -3128,7 +3444,8 @@
       "deste": "k1p-k1-23-ana-cocuk-sagligi-duzeyinin-izlenmesi-v2",
       "kisa": "Ana Çocuk Sağlığı İzlemi",
       "slayt": 3,
-      "baslik": "Anne Ölüm Oranı: Bir Toplumun Aynası"
+      "baslik": "Anne Ölüm Oranı: Bir Toplumun Aynası",
+      "anlatim": "Kadın ve anne sağlığı ile obstetrik hizmetlerin en önemli göstergelerinden biri **anne ölüm oranıdır (AÖO)**. Bu gösterge yalnız tıbbi bakımın kalitesini değil, toplumsal yapıyı da yansıtır.\n\n- **Sağlık hizmeti göstergesi:** Gebelik, doğum ve doğum sonrası bakımın erişilebilirliğini ve niteliğini ölçer.\n- **Toplumsal cinsiyet bağlantısı:** Anne ölümü, ==toplumsal cinsiyet eşitliği/ayrımcılığı== ile yakından ilişkilidir.\n- **Kadının statüsü:** Kadının toplumdaki konumu, sağlık hizmetine erişimini ve kaynaklardan yararlanmasını doğrudan etkiler.\n\nBu nedenle iki ülke benzer tıbbi teknolojiye sahip olsa bile, kadının karar verme gücü ve kaynaklara ulaşımı farklıysa anne ölüm oranları belirgin biçimde ayrışabilir.\n\n> Anne ölümü özellikle sağlık hizmetlerine erişmede ve kaynaklardan yararlanmada son derece etkili olan toplumsal cinsiyet eşitliği ve kadının statüsü ile yakından ilişkilidir."
      }
     ],
     "bebek_olum": [
@@ -3136,13 +3453,15 @@
       "deste": "k1p-k1-22-bebek-beslenmesi-v2",
       "kisa": "Bebek Beslenmesi",
       "slayt": 8,
-      "baslik": "Bebek Ölüm Hızı: Tanım ve Hesaplama"
+      "baslik": "Bebek Ölüm Hızı: Tanım ve Hesaplama",
+      "anlatim": "Bebek ölüm hızı (BÖH), bir toplumun sağlık ve beslenme düzeyini en duyarlı biçimde yansıtan göstergelerden biridir.\n\n### Formül\n**Bebek Ölüm Hızı = (1 yaşını doldurmadan ölen bebek sayısı / aynı yıl içindeki canlı doğum sayısı) × 1.000**\n\n- **Pay:** Bir yıl içinde **1 yaşını doldurmadan** ölen bebeklerin sayısı.\n- **Payda:** Aynı yıl içindeki **canlı doğum sayısı**; ölü doğumlar paydaya girmez.\n- **Katsayı:** Sonuç **binde** olarak ifade edilir (1.000 canlı doğumda).\n\n### İngilizce tanım\nDSÖ bu göstergeyi doğumdan 1 yaşına kadar ölme olasılığı (1.000 canlı doğumda) olarak tanımlar; yaş grubu **0-11 ay**dır.\n\n> BÖH'te payda **canlı doğum** sayısıdır ve sonuç **binde** verilir; ilk bölümde görülen canlı doğum sayısı bu nedenle göstergenin temelidir."
      },
      {
       "deste": "k1p-k1-23-ana-cocuk-sagligi-duzeyinin-izlenmesi-v2",
       "kisa": "Ana Çocuk Sağlığı İzlemi",
       "slayt": 14,
-      "baslik": "Türkiye'de Anne ve Bebek Ölüm Hızlarının Tarihsel Seyri"
+      "baslik": "Türkiye'de Anne ve Bebek Ölüm Hızlarının Tarihsel Seyri",
+      "anlatim": "Türkiye'de 2003'te başlatılan **Sağlıkta Dönüşüm Programı** ile anne ve çocuklara özel önem verilmesi vurgulanmıştır. Uzun dönem verileri bu politikaların etkisini gösterir.\n\n**Anne ölüm hızı (AÖH, yüz bin canlı doğumda):**\n\n- **1961:** ==520==\n- **2002:** 64\n- **2005:** 28,5\n- **2016:** 14,7\n\n**Bebek ölüm hızı (BÖH, bin canlı doğumda):**\n\n- **1963:** ==208==\n- **2002:** 31,5\n- **2022:** 9,2\n- **2023:** 10\n\nYorum: Altmış yılda anne ölüm hızı yaklaşık otuzda birine, bebek ölüm hızı yirmide birine inmiştir. 2002-2005 arasındaki keskin düşüş, Sağlıkta Dönüşüm Programı'nın ilk yıllarına denk gelir. 2023'te bebek ölüm hızı 9,2'den 10'a hafifçe yükselmiştir.\n\n> AÖH yüz binde, BÖH binde ifade edilir; iki göstergenin ölçekleri karıştırılmamalıdır."
      }
     ],
     "tnsa": [
@@ -3150,13 +3469,15 @@
       "deste": "k1p-k1-22-bebek-beslenmesi-v2",
       "kisa": "Bebek Beslenmesi",
       "slayt": 11,
-      "baslik": "TNSA-2018: Türkiye'de Çocukların Beslenme Durumu"
+      "baslik": "TNSA-2018: Türkiye'de Çocukların Beslenme Durumu",
+      "anlatim": "Türkiye Nüfus ve Sağlık Araştırması (**TNSA-2018**), beş yaş altı çocukların beslenme durumunu ulusal düzeyde ölçer.\n\n- **Bodurluk (yaşa göre kısa boy):** **%6**\n- **Zayıflık (boya göre düşük kilo):** **%2**\n- **Düşük kilo:** **%2**\n- **Fazla kilo:** **%8**\n\n### Yorum\n- Türkiye'de beş yaş altı çocuklarda **fazla kilo (%8)**, tüm yetersiz beslenme göstergelerinden daha sıktır.\n- Bodurluk %6 ile yetersiz beslenme göstergeleri içinde öne çıkar.\n- Böylece ilk bölümde dünya için görülen **çifte yük** (yetersiz beslenme ile aşırı kilonun bir arada olması) Türkiye'de de vardır.\n\n> TNSA-2018: beş yaş altı çocukların %6'sı bodur, %2'si zayıf, %2'si düşük kilolu, %8'i fazla kilolu."
      },
      {
       "deste": "k1p-k1-23-ana-cocuk-sagligi-duzeyinin-izlenmesi-v2",
       "kisa": "Ana Çocuk Sağlığı İzlemi",
       "slayt": 21,
-      "baslik": "TNSA-2018: Doğum Öncesi Bakım Kapsamı"
+      "baslik": "TNSA-2018: Doğum Öncesi Bakım Kapsamı",
+      "anlatim": "Türkiye Nüfus ve Sağlık Araştırması (TNSA-2018), araştırmadan önceki son 5 yılda canlı doğum yapan 15-49 yaş kadınların DÖB durumunu ortaya koyar.\n\n- **DÖB alma:** Kadınların ==%96'sı== en son doğumunda **uzman sağlık personelinden** DÖB almıştır.\n- **İzlem sayısı:** Kadınların ==%90'ı== **4 ya da daha fazla** DÖB almıştır.\n- **Bileşenler:** Gebe kadınların çoğu DÖB'ün temel bileşenlerinden yararlanmıştır; birçok bileşen için oran **%92'nin üzerindedir**.\n- **Demir ve tetanoz:** Kadınların **%81'i** gebelik boyunca demir takviyesi ve tetanos aşısı yaptırmıştır.\n\nYorum: DÖB'e erişim çok yüksek olmasına karşın, **demir takviyesi ve tetanoz aşısı** diğer bileşenlerin gerisinde kalmaktadır; yaklaşık her beş gebeden biri bu iki koruyucu uygulamayı almamaktadır.\n\n> DÖB alma oranının yüksek olması, bakımın içeriğinin tam olduğu anlamına gelmez; bileşen bazında açıklar sürmektedir."
      }
     ],
     "olcutler": [
@@ -3164,17 +3485,57 @@
       "deste": "k1p-k1-22-bebek-beslenmesi-v2",
       "kisa": "Bebek Beslenmesi",
       "slayt": 1,
-      "baslik": "Demografik Göstergeler: Canlı Doğum Sayısı ve Toplam Doğurganlık Hızı"
+      "baslik": "Demografik Göstergeler: Canlı Doğum Sayısı ve Toplam Doğurganlık Hızı",
+      "anlatim": "Bebek beslenmesinin halk sağlığındaki ağırlığını anlamak için önce kaç bebeğin doğduğuna bakılır.\n\n### Canlı doğum sayısı (CDS)\n- **Dünya:** Yılda yaklaşık **130-132 milyon** canlı doğum olur.\n- **Türkiye (TÜİK 2025):** 2022'de **1.035.795**, 2024'te **940.273**, 2025'te **895.374** canlı doğum kaydedilmiştir.\n- **Eğilim:** Üç yılda yıllık doğum sayısı yaklaşık 140 bin azalmış, 1 milyonun altına inmiştir.\n\n### Toplam doğurganlık hızı (TDH)\n- **2013:** 2.1\n- **2022:** 1.69\n- **2024:** 1.49\n- **2025:** ==1.42==\n- **Karabük:** 1.11 ile ülke ortalamasının da belirgin altındadır.\n\n> TDH'nin 2.1 düzeyi nüfusun kendini yenileme eşiği olarak kabul edilir. Türkiye 2013'ten sonra bu eşiğin altına inmiştir; her doğan bebeğin sağlıklı büyümesi bu nedenle daha da değerlidir."
      },
      {
       "deste": "k1p-k1-23-ana-cocuk-sagligi-duzeyinin-izlenmesi-v2",
       "kisa": "Ana Çocuk Sağlığı İzlemi",
       "slayt": 14,
-      "baslik": "Türkiye'de Anne ve Bebek Ölüm Hızlarının Tarihsel Seyri"
+      "baslik": "Türkiye'de Anne ve Bebek Ölüm Hızlarının Tarihsel Seyri",
+      "anlatim": "Türkiye'de 2003'te başlatılan **Sağlıkta Dönüşüm Programı** ile anne ve çocuklara özel önem verilmesi vurgulanmıştır. Uzun dönem verileri bu politikaların etkisini gösterir.\n\n**Anne ölüm hızı (AÖH, yüz bin canlı doğumda):**\n\n- **1961:** ==520==\n- **2002:** 64\n- **2005:** 28,5\n- **2016:** 14,7\n\n**Bebek ölüm hızı (BÖH, bin canlı doğumda):**\n\n- **1963:** ==208==\n- **2002:** 31,5\n- **2022:** 9,2\n- **2023:** 10\n\nYorum: Altmış yılda anne ölüm hızı yaklaşık otuzda birine, bebek ölüm hızı yirmide birine inmiştir. 2002-2005 arasındaki keskin düşüş, Sağlıkta Dönüşüm Programı'nın ilk yıllarına denk gelir. 2023'te bebek ölüm hızı 9,2'den 10'a hafifçe yükselmiştir.\n\n> AÖH yüz binde, BÖH binde ifade edilir; iki göstergenin ölçekleri karıştırılmamalıdır."
      }
     ]
    },
-   "spotlar": []
+   "spotlar": [],
+   "havuz_konulari": [
+    {
+     "id": "k6-epidemiyolojiye-giris",
+     "konu": "Epidemiyolojiye giriş",
+     "ortak": 21,
+     "bilgi": 54
+    },
+    {
+     "id": "k6-yasli-sagligi",
+     "konu": "Yaşlı Sağlığı Sorunları ve Sağlık Hizmetleri",
+     "ortak": 14,
+     "bilgi": 45
+    },
+    {
+     "id": "k6-saglik-gostergeleri",
+     "konu": "Sağlık göstergeleri (oran, orantı, hız; mortalite, fertilite, morbidite)",
+     "ortak": 14,
+     "bilgi": 31
+    },
+    {
+     "id": "k6-vaka-kontrol",
+     "konu": "Vaka-kontrol (retrospektif) araştırmaları",
+     "ortak": 12,
+     "bilgi": 13
+    },
+    {
+     "id": "k6-kohort",
+     "konu": "Kohort (izlem, prospektif) araştırmaları",
+     "ortak": 9,
+     "bilgi": 13
+    },
+    {
+     "id": "k6-yeterli-dengeli-beslenme",
+     "konu": "Yeterli ve Dengeli Beslenme",
+     "ortak": 4,
+     "bilgi": 56
+    }
+   ]
   },
   "halk_sagligi": {
    "konular": [
@@ -3188,38 +3549,39 @@
     "Akılcı İlaç Kullanımı",
     "Koruyucu Sağlık Hizmetleri"
    ],
-   "soru_sayisi": 104,
+   "soru_sayisi": 107,
    "havuz": 80,
    "yillar": {
     "Kategorisiz": 2,
     "Geçmiş Yıllar Çıkmışı (Arşiv)": 1,
     "2026": 1,
-    "2025-2026 (Geçen Sene)": 3,
+    "2025-2026 (Geçen Sene)": 2,
+    "2025-2026": 1,
     "2024-2025": 1,
-    "2023-2024": 48,
+    "2023-2024": 5,
     "2022-2023": 4,
     "2021-2026": 4,
-    "2021-2022": 22,
-    "2020-2021": 15,
+    "2021-2022": 21,
+    "2020-2021": 53,
     "2019-2020": 1,
-    "2016-2017": 2
+    "2018-2019": 11
    },
    "konu_dagilimi": {
     "Yeterli ve Dengeli Beslenme": 28,
     "Akılcı İlaç Kullanımı": 17,
     "Sağlığın geliştirilmesi": 16,
-    "Önemli Beslenme Sorunları": 12,
-    "Sağlık Eğitimi": 10,
+    "Önemli Beslenme Sorunları": 13,
+    "Sağlık Eğitimi": 11,
     "Halk Sağlığı Tarihçesi": 10,
+    "Koruyucu Sağlık Hizmetleri": 5,
     "Mobbing": 4,
-    "Koruyucu Sağlık Hizmetleri": 4,
     "Okul Sağlığı": 3
    },
    "kurul_dagilimi": {
     "1": 14,
     "5": 23,
     "6": 61,
-    "?": 6
+    "?": 9
    },
    "kazanimlar": [
     {
@@ -3306,7 +3668,7 @@
        "metin": "Sağlığın geliştirilmesi klinik yönetimini, farmakoterapi ilkelerini ve komplikasyonlardan korunma yaklaşımlarını sıralar."
       }
      ],
-     "cikmis": 13
+     "cikmis": 9
     },
     {
      "kurul": 5,
@@ -3364,7 +3726,7 @@
        "metin": "Türkiye Beslenme ve Sağlık Araştırması mekanizmasını ve klinik önemini analiz eder."
       }
      ],
-     "cikmis": 25
+     "cikmis": 17
     },
     {
      "kurul": 6,
@@ -3393,7 +3755,7 @@
        "metin": "Beslenme durumu araştırma yöntemleri mekanizmasını ve klinik önemini analiz eder."
       }
      ],
-     "cikmis": 12
+     "cikmis": 13
     },
     {
      "kurul": 5,
@@ -3414,7 +3776,7 @@
        "metin": "Okul Sağlığı klinik yönetimini, farmakoterapi ilkelerini ve komplikasyonlardan korunma yaklaşımlarını sıralar."
       }
      ],
-     "cikmis": 3
+     "cikmis": 2
     },
     {
      "kurul": 6,
@@ -3481,7 +3843,7 @@
        "metin": "Koruyucu Sağlık Hizmetleri klinik özelliklerini ve tanı yaklaşımlarını açıklar."
       }
      ],
-     "cikmis": 4
+     "cikmis": 3
     }
    ],
    "desteler": [
@@ -3516,7 +3878,8 @@
       "deste": "k1p-k1-18-halk-sagligi-tarihcesi-v2",
       "kisa": "Halk Sağlığı Tarihçesi",
       "slayt": 57,
-      "baslik": "Sağlığın Geliştirilmesi: Koruyucu Hekimliğin Negatif Algısı ve Güvenilir Çevre"
+      "baslik": "Sağlığın Geliştirilmesi: Koruyucu Hekimliğin Negatif Algısı ve Güvenilir Çevre",
+      "anlatim": "Sağlığın geliştirilmesinde ilk sorun bir **algı** sorunudur.\n\n### Koruyucu hekimliğin negatif anlamı\n- Koruyucu hekimliğin ==biraz negatif anlamı vardır==.\n- Nasıl? İnsanları sağlıkları için yararlı şeyleri yapmaya ==teşvikten ziyade==, onlar için çok zararlı olan ancak ==hoşlarına giden hususlardan alıkoymaya== çalışılmaktadır.\n- Bu nedenle halk sağlığının ya da koruyucu hekimliğin ==pozitif yönde algılanması ve benimsetilmesi güçleşmektedir==.\n\nSağlığın geliştirilmesi yaklaşımı bu sorunu aşmak için yasaklar yerine olumlu bileşenleri öne çıkarır.\n\n### Bileşen 1: Güvenilir çevre\n- ==Atıkların insan sağlığına zararsız hâle getirilmesi==\n- ==İçme ve kullanma suyunun steril olarak temin edilmesi==\n- ==Beslenme hijyeninin geliştirilmesi==\n- ==Sağlıklı konutlar ve güvenli ortam==\n\n> Koruyucu hekimlik “yapma” diye algılandığı için benimsetilmesi güçtür; sağlığın geliştirilmesi olumlu bileşenlerle bu algıyı değiştirmeyi hedefler."
      }
     ],
     "tarihce": [
@@ -3524,7 +3887,8 @@
       "deste": "learn-halk-sagligi-tarihcesi-ve",
       "kisa": "Halk Sağlığı Tarihçesi",
       "slayt": 8,
-      "baslik": "Bağışıklama Tarihinde Devrim: Çiçek Aşısı"
+      "baslik": "Bağışıklama Tarihinde Devrim: Çiçek Aşısı",
+      "anlatim": "Tarih boyunca milyonlarca insanın ölümüne, kör kalmasına veya yüzünde derin yara izleri bırakmasına neden olan çiçek hastalığı (Variola), halk sağlığı müdahalelerinin en büyük zaferine sahne olmuştur. Aşılama tarihinin kökleri Doğu ve Osmanlı tıbbına dayanır. Osmanlı toplumunda yüzyıllardır uygulanan 'variolasyon' (çiçekleme), hafif seyreden çiçek hastalarının püstüllerinden alınan sıvının sağlıklı kişilerin cildine çizik atılarak uygulanması tekniğiydi. İngiltere'nin İstanbul Büyükelçisi'nin eşi Lady Mary Wortley Montagu, 1717-1721 yıllarında Edirne ve İstanbul'da Osmanlı aşıcı kadınlarının bu başarılı uygulamasını gözlemlemiş, kendi çocuklarını aşılatmış ve yazdığı ünlü mektuplarla yöntemi Avrupa'ya tanıtmıştır.\n\nVariolasyon kısmi bağışıklık sağlasa da bazen tam çiçek hastalığına ve ölümlere yol açabiliyordu. Bu riski ortadan kaldıran devrimci adımı İngiliz kır hekimi Edward Jenner atmıştır. Jenner, kırsal bölgedeki sütçü kızların ineklerden geçen sığır çiçeği (cowpox) hastalığına yakalandıktan sonra insan çiçeğine (smallpox) asla yakalanmadıklarını fark etmiştir. 1796 yılında Sarah Nelmes adlı sütçü kadının elindeki lezyondan aldığı sıvıyı 8 yaşındaki James Phipps'in koluna aşılamış; çocuk hafif bir reaksiyon geçirdikten sonra, ona insan çiçeği mikrobu verdiğinde çocuğun hastalanmadığını görmüştür.\n\n…"
      }
     ]
    },
@@ -3690,6 +4054,44 @@
      "onem": 1,
      "ders": "Halk Sağlığı Tarihçesi"
     }
+   ],
+   "havuz_konulari": [
+    {
+     "id": "k6-yeterli-dengeli-beslenme",
+     "konu": "Yeterli ve Dengeli Beslenme",
+     "ortak": 31,
+     "bilgi": 56
+    },
+    {
+     "id": "k6-akilci-ilac",
+     "konu": "Akılcı İlaç Kullanımı",
+     "ortak": 17,
+     "bilgi": 22
+    },
+    {
+     "id": "k5-sagligin-gelistirilmesi",
+     "konu": "Sağlığın geliştirilmesi",
+     "ortak": 16,
+     "bilgi": 19
+    },
+    {
+     "id": "k6-onemli-beslenme-sorunlari",
+     "konu": "Önemli Beslenme Sorunları",
+     "ortak": 15,
+     "bilgi": 52
+    },
+    {
+     "id": "k1-korunma-duzeyleri",
+     "konu": "Korunma düzeyleri ve koruyucu sağlık hizmetleri",
+     "ortak": 12,
+     "bilgi": 19
+    },
+    {
+     "id": "k5-saglik-egitimi",
+     "konu": "Sağlık eğitimi",
+     "ortak": 11,
+     "bilgi": 24
+    }
    ]
   }
  },
@@ -3745,7 +4147,7 @@
    "konu": "Koruyucu Sağlık Hizmetleri",
    "anahtar": "Halk Sağlığı::Koruyucu Sağlık Hizmetleri",
    "kazanim": 2,
-   "cikmis": 4,
+   "cikmis": 5,
    "deste": null
   },
   {
@@ -3799,7 +4201,7 @@
    "konu": "Kanser Hastalıkları Epidemiyolojisi",
    "anahtar": "Halk Sağlığı::Kanser Hastalıkları Epidemiyolojisi",
    "kazanim": 3,
-   "cikmis": 18,
+   "cikmis": 19,
    "deste": null
   },
   {
@@ -3817,7 +4219,7 @@
    "konu": "Sağlık Yönetimi",
    "anahtar": "Halk Sağlığı::Sağlık Yönetimi",
    "kazanim": 5,
-   "cikmis": 19,
+   "cikmis": 21,
    "deste": null
   },
   {
@@ -3841,19 +4243,19 @@
   {
    "kurul": 5,
    "ders": "Halk Sağlığı",
-   "konu": "Meslek hastalıkları",
-   "anahtar": "Halk Sağlığı::Meslek hastalıkları",
-   "kazanim": 3,
+   "konu": "Sağlık Eğitimi",
+   "anahtar": "Halk Sağlığı::Sağlık Eğitimi",
+   "kazanim": 5,
    "cikmis": 11,
    "deste": null
   },
   {
    "kurul": 5,
    "ders": "Halk Sağlığı",
-   "konu": "Sağlık Eğitimi",
-   "anahtar": "Halk Sağlığı::Sağlık Eğitimi",
-   "kazanim": 5,
-   "cikmis": 10,
+   "konu": "Meslek hastalıkları",
+   "anahtar": "Halk Sağlığı::Meslek hastalıkları",
+   "kazanim": 3,
+   "cikmis": 11,
    "deste": null
   },
   {
@@ -3898,7 +4300,7 @@
    "konu": "Yaşlılık Döneminde Güvenli Yaşamın İlkeleri",
    "anahtar": "Aile Hekimliği::Yaşlılık Döneminde Güvenli Yaşamın İlkeleri",
    "kazanim": 3,
-   "cikmis": 14,
+   "cikmis": 15,
    "deste": null
   },
   {
@@ -3925,7 +4327,7 @@
    "konu": "Epidemiyolojiye Giriş",
    "anahtar": "Halk Sağlığı::Epidemiyolojiye Giriş",
    "kazanim": 3,
-   "cikmis": 20,
+   "cikmis": 21,
    "deste": null
   },
   {
@@ -3961,7 +4363,7 @@
    "konu": "Önemli Beslenme Sorunları",
    "anahtar": "Halk Sağlığı::Önemli Beslenme Sorunları",
    "kazanim": 5,
-   "cikmis": 12,
+   "cikmis": 13,
    "deste": null
   },
   {
@@ -3970,7 +4372,7 @@
    "konu": "Vaka-Kontrol çalışmaları",
    "anahtar": "Halk Sağlığı::Vaka-Kontrol çalışmaları",
    "kazanim": 3,
-   "cikmis": 11,
+   "cikmis": 12,
    "deste": null
   },
   {
