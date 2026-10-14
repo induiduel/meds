@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 scripts/sync_deepseek_data.py
-Robust DeepSeek Data Synchronizer and Sanitizer for MedSoru:
+Robust DeepSeek Data Synchronizer and Sanitizer for MeDSor:
 - Scans `meds_database/deepseek_data/` and local `deepseek_data/`.
 - Enforces strict anti-corruption filters:
     * Rejects bloated questions (>1000 chars)
@@ -300,7 +300,7 @@ def sync_markdown_spot_notes(data_dirs):
 
 def main():
     print("=" * 60)
-    print("🩺 MedSoru DeepSeek Data Synchronizer & Quality Gatekeeper")
+    print("🩺 MeDSor DeepSeek Data Synchronizer & Quality Gatekeeper")
     print("=" * 60)
 
     existing_dirs = [d for d in CANDIDATE_DIRS if os.path.exists(d)]

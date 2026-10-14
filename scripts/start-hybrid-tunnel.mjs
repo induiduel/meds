@@ -1,7 +1,7 @@
 /**
  * scripts/start-hybrid-tunnel.mjs
  * 
- * Yerel bilgisayarınızdaki MedSoru sunucusunu (port 3000)
+ * Yerel bilgisayarınızdaki MeDSor sunucusunu (port 3000)
  * GitHub Pages (HTTPS) üzerinden güvenle erişilebilir kılmak için
  * ücretsiz bir tünel açar ve adresi doğrudan Firebase Firestore'a kaydeder.
  * 

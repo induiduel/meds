@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""MedSoru Gemini Shadow Judge — bozuk tıp sorularını AI Studio ile onarır."""
+"""MeDSor Gemini Shadow Judge — bozuk tıp sorularını AI Studio ile onarır."""
 from __future__ import annotations
 
 import argparse
@@ -502,7 +502,7 @@ class DeepCurator:
 
 
 def _parse_args(argv: Optional[Sequence[str]] = None) -> argparse.Namespace:
-    p = argparse.ArgumentParser(description="MedSoru Gemini Shadow Judge")
+    p = argparse.ArgumentParser(description="MeDSor Gemini Shadow Judge")
     p.add_argument("--lake", default="./meds_lake")
     p.add_argument("--model", default="gemini-1.5-pro",
                    choices=["gemini-1.5-pro", "gemini-1.5-flash",

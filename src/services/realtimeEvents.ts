@@ -1,5 +1,5 @@
 /**
- * MedSoru Realtime Events Service (SSE - Server-Sent Events)
+ * MeDSor Realtime Events Service (SSE - Server-Sent Events)
  *
  * Sürekli ağ yoklaması (short polling) yerine HTTP/2 multiplexed tek yönlü
  * kalıcı akış kurar. Sunucu veya veritabanında yeni bildirim, hata raporu,
@@ -48,6 +48,20 @@ class RealtimeEventService {
           this.reconnectAttempts = 0;
           this.connect();
         }
+      });
+      // Sayfadan ayrılırken (yenileme, başka adrese gitme, geri/ileri önbelleği) akış KAPATILIR: kapatılmazsa önbellekteki
+      // eski sayfaların SSE'leri açık kalıyor, HTTP/1.1'in sunucu başına 6 bağlantı sınırı dolunca yeni sayfanın parçaları
+      // kuyrukta bekleyip ekran "Yükleniyor"da kalıyordu. Sayfa önbellekten geri gelirse akış lastEventId ile yeniden kurulur.
+      let resumeOnShow = false;
+      window.addEventListener('pagehide', () => {
+        resumeOnShow = !this.isExplicitlyClosed && !!this.eventSource;
+        if (this.eventSource || this.reconnectTimer) this.disconnect();
+      });
+      window.addEventListener('pageshow', (e) => {
+        if (!(e as PageTransitionEvent).persisted || !resumeOnShow) return;
+        resumeOnShow = false;
+        this.reconnectAttempts = 0;
+        this.connect();
       });
       // Yönetici girişi/çıkışı: yönetici olayları için akış yeni yetkiyle yeniden kurulur
       window.addEventListener('medsoru:admin-session', () => this.refreshAuth());

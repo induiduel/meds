@@ -1,5 +1,5 @@
 /* =============================================================================
- * MedSoru · Ders özetleri — liste (.sl-*) ve okuyucu (.sr-*)  (v10 kompakt: ray · okuma sütunu · sağ panel)
+ * MeDSor · Ders özetleri — liste (.sl-*) ve okuyucu (.sr-*)  (v10 kompakt: ray · okuma sütunu · sağ panel)
  *  - Yalnız token: --color-* (utils/palettes.ts, 3 tema × 4 palet), ders rengi --d / --d-ink / --d-soft
  *    (styles/health.css .d-*), hareket --mo-* (appearance.css). Sabit renk yok; tema seçicileri (light/
  *    sepia/dark) ve palet değişince kendiliğinden uyar. İstisna: Aa panelindeki tema önizleme daireleri.

@@ -1,6 +1,6 @@
 /**
  * ==============================================================================
- * MedSoru Akıllı Soru Yazma, Cümle Devamı ve Güvenli Yazım Düzeltme Motoru
+ * MeDSor Akıllı Soru Yazma, Cümle Devamı ve Güvenli Yazım Düzeltme Motoru
  * (src/services/smartComposerService.ts)
  *
  * Özellikler:

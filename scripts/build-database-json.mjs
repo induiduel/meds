@@ -1,7 +1,7 @@
 /**
  * scripts/build-database-json.mjs
  * 
- * MedSoru Veritabanı JSON Üretim ve Senkronizasyon Motoru
+ * MeDSor Veritabanı JSON Üretim ve Senkronizasyon Motoru
  * 
  * Hedef Klasör: C:\Users\indui\Desktop\meds_database\database_json
  * 
@@ -513,7 +513,7 @@ function standardizePastQuestion(q, folderKey, committeeId) {
 
 // Main execution
 export async function buildDatabaseJson() {
-  console.log('🏛️ [MedSoru Database JSON Motoru] Başlatılıyor...');
+  console.log('🏛️ [MeDSor Database JSON Motoru] Başlatılıyor...');
   console.log(`📁 Hedef Klasör: ${BASE_OUT_DIR}`);
 
   ensureAllDirectories();
@@ -740,7 +740,7 @@ export async function buildDatabaseJson() {
 
   const manifest = {
     version: '1.0.0',
-    engine: 'MedSoru Database JSON Engine',
+    engine: 'MeDSor Database JSON Engine',
     subagent: 'meds_database_json_subagent',
     createdAt: new Date().toISOString(),
     totalFolders: COMMITTEE_DEFINITIONS.length,
@@ -754,9 +754,9 @@ export async function buildDatabaseJson() {
   };
   fs.writeFileSync(path.join(BASE_OUT_DIR, 'manifest.json'), JSON.stringify(manifest, null, 2), 'utf8');
 
-  const readmeContent = `# MedSoru Veritabanı JSON Deposu (database_json)
+  const readmeContent = `# MeDSor Veritabanı JSON Deposu (database_json)
 
-Bu klasör, MedSoru projesinin tüm dönem ve kurullarına ait **çıkmış sorular**, **canlı soru havuzu**, **kullanıcı profilleri**, **ders notları** ve **kurul meta verilerini** yapılandırılmış ve temizlenmiş JSON formatında barındırır.
+Bu klasör, MeDSor projesinin tüm dönem ve kurullarına ait **çıkmış sorular**, **canlı soru havuzu**, **kullanıcı profilleri**, **ders notları** ve **kurul meta verilerini** yapılandırılmış ve temizlenmiş JSON formatında barındırır.
 
 Artık sürekli \`.txt\` veya \`.pdf\` dosyalarını baştan okumaya gerek yoktur. Buradaki dosyalar doğrudan:
 - **Supabase PostgreSQL** tablolarına (\`past_questions\`, \`questions\`, \`users\`, \`lecture_notes\`, \`committees\`)

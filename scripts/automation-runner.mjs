@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /**
- * MedSoru Central Script & Automation Runner Engine
+ * MeDSor Central Script & Automation Runner Engine
  * ----------------------------------------------------
  * Bu script; mevcut ve gelecekte oluşturulacak TÜM scriptlerin dinamik taranmasını,
  * manuel veya zincirleme (pipeline) olarak çalıştırılmasını, loglarının toplanmasını
@@ -758,7 +758,7 @@ if (process.argv[1] && path.resolve(process.argv[1]) === path.resolve(__filename
   if (args.includes('--help') || args.length === 0) {
     console.log(`
 =============================================================
-  MedSoru Merkezi Otomasyon & Script Yöneticisi (CLI)
+  MeDSor Merkezi Otomasyon & Script Yöneticisi (CLI)
 =============================================================
 Kullanım:
   node scripts/automation-runner.mjs --list

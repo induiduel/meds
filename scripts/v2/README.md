@@ -1,4 +1,4 @@
-# MedSoru Core v2 (`scripts/v2`)
+# MeDSor Core v2 (`scripts/v2`)
 
 Bağımsız veri **denetim + ingest** çekirdeği. Eski `scripts/agents`, `scripts/advanced_ai` ve
 `scripts/pipeline` hattından ayrı çalışır; onları kaldırmaz ve onların verisini ezmez.

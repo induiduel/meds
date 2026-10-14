@@ -2,7 +2,7 @@
 /**
  * scripts/fix-nested-and-embedded-questions.mjs
  * 
- * MedSoru İç İçe Geçmiş Şıklar, Soru Kökünde Kalan Şıklar ve
+ * MeDSor İç İçe Geçmiş Şıklar, Soru Kökünde Kalan Şıklar ve
  * Birbirine Yapışmış Soruları Ayrıştırma ve Düzeltme Motoru
  * 
  * Çözülen Sorunlar:
@@ -257,7 +257,7 @@ export async function runNestedAndEmbeddedFixer(options = {}) {
   const syncSupabase = options.syncSupabase || process.argv.includes('--sync-supabase');
 
   console.log('='.repeat(70));
-  console.log('🩺 MedSoru: İç İçe Şık ve Soru Ayrıştırma & Düzeltme Motoru');
+  console.log('🩺 MeDSor: İç İçe Şık ve Soru Ayrıştırma & Düzeltme Motoru');
   console.log(`📁 Kaynak: ${DATA_PAST_PATH}`);
   console.log(`⚙️  Mod: ${isDryRun ? '🔍 SIMULATION / DRY-RUN (Değişiklik yazılmaz)' : '🚀 FIX & SAVE'}`);
   console.log('='.repeat(70));

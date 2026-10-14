@@ -183,7 +183,7 @@ export function exportPastExamsToMarkdown(options: {
   const limit = options.limit || filtered.length;
   const sliced = filtered.slice(offset, offset + limit);
 
-  let md = `# MEDSORU ÇIKMIŞ SORULAR ARŞİVİ (NOTEBOOKLM UYUMLU KAYNAK)\n`;
+  let md = `# MEDSOR ÇIKMIŞ SORULAR ARŞİVİ (NOTEBOOKLM UYUMLU KAYNAK)\n`;
   md += `> Toplam Eşleşen: ${filtered.length} Soru | Gösterilen: ${sliced.length} (Ofset: ${offset})\n\n---\n\n`;
 
   sliced.forEach((q, idx) => {
@@ -237,7 +237,7 @@ export function exportSummariesToMarkdown(options: { kurul?: string; limit?: num
   const limit = options.limit || filtered.length;
   const sliced = filtered.slice(0, limit);
 
-  let md = `# MEDSORU AMFİ DERS ÖZETLERİ VE SPOT BİLGİLER\n`;
+  let md = `# MEDSOR AMFİ DERS ÖZETLERİ VE SPOT BİLGİLER\n`;
   md += `> Toplam Ders: ${filtered.length} | Gösterilen: ${sliced.length}\n\n---\n\n`;
 
   sliced.forEach((s) => {
@@ -262,7 +262,7 @@ export function exportGlossaryToMarkdown(options: { limit?: number; category?: s
   const glossary: Record<string, any> = readJsonSafe(GLOSSARY_FILE, {});
   const encyclopedia: any[] = readJsonSafe(ENCYCLOPEDIA_FILE, []);
 
-  let md = `# MEDSORU TIP SÖZLÜĞÜ VE KLİNİK ANSİKLOPEDİ\n`;
+  let md = `# MEDSOR TIP SÖZLÜĞÜ VE KLİNİK ANSİKLOPEDİ\n`;
   md += `> Toplam Terim: ${Object.keys(glossary).length} Sözlük Maddesi, ${encyclopedia.length} Ansiklopedi Maddesi\n\n---\n\n`;
 
   // First output encyclopedia if available
@@ -289,7 +289,7 @@ export function exportFlashcardsToMarkdown(options: { group?: string; limit?: nu
   }
   const sliced = filtered.slice(0, options.limit || filtered.length);
 
-  let md = `# MEDSORU AKIL VE ÇALIŞMA KARTLARI (FLASHCARDS)\n`;
+  let md = `# MEDSOR AKIL VE ÇALIŞMA KARTLARI (FLASHCARDS)\n`;
   md += `> Toplam Kart: ${filtered.length} | Gösterilen: ${sliced.length}\n\n---\n\n`;
 
   sliced.forEach((c, idx) => {
@@ -310,7 +310,7 @@ export function exportDecksToMarkdown(options: { deckId?: string } = {}): string
     filtered = filtered.filter((d) => d.id === options.deckId);
   }
 
-  let md = `# MEDSORU İNTERAKTİF ÖĞRENME DESTELERİ VE SLAYTLARI\n`;
+  let md = `# MEDSOR İNTERAKTİF ÖĞRENME DESTELERİ VE SLAYTLARI\n`;
   md += `> Toplam Deste Sayısı: ${filtered.length}\n\n---\n\n`;
 
   filtered.forEach((deck) => {
@@ -445,7 +445,7 @@ function inferPayloadType(data: any): string {
 // ---------------------------------------------------------------------------
 
 /**
- * Normalizes question options into MedSoru standard QuestionOption array
+ * Normalizes question options into MeDSor standard QuestionOption array
  */
 function normalizeQuestionOptions(
   rawOptions: any,
@@ -891,8 +891,8 @@ export function ingestFlashcards(payload: any): IngestionResult {
 
 export function getNotebookLMContracts(): Record<string, any> {
   return {
-    system_description: "MedSoru AI & Tıp Müfredatı Entegrasyon Altyapısı",
-    instruction_overview: "NotebookLM'e kaynak olarak aktarılan tıp fakültesi ders notları ve çıkmış sorular üzerinde çalışırken, aşağıdaki görev tiplerine ait JSON şablonlarını kullanın. Çıktıyı doğrudan MedSoru sistemine yapıştırarak tüm veritabanını anında güncelleyebilirsiniz.",
+    system_description: "MeDSor AI & Tıp Müfredatı Entegrasyon Altyapısı",
+    instruction_overview: "NotebookLM'e kaynak olarak aktarılan tıp fakültesi ders notları ve çıkmış sorular üzerinde çalışırken, aşağıdaki görev tiplerine ait JSON şablonlarını kullanın. Çıktıyı doğrudan MeDSor sistemine yapıştırarak tüm veritabanını anında güncelleyebilirsiniz.",
     contracts: {
       past_question_correction: {
         description: "Çıkmış soru düzeltme, eksik şık tamamlama, cevap anahtarı doğrulama, öncül ayrıştırma ve şık analizi",

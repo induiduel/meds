@@ -33,6 +33,8 @@ import { QuestionFocus } from '../../services/questionFocus';
 import { LessonPlayer } from './lesson/LessonPlayer';
 import { touchRecent } from './LearnHub';
 import { LearnLibrary, LessonSkeleton } from './LearnLibrary';
+import { LearnLibraryV12 } from '../v12/LearnLibraryV12';
+import { useAppearance } from '../../utils/appearance';
 import { Dialog } from '../ui/Dialog';
 import { NoPdfNotice, useNoPdfGate } from './NoPdfNotice';
 import type { DeckCatalogEntry } from '../../data/deckStore';
@@ -702,6 +704,8 @@ export const InteractiveDeckView: React.FC<InteractiveDeckViewProps> = ({ initia
     return m;
   }, [versionGroups]);
   /** Hata defteri tekrar ekranı (deckId: yalnız o ders) ve "Kaynağa git" ile açılacak adım */
+  /** v12 "Net": kitaplık kendi yapısıyla çizilir (components/v12/LearnLibraryV12); v10/v11 LearnLibrary */
+  const Library = useAppearance().design === 'v12' ? LearnLibraryV12 : LearnLibrary;
   const [review, setReview] = useState<{ deckId?: string } | null>(null);
   // Bugün ekranındaki "Tekrara başla": bayrak mount sonrası okunur (başlatıcıda okumak StrictMode çift çağrısında kayboluyordu)
   useEffect(() => {
@@ -774,7 +778,7 @@ export const InteractiveDeckView: React.FC<InteractiveDeckViewProps> = ({ initia
 
   return (
     <div className="flex flex-col gap-3 sm:gap-4 min-w-0">
-      <LearnLibrary
+      <Library
         decks={hubDecks}
         versions={versionLabels}
         onOpenReview={(id) => setReview({ deckId: id })}

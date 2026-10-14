@@ -33,7 +33,8 @@ img, video { max-width: 100%; }
 /* Liste satırlarında okuma yazısı değil arayüz yazısı (taranabilirlik) */
 :root:is([data-design='v11'],[data-design='v12']) .pv-row .pv-stem { font-family: var(--font-sans); font-size: 14.5px; line-height: 1.4; }
 /* Diyalog/çekmece gövdesi ekrandan uzun olursa yalnız gövde kayar */
-:is([role='dialog'], dialog) { max-height: calc(100dvh - 24px); }
+/* Tam ekran katmanları (ders oynatıcı, okuyucular, örtüler) hariç: onlar ekranı tam doldurmalı (ders oynatıcı alttan 24 px kırpılıyordu) */
+:is([role='dialog'], dialog):not(.ls-root, .r12-root, .sr-root, .ms-overlay, .wt-full, .cf-root, .lf-overlay, .p12-pause, .fixed.inset-0) { max-height: calc(var(--vvh, 100dvh) - 24px); }
 
 /* ── Soru etiketleri (varsayılan gizli; Ayarlar › Görünüm › Soru etiketleri) ── */
 :root:is([data-design='v11'],[data-design='v12'])[data-qtags='off'] :is(.qk-flags, .qk-more-flags) { display: none !important; }
@@ -53,9 +54,10 @@ img, video { max-width: 100%; }
 
 /* ── Yumuşak gezinme: sayfa girişi (yalnız saydamlık + 4 px; ana iş parçacığını yormaz) ── */
 @media (prefers-reduced-motion: no-preference) {
-  :root:is([data-design='v11'],[data-design='v12']):not([data-motion='reduced']) .v11-enter { animation: v11-in .22s cubic-bezier(.2, .8, .2, 1) both; }
+  :root:is([data-design='v11'],[data-design='v12']):not([data-motion='reduced']) .v11-enter { animation: v11-in .22s cubic-bezier(.2, .8, .2, 1) backwards; }
 }
-@keyframes v11-in { from { opacity: 0; transform: translate3d(0, 4px, 0); } }
+/* Yalnız saydamlık: transform'lu sayfa girişi içindeki position:fixed öğeleri (ders oynatıcı) <main>'e hapsediyordu */
+@keyframes v11-in { from { opacity: 0; } }
 .ayr-row[hidden] { display: none !important; }
 /* Telefonda görünüm seçicinin metin etiketi gizlenir (yalnız simge; aria-label/title korunur) */
 @media (max-width: 767px) {

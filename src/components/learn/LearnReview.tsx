@@ -6,7 +6,7 @@
  *  - Kapsam: açıldığı ders ya da tüm dersler.
  *  - Her ögede kaynak satırı (ders · adım) ve "Kaynağa git": dersi o adımda açar.
  *  - Deste güncellenip öge değiştiyse (içerik özeti tutmuyor) öge sessizce defterden düşer.
- * Stil: styles/learn-focus.css (.lr-rv-*) + ders ekranının .ls-* sınıfları (ls-root kabuğu).
+ * Stil: styles/learn-focus.css (.lr-rv-*) + ders ekranının .ls-* sınıfları (ls-root kabuğu); v12 görünümü styles/v12/learn-library.css.
  */
 import React, { useEffect, useMemo, useState } from 'react';
 import { BookOpenText, Check, ChevronLeft, ChevronRight, PartyPopper, RotateCcw } from 'lucide-react';
@@ -16,6 +16,7 @@ import { PracticeCard } from './lesson/LessonBlocks';
 import { dropEntry, dueEntries, itemSig, MASTER_BOX, openEntries, recordResult, type ReviewEntry } from '../../services/learnReview';
 import '../../styles/learn-focus.css';
 import '../../styles/learn-v10.css';
+import '../../styles/v12/learn-library.css';
 
 interface QItem { e: ReviewEntry; item: PracticeItem; stepTitle: string }
 type Mode = 'due' | 'all';

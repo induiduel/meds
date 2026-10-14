@@ -1,6 +1,6 @@
 # meds/ — Ajan Talimatı
 
-Bu klasör MedSoru uygulamasının kodudur. Kurallar tek yerde tutulur:
+Bu klasör MeDSor uygulamasının kodudur. Kurallar tek yerde tutulur:
 
 - **`../AGENTS.md`** — içerik, deste, etkileşim ve GPU kuralları (esas belge; çelişkide bu geçerlidir).
 - **`../PROJE_TANITIMI.md`** — amaç, klasör yapısı, veri hattı (downloads → temp → database).

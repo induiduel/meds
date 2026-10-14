@@ -78,23 +78,23 @@ export const DeviceStorageSection: React.FC<{ o: OfflineState }> = ({ o }) => {
   ];
 
   return (
-    <section className="of-sec ds" aria-label="Cihazdaki veriler">
-      <div className="ds-head">
+    <section className="of-sec dvs" aria-label="Cihazdaki veriler">
+      <div className="dvs-head">
         <h3>Cihazdaki veriler</h3>
-        {est && est.usage > 0 && <span className="ds-usage">{fmtBytes(est.usage)} kullanılıyor</span>}
+        {est && est.usage > 0 && <span className="dvs-usage">{fmtBytes(est.usage)} kullanılıyor</span>}
         <button type="button" className="ms-btn is-ghost is-sm" onClick={() => void refresh()} aria-label="Yenile"><RefreshCw /></button>
       </div>
 
-      <div className="ds-group">
-        <button type="button" className="ds-row is-head" aria-expanded={openKind === 'pdf'} onClick={() => setOpenKind(openKind === 'pdf' ? null : 'pdf')}>
+      <div className="dvs-group">
+        <button type="button" className="dvs-row is-head" aria-expanded={openKind === 'pdf'} onClick={() => setOpenKind(openKind === 'pdf' ? null : 'pdf')}>
           <FileText aria-hidden />
           <span>İndirilmiş PDF'ler</span>
           <b>{items ? tally(byKind.pdf) : '…'}</b>
-          <ChevronDown aria-hidden className="ds-chev" />
+          <ChevronDown aria-hidden className="dvs-chev" />
         </button>
         {openKind === 'pdf' && (
           byKind.pdf.length ? (
-            <ul className="ds-list">
+            <ul className="dvs-list">
               {byKind.pdf.map((it) => (
                 <li key={it.url}>
                   <span title={it.name}>{it.name}</span>
@@ -108,11 +108,11 @@ export const DeviceStorageSection: React.FC<{ o: OfflineState }> = ({ o }) => {
                 </li>
               )}
             </ul>
-          ) : <p className="ds-empty">Cihazda kayıtlı PDF yok.</p>
+          ) : <p className="dvs-empty">Cihazda kayıtlı PDF yok.</p>
         )}
       </div>
 
-      <ul className="ds-list is-rows">
+      <ul className="dvs-list is-rows">
         {stores.map(([k, label, n]) => (
           <li key={k}>
             <span>{label}</span>

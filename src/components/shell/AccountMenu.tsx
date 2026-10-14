@@ -146,7 +146,7 @@ export const AccountMenu: React.FC<{ open: boolean; onClose: () => void; user: A
     if (!open || phone) return;
     const onDown = (e: MouseEvent) => {
       const t = e.target as Node;
-      if (ref.current && !ref.current.contains(t) && !(t as HTMLElement).closest?.('.sh-acct-btn')) onClose();
+      if (ref.current && !ref.current.contains(t) && !(t as HTMLElement).closest?.('.sh-acct-btn, .s12-acct')) onClose();
     };
     const onKey = (e: KeyboardEvent) => e.key === 'Escape' && onClose();
     document.addEventListener('mousedown', onDown);

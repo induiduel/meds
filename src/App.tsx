@@ -103,7 +103,8 @@ function wrapLazy<T extends { default: React.ComponentType<any> }>(
 }
 
 // Lazy-loaded Views (Split into separate on-demand chunks)
-const PracticeMode = React.lazy(() => wrapLazy(import('./components/PracticeMode').then(m => ({ default: m.PracticeMode }))));
+// Test çöz: kurulum (kaynak/kurul/ders/zorluk/sayı ya da rastgele) + çözücü; havuz soruları girmez
+const TestHub = React.lazy(() => wrapLazy(import('./components/practice/TestHub').then(m => ({ default: m.TestHub }))));
 const StudyHub = React.lazy(() => wrapLazy(import('./components/study/StudyHub').then(m => ({ default: m.StudyHub }))));
 const BookletView = React.lazy(() => wrapLazy(import('./components/BookletView').then(m => ({ default: m.BookletView }))));
 const LeaderboardView = React.lazy(() => wrapLazy(import('./components/LeaderboardView').then(m => ({ default: m.LeaderboardView }))));
@@ -120,6 +121,7 @@ const TesterOzetView = React.lazy(() => wrapLazy(import('./components/TesterOzet
 const PracticeQuestionsView = React.lazy(() => wrapLazy(import('./components/PracticeQuestionsView')));
 const KazanimlarView = React.lazy(() => wrapLazy(import('./components/KazanimlarView').then(m => ({ default: m.KazanimlarView }))));
 const DiseasesView = React.lazy(() => wrapLazy(import('./components/diseases/DiseasesView').then(m => ({ default: m.DiseasesView }))));
+const SaglikView = React.lazy(() => wrapLazy(import('./components/saglik/SaglikView').then(m => ({ default: m.SaglikView }))));
 
 // Lazy-loaded Modals (Only downloaded when opened)
 const AdminPanelModal = React.lazy(() => wrapLazy(import('./components/AdminPanelModal').then(m => ({ default: m.AdminPanelModal }))));
@@ -1408,17 +1410,7 @@ export default function App() {
       )}
       {activeTab === 'practice' ? (
         <Suspense fallback={<ViewFallback />}>
-          <PracticeMode
-            questions={questions}
-            title={currentCommittee ? `${committeeShortLabel(currentCommittee).charAt(0)}${committeeShortLabel(currentCommittee).slice(1).toLocaleLowerCase('tr-TR')} · Test çöz` : 'Test çöz'}
-            subtitle={currentCommittee?.name.split(':').slice(1).join(':').trim() || currentCommittee?.name}
-            onExit={() => setActiveTab('study')}
-            onOpenQuestion={openQuestion}
-            onOpenContributeModal={() => {
-              setContributeDefaultNumber(undefined);
-              setIsContributeModalOpen(true);
-            }}
-          />
+          <TestHub onExit={() => setActiveTab('study')} />
         </Suspense>
       ) : activeTab === 'manage' || activeTab === 'admin' ? (
         isAdmin ? (
@@ -1661,6 +1653,13 @@ export default function App() {
                 setActiveTab('learn');
               }}
             />
+          </Suspense>
+        )}
+
+        {/* TAB: Sağlık Bakanlığı — resmî halk sağlığı verileri + ders/sınav bağları (/saglik/<bölüm>) */}
+        {activeTab === 'health_ministry' && (
+          <Suspense fallback={<ViewFallback />}>
+            <SaglikView />
           </Suspense>
         )}
 
@@ -1935,7 +1934,7 @@ export default function App() {
           </Suspense>
         )}
 
-        {/* /veri — MedSoru Core v2 Veri Merkezi (salt okunur) */}
+        {/* /veri — MeDSor Core v2 Veri Merkezi (salt okunur) */}
         {activeTab === 'datacore' && (
           <Suspense fallback={<ViewFallback />}>
             <DataCoreView />

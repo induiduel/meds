@@ -125,7 +125,7 @@ export function ensureDeepSeekFolder(): void {
 
     const readmePath = path.join(DEEPSEEK_DATA_DIR, 'README_KULLANIM_KILAVUZU.md');
     if (!fs.existsSync(readmePath)) {
-      const guide = `# MedSoru DeepSeek Veri Havuzu (deepseek_data)
+      const guide = `# MeDSor DeepSeek Veri Havuzu (deepseek_data)
 
 Bu klasör, **DeepSeek AI** tarafından analiz edilmiş, düzenlenmiş, redakte edilmiş veya özetlenmiş tüm tıbbi verilerin toplanma alanıdır.
 

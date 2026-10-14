@@ -1268,7 +1268,7 @@ export const ApiService = {
     const html = `
       <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 600px; margin: 0 auto; padding: 24px; border: 1px solid #e2e8f0; border-radius: 12px; background-color: #ffffff;">
         <div style="background: linear-gradient(135deg, #0f766e, #0d9488); color: #ffffff; padding: 20px 24px; border-radius: 8px;">
-          <h2 style="margin: 0; font-size: 20px; font-weight: 700;">MedSoru • Tıp Dönem 3 Kurul Arşivi</h2>
+          <h2 style="margin: 0; font-size: 20px; font-weight: 700;">MeDSor • Tıp Dönem 3 Kurul Arşivi</h2>
           <p style="margin: 6px 0 0 0; font-size: 13px; opacity: 0.9;">Kolektif Soru Havuzu ve AI Rekonstrüksiyonu</p>
         </div>
         
@@ -1289,7 +1289,7 @@ export const ApiService = {
           <p>Tıp fakültesinde bilgi paylaşımı ve dayanışma en büyük gücümüzdür. Dönem arkadaşlarınıza ve gelecek dönemlere miras kalacak bu soru arşivine sunduğunuz samimi destek için teşekkür eder, sınavlarınızda ve hekimlik yolculuğunuzda üstün başarılar dileriz!</p>
           
           <div style="margin-top: 28px; padding-top: 16px; border-top: 1px solid #e2e8f0; color: #64748b; font-size: 12px;">
-            <p style="margin: 0;">MedSoru Kurul Sistemi • nofrostlife@gmail.com</p>
+            <p style="margin: 0;">MeDSor Kurul Sistemi • nofrostlife@gmail.com</p>
             <p style="margin: 4px 0 0 0; font-style: italic;">Not: Bu teşekkür bildirimi her kurul sınavı için öğrenciye yalnızca 1 kez gönderilir.</p>
           </div>
         </div>

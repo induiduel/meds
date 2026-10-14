@@ -1,5 +1,5 @@
 [Unit]
-Description=MedSoru Revize v2 - Faz 14 sorularinin yeniden revizyonu (ucretsiz bulut AI, GPU yok)
+Description=MeDSor Revize v2 - Faz 14 sorularinin yeniden revizyonu (ucretsiz bulut AI, GPU yok)
 Documentation=file:///home/indu/medsor/meds/scripts/v2/revize/INSTRUCTIONS.md
 After=network-online.target
 Wants=network-online.target

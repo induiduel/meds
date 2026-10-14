@@ -23,6 +23,8 @@ type Grup = {
   durum: 'otomatik' | 'onayli' | 'ayrildi';
   gorunen?: string | null;
   ayrisik?: boolean;
+  /** Sonradan eklenen üyelerin asılla metin benzerliği (0–1); %99 altı "olası aynı soru" demektir. */
+  olasilik?: Record<string, number>;
   sorular: Soru[];
 };
 type Filtre = 'ayrisik' | 'incele' | 'ayni' | 'onayli' | 'ayrildi' | 'hepsi';
@@ -176,6 +178,9 @@ export const ManageMergesSection: React.FC<{ adminEmail: string }> = ({ adminEma
                     <article key={q.id} className={`rounded-xl p-3 flex flex-col gap-2 min-w-0 ${sitede ? 'bg-ok-tint ring-1 ring-ok/35' : q.ayrisik ? 'bg-canvas ring-1 ring-bad/40' : 'bg-canvas'}`}>
                       <div className="flex items-center gap-1.5 text-xs text-ink-3 min-w-0">
                         {asil ? <span className="ms-tag is-ok"><Crown /> Asıl</span> : <span className="ms-tag"><Copy /> Kopya</span>}
+                        {!asil && g.olasilik?.[q.id] !== undefined && g.olasilik[q.id] < 0.99 && (
+                          <span className="ms-tag is-warn tabular-nums" title="Metin benzerliği; aynı soru olduğu kesin değil">Olası %{Math.round(g.olasilik[q.id] * 100)}</span>
+                        )}
                         <span className="truncate">{[q.committeeId, q.discipline, q.year].filter(Boolean).join(' · ')}</span>
                       </div>
                       {(q.duzenleme || q.ayrisik) && (

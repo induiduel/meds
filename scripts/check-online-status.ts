@@ -1,5 +1,5 @@
 /**
- * MedSoru - Online Veritabanı ve Yapay Zeka Limit Denetleme Scripti (check-online-status.ts)
+ * MeDSor - Online Veritabanı ve Yapay Zeka Limit Denetleme Scripti (check-online-status.ts)
  * 
  * Bu script:
  * 1. Online Firebase Firestore bağlantısını ve günlük Spark 50K okuma kotasını denetler.

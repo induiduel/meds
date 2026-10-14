@@ -1,6 +1,8 @@
 import { QuestionItem, Committee } from '../types';
 
-export const FOLDER_NAME = 'MedSoru - Tıp Kurul Arşivi';
+export const FOLDER_NAME = 'MeDSor - Tıp Kurul Arşivi';
+// Uygulama adı MedSoru → MeDSor oldu (2026-10-14): eski adla açılmış klasör varsa yedekler orada kalır
+const LEGACY_FOLDER_NAME = 'MedSoru - Tıp Kurul Arşivi';
 
 export interface DriveUploadResult {
   fileId: string;
@@ -233,7 +235,7 @@ export async function generateBookletPdfBlob(
     style('normal', 6.5, INK3);
     doc.text(T(shortTitle), M, 10.5, { maxWidth: W - 30 });
     style('bold', 6.5, ACCENT);
-    doc.text(T('MEDSORU'), pageW - M, 10.5, { align: 'right' });
+    doc.text(T('MEDSOR'), pageW - M, 10.5, { align: 'right' });
     stroke(LINE);
     doc.line(M, 12.5, pageW - M, 12.5);
   };
@@ -269,7 +271,7 @@ export async function generateBookletPdfBlob(
 
   // ---------- Title block (full width) ----------
   style('bold', 6.8, ACCENT);
-  doc.text(T('MEDSORU · SORU KİTAPÇIĞI'), M, M);
+  doc.text(T('MEDSOR · SORU KİTAPÇIĞI'), M, M);
   y = M + 5.6;
   style('bold', SZ.title, INK);
   for (const line of doc.splitTextToSize(T(title), W) as string[]) {
@@ -442,7 +444,7 @@ export async function generateBookletPdfBlob(
     stroke(LINE);
     doc.line(M, pageH - 11, pageW - M, pageH - 11);
     style('normal', 6.5, INK3);
-    doc.text(T('MedSoru · Dönem 3 kurul soru arşivi'), M, pageH - 7.5);
+    doc.text(T('MeDSor · Dönem 3 kurul soru arşivi'), M, pageH - 7.5);
     doc.text(T(`${p} / ${total}`), pageW - M, pageH - 7.5, { align: 'right' });
   }
 
@@ -458,7 +460,7 @@ async function getOrCreateDriveFolder(
 ): Promise<string> {
   // Search for existing folder
   const query = encodeURIComponent(
-    `name = '${folderName}' and mimeType = 'application/vnd.google-apps.folder' and trashed = false`
+    `${folderName === FOLDER_NAME ? `(name = '${folderName}' or name = '${LEGACY_FOLDER_NAME}')` : `name = '${folderName}'`} and mimeType = 'application/vnd.google-apps.folder' and trashed = false`
   );
   const searchRes = await fetch(
     `https://www.googleapis.com/drive/v3/files?q=${query}&fields=files(id,name)`,
@@ -489,7 +491,7 @@ async function getOrCreateDriveFolder(
     body: JSON.stringify({
       name: folderName,
       mimeType: 'application/vnd.google-apps.folder',
-      description: 'MedSoru Tıp Fakültesi Kurul Çıkmış Soruları Arşivi',
+      description: 'MeDSor Tıp Fakültesi Kurul Çıkmış Soruları Arşivi',
     }),
   });
 
@@ -536,7 +538,7 @@ export async function uploadBookletPdfToDrive({
     `${sanitizedCommitteeName}_Cikmis_Sorular_${timestamp}.pdf`;
 
   // 4. Multipart upload
-  const boundary = '-------MedSoruBoundary' + Date.now();
+  const boundary = '-------MeDSorBoundary' + Date.now();
   const delimiter = `\r\n--${boundary}\r\n`;
   const closeDelimiter = `\r\n--${boundary}--`;
 

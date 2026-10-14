@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-MedSoru Master Orchestrator & Supervisor (scripts/master_controller.py)
+MeDSor Master Orchestrator & Supervisor (scripts/master_controller.py)
 En Yönetici, En Kapsamlı Sistem & Donanım Yöneticisi.
 
 Özellikler:
@@ -72,7 +72,7 @@ MANAGED_SCRIPTS = {
         "supports_gpu": True
     },
     "web_server": {
-        "name": "MedSoru Web Uygulaması (Port 3000)",
+        "name": "MeDSor Web Uygulaması (Port 3000)",
         "cmd": ["npx", "tsx", "server.ts"],
         "cwd": ROOT_DIR,
         "category": "frontend",
@@ -432,7 +432,7 @@ class MasterController:
             "scripts": scripts_info,
             "pipeline": pipeline_metrics,
             "links": [
-                {"name": "MedSoru Web Portalı", "url": "http://localhost:3000", "port": 3000, "icon": "graduation-cap"},
+                {"name": "MeDSor Web Portalı", "url": "http://localhost:3000", "port": 3000, "icon": "graduation-cap"},
                 {"name": "Hibrit Arama & Supabase REST", "url": "http://localhost:8000", "port": 8000, "icon": "bolt"},
                 {"name": "Canlı Analiz Kokpiti", "url": "http://localhost:8085", "port": 8085, "icon": "gauge-high"}
             ]
@@ -567,7 +567,7 @@ def run_desktop_gui(controller: MasterController):
     from tkinter import ttk, messagebox
 
     root = tk.Tk()
-    root.title("MedSoru AI - Master Yönetim & Denetim Kokpiti")
+    root.title("MeDSor AI - Master Yönetim & Denetim Kokpiti")
     root.geometry("1100x750")
     root.minsize(950, 650)
     root.configure(bg="#0f172a")
@@ -589,7 +589,7 @@ def run_desktop_gui(controller: MasterController):
 
     title_box = tk.Frame(header_frame, bg="#1e293b")
     title_box.pack(side="left")
-    tk.Label(title_box, text="⚡ MedSoru AI Master Supervisor", font=("Helvetica", 15, "bold"), fg="#38bdf8", bg="#1e293b").pack(anchor="w")
+    tk.Label(title_box, text="⚡ MeDSor AI Master Supervisor", font=("Helvetica", 15, "bold"), fg="#38bdf8", bg="#1e293b").pack(anchor="w")
     tk.Label(title_box, text="Tüm Yerel Scriptler, Donanım Koruyucusu ve Otomasyon Kontrol Masası", font=("Helvetica", 9), fg="#94a3b8", bg="#1e293b").pack(anchor="w")
 
     # Mod Butonları
@@ -765,7 +765,7 @@ def run_desktop_gui(controller: MasterController):
 # ==============================================================================
 def main():
     import argparse
-    parser = argparse.ArgumentParser(description="MedSoru AI Master Supervisor")
+    parser = argparse.ArgumentParser(description="MeDSor AI Master Supervisor")
     parser.add_argument("--mode", choices=["normal", "safe", "extreme"], help="Başlangıç çalışma modu")
     parser.add_argument("--gui", action="store_true", help="Masaüstü GUI penceresini aç")
     parser.add_argument("--cli", action="store_true", help="Terminal etkileşimli mod")
@@ -788,9 +788,9 @@ def main():
     supervisor_thread = threading.Thread(target=controller.supervisor_loop, daemon=True)
     supervisor_thread.start()
 
-    print(f"\n[✓] MedSoru Master Supervisor Başlatıldı. Mod: {controller.current_mode.upper()}")
+    print(f"\n[✓] MeDSor Master Supervisor Başlatıldı. Mod: {controller.current_mode.upper()}")
     print("    - Web Dashboard:     http://localhost:8085")
-    print("    - MedSoru Web App:   http://localhost:3000")
+    print("    - MeDSor Web App:   http://localhost:3000")
     print("    - Hibrit REST Servis: http://localhost:8000\n")
 
     # Eğer GUI istenmişse veya ekran ortamı müsaitse Tkinter GUI aç

@@ -123,7 +123,7 @@ async function generateZeroShot(prompt: string, apiKey: string): Promise<{ text:
 
 async function runEvaluation() {
   console.log('================================================================');
-  console.log('🩺 MedSoru Çok Modlu RAG Sistemi Gerçek Test Verisi Değerlendirmesi');
+  console.log('🩺 MeDSor Çok Modlu RAG Sistemi Gerçek Test Verisi Değerlendirmesi');
   console.log('================================================================\n');
 
   const apiKey = process.env.GEMINI_API_KEY || '';
@@ -167,8 +167,8 @@ async function runEvaluation() {
       : tc.query;
     const zeroShot = await generateZeroShot(zeroShotPrompt, apiKey);
 
-    // 3. RAG-Augmented Generation (MedSoru Amfi & Çıkmış Parçaları ile)
-    console.log(`🧠 [RAG-Augmented] MedSoru 49.960 parça zeminlemesi ile çalıştırılıyor...`);
+    // 3. RAG-Augmented Generation (MeDSor Amfi & Çıkmış Parçaları ile)
+    console.log(`🧠 [RAG-Augmented] MeDSor 49.960 parça zeminlemesi ile çalıştırılıyor...`);
     const tRagStart = Date.now();
     const ragResponse = await executeRagQuery({
       query: tc.query,

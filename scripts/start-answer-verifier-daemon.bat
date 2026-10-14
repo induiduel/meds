@@ -1,6 +1,6 @@
 @echo off
 chcp 65001 >nul
-title MedSoru - Otomatik Soru İzleyici ve Doğrulama Servisi (Watcher)
+title MeDSor - Otomatik Soru İzleyici ve Doğrulama Servisi (Watcher)
 color 0A
 
 echo ======================================================================

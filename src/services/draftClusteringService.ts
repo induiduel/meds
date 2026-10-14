@@ -1,6 +1,6 @@
 /**
  * ==============================================================================
- * MedSoru Akıllı Taslak Kümeleme, Çapa Soru Tespiti ve Birleştirme Motoru
+ * MeDSor Akıllı Taslak Kümeleme, Çapa Soru Tespiti ve Birleştirme Motoru
  * (src/services/draftClusteringService.ts) - Gelişmiş Tıbbi Kavram & AI Destekli
  * ==============================================================================
  */

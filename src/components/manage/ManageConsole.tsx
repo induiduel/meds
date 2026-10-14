@@ -30,7 +30,9 @@ import {
   MessageSquareText,
   Archive,
   UserSearch,
+  LayoutDashboard,
 } from 'lucide-react';
+import { ManageShellV12, ManageOverviewV12, type M12NavGroup } from '../v12/ManageV12';
 import type { QuestionItem, Committee, AdminNotification } from '../../types';
 import { ApiService } from '../../services/api';
 import { AdminScriptsTab } from '../AdminScriptsTab';
@@ -82,7 +84,7 @@ import {
   deleteDraftEverywhere,
 } from '../../services/manageConsoleService';
 
-export type ManageSection = 'pending' | 'inbox' | 'intake' | 'pool' | 'catalog' | 'data' | 'phases' | 'merges' | 'raw_pool' | 'ders_isci' | 'drafts' | 'studio' | 'moderation' | 'people' | 'users' | 'scripts' | 'system' | 'automation' | 'datacore' | 'notebooklm' | 'database';
+export type ManageSection = 'overview' | 'pending' | 'inbox' | 'intake' | 'pool' | 'catalog' | 'data' | 'phases' | 'merges' | 'raw_pool' | 'ders_isci' | 'drafts' | 'studio' | 'moderation' | 'people' | 'users' | 'scripts' | 'system' | 'automation' | 'datacore' | 'notebooklm' | 'database';
 
 interface ManageConsoleProps {
   adminEmail: string;
@@ -136,8 +138,18 @@ const V12_SECTIONS = V12_GROUPS.flatMap((g) => g.ids.map((id) => {
   const sec = SECTIONS.find((x) => x.id === id)!;
   return { ...sec, group: g.label };
 })).concat(SECTIONS.filter((x) => !V12_GROUPS.some((g) => g.ids.includes(x.id))));
+/** v12'ye özel üst bölüm: Genel bakış (v10/v11 bölüm listesine girmez). */
+const OVERVIEW_SECTION: (typeof SECTIONS)[number] = {
+  id: 'overview', slug: 'genel-bakis', label: 'Genel bakış', icon: LayoutDashboard, group: 'Konsol',
+  hint: 'Şimdi ilgilenmen gerekenler, servis durumu ve son hareketler tek ekranda.', keywords: 'özet pano kuyruk durum öncelik',
+};
+const V12_ALL = [OVERVIEW_SECTION, ...V12_SECTIONS];
+const isV12Doc = () => typeof document !== 'undefined' && document.documentElement.dataset.design === 'v12';
 const foldTr = (t: string) => t.toLocaleLowerCase('tr-TR').normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/ı/g, 'i');
-const sectionBySlug = (slug?: string) => SECTIONS.find((x) => x.slug === slug || x.id === slug);
+const sectionBySlug = (slug?: string, v12 = false) =>
+  (v12 && slug && (slug === OVERVIEW_SECTION.slug || slug === OVERVIEW_SECTION.id) ? OVERVIEW_SECTION : undefined) ||
+  SECTIONS.find((x) => x.slug === slug || x.id === slug);
+const slugOf = (id: ManageSection) => (id === 'overview' ? OVERVIEW_SECTION.slug : SECTIONS.find((x) => x.id === id)?.slug);
 
 // Yoğunluk: uygulamanın görünüm ayarından gelir (Profil ve ayarlar → Kompakt/Normal/Geniş)
 type Density = 'comfy' | 'compact' | 'tight';
@@ -159,15 +171,16 @@ const pushRecent = (id: ManageSection) => {
   }
 };
 const SYNC_STALE_MS = 60_000;
-const readSection = (entry: 'manage' | 'admin', slug?: string): ManageSection => {
-  const fromUrl = sectionBySlug(slug);
+const readSection = (entry: 'manage' | 'admin', slug?: string, v12 = false): ManageSection => {
+  const fromUrl = sectionBySlug(slug, v12);
   if (fromUrl) return fromUrl.id;
   if (entry === 'admin') return 'pool';
+  const fallback: ManageSection = v12 ? 'overview' : 'inbox';
   try {
     const v = localStorage.getItem(SECTION_KEY) as ManageSection | null;
-    return v && SECTIONS.some((s) => s.id === v) ? v : 'inbox';
+    return v && (SECTIONS.some((s) => s.id === v) || (v12 && v === 'overview')) ? v : fallback;
   } catch {
-    return 'inbox';
+    return fallback;
   }
 };
 
@@ -183,11 +196,12 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
   entry = 'manage',
   initialSlug,
 }) => {
-  const [section, setSectionState] = useState<ManageSection>(() => readSection(entry, initialSlug));
-  const sectionRef = useRef(section);
-  sectionRef.current = section;
   // v8: konsol uygulamanın tek yoğunluk ayarını kullanır (Profil ve ayarlar ile aynı)
   const look = useAppearance();
+  const v12 = look.design === 'v12';
+  const [section, setSectionState] = useState<ManageSection>(() => readSection(entry, initialSlug, v12));
+  const sectionRef = useRef(section);
+  sectionRef.current = section;
   const density: Density = look.density === 'compact' ? 'tight' : 'comfy';
   const [menuOpen, setMenuOpen] = useState(false);
   const [paletteOpen, setPaletteOpen] = useState(false);
@@ -197,7 +211,7 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
     setSectionState(s);
     setMenuOpen(false);
     setPaletteOpen(false);
-    writeLocation(entry, SECTIONS.find((x) => x.id === s)?.slug, opts.replace);
+    writeLocation(entry, slugOf(s), opts.replace);
     pushRecent(s);
     try {
       localStorage.setItem(SECTION_KEY, s);
@@ -245,7 +259,7 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
     const slug = SECTIONS.find((x) => x.id === section)?.slug;
     if (!(slug && window.location.pathname.startsWith(`/manage/${slug}/`))) setSection(section, { replace: true });
     const onPop = () => {
-      const hit = sectionBySlug(window.location.pathname.split('/').filter(Boolean)[1]);
+      const hit = sectionBySlug(window.location.pathname.split('/').filter(Boolean)[1], isV12Doc());
       if (hit) setSectionState(hit.id);
     };
     window.addEventListener('popstate', onPop);
@@ -263,8 +277,9 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
       // Alt + ↑/↓: önceki / sonraki bölüm (yazı alanındayken de çalışır; Alt+ok metinde iş görmez)
       if (e.altKey && !e.ctrlKey && !e.metaKey && (e.key === 'ArrowUp' || e.key === 'ArrowDown')) {
         e.preventDefault();
-        const i = SECTIONS.findIndex((x) => x.id === sectionRef.current);
-        setSection(SECTIONS[(i + (e.key === 'ArrowDown' ? 1 : SECTIONS.length - 1)) % SECTIONS.length].id);
+        const order = isV12Doc() ? V12_ALL : SECTIONS;
+        const i = order.findIndex((x) => x.id === sectionRef.current);
+        setSection(order[(i + (e.key === 'ArrowDown' ? 1 : order.length - 1)) % order.length].id);
       }
     };
     document.addEventListener('keydown', onKey);
@@ -473,7 +488,12 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
   };
 
   const { theme, toggle: toggleTheme } = useTheme();
-  const current = SECTIONS.find((s) => s.id === section) || SECTIONS[0];
+  const current = (section === 'overview' ? OVERVIEW_SECTION : SECTIONS.find((s) => s.id === section)) || SECTIONS[0];
+  // Genel bakış yalnız v12'de var: tasarım v12'den çıkınca gelen kutusuna dön
+  useEffect(() => {
+    if (!v12 && section === 'overview') setSection('inbox', { replace: true });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [v12, section]);
   const committeeName = committees.find((c) => c.id === selectedCommitteeId)?.name;
   const refreshAll = async () => {
     await onRefreshData();
@@ -555,13 +575,297 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
     sideNavRef.current?.querySelector('.ms-side-item.is-on')?.scrollIntoView({ block: 'nearest' });
   }, [section]);
 
+  // Bölüm içerikleri: v10/v11 ve v12 kabukları aynı içeriği çizer (veri ve işlevler tek yerde)
+  const sectionBody = (
+    <>
+      {section === 'pending' && (
+        <ManagePendingOperationsSection />
+      )}
+
+      {section === 'inbox' && (
+        <ManageMetrics
+          loading={loading && !reports.length}
+          items={[
+            { id: 'reports', label: 'Bekleyen bildirim', value: pendingReports.length, dates: reports.map((r) => r.createdAt), tone: 'alert', onClick: () => setSection('moderation') },
+            { id: 'drafts', label: 'Taslak', value: drafts.length, dates: drafts.map((d: any) => d.createdAt || d.updatedAt), upIsGood: true, onClick: () => setSection('drafts') },
+            { id: 'comments', label: 'Yorum', value: comments.length, dates: comments.map((c) => c.createdAt), upIsGood: true },
+            { id: 'users', label: 'Kayıtlı kullanıcı', value: registeredUsers.length, dates: registeredUsers.map((u: any) => u.createdAt), upIsGood: true, onClick: () => setSection('users') },
+            { id: 'pool', label: 'Havuz sorusu', value: questions.length, onClick: () => setSection('pool') },
+          ]}
+        />
+      )}
+
+      {section === 'inbox' && (
+        <ManageInboxSection
+          reports={reports}
+          comments={comments}
+          drafts={drafts}
+          notifications={notifications}
+          resolvedIds={resolvedIds}
+          busyAction={busyAction}
+          loading={loading}
+          onReview={(r) => {
+            setFocusReportId(r.id);
+            setSection('moderation');
+          }}
+          onResolve={(r) => void handleResolve(r)}
+          onEditReport={(r, updates) => void handleEditReport(r, updates)}
+          onDeleteReport={(r) => void handleDeleteReport(r)}
+          onEditComment={(c, text) => void handleEditComment(c, text)}
+          onDeleteComment={(c) => void handleDeleteComment(c)}
+          onEditDraft={setEditingDraft}
+          onPublishDraft={(d) => void handlePublishDraft(d)}
+          onDeleteDraft={(d) => void handleDeleteDraft(d)}
+          onNavigateToData={(qId, ds) => {
+            const resolvedDs = ds || (qId.startsWith('past-') ? 'past' : 'questions');
+            setDataJump({ id: qId, dsId: resolvedDs });
+            setSection('data');
+          }}
+        />
+      )}
+
+      {section === 'moderation' && (
+        <ManageModerationSection
+          adminEmail={adminEmail}
+          selectedCommitteeId={selectedCommitteeId}
+          reports={reports}
+          questions={questions}
+          pastQuestions={pastQuestions}
+          setPastQuestions={setPastQuestions}
+          resolvedIds={resolvedIds}
+          focusReportId={focusReportId}
+          setFocusReportId={setFocusReportId}
+          onResolve={handleResolve}
+          notify={notify}
+          onRefreshData={onRefreshData}
+          reloadInbox={reloadInbox}
+        />
+      )}
+
+      {section === 'catalog' && <ManageCatalogSection adminEmail={adminEmail} />}
+      {section === 'data' && (
+        <ManageDataSection
+          adminEmail={adminEmail}
+          questions={questions}
+          committees={committees}
+          onRefreshData={onRefreshData}
+          initialFocusId={dataJump?.id}
+          initialDsId={dataJump?.dsId}
+          onClearFocus={() => setDataJump(null)}
+        />
+      )}
+      {section === 'phases' && <ManagePhasesSection adminEmail={adminEmail} />}
+      {section === 'merges' && <ManageMergesSection adminEmail={adminEmail} />}
+      {section === 'raw_pool' && <ManageRawPoolSection adminEmail={adminEmail} />}
+      {section === 'intake' && <ManageIntakeSection adminEmail={adminEmail} />}
+      {section === 'ders_isci' && <ManageDersIsciSection adminEmail={adminEmail} />}
+
+      {section === 'drafts' && (
+        <ManageDraftsSection
+          adminEmail={adminEmail}
+          adminName="Yönetici"
+          committeeId={selectedCommitteeId}
+          committeeName={committeeName}
+          questions={questions}
+          onRefreshData={refreshAll}
+          notify={notify}
+        />
+      )}
+
+      {section === 'studio' && (
+        <DraftStudio
+          adminEmail={adminEmail}
+          committeeId={selectedCommitteeId}
+          committeeName={committeeName}
+          questions={questions}
+          onRefreshData={refreshAll}
+          notify={notify}
+        />
+      )}
+
+      {section === 'pool' && (
+        <AdminPanelModal
+          variant="embedded"
+          tab="questions"
+          isOpen
+          onClose={onExit}
+          adminEmail={adminEmail}
+          committees={committees}
+          questions={questions}
+          selectedCommitteeId={selectedCommitteeId}
+          onRefreshData={onRefreshData}
+        />
+      )}
+      {section === 'database' && (
+        <AdminPanelModal
+          variant="embedded"
+          tab="database"
+          isOpen
+          onClose={onExit}
+          adminEmail={adminEmail}
+          committees={committees}
+          questions={questions}
+          selectedCommitteeId={selectedCommitteeId}
+          onRefreshData={onRefreshData}
+        />
+      )}
+      {section === 'users' && <SubTabs value={usersTab} onChange={setUsersTab} items={[['activity', 'Katkılar'], ['accounts', 'Hesaplar ve e-posta']]} />}
+      {section === 'users' && usersTab === 'accounts' && (
+        <AdminPanelModal
+          variant="embedded"
+          tab="users"
+          isOpen
+          onClose={onExit}
+          adminEmail={adminEmail}
+          committees={committees}
+          questions={questions}
+          selectedCommitteeId={selectedCommitteeId}
+          onRefreshData={onRefreshData}
+        />
+      )}
+      {section === 'users' && usersTab === 'activity' && (
+        <ManageUsersSection
+          adminEmail={adminEmail}
+          committees={committees}
+          questions={questions}
+          pastQuestions={pastQuestions}
+          reports={reports}
+          comments={comments}
+          registeredUsers={registeredUsers}
+          setRegisteredUsers={setRegisteredUsers}
+          activity={activity}
+          notify={notify}
+          onRefreshData={onRefreshData}
+          reloadInbox={reloadInbox}
+        />
+      )}
+
+      {section === 'people' && <ManagePeopleSection adminEmail={adminEmail} notify={notify} />}
+      {section === 'scripts' && <AdminScriptsTab adminEmail={adminEmail} onRefreshAllData={onRefreshData} />}
+      {section === 'system' && <ManageSystemSection notify={notify} />}
+      {section === 'datacore' && <ManageDataCoreSection notify={notify} />}
+      {section === 'notebooklm' && <ManageNotebookLMSection />}
+      {section === 'automation' && <SubTabs value={autoTab} onChange={setAutoTab} items={[['schedule', 'Zamanlama ve anahtarlar'], ['services', 'Drive ve servisler']]} />}
+      {section === 'automation' && autoTab === 'schedule' && (
+        <ManageAutomationSection adminEmail={adminEmail} selectedCommitteeId={selectedCommitteeId} onRefreshData={onRefreshData} notify={notify} />
+      )}
+      {section === 'automation' && autoTab === 'services' && (
+        <AdminPanelModal
+          variant="embedded"
+          tab="automations"
+          isOpen
+          onClose={onExit}
+          adminEmail={adminEmail}
+          committees={committees}
+          questions={questions}
+          selectedCommitteeId={selectedCommitteeId}
+          onRefreshData={onRefreshData}
+        />
+      )}
+    </>
+  );
+  const paletteEl = paletteOpen && (
+    <SectionPalette current={section} onPick={(id) => setSection(id)} onClose={() => setPaletteOpen(false)} badgeOf={badgeOf} sections={v12 ? V12_ALL : undefined} />
+  );
+  const draftModal = editingDraft && (
+    <AdminEditQuestionModal
+      isOpen
+      question={editingDraft}
+      adminEmail={adminEmail}
+      onClose={() => setEditingDraft(null)}
+      onSaveQuestion={async (updated) => {
+        await ApiService.adminUpdateQuestion(adminEmail, editingDraft.id, updated);
+        setEditingDraft(null);
+        notify('Taslak güncellendi.');
+        await refreshAll();
+      }}
+    />
+  );
+
+  // v12 "Net": ayrı kabuk (gruplu menü, konum çubuğu, Canlı|Yerel) + Genel bakış; içerik ve işlevler aynı
+  if (v12) {
+    const badgeV12 = (id: ManageSection) => (id === 'users' ? undefined : badgeOf(id)); // menüde yalnız bekleyen sayılar
+    const groups: M12NavGroup[] = [
+      { label: null, items: [{ id: 'overview', label: OVERVIEW_SECTION.label, hint: OVERVIEW_SECTION.hint, icon: OVERVIEW_SECTION.icon }] },
+      ...V12_GROUPS.map((g) => ({
+        label: g.label,
+        items: g.ids.map((id) => {
+          const sec = SECTIONS.find((x) => x.id === id)!;
+          return { id, label: sec.label, hint: sec.hint, icon: sec.icon, badge: badgeV12(id) };
+        }),
+      })),
+    ];
+    const currentGroup = section === 'overview' ? 'Konsol' : V12_SECTIONS.find((x) => x.id === section)?.group || current.group;
+    const sourceLive = localHost ? panelTarget === 'oracle' : !isLocalHost();
+    const overviewHint = `${sourceLive ? 'Canlı veri (Oracle)' : 'Yerel veri'}${syncLabel ? ` · son eşitleme ${syncLabel}` : ''} · canlı kanal ${liveStatus === 'connected' ? 'bağlı' : liveStatus === 'connecting' ? 'bağlanıyor' : 'kopuk'}`;
+    return (
+      <>
+        <ManageShellV12
+          groups={groups}
+          section={section}
+          currentLabel={current.label}
+          currentGroup={currentGroup}
+          currentHint={section === 'overview' ? overviewHint : current.hint}
+          headCount={section === 'overview' ? undefined : headBadge}
+          onPick={(id) => setSection(id)}
+          onOpenPalette={() => setPaletteOpen(true)}
+          onExit={onExit}
+          adminEmail={adminEmail}
+          sourceLive={sourceLive}
+          canSwitchSource={localHost}
+          onChooseSource={choosePanelTarget}
+          liveStatus={liveStatus}
+          syncLabel={syncLabel}
+          dense={look.density === 'compact'}
+          onToggleDense={() => look.set({ density: look.density === 'compact' ? 'normal' : 'compact' })}
+          committees={committees}
+          selectedCommitteeId={selectedCommitteeId}
+          onSelectCommittee={onSelectCommittee}
+          loading={loading}
+          onRefresh={() => void refreshAll()}
+          theme={theme}
+          onToggleTheme={toggleTheme}
+          bodyDensity={density}
+          wide={section === 'studio'}
+          fullscreen={fullscreen}
+        >
+          {section === 'overview' ? (
+            <ManageOverviewV12
+              pendingReports={pendingReports}
+              comments={comments}
+              drafts={drafts}
+              notifications={notifications}
+              usersCount={registeredUsers.length}
+              questionsCount={questions.length}
+              liveStatus={liveStatus}
+              onGo={setSection}
+              onReviewReport={(r) => {
+                setFocusReportId(r.id);
+                setSection('moderation');
+              }}
+              onEditDraft={setEditingDraft}
+              onOpenQuestion={(qId) => {
+                setDataJump({ id: qId, dsId: qId.startsWith('past-') ? 'past' : 'questions' });
+                setSection('data');
+              }}
+            />
+          ) : (
+            sectionBody
+          )}
+        </ManageShellV12>
+        {paletteEl}
+        {draftModal}
+      </>
+    );
+  }
+
   return (
     <div className={`ms-console w-full bg-canvas overflow-hidden flex text-ink ${fullscreen ? 'h-[var(--vvh,100dvh)]' : 'rounded-2xl min-h-[560px] h-[calc(100dvh-150px)] lg:h-[calc(100dvh-120px)]'}`}>
       {/* Kenar menüsü (v9): marka, bölüm arama, gruplu bölümler */}
       <aside className="ms-side" aria-label="Yönetim menüsü" ref={sideNavRef}>
         <button type="button" onClick={onExit} className="msv-brand" title="Öğrenci sitesine dön">
           <span className="msv-logo" aria-hidden="true">M</span>
-          <span className="msv-word">MedSoru</span>
+          <span className="msv-word">MeDSor</span>
           <span className="msv-role"><ShieldCheck aria-hidden="true" /> Yönetim</span>
         </button>
         <button type="button" onClick={() => setPaletteOpen(true)} className="ms-cpal-btn" aria-label="Bölüme git (Ctrl+K)">
@@ -660,195 +964,12 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
               <p>{current.hint}</p>
             </div>
 
-            {section === 'pending' && (
-              <ManagePendingOperationsSection />
-            )}
-
-            {section === 'inbox' && (
-              <ManageMetrics
-                loading={loading && !reports.length}
-                items={[
-                  { id: 'reports', label: 'Bekleyen bildirim', value: pendingReports.length, dates: reports.map((r) => r.createdAt), tone: 'alert', onClick: () => setSection('moderation') },
-                  { id: 'drafts', label: 'Taslak', value: drafts.length, dates: drafts.map((d: any) => d.createdAt || d.updatedAt), upIsGood: true, onClick: () => setSection('drafts') },
-                  { id: 'comments', label: 'Yorum', value: comments.length, dates: comments.map((c) => c.createdAt), upIsGood: true },
-                  { id: 'users', label: 'Kayıtlı kullanıcı', value: registeredUsers.length, dates: registeredUsers.map((u: any) => u.createdAt), upIsGood: true, onClick: () => setSection('users') },
-                  { id: 'pool', label: 'Havuz sorusu', value: questions.length, onClick: () => setSection('pool') },
-                ]}
-              />
-            )}
-
-            {section === 'inbox' && (
-              <ManageInboxSection
-                reports={reports}
-                comments={comments}
-                drafts={drafts}
-                notifications={notifications}
-                resolvedIds={resolvedIds}
-                busyAction={busyAction}
-                loading={loading}
-                onReview={(r) => {
-                  setFocusReportId(r.id);
-                  setSection('moderation');
-                }}
-                onResolve={(r) => void handleResolve(r)}
-                onEditReport={(r, updates) => void handleEditReport(r, updates)}
-                onDeleteReport={(r) => void handleDeleteReport(r)}
-                onEditComment={(c, text) => void handleEditComment(c, text)}
-                onDeleteComment={(c) => void handleDeleteComment(c)}
-                onEditDraft={setEditingDraft}
-                onPublishDraft={(d) => void handlePublishDraft(d)}
-                onDeleteDraft={(d) => void handleDeleteDraft(d)}
-                onNavigateToData={(qId, ds) => {
-                  const resolvedDs = ds || (qId.startsWith('past-') ? 'past' : 'questions');
-                  setDataJump({ id: qId, dsId: resolvedDs });
-                  setSection('data');
-                }}
-              />
-            )}
-
-            {section === 'moderation' && (
-              <ManageModerationSection
-                adminEmail={adminEmail}
-                selectedCommitteeId={selectedCommitteeId}
-                reports={reports}
-                questions={questions}
-                pastQuestions={pastQuestions}
-                setPastQuestions={setPastQuestions}
-                resolvedIds={resolvedIds}
-                focusReportId={focusReportId}
-                setFocusReportId={setFocusReportId}
-                onResolve={handleResolve}
-                notify={notify}
-                onRefreshData={onRefreshData}
-                reloadInbox={reloadInbox}
-              />
-            )}
-
-            {section === 'catalog' && <ManageCatalogSection adminEmail={adminEmail} />}
-            {section === 'data' && (
-              <ManageDataSection
-                adminEmail={adminEmail}
-                questions={questions}
-                committees={committees}
-                onRefreshData={onRefreshData}
-                initialFocusId={dataJump?.id}
-                initialDsId={dataJump?.dsId}
-                onClearFocus={() => setDataJump(null)}
-              />
-            )}
-            {section === 'phases' && <ManagePhasesSection adminEmail={adminEmail} />}
-            {section === 'merges' && <ManageMergesSection adminEmail={adminEmail} />}
-            {section === 'raw_pool' && <ManageRawPoolSection adminEmail={adminEmail} />}
-            {section === 'intake' && <ManageIntakeSection adminEmail={adminEmail} />}
-            {section === 'ders_isci' && <ManageDersIsciSection adminEmail={adminEmail} />}
-
-            {section === 'drafts' && (
-              <ManageDraftsSection
-                adminEmail={adminEmail}
-                adminName="Yönetici"
-                committeeId={selectedCommitteeId}
-                committeeName={committeeName}
-                questions={questions}
-                onRefreshData={refreshAll}
-                notify={notify}
-              />
-            )}
-
-            {section === 'studio' && (
-              <DraftStudio
-                adminEmail={adminEmail}
-                committeeId={selectedCommitteeId}
-                committeeName={committeeName}
-                questions={questions}
-                onRefreshData={refreshAll}
-                notify={notify}
-              />
-            )}
-
-            {section === 'pool' && (
-              <AdminPanelModal
-                variant="embedded"
-                tab="questions"
-                isOpen
-                onClose={onExit}
-                adminEmail={adminEmail}
-                committees={committees}
-                questions={questions}
-                selectedCommitteeId={selectedCommitteeId}
-                onRefreshData={onRefreshData}
-              />
-            )}
-            {section === 'database' && (
-              <AdminPanelModal
-                variant="embedded"
-                tab="database"
-                isOpen
-                onClose={onExit}
-                adminEmail={adminEmail}
-                committees={committees}
-                questions={questions}
-                selectedCommitteeId={selectedCommitteeId}
-                onRefreshData={onRefreshData}
-              />
-            )}
-            {section === 'users' && <SubTabs value={usersTab} onChange={setUsersTab} items={[['activity', 'Katkılar'], ['accounts', 'Hesaplar ve e-posta']]} />}
-            {section === 'users' && usersTab === 'accounts' && (
-              <AdminPanelModal
-                variant="embedded"
-                tab="users"
-                isOpen
-                onClose={onExit}
-                adminEmail={adminEmail}
-                committees={committees}
-                questions={questions}
-                selectedCommitteeId={selectedCommitteeId}
-                onRefreshData={onRefreshData}
-              />
-            )}
-            {section === 'users' && usersTab === 'activity' && (
-              <ManageUsersSection
-                adminEmail={adminEmail}
-                committees={committees}
-                questions={questions}
-                pastQuestions={pastQuestions}
-                reports={reports}
-                comments={comments}
-                registeredUsers={registeredUsers}
-                setRegisteredUsers={setRegisteredUsers}
-                activity={activity}
-                notify={notify}
-                onRefreshData={onRefreshData}
-                reloadInbox={reloadInbox}
-              />
-            )}
-
-            {section === 'people' && <ManagePeopleSection adminEmail={adminEmail} notify={notify} />}
-            {section === 'scripts' && <AdminScriptsTab adminEmail={adminEmail} onRefreshAllData={onRefreshData} />}
-            {section === 'system' && <ManageSystemSection notify={notify} />}
-            {section === 'datacore' && <ManageDataCoreSection notify={notify} />}
-            {section === 'notebooklm' && <ManageNotebookLMSection />}
-            {section === 'automation' && <SubTabs value={autoTab} onChange={setAutoTab} items={[['schedule', 'Zamanlama ve anahtarlar'], ['services', 'Drive ve servisler']]} />}
-            {section === 'automation' && autoTab === 'schedule' && (
-              <ManageAutomationSection adminEmail={adminEmail} selectedCommitteeId={selectedCommitteeId} onRefreshData={onRefreshData} notify={notify} />
-            )}
-            {section === 'automation' && autoTab === 'services' && (
-              <AdminPanelModal
-                variant="embedded"
-                tab="automations"
-                isOpen
-                onClose={onExit}
-                adminEmail={adminEmail}
-                committees={committees}
-                questions={questions}
-                selectedCommitteeId={selectedCommitteeId}
-                onRefreshData={onRefreshData}
-              />
-            )}
+            {sectionBody}
           </div>
         </main>
       </div>
 
-      {paletteOpen && <SectionPalette current={section} onPick={(id) => setSection(id)} onClose={() => setPaletteOpen(false)} badgeOf={badgeOf} />}
+      {paletteEl}
 
       {/* Telefon ve tablet: bölüm menüsü alttan açılır */}
       <Drawer open={menuOpen} onClose={() => { setMenuOpen(false); setMenuQuery(''); }} title="Yönetim" label="Yönetim bölümleri">
@@ -879,20 +1000,7 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
         </button>
       </Drawer>
 
-      {editingDraft && (
-        <AdminEditQuestionModal
-          isOpen
-          question={editingDraft}
-          adminEmail={adminEmail}
-          onClose={() => setEditingDraft(null)}
-          onSaveQuestion={async (updated) => {
-            await ApiService.adminUpdateQuestion(adminEmail, editingDraft.id, updated);
-            setEditingDraft(null);
-            notify('Taslak güncellendi.');
-            await refreshAll();
-          }}
-        />
-      )}
+      {draftModal}
     </div>
   );
 };
@@ -916,7 +1024,9 @@ const SectionPalette: React.FC<{
   onPick: (id: ManageSection) => void;
   onClose: () => void;
   badgeOf: (id: ManageSection) => { n: number; alert?: boolean } | undefined;
-}> = ({ current, onPick, onClose, badgeOf }) => {
+  /** v12: Genel bakış + işe göre gruplanmış sıra */
+  sections?: (typeof SECTIONS)[number][];
+}> = ({ current, onPick, onClose, badgeOf, sections = SECTIONS }) => {
   const [q, setQ] = useState('');
   const [idx, setIdx] = useState(0);
   const inputRef = useRef<HTMLInputElement>(null);
@@ -924,10 +1034,10 @@ const SectionPalette: React.FC<{
   const query = foldTr(q.trim());
   const recent = query ? [] : readRecent().filter((id) => id !== current).slice(0, 4);
   const rows: { sec: (typeof SECTIONS)[number]; head?: string }[] = query
-    ? SECTIONS.filter((x) => foldTr(`${x.label} ${x.hint} ${x.keywords || ''} ${x.group}`).includes(query)).map((sec) => ({ sec }))
+    ? sections.filter((x) => foldTr(`${x.label} ${x.hint} ${x.keywords || ''} ${x.group}`).includes(query)).map((sec) => ({ sec }))
     : [
-        ...recent.map((id, i) => ({ sec: SECTIONS.find((x) => x.id === id)!, head: i === 0 ? 'Son açılanlar' : undefined })),
-        ...SECTIONS.filter((x) => !recent.includes(x.id)).map((sec, i, arr) => ({ sec, head: i === 0 || arr[i - 1].group !== sec.group ? sec.group : undefined })),
+        ...recent.map((id, i) => ({ sec: (sections.find((x) => x.id === id) || SECTIONS.find((x) => x.id === id))!, head: i === 0 ? 'Son açılanlar' : undefined })),
+        ...sections.filter((x) => !recent.includes(x.id)).map((sec, i, arr) => ({ sec, head: i === 0 || arr[i - 1].group !== sec.group ? sec.group : undefined })),
       ];
   useEffect(() => inputRef.current?.focus(), []);
   useEffect(() => setIdx(0), [q]);

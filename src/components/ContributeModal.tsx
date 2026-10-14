@@ -439,7 +439,7 @@ export const ContributeModal: React.FC<ContributeModalProps> = ({
                     {(close) => (
                       <ul className="qa-list" role="listbox" aria-label="Kurul">
                         {committees.map((c) => {
-                          const locked = isCommitteeLocked(c.id);
+                          const locked = isCommitteeLocked(c.id, examYear);
                           const on = c.id === committeeId;
                           return (
                             <li key={c.id}>

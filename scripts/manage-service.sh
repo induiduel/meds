@@ -5,7 +5,7 @@
 set -u
 
 ACTION="${1:-install-and-start}"
-TITLE="${2:-MedSoru Otomasyon Servisi}"
+TITLE="${2:-MeDSor Otomasyon Servisi}"
 MESSAGE="${3:-Servis arka planda çalışıyor.}"
 
 MEDS_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
@@ -43,13 +43,13 @@ case "$ACTION" in
 
   stop)
     systemctl --user stop "$UNIT_NAME" 2>/dev/null
-    notify "MedSoru Otomasyon Servisi" "Arka plan işleyici durduruldu."
+    notify "MeDSor Otomasyon Servisi" "Arka plan işleyici durduruldu."
     echo "Stopped."
     ;;
 
   sync-now)
     echo "Triggering immediate sync..."
-    notify "MedSoru: Senkronizasyon Başlatıldı" "Google Drive ve yerel klasör taranıyor..."
+    notify "MeDSor: Senkronizasyon Başlatıldı" "Google Drive ve yerel klasör taranıyor..."
     (cd "$MEDS_DIR" && nohup "$NODE_BIN" scripts/meds-local-sync.mjs --sync-now >/dev/null 2>&1 &)
     ;;
 
@@ -57,7 +57,7 @@ case "$ACTION" in
     mkdir -p "$UNIT_DIR"
     cat > "$UNIT_PATH" <<EOF
 [Unit]
-Description=MedSoru yerel senkronizasyon servisi
+Description=MeDSor yerel senkronizasyon servisi
 
 [Service]
 WorkingDirectory=$MEDS_DIR
@@ -69,7 +69,7 @@ WantedBy=default.target
 EOF
     systemctl --user daemon-reload
     systemctl --user enable --now "$UNIT_NAME"
-    notify "MedSoru Otomasyon Servisi" "Oturum açılışına eklendi, servis arka planda çalışıyor."
+    notify "MeDSor Otomasyon Servisi" "Oturum açılışına eklendi, servis arka planda çalışıyor."
     echo "SUCCESS: systemd user service installed and started."
     ;;
 

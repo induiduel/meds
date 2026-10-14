@@ -468,7 +468,7 @@ const peopleInsights = registerPeopleInsights(app, {
 // Keep this allowlist explicit: `/v1/admin`, write routes, user records and raw AI data
 // must never become public through a generic `/v1` -> `/api` rewrite.
 const PUBLIC_API_DIRECTORY = {
-  name: 'MedSoru API',
+  name: 'MeDSor API',
   version: 'v1',
   authentication: 'none for listed public GET endpoints',
   website: '/sorular',
@@ -497,9 +497,9 @@ const PUBLIC_API_DIRECTORY = {
     { path: '/v1/transcriptions', source: '/api/transcriptions', description: 'Amfi ses kaydı transkriptleri' },
     { path: '/v1/past-question-reviews', source: '/api/past-question-reviews', description: 'Faz 14 çıkmış soru redaksiyon inceleme katmanı ve önerileri' },
     { path: '/v1/deepseek/contributions', source: '/api/deepseek/contributions', description: 'İçe aktarılmış katkı ve metadata verileri' },
-    { path: '/v1/v2/status', source: '/api/v2/status', description: 'MedSoru Core v2 çekirdek durumu (bağımsız hat)' },
-    { path: '/v1/v2/katalog', source: '/api/v2/katalog', description: 'MedSoru Core v2 veri kümeleri kataloğu' },
-    { path: '/v1/v2/audit', source: '/api/v2/audit', description: 'MedSoru Core v2 veri denetim raporu (summary=1 ile özet)' },
+    { path: '/v1/v2/status', source: '/api/v2/status', description: 'MeDSor Core v2 çekirdek durumu (bağımsız hat)' },
+    { path: '/v1/v2/katalog', source: '/api/v2/katalog', description: 'MeDSor Core v2 veri kümeleri kataloğu' },
+    { path: '/v1/v2/audit', source: '/api/v2/audit', description: 'MeDSor Core v2 veri denetim raporu (summary=1 ile özet)' },
     { path: '/v1/v2/questions', source: '/api/v2/questions', description: 'Core v2 soruları (kurul/ders/konu/cevap filtreleri, sayfalı)' },
     { path: '/v1/v2/stats', source: '/api/v2/stats', description: 'Core v2 veri istatistikleri' },
     { path: '/v1/v2/graph', source: '/api/v2/graph', description: 'Core v2 kavram grafı (ders/konu/kazanım/terim)' },
@@ -574,7 +574,7 @@ app.use((req, res, next) => {
 app.get('/api/health', (req, res) => {
   res.json({
     status: 'online',
-    engine: 'MedSoru Local Hybrid Database & API Server',
+    engine: 'MeDSor Local Hybrid Database & API Server',
     uptime: Math.round(process.uptime()),
     timestamp: new Date().toISOString(),
     isLocalPc: true,
@@ -1591,7 +1591,7 @@ app.get('/api/data-catalog', (req, res) => {
   }
 });
 
-// ---- MedSoru Core v2 (bağımsız denetim/ingest hattı) — salt okunur uçlar ----
+// ---- MeDSor Core v2 (bağımsız denetim/ingest hattı) — salt okunur uçlar ----
 // Çıktı yalnız MEDS_CORE_DIR (varsayılan ../meds_database_core) altındadır; eski veriye dokunulmaz.
 function medsCoreDir(): string {
   if (process.env.MEDS_CORE_DIR) return process.env.MEDS_CORE_DIR;
@@ -6395,7 +6395,7 @@ let latestWorkerHeartbeat: {
 } = {
   timestamp: new Date().toISOString(),
   source: 'cloud_daemon',
-  hostname: 'MedSoru Bulut Sunucusu (7/24 Kesintisiz)',
+  hostname: 'MeDSor Bulut Sunucusu (7/24 Kesintisiz)',
   uptime: 0,
   pid: process.pid,
   lastAction: 'Manuel bekleme modu (Arka plan yükü sıfırlandı)',
@@ -6436,7 +6436,7 @@ app.get('/api/notebooklm/bundle', (req, res) => {
   const committee = db.committees.find((c) => c.id === committeeId) || db.committees[0];
   const committeeQuestions = db.questions.filter((q) => q.committeeId === committee?.id);
 
-  let md = `# MEDSORU TIP FAKÜLTESİ NOTEBOOKLM & GEMINI ÇALIŞMA KAYNAĞI\n\n`;
+  let md = `# MEDSOR TIP FAKÜLTESİ NOTEBOOKLM & GEMINI ÇALIŞMA KAYNAĞI\n\n`;
   md += `## KURUL: ${committee?.name || 'Tıp Dönem 3'}\n`;
   md += `Hedef Soru Sayısı: ${committee?.targetCount || 100} Soru\n`;
   md += `Açıklama: ${committee?.description || 'Tıp fakültesi dönem 3 kurul sınavı rekonstrüksiyon ve arşiv kaynağı'}\n\n`;
@@ -6471,7 +6471,7 @@ app.get('/api/notebooklm/bundle', (req, res) => {
   });
 
   res.setHeader('Content-Type', 'text/markdown; charset=utf-8');
-  res.setHeader('Content-Disposition', `attachment; filename="MedSoru_NotebookLM_${committee?.id || 'kaynak'}.md"`);
+  res.setHeader('Content-Disposition', `attachment; filename="MeDSor_NotebookLM_${committee?.id || 'kaynak'}.md"`);
   res.send(md);
 });
 
@@ -6509,7 +6509,7 @@ app.get(['/api/notebooklm/past-exams', '/api/notebooklm/cikmis'], (req, res) => 
 
     if (shouldServeNotebookLMHtml(req)) {
       res.setHeader('Content-Type', 'text/html; charset=utf-8');
-      return res.send(markdownToSemanticHtml('MedSoru Çıkmış Sorular (NotebookLM Kaynağı)', md));
+      return res.send(markdownToSemanticHtml('MeDSor Çıkmış Sorular (NotebookLM Kaynağı)', md));
     }
     res.setHeader('Content-Type', 'text/markdown; charset=utf-8');
     res.send(md);
@@ -6532,7 +6532,7 @@ app.get('/api/notebooklm/summaries', (req, res) => {
 
     if (shouldServeNotebookLMHtml(req)) {
       res.setHeader('Content-Type', 'text/html; charset=utf-8');
-      return res.send(markdownToSemanticHtml('MedSoru Ders Özetleri ve Spot Bilgiler', md));
+      return res.send(markdownToSemanticHtml('MeDSor Ders Özetleri ve Spot Bilgiler', md));
     }
     res.setHeader('Content-Type', 'text/markdown; charset=utf-8');
     res.send(md);
@@ -6550,7 +6550,7 @@ app.get(['/api/notebooklm/glossary', '/api/notebooklm/sozluk'], (req, res) => {
     });
     if (shouldServeNotebookLMHtml(req)) {
       res.setHeader('Content-Type', 'text/html; charset=utf-8');
-      return res.send(markdownToSemanticHtml('MedSoru Tıp Sözlüğü ve Ansiklopedi', md));
+      return res.send(markdownToSemanticHtml('MeDSor Tıp Sözlüğü ve Ansiklopedi', md));
     }
     res.setHeader('Content-Type', 'text/markdown; charset=utf-8');
     res.send(md);
@@ -6568,7 +6568,7 @@ app.get(['/api/notebooklm/flashcards', '/api/notebooklm/kartlar'], (req, res) =>
     });
     if (shouldServeNotebookLMHtml(req)) {
       res.setHeader('Content-Type', 'text/html; charset=utf-8');
-      return res.send(markdownToSemanticHtml('MedSoru Akıl Kartları (Flashcards)', md));
+      return res.send(markdownToSemanticHtml('MeDSor Akıl Kartları (Flashcards)', md));
     }
     res.setHeader('Content-Type', 'text/markdown; charset=utf-8');
     res.send(md);
@@ -6585,7 +6585,7 @@ app.get(['/api/notebooklm/decks', '/api/notebooklm/ogren'], (req, res) => {
     });
     if (shouldServeNotebookLMHtml(req)) {
       res.setHeader('Content-Type', 'text/html; charset=utf-8');
-      return res.send(markdownToSemanticHtml('MedSoru İnteraktif Öğrenme Desteleri', md));
+      return res.send(markdownToSemanticHtml('MeDSor İnteraktif Öğrenme Desteleri', md));
     }
     res.setHeader('Content-Type', 'text/markdown; charset=utf-8');
     res.send(md);
@@ -7334,7 +7334,7 @@ app.post('/api/ai/general-chat', async (req, res) => {
     } catch (_) {}
 
     // 2. Sistem Promptunu Mod'a Göre Oluştur (Tıbbi Doğruluk ve Halüsinasyon Önleyici Katı Kurallar)
-    let systemInstruction = `Sen MedSoru Tıp Fakültesi Otonom AI Asistanı ve Baş Tıp Eğitmenisin.
+    let systemInstruction = `Sen MeDSor Tıp Fakültesi Otonom AI Asistanı ve Baş Tıp Eğitmenisin.
 Türkiye'deki tıp fakültesi kurul/komite sınavları ve TUS müfredatına tam hakimsin.
 Kullanıcılara tıp dersleri, sınav soruları, patofizyoloji ve farmakolojik mekanizmalar konusunda yardımcı olursun.
 Üslubun motive edici, nazik, net ve akademik olarak kusursuz Türkçe tıp terminolojisine uygundur.
@@ -7795,7 +7795,7 @@ function getSmtpConfig(): SmtpConfig {
   const port = fileConfig.port || Number(process.env.SMTP_PORT) || 465;
   const secure = fileConfig.secure !== undefined ? fileConfig.secure : (port === 465);
   const service = fileConfig.service || (host.includes('gmail') ? 'gmail' : undefined);
-  const from = fileConfig.from || process.env.EMAIL_FROM || `MedSoru Tıp Fakültesi <${user}>`;
+  const from = fileConfig.from || process.env.EMAIL_FROM || `MeDSor Tıp Fakültesi <${user}>`;
   const enabled = fileConfig.enabled !== false;
 
   return { enabled, service, host, port, secure, user, pass, from };
@@ -7896,12 +7896,12 @@ app.post('/api/admin/smtp-test', requireAdmin, async (req, res) => {
     const info = await transporter.sendMail({
       from: cfg.from,
       to: targetEmail,
-      subject: '🧪 MedSoru Tıp Fakültesi - SMTP Bağlantı Testi',
-      text: `Tebrikler!\nMedSoru SMTP e-posta sunucusu başarıyla bağlandı.\nBu test e-postası ${new Date().toLocaleString('tr-TR')} tarihinde gönderilmiştir.\n\nGönderen: ${cfg.from}\nSunucu: ${cfg.host}`,
+      subject: '🧪 MeDSor Tıp Fakültesi - SMTP Bağlantı Testi',
+      text: `Tebrikler!\nMeDSor SMTP e-posta sunucusu başarıyla bağlandı.\nBu test e-postası ${new Date().toLocaleString('tr-TR')} tarihinde gönderilmiştir.\n\nGönderen: ${cfg.from}\nSunucu: ${cfg.host}`,
       html: `
         <div style="font-family: sans-serif; padding: 20px; background: #f8fafc; border-radius: 12px; border: 1px solid #e2e8f0; max-width: 500px;">
           <h2 style="color: #0f766e; margin-top: 0;">✅ SMTP E-posta Testi Başarılı!</h2>
-          <p style="color: #334155; font-size: 14px;">MedSoru Tıp Fakültesi e-posta sunucunuz başarıyla bağlandı ve canlı e-posta iletimi aktif.</p>
+          <p style="color: #334155; font-size: 14px;">MeDSor Tıp Fakültesi e-posta sunucunuz başarıyla bağlandı ve canlı e-posta iletimi aktif.</p>
           <div style="background: #ecfdf5; border: 1px solid #a7f3d0; padding: 12px; border-radius: 8px; font-size: 13px; color: #065f46;">
             <strong>Sunucu:</strong> ${cfg.host} (${cfg.port})<br>
             <strong>Gönderici:</strong> ${cfg.from}<br>
@@ -7927,7 +7927,7 @@ app.post('/api/admin/smtp-test', requireAdmin, async (req, res) => {
       success: false,
       error: userFriendly,
       code: err.code || 'SMTP_ERR',
-      hint: 'Google Hesabınız > Güvenlik > 2 Adımlı Doğrulama > Uygulama Şifreleri (App Passwords) kısmından MedSoru için şifre oluşturup kaydedin.'
+      hint: 'Google Hesabınız > Güvenlik > 2 Adımlı Doğrulama > Uygulama Şifreleri (App Passwords) kısmından MeDSor için şifre oluşturup kaydedin.'
     });
   }
 });
@@ -8099,7 +8099,7 @@ app.get('/api/admin/push/status', requireAdmin, (_req, res) => {
 app.post('/api/admin/push/test', requireAdmin, async (_req, res) => {
   try {
     const result = await serverNotificationService.sendAdminWebPush({
-      title: '🧪 MedSoru Test Bildirimi',
+      title: '🧪 MeDSor Test Bildirimi',
       body: 'Tebrikler! Telefonunuzda anlık admin bildirimleri kusursuz çalışıyor.',
       url: 'https://nofrostlife.com.tr/cikmis',
     });
@@ -8217,7 +8217,7 @@ app.post('/api/send-welcome-email', async (req, res) => {
   const cleanName = displayName?.trim() || cleanEmail.split('@')[0];
   const cleanNum = studentNumber ? String(studentNumber).trim() : null;
 
-  const subject = '🎉 MedSoru Tıp Fakültesi Soru Havuzuna Hoş Geldiniz!';
+  const subject = '🎉 MeDSor Tıp Fakültesi Soru Havuzuna Hoş Geldiniz!';
   const html = `
     <!DOCTYPE html>
     <html lang="tr">
@@ -8228,13 +8228,13 @@ app.post('/api/send-welcome-email', async (req, res) => {
     <body style="margin: 0; padding: 24px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background-color: #f8fafc; color: #1e293b;">
       <div style="max-width: 600px; margin: 0 auto; background: #ffffff; border-radius: 16px; border: 1px solid #e2e8f0; overflow: hidden; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);">
         <div style="background: linear-gradient(135deg, #0f766e 0%, #115e59 100%); padding: 32px 24px; color: #ffffff; text-align: center;">
-          <h1 style="margin: 0 0 8px 0; font-size: 24px; font-weight: 800; letter-spacing: -0.5px;">MedSoru Tıp Fakültesi</h1>
+          <h1 style="margin: 0 0 8px 0; font-size: 24px; font-weight: 800; letter-spacing: -0.5px;">MeDSor Tıp Fakültesi</h1>
           <p style="margin: 0; font-size: 14px; opacity: 0.9;">Dönem 3 Kurul Soru Hafıza Sistemi & Slayt Arşivi</p>
         </div>
         <div style="padding: 32px 24px;">
           <p style="font-size: 16px; font-weight: 700; color: #0f172a; margin-top: 0;">Sayın ${cleanName},</p>
           <p style="font-size: 14px; line-height: 1.6; color: #334155;">
-            MedSoru sistemine kaydınız başarıyla tamamlandı. Öğrenci hesabınız aktif durumdadır.
+            MeDSor sistemine kaydınız başarıyla tamamlandı. Öğrenci hesabınız aktif durumdadır.
           </p>
           ${cleanNum ? `<div style="background: #f1f5f9; padding: 12px 16px; border-radius: 8px; margin: 16px 0; font-size: 13px; color: #334155;">
             <strong>Öğrenci Numarası:</strong> <span style="font-family: monospace; font-size: 14px;">${cleanNum}</span>
@@ -8249,17 +8249,17 @@ app.post('/api/send-welcome-email', async (req, res) => {
             </ul>
           </div>
           <p style="font-size: 13px; line-height: 1.5; color: #64748b; margin-bottom: 0;">
-            Bu e-posta MedSoru Tıp Fakültesi Öğrenci Soru Portalı tarafından otomatik olarak gönderilmiştir.
+            Bu e-posta MeDSor Tıp Fakültesi Öğrenci Soru Portalı tarafından otomatik olarak gönderilmiştir.
           </p>
         </div>
         <div style="background: #f8fafc; border-top: 1px solid #e2e8f0; padding: 16px 24px; text-align: center; font-size: 11px; color: #94a3b8;">
-          MedSoru Tıp Fakültesi • İletişim & Destek: nofrostlife@gmail.com
+          MeDSor Tıp Fakültesi • İletişim & Destek: nofrostlife@gmail.com
         </div>
       </div>
     </body>
     </html>
   `;
-  const text = `Sayın ${cleanName},\nMedSoru Tıp Fakültesi sistemine kaydınız tamamlandı.\n${cleanNum ? `Öğrenci No: ${cleanNum}\n` : ''}Sisteme girerek ders slaytlarını okuyabilir, soru hafızalarını ekleyebilir ve çıkmış soruları çözebilirsiniz.`;
+  const text = `Sayın ${cleanName},\nMeDSor Tıp Fakültesi sistemine kaydınız tamamlandı.\n${cleanNum ? `Öğrenci No: ${cleanNum}\n` : ''}Sisteme girerek ders slaytlarını okuyabilir, soru hafızalarını ekleyebilir ve çıkmış soruları çözebilirsiniz.`;
 
   const cfg = getSmtpConfig();
   const transporter = createSmtpTransporter();
@@ -9658,7 +9658,7 @@ app.post('/api/automation/windows-service-stop', requireAdmin, (req, res) => {
 app.post('/api/automation/windows-service-notify', requireAdmin, (req, res) => {
   try {
     const { execSync } = require('child_process');
-    const title = (req.body?.title || 'MedSoru Otomasyon Servisi 🚀').replace(/"/g, '');
+    const title = (req.body?.title || 'MeDSor Otomasyon Servisi 🚀').replace(/"/g, '');
     const message = (req.body?.message || 'Windows bildirim sistemi sorunsuz çalışıyor.').replace(/"/g, '');
     execSync(serviceScriptCommand('notify', [title, message]), {
       timeout: 8000,
@@ -9680,7 +9680,7 @@ app.get('/api/pdf/status', (_req, res) => {
 app.post('/api/pdf/render', async (req, res) => {
   const html = typeof req.body?.html === 'string' ? req.body.html : '';
   if (!html.trim()) return res.status(400).json({ error: 'Belge boş.' });
-  const title = String(req.body?.title || 'MedSoru').slice(0, 160);
+  const title = String(req.body?.title || 'MeDSor').slice(0, 160);
   const fileName = String(req.body?.fileName || 'medsoru.pdf').replace(/[^\p{L}\d._ -]+/gu, '_').slice(0, 120) || 'medsoru.pdf';
   try {
     const pdf = await renderHtmlToPdf(html, { title });
@@ -10625,7 +10625,7 @@ app.get('/api/system/services', async (req, res) => {
     const services = [
       {
         id: 'core_api_server',
-        name: 'MedSoru Çekirdek API & Web Sunucusu (Express & Brotli/Gzip)',
+        name: 'MeDSor Çekirdek API & Web Sunucusu (Express & Brotli/Gzip)',
         category: 'core',
         status: 'active',
         statusLabel: 'Çalışıyor',

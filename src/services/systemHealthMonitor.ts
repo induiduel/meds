@@ -1,5 +1,5 @@
 /**
- * MedSoru Sistem & Veritabanı Sağlık Takip Servisi (systemHealthMonitor.ts)
+ * MeDSor Sistem & Veritabanı Sağlık Takip Servisi (systemHealthMonitor.ts)
  * 
  * Bu servis:
  * 1. Online Firebase Firestore (Spark kotası, izinler, bağlantı) durumunu izler.
@@ -212,7 +212,7 @@ class SystemHealthMonitor {
     this.isChecking = true;
 
     if (logToConsole) {
-      console.log('%c🔍 [MedSoru Teşhis] Tam sistem sağlık kontrolü başlatılıyor...', 'color:#2563EB;font-weight:bold;font-size:14px;');
+      console.log('%c🔍 [MeDSor Teşhis] Tam sistem sağlık kontrolü başlatılıyor...', 'color:#2563EB;font-weight:bold;font-size:14px;');
     }
 
     // 1 & 2. Firebase Firestore ve Supabase PostgreSQL Testlerini paralel yürüt
@@ -507,7 +507,7 @@ class SystemHealthMonitor {
   }
 
   private printConsoleSummary() {
-    console.group('%c📊 [MedSoru Teşhis Özeti]', 'color:#10B981;font-weight:bold;');
+    console.group('%c📊 [MeDSor Teşhis Özeti]', 'color:#10B981;font-weight:bold;');
     console.log('Genel Durum:', this.currentHealth.overallStatus.toUpperCase());
     console.log('Firebase Durumu:', this.currentHealth.firebase.status, `(${this.currentHealth.firebase.details || ''})`);
     console.log('Supabase Durumu:', this.currentHealth.supabase.status, `(${this.currentHealth.supabase.details || ''})`);

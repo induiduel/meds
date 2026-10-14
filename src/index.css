@@ -6,7 +6,7 @@
 @custom-variant dark (&:where(.tw-dark-disabled, .tw-dark-disabled *));
 
 /* -------------------------------------------------------------
- * MedSoru design tokens
+ * MeDSor design tokens
  * Teal is remapped onto the brand blue so every view that still
  * uses teal-* utilities picks up the new accent automatically.
  * ------------------------------------------------------------- */
@@ -383,7 +383,7 @@ body {
 }
 
 /* -------------------------------------------------------------
- * MedSoru animations (components/ui/Animations.tsx)
+ * MeDSor animations (components/ui/Animations.tsx)
  * ------------------------------------------------------------- */
 @keyframes ms-bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-9px); } }
 @keyframes ms-shadow { 0%, 100% { transform: scaleX(1); opacity: .12; } 50% { transform: scaleX(.7); opacity: .06; } }
@@ -518,7 +518,7 @@ main.flex-col > .mx-auto { width: 100%; min-width: 0; }
 
 
 /* =============================================================
- * MedSoru v4 arayüz katmanı — tüm sayfalarda ortak davranış
+ * MeDSor v4 arayüz katmanı — tüm sayfalarda ortak davranış
  * ============================================================= */
 html { text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
 body { font-size: 14px; line-height: 1.5; font-feature-settings: "ss01", "cv11"; }
@@ -2937,25 +2937,27 @@ button.cx-opt:focus-visible { outline: 2px solid var(--color-accent); outline-of
 .of-sys li.is-warn i { background: var(--color-warn); }
 .of-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; padding-top: 12px; border-top: 1px solid var(--color-line-soft); }
 
-/* Cihazdaki veriler (indirilmiş PDF'ler, depolar, önbellekler) */
-.ds-head { display: flex; align-items: center; gap: 8px; }
-.ds-head h3 { flex: 1; }
-.ds-usage { font-size: 12px; color: var(--color-ink-3); font-variant-numeric: tabular-nums; }
-.ds-group { border: 1px solid var(--color-line); border-radius: 12px; overflow: hidden; }
-.ds-row { display: flex; align-items: center; gap: 8px; width: 100%; padding: 10px 12px; border: 0; background: transparent; font: inherit; font-size: 13.5px; color: var(--color-ink); cursor: pointer; text-align: left; }
-.ds-row svg { width: 16px; height: 16px; flex-shrink: 0; color: var(--color-ink-3); }
-.ds-row span { flex: 1; font-weight: 600; }
-.ds-row b { font-size: 12px; font-weight: 600; color: var(--color-ink-3); font-variant-numeric: tabular-nums; }
-.ds-row .ds-chev { transition: transform .15s; }
-.ds-row[aria-expanded="true"] .ds-chev { transform: rotate(180deg); }
-.ds-list { list-style: none; margin: 0; padding: 0; max-height: 260px; overflow-y: auto; border-top: 1px solid var(--color-line-soft); }
-.ds-list.is-rows { max-height: none; border: 1px solid var(--color-line); border-radius: 12px; }
-.ds-list li { display: flex; align-items: center; gap: 8px; min-height: 40px; padding: 2px 6px 2px 12px; border-bottom: 1px solid var(--color-line-soft); font-size: 13px; color: var(--color-ink-2); }
-.ds-list li:last-child { border-bottom: 0; }
-.ds-list li > span { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.ds-list li > small { font-size: 12px; color: var(--color-ink-3); font-variant-numeric: tabular-nums; white-space: nowrap; }
-.ds-list li.is-all { justify-content: flex-end; padding: 6px; }
-.ds-empty { margin: 0; padding: 10px 12px; border-top: 1px solid var(--color-line-soft); font-size: 12.5px; color: var(--color-ink-3); }
+/* Cihazdaki veriler (indirilmiş PDF'ler, depolar, önbellekler) — önek dvs-: ds-* başka ekranların sınıfı (Kartlar listesi,
+ * boş durumlar); eskiden bu kurallar onlara da sızıyordu. PDF listesi iç kaydırma kutusu değil: pencere gövdesi kaydırır,
+ * son satırlar ve "Tümünü sil" altta gizli kalmaz. */
+.dvs-head { display: flex; align-items: center; gap: 8px; }
+.dvs-head h3 { flex: 1; }
+.dvs-usage { font-size: 12px; color: var(--color-ink-3); font-variant-numeric: tabular-nums; }
+.dvs-group { border: 1px solid var(--color-line); border-radius: 12px; overflow: hidden; }
+.dvs-row { display: flex; align-items: center; gap: 8px; width: 100%; padding: 10px 12px; border: 0; background: transparent; font: inherit; font-size: 13.5px; color: var(--color-ink); cursor: pointer; text-align: left; }
+.dvs-row svg { width: 16px; height: 16px; flex-shrink: 0; color: var(--color-ink-3); }
+.dvs-row span { flex: 1; font-weight: 600; }
+.dvs-row b { font-size: 12px; font-weight: 600; color: var(--color-ink-3); font-variant-numeric: tabular-nums; }
+.dvs-row .dvs-chev { transition: transform .15s; }
+.dvs-row[aria-expanded="true"] .dvs-chev { transform: rotate(180deg); }
+.dvs-list { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--color-line-soft); }
+.dvs-list.is-rows { border: 1px solid var(--color-line); border-radius: 12px; }
+.dvs-list li { display: flex; align-items: center; gap: 8px; min-height: 40px; padding: 2px 6px 2px 12px; border-bottom: 1px solid var(--color-line-soft); font-size: 13px; color: var(--color-ink-2); }
+.dvs-list li:last-child { border-bottom: 0; }
+.dvs-list li > span { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.dvs-list li > small { font-size: 12px; color: var(--color-ink-3); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.dvs-list li.is-all { justify-content: flex-end; padding: 6px; }
+.dvs-empty { margin: 0; padding: 10px 12px; border-top: 1px solid var(--color-line-soft); font-size: 12.5px; color: var(--color-ink-3); }
 
 /* Üst çubuk göstergesi */
 .of-badge { position: relative; flex-shrink: 0; display: inline-flex; align-items: center; justify-content: center; gap: 6px; height: 36px; min-width: 36px; padding: 0 10px; border: 0; border-radius: 12px; background: transparent; color: var(--color-ink-3); font: inherit; font-size: 12.5px; font-weight: 600; cursor: pointer; transition: background-color .15s, color .15s; }
@@ -3038,7 +3040,7 @@ html.theme-dark :is(.ls-vg-seg button.is-target, .ls-vg-seg button.is-miss, .ls-
 
 /* =============================================================
  * v6 · Klinik kitapçık — tüm sistem (html.ui-v3: v3 ve v4)
- * Kaynak: "MedSoru" tasarım sistemi (Design System artifact). /cikmis
+ * Kaynak: "MeDSor" tasarım sistemi (Design System artifact). /cikmis
  * sayfasının sınav kitapçığı dili bütün uygulamaya yayılır:
  *  - düz yüzey + kılçizgi, tek vurgu (accent), klinik ikincil ton (clinic)
  *  - kompakt yoğunluk: kontrol 32px (dokunmatik 40), boşluklar yarıya yakın

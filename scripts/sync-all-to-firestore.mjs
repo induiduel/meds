@@ -1,5 +1,5 @@
 /**
- * MedSoru Firestore Full Database Sync Script
+ * MeDSor Firestore Full Database Sync Script
  * 
  * Bu betik:
  * 1. INITIAL_COMMITTEES listesini Firestore 'committees' koleksiyonuna eşitler.

@@ -1,5 +1,5 @@
 [Unit]
-Description=MedSoru Core v2 - bagimsiz veri hatti (GPU yok, ucretsiz bulut)
+Description=MeDSor Core v2 - bagimsiz veri hatti (GPU yok, ucretsiz bulut)
 Documentation=file:///home/indu/medsor/meds/scripts/v2/README.md
 After=network-online.target
 Wants=network-online.target

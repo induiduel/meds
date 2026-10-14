@@ -225,7 +225,7 @@ export const RelatedDiseasesCard: React.FC<{
   );
 };
 
-const WHERE_ROWS: Array<{ keys: string[]; label: string; unit: string }> = [
+export const WHERE_ROWS: Array<{ keys: string[]; label: string; unit: string }> = [
   { keys: ['deck_slide'], label: 'Öğren', unit: 'slayt' },
   { keys: ['past_question'], label: 'Çıkmış', unit: 'soru' },
   { keys: ['ornek_question'], label: 'Örnek soru', unit: 'soru' },

@@ -2,13 +2,13 @@ import React, { useEffect, useRef, useState } from 'react';
 
 /**
  * MeDSor marka yazısı — "DS" = Doktora Sor.
- * 10 dakikada bir (ve oturumun ilk açılışında bir kez) harfler kayarak açılır:
+ * Dakikada bir kez (ve oturumun ilk açılışında 3,5 sn sonra) harfler kayarak açılır:
  *   MeDSor → "Me" kapanır, D'nin ardından "oktora" açılır, araya boşluk girer → "Doktora Sor"
  *   kısa bekleme → tersine kayıp kapanır → MeDSor.
  * Yalnız sekme görünürken oynar; "hareketi azalt" (sistem ya da Görünüm › Hareket) seçiliyse hiç oynamaz.
  * Genişlik geçişi max-width ile; yerleşimi bir kez etkiler, sürekli çizim yükü yok.
  */
-const EVERY_MS = 10 * 60 * 1000;
+const EVERY_MS = 60 * 1000;
 const HOLD_MS = 2600;
 const FIRST_KEY = 'medsoru_brand_anim_seen';
 

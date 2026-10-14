@@ -44,7 +44,7 @@ Genel bir soru bankası değil: sorular **bu fakültenin kendi ders materyalleri
 
 ## Brand Commitments
 
-- Ad: **MedSoru**. Arayüz, hata mesajları ve AI çıktıları **tamamen Türkçe**.
+- Ad: **MeDSor**. Arayüz, hata mesajları ve AI çıktıları **tamamen Türkçe**.
 - **Ücretsiz ve reklamsız.** Maliyet yerel AI ve ücretsiz anahtarlarla düşük tutulur.
 - **AI çıktısı doğrulanmış sayılmaz:** AI'nın kurduğu soru "inceleniyor" durumunda kalır, kaynağıyla gösterilir; öğrenciye kesin bilgi gibi sunulmaz.
 - **Telefon öncelikli.**

@@ -541,7 +541,7 @@ export const MusicPlayerProvider: React.FC<{ children: React.ReactNode }> = ({ c
       ms.metadata = new MediaMetadata({
         title: current.title,
         artist: current.artist || 'Admin seçkisi',
-        album: 'MedSoru · Müzik',
+        album: 'MeDSor · Müzik',
         artwork,
       });
     } catch { /* yoksay */ }

@@ -1,4 +1,4 @@
-# MedSoru AI Studio Master Prompt & Architectural Specification
+# MeDSor AI Studio Master Prompt & Architectural Specification
 > **Hedef:** Google AI Studio (Gemini 1.5 Pro / Flash) ortamına tek seferde yapıştırılacak; projenin tüm bağlamını, veri şemalarını, mimari hedeflerini anlatan ve istenen 3 devasa üretim scriptini eksiksiz ürettirecek ana talimatnamedir.
 
 ---
@@ -7,14 +7,14 @@
 # MISSION BRIEFING: MEDSORU MEDICAL AI & HIGH-PERFORMANCE DATA LAKE ENGINE
 
 Sen dünya çapında kıdemli bir Yapay Zeka Sistem Mimarı, Tıbbi NLP Uzmanı ve Dağıtık Büyük Veri Mühendisisin.
-Bu görevde senden, **MedSoru** (Tıp Fakültesi Dönem 3 Akıllı Soru Bankası & RAG Ekosistemi) için sıfır veri kaybı, milisaniyelik gecikme (<50ms) ve sıfır tıp halüsinasyonu sağlayan 3 devasa üretim sınıfı (production-grade) Python modülünü eksiksiz olarak kodlaman istenmektedir.
+Bu görevde senden, **MeDSor** (Tıp Fakültesi Dönem 3 Akıllı Soru Bankası & RAG Ekosistemi) için sıfır veri kaybı, milisaniyelik gecikme (<50ms) ve sıfır tıp halüsinasyonu sağlayan 3 devasa üretim sınıfı (production-grade) Python modülünü eksiksiz olarak kodlaman istenmektedir.
 
 ---
 
 ## 1. PROJE BAĞLAMI VE MEVCUT DURUM
 
 ### Projenin Amacı:
-MedSoru; Tıp Fakültesi amfi ders slaytlarını (PDF/PPTX), hoca ses kayıtlarını ve geçmiş yılların çıkmış kurul sınav sorularını işleyen, bunları anlamsal olarak birbirine bağlayan, öğrencilere web üzerinden anlık soru çözümü ve klinik açıklama sunan bir tıp yapay zekasıdır.
+MeDSor; Tıp Fakültesi amfi ders slaytlarını (PDF/PPTX), hoca ses kayıtlarını ve geçmiş yılların çıkmış kurul sınav sorularını işleyen, bunları anlamsal olarak birbirine bağlayan, öğrencilere web üzerinden anlık soru çözümü ve klinik açıklama sunan bir tıp yapay zekasıdır.
 
 ### Mevcut Mimari ve Yaşanan Büyük Darboğazlar:
 1. **Veri Saklama Darboğazı:**

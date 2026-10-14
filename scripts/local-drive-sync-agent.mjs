@@ -1,10 +1,10 @@
 /**
- * MedSoru Yerel Bilgisayar Arka Plan Otomasyon İşleyicisi (Local Sync Worker)
+ * MeDSor Yerel Bilgisayar Arka Plan Otomasyon İşleyicisi (Local Sync Worker)
  * 
  * Bu betik kendi bilgisayarınızda arkaplanda çalışarak:
  * 1. Google Drive klasöründeki (Kurul 1 ve Dönem 3) yeni PDF/DOCX slaytlarını otomatik takip eder.
  * 2. Belgeleri yerel bilgisayarınızın işlemcisiyle okuyup metne dönüştürür (Böylece AI token harcamaz, kotayı tüketmez).
- * 3. Dönüştürülen ders notlarını ve sayfaları anında MedSoru veritabanına ve soru havuzuna kaydeder.
+ * 3. Dönüştürülen ders notlarını ve sayfaları anında MeDSor veritabanına ve soru havuzuna kaydeder.
  * 4. Civan'ın Notları ve diğer kaynaklardaki yeni çıkmış soruları otomatik tarar.
  * 
  * ÇALIŞTIRMA:
@@ -39,17 +39,17 @@ console.log('='.repeat(70));
 console.log(`[BİLGİ] İşlemci Süreç Numarası (PID): ${process.pid}`);
 console.log(`[BİLGİ] Bilgisayar Adı: ${os.hostname()} (${os.type()} ${os.arch()})`);
 console.log(`[BİLGİ] Hedef Google Drive Klasörü: ${CONFIG.driveFolderId}`);
-console.log(`[BİLGİ] Hedef MedSoru Sunucusu: ${CONFIG.appServerUrl} (Yedek: ${CONFIG.fallbackServerUrl})`);
+console.log(`[BİLGİ] Hedef MeDSor Sunucusu: ${CONFIG.appServerUrl} (Yedek: ${CONFIG.fallbackServerUrl})`);
 console.log(`[BİLGİ] Senkronizasyon Periyodu: ${CONFIG.syncIntervalMinutes} dakikada bir (veya Hafta içi ${CONFIG.runAtHour}:00)`);
 console.log('-'.repeat(70));
 console.log(`✅ [ÇALIŞIYOR] Arka plan işleyicisi başarıyla başlatıldı ve hafızada dinliyor.`);
 console.log(`📌 [NASIL TEYİT EDİLİR?]:`);
-console.log(`   1. MedSoru uygulamasında sağ üstten "Yönetici Paneli"ne girin.`);
+console.log(`   1. MeDSor uygulamasında sağ üstten "Yönetici Paneli"ne girin.`);
 console.log(`   2. "Otomasyonlar & Masaüstü İşleyici" sekmesini açın.`);
 console.log(`   3. En üstte "🟢 ÇEVRİMİÇİ (ONLINE)" ibaresini ve PID ${process.pid} numaranızı göreceksiniz.`);
 console.log('-'.repeat(70));
 
-// Post JSON to MedSoru server (with automatic fallback between local and cloud)
+// Post JSON to MeDSor server (with automatic fallback between local and cloud)
 async function postJson(endpoint, payload) {
   const urlsToTry = [CONFIG.appServerUrl];
   if (CONFIG.fallbackServerUrl && CONFIG.fallbackServerUrl !== CONFIG.appServerUrl) {
@@ -109,7 +109,7 @@ async function fetchUrl(urlStr) {
       const client = fullUrl.protocol === 'https:' ? https : http;
       const req = client.get(fullUrl, {
         timeout: 10000,
-        headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) MedSoruAgent/1.0' },
+        headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) MeDSorAgent/1.0' },
       }, res => {
         let data = '';
         res.on('data', chunk => data += chunk);
@@ -146,7 +146,7 @@ async function runDriveSync() {
       timestamp: new Date().toISOString(),
     });
 
-    console.log(`[${timestamp}] ✓ MedSoru veritabanı senkronize edildi. Durum:`, res.status || 'OK');
+    console.log(`[${timestamp}] ✓ MeDSor veritabanı senkronize edildi. Durum:`, res.status || 'OK');
   } catch (err) {
     console.error(`[${timestamp}] ⚠️ Senkronizasyon uyarısı:`, err.message);
   }
@@ -196,7 +196,7 @@ async function sendHeartbeat() {
     });
     if (res.acknowledgedAt) {
       const now = new Date().toLocaleTimeString('tr-TR');
-      console.log(`[${now}] 💚 Sinyal Gönderildi (Heartbeat OK) - MedSoru web panelinde çevrimiçi görünüyorsunuz.`);
+      console.log(`[${now}] 💚 Sinyal Gönderildi (Heartbeat OK) - MeDSor web panelinde çevrimiçi görünüyorsunuz.`);
     }
   } catch (err) {
     // ignore transient network hiccups

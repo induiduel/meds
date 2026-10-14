@@ -151,7 +151,7 @@ def run(only: set[str] | None = None, limit: int | None = None, verbose: bool = 
 
 
 def main(argv: list[str] | None = None) -> int:
-    ap = argparse.ArgumentParser(description="MedSoru Core v2 denetçisi (salt okunur)")
+    ap = argparse.ArgumentParser(description="MeDSor Core v2 denetçisi (salt okunur)")
     ap.add_argument("--only", default="", help="virgülle ayrılmış küme adları (ör. questions,chunks)")
     ap.add_argument("--limit", type=int, default=None, help="küme başına en fazla N kayıt")
     args = ap.parse_args(argv)

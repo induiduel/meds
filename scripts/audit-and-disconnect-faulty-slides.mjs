@@ -1,5 +1,5 @@
 /**
- * MedSoru Slayt İlişkisi Denetim ve Hatalı İlişkileri Kesme Scripti (Script 1)
+ * MeDSor Slayt İlişkisi Denetim ve Hatalı İlişkileri Kesme Scripti (Script 1)
  * (scripts/audit-and-disconnect-faulty-slides.mjs)
  * 
  * Amaç:

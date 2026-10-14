@@ -5,7 +5,8 @@ import {
   ShieldAlert, Zap, Scale, Columns, Award, RotateCcw, ListOrdered, Gauge, ArrowUpDown, SpellCheck,
 } from 'lucide-react';
 import { EstimateSlider, FixTheText, Perturbation, SequenceOrder } from './LessonGames';
-import type { LessonCard, LessonQuestion, LessonStep, PracticeItem, DeckKazanim, IxDone } from './lessonModel';
+import type { LessonCard, LessonQuestion, LessonStep, PracticeItem, DeckKazanim, IxDone, IxResult } from './lessonModel';
+import { useAppearance } from '../../../utils/appearance';
 import { inline, mdToHtml, spotTone, stripEmoji } from './lessonModel';
 import type { FeedbackTarget } from './lessonFeedback';
 import { FeedbackFlag } from './LessonFeedbackUI';
@@ -1173,26 +1174,83 @@ const IxBody: React.FC<{ item: PracticeItem; onDone?: IxDone }> = ({ item, onDon
   }
 };
 
-export const PracticeCard: React.FC<{ item: PracticeItem; done?: boolean; onDone?: IxDone; style?: React.CSSProperties; className?: string; target?: FeedbackTarget }> = ({ item, done, onDone, style, className = '', target }) => {
+/** v12 blok kabuğu: alt çubukta, sonuç gelmeden önce gösterilen kısa yönerge (gövdesinde yönergesi olan türlerde yok) */
+const IX_IDLE_HINT: Record<string, string> = {
+  micro_quiz: 'İlk seçimin cevabın olur.',
+  branching_logic: 'İlk seçimin cevabın olur.',
+  question: 'İlk seçimin cevabın olur.',
+  active_recall: 'Önce cevabı kafanda kur, sonra aç.',
+  interactive_table: 'Gizli hücrelere dokunarak aç.',
+  hidden_table: 'Gizli hücrelere dokunarak aç.',
+  swipe_matching: 'Klavyede ← ve → tuşları da çalışır.',
+  feature_bidding: 'Yanlışta çarpan kadar puan gider.',
+  venn_grid: 'Her ölçüt için bir seçenek işaretle.',
+  cards: 'Karta dokununca çevrilir.',
+};
+
+/** v12 alt çubuktaki sonuç rozeti: tam doğru yeşil, kısmi turuncu, hiç doğru yok kırmızı */
+const resultBadge = (type: string, r: IxResult): { tone: 'ok' | 'warn' | 'bad'; text: string } => {
+  if (type === 'active_recall') return r.ok ? { tone: 'ok', text: 'Hatırladın' } : { tone: 'warn', text: 'Tekrara eklendi' };
+  if (r.total && r.total > 1) {
+    const sc = r.score ?? 0;
+    return { tone: r.ok ? 'ok' : sc > 0 ? 'warn' : 'bad', text: `${sc}/${r.total} doğru` };
+  }
+  return r.ok ? { tone: 'ok', text: 'Doğru' } : { tone: 'bad', text: 'Yanlış' };
+};
+
+export const PracticeCard: React.FC<{
+  item: PracticeItem;
+  done?: boolean;
+  onDone?: IxDone;
+  style?: React.CSSProperties;
+  className?: string;
+  target?: FeedbackTarget;
+  /** v12: alt çubuktaki "Sonraki: <ad>" düğmesi (Pekiştir adım çubuğundan gelir) */
+  next?: { label: string; go: () => void } | null;
+}> = ({ item, done, onDone, style, className = '', target, next }) => {
   const [Icon, label] = practiceMeta(item);
+  const v12 = useAppearance().design === 'v12';
+  const [res, setRes] = useState<IxResult | null>(null);
   // Sonuç bir kez bildirilir (StrictMode'da güncelleyiciler iki kez çalışabiliyor); süre kart açılışından ölçülür
   const t0 = useRef(Date.now());
   const sent = useRef(false);
   const report: IxDone = (r) => {
     if (sent.current) return;
     sent.current = true;
+    if (r) setRes(r);
     onDone?.(r ? { ...r, ms: Date.now() - t0.current } : undefined);
   };
+  const type = item.kind === 'cards' ? 'cards' : item.kind === 'question' ? 'question' : item.data.type;
+  const badge = v12 && res ? resultBadge(type, res) : null;
+  const hint = v12 && !res && !done ? IX_IDLE_HINT[type] || '' : '';
+  const showFoot = v12 && !!(badge || done || hint || next);
   return (
-    <section className={`ls-ix ${className}`} style={style} aria-label={label} data-fb-key={target?.key} data-ix={item.kind === 'cards' ? 'cards' : item.kind === 'question' ? 'question' : item.data.type}>
+    <section className={`ls-ix ${className}`} style={style} aria-label={label} data-fb-key={target?.key} data-ix={type}>
       <header className="ls-ix-head">
         <Icon aria-hidden />
         <span className="ls-ix-label" title={label}>{label}</span>
         {item.kind === 'question' && item.q.examYear && <span className="ls-tag is-plain" title={item.q.examYear}>{item.q.examYear}</span>}
-        {done && <span className="ls-tag is-ok"><Check aria-hidden /> Tamam</span>}
+        {done && !v12 && <span className="ls-tag is-ok"><Check aria-hidden /> Tamam</span>}
         {target && <FeedbackFlag target={target} />}
       </header>
       <IxBody item={item} onDone={report} />
+      {showFoot && (
+        /* v12 blok kabuğu alt çubuğu (canvas LearnBlocks · bx-foot): sonuç rozeti · yönerge · Sonraki */
+        <footer className="x12-bx-foot">
+          {badge ? (
+            <span className={`x12-badge is-${badge.tone}`} role="status">{badge.text}</span>
+          ) : done ? (
+            <span className="x12-badge is-ok"><Check aria-hidden /> Tamam</span>
+          ) : null}
+          <span className="x12-bx-hint">{hint}</span>
+          {next && (
+            <button type="button" className="ls-btn is-primary is-sm x12-bx-next" onClick={next.go}>
+              <span>Sonraki: {next.label}</span>
+              <ChevronRight aria-hidden />
+            </button>
+          )}
+        </footer>
+      )}
     </section>
   );
 };

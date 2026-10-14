@@ -21,19 +21,19 @@ import SCHEDULE from '../../data/deckSchedule.json';
 import { disciplineGroup, type ArchiveFilter } from './LearnHub';
 import '../../styles/learn-v10.css';
 
-type Progress = Record<string, { last?: number; seen?: number[] } | undefined>;
-type Status = 'all' | 'active' | 'done';
-const PAGE = 24;
+export type Progress = Record<string, { last?: number; seen?: number[] } | undefined>;
+export type Status = 'all' | 'active' | 'done';
+export const PAGE = 24;
 
 /** Ders programı kaydı (scripts/build_deck_schedule.py): s sıra, t tarih, k kurul, h hoca */
 type Sched = { s: number; t?: string; k?: number; h?: string };
 const SCHED = SCHEDULE as Record<string, Sched>;
 /** V2 gibi sürümler ana dersin program yerini paylaşır */
-const schedOf = (d: DeckCatalogEntry): Sched | undefined => SCHED[d.id] || SCHED[d.id.replace(/-v\d+$/i, '')];
+export const schedOf = (d: DeckCatalogEntry): Sched | undefined => SCHED[d.id] || SCHED[d.id.replace(/-v\d+$/i, '')];
 
-type View = 'grid' | 'list';
-type Sort = 'program' | 'date_desc' | 'alpha' | 'alpha_desc' | 'progress' | 'recent' | 'slides';
-const SORT_LABEL: Record<Sort, string> = {
+export type View = 'grid' | 'list';
+export type Sort = 'program' | 'date_desc' | 'alpha' | 'alpha_desc' | 'progress' | 'recent' | 'slides';
+export const SORT_LABEL: Record<Sort, string> = {
   program: 'Ders programı',
   date_desc: 'En yeni ders',
   alpha: 'A → Z',
@@ -42,9 +42,9 @@ const SORT_LABEL: Record<Sort, string> = {
   recent: 'Son açılan',
   slides: 'Slayt sayısı',
 };
-const VIEW_KEY = 'medsoru_learn_view';
-const SORT_KEY = 'medsoru_learn_sort';
-const readPref = <T extends string>(k: string, ok: readonly T[], def: T): T => {
+export const VIEW_KEY = 'medsoru_learn_view';
+export const SORT_KEY = 'medsoru_learn_sort';
+export const readPref = <T extends string>(k: string, ok: readonly T[], def: T): T => {
   try {
     const v = localStorage.getItem(k) as T | null;
     return v && ok.includes(v) ? v : def;
@@ -52,10 +52,10 @@ const readPref = <T extends string>(k: string, ok: readonly T[], def: T): T => {
     return def;
   }
 };
-const writePref = (k: string, v: string) => { try { localStorage.setItem(k, v); } catch { /* yok */ } };
+export const writePref = (k: string, v: string) => { try { localStorage.setItem(k, v); } catch { /* yok */ } };
 
 const RECENT_KEY = 'medsoru_learn_recent_v1';
-const readRecent = (): Record<string, number> => {
+export const readRecent = (): Record<string, number> => {
   try {
     return JSON.parse(localStorage.getItem(RECENT_KEY) || '{}');
   } catch {
@@ -64,21 +64,21 @@ const readRecent = (): Record<string, number> => {
 };
 
 /** k1p-k1-07-… → 7 ; sıra numarası olmayan desteler sona */
-const orderOf = (d: DeckCatalogEntry) => {
+export const orderOf = (d: DeckCatalogEntry) => {
   const m = /-k\d+-(\d+)/.exec(d.id);
   return m ? Number(m[1]) : 999;
 };
-const isPublished = (d: DeckCatalogEntry) => !!(d.isNew || String(d.version || '').startsWith('2') || (d.slideCount && d.slideCount >= 50) || (d.totalSlides && d.totalSlides >= 50));
+export const isPublished = (d: DeckCatalogEntry) => !!(d.isNew || String(d.version || '').startsWith('2') || (d.slideCount && d.slideCount >= 50) || (d.totalSlides && d.totalSlides >= 50));
 
 /** Kitaplıktaki kısa ders dalı adı: "Üroloji / Tıbbi Patoloji" → "Üroloji" */
-const branchOf = (d: DeckCatalogEntry) => disciplineLabel(disciplineGroup(d.discipline));
+export const branchOf = (d: DeckCatalogEntry) => disciplineLabel(disciplineGroup(d.discipline));
 /** "Kurul 1 - Ürogenital…" → "Kurul 1"; kurul numarası yoksa "Diğer" */
-const kurulOf = (d: DeckCatalogEntry) => {
+export const kurulOf = (d: DeckCatalogEntry) => {
   const m = /kurul\s*(\d+)/i.exec(String(d.committee || d.category || ''));
   return m ? `Kurul ${m[1]}` : 'Diğer';
 };
 
-const stateOf = (d: DeckCatalogEntry, p: Progress) => {
+export const stateOf = (d: DeckCatalogEntry, p: Progress) => {
   const total = d.slideCount || 0;
   const seen = Math.min(total, p[d.id]?.seen?.length || 0);
   const pct = total ? Math.min(100, Math.round((seen / total) * 100)) : 0;
@@ -88,12 +88,12 @@ const stateOf = (d: DeckCatalogEntry, p: Progress) => {
 
 /** Ders PDF'i eşlenemeyen ve ders günü üzerinden en az bir hafta geçmiş deste: kaynağı bilinmiyor (LearnHub ile aynı kural). */
 const SOURCE_WAIT_DAYS = 7;
-const unknownSource = (tarih: string | undefined) => {
+export const unknownSource = (tarih: string | undefined) => {
   if (tarih === undefined) return false;
   if (!tarih) return true;
   return Date.now() - new Date(`${tarih}T00:00:00`).getTime() >= SOURCE_WAIT_DAYS * 864e5;
 };
-const trDate = (t: string) => (t ? new Date(`${t}T00:00:00`).toLocaleDateString('tr-TR', { day: 'numeric', month: 'long' }) : '');
+export const trDate = (t: string) => (t ? new Date(`${t}T00:00:00`).toLocaleDateString('tr-TR', { day: 'numeric', month: 'long' }) : '');
 
 /** Kartın tek satırlık özeti: alt başlık / açıklama / genel bakışın ilk cümlesi (kesme CSS'te) */
 const blurbOf = (d: DeckCatalogEntry) => {

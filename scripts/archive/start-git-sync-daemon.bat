@@ -1,6 +1,6 @@
 @echo off
 chcp 65001 >nul
-title MedSoru - Otomatik Git Senkronizasyon Servisi (20 Dk)
+title MeDSor - Otomatik Git Senkronizasyon Servisi (20 Dk)
 color 0B
 
 echo ======================================================================

@@ -12,6 +12,8 @@ import { triggerDomHighlightAndScroll } from '../services/universalRedirectServi
 import { safeJsonFetch } from '../services/api';
 import { queryClient } from '../queryClient';
 import { offlineDatabaseService } from '../services/offlineDatabaseService';
+import { useAppearance } from '../utils/appearance';
+import { LectureSummariesV12 } from './v12/LectureSummariesV12';
 
 /**
  * Ders özetleri (v10 kompakt). Yapı:
@@ -164,6 +166,7 @@ export const LectureSummariesView: React.FC<LectureSummariesViewProps> = ({ onOp
   const [readFilter, setReadFilter] = useState<ReadFilter>('all');
   const [active, setActive] = useState<SummaryDetail | null>(null);
   const progress = useReadingProgress();
+  const v12 = useAppearance().design === 'v12';
 
   // Ders programından gelen gerçek ders adı, branş ve öğretim üyesi; kaynak PDF yılı
   const summaries: SummaryMeta[] = useMemo(
@@ -277,9 +280,7 @@ export const LectureSummariesView: React.FC<LectureSummariesViewProps> = ({ onOp
   ];
   const kurulCount = (k: number) => summaries.filter((s) => s.kurul === k).length;
 
-  let idx = 0;
-  return (
-    <div className="sl-page">
+  const toolbar = (
       <PageToolbar<string>
         title="Ders özetleri"
         count={
@@ -330,6 +331,38 @@ export const LectureSummariesView: React.FC<LectureSummariesViewProps> = ({ onOp
           )
         }
       />
+  );
+  const clearFilters = () => {
+    setQuery('');
+    setDiscipline('all');
+    setReadFilter('all');
+  };
+  const reader = active && (
+    <SummaryReader summary={active} onClose={() => setActive(null)} onOpenPdfModal={onOpenPdfModal} next={next} onOpenNext={next ? () => open(next) : undefined} />
+  );
+
+  if (v12)
+    return (
+      <LectureSummariesV12
+        toolbar={toolbar}
+        inProgress={inProgress}
+        showContinue={!q && readFilter === 'all'}
+        groups={groups}
+        filteredCount={filtered.length}
+        filtering={!!q || discipline !== 'all' || readFilter !== 'all'}
+        onClearFilters={clearFilters}
+        progress={progress}
+        kurulAll={kurul === 'all'}
+        lessonNo={lessonNo}
+        onOpen={open}
+        reader={reader}
+      />
+    );
+
+  let idx = 0;
+  return (
+    <div className="sl-page">
+      {toolbar}
 
       {inProgress.length > 0 && !q && readFilter === 'all' && (
         <section className="sl-group sl-continue" aria-label="Okumaya devam">

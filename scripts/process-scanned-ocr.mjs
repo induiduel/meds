@@ -1,5 +1,5 @@
 /**
- * MedSoru Scanned PDF OCR & Question Extraction Engine
+ * MeDSor Scanned PDF OCR & Question Extraction Engine
  * 
  * Bu betik:
  * 1. meds_sorular_images içindeki taranmış sınav fotoğraflarını OCR ile okur.

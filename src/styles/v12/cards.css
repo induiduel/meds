@@ -1,0 +1,314 @@
+/*
+ * v12 "Net" — Kartlar (/kartlar) ve Sınav spotları (/spotlar). Canvas: Cards.dc.html.
+ * Bileşenler: components/v12/FlashcardsV12.tsx, components/v12/SpotsV12.tsx. Önek: f12-.
+ * Yalnız palet token'ları (açık / sarı / koyu × 4 palet). Gölge yok (yalnız segmentteki seçili düğmede saç gölgesi).
+ * Hareket: yalnız transform/opacity, 120–220 ms; "hareketi azalt" ve data-motion=reduced altında kapanır.
+ */
+:root[data-design='v12'] {
+  & .f12-page { container: f12 / inline-size; width: 100%; min-width: 0; padding: 4px 0 40px; color: var(--color-ink); font-family: var(--font-sans); }
+  & .f12-col { width: 100%; max-width: 720px; margin: 0 auto; display: flex; flex-direction: column; gap: 14px; min-width: 0; }
+  & .f12-sp-col { width: 100%; max-width: 880px; display: flex; flex-direction: column; gap: 18px; min-width: 0; }
+  & .f12-grow { flex: 1 1 auto; min-width: 0; }
+  & .f12-sr { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+
+  /* ── Tipografi ── */
+  & .f12-h2 { margin: 0; font-size: 15px; font-weight: 600; letter-spacing: -.005em; color: var(--color-ink); }
+  & .f12-meta { font-size: 12.5px; line-height: 1.45; color: var(--color-ink-3); }
+  & .f12-label { display: block; font-size: 12.5px; font-weight: 500; color: var(--color-ink-2); }
+  & .f12-num { font-family: var(--font-mono); font-variant-numeric: tabular-nums; font-weight: 500; }
+  & .f12-ink { color: var(--color-ink); }
+  & .f12-dim { opacity: .7; font-size: 11px; }
+  & .f12-clamp1 { display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden; overflow-wrap: anywhere; }
+  & .f12-ico { width: 16px; height: 16px; flex: none; }
+  & .f12-kbd { font: 500 11px/1.3 var(--font-mono); padding: 1px 5px; border: 1px solid var(--color-line); border-bottom-width: 2px; border-radius: 5px;
+    color: var(--color-ink-3); background: var(--color-white); white-space: nowrap; }
+
+  /* ── Yüzeyler ── */
+  & .f12-panel { background: var(--color-white); border: 1px solid var(--color-line); border-radius: 10px; min-width: 0; }
+  & .f12-sep { height: 1px; margin: 0; border: 0; background: var(--color-line-soft); }
+  & .f12-skel { display: block; border-radius: 6px; background: var(--color-field); }
+
+  /* ── Düğmeler ── */
+  & .f12-btn { display: inline-flex; align-items: center; justify-content: center; gap: 6px; height: 36px; padding: 0 14px; border-radius: 7px;
+    border: 1px solid var(--color-line); background: var(--color-white); color: var(--color-ink); font: 500 13.5px/1 var(--font-sans);
+    cursor: pointer; white-space: nowrap; text-decoration: none; transition: background-color var(--mo-base) var(--mo-ease), border-color var(--mo-base), transform var(--mo-fast); }
+  & .f12-btn:hover:not(:disabled) { background: var(--color-field); }
+  & .f12-btn:active:not(:disabled) { transform: translateY(1px); }
+  & .f12-btn:disabled { opacity: .5; cursor: default; }
+  & .f12-btn > svg { width: 16px; height: 16px; flex: none; }
+  & .f12-btn.pri { background: var(--color-accent); border-color: var(--color-accent); color: var(--color-on-accent); }
+  & .f12-btn.pri:hover:not(:disabled) { background: var(--color-accent-hover); }
+  & .f12-btn.ghost { background: transparent; border-color: transparent; color: var(--color-ink-2); }
+  & .f12-btn.ghost:hover:not(:disabled) { background: var(--color-field); }
+  & .f12-btn.sm { height: 30px; padding: 0 10px; font-size: 12.5px; }
+  & .f12-btn.lg { height: 44px; padding: 0 18px; font-size: 14px; }
+  & .f12-btn.icon { width: 36px; padding: 0; }
+  & .f12-btn.icon.sm { width: 30px; }
+  & .f12-btn.is-on { background: var(--color-accent-soft); border-color: transparent; color: var(--color-accent); }
+  & .f12-btn.is-fav { color: var(--color-warn); }
+
+  /* ── Alan ── */
+  & .f12-field { position: relative; display: flex; align-items: center; gap: 8px; height: 36px; padding: 0 11px; border: 1px solid var(--color-line);
+    border-radius: 7px; background: var(--color-white); color: var(--color-ink-3); min-width: 0; }
+  & .f12-field:focus-within { border-color: var(--color-accent); box-shadow: 0 0 0 3px var(--color-accent-soft); }
+  & .f12-field :is(input, select) { flex: 1 1 auto; min-width: 0; height: 100%; border: 0; outline: 0; background: transparent; font: 400 14px var(--font-sans); color: var(--color-ink); }
+  & .f12-field select { appearance: none; -webkit-appearance: none; padding-right: 18px; cursor: pointer; text-overflow: ellipsis; }
+  & .f12-field select + .f12-ico { position: absolute; right: 10px; pointer-events: none; }
+  & .f12-field input::-webkit-search-cancel-button { display: none; }
+  & .f12-x { display: grid; place-items: center; width: 24px; height: 24px; border: 0; border-radius: 6px; background: transparent; color: var(--color-ink-3); cursor: pointer; flex: none; }
+  & .f12-x:hover { background: var(--color-field); color: var(--color-ink); }
+  & .f12-x > svg { width: 14px; height: 14px; }
+
+  /* ── Segment + hap + rozet ── */
+  & .f12-seg { display: inline-flex; padding: 3px; gap: 2px; background: var(--color-field); border-radius: 9px; max-width: 100%; overflow-x: auto; scrollbar-width: none; flex: none; }
+  & .f12-seg::-webkit-scrollbar { display: none; }
+  & .f12-seg > :is(a, button) { display: inline-flex; align-items: center; gap: 6px; height: 28px; padding: 0 11px; border: 0; border-radius: 7px; background: transparent;
+    color: var(--color-ink-2); font: 500 13px var(--font-sans); cursor: pointer; white-space: nowrap; text-decoration: none; }
+  & .f12-seg > :is(a, button):hover:not(.on) { color: var(--color-ink); }
+  & .f12-seg > .on { background: var(--color-white); color: var(--color-ink); box-shadow: var(--shadow-xs); }
+  & .f12-pill { display: inline-flex; align-items: center; gap: 6px; height: 28px; padding: 0 10px; border-radius: 999px; border: 1px solid var(--color-line);
+    background: var(--color-white); color: var(--color-ink-2); font: 500 12.5px var(--font-sans); cursor: pointer; white-space: nowrap; max-width: 220px; flex: none;
+    transition: background-color var(--mo-base) var(--mo-ease), color var(--mo-base); }
+  & .f12-pill:hover:not(.on):not(:disabled) { background: var(--color-field); }
+  & .f12-pill:disabled { opacity: .45; cursor: default; }
+  & .f12-pill > span { overflow: hidden; text-overflow: ellipsis; }
+  & .f12-pill > b { font: 600 11.5px var(--font-mono); font-variant-numeric: tabular-nums; }
+  & .f12-pill.on { background: var(--color-accent-soft); border-color: transparent; color: var(--color-accent); }
+  & .f12-badge { display: inline-flex; align-items: center; height: 20px; padding: 0 7px; border-radius: 6px; font-size: 11.5px; font-weight: 500;
+    background: var(--color-field); color: var(--color-ink-2); white-space: nowrap; flex: none; }
+  & .f12-badge.ok { background: var(--color-ok-soft); color: var(--color-ok); }
+  & .f12-badge.bad { background: var(--color-bad-soft); color: var(--color-bad-text); }
+  & .f12-badge.warn { background: var(--color-warn-soft); color: var(--color-warn); }
+  & .f12-badge.acc { background: var(--color-accent-soft); color: var(--color-accent); }
+
+  /* ── Üst satır, deste hapları, ayarlar ── */
+  & .f12-head { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 10px; min-width: 0; }
+  & .f12-decks { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; min-width: 0; }
+  & .f12-pill-skel { width: 110px; height: 28px; border-radius: 999px; }
+  & .f12-deck-sel { width: 200px; height: 30px; }
+  & .f12-deck-sel select { font-size: 13px; }
+  & .f12-settings { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 10px; padding: 10px 12px; }
+  & .f12-settings .f12-pill > svg { width: 14px; height: 14px; }
+  & .f12-settings-n { margin-left: auto; }
+
+  /* ── İlerleme ── */
+  & .f12-prog { display: flex; align-items: center; gap: 10px; min-width: 0; }
+  & .f12-bar { flex: 1 1 auto; height: 4px; border-radius: 4px; background: var(--color-field); overflow: hidden; }
+  & .f12-bar > i { display: block; height: 100%; border-radius: 4px; background: var(--color-accent); }
+
+  /* ── Kart ── */
+  & .f12-card { display: flex; flex-direction: column; min-height: 300px; overflow: hidden; cursor: pointer; transition: border-color var(--mo-base), opacity var(--mo-slow) var(--mo-ease), transform var(--mo-slow) var(--mo-ease); }
+  & .f12-card:hover { border-color: var(--color-line-2); }
+  & .f12-card.is-leave { opacity: 0; }
+  & .f12-card.is-leave-good { transform: translateX(24px); }
+  & .f12-card.is-leave-again { transform: translateX(-24px); }
+  & .f12-card.is-leave-hard { transform: translateY(8px); }
+  & .f12-card-skel { cursor: default; padding: 22px 26px; gap: 14px; min-height: 300px; }
+  & .f12-face { display: flex; flex-direction: column; gap: 12px; padding: 22px 26px; min-width: 0; }
+  & .f12-face-b { flex: 1 1 auto; background: var(--color-canvas); }
+  & .f12-face-hint { margin-top: auto; align-items: center; text-align: center; }
+  & .f12-cap { display: flex; align-items: center; gap: 8px; min-width: 0; }
+  & .f12-q { margin: 0; font-family: var(--read-font); font-size: 19px; line-height: 1.5; font-weight: 400; overflow-wrap: anywhere; color: var(--color-ink); }
+  & .f12-a { margin: 0; font-family: var(--read-font); font-size: 17px; line-height: 1.6; overflow-wrap: anywhere; color: var(--color-ink); white-space: pre-line; }
+  & .f12-pearl { margin: 0; font-size: 13.5px; line-height: 1.5; color: var(--color-ink-2); overflow-wrap: anywhere; }
+  & .f12-pearl > b { font-weight: 600; color: var(--color-ink); margin-right: 4px; }
+  & .f12-reveal { width: 100%; height: 48px; font-size: 14px; }
+
+  & .f12-ans { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+  & .f12-ans > button { position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; height: 60px;
+    border: 1px solid var(--color-line); border-radius: 7px; background: var(--color-white); color: var(--color-ink); font: 500 13.5px var(--font-sans); cursor: pointer;
+    transition: background-color var(--mo-base) var(--mo-ease), transform var(--mo-fast); }
+  & .f12-ans > button:hover { background: var(--color-field); }
+  & .f12-ans > button:active { transform: translateY(1px); }
+  & .f12-ans .f12-kbd { position: absolute; top: 6px; left: 6px; font-size: 10px; padding: 0 4px; }
+  & .f12-ans-iv { font: 500 12px var(--font-mono); color: var(--color-ink-3); }
+  & .f12-ans .is-again .f12-ans-t { color: var(--color-bad-text); }
+  & .f12-ans .is-hard .f12-ans-t { color: var(--color-warn); }
+  & .f12-ans .is-good .f12-ans-t { color: var(--color-ok); }
+
+  & .f12-tools { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 2px; }
+  & .f12-tools-sep { width: 1px; height: 18px; margin: 0 6px; background: var(--color-line); }
+  & .f12-keys { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 14px; }
+  & .f12-swipe { display: none; margin: 0; text-align: center; }
+  & .f12-extras { min-width: 0; }
+
+  /* Başlangıç / bitti paneli (kartın yerinde) */
+  & :is(.f12-start, .f12-done) { display: flex; flex-direction: column; gap: 14px; padding: 22px 26px; min-height: 200px; justify-content: center; }
+  & .f12-start-t { display: flex; flex-direction: column; gap: 4px; }
+  & .f12-start-t p { margin: 0; }
+  & .f12-start-a { display: flex; flex-wrap: wrap; gap: 8px; }
+  & .f12-done p { margin: 0; }
+  & .f12-done-n { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; margin: 0; }
+  & .f12-done-i { display: flex; flex-direction: column; gap: 2px; padding: 10px 12px; border-radius: 8px; background: var(--color-canvas); }
+  & .f12-done-i dt { font-size: 12.5px; color: var(--color-ink-3); }
+  & .f12-done-i dd { margin: 0; font-size: 20px; color: var(--color-ink); }
+  & .f12-done-i.is-ok dd { color: var(--color-ok); }
+  & .f12-done-i.is-warn dd { color: var(--color-warn); }
+  & .f12-done-i.is-bad dd { color: var(--color-bad-text); }
+
+  /* ── Göz at ── */
+  & .f12-browse { display: flex; flex-direction: column; gap: 10px; margin-top: 10px; min-width: 0; }
+  & .f12-gh { display: flex; align-items: baseline; flex-wrap: wrap; gap: 6px 10px; padding: 0 2px; min-width: 0; }
+  & .f12-tool { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; min-width: 0; }
+  & .f12-search { flex: 1 1 220px; max-width: 340px; }
+  & .f12-filters { display: flex; align-items: center; gap: 6px; min-width: 0; max-width: 100%; overflow-x: auto; scrollbar-width: none; }
+  & .f12-filters::-webkit-scrollbar { display: none; }
+  & .f12-filters.is-wrap { flex-wrap: wrap; overflow: visible; }
+  & .f12-list { display: flex; flex-direction: column; margin: 0; padding: 0; list-style: none; overflow: hidden; }
+  & .f12-row { border-top: 1px solid var(--color-line-soft); min-width: 0; }
+  & .f12-row:first-child { border-top: 0; }
+  & .f12-row-h { display: flex; align-items: center; gap: 12px; width: 100%; min-height: 52px; padding: 8px 14px; border: 0; background: transparent; text-align: left;
+    font: inherit; color: inherit; cursor: pointer; transition: background-color var(--mo-base); }
+  & .f12-row-h:hover { background: var(--color-canvas); }
+  & .f12-row-t { display: flex; flex-direction: column; gap: 2px; flex: 1 1 auto; min-width: 0; }
+  & .f12-row-t > b { font-size: 14px; font-weight: 500; color: var(--color-ink); }
+  & .f12-chev { color: var(--color-ink-3); transition: transform var(--mo-base) var(--mo-ease); }
+  & .f12-chev.is-open { transform: rotate(180deg); }
+  & .f12-row-b { display: flex; flex-direction: column; gap: 6px; padding: 0 14px 12px; }
+  & .f12-row-b p { margin: 0; font-size: 14px; line-height: 1.55; color: var(--color-ink-2); overflow-wrap: anywhere; white-space: pre-line; }
+  & .f12-row-a { display: flex; flex-wrap: wrap; gap: 4px; margin-left: -10px; }
+  & .f12-empty { display: flex; flex-direction: column; align-items: flex-start; gap: 6px; padding: 18px; }
+  & .f12-empty b { font-size: 14px; font-weight: 600; }
+  & .f12-more { align-self: center; }
+
+  /* Kartın altındaki Notum / Hata bildir (paylaşılan CardExtras) v12 yüzeyine oturur */
+  & .f12-extras .rb-note { border-radius: 10px; box-shadow: none; border: 1px solid var(--color-line); background: var(--color-white); }
+
+  /* ── Spotlar ── */
+  & .f12-sp-filter { display: flex; flex-direction: column; gap: 14px; padding: 14px; }
+  & .f12-sp-fgrid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+  & .f12-flab { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+  & .f12-sp-grp { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+  & .f12-sp-row { display: flex; align-items: flex-start; gap: 12px; padding: 12px 14px; border-top: 1px solid var(--color-line-soft); min-width: 0;
+    transition: background-color var(--mo-slow) var(--mo-ease); }
+  & .f12-sp-row:first-child { border-top: 0; }
+  & .f12-sp-row > .f12-badge { margin-top: 1px; }
+  & .f12-sp-row.is-flash { background: var(--color-accent-soft); }
+  & .f12-sp-row.is-done .f12-sp-t, & .f12-sp-row.is-done .f12-sp-txt > p { color: var(--color-ink-2); }
+  & .f12-sp-txt { display: flex; flex-direction: column; gap: 5px; flex: 1 1 auto; min-width: 0; }
+  & .f12-sp-t { margin: 0; font-size: 13px; font-weight: 600; color: var(--color-ink); overflow-wrap: anywhere; }
+  & .f12-sp-txt > p { margin: 0; font-size: 14px; line-height: 1.55; color: var(--color-ink); overflow-wrap: anywhere; }
+  & .f12-sp-txt strong { font-weight: 600; }
+  & .f12-sp-src { overflow-wrap: anywhere; }
+  & .f12-sp-ok { color: var(--color-ok); font-weight: 500; }
+  & .f12-sp-act { display: flex; align-items: center; gap: 2px; flex: none; margin: -3px -6px 0 0; }
+  & .f12-sp-act .f12-btn.is-on { background: var(--color-accent-soft); color: var(--color-accent); }
+  & .f12-sp-act .f12-learn.is-on { background: var(--color-ok-soft); color: var(--color-ok); }
+  & .f12-sp-more-b { display: flex; flex-direction: column; gap: 10px; margin-top: 6px; padding-top: 10px; border-top: 1px dashed var(--color-line); font-size: 13.5px; line-height: 1.55; }
+  & .f12-sp-qa { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 4px 10px; margin: 0; }
+  & .f12-sp-qa dt { font-size: 12px; font-weight: 500; color: var(--color-ink-3); padding-top: 1px; }
+  & .f12-sp-qa dd { margin: 0; color: var(--color-ink); overflow-wrap: anywhere; }
+  & .f12-sp-ul { margin: 0; padding-left: 18px; color: var(--color-ink-2); }
+  & .f12-sp-ul li + li { margin-top: 2px; }
+  & .f12-sp-tw { max-width: 100%; overflow-x: auto; border: 1px solid var(--color-line); border-radius: 8px; }
+  & .f12-sp-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  & .f12-sp-table :is(th, td) { padding: 6px 10px; text-align: left; vertical-align: top; border-top: 1px solid var(--color-line-soft); }
+  & .f12-sp-table thead th { border-top: 0; background: var(--color-canvas); font-weight: 600; color: var(--color-ink-2); white-space: nowrap; }
+  & .f12-sp-table tbody th { font-weight: 500; color: var(--color-ink-2); }
+  & .f12-sp-trap { display: flex; gap: 8px; align-items: flex-start; margin: 0; padding: 8px 10px; border-radius: 8px; background: var(--color-bad-soft); color: var(--color-ink); }
+  & .f12-sp-trap > .f12-ico { color: var(--color-bad-text); margin-top: 2px; }
+  & .f12-sp-trap b { color: var(--color-bad-text); font-weight: 600; }
+  & .f12-sp-quote { display: flex; flex-direction: column; gap: 4px; }
+  & .f12-sp-quote blockquote { margin: 0; padding: 6px 10px; border-radius: 8px; background: var(--color-canvas); font-family: var(--read-font); font-size: 13.5px; color: var(--color-ink-2); overflow-wrap: anywhere; }
+  & .f12-sp-more { padding: 8px 0; }
+  & .f12-sp-more .f12-skel { height: 48px; border-radius: 10px; }
+  & .f12-sp-end { margin: 0; text-align: center; }
+
+  /* ── Duyarlı: kap genişliği ── */
+  @container f12 (max-width: 760px) {
+    & .f12-sp-fgrid { grid-template-columns: minmax(0, 1fr); }
+    & .f12-settings-n { margin-left: 0; flex-basis: 100%; }
+  }
+  @container f12 (max-width: 620px) {
+    & .f12-face, & :is(.f12-start, .f12-done) { padding: 18px; }
+    & .f12-q { font-size: 18px; }
+    & .f12-a { font-size: 16px; }
+    & .f12-card { min-height: 240px; }
+    & .f12-decks { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; margin: 0 -2px; padding: 0 2px; }
+    & .f12-decks::-webkit-scrollbar { display: none; }
+    & .f12-deck-sel { display: none; }
+    & .f12-search { max-width: none; flex-basis: 100%; }
+    & .f12-head .f12-grow { display: none; }
+    & .f12-sp-row { flex-wrap: wrap; row-gap: 6px; }
+    & .f12-sp-row > .f12-badge { order: 0; }
+    & .f12-sp-act { order: 1; margin: -6px -6px 0 auto; }
+    & .f12-sp-txt { order: 2; flex-basis: 100%; }
+  }
+  /* Telefonda dokunma hedefleri ≥ 40 px; klavye ipuçları yerine kaydırma ipucu */
+  @media (pointer: coarse) {
+    & :is(.f12-btn.sm, .f12-pill, .f12-seg > :is(a, button)) { min-height: 40px; }
+    & .f12-btn.icon.sm { width: 40px; height: 40px; }
+    & .f12-deck-sel, & .f12-field { min-height: 40px; }
+    & .f12-keys { display: none; }
+    & .f12-swipe { display: block; }
+  }
+
+  /* ── Hareket azalt ── */
+  &[data-motion='reduced'] :is(.f12-card, .f12-bar > i, .f12-chev, .f12-btn, .f12-ans > button, .f12-sp-row, .f12-pill, .f12-row-h) { transition: none; }
+  &[data-motion='reduced'] .f12-card.is-leave { transform: none; }
+  @media (prefers-reduced-motion: reduce) {
+    & :is(.f12-card, .f12-bar > i, .f12-chev, .f12-btn, .f12-ans > button, .f12-sp-row, .f12-pill, .f12-row-h) { transition: none; }
+    & .f12-card.is-leave { transform: none; }
+  }
+}
+
+/* =============================================================================
+ * Spotlar — geniş ekran + renk turu (2026-10-14, taşma/boşluk taraması)
+ * 1920 px'te 880 px'lik sola yaslı sütun ekranın yarısını boş bırakıyordu: geniş kapta sütun ortalanır ve büyür,
+ * spot satırları iki sütuna dizilir (açılan satır tam genişliğe yayılır). Satırlar türüne göre ton şeridi,
+ * Soru/Cevap ve "Ders notundan" alıntıları ton zemini alır. Yalnız palet token'ları.
+ * ============================================================================= */
+:root[data-design='v12'] {
+  & .f12-sp-col { margin-inline: auto; }
+  @container f12 (min-width: 1240px) {
+    & .f12-sp-col { max-width: 1320px; }
+    & .f12-sp-grp > .f12-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); grid-auto-flow: row dense; }
+    & .f12-sp-grp > .f12-list > .f12-sp-row { border-top: 1px solid var(--color-line-soft); }
+    & .f12-sp-grp > .f12-list > .f12-sp-row:nth-child(-n + 2) { border-top: 0; }
+    & .f12-sp-grp > .f12-list > .f12-sp-row:nth-child(2n) { border-left: 1px solid var(--color-line-soft); }
+    & .f12-sp-grp > .f12-list > .f12-sp-row:has(.f12-sp-more-b) { grid-column: 1 / -1; border-left: 0; }
+    & .f12-sp-grp > .f12-list > .f12-sp-row:has(.f12-sp-more-b) ~ .f12-sp-row { border-left: 0; }
+    & .f12-sp-more-b { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 20px; align-items: start; }
+    & .f12-sp-more-b > :is(.f12-sp-tw, .f12-sp-trap, :last-child) { grid-column: 1 / -1; }
+  }
+
+  /* Ton şeridi: sınav spotu = uyarı sarısı, kritik uyarı = kırmızı, öğrenilen = yeşil */
+  & .f12-sp-row { --sp-tone: var(--color-warn); box-shadow: inset 3px 0 0 color-mix(in srgb, var(--sp-tone) 70%, transparent); }
+  & .f12-sp-row:has(> .f12-badge.bad) { --sp-tone: var(--color-bad); }
+  & .f12-sp-row.is-done { --sp-tone: var(--color-ok); }
+  & .f12-sp-row:hover { background: color-mix(in srgb, var(--sp-tone) 4%, var(--color-white)); }
+  & .f12-sp-t { font-size: 14.5px; letter-spacing: -.005em; }
+  & .f12-sp-txt > p strong, & .f12-sp-txt > p b { color: color-mix(in srgb, var(--sp-tone) 55%, var(--color-ink)); }
+  & .f12-gh .f12-h2 { font-size: 16px; }
+  & .f12-gh .f12-h2::before { content: ''; display: inline-block; width: 8px; height: 8px; margin-right: 8px; border-radius: 3px; background: var(--color-accent); vertical-align: 1px; }
+
+  /* Açılan ayrıntı: Soru (vurgu) · Cevap (yeşil) kutusu, alıntılar vurgu çizgili */
+  & .f12-sp-more-b { border-top-style: solid; border-top-color: var(--color-line-soft); }
+  & .f12-sp-qa { padding: 10px 12px; border-radius: 8px; background: var(--color-canvas); border: 1px solid var(--color-line-soft); }
+  & .f12-sp-qa dt { font-weight: 600; color: var(--color-accent); }
+  & .f12-sp-qa dt:nth-of-type(2) { color: var(--color-ok); }
+  & .f12-sp-qa dd:nth-of-type(2) { font-weight: 600; }
+  & .f12-sp-ul { padding: 8px 12px 8px 28px; border-radius: 8px; background: color-mix(in srgb, var(--color-accent) 5%, var(--color-white)); color: var(--color-ink); }
+  & .f12-sp-ul li::marker { color: var(--color-accent); }
+  & .f12-sp-quote .f12-label { font-weight: 600; color: var(--color-ink-2); }
+  & .f12-sp-quote blockquote { border: 1px solid color-mix(in srgb, var(--color-accent) 22%, var(--color-line)); border-radius: 8px;
+    background: color-mix(in srgb, var(--color-accent) 4%, var(--color-white)); color: var(--color-ink); }
+  & .f12-sp-table thead th { background: color-mix(in srgb, var(--color-accent) 7%, var(--color-white)); color: var(--color-ink); }
+  & .f12-sp-table tbody th { color: var(--color-ink); font-weight: 600; }
+}
+/* Simge düğmeleri dar satırda ezilmesin */
+:root[data-design='v12'] .f12-btn.icon { flex: none; }
+
+/* Kartlar — geniş ekran (2026-10-14): 1920 px'te 720 px'lik tek sütun ekranın %55'ini kullanıyordu. ≥1240 px kapta
+   çalışma alanı solda (≤720), "Göz at" listesi sağda yapışkan, kendi içinde kayan panel. Satır izleri: 12 otomatik + 1 esnek
+   (yapışkan panelin boyu sol sütuna boşluk olarak dağılmasın). */
+@container f12 (min-width: 1240px) {
+  :root[data-design='v12'] .f12-col:has(> .f12-browse) {
+    max-width: 1320px; display: grid; grid-template-columns: minmax(0, 720px) minmax(380px, 1fr); grid-template-rows: repeat(12, auto) 1fr;
+    column-gap: 28px; row-gap: 0; align-items: start;
+    & > :not(.f12-browse) { grid-column: 1; min-width: 0; }
+    & > :not(.f12-browse) ~ :not(.f12-browse) { margin-top: 14px; }
+    & > .f12-browse { grid-column: 2; grid-row: 1 / -1; position: sticky; top: 12px; align-self: start; min-width: 0;
+      max-height: calc(100dvh - 90px); overflow-y: auto; overscroll-behavior: contain; scrollbar-gutter: stable; }
+  }
+}

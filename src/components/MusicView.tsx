@@ -15,6 +15,7 @@ import {
   Check,
 } from 'lucide-react';
 import { PageHeader } from './ui/PageHeader';
+import '../styles/v12/secondary.css';
 import { isDirectAudio, parseYouTube, useMusicPlayer, type MusicTrack } from './music/MusicPlayerContext';
 
 export { parseYouTube };
@@ -66,7 +67,7 @@ export const MusicView: React.FC<{ isAdmin: boolean }> = ({ isAdmin }) => {
   const shown = tracks.map((t, i) => ({ t, i })).filter(({ t }) => list === 'all' || (list === 'mine' ? t.custom : !t.custom));
 
   return (
-    <div className="mux">
+    <div className="mux o12-page o12-mux">
       <PageHeader
         eyebrow="Topluluk"
         title="Müzik"

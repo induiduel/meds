@@ -1,0 +1,1118 @@
+{
+ "baslik": "Sağlık Bakanlığı › Karabük – il sağlık ve halk sağlığı verileri",
+ "derleme_tarihi": "2026-10-14",
+ "nufus": {
+  "toplam": 249614,
+  "yil": 2025,
+  "kaynak": "tuik_adnks_2025",
+  "konum": "İl ve ilçelere göre il/ilçe merkezi, belde/köy nüfusu ve yıllık nüfus artış hızı, 2025",
+  "erkek": 126021,
+  "kadin": 123593,
+  "il_ilce_merkezi": 193921,
+  "belde_koy": 55693,
+  "yillik_artis_hizi_binde": -3.46,
+  "onceki_yil": {
+   "toplam": 250478,
+   "yil": 2024,
+   "kaynak": "sb-siy-2024",
+   "konum": "Tablo 1.3 (TÜİK ADNKS 2024 kaynaklı)"
+  },
+  "ilceler": [
+   {
+    "ad": "Merkez",
+    "nufus": 135819,
+    "ilce_merkezi": 123417,
+    "belde_koy": 12402,
+    "yillik_artis_hizi_binde": 7.5
+   },
+   {
+    "ad": "Safranbolu",
+    "nufus": 69592,
+    "ilce_merkezi": 52343,
+    "belde_koy": 17249,
+    "yillik_artis_hizi_binde": 2.2
+   },
+   {
+    "ad": "Yenice",
+    "nufus": 18984,
+    "ilce_merkezi": 9194,
+    "belde_koy": 9790,
+    "yillik_artis_hizi_binde": -24.0
+   },
+   {
+    "ad": "Eskipazar",
+    "nufus": 12570,
+    "ilce_merkezi": 6231,
+    "belde_koy": 6339,
+    "yillik_artis_hizi_binde": -41.2
+   },
+   {
+    "ad": "Eflani",
+    "nufus": 8663,
+    "ilce_merkezi": 2183,
+    "belde_koy": 6480,
+    "yillik_artis_hizi_binde": -57.2
+   },
+   {
+    "ad": "Ovacık",
+    "nufus": 3986,
+    "ilce_merkezi": 553,
+    "belde_koy": 3433,
+    "yillik_artis_hizi_binde": -123.3
+   }
+  ],
+  "yas_65_ustu_orani": {
+   "deger": 16.0,
+   "birim": "%",
+   "sayi": 39941,
+   "yil": 2025,
+   "kaynak": "tuik_adnks_2025",
+   "konum": "İllere göre yaş bağımlılık oranı, 2007-2025 (65+ nüfus / toplam nüfus; oran hesaplandı)",
+   "turkiye": 11.1
+  },
+  "yas_0_14_orani": {
+   "deger": 14.5,
+   "birim": "%",
+   "sayi": 36177,
+   "yil": 2025,
+   "kaynak": "tuik_adnks_2025",
+   "konum": "İllere göre yaş bağımlılık oranı (oran hesaplandı)",
+   "turkiye": 20.4
+  },
+  "yasli_bagimlilik_orani": {
+   "deger": 23.0,
+   "birim": "%",
+   "yil": 2025,
+   "kaynak": "tuik_adnks_2025",
+   "turkiye": 16.2
+  },
+  "toplam_bagimlilik_orani": {
+   "deger": 43.9,
+   "birim": "%",
+   "yil": 2025,
+   "kaynak": "tuik_adnks_2025",
+   "turkiye": 46.0
+  },
+  "kent_kir_2024": {
+   "yogun_kent_yuzde": 64.8,
+   "orta_yogun_kent_yuzde": 11.0,
+   "kir_yuzde": 24.3,
+   "yil": 2024,
+   "kaynak": "sb-siy-2024",
+   "konum": "Tablo 1.3 (TÜİK kaynaklı), PDF s. 46"
+  }
+ },
+ "gostergeler": [
+  {
+   "kod": "kaba_dogum_hizi",
+   "ad": "Kaba doğum hızı",
+   "deger": 7.31,
+   "birim": "binde",
+   "yil": 2025,
+   "turkiye": 10.43,
+   "kaynak": "tuik_dogum_2025",
+   "konum": "İllere göre kaba doğum hızı, 2009-2025"
+  },
+  {
+   "kod": "tdh",
+   "ad": "Toplam doğurganlık hızı",
+   "deger": 1.14,
+   "birim": "kadın başına çocuk",
+   "yil": 2025,
+   "turkiye": 1.42,
+   "kaynak": "tuik_dogum_2025",
+   "konum": "İllere göre toplam doğurganlık hızı, 2009-2025",
+   "not": "Karabük 2009'da 1,67 idi; nüfus yenilenme düzeyinin (2,1) belirgin altında."
+  },
+  {
+   "kod": "genel_dogurganlik_hizi",
+   "ad": "Genel doğurganlık hızı",
+   "deger": 36.1,
+   "birim": "binde (15-49 yaş kadın)",
+   "yil": 2025,
+   "turkiye": 47.4,
+   "kaynak": "tuik_dogum_2025",
+   "konum": "İllere göre genel doğurganlık hızı, 2009-2025"
+  },
+  {
+   "kod": "bebek_olum_hizi",
+   "ad": "Bebek ölüm hızı",
+   "deger": 6.01,
+   "birim": "binde (canlı doğum)",
+   "yil": 2025,
+   "turkiye": 7.8,
+   "kaynak": "tuik_olum_2025",
+   "konum": "İllere göre bebek ölüm hızı, 2009-2025",
+   "not": "Küçük sayılarla hesaplandığı için yıldan yıla dalgalı: 2023(r) 11,91; 2024(r) 8,23."
+  },
+  {
+   "kod": "bes_yas_alti_olum_hizi",
+   "ad": "Beş yaş altı ölüm hızı",
+   "deger": 6.56,
+   "birim": "binde (canlı doğum)",
+   "yil": 2025,
+   "turkiye": 9.54,
+   "kaynak": "tuik_olum_2025",
+   "konum": "İllere göre beş yaş altı ölüm hızı, 2009-2025"
+  },
+  {
+   "kod": "kaba_olum_hizi",
+   "ad": "Kaba ölüm hızı",
+   "deger": 8.13,
+   "birim": "binde",
+   "yil": 2025,
+   "turkiye": 5.73,
+   "kaynak": "tuik_olum_2025",
+   "konum": "İllere göre kaba ölüm hızı, 2009-2025",
+   "not": "Yaşlı nüfus oranının yüksekliğiyle uyumlu; yaşa göre standardize değildir."
+  },
+  {
+   "kod": "dogumda_beklenen_yasam",
+   "ad": "Doğuşta beklenen yaşam süresi (toplam)",
+   "deger": 78.0,
+   "birim": "yıl",
+   "yil": "2021-2023",
+   "turkiye": 77.3,
+   "kaynak": "tuik_hayat_2021_2023",
+   "konum": "İllere ve cinsiyete göre doğuşta beklenen yaşam süreleri",
+   "not": "Erkek 75,3 (TR 74,7); kadın 80,8 (TR 80,0). İl düzeyinde yayımlanan en güncel dönem."
+  },
+  {
+   "kod": "olum_dolasim_payi",
+   "ad": "Ölümlerde dolaşım sistemi hastalıklarının payı",
+   "deger": 39.3,
+   "birim": "%",
+   "yil": 2025,
+   "turkiye": 34.7,
+   "kaynak": "tuik_olum_2025",
+   "konum": "İl ve seçilmiş ölüm nedenlerine göre ölümler, 2018-2025 (pay hesaplandı)",
+   "not": "Karabük 2025: toplam 2.032 ölüm; dolaşım 799, neoplazm 318, solunum 291, endokrin-metabolik 146, dışsal nedenler 71, sinir sistemi 63, diğer 281, bilinmeyen 63."
+  },
+  {
+   "kod": "olum_neoplazm_payi",
+   "ad": "Ölümlerde tümörlerin (neoplazm) payı",
+   "deger": 15.6,
+   "birim": "%",
+   "yil": 2025,
+   "turkiye": 16.1,
+   "kaynak": "tuik_olum_2025",
+   "konum": "İl ve seçilmiş ölüm nedenlerine göre ölümler (pay hesaplandı)"
+  },
+  {
+   "kod": "olum_solunum_payi",
+   "ad": "Ölümlerde solunum sistemi hastalıklarının payı",
+   "deger": 14.3,
+   "birim": "%",
+   "yil": 2025,
+   "turkiye": 15.1,
+   "kaynak": "tuik_olum_2025",
+   "konum": "İl ve seçilmiş ölüm nedenlerine göre ölümler (pay hesaplandı)",
+   "not": "2024(r): 227/2.005; 2025'te artış var. Yorum için çok yıllı izlem gerekir."
+  },
+  {
+   "kod": "kaba_intihar_hizi",
+   "ad": "Kaba intihar hızı",
+   "deger": 5.2,
+   "birim": "yüz binde",
+   "yil": 2025,
+   "turkiye": 5.36,
+   "kaynak": "tuik_olum_2025",
+   "konum": "İllere göre kaba intihar hızı, 2009-2025 (olay yerine göre)"
+  },
+  {
+   "kod": "yatak_10000",
+   "ad": "10.000 kişiye düşen hastane yatağı (tüm sektörler)",
+   "deger": 31.1,
+   "birim": "yatak / 10.000 kişi",
+   "yil": 2024,
+   "turkiye": 31.3,
+   "kaynak": "sb-siy-2024",
+   "konum": "Tablo 7.20, PDF s. 192",
+   "not": "İlde 6 hastane, 779 yatak (637 nitelikli, 131 yoğun bakım)."
+  },
+  {
+   "kod": "yb_yatak_10000",
+   "ad": "10.000 kişiye düşen yoğun bakım yatağı",
+   "deger": 5.2,
+   "birim": "yatak / 10.000 kişi",
+   "yil": 2024,
+   "turkiye": 5.7,
+   "kaynak": "sb-siy-2024",
+   "konum": "Tablo 7.20, PDF s. 192"
+  },
+  {
+   "kod": "nitelikli_yatak_orani",
+   "ad": "Nitelikli yatak oranı (yoğun bakım hariç)",
+   "deger": 98.3,
+   "birim": "%",
+   "yil": 2024,
+   "turkiye": 83.4,
+   "kaynak": "sb-siy-2024",
+   "konum": "Tablo 7.20, PDF s. 192"
+  },
+  {
+   "kod": "ahb_basina_nufus_2024",
+   "ad": "Aile hekimliği birimi başına düşen nüfus",
+   "deger": 2846,
+   "birim": "kişi",
+   "yil": 2024,
+   "turkiye": 2970,
+   "kaynak": "sb-siy-2024",
+   "konum": "Tablo 7.20, PDF s. 192",
+   "not": "2024'te 88 birim."
+  },
+  {
+   "kod": "ahb_basina_nufus_2026",
+   "ad": "Aile hekimliği birimi başına düşen nüfus (güncel hesap)",
+   "deger": 2773,
+   "birim": "kişi",
+   "yil": "2025 nüfusu / Eylül 2026 birim sayısı",
+   "turkiye": null,
+   "kaynak": "ism_ah_2026_09",
+   "konum": "Hesaplandı: ADNKS 2025 nüfusu (249.614) / 90 birim",
+   "not": "Bileşik hesap; resmî yayımlanmış değer değildir. Nüfus kaynağı: tuik_adnks_2025."
+  },
+  {
+   "kod": "kisi_basi_hekime_muracaat",
+   "ad": "Kişi başı hekime müracaat sayısı (tüm sektörler)",
+   "deger": 13.5,
+   "birim": "müracaat/kişi/yıl",
+   "yil": 2024,
+   "turkiye": 12.2,
+   "kaynak": "sb-siy-2024",
+   "konum": "Tablo 8.26, PDF s. 234"
+  },
+  {
+   "kod": "birinci_basamak_orani",
+   "ad": "Birinci basamak müracaatların tüm müracaatlar içindeki oranı",
+   "deger": 40.9,
+   "birim": "%",
+   "yil": 2024,
+   "turkiye": 43.3,
+   "kaynak": "sb-siy-2024",
+   "konum": "Tablo 8.26, PDF s. 234 (oran hesaplandı: 1.381.066 birinci basamak / 3.380.418 toplam)"
+  },
+  {
+   "kod": "kisi_basi_dis_muracaat",
+   "ad": "Kişi başı diş hekimine müracaat",
+   "deger": 0.97,
+   "birim": "müracaat/kişi/yıl",
+   "yil": 2024,
+   "turkiye": 0.73,
+   "kaynak": "sb-siy-2024",
+   "konum": "Tablo 8.26, PDF s. 234"
+  },
+  {
+   "kod": "yatak_doluluk",
+   "ad": "Hastanelerde yatak doluluk oranı",
+   "deger": 58.5,
+   "birim": "%",
+   "yil": 2024,
+   "turkiye": 59.8,
+   "kaynak": "sb-siy-2024",
+   "konum": "Tablo 8.26 (devamı), PDF s. 236",
+   "not": "Yatan hasta 45.431; ameliyat 12.889; yatak devir hızı 58,3."
+  },
+  {
+   "kod": "ortalama_kalis",
+   "ad": "Yatan hasta ortalama kalış günü",
+   "deger": 3.7,
+   "birim": "gün",
+   "yil": 2024,
+   "turkiye": 4.2,
+   "kaynak": "sb-siy-2024",
+   "konum": "Tablo 8.26 (devamı), PDF s. 236"
+  },
+  {
+   "kod": "hekim_100000",
+   "ad": "100.000 kişiye düşen toplam hekim (tüm sektörler)",
+   "deger": 228,
+   "birim": "hekim / 100.000",
+   "yil": 2024,
+   "turkiye": 258,
+   "kaynak": "sb-siy-2024",
+   "konum": "Tablo 10.12, PDF s. 291 (oran 2024 nüfusuyla hesaplandı)",
+   "not": "Karabük 2024: 571 hekim = 243 uzman + 183 pratisyen + 145 asistan."
+  },
+  {
+   "kod": "hemsire_ebe_100000",
+   "ad": "100.000 kişiye düşen hemşire + ebe",
+   "deger": 422,
+   "birim": "kişi / 100.000",
+   "yil": 2024,
+   "turkiye": 381,
+   "kaynak": "sb-siy-2024",
+   "konum": "Tablo 10.12, PDF s. 291 (oran hesaplandı)",
+   "not": "Karabük 2024: 807 hemşire, 250 ebe."
+  },
+  {
+   "kod": "acil_istasyon_basina_nufus",
+   "ad": "Acil yardım istasyonu başına düşen nüfus",
+   "deger": 14734,
+   "birim": "kişi",
+   "yil": 2024,
+   "turkiye": 24490,
+   "kaynak": "sb-siy-2024",
+   "konum": "Tablo 12.4, PDF s. 323"
+  },
+  {
+   "kod": "acil_ambulans_basina_nufus",
+   "ad": "Acil yardım ambulansı başına düşen nüfus",
+   "deger": 7590,
+   "birim": "kişi",
+   "yil": 2024,
+   "turkiye": 15124,
+   "kaynak": "sb-siy-2024",
+   "konum": "Tablo 12.4, PDF s. 323"
+  },
+  {
+   "kod": "asilsiz_ihbar",
+   "ad": "112'de asılsız ihbar oranı",
+   "deger": 8.2,
+   "birim": "%",
+   "yil": 2024,
+   "turkiye": 11.2,
+   "kaynak": "sb-siy-2024",
+   "konum": "Tablo 12.4, PDF s. 323"
+  }
+ ],
+ "kurum_sayilari": [
+  {
+   "tur": "Aile sağlığı merkezi (ASM)",
+   "sayi": 34,
+   "yil": 2026,
+   "yontem": "İl sağlık müdürlüğünün Eylül 2026 aile hekimi–ASÇ listesinden (xlsx) ASM adları sayıldı",
+   "kaynak": "ism_ah_2026_09",
+   "konum": "AH-ASÇ BİLGİLERİ güncel.xlsx, sayfa 1",
+   "adlar": [
+    "Hürriyet A.S.M. (Merkez)",
+    "Esentepe A.S.M. (Merkez)",
+    "Kurtuluş A.S.M. (Merkez)",
+    "120 Evler A.S.M. (Merkez)",
+    "Kayabaşı A.S.M. (Merkez)",
+    "Kartaltepe A.S.M. (Merkez)",
+    "Kılavuzlar A.S.M. (Merkez)",
+    "Umut A.S.M. (Merkez)",
+    "Aydınlıkevler A.S.M. (Merkez)",
+    "100.Yıl A.S.M. (Merkez)",
+    "Soğuksu A.S.M. (Merkez)",
+    "Atatürk A.S.M. (Merkez)",
+    "Yaşam A.S.M. (Merkez)",
+    "Şirinevler A.S.M. (Merkez)",
+    "Cumhuriyet A.S.M. (Merkez)",
+    "Bahçelievler A.S.M. (Merkez)",
+    "Kapullu A.S.M. (Merkez)",
+    "Cumayanı A.S.M. (Merkez)",
+    "Cezaevi A.S.M. (Merkez)",
+    "Vahdet ASM (Merkez)",
+    "Yenimahalle A.S.M. (Safranbolu)",
+    "Çarşı A.S.M. (Safranbolu)",
+    "Bağlar A.S.M. (Safranbolu)",
+    "Safran A.S.M. (Safranbolu)",
+    "Barış ASM (Safranbolu)",
+    "Emek A.S.M. (Safranbolu)",
+    "Bostanbükü A.S.M. (Safranbolu)",
+    "Ovacuma A.S.M. (Safranbolu)",
+    "Yazıköy A.S.M. (Safranbolu)",
+    "Eskipazar A.S.M. (Eskipazar)",
+    "Eflani A.S.M. (Eflani)",
+    "Yenice A.S.M. (Yenice)",
+    "Çengeller A.S.M. (Yenice)",
+    "Ovacık A.S.M. (Ovacık)"
+   ],
+   "not": "Listede 'Cezaevi A.S.M.' de yer alıyor (ceza infaz kurumu nüfusuna hizmet)."
+  },
+  {
+   "tur": "Aile hekimliği birimi (AHB)",
+   "sayi": 90,
+   "yil": 2026,
+   "yontem": "Aynı listede ÇKYS kodlu AHB satırları sayıldı; 90 birimin tamamında hekim adı yazılı (boş birim görünmüyor)",
+   "kaynak": "ism_ah_2026_09",
+   "konum": "AH-ASÇ BİLGİLERİ güncel.xlsx",
+   "not": "2024 yıllığında 88 birim; 02.01.2026'da Vahdet ASM (Merkez) ve Yenimahalle ASM'de (Safranbolu) birer yeni birim açıldı (ism_ah_yerlestirme_2025_3) → 88+2=90, tutarlı."
+  },
+  {
+   "tur": "Aile hekimi (birimde görevli hekim)",
+   "sayi": 90,
+   "yil": 2026,
+   "yontem": "Listede hekim adı dolu AHB satırları sayıldı",
+   "kaynak": "ism_ah_2026_09",
+   "konum": "AH-ASÇ BİLGİLERİ güncel.xlsx",
+   "not": "Bir birimde (Çengeller ASM, 78.06.06) aile sağlığı çalışanı alanı boş."
+  },
+  {
+   "tur": "Hastane (tüm sektörler)",
+   "sayi": 6,
+   "yil": 2024,
+   "yontem": "Sağlık İstatistikleri Yıllığı il tablosu",
+   "kaynak": "sb-siy-2024",
+   "konum": "Tablo 7.20, PDF s. 192",
+   "not": "Yıllık hastane adlarını vermiyor. Bakanlık alan adları altında doğrulanan genel hastaneler: KEAH, Safranbolu DH, Eskipazar İDH, Yenice DH, Eflani İEDH, Ovacık İDH (6). Ağız ve Diş Sağlığı EAH bu sayının içinde mi, ayrıca mı sayıldığı yıllıktan teyit edilemedi."
+  },
+  {
+   "tur": "Hastane yatağı (tüm sektörler)",
+   "sayi": 779,
+   "yil": 2024,
+   "yontem": "Sağlık İstatistikleri Yıllığı il tablosu",
+   "kaynak": "sb-siy-2024",
+   "konum": "Tablo 7.20",
+   "not": "637 nitelikli, 131 yoğun bakım yatağı."
+  },
+  {
+   "tur": "112 acil yardım istasyonu",
+   "sayi": 17,
+   "yil": 2024,
+   "yontem": "Sağlık İstatistikleri Yıllığı il tablosu",
+   "kaynak": "sb-siy-2024",
+   "konum": "Tablo 12.4, PDF s. 323"
+  },
+  {
+   "tur": "112 acil yardım ambulansı",
+   "sayi": 33,
+   "yil": 2024,
+   "yontem": "Sağlık İstatistikleri Yıllığı il tablosu",
+   "kaynak": "sb-siy-2024",
+   "konum": "Tablo 12.4, PDF s. 323"
+  },
+  {
+   "tur": "Toplam hekim",
+   "sayi": 571,
+   "yil": 2024,
+   "yontem": "Sağlık İstatistikleri Yıllığı il tablosu",
+   "kaynak": "sb-siy-2024",
+   "konum": "Tablo 10.12, PDF s. 291",
+   "not": "Uzman 243, pratisyen 183, asistan 145."
+  },
+  {
+   "tur": "Diş hekimi",
+   "sayi": 134,
+   "yil": 2024,
+   "yontem": "Sağlık İstatistikleri Yıllığı il tablosu",
+   "kaynak": "sb-siy-2024",
+   "konum": "Tablo 10.12"
+  },
+  {
+   "tur": "Eczacı",
+   "sayi": 107,
+   "yil": 2024,
+   "yontem": "Sağlık İstatistikleri Yıllığı il tablosu",
+   "kaynak": "sb-siy-2024",
+   "konum": "Tablo 10.12"
+  },
+  {
+   "tur": "Hemşire",
+   "sayi": 807,
+   "yil": 2024,
+   "yontem": "Sağlık İstatistikleri Yıllığı il tablosu",
+   "kaynak": "sb-siy-2024",
+   "konum": "Tablo 10.12"
+  },
+  {
+   "tur": "Ebe",
+   "sayi": 250,
+   "yil": 2024,
+   "yontem": "Sağlık İstatistikleri Yıllığı il tablosu",
+   "kaynak": "sb-siy-2024",
+   "konum": "Tablo 10.12"
+  },
+  {
+   "tur": "Diğer sağlık personeli",
+   "sayi": 1074,
+   "yil": 2024,
+   "yontem": "Sağlık İstatistikleri Yıllığı il tablosu",
+   "kaynak": "sb-siy-2024",
+   "konum": "Tablo 10.12"
+  },
+  {
+   "tur": "Kuduz aşı uygulama merkezi",
+   "sayi": 7,
+   "yil": 2023,
+   "yontem": "İl sağlık müdürlüğü kuduz aşı merkezleri tablosundan sayıldı",
+   "kaynak": "ism_kuduz_2023",
+   "konum": "Tablo görseli",
+   "adlar": [
+    "Karabük Eğitim Araştırma Hastanesi (Merkez)",
+    "Safranbolu Devlet Hastanesi",
+    "Ovacuma ASM (Safranbolu)",
+    "Yenice Devlet Hastanesi",
+    "Eskipazar Entegre İlçe Devlet Hastanesi",
+    "Eflani Entegre İlçe Devlet Hastanesi",
+    "Ovacık Entegre İlçe Sağlık Merkezi"
+   ]
+  },
+  {
+   "tur": "Hava kalitesi sürekli izleme istasyonu (SİM)",
+   "sayi": 5,
+   "yil": 2024,
+   "yontem": "İl Çevre Durum Raporu istasyon çizelgesinden sayıldı",
+   "kaynak": "csb_cdr_2024",
+   "konum": "Çizelge 6 ve A.8",
+   "adlar": [
+    "Tören Alanı",
+    "75. Yıl",
+    "Safranbolu",
+    "Kardemir-1",
+    "Kardemir-2"
+   ],
+   "not": "75. Yıl istasyonundan 2024'te sistem kaynaklı veri alınamadı."
+  }
+ ],
+ "hastaneler": [
+  {
+   "ad": "Karabük Eğitim ve Araştırma Hastanesi (KEAH)",
+   "ilce": "Merkez",
+   "tur": "Sağlık Bakanlığı eğitim ve araştırma hastanesi; Karabük Üniversitesi Tıp Fakültesi'nin ortak kullanım protokolüyle uygulama hastanesi",
+   "not": "Şirinevler ana bina 474 + 5000 Evler ek hizmet binası 76 = 550 yatak; 89.298 m² kapalı alan. 16.07.2012'de Karabük DH, Şirinevler DH ve Kadın Doğum ve Çocuk Hastanesi birleştirildi; 2014'te Şirinevler'deki yeni binaya geçildi; adı 05.12.2017'de KEAH olarak tescil edildi. 5000 Evler semt polikliniğinde yalnız TRSM hizmeti sürüyor. 5000 Evler ek binasında 24 yataklı psikiyatri ve 52 yataklı fizik tedavi servisi var. Özellikli hizmetler: hemodiyaliz, anjiyo, nükleer tıp, onkoloji, kemoterapi, uyku laboratuvarı, çocuk izlem merkezi, evde sağlık, gebe okulu, yanık ünitesi, kronik yara bakım, laktasyon polikliniği, diyabet okulu, geleneksel tıp. Eylül 2026'da hidroterapi eşliğinde doğum (suda doğum) başladı.",
+   "url": "https://karabukeah.saglik.gov.tr/",
+   "kaynak": "keah_hastanemiz",
+   "ek_kaynaklar": [
+    "keah_ek_bina",
+    "keah_ozellikli",
+    "ism_suda_dogum_2026"
+   ]
+  },
+  {
+   "ad": "Karabük Ağız ve Diş Sağlığı Eğitim ve Araştırma Hastanesi",
+   "ilce": "Merkez",
+   "tur": "Ağız ve diş sağlığı eğitim ve araştırma hastanesi",
+   "not": "Evde sağlık hizmetleri birimi var. İl sağlık müdürlüğünün eski haberlerinde 'Karabük Ağız ve Diş Sağlığı Merkezi' olarak geçiyor.",
+   "url": "https://karabukadsh.saglik.gov.tr/",
+   "kaynak": "adseah_site"
+  },
+  {
+   "ad": "Safranbolu Devlet Hastanesi",
+   "ilce": "Safranbolu",
+   "tur": "Devlet hastanesi (ikinci basamak)",
+   "not": "1890'da Türkiye'nin ilk beş zührevi hastalıklar hastanesinden biri olarak açıldı; 50 yataklı bina 1972'de; 75 yataklı yeni bina 2015'te tamamlandı. Cerrahi, ortopedi, üroloji, nöroloji, dahiliye, çocuk ve FTR klinikleri; 5 yataklı yoğun bakım; 7 yataklı hemodiyaliz ünitesi (6+1 cihaz, günde 13 hasta); 7/24 acil; evde sağlık. 11.11.2021'de HIMSS EMRAM Seviye 6.",
+   "url": "https://safranboludh.saglik.gov.tr/",
+   "kaynak": "safranbolu_tarihce",
+   "ek_kaynaklar": [
+    "safranbolu_diyaliz"
+   ]
+  },
+  {
+   "ad": "Eskipazar İlçe Devlet Hastanesi",
+   "ilce": "Eskipazar",
+   "tur": "İlçe devlet hastanesi (il sağlık müdürlüğü kuduz listesinde 'Eskipazar Entegre İlçe Devlet Hastanesi')",
+   "not": "Acil poliklinik, dahiliye polikliniği, ağız ve diş polikliniği, evde sağlık, iş yeri hekimliği birimi.",
+   "url": "https://eskipazardh.saglik.gov.tr/",
+   "kaynak": "eskipazar_site",
+   "ek_kaynaklar": [
+    "ism_kuduz_2023"
+   ]
+  },
+  {
+   "ad": "Yenice Devlet Hastanesi",
+   "ilce": "Yenice",
+   "tur": "Devlet hastanesi (ilçe)",
+   "not": "Diyaliz ünitesi: 4+1 cihaz, 1 hekim, 2 sağlık personeli (sayfa tarihi 2021).",
+   "url": "https://yenicedh.saglik.gov.tr/",
+   "kaynak": "yenice_site"
+  },
+  {
+   "ad": "Karabük Eflani İlçe Entegre Devlet Hastanesi",
+   "ilce": "Eflani",
+   "tur": "İlçe entegre devlet hastanesi (birinci ve ikinci basamak bir arada)",
+   "not": "Haziran 2015'te yeni binaya geçti. Acil servis, uzman aile hekimliği polikliniği, aile sağlığı merkezi, görüntüleme, laboratuvar, ağız ve diş polikliniği; evde sağlık.",
+   "url": "https://eflanidh.saglik.gov.tr/",
+   "kaynak": "eflani_tarihce"
+  },
+  {
+   "ad": "Ovacık İlçe Devlet Hastanesi",
+   "ilce": "Ovacık",
+   "tur": "İlçe devlet hastanesi (il sağlık müdürlüğü 2023 kuduz listesinde 'Ovacık Entegre İlçe Sağlık Merkezi')",
+   "not": "1964-1968'de yapılan binada (Pulur Mah.) hizmet veriyor. Acil, uzman aile hekimi polikliniği, ASM, toplum sağlığı birimi, diş, laboratuvar, röntgen, 112 birimi, çevre sağlığı, evde sağlık.",
+   "url": "https://ovacikidh.saglik.gov.tr/",
+   "kaynak": "ovacik_tarihce",
+   "ek_kaynaklar": [
+    "ism_kuduz_2023"
+   ]
+  }
+ ],
+ "ilceler": [
+  {
+   "ad": "Merkez",
+   "nufus": 135819,
+   "asm": 20,
+   "asm_adlari": [
+    "Hürriyet A.S.M.",
+    "Esentepe A.S.M.",
+    "Kurtuluş A.S.M.",
+    "120 Evler A.S.M.",
+    "Kayabaşı A.S.M.",
+    "Kartaltepe A.S.M.",
+    "Kılavuzlar A.S.M.",
+    "Umut A.S.M.",
+    "Aydınlıkevler A.S.M.",
+    "100.Yıl A.S.M.",
+    "Soğuksu A.S.M.",
+    "Atatürk A.S.M.",
+    "Yaşam A.S.M.",
+    "Şirinevler A.S.M.",
+    "Cumhuriyet A.S.M.",
+    "Bahçelievler A.S.M.",
+    "Kapullu A.S.M.",
+    "Cumayanı A.S.M.",
+    "Cezaevi A.S.M.",
+    "Vahdet ASM"
+   ],
+   "aile_hekimi_birimi": 50,
+   "ahb_basina_nufus": 2716,
+   "hastane": "Karabük Eğitim ve Araştırma Hastanesi; Karabük Ağız ve Diş Sağlığı EAH",
+   "kaynak": "ism_ah_2026_09",
+   "yontem": "ASM ve AHB Eylül 2026 listesinden sayıldı; AHB başına nüfus = ADNKS 2025 ilçe nüfusu / AHB sayısı (hesaplandı)",
+   "ek_kaynaklar": [
+    "tuik_adnks_2025"
+   ]
+  },
+  {
+   "ad": "Safranbolu",
+   "nufus": 69592,
+   "asm": 9,
+   "asm_adlari": [
+    "Yenimahalle A.S.M.",
+    "Çarşı A.S.M.",
+    "Bağlar A.S.M.",
+    "Safran A.S.M.",
+    "Barış ASM",
+    "Emek A.S.M.",
+    "Bostanbükü A.S.M.",
+    "Ovacuma A.S.M.",
+    "Yazıköy A.S.M."
+   ],
+   "aile_hekimi_birimi": 23,
+   "ahb_basina_nufus": 3026,
+   "hastane": "Safranbolu Devlet Hastanesi",
+   "kaynak": "ism_ah_2026_09",
+   "yontem": "ASM ve AHB Eylül 2026 listesinden sayıldı; AHB başına nüfus = ADNKS 2025 ilçe nüfusu / AHB sayısı (hesaplandı)",
+   "ek_kaynaklar": [
+    "tuik_adnks_2025"
+   ]
+  },
+  {
+   "ad": "Yenice",
+   "nufus": 18984,
+   "asm": 2,
+   "asm_adlari": [
+    "Yenice A.S.M.",
+    "Çengeller A.S.M."
+   ],
+   "aile_hekimi_birimi": 7,
+   "ahb_basina_nufus": 2712,
+   "hastane": "Yenice Devlet Hastanesi",
+   "kaynak": "ism_ah_2026_09",
+   "yontem": "ASM ve AHB Eylül 2026 listesinden sayıldı; AHB başına nüfus = ADNKS 2025 ilçe nüfusu / AHB sayısı (hesaplandı)",
+   "ek_kaynaklar": [
+    "tuik_adnks_2025"
+   ]
+  },
+  {
+   "ad": "Eskipazar",
+   "nufus": 12570,
+   "asm": 1,
+   "asm_adlari": [
+    "Eskipazar A.S.M."
+   ],
+   "aile_hekimi_birimi": 5,
+   "ahb_basina_nufus": 2514,
+   "hastane": "Eskipazar İlçe Devlet Hastanesi",
+   "kaynak": "ism_ah_2026_09",
+   "yontem": "ASM ve AHB Eylül 2026 listesinden sayıldı; AHB başına nüfus = ADNKS 2025 ilçe nüfusu / AHB sayısı (hesaplandı)",
+   "ek_kaynaklar": [
+    "tuik_adnks_2025"
+   ]
+  },
+  {
+   "ad": "Eflani",
+   "nufus": 8663,
+   "asm": 1,
+   "asm_adlari": [
+    "Eflani A.S.M."
+   ],
+   "aile_hekimi_birimi": 4,
+   "ahb_basina_nufus": 2166,
+   "hastane": "Karabük Eflani İlçe Entegre Devlet Hastanesi",
+   "kaynak": "ism_ah_2026_09",
+   "yontem": "ASM ve AHB Eylül 2026 listesinden sayıldı; AHB başına nüfus = ADNKS 2025 ilçe nüfusu / AHB sayısı (hesaplandı)",
+   "ek_kaynaklar": [
+    "tuik_adnks_2025"
+   ]
+  },
+  {
+   "ad": "Ovacık",
+   "nufus": 3986,
+   "asm": 1,
+   "asm_adlari": [
+    "Ovacık A.S.M."
+   ],
+   "aile_hekimi_birimi": 1,
+   "ahb_basina_nufus": 3986,
+   "hastane": "Ovacık İlçe Devlet Hastanesi",
+   "kaynak": "ism_ah_2026_09",
+   "yontem": "ASM ve AHB Eylül 2026 listesinden sayıldı; AHB başına nüfus = ADNKS 2025 ilçe nüfusu / AHB sayısı (hesaplandı)",
+   "ek_kaynaklar": [
+    "tuik_adnks_2025"
+   ]
+  }
+ ],
+ "birimler": [
+  {
+   "ad": "Sağlıklı Hayat Merkezi (SHM)",
+   "adres_ilce": "Merkez – 5000 Evler 75. Yıl Mah. 20. Cadde No:4, Kat -1/-2 (İl Sağlık Müdürlüğü binası)",
+   "aciklama": "Sigara bırakma polikliniği, fizyoterapi ve egzersiz danışmanlığı, beslenme danışmanlığı, KETEM ve üreme sağlığı hizmetleri (mamografi 40-69 yaş, HPV taraması 30-65 yaş), aile planlaması, evlilik öncesi danışmanlık, gebe sınıfı, okul sağlığı, koruyucu ağız-diş sağlığı (okullarda yılda 2 muayene, florürlü vernik), yabancı uyruklular polikliniği, bulaşıcı hastalıklar ve tüberküloz birimi.",
+   "kaynak": "ism_shm"
+  },
+  {
+   "ad": "KETEM (Kanser Erken Teşhis, Tarama ve Eğitim Merkezi) hizmeti",
+   "adres_ilce": "Merkez (SHM bünyesinde tanımlanıyor)",
+   "aciklama": "İl Hıfzıssıhha 2026/3 kararına göre ilde taramalar KETEM, toplum sağlığı merkezleri ve aile hekimliklerinde yapılıyor: meme (40-69 yaş, KETEM'de mamografi), serviks (30-65 yaş, HPV-DNA), kolorektal (50-70 yaş, gaitada gizli kan). Mobil kanser tarama aracıyla sahada mamografi de yapılıyor (Eylül 2024).",
+   "kaynak": "ism_shm",
+   "ek_kaynaklar": [
+    "ism_hk_2026",
+    "ism_kanser_tarama_2024"
+   ]
+  },
+  {
+   "ad": "Toplum Ruh Sağlığı Merkezi (TRSM)",
+   "adres_ilce": "Merkez – KEAH 5000 Evler semt polikliniği",
+   "aciklama": "KEAH tanıtımına göre 5000 Evler semt polikliniğinde yalnız TRSM hizmeti verilmeye devam ediyor.",
+   "kaynak": "keah_hastanemiz"
+  },
+  {
+   "ad": "Verem Savaş Dispanseri",
+   "adres_ilce": "Merkez (adres teyit edilemedi)",
+   "aciklama": "2022'de 1.500'den fazla kişiye akciğer grafisi çekildi; hastaların tedavisi %87 başarıyla sonlandı (dispanser hekiminin 07.01.2023 tarihli açıklaması). Cezaevi, sağlık çalışanları ve risk gruplarına yıllık tarama.",
+   "kaynak": "ism_verem_2023"
+  },
+  {
+   "ad": "Karabük Halk Sağlığı Laboratuvarı",
+   "adres_ilce": "Merkez",
+   "aciklama": "L2 tipi; TS EN ISO/IEC 17025 kapsamında değerlendiriliyor. Klinik dışı: içme-kullanma ve havuz suyu mikrobiyolojisi (total koliform, E. coli, enterokok, P. aeruginosa, C. perfringens vb.) ve kimyası (amonyum, nitrit, nitrat, pH, iletkenlik, alüminyum, bakır vb.). Sitede ayrıca tüberküloz ve kan parazitleri (sıtma) laboratuvarı sayfaları var.",
+   "kaynak": "ism_hsl_2026"
+  },
+  {
+   "ad": "İl Ambulans Servisi Başhekimliği (112)",
+   "adres_ilce": "İl geneli",
+   "aciklama": "2024'te 17 istasyon ve 33 acil yardım ambulansı. Karabük, Eylül 2026'da 10. Bölge ASKOM toplantısına (Karabük, Zonguldak, Bolu, Düzce, Bartın) ev sahipliği yaptı.",
+   "kaynak": "ism_askom_2026"
+  },
+  {
+   "ad": "Evde Sağlık Hizmetleri",
+   "adres_ilce": "Hastane tabanlı (KEAH, Safranbolu, Eskipazar, Eflani, Ovacık, ADSEAH)",
+   "aciklama": "Başvuru 444 38 33; KEAH bilgi hattı 0370 415 80 00. Hizmet, hastanelerdeki evde sağlık birimleri üzerinden yürütülüyor.",
+   "kaynak": "keah_ozellikli",
+   "ek_kaynaklar": [
+    "safranbolu_tarihce",
+    "eflani_tarihce",
+    "ovacik_tarihce",
+    "adseah_site"
+   ]
+  },
+  {
+   "ad": "Hemodiyaliz",
+   "adres_ilce": "Merkez, Safranbolu, Yenice",
+   "aciklama": "KEAH özellikli hizmetlerinde hemodiyaliz; Safranbolu DH'de 7 yataklı ünite (6+1 cihaz); Yenice DH'de 4+1 cihaz.",
+   "kaynak": "keah_ozellikli",
+   "ek_kaynaklar": [
+    "safranbolu_diyaliz",
+    "yenice_site"
+   ]
+  },
+  {
+   "ad": "Yabancı uyruklular / göçmen polikliniği",
+   "adres_ilce": "Merkez (SHM bünyesinde)",
+   "aciklama": "SHM hizmet listesinde 'Yabancı Uyruklular Polikliniği', 2022 tanıtım haberinde 'Göçmen polikliniği' olarak geçiyor. Ayrı bir Göç Sağlığı Merkezi teyit edilemedi.",
+   "kaynak": "ism_shm",
+   "ek_kaynaklar": [
+    "ism_tsm_shm_2022"
+   ]
+  },
+  {
+   "ad": "Merkez Toplum Sağlığı Merkezi",
+   "adres_ilce": "Merkez",
+   "aciklama": "2022'de SHM ile birlikte işyerlerinde tanıtım ve iş sağlığı ziyaretleri yaptı. Güncel adı veya ilçe sağlık müdürlüğüne dönüşümü teyit edilemedi.",
+   "kaynak": "ism_tsm_shm_2022"
+  }
+ ],
+ "cevre": [
+  {
+   "baslik": "PM10 yıllık ortalama",
+   "deger": 43.4,
+   "birim": "µg/m³",
+   "yil": 2024,
+   "istasyon": "Tören Alanı (Merkez; sanayi/trafik/ısınma)",
+   "aciklama": "12 aylık ortalamanın aritmetik ortalaması (hesaplandı). Yıllık sınır değeri (40) aşıyor. Aylık en yüksek değer Aralık'ta 59,2. Tabloda toplam 99 PM10 aşım günü var (24 saatlik sınır: 50). Sınır değerler (ÇDR Çizelge 1): PM10 yıllık 40 µg/m³, 24 saatlik 50 µg/m³; SO2 24 saatlik 125 µg/m³.",
+   "kaynak": "csb_cdr_2024",
+   "konum": "Çizelge 7 – 2024 aylık ortalamalar ve aşım gün sayıları (havaizleme.gov.tr)"
+  },
+  {
+   "baslik": "PM10 yıllık ortalama",
+   "deger": 37.5,
+   "birim": "µg/m³",
+   "yil": 2024,
+   "istasyon": "Kardemir-1 (sanayi)",
+   "aciklama": "Ocak-Kasım (11 ay) aylık ortalamalarının ortalaması (hesaplandı; Aralık verisi yok). Ocak ayı ortalaması 71,2; toplam 55 aşım günü.",
+   "kaynak": "csb_cdr_2024",
+   "konum": "Çizelge 7 – 2024 aylık ortalamalar ve aşım gün sayıları (havaizleme.gov.tr)"
+  },
+  {
+   "baslik": "PM10 yıllık ortalama",
+   "deger": 37.6,
+   "birim": "µg/m³",
+   "yil": 2024,
+   "istasyon": "Kardemir-2 (sanayi)",
+   "aciklama": "Ocak-Kasım (11 ay) aylık ortalamalarının ortalaması (hesaplandı). Temmuz ortalaması 62,3; toplam 74 aşım günü.",
+   "kaynak": "csb_cdr_2024",
+   "konum": "Çizelge 7 – 2024 aylık ortalamalar ve aşım gün sayıları (havaizleme.gov.tr)"
+  },
+  {
+   "baslik": "PM10 yıllık ortalama",
+   "deger": 32.9,
+   "birim": "µg/m³",
+   "yil": 2024,
+   "istasyon": "Safranbolu (Emek Mah.; trafik/ısınma)",
+   "aciklama": "12 aylık ortalamanın ortalaması (hesaplandı); toplam 30 aşım günü.",
+   "kaynak": "csb_cdr_2024",
+   "konum": "Çizelge 7 – 2024 aylık ortalamalar ve aşım gün sayıları (havaizleme.gov.tr)"
+  },
+  {
+   "baslik": "SO2 yıllık ortalama",
+   "deger": 9.5,
+   "birim": "µg/m³",
+   "yil": 2024,
+   "istasyon": "Tören Alanı",
+   "aciklama": "12 aylık ortalamanın ortalaması (hesaplandı); aylık en yüksek değer Şubat'ta 16,9. Tabloda SO2 aşım günü yok.",
+   "kaynak": "csb_cdr_2024",
+   "konum": "Çizelge 7 – 2024 aylık ortalamalar ve aşım gün sayıları (havaizleme.gov.tr)"
+  },
+  {
+   "baslik": "SO2 yıllık ortalama",
+   "deger": 8.5,
+   "birim": "µg/m³",
+   "yil": 2024,
+   "istasyon": "Safranbolu",
+   "aciklama": "12 aylık ortalamanın ortalaması (hesaplandı).",
+   "kaynak": "csb_cdr_2024",
+   "konum": "Çizelge 7 – 2024 aylık ortalamalar ve aşım gün sayıları (havaizleme.gov.tr)"
+  },
+  {
+   "baslik": "SO2 ortalama (eksik veri)",
+   "deger": 6.4,
+   "birim": "µg/m³",
+   "yil": 2024,
+   "istasyon": "Kardemir-1",
+   "aciklama": "Yalnız 7 ayın verisi var (Oca, Şub, Tem-Kas); ortalama hesaplandı, temsiliyeti sınırlı.",
+   "kaynak": "csb_cdr_2024",
+   "konum": "Çizelge 7 – 2024 aylık ortalamalar ve aşım gün sayıları (havaizleme.gov.tr)"
+  },
+  {
+   "baslik": "Sürekli emisyon ölçüm sistemi (SEÖS) bağlı tesis/baca",
+   "deger": "Metalurji: 1 tesis, 13 baca; atık yakma: 1 tesis, 1 baca (toplam 2 tesis, 14 baca)",
+   "birim": "adet",
+   "yil": 2024,
+   "istasyon": "–",
+   "aciklama": "Metalurji tesisi ilin demir-çelik sanayisine karşılık geliyor; ÇDR yakıt tablosu KARDEMİR A.Ş. verisine dayanıyor.",
+   "kaynak": "csb_cdr_2024",
+   "konum": "Çizelge 4 (sim.csb.gov.tr)"
+  },
+  {
+   "baslik": "Temiz Hava Eylem Planı (THEP) 2025-2029",
+   "deger": null,
+   "birim": null,
+   "yil": 2025,
+   "istasyon": "il geneli",
+   "aciklama": "3. izleme dönemi THEP hazırlandı ve 27.03.2025'te Bakanlığa gönderildi. Katı yakıt denetimi, ruhsatsız kömür satışının durdurulması, doğalgaz hattı olan yerlerde kamu binalarına doğalgaz zorunluluğu gibi önlemler içeriyor. Yerel İklim Değişikliği Eylem Planı en geç 2027 sonuna kadar hazırlanacak.",
+   "kaynak": "csb_cdr_2024",
+   "konum": "A.3.1 ve A.6"
+  },
+  {
+   "baslik": "İldeki toplam araç / egzoz ölçümü yaptıran araç",
+   "deger": "80.197 / 35.675",
+   "birim": "araç",
+   "yil": 2024,
+   "istasyon": "–",
+   "aciklama": "",
+   "kaynak": "csb_cdr_2024",
+   "konum": "Çizelge 9"
+  }
+ ],
+ "is_sagligi": [
+  {
+   "ad": "İş kazası geçiren sigortalı sayısı (4-1/a)",
+   "deger": 3143,
+   "yil": 2025,
+   "aciklama": "Erkek 2.822, kadın 321. Türkiye toplamı 766.039. 4-1/a kapsamında ilde 39.742 zorunlu sigortalı ve 5.687 iş yeri var (Tablo 1.10). Kaba oran ≈ 100 zorunlu sigortalıda 7,9 (hesaplandı; Türkiye için payda bu çalışmada alınmadı).",
+   "kaynak": "sgk_2025",
+   "konum": "Bölüm 3-1, Tablo 3.1.4; Bölüm 1, Tablo 1.10"
+  },
+  {
+   "ad": "Meslek hastalığına tutulan sigortalı sayısı (4-1/a)",
+   "deger": 2,
+   "yil": 2025,
+   "aciklama": "Erkek 2, kadın 0. Türkiye: 916. Meslek hastalıklarının Türkiye genelinde düşük bildirildiği bilinmektedir; il düzeyinde tanı dağılımı yayımlanmıyor.",
+   "kaynak": "sgk_2025",
+   "konum": "Tablo 3.1.4"
+  },
+  {
+   "ad": "İş kazası sonucu ölen sigortalı sayısı (4-1/a)",
+   "deger": 7,
+   "yil": 2025,
+   "aciklama": "Tamamı erkek. Türkiye: 1.931. Meslek hastalığı sonucu ölüm: 0.",
+   "kaynak": "sgk_2025",
+   "konum": "Tablo 3.1.5"
+  },
+  {
+   "ad": "4-1/a kapsamında zorunlu sigortalı sayısı",
+   "deger": 39742,
+   "yil": 2025,
+   "aciklama": "İş yeri sayısı 5.687. 2024'te 37.680 sigortalı.",
+   "kaynak": "sgk_2025",
+   "konum": "Bölüm 1, Tablo 1.10"
+  }
+ ],
+ "programlar": [
+  {
+   "ad": "Ulusal kanser taramaları (meme, serviks, kolorektal)",
+   "aciklama": "İl Hıfzıssıhha Meclisi, Mart Kolorektal Kanser Farkındalık Ayı nedeniyle kamu kurumlarındaki çalışanların gaitada gizli kan testi için KETEM'e ve aile hekimliklerine yönlendirilmesine karar verdi. Tarama yaşları: meme 40-69, serviks 30-65 (HPV-DNA), kolorektal 50-70.",
+   "tarih": "2026-03-10",
+   "kaynak": "ism_hk_2026"
+  },
+  {
+   "ad": "Mobil mamografi ile kanser taraması (Halk Sağlığı Haftası)",
+   "aciklama": "Kemal Güneş Caddesi'nde mobil kanser tarama aracıyla ücretsiz mamografi çekildi.",
+   "tarih": "2024-09-04",
+   "kaynak": "ism_kanser_tarama_2024"
+  },
+  {
+   "ad": "Altın Bebek Dostu İl",
+   "aciklama": "Karabük 2009'da 'Bebek Dostu İl' unvanı aldı. Bakanlık ekibinin üç günlük denetimi sonrasında 'Altın Bebek Dostu İl' unvanını sürdürdüğü bildirildi. İl Hıfzıssıhha 2025/12 kararı da bu programla ilgili.",
+   "tarih": "2025-10-01",
+   "kaynak": "ism_altin_bebek_2025",
+   "ek_kaynaklar": [
+    "ism_hk_2025"
+   ]
+  },
+  {
+   "ad": "Suda doğum ve gebe okulu (normal doğum eylem planı)",
+   "aciklama": "KEAH'ta 'Doğal olan Normal Doğum' eylem planı kapsamında hidroterapi eşliğinde travay ve doğum hizmeti başladı.",
+   "tarih": "2026-09-07",
+   "kaynak": "ism_suda_dogum_2026"
+  },
+  {
+   "ad": "Kırım-Kongo Kanamalı Ateşi (KKKA) önlemleri",
+   "aciklama": "Kene mevsimi öncesinde İl Hıfzıssıhha kararlarıyla KKKA'ya karşı önlemler alındı (2025/7: 05.05.2025; 2026/4: 13.04.2026). Temmuz 2025'te il müdürlüğü ve KEAH enfeksiyon uzmanı yerel TV'de bilgilendirme yaptı.",
+   "tarih": "2026-04-13",
+   "kaynak": "ism_hk_2025",
+   "ek_kaynaklar": [
+    "ism_hk_2026",
+    "ism_kkka_2025"
+   ]
+  },
+  {
+   "ad": "Tularemi önlemleri",
+   "aciklama": "İl Hıfzıssıhha 2025/5 kararı: içme suyu kaynaklarının kemirgen kontaminasyonundan korunması ve kontamine suların içilmemesi gibi önlemler.",
+   "tarih": "2025-03-24",
+   "kaynak": "ism_hk_2025"
+  },
+  {
+   "ad": "Kist hidatik ve zoonozlar (Kurban Bayramı öncesi)",
+   "aciklama": "İl Hıfzıssıhha 2026/5 kararı: Kurban Bayramı öncesinde kist hidatik başta olmak üzere zoonotik hastalıklara karşı önlemlerin artırılması.",
+   "tarih": "2026-05-20",
+   "kaynak": "ism_hk_2026"
+  },
+  {
+   "ad": "Mantar zehirlenmesine karşı önlemler",
+   "aciklama": "İl Hıfzıssıhha 2025/13 kararı: doğada yetişen mantarların satışa sunulmasına karşı önlem.",
+   "tarih": "2025-11-05",
+   "kaynak": "ism_hk_2025"
+  },
+  {
+   "ad": "Aşırı sıcaklar",
+   "aciklama": "İl Hıfzıssıhha 2025/9 (16.07.2025) ve 2026/7 (13.07.2026) kararlarıyla sağlık kurumlarında hazırlık, elektrik-su kesintilerinin önlenmesi ve halkın bilgilendirilmesi.",
+   "tarih": "2026-07-13",
+   "kaynak": "ism_hk_2025",
+   "ek_kaynaklar": [
+    "ism_hk_2026"
+   ]
+  },
+  {
+   "ad": "Çevre sağlığı ve içme suyu klorlaması",
+   "aciklama": "İl Hıfzıssıhha 2025/8 (11.06.2025) ve 2026/6 (08.06.2026) kararları: oyun alanlarının bakımı, umumi tuvaletlerin sağlık şartlarına uygun hale getirilmesi, çöp ve haşere kontrolü, şebeke suyunun tam otomatik klorlama cihazlarıyla sürekli dezenfeksiyonu. 2025/1 kararı: yağışlı mevsimde içme-kullanma suyunun kontaminasyon riskine karşı önlemler.",
+   "tarih": "2026-06-08",
+   "kaynak": "ism_hk_2025",
+   "ek_kaynaklar": [
+    "ism_hk_2026"
+   ]
+  },
+  {
+   "ad": "Grip ve soğuk algınlığından korunma",
+   "aciklama": "İl Hıfzıssıhha 2025/14 kararı: kış dönemi solunum yolu enfeksiyonlarına karşı halk eğitimi ve kişisel önlemler.",
+   "tarih": "2025",
+   "kaynak": "ism_hk_2025"
+  },
+  {
+   "ad": "Karbonmonoksit zehirlenmesi uyarısı",
+   "aciklama": "Soba, şofben ve bacasız gaz sobalarına bağlı CO zehirlenmelerine karşı kış uyarısı.",
+   "tarih": "2026-02-10",
+   "kaynak": "ism_co_2026"
+  },
+  {
+   "ad": "Olumsuz kış koşulları nedeniyle eğitime ara",
+   "aciklama": "İl Hıfzıssıhha kararlarıyla yoğun kar ve buzlanma nedeniyle eğitime birer gün ara verildi: 2025/3 (21.02.2025), 2025/6 (Eflani, 14.04.2025), 2025/15-17 (29.12.2025), 2026/1 (02.01.2026).",
+   "tarih": "2026-01-02",
+   "kaynak": "ism_hk_2025",
+   "ek_kaynaklar": [
+    "ism_hk_2026"
+   ]
+  },
+  {
+   "ad": "Dünya Yürüyüş Günü (bulaşıcı olmayan hastalıklarla mücadele)",
+   "aciklama": "Yenişehir Onur Stadyumu'nda il sağlık, gençlik-spor ve milli eğitim müdürlüklerinin ortak etkinliği.",
+   "tarih": "2025-10-03",
+   "kaynak": "ism_yuruyus_2025"
+  },
+  {
+   "ad": "Aile hekimlerine 'Tanıdan Tedaviye Güncel Yaklaşımlar' eğitimleri",
+   "aciklama": "Aylık yüz yüze eğitimler: Eylül 2025 deri hastalıkları, Ekim bağışıklama, Kasım kardiyovasküler hastalıklar.",
+   "tarih": "2025-09-25",
+   "kaynak": "ism_ah_egitim_2025"
+  },
+  {
+   "ad": "Organ bağışı farkındalığı",
+   "aciklama": "KEAH'ta 'Organ Bağışı ve Bölgemizde Son Durum' toplantısı (Ankara Bölge Koordinasyon Merkezi katılımıyla).",
+   "tarih": "2026-08-06",
+   "kaynak": "ism_organ_2026"
+  },
+  {
+   "ad": "Sağlık Bakanı ile il sağlık yöneticileri toplantısı",
+   "aciklama": "Bakan Prof. Dr. Kemal Memişoğlu başkanlığında 'Sağlıklı Türkiye Yüzyılı Karabük Sağlık Yöneticileri Toplantısı'.",
+   "tarih": "2026-07-10",
+   "kaynak": "ism_bakan_2026"
+  }
+ ],
+ "universite": {
+  "aciklama": "Karabük Üniversitesi Tıp Fakültesi, 01.02.2010 tarih ve 210/103 sayılı kararnameyle kuruldu (sayı fakülte sayfasındaki yazımıyla aktarılmıştır). Temel, Dahili ve Cerrahi Tıp Bilimleri olmak üzere üç bölümü var. İlk öğrenciler 2013-2014'te Zonguldak Bülent Ecevit Üniversitesi Tıp Fakültesi'nde eğitime başladı; 2016-2017'den beri eğitim Karabük Üniversitesi Merkez (Demirçelik) Kampüsü'ndeki Tıp Fakültesi binasında sürüyor. Eğitim Çekirdek Eğitim Programı (ÇEP) çerçevesinde yürütülüyor ve birinci sınıftan itibaren klinik ve mesleki beceri eğitimiyle erken klinik buluşma hedefleniyor. Sağlık Bakanlığı ile yapılan ortak kullanım protokolü kapsamında eğitim ve sağlık uygulamaları Karabük Eğitim ve Araştırma Hastanesinde (hastane 07.01.2013 protokolüyle 'Karabük Üniversitesi Karabük EAH' olmuştur) gerçekleştiriliyor. Adres: Kılavuzlar Mah. 413. Sokak No:10, KBÜ Merkez Kampüsü.",
+  "kaynak": "kbu_tip_hakkimizda",
+  "ek_kaynaklar": [
+   "kbu_tip_tarihce",
+   "kbu_tip_hastane",
+   "keah_hastanemiz"
+  ]
+ },
+ "dogrulanamayan": [
+  "İlçe Sağlık Müdürlükleri / Toplum Sağlığı Merkezleri: sayı, ad ve adresler il sağlık müdürlüğü sitesinde listelenmiyor. Yalnız 'Merkez TSM' (2022 haberi), Ovacık hastanesindeki 'toplum sağlığı birimi' ve kararlarda geçen 'Toplum Sağlığı Merkezleri' ifadesi var.",
+  "KETEM'in ayrı bir birim olarak adresi: sitede KETEM hizmeti SHM bünyesinde tanımlanıyor; bağımsız KETEM binası teyit edilemedi.",
+  "Verem Savaş Dispanserinin güncel adresi ve 2023 sonrası verileri (son resmî haber 07.01.2023).",
+  "Ayrı bir Göç Sağlığı Merkezi: yalnız SHM'de 'yabancı uyruklular polikliniği' teyit edildi.",
+  "Özel/bağımsız diyaliz merkezi ve özel hastane varlığı: 2024 yıllığında tüm sektörlerde 6 hastane var. Sitede '2026 Yılı Özel Hastaneler Planlama Artırma İşi İlanı' var, ama faal özel hastane adı teyit edilemedi.",
+  "112 istasyon ve ambulans sayısının 2025-2026 güncel değeri: yalnız 2024 yıllık değeri (17 istasyon, 33 ambulans) bulundu.",
+  "Aile hekimi başına nüfusun resmî 2024 değeri (Harita 10.7) PDF'te yalnız harita olarak var, sayısal okunamadı. AHB başına nüfus (Tablo 7.20) kullanıldı.",
+  "Hastane bazında yatak sayıları: yalnız KEAH (550) ve Safranbolu DH (75 yataklı yeni bina) teyit edildi. Diğer ilçe hastanelerinin yatak sayısı bulunamadı.",
+  "Ovacık ve Eskipazar hastanelerinin statüsü: hastane siteleri 'İlçe Devlet Hastanesi' diyor; il sağlık müdürlüğünün 2023 kuduz listesi 'Ovacık Entegre İlçe Sağlık Merkezi' ve 'Eskipazar Entegre İlçe Devlet Hastanesi' diyor.",
+  "2025 yılı hava kalitesi (PM10/SO2) değerleri: Karabük 2025 İl Çevre Durum Raporu henüz yayımlanmamış (2025 listesinde Karabük bağlantısız). havaizleme.gov.tr ham verisi bu çalışmada çekilmedi. 75. Yıl istasyonu 2024'te veri vermedi.",
+  "İl düzeyinde 2022-2024 ve 2023-2025 doğuşta beklenen yaşam süresi: TÜİK bu dönemlerde il tablosu yayımlamadı; en güncel il verisi 2021-2023.",
+  "İl bazında KETEM tarama sayıları, aşılama oranları, KKKA/tularemi vaka sayıları: resmî kaynakta sayısal veri bulunamadı. Kararlar yalnız önlem içeriyor.",
+  "KARDEMİR kaynaklı mesleki maruziyet / meslek hastalığı tanı dağılımı il bazında: SGK tanı tablosu (3.1.10) il kırılımı vermiyor.",
+  "Valilik (karabuk.gov.tr) ve Karabük Belediyesi sitelerinde güncel sağlık istatistiği bulunamadı."
+ ]
+}

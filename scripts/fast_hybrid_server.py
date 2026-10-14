@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""MedSoru Low-Latency Hybrid Serving API — FastAPI + DuckDB (cursor-per-request)."""
+"""MeDSor Low-Latency Hybrid Serving API — FastAPI + DuckDB (cursor-per-request)."""
 from __future__ import annotations
 
 import asyncio
@@ -412,16 +412,16 @@ _embedder = QueryEmbedder(_cfg.embed_model, _cfg.embed_dim, _cfg.embed_cache_siz
 
 @asynccontextmanager
 async def lifespan(app: FastAPI) -> AsyncIterator[None]:
-    LOG.info("MedSoru API başlıyor: lake=%s embed=%s (dim=%d)",
+    LOG.info("MeDSor API başlıyor: lake=%s embed=%s (dim=%d)",
              _cfg.lake, _cfg.embed_model, _embedder.dim)
     _cfg.embed_dim = _embedder.dim
     _engine.ensure_views()
     _engine.load_question_cache()
     yield
-    LOG.info("MedSoru API kapanıyor.")
+    LOG.info("MeDSor API kapanıyor.")
 
 
-app = FastAPI(title="MedSoru Hybrid API", version="1.1.0", lifespan=lifespan)
+app = FastAPI(title="MeDSor Hybrid API", version="1.1.0", lifespan=lifespan)
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["http://localhost:3000", "http://127.0.0.1:3000",

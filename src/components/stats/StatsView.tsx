@@ -9,6 +9,7 @@ import {
 import { dayKey, getActivity, getStudySeconds, type ActivityKind } from '../../services/activityLog';
 import { computeContributorStats } from '../../utils/contributionScore';
 import './stats.css';
+import '../../styles/v12/secondary.css';
 
 /**
  * İstatistiklerim (v10 kompakt yeniden kurulum 2026-10-13, "Istatistik-Masaustu" artboard'u).
@@ -243,7 +244,7 @@ export const StatsView: React.FC<Props> = ({ questions, currentUser, onGo }) => 
   const showSide = heatActive || weak.length > 0;
 
   return (
-    <div className="stv flex flex-col min-w-0 pb-12">
+    <div className="stv flex flex-col min-w-0 pb-12 o12-page o12-stv">
       <header className="stv-head">
         <div className="stv-title">
           <h1>İstatistiklerim</h1>

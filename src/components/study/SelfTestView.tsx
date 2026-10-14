@@ -19,6 +19,9 @@ import { committeeShortLabel } from '../QuickAddHero';
 import { Segmented, OptionButton, ExplanationBlock, EmptyState, cardCls, btnPrimary, btnSecondary, btnGhost, selectCls, Field, formatDuration, isTypingTarget } from './StudyUI';
 import { StudyReportButton } from './StudyReportButton';
 import { QuestionAiChatDrawer } from '../QuestionAiChatDrawer';
+import { useAppearance } from '../../utils/appearance';
+import { TestRunnerV12, RunnerCell, timerFor } from '../v12/PracticeV12';
+import { SelfTestSetupV12, SelfTestResultV12 } from '../v12/StudyV12';
 
 interface SelfTestViewProps {
   bank: StudyQuestion[];
@@ -34,6 +37,8 @@ type Phase = 'setup' | 'running' | 'result';
 type TimeMode = 'none' | '60' | '90';
 
 export const SelfTestView: React.FC<SelfTestViewProps> = ({ bank, committees, loading, initialCommitteeId, onProgressChange, quickStartNonce = 0 }) => {
+  // v12 "Net": aynı durum ve işlevlerle ayrı yapı (components/v12/StudyV12.tsx, PracticeV12.tsx)
+  const v12 = useAppearance().design === 'v12';
   const [phase, setPhase] = useState<Phase>('setup');
   const [history, setHistory] = useState(getTestHistory);
 
@@ -81,6 +86,9 @@ export const SelfTestView: React.FC<SelfTestViewProps> = ({ bank, committees, lo
     const progress = onlyUnsolved ? getProgress() : {};
     return scoped.filter((q) => (picked.length === 0 || picked.includes(q.discipline)) && (!onlyUnsolved || !progress[q.id]));
   }, [scoped, picked, onlyUnsolved]);
+
+  const testTitle = () =>
+    (committeeId === 'all' ? 'Karışık' : committeeName(committeeId)) + (picked.length ? ` · ${picked.length === 1 ? picked[0] : `${picked.length} ders`}` : '');
 
   const toggleDiscipline = (d: string) => setPicked((p) => (p.includes(d) ? p.filter((x) => x !== d) : [...p, d]));
 
@@ -141,8 +149,7 @@ export const SelfTestView: React.FC<SelfTestViewProps> = ({ bank, committees, lo
         recordAttempt(q.id, a, false);
       }
     });
-    const title =
-      (committeeId === 'all' ? 'Karışık' : committeeName(committeeId)) + (picked.length ? ` · ${picked.length === 1 ? picked[0] : `${picked.length} ders`}` : '');
+    const title = testTitle();
     const r: SelfTestResult = {
       id: `t-${Date.now().toString(36)}`,
       at: new Date().toISOString(),
@@ -196,6 +203,44 @@ export const SelfTestView: React.FC<SelfTestViewProps> = ({ bank, committees, lo
   // ---------------- SETUP ----------------
   if (phase === 'setup') {
     const effective = Math.min(count, pool.length);
+    if (v12) {
+      return (
+        <SelfTestSetupV12
+          loading={loading}
+          bankSize={bank.length}
+          committeeId={committeeId}
+          committeeOptions={committeeIds.map((id) => ({ id, label: committeeName(id), n: bank.filter((q) => q.committeeId === id).length }))}
+          onCommittee={(id) => {
+            setCommitteeId(id);
+            setPicked([]);
+          }}
+          timeMode={timeMode}
+          onTimeMode={setTimeMode}
+          count={count}
+          onCount={setCount}
+          disciplineCounts={disciplineCounts}
+          picked={picked}
+          onToggleDiscipline={toggleDiscipline}
+          onClearPicked={() => setPicked([])}
+          onlyUnsolved={onlyUnsolved}
+          onOnlyUnsolved={setOnlyUnsolved}
+          poolSize={pool.length}
+          onStart={start}
+          history={history}
+          onOpenHistory={(h) => {
+            setResult(h);
+            setItems(h.questionIds.map((id) => (bank || []).find((q) => q.id === id)).filter(Boolean) as StudyQuestion[]);
+            setPhase('result');
+          }}
+          onClearHistory={async () => {
+            if (await confirmDialog({ title: 'Tüm deneme geçmişi silinsin mi?', confirmLabel: 'Sil', tone: 'danger' })) {
+              clearTestHistory();
+              setHistory([]);
+            }
+          }}
+        />
+      );
+    }
     return (
       <div className="bento bento-host">
         <section className={`${cardCls} bt-wide p-4 sm:p-6 flex flex-col gap-4`}>
@@ -354,6 +399,57 @@ export const SelfTestView: React.FC<SelfTestViewProps> = ({ bank, committees, lo
     const answeredCount = Object.values(answers).filter(Boolean).length;
     const remaining = limit !== null ? Math.max(0, limit - elapsed) : null;
     const low = remaining !== null && remaining <= 60;
+    if (v12) {
+      const toggleFlag = () =>
+        setFlags((f) => {
+          const n = new Set(f);
+          n.has(q.id) ? n.delete(q.id) : n.add(q.id);
+          return n;
+        });
+      const cells: RunnerCell[] = items.map((it) => ({ id: it.id, answered: !!answers[it.id], flagged: flags.has(it.id) }));
+      const askFinish = async () => {
+        const blank = items.length - answeredCount;
+        if (blank > 0 && !(await confirmDialog({ title: 'Deneme bitirilsin mi?', message: `${blank} soru boş kaldı.`, confirmLabel: 'Bitir', cancelLabel: 'Devam et' }))) return;
+        finish();
+      };
+      const atEnd = cur >= items.length - 1;
+      return (
+        <TestRunnerV12
+          overlay
+          title={testTitle()}
+          subtitle={`${items.length} soru`}
+          exitLabel="Çık"
+          onExit={async () =>
+            (await confirmDialog({ title: 'Deneme iptal edilsin mi?', message: 'Cevapların kaydedilmez.', confirmLabel: 'İptal et', cancelLabel: 'Devam et', tone: 'danger' })) && setPhase('setup')
+          }
+          index={cur}
+          cells={cells}
+          onGo={setCur}
+          timer={remaining !== null ? timerFor(remaining, 'kalan', low ? 'low' : undefined) : timerFor(elapsed, 'gecen')}
+          qid={q.id}
+          meta={
+            <>
+              {q.discipline && <span className="p12-badge">{q.discipline}</span>}
+              {(q.year || q.number) && <span className="p12-meta">{[q.year, q.number ? `S${q.number}` : null].filter(Boolean).join(' · ')}</span>}
+            </>
+          }
+          tools={<StudyReportButton q={q} compact className="p12-btn is-sm is-ghost" />}
+          stem={q.stem}
+          options={q.options.map((o) => ({ key: o.key, text: o.text, state: answers[q.id] === o.key ? 'sel' : 'idle' }))}
+          onPick={(k) => setAnswers((p) => ({ ...p, [q.id]: p[q.id] === k ? undefined : (k as OptionKey) }))}
+          eliminate
+          flagged={flags.has(q.id)}
+          onFlag={toggleFlag}
+          flagHint="Sonra bakmak için işaretle (F)"
+          onPrev={() => setCur((i) => Math.max(0, i - 1))}
+          onNext={() => (atEnd ? askFinish() : setCur((i) => Math.min(items.length - 1, i + 1)))}
+          nextLabel={atEnd ? 'Testi bitir' : 'Sonraki'}
+          nextIsFinish={atEnd}
+          onFinish={askFinish}
+          keysHint="A–E seç · tekrar basınca boşalır · ← → gezin · F işaretle"
+        />
+      );
+    }
     return (
       <div className="tsx">
         {/* Üst çubuk: süre · çentikli ilerleme · bitir (canvas "Test") */}
@@ -457,18 +553,20 @@ export const SelfTestView: React.FC<SelfTestViewProps> = ({ bank, committees, lo
 
   // ---------------- RESULT ----------------
   if (!result) return <EmptyState title="Sonuç bulunamadı" action={<button type="button" className={btnSecondary} onClick={() => setPhase('setup')}>Yeni deneme</button>} />;
+  const addWrongToReview = () => {
+    items.forEach((q) => {
+      const a = result.answers[q.id];
+      if (a && a !== q.answer) setInReview(q.id, true);
+    });
+    onProgressChange?.();
+  };
+  if (v12) return <SelfTestResultV12 result={result} items={items} onRestart={() => setPhase('setup')} onAddWrongToReview={addWrongToReview} />;
   return (
     <ResultView
       result={result}
       items={items}
       onRestart={() => setPhase('setup')}
-      onAddWrongToReview={() => {
-        items.forEach((q) => {
-          const a = result.answers[q.id];
-          if (a && a !== q.answer) setInReview(q.id, true);
-        });
-        onProgressChange?.();
-      }}
+      onAddWrongToReview={addWrongToReview}
     />
   );
 };

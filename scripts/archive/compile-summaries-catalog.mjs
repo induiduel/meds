@@ -1,5 +1,5 @@
 /**
- * MedSoru Ders Özetleri ve Spot Bilgi Kataloğu Derleyicisi
+ * MeDSor Ders Özetleri ve Spot Bilgi Kataloğu Derleyicisi
  * (scripts/compile-summaries-catalog.mjs)
  * 
  * C:\Users\indui\Desktop\meds_database\redakte_ozet altındaki 347 adet

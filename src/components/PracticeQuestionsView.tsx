@@ -25,6 +25,8 @@ import { toast } from './ui/Toast';
 import { safeJsonFetch, ApiService } from '../services/api';
 import { KazanimSorulariView, KAZANIM_INDEX } from './KazanimSorulariView';
 import { pathFor } from '../router';
+import { useAppearance } from '../utils/appearance';
+import '../styles/v12/secondary.css';
 
 /**
  * Örnek çalışma soruları (/ornek-sorular): müfredata dayalı, Drive ders notlarından (drive_root) yapay zekâ ile üretilmiş,
@@ -359,7 +361,7 @@ export const PracticeQuestionsView: React.FC<{
   );
 
   return (
-    <div className="flex flex-col gap-4 pb-16 w-full min-w-0">
+    <div className="flex flex-col gap-4 pb-16 w-full min-w-0 o12-page o12-ornek">
       <PageHeader
         title="Örnek sorular"
         description="Kurul 1 kazanımlarına göre kolay, orta ve zor sorular; cevaplayınca her şıkkın gerekçesi açılır."
@@ -369,7 +371,7 @@ export const PracticeQuestionsView: React.FC<{
           { label: 'soru', value: k1Soru.toLocaleString('tr-TR') },
         ]}
       />
-      <div role="tablist" aria-label="Soru kümesi" className="ms-seg self-start">
+      <div role="tablist" aria-label="Soru kümesi" className="ms-seg o12-seg self-start">
         {sekmeBtn('k1', 'Ders kataloğu')}
         {sekmeBtn('havuz', 'Serbest arama')}
       </div>
@@ -470,34 +472,38 @@ const TumHavuzUretim: React.FC<{ focusId?: string | null }> = ({ focusId }) => {
   }, [shown]);
 
   const [aboutQuestion, setAboutQuestion] = useState<PQ | null>(null);
+  // v12: etiketler cümle düzeninde; v10/v11 metinleri aynen kalır
+  const v12 = useAppearance().design === 'v12';
 
-  const sel = 'h-11 px-3 rounded-xl border border-line bg-white text-base text-ink min-w-0';
+  const sel = 'h-11 px-3 rounded-xl border border-line bg-white text-base text-ink min-w-0 o12-field';
 
   return (
     <div className="flex flex-col gap-4">
-      <div className="rounded-xl bg-accent-soft text-ink px-3.5 py-2.5 text-sm flex items-center justify-between gap-2">
+      <div className="rounded-xl bg-accent-soft text-ink px-3.5 py-2.5 text-sm flex items-center justify-between gap-2 o12-havuz-note">
         <span className="flex items-center gap-2">
           <Sparkles className="w-4 h-4 text-accent shrink-0" />
-          <span><b>Supabase Havuzu:</b> Toplam <b>{totalCount.toLocaleString('tr-TR')}</b> soru yerel veritabanında aktif.</span>
+          {v12
+            ? <span>Havuzda <b>{totalCount.toLocaleString('tr-TR')}</b> soru</span>
+            : <span><b>Supabase Havuzu:</b> Toplam <b>{totalCount.toLocaleString('tr-TR')}</b> soru yerel veritabanında aktif.</span>}
         </span>
-        <span className="text-xs font-mono text-ink-3">Gösterilen: {shown.length} soru</span>
+        <span className="text-xs font-mono text-ink-3">{v12 ? `${shown.length} gösteriliyor` : `Gösterilen: ${shown.length} soru`}</span>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-2" role="group" aria-label="Filtreler">
-        <select className={sel} value={version} onChange={(e) => setVersion(e.target.value)}>
-          <option value="">Tüm Sürümler (v1, v5_muse, v6...)</option>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-2 o12-filters" role="group" aria-label="Filtreler">
+        <select className={sel} value={version} onChange={(e) => setVersion(e.target.value)} aria-label="Sürüm">
+          <option value="">{v12 ? 'Tüm sürümler' : 'Tüm Sürümler (v1, v5_muse, v6...)'}</option>
           {opts.versions.map((v) => <option key={v} value={v}>{v}</option>)}
         </select>
-        <select className={sel} value={ders} onChange={(e) => { setDers(e.target.value); setKonu(''); }}>
-          <option value="">Tüm Dersler</option>
+        <select className={sel} value={ders} onChange={(e) => { setDers(e.target.value); setKonu(''); }} aria-label="Ders">
+          <option value="">{v12 ? 'Tüm dersler' : 'Tüm Dersler'}</option>
           {opts.dersler.map((d) => <option key={d} value={d}>{d}</option>)}
         </select>
-        <select className={sel} value={konu} onChange={(e) => setKonu(e.target.value)}>
-          <option value="">Tüm Konular</option>
+        <select className={sel} value={konu} onChange={(e) => setKonu(e.target.value)} aria-label="Konu">
+          <option value="">{v12 ? 'Tüm konular' : 'Tüm Konular'}</option>
           {opts.konular.map((k) => <option key={k} value={k}>{k}</option>)}
         </select>
-        <select className={sel} value={zorluk} onChange={(e) => setZorluk(e.target.value)}>
-          <option value="">Tüm Zorluklar</option>
+        <select className={sel} value={zorluk} onChange={(e) => setZorluk(e.target.value)} aria-label="Zorluk">
+          <option value="">{v12 ? 'Tüm zorluklar' : 'Tüm Zorluklar'}</option>
           <option value="kolay">Kolay</option>
           <option value="orta">Orta</option>
           <option value="zor">Zor</option>
@@ -510,8 +516,9 @@ const TumHavuzUretim: React.FC<{ focusId?: string | null }> = ({ focusId }) => {
           type="search"
           value={search}
           onChange={(e) => setSearch(e.target.value)}
-          placeholder="Soru metni veya kavram ara..."
-          className="w-full h-11 pl-9 pr-3 rounded-xl bg-white border border-line text-base text-ink placeholder:text-ink-3 outline-none focus:border-accent"
+          placeholder={v12 ? 'Soru metni ya da kavram ara' : 'Soru metni veya kavram ara...'}
+          aria-label="Soru ara"
+          className="w-full h-11 pl-9 pr-3 rounded-xl bg-white border border-line text-base text-ink placeholder:text-ink-3 outline-none focus:border-accent o12-field o12-search"
         />
       </div>
 
@@ -527,14 +534,14 @@ const TumHavuzUretim: React.FC<{ focusId?: string | null }> = ({ focusId }) => {
       ) : all === null ? (
         <p className="m-0 text-base text-ink-3">Sorular yükleniyor…</p>
       ) : shown.length === 0 ? (
-        <div className="rounded-2xl border border-line bg-white p-8 text-center text-ink-3 text-base flex flex-col items-center gap-2">
+        <div className="rounded-2xl border border-line bg-white p-8 text-center text-ink-3 text-base flex flex-col items-center gap-2 o12-empty">
           <Filter className="w-6 h-6" />
-          <span>Filtreye uyan soru bulunamadı.</span>
+          {v12 ? <><b>Süzgece uyan soru yok</b><p>Ders, konu ya da zorluk seçimini genişlet.</p></> : <span>Filtreye uyan soru bulunamadı.</span>}
         </div>
       ) : (
         groups.map(([title, qs]) => (
           <section key={title} className="flex flex-col gap-3">
-            <h2 className="m-0 text-sm font-semibold uppercase tracking-wide text-ink-3">{title} · {qs.length} soru</h2>
+            <h2 className="m-0 text-sm font-semibold uppercase tracking-wide text-ink-3 o12-sec">{title} · {qs.length} soru</h2>
             {qs.map((q, i) => (
               <QuestionCard key={q.id} q={q} n={i + 1} onOpenAbout={(selQ) => setAboutQuestion(selQ)} />
             ))}

@@ -136,7 +136,7 @@ def format_options(options_obj):
 
 def main():
     print("=" * 60)
-    print("🏥 MedSoru: Supabase Cloud -> Yerel Database Birleştirme")
+    print("🏥 MeDSor: Supabase Cloud -> Yerel Database Birleştirme")
     print("=" * 60)
 
     EXPORT_DIR.mkdir(parents=True, exist_ok=True)

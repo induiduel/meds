@@ -1,5 +1,5 @@
 @echo off
-title MedSoru - Cloudflare Quick Tunnel
+title MeDSor - Cloudflare Quick Tunnel
 
 echo ========================================================
 echo       MEDSORU CLOUDFLARE QUICK TUNNEL BASLATICI

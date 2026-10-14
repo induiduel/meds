@@ -4,6 +4,8 @@ import { X, AlertCircle, CheckCircle2, Eye, EyeOff, ShieldCheck, ArrowLeft, Load
 import { Segmented } from './ui/kit';
 import { registerWithEmailPassword, loginWithEmailPassword, googleSignIn, ADMIN_EMAIL, AppUser } from '../services/auth';
 import { validateNamePolicy } from '../utils/namePolicy';
+import { useAppearance } from '../utils/appearance';
+import { AuthCardV12 } from './v12/AuthV12';
 
 /**
  * Giriş / kayıt kartı (kompakt). Tanıtım akışının son adımında gömülü, diğer yerlerde katmanlı pencere olarak açılır.
@@ -57,6 +59,8 @@ export const UserAuthModal: React.FC<UserAuthModalProps> = ({
       setSuccess(null);
     }
   }, [isOpen, initialMode]);
+
+  const v12 = useAppearance().design === 'v12';
 
   useEffect(() => {
     if (!isOpen || embedded || mandatory) return;
@@ -271,7 +275,38 @@ export const UserAuthModal: React.FC<UserAuthModalProps> = ({
     </div>
   );
 
-  if (embedded) return card;
+  const body = v12 ? (
+    <AuthCardV12
+      mode={mode}
+      onMode={(m) => { setMode(m); setError(null); }}
+      embedded={embedded}
+      closable={!embedded && !mandatory}
+      onClose={onClose}
+      googleIcon={<GoogleMark />}
+      busy={busy}
+      disabled={disabled}
+      error={error}
+      success={success}
+      email={email}
+      setEmail={setEmail}
+      password={password}
+      setPassword={setPassword}
+      showPass={showPass}
+      onTogglePass={() => setShowPass((v) => !v)}
+      displayName={displayName}
+      setDisplayName={setDisplayName}
+      studentNumber={studentNumber}
+      setStudentNumber={(v) => setStudentNumber(v.replace(/\D/g, ''))}
+      adminPassword={adminPassword}
+      setAdminPassword={setAdminPassword}
+      onGoogle={onGoogle}
+      onLogin={onLogin}
+      onRegister={onRegister}
+      onAdminPassword={onAdminPassword}
+    />
+  ) : card;
+
+  if (embedded) return body;
   if (inSheet) {
     return (
       <Sheet
@@ -282,7 +317,7 @@ export const UserAuthModal: React.FC<UserAuthModalProps> = ({
         width={420}
         label="Giriş ve kayıt"
       >
-        {card}
+        {body}
       </Sheet>
     );
   }
@@ -295,7 +330,7 @@ export const UserAuthModal: React.FC<UserAuthModalProps> = ({
       onClick={() => !mandatory && onClose()}
     >
       <div className="w-full max-w-[380px]" onClick={(e) => e.stopPropagation()}>
-        {card}
+        {body}
       </div>
     </div>
   );

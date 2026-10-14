@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * MedSoru Çıkmış Soru & Amfi Slayt İlişki Yönetim Motoru (Master Runner)
+ * MeDSor Çıkmış Soru & Amfi Slayt İlişki Yönetim Motoru (Master Runner)
  * (scripts/manage-slide-relations.mjs)
  * 
  * Bu betik iki ana scripti entegre olarak yönetir:
@@ -25,7 +25,7 @@ import { DATA_PAST_PATH } from './slide-matching-utils.mjs';
 function printHelp() {
   console.log(`
 ========================================================================
-🩺 MedSoru Çıkmış Soru & Amfi Slaytı İlişki Yönetim CLI
+🩺 MeDSor Çıkmış Soru & Amfi Slaytı İlişki Yönetim CLI
 ========================================================================
 
 Kullanım:
@@ -76,7 +76,7 @@ function showStats() {
   }
 
   console.log('\n======================================================');
-  console.log('📊 [MedSoru Veritabanı Slayt İlişki İstatistikleri]');
+  console.log('📊 [MeDSor Veritabanı Slayt İlişki İstatistikleri]');
   console.log('======================================================');
   console.log(`Toplam Çıkmış Soru           : ${total}`);
   console.log(`Ders Slaytı ile İlişkili     : ${withMatch} (%${((withMatch / total) * 100).toFixed(1)})`);

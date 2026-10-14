@@ -598,7 +598,7 @@ Spot İnciler: {" ".join(slide['spotPearls'])}
     print("=" * 80)
 
 def main():
-    parser = argparse.ArgumentParser(description="MedSoru Dönem 3 Günlük Müfredat & Öğrenme Otomasyon Motoru")
+    parser = argparse.ArgumentParser(description="MeDSor Dönem 3 Günlük Müfredat & Öğrenme Otomasyon Motoru")
     parser.add_argument("--lecture", type=str, nargs="+", help="Specific lecture(s) to process")
     parser.add_argument("--all-kurul1", action="store_true", help="Process and build all Kurul 1 curriculum lectures")
     parser.add_argument("--pending-only", action="store_true", help="Process only pending or basic (<15 slides) decks")

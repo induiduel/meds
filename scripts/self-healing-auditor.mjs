@@ -1,5 +1,5 @@
 /**
- * MedSoru Otonom Kendi Kendini Denetleyen ve İyileştiren Sistem (Self-Healing Auditor)
+ * MeDSor Otonom Kendi Kendini Denetleyen ve İyileştiren Sistem (Self-Healing Auditor)
  * (scripts/self-healing-auditor.mjs)
  * 
  * Görevleri:
@@ -22,7 +22,7 @@ const STATUS_PATH = path.join(ROOT_DIR, 'data', 'self_healing_health_status.json
 
 export async function runSelfHealingAudit(options = {}) {
   const { autoFix = true, syncCloud = true } = options;
-  console.log('🛡️ [MedSoru Otonom Denetleyici] Sistem sağlığı ve veri bütünlüğü taranıyor...');
+  console.log('🛡️ [MeDSor Otonom Denetleyici] Sistem sağlığı ve veri bütünlüğü taranıyor...');
 
   const startTime = Date.now();
   const anomalies = [];

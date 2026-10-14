@@ -1,6 +1,6 @@
 /**
  * ==============================================================================
- * MedSoru Akıllı Tıbbi Tahminci & Hibrit Eşleme Motoru (medicalPredictorService.ts)
+ * MeDSor Akıllı Tıbbi Tahminci & Hibrit Eşleme Motoru (medicalPredictorService.ts)
  * ==============================================================================
  * Kullanıcının soru ekleme alanında yazdığı metinden (kök, şıklar, ipuçları) yola çıkarak:
  * 1. En olası KURUL (Dönem 3 Kurul 1-6) ve DERS (Patoloji, Farmakoloji vb.) tahmin eder.

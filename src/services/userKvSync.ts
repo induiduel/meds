@@ -46,6 +46,7 @@ const SYNC_PATTERNS: RegExp[] = [
   /^medsoru_appearance$/,
   /^medsoru_auto_reveal$/,
   /^medsoru_(glossary|search|studio)_view$/,
+  /^medsoru_cikmis_kayitli_gorunumler$/,
   /^medsoru_solve_drawer$/,
   /^medsoru_study_section$/,
   /^medsoru_rail_collapsed$/,

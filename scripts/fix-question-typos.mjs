@@ -1,7 +1,7 @@
 /**
  * scripts/fix-question-typos.mjs
  * 
- * MedSoru Soru Yazım Hatalarını ve Bozuk OCR İfadelerini Tespit ve Düzeltme Motoru
+ * MeDSor Soru Yazım Hatalarını ve Bozuk OCR İfadelerini Tespit ve Düzeltme Motoru
  * 
  * Özellikler:
  * 1. Tire Bölünmelerini Düzeltir:

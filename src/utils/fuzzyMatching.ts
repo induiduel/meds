@@ -1,5 +1,5 @@
 /**
- * MedSoru Gelişmiş Türkçe Karakter Katlama, Kök Bulma (Stemming) &
+ * MeDSor Gelişmiş Türkçe Karakter Katlama, Kök Bulma (Stemming) &
  * Harf Eksikliği / Yer Değiştirme (Transposition) Toleranslı Arama Modülü
  * (src/utils/fuzzyMatching.ts)
  */

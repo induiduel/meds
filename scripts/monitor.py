@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-MedSoru Canlı Terminal Kokpiti ve Boru Hattı İzleyici (Terminal Dashboard v2)
+MeDSor Canlı Terminal Kokpiti ve Boru Hattı İzleyici (Terminal Dashboard v2)
 Tüm aşamaları (Faz 1 - Faz 8, Aşama 1 yenileme) hedefleri ve canlı ilerlemeleriyle gösterir:
 - Faz 1 (Ham Metin & OCR)
 - Faz 2 (Türkçe Onarım & Soru Ayrıştırma)
@@ -639,7 +639,7 @@ def main():
         curses.wrapper(render_dashboard)
     except KeyboardInterrupt:
         pass
-    print("\n👋 MedSoru İzleyici kapatıldı.")
+    print("\n👋 MeDSor İzleyici kapatıldı.")
 
 
 if __name__ == "__main__":

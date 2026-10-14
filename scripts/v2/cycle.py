@@ -160,7 +160,7 @@ def watch(roots: list[str | Path], *, interval: int, dataset: str = "archive", l
 
 
 def main(argv: list[str] | None = None) -> int:
-    ap = argparse.ArgumentParser(prog="python -m v2 cycle", description="MedSoru Core v2 orkestratörü")
+    ap = argparse.ArgumentParser(prog="python -m v2 cycle", description="MeDSor Core v2 orkestratörü")
     ap.add_argument("--roots", nargs="+", default=[str(config.DOWNLOADS_DIR)])
     ap.add_argument("--interval", type=int, default=600)
     ap.add_argument("--limit", type=int, default=None)

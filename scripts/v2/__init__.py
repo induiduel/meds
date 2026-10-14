@@ -1,4 +1,4 @@
-"""MedSoru Core v2 — bağımsız veri denetim + ingest sistemi.
+"""MeDSor Core v2 — bağımsız veri denetim + ingest sistemi.
 
 Eski `scripts/agents`, `scripts/advanced_ai` ve `scripts/pipeline` hattından bağımsız çalışır.
 Yalnızca `meds_database/schema/*.json` sözleşmesini paylaşır; eski veriyi okur ama asla ezmez.

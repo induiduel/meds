@@ -1,6 +1,6 @@
 /**
  * ==============================================================================
- * MedSoru RAG Knowledge Indexer & Embedder
+ * MeDSor RAG Knowledge Indexer & Embedder
  * ==============================================================================
  * Bu betik:
  * 1. data/pastQuestions.json (3500+ soru)
@@ -197,7 +197,7 @@ async function batchEmbed(texts, maxRetries = 6) {
 
 async function main() {
   console.log('====================================================');
-  console.log('🚀 MedSoru RAG Bilgi Bankası İndeksleyici');
+  console.log('🚀 MeDSor RAG Bilgi Bankası İndeksleyici');
   console.log('====================================================');
   console.log(`Supabase URL: ${SUPABASE_URL}`);
   console.log(`Aktif Gemini Anahtar Sayısı: ${GEMINI_KEYS.length}`);

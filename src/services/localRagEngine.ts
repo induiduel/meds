@@ -1,6 +1,6 @@
 /**
  * ==============================================================================
- * MedSoru Local & Hybrid RAG Engine (localRagEngine.ts)
+ * MeDSor Local & Hybrid RAG Engine (localRagEngine.ts)
  * ==============================================================================
  * Bu motor:
  * 1. Tüm tıp verilerini 8 farklı kategoride parçalar (chunklar):

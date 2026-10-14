@@ -1,6 +1,6 @@
 @echo off
 chcp 65001 >nul
-title MedSoru - Soru ve Cevap Doğrulama Motoru (%%90 Kuralı)
+title MeDSor - Soru ve Cevap Doğrulama Motoru (%%90 Kuralı)
 color 0B
 
 echo ======================================================================

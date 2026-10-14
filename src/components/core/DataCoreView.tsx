@@ -1,9 +1,10 @@
 import { useCallback, useEffect, useState } from 'react';
 import { safeJsonFetch } from '../../services/api';
 import { PageHeader } from '../ui/PageHeader';
+import '../../styles/v12/secondary.css';
 
 /**
- * MedSoru Core v2 — Veri Merkezi (salt okunur).
+ * MeDSor Core v2 — Veri Merkezi (salt okunur).
  * CORE verisini (sorular, müfredat/kazanım, kaynak bağları, not araması, birleşik adaylar) siteye bağlar.
  * Tüm istekler `safeJsonFetch` ile gider; GPU/AI kullanılmaz.
  */
@@ -104,7 +105,7 @@ export default function DataCoreView() {
   useEffect(() => { load('', false, false); }, [load]);
 
   return (
-    <div className="w-full min-w-0 flex flex-col gap-4 pb-12">
+    <div className="w-full min-w-0 flex flex-col gap-4 pb-12 o12-page o12-dc">
       <PageHeader
         title="Veri merkezi"
         description="Kaynaktan doğrulanmış sorular, müfredat/kazanım eşlemesi, ders notu bağlantıları ve toplu tamamlama. GPU/AI kullanılmaz."
@@ -188,7 +189,7 @@ export default function DataCoreView() {
       </div>
 
       {audit?.toplam && (
-        <div className="text-sm text-ink-3">
+        <div className="text-sm text-ink-3 o12-meta">
           Eski veri denetimi ({audit.zaman}): {audit.toplam.kayit} kayıt · engelleyici {audit.toplam.blocking} · inceleme {audit.toplam.review}
         </div>
       )}
@@ -253,6 +254,8 @@ export default function DataCoreView() {
           onKeyDown={(e) => { if (e.key === 'Enter') load(query, onlyAnswered, onlyOpen); }}
           placeholder="Sorularda ara…"
           className="flex-1 min-w-[200px] ms-input"
+          // ms-* sınıfları katmansız: min-w-[200px]'i eziyordu, kutu telefonda 93 px'e iniyordu
+          style={{ minWidth: 'min(100%, 220px)' }}
         />
         <label className="text-base text-ink-2 flex items-center gap-1.5 px-1 cursor-pointer">
           <input type="checkbox" checked={onlyAnswered} onChange={(e) => setOnlyAnswered(e.target.checked)} /> Cevaplı
@@ -266,7 +269,7 @@ export default function DataCoreView() {
       {loading && <div className="opacity-70 text-sm">Yükleniyor…</div>}
       {error && <div className="text-bad-text text-sm">{error}</div>}
 
-      <ul className="bento bento-host is-duo">
+      <ul className="bento bento-host is-duo o12-dc-list">
         {questions.map((qq) => (
           <li key={qq.question_id} className="ms-panel p-4 flex flex-col gap-1.5">
             <p className="m-0 text-md font-medium text-ink leading-snug">{qq.stem}</p>
@@ -300,7 +303,7 @@ export default function DataCoreView() {
           </li>
         ))}
       </ul>
-      {!loading && questions.length === 0 && !error && <div className="opacity-60 text-sm">Sonuç yok.</div>}
+      {!loading && questions.length === 0 && !error && <div className="opacity-60 text-sm o12-empty">Sonuç yok.</div>}
 
       {clusters.length > 0 && (
         <section className="flex flex-col gap-2">

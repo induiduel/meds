@@ -82,7 +82,7 @@ async function detectUpdates() {
   const isPushMode = process.argv.includes('--push');
 
   console.log('\n===============================================================');
-  console.log('🔍 [MedSoru] Veritabanı Güncelleme Tespit & Delta Sync Motoru');
+  console.log('🔍 [MeDSor] Veritabanı Güncelleme Tespit & Delta Sync Motoru');
   console.log('===============================================================');
   console.log(`🔗 Supabase URL: ${SUPABASE_URL}`);
 

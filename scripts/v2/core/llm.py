@@ -21,7 +21,7 @@ from typing import Any, Callable
 from .. import config
 from . import store
 
-UA = "MedSoruCoreV2/1.0"
+UA = "MeDSorCoreV2/1.0"
 DEFAULT_CHAIN = [
     "groq:openai/gpt-oss-120b",
     "groq:qwen/qwen3.8-27b",

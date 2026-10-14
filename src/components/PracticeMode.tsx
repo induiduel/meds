@@ -8,6 +8,7 @@ import { Sheet } from './ui/Sheet';
 import { confirmDialog } from './ui/ConfirmDialog';
 import { TestNavigator, navCounts, NavItem } from './practice/TestNavigator';
 import '../styles/practice-v10.css';
+import { PracticeV12, PracticeResultsV12, PracticeEmptyV12 } from './v12/PracticeV12';
 
 interface PracticeModeProps {
   questions: QuestionItem[];
@@ -46,6 +47,8 @@ export const PracticeMode: React.FC<PracticeModeProps> = ({
   title = 'Test çöz',
   subtitle,
 }) => {
+  // v12 "Net": aynı durum ve işlevlerle ayrı yapı (components/v12/PracticeV12.tsx)
+  const v12 = useAppearance().design === 'v12';
   // Only reconstructed questions can be practiced
   const items = useMemo(() => questions.filter((q) => q.status === 'completed' && q.reconstruction), [questions]);
 
@@ -171,6 +174,7 @@ export const PracticeMode: React.FC<PracticeModeProps> = ({
   );
 
   if (!currentQ || !rec) {
+    if (v12) return <PracticeEmptyV12 title={title} onExit={onExit} onContribute={onOpenContributeModal} />;
     return (
       <div className="tx tx-empty-page">
         <header className="tx-head">
@@ -196,6 +200,62 @@ export const PracticeMode: React.FC<PracticeModeProps> = ({
           </div>
         </main>
       </div>
+    );
+  }
+
+  const aiDrawer = (
+    <QuestionAiChatDrawer
+      isOpen={aiChatOpen}
+      onClose={() => setAiChatOpen(false)}
+      questionContext={
+        currentQ && rec
+          ? {
+              id: currentQ.id,
+              discipline: currentQ.discipline,
+              topic: currentQ.topic,
+              committeeId: currentQ.committeeId,
+              number: currentQ.questionNumber,
+              stem: rec.stem,
+              options: rec.options.map((o) => ({ key: o.key, text: o.text })),
+              correctAnswer: rec.correctAnswer,
+              explanation: rec.explanation,
+              userAnswer: userAnswer,
+              lectureReference: currentQ.lectureReference,
+              slideSnippet: currentQ.lectureReference?.matchedSnippet,
+            }
+          : null
+      }
+    />
+  );
+
+  if (v12) {
+    return (
+      <>
+        <PracticeV12
+          title={title}
+          subtitle={subtitle}
+          items={items}
+          index={currentIndex}
+          answers={selectedAnswers}
+          marked={marked}
+          elapsed={elapsed}
+          paused={paused}
+          finished={finished}
+          shortExplanation={shortExplanation}
+          onSelect={handleSelect}
+          onReset={handleReset}
+          onToggleMark={toggleMark}
+          onGo={go}
+          onFinish={finish}
+          onRestart={restart}
+          onReview={() => setFinished(false)}
+          onTogglePause={() => setPaused((v) => !v)}
+          onOpenAi={() => setAiChatOpen(true)}
+          onOpenQuestion={onOpenQuestion}
+          onExit={onExit}
+        />
+        {aiDrawer}
+      </>
     );
   }
 
@@ -421,28 +481,7 @@ export const PracticeMode: React.FC<PracticeModeProps> = ({
       </Sheet>
 
       {/* AI Live Tutor Chat Drawer */}
-      <QuestionAiChatDrawer
-        isOpen={aiChatOpen}
-        onClose={() => setAiChatOpen(false)}
-        questionContext={
-          currentQ && rec
-            ? {
-                id: currentQ.id,
-                discipline: currentQ.discipline,
-                topic: currentQ.topic,
-                committeeId: currentQ.committeeId,
-                number: currentQ.questionNumber,
-                stem: rec.stem,
-                options: rec.options.map((o) => ({ key: o.key, text: o.text })),
-                correctAnswer: rec.correctAnswer,
-                explanation: rec.explanation,
-                userAnswer: userAnswer,
-                lectureReference: currentQ.lectureReference,
-                slideSnippet: currentQ.lectureReference?.matchedSnippet,
-              }
-            : null
-        }
-      />
+      {aiDrawer}
     </div>
   );
 };
@@ -451,6 +490,7 @@ export const PracticeMode: React.FC<PracticeModeProps> = ({
 /** Sonuç ekranı: tasarım seçimine göre v11 Sade ya da Klasik v10 */
 const TestResults: React.FC<React.ComponentProps<typeof TestResultsV11>> = (props) => {
   const { design } = useAppearance();
+  if (design === 'v12') return <PracticeResultsV12 {...props} />;
   return design === 'v10' ? <TestResultsV10 {...props} /> : <TestResultsV11 {...props} />;
 };
 

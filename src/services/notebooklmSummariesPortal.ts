@@ -383,7 +383,7 @@ export function renderPortalIndexHtml(baseUrl: string = ''): string {
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>MedSoru · NotebookLM İçin Ders Özetleri Portalı</title>
+  <title>MeDSor · NotebookLM İçin Ders Özetleri Portalı</title>
   <meta name="description" content="Tıp fakültesi amfi ders özetleri, sınav spotları ve fizyopatolojik mekanizma notları NotebookLM için optimize edilmiş açık web portalı.">
   <style>${PORTAL_CSS}</style>
 </head>
@@ -391,7 +391,7 @@ export function renderPortalIndexHtml(baseUrl: string = ''): string {
   <header class="portal-header">
     <div class="header-inner">
       <div>
-        <div class="brand-badge">⚡ MedSoru AI · Tıp Eğitimi</div>
+        <div class="brand-badge">⚡ MeDSor AI · Tıp Eğitimi</div>
         <h1 class="portal-title">NotebookLM İçin Ders Özetleri Portalı</h1>
         <p class="portal-subtitle">Tüm amfi ders özetleri, sınav spotları ve kilit tıp bilgileri Google NotebookLM ile tam uyumlu.</p>
       </div>
@@ -487,7 +487,7 @@ export function renderKurulPortalHtml(kurulNum: string, baseUrl: string = ''): s
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Kurul ${kurulNum}: ${escapeHtml(kName)} · MedSoru NotebookLM Kaynağı</title>
+  <title>Kurul ${kurulNum}: ${escapeHtml(kName)} · MeDSor NotebookLM Kaynağı</title>
   <style>${PORTAL_CSS}</style>
 </head>
 <body>
@@ -568,7 +568,7 @@ export function renderSingleLectureHtml(lectureId: string, baseUrl: string = '')
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>${escapeHtml(s.title)} · MedSoru NotebookLM Özeti</title>
+  <title>${escapeHtml(s.title)} · MeDSor NotebookLM Özeti</title>
   <style>${PORTAL_CSS}</style>
 </head>
 <body>

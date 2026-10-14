@@ -3,7 +3,7 @@
 Yaptıkları (yalnız `meds_database/ortak/` altına yazar; kaynak veri kümelerine dokunmaz):
   1. En son denetim raporunun özetini `ortak/veri/v2_denetim.json` (+ CORE `reports/audit_latest.json`) yazar.
   2. CORE içeriğinden `ortak/veri/v2_katalog.json` üretir (kayıt sayılarıyla).
-  3. Kırık/bayat hub symlink'lerini onarır: eski `Masaüstü/MedSoru Project` yolu → güncel `PROJECT_ROOT`.
+  3. Kırık/bayat hub symlink'lerini onarır: eski `Masaüstü/MeDSor Project` yolu → güncel `PROJECT_ROOT`.
   4. v2 veri kümeleri için hub symlink'leri oluşturur (hedef varsa).
 
 Site bu dosyaları `/api/v2/audit` ve `/api/v2/katalog` uçlarından da okuyabilir.
@@ -17,7 +17,7 @@ from pathlib import Path
 from . import config
 from .core import store
 
-OLD_PREFIX = "/home/indu/Masaüstü/MedSoru Project"
+OLD_PREFIX = "/home/indu/Masaüstü/MeDSor Project"
 HUB = ("ortak", "veri")
 
 

@@ -1,0 +1,254 @@
+/*
+ * v12 "Net" — Öğren kitaplığı (components/v12/LearnLibraryV12.tsx) ve hata defteri tekrar ekranı (LearnReview .lr-rv-*).
+ * Canvas: Learn.dc.html. Renk yalnız token; her kural :root[data-design='v12'] altında.
+ */
+:root[data-design='v12'] {
+  & .l12 {
+    --l12-r: 10px;
+    --l12-r-sm: 7px;
+    --l12-h: 36px;
+    --l12-h-sm: 30px;
+    --l12-t: 160ms;
+    --l12-ease: cubic-bezier(.2, .7, .2, 1);
+    container: l12 / inline-size;
+    width: 100%;
+    max-width: 1040px;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    font-family: var(--font-sans);
+    font-size: 14px;
+    line-height: 1.45;
+    color: var(--color-ink);
+  }
+  /* Sıfırlamalar özgüllük taşımaz (:where): bileşen kuralları her zaman kazanır */
+  & :where(.l12) :where(h1, h2, p) { margin: 0; }
+  & :where(.l12) :where(button) { font: inherit; color: inherit; }
+
+  /* Tipografi */
+  & .l12-num { font-family: var(--font-mono); font-variant-numeric: tabular-nums; font-weight: 500; }
+  & .l12-m { font-size: 12.5px; font-weight: 400; color: var(--color-ink-3); }
+  & .l12-h2 { font-size: 15px; font-weight: 600; letter-spacing: -.005em; }
+  & .l12-grow { flex: 1 1 auto; min-width: 0; }
+
+  /* Başlık */
+  & .l12-head { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; min-width: 0; }
+  & .l12-h1 { font: 600 18px/1.2 var(--font-sans); letter-spacing: -.012em; }
+  & .l12-head-m { font-size: 12.5px; color: var(--color-ink-3); }
+
+  /* Araç satırı */
+  & .l12-tool { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; min-width: 0; }
+  & .l12-search {
+    flex: 1 1 240px; max-width: 360px; min-width: 0;
+    display: flex; align-items: center; gap: 8px; height: var(--l12-h); padding: 0 11px;
+    border: 1px solid var(--color-line); border-radius: var(--l12-r-sm); background: var(--color-white); color: var(--color-ink-3);
+    transition: border-color var(--l12-t), box-shadow var(--l12-t);
+  }
+  & .l12-search:focus-within { border-color: var(--color-accent); box-shadow: 0 0 0 3px var(--color-accent-soft); }
+  & .l12-search > svg { width: 16px; height: 16px; flex: none; }
+  & .l12-search input { flex: 1 1 auto; min-width: 0; border: 0; outline: 0; background: transparent; font: 400 14px var(--font-sans); color: var(--color-ink); padding: 0; }
+  & .l12-search input::-webkit-search-cancel-button { display: none; }
+  & .l12-search input::placeholder { color: var(--color-ink-3); }
+  & .l12-search:focus-within .l12-kbd { display: none; }
+  & .l12-kbd { font: 500 11px var(--font-mono); padding: 1px 5px; border: 1px solid var(--color-line); border-bottom-width: 2px; border-radius: 5px; color: var(--color-ink-3); background: var(--color-white); }
+
+  & .l12-seg { display: inline-flex; padding: 3px; gap: 2px; background: var(--color-field); border-radius: 9px; max-width: 100%; overflow-x: auto; scrollbar-width: none; }
+  & .l12-seg::-webkit-scrollbar { display: none; }
+  & .l12-seg button {
+    display: inline-flex; align-items: center; gap: 6px; height: 28px; padding: 0 11px; border: 0; border-radius: 7px; background: transparent;
+    color: var(--color-ink-2); font-size: 13px; font-weight: 500; cursor: pointer; white-space: nowrap;
+    transition: background-color var(--l12-t) var(--l12-ease), color var(--l12-t);
+  }
+  & .l12-seg button:hover { color: var(--color-ink); }
+  & .l12-seg button.is-on { background: var(--color-white); color: var(--color-ink); box-shadow: var(--shadow-xs); }
+  & .l12-seg-n { font: 500 11px var(--font-mono); color: var(--color-ink-3); }
+
+  /* Kurul / Ders / Sırala hapları (ortak QuickPill, v12 hap ölçüsü) */
+  & .l12-pills { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; min-width: 0; }
+  & .l12-pills .pt-q { height: 28px; max-width: 220px; border-color: var(--color-line); }
+  & .l12-pills .pt-q-btn { padding: 0 9px 0 10px; font-size: 12.5px; font-weight: 500; min-width: 0; }
+  & .l12-pills .pt-q-l { white-space: nowrap; }
+  & .l12-pills .pt-q-v { font-weight: 600; max-width: 130px; }
+  & .l12-pills .pt-q.is-on { border-color: transparent; }
+  & .l12-pills .pt-q-x { width: 22px; height: 22px; }
+
+  & .l12-view { display: inline-flex; border: 1px solid var(--color-line); border-radius: var(--l12-r-sm); overflow: hidden; background: var(--color-white); flex: none; }
+  & .l12-view button { width: 34px; height: 34px; display: grid; place-items: center; border: 0; background: transparent; color: var(--color-ink-3); cursor: pointer; transition: background-color var(--l12-t), color var(--l12-t); }
+  & .l12-view button + button { border-left: 1px solid var(--color-line); }
+  & .l12-view button:hover { color: var(--color-ink); }
+  & .l12-view button[aria-checked='true'] { background: var(--color-field); color: var(--color-ink); }
+  & .l12-view svg { width: 16px; height: 16px; }
+
+  /* Yüzeyler */
+  & .l12-panel { background: var(--color-white); border: 1px solid var(--color-line); border-radius: var(--l12-r); min-width: 0; }
+  & .l12-panel-h { display: flex; align-items: center; gap: 8px; padding: 12px 14px 4px; }
+  & .l12-panel-h .l12-h2 { flex: 1 1 auto; min-width: 0; }
+  & :is(.l12-list, .l12-cont-list, .l12-grid) { list-style: none; margin: 0; padding: 0; }
+
+  /* Düğme */
+  & .l12-btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 6px; height: var(--l12-h-sm); padding: 0 10px; flex: none;
+    border-radius: var(--l12-r-sm); border: 1px solid var(--color-line); background: var(--color-white); color: var(--color-ink);
+    font-size: 12.5px; font-weight: 500; white-space: nowrap; cursor: pointer;
+    transition: background-color var(--l12-t) var(--l12-ease), border-color var(--l12-t), transform 140ms var(--l12-ease);
+  }
+  & .l12-btn:hover { background: var(--color-field); }
+  & .l12-btn:active { transform: scale(.97); }
+  & .l12-btn.is-pri { background: var(--color-accent); border-color: var(--color-accent); color: var(--color-on-accent); }
+  & .l12-btn.is-pri:hover { background: var(--color-accent-hover); border-color: var(--color-accent-hover); }
+
+  /* Rozet */
+  & .l12-badge {
+    display: inline-flex; align-items: center; gap: 3px; height: 18px; padding: 0 6px; border: 0; border-radius: 6px;
+    font-size: 11px; font-weight: 500; line-height: 1; white-space: nowrap; background: var(--color-field); color: var(--color-ink-2);
+  }
+  & .l12-badge svg { width: 11px; height: 11px; }
+  & .l12-badge.is-acc { background: var(--color-accent-soft); color: var(--color-accent); }
+  & .l12-badge.is-warn { background: var(--color-warn-soft); color: var(--color-warn); }
+  & .l12-badge.is-ok { background: var(--color-ok-soft); color: var(--color-ok); }
+  & .l12-link .l12-badge { height: 20px; font-size: 11.5px; padding: 0 7px; }
+  & .l12-pdf { position: relative; z-index: 1; cursor: pointer; transition: background-color var(--l12-t), color var(--l12-t); }
+  & .l12-pdf:hover { background: var(--color-accent-soft); color: var(--color-accent); }
+
+  /* Ortak satır parçaları */
+  & .l12-main { flex: 1 1 auto; min-width: 0; display: flex; flex-direction: column; gap: 3px; }
+  & .l12-t {
+    font-size: 14px; font-weight: 500; color: var(--color-ink);
+    display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden; overflow-wrap: anywhere;
+  }
+  & .l12-sub { font-size: 12.5px; color: var(--color-ink-3); min-width: 0; overflow-wrap: anywhere; }
+  & .l12-meta { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; min-width: 0; }
+  & .l12-prog { flex: 0 0 120px; display: flex; align-items: center; gap: 8px; min-width: 0; }
+  & .l12-pct { width: 36px; flex: none; text-align: right; font: 500 12px var(--font-mono); font-variant-numeric: tabular-nums; color: var(--color-ink-2); }
+  & .l12-bar { flex: 1 1 auto; height: 4px; border-radius: 4px; background: var(--color-field); overflow: hidden; }
+  & .l12-bar i { display: block; height: 100%; border-radius: 4px; background: var(--color-accent); }
+  & .l12-bar i.is-done { background: var(--color-ok); }
+  & .l12-end { flex: 0 0 20px; display: grid; place-items: center; color: var(--color-ok); }
+  & .l12-end svg { width: 16px; height: 16px; stroke-width: 2; }
+
+  /* Devam et */
+  & .l12-cont { display: flex; align-items: center; gap: 12px; padding: 10px 14px; border-top: 1px solid var(--color-line-soft); min-width: 0; }
+  & .l12-cont:first-child { border-top: 0; }
+
+  /* Hata defteri satırı */
+  & .l12-link {
+    display: flex; align-items: center; gap: 10px; width: 100%; padding: 10px 14px; text-align: left; cursor: pointer;
+    transition: background-color var(--l12-t);
+  }
+  & .l12-link:hover { background: var(--color-canvas); }
+  & .l12-lead { width: 28px; height: 28px; border-radius: 8px; display: grid; place-items: center; flex: none; background: var(--color-field); color: var(--color-ink-2); }
+  & .l12-lead svg { width: 15px; height: 15px; }
+  & .l12-link-t { flex: 1 1 auto; min-width: 0; font-weight: 500; overflow-wrap: anywhere; }
+  & .l12-chev { width: 16px; height: 16px; flex: none; color: var(--color-ink-3); }
+
+  /* Ders grupları */
+  & .l12-group { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+  & .l12-gh { display: flex; align-items: baseline; gap: 10px; padding: 0 2px; min-width: 0; flex-wrap: wrap; }
+  & .l12-list { display: flex; flex-direction: column; overflow: hidden; }
+  & .l12-row {
+    position: relative; display: flex; align-items: center; gap: 12px; padding: 10px 14px; min-height: 48px;
+    border-top: 1px solid var(--color-line-soft); transition: background-color var(--l12-t);
+   
+  }
+  & .l12-row:first-child { border-top: 0; }
+  & .l12-row:hover { background: var(--color-canvas); }
+  /* Ders adı düğmesi bütün satırı kaplar (iç içe düğme olmadan); PDF rozeti üstte kalır */
+  & .l12-open { all: unset; box-sizing: border-box; cursor: pointer; text-align: left; font-size: 14px; font-weight: 500; color: var(--color-ink);
+    display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden; overflow-wrap: anywhere; }
+  & .l12-open::after { content: ''; position: absolute; inset: 0; border-radius: inherit; }
+  & .l12-open:focus-visible { outline: none; }
+  & .l12-open:focus-visible::after { outline: 2px solid var(--color-accent); outline-offset: -2px; border-radius: 8px; }
+  & .l12-row.is-done .l12-open { color: var(--color-ink-2); }
+
+  /* Izgara */
+  & .l12-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 8px; }
+  & .l12-tile {
+    position: relative; display: flex; flex-direction: column; gap: 8px; padding: 12px 14px; min-height: 112px;
+    transition: border-color var(--l12-t), background-color var(--l12-t);
+  }
+  & .l12-tile:hover { border-color: var(--color-line-2); }
+  & .l12-tile .l12-tile-t { -webkit-line-clamp: 2; line-height: 1.35; }
+  & .l12-tile .l12-open:focus-visible::after { border-radius: var(--l12-r); }
+  & .l12-tile-f { margin-top: auto; display: flex; align-items: center; gap: 8px; }
+  & .l12-tile-f .l12-prog { flex: 1 1 auto; flex-direction: row-reverse; }
+  & .l12-tile-f .l12-pct { text-align: right; }
+
+  /* Daha fazla / boş */
+  & .l12-more { display: flex; justify-content: center; padding: 4px 0 8px; }
+  & .l12-more .l12-btn { height: var(--l12-h); padding: 0 14px; }
+  & .l12-empty { border: 1px dashed var(--color-line-2); border-radius: var(--l12-r); padding: 20px; display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+  & .l12-empty-t { flex: 1 1 260px; min-width: 0; display: flex; flex-direction: column; gap: 2px; overflow-wrap: anywhere; }
+  & .l12-empty-t b { font-weight: 500; }
+
+  /* Telefon: çubuklar gizlenir (yüzde kalır), satırlar ve dokunma hedefleri büyür */
+  @container l12 (max-width: 560px) {
+    & .l12-prog { flex-basis: 44px; }
+    & .l12-row .l12-bar, & .l12-cont .l12-bar { display: none; }
+    & .l12-date { display: none; }
+    & .l12-search { max-width: none; flex-basis: 100%; }
+    & .l12-cont { flex-wrap: wrap; row-gap: 6px; }
+    & .l12-cont .l12-main { flex-basis: calc(100% - 140px); }
+    & .l12-grid { grid-template-columns: minmax(0, 1fr); }
+    & .l12-tile { min-height: 0; }
+  }
+  @media (pointer: coarse) {
+    & .l12-row { min-height: 56px; }
+    & .l12-btn { height: 40px; padding: 0 14px; }
+    & .l12-view button { width: 40px; height: 40px; }
+    & .l12-seg button { height: 34px; }
+    & .l12-search { height: 40px; }
+    & .l12-pills .pt-q { height: 34px; }
+    /* PDF rozeti küçük görünür ama dokunma alanı ~40 px */
+    & .l12-pdf::before { content: ''; position: absolute; inset: -11px -8px; }
+  }
+}
+
+/* Hareket: 'Az' ya da sistem tercihi */
+:root[data-design='v12'][data-motion='reduced'] .l12 :is(*, *::after) { transition: none !important; }
+@media (prefers-reduced-motion: reduce) {
+  :root[data-design='v12'] .l12 :is(*, *::after) { transition: none !important; }
+}
+
+/* =============================================================================
+ * Hata defteri tekrar ekranı (LearnReview) — v12 görünümü (yapı aynı, yüzey dili v12)
+ * ============================================================================= */
+:root[data-design='v12'] {
+  & .lr-rv-top .ttl b { font-size: 15px; font-weight: 600; letter-spacing: -.005em; }
+  & .lr-rv-top .ttl small { font-size: 12.5px; }
+  & .lr-rv-top .ls-count { font-family: var(--font-mono); font-variant-numeric: tabular-nums; font-weight: 500; font-size: 12.5px; color: var(--color-ink-2); }
+  & .lr-rv-top .lv-top-prog { height: 4px; }
+  & .lr-rv-main { padding: 20px 16px 32px; background: var(--color-canvas); }
+  & .lr-rv-col { max-width: 720px; gap: 14px; }
+
+  /* Kuyruk / kapsam: v12 segment */
+  & .lr-rv-seg { gap: 8px; }
+  & .lr-rv-seg .ls-seg { display: inline-flex; padding: 3px; gap: 2px; background: var(--color-field); border: 0; border-radius: 9px; max-width: 100%; overflow-x: auto; scrollbar-width: none; }
+  & .lr-rv-seg .ls-seg button { height: 28px; padding: 0 11px; border: 0; border-radius: 7px; background: transparent; color: var(--color-ink-2); font: 500 13px var(--font-sans); white-space: nowrap; cursor: pointer; box-shadow: none; }
+  & .lr-rv-seg .ls-seg button[aria-checked='true'] { background: var(--color-white); color: var(--color-ink); box-shadow: var(--shadow-xs); }
+
+  /* Kaynak satırı: tonlu blok yerine saç çizgili panel başlığı */
+  & .lr-rv-src {
+    border-radius: 10px; background: var(--color-white); border: 1px solid var(--color-line); padding: 8px 8px 8px 14px;
+    font-size: 12.5px; color: var(--color-ink-3); gap: 6px 10px; overflow-wrap: anywhere;
+  }
+  & .lr-rv-src b { font-weight: 500; color: var(--color-ink); }
+  & .lr-rv-box { font: 500 11.5px var(--font-mono); font-variant-numeric: tabular-nums; color: var(--color-ink-3); background: var(--color-field); border-radius: 6px; padding: 2px 6px; }
+  & .lr-rv-nav { gap: 8px; align-items: center; flex-wrap: wrap; }
+
+  /* Boş / bitti: kesik çizgili sade kutu, ortalanmış büyük ikon yerine satır içi */
+  & .lr-rv-empty {
+    align-items: flex-start; text-align: left; gap: 4px; padding: 20px; border: 1px dashed var(--color-line-2); border-radius: 10px;
+    background: transparent; color: var(--color-ink-3); font-size: 13px;
+  }
+  & .lr-rv-empty > svg { width: 20px; height: 20px; color: var(--color-ok); margin-bottom: 4px; }
+  & .lr-rv-empty b { font-size: 15px; font-weight: 600; color: var(--color-ink); }
+  & .lr-rv-empty .lr-rv-nav { margin-top: 10px; justify-content: flex-start; }
+  @media (pointer: coarse) {
+    & .lr-rv-seg .ls-seg button { height: 36px; }
+  }
+}
+/* PDF rozeti: dar ekranda (dokunmatik algılanmasa da) dokunma alanı ~40 px */
+@media (max-width: 767px) {
+  :root[data-design='v12'] .l12-pdf::before { content: ''; position: absolute; inset: -11px -8px; }
+}

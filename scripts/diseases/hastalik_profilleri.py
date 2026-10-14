@@ -288,7 +288,7 @@ FACT = {'type': 'object', 'required': ['text'], 'additionalProperties': False, '
         'type': {'enum': sorted(ETYPES)}, 'qualifier': {'type': 'string'}}}}}}
 SCHEMA = {
     '$schema': 'https://json-schema.org/draft/2020-12/schema', 'title': 'DiseaseProfile (şema 2)',
-    'description': 'MedSoru Hastalıklar bilgi tabanı profili. Her bilgi sorgulanabilir bir madde (fact) nesnesidir.',
+    'description': 'MeDSor Hastalıklar bilgi tabanı profili. Her bilgi sorgulanabilir bir madde (fact) nesnesidir.',
     'type': 'object', 'required': ['id', 'name', 'kind', 'category', 'hallmarks', 'sections', 'schemaVersion'],
     'properties': {
         'id': {'type': 'string'}, 'name': {'type': 'string'}, 'latinName': {'type': ['string', 'null']},

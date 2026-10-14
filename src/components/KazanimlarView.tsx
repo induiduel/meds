@@ -18,6 +18,7 @@ import { PageToolbar, QuickOptions, type ToolbarQuick } from './ui/PageToolbar';
 import { foldText } from '../services/searchText';
 import { navigateTo, pathFor } from '../router';
 import './kazanimlar.css';
+import '../styles/v12/secondary.css';
 
 /**
  * Kazanımlar (v11) — Kurul → Ders → Konu → kazanım hiyerarşisi.
@@ -385,7 +386,7 @@ export const KazanimlarView: React.FC<Props> = ({ onNavigateToLearn, onNavigateT
   const kurulKapsam = useMemo(() => kapsamSay(kurulItems), [kurulItems]);
 
   return (
-    <div className="kz-page" ref={rootRef}>
+    <div className="kz-page o12-page o12-kz" ref={rootRef}>
       <PageToolbar
         title="Kazanımlar"
         count={kurulData && !loading

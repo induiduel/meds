@@ -1,4 +1,4 @@
-# MedSoru
+# MeDSor
 
 Tıp Fakültesi Dönem 3 kurul sınavları için ortak soru havuzu. Öğrenciler sınavdan çıkınca
 hatırladıkları parçaları girer ("ACE inhibitörü kuru öksürük sorusu çıktı"); sistem fakültenin

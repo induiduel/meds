@@ -7,14 +7,14 @@ from . import audit, config, pipeline
 
 
 def _cmd_status(_args) -> int:
-    print("MedSoru Core v2 — durum")
+    print("MeDSor Core v2 — durum")
     for key, val in config.describe().items():
         print(f"  {key:24} {val}")
     return 0
 
 
 def main(argv: list[str] | None = None) -> int:
-    parser = argparse.ArgumentParser(prog="python -m v2", description="MedSoru Core v2 (bağımsız çekirdek)")
+    parser = argparse.ArgumentParser(prog="python -m v2", description="MeDSor Core v2 (bağımsız çekirdek)")
     sub = parser.add_subparsers(dest="cmd", required=True)
 
     a = sub.add_parser("audit", help="Mevcut tüm veriyi denetle (salt okunur)")

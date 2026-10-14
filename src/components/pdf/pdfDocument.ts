@@ -14,6 +14,7 @@ import React from 'react';
 import { createRoot } from 'react-dom/client';
 import { flushSync } from 'react-dom';
 import { getCustomApiUrl } from '../../services/api';
+import { getAppearance } from '../../utils/appearance';
 
 export type PaperSize = 'a3' | 'a4' | 'a5' | 'b4' | 'b5' | 'letter' | 'legal' | 'tablet';
 export type Orientation = 'portrait' | 'landscape';
@@ -21,6 +22,8 @@ export type MarginPreset = 'narrow' | 'normal' | 'wide';
 export type FontScale = 'xs' | 'sm' | 'md' | 'lg' | 'xl';
 export type TemplateId = 'modern' | 'sade' | 'klasik' | 'kompakt' | 'sinav';
 export type InkMode = 'color' | 'mono';
+/** Belgenin tasarım dili: uygulamanın v10 (Klasik) ya da v12 (Net) görünümü. v11 seçili uygulamada v12'ye düşer. */
+export type PdfDesign = 'v10' | 'v12';
 /** Sığdırma: kapalı, içerik sayfa genişliğine (tablo/görsel taşmaz), belirli sayfa sayısına (yazı küçülür) */
 export type FitMode = 'off' | 'width' | 'pages';
 
@@ -30,6 +33,8 @@ export interface PageSettings {
   margins: MarginPreset;
   fontScale: FontScale;
   template: TemplateId;
+  /** Kartların, başlıkların ve yazının hangi tasarım sürümüyle çizileceği */
+  design: PdfDesign;
   ink: InkMode;
   fit: FitMode;
   /** fit = 'pages' iken hedef en çok sayfa */
@@ -49,9 +54,24 @@ export interface DocumentOptions extends PageSettings {
 }
 
 export const DEFAULT_PAGE: PageSettings = {
-  paper: 'a4', orientation: 'portrait', margins: 'normal', fontScale: 'md', template: 'modern', ink: 'color',
+  paper: 'a4', orientation: 'portrait', margins: 'normal', fontScale: 'md', template: 'modern', design: 'v12', ink: 'color',
   fit: 'off', fitPages: 10, pageNumbers: true, runningHeader: true,
 };
+
+export const DESIGNS: Record<PdfDesign, { label: string; hint: string }> = {
+  v12: { label: 'Net (v12)', hint: 'Güncel tasarım: düz yüzey, ince çizgi, tek yazı ailesi' },
+  v10: { label: 'Klasik (v10)', hint: 'Önceki tasarım: yuvarlak kartlar, koyu numara, kalın başlık' },
+};
+export const DESIGN_ORDER: PdfDesign[] = ['v12', 'v10'];
+
+/** Kayıtlı seçim yoksa uygulamada seçili tasarım (Klasik → v10, Sade/Net → v12). */
+export function appPdfDesign(): PdfDesign {
+  try {
+    return getAppearance().design === 'v10' ? 'v10' : 'v12';
+  } catch {
+    return 'v12';
+  }
+}
 
 /** Kâğıt boyutları (mm, dikey) */
 export const PAPER: Record<PaperSize, { label: string; hint: string; w: number; h: number }> = {
@@ -97,6 +117,8 @@ export function normalizePage(raw: any): PageSettings {
   if (!MARGINS[o.margins as MarginPreset]) o.margins = 'normal';
   if (!ZOOM[o.fontScale as FontScale]) o.fontScale = 'md';
   if (!TEMPLATES[o.template as TemplateId]) o.template = 'modern';
+  // Seçilmemişse (eski kayıt) uygulamadaki tasarımı izler
+  if (!DESIGNS[raw?.design as PdfDesign]) o.design = appPdfDesign();
   if (o.ink !== 'mono') o.ink = 'color';
   if (!['off', 'width', 'pages'].includes(o.fit)) o.fit = 'off';
   o.fitPages = Math.max(1, Math.min(500, Math.round(Number(o.fitPages) || 10)));
@@ -127,7 +149,7 @@ export function renderMarkup(node: React.ReactNode): string {
  * Uygulama CSS'i: yazdırma kuralları atılır (uygulamanın @media print'i header/aside/button gizler,
  * PDF'te ekrandaki görünüm istenir). Çapraz kökenli sayfalar (Google Fonts) bağlantı olarak kalır.
  * ------------------------------------------------------------------------- */
-let cssCache: { css: string; links: string[] } | null = null;
+let cssCache: { css: string; links: string[]; sheets: number } | null = null;
 
 const ruleText = (rule: CSSRule): string => {
   if (typeof CSSMediaRule !== 'undefined' && rule instanceof CSSMediaRule) {
@@ -140,7 +162,8 @@ const ruleText = (rule: CSSRule): string => {
 };
 
 export function collectAppCss(): { css: string; links: string[] } {
-  if (cssCache) return cssCache;
+  // Tembel yüklenen parçalar (ör. v12 ders CSS'i) sonradan gelirse yeniden toplanır
+  if (cssCache && cssCache.sheets === document.styleSheets.length) return cssCache;
   const parts: string[] = [];
   const links: string[] = [];
   for (const sheet of Array.from(document.styleSheets)) {
@@ -156,7 +179,7 @@ export function collectAppCss(): { css: string; links: string[] } {
   document.querySelectorAll<HTMLLinkElement>('link[rel="stylesheet"][href*="fonts.googleapis.com"]').forEach((l) => {
     if (!links.includes(l.href)) links.push(l.href);
   });
-  cssCache = { css: parts.join('\n'), links };
+  cssCache = { css: parts.join('\n'), links, sheets: document.styleSheets.length };
   return cssCache;
 }
 
@@ -170,14 +193,16 @@ const pdfCss = (o: DocumentOptions) => {
   const head = o.runningHead || o.title;
   const mono = o.ink === 'mono';
   const accent = mono ? '#1F2430' : '#2453E6';
+  const net = o.design === 'v12';
+  const brandFont = net ? '600 7.5pt "Geist", system-ui, sans-serif' : '700 7.5pt "Bricolage Grotesque", "Geist", sans-serif';
   const mm = (n: number) => `${n}mm`;
   return `
 @page {
   size: ${g.w}mm ${g.h}mm;
   margin: ${mm(g.m.t)} ${mm(g.m.r)} ${mm(g.m.b)} ${mm(g.m.l)};
-  ${o.pageNumbers ? `@bottom-right { content: counter(page) " / " counter(pages); font: 600 8pt "Geist", system-ui, sans-serif; color: #8A94A6; }` : ''}
+  ${o.pageNumbers ? `@bottom-right { content: counter(page) " / " counter(pages); font: ${net ? '500 8pt "Geist Mono", "Geist", ui-monospace, monospace' : '600 8pt "Geist", system-ui, sans-serif'}; color: #8A94A6; }` : ''}
   ${o.runningHeader ? `@top-left { content: ${cssString(head)}; font: 600 7.5pt "Geist", system-ui, sans-serif; color: #8A94A6; letter-spacing: .02em; }
-  @top-right { content: "MedSoru"; font: 700 7.5pt "Bricolage Grotesque", "Geist", sans-serif; color: ${accent}; }` : ''}
+  @top-right { content: "MeDSor"; font: ${brandFont}; color: ${accent}; }` : ''}
 }
 @page cover { margin: 0; @bottom-right { content: none; } @top-left { content: none; } @top-right { content: none; } }
 *, *::before, *::after { animation: none !important; transition: none !important; }
@@ -205,11 +230,30 @@ ${o.fit !== 'off' ? `.pd-zoom img, .pd-zoom svg, .pd-zoom video { max-width: 100
 `;
 };
 
+/**
+ * Kök öznitelikleri: tasarım CSS'i (v11/v12 katmanları `:root[data-design]` kapsamında) ancak bunlarla devreye girer.
+ * v12 belge her zaman açık temada, kullanıcının açık tema paleti/vurgusu ve okuma yazısıyla çizilir; v10 eskisi gibi
+ * yalnız temel token'larla (palet özniteliği yok) kalır.
+ */
+function designAttrs(design: PdfDesign): string {
+  if (design !== 'v12') return 'data-design="v10"';
+  const attrs: Record<string, string> = { 'data-design': 'v12', 'data-mode': 'light', 'data-density': 'normal', 'data-text-size': 'm', 'data-motion': 'reduced', 'data-qtags': 'on' };
+  try {
+    const a = getAppearance();
+    const pal = a.palettes?.light;
+    if (pal) attrs['data-palette'] = pal;
+    const acc = a.accents?.[`light:${pal}`];
+    if (acc) attrs['data-accent'] = acc;
+    attrs['data-reading'] = a.reading || 'serif';
+  } catch {}
+  return Object.entries(attrs).map(([k, v]) => `${k}="${escAttr(v)}"`).join(' ');
+}
+
 export function buildDocument(bodyHtml: string, o: DocumentOptions): string {
   const { css, links } = collectAppCss();
   const rootClass = Array.from(document.documentElement.classList).filter((c) => c !== 'theme-dark' && c !== 'dark').join(' ');
   return `<!DOCTYPE html>
-<html lang="tr" class="${escAttr(rootClass)}">
+<html lang="tr" class="${escAttr(rootClass)}" ${designAttrs(o.design)}>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -219,7 +263,7 @@ ${links.map((h) => `<link rel="stylesheet" href="${escAttr(h)}">`).join('\n')}
 <style>${css}</style>
 <style>${pdfCss(o)}</style>
 </head>
-<body class="ps-tpl-${o.template} ps-ink-${o.ink}">
+<body class="ps-tpl-${o.template} ps-ink-${o.ink} pd-design-${o.design}">
 <main class="pd-doc"><div class="pd-zoom">${bodyHtml}</div></main>
 </body>
 </html>`;
@@ -416,4 +460,4 @@ export const safeFileName = (s: string) =>
   s
     .replace(/[^\p{L}\d]+/gu, '_')
     .replace(/^_+|_+$/g, '')
-    .slice(0, 70) || 'MedSoru';
+    .slice(0, 70) || 'MeDSor';

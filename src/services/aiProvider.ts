@@ -574,7 +574,7 @@ export async function callMuseSpark(
           }
           if (baseUrl.includes('openrouter')) {
             headers['HTTP-Referer'] = 'https://nofrostlife.com.tr';
-            headers['X-Title'] = 'MedSoru AI Medical Tutor';
+            headers['X-Title'] = 'MeDSor AI Medical Tutor';
           }
 
           console.log(`[Muse Spark 1.3] Deneniyor: ${baseUrl} (${m}) [${keyInfo.label}]...`);

@@ -12,6 +12,8 @@ import { deletePastComment, resolveInboxReport, sendUserEmail, deleteManageUser 
 import { ApiService } from '../../services/api';
 import { EmptyState, ConfirmButton } from './consoleUi';
 import '../../styles/manage-people.css';
+import { useAppearance } from '../../utils/appearance';
+import { ManagePeopleV12 } from '../v12/ManagePeopleV12';
 
 /**
  * Kişiler: her kullanıcının (hesaplı ya da girişsiz cihaz) tüm izi tek ekranda — cihazlar, kullanım süresi, skorlar,
@@ -27,6 +29,9 @@ interface Props {
 type Filter = 'all' | 'online' | 'accounts' | 'guests' | 'reporters' | 'contributors';
 type Sort = 'seen' | 'usage' | 'contrib';
 type Tab = 'ozet' | 'etkinlik' | 'katkilar' | 'bildirimler' | 'notlar' | 'skorlar' | 'cihazlar';
+export type PeopleFilter = Filter;
+export type PeopleSort = Sort;
+export type PeopleTab = Tab;
 const TABS: { id: Tab; label: string }[] = [
   { id: 'ozet', label: 'Özet' },
   { id: 'etkinlik', label: 'Etkinlik' },
@@ -76,6 +81,7 @@ const writeUrl = (key: string | null, tab: Tab, replace = false) => {
 };
 
 export const ManagePeopleSection: React.FC<Props> = ({ adminEmail, notify }) => {
+  const v12 = useAppearance().design === 'v12';
   const [list, setList] = useState<PeopleList | null>(null);
   const [listErr, setListErr] = useState('');
   const [query, setQuery] = useState('');
@@ -197,6 +203,39 @@ export const ManagePeopleSection: React.FC<Props> = ({ adminEmail, notify }) => 
     ['reporters', 'Bildirim yapanlar'],
     ['contributors', 'Katkı yapanlar'],
   ];
+
+  // v12 "Net": denetim düzeni (kayıtlı görünümler, süzgeç çubuğu, seçimli tablo, sağ ayrıntı çekmecesi); veri ve işlevler aynı
+  if (v12)
+    return (
+      <ManagePeopleV12
+        list={list}
+        listErr={listErr}
+        rows={rows}
+        filters={FILTERS}
+        filter={filter}
+        setFilter={setFilter}
+        query={query}
+        setQuery={setQuery}
+        sort={sort}
+        setSort={setSort}
+        pulse={pulse}
+        onRefresh={() => void refreshList()}
+        openKey={openKey}
+        tab={tab}
+        open={open}
+        setTab={setTab}
+        detail={detail}
+        detailErr={detailErr}
+        loadingDetail={loadingDetail}
+        adminEmail={adminEmail}
+        notify={notify}
+        reload={() => {
+          void refreshDetail(openKey, true);
+          void refreshList();
+        }}
+        parts={PEOPLE_V12_PARTS}
+      />
+    );
 
   return (
     <div className={`pp-root ${openKey ? 'has-open' : ''}`}>
@@ -853,3 +892,7 @@ const EditBox: React.FC<{ d: PersonDetail; adminEmail: string; notify: (m: strin
     </form>
   );
 };
+
+/** v12 görünümünün yeniden kullandığı parçalar (ManagePeopleV12'ye prop olarak geçer; döngüsel içe aktarma yok). */
+const PEOPLE_V12_PARTS = { Timeline, ItemList, Scores, Devices, MailBox, EditBox, mergeTimeline, contribTotal };
+export type PeopleV12Parts = typeof PEOPLE_V12_PARTS;

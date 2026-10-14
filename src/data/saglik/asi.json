@@ -1,0 +1,1698 @@
+{
+ "baslik": "Sağlık Bakanlığı › Aşı — Türkiye resmî aşı verileri",
+ "olusturma": "2026-10-14",
+ "guncellik_notu": "Güncel takvim 1 Eylül 2026 tarihli resmî aşı kartıdır (suçiçeği 2. dozu eklendi). Derste anlatılan '2025 Aşı Takvimi (Güncellenmiş)' ile tek farkı 48. aydaki suçiçeği 2. dozudur. 2025 takviminde Hep-B 1. ay dozu yoktur; Hep-B doğumda, sonrası altılı karma aşı içindedir.",
+ "takvim_zamanlari": [
+  {
+   "id": "dogum",
+   "etiket": "Doğumda",
+   "ay": 0
+  },
+  {
+   "id": "ay2",
+   "etiket": "2. ay sonu",
+   "ay": 2
+  },
+  {
+   "id": "ay4",
+   "etiket": "4. ay sonu",
+   "ay": 4
+  },
+  {
+   "id": "ay6",
+   "etiket": "6. ay sonu",
+   "ay": 6
+  },
+  {
+   "id": "ay9",
+   "etiket": "9. ay sonu",
+   "ay": 9
+  },
+  {
+   "id": "ay12",
+   "etiket": "12. ay sonu",
+   "ay": 12
+  },
+  {
+   "id": "ay18",
+   "etiket": "18. ay sonu",
+   "ay": 18
+  },
+  {
+   "id": "ay24",
+   "etiket": "24. ay sonu",
+   "ay": 24
+  },
+  {
+   "id": "ay48",
+   "etiket": "48. ay (4 yaş)",
+   "ay": 48
+  },
+  {
+   "id": "yas13",
+   "etiket": "13 yaş",
+   "ay": 156,
+   "not": "2020 öncesinde 'İlköğretim 8. sınıf' okul aşısıydı; 1 Temmuz 2020'den beri 13 yaşında Aile Sağlığı Merkezinde uygulanır (sb-asila-brosur-2020, sb-takvim-2020)."
+  }
+ ],
+ "takvim": [
+  {
+   "id": "hbv",
+   "ad": "Hepatit B aşısı",
+   "kisa": "Hep-B",
+   "hastaliklar": [
+    "Hepatit B"
+   ],
+   "tur": "İnaktif (rekombinant) — türü resmî kartta belirtilmez",
+   "yol": "İM",
+   "dozlar": [
+    {
+     "zaman": "dogum",
+     "doz": "Tek doz (doğum dozu)"
+    }
+   ],
+   "not": "Doğumdan sonra en geç ilk 72 saat (tercihen ilk 24 saat) içinde uygulanır. 14 Nisan 2025'ten bu yana sonraki dozlar altı bileşenli karma aşı (DaBT-İPA-Hib-HepB) içinde verilir; tekli Hep-B uygulaması yalnızca doğum dozu ile sınırlıdır, bu yüzden 2025'ten itibaren takvimde ayrı 'Hep-B 3. doz' yoktur. Taşıyıcı olduğu bilinen (HBsAg+) anneden doğan bebeğe ilk 12 saat içinde aşı ile birlikte Hepatit B immünglobulini (HBIG) yapılır. Aşılamadan önce serolojik inceleme gerekmez. 2000 g altı bebek şeması genelgede eski 0-1-6 takvimine göre tanımlanmıştır (anne taşıyıcı/bilinmiyor: ilk 12 saat + 1., 2., 12. ay = 4 doz). Doz: 10 yaşa kadar 0,5 ml, 10 yaş ve üzeri 1 ml.",
+   "kaynak": "sb-asi-karti-2026",
+   "ek_kaynaklar": [
+    "sb-siy-2025-bulten",
+    "sb-haber-altili-karma-2025",
+    "sb-gbp-genelge-2009"
+   ]
+  },
+  {
+   "id": "bcg",
+   "ad": "BCG aşısı (Verem aşısı, Bacille Calmette-Guérin)",
+   "kisa": "BCG",
+   "hastaliklar": [
+    "Tüberküloz (verem)"
+   ],
+   "tur": "Canlı atenüe bakteri aşısı",
+   "yol": "İD (intradermal/cilt içi), sol omuz bölgesine yakın",
+   "dozlar": [
+    {
+     "zaman": "ay2",
+     "doz": "Tek doz"
+    }
+   ],
+   "not": "Doğumdan itibaren yapılabilir ancak uygulama kolaylığı, daha az komplikasyon ve daha güçlü immünite için 2 ayı doldurunca uygulanır. 3. aydan sonra yapılacaksa önce PPD ile tüberkülin cilt testi (TCT) yapılır, sonuca göre aşılanır (0-5 mm negatif → aşılanır). Kayıtlı BCG'si veya skarı olana TCT/yeniden BCG gerekmez; 6 yaş üzerinde hiç aşılanmamış çocukta BCG gerekli değildir. Doz: 0 yaşta 0,05 ml, 1 yaş üzerinde 0,1 ml; ciltte 5-6 mm bül oluşmalı. Kızamık içeren aşıdan sonra BCG için 4 hafta beklenir; BCG önce yapılmışsa kızamık içeren aşı için beklemek gerekmez.",
+   "kaynak": "sb-asi-karti-2026",
+   "ek_kaynaklar": [
+    "sb-gbp-genelge-2009"
+   ]
+  },
+  {
+   "id": "kpa",
+   "ad": "Konjuge pnömokok aşısı",
+   "kisa": "KPA",
+   "hastaliklar": [
+    "İnvaziv pnömokok hastalıkları (pnömoni, menenjit, sepsis)"
+   ],
+   "tur": "Konjuge (inaktif) aşı",
+   "yol": "İM",
+   "dozlar": [
+    {
+     "zaman": "ay2",
+     "doz": "1. doz"
+    },
+    {
+     "zaman": "ay4",
+     "doz": "2. doz"
+    },
+    {
+     "zaman": "ay12",
+     "doz": "Rapel"
+    }
+   ],
+   "not": "Kasım 2008'de 7 valanlı (PCV-7) olarak programa girdi, 2011'de 13 valanlı (PCV-13) aşıya geçildi. 1 Temmuz 2019'dan itibaren 6. aydaki 3. doz kaldırılıp 12. ay rapel uygulamasına geçildi. Pekiştirme dozu 12. aydan önce yapılmamalıdır. Genel kontrendikasyonlar dışında kontrendikasyonu yoktur; doz 0,5 ml.",
+   "kaynak": "sb-asi-karti-2026",
+   "ek_kaynaklar": [
+    "sb-gbp-genelge-2009",
+    "sb-siy-2021",
+    "sb-gbp-tarihce-en"
+   ]
+  },
+  {
+   "id": "dabt-ipa-hib-hepb",
+   "ad": "Altı bileşenli karma aşı (Difteri, asellüler Boğmaca, Tetanos, İnaktif Polio, Hemofilus influenza tip b, Hepatit B)",
+   "kisa": "DaBT-İPA-Hib-HepB",
+   "hastaliklar": [
+    "Difteri",
+    "Boğmaca",
+    "Tetanos",
+    "Poliomiyelit (çocuk felci)",
+    "Hib hastalığı (menenjit, sepsis vb.)",
+    "Hepatit B"
+   ],
+   "tur": "İnaktif kombine aşı",
+   "yol": "İM (12 aya kadar uyluk vastus lateralis ön-yan bölümü, 12. aydan sonra deltoid)",
+   "dozlar": [
+    {
+     "zaman": "ay2",
+     "doz": "1. doz"
+    },
+    {
+     "zaman": "ay4",
+     "doz": "2. doz"
+    },
+    {
+     "zaman": "ay6",
+     "doz": "3. doz"
+    },
+    {
+     "zaman": "ay18",
+     "doz": "Rapel"
+    }
+   ],
+   "not": "14 Nisan 2025'te uygulamaya girdi; 2008'den beri kullanılan beşli karma (DaBT-İPA-Hib) aşı ile Hepatit B aşısını birleştirdi. Beşli karma ile başlayan çocukların devam dozları altılı karma ile tamamlanır. Genelgedeki beşli karma kuralları: 1.-2. ve 2.-3. dozlar arası en az 4 hafta, 3. doz-rapel arası en az 6 ay; üst yaş sınırı 6 yaş (72 ay). Boğmaca bileşenine bağlı ensefalopati kesin kontrendikasyondur (boğmaca bileşeni çıkarılarak devam edilir).",
+   "kaynak": "sb-asi-karti-2026",
+   "ek_kaynaklar": [
+    "sb-haber-altili-karma-2025",
+    "sb-siy-2025-bulten",
+    "sb-gbp-genelge-2009"
+   ]
+  },
+  {
+   "id": "opa",
+   "ad": "Oral polio aşısı",
+   "kisa": "OPA",
+   "hastaliklar": [
+    "Poliomiyelit (çocuk felci)"
+   ],
+   "tur": "Canlı atenüe virüs aşısı (2016'dan beri bivalan OPA)",
+   "yol": "Oral (ağızdan; kullanılan aşıda 2 damla = 1 doz)",
+   "dozlar": [
+    {
+     "zaman": "ay6",
+     "doz": "1. doz"
+    },
+    {
+     "zaman": "ay18",
+     "doz": "2. doz"
+    }
+   ],
+   "not": "İnaktif polio (İPA) karma aşı içinde 2., 4., 6. ve 18. aylarda ayrıca verilir. OPA sonrası beslenme kısıtlanmaz, anne sütü verilebilir. İshali olan çocuğa uygulanabilir, 4 hafta sonra fazladan bir doz yapılır. OPA ile diğer canlı aşılar arasında süre bırakmak gerekmez. HIV enfeksiyonu, evde immün yetmezlikli/HIV'li kişi olması ve immün baskılanma kesin kontrendikasyondur.",
+   "kaynak": "sb-asi-karti-2026",
+   "ek_kaynaklar": [
+    "sb-gbp-genelge-2009",
+    "sb-gbp-tarihce-en"
+   ]
+  },
+  {
+   "id": "sucicegi",
+   "ad": "Suçiçeği aşısı",
+   "kisa": "VZV (Suçiçeği)",
+   "hastaliklar": [
+    "Suçiçeği (varisella)"
+   ],
+   "tur": "Canlı atenüe virüs aşısı",
+   "yol": "SK (subkutan/deri altı)",
+   "dozlar": [
+    {
+     "zaman": "ay12",
+     "doz": "1. doz"
+    },
+    {
+     "zaman": "ay48",
+     "doz": "2. doz (1 Eylül 2026'dan itibaren)"
+    }
+   ],
+   "not": "2013'ten beri 12. ayda tek doz (1 Ocak 2012 ve sonrası doğanlar). 1 Eylül 2026 itibarıyla tüm Türkiye'de 48. ayda ikinci doz başladı; 49-72. ay (72. ay dahil) arasında 2. dozu olmayanlara yakalama aşısı yapılır. 13 yaş altında iki doz arası en az 3 ay (zorunlu durumda 4 hafta), 13 yaş ve üzerinde en az 1 ay arayla 2 doz. 12. aydan önce yapılan doz geçerli sayılmaz. KKK ve/veya BCG ile aynı gün ya da en az 4 hafta arayla yapılır.",
+   "kaynak": "sb-asi-karti-2026",
+   "ek_kaynaklar": [
+    "sb-portal-son-guncellemeler",
+    "sb-portal-sss",
+    "sb-takvim-2020"
+   ]
+  },
+  {
+   "id": "kkk",
+   "ad": "Kızamık-Kızamıkçık-Kabakulak aşısı",
+   "kisa": "KKK",
+   "hastaliklar": [
+    "Kızamık",
+    "Kızamıkçık (rubella)",
+    "Kabakulak"
+   ],
+   "tur": "Canlı atenüe virüs aşısı",
+   "yol": "SK (subkutan; üst kol deltoid bölgesi, 45° açıyla)",
+   "dozlar": [
+    {
+     "zaman": "ay9",
+     "doz": "Ek doz"
+    },
+    {
+     "zaman": "ay12",
+     "doz": "1. doz"
+    },
+    {
+     "zaman": "ay48",
+     "doz": "2. doz"
+    }
+   ],
+   "not": "Resmî 2025 ve 2026 kartlarında 9. ay sonunda 'EK DOZ' gösterilir; kartta 12. ay dozu ayrıca '1. doz' olarak yer alır. 2. doz eskiden ilköğretim 1. sınıfta okulda yapılırdı; 1 Temmuz 2020'den itibaren (1 Temmuz 2016 ve sonrası doğanlar) 48. ayda Aile Sağlığı Merkezinde yapılır. Kızamık antijeni içeren iki aşı arasında en az 4 hafta olmalıdır. Gebelik ve immün baskılanma kesin kontrendikasyondur; aşı sonrası 4 hafta gebelikten korunulur (öncesinde gebelik testi gerekmez). PPD, kızamık içeren aşıyla aynı gün ya da 4-6 hafta sonra yapılır.",
+   "kaynak": "sb-asi-karti-2026",
+   "ek_kaynaklar": [
+    "sb-asi-karti-2025",
+    "sb-takvim-2020",
+    "sb-asila-brosur-2020",
+    "sb-gbp-genelge-2009"
+   ]
+  },
+  {
+   "id": "hepa",
+   "ad": "Hepatit A aşısı",
+   "kisa": "Hep-A",
+   "hastaliklar": [
+    "Hepatit A"
+   ],
+   "tur": "İnaktif (ölü virüs) aşısı",
+   "yol": "İM (koldan kas içine)",
+   "dozlar": [
+    {
+     "zaman": "ay18",
+     "doz": "1. doz"
+    },
+    {
+     "zaman": "ay24",
+     "doz": "2. doz"
+    }
+   ],
+   "not": "2012'de programa eklendi (1 Mart 2011 ve sonrası doğanlar). Risk gruplarına (kronik HBV/HCV, HIV, pıhtılaşma bozukluğu, nakil adayları, kanalizasyon işçileri vb.) ücretsiz uygulanır.",
+   "kaynak": "sb-asi-karti-2026",
+   "ek_kaynaklar": [
+    "sb-portal-hastaliklar",
+    "sb-takvim-2020",
+    "sb-portal-risk-gruplari"
+   ]
+  },
+  {
+   "id": "dabt-ipa",
+   "ad": "Dörtlü karma aşı (Difteri, asellüler Boğmaca, Tetanos, İnaktif Polio)",
+   "kisa": "DaBT-İPA",
+   "hastaliklar": [
+    "Difteri",
+    "Boğmaca",
+    "Tetanos",
+    "Poliomiyelit (çocuk felci)"
+   ],
+   "tur": "İnaktif kombine aşı",
+   "yol": "İM (deltoid)",
+   "dozlar": [
+    {
+     "zaman": "ay48",
+     "doz": "Rapel"
+    }
+   ],
+   "not": "2010'da ilköğretim 1. sınıf okul aşısı olarak başladı; 1 Temmuz 2020'den itibaren (1 Temmuz 2016 ve sonrası doğanlar) 48. ayda Aile Sağlığı Merkezinde uygulanır.",
+   "kaynak": "sb-asi-karti-2026",
+   "ek_kaynaklar": [
+    "sb-takvim-2020",
+    "sb-asila-brosur-2020",
+    "sb-portal-sss",
+    "sb-gbp-tarihce-en"
+   ]
+  },
+  {
+   "id": "td",
+   "ad": "Erişkin tip tetanos-difteri aşısı",
+   "kisa": "Td",
+   "hastaliklar": [
+    "Tetanos",
+    "Difteri"
+   ],
+   "tur": "Toksoid aşı",
+   "yol": "İM",
+   "dozlar": [
+    {
+     "zaman": "yas13",
+     "doz": "Rapel"
+    }
+   ],
+   "not": "Eskiden ilköğretim 8. sınıfta okulda yapılırdı; 1 Temmuz 2020'den beri 13 yaşında Aile Sağlığı Merkezinde yapılır. Sonrasında primer serisi tamamlanmış tüm erişkinlere 10 yılda bir Td önerilir. Gebelik dahil tetanoz toksoidi (TT) gereken her durumda Td kullanılır. Genel kontrendikasyonlar dışında kontrendikasyonu yoktur.",
+   "kaynak": "sb-asi-karti-2026",
+   "ek_kaynaklar": [
+    "sb-asila-brosur-2020",
+    "sb-gbp-genelge-2009",
+    "sb-portal-eriskin"
+   ]
+  }
+ ],
+ "gebe_eriskin": [
+  {
+   "baslik": "Gebe aşılaması — güncel uygulama (Tdab/Td, grip)",
+   "maddeler": [
+    "Çocuklukta aşılanmamış, aşı durumu bilinmeyen, eksik aşılı ya da tam aşılı olup son 10 yılda pekiştirme almamış tüm gebelere tetanos aşısı uygulanır.",
+    "Hiç aşılanmamış gebelere, en az biri Tdab (tetanos, difteri, asellüler boğmaca) olmak üzere 4 hafta arayla 2 doz tetanos aşısı önerilir: gebeliğin 18-24. haftaları arasında 1 doz Tdab, 4 hafta sonra 1 doz Td.",
+    "Koruyuculuk 2. dozdan 1 ay sonra yeterli düzeye ulaştığından şema doğumdan en az 1 ay önce tamamlanmalıdır; amaç ilk aylarda boğmacaya karşı savunmasız bebeği anne aracılığıyla korumaktır.",
+    "Gebelere Tdab uygulaması 2 Nisan 2025 itibarıyla programa alındı.",
+    "Tüm gebelere grip aşısı önerilir; gebeliğin her döneminde, tek doz olarak ve her gebelikte tekrarlanarak uygulanır (reçete edilirse ücretsiz).",
+    "Kızamıkçığa bağışıklık kanıtı olmayan gebeler doğumdan hemen sonra (KKK ile) aşılanmalıdır; gebelikte canlı aşı yapılmaz."
+   ],
+   "kaynak": "sb-portal-eriskin",
+   "ek_kaynaklar": [
+    "sb-haber-altili-karma-2025",
+    "sb-asi-karti-2026",
+    "sb-portal-hastaliklar"
+   ]
+  },
+  {
+   "baslik": "Doğurganlık çağı (15-49 yaş) kadın/gebe Td şeması — GBP Genelgesi",
+   "maddeler": [
+    "Td1: gebeliğin 4. ayında / ilk karşılaşmada — koruma yok.",
+    "Td2: Td1'den en az 4 hafta sonra — koruma 1-3 yıl.",
+    "Td3: Td2'den en az 6 ay sonra — koruma 5 yıl.",
+    "Td4: Td3'ten en az 1 yıl sonra ya da sonraki gebelikte — koruma 10 yıl.",
+    "Td5: Td4'ten en az 1 yıl sonra ya da sonraki gebelikte — doğurganlık çağı boyunca koruma.",
+    "Hiç aşılanmamış gebe en az 2 doz Td almalı; 2. doz doğumdan en az 2 hafta önce tamamlanmalıdır.",
+    "Primer serisi kayıtlarla tamamlanmış kadına gebeliğinde 1 doz, sonraki gebeliğinde 1 doz Td yapılarak 5 doz tamamlanır; 5 doz almış kadınlarda 10 yılda bir Td sürdürülür.",
+    "1980'den sonra doğan ve kayıtlarında uygun aralıklı en az 3 doz DBT/Td/TT bulunan kadınlarda bunlar doğurganlık çağındaki 2 doz yerine sayılır, takvime kalınan yerden devam edilir."
+   ],
+   "kaynak": "sb-gbp-genelge-2009"
+  },
+  {
+   "baslik": "Sağlıklı erişkinler",
+   "maddeler": [
+    "Td: aşılanma kaydı olmayan tüm erişkinlere 3 doz Td ile primer seri (1. ile 2. doz arası 1 ay, 2. ile 3. doz arası 6 ay); primer seri tamamlanmış herkese 10 yılda bir Td.",
+    "KKK: iki doz kızamık içeren aşı/KKK kaydı, geçirilmiş kızamık kaydı ya da laboratuvarla bağışıklık kanıtı olmayan, gebe olmayan tüm erişkinlere 4 hafta arayla KKK; talep halinde aile hekimince ücretsiz 2 doz.",
+    "Kızamıkçık aşısı 2006'da takvime girdiği için 2006 öncesi yapılan kızamık aşıları kızamıkçığa karşı korumaz; özellikle doğurganlık çağındaki gebe olmayan kadınlarda KKK önemlidir."
+   ],
+   "kaynak": "sb-portal-eriskin",
+   "ek_kaynaklar": [
+    "sb-gbp-genelge-2009",
+    "sb-asi-karti-2026"
+   ]
+  },
+  {
+   "baslik": "65 yaş ve üzeri",
+   "maddeler": [
+    "Pnömokok: pnömoni, sepsis, menenjit gibi ciddi hastalıklardan korunmak için 2 doz pnömokok aşısı önerilir; konjuge pnömokok aşısı ücretsizdir, polisakkarit aşı Sağlık Uygulama Tebliği'ndeki risk gruplarında reçeteyle karşılanır.",
+    "Grip: 65 yaş ve üzeri ile huzurevi/yaşlı bakımevinde kalanlara sağlık raporu aranmaksızın yılda bir kez bedeli karşılanır."
+   ],
+   "kaynak": "sb-portal-eriskin",
+   "ek_kaynaklar": [
+    "sb-asi-karti-2026"
+   ]
+  },
+  {
+   "baslik": "Risk grubundaki erişkinler (resmî kartta: Hepatit B, Hepatit A, Pnömokok, Grip, Meningokok, Suçiçeği, KKK)",
+   "maddeler": [
+    "Pnömokok: kronik kalp/akciğer (astım dahil)/böbrek/karaciğer hastalığı, diabetes mellitus, BOS kaçağı, koklear implant, orak hücreli anemi ve hemoglobinopatiler, aspleni, HIV, immün baskılanma, malignite, organ/kök hücre nakli, multipl miyelom, alkolizm.",
+    "Hepatit B: hemodiyaliz hastaları, nakil adayları/alıcıları, sık kan ürünü alanlar, madde bağımlıları, taşıyıcıların aşısız ev içi temaslıları, çok eşli/ticari cinsel ilişki, HBV dışı kronik karaciğer hastalığı, cezaevi, berber-kuaför-manikürcü, dövme/piercing yaptıracaklar, bakımevi ve yetiştirme yurtları, riskli güvenlik personeli, ilk yardım uygulayıcıları.",
+    "Hepatit A: kronik HBV/HCV, HIV/AIDS, pıhtılaşma bozukluğu, nakil adayları/alıcıları, erkeklerle seks yapan erkekler, kanalizasyon işçileri.",
+    "KKK: hematopoetik kök hücre alıcıları, HIV/AIDS, solid organ nakli planlananlar.",
+    "Hib: splenektomi/aspleni, orak hücreli anemi vb.; 5 yaş ve üzeri sağlıklı çocuğa Hib gerekmez.",
+    "Grip: astım dahil kronik akciğer, kalp ve diğer kronik hastalığı olan erişkinlere raporla yılda bir kez bedeli karşılanır.",
+    "Meningokok: rutin takvimde yok; dalak fonksiyonu olmayanlar, kompleman eksikliği, laboratuvar çalışanları, askerler, hacca gidenler, salgın bölgesine seyahat edenler için önerilir."
+   ],
+   "kaynak": "sb-portal-risk-gruplari",
+   "ek_kaynaklar": [
+    "sb-portal-eriskin",
+    "sb-portal-hastaliklar",
+    "sb-asi-karti-2026"
+   ]
+  },
+  {
+   "baslik": "Sağlık çalışanları ve sağlık öğrencileri (tıp fakültesi öğrencileri dahil)",
+   "maddeler": [
+    "Kapsam: tıp/diş hekimliği fakülteleri, hemşirelik-ebelik okulları ve sağlık MYO öğrencileri, hasta ve hasta çıkartısıyla teması olan tüm sağlık çalışanları, sağlık kurumu temizlik personeli, 112 ve UMKE personeli.",
+    "Önerilen aşılar: Td (bir dozunun boğmaca içeren aşı olması önerilir), KKK, mevsimsel influenza, Hepatit B, suçiçeği.",
+    "Hepatit A: tıp/hemşirelik/sağlık MYO öğrencileri, pediatri-çocuk enfeksiyon-erişkin yoğun bakım gibi alt bakımı verilen servis çalışanları, fekal materyalle çalışan laboratuvar personeli, 112/UMKE ve kronik hepatiti olan sağlık çalışanları.",
+    "Meningokok: mikrobiyoloji laboratuvarında meningokokla çalışanlar.",
+    "Tüm sağlık çalışanlarının grip aşısı için Bakanlık 2005-2006 sezonundan beri aşı temin edip illere dağıtmaktadır."
+   ],
+   "kaynak": "sb-portal-meslek",
+   "ek_kaynaklar": [
+    "sb-portal-eriskin"
+   ]
+  },
+  {
+   "baslik": "Diğer meslek grupları, hac-umre ve seyahat",
+   "maddeler": [
+    "Askerler ve askerî öğrenciler risk grubu aşılaması kapsamında ücretsiz aşılanır; kanalizasyon işçilerine Hepatit A; tıbbi atık çalışanlarına grip, Td, Hepatit B ve Hepatit A önerilir.",
+    "Hac/umre: meningokok (dört bileşenli konjuge ACWY), OPA (mümkünse gitmeden en az 4 hafta önce) ve kayıtlı 2 doz KKK'sı olmayanlara KKK önerilir; meningokok şeması ziyaretten 10 gün önce tamamlanmalıdır.",
+    "Seyahat aşıları DSÖ önerileri doğrultusunda Hudut ve Sahiller Sağlık Genel Müdürlüğü seyahat sağlığı birimlerinde uygulanır."
+   ],
+   "kaynak": "sb-portal-meslek",
+   "ek_kaynaklar": [
+    "sb-portal-eriskin"
+   ]
+  },
+  {
+   "baslik": "Kuduz profilaksisi (özet)",
+   "maddeler": [
+    "En önemli adım yara bakımıdır: yara aradan geçen süreye bakılmaksızın bol akarsu ve sabunla yıkanır, ardından alkol veya iyotlu antiseptik uygulanır.",
+    "Kategori I (dokunma, besleme, sağlam derinin yalanması): işlem gerekmez.",
+    "Kategori II (deri altına geçmeyen sıyrık, kanamasız küçük tırmalama): hayvan son 1 yılda aşılı veya sağlıklı ve gözlenebiliyorsa yara bakımı + tetanoz değerlendirmesi + 10 gün gözlem; aşısız/bilinmeyen ve gözlenemeyen hayvanda aşılamaya hemen başlanır.",
+    "Kategori III (deriyi zedeleyen ısırık/tırmalama, mukoza veya açık yaranın salyayla teması, baş-boyun-parmak ucu lezyonu): hayvanın durumuna göre aşı; gözlenemeyen aşısız hayvanda aşı + ilk dozla birlikte kuduz immünglobulini.",
+    "Kategori IV (kuduz olabilecek yabani hayvanla riskli temas): aşı + immünglobulin hemen.",
+    "Aşı şeması: 0., 3., 7. günlerde birer doz ve 14-28. günler arasında 4. doz (toplam 4 doz) ya da 2-1-1 şeması (0. gün 2 doz, 7. ve 21. gün birer doz). Erişkinde deltoid, küçük çocukta uyluk anterolateraline İM; gluteal bölgeye yapılmaz.",
+    "İmmünglobulin: at kaynaklı 40 IU/kg, insan kaynaklı 20 IU/kg; mümkün olduğunca tamamı yara içi/çevresine. İlk doz aşıdan sonra en geç 7 gün içinde yapılabilir, 7 günden sonra yapılmaz.",
+    "Temas öncesi profilaksi (veteriner hekimler, laboratuvar çalışanları, mağara/yarasa çalışanları vb.): 0. ve 7. günlerde 2 doz İM (immün baskılanmışlarda 21. veya 28. günde 3. doz).",
+    "Profilaksi gerekmeyenler: fare, sıçan, sincap, hamster, kobay, gerbil, tavşan ısırıkları; soğukkanlı hayvanlar; kümes hayvanları; sağlam derinin yalanması; 10 günden önce ısırıp hâlâ sağlam olan kedi/köpek; son 6 ayda tam profilaksi almış kişi (yüz yaralanması ve immün baskılanma hariç).",
+    "Bebek, çocuk, erişkin ve gebelerde kuduz aşılaması aynı şema ve dozlarla uygulanır."
+   ],
+   "kaynak": "sb-kuduz-rehberi-2019",
+   "ek_kaynaklar": [
+    "sb-portal-hastaliklar"
+   ]
+  },
+  {
+   "baslik": "Tetanoz profilaksisi (kuduz riskli temaslarda; SB Kuduz Profilaksi Rehberi Tablo 2)",
+   "maddeler": [
+    "Aşı durumu bilinmiyor veya <3 doz: Kategori II temasta Td evet, TIG hayır; Kategori III-IV temasta Td evet, TIG evet.",
+    "≥3 doz: Kategori II'de son dozun üzerinden 10 yıldan fazla geçmişse Td, TIG gerekmez; Kategori III-IV'te son dozdan 5 yıldan fazla geçmişse Td, TIG gerekmez.",
+    "Kirli ve dışkı ile bulaşık Kategori II yaralanmalar Kategori III-IV gibi değerlendirilir.",
+    "Tetanoz immünglobulini (TIG): insan kaynaklı 250 IU İM; at kaynaklı kullanılacaksa 1.500-3.000 IU İM."
+   ],
+   "kaynak": "sb-kuduz-rehberi-2019"
+  },
+  {
+   "baslik": "Suçiçeği temas sonrası aşılama",
+   "maddeler": [
+    "Yüksek riskli temas: ev içi temas, kapalı alanda ≥5 dakika yüz yüze temas, hastanede aynı odayı paylaşma ya da >1 saat yakın temas, vezikül sıvısıyla doğrudan temas.",
+    "9 aydan büyük, bağışık olmayan temaslılara kontrendikasyon yoksa temastan sonra mümkün olan en kısa sürede (tercihen 3 gün içinde, en geç 5. günde) suçiçeği aşısı önerilir.",
+    "12. aydan önce yapılan doz geçerli sayılmaz; aşıyı izleyen 14 gün içinde asiklovir/valasiklovir/famsiklovir kullanılırsa doz geçersizdir."
+   ],
+   "kaynak": "sb-portal-sss"
+  }
+ ],
+ "oranlar": {
+  "birim": "%",
+  "tanim": "Aşı kapsayıcılığı (aşılama hızı); payda Sağlık Bakanlığı'nın hesapladığı hedef nüfustur.",
+  "kaynak": "sb-siy-2024",
+  "konum": "Tablo 5.1 Yıllara Göre Aşı Kapsayıcılığı (%), s.94 — eksik yıllar önceki yıllıklardan (her değerde ayrı kaynak/konum)",
+  "not": "Her yıl için yayımlanmış en güncel yıllıktaki değer alınmıştır. 2002 değerleri her yıllıkta aynıdır (taban yıl). 2003-2012 yılları 2017 ve sonrası yıllık tablolarında yer almadığından eklenmemiştir. 2022 değerleri SİY 2023'te ondalıklı, SİY 2024'te yuvarlanmış verilmiştir; ondalıklı olan kullanıldı.",
+  "seriler": [
+   {
+    "asi": "DaBT-İPA-Hib3 (2025'ten itibaren DaBT-İPA-Hib-HepB 3)",
+    "kisa": "DaBT 3",
+    "not": "2008'e kadar DBT olarak uygulandı. 2025 değeri altı bileşenli karma aşının 3. dozudur.",
+    "degerler": [
+     {
+      "yil": 2002,
+      "deger": 78,
+      "kaynak": "sb-siy-2024",
+      "konum": "Tablo 5.1, s.94"
+     },
+     {
+      "yil": 2013,
+      "deger": 98,
+      "kaynak": "sb-siy-2017",
+      "konum": "Yıllara Göre Aşılama Hızları tablosu, PDF s.105"
+     },
+     {
+      "yil": 2014,
+      "deger": 96,
+      "kaynak": "sb-siy-2017",
+      "konum": "Yıllara Göre Aşılama Hızları tablosu, PDF s.105"
+     },
+     {
+      "yil": 2015,
+      "deger": 97,
+      "kaynak": "sb-siy-2019",
+      "konum": "Tablo 5.1, s.81"
+     },
+     {
+      "yil": 2016,
+      "deger": 98,
+      "kaynak": "sb-siy-2019",
+      "konum": "Tablo 5.1, s.81"
+     },
+     {
+      "yil": 2017,
+      "deger": 96,
+      "kaynak": "sb-siy-2021",
+      "konum": "Tablo 5.1, s.85"
+     },
+     {
+      "yil": 2018,
+      "deger": 98,
+      "kaynak": "sb-siy-2021",
+      "konum": "Tablo 5.1, s.85"
+     },
+     {
+      "yil": 2019,
+      "deger": 99,
+      "kaynak": "sb-siy-2023",
+      "konum": "Tablo 5.1, s.87"
+     },
+     {
+      "yil": 2020,
+      "deger": 98,
+      "kaynak": "sb-siy-2024",
+      "konum": "Tablo 5.1, s.94"
+     },
+     {
+      "yil": 2021,
+      "deger": 95,
+      "kaynak": "sb-siy-2024",
+      "konum": "Tablo 5.1, s.94"
+     },
+     {
+      "yil": 2022,
+      "deger": 99.5,
+      "kaynak": "sb-siy-2023",
+      "konum": "Tablo 5.1, s.87"
+     },
+     {
+      "yil": 2023,
+      "deger": 98.8,
+      "kaynak": "sb-siy-2024",
+      "konum": "Tablo 5.1, s.94"
+     },
+     {
+      "yil": 2024,
+      "deger": 96,
+      "kaynak": "sb-siy-2024",
+      "konum": "Tablo 5.1, s.94"
+     },
+     {
+      "yil": 2025,
+      "deger": 94,
+      "kaynak": "sb-siy-2025-bulten",
+      "konum": "Tablo 4 (Türkiye satırı), s.2"
+     }
+    ]
+   },
+   {
+    "asi": "BCG",
+    "kisa": "BCG",
+    "degerler": [
+     {
+      "yil": 2002,
+      "deger": 77,
+      "kaynak": "sb-siy-2024",
+      "konum": "Tablo 5.1, s.94"
+     },
+     {
+      "yil": 2013,
+      "deger": 96,
+      "kaynak": "sb-siy-2017",
+      "konum": "Yıllara Göre Aşılama Hızları tablosu, PDF s.105"
+     },
+     {
+      "yil": 2014,
+      "deger": 95,
+      "kaynak": "sb-siy-2017",
+      "konum": "Yıllara Göre Aşılama Hızları tablosu, PDF s.105"
+     },
+     {
+      "yil": 2015,
+      "deger": 96,
+      "kaynak": "sb-siy-2019",
+      "konum": "Tablo 5.1, s.81"
+     },
+     {
+      "yil": 2016,
+      "deger": 96,
+      "kaynak": "sb-siy-2019",
+      "konum": "Tablo 5.1, s.81"
+     },
+     {
+      "yil": 2017,
+      "deger": 93,
+      "kaynak": "sb-siy-2021",
+      "konum": "Tablo 5.1, s.85"
+     },
+     {
+      "yil": 2018,
+      "deger": 96,
+      "kaynak": "sb-siy-2021",
+      "konum": "Tablo 5.1, s.85"
+     },
+     {
+      "yil": 2019,
+      "deger": 96,
+      "kaynak": "sb-siy-2023",
+      "konum": "Tablo 5.1, s.87"
+     },
+     {
+      "yil": 2020,
+      "deger": 96,
+      "kaynak": "sb-siy-2024",
+      "konum": "Tablo 5.1, s.94"
+     },
+     {
+      "yil": 2021,
+      "deger": 95,
+      "kaynak": "sb-siy-2024",
+      "konum": "Tablo 5.1, s.94"
+     },
+     {
+      "yil": 2022,
+      "deger": 98.1,
+      "kaynak": "sb-siy-2023",
+      "konum": "Tablo 5.1, s.87"
+     },
+     {
+      "yil": 2023,
+      "deger": 96,
+      "kaynak": "sb-siy-2024",
+      "konum": "Tablo 5.1, s.94"
+     },
+     {
+      "yil": 2024,
+      "deger": 95,
+      "kaynak": "sb-siy-2024",
+      "konum": "Tablo 5.1, s.94"
+     },
+     {
+      "yil": 2025,
+      "deger": 93,
+      "kaynak": "sb-siy-2025-bulten",
+      "konum": "Tablo 4 (Türkiye satırı), s.2"
+     }
+    ]
+   },
+   {
+    "asi": "Hepatit B 3. doz",
+    "kisa": "HBV 3",
+    "not": "2025'ten itibaren takvimde ayrı Hep-B 3. doz yoktur (altılı karma içinde) — seri 2024'te biter.",
+    "degerler": [
+     {
+      "yil": 2002,
+      "deger": 72,
+      "kaynak": "sb-siy-2024",
+      "konum": "Tablo 5.1, s.94"
+     },
+     {
+      "yil": 2013,
+      "deger": 97,
+      "kaynak": "sb-siy-2017",
+      "konum": "Yıllara Göre Aşılama Hızları tablosu, PDF s.105"
+     },
+     {
+      "yil": 2014,
+      "deger": 95,
+      "kaynak": "sb-siy-2017",
+      "konum": "Yıllara Göre Aşılama Hızları tablosu, PDF s.105"
+     },
+     {
+      "yil": 2015,
+      "deger": 97,
+      "kaynak": "sb-siy-2019",
+      "konum": "Tablo 5.1, s.81"
+     },
+     {
+      "yil": 2016,
+      "deger": 98,
+      "kaynak": "sb-siy-2019",
+      "konum": "Tablo 5.1, s.81"
+     },
+     {
+      "yil": 2017,
+      "deger": 96,
+      "kaynak": "sb-siy-2021",
+      "konum": "Tablo 5.1, s.85"
+     },
+     {
+      "yil": 2018,
+      "deger": 98,
+      "kaynak": "sb-siy-2021",
+      "konum": "Tablo 5.1, s.85"
+     },
+     {
+      "yil": 2019,
+      "deger": 99,
+      "kaynak": "sb-siy-2023",
+      "konum": "Tablo 5.1, s.87"
+     },
+     {
+      "yil": 2020,
+      "deger": 98,
+      "kaynak": "sb-siy-2024",
+      "konum": "Tablo 5.1, s.94"
+     },
+     {
+      "yil": 2021,
+      "deger": 96,
+      "kaynak": "sb-siy-2024",
+      "konum": "Tablo 5.1, s.94"
+     },
+     {
+      "yil": 2022,
+      "deger": 99.3,
+      "kaynak": "sb-siy-2023",
+      "konum": "Tablo 5.1, s.87"
+     },
+     {
+      "yil": 2023,
+      "deger": 99,
+      "kaynak": "sb-siy-2024",
+      "konum": "Tablo 5.1, s.94"
+     },
+     {
+      "yil": 2024,
+      "deger": 95,
+      "kaynak": "sb-siy-2024",
+      "konum": "Tablo 5.1, s.94"
+     }
+    ]
+   },
+   {
+    "asi": "KKK (12. ay dozu)",
+    "kisa": "KKK",
+    "not": "2006'dan önce yalnız kızamık aşısı olarak uygulanıyordu (2002 değeri kızamık aşısıdır). Bültene göre KKK, 12. ayını dolduran bebeklere yapılan dozu ifade eder.",
+    "degerler": [
+     {
+      "yil": 2002,
+      "deger": 82,
+      "kaynak": "sb-siy-2024",
+      "konum": "Tablo 5.1, s.94"
+     },
+     {
+      "yil": 2013,
+      "deger": 98,
+      "kaynak": "sb-siy-2017",
+      "konum": "Yıllara Göre Aşılama Hızları tablosu, PDF s.105"
+     },
+     {
+      "yil": 2014,
+      "deger": 94,
+      "kaynak": "sb-siy-2017",
+      "konum": "Yıllara Göre Aşılama Hızları tablosu, PDF s.105"
+     },
+     {
+      "yil": 2015,
+      "deger": 97,
+      "kaynak": "sb-siy-2019",
+      "konum": "Tablo 5.1, s.81"
+     },
+     {
+      "yil": 2016,
+      "deger": 98,
+      "kaynak": "sb-siy-2019",
+      "konum": "Tablo 5.1, s.81"
+     },
+     {
+      "yil": 2017,
+      "deger": 96,
+      "kaynak": "sb-siy-2021",
+      "konum": "Tablo 5.1, s.85"
+     },
+     {
+      "yil": 2018,
+      "deger": 96,
+      "kaynak": "sb-siy-2021",
+      "konum": "Tablo 5.1, s.85"
+     },
+     {
+      "yil": 2019,
+      "deger": 97,
+      "kaynak": "sb-siy-2023",
+      "konum": "Tablo 5.1, s.87"
+     },
+     {
+      "yil": 2020,
+      "deger": 95,
+      "kaynak": "sb-siy-2024",
+      "konum": "Tablo 5.1, s.94"
+     },
+     {
+      "yil": 2021,
+      "deger": 96,
+      "kaynak": "sb-siy-2024",
+      "konum": "Tablo 5.1, s.94"
+     },
+     {
+      "yil": 2022,
+      "deger": 95.2,
+      "kaynak": "sb-siy-2023",
+      "konum": "Tablo 5.1, s.87"
+     },
+     {
+      "yil": 2023,
+      "deger": 95.2,
+      "kaynak": "sb-siy-2023",
+      "konum": "Tablo 5.1, s.87"
+     },
+     {
+      "yil": 2024,
+      "deger": 94,
+      "kaynak": "sb-siy-2024",
+      "konum": "Tablo 5.1, s.94"
+     },
+     {
+      "yil": 2025,
+      "deger": 92,
+      "kaynak": "sb-siy-2025-bulten",
+      "konum": "Tablo 4 (Türkiye satırı), s.2"
+     }
+    ]
+   },
+   {
+    "asi": "KPA 3 (2018 ve öncesi) / KPA Rapel (2020 ve sonrası)",
+    "kisa": "KPA",
+    "not": "1 Temmuz 2019'da KPA 3. doz kaldırılıp rapel uygulamasına geçildi; 2018 ve öncesi KPA 3, 2020 ve sonrası KPA Rapel. 2019 için yıllıkta değer verilmemiştir ('-').",
+    "degerler": [
+     {
+      "yil": 2013,
+      "deger": 97,
+      "kaynak": "sb-siy-2017",
+      "konum": "Yıllara Göre Aşılama Hızları tablosu, PDF s.105"
+     },
+     {
+      "yil": 2014,
+      "deger": 96,
+      "kaynak": "sb-siy-2017",
+      "konum": "Yıllara Göre Aşılama Hızları tablosu, PDF s.105"
+     },
+     {
+      "yil": 2015,
+      "deger": 97,
+      "kaynak": "sb-siy-2017",
+      "konum": "Yıllara Göre Aşılama Hızları tablosu, PDF s.105"
+     },
+     {
+      "yil": 2016,
+      "deger": 98,
+      "kaynak": "sb-siy-2017",
+      "konum": "Yıllara Göre Aşılama Hızları tablosu, PDF s.105"
+     },
+     {
+      "yil": 2017,
+      "deger": 96,
+      "kaynak": "sb-siy-2021",
+      "konum": "Tablo 5.1, s.85"
+     },
+     {
+      "yil": 2018,
+      "deger": 98,
+      "kaynak": "sb-siy-2021",
+      "konum": "Tablo 5.1, s.85"
+     },
+     {
+      "yil": 2020,
+      "deger": 95,
+      "kaynak": "sb-siy-2024",
+      "konum": "Tablo 5.1, s.94"
+     },
+     {
+      "yil": 2021,
+      "deger": 96,
+      "kaynak": "sb-siy-2024",
+      "konum": "Tablo 5.1, s.94"
+     },
+     {
+      "yil": 2022,
+      "deger": 95.3,
+      "kaynak": "sb-siy-2023",
+      "konum": "Tablo 5.1, s.87"
+     },
+     {
+      "yil": 2023,
+      "deger": 95.2,
+      "kaynak": "sb-siy-2023",
+      "konum": "Tablo 5.1, s.87"
+     },
+     {
+      "yil": 2024,
+      "deger": 94,
+      "kaynak": "sb-siy-2024",
+      "konum": "Tablo 5.1, s.94"
+     },
+     {
+      "yil": 2025,
+      "deger": 92,
+      "kaynak": "sb-siy-2025-bulten",
+      "konum": "Tablo 4 (Türkiye satırı), s.2"
+     }
+    ]
+   }
+  ]
+ },
+ "hastaliklar": [
+  {
+   "ad": "Difteri",
+   "etken": "Corynebacterium diphtheriae (ve C. ulcerans) — toksin aracılı bakteriyel hastalık",
+   "asi": "DaBT-İPA-Hib-HepB (2., 4., 6., 18. ay), DaBT-İPA (48. ay), Td (13 yaş, erişkinde 10 yılda bir)",
+   "bulas": "Solunum damlacıkları (öksürme, hapşırma); kutanöz formda yara/lezyonla doğrudan temas. Tedavisiz vakalar 4 haftaya kadar bulaştırıcıdır; asemptomatik taşıyıcılar daha uzun süre yayabilir.",
+   "turkiye": "Monovalan difteri aşılaması 1937'de başladı; 2004-2010 arasında vaka saptanmadı, 2011'de tek vaka bildirildi, 2012'den sonra vaka bildirilmedi (kaynak sayfanın yazıldığı tarih itibarıyla). 2015-2019 ortalaması 0 vaka, 1980-1984'e göre %100 azalma.",
+   "vaka": [
+    {
+     "yil": null,
+     "donem": "1932-1936",
+     "sayi": 1236,
+     "kaynak": "sb-gbp-sonuclar-en",
+     "konum": "Vaka sayısı ve azalma oranı tablosu (Türkiye, 1980-1984 ve 2015-2019)",
+     "not": "Aşılama programı öncesi dönem yıllık ortalaması"
+    },
+    {
+     "yil": null,
+     "donem": "1980-1984",
+     "sayi": 174,
+     "kaynak": "sb-gbp-sonuclar-en",
+     "konum": "Vaka sayısı ve azalma oranı tablosu (Türkiye, 1980-1984 ve 2015-2019)",
+     "not": "5 yıllık dönemde yıllık ortalama vaka sayısı"
+    },
+    {
+     "yil": null,
+     "donem": "2015-2019",
+     "sayi": 0,
+     "kaynak": "sb-gbp-sonuclar-en",
+     "konum": "Vaka sayısı ve azalma oranı tablosu (Türkiye, 1980-1984 ve 2015-2019)",
+     "not": "5 yıllık dönemde yıllık ortalama vaka sayısı"
+    }
+   ],
+   "kaynak": "sb-portal-hastaliklar",
+   "ek_kaynaklar": [
+    "sb-gbp-sonuclar-en"
+   ]
+  },
+  {
+   "ad": "Boğmaca (Pertussis)",
+   "etken": "Bordetella pertussis",
+   "asi": "DaBT-İPA-Hib-HepB, DaBT-İPA; gebelikte Tdab (18-24. hafta)",
+   "bulas": "Enfekte kişinin burun-boğazından yayılan damlacıkların solunması; hafif semptomlu veya asemptomatik kişiler de bulaştırır.",
+   "turkiye": "Boğmaca aşılaması 1937'de başladı. 2015-2019 döneminde vaka sayısı 1980-1984'e göre %98 azaldı. 2 Nisan 2025'ten itibaren gebelere Tdab ile bebeğin ilk aylarda anne yoluyla korunması hedeflenmektedir.",
+   "vaka": [
+    {
+     "yil": null,
+     "donem": "1963-1967",
+     "sayi": 10762,
+     "kaynak": "sb-gbp-sonuclar-en",
+     "konum": "Vaka sayısı ve azalma oranı tablosu (Türkiye, 1980-1984 ve 2015-2019)",
+     "not": "Aşılama programı öncesi dönem yıllık ortalaması"
+    },
+    {
+     "yil": null,
+     "donem": "1980-1984",
+     "sayi": 3619,
+     "kaynak": "sb-gbp-sonuclar-en",
+     "konum": "Vaka sayısı ve azalma oranı tablosu (Türkiye, 1980-1984 ve 2015-2019)",
+     "not": "5 yıllık dönemde yıllık ortalama vaka sayısı"
+    },
+    {
+     "yil": null,
+     "donem": "2015-2019",
+     "sayi": 84,
+     "kaynak": "sb-gbp-sonuclar-en",
+     "konum": "Vaka sayısı ve azalma oranı tablosu (Türkiye, 1980-1984 ve 2015-2019)",
+     "not": "5 yıllık dönemde yıllık ortalama vaka sayısı"
+    }
+   ],
+   "kaynak": "sb-portal-hastaliklar",
+   "ek_kaynaklar": [
+    "sb-gbp-sonuclar-en",
+    "sb-haber-altili-karma-2025"
+   ]
+  },
+  {
+   "ad": "Tetanos",
+   "etken": "Clostridium tetani toksinleri (sporlar toprak, toz, gübrede)",
+   "asi": "DaBT-İPA-Hib-HepB, DaBT-İPA, Td; gebelikte Td/Tdab",
+   "bulas": "Kişiden kişiye bulaşmaz (aşıyla önlenebilen bulaşıcı olmayan tek hastalık); sporların açık yaradan girmesiyle. Neonatal tetanos göbek kordonunun steril olmayan koşullarda kesilmesi/bakımıyla gelişir.",
+   "turkiye": "Tetanoz aşılaması ilk kez 1935'te başladı. Maternal ve neonatal tetanoz (MNT) eliminasyonu 2009'da DSÖ ile Sağlık Bakanlığı'nın ortak çalışmasıyla belgelendi (hedef: her bölgede 1000 canlı doğumda <1 NT vakası, hiç MT olmaması). 2006-2007'de Tetanoz Aşı Günleri yapıldı.",
+   "vaka": [
+    {
+     "yil": null,
+     "donem": "1980-1984",
+     "sayi": 110,
+     "kaynak": "sb-gbp-sonuclar-en",
+     "konum": "Vaka sayısı ve azalma oranı tablosu (Türkiye, 1980-1984 ve 2015-2019)",
+     "not": "5 yıllık dönemde yıllık ortalama vaka sayısı"
+    },
+    {
+     "yil": null,
+     "donem": "2015-2019",
+     "sayi": 16,
+     "kaynak": "sb-gbp-sonuclar-en",
+     "konum": "Vaka sayısı ve azalma oranı tablosu (Türkiye, 1980-1984 ve 2015-2019)",
+     "not": "5 yıllık dönemde yıllık ortalama vaka sayısı"
+    }
+   ],
+   "kaynak": "sb-portal-hastaliklar",
+   "ek_kaynaklar": [
+    "sb-gbp-sonuclar-en",
+    "sb-gbp-tarihce-en",
+    "sb-gbp-genelge-2009"
+   ]
+  },
+  {
+   "ad": "Poliomiyelit (çocuk felci)",
+   "etken": "Poliovirüs (vahşi tip 1 halen dolaşımda; tip 2 Eylül 2015'te, tip 3 Kasım 2019'da eradike)",
+   "asi": "İPA (altılı ve dörtlü karma içinde) + OPA (6. ve 18. ay)",
+   "bulas": "Damlacık veya fekal-oral kontaminasyon; tek rezervuar insandır. Kuluçka ~7-10 gün (45 güne kadar); virüs dışkıyla 6 haftaya kadar atılır.",
+   "turkiye": "Polio aşısı 1963'te programa girdi. Polio Eradikasyon Programı 1989 sonunda başladı; 1995-2000 Ulusal Polio Aşı Günleri yapıldı. Son yerli polio vakası 1998'de görüldü; Türkiye 21 Haziran 2002'de DSÖ Avrupa Bölgesi ile birlikte 'poliodan arındırılmış' sertifikası aldı. AFP sürveyansı sürmektedir (15 yaş altında 100.000'de ≥1 polio dışı AFP).",
+   "vaka": [
+    {
+     "yil": null,
+     "donem": "1958-1962",
+     "sayi": 501,
+     "kaynak": "sb-gbp-sonuclar-en",
+     "konum": "Vaka sayısı ve azalma oranı tablosu (Türkiye, 1980-1984 ve 2015-2019)",
+     "not": "Aşılama programı öncesi dönem yıllık ortalaması"
+    },
+    {
+     "yil": null,
+     "donem": "1980-1984",
+     "sayi": 159,
+     "kaynak": "sb-gbp-sonuclar-en",
+     "konum": "Vaka sayısı ve azalma oranı tablosu (Türkiye, 1980-1984 ve 2015-2019)",
+     "not": "5 yıllık dönemde yıllık ortalama vaka sayısı"
+    },
+    {
+     "yil": null,
+     "donem": "2015-2019",
+     "sayi": 0,
+     "kaynak": "sb-gbp-sonuclar-en",
+     "konum": "Vaka sayısı ve azalma oranı tablosu (Türkiye, 1980-1984 ve 2015-2019)",
+     "not": "5 yıllık dönemde yıllık ortalama vaka sayısı"
+    }
+   ],
+   "kaynak": "sb-portal-hastaliklar",
+   "ek_kaynaklar": [
+    "sb-gbp-sonuclar-en",
+    "sb-gbp-tarihce-en",
+    "sb-gbp-genelge-2009"
+   ]
+  },
+  {
+   "ad": "Kızamık",
+   "etken": "Kızamık virüsü (Paramyxoviridae, Morbillivirus; tek sarmallı RNA)",
+   "asi": "KKK (9. ay ek doz, 12. ay, 48. ay)",
+   "bulas": "Solunum damlacıkları/hava yolu; damlacıklar havada saatlerce kalabilir. Döküntüden ~5 gün önce ile 4 gün sonrası arası bulaştırıcı; bağışık olmayan maruz kalanların ~%90'ı hastalanır.",
+   "turkiye": "Kızamık aşısı 1970'te programa girdi. Kızamık Eliminasyon Programı 2002'den beri sürmekte; 2003-2005 Kızamık Aşı Günlerinde 9 ay-14 yaş 18,2 milyon çocuğa ek doz yapıldı. Genelgedeki '2010'a kadar yerli virüsü elimine etme' hedefine rağmen eliminasyon resmî kaynaklarda hâlâ 'hedef' olarak geçmektedir; 2019 (2.905) ve 2023 (5.088) yıllarında belirgin vaka artışları yaşanmıştır.",
+   "vaka": [
+    {
+     "yil": 2002,
+     "sayi": 7810,
+     "kaynak": "sb-siy-2024",
+     "konum": "SİY 2024 Tablo 3.1, s.44 (toplam vaka = yerli + yabancı)"
+    },
+    {
+     "yil": 2013,
+     "sayi": 7405,
+     "kaynak": "sb-siy-2017",
+     "konum": "SİY 2017 Tablo 3.1, PDF s.63"
+    },
+    {
+     "yil": 2014,
+     "sayi": 565,
+     "kaynak": "sb-siy-2017",
+     "konum": "SİY 2017 Tablo 3.1, PDF s.63"
+    },
+    {
+     "yil": 2015,
+     "sayi": 342,
+     "kaynak": "sb-siy-2019",
+     "konum": "SİY 2019 Tablo 3.1, s.36"
+    },
+    {
+     "yil": 2016,
+     "sayi": 9,
+     "kaynak": "sb-siy-2019",
+     "konum": "SİY 2019 Tablo 3.1, s.36"
+    },
+    {
+     "yil": 2017,
+     "sayi": 84,
+     "kaynak": "sb-siy-2021",
+     "konum": "SİY 2021 Tablo 3.1, s.39"
+    },
+    {
+     "yil": 2018,
+     "sayi": 716,
+     "kaynak": "sb-siy-2021",
+     "konum": "SİY 2021 Tablo 3.1, s.39"
+    },
+    {
+     "yil": 2019,
+     "sayi": 2905,
+     "kaynak": "sb-siy-2023",
+     "konum": "SİY 2023 Tablo 3.1, s.41"
+    },
+    {
+     "yil": 2020,
+     "sayi": 617,
+     "kaynak": "sb-siy-2024",
+     "konum": "SİY 2024 Tablo 3.1, s.44 (toplam vaka = yerli + yabancı)"
+    },
+    {
+     "yil": 2021,
+     "sayi": 50,
+     "kaynak": "sb-siy-2024",
+     "konum": "SİY 2024 Tablo 3.1, s.44 (toplam vaka = yerli + yabancı)"
+    },
+    {
+     "yil": 2022,
+     "sayi": 103,
+     "kaynak": "sb-siy-2024",
+     "konum": "SİY 2024 Tablo 3.1, s.44 (toplam vaka = yerli + yabancı)"
+    },
+    {
+     "yil": 2023,
+     "sayi": 5088,
+     "kaynak": "sb-siy-2024",
+     "konum": "SİY 2024 Tablo 3.1, s.44 (toplam vaka = yerli + yabancı)",
+     "not": "Yerli 3.571 + yabancı 1.517"
+    },
+    {
+     "yil": 2024,
+     "sayi": 1582,
+     "kaynak": "sb-siy-2024",
+     "konum": "SİY 2024 Tablo 3.1, s.44 (toplam vaka = yerli + yabancı)",
+     "not": "Yerli 1.259 + yabancı 323; insidans 1,85/100.000"
+    },
+    {
+     "yil": 2025,
+     "sayi": 228,
+     "kaynak": "sb-siy-2025-bulten",
+     "konum": "SİY 2025 Haber Bülteni Tablo 3, s.2",
+     "not": "Yerli 194 + yabancı 34; insidans 0,26/100.000"
+    }
+   ],
+   "vaka_donem": [
+    {
+     "yil": null,
+     "donem": "1965-1969",
+     "sayi": 50145,
+     "kaynak": "sb-gbp-sonuclar-en",
+     "konum": "Vaka sayısı ve azalma oranı tablosu (Türkiye, 1980-1984 ve 2015-2019)",
+     "not": "Aşılama programı öncesi dönem yıllık ortalaması"
+    },
+    {
+     "yil": null,
+     "donem": "1980-1984",
+     "sayi": 21225,
+     "kaynak": "sb-gbp-sonuclar-en",
+     "konum": "Vaka sayısı ve azalma oranı tablosu (Türkiye, 1980-1984 ve 2015-2019)",
+     "not": "5 yıllık dönemde yıllık ortalama vaka sayısı"
+    },
+    {
+     "yil": null,
+     "donem": "2015-2019",
+     "sayi": 713,
+     "kaynak": "sb-gbp-sonuclar-en",
+     "konum": "Vaka sayısı ve azalma oranı tablosu (Türkiye, 1980-1984 ve 2015-2019)",
+     "not": "5 yıllık dönemde yıllık ortalama vaka sayısı"
+    }
+   ],
+   "kaynak": "sb-portal-hastaliklar",
+   "ek_kaynaklar": [
+    "sb-gbp-sonuclar-en",
+    "sb-gbp-genelge-2009"
+   ]
+  },
+  {
+   "ad": "Kızamıkçık (rubella) ve konjenital kızamıkçık sendromu",
+   "etken": "Kızamıkçık virüsü (Togavirus ailesi, RNA)",
+   "asi": "KKK",
+   "bulas": "Doğrudan temas veya solunum damlacıkları; döküntüden ~7 gün önce ile 6 gün sonrası arası bulaştırıcı. Vakaların ~%50'si belirtisizdir. Gebeliğin ilk 3 ayında enfeksiyon düşük veya KKS'ye yol açabilir.",
+   "turkiye": "2006'da KKK ile programa girdi ve Kızamıkçık Eliminasyonu ve KKS'nin Önlenmesi Programı başladı; 2009'da 33 ilde 18-35 yaş kadınlara kızamıkçık içeren aşı yapıldı. 2019 sonunda endemik kızamıkçık virüsü dolaşımının 36 aydır kesildiği ve Türkiye'nin ilgili dönem için kızamıkçığı elimine ettiği DSÖ tarafından onaylandı.",
+   "vaka": [],
+   "kaynak": "sb-portal-hastaliklar",
+   "ek_kaynaklar": [
+    "sb-gbp-sonuclar-en",
+    "sb-gbp-tarihce-en"
+   ]
+  },
+  {
+   "ad": "Kabakulak",
+   "etken": "Kabakulak virüsü (Paramiksovirüs grubu, RNA)",
+   "asi": "KKK",
+   "bulas": "Solunum damlacıkları (konuşma, öksürme, hapşırma) ve kontamine eşyalar; kuluçka ortalama 19 gün (14-25). Enfekte olanların ~%30'unda semptomatik hastalık gelişir.",
+   "turkiye": "2006'da KKK ile programa girdi. Okul çağı, üniversite öğrencileri ve sağlık çalışanları gibi yakın temaslı ortamlarda risk yüksektir.",
+   "vaka": [],
+   "kaynak": "sb-portal-hastaliklar",
+   "ek_kaynaklar": [
+    "sb-gbp-tarihce-en"
+   ]
+  },
+  {
+   "ad": "Tüberküloz (verem)",
+   "etken": "Mycobacterium tuberculosis",
+   "asi": "BCG (2. ay sonu)",
+   "bulas": "Solunum yolu (damlacık); tedavi başlanmayan hastalar ev ve iş ortamında bulaştırmaya devam eder.",
+   "turkiye": "BCG aşısı 1952'den beri uygulanmaktadır. Türkiye Tüberkülozu Bitirme Stratejisini benimsemiş, 'eliminasyon fazındaki ülkeler' arasındadır; TB hasta sayısı 2005'te 20.535 iken 2022'de 9.851'e, insidans 100.000'de 29,4'ten 11,4'e düştü (portal). 2025 insidansı 9,47/100.000.",
+   "vaka": [
+    {
+     "yil": 2002,
+     "sayi": 18043,
+     "kaynak": "sb-siy-2024",
+     "konum": "SİY 2024 Tablo 3.1, s.44 (toplam vaka = yerli + yabancı)"
+    },
+    {
+     "yil": 2013,
+     "sayi": 13170,
+     "kaynak": "sb-siy-2017",
+     "konum": "SİY 2017 Tablo 3.1, PDF s.63"
+    },
+    {
+     "yil": 2014,
+     "sayi": 13108,
+     "kaynak": "sb-siy-2017",
+     "konum": "SİY 2017 Tablo 3.1, PDF s.63"
+    },
+    {
+     "yil": 2015,
+     "sayi": 12550,
+     "kaynak": "sb-siy-2019",
+     "konum": "SİY 2019 Tablo 3.1, s.36"
+    },
+    {
+     "yil": 2016,
+     "sayi": 12186,
+     "kaynak": "sb-siy-2019",
+     "konum": "SİY 2019 Tablo 3.1, s.36"
+    },
+    {
+     "yil": 2017,
+     "sayi": 11821,
+     "kaynak": "sb-siy-2021",
+     "konum": "SİY 2021 Tablo 3.1, s.39"
+    },
+    {
+     "yil": 2018,
+     "sayi": 11576,
+     "kaynak": "sb-siy-2021",
+     "konum": "SİY 2021 Tablo 3.1, s.39"
+    },
+    {
+     "yil": 2019,
+     "sayi": 11247,
+     "kaynak": "sb-siy-2023",
+     "konum": "SİY 2023 Tablo 3.1, s.41"
+    },
+    {
+     "yil": 2020,
+     "sayi": 8830,
+     "kaynak": "sb-siy-2024",
+     "konum": "SİY 2024 Tablo 3.1, s.44 (toplam vaka = yerli + yabancı)"
+    },
+    {
+     "yil": 2021,
+     "sayi": 9047,
+     "kaynak": "sb-siy-2024",
+     "konum": "SİY 2024 Tablo 3.1, s.44 (toplam vaka = yerli + yabancı)"
+    },
+    {
+     "yil": 2022,
+     "sayi": 9723,
+     "kaynak": "sb-siy-2024",
+     "konum": "SİY 2024 Tablo 3.1, s.44 (toplam vaka = yerli + yabancı)"
+    },
+    {
+     "yil": 2023,
+     "sayi": 9408,
+     "kaynak": "sb-siy-2024",
+     "konum": "SİY 2024 Tablo 3.1, s.44 (toplam vaka = yerli + yabancı)"
+    },
+    {
+     "yil": 2024,
+     "sayi": 8891,
+     "kaynak": "sb-siy-2024",
+     "konum": "SİY 2024 Tablo 3.1, s.44 (toplam vaka = yerli + yabancı)"
+    },
+    {
+     "yil": 2025,
+     "sayi": 8151,
+     "kaynak": "sb-siy-2025-bulten",
+     "konum": "SİY 2025 Haber Bülteni Tablo 3, s.2"
+    }
+   ],
+   "vaka_notu": "Yeni + nüks vakaların toplamı (yerli + yabancı). Portaldaki 2022 sayısı (9.851) yıllıktaki 9.723'ten farklıdır; seri yıllıktan alınmıştır.",
+   "kaynak": "sb-portal-hastaliklar",
+   "ek_kaynaklar": [
+    "sb-gbp-tarihce-en"
+   ]
+  },
+  {
+   "ad": "Hepatit B",
+   "etken": "Hepatit B virüsü (Hepadnaviridae, çift sarmallı DNA)",
+   "asi": "Hep-B doğum dozu + DaBT-İPA-Hib-HepB (2., 4., 6., 18. ay); risk gruplarına ücretsiz",
+   "bulas": "Kontrolsüz kan/kan ürünü, steril olmayan tıbbi-diş girişimleri, anneden bebeğe doğumda, enjektör paylaşımı, jilet/diş fırçası paylaşımı, steril olmayan dövme/piercing, korunmasız cinsel ilişki.",
+   "turkiye": "1998'de Hepatit B Kontrol Programıyla aşı takvime girdi; 2005-2009 ilk ve ortaöğretim öğrencilerine yakalama aşılaması yapıldı; 2018-2023 Türkiye Viral Hepatit Önleme ve Kontrol Programı oluşturuldu. 2015-2019 hepatit B vaka sayısı 2005-2009'a göre %76 azaldı. Ülke verilerine göre 18 yaş üstünde her 3 kişiden biri HBV ile enfekte veya geçirmiş durumdadır.",
+   "vaka": [],
+   "kaynak": "sb-portal-hastaliklar",
+   "ek_kaynaklar": [
+    "sb-gbp-sonuclar-en",
+    "sb-gbp-tarihce-en"
+   ]
+  },
+  {
+   "ad": "Hepatit A",
+   "etken": "Hepatit A virüsü (zarfsız RNA virüsü)",
+   "asi": "Hep-A (18. ve 24. ay)",
+   "bulas": "Fekal-oral: dışkıyla kirlenmiş su ve gıda, kanalizasyonla kirlenmiş çiğ/az pişmiş besinler; ayrıca eşcinsel/biseksüel cinsel ilişki.",
+   "turkiye": "Türkiye hepatit A açısından orta yaygınlıkta ülkeler arasındadır; aşı 2012'de programa eklendi.",
+   "vaka": [],
+   "kaynak": "sb-portal-hastaliklar",
+   "ek_kaynaklar": [
+    "sb-gbp-tarihce-en"
+   ]
+  },
+  {
+   "ad": "Haemophilus influenzae tip b (Hib) hastalığı",
+   "etken": "Haemophilus influenzae tip b",
+   "asi": "Altılı karma içinde (2., 4., 6., 18. ay)",
+   "bulas": "Burun-boğazında bakteri taşıyanların öksürme/hapşırmasıyla; solunum yolu sekresyonlarıyla doğrudan temas.",
+   "turkiye": "Hib aşısı 2006'da programa eklendi; 2008'den beri beşli, 2025'ten beri altılı karma aşı içinde uygulanır. Menenjit, sepsis, zatürre, eklem iltihabı, kalp zarı iltihabı, deri-yumuşak doku ve kemik iltihabı, sinüzit ve orta kulak iltihabına yol açabilir.",
+   "vaka": [],
+   "kaynak": "sb-portal-hastaliklar",
+   "ek_kaynaklar": [
+    "sb-gbp-tarihce-en",
+    "sb-gbp-genelge-2009"
+   ]
+  },
+  {
+   "ad": "Pnömokokal hastalık",
+   "etken": "Streptococcus pneumoniae (pnömokok)",
+   "asi": "KPA (2., 4. ay, 12. ay rapel); 65 yaş üstü ve risk gruplarında konjuge/polisakkarit pnömokok aşısı",
+   "bulas": "Taşıyıcı/hastaların öksürük-hapşırığı, solunum sekresyonları ve büyük damlacıklar.",
+   "turkiye": "KPA Kasım 2008'de (PCV-7) programa girdi, 2011'de PCV-13'e geçildi, 1 Temmuz 2019'dan beri 2+1 şema.",
+   "vaka": [],
+   "kaynak": "sb-portal-hastaliklar",
+   "ek_kaynaklar": [
+    "sb-gbp-genelge-2009",
+    "sb-gbp-tarihce-en",
+    "sb-siy-2021"
+   ]
+  },
+  {
+   "ad": "Suçiçeği",
+   "etken": "Varisella-zoster virüsü (VZV; zonaya da yol açar)",
+   "asi": "Suçiçeği aşısı (12. ay, 48. ay)",
+   "bulas": "Solunum yolu, vezikül sıvısıyla temas, giysi/yüzey/oyuncak; döküntüden 1-2 gün önce başlar, tüm lezyonlar kabuklanana dek sürer. Ev içi bulaşıcılık %80-90.",
+   "turkiye": "Yaygın görülür (kış-ilkbahar, 2-8 yaş); aşı 2013'te programa eklendi, 1 Eylül 2026'dan itibaren 48. ayda 2. doz uygulanmaktadır.",
+   "vaka": [],
+   "kaynak": "sb-portal-hastaliklar",
+   "ek_kaynaklar": [
+    "sb-portal-son-guncellemeler"
+   ]
+  },
+  {
+   "ad": "Kuduz",
+   "etken": "Lyssavirus (Rhabdoviridae)",
+   "asi": "Kuduz aşısı (rutin takvimde değil; temas öncesi ve temas sonrası profilaksi) ± kuduz immünglobulini",
+   "bulas": "Kuduz hayvanın ısırması/tırmalaması, salyanın sıyrık-çatlak deri veya mukozaya teması (portal ayrıca çiğ et/süt tüketimini sayar; Kuduz Profilaksi Rehberi'ne göre bununla insana geçiş gösterilmemiştir).",
+   "turkiye": "Kuduz Profilaksi Rehberi'ne göre yılda yaklaşık 250.000 kuduz riskli temas bildirilmekte, yılda ortalama 1-2 insan kuduzu görülmektedir; 1997-2017 arasında hayvanlarda saptanan 6.465 kuduz vakasının %43,3'ü köpek, %36,6'sı sığırdır.",
+   "vaka": [],
+   "kaynak": "sb-kuduz-rehberi-2019",
+   "ek_kaynaklar": [
+    "sb-portal-hastaliklar"
+   ]
+  }
+ ],
+ "kilometre_taslari": [
+  {
+   "yil": 1930,
+   "olay": "Çiçek aşısı uygulaması (ulusal program kaydı).",
+   "kaynak": "sb-gbp-tarihce-en"
+  },
+  {
+   "yil": 1935,
+   "olay": "Tetanoz aşılaması ilk kez başladı.",
+   "kaynak": "sb-gbp-sonuclar-en"
+  },
+  {
+   "yil": 1937,
+   "olay": "Difteri ve boğmaca aşılarının uygulanmasına başlandı.",
+   "kaynak": "sb-gbp-tarihce-en"
+  },
+  {
+   "yil": 1952,
+   "olay": "BCG aşısı uygulaması başladı.",
+   "kaynak": "sb-gbp-tarihce-en"
+  },
+  {
+   "yil": 1963,
+   "olay": "Oral polio aşısı (OPA) ulusal programa eklendi.",
+   "kaynak": "sb-gbp-tarihce-en"
+  },
+  {
+   "yil": 1968,
+   "olay": "Difteri-boğmaca-tetanoz karma aşısı programa eklendi (kaynakta 'DTaP').",
+   "kaynak": "sb-gbp-tarihce-en"
+  },
+  {
+   "yil": 1970,
+   "olay": "Kızamık aşısı ulusal programa eklendi.",
+   "kaynak": "sb-gbp-tarihce-en"
+  },
+  {
+   "yil": 1981,
+   "olay": "Genişletilmiş Bağışıklama Programı (GBP) başladı (Bakanlık zaman çizelgesi). Not: aşı portalının erişkin aşılama sayfası GBP'nin '1985 yılından bu yana' yürütüldüğünü yazar.",
+   "kaynak": "sb-gbp-tarihce-en"
+  },
+  {
+   "yil": 1985,
+   "olay": "Türkiye Aşı Kampanyası; difteri insidansı bu kampanyadan sonra düştü.",
+   "kaynak": "sb-gbp-tarihce-en"
+  },
+  {
+   "yil": 1989,
+   "olay": "Polio Eradikasyon Programı yıl sonunda başlatıldı.",
+   "kaynak": "sb-gbp-genelge-2009"
+  },
+  {
+   "yil": 1993,
+   "olay": "Bağışıklama Danışma Kurulu çalışmalarına başladı.",
+   "kaynak": "sb-portal-asi-takvimi"
+  },
+  {
+   "yil": 1998,
+   "olay": "Türkiye'de son poliomiyelit vakası görüldü; Hepatit B aşısı Hepatit B Kontrol Programıyla takvime eklendi.",
+   "kaynak": "sb-gbp-tarihce-en"
+  },
+  {
+   "yil": 2002,
+   "olay": "21 Haziran 2002'de Türkiye DSÖ Avrupa Bölgesi ile birlikte 'poliodan arındırılmış' olarak sertifikalandırıldı; Kızamık Eliminasyon Programı başladı.",
+   "kaynak": "sb-gbp-sonuclar-en",
+   "ek_kaynaklar": [
+    "sb-portal-hastaliklar",
+    "sb-gbp-tarihce-en"
+   ]
+  },
+  {
+   "yil": 2003,
+   "olay": "2003-2005 Kızamık Aşı Günleri: 9 ay-14 yaş 18,2 milyon çocuğa ek kızamık dozu.",
+   "kaynak": "sb-gbp-sonuclar-en"
+  },
+  {
+   "yil": 2006,
+   "olay": "KKK (kızamıkçık ve kabakulak) ile Hib aşısı programa eklendi; Kızamıkçık Eliminasyonu ve KKS Önleme Programı başladı (antijen sayısı 7'den 10'a çıktı).",
+   "kaynak": "sb-gbp-tarihce-en",
+   "ek_kaynaklar": [
+    "sb-siy-2024"
+   ]
+  },
+  {
+   "yil": 2008,
+   "olay": "Yıl başında DaBT-İPA-Hib beşli karma aşı, Kasım ayında konjuge pnömokok aşısı (PCV-7) programa girdi.",
+   "kaynak": "sb-gbp-genelge-2009",
+   "ek_kaynaklar": [
+    "sb-gbp-tarihce-en"
+   ]
+  },
+  {
+   "yil": 2009,
+   "olay": "Maternal ve neonatal tetanoz eliminasyonu DSÖ-Sağlık Bakanlığı ortak çalışmasıyla belgelendi; GBP Daimi Genelgesi 2009/17 yayımlandı (13.03.2009).",
+   "kaynak": "sb-gbp-sonuclar-en",
+   "ek_kaynaklar": [
+    "sb-gbp-genelge-2009",
+    "sb-gbp-tarihce-en"
+   ]
+  },
+  {
+   "yil": 2010,
+   "olay": "İlköğretim 1. sınıflarda DaBT-İPA (dörtlü karma) uygulaması başladı.",
+   "kaynak": "sb-gbp-tarihce-en"
+  },
+  {
+   "yil": 2011,
+   "olay": "13 valanlı konjuge pnömokok aşısına (PCV-13) geçildi.",
+   "kaynak": "sb-gbp-tarihce-en"
+  },
+  {
+   "yil": 2012,
+   "olay": "Hepatit A aşısı programa eklendi (1 Mart 2011 ve sonrası doğanlar); takvimdeki antijen sayısı 13'e ulaştı.",
+   "kaynak": "sb-gbp-tarihce-en",
+   "ek_kaynaklar": [
+    "sb-takvim-2020",
+    "sb-siy-2024"
+   ]
+  },
+  {
+   "yil": 2013,
+   "olay": "Suçiçeği aşısı 12. ayda tek doz olarak programa eklendi (1 Ocak 2012 ve sonrası doğanlar).",
+   "kaynak": "sb-gbp-tarihce-en",
+   "ek_kaynaklar": [
+    "sb-takvim-2020",
+    "sb-portal-son-guncellemeler"
+   ]
+  },
+  {
+   "yil": 2016,
+   "olay": "Bivalan OPA uygulamasına geçildi.",
+   "kaynak": "sb-gbp-tarihce-en"
+  },
+  {
+   "yil": 2019,
+   "olay": "1 Temmuz 2019'da KPA 3. doz kaldırılıp 12. ay rapeline geçildi; yıl sonunda kızamıkçık eliminasyonu (36 ay endemik dolaşım yok) DSÖ tarafından onaylandı.",
+   "kaynak": "sb-siy-2021",
+   "ek_kaynaklar": [
+    "sb-gbp-sonuclar-en"
+   ]
+  },
+  {
+   "yil": 2020,
+   "olay": "1 Temmuz 2020'den itibaren ilköğretim 1. sınıftaki KKK ve DaBT-İPA 48. aya, 8. sınıftaki Td 13 yaşa alındı ve Aile Sağlığı Merkezlerine taşındı; yerli Td aşısı üretimi.",
+   "kaynak": "sb-takvim-2020",
+   "ek_kaynaklar": [
+    "sb-asila-brosur-2020",
+    "sb-gbp-tarihce-en"
+   ]
+  },
+  {
+   "yil": 2025,
+   "olay": "2 Nisan 2025'te gebelere Tdab, 14 Nisan 2025'te altı bileşenli karma aşı (DaBT-İPA-Hib-HepB) uygulaması başladı; Hep-B 1. ay dozu kalktı.",
+   "kaynak": "sb-haber-altili-karma-2025",
+   "ek_kaynaklar": [
+    "sb-siy-2025-bulten"
+   ]
+  },
+  {
+   "yil": 2026,
+   "olay": "1 Eylül 2026'da suçiçeği 2. dozu 48. ayda takvime eklendi; 49-72 aylık çocuklara yakalama aşısı.",
+   "kaynak": "sb-portal-son-guncellemeler"
+  }
+ ],
+ "soguk_zincir": [
+  {
+   "madde": "Soğuk zincir, aşının etkinliğini üretimden kişiye uygulanana kadar koruyan, insan ve malzemeden oluşan sistemdir; aşılar etkin değilse %100 aşılama hızına ulaşılsa bile bağışık toplum oluşmaz.",
+   "kaynak": "sb-gbp-genelge-2009"
+  },
+  {
+   "madde": "Aşı buzdolabının ısısı +2 ile +8 °C arasında korunmalı, özellikle +4 °C'de kalması sağlanmalıdır; termostat günün en soğuk saatlerinde +2 ile +4 °C arasında olacak şekilde ayarlanır.",
+   "kaynak": "sb-gbp-genelge-2009"
+  },
+  {
+   "madde": "Tüm aşılar ısıya hassastır; hasar kümülatiftir: bir kez 30-35 °C üzeri maruziyet kadar, defalarca 10-30 °C maruziyet de aşıyı bozar ve etkinlik geri kazanılamaz.",
+   "kaynak": "sb-gbp-genelge-2009"
+  },
+  {
+   "madde": "BCG, kızamık, KKK ve kızamıkçık aşıları güneş ışığı/ultraviyoleye de hassastır; ışıktan korunmalıdır.",
+   "kaynak": "sb-gbp-genelge-2009"
+  },
+  {
+   "madde": "Polio, kızamık, KKK, kızamıkçık, liyofilize Hib ve BCG dondurulabilir; DaBT-İPA-Hib, DT, Td, Hepatit B aşıları ve liyofilize aşıların sulandırıcıları asla donmamalıdır. Donmaya hassasiyet sırası (en hassastan): Hepatit B > DaBT-İPA-Hib, KPA, PPD, grip aşısı, antiserumlar > Td, DT, sulandırıcılar > kızamık, KKK, BCG, Hib, meningokok > OPA.",
+   "kaynak": "sb-gbp-genelge-2009"
+  },
+  {
+   "madde": "Donmuş aşı çalkalanınca homojene yakın bulanıklık verip donmamış izlenimi yaratabilir; tek başına çalkalama testi aşının kullanılabilir olduğunu göstermez, sürekli ısı kaydı esastır.",
+   "kaynak": "sb-gbp-genelge-2009"
+  },
+  {
+   "madde": "Aşı dolabında en az bir güvenilir (tercihen sürekli kayıtlı, alarmlı) termometre bulunmalı; ısı her açılışta kontrol edilmeli, kapıdaki çizelgeye sabah ve akşam kaydedilmeli, çizelgede soğuk zincir sorumlusu ve yedeğinin adı yazmalıdır.",
+   "kaynak": "sb-gbp-genelge-2009"
+  },
+  {
+   "madde": "Buzdolabına aşı, sulandırıcı, antiserum, buz aküsü ve su bidonu dışında hiçbir şey (ilaç, yiyecek, içecek, enjektör) konmaz; aşılar buzluğa ve kapak raflarına konmaz; buzluk 0,5 cm'den kalın buzlanmamalıdır; en alt bölmeye ısıyı sabitlemek için su şişeleri yerleştirilir.",
+   "kaynak": "sb-gbp-genelge-2009"
+  },
+  {
+   "madde": "Üstten soğutmalı buzdolabında yerleşim: üst raf OPA, Hib, BCG, KKK, kızamık, kızamıkçık (sulandırıcılar ayrı); orta raf DaBT-İPA-Hib, kuduz aşısı ve 'ilk kullanılacak' kutusu; alt raf KPA, Hep B, Td, DT, PPD, sulandırıcılar ve antiserumlar.",
+   "kaynak": "sb-gbp-genelge-2009"
+  },
+  {
+   "madde": "Buzdolabı duvardan en az 10-15 cm uzakta, gölgede, ısıtıcılardan uzak, düz zemine yerleştirilir; çift kapılı no-frost buzdolabı tercih edilir; miadı yakın aşılar öne konur ('ilk dolan ilk kullanılır').",
+   "kaynak": "sb-gbp-genelge-2009"
+  },
+  {
+   "madde": "Uzun elektrik kesintisinde kapak açılmaz, gerekirse buz aküleri buzdolabı bölmesine alınır; iyi yalıtımlı dolapta ısı genellikle 24 saat korunur, daha uzun kesintide acil durum planı uygulanır.",
+   "kaynak": "sb-gbp-genelge-2009"
+  },
+  {
+   "madde": "Aşı nakil kapları: soğuk ömrü ≤1 gün olanlar kısa ömürlü (askılı), 3-5 gün olanlar uzun ömürlüdür; 4 saate kadar mesafede askılı kap kullanılabilir. Buz aküleri en az 24 saat dondurulur, kullanmadan önce sallanınca su sesi gelene kadar oda ısısında bekletilir; donmaya hassas aşılar akülerle doğrudan temas ettirilmez.",
+   "kaynak": "sb-gbp-genelge-2009"
+  },
+  {
+   "madde": "Açılmış çok dozlu liyofilize olmayan aşılar (OPA, DT, Td, Hep B) koşullar sağlanırsa toplam 4 haftayı geçmemek üzere art arda 3 seansta kullanılabilir; sulandırılmış BCG +2/+8 °C'de ve karanlıkta 6 saat, çok dozlu kızamık/kızamıkçık 4 saat içinde; tek dozlu Hib ve KKK sulandırılınca hemen kullanılır. Her aşı yalnız kendi sulandırıcısıyla sulandırılır.",
+   "kaynak": "sb-gbp-genelge-2009"
+  },
+  {
+   "madde": "Aşılar Bakanlıktan uygulama noktasına kadar tüm sağlık kuruluşlarında soğuk zincir içinde korunmakta ve sistem çevrim içi sürekli izlenmektedir.",
+   "kaynak": "sb-portal-sss"
+  }
+ ],
+ "genel_kurallar": [
+  {
+   "madde": "GBP hedefleri: her antijende %95 aşılama hızı, 12-23 aylıkların %90'ının tam aşılı olması, 0-59 aylık eksik aşılıların saptanıp aşılanması, tüm gebelere uygun Td, poliodan arındırılmışlığın sürdürülmesi, MNT eliminasyonu, kızamık eliminasyonu. 'Tam aşılı çocuk' tanımı (genelge): 1'er doz BCG ve KKK, 3'er doz DaBT, polio, Hep B ve Hib.",
+   "kaynak": "sb-gbp-genelge-2009"
+  },
+  {
+   "madde": "Her başvuruda (özellikle bebek, çocuk, gebe) aşı durumu kontrol edilir, kaçırılmış fırsat en aza indirilir; sağlık kurumlarında 'aşı günü' uygulanmaz, her gün aşı yapılır.",
+   "kaynak": "sb-gbp-genelge-2009"
+  },
+  {
+   "madde": "Birden fazla aşı aynı gün, ayrı enjektörle ve farklı ekstremiteden yapılabilir; aynı ekstremite zorunluysa enjeksiyon yerleri arası en az 2 cm olmalıdır. Kombine aşı dışındaki aşılar aynı enjektörde karıştırılmaz.",
+   "kaynak": "sb-gbp-genelge-2009"
+  },
+  {
+   "madde": "İki doz arasındaki en kısa sürelere uyulmalıdır; daha kısa aralıkla yapılan doz geçersiz sayılır ve uygun süre sonra tekrarlanır. Aradan uzun süre geçse bile aşılamaya kalınan yerden devam edilir, önceki dozlar tekrarlanmaz.",
+   "kaynak": "sb-gbp-genelge-2009"
+  },
+  {
+   "madde": "En kısa aralıklar: DaBT-İPA-Hib 1.-2. ve 2.-3. doz en az 4 hafta, 3. doz-rapel en az 6 ay; kızamık içeren iki aşı arası en az 4 hafta; KPA (12 ay altı) dozlar arası 4 hafta, son doz-rapel en az 4 ay ve rapel 12. aydan önce yapılmaz; Hep B 1.-2. en az 4 hafta, 2.-3. en az 8 hafta, 3. doz 1. dozdan en az 16 hafta sonra.",
+   "kaynak": "sb-gbp-genelge-2009"
+  },
+  {
+   "madde": "Parenteral iki canlı viral aşı aynı gün yapılabilir; aynı gün yapılmazsa aralarında en az 4 hafta bırakılır. OPA ile diğer canlı aşılar arasında süre gerekmez. Kızamık içeren aşıdan sonra BCG için 4 hafta beklenir (BCG önceyse beklenmez).",
+   "kaynak": "sb-gbp-genelge-2009"
+  },
+  {
+   "madde": "Canlı virüs aşıları TCT'yi bozabilir; PPD, kızamık içeren aşıyla aynı gün veya 4-6 hafta sonra yapılır.",
+   "kaynak": "sb-gbp-genelge-2009"
+  },
+  {
+   "madde": "12 aya kadar İM uygulama uyluk orta/üst 1/3 vastus lateralis ön-yan bölümüne, 12. aydan sonra deltoide yapılır (90°); KKK deltoid bölgeye 45° ile SK; BCG intradermal; OPA ağızdan.",
+   "kaynak": "sb-gbp-genelge-2009"
+  },
+  {
+   "madde": "Genel kesin kontrendikasyonlar: bir aşıya karşı anafilaksi (o aşının sonraki dozları için) ve bir aşı bileşenine anafilaksi (o bileşeni içeren tüm aşılar için). Ateşli ya da ateşsiz ciddi hastalıkta izleyen hekime danışılmadan aşı yapılmaz.",
+   "kaynak": "sb-gbp-genelge-2009"
+  },
+  {
+   "madde": "Aşıya özel kesin kontrendikasyonlar: DaBT'ye bağlı ensefalopati (boğmaca bileşeni çıkarılır); İPA'da neomisin/streptomisin/polimiksin B anafilaksisi; KKK'da neomisin/jelatin anafilaksisi, yumurtaya anafilaksi, gebelik, immün yetmezlik/baskılanma; OPA'da HIV (kişide veya evde), immün yetmezlik/baskılanma ve ev temaslısında immün yetmezlik; Hep B'de ekmek mayasına (Saccharomyces cerevisiae) anafilaksi; BCG'de immün yetmezlik/baskılanma ve gebelik; Td, Hib ve KPA'da genel kontrendikasyonlar dışında yok.",
+   "kaynak": "sb-gbp-genelge-2009"
+  },
+  {
+   "madde": "Önlem alınarak (hekim kararıyla) yapılacak durumlar: DaBT sonrası 48 saat içinde ≥40,5 °C rektal ateş, hipotonik-hiporesponsif atak, konvülsiyon, ≥3 saat süren durdurulamayan ağlama; KKK'da yakın zamanda (3-11 ay) kan ürünü/immünglobulin, trombositopeni/trombositopenik purpura öyküsü; İPA ve OPA'da gebelik; BCG'de HIV riski altındaki kişiler.",
+   "kaynak": "sb-gbp-genelge-2009"
+  },
+  {
+   "madde": "Yanlış kontrendikasyonlar (aşı ertelenmez): belirli bileşen dışı alerji/astım, 38,5 °C altı hafif ÜSYE veya ishal, ailede aşı yan etkisi veya konvülsiyon/epilepsi öyküsü, antibiyotik kullanımı, anne sütü alma, kronik hastalıklar, serebral palsi/Down sendromu, prematürite, ameliyat öncesi-sonrası, malnütrisyon, yenidoğan sarılığı öyküsü, topikal/inhaler/lokal ya da düşük doz oral steroid (<2 mg/kg veya <20 mg/gün).",
+   "kaynak": "sb-gbp-genelge-2009"
+  },
+  {
+   "madde": "Sağlıklı görünen çocukta aşı öncesi ateş ölçümü ve fizik muayene gerekmez; kontrendikasyonlar mutlaka sorgulanır.",
+   "kaynak": "sb-gbp-genelge-2009"
+  },
+  {
+   "madde": "Genel ilke olarak gebelikte canlı aşı yapılmaz (kuduz aşısı gibi risk-yarar durumlarında karar verilir); kızamıkçık/KKK sonrası 4 hafta gebelikten korunulur, öncesinde gebelik testi gerekmez.",
+   "kaynak": "sb-gbp-genelge-2009"
+  },
+  {
+   "madde": "Aşı öncesi etiket ve son kullanma tarihi kontrol edilir; çok dozlu flakona açılış tarihi/saati yazılır; her aşı için ayrı steril enjektör kullanılır; aşılanan herkese aşı kartı verilir; atıklar enjektör güvenli atık kutusuna atılır.",
+   "kaynak": "sb-gbp-genelge-2009"
+  },
+  {
+   "madde": "Ulusal Çocukluk Dönemi Aşı Takvimindeki tüm aşılar ve risk grubu aşılarının önemli bölümü aile sağlığı merkezleri başta olmak üzere Bakanlık kuruluşlarında ücretsizdir.",
+   "kaynak": "sb-portal-sss"
+  }
+ ],
+ "dogrulanamayan": [
+  "HPV aşısı: 1 Eylül 2026 tarihli resmî aşı kartında ve aşı portalında HPV aşısı yer almıyor. Sağlık Bakanı'nın 12 Haziran 2025'te '2025 sonunda 13 yaşa ücretsiz HPV aşısı' açıklaması yalnız haber sitelerinde bulundu; programa eklendiğine dair resmî duyuru/genelge bulunamadı.",
+  "KKK 9. ay 'EK DOZ' uygulamasının başlangıç tarihi ve resmî gerekçesi (kızamık salgınlarına yanıt olduğu haberlerde geçiyor) devlet kaynağında teyit edilemedi; yalnızca 2025 ve 2026 resmî kartlarında 9. ay sonunda 'EK DOZ' olarak gösterildiği doğrulandı.",
+  "Altılı karma aşıya geçişten sonra 2000 g altı doğan ve HBsAg+ anneden doğan bebekler için güncellenmiş Hep-B şeması resmî kaynakta bulunamadı (genelgedeki şema eski 0-1-6 takvimine göredir).",
+  "Kapsamlı ve güncel bir 'Genişletilmiş Bağışıklama Programı Genelgesi' (2009/17 sonrası) Bakanlık mevzuat listesinde bulunamadı; soğuk zincir ve genel kurallar 2009/17 sayılı Daimi Genelge'den alındı, sonraki dönemde değişmiş olabilir.",
+  "OPA3, DaBT-İPA-Hib1 ve KKK 48. ay (2. doz) kapsayıcılık oranları Sağlık İstatistikleri Yıllıklarında yer almıyor; bu nedenle seriye eklenmedi.",
+  "2003-2012 yıllarına ait aşılama hızları: 2017 ve sonrası yıllıklarda yok; daha eski yıllıkların PDF'lerine resmî sitede ulaşılamadı.",
+  "Difteri, boğmaca, tetanos, kızamıkçık, kabakulak, Hib, suçiçeği, hepatit A/B için yıllara göre (yıllık) bildirimi zorunlu hastalık vaka sayıları SB yıllıklarında yer almıyor; yalnızca difteri, boğmaca, tetanos, polio ve kızamık için 5 yıllık dönem ortalamaları (1980-1984, 2015-2019) Bakanlık GBP sayfasından alındı.",
+  "Kızamık eliminasyonunun Türkiye için DSÖ tarafından onaylandığına dair resmî kaynak bulunamadı; resmî sayfalar eliminasyonu 'hedef' olarak ifade ediyor.",
+  "GBP'nin başlangıç yılı resmî kaynaklarda çelişkili: Bakanlık zaman çizelgesi 1981, aşı portalının erişkin aşılama sayfası '1985 yılından bu yana' diyor.",
+  "Genel (kuduz dışı) yara tipine göre tetanoz profilaksisi tablosu (temiz-küçük / kirli-büyük yara) için güncel SB rehberine ulaşılamadı (dosyamerkez'deki 'Tetanoz Profilaksi Uygulamaları' PDF'i boş döndü); yalnız Kuduz Profilaksi Rehberi Tablo 2 kullanıldı.",
+  "Maternal-neonatal tetanoz eliminasyonunun kesin günü (bazı kaynaklarda 24 Nisan 2009) devlet kaynağında teyit edilemedi; yalnız 2009 yılı teyitli."
+ ]
+}

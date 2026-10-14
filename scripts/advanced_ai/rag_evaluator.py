@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-MedSoru RAG Değerlendirme (Evaluation) Test Scripti
+MeDSor RAG Değerlendirme (Evaluation) Test Scripti
 Metrikler: Hit Rate@1, Hit Rate@3, Hit Rate@5, MRR (Mean Reciprocal Rank)
 Ground Truth: Sorunun 'evidence.chunk_id' veya 'doc_source_id' / 'kaynak.source_id' bilgisi.
 """
@@ -81,7 +81,7 @@ def load_eval_dataset(limit: int = 50) -> list[dict]:
 
 def run_evaluation(num_samples: int = 30, use_hybrid: bool = True):
     print("=" * 65)
-    print("🏥 MedSoru RAG Kalite & Erişim Doğrulama (Evaluation) Başlatılıyor...")
+    print("🏥 MeDSor RAG Kalite & Erişim Doğrulama (Evaluation) Başlatılıyor...")
     print("=" * 65)
 
     # 1. Chunk'ları ve BGE-M3 Vektörlerini Yükle

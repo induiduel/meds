@@ -250,6 +250,61 @@ body.ps-ink-mono {
 }
 
 /* ===========================================================================
+   Tasarım: Net (v12) — gövdede pd-design-v12, kökte data-design='v12' (pdfDocument.ts designAttrs).
+   Kök özniteliği v11/v12 katmanlarını (token, ls-* blokları, okuma yazısı) zaten açar; burada yalnız PDF'e
+   özgü bloklar v12 diline çekilir: düz yüzey + 1 px çizgi, köşe 8–12, 600 başlık, büyük harfli etiket yok,
+   rakamlar mono. Kart biçimi yalnız Uygulama/Kompakt şablonunda değişir; Sade, Klasik ve Sınav şablonları
+   kendi biçimini korur (yalnız yazı ve etiket dili v12'den gelir).
+   =========================================================================== */
+html[data-design='v12'] :is(.pd-step, .pd-sum) .ls-prose { max-width: none; }
+body.pd-design-v12 .pd-cover-kicker { text-transform: none; letter-spacing: 0; font-size: 13px; font-weight: 550; }
+body.pd-design-v12 .pd-cover h1 { font-family: var(--font-sans); font-weight: 600; letter-spacing: -.022em; }
+body.pd-design-v12 .pd-cover-brand { font: 600 16px var(--font-sans); letter-spacing: -.015em; }
+body.pd-design-v12 .pd-cover-brand i { width: 26px; height: 26px; border-radius: 8px; font-size: 13px; }
+body.pd-design-v12 .pd-cover-form div { text-transform: none; letter-spacing: 0; font-size: 12px; font-weight: 500; }
+body.pd-design-v12 .pd-masthead h1 { font-family: var(--font-sans); font-weight: 600; font-size: 24px; letter-spacing: -.018em; }
+body.pd-design-v12 :is(.pd-group, .pd-gsol-h, .pd-section-h) { font-family: var(--font-sans); font-weight: 600; letter-spacing: -.01em; }
+body.pd-design-v12 .pd-group { font-size: 15.5px; }
+body.pd-design-v12 .pd-section-h { font-size: 20px; }
+body.pd-design-v12 .pd-qblock-h { text-transform: none; letter-spacing: 0; font-size: 12.5px; font-weight: 600; color: var(--color-ink-2); }
+body.pd-design-v12 .pd-sec-title small, body.pd-design-v12 .pd-card small { text-transform: none; letter-spacing: 0; font-size: 11.5px; font-weight: 500; }
+body.pd-design-v12 .cx-q .ms-stem { font-weight: 400; }
+body.pd-design-v12 .cx-q-meta b { font-weight: 550; }
+
+/* Kart biçimi: Uygulama ve Kompakt şablonları */
+body.pd-design-v12:is(.ps-tpl-modern, .ps-tpl-kompakt) .cx-q { border: 1px solid var(--color-line); border-radius: 12px; background: var(--color-white); box-shadow: none; }
+body.pd-design-v12.ps-tpl-modern .cx-q { gap: 10px; padding: 14px 16px 10px; }
+body.pd-design-v12:is(.ps-tpl-modern, .ps-tpl-kompakt) .cx-q-no { min-width: 30px; height: 22px; padding: 0 7px; border-radius: 6px; background: var(--color-field); color: var(--color-ink-2); font: 600 12px var(--font-mono); }
+body.pd-design-v12:is(.ps-tpl-modern, .ps-tpl-kompakt) .cx-opts { gap: 5px; }
+body.pd-design-v12:is(.ps-tpl-modern, .ps-tpl-kompakt) .cx-opt-li { border-top: 0 !important; border-bottom: 0; }
+body.pd-design-v12:is(.ps-tpl-modern, .ps-tpl-kompakt) .cx-opt { gap: 10px; padding: 7px 10px; border: 1px solid var(--color-line); border-radius: 8px; background: var(--color-white); }
+body.pd-design-v12:is(.ps-tpl-modern, .ps-tpl-kompakt) .pd-qlist:is(.is-two, .is-three) .cx-opt { padding: 5px 8px; gap: 8px; }
+body.pd-design-v12:is(.ps-tpl-modern, .ps-tpl-kompakt) .cx-opt .cx-bubble { width: 22px; height: 22px; margin-top: 0; border: 0; border-radius: 6px; background: var(--color-field); color: var(--color-ink-2); font: 600 12px var(--font-mono); }
+body.pd-design-v12:is(.ps-tpl-modern, .ps-tpl-kompakt) .cx-opt.is-correct { border-color: var(--color-ok); background: var(--color-ok-soft); }
+body.pd-design-v12:is(.ps-tpl-modern, .ps-tpl-kompakt) .cx-opt.is-correct .cx-bubble { background: var(--color-ok); color: var(--color-on-solid, #fff); }
+body.pd-design-v12:is(.ps-tpl-modern, .ps-tpl-kompakt) .cx-opt.is-correct .cx-opt-t { font-weight: 550; color: var(--color-ink); }
+body.pd-design-v12:is(.ps-tpl-modern, .ps-tpl-kompakt) .pd-why { margin: 0 0 2px 32px; border: 1px solid var(--color-line); border-radius: 8px; background: var(--color-white); }
+body.pd-design-v12:is(.ps-tpl-modern, .ps-tpl-kompakt) .pd-why.is-ok { border-color: color-mix(in srgb, var(--color-ok) 40%, var(--color-line)); background: var(--color-ok-soft); }
+body.pd-design-v12:is(.ps-tpl-modern, .ps-tpl-kompakt) .cx-opts > .pd-why + .cx-opt-li { border-top: 0; }
+body.pd-design-v12:is(.ps-tpl-modern, .ps-tpl-kompakt) .pd-cover::before { height: 1.6mm; }
+body.pd-design-v12:is(.ps-tpl-modern, .ps-tpl-kompakt) .pd-cover-stat { border: 1px solid var(--color-line); border-radius: 10px; background: var(--color-white); }
+body.pd-design-v12:is(.ps-tpl-modern, .ps-tpl-kompakt) .pd-cover-stat b { font: 600 20px var(--font-mono); letter-spacing: -.01em; }
+body.pd-design-v12:is(.ps-tpl-modern, .ps-tpl-kompakt) .pd-cover-stat span { font-weight: 500; }
+body.pd-design-v12:is(.ps-tpl-modern, .ps-tpl-kompakt) .pd-masthead { border-bottom: 1px solid var(--color-line); }
+body.pd-design-v12:is(.ps-tpl-modern, .ps-tpl-kompakt) .pd-section-h { border-bottom: 1px solid var(--color-line); }
+body.pd-design-v12:is(.ps-tpl-modern, .ps-tpl-kompakt) :is(.pd-key > div, .pd-key > a) { background: var(--color-white); border: 1px solid var(--color-line); border-radius: 8px; }
+body.pd-design-v12:is(.ps-tpl-modern, .ps-tpl-kompakt) .pd-key b { border-radius: 6px; }
+body.pd-design-v12:is(.ps-tpl-modern, .ps-tpl-kompakt) .pd-sec-title { background: var(--color-field); color: var(--color-ink); border: 1px solid var(--color-line); border-radius: 12px; }
+body.pd-design-v12:is(.ps-tpl-modern, .ps-tpl-kompakt) .pd-sec-title small { color: var(--color-ink-3); opacity: 1; }
+body.pd-design-v12:is(.ps-tpl-modern, .ps-tpl-kompakt) .pd-sec-title b { font-family: var(--font-sans); font-weight: 600; font-size: 19px; }
+body.pd-design-v12:is(.ps-tpl-modern, .ps-tpl-kompakt) .pd-sec-title span { color: var(--color-ink-2); opacity: 1; }
+body.pd-design-v12:is(.ps-tpl-modern, .ps-tpl-kompakt) :is(.pd-box, .pd-card) { border-radius: 10px; }
+body.pd-design-v12:is(.ps-tpl-modern, .ps-tpl-kompakt) .pd-card .is-back { background: var(--color-accent-soft); color: var(--color-ink); }
+body.pd-design-v12:is(.ps-tpl-modern, .ps-tpl-kompakt) .pd-card .is-front { background: var(--color-white); border-bottom: 1px solid var(--color-line); }
+body.pd-design-v12:is(.ps-tpl-modern, .ps-tpl-kompakt) .pd-toc li { border-bottom-style: solid; border-bottom-color: var(--color-line-soft); }
+body.pd-design-v12:is(.ps-tpl-modern, .ps-tpl-kompakt) .pd-step { border-bottom-color: var(--color-line-soft); }
+
+/* ===========================================================================
    PDF Stüdyosu arayüzü (ps-*)
    =========================================================================== */
 .ps-overlay { position: fixed; inset: 0; z-index: 80; display: flex; align-items: stretch; justify-content: center; background: var(--color-scrim); }
@@ -382,6 +437,21 @@ body.ps-ink-mono {
 .ps-tpl b { margin-top: 4px; font-size: 13px; font-weight: 650; color: var(--color-ink); }
 .ps-tpl small { font-size: 11.5px; line-height: 1.3; color: var(--color-ink-3); }
 .ps-tpl.is-on { border-color: var(--color-accent); background: var(--color-accent-soft); box-shadow: inset 0 0 0 1px var(--color-accent); }
+.ps-designs { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.ps-dglyph { height: 58px; border-radius: 7px; background: #fff; border: 1px solid var(--color-line); padding: 6px; display: flex; flex-direction: column; gap: 4px; overflow: hidden; }
+.ps-dglyph-card { display: flex; align-items: center; gap: 5px; }
+.ps-dglyph-card em { font-style: normal; display: inline-grid; place-items: center; height: 12px; min-width: 14px; padding: 0 3px; font: 700 8px/1 var(--font-mono, monospace); }
+.ps-dglyph-card > span { flex: 1; display: flex; flex-direction: column; gap: 3px; }
+.ps-dglyph i { display: block; height: 2px; border-radius: 2px; background: #C4CCD9; }
+.ps-dglyph-card i:last-child { width: 60%; }
+.ps-dglyph-opts { display: flex; flex-direction: column; gap: 3px; }
+.ps-dglyph-opts i { height: 6px; border-radius: 3px; background: none; }
+.ps-dglyph.is-v10 .ps-dglyph-card em { background: #1F2430; color: #fff; border-radius: 4px; }
+.ps-dglyph.is-v10 .ps-dglyph-opts { padding: 3px 4px; border-radius: 7px; border: 1px solid #DCE2EC; background: #F7F9FC; }
+.ps-dglyph.is-v10 .ps-dglyph-opts i { height: 2px; background: #C4CCD9; border-bottom: 0; }
+.ps-dglyph.is-v12 .ps-dglyph-card em { background: #EEF1F5; color: #5B6577; border-radius: 3px; font-weight: 600; }
+.ps-dglyph.is-v12 .ps-dglyph-opts i { border: 1px solid #DCE2EC; border-radius: 2px; }
+.ps-dglyph.is-v12 .ps-dglyph-opts i:first-child { border-color: #2E9D6A; background: #E8F6EF; }
 .ps-tglyph { height: 58px; border-radius: 7px; background: #fff; border: 1px solid var(--color-line); padding: 6px; display: flex; flex-direction: column; gap: 4px; overflow: hidden; }
 .ps-tglyph em { font: 700 11px/1 var(--font-sans); font-style: normal; color: #1F2430; min-height: 0; }
 .ps-tglyph em:empty { display: none; }

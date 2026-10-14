@@ -1,60 +1,26 @@
-import React, { useEffect, useLayoutEffect, useRef, useState } from 'react';
+import React, { useLayoutEffect, useRef, useState } from 'react';
 import { Activity, PanelLeftClose, PanelLeftOpen, Search, ShieldCheck } from 'lucide-react';
 import { linkClick, pathFor, type AppRoute } from '../../router';
 import type { AppUser } from '../../services/auth';
 import { NAV_ITEMS, NAV_TREE, initialsOf, openSearch } from './navModel';
 import { BrandWord } from './BrandWord';
+import { useSideCollapse } from './shellHooks';
+import { useAppearance } from '../../utils/appearance';
+import { SideNavV12 } from '../v12/ShellV12';
 
-const COLLAPSE_KEY = 'medsoru_rail_collapsed';
+export type SideNavProps = { active: AppRoute; onGo: (r: AppRoute) => void; isAdmin: boolean; user: AppUser | null };
+
+/** v12 "Net" tasarımında kendi rayı (components/v12/ShellV12); v10/v11 aşağıdaki klasik menü. */
+export const SideNav: React.FC<SideNavProps> = (props) =>
+  useAppearance().design === 'v12' ? <SideNavV12 {...props} /> : <SideNavClassic {...props} />;
 
 /**
  * v8 kenar menüsü (≥768px). Tablette 72px simge rayı (kısa etiketli), masaüstünde 236px gruplu menü;
  * masaüstünde daraltılabilir. Etkin sayfayı tek bir kayan vurgu izler (yayla).
  * Altta: yönetim (yöneticiye) ve kullanıcı kartı → Profil ve ayarlar.
  */
-export const SideNav: React.FC<{ active: AppRoute; onGo: (r: AppRoute) => void; isAdmin: boolean; user: AppUser | null }> = ({ active, onGo, isAdmin, user }) => {
-  // Kullanıcının seçimi (null: seçim yok). Seçim yoksa Akış/Odak düzeninde menü daralmış başlar; düzen
-  // değişince seçim sıfırlanır. Eskiden bu düzenlerde CSS menüyü zorla daraltıyordu ve düğme işe yaramıyordu.
-  const [pref, setPref] = useState<boolean | null>(() => {
-    try {
-      const v = localStorage.getItem(COLLAPSE_KEY);
-      return v === '1' ? true : v === '0' ? false : null;
-    } catch {
-      return null;
-    }
-  });
-  const [compactLayout, setCompactLayout] = useState(() => /^(akis|odak)$/.test(document.documentElement.dataset.layout || ''));
-  useEffect(() => {
-    const el = document.documentElement;
-    let last = el.dataset.layout;
-    const mo = new MutationObserver(() => {
-      if (el.dataset.layout === last) return;
-      last = el.dataset.layout;
-      setCompactLayout(/^(akis|odak)$/.test(last || ''));
-      setPref(null);
-      try {
-        localStorage.removeItem(COLLAPSE_KEY);
-      } catch {
-        /* ignore */
-      }
-    });
-    mo.observe(el, { attributes: true, attributeFilter: ['data-layout'] });
-    return () => mo.disconnect();
-  }, []);
-  const collapsed = pref ?? compactLayout;
-  const setCollapsed = (f: (c: boolean) => boolean) => {
-    const next = f(collapsed);
-    setPref(next);
-    try {
-      localStorage.setItem(COLLAPSE_KEY, next ? '1' : '0');
-    } catch {
-      /* ignore */
-    }
-  };
-  useEffect(() => {
-    document.documentElement.dataset.side = collapsed ? 'collapsed' : 'open';
-  }, [collapsed]);
-  useEffect(() => () => void delete document.documentElement.dataset.side, []);
+const SideNavClassic: React.FC<SideNavProps> = ({ active, onGo, isAdmin, user }) => {
+  const { collapsed, setCollapsed } = useSideCollapse();
 
   // Kayan vurgu: etkin bağlantının konumunu izler
   const listRef = useRef<HTMLDivElement>(null);

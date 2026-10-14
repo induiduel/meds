@@ -1,6 +1,8 @@
 import React, { Suspense, useEffect, useRef, useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import type { AppUser } from '../../services/auth';
+import { useAppearance } from '../../utils/appearance';
+import { OnboardingV12 } from '../v12/OnboardingV12';
 
 const UserAuthModal = React.lazy(() => import('../UserAuthModal').then(m => ({ default: m.UserAuthModal || (m as any).default })));
 
@@ -82,6 +84,7 @@ export const Onboarding: React.FC<OnboardingProps> = ({ onAuthSuccess }) => {
   const [step, setStep] = useState(0);
   const [dir, setDir] = useState<1 | -1>(1);
   const touchX = useRef<number | null>(null);
+  const v12 = useAppearance().design === 'v12';
   const last = STEPS.length - 1;
 
   const go = (n: number) => {
@@ -103,6 +106,31 @@ export const Onboarding: React.FC<OnboardingProps> = ({ onAuthSuccess }) => {
 
   const s = STEPS[step];
   const isAuth = step === last;
+  const onTouchStart = (e: React.TouchEvent) => { if (!isAuth) touchX.current = e.touches[0].clientX; };
+  const onTouchEnd = (e: React.TouchEvent) => {
+    if (touchX.current == null) return;
+    const dx = e.changedTouches[0].clientX - touchX.current;
+    touchX.current = null;
+    if (Math.abs(dx) > 50) go(step + (dx < 0 ? 1 : -1));
+  };
+
+  if (v12) {
+    return (
+      <OnboardingV12
+        steps={STEPS}
+        step={step}
+        dir={dir}
+        go={go}
+        onTouchStart={onTouchStart}
+        onTouchEnd={onTouchEnd}
+        auth={
+          <Suspense fallback={<div className="e12-auth-skel" aria-hidden="true" />}>
+            <UserAuthModal isOpen embedded mandatory onClose={() => {}} onAuthSuccess={onAuthSuccess} initialMode="register" />
+          </Suspense>
+        }
+      />
+    );
+  }
 
   return (
     <div
@@ -110,13 +138,8 @@ export const Onboarding: React.FC<OnboardingProps> = ({ onAuthSuccess }) => {
       role="dialog"
       aria-modal="true"
       aria-label="MeDSor tanıtımı"
-      onTouchStart={e => { if (!isAuth) touchX.current = e.touches[0].clientX; }}
-      onTouchEnd={e => {
-        if (touchX.current == null) return;
-        const dx = e.changedTouches[0].clientX - touchX.current;
-        touchX.current = null;
-        if (Math.abs(dx) > 50) go(step + (dx < 0 ? 1 : -1));
-      }}
+      onTouchStart={onTouchStart}
+      onTouchEnd={onTouchEnd}
     >
       <div className="ms-onboard-top">
         <span className="ms-onboard-brand">Me<span>DS</span>or</span>

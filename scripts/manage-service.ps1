@@ -1,7 +1,7 @@
 param(
     [ValidateSet("install-and-start", "status", "stop", "sync-now", "notify")]
     [string]$Action = "install-and-start",
-    [string]$Title = "MedSoru Otomasyon Servisi 🚀",
+    [string]$Title = "MeDSor Otomasyon Servisi 🚀",
     [string]$Message = "Windows başlangıcına eklendi ve arka planda başlatıldı."
 )
 
@@ -11,8 +11,8 @@ $desktopPath = [Environment]::GetFolderPath('Desktop')
 $startupPath = [Environment]::GetFolderPath('Startup')
 $medsDir = "C:\Users\indui\Desktop\meds"
 
-$desktopShortcut = Join-Path $desktopPath "MedSoru Otomasyon Servisi.lnk"
-$startupShortcut = Join-Path $startupPath "MedSoru Otomasyon Servisi.lnk"
+$desktopShortcut = Join-Path $desktopPath "MeDSor Otomasyon Servisi.lnk"
+$startupShortcut = Join-Path $startupPath "MeDSor Otomasyon Servisi.lnk"
 $daemonVbs = Join-Path $medsDir "start-meds-daemon.vbs"
 $serviceBat = Join-Path $medsDir "start-meds-service.bat"
 $notificationScript = Join-Path $medsDir "scripts\show-notification.ps1"
@@ -70,13 +70,13 @@ switch ($Action) {
         foreach ($p in $procs) {
             Stop-Process -Id $p.ProcessId -Force -ErrorAction SilentlyContinue
         }
-        Show-Toast "MedSoru Otomasyon Servisi ⏹️" "$count adet arka plan işleyici süreci durduruldu."
+        Show-Toast "MeDSor Otomasyon Servisi ⏹️" "$count adet arka plan işleyici süreci durduruldu."
         Write-Output "Stopped $count processes."
     }
 
     "sync-now" {
         Write-Output "Triggering immediate sync..."
-        Show-Toast "MedSoru: Senkronizasyon Başlatıldı ⏳" "Google Drive ve yerel klasör taranıyor..."
+        Show-Toast "MeDSor: Senkronizasyon Başlatıldı ⏳" "Google Drive ve yerel klasör taranıyor..."
         Start-Process -FilePath "node.exe" -ArgumentList "`"$medsDir\scripts\meds-local-sync.mjs`"", "--sync-now" -WorkingDirectory $medsDir -WindowStyle Hidden
     }
 
@@ -86,7 +86,7 @@ switch ($Action) {
                         -targetPath $serviceBat `
                         -arguments "" `
                         -workingDir $medsDir `
-                        -description "MedSoru Tıp Fakültesi Günlük Senkronizasyon ve Windows Başlangıç Servisi" `
+                        -description "MeDSor Tıp Fakültesi Günlük Senkronizasyon ve Windows Başlangıç Servisi" `
                         -icon "shell32.dll,238"
 
         Write-Output "2. Registering in Windows Startup ($startupPath)..."
@@ -94,7 +94,7 @@ switch ($Action) {
                         -targetPath "wscript.exe" `
                         -arguments "`"$daemonVbs`"" `
                         -workingDir $medsDir `
-                        -description "MedSoru Günlük Arka Plan Senkronizasyon Servisi (Otomatik Başlangıç)" `
+                        -description "MeDSor Günlük Arka Plan Senkronizasyon Servisi (Otomatik Başlangıç)" `
                         -icon "shell32.dll,238"
 
         Write-Output "3. Checking running service processes..."
@@ -108,7 +108,7 @@ switch ($Action) {
         }
 
         Write-Output "4. Sending Windows Toast Notification..."
-        Show-Toast "MedSoru Otomasyon Servisi Aktif 🚀" "Windows Başlangıcına Eklendi! Servis arka planda çalışıyor. Her gün 16:00 - 18:00 arasında otomatik eşitlenecektir."
+        Show-Toast "MeDSor Otomasyon Servisi Aktif 🚀" "Windows Başlangıcına Eklendi! Servis arka planda çalışıyor. Her gün 16:00 - 18:00 arasında otomatik eşitlenecektir."
 
         Write-Output "SUCCESS: Installed on Desktop, registered in Startup, and service started."
     }

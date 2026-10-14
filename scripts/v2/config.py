@@ -1,4 +1,4 @@
-"""MedSoru Core v2 — merkezi yapılandırma.
+"""MeDSor Core v2 — merkezi yapılandırma.
 
 Tüm yollar ortam değişkenlerinden okunur (kodda gömülü mutlak yol yok). Varsayılanlar projenin
 kardeş klasör düzenini (PROJE_TANITIMI.md) izler:

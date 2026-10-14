@@ -15,7 +15,7 @@ const today = () => new Date().toLocaleDateString('tr-TR', { day: 'numeric', mon
 
 export const Cover: React.FC<{ info: CoverInfo }> = ({ info }) => (
   <section className="pd-cover">
-    <div className="pd-cover-brand"><i>M</i> MedSoru</div>
+    <div className="pd-cover-brand"><i>M</i> MeDSor</div>
     <p className="pd-cover-kicker">{info.kicker}</p>
     <h1>{info.title}</h1>
     {info.subtitle && <p className="pd-cover-sub">{info.subtitle}</p>}

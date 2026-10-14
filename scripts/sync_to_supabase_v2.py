@@ -2,7 +2,7 @@
 """
 scripts/sync_to_supabase_v2.py
 --------------------------------------------------------------------------------
-MedSoru AI - Supabase v2 Chunk-Build Veri Senkronizasyonu Motoru
+MeDSor AI - Supabase v2 Chunk-Build Veri Senkronizasyonu Motoru
 
 1. 6.263 Doğrulanmış ve Zenginleştirilmiş Çıkmış Soruyu Supabase past_questions'a yükler:
    - Sürüm etiketi: v2_local_pipeline_2026

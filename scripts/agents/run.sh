@@ -23,7 +23,7 @@ case "$cmd" in
     UNIT_DIR="$HOME/.config/systemd/user"; mkdir -p "$UNIT_DIR"
     cat > "$UNIT_DIR/meds-downloads-watcher.service" <<EOF
 [Unit]
-Description=MedSoru downloads -> temp1 okuma ajanı
+Description=MeDSor downloads -> temp1 okuma ajanı
 
 [Service]
 ExecStart="$AGENTS_DIR/run.sh" watch

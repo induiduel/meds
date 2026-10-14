@@ -9,6 +9,8 @@ import { SolveView } from './SolveView';
 import { SelfTestView } from './SelfTestView';
 import { NotesView } from './NotesView';
 import { Segmented as Seg } from '../ui/kit';
+import { useAppearance } from '../../utils/appearance';
+import { StudyHubV12 } from '../v12/StudyV12';
 
 export type StudySection = 'solve' | 'test' | 'notes' | 'lists';
 
@@ -28,6 +30,8 @@ export const StudyHub: React.FC<StudyHubProps> = ({
   selectedCommitteeId,
   onStartQuickTest,
 }) => {
+  // v12 "Net": başlık + sekmeler ayrı yapı (components/v12/StudyV12.tsx); bölüm içerikleri ortak
+  const v12 = useAppearance().design === 'v12';
   const [section, setSection] = useState<StudySection>(() => {
     try {
       const s = localStorage.getItem(SECTION_KEY) as StudySection | null;
@@ -97,6 +101,49 @@ export const StudyHub: React.FC<StudyHubProps> = ({
     setQuickNonce((n) => n + 1);
   };
 
+  const panel = (
+    <div role="tabpanel" id={`study-panel-${section}`} aria-labelledby={`study-tab-${section}`}>
+      {section === 'solve' && (
+        <SolveView
+          bank={bank}
+          committees={cleanCommittees}
+          loading={loading}
+          initialCommitteeId={selectedCommitteeId}
+          onProgressChange={bump}
+        />
+      )}
+      {section === 'test' && (
+        <SelfTestView
+          bank={bank}
+          committees={cleanCommittees}
+          loading={loading}
+          initialCommitteeId={selectedCommitteeId}
+          onProgressChange={bump}
+          quickStartNonce={quickNonce}
+        />
+      )}
+      {section === 'lists' && <ListsView bank={bank} onChange={bump} />}
+      {section === 'notes' && <NotesView disciplines={disciplines} />}
+    </div>
+  );
+
+  if (v12) {
+    return (
+      <StudyHubV12
+        loading={loading}
+        bankSize={bank.length}
+        solved={stats.solved}
+        accuracy={stats.accuracy}
+        tabs={tabs}
+        section={section}
+        onSection={(id) => setSection(id as StudySection)}
+        onQuick={startQuick}
+      >
+        {panel}
+      </StudyHubV12>
+    );
+  }
+
   return (
     <div className="flex flex-col gap-3 sm:gap-4">
       <PageHeader
@@ -142,29 +189,7 @@ export const StudyHub: React.FC<StudyHubProps> = ({
             </div>
           </div>
 
-      <div role="tabpanel" id={`study-panel-${section}`} aria-labelledby={`study-tab-${section}`}>
-        {section === 'solve' && (
-          <SolveView
-            bank={bank}
-            committees={cleanCommittees}
-            loading={loading}
-            initialCommitteeId={selectedCommitteeId}
-            onProgressChange={bump}
-          />
-        )}
-        {section === 'test' && (
-          <SelfTestView
-            bank={bank}
-            committees={cleanCommittees}
-            loading={loading}
-            initialCommitteeId={selectedCommitteeId}
-            onProgressChange={bump}
-            quickStartNonce={quickNonce}
-          />
-        )}
-        {section === 'lists' && <ListsView bank={bank} onChange={bump} />}
-        {section === 'notes' && <NotesView disciplines={disciplines} />}
-      </div>
+      {panel}
     </div>
   );
 };

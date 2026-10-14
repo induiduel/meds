@@ -28,6 +28,8 @@ import { QuestionAboutDialog } from './QuestionAboutDialog';
 import { toast } from './ui/Toast';
 import { ApiService, safeJsonFetch } from '../services/api';
 import { contentReady, isContentChanged, onContentChanged } from '../services/contentLive';
+import { useAppearance } from '../utils/appearance';
+import '../styles/v12/secondary.css';
 
 /**
  * Kurul 1 kazanım temelli örnek sorular (/ornek-sorular, varsayılan sekme).
@@ -513,6 +515,7 @@ function DersGorunumu({ id, initialKazanimNo, initialQuestionId, onBack }: { id:
   const [aboutQuestion, setAboutQuestion] = useState<{ q: Soru; ders: string; konu: string } | null>(null);
   const [tam, setTam] = useState<{ sorular: Soru[]; baslik: string } | null>(null);
   const cevaplar = useCevaplar();
+  const v12 = useAppearance().design === 'v12';
   // Kazanım grupları akordiyon; "Tüm soruları göster" sağda o kazanımın soru listesini açar.
   const [acik, setAcik] = useState<Set<number>>(() => new Set(initialKazanimNo ? [initialKazanimNo] : []));
   const [panelK, setPanelK] = useState<number | null>(null);
@@ -667,7 +670,7 @@ function DersGorunumu({ id, initialKazanimNo, initialQuestionId, onBack }: { id:
           <aside className="os-panel" aria-label={`K${panel.no} · tüm sorular`}>
             <div className="os-ph">
               <div className="min-w-0 flex-1">
-                <span className="os-eyebrow">TÜM SORULAR · K{panel.no}</span>
+                <span className="os-eyebrow">{v12 ? `Tüm sorular · K${panel.no}` : `TÜM SORULAR · K${panel.no}`}</span>
                 <b>{panel.metin}</b>
                 <span className="os-meta">{panelSorular.length} soru{zorluk ? ` · ${zorluk}` : ''}</span>
               </div>
@@ -805,11 +808,11 @@ export const KazanimSorulariView: React.FC<{
   if (secili) return <DersGorunumu id={secili} initialKazanimNo={initialKazanimNo || undefined} initialQuestionId={secili === initialLessonId ? initialQuestionId || undefined : undefined} onBack={() => sec(null)} />;
 
   if (!INDEX.length) {
-    return <p className="m-0 rounded-2xl border border-line bg-white p-6 text-center text-base text-ink-3">Kurul 1 örnek soruları henüz hazırlanmadı.</p>;
+    return <p className="m-0 rounded-2xl border border-line bg-white p-6 text-center text-base text-ink-3 o12-empty">Kurul 1 örnek soruları henüz hazırlanmadı.</p>;
   }
 
   return (
-    <div className="flex flex-col gap-3">
+    <div className="flex flex-col gap-3 o12-ks">
       <div className="cx-dock">
         <label className="cx-search">
           <Search aria-hidden />
@@ -829,13 +832,13 @@ export const KazanimSorulariView: React.FC<{
         </div>
       </div>
       {liste.length === 0 && (
-        <div className="ui-card flex flex-col items-center gap-2 text-center" style={{ paddingBlock: 32 }}>
+        <div className="ui-card flex flex-col items-center gap-2 text-center o12-empty" style={{ paddingBlock: 32 }}>
           <b>Aramanla eşleşen ders yok</b>
           <span className="ui-hint">Kelimeyi kısalt ya da branş süzgecini kaldır.</span>
           <button type="button" className="ui-btn is-tonal is-sm" onClick={() => { setAra(''); setBrans(''); }}>Temizle</button>
         </div>
       )}
-      <ul className="ui-grid m-0 p-0 list-none">
+      <ul className="ui-grid m-0 p-0 list-none o12-ks-list">
         {liste.map((x) => {
           const { n, d } = dersIlerleme(x.id, cevaplar);
           const yuzde = Math.min(100, Math.round((n / x.soru_sayisi) * 100));

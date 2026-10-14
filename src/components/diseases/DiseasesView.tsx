@@ -47,6 +47,7 @@ import { foldText } from '../../services/searchText';
 import { useAppearance } from '../../utils/appearance';
 import { ConceptsCard, RelatedDiseasesCard, WhereCard, linkedQuestionCount, useDiseaseInsights } from './DiseaseInsights';
 import { lessonFlagText, lessonSelOn, topicMatches, useDiseaseLessons, type LessonSel } from './diseaseLessons';
+import { DiseasesV12 } from '../v12/DiseasesV12';
 import './diseasesAtlas.css';
 
 /**
@@ -154,9 +155,11 @@ export const DiseasesView: React.FC<DiseasesViewProps> = ({
   const [tab, setTab] = useState<DetailTab>('ozet');
 
   // Görüntüleme modu: Odak + geniş ekran → liste ve ayrıntı yan yana
-  const { layout } = useAppearance();
+  const { layout, design } = useAppearance();
+  const v12 = design === 'v12';
   const isWide = useMedia('(min-width: 1024px)');
-  const split = isWide && layout === 'odak';
+  // v12: geniş ekranda her zaman liste + ayrıntı (DiseasesV12)
+  const split = isWide && (v12 || layout === 'odak');
   const rootRef = useRef<HTMLDivElement>(null);
 
   // Ekleme / Düzenleme
@@ -666,6 +669,16 @@ export const DiseasesView: React.FC<DiseasesViewProps> = ({
   /** Ayrı sayfa düzeninde ayrıntı açıkken liste ve araç çubuğu gizlenir (konum yolundan dönülür) */
   const detailPage = Boolean(sel) && !split;
 
+  /** Satırdaki eşleşme nedeni: varlık süzgeci ya da ders programı konusu ("başlık|metin") */
+  const hitLabelOf = (d: DiseaseProfile): string | undefined => {
+    const hit = activeEntity?.hits.find((h) => h.diseaseId === d.id);
+    const lm = lessonOn && !hit ? lessonMatch.get(d.id) : undefined;
+    const lessonLabel = lm && lessonData
+      ? `${lessonSel.t != null ? 'Bu konuda' : lessonData.konular[lm.best].t}|${lm.n} kez · ${lessonFlagText(lm.flags)}`
+      : undefined;
+    return hit && activeEntity ? `${sectionTitle(d.kind, hit.section as DiseaseSectionId) || 'Karakteristik özellik'}|${activeEntity.entity.name}${hit.qualifier ? ` (${hit.qualifier})` : ''}` : lessonLabel;
+  };
+
   const list = (
     <div className="hx-listwrap">
       {!dataReady ? (
@@ -688,23 +701,160 @@ export const DiseasesView: React.FC<DiseasesViewProps> = ({
       ) : (
         <>
           <ul className="hx-list" data-layout-grid={split ? undefined : ''}>
-            {filteredDiseases.slice(0, limit).map((d) => {
-              const hit = activeEntity?.hits.find((h) => h.diseaseId === d.id);
-              const lm = lessonOn && !hit ? lessonMatch.get(d.id) : undefined;
-              const lessonLabel = lm && lessonData
-                ? `${lessonSel.t != null ? 'Bu konuda' : lessonData.konular[lm.best].t}|${lm.n} kez · ${lessonFlagText(lm.flags)}`
-                : undefined;
-              return (
-                <DiseaseRow key={d.id} d={d} isFav={favoriteIds.has(d.id)} active={sel?.id === d.id} onOpen={openDisease} onFav={handleToggleFavorite}
-                  hitLabel={hit && activeEntity ? `${sectionTitle(d.kind, hit.section as DiseaseSectionId) || 'Karakteristik özellik'}|${activeEntity.entity.name}${hit.qualifier ? ` (${hit.qualifier})` : ''}` : lessonLabel} />
-              );
-            })}
+            {filteredDiseases.slice(0, limit).map((d) => (
+              <DiseaseRow key={d.id} d={d} isFav={favoriteIds.has(d.id)} active={sel?.id === d.id} onOpen={openDisease} onFav={handleToggleFavorite}
+                hitLabel={hitLabelOf(d)} />
+            ))}
           </ul>
           {filteredDiseases.length > limit && <div ref={setSentinel} className="hx-more-sentinel" aria-hidden><span className="ui-skel" /></div>}
         </>
       )}
     </div>
   );
+
+  const editSheet = (
+    <Sheet
+      open={showAddEditModal}
+      onClose={() => setShowAddEditModal(false)}
+      title={editingDisease ? 'Profili düzenle' : 'Yeni profil'}
+      subtitle='Her satır bir madde olarak kaydedilir. "Etiket: açıklama" yazarsan etiket kalın görünür; ==terim== vurgulanır.'
+      width={680}
+    >
+      <form onSubmit={handleSaveForm} className="dz-form">
+        <div className="dz-form-2">
+          {field('Ad', formName, setFormName, { required: true, ph: 'Örn. Akut apandisit' })}
+          {field('Latince / İngilizce adı', formLatinName, setFormLatinName, { ph: 'Örn. Acute appendicitis' })}
+          {field('ICD-10 kodu', formIcdCode, setFormIcdCode, { ph: 'Örn. K35' })}
+          <label className="dz-field">
+            <span>Tür</span>
+            <select value={formKind} onChange={(e) => setFormKind(e.target.value as DiseaseKind)}>
+              {(Object.keys(KIND_LABEL) as DiseaseKind[]).map((k) => <option key={k} value={k}>{KIND_LABEL[k]}</option>)}
+            </select>
+          </label>
+          <label className="dz-field">
+            <span>Uzmanlık</span>
+            <select value={formCategory} onChange={(e) => setFormCategory(e.target.value)}>
+              {[...DISEASE_CATEGORIES, ...(DISEASE_CATEGORIES as readonly string[]).includes(formCategory) ? [] : [formCategory]].map((c) => <option key={c} value={c}>{c}</option>)}
+            </select>
+          </label>
+        </div>
+        {FORM_KEYS.map((k) => {
+          const title = k === 'hallmarks' ? 'Karakteristik özellik' : sectionTitle(formKind, k);
+          if (!title) return null;
+          return field(title, formSecs[k] || '', (v) => setFormSec(k, v), {
+            area: true,
+            rows: k === 'hallmarks' ? 2 : 3,
+            hint: k === 'hallmarks' ? 'Tek bakışta tanıtan bulgu (ör. Çilek serviks)' : undefined,
+          });
+        })}
+        <div className="dz-form-f">
+          <button type="button" className="ui-btn is-ghost" onClick={() => setShowAddEditModal(false)}>Vazgeç</button>
+          <button type="submit" className="ui-btn is-primary">{editingDisease ? 'Kaydet' : 'Ekle'}</button>
+        </div>
+      </form>
+    </Sheet>
+  );
+
+  if (v12) {
+    return (
+      <>
+        <DiseasesV12
+          dataReady={dataReady}
+          total={diseases.length}
+          filtered={filteredDiseases}
+          limit={limit}
+          setLimit={setLimit}
+          setSentinel={setSentinel}
+          alphabetical={!searchQuery.trim() && !lessonOn}
+          searchQuery={searchQuery}
+          onSearchQuery={setSearchQuery}
+          filters={(
+            <>
+              {kinds.length > 1 && (
+                <FilterPills<DiseaseKind | 'all'>
+                  label="Kayıt türü"
+                  value={selectedKind}
+                  onChange={setSelectedKind}
+                  options={[{ id: 'all' as const, label: 'Tümü', count: diseases.length }, ...kinds.map((k) => ({ id: k, label: KIND_LABEL[k], count: counts.kind.get(k) || 0 }))]}
+                />
+              )}
+              <FilterPills
+                label="Uzmanlık / sistem"
+                value={selectedCategory}
+                onChange={setSelectedCategory}
+                options={categories.map((c) => ({ id: c, label: c === 'all' ? 'Tümü' : c, count: catCount(c) }))}
+              />
+              <FilterPills
+                label="Göster"
+                value={onlyFavorites ? 'fav' : 'all'}
+                onChange={(v) => setOnlyFavorites(v === 'fav')}
+                options={[{ id: 'all', label: 'Tüm profiller' }, { id: 'fav', label: 'Kaydedilenler', count: favoriteIds.size }]}
+              />
+            </>
+          )}
+          filterCount={(selectedKind !== 'all' ? 1 : 0) + (selectedCategory !== 'all' ? 1 : 0) + (onlyFavorites ? 1 : 0)}
+          chips={[
+            ...(selectedKind !== 'all' ? [{ id: 'kind', label: KIND_LABEL[selectedKind], onRemove: () => setSelectedKind('all') }] : []),
+            ...chips,
+          ]}
+          onClearChips={() => { setSelectedKind('all'); setSelectedCategory('all'); setOnlyFavorites(false); setEntityFilter(null); }}
+          filtersOn={filtersOn}
+          onClearFilters={clearFilters}
+          quick={lessonQuick}
+          notices={(lessonOn && lessonData) || entitySuggestions.length > 0 ? (
+            <div className="g12-notices">
+              {lessonOn && lessonData && (
+                <p className="g12-notice" role="status">
+                  <GraduationCap aria-hidden />
+                  <span>
+                    {lessonSel.t != null
+                      ? <>Bu konunun ders özeti, kazanımları ya da çıkmış sorularında adı geçen profiller; en çok geçen üstte.</>
+                      : <>Seçili {lessonSel.d != null ? 'dersin' : 'kurulun'} konularında adı geçen profiller; satırda en çok geçtiği konu yazar.</>}
+                    {' '}<button type="button" onClick={() => setLessonSel({})}>Kaldır</button>
+                  </span>
+                </p>
+              )}
+              {entitySuggestions.length > 0 && (
+                <div className="g12-notice" role="status">
+                  <Tags aria-hidden />
+                  <span>Sınıflandır:</span>
+                  {entitySuggestions.map((sg) => (
+                    <button key={sg.key} type="button" className="g12-pill" onClick={() => applyEntity(sg.key)}>
+                      <span>{sg.label}</span><b className="g12-num">{sg.n}</b>
+                    </button>
+                  ))}
+                </div>
+              )}
+            </div>
+          ) : undefined}
+          onAdd={handleOpenAdd}
+          hitLabelOf={hitLabelOf}
+          sel={sel}
+          split={split}
+          favoriteIds={favoriteIds}
+          onOpen={openDisease}
+          onFav={handleToggleFavorite}
+          onClose={closeDisease}
+          insights={insights}
+          insightsLoading={insightsLoading}
+          entities={selEntities}
+          canEdit={canEdit}
+          onShare={handleShare}
+          onCopy={() => sel && handleCopySummary(sel)}
+          onEdit={() => sel && handleOpenEdit(sel)}
+          onDelete={sel?.isCustom ? () => handleDelete(sel.id) : undefined}
+          onOpenDisease={openById}
+          canOpen={(id) => Boolean(findById(id))}
+          onEntity={applyEntity}
+          onSearch={goSearch}
+          onReport={onOpenReportModal && sel ? () => onOpenReportModal({ type: 'disease', id: sel.id, title: sel.name }) : undefined}
+          lessons={selLessons}
+          onLesson={applyLesson}
+        />
+        {editSheet}
+      </>
+    );
+  }
 
   return (
     <div className={`hx-page ${split ? 'is-split' : ''}`} ref={rootRef}>
@@ -805,46 +955,7 @@ export const DiseasesView: React.FC<DiseasesViewProps> = ({
         />
       ) : list}
 
-      <Sheet
-        open={showAddEditModal}
-        onClose={() => setShowAddEditModal(false)}
-        title={editingDisease ? 'Profili düzenle' : 'Yeni profil'}
-        subtitle='Her satır bir madde olarak kaydedilir. "Etiket: açıklama" yazarsan etiket kalın görünür; ==terim== vurgulanır.'
-        width={680}
-      >
-        <form onSubmit={handleSaveForm} className="dz-form">
-          <div className="dz-form-2">
-            {field('Ad', formName, setFormName, { required: true, ph: 'Örn. Akut apandisit' })}
-            {field('Latince / İngilizce adı', formLatinName, setFormLatinName, { ph: 'Örn. Acute appendicitis' })}
-            {field('ICD-10 kodu', formIcdCode, setFormIcdCode, { ph: 'Örn. K35' })}
-            <label className="dz-field">
-              <span>Tür</span>
-              <select value={formKind} onChange={(e) => setFormKind(e.target.value as DiseaseKind)}>
-                {(Object.keys(KIND_LABEL) as DiseaseKind[]).map((k) => <option key={k} value={k}>{KIND_LABEL[k]}</option>)}
-              </select>
-            </label>
-            <label className="dz-field">
-              <span>Uzmanlık</span>
-              <select value={formCategory} onChange={(e) => setFormCategory(e.target.value)}>
-                {[...DISEASE_CATEGORIES, ...(DISEASE_CATEGORIES as readonly string[]).includes(formCategory) ? [] : [formCategory]].map((c) => <option key={c} value={c}>{c}</option>)}
-              </select>
-            </label>
-          </div>
-          {FORM_KEYS.map((k) => {
-            const title = k === 'hallmarks' ? 'Karakteristik özellik' : sectionTitle(formKind, k);
-            if (!title) return null;
-            return field(title, formSecs[k] || '', (v) => setFormSec(k, v), {
-              area: true,
-              rows: k === 'hallmarks' ? 2 : 3,
-              hint: k === 'hallmarks' ? 'Tek bakışta tanıtan bulgu (ör. Çilek serviks)' : undefined,
-            });
-          })}
-          <div className="dz-form-f">
-            <button type="button" className="ui-btn is-ghost" onClick={() => setShowAddEditModal(false)}>Vazgeç</button>
-            <button type="submit" className="ui-btn is-primary">{editingDisease ? 'Kaydet' : 'Ekle'}</button>
-          </div>
-        </form>
-      </Sheet>
+      {editSheet}
     </div>
   );
 };

@@ -14,6 +14,7 @@ import { Sheet } from '../ui/Sheet';
 import { MORE_TREE, NAV_ITEMS, TAB_ITEMS } from './navModel';
 import { userNotificationService } from '../../services/userNotificationService';
 import { NotificationHistoryModal } from '../notifications/NotificationHistoryModal';
+import { TabBarV12 } from '../v12/ShellV12';
 
 const MODE_ICONS: Record<ThemeMode, React.ElementType> = { light: Sun, sepia: SunMedium, dark: Moon };
 
@@ -23,13 +24,19 @@ const MODE_ICONS: Record<ThemeMode, React.ElementType> = { light: Sun, sepia: Su
  * Dokunuşta kısa titreşim, basılı tutunca sayfanın kodu önden yüklenir. Klavye açıkken gizlenir (html.kb-open).
  * "Daha" ortak Sheet'te: gruplu liste, hızlı tema, araçlar.
  */
-export const TabBar: React.FC<{
+export type TabBarProps = {
   active: AppRoute;
   onGo: (r: AppRoute) => void;
   isAdmin: boolean;
   onPdf: () => void;
   onOffline?: () => void;
-}> = ({ active, onGo, isAdmin, onPdf, onOffline }) => {
+};
+
+/** v12 "Net" tasarımında kenara oturan düz alt çubuk (components/v12/ShellV12); v10/v11 aşağıdaki ada. */
+export const TabBar: React.FC<TabBarProps> = (props) =>
+  useAppearance().design === 'v12' ? <TabBarV12 {...props} /> : <TabBarClassic {...props} />;
+
+const TabBarClassic: React.FC<TabBarProps> = ({ active, onGo, isAdmin, onPdf, onOffline }) => {
   const [more, setMore] = useState(false);
   const [unreadNotifs, setUnreadNotifs] = useState(0);
   const [showNotifModal, setShowNotifModal] = useState(false);
@@ -57,7 +64,7 @@ export const TabBar: React.FC<{
     onGo(r);
   };
   const [addTab, learnTab, poolTab, pastTab] = TAB_ITEMS;
-  const tabLink = ({ id, short, label, icon: Icon, tint }: (typeof TAB_ITEMS)[number]) => {
+  const tabLink = ({ id, short, label, icon: Icon }: (typeof TAB_ITEMS)[number]) => {
     const on = active === id;
     return (
       <a
@@ -67,7 +74,6 @@ export const TabBar: React.FC<{
         onPointerDown={() => prefetchRoute(id)}
         aria-current={on ? 'page' : undefined}
         className="sh-tab"
-        style={{ ['--tab-c' as string]: tint }}
       >
         <span className="sh-tab-pill"><Icon strokeWidth={on ? 2.3 : 1.9} /></span>
         <span className="sh-tab-l">{short || label}</span>
@@ -99,7 +105,6 @@ export const TabBar: React.FC<{
             aria-haspopup="dialog"
             aria-expanded={more}
             aria-current={inMore ? 'page' : undefined}
-            style={{ ['--tab-c' as string]: 'var(--color-ink-2)' }}
           >
             <span className="sh-tab-pill"><LayoutGrid strokeWidth={inMore ? 2.3 : 1.9} />{(unreadNotifs > 0 || queued > 0) && <i className="sh-tab-dot" aria-hidden />}</span>
             <span className="sh-tab-l">Daha</span>
@@ -113,7 +118,7 @@ export const TabBar: React.FC<{
             <section key={g.label} className="ui-section">
               <div className="ui-section-h"><h2>{g.label}</h2></div>
               <div className="ui-group">
-                {g.items.map(({ id, label, hint, icon: Icon, tint }) => (
+                {g.items.map(({ id, label, hint, icon: Icon }) => (
                   <a
                     key={id}
                     href={pathFor(id)}
@@ -121,7 +126,7 @@ export const TabBar: React.FC<{
                     aria-current={active === id ? 'page' : undefined}
                     className="ui-row has-icon sh-more-row"
                   >
-                    <span className="ui-ico" style={{ '--ico-bg': tint, '--ico-fg': '#fff' } as React.CSSProperties}><Icon strokeWidth={2.1} /></span>
+                    <span className="ui-ico" style={{ '--ico-bg': 'var(--color-accent-soft)', '--ico-fg': 'var(--color-accent)' } as React.CSSProperties}><Icon strokeWidth={2.1} /></span>
                     <span className="ui-row-main"><b>{label}</b><span>{hint}</span></span>
                     <ChevronRight className="w-4 h-4 shrink-0" style={{ color: 'var(--color-line-2)' }} />
                   </a>
@@ -153,7 +158,7 @@ export const TabBar: React.FC<{
                   setShowNotifModal(true);
                 }}
               >
-                <span className="ui-ico" style={{ '--ico-bg': '#FF9500', '--ico-fg': '#fff' } as React.CSSProperties}>
+                <span className="ui-ico" style={{ '--ico-bg': 'var(--color-accent-soft)', '--ico-fg': 'var(--color-accent)' } as React.CSSProperties}>
                   <Bell strokeWidth={2.1} />
                 </span>
                 <span className="ui-row-main">
@@ -174,7 +179,7 @@ export const TabBar: React.FC<{
                   window.dispatchEvent(new Event('medsoru:pending'));
                 }}
               >
-                <span className="ui-ico" style={{ '--ico-bg': queued ? 'var(--color-warn)' : '#34C759', '--ico-fg': '#fff' } as React.CSSProperties}>
+                <span className="ui-ico" style={{ '--ico-bg': queued ? 'var(--color-warn-soft)' : 'var(--color-ok-soft)', '--ico-fg': queued ? 'var(--color-warn)' : 'var(--color-ok)' } as React.CSSProperties}>
                   <CloudUpload strokeWidth={2.1} />
                 </span>
                 <span className="ui-row-main">
@@ -184,23 +189,23 @@ export const TabBar: React.FC<{
                 {queued > 0 ? <span className="ui-tag is-warn">{queued}</span> : <ChevronRight className="w-4 h-4 shrink-0" style={{ color: 'var(--color-line-2)' }} />}
               </button>
               <a href={pathFor('settings')} onClick={linkClick(() => go('settings'))} className="ui-row has-icon sh-more-row" aria-current={active === 'settings' ? 'page' : undefined}>
-                <span className="ui-ico" style={{ '--ico-bg': NAV_ITEMS.settings.tint, '--ico-fg': '#fff' } as React.CSSProperties}><NAV_ITEMS.settings.icon strokeWidth={2.1} /></span>
+                <span className="ui-ico" style={{ '--ico-bg': 'var(--color-accent-soft)', '--ico-fg': 'var(--color-accent)' } as React.CSSProperties}><NAV_ITEMS.settings.icon strokeWidth={2.1} /></span>
                 <span className="ui-row-main"><b>Profil ve ayarlar</b><span>Palet, yoğunluk, fotoğraf</span></span>
                 <ChevronRight className="w-4 h-4 shrink-0" style={{ color: 'var(--color-line-2)' }} />
               </a>
               {onOffline && (
                 <button type="button" className="ui-row has-icon" onClick={() => { setMore(false); onOffline(); }}>
-                  <span className="ui-ico" style={{ '--ico-bg': '#30B0C7', '--ico-fg': '#fff' } as React.CSSProperties}><Database strokeWidth={2.1} /></span>
+                  <span className="ui-ico" style={{ '--ico-bg': 'var(--color-accent-soft)', '--ico-fg': 'var(--color-accent)' } as React.CSSProperties}><Database strokeWidth={2.1} /></span>
                   <span className="ui-row-main"><b>Çevrimdışı veritabanı</b><span>Soruları cihaza indir</span></span>
                 </button>
               )}
               <button type="button" className="ui-row has-icon" onClick={() => { setMore(false); onPdf(); }}>
-                <span className="ui-ico" style={{ '--ico-bg': '#5856D6', '--ico-fg': '#fff' } as React.CSSProperties}><FileDown strokeWidth={2.1} /></span>
+                <span className="ui-ico" style={{ '--ico-bg': 'var(--color-accent-soft)', '--ico-fg': 'var(--color-accent)' } as React.CSSProperties}><FileDown strokeWidth={2.1} /></span>
                 <span className="ui-row-main"><b>PDF indir</b><span>Kurul soruları A4 kitapçık</span></span>
               </button>
               {isAdmin && (
                 <a href={pathFor('manage')} onClick={linkClick(() => go('manage'))} className="ui-row has-icon sh-more-row">
-                  <span className="ui-ico" style={{ '--ico-bg': '#FF9500', '--ico-fg': '#fff' } as React.CSSProperties}><ShieldCheck strokeWidth={2.1} /></span>
+                  <span className="ui-ico" style={{ '--ico-bg': 'var(--color-accent-soft)', '--ico-fg': 'var(--color-accent)' } as React.CSSProperties}><ShieldCheck strokeWidth={2.1} /></span>
                   <span className="ui-row-main"><b>Yönetim konsolu</b></span>
                   <ChevronRight className="w-4 h-4 shrink-0" style={{ color: 'var(--color-line-2)' }} />
                 </a>

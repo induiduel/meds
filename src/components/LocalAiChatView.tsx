@@ -19,6 +19,7 @@ import {
 } from 'lucide-react';
 import { ApiService } from '../services/api';
 import { PageHeader } from './ui/PageHeader';
+import '../styles/v12/secondary.css';
 import { AppUser } from '../services/auth';
 import { useQualityAuditStatusQuery, useAiErrorLogsQuery } from '../hooks/useMedicalQueries';
 
@@ -277,7 +278,7 @@ export const LocalAiChatView: React.FC<LocalAiChatViewProps> = ({
               const headers = rows[0].split('|').map(c => c.trim()).filter((_, idx, arr) => idx > 0 && idx < arr.length - 1);
               const dataRows = rows.slice(2).map(r => r.split('|').map(c => c.trim()).filter((_, idx, arr) => idx > 0 && idx < arr.length - 1));
               return (
-                <div key={pIdx} className="overflow-x-auto my-2 rounded-xl border border-line">
+                <div key={pIdx} className="o12-tbox overflow-x-auto my-2 rounded-xl border border-line">
                   <table className="w-full text-left text-sm">
                     <thead className="bg-canvas border-b border-line text-ink-2 font-semibold">
                       <tr>
@@ -346,7 +347,7 @@ export const LocalAiChatView: React.FC<LocalAiChatViewProps> = ({
           // Callout / Blockquote
           if (trimmed.startsWith('>')) {
             return (
-              <div key={pIdx} className="border-l-3 border-accent bg-accent-soft/40 px-3 py-2 rounded-r-lg text-ink text-sm my-1">
+              <div key={pIdx} className="o12-callout border-l-3 border-accent bg-accent-soft/40 px-3 py-2 rounded-r-lg text-ink text-sm my-1">
                 <span dangerouslySetInnerHTML={{
                   __html: trimmed
                     .replace(/^>\s*/g, '')
@@ -374,7 +375,7 @@ export const LocalAiChatView: React.FC<LocalAiChatViewProps> = ({
   };
 
   return (
-    <div ref={shellRef} className="ms-chat-shell flex flex-col gap-3 min-w-0 w-full">
+    <div ref={shellRef} className="ms-chat-shell flex flex-col gap-3 min-w-0 w-full o12-page o12-ai">
       <PageHeader
         title="Asistan"
         description="Aklında kalanı anlat; soruyu bulur, açıklar ya da yeni soru türetir."
@@ -391,9 +392,10 @@ export const LocalAiChatView: React.FC<LocalAiChatViewProps> = ({
       <div className="flex flex-wrap items-center justify-between gap-3">
         {isAdmin && <div className="flex flex-wrap items-center gap-2">
           {/* Provider Selection */}
-          <div className="flex items-center gap-1 bg-canvas p-1 rounded-xl">
+          <div className="flex items-center gap-1 bg-canvas p-1 rounded-xl o12-seg">
             <button
               type="button"
+              aria-pressed={providerMode === 'ollama'}
               onClick={() => { setProviderMode('ollama'); setSelectedModel('gemma3:4b'); }}
               className={`h-8 px-2.5 rounded-lg text-sm font-semibold flex items-center gap-1.5 transition-colors cursor-pointer ${
                 providerMode === 'ollama' ? 'bg-accent text-white shadow-xs' : 'text-ink-2 hover:text-ink'
@@ -405,6 +407,7 @@ export const LocalAiChatView: React.FC<LocalAiChatViewProps> = ({
 
             <button
               type="button"
+              aria-pressed={providerMode !== 'ollama'}
               onClick={() => { setProviderMode('auto'); setSelectedModel('gemini-3.8-flash'); }}
               className={`h-8 px-2.5 rounded-lg text-sm font-semibold flex items-center gap-1.5 transition-colors cursor-pointer ${
                 providerMode !== 'ollama' ? 'bg-accent text-white shadow-xs' : 'text-ink-2 hover:text-ink'
@@ -450,7 +453,7 @@ export const LocalAiChatView: React.FC<LocalAiChatViewProps> = ({
         </div>}
 
         {/* Mode Selector */}
-        <div className="flex items-center gap-1 overflow-x-auto no-scrollbar min-w-0">
+        <div className="flex items-center gap-1 overflow-x-auto no-scrollbar min-w-0 o12-seg o12-ai-modes">
           {(
             [
               ['general', 'Tıbbi Sohbet', Lightbulb],
@@ -462,6 +465,7 @@ export const LocalAiChatView: React.FC<LocalAiChatViewProps> = ({
             <button
               key={mId}
               type="button"
+              aria-pressed={interactionMode === mId}
               onClick={() => setInteractionMode(mId)}
               className={`h-9 px-3.5 rounded-full text-base font-medium flex items-center gap-1.5 transition-colors cursor-pointer shrink-0 ${
                 interactionMode === mId
@@ -479,7 +483,7 @@ export const LocalAiChatView: React.FC<LocalAiChatViewProps> = ({
             <button
               type="button"
               onClick={handleClearHistory}
-              className="h-8 px-3 rounded-full text-ink-3 hover:text-ink hover:bg-field text-sm font-medium flex items-center gap-1.5 transition-colors cursor-pointer shrink-0"
+              className="o12-btn is-ghost is-sm h-8 px-3 rounded-full text-ink-3 hover:text-ink hover:bg-field text-sm font-medium flex items-center gap-1.5 transition-colors cursor-pointer shrink-0"
               title="Sohbet geçmişini sıfırla"
             >
               <Trash2 className="w-3.5 h-3.5" />
@@ -494,7 +498,7 @@ export const LocalAiChatView: React.FC<LocalAiChatViewProps> = ({
         <button
           type="button"
           onClick={() => handleQuickPrompt('50 yaşında erkek hasta, hiperkalsemi ve lityum kullanımı öyküsü var. Bu hangi kurul sorusudur ve doğru cevabı nedir?', 'find_question')}
-          className="text-xs bg-white border border-line-2 hover:border-accent hover:text-accent rounded-full px-3 py-1.5 text-ink-2 flex items-center shrink-0 whitespace-nowrap gap-1.5 cursor-pointer transition-colors"
+          className="o12-pill text-xs bg-white border border-line-2 hover:border-accent hover:text-accent rounded-full px-3 py-1.5 text-ink-2 flex items-center shrink-0 whitespace-nowrap gap-1.5 cursor-pointer transition-colors"
         >
           <Search className="w-3 h-3 text-accent" />
           <span>"50 yaş hiperkalsemi lityum sorusunu bul"</span>
@@ -503,7 +507,7 @@ export const LocalAiChatView: React.FC<LocalAiChatViewProps> = ({
         <button
           type="button"
           onClick={() => handleQuickPrompt('Mycobacterium tuberculosis, Ziehl-Neelsen, kazeöz nekroz anahtar kelimelerinden olası Dönem 3 kurul soruları üret.', 'generate_from_keywords')}
-          className="text-xs bg-white border border-line-2 hover:border-accent hover:text-accent rounded-full px-3 py-1.5 text-ink-2 flex items-center shrink-0 whitespace-nowrap gap-1.5 cursor-pointer transition-colors"
+          className="o12-pill text-xs bg-white border border-line-2 hover:border-accent hover:text-accent rounded-full px-3 py-1.5 text-ink-2 flex items-center shrink-0 whitespace-nowrap gap-1.5 cursor-pointer transition-colors"
         >
           <Sparkles className="w-3 h-3 text-warn" />
           <span>"Tüberküloz & kazeöz nekrozdan kurul sorusu türet"</span>
@@ -512,7 +516,7 @@ export const LocalAiChatView: React.FC<LocalAiChatViewProps> = ({
         <button
           type="button"
           onClick={() => handleQuickPrompt('Kardiyojenik şok ile hipovolemik şok arasındaki Swan-Ganz kateter hemodinami farklarını açıkla.', 'explain')}
-          className="text-xs bg-white border border-line-2 hover:border-accent hover:text-accent rounded-full px-3 py-1.5 text-ink-2 flex items-center shrink-0 whitespace-nowrap gap-1.5 cursor-pointer transition-colors"
+          className="o12-pill text-xs bg-white border border-line-2 hover:border-accent hover:text-accent rounded-full px-3 py-1.5 text-ink-2 flex items-center shrink-0 whitespace-nowrap gap-1.5 cursor-pointer transition-colors"
         >
           <BookOpen className="w-3 h-3 text-ok" />
           <span>"Kardiyojenik vs hipovolemik şok farkı"</span>
@@ -527,7 +531,7 @@ export const LocalAiChatView: React.FC<LocalAiChatViewProps> = ({
           return (
             <div key={m.id} className={`ms-pop-in flex flex-col gap-1 min-w-0 ${isUser ? 'self-end items-end max-w-[85%]' : 'self-stretch items-start'}`}>
               {isUser ? (
-                <div className="px-4 py-2.5 rounded-2xl rounded-br-md bg-accent-soft text-ink text-md leading-relaxed whitespace-pre-wrap [overflow-wrap:anywhere]">
+                <div className="o12-ai-user px-4 py-2.5 rounded-2xl rounded-br-md bg-accent-soft text-ink text-md leading-relaxed whitespace-pre-wrap [overflow-wrap:anywhere]">
                   {m.content}
                 </div>
               ) : (
@@ -543,7 +547,7 @@ export const LocalAiChatView: React.FC<LocalAiChatViewProps> = ({
                           type="button"
                           onClick={() => onNavigateToQuestion?.(mq.id)}
                           disabled={!onNavigateToQuestion}
-                          className="group text-left rounded-xl border border-line bg-white px-3.5 py-2.5 flex flex-col gap-0.5 min-w-0 cursor-pointer hover:border-line-2 transition-colors"
+                          className="o12-ai-match group text-left rounded-xl border border-line bg-white px-3.5 py-2.5 flex flex-col gap-0.5 min-w-0 cursor-pointer hover:border-line-2 transition-colors"
                         >
                           <span className="flex items-center gap-2 text-xs text-ink-3 min-w-0">
                             <span className="truncate">{[mq.discipline, mq.topic].filter(Boolean).join(' · ')}</span>
@@ -583,7 +587,7 @@ export const LocalAiChatView: React.FC<LocalAiChatViewProps> = ({
         }}
         className="shrink-0"
       >
-        <div className="flex items-center gap-2 h-14 pl-5 pr-2 rounded-full bg-white border border-line shadow-md focus-within:border-accent transition-colors">
+        <div className="o12-composer flex items-center gap-2 h-14 pl-5 pr-2 rounded-full bg-white border border-line shadow-md focus-within:border-accent transition-colors">
           <input
             type="text"
             value={inputText}

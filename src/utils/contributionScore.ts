@@ -51,15 +51,23 @@ export function computeContributorStats(
     );
   };
 
+  // Hangi satır kimlikle (uid), hangisi yalnız adla açıldı — sondaki birleştirme için
+  const uidKeys = new Set<string>();
+  const nameOnlyKeys = new Set<string>();
+  const looksLikeUid = (k: string) => /^[A-Za-z0-9_-]{20,}$/.test(k) && !/\s/.test(k);
+
   // Helper to get or create stats entry
   const getEntry = (key: string, name: string, studentNumber?: string): ContributorStats | null => {
     if (isBotOrSystem(name, key)) return null;
-    const cleanKey = key.trim().toLowerCase();
+    const rawKey = key.trim().toLowerCase();
+    const isCurrent = !!(
+      (currentUser?.uid && key === currentUser.uid) ||
+      (currentUser?.displayName && rawKey === currentUser.displayName.trim().toLowerCase())
+    );
+    // Oturumdaki kişinin uid'le ve yalnız adla yazılmış katkıları tek satırda toplanır (çift "Sen" satırı olmasın)
+    const cleanKey = isCurrent ? (currentUser!.uid || currentUser!.displayName || rawKey).trim().toLowerCase() : rawKey;
+    if (isCurrent || looksLikeUid(key)) uidKeys.add(cleanKey); else nameOnlyKeys.add(cleanKey);
     if (!statsMap[cleanKey]) {
-      const isCurrent = !!(
-        (currentUser?.uid && key === currentUser.uid) ||
-        (currentUser?.displayName && cleanKey === currentUser.displayName.toLowerCase())
-      );
 
       statsMap[cleanKey] = {
         id: cleanKey,
@@ -177,6 +185,21 @@ export function computeContributorStats(
       };
     }
   });
+
+  // Yalnız adla (uid'siz) yazılmış katkılar, aynı rumuzu taşıyan TEK kimlikli kişiye bağlanır (aynı kişi iki satır olmasın).
+  // Aynı adı taşıyan birden çok kimlik varsa kimin olduğu bilinemez; satır ayrı kalır.
+  for (const nameKey of nameOnlyKeys) {
+    const e = statsMap[nameKey];
+    if (!e || uidKeys.has(nameKey)) continue;
+    const owners = Object.values(statsMap).filter((o) => o !== e && uidKeys.has(o.id) && o.name.toLocaleLowerCase('tr-TR') === e.name.toLocaleLowerCase('tr-TR'));
+    if (owners.length !== 1) continue;
+    const o = owners[0];
+    o.questionsCount += e.questionsCount; o.optionsCount += e.optionsCount; o.upvotesCount += e.upvotesCount;
+    o.revisionsCount += e.revisionsCount; o.totalPoints += e.totalPoints;
+    o.isCurrentUser = o.isCurrentUser || e.isCurrentUser;
+    o.studentNumber = o.studentNumber || e.studentNumber;
+    delete statsMap[nameKey];
+  }
 
   // Sort descending by totalPoints
   const sorted = Object.values(statsMap).sort((a, b) => {

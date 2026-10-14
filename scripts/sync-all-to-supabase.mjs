@@ -382,7 +382,7 @@ async function main() {
   await syncLectureNotes();
   await syncPracticeQuestions();
   console.log('\n🎉 [TAMAMLANDI] Supabase artık tüm kurullar, aktif sorular, çıkmış sorular, ders notları ve örnek sorular ile hazır!');
-  console.log('Firebase Spark devre dışı kaldığında MedSoru otomatik olarak Supabase üzerinden çalışmaya devam edecektir.');
+  console.log('Firebase Spark devre dışı kaldığında MeDSor otomatik olarak Supabase üzerinden çalışmaya devam edecektir.');
 }
 
 main().catch(err => {

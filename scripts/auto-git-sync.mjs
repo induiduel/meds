@@ -142,7 +142,7 @@ function syncGitChanges() {
 
 // Ana çalışma döngüsü
 console.log(`=========================================================`);
-console.log(`🩺 MedSoru - Otomatik Git Senkronizasyon Servisi`);
+console.log(`🩺 MeDSor - Otomatik Git Senkronizasyon Servisi`);
 console.log(`📂 İzlenen Dizin: ${projectRoot}`);
 console.log(`⚙️  Git Binary   : ${GIT_EXE}`);
 console.log(`⏰ Kontrol Süresi: Her ${intervalMinutes} dakikada bir`);

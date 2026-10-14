@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-MedSoru Gelişmiş Tıp Notu & Öğrenme Paketi Oluşturucu (Dinamik Uzunluk, Tablolu, Akıcı & Sıfır GPU)
+MeDSor Gelişmiş Tıp Notu & Öğrenme Paketi Oluşturucu (Dinamik Uzunluk, Tablolu, Akıcı & Sıfır GPU)
 
 PROJE_TANITIMI.md süreciyle tam uyumlu:
 1. Slayt uzunluğu ve sayfa sayısı ile orantılı dinamik özet ve not derinliği:

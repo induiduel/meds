@@ -1,5 +1,5 @@
 /**
- * MedSoru Arkaplan Yapay Zeka Redaksiyon & İyileştirme Motoru (scripts/background-ai-redactor.mjs)
+ * MeDSor Arkaplan Yapay Zeka Redaksiyon & İyileştirme Motoru (scripts/background-ai-redactor.mjs)
  * 
  * Bu subagent/daemon script:
  * 1. meds_sorular_txt klasöründeki tüm sınav dosyalarını en ince ayrıntısına kadar ayrıştırır (soru ve şıkları asla kaçırmaz).

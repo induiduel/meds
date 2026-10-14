@@ -13,6 +13,7 @@ import { Sheet } from '../../ui/Sheet';
 import { toast } from '../../ui/Toast';
 import type { LessonStep } from './lessonModel';
 import { whoAmI } from './lessonFeedback';
+import { useAppearance } from '../../../utils/appearance';
 import {
   createNote, createThread, deleteMessage, deleteNote, findQuoteRange, flattenForSearch, loadThread, MESSAGE_MAX, NOTE_KINDS, NOTE_MAX,
   NoteKind, onSocialMessage, sendMessage, setThreadStatus, SocialMessage, SocialNote, SocialThread, useLearnSocial,
@@ -302,6 +303,8 @@ const NoteComposer: React.FC<{ req: ComposerReq; onDone: () => void }> = ({ req,
   const [kind, setKind] = useState<NoteKind>('spot');
   const [body, setBody] = useState('');
   const [anchor, setAnchor] = useState(req.anchor);
+  // v12 (canvas sn-compose): tür seçici cümle düzeninde segment (Spot · Önemli · Vurgu), renk noktası CSS'ten
+  const v12 = useAppearance().design === 'v12';
   const [busy, setBusy] = useState(false);
   const formRef = useRef<HTMLFormElement>(null);
   const taRef = useRef<HTMLTextAreaElement>(null);
@@ -335,7 +338,7 @@ const NoteComposer: React.FC<{ req: ComposerReq; onDone: () => void }> = ({ req,
       <div className="ls-sx-kinds" role="radiogroup" aria-label="Not türü">
         {NOTE_KINDS.map((k) => (
           <button key={k.id} type="button" role="radio" aria-checked={kind === k.id} className={`ls-sx-badge is-${k.id} ${kind === k.id ? 'is-on' : ''}`} onClick={() => setKind(k.id)} title={k.hint}>
-            {k.label}
+            {v12 ? k.label.charAt(0) + k.label.slice(1).toLocaleLowerCase('tr-TR') : k.label}
           </button>
         ))}
       </div>

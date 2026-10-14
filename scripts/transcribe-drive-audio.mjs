@@ -3,7 +3,7 @@
 /**
  * scripts/transcribe-drive-audio.mjs
  * 
- * MedSoru Tıbbi Amfi Ses Kayıtları Transkripsiyon, Ders Eşleştirme ve İzleme Motoru
+ * MeDSor Tıbbi Amfi Ses Kayıtları Transkripsiyon, Ders Eşleştirme ve İzleme Motoru
  * ---------------------------------------------------------------------------------
  * 1. Google Drive ('G:\Drive'ım\Tıp Genel\Ses Kayıtları Dönem 3 (26-27)') klasörünü
  *    özyinelemeli (recursive) tarar ve yeni ses kayıtlarını yerel 'meds_database/ses_kayitlari'
@@ -880,7 +880,7 @@ async function runSingleCycle(ai, catalog, questionsDb) {
 // 6. Ana Giriş Fonksiyonu
 async function main() {
   log('=================================================================');
-  log('🩺 MedSoru - Tıbbi Amfi Ses Kayıtları Tam Transkripsiyon & İzleme');
+  log('🩺 MeDSor - Tıbbi Amfi Ses Kayıtları Tam Transkripsiyon & İzleme');
   log(`⚡ Mod: ${isWatchMode ? '🛡️ Kalıcı Otomatik İzleyici (Watcher Daemon)' : '⚡ Tek Seferlik Senkronizasyon ve İşlem'}`);
   log(`🤖 Tercih Edilen Model: ${modelArg} (1M Token Çok Modlu)`);
   log('=================================================================');

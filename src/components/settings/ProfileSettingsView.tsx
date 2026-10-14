@@ -50,6 +50,7 @@ import { toast } from '../ui/Toast';
 import { NotesSyncRow } from './NotesSyncRow';
 import { UserDataSyncRow } from './UserDataSyncRow';
 import { startWelcomeTour } from '../onboarding/tourState';
+import { ProfileV12 } from '../v12/ProfileV12';
 import './settings.css';
 
 interface Props {
@@ -89,9 +90,15 @@ const initialsOf = (u: AppUser | null) => {
  * kompakt ayar listesi), Profil ve Hesap ve veri. Tablet/telefonda menü üstte yatay çip satırına döner.
  * Görünüm ayarları girişsiz de çalışır; profil bölümü girişte açılır.
  */
-export const ProfileSettingsView: React.FC<Props> = ({ currentUser, isAdmin, questions, onUpdateUser, onOpenAuth, onLogout, onOpenAdmin, onOpenOffline }) => {
+export const ProfileSettingsView: React.FC<Props> = (props) => {
+  // v12 "Net": canvas Profile + Settings panolarına göre ayrı yapı (components/v12/ProfileV12.tsx); v10/v11 aşağıda değişmeden
+  const v12 = useAppearance().design === 'v12';
+  return v12 ? <ProfileV12 {...props} /> : <ProfileSettingsClassic {...props} />;
+};
+
+const ProfileSettingsClassic: React.FC<Props> = ({ currentUser, isAdmin, questions, onUpdateUser, onOpenAuth, onLogout, onOpenAdmin, onOpenOffline }) => {
   const look = useAppearance();
-  const [active, setActive] = useState<string>(() => (look.design === 'v12' ? 'profil' : 'gorunum'));
+  const [active, setActive] = useState<string>('gorunum');
   const [autoReveal, setAutoReveal] = useState(autoRevealEnabled);
   const [preview, setPreview] = useState(false);
 
@@ -110,9 +117,7 @@ export const ProfileSettingsView: React.FC<Props> = ({ currentUser, isAdmin, que
   }, []);
 
   const modeName = MODE_LABELS[look.mode];
-  // v12: profil önce gelir (kim olduğun → nasıl göründüğü → hesap); v10/v11 eski sırayı korur
-  const profileFirst = look.design === 'v12';
-  const sections = profileFirst ? [SECTIONS[1], SECTIONS[0], SECTIONS[2]] : SECTIONS;
+  const sections = SECTIONS;
 
   return (
     <div className="ui-page is-wide">
@@ -152,7 +157,6 @@ export const ProfileSettingsView: React.FC<Props> = ({ currentUser, isAdmin, que
           <p>Görünüm ayarları bu cihazda saklanır; her temanın paleti ayrı hatırlanır.</p>
         </header>
 
-        {profileFirst && <ProfileSection currentUser={currentUser} questions={questions} onUpdateUser={onUpdateUser} onOpenAuth={onOpenAuth} />}
         <section id="gorunum" className="ayr-sec" aria-labelledby="ayr-gorunum-h">
           <h2 id="ayr-gorunum-h" className="ayr-h1">Görünüm</h2>
 
@@ -239,22 +243,9 @@ export const ProfileSettingsView: React.FC<Props> = ({ currentUser, isAdmin, que
                 <b>Tasarım</b>
                 <span>Net (v12): sade, kompakt, tek ekranda bilgi. Sade (v11) ve Klasik (v10) önceki tasarımlardır; istediğin an geçebilirsin.</span>
               </span>
-              {look.design !== 'v12' && (
-                <Segmented<DesignVersion> label="Tasarım" value={look.design} onChange={(v) => look.set({ design: v })}
-                  options={DESIGN_ORDER.map((v) => ({ value: v, label: DESIGN_LABELS[v] }))} />
-              )}
+              <Segmented<DesignVersion> label="Tasarım" value={look.design} onChange={(v) => look.set({ design: v })}
+                options={DESIGN_ORDER.map((v) => ({ value: v, label: DESIGN_LABELS[v] }))} />
             </div>
-            {look.design === 'v12' && (
-              <div className="ayr-designs" role="radiogroup" aria-label="Tasarım">
-                {DESIGN_ORDER.map((v) => (
-                  <button key={v} type="button" role="radio" aria-checked={look.design === v} className={`ayr-design is-${v} ${look.design === v ? 'is-on' : ''}`} onClick={() => look.set({ design: v })}>
-                    <span className="ayr-design-pv" aria-hidden><i /><i /><i /><i /></span>
-                    <span className="ayr-design-t"><b>{DESIGN_LABELS[v].replace(/ \(.*\)$/, '')}</b><small>{v}</small></span>
-                    <span className="ayr-design-h">{v === 'v12' ? 'Sade, kompakt, tek ekranda bilgi' : v === 'v11' ? 'Geniş boşluk, okuma odaklı' : 'Kart ızgaraları, renkli bölümler'}</span>
-                  </button>
-                ))}
-              </div>
-            )}
             <div className="ayr-row">
               <span className="ayr-row-t">
                 <b id="ayr-yog-h">Yoğunluk</b>
@@ -320,7 +311,7 @@ export const ProfileSettingsView: React.FC<Props> = ({ currentUser, isAdmin, que
           </div>
         </section>
 
-        {!profileFirst && <ProfileSection currentUser={currentUser} questions={questions} onUpdateUser={onUpdateUser} onOpenAuth={onOpenAuth} />}
+        <ProfileSection currentUser={currentUser} questions={questions} onUpdateUser={onUpdateUser} onOpenAuth={onOpenAuth} />
 
         <Section id="hesap" title="Hesap ve veri">
           <div className="ui-group">

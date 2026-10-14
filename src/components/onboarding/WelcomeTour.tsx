@@ -3,6 +3,8 @@ import { ArrowRight, Check, ChevronLeft, ChevronRight, Sparkles, X } from 'lucid
 import { ROUTE_PATHS, type AppRoute } from '../../router';
 import { NAV_ITEMS } from '../shell/navModel';
 import { markTourSeen as markSeen } from './tourState';
+import { useAppearance } from '../../utils/appearance';
+import { TourCardV12, WelcomeFullV12 } from '../v12/OnboardingV12';
 import './welcome-tour.css';
 
 /* ------------------------------------------------------------------
@@ -31,16 +33,16 @@ type Stop = {
 
 const href = (r: AppRoute) => `a[href="${ROUTE_PATHS[r]}"]`;
 
-const MORE_BTN = '.sh-tabs button[aria-haspopup="dialog"]';
+const MORE_BTN = '.sh-tabs button[aria-haspopup="dialog"], .s12-tabs button[aria-haspopup="dialog"]';
 /** "Daha" sayfasındaki satır (telefon): tur sayfayı açar, satırı vurgular */
-const moreRow = (r: AppRoute) => `.sh-more a[href="${ROUTE_PATHS[r]}"]`;
+const moreRow = (r: AppRoute) => `.sh-more a[href="${ROUTE_PATHS[r]}"], .s12-more a[href="${ROUTE_PATHS[r]}"]`;
 const setMoreSheet = (open: boolean) => window.dispatchEvent(new CustomEvent('medsoru:more', { detail: { open } }));
 
 const STOPS: Stop[] = [
   {
     route: 'search',
-    side: '.sh-side-search',
-    tab: '.sh-top-search-i, .sh-top-search',
+    side: '.sh-side-search, .s12-rail-search',
+    tab: '.sh-top-search-i, .sh-top-search, .s12-top-tools [aria-label*="Ara"]',
     eyebrow: 'Her yerden',
     title: 'Tek kutudan ara',
     text: 'Bir terim, hastalık ya da soru parçası yaz; bütün veri setleri birlikte taranır.',
@@ -48,8 +50,8 @@ const STOPS: Stop[] = [
   },
   {
     route: 'quick_add',
-    side: '.sh-side-add',
-    tab: '.sh-tab-fab',
+    side: '.sh-side-add, .s12-add',
+    tab: '.sh-tab-fab, .s12-tab-plus',
     eyebrow: 'Birlikte kur',
     title: 'Sınavdan hatırladığını ekle',
     text: 'Aklında kalan birkaç kelime yeter. Yazdıkça ders slaytları ve çıkmışlar taranır, en yakın eşleşmeler önüne gelir.',
@@ -61,7 +63,7 @@ const STOPS: Stop[] = [
   },
   {
     route: 'today',
-    side: `.sh-side ${href('today')}`,
+    side: `.sh-side ${href('today')}, .s12-rail ${href('today')}`,
     eyebrow: 'Günlük',
     title: 'Bugün',
     text: 'Her gün buradan başla: kaldığın ders, günün sınav spotu ve haftalık çalışma süren tek ekranda.',
@@ -70,8 +72,8 @@ const STOPS: Stop[] = [
   },
   {
     route: 'learn',
-    side: `.sh-side ${href('learn')}`,
-    tab: `.sh-tabs ${href('learn')}`,
+    side: `.sh-side ${href('learn')}, .s12-rail ${href('learn')}`,
+    tab: `.sh-tabs ${href('learn')}, .s12-tabs ${href('learn')}`,
     eyebrow: 'Öğren',
     title: 'İnteraktif ders desteleri',
     text: 'Her ders, amfi slaytlarından kurulmuş adım adım bir anlatımdır. Okurken küçük etkileşimlerle bilgiyi sınarsın.',
@@ -83,7 +85,7 @@ const STOPS: Stop[] = [
   },
   {
     route: 'spots',
-    side: `.sh-side ${href('spots')}`,
+    side: `.sh-side ${href('spots')}, .s12-rail ${href('spots')}`,
     eyebrow: 'Hızlı tekrar',
     title: 'Spotlar, kartlar, özetler',
     text: 'Sınava yakın dönemde kısa tekrar için üç araç:',
@@ -96,8 +98,8 @@ const STOPS: Stop[] = [
   },
   {
     route: 'past_exams',
-    side: `.sh-side ${href('past_exams')}`,
-    tab: `.sh-tabs ${href('past_exams')}`,
+    side: `.sh-side ${href('past_exams')}, .s12-rail ${href('past_exams')}`,
+    tab: `.sh-tabs ${href('past_exams')}, .s12-tabs ${href('past_exams')}`,
     eyebrow: 'Soru çöz',
     title: 'Çıkmış sorular',
     text: 'Kurullara ve derslere göre ayrılmış, cevap anahtarı doğrulanmış çıkmış sorular.',
@@ -105,7 +107,7 @@ const STOPS: Stop[] = [
   },
   {
     route: 'study',
-    side: `.sh-side ${href('study')}`,
+    side: `.sh-side ${href('study')}, .s12-rail ${href('study')}`,
     eyebrow: 'Soru çöz',
     title: 'Çalış ve test çöz',
     text: 'Kendini sınamak için: kurul seç, soru çöz, yanlışlarını tekrar et.',
@@ -118,7 +120,7 @@ const STOPS: Stop[] = [
   },
   {
     route: 'glossary',
-    side: `.sh-side ${href('glossary')}`,
+    side: `.sh-side ${href('glossary')}, .s12-rail ${href('glossary')}`,
     eyebrow: 'Başvuru',
     title: 'Sözlük, hastalıklar, kazanımlar',
     text: 'Takıldığın bir kavrama bakmak için başvuru kaynakları.',
@@ -131,8 +133,8 @@ const STOPS: Stop[] = [
   },
   {
     route: 'questions',
-    side: `.sh-side ${href('questions')}`,
-    tab: `.sh-tabs ${href('questions')}`,
+    side: `.sh-side ${href('questions')}, .s12-rail ${href('questions')}`,
+    tab: `.sh-tabs ${href('questions')}, .s12-tabs ${href('questions')}`,
     eyebrow: 'Topluluk',
     title: 'Soru havuzu',
     text: 'Son kurulda sorulan soruların herkesin katkısıyla yeniden kurulduğu yer.',
@@ -144,8 +146,8 @@ const STOPS: Stop[] = [
   },
   {
     route: 'settings',
-    side: '.sh-side-user',
-    tab: '.sh-acct-btn',
+    side: '.sh-side-user, .s12-me, .s12-rail .s12-av',
+    tab: '.sh-acct-btn, .s12-acct-anchor button',
     eyebrow: 'Senin alanın',
     title: 'Profil ve ayarlar',
     text: 'Uygulamayı kendine göre ayarla. Yaptığın her şey profiline kaydedilir; başka cihazda giriş yapınca kaldığın yerden devam edersin.',
@@ -208,6 +210,7 @@ export const WelcomeTour: React.FC<{ name?: string | null; onGo: (r: AppRoute) =
   const [viaMore, setViaMore] = useState(false);
   const [pos, setPos] = useState<{ top: number; left: number; place: 'right' | 'above' | 'below' | 'center' }>({ top: 0, left: 0, place: 'center' });
   const cardRef = useRef<HTMLDivElement>(null);
+  const v12 = useAppearance().design === 'v12';
   const stop = STOPS[i];
   const first = (name || '').trim().split(/\s+/)[0];
 
@@ -330,6 +333,23 @@ export const WelcomeTour: React.FC<{ name?: string | null; onGo: (r: AppRoute) =
     cardRef.current?.focus({ preventScroll: true });
   }, [phase, i]);
 
+  if ((phase === 'intro' || phase === 'finish') && v12) {
+    return (
+      <WelcomeFullV12
+        phase={phase}
+        cardRef={cardRef}
+        first={first}
+        stopCount={STOPS.length}
+        pillars={PILLARS}
+        starts={STARTS}
+        onStartTour={() => { setI(0); setPhase('tour'); }}
+        onSkip={() => finish('skipped')}
+        onPick={(r) => finish('done', r)}
+        onBackToTour={() => { setI(STOPS.length - 1); setPhase('tour'); }}
+      />
+    );
+  }
+
   if (phase === 'intro' || phase === 'finish') {
     const intro = phase === 'intro';
     return (
@@ -419,6 +439,24 @@ export const WelcomeTour: React.FC<{ name?: string | null; onGo: (r: AppRoute) =
           style={{ top: hole.top, left: hole.left, width: hole.width, height: hole.height }}
         />
       )}
+      {v12 ? (
+        <TourCardV12
+          cardRef={cardRef}
+          place={pos.place}
+          top={pos.top}
+          left={pos.left}
+          index={i}
+          total={STOPS.length}
+          route={stop.route}
+          title={stop.title}
+          text={stop.text}
+          points={stop.points}
+          note={viaMore ? stop.moreNote : undefined}
+          onPrev={prev}
+          onNext={next}
+          onClose={() => finish('skipped')}
+        />
+      ) : (
       <div
         ref={cardRef}
         tabIndex={-1}
@@ -458,6 +496,7 @@ export const WelcomeTour: React.FC<{ name?: string | null; onGo: (r: AppRoute) =
           </button>
         </div>
       </div>
+      )}
     </div>
   );
 };

@@ -1,5 +1,5 @@
 param(
-    [string]$Title = "MedSoru Otomasyon Servisi 🚀",
+    [string]$Title = "MeDSor Otomasyon Servisi 🚀",
     [string]$Message = "Servis aktif ve çalışıyor."
 )
 

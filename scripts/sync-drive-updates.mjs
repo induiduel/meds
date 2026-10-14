@@ -3,7 +3,7 @@
 /**
  * scripts/sync-drive-updates.mjs
  * 
- * MedSoru Google Drive Değişiklik Tespit ve Manuel Senkronizasyon Motoru
+ * MeDSor Google Drive Değişiklik Tespit ve Manuel Senkronizasyon Motoru
  * ---------------------------------------------------------------------
  * Bu script; Google Drive klasörlerinde (Ders Notları & Amfi Slaytları ve Çıkmış Sınavlar)
  * güncelleme veya yeni dosya olduğunda:
@@ -720,7 +720,7 @@ async function main() {
   } catch (_) {}
 
   sendWindowsNotification(
-    'MedSoru: Google Drive Senkronizasyonu Tamamlandı ✅',
+    'MeDSor: Google Drive Senkronizasyonu Tamamlandı ✅',
     `${newlyDownloadedCount} yeni dosya indirildi. ${newlyExtractedQuestions.length} soru ve ${newlyAddedLectureNotesCount} ders notu havuza eklendi.`
   );
 

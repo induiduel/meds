@@ -42,6 +42,10 @@ export interface Appearance {
   qtags: boolean;
   motion: MotionPref;
   design: DesignVersion;
+  /** Kullanıcı tasarımı Ayarlar'dan bilerek seçti mi (seçmediyse eski varsayılan 'v11' v12'ye taşınır) */
+  designPicked?: boolean;
+  /** v11 → v12 taşımasının zamanı (taşınan değerin profil eşitlemesiyle sunucuya gitmesi için kayıt değişir) */
+  designMigratedAt?: number;
   /** Vurgu rengi seçimi, "<tema>:<palet>" anahtarıyla (yalnız `accents` tanımlı paletler; utils/palettes.ts) */
   accents?: Record<string, string>;
 }
@@ -65,15 +69,18 @@ const KEY = 'medsoru_appearance';
 const LEGACY_THEME_KEY = 'medsoru_theme';
 const listeners = new Set<() => void>();
 
-/** v11 önceki varsayılandı: kayıtlı 'v11' bir kez v12'ye taşınır (bilerek Klasik seçen v10'da kalır). */
-const DESIGN_MIGRATION_KEY = 'medsoru_design_v12_migrated';
-function migrateDesign(d: unknown): DesignVersion {
+/**
+ * v11 önceki varsayılandı: bilerek seçilmemiş 'v11' v12'ye taşınır (Klasik v10 ve bilerek seçilen v11 kalır).
+ * Taşıma bilgisi görünüm kaydının içindedir (designPicked); ayrı bir yerel bayrak tutulmaz — aksi halde profil
+ * eşitlemesi sunucudaki eski 'v11' kaydını geri yazınca bayrak taşımayı engelliyor ve kullanıcı v11'de kalıyordu.
+ */
+let migratedThisLoad = false;
+function migrateDesign(p: Partial<Appearance>): DesignVersion {
+  const d = p.design;
   if (d === 'v10' || d === 'v12') return d;
   if (d === 'v11') {
-    try {
-      if (localStorage.getItem(DESIGN_MIGRATION_KEY)) return 'v11';
-      localStorage.setItem(DESIGN_MIGRATION_KEY, '1');
-    } catch { return 'v11'; }
+    if (p.designPicked) return 'v11';
+    migratedThisLoad = true;
     return 'v12';
   }
   return 'v12';
@@ -100,7 +107,9 @@ function read(): Appearance {
         filters: p.filters === 'gelismis' ? 'gelismis' : 'basit',
         qtags: p.qtags === true,
         motion: p.motion === 'reduced' ? 'reduced' : 'full',
-        design: migrateDesign(p.design),
+        design: migrateDesign(p),
+        designPicked: p.designPicked === true,
+        designMigratedAt: typeof p.designMigratedAt === 'number' ? p.designMigratedAt : undefined,
         accents: p.accents && typeof p.accents === 'object' ? { ...p.accents } : {},
       };
       // Taşınan tasarım seçimi kalıcı olsun (aksi halde sonraki açılışta v11'e döner)
@@ -119,6 +128,28 @@ function read(): Appearance {
 let current: Appearance = typeof window === 'undefined'
   ? { mode: 'light', palettes: { light: 'a', sepia: 'a', dark: 'a' }, density: 'normal', layout: 'pano', ...V11_DEFAULTS }
   : read();
+
+if (typeof window !== 'undefined') {
+  // Taşınan seçim, profil eşitleme izleyicisi kurulduktan sonra bir kez daha (farklı içerikle) yazılır ki "değişti"
+  // sayılıp sunucuya gitsin; yoksa sunucudaki eski 'v11' her açılışta geri gelir.
+  if (migratedThisLoad) {
+    window.setTimeout(() => {
+      try {
+        current = { ...current, designMigratedAt: Date.now() };
+        localStorage.setItem(KEY, JSON.stringify(current));
+      } catch { /* gizli pencere */ }
+    }, 4000);
+  }
+  // Başka sekme ya da profil eşitlemesi görünüm kaydını değiştirirse anında uygula
+  window.addEventListener('storage', (e) => {
+    if (e.key !== KEY) return;
+    const next = read();
+    if (JSON.stringify(next) === JSON.stringify(current)) return;
+    current = next;
+    applyAppearance(current);
+    listeners.forEach((l) => l());
+  });
+}
 
 /** Kök öğeye tercihleri yazar (anında, geçişsiz). Açılışta ve örtü altındaki geçişte kullanılır. */
 export function applyAppearance(a: Appearance = current) {
@@ -156,7 +187,14 @@ const COVER_OUT = 280;
 let pendingApply: Appearance | null = null;
 let switching = false;
 const wait = (ms: number) => new Promise<void>((r) => window.setTimeout(r, ms));
-const nextFrame = () => new Promise<void>((r) => requestAnimationFrame(() => requestAnimationFrame(() => r())));
+// Arka plan sekmesinde/gizli görünümde rAF durur: 120 ms sonra yine de devam et (yoksa tema geçişi yarıda takılır
+// ve sonraki tema seçimleri kuyrukta kalırdı)
+const nextFrame = () => new Promise<void>((r) => {
+  let done = false;
+  const fin = () => { if (!done) { done = true; r(); } };
+  requestAnimationFrame(() => requestAnimationFrame(fin));
+  window.setTimeout(fin, 120);
+});
 
 function coverLabel(a: Appearance) {
   return `${MODE_LABELS[a.mode]} · ${findPalette(a.mode, a.palettes[a.mode]).name}`;
@@ -232,7 +270,7 @@ export function setAppearance(patch: Partial<Omit<Appearance, 'palettes' | 'acce
   if (patch.filters) next.filters = patch.filters;
   if (typeof patch.qtags === 'boolean') next.qtags = patch.qtags;
   if (patch.motion) next.motion = patch.motion;
-  if (patch.design) next.design = patch.design;
+  if (patch.design) { next.design = patch.design; next.designPicked = true; }
   if (patch.palette) next.palettes[next.mode] = patch.palette;
   // Vurgu rengi: örtüsüz, anında (yalnız 4 token değişir)
   if (patch.accent) {

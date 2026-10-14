@@ -26,6 +26,7 @@ import {
 import * as api from '../../services/api';
 import { triggerDomHighlightAndScroll, shareDeepLink } from '../../services/universalRedirectService';
 import { useAppearance } from '../../utils/appearance';
+import { GlossaryV12 } from '../v12/GlossaryV12';
 import './glossary.css';
 
 /**
@@ -87,6 +88,8 @@ interface MedicalEncyclopediaViewProps {
 /** Bir seferde çizilen madde sayısı */
 const PAGE = 40;
 const ALPHABET = 'ABCÇDEFGĞHIİJKLMNOÖPRSŞTUÜVYZ'.split('');
+/** v12 A–Z şeridi: Türkçede sözcük başında gelmeyen Ğ yok */
+const V12_ALPHABET = ALPHABET.filter((c) => c !== 'Ğ');
 const CUSTOM_KEY = 'medsoru_custom_encyclopedia_v1';
 const BOOKMARK_KEY = 'medsoru_bookmarked_encyclopedia';
 
@@ -817,7 +820,9 @@ export const MedicalEncyclopediaView: React.FC<MedicalEncyclopediaViewProps> = (
   const isWide = useWide();
   const { layout, design } = useAppearance();
   // v11: geniş ekranda liste + ayrıntı bölmesi varsayılan (Akış modunda tek sütun akordeon kalır)
-  const wide = isWide && (design === 'v10' ? layout === 'odak' : layout !== 'akis');
+  // v12: geniş ekranda her zaman liste + ayrıntı (dar ekranda ayrıntı tam görünüm, GlossaryV12)
+  const v12 = design === 'v12';
+  const wide = isWide && (v12 || (design === 'v10' ? layout === 'odak' : layout !== 'akis'));
   const wideRef = useRef(wide);
   wideRef.current = wide;
   const anchorRef = useRef<{ id: string; top: number } | null>(null);
@@ -828,6 +833,10 @@ export const MedicalEncyclopediaView: React.FC<MedicalEncyclopediaViewProps> = (
     setAuditMessage(null);
     setOpenId((prev) => (prev === id && !wideRef.current ? null : id));
   }, []);
+
+  // v12: seçim akordeon gibi kapanmaz; dar ekranda kapatma geri düğmesindedir
+  const selectEntry = useCallback((id: string) => { setAuditMessage(null); setOpenId(id); }, []);
+  const closeEntry = useCallback(() => setOpenId(null), []);
 
   // Üstteki açık madde kapanınca dokunulan satır yerinde kalsın (görünür alana getirme: autoReveal)
   useLayoutEffect(() => {
@@ -890,7 +899,7 @@ export const MedicalEncyclopediaView: React.FC<MedicalEncyclopediaViewProps> = (
   useEffect(() => {
     if (!loaded || typeof window === 'undefined') return;
     const urlParams = new URLSearchParams(window.location.search);
-    const targetId = initialTermId || urlParams.get('id') || urlParams.get('term');
+    const targetId = initialTermId || urlParams.get('id') || urlParams.get('term') || urlParams.get('terim');
     const highlight = urlParams.get('highlight');
     if (targetId) {
       // Arama sonucunda kimlik yerine terim ADI gelir ("apoptoz", "Apoptoz (Programlı Hücre Ölümü)"):
@@ -1098,6 +1107,138 @@ Lütfen bu kavramı fakülte sınavları ve TUS açısından en yüksek verimle 
   const showRail = !wide && grouped && !!entries && filteredEntries.length > PAGE;
   const rowSep = (k: string) => (sortMode === 'kurul' ? k.replace(/\s+/g, '-') : k);
 
+  const reportModal = showReportModal && reportingEntry && (
+    <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-[var(--color-scrim)] animate-in fade-in duration-200">
+      <div className="bg-white border border-line rounded-2xl w-full max-w-lg shadow-xl overflow-hidden flex flex-col max-h-[90vh]">
+        <div className="flex items-center justify-between px-6 py-4 border-b border-line bg-canvas">
+          <div className="flex items-center gap-2">
+            <AlertCircle className="w-5 h-5 text-warn" />
+            <h3 className="font-semibold text-lg text-ink">Terim / Sözlük Hata Bildirimi</h3>
+          </div>
+          <button
+            type="button"
+            onClick={() => setShowReportModal(false)}
+            className="p-1 rounded-lg hover:bg-canvas text-ink-3 hover:text-ink cursor-pointer transition-colors"
+            aria-label="Kapat"
+          >
+            <X className="w-5 h-5" />
+          </button>
+        </div>
+        <form onSubmit={handleReportSubmit} className="p-6 flex flex-col gap-4 overflow-y-auto">
+          <div className="p-3 bg-canvas rounded-xl border border-line flex flex-col gap-1">
+            <span className="text-xs font-semibold text-ink-2">Bildirilen Terim:</span>
+            <span className="font-bold text-ink">{reportingEntry.term}</span>
+            {reportingEntry.kurul && <span className="text-xs text-ink-3">{reportingEntry.kurul} · {reportingEntry.discipline}</span>}
+          </div>
+          <div className="flex flex-col gap-1.5">
+            <label className="text-xs font-semibold text-ink-2 uppercase tracking-wider">Hata Türü</label>
+            <select
+              value={reportReason}
+              onChange={(e) => setReportReason(e.target.value)}
+              className="w-full px-3 py-2 text-sm rounded-xl border border-line bg-canvas text-ink focus:border-accent outline-hidden"
+            >
+              <option value="Tanım / Bilgi hatalı">Tanım / Bilgi hatalı</option>
+              <option value="Mekanizma veya patoloji yanlış">Mekanizma veya patoloji yanlış</option>
+              <option value="Sınav tuzağı / spot bilgisi eksik veya hatalı">Sınav tuzağı / spot bilgisi eksik veya hatalı</option>
+              <option value="Ders notu / slayt uyumsuz">Ders notu / slayt uyumsuz</option>
+              <option value="Diğer">Diğer</option>
+            </select>
+          </div>
+          <div className="flex flex-col gap-1.5">
+            <label className="text-xs font-semibold text-ink-2 uppercase tracking-wider">Açıklama *</label>
+            <textarea
+              rows={3}
+              value={reportDetails}
+              onChange={(e) => setReportDetails(e.target.value)}
+              placeholder="Tespit ettiğiniz eksik veya hatalı kısmı belirtin..."
+              required
+              className="w-full px-3 py-2 text-sm rounded-xl border border-line bg-canvas text-ink focus:border-accent outline-hidden resize-none"
+            />
+          </div>
+          <div className="flex flex-col gap-1.5">
+            <label className="text-xs font-semibold text-ink-2 uppercase tracking-wider">Önerilen Doğru Bilgi / Metin (İsteğe Bağlı)</label>
+            <input
+              type="text"
+              value={reportSuggestedAnswer}
+              onChange={(e) => setReportSuggestedAnswer(e.target.value)}
+              placeholder="Doğru ifade veya eklenmesini önerdiğiniz bilgi..."
+              className="w-full px-3 py-2 text-sm rounded-xl border border-line bg-canvas text-ink focus:border-accent outline-hidden"
+            />
+          </div>
+          <div className="flex items-center justify-end gap-3 pt-3 border-t border-line">
+            <button
+              type="button"
+              onClick={() => setShowReportModal(false)}
+              className="px-4 py-2 text-sm font-semibold rounded-xl text-ink-2 hover:bg-canvas cursor-pointer transition-colors"
+            >
+              Vazgeç
+            </button>
+            <button
+              type="submit"
+              disabled={isSubmittingReport}
+              className="px-5 py-2 text-sm font-semibold rounded-xl bg-accent text-white hover:bg-accent-hover disabled:opacity-50 cursor-pointer flex items-center gap-2 transition-colors"
+            >
+              <Send className="w-4 h-4" />
+              {isSubmittingReport ? 'Gönderiliyor...' : 'Bildirimi Gönder'}
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  );
+
+  if (v12) {
+    return (
+      <>
+        <GlossaryV12
+          entries={entries}
+          loadError={loadError}
+          onReload={() => setReloadKey((n) => n + 1)}
+          total={total}
+          filteredCount={filteredEntries.length}
+          visibleCount={visible.length}
+          groups={groups}
+          hasMore={hasMore}
+          setSentinel={setSentinel}
+          grouped={grouped}
+          groupDomId={(k) => `gz-h-${rowSep(k)}`}
+          alphabet={V12_ALPHABET}
+          letterSet={letterSet}
+          onJumpLetter={jumpToLetter}
+          searchQuery={searchQuery}
+          onSearch={setSearchQuery}
+          filters={filtersSheet}
+          chips={chips}
+          onClearChips={() => {
+            if (!SEGMENT_IDS.includes(selectedCategory)) setSelectedCategory('all');
+            setSelectedKurul('Tümü');
+            setSelectedDiscipline('Tümü');
+            setSortMode('default');
+            setOnlyAiVerified(false);
+            setOnlySaved(false);
+          }}
+          onResetFilters={resetFilters}
+          openEntry={openEntry}
+          wide={wide}
+          onSelect={selectEntry}
+          onClose={closeEntry}
+          saved={bookmarkedSet}
+          onBookmark={toggleBookmark}
+          onShare={copyShareLink}
+          copied={copiedLink}
+          onReport={handleOpenReport}
+          onAudit={handleRunAiAudit}
+          auditing={isAiAuditing}
+          auditMessage={auditMessage}
+          related={related}
+          onOpenRelated={focusEntry}
+          catLabel={catLabel}
+        />
+        {reportModal}
+      </>
+    );
+  }
+
   return (
     <div className="ds-page gz-page">
       <PageToolbar
@@ -1193,85 +1334,7 @@ Lütfen bu kavramı fakülte sınavları ve TUS açısından en yüksek verimle 
 
       {showRail && <LetterRail letters={letterSet} onJump={jumpToLetter} />}
 
-      {showReportModal && reportingEntry && (
-        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-[var(--color-scrim)] animate-in fade-in duration-200">
-          <div className="bg-white border border-line rounded-2xl w-full max-w-lg shadow-xl overflow-hidden flex flex-col max-h-[90vh]">
-            <div className="flex items-center justify-between px-6 py-4 border-b border-line bg-canvas">
-              <div className="flex items-center gap-2">
-                <AlertCircle className="w-5 h-5 text-warn" />
-                <h3 className="font-semibold text-lg text-ink">Terim / Sözlük Hata Bildirimi</h3>
-              </div>
-              <button
-                type="button"
-                onClick={() => setShowReportModal(false)}
-                className="p-1 rounded-lg hover:bg-canvas text-ink-3 hover:text-ink cursor-pointer transition-colors"
-                aria-label="Kapat"
-              >
-                <X className="w-5 h-5" />
-              </button>
-            </div>
-            <form onSubmit={handleReportSubmit} className="p-6 flex flex-col gap-4 overflow-y-auto">
-              <div className="p-3 bg-canvas rounded-xl border border-line flex flex-col gap-1">
-                <span className="text-xs font-semibold text-ink-2">Bildirilen Terim:</span>
-                <span className="font-bold text-ink">{reportingEntry.term}</span>
-                {reportingEntry.kurul && <span className="text-xs text-ink-3">{reportingEntry.kurul} · {reportingEntry.discipline}</span>}
-              </div>
-              <div className="flex flex-col gap-1.5">
-                <label className="text-xs font-semibold text-ink-2 uppercase tracking-wider">Hata Türü</label>
-                <select
-                  value={reportReason}
-                  onChange={(e) => setReportReason(e.target.value)}
-                  className="w-full px-3 py-2 text-sm rounded-xl border border-line bg-canvas text-ink focus:border-accent outline-hidden"
-                >
-                  <option value="Tanım / Bilgi hatalı">Tanım / Bilgi hatalı</option>
-                  <option value="Mekanizma veya patoloji yanlış">Mekanizma veya patoloji yanlış</option>
-                  <option value="Sınav tuzağı / spot bilgisi eksik veya hatalı">Sınav tuzağı / spot bilgisi eksik veya hatalı</option>
-                  <option value="Ders notu / slayt uyumsuz">Ders notu / slayt uyumsuz</option>
-                  <option value="Diğer">Diğer</option>
-                </select>
-              </div>
-              <div className="flex flex-col gap-1.5">
-                <label className="text-xs font-semibold text-ink-2 uppercase tracking-wider">Açıklama *</label>
-                <textarea
-                  rows={3}
-                  value={reportDetails}
-                  onChange={(e) => setReportDetails(e.target.value)}
-                  placeholder="Tespit ettiğiniz eksik veya hatalı kısmı belirtin..."
-                  required
-                  className="w-full px-3 py-2 text-sm rounded-xl border border-line bg-canvas text-ink focus:border-accent outline-hidden resize-none"
-                />
-              </div>
-              <div className="flex flex-col gap-1.5">
-                <label className="text-xs font-semibold text-ink-2 uppercase tracking-wider">Önerilen Doğru Bilgi / Metin (İsteğe Bağlı)</label>
-                <input
-                  type="text"
-                  value={reportSuggestedAnswer}
-                  onChange={(e) => setReportSuggestedAnswer(e.target.value)}
-                  placeholder="Doğru ifade veya eklenmesini önerdiğiniz bilgi..."
-                  className="w-full px-3 py-2 text-sm rounded-xl border border-line bg-canvas text-ink focus:border-accent outline-hidden"
-                />
-              </div>
-              <div className="flex items-center justify-end gap-3 pt-3 border-t border-line">
-                <button
-                  type="button"
-                  onClick={() => setShowReportModal(false)}
-                  className="px-4 py-2 text-sm font-semibold rounded-xl text-ink-2 hover:bg-canvas cursor-pointer transition-colors"
-                >
-                  Vazgeç
-                </button>
-                <button
-                  type="submit"
-                  disabled={isSubmittingReport}
-                  className="px-5 py-2 text-sm font-semibold rounded-xl bg-accent text-white hover:bg-accent-hover disabled:opacity-50 cursor-pointer flex items-center gap-2 transition-colors"
-                >
-                  <Send className="w-4 h-4" />
-                  {isSubmittingReport ? 'Gönderiliyor...' : 'Bildirimi Gönder'}
-                </button>
-              </div>
-            </form>
-          </div>
-        </div>
-      )}
+      {reportModal}
     </div>
   );
 };

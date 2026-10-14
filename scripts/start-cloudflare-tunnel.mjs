@@ -1,7 +1,7 @@
 /**
  * scripts/start-cloudflare-tunnel.mjs
  * 
- * MedSoru Sunucusunu (port 3000) ve Cloudflare Quick Tunnel'ı
+ * MeDSor Sunucusunu (port 3000) ve Cloudflare Quick Tunnel'ı
  * eşzamanlı olarak başlatır. Domain gerektirmeden anında
  * güvenli bir https://*.trycloudflare.com adresi üretir.
  */
@@ -83,9 +83,9 @@ async function main() {
   // Adım 1: Sunucu Durumu Kontrolü
   const isAlreadyRunning = await checkPort3000();
   if (isAlreadyRunning) {
-    console.log('✅ MedSoru sunucusu halihazırda port 3000 üzerinde aktif.');
+    console.log('✅ MeDSor sunucusu halihazırda port 3000 üzerinde aktif.');
   } else {
-    console.log('🚀 MedSoru sunucusu başlatılıyor (npx tsx server.ts)...');
+    console.log('🚀 MeDSor sunucusu başlatılıyor (npx tsx server.ts)...');
     serverProcess = spawn('npx', ['tsx', 'server.ts'], {
       cwd: ROOT_DIR,
       shell: true,
@@ -94,7 +94,7 @@ async function main() {
 
     serverProcess.on('exit', (code) => {
       if (code !== 0 && code !== null) {
-        console.error(`⚠️ MedSoru sunucusu kapandı (kod: ${code})`);
+        console.error(`⚠️ MeDSor sunucusu kapandı (kod: ${code})`);
       }
     });
 
@@ -112,7 +112,7 @@ async function main() {
       cleanupAndExit(1);
       return;
     }
-    console.log('✅ MedSoru sunucusu başarıyla hazırlandı (http://localhost:3000).');
+    console.log('✅ MeDSor sunucusu başarıyla hazırlandı (http://localhost:3000).');
   }
 
   // Adım 2: Cloudflared Yolunu Al
@@ -156,9 +156,9 @@ async function main() {
 
         // Masaüstüne doğrudan kısayol (.url) oluştur
         try {
-          const desktopUrlPath = path.join(DESKTOP_DIR, 'MedSoru_Tünel_Giriş.url');
+          const desktopUrlPath = path.join(DESKTOP_DIR, 'MeDSor_Tünel_Giriş.url');
           fs.writeFileSync(desktopUrlPath, `[InternetShortcut]\nURL=${tunnelUrl}\n`, 'utf8');
-          console.log('📌 Masaüstünüze doğrudan tıklayıp açabileceğiniz "MedSoru_Tünel_Giriş.url" kısayolu eklendi.');
+          console.log('📌 Masaüstünüze doğrudan tıklayıp açabileceğiniz "MeDSor_Tünel_Giriş.url" kısayolu eklendi.');
         } catch (e) {}
 
         // Firestore'a kaydet (GitHub Pages senkronizasyonu için)

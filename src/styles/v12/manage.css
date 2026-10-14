@@ -1,0 +1,430 @@
+/*
+ * Yönetim konsolu — v12 "Net" kabuğu, Genel bakış ve Kişiler denetim düzeni.
+ * Canvas: Manage.dc.html (kabuk + genel bakış), ManageUsers.dc.html (kişi denetimi).
+ * Bileşenler: components/v12/ManageV12.tsx, components/v12/ManagePeopleV12.tsx. Önek: m12-.
+ * Her kural :root.ms-v9[data-design='v12'] altında; renk yalnız palet token'larından (açık / sarı / koyu).
+ */
+
+:root.ms-v9[data-design='v12'] {
+  /* ── Kök ve yoğunluk ─────────────────────────────────────────────────── */
+  & .m12-app {
+    --m12-h: 36px;
+    --m12-h-sm: 30px;
+    --m12-row: 46px;
+    --m12-pad: 11px;
+    --m12-r: 10px;
+    --m12-r-sm: 7px;
+    --m12-t: 160ms;
+    --m12-ease: cubic-bezier(.2, .7, .2, 1);
+    display: flex;
+    width: 100%;
+    min-width: 0;
+    overflow: hidden;
+    background: var(--color-canvas);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-size: 14px;
+    line-height: 1.45;
+  }
+  & .m12-app[data-m12-dense='tight'] { --m12-row: 38px; --m12-pad: 7px; }
+  & .m12-app.is-full { height: var(--vvh, 100dvh); }
+  & .m12-app.is-inline { height: calc(100dvh - 120px); min-height: 560px; border-radius: 12px; border: 1px solid var(--color-line); }
+  & .m12-app :is(h1, h2, h3, p) { margin: 0; }
+  & .m12-app :focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+
+  /* ── Ortak küçük parçalar ────────────────────────────────────────────── */
+  & .m12-num { font-family: var(--font-mono); font-variant-numeric: tabular-nums; font-weight: 500; }
+  & .m12-mono { overflow-wrap: anywhere; font-size: 12px; }
+  & .m12-meta { font-size: 12.5px; color: var(--color-ink-3); }
+  & .m12-grow { flex: 1 1 auto; min-width: 0; }
+  & .m12-clamp1 { display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden; overflow-wrap: anywhere; }
+  & .m12-h2 { font-size: 15px; font-weight: 600; letter-spacing: -.005em; display: inline-flex; align-items: baseline; gap: 6px; min-width: 0; }
+  & .m12-h2 .m12-num { font-size: 12px; }
+
+  & .m12-badge {
+    display: inline-flex; align-items: center; gap: 4px; height: 20px; padding: 0 7px; border-radius: 6px;
+    font: 500 11.5px/1 var(--font-sans); background: var(--color-field); color: var(--color-ink-2); white-space: nowrap; flex: none;
+  }
+  & .m12-badge > svg { width: 12px; height: 12px; }
+  & .m12-badge.ok { background: var(--color-ok-soft); color: var(--color-ok); }
+  & .m12-badge.bad { background: var(--color-bad-soft); color: var(--color-bad-text); }
+  & .m12-badge.warn { background: var(--color-warn-soft); color: var(--color-warn); }
+  & .m12-badge.acc { background: var(--color-accent-soft); color: var(--color-accent); }
+  & .m12-role {
+    display: inline-flex; align-items: center; height: 20px; padding: 0 7px; border-radius: 6px; font-size: 11.5px; font-weight: 500;
+    border: 1px solid var(--color-line-2); color: var(--color-ink-2); white-space: nowrap;
+  }
+
+  & .m12-btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 6px; height: var(--m12-h); padding: 0 14px;
+    border-radius: var(--m12-r-sm); border: 1px solid var(--color-line); background: var(--color-white); color: var(--color-ink);
+    font: 500 13.5px/1 var(--font-sans); cursor: pointer; white-space: nowrap; text-decoration: none; flex: none;
+    transition: background-color var(--m12-t) var(--m12-ease), border-color var(--m12-t), transform var(--m12-t);
+  }
+  & .m12-btn > svg { width: 16px; height: 16px; flex: none; }
+  & .m12-btn:hover:not(:disabled) { background: var(--color-field); }
+  & .m12-btn:active:not(:disabled) { transform: translateY(1px); }
+  & .m12-btn:disabled { opacity: .5; cursor: default; }
+  & .m12-btn.sm { height: var(--m12-h-sm); padding: 0 10px; font-size: 12.5px; }
+  & .m12-btn.icon { width: var(--m12-h); padding: 0; }
+  & .m12-btn.sm.icon { width: var(--m12-h-sm); }
+  & .m12-btn.ghost { background: transparent; border-color: transparent; color: var(--color-ink-2); }
+  & .m12-btn.ghost:hover:not(:disabled) { background: var(--color-field); }
+  & .m12-btn.pri { background: var(--color-accent); border-color: var(--color-accent); color: var(--color-on-accent); }
+  & .m12-btn.pri:hover:not(:disabled) { background: var(--color-accent-hover); }
+  & .m12-btn.danger { color: var(--color-bad-text); }
+  & .m12-btn.danger.is-armed { background: var(--color-bad); border-color: var(--color-bad); color: var(--color-white); }
+  & .m12-btn.is-on, & .m12-btn[aria-pressed='true'].m12-dense { background: var(--color-field); border-color: var(--color-line-2); }
+
+  & .m12-link {
+    display: inline-flex; align-items: center; gap: 2px; padding: 0; border: 0; background: none; cursor: pointer;
+    font: 500 12.5px var(--font-sans); color: var(--color-accent); text-align: left; text-decoration: none; min-width: 0;
+  }
+  & .m12-link > svg { width: 14px; height: 14px; flex: none; }
+  & .m12-link:hover { text-decoration: underline; }
+
+  & .m12-field {
+    display: flex; align-items: center; gap: 8px; height: var(--m12-h-sm); padding: 0 10px; min-width: 0;
+    border: 1px solid var(--color-line); border-radius: var(--m12-r-sm); background: var(--color-white); color: var(--color-ink-3);
+  }
+  & .m12-field > svg { width: 15px; height: 15px; flex: none; }
+  & .m12-field:focus-within { border-color: var(--color-accent); box-shadow: 0 0 0 3px var(--color-accent-soft); }
+  & .m12-field :is(input, select) {
+    flex: 1 1 auto; min-width: 0; border: 0; outline: 0; background: transparent; font: 400 13px var(--font-sans); color: var(--color-ink);
+  }
+  & .m12-field select { cursor: pointer; padding-right: 2px; }
+  & .m12-kbd {
+    font: 500 11px var(--font-mono); padding: 2px 5px; border: 1px solid var(--color-line); border-bottom-width: 2px; border-radius: 5px;
+    color: var(--color-ink-3); background: var(--color-white); flex: none;
+  }
+
+  & .m12-seg { display: inline-flex; padding: 3px; gap: 2px; background: var(--color-field); border-radius: 9px; max-width: 100%; overflow-x: auto; scrollbar-width: none; flex: none; }
+  & .m12-seg button {
+    display: inline-flex; align-items: center; gap: 6px; height: 26px; padding: 0 10px; border: 0; border-radius: 7px; background: transparent;
+    color: var(--color-ink-2); font: 500 12.5px var(--font-sans); cursor: pointer; white-space: nowrap;
+    transition: background-color var(--m12-t), color var(--m12-t);
+  }
+  & .m12-seg button.on { background: var(--color-white); color: var(--color-ink); box-shadow: 0 0 0 1px var(--color-line); }
+  & .m12-seg button .n { font-size: 11px; color: var(--color-ink-3); }
+
+  & .m12-pill {
+    display: inline-flex; align-items: center; gap: 6px; height: 28px; padding: 0 10px; border-radius: 999px; border: 1px solid var(--color-line);
+    background: var(--color-white); color: var(--color-ink-2); font: 500 12.5px var(--font-sans); cursor: pointer; white-space: nowrap; max-width: 220px;
+  }
+  & .m12-pill span { overflow: hidden; text-overflow: ellipsis; }
+  & .m12-pill b { font-size: 11.5px; font-weight: 600; color: var(--color-ink-3); }
+  & .m12-pill.on { background: var(--color-accent-soft); border-color: transparent; color: var(--color-accent); }
+  & .m12-pill.on b { color: inherit; }
+
+  & .m12-panel { background: var(--color-white); border: 1px solid var(--color-line); border-radius: var(--m12-r); min-width: 0; }
+  & .m12-panel-h { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; padding: 9px 12px; border-bottom: 1px solid var(--color-line-soft); }
+  & .m12-panel-h > .m12-h2 { flex: 1 1 auto; }
+  & .m12-panel-f { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; padding: 8px 12px; border-top: 1px solid var(--color-line-soft); }
+  & .m12-panel-f > .m12-meta:first-child { flex: 1 1 220px; }
+  & .m12-empty { padding: 22px 14px; font-size: 13px; color: var(--color-ink-3); text-align: center; }
+  & .m12-note { margin: 0; padding: 8px 10px; border-radius: 8px; font-size: 12.5px; }
+  & .m12-note.warn { background: var(--color-warn-soft); color: var(--color-ink-2); }
+  & .m12-note.bad { background: var(--color-bad-soft); color: var(--color-bad-text); }
+
+  & .m12-pop { background: var(--color-white); border: 1px solid var(--color-line); border-radius: 12px; box-shadow: var(--v12-pop); }
+
+  & .m12-dl { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 7px 14px; margin: 0; font-size: 13px; }
+  & .m12-dl dt { color: var(--color-ink-3); white-space: nowrap; }
+  & .m12-dl dd { margin: 0; color: var(--color-ink); min-width: 0; overflow-wrap: anywhere; }
+  & .m12-dl a { color: var(--color-accent); text-decoration: none; }
+
+  & .m12-tbl-box { overflow-x: auto; overscroll-behavior-x: contain; }
+  & .m12-tbl { width: 100%; min-width: 640px; border-collapse: collapse; font-size: 13px; }
+  & .m12-tbl th {
+    text-align: left; font-size: 12px; font-weight: 500; color: var(--color-ink-3); padding: 8px 12px;
+    border-bottom: 1px solid var(--color-line-soft); white-space: nowrap; text-transform: none; letter-spacing: 0;
+  }
+  & .m12-tbl td { padding: var(--m12-pad) 12px; border-top: 1px solid var(--color-line-soft); vertical-align: middle; color: var(--color-ink-2); }
+  & .m12-tbl tbody tr:first-child td { border-top: 0; }
+  & .m12-tbl td.k { color: var(--color-ink); font-weight: 500; }
+  & .m12-tbl :is(th, td).n { text-align: right; }
+  & .m12-tbl .w-t { width: 110px; }
+  & .m12-tbl .w-k { width: 170px; }
+  & .m12-tbl .m12-num { font-size: 12px; color: var(--color-ink-3); }
+  & .m12-td-empty { padding: 26px 14px !important; text-align: center; color: var(--color-ink-3); font-size: 13px; }
+
+  & .m12-spin { animation: m12-spin 900ms linear infinite; }
+  & .m12-spin-once { animation: m12-spin 600ms var(--m12-ease) 1; }
+
+  /* ── Kenar menüsü ────────────────────────────────────────────────────── */
+  & .m12-side {
+    flex: 0 0 236px; min-width: 0; display: flex; flex-direction: column; gap: 1px; padding: 12px 8px 12px;
+    background: var(--color-white); border-right: 1px solid var(--color-line); overflow-y: auto; overscroll-behavior: contain;
+  }
+  & .m12-brand {
+    display: flex; align-items: center; gap: 8px; padding: 2px 8px 12px; border: 0; background: none; cursor: pointer;
+    color: var(--color-ink); font: inherit; text-align: left; border-radius: 8px;
+  }
+  & .m12-brand > i {
+    width: 24px; height: 24px; border-radius: 7px; display: grid; place-items: center; flex: none;
+    background: var(--color-ink); color: var(--color-white); font: 700 12px var(--font-sans); font-style: normal;
+  }
+  & .m12-brand .w { font-weight: 600; font-size: 14px; letter-spacing: -.01em; }
+  & .m12-brand .m12-badge { margin-left: auto; }
+  & .m12-nav { display: flex; flex-direction: column; gap: 1px; }
+  & .m12-grp { display: flex; flex-direction: column; gap: 1px; }
+  & .m12-grp-h { display: flex; align-items: center; gap: 6px; padding: 14px 8px 4px; font-size: 11.5px; font-weight: 600; color: var(--color-ink-3); }
+  & .m12-grp-h .c { margin-left: auto; font: 500 11px var(--font-mono); color: var(--color-ink-3); }
+  & .m12-grp-h .c.hot { color: var(--color-bad-text); }
+  & .m12-nav-i {
+    display: flex; align-items: center; gap: 9px; width: 100%; min-height: 30px; padding: 0 8px; border: 0; border-radius: 7px;
+    background: transparent; color: var(--color-ink-2); font: 500 13px var(--font-sans); text-align: left; cursor: pointer; min-width: 0; flex: none;
+    transition: background-color var(--m12-t), color var(--m12-t);
+  }
+  & .m12-nav-i:hover { background: var(--color-field); }
+  & .m12-nav-i.on { background: var(--color-accent-soft); color: var(--color-accent); }
+  & .m12-nav-i > svg { width: 15px; height: 15px; flex: none; stroke-width: 1.8; }
+  & .m12-nav-i .l { flex: 1 1 auto; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  & .m12-nav-i .c { font: 500 11px var(--font-mono); color: var(--color-ink-3); }
+  & .m12-nav-i .c.hot { color: var(--color-bad-text); }
+  & .m12-legend { padding: 12px 8px 8px; font-size: 11.5px; line-height: 1.4; color: var(--color-ink-3); margin-top: auto; }
+  & .m12-exit { color: var(--color-ink-3); }
+
+  /* ── Ana sütun + üst çubuk ───────────────────────────────────────────── */
+  & .m12-main { flex: 1 1 auto; min-width: 0; min-height: 0; display: flex; flex-direction: column; }
+  & .m12-top {
+    display: flex; align-items: center; gap: 10px; flex-wrap: wrap; min-height: 52px; padding: 8px 20px; flex: none;
+    background: var(--color-white); border-bottom: 1px solid var(--color-line); border-top: 2px solid transparent;
+  }
+  & .m12-top.is-live { border-top-color: var(--color-warn); }
+  & .m12-crumb { display: flex; align-items: center; gap: 6px; font-size: 13px; color: var(--color-ink-3); min-width: 0; flex: 1 1 220px; }
+  & .m12-crumb > svg { width: 13px; height: 13px; flex: none; color: var(--color-line-2); }
+  & .m12-crumb > span { white-space: nowrap; }
+  & .m12-crumb b { font-weight: 600; color: var(--color-ink); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; min-width: 0; }
+  & .m12-search { flex: 0 1 300px; cursor: pointer; font: inherit; text-align: left; }
+  & .m12-search .ph { flex: 1 1 auto; min-width: 0; font-size: 13px; color: var(--color-ink-3); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  & .m12-search:hover { border-color: var(--color-line-2); }
+  & .m12-env button { height: 24px; }
+  & .m12-env button .d { width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
+  & .m12-env button.on.live { background: var(--color-warn-soft); color: var(--color-warn); box-shadow: none; }
+  & .m12-kurul { flex: 0 1 220px; max-width: 220px; padding-right: 8px; }
+  & .m12-kurul select { appearance: none; -webkit-appearance: none; font-size: 12.5px; text-overflow: ellipsis; }
+  & .m12-kurul > svg { width: 14px; height: 14px; pointer-events: none; }
+  & .m12-live { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; color: var(--color-ink-3); white-space: nowrap; flex: none; }
+  & .m12-live > i { width: 7px; height: 7px; border-radius: 50%; background: var(--color-line-2); flex: none; }
+  & .m12-live.is-connected > i { background: var(--color-ok); }
+  & .m12-live.is-connecting > i { background: var(--color-warn); }
+  & .m12-live.is-disconnected > i { background: var(--color-bad); }
+  & .m12-live small { font-size: 11px; color: var(--color-ink-3); }
+  & .m12-me {
+    width: 28px; height: 28px; border-radius: 50%; display: grid; place-items: center; flex: none;
+    background: var(--color-field); color: var(--color-ink-2); font-size: 11px; font-weight: 600;
+  }
+
+  & .m12-body { flex: 1 1 auto; min-height: 0; overflow-y: auto; overscroll-behavior: contain; }
+  & .m12-inner { max-width: 1320px; }
+  & .m12-inner.is-wide { max-width: none; }
+  & .m12-head { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
+  & .m12-head h1 { display: flex; align-items: center; gap: 8px; font-size: 20px; font-weight: 600; letter-spacing: -.015em; line-height: 1.2; }
+  & .m12-head .m12-meta { overflow-wrap: anywhere; max-width: 90ch; }
+
+  /* ── Genel bakış ─────────────────────────────────────────────────────── */
+  & .m12-ov { display: flex; flex-direction: column; gap: 14px; min-width: 0; }
+  & .m12-health { display: flex; flex-wrap: wrap; align-items: center; padding: 0 4px; }
+  & .m12-hc { display: inline-flex; align-items: center; gap: 7px; padding: 9px 12px; font-size: 12.5px; color: var(--color-ink-2); white-space: nowrap; }
+  & .m12-hc + .m12-hc { border-left: 1px solid var(--color-line-soft); }
+  & .m12-hc b { font-weight: 500; color: var(--color-ink); }
+  & .m12-hc .t { font-size: 12px; color: var(--color-ink-3); }
+  & .m12-hc-more { margin-left: auto; padding: 9px 12px; }
+  & .m12-dot { width: 8px; height: 8px; border-radius: 50%; flex: none; background: var(--color-ok); }
+  & .m12-dot.warn { background: var(--color-warn); }
+  & .m12-dot.bad { background: var(--color-bad); }
+  & .m12-dot.idle { background: var(--color-line-2); }
+
+  & .m12-cols { display: flex; flex-wrap: wrap; gap: 14px; align-items: flex-start; }
+  & .m12-col-main { flex: 999 1 520px; min-width: 0; }
+  & .m12-col-side { flex: 1 1 290px; min-width: 0; display: flex; flex-direction: column; gap: 14px; }
+  & .m12-queue { list-style: none; margin: 0; padding: 0; }
+  & .m12-q { display: flex; align-items: center; gap: 10px; min-height: var(--m12-row); padding: var(--m12-pad) 12px; border-top: 1px solid var(--color-line-soft); min-width: 0; }
+  & .m12-q:first-child { border-top: 0; }
+  & .m12-q .tp { flex: 0 0 100px; min-width: 0; }
+  & .m12-q .tp .m12-badge { max-width: 100%; overflow: hidden; text-overflow: ellipsis; }
+  & .m12-q .mid { flex: 1 1 auto; min-width: 0; display: flex; flex-direction: column; gap: 1px; }
+  & .m12-q .tt { font-size: 13px; font-weight: 500; color: var(--color-ink); }
+  & .m12-q .mt { font-size: 12px; color: var(--color-ink-3); }
+  & .m12-q .ag { flex: 0 0 52px; text-align: right; font-size: 11.5px; color: var(--color-ink-3); }
+  & .m12-q .act { min-width: 96px; }
+  & .m12-quick { display: flex; flex-wrap: wrap; gap: 6px; padding: 12px; }
+  & .m12-col-side .m12-dl { padding: 12px 14px; }
+  & .m12-col-side .m12-dl dd { text-align: right; }
+
+  /* ── Kişiler: denetim düzeni ─────────────────────────────────────────── */
+  & .m12-pp { container: m12pp / inline-size; min-width: 0; }
+  & .m12-pp-split { display: flex; flex-wrap: wrap; gap: 14px; align-items: flex-start; }
+  & .m12-pp-list { flex: 999 1 560px; min-width: 0; display: flex; flex-direction: column; gap: 10px; }
+  & .m12-pp-row1 { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+  & .m12-chips { display: flex; gap: 6px; flex-wrap: wrap; min-width: 0; }
+  & .m12-filters { display: flex; gap: 6px; flex-wrap: wrap; align-items: center; }
+  & .m12-qs { flex: 1 1 240px; }
+  & .m12-f { flex: 0 1 auto; gap: 6px; padding: 0 8px; }
+  & .m12-f .fl { font-size: 12px; color: var(--color-ink-3); white-space: nowrap; }
+  & .m12-f select { font-size: 12.5px; }
+  & .m12-bar { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; min-height: 44px; padding: 6px 12px; border-bottom: 1px solid var(--color-line-soft); }
+  & .m12-bar.bulk { background: var(--color-accent-soft); border-radius: var(--m12-r) var(--m12-r) 0 0; }
+  & .m12-bar.bulk b { font-weight: 600; font-size: 13px; color: var(--color-accent); }
+  & .m12-ptbl { min-width: 820px; }
+  & .m12-ptbl td { white-space: nowrap; }
+  & .m12-ptbl :is(th, td).c-cb { width: 38px; padding-right: 0; }
+  & .m12-ptbl :is(th, td).c-act { width: 44px; padding: 0 6px; }
+  & .m12-ptbl td.c-user { white-space: normal; min-width: 210px; }
+  & .m12-ptbl tbody tr { transition: background-color var(--m12-t); }
+  & .m12-ptbl tbody tr:hover { background: var(--color-canvas); }
+  & .m12-ptbl tbody tr.sel { background: var(--color-canvas); }
+  & .m12-ptbl tbody tr.cur, & .m12-ptbl tbody tr.cur:hover { background: var(--color-accent-soft); }
+  & .m12-ptbl .m12-num.warn { color: var(--color-warn); font-weight: 600; }
+  & .m12-cb { width: 16px; height: 16px; margin: 0; accent-color: var(--color-accent); cursor: pointer; vertical-align: middle; }
+  & .m12-user {
+    display: flex; align-items: center; gap: 9px; min-width: 0; max-width: 280px; padding: 0; border: 0; background: transparent;
+    font: inherit; color: inherit; text-align: left; cursor: pointer; border-radius: 6px;
+  }
+  & .m12-user .tx { display: flex; flex-direction: column; min-width: 0; }
+  & .m12-user .nm { font-weight: 500; font-size: 13px; color: var(--color-ink); }
+  & .m12-user .em { font-size: 12px; color: var(--color-ink-3); }
+  & .m12-user:hover .nm { text-decoration: underline; text-underline-offset: 3px; }
+  & .m12-av {
+    position: relative; width: 26px; height: 26px; border-radius: 50%; flex: none; display: grid; place-items: center;
+    background: var(--color-field); color: var(--color-ink-2); font-size: 10.5px; font-weight: 600;
+  }
+  & .m12-av img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; }
+  & .m12-av.lg { width: 40px; height: 40px; font-size: 13px; }
+  & .m12-av-dot { position: absolute; right: -1px; bottom: -1px; width: 9px; height: 9px; border-radius: 50%; background: var(--color-ok); box-shadow: 0 0 0 2px var(--color-white); }
+  & .m12-rowmenu { position: relative; display: inline-flex; }
+  & .m12-menu { position: absolute; right: 0; top: calc(100% + 2px); z-index: 20; width: 210px; padding: 5px; display: flex; flex-direction: column; animation: m12-pop 140ms var(--m12-ease); }
+  & .m12-menu.up { top: auto; bottom: calc(100% + 2px); }
+  & .m12-menu button {
+    display: flex; align-items: center; gap: 9px; width: 100%; height: 32px; padding: 0 9px; border: 0; border-radius: 7px; background: transparent;
+    color: var(--color-ink-2); font: 500 13px var(--font-sans); text-align: left; cursor: pointer;
+  }
+  & .m12-menu button:hover, & .m12-menu button:focus-visible { background: var(--color-field); color: var(--color-ink); }
+  & .m12-menu button > svg { width: 15px; height: 15px; flex: none; }
+
+  /* Sağ ayrıntı çekmecesi */
+  & .m12-pp-drawer {
+    flex: 1 1 380px; max-width: 460px; min-width: 0; display: flex; flex-direction: column;
+    position: sticky; top: 0; max-height: calc(var(--vvh, 100dvh) - 120px); overflow-y: auto; overscroll-behavior: contain;
+    animation: m12-in 180ms var(--m12-ease);
+  }
+  & .m12-dr { display: flex; flex-direction: column; min-width: 0; }
+  & .m12-dh { display: flex; align-items: flex-start; gap: 10px; padding: 14px 14px 10px; }
+  & .m12-dh-t { flex: 1 1 auto; min-width: 0; display: flex; flex-direction: column; gap: 3px; }
+  & .m12-dh-t a.m12-meta { text-decoration: none; }
+  & .m12-dh-t a.m12-meta:hover { color: var(--color-accent); }
+  & .m12-dh-b { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 3px; }
+  & .m12-pp-back { display: none; }
+  & .m12-acts { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; padding: 0 14px 12px; }
+  & .m12-acts .vr { width: 1px; height: 20px; background: var(--color-line); margin: 0 2px; }
+  & .m12-dform { padding: 0 14px 12px; }
+  & .m12-tabs { display: flex; gap: 14px; padding: 0 14px; border-bottom: 1px solid var(--color-line); overflow-x: auto; scrollbar-width: none; flex: none; }
+  & .m12-tabs button {
+    display: inline-flex; align-items: center; gap: 5px; padding: 8px 0; margin-bottom: -1px; border: 0; border-bottom: 2px solid transparent;
+    background: transparent; color: var(--color-ink-3); font: 500 13px var(--font-sans); white-space: nowrap; cursor: pointer;
+    transition: color var(--m12-t), border-color var(--m12-t);
+  }
+  & .m12-tabs button:hover { color: var(--color-ink-2); }
+  & .m12-tabs button.on { color: var(--color-ink); border-bottom-color: var(--color-ink); }
+  & .m12-tabs .m12-num { font-size: 11px; color: var(--color-ink-3); }
+  & .m12-dbody { min-width: 0; }
+  & .m12-dsec { padding: 12px 14px; display: flex; flex-direction: column; gap: 8px; border-top: 1px solid var(--color-line-soft); min-width: 0; }
+  & .m12-dsec:first-child { border-top: 0; }
+  & .m12-dsec-h { display: flex; align-items: center; gap: 8px; font-size: 12.5px; font-weight: 600; color: var(--color-ink-2); }
+  & .m12-dsec-h .m12-meta { font-weight: 400; }
+  & .m12-bars { display: flex; align-items: flex-end; gap: 2px; height: 56px; }
+  & .m12-bars > span { flex: 1 1 0; height: 100%; display: flex; align-items: flex-end; border-radius: 2px; background: var(--color-canvas); }
+  & .m12-bars i { display: block; width: 100%; border-radius: 2px; background: var(--color-accent); }
+  & .m12-tl { display: grid; grid-template-columns: 44px minmax(0, 1fr); gap: 6px 10px; font-size: 12.5px; align-items: baseline; }
+  & .m12-tl .tm { font: 500 11.5px var(--font-mono); color: var(--color-ink-3); }
+  & .m12-tl .ev { display: flex; align-items: center; gap: 6px; min-width: 0; color: var(--color-ink); }
+  & .m12-tl .ev > .m12-clamp1 { flex: 1 1 auto; }
+  & .m12-tl .ev a { display: inline-grid; place-items: center; width: 22px; height: 22px; border-radius: 6px; color: var(--color-accent); flex: none; }
+  & .m12-tl .ev a:hover { background: var(--color-field); }
+  & .m12-tl .ev a > svg { width: 13px; height: 13px; }
+  & .m12-day { grid-column: 1 / -1; font-size: 11.5px; font-weight: 600; color: var(--color-ink-3); padding-top: 4px; }
+
+  /* Çekmecede yeniden kullanılan Kişiler parçaları (pp-*): v12 diline indirilir */
+  & .m12-pp-drawer :is(.pp-form) { margin: 0; border-radius: 10px; border-color: var(--color-line-2); background: var(--color-canvas); box-shadow: none; }
+  & .m12-pp-legacy :is(.pp-chip) { height: 28px; border-radius: 999px; font-weight: 500; }
+  & .m12-pp-legacy .pp-chip.is-on { background: var(--color-accent-soft); border-color: transparent; color: var(--color-accent); }
+  & .m12-pp-legacy :is(.pp-card, .pp-tile, .pp-item, .pp-dev) { box-shadow: none; }
+  & .m12-pp-legacy .pp-tiles { grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); }
+  & .m12-pp-legacy :is(.ms-empty) { padding: 22px 8px; }
+
+}
+
+/* Dar kap: kişi açıkken liste gizlenir, çekmece tam genişlik (telefon ve dar tablet) */
+@container m12pp (max-width: 940px) {
+  :root.ms-v9[data-design='v12'] {
+    & .m12-pp.has-open .m12-pp-list { display: none; }
+    & .m12-pp-drawer { flex-basis: 100%; max-width: none; position: static; max-height: none; overflow: visible; }
+    & .m12-pp-back { display: inline-flex; }
+    & .m12-dh-x { display: none; }
+  }
+}
+
+/* ── Telefon: menü yatay şerit, üst çubuk sarar ─────────────────────────── */
+@media (max-width: 760px) {
+  :root.ms-v9[data-design='v12'] {
+    & .m12-app { flex-direction: column; }
+    & .m12-side { flex: none; flex-direction: row; align-items: center; gap: 4px; padding: 6px 8px; overflow-x: auto; overflow-y: hidden; border-right: 0; border-bottom: 1px solid var(--color-line); scrollbar-width: none; }
+    & .m12-nav, & .m12-grp { flex-direction: row; gap: 4px; }
+    & .m12-grp-h, & .m12-legend, & .m12-brand .w, & .m12-brand .m12-badge { display: none; }
+    & .m12-brand { padding: 0 4px 0 0; }
+    & .m12-nav-i { width: auto; min-height: 40px; padding: 0 10px; }
+    & .m12-exit .l { display: none; }
+    & .m12-top { padding: 8px 12px; gap: 8px; }
+    & .m12-crumb { flex-basis: 100%; }
+    & .m12-crumb > span:first-child, & .m12-crumb > svg:first-of-type { display: none; }
+    & .m12-search { flex: 1 1 100%; order: 5; }
+    & .m12-kurul { flex: 1 1 140px; max-width: none; }
+    & .m12-live span, & .m12-live small, & .m12-dense span, & .m12-me { display: none; }
+    & .m12-q { flex-wrap: wrap; }
+    & .m12-q .tp { display: none; }
+    & .m12-q .act { min-width: 0; }
+    & .m12-hc { flex: 1 1 50%; }
+    & .m12-hc + .m12-hc { border-left: 0; }
+    & .m12-hc-more { flex-basis: 100%; margin-left: 0; }
+  }
+}
+@media (min-width: 761px) and (max-width: 1180px) {
+  :root.ms-v9[data-design='v12'] {
+    & .m12-side { flex-basis: 212px; }
+    & .m12-live small { display: none; }
+    & .m12-search { flex-basis: 200px; }
+  }
+}
+
+/* ── Dokunmatik: hedefler ≥ 40 px ───────────────────────────────────────── */
+@media (pointer: coarse) {
+  :root.ms-v9[data-design='v12'] .m12-app {
+    --m12-h: 44px;
+    --m12-h-sm: 40px;
+    & .m12-nav-i { min-height: 40px; }
+    & .m12-seg button { height: 34px; }
+    & .m12-pill { height: 36px; }
+    & .m12-tabs button { padding: 11px 0; }
+    & .m12-menu button { height: 40px; }
+    & .m12-cb { width: 20px; height: 20px; }
+  }
+}
+
+/* ── Hareket azaltma ────────────────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  :root.ms-v9[data-design='v12'] :is(.m12-spin, .m12-spin-once, .m12-menu, .m12-pp-drawer) { animation: none; }
+  :root.ms-v9[data-design='v12'] :is(.m12-btn, .m12-nav-i, .m12-seg button, .m12-tabs button, .m12-ptbl tbody tr) { transition: none; }
+}
+:root.ms-v9[data-design='v12'][data-motion='reduced'] {
+  & :is(.m12-spin, .m12-spin-once, .m12-menu, .m12-pp-drawer) { animation: none; }
+  & :is(.m12-btn, .m12-nav-i, .m12-seg button, .m12-tabs button, .m12-ptbl tbody tr) { transition: none; }
+}
+
+@keyframes m12-spin { to { transform: rotate(360deg); } }
+@keyframes m12-pop { from { opacity: 0; transform: translate3d(0, -3px, 0); } }
+@keyframes m12-in { from { opacity: 0; transform: translate3d(6px, 0, 0); } }
+/* Telefonda metin bağlantıları (Son hareketler hedefleri) parmakla seçilebilsin */
+@media (pointer: coarse), (max-width: 767px) {
+  :root.ms-v9[data-design='v12'] .m12-link { display: inline-flex; align-items: center; min-height: 32px; }
+}

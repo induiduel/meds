@@ -5,7 +5,7 @@ import { smartComposerService, AssistOption, AssistResult } from '../../services
 import { composerClient } from '../../services/composerClient';
 
 /**
- * MedSoru Akıllı Soru Yazma Yardımcısı (ComposerAssist)
+ * MeDSor Akıllı Soru Yazma Yardımcısı (ComposerAssist)
  *
  *  - Hesaplar Web Worker'da yapılır (composerClient): yazarken ana iş parçacığı donmaz,
  *    hızlı yazımda aradaki istekler atlanır.

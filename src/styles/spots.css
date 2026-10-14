@@ -1,5 +1,5 @@
 /* =============================================================================
- * MedSoru · Sınav spotları (.xs-*) — components/spots/ExamSpotsView.tsx + SpotCard.tsx
+ * MeDSor · Sınav spotları (.xs-*) — components/spots/ExamSpotsView.tsx + SpotCard.tsx
  *  Yalnız palet tokenı (--color-*, utils/palettes.ts) ve hareket tokenı (--mo-*); açık/sepya/koyu temada aynı kurallar.
  *  Kategori rengi --k (kart etiketi, çip, nokta); yumuşak zemin ve yazı rengi color-mix ile türetilir.
  *  Yerleşim kapsayıcı sorgusuyla (.xs-page = "xs"): <640 tek sütun · ≥640 iki sütun kart · ≥1000 üç bölme

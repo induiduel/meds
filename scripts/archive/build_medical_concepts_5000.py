@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 Master 5,000 Medical Concepts Knowledge Base Generator
-Gathers, synthesizes, enriches and standardizes 5,000+ medical concepts for MedSoru.
+Gathers, synthesizes, enriches and standardizes 5,000+ medical concepts for MeDSor.
 """
 
 import json

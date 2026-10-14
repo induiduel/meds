@@ -1,0 +1,103 @@
+/*
+ * Test çöz › Test oluştur (components/practice/TestHub.tsx). Öneki tb-.
+ * Temel kurallar Klasik (v10) / Sade (v11) diliyle: yuvarlak kartlar, dolu seçim. v12 "Net" katmanı en altta:
+ * düz yüzey + 1 px çizgi, köşe 8–12, 600 başlık, mono sayaçlar. Renkler yalnız token.
+ */
+.tb { min-height: 100dvh; background: var(--color-canvas); color: var(--color-ink); padding: 16px 16px calc(32px + env(safe-area-inset-bottom, 0px)); }
+.tb > * { max-width: 880px; margin-inline: auto; }
+.tb svg { flex-shrink: 0; }
+
+.tb-head { display: flex; align-items: flex-start; gap: 12px; padding: 8px 0 18px; flex-wrap: wrap; }
+.tb-head-t { flex: 1 1 260px; min-width: 0; }
+.tb-head h1 { margin: 0; font: 700 26px/1.15 var(--font-display); letter-spacing: -.02em; }
+.tb-head p { margin: 4px 0 0; font-size: 14.5px; line-height: 1.5; color: var(--color-ink-2); }
+.tb-ib { width: 40px; height: 40px; margin-left: -6px; flex-shrink: 0; border-radius: 10px; display: grid; place-items: center; color: var(--color-ink); cursor: pointer; }
+.tb-ib:hover { background: var(--color-field); }
+.tb-ib svg { width: 20px; height: 20px; }
+
+.tb-btn { display: inline-flex; align-items: center; justify-content: center; gap: 7px; min-height: 42px; padding: 0 16px; border-radius: 12px; border: 1px solid var(--color-line); background: var(--color-white); color: var(--color-ink); font: inherit; font-size: 14.5px; font-weight: 650; cursor: pointer; white-space: nowrap; transition: background-color .15s, border-color .15s; }
+.tb-btn:hover:not(:disabled) { border-color: var(--color-line-2); background: var(--color-field); }
+.tb-btn:disabled { opacity: .55; cursor: default; }
+.tb-btn svg { width: 17px; height: 17px; }
+.tb-btn.is-primary { background: var(--color-accent); border-color: var(--color-accent); color: var(--color-on-accent); }
+.tb-btn.is-primary:hover:not(:disabled) { background: var(--color-accent-hover, var(--color-accent)); border-color: transparent; }
+.tb-btn.is-ghost { border-color: transparent; background: transparent; color: var(--color-ink-2); }
+
+.tb-panel { display: flex; flex-direction: column; gap: 22px; padding: 18px; border-radius: 20px; background: var(--color-white); border: 1px solid var(--color-line); }
+@media (min-width: 640px) { .tb-panel { padding: 22px 24px; } }
+.tb-sec { display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+.tb-sec-h { display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; }
+.tb-sec-h h2 { margin: 0; font-size: 15px; font-weight: 700; color: var(--color-ink); }
+.tb-sec-h span { font-size: 13px; color: var(--color-ink-3); }
+.tb-link { margin-left: auto; font-size: 13px; font-weight: 650; color: var(--color-accent); cursor: pointer; }
+.tb-hint { margin: 0; font-size: 13px; line-height: 1.45; color: var(--color-ink-3); }
+.tb-hint.is-warn { color: var(--color-warn); }
+.tb-row { display: grid; grid-template-columns: minmax(0, 1fr); gap: 22px; }
+@media (min-width: 640px) { .tb-row { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+/* Kaynak kartları */
+.tb-srcs { display: grid; grid-template-columns: minmax(0, 1fr); gap: 8px; }
+@media (min-width: 560px) { .tb-srcs { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 860px) { .tb-srcs { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.tb-src { display: grid; grid-template-columns: auto minmax(0, 1fr) auto auto; align-items: center; gap: 10px; min-height: 60px; padding: 10px 12px; border-radius: 14px; border: 1px solid var(--color-line); background: var(--color-white); text-align: left; cursor: pointer; transition: border-color .15s, background-color .15s; }
+.tb-src:hover:not(:disabled) { border-color: var(--color-line-2); }
+.tb-src:disabled { opacity: .5; cursor: not-allowed; }
+.tb-src-ic { width: 34px; height: 34px; border-radius: 10px; display: grid; place-items: center; background: var(--color-field); color: var(--color-ink-2); }
+.tb-src-ic svg { width: 18px; height: 18px; }
+.tb-src-t { display: flex; flex-direction: column; gap: 1px; min-width: 0; }
+.tb-src-t b { font-size: 14px; font-weight: 650; color: var(--color-ink); }
+.tb-src-t small { font-size: 12px; line-height: 1.3; color: var(--color-ink-3); }
+.tb-src-n { font-family: var(--font-mono); font-size: 12px; color: var(--color-ink-3); white-space: nowrap; }
+.tb-check { width: 20px; height: 20px; border-radius: 6px; border: 1.5px solid var(--color-line-2); display: grid; place-items: center; color: var(--color-on-accent); }
+.tb-check svg { width: 14px; height: 14px; }
+.tb-src.is-on { border-color: var(--color-accent); background: var(--color-accent-soft); }
+.tb-src.is-on .tb-src-ic { background: var(--color-accent); color: var(--color-on-accent); }
+.tb-src.is-on .tb-check { background: var(--color-accent); border-color: var(--color-accent); }
+
+/* Hap seçimleri */
+.tb-chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.tb-chips.is-scroll { max-height: 168px; overflow-y: auto; overscroll-behavior: contain; }
+.tb-chip { display: inline-flex; align-items: center; gap: 6px; min-height: 34px; padding: 0 12px; border-radius: 99px; border: 1px solid var(--color-line); background: var(--color-white); color: var(--color-ink); font: inherit; font-size: 13.5px; cursor: pointer; max-width: 100%; }
+.tb-chip small { font-family: var(--font-mono); font-size: 11px; color: var(--color-ink-3); }
+.tb-chip:hover { border-color: var(--color-line-2); }
+.tb-chip.is-on { background: var(--color-accent-soft); border-color: color-mix(in srgb, var(--color-accent) 45%, transparent); color: var(--color-accent); font-weight: 650; }
+.tb-chip.is-on small { color: inherit; opacity: .75; }
+
+.tb-seg { display: inline-flex; flex-wrap: wrap; gap: 4px; padding: 4px; border-radius: 12px; background: var(--color-field); align-self: flex-start; }
+.tb-seg button { min-width: 48px; min-height: 36px; padding: 0 12px; border-radius: 9px; font: inherit; font-size: 14px; font-weight: 600; color: var(--color-ink-2); cursor: pointer; font-variant-numeric: tabular-nums; }
+.tb-seg button.is-on { background: var(--color-white); color: var(--color-ink); box-shadow: 0 1px 2px rgb(16 24 40 / .1); }
+
+.tb-foot { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; padding-top: 16px; border-top: 1px solid var(--color-line-soft); }
+.tb-sum { flex: 1 1 220px; min-width: 0; margin: 0; display: flex; flex-direction: column; gap: 2px; }
+.tb-sum b { font-size: 16px; font-weight: 700; }
+.tb-sum span { font-size: 13px; color: var(--color-ink-3); overflow-wrap: anywhere; }
+.tb-note { margin: -8px 0 0; font-size: 12.5px; color: var(--color-ink-3); }
+@media (max-width: 479px) {
+  .tb-head > .tb-btn { width: 100%; }
+  .tb-foot .tb-btn.is-primary { flex: 1 1 100%; }
+}
+
+/* ── v12 "Net" ── */
+:root[data-design='v12'] {
+  & .tb-head h1 { font: 600 22px/1.2 var(--font-sans); letter-spacing: -.015em; }
+  & .tb-head p { font-size: 13.5px; color: var(--color-ink-3); }
+  & .tb-ib { width: 34px; height: 34px; border-radius: 8px; }
+  & .tb-btn { min-height: 36px; padding: 0 14px; border-radius: 7px; font-size: 13.5px; font-weight: 550; }
+  & .tb-btn:active:not(:disabled) { transform: translateY(1px); }
+  & .tb-btn svg { width: 16px; height: 16px; }
+  & .tb-panel { border-radius: 12px; gap: 20px; }
+  & .tb-sec-h h2 { font-size: 13.5px; font-weight: 600; }
+  & .tb-src { min-height: 54px; border-radius: 10px; padding: 8px 10px; gap: 10px; }
+  & .tb-src-ic { width: 28px; height: 28px; border-radius: 7px; background: transparent; box-shadow: inset 0 0 0 1px var(--color-line); }
+  & .tb-src-ic svg { width: 16px; height: 16px; }
+  & .tb-src-t b { font-size: 13.5px; font-weight: 600; }
+  & .tb-src.is-on { background: var(--color-white); border-color: var(--color-accent); box-shadow: inset 0 0 0 1px var(--color-accent); }
+  & .tb-src.is-on .tb-src-ic { background: var(--color-accent-soft); color: var(--color-accent); box-shadow: none; }
+  & .tb-check { border-radius: 4px; width: 18px; height: 18px; }
+  & .tb-chip { min-height: 30px; padding: 0 10px; border-radius: 7px; font-size: 13px; }
+  & .tb-chip.is-on { font-weight: 550; border-color: var(--color-accent); }
+  & .tb-seg { border-radius: 8px; padding: 3px; gap: 2px; }
+  & .tb-seg button { min-height: 30px; border-radius: 6px; font: 500 13px var(--font-mono); }
+  & .tb-seg button.is-on { box-shadow: 0 0 0 1px var(--color-line); }
+  & .tb-sum b { font: 600 15px var(--font-sans); }
+}

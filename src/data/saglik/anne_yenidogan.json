@@ -1,0 +1,1624 @@
+{
+ "dob_izlemleri": [
+  {
+   "no": 1,
+   "zaman": "İlk 14 hafta (ilk izlem; 30 dk)",
+   "hafta_bas": 0,
+   "hafta_son": 14,
+   "icerik": [
+    "14. haftadan sonra saptanan gebelik, haftasına bakılmaksızın 'ilk izlem' sayılır; ilk izlemin tüm prosedürleri + haftaya uygun işlemler yapılır.",
+    "Öykü: kişisel bilgiler, akraba evliliği, soy geçmişi, alışkanlıklar, tıbbi öykü (talasemi ve SMA taşıyıcılığı, aşılanma durumu: Tdab, rubella, HBV, influenza, COVID-19, serviks kanseri taraması), obstetrik öykü, SAT/TDT.",
+    "Fizik muayene: boy-kilo/BKİ (BKİ <18,5 veya ≥30 → diyetisyen), kan basıncı (≥140/90 gebelikte yüksek → KHDU sevk; ≥160/110 → 15 dk sonra tekrar, yüksekse tedavi + 112 ile sevk), nabız, anemi bulguları, oskültasyon, ödem/varis, uterus-hafta uyumu, fetal kalp atımı (110-160/dk; el Doppleri ile 16. haftadan itibaren).",
+    "Risk değerlendirme formu; preeklampsi risk faktörüne göre 12. haftadan itibaren 80-150 mg/gün aspirin (1 majör veya ≥2 minör risk); VTE risk değerlendirmesi.",
+    "Laboratuvar: tam idrar + idrar kültürü (asemptomatik bakteriüri tedavisi; keton veya 2+ proteinüri → sevk), tam kan sayımı (Hb<11 ve MCV<80 → mümkünse ferritin, demir tedavisi; demir eksikliği yokken MCV<80 → talasemi taraması), HBsAg (aşılı olsa da) ve anti-HCV, kan grubu (anne Rh-, baba Rh+ → indirekt Coombs; negatifse 28. haftada tekrar), rubella IgG (bağışıklık bilinmiyorsa), sifiliz, onamla HIV, TSH.",
+    "Risk grubunda gestasyonel diyabet erken taraması (AKŞ ≥126 veya rastgele ≥200 ya da HbA1c ≥%6,5 → aşikar diyabet); negatifse 24-28. haftada 75 g veya 100 g OGTT.",
+    "Serviks kanseri taraması için Ulusal Kanser Tarama Programına yönlendirme.",
+    "Prenatal tarama/tanı testleri hakkında bilgilendirme: 11-14. hafta ense saydamlığı + kombine test; 16-20. hafta MSAFP; 16-20. hafta üçlü/dörtlü test (kombine yapılmamışsa); 18-24. hafta USG ile fetal anomali taraması; koryon villus örneklemesi/amniyosentez.",
+    "İlaç/destek: anemi yoksa 16. haftadan demir desteği; folik asit gebelikten ≥1 ay önce 400-800 µg/gün (yüksek riskte 3 ay önceden 4-5 mg/gün), tüm gebelerde 12. haftaya kadar; 12. haftadan itibaren 1200 IU/gün D vitamini; tetanos bağışıklaması (12. haftadan, Tdab 18. haftadan itibaren); HBV'ye bağışık değil ve riskli ise aşı; grip sezonunda (Eylül-Nisan) influenza aşısı.",
+    "Danışmanlık: beslenme/kilo alımı, fiziksel aktivite, seyahat, cinsel yaşam, hijyen, ağız-diş sağlığı, sigara-alkol-madde, ilaç ve takviye kullanımı, gebelikte tehlike işaretleri; gebe okulu bulunan kuruluşa yönlendirme; aile içi şiddet değerlendirmesi.",
+    "Risk formunda en az bir 'evet' → kadın hastalıkları ve doğum uzmanı bulunan kuruluşa sevk."
+   ],
+   "kaynak": "sb_dob_2026",
+   "konum": "Birinci İzlem, s.1-13"
+  },
+  {
+   "no": 2,
+   "zaman": "18-24. hafta (20 dk)",
+   "hafta_bas": 18,
+   "hafta_son": 24,
+   "icerik": [
+    "Öykünün gözden geçirilmesi; alışkanlıklar, yakınmalar, tehlike işaretleri, demir/ilaç kullanımı sorgusu.",
+    "Fizik muayenenin tekrarı; kilo alımı, VTE risk formu; fundus-pubis mesafesi beklenenden ±4 cm farklıysa sevk.",
+    "Tam idrar tahlili (önceden yapılmadıysa idrar kültürü); tam kan sayımı tekrarı.",
+    "Yüksek risk grubunda olmayan tüm gebelere 24-28. haftada 50 g oral glukoz tarama testi konusunda bilgilendirme.",
+    "18-24. haftada USG ile fetal anomali taraması (yapılamıyorsa nöral tüp defekti için MSAFP); geçirilmiş uterin cerrahide plasenta yerleşim/yapışma anomalisi değerlendirmesi; erken doğum öyküsünde TV-USG ile servikal uzunluk.",
+    "Kombine test yapılmamış ve gebe istiyorsa üçlü/dörtlü test; kombine yapılmışsa tekrar gerekmez.",
+    "Demir ve D vitamini başlanmamışsa başlatma; gerekiyorsa tetanos aşısı (Tdab 1. doz 18-24. hafta).",
+    "Danışmanlık: fetüs hareketlerinin hissedilmemesi, hızlı kilo alımı, tehlike işaretleri; ağız-diş sağlığı eğitimi; gebe okuluna yönlendirme."
+   ],
+   "kaynak": "sb_dob_2026",
+   "konum": "İkinci İzlem, s.14-17; Şekil 3 s.35"
+  },
+  {
+   "no": 3,
+   "zaman": "28-32. hafta (20 dk)",
+   "hafta_bas": 28,
+   "hafta_son": 32,
+   "icerik": [
+    "Öykü tekrarı; demir, ilaç ve takviye kullanımının sorgulanması.",
+    "Fizik muayene, kilo alımı, VTE risk formu (1. ve 3. izlemde doldurulur), uterus-hafta uyumu; yaygın ödem kontrolü (üst vücutta ödem preeklampsinin ilk belirtisi olabilir).",
+    "32. haftadan doğuma kadar haftada 1 kan basıncı ölçümü önerilir; >130/80 mmHg ise doktora başvuru.",
+    "Tam idrar tahlili ve idrar kültürü; tam kan sayımı; Rh uygunsuzluğunda indirekt Coombs, 28. haftadan itibaren Coombs negatifse anti-D immünglobulin yapılabilir.",
+    "Geçirilmiş uterin cerrahide plasenta yerleşim/yapışma anomalisi açısından tekrar değerlendirme.",
+    "Demir/D vitamini devamı; tetanos (Td 2. doz 28-32. hafta).",
+    "Danışmanlık: doğum eylemi ve doğum, doğumun yapılacağı kuruluş, emzirme ve anne sütünün önemi, doğum sonu üreme sağlığı (kontrasepsiyon) danışmanlığı; gebe okuluna yönlendirme."
+   ],
+   "kaynak": "sb_dob_2026",
+   "konum": "Üçüncü İzlem, s.18-21"
+  },
+  {
+   "no": 4,
+   "zaman": "36-38. hafta (20 dk)",
+   "hafta_bas": 36,
+   "hafta_son": 38,
+   "icerik": [
+    "Öykü tekrarı; yakınmalar ve tehlike işaretleri.",
+    "Fizik muayene; kilo alımı; VTE formu gözden geçirme; uterus-hafta uyumu.",
+    "Obstetrik USG: fetüs sayısı, fetal kalp atımı, biyometri, plasenta lokalizasyonu, amniyon sıvısı (uterin cerrahi öyküsünde yapışma anomalisi).",
+    "Yaygın ödem ve preeklampsi belirtilerinin sorgulanması; haftalık tansiyon takibi önerisi.",
+    "Emzirmeye yönelik meme muayenesi; prezente kısmın belirlenmesi (prezentasyon anomalisi şüphesinde sevk).",
+    "Tam idrar tahlili; tam kan sayımı (Hb <10 g/dl → anemi yönetimi için sevk).",
+    "Danışmanlık: doğum eyleminin belirtileri (kanama, su gelişi, sancı), doğumun yapılacağı kuruluş, anne sütü ve emzirme, doğum sonu üreme sağlığı."
+   ],
+   "kaynak": "sb_dob_2026",
+   "konum": "Dördüncü İzlem, s.22-25"
+  }
+ ],
+ "tehlike_isaretleri": {
+  "maddeler": [
+   "Şiddetli bulantı ve kusma",
+   "Vajinal kanama",
+   "Konvülziyon",
+   "Şiddetli baş ağrısı",
+   "Görmede bulanıklık",
+   "Ateş",
+   "Günlük aktivitelerini yerine getirememe",
+   "Karın ağrısı",
+   "Solunum güçlüğü veya sık solunum",
+   "Yüz, el ve bacaklarda şişme",
+   "Bebek hareketlerinde azalma",
+   "Su gelmesi",
+   "Nedeni açıklanamayan cilt kaşıntısı"
+  ],
+  "acil_sevk_kriterleri": [
+   "Ani/yoğun kan kaybı veya şok bulguları (taşikardi, hipotansiyon, hipoperfüzyon) ve bilinç değişikliği",
+   "≥160/110 mmHg (15 dk sonra hâlâ yüksek) veya preeklampsi bulgularıyla >140/90 ya da 4 saatte <140/90'a düşürülemeyen kan basıncı",
+   "Konvülziyon",
+   "Ciddi karın ağrısı/akut batın",
+   "Solunum güçlüğü ve hızlı solunum",
+   "Şiddetli/sürekli baş ağrısı, bulanık veya çift görme",
+   "İki ölçümde ateş >38°C veya enfeksiyon bulguları",
+   "Uterin hassasiyet ve/veya kötü kokulu vajinal akıntı",
+   "Baldır ağrısı, kızarıklık veya şişme",
+   "Nefes darlığı veya göğüs ağrısı",
+   "Ciddi anemi (Hb ≤7 g/dL)"
+  ],
+  "kaynak": "sb_dob_2026",
+  "konum": "Bilgilendirme ve danışmanlık s.12-13; Sevk Kriterleri s.26"
+ },
+ "lohusa_izlemleri": [
+  {
+   "no": 1,
+   "zaman": "Doğumu takip eden ilk 0-1. saat (hastanede)",
+   "icerik": [
+    "Genel durum, bilinç; vital bulgular 15 dakikada bir (≥140/90 preeklampsi; şok indeksi >0,8 kanama açısından)",
+    "Kanama ve uterus involüsyonu: 3. evrenin aktif yönetimi (ilk seçenek oksitosin 10 ünite İM veya 5-10 ünite İV); uterus tonusu ilk yarım saat 5-10 dk, sonraki yarım saat 15 dk, 2. saate kadar yarım saatte bir",
+    "Vajinal doğumda perine (vajinal-rektal) muayenesi; hematom değerlendirmesi",
+    "Kan grubu (bilinmiyorsa); anne Rh(-) ise bebeğin kan grubu",
+    "İlk 30-60 dakikada ten tene temas ve emzirmenin başlatılması; anne-bebek 24 saat aynı odada",
+    "Hastanede kalış süresi için risk tespiti"
+   ],
+   "kaynak": "sb_dsb_2026",
+   "konum": "Birinci İzlem, s.1-15"
+  },
+  {
+   "no": 2,
+   "zaman": "Doğumu takip eden 1-6. saat (hastanede)",
+   "icerik": [
+    "Vital bulgular 1-2. saatte 30 dk'da bir, 2-6. saatte saatte bir",
+    "Emzirme değerlendirmesi ve meme muayenesi",
+    "Rh uygunsuzluğunda bebeğin Rh durumuna göre anti-D Ig; gerekiyorsa tetanos immünizasyonu",
+    "Doğum sonu 6. saatte hemoglobin ölçümü",
+    "İlk 2 saatte idrar yapmaya teşvik, 6 saatte idrar kontrolü; erken mobilizasyon (tromboemboli önlemi)",
+    "Bebek bakımı eğitimi"
+   ],
+   "kaynak": "sb_dsb_2026",
+   "konum": "İkinci İzlem, s.16-21"
+  },
+  {
+   "no": 3,
+   "zaman": "Doğumu takip eden 6-24. saat (hastanede, taburculuk öncesi)",
+   "icerik": [
+    "Kanama ve involüsyon (6 saatte bir); perine/sezaryen kesisi değerlendirmesi",
+    "Gerekirse hemoglobin ölçümü",
+    "VTE risk değerlendirmesi ve gerekirse profilaksi",
+    "Psikolojik değerlendirme (gerekirse Edinburgh Postpartum Depresyon Ölçeği); aile içi şiddet",
+    "Demir ve D vitamini desteğinin başlatılması",
+    "Taburculuk danışmanlığı: tehlike işaretleri, emzirme, beslenme, kontrasepsiyon (iki doğum arası en az 2 yıl)",
+    "Komplikasyonsuz vajinal doğumda en az 24 saat, sezaryende en az 48 saat hastanede kalış (2010/27 sayılı genelge)"
+   ],
+   "kaynak": "sb_dsb_2026",
+   "konum": "Üçüncü İzlem, s.22-30"
+  },
+  {
+   "no": 4,
+   "zaman": "Doğumu takip eden 2-5. gün (evde veya sağlık kuruluşunda)",
+   "icerik": [
+    "Loşi takibi (ilk 2 gün kırmızı, 2-10. gün pembe-kahverengi; emzirenlerde lekelenme 6. haftaya kadar sürebilir)",
+    "Fundus yüksekliği (her 24 saatte ~1-2 cm iner); perine/insizyon değerlendirmesi",
+    "Vital bulgular; Edinburgh Postpartum Depresyon Ölçeği; sigara-alkol-madde sorgusu",
+    "Emzirme ve meme başı değerlendirmesi; en az 6 ay sadece anne sütü önerisi",
+    "Anti-D yapılmamışsa uygulanması; demir ve D vitamini devamı",
+    "Gerekirse Hb ve tam idrar tahlili; tehlike işaretleri eğitimi"
+   ],
+   "kaynak": "sb_dsb_2026",
+   "konum": "Dördüncü İzlem, s.31-38"
+  },
+  {
+   "no": 5,
+   "zaman": "Doğumu takip eden 13-17. gün (evde veya sağlık kuruluşunda)",
+   "icerik": [
+    "4. izlemdeki değerlendirme ve muayene basamakları",
+    "Fundus simfizis pubis hizasında olmalı",
+    "Gerekirse Hb ve tam idrar tahlili",
+    "VTE profilaksisi devamı (risk grubunda)",
+    "Bir sonraki izleme eşiyle birlikte gelmesinin istenmesi"
+   ],
+   "kaynak": "sb_dsb_2026",
+   "konum": "Beşinci İzlem, s.39-40"
+  },
+  {
+   "no": 6,
+   "zaman": "Doğumu takip eden 30-42. gün (evde veya sağlık kuruluşunda)",
+   "icerik": [
+    "4. izlemdeki değerlendirme ve muayene basamakları; fundus yüksekliği",
+    "Gestasyonel diyabet öyküsünde doğum sonu 6-12. haftada OGTT önerisi",
+    "Cinsel yaşam ve kontrasepsiyon danışmanlığı (iki doğum arası en az 2 yıl)",
+    "Psikolojik durum değerlendirmesi; psikiyatrik risk varsa sevk"
+   ],
+   "kaynak": "sb_dsb_2026",
+   "konum": "Altıncı İzlem, s.41-43"
+  }
+ ],
+ "bebek_cocuk_izlemleri": [
+  {
+   "zaman": "Doğum sonrası ilk izlem (doğumun hemen sonrası)",
+   "ay": 0,
+   "icerik": [
+    "Baş çevresi, boy, ağırlık; fizik muayene",
+    "İşitme taraması (T), görme taraması/kırmızı refle (T), yenidoğan topuk kanı taraması (T), GKD taraması/risk değerlendirmesi (T)",
+    "Bağışıklama (Hepatit B 1. doz)",
+    "Danışmanlık; KKKH için nabız oksimetresi taraması 24-48. saatte veya taburculuk öncesi"
+   ],
+   "kaynak": "sb_bce_2026",
+   "konum": "Özet Tablo s.53; İzlem Aralıkları s.55"
+  },
+  {
+   "zaman": "Doğumdan sonraki ilk hafta (1-10. gün)",
+   "ay": 0.1,
+   "icerik": [
+    "Topuk kanı 2. örneği (3-5. gün) (T); görme (T); işitme taramasının yapıldığının sorgulanması",
+    "Hepatit B 1. dozun sorgulanması; emzirme değerlendirmesi",
+    "≤32 hafta ve ≤1500 g doğan tüm bebeklerin 4. haftada ROP muayenesine sevki",
+    "GKD risk faktörü varsa kalça USG randevusu",
+    "D vitamini 400 IU/gün (3 damla) başlatılması ve ücretsiz verilmesi"
+   ],
+   "kaynak": "sb_bce_2026",
+   "konum": "İlk hafta izlemi s.20-21; s.55"
+  },
+  {
+   "zaman": "15. gün izlemi (11-29. gün)",
+   "ay": 0.5,
+   "icerik": [
+    "Büyüme ölçümleri, işitme ve görme değerlendirmesi, gelişimin değerlendirilmesi (GİDR)",
+    "D vitamini desteği, danışmanlık"
+   ],
+   "kaynak": "sb_bce_2026",
+   "konum": "s.24-28; s.53-55"
+  },
+  {
+   "zaman": "41. gün izlemi (30-59. gün)",
+   "ay": 1.35,
+   "icerik": [
+    "GKD için risk değerlendirmesi ve kalça fizik muayenesi (T) – aile hekiminin '4. izlemi'",
+    "1. ay Hepatit B aşısı; büyüme-gelişim; D vitamini"
+   ],
+   "kaynak": "sb_bce_2026",
+   "konum": "s.24-28; AŞ3.5 s.96; s.53-55"
+  },
+  {
+   "zaman": "2. ay izlemi (60-89. gün)",
+   "ay": 2,
+   "icerik": [
+    "Aşılar (2. ay takvimi)",
+    "Prematüre/düşük doğum ağırlıklı bebeğe demir desteği (gerekirse, 2 mg/kg/gün)",
+    "Büyüme, gelişim, D vitamini"
+   ],
+   "kaynak": "sb_bce_2026",
+   "konum": "s.24-28; AŞ6.2a; s.53-55"
+  },
+  {
+   "zaman": "3. ay izlemi (90-115. gün)",
+   "ay": 3,
+   "icerik": [
+    "Büyüme-gelişim; diş sağlığı değerlendirmesinin başlaması",
+    "D vitamini; gerekirse demir"
+   ],
+   "kaynak": "sb_bce_2026",
+   "konum": "s.29-32; s.53-55"
+  },
+  {
+   "zaman": "4. ay izlemi (120-150. gün)",
+   "ay": 4,
+   "icerik": [
+    "Anemi değerlendirmesi; term bebeğe demir profilaksisi başlatılması (1 mg/kg/gün veya 10 mg/gün)",
+    "Aşılar; büyüme-gelişim; D vitamini"
+   ],
+   "kaynak": "sb_bce_2026",
+   "konum": "s.29-32; AŞ6.2b s.126"
+  },
+  {
+   "zaman": "6. ay izlemi (180-210. gün)",
+   "ay": 6,
+   "icerik": [
+    "Büyüme-gelişim, aşılar, demir ve D vitamini desteği",
+    "Tamamlayıcı beslenme danışmanlığı (6. aydan sonra anne sütüne ek besin)"
+   ],
+   "kaynak": "sb_bce_2026",
+   "konum": "s.33-36"
+  },
+  {
+   "zaman": "9. ay izlemi (250-290. gün)",
+   "ay": 9,
+   "icerik": [
+    "Hb/Hct ölçümü (profilaksi alan term bebeklerde anemi kontrolü)",
+    "Büyüme-gelişim; demir ve D vitamini"
+   ],
+   "kaynak": "sb_bce_2026",
+   "konum": "s.33-36; AŞ6.2b"
+  },
+  {
+   "zaman": "12. ay izlemi (365-394. gün)",
+   "ay": 12,
+   "icerik": [
+    "Demir profilaksisinin 12. aya kadar sürdürülmesi; aşılar",
+    "Büyüme-gelişim; 1 yaşından sonra D vitamini ihtiyacı 600 IU/gün"
+   ],
+   "kaynak": "sb_bce_2026",
+   "konum": "s.33-36; AŞ6.1 s.124"
+  },
+  {
+   "zaman": "18. ay izlemi (481-570. gün)",
+   "ay": 18,
+   "icerik": [
+    "Otizm spektrum bozukluğu değerlendirmesi",
+    "Büyüme-gelişim, aşılar"
+   ],
+   "kaynak": "sb_bce_2026",
+   "konum": "s.37-40; s.53"
+  },
+  {
+   "zaman": "24. ay izlemi (661-760. gün)",
+   "ay": 24,
+   "icerik": [
+    "Otizm spektrum bozukluğu değerlendirmesi; BKİ; hiperlipidemi risk değerlendirmesi"
+   ],
+   "kaynak": "sb_bce_2026",
+   "konum": "s.37-40; s.53"
+  },
+  {
+   "zaman": "30. ay izlemi (841-930. gün)",
+   "ay": 30,
+   "icerik": [
+    "Büyüme (BKİ), gelişim, hiperlipidemi risk değerlendirmesi, diş sağlığı"
+   ],
+   "kaynak": "sb_bce_2026",
+   "konum": "s.53-55"
+  },
+  {
+   "zaman": "36. ay izlemi (1021-1110. gün)",
+   "ay": 36,
+   "icerik": [
+    "Büyüme-gelişim; 36-48 ay görme muayenesi"
+   ],
+   "kaynak": "sb_bce_2026",
+   "konum": "s.37-40; AŞ3.1b"
+  },
+  {
+   "zaman": "48. ay izlemi (1321-1530. gün)",
+   "ay": 48,
+   "icerik": [
+    "4-6 yaş çocuk izlemi; yılda bir kontrol"
+   ],
+   "kaynak": "sb_bce_2026",
+   "konum": "s.41-44; s.55"
+  },
+  {
+   "zaman": "60. ay izlemi (1681-1890. gün)",
+   "ay": 60,
+   "icerik": [
+    "Yılda bir kontrol; okula hazır olma"
+   ],
+   "kaynak": "sb_bce_2026",
+   "konum": "s.41-44; s.55"
+  },
+  {
+   "zaman": "6-21 yaş: yılda bir izlem (6. yaş 63-78. ay … 21. yaş 247-258. ay)",
+   "ay": 72,
+   "icerik": [
+    "Yıllık izlem; ilkokul 1. sınıfta görme ve işitme taraması",
+    "10-21 yaşta her yıl izlem; Hb/Hct ölçümü 10-14, 15-18 ve 19-21 yaş gruplarında birer kez",
+    "Aile hekimleri, bebekte ilk izlem hariç diğer 8 bebek izleminden, çocuk izlemlerinden ve 6-19 yaş izlemlerinin tamamından sorumludur"
+   ],
+   "kaynak": "sb_bce_2026",
+   "konum": "s.45-55"
+  }
+ ],
+ "yenidogan_taramalari": [
+  {
+   "id": "pku",
+   "ad": "Fenilketonüri",
+   "grup": "Topuk kanı",
+   "baslangic": 1987,
+   "zaman": "İlk örnek doğumdan sonraki ilk 48 saat içinde (oral beslenmeden sonra; beslenme yetersiz olsa da 48 saat içinde), ikinci örnek ilk hafta içinde (3-5. gün)",
+   "yontem": "Guthrie (5 daireli filtre) kağıdına topuk kanı; plantar yüzün medial/lateral kenarı, ilk damla silinir",
+   "not": "1993'te tüm Türkiye'ye yaygınlaştırıldı. 48 saat geçtikten sonra ilk kez alınıyorsa 5+2 gode iki ayrı kağıda alınır ve şüpheli sonuç yoksa 2. örnek gerekmez. Örnekler Ankara ve İstanbul tarama laboratuvarlarına gönderilir.",
+   "kaynak": "sb_ytp",
+   "ek_kaynaklar": [
+    "sb_bce_2026"
+   ]
+  },
+  {
+   "id": "kht",
+   "ad": "Konjenital hipotiroidi",
+   "grup": "Topuk kanı",
+   "baslangic": 2006,
+   "zaman": "Aynı topuk kanı örnekleri (ilk 48 saat + 3-5. gün)",
+   "yontem": "Topuk kanı (kuru kan lekesi)",
+   "not": "25.12.2006'da FKÜ'ye eklenmesiyle Ulusal Yenidoğan Tarama Programı başladı.",
+   "kaynak": "sb_ytp",
+   "ek_kaynaklar": [
+    "sb_bce_2026"
+   ]
+  },
+  {
+   "id": "be",
+   "ad": "Biyotinidaz eksikliği",
+   "grup": "Topuk kanı",
+   "baslangic": 2008,
+   "zaman": "Aynı topuk kanı örnekleri",
+   "yontem": "Topuk kanı (kuru kan lekesi)",
+   "not": "Ekim 2008'de panele eklendi.",
+   "kaynak": "sb_ytp",
+   "ek_kaynaklar": [
+    "sb_bce_2026"
+   ]
+  },
+  {
+   "id": "kf",
+   "ad": "Kistik fibrozis",
+   "grup": "Topuk kanı",
+   "baslangic": 2015,
+   "zaman": "Aynı topuk kanı örnekleri; IRT yüksekse ikinci topuk kanı",
+   "yontem": "İmmünreaktif tripsinojen (IRT); iki IRT eşik üstündeyse ter testi merkezine sevk",
+   "not": "Ocak 2015'ten itibaren panelde.",
+   "kaynak": "sb_ytp",
+   "ek_kaynaklar": [
+    "sb_kf_rehber",
+    "sb_bce_2026"
+   ]
+  },
+  {
+   "id": "kah",
+   "ad": "Konjenital adrenal hiperplazi",
+   "grup": "Topuk kanı",
+   "baslangic": 2017,
+   "zaman": "Aynı topuk kanı örnekleri",
+   "yontem": "Topuk kanı (kuru kan lekesi)",
+   "not": "2017 pilot (Konya, Kayseri, Samsun, Adana); 2018'de 14, 2019'da 22, 2020'de 41 il; 2022'de 81 il.",
+   "kaynak": "sb_ytp",
+   "ek_kaynaklar": [
+    "sb_bce_2026"
+   ]
+  },
+  {
+   "id": "sma",
+   "ad": "Spinal müsküler atrofi",
+   "grup": "Topuk kanı",
+   "baslangic": 2022,
+   "zaman": "Aynı topuk kanı örnekleri",
+   "yontem": "Topuk kanı; SMA çalışılacak kısım kuruduktan sonra ayrılıp ayrı kilitli poşete konur",
+   "not": "09.05.2022'den itibaren panelde.",
+   "kaynak": "sb_ytp",
+   "ek_kaynaklar": [
+    "sb_bce_2026"
+   ]
+  },
+  {
+   "id": "isitme",
+   "ad": "Yenidoğan işitme taraması",
+   "grup": "İşitme",
+   "baslangic": 2000,
+   "zaman": "1. ABR testi doğumdan sonraki 72 saat içinde (taburculuk öncesi); kalırsa 2. test 7-15. gün, 3. test 15-30. gün; protokol 30 günde tamamlanır",
+   "yontem": "Tarama ABR (otomatik işitsel beyin sapı yanıtı)",
+   "not": "29.09.2000 pilot (Ankara Zübeyde Hanım Doğumevi), 2005'te AÇSAP GM'ye devir, 2008'de 81 ilde ulusal program. 5-30 gün yoğun bakım: kalırsa 2. test 15-30. gün; >30 gün yoğun bakım: ilk testten kalan doğrudan referans merkezine. Risk faktörlüler testi geçse de izleme yönlendirilir. Okul çağında 1. sınıfta odyometrik tarama.",
+   "kaynak": "sb_isitme",
+   "ek_kaynaklar": [
+    "sb_bce_2026"
+   ]
+  },
+  {
+   "id": "gkd",
+   "ad": "Gelişimsel kalça displazisi",
+   "grup": "Ortopedik",
+   "baslangic": 2010,
+   "zaman": "İlk 48 saatte aile bilgilendirme ve risk kaydı; risk varsa USG; risk yoksa 41. gün izleminde aile hekimi fizik muayenesi; hedef USG yaşı ilk 3-6 hafta",
+   "yontem": "Risk değerlendirmesi + kalça muayenesi; Graf yöntemiyle kalça USG (her kalçadan ≥2 sonogram). Tip I izlemden çıkar, Tip IIa dahil diğerleri izlenir",
+   "not": "Çocuk Ortopedisi Derneği iş birliğiyle 2010'da başladı; 2013'te radyoloji derneği katıldı. Risk faktörleri: aile öyküsü, makat geliş/doğum, çoğul gebelik, oligohidramnios, eşlik eden deformiteler, kundak, ilk doğan kız.",
+   "kaynak": "sb_gkd",
+   "ek_kaynaklar": [
+    "sb_bce_2026"
+   ]
+  },
+  {
+   "id": "kkkh",
+   "ad": "Kritik doğuştan kalp hastalıkları (nabız oksimetresi)",
+   "grup": "Kardiyak",
+   "baslangic": 2026,
+   "zaman": "Doğumdan sonraki 24-48. saat veya taburculuk öncesi (<24 saat ölçülmüşse 72 saat içinde tekrar önerilir); oksijen kesildikten ≥24 saat sonra",
+   "yontem": "Sağ el (preduktal) ve ayak (postduktal) SpO2. Geçti: her ikisi ≥%95 ve fark ≤%3. Şüpheli: %90-94 veya fark >%3 → 1 saat sonra tekrar. Kaldı: herhangi birinde <%90 veya iki ölçümde şüpheli → hekim muayenesi (≤2 saat) ve EKO için sevk",
+   "not": "Rehber 2026'da (HSGM) yayımlandı; Ulusal KDKH Tarama Programı olarak ülke geneline yaygınlaştırılması hedefleniyor. Başlangıç yılı rehber tarihidir.",
+   "kaynak": "sb_kkkh_2026"
+  },
+  {
+   "id": "gorme",
+   "ad": "Yenidoğan görme taraması (kırmızı refle)",
+   "grup": "Göz",
+   "baslangic": null,
+   "zaman": "Doğum sonrası ilk izlem ve ilk hafta (T); sonraki izlemlerde muayene",
+   "yontem": "Kırmızı refle testi ve göz muayenesi (şaşılık, ambliyopi, katarakt, glokom, retinoblastom, ROP)",
+   "not": "Aile hekimlerine kırmızı refle eğitimi verildi; 36-48 ay ve ilkokul 1. sınıfta ayrıca görme taraması.",
+   "kaynak": "sb_gorme_yd",
+   "ek_kaynaklar": [
+    "sb_bce_2026"
+   ]
+  },
+  {
+   "id": "rop",
+   "ad": "Prematüre retinopatisi (ROP) taraması",
+   "grup": "Göz",
+   "baslangic": null,
+   "zaman": "Doğum sonrası 4. hafta",
+   "yontem": "Göz hastalıkları uzmanı muayenesi",
+   "not": "32 hafta ve altındaki tüm prematüreler ile 1500 g ve altında doğan tüm bebekler sevk edilir.",
+   "kaynak": "sb_bce_2026",
+   "ek_kaynaklar": [
+    "sb_gorme_rehber"
+   ]
+  }
+ ],
+ "destek_programlari": [
+  {
+   "ad": "Demir Gibi Türkiye (bebek demir desteği)",
+   "hedef": "Anemisi olmayan term bebekler (4-12 ay); prematüre/<2500 g bebekler",
+   "doz": "Term: 10 mg/gün elementer demir (+3 değerlikli 4 damla veya +2 değerlikli 9 damla, günde tek doz); 2026 protokolünde 1 mg/kg/gün veya 10 mg/gün (Fe+2). Prematüre/DDA: 2 mg/kg/gün. Anemi tedavisi (4-24 ay): 3 mg/kg/gün, 3 ay. Hb<7 g/dL veya Htc<%21 → acil sevk",
+   "baslangic": "Term: 4. ay; prematüre/DDA: 2. ay (Demir Gibi Türkiye rehberi), 2026 protokolünde 15. günden sonra",
+   "bitis": "1 yaş (12. ay; en az 5 ay); profilakside 9. ayda Hb/Hct kontrolü",
+   "not": "Program Nisan 2004'te başladı; bu yaş grubunda anemi sıklığı %30'lardan %6,3'e indi.",
+   "kaynak": "sb_demirgibi_rehber",
+   "ek_kaynaklar": [
+    "sb_demirgibi_web",
+    "sb_bce_2026"
+   ]
+  },
+  {
+   "ad": "Bebeklere D Vitamini Desteği (D Vitamini Eksikliği Önleme ve Kontrol Programı)",
+   "hedef": "Beslenme biçimine bakılmaksızın tüm yenidoğanlar",
+   "doz": "400 IU/gün (3 damla), ağızdan; ilk 12 ayda profilaksi için daha yüksek doz veya ampul gerekmez",
+   "baslangic": "Yaşamın ilk günü (2-3 hafta beklenmez)",
+   "bitis": "1 yaşın sonu (AŞ6.1); 2026 protokolünün ilk hafta bölümü ve özet tablosu 24. aya kadar desteği gösteriyor. 1 yaşından sonra ihtiyaç 600 IU/gün",
+   "not": "Mayıs 2005'ten itibaren ülke genelinde ücretsiz; anne sütünde D vitamini düşüktür.",
+   "kaynak": "sb_dvit_web",
+   "ek_kaynaklar": [
+    "sb_dvit_rehber",
+    "sb_bce_2026"
+   ]
+  },
+  {
+   "ad": "Gebelere Demir Desteği",
+   "hedef": "Tüm gebe ve lohusalar (kontrendikasyon dışında)",
+   "doz": "Profilaksi 40-60 mg/gün elementer demir (Fe+2). Anemi: Hb 7-11 g/dl ve MCV<80 veya ferritin<30 → 100-120 mg/gün; MCV 80-85 veya ferritin 30-100 → 40-60 mg/gün; 2-3 hafta sonra Hb kontrolü. Hb<7 g/dl veya ferritin>100 → sevk; 34. haftada Hb<10 → IV demir için sevk",
+   "baslangic": "16. gebelik haftası (4. ay)",
+   "bitis": "Gebelikte 6 ay + doğum sonu 3 ay (toplam 9 ay)",
+   "not": "2020/4 sayılı 'Gebelere Demir ve D Vitamini Destek Uygulamaları' genelgesi; güvencesizlere ücretsiz.",
+   "kaynak": "sb_gebe_nutrisyonel",
+   "ek_kaynaklar": [
+    "sb_dob_2026"
+   ]
+  },
+  {
+   "ad": "Gebelere D Vitamini Desteği",
+   "hedef": "Tüm gebe ve lohusalar",
+   "doz": "1200 IU/gün tek doz (9 damla); serum 25(OH)D düzeyine bakılmaksızın; hiperkalsemi bulgusunda sevk",
+   "baslangic": "12. gebelik haftası",
+   "bitis": "Doğum sonu 6. ayın sonu",
+   "not": "2020/4 sayılı genelge.",
+   "kaynak": "sb_gebe_nutrisyonel",
+   "ek_kaynaklar": [
+    "sb_dob_2026"
+   ]
+  },
+  {
+   "ad": "Folik asit desteği",
+   "hedef": "Gebelik planlayan tüm kadınlar",
+   "doz": "400-800 µg/gün; NTD açısından yüksek riskte (antiepileptik kullanımı, NTD öyküsü, diyabet, obezite) 4-5 mg/gün",
+   "baslangic": "Gebelikten en az 1 ay önce (yüksek riskte 3 ay önce)",
+   "bitis": "12. gebelik haftası",
+   "kaynak": "sb_dob_2026"
+  },
+  {
+   "ad": "Gebelikte Td/Tdab aşılaması",
+   "hedef": "Primer aşılaması tamamlanmamış veya kaydı olmayan gebeler",
+   "doz": "1. doz Tdab 18-24. hafta, 2. doz Td 28-32. hafta, rapel Td 2. dozdan 6 ay sonra; tetanos içeren son doz 5 yıl içindeyse tek doz Tdab",
+   "baslangic": "Tetanos 12. haftadan, Tdab 18. haftadan itibaren",
+   "bitis": "Tdab 32. haftanın sonuna kadar yapılabilir (Td ile arada ≥4 hafta)",
+   "kaynak": "sb_dob_2026"
+  },
+  {
+   "ad": "İyot Yetersizliği Hastalıklarının Önlenmesi ve Tuzun İyotlanması Programı",
+   "hedef": "Tüm toplum; risk grupları gebeler, doğurganlık çağındaki kadınlar, bebekler ve çocuklar",
+   "doz": "Sofra tuzuna 25-40 mg/kg potasyum iyodat",
+   "baslangic": "1994 (UNICEF iş birliği); 1998 tuz tebliği ile tüm sofra tuzlarının iyotlanması",
+   "bitis": "Süregelen",
+   "not": "İyotlu tuz kullanımı 1995'te %18,2'den 2008'de %85,4'e çıktı.",
+   "kaynak": "sb_iyot"
+  }
+ ],
+ "gostergeler": [
+  {
+   "kod": "AOO",
+   "ad": "Anne ölüm oranı",
+   "birim": "100.000 canlı doğumda",
+   "tanim": "Bir yılda gebelik nedeniyle ölen anne sayısının aynı yıldaki canlı doğum sayısına oranı × 100.000",
+   "seri": [
+    {
+     "yil": 2005,
+     "deger": 28.5
+    },
+    {
+     "yil": 2007,
+     "deger": 21.9
+    },
+    {
+     "yil": 2008,
+     "deger": 19.8
+    },
+    {
+     "yil": 2009,
+     "deger": 19.0
+    },
+    {
+     "yil": 2010,
+     "deger": 16.7
+    },
+    {
+     "yil": 2011,
+     "deger": 15.8
+    },
+    {
+     "yil": 2012,
+     "deger": 15.2
+    },
+    {
+     "yil": 2013,
+     "deger": 15.7
+    },
+    {
+     "yil": 2014,
+     "deger": 15.0
+    },
+    {
+     "yil": 2015,
+     "deger": 14.6
+    },
+    {
+     "yil": 2016,
+     "deger": 14.7
+    },
+    {
+     "yil": 2017,
+     "deger": 14.5
+    },
+    {
+     "yil": 2018,
+     "deger": 13.6
+    },
+    {
+     "yil": 2019,
+     "deger": 13.1
+    },
+    {
+     "yil": 2020,
+     "deger": 13.1
+    },
+    {
+     "yil": 2021,
+     "deger": 13.1
+    },
+    {
+     "yil": 2022,
+     "deger": 12.6
+    },
+    {
+     "yil": 2023,
+     "deger": 13.5
+    },
+    {
+     "yil": 2024,
+     "deger": 11.5
+    },
+    {
+     "yil": 2025,
+     "deger": 12.6
+    }
+   ],
+   "kaynak": "sb_anne_olum_2015_2019",
+   "konum": "2005-2019: Anne Ölümleri Raporu Şekil 2 (s.6); 2020: SİY 2020 Şekil 2.11; 2021: SİY 2021 Şekil 2.11; 2022-2023: SİY Şekil 2.12; 2024: SİY 2024 Şekil 2.11 (s.27) · 2025 değeri: Sağlık İstatistikleri Yıllığı 2025 Haber Bülteni",
+   "not": "2005 değeri Ulusal Anne Ölümleri Çalışması (UAÖÇ). 2020 değeri COVID-19 kaynaklı anne ölümleri hariçtir; dahil edildiğinde 19,9. DÖB Rehberi 2018 sunuşu 2002 için 64 bildirir (tahmin). 2006 için ayrı değer yok.",
+   "ek_kaynaklar": [
+    "sb_siy_2020",
+    "sb_siy_2022",
+    "tuik_istkadin_2025",
+    "sb-siy-2025-bulten"
+   ]
+  },
+  {
+   "kod": "BOH",
+   "ad": "Bebek ölüm hızı",
+   "birim": "1.000 canlı doğumda",
+   "tanim": "Belli bir yılda 1.000 canlı doğum başına bir yaşını tamamlamadan ölen bebek sayısı",
+   "seri": [
+    {
+     "yil": 2009,
+     "deger": 13.9
+    },
+    {
+     "yil": 2010,
+     "deger": 12.0
+    },
+    {
+     "yil": 2011,
+     "deger": 11.6
+    },
+    {
+     "yil": 2012,
+     "deger": 11.5
+    },
+    {
+     "yil": 2013,
+     "deger": 10.8
+    },
+    {
+     "yil": 2014,
+     "deger": 11.0
+    },
+    {
+     "yil": 2015,
+     "deger": 10.2
+    },
+    {
+     "yil": 2016,
+     "deger": 9.8
+    },
+    {
+     "yil": 2017,
+     "deger": 9.3
+    },
+    {
+     "yil": 2018,
+     "deger": 9.3
+    },
+    {
+     "yil": 2019,
+     "deger": 9.2
+    },
+    {
+     "yil": 2020,
+     "deger": 8.7
+    },
+    {
+     "yil": 2021,
+     "deger": 9.3
+    },
+    {
+     "yil": 2022,
+     "deger": 9.2
+    },
+    {
+     "yil": 2023,
+     "deger": 10.1
+    },
+    {
+     "yil": 2024,
+     "deger": 9.0
+    },
+    {
+     "yil": 2025,
+     "deger": 7.8
+    }
+   ],
+   "kaynak": "tuik_nip_olum",
+   "konum": "TÜİK NİP Ölüm > Bebek Ölüm Hızı tablosu",
+   "not": "2024: erkek 9,8, kız 8,3 (İstatistiklerle Çocuk 2025). SB/HSGM verisi (tüm haftalar) 2024'te 8,9 (SİY 2024 Şekil 2.3). 2023 yükselişi depremle ilişkilendirilmiştir (SİY 2023). DÖB Rehberi 2018: 2002'de binde 31,5."
+  },
+  {
+   "kod": "NOH",
+   "ad": "Neonatal ölüm hızı",
+   "birim": "1.000 canlı doğumda",
+   "tanim": "İlk 28 günde ölen bebek sayısı / canlı doğum × 1.000 (SB, tüm gebelik haftaları)",
+   "seri": [
+    {
+     "yil": 2020,
+     "deger": 5.5
+    },
+    {
+     "yil": 2021,
+     "deger": 5.9
+    },
+    {
+     "yil": 2022,
+     "deger": 5.7
+    },
+    {
+     "yil": 2023,
+     "deger": 6.0
+    },
+    {
+     "yil": 2024,
+     "deger": 5.6
+    },
+    {
+     "yil": 2025,
+     "deger": 5.0
+    }
+   ],
+   "kaynak": "sb_siy_2020",
+   "konum": "SİY 2020-2021 Şekil 2.6; SİY 2022-2023 Şekil 2.7; SİY 2024 Şekil 2.6 (s.24) · 2025 değeri: Sağlık İstatistikleri Yıllığı 2025 Haber Bülteni",
+   "not": "28 hafta veya ≥1000 g doğanlarda: 2020 3,6; 2021 3,7; 2022 3,6; 2023 3,7; 2024 3,5. Postneonatal ölüm hızı 2024: 3,3 (tüm haftalar).",
+   "ek_kaynaklar": [
+    "sb_siy_2022",
+    "sb-siy-2025-bulten"
+   ]
+  },
+  {
+   "kod": "PNOH",
+   "ad": "Perinatal ölüm hızı",
+   "birim": "1.000 doğumda (canlı + ölü)",
+   "tanim": "Ölü doğumlar + ilk 7 gündeki ölümler / toplam doğum × 1.000; ölü doğumlar paya ve paydaya dahildir",
+   "seri": [
+    {
+     "yil": 2020,
+     "deger": 10.6
+    },
+    {
+     "yil": 2021,
+     "deger": 11.0
+    },
+    {
+     "yil": 2022,
+     "deger": 10.5
+    },
+    {
+     "yil": 2023,
+     "deger": 10.8
+    },
+    {
+     "yil": 2024,
+     "deger": 10.4
+    },
+    {
+     "yil": 2025,
+     "deger": 10.1
+    }
+   ],
+   "kaynak": "sb_siy_2020",
+   "konum": "SİY 2020-2021 Şekil 2.5; SİY 2022-2023 Şekil 2.6; SİY 2024 Şekil 2.5 (s.24) · 2025 değeri: Sağlık İstatistikleri Yıllığı 2025 Haber Bülteni",
+   "not": "Seri tüm gebelik haftalarına göredir. 28 hafta veya ≥1000 g tanımıyla: 2020 7,0; 2021 7,0; 2022 6,6; 2023 6,6; 2024 6,3.",
+   "ek_kaynaklar": [
+    "sb_siy_2022",
+    "sb-siy-2025-bulten"
+   ]
+  },
+  {
+   "kod": "BYAOH",
+   "ad": "Beş yaş altı ölüm hızı",
+   "birim": "1.000 canlı doğumda",
+   "tanim": "Belli bir yılda 1.000 canlı doğum başına beş yaşını tamamlamadan ölenlerin sayısı",
+   "seri": [
+    {
+     "yil": 2009,
+     "deger": 17.7
+    },
+    {
+     "yil": 2010,
+     "deger": 15.5
+    },
+    {
+     "yil": 2011,
+     "deger": 14.9
+    },
+    {
+     "yil": 2012,
+     "deger": 14.4
+    },
+    {
+     "yil": 2013,
+     "deger": 13.4
+    },
+    {
+     "yil": 2014,
+     "deger": 13.3
+    },
+    {
+     "yil": 2015,
+     "deger": 12.4
+    },
+    {
+     "yil": 2016,
+     "deger": 12.0
+    },
+    {
+     "yil": 2017,
+     "deger": 11.3
+    },
+    {
+     "yil": 2018,
+     "deger": 11.4
+    },
+    {
+     "yil": 2019,
+     "deger": 11.3
+    },
+    {
+     "yil": 2020,
+     "deger": 10.6
+    },
+    {
+     "yil": 2021,
+     "deger": 11.3
+    },
+    {
+     "yil": 2022,
+     "deger": 11.2
+    },
+    {
+     "yil": 2023,
+     "deger": 14.6
+    },
+    {
+     "yil": 2024,
+     "deger": 11.1
+    },
+    {
+     "yil": 2025,
+     "deger": 9.5
+    }
+   ],
+   "kaynak": "tuik_nip_olum",
+   "konum": "TÜİK NİP Ölüm > Beş Yaş Altı Ölüm Hızı tablosu",
+   "not": "SB/HSGM verisi (tüm haftalar) 2024: 10,9 (SİY 2024 Şekil 2.9)."
+  },
+  {
+   "kod": "TDH",
+   "ad": "Toplam doğurganlık hızı",
+   "birim": "kadın başına çocuk",
+   "tanim": "Bir kadının 15-49 yaş boyunca yaşa özel doğurganlık hızlarını izlediği varsayımıyla doğurabileceği ortalama canlı çocuk sayısı",
+   "seri": [
+    {
+     "yil": 2001,
+     "deger": 2.38
+    },
+    {
+     "yil": 2009,
+     "deger": 2.1
+    },
+    {
+     "yil": 2010,
+     "deger": 2.0
+    },
+    {
+     "yil": 2011,
+     "deger": 2.0
+    },
+    {
+     "yil": 2012,
+     "deger": 2.1
+    },
+    {
+     "yil": 2013,
+     "deger": 2.1
+    },
+    {
+     "yil": 2014,
+     "deger": 2.1
+    },
+    {
+     "yil": 2015,
+     "deger": 2.1
+    },
+    {
+     "yil": 2016,
+     "deger": 2.1
+    },
+    {
+     "yil": 2017,
+     "deger": 2.0
+    },
+    {
+     "yil": 2018,
+     "deger": 2.0
+    },
+    {
+     "yil": 2019,
+     "deger": 1.8
+    },
+    {
+     "yil": 2020,
+     "deger": 1.7
+    },
+    {
+     "yil": 2021,
+     "deger": 1.7
+    },
+    {
+     "yil": 2022,
+     "deger": 1.6
+    },
+    {
+     "yil": 2023,
+     "deger": 1.5
+    },
+    {
+     "yil": 2024,
+     "deger": 1.48
+    },
+    {
+     "yil": 2025,
+     "deger": 1.42
+    }
+   ],
+   "kaynak": "tuik_nip_dogum",
+   "konum": "NİP Doğum > TDH (tek ondalık); 2001 ve 2024 iki ondalıklı değer: İstatistiklerle Kadın 2025, Temel Doğurganlık Göstergeleri (s.2) · 2025 değeri (1,42): TÜİK Doğum İstatistikleri 2025 bülteni",
+   "not": "TNSA-2018 (son 3 yıl): 2,3. Yenilenme düzeyi 2,10.",
+   "ek_kaynaklar": [
+    "tuik_istkadin_2025",
+    "tuik_dogum_2025"
+   ]
+  },
+  {
+   "kod": "KDH",
+   "ad": "Kaba doğum hızı",
+   "birim": "1.000 nüfusta",
+   "tanim": "Bir yıldaki canlı doğum sayısı / yıl ortası nüfus × 1.000",
+   "seri": [
+    {
+     "yil": 1990,
+     "deger": 24.1
+    },
+    {
+     "yil": 2000,
+     "deger": 21.6
+    },
+    {
+     "yil": 2009,
+     "deger": 17.5
+    },
+    {
+     "yil": 2010,
+     "deger": 17.2
+    },
+    {
+     "yil": 2011,
+     "deger": 16.8
+    },
+    {
+     "yil": 2012,
+     "deger": 17.2
+    },
+    {
+     "yil": 2013,
+     "deger": 17.0
+    },
+    {
+     "yil": 2014,
+     "deger": 17.5
+    },
+    {
+     "yil": 2015,
+     "deger": 17.0
+    },
+    {
+     "yil": 2016,
+     "deger": 16.6
+    },
+    {
+     "yil": 2017,
+     "deger": 16.1
+    },
+    {
+     "yil": 2018,
+     "deger": 15.4
+    },
+    {
+     "yil": 2019,
+     "deger": 14.4
+    },
+    {
+     "yil": 2020,
+     "deger": 13.4
+    },
+    {
+     "yil": 2021,
+     "deger": 12.9
+    },
+    {
+     "yil": 2022,
+     "deger": 12.2
+    },
+    {
+     "yil": 2023,
+     "deger": 11.2
+    },
+    {
+     "yil": 2024,
+     "deger": 11.0
+    },
+    {
+     "yil": 2025,
+     "deger": 10.4
+    }
+   ],
+   "kaynak": "tuik_nip_dogum",
+   "konum": "NİP Doğum > Kaba Doğum Hızı; 1990 ve 2000: SİY 2024 Tablo 1.1"
+  },
+  {
+   "kod": "CDS",
+   "ad": "Canlı doğum sayısı",
+   "birim": "sayı",
+   "tanim": "Yıl içinde gerçekleşen canlı doğumlar",
+   "seri": [
+    {
+     "yil": 2009,
+     "deger": 1266751
+    },
+    {
+     "yil": 2010,
+     "deger": 1261169
+    },
+    {
+     "yil": 2011,
+     "deger": 1252812
+    },
+    {
+     "yil": 2012,
+     "deger": 1294605
+    },
+    {
+     "yil": 2013,
+     "deger": 1297505
+    },
+    {
+     "yil": 2014,
+     "deger": 1351088
+    },
+    {
+     "yil": 2015,
+     "deger": 1336908
+    },
+    {
+     "yil": 2016,
+     "deger": 1316204
+    },
+    {
+     "yil": 2017,
+     "deger": 1300258
+    },
+    {
+     "yil": 2018,
+     "deger": 1257071
+    },
+    {
+     "yil": 2019,
+     "deger": 1191709
+    },
+    {
+     "yil": 2020,
+     "deger": 1120430
+    },
+    {
+     "yil": 2021,
+     "deger": 1086136
+    },
+    {
+     "yil": 2022,
+     "deger": 1041846
+    },
+    {
+     "yil": 2023,
+     "deger": 963075
+    },
+    {
+     "yil": 2024,
+     "deger": 940273
+    },
+    {
+     "yil": 2025,
+     "deger": 895374
+    }
+   ],
+   "kaynak": "tuik_nip_dogum",
+   "konum": "NİP Doğum > Canlı Doğum Sayısı",
+   "not": "TÜİK 'İstatistiklerle Çocuk 2025' 2024 için 937.559 verir (Doğum İstatistikleri 2024 bülteni); NİP'teki 940.273 güncellenmiş değerdir."
+  },
+  {
+   "kod": "SEZ",
+   "ad": "Sezaryen oranı (canlı doğumlar içinde)",
+   "birim": "%",
+   "tanim": "Sezaryen ameliyatlarının canlı doğumlar içindeki oranı",
+   "seri": [
+    {
+     "yil": 2019,
+     "deger": 54.4
+    },
+    {
+     "yil": 2020,
+     "deger": 57.3
+    },
+    {
+     "yil": 2021,
+     "deger": 58.4
+    },
+    {
+     "yil": 2022,
+     "deger": 60.1
+    },
+    {
+     "yil": 2023,
+     "deger": 61.5
+    },
+    {
+     "yil": 2024,
+     "deger": 61.2
+    },
+    {
+     "yil": 2025,
+     "deger": 59.0
+    }
+   ],
+   "kaynak": "sb_siy_2020",
+   "konum": "SİY Tablo 5.2 (2024: s.97) · 2025 değeri: Sağlık İstatistikleri Yıllığı 2025 Haber Bülteni",
+   "not": "Hastane doğumları içinde sezaryen: 2019 57,0; 2020 59,6; 2021 60,9; 2022 62,8; 2023 64,2; 2024 63,7 (SİY Tablo 5.3; 2024 SB 50,7 / üniversite 75,6 / özel 77,4). Primer sezaryen/canlı doğum 2024: 32,2. TNSA-2018: tüm doğumların %52'si (%38 planlı).",
+   "ek_kaynaklar": [
+    "sb_siy_2022",
+    "sb-siy-2025-bulten"
+   ]
+  },
+  {
+   "kod": "DOB4",
+   "ad": "En az 4 doğum öncesi bakım alan gebe oranı",
+   "birim": "%",
+   "tanim": "Son 5 yılda canlı doğum yapan 15-49 yaş kadınlardan son doğumu için 4+ DÖB ziyareti olanlar",
+   "seri": [
+    {
+     "yil": 2013,
+     "deger": 89
+    },
+    {
+     "yil": 2018,
+     "deger": 89.7
+    }
+   ],
+   "kaynak": "hu_tdhs_2018",
+   "konum": "TDHS 2018 Tablo 9.2 (s.113) ve Bölüm 9.1.2 metni",
+   "not": "Kent %91,4, kır %84,0. İlk DÖB ilk trimesterde: %89,5. Uzman personelden DÖB: %96. SB idari verisi: en az bir DÖB ziyareti 2020-2022 %99,7; 2023 %99,57; 2024 %99,60 (SİY 2024 Tablo 5.4). Gebe tam izlem oranı 2023 %95,9; 2024 %96,8 (SİY 2024 Tablo 5.5).",
+   "ek_kaynaklar": [
+    "hu_tnsa_2018"
+   ]
+  },
+  {
+   "kod": "HKD",
+   "ad": "Sağlık kuruluşunda/hastanede doğum oranı",
+   "birim": "%",
+   "tanim": "Hastanelerde gerçekleşen doğumların canlı doğumlar içindeki oranı",
+   "seri": [
+    {
+     "yil": 2019,
+     "deger": 97.0
+    },
+    {
+     "yil": 2020,
+     "deger": 98.0
+    },
+    {
+     "yil": 2021,
+     "deger": 97.5
+    },
+    {
+     "yil": 2022,
+     "deger": 97.3
+    },
+    {
+     "yil": 2023,
+     "deger": 97.5
+    },
+    {
+     "yil": 2024,
+     "deger": 99.4
+    },
+    {
+     "yil": 2025,
+     "deger": 96
+    }
+   ],
+   "kaynak": "sb_siy_2020",
+   "konum": "SİY Tablo 5.2 · 2025 değeri: Sağlık İstatistikleri Yıllığı 2025 Haber Bülteni",
+   "not": "TNSA-2018: son 5 yıldaki doğumların %98,9'u sağlık kuruluşunda (Tablo 9.4); evde doğum %0,9.",
+   "ek_kaynaklar": [
+    "sb_siy_2022",
+    "sb-siy-2025-bulten"
+   ]
+  },
+  {
+   "kod": "IDOY",
+   "ad": "İlk doğumda ortalama anne yaşı",
+   "birim": "yaş",
+   "tanim": "İlk canlı doğumunu yapan annelerin ortalama yaşı",
+   "seri": [
+    {
+     "yil": 2014,
+     "deger": 25.5
+    },
+    {
+     "yil": 2024,
+     "deger": 27.3
+    }
+   ],
+   "kaynak": "tuik_istkadin_2025",
+   "konum": "Temel Doğurganlık Göstergeleri (s.2)"
+  },
+  {
+   "kod": "ADH",
+   "ad": "Adölesan doğurganlık hızı",
+   "birim": "15-19 yaş 1.000 kadında",
+   "tanim": "15-19 yaş grubunda bin kadın başına düşen ortalama canlı doğum",
+   "seri": [
+    {
+     "yil": 2001,
+     "deger": 49
+    },
+    {
+     "yil": 2013,
+     "deger": 28.9
+    },
+    {
+     "yil": 2014,
+     "deger": 27.9
+    },
+    {
+     "yil": 2015,
+     "deger": 25.8
+    },
+    {
+     "yil": 2016,
+     "deger": 24.1
+    },
+    {
+     "yil": 2017,
+     "deger": 21.8
+    },
+    {
+     "yil": 2018,
+     "deger": 18.9
+    },
+    {
+     "yil": 2019,
+     "deger": 16.9
+    },
+    {
+     "yil": 2020,
+     "deger": 14.8
+    },
+    {
+     "yil": 2021,
+     "deger": 13.1
+    },
+    {
+     "yil": 2022,
+     "deger": 12.5
+    },
+    {
+     "yil": 2023,
+     "deger": 11.2
+    },
+    {
+     "yil": 2024,
+     "deger": 10.1
+    }
+   ],
+   "kaynak": "tuik_istkadin_2025",
+   "konum": "2001: İstatistiklerle Kadın 2025 s.2; 2013-2024: SİY 2024 Şekil 5.12 (s.101; kaynak TÜİK Doğum İstatistikleri 2024)",
+   "not": "TNSA-2018 (araştırma öncesi 3 yıl): 30,0‰."
+  }
+ ],
+ "ureme_sagligi": [
+  {
+   "ad": "Modern yöntem kullanımı (halen evli 15-49 yaş kadın)",
+   "deger": "%48,9 (~%49)",
+   "yil": 2018,
+   "kaynak": "hu_tnsa_2018",
+   "konum": "Özet göstergeler s.xv; TDHS Bölüm 7 (2013'te %47)",
+   "ek_kaynaklar": [
+    "hu_tdhs_2018"
+   ]
+  },
+  {
+   "ad": "Herhangi bir yöntem kullanımı (halen evli kadın)",
+   "deger": "%69,8 (~%70); en sık geri çekme %20, erkek kondomu %19, RİA %14, sterilizasyon %10",
+   "yil": 2018,
+   "kaynak": "hu_tnsa_2018",
+   "konum": "Özet göstergeler s.xv; TDHS Bölüm 7",
+   "ek_kaynaklar": [
+    "hu_tdhs_2018"
+   ]
+  },
+  {
+   "ad": "Karşılanmamış aile planlaması gereksinimi (halen evli kadın)",
+   "deger": "%12 (aralık için %4,0 + sınırlama için %7,6)",
+   "yil": 2018,
+   "kaynak": "hu_tnsa_2018",
+   "konum": "Özet göstergeler s.xv; TDHS Bölüm 7 anahtar bulgular",
+   "ek_kaynaklar": [
+    "hu_tdhs_2018"
+   ]
+  },
+  {
+   "ad": "AP ihtiyacını modern yöntemle karşılayan kadınlar (SKH 3.7.1)",
+   "deger": "%60,6",
+   "yil": 2018,
+   "kaynak": "hu_tnsa_2018",
+   "konum": "SKH özet göstergeleri, Tablo 7.13.2"
+  },
+  {
+   "ad": "Sadece anne sütü ile beslenme (0-5 ay)",
+   "deger": "%40,7 (4-5 ayda %14,4)",
+   "yil": 2018,
+   "kaynak": "hu_tnsa_2018",
+   "konum": "Bölüm 11.2.2; TDHS Tablo 11.x (40.7)",
+   "ek_kaynaklar": [
+    "hu_tdhs_2018"
+   ]
+  },
+  {
+   "ad": "Ortanca emzirme süresi",
+   "deger": "16,7 ay (kent 16,4, kır 17,7; erkek 18,0)",
+   "yil": 2018,
+   "kaynak": "hu_tnsa_2018",
+   "konum": "Özet göstergeler s.xvi; Bölüm 11.2.3, Tablo 11.5"
+  },
+  {
+   "ad": "Toplam doğurganlık hızı (TNSA)",
+   "deger": "2,3 (kent 2,2, kır 2,8; Doğu 3,2)",
+   "yil": 2018,
+   "kaynak": "hu_tnsa_2018",
+   "konum": "Özet göstergeler s.xv"
+  },
+  {
+   "ad": "En az 4 doğum öncesi bakım ziyareti",
+   "deger": "%89,7 (ilk trimesterde DÖB %89,5; DÖB almayan %3,5)",
+   "yil": 2018,
+   "kaynak": "hu_tdhs_2018",
+   "konum": "Tablo 9.2"
+  },
+  {
+   "ad": "Sağlık kuruluşunda doğum",
+   "deger": "%98,9 (kamu %58,6, özel %40,3, ev %0,9)",
+   "yil": 2018,
+   "kaynak": "hu_tdhs_2018",
+   "konum": "Tablo 9.4"
+  },
+  {
+   "ad": "Sezaryen (TNSA)",
+   "deger": "Tüm doğumların %52'si; %38 eylem başlamadan planlı",
+   "yil": 2018,
+   "kaynak": "hu_tdhs_2018",
+   "konum": "Tablo 9.6, Bölüm 9 anahtar bulgular"
+  },
+  {
+   "ad": "Doğum sonrası ilk 2 gün içinde kontrol",
+   "deger": "Anne %79, yenidoğan %68",
+   "yil": 2018,
+   "kaynak": "hu_tdhs_2018",
+   "konum": "Bölüm 9 anahtar bulgular"
+  },
+  {
+   "ad": "Gebelikte demir takviyesi / tetanos aşısı",
+   "deger": "Her ikisi %81",
+   "yil": 2018,
+   "kaynak": "hu_tdhs_2018",
+   "konum": "Bölüm 9 anahtar bulgular"
+  },
+  {
+   "ad": "100 gebelikte gebelik sonuçları (son 5 yıl)",
+   "deger": "Kendiliğinden düşük 12,7; isteyerek düşük 5,9; ölü doğum 1,0",
+   "yil": 2018,
+   "kaynak": "hu_tdhs_2018",
+   "konum": "Tablo 12.2"
+  },
+  {
+   "ad": "İsteğe bağlı düşüğün yasal sınırı",
+   "deger": "Gebeliğin 10. haftasına kadar (1983 yasa değişikliği); işlem öncesi aydınlatılmış onam",
+   "yil": 2015,
+   "kaynak": "sb_dusuk_rehber_2015",
+   "konum": "Giriş ve Danışmanlık Konuları (s.14-15)"
+  }
+ ],
+ "evlilik_oncesi": {
+  "maddeler": [
+   "Evlilik Öncesi Danışmanlık Programı: sağlıklı aile, üreme sağlığı, bulaşıcı hastalıklar, akraba evliliği ve kalıtsal kan hastalıkları (hemoglobinopati) danışmanlığı; gebelik öncesi danışmanlık.",
+   "Hemoglobinopati: 3960 sayılı Kalıtsal Kan Hastalıkları ile Mücadele Kanunu (30.12.1993); yönetmelik 24.10.2002 (RG 24916); Hemoglobinopati Kontrol Programı 2003'te 33 riskli ilde, 2013'te +8 il (41 il).",
+   "1 Kasım 2018'den itibaren 'Evlilik Öncesi Hemoglobinopati Tarama Programı' 81 ilde: evlilik raporu için aile hekimine başvuran erkek adaydan kan alınır; taşıyıcı/şüpheli ise kadın adaya da test; ikisi de taşıyıcıysa genetik danışmanlık.",
+   "Örnek: EDTA'lı tüpe 2 cc kan; aile hekimi taahhütname ve onam formu alır. Türkiye'de beta-talasemi taşıyıcı sıklığı %2,1.",
+   "41 ilde 2017'de evlenecek çiftlerin %87'si tarandı; 2003'ten bu yana 19.430 hasta, 409.654 taşıyıcı saptandı.",
+   "Evlilik Öncesi SMA Taşıyıcı Taraması: Aralık 2021 sonundan itibaren 81 ilde; evlilik raporu için başvuranlar ve isteyen evli çiftler; önce erkek eş adayı, şüpheli sonuçta kadın eş adayı; doğurganlık çağını tamamlamış kadından kan alınmaz; sonuçlar e-Nabız'da.",
+   "SMA taşıyıcı sıklığı 1/40-60; her iki eş taşıyıcıysa her gebelikte %25 hasta çocuk riski; prenatal tanı KVS ile 10. haftadan, amniyosentez ile 15. haftadan itibaren; preimplantasyon tanı seçeneği.",
+   "Gebelik öncesi: folik asit desteği ve kızamıkçık bağışıklığının sorgulanması/aşılama önerisi."
+  ],
+  "kaynak": "sb_evlilik_oncesi_web",
+  "ek_kaynaklar": [
+   "sb_hemoglobinopati_web",
+   "sb_hemoglobinopati_rehber",
+   "sb_sma_tasiyici_web",
+   "sb_evlilik_oncesi_rehber"
+  ]
+ },
+ "programlar": [
+  {
+   "ad": "Gebe Okulu",
+   "aciklama": "Tüm gebelerin doğum öncesi, doğum ve doğum sonrası konularda bilgilenmesi ve bilinçli doğum yapması amacıyla birinci basamak kuruluşları (Sağlıklı Hayat Merkezi vb.), Bakanlık hastaneleri, üniversite ve özel kuruluşlarda açılan okullar; normal doğum, ağrı yönetimi, eş desteği, tehlike işaretleri ve yenidoğan bakımı. DÖB rehberi her izlemde gebe okuluna yönlendirmeyi önerir. Gebe Okulu Eğitim Kitabı 2025'te yayımlandı (SB Yayın No 1368).",
+   "kaynak": "sb_gebe_okulu_web",
+   "ek_kaynaklar": [
+    "sb_gebe_okulu_kitap",
+    "sb_dob_2026"
+   ]
+  },
+  {
+   "ad": "Anne Dostu Hastane Programı",
+   "aciklama": "2010'da kurulan bilim komisyonunun geliştirdiği Ulusal Anne Dostu Hastane Kriterleri; normal doğumun desteklenmesi; gönüllü başvuru ve değerlendirmeyle unvan, yıllık izlem. 2018/27 sayılı genelge ve değerlendirmeci/eğitimci/katılımcı rehberleri; 691 personel eğitildi. Ulusal düzeyde yürütülen ilk program olduğu belirtilir.",
+   "kaynak": "sb_anne_dostu_web"
+  },
+  {
+   "ad": "Anne Sütünün Teşviki ve Bebek Dostu Sağlık Kuruluşları Programı",
+   "aciklama": "1991'den beri; doğumdan hemen sonra emzirme, ilk 6 ay sadece anne sütü, 6. aydan sonra ek besinle emzirmenin 2 yaş ve ötesine sürmesi; 'Başarılı emzirmede 10 adım'. ≥80 puan alan hastane Bebek Dostu unvanı alır, 5 yılda bir yeniden değerlendirilir; Bebek Dostu İl ve Altın Bebek Dostu İl kriterleri.",
+   "kaynak": "sb_bebekdostu_web"
+  },
+  {
+   "ad": "Misafir Anne Uygulaması",
+   "aciklama": "16.04.2008 tarih ve 2008/29 sayılı genelge; iklim, ulaşım veya sosyal nedenlerle doğumda sağlık kuruluşuna ulaşamayabilecek gebeler doğumdan önce merkezlere nakledilip konaklatılır, hastanede doğum yapmaları sağlanır.",
+   "kaynak": "sb_misafir_anne_web"
+  },
+  {
+   "ad": "15-49 Yaş Kadın İzlem Programı",
+   "aciklama": "Aile hekimlerince doğurganlık çağındaki kadınların izlenmesi; üreme sağlığı danışmanlığı, taramalar, risklerin tespiti ve gebelik öncesi danışmanlık.",
+   "kaynak": "sb_1549_web"
+  },
+  {
+   "ad": "Doğum Sonu Bakım Programı",
+   "aciklama": "Doğumdan 42. güne kadar; anne ölümlerinin yaklaşık %70'i lohusalıkta gerçekleşir. Normal doğumda 24, sezaryende 48 saat hastanede kalış; doğumun yapıldığı kuruluşta en az 3, taburculuk sonrası aile hekimince en az 3 izlem.",
+   "kaynak": "sb_dsb_program"
+  },
+  {
+   "ad": "Prenatal tarama ve tanı testleri (DÖB rehberi)",
+   "aciklama": "11-14. hafta ense saydamlığı + kombine test; 16-20. hafta MSAFP ve üçlü/dörtlü test (kombine yapılmamışsa); 18-24. hafta fetal anomali USG; koryon villus örneklemesi ve amniyosentez tanı testleri olarak sunulur. Gebeye kromozom anomalilerinin tedavisinin mümkün olmadığı anlatılır.",
+   "kaynak": "sb_dob_2026"
+  }
+ ],
+ "kanser_taramalari": [
+  {
+   "kanser": "Meme",
+   "hedef": "40-69 yaş kadın",
+   "yontem": "Mamografi (+ yılda bir klinik meme muayenesi)",
+   "aralik": "2 yılda bir",
+   "not": "20 yaşından itibaren kendi kendine meme muayenesi farkındalığı ve yılda bir klinik meme muayenesi önerilir. Ulusal meme kanseri tarama standartları ilk kez 2004/99 genelgesiyle yayımlandı. Türkiye'de yılda yaklaşık 32 bin kadına meme kanseri tanısı konuyor.",
+   "kaynak": "sb_kanser_meme",
+   "ek_kaynaklar": [
+    "sb_kanser_tarama_haber",
+    "sb_kanser_kontrol_2021"
+   ]
+  },
+  {
+   "kanser": "Serviks (rahim ağzı)",
+   "hedef": "30-65 yaş kadın",
+   "yontem": "HPV-DNA testi (sonuç algoritmasında sitoloji)",
+   "aralik": "5 yılda bir",
+   "not": "2014'te pap-smear tabanlı toplum taraması yenilenerek HPV-DNA eklendi. HPV(-) → 5 yıl sonra; HPV 16/18(+) → KHDU'ya sevk (kolposkopi); diğer tipler(+) → sitoloji: anormalse sevk, normalse 1 yıl sonra test; yetersiz numune → 3 ay sonra tekrar. Türkiye'de olguların yaklaşık %70'i HPV 16/18 ile ilişkili.",
+   "kaynak": "sb_kanser_serviks",
+   "ek_kaynaklar": [
+    "sb_kanser_tarama_haber",
+    "sb_dob_2026",
+    "sb_kanser_kontrol_2021"
+   ]
+  },
+  {
+   "kanser": "Kolorektal (kalın bağırsak)",
+   "hedef": "50-70 yaş kadın ve erkek",
+   "yontem": "Gaitada gizli kan testi (GGK); ayrıca 10 yılda bir kolonoskopi önerilir",
+   "aralik": "GGK 2 yılda bir; kolonoskopi 10 yılda bir",
+   "not": "Son iki GGK testi negatif olan 70 yaşındakilerde tarama kesilir. GGK(+) → 2./3. basamağa yönlendirme. Birinci derece akrabada KRK/adenomatöz polip, ülseratif kolit, Crohn, kalıtsal polipozis/Lynch varsa 40 yaşından itibaren tarama. Toplum tabanlı KRK taraması 2014'te 81 ile yaygınlaştırıldı.",
+   "kaynak": "sb_kanser_kolorektal",
+   "ek_kaynaklar": [
+    "sb_kanser_tarama_haber",
+    "sb_kanser_kontrol_2021"
+   ]
+  }
+ ],
+ "ketem": {
+  "sayi": 417,
+  "yil": 2024,
+  "kaynak": "sb-siy-2024",
+  "konum": "SİY 2024 Tablo 7.18 (s.158)",
+  "detay": "95 sabit KETEM (ÇKYS kayıtlı) + 46 mobil araç + Sağlıklı Hayat Merkezlerinde 276 KETEM.",
+  "seri": [
+   {
+    "yil": 2002,
+    "deger": 84
+   },
+   {
+    "yil": 2020,
+    "deger": 175
+   },
+   {
+    "yil": 2021,
+    "deger": 336
+   },
+   {
+    "yil": 2022,
+    "deger": 364
+   },
+   {
+    "yil": 2023,
+    "deger": 381
+   },
+   {
+    "yil": 2024,
+    "deger": 417
+   }
+  ],
+  "not": "HSGM Kanser D.B. haberi: 'Ağustos 2024 itibarıyla her ilde en az bir olmak üzere 405 KETEM; 46'sı mobil'. 2023'te 7,7 milyon, 2024 ilk 6 ayda 4,5 milyon kanser taraması. Tarihçe: 1995 ilk Kanser Erken Teşhis Merkezi (Bakırköy); 2004 AB fonlarıyla 11 ilde KETEM; 2007 meme, serviks ve kolorektal ulusal tarama standartları, 2013 revizyon.",
+  "ek_kaynak": "sb_kanser_tarama_haber; sb_kanser_kontrol_2021"
+ },
+ "dogrulanamayan": [
+  "Gebelere Demir Desteği ve Gebelere D Vitamini Desteği programlarının ilk başlangıç yılları (sık anılan 2005/2011) resmî kaynakta bulunamadı; yalnız yürürlükteki 2020/4 sayılı genelge teyit edildi.",
+  "Kessner indeksi Sağlık Bakanlığı rehberlerinde ya da yıllıklarda yer almıyor (akademik bir ölçüt); tanımı ve sınıfları ders notundan alınmalı.",
+  "Kritik doğuştan kalp hastalıkları taramasının ulusal başlangıç tarihi belirsiz: rehber 2026'da yayımlandı ve 'yaygınlaştırma hedefleniyor' deniyor. 'baslangic: 2026' rehber yılıdır.",
+  "Yenidoğan görme (kırmızı refle) ve ROP taramalarının programa giriş yılı resmî sayfalarda verilmiyor.",
+  "Anne ölüm oranı için 2006 değeri ve 2025 değeri bulunamadı (SB Sağlık İstatistikleri Yıllığı 2025 henüz yayımlanmadı). 2002 değeri (64) yalnız DÖB Rehberi 2018 sunuşunda geçiyor; seriye eklenmedi.",
+  "Perinatal ve neonatal ölüm hızlarının 2020 öncesi SB serisi ile sezaryen oranlarının 2019 öncesi serisi toplanmadı (yalnız 2020-2024 yıllıkları tarandı).",
+  "En az 4 DÖB oranı yalnız TNSA 2013 (%89) ve 2018 (%89,7) için var; SB idari verisi yalnız 'en az bir ziyaret' ve 'gebe tam izlem' oranlarını veriyor.",
+  "TNSA-2018 Sağlık Bakanlığı adına yapılmadı; raporda Strateji ve Bütçe Başkanlığı ile TÜBİTAK desteği belirtiliyor.",
+  "Bebeklerde D vitamini süresi 2026 BÇE protokolünde tutarsız: AŞ6.1 akış şeması ve Y11.1 '1 yaşına dek' diyor; ilk hafta izlemi 'Önerin' maddesi '2 yaşına dek' diyor; özet tablo 24. aya kadar işaretli.",
+  "Bebek demir profilaksisi dozu kaynaklar arasında farklı: Demir Gibi Türkiye rehberi 10 mg/gün diyor; 2026 BÇE protokolü '1 mg/kg veya 10 mg/gün (Fe+2)' ve metinde '4. ay sonunda 1 mg/kg/gün' diyor. Preterm başlangıcı da farklı: 2. ay ile 15. gün.",
+  "DÖB 3. izlemi bazı ders kaynaklarında '30-32. hafta' olarak geçiyor; 2018 ve 2026 SB rehberlerinin ikisi de '28-32. hafta' diyor.",
+  "Riskli gebelik formunda 'tekrarlayan düşük' eşiği değişti: 2018 rehberinde 3 ve üzeri, 2026 rehberinde 2 ve üzeri.",
+  "Bebek ve Anne Dostu Hastane sayıları (güncel) toplanmadı."
+ ]
+}

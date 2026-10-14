@@ -11,6 +11,7 @@
  *   /yonetim     → admin panel (admins only)
  *   /ara/<sorgu> → tüm veri setlerinde arama sonuçları
  *   /manage      → yönetim konsolu (manage.nofrostlife.com.tr ile aynı ekran)
+ *   /saglik      → Sağlık Bakanlığı: resmî veriler + ders bağları, /saglik/<bölüm> (asi, karabuk, yenidogan …)
  *
  * Old `#tab` links keep working: they are rewritten to the matching path on load.
  */
@@ -44,6 +45,7 @@ export type AppRoute =
   | 'music'
   | 'datacore'
   | 'diseases'
+  | 'health_ministry'
   | 'settings'
   | 'stats';
 
@@ -75,6 +77,7 @@ export const ROUTE_PATHS: Record<AppRoute, string> = {
   manage: '/manage',
   search: '/ara',
   diseases: '/hastaliklar',
+  health_ministry: '/saglik',
   settings: '/ayarlar',
   stats: '/istatistik',
 };
@@ -85,6 +88,7 @@ export const ROUTE_TITLES: Record<AppRoute, string> = {
   learn: 'Öğren',
   glossary: 'Sözlük',
   diseases: 'Hastalıklar',
+  health_ministry: 'Sağlık Bakanlığı',
   flashcards: 'Ezber kartları',
   questions: 'Soru havuzu',
   past_exams: 'Çıkmış sorular',
@@ -174,6 +178,11 @@ const ALIASES: Record<string, AppRoute> = {
   hastaliklar: 'diseases',
   'tibbi-hastaliklar': 'diseases',
   atlas: 'diseases',
+  'saglik-bakanligi': 'health_ministry',
+  bakanlik: 'health_ministry',
+  'halk-sagligi': 'health_ministry',
+  karabuk: 'health_ministry',
+  'asi-takvimi': 'health_ministry',
 };
 
 export interface ParsedRoute {

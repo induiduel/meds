@@ -1,5 +1,5 @@
 """
-MedSoru otomatik boru hattı — ortak kütüphane (tamamen yerel; bulut AI kullanmaz).
+MeDSor otomatik boru hattı — ortak kütüphane (tamamen yerel; bulut AI kullanmaz).
 
 Süreç: PROJE_TANITIMI.md  (downloads -> temp1 -> temp2 -> temp3 -> database)
 """
@@ -17,7 +17,7 @@ import unicodedata
 from collections import Counter
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[3]  # .../MedSoru Project
+ROOT = Path(__file__).resolve().parents[3]  # .../MeDSor Project
 DOWNLOADS = Path(os.environ.get("MEDS_DOWNLOADS_DIR") or ROOT / "meds_downloads")
 
 # Otomatik Disk Doluluk Koruma Mekanizması (%60 Eşiği):

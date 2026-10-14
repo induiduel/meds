@@ -36,6 +36,8 @@ import { StemText } from './ui/StemText';
 import { Collapsible } from './ui/Collapsible';
 import { ActionMenu, ActionItem } from './ui/ActionMenu';
 import { guardedInterval } from '../services/net';
+import { useAppearance } from '../utils/appearance';
+import '../styles/v12/practice.css';
 
 // Kelime düzeyinde fark (LCS). Kök birkaç yüz kelimeyi geçmez; 400 kelime üstünde fark çizilmez.
 type DiffPart = { t: string; k: 'same' | 'add' | 'del' };
@@ -306,6 +308,8 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
   isAdmin,
   onBackToPastExams,
 }) => {
+  // v12 "Net": aynı yapı, v12 yüzeyi (styles/v12/practice.css · .p12-tc)
+  const v12 = useAppearance().design === 'v12';
   const [allReviews, setAllReviews] = useState<PastQuestionReviewRecord[]>([]);
   const [report, setReport] = useState<any>(null);
   const [isLoading, setIsLoading] = useState(true);
@@ -744,7 +748,7 @@ export const TestCikmisView: React.FC<TestCikmisViewProps> = ({
   const progressPct = total ? Math.min(100, Math.round((processed / total) * 100)) : 0;
 
   return (
-    <div className="flex flex-col gap-3 pb-16 min-w-0 w-full max-w-[1400px] mx-auto">
+    <div className={`flex flex-col gap-3 pb-16 min-w-0 w-full max-w-[1400px] mx-auto ${v12 ? 'p12-tc' : ''}`}>
       <PageHeader
         title="Faz 14 İncelemesi"
         description="Çıkmış sorular için önerilen OCR, imla ve eksik şık düzeltmeleri."

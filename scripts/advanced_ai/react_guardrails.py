@@ -26,7 +26,7 @@ class MedicalGuardrails:
     @staticmethod
     def censor_unsafe_treatment(text: str) -> str:
         """Klinik uygulama veya reçeteleme riski içeren durumlarda akademik disclaimer ekler"""
-        disclaimer = "\n\n*[MedSoru Akademik Bilgilendirme: Bu içerik Tıp Fakültesi Dönem 3 ders notlarından amfi sınavlarına hazırlık amacıyla derlenmiştir. Gerçek klinik tanı veya tedavi yerine geçmez.]*"
+        disclaimer = "\n\n*[MeDSor Akademik Bilgilendirme: Bu içerik Tıp Fakültesi Dönem 3 ders notlarından amfi sınavlarına hazırlık amacıyla derlenmiştir. Gerçek klinik tanı veya tedavi yerine geçmez.]*"
         return text + disclaimer
 
 class MedicalReActAgent:

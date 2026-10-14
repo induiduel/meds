@@ -1,6 +1,7 @@
 import React, { useState, useMemo, useLayoutEffect, useRef } from 'react';
 import { Segmented } from './ui/kit';
 import { PageHeader } from './ui/PageHeader';
+import '../styles/v12/secondary.css';
 import { EmptySearch } from './ui/Animations';
 import {
   ChevronDown,
@@ -88,7 +89,7 @@ export const LeaderboardView: React.FC<LeaderboardViewProps> = ({
       .toLocaleUpperCase('tr-TR') || '?';
 
   return (
-    <div className="ds-page">
+    <div className="ds-page o12-page o12-lb">
       <PageHeader
         title="Sıralama"
         stats={[
@@ -120,7 +121,7 @@ export const LeaderboardView: React.FC<LeaderboardViewProps> = ({
             <span>Kurul</span>
             <select value={selectedCommitteeId} onChange={(e) => onSelectCommittee(e.target.value)} aria-label="Kurul">
               {committees.map((c) => (
-                <option key={c.id} value={c.id}>{c.name}</option>
+                <option key={c.id} value={c.id} title={c.name}>{committeeLabel(c)}</option>
               ))}
             </select>
             <ChevronDown aria-hidden />
@@ -185,6 +186,14 @@ export const LeaderboardView: React.FC<LeaderboardViewProps> = ({
     </div>
   );
 };
+
+/** "Dönem 3 - Kurul 1: TIP 310 - Ürogenital ve Obstetrik Kurulu" → "Kurul 1 · Ürogenital ve Obstetrik Kurulu" (seçim kutusu dar ekranda kesmesin) */
+function committeeLabel(c: Committee) {
+  const no = c.name.match(/Kurul\s*(\d+)/i)?.[1];
+  const head = no ? `Kurul ${no}` : /final/i.test(c.id + c.name) ? 'Final' : /b[uü]t[uü]nleme/i.test(c.id + c.name) ? 'Bütünleme' : '';
+  const topic = (c.name.split(':')[1] || '').replace(/^\s*TIP\s*\d+\s*[-–]\s*/i, '').replace(/\s+kurulu\s*$/i, '').trim();
+  return head ? (topic ? `${head} · ${topic}` : head) : c.name;
+}
 
 function CrownIcon({ className }: { className?: string }) {
   return (

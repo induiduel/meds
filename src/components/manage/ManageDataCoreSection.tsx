@@ -2,7 +2,7 @@ import { useCallback, useEffect, useState } from 'react';
 import { safeJsonFetch } from '../../services/api';
 
 /**
- * Yönetim konsolu — MedSoru Core v2 bölümü.
+ * Yönetim konsolu — MeDSor Core v2 bölümü.
  * v2 veri durumu, denetim özeti, kavram grafı ve toplu tamamlama adaylarını gösterir (salt okunur).
  */
 export function ManageDataCoreSection({ notify }: { notify?: (msg: string) => void }) {
@@ -38,7 +38,7 @@ export function ManageDataCoreSection({ notify }: { notify?: (msg: string) => vo
     <div className="space-y-4">
       <div className="flex items-center justify-between">
         <p className="text-sm opacity-70">
-          Bağımsız MedSoru Core v2 hattı: kaynaktan doğrulanmış sorular, müfredat/kazanım, ders notu bağları,
+          Bağımsız MeDSor Core v2 hattı: kaynaktan doğrulanmış sorular, müfredat/kazanım, ders notu bağları,
           kavram grafı ve toplu tamamlama. GPU/AI kullanılmaz.
         </p>
         <button onClick={load} className="text-xs rounded border px-2 py-1">Yenile</button>

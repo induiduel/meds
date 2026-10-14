@@ -12,6 +12,7 @@ import {
   PenLine,
   ChevronDown,
   ChevronLeft,
+  ChevronUp,
   ChevronRight,
   Columns,
   EyeOff,
@@ -67,6 +68,8 @@ import { registerSelectionActions } from '../../../utils/selectionShare';
 import { selectionContext, useLearnSocial } from './learnSocial';
 import { ComposerReq, ReportReq, ReportSheet, setSocialVisible, SocialProvider, StepSocial, ThreadSheet, useSocialVisible } from './LearnSocialUI';
 import '../../../styles/learn-v10.css';
+import '../../../styles/v12/lesson.css';
+import { useAppearance } from '../../../utils/appearance';
 import { FocusSession, IX_EVENT, IxEventDetail } from './FocusSession';
 import { recordResult } from '../../../services/learnReview';
 import type { IxResult } from './lessonModel';
@@ -193,7 +196,29 @@ const ListenButton: React.FC<{ step: LessonStep }> = ({ step }) => {
   );
 };
 
-const StepHead: React.FC<{ step: LessonStep; total: number }> = ({ step, total }) => (
+const StepHead: React.FC<{ step: LessonStep; total: number; sectionName?: string }> = ({ step, total, sectionName }) => {
+  // v12 (canvas LearnPlayer): üstte sade künye satırı (bölüm · adım), bayrak başlığın yanında
+  const v12 = useAppearance().design === 'v12';
+  if (v12) {
+    return (
+      <header className="ls-head x12-head" data-fb-key={`${step.number}:text:0`}>
+        <div className="ls-eyebrow-row">
+          <span className="x12-head-meta">{sectionName ? `${sectionName} · ` : ''}Adım {step.number} / {total}</span>
+          {step.checkpoint > 0 && <span className="ls-tag is-warn">Tekrar {step.checkpoint}</span>}
+          {step.game && <span className="ls-tag is-ai">Ders sonu oyunları</span>}
+          {step.badge && !step.checkpoint && !step.game && <span className="ls-tag is-plain">{step.badge}</span>}
+          {step.questions.length > 0 && <span className="ls-tag is-warn">{step.questions.length} soru</span>}
+          <ListenButton step={step} />
+        </div>
+        <div className="x12-title-row">
+          <h1 className="ls-title"><span>{step.title}</span></h1>
+          <FeedbackFlag target={fbTarget(step, 'text', 0, 'Anlatım', step.title, 'Ana içerik › Başlık ve anlatım')} className="ls-head-flag" />
+        </div>
+        {step.slide.subtitle && <p className="ls-sub">{step.slide.subtitle}</p>}
+      </header>
+    );
+  }
+  return (
   <header className="ls-head" data-fb-key={`${step.number}:text:0`}>
     <div className="ls-eyebrow-row">
       <span>Bölüm {step.section + 1}</span>
@@ -209,7 +234,8 @@ const StepHead: React.FC<{ step: LessonStep; total: number }> = ({ step, total }
     <h1 className="ls-title"><span>{step.title}</span></h1>
     {step.slide.subtitle && <p className="ls-sub">{step.slide.subtitle}</p>}
   </header>
-);
+  );
+};
 
 const StepBody: React.FC<{ step: LessonStep; deckId: string }> = React.memo(({ step, deckId }) => {
   const showKeys = step.bullets.length > 1 || (!step.narrative.trim() && step.bullets.length > 0);
@@ -242,6 +268,8 @@ const PracticeSet: React.FC<{ step: LessonStep; items: PracticeItem[]; jump?: { 
   const [cur, setCur] = useState(0);
   const [dir, setDir] = useState<1 | -1>(1);
   const [doneSet, setDoneSet] = useState<Set<number>>(new Set());
+  // v12: "Sonraki: <ad>" kartın alt çubuğunda (blok kabuğu), v10/v11'de kartın altında
+  const v12 = useAppearance().design === 'v12';
   const go = (i: number) => {
     setDir(i >= cur ? 1 : -1);
     setCur(i);
@@ -256,6 +284,7 @@ const PracticeSet: React.FC<{ step: LessonStep; items: PracticeItem[]; jump?: { 
   const nextUndone = items.findIndex((_, i) => i > at && !doneSet.has(i));
   const nextIdx = nextUndone >= 0 ? nextUndone : items.findIndex((_, i) => !doneSet.has(i) && i !== at);
   const pct = Math.round((doneSet.size / items.length) * 100);
+  const nextBtn = doneSet.has(at) && nextIdx >= 0 ? { label: practiceMeta(items[nextIdx])[1], go: () => go(nextIdx) } : null;
   return (
     <section className="ls-practice" aria-label="Pekiştir">
       <div className="ls-sec-h">Pekiştir <span>{doneSet.size}/{items.length}</span></div>
@@ -288,6 +317,7 @@ const PracticeSet: React.FC<{ step: LessonStep; items: PracticeItem[]; jump?: { 
         item={item}
         target={practiceTarget(step, item, at)}
         done={doneSet.has(at)}
+        next={v12 ? nextBtn : undefined}
         onDone={(r) => {
           if (r) onResult?.(at, item, r);
           setDoneSet((d) => {
@@ -298,10 +328,10 @@ const PracticeSet: React.FC<{ step: LessonStep; items: PracticeItem[]; jump?: { 
           });
         }}
       />
-      {doneSet.has(at) && nextIdx >= 0 && (
-        <button type="button" className="ls-pnext" onClick={() => go(nextIdx)}>
+      {!v12 && nextBtn && (
+        <button type="button" className="ls-pnext" onClick={nextBtn.go}>
           <span>Sonraki</span>
-          <b>{practiceMeta(items[nextIdx])[1]}</b>
+          <b>{nextBtn.label}</b>
           <ChevronRight aria-hidden />
         </button>
       )}
@@ -349,9 +379,16 @@ export const LessonPlayer: React.FC<LessonPlayerProps> = ({ deck, startAt, initi
   const [layoutPref, setLayoutPref] = useState<Layout>(() => pref.get('medsoru_learn_layout', 'A', ['A', 'B'] as const));
   const layout: Layout = isPhone ? 'A' : layoutPref;
   const [viewMode, setViewMode] = useState<DeckViewMode>(initialViewMode);
-  /** Slayt rayı solda mı (≥1024, Akış, ders görünümü) yoksa Sheet olarak mı açılır */
-  const railInline = layout === 'A' && isWide && viewMode === 'interactive';
+  /** v12 (canvas LearnPlayer): Stüdyo = Akış kabuğu (ray + okuma sütunu + bilgi çekmecesi + alt gezinme) içinde iki sütun;
+   *  sağda tek etkin bloklu Pekiştir paneli. v10/v11'in kart + yan sekmeler + bilgi karoları Stüdyo'su yalnız onlarda kalır. */
+  const v12 = useAppearance().design === 'v12';
+  const bClassic = layout === 'B' && !v12;
+  const studioV12 = layout === 'B' && v12;
+  /** Slayt rayı solda mı (≥1024, Akış — v12'de Stüdyo da —, ders görünümü) yoksa Sheet olarak mı açılır */
+  const railInline = (layout === 'A' || v12) && isWide && viewMode === 'interactive';
   const [readMode, setReadMode] = useState<ReadMode>(() => pref.get('medsoru_learn_mode', 'paged', ['paged', 'scroll'] as const));
+  /** Kaydırarak okuma yalnız Akış'ta (v12 Stüdyo hep sayfa sayfa) */
+  const flowScroll = readMode === 'scroll' && layout === 'A';
   const [recall, setRecall] = useState(false);
   const [outlineOpen, setOutlineOpen] = useState(() => pref.get('medsoru_learn_toc', typeof window !== 'undefined' && window.innerWidth >= 1100 ? '1' : '0', ['1', '0'] as const) === '1');
   const [outlineMobile, setOutlineMobile] = useState(false);
@@ -360,6 +397,8 @@ export const LessonPlayer: React.FC<LessonPlayerProps> = ({ deck, startAt, initi
   const zoom = useLessonZoom();
   const [zoomBadge, setZoomBadge] = useState(0);
   const [sheet, setSheet] = useState<Sheet>(null);
+  /** v12: Notlarım geniş ekranda kalıcı bölme (Akış: sağ sütun, Stüdyo: Pekiştir panelinin üstü); dar ekranda yan sayfa */
+  const notesDocked = v12 && sheet === 'mine' && isWide && viewMode === 'interactive';
   const [searchOpen, setSearchOpen] = useState(false);
   const [dockTab, setDockTab] = useState<InfoId | null>(null);
   const [infoSheet, setInfoSheet] = useState<InfoId | null>(null);
@@ -762,7 +801,7 @@ export const LessonPlayer: React.FC<LessonPlayerProps> = ({ deck, startAt, initi
     touch.current = null;
     if (e.touches.length > 0) return; // iki parmak (yakınlaştırma) sayfa çevirmez
     if (!s || (layout === 'A' && readMode === 'scroll') || isPenActive() || marking || Date.now() - s.at > 450) return;
-    if ((e.target as HTMLElement).closest('.ls-ix, .ls-table, .ls-dock, input')) return;
+    if ((e.target as HTMLElement).closest('.ls-ix, .ls-table, .ls-dock, input, textarea, .x12-notes, .x12-studio-r')) return;
     const sel = window.getSelection();
     if (sel && !sel.isCollapsed && sel.toString().trim()) return;
     const t = e.changedTouches[0];
@@ -800,7 +839,244 @@ export const LessonPlayer: React.FC<LessonPlayerProps> = ({ deck, startAt, initi
     setToolsOpen(false);
   };
 
-  const topBar = (
+  const zoomPop = zoomOpen && (
+    <div className="ls-tools-pop ls-zoom-pop" role="dialog" aria-label="Yazı boyutu">
+      <div className="ls-zoom-row">
+        <button type="button" className="ls-btn is-icon" onClick={() => stepZoom(-1)} disabled={zoom.scale <= ZOOM_MIN} aria-label="Küçült"><ZoomOut aria-hidden /></button>
+        <input
+          type="range"
+          className="ls-zoom-range"
+          min={ZOOM_MIN * 100}
+          max={ZOOM_MAX * 100}
+          step={10}
+          value={Math.round(zoom.scale * 100)}
+          onChange={(e) => setLessonZoom({ scale: Number(e.target.value) / 100 })}
+          aria-label="Yakınlaştırma oranı"
+          style={{ ['--p' as string]: `${((zoom.scale - ZOOM_MIN) / (ZOOM_MAX - ZOOM_MIN)) * 100}%` }}
+        />
+        <button type="button" className="ls-btn is-icon" onClick={() => stepZoom(1)} disabled={zoom.scale >= ZOOM_MAX} aria-label="Büyüt"><ZoomIn aria-hidden /></button>
+      </div>
+      <div className="ls-zoom-row is-meta">
+        <b className="ls-zoom-val">%{Math.round(zoom.scale * 100)}</b>
+        <button type="button" className="ls-btn is-sm is-ghost" onClick={() => setLessonZoom({ scale: 1 })} disabled={zoom.scale === 1}><RotateCcw aria-hidden /> Sıfırla</button>
+      </div>
+      <label className="ls-zoom-switch">
+        <span>Hareketle yakınlaştır<small>İki parmak, trackpad ve Ctrl + / − / 0</small></span>
+        <button type="button" role="switch" aria-checked={zoom.gestures} className="ui-switch" onClick={() => setLessonZoom({ gestures: !zoom.gestures })} aria-label="Hareketle yakınlaştırma" />
+      </label>
+    </div>
+  );
+
+  const toolsPop = toolsOpen && (
+    <div className="ls-tools-pop ls-tools-v2" role="menu" aria-label="Araçlar">
+      {v12 ? (
+        /* v12 (canvas Araçlar menüsü): her görünüm ayarı etiketli satırda satır içi segment */
+        <div className="ls-tools-grp">
+          <span className="ls-eyebrow">Görünüm</span>
+          <div className="x12-tl-line">
+            <span>Kaynak</span>
+            <div className="ls-seg" role="radiogroup" aria-label="Kaynak">
+              <button type="button" role="radio" aria-checked={viewMode === 'interactive'} onClick={() => pickTool(() => setViewMode('interactive'))}>Ders</button>
+              <button type="button" role="radio" aria-checked={viewMode === 'split'} onClick={() => pickTool(() => setViewMode('split'))}>Yan yana</button>
+              <button type="button" role="radio" aria-checked={viewMode === 'pdf'} onClick={() => pickTool(() => setViewMode('pdf'))}>PDF</button>
+            </div>
+          </div>
+          {layout === 'A' && viewMode === 'interactive' && (
+            <div className="x12-tl-line">
+              <span>Okuma</span>
+              <div className="ls-seg" role="radiogroup" aria-label="Okuma">
+                <button type="button" role="radio" aria-checked={readMode === 'paged'} onClick={() => pickTool(() => setReadMode('paged'))} title="Sayfa sayfa">Sayfa</button>
+                <button type="button" role="radio" aria-checked={readMode === 'scroll'} onClick={() => pickTool(() => setReadMode('scroll'))} title="Kaydırarak">Kaydır</button>
+              </div>
+            </div>
+          )}
+          <div className="x12-tl-line">
+            <span>Ortak notlar</span>
+            <div className="ls-seg" role="radiogroup" aria-label="Ortak notlar">
+              <button type="button" role="radio" aria-checked={socialVisible} onClick={() => pickTool(() => setSocialVisible(true))}>Göster</button>
+              <button type="button" role="radio" aria-checked={!socialVisible} onClick={() => pickTool(() => setSocialVisible(false))}>Gizle</button>
+            </div>
+          </div>
+          {!isPhone && (
+            <div className="x12-tl-line">
+              <span>Düzen</span>
+              <div className="ls-seg" role="radiogroup" aria-label="Düzen">
+                <button type="button" role="radio" aria-checked={layout === 'A'} onClick={() => pickTool(() => setLayoutPref('A'))} title="Akış düzeni">Akış</button>
+                <button type="button" role="radio" aria-checked={layout === 'B'} onClick={() => pickTool(() => setLayoutPref('B'))} title="Stüdyo düzeni">Stüdyo</button>
+              </div>
+            </div>
+          )}
+        </div>
+      ) : (
+      <div className="ls-tools-grp">
+        <span className="ls-eyebrow">Görünüm</span>
+        <div className="ls-seg" role="radiogroup" aria-label="Görünüm">
+          <button type="button" role="radio" aria-checked={viewMode === 'interactive'} onClick={() => pickTool(() => setViewMode('interactive'))}><GalleryHorizontal aria-hidden /> Ders</button>
+          <button type="button" role="radio" aria-checked={viewMode === 'split'} onClick={() => pickTool(() => setViewMode('split'))}><Columns aria-hidden /> Yan yana</button>
+          <button type="button" role="radio" aria-checked={viewMode === 'pdf'} onClick={() => pickTool(() => setViewMode('pdf'))}><FileText aria-hidden /> PDF</button>
+        </div>
+        {(layout === 'A' && viewMode === 'interactive') || !isPhone ? (
+          <div className="ls-seg-pair">
+            {layout === 'A' && viewMode === 'interactive' && (
+              <div className="ls-seg" role="radiogroup" aria-label="Okuma">
+                <button type="button" role="radio" aria-checked={readMode === 'paged'} onClick={() => pickTool(() => setReadMode('paged'))} title="Sayfa sayfa"><GalleryHorizontal aria-hidden /> Sayfa</button>
+                <button type="button" role="radio" aria-checked={readMode === 'scroll'} onClick={() => pickTool(() => setReadMode('scroll'))} title="Kaydırarak"><Rows3 aria-hidden /> Kaydır</button>
+              </div>
+            )}
+            {!isPhone && (
+              <div className="ls-seg" role="radiogroup" aria-label="Düzen">
+                <button type="button" role="radio" aria-checked={layout === 'A'} onClick={() => pickTool(() => setLayoutPref('A'))} title="Akış düzeni"><LayoutPanelLeft aria-hidden /> Akış</button>
+                <button type="button" role="radio" aria-checked={layout === 'B'} onClick={() => pickTool(() => setLayoutPref('B'))} title="Stüdyo düzeni"><PanelsTopLeft aria-hidden /> Stüdyo</button>
+              </div>
+            )}
+          </div>
+        ) : null}
+      </div>
+      )}
+      <div className="ls-tools-grp">
+        <span className="ls-eyebrow">Çalışma</span>
+        <div className="ls-tgrid">
+          <button type="button" role="menuitemcheckbox" aria-checked={recall} className={`ls-tt ${recall ? 'is-on' : ''}`} onClick={() => pickTool(() => setRecall((v) => !v))} title="Kalın ifadeler örtülür, dokununca açılır">
+            <EyeOff aria-hidden /><span>Hatırlama</span>
+          </button>
+          <button type="button" role="menuitemcheckbox" aria-checked={penOn} className={`ls-tt ${penOn ? 'is-on' : ''}`} onClick={() => pickTool(() => { setDrawingGlobalState({ activeMode: 'none' }); setHighlighterTool({ active: !penOn, eraser: false }); })} title="Metni renkli işaretle">
+            <Highlighter aria-hidden /><span>Marker</span>
+          </button>
+          <button type="button" role="menuitemcheckbox" aria-checked={drawMode !== 'none'} className={`ls-tt ${drawMode !== 'none' ? 'is-on' : ''}`} onClick={() => pickTool(() => { stopPen(); setDrawingGlobalState({ activeMode: drawMode !== 'none' ? 'none' : 'pen' }); })} title="Sayfanın üstüne serbest çiz">
+            <PenLine aria-hidden /><span>Kalem</span>
+          </button>
+          <button type="button" role="menuitem" className={`ls-tt ${sheet === 'mine' ? 'is-on' : ''}`} onClick={() => pickTool(() => setSheet((v) => (v12 && v === 'mine' ? null : 'mine')))} title="Biçimli kişisel not">
+            <NotebookPen aria-hidden /><span>Notlarım</span>
+          </button>
+          {!v12 && (
+            <button type="button" role="menuitemcheckbox" aria-checked={socialVisible} className={`ls-tt ${socialVisible ? 'is-on' : ''}`} onClick={() => pickTool(() => setSocialVisible(!socialVisible))} title="Herkesin SPOT / ÖNEMLİ / VURGU notlarını göster ya da gizle">
+              <Users aria-hidden /><span>Ortak notlar</span>
+            </button>
+          )}
+          <button type="button" role="menuitem" className={`ls-tt ${sheet === 'notes' ? 'is-on' : ''}`} onClick={() => pickTool(() => setSheet('notes'))} title="Dersin özeti ve spotları">
+            <NotebookText aria-hidden /><span>Ders notu</span>
+          </button>
+          <button type="button" role="menuitem" className={`ls-tt ${sheet === 'ai' ? 'is-on' : ''}`} onClick={() => pickTool(() => setSheet('ai'))} title="Bu adım hakkında soru sor">
+            <MessageCircleQuestion aria-hidden /><span>Asistan</span>
+          </button>
+          <button type="button" role="menuitem" className="ls-tt" onClick={() => pickTool(() => setIsDrawerOpen(true))} title={`${glossaryList.length} terim`}>
+            <BookOpen aria-hidden /><span>Sözlük</span>
+          </button>
+          <button type="button" role="menuitem" className={`ls-tt ${focusOn ? 'is-on' : ''}`} onClick={() => pickTool(() => setFocusSetup(true))} disabled={focusOn} title="Süreli, hedefli çalışma; arayüz sadeleşir (kısayol: O)">
+            <Timer aria-hidden /><span>Odak seansı</span>{v12 && <kbd className="x12-kbd" aria-hidden>O</kbd>}
+          </button>
+          <button type="button" role="menuitem" className={`ls-tt ${fsOn ? 'is-on' : ''}`} onClick={() => pickTool(toggleFullscreen)} title="Kısayol: F">
+            {fsOn ? <Minimize2 aria-hidden /> : <Maximize2 aria-hidden />}<span>{fsOn ? 'Küçült' : 'Tam ekran'}</span>{v12 && <kbd className="x12-kbd" aria-hidden>F</kbd>}
+          </button>
+          {onExportPdf && (
+            <button type="button" role="menuitem" className="ls-tt" onClick={() => { setToolsOpen(false); if (document.fullscreenElement) document.exitFullscreen?.().catch(() => {}); onExportPdf(step.slide.slideNumber); }} title="Bu adımı PDF olarak indir">
+              <FileDown aria-hidden /><span>PDF yap</span>
+            </button>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+
+  const railPressed = railInline ? outlineOpen : outlineMobile;
+  const toggleRail = () => (railInline ? setOutlineOpen((v) => !v) : setOutlineMobile((v) => !v));
+  const versionSwitch = versions && versions.length > 1 && onSwitchVersion && (
+    <span className="lv-vswitch" role="group" aria-label="Ders sürümü">
+      {versions.map((v) => (
+        <button
+          key={v.id}
+          type="button"
+          aria-pressed={v.id === deck.id}
+          onClick={() => v.id !== deck.id && onSwitchVersion(v.id)}
+          title={v.id === deck.id ? `${v.label} açık${v.note ? ` · ${v.note}` : ''}` : `${v.label} sürümüne geç${v.note ? ` · ${v.note}` : ''}`}
+        >
+          {v.label}
+        </button>
+      ))}
+    </span>
+  );
+  const pdfToggle = (
+    <button
+      type="button"
+      className={`ls-btn lv-pdf-btn ${viewMode !== 'interactive' ? 'is-on' : ''}`}
+      aria-pressed={viewMode !== 'interactive'}
+      onClick={() => (viewMode !== 'interactive' ? setViewMode('interactive') : isPhone ? (setPdfPage(pdfLoc.primaryPage), setViewMode('pdf')) : openPdf())}
+      title={viewMode !== 'interactive' ? 'Derse dön' : 'Bu adımın ders PDF sayfasını aç'}
+      aria-label="Ders PDF'i"
+    >
+      <FileText aria-hidden /><span className="lv-hide-sm">Ders PDF’i</span>
+    </button>
+  );
+  const zoomBtn = (
+    <button
+      type="button"
+      className={`ls-btn is-icon is-ghost ${zoomOpen || zoom.scale !== 1 ? 'is-on' : ''}`}
+      aria-expanded={zoomOpen}
+      aria-haspopup="true"
+      aria-label={`Yazı boyutu ve yakınlaştırma (%${Math.round(zoom.scale * 100)})`}
+      title="Yazı boyutu (Ctrl + / −)"
+      onClick={() => { setZoomOpen((v) => !v); setToolsOpen(false); }}
+    >
+      <Type aria-hidden />
+    </button>
+  );
+
+  /* v12 (canvas LearnPlayer · 52 px): ‹ Kitaplık · Slaytlar | başlık · ince ilerleme + n/N · Ders PDF'i · Notlarım · Akış/Stüdyo · Ara · T · Araçlar */
+  const topBarV12 = (
+    <header className={`ls-top lv-top x12-top ${immersive ? 'is-hidden' : ''}`}>
+      <button type="button" className="ls-btn is-ghost x12-back" onClick={onClose} aria-label="Kitaplığa dön" title="Kitaplığa dön (Esc)">
+        <ChevronLeft aria-hidden /><span className="x12-back-l">Kitaplık</span>
+      </button>
+      <button
+        type="button"
+        className={`ls-btn is-icon is-ghost lv-rail-btn ${railPressed ? 'is-on' : ''}`}
+        onClick={toggleRail}
+        aria-label="Slaytlar"
+        {...(railInline ? { 'aria-expanded': outlineOpen, 'aria-controls': 'lv-rail' } : { 'aria-haspopup': 'dialog' as const })}
+        title="Slaytlar"
+      >
+        <LayoutPanelLeft aria-hidden />
+      </button>
+      <span className="x12-vsep" aria-hidden />
+      <b className="x12-title" title={`${deck.title}${deck.discipline ? ` · ${deck.discipline}` : ''}${deck.instructor ? ` · ${deck.instructor}` : ''}`}>{deckName(deck)}</b>
+      {versionSwitch}
+      <div className="x12-prog" role="progressbar" aria-label={`İlerleme: ${n} adımın ${index + 1}. adımı`} aria-valuemin={1} aria-valuemax={n} aria-valuenow={index + 1}>
+        <span className="x12-bar" aria-hidden><i style={{ width: `${((index + 1) / n) * 100}%` }} /></span>
+        <span className="ls-count" aria-live="polite">{index + 1}<i>/</i>{n}</span>
+      </div>
+      {pdfToggle}
+      <button
+        type="button"
+        className={`ls-btn x12-notes-btn ${sheet === 'mine' ? 'is-on' : ''}`}
+        aria-pressed={sheet === 'mine'}
+        onClick={() => setSheet((v) => (v === 'mine' ? null : 'mine'))}
+        aria-label="Notlarım"
+        title="Notlarım (bu ders, yalnız sen)"
+      >
+        <NotebookPen aria-hidden /><span className="x12-notes-l">Notlarım</span>
+      </button>
+      {!isPhone && (
+        <div className="ls-seg x12-layout" role="radiogroup" aria-label="Düzen">
+          <button type="button" role="radio" aria-checked={layout === 'A'} onClick={() => setLayoutPref('A')}>Akış</button>
+          <button type="button" role="radio" aria-checked={layout === 'B'} onClick={() => setLayoutPref('B')}>Stüdyo</button>
+        </div>
+      )}
+      <button type="button" className="ls-btn is-icon is-ghost" onClick={() => setSearchOpen(true)} aria-label="Derste ara" title="Derste ara (Ctrl+K)"><Search aria-hidden /></button>
+      <div className="ls-tools" ref={zoomRef}>
+        {zoomBtn}
+        {zoomPop}
+      </div>
+      <div className="ls-tools" ref={toolsRef}>
+        <button type="button" className={`ls-btn is-icon is-ghost x12-tools-btn ${toolsOpen ? 'is-on' : ''}`} aria-expanded={toolsOpen} aria-haspopup="menu" aria-label="Araçlar" title="Araçlar" onClick={() => { setToolsOpen((v) => !v); setZoomOpen(false); }}>
+          <MoreHorizontal aria-hidden />
+        </button>
+        {toolsPop}
+      </div>
+      <div className="ls-prog" aria-hidden><i style={{ width: `${((index + 1) / n) * 100}%` }} /></div>
+    </header>
+  );
+
+  const topBar = v12 ? topBarV12 : (
     <header className={`ls-top lv-top ${immersive ? 'is-hidden' : ''}`}>
       <button type="button" className="ls-btn is-icon is-ghost" onClick={onClose} aria-label="Kitaplığa dön" title="Kitaplığa dön (Esc)"><ChevronLeft aria-hidden /></button>
       <button
@@ -879,106 +1155,13 @@ export const LessonPlayer: React.FC<LessonPlayerProps> = ({ deck, startAt, initi
         >
           <Type aria-hidden />
         </button>
-        {zoomOpen && (
-          <div className="ls-tools-pop ls-zoom-pop" role="dialog" aria-label="Yazı boyutu">
-            <div className="ls-zoom-row">
-              <button type="button" className="ls-btn is-icon" onClick={() => stepZoom(-1)} disabled={zoom.scale <= ZOOM_MIN} aria-label="Küçült"><ZoomOut aria-hidden /></button>
-              <input
-                type="range"
-                className="ls-zoom-range"
-                min={ZOOM_MIN * 100}
-                max={ZOOM_MAX * 100}
-                step={10}
-                value={Math.round(zoom.scale * 100)}
-                onChange={(e) => setLessonZoom({ scale: Number(e.target.value) / 100 })}
-                aria-label="Yakınlaştırma oranı"
-                style={{ ['--p' as string]: `${((zoom.scale - ZOOM_MIN) / (ZOOM_MAX - ZOOM_MIN)) * 100}%` }}
-              />
-              <button type="button" className="ls-btn is-icon" onClick={() => stepZoom(1)} disabled={zoom.scale >= ZOOM_MAX} aria-label="Büyüt"><ZoomIn aria-hidden /></button>
-            </div>
-            <div className="ls-zoom-row is-meta">
-              <b className="ls-zoom-val">%{Math.round(zoom.scale * 100)}</b>
-              <button type="button" className="ls-btn is-sm is-ghost" onClick={() => setLessonZoom({ scale: 1 })} disabled={zoom.scale === 1}><RotateCcw aria-hidden /> Sıfırla</button>
-            </div>
-            <label className="ls-zoom-switch">
-              <span>Hareketle yakınlaştır<small>İki parmak, trackpad ve Ctrl + / − / 0</small></span>
-              <button type="button" role="switch" aria-checked={zoom.gestures} className="ui-switch" onClick={() => setLessonZoom({ gestures: !zoom.gestures })} aria-label="Hareketle yakınlaştırma" />
-            </label>
-          </div>
-        )}
+        {zoomPop}
       </div>
       <div className="ls-tools" ref={toolsRef}>
         <button type="button" className={`ls-btn ${toolsOpen ? 'is-on' : ''}`} aria-expanded={toolsOpen} aria-haspopup="true" onClick={() => { setToolsOpen((v) => !v); setZoomOpen(false); }}>
           <MoreHorizontal aria-hidden /> <span className="ls-hide-phone">Araçlar</span>
         </button>
-        {toolsOpen && (
-          <div className="ls-tools-pop ls-tools-v2" role="menu" aria-label="Araçlar">
-            <div className="ls-tools-grp">
-              <span className="ls-eyebrow">Görünüm</span>
-              <div className="ls-seg" role="radiogroup" aria-label="Görünüm">
-                <button type="button" role="radio" aria-checked={viewMode === 'interactive'} onClick={() => pickTool(() => setViewMode('interactive'))}><GalleryHorizontal aria-hidden /> Ders</button>
-                <button type="button" role="radio" aria-checked={viewMode === 'split'} onClick={() => pickTool(() => setViewMode('split'))}><Columns aria-hidden /> Yan yana</button>
-                <button type="button" role="radio" aria-checked={viewMode === 'pdf'} onClick={() => pickTool(() => setViewMode('pdf'))}><FileText aria-hidden /> PDF</button>
-              </div>
-              {(layout === 'A' && viewMode === 'interactive') || !isPhone ? (
-                <div className="ls-seg-pair">
-                  {layout === 'A' && viewMode === 'interactive' && (
-                    <div className="ls-seg" role="radiogroup" aria-label="Okuma">
-                      <button type="button" role="radio" aria-checked={readMode === 'paged'} onClick={() => pickTool(() => setReadMode('paged'))} title="Sayfa sayfa"><GalleryHorizontal aria-hidden /> Sayfa</button>
-                      <button type="button" role="radio" aria-checked={readMode === 'scroll'} onClick={() => pickTool(() => setReadMode('scroll'))} title="Kaydırarak"><Rows3 aria-hidden /> Kaydır</button>
-                    </div>
-                  )}
-                  {!isPhone && (
-                    <div className="ls-seg" role="radiogroup" aria-label="Düzen">
-                      <button type="button" role="radio" aria-checked={layout === 'A'} onClick={() => pickTool(() => setLayoutPref('A'))} title="Akış düzeni"><LayoutPanelLeft aria-hidden /> Akış</button>
-                      <button type="button" role="radio" aria-checked={layout === 'B'} onClick={() => pickTool(() => setLayoutPref('B'))} title="Stüdyo düzeni"><PanelsTopLeft aria-hidden /> Stüdyo</button>
-                    </div>
-                  )}
-                </div>
-              ) : null}
-            </div>
-            <div className="ls-tools-grp">
-              <span className="ls-eyebrow">Çalışma</span>
-              <div className="ls-tgrid">
-                <button type="button" role="menuitemcheckbox" aria-checked={recall} className={`ls-tt ${recall ? 'is-on' : ''}`} onClick={() => pickTool(() => setRecall((v) => !v))} title="Kalın ifadeler örtülür, dokununca açılır">
-                  <EyeOff aria-hidden /><span>Hatırlama</span>
-                </button>
-                <button type="button" role="menuitemcheckbox" aria-checked={penOn} className={`ls-tt ${penOn ? 'is-on' : ''}`} onClick={() => pickTool(() => { setDrawingGlobalState({ activeMode: 'none' }); setHighlighterTool({ active: !penOn, eraser: false }); })} title="Metni renkli işaretle">
-                  <Highlighter aria-hidden /><span>Marker</span>
-                </button>
-                <button type="button" role="menuitemcheckbox" aria-checked={drawMode !== 'none'} className={`ls-tt ${drawMode !== 'none' ? 'is-on' : ''}`} onClick={() => pickTool(() => { stopPen(); setDrawingGlobalState({ activeMode: drawMode !== 'none' ? 'none' : 'pen' }); })} title="Sayfanın üstüne serbest çiz">
-                  <PenLine aria-hidden /><span>Kalem</span>
-                </button>
-                <button type="button" role="menuitem" className={`ls-tt ${sheet === 'mine' ? 'is-on' : ''}`} onClick={() => pickTool(() => setSheet('mine'))} title="Biçimli kişisel not">
-                  <NotebookPen aria-hidden /><span>Notlarım</span>
-                </button>
-                <button type="button" role="menuitemcheckbox" aria-checked={socialVisible} className={`ls-tt ${socialVisible ? 'is-on' : ''}`} onClick={() => pickTool(() => setSocialVisible(!socialVisible))} title="Herkesin SPOT / ÖNEMLİ / VURGU notlarını göster ya da gizle">
-                  <Users aria-hidden /><span>Ortak notlar</span>
-                </button>
-                <button type="button" role="menuitem" className={`ls-tt ${sheet === 'notes' ? 'is-on' : ''}`} onClick={() => pickTool(() => setSheet('notes'))} title="Dersin özeti ve spotları">
-                  <NotebookText aria-hidden /><span>Ders notu</span>
-                </button>
-                <button type="button" role="menuitem" className={`ls-tt ${sheet === 'ai' ? 'is-on' : ''}`} onClick={() => pickTool(() => setSheet('ai'))} title="Bu adım hakkında soru sor">
-                  <MessageCircleQuestion aria-hidden /><span>Asistan</span>
-                </button>
-                <button type="button" role="menuitem" className="ls-tt" onClick={() => pickTool(() => setIsDrawerOpen(true))} title={`${glossaryList.length} terim`}>
-                  <BookOpen aria-hidden /><span>Sözlük</span>
-                </button>
-                <button type="button" role="menuitem" className={`ls-tt ${focusOn ? 'is-on' : ''}`} onClick={() => pickTool(() => setFocusSetup(true))} disabled={focusOn} title="Süreli, hedefli çalışma; arayüz sadeleşir (kısayol: O)">
-                  <Timer aria-hidden /><span>Odak seansı</span>
-                </button>
-                <button type="button" role="menuitem" className={`ls-tt ${fsOn ? 'is-on' : ''}`} onClick={() => pickTool(toggleFullscreen)} title="Kısayol: F">
-                  {fsOn ? <Minimize2 aria-hidden /> : <Maximize2 aria-hidden />}<span>{fsOn ? 'Küçült' : 'Tam ekran'}</span>
-                </button>
-                {onExportPdf && (
-                  <button type="button" role="menuitem" className="ls-tt" onClick={() => { setToolsOpen(false); if (document.fullscreenElement) document.exitFullscreen?.().catch(() => {}); onExportPdf(step.slide.slideNumber); }} title="Bu adımı PDF olarak indir">
-                    <FileDown aria-hidden /><span>PDF yap</span>
-                  </button>
-                )}
-              </div>
-            </div>
-          </div>
-        )}
+        {toolsPop}
       </div>
       <div className="ls-prog" aria-hidden><i style={{ width: `${((index + 1) / n) * 100}%` }} /></div>
     </header>
@@ -1042,11 +1225,11 @@ export const LessonPlayer: React.FC<LessonPlayerProps> = ({ deck, startAt, initi
     const kind = hedef.split(':')[1] || '';
     const infoOf: Record<string, InfoId> = { spot: 'spot', term: 'terms', teacher: 'teacher', important: 'teacher', tip: 'teacher' };
     if (infoOf[kind]) {
-      if (layout === 'A' || viewMode !== 'interactive') setDockTab(infoOf[kind]);
+      if (!bClassic || viewMode !== 'interactive') setDockTab(infoOf[kind]);
       else setInfoSheet(infoOf[kind]);
     } else if (kind === 'q' || kind === 'cards' || kind.startsWith('ix-')) {
       const k = practice.findIndex((p, i) => practiceTarget(step, p, i).key === hedef);
-      if (layout === 'B' && viewMode === 'interactive') setSideTab(kind === 'q' ? 'q' : kind === 'cards' ? 'cards' : 'ix');
+      if (bClassic && viewMode === 'interactive') setSideTab(kind === 'q' ? 'q' : kind === 'cards' ? 'cards' : 'ix');
       else if (k >= 0) setPracticeJump({ to: k, at: Date.now() });
     }
     let tries = 0;
@@ -1073,7 +1256,7 @@ export const LessonPlayer: React.FC<LessonPlayerProps> = ({ deck, startAt, initi
     setDockTab(null);
     setInfoSheet(null);
     const scroll = (sel: string) => window.setTimeout(() => scrollInto(rootRef.current?.querySelector(sel), 'start', true), 80);
-    if (layout === 'B' && viewMode === 'interactive') {
+    if (bClassic && viewMode === 'interactive') {
       setSideTab('q');
       scroll(`.ls-B-side [data-q="${CSS.escape(q.id)}"]`);
       return;
@@ -1106,7 +1289,7 @@ export const LessonPlayer: React.FC<LessonPlayerProps> = ({ deck, startAt, initi
           ))}
           <span className="sp" />
           <button type="button" className="ls-btn is-icon is-ghost" onClick={() => setDockTab((v) => (v ? null : infoTabs[0].id))} aria-label={dockTab ? 'Bilgi bölmesini kapat' : 'Bilgi bölmesini aç'}>
-            {dockTab ? <ChevronDown aria-hidden /> : <Info aria-hidden />}
+            {v12 ? <ChevronUp aria-hidden className={`x12-chev ${dockTab ? 'is-open' : ''}`} /> : dockTab ? <ChevronDown aria-hidden /> : <Info aria-hidden />}
           </button>
         </div>
         <div className="ls-dock-body">
@@ -1143,9 +1326,95 @@ export const LessonPlayer: React.FC<LessonPlayerProps> = ({ deck, startAt, initi
     </nav>
   );
 
+  const finishDeck = () => { markDone(step.number); toast.success('Ders tamamlandı', `${deckName(deck)} bitti.`); };
+  /* ---- v12: alt gezinme çubuğu (canvas lp-nav): Önceki ← · bölüm · bölümde k/N · Sonraki → ---- */
+  const NavV12 = (
+    <nav className="x12-nav" aria-label="Adım gezinmesi">
+      <button type="button" className="ls-btn x12-nav-prev" onClick={prev} disabled={index === 0} aria-label="Önceki adım">
+        <ChevronLeft aria-hidden /><span>Önceki</span><kbd className="x12-kbd" aria-hidden>←</kbd>
+      </button>
+      {/* Bilgi sekmeleri (Sınav spotu · Terimler · Kazanımlar · Kaynak) ayrı satır yerine alt çubukta; bölme çubuğun üstünde açılır */}
+      <span className={`x12-nav-mid ${infoTabs.length > 0 ? 'has-tabs' : ''}`}>
+        {infoTabs.length > 0 && (
+          <span className="x12-nav-tabs" role="tablist" aria-label="Bilgi">
+            {infoTabs.map((t) => (
+              <button
+                key={t.id}
+                type="button"
+                role="tab"
+                aria-selected={dockTab === t.id}
+                aria-expanded={dockTab === t.id}
+                className={`x12-nav-tab ${dockTab === t.id ? 'is-on' : ''} ${t.hot ? 'is-hot' : ''}`}
+                onClick={() => setDockTab((v) => (v === t.id ? null : t.id))}
+              >
+                <t.icon aria-hidden />
+                <span className="lbl">{t.label}</span>
+                {t.id !== 'src' && <span className="c">{t.count}</span>}
+              </button>
+            ))}
+          </span>
+        )}
+        <span className="x12-nav-pos">{section ? `${section.name} · bölümde ${secPos + 1}/${section.steps.length}` : `${index + 1}/${n}`}</span>
+      </span>
+      {nextStep ? (
+        <button type="button" className="ls-btn is-primary x12-nav-next" onClick={next} title={nextStep.title} aria-label={`Sonraki adım: ${nextStep.title}`}>
+          <span>Sonraki</span><kbd className="x12-kbd" aria-hidden>→</kbd><ChevronRight aria-hidden />
+        </button>
+      ) : (
+        <button type="button" className="ls-btn is-primary x12-nav-next is-end" onClick={finishDeck}>
+          <span>Dersi bitir</span><Check aria-hidden />
+        </button>
+      )}
+    </nav>
+  );
+
+  /* ---- v12: Notlarım bölmesi (canvas lp-notes / nt): başlık + hızlı ekleme + not ---- */
+  const deckNotePanel = (closeOnJump: boolean) => (
+    <DeckNotePanel
+      deckId={deck.id}
+      deckTitle={deckName(deck)}
+      discipline={deck.discipline}
+      stepNumber={step.number}
+      stepTitle={String((step.slide as any)?.title || '').trim() || `Slayt ${step.slide.slideNumber}`}
+      spots={step.spots}
+      bullets={step.bullets.map((b: any) => [b.title, b.desc].filter(Boolean).join(': '))}
+      onJump={(num) => {
+        const i = steps.findIndex((x) => x.number === num);
+        if (i >= 0) { goTo(i); if (closeOnJump) setSheet(null); }
+      }}
+    />
+  );
+  const notesPaneV12 = (inline: boolean) => (
+    <section className={`x12-notes ${inline ? 'is-inline' : 'is-docked'}`} aria-label="Notlarım">
+      <div className="x12-notes-h">
+        <h2>Notlarım</h2>
+        <span className="x12-meta">Bu ders · yalnız sen</span>
+        <button type="button" className="ls-btn is-icon is-ghost" onClick={() => setSheet(null)} aria-label="Notlarımı kapat"><X aria-hidden /></button>
+      </div>
+      {deckNotePanel(false)}
+    </section>
+  );
+
+  /* ---- v12 Stüdyo: solda ders, sağda yapışkan Pekiştir paneli (tek etkin blok) ---- */
+  const StudioArticle = (s: LessonStep) => (
+    <div className="x12-studio">
+      <div className="x12-studio-l">
+        <StepHead step={s} total={n} sectionName={sections[s.section]?.name} />
+        <StepBody step={s} deckId={deck.id} />
+        <StepSocial step={s} />
+      </div>
+      {(practice.length > 0 || notesDocked) && (
+        <aside className="x12-studio-r" aria-label="Pekiştir">
+          {notesDocked && notesPaneV12(true)}
+          <PracticeSet step={s} items={practice} jump={practiceJump} onAllDone={() => markDone(s.number)} onResult={(i, item, r) => recordIx(s, i, item, r)} />
+        </aside>
+      )}
+    </div>
+  );
+
   const FlowArticle = (s: LessonStep, withPractice: boolean) => (
     <>
-      <StepHead step={s} total={n} />
+      <StepHead step={s} total={n} sectionName={v12 ? sections[s.section]?.name : undefined} />
       <StepBody step={s} deckId={deck.id} />
       <StepSocial step={s} />
       {withPractice && <PracticeSet step={s} items={s.index === index ? practice : practiceOf(s)} jump={s.index === index ? practiceJump : null} onAllDone={() => markDone(s.number)} onResult={(i, item, r) => recordIx(s, i, item, r)} />}
@@ -1171,8 +1440,9 @@ export const LessonPlayer: React.FC<LessonPlayerProps> = ({ deck, startAt, initi
           <div className="ls-split-l" ref={mainRef} onTouchStart={onTouchStart} onTouchEnd={onTouchEnd}>
             <article className={`ls-col ${dir > 0 ? 'ls-enter-r' : 'ls-enter-l'}`} key={index} data-step={index}>
               {FlowArticle(step, true)}
-              {FlowNav}
+              {!v12 && FlowNav}
             </article>
+            {v12 && NavV12}
           </div>
         }
         right={
@@ -1181,15 +1451,15 @@ export const LessonPlayer: React.FC<LessonPlayerProps> = ({ deck, startAt, initi
           </div>
         }
       />
-    ) : layout === 'A' ? (
-      <div className={`ls-A ${outlineOpen && railInline ? 'has-outline' : ''}`}>
+    ) : layout === 'A' || v12 ? (
+      <div className={`ls-A ${outlineOpen && railInline ? 'has-outline' : ''} ${notesDocked && !studioV12 ? 'x12-has-notes' : ''} ${studioV12 ? 'x12-is-studio' : ''}`}>
         {outlineOpen && railInline && (
           <nav id="lv-rail" className="ls-A-outline lv-rail" aria-label="Slaytlar">
             <LessonRail steps={steps} sections={sections} current={index} done={done} onPick={goTo} />
           </nav>
         )}
         <main className="ls-A-main" ref={mainRef} onTouchStart={onTouchStart} onTouchEnd={onTouchEnd}>
-          {readMode === 'scroll' ? (
+          {flowScroll ? (
             <div className="ls-col is-flow">
               {steps.map((s, i) => (
                 <article key={i} ref={(el) => { flowRefs.current[i] = el; }} className="ls-flow-step" data-step={i} aria-label={`Adım ${s.number}`}>
@@ -1198,13 +1468,15 @@ export const LessonPlayer: React.FC<LessonPlayerProps> = ({ deck, startAt, initi
               ))}
             </div>
           ) : (
-            <article className={`ls-col ${dir > 0 ? 'ls-enter-r' : 'ls-enter-l'}`} key={index} data-step={index}>
-              {FlowArticle(step, true)}
-              {FlowNav}
+            <article className={`ls-col ${studioV12 ? 'x12-studio-col' : ''} ${dir > 0 ? 'ls-enter-r' : 'ls-enter-l'}`} key={index} data-step={index}>
+              {studioV12 ? StudioArticle(step) : FlowArticle(step, true)}
+              {!v12 && FlowNav}
             </article>
           )}
           {Dock}
+          {v12 && !flowScroll && NavV12}
         </main>
+        {notesDocked && !studioV12 && notesPaneV12(false)}
       </div>
     ) : (
       <div className="ls-B">
@@ -1332,7 +1604,7 @@ export const LessonPlayer: React.FC<LessonPlayerProps> = ({ deck, startAt, initi
         </nav>
       </Sheet>
 
-      {sheet && (
+      {sheet && !notesDocked && (
         <>
           <button type="button" className="ls-scrim is-right" aria-label="Paneli kapat" onClick={() => setSheet(null)} />
           <aside className="ls-side-sheet" aria-label={sheet === 'ai' ? 'Asistana sor' : sheet === 'mine' ? 'Notlarım' : 'Ders notları'}>
@@ -1344,19 +1616,7 @@ export const LessonPlayer: React.FC<LessonPlayerProps> = ({ deck, startAt, initi
               {sheet === 'ai' ? (
                 <AskAi key={step.number} deck={deck} slide={step.slide} />
               ) : sheet === 'mine' ? (
-                <DeckNotePanel
-                  deckId={deck.id}
-                  deckTitle={deckName(deck)}
-                  discipline={deck.discipline}
-                  stepNumber={step.number}
-                  stepTitle={String((step.slide as any)?.title || '').trim() || `Slayt ${step.slide.slideNumber}`}
-                  spots={step.spots}
-                  bullets={step.bullets.map((b: any) => [b.title, b.desc].filter(Boolean).join(': '))}
-                  onJump={(num) => {
-                    const i = steps.findIndex((x) => x.number === num);
-                    if (i >= 0) { goTo(i); setSheet(null); }
-                  }}
-                />
+                deckNotePanel(true)
               ) : (
                 <>
                   {deck.overview && <Prose text={deck.overview} className="is-sm" />}

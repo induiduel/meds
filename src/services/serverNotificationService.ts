@@ -309,8 +309,8 @@ export class ServerNotificationService {
 
     if (type === 'report') {
       subject = params.link?.startsWith('/ogren')
-        ? `🚨 [MedSoru Öğren Hata Bildirimi] ${questionId || 'Ders'}: ${safeReason || 'İtiraz/Hata'}`
-        : `🚨 [MedSoru Hata Bildirimi] Soru #${questionId || 'Genel'}: ${safeReason || 'İtiraz/Hata'}`;
+        ? `🚨 [MeDSor Öğren Hata Bildirimi] ${questionId || 'Ders'}: ${safeReason || 'İtiraz/Hata'}`
+        : `🚨 [MeDSor Hata Bildirimi] Soru #${questionId || 'Genel'}: ${safeReason || 'İtiraz/Hata'}`;
       badgeColor = '#dc2626';
       badgeText = 'HATA BİLDİRİMİ';
       headline = 'Bir tıp öğrencisi soru hakkında hata/itiraz bildirdi!';
@@ -325,7 +325,7 @@ export class ServerNotificationService {
         </div>
       `;
     } else if (type === 'comment') {
-      subject = `💬 [MedSoru Yeni Yorum] Soru #${questionId || 'Genel'} - ${safeAuthor}`;
+      subject = `💬 [MeDSor Yeni Yorum] Soru #${questionId || 'Genel'} - ${safeAuthor}`;
       badgeColor = '#2563eb';
       badgeText = 'ÖĞRENCİ YORUMU';
       headline = 'Soruya yeni bir öğrenci yorumu/katkısı eklendi!';
@@ -336,7 +336,7 @@ export class ServerNotificationService {
         </div>
       `;
     } else {
-      subject = `🧪 [MedSoru] Admin Bildirim Sistemi Canlı Testi`;
+      subject = `🧪 [MeDSor] Admin Bildirim Sistemi Canlı Testi`;
       badgeColor = '#059669';
       badgeText = 'TEST BİLDİRİMİ';
       headline = 'Bildirim sistemi ve e-posta entegrasyonu başarıyla çalışıyor!';
@@ -409,7 +409,7 @@ export class ServerNotificationService {
     <!-- Alt Bilgi -->
     <div style="background-color: #f1f5f9; padding: 16px 24px; border-top: 1px solid #e2e8f0; font-size: 12px; color: #64748b; line-height: 1.5; text-align: center;">
       <p style="margin: 0 0 4px 0;">Bu bildirim yalnızca yöneticiye (<strong style="color: #334155;">${ADMIN_EMAIL}</strong>) gönderilmektedir.</p>
-      <p style="margin: 0;">MedSoru Bildirim Sistemi · <a href="${cleanBaseUrl}" style="color: #0f766e; text-decoration: none;">nofrostlife.com.tr</a></p>
+      <p style="margin: 0;">MeDSor Bildirim Sistemi · <a href="${cleanBaseUrl}" style="color: #0f766e; text-decoration: none;">nofrostlife.com.tr</a></p>
     </div>
 
   </div>
@@ -482,12 +482,12 @@ export class ServerNotificationService {
       : `${cleanBaseUrl}/cikmis`;
 
     const title = type === 'report' && params.link?.startsWith('/ogren')
-      ? `📘 MedSoru Öğren: Hata Bildirimi (${questionId})`
+      ? `📘 MeDSor Öğren: Hata Bildirimi (${questionId})`
       : type === 'report'
-      ? `🚨 MedSoru: Yeni Hata Bildirimi (#${questionId})`
+      ? `🚨 MeDSor: Yeni Hata Bildirimi (#${questionId})`
       : type === 'comment'
-      ? `💬 MedSoru: Yeni Öğrenci Yorumu (#${questionId})`
-      : `🧪 MedSoru: Test Bildirimi`;
+      ? `💬 MeDSor: Yeni Öğrenci Yorumu (#${questionId})`
+      : `🧪 MeDSor: Test Bildirimi`;
 
     const summaryMessage = type === 'report'
       ? `${authorName}: ${reason || 'Hata bildirildi'}${details ? ' - ' + details : ''}`

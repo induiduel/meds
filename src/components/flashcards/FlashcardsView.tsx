@@ -10,11 +10,13 @@ import { ApiService } from '../../services/api';
 import { toast } from '../ui/Toast';
 import './fcHero.css';
 import '../../styles/flashcards-v10.css';
+import { useAppearance } from '../../utils/appearance';
+import { FlashcardsV12 } from '../v12/FlashcardsV12';
 
 // ---------------------------------------------------------------------------
 // Card model + spaced repetition (Leitner boxes, stored per device)
 // ---------------------------------------------------------------------------
-interface StudyCard {
+export interface StudyCard {
   id: string;
   group: string;
   front: string;
@@ -23,8 +25,8 @@ interface StudyCard {
   pearl?: string;
 }
 
-type Grade = 'again' | 'hard' | 'good';
-interface CardState {
+export type Grade = 'again' | 'hard' | 'good';
+export interface CardState {
   box: number; // 0 = learning … 5 = long-term
   due: number; // epoch ms
   seen: number;
@@ -62,7 +64,7 @@ const nextState = (prev: CardState | undefined, grade: Grade, now = Date.now()):
   return { box: b, due: now + INTERVALS[b], seen };
 };
 
-type Status = 'new' | 'due' | 'learning' | 'mastered';
+export type Status = 'new' | 'due' | 'learning' | 'mastered';
 const statusOf = (s: CardState | undefined, now: number): Status => {
   if (!s) return 'new';
   if (s.due <= now) return 'due';
@@ -143,6 +145,7 @@ const plain = (s?: string) => String(s || '').replace(/\*\*/g, '');
 // Page
 // ---------------------------------------------------------------------------
 export const FlashcardsView: React.FC = () => {
+  const v12 = useAppearance().design === 'v12';
   const [source, setSource] = useState<'terms' | 'lessons'>('terms');
   const [deckCards, setDeckCards] = useState<StudyCard[] | null>(null);
   // Sözlük panelden değişince (canlı içerik) terim kartları yeniden kurulur
@@ -306,6 +309,128 @@ export const FlashcardsView: React.FC = () => {
   const loading = source === 'lessons' && !deckCards;
   const startCount = Math.min(limit > 0 ? limit : inGroup.length, counts.due + counts.new || inGroup.length);
 
+  const reportDialog = reportingCard && (
+    <div className="cf-root" role="dialog" aria-modal="true">
+      <div className="cf max-w-md w-full !text-left">
+        <div className="flex items-center justify-between w-full border-b border-line pb-2 mb-2">
+          <div className="flex items-center gap-2">
+            <div className="cf-ic !w-8 !h-8 !mb-0 bg-bad-soft text-bad-text">
+              <AlertCircle className="w-4 h-4" />
+            </div>
+            <h3 className="font-bold text-base m-0 text-ink">Kart Hata Bildirimi</h3>
+          </div>
+          <button
+            type="button"
+            onClick={() => setReportingCard(null)}
+            className="ms-btn is-icon is-ghost !w-7 !h-7"
+            aria-label="Kapat"
+          >
+            <X className="w-4 h-4" />
+          </button>
+        </div>
+
+        <div className="bg-canvas p-2.5 rounded-xl border border-line text-xs space-y-1 mb-2">
+          <div className="font-semibold text-ink line-clamp-1">{plain(reportingCard.front)}</div>
+          <div className="text-ink-3 line-clamp-2">{plain(reportingCard.back)}</div>
+        </div>
+
+        <label className="text-xs font-semibold text-ink-2 mb-1 block">Bildirim Sebebi</label>
+        <select
+          value={reportReason}
+          onChange={(e) => setReportReason(e.target.value)}
+          className="w-full h-10 px-3 rounded-lg border border-line bg-canvas text-sm text-ink mb-3"
+        >
+          <option value="Hatalı Tanım / Cevap">Hatalı Tanım / Cevap</option>
+          <option value="İmla / Yazım Yanlışı">İmla / Yazım Yanlışı</option>
+          <option value="Ders Notu Uyuşmazlığı">Ders Notu Uyuşmazlığı</option>
+          <option value="Eksik Kilit Bilgi">Eksik Kilit Bilgi</option>
+          <option value="Diğer">Diğer</option>
+        </select>
+
+        <label className="text-xs font-semibold text-ink-2 mb-1 block">Detay / Doğru Bilgi (Opsiyonel)</label>
+        <textarea
+          value={reportDetails}
+          onChange={(e) => setReportDetails(e.target.value)}
+          placeholder="Düzeltilmesi gereken noktayı açıklayabilirsiniz…"
+          rows={3}
+          className="w-full p-2.5 rounded-lg border border-line bg-canvas text-sm text-ink mb-4 resize-none"
+        />
+
+        <div className="flex justify-end gap-2 w-full">
+          <button
+            type="button"
+            onClick={() => setReportingCard(null)}
+            className="ms-btn is-ghost is-sm"
+          >
+            Vazgeç
+          </button>
+          <button
+            type="button"
+            disabled={isSubmittingReport}
+            onClick={submitCardReport}
+            className="ms-btn is-primary is-sm bg-bad hover:bg-bad-hover text-white font-semibold"
+          >
+            {isSubmittingReport ? 'Gönderiliyor…' : 'Bildirimi Gönder'}
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+
+  if (v12) {
+    return (
+      <FlashcardsV12
+        source={source}
+        onSource={(s) => {
+          setSession(null);
+          setSource(s);
+        }}
+        sourceCounts={{ terms: termCards.length, lessons: deckCards?.length }}
+        decks={decks}
+        group={group}
+        onPickDeck={(id) => {
+          setGroup(id);
+          setNow(Date.now());
+          buildSession(false, id);
+        }}
+        loading={loading}
+        groupTotal={inGroup.length}
+        counts={counts}
+        struggling={struggling}
+        session={session}
+        onStart={(forceAll) => {
+          setNow(Date.now());
+          buildSession(forceAll);
+        }}
+        onStudyCards={(cards) => setSession(doShuffle ? shuffle(cards) : cards)}
+        startCount={startCount}
+        limit={limit}
+        onLimit={setLimit}
+        doShuffle={doShuffle}
+        onShuffle={setDoShuffle}
+        reverse={reverse}
+        onReverse={setReverse}
+        onGrade={grade}
+        intervalLabel={intervalLabel}
+        onExit={() => {
+          setSession(null);
+          setNow(Date.now());
+          setFavCards(getFavoriteCards());
+        }}
+        onShare={handleShare}
+        onReport={handleReport}
+        visible={visible}
+        view={view}
+        onView={setView}
+        query={query}
+        onQuery={setQuery}
+        statusFor={(id) => statusOf(store[id], now)}
+        favCount={favCards.length}
+        reportDialog={reportDialog}
+      />
+    );
+  }
+
   // v10 yerleşim: solda deste paneli (telefon/tablette üstte kompakt seçim), sağda oturum ya da başlangıç + göz at
   return (
     <div className={`ds-page fv ${session ? 'is-study' : ''}`}>
@@ -435,73 +560,7 @@ export const FlashcardsView: React.FC = () => {
         )}
       </div>
 
-      {reportingCard && (
-        <div className="cf-root" role="dialog" aria-modal="true">
-          <div className="cf max-w-md w-full !text-left">
-            <div className="flex items-center justify-between w-full border-b border-line pb-2 mb-2">
-              <div className="flex items-center gap-2">
-                <div className="cf-ic !w-8 !h-8 !mb-0 bg-bad-soft text-bad-text">
-                  <AlertCircle className="w-4 h-4" />
-                </div>
-                <h3 className="font-bold text-base m-0 text-ink">Kart Hata Bildirimi</h3>
-              </div>
-              <button
-                type="button"
-                onClick={() => setReportingCard(null)}
-                className="ms-btn is-icon is-ghost !w-7 !h-7"
-                aria-label="Kapat"
-              >
-                <X className="w-4 h-4" />
-              </button>
-            </div>
-
-            <div className="bg-canvas p-2.5 rounded-xl border border-line text-xs space-y-1 mb-2">
-              <div className="font-semibold text-ink line-clamp-1">{plain(reportingCard.front)}</div>
-              <div className="text-ink-3 line-clamp-2">{plain(reportingCard.back)}</div>
-            </div>
-
-            <label className="text-xs font-semibold text-ink-2 mb-1 block">Bildirim Sebebi</label>
-            <select
-              value={reportReason}
-              onChange={(e) => setReportReason(e.target.value)}
-              className="w-full h-10 px-3 rounded-lg border border-line bg-canvas text-sm text-ink mb-3"
-            >
-              <option value="Hatalı Tanım / Cevap">Hatalı Tanım / Cevap</option>
-              <option value="İmla / Yazım Yanlışı">İmla / Yazım Yanlışı</option>
-              <option value="Ders Notu Uyuşmazlığı">Ders Notu Uyuşmazlığı</option>
-              <option value="Eksik Kilit Bilgi">Eksik Kilit Bilgi</option>
-              <option value="Diğer">Diğer</option>
-            </select>
-
-            <label className="text-xs font-semibold text-ink-2 mb-1 block">Detay / Doğru Bilgi (Opsiyonel)</label>
-            <textarea
-              value={reportDetails}
-              onChange={(e) => setReportDetails(e.target.value)}
-              placeholder="Düzeltilmesi gereken noktayı açıklayabilirsiniz…"
-              rows={3}
-              className="w-full p-2.5 rounded-lg border border-line bg-canvas text-sm text-ink mb-4 resize-none"
-            />
-
-            <div className="flex justify-end gap-2 w-full">
-              <button
-                type="button"
-                onClick={() => setReportingCard(null)}
-                className="ms-btn is-ghost is-sm"
-              >
-                Vazgeç
-              </button>
-              <button
-                type="button"
-                disabled={isSubmittingReport}
-                onClick={submitCardReport}
-                className="ms-btn is-primary is-sm bg-bad hover:bg-bad-hover text-white font-semibold"
-              >
-                {isSubmittingReport ? 'Gönderiliyor…' : 'Bildirimi Gönder'}
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
+      {reportDialog}
     </div>
   );
 };

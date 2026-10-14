@@ -27,8 +27,8 @@ import summariesMeta from '../../data/summaries_meta.json';
 import {
   buildDocument, renderMarkup, serverPdfAvailable, renderPdfOnServer, downloadBlob, printDocument, downloadHtml, safeFileName,
   computeFitZoom, estimatePages, normalizePage, pageGeometry, pageLabel,
-  PAPER, PAPER_ORDER, MARGINS, TEMPLATES, DEFAULT_PAGE, ZOOM,
-  type PageSettings, type FontScale, type DocumentOptions, type TemplateId, type MarginPreset, type FitMode, type PaperSize,
+  PAPER, PAPER_ORDER, MARGINS, TEMPLATES, DEFAULT_PAGE, ZOOM, DESIGNS, DESIGN_ORDER,
+  type PageSettings, type FontScale, type DocumentOptions, type TemplateId, type MarginPreset, type FitMode, type PaperSize, type PdfDesign,
 } from './pdfDocument';
 import {
   fromPastQuestion, fromPoolQuestion, loadOrnekQuestions, miniQuestionsFromDeck, ORNEK_INDEX, COMMITTEE_NAME, sortYears,
@@ -664,7 +664,7 @@ export const PdfStudio: React.FC<PdfStudioProps> = ({ isOpen, onClose, committee
   const stepSummary: Record<StepId, string> = {
     source: loading ? 'Yükleniyor…' : `${kindLabel} · ${itemCount} ${unit}`,
     layout: groupText,
-    look: `${TEMPLATES[page.template].label}${page.fit === 'pages' ? ` · ${page.fitPages} sayfaya` : page.fit === 'width' ? ' · genişliğe' : ''}`,
+    look: `${DESIGNS[page.design].label.replace(/ \(.*\)/, '')} · ${TEMPLATES[page.template].label}${page.fit === 'pages' ? ` · ${page.fitPages} sayfaya` : page.fit === 'width' ? ' · genişliğe' : ''}`,
     page: `${pageLabel(page)} · ${MARGINS[page.margins].label.toLocaleLowerCase('tr-TR')}`,
   };
   const stepIndex = STEPS.findIndex((s) => s.id === step);
@@ -790,6 +790,13 @@ export const PdfStudio: React.FC<PdfStudioProps> = ({ isOpen, onClose, committee
                 pagesText && <span className="ps-pill">{pagesText}</span>
               )}
               <span className="ps-grow" />
+              <div role="radiogroup" aria-label="Tasarım" className="ps-seg is-small" title="PDF'in tasarım sürümü">
+                {DESIGN_ORDER.map((id) => (
+                  <button key={id} type="button" role="radio" aria-checked={page.design === id} className={page.design === id ? 'is-on' : ''} onClick={() => setPage({ design: id })}>
+                    {id === 'v12' ? 'Net · v12' : 'Klasik · v10'}
+                  </button>
+                ))}
+              </div>
               {serverOk && canInlinePdf && (
                 <div role="radiogroup" aria-label="Önizleme türü" className="ps-seg is-small">
                   {(
@@ -856,7 +863,7 @@ export const PdfStudio: React.FC<PdfStudioProps> = ({ isOpen, onClose, committee
           </div>
           <p className="ps-foot-sum" role="status">
             <b>{loading ? 'Yükleniyor…' : `${itemCount} ${unit}`}</b>
-            <span>{[groupText, TEMPLATES[page.template].label, pageLabel(page), pagesText].filter(Boolean).join(' · ')}</span>
+            <span>{[groupText, `${page.design} · ${TEMPLATES[page.template].label}`, pageLabel(page), pagesText].filter(Boolean).join(' · ')}</span>
           </p>
           <button type="button" className="ps-btn ps-hide-mobile" onClick={handlePrint} disabled={!itemCount || !!busy} title="Tarayıcının yazdırma penceresini açar">
             <Printer /> Yazdır
@@ -1271,6 +1278,21 @@ const TEMPLATE_ORDER: TemplateId[] = ['modern', 'sade', 'klasik', 'kompakt', 'si
 
 const LookCommon: React.FC<{ page: PageSettings; setPage: (p: Partial<PageSettings>) => void; fitInfo: { zoom: number; pages: number; basePages: number } | null; unit: string }> = ({ page, setPage, fitInfo }) => (
   <>
+    <Group title="Tasarım">
+      <div className="ps-tpls ps-designs" role="radiogroup" aria-label="Tasarım">
+        {DESIGN_ORDER.map((id) => {
+          const on = page.design === id;
+          return (
+            <button key={id} type="button" role="radio" aria-checked={on} className={`ps-tpl ${on ? 'is-on' : ''}`} onClick={() => setPage({ design: id })}>
+              <DesignGlyph id={id} />
+              <b>{DESIGNS[id].label}</b>
+              <small>{DESIGNS[id].hint}</small>
+            </button>
+          );
+        })}
+      </div>
+      <p className="ps-hint">Şablonlar seçilen tasarımın üstüne biner; “Uygulama” şablonu tasarımı en yalın hâliyle gösterir.</p>
+    </Group>
     <Group title="Şablon">
       <div className="ps-tpls" role="radiogroup" aria-label="Şablon">
         {TEMPLATE_ORDER.map((id) => {
@@ -1592,6 +1614,17 @@ const ColumnGlyph: React.FC<{ cols: 1 | 2 | 3 }> = ({ cols }) => (
 );
 
 /** Şablonun küçük çizimi: kart / çizgi / tırnaklı / sıkı / sınav */
+/** Tasarım önizleme simgesi: v10 koyu numara + yuvarlak kart, v12 düz kart + ince çizgi */
+const DesignGlyph: React.FC<{ id: PdfDesign }> = ({ id }) => (
+  <span className={`ps-dglyph is-${id}`} aria-hidden="true">
+    <span className="ps-dglyph-card">
+      <em>{id === 'v12' ? 'S1' : '1'}</em>
+      <span><i /><i /></span>
+    </span>
+    <span className="ps-dglyph-opts"><i /><i /><i /></span>
+  </span>
+);
+
 const TemplateGlyph: React.FC<{ id: TemplateId }> = ({ id }) => (
   <span className={`ps-tglyph is-${id}`} aria-hidden="true">
     <em>{id === 'klasik' ? 'Aa' : id === 'sinav' ? '1.' : ''}</em>

@@ -2,7 +2,7 @@
 """
 scripts/agents/post_lora_auto_refiner.py
 --------------------------------------------------------------------------------
-MedSoru Otonom Veri Düzeltme & İyileştirme Motoru (Post-Training Autonomous Dataset Refiner)
+MeDSor Otonom Veri Düzeltme & İyileştirme Motoru (Post-Training Autonomous Dataset Refiner)
 
 Amaç:
 1. QLoRA eğitimi sonrasında veya arka plan otomasyonu olarak tüm verileri baştan sona denetler.
@@ -285,7 +285,7 @@ class PostLoraDatasetRefiner:
         log.info(f"İyileştirme raporu kaydedildi: {REPORT_FILE}")
 
 def main():
-    parser = argparse.ArgumentParser(description="MedSoru Post-Training Autonomous Dataset Refiner")
+    parser = argparse.ArgumentParser(description="MeDSor Post-Training Autonomous Dataset Refiner")
     parser.add_argument("--sync-supabase", action="store_true", help="Temizlenen soruları Supabase'e de senkronize et")
     args = parser.parse_args()
 

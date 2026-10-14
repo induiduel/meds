@@ -294,10 +294,10 @@ export interface QuestionItem {
   qualityVersion?: string;
   is_manual_entry?: boolean;
   manuel_ekleme?: boolean;
-  similarPastQuestions?: Array<{ id: string; examYear?: string; booklet?: string; questionNumber?: number; label?: string }>;
+  similarPastQuestions?: Array<{ id: string; examYear?: string; booklet?: string; questionNumber?: number; label?: string; benzerlik?: number; olasi?: boolean }>;
   appearanceCount?: number;
   appearanceLabels?: string[];
-  examOccurrences?: Array<{ id: string; examYear?: string; booklet?: string; questionNumber?: number; label?: string }>;
+  examOccurrences?: Array<{ id: string; examYear?: string; booklet?: string; questionNumber?: number; label?: string; benzerlik?: number; olasi?: boolean }>;
   createdAt: string;
   updatedAt: string;
 }

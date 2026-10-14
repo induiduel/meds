@@ -3,6 +3,8 @@ import { Archive, CloudDownload, Smartphone, WifiOff } from 'lucide-react';
 import { pwaService, PWA_WELCOME_STORAGE_KEY } from '../../services/pwaService';
 import { offlineDatabaseService } from '../../services/offlineDatabaseService';
 import { Dialog } from '../ui/Dialog';
+import { useAppearance } from '../../utils/appearance';
+import { PwaWelcomeV12 } from '../v12/OnboardingV12';
 
 export { PWA_WELCOME_STORAGE_KEY };
 
@@ -26,6 +28,7 @@ const remember = (permanent: boolean) => {
  */
 export const PwaInstallWelcomeModal: React.FC<PwaInstallWelcomeModalProps> = ({ isOpen, onClose, onOpenOfflineDatabase }) => {
   const [busy, setBusy] = useState(false);
+  const v12 = useAppearance().design === 'v12';
   if (!isOpen) return null;
 
   const close = (permanent: boolean) => {
@@ -42,6 +45,8 @@ export const PwaInstallWelcomeModal: React.FC<PwaInstallWelcomeModalProps> = ({ 
     onOpenOfflineDatabase();
     window.setTimeout(() => offlineDatabaseService.downloadEntireDatabase(), 300);
   };
+
+  if (v12) return <PwaWelcomeV12 busy={busy} onLater={() => close(false)} onNever={() => close(true)} onAccept={accept} />;
 
   return (
     <Dialog

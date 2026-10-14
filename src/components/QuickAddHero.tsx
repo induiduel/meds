@@ -40,6 +40,8 @@ import { getSmartQuestionAssistant, SmartQuestionAssistantResult } from '../serv
 import { Colored, WordLegend, ContextBadge, sharedWordColors } from './draftHighlight';
 import { MetaPicker } from './ui/MetaPicker';
 import './quickadd/quickadd.css';
+import { useAppearance } from '../utils/appearance';
+import { QuickAddV12 } from './v12/QuickAddV12';
 
 const AiQuestionOptimizerModal = React.lazy(() =>
   import('./AiQuestionOptimizerModal').then((m) => ({ default: m.AiQuestionOptimizerModal }))
@@ -212,7 +214,12 @@ const COMMITTEE_SEQUENCE = [
   'donem3-butunleme',
 ];
 
-export const isCommitteeLocked = (committeeId: string): boolean => {
+/**
+ * Kurul kilidi yalnız bu öğretim yılının soruları içindir (sınav takvimi bu yıla ait). Eski bir sınav yılı
+ * seçildiyse o yılın bütün sınavları yapılmıştır: tüm kurullar açıktır. "Bilmiyorum" (boş) bu yıl sayılır.
+ */
+export const isCommitteeLocked = (committeeId: string, examYear?: string): boolean => {
+  if (examYear && examYear !== currentAcademicYear()) return false;
   const idx = COMMITTEE_SEQUENCE.indexOf(committeeId);
   if (idx <= 0) return false; // Kurul 1 her zaman açıktır
   const prevCommitteeId = COMMITTEE_SEQUENCE[idx - 1];
@@ -243,6 +250,8 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
       ? committee.disciplines
       : ['Tıbbi Patoloji', 'Tıbbi Farmakoloji', 'Tıbbi Biyokimya', 'Halk Sağlığı', 'İç Hastalıkları'];
 
+  // v12 "Net": ayrı yapı (components/v12/QuickAddV12); tüm durum ve mantık bu bileşende kalır
+  const v12 = useAppearance().design === 'v12';
   const [mode, setMode] = useState<Mode>('stem');
   // Each mode keeps its own text: typing a stem must not leak into the clue
   type TextMode = Exclude<Mode, 'option'>;
@@ -316,8 +325,8 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
 
   // Kurul kilitli mi kontrolü: Sınav tarihi gelmeden soru yazılamaz
   const isLocked = useMemo(() => {
-    return committee ? isCommitteeLocked(committee.id) : false;
-  }, [committee]);
+    return committee ? isCommitteeLocked(committee.id, examYear) : false;
+  }, [committee, examYear]);
 
   // 1. Kelime-bazlı ve boşluk tetiklemeli (Space-delimited / Word-level) gecikmeli metin optimizasyonu:
   // - Kullanıcı boşluk (' ') veya noktalama (. , ! ? \n) bastığı an, tamamlanan son kelimeye kadar olan
@@ -712,7 +721,7 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
       return;
     }
 
-    if (isCommitteeLocked(targetCommittee.id)) {
+    if (isCommitteeLocked(targetCommittee.id, examYear)) {
       const msg = 'Ders programına göre bu kurulun sınav tarihi henüz gelmedi. Önceki kurul sınavı tamamlanmadan sonraki kurula soru yazılamaz.';
       setFormError(msg);
       toast.error('Kurul Henüz Açılmadı', msg);
@@ -1011,11 +1020,11 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
     return () => mq.removeEventListener('change', on);
   }, []);
   useEffect(() => {
-    if (!isWide) return;
-    // Geniş ekranda kök ve şıklar aynı anda görünür: tek kip (kök); telefondan büyütülürse tam ekran kapanır
+    if (!isWide && !v12) return;
+    // Geniş ekranda (ve v12'de her genişlikte) kök ve şıklar aynı anda görünür: tek kip (kök); telefondan büyütülürse tam ekran kapanır
     if (mode !== 'stem') setMode('stem');
     if (fullRef.current) setFull(false);
-  }, [isWide, mode]);
+  }, [isWide, mode, v12]);
 
   // Taslak kaydet: form bu cihazda saklanır, gönderim başarılı olunca silinir
   type QhDraft = {
@@ -1060,6 +1069,121 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [successMessage]);
   const formEmpty = !hasAnyText && filledOptionCount === 0 && !claimedAnswer && !premises.some((p) => p.trim());
+
+  if (v12) {
+    return (
+      <>
+        <QuickAddV12
+          committee={committee}
+          committees={sortedCommittees}
+          activeCommitteeId={activeCommitteeId}
+          committeeLabel={titleCase}
+          isCommitteeLocked={(id: string) => isCommitteeLocked(id, examYear)}
+          onSelectCommittee={onSelectCommittee}
+          isLocked={isLocked}
+          isCollecting={isCollecting}
+          disciplines={disciplines}
+          discipline={discipline}
+          onDiscipline={(d) => { setDiscipline(d); setUserManualDiscipline(true); setAutoDisc(false); }}
+          discAuto={autoDisc && !userManualDiscipline}
+          examYear={examYear}
+          onExamYear={setExamYear}
+          years={academicYears()}
+          currentYear={currentAcademicYear()}
+          questionNumber={questionNumber}
+          onQuestionNumber={(v) => { setQuestionNumber(v.replace(/[^0-9]/g, '').slice(0, 3)); setUserManualNumber(true); setAutoNum(false); }}
+          numAuto={autoNum && !userManualNumber}
+          stem={texts.stem}
+          onStem={(v) => setTexts((prev) => ({ ...prev, stem: v }))}
+          stemPlaceholder={PLACEHOLDERS.stem}
+          clue={texts.clue}
+          onClue={(v) => setTexts((prev) => ({ ...prev, clue: v }))}
+          cluePlaceholder={PLACEHOLDERS.clue}
+          qType={qType}
+          onQType={setQType}
+          premises={premises}
+          premiseMax={PREMISE_MAX}
+          onPremiseAt={setPremiseAt}
+          onAddPremise={addPremise}
+          onRemovePremise={removePremise}
+          onPastePremises={pastePremises}
+          looksOnculu={looksOnculu}
+          stemPremiseCount={stemPremiseLines.length}
+          onExtractPremises={extractPremisesFromStem}
+          truePremises={truePremises}
+          filledPremiseCount={filledPremiseCount}
+          onFillStandard={fillStandardOptions}
+          comboChips={comboChips}
+          onFillNext={fillNextOption}
+          options={options}
+          setOptions={setOptions}
+          optionCount={optionCount}
+          setOptionCount={setOptionCount}
+          answer={claimedAnswer}
+          onAnswer={setClaimedAnswer}
+          answerReason={answerReason}
+          onAnswerReason={setAnswerReason}
+          linkedQuestion={linkedQuestion}
+          onUnlink={() => { setLinkedQuestion(null); setQuestionNumber(''); }}
+          isSearching={isSearching}
+          queryText={debouncedText}
+          matches={realtimeMatches}
+          selectedMatchIds={selectedMatchIds}
+          onToggleMatch={toggleSelectMatch}
+          onSelectAllMatches={selectAllMatches}
+          onClearMatchSelection={clearSelection}
+          onLink={handleLinkToQuestion}
+          onReject={rejectMatch}
+          onMerge={handleMergeAndGroupSelected}
+          isMerging={isMergingSelected}
+          isAdmin={isAdmin}
+          onOptimize={setOptimizingQuestion}
+          sharedColors={sharedColors}
+          highlightMin={HIGHLIGHT_MIN_SCORE}
+          stemOf={questionStemText}
+          similar={similar}
+          onTransfer={handleTransferEntireQuestion}
+          onCopyStem={handleCopyQuestionStem}
+          sources={sources}
+          assistant={smartAssistant}
+          onApplyCommittee={() => {
+            const sa = smartAssistant;
+            if (!sa?.predictedCommittee) return;
+            onSelectCommittee(sa.predictedCommittee.committeeId);
+            if (sa.predictedDiscipline) setDiscipline(sa.predictedDiscipline.discipline);
+            toast.success('Kurul Değiştirildi', `${sa.predictedCommittee.committeeName} kuruluna geçildi.`);
+          }}
+          onApplyDiscipline={(d) => { setDiscipline(d); setUserManualDiscipline(true); setAutoDisc(false); }}
+          savedDraftAt={savedDraft?.at || null}
+          formEmpty={formEmpty}
+          onSaveDraft={saveDraft}
+          onRestoreDraft={restoreDraft}
+          onDropDraft={dropDraft}
+          formError={formError}
+          successMessage={successMessage}
+          intakeId={intakeId}
+          onCloseIntake={() => setIntakeId(null)}
+          isSubmitting={isSubmitting}
+          onSubmit={handleSubmit}
+        />
+        {optimizingQuestion && (
+          <React.Suspense fallback={null}>
+            <AiQuestionOptimizerModal
+              question={optimizingQuestion}
+              isOpen={Boolean(optimizingQuestion)}
+              onClose={() => setOptimizingQuestion(null)}
+              currentUser={currentUser}
+              onSaved={async (updated) => {
+                setOptimizingQuestion(null);
+                toast.success('Taslak Geliştirildi', `Soru #${updated.questionNumber || 'taslak'} güncellendi; inceleme bitene kadar İnceleniyor olarak kalır.`);
+                if (onQuestionsUpdated) await onQuestionsUpdated();
+              }}
+            />
+          </React.Suspense>
+        )}
+      </>
+    );
+  }
 
   if (isWide) {
     const riskCls = (s: number) => (s >= 80 ? 'is-bad' : s >= 65 ? 'is-warn' : 'is-mid');
@@ -1108,7 +1232,7 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
                 <select value={committee?.id || ''} onChange={(e) => onSelectCommittee(e.target.value)}>
                   {!committee && <option value="">Seç</option>}
                   {sortedCommittees.map((c) => {
-                    const locked = isCommitteeLocked(c.id);
+                    const locked = isCommitteeLocked(c.id, examYear);
                     return (
                       <option key={c.id} value={c.id} disabled={locked}>
                         {titleCase(c)}{locked ? ' · açılmadı' : c.id === activeCommitteeId ? ' · toplama açık' : ''}
@@ -1682,7 +1806,7 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
                           {(close) => (
                             <ul className="qa-list" role="listbox" aria-label="Kurul">
                               {sortedCommittees.map((c) => {
-                                const locked = isCommitteeLocked(c.id);
+                                const locked = isCommitteeLocked(c.id, examYear);
                                 const on = c.id === committee?.id;
                                 return (
                                   <li key={c.id}>
@@ -1768,7 +1892,7 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
                     {(close) => (
                       <ul className="qa-list" role="listbox" aria-label="Kurul">
                         {sortedCommittees.map((c) => {
-                          const locked = isCommitteeLocked(c.id);
+                          const locked = isCommitteeLocked(c.id, examYear);
                           const on = c.id === committee?.id;
                           return (
                             <li key={c.id}>

@@ -1,6 +1,6 @@
 import React, { useEffect, useId, useRef, useState } from 'react';
 import {
-  Bookmark, BookOpen, Check, ChevronDown, Eye, FileText, Flag, History, Info, MessageSquare, RotateCcw, Share2, Strikethrough, ThumbsDown, ThumbsUp, X,
+  Bookmark, BookOpen, Check, ChevronDown, Eye, FileText, Flag, Heart, History, Info, MessageSquare, RotateCcw, Share2, Strikethrough, ThumbsDown, ThumbsUp, X,
 } from 'lucide-react';
 import { CopyQuestionButton } from '../ui/CopyQuestionButton';
 import { useAppearance } from '../../utils/appearance';
@@ -45,6 +45,8 @@ export interface RichCardExtras {
   /** Dağılım okumak için oy kimliği */
   voterUid?: string;
   commentPreview?: { author: string; text: string; more: number } | null;
+  /** Konu (v12 etiket satırında) */
+  topic?: string;
 }
 
 export type PastQuestionRichCardProps = CikmisCardProps & { rich?: RichCardExtras };
@@ -55,7 +57,8 @@ export const PastQuestionRichCard: React.FC<PastQuestionRichCardProps> = (p) => 
   const r = p.rich;
   const uid = useId();
   // v12: şık satırında hızlı düğme (cevaplamadan önce ele, sonra şıkkı bildir) + alt çubukta kopyala
-  const v12 = useAppearance().design === 'v12';
+  const look = useAppearance();
+  const v12 = look.design === 'v12';
   const [elim, setElim] = useState<Set<string>>(() => new Set());
   const key = p.correctAnswer ? String(p.correctAnswer).toUpperCase() : '';
   const [picked, setPicked] = useState<string | null>(() => (r?.attempt?.picked ? String(r.attempt.picked).toUpperCase() : null));
@@ -136,8 +139,63 @@ export const PastQuestionRichCard: React.FC<PastQuestionRichCardProps> = (p) => 
   ];
   const no = r?.number != null && r.number !== '' ? `#${r.number}` : '#?';
 
+  // Açıklama gövdesi: v10/v11'de şıkların altında başlıklı bölüm, v12'de işlem çubuğunun altında (çubuktaki "Açıklama" açar)
+  const explRev = hasExplain ? (
+    <div className="ck-rev" id={`${uid}-expl`} ref={explRef}>
+      <div className="ck-rev-in" inert={!explOpen ? true : undefined}>
+        {explMounted ? (
+          <div className="ck-expl-b">
+            {p.explanation?.trim() ? <SourceText text={p.explanation} size="sm" /> : <p className="ck-muted">Bu soruya henüz açıklama yazılmadı.</p>}
+            {p.analysis.length > 0 && (
+              <dl className="ck-analysis">
+                {p.analysis.map(([k, v]) => (
+                  <div key={k} className={String(k).toUpperCase() === key ? 'is-ok' : ''}>
+                    <dt>{k}</dt>
+                    <dd>{String(v)}</dd>
+                  </div>
+                ))}
+              </dl>
+            )}
+            {p.kazanim && <p className="ck-kaz"><b>{p.kazanim.baslik}</b>{p.kazanim.metin}</p>}
+            {(p.refs.length > 0 || r?.onOpenNote) && (
+              <p className="ck-refs">
+                <FileText aria-hidden />
+                <span>{p.refs.length > 0 ? p.refs.join(' · ') : 'Ders notu'}</span>
+                {r?.onOpenNote && <button type="button" className="ck-link" onClick={r.onOpenNote}>Ders notunda aç</button>}
+              </p>
+            )}
+            {p.history && (
+              <>
+                <button type="button" className="ck-link" aria-expanded={histOpen} aria-controls={`${uid}-hist`} onClick={() => setHistOpen((v) => !v)}>
+                  <History aria-hidden />Değişiklik geçmişi{p.historyBadge ? ` · ${p.historyBadge}` : ''}
+                </button>
+                <div id={`${uid}-hist`} className="ck-hist" hidden={!histOpen}>{histOpen && p.history}</div>
+              </>
+            )}
+          </div>
+        ) : null}
+      </div>
+    </div>
+  ) : null;
+
   return (
     <article id={p.anchorId} className={`ck ${p.className || ''}`} aria-labelledby={`${uid}-stem`}>
+      {v12 ? (
+        <header className="ck-meta">
+          <span className="ck-no">S {r?.number != null && r.number !== '' ? r.number : '?'}</span>
+          {r?.year && <span className="ck-m">{r.year}</span>}
+          {p.kurul && <span className="ck-m" title="Kurul">{p.kurul.replace(/^K(?=\d)/, 'Kurul ')}</span>}
+          {picked && key && <span className={`ck-badge ${picked === key ? 'is-ok' : 'is-bad'}`}>{picked === key ? 'Doğru' : 'Yanlış'}</span>}
+          {r?.status && <span className={`ck-badge ${TONE_CLS[r.status.tone] || ''}`}>{r.status.label}</span>}
+          <span className="ck-sp" />
+          {r && (
+            <button type="button" className={`c12-qsave ${r.saved ? 'is-on' : ''}`} onClick={r.onToggleSave} aria-pressed={r.saved} aria-label={r.saved ? 'Kaydedildi, kaydı kaldır' : 'Soruyu kaydet'} title={r.saved ? 'Kaydedilenlerden çıkar' : 'Kaydet'}>
+              <Bookmark aria-hidden className={r.saved ? 'is-fill' : ''} />
+            </button>
+          )}
+          <ActionMenu items={menu} title={`Soru ${no}`} highlight={p.menuHighlight} className="ck-menu" />
+        </header>
+      ) : (
       <header className="ck-meta">
         <span className="ck-no">{no}</span>
         {r?.year && <span className="ck-m">{r.year}</span>}
@@ -148,6 +206,7 @@ export const PastQuestionRichCard: React.FC<PastQuestionRichCardProps> = (p) => 
         {r?.status && <span className={`ck-badge ${TONE_CLS[r.status.tone] || ''}`}>{r.status.label}</span>}
         <ActionMenu items={menu} title={`Soru ${no}`} highlight={p.menuHighlight} className="ck-menu" />
       </header>
+      )}
 
       <div className="ck-stem" id={`${uid}-stem`}>{p.stem}</div>
 
@@ -231,7 +290,16 @@ export const PastQuestionRichCard: React.FC<PastQuestionRichCardProps> = (p) => 
 
       {p.notes}
 
-      {hasExplain && (
+      {v12 && look.qtags && (
+        <div className="c12-tags">
+          {p.ders && <span className="c12-tag" title={p.ders}><i className="ck-dot" aria-hidden />{p.ders}</span>}
+          {r?.topic && r.topic !== p.ders && <span className="c12-tag" title={r.topic}>{r.topic}</span>}
+          {p.flags.map((f, i) => <React.Fragment key={i}>{f}</React.Fragment>)}
+          {p.kazanim && <span className="c12-tag is-acc" title={p.kazanim.metin}>Kazanım: {p.kazanim.metin}</span>}
+        </div>
+      )}
+
+      {hasExplain && !v12 && (
         <section className={`ck-expl ${explOpen ? 'is-open' : ''}`}>
           <button type="button" className="ck-expl-h" aria-expanded={explOpen} aria-controls={`${uid}-expl`} onClick={() => openExpl(!explOpen)}>
             <BookOpen aria-hidden />
@@ -239,44 +307,34 @@ export const PastQuestionRichCard: React.FC<PastQuestionRichCardProps> = (p) => 
             {!revealed && !explOpen && <small>cevabı da gösterir</small>}
             <ChevronDown aria-hidden className="ck-chev" />
           </button>
-          <div className="ck-rev" id={`${uid}-expl`} ref={explRef}>
-            <div className="ck-rev-in" inert={!explOpen ? true : undefined}>
-              {explMounted ? (
-                <div className="ck-expl-b">
-                  {p.explanation?.trim() ? <SourceText text={p.explanation} size="sm" /> : <p className="ck-muted">Bu soruya henüz açıklama yazılmadı.</p>}
-                  {p.analysis.length > 0 && (
-                    <dl className="ck-analysis">
-                      {p.analysis.map(([k, v]) => (
-                        <div key={k} className={String(k).toUpperCase() === key ? 'is-ok' : ''}>
-                          <dt>{k}</dt>
-                          <dd>{String(v)}</dd>
-                        </div>
-                      ))}
-                    </dl>
-                  )}
-                  {p.kazanim && <p className="ck-kaz"><b>{p.kazanim.baslik}</b>{p.kazanim.metin}</p>}
-                  {(p.refs.length > 0 || r?.onOpenNote) && (
-                    <p className="ck-refs">
-                      <FileText aria-hidden />
-                      <span>{p.refs.length > 0 ? p.refs.join(' · ') : 'Ders notu'}</span>
-                      {r?.onOpenNote && <button type="button" className="ck-link" onClick={r.onOpenNote}>Ders notunda aç</button>}
-                    </p>
-                  )}
-                  {p.history && (
-                    <>
-                      <button type="button" className="ck-link" aria-expanded={histOpen} aria-controls={`${uid}-hist`} onClick={() => setHistOpen((v) => !v)}>
-                        <History aria-hidden />Değişiklik geçmişi{p.historyBadge ? ` · ${p.historyBadge}` : ''}
-                      </button>
-                      <div id={`${uid}-hist`} className="ck-hist" hidden={!histOpen}>{histOpen && p.history}</div>
-                    </>
-                  )}
-                </div>
-              ) : null}
-            </div>
-          </div>
+          {explRev}
         </section>
       )}
 
+      {v12 ? (
+        <footer className="ck-bar" role="toolbar" aria-label="Soru işlemleri">
+          <button type="button" className={`ck-act ${p.social.liked ? 'is-on' : ''}`} onClick={p.social.onLike} aria-pressed={p.social.liked} aria-label={`Beğen, ${p.social.up} beğeni`} title={p.social.liked ? 'Beğeniyi geri al' : 'Soruyu beğen'}>
+            <Heart aria-hidden className={p.social.liked ? 'is-fill' : ''} /><span className="c12-n" aria-hidden>{p.social.up}</span>
+          </button>
+          <button type="button" className={`ck-act ${p.social.commentsOpen ? 'is-on' : ''}`} onClick={p.social.onComments} aria-expanded={p.social.commentsOpen} aria-controls={`${uid}-comm`} aria-label={`Yorumlar, ${p.social.comments}`} title="Yorumlar">
+            <MessageSquare aria-hidden /><span className="c12-n" aria-hidden>{p.social.comments}</span>
+          </button>
+          {hasExplain && (
+            <button type="button" className={`ck-act c12-act-exp ${explOpen ? 'is-on' : ''}`} aria-expanded={explOpen} aria-controls={`${uid}-expl`} onClick={() => openExpl(!explOpen)}
+              title={!revealed && !explOpen ? 'Açıklamayı aç (cevabı da gösterir)' : 'Açıklama'}>
+              <Info aria-hidden /><span>Açıklama</span>
+            </button>
+          )}
+          <span className="ck-sp" />
+          <CopyQuestionButton stem={p.copy.stem} options={p.copy.options} className="ck-act ck-copy" />
+          <button type="button" className="ck-act" onClick={p.social.onShare} aria-label="Soruyu paylaş" title="Soru bağlantısını paylaş">
+            <Share2 aria-hidden />
+          </button>
+          <button type="button" className="ck-act c12-act-rep" onClick={p.onReport} aria-label="Soruyu bildir" title="Hata bildir">
+            <Flag aria-hidden />
+          </button>
+        </footer>
+      ) : (
       <footer className="ck-bar" aria-label="Soru işlemleri">
         <button type="button" className={`ck-act ${p.social.liked ? 'is-on' : ''}`} onClick={p.social.onLike} aria-pressed={p.social.liked} aria-label={`Beğen, ${p.social.up} beğeni`} title={p.social.liked ? 'Beğeniyi geri al' : 'Soruyu beğen'}>
           <ThumbsUp aria-hidden className={p.social.liked ? 'is-fill' : ''} /><span aria-hidden>{p.social.up}</span>
@@ -294,11 +352,13 @@ export const PastQuestionRichCard: React.FC<PastQuestionRichCardProps> = (p) => 
           <Flag aria-hidden />
         </button>
         <span className="ck-sp" />
-        {v12 && <CopyQuestionButton stem={p.copy.stem} options={p.copy.options} className="ck-act ck-copy" />}
         <button type="button" className="ck-act" onClick={p.social.onShare} aria-label="Soruyu paylaş" title="Soru bağlantısını paylaş">
           <Share2 aria-hidden />
         </button>
       </footer>
+      )}
+
+      {v12 && explRev && <section className={`ck-expl c12-expl ${explOpen ? 'is-open' : ''}`} aria-label="Açıklama">{explRev}</section>}
 
       {p.social.commentsOpen ? (
         <div id={`${uid}-comm`} className="ck-comments">{p.comments}</div>
@@ -330,7 +390,8 @@ export const RichCardSkeleton: React.FC = () => (
  * Kademeli çizim: liste sonuna konur; görünür olunca (ya da yaklaşınca) `onMore` çağrılır.
  * IntersectionObserver yoksa düğme olarak kalır.
  */
-export const LoadMoreSentinel: React.FC<{ onMore: () => void; remaining: number }> = ({ onMore, remaining }) => {
+export const LoadMoreSentinel: React.FC<{ onMore: () => void; remaining: number; shown?: number; total?: number }> = ({ onMore, remaining, shown, total }) => {
+  const v12 = useAppearance().design === 'v12';
   const ref = useRef<HTMLDivElement>(null);
   const cb = useRef(onMore);
   cb.current = onMore;
@@ -344,7 +405,13 @@ export const LoadMoreSentinel: React.FC<{ onMore: () => void; remaining: number 
   if (remaining <= 0) return null;
   return (
     <div ref={ref} className="ck-more">
-      <button type="button" className="ui-btn is-ghost" onClick={onMore}>{remaining.toLocaleString('tr-TR')} soru daha</button>
+      {v12 && shown != null && total != null ? (
+        <button type="button" className="c12-more" onClick={onMore}>
+          Daha fazla yükle · <span className="c12-more-n">{shown.toLocaleString('tr-TR')} / {total.toLocaleString('tr-TR')}</span>
+        </button>
+      ) : (
+        <button type="button" className="ui-btn is-ghost" onClick={onMore}>{remaining.toLocaleString('tr-TR')} soru daha</button>
+      )}
     </div>
   );
 };

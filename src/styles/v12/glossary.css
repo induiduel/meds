@@ -1,0 +1,335 @@
+/*
+ * v12 "Net" — Sözlük (components/v12/GlossaryV12.tsx) ve Hastalıklar (components/v12/DiseasesV12.tsx).
+ * Canvas: Glossary.dc.html. Liste + ayrıntı bölmesi; hastalık bölümleri tanım listesi (.g12-dl).
+ * Renk yalnız token; gölge yok (yalnız açılır katmanlar); her kural :root[data-design='v12'] altında.
+ */
+:root[data-design='v12'] {
+  & .g12 {
+    --g12-r: 10px;
+    --g12-r-sm: 7px;
+    --g12-h: 36px;
+    --g12-h-sm: 30px;
+    --g12-t: 160ms;
+    --g12-ease: cubic-bezier(.2, .7, .2, 1);
+    --g12-top: calc(var(--sh-top-h, 52px) + 12px);
+    container: g12 / inline-size;
+    width: 100%;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding-bottom: 24px;
+    font-family: var(--font-sans);
+    font-size: 14px;
+    line-height: 1.45;
+    color: var(--color-ink);
+  }
+  & :where(.g12) :where(h1, h2, h3, p, dl, dd, ol, ul) { margin: 0; }
+  & :where(.g12) :where(button) { font: inherit; color: inherit; }
+  & :where(.g12) svg { flex: none; }
+
+  /* Tipografi */
+  & .g12-num { font-family: var(--font-mono); font-variant-numeric: tabular-nums; font-weight: 500; }
+  & .g12-m { font-size: 12.5px; font-weight: 400; color: var(--color-ink-3); }
+  & .g12-grow { flex: 1 1 auto; min-width: 0; }
+  & .g12-h1 { font: 600 18px/1.2 var(--font-sans); letter-spacing: -.012em; }
+  & .g12-h2 { font: 600 16px/1.3 var(--font-sans); letter-spacing: -.005em; overflow-wrap: anywhere; }
+  & .g12-title { font: 600 22px/1.2 var(--font-sans); letter-spacing: -.015em; overflow-wrap: anywhere; flex: 1 1 auto; min-width: 0; }
+
+  /* Başlık satırı */
+  & .g12-head { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; min-width: 0; }
+  & .g12-seg { display: inline-flex; padding: 3px; gap: 2px; background: var(--color-field); border-radius: 9px; max-width: 100%; overflow-x: auto; scrollbar-width: none; }
+  & .g12-seg a { display: inline-flex; align-items: center; height: 28px; padding: 0 11px; border-radius: 7px; color: var(--color-ink-2); font: 500 13px var(--font-sans);
+    text-decoration: none; white-space: nowrap; transition: background-color var(--g12-t) var(--g12-ease), color var(--g12-t); }
+  & .g12-seg a:hover { color: var(--color-ink); }
+  & .g12-seg a.is-on { background: var(--color-white); color: var(--color-ink); box-shadow: inset 0 0 0 1px var(--color-line); }
+
+  /* Düğmeler */
+  & .g12-btn { display: inline-flex; align-items: center; justify-content: center; gap: 6px; height: var(--g12-h); padding: 0 14px; border-radius: var(--g12-r-sm);
+    border: 1px solid var(--color-line); background: var(--color-white); color: var(--color-ink); font: 500 13.5px/1 var(--font-sans); cursor: pointer;
+    white-space: nowrap; text-decoration: none; transition: background-color var(--g12-t) var(--g12-ease), border-color var(--g12-t), transform 140ms var(--g12-ease); }
+  & .g12-btn svg { width: 16px; height: 16px; }
+  & .g12-btn:hover { background: var(--color-field); }
+  & .g12-btn:active:not(:disabled) { transform: translateY(1px); }
+  & .g12-btn:disabled { opacity: .55; cursor: default; }
+  & .g12-btn.is-sm { height: var(--g12-h-sm); padding: 0 10px; font-size: 12.5px; }
+  & .g12-btn.is-sm svg { width: 15px; height: 15px; }
+  & .g12-btn.is-pri { background: var(--color-accent); border-color: var(--color-accent); color: var(--color-on-accent); }
+  & .g12-btn.is-pri:hover { background: var(--color-accent-hover); }
+  & .g12-btn.is-tonal { background: var(--color-accent-soft); border-color: transparent; color: var(--color-accent); }
+  & .g12-btn.is-ghost { background: transparent; border-color: transparent; color: var(--color-ink-2); }
+  & .g12-btn.is-ghost:hover:not(:disabled) { background: var(--color-field); color: var(--color-ink); }
+
+  & .g12-ibtn { position: relative; display: inline-grid; place-items: center; width: var(--g12-h); height: var(--g12-h); flex: none; padding: 0; border-radius: var(--g12-r-sm);
+    border: 1px solid var(--color-line); background: var(--color-white); color: var(--color-ink-2); cursor: pointer;
+    transition: background-color var(--g12-t) var(--g12-ease), color var(--g12-t), transform 140ms var(--g12-ease); }
+  & .g12-ibtn svg { width: 16px; height: 16px; }
+  & .g12-ibtn:hover { background: var(--color-field); color: var(--color-ink); }
+  & .g12-ibtn:active { transform: scale(.96); }
+  & .g12-ibtn.is-ghost { background: transparent; border-color: transparent; }
+  & .g12-ibtn.is-sm { width: var(--g12-h-sm); height: var(--g12-h-sm); }
+  & .g12-ibtn[aria-pressed='true'] { color: var(--color-accent); }
+  & .g12-ibtn.is-bad:hover { background: var(--color-bad-soft); color: var(--color-bad-text); }
+  & .g12-badge-n { position: absolute; top: -5px; right: -5px; min-width: 17px; height: 17px; padding: 0 4px; border-radius: 9px; display: grid; place-items: center;
+    background: var(--color-accent); color: var(--color-on-accent); font: 600 10.5px/1 var(--font-mono); }
+  & .g12-badge { display: inline-flex; align-items: center; height: 20px; padding: 0 7px; border-radius: 6px; font-size: 11.5px; font-weight: 500;
+    background: var(--color-field); color: var(--color-ink-2); white-space: nowrap; flex: none; }
+  & .g12-badge.is-warn { background: var(--color-warn-soft); color: var(--color-warn); }
+  & .g12-link, & .g12-linkbtn { display: inline-flex; align-items: center; gap: 6px; font-weight: 500; font-size: 13.5px; color: var(--color-accent);
+    text-decoration: none; background: none; border: 0; padding: 4px 0; cursor: pointer; min-height: 32px; }
+  & .g12-link svg { width: 14px; height: 14px; }
+  & .g12-link:hover, & .g12-linkbtn:hover { color: var(--color-accent-hover); text-decoration: underline; }
+
+  /* Paneller ve bölme */
+  & .g12-panel { background: var(--color-white); border: 1px solid var(--color-line); border-radius: var(--g12-r); min-width: 0; }
+  & .g12-split { display: grid; grid-template-columns: minmax(0, 1fr); gap: 16px; align-items: start; min-width: 0; }
+  & .g12.is-wide .g12-split { grid-template-columns: minmax(260px, min(380px, 38%)) minmax(0, 1fr); }
+  & .g12-list { display: flex; flex-direction: column; overflow: hidden; }
+  & .g12.is-wide .g12-list { position: sticky; top: var(--g12-top); max-height: calc(100dvh - var(--g12-top) - 16px); }
+  & .g12-scroll { min-height: 0; }
+  & .g12.is-wide .g12-scroll { flex: 1 1 auto; overflow-y: auto; overscroll-behavior: contain; }
+
+  /* Araç satırı */
+  & .g12-tools { display: flex; align-items: center; gap: 8px; padding: 10px; border-bottom: 1px solid var(--color-line-soft); }
+  & .g12-field { display: flex; align-items: center; gap: 8px; height: var(--g12-h); padding: 0 6px 0 11px; border: 1px solid var(--color-line);
+    border-radius: var(--g12-r-sm); background: var(--color-white); color: var(--color-ink-3); min-width: 0; cursor: text;
+    transition: border-color var(--g12-t), box-shadow var(--g12-t); }
+  & .g12-field > svg { width: 16px; height: 16px; }
+  & .g12-field:focus-within { border-color: var(--color-accent); box-shadow: 0 0 0 3px var(--color-accent-soft); }
+  & .g12-field input { flex: 1 1 auto; min-width: 0; height: 100%; border: 0; outline: 0; background: transparent; color: var(--color-ink); font-family: var(--font-sans); }
+  & .g12-field input::-webkit-search-cancel-button { display: none; }
+  & .g12-field input::placeholder { color: var(--color-ink-3); }
+  & .g12-kbd { font: 500 11px var(--font-mono); padding: 1px 5px; margin-right: 4px; border: 1px solid var(--color-line); border-bottom-width: 2px; border-radius: 5px;
+    color: var(--color-ink-3); background: var(--color-white); }
+  & .g12-clear { display: grid; place-items: center; width: 26px; height: 26px; border: 0; border-radius: 6px; background: transparent; color: var(--color-ink-3); cursor: pointer; }
+  & .g12-clear:hover { background: var(--color-field); color: var(--color-ink); }
+  & .g12-clear svg { width: 14px; height: 14px; }
+
+  & .g12-quick { padding: 8px 10px; border-bottom: 1px solid var(--color-line-soft); margin: 0; flex-wrap: wrap; }
+  & .g12-chips { display: flex; flex-wrap: wrap; gap: 6px; padding: 8px 10px; border-bottom: 1px solid var(--color-line-soft); }
+  & .g12-chip { display: inline-flex; align-items: center; gap: 4px; height: 28px; max-width: 100%; padding: 0 6px 0 10px; border-radius: 999px; border: 0;
+    background: var(--color-accent-soft); color: var(--color-accent); font-size: 12.5px; font-weight: 500; cursor: pointer; }
+  & .g12-chip span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  & .g12-chip svg { width: 13px; height: 13px; }
+  & .g12-chip-clear { height: 28px; padding: 0 8px; border: 0; background: transparent; color: var(--color-ink-3); font-size: 12.5px; font-weight: 500; cursor: pointer; border-radius: 7px; }
+  & .g12-chip-clear:hover { background: var(--color-field); color: var(--color-ink); }
+  & .g12-notices { display: flex; flex-direction: column; gap: 6px; padding: 8px 10px; border-bottom: 1px solid var(--color-line-soft); }
+  & .g12-notice { display: flex; align-items: center; flex-wrap: wrap; gap: 6px; font-size: 12.5px; color: var(--color-ink-2); line-height: 1.45; }
+  & .g12-notice > svg { width: 15px; height: 15px; color: var(--color-ink-3); }
+  & .g12-notice > span { min-width: 0; overflow-wrap: anywhere; }
+  & .g12-notice button:not(.g12-pill) { border: 0; background: none; padding: 0; color: var(--color-accent); font-weight: 500; cursor: pointer; text-decoration: underline; text-underline-offset: 3px; }
+
+  /* A–Z şeridi */
+  & .g12-az { display: flex; gap: 2px; overflow-x: auto; scrollbar-width: none; padding: 8px 10px; border-bottom: 1px solid var(--color-line-soft); }
+  & .g12-az::-webkit-scrollbar { display: none; }
+  & .g12-az button { flex: none; min-width: 22px; height: 24px; padding: 0 3px; display: grid; place-items: center; border: 0; border-radius: 6px; background: transparent;
+    font: 500 12px var(--font-sans); color: var(--color-ink-3); cursor: pointer; transition: background-color var(--g12-t), color var(--g12-t); }
+  & .g12-az button:hover:not(:disabled) { background: var(--color-field); color: var(--color-ink); }
+  & .g12-az button.is-on { background: var(--color-accent-soft); color: var(--color-accent); }
+  & .g12-az button:disabled { color: var(--color-line-2); cursor: default; }
+
+  /* Liste */
+  & .g12-ul-rows { list-style: none; padding: 0; display: flex; flex-direction: column; }
+  & .g12-letter { position: sticky; top: 0; z-index: 1; padding: 6px 14px; font: 600 12px var(--font-sans); color: var(--color-ink-3); background: var(--color-canvas);
+    border-top: 1px solid var(--color-line-soft); scroll-margin-top: 0; }
+  & .g12-scroll > section:first-child .g12-letter { border-top: 0; }
+  & .g12-row { display: flex; flex-direction: column; align-items: stretch; gap: 2px; width: 100%; padding: 9px 14px; border: 0; border-top: 1px solid var(--color-line-soft);
+    background: transparent; text-align: left; color: inherit; cursor: pointer; min-width: 0; transition: background-color var(--g12-t); }
+  & .g12-ul-rows > li:first-child > .g12-row, & .g12-ul-rows > .g12-row:first-child { border-top: 0; }
+  & .g12-letter + .g12-ul-rows > li:first-child > .g12-row { border-top: 1px solid var(--color-line-soft); }
+  & .g12-row:hover { background: var(--color-canvas); }
+  & .g12-row.is-on { background: var(--color-accent-soft); }
+  & .g12-row.is-on .t { color: var(--color-accent); }
+  & .g12-row-t { display: flex; align-items: center; gap: 6px; min-width: 0; }
+  & .g12-row .t { flex: 0 1 auto; min-width: 0; font-weight: 500; font-size: 14px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  & .g12-row .d { display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden; overflow-wrap: anywhere; font-size: 12.5px; color: var(--color-ink-3); }
+  & .g12-row .d b { font-weight: 600; color: var(--color-ink-2); }
+  & .g12-row-saved { width: 13px; height: 13px; color: var(--color-accent); }
+  & .g12-row.is-skel { cursor: default; gap: 6px; padding: 12px 14px; }
+  & .g12-row.is-skel:hover { background: transparent; }
+  & .g12-rowli { position: relative; }
+  & .g12-rowli > .g12-row { padding-right: 46px; }
+  & .g12-rowfav { position: absolute; top: 50%; right: 8px; transform: translateY(-50%); color: var(--color-ink-3); opacity: 0; transition: opacity var(--g12-t), background-color var(--g12-t); }
+  & .g12-rowli:hover .g12-rowfav, & .g12-rowfav:focus-visible, & .g12-rowfav.is-on { opacity: 1; }
+  & .g12-rowfav.is-on { color: var(--color-accent); }
+  @media (hover: none) { & .g12-rowfav { opacity: .7; } }
+  & .g12-listfoot { padding: 10px 14px; border-top: 1px solid var(--color-line-soft); text-align: center; }
+  & .g12-empty { display: flex; flex-direction: column; align-items: center; gap: 6px; padding: 36px 16px; text-align: center; font-size: 13.5px; color: var(--color-ink-3); }
+  & .g12-empty b { font-size: 15px; font-weight: 600; color: var(--color-ink); }
+  & .g12-empty .g12-btn { margin-top: 6px; }
+
+  /* Ayrıntı */
+  & .g12-detail { container: g12d / inline-size; display: flex; flex-direction: column; min-width: 0; scroll-margin-top: var(--g12-top); overflow: hidden; }
+  & .g12-placeholder { align-items: center; justify-content: center; gap: 6px; padding: 56px 24px; text-align: center; color: var(--color-ink-3); font-size: 13.5px; }
+  & .g12-placeholder svg { width: 28px; height: 28px; color: var(--color-line-2); margin-bottom: 4px; }
+  & .g12-placeholder b { color: var(--color-ink); font-size: 15px; font-weight: 600; }
+  & .g12-backbar { padding: 8px 10px; border-bottom: 1px solid var(--color-line-soft); }
+  & .g12-back { display: inline-flex; align-items: center; gap: 4px; height: 36px; padding: 0 10px 0 6px; border: 0; border-radius: var(--g12-r-sm); background: transparent;
+    color: var(--color-accent); font-weight: 500; font-size: 14px; cursor: pointer; }
+  & .g12-back:hover { background: var(--color-accent-soft); }
+  & .g12-back svg { width: 18px; height: 18px; }
+  & .g12-dh { display: flex; flex-direction: column; gap: 8px; padding: 18px 22px 16px; }
+  & .g12-dh-row { display: flex; align-items: flex-start; gap: 6px; min-width: 0; }
+  & .g12-meta { display: flex; flex-wrap: wrap; gap: 4px 10px; font-size: 12.5px; color: var(--color-ink-3); overflow-wrap: anywhere; }
+  & .g12-meta i { color: var(--color-ink-2); }
+  & .g12-status { display: flex; align-items: center; gap: 8px; margin: 0 22px 12px; padding: 8px 12px; border-radius: 8px; background: var(--color-ai-soft); color: var(--color-ink);
+    font-size: 13px; line-height: 1.45; }
+  & .g12-status svg { width: 15px; height: 15px; color: var(--color-ai); }
+
+  & .g12-sec { display: flex; flex-direction: column; gap: 8px; padding: 16px 22px; border-top: 1px solid var(--color-line-soft); min-width: 0; }
+  /* Bölüm başlığı: gövdeden (14–17 px) belirgin — 15 px / 600 / ana mürekkep; tonlu bölümde ton rengi */
+  & .g12-sub { display: inline-flex; align-items: center; gap: 7px; font: 600 15px/1.3 var(--font-sans); letter-spacing: -.005em; color: var(--color-ink); }
+  & .g12-sub svg { width: 16px; height: 16px; flex: none; }
+  & .g12-sub.is-bad { color: var(--color-bad-text); }
+  & .g12-sub.is-warn { color: var(--color-warn); }
+  & .g12-sub.is-clinic { color: var(--color-clinic); }
+  & .g12-sub.is-ai { color: var(--color-ai); }
+  & .g12-sub.is-accent { color: var(--color-accent); }
+  /* Tonlu bilgi kutusu (v10/v11 ds-callout karşılığı): ton zemini + ince ton çerçeve */
+  & .g12-sec.has-tone { border-top: 0; padding-top: 6px; padding-bottom: 6px; }
+  & .g12-sec.has-tone + .g12-sec:not(.has-tone) { margin-top: 10px; }
+  & .g12-sec.has-tone:last-of-type { padding-bottom: 14px; }
+  & .g12-box { --tone: var(--color-accent); display: flex; flex-direction: column; gap: 8px; min-width: 0; padding: 12px 16px 14px; border-radius: 10px;
+    background: color-mix(in srgb, var(--tone) 8%, var(--color-white)); border: 1px solid color-mix(in srgb, var(--tone) 22%, var(--color-line)); }
+  & .is-bad > .g12-box { --tone: var(--color-bad); }
+  & .is-warn > .g12-box { --tone: var(--color-warn); }
+  & .is-clinic > .g12-box { --tone: var(--color-clinic); }
+  & .is-ai > .g12-box { --tone: var(--color-ai); }
+  & .g12-box :is(.g12-read, .g12-text, .g12-ul) { max-width: 72ch; }
+  & .g12-blocks { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+  & .g12-sec > .g12-sub + .g12-ul.is-read, & .g12-sec > .g12-sub + .g12-read { margin-top: 2px; }
+  & .g12-read { font-family: var(--read-font, var(--font-sans)); font-size: calc(var(--read-size, 16px) + 1px); line-height: var(--read-lh, 1.65); max-width: 68ch;
+    color: var(--color-ink); overflow-wrap: anywhere; }
+  & .g12-read.is-sm { font-size: var(--read-size, 16px); }
+  & .g12-text { font-size: 14px; line-height: 1.55; color: var(--color-ink); max-width: 72ch; overflow-wrap: anywhere; }
+  & .g12-pre .g12-text { white-space: pre-line; }
+  & .g12-ul { margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 4px; font-size: 14px; line-height: 1.55; max-width: 72ch; overflow-wrap: anywhere; }
+  & .g12-ul.is-read { font-family: var(--read-font, var(--font-sans)); font-size: calc(var(--read-size, 16px) - .5px); line-height: 1.6; }
+  & .g12-ul.is-sub { margin-top: 4px; font-size: .94em; color: var(--color-ink-2); }
+  & .g12-ul li::marker { color: var(--color-ink-3); }
+  & .g12-ul b { font-weight: 600; }
+
+  & .g12-pills { display: flex; flex-wrap: wrap; gap: 6px; min-width: 0; }
+  & .g12-pill { display: inline-flex; align-items: center; gap: 6px; height: 28px; max-width: 100%; padding: 0 10px; border-radius: 999px; border: 1px solid var(--color-line);
+    background: var(--color-white); color: var(--color-ink-2); font: 500 12.5px var(--font-sans); cursor: pointer; white-space: nowrap;
+    transition: background-color var(--g12-t), border-color var(--g12-t), color var(--g12-t); }
+  & .g12-pill span { overflow: hidden; text-overflow: ellipsis; }
+  & .g12-pill b { font: 600 11.5px var(--font-mono); color: var(--color-ink-3); }
+  & .g12-pill:hover:not(:disabled) { border-color: var(--color-line-2); color: var(--color-ink); background: var(--color-canvas); }
+  & .g12-pill:disabled { cursor: default; color: var(--color-ink-3); background: transparent; border-style: dashed; }
+
+  & .g12-lessons { list-style: none; padding: 0; display: flex; flex-direction: column; }
+  & .g12-lessons > li + li > .g12-lesson, & .g12-lessons > li.g12-lesson + li.g12-lesson { border-top: 1px solid var(--color-line-soft); }
+  & .g12-lesson { display: flex; align-items: center; gap: 10px; width: 100%; padding: 8px 0; min-width: 0; color: inherit; text-decoration: none; text-align: left; }
+  & .g12-lesson .g12-grow { display: flex; flex-direction: column; gap: 1px; }
+  & .g12-lesson .t { font-weight: 500; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden; overflow-wrap: anywhere; }
+  & .g12-lesson .g12-m { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; overflow-wrap: anywhere; }
+  & .g12-lesson.is-btn { border: 0; background: transparent; cursor: pointer; border-radius: 0; }
+  & .g12-lesson.is-btn:hover .t { color: var(--color-accent); }
+  & .g12-lead { width: 28px; height: 28px; border-radius: 8px; display: grid; place-items: center; background: var(--color-field); color: var(--color-ink-2); flex: none; }
+  & .g12-lead svg { width: 15px; height: 15px; }
+  & .g12-chev { width: 16px; height: 16px; color: var(--color-ink-3); }
+
+  & .g12-dfoot { display: flex; align-items: center; flex-wrap: wrap; gap: 6px 10px; padding: 10px 22px; border-top: 1px solid var(--color-line-soft); }
+  & .g12-dacts { display: flex; flex-wrap: wrap; gap: 4px; padding: 6px 14px 10px; border-top: 1px solid var(--color-line-soft); }
+
+  /* Hastalık ayrıntısı */
+  & .g12-dsh { display: flex; flex-direction: column; gap: 8px; padding: 14px 20px; border-bottom: 1px solid var(--color-line-soft); }
+  & .g12-dsh-row { display: flex; align-items: flex-start; gap: 10px; flex-wrap: wrap; min-width: 0; }
+  & .g12-dsh-main { display: flex; flex-direction: column; gap: 2px; }
+  & .g12-acts { display: flex; align-items: center; flex-wrap: wrap; gap: 6px; min-width: 0; }
+  & .g12-hl { background: var(--color-warn-soft); color: inherit; border-radius: 3px; padding: 0 2px; }
+  & .g12-ref { margin-left: 3px; font: 500 11px var(--font-mono); color: var(--color-accent); text-decoration: none; vertical-align: super; }
+  & .g12-fsrc { display: block; margin-top: 2px; }
+  & .g12-verif { flex-direction: row; align-items: flex-start; font-size: 12.5px; color: var(--color-ink-2); line-height: 1.45; }
+  & .g12-verif svg { width: 15px; height: 15px; margin-top: 1px; color: var(--color-ok); }
+  & .g12-verif b { font-weight: 600; color: var(--color-ink); }
+  & .g12-refs { padding-left: 22px; display: flex; flex-direction: column; gap: 4px; font-size: 13px; line-height: 1.5; overflow-wrap: anywhere; color: var(--color-ink-2); }
+  & .g12-refs a { color: var(--color-accent); text-decoration: none; }
+  & .g12-refs a:hover { text-decoration: underline; }
+  & .g12-refs svg { display: inline; width: 12px; height: 12px; vertical-align: -1px; }
+
+  /* Tanım listesi: geniş ekranda iki sütun (başlık | maddeler), dar ekranda üst üste */
+  & .g12-dl { display: grid; grid-template-columns: minmax(96px, 150px) minmax(0, 1fr); margin: 0; }
+  & .g12-dl > dt { display: flex; align-items: flex-start; gap: 4px; padding: 12px 0 12px 20px; font-size: 13px; font-weight: 600; color: var(--color-ink-2);
+    border-top: 1px solid var(--color-line-soft); scroll-margin-top: var(--g12-top); overflow-wrap: anywhere; min-width: 0; }
+  & .g12-dl > dt > span { min-width: 0; }
+  & .g12-dl > dd { margin: 0; padding: 12px 20px 12px 12px; border-top: 1px solid var(--color-line-soft); min-width: 0; }
+  & .g12-dl > dt:first-of-type, & .g12-dl > dt:first-of-type + dd { border-top: 0; }
+  & .g12-dl ul { margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 4px; font-size: 14px; line-height: 1.55; overflow-wrap: anywhere; }
+  & .g12-dl ul ul { margin-top: 4px; gap: 2px; font-size: 13.5px; color: var(--color-ink-2); }
+  & .g12-dl li::marker { color: var(--color-ink-3); }
+  & .g12-dl li b { font-weight: 600; }
+  & .g12-dl li > .g12-badge { margin-left: 6px; vertical-align: 1px; height: 18px; font-size: 11px; }
+  & .g12-dt-share { display: grid; place-items: center; width: 24px; height: 24px; margin: -3px 0 0 auto; border: 0; border-radius: 6px; background: transparent;
+    color: var(--color-ink-3); cursor: pointer; opacity: 0; transition: opacity var(--g12-t), background-color var(--g12-t); flex: none; }
+  & .g12-dt-share svg { width: 13px; height: 13px; }
+  & .g12-dl > dt:hover .g12-dt-share, & .g12-dt-share:focus-visible { opacity: 1; }
+  & .g12-dt-share:hover { background: var(--color-field); color: var(--color-ink); }
+  @media (hover: none) { & .g12-dt-share { opacity: .7; } }
+  & .g12-dl.is-compact { grid-template-columns: minmax(90px, 130px) minmax(0, 1fr); }
+  & .g12-dl.is-compact > dt { padding: 8px 0; font-size: 12.5px; font-weight: 500; color: var(--color-ink-3); }
+  & .g12-dl.is-compact > dd { padding: 6px 0 6px 10px; }
+
+  /* Dar kap: tanım listesi üst üste, iç boşluklar daralır */
+  @container g12d (max-width: 560px) {
+    & .g12-dl { grid-template-columns: minmax(0, 1fr); }
+    & .g12-dl > dt { padding: 12px 16px 0; border-top: 1px solid var(--color-line-soft); }
+    & .g12-dl > dt:first-of-type { border-top: 0; }
+    & .g12-dl > dd { padding: 4px 16px 12px; border-top: 0; }
+    & .g12-dl.is-compact > dt { padding: 8px 0 0; border-top: 0; }
+    & .g12-dl.is-compact > dd { padding: 4px 0 6px; }
+    & .g12-dh { padding: 14px 16px 12px; }
+    & .g12-sec { padding: 14px 16px; }
+    & .g12-dfoot { padding: 10px 16px; }
+    & .g12-dsh { padding: 12px 16px; }
+    & .g12-status { margin: 0 16px 12px; }
+    & .g12-title { font-size: 20px; }
+  }
+
+  /* Dokunmatik: hedefler ≥ 40 px */
+  @media (pointer: coarse) {
+    & .g12 { --g12-h: 40px; --g12-h-sm: 36px; }
+    & .g12-seg a { height: 34px; }
+    & .g12-az button { min-width: 34px; height: 36px; font-size: 13px; }
+    & .g12-row { min-height: 52px; justify-content: center; }
+    & .g12-chip, & .g12-pill { height: 34px; }
+    & .g12-clear { width: 34px; height: 34px; }
+    & .g12-lesson { min-height: 44px; }
+    & .g12-dt-share { width: 32px; height: 32px; }
+    & .g12-rowfav { width: 40px; height: 40px; }
+    & .g12-rowli > .g12-row { padding-right: 54px; }
+  }
+}
+
+/* Hareketi azalt: geçişler kapanır */
+@media (prefers-reduced-motion: reduce) {
+  :root[data-design='v12'] :is(.g12, .g12 *) { transition: none !important; animation: none !important; }
+}
+:root[data-design='v12'][data-motion='reduced'] :is(.g12, .g12 *) { transition: none !important; animation: none !important; }
+/* Dokunmatikte A–Z harfleri parmakla seçilebilsin (en az 32 px) */
+@media (pointer: coarse), (max-width: 767px) {
+  :root[data-design='v12'] .g12-az button { min-width: 32px; height: 32px; }
+}
+
+/* Hastalık bölümleri: anlam tonu (2026-10-14) — bölüm adı ton renginde, solunda ton işareti; Karakteristik ve
+   Komplikasyon gibi sınav açısından kritik bölümler hafif ton zemini alır. Yalnız palet token'ları. */
+:root[data-design='v12'] {
+  & .g12-dl > [data-sec] { --sec: var(--color-accent); }
+  & .g12-dl > [data-sec='hallmarks'] { --sec: var(--color-warn); }
+  & .g12-dl > :is([data-sec='etiology'], [data-sec='physiology']) { --sec: var(--color-ai); }
+  & .g12-dl > :is([data-sec='pathology'], [data-sec='lecture']) { --sec: var(--color-clinic); }
+  & .g12-dl > [data-sec='treatment'] { --sec: var(--color-ok); }
+  & .g12-dl > :is([data-sec='complications'], [data-sec='pathognomonic']) { --sec: var(--color-bad); }
+  & .g12-dl > [data-sec='epidemiology'] { --sec: var(--color-ink-3); }
+  & .g12-dl > dt[data-sec] { position: relative; font-size: 13.5px; color: color-mix(in srgb, var(--sec) 80%, var(--color-ink)); }
+  & .g12-dl > dt[data-sec]::before { content: ''; position: absolute; left: 8px; top: 16px; width: 4px; height: 14px; border-radius: 2px; background: var(--sec); }
+  & .g12-dl > :is(dt, dd):is([data-sec='hallmarks'], [data-sec='complications'], [data-sec='pathognomonic']) { background: color-mix(in srgb, var(--sec) 5%, var(--color-white)); }
+  & .g12-dl li::marker { color: color-mix(in srgb, var(--sec, var(--color-ink-3)) 70%, var(--color-ink-3)); }
+  & .g12-dl li b { color: var(--color-ink); }
+}
+
+/* Geniş ekranda liste paneli yükseklik sınırlı bir sütun: kaydırma alanının içerik boyu (flex-basis:auto) diğer satırları
+   eziyordu → "Kurul / Ders" hızlı süzgeç hapları alfabe şeridinin altında yarıya kesiliyordu. Yalnız kaydırma alanı küçülür. */
+:root[data-design='v12'] .g12-list > :not(.g12-scroll) { flex-shrink: 0; }
+:root[data-design='v12'] .g12.is-wide .g12-scroll { flex: 1 1 0; }

@@ -1,6 +1,6 @@
 # Semantik Veri Modeli (Anlamsal Bağdaştırma Motoru)
 
-Bu klasör, MedSoru verilerini **yalnızca veri modelleme ve anlamsal bağdaştırma** amacıyla kullanan
+Bu klasör, MeDSor verilerini **yalnızca veri modelleme ve anlamsal bağdaştırma** amacıyla kullanan
 bağımsız bir çekirdektir. Buradaki çıktı **kullanıcıya sunulmaz**; soruları makineye anlamlandırmak,
 ders/konu/kazanım ile eşleştirmek ve RAG için sağlam bir bilgi tabanı sağlamak için vardır.
 

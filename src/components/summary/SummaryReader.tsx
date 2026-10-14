@@ -7,6 +7,7 @@ import {
   ChevronUp,
   Clock,
   Copy,
+  Download,
   Expand,
   FileQuestion,
   FileText,
@@ -36,6 +37,7 @@ import { lockScroll, unlockScroll } from '../../utils/scrollLock';
 import { disciplineClass, disciplineLabel } from '../../utils/discipline';
 import { driveViewUrl, resolveDeckPdf, type DeckPdfInfo } from '../../services/deckPdfService';
 import { ReaderPanel, useLessonSpots, useScopeMarks, type ScopeMark } from './ReaderPanel';
+import { R12MenuGroup, R12MenuItem, R12MenuSeg, R12NextRow, ReaderV12, type ReaderTocItem } from '../v12/ReaderV12';
 
 /**
  * Ders özeti okuyucusu (v10 kompakt). Uygulamanın temasını ve paletini kullanır — ayrı okuyucu teması yok;
@@ -453,6 +455,225 @@ export const SummaryReader: React.FC<Props> = ({ summary, onClose, onOpenPdfModa
         );
     }
   };
+
+  // ── v12 "Net": aynı durum ve işlevler, okuma çerçevesi components/v12/ReaderV12 (Notes.dc.html) ──
+  if (appearance.design === 'v12') {
+    const plainTitle = (t: string) => t.replace(/==|\*\*|`/g, '').replace(/(^|\s)\*(\S)/g, '$1$2');
+    const tocItems: ReaderTocItem[] = doc.sections.flatMap((s) => [
+      { id: s.id, title: secTitle(s), level: 2 as const, count: s.kind === 'questions' ? s.questions.length : s.kind === 'spot' ? s.spots.length : undefined },
+      ...(s.id === activeSec ? s.subs.map((sub) => ({ id: sub.id, title: plainTitle(sub.title), level: 3 as const })) : []),
+    ]);
+    const panel = <ReaderPanel spots={lessonSpots} marks={marks} onJump={jumpToMark} />;
+    return (
+      <ReaderV12
+        rootRef={rootRef}
+        className={disciplineClass(summary.discipline)}
+        closing={closing}
+        title={summary.title}
+        ariaLabel={summary.title}
+        meta={activeSection ? `${disciplineLabel(summary.discipline)} · ${secTitle(activeSection)}` : `${disciplineLabel(summary.discipline)} · ders özeti · ${totalMin} dk okuma`}
+        onBack={close}
+        backLabel="Özetlere dön"
+        escToClose={false}
+        toc={ready ? tocItems : []}
+        activeId={activeSub || activeSec}
+        onJump={jump}
+        progress={progress}
+        scrollRef={scrollRef}
+        onScroll={onScroll}
+        onPointerUp={refreshMarksSoon}
+        onKeyUp={refreshMarksSoon}
+        measure={prefs.measure}
+        titleSlot={
+          searchOpen ? (
+            <div className="r12-find" role="search">
+              <Search aria-hidden />
+              <input
+                type="search"
+                autoFocus
+                value={query}
+                onChange={(e) => setQuery(e.target.value)}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter') {
+                    e.preventDefault();
+                    stepHit(e.shiftKey ? -1 : 1);
+                  }
+                }}
+                placeholder="Özette ara"
+                aria-label="Özette ara"
+              />
+              <span aria-live="polite">{liveQuery.length >= 2 ? (hits.length ? `${hitIdx + 1}/${hits.length}` : 'yok') : ''}</span>
+              <button type="button" className="r12-ib" onClick={() => stepHit(-1)} disabled={!hits.length} aria-label="Önceki eşleşme">
+                <ChevronUp aria-hidden />
+              </button>
+              <button type="button" className="r12-ib" onClick={() => stepHit(1)} disabled={!hits.length} aria-label="Sonraki eşleşme">
+                <ChevronDown aria-hidden />
+              </button>
+              <button type="button" className="r12-ib" onClick={closeSearch} aria-label="Aramayı kapat">
+                <X aria-hidden />
+              </button>
+            </div>
+          ) : undefined
+        }
+        tools={
+          <>
+            {!searchOpen && (
+              <button type="button" className="r12-ib" onClick={() => setSearchOpen(true)} aria-label="Özette ara" title="Ara ( / )">
+                <Search aria-hidden />
+              </button>
+            )}
+            <HighlighterToolbar className="r12-pen" />
+          </>
+        }
+        menu={
+          <>
+            <R12MenuGroup label="Belge">
+              <R12MenuItem icon={Search} label="Özette ara" hint="/" onClick={() => setSearchOpen(true)} />
+              {pdfHref && <R12MenuItem icon={FileText} label="Slayt PDF’i" href={pdfHref} />}
+              {onOpenPdfModal && <R12MenuItem icon={Download} label="PDF indir" onClick={onOpenPdfModal} />}
+              <R12MenuItem icon={fullscreen ? Shrink : Expand} label={fullscreen ? 'Tam ekrandan çık' : 'Tam ekran'} onClick={toggleFullscreen} />
+              <R12MenuItem icon={Printer} label="Yazdır / PDF" onClick={() => window.setTimeout(() => window.print(), 50)} />
+              <R12MenuItem icon={Copy} label="Metni kopyala" onClick={copyMarkdown} />
+            </R12MenuGroup>
+            <R12MenuGroup label="Okuma">
+              <R12MenuItem label="Anahtar kelime vurguları" checked={prefs.markers} onClick={() => setPrefs({ markers: !prefs.markers })} />
+              <R12MenuSeg<Measure> label="Satır genişliği" value={prefs.measure} options={MEASURES.map((m) => ({ id: m.value, label: m.label }))} onChange={(v) => setPrefs({ measure: v })} />
+              <R12MenuSeg<ThemeMode> label="Tema" value={appearance.mode} options={MODES.map((m) => ({ id: m, label: MODE_LABELS[m] }))} onChange={(m) => appearance.set({ mode: m })} />
+            </R12MenuGroup>
+          </>
+        }
+        margin={ready ? panel : undefined}
+        marginLabel="Spotlar ve notlarım"
+        after={ready ? <ReaderPanel spots={lessonSpots} marks={marks} onJump={jumpToMark} inline /> : undefined}
+        floating={
+          <>
+            {resume && (
+              <div className="r12-float" role="status">
+                <button
+                  type="button"
+                  onClick={() => {
+                    scrollRef.current?.scrollTo({ top: resume.y, behavior: reduceMotion() ? 'auto' : 'smooth' });
+                    setResume(null);
+                  }}
+                >
+                  <RotateCcw aria-hidden />
+                  <span>Kaldığın yerden devam et · %{Math.round(resume.p)}</span>
+                </button>
+                <button type="button" onClick={() => setResume(null)} aria-label="Kapat">
+                  <X aria-hidden />
+                </button>
+              </div>
+            )}
+            <button type="button" className={`r12-totop ${scrolled && !resume ? 'is-on' : ''}`} onClick={toTop} aria-label="Başa dön" tabIndex={scrolled ? 0 : -1}>
+              <ArrowUp aria-hidden />
+            </button>
+          </>
+        }
+      >
+        <Highlightable scope={scope} className="sr-col r12-hl">
+          <header className="r12-head">
+            <h1 className="r12-h1">{summary.title}</h1>
+            <p className="r12-meta">
+              <span>{disciplineLabel(summary.discipline)}</span>
+              <span>Kurul {summary.kurul}</span>
+              {summary.sourceYear && <span>{summary.sourceYear}</span>}
+              {instructor && (
+                <span>
+                  <GraduationCap aria-hidden /> {instructor}
+                </span>
+              )}
+              <span>
+                <Clock aria-hidden />
+                <b>{summary.readingTimeMinutes}</b> dk okuma
+              </span>
+              {ready && (
+                <span>
+                  <b>{doc.counts.sections}</b> bölüm
+                  {doc.counts.tables > 0 && <> · <b>{doc.counts.tables}</b> tablo</>}
+                  {doc.counts.spots > 0 && <> · <b>{doc.counts.spots}</b> spot</>}
+                  {doc.counts.questions > 0 && <> · <b>{doc.counts.questions}</b> soru</>}
+                </span>
+              )}
+            </p>
+            {realSource && <p className="r12-meta">Kaynak: {realSource}</p>}
+          </header>
+
+          {!ready ? (
+            <div className="r12-skel" aria-busy="true" aria-label="Özet yükleniyor">
+              {Array.from({ length: 12 }, (_, k) => (
+                <i key={k} />
+              ))}
+            </div>
+          ) : (
+            <>
+              {doc.sections.map((s) => (
+                <section key={s.id} className={`r12-sec is-${s.kind}`} data-sec={s.id} aria-labelledby={`${s.id}-h`}>
+                  <header className="r12-sec-h">
+                    <div>
+                      <h2 id={`${s.id}-h`} className="r12-h2">
+                        {secTitle(s)}
+                      </h2>
+                      {s.context && <p className="r12-sec-ctx">{renderText(s.context)}</p>}
+                    </div>
+                    {s.kind === 'questions' && answered.length > 0 && (
+                      <span className={`sr-score ${correct * 2 < answered.length ? 'is-low' : ''}`}>
+                        {correct}/{answered.length} doğru
+                        <button type="button" className="sr-ib is-sm" onClick={() => { setPicked({}); setRevealed({}); }} aria-label="Soruları sıfırla" title="Sıfırla">
+                          <RotateCcw />
+                        </button>
+                      </span>
+                    )}
+                  </header>
+                  {s.objectives.length > 0 && <Objectives items={s.objectives} renderText={renderText} />}
+                  {s.spots.length > 0 && <SpotWall spots={s.spots} renderText={renderText} />}
+                  {s.blocks.length > 0 && <div className="sr-blocks">{s.blocks.map(renderBlock)}</div>}
+                  {s.questions.length > 0 && (
+                    <div className="sr-qs">
+                      {s.questions.map((q) => (
+                        <QuestionCard
+                          key={q.id}
+                          q={q}
+                          picked={picked[q.id]}
+                          revealed={!!revealed[q.id]}
+                          onPick={(l) => setPicked((p) => ({ ...p, [q.id]: l }))}
+                          onReveal={() => setRevealed((r) => ({ ...r, [q.id]: true }))}
+                          renderText={renderText}
+                        />
+                      ))}
+                    </div>
+                  )}
+                </section>
+              ))}
+
+              <footer className="r12-end">
+                <h2>Özetin sonuna geldin</h2>
+                <p>
+                  {answered.length > 0
+                    ? `${answered.length} sorudan ${correct} tanesini doğru yanıtladın.`
+                    : allQuestions.length > 0
+                      ? `Pekiştirmek için ${allQuestions.length} çıkmış soruyu çözebilirsin.`
+                      : 'Hızlı tekrar bölümüne dönüp spotları gözden geçirebilirsin.'}
+                </p>
+                <div className="r12-end-acts">
+                  <button type="button" className="r12-btn" onClick={toTop}>
+                    <ArrowUp aria-hidden /> Başa dön
+                  </button>
+                  {onOpenPdfModal && (
+                    <button type="button" className="r12-btn" onClick={onOpenPdfModal}>
+                      <Download aria-hidden /> PDF indir
+                    </button>
+                  )}
+                </div>
+                {next && onOpenNext && (
+                  <R12NextRow label="Sıradaki ders" title={next.title} meta={`${disciplineLabel(next.discipline)} · ~${next.readingTimeMinutes} dk`} onClick={onOpenNext} />
+                )}
+              </footer>
+            </>
+          )}
+        </Highlightable>
+      </ReaderV12>
+    );
+  }
 
   return (
     <div

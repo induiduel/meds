@@ -419,7 +419,7 @@
       "title": "Windows Masaüstü Bildirimi (PowerShell)",
       "category": "Sistem & Servis",
       "description": "Windows Action Center alanına özel başlık ve mesajla masaüstü bildirimi gönderir.",
-      "defaultArgs": "-Title 'MedSoru Otomasyonu' -Message 'Sistem hazır'",
+      "defaultArgs": "-Title 'MeDSor Otomasyonu' -Message 'Sistem hazır'",
       "tags": ["bildirim", "windows", "powershell"],
       "danger": false
     }

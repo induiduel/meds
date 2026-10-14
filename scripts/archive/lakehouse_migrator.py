@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""MedSoru Medical Lakehouse Builder — JSON/JSONL/SQLite → Parquet gölü."""
+"""MeDSor Medical Lakehouse Builder — JSON/JSONL/SQLite → Parquet gölü."""
 from __future__ import annotations
 
 import argparse
@@ -34,7 +34,7 @@ EMBEDDING_REGISTRY: dict[str, tuple[str, int, int]] = {
     "e5-small": ("intfloat/multilingual-e5-small", 384, 512),
     "minilm":   ("sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2", 384, 256),
 }
-# MedSoru standart mimarisi: bge-m3 (1024d)
+# MeDSor standart mimarisi: bge-m3 (1024d)
 DEFAULT_EMBED_MODEL = os.environ.get("MEDSORU_EMBED_MODEL", "bge-m3")
 
 DEFAULT_CHUNK_CHARS = 900
@@ -781,7 +781,7 @@ def verify_lake(cfg: LakehouseConfig) -> None:
 
 
 def _parse_args(argv: Optional[Sequence[str]] = None) -> argparse.Namespace:
-    p = argparse.ArgumentParser(description="MedSoru Medical Lakehouse Builder")
+    p = argparse.ArgumentParser(description="MeDSor Medical Lakehouse Builder")
     p.add_argument("--root", default=".")
     p.add_argument("--lake", default="./meds_lake")
     p.add_argument("--embed-model", default=DEFAULT_EMBED_MODEL,

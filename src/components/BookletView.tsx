@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { PageHeader } from './ui/PageHeader';
 import { Printer, Eye, EyeOff } from 'lucide-react';
 import { QuestionItem, Committee } from '../types';
+import { useAppearance } from '../utils/appearance';
+import '../styles/v12/secondary.css';
 
 interface BookletViewProps {
   committee?: Committee;
@@ -16,6 +18,8 @@ export const BookletView: React.FC<BookletViewProps> = ({
 }) => {
   const [showAnswerKey, setShowAnswerKey] = useState(false);
   const [showExplanations, setShowExplanations] = useState(false);
+  // v12: düğmeler cümle düzeninde, durum aria-pressed ile (v10/v11 metinleri aynen kalır)
+  const v12 = useAppearance().design === 'v12';
 
   // Filter questions that have either reconstruction or fragments or stem
   const activeQuestions = questions.filter(
@@ -31,51 +35,57 @@ export const BookletView: React.FC<BookletViewProps> = ({
   };
 
   return (
-    <div className="flex flex-col gap-5">
+    <div className="flex flex-col gap-5 o12-page o12-bk">
       {/* Print Controls Bar (hidden in print media) */}
       <PageHeader
         className="print:hidden"
         eyebrow="Yazdırılabilir"
         title="A4 kitapçık"
+        stats={v12 ? [{ label: 'soru', value: activeQuestions.length.toLocaleString('tr-TR') }] : undefined}
         description="Katkılar ve kaynaklarla tamamlanan soruların iki sütunlu klasik sınav kitapçığı."
         actions={
           <div className="flex flex-wrap items-center gap-2">
           <button
+            type="button"
+            aria-pressed={showAnswerKey}
             onClick={() => setShowAnswerKey(!showAnswerKey)}
-            className={`h-10 px-3 rounded-[10px] text-[13px] font-semibold flex items-center gap-1.5 border transition-colors cursor-pointer ${
+            className={`o12-btn h-10 px-3 rounded-[10px] text-[13px] font-semibold flex items-center gap-1.5 border transition-colors cursor-pointer ${
               showAnswerKey
                 ? 'bg-teal-50 border-teal-300 text-teal-800'
                 : 'bg-white border-line text-ink-2 hover:bg-canvas'
             }`}
           >
             {showAnswerKey ? <EyeOff className="w-3.5 h-3.5" /> : <Eye className="w-3.5 h-3.5" />}
-            <span>Cevap Anahtarı: {showAnswerKey ? 'Açık' : 'Gizli'}</span>
+            <span>{v12 ? 'Cevap anahtarı' : `Cevap Anahtarı: ${showAnswerKey ? 'Açık' : 'Gizli'}`}</span>
           </button>
 
           <button
+            type="button"
+            aria-pressed={showExplanations}
             onClick={() => setShowExplanations(!showExplanations)}
-            className={`h-10 px-3 rounded-[10px] text-[13px] font-semibold flex items-center gap-1.5 border transition-colors cursor-pointer ${
+            className={`o12-btn h-10 px-3 rounded-[10px] text-[13px] font-semibold flex items-center gap-1.5 border transition-colors cursor-pointer ${
               showExplanations
                 ? 'bg-ok-soft border-ok text-ok'
                 : 'bg-white border-line text-ink-2 hover:bg-canvas'
             }`}
           >
-            <span>Tıbbi Açıklamalar: {showExplanations ? 'Açık' : 'Gizli'}</span>
+            <span>{v12 ? 'Açıklamalar' : `Tıbbi Açıklamalar: ${showExplanations ? 'Açık' : 'Gizli'}`}</span>
           </button>
 
           <button
+            type="button"
             onClick={handlePrint}
-            className="h-10 bg-accent hover:bg-accent-hover text-white px-4 rounded-[10px] text-[13px] font-semibold flex items-center gap-1.5 shadow-xs cursor-pointer active:scale-95"
+            className="o12-btn is-pri h-10 bg-accent hover:bg-accent-hover text-white px-4 rounded-[10px] text-[13px] font-semibold flex items-center gap-1.5 shadow-xs cursor-pointer active:scale-95"
           >
             <Printer className="w-3.5 h-3.5" />
-            <span>Yazdır / PDF Olarak Kaydet</span>
+            <span>{v12 ? 'Yazdır ya da PDF kaydet' : 'Yazdır / PDF Olarak Kaydet'}</span>
           </button>
           </div>
         }
       />
 
       {/* A4 Printable Paper Container */}
-      <div className="bg-white rounded-2xl border border-line p-6 sm:p-8 shadow-sm w-full print:shadow-none print:border-none print:p-0">
+      <div className="o12-paper bg-white rounded-2xl border border-line p-6 sm:p-8 shadow-sm w-full print:shadow-none print:border-none print:p-0">
         {/* Booklet Header */}
         <div className="border-b-2 border-ink pb-4 mb-6 text-center space-y-1">
           <span className="text-xs uppercase tracking-widest font-bold text-ink-3">

@@ -15,6 +15,8 @@ import {
   setLocalAdminSession,
   AppUser,
 } from '../services/auth';
+import { useAppearance } from '../utils/appearance';
+import { AuthErrorV12 } from './v12/AuthV12';
 
 interface AuthErrorModalProps {
   isOpen: boolean;
@@ -30,6 +32,7 @@ export const AuthErrorModal: React.FC<AuthErrorModalProps> = ({
   const [copied, setCopied] = useState(false);
   const [tokenInput, setTokenInput] = useState('');
   const [showTokenInput, setShowTokenInput] = useState(false);
+  const v12 = useAppearance().design === 'v12';
 
   if (!isOpen) return null;
 
@@ -41,6 +44,32 @@ export const AuthErrorModal: React.FC<AuthErrorModalProps> = ({
     onLoginSuccess(user, tokenInput ? tokenInput.trim() : null);
     onClose();
   };
+
+  const domains = [domainToAuthorize, 'nofrostlife.com.tr', 'www.nofrostlife.com.tr', 'localhost', '127.0.0.1'].filter((d, i, arr) => d && arr.indexOf(d) === i);
+  const copyDomain = (dom: string) => {
+    navigator.clipboard.writeText(dom);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
+
+  if (v12) {
+    return (
+      <AuthErrorV12
+        onClose={onClose}
+        domain={domainToAuthorize}
+        domains={domains}
+        adminEmail={ADMIN_EMAIL}
+        projectId={FIREBASE_PROJECT_ID}
+        consoleUrl={FIREBASE_CONSOLE_URL}
+        tokenInput={tokenInput}
+        setTokenInput={setTokenInput}
+        showTokenInput={showTokenInput}
+        onToggleToken={() => setShowTokenInput(!showTokenInput)}
+        onCopy={copyDomain}
+        onBypass={handleBypassAdminLogin}
+      />
+    );
+  }
 
   return (
     <div className="ms-overlay fixed inset-0 z-50 bg-[var(--color-scrim)] flex items-center justify-center p-4 overflow-y-auto">

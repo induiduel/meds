@@ -1,5 +1,5 @@
 r"""
-MedSoru Scanned PDF Image Extractor
+MeDSor Scanned PDF Image Extractor
 Extracts images from scanned PDFs in C:\Users\indui\Desktop\meds_database\meds_sorular
 and saves them to C:\Users\indui\Desktop\meds_database\meds_sorular_images\[pdf_name]\
 """

@@ -103,7 +103,7 @@ class PwaService {
       this.state.canInstall = false;
       this.state.isInstalled = true;
       this.notify();
-      console.log('[PWA] MedSoru başarıyla kuruldu.');
+      console.log('[PWA] MeDSor başarıyla kuruldu.');
     });
   }
 

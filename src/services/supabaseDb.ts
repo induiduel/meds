@@ -1,5 +1,5 @@
 /**
- * MedSoru veritabanı servisi (istemci). Adı tarihsel: Supabase 2026-10-12'de kaldırıldı.
+ * MeDSor veritabanı servisi (istemci). Adı tarihsel: Supabase 2026-10-12'de kaldırıldı.
  *
  * - Okuma/yazma: `getSupabaseClient()` artık `dbRemoteClient` döner; aynı zincir biçimi sunucudaki
  *   POST /api/db/query kapısına gider (meds-pg). Tarayıcıda veritabanı adresi ya da anahtar yoktur.

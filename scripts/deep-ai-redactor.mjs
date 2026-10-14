@@ -1,5 +1,5 @@
 /**
- * MedSoru Derin Tıbbi Yapay Zeka Redaksiyon Motoru (scripts/deep-ai-redactor.mjs)
+ * MeDSor Derin Tıbbi Yapay Zeka Redaksiyon Motoru (scripts/deep-ai-redactor.mjs)
  * 
  * Kurallar:
  * 1. Her soru için en az 20 saniye süre ayrılır (derin analiz ve oran sınırlaması).

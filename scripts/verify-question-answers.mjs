@@ -1,5 +1,5 @@
 /**
- * MedSoru Çıkmış Soru ve Cevap Doğrulama Motoru (scripts/verify-question-answers.mjs)
+ * MeDSor Çıkmış Soru ve Cevap Doğrulama Motoru (scripts/verify-question-answers.mjs)
  * 
  * Amaç:
  * Çıkmış soruların cevaplarını; hem amfi ders notları/slaytları hem de güncel tıp literatürü
@@ -587,7 +587,7 @@ export async function verifyQuestionsBatch(options = {}) {
 // Her yeni soru eklendiğinde otomatik olarak çalışır!
 // -------------------------------------------------------------
 export function startContinuousWatcher() {
-  console.log('\n👁️ [Watcher Aktif] MedSoru Soru Cevap Denetleme İzleyicisi devrede...');
+  console.log('\n👁️ [Watcher Aktif] MeDSor Soru Cevap Denetleme İzleyicisi devrede...');
   console.log(`📁 İzlenen dosya: ${DATA_PAST_PATH}`);
   console.log('✨ Sisteme yeni bir soru eklendiğinde anında otomatik olarak denetlenecektir.\n');
 
@@ -647,7 +647,7 @@ async function main() {
 
   const unverifiedOnly = !args.includes('--all');
 
-  console.log('🩺 [MedSoru] Çıkmış Soru & Cevap Doğrulama Motoru Başlatılıyor...');
+  console.log('🩺 [MeDSor] Çıkmış Soru & Cevap Doğrulama Motoru Başlatılıyor...');
   await verifyQuestionsBatch({
     unverifiedOnly,
     limit,

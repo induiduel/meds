@@ -32,8 +32,15 @@ export const LessonRail: React.FC<{
   }, [current]);
   const nq = q.trim().toLocaleLowerCase('tr-TR');
   const showSections = sections.length > 1;
+  const doneCount = v12 ? steps.reduce((a, s) => (done.has(s.number) ? a + 1 : a), 0) : 0;
   return (
     <div className="lr">
+      {v12 && (
+        <div className="x12-rail-top">
+          <span className="x12-rail-h">Slaytlar</span>
+          <span className="x12-rail-c" aria-label={`${steps.length} slaytın ${doneCount} tanesi tamamlandı`}>{doneCount}/{steps.length}</span>
+        </div>
+      )}
       <label className="lr-search">
         <Search aria-hidden />
         <input value={q} onChange={(e) => setQ(e.target.value)} placeholder="Slaytlarda ara" aria-label="Slaytlarda ara" />
@@ -81,10 +88,12 @@ export const LessonRail: React.FC<{
                     onClick={() => onPick(i)}
                     title={s.title}
                   >
-                    <span className="lr-no" aria-hidden>{isDone && !isCur && !cp ? <Check /> : s.number}</span>
+                    {/* v12 (canvas): numara hep görünür (eş genişlikli), durum işareti sağ sütunda */}
+                    <span className="lr-no" aria-hidden>{!v12 && isDone && !isCur && !cp ? <Check /> : s.number}</span>
                     <span className="lr-tx">
                       {cp ? `Tekrar · ${s.topic}` : game ? `Oyun · ${s.topic}` : s.topic}
                     </span>
+                    {v12 && <span className="x12-lr-s" aria-hidden>{isDone && <Check />}</span>}
                     <span className="sr-only">{sub ? ` (${sub})` : ''}{isDone ? ' (tamamlandı)' : ''}{cp ? ' (tekrar sayfası)' : ''}{game ? ' (ders sonu oyunları)' : ''}</span>
                   </button>
                   </React.Fragment>

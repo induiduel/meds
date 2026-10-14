@@ -5,6 +5,8 @@ import { SpotCard } from './SpotCard';
 import { QuickOptions, QuickPill, type QuickOption, type ToolbarQuick } from '../ui/PageToolbar';
 import kurulIndex from '../../data/kazanimlar/index.json';
 import { ANAHTAR, KATEGORILER, Kategori, Spot, Veri, azHareket, kucuk, okuOgrenilen, yazOgrenilen } from './spotsShared';
+import { useAppearance } from '../../utils/appearance';
+import { SpotsV12 } from '../v12/SpotsV12';
 
 export { KATEGORILER };
 
@@ -61,7 +63,10 @@ const IskeletKart: React.FC<{ i: number }> = ({ i }) => (
   </div>
 );
 
-export const ExamSpotsView: React.FC = () => {
+/** v12 "Net" ayrı bileşendir (canvas Cards.dc.html › Spotlar); tasarım değişince kancalar karışmasın diye ayrı tür. */
+export const ExamSpotsView: React.FC = () => (useAppearance().design === 'v12' ? <SpotsV12 /> : <ExamSpotsClassic />);
+
+const ExamSpotsClassic: React.FC = () => {
   const [veri, setVeri] = useState<Veri | null>(null);
   const [hata, setHata] = useState(false);
   const [q, setQ] = useState('');

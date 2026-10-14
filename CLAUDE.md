@@ -2,7 +2,7 @@
 
 > **Önce oku:** `../PROJE_TANITIMI.md` — projenin amacı, klasör yapısı (downloads/temp1-2-3/database) ve zorunlu boru hattı. Tüm ajanlar buna uygun davranmalıdır.
 
-MedSoru: shared exam-question pool for Turkish medical school (Dönem 3). Students submit fragments of
+MeDSor: shared exam-question pool for Turkish medical school (Dönem 3). Students submit fragments of
 questions they remember; the backend retrieves matching course material / past exam questions (RAG)
 and an LLM reconstructs the full question grounded on those sources. See README.md for the flow.
 

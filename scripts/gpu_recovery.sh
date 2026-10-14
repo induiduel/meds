@@ -1,5 +1,5 @@
 #!/bin/bash
-# MedSoru GPU & Audio Otomatik Uyandırma ve Kurtarma Scripti
+# MeDSor GPU & Audio Otomatik Uyandırma ve Kurtarma Scripti
 echo "[$(date '+%Y-%m-%d %H:%M:%S')] GPU/Ses kurtarma başlatılıyor..."
 
 # 1. Ses aygıtını unbind / bind et (GPU D3cold kilidini açar)

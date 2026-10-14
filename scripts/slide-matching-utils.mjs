@@ -1,5 +1,5 @@
 /**
- * MedSoru Slayt Eşleştirme ve Denetim Yardımcı Modülü
+ * MeDSor Slayt Eşleştirme ve Denetim Yardımcı Modülü
  * (scripts/slide-matching-utils.mjs)
  */
 

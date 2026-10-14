@@ -1,6 +1,6 @@
 @echo off
 chcp 65001 >nul
-title MedSoru Donem 3 Gunluk Mufredat ve Ogrenme Otomasyonu
+title MeDSor Donem 3 Gunluk Mufredat ve Ogrenme Otomasyonu
 cd /d "%~dp0"
 
 echo ===============================================================================

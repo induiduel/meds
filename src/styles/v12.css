@@ -176,8 +176,7 @@
   /* =========================================================================
    * Taşma ve akıcılık
    * ========================================================================= */
-  /* Uzun listelerde ekran dışı kartlar çizilmez (kaydırma akıcı, ilk boyama hızlı) */
-  & :is(.qk, .pv-row, .lv-row, .ck-card) { content-visibility: auto; contain-intrinsic-size: auto 180px; }
+  /* content-visibility KULLANMA: kapsama (contain) kartın içindeki position:fixed öğeleri (balon, toast) karta hapseder. */
   & :is(.qk-stem, .qk-opt-t, .pv-stem, .ls-prose, .tst-t, .cf-t, .cf-m) { overflow-wrap: anywhere; }
   & :is(input, textarea, select) { font-size: max(16px, 1em); }
   @media (min-width: 768px) { & :is(input, textarea, select) { font-size: inherit; } }
@@ -205,7 +204,7 @@
   /* Tek hareket anı: adım değişince sütun bir kez belirir; blok blok kademeli giriş yok */
   & :is(.ls-col:not(.is-flow) > .ls-head > *, .ls-B-head .ls-head > *, .ls-col:not(.is-flow) .ls-content > *, .ls-B-body .ls-content > *,
         .ls-col:not(.is-flow) > .ls-practice, .ls-col:not(.is-flow) > .ls-flownav) { animation: none; }
-  & .ls-col:not(.is-flow) { animation: v12-step-in .2s var(--mo-ease) both; }
+  & .ls-col:not(.is-flow) { animation: v12-op-in .2s var(--mo-ease) backwards; }
 
   /* Not kutuları: kalın sol çizgi yerine tonlu zemin + ton çerçeve */
   & .ls-note { border-radius: 10px; padding: 10px 14px; border-color: color-mix(in srgb, var(--tone) 28%, var(--color-line));
@@ -295,21 +294,24 @@
   }
   /* Segment / sekme: seçilen düğme yumuşak geçer; içerik paneli girerken kısa belirir */
   & :is(.pt-seg, .pt-view, .ms-seg, .ms-f-seg, .ls-seg) button { transition: background-color var(--mo-base) var(--mo-ease), color var(--mo-base), box-shadow var(--mo-base); }
-  & :is([role='tabpanel'], .ls-dock-body, .sh-acct, .pt-sheet) { animation: v12-fade-in .18s var(--mo-ease) both; }
+  & :is([role='tabpanel'], .ls-dock-body, .sh-acct, .pt-sheet) { animation: v12-op-in .18s var(--mo-ease) backwards; }
   /* Sekme şeridindeki etkin çizgi kayar gibi büyür */
   & [role='tab'][aria-selected='true'] { transition: color var(--mo-base), background-color var(--mo-base); }
   /* Satır ve kart üzerine gelme: zemin/çizgi rengi yumuşak değişir (konum oynamaz) */
   & :is(.td12-row, .td12-resume, .lv-row, .pv-row, .ms-side-item, .sh-side-link, .lr-item, .ls-opt, .ls-tile) { transition: background-color var(--mo-base), box-shadow var(--mo-base), color var(--mo-base); }
   /* Açılır menü / kutu: ölçek + saydamlık, kaynağından açılır */
-  & :is(.sh-pop, .pt-pop, .pt-qo) { animation: v12-pop-in .16s var(--mo-ease) both; transform-origin: top right; }
+  & :is(.sh-pop, .pt-pop, .pt-qo) { animation: v12-pop-in .16s var(--mo-ease) backwards; transform-origin: top right; }
   /* Sayfa geçişi (App.tsx .v11-enter her rota değişiminde): biraz daha belirgin ama kısa */
   @media (prefers-reduced-motion: no-preference) {
-    &:not([data-motion='reduced']) .v11-enter { animation: v12-page-in .24s var(--mo-ease) both; }
+    &:not([data-motion='reduced']) .v11-enter { animation: v12-op-in .22s var(--mo-ease) backwards; }
   }
   /* Doğru / yanlış geri bildirimi: doğru yumuşak nabız, yanlış kısa yatay sarsıntı */
   & :is(.ls-opt, .qk-opt).is-ok, & :is(.ls-optcard).is-ok { animation: v12-ok .42s var(--mo-ease); }
   & :is(.ls-opt, .qk-opt).is-bad, & :is(.ls-optcard).is-bad { animation: v12-shake .3s var(--mo-ease); }
 }
+/* Kapsayıcı girişleri yalnız saydamlık: transform'lu (ya da 'both' ile dolu kalan) animasyon, içindeki position:fixed
+ * öğeler için konumlandırma kabı oluşturur — ders oynatıcı (.ls-root) tam ekran yerine <main>'e yerleşip taşıyordu. */
+@keyframes v12-op-in { from { opacity: 0; } }
 @keyframes v12-fade-in { from { opacity: 0; transform: translate3d(0, 2px, 0); } }
 @keyframes v12-pop-in { from { opacity: 0; transform: scale(.97) translate3d(0, -2px, 0); } }
 @keyframes v12-page-in { from { opacity: 0; transform: translate3d(0, 6px, 0); } }
@@ -398,3 +400,7 @@
   & .ayr-design-t small { font: 500 11px var(--font-mono); color: var(--color-ink-3); }
   & .ayr-design-h { font-size: 12px; color: var(--color-ink-3); line-height: 1.35; }
 }
+
+/* Not düzenleyici araç çubuğu: dar bölmede (Notlarım 320 px, telefon) gizli yatay kaydırma simgeleri kesiyordu → satıra sarar */
+:root[data-design='v12'] .rt-bar { flex-wrap: wrap; overflow-x: visible; row-gap: 2px; }
+:root[data-design='v12'] .x12-notes .rt-tool { width: 32px; height: 32px; }

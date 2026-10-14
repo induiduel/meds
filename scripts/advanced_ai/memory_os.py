@@ -1,5 +1,5 @@
 """
-MemGPT / Hiyerarşik Bellek Katmanı (MedSoru)
+MemGPT / Hiyerarşik Bellek Katmanı (MeDSor)
 - Core Memory: Kullanıcı/Öğrenci profili, hedefler, zayıf kalınan tıbbi kurullar/dersler
 - Recall Memory: Son etkileşimler, çözülen sorular, oturum bağlamı
 - Archival Memory: Milyonlarca slayt chunk'ı ve doğrulanmış soru arşivi

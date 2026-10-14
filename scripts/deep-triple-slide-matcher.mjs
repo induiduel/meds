@@ -1,5 +1,5 @@
 /**
- * MedSoru Derinlemesine 3 Aşamalı Slayt ve Soru Eşleştirme Motoru
+ * MeDSor Derinlemesine 3 Aşamalı Slayt ve Soru Eşleştirme Motoru
  * (scripts/deep-triple-slide-matcher.mjs)
  * 
  * Özellikler:

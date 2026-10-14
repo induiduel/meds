@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# MedSoru Core v2 systemd kullanıcı servislerini kurar (başlatmaz).
+# MeDSor Core v2 systemd kullanıcı servislerini kurar (başlatmaz).
 # Kullanım:  scripts/v2/deploy/install-meds-core.sh
 set -euo pipefail
 

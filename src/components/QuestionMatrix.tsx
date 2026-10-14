@@ -5,6 +5,7 @@ import { Sheet } from './ui/Sheet';
 import { committeeShortLabel, questionStemText } from './QuickAddHero';
 import type { Committee, QuestionItem } from '../types';
 import '../styles/matrix.css';
+import '../styles/v12/secondary.css';
 
 /**
  * Soru haritası (v10): kurul sınavının 1–N numaralı her sorusu bir kutu.
@@ -124,7 +125,7 @@ export const QuestionMatrix: React.FC<QuestionMatrixProps> = ({
   ) : null;
 
   return (
-    <div className="qm">
+    <div className="qm o12-page o12-qm">
       <PageToolbar title="Soru haritası" count={`${filled} / ${targetCount} dolu`}>
         <p className="qm-sub">{subLine}</p>
       </PageToolbar>

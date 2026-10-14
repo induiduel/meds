@@ -2,7 +2,7 @@
 
 /**
  * ==============================================================================
- * MedSoru AI Drive Curriculum Orchestrator & Interactive Deck Generator
+ * MeDSor AI Drive Curriculum Orchestrator & Interactive Deck Generator
  * ==============================================================================
  * Bu orkestrasyon motoru:
  *   [Aşama 1] Sistem başlangıcı, ortam değişkenleri (.env), Supabase ve Gemini AI havuzunu doğrular.
@@ -48,7 +48,7 @@ const processLimit = limitIdx !== -1 && args[limitIdx + 1] ? parseInt(args[limit
 // AŞAMA 1: BAŞLATMA, LOGLAMA VE API DOĞRULAMA
 // ==============================================================================
 console.log('='.repeat(75));
-console.log('  🏥 MedSoru AI Drive Curriculum Orchestrator');
+console.log('  🏥 MeDSor AI Drive Curriculum Orchestrator');
 console.log(`  🕒 Zaman: ${new Date().toLocaleString('tr-TR', { timeZone: 'Europe/Istanbul' })} (Türkiye Saati)`);
 console.log(`  ⚙️  Mod: ${isDryRun ? 'DRY-RUN (Sadece Karşılaştırma & Fark Raporu)' : 'CANLI SENKRONİZASYON & AI ÜRETİMİ'}`);
 console.log('='.repeat(75));

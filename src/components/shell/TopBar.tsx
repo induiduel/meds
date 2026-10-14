@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useSyncExternalStore } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Activity, Moon, Search, Sun, UserRound, Bell } from 'lucide-react';
 import { linkClick, pathFor, ROUTE_TITLES, type AppRoute } from '../../router';
 import type { AppUser } from '../../services/auth';
@@ -12,24 +12,16 @@ import { initialsOf } from './navModel';
 import { userNotificationService } from '../../services/userNotificationService';
 import { NotificationHistoryModal } from '../notifications/NotificationHistoryModal';
 import { BrandWord } from './BrandWord';
-
-const usePhone = () =>
-  useSyncExternalStore(
-    (cb) => {
-      const m = window.matchMedia('(max-width: 639px)');
-      m.addEventListener('change', cb);
-      return () => m.removeEventListener('change', cb);
-    },
-    () => window.matchMedia('(max-width: 639px)').matches,
-    () => false
-  );
+import { usePhone, useSearchShortcut } from './shellHooks';
+import { useAppearance } from '../../utils/appearance';
+import { TopBarV12 } from '../v12/ShellV12';
 
 /**
  * v8 üst çubuk. Sol: telefonda logo; sayfa aşağı kayınca logo yerine sayfa adı belirir (büyük başlık → çubuk başlığı).
  * Sağ: masaüstünde alan görünümlü arama, çevrimdışı rozeti, hızlı açık/koyu, hesap (telefonda alt sayfa).
  * Arama: "/" ya da Ctrl/⌘+K; kenar menüsü `medsoru:search` olayıyla açar.
  */
-export const TopBar: React.FC<{
+export type TopBarProps = {
   active: AppRoute;
   onGo: (r: AppRoute) => void;
   user: AppUser | null;
@@ -39,7 +31,13 @@ export const TopBar: React.FC<{
   onSearch?: (q: string, focusId?: string, hit?: SearchHit) => void;
   onOpenOffline?: () => void;
   actions: Omit<AccountActions, 'onInstall'>;
-}> = ({ active, onGo, user, isAdmin, searchQuery = '', onSearch, onOpenOffline, actions }) => {
+};
+
+/** v12 "Net" tasarımında kendi üst çubuğu (components/v12/ShellV12); v10/v11 aşağıdaki klasik çubuk. */
+export const TopBar: React.FC<TopBarProps> = (props) =>
+  useAppearance().design === 'v12' ? <TopBarV12 {...props} /> : <TopBarClassic {...props} />;
+
+const TopBarClassic: React.FC<TopBarProps> = ({ active, onGo, user, isAdmin, searchQuery = '', onSearch, onOpenOffline, actions }) => {
   const phone = usePhone();
   const { theme, toggle } = useTheme();
   const [menu, setMenu] = useState(false);
@@ -71,22 +69,7 @@ export const TopBar: React.FC<{
   }, []);
   useEffect(() => setMenu(false), [active]);
 
-  useEffect(() => {
-    const open = () => setSearch(true);
-    const onKey = (e: KeyboardEvent) => {
-      const t = e.target as HTMLElement;
-      const isK = (e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k';
-      if (!isK && (e.key !== '/' || ['INPUT', 'TEXTAREA', 'SELECT'].includes(t.tagName) || t.isContentEditable)) return;
-      e.preventDefault();
-      setSearch(true);
-    };
-    window.addEventListener('medsoru:search', open);
-    document.addEventListener('keydown', onKey);
-    return () => {
-      window.removeEventListener('medsoru:search', open);
-      document.removeEventListener('keydown', onKey);
-    };
-  }, []);
+  useSearchShortcut(() => setSearch(true));
 
   const title = ROUTE_TITLES[active];
 

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-MedSoru Watchdog: pipeline_runner, dashboard (8085) ve web sunucusunun (3000) canlılığını, ajan kodu değişince
+MeDSor Watchdog: pipeline_runner, dashboard (8085) ve web sunucusunun (3000) canlılığını, ajan kodu değişince
 bayat süreçleri ve sistem belleğini denetler. Yerel GPU/Ollama denetimi yok (2026-10-11: yerel GPU yasak).
 """
 import time
@@ -200,7 +200,7 @@ def check_system_resources():
 
 
 def main():
-    log("MedSoru Gelişmiş Otonom Sistem & Docker Watchdog Başlatıldı.")
+    log("MeDSor Gelişmiş Otonom Sistem & Docker Watchdog Başlatıldı.")
     last_known_code_mtime = get_code_mtime()
 
     while True:

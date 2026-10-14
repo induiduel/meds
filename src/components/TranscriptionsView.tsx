@@ -1,5 +1,8 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { PageHeader } from './ui/PageHeader';
+import { PageToolbar, QuickOptions } from './ui/PageToolbar';
+import { useAppearance } from '../utils/appearance';
+import { TranscriptionsV12 } from './v12/TranscriptionsV12';
 import {
   Mic,
   Search,
@@ -41,6 +44,7 @@ export const TranscriptionsView: React.FC<TranscriptionsViewProps> = ({ onAskAiW
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const { data: selectedItem, isLoading: isLoadingDetail } = useTranscriptionDetailQuery(selectedId);
   const [copied, setCopied] = useState(false);
+  const v12 = useAppearance().design === 'v12';
 
   const handleOpenDetail = (meta: TranscriptionMeta) => {
     setSelectedId(meta.id);
@@ -72,6 +76,51 @@ export const TranscriptionsView: React.FC<TranscriptionsViewProps> = ({ onAskAiW
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
+
+  if (v12) {
+    const countOf = (d: string) => transcriptions.filter((t) => t.discipline === d).length;
+    return (
+      <TranscriptionsV12
+        toolbar={
+          <PageToolbar
+            title="Ses kayıtları"
+            count={filteredTranscriptions.length === transcriptions.length ? `${transcriptions.length} kayıt` : `${filteredTranscriptions.length} / ${transcriptions.length}`}
+            search={{ value: searchQuery, onChange: setSearchQuery, placeholder: 'Transkript ya da konu ara' }}
+            quick={
+              disciplines.length > 0
+                ? [
+                    {
+                      id: 'brans',
+                      label: 'Branş',
+                      value: selectedDiscipline !== 'all' ? selectedDiscipline : undefined,
+                      onClear: () => setSelectedDiscipline('all'),
+                      content: (close) => (
+                        <QuickOptions
+                          options={[{ id: 'all', label: 'Tüm branşlar', count: transcriptions.length }, ...disciplines.map((d) => ({ id: d, label: d, count: countOf(d) }))]}
+                          value={selectedDiscipline}
+                          onPick={setSelectedDiscipline}
+                          close={close}
+                        />
+                      ),
+                    },
+                  ]
+                : undefined
+            }
+          />
+        }
+        isLoading={isLoading}
+        items={filteredTranscriptions}
+        hasAny={transcriptions.length > 0}
+        onOpen={handleOpenDetail}
+        selectedId={selectedId}
+        detail={selectedItem}
+        isLoadingDetail={isLoadingDetail}
+        onClose={() => setSelectedId(null)}
+        onCopy={handleCopy}
+        onAskAiWithContext={onAskAiWithContext}
+      />
+    );
+  }
 
   return (
     <div className="w-full min-w-0 flex flex-col gap-4 sm:gap-5 pb-8">

@@ -1,7 +1,7 @@
 /**
  * scripts/reconcile-curriculum-summaries.mjs
  * 
- * MedSoru Ders Programı (Curriculum) Tabanlı Özet, Hoca, Konu ve Kurul Senkronizasyon Motoru
+ * MeDSor Ders Programı (Curriculum) Tabanlı Özet, Hoca, Konu ve Kurul Senkronizasyon Motoru
  * 
  * Bu script:
  * 1. Karabük Üniversitesi Tıp Fakültesi Dönem 3 Resmi Müfredatını (curriculumData.ts & donem3_curriculum.json) temel alır.
@@ -301,7 +301,7 @@ const CURRICULUM_DEFAULT_INSTRUCTORS = {
 };
 
 export function runReconciliation() {
-  console.log('🩺 [MedSoru Müfredat & Özet Senkronizasyonu] Başlatılıyor...');
+  console.log('🩺 [MeDSor Müfredat & Özet Senkronizasyonu] Başlatılıyor...');
 
   if (!fs.existsSync(CATALOG_PATH)) {
     throw new Error(`Catalog dosyası bulunamadı: ${CATALOG_PATH}`);

@@ -1,5 +1,5 @@
 /* =============================================================================
- * MedSoru v8 · Kabuk (üst çubuk, kenar menüsü, alt gezinme, alt sayfa, hesap menüsü)
+ * MeDSor v8 · Kabuk (üst çubuk, kenar menüsü, alt gezinme, alt sayfa, hesap menüsü)
  * Yalnız token okur (appearance.css). Klasik tasarımda (v2) bu bileşenler render edilmez.
  * ============================================================================= */
 
@@ -148,8 +148,9 @@ html { --sh-side-w: 0px; --sh-top-h: 52px; --sh-tabs-h: 62px; }
 
 /* ---------- Alt gezinme (v9 · yüzen ada) ----------
  * Ekranın altında kenarlardan ayrık, yuvarlak, katı yüzeyli çubuk (bulanıklık yok → kaydırırken GPU yükü yok).
- * Etkin sekme: simge kendi renginde (--tab-c) bir hapa oturur, etiket kalınlaşır; hap yaylanarak büyür.
- * Ortada yükseltilmiş "Ekle" düğmesi (marka rengi). Klavye açıkken gizlenir. */
+ * Renkler yalnız etkin tema/palet tokenlarından (--color-white/-line/-ink-3/-accent/-accent-soft/-on-accent) gelir;
+ * sekmeye özel sabit renk yok. Etkin sekme: simge vurgu renginde bir hapa oturur, etiket kalınlaşır; hap yaylanarak büyür.
+ * Ortada yükseltilmiş "Ekle" düğmesi (palet vurgusu). Klavye açıkken gizlenir. */
 .sh-tabs { position: fixed; z-index: 40; left: 0; right: 0; bottom: 0; pointer-events: none;
   padding: 0 10px calc(env(safe-area-inset-bottom, 0px) + 8px); }
 @media (min-width: 768px) { .sh-tabs { display: none; } }
@@ -161,27 +162,27 @@ html { --sh-side-w: 0px; --sh-top-h: 52px; --sh-tabs-h: 62px; }
 .sh-tab { position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; height: 100%;
   color: var(--color-ink-3); text-decoration: none; font-size: 10.5px; font-weight: 550; cursor: pointer; -webkit-tap-highlight-color: transparent; }
 .sh-tab-pill { position: relative; width: 50px; height: 30px; border-radius: 99px; display: grid; place-items: center; }
-.sh-tab-pill::before { content: ""; position: absolute; inset: 0; border-radius: inherit; background: color-mix(in srgb, var(--tab-c, var(--color-accent)) 16%, var(--color-white));
+.sh-tab-pill::before { content: ""; position: absolute; inset: 0; border-radius: inherit; background: var(--color-accent-soft);
   transform: scaleX(.3); opacity: 0; transition: transform .38s var(--mo-spring), opacity .2s ease; }
 .sh-tab-pill > svg { position: relative; width: 22px; height: 22px; transition: transform .38s var(--mo-spring), color .2s; }
 .sh-tab:active .sh-tab-pill > svg { transform: scale(.84); }
 .sh-tab-l { max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; transition: color .2s; }
-.sh-tab[aria-current="page"] { color: var(--color-ink); font-weight: 700; }
+.sh-tab[aria-current="page"] { color: var(--color-accent); font-weight: 700; }
 .sh-tab[aria-current="page"] .sh-tab-pill::before { transform: none; opacity: 1; }
-.sh-tab[aria-current="page"] .sh-tab-pill > svg { color: color-mix(in srgb, var(--tab-c, var(--color-accent)) 82%, var(--color-ink)); animation: sh-tab-hop .5s var(--mo-spring); }
+.sh-tab[aria-current="page"] .sh-tab-pill > svg { color: var(--color-accent); animation: sh-tab-hop .5s var(--mo-spring); }
 @keyframes sh-tab-hop { 0% { transform: translateY(0) scale(1); } 35% { transform: translateY(-4px) scale(1.12); } 100% { transform: none; } }
-.sh-tab-dot { position: absolute; top: 3px; right: 11px; width: 8px; height: 8px; border-radius: 50%; background: var(--color-brand); box-shadow: 0 0 0 2px var(--color-white); }
+.sh-tab-dot { position: absolute; top: 3px; right: 11px; width: 8px; height: 8px; border-radius: 50%; background: var(--color-bad); box-shadow: 0 0 0 2px var(--color-white); }
 /* Ortadaki ekle düğmesi */
 .sh-tab-fab { display: flex; flex-direction: column; align-items: center; justify-content: flex-end; gap: 2px; height: 100%; padding-bottom: 6px; text-decoration: none; color: var(--color-ink-3); font-size: 10.5px; font-weight: 600; -webkit-tap-highlight-color: transparent; }
-.sh-tab-fab-in { width: 50px; height: 50px; margin-top: -26px; border-radius: 17px; display: grid; place-items: center; color: #fff;
-  background: linear-gradient(145deg, color-mix(in srgb, var(--color-brand) 88%, #fff), var(--color-brand));
-  box-shadow: 0 8px 18px -6px color-mix(in srgb, var(--color-brand) 70%, transparent), 0 0 0 4px var(--color-white);
+.sh-tab-fab-in { width: 50px; height: 50px; margin-top: -26px; border-radius: 17px; display: grid; place-items: center; color: var(--color-on-accent);
+  background: linear-gradient(145deg, color-mix(in srgb, var(--color-accent) 86%, var(--color-white)), var(--color-accent));
+  box-shadow: 0 8px 18px -6px color-mix(in srgb, var(--color-accent) 60%, transparent), 0 0 0 4px var(--color-white);
   transition: transform .3s var(--mo-spring), box-shadow .2s; }
 .sh-tab-fab-in > svg { width: 24px; height: 24px; transition: transform .4s var(--mo-spring); }
 .sh-tab-fab:active .sh-tab-fab-in { transform: scale(.9); }
 .sh-tab-fab:active .sh-tab-fab-in > svg { transform: rotate(90deg); }
-.sh-tab-fab[aria-current="page"] { color: var(--color-ink); font-weight: 700; }
-.sh-tab-fab[aria-current="page"] .sh-tab-fab-in { box-shadow: 0 8px 18px -6px color-mix(in srgb, var(--color-brand) 70%, transparent), 0 0 0 4px var(--color-white), 0 0 0 6px color-mix(in srgb, var(--color-brand) 35%, transparent); }
+.sh-tab-fab[aria-current="page"] { color: var(--color-accent); font-weight: 700; }
+.sh-tab-fab[aria-current="page"] .sh-tab-fab-in { box-shadow: 0 8px 18px -6px color-mix(in srgb, var(--color-accent) 60%, transparent), 0 0 0 4px var(--color-white), 0 0 0 6px var(--color-accent-soft); }
 @media (prefers-reduced-motion: reduce) {
   .sh-tabs-in, .sh-tab[aria-current="page"] .sh-tab-pill > svg { animation: none; }
   .sh-tab-pill::before, .sh-tab-fab-in, .sh-tab-fab-in > svg { transition: none; }
@@ -288,7 +289,7 @@ html[data-mode="dark"][data-palette="b"] .cf { box-shadow: var(--shadow-xl), ins
 @media (prefers-reduced-motion: reduce) { .cf-root, .cf { animation: none !important; } }
 
 /* =============================================================================
- * MedSoru · Mobil Uygulama (PWA / Standalone) Native Görünüm & Davranış
+ * MeDSor · Mobil Uygulama (PWA / Standalone) Native Görünüm & Davranış
  * ============================================================================= */
 html, body {
   -webkit-tap-highlight-color: transparent;
@@ -310,7 +311,7 @@ html, body {
 }
 
 /* =============================================================================
- * MedSoru · Evrensel Derin Bağlantı (Deep Linking) Vurgu Animasyonu
+ * MeDSor · Evrensel Derin Bağlantı (Deep Linking) Vurgu Animasyonu
  * 1-2 kez yumuşakça parıldayan, nefes alan fade highlight efekti
  * ============================================================================= */
 @keyframes deepLinkHighlightPulseLight {
@@ -378,7 +379,7 @@ html[data-mode="dark"] .deep-link-highlight-pulse,
   }
 }
 
-/* ---------- Marka yazısı: MeDSor ⇄ Doktora Sor (BrandWord.tsx, 10 dk'da bir) ----------
+/* ---------- Marka yazısı: MeDSor ⇄ Doktora Sor (BrandWord.tsx, dakikada bir) ----------
  * Açılış: "Me" kayıp kapanır, ardından "oktora" ve boşluk açılır. Kapanış: önce "oktora" kapanır, sonra "Me" geri açılır. */
 .bw { display: inline-flex; align-items: baseline; white-space: nowrap; }
 .bw > span, .bw > b { display: inline-block; }

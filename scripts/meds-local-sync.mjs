@@ -1,5 +1,5 @@
 /**
- * MedSoru Yerel Otomasyon ve Senkronizasyon Motoru (meds-local-sync.mjs)
+ * MeDSor Yerel Otomasyon ve Senkronizasyon Motoru (meds-local-sync.mjs)
  * 
  * Bu betik:
  * 1. Google Drive çıkmış soru ve ders notları klasörlerini tarar.
@@ -49,7 +49,7 @@ function sendWindowsNotification(title, message) {
   }
 }
 
-// MedSoru Sunucusuna Kalp Atışı (Heartbeat) Bildirimi
+// MeDSor Sunucusuna Kalp Atışı (Heartbeat) Bildirimi
 async function sendWorkerHeartbeat(status = 'online', lastAction = '16:00 - 18:00 Arası Otomasyon ve Eşitleme Aktif') {
   try {
     let questionFilesCount = 0;
@@ -426,7 +426,7 @@ export async function runFullSync() {
 
   // Windows Bildirimi ve Sunucu Kalp Atışı
   sendWindowsNotification(
-    'MedSoru: Günlük Eşitleme Başladı ⏳',
+    'MeDSor: Günlük Eşitleme Başladı ⏳',
     'Google Drive çıkmış soruları ve ders notları taranıyor...'
   );
   await sendWorkerHeartbeat('online', 'Google Drive taranıyor ve PDF belgeleri okunuyor...');
@@ -620,10 +620,10 @@ export async function runFullSync() {
   fs.writeFileSync(lectureNotesJsonPath, JSON.stringify(updatedNotes, null, 2), 'utf8');
   console.log(`   ✓ data/lecture_notes.json güncellendi! (Toplam Ders Notu: ${updatedNotes.length})`);
 
-  // 6. ADIM: MedSoru Çalışan Sunucusuna ve Firebase'e Eşitle
+  // 6. ADIM: MeDSor Çalışan Sunucusuna ve Firebase'e Eşitle
   console.log('\n🌐 6. ADIM: Sunucu ve Firebase Senkronizasyonu...');
   if (totalParsedQuestions.length > 0) {
-    console.log(`   📤 ${totalParsedQuestions.length} soru MedSoru sunucusuna ve veritabanına aktarılıyor...`);
+    console.log(`   📤 ${totalParsedQuestions.length} soru MeDSor sunucusuna ve veritabanına aktarılıyor...`);
     await postServerJson('/api/questions/batch-import', {
       adminEmail: 'nofrostlife@gmail.com',
       committeeId: 'donem3-kurul1',
@@ -649,7 +649,7 @@ export async function runFullSync() {
 
   // Windows Bildirimi ve Kalp Atışı
   sendWindowsNotification(
-    'MedSoru: Eşitleme Tamamlandı ✅',
+    'MeDSor: Eşitleme Tamamlandı ✅',
     `${mergedQuestions.length} soru veritabanında güncel, ${updatedNotes.length} ders notu işlendi ve Firestore'a aktarıldı.`
   );
   await sendWorkerHeartbeat('online', `Eşitleme tamamlandı (${mergedQuestions.length} soru, ${updatedNotes.length} not)`);
@@ -674,7 +674,7 @@ async function startDaemon(forceSyncNow = false) {
 
   // Windows Masaüstü Bildirimi
   sendWindowsNotification(
-    'MedSoru Otomasyon Servisi Aktif 🚀',
+    'MeDSor Otomasyon Servisi Aktif 🚀',
     'Windows başlangıcına eklendi. Servis arka planda çalışıyor (16:00 - 18:00 arası otomatik eşitlenecektir).'
   );
 
@@ -705,7 +705,7 @@ async function startDaemon(forceSyncNow = false) {
         } catch (err) {
           console.error('Eşitleme hatası:', err);
           sendWindowsNotification(
-            'MedSoru: Eşitleme Uyarısı ⚠️',
+            'MeDSor: Eşitleme Uyarısı ⚠️',
             'Eşitleme sırasında hata oluştu: ' + (err.message || 'Bilinmeyen hata')
           );
         }

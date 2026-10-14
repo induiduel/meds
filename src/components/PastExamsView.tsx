@@ -4,6 +4,8 @@ import { CikmisCard } from '../screens/cikmis/CikmisCard';
 import { PastQuestionRichCard, PastQuestionRichCardProps, RichCardSkeleton, LoadMoreSentinel } from './cikmis/PastQuestionRichCard';
 import { CikmisViewSwitch, useCikmisGorunum } from './cikmis/CikmisViewSwitch';
 import { PageToolbar, QuickOptions, type ToolbarChip, type ToolbarQuick } from './ui/PageToolbar';
+import { useAppearance } from '../utils/appearance';
+import { CikmisV12, type C12Facet } from './v12/CikmisV12';
 import { getProgress, recordAttempt, getFavorites, setFavorite, OptionKey, AttemptRecord } from '../services/studyStore';
 import { logActivity } from '../services/activityLog';
 import { FilterGroup } from './ui/FilterGroup';
@@ -272,6 +274,10 @@ const DiffSheet: React.FC<{
   );
 };
 
+/** v12'de kart listesini CikmisV12 çerçevesine (araç çubuğu + süzgeç sütunu) yerleştirir; v10/v11'de liste olduğu gibi çizilir. */
+const V12Frame: React.FC<{ on: boolean; props?: () => Omit<React.ComponentProps<typeof CikmisV12>, 'children'>; children: React.ReactNode }> = ({ on, props, children }) =>
+  on && props ? <CikmisV12 {...props()}>{children}</CikmisV12> : <>{children}</>;
+
 export const PastExamsView: React.FC<PastExamsViewProps> = ({
   currentUser,
   lectureNotes = [],
@@ -280,6 +286,8 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
   onUpdateQuestionReference,
   onNavigateToLearn,
 }) => {
+  // v12 "Net": araç çubuğu + gelişmiş süzgeç sütunu components/v12/CikmisV12'de; kart listesi ortak
+  const v12 = useAppearance().design === 'v12';
   const [questions, setQuestions] = useState<QuestionItem[]>([]);
   const [internalNotes, setInternalNotes] = useState<LectureNote[]>([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -1391,9 +1399,117 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
     </div>
   );
 
+  // v12 çerçevesinin girdileri (yalnız v12'de çağrılır): mevcut durum + işleyiciler, yeni veri mantığı yok
+  const buildV12Props = (): Omit<React.ComponentProps<typeof CikmisV12>, 'children'> => {
+    const facet = (id: string, label: string, value: string, set: (v: any) => void, opts: [string, string, number?][]): C12Facet => ({
+      id, label, value, options: opts.map(([oid, l, c]) => ({ id: oid, label: l, count: c })), onPick: (v) => { set(v); resetPage(); },
+    });
+    // Kayıtlı görünüm: yalnız varsayılandan farklı değerler (anahtar → [değer, varsayılan, ayarlayıcı])
+    const viewKeys: Record<string, [string, string, (v: any) => void]> = {
+      q: [searchQuery.trim(), '', setSearchQuery], st: [statusFilter, 'all', setStatusFilter], k: [selectedCommittee, 'all', setSelectedCommittee],
+      y: [selectedYear, 'all', setSelectedYear], d: [selectedDiscipline, 'all', setSelectedDiscipline], t: [selectedTopic, 'all', setSelectedTopic],
+      a: [answerFilter, 'all', setAnswerFilter], e: [explanationFilter, 'all', setExplanationFilter], r: [repeatedFilter, 'all', setRepeatedFilter],
+      p: [ambiguityTab, 'valid', setAmbiguityTab], n: [newnessFilter, 'all', setNewnessFilter], m: [viewMode, 'redacted', setViewMode], s: [sortOrder, 'default', setSortOrder],
+      ...(isAdminUser ? {
+        kr: [quarantineFilter, 'standard', setQuarantineFilter], ky: [sourceFilter, 'all', setSourceFilter], dn: [denetleyiciFilter, 'all', setDenetleyiciFilter],
+        f14: [phase14Filter, 'all', setPhase14Filter], sd: [editedFilter, 'all', setEditedFilter], ma: [manualFilter, 'all', setManualFilter],
+      } as Record<string, [string, string, (v: any) => void]> : {}),
+    };
+    return {
+      total: filteredQuestions.length,
+      shown: paginatedQuestions.length,
+      scope: selectedCommittee !== 'all' ? committeeShort(selectedCommittee) : undefined,
+      search: { value: searchQuery, onChange: (v) => { setSearchQuery(v); resetPage(); } },
+      suggest: {
+        disciplines: suggestions.disciplines,
+        topics: suggestions.topics,
+        onDiscipline: (d) => { setSelectedDiscipline(d); setSelectedTopic('all'); setSearchQuery(''); resetPage(); },
+        onTopic: (t) => { setSelectedTopic(t); setSearchQuery(''); resetPage(); },
+      },
+      status: { value: statusFilter, counts: statusCounts, onPick: pickStatus },
+      committee: committeeList.length > 1 ? {
+        value: selectedCommittee,
+        label: selectedCommittee !== 'all' ? committeeShort(selectedCommittee) : undefined,
+        options: [{ id: 'all', label: 'Tüm kurullar', count: fc('committee') }, ...committeeList.map((c) => ({ id: c, label: committeeShort(c), count: fc('committee', c) }))],
+        onPick: pickCommittee,
+      } : null,
+      year: {
+        value: selectedYear,
+        options: [{ id: 'all', label: 'Tüm yıllar', count: fc('year') }, ...yearList.map((y) => ({ id: y, label: y, count: fc('year', y) }))],
+        onPick: (y) => { setSelectedYear(y); resetPage(); },
+      },
+      discipline: {
+        value: selectedDiscipline,
+        label: selectedDiscipline !== 'all' ? disciplineLabel(selectedDiscipline) || selectedDiscipline : undefined,
+        options: [
+          { id: 'all', label: 'Tüm dersler', count: fc('discipline') },
+          ...groupDisciplines(disciplineList.filter((d) => fc('discipline', d) > 0 || selectedDiscipline === d), (d) => d, (d) => fc('discipline', d))
+            .flatMap((g) => g.items.map((d) => ({ id: d, label: disciplineLabel(d) || d, count: fc('discipline', d), group: g.label }))),
+        ],
+        onPick: (d) => { setSelectedDiscipline(d); setSelectedTopic('all'); resetPage(); },
+      },
+      topic: selectedDiscipline !== 'all' && (topicList.length > 0 || selectedTopic !== 'all') ? {
+        value: selectedTopic,
+        options: [{ id: 'all', label: 'Tüm konular' }, ...topicList.map(([t, cnt]) => ({ id: t, label: t, count: cnt }))],
+        onPick: (t) => { setSelectedTopic(t); resetPage(); },
+      } : null,
+      sort: {
+        value: sortOrder,
+        options: (['default', 'newest', 'oldest', 'number', 'discipline', 'popular', 'updated', 'quality_desc', 'quality_asc'] as const).map((k) => ({ id: k, label: LABELS.sort[k] })),
+        onPick: (v) => { setSortOrder(v as typeof sortOrder); resetPage(); },
+      },
+      facets: [
+        facet('cevap', 'Cevap', answerFilter, setAnswerFilter, [['all', 'Tümü', fc('answer')], ['with', 'Cevaplı', fc('answer', 'with')], ['without', 'Cevapsız', fc('answer', 'without')], ['doubtful', 'Cevabı tartışmalı', fc('answer', 'doubtful')]]),
+        facet('aciklama', 'Açıklama', explanationFilter, setExplanationFilter, [['all', 'Tümü', fc('explanation')], ['with', 'Var', fc('explanation', 'with')], ['without', 'Yok', fc('explanation', 'without')]]),
+        facet('tekrar', 'Tekrar', repeatedFilter, setRepeatedFilter, [['all', 'Tümü', fc('repeated')], ['repeated_only', 'Birden çok sınavda', fc('repeated', 'repeated_only')], ['unique_only', 'Tek sınavda', fc('repeated', 'unique_only')]]),
+        facet('havuz', 'Havuz', ambiguityTab, setAmbiguityTab, [['valid', 'Tam metin', fc('pool', 'valid')], ['ambiguous', 'İncelemede', fc('pool', 'ambiguous')], ['reported', 'Hata bildirilen', fc('pool', 'reported')], ['quarantined', 'Karantina', fc('pool', 'quarantined')], ['all', 'Tümü', fc('pool')]]),
+        facet('yenilik', 'Yenilik', newnessFilter, setNewnessFilter, [['all', 'Tümü', fc('newness')], ['new_only', 'Yeni', fc('newness', 'new_only')], ['archived_only', 'Arşiv', fc('newness', 'archived_only')]]),
+        facet('metin', 'Metin', viewMode, setViewMode, [['redacted', 'Düzenlenmiş'], ['raw', 'Ham'], ['split', 'Karşılaştır']]),
+      ],
+      adminFacets: isAdminUser ? [
+        facet('karantina', 'Karantina ve erişim', quarantineFilter, setQuarantineFilter, [['standard', 'Yayında', fc('quarantine', 'standard')], ['karantina', 'Karantinada', fc('quarantine', 'karantina')], ['inaccessible', 'Erişilemeyen', fc('quarantine', 'inaccessible')], ['all', 'Tümü', fc('quarantine', 'all')]]),
+        facet('kaynak', 'Kaynak', sourceFilter, setSourceFilter, [['all', 'Tümü', fc('source')], ['gemini_v3', 'Gemini v3', fc('source', 'gemini_v3')], ['existing', 'Mevcut', fc('source', 'existing')]]),
+        facet('denetleyici', 'Denetleyici', denetleyiciFilter, setDenetleyiciFilter, [['all', 'Tümü', fc('denetleyici')], ['denetleyici_only', 'Onaylı', fc('denetleyici', 'denetleyici_only')], ['standard_only', 'Onaysız', fc('denetleyici', 'standard_only')]]),
+        facet('p14', 'AI inceleme', phase14Filter, setPhase14Filter, [['all', 'Tümü', fc('p14')], ['faz14', 'Faz 14', fc('p14', 'faz14')], ['faz14_onayli', 'Onaylı', fc('p14', 'faz14_onayli')], ['faz14_bekleyen', 'Onay bekliyor', fc('p14', 'faz14_bekleyen')]]),
+        facet('degisiklik', 'Son değişiklik', editedFilter, setEditedFilter, [['all', 'Tümü', fc('edited')], ['son24', 'Son 24 saat', fc('edited', 'son24')], ['son7', 'Son 7 gün', fc('edited', 'son7')], ['cevap', 'Cevabı düzeltilen', fc('edited', 'cevap')], ['kurulan', 'Şıkları sonradan kurulan', fc('edited', 'kurulan')]]),
+        facet('yukleme', 'Yükleme', manualFilter, setManualFilter, [['all', 'Tümü', fc('manual')], ['manual_only', 'Elle eklenen', fc('manual', 'manual_only')], ['standard_only', 'Otomatik', fc('manual', 'standard_only')]]),
+      ] : undefined,
+      // Kurul/yıl/ders/konu hızlı haplarda; çip satırında yalnız haplarda görünmeyenler
+      chips: activeFilterChips
+        .filter((c) => c.label !== selectedDiscipline && c.label !== selectedTopic && c.label !== selectedYear)
+        .map((c) => ({ label: c.label, onRemove: () => { c.clear(); resetPage(); } })),
+      anyFilter: anyFilter || statusFilter !== 'all' || sortOrder !== 'default',
+      onClearAll: clearAllFilters,
+      quiz: { on: quizMode, onToggle: () => setQuizMode((v) => !v) },
+      view: { value: gorunum, onChange: setGorunum },
+      adminHref: isAdminUser ? pathFor('test_cikmis') : undefined,
+      practiceHref: pathFor('practice'),
+      sync: { busy: cacheStatus.isSyncing, onSync: handleManualSync, deviceCount: questions.length },
+      views: {
+        snapshot: () => Object.fromEntries(Object.entries(viewKeys).filter(([, [v, def]]) => v !== def).map(([k, [v]]) => [k, v])),
+        apply: (st) => {
+          clearAllFilters();
+          for (const [k, [, , set]] of Object.entries(viewKeys)) if (typeof st[k] === 'string') set(st[k]);
+          if (st.st) setStatusSnap({ attempts: getProgress(), saved: getFavorites() });
+        },
+        suggestName: () =>
+          [
+            selectedCommittee !== 'all' ? committeeShort(selectedCommittee) : '',
+            selectedYear !== 'all' ? selectedYear : '',
+            selectedDiscipline !== 'all' ? disciplineLabel(selectedDiscipline) || selectedDiscipline : '',
+            selectedTopic !== 'all' ? selectedTopic : '',
+            statusFilter !== 'all' ? STATUS_LABEL[statusFilter] : '',
+            ...activeFilterChips.filter((c) => ![selectedDiscipline, selectedTopic, selectedYear].includes(c.label)).map((c) => c.label),
+            searchQuery.trim() ? `“${searchQuery.trim()}”` : '',
+          ].filter(Boolean).join(' · ').slice(0, 80) || 'Görünüm',
+      },
+    };
+  };
+
   return (
     <div className="cx">
       {/* Ortak kompakt araç çubuğu: başlık · sayı · arama · durum segmenti · Süzgeç (sayfa) · görünüm seçici */}
+      {!v12 && (
       <div
         style={{ display: 'contents' }}
         onFocus={(e) => { if ((e.target as HTMLElement).matches?.('[data-page-search]')) setSuggestOpen(true); }}
@@ -1649,9 +1765,10 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
         )}
       </PageToolbar>
       </div>
+      )}
 
-      {/* Derslere göz at (Apple Sağlık "Göz at" listesi): süzgeç yokken ders renkli kısa yol */}
-      {!isLoading && !sharedId && selectedDiscipline === 'all' && !searchQuery.trim() && currentPage === 1 && (() => {
+      {/* Derslere göz at (Apple Sağlık "Göz at" listesi): süzgeç yokken ders renkli kısa yol (v12'de Ders hapı/sütunu) */}
+      {!v12 && !isLoading && !sharedId && selectedDiscipline === 'all' && !searchQuery.trim() && currentPage === 1 && (() => {
         const rows = disciplineList.map((d) => ({ d, cnt: fc('discipline', d) })).filter((r) => r.cnt > 0).sort((a, b) => b.cnt - a.cnt);
         if (rows.length < 2) return null;
         // Tek satır, yatay kayan şerit: tüm dersler sırayla; masaüstünde ‹ › ile bir ekran kayar
@@ -1690,7 +1807,8 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
         );
       })()}
 
-      {/* Questions Listing */}
+      {/* Questions Listing (v12: CikmisV12 çerçevesinin sonuç sütununda) */}
+      <V12Frame on={v12} props={v12 ? buildV12Props : undefined}>
       {isLoading && gorunum === 'kart' ? (
         <div className="cx-list ck-list" aria-busy="true" aria-label="Çıkmış sorular yükleniyor">
           {[0, 1, 2].map((i) => <RichCardSkeleton key={i} />)}
@@ -2004,6 +2122,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                   attempt: att ? { picked: att.picked, correct: att.correct } : null,
                   onAnswer: (k, ok) => handleRichAnswer(q, k, ok),
                   voterUid: userUid,
+                  topic: q.topic ? String(q.topic) : undefined,
                   commentPreview: lastCm ? { author: String(lastCm.author || 'Tıp öğrencisi'), text: censorProfanity(String(lastCm.text || '')), more: cmts.length - 1 } : null,
                 } : undefined}
                 id={String(q.id)}
@@ -2047,7 +2166,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
 
                     {/* Çoklu referans / alternatif sınav yılları bandı */}
                     {q.similarPastQuestions && q.similarPastQuestions.length > 0 && (
-                      <div className="mt-2.5 pt-2 border-t border-line/60 flex flex-wrap items-center gap-1.5 text-xs text-ink-3">
+                      <div className="cx-alt mt-2.5 pt-2 border-t border-line/60 flex flex-wrap items-center gap-1.5 text-xs text-ink-3">
                         <span className="font-semibold text-ink-2 flex items-center gap-1">
                           <Layers className="w-3.5 h-3.5 text-accent" />
                           Diğer yıllardaki çıkmış örnekleri:
@@ -2056,9 +2175,10 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
                           <span
                             key={alt.id}
                             className="inline-flex items-center px-2 py-0.5 rounded-md bg-field border border-line text-xs font-medium text-ink"
-                            title={`Soru ID: ${alt.id}`}
+                            title={alt.olasi && alt.benzerlik ? `Olası aynı soru — metin benzerliği %${Math.round(alt.benzerlik * 100)} · Soru ID: ${alt.id}` : `Soru ID: ${alt.id}`}
                           >
                             {alt.label || `${alt.examYear} - Soru ${alt.questionNumber}`}
+                            {alt.olasi && alt.benzerlik ? <span className="ml-1 font-normal text-ink-3 tabular-nums">· olası %{Math.round(alt.benzerlik * 100)}</span> : null}
                           </span>
                         ))}
                       </div>
@@ -2209,7 +2329,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
           })}
 
           {gorunum === 'kart' && !sharedId && (
-            <LoadMoreSentinel remaining={filteredQuestions.length - paginatedQuestions.length} onMore={() => setRichLimit((l) => l + RICH_STEP)} />
+            <LoadMoreSentinel remaining={filteredQuestions.length - paginatedQuestions.length} onMore={() => setRichLimit((l) => l + RICH_STEP)} shown={paginatedQuestions.length} total={filteredQuestions.length} />
           )}
           {gorunum === 'kompakt' && totalPages > 1 && !sharedId && (
             <nav aria-label="Sayfalar" className="cx-pager">
@@ -2226,6 +2346,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
           )}
         </div>
       )}
+      </V12Frame>
 
       {/* Öğren eşleşmesi: soru hangi slayta bağlı */}
       {selectedLearnMatch && (

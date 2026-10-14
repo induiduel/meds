@@ -1,5 +1,5 @@
-// MedSoru Service Worker - PWA v8: Yüksek Hızlı Açılış, Optimize Edilmiş Bellek & Modül Parçalama
-const CACHE_VERSION = 'medsoru-pwa-v11';
+// MeDSor Service Worker - PWA v8: Yüksek Hızlı Açılış, Optimize Edilmiş Bellek & Modül Parçalama
+const CACHE_VERSION = 'medsoru-pwa-v12';
 const STATIC_CACHE = `medsoru-static-${CACHE_VERSION}`;
 const RUNTIME_CACHE = `medsoru-runtime-${CACHE_VERSION}`;
 const DATA_CACHE = `medsoru-data-${CACHE_VERSION}`;
@@ -223,7 +223,15 @@ self.addEventListener('fetch', (event) => {
   // C. API İstekleri (/api/...)
   // Network-First, bağlantı hatasında güvenli veri mock'una veya veri önbelleğine düş
   if (url.pathname.startsWith('/api/')) {
+    // Akış (SSE) ve canlı uçlar SW'den GEÇMEZ: yakalanan sonsuz akış (önbellek kopyası da okunuyordu) sayfa yenilense de
+    // kapanmıyor, her açılışta bir bağlantı daha birikiyor; HTTP/1.1'in 6 bağlantı sınırı dolunca sayfalar "Yükleniyor"da kalıyordu
     if (
+      (req.headers.get('accept') || '').includes('text/event-stream') ||
+      url.pathname.startsWith('/api/realtime/') ||
+      url.pathname.startsWith('/api/live/') ||
+      url.pathname.startsWith('/api/presence') ||
+      url.pathname.includes('/events') ||
+      url.pathname.includes('/stream') ||
       url.pathname.includes('/sse') ||
       url.pathname.includes('/heartbeat') ||
       url.pathname.includes('/ai/') ||
@@ -330,7 +338,7 @@ self.addEventListener('push', (event) => {
 
   try {
     const payload = event.data.json();
-    const title = payload.title || '🚨 MedSoru Bildirimi';
+    const title = payload.title || '🚨 MeDSor Bildirimi';
     const body = payload.body || 'Yeni bir işlem gerçekleşti.';
     const icon = payload.icon || '/icons/icon-192x192.png';
     const badge = payload.badge || '/icons/icon-96x96.png';
@@ -356,7 +364,7 @@ self.addEventListener('push', (event) => {
   } catch (err) {
     console.error('[SW] Push ayrıştırma hatası:', err);
     event.waitUntil(
-      self.registration.showNotification('🚨 MedSoru Bildirimi', {
+      self.registration.showNotification('🚨 MeDSor Bildirimi', {
         body: event.data.text() || 'Yeni bir güncelleme alındı.',
         icon: '/icons/icon-192x192.png',
         vibrate: [200, 100, 200],

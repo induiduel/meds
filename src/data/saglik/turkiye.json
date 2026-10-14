@@ -1,0 +1,4879 @@
+{
+ "gostergeler": [
+  {
+   "kod": "KDH",
+   "ad": "Kaba doğum hızı",
+   "birim": "binde",
+   "tanim": "Belli bir yıl içinde her 1.000 nüfus başına düşen canlı doğum sayısıdır (SB yıllığı / TÜİK tanımı).",
+   "formul": {
+    "pay": "Bir toplumda bir yıldaki canlı doğum sayısı",
+    "payda": "Aynı toplumun aynı yıl ortası nüfusu",
+    "katsayi": 1000
+   },
+   "seri": [
+    {
+     "yil": 2001,
+     "deger": 20.3
+    },
+    {
+     "yil": 2012,
+     "deger": 17.1
+    },
+    {
+     "yil": 2013,
+     "deger": 17.0
+    },
+    {
+     "yil": 2014,
+     "deger": 17.4
+    },
+    {
+     "yil": 2015,
+     "deger": 17.0
+    },
+    {
+     "yil": 2016,
+     "deger": 16.5
+    },
+    {
+     "yil": 2017,
+     "deger": 16.1
+    },
+    {
+     "yil": 2018,
+     "deger": 15.3
+    },
+    {
+     "yil": 2019,
+     "deger": 14.3
+    },
+    {
+     "yil": 2020,
+     "deger": 13.3
+    },
+    {
+     "yil": 2021,
+     "deger": 12.8
+    },
+    {
+     "yil": 2022,
+     "deger": 12.2
+    },
+    {
+     "yil": 2023,
+     "deger": 11.2
+    },
+    {
+     "yil": 2024,
+     "deger": 11.0
+    },
+    {
+     "yil": 2025,
+     "deger": 10.4
+    }
+   ],
+   "kaynak": "tuik_dogum_2025",
+   "konum": "TÜİK Doğum İstatistikleri bültenleri metni: 2025 ve 2001 → bülten 58018; 2012 → 16048 (2013 bülteni); 2013 → 18621 (revize); 2014 → 21514 (revize); 2015 → 24647; 2016–2024 → izleyen yılın bülteni ve kendi yılı bülteni (27588, 30696, 33706, 37229, 45547, 49673, 53708, 54196)",
+   "ek_kaynaklar": [
+    "tuik_dogum2013",
+    "tuik_dogum2014",
+    "tuik_dogum2015",
+    "tuik_dogum2016",
+    "tuik_dogum2017",
+    "tuik_dogum2018",
+    "tuik_dogum2019",
+    "tuik_dogum2020",
+    "tuik_dogum2021",
+    "tuik_dogum2022",
+    "tuik_dogum2023",
+    "tuik_dogum2024",
+    "ders_gosterge"
+   ],
+   "not": "Değerler, mümkün olduğunda bir sonraki yıl bülteninde yayımlanan revize değerdir. SB Yıllığı 2024 Tablo 1.1'de 2023 için 11,3 verilmiştir (TÜİK bülteni 11,2)."
+  },
+  {
+   "kod": "KOH",
+   "ad": "Kaba ölüm hızı",
+   "birim": "binde",
+   "tanim": "Belli bir yıl içinde her 1.000 nüfus başına düşen ölüm sayısıdır.",
+   "formul": {
+    "pay": "Bir toplumda belirli bir süre (yıl) içinde meydana gelen ölüm sayısı",
+    "payda": "Aynı toplumun aynı süredeki yıl ortası nüfusu",
+    "katsayi": 1000
+   },
+   "seri": [
+    {
+     "yil": 2009,
+     "deger": 5.1
+    },
+    {
+     "yil": 2012,
+     "deger": 5.0
+    },
+    {
+     "yil": 2013,
+     "deger": 4.9
+    },
+    {
+     "yil": 2014,
+     "deger": 5.1
+    },
+    {
+     "yil": 2015,
+     "deger": 5.2
+    },
+    {
+     "yil": 2016,
+     "deger": 5.3
+    },
+    {
+     "yil": 2017,
+     "deger": 5.3
+    },
+    {
+     "yil": 2018,
+     "deger": 5.2
+    },
+    {
+     "yil": 2019,
+     "deger": 5.3
+    },
+    {
+     "yil": 2020,
+     "deger": 6.1
+    },
+    {
+     "yil": 2021,
+     "deger": 6.7
+    },
+    {
+     "yil": 2022,
+     "deger": 5.9
+    },
+    {
+     "yil": 2023,
+     "deger": 6.2
+    },
+    {
+     "yil": 2024,
+     "deger": 5.7
+    },
+    {
+     "yil": 2025,
+     "deger": 5.7
+    }
+   ],
+   "kaynak": "tuik_olum_2025",
+   "konum": "TÜİK Ölüm ve Ölüm Nedeni İstatistikleri 2025 bülteni grafiği 'Ölüm sayısı ve kaba ölüm hızı, 2009-2025' (2009, 2019, 2021, 2023, 2024, 2025 etiketli) + önceki bültenlerin metni (2012–2013: 16050; 2014: 21522; 2015–2016: 24649; 2017: 27592; 2018: 30701; 2020: 37243; 2022: 49679)",
+   "ek_kaynaklar": [
+    "tuik_olum2013",
+    "tuik_olum2015",
+    "tuik_olum2016",
+    "tuik_olum2017",
+    "tuik_olum2018",
+    "tuik_olum2020",
+    "tuik_olum2022",
+    "sb_siy2024",
+    "ders_gosterge"
+   ],
+   "not": "Ölüm sayısı: 2024 = 489.734, 2025 = 491.684 (TÜİK 2025 bülteni). 2010–2011 değerleri grafikte etiketsiz olduğundan yazılmadı."
+  },
+  {
+   "kod": "TDH",
+   "ad": "Toplam doğurganlık hızı",
+   "birim": "kadın başına çocuk",
+   "tanim": "Bir kadının doğurgan olduğu dönem olan 15-49 yaş grubunda yaşayacağı ve belirli yaşa özel doğurganlık hızlarını takip edeceği varsayımı altında doğurabileceği ortalama canlı doğan çocuk sayısıdır. Nüfusun yenilenme düzeyi 2,10'dur.",
+   "formul": {
+    "pay": "5 × Σ(15-19 … 45-49 beşli yaş gruplarına özel doğurganlık hızları, binde)",
+    "payda": "1000",
+    "katsayi": 1,
+    "aciklama": "TDH = 5 × Σ f(a) ÷ 1000; f(a): 'a' yaş grubundaki kadınların canlı doğum sayısı / aynı yaş grubundaki kadın sayısı × 1000"
+   },
+   "seri": [
+    {
+     "yil": 2001,
+     "deger": 2.38
+    },
+    {
+     "yil": 2012,
+     "deger": 2.09
+    },
+    {
+     "yil": 2013,
+     "deger": 2.1
+    },
+    {
+     "yil": 2014,
+     "deger": 2.19
+    },
+    {
+     "yil": 2015,
+     "deger": 2.16
+    },
+    {
+     "yil": 2016,
+     "deger": 2.11
+    },
+    {
+     "yil": 2017,
+     "deger": 2.08
+    },
+    {
+     "yil": 2018,
+     "deger": 2.0
+    },
+    {
+     "yil": 2019,
+     "deger": 1.89
+    },
+    {
+     "yil": 2020,
+     "deger": 1.77
+    },
+    {
+     "yil": 2021,
+     "deger": 1.71
+    },
+    {
+     "yil": 2022,
+     "deger": 1.63
+    },
+    {
+     "yil": 2023,
+     "deger": 1.52
+    },
+    {
+     "yil": 2024,
+     "deger": 1.49
+    },
+    {
+     "yil": 2025,
+     "deger": 1.42
+    }
+   ],
+   "kaynak": "tuik_dogum_2025",
+   "konum": "TÜİK Doğum İstatistikleri 2025 bülteni grafiği 'Doğum sayısı ve toplam doğurganlık hızı, 2001-2025' (2001 ve 2014–2025 etiketli revize değerler); 2012 → bülten 16048, 2013 → bülten 18621 (revize 2,10)",
+   "ek_kaynaklar": [
+    "tuik_dogum2013",
+    "tuik_dogum2014",
+    "ders_gosterge"
+   ],
+   "not": "2025'te 76 ilde TDH 2,10'un altında; en yüksek Şanlıurfa 3,15, en düşük Bartın 1,09. Canlı doğum 2025 = 895.374."
+  },
+  {
+   "kod": "E0",
+   "ad": "Doğumda beklenen yaşam süresi (toplam)",
+   "birim": "yıl",
+   "tanim": "Yeni doğmuş bir bireyin mevcut ölümlülük risklerine (yaşa özel ölüm hızlarına) maruz kalması durumunda yaşaması beklenen ortalama yıl sayısıdır (TÜİK). Hayat tablosundan hesaplanır; TÜİK üç yıllık dönemler için yayımlar.",
+   "formul": {
+    "pay": "T0: hayat tablosunda 0 yaşından itibaren yaşanacak toplam kişi-yıl",
+    "payda": "l0: hayat tablosunun başlangıç kohortu (genellikle 100.000 canlı doğum)",
+    "katsayi": 1,
+    "aciklama": "e0 = T0 / l0 (hayat tablosu yöntemi)"
+   },
+   "seri": [
+    {
+     "yil": 2014,
+     "donem": "2013-2014",
+     "deger": 78.0
+    },
+    {
+     "yil": 2015,
+     "donem": "2013-2015",
+     "deger": 78.0
+    },
+    {
+     "yil": 2016,
+     "donem": "2014-2016",
+     "deger": 78.0
+    },
+    {
+     "yil": 2017,
+     "donem": "2015-2017",
+     "deger": 78.0
+    },
+    {
+     "yil": 2018,
+     "donem": "2016-2018",
+     "deger": 78.3
+    },
+    {
+     "yil": 2019,
+     "donem": "2017-2019",
+     "deger": 78.6
+    },
+    {
+     "yil": 2020,
+     "donem": "2018-2020",
+     "deger": 78.3
+    },
+    {
+     "yil": 2021,
+     "donem": "2019-2021",
+     "deger": 77.7
+    },
+    {
+     "yil": 2022,
+     "donem": "2020-2022",
+     "deger": 77.5
+    },
+    {
+     "yil": 2023,
+     "donem": "2021-2023",
+     "deger": 77.3
+    },
+    {
+     "yil": 2024,
+     "donem": "2022-2024",
+     "deger": 78.1
+    },
+    {
+     "yil": 2025,
+     "donem": "2023-2025",
+     "deger": 78.5
+    }
+   ],
+   "kaynak": "tuik_hayat2023_2025",
+   "konum": "TÜİK Hayat Tabloları bültenleri metni (2013-2014 … 2023-2025); 'yil' alanı dönemin son yılıdır",
+   "ek_kaynaklar": [
+    "tuik_hayat2013_2014",
+    "tuik_hayat2013_2015",
+    "tuik_hayat2014_2016",
+    "tuik_hayat2015_2017",
+    "tuik_hayat2016_2018",
+    "tuik_hayat2017_2019",
+    "tuik_hayat2018_2020",
+    "tuik_hayat2019_2021",
+    "tuik_hayat2020_2022",
+    "tuik_hayat2021_2023",
+    "tuik_hayat2022_2024",
+    "tuik_hayat2023_2025"
+   ],
+   "not": "2023-2025: 65 yaşında kalan yaşam 18,4 yıl (E 16,7 / K 20,0); doğuşta sağlıklı yaşam süresi 58,0 yıl."
+  },
+  {
+   "kod": "E0_E",
+   "ad": "Doğumda beklenen yaşam süresi (erkek)",
+   "birim": "yıl",
+   "tanim": "Yeni doğmuş bir bireyin mevcut ölümlülük risklerine (yaşa özel ölüm hızlarına) maruz kalması durumunda yaşaması beklenen ortalama yıl sayısıdır (TÜİK). Hayat tablosundan hesaplanır; TÜİK üç yıllık dönemler için yayımlar.",
+   "formul": {
+    "pay": "T0: hayat tablosunda 0 yaşından itibaren yaşanacak toplam kişi-yıl",
+    "payda": "l0: hayat tablosunun başlangıç kohortu (genellikle 100.000 canlı doğum)",
+    "katsayi": 1,
+    "aciklama": "e0 = T0 / l0 (hayat tablosu yöntemi)"
+   },
+   "seri": [
+    {
+     "yil": 2014,
+     "donem": "2013-2014",
+     "deger": 75.3
+    },
+    {
+     "yil": 2015,
+     "donem": "2013-2015",
+     "deger": 75.3
+    },
+    {
+     "yil": 2016,
+     "donem": "2014-2016",
+     "deger": 75.3
+    },
+    {
+     "yil": 2017,
+     "donem": "2015-2017",
+     "deger": 75.3
+    },
+    {
+     "yil": 2018,
+     "donem": "2016-2018",
+     "deger": 75.6
+    },
+    {
+     "yil": 2019,
+     "donem": "2017-2019",
+     "deger": 75.9
+    },
+    {
+     "yil": 2020,
+     "donem": "2018-2020",
+     "deger": 75.6
+    },
+    {
+     "yil": 2021,
+     "donem": "2019-2021",
+     "deger": 75.0
+    },
+    {
+     "yil": 2022,
+     "donem": "2020-2022",
+     "deger": 74.8
+    },
+    {
+     "yil": 2023,
+     "donem": "2021-2023",
+     "deger": 74.7
+    },
+    {
+     "yil": 2024,
+     "donem": "2022-2024",
+     "deger": 75.5
+    },
+    {
+     "yil": 2025,
+     "donem": "2023-2025",
+     "deger": 75.9
+    }
+   ],
+   "kaynak": "tuik_hayat2023_2025",
+   "konum": "TÜİK Hayat Tabloları bültenleri metni (2013-2014 … 2023-2025); 'yil' alanı dönemin son yılıdır",
+   "ek_kaynaklar": [
+    "tuik_hayat2013_2014",
+    "tuik_hayat2013_2015",
+    "tuik_hayat2014_2016",
+    "tuik_hayat2015_2017",
+    "tuik_hayat2016_2018",
+    "tuik_hayat2017_2019",
+    "tuik_hayat2018_2020",
+    "tuik_hayat2019_2021",
+    "tuik_hayat2020_2022",
+    "tuik_hayat2021_2023",
+    "tuik_hayat2022_2024",
+    "tuik_hayat2023_2025"
+   ],
+   "not": "2023-2025: 65 yaşında kalan yaşam 18,4 yıl (E 16,7 / K 20,0); doğuşta sağlıklı yaşam süresi 58,0 yıl."
+  },
+  {
+   "kod": "E0_K",
+   "ad": "Doğumda beklenen yaşam süresi (kadın)",
+   "birim": "yıl",
+   "tanim": "Yeni doğmuş bir bireyin mevcut ölümlülük risklerine (yaşa özel ölüm hızlarına) maruz kalması durumunda yaşaması beklenen ortalama yıl sayısıdır (TÜİK). Hayat tablosundan hesaplanır; TÜİK üç yıllık dönemler için yayımlar.",
+   "formul": {
+    "pay": "T0: hayat tablosunda 0 yaşından itibaren yaşanacak toplam kişi-yıl",
+    "payda": "l0: hayat tablosunun başlangıç kohortu (genellikle 100.000 canlı doğum)",
+    "katsayi": 1,
+    "aciklama": "e0 = T0 / l0 (hayat tablosu yöntemi)"
+   },
+   "seri": [
+    {
+     "yil": 2014,
+     "donem": "2013-2014",
+     "deger": 80.7
+    },
+    {
+     "yil": 2015,
+     "donem": "2013-2015",
+     "deger": 80.7
+    },
+    {
+     "yil": 2016,
+     "donem": "2014-2016",
+     "deger": 80.7
+    },
+    {
+     "yil": 2017,
+     "donem": "2015-2017",
+     "deger": 80.8
+    },
+    {
+     "yil": 2018,
+     "donem": "2016-2018",
+     "deger": 81.0
+    },
+    {
+     "yil": 2019,
+     "donem": "2017-2019",
+     "deger": 81.3
+    },
+    {
+     "yil": 2020,
+     "donem": "2018-2020",
+     "deger": 81.1
+    },
+    {
+     "yil": 2021,
+     "donem": "2019-2021",
+     "deger": 80.5
+    },
+    {
+     "yil": 2022,
+     "donem": "2020-2022",
+     "deger": 80.3
+    },
+    {
+     "yil": 2023,
+     "donem": "2021-2023",
+     "deger": 80.0
+    },
+    {
+     "yil": 2024,
+     "donem": "2022-2024",
+     "deger": 80.7
+    },
+    {
+     "yil": 2025,
+     "donem": "2023-2025",
+     "deger": 81.1
+    }
+   ],
+   "kaynak": "tuik_hayat2023_2025",
+   "konum": "TÜİK Hayat Tabloları bültenleri metni (2013-2014 … 2023-2025); 'yil' alanı dönemin son yılıdır",
+   "ek_kaynaklar": [
+    "tuik_hayat2013_2014",
+    "tuik_hayat2013_2015",
+    "tuik_hayat2014_2016",
+    "tuik_hayat2015_2017",
+    "tuik_hayat2016_2018",
+    "tuik_hayat2017_2019",
+    "tuik_hayat2018_2020",
+    "tuik_hayat2019_2021",
+    "tuik_hayat2020_2022",
+    "tuik_hayat2021_2023",
+    "tuik_hayat2022_2024",
+    "tuik_hayat2023_2025"
+   ],
+   "not": "2023-2025: 65 yaşında kalan yaşam 18,4 yıl (E 16,7 / K 20,0); doğuşta sağlıklı yaşam süresi 58,0 yıl."
+  },
+  {
+   "kod": "BOH",
+   "ad": "Bebek ölüm hızı (TÜİK)",
+   "birim": "binde",
+   "tanim": "Bir toplumda bir yılda canlı doğan ve bir yaşını (365 gün) tamamlamadan ölen bebek sayısının, aynı yıl canlı doğan bebek sayısına oranının 1.000 ile çarpımıdır.",
+   "formul": {
+    "pay": "Bir yılda canlı doğup 1 yaşını tamamlamadan ölen bebek sayısı",
+    "payda": "Aynı toplumda aynı yıldaki canlı doğum sayısı",
+    "katsayi": 1000
+   },
+   "seri": [
+    {
+     "yil": 2009,
+     "deger": 13.9
+    },
+    {
+     "yil": 2012,
+     "deger": 11.6
+    },
+    {
+     "yil": 2013,
+     "deger": 10.8
+    },
+    {
+     "yil": 2014,
+     "deger": 11.3
+    },
+    {
+     "yil": 2015,
+     "deger": 10.2
+    },
+    {
+     "yil": 2016,
+     "deger": 9.9
+    },
+    {
+     "yil": 2017,
+     "deger": 9.4
+    },
+    {
+     "yil": 2018,
+     "deger": 9.3
+    },
+    {
+     "yil": 2019,
+     "deger": 9.2
+    },
+    {
+     "yil": 2020,
+     "deger": 8.7
+    },
+    {
+     "yil": 2021,
+     "deger": 9.4
+    },
+    {
+     "yil": 2022,
+     "deger": 9.2
+    },
+    {
+     "yil": 2023,
+     "deger": 10.1
+    },
+    {
+     "yil": 2024,
+     "deger": 9.0
+    },
+    {
+     "yil": 2025,
+     "deger": 7.8
+    }
+   ],
+   "kaynak": "tuik_olum_2025",
+   "konum": "TÜİK Ölüm ve Ölüm Nedeni İstatistikleri 2025 bülteni grafiği 'Bebek ölüm sayısı ve hızı, 2009-2025' (2009, 2019, 2021, 2023, 2024, 2025 etiketli) + önceki bültenlerde bir sonraki yılın verdiği revize değerler",
+   "ek_kaynaklar": [
+    "tuik_olum2013",
+    "tuik_olum2014",
+    "tuik_olum2016",
+    "tuik_olum2017",
+    "tuik_olum2018",
+    "tuik_olum2020",
+    "tuik_olum2022",
+    "tuik_olum2024",
+    "sb_siy2024",
+    "ders_gosterge"
+   ],
+   "not": "Bebek ölüm sayısı 2024 = 8.484, 2025 = 6.988. TÜİK (MERNİS) ve Sağlık Bakanlığı (HSGM) değerleri yöntem farkı nedeniyle farklıdır; SB serisi için BOH_SB'ye bakınız."
+  },
+  {
+   "kod": "BOH_SB",
+   "ad": "Bebek ölüm hızı (Sağlık Bakanlığı, tüm gebelik haftaları)",
+   "birim": "binde",
+   "tanim": "SB tanımı: Bir toplumda bir yılda canlı doğan ve bir yaşını tamamlamadan ölen bebek sayısının, aynı yıl canlı doğan bebek sayısına oranı × 1.000. SB iki ayrım yayımlar: 'tüm haftalar' ve '28 hafta ve üzeri veya 1.000 g ve üzeri'.",
+   "formul": {
+    "pay": "Yıl içinde canlı doğup 1 yaşını tamamlamadan ölen bebek sayısı",
+    "payda": "Aynı yıl canlı doğan bebek sayısı",
+    "katsayi": 1000
+   },
+   "seri": [
+    {
+     "yil": 2017,
+     "deger": 9.1,
+     "hafta28_ve_uzeri": 6.8
+    },
+    {
+     "yil": 2018,
+     "deger": 9.2,
+     "hafta28_ve_uzeri": 6.8
+    },
+    {
+     "yil": 2019,
+     "deger": 9.0,
+     "hafta28_ve_uzeri": 6.7
+    },
+    {
+     "yil": 2020,
+     "deger": 8.5,
+     "hafta28_ve_uzeri": 6.4
+    },
+    {
+     "yil": 2021,
+     "deger": 9.1,
+     "hafta28_ve_uzeri": 6.6
+    },
+    {
+     "yil": 2022,
+     "deger": 9.1,
+     "hafta28_ve_uzeri": 6.6
+    },
+    {
+     "yil": 2023,
+     "deger": 9.8,
+     "hafta28_ve_uzeri": 7.2
+    },
+    {
+     "yil": 2024,
+     "deger": 8.9,
+     "hafta28_ve_uzeri": 6.5
+    },
+    {
+     "yil": 2025,
+     "deger": 7.7,
+     "hafta28_ve_uzeri": 5.5
+    }
+   ],
+   "kaynak": "sb-siy-2025-bulten",
+   "konum": "SB Yıllık haber bültenleri Tablo 1 'İBBS-1'e Göre Mortalite Göstergeleri' Türkiye satırı (2017–2025 bültenleri); 2024 → SB Yıllığı 2024 Şekil 2.3",
+   "ek_kaynaklar": [
+    "sb_bulten2017",
+    "sb_bulten2018",
+    "sb_bulten2019",
+    "sb_bulten2020",
+    "sb_bulten2021",
+    "sb_bulten2022",
+    "sb_bulten2023",
+    "sb_bulten2024",
+    "sb_siy2024"
+   ],
+   "not": "2025'te kız 7,0, erkek 8,4. 2020 ve öncesi bültenlerde başlık değeri '28 hafta ve üzeri'dir."
+  },
+  {
+   "kod": "NOH",
+   "ad": "Neonatal (yenidoğan) ölüm hızı",
+   "birim": "binde",
+   "tanim": "Bir toplumda bir yılda canlı doğan ve ilk 28 gün içinde ölen bebek sayısının, aynı yıl canlı doğan bebek sayısına oranının 1.000 ile çarpımıdır (erken neonatal 0-7, geç neonatal 8-28 gün). Ana sağlığı ve doğum öncesi/doğum/doğum sonrası bakımın düzeyini yansıtır.",
+   "formul": {
+    "pay": "Bir yılda canlı doğup 0-28 gün arasında ölen bebek sayısı",
+    "payda": "Aynı toplumda aynı yıldaki canlı doğum sayısı",
+    "katsayi": 1000
+   },
+   "seri": [
+    {
+     "yil": 2017,
+     "deger": 5.8,
+     "hafta28_ve_uzeri": 3.8
+    },
+    {
+     "yil": 2018,
+     "deger": 6.0,
+     "hafta28_ve_uzeri": 3.9
+    },
+    {
+     "yil": 2019,
+     "deger": 5.8,
+     "hafta28_ve_uzeri": 3.7
+    },
+    {
+     "yil": 2020,
+     "deger": 5.5,
+     "hafta28_ve_uzeri": 3.6
+    },
+    {
+     "yil": 2021,
+     "deger": 5.9,
+     "hafta28_ve_uzeri": 3.7
+    },
+    {
+     "yil": 2022,
+     "deger": 5.7,
+     "hafta28_ve_uzeri": 3.6
+    },
+    {
+     "yil": 2023,
+     "deger": 6.0,
+     "hafta28_ve_uzeri": 3.7
+    },
+    {
+     "yil": 2024,
+     "deger": 5.6,
+     "hafta28_ve_uzeri": 3.5
+    },
+    {
+     "yil": 2025,
+     "deger": 5.0,
+     "hafta28_ve_uzeri": 3.0
+    }
+   ],
+   "kaynak": "sb-siy-2025-bulten",
+   "konum": "SB haber bültenleri Tablo 1 Türkiye satırı, 'Neonatal Ölüm Hızı' sütunu (tüm haftalar / 28 hafta ve üzeri)",
+   "ek_kaynaklar": [
+    "sb_bulten2017",
+    "sb_bulten2018",
+    "sb_bulten2019",
+    "sb_bulten2020",
+    "sb_bulten2021",
+    "sb_bulten2022",
+    "sb_bulten2023",
+    "sb_bulten2024",
+    "sb_siy2024",
+    "ders_gosterge"
+   ],
+   "not": "Postneonatal (29-364. gün) ölüm hızı 2025: 2,7 (tüm haftalar); perinatal ölüm hızı 2025: 10,1 (1.000 doğumda)."
+  },
+  {
+   "kod": "5YAOH",
+   "ad": "Beş yaş altı ölüm hızı (TÜİK)",
+   "birim": "binde",
+   "tanim": "Doğumdan sonraki beş yıl içinde ölme olasılığıdır (TÜİK). Ders tanımı: bir takvim yılında 5 yaşını doldurmadan ölen çocuk sayısının aynı yıl canlı doğum sayısına oranı × 1.000.",
+   "formul": {
+    "pay": "Bir yılda 5 yaşını doldurmadan ölen çocuk sayısı",
+    "payda": "Aynı toplumda aynı yıldaki canlı doğum sayısı",
+    "katsayi": 1000
+   },
+   "seri": [
+    {
+     "yil": 2009,
+     "deger": 17.7
+    },
+    {
+     "yil": 2013,
+     "deger": 13.4
+    },
+    {
+     "yil": 2014,
+     "deger": 13.5
+    },
+    {
+     "yil": 2015,
+     "deger": 12.4
+    },
+    {
+     "yil": 2016,
+     "deger": 12.1
+    },
+    {
+     "yil": 2017,
+     "deger": 11.4
+    },
+    {
+     "yil": 2018,
+     "deger": 11.3
+    },
+    {
+     "yil": 2019,
+     "deger": 11.3
+    },
+    {
+     "yil": 2020,
+     "deger": 10.6
+    },
+    {
+     "yil": 2021,
+     "deger": 11.4
+    },
+    {
+     "yil": 2022,
+     "deger": 11.2
+    },
+    {
+     "yil": 2023,
+     "deger": 14.7
+    },
+    {
+     "yil": 2024,
+     "deger": 11.1
+    },
+    {
+     "yil": 2025,
+     "deger": 9.5
+    }
+   ],
+   "kaynak": "tuik_olum_2025",
+   "konum": "TÜİK 2025 bülteni grafiği 'Beş yaş altı ölüm sayısı ve hızı, 2009-2025' (2009, 2019, 2021, 2023, 2024, 2025 etiketli) + önceki bültenlerin revize değerleri (2014: 2013; 2015: 2014; 2016: 2015–2016; 2018: 2017; 2019: 2018; 2020: 2020; 2022: 2022)",
+   "ek_kaynaklar": [
+    "tuik_olum2014",
+    "tuik_olum2015",
+    "tuik_olum2016",
+    "tuik_olum2018",
+    "tuik_olum2019",
+    "tuik_olum2020",
+    "tuik_olum2022",
+    "sb_bulten2025",
+    "ders_gosterge"
+   ],
+   "not": "2023'teki sıçrama 6 Şubat 2023 depremleriyle eş zamanlıdır (bülten metninde neden belirtilmemiştir). SB (HSGM) değeri 2025: 9,4."
+  },
+  {
+   "kod": "AOO",
+   "ad": "Anne ölüm oranı",
+   "birim": "100.000 canlı doğumda",
+   "tanim": "Bir toplumda bir yılda gebelik ve/veya gebeliğin ağırlaştırdığı herhangi bir sebeple (gebelik, doğum ya da doğumdan sonraki ilk 42 gün içinde) ölen anne sayısının, aynı yıl canlı doğan bebek sayısına oranının 100.000 ile çarpımıdır. Paydası doğurgan çağdaki kadın sayısı olursa 'anne ölüm hızı' adını alır.",
+   "formul": {
+    "pay": "Bir yılda gebelik, doğum veya lohusalık (42 gün) nedeniyle ölen kadın sayısı",
+    "payda": "Aynı yıldaki canlı doğum sayısı",
+    "katsayi": 100000
+   },
+   "seri": [
+    {
+     "yil": 2016,
+     "deger": 14.7
+    },
+    {
+     "yil": 2017,
+     "deger": 14.6
+    },
+    {
+     "yil": 2018,
+     "deger": 13.6
+    },
+    {
+     "yil": 2019,
+     "deger": 13.1
+    },
+    {
+     "yil": 2021,
+     "deger": 13.1
+    },
+    {
+     "yil": 2022,
+     "deger": 12.6
+    },
+    {
+     "yil": 2023,
+     "deger": 13.5
+    },
+    {
+     "yil": 2024,
+     "deger": 11.5
+    },
+    {
+     "yil": 2025,
+     "deger": 12.6
+    }
+   ],
+   "kaynak": "sb-siy-2025-bulten",
+   "konum": "SB haber bültenleri Tablo 1 'Anne Ölüm Oranı' sütunu (2017–2025); 2016 → 2017 bülteni metni; 2024 → SB Yıllığı 2024 Şekil 2.11",
+   "ek_kaynaklar": [
+    "sb_bulten2017",
+    "sb_bulten2018",
+    "sb_bulten2019",
+    "sb_bulten2021",
+    "sb_bulten2022",
+    "sb_bulten2023",
+    "sb_bulten2024",
+    "sb_siy2024",
+    "ders_gosterge"
+   ],
+   "not": "2020 değeri 2020 haber bülteninde yayımlanmamış (dogrulanamayan listesine bakınız). 42 gün ifadesi uluslararası (ICD-10/DSÖ) tanımdır; ders notunda 'doğumdan sonra ilk … hf' olarak geçer."
+  },
+  {
+   "kod": "NAH",
+   "ad": "Yıllık nüfus artış hızı",
+   "birim": "binde",
+   "tanim": "İki sayım tarihi arasındaki dönemde her 1.000 nüfus için yıllık artan nüfustur (TÜİK). TÜİK, doğal artış bağıntısını (P(n+t) = P(n)·e^(r·t)) kullanır. Ders notunda doğal artış hızı olarak NAH = KDH − KÖH (göç yok sayılarak) verilir.",
+   "formul": {
+    "pay": "ln(Sonraki dönem nüfusu / Önceki dönem nüfusu)",
+    "payda": "İki dönem arasındaki süre (yıl)",
+    "katsayi": 1000,
+    "aciklama": "r = [ln(P(n+t)/P(n)) / t] × 1000; doğal artış yaklaşımı: KDH − KÖH (binde)"
+   },
+   "seri": [
+    {
+     "yil": 2012,
+     "deger": 12.0
+    },
+    {
+     "yil": 2013,
+     "deger": 13.7
+    },
+    {
+     "yil": 2014,
+     "deger": 13.3
+    },
+    {
+     "yil": 2015,
+     "deger": 13.4
+    },
+    {
+     "yil": 2016,
+     "deger": 13.5
+    },
+    {
+     "yil": 2017,
+     "deger": 12.4
+    },
+    {
+     "yil": 2018,
+     "deger": 14.7
+    },
+    {
+     "yil": 2019,
+     "deger": 13.9
+    },
+    {
+     "yil": 2020,
+     "deger": 5.5
+    },
+    {
+     "yil": 2021,
+     "deger": 12.7
+    },
+    {
+     "yil": 2022,
+     "deger": 7.1
+    },
+    {
+     "yil": 2023,
+     "deger": 1.1
+    },
+    {
+     "yil": 2024,
+     "deger": 3.4
+    },
+    {
+     "yil": 2025,
+     "deger": 5.0
+    }
+   ],
+   "kaynak": "tuik_adnks_2025",
+   "konum": "TÜİK ADNKS bültenleri metni (2013–2025); formül → ADNKS 2025 bülteni metaveri 'Yıllık nüfus artış hızı'",
+   "ek_kaynaklar": [
+    "tuik_adnks2013",
+    "tuik_adnks2014",
+    "tuik_adnks2015",
+    "tuik_adnks2016",
+    "tuik_adnks2017",
+    "tuik_adnks2018",
+    "tuik_adnks2019",
+    "tuik_adnks2020",
+    "tuik_adnks2021",
+    "tuik_adnks2022",
+    "tuik_adnks2023",
+    "tuik_adnks2024",
+    "sb_siy2024",
+    "ders_gosterge"
+   ],
+   "not": "Türkiye nüfusu 31.12.2025: 86.092.168 (bir önceki yıla göre +427.224)."
+  },
+  {
+   "kod": "YASLI65",
+   "ad": "65 yaş ve üzeri nüfus oranı",
+   "birim": "%",
+   "tanim": "65 yaş ve üzerindeki nüfusun toplam nüfusa oranıdır (SB yıllığı). TÜİK 65 ve daha yukarı yaştakileri 'yaşlı nüfus' olarak kabul eder.",
+   "formul": {
+    "pay": "65 yaş ve üzeri nüfus",
+    "payda": "Toplam nüfus",
+    "katsayi": 100
+   },
+   "seri": [
+    {
+     "yil": 1990,
+     "deger": 4.3
+    },
+    {
+     "yil": 2000,
+     "deger": 5.7
+    },
+    {
+     "yil": 2007,
+     "deger": 7.1
+    },
+    {
+     "yil": 2013,
+     "deger": 7.7
+    },
+    {
+     "yil": 2014,
+     "deger": 8.0
+    },
+    {
+     "yil": 2015,
+     "deger": 8.2
+    },
+    {
+     "yil": 2016,
+     "deger": 8.3
+    },
+    {
+     "yil": 2017,
+     "deger": 8.5
+    },
+    {
+     "yil": 2018,
+     "deger": 8.8
+    },
+    {
+     "yil": 2019,
+     "deger": 9.1
+    },
+    {
+     "yil": 2020,
+     "deger": 9.5
+    },
+    {
+     "yil": 2021,
+     "deger": 9.7
+    },
+    {
+     "yil": 2022,
+     "deger": 9.9
+    },
+    {
+     "yil": 2023,
+     "deger": 10.2
+    },
+    {
+     "yil": 2024,
+     "deger": 10.6
+    },
+    {
+     "yil": 2025,
+     "deger": 11.1
+    }
+   ],
+   "kaynak": "tuik_adnks_2025",
+   "konum": "TÜİK ADNKS bültenleri metni (2007 ve 2013–2025); 1990, 2000 → SB Yıllığı 2024 Tablo 1.1",
+   "ek_kaynaklar": [
+    "tuik_adnks2013",
+    "tuik_adnks2014",
+    "tuik_adnks2015",
+    "tuik_adnks2016",
+    "tuik_adnks2017",
+    "tuik_adnks2018",
+    "tuik_adnks2019",
+    "tuik_adnks2020",
+    "tuik_adnks2021",
+    "tuik_adnks2022",
+    "tuik_adnks2023",
+    "tuik_adnks2024",
+    "tuik_yasli2025",
+    "sb_siy2024"
+   ],
+   "not": "Yaşlı nüfus 2025: 9.583.059 kişi (%44,7 erkek, %55,3 kadın) — TÜİK İstatistiklerle Yaşlılar 2025. Yaşlı bağımlılık oranı 2024: %15,5 (SB Yıllığı Tablo 1.1)."
+  },
+  {
+   "kod": "ORTANCA",
+   "ad": "Ortanca yaş",
+   "birim": "yaş",
+   "tanim": "Nüfusu oluşturan kişilerin yaşları küçükten büyüğe doğru sıralandığında ortada kalan kişinin yaşıdır (TÜİK).",
+   "formul": {
+    "pay": "(N/2) − f",
+    "payda": "f_med (ortanca yaş grubunun nüfusu)",
+    "katsayi": 1,
+    "aciklama": "Ortanca yaş = I + [((N/2) − f) / f_med] × i; I: ortanca grubun alt sınırı, N: toplam nüfus, f: ortanca gruptan küçük gruplardaki nüfus toplamı, i: grup aralığı"
+   },
+   "seri": [
+    {
+     "yil": 2012,
+     "deger": 30.1
+    },
+    {
+     "yil": 2013,
+     "deger": 30.4
+    },
+    {
+     "yil": 2014,
+     "deger": 30.7
+    },
+    {
+     "yil": 2015,
+     "deger": 31.0
+    },
+    {
+     "yil": 2016,
+     "deger": 31.4
+    },
+    {
+     "yil": 2017,
+     "deger": 31.7
+    },
+    {
+     "yil": 2018,
+     "deger": 32.0
+    },
+    {
+     "yil": 2019,
+     "deger": 32.4
+    },
+    {
+     "yil": 2020,
+     "deger": 32.7
+    },
+    {
+     "yil": 2021,
+     "deger": 33.1
+    },
+    {
+     "yil": 2022,
+     "deger": 33.5
+    },
+    {
+     "yil": 2023,
+     "deger": 34.0
+    },
+    {
+     "yil": 2024,
+     "deger": 34.4
+    },
+    {
+     "yil": 2025,
+     "deger": 34.9
+    }
+   ],
+   "kaynak": "tuik_adnks_2025",
+   "konum": "TÜİK ADNKS bültenleri metni (2013–2025); formül → ADNKS 2025 bülteni metaveri",
+   "ek_kaynaklar": [
+    "tuik_adnks2013",
+    "tuik_adnks2014",
+    "tuik_adnks2015",
+    "tuik_adnks2016",
+    "tuik_adnks2017",
+    "tuik_adnks2018",
+    "tuik_adnks2019",
+    "tuik_adnks2020",
+    "tuik_adnks2021",
+    "tuik_adnks2022",
+    "tuik_adnks2023",
+    "tuik_adnks2024"
+   ],
+   "not": "2023: erkek 33,2 / kadın 34,7."
+  }
+ ],
+ "olum_nedenleri": {
+  "yil": 2025,
+  "kaynak": "tuik_olum_2025",
+  "konum": "TÜİK Ölüm ve Ölüm Nedeni İstatistikleri 2025 bülteni grafiği 'Nedenlere göre ölüm oranı, 2024, 2025' (ICD-10 ana grupları; yüzdeler toplam ölümler içindedir)",
+  "toplam_olum": {
+   "2024": 489734,
+   "2025": 491684
+  },
+  "kalemler": [
+   {
+    "ad": "Dolaşım sistemi hastalıkları (I00-I99)",
+    "yuzde": 34.7,
+    "onceki": {
+     "yil": 2024,
+     "yuzde": 36.3
+    },
+    "alt": "Dolaşım sistemi ölümlerinin %42,3'ü iskemik kalp hastalıkları, %24,6'sı diğer kalp hastalıkları, %18,2'si serebrovasküler hastalıklar"
+   },
+   {
+    "ad": "İyi ve kötü huylu tümörler (C00-D48)",
+    "yuzde": 16.1,
+    "onceki": {
+     "yil": 2024,
+     "yuzde": 16.4
+    },
+    "alt": "Tümör ölümlerinin %28,9'u gırtlak ve soluk borusu/bronş/akciğer, %8,0'ı kolon, %7,6'sı lenfoid ve hematopoetik kötü huylu tümörler"
+   },
+   {
+    "ad": "Solunum sistemi hastalıkları (J00-J99)",
+    "yuzde": 15.1,
+    "onceki": {
+     "yil": 2024,
+     "yuzde": 15.0
+    }
+   },
+   {
+    "ad": "İç salgı bezi (endokrin), beslenme ve metabolizmayla ilgili hastalıklar (E00-E90)",
+    "yuzde": 5.0,
+    "onceki": {
+     "yil": 2024,
+     "yuzde": 4.8
+    }
+   },
+   {
+    "ad": "Dışsal yaralanma nedenleri ve zehirlenmeler (V01-Y89)",
+    "yuzde": 4.0,
+    "onceki": {
+     "yil": 2024,
+     "yuzde": 4.3
+    }
+   },
+   {
+    "ad": "Sinir sistemi ve duyu organları hastalıkları (G00-H95)",
+    "yuzde": 3.3,
+    "onceki": {
+     "yil": 2024,
+     "yuzde": 3.4
+    }
+   },
+   {
+    "ad": "Diğer",
+    "yuzde": 13.8,
+    "onceki": {
+     "yil": 2024,
+     "yuzde": 14.4
+    }
+   },
+   {
+    "ad": "Bilinmeyen",
+    "yuzde": 8.0,
+    "onceki": {
+     "yil": 2024,
+     "yuzde": 5.3
+    }
+   }
+  ],
+  "ilk_uc_seri": [
+   {
+    "yil": 2019,
+    "dolasim": 36.8,
+    "tumor": 18.4,
+    "solunum": 12.9,
+    "kaynak": "tuik_olum2019"
+   },
+   {
+    "yil": 2020,
+    "dolasim": 36.0,
+    "tumor": 15.7,
+    "solunum": 15.8,
+    "kaynak": "tuik_olum2020"
+   },
+   {
+    "yil": 2021,
+    "dolasim": 33.4,
+    "tumor": 14.0,
+    "solunum": 13.4,
+    "kaynak": "tuik_olum2021"
+   },
+   {
+    "yil": 2022,
+    "dolasim": 35.4,
+    "tumor": 15.2,
+    "solunum": 13.5,
+    "kaynak": "tuik_olum2022"
+   },
+   {
+    "yil": 2023,
+    "dolasim": 33.4,
+    "tumor": 15.0,
+    "solunum": 13.2,
+    "kaynak": "tuik_olum2023"
+   },
+   {
+    "yil": 2024,
+    "dolasim": 36.3,
+    "tumor": 16.4,
+    "solunum": 15.0,
+    "kaynak": "tuik_olum_2025",
+    "not": "2024 bülteninde ilk yayımlanan değerler 36,0 / 16,3 / 15,0; 2025 bülteni revize değeri verildi"
+   },
+   {
+    "yil": 2025,
+    "dolasim": 34.7,
+    "tumor": 16.1,
+    "solunum": 15.1,
+    "kaynak": "tuik_olum_2025"
+   }
+  ],
+  "icd10_ayrintili_2022_2024": {
+   "kaynak": "sb-siy-2024",
+   "konum": "SB Yıllığı 2024 Tablo 2.2 'Yıllara, ICD-10 Ana Tanı Gruplarına ve Cinsiyete Göre Ölüm Nedenlerinin Dağılımı, (%)' (kaynak: TÜİK) — toplam sütunları",
+   "kalemler": [
+    {
+     "ad": "Dolaşım sistemi hastalıkları (I00-I99)",
+     "2022": 35.79,
+     "2023": 33.62,
+     "2024": 36.01
+    },
+    {
+     "ad": "Neoplazmlar (C00-D48)",
+     "2022": 15.22,
+     "2023": 15.07,
+     "2024": 16.33
+    },
+    {
+     "ad": "Solunum sistemi hastalıkları (J00-J99)",
+     "2022": 13.63,
+     "2023": 13.25,
+     "2024": 14.98
+    },
+    {
+     "ad": "Endokrin, beslenme ve metabolizma hastalıkları (E00-E90)",
+     "2022": 4.54,
+     "2023": 4.23,
+     "2024": 4.78
+    },
+    {
+     "ad": "Bazı enfeksiyöz ve paraziter hastalıklar (A00-B99)",
+     "2022": 3.67,
+     "2023": 3.75,
+     "2024": 4.47
+    },
+    {
+     "ad": "Genitoüriner sistem hastalıkları (N00-N99)",
+     "2022": 3.72,
+     "2023": 3.61,
+     "2024": 4.11
+    },
+    {
+     "ad": "Dışsal yaralanma nedenleri (V01-Y89)",
+     "2022": 3.87,
+     "2023": 12.58,
+     "2024": 3.94
+    },
+    {
+     "ad": "Sinir sistemi ve duyu organları hastalıkları (G00-H95)",
+     "2022": 3.6,
+     "2023": 3.36,
+     "2024": 3.43
+    },
+    {
+     "ad": "Sindirim sistemi hastalıkları (K00-K93)",
+     "2022": 2.21,
+     "2023": 2.16,
+     "2024": 2.38
+    },
+    {
+     "ad": "Semptomlar, belirtiler ve anormal bulgular (R00-R99)",
+     "2022": 1.43,
+     "2023": 1.26,
+     "2024": 1.2
+    },
+    {
+     "ad": "Perinatal dönemden kaynaklanan durumlar (P00-P96)",
+     "2022": 1.02,
+     "2023": 0.93,
+     "2024": 0.92
+    },
+    {
+     "ad": "Konjenital malformasyonlar (Q00-Q99)",
+     "2022": 0.57,
+     "2023": 0.51,
+     "2024": 0.5
+    },
+    {
+     "ad": "COVID-19 (U07)",
+     "2022": 4.36,
+     "2023": 0.33,
+     "2024": 0.04
+    },
+    {
+     "ad": "Bilinmeyen",
+     "2022": 5.76,
+     "2023": 4.79,
+     "2024": 6.33
+    }
+   ],
+   "not": "2023'te dışsal yaralanma payındaki artış (%12,58) aynı yıl yaşanan 6 Şubat depremleriyle eş zamanlıdır; tabloda neden belirtilmemiştir."
+  }
+ },
+ "kurumlar": [
+  {
+   "ad": "Hastane sayısı (toplam)",
+   "seri": [
+    {
+     "yil": 2002,
+     "deger": 1156
+    },
+    {
+     "yil": 2017,
+     "deger": 1518
+    },
+    {
+     "yil": 2018,
+     "deger": 1534
+    },
+    {
+     "yil": 2019,
+     "deger": 1538
+    },
+    {
+     "yil": 2020,
+     "deger": 1534
+    },
+    {
+     "yil": 2021,
+     "deger": 1547
+    },
+    {
+     "yil": 2022,
+     "deger": 1555
+    },
+    {
+     "yil": 2023,
+     "deger": 1566
+    },
+    {
+     "yil": 2024,
+     "deger": 1562
+    },
+    {
+     "yil": 2025,
+     "deger": 1553
+    }
+   ],
+   "alt_seri": {
+    "Sağlık Bakanlığı": [
+     {
+      "yil": 2002,
+      "deger": 774
+     },
+     {
+      "yil": 2017,
+      "deger": 879
+     },
+     {
+      "yil": 2018,
+      "deger": 889
+     },
+     {
+      "yil": 2019,
+      "deger": 895
+     },
+     {
+      "yil": 2020,
+      "deger": 900
+     },
+     {
+      "yil": 2021,
+      "deger": 908
+     },
+     {
+      "yil": 2022,
+      "deger": 915
+     },
+     {
+      "yil": 2023,
+      "deger": 933
+     },
+     {
+      "yil": 2024,
+      "deger": 941
+     },
+     {
+      "yil": 2025,
+      "deger": 943
+     }
+    ],
+    "Üniversite": [
+     {
+      "yil": 2002,
+      "deger": 50
+     },
+     {
+      "yil": 2017,
+      "deger": 68
+     },
+     {
+      "yil": 2018,
+      "deger": 68
+     },
+     {
+      "yil": 2019,
+      "deger": 68
+     },
+     {
+      "yil": 2020,
+      "deger": 68
+     },
+     {
+      "yil": 2021,
+      "deger": 68
+     },
+     {
+      "yil": 2022,
+      "deger": 68
+     },
+     {
+      "yil": 2023,
+      "deger": 68
+     },
+     {
+      "yil": 2024,
+      "deger": 69
+     },
+     {
+      "yil": 2025,
+      "deger": 70
+     }
+    ],
+    "Özel": [
+     {
+      "yil": 2002,
+      "deger": 271
+     },
+     {
+      "yil": 2017,
+      "deger": 571
+     },
+     {
+      "yil": 2018,
+      "deger": 577
+     },
+     {
+      "yil": 2019,
+      "deger": 575
+     },
+     {
+      "yil": 2020,
+      "deger": 566
+     },
+     {
+      "yil": 2021,
+      "deger": 571
+     },
+     {
+      "yil": 2022,
+      "deger": 572
+     },
+     {
+      "yil": 2023,
+      "deger": 565
+     },
+     {
+      "yil": 2024,
+      "deger": 552
+     },
+     {
+      "yil": 2025,
+      "deger": 540
+     }
+    ]
+   },
+   "alt": [
+    {
+     "ad": "Sağlık Bakanlığı",
+     "deger": 943
+    },
+    {
+     "ad": "Üniversite (50 devlet + 20 vakıf SUAM)",
+     "deger": 70
+    },
+    {
+     "ad": "Özel",
+     "deger": 540
+    }
+   ],
+   "kaynak": "sb-siy-2025-bulten",
+   "konum": "2025: SB 2025 bülteni Tablo 6/11; 2017–2024: ilgili yıl bülteni hastane tablosu Türkiye satırı; 2002: SB Yıllığı 2024 Şekil 7.1",
+   "not": "2002'de 61 'diğer' kamu hastanesi de vardır (toplama dahil)."
+  },
+  {
+   "ad": "Hastane yatağı sayısı (toplam)",
+   "seri": [
+    {
+     "yil": 2002,
+     "deger": 164471
+    },
+    {
+     "yil": 2017,
+     "deger": 225863
+    },
+    {
+     "yil": 2018,
+     "deger": 231913
+    },
+    {
+     "yil": 2019,
+     "deger": 237504
+    },
+    {
+     "yil": 2020,
+     "deger": 251182
+    },
+    {
+     "yil": 2021,
+     "deger": 254497
+    },
+    {
+     "yil": 2022,
+     "deger": 262190
+    },
+    {
+     "yil": 2023,
+     "deger": 266594
+    },
+    {
+     "yil": 2024,
+     "deger": 268359
+    },
+    {
+     "yil": 2025,
+     "deger": 270829
+    }
+   ],
+   "alt_seri": {
+    "Sağlık Bakanlığı": [
+     {
+      "yil": 2017,
+      "deger": 135339
+     },
+     {
+      "yil": 2018,
+      "deger": 139651
+     },
+     {
+      "yil": 2019,
+      "deger": 143412
+     },
+     {
+      "yil": 2020,
+      "deger": 156965
+     },
+     {
+      "yil": 2021,
+      "deger": 157714
+     },
+     {
+      "yil": 2022,
+      "deger": 163207
+     },
+     {
+      "yil": 2023,
+      "deger": 167649
+     },
+     {
+      "yil": 2024,
+      "deger": 169834
+     },
+     {
+      "yil": 2025,
+      "deger": 172079
+     }
+    ],
+    "Üniversite": [
+     {
+      "yil": 2017,
+      "deger": 41324
+     },
+     {
+      "yil": 2018,
+      "deger": 42066
+     },
+     {
+      "yil": 2019,
+      "deger": 42925
+     },
+     {
+      "yil": 2020,
+      "deger": 41987
+     },
+     {
+      "yil": 2021,
+      "deger": 42978
+     },
+     {
+      "yil": 2022,
+      "deger": 43914
+     },
+     {
+      "yil": 2023,
+      "deger": 43878
+     },
+     {
+      "yil": 2024,
+      "deger": 44131
+     },
+     {
+      "yil": 2025,
+      "deger": 45740
+     }
+    ],
+    "Özel": [
+     {
+      "yil": 2017,
+      "deger": 49200
+     },
+     {
+      "yil": 2018,
+      "deger": 50196
+     },
+     {
+      "yil": 2019,
+      "deger": 51167
+     },
+     {
+      "yil": 2020,
+      "deger": 52230
+     },
+     {
+      "yil": 2021,
+      "deger": 53805
+     },
+     {
+      "yil": 2022,
+      "deger": 55069
+     },
+     {
+      "yil": 2023,
+      "deger": 55067
+     },
+     {
+      "yil": 2024,
+      "deger": 54394
+     },
+     {
+      "yil": 2025,
+      "deger": 53010
+     }
+    ]
+   },
+   "alt": [
+    {
+     "ad": "Sağlık Bakanlığı",
+     "deger": 172079
+    },
+    {
+     "ad": "Üniversite",
+     "deger": 45740
+    },
+    {
+     "ad": "Özel",
+     "deger": 53010
+    }
+   ],
+   "kaynak": "sb-siy-2025-bulten",
+   "konum": "SB 2025 bülteni Tablo 7; önceki yıllar ilgili bülten; 2002: SB Yıllığı 2024 Şekil 7.2",
+   "not": "2025 nitelikli yatak oranı %83,1 (184.965 yatak)."
+  },
+  {
+   "ad": "10.000 kişiye düşen hastane yatağı",
+   "seri": [
+    {
+     "yil": 2002,
+     "deger": 24.8
+    },
+    {
+     "yil": 2024,
+     "deger": 31.3
+    },
+    {
+     "yil": 2025,
+     "deger": 31.5
+    }
+   ],
+   "alt": [
+    {
+     "ad": "Sağlık Bakanlığı",
+     "deger": 20.0
+    },
+    {
+     "ad": "Devlet üniversitesi SUAM",
+     "deger": 4.6
+    },
+    {
+     "ad": "Vakıf üniversitesi SUAM",
+     "deger": 0.7
+    },
+    {
+     "ad": "Özel",
+     "deger": 6.2
+    }
+   ],
+   "kaynak": "sb-siy-2025-bulten",
+   "konum": "SB 2025 bülteni Tablo 11; 2024: SB 2024 bülteni Tablo 12; 2002: SB Yıllığı 2024 Şekil 7.3",
+   "not": "alt değerler 2025."
+  },
+  {
+   "ad": "Yoğun bakım yatağı (toplam)",
+   "seri": [
+    {
+     "yil": 2017,
+     "deger": 36240
+    },
+    {
+     "yil": 2018,
+     "deger": 38098
+    },
+    {
+     "yil": 2019,
+     "deger": 39955
+    },
+    {
+     "yil": 2020,
+     "deger": 47700
+    },
+    {
+     "yil": 2021,
+     "deger": 48753
+    },
+    {
+     "yil": 2022,
+     "deger": 48807
+    },
+    {
+     "yil": 2023,
+     "deger": 48966
+    },
+    {
+     "yil": 2024,
+     "deger": 49010
+    },
+    {
+     "yil": 2025,
+     "deger": 48360
+    }
+   ],
+   "alt": [
+    {
+     "ad": "Erişkin",
+     "deger": 32568
+    },
+    {
+     "ad": "Çocuk",
+     "deger": 2534
+    },
+    {
+     "ad": "Yenidoğan",
+     "deger": 13258
+    },
+    {
+     "ad": "Sağlık Bakanlığı payı (%)",
+     "deger": 53.7
+    }
+   ],
+   "kaynak": "sb-siy-2025-bulten",
+   "konum": "SB bültenleri 'Türlerine ve Sektörlere Göre Yoğun Bakım Yatak Sayıları' tablosu toplam satırı (2025: Tablo 9)"
+  },
+  {
+   "ad": "Aile hekimliği birimi (= aile hekimi pozisyonu) sayısı",
+   "seri": [
+    {
+     "yil": 2017,
+     "deger": 25198
+    },
+    {
+     "yil": 2018,
+     "deger": 26252
+    },
+    {
+     "yil": 2019,
+     "deger": 26476
+    },
+    {
+     "yil": 2020,
+     "deger": 26594
+    },
+    {
+     "yil": 2021,
+     "deger": 26928
+    },
+    {
+     "yil": 2022,
+     "deger": 27762
+    },
+    {
+     "yil": 2023,
+     "deger": 28054
+    },
+    {
+     "yil": 2024,
+     "deger": 28845
+    },
+    {
+     "yil": 2025,
+     "deger": 30006
+    }
+   ],
+   "kaynak": "sb-siy-2025-bulten",
+   "konum": "SB bültenleri 'Birinci Basamak Kurum ... Sayıları' tablosu (2025: Tablo 12); 2020–2024 ayrıca SB Yıllığı 2024 Tablo 7.18",
+   "not": "Her aile hekimliği biriminde bir aile hekimi görev yapar (5258 sayılı Kanun md. 2 tanımı)."
+  },
+  {
+   "ad": "Aile sağlığı merkezi (ASM) sayısı",
+   "seri": [
+    {
+     "yil": 2017,
+     "deger": 7774
+    },
+    {
+     "yil": 2018,
+     "deger": 7979
+    },
+    {
+     "yil": 2019,
+     "deger": 7997
+    },
+    {
+     "yil": 2020,
+     "deger": 8015
+    },
+    {
+     "yil": 2021,
+     "deger": 8057
+    },
+    {
+     "yil": 2022,
+     "deger": 8172
+    },
+    {
+     "yil": 2023,
+     "deger": 8163
+    },
+    {
+     "yil": 2024,
+     "deger": 8228
+    },
+    {
+     "yil": 2025,
+     "deger": 8330
+    }
+   ],
+   "kaynak": "sb-siy-2025-bulten",
+   "konum": "SB bültenleri birinci basamak tablosu (2025: Tablo 12)"
+  },
+  {
+   "ad": "Aile hekimliği birimi başına düşen nüfus",
+   "seri": [
+    {
+     "yil": 2024,
+     "deger": 2970
+    }
+   ],
+   "alt": [
+    {
+     "ad": "En yüksek: İstanbul",
+     "deger": 3128
+    },
+    {
+     "ad": "En düşük: Kuzeydoğu Anadolu",
+     "deger": 2730
+    }
+   ],
+   "kaynak": "sb-siy-2024",
+   "konum": "SB Yıllığı 2024 Şekil 7.23 'İBBS-1'e Göre Aile Hekimliği Birimi Başına Düşen Nüfus, 2024'"
+  },
+  {
+   "ad": "Toplum sağlığı merkezi (TSM) sayısı",
+   "seri": [
+    {
+     "yil": 2017,
+     "deger": 972
+    },
+    {
+     "yil": 2018,
+     "deger": 776
+    },
+    {
+     "yil": 2019,
+     "deger": 778
+    },
+    {
+     "yil": 2020,
+     "deger": 779
+    },
+    {
+     "yil": 2021,
+     "deger": 778
+    },
+    {
+     "yil": 2022,
+     "deger": 774
+    },
+    {
+     "yil": 2023,
+     "deger": 973
+    },
+    {
+     "yil": 2024,
+     "deger": 973
+    },
+    {
+     "yil": 2025,
+     "deger": 973
+    }
+   ],
+   "kaynak": "sb-siy-2025-bulten",
+   "konum": "SB bültenleri birinci basamak tablosu",
+   "not": "2022 bülteninden itibaren dipnotta nüfusu 30.000 ve üzeri ilçelerde aynı hizmeti veren İlçe Sağlık Müdürlüklerinin (2022: 431, 2023: 433, 2024: 434, 2025: 431) TSM sayısına dahil edildiği belirtilir; 2023'teki sıçrama bu tanım değişikliğiyle ilişkilidir, seri karşılaştırılırken dikkat edilmelidir."
+  },
+  {
+   "ad": "KETEM (Kanser Erken Teşhis, Tarama ve Eğitim Merkezi) sayısı",
+   "seri": [
+    {
+     "yil": 2002,
+     "deger": 84
+    },
+    {
+     "yil": 2017,
+     "deger": 166
+    },
+    {
+     "yil": 2018,
+     "deger": 175
+    },
+    {
+     "yil": 2019,
+     "deger": 178
+    },
+    {
+     "yil": 2020,
+     "deger": 175
+    },
+    {
+     "yil": 2021,
+     "deger": 336
+    },
+    {
+     "yil": 2022,
+     "deger": 364
+    },
+    {
+     "yil": 2023,
+     "deger": 381
+    },
+    {
+     "yil": 2024,
+     "deger": 417
+    },
+    {
+     "yil": 2025,
+     "deger": 466
+    }
+   ],
+   "kaynak": "sb-siy-2025-bulten",
+   "konum": "SB bültenleri birinci basamak tablosu; 2002: SB Yıllığı 2024 Tablo 7.18",
+   "not": "2021'den itibaren SHM bünyesindeki ve mobil KETEM'ler dahil (2025: 74 sabit + 54 mobil + 338 SHM içi)."
+  },
+  {
+   "ad": "Sağlıklı Hayat Merkezi (SHM) sayısı",
+   "seri": [
+    {
+     "yil": 2025,
+     "deger": 335
+    }
+   ],
+   "kaynak": "sb-siy-2025-bulten",
+   "konum": "SB 2025 bülteni Tablo 12"
+  },
+  {
+   "ad": "Verem Savaş Dispanseri sayısı",
+   "seri": [
+    {
+     "yil": 2002,
+     "deger": 277
+    },
+    {
+     "yil": 2020,
+     "deger": 173
+    },
+    {
+     "yil": 2021,
+     "deger": 173
+    },
+    {
+     "yil": 2022,
+     "deger": 173
+    },
+    {
+     "yil": 2023,
+     "deger": 173
+    },
+    {
+     "yil": 2024,
+     "deger": 170
+    },
+    {
+     "yil": 2025,
+     "deger": 171
+    }
+   ],
+   "kaynak": "sb-siy-2025-bulten",
+   "konum": "SB 2025 bülteni Tablo 12; 2002–2024: SB Yıllığı 2024 Tablo 7.18"
+  },
+  {
+   "ad": "Sağlık evi sayısı",
+   "seri": [
+    {
+     "yil": 2002,
+     "deger": 2899
+    },
+    {
+     "yil": 2020,
+     "deger": 5027
+    },
+    {
+     "yil": 2021,
+     "deger": 4983
+    },
+    {
+     "yil": 2022,
+     "deger": 4958
+    },
+    {
+     "yil": 2023,
+     "deger": 4909
+    },
+    {
+     "yil": 2024,
+     "deger": 4775
+    },
+    {
+     "yil": 2025,
+     "deger": 4402
+    }
+   ],
+   "kaynak": "sb-siy-2025-bulten",
+   "konum": "SB 2025 bülteni Tablo 12; önceki yıllar SB Yıllığı 2024 Tablo 7.18"
+  },
+  {
+   "ad": "Sağlık ocağı sayısı (tarihsel)",
+   "seri": [
+    {
+     "yil": 2002,
+     "deger": 5055
+    }
+   ],
+   "kaynak": "sb-siy-2024",
+   "konum": "SB Yıllığı 2024 Tablo 7.18",
+   "not": "Aile hekimliğine geçişle sağlık ocakları kapanmıştır (2020'den itibaren '-')."
+  },
+  {
+   "ad": "112 acil yardım istasyonu sayısı",
+   "seri": [
+    {
+     "yil": 2021,
+     "deger": 3170
+    },
+    {
+     "yil": 2022,
+     "deger": 3290
+    },
+    {
+     "yil": 2023,
+     "deger": 3420
+    },
+    {
+     "yil": 2024,
+     "deger": 3498
+    },
+    {
+     "yil": 2025,
+     "deger": 3591
+    }
+   ],
+   "alt": [
+    {
+     "ad": "Acil yardım ambulansı (2025)",
+     "deger": 6234
+    },
+    {
+     "ad": "İstasyon başına düşen nüfus (2025)",
+     "deger": 23974
+    },
+    {
+     "ad": "Ambulans başına düşen nüfus (2025)",
+     "deger": 13810
+    }
+   ],
+   "kaynak": "sb-siy-2025-bulten",
+   "konum": "SB bültenleri birinci basamak ve acil hizmet tablosu (2025: Tablo 12, 14)",
+   "not": "İstasyon başına nüfus: 2019 28.813; 2020 27.415; 2021 26.713; 2022 25.921; 2023 24.963; 2024 24.490 (ilgili bültenler)."
+  },
+  {
+   "ad": "Halk sağlığı laboratuvarı sayısı",
+   "seri": [
+    {
+     "yil": 2020,
+     "deger": 84
+    },
+    {
+     "yil": 2021,
+     "deger": 84
+    },
+    {
+     "yil": 2022,
+     "deger": 84
+    },
+    {
+     "yil": 2023,
+     "deger": 84
+    },
+    {
+     "yil": 2024,
+     "deger": 84
+    },
+    {
+     "yil": 2025,
+     "deger": 84
+    }
+   ],
+   "kaynak": "sb-siy-2025-bulten",
+   "konum": "SB 2025 bülteni Tablo 12; SB Yıllığı 2024 Tablo 7.18"
+  },
+  {
+   "ad": "Kişi başı hekime müracaat sayısı (tüm sektörler)",
+   "seri": [
+    {
+     "yil": 2017,
+     "deger": 8.9
+    },
+    {
+     "yil": 2018,
+     "deger": 9.5
+    },
+    {
+     "yil": 2019,
+     "deger": 9.8
+    },
+    {
+     "yil": 2020,
+     "deger": 7.2
+    },
+    {
+     "yil": 2021,
+     "deger": 8.0
+    },
+    {
+     "yil": 2022,
+     "deger": 10.0
+    },
+    {
+     "yil": 2023,
+     "deger": 11.4
+    },
+    {
+     "yil": 2024,
+     "deger": 12.2
+    },
+    {
+     "yil": 2025,
+     "deger": 13.2
+    }
+   ],
+   "alt": [
+    {
+     "ad": "Birinci basamak (2025)",
+     "deger": 5.5
+    },
+    {
+     "ad": "İkinci+üçüncü basamak (2025)",
+     "deger": 7.8
+    },
+    {
+     "ad": "Toplam müracaat (2025)",
+     "deger": 1138060185
+    },
+    {
+     "ad": "Birinci basamağın payı % (2025)",
+     "deger": 41.3
+    }
+   ],
+   "kaynak": "sb-siy-2025-bulten",
+   "konum": "SB bültenleri 'İBBS-1'e Göre Bazı Sağlık Hizmeti Kullanım Göstergeleri' Türkiye satırı; 2025: Tablo 15-16",
+   "not": "2025 yatak doluluk %54,5; ortalama kalış 4,0 gün."
+  }
+ ],
+ "insan_gucu": [
+  {
+   "ad": "Toplam hekim sayısı",
+   "seri": [
+    {
+     "yil": 2002,
+     "deger": 91949
+    },
+    {
+     "yil": 2017,
+     "deger": 149997
+    },
+    {
+     "yil": 2018,
+     "deger": 153128
+    },
+    {
+     "yil": 2019,
+     "deger": 160810
+    },
+    {
+     "yil": 2020,
+     "deger": 171259
+    },
+    {
+     "yil": 2021,
+     "deger": 183569
+    },
+    {
+     "yil": 2022,
+     "deger": 194688
+    },
+    {
+     "yil": 2023,
+     "deger": 204223
+    },
+    {
+     "yil": 2024,
+     "deger": 221133
+    },
+    {
+     "yil": 2025,
+     "deger": 232315
+    }
+   ],
+   "kaynak": "sb-siy-2025-bulten",
+   "konum": "SB bültenleri 'Sağlık Personelinin Sektörlere ve Ünvanlara Göre Dağılımı' tablosu toplam sütunu (2025: Tablo 18); 2002: SB Yıllığı 2024 Tablo 10.1",
+   "alt": [
+    {
+     "ad": "Sağlık Bakanlığı (2025)",
+     "deger": 150264
+    },
+    {
+     "ad": "Üniversite (2025)",
+     "deger": 42882
+    },
+    {
+     "ad": "Özel (2025)",
+     "deger": 39169
+    },
+    {
+     "ad": "Kadın hekim oranı % (2025)",
+     "deger": 43.9
+    }
+   ]
+  },
+  {
+   "ad": "Uzman hekim sayısı",
+   "seri": [
+    {
+     "yil": 2002,
+     "deger": 45457
+    },
+    {
+     "yil": 2017,
+     "deger": 80951
+    },
+    {
+     "yil": 2018,
+     "deger": 82894
+    },
+    {
+     "yil": 2019,
+     "deger": 85199
+    },
+    {
+     "yil": 2020,
+     "deger": 88127
+    },
+    {
+     "yil": 2021,
+     "deger": 93517
+    },
+    {
+     "yil": 2022,
+     "deger": 95600
+    },
+    {
+     "yil": 2023,
+     "deger": 101233
+    },
+    {
+     "yil": 2024,
+     "deger": 107014
+    },
+    {
+     "yil": 2025,
+     "deger": 111472
+    }
+   ],
+   "kaynak": "sb-siy-2025-bulten",
+   "konum": "SB bültenleri 'Sağlık Personelinin Sektörlere ve Ünvanlara Göre Dağılımı' tablosu toplam sütunu (2025: Tablo 18); 2002: SB Yıllığı 2024 Tablo 10.1"
+  },
+  {
+   "ad": "Pratisyen hekim sayısı",
+   "seri": [
+    {
+     "yil": 2002,
+     "deger": 30900
+    },
+    {
+     "yil": 2017,
+     "deger": 44649
+    },
+    {
+     "yil": 2018,
+     "deger": 44053
+    },
+    {
+     "yil": 2019,
+     "deger": 46843
+    },
+    {
+     "yil": 2020,
+     "deger": 49760
+    },
+    {
+     "yil": 2021,
+     "deger": 53035
+    },
+    {
+     "yil": 2022,
+     "deger": 53697
+    },
+    {
+     "yil": 2023,
+     "deger": 54899
+    },
+    {
+     "yil": 2024,
+     "deger": 54939
+    },
+    {
+     "yil": 2025,
+     "deger": 56300
+    }
+   ],
+   "kaynak": "sb-siy-2025-bulten",
+   "konum": "SB bültenleri 'Sağlık Personelinin Sektörlere ve Ünvanlara Göre Dağılımı' tablosu toplam sütunu (2025: Tablo 18); 2002: SB Yıllığı 2024 Tablo 10.1"
+  },
+  {
+   "ad": "Asistan hekim sayısı",
+   "seri": [
+    {
+     "yil": 2002,
+     "deger": 15592
+    },
+    {
+     "yil": 2017,
+     "deger": 24397
+    },
+    {
+     "yil": 2018,
+     "deger": 26181
+    },
+    {
+     "yil": 2019,
+     "deger": 28768
+    },
+    {
+     "yil": 2020,
+     "deger": 33372
+    },
+    {
+     "yil": 2021,
+     "deger": 37017
+    },
+    {
+     "yil": 2022,
+     "deger": 45391
+    },
+    {
+     "yil": 2023,
+     "deger": 48091
+    },
+    {
+     "yil": 2024,
+     "deger": 59180
+    },
+    {
+     "yil": 2025,
+     "deger": 64543
+    }
+   ],
+   "kaynak": "sb-siy-2025-bulten",
+   "konum": "SB bültenleri 'Sağlık Personelinin Sektörlere ve Ünvanlara Göre Dağılımı' tablosu toplam sütunu (2025: Tablo 18); 2002: SB Yıllığı 2024 Tablo 10.1",
+   "not": "2025'e 3.988 yan dal asistanı dahil."
+  },
+  {
+   "ad": "Hemşire sayısı",
+   "seri": [
+    {
+     "yil": 2002,
+     "deger": 72393
+    },
+    {
+     "yil": 2017,
+     "deger": 166142
+    },
+    {
+     "yil": 2018,
+     "deger": 190499
+    },
+    {
+     "yil": 2019,
+     "deger": 198103
+    },
+    {
+     "yil": 2020,
+     "deger": 227292
+    },
+    {
+     "yil": 2021,
+     "deger": 232442
+    },
+    {
+     "yil": 2022,
+     "deger": 243565
+    },
+    {
+     "yil": 2023,
+     "deger": 248287
+    },
+    {
+     "yil": 2024,
+     "deger": 264857
+    },
+    {
+     "yil": 2025,
+     "deger": 264172
+    }
+   ],
+   "kaynak": "sb-siy-2025-bulten",
+   "konum": "SB bültenleri 'Sağlık Personelinin Sektörlere ve Ünvanlara Göre Dağılımı' tablosu toplam sütunu (2025: Tablo 18); 2002: SB Yıllığı 2024 Tablo 10.1"
+  },
+  {
+   "ad": "Ebe sayısı",
+   "seri": [
+    {
+     "yil": 2002,
+     "deger": 41479
+    },
+    {
+     "yil": 2017,
+     "deger": 53741
+    },
+    {
+     "yil": 2018,
+     "deger": 56351
+    },
+    {
+     "yil": 2019,
+     "deger": 55972
+    },
+    {
+     "yil": 2020,
+     "deger": 59040
+    },
+    {
+     "yil": 2021,
+     "deger": 57908
+    },
+    {
+     "yil": 2022,
+     "deger": 59632
+    },
+    {
+     "yil": 2023,
+     "deger": 59750
+    },
+    {
+     "yil": 2024,
+     "deger": 61618
+    },
+    {
+     "yil": 2025,
+     "deger": 60948
+    }
+   ],
+   "kaynak": "sb-siy-2025-bulten",
+   "konum": "SB bültenleri 'Sağlık Personelinin Sektörlere ve Ünvanlara Göre Dağılımı' tablosu toplam sütunu (2025: Tablo 18); 2002: SB Yıllığı 2024 Tablo 10.1"
+  },
+  {
+   "ad": "Diş hekimi sayısı",
+   "seri": [
+    {
+     "yil": 2002,
+     "deger": 16371
+    },
+    {
+     "yil": 2020,
+     "deger": 34830
+    },
+    {
+     "yil": 2021,
+     "deger": 39851
+    },
+    {
+     "yil": 2022,
+     "deger": 42359
+    },
+    {
+     "yil": 2023,
+     "deger": 45718
+    },
+    {
+     "yil": 2024,
+     "deger": 50434
+    },
+    {
+     "yil": 2025,
+     "deger": 52994
+    }
+   ],
+   "kaynak": "sb-siy-2025-bulten",
+   "konum": "SB bültenleri 'Sağlık Personelinin Sektörlere ve Ünvanlara Göre Dağılımı' tablosu toplam sütunu (2025: Tablo 18); 2002: SB Yıllığı 2024 Tablo 10.1"
+  },
+  {
+   "ad": "Eczacı sayısı",
+   "seri": [
+    {
+     "yil": 2002,
+     "deger": 22289
+    },
+    {
+     "yil": 2020,
+     "deger": 35364
+    },
+    {
+     "yil": 2021,
+     "deger": 37211
+    },
+    {
+     "yil": 2022,
+     "deger": 38981
+    },
+    {
+     "yil": 2023,
+     "deger": 40610
+    },
+    {
+     "yil": 2024,
+     "deger": 42324
+    },
+    {
+     "yil": 2025,
+     "deger": 43720
+    }
+   ],
+   "kaynak": "sb-siy-2025-bulten",
+   "konum": "SB bültenleri 'Sağlık Personelinin Sektörlere ve Ünvanlara Göre Dağılımı' tablosu toplam sütunu (2025: Tablo 18); 2002: SB Yıllığı 2024 Tablo 10.1"
+  },
+  {
+   "ad": "Toplam sağlık sektörü personeli",
+   "seri": [
+    {
+     "yil": 2002,
+     "deger": 378551
+    },
+    {
+     "yil": 2019,
+     "deger": 1033767
+    },
+    {
+     "yil": 2020,
+     "deger": 1142469
+    },
+    {
+     "yil": 2021,
+     "deger": 1251922
+    },
+    {
+     "yil": 2022,
+     "deger": 1350528
+    },
+    {
+     "yil": 2023,
+     "deger": 1413921
+    },
+    {
+     "yil": 2024,
+     "deger": 1436686
+    },
+    {
+     "yil": 2025,
+     "deger": 1441114
+    }
+   ],
+   "kaynak": "sb-siy-2025-bulten",
+   "konum": "SB bültenleri 'Sağlık Personelinin Sektörlere ve Ünvanlara Göre Dağılımı' tablosu toplam sütunu (2025: Tablo 18); 2002: SB Yıllığı 2024 Tablo 10.1"
+  },
+  {
+   "ad": "100.000 kişiye düşen hekim sayısı",
+   "seri": [
+    {
+     "yil": 2002,
+     "deger": 138
+    },
+    {
+     "yil": 2010,
+     "deger": 167
+    },
+    {
+     "yil": 2015,
+     "deger": 179
+    },
+    {
+     "yil": 2016,
+     "deger": 181
+    },
+    {
+     "yil": 2017,
+     "deger": 186
+    },
+    {
+     "yil": 2018,
+     "deger": 187
+    },
+    {
+     "yil": 2019,
+     "deger": 193
+    },
+    {
+     "yil": 2020,
+     "deger": 205
+    },
+    {
+     "yil": 2021,
+     "deger": 217
+    },
+    {
+     "yil": 2022,
+     "deger": 228
+    },
+    {
+     "yil": 2023,
+     "deger": 239
+    },
+    {
+     "yil": 2024,
+     "deger": 258
+    },
+    {
+     "yil": 2025,
+     "deger": 270
+    }
+   ],
+   "kaynak": "sb-siy-2025-bulten",
+   "konum": "SB bültenleri 'İBBS-1'e ve Ünvanlara Göre 100.000 Kişiye Düşen Personel Sayısı' tablosu Türkiye satırı (2025: Tablo 20); 2002/2010/2015: SB Yıllığı 2024 Tablo 10.6",
+   "not": "OECD ortalaması 2023: 389; AB: 429 (SB Yıllığı 2024 Tablo 10.6)."
+  },
+  {
+   "ad": "100.000 kişiye düşen uzman hekim sayısı",
+   "seri": [
+    {
+     "yil": 2016,
+     "deger": 99
+    },
+    {
+     "yil": 2017,
+     "deger": 100
+    },
+    {
+     "yil": 2018,
+     "deger": 101
+    },
+    {
+     "yil": 2019,
+     "deger": 102
+    },
+    {
+     "yil": 2020,
+     "deger": 105
+    },
+    {
+     "yil": 2021,
+     "deger": 110
+    },
+    {
+     "yil": 2022,
+     "deger": 112
+    },
+    {
+     "yil": 2023,
+     "deger": 119
+    },
+    {
+     "yil": 2024,
+     "deger": 125
+    },
+    {
+     "yil": 2025,
+     "deger": 129
+    }
+   ],
+   "kaynak": "sb-siy-2025-bulten",
+   "konum": "SB bültenleri 'İBBS-1'e ve Ünvanlara Göre 100.000 Kişiye Düşen Personel Sayısı' tablosu Türkiye satırı (2025: Tablo 20); 2002/2010/2015: SB Yıllığı 2024 Tablo 10.6"
+  },
+  {
+   "ad": "100.000 kişiye düşen pratisyen hekim sayısı",
+   "seri": [
+    {
+     "yil": 2017,
+     "deger": 55
+    },
+    {
+     "yil": 2018,
+     "deger": 54
+    },
+    {
+     "yil": 2019,
+     "deger": 56
+    },
+    {
+     "yil": 2020,
+     "deger": 60
+    },
+    {
+     "yil": 2021,
+     "deger": 63
+    },
+    {
+     "yil": 2022,
+     "deger": 63
+    },
+    {
+     "yil": 2023,
+     "deger": 64
+    },
+    {
+     "yil": 2024,
+     "deger": 64
+    },
+    {
+     "yil": 2025,
+     "deger": 65
+    }
+   ],
+   "kaynak": "sb-siy-2025-bulten",
+   "konum": "SB bültenleri 'İBBS-1'e ve Ünvanlara Göre 100.000 Kişiye Düşen Personel Sayısı' tablosu Türkiye satırı (2025: Tablo 20); 2002/2010/2015: SB Yıllığı 2024 Tablo 10.6"
+  },
+  {
+   "ad": "100.000 kişiye düşen hemşire ve ebe sayısı",
+   "seri": [
+    {
+     "yil": 2002,
+     "deger": 171
+    },
+    {
+     "yil": 2010,
+     "deger": 224
+    },
+    {
+     "yil": 2015,
+     "deger": 261
+    },
+    {
+     "yil": 2016,
+     "deger": 257
+    },
+    {
+     "yil": 2017,
+     "deger": 272
+    },
+    {
+     "yil": 2018,
+     "deger": 301
+    },
+    {
+     "yil": 2019,
+     "deger": 306
+    },
+    {
+     "yil": 2020,
+     "deger": 342
+    },
+    {
+     "yil": 2021,
+     "deger": 343
+    },
+    {
+     "yil": 2022,
+     "deger": 356
+    },
+    {
+     "yil": 2023,
+     "deger": 361
+    },
+    {
+     "yil": 2024,
+     "deger": 381
+    },
+    {
+     "yil": 2025,
+     "deger": 378
+    }
+   ],
+   "kaynak": "sb-siy-2025-bulten",
+   "konum": "SB bültenleri 'İBBS-1'e ve Ünvanlara Göre 100.000 Kişiye Düşen Personel Sayısı' tablosu Türkiye satırı (2025: Tablo 20); 2002/2010/2015: SB Yıllığı 2024 Tablo 10.6",
+   "not": "2015 değeri (261) SB Yıllığı 2024 Tablo 10.6'dan, 2016 değeri (257) 2017 bülteni metninden alınmıştır; farklı yayınlar arasında revizyon olabilir."
+  },
+  {
+   "ad": "100.000 kişiye düşen diş hekimi sayısı",
+   "seri": [
+    {
+     "yil": 2002,
+     "deger": 25
+    },
+    {
+     "yil": 2010,
+     "deger": 29
+    },
+    {
+     "yil": 2015,
+     "deger": 32
+    },
+    {
+     "yil": 2017,
+     "deger": 35
+    },
+    {
+     "yil": 2018,
+     "deger": 37
+    },
+    {
+     "yil": 2019,
+     "deger": 40
+    },
+    {
+     "yil": 2020,
+     "deger": 42
+    },
+    {
+     "yil": 2021,
+     "deger": 47
+    },
+    {
+     "yil": 2022,
+     "deger": 50
+    },
+    {
+     "yil": 2023,
+     "deger": 54
+    },
+    {
+     "yil": 2024,
+     "deger": 59
+    },
+    {
+     "yil": 2025,
+     "deger": 62
+    }
+   ],
+   "kaynak": "sb-siy-2025-bulten",
+   "konum": "SB bültenleri 'İBBS-1'e ve Ünvanlara Göre 100.000 Kişiye Düşen Personel Sayısı' tablosu Türkiye satırı (2025: Tablo 20); 2002/2010/2015: SB Yıllığı 2024 Tablo 10.6"
+  }
+ ],
+ "basamaklar": [
+  {
+   "basamak": "Birinci basamak",
+   "kurumlar": [
+    "Aile sağlığı merkezi (ASM) / aile hekimliği birimi",
+    "Toplum sağlığı merkezi (TSM) ve bünyesinde birinci basamak sağlık kuruluşu bulunan ilçe sağlık müdürlüğü",
+    "Halk sağlığı laboratuvarı (L1-L2)",
+    "Kurum tabipliği",
+    "112 acil sağlık hizmeti birimleri",
+    "Üniversitelerin mediko-sosyal birimleri",
+    "TSK birinci basamak sağlık üniteleri",
+    "Belediyelere ait poliklinikler",
+    "Entegre ilçe devlet hastaneleri (E2, E3)",
+    "Özel: evde bakım merkezleri, işyeri sağlık ve güvenlik birimleri, özel poliklinikler, özel ağız-diş sağlığı kuruluşları"
+   ],
+   "aciklama": "Koruyucu hizmetler ile ayakta teşhis-tedavi hizmetlerinin ilk temas noktası. Aile hekimi; kişiye yönelik koruyucu sağlık hizmetleri ile birinci basamak teşhis, tedavi ve rehabilite edici hizmetleri yaş, cinsiyet ve hastalık ayrımı yapmaksızın kapsamlı ve devamlı olarak verir (5258 s. Kanun md. 2). 2026 itibarıyla birinci basamakta yapılan hekim ve diş hekimi muayenesinden katılım payı alınmaz (SUT 1.8.1).",
+   "kaynak": "sgk_sut",
+   "ek_kaynaklar": [
+    "mevzuat_5258"
+   ]
+  },
+  {
+   "basamak": "İkinci basamak",
+   "kurumlar": [
+    "Eğitim ve araştırma hastanesi olmayan devlet hastaneleri ve dal hastaneleri (+ bağlı semt poliklinikleri)",
+    "Entegre ilçe hastanesi (E1)",
+    "SB'ye bağlı ağız ve diş sağlığı merkezleri / hastaneleri",
+    "Kamuya ait, SB ruhsatlı hastane, tıp merkezi, dal merkezi",
+    "Kamuya ait diyaliz, üremeye yardımcı tedavi, hiperbarik oksijen merkezleri, tıbbi laboratuvarlar",
+    "Özel: özel hastaneler, özel tıp merkezleri ve dal merkezleri, özel diyaliz merkezleri"
+   ],
+   "aciklama": "Yataklı tedavi ve uzman hekim düzeyindeki hizmetler. SUT'a göre ikinci basamak resmi sağlık hizmeti sunucularında muayene katılım payı 50 TL'dir (1/7/2026 değişikliği).",
+   "kaynak": "sgk_sut"
+  },
+  {
+   "basamak": "Üçüncü basamak",
+   "kurumlar": [
+    "SB'ye bağlı eğitim ve araştırma hastaneleri (+ bağlı semt poliklinikleri)",
+    "Tıp fakültesi bulunan devlet üniversitesi SUAM'ları (U1)",
+    "Tıp fakültesi bulunan vakıf üniversitesi SUAM'ları (U2)",
+    "Diş hekimliği fakültesi bulunan devlet/vakıf üniversite hastaneleri",
+    "SB tarafından üçüncü basamak olarak basamaklandırılan SB ve özel hastaneler"
+   ],
+   "aciklama": "İleri uzmanlık, eğitim ve araştırma hizmetleri. SUT'a göre EAH ve devlet üniversitesi SUAM muayene katılım payı 90 TL (1/7/2026 değişikliği).",
+   "kaynak": "sgk_sut"
+  },
+  {
+   "basamak": "Sevk zinciri",
+   "kurumlar": [],
+   "aciklama": "Sağlıkta Dönüşüm Programı 'etkili, kademeli sevk zinciri'ni hedeflemiş; ön şart olarak hastanın kendi seçtiği aile hekiminden birinci basamak hizmeti almasını, sevkin çift yönlü (geri bildirimli) olmasını öngörmüş ve 'Sevk zincirine girmek istemeyen hastaları kimse zorlayamaz' ilkesini benimsemiştir. Güncel SUT'ta SB sağlık hizmeti sunucuları doğrudan veya sevkli müracaatları kabul eder (SUT 1.5.1.A-1); yani zorunlu sevk uygulanmamakta, basamaklar arası fark katılım payı ile yönlendirilmektedir.",
+   "kaynak": "sb_sdp2003",
+   "ek_kaynaklar": [
+    "sgk_sut"
+   ]
+  },
+  {
+   "basamak": "Tarihsel (sosyalleştirme modeli)",
+   "kurumlar": [
+    "Sağlık evi (ebe)",
+    "Sağlık ocağı (takriben 5.000-10.000 kişi)",
+    "İlçe ve il hastaneleri"
+   ],
+   "aciklama": "224 sayılı Kanun: 'Takriben 5000-10000 kişinin köyler grubu veya bir kasaba veya şehir ve büyük kasabalardaki mahalle grupları bir sağlık ocağını teşkil eder.' SB tarihçesi: yaygın, sürekli, entegre, kademeli, il içinde bütünleşmiş yapı.",
+   "kaynak": "mevzuat_224",
+   "ek_kaynaklar": [
+    "sb_tarihce"
+   ]
+  }
+ ],
+ "tarihce": [
+  {
+   "yil": 1920,
+   "olay": "Sağlık Bakanlığı TBMM'nin açılışını takiben 3 Mayıs 1920'de 3 sayılı kanunla kuruldu; ilk bakan Dr. Adnan Adıvar.",
+   "kaynak": "sb_tarihce"
+  },
+  {
+   "yil": 1928,
+   "olay": "1219 sayılı Tababet ve Şuabatı San'atlarının Tarzı İcrasına Dair Kanun (RG 4/4/1928).",
+   "kaynak": "sb_tarihce"
+  },
+  {
+   "yil": 1930,
+   "olay": "1593 sayılı Umumi Hıfzıssıhha Kanunu kabul edildi (24/4/1930; RG 6/5/1930-1489). Md. 57-58: belirtilen bulaşıcı hastalıkları tanı koyan her tabip ilk 24 saat içinde sıhhiye dairesine bildirir; md. 20: belediyelerin hıfzıssıhha görevleri (içme suyu temini, lağım, mezbaha, mezarlık, her nevi muzahrafatın [çöp/atık] teb'it ve imhası vb.).",
+   "kaynak": "mevzuat_1593"
+  },
+  {
+   "yil": 1961,
+   "olay": "224 sayılı Sağlık Hizmetlerinin Sosyalleştirilmesi Hakkında Kanun kabul edildi (5/1/1961; RG 12/1/1961-10705). Sağlığı 'yalnız hastalık ve malüliyetin yokluğu olmayıp bedenen, ruhen ve sosyal bakımdan tam bir iyilik hali' olarak tanımlar; temel birim sağlık ocağıdır.",
+   "kaynak": "mevzuat_224"
+  },
+  {
+   "yil": 1963,
+   "olay": "Sağlıkta sosyalizasyon fiilen başladı; 1983'te ülkenin tümüne yayıldı.",
+   "kaynak": "sb_tarihce"
+  },
+  {
+   "yil": 1965,
+   "olay": "554 sayılı Nüfus Planlaması Hakkında Kanun: pronatalist politikadan antinatalist politikaya geçiş.",
+   "kaynak": "sb_tarihce"
+  },
+  {
+   "yil": 1983,
+   "olay": "2827 sayılı Nüfus Planlaması Hakkında Kanun (RG 27/5/1983-18059): isteğe bağlı 10 haftaya kadar gebelik sonlandırma ve gönüllü cerrahi sterilizasyona izin.",
+   "kaynak": "sb_tarihce"
+  },
+  {
+   "yil": 1987,
+   "olay": "3359 sayılı Sağlık Hizmetleri Temel Kanunu çıkarıldı (7/5/1987).",
+   "kaynak": "sb_tarihce",
+   "ek_kaynaklar": [
+    "mevzuat_bhske"
+   ]
+  },
+  {
+   "yil": 1992,
+   "olay": "3816 sayılı kanunla sosyal güvencesi olmayan düşük gelirliler için yeşil kart uygulaması başladı.",
+   "kaynak": "sb_tarihce"
+  },
+  {
+   "yil": 2003,
+   "olay": "Sağlıkta Dönüşüm Programı (SDP) kamuoyuna duyuruldu. 8 bileşen: (1) planlayıcı ve denetleyici Sağlık Bakanlığı, (2) herkesi tek çatı altında toplayan genel sağlık sigortası, (3) yaygın, erişimi kolay ve güler yüzlü sağlık hizmet sistemi (güçlendirilmiş temel sağlık hizmetleri ve aile hekimliği; etkili, kademeli sevk zinciri; idari ve mali özerkliğe sahip sağlık işletmeleri), (4) bilgi ve beceri ile donanmış, yüksek motivasyonla çalışan sağlık insan gücü, (5) sistemi destekleyecek eğitim ve bilim kurumları, (6) nitelikli ve etkili sağlık hizmetleri için kalite ve akreditasyon, (7) akılcı ilaç ve malzeme yönetiminde kurumsal yapılanma, (8) karar sürecinde etkili bilgiye erişim: sağlık bilgi sistemi.",
+   "kaynak": "sb_sdp2003",
+   "ek_kaynaklar": [
+    "sb_tarihce"
+   ]
+  },
+  {
+   "yil": 2004,
+   "olay": "5258 sayılı Aile Hekimliği Pilot Uygulaması Hakkında Kanun kabul edildi (24/11/2004; RG 9/12/2004-25665). Kanunun adı 663 sayılı KHK (11/10/2011) ile 'Aile Hekimliği Kanunu' olarak değiştirildi.",
+   "kaynak": "mevzuat_5258"
+  },
+  {
+   "yil": 2004,
+   "olay": "Bulaşıcı Hastalıkların İhbarı ve Bildirim Sistemi Standart Tanı, Sürveyans ve Laboratuvar Rehberi yayımlandı; bildirimi zorunlu hastalıklar A, B, C, D gruplarına ayrıldı.",
+   "kaynak": "sb_bh_rehber2004"
+  },
+  {
+   "yil": 2005,
+   "olay": "Aile hekimliği pilot uygulaması Düzce ilinde başlatıldı.",
+   "kaynak": "hsgm_ah_rehber2021"
+  },
+  {
+   "yil": 2007,
+   "olay": "Bulaşıcı Hastalıklar Sürveyans ve Kontrol Esasları Yönetmeliği yayımlandı (RG 30/5/2007-26537); 2011'de bildirime esas hastalık sayısı 73'e, 2019'da 80'e çıkarıldı; 2020'de 81. madde olarak COVID-19 eklendi.",
+   "kaynak": "mevzuat_bhske",
+   "ek_kaynaklar": [
+    "hsgm_hepatit_sunum",
+    "rg_2020_bhske"
+   ]
+  },
+  {
+   "yil": 2010,
+   "olay": "2010 yılı sonu itibarıyla ülke genelinde (81 il) aile hekimliği uygulamasına geçildi.",
+   "kaynak": "hsgm_ah_rehber2021"
+  },
+  {
+   "yil": 2012,
+   "olay": "6331 sayılı İş Sağlığı ve Güvenliği Kanunu kabul edildi (20/6/2012; RG 30/6/2012-28339).",
+   "kaynak": "mevzuat_6331"
+  },
+  {
+   "yil": 2015,
+   "olay": "Aile hekimliğine geçiş ve Bakanlığın yeniden yapılanması nedeniyle Bulaşıcı Hastalıkların İhbar ve Bildirim Sistemi 2015/18 sayılı Genelge ile güncellendi.",
+   "kaynak": "hsgm_hepatit_sunum"
+  },
+  {
+   "yil": 2017,
+   "olay": "694 sayılı KHK (RG 25/8/2017-30165) ile Türkiye Halk Sağlığı Kurumu ve Türkiye Kamu Hastaneleri Kurumu kaldırıldı; Bakanlık merkez teşkilatına Halk Sağlığı Genel Müdürlüğü eklendi; kaldırılan kurumların kadroları Bakanlığa aktarıldı ve taşradaki halk sağlığı müdürlüğü müdür/müdür yardımcısı görevleri sona erdi (md. 192-193).",
+   "kaynak": "rg_khk694"
+  },
+  {
+   "yil": 2018,
+   "olay": "TSM ve Bağlı Birimler Yönetmeliği değişikliği (RG 25/5/2018-30431): Nüfusu 15.000'e kadar ilçelerde TSM kurulur; 15.000-30.000 arasında ilçe sağlık müdürlüğü kurulmamışsa TSM kurulur; nüfusu 30.000 ve üzeri ilçeler ile ilçe devlet hastanesi bulunan yerlerde TSM kurulmaz, bu hizmetleri ilçe sağlık müdürlüğü yürütür.",
+   "kaynak": "rg_tsm2018"
+  }
+ ],
+ "bildirimi_zorunlu": {
+  "yonetmelik": "Bulaşıcı Hastalıklar Sürveyans ve Kontrol Esasları Yönetmeliği (RG 30/5/2007-26537; değ. RG 2/4/2011-27893, 4/5/2019-30764, 22/4/2020-31107). Dayanak: 1593 s. Umumi Hıfzıssıhha Kanunu md. 3, 57, 64; 3359 s. Sağlık Hizmetleri Temel Kanunu.",
+  "kaynak": "mevzuat_bhske",
+  "guncel_liste": {
+   "aciklama": "Yönetmelik EK-I 'Bildirime Esas Bulaşıcı Hastalıklar Listesi' 2019'da 80 maddeye güncellendi (alfabetik, grupsuz); 22/4/2020'de 81. madde olarak COVID-19 eklendi. Vaka tanımları EK-III'te. Bildirimler AHBS/HBYS'de Form 014 standardındaki ekranla anlık ve otomatik olarak e-Nabız'a yapılır; HBYS'deki bildirimler hastane sürveyans sorumlusuna da düşer.",
+   "sayi": 81,
+   "hastaliklar": [
+    "Akut barsak enfeksiyonu",
+    "Ağır akut solunum yetmezliği sendromu (SARS)",
+    "Avian influenza enfeksiyonu – insanlarda (A/H5, A/H7, A/H9)",
+    "Batı Nil virüsü enfeksiyonu",
+    "Boğmaca",
+    "Botulismus, besin kaynaklı",
+    "Bruselloz",
+    "Campylobacter spp. enfeksiyonu (C. jejuni/coli)",
+    "Chikungunya ateşi",
+    "Chlamydia trachomatis (cinsel yolla bulaşan enfeksiyon etkeni olarak)",
+    "Clostridium difficile enfeksiyonu",
+    "Cryptosporidium spp. enfeksiyonu",
+    "Çiçek",
+    "Çocuk felci (Poliomyelitis)",
+    "Dengue virüs enfeksiyonu",
+    "Difteri",
+    "Ebola virüs hastalığı",
+    "Ekinokokkoz",
+    "Entamoeba histolytica (amipli dizanteri etkeni olarak)",
+    "Epidemik tifüs",
+    "Escherichia coli enfeksiyonu (VTEC/STEC/EHEC)",
+    "Giardia intestinalis enfeksiyonu",
+    "Gonore",
+    "Hanta virüs enfeksiyonları",
+    "Hepatit A",
+    "Hepatit B",
+    "Hepatit C",
+    "Hepatit D",
+    "Hepatit E",
+    "HIV enfeksiyonu/AIDS",
+    "İnfluenza",
+    "İnvaziv Haemophilus influenzae hastalıkları",
+    "İnvaziv meningokokal hastalık",
+    "İnvaziv pnömokokal hastalıklar",
+    "Kabakulak",
+    "Kala-azar (visseral leishmaniasis)",
+    "Kene kaynaklı ensefalit",
+    "Kırım Kongo kanamalı ateşi",
+    "Kızamık",
+    "Kızamıkçık",
+    "Konjenital kızamıkçık sendromu (KKS)",
+    "Kolera",
+    "Kuduz",
+    "Kuduz riskli temas",
+    "Lejyoner hastalığı",
+    "Lepra",
+    "Leptospiroz",
+    "Listeria monocytogenes enfeksiyonu",
+    "Lyme hastalığı",
+    "MERS (Coronavirus)",
+    "Norovirüs enfeksiyonu",
+    "Q ateşi",
+    "Rotavirüs enfeksiyonu",
+    "Salmonella spp. enfeksiyonu",
+    "Salmonella Typhi enfeksiyonu (tifo; enterik ateş)",
+    "Sarı humma",
+    "Shigella spp. enfeksiyonu",
+    "Sıtma",
+    "Sifiliz",
+    "Subakut sklerozan panensefalit",
+    "Konjenital sifiliz",
+    "Suçiçeği (varisella)",
+    "Şarbon",
+    "Şark çıbanı (kutanöz leishmaniasis)",
+    "Tetanoz",
+    "Neonatal tetanoz",
+    "Toksoplazmoz",
+    "Trahom",
+    "Trişinelloz",
+    "Tularemi",
+    "Tüberküloz",
+    "Veba",
+    "Viral hemorajik ateş sendromu",
+    "Yeni varyant Creutzfeldt-Jakob hastalığı",
+    "Yersinia spp. enfeksiyonu",
+    "Zika virüs hastalığı",
+    "Konjenital Zika virüs hastalığı",
+    "Antimikrobiyal direnç",
+    "Sağlık hizmeti ilişkili enfeksiyonlar",
+    "Uluslararası önemi haiz halk sağlığı acil durumları",
+    "Covid-19 (yeni coronavirüs hastalığı) [2020'de 81. madde olarak eklendi]"
+   ],
+   "kaynak": "rg_2019_bhske_ek",
+   "ek_kaynaklar": [
+    "rg_2020_bhske",
+    "hsgm_hepatit_sunum"
+   ]
+  },
+  "genel_kurallar": [
+   "Bildirim sistemi kapsamında bir bulaşıcı hastalığın ihbarı ve bildiriminden, sağlık hizmeti veren tüm kamu kurum ve kuruluşları ile gerçek ve tüzel kişiler sorumludur; salgın gelişmekte olduğunu düşündüren her türlü uyarı/bilgi 'derhal' yerel sağlık birimine bildirilir (Yönetmelik md. 10).",
+   "100 ve üzeri yataklı tüm yataklı tedavi kurumlarında hekim sorumluluğunda sürveyans birimi kurulur; daha az yataklı kurumlarda işlemleri sürveyans sorumluları yürütür (md. 5).",
+   "Aykırı davrananlar hakkında 1593 s. UHK md. 282 ve 3359 s. Kanun Ek md. 11 uygulanır (md. 30/A).",
+   "UHK md. 58 (tarihsel temel): md. 57'de sayılan hastalıklarda tabip kesin veya muhtemel tanıdan sonra ilk 24 saat içinde sıhhiye dairesine bildirir."
+  ],
+  "gruplar": [
+   {
+    "grup": "A",
+    "kural": "Nüfus tabanlı; birinci basamaktan itibaren ülke genelinde hasta kabul eden tüm kamu/özel kurum ve hekimlerden bildirilir. Hastaneler vakayı tespit edildiği gün Form 014 ile ilçe/il sağlık müdürlüğüne bildirir; birinci basamak (eski sağlık ocağı) Form 016'ya günlük işler, sürveyans/filyasyon yapar ve takip eden ayın ilk haftasında Form 017/A ile AYLIK olarak il sağlık müdürlüğüne bildirir; il, icmali aylık olarak Bakanlığa gönderir.",
+    "hastaliklar": [
+     "AIDS",
+     "HIV enfeksiyonu",
+     "Akut kanlı ishal",
+     "Akut viral hepatitler",
+     "Boğmaca",
+     "Bruselloz",
+     "Difteri",
+     "Gonore",
+     "Kabakulak",
+     "Kızamık",
+     "Kızamıkçık",
+     "Kolera",
+     "Kuduz ve kuduz riskli temas",
+     "Meningokoksik menenjit",
+     "Neonatal tetanoz",
+     "Poliomiyelit",
+     "Sifiliz",
+     "Sıtma",
+     "Şarbon",
+     "Şark çıbanı",
+     "Tetanoz",
+     "Tifo",
+     "Tüberküloz"
+    ]
+   },
+   {
+    "grup": "B",
+    "kural": "Kuşku duyulduğu anda ihbarı zorunlu hastalıklar (DSÖ Uluslararası Sağlık Düzenlemeleri kapsamında uluslararası bildirimi zorunlu). Hangi basamakta saptanırsa saptansın doğrudan ve en hızlı araçla (telefonla) Sağlık Bakanlığına ve il sağlık müdürlüğüne hemen bildirilir; inceleme Bakanlık ile il birlikte yapar; uluslararası bildirim yalnız Bakanlığın yetkisindedir.",
+    "hastaliklar": [
+     "Çiçek",
+     "Sarı humma",
+     "Epidemik tifüs",
+     "Veba"
+    ]
+   },
+   {
+    "grup": "C",
+    "kural": "Kurum tabanlı / sentinel sürveyans; her sağlık kuruluşundan değil, rehberde 'sürveyans tipi' bölümünde tanımlanan (çoğunlukla ikinci basamak ve üzeri) kuruluşlardan bildirilir (trahom hariç birinci basamaktan bildirim istenmez). Form 014 ile GÜNLÜK olarak ilçe/il sağlık müdürlüğüne; il, icmali AYLIK Form 017/C ile takip eden ayın ilk haftasında Bakanlığa gönderir.",
+    "hastaliklar": [
+     "Akut hemorajik ateş",
+     "Creutzfeldt-Jakob hastalığı",
+     "Ekinokokkoz",
+     "H. influenzae tip b (Hib) enfeksiyonu",
+     "İnfluenza",
+     "Kala-azar",
+     "Konjenital rubella",
+     "Lejyoner hastalığı",
+     "Lepra",
+     "Leptospiroz",
+     "Subakut sklerozan panensefalit (SSPE)",
+     "Şistozomiyaz",
+     "Trahom",
+     "Toksoplazmoz",
+     "Tularemi"
+    ]
+   },
+   {
+    "grup": "D",
+    "kural": "Hastalık değil enfeksiyon ETKENİ bildirimi; laboratuvar tabanlı ve sentinel. Tanımlanan laboratuvarlar pozitif bulguyu GÜNLÜK olarak kurum bildirim sorumlusuna 'Grup D Enfeksiyon Etkenleri Bildirim Fişi' ile bildirir; kurum HAFTALIK Form 017/D ile ilçe/il sağlık müdürlüğüne, il AYLIK olarak Bakanlığa gönderir.",
+    "hastaliklar": [
+     "Campylobacter jejuni",
+     "Chlamydia trachomatis",
+     "Cryptosporidium sp.",
+     "Entamoeba histolytica",
+     "Enterohemorajik E. coli",
+     "Giardia intestinalis",
+     "Listeria monocytogenes",
+     "Salmonella sp.",
+     "Shigella sp."
+    ]
+   }
+  ],
+  "gruplar_kaynak": "sb_bh_rehber2004",
+  "gruplar_konum": "SB Standart Tanı, Sürveyans ve Laboratuvar Rehberi-2004, Yönerge md. 7-12 ve 'Genel Bilgi' Tablo 1-4 (s. 6-23)",
+  "not": "A-D grup listeleri 2004 rehberine aittir. 2019 Yönetmelik EK-I'i grupsuz 80 hastalıklık (2020'den 81) güncel listedir ve KKKA, Batı Nil, Zika, MERS, antimikrobiyal direnç gibi yeni başlıklar içerir; bildirim algoritmaları 2015/18 sayılı Genelge'ye göre uygulanmaktadır (HSGM). 2015/18 Genelgesi'nin güncel grup listesi doğrulanamadı."
+ },
+ "surveyans": [
+  {
+   "tur": "Sürveyans (genel tanım)",
+   "tanim": "Herhangi bir hastalık, durum veya olay ile ilgili olarak uygun koruyucu ve karşı önlemlerin önerilmesi, alınması ve uygulanması amacıyla verilerin sürekli ve sistematik bir şekilde toplanması, analiz edilmesi, yorumlanması ve ilgili taraflarla paylaşılmasıdır.",
+   "kaynak": "mevzuat_bhske"
+  },
+  {
+   "tur": "Pasif sürveyans",
+   "tanim": "Katılımcılardan aktif olarak veri toplanmayan, bildirimin kendiliğinden yapılmasının beklendiği sürveyans sistemidir (bildirimi zorunlu hastalıkların rutin bildirimi).",
+   "kaynak": "sb_bh_rehber2004"
+  },
+  {
+   "tur": "Aktif sürveyans",
+   "tanim": "Bildirim yapmakla yükümlü kişi veya birimlerin kendiliğinden rapor etmesini beklemeksizin, yetkili birimlerce verilerin düzenli olarak toplanmasıdır (örn. klinisyenleri ayda bir telefonla aramak). İlişkili kavram 'aktif vaka bulma': vakaların sahada aranması (örn. TB için ev ziyaretleri).",
+   "kaynak": "sb_bh_rehber2004"
+  },
+  {
+   "tur": "Sentinel sürveyans",
+   "tanim": "Bir hastalık için olguların erken saptanması veya trendler hakkında gösterge sayılabilecek bilgiye ulaşmak için, verilerin toplumun kalanındaki duruma işaret edecek şekilde seçilmiş bir örnek popülasyondan/kurumdan toplandığı sürveyans tipidir (örn. birkaç hastane ile influenza sürveyansı; gebelerde sifiliz serolojisi). Her olgunun saptanması gereken durumlarda (örn. poliomiyelit) sentinel sürveyans yapılmaz.",
+   "kaynak": "sb_bh_rehber2004"
+  },
+  {
+   "tur": "Laboratuvar sürveyansı",
+   "tanim": "Belirli bir organizmanın laboratuvarda izolasyonu veya identifikasyonunun başlangıç noktası olarak alındığı sürveyans (örn. salmonelloz; D grubu).",
+   "kaynak": "sb_bh_rehber2004"
+  },
+  {
+   "tur": "Rutin sürveyans",
+   "tanim": "Bir hastalığı veya sağlık olayını izlemek için gereken bilginin düzenli ve sistematik olarak toplanmasıdır.",
+   "kaynak": "sb_bh_rehber2004"
+  },
+  {
+   "tur": "Göstergeye dayalı sürveyans",
+   "tanim": "Hastalıklarla ilgili önceden belirlenmiş verilerin rutin bir şekilde toplandığı, analiz edildiği, yorumlandığı ve geri bildiriminin yapıldığı sürveyans yöntemidir.",
+   "kaynak": "mevzuat_bhske"
+  },
+  {
+   "tur": "Olaya dayalı sürveyans",
+   "tanim": "Hastalık kümelenmeleri, açıklanamayan ölümler gibi halk sağlığı olaylarının erken tespiti, bildirimi, doğrulanması, değerlendirilmesi ve raporlanması amacıyla akut halk sağlığı olaylarıyla ilgili verilerin hızla toplandığı, analiz edildiği ve geri bildirildiği yöntemdir.",
+   "kaynak": "mevzuat_bhske"
+  },
+  {
+   "tur": "Sendromik sürveyans",
+   "tanim": "Belirli bir hastalığa özgü olmayan tanı veya semptomlardan oluşan sağlıkla ilgili verilerin toplandığı, analiz edildiği, yorumlandığı ve geri bildirildiği yöntemdir (örn. akut hemorajik ateş sendromu, üretral akıntı sendromu).",
+   "kaynak": "mevzuat_bhske",
+   "ek_kaynaklar": [
+    "sb_bh_rehber2004"
+   ]
+  },
+  {
+   "tur": "Sıfır vaka bildirimi",
+   "tanim": "Bildirimle yükümlü kişi/birimin vaka olmadığında da 'sıfır vaka' bildirmesi; verinin unutulmadığını veya kaybolmadığını güvenceye alır.",
+   "kaynak": "sb_bh_rehber2004"
+  },
+  {
+   "tur": "Erken Uyarı ve Cevap Sistemi (EUCS) düzeyleri",
+   "tanim": "Düzey 0: md. 20'deki olaylardan hiçbiri yok; Düzey 1: görülme olasılığı var (bilgi paylaşımı); Düzey 2: kanıta dayalı olarak yüksek olasılık – potansiyel tehdit; Düzey 3: ani gelişen halk sağlığı tehdidi – kesin tehdit.",
+   "kaynak": "mevzuat_bhske"
+  },
+  {
+   "tur": "İlgili tanımlar",
+   "tanim": "İhbar: bazı bildirimi zorunlu hastalıklarda vaka/salgın söz konusu olduğunda durumun en kısa zamanda yerel sağlık otoritesine iletilmesi. Filyasyon: bir halk sağlığı sorununun kaynağını bulma çalışmaları. Eliminasyon: etken yeryüzünden yok edilemese bile hastalığın görülmemesinin sağlanması. Eradikasyon: hastalığın etkeni ile birlikte yeryüzünden yok edilmesi. Salgın (Yönetmelik): belirli alanda, belirli grupta, belirli sürede beklenenden fazla vaka veya epidemiyolojik bağlantılı ≥2 vaka ya da yeni/elimine/eradike edilmiş hastalığa ait tek vaka.",
+   "kaynak": "sb_bh_rehber2004",
+   "ek_kaynaklar": [
+    "mevzuat_bhske"
+   ]
+  }
+ ],
+ "salgin_inceleme_basamaklari": [
+  {
+   "no": 1,
+   "adim": "Salgın incelemesi için hazırlık yapmak (ekip: ilçe sağlık müdürlüğü/TSM çalışanları, varsa halk sağlığı uzmanı, çevre sağlığı teknisyeni, bulaşıcı hastalıklar şubesi, laboratuvar, klinisyen, veteriner hekim vb.)",
+   "kaynak": "hsgm_salgin_inceleme"
+  },
+  {
+   "no": 2,
+   "adim": "Salgına karar vermek (salgının varlığını doğrulamak: vaka sayısı aynı dönemin önceki haftaları/ayları/yılları ile karşılaştırılır; nüfus değişimi, tanı yöntemi/bildirim sistemi/vaka tanımı değişikliği, veri giriş hataları gibi yalancı salgın nedenleri dışlanır)",
+   "kaynak": "hsgm_salgin_inceleme"
+  },
+  {
+   "no": 3,
+   "adim": "Tanının doğrulanması için bilgi toplamak",
+   "kaynak": "hsgm_salgin_inceleme"
+  },
+  {
+   "no": 4,
+   "adim": "Vaka tanımı yapmak ve vakaları bulmak",
+   "kaynak": "hsgm_salgin_inceleme"
+  },
+  {
+   "no": 5,
+   "adim": "Tanımlayıcı bilgileri toplamak (kişi, yer, zaman)",
+   "kaynak": "hsgm_salgin_inceleme"
+  },
+  {
+   "no": 6,
+   "adim": "Uygun koruma ve kontrol önlemlerinin alınması",
+   "kaynak": "hsgm_salgin_inceleme"
+  },
+  {
+   "no": 7,
+   "adim": "Salgında uygun iletişimin sağlanması",
+   "kaynak": "hsgm_salgin_inceleme"
+  },
+  {
+   "no": 8,
+   "adim": "Salgın raporu yazılması",
+   "kaynak": "hsgm_salgin_inceleme"
+  },
+  {
+   "no": 9,
+   "adim": "İlgililerle paylaşılması",
+   "kaynak": "hsgm_salgin_inceleme"
+  },
+  {
+   "no": 10,
+   "adim": "Salgın sonrasında yapılması gerekenler",
+   "kaynak": "hsgm_salgin_inceleme"
+  },
+  {
+   "no": 11,
+   "adim": "Yasal çerçeve: Bakanlık ve yerel sağlık birimi incelenen bütün salgınların raporlarını hazırlar ve Bakanlığın belirlediği kurallara göre ilgili yerlere gönderir (Yönetmelik md. 28); salgınların araştırılması ve kontrolü Bakanlıkça düzenlenir (md. 26).",
+   "kaynak": "mevzuat_bhske"
+  }
+ ],
+ "bulasici_veriler": [
+  {
+   "hastalik": "Kırım-Kongo kanamalı ateşi (KKKA)",
+   "olcu": "vaka",
+   "seri": [
+    {
+     "yil": "2002-2003",
+     "deger": 150
+    },
+    {
+     "yil": 2004,
+     "deger": 249
+    },
+    {
+     "yil": 2005,
+     "deger": 266
+    },
+    {
+     "yil": 2006,
+     "deger": 438
+    },
+    {
+     "yil": 2007,
+     "deger": 717
+    },
+    {
+     "yil": 2008,
+     "deger": 1315
+    },
+    {
+     "yil": 2009,
+     "deger": 1318
+    },
+    {
+     "yil": 2010,
+     "deger": 868
+    },
+    {
+     "yil": 2011,
+     "deger": 1075
+    },
+    {
+     "yil": 2012,
+     "deger": 796
+    },
+    {
+     "yil": 2013,
+     "deger": 910
+    },
+    {
+     "yil": 2014,
+     "deger": 967
+    },
+    {
+     "yil": 2015,
+     "deger": 718
+    },
+    {
+     "yil": 2016,
+     "deger": 432
+    },
+    {
+     "yil": 2017,
+     "deger": 343
+    },
+    {
+     "yil": 2018,
+     "deger": 479
+    },
+    {
+     "yil": 2019,
+     "deger": 739
+    },
+    {
+     "yil": 2020,
+     "deger": 1310
+    },
+    {
+     "yil": 2021,
+     "deger": 1440
+    },
+    {
+     "yil": 2022,
+     "deger": 1310
+    },
+    {
+     "yil": 2023,
+     "deger": 699
+    },
+    {
+     "yil": 2024,
+     "deger": 593
+    },
+    {
+     "yil": 2025,
+     "deger": 681
+    }
+   ],
+   "olum": [
+    {
+     "yil": "2002-2003",
+     "deger": 6
+    },
+    {
+     "yil": 2004,
+     "deger": 13
+    },
+    {
+     "yil": 2005,
+     "deger": 13
+    },
+    {
+     "yil": 2006,
+     "deger": 27
+    },
+    {
+     "yil": 2007,
+     "deger": 33
+    },
+    {
+     "yil": 2008,
+     "deger": 63
+    },
+    {
+     "yil": 2009,
+     "deger": 63
+    },
+    {
+     "yil": 2010,
+     "deger": 50
+    },
+    {
+     "yil": 2011,
+     "deger": 54
+    },
+    {
+     "yil": 2012,
+     "deger": 38
+    },
+    {
+     "yil": 2013,
+     "deger": 37
+    },
+    {
+     "yil": 2014,
+     "deger": 44
+    },
+    {
+     "yil": 2015,
+     "deger": 29
+    },
+    {
+     "yil": 2016,
+     "deger": 16
+    },
+    {
+     "yil": 2017,
+     "deger": 16
+    },
+    {
+     "yil": 2018,
+     "deger": 27
+    },
+    {
+     "yil": 2019,
+     "deger": 35
+    },
+    {
+     "yil": 2020,
+     "deger": 43
+    },
+    {
+     "yil": 2021,
+     "deger": 72
+    },
+    {
+     "yil": 2022,
+     "deger": 80
+    },
+    {
+     "yil": 2023,
+     "deger": 41
+    },
+    {
+     "yil": 2024,
+     "deger": 20
+    },
+    {
+     "yil": 2025,
+     "deger": 36
+    }
+   ],
+   "ozet": "2002-2025 toplam 17.813 olgu, 855 ölüm; vaka-ölüm (fatalite) oranı %4,8. İlk dikkat çekme 2002, kanıtlanma 2003.",
+   "kaynak": "hsgm_kkka2026",
+   "konum": "HSGM KKKA sunumu 2026, slayt 5-6 (grafik etiketleri); 2002-2024 değerleri HSGM 2025 sunumu slayt 6 ile aynıdır",
+   "ek_kaynaklar": [
+    "hsgm_kkka2025"
+   ]
+  },
+  {
+   "hastalik": "Tüberküloz (yeni + nüks)",
+   "olcu": "vaka",
+   "seri": [
+    {
+     "yil": 2005,
+     "deger": 20262
+    },
+    {
+     "yil": 2006,
+     "deger": 20078
+    },
+    {
+     "yil": 2007,
+     "deger": 19241
+    },
+    {
+     "yil": 2008,
+     "deger": 18074
+    },
+    {
+     "yil": 2009,
+     "deger": 17120
+    },
+    {
+     "yil": 2010,
+     "deger": 16253
+    },
+    {
+     "yil": 2011,
+     "deger": 15407
+    },
+    {
+     "yil": 2012,
+     "deger": 14405
+    },
+    {
+     "yil": 2013,
+     "deger": 13170
+    },
+    {
+     "yil": 2014,
+     "deger": 13108
+    },
+    {
+     "yil": 2015,
+     "deger": 12550
+    },
+    {
+     "yil": 2016,
+     "deger": 12186
+    },
+    {
+     "yil": 2017,
+     "deger": 11821
+    },
+    {
+     "yil": 2018,
+     "deger": 11576
+    },
+    {
+     "yil": 2019,
+     "deger": 11247
+    },
+    {
+     "yil": 2020,
+     "deger": 8830
+    },
+    {
+     "yil": 2021,
+     "deger": 9047
+    },
+    {
+     "yil": 2022,
+     "deger": 9723
+    },
+    {
+     "yil": 2023,
+     "deger": 9408
+    },
+    {
+     "yil": 2024,
+     "deger": 8891
+    },
+    {
+     "yil": 2025,
+     "deger": 8151
+    }
+   ],
+   "insidans_100bin": [
+    {
+     "yil": 2002,
+     "deger": 32.0
+    },
+    {
+     "yil": 2005,
+     "deger": 29.4
+    },
+    {
+     "yil": 2006,
+     "deger": 28.8
+    },
+    {
+     "yil": 2007,
+     "deger": 27.3
+    },
+    {
+     "yil": 2008,
+     "deger": 25.3
+    },
+    {
+     "yil": 2009,
+     "deger": 23.6
+    },
+    {
+     "yil": 2010,
+     "deger": 22.0
+    },
+    {
+     "yil": 2011,
+     "deger": 20.6
+    },
+    {
+     "yil": 2012,
+     "deger": 19.0
+    },
+    {
+     "yil": 2013,
+     "deger": 17.2
+    },
+    {
+     "yil": 2014,
+     "deger": 16.9
+    },
+    {
+     "yil": 2015,
+     "deger": 15.9
+    },
+    {
+     "yil": 2016,
+     "deger": 15.3
+    },
+    {
+     "yil": 2017,
+     "deger": 14.6
+    },
+    {
+     "yil": 2018,
+     "deger": 14.1
+    },
+    {
+     "yil": 2019,
+     "deger": 13.5
+    },
+    {
+     "yil": 2020,
+     "deger": 10.6
+    },
+    {
+     "yil": 2021,
+     "deger": 10.7
+    },
+    {
+     "yil": 2022,
+     "deger": 11.4
+    },
+    {
+     "yil": 2023,
+     "deger": 11.02
+    },
+    {
+     "yil": 2024,
+     "deger": 10.38
+    },
+    {
+     "yil": 2025,
+     "deger": 9.47
+    }
+   ],
+   "ozet": "2025: 8.151 vaka (7.307 yerli, 844 yabancı), insidans 100.000'de 9,47 (K 7,61 / E 11,32). İnsidans formülü: (yeni + nüks olgu sayısı / nüfus) × 100.000.",
+   "kaynak": "sb-siy-2025-bulten",
+   "konum": "2005-2016: Verem Savaşı 2018 Raporu Tablo 15; 2017-2019: SB 2017-2019 bültenleri morbidite tablosu; 2020-2024: SB Yıllığı 2024 Tablo 3.1-3.2; 2025: SB 2025 bülteni Tablo 3; 2002 insidansı: SB Yıllığı Tablo 3.2 (DSÖ TB veri tabanı)",
+   "ek_kaynaklar": [
+    "hsgm_verem2018",
+    "sb_siy2024",
+    "sb_bulten2017",
+    "sb_bulten2018",
+    "sb_bulten2019"
+   ]
+  },
+  {
+   "hastalik": "Kızamık",
+   "olcu": "vaka",
+   "seri": [
+    {
+     "yil": 2002,
+     "deger": 7810
+    },
+    {
+     "yil": 2017,
+     "deger": 84
+    },
+    {
+     "yil": 2018,
+     "deger": 716
+    },
+    {
+     "yil": 2019,
+     "deger": 2905
+    },
+    {
+     "yil": 2020,
+     "deger": 617
+    },
+    {
+     "yil": 2021,
+     "deger": 50
+    },
+    {
+     "yil": 2022,
+     "deger": 103
+    },
+    {
+     "yil": 2023,
+     "deger": 5088
+    },
+    {
+     "yil": 2024,
+     "deger": 1582
+    },
+    {
+     "yil": 2025,
+     "deger": 228
+    }
+   ],
+   "insidans_100bin": [
+    {
+     "yil": 2002,
+     "deger": 11.8
+    },
+    {
+     "yil": 2017,
+     "deger": 0.1
+    },
+    {
+     "yil": 2018,
+     "deger": 0.87
+    },
+    {
+     "yil": 2019,
+     "deger": 3.49
+    },
+    {
+     "yil": 2020,
+     "deger": 0.74
+    },
+    {
+     "yil": 2021,
+     "deger": 0.06
+    },
+    {
+     "yil": 2022,
+     "deger": 0.12
+    },
+    {
+     "yil": 2023,
+     "deger": 5.96
+    },
+    {
+     "yil": 2024,
+     "deger": 1.85
+    },
+    {
+     "yil": 2025,
+     "deger": 0.26
+    }
+   ],
+   "ozet": "2025: 228 vaka (194 yerli, 34 yabancı).",
+   "kaynak": "sb-siy-2025-bulten",
+   "konum": "SB 2025 bülteni Tablo 3; 2020-2024 ve 2002: SB Yıllığı 2024 Tablo 3.1-3.2; 2017-2019: ilgili bültenler",
+   "ek_kaynaklar": [
+    "sb_siy2024",
+    "sb_bulten2017",
+    "sb_bulten2018",
+    "sb_bulten2019"
+   ]
+  },
+  {
+   "hastalik": "Sıtma (tamamı yurt dışı kaynaklı)",
+   "olcu": "vaka",
+   "seri": [
+    {
+     "yil": 2002,
+     "deger": 10224
+    },
+    {
+     "yil": 2017,
+     "deger": 214
+    },
+    {
+     "yil": 2018,
+     "deger": 238
+    },
+    {
+     "yil": 2019,
+     "deger": 279
+    },
+    {
+     "yil": 2020,
+     "deger": 135
+    },
+    {
+     "yil": 2021,
+     "deger": 210
+    },
+    {
+     "yil": 2022,
+     "deger": 278
+    },
+    {
+     "yil": 2023,
+     "deger": 298
+    },
+    {
+     "yil": 2024,
+     "deger": 292
+    },
+    {
+     "yil": 2025,
+     "deger": 221
+    }
+   ],
+   "insidans_100bin": [
+    {
+     "yil": 2002,
+     "deger": 15.4
+    },
+    {
+     "yil": 2017,
+     "deger": 0.26
+    },
+    {
+     "yil": 2018,
+     "deger": 0.29
+    },
+    {
+     "yil": 2019,
+     "deger": 0.34
+    },
+    {
+     "yil": 2020,
+     "deger": 0.16
+    },
+    {
+     "yil": 2021,
+     "deger": 0.25
+    },
+    {
+     "yil": 2022,
+     "deger": 0.33
+    },
+    {
+     "yil": 2023,
+     "deger": 0.35
+    },
+    {
+     "yil": 2024,
+     "deger": 0.34
+    },
+    {
+     "yil": 2025,
+     "deger": 0.26
+    }
+   ],
+   "ozet": "2002'de 10.184 yerli vaka varken 2020-2025 yerli vaka 0; 2025'te 221 vakanın tamamı yabancı/hariçten gelen. Türkiye'de yerli bulaş ortadan kaldırılmıştır (HSGM).",
+   "kaynak": "sb-siy-2025-bulten",
+   "konum": "SB 2025 bülteni Tablo 3; SB Yıllığı 2024 Tablo 3.1-3.2; 2017-2019 bültenleri",
+   "ek_kaynaklar": [
+    "sb_siy2024",
+    "sb_bulten2017",
+    "sb_bulten2018",
+    "sb_bulten2019"
+   ]
+  },
+  {
+   "hastalik": "HIV/AIDS (doğrulanmış yeni bildirim)",
+   "olcu": "vaka",
+   "seri": [
+    {
+     "yil": 2022,
+     "deger": 6230
+    },
+    {
+     "yil": 2023,
+     "deger": 7016
+    },
+    {
+     "yil": 2024,
+     "deger": 7561
+    },
+    {
+     "yil": 2025,
+     "deger": 7501
+    }
+   ],
+   "alt_seri": {
+    "HIV": [
+     {
+      "yil": 2022,
+      "deger": 6104
+     },
+     {
+      "yil": 2023,
+      "deger": 6855
+     },
+     {
+      "yil": 2024,
+      "deger": 7399
+     },
+     {
+      "yil": 2025,
+      "deger": 7336
+     }
+    ],
+    "AIDS": [
+     {
+      "yil": 2022,
+      "deger": 126
+     },
+     {
+      "yil": 2023,
+      "deger": 161
+     },
+     {
+      "yil": 2024,
+      "deger": 162
+     },
+     {
+      "yil": 2025,
+      "deger": 165
+     }
+    ]
+   },
+   "olum": [
+    {
+     "yil": 2022,
+     "deger": 76
+    },
+    {
+     "yil": 2023,
+     "deger": 72
+    },
+    {
+     "yil": 2024,
+     "deger": 86
+    },
+    {
+     "yil": 2025,
+     "deger": 79
+    }
+   ],
+   "ozet": "1985-13.07.2026: 61.004 HIV pozitif kişi ve 2.762 AIDS vakası; %82,1 erkek; bulaş yolu bildirilenlerin %94,5'i cinsel yol. 2025'te 14.281.395 kişiye 21.095.508 HIV testi.",
+   "kaynak": "hsgm_hiv2026",
+   "konum": "HSGM HIV/AIDS İstatistikleri, 'Toplam vaka ve ölüm sayılarının son 5 yıl dağılımı' tablosu (13.07.2026 itibarıyla)",
+   "not": "SB yıllığındaki 'AIDS' tablosu (2020: 75, 2021: 105, 2022: 128, 2023: 154, 2024: 133) farklı kesim tarihlidir."
+  },
+  {
+   "hastalik": "Bruselloz (kesin vaka)",
+   "olcu": "vaka",
+   "seri": [
+    {
+     "yil": 2008,
+     "deger": 9818
+    },
+    {
+     "yil": 2009,
+     "deger": 9385
+    },
+    {
+     "yil": 2010,
+     "deger": 7703
+    },
+    {
+     "yil": 2011,
+     "deger": 7177
+    },
+    {
+     "yil": 2012,
+     "deger": 6759
+    },
+    {
+     "yil": 2013,
+     "deger": 7225
+    },
+    {
+     "yil": 2014,
+     "deger": 4475
+    },
+    {
+     "yil": 2015,
+     "deger": 4173
+    },
+    {
+     "yil": 2016,
+     "deger": 5148
+    },
+    {
+     "yil": 2017,
+     "deger": 6457
+    },
+    {
+     "yil": 2018,
+     "deger": 7219
+    },
+    {
+     "yil": 2019,
+     "deger": 10244
+    }
+   ],
+   "insidans_100bin": [
+    {
+     "yil": 2008,
+     "deger": 13.73
+    },
+    {
+     "yil": 2009,
+     "deger": 12.93
+    },
+    {
+     "yil": 2010,
+     "deger": 10.45
+    },
+    {
+     "yil": 2011,
+     "deger": 9.6
+    },
+    {
+     "yil": 2012,
+     "deger": 8.94
+    },
+    {
+     "yil": 2013,
+     "deger": 9.42
+    },
+    {
+     "yil": 2014,
+     "deger": 5.76
+    },
+    {
+     "yil": 2015,
+     "deger": 5.3
+    },
+    {
+     "yil": 2016,
+     "deger": 6.45
+    },
+    {
+     "yil": 2017,
+     "deger": 7.99
+    },
+    {
+     "yil": 2018,
+     "deger": 8.8
+    },
+    {
+     "yil": 2019,
+     "deger": 12.32
+    }
+   ],
+   "ozet": "Türkiye'de en sık görülen bakteriyel zoonoz; Doğu ve Güneydoğu Anadolu'da yoğun. 2008 ve 2018'de birer ölüm.",
+   "kaynak": "hsgm_bruselloz2024",
+   "konum": "HSGM Türkiye'de Bruselloz Mevcut Durum Raporu (2024), Tablo 5",
+   "not": "2020 sonrası resmi seri bulunamadı."
+  },
+  {
+   "hastalik": "Kuduz riskli temas",
+   "olcu": "bildirim/yıl (yaklaşık)",
+   "seri": [
+    {
+     "yil": "yıllık ortalama (2019 rehberi)",
+     "deger": 250000
+    }
+   ],
+   "ozet": "Türkiye kuduz yönünden endemik; yılda yaklaşık 250.000 kuduz riskli temas bildirimi ve ortalama 1-2 insan kuduz vakası.",
+   "kaynak": "hsgm_kuduz_rehber",
+   "konum": "Kuduz Profilaksi Rehberi (2019), giriş bölümü",
+   "not": "Yıllara göre ayrıntılı seri resmi kaynakta bulunamadı."
+  },
+  {
+   "hastalik": "AIDS (SB yıllığı tablosu)",
+   "olcu": "vaka",
+   "seri": [
+    {
+     "yil": 2002,
+     "deger": 44
+    },
+    {
+     "yil": 2020,
+     "deger": 75
+    },
+    {
+     "yil": 2021,
+     "deger": 105
+    },
+    {
+     "yil": 2022,
+     "deger": 128
+    },
+    {
+     "yil": 2023,
+     "deger": 154
+    },
+    {
+     "yil": 2024,
+     "deger": 133
+    }
+   ],
+   "kaynak": "sb-siy-2024",
+   "konum": "SB Yıllığı 2024 Tablo 3.1 (24 Haziran 2025'e kadar doğrulanan vakalar)"
+  }
+ ],
+ "cevre": [
+  {
+   "baslik": "İçme-kullanma suyu: dezenfeksiyon ve serbest klor (İnsani Tüketim Amaçlı Sular Hakkında Yönetmelik md. 10/5)",
+   "maddeler": [
+    {
+     "ad": "Dezenfeksiyon yöntemi",
+     "deger": "Klor ve klorlu bileşikler; su deposunda debi ve basınca göre ayarlanabilen otomatik klorlama cihazı zorunlu",
+     "not": "Değişik: RG 7/3/2013, 20/10/2016"
+    },
+    {
+     "ad": "Şebeke uç noktasında serbest klor",
+     "deger": "0,2–0,5 mg/L",
+     "not": "Sağlanamazsa mahalli idare ara klorlama ünitesi yaptırır."
+    },
+    {
+     "ad": "Olağanüstü durumlar (deprem, sel, arıza sonrası kesinti)",
+     "deger": "en fazla 1,0 mg/L serbest klor",
+     "not": "Şebekenin en uç noktasında"
+    },
+    {
+     "ad": "Serbest klor ölçüm sıklığı",
+     "deger": "Her gün, suyun mahallinde",
+     "not": "Dezenfeksiyon etkinliğinin denetimi için"
+    }
+   ],
+   "kaynak": "mevzuat_su"
+  },
+  {
+   "baslik": "İçme suyu parametre sınır değerleri (aynı yönetmelik EK-1, değişik RG 7/3/2013 ve 20/10/2016)",
+   "maddeler": [
+    {
+     "ad": "E. coli / Enterokok / Koliform (ambalajlı içme ve kaynak suları)",
+     "deger": "0/250 ml"
+    },
+    {
+     "ad": "Koliform bakteri (gösterge parametresi)",
+     "deger": "0/100 ml",
+     "not": "Şişe/kap suları için 0/250 ml"
+    },
+    {
+     "ad": "C. perfringens (sporlular dahil)",
+     "deger": "0/100 ml",
+     "not": "Yüzey suyundan etkilenen sularda"
+    },
+    {
+     "ad": "Arsenik",
+     "deger": "10 µg/L"
+    },
+    {
+     "ad": "Kurşun",
+     "deger": "10 µg/L"
+    },
+    {
+     "ad": "Kadmiyum",
+     "deger": "5,0 µg/L"
+    },
+    {
+     "ad": "Cıva",
+     "deger": "1,0 µg/L"
+    },
+    {
+     "ad": "Nitrat",
+     "deger": "50 mg/L",
+     "not": "[nitrat]/50 + [nitrit]/3 ≤ 1 koşulu"
+    },
+    {
+     "ad": "Nitrit",
+     "deger": "0,50 mg/L"
+    },
+    {
+     "ad": "Florür",
+     "deger": "1,5 mg/L"
+    },
+    {
+     "ad": "Trihalometanlar (toplam)",
+     "deger": "100 µg/L"
+    },
+    {
+     "ad": "Bor",
+     "deger": "1 mg/L"
+    },
+    {
+     "ad": "pH",
+     "deger": "6,5–9,5",
+     "not": "Şişe/kap suları için minimum 4,5 olabilir"
+    },
+    {
+     "ad": "İletkenlik",
+     "deger": "2500 µS/cm (20 °C)"
+    },
+    {
+     "ad": "Klorür / Sülfat",
+     "deger": "250 mg/L / 250 mg/L"
+    },
+    {
+     "ad": "Amonyum",
+     "deger": "0,50 mg/L"
+    },
+    {
+     "ad": "Demir / Mangan",
+     "deger": "200 µg/L / 50 µg/L"
+    },
+    {
+     "ad": "Sodyum",
+     "deger": "200 mg/L"
+    },
+    {
+     "ad": "Bulanıklık",
+     "deger": "Tüketicilerce kabul edilebilir; yüzey suyu arıtımında ≤1,0 NTU"
+    }
+   ],
+   "kaynak": "mevzuat_su"
+  },
+  {
+   "baslik": "Hava kalitesi limit değerleri – insan sağlığının korunması (Hava Kalitesi Değerlendirme ve Yönetimi Yönetmeliği, Ek I-B)",
+   "maddeler": [
+    {
+     "ad": "PM10 – 24 saatlik",
+     "deger": "50 µg/m³",
+     "not": "Bir yılda 35 defadan fazla aşılmaz; limit değere 1 Ocak 2019'da ulaşılmıştır"
+    },
+    {
+     "ad": "PM10 – yıllık",
+     "deger": "40 µg/m³",
+     "not": "1 Ocak 2019"
+    },
+    {
+     "ad": "SO2 – saatlik",
+     "deger": "350 µg/m³",
+     "not": "Yılda 24 defadan fazla aşılmaz; uyarı eşiği 500 µg/m³ (3 ardışık saat)"
+    },
+    {
+     "ad": "SO2 – 24 saatlik",
+     "deger": "125 µg/m³",
+     "not": "Yılda 3 defadan fazla aşılmaz"
+    },
+    {
+     "ad": "SO2 – yıllık ve kış dönemi (ekosistem)",
+     "deger": "20 µg/m³"
+    },
+    {
+     "ad": "NO2 – saatlik",
+     "deger": "200 µg/m³",
+     "not": "Yılda 18 defadan fazla aşılmaz; limit değere 1 Ocak 2024'te ulaşılmıştır; uyarı eşiği 400 µg/m³"
+    },
+    {
+     "ad": "NO2 – yıllık",
+     "deger": "40 µg/m³",
+     "not": "1 Ocak 2024"
+    },
+    {
+     "ad": "NOx – yıllık (vejetasyon)",
+     "deger": "30 µg/m³"
+    },
+    {
+     "ad": "CO – maksimum günlük 8 saatlik ortalama",
+     "deger": "10 mg/m³"
+    },
+    {
+     "ad": "Kurşun – yıllık",
+     "deger": "0,5 µg/m³"
+    },
+    {
+     "ad": "Benzen – yıllık",
+     "deger": "5 µg/m³"
+    },
+    {
+     "ad": "Ozon – maksimum günlük 8 saatlik ortalama hedef",
+     "deger": "120 µg/m³",
+     "not": "Bilgi eşiği 180, uyarı eşiği 240 µg/m³ (1 saatlik)"
+    },
+    {
+     "ad": "PM2,5",
+     "deger": "Yönetmelikte limit/hedef değer yok",
+     "not": "Yönetmelik yalnızca PM2,5 ölçüm/izleme yükümlülüğü getirir (md. 6, Ek)."
+    }
+   ],
+   "kaynak": "mevzuat_hkdy"
+  },
+  {
+   "baslik": "Türkiye hava kalitesi durumu (ÇŞİDB Çevresel Göstergeler, 2023 verisi)",
+   "maddeler": [
+    {
+     "ad": "Yıllık PM10 ortalaması en yüksek 10 istasyon (µg/m³)",
+     "deger": "Muş 96; Iğdır 85; Batman 82; Şırnak 75; Kahramanmaraş 74; Malatya 72; Ağrı 70; Denizli 68; Osmaniye 65; Kilis 64"
+    },
+    {
+     "ad": "Yıllık SO2 ortalaması en yüksek 10 istasyon (µg/m³)",
+     "deger": "Hakkari 83; Bolu 60; Manisa 34; Şanlıurfa 31; Kahramanmaraş 26; Uşak 21; Muğla 20; Şırnak 20; Edirne 19; Tunceli 19"
+    },
+    {
+     "ad": "Ülke geneli PM10 ortalaması",
+     "deger": "2023'te ulusal ve AB sınır değeri %10 oranında aşıldı"
+    },
+    {
+     "ad": "2018-2023 sık tekrar eden en kirli PM10 istasyonları",
+     "deger": "Iğdır, Malatya, Muş, Şırnak (5 kez); Kahramanmaraş, Batman (4 kez); Ağrı, Kilis, Osmaniye (3 kez)"
+    },
+    {
+     "ad": "İzleme",
+     "deger": "Ulusal Hava Kalitesi İzleme Ağı, 81 il; www.havaizleme.gov.tr"
+    }
+   ],
+   "kaynak": "csb_pm10_gosterge"
+  },
+  {
+   "baslik": "Atık, tıbbi atık ve gürültü mevzuatı (kısa)",
+   "maddeler": [
+    {
+     "ad": "Tıbbi (enfeksiyöz) atık torbası",
+     "deger": "Kırmızı renkli, çift kat 100 mikron, ≥10 kg kaldırma kapasiteli, 'Uluslararası Biyotehlike' amblemi ve 'DİKKAT! TIBBİ ATIK' ibareli; en fazla ¾ doldurulur, sıkıştırılmaz",
+     "not": "Tıbbi Atıkların Kontrolü Yönetmeliği (RG 25/1/2017-29959)"
+    },
+    {
+     "ad": "Kesici-delici atık",
+     "deger": "Delinmeye/yırtılmaya dayanıklı, sızdırmaz plastik veya lamine karton kutu/konteyner; 'DİKKAT! KESİCİ ve DELİCİ TIBBİ ATIK' ibareli; ¾ dolunca kapatılıp kırmızı torbaya konur"
+    },
+    {
+     "ad": "Patolojik atık",
+     "deger": "Kırmızı renkli, sızdırmaz plastik biriktirme kapları ('DİKKAT! PATOLOJİK TIBBİ ATIK')"
+    },
+    {
+     "ad": "Tıbbi atık geçici depolama",
+     "deger": "En fazla 48 saat; depo sıcaklığı +4 °C ise bir haftaya kadar"
+    },
+    {
+     "ad": "Belediyelerin hıfzıssıhha görevleri (UHK md. 20)",
+     "deger": "İçme-kullanma suyu temini, lağım ve mecra tesisatı, mezbaha, mezarlık, her nevi muzahrafatın (çöp/atık) uzaklaştırılması ve imhası, meskenlerin sıhhi durumuna nezaret",
+     "not": "1593 s. Umumi Hıfzıssıhha Kanunu"
+    },
+    {
+     "ad": "Çevresel gürültü",
+     "deger": "Çevresel Gürültü Kontrol Yönetmeliği (RG 30/11/2022-32029): gürültü haritaları, eylem planları ve kontrol tedbirleri; 4/6/2010 tarihli Çevresel Gürültünün Değerlendirilmesi ve Yönetimi Yönetmeliği'ni yürürlükten kaldırmıştır",
+     "not": "ÇŞİDB"
+    }
+   ],
+   "kaynak": "rg_tibbiatik2017",
+   "ek_kaynaklar": [
+    "mevzuat_1593",
+    "rg_gurultu2022"
+   ]
+  }
+ ],
+ "is_sagligi": [
+  {
+   "ad": "İş kazası geçiren sigortalı sayısı (4-1/a)",
+   "seri": [
+    {
+     "yil": 2013,
+     "deger": 191389
+    },
+    {
+     "yil": 2014,
+     "deger": 221366
+    },
+    {
+     "yil": 2015,
+     "deger": 241547
+    },
+    {
+     "yil": 2016,
+     "deger": 286068
+    },
+    {
+     "yil": 2017,
+     "deger": 359653
+    },
+    {
+     "yil": 2018,
+     "deger": 430985
+    },
+    {
+     "yil": 2019,
+     "deger": 422463
+    },
+    {
+     "yil": 2020,
+     "deger": 384262
+    },
+    {
+     "yil": 2021,
+     "deger": 511084
+    },
+    {
+     "yil": 2022,
+     "deger": 588823
+    },
+    {
+     "yil": 2023,
+     "deger": 681401
+    },
+    {
+     "yil": 2024,
+     "deger": 733646
+    },
+    {
+     "yil": 2025,
+     "deger": 766039
+    }
+   ],
+   "kaynak": "sgk_2013",
+   "konum": "SGK İstatistik Yıllıkları Bölüm 3-1 (4a), Tablo 3.1.1 'Toplam' satırı (2013-2016: Tablo 3.1/3.2)",
+   "ek_kaynaklar": [
+    "sgk_2013",
+    "sgk_2014",
+    "sgk_2015",
+    "sgk_2016",
+    "sgk_2017",
+    "sgk_2018",
+    "sgk_2019",
+    "sgk_2020",
+    "sgk_2021",
+    "sgk_2022",
+    "sgk_2023",
+    "sgk_2024"
+   ],
+   "not": "Yalnız 5510 s. Kanun 4-1/a (hizmet akdiyle çalışan) sigortalıları kapsar; 4/b ve kamu görevlileri dahil değildir. 2025: erkek 566.278, kadın 199.761."
+  },
+  {
+   "ad": "İş kazası sonucu ölen sigortalı sayısı (4-1/a)",
+   "seri": [
+    {
+     "yil": 2013,
+     "deger": 1360
+    },
+    {
+     "yil": 2014,
+     "deger": 1626
+    },
+    {
+     "yil": 2015,
+     "deger": 1252
+    },
+    {
+     "yil": 2016,
+     "deger": 1405
+    },
+    {
+     "yil": 2017,
+     "deger": 1633
+    },
+    {
+     "yil": 2018,
+     "deger": 1541
+    },
+    {
+     "yil": 2019,
+     "deger": 1147
+    },
+    {
+     "yil": 2020,
+     "deger": 1231
+    },
+    {
+     "yil": 2021,
+     "deger": 1382
+    },
+    {
+     "yil": 2022,
+     "deger": 1517
+    },
+    {
+     "yil": 2023,
+     "deger": 1966
+    },
+    {
+     "yil": 2024,
+     "deger": 1897
+    },
+    {
+     "yil": 2025,
+     "deger": 1931
+    }
+   ],
+   "kaynak": "sgk_2013",
+   "konum": "SGK Yıllıkları Tablo 3.1.2 (2013-2016: Tablo 3.18) toplam satırı",
+   "ek_kaynaklar": [
+    "sgk_2013",
+    "sgk_2014",
+    "sgk_2015",
+    "sgk_2016",
+    "sgk_2017",
+    "sgk_2018",
+    "sgk_2019",
+    "sgk_2020",
+    "sgk_2021",
+    "sgk_2022",
+    "sgk_2023",
+    "sgk_2024"
+   ],
+   "not": "2025: erkek 1.864, kadın 67."
+  },
+  {
+   "ad": "Meslek hastalığına tutulan sigortalı sayısı (4-1/a)",
+   "seri": [
+    {
+     "yil": 2013,
+     "deger": 351
+    },
+    {
+     "yil": 2014,
+     "deger": 494
+    },
+    {
+     "yil": 2015,
+     "deger": 510
+    },
+    {
+     "yil": 2016,
+     "deger": 597
+    },
+    {
+     "yil": 2017,
+     "deger": 691
+    },
+    {
+     "yil": 2018,
+     "deger": 1044
+    },
+    {
+     "yil": 2019,
+     "deger": 1088
+    },
+    {
+     "yil": 2020,
+     "deger": 908
+    },
+    {
+     "yil": 2021,
+     "deger": 1207
+    },
+    {
+     "yil": 2022,
+     "deger": 953
+    },
+    {
+     "yil": 2023,
+     "deger": 945
+    },
+    {
+     "yil": 2024,
+     "deger": 888
+    },
+    {
+     "yil": 2025,
+     "deger": 916
+    }
+   ],
+   "kaynak": "sgk_2013",
+   "konum": "SGK Yıllıkları Tablo 3.1.1 (2013-2016: Tablo 3.1/3.2) 'meslek hastalığına tutulan' toplam sütunu",
+   "ek_kaynaklar": [
+    "sgk_2013",
+    "sgk_2014",
+    "sgk_2015",
+    "sgk_2016",
+    "sgk_2017",
+    "sgk_2018",
+    "sgk_2019",
+    "sgk_2020",
+    "sgk_2021",
+    "sgk_2022",
+    "sgk_2023",
+    "sgk_2024"
+   ]
+  },
+  {
+   "ad": "Meslek hastalığı sonucu ölüm (4-1/a)",
+   "seri": [
+    {
+     "yil": 2013,
+     "deger": 0
+    },
+    {
+     "yil": 2014,
+     "deger": 0
+    },
+    {
+     "yil": 2015,
+     "deger": 0
+    },
+    {
+     "yil": 2016,
+     "deger": 0
+    },
+    {
+     "yil": 2017,
+     "deger": 0
+    },
+    {
+     "yil": 2018,
+     "deger": 0
+    },
+    {
+     "yil": 2019,
+     "deger": 0
+    },
+    {
+     "yil": 2020,
+     "deger": 5
+    },
+    {
+     "yil": 2021,
+     "deger": 35
+    },
+    {
+     "yil": 2022,
+     "deger": 8
+    },
+    {
+     "yil": 2023,
+     "deger": 0
+    },
+    {
+     "yil": 2024,
+     "deger": 3
+    },
+    {
+     "yil": 2025,
+     "deger": 0
+    }
+   ],
+   "kaynak": "sgk_2013",
+   "konum": "SGK Yıllıkları Tablo 3.1.2 / 3.18",
+   "ek_kaynaklar": [
+    "sgk_2013",
+    "sgk_2014",
+    "sgk_2015",
+    "sgk_2016",
+    "sgk_2017",
+    "sgk_2018",
+    "sgk_2019",
+    "sgk_2020",
+    "sgk_2021",
+    "sgk_2022",
+    "sgk_2023",
+    "sgk_2024"
+   ]
+  },
+  {
+   "ad": "İş kazası frekans hızı (2025)",
+   "seri": [
+    {
+     "yil": 2025,
+     "deger": 15.39,
+     "birim": "1.000.000 iş saatinde"
+    },
+    {
+     "yil": 2025,
+     "deger": 3.46,
+     "birim": "100 kişide"
+    }
+   ],
+   "kaynak": "sgk_2013",
+   "konum": "SGK 2025 Yıllığı Tablo 3.1.30 'İş Kazası Frekans ve Ağırlık Hızları'",
+   "not": "Hesap: iş kazası geçiren sigortalı sayısı / toplam prim tahakkuk eden gün sayısından türetilen çalışma saati × 1.000.000 (SGK)."
+  },
+  {
+   "ad": "6331 sayılı İş Sağlığı ve Güvenliği Kanunu – temel ilkeler",
+   "seri": [],
+   "maddeler": [
+    "Kabul 20/6/2012; RG 30/6/2012-28339. Amaç: işyerlerinde iş sağlığı ve güvenliğinin sağlanması ve mevcut şartların iyileştirilmesi için işveren ve çalışanların görev, yetki, sorumluluk, hak ve yükümlülüklerini düzenlemek (md. 1).",
+    "Tanımlar (md. 3): İş kazası – işyerinde veya işin yürütümü nedeniyle meydana gelen, ölüme sebebiyet veren veya vücut bütünlüğünü ruhen ya da bedenen engelli hâle getiren olay; Meslek hastalığı – mesleki risklere maruziyet sonucu ortaya çıkan hastalık.",
+    "Risklerden korunma ilkeleri (md. 5): risklerden kaçınmak; kaçınılmaz riskleri analiz etmek; risklerle kaynağında mücadele; işin kişiye uygun hale getirilmesi (tekdüze çalışmanın olumsuz etkilerini önlemek); teknik gelişmelere uyum; tehlikeliyi tehlikesiz/az tehlikeli olanla değiştirmek; tutarlı genel önleme politikası; toplu korunma tedbirlerine kişisel korunmaya göre öncelik; çalışanlara uygun talimat.",
+    "İSG hizmetleri (md. 6): işveren iş güvenliği uzmanı, işyeri hekimi ve 10+ çalışanı olan çok tehlikeli işyerlerinde diğer sağlık personeli görevlendirir; OSGB/ÇASMER'den hizmet alınabilir.",
+    "İşyeri tehlike sınıfları (md. 9): 5510 s. Kanun md. 83'e göre belirlenen kısa vadeli sigorta prim oranları esas alınarak (az tehlikeli, tehlikeli, çok tehlikeli) tespit edilir; asıl iş dikkate alınır.",
+    "Çalışmaktan kaçınma hakkı (md. 13): ciddi ve yakın tehlike durumunda kurula/işverene başvurulur; tehlike önlenemezse çalışan işyerini terk edebilir, hakları kısıtlanamaz.",
+    "Bildirim (md. 14): işveren iş kazasını kazadan sonraki 3 iş günü içinde, kendisine bildirilen meslek hastalığını öğrendiği tarihten itibaren 3 iş günü içinde SGK'ya bildirir; sağlık hizmeti sunucuları iş kazalarını, yetkili sağlık hizmeti sunucuları meslek hastalığı tanılarını en geç 10 gün içinde SGK'ya bildirir; meslek hastalığı ön tanılı vakalar SGK'nın yetkilendirdiği sağlık hizmeti sunucularına sevk edilir.",
+    "Sağlık gözetimi (md. 15): işveren çalışanları maruz kalacakları risklere göre sağlık gözetimine tabi tutar (işe girişte, iş değişikliğinde, iş kazası/meslek hastalığı sonrası dönüşte ve düzenli aralıklarla)."
+   ],
+   "kaynak": "mevzuat_6331",
+   "konum": "6331 s. Kanun md. 1, 3, 5, 6, 9, 13, 14, 15"
+  }
+ ],
+ "meta": {
+  "olusturma": "2026-10-14",
+  "aciklama": "Türkiye güncel resmî halk sağlığı verileri (SB, TÜİK, SGK, ÇŞİDB, Resmî Gazete/mevzuat.gov.tr). Seri değerleri mümkün olduğunda en güncel revize yayından alınmıştır; her öğede 'kaynak' + 'konum' verilmiştir."
+ },
+ "dogrulanamayan": [
+  "Anne ölüm oranı 2020 (SB 2020 haber bülteninde yayımlanmamış; yıllık değer teyit edilemedi).",
+  "TÜİK kaba ölüm hızı ve bebek ölüm hızı 2010–2011 değerleri (2025 bülten grafiğinde etiketsiz; ham tablolar TÜİK veri portalından indirilemedi – erişim engeli).",
+  "Toplam doğurganlık ve kaba doğum hızı 2010–2011 değerleri (TÜİK bültenlerinde metin olarak bulunamadı; grafikte etiketsiz).",
+  "SB (HSGM) neonatal ölüm hızı ve anne ölüm oranının 2010–2016 serisi (yalnız 2016 AÖO = 14,7 bulundu).",
+  "Ortanca yaş ve 65+ oranının 2010–2011 değerleri (ilgili ADNKS bültenlerine erişilemedi).",
+  "10.000 kişiye düşen yatak sayısının 2017–2023 yıllık değerleri (bültenlerde Türkiye toplamı verilmemiş).",
+  "Sağlıklı Hayat Merkezi sayısının 2025 öncesi serisi.",
+  "Boğmaca, şarbon, kolera, akut gastroenterit/akut kanlı ishal, tifo yıllık vaka sayıları (SB 2024 yıllığında bildirimi zorunlu hastalıklar tablosu yalnız AIDS, kızamık, tüberküloz, sıtmayı içeriyor; HSGM'de güncel resmi seri bulunamadı).",
+  "Kuduz riskli temas yıllık serisi (yalnız 'yılda yaklaşık 250.000' ifadesi teyit edildi) ve 2020 sonrası bruselloz vaka sayıları.",
+  "2015/18 sayılı 'Bulaşıcı Hastalıkların İhbar ve Bildirim Sistemi' Genelgesi metni ve güncel A-D grup listeleri (yalnız 2004 rehberi listesi teyit edildi).",
+  "224 sayılı Kanunun ilk uygulamasının 1963'te Muş ilinde başladığı bilgisi (SB tarihçesi yalnız '1963'te fiilen başladı' der; il adı devlet kaynağında teyit edilmedi).",
+  "Türkiye'nin ILO üyeliği (1932) – çıkmış soruda geçiyor, devlet kaynağında teyit edilmedi.",
+  "PM2,5 için ulusal limit değer (HKDY Yönetmeliği'nde yok) ve Türkiye geneli 2024–2025 hava kalitesi değerlendirme raporu (ÇŞİDB'nin en güncel ulusal göstergesi 2023 verisi).",
+  "İnsani Tüketim Amaçlı Sular Yönetmeliği'nde şebeke (içme-kullanma) suyu için ayrı E. coli/enterokok sınırının güncel (2016 sonrası) metni; EK-1(a) yalnız ambalajlı içme ve kaynak sularını listeliyor.",
+  "Tıbbi Atıkların Kontrolü Yönetmeliği'nin 2017 sonrası değişiklikleri kontrol edilmedi (RG 2017 asıl metni kullanıldı)."
+ ]
+}

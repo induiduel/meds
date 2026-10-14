@@ -3,6 +3,7 @@ import { ArrowUpRight, ChevronDown, LayoutGrid, List as ListIcon, Loader2, Searc
 import { safeJsonFetch } from '../../services/api';
 import type { LectureNote } from '../../types';
 import { PageHeader } from '../ui/PageHeader';
+import '../../styles/v12/secondary.css';
 import { fetchSearch, Highlight, TypeTag, TYPE_META, TYPE_ORDER, type SearchDocType, type SearchHit, type SearchResponse } from './searchShared';
 import { rememberSearch } from './SearchPalette';
 import { UnderstandingBar } from './QueryIntelUi';
@@ -122,7 +123,7 @@ export const SearchView: React.FC<SearchViewProps> = ({ initialQuery, focusId, c
   const total = data?.total ?? 0;
 
   return (
-    <div className="flex flex-col gap-4 min-w-0 pb-12">
+    <div className="flex flex-col gap-4 min-w-0 pb-12 o12-page o12-sr">
       <PageHeader title="Arama" description={query ? undefined : 'Slaytlar, özetler, çıkmış sorular ve ses kayıtlarının tamamında ara.'} />
 
       <form onSubmit={submit} role="search" className="ms-search-field is-page">
@@ -158,7 +159,7 @@ export const SearchView: React.FC<SearchViewProps> = ({ initialQuery, focusId, c
       )}
 
       {chips.length > 0 && (
-        <div className="flex gap-2 overflow-x-auto no-scrollbar -mx-4 px-4 sm:mx-0 sm:px-0" role="tablist" aria-label="Kaynak türü">
+        <div className="flex gap-2 overflow-x-auto no-scrollbar -mx-4 px-4 sm:mx-0 sm:px-0 o12-srtypes" role="tablist" aria-label="Kaynak türü">
           {(['all', ...chips] as const).map((t) => {
             const on = type === t;
             const count = t === 'all' ? allCount : byType[t];
@@ -186,7 +187,7 @@ export const SearchView: React.FC<SearchViewProps> = ({ initialQuery, focusId, c
           {[0, 1, 2, 3].map((i) => <div key={i} className="h-[92px] rounded-2xl bg-white border border-line animate-pulse" />)}
         </div>
       ) : !query ? null : items.length === 0 ? (
-        <div className="py-14 text-center text-md text-ink-3">“{query}” için sonuç bulunamadı. Daha kısa ya da farklı bir ifade dene.</div>
+        <div className="py-14 text-center text-md text-ink-3 o12-empty">“{query}” için sonuç bulunamadı. Daha kısa ya da farklı bir ifade dene.</div>
       ) : (
         <>
           <div className="rb-search-bar">
@@ -230,7 +231,7 @@ export const SearchView: React.FC<SearchViewProps> = ({ initialQuery, focusId, c
                       </div>
                       {SOURCE_ACTION[r.documentType] && (
                         <div className="ms-hit-actions">
-                          <button type="button" onClick={() => openSource(r)} disabled={openingId === r.id} className="h-10 px-4 rounded-full bg-accent-soft text-accent text-base font-semibold inline-flex items-center gap-1.5 cursor-pointer hover:bg-accent hover:text-white transition-colors disabled:opacity-60">
+                          <button type="button" onClick={() => openSource(r)} disabled={openingId === r.id} className="o12-btn is-tonal h-10 px-4 rounded-full bg-accent-soft text-accent text-base font-semibold inline-flex items-center gap-1.5 cursor-pointer hover:bg-accent hover:text-white transition-colors disabled:opacity-60">
                             {openingId === r.id ? <Loader2 className="w-4 h-4 animate-spin" /> : <ArrowUpRight className="w-4 h-4" />}
                             {SOURCE_ACTION[r.documentType]}
                           </button>
@@ -243,7 +244,7 @@ export const SearchView: React.FC<SearchViewProps> = ({ initialQuery, focusId, c
             })}
           </ol>
           {items.length < total && (
-            <button type="button" onClick={loadMore} disabled={loadingMore} className="self-center h-11 px-5 rounded-full border border-line-2 bg-white text-base font-semibold text-ink cursor-pointer hover:bg-canvas disabled:opacity-60 inline-flex items-center gap-2">
+            <button type="button" onClick={loadMore} disabled={loadingMore} className="o12-btn self-center h-11 px-5 rounded-full border border-line-2 bg-white text-base font-semibold text-ink cursor-pointer hover:bg-canvas disabled:opacity-60 inline-flex items-center gap-2">
               {loadingMore && <Loader2 className="w-4 h-4 animate-spin" />}
               Daha fazla göster
             </button>

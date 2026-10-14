@@ -1,5 +1,5 @@
 /**
- * MedSoru Slayt Eşleştirme, Bağlama ve Vurgulama Scripti (Script 2)
+ * MeDSor Slayt Eşleştirme, Bağlama ve Vurgulama Scripti (Script 2)
  * (scripts/match-and-link-lecture-slides.mjs)
  * 
  * Amaç:

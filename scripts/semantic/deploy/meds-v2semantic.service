@@ -1,5 +1,5 @@
 [Unit]
-Description=MedSoru Semantik Veri Modeli servisi (CPU e5 + FAISS, GPU yok)
+Description=MeDSor Semantik Veri Modeli servisi (CPU e5 + FAISS, GPU yok)
 Documentation=file:///home/indu/medsor/meds/scripts/semantic/README.md
 After=network.target
 

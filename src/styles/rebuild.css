@@ -1,6 +1,6 @@
 /*
  * Yeniden kurulum (2026-10-11) — tüm ekranlara uygulanan ortak düzeltmeler.
- * Tasarım: https://claude.ai/artifact/YFo4nFTe3aXDR6RgjkjSJ9 · MedSoru v6 tokenları.
+ * Tasarım: https://claude.ai/artifact/YFo4nFTe3aXDR6RgjkjSJ9 · MeDSor v6 tokenları.
  * Yalnız --color-* tokenları kullanılır; ham renk yok.
  */
 
@@ -1729,3 +1729,9 @@ html.theme-dark .deep-link-highlight-pulse, html[data-mode="dark"] .deep-link-hi
 .lcx-nosrc svg { width: 12px; height: 12px; }
 .lcx-nosrc small { font-size: 11px; font-weight: 650; white-space: nowrap; }
 @media (max-width: 479px) { .lcx-nosrc small { display: none; } .lcx-nosrc { padding: 0 4px; } }
+
+/* Kompakt çıkmış kartı (.qk) iç dolgusuz; kartın altına eklenen notlar ve "Diğer yıllardaki çıkmış örnekleri" bandı
+   kenara yapışıp simge/haplar çerçeveye taşıyordu → kartın yatay iç boşluğuna hizalanır */
+.qk > :is(.cx-note, .cx-alt) { margin-inline: var(--qk-x, 12px); min-width: 0; }
+.qk > .cx-alt { margin-top: 0; padding: 8px 0 10px; }
+.qk > .cx-alt > span { max-width: 100%; overflow-wrap: anywhere; }
