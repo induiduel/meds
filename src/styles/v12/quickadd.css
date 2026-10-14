@@ -1,0 +1,48 @@
+/*
+ * v12 Soru ekle (2026-10-14, kullanıcı isteği): "v10 gibi sade; yazmaya başlayınca tam ekran, aşama aşama".
+ * Yapı QuickAddHero'nun telefon yolu (sade kart + tam ekran sihirbaz: kök → tip → öncüller → şıklar → son).
+ * index.css'teki tam ekran ve sihirbaz kuralları yalnız ≤767 px'te geçerli; burada v12 için her genişlikte açılır
+ * ve geniş ekranda içerik ortadaki ~720 px okuma sütununa yerleşir. Renk yok: yalnız token.
+ */
+:root[data-design='v12'] {
+  /* Sade giriş sayfası: dar sütun, ortalı */
+  & .qa12 { width: 100%; max-width: 720px; margin-inline: auto; }
+
+  @media (min-width: 768px) {
+    & .ms-composer.is-full {
+      position: fixed; z-index: 70; inset: 0 0 auto 0; height: var(--vvh, 100dvh);
+      display: flex; flex-direction: column; border: 0; border-radius: 0; box-shadow: none; background: var(--color-white);
+      overflow: hidden; animation: v12-qa-in .22s var(--mo-ease) backwards;
+      --qa-pad: max(20px, calc((100% - 720px) / 2));
+    }
+    & .ms-composer.is-full.is-closing { animation: v12-qa-out .2s var(--mo-ease) forwards; }
+    & .ms-composer.is-full .ms-composer-top { display: flex; align-items: center; gap: 10px; height: 56px; padding: 0 var(--qa-pad); border-bottom: 1px solid var(--color-line-soft); flex-shrink: 0; }
+    & .ms-composer-close { width: 40px; height: 40px; border: 0; border-radius: 10px; background: var(--color-field); color: var(--color-ink-2); display: grid; place-items: center; cursor: pointer; }
+    & .ms-composer-close svg { width: 20px; height: 20px; }
+    & .ms-composer-title { flex: 1; min-width: 0; display: flex; flex-direction: column; line-height: 1.15; font: 600 16px/1.2 var(--font-sans); color: var(--color-ink); }
+    & .ms-composer-title small { font: 600 11px var(--font-mono); color: var(--color-ink-3); }
+    & .ms-composer-send { height: 38px; padding: 0 16px; border: 0; border-radius: 10px; background: var(--color-accent); color: var(--color-on-accent); font: 600 14px var(--font-sans); cursor: pointer; }
+    & .ms-composer-send:disabled { opacity: .45; cursor: default; }
+    & .ms-composer.is-full > textarea { flex: 1; min-height: 0 !important; padding: 24px var(--qa-pad) !important; font-family: var(--read-font, var(--font-sans)) !important; font-size: 19px !important; line-height: 1.65 !important; resize: none; overflow-y: auto; }
+    & .ms-composer.is-full > .ms-meta { display: none; }
+    & .ms-composer.is-full .wz-progress { display: block; height: 2px; background: var(--color-line-soft); flex-shrink: 0; }
+    & .wz-progress i { display: block; height: 100%; background: var(--color-accent); }
+    & .ms-composer.is-full > textarea[hidden] { display: none !important; }
+    & .ms-composer.is-full .wz-panel { display: flex; flex-direction: column; gap: 14px; flex: 1; min-height: 0; overflow-y: auto; overscroll-behavior: contain; padding: 24px var(--qa-pad) 28px; }
+    & .wz-panel.is-fwd, & .wz-panel.is-back { animation: v12-op-in .18s var(--mo-ease) backwards; }
+    & .wz-types { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
+
+  /* Her genişlikte v12 dili: tek yazı ailesi, sakin köşeler, gölgesiz */
+  & .ms-composer.is-full .ms-composer-title { font-family: var(--font-sans); font-weight: 600; }
+  & .wz-q { font-family: var(--font-sans); font-weight: 600; font-size: 18px; }
+  & .wz-type { border-radius: 12px; }
+  & .wz-type:active { transform: none; }
+  & .wz-submit { border-radius: 10px; font-weight: 600; }
+  & :is(.wz-prem li, .wz-clue, .wz-add) { border-radius: 10px; }
+}
+@keyframes v12-qa-in { from { opacity: 0; } }
+@keyframes v12-qa-out { to { opacity: 0; } }
+@media (prefers-reduced-motion: reduce) {
+  :root[data-design='v12'] .ms-composer.is-full { animation: none !important; }
+}

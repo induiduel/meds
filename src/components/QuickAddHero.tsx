@@ -40,8 +40,8 @@ import { getSmartQuestionAssistant, SmartQuestionAssistantResult } from '../serv
 import { Colored, WordLegend, ContextBadge, sharedWordColors } from './draftHighlight';
 import { MetaPicker } from './ui/MetaPicker';
 import './quickadd/quickadd.css';
+import '../styles/v12/quickadd.css';
 import { useAppearance } from '../utils/appearance';
-import { QuickAddV12 } from './v12/QuickAddV12';
 
 const AiQuestionOptimizerModal = React.lazy(() =>
   import('./AiQuestionOptimizerModal').then((m) => ({ default: m.AiQuestionOptimizerModal }))
@@ -250,7 +250,7 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
       ? committee.disciplines
       : ['Tıbbi Patoloji', 'Tıbbi Farmakoloji', 'Tıbbi Biyokimya', 'Halk Sağlığı', 'İç Hastalıkları'];
 
-  // v12 "Net": ayrı yapı (components/v12/QuickAddV12); tüm durum ve mantık bu bileşende kalır
+  // v12 "Net": sade sayfa + her genişlikte tam ekran sihirbaz (eski ayrı yapı components/v12/QuickAddV12 artık kullanılmıyor)
   const v12 = useAppearance().design === 'v12';
   const [mode, setMode] = useState<Mode>('stem');
   // Each mode keeps its own text: typing a stem must not leak into the clue
@@ -956,7 +956,7 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
   const isClosingRef = React.useRef(false);
 
   const openFull = () => {
-    if (fullRef.current || !window.matchMedia('(max-width: 767px)').matches) return;
+    if (fullRef.current || (!v12 && !window.matchMedia('(max-width: 767px)').matches)) return;
     isClosingRef.current = false;
     setFull('open');
     setWizRaw('kok');
@@ -1020,8 +1020,8 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
     return () => mq.removeEventListener('change', on);
   }, []);
   useEffect(() => {
-    if (!isWide && !v12) return;
-    // Geniş ekranda (ve v12'de her genişlikte) kök ve şıklar aynı anda görünür: tek kip (kök); telefondan büyütülürse tam ekran kapanır
+    if (!isWide || v12) return;
+    // Geniş ekranda kök ve şıklar aynı anda görünür: tek kip (kök); telefondan büyütülürse tam ekran kapanır (v12'de sihirbaz her genişlikte)
     if (mode !== 'stem') setMode('stem');
     if (fullRef.current) setFull(false);
   }, [isWide, mode, v12]);
@@ -1070,122 +1070,9 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
   }, [successMessage]);
   const formEmpty = !hasAnyText && filledOptionCount === 0 && !claimedAnswer && !premises.some((p) => p.trim());
 
-  if (v12) {
-    return (
-      <>
-        <QuickAddV12
-          committee={committee}
-          committees={sortedCommittees}
-          activeCommitteeId={activeCommitteeId}
-          committeeLabel={titleCase}
-          isCommitteeLocked={(id: string) => isCommitteeLocked(id, examYear)}
-          onSelectCommittee={onSelectCommittee}
-          isLocked={isLocked}
-          isCollecting={isCollecting}
-          disciplines={disciplines}
-          discipline={discipline}
-          onDiscipline={(d) => { setDiscipline(d); setUserManualDiscipline(true); setAutoDisc(false); }}
-          discAuto={autoDisc && !userManualDiscipline}
-          examYear={examYear}
-          onExamYear={setExamYear}
-          years={academicYears()}
-          currentYear={currentAcademicYear()}
-          questionNumber={questionNumber}
-          onQuestionNumber={(v) => { setQuestionNumber(v.replace(/[^0-9]/g, '').slice(0, 3)); setUserManualNumber(true); setAutoNum(false); }}
-          numAuto={autoNum && !userManualNumber}
-          stem={texts.stem}
-          onStem={(v) => setTexts((prev) => ({ ...prev, stem: v }))}
-          stemPlaceholder={PLACEHOLDERS.stem}
-          clue={texts.clue}
-          onClue={(v) => setTexts((prev) => ({ ...prev, clue: v }))}
-          cluePlaceholder={PLACEHOLDERS.clue}
-          qType={qType}
-          onQType={setQType}
-          premises={premises}
-          premiseMax={PREMISE_MAX}
-          onPremiseAt={setPremiseAt}
-          onAddPremise={addPremise}
-          onRemovePremise={removePremise}
-          onPastePremises={pastePremises}
-          looksOnculu={looksOnculu}
-          stemPremiseCount={stemPremiseLines.length}
-          onExtractPremises={extractPremisesFromStem}
-          truePremises={truePremises}
-          filledPremiseCount={filledPremiseCount}
-          onFillStandard={fillStandardOptions}
-          comboChips={comboChips}
-          onFillNext={fillNextOption}
-          options={options}
-          setOptions={setOptions}
-          optionCount={optionCount}
-          setOptionCount={setOptionCount}
-          answer={claimedAnswer}
-          onAnswer={setClaimedAnswer}
-          answerReason={answerReason}
-          onAnswerReason={setAnswerReason}
-          linkedQuestion={linkedQuestion}
-          onUnlink={() => { setLinkedQuestion(null); setQuestionNumber(''); }}
-          isSearching={isSearching}
-          queryText={debouncedText}
-          matches={realtimeMatches}
-          selectedMatchIds={selectedMatchIds}
-          onToggleMatch={toggleSelectMatch}
-          onSelectAllMatches={selectAllMatches}
-          onClearMatchSelection={clearSelection}
-          onLink={handleLinkToQuestion}
-          onReject={rejectMatch}
-          onMerge={handleMergeAndGroupSelected}
-          isMerging={isMergingSelected}
-          isAdmin={isAdmin}
-          onOptimize={setOptimizingQuestion}
-          sharedColors={sharedColors}
-          highlightMin={HIGHLIGHT_MIN_SCORE}
-          stemOf={questionStemText}
-          similar={similar}
-          onTransfer={handleTransferEntireQuestion}
-          onCopyStem={handleCopyQuestionStem}
-          sources={sources}
-          assistant={smartAssistant}
-          onApplyCommittee={() => {
-            const sa = smartAssistant;
-            if (!sa?.predictedCommittee) return;
-            onSelectCommittee(sa.predictedCommittee.committeeId);
-            if (sa.predictedDiscipline) setDiscipline(sa.predictedDiscipline.discipline);
-            toast.success('Kurul Değiştirildi', `${sa.predictedCommittee.committeeName} kuruluna geçildi.`);
-          }}
-          onApplyDiscipline={(d) => { setDiscipline(d); setUserManualDiscipline(true); setAutoDisc(false); }}
-          savedDraftAt={savedDraft?.at || null}
-          formEmpty={formEmpty}
-          onSaveDraft={saveDraft}
-          onRestoreDraft={restoreDraft}
-          onDropDraft={dropDraft}
-          formError={formError}
-          successMessage={successMessage}
-          intakeId={intakeId}
-          onCloseIntake={() => setIntakeId(null)}
-          isSubmitting={isSubmitting}
-          onSubmit={handleSubmit}
-        />
-        {optimizingQuestion && (
-          <React.Suspense fallback={null}>
-            <AiQuestionOptimizerModal
-              question={optimizingQuestion}
-              isOpen={Boolean(optimizingQuestion)}
-              onClose={() => setOptimizingQuestion(null)}
-              currentUser={currentUser}
-              onSaved={async (updated) => {
-                setOptimizingQuestion(null);
-                toast.success('Taslak Geliştirildi', `Soru #${updated.questionNumber || 'taslak'} güncellendi; inceleme bitene kadar İnceleniyor olarak kalır.`);
-                if (onQuestionsUpdated) await onQuestionsUpdated();
-              }}
-            />
-          </React.Suspense>
-        )}
-      </>
-    );
-  }
+  // v12 (2026-10-14, kullanıcı isteği): v10 kadar sade sayfa + her genişlikte tam ekran adım adım sihirbaz (aşağıdaki telefon yolu).
 
-  if (isWide) {
+  if (isWide && !v12) {
     const riskCls = (s: number) => (s >= 80 ? 'is-bad' : s >= 65 ? 'is-warn' : 'is-mid');
     const yearLabel = (y: string) => `${y.slice(0, 4)}–${y.slice(7, 9)}`;
     const hasSuggest = !!smartAssistant && (!!smartAssistant.crossCommitteeWarning || smartAssistant.suggestedTopics.length > 0);
@@ -1637,7 +1524,7 @@ export const QuickAddHero: React.FC<QuickAddHeroProps> = ({
           }
         }}
         aria-busy={isSubmitting}
-        className="relative flex flex-col gap-3"
+        className={`relative flex flex-col gap-3 ${v12 ? 'qa12' : ''}`}
       >
         <BlurOverlay show={isSubmitting} label="Havuza ekleniyor…" hint="Benzer parçalar varsa aynı soruya bağlıyoruz" />
         {mode === 'option' ? (
