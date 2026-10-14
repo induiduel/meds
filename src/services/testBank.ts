@@ -3,7 +3,8 @@
  *  - Çıkmış sorular (arşiv; studyStore.loadArchiveBank)
  *  - Kazanım temelli örnek sorular (ornek_sorular/k1)
  *  - Öğren destelerinin etkileşimli ögeleri: mini soru (micro_quiz), klinik karar (branching_logic),
- *    tuzak avı (spot_the_lie → "hangisi yanlıştır?")
+ *    tuzak avı (spot_the_lie → "hangisi yanlıştır?"), boşluk doldurma (cloze_masking → aynı destenin
+ *    başka gizli terimleri çeldirici olan çoktan seçmeli)
  * Soru havuzundaki kullanıcı eklemeleri bilerek DIŞARIDA bırakılır (doğrulanmamış, kullanıcı kaynaklı veri).
  *
  * Örnek soru dosyaları ve desteler büyük olduğundan hepsi yüklenmez: ölçütlere uyan dosyalar karıştırılır ve
@@ -15,16 +16,19 @@ import { DECK_CATALOG, loadDeck } from '../data/deckStore';
 import { ORNEK_INDEX, loadOrnekQuestions, miniQuestionsFromDeck, type PdfQuestion } from '../components/pdf/pdfSources';
 import { cleanWhy } from '../components/learn/lesson/LessonBlocks';
 
-export type TestSource = 'cikmis' | 'ornek' | 'mini' | 'vaka' | 'tuzak';
+export type TestSource = 'cikmis' | 'ornek' | 'mini' | 'vaka' | 'tuzak' | 'bosluk';
+type DeckSource = 'mini' | 'vaka' | 'tuzak' | 'bosluk';
+const DECK_SOURCES: DeckSource[] = ['mini', 'vaka', 'tuzak', 'bosluk'];
 export type Difficulty = 'kolay' | 'orta' | 'zor';
 
-export const SOURCE_ORDER: TestSource[] = ['cikmis', 'ornek', 'mini', 'vaka', 'tuzak'];
+export const SOURCE_ORDER: TestSource[] = ['cikmis', 'ornek', 'mini', 'vaka', 'tuzak', 'bosluk'];
 export const SOURCE_INFO: Record<TestSource, { label: string; hint: string; kurul1Only: boolean }> = {
   cikmis: { label: 'Çıkmış', hint: 'Geçmiş sınav soruları', kurul1Only: false },
   ornek: { label: 'Örnek soru', hint: 'Kazanım temelli, zorluk seçilir', kurul1Only: true },
   mini: { label: 'Mini soru', hint: 'Öğren adımlarındaki sorular', kurul1Only: true },
   vaka: { label: 'Klinik karar', hint: 'Öğren vaka senaryoları', kurul1Only: true },
   tuzak: { label: 'Tuzak avı', hint: 'Hangisi yanlıştır?', kurul1Only: true },
+  bosluk: { label: 'Boşluk doldurma', hint: 'Gizli terimi seç', kurul1Only: true },
 };
 /** Örnek sorular ve Öğren desteleri şimdilik yalnız Kurul 1'de */
 export const KURUL1 = 'donem3-kurul1';
@@ -64,6 +68,8 @@ export interface TestCriteria {
 export const DEFAULT_CRITERIA: TestCriteria = { sources: [...SOURCE_ORDER], committeeId: 'all', disciplines: [], difficulties: [], count: 20 };
 
 const MAX_FILES = 12;
+/** Öğren desteleri: yalnız seçili türde ögesi olanlar yüklenir */
+const MAX_DECKS = 30;
 /** Testte görsel gösterilmez: şekle/görsele dayanan sorular dışarıda kalır */
 const NEEDS_IMAGE = /(?:şekil|görsel|resim|figür)\s*\d|(?:yukarıdaki|aşağıdaki|verilen) (?:şekil|görsel|resim|fotoğraf|mikrograf)|\bbu (?:görsel|resim|fotoğraf|mikrograf)/i;
 const needsImage = (q: { stem: string; options: { text: string }[] }) => NEEDS_IMAGE.test(q.stem) || q.options.some((o) => /(şekil|görsel)\s*\d/i.test(o.text));
@@ -156,22 +162,69 @@ function lieQuestionsFromDeck(deck: any): PdfQuestion[] {
   return out;
 }
 
-/** Ölçütlere uyan aday dosya sayıları (kurulumdaki sayaçlar için; yükleme yapmaz). */
+/** Boşluk doldurma: cümledeki gizli terim boşluk olur; çeldiriciler aynı destenin (öğretilmiş) diğer gizli terimleri */
+function clozeQuestionsFromDeck(deck: any): PdfQuestion[] {
+  const all: { e: any; slideNo: number; j: number }[] = [];
+  (Array.isArray(deck?.slides) ? deck.slides : []).forEach((sl: any, idx: number) => {
+    const els: any[] = Array.isArray(sl.interactiveElements) ? sl.interactiveElements : Array.isArray(sl.elements) ? sl.elements : [];
+    els.filter((e) => e?.type === 'cloze_masking').forEach((e, j) => all.push({ e, slideNo: sl.slideNumber ?? idx + 1, j }));
+  });
+  const terms = [...new Set(all.map(({ e }) => s(e.maskedTerm)).filter(Boolean))];
+  const out: PdfQuestion[] = [];
+  all.forEach(({ e, slideNo, j }) => {
+    const term = s(e.maskedTerm);
+    const sentence = s(e.sentence);
+    const at = sentence.toLocaleLowerCase('tr').indexOf(term.toLocaleLowerCase('tr'));
+    if (!term || at < 0) return;
+    const low = term.toLocaleLowerCase('tr');
+    const words = term.split(/\s+/).length;
+    // Benzer uzunluktaki terimler önce (tek kelimeye karşı uzun ifade cevabı ele vermesin)
+    const pool = shuffle(terms.filter((x) => x.toLocaleLowerCase('tr') !== low && !sentence.toLocaleLowerCase('tr').includes(x.toLocaleLowerCase('tr'))))
+      .sort((a, b) => Math.abs(a.split(/\s+/).length - words) - Math.abs(b.split(/\s+/).length - words));
+    const distractors = pool.slice(0, 4);
+    if (distractors.length < 3) return;
+    const opts = shuffle([{ text: term, ok: true }, ...distractors.map((text) => ({ text, ok: false }))]).map((o, k) => ({ ...o, key: LETTERS[k] }));
+    const blank = `${sentence.slice(0, at)}_____${sentence.slice(at + term.length)}`;
+    const hint = s(e.hint);
+    out.push({
+      id: `${deck.id}:${slideNo}:cloze${j}`,
+      source: 'mini',
+      discipline: s(deck.discipline),
+      topic: s(deck.shortTitle || deck.title),
+      stem: `${blank}${hint ? `\n\nİpucu: ${hint}` : ''}\n\nBoşluğa aşağıdakilerden hangisi gelmelidir?`,
+      options: opts.map(({ ok: _ok, ...o }) => ({ ...o, why: _ok ? cleanWhy(e.explanation) || sentence : undefined })),
+      answer: opts.find((o) => o.ok)?.key,
+      explanation: sentence,
+      refs: [],
+      badges: [],
+    });
+  });
+  return out;
+}
+
+/** Destenin seçili türlerdeki test ögesi sayısı (derlemede kataloğa yazılır: splitLearningDecks testCounts) */
+const deckTestCount = (d: any, srcs: readonly TestSource[]) =>
+  DECK_SOURCES.reduce((n, x) => n + (srcs.includes(x) ? Number(d?.testCounts?.[x]) || 0 : 0), 0);
+
+/** Ölçütlere uyan soru sayıları (kurulumdaki sayaçlar için; yükleme yapmaz). */
 export function catalogCounts(c: Pick<TestCriteria, 'committeeId' | 'disciplines'>) {
   const k1 = c.committeeId === 'all' || c.committeeId === KURUL1;
   const crit = { ...DEFAULT_CRITERIA, ...c };
   const decks = k1 ? DECK_CATALOG.filter((d) => discOk(crit, disciplineName(d.discipline))) : [];
   const ornek = k1 ? ORNEK_INDEX.filter((r) => discOk(crit, disciplineName(r.ders))) : [];
-  return { decks: decks.length, ornekFiles: ornek.length, ornekQuestions: ornek.reduce((n, r) => n + (r.soru_sayisi || 0), 0) };
+  const deckItems = Object.fromEntries(DECK_SOURCES.map((x) => [x, decks.reduce((n, d) => n + deckTestCount(d, [x]), 0)])) as Record<DeckSource, number>;
+  return { decks: decks.length, ornekFiles: ornek.length, ornekQuestions: ornek.reduce((n, r) => n + (r.soru_sayisi || 0), 0), ...deckItems };
 }
 
 /** Kurulumdaki ders listesi: çıkmış bankası + (Kurul 1 seçiliyse) deste ve örnek dersleri */
-export function disciplineOptions(archive: TestQuestion[], committeeId: string): [string, number][] {
+export function disciplineOptions(archive: TestQuestion[], committeeId: string, sources: readonly TestSource[] = SOURCE_ORDER): [string, number][] {
   const m = new Map<string, number>();
-  archive.filter((q) => committeeId === 'all' || q.committeeId === committeeId).forEach((q) => m.set(q.discipline, (m.get(q.discipline) || 0) + 1));
+  const srcs = sources.length ? sources : SOURCE_ORDER;
+  const add = (d: string, n: number) => m.set(d, (m.get(d) || 0) + n);
+  if (srcs.includes('cikmis')) archive.filter((q) => committeeId === 'all' || q.committeeId === committeeId).forEach((q) => add(q.discipline, 1));
   if (committeeId === 'all' || committeeId === KURUL1) {
-    DECK_CATALOG.forEach((d) => m.set(disciplineName(d.discipline), (m.get(disciplineName(d.discipline)) || 0) + (d.questionCount || 0)));
-    ORNEK_INDEX.forEach((r) => m.set(disciplineName(r.ders), (m.get(disciplineName(r.ders)) || 0) + (r.soru_sayisi || 0)));
+    DECK_CATALOG.forEach((d) => add(disciplineName(d.discipline), deckTestCount(d, srcs)));
+    if (srcs.includes('ornek')) ORNEK_INDEX.forEach((r) => add(disciplineName(r.ders), r.soru_sayisi || 0));
   }
   return [...m.entries()].filter(([, n]) => n > 0).sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0], 'tr'));
 }
@@ -235,17 +288,18 @@ export async function buildTest(c: TestCriteria, onProgress?: (msg: string) => v
     pools.ornek = acc;
   }
 
-  const deckSources = sources.filter((x): x is 'mini' | 'vaka' | 'tuzak' => x === 'mini' || x === 'vaka' || x === 'tuzak');
+  const deckSources = sources.filter((x): x is DeckSource => (DECK_SOURCES as TestSource[]).includes(x));
   if (deckSources.length && usesKurul1(c)) {
     onProgress?.('Öğren desteleri yükleniyor…');
-    const decks = shuffle(DECK_CATALOG.filter((d) => discOk(c, disciplineName(d.discipline))));
-    const acc: Record<'mini' | 'vaka' | 'tuzak', TestQuestion[]> = { mini: [], vaka: [], tuzak: [] };
-    for (const entry of decks.slice(0, MAX_FILES)) {
+    // Seçili türde ögesi olmayan desteler (ör. etkileşimsiz V1) hiç yüklenmez
+    const decks = shuffle(DECK_CATALOG.filter((d) => discOk(c, disciplineName(d.discipline)) && deckTestCount(d, deckSources) > 0));
+    const acc: Record<DeckSource, TestQuestion[]> = { mini: [], vaka: [], tuzak: [], bosluk: [] };
+    for (const entry of decks.slice(0, MAX_DECKS)) {
       const deck = await loadDeck<any>(entry.id).catch(() => null);
       if (!deck) continue;
       const origin = `Öğren · ${s(entry.shortTitle || entry.title)}`;
-      const got: Record<'mini' | 'vaka' | 'tuzak', number> = { mini: 0, vaka: 0, tuzak: 0 };
-      const add = (q: PdfQuestion, src: 'mini' | 'vaka' | 'tuzak') => {
+      const got: Record<DeckSource, number> = { mini: 0, vaka: 0, tuzak: 0, bosluk: 0 };
+      const add = (q: PdfQuestion, src: DeckSource) => {
         if (!deckSources.includes(src) || got[src] >= perFileCap(per)) return;
         const t = fromPdf(q, src, origin);
         if (t) {
@@ -257,6 +311,7 @@ export async function buildTest(c: TestCriteria, onProgress?: (msg: string) => v
         shuffle(miniQuestionsFromDeck(deck, deckSources.includes('vaka'))).forEach((q) => add(q, q.badges.some((b) => b.label === 'Klinik karar') ? 'vaka' : 'mini'));
       }
       if (deckSources.includes('tuzak')) shuffle(lieQuestionsFromDeck(deck)).forEach((q) => add(q, 'tuzak'));
+      if (deckSources.includes('bosluk')) shuffle(clozeQuestionsFromDeck(deck)).forEach((q) => add(q, 'bosluk'));
       if (deckSources.every((x) => acc[x].length >= per * 2)) break;
     }
     deckSources.forEach((x) => (pools[x] = acc[x]));

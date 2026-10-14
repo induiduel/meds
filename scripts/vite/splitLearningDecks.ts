@@ -91,7 +91,9 @@ export function splitLearningDecks(root: string): Plugin {
           try {
             itemCount = fs.existsSync(itemsDir) ? fs.readdirSync(itemsDir).filter((f) => f.endsWith('.json')).length : 0;
           } catch {}
-          if (itemCount === valid.length && valid.length > 0) return;
+          // Eski biçimli katalog (Test çöz sayaçları yok) yeniden üretilir
+          const fresh = fs.readFileSync(catalogFile, 'utf8').includes('"testCounts"');
+          if (fresh && itemCount === valid.length && valid.length > 0) return;
         }
       } catch {}
     }
@@ -116,11 +118,28 @@ export function splitLearningDecks(root: string): Plugin {
       // Sürüm seçimi (V1/V2) için öğrenciye gösterilen ölçüler
       let interactiveCount = 0;
       let wordCount = 0;
+      // Test çöz sayaçları (services/testBank.ts ile aynı geçerlilik koşulları)
+      const testCounts = { mini: 0, vaka: 0, tuzak: 0, bosluk: 0 };
       const grp = d.shortTitle || d.title;
       const dGrp = deckGroup(d.discipline);
       for (const s of slides) {
         const els = s.interactiveElements || s.elements || (s.interactiveElement ? [s.interactiveElement] : []);
         interactiveCount += Array.isArray(els) ? els.length : 0;
+        for (const e of Array.isArray(els) ? els : []) {
+          if (e?.type === 'micro_quiz') {
+            const o = (e.microQuizOptions || e.options || []).filter((x: any) => String(x?.text ?? '').trim());
+            if (String(e.question || e.sentence || '').trim() && o.length >= 2 && o.some((x: any) => x.isCorrect)) testCounts.mini++;
+          } else if (e?.type === 'branching_logic') {
+            const o = (e.options || []).filter((x: any) => String(x?.text ?? '').trim());
+            if (String(e.scenario || e.question || '').trim() && o.length >= 2 && o.some((x: any) => x.isCorrect)) testCounts.vaka++;
+          } else if (e?.type === 'spot_the_lie') {
+            const it = (e.items || e.statements || []).filter((x: any) => String(x?.text ?? '').trim());
+            if (it.length >= 3 && it.length <= 5 && it.filter((x: any) => x.isLie).length === 1) testCounts.tuzak++;
+          } else if (e?.type === 'cloze_masking') {
+            const m = String(e.maskedTerm || '').trim();
+            if (m && String(e.sentence || '').toLocaleLowerCase('tr').includes(m.toLocaleLowerCase('tr'))) testCounts.bosluk++;
+          }
+        }
         wordCount += String(s.synthesisNarrative || s.content || '').split(/\s+/).filter(Boolean).length;
         if (Array.isArray(s.flashcards)) {
           s.flashcards.forEach((c: any, i: number) => {
@@ -142,6 +161,7 @@ export function splitLearningDecks(root: string): Plugin {
         ...meta,
         slideCount: slides.length,
         interactiveCount,
+        testCounts,
         wordCount,
         sizeKb: Math.round(Buffer.byteLength(JSON.stringify(d)) / 1024),
         questionCount,

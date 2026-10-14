@@ -1,12 +1,12 @@
 /**
  * /test — Test çöz: önce "Test oluştur" kurulumu, sonra mevcut çözücü (PracticeMode; v10/v11/v12 görünümleri).
- * Kaynaklar: çıkmış, örnek soru, Öğren mini soru / klinik karar / tuzak avı (services/testBank.ts).
+ * Kaynaklar: çıkmış, örnek soru, Öğren mini soru / klinik karar / tuzak avı / boşluk doldurma (services/testBank.ts).
  * Kullanıcı kaynak, kurul, ders, zorluk ve soru sayısını seçebilir; hiçbir şey seçmezse ya da "Rastgele"ye
  * basarsa bütün kaynaklardan rastgele kurulur. Soru havuzundaki kullanıcı soruları bu ekranda listelenmez.
  * Sınıf öneki `tb-` (styles/test-builder.css); v12 kuralları :root[data-design='v12'] altında.
  */
 import React, { useEffect, useMemo, useState } from 'react';
-import { ArrowLeft, Shuffle, Play, Archive, Target, HelpCircle, Stethoscope, SearchX, Check, RotateCcw } from 'lucide-react';
+import { ArrowLeft, Shuffle, Play, Archive, Target, HelpCircle, Stethoscope, SearchX, TextCursorInput, Check, RotateCcw } from 'lucide-react';
 import type { QuestionItem } from '../../types';
 import { PracticeMode } from '../PracticeMode';
 import { toast } from '../ui/Toast';
@@ -24,7 +24,7 @@ interface TestHubProps {
 const KEY = 'medsoru_test_kriter_v1';
 const COUNTS = [10, 20, 40, 60, 100];
 const LEVELS: [Difficulty, string][] = [['kolay', 'Kolay'], ['orta', 'Orta'], ['zor', 'Zor']];
-const ICONS: Record<TestSource, React.ElementType> = { cikmis: Archive, ornek: Target, mini: HelpCircle, vaka: Stethoscope, tuzak: SearchX };
+const ICONS: Record<TestSource, React.ElementType> = { cikmis: Archive, ornek: Target, mini: HelpCircle, vaka: Stethoscope, tuzak: SearchX, bosluk: TextCursorInput };
 const fmt = (n: number) => n.toLocaleString('tr-TR');
 
 const readSaved = (): TestCriteria => {
@@ -91,19 +91,26 @@ export const TestHub: React.FC<TestHubProps> = ({ onExit }) => {
 
   const committees = useMemo(() => {
     const m = new Map<string, number>();
-    (archive || []).forEach((q) => q.committeeId && m.set(q.committeeId, (m.get(q.committeeId) || 0) + 1));
-    if (!m.has(KURUL1)) m.set(KURUL1, 0);
+    const srcs = c.sources.length ? c.sources : SOURCE_ORDER;
+    (archive || []).forEach((q) => q.committeeId && m.set(q.committeeId, (m.get(q.committeeId) || 0) + (srcs.includes('cikmis') ? 1 : 0)));
+    // Kurul 1: seçili kaynaklara göre örnek + Öğren ögeleri de sayılır
+    const k1 = catalogCounts({ committeeId: KURUL1, disciplines: [] });
+    m.set(KURUL1, (m.get(KURUL1) || 0) + srcs.reduce((n, src) => n + (src === 'cikmis' ? 0 : src === 'ornek' ? k1.ornekQuestions : k1[src]), 0));
     const order = Object.keys(COMMITTEE_NAME);
     const rank = (id: string) => (order.indexOf(id) < 0 ? 99 : order.indexOf(id));
     return [...m.entries()].sort((a, b) => rank(a[0]) - rank(b[0]) || a[0].localeCompare(b[0], 'tr', { numeric: true }));
-  }, [archive]);
-  const discOpts = useMemo(() => disciplineOptions(archive || [], c.committeeId), [archive, c.committeeId]);
-  // Kurul değişince listede olmayan ders seçimleri düşer
+  }, [archive, c.sources]);
+  const discOpts = useMemo(() => disciplineOptions(archive || [], c.committeeId, c.sources), [archive, c.committeeId, c.sources]);
+  // Kurul değişince listede olmayan ders seçimleri düşer (kaynak değişimi seçimi silmez; ders 0 ile görünür kalır)
+  const discList = useMemo(() => {
+    const seen = new Set(discOpts.map(([d]) => d));
+    return [...discOpts, ...c.disciplines.filter((d) => !seen.has(d)).map((d) => [d, 0] as [string, number])];
+  }, [discOpts, c.disciplines]);
   useEffect(() => {
     if (!archive) return;
-    const ok = new Set(discOpts.map(([d]) => d));
+    const ok = new Set(disciplineOptions(archive, c.committeeId).map(([d]) => d));
     setC((prev) => (prev.disciplines.every((d) => ok.has(d)) ? prev : { ...prev, disciplines: prev.disciplines.filter((d) => ok.has(d)) }));
-  }, [discOpts, archive]);
+  }, [archive, c.committeeId]);
 
   const k1Open = c.committeeId === 'all' || c.committeeId === KURUL1;
   const cat = useMemo(() => catalogCounts(c), [c]);
@@ -115,9 +122,13 @@ export const TestHub: React.FC<TestHubProps> = ({ onExit }) => {
     if (src === 'cikmis') return archive ? fmt(archiveCount) : '…';
     if (!k1Open) return '—';
     if (src === 'ornek') return fmt(cat.ornekQuestions);
-    return `${cat.decks} deste`;
+    return fmt(cat[src]);
   };
   const activeSources = c.sources.filter((src) => !SOURCE_INFO[src].kurul1Only || k1Open);
+  const available = (activeSources.length ? activeSources : SOURCE_ORDER.filter((src) => !SOURCE_INFO[src].kurul1Only || k1Open)).reduce(
+    (n, src) => n + (src === 'cikmis' ? archiveCount : src === 'ornek' ? cat.ornekQuestions : cat[src]),
+    0
+  );
 
   const start = async (crit: TestCriteria, label: string) => {
     if (busy) return;
@@ -238,7 +249,7 @@ export const TestHub: React.FC<TestHubProps> = ({ onExit }) => {
           </div>
           <div className="tb-chips is-scroll">
             {!archive && !archiveErr && <span className="tb-hint">Dersler yükleniyor…</span>}
-            {discOpts.map(([d, n]) => {
+            {discList.map(([d, n]) => {
               const on = c.disciplines.includes(d);
               return (
                 <button key={d} type="button" aria-pressed={on} className={`tb-chip ${on ? 'is-on' : ''}`} onClick={() => patch({ disciplines: toggle(c.disciplines, d) })}>
@@ -286,6 +297,7 @@ export const TestHub: React.FC<TestHubProps> = ({ onExit }) => {
         <footer className="tb-foot">
           <p className="tb-sum" role="status">
             <b>{busy || `${c.count} soru`}</b>
+            {!busy && <span>{archive ? `${fmt(available)} uygun soru` : 'uygun sorular sayılıyor…'}</span>}
             {!busy && (
               <span>
                 {[
