@@ -16,10 +16,12 @@
  */
 
 import { getCustomApiUrl } from './api';
+import { getOwner } from './userScope';
 import { getNetState } from './net';
 import { getDeviceToken, getVoterId } from '../utils/voterId';
 import { auth, SAVED_NAME_KEY, SAVED_STUDENT_NUMBER_KEY } from './auth';
 import { replaceNotesFromSync, StudyNote } from './studyStore';
+import { getResetStamps, setResetStamps, type ProgressResetStamps } from './progressReset';
 import {
   applyKv,
   collectKv,
@@ -75,6 +77,8 @@ export interface FullUserDataBundle {
   notes: StudyNote[];
   /** Silinen notların mezar taşları (id → silinme zamanı); birleştirmede silinen not geri gelmesin */
   notesDeleted?: Record<string, string>;
+  /** İlerlemeyi sıfırlama zamanları (kapsam → ISO); birleşim bu zamandan eski çözümleri/kartları geri getirmez */
+  progressReset?: ProgressResetStamps;
   comments?: Array<{ questionId: string; text: string; at?: string }>;
   clientUpdatedAt: string;
   lastBackupAt?: string;
@@ -172,6 +176,7 @@ export function collectLocalUserData(): FullUserDataBundle {
     notificationsDeleted,
     notes,
     notesDeleted,
+    progressReset: getResetStamps(),
     clientUpdatedAt: new Date().toISOString(),
   };
 }
@@ -197,7 +202,7 @@ export function applyBundleToLocal(bundle: FullUserDataBundle, uid?: string): vo
 }
 
 function applyBundleInner(bundle: FullUserDataBundle): void {
-  const st = bundle?.stats || {};
+  const st: any = { ...(bundle?.stats || {}) };
   const keyOf = (x: any) => (x && typeof x === 'object' ? String(x.id ?? x.at ?? x.date ?? x.timestamp ?? JSON.stringify(x)) : String(x));
   const union = (local: any[], remote: any[], pick: (l: any, r: any) => any = (l) => l) => {
     const m = new Map<string, any>();
@@ -209,6 +214,29 @@ function applyBundleInner(bundle: FullUserDataBundle): void {
     }
     return Array.from(m.values());
   };
+
+  // İlerleme sıfırlaması: daha yeni bir sıfırlama geldiyse yereldeki o kapsam silinir (uzak veri zaten sıfırlanmış);
+  // her durumda sıfırlamadan önceki uzak kayıtlar aşağıdaki birleşime girmez.
+  const localReset = getResetStamps();
+  const remoteReset = bundle.progressReset || {};
+  const reset: ProgressResetStamps = { ...localReset };
+  for (const scope of ['soru', 'kart'] as const) {
+    const r = remoteReset[scope];
+    if (!r || r <= (localReset[scope] || '')) continue;
+    reset[scope] = r;
+    const keys = scope === 'soru' ? ['medsoru_study_progress_v1', 'medsoru_study_review_v1', 'medsoru_selftest_history_v1'] : ['medsoru_flashcards_v1'];
+    for (const k of keys) localStorage.removeItem(k);
+  }
+  if (reset.soru !== localReset.soru || reset.kart !== localReset.kart) setResetStamps(reset);
+  const remoteOlder = (scope: 'soru' | 'kart') => Boolean(reset[scope]) && (remoteReset[scope] || '') < reset[scope]!;
+  const afterReset = (at: unknown) => !reset.soru || String(at || '') > reset.soru;
+  if (remoteOlder('soru')) {
+    // Sıfırlamayı bilmeyen eski yedek: zamanı olanlardan yalnız sonrası, zamansız yanlış listesi hiç alınmaz
+    if (Array.isArray(st.selftestHistory)) st.selftestHistory = st.selftestHistory.filter((t: any) => afterReset(t?.at));
+    if (st.studyProgress) st.studyProgress = Object.fromEntries(Object.entries(st.studyProgress as Record<string, any>).filter(([, r]) => afterReset(r?.at)));
+    delete st.studyReview;
+  }
+  if (remoteOlder('kart')) delete st.flashcards;
 
   if (Array.isArray(st.activityLog)) {
     const k = (a: any) => `${a?.at}|${a?.kind}|${a?.text}`;
@@ -329,6 +357,11 @@ export async function backupUserDataToDatabase(): Promise<{
 
   try {
     const who = await backupIdentity();
+    // Savunma: tarayıcıdaki veri başka bir öğrenciye aitse (userScope sahibi farklı) hiçbir şey gönderilmez.
+    const owner = getOwner();
+    if (auth.currentUser && owner !== null && owner !== who.uid) {
+      return { success: false, error: 'Bu cihazdaki veri başka bir hesaba ait; gönderilmedi.' };
+    }
     const since = readJson<Record<string, string>>(KV_SINCE_KEY, {})[who.uid] || '';
     // Bu kimlikle ilk eşitlemede tüm profil anahtarları, sonra yalnız değişenler gider
     const { kv } = collectKv(!since);

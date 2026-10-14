@@ -8,12 +8,15 @@ import { toast } from './Toast';
  * Marks are drawn with the CSS Custom Highlight API (no DOM changes, so React
  * re-renders are safe) and saved per scope (summary / slide) on this device.
  */
-export type HlColor = 'yellow' | 'green' | 'pink' | 'blue';
+export type HlColor = 'yellow' | 'green' | 'pink' | 'blue' | 'orange' | 'purple' | 'teal';
 export const HL_COLORS: { id: HlColor; label: string; swatch: string }[] = [
   { id: 'yellow', label: 'Sarı', swatch: '#FDE047' },
   { id: 'green', label: 'Yeşil', swatch: '#86EFAC' },
   { id: 'pink', label: 'Pembe', swatch: '#F9A8D4' },
   { id: 'blue', label: 'Mavi', swatch: '#93C5FD' },
+  { id: 'orange', label: 'Turuncu', swatch: '#FDBA74' },
+  { id: 'purple', label: 'Mor', swatch: '#C4B5FD' },
+  { id: 'teal', label: 'Camgöbeği', swatch: '#5EEAD4' },
 ];
 
 // ---------------------------------------------------------------------------

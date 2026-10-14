@@ -1,5 +1,5 @@
 // MeDSor Service Worker - PWA v8: Yüksek Hızlı Açılış, Optimize Edilmiş Bellek & Modül Parçalama
-const CACHE_VERSION = 'medsoru-pwa-v12';
+const CACHE_VERSION = 'medsoru-pwa-v13';
 const STATIC_CACHE = `medsoru-static-${CACHE_VERSION}`;
 const RUNTIME_CACHE = `medsoru-runtime-${CACHE_VERSION}`;
 const DATA_CACHE = `medsoru-data-${CACHE_VERSION}`;
@@ -241,7 +241,12 @@ self.addEventListener('fetch', (event) => {
     }
 
     // Büyük tam listeler IndexedDB'de tutulur; SW önbelleğine ikinci kopya yazılmaz
-    const cacheable = !/\/api\/past-exams(\/?$|\/sync)/.test(url.pathname) && !url.pathname.includes('/admin/');
+    // Kişiye özel yanıtlar (notlar, profil, kullanıcı verisi, kimlik başlıklı istekler) asla önbelleğe alınmaz:
+    // anahtar yalnız URL olduğundan aynı cihazdaki sonraki öğrenciye verilirdi.
+    const personal =
+      /^\/api\/(notes|user-data|users|profile|me|my-|people|presence|learn\/social|ornek)/.test(url.pathname) ||
+      req.headers.has('authorization') || req.headers.has('x-user-id') || req.headers.has('x-user-uid');
+    const cacheable = !personal && !/\/api\/past-exams(\/?$|\/sync)/.test(url.pathname) && !url.pathname.includes('/admin/');
 
     event.respondWith(
       (async () => {
@@ -435,4 +440,11 @@ self.addEventListener('notificationclick', (event) => {
     }
     if (self.clients.openWindow) await self.clients.openWindow(absolute);
   })());
+});
+
+// Oturum değişince istemci kişisel önbelleği boşaltır (auth.ts purgePersonalCaches).
+self.addEventListener('message', (event) => {
+  if (event.data && event.data.type === 'PURGE_DATA_CACHE') {
+    event.waitUntil(caches.delete(DATA_CACHE));
+  }
 });

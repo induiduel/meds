@@ -32,6 +32,29 @@ export const DESIGN_ORDER: DesignVersion[] = ['v12', 'v11', 'v10'];
 /** v11 yapısını kullanan tasarımlar (v11 ve v12) */
 export const isSadeFamily = (d: DesignVersion) => d !== 'v10';
 
+/** Çıkmış soru kartı: tam (varsayılan) · katlanır (yalnız kök + künye, dokununca şıklar) · dar (sıkı şıklar) */
+export type QCardMode = 'tam' | 'katlanir' | 'dar';
+export const QCARD_MODE_LABELS: Record<QCardMode, string> = { tam: 'Tam', katlanir: 'Katlanır', dar: 'Dar şıklar' };
+export interface QCardPrefs {
+  mode: QCardMode;
+  kurul: boolean;
+  ders: boolean;
+  yil: boolean;
+  /** Açıklama düğmesi ve gövdesi */
+  aciklama: boolean;
+  /** Açıklamadaki şık şık analiz */
+  sikAciklama: boolean;
+}
+export const QCARD_DEFAULTS: QCardPrefs = { mode: 'tam', kurul: true, ders: true, yil: true, aciklama: true, sikAciklama: true };
+const readQCard = (v: any): QCardPrefs => {
+  const o = v && typeof v === 'object' ? v : {};
+  const b = (k: keyof QCardPrefs) => (typeof o[k] === 'boolean' ? o[k] : (QCARD_DEFAULTS[k] as boolean));
+  return {
+    mode: o.mode === 'katlanir' || o.mode === 'dar' ? o.mode : 'tam',
+    kurul: b('kurul'), ders: b('ders'), yil: b('yil'), aciklama: b('aciklama'), sikAciklama: b('sikAciklama'),
+  };
+};
+
 export interface Appearance {
   mode: ThemeMode;
   /** Her tema kendi palet seçimini hatırlar: koyuya geçip dönünce açık tema paleti kaybolmaz. */
@@ -43,6 +66,8 @@ export interface Appearance {
   filters: FilterMode;
   /** Çıkmış/örnek soru kartlarında işaret etiketleri (varsayılan gizli) */
   qtags: boolean;
+  /** Çıkmış soru kartı modu ve görünür alanları */
+  qcard: QCardPrefs;
   motion: MotionPref;
   design: DesignVersion;
   /** Kullanıcı tasarımı Ayarlar'dan bilerek seçti mi (seçmediyse eski varsayılan 'v11' v12'ye taşınır) */
@@ -58,7 +83,7 @@ export const LAYOUT_LABELS: Record<LayoutMode, string> = { akis: 'Akış', pano:
 export const READING_LABELS: Record<ReadingFont, string> = { serif: 'Serif', sans: 'Sans' };
 export const TEXT_SIZE_LABELS: Record<TextSize, string> = { xs: 'En küçük', s: 'Küçük', m: 'Orta', l: 'Büyük', xl: 'En büyük' };
 export const FILTER_MODE_LABELS: Record<FilterMode, string> = { basit: 'Basit', gelismis: 'Gelişmiş' };
-const V11_DEFAULTS = { reading: 'serif' as ReadingFont, textSize: 'm' as TextSize, filters: 'basit' as FilterMode, qtags: false, motion: 'full' as MotionPref, design: 'v12' as DesignVersion };
+const V11_DEFAULTS = { reading: 'serif' as ReadingFont, textSize: 'm' as TextSize, filters: 'basit' as FilterMode, qtags: false, qcard: QCARD_DEFAULTS, motion: 'full' as MotionPref, design: 'v12' as DesignVersion };
 export const DESIGN_LABELS: Record<DesignVersion, string> = { v12: 'Net (v12)', v11: 'Sade (v11)', v10: 'Klasik (v10)' };
 export const DENSITY_LABELS: Record<Density, string> = { compact: 'Kompakt', normal: 'Normal', wide: 'Geniş' };
 /** Geriye dönük uyumluluk: tema → palet kimliği → bilgi (kayıttan üretilir). */
@@ -109,6 +134,7 @@ function read(): Appearance {
         textSize: (TEXT_SIZE_ORDER as string[]).includes(String(p.textSize)) ? (p.textSize as TextSize) : 'm',
         filters: p.filters === 'gelismis' ? 'gelismis' : 'basit',
         qtags: p.qtags === true,
+        qcard: readQCard(p.qcard),
         motion: p.motion === 'reduced' ? 'reduced' : 'full',
         design: migrateDesign(p),
         designPicked: p.designPicked === true,
@@ -289,7 +315,7 @@ async function switchAppearance(next: Appearance) {
   }
 }
 
-export function setAppearance(patch: Partial<Omit<Appearance, 'palettes' | 'accents'>> & { palette?: Palette; accent?: string }) {
+export function setAppearance(patch: Partial<Omit<Appearance, 'palettes' | 'accents' | 'qcard'>> & { qcard?: Partial<QCardPrefs>; palette?: Palette; accent?: string }) {
   const next: Appearance = { ...current, palettes: { ...current.palettes }, accents: { ...(current.accents || {}) } };
   if (patch.mode) next.mode = patch.mode;
   if (patch.density) next.density = patch.density;
@@ -298,6 +324,7 @@ export function setAppearance(patch: Partial<Omit<Appearance, 'palettes' | 'acce
   if (patch.textSize) next.textSize = patch.textSize;
   if (patch.filters) next.filters = patch.filters;
   if (typeof patch.qtags === 'boolean') next.qtags = patch.qtags;
+  if (patch.qcard) next.qcard = readQCard({ ...next.qcard, ...patch.qcard });
   if (patch.motion) next.motion = patch.motion;
   if (patch.design) { next.design = patch.design; next.designPicked = true; }
   if (patch.palette) next.palettes[next.mode] = patch.palette;

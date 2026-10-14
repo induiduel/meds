@@ -319,7 +319,9 @@ html.ui-v7 .ms-ders-acc-head .hk-dot { margin-right: 2px; }
 
 /* ---------- Yorum dizisi (çıkmış soru) ---------- */
 .cm-wrap { display: flex; flex-direction: column; gap: 10px; padding: 12px; border-radius: 12px; background: var(--color-canvas); animation: ui-in var(--mo-base) var(--mo-ease) both; }
-.cm-list { display: flex; flex-direction: column; gap: 12px; max-height: 420px; overflow-y: auto; overscroll-behavior: contain; padding: 6px; margin: -6px; }
+.cm-list { display: flex; flex-direction: column; gap: 12px; max-height: 420px; overflow-y: auto;  padding: 6px; margin: -6px; }
+/* Dokunmatikte iç kaydırma kutusu yok: yorumlar sayfayla birlikte akar (iç kutu parmağı yakalayıp sayfa kaydırmasını kilitliyordu). */
+@media (pointer: coarse), (max-width: 767px) { .cm-list { max-height: none; overflow: visible; } }
 .cm-thread { display: flex; flex-direction: column; gap: 8px; }
 .cm { display: flex; gap: 10px; align-items: flex-start; min-width: 0; padding: 6px; margin: -6px; border-radius: 10px; transition: background var(--mo-base); }
 .cm.is-target { background: var(--color-accent-soft); }

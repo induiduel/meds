@@ -210,14 +210,14 @@ const QuestionCardComponent: React.FC<QuestionCardProps> = ({
   const isMyQuestion =
     !!currentUser &&
     (question.contributedByUid === currentUser.uid ||
-      (currentUser.email && question.contributedByName === currentUser.displayName) ||
-      question.fragments.some((f) => f.authorUid === currentUser.uid || (currentUser.displayName && f.author === currentUser.displayName)) ||
-      question.options.some((o) => o.suggestedByUid === currentUser.uid || (currentUser.displayName && o.suggestedBy === currentUser.displayName)) ||
+      (!question.contributedByUid && currentUser.displayName && question.contributedByName === currentUser.displayName) ||
+      question.fragments.some((f) => f.authorUid === currentUser.uid || (!f.authorUid && currentUser.displayName && f.author === currentUser.displayName)) ||
+      question.options.some((o) => o.suggestedByUid === currentUser.uid || (!o.suggestedByUid && currentUser.displayName && o.suggestedBy === currentUser.displayName)) ||
       (question.mergedSatellites && question.mergedSatellites.some((sat) =>
         sat.contributedByUid === currentUser.uid ||
-        (currentUser.displayName && sat.contributedByName === currentUser.displayName) ||
-        sat.fragments?.some((f) => f.authorUid === currentUser.uid || (currentUser.displayName && f.author === currentUser.displayName)) ||
-        sat.options?.some((o) => o.suggestedByUid === currentUser.uid || (currentUser.displayName && o.suggestedBy === currentUser.displayName))
+        (!sat.contributedByUid && currentUser.displayName && sat.contributedByName === currentUser.displayName) ||
+        sat.fragments?.some((f) => f.authorUid === currentUser.uid || (!f.authorUid && currentUser.displayName && f.author === currentUser.displayName)) ||
+        sat.options?.some((o) => o.suggestedByUid === currentUser.uid || (!o.suggestedByUid && currentUser.displayName && o.suggestedBy === currentUser.displayName))
       )));
 
   // Tüm parçaları topla: ana sorunun parçaları + birleştirilen uydu taslakların parçaları
@@ -267,13 +267,13 @@ const QuestionCardComponent: React.FC<QuestionCardProps> = ({
   const revisionCount = question.revisions?.length || 0;
 
   const [fragmentText, setFragmentText] = useState('');
-  const [fragmentAuthor, setFragmentAuthor] = useState(() => localStorage.getItem(SAVED_NAME_KEY) || '');
+  const [fragmentAuthor, setFragmentAuthor] = useState(() => currentUser?.displayName || localStorage.getItem(SAVED_NAME_KEY) || '');
   const [fragmentType, setFragmentType] = useState<'stem' | 'clue' | 'option'>('clue');
   const [isSubmittingFragment, setIsSubmittingFragment] = useState(false);
 
   const [optionKey, setOptionKey] = useState<OptionKey>('A');
   const [optionText, setOptionText] = useState('');
-  const [optionAuthor, setOptionAuthor] = useState(() => localStorage.getItem(SAVED_NAME_KEY) || '');
+  const [optionAuthor, setOptionAuthor] = useState(() => currentUser?.displayName || localStorage.getItem(SAVED_NAME_KEY) || '');
   const [isSubmittingOption, setIsSubmittingOption] = useState(false);
 
   const handleAuthorUpdate = (val: string) => {

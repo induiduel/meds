@@ -778,6 +778,8 @@ export default function App() {
     setCurrentUser(null);
     setAccessToken(null);
     setDriveUploadSuccess(null);
+    // Bellekteki ekran durumları önceki öğrenciye ait: temiz açılış.
+    window.location.reload();
   };
 
   const currentCommittee = (committees || []).find((c) => c.id === selectedCommitteeId);
@@ -1228,14 +1230,14 @@ export default function App() {
     (q) =>
       currentUser &&
       (q.contributedByUid === currentUser.uid ||
-        (currentUser.displayName && q.contributedByName === currentUser.displayName) ||
-        q.fragments.some((f) => f.authorUid === currentUser.uid || (currentUser.displayName && f.author === currentUser.displayName)) ||
-        q.options.some((o) => o.suggestedByUid === currentUser.uid || (currentUser.displayName && o.suggestedBy === currentUser.displayName)) ||
+        (!q.contributedByUid && currentUser.displayName && q.contributedByName === currentUser.displayName) ||
+        q.fragments.some((f) => f.authorUid === currentUser.uid || (!f.authorUid && currentUser.displayName && f.author === currentUser.displayName)) ||
+        q.options.some((o) => o.suggestedByUid === currentUser.uid || (!o.suggestedByUid && currentUser.displayName && o.suggestedBy === currentUser.displayName)) ||
         (q.mergedSatellites && q.mergedSatellites.some((sat) =>
           sat.contributedByUid === currentUser.uid ||
-          (currentUser.displayName && sat.contributedByName === currentUser.displayName) ||
-          sat.fragments?.some((f) => f.authorUid === currentUser.uid || (currentUser.displayName && f.author === currentUser.displayName)) ||
-          sat.options?.some((o) => o.suggestedByUid === currentUser.uid || (currentUser.displayName && o.suggestedBy === currentUser.displayName))
+          (!sat.contributedByUid && currentUser.displayName && sat.contributedByName === currentUser.displayName) ||
+          sat.fragments?.some((f) => f.authorUid === currentUser.uid || (!f.authorUid && currentUser.displayName && f.author === currentUser.displayName)) ||
+          sat.options?.some((o) => o.suggestedByUid === currentUser.uid || (!o.suggestedByUid && currentUser.displayName && o.suggestedBy === currentUser.displayName))
         )))
   );
 

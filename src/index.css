@@ -462,6 +462,17 @@ body {
 ::highlight(ms-hl-green) { background-color: rgba(134, 239, 172, 0.75); color: inherit; }
 ::highlight(ms-hl-pink) { background-color: rgba(249, 168, 212, 0.75); color: inherit; }
 ::highlight(ms-hl-blue) { background-color: rgba(147, 197, 253, 0.75); color: inherit; }
+::highlight(ms-hl-orange) { background-color: rgba(253, 186, 116, 0.75); color: inherit; }
+::highlight(ms-hl-purple) { background-color: rgba(196, 181, 253, 0.75); color: inherit; }
+::highlight(ms-hl-teal) { background-color: rgba(94, 234, 212, 0.7); color: inherit; }
+/* Gece modu: açık yazı koyu zeminde kalsın diye doygun, yarı saydam mürekkep */
+:root[data-mode="dark"] ::highlight(ms-hl-yellow) { background-color: rgba(202, 138, 4, 0.5); }
+:root[data-mode="dark"] ::highlight(ms-hl-green) { background-color: rgba(22, 163, 74, 0.45); }
+:root[data-mode="dark"] ::highlight(ms-hl-pink) { background-color: rgba(219, 39, 119, 0.45); }
+:root[data-mode="dark"] ::highlight(ms-hl-blue) { background-color: rgba(37, 99, 235, 0.5); }
+:root[data-mode="dark"] ::highlight(ms-hl-orange) { background-color: rgba(234, 88, 12, 0.48); }
+:root[data-mode="dark"] ::highlight(ms-hl-purple) { background-color: rgba(147, 51, 234, 0.48); }
+:root[data-mode="dark"] ::highlight(ms-hl-teal) { background-color: rgba(13, 148, 136, 0.5); }
 
 /* While the pen is on, the selection itself previews the ink colour */
 .ms-pen { cursor: text; }
@@ -469,6 +480,9 @@ body {
 .ms-pen-green ::selection { background: rgba(134, 239, 172, 0.85); color: inherit; }
 .ms-pen-pink ::selection { background: rgba(249, 168, 212, 0.85); color: inherit; }
 .ms-pen-blue ::selection { background: rgba(147, 197, 253, 0.85); color: inherit; }
+.ms-pen-orange ::selection { background: rgba(253, 186, 116, 0.85); color: inherit; }
+.ms-pen-purple ::selection { background: rgba(196, 181, 253, 0.85); color: inherit; }
+.ms-pen-teal ::selection { background: rgba(94, 234, 212, 0.85); color: inherit; }
 .ms-pen-eraser { cursor: cell; }
 .ms-pen-eraser ::selection { background: rgba(14, 26, 38, 0.12); color: inherit; }
 

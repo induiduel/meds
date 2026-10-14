@@ -96,12 +96,20 @@ export interface AnneVeri {
   ketem?: { sayi?: number; yil?: number | string; kaynak?: string; konum?: string; detay?: string; not?: string; seri?: SeriNokta[] };
 }
 
+export interface KarabukOran { deger: number; sayi?: number; yil?: number | string; kaynak?: string; konum?: string; turkiye?: number; seri?: SeriNokta[] }
+
 export interface KarabukVeri {
   dogrulanamayan?: string[];
   nufus?: {
-    toplam?: number; yil?: number | string; kaynak?: string; seri?: SeriNokta[];
-    ilceler?: { ad: string; nufus: number; seri?: SeriNokta[] }[];
-    yas_65_ustu_orani?: { deger: number; yil?: number | string; kaynak?: string; seri?: SeriNokta[] };
+    toplam?: number; yil?: number | string; kaynak?: string; konum?: string; seri?: SeriNokta[];
+    erkek?: number; kadin?: number; il_ilce_merkezi?: number; belde_koy?: number; yillik_artis_hizi_binde?: number;
+    onceki_yil?: { toplam: number; yil: number | string; kaynak?: string; konum?: string };
+    ilceler?: { ad: string; nufus: number; ilce_merkezi?: number; belde_koy?: number; yillik_artis_hizi_binde?: number; seri?: SeriNokta[] }[];
+    yas_65_ustu_orani?: KarabukOran;
+    yas_0_14_orani?: KarabukOran;
+    yasli_bagimlilik_orani?: KarabukOran;
+    toplam_bagimlilik_orani?: KarabukOran;
+    kent_kir_2024?: { yogun_kent_yuzde?: number; orta_yogun_kent_yuzde?: number; kir_yuzde?: number; yil?: number | string; kaynak?: string; konum?: string };
   };
   /** il göstergeleri: seri = il yıllara göre, turkiye_seri = aynı yılların Türkiye değeri */
   gostergeler?: (Gosterge & { turkiye_seri?: SeriNokta[]; not?: string })[];

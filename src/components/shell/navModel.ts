@@ -104,6 +104,13 @@ export const V12_MORE_TREE: NavGroup[] = [
   { label: 'Kaynaklar', items: V12_RAIL[1].items },
   ...V12_RAIL_MORE.map((g) => ({ ...g, items: g.items.filter((it) => !V12_IN_TABS.has(it.id)) })),
 ].filter((g) => g.items.length > 0);
+/** Telefon "Tüm sayfalar" ızgarası: çalışma sayfaları bir arada, kaynak ve diğerleri ayrı (az grup, az kaydırma) */
+const PHONE_STUDY = new Set<AppRoute>(['questions', 'flashcards', 'practice', 'ornek_sorular', 'study', 'kazanimlar', 'spots', 'summaries']);
+const flatMore = V12_MORE_TREE.flatMap((g) => g.items);
+export const V12_PHONE_TREE: NavGroup[] = [
+  { label: 'Çalış', items: flatMore.filter((it) => PHONE_STUDY.has(it.id)) },
+  { label: 'Kaynaklar ve diğer', items: flatMore.filter((it) => !PHONE_STUDY.has(it.id)) },
+].filter((g) => g.items.length > 0);
 
 /** Global arama paletini aç (üst çubuk dinler; kenar menüsü ve kısayollar tetikler) */
 export const openSearch = () => window.dispatchEvent(new CustomEvent('medsoru:search'));

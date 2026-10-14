@@ -35,6 +35,8 @@ const SYNC_PATTERNS: RegExp[] = [
   /^my_(comment|report)_ids$/,
   // Ders özetleri / okuyucu
   /^medsoru_summary_progress$/,
+  // İlerleme sıfırlamasında korunan istatistik arşivi
+  /^medsoru_stats_archive_v1$/,
   /^medsoru_reader_prefs$/,
   // Katkı formu, arama, yapay zekâ sohbeti
   /^medsoru_saved_(contributor_name|student_number)$/,
@@ -73,6 +75,7 @@ const BUNDLE_KEYS = new Set([
   'medsoru_push_notifications_enabled',
   'medsoru_email_notifications_enabled',
   'medsoru_notes_v1',
+  'medsoru_progress_reset_v1',
 ]);
 /** Sık yazılan sayaçlar: profile girer ama anlık gönderim tetiklemez (dönemsel/arka plana geçişte gider). */
 const QUIET_KEYS = new Set(['medsoru_study_seconds_v1', 'medsoru_activity_v1']);
@@ -84,6 +87,8 @@ const DIRTY_KEY = 'medsoru_kv_dirty_v1'; // henüz sunucuya gitmemiş anahtarlar
 const MAX_VALUE = 2_000_000; // sunucudaki sınırla aynı
 
 export const isProfileKey = (key: string): boolean => SYNC_PATTERNS.some((re) => re.test(key));
+/** Öğrenciye ait (profil, paket ya da sayaç) anahtar mı — oturum değişince ayrılır (userScope). */
+export const isUserDataKey = (key: string): boolean => isProfileKey(key) || BUNDLE_KEYS.has(key) || QUIET_KEYS.has(key);
 
 let rawSet: ((k: string, v: string) => void) | null = null;
 let rawRemove: ((k: string) => void) | null = null;

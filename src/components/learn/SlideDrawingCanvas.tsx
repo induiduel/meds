@@ -90,7 +90,23 @@ export const PALETTE_COLORS = [
   { id: 'green', label: 'Yeşil (Klinik Not)', hex: '#16A34A' },
   { id: 'purple', label: 'Mor (Genel Not)', hex: '#9333EA' },
   { id: 'black', label: 'Siyah (El Yazısı)', hex: '#1E293B' },
+  { id: 'orange', label: 'Turuncu', hex: '#F97316' },
+  { id: 'pink', label: 'Pembe', hex: '#EC4899' },
+  { id: 'teal', label: 'Camgöbeği', hex: '#0D9488' },
 ];
+/** Gece modunda koyu zeminde okunan kalem renkleri (siyah yerine beyaz, açık tonlar). */
+export const PALETTE_COLORS_DARK = [
+  { id: 'red', label: 'Kırmızı (Önemli)', hex: '#F87171' },
+  { id: 'blue', label: 'Mavi (Çıkmış Soru)', hex: '#60A5FA' },
+  { id: 'yellow', label: 'Fosforlu Sarı', hex: '#FDE047' },
+  { id: 'green', label: 'Yeşil (Klinik Not)', hex: '#4ADE80' },
+  { id: 'purple', label: 'Mor (Genel Not)', hex: '#C084FC' },
+  { id: 'white', label: 'Beyaz (El Yazısı)', hex: '#F8FAFC' },
+  { id: 'orange', label: 'Turuncu', hex: '#FB923C' },
+  { id: 'pink', label: 'Pembe', hex: '#F472B6' },
+  { id: 'teal', label: 'Camgöbeği', hex: '#2DD4BF' },
+];
+export const penPalette = (mode: string) => (mode === 'dark' ? PALETTE_COLORS_DARK : PALETTE_COLORS);
 
 // ---------------------------------------------------------------------------
 // Slide Drawing Canvas Component
@@ -510,7 +526,7 @@ export const DrawingModeToolbarTrigger: React.FC<{ className?: string }> = ({ cl
                 className="absolute top-9 left-0 z-50 p-2 bg-white border border-line rounded-xl shadow-xl flex items-center gap-1.5 animate-in fade-in duration-100"
                 onClick={(e) => e.stopPropagation()}
               >
-                {PALETTE_COLORS.map((c) => (
+                {penPalette(document.documentElement.dataset.mode || '').map((c) => (
                   <button
                     key={c.id}
                     type="button"

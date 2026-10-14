@@ -40,6 +40,8 @@ import {
   Type,
   Users,
   Timer,
+  Moon,
+  Sun,
   Compass,
 } from 'lucide-react';
 import type { InteractiveDeck } from '../InteractiveDeckView';
@@ -50,7 +52,7 @@ import { SplitPane } from './SplitPane';
 import { useGlossary } from '../MedicalGlossaryPopover';
 import { HL_COLORS, Highlightable, isPenActive, setHighlighterTool, stopPen, useHighlighterTool, usePenActive } from '../../ui/Highlighter';
 import { resetPenDevice, usePenDevice } from '../../ui/penInput';
-import { PALETTE_COLORS, SlideDrawingCanvas, setDrawingGlobalState, useDrawingGlobalState } from '../SlideDrawingCanvas';
+import { penPalette, SlideDrawingCanvas, setDrawingGlobalState, useDrawingGlobalState } from '../SlideDrawingCanvas';
 import { getSlidePdfLocation } from '../../../services/slidePdfMappingService';
 import { useDeckPdf } from '../../../services/deckPdfService';
 import { QuestionFocus, focusMarks } from '../../../services/questionFocus';
@@ -71,7 +73,29 @@ import { selectionContext, useLearnSocial } from './learnSocial';
 import { ComposerReq, ReportReq, ReportSheet, setSocialVisible, SocialProvider, StepSocial, ThreadSheet, useSocialVisible } from './LearnSocialUI';
 import '../../../styles/learn-v10.css';
 import '../../../styles/v12/lesson.css';
-import { useAppearance } from '../../../utils/appearance';
+import { useAppearance, setAppearance } from '../../../utils/appearance';
+
+// Gece modu: dersten çıkmadan Koyu ↔ son açık tema (Açık/Sarı) arasında geçer.
+const DAY_KEY = 'medsoru_lesson_day_mode';
+const NightToggle: React.FC = () => {
+  const { mode } = useAppearance();
+  const dark = mode === 'dark';
+  const toggle = () => {
+    if (dark) {
+      let day: 'light' | 'sepia' = 'light';
+      try { if (localStorage.getItem(DAY_KEY) === 'sepia') day = 'sepia'; } catch { /* gizli pencere */ }
+      setAppearance({ mode: day });
+    } else {
+      try { localStorage.setItem(DAY_KEY, mode); } catch { /* gizli pencere */ }
+      setAppearance({ mode: 'dark' });
+    }
+  };
+  return (
+    <button type="button" className="ls-btn is-icon is-ghost" onClick={toggle} aria-pressed={dark} aria-label={dark ? 'Gündüz moduna geç' : 'Gece moduna geç'} title={dark ? 'Gündüz modu' : 'Gece modu'}>
+      {dark ? <Sun aria-hidden /> : <Moon aria-hidden />}
+    </button>
+  );
+};
 import { FocusSession, IX_EVENT, IxEventDetail } from './FocusSession';
 import { recordResult } from '../../../services/learnReview';
 import type { IxResult } from './lessonModel';
@@ -383,7 +407,8 @@ export const LessonPlayer: React.FC<LessonPlayerProps> = ({ deck, startAt, initi
   const [viewMode, setViewMode] = useState<DeckViewMode>(initialViewMode);
   /** v12 (canvas LearnPlayer): Stüdyo = Akış kabuğu (ray + okuma sütunu + bilgi çekmecesi + alt gezinme) içinde iki sütun;
    *  sağda tek etkin bloklu Pekiştir paneli. v10/v11'in kart + yan sekmeler + bilgi karoları Stüdyo'su yalnız onlarda kalır. */
-  const v12 = useAppearance().design === 'v12';
+  const appearance = useAppearance();
+  const v12 = appearance.design === 'v12';
   const bClassic = layout === 'B' && !v12;
   const studioV12 = layout === 'B' && v12;
   /** Slayt rayı solda mı (≥1024, Akış — v12'de Stüdyo da —, ders görünümü) yoksa Sheet olarak mı açılır */
@@ -1067,6 +1092,7 @@ export const LessonPlayer: React.FC<LessonPlayerProps> = ({ deck, startAt, initi
         </div>
       )}
       <button type="button" className="ls-btn is-icon is-ghost" onClick={() => setSearchOpen(true)} aria-label="Derste ara" title="Derste ara (Ctrl+K)"><Search aria-hidden /></button>
+      <NightToggle />
       <div className="ls-tools" ref={zoomRef}>
         {zoomBtn}
         {zoomPop}
@@ -1191,7 +1217,7 @@ export const LessonPlayer: React.FC<LessonPlayerProps> = ({ deck, startAt, initi
           </span>
           {drawState.activeMode !== 'eraser' && (
             <span className="ls-swatches" role="radiogroup" aria-label="Renk">
-              {PALETTE_COLORS.map((c) => (
+              {penPalette(appearance.mode).map((c) => (
                 <button key={c.id} type="button" role="radio" aria-checked={drawState.color === c.hex} aria-label={c.label} title={c.label} style={{ ['--sw' as string]: c.hex }} onClick={() => setDrawingGlobalState({ color: c.hex })} />
               ))}
             </span>

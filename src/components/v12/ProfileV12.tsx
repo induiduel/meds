@@ -53,7 +53,6 @@ import {
   getFavoriteCards,
   getFavorites,
   getNotes,
-  getProgress,
   loadArchiveBank,
   setFavorite,
   toggleFavoriteCard,
@@ -68,6 +67,8 @@ import { AvatarCropper } from '../ui/AvatarCropper';
 import { toast } from '../ui/Toast';
 import { NotesSyncRow } from '../settings/NotesSyncRow';
 import { UserDataSyncRow } from '../settings/UserDataSyncRow';
+import { ProgressResetRow } from '../settings/ProgressResetRow';
+import { getStatsAttempts } from '../../services/progressReset';
 import { startWelcomeTour } from '../onboarding/tourState';
 import { onLearnTour } from '../onboarding/learnTourState';
 import '../../styles/v12/profile.css';
@@ -527,7 +528,7 @@ interface LessonRow { id: string; title: string; seen: number; total: number }
 
 const OverviewPanel: React.FC<{ currentUser: AppUser | null; questions: QuestionItem[] }> = ({ currentUser, questions }) => {
   const stats = useMemo(() => {
-    const prog = Object.values(getProgress());
+    const prog = getStatsAttempts().map(([, a]) => a);
     const ok = prog.filter((a) => a.correct).length;
     const secs = getStudySeconds();
     const total = Object.values(secs).reduce((a, s) => a + s, 0);
@@ -1002,6 +1003,12 @@ const DataPanel: React.FC<{ onOpenOffline: () => void }> = ({ onOpenOffline }) =
         <SetRow id="u12-cevrimdisi" title="Çevrimdışı veritabanı" sub="Soruları, sözlüğü ve kartları cihaza indir; bağlantı yokken de çalış.">
           <button type="button" className="u12-btn is-sm" onClick={onOpenOffline}><Database aria-hidden />Cihaza indir</button>
         </SetRow>
+      </section>
+
+      <section className="u12-panel" id="u12-sifirla">
+        <div className="u12-legacy">
+          <ProgressResetRow />
+        </div>
       </section>
 
       <p className="u12-foot u12-meta">E-posta adresin her kurulda ilk katkın için teşekkür e-postası almak içindir; kimseyle paylaşılmaz.</p>

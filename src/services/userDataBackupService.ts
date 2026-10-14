@@ -73,8 +73,28 @@ const newerAt = (o: any, n: any) => (String(n?.at || n?.updatedAt || '') >= Stri
 export function mergeUserBundle(existing: any, incoming: any): any {
   const e = obj(existing);
   const i = obj(incoming);
-  const es = obj(e.stats);
-  const is = obj(i.stats);
+  const es = { ...obj(e.stats) };
+  const is = { ...obj(i.stats) };
+
+  // İlerleme sıfırlaması (kapsam → ISO): daha yeni sıfırlamayı taşıyan taraf o kapsamda tek başına geçerlidir;
+  // eski taraftan yalnız sıfırlamadan sonra yapılmış (zamanı olan) çözümler alınır.
+  const eReset = obj(e.progressReset);
+  const iReset = obj(i.progressReset);
+  const progressReset: Record<string, string> = {};
+  for (const scope of ['soru', 'kart']) {
+    const at = [String(eReset[scope] || ''), String(iReset[scope] || '')].sort().pop() || '';
+    if (!at) continue;
+    progressReset[scope] = at;
+    const after = (x: any) => String(x?.at || '') > at;
+    for (const [side, stamp] of [[es, String(eReset[scope] || '')], [is, String(iReset[scope] || '')]] as const) {
+      if (stamp >= at) continue;
+      if (scope === 'soru') {
+        side.selftestHistory = arr(side.selftestHistory).filter(after);
+        side.studyProgress = Object.fromEntries(Object.entries(obj(side.studyProgress)).filter(([, r]) => after(r)));
+        side.studyReview = [];
+      } else side.flashcards = {};
+    }
+  }
 
   const studySeconds: Record<string, number> = { ...obj(es.studySeconds) };
   for (const [day, sec] of Object.entries(obj(is.studySeconds))) studySeconds[day] = Math.max(Number(studySeconds[day]) || 0, Number(sec) || 0);
@@ -131,6 +151,7 @@ export function mergeUserBundle(existing: any, incoming: any): any {
     notificationsDeleted: { ids: tombIds, clearedAt },
     notificationPrefs: { ...obj(e.notificationPrefs), ...obj(i.notificationPrefs) },
     kv: mergeKv(e.kv, i.kv),
+    progressReset,
   };
 }
 
@@ -442,11 +463,14 @@ export function registerUserDataBackupRoutes(app: express.Express, deps: UserDat
    * GET /api/user-data/my-comments
    * Kullanıcının soru veritabanındaki tüm yorumlarını ve katkılarını listeler.
    */
-  app.get('/api/user-data/my-comments', (req, res) => {
+  app.get('/api/user-data/my-comments', async (req, res) => {
     try {
-      const uid = String(req.query.uid || req.headers['x-user-id'] || '').trim();
-      const email = String(req.query.email || '').trim().toLowerCase();
-      const author = String(req.query.author || '').trim().toLowerCase();
+      // Kimlik sorgudan alınmaz (başkasının yorumları/e-postası okunabiliyordu): doğrulanmış oturum ya da cihaz jetonu.
+      const ident = await resolveIdentity(req, String(req.headers['x-user-id'] || '').trim());
+      if (!ident.id) return res.status(ident.status || 401).json({ error: ident.error });
+      const uid = ident.id.uid;
+      const email = ident.id.verified ? String(ident.id.email || '').toLowerCase() : '';
+      const author = '';
 
       if (!uid && !email && !author) {
         return res.status(400).json({ error: 'uid, email veya author belirtilmelidir.' });

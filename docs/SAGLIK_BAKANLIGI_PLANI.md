@@ -112,3 +112,10 @@ sağlığın geliştirilmesi bileşenlerinin daha anlaşılır anlatımı; koruy
 - [x] Derste çapası slayt anlatımını açar · [x] 18 bölüm × 2 görünüm × 3 genişlik taraması temiz
 - Veri yenileme: `birlestir.py --kaynak <1. tur> --kaynak2 <2. tur>` (kavramlar, mevzuat_teskilat, havuz/*.json,
   karabuk_tarihsel.json) → `baglantilari_kur.py` (havuz bağları ve `sorular/havuz.json` dahil) → `npx vite build`.
+
+## 4. tur (2026-10-14): Karabük alt sayfaları
+
+Karabük bölümü `?sayfa=` ile 7 alt sayfaya bölündü (ozet, kurumlar, ilceler, nufus, gostergeler, cevre, programlar);
+kod `src/components/saglik/SaglikKarabuk.tsx`. Bilgi "ad · değer" satırlarıyla (`Satirlar`) verilir: başlığa dokununca
+ayrıntı, saat düğmesi geçmiş yıllar; madde görünümü aynı satırlardan (`satirMaddesi`). Başka bölüm alt sayfaya
+bölünecekse aynı desen: `BolumProps.alt/altGit` + `bolumKaynaklari(id, v, alt)`.

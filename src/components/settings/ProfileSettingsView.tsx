@@ -50,6 +50,7 @@ import { Row, Section, Segmented, Switch } from '../ui/kit';
 import { toast } from '../ui/Toast';
 import { NotesSyncRow } from './NotesSyncRow';
 import { UserDataSyncRow } from './UserDataSyncRow';
+import { ProgressResetRow } from './ProgressResetRow';
 import { startWelcomeTour } from '../onboarding/tourState';
 import { onLearnTour } from '../onboarding/learnTourState';
 import { ProfileV12 } from '../v12/ProfileV12';
@@ -320,6 +321,7 @@ const ProfileSettingsClassic: React.FC<Props> = ({ currentUser, isAdmin, questio
             <UserDataSyncRow />
             <Row icon={Database} iconBg="var(--color-clinic)" title="Çevrimdışı veritabanı" sub="Soruları, sözlüğü ve kartları cihaza indir" onClick={onOpenOffline} />
             <NotesSyncRow />
+            <ProgressResetRow />
             <Row icon={Compass} iconBg="var(--color-accent)" title="Tanıtım turu" sub="Sayfaları ve özellikleri yeniden gez" onClick={startWelcomeTour} />
             <Row icon={Compass} iconBg="var(--color-accent)" title="Öğren turu" sub="Ders kitaplığı ve etkileşim türleri" onClick={onLearnTour} />
             {isAdmin && <Row icon={ShieldCheck} iconBg="var(--color-warn)" title="Yönetim konsolu" sub="Taslaklar, moderasyon, sistem" onClick={onOpenAdmin} />}

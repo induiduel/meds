@@ -40,9 +40,12 @@ const slugOku = () => {
   const r = parseLocation();
   return r.route === 'health_ministry' ? r.param : undefined;
 };
+/** Alt sayfa (?sayfa=…), ör. /saglik/karabuk?sayfa=ilceler */
+const altOku = () => { try { return new URLSearchParams(window.location.search).get('sayfa') || undefined; } catch { return undefined; } };
 
 export const SaglikView: React.FC = () => {
   const [bolum, setBolum] = useState<BolumId>(() => bolumBySlug(slugOku()).id);
+  const [alt, setAlt] = useState<string | undefined>(altOku);
   const [veri, setVeri] = useState<SaglikVeri | null>(null);
   const [hata, setHata] = useState(false);
   const [deneme, setDeneme] = useState(0);
@@ -67,7 +70,7 @@ export const SaglikView: React.FC = () => {
 
   // Geri/ileri: adres çubuğundaki bölüm
   useEffect(() => {
-    const f = () => setBolum(bolumBySlug(slugOku()).id);
+    const f = () => { setBolum(bolumBySlug(slugOku()).id); setAlt(altOku()); };
     window.addEventListener('popstate', f);
     return () => window.removeEventListener('popstate', f);
   }, []);
@@ -81,9 +84,23 @@ export const SaglikView: React.FC = () => {
   const git = useCallback((id: BolumId) => {
     const b = BOLUMLER.find((x) => x.id === id) || BOLUMLER[0];
     setBolum(b.id);
+    setAlt(undefined);
     setGecmis(null);
-    writeLocation('health_ministry', b.slug || undefined);
+    // Aynı bölümün alt sayfasındayken (?sayfa=) bölüm adına dokunmak özet sayfasına döner
+    if (window.location.search && window.location.pathname === pathFor('health_ministry', b.slug || undefined)) {
+      try { window.history.pushState({ route: 'health_ministry', param: b.slug }, '', window.location.pathname); } catch { /* geçmiş yazılamadı */ }
+    } else writeLocation('health_ministry', b.slug || undefined);
     window.scrollTo({ top: 0 });
+  }, []);
+
+  const altGit = useCallback((id: string) => {
+    setAlt(id === 'ozet' ? undefined : id);
+    setGecmis(null);
+    const yol = `${window.location.pathname}${id === 'ozet' ? '' : `?sayfa=${encodeURIComponent(id)}`}`;
+    if (window.location.pathname + window.location.search !== yol) {
+      try { window.history.pushState({ route: 'health_ministry', param: slugOku() }, '', yol); } catch { /* geçmiş yazılamadı */ }
+    }
+    document.querySelector('.sbk-bolum-h')?.scrollIntoView({ block: 'start' });
   }, []);
 
   // Bilgi havuzu büyük: yalnız havuz bölümü açılınca yüklenir ve kaynakçası için veriye eklenir
@@ -98,7 +115,7 @@ export const SaglikView: React.FC = () => {
 
   const tanim = BOLUMLER.find((b) => b.id === bolum) || BOLUMLER[0];
   const bag = veri?.baglantilar.bolumler[bolum];
-  const kaynakIds = useMemo(() => (veriH ? bolumKaynaklari(bolum, veriH) : []), [veriH, bolum]);
+  const kaynakIds = useMemo(() => (veriH ? bolumKaynaklari(bolum, veriH, alt) : []), [veriH, bolum, alt]);
   const Bilesen = BOLUM_BILESEN[bolum];
   const TanimIc = tanim.icon;
 
@@ -170,7 +187,7 @@ export const SaglikView: React.FC = () => {
           )}
           <div className={`sbk-izgara ${bag ? 'has-yan' : ''}`}>
             <div className="sbk-icerik">
-              <BolumSiniri anahtar={bolum}><Bilesen v={veriH || veri} bag={bag} git={git} /></BolumSiniri>
+              <BolumSiniri anahtar={bolum}><Bilesen v={veriH || veri} bag={bag} git={git} alt={alt} altGit={altGit} /></BolumSiniri>
               {bag && bag.havuz > 0 && bolum !== 'genel' && <KendiniSina bolum={bolum} baslik={tanim.ad} toplam={bag.soru_sayisi} />}
               <Kaynakca dogrulanamayan={dogrulanamayanlar(bolum, veri)} />
             </div>

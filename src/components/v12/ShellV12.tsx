@@ -38,7 +38,7 @@ import type { SideNavProps } from '../shell/SideNav';
 import type { TopBarProps } from '../shell/TopBar';
 import type { TabBarProps } from '../shell/TabBar';
 import { BrandWord } from '../shell/BrandWord';
-import { NAV_ITEMS, V12_MORE_TREE, V12_RAIL, V12_RAIL_MORE, V12_TABS, initialsOf, openSearch, type NavItem } from '../shell/navModel';
+import { NAV_ITEMS, V12_PHONE_TREE, V12_RAIL, V12_RAIL_MORE, V12_TABS, initialsOf, openSearch, type NavItem } from '../shell/navModel';
 import { usePhone, useSearchShortcut, useSideCollapse } from '../shell/shellHooks';
 import '../../styles/v12/shell.css';
 
@@ -454,19 +454,24 @@ export const TabBarV12: React.FC<TabBarProps> = ({ active, onGo, isAdmin, onPdf,
         </button>
       </nav>
 
-      <Sheet open={more} onClose={() => setMore(false)} title="Daha fazla" size="auto">
+      <Sheet open={more} onClose={() => setMore(false)} title="Tüm sayfalar" size="auto">
         <div className="s12-more">
-          {V12_MORE_TREE.map((g) => (
+          {V12_PHONE_TREE.map((g) => (
             <section key={g.label} className="s12-msec" aria-label={g.label || undefined}>
               {g.label && <h2 className="s12-msec-h">{g.label}</h2>}
-              <div className="s12-mlist">
-                {g.items.map(({ id, label, hint, icon }) => row(id, icon, label, hint, undefined, { href: pathFor(id), onClick: () => go(id), current: active === id }))}
+              <div className="s12-mgrid">
+                {g.items.map(({ id, label, short, icon: Icon }) => (
+                  <a key={id} href={pathFor(id)} onClick={linkClick(() => go(id))} onPointerDown={() => prefetchRoute(id)} aria-current={active === id ? 'page' : undefined} className="s12-mtile" title={label}>
+                    <span className="s12-mtile-ic"><Icon strokeWidth={1.8} aria-hidden="true" /></span>
+                    <span className="s12-mtile-l">{short || label}</span>
+                  </a>
+                ))}
               </div>
             </section>
           ))}
 
           <section className="s12-msec" aria-label="Görünüm ve hesap">
-            <h2 className="s12-msec-h">Görünüm ve hesap</h2>
+            <h2 className="s12-msec-h">Hesap ve araçlar</h2>
             <div className="s12-mtheme">
               <Segmented<ThemeMode>
                 className="flex-1"

@@ -4,8 +4,9 @@ import type { QuestionItem } from '../../types';
 import type { AppUser } from '../../services/auth';
 import type { AppRoute } from '../../router';
 import {
-  getFavoriteCards, getFavorites, getNotes, getProgress, getReview, getTestHistory, loadArchiveBank, type StudyQuestion,
+  getFavoriteCards, getFavorites, getNotes, getReview, loadArchiveBank, type StudyQuestion,
 } from '../../services/studyStore';
+import { getStatsAttempts, getStatsTests } from '../../services/progressReset';
 import { dayKey, getActivity, getStudySeconds, type ActivityKind } from '../../services/activityLog';
 import { computeContributorStats } from '../../utils/contributionScore';
 import './stats.css';
@@ -73,8 +74,8 @@ export const StatsView: React.FC<Props> = ({ questions, currentUser, onGo }) => 
     loadArchiveBank().then(setBank).catch(() => setBank([])).finally(() => setBankReady(true));
   }, []);
 
-  const progress = useMemo(() => getProgress(), []);
-  const attempts = useMemo(() => Object.entries(progress), [progress]);
+  // Arşiv dahil: ilerleme sıfırlansa da istatistikler korunur
+  const attempts = useMemo(() => getStatsAttempts(), []);
   const bankById = useMemo(() => new Map(bank.map((q) => [q.id, q])), [bank]);
   const wrongAll = attempts.filter(([, a]) => !a.correct).length;
 
@@ -195,7 +196,7 @@ export const StatsView: React.FC<Props> = ({ questions, currentUser, onGo }) => 
   const favCards = useMemo(() => getFavoriteCards(), []);
   const notes = useMemo(() => getNotes(), []);
   const review = useMemo(() => [...getReview()], []);
-  const tests = useMemo(() => getTestHistory(), []);
+  const tests = useMemo(() => getStatsTests(), []);
   const cardNotes = useMemo(readCardNotes, []);
   const activity = useMemo(() => getActivity().slice(-40).reverse(), []);
   const contribCount = activity.filter((a) => a.kind === 'katki').length;

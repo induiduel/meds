@@ -17,9 +17,13 @@ import { degerBirim, seriMaddeleri, useGecmis, type MaddeOge } from './saglikBag
 import { GelistirmeBolum, KavramBolum, KorumaBolum } from './SaglikKavram';
 import { MevzuatBolum, SistemBolum, TeskilatBolum } from './SaglikSistem';
 import { HavuzBolum } from './SaglikHavuz';
-import { KarabukKurumRehberi } from './SaglikKarabukKurum';
+import { KarabukBolum, karabukSayfaKaynaklari } from './SaglikKarabuk';
 
-export interface BolumProps { v: SaglikVeri; bag?: BolumBaglanti; git: (b: BolumId) => void }
+export interface BolumProps {
+  v: SaglikVeri; bag?: BolumBaglanti; git: (b: BolumId) => void;
+  /** Alt sayfa (?sayfa=) — yalnız alt sayfalı bölümler (Karabük) kullanır */
+  alt?: string; altGit?: (id: string) => void;
+}
 
 const cp = (bag: BolumBaglanti | undefined, ...ids: string[]) => ids.flatMap((id) => bag?.capalar?.[id] || []).slice(0, 2);
 
@@ -59,11 +63,11 @@ const KpiBlok: React.FC<{ maddeler: () => MaddeOge[]; children: React.ReactNode;
 );
 
 /** Bölümün kaynakçasına girecek veri kökleri (numaralama bu sırayla) */
-export function bolumKaynaklari(id: BolumId, v: SaglikVeri): string[] {
+export function bolumKaynaklari(id: BolumId, v: SaglikVeri, alt?: string): string[] {
   const { asi, anne, karabuk, turkiye } = v;
   switch (id) {
     case 'genel': return kaynaklariTopla(turkiye.gostergeler, anne.gostergeler, asi.oranlar, turkiye.kurumlar, karabuk.nufus, karabuk.kurum_sayilari);
-    case 'karabuk': return kaynaklariTopla(karabuk);
+    case 'karabuk': return karabukSayfaKaynaklari(alt, karabuk);
     case 'asi': return kaynaklariTopla(asi);
     case 'yenidogan': return kaynaklariTopla(anne.yenidogan_taramalari, anne.bebek_cocuk_izlemleri, anne.destek_programlari, yenidoganGostergeleri(v), anne.ureme_sagligi);
     case 'anne_kadin': return kaynaklariTopla(anne.dob_izlemleri, anne.tehlike_isaretleri, anne.lohusa_izlemleri, anneGostergeleri(v), anne.ureme_sagligi, anne.evlilik_oncesi, anne.programlar);
@@ -253,260 +257,6 @@ export const GenelBolum: React.FC<BolumProps> = ({ v, git }) => {
           />
         </Blok>
       )}
-    </>
-  );
-};
-
-/* =============================================================================================================== */
-/* Karabük                                                                                                          */
-/* =============================================================================================================== */
-
-type KarsiSatir = { ad: string; il: number; tr: number; birim?: string; yil?: number | string; kaynak?: string; konum?: string; ilSeri?: SeriNokta[]; trSeri?: SeriNokta[]; tanim?: string; not?: string };
-
-const Karsilastir: React.FC<{ satirlar: KarsiSatir[] }> = ({ satirlar }) => {
-  const [hepsi, setHepsi] = useState(false);
-  const ac = useGecmis();
-  const SINIR = 10;
-  return (
-  <div className="sbk-karsi">
-    <div className="sbk-lejant"><span><i aria-hidden />Karabük</span><span className="is-notr"><i aria-hidden />Türkiye</span></div>
-    {(hepsi ? satirlar : satirlar.slice(0, SINIR)).map((s) => {
-      const mx = Math.max(s.il, s.tr) || 1;
-      const gecmisVar = (s.ilSeri?.length || 0) > 1;
-      const icerik = (
-        <>
-          <span className="sbk-karsi-ad">{s.ad}<small>{s.birim}{s.yil ? ` · ${s.yil}` : ''}{gecmisVar ? ` · ${s.ilSeri!.length} yıl` : ''}</small><Atif id={s.kaynak} konum={s.konum} /></span>
-          <span className="sbk-cubuk-izler">
-            <span className="sbk-cubuk-iz"><i style={{ width: `${(s.il / mx) * 100}%` }} /><b data-num>{sayi(s.il)}</b></span>
-            <span className="sbk-cubuk-iz is-notr"><i style={{ width: `${(s.tr / mx) * 100}%` }} /><b data-num>{sayi(s.tr)}</b></span>
-          </span>
-        </>
-      );
-      return gecmisVar ? (
-        <div
-          key={s.ad} className="sbk-karsi-s is-acilir" role="button" tabIndex={0} title="Geçmiş yılları göster"
-          onClick={(e) => { if ((e.target as HTMLElement).closest('a')) return; ac({ baslik: `${s.ad} · Karabük ve Türkiye`, birim: s.birim, seriler: [{ ad: 'Karabük', seri: s.ilSeri! }, ...(s.trSeri?.length ? [{ ad: 'Türkiye', seri: s.trSeri }] : [])], kaynak: s.kaynak, konum: s.konum, tanim: s.tanim, not: s.not }); }}
-          onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); (e.currentTarget as HTMLElement).click(); } }}
-        >{icerik}</div>
-      ) : <div key={s.ad} className="sbk-karsi-s">{icerik}</div>;
-    })}
-    {satirlar.length > SINIR && (
-      <button type="button" className="sbk-btn" onClick={() => setHepsi((x) => !x)} aria-expanded={hepsi}>
-        {hepsi ? 'Daha az göster' : `Tüm göstergeler (${satirlar.length})`}
-      </button>
-    )}
-  </div>
-  );
-};
-
-/** Kurum/birim listesi: ad + tür satırı, açıklama dokununca açılır */
-const KurumListesi: React.FC<{ ogeler: { ad: string; alt?: string; not?: string; kaynak?: string; ikon: React.ElementType }[] }> = ({ ogeler }) => (
-  <ul className="sbk-kurum-l">
-    {ogeler.map((o) => {
-      const Ic = o.ikon;
-      const ic = (
-        <>
-          <span className="sbk-kurum-ic"><Ic aria-hidden /></span>
-          <span><b>{o.ad}</b>{o.alt && <small>{o.alt}</small>}</span>
-          <Atif id={o.kaynak} />
-        </>
-      );
-      return (
-        <li key={o.ad}>
-          {o.not ? (
-            <details className="sbk-kurum-d">
-              <summary>{ic}</summary>
-              <p>{o.not}</p>
-            </details>
-          ) : <div className="sbk-kurum-s">{ic}</div>}
-        </li>
-      );
-    })}
-  </ul>
-);
-
-export const KarabukBolum: React.FC<BolumProps> = ({ v, git }) => {
-  const kb = v.karabuk;
-  const ac = useGecmis();
-  const ilceler = useMemo(() => {
-    const m = new Map<string, { ad: string; nufus?: number; seri?: SeriNokta[]; asm?: number; asmAdlari?: string[]; birim?: number; birimBasina?: number; hastane?: string; kaynak?: string }>();
-    for (const x of kb.nufus?.ilceler || []) m.set(x.ad, { ad: x.ad, nufus: x.nufus, seri: x.seri });
-    for (const x of kb.ilceler || []) {
-      const o = m.get(x.ad) || { ad: x.ad };
-      m.set(x.ad, { ...o, nufus: o.nufus ?? x.nufus, asm: x.asm, asmAdlari: x.asm_adlari, birim: x.aile_hekimi_birimi, birimBasina: x.ahb_basina_nufus, hastane: x.hastane, kaynak: x.kaynak });
-    }
-    return [...m.values()].sort((a, b) => (b.nufus || 0) - (a.nufus || 0));
-  }, [kb]);
-  const [acikIlce, setAcikIlce] = useState<string | null>(null);
-  const kurumGrup = useMemo(() => {
-    const gruplar: { ad: string; re: RegExp }[] = [
-      { ad: 'Birinci basamak', re: /aile|ASM|kuduz/i },
-      { ad: 'Hastane ve acil', re: /hastane|yatak|112|ambulans/i },
-      { ad: 'Sağlık insan gücü', re: /hekim|eczacı|hemşire|ebe|personel/i },
-    ];
-    const kalan = [...(kb.kurum_sayilari || [])];
-    const out = gruplar.map((g) => {
-      const al = kalan.filter((k) => g.re.test(k.tur));
-      al.forEach((k) => kalan.splice(kalan.indexOf(k), 1));
-      return { ad: g.ad, liste: al };
-    });
-    if (kalan.length) out.push({ ad: 'Diğer', liste: kalan });
-    return out.filter((g) => g.liste.length);
-  }, [kb.kurum_sayilari]);
-  const nMax = Math.max(1, ...ilceler.map((x) => x.nufus || 0));
-  const karsi = (kb.gostergeler || []).filter((g) => typeof g.deger === 'number' && typeof g.turkiye === 'number');
-  const tekil = (kb.gostergeler || []).filter((g) => !(typeof g.deger === 'number' && typeof g.turkiye === 'number'));
-  const yas65 = kb.nufus?.yas_65_ustu_orani;
-  return (
-    <>
-      <Blok
-        baslik="Karabük bir bakışta" ikon={MapPin} genis alt="Kutuya dokun: geçmiş yıllar"
-        maddeler={() => temiz([
-          kb.nufus?.toplam != null && mDeg('Nüfus', kb.nufus.toplam, { yil: kb.nufus.yil, kaynak: kb.nufus.kaynak, seri: kb.nufus.seri }),
-          yas65 && mDeg('65 yaş ve üstü nüfus oranı', yas65.deger, { yil: yas65.yil, kaynak: yas65.kaynak, seri: yas65.seri, birim: '%' }),
-          ilceler.length > 0 && `**İlçeler (${ilceler.length})**: ${ilceler.map((x) => x.ad).join(', ')}`,
-          ...kurumGrup.map((g) => mBaslik(g.ad, g.liste.map((k) => mDeg(k.tur, k.sayi, { yil: k.yil, kaynak: k.kaynak, konum: k.konum, seri: k.seri, not: k.yontem && /sayıldı/i.test(k.yontem) ? 'resmî listeden sayıldı' : undefined })))),
-        ])}
-      >
-        <KpiIzgara>
-          {kb.nufus?.toplam != null && <Kpi ad="Nüfus" deger={sayi(kb.nufus.toplam)} yil={kb.nufus.yil} kaynak={kb.nufus.kaynak} not="ADNKS" seri={kb.nufus.seri} />}
-          {yas65 && <Kpi ad="65 yaş ve üstü" deger={`%${sayi(yas65.deger)}`} yil={yas65.yil} kaynak={yas65.kaynak} seri={yas65.seri} gecmis={{ birim: '%' }} />}
-          {ilceler.length > 0 && <Kpi ad="İlçe" deger={ilceler.length} not={ilceler.map((x) => x.ad).join(', ')} />}
-        </KpiIzgara>
-        {kurumGrup.map((g) => (
-          <div key={g.ad} className="sbk-kpi-grup">
-            <h4>{g.ad}</h4>
-            <KpiIzgara>
-              {g.liste.map((k) => (
-                <Kpi
-                  key={k.tur} ad={k.tur} deger={sayi(k.sayi)} yil={k.yil} kaynak={k.kaynak} konum={k.konum} seri={k.seri}
-                  not={k.yontem && /sayıldı/i.test(k.yontem) ? 'resmî listeden sayıldı' : undefined}
-                  ipucu={[k.yontem, k.not].filter(Boolean).join(' — ')}
-                  gecmis={{ not: k.not }}
-                />
-              ))}
-            </KpiIzgara>
-          </div>
-        ))}
-      </Blok>
-
-      <KarabukKurumRehberi e={kb.envanter} />
-
-      {ilceler.length > 0 && (
-        <Blok
-          baslik="İlçelere göre" ikon={ListOrdered} alt="Nüfusa dokun: yıllara göre ilçe nüfusu · ilçe adına dokun: ASM adları" genis
-          maddeler={() => ilceler.map((x) => mBaslik(x.ad, [
-            mDeg('Nüfus', x.nufus, { yil: kb.nufus?.yil, kaynak: kb.nufus?.kaynak, seri: x.seri }),
-            x.asm != null && { metin: `**Aile sağlığı merkezi**: ${x.asm}`, alt: x.asmAdlari?.length ? [x.asmAdlari.join(', ')] : undefined },
-            x.birim != null && `**Aile hekimliği birimi**: ${x.birim}`,
-            x.birimBasina != null && `**Birim başına nüfus**: ${sayi(x.birimBasina)} (hesaplandı)`,
-            x.hastane && `**Hastane**: ${x.hastane}`,
-          ], x.kaynak))}
-        >
-          <div className="sbk-tablo-kap">
-            <table className="sbk-tablo sbk-ilce">
-              <thead><tr><th scope="col">İlçe</th><th scope="col">Nüfus</th><th scope="col">ASM</th><th scope="col">Aile hekimliği birimi</th><th scope="col">Birim başına nüfus</th><th scope="col">Hastane</th></tr></thead>
-              <tbody>
-                {ilceler.map((x) => (
-                  <React.Fragment key={x.ad}>
-                    <tr>
-                      <th scope="row">
-                        {x.asmAdlari?.length ? (
-                          <button type="button" className="sbk-ilce-b" onClick={() => setAcikIlce(acikIlce === x.ad ? null : x.ad)} aria-expanded={acikIlce === x.ad} title="ASM adlarını göster">{x.ad}</button>
-                        ) : x.ad}
-                      </th>
-                      <td>
-                        {(x.seri?.length || 0) > 1 ? (
-                          <button type="button" className="sbk-hucre-b" onClick={() => ac({ baslik: `${x.ad} nüfusu`, seriler: [{ ad: x.ad, seri: x.seri! }], kaynak: kb.nufus?.kaynak })} title="Yıllara göre nüfus">
-                            <span className="sbk-hucre-cubuk"><i style={{ width: `${((x.nufus || 0) / nMax) * 100}%` }} /><b data-num>{x.nufus != null ? sayi(x.nufus) : '—'}</b></span>
-                          </button>
-                        ) : (
-                          <span className="sbk-hucre-cubuk"><i style={{ width: `${((x.nufus || 0) / nMax) * 100}%` }} /><b data-num>{x.nufus != null ? sayi(x.nufus) : '—'}</b></span>
-                        )}
-                      </td>
-                      <td data-num>{x.asm ?? '—'}</td>
-                      <td data-num>{x.birim ?? '—'}</td>
-                      <td data-num>{x.birimBasina != null ? sayi(x.birimBasina) : '—'}</td>
-                      <td>{x.hastane || '—'} <Atif id={x.kaynak} /></td>
-                    </tr>
-                    {acikIlce === x.ad && x.asmAdlari?.length ? (
-                      <tr className="sbk-ilce-ac"><td colSpan={6}><div className="sbk-etiketler">{x.asmAdlari.map((n) => <Rozet key={n}>{n}</Rozet>)}</div></td></tr>
-                    ) : null}
-                  </React.Fragment>
-                ))}
-              </tbody>
-            </table>
-          </div>
-          <p className="sbk-grafik-k">Birim başına nüfus = ilçe nüfusu / aile hekimliği birimi (hesaplandı). Nüfus <Atif id={kb.nufus?.kaynak} /></p>
-        </Blok>
-      )}
-
-      {karsi.length > 0 && (
-        <Blok
-          baslik="Karabük ve Türkiye" ikon={LineChart} alt="Aynı tanımla il ve ülke değeri · satıra dokun: yıllara göre ikisi birlikte"
-          maddeler={() => karsi.map((g) => ({
-            metin: `**${g.ad}** (${g.yil}): Karabük ${dg(g.deger)}, Türkiye ${dg(g.turkiye)}${g.birim ? ` ${g.birim}` : ''}`, kaynak: g.kaynak, konum: g.konum,
-            alt: temiz([
-              yillar(g.seri, g.birim) && { metin: 'Karabük yıllara göre', alt: seriMaddeleri(g.seri!, g.birim) },
-              (g.turkiye_seri?.length || 0) > 1 && { metin: 'Türkiye yıllara göre', alt: seriMaddeleri(g.turkiye_seri!, g.birim) },
-            ]),
-          }))}
-        >
-          <Karsilastir satirlar={karsi.map((g) => ({ ad: g.ad, il: g.deger as number, tr: g.turkiye as number, birim: g.birim, yil: g.yil, kaynak: g.kaynak, konum: g.konum, ilSeri: g.seri, trSeri: g.turkiye_seri, tanim: g.tanim, not: g.not }))} />
-        </Blok>
-      )}
-      {tekil.length > 0 && (
-        <Blok baslik="İl göstergeleri" ikon={ClipboardList} maddeler={() => tekil.map((g) => mDeg(g.ad, g.deger, { birim: g.birim, yil: g.yil, kaynak: g.kaynak, konum: g.konum, seri: g.seri, not: g.not }))}>
-          <KpiIzgara>{tekil.map((g) => <Kpi key={g.ad} ad={g.ad} deger={typeof g.deger === 'number' ? sayi(g.deger) : String(g.deger ?? '—')} birim={g.birim} yil={g.yil} kaynak={g.kaynak} konum={g.konum} seri={g.seri} />)}</KpiIzgara>
-        </Blok>
-      )}
-
-      {(kb.hastaneler?.length || 0) > 0 && (
-        <Blok baslik="Hastaneler" ikon={Hospital} alt={`${kb.hastaneler!.length} kurum`} maddeler={() => kb.hastaneler!.map((h) => mBaslik(h.ad, [[h.ilce, h.tur].filter(Boolean).join(' · '), h.not], h.kaynak))}>
-          <KurumListesi ogeler={kb.hastaneler!.map((h) => ({ ad: h.ad, alt: [h.ilce, h.tur].filter(Boolean).join(' · '), not: h.not, kaynak: h.kaynak, ikon: Hospital }))} />
-        </Blok>
-      )}
-
-      {(kb.birimler?.length || 0) > 0 && (
-        <Blok baslik="Halk sağlığı birimleri" ikon={Stethoscope} alt="İl Sağlık Müdürlüğüne bağlı birimler" maddeler={() => kb.birimler!.map((b) => mBaslik(b.ad, [b.adres_ilce && `Yer: ${b.adres_ilce}`, b.aciklama], b.kaynak))}>
-          <KurumListesi ogeler={kb.birimler!.map((b) => ({ ad: b.ad, alt: b.adres_ilce, not: b.aciklama, kaynak: b.kaynak, ikon: Building2 }))} />
-        </Blok>
-      )}
-
-      {((kb.cevre?.length || 0) > 0 || (kb.is_sagligi?.length || 0) > 0) && (
-        <Blok
-          baslik="Çevre ve iş sağlığı" ikon={Factory} alt="Demir-çelik sanayisi kenti: hava kalitesi ve iş kazaları" arac={<button type="button" className="sbk-btn" onClick={() => git('cevre')}>Çevre ve sağlık <ArrowRight aria-hidden /></button>}
-          maddeler={() => temiz([
-            ...(kb.cevre || []).filter((c) => c.deger != null).map((c) => mDeg(`${c.baslik}${c.istasyon ? ` · ${c.istasyon}` : ''}`, c.deger, { birim: c.birim, yil: c.yil, kaynak: c.kaynak, konum: c.konum, seri: c.seri })),
-            ...(kb.is_sagligi || []).map((c) => mDeg(c.ad, c.deger, { yil: c.yil, kaynak: c.kaynak, konum: c.konum, seri: c.seri })),
-          ])}
-        >
-          <KpiIzgara>
-            {(kb.cevre || []).filter((c) => c.deger != null).slice(0, 4).map((c) => (
-              <Kpi key={`${c.baslik}-${c.istasyon || ''}-${c.yil || ''}`} ad={c.baslik} deger={typeof c.deger === 'number' ? sayi(c.deger) : String(c.deger)} birim={c.birim} yil={c.yil} kaynak={c.kaynak} konum={c.konum} not={c.istasyon} seri={c.seri} gecmis={{ baslik: `${c.baslik}${c.istasyon ? ` · ${c.istasyon}` : ''}`, not: c.aciklama }} />
-            ))}
-            {(kb.is_sagligi || []).slice(0, 4).map((c) => <Kpi key={c.ad} ad={c.ad} deger={typeof c.deger === 'number' ? sayi(c.deger) : String(c.deger)} yil={c.yil} kaynak={c.kaynak} konum={c.konum} ipucu={c.aciklama} seri={c.seri} gecmis={{ not: c.aciklama }} />)}
-          </KpiIzgara>
-        </Blok>
-      )}
-
-      {(kb.programlar?.length || 0) > 0 && (
-        <Blok baslik="İl sağlık müdürlüğü programları" ikon={CalendarClock} maddeler={() => kb.programlar!.map((p) => mBaslik(`${p.ad}${p.tarih ? ` (${p.tarih})` : ''}`, [p.aciklama], p.kaynak))}>
-          <ul className="sbk-program-l">
-            {kb.programlar!.map((p) => (
-              <li key={p.ad}><b>{p.ad}</b>{p.tarih && <Rozet>{p.tarih}</Rozet>}<span>{p.aciklama} <Atif id={p.kaynak} /></span></li>
-            ))}
-          </ul>
-        </Blok>
-      )}
-
-      {kb.universite?.aciklama && (
-        <Blok baslik="Karabük Üniversitesi Tıp Fakültesi" ikon={GraduationCap} maddeler={() => kb.universite!.aciklama.split(/(?<=\.)\s+/).filter(Boolean).map((c, i) => (i === 0 ? { metin: c, kaynak: kb.universite!.kaynak, ek: kb.universite!.ek_kaynaklar } : c))}>
-          <MiniMetin metin={kb.universite.aciklama} />
-          <p className="sbk-grafik-k">Kaynak <Atif id={kb.universite.kaynak} />{kb.universite.ek_kaynaklar?.map((e) => <Atif key={e} id={e} />)}</p>
-        </Blok>
-      )}
-      {!kb.nufus && !kb.kurum_sayilari?.length && <Bos />}
     </>
   );
 };

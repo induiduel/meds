@@ -443,3 +443,9 @@
 @media (min-width: 1180px) and (max-width: 1499px) {
   :root[data-design='v12'][data-layout='pano'] .cx-list.ck-list { display: flex; flex-direction: column; }
 }
+
+/* ── Telefon: kompakt ve sade ── başlık üst çubukta yazdığı için sayfa açıklamaları gizlenir, alt çubuk incelir */
+@media (max-width: 767px) {
+  :root[data-design='v12'] { --sh-tabs-h: 54px; }
+  :root[data-design='v12'] .o12-page .cx-desc { display: none; }
+}

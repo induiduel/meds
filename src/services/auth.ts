@@ -1,4 +1,5 @@
 import { initializeApp, getApps } from 'firebase/app';
+import { claimForUser, releaseUser } from './userScope';
 import { 
   getAuth, 
   signInWithPopup, 
@@ -216,6 +217,11 @@ export const initAuth = (
   getRedirectResult(auth)
     .then(async (result) => {
       if (result && result.user) {
+        if (claimForUser(result.user.uid)) {
+          await purgePersonalCaches();
+          window.location.reload();
+          return;
+        }
         const credential = GoogleAuthProvider.credentialFromResult(result);
         if (credential?.accessToken) {
           cachedAccessToken = credential.accessToken;
@@ -244,6 +250,12 @@ export const initAuth = (
     });
 
   return onAuthStateChanged(auth, async (firebaseUser: User | null) => {
+    // Tarayıcıdaki kişisel veri yalnız sahibine görünür; sahip değiştiyse sayfa temiz durumla yeniden açılır.
+    if (firebaseUser ? claimForUser(firebaseUser.uid) : releaseUser(false)) {
+      await purgePersonalCaches();
+      window.location.reload();
+      return;
+    }
     if (firebaseUser) {
       // Load cached profile or fetch from Firestore
       const cached = loadStoredUserProfile(firebaseUser.uid);
@@ -547,13 +559,37 @@ export const setCustomAccessToken = (token: string) => {
   safeStorage.setItem(LOCAL_TOKEN_KEY, cachedAccessToken);
 };
 
+/** Hizmet çalışanının API yanıt önbelleği kişisel yanıt tutabilir: oturum değişince boşaltılır. */
+export const purgePersonalCaches = async () => {
+  try {
+    navigator.serviceWorker?.controller?.postMessage({ type: 'PURGE_DATA_CACHE' });
+    const names = await caches.keys();
+    await Promise.all(names.filter((n) => /data|api/i.test(n)).map((n) => caches.delete(n)));
+  } catch {
+    /* önbellek yok */
+  }
+};
+
 export const logout = async () => {
+  // Çıkmadan önce son değişiklikler hesaba gönderilir; sonra tarayıcıdaki kişisel veri silinir (sonraki öğrenci görmez).
+  let sent = false;
+  if (auth.currentUser) {
+    try {
+      const { backupUserDataToDatabase } = await import('./userDataSyncService');
+      const r = await Promise.race([backupUserDataToDatabase(), new Promise<{ success: boolean }>((ok) => setTimeout(() => ok({ success: false }), 8000))]);
+      sent = !!r?.success;
+    } catch {
+      /* gönderilemedi: veri bu kullanıcı adına cihazda saklanır */
+    }
+  }
+  releaseUser(sent);
   try {
     await auth.signOut();
   } catch (e) {
     // ignore
   }
   clearLocalAdminSession();
+  await purgePersonalCaches();
 };
 
 export const isAdminUser = (user: AppUser | null): boolean => {
