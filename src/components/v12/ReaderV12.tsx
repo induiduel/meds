@@ -15,7 +15,7 @@
  */
 import React, { useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { AlignLeft, ChevronLeft, ChevronRight, Focus, MoreVertical } from 'lucide-react';
-import { useAppearance, TEXT_SIZE_ORDER, TEXT_SIZE_PX, type TextSize } from '../../utils/appearance';
+import { useAppearance, TEXT_PX_MAX, TEXT_PX_MIN } from '../../utils/appearance';
 import { lockScroll, unlockScroll } from '../../utils/scrollLock';
 import '../../styles/v12/reader.css';
 
@@ -68,9 +68,6 @@ export interface ReaderV12Props {
   children: React.ReactNode;
 }
 
-const SIZES: TextSize[] = TEXT_SIZE_ORDER;
-/** Okuyucu gövdesi uygulamanın okuma boyutundan 1 px büyük (reader.css --r12-fs ile aynı) */
-const SIZE_PX = Object.fromEntries(TEXT_SIZE_ORDER.map((k) => [k, TEXT_SIZE_PX[k] + 1])) as Record<TextSize, number>;
 const PREF_KEY = 'medsoru_r12_reader';
 type Pref = { toc?: boolean; focus?: boolean };
 const readPref = (): Pref => {
@@ -94,17 +91,17 @@ const reduceMotion = () =>
 /** Yazı boyutu ve okuma yazı tipi (üst çubukta ve dar ekranda menüde aynı denetim) */
 const TypeControls: React.FC<{ inMenu?: boolean }> = ({ inMenu }) => {
   const look = useAppearance();
-  const i = SIZES.indexOf(look.textSize);
+  const px = look.textPx;
   return (
     <div className={inMenu ? 'r12-menu-type' : 'r12-type'}>
       <div className="r12-size" role="group" aria-label="Yazı boyutu">
-        <button type="button" onClick={() => look.set({ textSize: SIZES[Math.max(0, i - 1)] })} disabled={i <= 0} aria-label="Yazıyı küçült">
+        <button type="button" onClick={() => look.set({ textPx: px - 1 })} disabled={px <= TEXT_PX_MIN} aria-label="Yazıyı küçült">
           A−
         </button>
-        <span aria-live="polite" aria-label={`Yazı boyutu ${SIZE_PX[look.textSize]} piksel`}>
-          {SIZE_PX[look.textSize]}
+        <span aria-live="polite" aria-label={`Yazı boyutu ${px + 1} piksel`}>
+          {px + 1}
         </span>
-        <button type="button" onClick={() => look.set({ textSize: SIZES[Math.min(SIZES.length - 1, i + 1)] })} disabled={i >= SIZES.length - 1} aria-label="Yazıyı büyüt">
+        <button type="button" onClick={() => look.set({ textPx: px + 1 })} disabled={px >= TEXT_PX_MAX} aria-label="Yazıyı büyüt">
           A+
         </button>
       </div>

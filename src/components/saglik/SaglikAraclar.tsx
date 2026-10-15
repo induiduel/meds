@@ -1,6 +1,7 @@
 import React, { useMemo, useState } from 'react';
 import { Check, ChevronDown, Eye, EyeOff, LayoutList, Search, Table2 } from 'lucide-react';
 import { Atif, MiniMetin, useGenislik } from './SaglikOrtak';
+import { TabloKabi } from './SaglikTablo';
 import { kucukHarf, sayi, sonDeger, type AnneVeri, type AsiVeri, type Gosterge, type TurkiyeVeri } from './saglikVeri';
 
 /* ===============================================================================================================
@@ -33,51 +34,7 @@ export const AsiTakvimi: React.FC<{ v: AsiVeri }> = ({ v }) => {
   const seciliZ = zamanlar[zIndex];
   const buZiyaret = asilar.flatMap((a) => a.dozlar.filter((d) => d.zaman === secili).map((d) => ({ a, d })));
   const ac = (k: string) => setAcik((p) => new Set(p).add(k));
-  return (
-    <div className="sbk-asi" ref={kapRef}>
-      <div className="sbk-asi-arac">
-        <label className="sbk-kaydir">
-          <span>Ziyaret: <b>{seciliZ?.etiket}</b></span>
-          <input
-            type="range" min={0} max={zamanlar.length - 1} step={1} value={zIndex}
-            onChange={(e) => setSecili(zamanlar[Number(e.target.value)].id)}
-            aria-valuetext={seciliZ?.etiket}
-          />
-        </label>
-        <div className="sbk-asi-dugmeler">
-          <div className="sbk-seg" role="radiogroup" aria-label="Takvim görünümü">
-            <button type="button" role="radio" aria-checked={gorunum === 'liste'} className={gorunum === 'liste' ? 'is-sec' : ''} onClick={() => setSecimGorunum('liste')}><LayoutList aria-hidden /> Ziyaret</button>
-            <button type="button" role="radio" aria-checked={gorunum === 'tablo'} className={gorunum === 'tablo' ? 'is-sec' : ''} onClick={() => setSecimGorunum('tablo')}><Table2 aria-hidden /> Tablo</button>
-          </div>
-          <button type="button" className={`sbk-btn ${ezber ? 'is-dolu' : ''}`} onClick={() => { setEzber((x) => !x); setAcik(new Set()); }} aria-pressed={ezber}>
-            {ezber ? <EyeOff aria-hidden /> : <Eye aria-hidden />} {ezber ? 'Ezber açık' : 'Ezber modu'}
-          </button>
-        </div>
-      </div>
-      {gorunum === 'liste' ? (
-        <ol className="sbk-asi-liste" aria-label="Ziyaretlere göre aşılar">
-          {zamanlar.map((z) => {
-            const burada = asilar.flatMap((a) => a.dozlar.filter((d) => d.zaman === z.id).map((d) => ({ a, d })));
-            return (
-              <li key={z.id} className={z.id === secili ? 'is-sec' : ''}>
-                <button type="button" className="sbk-asi-liste-z" onClick={() => setSecili(z.id)} aria-pressed={z.id === secili}>
-                  <b>{z.etiket}</b><small>{burada.length ? `${burada.length} aşı` : 'rutin aşı yok'}</small>
-                </button>
-                <div className="sbk-asi-cipler">
-                  {burada.map(({ a, d }) => {
-                    const k = `${a.id}:${z.id}`;
-                    return ezber && !acik.has(k) ? (
-                      <button key={a.id} type="button" className="sbk-asi-cip is-gizli" onClick={() => ac(k)} aria-label={`${z.etiket}: gizli aşıyı göster`}>?</button>
-                    ) : (
-                      <span key={a.id} className="sbk-asi-cip" title={`${a.ad} — ${d.doz}`}><b>{a.kisa}</b><i>{dozKisa(d.doz)}</i></span>
-                    );
-                  })}
-                </div>
-              </li>
-            );
-          })}
-        </ol>
-      ) : (
+  const tablo = (
       <div className="sbk-asi-kap" role="region" aria-label="Aşı takvimi tablosu" tabIndex={0}>
         <table className="sbk-asi-t">
           <thead>
@@ -115,7 +72,54 @@ export const AsiTakvimi: React.FC<{ v: AsiVeri }> = ({ v }) => {
           </tbody>
         </table>
       </div>
-      )}
+  );
+  return (
+    <div className="sbk-asi" ref={kapRef}>
+      <div className="sbk-asi-arac">
+        <label className="sbk-kaydir">
+          <span>Ziyaret: <b>{seciliZ?.etiket}</b></span>
+          <input
+            type="range" min={0} max={zamanlar.length - 1} step={1} value={zIndex}
+            onChange={(e) => setSecili(zamanlar[Number(e.target.value)].id)}
+            aria-valuetext={seciliZ?.etiket}
+          />
+        </label>
+        <div className="sbk-asi-dugmeler">
+          <div className="sbk-seg" role="radiogroup" aria-label="Takvim görünümü">
+            <button type="button" role="radio" aria-checked={gorunum === 'liste'} className={gorunum === 'liste' ? 'is-sec' : ''} onClick={() => setSecimGorunum('liste')}><LayoutList aria-hidden /> Ziyaret</button>
+            <button type="button" role="radio" aria-checked={gorunum === 'tablo'} className={gorunum === 'tablo' ? 'is-sec' : ''} onClick={() => setSecimGorunum('tablo')}><Table2 aria-hidden /> Tablo</button>
+          </div>
+          <button type="button" className={`sbk-btn ${ezber ? 'is-dolu' : ''}`} onClick={() => { setEzber((x) => !x); setAcik(new Set()); }} aria-pressed={ezber}>
+            {ezber ? <EyeOff aria-hidden /> : <Eye aria-hidden />} {ezber ? 'Ezber açık' : 'Ezber modu'}
+          </button>
+        </div>
+      </div>
+      {gorunum === 'liste' ? (
+        <TabloKabi baslik="Aşı takvimi" tamEkran={tablo} dugmeMetni="Tabloyu tam ekran aç">
+        <ol className="sbk-asi-liste" aria-label="Ziyaretlere göre aşılar">
+          {zamanlar.map((z) => {
+            const burada = asilar.flatMap((a) => a.dozlar.filter((d) => d.zaman === z.id).map((d) => ({ a, d })));
+            return (
+              <li key={z.id} className={z.id === secili ? 'is-sec' : ''}>
+                <button type="button" className="sbk-asi-liste-z" onClick={() => setSecili(z.id)} aria-pressed={z.id === secili}>
+                  <b>{z.etiket}</b><small>{burada.length ? `${burada.length} aşı` : 'rutin aşı yok'}</small>
+                </button>
+                <div className="sbk-asi-cipler">
+                  {burada.map(({ a, d }) => {
+                    const k = `${a.id}:${z.id}`;
+                    return ezber && !acik.has(k) ? (
+                      <button key={a.id} type="button" className="sbk-asi-cip is-gizli" onClick={() => ac(k)} aria-label={`${z.etiket}: gizli aşıyı göster`}>?</button>
+                    ) : (
+                      <span key={a.id} className="sbk-asi-cip" title={`${a.ad} — ${d.doz}`}><b>{a.kisa}</b><i>{dozKisa(d.doz)}</i></span>
+                    );
+                  })}
+                </div>
+              </li>
+            );
+          })}
+        </ol>
+        </TabloKabi>
+      ) : <TabloKabi baslik="Aşı takvimi">{tablo}</TabloKabi>}
       <p className="sbk-muted sbk-asi-lejant">Sayı doz sırasıdır; R = rapel (pekiştirme), Ek = ek doz. Ziyarete dokun: o ziyaretin ayrıntısı aşağıda.</p>
       <div className="sbk-asi-ziyaret" aria-live="polite">
         <h4>

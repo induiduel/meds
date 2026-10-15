@@ -22,6 +22,12 @@ export type ReadingFont = 'serif' | 'sans';
 export type TextSize = 'xs' | 's' | 'm' | 'l' | 'xl';
 export const TEXT_SIZE_ORDER: TextSize[] = ['xs', 's', 'm', 'l', 'xl'];
 export const TEXT_SIZE_PX: Record<TextSize, number> = { xs: 14, s: 15, m: 16, l: 18, xl: 20 };
+/** Serbest yazı boyutu (profildeki kaydırıcı): 6–20 px, 1 px adım. `textSize` en yakın adımı tutar (eski kurallar için). */
+export const TEXT_PX_MIN = 6;
+export const TEXT_PX_MAX = 20;
+export const clampTextPx = (n: number) => Math.min(TEXT_PX_MAX, Math.max(TEXT_PX_MIN, Math.round(n)));
+export const nearestTextSize = (px: number): TextSize =>
+  TEXT_SIZE_ORDER.reduce((b, k) => (Math.abs(TEXT_SIZE_PX[k] - px) < Math.abs(TEXT_SIZE_PX[b] - px) ? k : b), 'xs' as TextSize);
 /** Basit: yalnız hızlı süzgeç hapları; Gelişmiş: "Süzgeç" sayfası da görünür */
 export type FilterMode = 'basit' | 'gelismis';
 export type MotionPref = 'full' | 'reduced';
@@ -63,6 +69,8 @@ export interface Appearance {
   layout: LayoutMode;
   reading: ReadingFont;
   textSize: TextSize;
+  /** Okuma yazısı boyutu, px (6–20); kök öğeye --read-size olarak yazılır */
+  textPx: number;
   filters: FilterMode;
   /** Çıkmış/örnek soru kartlarında işaret etiketleri (varsayılan gizli) */
   qtags: boolean;
@@ -83,7 +91,7 @@ export const LAYOUT_LABELS: Record<LayoutMode, string> = { akis: 'Akış', pano:
 export const READING_LABELS: Record<ReadingFont, string> = { serif: 'Serif', sans: 'Sans' };
 export const TEXT_SIZE_LABELS: Record<TextSize, string> = { xs: 'En küçük', s: 'Küçük', m: 'Orta', l: 'Büyük', xl: 'En büyük' };
 export const FILTER_MODE_LABELS: Record<FilterMode, string> = { basit: 'Basit', gelismis: 'Gelişmiş' };
-const V11_DEFAULTS = { reading: 'serif' as ReadingFont, textSize: 'm' as TextSize, filters: 'basit' as FilterMode, qtags: false, qcard: QCARD_DEFAULTS, motion: 'full' as MotionPref, design: 'v12' as DesignVersion };
+const V11_DEFAULTS = { reading: 'serif' as ReadingFont, textSize: 'm' as TextSize, textPx: 16, filters: 'basit' as FilterMode, qtags: false, qcard: QCARD_DEFAULTS, motion: 'full' as MotionPref, design: 'v12' as DesignVersion };
 export const DESIGN_LABELS: Record<DesignVersion, string> = { v12: 'Net (v12)', v11: 'Sade (v11)', v10: 'Klasik (v10)' };
 export const DENSITY_LABELS: Record<Density, string> = { compact: 'Kompakt', normal: 'Normal', wide: 'Geniş' };
 /** Geriye dönük uyumluluk: tema → palet kimliği → bilgi (kayıttan üretilir). */
@@ -132,6 +140,9 @@ function read(): Appearance {
         layout: p.layout === 'akis' || p.layout === 'odak' || p.layout === 'pano' ? p.layout : 'pano',
         reading: p.reading === 'sans' ? 'sans' : 'serif',
         textSize: (TEXT_SIZE_ORDER as string[]).includes(String(p.textSize)) ? (p.textSize as TextSize) : 'm',
+        textPx: typeof p.textPx === 'number' && isFinite(p.textPx)
+          ? clampTextPx(p.textPx)
+          : TEXT_SIZE_PX[(TEXT_SIZE_ORDER as string[]).includes(String(p.textSize)) ? (p.textSize as TextSize) : 'm'],
         filters: p.filters === 'gelismis' ? 'gelismis' : 'basit',
         qtags: p.qtags === true,
         qcard: readQCard(p.qcard),
@@ -192,6 +203,8 @@ export function applyAppearance(a: Appearance = current) {
   el.dataset.layout = a.layout;
   el.dataset.reading = a.reading;
   el.dataset.textSize = a.textSize;
+  // Serbest boyut: satır içi değişken data-text-size kurallarını ezer (6–20 px)
+  el.style.setProperty('--read-size', `${clampTextPx(a.textPx ?? TEXT_SIZE_PX[a.textSize])}px`);
   el.dataset.filters = a.filters;
   el.dataset.qtags = a.qtags ? 'on' : 'off';
   el.dataset.motion = a.motion;
@@ -321,7 +334,8 @@ export function setAppearance(patch: Partial<Omit<Appearance, 'palettes' | 'acce
   if (patch.density) next.density = patch.density;
   if (patch.layout) next.layout = patch.layout;
   if (patch.reading) next.reading = patch.reading;
-  if (patch.textSize) next.textSize = patch.textSize;
+  if (patch.textSize) { next.textSize = patch.textSize; next.textPx = TEXT_SIZE_PX[patch.textSize]; }
+  if (typeof patch.textPx === 'number' && isFinite(patch.textPx)) { next.textPx = clampTextPx(patch.textPx); next.textSize = nearestTextSize(next.textPx); }
   if (patch.filters) next.filters = patch.filters;
   if (typeof patch.qtags === 'boolean') next.qtags = patch.qtags;
   if (patch.qcard) next.qcard = readQCard({ ...next.qcard, ...patch.qcard });

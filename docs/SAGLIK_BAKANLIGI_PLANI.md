@@ -119,3 +119,9 @@ Karabük bölümü `?sayfa=` ile 7 alt sayfaya bölündü (ozet, kurumlar, ilcel
 kod `src/components/saglik/SaglikKarabuk.tsx`. Bilgi "ad · değer" satırlarıyla (`Satirlar`) verilir: başlığa dokununca
 ayrıntı, saat düğmesi geçmiş yıllar; madde görünümü aynı satırlardan (`satirMaddesi`). Başka bölüm alt sayfaya
 bölünecekse aynı desen: `BolumProps.alt/altGit` + `bolumKaynaklari(id, v, alt)`.
+
+## 5. tur (2026-10-15): tablo tam ekran, kompakt mod, ders slaytı işareti
+
+- Ders slaytı eşleşme dizini: `python3 scripts/saglik/ders_eslesme.py` → `src/data/saglik/ders_eslesme.json`; eşleştirici
+  `src/components/saglik/saglikDers.ts` (eşikler ESIK_GUCLU/ESIK_YILLI/ESIK_ZAYIF). Yanlış eşleşme görülürse önce eşikler.
+- Tablo kabı ve tam ekran: `SaglikTablo.tsx` (TabloKabi). Kompakt: `.sbk.is-kompakt`.

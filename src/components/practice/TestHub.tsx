@@ -12,7 +12,7 @@ import { PracticeMode } from '../PracticeMode';
 import { toast } from '../ui/Toast';
 import {
   buildTest, loadArchiveTests, disciplineOptions, catalogCounts, randomCriteria, DEFAULT_CRITERIA, SOURCE_INFO, SOURCE_ORDER, KURUL1,
-  type TestCriteria, type TestQuestion, type TestSource, type Difficulty,
+  difficultyActive, type TestCriteria, type TestQuestion, type TestSource, type Difficulty,
 } from '../../services/testBank';
 import { COMMITTEE_NAME } from '../pdf/pdfSources';
 import '../../styles/test-builder.css';
@@ -125,7 +125,8 @@ export const TestHub: React.FC<TestHubProps> = ({ onExit }) => {
     return fmt(cat[src]);
   };
   const activeSources = c.sources.filter((src) => !SOURCE_INFO[src].kurul1Only || k1Open);
-  const available = (activeSources.length ? activeSources : SOURCE_ORDER.filter((src) => !SOURCE_INFO[src].kurul1Only || k1Open)).reduce(
+  const byLevel = difficultyActive(c);
+  const available = byLevel ? cat.ornekQuestions : (activeSources.length ? activeSources : SOURCE_ORDER.filter((src) => !SOURCE_INFO[src].kurul1Only || k1Open)).reduce(
     (n, src) => n + (src === 'cikmis' ? archiveCount : src === 'ornek' ? cat.ornekQuestions : cat[src]),
     0
   );
@@ -278,7 +279,7 @@ export const TestHub: React.FC<TestHubProps> = ({ onExit }) => {
             <div className="tb-sec">
               <div className="tb-sec-h">
                 <h2>Zorluk</h2>
-                <span>örnek sorular</span>
+                <span>{byLevel ? 'test yalnız örnek sorulardan kurulur' : 'örnek sorular'}</span>
               </div>
               <div className="tb-seg" role="group" aria-label="Zorluk">
                 {LEVELS.map(([v, l]) => {

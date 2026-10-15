@@ -252,12 +252,19 @@ export async function loadArchiveTests(): Promise<TestQuestion[]> {
   return archiveCache;
 }
 
+/** Zorluk süzgeci etkin mi: seçim var, örnek sorular kaynakta ve Kurul 1 kapsamda */
+export const difficultyActive = (c: TestCriteria) =>
+  c.difficulties.length > 0 && (!c.sources.length || c.sources.includes('ornek')) && usesKurul1(c);
+
 /**
  * Ölçütlere göre test kurar. Soru sayısı seçili kaynaklara eşit paylaştırılır; bir kaynak payını
  * dolduramazsa kalan diğerlerinden tamamlanır. Sonuç karışık sıradadır.
  */
 export async function buildTest(c: TestCriteria, onProgress?: (msg: string) => void): Promise<TestQuestion[]> {
-  const sources = c.sources.length ? c.sources : [...SOURCE_ORDER];
+  const picked0 = c.sources.length ? c.sources : [...SOURCE_ORDER];
+  // Zorluk yalnız örnek sorularda var: seçiliyse diğer kaynaklar (zorluksuz) testi doldurmasın
+  const byLevel = difficultyActive(c);
+  const sources: TestSource[] = byLevel ? ['ornek'] : picked0;
   const pools: Partial<Record<TestSource, TestQuestion[]>> = {};
   const per = Math.max(1, Math.ceil(c.count / sources.length));
 

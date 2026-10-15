@@ -68,6 +68,7 @@ import { linkClick, navigateTo, pathFor } from '../../router';
 import { initialsOf } from '../shell/navModel';
 import { AvatarCropper } from '../ui/AvatarCropper';
 import { toast } from '../ui/Toast';
+import { TextSizeSlider } from '../settings/TextSizeSlider';
 import { NotesSyncRow } from '../settings/NotesSyncRow';
 import { UserDataSyncRow } from '../settings/UserDataSyncRow';
 import { ProgressResetRow } from '../settings/ProgressResetRow';
@@ -1123,9 +1124,8 @@ const AppearancePanel: React.FC = () => {
           <Seg<Density> label="Yoğunluk" value={look.density} onChange={(d) => look.set({ density: d })}
             options={(['wide', 'normal', 'compact'] as Density[]).map((d) => ({ value: d, label: DENSITY_LABELS[d] }))} />
         </SetRow>
-        <SetRow id="u12-s-boyut" title={`Yazı boyutu · ${TEXT_SIZE_PX[look.textSize]} px`} sub="Soru kökü ve şıklar, ders anlatımı, kartlar, notlar ve özetler bu boyutla gösterilir.">
-          <Seg<TextSize> label="Yazı boyutu" value={look.textSize} onChange={(v) => look.set({ textSize: v })}
-            options={TEXT_SIZE_ORDER.map((v, i) => ({ value: v, label: 'A', aria: `${TEXT_SIZE_LABELS[v]} (${TEXT_SIZE_PX[v]} px)`, style: { fontSize: 11 + i * 2 } }))} />
+        <SetRow id="u12-s-boyut" title={`Yazı boyutu · ${look.textPx} px`} sub="6–20 px arası. Soru kökü ve şıklar, ders anlatımı, kartlar, notlar ve özetler bu boyutla gösterilir.">
+          <TextSizeSlider />
         </SetRow>
         <p className="u12-meta u12-preview-read" aria-hidden="true">Gebeliğin 20. haftasından sonra yeni başlayan hipertansiyon ve proteinüri preeklampsi düşündürür.</p>
         <SetRow id="u12-s-okuma" title="Okuma yazısı" sub="Soru kökü, ders anlatımı ve notlarda.">

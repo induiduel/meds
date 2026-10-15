@@ -1,4 +1,5 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
+import { TextSizeSlider } from './TextSizeSlider';
 import { getProgress, getNotes } from '../../services/studyStore';
 import { getStudySeconds } from '../../services/activityLog';
 import { pathFor, linkClick } from '../../router';
@@ -281,8 +282,7 @@ const ProfileSettingsClassic: React.FC<Props> = ({ currentUser, isAdmin, questio
               <span style={{ display: 'flex', gap: 8, flexWrap: 'wrap', justifyContent: 'flex-end' }}>
                 <Segmented<ReadingFont> label="Okuma yazısı" value={look.reading} onChange={(v) => look.set({ reading: v })}
                   options={(['serif', 'sans'] as ReadingFont[]).map((v) => ({ value: v, label: READING_LABELS[v] }))} />
-                <Segmented<TextSize> label="Okuma boyutu" value={look.textSize} onChange={(v) => look.set({ textSize: v })}
-                  options={TEXT_SIZE_ORDER.map((v) => ({ value: v, label: `${TEXT_SIZE_PX[v]}` }))} />
+                <TextSizeSlider />
               </span>
             </div>
             <div className="ayr-row" hidden={look.design === 'v10'}>

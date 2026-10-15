@@ -3681,3 +3681,21 @@ html.ui-v3 .ms-tooltip { border-radius: 8px; font-size: 12px; }
 .ls-chain.is-sub .n { width: 24px; height: 20px; font-size: 10.5px; background: var(--color-accent-soft); color: var(--color-accent); }
 .ls-chain.is-sub li:not(:last-child)::after { left: 11px; top: 20px; width: 1px; }
 .ls-chain.is-sub .t { font-size: 13px; }
+
+/* ── Yazı boyutu kaydırıcısı (components/settings/TextSizeSlider.tsx) — 6–20 px ── */
+.tss { display: grid; gap: 8px; width: 100%; max-width: 420px; }
+.tss-row { display: flex; align-items: center; gap: 8px; }
+.tss-btn {
+  width: 34px; height: 34px; flex: none; display: grid; place-items: center; border-radius: 9px; border: 1px solid var(--color-line);
+  background: var(--color-white); color: var(--color-ink); cursor: pointer;
+}
+.tss-btn svg { width: 15px; height: 15px; }
+.tss-btn:disabled { opacity: .4; cursor: default; }
+.tss-range { flex: 1; min-width: 0; accent-color: var(--color-accent); min-height: 28px; }
+.tss-val { flex: none; min-width: 52px; text-align: right; font-weight: 650; font-variant-numeric: tabular-nums; color: var(--color-ink); }
+.tss-steps { display: flex; flex-wrap: wrap; gap: 4px; }
+.tss-step {
+  min-width: 34px; height: 28px; padding: 0 8px; border-radius: 999px; border: 1px solid var(--color-line); background: transparent;
+  color: var(--color-ink-2); font: inherit; font-size: 12px; font-variant-numeric: tabular-nums; cursor: pointer;
+}
+.tss-step.is-on { background: var(--color-accent); border-color: var(--color-accent); color: var(--color-on-accent); font-weight: 650; }

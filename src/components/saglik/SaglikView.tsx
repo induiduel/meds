@@ -1,11 +1,12 @@
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import { LayoutGrid, Landmark, List, RefreshCw } from 'lucide-react';
+import { LayoutGrid, Landmark, List, Rows3, Rows4, RefreshCw } from 'lucide-react';
 import { parseLocation, pathFor, writeLocation, linkClick } from '../../router';
 import { AtifSaglayici, DersPaneli, Kaynakca, KendiniSina, tarihTR } from './SaglikOrtak';
 import { BOLUM_BILESEN, bolumKaynaklari } from './SaglikBolumler';
 import { BOLUMLER, BOLUM_GRUPLARI, bolumBySlug, havuzYukle, saglikVeriYukle, type BolumId, type HavuzVeri, type SaglikVeri } from './saglikVeri';
 import { GecmisCtx, GorunumCtx, type GecmisIstek, type GorunumModu } from './saglikBaglam';
 import { GecmisPencere } from './SaglikGecmis';
+import { DersCtx, dersDiziniYukle, type DersDizin } from './saglikDers';
 import '../../styles/saglik.css';
 
 /**
@@ -59,6 +60,14 @@ export const SaglikView: React.FC = () => {
     try { localStorage.setItem('medsoru_saglik_gorunum', m); } catch { /* özel pencere */ }
   }, []);
   const gorunum = useMemo(() => ({ mod, setMod }), [mod, setMod]);
+  // Yoğunluk: Rahat (varsayılan) ya da Kompakt (daha küçük boşluk ve yazı, bloklarda açıklama satırı gizli)
+  const [kompakt, setKompaktHam] = useState<boolean>(() => {
+    try { return localStorage.getItem('medsoru_saglik_yogunluk') === 'kompakt'; } catch { return false; }
+  });
+  const setKompakt = useCallback((k: boolean) => {
+    setKompaktHam(k);
+    try { localStorage.setItem('medsoru_saglik_yogunluk', k ? 'kompakt' : 'rahat'); } catch { /* özel pencere */ }
+  }, []);
   const [gecmis, setGecmis] = useState<GecmisIstek | null>(null);
 
   useEffect(() => {
@@ -103,6 +112,14 @@ export const SaglikView: React.FC = () => {
     document.querySelector('.sbk-bolum-h')?.scrollIntoView({ block: 'start' });
   }, []);
 
+  // Ders slaytı eşleşme dizini: sayfa açılınca arka planda yüklenir; gelince değerlerde "!" işaretleri belirir
+  const [dersDizin, setDersDizin] = useState<DersDizin | null>(null);
+  useEffect(() => {
+    let iptal = false;
+    dersDiziniYukle().then((d) => { if (!iptal) setDersDizin(d); }).catch(() => { /* işaretler yalnız gösterilmez */ });
+    return () => { iptal = true; };
+  }, []);
+
   // Bilgi havuzu büyük: yalnız havuz bölümü açılınca yüklenir ve kaynakçası için veriye eklenir
   const [havuz, setHavuz] = useState<HavuzVeri | null>(null);
   useEffect(() => {
@@ -124,7 +141,7 @@ export const SaglikView: React.FC = () => {
   }, [bolum, tanim.ad]);
 
   return (
-    <div className="sbk">
+    <div className={`sbk ${kompakt ? 'is-kompakt' : ''}`}>
       <header className="sbk-ust">
         <span className="sbk-amblem" aria-hidden><Landmark /></span>
         <div className="sbk-ust-m">
@@ -136,6 +153,10 @@ export const SaglikView: React.FC = () => {
           <div className="sbk-seg" role="radiogroup" aria-label="Görünüm">
             <button type="button" role="radio" aria-checked={mod === 'kart'} className={mod === 'kart' ? 'is-sec' : ''} onClick={() => setMod('kart')}><LayoutGrid aria-hidden /> Kart</button>
             <button type="button" role="radio" aria-checked={mod === 'madde'} className={mod === 'madde' ? 'is-sec' : ''} onClick={() => setMod('madde')}><List aria-hidden /> Madde madde</button>
+          </div>
+          <div className="sbk-seg" role="radiogroup" aria-label="Yoğunluk">
+            <button type="button" role="radio" aria-checked={!kompakt} className={!kompakt ? 'is-sec' : ''} onClick={() => setKompakt(false)}><Rows3 aria-hidden /> Rahat</button>
+            <button type="button" role="radio" aria-checked={kompakt} className={kompakt ? 'is-sec' : ''} onClick={() => setKompakt(true)}><Rows4 aria-hidden /> Kompakt</button>
           </div>
           {veri?.guncelleme && <span className="sbk-ust-g">Veriler {tarihTR(veri.guncelleme)} tarihinde resmî kaynaklardan derlendi</span>}
         </div>
@@ -173,6 +194,7 @@ export const SaglikView: React.FC = () => {
         </div>
       ) : (
         <GorunumCtx.Provider value={gorunum}>
+        <DersCtx.Provider value={dersDizin}>
         <GecmisCtx.Provider value={setGecmis}>
         <AtifSaglayici ids={kaynakIds} kaynaklar={veri.kaynaklar}>
           <GecmisPencere istek={gecmis} onClose={() => setGecmis(null)} />
@@ -199,6 +221,7 @@ export const SaglikView: React.FC = () => {
           </div>
         </AtifSaglayici>
         </GecmisCtx.Provider>
+        </DersCtx.Provider>
         </GorunumCtx.Provider>
       )}
     </div>

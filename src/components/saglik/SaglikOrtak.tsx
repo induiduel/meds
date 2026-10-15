@@ -6,6 +6,8 @@ import {
 import { toast } from '../ui/Toast';
 import { maddeMetni, useGecmis, useGorunum, yillikMi, type GecmisIstek, type MaddeOge } from './saglikBaglam';
 import { linkClick, navigateTo, pathFor } from '../../router';
+import { TabloKabi } from './SaglikTablo';
+import { cumleAraligi, dersEslesmeleri, useDersDizin, type DersEslesme } from './saglikDers';
 import {
   bolumSorulari, sayi, type BaglantiCapa, type BolumBaglanti, type BolumId, type Kaynak, type SeriNokta, type SinavSorusu,
 } from './saglikVeri';
@@ -96,12 +98,94 @@ export const tarihTR = (s: string) => {
  * Metin: **kalın**, ==vurgu==, "- " maddeler ve satır sonları (ders notu ve açıklamalardaki biçim)
  * =============================================================================================================== */
 
-const satirIci = (s: string): React.ReactNode[] =>
-  s.split(/(\*\*[^*]+\*\*|==[^=]+==)/g).map((p, i) => {
-    if (p.startsWith('**') && p.endsWith('**')) return <strong key={i}>{p.slice(2, -2)}</strong>;
+/** Vurgulanacak sayıları (ders slaytında geçenler) <mark> ile sarar; her biri bir kez */
+const vurgula = (p: string, vurgu: string[] | undefined, anahtar: string): React.ReactNode => {
+  if (!vurgu?.length) return p;
+  const kalan = vurgu.filter((v) => v && p.includes(v));
+  if (!kalan.length) return p;
+  const re = new RegExp(`(${kalan.map((v) => v.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|')})`);
+  const [a, x, ...b] = p.split(re);
+  return <React.Fragment key={anahtar}>{a}<mark className="sbk-ders-m">{x}</mark>{b.join('')}</React.Fragment>;
+};
+
+/**
+ * Satır içi biçim: **kalın**, ==vurgu==; baştaki "Etiket:" (ör. "Yönetim:", "**Nüfus**:") renkli yazılır.
+ * `vurgu`: ders slaytında da geçen sayılar (işaretlenir).
+ */
+export const satirIci = (s: string, vurgu?: string[]): React.ReactNode[] => {
+  let govde = s;
+  let etiket: React.ReactNode = null;
+  // "- **Başlık:** açıklama" (ders notu biçimi): iki nokta kalının içinde
+  const ic = /^\*\*([^*\n]{1,60}):\*\*(\s|$)/.exec(s);
+  if (ic) {
+    return [
+      <React.Fragment key="etkf"><span className="sbk-etk">{vurgula(ic[1], vurgu, 'etkv')}</span>:</React.Fragment>,
+      ...satirIci(s.slice(ic[0].length - ic[2].length), vurgu).map((x, i) => <React.Fragment key={`g${i}`}>{x}</React.Fragment>),
+    ];
+  }
+  const m = /^(?:\*\*([^*\n]{1,60})\*\*|([^:*\n.!?]{2,48})):(\s|$)/.exec(s);
+  if (m && !/https?$/i.test(m[2] || '') && (m[1] || m[2]).trim().split(/\s+/).length <= 7) {
+    etiket = <span className="sbk-etk" key="etk">{vurgula(m[1] || m[2], vurgu, 'etkv')}</span>;
+    govde = s.slice(m[0].length - m[3].length);
+    etiket = <React.Fragment key="etkf">{etiket}:</React.Fragment>;
+  }
+  const parcalar = govde.split(/(\*\*[^*]+\*\*|==[^=]+==)/g).map((p, i) => {
+    if (p.startsWith('**') && p.endsWith('**')) return <strong key={i}>{vurgula(p.slice(2, -2), vurgu, `v${i}`)}</strong>;
     if (p.startsWith('==') && p.endsWith('==')) return <mark key={i}>{p.slice(2, -2)}</mark>;
-    return <React.Fragment key={i}>{p}</React.Fragment>;
+    return <React.Fragment key={i}>{vurgula(p, vurgu, `v${i}`)}</React.Fragment>;
   });
+  return etiket ? [etiket, ...parcalar] : parcalar;
+};
+
+/* ===============================================================================================================
+ * Ders slaytı işareti: değer ders slaytında da geçiyorsa sağ üstte "!" — dokununca slayt cümlesi (sayı vurgulu)
+ * =============================================================================================================== */
+
+export const DersIsareti: React.FC<{ e: DersEslesme[] }> = ({ e }) => {
+  const [acik, setAcik] = useState(false);
+  const ref = useRef<HTMLSpanElement>(null);
+  const dz = useDersDizin();
+  useEffect(() => {
+    if (!acik) return;
+    const dis = (ev: PointerEvent) => { if (!ref.current?.contains(ev.target as Node)) setAcik(false); };
+    const tus = (ev: KeyboardEvent) => { if (ev.key === 'Escape') setAcik(false); };
+    document.addEventListener('pointerdown', dis);
+    document.addEventListener('keydown', tus);
+    return () => { document.removeEventListener('pointerdown', dis); document.removeEventListener('keydown', tus); };
+  }, [acik]);
+  if (!e.length || !dz) return null;
+  return (
+    <span className={`sbk-ders-i ${acik ? 'is-acik' : ''}`} ref={ref} onClick={(ev) => ev.stopPropagation()} onKeyDown={(ev) => ev.stopPropagation()}>
+      <button
+        type="button" className="sbk-ders-i-b" aria-expanded={acik} onClick={() => setAcik((x) => !x)}
+        title="Bu bilgi ders slaytında da geçiyor" aria-label="Ders slaytında geçiyor: ayrıntı"
+      >!</button>
+      {acik && (
+        <span className="sbk-ders-pop" role="dialog" aria-label="Ders slaytında geçiyor">
+          <span className="sbk-ders-pop-t"><Presentation aria-hidden /> Ders slaytında geçiyor</span>
+          {e.slice(0, 3).map((x, i) => {
+            const r = cumleAraligi(dz, x);
+            const t = x.cumle.t;
+            return (
+              <span key={i} className="sbk-ders-pop-o">
+                <small>{x.deste} · Slayt {x.cumle.s}{x.cumle.b ? ` · ${x.cumle.b}` : ''}</small>
+                <q>{r ? <>{t.slice(0, r[0])}<mark className="sbk-ders-m">{t.slice(r[0], r[1])}</mark>{t.slice(r[1])}</> : t}</q>
+                <IcBag to={desteYolu(x.cumle.d, x.cumle.s)} className="sbk-bag">Slayta git <ArrowRight aria-hidden /></IcBag>
+              </span>
+            );
+          })}
+          {e.length > 3 && <small className="sbk-muted">+{e.length - 3} slayt daha</small>}
+        </span>
+      )}
+    </span>
+  );
+};
+
+/** Metnin ders slaytı eşleşmeleri (dizin yüklenmediyse boş) */
+export const useDersEslesme = (metin: string, baglam = ''): DersEslesme[] => {
+  const dz = useDersDizin();
+  return useMemo(() => dersEslesmeleri(dz, metin, baglam), [dz, metin, baglam]);
+};
 
 export const MiniMetin: React.FC<{ metin: string; className?: string }> = ({ metin, className }) => {
   const bloklar: React.ReactNode[] = [];
@@ -171,16 +255,24 @@ export const DersteCapa: React.FC<{ capalar?: BaglantiCapa[] }> = ({ capalar }) 
  * =============================================================================================================== */
 
 /** Madde ağacı (madde görünümü ve geçmiş yıllar listesi) */
-export const MaddeAgaci: React.FC<{ ogeler: MaddeOge[]; sik?: boolean }> = ({ ogeler, sik }) => (
+const etiketi = (m: string) => (/^(?:\*\*([^*]+)\*\*|([^:]{2,80})):/.exec(m)?.slice(1).find(Boolean) || '').replace(/\*\*/g, '');
+
+const MaddeSatiri: React.FC<{ o: MaddeOge; baglam: string }> = ({ o, baglam }) => {
+  const metin = typeof o === 'string' ? o : o.metin;
+  const e = useDersEslesme(metin, baglam);
+  const vurgu = e.map((x) => x.ham);
+  return (
+    <li className={e.length ? 'has-ders' : undefined}>
+      <span>{satirIci(metin, vurgu)}{typeof o !== 'string' && <><Atif id={o.kaynak} konum={o.konum} />{o.ek?.length ? <EkAtif ids={o.ek} /> : null}</>}</span>
+      <DersIsareti e={e} />
+      {typeof o !== 'string' && o.alt?.length ? <MaddeAgaci ogeler={o.alt} sik baglam={[baglam, etiketi(metin)].filter(Boolean).join(' ')} /> : null}
+    </li>
+  );
+};
+
+export const MaddeAgaci: React.FC<{ ogeler: MaddeOge[]; sik?: boolean; baglam?: string }> = ({ ogeler, sik, baglam = '' }) => (
   <ul className={`sbk-agac ${sik ? 'is-sik' : ''}`}>
-    {ogeler.map((o, i) => (typeof o === 'string' ? (
-      <li key={i}><span>{satirIci(o)}</span></li>
-    ) : (
-      <li key={i}>
-        <span>{satirIci(o.metin)}<Atif id={o.kaynak} konum={o.konum} />{o.ek?.length ? <EkAtif ids={o.ek} /> : null}</span>
-        {o.alt?.length ? <MaddeAgaci ogeler={o.alt} sik /> : null}
-      </li>
-    )))}
+    {ogeler.map((o, i) => <MaddeSatiri key={i} o={o} baglam={baglam} />)}
   </ul>
 );
 
@@ -252,13 +344,15 @@ export const Kpi: React.FC<{
   gecmis?: Partial<GecmisIstek>;
 }> = ({ ad, deger, birim, yil, kaynak, konum, not, seri, ton, ipucu, ek, gecmis }) => {
   const ac = useGecmis();
+  const degerMetni = typeof deger === 'string' || typeof deger === 'number' ? String(deger) : '';
+  const dersE = useDersEslesme(degerMetni ? `${ad}: ${degerMetni}` : '', `${ad} ${yil ?? ''}`);
   const yilSay = (seri || []).filter((p) => typeof p.deger === 'number').length;
   const acilir = yilSay >= 2;
   const ic = (
     <>
       <span className="sbk-kpi-ad">{ad}</span>
       <span className="sbk-kpi-d">
-        <b data-num>{deger}</b>
+        <b data-num>{dersE.length ? <mark className="sbk-ders-m">{deger}</mark> : deger}</b>
         {birim && <small>{birim}</small>}
         <Atif id={kaynak} konum={konum} />
         {ek && ek.length > 0 && <EkAtif ids={ek} />}
@@ -269,6 +363,7 @@ export const Kpi: React.FC<{
       </span>
       {seri && seri.filter(yillikMi).length > 2 && <Kivilcim seri={seri} />}
       {acilir && <span className="sbk-kpi-gecmis"><History aria-hidden /> {yilSay} yıl</span>}
+      <DersIsareti e={dersE} />
     </>
   );
   if (!acilir) return <div className={`sbk-kpi ${ton ? `is-${ton}` : ''}`} title={ipucu}>{ic}</div>;
@@ -761,37 +856,41 @@ export const OkunurTablo: React.FC<{
   const [ref, w] = useGenislik<HTMLDivElement>();
   const kart = w > 0 && w < dar;
   const [ilk, ...diger] = sutunlar;
+  const tablo = (
+    <div className="sbk-tablo-kap">
+      <table className="sbk-tablo sbk-okunur-t">
+        {baslik && <caption className="sbk-gizli">{baslik}</caption>}
+        <thead><tr>{sutunlar.map((s) => <th key={s.anahtar} scope="col">{s.ad}</th>)}</tr></thead>
+        <tbody>
+          {satirlar.map((r, i) => (
+            <tr key={i}>
+              <th scope="row">{r[ilk.anahtar]}</th>
+              {diger.map((s) => <td key={s.anahtar}>{r[s.anahtar] ?? '—'}</td>)}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
   return (
     <div ref={ref} className="sbk-okunur">
       {kart ? (
-        <ul className="sbk-okunur-kartlar" aria-label={baslik}>
-          {satirlar.map((r, i) => (
-            <li key={i}>
-              <h4>{r[ilk.anahtar]}</h4>
-              <dl>
-                {diger.map((s) => (r[s.anahtar] != null && r[s.anahtar] !== '' ? (
-                  <div key={s.anahtar}><dt>{s.ad}</dt><dd>{r[s.anahtar]}</dd></div>
-                ) : null))}
-              </dl>
-            </li>
-          ))}
-        </ul>
-      ) : (
-        <div className="sbk-tablo-kap">
-          <table className="sbk-tablo sbk-okunur-t">
-            {baslik && <caption className="sbk-gizli">{baslik}</caption>}
-            <thead><tr>{sutunlar.map((s) => <th key={s.anahtar} scope="col">{s.ad}</th>)}</tr></thead>
-            <tbody>
-              {satirlar.map((r, i) => (
-                <tr key={i}>
-                  <th scope="row">{r[ilk.anahtar]}</th>
-                  {diger.map((s) => <td key={s.anahtar}>{r[s.anahtar] ?? '—'}</td>)}
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      )}
+        // Telefonda satırlar kart olur; tablonun kendisi tam ekranda yakınlaştırılarak görülür
+        <TabloKabi baslik={baslik} tamEkran={tablo} dugmeMetni="Tablo olarak aç">
+          <ul className="sbk-okunur-kartlar" aria-label={baslik}>
+            {satirlar.map((r, i) => (
+              <li key={i}>
+                <h4>{r[ilk.anahtar]}</h4>
+                <dl>
+                  {diger.map((s) => (r[s.anahtar] != null && r[s.anahtar] !== '' ? (
+                    <div key={s.anahtar}><dt>{s.ad}</dt><dd>{r[s.anahtar]}</dd></div>
+                  ) : null))}
+                </dl>
+              </li>
+            ))}
+          </ul>
+        </TabloKabi>
+      ) : <TabloKabi baslik={baslik}>{tablo}</TabloKabi>}
     </div>
   );
 };
