@@ -2577,7 +2577,12 @@ export const ApiService = {
           const json = await res.json();
           if (json.questions && Array.isArray(json.questions)) {
             list = json.questions;
-            pastQuestionsCache.saveBatch(list).catch(() => {});
+            const full = list;
+            pastQuestionsCache.saveBatch(full).then(() => {
+              let maxTime = new Date(0).toISOString();
+              for (const q of full) if (q.updatedAt && q.updatedAt > maxTime) maxTime = q.updatedAt;
+              return pastQuestionsCache.setLastSyncTime(maxTime, full.length);
+            }).catch(() => {});
           }
         }
       } catch (e) {}

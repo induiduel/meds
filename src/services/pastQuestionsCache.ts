@@ -198,6 +198,20 @@ class PastQuestionsCacheService {
    * embeddingText, grounding, yinelenen denetleyiciSurumu/reconstruction açıklamaları) bellekten ve
    * IndexedDB'den arındırarak RAM kullanımını %50+ düşürür.
    */
+  /** Kayıt sadeleştirilmemiş alan taşıyor mu (okumada her soruyu yeniden kopyalamamak için ucuz denetim) */
+  private needsSlim(raw: any): boolean {
+    if (!raw || typeof raw !== 'object') return false;
+    if (raw.checkSolveOriginal || raw.ragChunk || raw.embeddingText || raw.grounding) return true;
+    if (raw.explanation && raw.tibbi_aciklama) return true;
+    const cs = raw.checkSolve;
+    if (cs && typeof cs === 'object' && ('version' in cs || 'parti' in cs || 'degisiklikler' in cs || 'guven' in cs)) return true;
+    const ds = raw.denetleyiciSurumu;
+    if (ds && typeof ds === 'object' && ('explanation' in ds || 'correctAnswer' in ds || 'topic' in ds)) return true;
+    const rc = raw.reconstruction;
+    if (rc && typeof rc === 'object' && ((raw.explanation && rc.explanation === raw.explanation) || (raw.stem && rc.stem === raw.stem))) return true;
+    return false;
+  }
+
   private slimQuestion(raw: QuestionItem): QuestionItem {
     if (!raw || typeof raw !== 'object') return raw;
     const q: any = { ...raw };
@@ -270,7 +284,8 @@ class PastQuestionsCacheService {
           const slimmed: QuestionItem[] = [];
           for (const item of rawItems) {
             if (item && item.id) {
-              const s = this.slimQuestion(item);
+              // saveBatch/saveQuestion zaten sadeleştirip yazar; yalnız eski biçimde kalmış kaydı yeniden kopyala
+              const s = this.needsSlim(item) ? this.slimQuestion(item) : item;
               this.memoryMap.set(s.id, s);
               slimmed.push(s);
             }
@@ -510,6 +525,10 @@ class PastQuestionsCacheService {
 
   public async setLastSyncTime(time: string, count?: number): Promise<void> {
     await this.setMeta(KEY_LAST_SYNC, time);
+    // Eşitleme zamanı yalnız güncel biçimde tam/artımlı yazılmış önbellek için kaydedilir; biçim işareti
+    // konmazsa getLastSyncTime null döner ve bir sonraki eşitleme tüm listeyi (~85 MB) ikinci kez indirirdi
+    // (ilk açılışı multiDbManager/api.ts doldurduğunda böyle oluyordu).
+    try { if (typeof window !== 'undefined') window.localStorage.setItem(CACHE_FORMAT_KEY, CACHE_FORMAT); } catch { /* depolama kapalı */ }
     if (count !== undefined) {
       await this.setMeta(KEY_TOTAL_COUNT, count);
     }

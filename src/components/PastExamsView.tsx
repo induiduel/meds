@@ -278,6 +278,9 @@ const DiffSheet: React.FC<{
 const V12Frame: React.FC<{ on: boolean; props?: () => Omit<React.ComponentProps<typeof CikmisV12>, 'children'>; children: React.ReactNode }> = ({ on, props, children }) =>
   on && props ? <CikmisV12 {...props()}>{children}</CikmisV12> : <>{children}</>;
 
+/** Ham önbellek nesnesi → ekranda kullanılan işlenmiş soru (bileşen yeniden bağlanınca yeniden kullanılır). */
+const processedPastCache = new WeakMap<object, QuestionItem>();
+
 export const PastExamsView: React.FC<PastExamsViewProps> = ({
   currentUser,
   lectureNotes = [],
@@ -539,6 +542,10 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
       const processed = data
         .filter(q => !q.id?.startsWith('civan-') && !q.tags?.some((t: string) => /civan/i.test(t)))
         .map(q => {
+          // Önbellekteki aynı soru nesnesi için işlenmiş hâl yeniden kullanılır: sayfaya her dönüşte 4.000+
+          // soru baştan normalize edilip arama alanları (_cachedFields) yeniden katlanmasın.
+          const hit = processedPastCache.get(q);
+          if (hit) return hit;
           const normComm = normalizeCommitteeId(q.committeeId);
           const normDisc = normalizeDonem3Discipline(q.discipline);
           const isQuarantined = Boolean(
@@ -549,7 +556,7 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
           const isDonem3 = isDonem3Question({ ...q, committeeId: normComm || q.committeeId });
           const isHidden = Boolean((q as any).hidden || (q as any).data?.hidden);
           const isInaccessible = isQuarantined || !isDonem3 || isHidden;
-          return {
+          const out = {
             ...q,
             committeeId: normComm || q.committeeId,
             discipline: normDisc || q.discipline,
@@ -557,6 +564,8 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
             isInaccessible,
             isDonem3,
           };
+          processedPastCache.set(q, out);
+          return out;
         });
       setQuestions(processed);
     } catch (e) {

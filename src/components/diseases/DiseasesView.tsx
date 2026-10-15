@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useEffect, useRef, useCallback, memo } from 'react';
+import React, { useState, useMemo, useEffect, useRef, useCallback, memo, useDeferredValue } from 'react';
 import {
   BookOpenText,
   Activity,
@@ -71,6 +71,22 @@ interface DiseasesViewProps {
 }
 
 /** Bölüm başına ikon ve vurgu tonu (başlık türe göre diseaseModel.sectionTitle'dan gelir) */
+
+// Katlanmış (Türkçe duyarsız) ad ve tam arama metni profil nesnesi başına bir kez hesaplanır: her tuşta
+// ya da sayfaya her dönüşte 470+ profilin tüm maddeleri yeniden katlanmasın. Düzenlenen profil yeni nesnedir.
+const foldedNameCache = new WeakMap<object, string>();
+const foldedTextCache = new WeakMap<object, string>();
+function foldedName(d: DiseaseProfile): string {
+  let v = foldedNameCache.get(d);
+  if (v === undefined) foldedNameCache.set(d, (v = foldText(`${d.name} ${d.latinName || ''} ${d.icd_code || ''} ${(d.altNames || []).join(' ')}`)));
+  return v;
+}
+function foldedSearchText(d: DiseaseProfile): string {
+  let v = foldedTextCache.get(d);
+  if (v === undefined) foldedTextCache.set(d, (v = foldText(diseaseSearchText(d))));
+  return v;
+}
+
 const SECTION_META: Record<DiseaseSectionId, { icon: React.ElementType; tone: string }> = {
   definition: { icon: Info, tone: 'accent' },
   etiology: { icon: Activity, tone: 'ai' },
@@ -246,25 +262,38 @@ export const DiseasesView: React.FC<DiseasesViewProps> = ({
     return () => { ctrl.abort(); window.clearTimeout(t); };
   }, [searchQuery]);
 
-  // Varlık dizini: "belirti:ateş" → geçtiği profiller (sınıflandırma süzgeci)
-  const entityIndex = useMemo(() => buildEntityIndex(diseases), [diseases]);
+  // Arama ve süzme ertelenmiş sorguyla çalışır: yazarken giriş kutusu bekletilmez
+  const deferredQuery = useDeferredValue(searchQuery);
+  const foldedQuery = useMemo(() => foldText(deferredQuery.trim()), [deferredQuery]);
+
+  // Varlık dizini: "belirti:ateş" → geçtiği profiller (sınıflandırma süzgeci). Açılışta değil, ilk gerektiğinde
+  // (en az 3 harflik arama ya da varlık süzgeci) bir kez kurulur.
+  const needEntities = Boolean(entityFilter) || foldedQuery.length >= 3;
+  const entityIndex = useMemo(
+    () => (needEntities ? buildEntityIndex(diseases) : new Map<string, { entity: { name: string; type: any }; hits: { diseaseId: string; section: any }[] }>()),
+    [diseases, needEntities],
+  ) as ReturnType<typeof buildEntityIndex>;
+  const entityFolded = useMemo(() => {
+    const m = new Map<string, string>();
+    for (const [k, row] of entityIndex) m.set(k, foldText(row.entity.name));
+    return m;
+  }, [entityIndex]);
   const activeEntity = entityFilter ? entityIndex.get(entityFilter) : undefined;
   const entityIds = useMemo(() => new Set(activeEntity?.hits.map((h) => h.diseaseId) || []), [activeEntity]);
 
   /** Aranan sözcük bir varlık adıysa ("ateş") sınıflandırma önerisi */
   const entitySuggestions = useMemo(() => {
-    const q = foldText(searchQuery.trim());
+    const q = foldedQuery;
     if (q.length < 3 || entityFilter) return [];
     const out: Array<{ key: string; label: string; n: number }> = [];
     for (const [key, row] of entityIndex) {
-      if (foldText(row.entity.name) !== q) continue;
+      if (entityFolded.get(key) !== q) continue;
       const n = new Set(row.hits.map((h) => h.diseaseId)).size;
       if (n >= 2) out.push({ key, label: `${ENTITY_TYPE_LABEL[row.entity.type]}: ${row.entity.name}`, n });
     }
     return out.sort((a, b) => b.n - a.n).slice(0, 4);
-  }, [searchQuery, entityIndex, entityFilter]);
+  }, [foldedQuery, entityIndex, entityFolded, entityFilter]);
 
-  const searchTexts = useMemo(() => new Map(diseases.map((d) => [d.id, foldText(diseaseSearchText(d))])), [diseases]);
 
   const categories = useMemo(() => {
     const present = new Set(diseases.map((d) => d.category).filter(Boolean));
@@ -319,8 +348,7 @@ export const DiseasesView: React.FC<DiseasesViewProps> = ({
 
   // Süzme: Türkçe karakter/büyük-küçük harf duyarsız; ad eşleşmesi ve sorgu zekâsının tanıdığı hastalıklar öne
   const filteredDiseases = useMemo(() => {
-    const q = foldText(searchQuery.trim());
-    const terms = q.split(/\s+/).filter((t) => t.length >= 2);
+    const terms = foldedQuery.split(/\s+/).filter((t) => t.length >= 2);
     const pinned = new Set(conceptIds);
     const scored: Array<{ d: DiseaseProfile; s: number }> = [];
     for (const d of diseases) {
@@ -330,18 +358,18 @@ export const DiseasesView: React.FC<DiseasesViewProps> = ({
       if (activeEntity && !entityIds.has(d.id)) continue;
       if (lessonOn && !lessonMatch.has(d.id)) continue;
       if (!terms.length) { scored.push({ d, s: lessonOn ? lessonMatch.get(d.id)!.n : 0 }); continue; }
-      const name = foldText(`${d.name} ${d.latinName || ''} ${d.icd_code || ''} ${(d.altNames || []).join(' ')}`);
+      const name = foldedName(d);
       let s = 0;
       if (pinned.has(d.id)) s += 100;
       if (terms.every((t) => name.includes(t))) s += 50 + (name.startsWith(terms[0]) ? 10 : 0);
-      else if (terms.every((t) => searchTexts.get(d.id)?.includes(t))) s += 10;
+      else { const txt = foldedSearchText(d); if (terms.every((t) => txt.includes(t))) s += 10; }
       if (s > 0) scored.push({ d, s });
     }
     // Ders süzgecinde konuda en çok geçen profiller öne gelir
     if (terms.length || lessonOn) scored.sort((a, b) => b.s - a.s || a.d.name.localeCompare(b.d.name, 'tr'));
     else scored.sort((a, b) => a.d.name.localeCompare(b.d.name, 'tr'));
     return scored.map((x) => x.d);
-  }, [diseases, searchQuery, selectedCategory, selectedKind, onlyFavorites, favoriteIds, conceptIds, activeEntity, entityIds, searchTexts, lessonOn, lessonMatch]);
+  }, [diseases, foldedQuery, selectedCategory, selectedKind, onlyFavorites, favoriteIds, conceptIds, activeEntity, entityIds, lessonOn, lessonMatch]);
 
   // Kaydırdıkça yükleme: ilk 40 satır, alt uca yaklaşınca 40'ar eklenir (470 kaydın tek seferde çizilmesi donma yapıyordu)
   const PAGE = 40;

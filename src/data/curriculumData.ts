@@ -241,8 +241,17 @@ export const DONEM3_CURRICULUM_DISCIPLINES: string[] = [
  * Verilen serbest veya karmaşık branş adını Dönem 3 resmi ders programındaki standart ada normalize eder.
  * Dönem 3 müfredatında yer almayan dersler için (Anatomi, Histoloji, Fizyoloji, vb.) null döner.
  */
+// Farklı ders adı sayısı az (≈100) ama işlev her soru için çağrılıyor (çıkmış listesi 4.000+): sonuç önbellekte
+const disciplineNormCache = new Map<string, string | null>();
 export function normalizeDonem3Discipline(raw?: string): string | null {
   if (!raw) return null;
+  const hit = disciplineNormCache.get(raw);
+  if (hit !== undefined) return hit;
+  const out = normalizeDonem3DisciplineRaw(raw);
+  if (disciplineNormCache.size < 5000) disciplineNormCache.set(raw, out);
+  return out;
+}
+function normalizeDonem3DisciplineRaw(raw: string): string | null {
   const c = raw.trim().toLocaleLowerCase('tr-TR').replace(/[\u0300-\u036f]/g, '');
 
   // Dönem 3 müfredatında bulunmayan branşları dışla (Dönem 1 & 2 veya diğer stajlar)
