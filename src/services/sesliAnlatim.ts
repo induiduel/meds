@@ -275,7 +275,11 @@ class KotaHatasi extends Error {
 }
 const anahtarBekleme = new Map<string, number>(); // ad → bu zamana kadar kullanma
 function ucretsizAnahtarlar(): { ad: string; deger: string }[] {
-  const adlar = ['GEMINI_API_KEY', ...freeGeminiKeyNames()];
+  // Önce seslendirmeye ayrılmış ücretsiz anahtarlar (TTS_FREE_GEMINI_KEY_N), sonra genel ücretsiz havuz
+  const ozel = Object.keys(process.env)
+    .filter((n) => /^TTS_FREE_GEMINI_KEY_\d+$/.test(n))
+    .sort((a, b) => Number(a.slice(20)) - Number(b.slice(20)));
+  const adlar = [...ozel, 'GEMINI_API_KEY', ...freeGeminiKeyNames()];
   return adlar.map((ad) => ({ ad, deger: (process.env[ad] || '').trim() })).filter((x) => x.deger);
 }
 function sonrakiPasifikGeceYarisi(): number {
