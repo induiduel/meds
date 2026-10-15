@@ -7,11 +7,23 @@ import React, { Suspense, lazy, memo, useCallback, useEffect, useLayoutEffect, u
 import { ChevronLeft, Crosshair, FileText, Minus, Play, Plus, ScrollText } from 'lucide-react';
 import { navigateTo, pathFor } from '../../router';
 import { driveViewUrl, useDeckPdf } from '../../services/deckPdfService';
-import { elementZoom } from '../../utils/uiZoom';
 import {
   cdCumleAraligi, cdDetayBagla, cdDetayGetir, cdDurum, cdOynat, cdParagrafa, useCd, type CdDetay,
 } from './canliDersStore';
 import '../learn/pdf/pdfDoc.css';
+
+/** Öğenin görünür ölçeği (v12 yazı boyutu CSS zoom'u); utils/uiZoom.elementZoom ile aynı mantık. */
+function elementZoom(el: Element | null | undefined): number {
+  if (!el) return 1;
+  const z = (el as Element & { currentCSSZoom?: number }).currentCSSZoom;
+  if (typeof z === 'number' && z > 0) return z;
+  const h = el as HTMLElement;
+  if (h.offsetWidth > 0) {
+    const r = el.getBoundingClientRect().width / h.offsetWidth;
+    if (r > 0 && Number.isFinite(r)) return r;
+  }
+  return 1;
+}
 
 const PdfDocView = lazy(() => import('../learn/pdf/PdfDocView'));
 
