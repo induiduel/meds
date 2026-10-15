@@ -173,7 +173,7 @@ export const ManageSesliAnlatimSection: React.FC<{ adminEmail: string }> = ({ ad
             <button type="button" className="ms-btn is-sm" onClick={() => setKuyrukAcik((v) => !v)}>{kuyrukAcik ? 'Gizle' : 'Göster'}</button>
           </>
         }
-        desc="Emel ve Gemini iki şeritte paralel; her şerit dersleri sırayla, tek tek seslendirir. Gemini sesi bitmeden sonraki derse geçilmez: önce tüm ücretsiz anahtarlar denenir, hepsi doluysa ücretli üretim açıksa ücretli anahtarla sürer, kapalıysa kota açılınca kaldığı parçadan devam eder."
+        desc="Emel, ücretsiz Gemini ve ücretli Gemini üç ayrı şeritte paralel; ücretli işler hiç beklemez, her şerit kendi içinde dersleri sırayla, tek tek seslendirir. Gemini sesi bitmeden sonraki derse geçilmez: önce tüm ücretsiz anahtarlar denenir, hepsi doluysa ücretli üretim açıksa ücretli anahtarla sürer, kapalıysa kota açılınca kaldığı parçadan devam eder."
         flush={!kuyrukAcik}
       >
         {kuyrukAcik &&

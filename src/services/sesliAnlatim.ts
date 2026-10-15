@@ -652,11 +652,12 @@ async function isIsle(is: Is) {
   degisti('bitti');
 }
 
-type Serit = 'edge' | 'gemini';
-const seritSaglayici = (x: Is): Serit => (x.saglayici === 'edge-emel' ? 'edge' : 'gemini');
+type Serit = 'edge' | 'gemini' | 'ucretli';
+const seritSaglayici = (x: Is): Serit => (x.saglayici === 'edge-emel' ? 'edge' : x.saglayici === 'gemini-ucretli' ? 'ucretli' : 'gemini');
 const uyandirilar = new Set<() => void>();
 
-/** Bir şerit: Edge (Emel) ve Gemini ayrı servisler olduğundan iki şerit paralel çalışır; her şerit kendi içinde tek tek. */
+/** Bir şerit: Edge (Emel), ücretsiz Gemini ve ücretli Gemini ayrı servis/anahtar kullandığından üç şerit paralel çalışır;
+ *  her şerit kendi içinde tek tek. Ücretli işler hiçbir ücretsiz işi beklemez. */
 async function seritDongusu(serit: Serit) {
   for (;;) {
     let bekle = 60000;
@@ -672,8 +673,8 @@ async function seritDongusu(serit: Serit) {
             fs.existsSync(P.metin(x.key)) &&
             (x.saglayici !== 'gemini-ucretli' || ayar().ucretliAktif),
         );
-        // Gemini şeridinde elle başlatılan ücretli işler önce. Ücretsiz Aoede alternatifleri ders sırasıyla ve
-        // TEK TEK: başlamış (kota bekleyen / yarım) bir ücretsiz iş bitmeden sıradaki derse geçilmez.
+        // Ücretsiz Aoede alternatifleri ders sırasıyla ve TEK TEK: başlamış (kota bekleyen / yarım) bir ücretsiz iş
+        // bitmeden sıradaki derse geçilmez.
         let adaylar = sirada;
         if (serit === 'gemini') {
           const yarim = q.find(
@@ -681,9 +682,9 @@ async function seritDongusu(serit: Serit) {
               x.saglayici === 'gemini-ucretsiz' &&
               (x.durum === 'calisiyor' || x.durum === 'kota-bekliyor' || (x.durum === 'bekliyor' && (x.ilerleme?.bitti || 0) > 0)),
           );
-          if (yarim) adaylar = sirada.filter((x) => x.saglayici === 'gemini-ucretli' || x.id === yarim.id);
+          if (yarim) adaylar = sirada.filter((x) => x.id === yarim.id);
         }
-        const is = adaylar.find((x) => x.saglayici === 'gemini-ucretli') || adaylar[0];
+        const is = adaylar[0];
         if (is) {
           try {
             await isIsle(is);
@@ -734,6 +735,7 @@ async function isciDongusu() {
   kuyrukYaz(q0);
   void seritDongusu('edge');
   void seritDongusu('gemini');
+  void seritDongusu('ucretli');
 }
 
 export function isEkle(key: string, saglayici: Saglayici, ses: string, opts: { varsayilanYap?: boolean; isteyen?: string; one?: boolean } = {}) {
