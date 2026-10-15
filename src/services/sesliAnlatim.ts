@@ -504,6 +504,7 @@ async function isIsle(is: Is) {
     const beklenen = (p.kelime / KELIME_DK) * 60;
     let buf: Buffer | null = null;
     let sure = 0;
+    let ucretliYedek = false;
     let dogrulama: number | undefined; // Gemini: döküm benzerliği %, -1 = doğrulanamadı
     let zaman: ParcaZaman | undefined; // parça içi paragraf zamanları (birleştirmede globale çevrilir)
     for (let deneme = 1; deneme <= 4 && !buf; deneme++) {
@@ -516,6 +517,7 @@ async function isIsle(is: Is) {
           zaman = z;
         } else {
           const ucretli = is.saglayici === 'gemini-ucretli';
+          let parcaUcretli = false; // ücretsiz işte tüm ücretsiz anahtarlar doluyken ücretli yedekle üretilen parça
           let anahtar = '';
           let anahtarAdi = '';
           if (ucretli) {
@@ -534,19 +536,32 @@ async function isIsle(is: Is) {
             }
           } else {
             const uygun = ucretsizAnahtarlar().filter((k) => (anahtarBekleme.get(k.ad) || 0) <= Date.now());
-            if (!uygun.length) {
-              const en = Math.min(...ucretsizAnahtarlar().map((k) => anahtarBekleme.get(k.ad) || Date.now() + 60000));
-              throw new KotaHatasi(Math.max(en - Date.now(), 30000), 'Tüm ücretsiz anahtarların kotası dolu');
+            if (uygun.length) {
+              anahtar = uygun[0].deger;
+              anahtarAdi = uygun[0].ad;
+            } else {
+              // Bütün ücretsiz anahtarlar denendi ve dolu: ücretli üretim açıksa aynı ders ücretli anahtarla sürer, değilse bekler
+              const odenen = (process.env.TTS_PAID_GEMINI_KEY || '').trim();
+              const b0 = butce();
+              if (ayar().ucretliAktif && odenen && b0.harcananTL + parcaTahminiTL(p.kelime) <= BUTCE.kilitTL) {
+                anahtar = odenen;
+                anahtarAdi = 'TTS_PAID_GEMINI_KEY';
+                parcaUcretli = true;
+              } else {
+                const en = Math.min(...ucretsizAnahtarlar().map((k) => anahtarBekleme.get(k.ad) || Date.now() + 60000));
+                throw new KotaHatasi(
+                  Math.max(en - Date.now(), 30000),
+                  ayar().ucretliAktif ? 'Tüm ücretsiz anahtarlar dolu ve bütçe kilidine ulaşıldı' : 'Tüm ücretsiz anahtarların kotası dolu (ücretli üretim kapalı; kota açılınca aynı ders sürer)',
+                );
+              }
             }
-            anahtar = uygun[0].deger;
-            anahtarAdi = uygun[0].ad;
           }
           try {
             const ham = await geminiCagir(anahtar, is.ses, p.metin);
             const usage = ham.usage;
             const pcm = sessizlikKirp(ham.pcm);
             sure = pcm.length / 48000;
-            if (ucretli) {
+            if (ucretli || parcaUcretli) {
               const tl = tlHesapla(usage);
               const b = butce();
               b.harcananTL = +(b.harcananTL + tl).toFixed(4);
@@ -563,10 +578,11 @@ async function isIsle(is: Is) {
             } else dogrulama = -1;
             const once = p.bolumBasi && i > 0 ? 0.6 : 0;
             buf = pcmMp3(pcm, 0.6, once);
+            ucretliYedek = parcaUcretli;
             zaman = geminiParcaZamani(p.metin.split('\n'), once, sure, 0.6, mp3Sure(buf, 64));
             sure += 0.6 + once;
           } catch (e) {
-            if (e instanceof KotaHatasi && !ucretli) {
+            if (e instanceof KotaHatasi && !ucretli && !parcaUcretli) {
               anahtarBekleme.set(anahtarAdi, Date.now() + e.bekleMs);
               deneme--; // başka anahtarla aynı denemeyi sürdür
               if (ucretsizAnahtarlar().every((k) => (anahtarBekleme.get(k.ad) || 0) > Date.now())) throw e;
@@ -583,7 +599,7 @@ async function isIsle(is: Is) {
       }
     }
     fs.writeFileSync(dosya, buf!);
-    fs.writeFileSync(meta, JSON.stringify({ sure, kelime: p.kelime, dogrulama, bayt: buf!.length, paragraf: p.metin.split('\n').length, zaman: zaman?.map(([a, b]) => [yuvarla(a, 3), yuvarla(b, 3)]) }));
+    fs.writeFileSync(meta, JSON.stringify({ sure, kelime: p.kelime, dogrulama, ucretliYedek, bayt: buf!.length, paragraf: p.metin.split('\n').length, zaman: zaman?.map(([a, b]) => [yuvarla(a, 3), yuvarla(b, 3)]) }));
     sureToplam += sure;
     isGuncelle(is.id, (x) => (x.ilerleme = { bitti: i + 1, toplam: parcalar.length }));
     degisti('ilerleme');
@@ -593,7 +609,8 @@ async function isIsle(is: Is) {
   const vid = `${is.saglayici}-${is.ses.toLowerCase()}-${Date.now().toString(36)}`;
   const hedef = P.ses(is.key, vid);
   const parts = parcalar.map((_, i) => fs.readFileSync(path.join(dir, `${String(i).padStart(3, '0')}.mp3`)));
-  const metalar = parcalar.map((_, i) => oku<{ dogrulama?: number }>(path.join(dir, `${String(i).padStart(3, '0')}.mp3.json`), {}));
+  const metalar = parcalar.map((_, i) => oku<{ dogrulama?: number; ucretliYedek?: boolean }>(path.join(dir, `${String(i).padStart(3, '0')}.mp3.json`), {}));
+  const yedekParca = metalar.filter((m) => m.ucretliYedek).length;
   const dogrulanan = metalar.filter((m) => typeof m.dogrulama === 'number' && m.dogrulama >= 0);
   const dogrulamaOzet = is.saglayici === 'edge-emel' ? undefined : {
     parca: dogrulanan.length,
@@ -609,7 +626,7 @@ async function isIsle(is: Is) {
     saglayici: is.saglayici,
     ses: is.ses,
     model: is.saglayici === 'edge-emel' ? 'tr-TR-EmelNeural' : GEMINI_MODEL,
-    etiket: `${s.etiket}${is.saglayici === 'edge-emel' ? '' : ` · ${is.ses}`}`,
+    etiket: `${s.etiket}${is.saglayici === 'edge-emel' ? '' : ` · ${is.ses}`}${yedekParca ? ` · ${yedekParca}/${parcalar.length} parça ücretli yedekle` : ''}`,
     ucretli: s.ucretli,
     sureSn: Math.round(sureToplam),
     bayt: tum.length,
@@ -655,8 +672,18 @@ async function seritDongusu(serit: Serit) {
             fs.existsSync(P.metin(x.key)) &&
             (x.saglayici !== 'gemini-ucretli' || ayar().ucretliAktif),
         );
-        // Gemini şeridinde elle başlatılan ücretli işler önce; ücretsiz Aoede alternatifleri ders sırasıyla
-        const is = sirada.find((x) => x.saglayici === 'gemini-ucretli') || sirada[0];
+        // Gemini şeridinde elle başlatılan ücretli işler önce. Ücretsiz Aoede alternatifleri ders sırasıyla ve
+        // TEK TEK: başlamış (kota bekleyen / yarım) bir ücretsiz iş bitmeden sıradaki derse geçilmez.
+        let adaylar = sirada;
+        if (serit === 'gemini') {
+          const yarim = q.find(
+            (x) =>
+              x.saglayici === 'gemini-ucretsiz' &&
+              (x.durum === 'calisiyor' || x.durum === 'kota-bekliyor' || (x.durum === 'bekliyor' && (x.ilerleme?.bitti || 0) > 0)),
+          );
+          if (yarim) adaylar = sirada.filter((x) => x.saglayici === 'gemini-ucretli' || x.id === yarim.id);
+        }
+        const is = adaylar.find((x) => x.saglayici === 'gemini-ucretli') || adaylar[0];
         if (is) {
           try {
             await isIsle(is);
@@ -907,6 +934,11 @@ export function registerSesliAnlatimRoutes(
 
   app.post('/api/sesli-anlatim/ucretli', requireAdmin, guclu, (req, res) => {
     yaz(P.ayar, { ...ayar(), ucretliAktif: !!req.body?.aktif });
+    if (req.body?.aktif) {
+      const q = kuyruk();
+      q.forEach((x) => x.saglayici === 'gemini-ucretsiz' && x.durum === 'kota-bekliyor' && delete x.sonrakiDeneme);
+      kuyrukYaz(q);
+    }
     degisti('ucretli');
     durt();
     res.json({ ok: true });

@@ -151,7 +151,7 @@ export const ManageSesliAnlatimSection: React.FC<{ adminEmail: string }> = ({ ad
               disabled={!d.butce.anahtarVar}
               onChange={async (e) => {
                 const ac = e.target.checked;
-                if (ac && !(await confirmDialog({ title: 'Ücretli üretim açılsın mı?', message: `Açıkken "Alternatif oluştur" ile ücretli Gemini sesi üretilebilir. Kalan bütçe ${d.butce.kalanTL} TL; ${d.butce.kilitTL} TL'de kendiliğinden kilitlenir.`, confirmLabel: 'Aç', tone: 'danger' }))) return;
+                if (ac && !(await confirmDialog({ title: 'Ücretli üretim açılsın mı?', message: `Açıkken: (1) ücretsiz anahtarların hepsi dolunca sıradaki Aoede sesi aynı dersten ücretli anahtarla tamamlanır, (2) "Alternatif oluştur" ile ücretli Gemini sesi üretilebilir. Kalan bütçe ${d.butce.kalanTL} TL; ${d.butce.kilitTL} TL'de kendiliğinden kilitlenir.`, confirmLabel: 'Aç', tone: 'danger' }))) return;
                 await post('/api/sesli-anlatim/ucretli', { aktif: ac });
               }}
             />
@@ -173,7 +173,7 @@ export const ManageSesliAnlatimSection: React.FC<{ adminEmail: string }> = ({ ad
             <button type="button" className="ms-btn is-sm" onClick={() => setKuyrukAcik((v) => !v)}>{kuyrukAcik ? 'Gizle' : 'Göster'}</button>
           </>
         }
-        desc="Dersler sırayla seslendirilir; biri bitince otomatik olarak sonrakine geçilir. Kota dolan Gemini işleri kendiliğinden yeniden denenir."
+        desc="Emel ve Gemini iki şeritte paralel; her şerit dersleri sırayla, tek tek seslendirir. Gemini sesi bitmeden sonraki derse geçilmez: önce tüm ücretsiz anahtarlar denenir, hepsi doluysa ücretli üretim açıksa ücretli anahtarla sürer, kapalıysa kota açılınca kaldığı parçadan devam eder."
         flush={!kuyrukAcik}
       >
         {kuyrukAcik &&
