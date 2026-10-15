@@ -725,8 +725,23 @@ async function isIsle(is: Is) {
     ortalama: dogrulanan.length ? Math.round(dogrulanan.reduce((t, m) => t + (m.dogrulama || 0), 0) / dogrulanan.length) : null,
   };
   const tum = Buffer.concat(parts);
-  fs.writeFileSync(hedef, tum);
   const zz = zamanlamaBirlestir(is.saglayici, parcalar, parts, parcalar.map((_, i) => oku<ParcaMeta>(path.join(dir, `${String(i).padStart(3, '0')}.mp3.json`), {})));
+  // Eşleşme kapısı (kullanıcı kuralı: her ses metin–slayt–ses eşleşmesine uymalı): paragraf sayısı metinle birebir,
+  // zamanlama dosyanın gerçek süresiyle uyumlu ve paragraf aralıkları geçerli olmalı. Uymazsa ses yayına alınmaz;
+  // parçalar diskte kalır (yeniden deneme yalnız yeniden birleştirir, ücretli parça yeniden üretilmez).
+  const toplamSn = parcalar.reduce((t, _, i) => t + mp3Sure(parts[i], is.saglayici === 'edge-emel' ? 48 : 64), 0);
+  const paragrafSayisi = metinParagraflari(md).length;
+  const z = zz.zamanlama;
+  const sorun =
+    z.length !== paragrafSayisi
+      ? `paragraf sayısı ${z.length} ≠ metin ${paragrafSayisi}`
+      : Math.abs(z[z.length - 1][1] - toplamSn) > 1.5
+        ? `zamanlama sonu ${z[z.length - 1][1].toFixed(1)} sn ≠ ses ${toplamSn.toFixed(1)} sn`
+        : z.some(([a, b], i) => !(b > a) || (i > 0 && Math.abs(a - z[i - 1][1]) > 0.05))
+          ? 'paragraf aralıkları bozuk'
+          : '';
+  if (sorun) throw new Error(`Eşleşme denetimi geçmedi: ${sorun} — ses yayına alınmadı (parçalar korunuyor)`);
+  fs.writeFileSync(hedef, tum);
   const s = SAGLAYICILAR[is.saglayici];
   const v: Varyant = {
     id: vid,
