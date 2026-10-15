@@ -568,7 +568,11 @@ async function isIsle(is: Is) {
               // Bütün ücretsiz anahtarlar denendi ve dolu: ücretli üretim açıksa aynı ders ücretli anahtarla sürer, değilse bekler
               const odenen = (process.env.TTS_PAID_GEMINI_KEY || '').trim();
               const b0 = butce();
-              if (ayar().ucretliAktif && odenen && b0.harcananTL + parcaTahminiTL(p.kelime) <= BUTCE.kilitTL) {
+              // Aynı dersin ayrı bir ücretli işi/sesi varsa aynı ders iki kez ücretlendirilmesin: bekle
+              const ayniDersUcretli =
+                kuyruk().some((x) => x.key === is.key && x.saglayici === 'gemini-ucretli' && x.durum !== 'iptal') ||
+                (kayitlar()[is.key] || []).some((v) => v.saglayici === 'gemini-ucretli');
+              if (ayar().ucretliAktif && odenen && !ayniDersUcretli && b0.harcananTL + parcaTahminiTL(p.kelime) <= BUTCE.kilitTL) {
                 anahtar = odenen;
                 anahtarAdi = 'TTS_PAID_GEMINI_KEY';
                 parcaUcretli = true;
@@ -576,7 +580,11 @@ async function isIsle(is: Is) {
                 const en = Math.min(...ucretsizAnahtarlar().map((k) => anahtarBekleme.get(k.ad) || Date.now() + 60000));
                 throw new KotaHatasi(
                   Math.max(en - Date.now(), 30000),
-                  ayar().ucretliAktif ? 'Tüm ücretsiz anahtarlar dolu ve bütçe kilidine ulaşıldı' : 'Tüm ücretsiz anahtarların kotası dolu (ücretli üretim kapalı; kota açılınca aynı ders sürer)',
+                  !ayar().ucretliAktif
+                    ? 'Tüm ücretsiz anahtarların kotası dolu (ücretli üretim kapalı; kota açılınca aynı ders sürer)'
+                    : ayniDersUcretli
+                      ? 'Tüm ücretsiz anahtarların kotası dolu; bu dersin ayrı ücretli sesi olduğu için ücretli yedek kullanılmadı, kota açılınca sürer'
+                      : 'Tüm ücretsiz anahtarlar dolu ve bütçe kilidine ulaşıldı',
                 );
               }
             }
