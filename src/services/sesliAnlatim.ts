@@ -13,6 +13,7 @@
 // Gemini TTS ücretli anahtar (TTS_PAID_GEMINI_KEY; yalnız panelden elle, bütçe kilidi 850 TL / tavan 900 TL),
 // Coqui XTTS v2 — yöneticinin bilgisayarında CPU ile (xtts-yerel): sunucu sentezlemez; işi o PC'deki
 // scripts/sesli_anlatim/xtts_isci.py `/api/sesli-anlatim/yerel/*` uçlarından alır, parçaları yükler, birleştirme burada.
+// EMA Lightning (ema-yerel) — aynı yerel işçi protokolü; tek sabit Türkçe ses, yalnız CPU (scripts/sesli_anlatim/ema_isci.py).
 import express from 'express';
 import type { Express, Request, Response, NextFunction } from 'express';
 import fs from 'fs';
@@ -22,7 +23,10 @@ import { Mp3Encoder } from '@breezystack/lamejs';
 import { freeGeminiKeyNames } from './aiProvider';
 import { isStrongAdmin } from './peopleInsights';
 
-type Saglayici = 'edge-emel' | 'gemini-ucretsiz' | 'gemini-ucretli' | 'xtts-yerel';
+type Saglayici = 'edge-emel' | 'gemini-ucretsiz' | 'gemini-ucretli' | 'xtts-yerel' | 'ema-yerel';
+/** Sunucunun sentezlemediği, işi yöneticinin bilgisayarındaki işçinin aldığı sağlayıcılar */
+const YEREL_SAGLAYICILAR: Saglayici[] = ['xtts-yerel', 'ema-yerel'];
+const yerelMi = (s: Saglayici) => YEREL_SAGLAYICILAR.includes(s);
 type IsDurum = 'bekliyor' | 'calisiyor' | 'kota-bekliyor' | 'bitti' | 'hata' | 'iptal' | 'butce-durdu';
 
 interface Varyant {
@@ -60,7 +64,7 @@ interface Is {
   notlar?: string[];
   maliyetTL?: number;
   isteyen?: string;
-  /** xtts-yerel: işi alan bilgisayar ve son sinyali (sinyal kesilirse iş başka işçiye açılır) */
+  /** yerel sağlayıcılar (xtts/ema): işi alan bilgisayar ve son sinyali (sinyal kesilirse iş başka işçiye açılır) */
   isci?: string;
   sinyal?: string;
 }
@@ -87,9 +91,10 @@ const EDGE_HIZ = '+12%';
 const KELIME_DK = 112; // Emel %12 hızda ölçüldü
 const EDGE_PARCA = 2400;
 const GEMINI_PARCA = 3000;
-const XTTS_PARCA = 3000;
-// XTTS v2 hazır konuşmacıları (Türkçe okunuşu dinlenerek seçildi; ses klonlama yok)
-const XTTS_SESLER = ['Ana Florence', 'Daisy Studious', 'Gracie Wise', 'Sofia Hellen', 'Tammie Ema', 'Alison Dietlinde', 'Claribel Dervla'];
+const YEREL_PARCA = 3000; // xtts-yerel ve ema-yerel
+// XTTS v2 hazır konuşmacıları (Türkçe okunuşu dinlenerek seçildi; ses klonlama yok). Varsayılan Chandra MacFarland:
+// muhammedsaban/coqui-xtts-v2-turkish-local'ın Türkçe için önerdiği ses (hız 1.2, ≤220 karakterlik cümle parçaları).
+const XTTS_SESLER = ['Chandra MacFarland', 'Ana Florence', 'Daisy Studious', 'Gracie Wise', 'Sofia Hellen', 'Tammie Ema', 'Alison Dietlinde', 'Claribel Dervla'];
 /** Bu kadar süre sinyal gelmezse yerel işçi çevrimdışı sayılır; üzerindeki iş başka bir yerel işçiye açılır. */
 const YEREL_ZAMAN_ASIMI_MS = 10 * 60000;
 // Gemini TTS'e YALNIZ ders metni gider: Türkçe üslup yönergesi modele verildiğinde sesli okunuyordu (k1-28 ücretli
@@ -101,8 +106,9 @@ const SAGLAYICILAR: Record<Saglayici, { etiket: string; ucretli: boolean; sesler
   'gemini-ucretsiz': { etiket: 'Google Gemini TTS · ücretsiz anahtarlar', ucretli: false, sesler: GEMINI_SESLER, varsayilanSes: 'Aoede' },
   'gemini-ucretli': { etiket: 'Google Gemini TTS · ücretli anahtar', ucretli: true, sesler: GEMINI_SESLER, varsayilanSes: 'Aoede' },
   'xtts-yerel': { etiket: 'Coqui XTTS v2 · bu PC (yerel)', ucretli: false, sesler: XTTS_SESLER, varsayilanSes: XTTS_SESLER[0] },
+  'ema-yerel': { etiket: 'EMA Lightning · bu PC (yerel)', ucretli: false, sesler: ['Ema'], varsayilanSes: 'Ema' },
 };
-const parcaSiniri = (s: Saglayici) => (s === 'edge-emel' ? EDGE_PARCA : s === 'xtts-yerel' ? XTTS_PARCA : GEMINI_PARCA);
+const parcaSiniri = (s: Saglayici) => (s === 'edge-emel' ? EDGE_PARCA : yerelMi(s) ? YEREL_PARCA : GEMINI_PARCA);
 const sesSlug = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 
 const oku = <T,>(p: string, bos: T): T => {
@@ -143,8 +149,10 @@ const isGuncelle = (id: string, f: (i: Is) => void) => {
 };
 const butce = () => oku(P.butce, { tavanTL: BUTCE.tavanTL, kilitTL: BUTCE.kilitTL, harcananTL: 0, kayitlar: [] as any[] });
 const ayar = () => ({ isciAktif: true, ucretliAktif: false, yerelAktif: true, ...oku<Record<string, any>>(P.ayar, {}) });
-/** Yerel (XTTS) işçinin son sinyali — yalnız bellekte; panel "bu PC çevrimiçi mi" diye bunu gösterir. */
-let yerelIsci: { ad: string; at: number; isId?: string; not?: string } | null = null;
+/** Yerel işçilerin (XTTS, EMA) son sinyali, sağlayıcı başına — yalnız bellekte; panel "bu PC çevrimiçi mi" diye bunu gösterir. */
+type YerelSinyal = { ad: string; at: number; isId?: string; not?: string };
+const yerelIsciler: Partial<Record<Saglayici, YerelSinyal>> = {};
+const sonYerelIsci = () => Object.values(yerelIsciler).sort((a, b) => b!.at - a!.at)[0] || null;
 
 // ---------- metin → parçalar ----------
 interface Parca { metin: string; kelime: number; bolumBasi: boolean; ilkParagraf: number }
@@ -739,7 +747,7 @@ async function birlestirKaydet(is: Is, md: string, parcalar: Parca[], dir: strin
   const metalar = parcalar.map((_, i) => oku<{ dogrulama?: number; ucretliYedek?: boolean }>(path.join(dir, `${String(i).padStart(3, '0')}.mp3.json`), {}));
   const yedekParca = metalar.filter((m) => m.ucretliYedek).length;
   const dogrulanan = metalar.filter((m) => typeof m.dogrulama === 'number' && m.dogrulama >= 0);
-  const dogrulamaOzet = is.saglayici === 'edge-emel' || is.saglayici === 'xtts-yerel' ? undefined : {
+  const dogrulamaOzet = is.saglayici === 'edge-emel' || yerelMi(is.saglayici) ? undefined : {
     parca: dogrulanan.length,
     toplam: parcalar.length,
     ortalama: dogrulanan.length ? Math.round(dogrulanan.reduce((t, m) => t + (m.dogrulama || 0), 0) / dogrulanan.length) : null,
@@ -767,7 +775,7 @@ async function birlestirKaydet(is: Is, md: string, parcalar: Parca[], dir: strin
     id: vid,
     saglayici: is.saglayici,
     ses: is.ses,
-    model: is.saglayici === 'edge-emel' ? 'tr-TR-EmelNeural' : is.saglayici === 'xtts-yerel' ? 'xtts_v2' : GEMINI_MODEL,
+    model: is.saglayici === 'edge-emel' ? 'tr-TR-EmelNeural' : is.saglayici === 'xtts-yerel' ? 'xtts_v2' : is.saglayici === 'ema-yerel' ? 'ema-lightning' : GEMINI_MODEL,
     etiket: `${s.etiket}${is.saglayici === 'edge-emel' ? '' : ` · ${is.ses}`}${yedekParca ? ` · ${yedekParca}/${parcalar.length} parça ücretli yedekle` : ''}`,
     ucretli: s.ucretli,
     sureSn: Math.round(sureToplam),
@@ -795,9 +803,9 @@ async function birlestirKaydet(is: Is, md: string, parcalar: Parca[], dir: strin
 }
 
 type Serit = 'edge' | 'gemini' | 'ucretli' | 'yerel';
-/** 'yerel' şeridini sunucu çalıştırmaz: işi yöneticinin bilgisayarındaki XTTS işçisi alır. */
+/** 'yerel' şeridini sunucu çalıştırmaz: işi yöneticinin bilgisayarındaki XTTS / EMA işçisi alır. */
 const seritSaglayici = (x: Is): Serit =>
-  x.saglayici === 'edge-emel' ? 'edge' : x.saglayici === 'gemini-ucretli' ? 'ucretli' : x.saglayici === 'xtts-yerel' ? 'yerel' : 'gemini';
+  x.saglayici === 'edge-emel' ? 'edge' : x.saglayici === 'gemini-ucretli' ? 'ucretli' : yerelMi(x.saglayici) ? 'yerel' : 'gemini';
 const uyandirilar = new Set<() => void>();
 
 /** Bir şerit: Edge (Emel), ücretsiz Gemini ve ücretli Gemini ayrı servis/anahtar kullandığından üç şerit paralel çalışır;
@@ -875,7 +883,7 @@ async function isciDongusu() {
   calisiyor = true;
   // yeniden açılışta yarım kalan işler sıraya döner (parçalar diskte durur)
   const q0 = kuyruk();
-  q0.forEach((x) => x.durum === 'calisiyor' && x.saglayici !== 'xtts-yerel' && (x.durum = 'bekliyor'));
+  q0.forEach((x) => x.durum === 'calisiyor' && !yerelMi(x.saglayici) && (x.durum = 'bekliyor'));
   kuyrukYaz(q0);
   void seritDongusu('edge');
   void seritDongusu('gemini');
@@ -939,13 +947,19 @@ function durum() {
     saglayicilar: Object.entries(SAGLAYICILAR).map(([id, s]) => ({ id, ...s })),
     ucretsizAnahtar: ucretsizAnahtarlar().map((x) => ({ ad: x.ad, bekliyorKadar: anahtarBekleme.get(x.ad) && anahtarBekleme.get(x.ad)! > Date.now() ? new Date(anahtarBekleme.get(x.ad)!).toISOString() : null })),
     isci: { aktif: ayar().isciAktif !== false, calisiyor },
-    yerel: {
-      aktif: ayar().yerelAktif !== false,
-      cevrimici: !!yerelIsci && Date.now() - yerelIsci.at < 3 * 60000,
-      ad: yerelIsci?.ad || null,
-      sonSinyal: yerelIsci ? new Date(yerelIsci.at).toISOString() : null,
-      not: yerelIsci?.not || null,
-    },
+    yerel: (() => {
+      const ozet = (y: YerelSinyal | null | undefined) => ({
+        cevrimici: !!y && Date.now() - y.at < 3 * 60000,
+        ad: y?.ad || null,
+        sonSinyal: y ? new Date(y.at).toISOString() : null,
+        not: y?.not || null,
+      });
+      return {
+        aktif: ayar().yerelAktif !== false,
+        ...ozet(sonYerelIsci()),
+        isciler: Object.fromEntries(YEREL_SAGLAYICILAR.map((s) => [s, ozet(yerelIsciler[s])])),
+      };
+    })(),
     ucretliAktif: !!ayar().ucretliAktif,
   };
 }
@@ -1104,19 +1118,26 @@ export function registerSesliAnlatimRoutes(
     res.json({ ok: true });
   });
 
-  // ---------- yerel XTTS işçisi (yöneticinin bilgisayarı) ----------
+  // ---------- yerel işçiler: XTTS / EMA (yöneticinin bilgisayarı) ----------
   // Yalnız MEDS_PANEL_SECRET (ya da loopback) ile: işçi bu sırrı kendi .env'inden okur.
+  // İşçi hangi sağlayıcıya hizmet ettiğini gövdede `saglayici` (ya da x-saglayici) ile bildirir; yoksa xtts-yerel (eski işçi).
   const isciAdi = (req: Request) => String(req.body?.isci || req.headers['x-isci'] || 'yerel').slice(0, 60);
-  const sinyal = (req: Request, isId?: string, not?: string) => {
-    yerelIsci = { ad: isciAdi(req), at: Date.now(), isId, not: not ?? yerelIsci?.not };
+  const isciSaglayici = (req: Request): Saglayici => {
+    const s = String(req.body?.saglayici || req.headers['x-saglayici'] || 'xtts-yerel') as Saglayici;
+    return yerelMi(s) ? s : 'xtts-yerel';
   };
-  const yerelIs = (id: string) => kuyruk().find((x) => x.id === id && x.saglayici === 'xtts-yerel');
+  const sinyal = (req: Request, isId?: string, not?: string) => {
+    const s = isciSaglayici(req);
+    yerelIsciler[s] = { ad: isciAdi(req), at: Date.now(), isId, not: not ?? yerelIsciler[s]?.not };
+  };
+  const yerelIs = (id: string) => kuyruk().find((x) => x.id === id && yerelMi(x.saglayici));
 
   app.post('/api/sesli-anlatim/yerel/kalp', guclu, (req, res) => {
     const isId = req.body?.isId ? String(req.body.isId) : undefined;
-    const ilk = !yerelIsci || Date.now() - yerelIsci.at > 3 * 60000;
+    const onceki = yerelIsciler[isciSaglayici(req)];
+    const ilk = !onceki || Date.now() - onceki.at > 3 * 60000;
     sinyal(req, isId, req.body?.not ? String(req.body.not).slice(0, 200) : undefined);
-    if (isId) isGuncelle(isId, (x) => x.saglayici === 'xtts-yerel' && x.durum === 'calisiyor' && (x.sinyal = simdi()));
+    if (isId) isGuncelle(isId, (x) => yerelMi(x.saglayici) && x.durum === 'calisiyor' && (x.sinyal = simdi()));
     const is = isId ? yerelIs(isId) : undefined;
     if (ilk) degisti('yerel');
     // dur: iş iptal edildi / silindi ya da yerel işçi panelden kapatıldı → işçi parçayı bırakır
@@ -1127,15 +1148,16 @@ export function registerSesliAnlatimRoutes(
     sinyal(req);
     if (ayar().yerelAktif === false) return res.json({ is: null, neden: 'Yerel işçi panelden kapalı' });
     const ad = isciAdi(req);
+    const sag = isciSaglayici(req);
     const q = kuyruk();
     const an = Date.now();
     // önce bu işçinin yarım bıraktığı ya da sinyali kesilmiş çalışan iş, sonra sıradaki
     const is =
-      q.find((x) => x.saglayici === 'xtts-yerel' && x.durum === 'calisiyor' && (x.isci === ad || !(an - Date.parse(x.sinyal || x.basladi || '') < YEREL_ZAMAN_ASIMI_MS))) ||
-      q.find((x) => x.saglayici === 'xtts-yerel' && x.durum === 'bekliyor' && fs.existsSync(P.metin(x.key)));
+      q.find((x) => x.saglayici === sag && x.durum === 'calisiyor' && (x.isci === ad || !(an - Date.parse(x.sinyal || x.basladi || '') < YEREL_ZAMAN_ASIMI_MS))) ||
+      q.find((x) => x.saglayici === sag && x.durum === 'bekliyor' && fs.existsSync(P.metin(x.key)));
     if (!is) return res.json({ is: null });
     const md = fs.readFileSync(P.metin(is.key), 'utf8');
-    const parcalar = metniParcala(md, XTTS_PARCA);
+    const parcalar = metniParcala(md, YEREL_PARCA);
     const dir = P.parcaDir(is.key, is.id);
     fs.mkdirSync(dir, { recursive: true });
     const mevcut = parcalar.map((_, i) => i).filter((i) => {
@@ -1174,7 +1196,7 @@ export function registerSesliAnlatimRoutes(
     }
     const md = fs.readFileSync(P.metin(is.key), 'utf8');
     if (meta.metinHash !== hash(md)) return res.status(409).json({ error: 'Konuşma metni iş alındıktan sonra değişti; iş yeniden alınmalı' });
-    const parcalar = metniParcala(md, XTTS_PARCA);
+    const parcalar = metniParcala(md, YEREL_PARCA);
     const i = parseInt(String(req.params.i), 10);
     const p = parcalar[i];
     const buf = req.body as Buffer;
@@ -1204,7 +1226,7 @@ export function registerSesliAnlatimRoutes(
     const is = yerelIs(String(req.params.id));
     if (!is || is.durum !== 'calisiyor') return res.status(409).json({ error: 'iş çalışır durumda değil' });
     const md = fs.readFileSync(P.metin(is.key), 'utf8');
-    const parcalar = metniParcala(md, XTTS_PARCA);
+    const parcalar = metniParcala(md, YEREL_PARCA);
     const dir = P.parcaDir(is.key, is.id);
     const eksik = parcalar.map((_, i) => i).filter((i) => !fs.existsSync(path.join(dir, `${String(i).padStart(3, '0')}.mp3.json`)));
     if (eksik.length) return res.status(400).json({ error: `eksik parça: ${eksik.map((i) => i + 1).join(', ')}` });

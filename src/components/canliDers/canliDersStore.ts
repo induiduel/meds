@@ -79,7 +79,7 @@ export const fmtSure = (s: number) => {
 export const cdSesKisa = (v: Pick<CdVaryant, 'etiket' | 'ses' | 'saglayici' | 'id'> | null | undefined) => {
   if (!v) return '';
   const p = v.saglayici || '';
-  const kaynak = /edge/i.test(p) ? 'Edge' : /gemini/i.test(p) ? 'Gemini' : '';
+  const kaynak = /edge/i.test(p) ? 'Edge' : /gemini/i.test(p) ? 'Gemini' : /ema/i.test(p) ? 'EMA Lightning' : /xtts/i.test(p) ? 'XTTS' : '';
   const ad = v.ses || (v.etiket || '').split('·').pop()?.trim() || v.id;
   return kaynak ? `${ad} · ${kaynak}` : ad;
 };
