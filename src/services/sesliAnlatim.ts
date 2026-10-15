@@ -621,8 +621,8 @@ async function isIsle(is: Is) {
             }
             if (e instanceof KotaHatasi && !ucretli && !parcaUcretli) {
               anahtarBekleme.set(anahtarAdi, Date.now() + e.bekleMs);
-              deneme--; // başka anahtarla aynı denemeyi sürdür
-              if (ucretsizAnahtarlar().every((k) => (anahtarBekleme.get(k.ad) || 0) > Date.now())) throw e;
+              // başka anahtarla aynı denemeyi sürdür; hepsi doluysa döngü başı ücretli yedeğe geçer (açıksa) ya da bekler
+              deneme--;
               continue;
             }
             throw e;
