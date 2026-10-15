@@ -470,8 +470,7 @@ const parcaTahminiTL = (kelime: number) => tlHesapla({ candidatesTokenCount: (ke
 
 // ---------- işçi ----------
 let calisiyor = false;
-let uyandir: (() => void) | null = null;
-const durt = () => uyandir?.();
+const durt = () => [...uyandirilar].forEach((f) => f());
 
 async function isIsle(is: Is) {
   const md = fs.readFileSync(P.metin(is.key), 'utf8');
@@ -632,13 +631,12 @@ async function isIsle(is: Is) {
   degisti('bitti');
 }
 
-async function isciDongusu() {
-  if (calisiyor) return;
-  calisiyor = true;
-  // yeniden açılışta yarım kalan işler sıraya döner (parçalar diskte durur)
-  const q0 = kuyruk();
-  q0.forEach((x) => x.durum === 'calisiyor' && (x.durum = 'bekliyor'));
-  kuyrukYaz(q0);
+type Serit = 'edge' | 'gemini';
+const seritSaglayici = (x: Is): Serit => (x.saglayici === 'edge-emel' ? 'edge' : 'gemini');
+const uyandirilar = new Set<() => void>();
+
+/** Bir şerit: Edge (Emel) ve Gemini ayrı servisler olduğundan iki şerit paralel çalışır; her şerit kendi içinde tek tek. */
+async function seritDongusu(serit: Serit) {
   for (;;) {
     let bekle = 60000;
     try {
@@ -647,13 +645,14 @@ async function isciDongusu() {
         const an = Date.now();
         const sirada = q.filter(
           (x) =>
+            seritSaglayici(x) === serit &&
             (x.durum === 'bekliyor' || x.durum === 'kota-bekliyor') &&
             (!x.sonrakiDeneme || Date.parse(x.sonrakiDeneme) <= an) &&
             fs.existsSync(P.metin(x.key)) &&
             (x.saglayici !== 'gemini-ucretli' || ayar().ucretliAktif),
         );
-        // Emel (Edge) işleri önce; Gemini alternatifleri ders sırasıyla tek tek (kota beklerken Edge sürer)
-        const is = sirada.find((x) => x.saglayici === 'edge-emel') || sirada[0];
+        // Gemini şeridinde elle başlatılan ücretli işler önce; ücretsiz Aoede alternatifleri ders sırasıyla
+        const is = sirada.find((x) => x.saglayici === 'gemini-ucretli') || sirada[0];
         if (is) {
           try {
             await isIsle(is);
@@ -675,22 +674,35 @@ async function isciDongusu() {
           bekle = 500;
         } else {
           const sonraki = q
-            .filter((x) => x.durum === 'kota-bekliyor' && x.sonrakiDeneme)
+            .filter((x) => seritSaglayici(x) === serit && x.durum === 'kota-bekliyor' && x.sonrakiDeneme)
             .map((x) => Date.parse(x.sonrakiDeneme!) - an);
           if (sonraki.length) bekle = Math.max(5000, Math.min(...sonraki, 600000));
         }
       }
     } catch (e) {
-      console.error('[sesli-anlatim] işçi hatası', e);
+      console.error(`[sesli-anlatim] ${serit} şeridi hatası`, e);
     }
     await new Promise<void>((r) => {
-      const t = setTimeout(r, bekle);
-      uyandir = () => {
+      const t = setTimeout(done, bekle);
+      function done() {
         clearTimeout(t);
+        uyandirilar.delete(done);
         r();
-      };
+      }
+      uyandirilar.add(done);
     });
   }
+}
+
+async function isciDongusu() {
+  if (calisiyor) return;
+  calisiyor = true;
+  // yeniden açılışta yarım kalan işler sıraya döner (parçalar diskte durur)
+  const q0 = kuyruk();
+  q0.forEach((x) => x.durum === 'calisiyor' && (x.durum = 'bekliyor'));
+  kuyrukYaz(q0);
+  void seritDongusu('edge');
+  void seritDongusu('gemini');
 }
 
 export function isEkle(key: string, saglayici: Saglayici, ses: string, opts: { varsayilanYap?: boolean; isteyen?: string; one?: boolean } = {}) {
