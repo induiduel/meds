@@ -11,6 +11,7 @@ import {
   cdCumleAraligi, cdDetayBagla, cdDetayGetir, cdDurum, cdOynat, cdParagrafa, useCd, type CdDetay,
 } from './canliDersStore';
 import { useCdTur } from './useCdTur';
+import { CevrimdisiDugme } from './CanliDersCevrimdisi';
 import '../learn/pdf/pdfDoc.css';
 
 /** Öğenin görünür ölçeği (v12 yazı boyutu CSS zoom'u); utils/uiZoom.elementZoom ile aynı mantık. */
@@ -160,6 +161,7 @@ export default function CanliDersDers({ dersKey }: { dersKey: string }) {
             </button>
           </div>
         )}
+        <CevrimdisiDugme dersKey={detay.key} baslik={detay.baslik} varyantlar={detay.varyantlar} />
         {tanitim.dugme}
       </header>
       {baglanti === 'baska' && !buDers && (

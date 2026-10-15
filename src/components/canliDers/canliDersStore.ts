@@ -9,6 +9,7 @@
  */
 import { useSyncExternalStore } from 'react';
 import { getCustomApiUrl, safeJsonFetch } from '../../services/api';
+import { cdCevrimdisiKayitlari, cdCevrimdisiVid } from './canliDersCevrimdisiKayit';
 
 export interface CdVaryant {
   id: string;
@@ -83,6 +84,13 @@ export function cdListeGetir(yenile = false): Promise<CdListeDers[]> {
     listeP = safeJsonFetch<{ dersler: CdListeDers[] }>('/api/canli-ders').then((r) => {
       if (!r.ok || !Array.isArray(r.data?.dersler)) {
         listeP = null;
+        // İnternet yok: cihaza indirilmiş dersler (canliDersCevrimdisi)
+        if (Object.keys(cdCevrimdisiKayitlari()).length) {
+          return import('./canliDersCevrimdisi').then((m) => m.cdYerelListe()).then((ds) => {
+            if (!ds.length) throw new Error(r.error || `Liste alınamadı (${r.status})`);
+            return ds.sort((a, b) => (a.sira ?? 0) - (b.sira ?? 0));
+          });
+        }
         throw new Error(r.error || `Liste alınamadı (${r.status})`);
       }
       r.data!.dersler.forEach((d) => surumKaydet(d.key, d.varyantlar as any));
@@ -100,6 +108,13 @@ export function cdDetayGetir(key: string, yenile = false): Promise<CdDetay> {
   const p = safeJsonFetch<CdDetay>(`/api/canli-ders/${encodeURIComponent(key)}`, { cache: 'no-store' } as RequestInit).then((r) => {
     if (!r.ok || !r.data || !Array.isArray(r.data.bolumler)) {
       detayCache.delete(key);
+      if (r.status !== 404 && cdCevrimdisiKayitlari()[key]) {
+        return import('./canliDersCevrimdisi').then((m) => m.cdYerelDetay(key)).then((d) => {
+          if (!d) throw new Error(r.error || `Ders alınamadı (${r.status})`);
+          surumKaydet(key, d.varyantlar as any);
+          return d;
+        });
+      }
       throw new Error(r.status === 404 ? 'Bu ders bulunamadı.' : r.error || `Ders alınamadı (${r.status})`);
     }
     surumKaydet(key, r.data.varyantlar as any);
@@ -404,7 +419,8 @@ function kaynakKur(o: CdOzet, vid: string, t0: number, oynat: boolean) {
 /** Dersi/varyantı çal. Aynı ders ve varyant ise yalnız oynat/duraklat. Kullanıcı hareketi içinde çağrılmalı. */
 export function cdOynat(o: CdOzet, vid?: string, opts: { t?: number; oynat?: boolean } = {}) {
   const oynat = opts.oynat ?? true;
-  const v = vid || (st.key === o.key && st.vid ? st.vid : tercihVaryant(o.varyantlar));
+  // İnternet yokken cihaza indirilen ses çalınır (başka ses açılamaz)
+  const v = cdCevrimdisiVid(o.key) || vid || (st.key === o.key && st.vid ? st.vid : tercihVaryant(o.varyantlar));
   if (!v) return;
   if (st.key === o.key && st.vid === v && audio?.getAttribute('src')) {
     if (opts.t != null) cdAtla(opts.t);

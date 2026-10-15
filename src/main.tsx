@@ -146,7 +146,9 @@ class RootErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState
         }
       }
       if ('caches' in window) {
-        caches.keys().then((keys) => keys.forEach((k) => caches.delete(k))).catch(() => {});
+        // Kullanıcının elle indirdikleri (çevrimdışı PDF'ler, canlı ders paketleri) korunur
+        const korunan = ['medsoru-pdf-offline', 'medsoru-canli-ders-offline'];
+        caches.keys().then((keys) => keys.filter((k) => !korunan.includes(k)).forEach((k) => caches.delete(k))).catch(() => {});
       }
     } catch (e) {}
     window.location.reload();

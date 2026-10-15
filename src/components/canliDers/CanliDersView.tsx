@@ -14,6 +14,7 @@ import {
 import CanliDersDers from './CanliDersDers';
 import '../../styles/canli-ders.css';
 import { useCdTur } from './useCdTur';
+import { CevrimdisiDugme, useCevrimdisiSuzgec } from './CanliDersCevrimdisi';
 
 const fold = (s: string) =>
   s.toLocaleLowerCase('tr').normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/ı/g, 'i').replace(/\s+/g, ' ').trim();
@@ -45,6 +46,7 @@ function CanliDersListe() {
     if (!f) return dersler;
     return dersler.filter((d) => fold(`${d.no} ${d.baslik}`).includes(f));
   }, [dersler, q]);
+  const cevrimdisi = useCevrimdisiSuzgec(liste);
 
   return (
     <div className="cd-root cd-liste">
@@ -85,9 +87,10 @@ function CanliDersListe() {
         <div className="cd-bos"><p>{q ? `"${q}" için ders bulunamadı.` : 'Henüz sesi hazır ders yok.'}</p></div>
       ) : (
         <>
+          {cevrimdisi.serit}
           <p className="cd-sayi">{liste.length === dersler.length ? `${dersler.length} ders` : `${liste.length} / ${dersler.length} ders`}</p>
           <ul className="cd-satirlar">
-            {liste.map((d) => <DersSatiri key={d.key} d={d} />)}
+            {cevrimdisi.liste.map((d) => <DersSatiri key={d.key} d={d} />)}
           </ul>
         </>
       )}
@@ -163,6 +166,7 @@ const DersSatiri = React.memo(function DersSatiri({ d }: { d: CdListeDers }) {
           </button>
           <OynatDugme d={d} v={v} />
           <IndirDugme d={d} v={v} />
+          <CevrimdisiDugme dersKey={d.key} baslik={d.baslik} varyantlar={d.varyantlar} />
           {diger.length > 0 ? (
             <button
               type="button"

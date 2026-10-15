@@ -1,0 +1,27 @@
+/* Canlı ders · çevrimdışı (CanliDersCevrimdisi.tsx). Önek .cd-cd- */
+.cd-cd-dugme { position: relative; overflow: hidden; }
+.cd-cd-dugme:disabled { opacity: .5; cursor: not-allowed; }
+.cd-cd-dugme.is-iniyor { font-variant-numeric: tabular-nums; min-width: 72px; }
+.cd-cd-dugme.is-iniyor::after { content: ''; position: absolute; left: 0; bottom: 0; height: 3px; width: 100%; transform-origin: 0 50%;
+  transform: scaleX(var(--cd-oran, 0)); background: var(--color-accent); transition: transform .15s linear; }
+.cd-cd-dugme.is-iniyor .cd-spin { width: 13px; height: 13px; }
+.cd-cd-dugme.is-cihazda { border-color: var(--color-accent); color: var(--color-accent); background: var(--color-accent-soft); }
+.cd-cd-dugme.is-hata { border-color: var(--color-bad); color: var(--color-bad-text, var(--color-bad)); }
+.cd-cd-grup { display: inline-flex; align-items: center; gap: 4px; flex: none; }
+
+.cd-cd-serit { display: flex; align-items: flex-start; gap: 10px; padding: 10px 12px; border: 1px solid var(--color-warn, var(--color-line)); border-radius: 12px;
+  background: var(--color-warn-soft, var(--color-field)); color: var(--color-ink); font-size: 13.5px; line-height: 1.45; }
+.cd-cd-serit > svg { width: 18px; height: 18px; flex: none; margin-top: 1px; }
+
+.cd-cd-soru { position: fixed; z-index: 160; left: 0; right: 0; bottom: 0; display: flex; justify-content: center; padding: 0 12px calc(84px + env(safe-area-inset-bottom, 0px)); pointer-events: none; }
+.cd-cd-soru-kart { position: relative; width: min(420px, 100%); padding: 14px 16px; border: 1px solid var(--color-line); border-radius: 16px; background: var(--color-white);
+  color: var(--color-ink); box-shadow: 0 12px 40px rgb(0 0 0 / .18); pointer-events: auto; }
+.cd-cd-soru-kart > b { display: block; padding-right: 28px; font-size: 15px; }
+.cd-cd-soru-kart p { margin: 6px 0 8px; font-size: 13.5px; line-height: 1.5; color: var(--color-ink-2); }
+.cd-cd-soru-x { position: absolute; top: 8px; right: 8px; display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 30px; border: 0; border-radius: 8px;
+  background: transparent; color: var(--color-ink-3); cursor: pointer; }
+.cd-cd-soru-x:hover { background: var(--color-field); color: var(--color-ink); }
+.cd-cd-soru-x > svg { width: 16px; height: 16px; }
+.cd-cd-soru-liste { margin: 0 0 12px; padding: 0 0 0 18px; font-size: 12.5px; color: var(--color-ink-3); line-height: 1.5; }
+.cd-cd-soru-liste li { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.cd-cd-soru-eylem { display: flex; justify-content: flex-end; gap: 8px; flex-wrap: wrap; }

@@ -3,6 +3,57 @@ const CACHE_VERSION = 'medsoru-pwa-v13';
 const STATIC_CACHE = `medsoru-static-${CACHE_VERSION}`;
 const RUNTIME_CACHE = `medsoru-runtime-${CACHE_VERSION}`;
 const DATA_CACHE = `medsoru-data-${CACHE_VERSION}`;
+// Canlı ders çevrimdışı paketleri (canliDersCevrimdisi.ts): sürüm temizliğinde silinmez, yalnız kullanıcı siler
+const CD_OFFLINE_CACHE = 'medsoru-canli-ders-offline';
+
+// Cihazdaki canlı ders sesleri: yol → sürüm (X-Cd-Surum). İstemci değiştirince CD_OFFLINE_CHANGED gönderir.
+let cdSesler = null;
+let cdSesYukle = null;
+function cdSesleriYukle() {
+  cdSesYukle = caches
+    .open(CD_OFFLINE_CACHE)
+    .then(async (c) => {
+      const m = new Map();
+      for (const r of await c.keys()) {
+        const u = new URL(r.url);
+        if (!u.pathname.startsWith('/api/canli-ders/ses/')) continue;
+        const res = await c.match(r);
+        m.set(u.pathname, res ? res.headers.get('X-Cd-Surum') || '' : '');
+      }
+      cdSesler = m;
+    })
+    .catch(() => { cdSesler = new Map(); });
+  return cdSesYukle;
+}
+cdSesleriYukle();
+
+/** Önbellekteki tam MP3'ten Range isteğine 206 (yoksa 200) yanıt */
+async function cdSesYanit(req, url) {
+  const c = await caches.open(CD_OFFLINE_CACHE);
+  const hit = await c.match(url.origin + url.pathname);
+  if (!hit) return null;
+  const blob = await hit.blob();
+  const size = blob.size;
+  const range = req.headers.get('range');
+  const m = range && /bytes=(\d*)-(\d*)/.exec(range);
+  if (!m) {
+    return new Response(blob, { status: 200, headers: { 'Content-Type': 'audio/mpeg', 'Content-Length': String(size), 'Accept-Ranges': 'bytes' } });
+  }
+  let start = m[1] === '' ? Math.max(0, size - Number(m[2])) : Number(m[1]);
+  let end = m[1] !== '' && m[2] !== '' ? Math.min(size - 1, Number(m[2])) : size - 1;
+  if (start >= size || start > end) {
+    return new Response(null, { status: 416, headers: { 'Content-Range': `bytes */${size}` } });
+  }
+  return new Response(blob.slice(start, end + 1), {
+    status: 206,
+    headers: {
+      'Content-Type': 'audio/mpeg',
+      'Content-Length': String(end - start + 1),
+      'Content-Range': `bytes ${start}-${end}/${size}`,
+      'Accept-Ranges': 'bytes',
+    },
+  });
+}
 
 const PRECACHE_ASSETS = [
   '/index.html',
@@ -61,7 +112,7 @@ self.addEventListener('activate', (event) => {
       .then((keys) => {
         return Promise.all(
           keys.map((key) => {
-            if (key !== STATIC_CACHE && key !== RUNTIME_CACHE && key !== DATA_CACHE && key !== 'medsoru-pdf-offline') {
+            if (key !== STATIC_CACHE && key !== RUNTIME_CACHE && key !== DATA_CACHE && key !== 'medsoru-pdf-offline' && key !== CD_OFFLINE_CACHE) {
               console.log('[SW] Eski önbellek temizleniyor:', key);
               return caches.delete(key);
             }
@@ -116,20 +167,21 @@ self.addEventListener('fetch', (event) => {
         }
 
         // Ağ gecikti veya başarısız oldu: Önce önbelleklerde index.html ara
-        const matchDirect = await caches.match(req, { ignoreSearch: true });
+        // (ignoreVary: kayıtlı yanıt 'Vary: Accept-Encoding' taşır; başlıksız '/index.html' isteğiyle eşleşmiyordu)
+        const matchDirect = await caches.match(req, { ignoreSearch: true, ignoreVary: true });
         if (matchDirect) return matchDirect;
 
         const matchHtml =
-          (await caches.match('/index.html', { ignoreSearch: true })) ||
-          (await caches.match('/', { ignoreSearch: true }));
+          (await caches.match('/index.html', { ignoreSearch: true, ignoreVary: true })) ||
+          (await caches.match('/', { ignoreSearch: true, ignoreVary: true }));
         if (matchHtml) return matchHtml;
 
         const allKeys = await caches.keys();
         for (const k of allKeys) {
           const c = await caches.open(k);
           const found =
-            (await c.match('/index.html', { ignoreSearch: true })) ||
-            (await c.match('/', { ignoreSearch: true }));
+            (await c.match('/index.html', { ignoreSearch: true, ignoreVary: true })) ||
+            (await c.match('/', { ignoreSearch: true, ignoreVary: true }));
           if (found) return found;
         }
 
@@ -165,6 +217,45 @@ self.addEventListener('fetch', (event) => {
     return;
   }
 
+  // Canlı ders sesi cihazdaysa: aynı sürümse doğrudan cihazdan (Range/206), değilse önce ağ, ağ yoksa cihazdaki kopya.
+  // Cihazda olmayan ses SW'den hiç geçmez (aşağıdaki API dalında atlanır).
+  if (url.pathname.startsWith('/api/canli-ders/ses/') && !url.searchParams.has('indir')) {
+    const karar = (m) => {
+      if (!m.has(url.pathname)) return null;
+      const surum = m.get(url.pathname);
+      const istenen = url.searchParams.get('v');
+      if (!istenen || !surum || istenen === surum) return cdSesYanit(req, url).then((r) => r || fetch(req));
+      return fetch(req).catch(() => cdSesYanit(req, url).then((r) => r || Response.error()));
+    };
+    if (cdSesler) {
+      const p = karar(cdSesler);
+      if (p) {
+        event.respondWith(p);
+        return;
+      }
+    } else {
+      event.respondWith((cdSesYukle || cdSesleriYukle()).then(() => karar(cdSesler) || fetch(req)));
+      return;
+    }
+  }
+
+  // PDF.js yardımcı dosyaları (yazı tipi, wasm, ICC, CMap): sürüme bağlı, değişmez → önbellek önce
+  if (url.pathname.startsWith('/vendor/pdfjs/')) {
+    event.respondWith(
+      (async () => {
+        const cached = await caches.match(req, { ignoreSearch: true, ignoreVary: true });
+        if (cached) return cached;
+        const res = await fetch(req);
+        if (res && res.status === 200) {
+          const clone = res.clone();
+          caches.open(RUNTIME_CACHE).then((cache) => cache.put(req, clone)).catch(() => {});
+        }
+        return res;
+      })()
+    );
+    return;
+  }
+
   // B. Statik Varlıklar (JS, CSS, Fontlar, İkonlar, Resimler)
   // İçerik özetli (/assets/) dosyalar değişmez (immutable) olduğundan tam Cache-First uygulanır (gereksiz arka plan ağ trafiği sıfırlanır)
   if (
@@ -176,7 +267,7 @@ self.addEventListener('fetch', (event) => {
     const isImmutableAsset = url.pathname.startsWith('/assets/');
     event.respondWith(
       (async () => {
-        const cached = await caches.match(req, { ignoreSearch: true });
+        const cached = await caches.match(req, { ignoreSearch: true, ignoreVary: true });
         if (cached && isImmutableAsset) {
           return cached;
         }
@@ -319,7 +410,9 @@ self.addEventListener('message', (event) => {
   const data = event.data;
   if (!data) return;
 
-  if (data.type === 'SKIP_WAITING') {
+  if (data.type === 'CD_OFFLINE_CHANGED') {
+    event.waitUntil(cdSesleriYukle());
+  } else if (data.type === 'SKIP_WAITING') {
     self.skipWaiting();
   } else if (data.type === 'CACHE_URLS' && Array.isArray(data.urls)) {
     event.waitUntil(
