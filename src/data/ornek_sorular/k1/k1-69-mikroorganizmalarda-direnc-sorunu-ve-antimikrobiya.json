@@ -1,0 +1,545 @@
+{
+ "id": "k1-69-mikroorganizmalarda-direnc-sorunu-ve-antimikrobiya",
+ "sira": 69,
+ "kurul": 1,
+ "ders": "Enfeksiyon Hastalıkları",
+ "konu": "Mikroorganizmalarda Direnç Sorunu ve Antimikrobiyal Yönetim",
+ "ogretim_uyesi": "DR. ÖĞR. ÜYESİ RÜVEYDA KORKMAZER",
+ "tarih": "2026-10-13",
+ "kazanimlar": [
+  {
+   "no": 1,
+   "metin": "Mikroorganizmalarda Direnç Sorunu ve Antimikrobiyal Yönetim ile ilgili temel mekanizmaları ve kavramları tanımlar.",
+   "sorular": [
+    {
+     "id": "k1-69-mikroorganizmalarda-direnc-sorunu-ve-antimikrobiya-q01",
+     "kazanim": 1,
+     "zorluk": "kolay",
+     "soru": "Çok ilaca dirençli (MDR) bakteri tanımı için aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "En az iki antibiyotik grubuna dirençli olması",
+      "B": "En az üç antibiyotik grubuna dirençli olması",
+      "C": "Kolistin ve tigesiklin dışındaki tüm ilaçlara dirençli olması",
+      "D": "Tüm ilaçlara dirençli olması",
+      "E": "Yalnız beta-laktamlara dirençli olması"
+     },
+     "dogru": "B",
+     "aciklama": "MDR en az üç antibiyotik grubuna direnç demektir; XDR kolistin ve tigesiklin dışı tümüne, PDR tüm ilaçlara dirençtir (s. 11).",
+     "sik_aciklamalari": {
+      "A": "Yanlış; MDR için iki grup yetmez, en az üç gruba direnç gerekir (s. 11).",
+      "B": "Doğru; derste MDR en az üç gruba dirençli bakteri olarak tanımlanır (s. 11).",
+      "C": "Yanlış; bu XDR tanımıdır (s. 11).",
+      "D": "Yanlış; bu PDR tanımıdır (s. 11).",
+      "E": "Yanlış; tek gruba direnç MDR tanımını karşılamaz (s. 11)."
+     },
+     "bilgi": [
+      27,
+      28
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 11,
+      "alinti": "Çok ilaca dirençli (MDR): En az üç gruba dirençli"
+     }
+    },
+    {
+     "id": "k1-69-mikroorganizmalarda-direnc-sorunu-ve-antimikrobiya-q02",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Mikroorganizma ve doğal (intrensek) dirençli olduğu antibiyotik eşleştirmelerinden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Staphylococcus aureus – vankomisin",
+      "B": "Enterokoklar – ampisilin",
+      "C": "Anaeroblar – karbapenemler",
+      "D": "Escherichia coli – vankomisin",
+      "E": "Stenotrophomonas – aminoglikozidler"
+     },
+     "dogru": "D",
+     "aciklama": "Gram negatif bakteriler (E. coli dahil) büyük vankomisin molekülünün dış membranı geçememesi nedeniyle vankomisine doğal dirençlidir (s. 9).",
+     "sik_aciklamalari": {
+      "A": "Yanlış; S. aureus vankomisine doğal olarak duyarlıdır, MRSA tedavisinde kullanılır (s. 23).",
+      "B": "Yanlış; derste enterokokların doğal direnci sefalosporinlere karşı verilir (s. 9).",
+      "C": "Yanlış; anaeroblar aminoglikozidlere doğal dirençlidir (s. 9).",
+      "D": "Doğru; Gram negatif bakteriler vankomisine doğal dirençlidir, molekül dış membranı geçemez (s. 9).",
+      "E": "Yanlış; Stenotrophomonas'ın derste verilen doğal direnci karbapenemlere karşıdır (s. 9)."
+     },
+     "bilgi": [
+      21,
+      22,
+      23
+     ],
+     "benzer_cikmis": [
+      "k1-2020-2021-b-q023",
+      "k1-2021-2022-q014"
+     ],
+     "kanit": {
+      "sayfa": 9,
+      "alinti": "Hedeflerine ulaşmasının mümkün olmaması Gram negatif bakteriler vankomisine"
+     }
+    },
+    {
+     "id": "k1-69-mikroorganizmalarda-direnc-sorunu-ve-antimikrobiya-q03",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Kazanılmış antibiyotik direnci ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Kromozomal mutasyonla gelişebilir",
+      "B": "R plazmidleriyle bakteriler arasında aktarılabilir",
+      "C": "Transpozonlar aracılığıyla edinilebilir",
+      "D": "Türün tüm suşlarında bulunan yapısal bir özelliktir",
+      "E": "Daha önce duyarlı olan suşun dirençli hâle gelmesidir"
+     },
+     "dogru": "D",
+     "aciklama": "Türün yapısından kaynaklanan direnç doğal dirençtir; kazanılmış direnç mutasyon ya da direnç geni edinimiyle sonradan gelişir (s. 9–10).",
+     "sik_aciklamalari": {
+      "A": "Yanlış seçenek; ifade doğrudur: kazanılmış direnç kromozomal mutasyonla gelişebilir (s. 10).",
+      "B": "Yanlış seçenek; ifade doğrudur: plazmid aracılı direnç R plazmidleriyle taşınır (s. 10).",
+      "C": "Yanlış seçenek; ifade doğrudur: transpozon aracılı direnç küçük DNA dizileriyle olur (s. 8, 10).",
+      "D": "Doğru cevap; bu doğal (intrensek) direncin tanımıdır, kazanılmış direnç yalnız bazı suşlarda sonradan gelişir (s. 9–10).",
+      "E": "Yanlış seçenek; ifade doğrudur: mutasyon ya da gen edinimiyle antibiyotik etkisiz kalır (s. 10)."
+     },
+     "bilgi": [
+      24,
+      25,
+      20
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 10,
+      "alinti": "Mutasyon sonucunda ya da direnç geni taşıyan DNA dizilerinin başka bakterilerden edinilmesi"
+     }
+    },
+    {
+     "id": "k1-69-mikroorganizmalarda-direnc-sorunu-ve-antimikrobiya-q04",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Aminoglikozid direnci ile ilgili aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "En sık mekanizma ribozomal değişikliktir",
+      "B": "Geçirgenlik azalması çapraz direnç oluşturmaz",
+      "C": "En sık mekanizma plazmid aracılı enzimatik modifikasyondur",
+      "D": "Ribozomal direnç tüm aminoglikozidlere çapraz direnç yapar",
+      "E": "Beta-laktamaz üretimi aminoglikozid direncine yol açar"
+     },
+     "dogru": "C",
+     "aciklama": "Aminoglikozid direncinde en sık mekanizma plazmid aracılı enzimatik modifikasyondur; ribozomal direnç nadirdir ve çapraz direnç yapmaz (s. 20).",
+     "sik_aciklamalari": {
+      "A": "Yanlış; ribozomal mekanizma nadirdir (s. 20).",
+      "B": "Yanlış; geçirgenlik azalması çapraz direnç oluşturur (s. 20).",
+      "C": "Doğru; derste enzimatik mekanizma en sık ve plazmid aracılı olarak verilir (s. 20).",
+      "D": "Yanlış; ribozomal direnç çapraz direnç yapmaz, streptomisin direncidir (s. 20).",
+      "E": "Yanlış; beta-laktamazlar yalnız beta-laktamları hidrolize eder (s. 12, 20)."
+     },
+     "bilgi": [
+      58,
+      56,
+      57
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 20,
+      "alinti": "S. aureus, çapraz direnç +) • Enzimatik (en sık, plazmid aracılı)"
+     }
+    },
+    {
+     "id": "k1-69-mikroorganizmalarda-direnc-sorunu-ve-antimikrobiya-q05",
+     "kazanim": 1,
+     "zorluk": "orta",
+     "soru": "Karbapenemazlarla ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Plazmid aracılıdır",
+      "B": "OXA-48 Türkiye'den köken almıştır",
+      "C": "Genellikle GSBL ve AmpC gibi mekanizmalarla birlikte bulunur",
+      "D": "Karbapenemaz üreten suşların tedavisinde 3. kuşak sefalosporinler tercih edilir",
+      "E": "VIM bir metallo-beta-laktamazdır"
+     },
+     "dogru": "D",
+     "aciklama": "Karbapenemaz üreten suşlar çoğunlukla GSBL de taşır; 3. kuşak sefalosporin etkisizdir ve tedavide kolistin kullanılır (s. 17).",
+     "sik_aciklamalari": {
+      "A": "Yanlış seçenek; ifade doğrudur: derste karbapenemazlar plazmid aracılı verilir (s. 17).",
+      "B": "Yanlış seçenek; ifade doğrudur (s. 17).",
+      "C": "Yanlış seçenek; ifade doğrudur (s. 17).",
+      "D": "Doğru cevap; bu suşlar GSBL ile birlikte bulunur ve tedavide çoğunlukla duyarlı kalan kolistin kullanılır (s. 15, 17).",
+      "E": "Yanlış seçenek; ifade doğrudur: Verona integron aracılı metallo-beta-laktamazdır (s. 17)."
+     },
+     "bilgi": [
+      45,
+      42,
+      43,
+      44
+     ],
+     "benzer_cikmis": [
+      "d3-k1-enf-062"
+     ],
+     "kanit": {
+      "sayfa": 17,
+      "alinti": "Bu suşların çoğunlukla kolistine duyarlı olup tedavisinde kolistin kullanılmaktadır"
+     }
+    },
+    {
+     "id": "k1-69-mikroorganizmalarda-direnc-sorunu-ve-antimikrobiya-q06",
+     "kazanim": 1,
+     "zorluk": "zor",
+     "soru": "Bir Enterobacter cloacae bakteriyemisi seftriaksonla tedavi edilirken, başlangıçta seftriaksona duyarlı olan suşun tedavinin 5. gününde dirençli hâle geldiği saptanıyor. En olası mekanizma hangisidir?",
+     "secenekler": {
+      "A": "Kromozomal indüklenebilir AmpC'nin yüksek düzeyde üretilmesi",
+      "B": "Ribozomal hedef değişimi",
+      "C": "DNA giraz mutasyonu",
+      "D": "Hücre duvarı öncüsünde D-Ala-D-Laktat oluşumu",
+      "E": "Doğal vankomisin direnci"
+     },
+     "dogru": "A",
+     "aciklama": "Enterobacter, C. freundii, Serratia, Morganella ve Hafnia indüklenebilir kromozomal AmpC taşır; tedavi sırasında 3. kuşak sefalosporin direnci gelişebilir (s. 16).",
+     "sik_aciklamalari": {
+      "A": "Doğru; Enterobacter indüklenebilir kromozomal AmpC taşır, sefalosporin baskısı yüksek üreten mutantları seçer (s. 16).",
+      "B": "Yanlış; beta-laktamlar ribozoma etki etmez (s. 4–5).",
+      "C": "Yanlış; bu kinolon direncidir (s. 21).",
+      "D": "Yanlış; bu vankomisin direncidir (s. 7, 23).",
+      "E": "Yanlış; Gram negatiflerin vankomisin direnci seftriakson tedavisini etkilemez (s. 9)."
+     },
+     "bilgi": [
+      40,
+      38
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 16,
+      "alinti": "Inducible AmpC Enterobacter sp. Citrobacter treundii Serratia marcescens"
+     }
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "k1-2020-2021-b-q023",
+     "soru": "Mikroorganizma ve doğal dirençli olduğu antibiyotik eşleştirmelerinden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Escherichia coli - Ampisilin",
+      "B": "Staphylococcus aureus - Vankomisin",
+      "C": "Escherichia coli - Vankomisin",
+      "D": "Pseudomonas aeruginosa - Piperasilin",
+      "E": "Neisseria gonorrhoeae - Seftriakson"
+     },
+     "cevap": "C"
+    },
+    {
+     "id": "k1-2021-2022-q014",
+     "soru": "Mikroorganizma ve doğal dirençli olduğu antibiyotik eşleştirmelerinden hangisi doğrudur?",
+     "secenekler": {
+      "A": "Escherichia coli - Ampisilin",
+      "B": "Staphylococcus aureus - Vankomisin",
+      "C": "Escherichia coli - Vankomisin",
+      "D": "Pseudomonas aeruginosa - Piperasilin",
+      "E": "Neisseria gonorrhoeae - Seftriakson"
+     },
+     "cevap": "C"
+    },
+    {
+     "id": "d3-k1-enf-062",
+     "soru": "Antibiyotiklere karşı gelişen beta-laktamaz direnci ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Genişlemiş spektrumlu beta-laktamaz (GSBL) üreten bakteriler 3. kuşak sefalosporinlerle tedavi edilebilir",
+      "B": "GSBL üreten bakterilerin neden olduğu enfeksiyonlar karbapenemlerle tedavi edilebilir",
+      "C": "Karbapenemazlar karbapenemleri hidrolize ederek etkisiz hâle getirir",
+      "D": "Enzimatik direnç, beta-laktam antibiyotiklere karşı en sık görülen direnç mekanizmasıdır",
+      "E": "Karbapenemaz üreten suşlar çoğunlukla kolistine duyarlıdır ve tedavilerinde kolistin kullanılabilir"
+     },
+     "cevap": "A"
+    }
+   ]
+  },
+  {
+   "no": 2,
+   "metin": "Mikroorganizmalarda Direnç Sorunu ve Antimikrobiyal Yönetim klinik özelliklerini ve tanı yaklaşımlarını açıklar.",
+   "sorular": [
+    {
+     "id": "k1-69-mikroorganizmalarda-direnc-sorunu-ve-antimikrobiya-q07",
+     "kazanim": 2,
+     "zorluk": "kolay",
+     "soru": "Uygun antibiyotik seçimi ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Enfeksiyon nedeni olan mikroorganizma bilinmeli veya tahmin edilmelidir",
+      "B": "Olası etkenin antimikrobiyal duyarlılığı bilinmeli veya tahmin edilmelidir",
+      "C": "İlacın etkisini ve toksisitesini etkileyecek hasta özellikleri bilinmelidir",
+      "D": "Kullanılacak antibiyotiğin özellikleri hakkında bilgi sahibi olunmalıdır",
+      "E": "Ateşi olan her hastaya antibiyotik başlanmalıdır"
+     },
+     "dogru": "E",
+     "aciklama": "Uygun seçimin dört koşulu etken, duyarlılık, hasta ve ilaç özellikleridir; ateşi olan her hastaya antibiyotik vermek hatadır (s. 26–27).",
+     "sik_aciklamalari": {
+      "A": "Yanlış seçenek; ifade doğrudur: uygun seçimin birinci koşuludur (s. 26).",
+      "B": "Yanlış seçenek; ifade doğrudur: ikinci koşuldur (s. 26).",
+      "C": "Yanlış seçenek; ifade doğrudur: üçüncü koşuldur (s. 26).",
+      "D": "Yanlış seçenek; ifade doğrudur: dördüncü koşuldur (s. 26).",
+      "E": "Doğru cevap; ateşi olan her hastaya antibiyotik verilmesi derste kullanım hatası olarak geçer (s. 27)."
+     },
+     "bilgi": [
+      72,
+      73,
+      74,
+      75
+     ],
+     "benzer_cikmis": [
+      "d3-k1-enf-060",
+      "13a1892a6d1c",
+      "k1-2021-2022-q015"
+     ],
+     "kanit": {
+      "sayfa": 26,
+      "alinti": "Enfeksiyon nedeni olan mikroorganizma bilinmeli veya tahmin edilmeli"
+     }
+    },
+    {
+     "id": "k1-69-mikroorganizmalarda-direnc-sorunu-ve-antimikrobiya-q08",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "GSBL üreten Klebsiella pneumoniae ile gelişen ağır bir enfeksiyonun tedavisinde tercih edilecek antibiyotik grubu hangisidir?",
+     "secenekler": {
+      "A": "3. kuşak sefalosporinler",
+      "B": "Karbapenemler",
+      "C": "Aminopenisilinler",
+      "D": "1. kuşak sefalosporinler",
+      "E": "4. kuşak sefalosporin (sefepim)"
+     },
+     "dogru": "B",
+     "aciklama": "GSBL karbapenemleri hidrolize edemez; ağır GSBL enfeksiyonunda karbapenem tercih edilir (s. 15).",
+     "sik_aciklamalari": {
+      "A": "Yanlış; GSBL oksiimino-sefalosporinleri (sefotaksim, seftriakson, seftazidim) hidrolize eder (s. 15).",
+      "B": "Doğru; GSBL üreten bakteri enfeksiyonunda karbapenemler (imipenem, meropenem, ertapenem) kullanılır (s. 15).",
+      "C": "Yanlış; klasik beta-laktamazla bile hidrolize olur (s. 14).",
+      "D": "Yanlış; klasik beta-laktamazla bile yıkılır (s. 14).",
+      "E": "Yanlış; sefepim de GSBL ile hidrolize olan oksiimino-sefalosporindir (s. 15)."
+     },
+     "bilgi": [
+      37,
+      36
+     ],
+     "benzer_cikmis": [
+      "d3-k1-enf-062",
+      "e0bfb3a8ff3f"
+     ],
+     "kanit": {
+      "sayfa": 15,
+      "alinti": "ESBL üreten bir bakterinin neden olduğu infeksiyonun tedavisinde karbapenem grubu antibiyotikler kullanılır"
+     }
+    },
+    {
+     "id": "k1-69-mikroorganizmalarda-direnc-sorunu-ve-antimikrobiya-q09",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "MRSA ile gelişen bakteriyemide aşağıdaki ilaçlardan hangisi tedavi seçenekleri arasında yer almaz?",
+     "secenekler": {
+      "A": "Vankomisin",
+      "B": "Teikoplanin",
+      "C": "Linezolid",
+      "D": "Daptomisin",
+      "E": "Meropenem"
+     },
+     "dogru": "E",
+     "aciklama": "MRSA tüm beta-laktamlara (karbapenemler dahil) dirençlidir; tedavide vankomisin, teikoplanin, linezolid ve daptomisin kullanılır (s. 23).",
+     "sik_aciklamalari": {
+      "A": "Yanlış seçenek; MRSA tedavisinde kullanılır (s. 23).",
+      "B": "Yanlış seçenek; MRSA tedavisinde kullanılır (s. 23).",
+      "C": "Yanlış seçenek; MRSA tedavisinde kullanılır (s. 23).",
+      "D": "Yanlış seçenek; MRSA tedavisinde kullanılır (s. 23).",
+      "E": "Doğru cevap; MRSA bütün penisilin, sefalosporin ve karbapenemlere dirençlidir (s. 23)."
+     },
+     "bilgi": [
+      67,
+      64
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 23,
+      "alinti": "Tedavide vankomisin, teikoplanin, linezolid, daptomisin kullanılır"
+     }
+    },
+    {
+     "id": "k1-69-mikroorganizmalarda-direnc-sorunu-ve-antimikrobiya-q10",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Hastanelerde antibiyotik kullanımına ilişkin derste sayılan sorunlar arasında aşağıdakilerden hangisi yoktur?",
+     "secenekler": {
+      "A": "Kültür için örnek alınmadan antibiyotik başlanması",
+      "B": "Geniş spektrumlu ya da kombinasyon tedavilerinin seçilmesi",
+      "C": "Enfeksiyon olmadığı hâlde antibiyotik kullanılması",
+      "D": "Kültür sonucuna göre tedavinin daraltılması",
+      "E": "Antibiyotik tedavisinin gereğinden fazla uzatılması"
+     },
+     "dogru": "D",
+     "aciklama": "Hastane sorunları kültürsüz başlama, gereksiz geniş spektrum/kombinasyon, enfeksiyonsuz kullanım ve uzun tedavidir; daraltma doğru uygulamadır (s. 29).",
+     "sik_aciklamalari": {
+      "A": "Yanlış seçenek; derste özellikle acil servis sorunu olarak verilir (s. 29).",
+      "B": "Yanlış seçenek; derste hastane sorunu olarak verilir (s. 29).",
+      "C": "Yanlış seçenek; derste hastane sorunu olarak verilir (s. 29).",
+      "D": "Doğru cevap; bu bir sorun değil, akılcı kullanımın gereğidir (s. 25–26).",
+      "E": "Yanlış seçenek; derste hastane sorunu olarak verilir (s. 29)."
+     },
+     "bilgi": [
+      78,
+      79,
+      80
+     ],
+     "benzer_cikmis": [],
+     "kanit": {
+      "sayfa": 29,
+      "alinti": "Kültür için örnekler alınmadan antibiyotik başlanması(daha çok acil servis)"
+     }
+    },
+    {
+     "id": "k1-69-mikroorganizmalarda-direnc-sorunu-ve-antimikrobiya-q11",
+     "kazanim": 2,
+     "zorluk": "orta",
+     "soru": "Antibiyotiklerin gereksiz ve yaygın kullanımının sonuçları arasında aşağıdakilerden hangisi yer almaz?",
+     "secenekler": {
+      "A": "Dirençli bakterilerin seçilmesi",
+      "B": "Yeni direnç paternlerinin ortaya çıkması",
+      "C": "Ekolojik dengenin bozulması",
+      "D": "Doğal (intrensek) direnç gösteren türlerin duyarlı hâle gelmesi",
+      "E": "Uzun süreli geniş spektrumlu kullanımla dirençli suşların öne çıkması"
+     },
+     "dogru": "D",
+     "aciklama": "Gereksiz kullanım dirençli bakteri seçilimi, yeni direnç paternleri ve ekolojik denge bozulmasına yol açar; doğal direnci değiştirmez (s. 30).",
+     "sik_aciklamalari": {
+      "A": "Yanlış seçenek; derste ilk sonuç olarak verilir (s. 30).",
+      "B": "Yanlış seçenek; derste verilir (s. 30).",
+      "C": "Yanlış seçenek; derste verilir (s. 30).",
+      "D": "Doğru cevap; doğal direnç yapısal bir özelliktir, antibiyotik kullanımı onu ortadan kaldırmaz (s. 9, 30).",
+      "E": "Yanlış seçenek; seçilim baskısının sonucudur (s. 29–30)."
+     },
+     "bilgi": [
+      81,
+      20
+     ],
+     "benzer_cikmis": [
+      "k1-2019-2020-q024"
+     ],
+     "kanit": {
+      "sayfa": 30,
+      "alinti": "Antibiyotiklerin gereksiz ve yaygın kullanımları Dirençli bakterilerin seçilmesi Yeni direnç paternlerinin ortaya çıkması Ekolojik dengenin bozulması"
+     }
+    },
+    {
+     "id": "k1-69-mikroorganizmalarda-direnc-sorunu-ve-antimikrobiya-q12",
+     "kazanim": 2,
+     "zorluk": "zor",
+     "soru": "Acil serviste ateş ve piyelonefrit bulgularıyla başvuran hastaya kültür alınmadan geniş spektrumlu iki antibiyotik başlanıyor ve tedavi 3 hafta sürdürülüyor. Bu yaklaşımda derste vurgulanan ve tedavinin daraltılmasını engelleyen temel hata hangisidir?",
+     "secenekler": {
+      "A": "Antibiyotiğin intravenöz verilmesi",
+      "B": "Kültür için örnek alınmadan antibiyotik başlanması",
+      "C": "Hastanın hastaneye yatırılması",
+      "D": "Ateşin antibiyotik endikasyonu olarak değerlendirilmesi",
+      "E": "Hasta özelliklerinin bilinmesi"
+     },
+     "dogru": "B",
+     "aciklama": "Kültürsüz başlama etken ve duyarlılığın öğrenilmesini engeller; gereksiz kombinasyon ve uzun tedavi de ek hastane sorunlarıdır (s. 29).",
+     "sik_aciklamalari": {
+      "A": "Yanlış; uygulama yolu derste hata olarak verilmez (s. 29).",
+      "B": "Doğru; kültür alınmadığı için etken ve duyarlılık öğrenilemez, tedavi daraltılamaz; derste daha çok acil servis sorunu olarak verilir (s. 29).",
+      "C": "Yanlış; yatış bir antibiyotik kullanım hatası değildir (s. 29).",
+      "D": "Yanlış; piyelonefrit bakteriyel enfeksiyondur, sorun endikasyon değil tedavinin yönetimidir (s. 27, 29).",
+      "E": "Yanlış; hasta özelliklerini bilmek uygun seçimin koşuludur (s. 26)."
+     },
+     "bilgi": [
+      78,
+      79,
+      80
+     ],
+     "benzer_cikmis": [
+      "past-1790877034926-634071"
+     ],
+     "kanit": {
+      "sayfa": 29,
+      "alinti": "Kültür için örnekler alınmadan antibiyotik başlanması(daha çok acil servis)"
+     }
+    }
+   ],
+   "ilgili_cikmis": [
+    {
+     "id": "d3-k1-enf-060",
+     "soru": "Uygun antibiyotik seçimi ile ilgili olarak aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Enfeksiyon nedeni olan mikroorganizma bilinmeli veya tahmin edilmelidir",
+      "B": "Etken olan veya etken olması muhtemel mikroorganizmanın antimikrobiyal duyarlılık durumu bilinmeli veya tahmin edilmelidir",
+      "C": "Kullanılacak antimikrobiyal ilacın etkisini ve toksisitesini etkileyecek hastaya ait özellikler bilinmelidir",
+      "D": "Kullanılacak antibiyotiğin özellikleri hakkında bilgi sahibi olunmalıdır",
+      "E": "Ateşi olan her hastaya antibiyotik başlanmalıdır"
+     },
+     "cevap": "E"
+    },
+    {
+     "id": "13a1892a6d1c",
+     "soru": "Uygun antibiyotik seçiminde hangisi yanlış ?",
+     "secenekler": {
+      "A": "Enfeksiyon nedeni olan mikroorganizma bilinmeli veya tahmin edilmeli",
+      "B": "Etken olan veya etken olması muhtemel mikroorganizmanın antimikrobiyal duyarlılık durumu bilinmeli veya tahmin edilmeli",
+      "C": "Kullanılacak antimikrobiyal ilaçın etkisini ve toksisitesini etkileyecek hastaya ait özellikler bilinmeli",
+      "D": "Kullanılacak antibiyotiğin özellikleri hakkında bilgi sahibi olunmalı",
+      "E": "Ateşi olan her hastaya antibiyotik verilmesi"
+     },
+     "cevap": "E"
+    },
+    {
+     "id": "k1-2021-2022-q015",
+     "soru": "Aşağıdakilerden hangisi antibiyotik kullanımı ile ilgili doğru değildir?",
+     "secenekler": {
+      "A": "Enfeksiyon nedeni olan mikroorganizma bilinmeli veya tahmin edilmeli.",
+      "B": "Etken olan veya etken olması muhtemel mikroorganizmanın antimikrobiyal duyarlılık durumu bilinmeli veya tahmin edilmeli.",
+      "C": "Kullanılacak antimikrobiyal ilacın etkisini ve toksisitesini etkileyecek hastaya ait özellikler bilinmeli.",
+      "D": "Kullanılacak antibiyotiğin özellikleri hakkında bilgi sahibi olunmalı.",
+      "E": "Ateşi olan her hastaya antibiyotik başlanmalı."
+     },
+     "cevap": "E"
+    },
+    {
+     "id": "d3-k1-enf-062",
+     "soru": "Antibiyotiklere karşı gelişen beta-laktamaz direnci ile ilgili aşağıdakilerden hangisi yanlıştır?",
+     "secenekler": {
+      "A": "Genişlemiş spektrumlu beta-laktamaz (GSBL) üreten bakteriler 3. kuşak sefalosporinlerle tedavi edilebilir",
+      "B": "GSBL üreten bakterilerin neden olduğu enfeksiyonlar karbapenemlerle tedavi edilebilir",
+      "C": "Karbapenemazlar karbapenemleri hidrolize ederek etkisiz hâle getirir",
+      "D": "Enzimatik direnç, beta-laktam antibiyotiklere karşı en sık görülen direnç mekanizmasıdır",
+      "E": "Karbapenemaz üreten suşlar çoğunlukla kolistine duyarlıdır ve tedavilerinde kolistin kullanılabilir"
+     },
+     "cevap": "A"
+    },
+    {
+     "id": "e0bfb3a8ff3f",
+     "soru": "Ürosepsis nedeniyle ampirik antibiyotik başlanacak olan hastada son 1 içinde cerrahi girişim ve antibiyotik kullanımı öyküsü olması durumunda ilk tercih antibiyotik aşağıdakilerden hangisi olmalıdır?",
+     "secenekler": {
+      "A": "Seftriakson",
+      "B": "Ampisilin",
+      "C": "Ampisilinsulbaktam",
+      "D": "Ertapenem",
+      "E": "SiproÖoksasin"
+     },
+     "cevap": "C"
+    },
+    {
+     "id": "k1-2019-2020-q024",
+     "soru": "Antibiyotik direncinin yayılmasında\nI. Uzun süreli ve geniş spektrumlu antibiyotik kullanımı\nII. Hayvan yemlerinde ve tarımda antibiyotiklerin kullanılması\nIII. Hastane izolasyon yöntemlerine uyulmaması\nIV. Hastaların uzun süre yatağa bağımlı yaşaması\netmenlerinden hangileri rol oynamaktadır?",
+     "secenekler": {
+      "A": "I, II ve III",
+      "B": "I ve III",
+      "C": "II ve IV",
+      "D": "Yalnız IV",
+      "E": "I, II, III ve IV"
+     },
+     "cevap": "A"
+    },
+    {
+     "id": "past-1790877034926-634071",
+     "soru": "Ampirik antibiyotik kullanımı için aşağıdakilerden hangisi doğrudur?",
+     "secenekler": {
+      "A": "İdrar kültürü sonucuna göre başlanan uygun antibiyotik tedavisidir",
+      "B": "Cerrahi girişim öncesi uygulanan antibiyotik tedavisidir",
+      "C": "Yüksek olasılıkla enfeksiyon gelişeceğinin düşünüldüğü durumlarda uygulanan tedavidir",
+      "D": "Etken belirlenmeden olası patojen ve duyarlı olabileceği antimikrobiyal ajanlardan biriyle tedavi etme yöntemidir",
+      "E": "Hastanın semptomlar başladığında doktora gitmeden önce kendi kendine uyguladığı tedavidir"
+     },
+     "cevap": "D"
+    }
+   ]
+  }
+ ],
+ "soru_sayisi": 12
+}

@@ -2431,7 +2431,7 @@
     "description": "Çoğu beta-laktamaz enzimine dirençli, gram negatif basillere karşı en geniş spektrumlu son çare beta-laktam antibiyotik ailesi.",
     "discipline": "Farmakoloji",
     "committee": "",
-    "clinicalPearl": "Direnç geliştiğinde (Karbapenem Dirençli Enterobacteriaceae - CRE) hastanede Temas İzolasyonu zorunludur. · Ürosepsiste antipsödomonal etkinlik; imipenem 500 mg IV 6 saatte bir, meropenem 1 g IV 8 saatte bir. Piyelonefritte yalnız ÇİD organizma veya ürosepsiste. · Girişim sonrası prostatit ve epididimitte 2–4 hafta kullanılır; postoperatif pelvik enfeksiyonda meropenem/imipenem/ertapenem seçenektir.",
+    "clinicalPearl": "Direnç geliştiğinde (Karbapenem Dirençli Enterobacteriaceae - CRE) hastanede Temas İzolasyonu zorunludur. · Ürosepsiste antipsödomonal etkinlik; imipenem 500 mg IV 6 saatte bir, meropenem 1 g IV 8 saatte bir. Piyelonefritte yalnız ÇİD organizma veya ürosepsiste. · Girişim sonrası prostatit ve epididimitte 2–4 hafta kullanılır; postoperatif pelvik enfeksiyonda meropenem/imipenem/ertapenem seçenektir. · GSBL üreten bakteri enfeksiyonunda tercih edilir: imipenem, meropenem, ertapenem.",
     "dogrulama": {
       "durum": "editor_onay",
       "destek": 0.587,
@@ -2950,7 +2950,7 @@
     "description": "mecA geni aracılığıyla PBP2a sentezleyerek tüm standart beta-laktam antibiyotiklere direnç kazanmış S. aureus suşları.",
     "discipline": "Bakteriyoloji",
     "committee": "",
-    "clinicalPearl": "Hastanede temas izolasyonu gerektirir; tedavide vankomisin veya daptomisin seçilir.",
+    "clinicalPearl": "Hastanede temas izolasyonu gerektirir; tedavide vankomisin veya daptomisin seçilir. · Kinolonlara duyarlı görünse de tedavi sırasında direnç gelişir; tedavide vankomisin, teikoplanin, linezolid, daptomisin.",
     "aliases": [
       "MRSA",
       "Metisiline Dirençli S. aureus"
@@ -4176,7 +4176,7 @@
     "description": "D-Ala-D-Ala ucuna bağlanarak hücre duvarı peptidoglikan sentezini engelleyen glikopeptid antibiyotik.",
     "discipline": "Farmakoloji",
     "committee": "",
-    "clinicalPearl": "MRSA bakteriyemisinde intravenöz; C. difficile kolitinde oral yolla kullanılır. · Kritik sistemik ÜSE ve ürosepsiste MRSA/dirençli enterokok şüphesinde karbapeneme eklenir.",
+    "clinicalPearl": "MRSA bakteriyemisinde intravenöz; C. difficile kolitinde oral yolla kullanılır. · Kritik sistemik ÜSE ve ürosepsiste MRSA/dirençli enterokok şüphesinde karbapeneme eklenir. · Gram negatif bakteriler vankomisine doğal dirençlidir; VRE ve VISA glikopeptid direncini temsil eder.",
     "dogrulama": {
       "durum": "kaynakli",
       "destek": 1.0,
@@ -4308,7 +4308,7 @@
     "description": "vanA veya vanB genleri aracılığıyla hücre duvarı hedef peptidi D-Ala-D-Ala yerine D-Ala-D-Laktat sentezleyerek glikopeptidlere direnç kazanan Enterococcus faecium suşları.",
     "discipline": "Bakteriyoloji",
     "committee": "",
-    "clinicalPearl": "Hastanelerde Temas İzolasyonu ile sınırlandırılır; tedavide linezolid tercih edilir.",
+    "clinicalPearl": "Hastanelerde Temas İzolasyonu ile sınırlandırılır; tedavide linezolid tercih edilir. · Direnç hücre duvarı öncüsünde D-Ala-D-Ala yerine D-Ala-D-Laktat oluşmasıyla gelişir (Tablo 2).",
     "aliases": [
       "VRE",
       "Vankomisine Dirençli Enterokok"
@@ -22724,7 +22724,8 @@
         "sayfa": 13,
         "alinti": "Bulaş yoluna yönelik önlemler: • Temas izolasyonu: İlgili resim"
       }
-    ]
+    ],
+    "clinicalPearl": "İlk kez sefotaksimin 1980'de kullanıma girmesinden kısa süre sonra Almanya'da K. pneumoniae'de saptandı; tedavi karbapenemdir."
   },
   "virülans": {
     "term": "Virülans",
@@ -27276,7 +27277,8 @@
         "sayfa": 36,
         "alinti": "Karbapenem dirençli etken riski : Aminoglikozid, kolistin, iv fosfomisin"
       }
-    ]
+    ],
+    "clinicalPearl": "Karbapenemaz üreten suşlar çoğunlukla kolistine duyarlıdır; XDR tanımında duyarlı kalan iki ilaçtan biridir."
   },
   "teikoplanin": {
     "term": "Teikoplanin",
@@ -74734,7 +74736,7 @@
     "description": "Enterobacteriaceae, P. aeruginosa, S. aureus ve S. saprophyticus'a etkili geniş spektrumlu antibiyotik grubudur; siprofloksasin ve levofloksasin üriner ve genital enfeksiyonlarda kullanılan örnekleridir.",
     "discipline": "Üroloji",
     "committee": "",
-    "clinicalPearl": "Çocuklar ve gebelerde kıkırdak gelişimini bozduğu için kullanılmaz.",
+    "clinicalPearl": "Çocuklar ve gebelerde kıkırdak gelişimini bozduğu için kullanılmaz. · Direncin temel nedeni DNA giraz (GyrA, GyrB) mutasyonudur; geçirgenlik azalması ve aktif pompa katkıda bulunur.",
     "aliases": [
       "Kinolonlar"
     ],
@@ -74781,7 +74783,7 @@
     "description": "Gentamisinin örnek olduğu, ateşli ve komplike üriner sistem enfeksiyonlarında ve bazı pelvik enfeksiyonlarda çoğunlukla kombinasyon içinde kullanılan, nefrotoksik ve ototoksik antibiyotik grubudur.",
     "discipline": "Üroloji",
     "committee": "",
-    "clinicalPearl": "Nefrotoksik ve ototoksiktir; günde tek doz uygulama önerilir.",
+    "clinicalPearl": "Nefrotoksik ve ototoksiktir; günde tek doz uygulama önerilir. · Direncin en sık nedeni plazmid aracılı enzimatik modifikasyondur; anaeroblar doğal dirençlidir.",
     "dogrulama": {
       "durum": "sozluk_v2",
       "destek": 1.0,
@@ -86170,7 +86172,7 @@
     "description": "Mikroorganizma suşlarının antibiyotiklere dirençli olması veya direnç geliştirmesi.",
     "discipline": "Halk Sağlığı",
     "committee": "",
-    "clinicalPearl": "Uygunsuz kullanım dirençlileri yaygınlaştırır.",
+    "clinicalPearl": "Uygunsuz kullanım dirençlileri yaygınlaştırır. · Doğal ve kazanılmış olarak ikiye ayrılır; 2050'de yılda 10 milyon ölüme yol açması öngörülür.",
     "dogrulama": {
       "durum": "ders_isci",
       "destek": 1.0,
@@ -94814,6 +94816,792 @@
         "kurul": 1,
         "sayfa": 11,
         "alinti": "%20 abortus, ölü doğum, neonatal ölüm"
+      }
+    ]
+  },
+  "doğal (intrensek) direnç": {
+    "term": "Doğal (intrensek) direnç",
+    "category": "terim",
+    "definition": "Mikroorganizmanın doğal yapısı nedeniyle antibiyotiğin etkisiz olması; ilacın hedefi yoktur ya da ilaç hedefine ulaşamaz.",
+    "description": "Mikroorganizmanın doğal yapısı nedeniyle antibiyotiğin etkisiz olması; ilacın hedefi yoktur ya da ilaç hedefine ulaşamaz.",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "",
+    "clinicalPearl": "Gram negatif–vankomisin, enterokok/Listeria/Legionella–sefalosporin, anaerob–aminoglikozid, Stenotrophomonas–karbapenem.",
+    "aliases": [
+      "intrensek direnç",
+      "intrinsik direnç"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-ea63733c79"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Enfeksiyon Hastalıkları/10)Mikroorganizmalarda direnç sorunu ve antimikrobiyal yönetim .pdf",
+        "ders": "Enfeksiyon Hastalıkları",
+        "kurul": 1,
+        "sayfa": 9,
+        "alinti": "Mikroorganizmaların doğal yapısı nedeniyle antibiyotiklerin etkisiz olması"
+      }
+    ]
+  },
+  "kazanılmış direnç": {
+    "term": "Kazanılmış direnç",
+    "category": "terim",
+    "definition": "Mutasyon ya da direnç geni taşıyan DNA dizilerinin başka bakterilerden edinilmesiyle daha önce duyarlı suşun dirençli hâle gelmesi.",
+    "description": "Mutasyon ya da direnç geni taşıyan DNA dizilerinin başka bakterilerden edinilmesiyle daha önce duyarlı suşun dirençli hâle gelmesi.",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "",
+    "clinicalPearl": "Kromozom, plazmid (R plazmidi) ya da transpozon aracılıdır.",
+    "aliases": [
+      "edinsel direnç"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-ea63733c79"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Enfeksiyon Hastalıkları/10)Mikroorganizmalarda direnç sorunu ve antimikrobiyal yönetim .pdf",
+        "ders": "Enfeksiyon Hastalıkları",
+        "kurul": 1,
+        "sayfa": 10,
+        "alinti": "Mutasyon sonucunda ya da direnç geni taşıyan DNA dizilerinin başka bakterilerden edinilmesi"
+      }
+    ]
+  },
+  "r plazmidi": {
+    "term": "R plazmidi",
+    "category": "genetik",
+    "definition": "Direnç genleri taşıyan, bakteriler arasında aktarılabilen kromozom dışı DNA.",
+    "description": "Direnç genleri taşıyan, bakteriler arasında aktarılabilen kromozom dışı DNA.",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "",
+    "clinicalPearl": "Plazmid aracılı direnç en hızlı yayılan dirençtir; çoğunlukla konjugasyonla aktarılır.",
+    "aliases": [
+      "direnç plazmidi"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-ea63733c79"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Enfeksiyon Hastalıkları/10)Mikroorganizmalarda direnç sorunu ve antimikrobiyal yönetim .pdf",
+        "ders": "Enfeksiyon Hastalıkları",
+        "kurul": 1,
+        "sayfa": 8,
+        "alinti": "Kromozom aracılı Plazmid aracılı (R plazmidler) Transpozon aracılı (küçük DNA dizileri)"
+      }
+    ]
+  },
+  "transpozon": {
+    "term": "Transpozon",
+    "category": "genetik",
+    "definition": "Genom içinde ve plazmidler arasında yer değiştirebilen küçük DNA dizisi; direnç genlerini taşıyabilir.",
+    "description": "Genom içinde ve plazmidler arasında yer değiştirebilen küçük DNA dizisi; direnç genlerini taşıyabilir.",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "",
+    "aliases": [
+      "sıçrayan gen"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-ea63733c79"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Enfeksiyon Hastalıkları/10)Mikroorganizmalarda direnç sorunu ve antimikrobiyal yönetim .pdf",
+        "ders": "Enfeksiyon Hastalıkları",
+        "kurul": 1,
+        "sayfa": 10,
+        "alinti": "3. Transpozon aracılı direnç (DNA dizileri)"
+      }
+    ]
+  },
+  "efluks pompası": {
+    "term": "Efluks pompası",
+    "category": "terim",
+    "definition": "Antibiyotiği hücre dışına aktif olarak atarak hücre içi ilaç yoğunluğunu düşüren membran taşıyıcısı.",
+    "description": "Antibiyotiği hücre dışına aktif olarak atarak hücre içi ilaç yoğunluğunu düşüren membran taşıyıcısı.",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "",
+    "clinicalPearl": "Florokinolon, aminoglikozid ve tetrasiklin direncinde önemlidir.",
+    "aliases": [
+      "aktif dışa atım",
+      "efflux"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-ea63733c79"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Enfeksiyon Hastalıkları/10)Mikroorganizmalarda direnç sorunu ve antimikrobiyal yönetim .pdf",
+        "ders": "Enfeksiyon Hastalıkları",
+        "kurul": 1,
+        "sayfa": 5,
+        "alinti": "Rifamycins Efflux Fluoroquinolones Aminoglycosides Tetracyclines immunity"
+      }
+    ]
+  },
+  "çok ilaca dirençli bakteri (mdr)": {
+    "term": "Çok ilaca dirençli bakteri (MDR)",
+    "category": "terim",
+    "definition": "En az üç antibiyotik grubuna dirençli bakteri.",
+    "description": "En az üç antibiyotik grubuna dirençli bakteri.",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "",
+    "aliases": [
+      "MDR"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-ea63733c79"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Enfeksiyon Hastalıkları/10)Mikroorganizmalarda direnç sorunu ve antimikrobiyal yönetim .pdf",
+        "ders": "Enfeksiyon Hastalıkları",
+        "kurul": 1,
+        "sayfa": 11,
+        "alinti": "Çok ilaca dirençli (MDR): En az üç gruba dirençli"
+      }
+    ]
+  },
+  "yaygın ilaca dirençli bakteri (xdr)": {
+    "term": "Yaygın ilaca dirençli bakteri (XDR)",
+    "category": "terim",
+    "definition": "Kolistin ve tigesiklin dışındaki tüm ilaçlara dirençli bakteri.",
+    "description": "Kolistin ve tigesiklin dışındaki tüm ilaçlara dirençli bakteri.",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "",
+    "aliases": [
+      "XDR"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-ea63733c79"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Enfeksiyon Hastalıkları/10)Mikroorganizmalarda direnç sorunu ve antimikrobiyal yönetim .pdf",
+        "ders": "Enfeksiyon Hastalıkları",
+        "kurul": 1,
+        "sayfa": 11,
+        "alinti": "XDR: Kolistin ve tigesiklin dışındaki tüm ilaçlara dirençli PDR: tüm ilaçlara dirençli"
+      }
+    ]
+  },
+  "tüm ilaçlara dirençli bakteri (pdr)": {
+    "term": "Tüm ilaçlara dirençli bakteri (PDR)",
+    "category": "terim",
+    "definition": "Tüm antibiyotiklere dirençli bakteri.",
+    "description": "Tüm antibiyotiklere dirençli bakteri.",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "",
+    "aliases": [
+      "PDR",
+      "pan-dirençli"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-ea63733c79"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Enfeksiyon Hastalıkları/10)Mikroorganizmalarda direnç sorunu ve antimikrobiyal yönetim .pdf",
+        "ders": "Enfeksiyon Hastalıkları",
+        "kurul": 1,
+        "sayfa": 11,
+        "alinti": "XDR: Kolistin ve tigesiklin dışındaki tüm ilaçlara dirençli PDR: tüm ilaçlara dirençli"
+      }
+    ]
+  },
+  "beta-laktamaz": {
+    "term": "Beta-laktamaz",
+    "category": "terim",
+    "definition": "Beta-laktam antibiyotiklerin beta-laktam halkasını hidrolize ederek etkisiz bırakan bakteri enzimi.",
+    "description": "Beta-laktam antibiyotiklerin beta-laktam halkasını hidrolize ederek etkisiz bırakan bakteri enzimi.",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "",
+    "clinicalPearl": "Beta-laktamlara karşı en önemli direnç mekanizmasıdır.",
+    "aliases": [
+      "β-laktamaz"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-ea63733c79"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Enfeksiyon Hastalıkları/10)Mikroorganizmalarda direnç sorunu ve antimikrobiyal yönetim .pdf",
+        "ders": "Enfeksiyon Hastalıkları",
+        "kurul": 1,
+        "sayfa": 12,
+        "alinti": "Enzimatik direnç Beta laktamaz Genişlemiş spektrumlu beta laktamaz (ESBL)"
+      }
+    ]
+  },
+  "karbapenemaz": {
+    "term": "Karbapenemaz",
+    "category": "terim",
+    "definition": "Karbapenemleri hidrolize eden beta-laktamaz.",
+    "description": "Karbapenemleri hidrolize eden beta-laktamaz.",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "",
+    "clinicalPearl": "Başlıcaları VIM, KPC, NDM ve Türkiye kökenli OXA-48; tedavide kolistin.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-ea63733c79"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Enfeksiyon Hastalıkları/10)Mikroorganizmalarda direnç sorunu ve antimikrobiyal yönetim .pdf",
+        "ders": "Enfeksiyon Hastalıkları",
+        "kurul": 1,
+        "sayfa": 12,
+        "alinti": "Karbapenemazlar (karbapenemi hidrolize eden beta laktamaz)"
+      }
+    ]
+  },
+  "tem-1": {
+    "term": "TEM-1",
+    "category": "genetik",
+    "definition": "1960'larda Yunanistan'da saptanan, plazmid aracılı klasik beta-laktamaz.",
+    "description": "1960'larda Yunanistan'da saptanan, plazmid aracılı klasik beta-laktamaz.",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "",
+    "clinicalPearl": "Penisilin ve 1. kuşak sefalosporini yıkar; klavulanik asitle inhibe olur.",
+    "aliases": [
+      "TEM-2"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-ea63733c79"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Enfeksiyon Hastalıkları/10)Mikroorganizmalarda direnç sorunu ve antimikrobiyal yönetim .pdf",
+        "ders": "Enfeksiyon Hastalıkları",
+        "kurul": 1,
+        "sayfa": 14,
+        "alinti": "İlk kez 1960’larda Yunanistan’da saptandı Plazmid aracılı TEM-1 ve TEM-2"
+      }
+    ]
+  },
+  "ambler sınıflaması": {
+    "term": "Ambler sınıflaması",
+    "category": "terim",
+    "definition": "Beta-laktamazların moleküler yapıya göre A (serin), B (metallo), C (AmpC) ve D (oksasilinaz) olarak sınıflandırılması.",
+    "description": "Beta-laktamazların moleküler yapıya göre A (serin), B (metallo), C (AmpC) ve D (oksasilinaz) olarak sınıflandırılması.",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-ea63733c79"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Enfeksiyon Hastalıkları/10)Mikroorganizmalarda direnç sorunu ve antimikrobiyal yönetim .pdf",
+        "ders": "Enfeksiyon Hastalıkları",
+        "kurul": 1,
+        "sayfa": 16,
+        "alinti": "MAIN BETA-LACTAMASES IN ENTEROBACTERIACEAE Ambler's classification"
+      }
+    ]
+  },
+  "ampc beta-laktamaz": {
+    "term": "AmpC beta-laktamaz",
+    "category": "terim",
+    "definition": "Ambler sınıf C sefalosporinaz; Enterobacter, C. freundii, Serratia, Morganella ve Hafnia'da indüklenebilir, E. coli'de indüklenemeyen kromozomal formdadır.",
+    "description": "Ambler sınıf C sefalosporinaz; Enterobacter, C. freundii, Serratia, Morganella ve Hafnia'da indüklenebilir, E. coli'de indüklenemeyen kromozomal formdadır.",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "",
+    "clinicalPearl": "İndüklenebilir AmpC'de 3. kuşak sefalosporin tedavisi sırasında direnç gelişebilir.",
+    "aliases": [
+      "AmpC"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-ea63733c79"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Enfeksiyon Hastalıkları/10)Mikroorganizmalarda direnç sorunu ve antimikrobiyal yönetim .pdf",
+        "ders": "Enfeksiyon Hastalıkları",
+        "kurul": 1,
+        "sayfa": 16,
+        "alinti": "Inducible AmpC Enterobacter sp. Citrobacter treundii Serratia marcescens"
+      }
+    ]
+  },
+  "metallo-beta-laktamaz": {
+    "term": "Metallo-beta-laktamaz",
+    "category": "terim",
+    "definition": "Aktif bölgesinde çinko taşıyan, klavulanik asitle inhibe olmayan Ambler sınıf B beta-laktamaz.",
+    "description": "Aktif bölgesinde çinko taşıyan, klavulanik asitle inhibe olmayan Ambler sınıf B beta-laktamaz.",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "",
+    "clinicalPearl": "VIM ve NDM örnektir.",
+    "aliases": [
+      "MBL"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-ea63733c79"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Enfeksiyon Hastalıkları/10)Mikroorganizmalarda direnç sorunu ve antimikrobiyal yönetim .pdf",
+        "ders": "Enfeksiyon Hastalıkları",
+        "kurul": 1,
+        "sayfa": 17,
+        "alinti": "Plazmid aracılı VIM (Verona integron aracılı metalo beta laktamaz)"
+      }
+    ]
+  },
+  "kpc": {
+    "term": "KPC",
+    "category": "genetik",
+    "definition": "Klebsiella pneumoniae karbapenemazı; Ambler sınıf A karbapenemaz.",
+    "description": "Klebsiella pneumoniae karbapenemazı; Ambler sınıf A karbapenemaz.",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "",
+    "aliases": [
+      "Klebsiella pneumoniae karbapenemazı"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-ea63733c79"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Enfeksiyon Hastalıkları/10)Mikroorganizmalarda direnç sorunu ve antimikrobiyal yönetim .pdf",
+        "ders": "Enfeksiyon Hastalıkları",
+        "kurul": 1,
+        "sayfa": 17,
+        "alinti": "KPC (K.pneumoniae karbapenemazı) NDM (New Delhi Metalo beta laktamaz) OXA 48 (Türkiye’den köken almış)"
+      }
+    ]
+  },
+  "ndm": {
+    "term": "NDM",
+    "category": "genetik",
+    "definition": "New Delhi metallo-beta-laktamaz; plazmid aracılı karbapenemaz.",
+    "description": "New Delhi metallo-beta-laktamaz; plazmid aracılı karbapenemaz.",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "",
+    "aliases": [
+      "New Delhi metallo-beta-laktamaz"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-ea63733c79"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Enfeksiyon Hastalıkları/10)Mikroorganizmalarda direnç sorunu ve antimikrobiyal yönetim .pdf",
+        "ders": "Enfeksiyon Hastalıkları",
+        "kurul": 1,
+        "sayfa": 17,
+        "alinti": "KPC (K.pneumoniae karbapenemazı) NDM (New Delhi Metalo beta laktamaz) OXA 48 (Türkiye’den köken almış)"
+      }
+    ]
+  },
+  "oxa-48": {
+    "term": "OXA-48",
+    "category": "genetik",
+    "definition": "Türkiye'den köken almış, Ambler sınıf D oksasilinaz tipi karbapenemaz.",
+    "description": "Türkiye'den köken almış, Ambler sınıf D oksasilinaz tipi karbapenemaz.",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "",
+    "clinicalPearl": "Türkiye'de karbapenem dirençli Klebsiella'da en sık karbapenemaz.",
+    "aliases": [
+      "OXA 48"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-ea63733c79"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Enfeksiyon Hastalıkları/10)Mikroorganizmalarda direnç sorunu ve antimikrobiyal yönetim .pdf",
+        "ders": "Enfeksiyon Hastalıkları",
+        "kurul": 1,
+        "sayfa": 17,
+        "alinti": "KPC (K.pneumoniae karbapenemazı) NDM (New Delhi Metalo beta laktamaz) OXA 48 (Türkiye’den köken almış)"
+      }
+    ]
+  },
+  "vım": {
+    "term": "VIM",
+    "category": "genetik",
+    "definition": "Verona integron aracılı metallo-beta-laktamaz; plazmid aracılı karbapenemaz.",
+    "description": "Verona integron aracılı metallo-beta-laktamaz; plazmid aracılı karbapenemaz.",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-ea63733c79"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Enfeksiyon Hastalıkları/10)Mikroorganizmalarda direnç sorunu ve antimikrobiyal yönetim .pdf",
+        "ders": "Enfeksiyon Hastalıkları",
+        "kurul": 1,
+        "sayfa": 17,
+        "alinti": "Plazmid aracılı VIM (Verona integron aracılı metalo beta laktamaz)"
+      }
+    ]
+  },
+  "oksiimino-sefalosporinler": {
+    "term": "Oksiimino-sefalosporinler",
+    "category": "ilac",
+    "definition": "Yan zincirinde oksiimino grubu taşıyan sefotaksim, seftazidim, seftriakson ve sefepim; GSBL tarafından hidrolize edilir.",
+    "description": "Yan zincirinde oksiimino grubu taşıyan sefotaksim, seftazidim, seftriakson ve sefepim; GSBL tarafından hidrolize edilir.",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-ea63733c79"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Enfeksiyon Hastalıkları/10)Mikroorganizmalarda direnç sorunu ve antimikrobiyal yönetim .pdf",
+        "ders": "Enfeksiyon Hastalıkları",
+        "kurul": 1,
+        "sayfa": 15,
+        "alinti": "Oksiimino-sefalosporinler (sefotaksim, seftazidim, seftriakson, sefepim) direnci"
+      }
+    ]
+  },
+  "dna giraz": {
+    "term": "DNA giraz",
+    "category": "fizyoloji",
+    "definition": "DNA'nın süpersarmal yapısını düzenleyen tip II topoizomeraz; GyrA ve GyrB alt birimlerinden oluşur ve kinolonların hedefidir.",
+    "description": "DNA'nın süpersarmal yapısını düzenleyen tip II topoizomeraz; GyrA ve GyrB alt birimlerinden oluşur ve kinolonların hedefidir.",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "",
+    "clinicalPearl": "Kinolon direncinin temel nedeni GyrA/GyrB mutasyonudur.",
+    "aliases": [
+      "GyrA",
+      "GyrB"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-ea63733c79"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Enfeksiyon Hastalıkları/10)Mikroorganizmalarda direnç sorunu ve antimikrobiyal yönetim .pdf",
+        "ders": "Enfeksiyon Hastalıkları",
+        "kurul": 1,
+        "sayfa": 21,
+        "alinti": "Hedef enzim olan DNA-giraz’da mutasyon (GyrA, GyrB)"
+      }
+    ]
+  },
+  "vısa": {
+    "term": "VISA",
+    "category": "patojen",
+    "definition": "Vankomisine duyarlılığı azalmış Staphylococcus aureus.",
+    "description": "Vankomisine duyarlılığı azalmış Staphylococcus aureus.",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "",
+    "aliases": [
+      "vankomisine orta duyarlı S. aureus"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-ea63733c79"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Enfeksiyon Hastalıkları/10)Mikroorganizmalarda direnç sorunu ve antimikrobiyal yönetim .pdf",
+        "ders": "Enfeksiyon Hastalıkları",
+        "kurul": 1,
+        "sayfa": 23,
+        "alinti": "VISA = Vankomisine duyarlılığı azalmış S. aureus VRE = Vankomisine dirençli enterokok"
+      }
+    ]
+  },
+  "uamdss": {
+    "term": "UAMDSS",
+    "category": "terim",
+    "definition": "Ulusal Antimikrobiyal Direnç Sürveyans Sistemi; Türkiye'de kan izolatlarındaki direnç oranlarını izler.",
+    "description": "Ulusal Antimikrobiyal Direnç Sürveyans Sistemi; Türkiye'de kan izolatlarındaki direnç oranlarını izler.",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "",
+    "clinicalPearl": "2016'da E. coli ampisilin direnci %78,5, K. pneumoniae karbapenem direnci %40,1.",
+    "aliases": [
+      "Ulusal Antimikrobiyal Direnç Sürveyans Sistemi"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-ea63733c79"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Enfeksiyon Hastalıkları/10)Mikroorganizmalarda direnç sorunu ve antimikrobiyal yönetim .pdf",
+        "ders": "Enfeksiyon Hastalıkları",
+        "kurul": 1,
+        "sayfa": 18,
+        "alinti": "Tablo 4. UAMDSS 2016 E.coli izolatlarında (n=4342) antibiyotik duyarlılık sonuçları"
+      }
+    ]
+  },
+  "akılcı antibiyotik kullanımı": {
+    "term": "Akılcı antibiyotik kullanımı",
+    "category": "tedavi",
+    "definition": "Doğru tanı konmuş ve antibiyotik gerektiği kararlaştırılmış hastada en dar spektrumlu ilacın doğru doz, süre ve aralıkla, hastaya uygun en ucuz seçenek olarak kullanılması.",
+    "description": "Doğru tanı konmuş ve antibiyotik gerektiği kararlaştırılmış hastada en dar spektrumlu ilacın doğru doz, süre ve aralıkla, hastaya uygun en ucuz seçenek olarak kullanılması.",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "",
+    "aliases": [
+      "doğru antibiyotik kullanımı"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-ea63733c79"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Enfeksiyon Hastalıkları/10)Mikroorganizmalarda direnç sorunu ve antimikrobiyal yönetim .pdf",
+        "ders": "Enfeksiyon Hastalıkları",
+        "kurul": 1,
+        "sayfa": 25,
+        "alinti": "Doğru ( en dar spektrumlu) ilaç seçimi ile Doğru dozda Doğru sürede"
+      }
+    ]
+  },
+  "antimikrobiyal yönetim": {
+    "term": "Antimikrobiyal yönetim",
+    "category": "tedavi",
+    "definition": "Antibiyotiklerin doğru endikasyon, ilaç, doz, yol ve sürede kullanılmasını sağlayan kurumsal program (antimicrobial stewardship).",
+    "description": "Antibiyotiklerin doğru endikasyon, ilaç, doz, yol ve sürede kullanılmasını sağlayan kurumsal program (antimicrobial stewardship).",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "",
+    "aliases": [
+      "antimicrobial stewardship"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-ea63733c79"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Enfeksiyon Hastalıkları/10)Mikroorganizmalarda direnç sorunu ve antimikrobiyal yönetim .pdf",
+        "ders": "Enfeksiyon Hastalıkları",
+        "kurul": 1,
+        "sayfa": null,
+        "alinti": null
+      }
+    ]
+  },
+  "oksotrof mutant": {
+    "term": "Oksotrof mutant",
+    "category": "genetik",
+    "definition": "Bir metaboliti sentezleyemeyip ortamdan hazır alan mutant; folat yolu inhibitörlerinin bloke ettiği basamağı atlar.",
+    "description": "Bir metaboliti sentezleyemeyip ortamdan hazır alan mutant; folat yolu inhibitörlerinin bloke ettiği basamağı atlar.",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "",
+    "clinicalPearl": "Sülfonamid ve trimetoprim direncinde görülür.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-ea63733c79"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Enfeksiyon Hastalıkları/10)Mikroorganizmalarda direnç sorunu ve antimikrobiyal yönetim .pdf",
+        "ders": "Enfeksiyon Hastalıkları",
+        "kurul": 1,
+        "sayfa": 7,
+        "alinti": "Hedef enzimin agin sentezi a tr... . . İnhibe evreleri atlayan oksotrof mutantlar"
+      }
+    ]
+  },
+  "salvarsan": {
+    "term": "Salvarsan",
+    "category": "ilac",
+    "definition": "1910'da kumaş boyasından sentezlenen ve sifiliz tedavisinde kullanılan ilk antimikrobiyal ilaç.",
+    "description": "1910'da kumaş boyasından sentezlenen ve sifiliz tedavisinde kullanılan ilk antimikrobiyal ilaç.",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "",
+    "aliases": [
+      "arsfenamin"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-ea63733c79"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Enfeksiyon Hastalıkları/10)Mikroorganizmalarda direnç sorunu ve antimikrobiyal yönetim .pdf",
+        "ders": "Enfeksiyon Hastalıkları",
+        "kurul": 1,
+        "sayfa": 31,
+        "alinti": "The first antimicrobial drug, Salvarsan, is synthesised from clothes dye & used to treat syphilis"
+      }
+    ]
+  },
+  "teiksobaktin": {
+    "term": "Teiksobaktin",
+    "category": "ilac",
+    "definition": "2017'de geliştirilmiş formu üretilen, süper bakterilere karşı potansiyeli olan yeni sınıf antibiyotik.",
+    "description": "2017'de geliştirilmiş formu üretilen, süper bakterilere karşı potansiyeli olan yeni sınıf antibiyotik.",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "",
+    "aliases": [
+      "teixobactin"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-ea63733c79"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Enfeksiyon Hastalıkları/10)Mikroorganizmalarda direnç sorunu ve antimikrobiyal yönetim .pdf",
+        "ders": "Enfeksiyon Hastalıkları",
+        "kurul": 1,
+        "sayfa": 31,
+        "alinti": "Teixobactin: a new class of antibiotics with the potential to destroy superbugs"
+      }
+    ]
+  },
+  "stenotrophomonas maltophilia": {
+    "term": "Stenotrophomonas maltophilia",
+    "category": "patojen",
+    "definition": "Karbapenemlere doğal dirençli Gram negatif nonfermentatif basil.",
+    "description": "Karbapenemlere doğal dirençli Gram negatif nonfermentatif basil.",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "",
+    "aliases": [
+      "Stenotrophomonas"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-ea63733c79"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Enfeksiyon Hastalıkları/10)Mikroorganizmalarda direnç sorunu ve antimikrobiyal yönetim .pdf",
+        "ders": "Enfeksiyon Hastalıkları",
+        "kurul": 1,
+        "sayfa": 9,
+        "alinti": "Anaeroblar aminoglikozitlere Stenotrophomonas karbapenemlere doğal dirençli"
+      }
+    ]
+  },
+  "beta-laktamaz inhibitörü": {
+    "term": "Beta-laktamaz inhibitörü",
+    "category": "ilac",
+    "definition": "Klasik beta-laktamazları bağlayıp inaktive ederek eşlik eden beta-laktamı koruyan bileşik; klavulanik asit ve sulbaktam.",
+    "description": "Klasik beta-laktamazları bağlayıp inaktive ederek eşlik eden beta-laktamı koruyan bileşik; klavulanik asit ve sulbaktam.",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "",
+    "aliases": [
+      "klavulanik asit",
+      "sulbaktam"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-ea63733c79"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Enfeksiyon Hastalıkları/10)Mikroorganizmalarda direnç sorunu ve antimikrobiyal yönetim .pdf",
+        "ders": "Enfeksiyon Hastalıkları",
+        "kurul": 1,
+        "sayfa": 14,
+        "alinti": "2. ve 3. kuşak sefalosporinler Beta laktamaz inhibitörleri (klavulanik asid, sulbaktam)"
       }
     ]
   }
