@@ -81,10 +81,9 @@ const EDGE_HIZ = '+12%';
 const KELIME_DK = 112; // Emel %12 hızda ölçüldü
 const EDGE_PARCA = 2400;
 const GEMINI_PARCA = 3000;
-const STIL =
-  'Aşağıdaki Türkçe tıp dersi anlatımını, deneyimli bir kadın patoloji hocası gibi sıcak, net ve öğretici bir tonda, ' +
-  'normalden yüzde on kadar hızlı ve akıcı bir tempoda, tıbbi terimleri özenle ve doğru telaffuz ederek oku. ' +
-  'Metni değiştirme, hiçbir şey ekleme ya da atlama, bu yönergeyi okuma:\n\n';
+// Gemini TTS'e YALNIZ ders metni gider: Türkçe üslup yönergesi modele verildiğinde sesli okunuyordu (k1-28 ücretli
+// sürümünde her parçanın başında duyuldu). Yönerge eklemek gerekirse önce kısa bir parçada dökümle doğrulanmalı.
+const STIL = '';
 
 const SAGLAYICILAR: Record<Saglayici, { etiket: string; ucretli: boolean; sesler: string[]; varsayilanSes: string }> = {
   'edge-emel': { etiket: 'Microsoft Edge · Emel', ucretli: false, sesler: ['Emel'], varsayilanSes: 'Emel' },
@@ -610,6 +609,9 @@ async function isIsle(is: Is) {
             if (dokum !== null) {
               const oran = benzerlik(p.metin, dokum);
               dogrulama = Math.round(oran * 100);
+              // Fazladan söz (ör. yönerge okunması, tekrar): döküm kaynak metinden belirgin uzunsa parça bozuktur
+              const fazla = harfDizisi(dokum).length / Math.max(1, harfDizisi(p.metin).length);
+              if (fazla > 1.12) throw new Error(`dökümde fazladan konuşma var (%${Math.round(fazla * 100)} uzunluk)`);
               // Ücretsizde düşük benzerlik yeniden üretilir; ücretli parçada para yakmamak için ses tutulur, not düşülür
               if (oran < 0.85 && !parali) throw new Error(`döküm uyuşmuyor (%${dogrulama})`);
               if (oran < 0.85) isGuncelle(is.id, (x) => (x.notlar = [...(x.notlar || []).slice(-9), `parça ${i + 1}: döküm benzerliği %${dogrulama} (ücretli; yeniden üretilmedi)`]));
