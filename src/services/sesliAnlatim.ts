@@ -268,6 +268,8 @@ async function edgeSentezle(p: Parca): Promise<{ buf: Buffer; zaman: ParcaZaman 
 const edgeSure = (b: Buffer) => (b.length * 8) / 48000;
 
 // ---------- Gemini ----------
+/** Anahtar geçersiz/yetkisiz (401/403): işten deneme hakkı yemez; anahtar 24 saat devre dışı kalır. */
+class AnahtarHatasi extends Error {}
 class KotaHatasi extends Error {
   constructor(public bekleMs: number, msg: string) {
     super(msg);
@@ -320,6 +322,7 @@ async function geminiCagir(anahtar: string, sesAdi: string, metin: string): Prom
         throw new KotaHatasi(gunluk ? sonrakiPasifikGeceYarisi() - Date.now() : Math.max(retry, 20000), msg.slice(0, 200));
       }
       if (r.status >= 500) throw new KotaHatasi(30000, `Gemini ${r.status}: ${msg.slice(0, 160)}`);
+      if (r.status === 401 || r.status === 403) throw new AnahtarHatasi(`Gemini ${r.status}: ${msg.slice(0, 160)}`);
       throw new Error(`Gemini ${r.status}: ${msg.slice(0, 200)}`);
     }
     const data = j?.candidates?.[0]?.content?.parts?.find((p: any) => p?.inlineData?.data)?.inlineData?.data;
@@ -347,17 +350,37 @@ function sessizlikKirp(pcm: Buffer): Buffer {
   son = Math.min(s.length, son + 4800); // 200 ms pay
   return Buffer.from(pcm.buffer, pcm.byteOffset + bas * 2, (son - bas) * 2);
 }
-const katla = (t: string) =>
-  t.toLocaleLowerCase('tr-TR').normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/ı/g, 'i').replace(/[^a-z0-9\s]/g, ' ').split(/\s+/).filter(Boolean);
-/** Kaynak kelimelerin dökümde sırayla bulunma oranı (LCS / kaynak). */
+const BIRLER = ['', 'bir', 'iki', 'üç', 'dört', 'beş', 'altı', 'yedi', 'sekiz', 'dokuz'];
+const ONLAR = ['', 'on', 'yirmi', 'otuz', 'kırk', 'elli', 'altmış', 'yetmiş', 'seksen', 'doksan'];
+/** 0–999.999.999 arası sayıyı Türkçe yazıya çevirir (döküm karşılaştırması için). */
+function sayiYazi(n: number): string {
+  if (n === 0) return 'sıfır';
+  const uc = (x: number) => (x >= 100 ? (x >= 200 ? BIRLER[Math.floor(x / 100)] : '') + 'yüz' : '') + ONLAR[Math.floor((x % 100) / 10)] + BIRLER[x % 10];
+  const milyon = Math.floor(n / 1e6), bin = Math.floor((n % 1e6) / 1000), kalan = n % 1000;
+  return (milyon ? uc(milyon) + 'milyon' : '') + (bin ? (bin === 1 ? '' : uc(bin)) + 'bin' : '') + uc(kalan);
+}
+/** Karşılaştırma için katlanmış harf dizisi: yüzde/sayılar yazıya, aksan/boşluk/noktalama atılır.
+ *  Böylece "de ne a" ile "DNA", "yüzde otuz" ile "%30" eşleşir. */
+const harfDizisi = (t: string) =>
+  t
+    .replace(/%\s*(\d+)/g, ' yüzde $1 ')
+    .replace(/(\d+)[.,](\d+)/g, (_m, a, b) => ` ${a} virgül ${b} `)
+    .replace(/\d+/g, (m) => (m.length <= 9 ? ' ' + sayiYazi(Number(m)) + ' ' : ' ' + m + ' '))
+    .toLocaleLowerCase('tr-TR')
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/ı/g, 'i')
+    .replace(/[^a-z]/g, '');
+/** Kaynak harflerinin dökümde sırayla bulunma oranı (harf düzeyinde LCS / kaynak uzunluğu). */
 function benzerlik(kaynak: string, dokum: string): number {
-  const a = katla(kaynak);
-  const b = katla(dokum);
+  const a = harfDizisi(kaynak);
+  const b = harfDizisi(dokum);
   if (!a.length) return 1;
   let prev = new Uint16Array(b.length + 1);
   let cur = new Uint16Array(b.length + 1);
   for (let i = 1; i <= a.length; i++) {
-    for (let j = 1; j <= b.length; j++) cur[j] = a[i - 1] === b[j - 1] ? prev[j - 1] + 1 : Math.max(prev[j], cur[j - 1]);
+    const ca = a.charCodeAt(i - 1);
+    for (let j = 1; j <= b.length; j++) cur[j] = ca === b.charCodeAt(j - 1) ? prev[j - 1] + 1 : Math.max(prev[j], cur[j - 1]);
     [prev, cur] = [cur, prev];
   }
   return prev[b.length] / a.length;
@@ -507,7 +530,9 @@ async function isIsle(is: Is) {
     let ucretliYedek = false;
     let dogrulama: number | undefined; // Gemini: döküm benzerliği %, -1 = doğrulanamadı
     let zaman: ParcaZaman | undefined; // parça içi paragraf zamanları (birleştirmede globale çevrilir)
-    for (let deneme = 1; deneme <= 4 && !buf; deneme++) {
+    // Ücretli işte her deneme para yakar: en fazla 2 deneme (yalnız bağlantı/biçim hatasında), ücretsizde 4
+    const maxDeneme = is.saglayici === 'gemini-ucretli' ? 2 : 4;
+    for (let deneme = 1; deneme <= maxDeneme && !buf; deneme++) {
       try {
         if (is.saglayici === 'edge-emel') {
           const { buf: b, zaman: z } = await edgeSentezle(p);
@@ -569,12 +594,17 @@ async function isIsle(is: Is) {
               yaz(P.butce, b);
               isGuncelle(is.id, (x) => (x.maliyetTL = +((x.maliyetTL || 0) + tl).toFixed(4)));
             }
-            if (sure < beklenen * 0.5 || sure > beklenen * 2) throw new Error(`süre tutarsız (${sure.toFixed(0)} sn, beklenen ~${beklenen.toFixed(0)})`);
+            const parali = ucretli || parcaUcretli;
+            // Ücretli parçada yalnız açıkça bozuk çıktı (çok kısa/uzun) yeniden denenir; ücretsizde dar aralık
+            if (parali ? sure < beklenen * 0.35 || sure > beklenen * 3 : sure < beklenen * 0.5 || sure > beklenen * 2)
+              throw new Error(`süre tutarsız (${sure.toFixed(0)} sn, beklenen ~${beklenen.toFixed(0)})`);
             const dokum = await dokumAl(pcm);
             if (dokum !== null) {
               const oran = benzerlik(p.metin, dokum);
-              if (oran < 0.85) throw new Error(`döküm uyuşmuyor (%${Math.round(oran * 100)})`);
               dogrulama = Math.round(oran * 100);
+              // Ücretsizde düşük benzerlik yeniden üretilir; ücretli parçada para yakmamak için ses tutulur, not düşülür
+              if (oran < 0.85 && !parali) throw new Error(`döküm uyuşmuyor (%${dogrulama})`);
+              if (oran < 0.85) isGuncelle(is.id, (x) => (x.notlar = [...(x.notlar || []).slice(-9), `parça ${i + 1}: döküm benzerliği %${dogrulama} (ücretli; yeniden üretilmedi)`]));
             } else dogrulama = -1;
             const once = p.bolumBasi && i > 0 ? 0.6 : 0;
             buf = pcmMp3(pcm, 0.6, once);
@@ -582,6 +612,13 @@ async function isIsle(is: Is) {
             zaman = geminiParcaZamani(p.metin.split('\n'), once, sure, 0.6, mp3Sure(buf, 64));
             sure += 0.6 + once;
           } catch (e) {
+            if (e instanceof AnahtarHatasi && !ucretli && !parcaUcretli) {
+              anahtarBekleme.set(anahtarAdi, Date.now() + 24 * 3600000);
+              deneme--;
+              if (ucretsizAnahtarlar().every((k) => (anahtarBekleme.get(k.ad) || 0) > Date.now()))
+                throw new KotaHatasi(30 * 60000, 'Ücretsiz anahtarların hepsi kota bekliyor ya da geçersiz');
+              continue;
+            }
             if (e instanceof KotaHatasi && !ucretli && !parcaUcretli) {
               anahtarBekleme.set(anahtarAdi, Date.now() + e.bekleMs);
               deneme--; // başka anahtarla aynı denemeyi sürdür
@@ -593,7 +630,8 @@ async function isIsle(is: Is) {
         }
       } catch (e: any) {
         if (e instanceof KotaHatasi) throw e;
-        if (deneme >= 4) throw new Error(`Parça ${i + 1}/${parcalar.length}: ${e?.message || e}`);
+        if (e instanceof AnahtarHatasi && is.saglayici === 'gemini-ucretli') throw new Error(`Ücretli anahtar reddedildi: ${e.message}`);
+        if (deneme >= maxDeneme) throw new Error(`Parça ${i + 1}/${parcalar.length}: ${e?.message || e}`);
         isGuncelle(is.id, (x) => (x.notlar = [...(x.notlar || []).slice(-9), `parça ${i + 1} deneme ${deneme}: ${e?.message || e}`]));
         await uyu(4000 * deneme);
       }
