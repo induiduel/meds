@@ -13,6 +13,7 @@ import {
 } from './canliDersStore';
 import CanliDersDers from './CanliDersDers';
 import '../../styles/canli-ders.css';
+import { useCdTur } from './useCdTur';
 
 const fold = (s: string) =>
   s.toLocaleLowerCase('tr').normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/ı/g, 'i').replace(/\s+/g, ' ').trim();
@@ -25,6 +26,7 @@ const dersAc = (key: string) => navigateTo(pathFor('canli_ders', key));
 
 function CanliDersListe() {
   const [dersler, setDersler] = useState<CdListeDers[] | null>(null);
+  const tanitim = useCdTur('liste', !!dersler?.length, () => !!document.querySelector('.cd-satir'));
   const [hata, setHata] = useState<string | null>(null);
   const [q, setQ] = useState('');
 
@@ -53,6 +55,7 @@ function CanliDersListe() {
             <h1>Canlı ders</h1>
             <p>Dersleri dinle; metin ve slaytlar sesle birlikte akar. İstediğin dersi MP3 olarak indir.</p>
           </div>
+          {tanitim.dugme}
         </div>
         <label className="cd-ara">
           <Search aria-hidden />
@@ -88,6 +91,7 @@ function CanliDersListe() {
           </ul>
         </>
       )}
+      {tanitim.tur}
     </div>
   );
 }

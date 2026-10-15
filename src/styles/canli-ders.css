@@ -226,3 +226,14 @@
 @media (min-width: 768px) { :root.cd-dock-acik .sh-main { padding-bottom: calc(24px + var(--cd-dock-h, 0px)); } }
 /* Ders ekranı yüksekliğini kendisi ayarlar (bölmeler kendi kayar): sayfa altta boş kaydırma bırakmasın */
 :root.cd-ders-acik .sh-main { padding-bottom: 0; }
+
+/* Tanıtım turu düğmesi (CanliDersTur) */
+.cd-tur-btn { display: inline-flex; align-items: center; gap: 5px; height: 32px; padding: 0 10px; margin-left: auto; flex: none; border: 1px solid var(--color-line); border-radius: 9px; background: var(--color-white); color: var(--color-ink-2); font: inherit; font-size: 12.5px; font-weight: 600; cursor: pointer; }
+.cd-tur-btn > svg { width: 16px; height: 16px; }
+.cd-tur-btn:hover { background: var(--color-field); color: var(--color-ink); }
+.cd-tur-btn:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+.cd-ders-bas .cd-tur-btn { margin-left: 0; }
+@media (max-width: 640px) {
+  .cd-tur-btn { width: 32px; padding: 0; justify-content: center; }
+  .cd-tur-btn > span { display: none; }
+}

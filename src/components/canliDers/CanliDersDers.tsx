@@ -10,6 +10,7 @@ import { driveViewUrl, useDeckPdf } from '../../services/deckPdfService';
 import {
   cdCumleAraligi, cdDetayBagla, cdDetayGetir, cdDurum, cdOynat, cdParagrafa, useCd, type CdDetay,
 } from './canliDersStore';
+import { useCdTur } from './useCdTur';
 import '../learn/pdf/pdfDoc.css';
 
 /** Öğenin görünür ölçeği (v12 yazı boyutu CSS zoom'u); utils/uiZoom.elementZoom ile aynı mantık. */
@@ -58,6 +59,7 @@ export default function CanliDersDers({ dersKey }: { dersKey: string }) {
   const [yuk, setYuk] = useState<number | null>(null);
   const caliyorKey = useCd((s) => s.key);
   const caliyorBaslik = useCd((s) => s.baslik);
+  const tanitim = useCdTur('ders', !!detay, () => !!document.querySelector('.cd-dock') && !!document.querySelector('.cd-metin p'));
 
   useEffect(() => {
     let canli = true;
@@ -158,6 +160,7 @@ export default function CanliDersDers({ dersKey }: { dersKey: string }) {
             </button>
           </div>
         )}
+        {tanitim.dugme}
       </header>
       {baglanti === 'baska' && !buDers && (
         <div className="cd-uyari">
@@ -171,6 +174,7 @@ export default function CanliDersDers({ dersKey }: { dersKey: string }) {
         {pdfGoster && <CdPdfBolme detay={detay} canli={buDers} />}
         {metinGoster && <CdMetinBolme detay={detay} canli={buDers} />}
       </div>
+      {tanitim.tur}
     </div>
   );
 }
