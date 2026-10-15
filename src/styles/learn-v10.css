@@ -257,10 +257,10 @@
 .ls-sx-resolved[open] summary { margin-bottom: 6px; }
 
 /* Metin içi işaretler (CSS Highlight API) + kırmızı "!" düğmesi */
-::highlight(ls-sx-report) { text-decoration: underline wavy var(--color-bad); text-decoration-thickness: 1.5px; text-underline-offset: 3px; background-color: color-mix(in srgb, var(--color-bad) 10%, transparent); }
-::highlight(ls-sx-spot) { background-color: color-mix(in srgb, var(--color-warn) 22%, transparent); }
-::highlight(ls-sx-onemli) { background-color: color-mix(in srgb, var(--color-bad) 16%, transparent); }
-::highlight(ls-sx-vurgu) { background-color: color-mix(in srgb, var(--color-accent) 16%, transparent); }
+.ls-content::highlight(ls-sx-report), .ls-content ::highlight(ls-sx-report) { text-decoration: underline wavy var(--color-bad); text-decoration-thickness: 1.5px; text-underline-offset: 3px; background-color: color-mix(in srgb, var(--color-bad) 10%, transparent); }
+.ls-content::highlight(ls-sx-spot), .ls-content ::highlight(ls-sx-spot) { background-color: color-mix(in srgb, var(--color-warn) 22%, transparent); }
+.ls-content::highlight(ls-sx-onemli), .ls-content ::highlight(ls-sx-onemli) { background-color: color-mix(in srgb, var(--color-bad) 16%, transparent); }
+.ls-content::highlight(ls-sx-vurgu), .ls-content ::highlight(ls-sx-vurgu) { background-color: color-mix(in srgb, var(--color-accent) 16%, transparent); }
 .ls-sx-flag { display: inline-grid; place-items: center; width: 1.25em; height: 1.25em; margin: 0 0 0 .15em; padding: 0; border: 0; border-radius: 99px; background: transparent; color: var(--color-bad); vertical-align: -.2em; cursor: pointer; line-height: 1; position: relative; }
 .ls-sx-flag::after { content: ''; position: absolute; inset: -9px; } /* dokunma alanı ≥ 36 px */
 .ls-sx-flag svg { width: 1.05em; height: 1.05em; fill: var(--color-bad); stroke: var(--color-white); stroke-width: 2.4; stroke-linecap: round; }

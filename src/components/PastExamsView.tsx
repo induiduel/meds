@@ -1054,6 +1054,22 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [questions, doubtInfo]);
 
+  // Arama alanlarını tarayıcı boştayken parça parça hazırla: yoksa ilk tuşta binlerce soru birden katlanıyor
+  // (telefonda ~0,4 sn donma). Hazırlanan alanlar soru nesnesinde önbellekte kalır.
+  useEffect(() => {
+    const ric = (window as any).requestIdleCallback as undefined | ((cb: (d: IdleDeadline) => void, o?: { timeout: number }) => number);
+    const cic = (window as any).cancelIdleCallback as undefined | ((h: number) => void);
+    let i = 0;
+    let h = 0;
+    const step = (d?: IdleDeadline) => {
+      const until = performance.now() + 8;
+      while (i < prepared.length && (d ? d.timeRemaining() > 1 : performance.now() < until)) void prepared[i++].fields;
+      if (i < prepared.length) h = ric ? ric(step, { timeout: 2000 }) : window.setTimeout(step, 30);
+    };
+    h = ric ? ric(step, { timeout: 2000 }) : window.setTimeout(step, 300);
+    return () => (ric && cic ? cic(h) : window.clearTimeout(h));
+  }, [prepared]);
+
   const deferredQuery = useDeferredValue(searchQuery);
   const parsedQuery = useMemo(() => parseQuery(deferredQuery), [deferredQuery]);
   const hasQuery = parsedQuery.terms.length > 0 || parsedQuery.excluded.length > 0 || parsedQuery.number !== null;
@@ -1245,7 +1261,14 @@ export const PastExamsView: React.FC<PastExamsViewProps> = ({
       .filter(([, n]) => n > 0)
       .slice(0, 3);
     const tc = new Map<string, number>();
-    for (const p of prepared) if (p.topic && foldText(p.topic).includes(last)) tc.set(p.topic, (tc.get(p.topic) || 0) + 1);
+    // Konu sayısı azdır: her tuşta binlerce kez yeniden katlamak yerine konu başına bir kez
+    const folded = new Map<string, boolean>();
+    for (const p of prepared) {
+      if (!p.topic) continue;
+      let hit = folded.get(p.topic);
+      if (hit === undefined) folded.set(p.topic, (hit = foldText(p.topic).includes(last)));
+      if (hit) tc.set(p.topic, (tc.get(p.topic) || 0) + 1);
+    }
     const topics = Array.from(tc.entries()).sort((a, b) => b[1] - a[1]).slice(0, 5);
     return { disciplines, topics };
   }, [parsedQuery, prepared]);

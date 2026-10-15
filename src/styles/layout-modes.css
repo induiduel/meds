@@ -50,4 +50,5 @@ html.theme-dark .ss-bar button.is-accent { color: var(--color-accent); }
   .ss-bar { max-width: calc(100vw - 16px); overflow-x: auto; scrollbar-width: none; }
   .ss-bar button { padding: 0 9px; gap: 5px; flex-shrink: 0; }
 }
-::highlight(ss-vurgu) { background-color: color-mix(in srgb, var(--color-accent) 30%, transparent); color: inherit; }
+/* Kapsamsız ::highlight her öğeye vurgu stili hesaplatır: yalnız vurgu sürerken (html.ss-vurgu-on) etkin */
+html.ss-vurgu-on .sh-main ::highlight(ss-vurgu) { background-color: color-mix(in srgb, var(--color-accent) 30%, transparent); color: inherit; }

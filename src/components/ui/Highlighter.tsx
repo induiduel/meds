@@ -412,7 +412,7 @@ export const Highlightable: React.FC<{ scope: string; className?: string; style?
       onPointerUp={onPointerUp}
       onPointerCancel={() => (touchStart.current = null)}
       onContextMenu={(e) => { if (t.active) e.preventDefault(); }}
-      className={`${className} ${t.active ? (t.eraser ? 'ms-pen-eraser' : `ms-pen ms-pen-${t.color}`) : ''}`}
+      className={`ms-hl-host ${className} ${t.active ? (t.eraser ? 'ms-pen-eraser' : `ms-pen ms-pen-${t.color}`) : ''}`}
       style={style}
     >
       {children}

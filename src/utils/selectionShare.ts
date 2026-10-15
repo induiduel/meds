@@ -142,7 +142,12 @@ function findAndHighlight(needle: string): boolean {
   const reg = (CSS as unknown as { highlights?: Map<string, unknown> }).highlights;
   if (H && reg) {
     reg.set('ss-vurgu', new H(range));
-    window.setTimeout(() => reg.delete('ss-vurgu'), 3500);
+    // Vurgu kuralı yalnız bu sınıf varken etkin (kapsamsız ::highlight tüm sayfanın stilini pahalılaştırır)
+    document.documentElement.classList.add('ss-vurgu-on');
+    window.setTimeout(() => {
+      reg.delete('ss-vurgu');
+      document.documentElement.classList.remove('ss-vurgu-on');
+    }, 3500);
   } else {
     // Yedek: seçim olarak göster (tek düğüm dışına taşan aralıklarda da çalışır)
     const sel = window.getSelection();

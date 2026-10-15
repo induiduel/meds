@@ -1361,12 +1361,12 @@ html.ui-v7 .cx-dock .cx-search { height: 40px; min-height: 40px; border-radius: 
  *  Önceki: dolgulu sarmalayıcı içinde çerçeveli şık kutusu + gri "Ayrıntılar" kutusu + sağda gri zeminde çerçeveli
  *  kutular (iç içe 3 kutu). Şimdi Çıkmış kartıyla aynı dil: tek kart, kenardan kenara ince çizgili satırlar, 14px hiza. */
 .qc { --qk-x: 14px; border: 1px solid var(--color-line); border-radius: 12px; overflow: clip; box-shadow: none; }
-.qc > .grid > div:has(> .qk-h.is-pool) { padding: 0 !important; gap: 0 !important; }
-.qc > .grid > div:has(> .qk-h.is-pool) > * { margin-left: var(--qk-x); margin-right: var(--qk-x); }
+.qc > .grid > div.qc-main.qc-main { padding: 0 !important; gap: 0 !important; }
+.qc > .grid > div.qc-main.qc-main > * { margin-left: var(--qk-x); margin-right: var(--qk-x); }
 .qc .qk-h.is-pool { min-height: 44px; padding: 4px 6px 2px 0; margin-right: 0 !important; }
 .qc .qk-stem.is-pool { padding: 2px 0 10px; font-size: 15.5px; line-height: 1.6; }
 /* Şıklar: çerçeveli iç kutu yok — kartın kenarına kadar uzanan satırlar */
-.qc > .grid > div:has(> .qk-h.is-pool) > div:has(> .qk-opts.is-pool) { margin-left: 0; margin-right: 0; gap: 0; }
+.qc > .grid > div.qc-main.qc-main > div.qc-opts.qc-opts { margin-left: 0; margin-right: 0; gap: 0; }
 .qk-opts.is-pool { border: 0; border-radius: 0; border-top: 1px solid var(--color-line-soft); border-bottom: 1px solid var(--color-line-soft); overflow: visible; }
 .qk-opts.is-pool .qk-opt { padding: 8px var(--qk-x); min-height: 40px; }
 .qk-opts.is-pool .qk-opt-li > .qk-vote { margin-right: 10px; }
@@ -1375,8 +1375,8 @@ html.ui-v7 .cx-dock .cx-search { height: 40px; min-height: 40px; border-radius: 
 .qc .qk-disc-h.is-pool-disc { margin: 0 !important; width: 100%; height: 40px; padding: 0 var(--qk-x); border-radius: 0; background: transparent; border-top: 1px solid var(--color-line-soft); color: var(--color-ink-2); font-size: 13px; }
 .qc .qk-disc-h.is-pool-disc:hover { background: var(--color-field); }
 .qc .qk-pool-expl { padding: 12px 0 14px; }
-.qc > .grid > div:has(> .qk-h.is-pool) > p.bg-canvas { background: transparent; padding: 4px 0 12px; border-radius: 0; color: var(--color-ink-3); }
-.qc > .grid > div:has(> .qk-h.is-pool) > .ms-pop-in { margin-top: 10px; margin-bottom: 10px; }
+.qc > .grid > div.qc-main.qc-main > p.bg-canvas { background: transparent; padding: 4px 0 12px; border-radius: 0; color: var(--color-ink-3); }
+.qc > .grid > div.qc-main.qc-main > .ms-pop-in { margin-top: 10px; margin-bottom: 10px; }
 /* Masaüstü yan paneli: gri zemin + çerçeveli kutular yerine tek beyaz sütun, bölümler ince çizgiyle ayrılır */
 .qc .rb-qside { background: var(--color-white) !important; padding: 0 !important; gap: 0 !important; }
 .qc .rb-qside > section { border: 0 !important; border-radius: 0 !important; background: transparent !important; padding: 12px var(--qk-x) !important; box-shadow: none !important; }

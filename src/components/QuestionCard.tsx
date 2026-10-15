@@ -390,7 +390,7 @@ const QuestionCardComponent: React.FC<QuestionCardProps> = ({
     >
       <div className={`grid grid-cols-1 ${isExpanded ? 'lg:grid-cols-[minmax(0,1.75fr)_minmax(0,1fr)]' : ''}`}>
         {/* ---------------- Main column ---------------- */}
-        <div className="p-4 sm:p-6 flex flex-col gap-4 sm:gap-5 min-w-0">
+        <div className="qc-main p-4 sm:p-6 flex flex-col gap-4 sm:gap-5 min-w-0">
           {(() => {
             const reps = question.reports || [];
             const solved = reps.filter((r) => r.status === 'resolved' || r.status === 'verified_correct').length;
@@ -473,7 +473,7 @@ const QuestionCardComponent: React.FC<QuestionCardProps> = ({
           {isExpanded && (
             <>
               {rows.length > 0 ? (
-                <div className="flex flex-col gap-2.5">
+                <div className="qc-opts flex flex-col gap-2.5">
                   <ol className="qk-opts is-pool">
                     {rows.map((o) => (
                       <li key={o.key} id={`opt-${question.id}-${o.key}`} className="qk-opt-li">

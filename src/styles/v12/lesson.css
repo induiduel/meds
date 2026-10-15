@@ -476,10 +476,10 @@
   & .ls-sx-hidden { border-radius: 7px; }
   & .ls-sx-status { border-radius: 6px; font-weight: 500; }
   /* Metne bağlı ortak notlar: zemin yerine türün renginde 2 px alt çizgi (canvas an), çok hafif ton zemini yedek */
-  & ::highlight(ls-sx-spot) { background-color: color-mix(in srgb, var(--color-warn) 8%, transparent); text-decoration-line: underline; text-decoration-color: var(--color-warn); text-decoration-thickness: 2px; }
-  & ::highlight(ls-sx-onemli) { background-color: color-mix(in srgb, var(--color-bad) 7%, transparent); text-decoration-line: underline; text-decoration-color: var(--color-bad); text-decoration-thickness: 2px; }
-  & ::highlight(ls-sx-vurgu) { background-color: color-mix(in srgb, var(--color-accent) 7%, transparent); text-decoration-line: underline; text-decoration-color: var(--color-accent); text-decoration-thickness: 2px; }
-  & ::highlight(ls-sx-report) { background-color: transparent; text-decoration-line: underline; text-decoration-style: dashed; text-decoration-color: var(--color-bad); text-decoration-thickness: 1px; }
+  & .ls-content::highlight(ls-sx-spot), & .ls-content ::highlight(ls-sx-spot) { background-color: color-mix(in srgb, var(--color-warn) 8%, transparent); text-decoration-line: underline; text-decoration-color: var(--color-warn); text-decoration-thickness: 2px; }
+  & .ls-content::highlight(ls-sx-onemli), & .ls-content ::highlight(ls-sx-onemli) { background-color: color-mix(in srgb, var(--color-bad) 7%, transparent); text-decoration-line: underline; text-decoration-color: var(--color-bad); text-decoration-thickness: 2px; }
+  & .ls-content::highlight(ls-sx-vurgu), & .ls-content ::highlight(ls-sx-vurgu) { background-color: color-mix(in srgb, var(--color-accent) 7%, transparent); text-decoration-line: underline; text-decoration-color: var(--color-accent); text-decoration-thickness: 2px; }
+  & .ls-content::highlight(ls-sx-report), & .ls-content ::highlight(ls-sx-report) { background-color: transparent; text-decoration-line: underline; text-decoration-style: dashed; text-decoration-color: var(--color-bad); text-decoration-thickness: 1px; }
 
   /* =========================================================================
    * Alt bilgi çekmecesi (canvas lp-drawer): sütun genişliğinde, 44 px çubuğa katlanır; gezinme çubuğunun hemen üstünde
