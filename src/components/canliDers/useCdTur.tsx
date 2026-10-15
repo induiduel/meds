@@ -10,9 +10,12 @@ export function useCdTur(tur: CdTurTuru, hazir: boolean, bekle?: () => boolean) 
   const [acik, setAcik] = useState(false);
   useEffect(() => {
     if (!hazir || cdTurGoruldu(tur)) return;
-    // Sayfa (ve ders ekranında tembel yüklenen oynatıcı) yerleşsin; en çok ~2,5 sn bekle
+    // Sayfa (ve ders ekranında tembel yüklenen oynatıcı) yerleşsin; en çok ~2,5 sn bekle.
+    // Başka bir modal açıksa (ör. sitenin ilk ziyaret karşılaması .e12-ob) o kapanana kadar başlama: üst üste binmesin.
     let n = 0;
     const id = window.setInterval(() => {
+      const baskaPencere = document.querySelector('[aria-modal="true"]:not(.cd-tur)');
+      if (baskaPencere) return;
       n += 1;
       if (n >= 10 || !bekle || bekle()) {
         window.clearInterval(id);
