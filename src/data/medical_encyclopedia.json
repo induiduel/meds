@@ -85840,5 +85840,731 @@
       "accuracyScore": 100,
       "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
     }
+  },
+  {
+    "id": "s13-vertikal_orgutlenme",
+    "term": "Vertikal örgütlenme",
+    "aliases": [
+      "Dikey örgütlenme"
+    ],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Halk Sağlığı",
+    "instructorAndSource": "Ders notu: 6)Türkiyede Sağlık Hizmetlerinin Sunumu s.3",
+    "definition": "Her hastalık için yalnız o hastalıkla ilgilenen ayrı bir teşkilat kurulmasına dayanan sağlık örgütlenme modeli.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Refik Saydam döneminde sıtma, trahom, frengi ve lepra için uygulandı; çalışanlara yüksek ücret ödendi.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-15",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-entegre_saglik_hizmeti",
+    "term": "Entegre sağlık hizmeti",
+    "aliases": [
+      "Yatay örgütlenme",
+      "Bütünleşik hizmet"
+    ],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Halk Sağlığı",
+    "instructorAndSource": "Ders notu: 6)Türkiyede Sağlık Hizmetlerinin Sunumu s.5",
+    "definition": "Belirli bir bölgede koruyucu, tedavi edici, adli ve çevre sağlığı hizmetlerinin tek kurum tarafından birlikte verilmesi.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Sosyalleştirilmiş hizmetin ikinci özelliğidir; vertikal örgütlenmenin karşıtıdır.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-15",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-basamakli_saglik_hizmeti",
+    "term": "Basamaklı sağlık hizmeti",
+    "aliases": [
+      "Kademeli hizmet",
+      "Sevk zinciri"
+    ],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Halk Sağlığı",
+    "instructorAndSource": "Ders notu: 6)Türkiyede Sağlık Hizmetlerinin Sunumu s.5",
+    "definition": "Hastanın önce birinci basamağa başvurduğu, gerektiğinde üst basamağa sevk edildiği ve üst basamağın geri bildirimde bulunduğu hizmet düzeni.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Sevk aşağıdan yukarı, geri bildirim yukarıdan aşağıdır.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-15",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-hukumet_tabipligi",
+    "term": "Hükümet tabipliği",
+    "aliases": [
+      "Hükümet tabibi"
+    ],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Halk Sağlığı",
+    "instructorAndSource": "Ders notu: 6)Türkiyede Sağlık Hizmetlerinin Sunumu s.3",
+    "definition": "Refik Saydam döneminde Osmanlı'daki memleket tabipliğinin yerini tutmak üzere ilçelerde kurulan, devleti temsil eden hekimlik kurumu.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "İlçe düzeyindedir; koruyucu ve adli hekimlik görevleri yürütür.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-15",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-memleket_tabipligi",
+    "term": "Memleket tabipliği",
+    "aliases": [
+      "Memleket tabibi"
+    ],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Halk Sağlığı",
+    "instructorAndSource": "Ders notu: 6)Türkiyede Sağlık Hizmetlerinin Sunumu s.3",
+    "definition": "Osmanlı döneminde il ve kazalarda görev yapan devlet hekimliği kurumu.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Cumhuriyette yerini Hükümet Tabipliği almıştır.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-15",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-saglik_memuru",
+    "term": "Sağlık memuru",
+    "aliases": [],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Halk Sağlığı",
+    "instructorAndSource": "Ders notu: 6)Türkiyede Sağlık Hizmetlerinin Sunumu s.2",
+    "definition": "Kırsalda koruyucu sağlık hizmetlerini yürütmek üzere yetiştirilen yardımcı sağlık personeli.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Kırsalda kadın personel çalıştırmanın zor olması nedeniyle yetiştirildi.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-15",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-mecburi_hizmet",
+    "term": "Mecburi hizmet",
+    "aliases": [
+      "Zorunlu hizmet"
+    ],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Halk Sağlığı",
+    "instructorAndSource": "Ders notu: 6)Türkiyede Sağlık Hizmetlerinin Sunumu s.2",
+    "definition": "Devletin yetiştirdiği hekimin mezuniyet sonrası belirli bir süre devletin gösterdiği yerde çalışma yükümlülüğü.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Erken Cumhuriyette parasız yatılı sistemle birlikte hekimin kırsala dağılımını sağladı.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-15",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-sosyal_guvenlik_kurumu_sgk",
+    "term": "Sosyal Güvenlik Kurumu (SGK)",
+    "aliases": [
+      "SGK"
+    ],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Halk Sağlığı",
+    "instructorAndSource": "Ders notu: 6)Türkiyede Sağlık Hizmetlerinin Sunumu s.8",
+    "definition": "Emekli Sandığı, Bağ-Kur ve SSK'nın birleşmesiyle oluşan, sağlık hizmetlerini finanse eden ve geri ödemeyi denetleyen kurum.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Sağlıkta Dönüşüm Programı'nın birinci bileşenidir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-15",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-aile_hekimligi",
+    "term": "Aile hekimliği",
+    "aliases": [
+      "Aile hekimi"
+    ],
+    "category": "tedavi",
+    "kurul": "Kurul 1",
+    "discipline": "Halk Sağlığı",
+    "instructorAndSource": "Ders notu: 6)Türkiyede Sağlık Hizmetlerinin Sunumu s.8",
+    "definition": "Her bireyin kayıtlı olduğu bir aile hekimi tarafından sürekli ve kişiye yönelik birinci basamak sağlık hizmeti sunulan model.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Sağlıkta Dönüşüm Programı'nın üçüncü bileşenidir; hekim başına 3000-3500 kişi, hedef 2000.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-15",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-aile_sagligi_merkezi_asm",
+    "term": "Aile Sağlığı Merkezi (ASM)",
+    "aliases": [
+      "ASM"
+    ],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Halk Sağlığı",
+    "instructorAndSource": "Ders notu: 6)Türkiyede Sağlık Hizmetlerinin Sunumu s.29",
+    "definition": "Aile hekimlerinin ve aile sağlığı elemanlarının birinci basamak hizmeti verdiği sağlık kuruluşu.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "2010'dan beri Türkiye'nin birinci basamak kuruluşudur; en ileri donanımlı tip A tipidir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-15",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-aile_sagligi_elemani",
+    "term": "Aile sağlığı elemanı",
+    "aliases": [],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Halk Sağlığı",
+    "instructorAndSource": "Ders notu: 6)Türkiyede Sağlık Hizmetlerinin Sunumu s.29",
+    "definition": "Aile Sağlığı Merkezinde her aile hekiminin yardımcısı olarak çalışan, genellikle hemşire olan sağlık personeli.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-15",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-toplum_sagligi_merkezi_tsm",
+    "term": "Toplum Sağlığı Merkezi (TSM)",
+    "aliases": [
+      "TSM"
+    ],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Halk Sağlığı",
+    "instructorAndSource": "Ders notu: 6)Türkiyede Sağlık Hizmetlerinin Sunumu s.28",
+    "definition": "Topluma yönelik koruyucu sağlık hizmetlerini yürüten birinci basamak sağlık kuruluşu.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "2016'da 970 TSM vardır; yeni mezun hekimin çalışma yerlerindendir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-15",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-saglik_evi",
+    "term": "Sağlık evi",
+    "aliases": [],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Halk Sağlığı",
+    "instructorAndSource": "Ders notu: 6)Türkiyede Sağlık Hizmetlerinin Sunumu s.28",
+    "definition": "Köylerde hizmet veren en küçük birinci basamak sağlık birimi.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "2016'da 5.419 sağlık evi vardır.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-15",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-acsap_merkezi",
+    "term": "AÇSAP Merkezi",
+    "aliases": [
+      "Ana Çocuk Sağlığı ve Aile Planlaması Merkezi"
+    ],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Halk Sağlığı",
+    "instructorAndSource": "Ders notu: 6)Türkiyede Sağlık Hizmetlerinin Sunumu s.31",
+    "definition": "Ana Çocuk Sağlığı ve Aile Planlaması hizmetlerini veren birinci basamak birimi.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Türkiye'de 181 AÇSAP merkezi vardır.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-15",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-ketem",
+    "term": "KETEM",
+    "aliases": [
+      "Kanser Erken Teşhis, Tarama ve Eğitim Merkezi"
+    ],
+    "category": "tani",
+    "kurul": "Kurul 1",
+    "discipline": "Halk Sağlığı",
+    "instructorAndSource": "Ders notu: 6)Türkiyede Sağlık Hizmetlerinin Sunumu s.31",
+    "definition": "Kanser Erken Teşhis, Tarama ve Eğitim Merkezi; kanser taraması ve eğitimi yapan birinci basamak birimi.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Türkiye'de 159 KETEM vardır.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-15",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-verem_savas_dispanseri",
+    "term": "Verem savaş dispanseri",
+    "aliases": [
+      "VSD"
+    ],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Halk Sağlığı",
+    "instructorAndSource": "Ders notu: 6)Türkiyede Sağlık Hizmetlerinin Sunumu s.31",
+    "definition": "Tüberkülozun tanı, tedavi ve kontrolüne yönelik hizmet veren birinci basamak birimi.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Türkiye'de 180 verem savaş dispanseri vardır.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-15",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-112_acil_yardim_istasyonu",
+    "term": "112 Acil Yardım İstasyonu",
+    "aliases": [
+      "112 Acil"
+    ],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Halk Sağlığı",
+    "instructorAndSource": "Ders notu: 6)Türkiyede Sağlık Hizmetlerinin Sunumu s.31",
+    "definition": "Hastane öncesi acil sağlık hizmetlerini yürüten istasyon.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Türkiye'de 2.400 adet 112 istasyonu vardır.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-15",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-ikinci_basamak_saglik_kurulusu",
+    "term": "İkinci basamak sağlık kuruluşu",
+    "aliases": [],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Halk Sağlığı",
+    "instructorAndSource": "Ders notu: 6)Türkiyede Sağlık Hizmetlerinin Sunumu s.32",
+    "definition": "Uzman hekim çalışan özel veya devlete ait sağlık kuruluşu.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Sahiplik değil uzman hekim varlığı belirleyicidir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-15",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-ucuncu_basamak_saglik_kurulusu",
+    "term": "Üçüncü basamak sağlık kuruluşu",
+    "aliases": [],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Halk Sağlığı",
+    "instructorAndSource": "Ders notu: 6)Türkiyede Sağlık Hizmetlerinin Sunumu s.32",
+    "definition": "Asistan yetiştirilen üniversite hastanesi veya Sağlık Bakanlığı eğitim hastanesi.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Tanımlayıcı ölçüt uzmanlık eğitimi (asistan) verilmesidir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-15",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-tip_merkezi",
+    "term": "Tıp merkezi",
+    "aliases": [],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Halk Sağlığı",
+    "instructorAndSource": "Ders notu: 6)Türkiyede Sağlık Hizmetlerinin Sunumu s.34",
+    "definition": "Asgari dört temel uzmanlık dalında uzman, en az iki kadrolu uzman, diş ünitesi, laboratuvar ve radyoloji bulunduran, 24 saat ayakta teşhis ve tedavi hizmeti veren özel sağlık kuruluşu.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Dört dal: iç hastalıkları, kadın doğum, çocuk sağlığı, genel cerrahi.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-15",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-ozel_dal_merkezi",
+    "term": "Özel dal merkezi",
+    "aliases": [],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Halk Sağlığı",
+    "instructorAndSource": "Ders notu: 6)Türkiyede Sağlık Hizmetlerinin Sunumu s.36",
+    "definition": "İlgili uzmanlık dalında en az iki uzman hekim çalıştıran ve 24 saat ayakta teşhis ve tedavi hizmeti sunan özel sağlık kuruluşu.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-15",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-poliklinik",
+    "term": "Poliklinik",
+    "aliases": [],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Halk Sağlığı",
+    "instructorAndSource": "Ders notu: 6)Türkiyede Sağlık Hizmetlerinin Sunumu s.37",
+    "definition": "En az iki hekimlik hizmetinin bir araya gelmesiyle kurulan, 24 saat hizmet zorunluluğu olmayan özel sağlık kuruluşu.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Çalışma saatlerini başvuru sırasında müdürlüğe bildirir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-15",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-muayenehane",
+    "term": "Muayenehane",
+    "aliases": [],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Halk Sağlığı",
+    "instructorAndSource": "Ders notu: 6)Türkiyede Sağlık Hizmetlerinin Sunumu s.38",
+    "definition": "Tek hekim veya diş hekiminin hizmet verdiği özel sağlık birimi.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-15",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-malul_ayligi",
+    "term": "Malul aylığı",
+    "aliases": [
+      "Malullük aylığı"
+    ],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Halk Sağlığı",
+    "instructorAndSource": "Ders notu: 6)Türkiyede Sağlık Hizmetlerinin Sunumu s.10",
+    "definition": "Çalışma gücünü belirli oranda yitirmiş sigortalıya bağlanan aylık.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "SGK, çalıştığı hâlde malul aylığı alan 288 kişi saptadı.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-15",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-sezaryen",
+    "term": "Sezaryen",
+    "aliases": [
+      "Sezaryen doğum"
+    ],
+    "category": "tedavi",
+    "kurul": "Kurul 1",
+    "discipline": "Halk Sağlığı",
+    "instructorAndSource": "Ders notu: 6)Türkiyede Sağlık Hizmetlerinin Sunumu s.15",
+    "definition": "Bebeğin karın ve uterus duvarına yapılan cerrahi kesiyle doğurtulması.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Türkiye'de oranı 2002'de %21 iken 2016'da %53'e çıktı.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-15",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-trahom",
+    "term": "Trahom",
+    "aliases": [],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Halk Sağlığı",
+    "instructorAndSource": "Ders notu: 6)Türkiyede Sağlık Hizmetlerinin Sunumu s.3",
+    "definition": "Chlamydia trachomatis'in yol açtığı, tekrarlayan enfeksiyonlarla körlüğe neden olabilen kronik keratokonjonktivit.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Refik Saydam döneminde vertikal mücadele teşkilatı kurulan hastalıklardandır.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-15",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-jci_akreditasyonu",
+    "term": "JCI akreditasyonu",
+    "aliases": [
+      "Joint Commission International"
+    ],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Halk Sağlığı",
+    "instructorAndSource": "Ders notu: 6)Türkiyede Sağlık Hizmetlerinin Sunumu s.26",
+    "definition": "Joint Commission International tarafından hasta güvenliği ve hizmet kalitesine göre verilen uluslararası hastane akreditasyonu.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "2018'de Türkiye'de 32 JCI belgeli hastane vardır.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-15",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-dal_hastanesi",
+    "term": "Dal hastanesi",
+    "aliases": [],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Halk Sağlığı",
+    "instructorAndSource": "Ders notu: 6)Türkiyede Sağlık Hizmetlerinin Sunumu s.27",
+    "definition": "Belirli bir uzmanlık alanına hizmet veren hastane.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Kadın doğum ve çocuk, göz, fizik tedavi, göğüs ve psikiyatri en kalabalık dal hastaneleridir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-15",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-il_saglik_mudurlugu",
+    "term": "İl Sağlık Müdürlüğü",
+    "aliases": [],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Halk Sağlığı",
+    "instructorAndSource": "Ders notu: 6)Türkiyede Sağlık Hizmetlerinin Sunumu s.17",
+    "definition": "Sağlık Bakanlığı'nın illerdeki taşra teşkilatı.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-15",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-663_sayili_khk",
+    "term": "663 sayılı KHK",
+    "aliases": [],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Halk Sağlığı",
+    "instructorAndSource": "Ders notu: 6)Türkiyede Sağlık Hizmetlerinin Sunumu s.17",
+    "definition": "Sağlık Bakanlığı ve Bağlı Kuruluşlarının Teşkilat ve Görevleri Hakkında 2011 tarihli kanun hükmünde kararname.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "2017'de 694 sayılı KHK ile değiştirilmiştir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-15",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-turkiye_saglik_enstituleri_baskanligi_tuseb",
+    "term": "Türkiye Sağlık Enstitüleri Başkanlığı (TÜSEB)",
+    "aliases": [
+      "TÜSEB"
+    ],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Halk Sağlığı",
+    "instructorAndSource": "Ders notu: 6)Türkiyede Sağlık Hizmetlerinin Sunumu s.18",
+    "definition": "Sağlık alanında araştırma ve geliştirme faaliyetlerini yürüten, Sağlık Bakanlığı teşkilat şemasında yer alan kuruluş.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-15",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-turkiye_hudut_ve_sahiller_saglik_genel_mudurlugu",
+    "term": "Türkiye Hudut ve Sahiller Sağlık Genel Müdürlüğü",
+    "aliases": [],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Halk Sağlığı",
+    "instructorAndSource": "Ders notu: 6)Türkiyede Sağlık Hizmetlerinin Sunumu s.18",
+    "definition": "Kara, deniz ve hava sınır kapılarında sınır sağlığı hizmetlerini yürüten genel müdürlük.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-15",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-ozel_idare",
+    "term": "Özel İdare",
+    "aliases": [
+      "İl Özel İdaresi"
+    ],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Halk Sağlığı",
+    "instructorAndSource": "Ders notu: 6)Türkiyede Sağlık Hizmetlerinin Sunumu s.3",
+    "definition": "İl düzeyinde hizmet veren, tüzel kişiliğe sahip yerel yönetim birimi.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Refik Saydam döneminde tedavi edici hekimlik Özel İdareler ve belediyelere bırakıldı.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-15",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-foseptik",
+    "term": "Foseptik",
+    "aliases": [],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Halk Sağlığı",
+    "instructorAndSource": "Ders notu: 6)Türkiyede Sağlık Hizmetlerinin Sunumu s.20",
+    "definition": "Kanalizasyonun olmadığı yerlerde atık suyun toplandığı çukur sistemi.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Kanalizasyon veya foseptik sistemi belediyenin sağlık görevleri arasındadır.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-15",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-yatak_nufus_orani",
+    "term": "Yatak/nüfus oranı",
+    "aliases": [],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Halk Sağlığı",
+    "instructorAndSource": "Ders notu: 6)Türkiyede Sağlık Hizmetlerinin Sunumu s.24",
+    "definition": "Belirli nüfusa (genellikle 10 bin kişi) düşen hastane yatağı sayısı.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Türkiye'de 10 bin kişiye 27 yatak düşer; dünya ortalaması 36'dır.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-15",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-mobil_saglik_hizmeti",
+    "term": "Mobil sağlık hizmeti",
+    "aliases": [
+      "Gezici hizmet"
+    ],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Halk Sağlığı",
+    "instructorAndSource": "Ders notu: 6)Türkiyede Sağlık Hizmetlerinin Sunumu s.6",
+    "definition": "Sağlık ekibinin halkın bulunduğu yere giderek verdiği hizmet.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Sosyalleştirilmiş hizmetin beşinci özelliğidir; bugün sağlık ocaklarının %40'ının motorlu aracı vardır.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-15",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
   }
 ]

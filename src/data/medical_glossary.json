@@ -50107,7 +50107,7 @@
     "description": "1961'de çıkarılan ve gebe, bebek ve çocuk takibini sağlık ocaklarına görev olarak veren kanun.",
     "discipline": "Halk Sağlığı",
     "committee": "",
-    "clinicalPearl": "Sosyalleştirme takviminde normal gebelikte toplam 13 muayene öngörülmüştür.",
+    "clinicalPearl": "Sosyalleştirme takviminde normal gebelikte toplam 13 muayene öngörülmüştür. · Uygulama 1963'te Muş'ta başladı; 1 Ocak 1984'te tüm Türkiye kapsama alındı.",
     "aliases": [
       "224 sayılı kanun",
       "Sosyalleştirme kanunu"
@@ -50151,7 +50151,8 @@
         "sayfa": 17,
         "alinti": "Türkiye’de 2003 yılında Sağlıkta Dönüşüm Programının başlatılması ile anne ve çocuklara özel önem gösterilmesi vurgulanmış"
       }
-    ]
+    ],
+    "clinicalPearl": "Dört bileşeni: SGK çatısında birleşme, SSK hastanelerinin devri ve serbest eczane, aile hekimliği, özel hastanelerin teşviki."
   },
   "türkiye nüfus ve sağlık araştırması (tnsa)": {
     "term": "Türkiye Nüfus ve Sağlık Araştırması (TNSA)",
@@ -50189,7 +50190,7 @@
     "description": "Sağlık Bakanlığı'nın öngördüğü, 0-14, 18-24, 28-32 ve 36-38. haftalarda yapılan dört doğum öncesi izlem.",
     "discipline": "Halk Sağlığı",
     "committee": "",
-    "clinicalPearl": "1. izlemde öykü 30 dakika, 3. izlemde 20 dakika sürmelidir.",
+    "clinicalPearl": "1. izlemde öykü 30 dakika, 3. izlemde 20 dakika sürmelidir. · Türkiye'de gebe başına ortalama izlem sayısı 2002'de 1,7'den 2016'da 4,7'ye çıktı.",
     "aliases": [
       "Gebe izlem takvimi"
     ],
@@ -54237,7 +54238,8 @@
         "sayfa": 33,
         "alinti": "Cüzzam (Lepra) Mycobacterium leprae"
       }
-    ]
+    ],
+    "clinicalPearl": "Refik Saydam döneminde vertikal mücadele teşkilatı kurulan hastalıklardandır; 2016'da Türkiye'de 34 yataklı 1 lepra hastanesi vardır."
   },
   "kedi tırmığı hastalığı": {
     "term": "Kedi tırmığı hastalığı",
@@ -58801,7 +58803,7 @@
     "description": "Sağlık hizmetinin kamu eliyle, herkese eşit ve ülkenin ücra köşelerine kadar ulaştırılması; Türkiye'de Nusret Fişek döneminde yasalaşmıştır.",
     "discipline": "Halk Sağlığı",
     "committee": "",
-    "clinicalPearl": "Köylere ebe, ilçelere doktor.",
+    "clinicalPearl": "Köylere ebe, ilçelere doktor. · Sekiz özellik: birinci basamak kurumu sağlık ocağı, dar bölgede entegre hizmet, basamaklı hizmet, ekip, mobil, ücretsiz, sürekli (24 saat/7 gün), toplum katılımı.",
     "aliases": [
       "Sosyalleştirme"
     ],
@@ -80465,7 +80467,7 @@
     "description": "Sistemik arter kan basıncının sürekli yüksek seyretmesidir; uzun vadede kalpte hipertrofi, böbrekte nefroskleroz ve damar duvarında hasara yol açar.",
     "discipline": "Tıbbi Patoloji",
     "committee": "",
-    "clinicalPearl": "Malign hipertansiyonda \"soğan zarı\" hiperplastik arteriyolosklerozu, \"pire ısırığı\" kortikal peteşiyal kanamaları gösterir.",
+    "clinicalPearl": "Malign hipertansiyonda \"soğan zarı\" hiperplastik arteriyolosklerozu, \"pire ısırığı\" kortikal peteşiyal kanamaları gösterir. · TÜİK verisine göre 18 yaş üstünde hastaneye en sık başvuru nedenidir (%15,8).",
     "aliases": [
       "Yüksek tansiyon"
     ],
@@ -81163,7 +81165,7 @@
     "description": "Türkiye'de sosyalleştirilmiş sağlık hizmetleri modelinde belirli bir coğrafi bölgeye koruyucu ve tedavi edici hizmeti birlikte veren birinci basamak sağlık kurumudur.",
     "discipline": "Halk Sağlığı",
     "committee": "",
-    "clinicalPearl": "Sosyalleştirilmiş modelde birinci basamak sağlık kurumu sağlık ocağıdır.",
+    "clinicalPearl": "Sosyalleştirilmiş modelde birinci basamak sağlık kurumu sağlık ocağıdır. · Sosyalleştirilmiş sistemde birinci basamak kurumudur; köy tipi 5-10 bin, ilçe tipi 10-30 bin, il tipi 30-50 bin nüfusa yöneliktir.",
     "dogrulama": {
       "durum": "sozluk_v2",
       "destek": 1.0,
@@ -95602,6 +95604,962 @@
         "kurul": 1,
         "sayfa": 14,
         "alinti": "2. ve 3. kuşak sefalosporinler Beta laktamaz inhibitörleri (klavulanik asid, sulbaktam)"
+      }
+    ]
+  },
+  "vertikal örgütlenme": {
+    "term": "Vertikal örgütlenme",
+    "category": "terim",
+    "definition": "Her hastalık için yalnız o hastalıkla ilgilenen ayrı bir teşkilat kurulmasına dayanan sağlık örgütlenme modeli.",
+    "description": "Her hastalık için yalnız o hastalıkla ilgilenen ayrı bir teşkilat kurulmasına dayanan sağlık örgütlenme modeli.",
+    "discipline": "Halk Sağlığı",
+    "committee": "",
+    "clinicalPearl": "Refik Saydam döneminde sıtma, trahom, frengi ve lepra için uygulandı; çalışanlara yüksek ücret ödendi.",
+    "aliases": [
+      "Dikey örgütlenme"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-e9270ffff1"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Halk Sağlığı/6)Türkiyede Sağlık Hizmetlerinin Sunumu.pdf",
+        "ders": "Halk Sağlığı",
+        "kurul": 1,
+        "sayfa": 3,
+        "alinti": "Vertikal (sıtma, trahom, frengi, lepra gibi tek konuyla ilgilenen) sağlık teşkilatları kurulmuştur"
+      }
+    ]
+  },
+  "entegre sağlık hizmeti": {
+    "term": "Entegre sağlık hizmeti",
+    "category": "terim",
+    "definition": "Belirli bir bölgede koruyucu, tedavi edici, adli ve çevre sağlığı hizmetlerinin tek kurum tarafından birlikte verilmesi.",
+    "description": "Belirli bir bölgede koruyucu, tedavi edici, adli ve çevre sağlığı hizmetlerinin tek kurum tarafından birlikte verilmesi.",
+    "discipline": "Halk Sağlığı",
+    "committee": "",
+    "clinicalPearl": "Sosyalleştirilmiş hizmetin ikinci özelliğidir; vertikal örgütlenmenin karşıtıdır.",
+    "aliases": [
+      "Yatay örgütlenme",
+      "Bütünleşik hizmet"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-e9270ffff1"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Halk Sağlığı/6)Türkiyede Sağlık Hizmetlerinin Sunumu.pdf",
+        "ders": "Halk Sağlığı",
+        "kurul": 1,
+        "sayfa": 5,
+        "alinti": "koruyucu ve tedavi edici hizmetlerle adli hizmetler ve çevre sağlığı hizmetlerinin birlikte verilmesi"
+      }
+    ]
+  },
+  "basamaklı sağlık hizmeti": {
+    "term": "Basamaklı sağlık hizmeti",
+    "category": "terim",
+    "definition": "Hastanın önce birinci basamağa başvurduğu, gerektiğinde üst basamağa sevk edildiği ve üst basamağın geri bildirimde bulunduğu hizmet düzeni.",
+    "description": "Hastanın önce birinci basamağa başvurduğu, gerektiğinde üst basamağa sevk edildiği ve üst basamağın geri bildirimde bulunduğu hizmet düzeni.",
+    "discipline": "Halk Sağlığı",
+    "committee": "",
+    "clinicalPearl": "Sevk aşağıdan yukarı, geri bildirim yukarıdan aşağıdır.",
+    "aliases": [
+      "Kademeli hizmet",
+      "Sevk zinciri"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-e9270ffff1"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Halk Sağlığı/6)Türkiyede Sağlık Hizmetlerinin Sunumu.pdf",
+        "ders": "Halk Sağlığı",
+        "kurul": 1,
+        "sayfa": 5,
+        "alinti": "Basamaklı (kademeli) hizmet, Sağlık ocakları hastanelere sevk yapar. Hastanelerden geri bildirimde bulunulur"
+      }
+    ]
+  },
+  "hükümet tabipliği": {
+    "term": "Hükümet tabipliği",
+    "category": "terim",
+    "definition": "Refik Saydam döneminde Osmanlı'daki memleket tabipliğinin yerini tutmak üzere ilçelerde kurulan, devleti temsil eden hekimlik kurumu.",
+    "description": "Refik Saydam döneminde Osmanlı'daki memleket tabipliğinin yerini tutmak üzere ilçelerde kurulan, devleti temsil eden hekimlik kurumu.",
+    "discipline": "Halk Sağlığı",
+    "committee": "",
+    "clinicalPearl": "İlçe düzeyindedir; koruyucu ve adli hekimlik görevleri yürütür.",
+    "aliases": [
+      "Hükümet tabibi"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-e9270ffff1"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Halk Sağlığı/6)Türkiyede Sağlık Hizmetlerinin Sunumu.pdf",
+        "ders": "Halk Sağlığı",
+        "kurul": 1,
+        "sayfa": 3,
+        "alinti": "Osmanlı’daki “memleket tabipliği” nin yerini tutacak olan Hükümet Tabipliği sistemi ilçelerde kurulmuştur"
+      }
+    ]
+  },
+  "memleket tabipliği": {
+    "term": "Memleket tabipliği",
+    "category": "terim",
+    "definition": "Osmanlı döneminde il ve kazalarda görev yapan devlet hekimliği kurumu.",
+    "description": "Osmanlı döneminde il ve kazalarda görev yapan devlet hekimliği kurumu.",
+    "discipline": "Halk Sağlığı",
+    "committee": "",
+    "clinicalPearl": "Cumhuriyette yerini Hükümet Tabipliği almıştır.",
+    "aliases": [
+      "Memleket tabibi"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-e9270ffff1"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Halk Sağlığı/6)Türkiyede Sağlık Hizmetlerinin Sunumu.pdf",
+        "ders": "Halk Sağlığı",
+        "kurul": 1,
+        "sayfa": 3,
+        "alinti": "Osmanlı’daki “memleket tabipliği” nin yerini tutacak olan Hükümet Tabipliği sistemi ilçelerde kurulmuştur"
+      }
+    ]
+  },
+  "sağlık memuru": {
+    "term": "Sağlık memuru",
+    "category": "terim",
+    "definition": "Kırsalda koruyucu sağlık hizmetlerini yürütmek üzere yetiştirilen yardımcı sağlık personeli.",
+    "description": "Kırsalda koruyucu sağlık hizmetlerini yürütmek üzere yetiştirilen yardımcı sağlık personeli.",
+    "discipline": "Halk Sağlığı",
+    "committee": "",
+    "clinicalPearl": "Kırsalda kadın personel çalıştırmanın zor olması nedeniyle yetiştirildi.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-e9270ffff1"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Halk Sağlığı/6)Türkiyede Sağlık Hizmetlerinin Sunumu.pdf",
+        "ders": "Halk Sağlığı",
+        "kurul": 1,
+        "sayfa": 2,
+        "alinti": "Kırsalda bayan personel çalıştırmak zor olduğundan “SAĞLIK MEMURU” yetiştiriliyor"
+      }
+    ]
+  },
+  "mecburi hizmet": {
+    "term": "Mecburi hizmet",
+    "category": "terim",
+    "definition": "Devletin yetiştirdiği hekimin mezuniyet sonrası belirli bir süre devletin gösterdiği yerde çalışma yükümlülüğü.",
+    "description": "Devletin yetiştirdiği hekimin mezuniyet sonrası belirli bir süre devletin gösterdiği yerde çalışma yükümlülüğü.",
+    "discipline": "Halk Sağlığı",
+    "committee": "",
+    "clinicalPearl": "Erken Cumhuriyette parasız yatılı sistemle birlikte hekimin kırsala dağılımını sağladı.",
+    "aliases": [
+      "Zorunlu hizmet"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-e9270ffff1"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Halk Sağlığı/6)Türkiyede Sağlık Hizmetlerinin Sunumu.pdf",
+        "ders": "Halk Sağlığı",
+        "kurul": 1,
+        "sayfa": 2,
+        "alinti": "Parasız yatılı sistemle ve mecburi hizmet karşılığı hekim yetiştiriliyor"
+      }
+    ]
+  },
+  "sosyal güvenlik kurumu (sgk)": {
+    "term": "Sosyal Güvenlik Kurumu (SGK)",
+    "category": "terim",
+    "definition": "Emekli Sandığı, Bağ-Kur ve SSK'nın birleşmesiyle oluşan, sağlık hizmetlerini finanse eden ve geri ödemeyi denetleyen kurum.",
+    "description": "Emekli Sandığı, Bağ-Kur ve SSK'nın birleşmesiyle oluşan, sağlık hizmetlerini finanse eden ve geri ödemeyi denetleyen kurum.",
+    "discipline": "Halk Sağlığı",
+    "committee": "",
+    "clinicalPearl": "Sağlıkta Dönüşüm Programı'nın birinci bileşenidir.",
+    "aliases": [
+      "SGK"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-e9270ffff1"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Halk Sağlığı/6)Türkiyede Sağlık Hizmetlerinin Sunumu.pdf",
+        "ders": "Halk Sağlığı",
+        "kurul": 1,
+        "sayfa": 8,
+        "alinti": "Emekli Sandığı, BağKur ve SSK adlı sosyal güvenlik kurumlarının SGK çatısı altında birleşmesi"
+      }
+    ]
+  },
+  "aile hekimliği": {
+    "term": "Aile hekimliği",
+    "category": "tedavi",
+    "definition": "Her bireyin kayıtlı olduğu bir aile hekimi tarafından sürekli ve kişiye yönelik birinci basamak sağlık hizmeti sunulan model.",
+    "description": "Her bireyin kayıtlı olduğu bir aile hekimi tarafından sürekli ve kişiye yönelik birinci basamak sağlık hizmeti sunulan model.",
+    "discipline": "Halk Sağlığı",
+    "committee": "",
+    "clinicalPearl": "Sağlıkta Dönüşüm Programı'nın üçüncü bileşenidir; hekim başına 3000-3500 kişi, hedef 2000.",
+    "aliases": [
+      "Aile hekimi"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-e9270ffff1"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Halk Sağlığı/6)Türkiyede Sağlık Hizmetlerinin Sunumu.pdf",
+        "ders": "Halk Sağlığı",
+        "kurul": 1,
+        "sayfa": 8,
+        "alinti": "SSK hastanelerinin devri ve serbest eczanelerden herkesin yararlanabilmesi 3-Aile hekimliği"
+      }
+    ]
+  },
+  "aile sağlığı merkezi (asm)": {
+    "term": "Aile Sağlığı Merkezi (ASM)",
+    "category": "terim",
+    "definition": "Aile hekimlerinin ve aile sağlığı elemanlarının birinci basamak hizmeti verdiği sağlık kuruluşu.",
+    "description": "Aile hekimlerinin ve aile sağlığı elemanlarının birinci basamak hizmeti verdiği sağlık kuruluşu.",
+    "discipline": "Halk Sağlığı",
+    "committee": "",
+    "clinicalPearl": "2010'dan beri Türkiye'nin birinci basamak kuruluşudur; en ileri donanımlı tip A tipidir.",
+    "aliases": [
+      "ASM"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-e9270ffff1"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Halk Sağlığı/6)Türkiyede Sağlık Hizmetlerinin Sunumu.pdf",
+        "ders": "Halk Sağlığı",
+        "kurul": 1,
+        "sayfa": 29,
+        "alinti": "Türkiye’de 2010 yılından beri birinci basamak sağlık kuruluşu Aile Sağlığı Merkezleridir"
+      }
+    ]
+  },
+  "aile sağlığı elemanı": {
+    "term": "Aile sağlığı elemanı",
+    "category": "terim",
+    "definition": "Aile Sağlığı Merkezinde her aile hekiminin yardımcısı olarak çalışan, genellikle hemşire olan sağlık personeli.",
+    "description": "Aile Sağlığı Merkezinde her aile hekiminin yardımcısı olarak çalışan, genellikle hemşire olan sağlık personeli.",
+    "discipline": "Halk Sağlığı",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-e9270ffff1"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Halk Sağlığı/6)Türkiyede Sağlık Hizmetlerinin Sunumu.pdf",
+        "ders": "Halk Sağlığı",
+        "kurul": 1,
+        "sayfa": 29,
+        "alinti": "Her hekimin yardımcısı olarak bir aile sağlığı elemanı vardır (genellikle hemşire)"
+      }
+    ]
+  },
+  "toplum sağlığı merkezi (tsm)": {
+    "term": "Toplum Sağlığı Merkezi (TSM)",
+    "category": "terim",
+    "definition": "Topluma yönelik koruyucu sağlık hizmetlerini yürüten birinci basamak sağlık kuruluşu.",
+    "description": "Topluma yönelik koruyucu sağlık hizmetlerini yürüten birinci basamak sağlık kuruluşu.",
+    "discipline": "Halk Sağlığı",
+    "committee": "",
+    "clinicalPearl": "2016'da 970 TSM vardır; yeni mezun hekimin çalışma yerlerindendir.",
+    "aliases": [
+      "TSM"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-e9270ffff1"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Halk Sağlığı/6)Türkiyede Sağlık Hizmetlerinin Sunumu.pdf",
+        "ders": "Halk Sağlığı",
+        "kurul": 1,
+        "sayfa": 28,
+        "alinti": "Aile Hekimi sayısı 24.428 Aile Sağlığı Merkezi (ASM) 7.636 Toplum Sağlığı Merkezi 970"
+      }
+    ]
+  },
+  "sağlık evi": {
+    "term": "Sağlık evi",
+    "category": "terim",
+    "definition": "Köylerde hizmet veren en küçük birinci basamak sağlık birimi.",
+    "description": "Köylerde hizmet veren en küçük birinci basamak sağlık birimi.",
+    "discipline": "Halk Sağlığı",
+    "committee": "",
+    "clinicalPearl": "2016'da 5.419 sağlık evi vardır.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-e9270ffff1"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Halk Sağlığı/6)Türkiyede Sağlık Hizmetlerinin Sunumu.pdf",
+        "ders": "Halk Sağlığı",
+        "kurul": 1,
+        "sayfa": 28,
+        "alinti": "Aile Hekimi sayısı 24.428 Aile Sağlığı Merkezi (ASM) 7.636 Toplum Sağlığı Merkezi 970"
+      }
+    ]
+  },
+  "açsap merkezi": {
+    "term": "AÇSAP Merkezi",
+    "category": "terim",
+    "definition": "Ana Çocuk Sağlığı ve Aile Planlaması hizmetlerini veren birinci basamak birimi.",
+    "description": "Ana Çocuk Sağlığı ve Aile Planlaması hizmetlerini veren birinci basamak birimi.",
+    "discipline": "Halk Sağlığı",
+    "committee": "",
+    "clinicalPearl": "Türkiye'de 181 AÇSAP merkezi vardır.",
+    "aliases": [
+      "Ana Çocuk Sağlığı ve Aile Planlaması Merkezi"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-e9270ffff1"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Halk Sağlığı/6)Türkiyede Sağlık Hizmetlerinin Sunumu.pdf",
+        "ders": "Halk Sağlığı",
+        "kurul": 1,
+        "sayfa": 31,
+        "alinti": "AÇSAP Merkezi 181 Verem Savaş Dispanseri 180 Kanser Erken Teşhis, Tarama ve Eğitim Merkezi (KETEM) 159"
+      }
+    ]
+  },
+  "ketem": {
+    "term": "KETEM",
+    "category": "tani",
+    "definition": "Kanser Erken Teşhis, Tarama ve Eğitim Merkezi; kanser taraması ve eğitimi yapan birinci basamak birimi.",
+    "description": "Kanser Erken Teşhis, Tarama ve Eğitim Merkezi; kanser taraması ve eğitimi yapan birinci basamak birimi.",
+    "discipline": "Halk Sağlığı",
+    "committee": "",
+    "clinicalPearl": "Türkiye'de 159 KETEM vardır.",
+    "aliases": [
+      "Kanser Erken Teşhis, Tarama ve Eğitim Merkezi"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-e9270ffff1"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Halk Sağlığı/6)Türkiyede Sağlık Hizmetlerinin Sunumu.pdf",
+        "ders": "Halk Sağlığı",
+        "kurul": 1,
+        "sayfa": 31,
+        "alinti": "AÇSAP Merkezi 181 Verem Savaş Dispanseri 180 Kanser Erken Teşhis, Tarama ve Eğitim Merkezi (KETEM) 159"
+      }
+    ]
+  },
+  "verem savaş dispanseri": {
+    "term": "Verem savaş dispanseri",
+    "category": "terim",
+    "definition": "Tüberkülozun tanı, tedavi ve kontrolüne yönelik hizmet veren birinci basamak birimi.",
+    "description": "Tüberkülozun tanı, tedavi ve kontrolüne yönelik hizmet veren birinci basamak birimi.",
+    "discipline": "Halk Sağlığı",
+    "committee": "",
+    "clinicalPearl": "Türkiye'de 180 verem savaş dispanseri vardır.",
+    "aliases": [
+      "VSD"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-e9270ffff1"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Halk Sağlığı/6)Türkiyede Sağlık Hizmetlerinin Sunumu.pdf",
+        "ders": "Halk Sağlığı",
+        "kurul": 1,
+        "sayfa": 31,
+        "alinti": "AÇSAP Merkezi 181 Verem Savaş Dispanseri 180 Kanser Erken Teşhis, Tarama ve Eğitim Merkezi (KETEM) 159"
+      }
+    ]
+  },
+  "112 acil yardım istasyonu": {
+    "term": "112 Acil Yardım İstasyonu",
+    "category": "terim",
+    "definition": "Hastane öncesi acil sağlık hizmetlerini yürüten istasyon.",
+    "description": "Hastane öncesi acil sağlık hizmetlerini yürüten istasyon.",
+    "discipline": "Halk Sağlığı",
+    "committee": "",
+    "clinicalPearl": "Türkiye'de 2.400 adet 112 istasyonu vardır.",
+    "aliases": [
+      "112 Acil"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-e9270ffff1"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Halk Sağlığı/6)Türkiyede Sağlık Hizmetlerinin Sunumu.pdf",
+        "ders": "Halk Sağlığı",
+        "kurul": 1,
+        "sayfa": 31,
+        "alinti": "112 Acil Yardım İstasyonu 2.400 Halk Sağlığı Laboratuvarları - 83"
+      }
+    ]
+  },
+  "ikinci basamak sağlık kuruluşu": {
+    "term": "İkinci basamak sağlık kuruluşu",
+    "category": "terim",
+    "definition": "Uzman hekim çalışan özel veya devlete ait sağlık kuruluşu.",
+    "description": "Uzman hekim çalışan özel veya devlete ait sağlık kuruluşu.",
+    "discipline": "Halk Sağlığı",
+    "committee": "",
+    "clinicalPearl": "Sahiplik değil uzman hekim varlığı belirleyicidir.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-e9270ffff1"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Halk Sağlığı/6)Türkiyede Sağlık Hizmetlerinin Sunumu.pdf",
+        "ders": "Halk Sağlığı",
+        "kurul": 1,
+        "sayfa": 32,
+        "alinti": "2. Basamak sağlık kuruluşu: Uzman hekim çalışan özel veya devlete ait kuruluşlardır"
+      }
+    ]
+  },
+  "üçüncü basamak sağlık kuruluşu": {
+    "term": "Üçüncü basamak sağlık kuruluşu",
+    "category": "terim",
+    "definition": "Asistan yetiştirilen üniversite hastanesi veya Sağlık Bakanlığı eğitim hastanesi.",
+    "description": "Asistan yetiştirilen üniversite hastanesi veya Sağlık Bakanlığı eğitim hastanesi.",
+    "discipline": "Halk Sağlığı",
+    "committee": "",
+    "clinicalPearl": "Tanımlayıcı ölçüt uzmanlık eğitimi (asistan) verilmesidir.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-e9270ffff1"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Halk Sağlığı/6)Türkiyede Sağlık Hizmetlerinin Sunumu.pdf",
+        "ders": "Halk Sağlığı",
+        "kurul": 1,
+        "sayfa": 32,
+        "alinti": "3. Basamak sağlık kuruluşu: Asistan yetiştirilen Üniversite hastanesi veya Sağlık Bakanlığı Eğitim hastaneleridir"
+      }
+    ]
+  },
+  "tıp merkezi": {
+    "term": "Tıp merkezi",
+    "category": "terim",
+    "definition": "Asgari dört temel uzmanlık dalında uzman, en az iki kadrolu uzman, diş ünitesi, laboratuvar ve radyoloji bulunduran, 24 saat ayakta teşhis ve tedavi hizmeti veren özel sağlık kuruluşu.",
+    "description": "Asgari dört temel uzmanlık dalında uzman, en az iki kadrolu uzman, diş ünitesi, laboratuvar ve radyoloji bulunduran, 24 saat ayakta teşhis ve tedavi hizmeti veren özel sağlık kuruluşu.",
+    "discipline": "Halk Sağlığı",
+    "committee": "",
+    "clinicalPearl": "Dört dal: iç hastalıkları, kadın doğum, çocuk sağlığı, genel cerrahi.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-e9270ffff1"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Halk Sağlığı/6)Türkiyede Sağlık Hizmetlerinin Sunumu.pdf",
+        "ders": "Halk Sağlığı",
+        "kurul": 1,
+        "sayfa": 34,
+        "alinti": "iç hastalıkları, kadın hastalıkları ve doğum, çocuk sağlığı ve hastalıkları ve genel cerrahi tıp dallarında birer uzman hekim"
+      }
+    ]
+  },
+  "özel dal merkezi": {
+    "term": "Özel dal merkezi",
+    "category": "terim",
+    "definition": "İlgili uzmanlık dalında en az iki uzman hekim çalıştıran ve 24 saat ayakta teşhis ve tedavi hizmeti sunan özel sağlık kuruluşu.",
+    "description": "İlgili uzmanlık dalında en az iki uzman hekim çalıştıran ve 24 saat ayakta teşhis ve tedavi hizmeti sunan özel sağlık kuruluşu.",
+    "discipline": "Halk Sağlığı",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-e9270ffff1"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Halk Sağlığı/6)Türkiyede Sağlık Hizmetlerinin Sunumu.pdf",
+        "ders": "Halk Sağlığı",
+        "kurul": 1,
+        "sayfa": 36,
+        "alinti": "İlgili uzmanlık dalında en az iki uzman hekim çalıştıran"
+      }
+    ]
+  },
+  "poliklinik": {
+    "term": "Poliklinik",
+    "category": "terim",
+    "definition": "En az iki hekimlik hizmetinin bir araya gelmesiyle kurulan, 24 saat hizmet zorunluluğu olmayan özel sağlık kuruluşu.",
+    "description": "En az iki hekimlik hizmetinin bir araya gelmesiyle kurulan, 24 saat hizmet zorunluluğu olmayan özel sağlık kuruluşu.",
+    "discipline": "Halk Sağlığı",
+    "committee": "",
+    "clinicalPearl": "Çalışma saatlerini başvuru sırasında müdürlüğe bildirir.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-e9270ffff1"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Halk Sağlığı/6)Türkiyede Sağlık Hizmetlerinin Sunumu.pdf",
+        "ders": "Halk Sağlığı",
+        "kurul": 1,
+        "sayfa": 37,
+        "alinti": "en az iki hekimlik hizmetinin bir araya gelmesi ile kurulan özel sağlık kuruluşlarıdır"
+      }
+    ]
+  },
+  "muayenehane": {
+    "term": "Muayenehane",
+    "category": "terim",
+    "definition": "Tek hekim veya diş hekiminin hizmet verdiği özel sağlık birimi.",
+    "description": "Tek hekim veya diş hekiminin hizmet verdiği özel sağlık birimi.",
+    "discipline": "Halk Sağlığı",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-e9270ffff1"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Halk Sağlığı/6)Türkiyede Sağlık Hizmetlerinin Sunumu.pdf",
+        "ders": "Halk Sağlığı",
+        "kurul": 1,
+        "sayfa": 38,
+        "alinti": "Tek hekim veya diş hekiminin olduğu birimlerdir"
+      }
+    ]
+  },
+  "malul aylığı": {
+    "term": "Malul aylığı",
+    "category": "terim",
+    "definition": "Çalışma gücünü belirli oranda yitirmiş sigortalıya bağlanan aylık.",
+    "description": "Çalışma gücünü belirli oranda yitirmiş sigortalıya bağlanan aylık.",
+    "discipline": "Halk Sağlığı",
+    "committee": "",
+    "clinicalPearl": "SGK, çalıştığı hâlde malul aylığı alan 288 kişi saptadı.",
+    "aliases": [
+      "Malullük aylığı"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-e9270ffff1"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Halk Sağlığı/6)Türkiyede Sağlık Hizmetlerinin Sunumu.pdf",
+        "ders": "Halk Sağlığı",
+        "kurul": 1,
+        "sayfa": 10,
+        "alinti": "Çalıştığı halde malul aylığı alan 288 kişi tespit edildi"
+      }
+    ]
+  },
+  "sezaryen": {
+    "term": "Sezaryen",
+    "category": "tedavi",
+    "definition": "Bebeğin karın ve uterus duvarına yapılan cerrahi kesiyle doğurtulması.",
+    "description": "Bebeğin karın ve uterus duvarına yapılan cerrahi kesiyle doğurtulması.",
+    "discipline": "Halk Sağlığı",
+    "committee": "",
+    "clinicalPearl": "Türkiye'de oranı 2002'de %21 iken 2016'da %53'e çıktı.",
+    "aliases": [
+      "Sezaryen doğum"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-e9270ffff1"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Halk Sağlığı/6)Türkiyede Sağlık Hizmetlerinin Sunumu.pdf",
+        "ders": "Halk Sağlığı",
+        "kurul": 1,
+        "sayfa": 15,
+        "alinti": "Sezaryen Doğumların Tüm Doğumlar İçindeki Payı 2002 de (%) 21 iken 2016 da %53’ e çıktı"
+      }
+    ]
+  },
+  "trahom": {
+    "term": "Trahom",
+    "category": "hastalik",
+    "definition": "Chlamydia trachomatis'in yol açtığı, tekrarlayan enfeksiyonlarla körlüğe neden olabilen kronik keratokonjonktivit.",
+    "description": "Chlamydia trachomatis'in yol açtığı, tekrarlayan enfeksiyonlarla körlüğe neden olabilen kronik keratokonjonktivit.",
+    "discipline": "Halk Sağlığı",
+    "committee": "",
+    "clinicalPearl": "Refik Saydam döneminde vertikal mücadele teşkilatı kurulan hastalıklardandır.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-e9270ffff1"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Halk Sağlığı/6)Türkiyede Sağlık Hizmetlerinin Sunumu.pdf",
+        "ders": "Halk Sağlığı",
+        "kurul": 1,
+        "sayfa": 3,
+        "alinti": "Vertikal (sıtma, trahom, frengi, lepra gibi tek konuyla ilgilenen) sağlık teşkilatları kurulmuştur"
+      }
+    ]
+  },
+  "jcı akreditasyonu": {
+    "term": "JCI akreditasyonu",
+    "category": "terim",
+    "definition": "Joint Commission International tarafından hasta güvenliği ve hizmet kalitesine göre verilen uluslararası hastane akreditasyonu.",
+    "description": "Joint Commission International tarafından hasta güvenliği ve hizmet kalitesine göre verilen uluslararası hastane akreditasyonu.",
+    "discipline": "Halk Sağlığı",
+    "committee": "",
+    "clinicalPearl": "2018'de Türkiye'de 32 JCI belgeli hastane vardır.",
+    "aliases": [
+      "Joint Commission International"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-e9270ffff1"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Halk Sağlığı/6)Türkiyede Sağlık Hizmetlerinin Sunumu.pdf",
+        "ders": "Halk Sağlığı",
+        "kurul": 1,
+        "sayfa": 26,
+        "alinti": "JCI belgeli 32 hastane ve bulundukları şehirler, 2018"
+      }
+    ]
+  },
+  "dal hastanesi": {
+    "term": "Dal hastanesi",
+    "category": "terim",
+    "definition": "Belirli bir uzmanlık alanına hizmet veren hastane.",
+    "description": "Belirli bir uzmanlık alanına hizmet veren hastane.",
+    "discipline": "Halk Sağlığı",
+    "committee": "",
+    "clinicalPearl": "Kadın doğum ve çocuk, göz, fizik tedavi, göğüs ve psikiyatri en kalabalık dal hastaneleridir.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-e9270ffff1"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Halk Sağlığı/6)Türkiyede Sağlık Hizmetlerinin Sunumu.pdf",
+        "ders": "Halk Sağlığı",
+        "kurul": 1,
+        "sayfa": 27,
+        "alinti": "Kadın Doğum ve Çocuk Hastalıkları Hastanesi 31- 5.549"
+      }
+    ]
+  },
+  "il sağlık müdürlüğü": {
+    "term": "İl Sağlık Müdürlüğü",
+    "category": "terim",
+    "definition": "Sağlık Bakanlığı'nın illerdeki taşra teşkilatı.",
+    "description": "Sağlık Bakanlığı'nın illerdeki taşra teşkilatı.",
+    "discipline": "Halk Sağlığı",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-e9270ffff1"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Halk Sağlığı/6)Türkiyede Sağlık Hizmetlerinin Sunumu.pdf",
+        "ders": "Halk Sağlığı",
+        "kurul": 1,
+        "sayfa": 17,
+        "alinti": "Merkez: Bakan-Bakan Yardımcıları-genel Müdürler taşra teşkilatı İl Sağlık Müdürü Bağlı kuruluşlar"
+      }
+    ]
+  },
+  "663 sayılı khk": {
+    "term": "663 sayılı KHK",
+    "category": "terim",
+    "definition": "Sağlık Bakanlığı ve Bağlı Kuruluşlarının Teşkilat ve Görevleri Hakkında 2011 tarihli kanun hükmünde kararname.",
+    "description": "Sağlık Bakanlığı ve Bağlı Kuruluşlarının Teşkilat ve Görevleri Hakkında 2011 tarihli kanun hükmünde kararname.",
+    "discipline": "Halk Sağlığı",
+    "committee": "",
+    "clinicalPearl": "2017'de 694 sayılı KHK ile değiştirilmiştir.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-e9270ffff1"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Halk Sağlığı/6)Türkiyede Sağlık Hizmetlerinin Sunumu.pdf",
+        "ders": "Halk Sağlığı",
+        "kurul": 1,
+        "sayfa": 17,
+        "alinti": "Hakkında Kanun Hükmünde Kararname 2011 KHK/663"
+      }
+    ]
+  },
+  "türkiye sağlık enstitüleri başkanlığı (tüseb)": {
+    "term": "Türkiye Sağlık Enstitüleri Başkanlığı (TÜSEB)",
+    "category": "terim",
+    "definition": "Sağlık alanında araştırma ve geliştirme faaliyetlerini yürüten, Sağlık Bakanlığı teşkilat şemasında yer alan kuruluş.",
+    "description": "Sağlık alanında araştırma ve geliştirme faaliyetlerini yürüten, Sağlık Bakanlığı teşkilat şemasında yer alan kuruluş.",
+    "discipline": "Halk Sağlığı",
+    "committee": "",
+    "aliases": [
+      "TÜSEB"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-e9270ffff1"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Halk Sağlığı/6)Türkiyede Sağlık Hizmetlerinin Sunumu.pdf",
+        "ders": "Halk Sağlığı",
+        "kurul": 1,
+        "sayfa": 18,
+        "alinti": "Türkiye Hudut ve Sahiller Sağlık Genel Müdürlüğü"
+      }
+    ]
+  },
+  "türkiye hudut ve sahiller sağlık genel müdürlüğü": {
+    "term": "Türkiye Hudut ve Sahiller Sağlık Genel Müdürlüğü",
+    "category": "terim",
+    "definition": "Kara, deniz ve hava sınır kapılarında sınır sağlığı hizmetlerini yürüten genel müdürlük.",
+    "description": "Kara, deniz ve hava sınır kapılarında sınır sağlığı hizmetlerini yürüten genel müdürlük.",
+    "discipline": "Halk Sağlığı",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-e9270ffff1"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Halk Sağlığı/6)Türkiyede Sağlık Hizmetlerinin Sunumu.pdf",
+        "ders": "Halk Sağlığı",
+        "kurul": 1,
+        "sayfa": 18,
+        "alinti": "Türkiye Hudut ve Sahiller Sağlık Genel Müdürlüğü"
+      }
+    ]
+  },
+  "özel idare": {
+    "term": "Özel İdare",
+    "category": "terim",
+    "definition": "İl düzeyinde hizmet veren, tüzel kişiliğe sahip yerel yönetim birimi.",
+    "description": "İl düzeyinde hizmet veren, tüzel kişiliğe sahip yerel yönetim birimi.",
+    "discipline": "Halk Sağlığı",
+    "committee": "",
+    "clinicalPearl": "Refik Saydam döneminde tedavi edici hekimlik Özel İdareler ve belediyelere bırakıldı.",
+    "aliases": [
+      "İl Özel İdaresi"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-e9270ffff1"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Halk Sağlığı/6)Türkiyede Sağlık Hizmetlerinin Sunumu.pdf",
+        "ders": "Halk Sağlığı",
+        "kurul": 1,
+        "sayfa": 3,
+        "alinti": "Devlet tedavi edici hekimliği Özel İdare’ler ve Belediyelere bırakmıştır"
+      }
+    ]
+  },
+  "foseptik": {
+    "term": "Foseptik",
+    "category": "terim",
+    "definition": "Kanalizasyonun olmadığı yerlerde atık suyun toplandığı çukur sistemi.",
+    "description": "Kanalizasyonun olmadığı yerlerde atık suyun toplandığı çukur sistemi.",
+    "discipline": "Halk Sağlığı",
+    "committee": "",
+    "clinicalPearl": "Kanalizasyon veya foseptik sistemi belediyenin sağlık görevleri arasındadır.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-e9270ffff1"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Halk Sağlığı/6)Türkiyede Sağlık Hizmetlerinin Sunumu.pdf",
+        "ders": "Halk Sağlığı",
+        "kurul": 1,
+        "sayfa": 20,
+        "alinti": "Çöplerin toplanması Mezarlık tesisi İçme suyu temini Kanalizasyon veya foseptik sistemi"
+      }
+    ]
+  },
+  "yatak/nüfus oranı": {
+    "term": "Yatak/nüfus oranı",
+    "category": "terim",
+    "definition": "Belirli nüfusa (genellikle 10 bin kişi) düşen hastane yatağı sayısı.",
+    "description": "Belirli nüfusa (genellikle 10 bin kişi) düşen hastane yatağı sayısı.",
+    "discipline": "Halk Sağlığı",
+    "committee": "",
+    "clinicalPearl": "Türkiye'de 10 bin kişiye 27 yatak düşer; dünya ortalaması 36'dır.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-e9270ffff1"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Halk Sağlığı/6)Türkiyede Sağlık Hizmetlerinin Sunumu.pdf",
+        "ders": "Halk Sağlığı",
+        "kurul": 1,
+        "sayfa": 24,
+        "alinti": "1510 hastane’ de 217 700 yatak var; 10 bin kişiye 27 yatak düşüyor"
+      }
+    ]
+  },
+  "mobil sağlık hizmeti": {
+    "term": "Mobil sağlık hizmeti",
+    "category": "terim",
+    "definition": "Sağlık ekibinin halkın bulunduğu yere giderek verdiği hizmet.",
+    "description": "Sağlık ekibinin halkın bulunduğu yere giderek verdiği hizmet.",
+    "discipline": "Halk Sağlığı",
+    "committee": "",
+    "clinicalPearl": "Sosyalleştirilmiş hizmetin beşinci özelliğidir; bugün sağlık ocaklarının %40'ının motorlu aracı vardır.",
+    "aliases": [
+      "Gezici hizmet"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-e9270ffff1"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Halk Sağlığı/6)Türkiyede Sağlık Hizmetlerinin Sunumu.pdf",
+        "ders": "Halk Sağlığı",
+        "kurul": 1,
+        "sayfa": 6,
+        "alinti": "bugün 5840 sağlık ocağının %40’ının motorlu aracı var"
       }
     ]
   }
