@@ -1,5 +1,5 @@
 import React, { Suspense, useEffect, useMemo, useState } from 'react';
-import { BookOpenCheck, CheckCircle2, ClipboardList, Eye, FileWarning, RefreshCw, RotateCcw, XCircle, PenLine, Library } from 'lucide-react';
+import { BookOpenCheck, CheckCircle2, ClipboardList, Eye, FileWarning, RefreshCw, RotateCcw, XCircle, PenLine, Library, Play } from 'lucide-react';
 import { CalendarClock, Cpu, FileSearch, RefreshCcw, ShieldCheck, Hourglass, AlertTriangle, Ban, Wrench, Inbox, Layers } from 'lucide-react';
 import { safeJsonFetch } from '../../services/api';
 import { toast } from '../ui/Toast';
@@ -102,7 +102,7 @@ function taslakKategorisi(t: Taslak): Exclude<Filtre, 'hepsi'> {
 /** İşçi /olaylar: günlükten iş yaşam döngüsü (Drive'dan gelen PDF kuyruğa alındı → işleniyor → taslak → karar). */
 interface OlayAkisi {
   son_tarama: { zaman: number; yeni: number } | null;
-  olaylar: { zaman: number; tur: 'kuyruga' | 'isleniyor' | 'taslak' | 'karar' | 'yeniden' | 'hata'; metin: string }[];
+  olaylar: { zaman: number; tur: 'kuyruga' | 'isleniyor' | 'taslak' | 'karar' | 'yeniden' | 'simdi' | 'hata'; metin: string }[];
 }
 const OLAY_ETIKET: Record<OlayAkisi['olaylar'][number]['tur'], { label: string; cls: string }> = {
   kuyruga: { label: "Drive'dan yeni PDF · kuyruğa alındı", cls: 'is-accent' },
@@ -110,6 +110,7 @@ const OLAY_ETIKET: Record<OlayAkisi['olaylar'][number]['tur'], { label: string; 
   taslak: { label: 'Taslak hazır', cls: 'is-ok' },
   karar: { label: 'Karar', cls: '' },
   yeniden: { label: 'Yeniden kuyrukta', cls: '' },
+  simdi: { label: 'Panelden hemen işle', cls: 'is-accent' },
   hata: { label: 'Hata', cls: 'is-bad' },
 };
 
@@ -375,6 +376,17 @@ const OtomatikDersIsci: React.FC<{ adminEmail: string }> = ({ adminEmail }) => {
     api(`/taslak/${secili}`).then((x) => x.ok && setAyr(x.data));
   };
 
+  // Programlanmış dersi zamanlayıcıyı (saat penceresi, günlük sınır, ders arası) beklemeden başlat
+  const hemenIsle = async (isId: string, baslik: string) => {
+    if (!window.confirm(`"${baslik}" zamanlayıcı beklenmeden şimdi işlensin mi? (yaklaşık 30–60 dk sürer; sonraki ders bundan sonraki ders arası kadar bekler)`)) return;
+    setBusy(true);
+    const r = await api(`/kuyruk/${isId}/simdi`, { method: 'POST', body: '{}' });
+    setBusy(false);
+    if (!r.ok) return toast.error((r.data as any)?.hata || 'Başlatılamadı.');
+    toast.success('İşleme alındı; ders işçisi şimdi başladı.');
+    await yukle();
+  };
+
   const satirlar = useMemo(() => satirlariKur(liste || [], kuyruk, zam, konular), [liste, kuyruk, zam, konular]);
   const sayim = useMemo(() => {
     const n: Partial<Record<Filtre, number>> = {};
@@ -457,6 +469,13 @@ const OtomatikDersIsci: React.FC<{ adminEmail: string }> = ({ adminEmail }) => {
                   </button>
                 ) : (
                   <div className="ms-panel w-full p-3">{icerik}</div>
+                )}
+                {x.kat === 'programlandi' && x.anahtar.startsWith('k:') && (
+                  <div className="flex justify-end mt-1">
+                    <button type="button" className="ms-btn is-sm" disabled={busy} onClick={() => hemenIsle(x.anahtar.slice(2), x.baslik)}>
+                      <Play aria-hidden /> Hemen işle
+                    </button>
+                  </div>
                 )}
               </li>
             );

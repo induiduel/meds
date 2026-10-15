@@ -46,6 +46,7 @@ OLAY_TURLERI = [
     ("isleniyor", re.compile(r"^işleniyor: \S+ (.+)$")),
     ("taslak", re.compile(r"^taslak hazır: \S+ → (.+)$")),
     ("karar", re.compile(r"^karar: (\S+ → \S+)$")),
+    ("simdi", re.compile(r"^hemen işle istendi \(panel\): (\S+)$")),
     ("yeniden", re.compile(r"^(?:düzeltme istendi|yeniden derleme istendi|yeniden gönderildi|yarım kalan iş).*$")),
     ("hata", re.compile(r"^(?:Drive taraması hatası|tur hatası|PDF eşleşmesi hatası).*$")),
 ]
@@ -180,6 +181,9 @@ class H(BaseHTTPRequestHandler):
         return self._json(404, {"hata": "yol yok"})
 
     def do_POST(self):  # noqa: N802
+        h = re.match(r"^/kuyruk/([0-9]{8}-[0-9a-f]{10}(?:-\d+)?)/simdi$", self.path.split("?")[0].rstrip("/"))
+        if h:
+            return self._simdi(h.group(1))
         y = re.match(r"^/taslak/([^/]+)/yeniden$", self.path.split("?")[0].rstrip("/"))
         if y:
             return self._yeniden(y.group(1))
@@ -205,6 +209,36 @@ class H(BaseHTTPRequestHandler):
         return self._json(200, {"ok": True, "karar": k})
 
 
+    def _simdi(self, is_id: str):
+        """Programlanmış dersi hemen işle (panel "Hemen işle"): saat penceresi, günlük sınır ve ders arası atlanır.
+        Aynı anda tek iş: başka iş işleniyorsa 409. İş arka planda (bu süreçte) çalışır; ders arası sayacı bundan başlar."""
+        with _SIMDI_KILIT:
+            kuyruk = oku(KUYRUK, [])
+            j = next((k for k in kuyruk if k["is_id"] == is_id), None)
+            if not j:
+                return self._json(404, {"hata": "kuyrukta yok"})
+            if j["durum"] != "bekliyor":
+                return self._json(409, {"hata": f"iş bekliyor durumunda değil ({j['durum']})"})
+            calisan = next((k for k in kuyruk if k["durum"] == "isleniyor"), None)
+            if calisan:
+                return self._json(409, {"hata": f"şu an başka ders işleniyor: {calisan['yol'].split('/')[-1]}"})
+            from izle import sira_isle  # noqa: E402
+            log(f"hemen işle istendi (panel): {is_id}")
+            threading.Thread(target=self._calistir, args=(sira_isle, is_id), daemon=True, name=f"simdi-{is_id}").start()
+            # Durum iş parçacığında 'isleniyor'a geçer; panel yenilendiğinde görünsün diye kısa bekle
+            for _ in range(20):
+                time.sleep(0.1)
+                if any(k["is_id"] == is_id and k["durum"] != "bekliyor" for k in oku(KUYRUK, [])):
+                    break
+        return self._json(200, {"ok": True})
+
+    @staticmethod
+    def _calistir(sira_isle, is_id: str):
+        try:
+            sira_isle(is_id)
+        except Exception as e:  # noqa: BLE001
+            log(f"hemen işle hatası: {is_id}: {e!r}")
+
     def _yeniden(self, is_id: str):
         """Onaylanıp siteye geçmeyen taslağı yeniden gönder: yayın hatasında yayin.json silinir (yayın zamanlayıcısı
         ≤10 dk içinde yeniden dener); yayınlanıp site derlenemediyse derleme isteği bırakılır."""
@@ -225,6 +259,9 @@ class H(BaseHTTPRequestHandler):
         (d / "yayin.json").unlink(missing_ok=True)
         log(f"yeniden gönderildi: {d.name} (önceki: {y.get('durum')})")
         return self._json(200, {"ok": True, "is": "yayinla"})
+
+
+_SIMDI_KILIT = threading.Lock()
 
 
 def baslat(port: int = 8095):

@@ -6,14 +6,14 @@
 import express from 'express';
 
 const ISCI_URL = (process.env.MEDS_ISCI_URL || 'http://meds-ders-isci:8095').replace(/\/$/, '');
-const IZINLI = /^\/(saglik|taslaklar|checklist|kuyruk|zamanlama|olaylar|taslak\/[0-9]{8}-[0-9a-f]{10}(?:-\d+)?(?:\/dosya\/[a-z_]+\.(?:json|jsonl|md)|\/karar|\/yeniden)?)$/;
+const IZINLI = /^\/(saglik|taslaklar|checklist|kuyruk|kuyruk\/[0-9]{8}-[0-9a-f]{10}(?:-\d+)?\/simdi|zamanlama|olaylar|taslak\/[0-9]{8}-[0-9a-f]{10}(?:-\d+)?(?:\/dosya\/[a-z_]+\.(?:json|jsonl|md)|\/karar|\/yeniden)?)$/;
 
 export function dersIsciRouter(): express.Router {
   const r = express.Router();
   r.use(async (req, res) => {
     const yol = req.path.replace(/\/$/, '') || '/';
     if (!IZINLI.test(yol)) return res.status(404).json({ hata: 'yol yok' });
-    if (req.method !== 'GET' && !(req.method === 'POST' && (yol.endsWith('/karar') || yol.endsWith('/yeniden')))) {
+    if (req.method !== 'GET' && !(req.method === 'POST' && (yol.endsWith('/karar') || yol.endsWith('/yeniden') || yol.endsWith('/simdi')))) {
       return res.status(405).json({ hata: 'yöntem yok' });
     }
     try {
