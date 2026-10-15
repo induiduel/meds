@@ -44,7 +44,15 @@ function varyantlar(key: string): KayitVaryant[] {
   const k = oku<Record<string, KayitVaryant[]>>(P.kayit, {});
   return (k[key] || []).filter((v) => vidGecerli(v.id) && fs.existsSync(P.ses(key, v.id)));
 }
-const ozet = (v: KayitVaryant) => ({ id: v.id, etiket: v.etiket, saglayici: v.saglayici, ses: v.ses, sureSn: v.sureSn, bayt: v.bayt });
+/** surum: dosyanın değiştirilme zamanı — ses onarılınca/yeniden üretilince adres değişsin (aynı bayt boyutu olsa bile). */
+const surum = (key: string, vid: string) => {
+  try {
+    return Math.round(fs.statSync(P.ses(key, vid)).mtimeMs);
+  } catch {
+    return 0;
+  }
+};
+const ozet = (key: string) => (v: KayitVaryant) => ({ id: v.id, etiket: v.etiket, saglayici: v.saglayici, ses: v.ses, sureSn: v.sureSn, bayt: v.bayt, surum: surum(key, v.id) });
 
 export function registerCanliDersRoutes(app: Express) {
   app.get('/api/canli-ders', (_req: Request, res: Response) => {
@@ -59,8 +67,8 @@ export function registerCanliDersRoutes(app: Express) {
           no: d.no,
           baslik: d.baslik,
           sira: d.sira,
-          varsayilan: ozet(vs[0]),
-          varyantlar: vs.map(ozet),
+          varsayilan: ozet(d.key)(vs[0]),
+          varyantlar: vs.map(ozet(d.key)),
           pdf: fs.existsSync(P.hizalama(d.key)),
         };
       })
@@ -121,7 +129,7 @@ export function registerCanliDersRoutes(app: Express) {
       baslik: d.baslik,
       bolumler,
       varyantlar: vs.map((v) => ({
-        ...ozet(v),
+        ...ozet(key)(v),
         zamanlama: Array.isArray(v.zamanlama) && v.zamanlama.length === pars.length ? v.zamanlama : null,
       })),
       pdf,

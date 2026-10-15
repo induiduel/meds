@@ -345,9 +345,28 @@ function sessizlikKirp(pcm: Buffer): Buffer {
   while (bas < s.length && !sesli(bas)) bas += pencere;
   let son = s.length;
   while (son > bas && !sesli(Math.max(0, son - pencere))) son -= pencere;
+  // Gemini her çıktının sonuna, konuşmadan kısa bir boşlukla ayrılmış ~0,2 sn'lik bir "kapanış" patlaması ekliyor:
+  // boşluktan sonra gelen 0,35 sn'den kısa son ses parçası atılır (iki kez denenir).
+  for (let tur = 0; tur < 2; tur++) {
+    let kSon = son;
+    while (kSon > bas && !sesli(Math.max(0, kSon - pencere))) kSon -= pencere;
+    let kBas = kSon;
+    while (kBas > bas && sesli(Math.max(0, kBas - pencere))) kBas -= pencere;
+    let bosluk = kBas;
+    while (bosluk > bas && !sesli(Math.max(0, bosluk - pencere))) bosluk -= pencere;
+    if (kSon - kBas > 0 && kSon - kBas < 0.35 * 24000 && kBas - bosluk >= 0.12 * 24000 && bosluk > bas) son = bosluk;
+    else break;
+  }
   bas = Math.max(0, bas - 3600); // 150 ms pay
   son = Math.min(s.length, son + 4800); // 200 ms pay
-  return Buffer.from(pcm.buffer, pcm.byteOffset + bas * 2, (son - bas) * 2);
+  const out = Buffer.from(s.slice(bas, son).buffer);
+  const o = new Int16Array(out.buffer, out.byteOffset, out.length / 2);
+  const fade = Math.min(480, Math.floor(o.length / 4)); // 20 ms yumuşak giriş/çıkış: birleşimde tık olmasın
+  for (let i = 0; i < fade; i++) {
+    o[i] = Math.round((o[i] * i) / fade);
+    o[o.length - 1 - i] = Math.round((o[o.length - 1 - i] * i) / fade);
+  }
+  return out;
 }
 const BIRLER = ['', 'bir', 'iki', 'üç', 'dört', 'beş', 'altı', 'yedi', 'sekiz', 'dokuz'];
 const ONLAR = ['', 'on', 'yirmi', 'otuz', 'kırk', 'elli', 'altmış', 'yetmiş', 'seksen', 'doksan'];
@@ -461,6 +480,46 @@ function geminiParcaZamani(paragraflar: string[], once: number, pcmSn: number, s
   const nominal = once + pcmSn + sona;
   const k = nominal > 0 && gercekSn > 0 ? gercekSn / nominal : 1;
   return karakterOraniyla(paragraflar, once, pcmSn).map(([a, b]) => [a * k, b * k]);
+}
+/**
+ * Gemini parçasında paragraf sınırlarını sesteki gerçek duraklamalara oturtur (karakter oranı yalnız ilk tahmindir).
+ * pcm: parçanın konuşması (24 kHz s16), once: konuşmadan önceki sessizlik (sn), zaman: parça içi [bas, son] tahmini.
+ */
+function sessizligeOturt(pcm: Buffer, once: number, zaman: ParcaZaman): ParcaZaman {
+  if (zaman.length < 2) return zaman;
+  const s = new Int16Array(pcm.buffer, pcm.byteOffset, Math.floor(pcm.length / 2));
+  const pen = 480; // 20 ms
+  const sessiz: [number, number][] = [];
+  let bas = -1;
+  for (let i = 0; i < s.length; i += pen) {
+    let m = 0;
+    for (let j = i; j < Math.min(i + pen, s.length); j++) m = Math.max(m, Math.abs(s[j]));
+    if (m < 400) {
+      if (bas < 0) bas = i;
+    } else if (bas >= 0) {
+      if (i - bas >= 0.22 * 24000) sessiz.push([bas / 24000 + once, i / 24000 + once]);
+      bas = -1;
+    }
+  }
+  const out = zaman.map(([a, b]) => [a, b] as [number, number]);
+  for (let j = 1; j < out.length; j++) {
+    const tahmin = out[j][0];
+    const pay = Math.max(1.5, 0.3 * Math.min(out[j - 1][1] - out[j - 1][0], out[j][1] - out[j][0]));
+    let en: [number, number] | null = null;
+    let enPuan = -Infinity;
+    for (const g of sessiz) {
+      const orta = (g[0] + g[1]) / 2;
+      if (Math.abs(orta - tahmin) > pay || g[1] <= out[j - 1][0] + 0.5) continue;
+      const puan = (g[1] - g[0]) * 2 - Math.abs(orta - tahmin) / pay; // uzun ve yakın duraklama
+      if (puan > enPuan) (enPuan = puan), (en = g);
+    }
+    if (en) {
+      const sinir = Math.max(en[0], en[1] - 0.1);
+      out[j - 1][1] = sinir;
+      out[j][0] = sinir;
+    }
+  }
+  return out;
 }
 /** Parça metalarından global, bitişik paragraf zamanlaması. Eski (zamansız) metalarda parça süresi karakter oranıyla bölünür. */
 function zamanlamaBirlestir(sag: Saglayici, parcalar: Parca[], buflar: Buffer[], metalar: ParcaMeta[]): { zamanlama: [number, number][]; kaynak: string } {
@@ -619,7 +678,7 @@ async function isIsle(is: Is) {
             const once = p.bolumBasi && i > 0 ? 0.6 : 0;
             buf = pcmMp3(pcm, 0.6, once);
             ucretliYedek = parcaUcretli;
-            zaman = geminiParcaZamani(p.metin.split('\n'), once, sure, 0.6, mp3Sure(buf, 64));
+            zaman = sessizligeOturt(pcm, once, geminiParcaZamani(p.metin.split('\n'), once, sure, 0.6, mp3Sure(buf, 64)));
             sure += 0.6 + once;
           } catch (e) {
             if (e instanceof AnahtarHatasi && !ucretli && !parcaUcretli) {

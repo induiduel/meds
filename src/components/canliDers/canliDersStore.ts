@@ -51,9 +51,18 @@ const VARYANT_KEY = 'medsoru_canli_ders_ses';
 
 /* ---------------- adresler ---------------- */
 const yol = (key: string, vid: string) => `/api/canli-ders/ses/${encodeURIComponent(key)}/${encodeURIComponent(vid)}.mp3`;
+/** Ses dosyası sürümü (bayt): dosya yenilenirse (onarım vb.) adres değişir, tarayıcı/oynatıcı eskisini kullanmaz. */
+const surumler = new Map<string, number>();
+const surumKaydet = (key: string, vs: { id: string; bayt?: number; surum?: number }[] | undefined) =>
+  (vs || []).forEach((v) => (v?.surum || v?.bayt) && surumler.set(`${key}/${v.id}`, v.surum || v.bayt!));
 export const cdSesUrl = (key: string, vid: string, indir = false) => {
   const p = yol(key, vid);
-  return `${(getCustomApiUrl(p) || '').replace(/\/$/, '')}${p}${indir ? '?indir=1' : ''}`;
+  const qs = new URLSearchParams();
+  const v = surumler.get(`${key}/${vid}`);
+  if (v) qs.set('v', String(v));
+  if (indir) qs.set('indir', '1');
+  const q = qs.toString();
+  return `${(getCustomApiUrl(p) || '').replace(/\/$/, '')}${p}${q ? `?${q}` : ''}`;
 };
 export const cdDosyaAdi = (no: string | number, baslik: string, etiket?: string) =>
   `${String(no).padStart(2, '0')} ${baslik}${etiket ? ` - ${etiket}` : ''}.mp3`.replace(/[\\/:*?"<>|]+/g, ' ').replace(/\s+/g, ' ').trim();
@@ -76,23 +85,27 @@ export function cdListeGetir(yenile = false): Promise<CdListeDers[]> {
         listeP = null;
         throw new Error(r.error || `Liste alınamadı (${r.status})`);
       }
+      r.data!.dersler.forEach((d) => surumKaydet(d.key, d.varyantlar as any));
       return r.data!.dersler.slice().sort((a, b) => (a.sira ?? 0) - (b.sira ?? 0));
     });
   }
   return listeP;
 }
-const detayCache = new Map<string, Promise<CdDetay>>();
-export function cdDetayGetir(key: string): Promise<CdDetay> {
+// Ders ayrıntısı (metin + zamanlama + PDF eşlemesi) 3 dk önbellekte: ses yeniden üretilir/onarılırsa zamanlama da tazelenir
+const DETAY_OMUR_MS = 3 * 60 * 1000;
+const detayCache = new Map<string, { p: Promise<CdDetay>; at: number }>();
+export function cdDetayGetir(key: string, yenile = false): Promise<CdDetay> {
   const hit = detayCache.get(key);
-  if (hit) return hit;
-  const p = safeJsonFetch<CdDetay>(`/api/canli-ders/${encodeURIComponent(key)}`).then((r) => {
+  if (hit && !yenile && Date.now() - hit.at < DETAY_OMUR_MS) return hit.p;
+  const p = safeJsonFetch<CdDetay>(`/api/canli-ders/${encodeURIComponent(key)}`, { cache: 'no-store' } as RequestInit).then((r) => {
     if (!r.ok || !r.data || !Array.isArray(r.data.bolumler)) {
       detayCache.delete(key);
       throw new Error(r.status === 404 ? 'Bu ders bulunamadı.' : r.error || `Ders alınamadı (${r.status})`);
     }
+    surumKaydet(key, r.data.varyantlar as any);
     return r.data;
   });
-  detayCache.set(key, p);
+  detayCache.set(key, { p, at: Date.now() });
   return p;
 }
 
@@ -297,6 +310,13 @@ function ses(): HTMLAudioElement {
       zamanlamaKur();
       tick();
       msKonum();
+    }
+    // Ses dosyası zamanlamadaki süreden belirgin farklıysa (ses yeniden üretildi/onarıldı) ayrıntıyı tazele
+    const z = st.detay?.varyantlar.find((v) => v.id === st.vid)?.zamanlama;
+    const zSon = z && z.length ? z[z.length - 1][1] : 0;
+    if (st.key && Number.isFinite(d) && zSon > 0 && Math.abs(d - zSon) > 3) {
+      const key = st.key;
+      cdDetayGetir(key, true).then((yeni) => { if (st.key === key) cdDetayBagla(yeni); }).catch(() => {});
     }
   };
   a.addEventListener('loadedmetadata', sureAl);
