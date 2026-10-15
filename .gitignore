@@ -73,3 +73,11 @@ src/data/pastQuestions.json
 data/recall_feedback.jsonl
 data/recall_weights.json
 data/tts_cache/
+
+# Sesli anlatım: sesler ve çalışma durumu sunucuda üretilir (metin/ + dersler.json repoda)
+data/sesli_anlatim/ses/
+data/sesli_anlatim/kayit.json
+data/sesli_anlatim/kuyruk.json
+data/sesli_anlatim/butce.json
+data/sesli_anlatim/ayar.json
+data/sesli_anlatim/*.tmp

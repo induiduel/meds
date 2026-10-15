@@ -1,0 +1,47 @@
+/* Yönetim › Sesli anlatım (ManageSesliAnlatimSection) */
+.sa-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 8px; }
+.sa-stats > div { border: 1px solid var(--line, rgba(127,127,127,.2)); border-radius: 12px; padding: 10px 12px; display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.sa-stats b { font-size: 1.15rem; font-variant-numeric: tabular-nums; }
+.sa-stats span { font-size: .75rem; opacity: .7; }
+.sa-stats .is-warn b { color: var(--danger, #c0392b); }
+
+.sa-list { list-style: none; margin: 0; padding: 0; }
+.sa-row { border-top: 1px solid var(--line, rgba(127,127,127,.15)); }
+.sa-row:first-child { border-top: 0; }
+.sa-head { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; padding: 10px 14px; }
+.sa-title { display: flex; align-items: center; gap: 10px; flex: 1 1 280px; min-width: 0; text-align: left; background: none; border: 0; padding: 0; color: inherit; cursor: pointer; }
+.sa-title b { display: block; font-weight: 600; overflow: hidden; text-overflow: ellipsis; }
+.sa-title small { display: block; font-size: .75rem; opacity: .65; }
+.sa-no { flex: none; width: 30px; height: 30px; border-radius: 9px; display: grid; place-items: center; font-size: .8rem; font-weight: 700; background: var(--accent-soft, rgba(80,120,255,.12)); font-variant-numeric: tabular-nums; }
+.sa-badges { display: flex; flex-wrap: wrap; gap: 6px; }
+.sa-quick { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+.sa-audio { height: 32px; max-width: 100%; width: 320px; }
+.sa-body { padding: 0 14px 14px 54px; display: flex; flex-direction: column; gap: 10px; }
+@media (max-width: 640px) { .sa-body { padding-left: 14px; } .sa-audio { width: 100%; } }
+.sa-variants { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 6px; }
+.sa-variants > li { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; border: 1px solid var(--line, rgba(127,127,127,.18)); border-radius: 10px; padding: 8px 10px; }
+.sa-vt { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+.sa-variants small { font-size: .75rem; opacity: .7; }
+.sa-vact { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.sa-alt { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; padding: 10px; border-radius: 10px; background: var(--surface-2, rgba(127,127,127,.06)); }
+.sa-alt select { width: auto; min-width: 140px; }
+.sa-hint { flex-basis: 100%; font-size: .72rem; opacity: .65; }
+.sa-text { white-space: pre-wrap; font: inherit; font-size: .85rem; line-height: 1.55; max-height: 420px; overflow: auto; margin-top: 8px; padding: 12px; border-radius: 10px; background: var(--surface-2, rgba(127,127,127,.06)); }
+.sa-bar { position: relative; height: 16px; border-radius: 8px; background: rgba(127,127,127,.15); overflow: hidden; margin-top: 6px; max-width: 420px; }
+.sa-bar > i { position: absolute; inset: 0 auto 0 0; background: var(--accent, #4f7cff); opacity: .55; transition: width .4s ease; }
+.sa-bar > span { position: relative; font-size: .68rem; padding-left: 8px; line-height: 16px; font-variant-numeric: tabular-nums; }
+.sa-err { font-size: .75rem; color: var(--danger, #c0392b); margin-top: 4px; word-break: break-word; }
+.sa-job { font-size: .82rem; }
+.sa-queue { list-style: none; margin: 0; padding: 0; max-height: 420px; overflow: auto; }
+.sa-qrow { display: flex; gap: 10px; align-items: flex-start; padding: 8px 14px; border-top: 1px solid var(--line, rgba(127,127,127,.12)); }
+.sa-qn { flex: none; width: 22px; font-size: .75rem; opacity: .6; text-align: right; padding-top: 2px; font-variant-numeric: tabular-nums; }
+.sa-qtitle { font-weight: 600; font-size: .88rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.sa-qmeta { font-size: .74rem; opacity: .75; }
+.sa-qact { display: flex; gap: 4px; flex: none; }
+.sa-qrow.is-calisiyor .sa-qtitle::after { content: ' ●'; color: var(--accent, #4f7cff); }
+.sa-mini { height: 4px; border-radius: 2px; background: rgba(127,127,127,.18); overflow: hidden; margin-top: 4px; }
+.sa-mini > i { display: block; height: 100%; background: var(--accent, #4f7cff); transition: width .4s ease; }
+.sa-switch { display: flex; align-items: center; gap: 8px; margin-top: 6px; font-size: .78rem; font-weight: 600; cursor: pointer; }
+.sa-switch input { width: 34px; height: 18px; accent-color: var(--danger, #c0392b); cursor: pointer; }
+.sa-paid { grid-column: span 2; }
+@media (max-width: 640px) { .sa-paid { grid-column: auto; } }

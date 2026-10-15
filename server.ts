@@ -18,6 +18,7 @@ import { pgDb, pgHealth, pgListen } from './src/services/pgDb';
 import * as rawLedger from './src/services/rawQuestionLedger';
 import { registerDbQueryRoute, invalidateDbQueryCache } from './src/services/dbQueryRoute';
 import { registerTtsRoute } from './src/services/ttsRoute';
+import { registerSesliAnlatimRoutes } from './src/services/sesliAnlatim';
 import crypto from 'crypto';
 
 const require = createRequire(import.meta.url);
@@ -2690,6 +2691,7 @@ app.post('/api/live/broadcast', (req, res) => {
 // Tarayıcının veritabanı erişimi yalnız bu kapıdan (beyaz liste + yönetici denetimi)
 registerDbQueryRoute(app, isRequestAdmin);
 registerTtsRoute(app);
+registerSesliAnlatimRoutes(app, requireAdmin, (ev, data) => broadcastRealtimeEvent(ev, data, true), ADMIN_EMAIL);
 
 // Gidiş-dönüş testi: NOTIFY → LISTEN → SSE zincirinin tamamını ölçer (Sistem Tanılama ekranı).
 app.post('/api/live/ping', async (req, res) => {

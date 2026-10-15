@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useRef, useState } from 'react';
+import React, { Suspense, lazy, useEffect, useMemo, useRef, useState } from 'react';
 import {
   ShieldCheck,
   Inbox,
@@ -27,6 +27,7 @@ import {
   Clock,
   Boxes,
   BookOpenCheck,
+  AudioLines,
   MessageSquareText,
   Archive,
   UserSearch,
@@ -59,6 +60,7 @@ import { ManageAutomationSection } from './ManageAutomationSection';
 import { ManageDataCoreSection } from './ManageDataCoreSection';
 import { ManageNotebookLMSection } from './ManageNotebookLMSection';
 import { ManagePendingOperationsSection } from './ManagePendingOperationsSection';
+const ManageSesliAnlatimSection = lazy(() => import('./ManageSesliAnlatimSection'));
 import { consoleLogBuffer } from './ConsoleLogBuffer';
 import { ManageMetrics } from './ManageMetrics';
 import { useAppearance, DENSITY_LABELS, type Density as AppDensity } from '../../utils/appearance';
@@ -84,7 +86,7 @@ import {
   deleteDraftEverywhere,
 } from '../../services/manageConsoleService';
 
-export type ManageSection = 'overview' | 'pending' | 'inbox' | 'intake' | 'pool' | 'catalog' | 'data' | 'phases' | 'merges' | 'raw_pool' | 'ders_isci' | 'drafts' | 'studio' | 'moderation' | 'people' | 'users' | 'scripts' | 'system' | 'automation' | 'datacore' | 'notebooklm' | 'database';
+export type ManageSection = 'overview' | 'pending' | 'inbox' | 'intake' | 'pool' | 'catalog' | 'data' | 'phases' | 'merges' | 'raw_pool' | 'ders_isci' | 'drafts' | 'studio' | 'moderation' | 'people' | 'users' | 'scripts' | 'system' | 'automation' | 'datacore' | 'notebooklm' | 'database' | 'sesli';
 
 interface ManageConsoleProps {
   adminEmail: string;
@@ -110,6 +112,7 @@ const SECTIONS: { id: ManageSection; slug: string; label: string; hint: string; 
   { id: 'catalog', slug: 'veri-katalogu', label: 'Veri kataloğu', hint: 'Her veri türü tek yerde: ara, sınıflara göre süz, kaydı düzenle, değerlendir (onaylı / inceleme / sorunlu), etiketle ve ilişkileri gez.', icon: Boxes, group: 'İçerik', keywords: 'katalog sınıflandır etiket değerlendir ilişki deste kazanım sözlük kart hastalık özet geri bildirim müzik' },
   { id: 'data', slug: 'tum-veriler', label: 'Tüm veriler', hint: 'Her veri kümesi tek tabloda: ara, sırala, seç, toplu işlem yap, CSV al.', icon: Table2, group: 'İçerik', keywords: 'tablo csv toplu' },
   { id: 'phases', slug: 'fazlar', label: 'Faz verileri', hint: 'Soru bazında faz çıktıları: gez, elle düzelt, arama testini çalıştır.', icon: FlaskConical, group: 'İçerik', keywords: 'faz 14 faz 15' },
+  { id: 'sesli', slug: 'sesli-anlatim', label: 'Sesli anlatım', hint: 'Her dersin konuşma metni ve MP3 sesi: dinle, indir, sağlayıcıyı gör; alternatif ses (Gemini ücretsiz/ücretli) oluştur; seslendirme kuyruğunu yönet.', icon: AudioLines, group: 'İçerik', keywords: 'ses mp3 sesli anlatım dinle indir emel gemini aoede seslendirme podcast' },
   { id: 'ders_isci', slug: 'yeni-dersler', label: 'Yeni dersler', hint: 'Drive\'a eklenen ders PDF\'lerinden ders işçisinin ürettiği paketler: incele, önizle, onayla; 2026-27 checklist durumu.', icon: BookOpenCheck, group: 'İçerik', keywords: 'ders işçisi drive pdf onay taslak deste checklist yeni ders' },
   { id: 'raw_pool', slug: 'ham-havuz', label: 'Ham soru havuzu', hint: 'Kullanıcı soruları ve katkıları (ipucu, şık, itiraz, yorum, oy) soru başına tek kümede; silinmez. Görüntüle, sınıflandır, düzenle, JSON/CSV al.', icon: Archive, group: 'İçerik', keywords: 'ham veri defter küme kullanıcı katkı ipucu şık itiraz dışa aktar json' },
   { id: 'merges', slug: 'birlesenler', label: 'Birleştirilen sorular', hint: 'Kopya çıkmış sorular: yan yana karşılaştır, asıl soruyu seç ya da ayır.', icon: GitMerge, group: 'İçerik', keywords: 'kopya birleştir' },
@@ -129,7 +132,7 @@ const SECTIONS: { id: ManageSection; slug: string; label: string; hint: string; 
 const V12_GROUPS: { label: string; ids: ManageSection[] }[] = [
   { label: 'Gelen', ids: ['inbox', 'pending', 'moderation'] },
   { label: 'Sorular', ids: ['pool', 'raw_pool', 'intake', 'drafts', 'studio', 'merges'] },
-  { label: 'Öğrenme içeriği', ids: ['ders_isci', 'catalog', 'notebooklm'] },
+  { label: 'Öğrenme içeriği', ids: ['ders_isci', 'sesli', 'catalog', 'notebooklm'] },
   { label: 'Veri', ids: ['data', 'phases', 'datacore', 'database'] },
   { label: 'Kişiler ve denetim', ids: ['people', 'users'] },
   { label: 'Sistem', ids: ['system', 'automation', 'scripts'] },
@@ -659,6 +662,12 @@ export const ManageConsole: React.FC<ManageConsoleProps> = ({
       {section === 'raw_pool' && <ManageRawPoolSection adminEmail={adminEmail} />}
       {section === 'intake' && <ManageIntakeSection adminEmail={adminEmail} />}
       {section === 'ders_isci' && <ManageDersIsciSection adminEmail={adminEmail} />}
+
+      {section === 'sesli' && (
+        <Suspense fallback={<div className="h-48 rounded-2xl ms-shimmer" role="status" aria-label="Yükleniyor" />}>
+          <ManageSesliAnlatimSection adminEmail={adminEmail} />
+        </Suspense>
+      )}
 
       {section === 'drafts' && (
         <ManageDraftsSection

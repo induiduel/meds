@@ -44,6 +44,7 @@
     "composer:sim": "tsx scripts/composer/simulate.mts"
   },
   "dependencies": {
+    "@breezystack/lamejs": "^1.2.7",
     "@google/genai": "^2.4.0",
     "@tailwindcss/vite": "^4.3.3",
     "@tanstack/react-query": "^5.104.2",
