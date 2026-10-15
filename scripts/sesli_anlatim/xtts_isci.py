@@ -18,9 +18,10 @@ Kullanım:
   xtts_isci.py dene "metin" [--ses AD] [--cikti a.mp3]   # tek seferlik deneme (sunucuya dokunmaz)
 Ortam: MEDS_XTTS_SUNUCU (varsayılan MEDS_ORACLE_API_URL ya da https://api.nofrostlife.com.tr),
        MEDS_PANEL_SECRET (.env'den), XTTS_IS_PARCACIGI (torch iş parçacığı, varsayılan 6), XTTS_HIZ (1.2 — Türkçe için önerilen; muhammedsaban/coqui-xtts-v2-turkish-local),
-       XTTS_CIHAZ (auto | cuda | cpu), XTTS_GPU_PAY (0.4).
-GPU: AGENTS.md kural 10'un TEK istisnası (kullanıcı izni 2026-10-16) — en fazla %40: VRAM payı 0.4 ile sınırlı ve
-her GPU sentezinden sonra GPU boşta bekletilir (çalışma/toplam ≈ %40). GPU yoksa ya da bellek yetmezse CPU'ya düşer;
+       XTTS_CIHAZ (auto | cuda | cpu), XTTS_GPU_PAY (0.7), XTTS_SICAK_UST (80), XTTS_SICAK_ALT (70).
+GPU: AGENTS.md kural 10'un TEK istisnası (kullanıcı izni 2026-10-16) — en fazla %70: VRAM payı 0.7 ile sınırlı ve
+her GPU sentezinden sonra GPU boşta bekletilir (çalışma/toplam ≈ pay). Isı denetimi: GPU 80 °C'yi aşınca pay %20'ye
+iner, 70 °C'ye düşünce yeniden %70; 85 °C'de 70 °C'ye inene kadar tamamen durur. GPU yoksa ya da bellek yetmezse CPU'ya düşer;
 model ağırlıkları RAM'den yüklenir, metin işleme ve MP3 kodlama CPU'da.
 """
 from __future__ import annotations
@@ -91,8 +92,47 @@ def istek(yol: str, govde: dict | bytes | None = None, yontem: str = "POST", bas
 
 # ---------------------------------------------------------------- sentez (ağır süreç)
 
-GPU_PAY = min(0.4, float(os.environ.get("XTTS_GPU_PAY", "0.4")))  # kullanıcı izni en fazla %40
+GPU_PAY = min(0.7, float(os.environ.get("XTTS_GPU_PAY", "0.7")))  # kullanıcı izni en fazla %70
+YAVAS_PAY = 0.2
+SICAK_UST = float(os.environ.get("XTTS_SICAK_UST", "80"))  # bunun üstünde yavaşla
+SICAK_ALT = float(os.environ.get("XTTS_SICAK_ALT", "70"))  # buna inince tam hız
+SICAK_DUR = SICAK_UST + 5  # bunun üstünde tamamen bekle
 CIHAZ = {"ad": "cpu"}
+ISI = {"yavas": False, "olcum": 0.0, "c": None}
+
+
+def gpu_sicaklik() -> float | None:
+    """nvidia-smi ile GPU sıcaklığı (°C); 2 sn önbellek. Okunamazsa None (denetim devre dışı, pay sabit)."""
+    if time.time() - ISI["olcum"] < 2:
+        return ISI["c"]
+    try:
+        out = subprocess.run(["nvidia-smi", "--query-gpu=temperature.gpu", "--format=csv,noheader,nounits"],
+                             capture_output=True, text=True, timeout=5).stdout.split()
+        ISI["c"] = float(out[0]) if out else None
+    except Exception:
+        ISI["c"] = None
+    ISI["olcum"] = time.time()
+    return ISI["c"]
+
+
+def etkin_pay() -> float:
+    """Isı histerezisi: > SICAK_UST → yavaş (YAVAS_PAY), ≤ SICAK_ALT → tam (GPU_PAY); ≥ SICAK_DUR → soğuyana kadar bekle."""
+    c = gpu_sicaklik()
+    if c is None:
+        return GPU_PAY
+    if c >= SICAK_DUR:
+        log(f"GPU {c:.0f} °C → {SICAK_ALT:.0f} °C'ye inene kadar bekleniyor")
+        while (c := gpu_sicaklik()) is not None and c > SICAK_ALT:
+            time.sleep(5)
+        ISI["yavas"] = False
+        log(f"GPU {c} °C → tam hız")
+    elif c > SICAK_UST and not ISI["yavas"]:
+        ISI["yavas"] = True
+        log(f"GPU {c:.0f} °C > {SICAK_UST:.0f} → yavaş mod (pay %{int(YAVAS_PAY * 100)})")
+    elif c <= SICAK_ALT and ISI["yavas"]:
+        ISI["yavas"] = False
+        log(f"GPU {c:.0f} °C ≤ {SICAK_ALT:.0f} → tam hız (pay %{int(GPU_PAY * 100)})")
+    return YAVAS_PAY if ISI["yavas"] else GPU_PAY
 
 
 def model_yukle():
@@ -128,11 +168,12 @@ def gpu_birak(tts):
 
 
 def tts_cagir(tts, **kw):
-    """GPU'da: sentezden sonra GPU'yu (1-pay)/pay katı kadar boşta bırakır → ortalama kullanım ≈ %40.
+    """GPU'da: sentezden sonra GPU'yu (1-pay)/pay katı kadar boşta bırakır → ortalama kullanım ≈ pay (ısıya göre).
     GPU belleği taşarsa model CPU'ya alınır ve iş orada sürer."""
     import torch
 
     if CIHAZ["ad"] == "cuda":
+        pay = etkin_pay()
         t = time.time()
         try:
             wav = tts.tts(**kw)
@@ -141,7 +182,7 @@ def tts_cagir(tts, **kw):
             log("GPU belleği yetmedi (pay %d) → CPU'ya geçiliyor" % int(GPU_PAY * 100))
             gpu_birak(tts)
             return tts.tts(**kw)
-        time.sleep((time.time() - t) * (1 - GPU_PAY) / GPU_PAY)
+        time.sleep((time.time() - t) * (1 - pay) / pay)
         return wav
     return tts.tts(**kw)
 

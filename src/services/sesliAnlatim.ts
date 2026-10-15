@@ -77,6 +77,8 @@ const P = {
   kuyruk: path.join(KOK, 'kuyruk.json'),
   butce: path.join(KOK, 'butce.json'),
   ayar: path.join(KOK, 'ayar.json'),
+  /** Yerel ses planı: hangi derse hangi yerel sağlayıcı + konuşmacıyla alternatif üretilecek { key: { saglayici, ses } } */
+  plan: path.join(KOK, 'yerel_plan.json'),
   metin: (k: string) => path.join(KOK, 'metin', `${k}.md`),
   sesDir: (k: string) => path.join(KOK, 'ses', k),
   ses: (k: string, v: string) => path.join(KOK, 'ses', k, `${v}.mp3`),
@@ -94,7 +96,16 @@ const GEMINI_PARCA = 3000;
 const YEREL_PARCA = 3000; // xtts-yerel ve ema-yerel
 // XTTS v2 hazır konuşmacıları (Türkçe okunuşu dinlenerek seçildi; ses klonlama yok). Varsayılan Chandra MacFarland:
 // muhammedsaban/coqui-xtts-v2-turkish-local'ın Türkçe için önerdiği ses (hız 1.2, ≤220 karakterlik cümle parçaları).
-const XTTS_SESLER = ['Chandra MacFarland', 'Ana Florence', 'Daisy Studious', 'Gracie Wise', 'Sofia Hellen', 'Tammie Ema', 'Alison Dietlinde', 'Claribel Dervla'];
+const XTTS_ONCELIKLI = ['Chandra MacFarland', 'Ana Florence', 'Daisy Studious', 'Gracie Wise', 'Sofia Hellen', 'Tammie Ema', 'Alison Dietlinde', 'Claribel Dervla'];
+// Tam liste (58 hazır konuşmacı) xtts_ornekler.py'nin yazdığı ornek/xtts_konusmacilar.json'dan; öncelikliler başta
+const XTTS_SESLER = (() => {
+  try {
+    const tam: string[] = JSON.parse(fs.readFileSync(path.join(process.cwd(), 'data', 'sesli_anlatim', 'ornek', 'xtts_konusmacilar.json'), 'utf8'));
+    return [...XTTS_ONCELIKLI, ...tam.filter((x) => typeof x === 'string' && !XTTS_ONCELIKLI.includes(x))];
+  } catch {
+    return XTTS_ONCELIKLI;
+  }
+})();
 /** Bu kadar süre sinyal gelmezse yerel işçi çevrimdışı sayılır; üzerindeki iş başka bir yerel işçiye açılır. */
 const YEREL_ZAMAN_ASIMI_MS = 10 * 60000;
 // Gemini TTS'e YALNIZ ders metni gider: Türkçe üslup yönergesi modele verildiğinde sesli okunuyordu (k1-28 ücretli
@@ -961,7 +972,21 @@ function durum() {
       };
     })(),
     ucretliAktif: !!ayar().ucretliAktif,
+    yerelPlan: yerelPlan(),
+    /** Örneği olan konuşmacılar: "<saglayici>/<ses>" */
+    ornekler: Object.entries(SAGLAYICILAR).flatMap(([id, x]) =>
+      x.sesler.filter((v) => fs.existsSync(path.join(KOK, 'ornek', `${id}-${sesSlug(v)}.mp3`))).map((v) => `${id}/${v}`),
+    ),
   };
+}
+
+type PlanSatiri = { saglayici: Saglayici; ses: string; at?: string };
+const yerelPlan = () => oku<Record<string, PlanSatiri>>(P.plan, {});
+/** Plan satırı zaten karşılanmış mı: aynı sağlayıcı+sesle varyant var ya da iş sırada/çalışıyor. */
+function planDurumu(key: string, p: PlanSatiri): 'hazir' | 'sirada' | 'bekliyor' {
+  if ((kayitlar()[key] || []).some((v) => v.saglayici === p.saglayici && v.ses === p.ses)) return 'hazir';
+  if (kuyruk().some((x) => x.key === key && x.saglayici === p.saglayici && x.ses === p.ses && ['bekliyor', 'calisiyor', 'kota-bekliyor'].includes(x.durum))) return 'sirada';
+  return 'bekliyor';
 }
 
 function guvenliAnahtar(k: string) {
@@ -1256,6 +1281,60 @@ export function registerSesliAnlatimRoutes(
     sinyal(req, undefined, birak ? 'iş bırakıldı' : 'hata');
     degisti('hata');
     res.json({ ok: true });
+  });
+
+  // Konuşmacı örneği (panelde "Dinle"): data/sesli_anlatim/ornek/<saglayici>-<ses-slug>.mp3 — aynı kısa cümle
+  app.get('/api/sesli-anlatim/ornek/:saglayici/:ses', requireAdmin, (req, res) => {
+    const sag = String(req.params.saglayici) as Saglayici;
+    const s0 = SAGLAYICILAR[sag];
+    if (!s0 || !s0.sesler.includes(String(req.params.ses))) return res.status(404).end();
+    const f = path.join(KOK, 'ornek', `${sag}-${sesSlug(String(req.params.ses))}.mp3`);
+    if (!fs.existsSync(f)) return res.status(404).end();
+    res.setHeader('Content-Type', 'audio/mpeg');
+    res.setHeader('Cache-Control', 'private, max-age=3600');
+    fs.createReadStream(f).pipe(res);
+  });
+
+  // Yerel ses planı: { plan: { <key>: { saglayici, ses } | null } } birleştirilir (null satırı siler)
+  app.post('/api/sesli-anlatim/yerel/plan', requireAdmin, guclu, (req, res) => {
+    const gelen = req.body?.plan;
+    if (!gelen || typeof gelen !== 'object') return res.status(400).json({ error: 'plan yok' });
+    const plan = yerelPlan();
+    for (const [key, v] of Object.entries(gelen as Record<string, any>)) {
+      const k = guvenliAnahtar(key);
+      if (!k) continue;
+      if (!v) {
+        delete plan[k];
+        continue;
+      }
+      const sag = String(v.saglayici) as Saglayici;
+      if (!yerelMi(sag) || !SAGLAYICILAR[sag]) return res.status(400).json({ error: `yerel sağlayıcı değil: ${sag}` });
+      const ses = SAGLAYICILAR[sag].sesler.includes(String(v.ses)) ? String(v.ses) : SAGLAYICILAR[sag].varsayilanSes;
+      plan[k] = { saglayici: sag, ses, at: simdi() };
+    }
+    yaz(P.plan, plan);
+    degisti('plan');
+    res.json({ ok: true, plan });
+  });
+
+  // Planı kuyruğa al: verilen dersler (yoksa tüm plan); hazır ya da zaten sıradaki satırlar atlanır
+  app.post('/api/sesli-anlatim/yerel/plan/kuyruga', requireAdmin, guclu, (req, res) => {
+    const plan = yerelPlan();
+    const keys: string[] = Array.isArray(req.body?.keys) ? req.body.keys.map(String) : Object.keys(plan);
+    const dersler = oku<Ders[]>(P.dersler, []);
+    const sira = (k: string) => dersler.find((d) => d.key === k)?.sira ?? 9999;
+    let eklendi = 0;
+    let atlandi = 0;
+    for (const k of keys.filter((x) => plan[x]).sort((a, b) => sira(a) - sira(b))) {
+      const p = plan[k];
+      if (!fs.existsSync(P.metin(k)) || planDurumu(k, p) !== 'bekliyor') {
+        atlandi++;
+        continue;
+      }
+      isEkle(k, p.saglayici, p.ses, { isteyen: `plan:${String(req.headers['x-admin-email'] || 'panel')}` });
+      eklendi++;
+    }
+    res.json({ ok: true, eklendi, atlandi });
   });
 
   app.post('/api/sesli-anlatim/yerel/aktif', requireAdmin, guclu, (req, res) => {

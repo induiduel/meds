@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
-import { AudioLines, Download, Play, Plus, RotateCcw, X, ArrowUp, Star, Trash2, FileText, Wallet, Pause, ListOrdered } from 'lucide-react';
+import { AudioLines, Download, Play, Plus, RotateCcw, X, ArrowUp, Star, Trash2, FileText, Wallet, Pause, ListOrdered, Cpu } from 'lucide-react';
 import { safeJsonFetch, getCustomApiUrl } from '../../services/api';
 import { toast } from '../ui/Toast';
 import { confirmDialog } from '../ui/ConfirmDialog';
@@ -13,7 +13,7 @@ import './sesli-anlatim.css';
  * Varsayılan ses Microsoft Edge Emel (ücretsiz). "Alternatif oluştur" ile Gemini sesi (ücretsiz anahtar havuzu ya da
  * ücretli anahtar — bütçe kilidi 850 TL, tavan 900 TL) üretilir; ücretli üretim yalnız buradan elle başlar.
  */
-type Saglayici = 'edge-emel' | 'gemini-ucretsiz' | 'gemini-ucretli';
+type Saglayici = 'edge-emel' | 'gemini-ucretsiz' | 'gemini-ucretli' | 'xtts-yerel' | 'ema-yerel';
 type Varyant = {
   id: string; saglayici: Saglayici; ses: string; etiket: string; ucretli: boolean; sureSn: number; bayt: number; parca: number;
   olusturuldu: string; maliyetTL?: number; metinGuncel?: boolean; dogrulama?: { parca: number; toplam: number; ortalama: number | null };
@@ -28,8 +28,46 @@ type Durum = {
   dersler: Ders[]; kuyruk: Is[]; saglayicilar: SaglayiciBilgi[];
   butce: { tavanTL: number; kilitTL: number; harcananTL: number; kalanTL: number; varsayim: string; anahtarVar: boolean };
   isci: { aktif: boolean; calisiyor: boolean };
+  /** Coqui XTTS v2: yöneticinin bilgisayarındaki işçi (scripts/sesli_anlatim/xtts_isci.py); eski sunucuda yok */
+  yerel?: YerelOzet & { aktif: boolean; isciler?: Partial<Record<Saglayici, YerelOzet>> };
   ucretliAktif: boolean;
+  /** Yerel ses planı: ders → yerel sağlayıcı + konuşmacı (sunucuda yerel_plan.json) */
+  yerelPlan?: Record<string, { saglayici: Saglayici; ses: string; at?: string }>;
+  /** Örneği olan konuşmacılar "<saglayici>/<ses>" (panelde Dinle) */
+  ornekler?: string[];
 };
+
+/** Konuşmacı örneği: tek paylaşılan oynatıcı; başka örnek başlayınca öncekini durdurur. */
+let ornekSes: HTMLAudioElement | null = null;
+const OrnekDinle: React.FC<{ d: Durum; saglayici?: Saglayici | ''; ses?: string; url: (sag: string, ses: string) => string }> = ({ d, saglayici, ses, url }) => {
+  const [caliyor, setCaliyor] = useState(false);
+  const benim = React.useRef<HTMLAudioElement | null>(null);
+  useEffect(() => () => benim.current?.pause(), []); // satır kapanınca yalnız kendi örneğini durdurur
+  if (!saglayici || !ses || !d.ornekler?.includes(`${saglayici}/${ses}`)) return null;
+  const tikla = () => {
+    if (caliyor) {
+      benim.current?.pause();
+      return setCaliyor(false);
+    }
+    ornekSes?.pause(); // başka düğmenin örneği: kendi pause dinleyicisi onu kapatır
+    const a = new Audio(url(saglayici, ses));
+    ornekSes = a;
+    benim.current = a;
+    a.addEventListener('ended', () => setCaliyor(false), { once: true });
+    a.addEventListener('pause', () => setCaliyor(false), { once: true });
+    setCaliyor(true);
+    a.play().catch(() => {
+      setCaliyor(false);
+      toast.error('Örnek çalınamadı.');
+    });
+  };
+  return (
+    <button type="button" className="ms-btn is-sm" onClick={tikla} title={`${ses} örneğini dinle`} aria-label={`${ses} örneğini ${caliyor ? 'durdur' : 'dinle'}`}>
+      {caliyor ? <Pause /> : <Play />}
+    </button>
+  );
+};
+type YerelOzet = { cevrimici: boolean; ad: string | null; sonSinyal: string | null; not: string | null };
 /** Yazma uçları doğrulanmış yönetici ister: Firebase oturum jetonu eklenir (yerelde loopback yeter). */
 async function yetkili(h: Record<string, string>): Promise<Record<string, string>> {
   const u = auth.currentUser;
@@ -47,7 +85,7 @@ const DURUM_ETIKET: Record<string, string> = {
 };
 const sure = (sn: number) => (sn >= 3600 ? `${Math.floor(sn / 3600)} sa ${Math.round((sn % 3600) / 60)} dk` : `${Math.floor(sn / 60)} dk ${String(Math.round(sn % 60)).padStart(2, '0')} sn`);
 const mb = (b: number) => `${(b / 1048576).toFixed(1)} MB`;
-const kisaEtiket = (v: Varyant) => (v.saglayici === 'edge-emel' ? 'Emel' : `${v.ses}${v.ucretli ? ' · ücretli' : ''}`);
+const kisaEtiket = (v: Varyant) => (v.saglayici === 'edge-emel' ? 'Emel' : v.saglayici === 'xtts-yerel' ? `${v.ses} · XTTS` : `${v.ses}${v.ucretli ? ' · ücretli' : ''}`);
 
 export const ManageSesliAnlatimSection: React.FC<{ adminEmail: string }> = ({ adminEmail }) => {
   const headers = useMemo(() => ({ 'Content-Type': 'application/json', 'x-admin-email': adminEmail || '' }), [adminEmail]);
@@ -83,6 +121,10 @@ export const ManageSesliAnlatimSection: React.FC<{ adminEmail: string }> = ({ ad
     const qs = new URLSearchParams({ adminEmail: adminEmail || '' });
     if (indir) qs.set('indir', '1');
     return `${getCustomApiUrl(yol).replace(/\/$/, '')}${yol}?${qs}`;
+  }, [adminEmail]);
+  const ornekUrl = useCallback((sag: string, ses: string) => {
+    const yol = `/api/sesli-anlatim/ornek/${sag}/${encodeURIComponent(ses)}`;
+    return `${getCustomApiUrl(yol).replace(/\/$/, '')}${yol}?${new URLSearchParams({ adminEmail: adminEmail || '' })}`;
   }, [adminEmail]);
   const post = async (yol: string, body?: any) => {
     const r = await safeJsonFetch<any>(yol, { method: 'POST', headers: await yetkili(headers), body: JSON.stringify(body || {}) });
@@ -159,6 +201,32 @@ export const ManageSesliAnlatimSection: React.FC<{ adminEmail: string }> = ({ ad
           </label>
         </div>
       </div>
+
+      {d.yerel && (() => {
+        const xi = d.yerel.isciler?.['xtts-yerel'] ?? d.yerel; // XTTS işçisinin kendi sinyali (eski sunucuda ortak)
+        return (
+        <div className={`sa-yerel ${xi.cevrimici ? 'is-on' : ''}`}>
+          <Cpu className="w-4 h-4" aria-hidden />
+          <div className="min-w-0 flex-1">
+            <b>Bu PC · Coqui XTTS v2</b>{' '}
+            <span className={`ms-tag ${xi.cevrimici ? 'is-ok' : ''}`}>{xi.cevrimici ? 'Çevrimiçi' : 'Çevrimdışı'}</span>
+            <small>
+              {xi.cevrimici
+                ? `${xi.ad || 'yerel işçi'} · ${xi.not || 'iş bekliyor'} · son sinyal ${timeLabel(xi.sonSinyal!, true)}`
+                : xi.sonSinyal
+                  ? `Son sinyal ${timeLabel(xi.sonSinyal, true)}. Bilgisayar açılınca (meds-xtts servisi) sıradaki işi kendisi alır.`
+                  : 'Henüz bağlanmadı. Bilgisayarda: systemctl --user start meds-xtts'}
+              {' '}Bir derste "Alternatif oluştur → Coqui XTTS v2 · bu PC" seçip onayladığında o ders bu bilgisayarda (GPU en fazla %70, 80 °C üstünde yavaşlar + CPU) seslendirilir.
+            </small>
+          </div>
+          <button type="button" className="ms-btn is-sm" onClick={() => void post('/api/sesli-anlatim/yerel/aktif', { aktif: !d.yerel!.aktif })}>
+            {d.yerel.aktif ? <><Pause /> Yerel işçiyi durdur</> : <><Play /> Yerel işçiyi aç</>}
+          </button>
+        </div>
+        );
+      })()}
+
+      {d.yerelPlan && <YerelPlan d={d} post={post} ornekUrl={ornekUrl} />}
 
       <Panel
         title="Seslendirme kuyruğu"
@@ -255,6 +323,8 @@ export const ManageSesliAnlatimSection: React.FC<{ adminEmail: string }> = ({ ad
                 post={post}
                 headers={headers}
                 yukle={yukle}
+                d={d}
+                ornekUrl={ornekUrl}
               />
             ))}
           </ul>
@@ -294,7 +364,9 @@ const DersSatiri: React.FC<{
   post: (yol: string, body?: any) => Promise<boolean>;
   headers: Record<string, string>;
   yukle: () => Promise<void>;
-}> = ({ ders, saglayicilar, butce, ucretliAktif, acik, onAc, calan, setCalan, sesUrl, post, headers, yukle }) => {
+  d: Durum;
+  ornekUrl: (sag: string, ses: string) => string;
+}> = ({ ders, saglayicilar, butce, ucretliAktif, acik, onAc, calan, setCalan, sesUrl, post, headers, yukle, d, ornekUrl }) => {
   const [sag, setSag] = useState<Saglayici>('gemini-ucretsiz');
   const [ses, setSes] = useState('Aoede');
   const [metin, setMetin] = useState<string | null>(null);
@@ -316,7 +388,15 @@ const DersSatiri: React.FC<{
       });
       if (!ok) return;
     }
-    if (await post('/api/sesli-anlatim/uret', { key: ders.key, saglayici: sag, ses })) toast.success('Alternatif ses kuyruğa alındı.');
+    if (sag === 'xtts-yerel') {
+      const ok = await confirmDialog({
+        title: 'Bu bilgisayarda seslendirilsin mi?',
+        message: `"${ders.baslik}" Coqui XTTS v2 (${ses}) ile senin bilgisayarında seslendirilecek: GPU en fazla %70 (80 °C üstünde yavaşlar), gerisi CPU ve RAM. Tahmini süre ~${Math.max(5, Math.round(ders.tahminiDk * 0.4))} dk; bilgisayar kapalıysa açılınca başlar, yarıda kalırsa kaldığı parçadan sürer. Ücretsiz.`,
+        confirmLabel: 'Onayla ve kuyruğa al',
+      });
+      if (!ok) return;
+    }
+    if (await post('/api/sesli-anlatim/uret', { key: ders.key, saglayici: sag, ses })) toast.success(sag === 'xtts-yerel' ? 'Ders bu PC\'nin kuyruğuna alındı.' : 'Alternatif ses kuyruğa alındı.');
   };
   const metniAc = async () => {
     setMetinAcik((v) => !v);
@@ -423,6 +503,7 @@ const DersSatiri: React.FC<{
               <select className="ms-input" value={ses} onChange={(e) => setSes(e.target.value)} aria-label="Ses">
                 {(sb?.sesler || []).map((s) => <option key={s} value={s}>{s}</option>)}
               </select>
+              <OrnekDinle d={d} saglayici={sag} ses={ses} url={ornekUrl} />
               <button type="button" className={`ms-btn is-sm ${sb?.ucretli ? 'is-danger' : 'is-primary'}`} onClick={() => void alternatif()} disabled={sb?.ucretli && (!butce.anahtarVar || !ucretliAktif)}>
                 <AudioLines /> {sb?.ucretli ? `Ücretli oluştur (~${tahminiTL.toLocaleString('tr-TR')} TL)` : 'Oluştur'}
               </button>
@@ -441,6 +522,151 @@ const DersSatiri: React.FC<{
         </div>
       )}
     </li>
+  );
+};
+
+/**
+ * Yerel ses planı: hangi derse hangi yerel sesle (XTTS konuşmacısı / EMA) alternatif üretileceği. Plan sunucuda tutulur;
+ * "Planı kuyruğa al" yalnız henüz hazır ya da sırada olmayan satırları kuyruğa ekler (bu PC işçisi sırayla alır).
+ */
+const YerelPlan: React.FC<{ d: Durum; post: (yol: string, body?: any) => Promise<boolean>; ornekUrl: (sag: string, ses: string) => string }> = ({ d, post, ornekUrl }) => {
+  const [acik, setAcik] = useState(false);
+  const [ara, setAra] = useState('');
+  const [secili, setSecili] = useState<Set<string>>(new Set());
+  const yereller = d.saglayicilar.filter((s) => s.id === 'xtts-yerel' || s.id === 'ema-yerel');
+  const [topluSag, setTopluSag] = useState<Saglayici>('xtts-yerel');
+  const topluSb = yereller.find((s) => s.id === topluSag) || yereller[0];
+  const [topluSes, setTopluSes] = useState(topluSb?.varsayilanSes || '');
+  useEffect(() => {
+    if (topluSb && !topluSb.sesler.includes(topluSes)) setTopluSes(topluSb.varsayilanSes);
+  }, [topluSag]); // eslint-disable-line react-hooks/exhaustive-deps
+  const plan = d.yerelPlan || {};
+
+  const durumu = (x: Ders) => {
+    const p = plan[x.key];
+    if (!p) return null;
+    if (x.varyantlar.some((v) => v.saglayici === p.saglayici && v.ses === p.ses)) return 'hazir';
+    if (x.isler.some((j) => j.saglayici === p.saglayici && j.ses === p.ses)) return 'sirada';
+    return 'bekliyor';
+  };
+  const dersler = useMemo(() => {
+    const q = ara.trim().toLocaleLowerCase('tr-TR');
+    return d.dersler
+      .filter((x) => x.metin)
+      .filter((x) => !q || x.baslik.toLocaleLowerCase('tr-TR').includes(q) || String(x.no) === q)
+      .sort((a, b) => a.sira - b.sira);
+  }, [d.dersler, ara]);
+  const bekleyen = d.dersler.filter((x) => durumu(x) === 'bekliyor');
+  const kaydet = (degisiklik: Record<string, { saglayici: Saglayici; ses: string } | null>) => post('/api/sesli-anlatim/yerel/plan', { plan: degisiklik });
+  const toplu = async (kaldir: boolean) => {
+    if (!secili.size) return toast.error('Önce ders seç.');
+    const ok = await kaydet(Object.fromEntries([...secili].map((k) => [k, kaldir ? null : { saglayici: topluSag, ses: topluSes }])));
+    if (ok) toast.success(kaldir ? `${secili.size} ders plandan çıkarıldı.` : `${secili.size} derse ${topluSes} atandı.`);
+  };
+  const kuyrugaAl = async (keys?: string[]) => {
+    const hedef = keys ? bekleyen.filter((x) => keys.includes(x.key)) : bekleyen;
+    if (!hedef.length) return toast.error('Kuyruğa alınacak plan satırı yok (hepsi hazır ya da sırada).');
+    const dk = hedef.reduce((t, x) => t + x.tahminiDk, 0);
+    const ok = await confirmDialog({
+      title: `${hedef.length} ders bu bilgisayarda seslendirilsin mi?`,
+      message: `${hedef.slice(0, 6).map((x) => `${x.no}. ${x.baslik} → ${plan[x.key].ses}`).join('\n')}${hedef.length > 6 ? `\n… ve ${hedef.length - 6} ders daha` : ''}\n\nToplam ~${dk} dk ses; bu PC'de tahmini ~${Math.max(5, Math.round(dk * 0.4))} dk sürer (GPU en fazla %70, 80 °C üstünde yavaşlar). Dersler sırayla alınır, ücretsiz.`,
+      confirmLabel: 'Onayla ve kuyruğa al',
+    });
+    if (!ok) return;
+    if (await post('/api/sesli-anlatim/yerel/plan/kuyruga', keys ? { keys } : {})) toast.success(`${hedef.length} ders kuyruğa alındı.`);
+  };
+  const tumSecili = dersler.length > 0 && dersler.every((x) => secili.has(x.key));
+
+  return (
+    <Panel
+      title="Yerel ses planı"
+      icon={Cpu}
+      count={Object.keys(plan).length}
+      desc="Hangi derse hangi yerel sesle (Coqui XTTS v2 konuşmacısı ya da EMA) alternatif oluşturulacağını seç. Plan kaydedilir; onayladığında yalnız henüz hazır ya da sırada olmayan dersler bu bilgisayarın kuyruğuna girer."
+      flush={!acik}
+      tools={
+        <>
+          <span className="ms-tag">{bekleyen.length} bekliyor</span>
+          <button type="button" className="ms-btn is-sm is-primary" disabled={!bekleyen.length} onClick={() => void kuyrugaAl()}>
+            <ListOrdered /> Planı kuyruğa al
+          </button>
+          <button type="button" className="ms-btn is-sm" onClick={() => setAcik((v) => !v)}>{acik ? 'Gizle' : 'Düzenle'}</button>
+        </>
+      }
+    >
+      {acik && (
+        <div className="sa-plan">
+          <div className="sa-plan-bar">
+            <label className="sa-plan-chk">
+              <input
+                type="checkbox"
+                checked={tumSecili}
+                onChange={() => setSecili(tumSecili ? new Set() : new Set(dersler.map((x) => x.key)))}
+              />
+              <span>Tümü ({secili.size})</span>
+            </label>
+            <select className="ms-input" value={topluSag} onChange={(e) => setTopluSag(e.target.value as Saglayici)} aria-label="Toplu atama sağlayıcısı">
+              {yereller.map((s) => <option key={s.id} value={s.id}>{s.etiket}</option>)}
+            </select>
+            <select className="ms-input" value={topluSes} onChange={(e) => setTopluSes(e.target.value)} aria-label="Toplu atama sesi">
+              {(topluSb?.sesler || []).map((x) => <option key={x} value={x}>{x}</option>)}
+            </select>
+            <OrnekDinle d={d} saglayici={topluSag} ses={topluSes} url={ornekUrl} />
+            <button type="button" className="ms-btn is-sm" onClick={() => void toplu(false)} disabled={!secili.size}>Seçilenlere ata</button>
+            <button type="button" className="ms-btn is-sm" onClick={() => void toplu(true)} disabled={!secili.size}><X /> Plandan çıkar</button>
+            {secili.size > 0 && (
+              <button type="button" className="ms-btn is-sm" onClick={() => void kuyrugaAl([...secili])}>Seçilenleri kuyruğa al</button>
+            )}
+            <div className="flex-1 min-w-[180px]"><SearchBox value={ara} onChange={setAra} placeholder="Ders adı ya da no" /></div>
+          </div>
+          <ul className="sa-plan-list">
+            {dersler.map((x) => {
+              const p = plan[x.key];
+              const sb = yereller.find((s) => s.id === p?.saglayici);
+              const dr = durumu(x);
+              return (
+                <li key={x.key} className={p ? 'is-planned' : ''}>
+                  <input
+                    type="checkbox"
+                    aria-label={`${x.no}. ${x.baslik} seç`}
+                    checked={secili.has(x.key)}
+                    onChange={() => setSecili((o) => { const n = new Set(o); if (n.has(x.key)) n.delete(x.key); else n.add(x.key); return n; })}
+                  />
+                  <span className="sa-plan-t" title={`${x.no}. ${x.baslik}`}><span className="sa-no">{x.no}</span> {x.baslik} <small>~{x.tahminiDk} dk</small></span>
+                  <select
+                    className="ms-input"
+                    value={p?.saglayici || ''}
+                    aria-label={`${x.baslik} yerel ses ajanı`}
+                    onChange={(e) => {
+                      const sag = e.target.value as Saglayici;
+                      const yeni = yereller.find((s) => s.id === sag);
+                      void kaydet({ [x.key]: yeni ? { saglayici: sag, ses: yeni.varsayilanSes } : null });
+                    }}
+                  >
+                    <option value="">— yerel ses yok</option>
+                    {yereller.map((s) => <option key={s.id} value={s.id}>{s.id === 'xtts-yerel' ? 'XTTS v2' : s.id === 'ema-yerel' ? 'EMA' : s.etiket}</option>)}
+                  </select>
+                  <select
+                    className="ms-input"
+                    value={p?.ses || ''}
+                    disabled={!p}
+                    aria-label={`${x.baslik} konuşmacı`}
+                    onChange={(e) => void kaydet({ [x.key]: { saglayici: p!.saglayici, ses: e.target.value } })}
+                  >
+                    {!p && <option value="">—</option>}
+                    {(sb?.sesler || []).map((v) => <option key={v} value={v}>{v}</option>)}
+                  </select>
+                  <span className="sa-plan-dinle"><OrnekDinle d={d} saglayici={p?.saglayici} ses={p?.ses} url={ornekUrl} /></span>
+                  <span className={`ms-tag ${dr === 'hazir' ? 'is-ok' : dr === 'sirada' ? 'is-accent' : ''}`}>
+                    {dr === 'hazir' ? 'Hazır' : dr === 'sirada' ? 'Sırada' : dr === 'bekliyor' ? 'Planlandı' : '—'}
+                  </span>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+      )}
+    </Panel>
   );
 };
 

@@ -45,3 +45,28 @@
 .sa-switch input { width: 34px; height: 18px; accent-color: var(--danger, #c0392b); cursor: pointer; }
 .sa-paid { grid-column: span 2; }
 @media (max-width: 640px) { .sa-paid { grid-column: auto; } }
+
+/* Bu PC (XTTS) işçi şeridi */
+.sa-yerel { display: flex; align-items: center; gap: 10px; padding: 10px 12px; border: 1px solid var(--ms-line, rgba(127,127,127,.25)); border-radius: 12px; flex-wrap: wrap; }
+.sa-yerel.is-on { border-color: var(--ms-ok, #2f9e6a); }
+.sa-yerel small { display: block; opacity: .75; line-height: 1.35; margin-top: 2px; }
+
+/* Yerel ses planı */
+.sa-plan { display: flex; flex-direction: column; gap: 8px; padding: 10px 12px; }
+.sa-plan-bar { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
+.sa-plan-bar .ms-input { width: auto; min-width: 0; max-width: 100%; }
+.sa-plan-chk { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; }
+.sa-plan-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; max-height: 60vh; overflow: auto; }
+.sa-plan-list li { display: grid; grid-template-columns: auto minmax(140px, 1fr) minmax(92px, 130px) minmax(130px, 190px) 34px 76px; align-items: center; gap: 8px; padding: 6px 2px; border-top: 1px solid var(--line, rgba(127,127,127,.18)); }
+.sa-plan-list li.is-planned .sa-plan-t { font-weight: 600; }
+.sa-plan-list .ms-input { width: 100%; min-width: 0; }
+.sa-plan-t { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; display: flex; align-items: center; gap: 6px; }
+.sa-plan-t .sa-no { flex: none; }
+.sa-plan-t small { opacity: .6; font-weight: 400; }
+@media (max-width: 640px) {
+  .sa-plan-list li { grid-template-columns: auto minmax(0, 1fr) auto; }
+  .sa-plan-list li .ms-input { grid-column: 2 / 4; }
+  .sa-plan-list li .ms-tag { grid-column: 3; grid-row: 1; }
+}
+.sa-plan-dinle { display: inline-flex; min-width: 34px; }
+@media (max-width: 640px) { .sa-plan-dinle { grid-column: 3; } }
