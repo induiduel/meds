@@ -33,6 +33,8 @@ export interface NavItem {
   id: AppRoute;
   label: string;
   short?: string;
+  /** Telefon "Tüm sayfalar" döşemesi (iki satıra kadar); yoksa label */
+  tile?: string;
   hint: string;
   icon: React.ElementType;
   tint: string;
@@ -63,7 +65,7 @@ const I: Record<string, NavItem> = {
   music: { id: 'music', label: 'Müzik', hint: 'Çalışırken dinle', icon: Music, tint: '#FF375F' },
   practice: { id: 'practice', label: 'Test çöz', short: 'Test', hint: 'Süreli deneme sınavı', icon: Timer, tint: '#0A84FF' },
   notes: { id: 'notes', label: 'Ders notları', short: 'Notlar', hint: 'Amfi slaytları ve ders notları', icon: NotebookPen, tint: '#FF9F0A' },
-  stats: { id: 'stats', label: 'İstatistiklerim', short: 'İstatistik', hint: 'İlerleme, puan ve etkinlik', icon: BarChart3, tint: '#5E5CE6' },
+  stats: { id: 'stats', label: 'İstatistiklerim', short: 'İstatistik', tile: 'İstatistik', hint: 'İlerleme, puan ve etkinlik', icon: BarChart3, tint: '#5E5CE6' },
   settings: { id: 'settings', label: 'Profil ve ayarlar', short: 'Ayarlar', hint: 'Tema, palet, yoğunluk, fotoğraf', icon: Settings2, tint: '#8E8E93' },
 };
 
@@ -106,13 +108,20 @@ export const V12_MORE_TREE: NavGroup[] = [
   { label: 'Kaynaklar', items: V12_RAIL[1].items },
   ...V12_RAIL_MORE.map((g) => ({ ...g, items: g.items.filter((it) => !V12_IN_TABS.has(it.id)) })),
 ].filter((g) => g.items.length > 0);
-/** Telefon "Tüm sayfalar" ızgarası: çalışma sayfaları bir arada, kaynak ve diğerleri ayrı (az grup, az kaydırma) */
-const PHONE_STUDY = new Set<AppRoute>(['canli_ders', 'questions', 'flashcards', 'practice', 'ornek_sorular', 'study', 'kazanimlar', 'spots', 'summaries']);
-const flatMore = V12_MORE_TREE.flatMap((g) => g.items);
-export const V12_PHONE_TREE: NavGroup[] = [
-  { label: 'Çalış', items: flatMore.filter((it) => PHONE_STUDY.has(it.id)) },
-  { label: 'Kaynaklar ve diğer', items: flatMore.filter((it) => !PHONE_STUDY.has(it.id)) },
-].filter((g) => g.items.length > 0);
+/**
+ * Telefon "Tüm sayfalar" ızgarası: çalışma sayfaları bir arada, kaynak ve diğerleri ayrı (az grup, az kaydırma).
+ * Alt çubuk kişiselleştirilebildiği için (shell/phoneNav) o an alt çubukta duranlar `exclude` ile çıkarılır.
+ */
+const PHONE_STUDY = new Set<AppRoute>(['today', 'learn', 'past_exams', 'canli_ders', 'questions', 'flashcards', 'practice', 'ornek_sorular', 'study', 'kazanimlar', 'spots', 'summaries']);
+/** Telefonda alt çubuğa konabilen / ızgarada duran her sayfa (Soru ekle ve Ayarlar hariç) */
+export const V12_PHONE_PAGES: NavItem[] = [I.today, I.learn, I.past_exams, ...V12_MORE_TREE.flatMap((g) => g.items)];
+export const v12PhoneTree = (exclude: ReadonlySet<AppRoute>): NavGroup[] => {
+  const items = V12_PHONE_PAGES.filter((it) => !exclude.has(it.id));
+  return [
+    { label: 'Çalış', items: items.filter((it) => PHONE_STUDY.has(it.id)) },
+    { label: 'Kaynaklar ve diğer', items: items.filter((it) => !PHONE_STUDY.has(it.id)) },
+  ].filter((g) => g.items.length > 0);
+};
 
 /** Global arama paletini aç (üst çubuk dinler; kenar menüsü ve kısayollar tetikler) */
 export const openSearch = () => window.dispatchEvent(new CustomEvent('medsoru:search'));

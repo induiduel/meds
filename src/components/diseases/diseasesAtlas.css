@@ -48,7 +48,7 @@
 /* ---------------- Bölmeli düzen (Odak ≥1024) ---------------- */
 .hx-split { display: grid; grid-template-columns: minmax(300px, 380px) minmax(0, 1fr); gap: 16px; align-items: start; }
 .hx-split-list { min-width: 0; }
-.hx-pane { position: sticky; top: calc(var(--pt-top, 52px) + var(--hx-bar) + 4px); max-height: calc(100dvh - var(--pt-top, 52px) - var(--hx-bar) - 16px); overflow-y: auto; overscroll-behavior: contain; min-width: 0; border: 1px solid var(--color-line); border-radius: 14px; background: var(--color-canvas); scrollbar-width: thin; }
+.hx-pane { position: sticky; top: calc(var(--pt-top, 52px) + var(--hx-bar) + 4px); max-height: calc(100dvh / var(--in-zoom, 1) - var(--pt-top, 52px) - var(--hx-bar) - 16px); overflow-y: auto; overscroll-behavior: contain; min-width: 0; border: 1px solid var(--color-line); border-radius: 14px; background: var(--color-canvas); scrollbar-width: thin; }
 .hx-pane > .hx-pane-empty { border: 0; background: transparent; }
 .hx-pane .hx-detail { padding: 16px 18px 20px; }
 

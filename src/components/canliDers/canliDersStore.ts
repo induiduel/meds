@@ -75,6 +75,14 @@ export const fmtSure = (s: number) => {
   const sn = Math.floor(s % 60);
   return h ? `${h}:${String(m).padStart(2, '0')}:${String(sn).padStart(2, '0')}` : `${m}:${String(sn).padStart(2, '0')}`;
 };
+/** Kısa ses adı: "Emel · Edge", "Aoede · Gemini" (tam etiket title'da kalır) */
+export const cdSesKisa = (v: Pick<CdVaryant, 'etiket' | 'ses' | 'saglayici' | 'id'> | null | undefined) => {
+  if (!v) return '';
+  const p = v.saglayici || '';
+  const kaynak = /edge/i.test(p) ? 'Edge' : /gemini/i.test(p) ? 'Gemini' : '';
+  const ad = v.ses || (v.etiket || '').split('·').pop()?.trim() || v.id;
+  return kaynak ? `${ad} · ${kaynak}` : ad;
+};
 export const fmtMb = (b: number) => (b > 0 ? `${(b / 1048576).toFixed(b < 10485760 ? 1 : 0)} MB` : '');
 
 /* ---------------- veri ---------------- */
@@ -174,6 +182,7 @@ const subscribe = (f: () => void) => {
   return () => subs.delete(f);
 };
 export const cdDurum = () => st;
+export const cdAbone = subscribe;
 export function useCd<T>(sel: (s: CdState) => T): T {
   return useSyncExternalStore(subscribe, () => sel(st), () => sel(st));
 }
@@ -280,6 +289,9 @@ export const cdAralik = (i: number): [number, number] | null => {
 export const cdBolumBaslari = (): number[] => bolumBas.map((k) => (k < starts.length ? starts[k] : NaN)).filter((x) => Number.isFinite(x));
 
 /* ---------------- ses öğesi ---------------- */
+/** Ders bitince çağrılır (oynatma listesi / tekrar: canliDersListe.ts kaydeder) */
+let bitinceFn: (() => void) | null = null;
+export const cdBitinceKaydet = (f: (() => void) | null) => { bitinceFn = f; };
 let audio: HTMLAudioElement | null = null;
 let raf = 0;
 let sonKayit = 0;
@@ -311,7 +323,7 @@ function ses(): HTMLAudioElement {
   pitch(a);
   a.addEventListener('play', () => { set({ playing: true, hata: null }); loopBaslat(); msDurum(); });
   a.addEventListener('pause', () => { set({ playing: false }); tick(); konumKaydet(); msDurum(); });
-  a.addEventListener('ended', () => { set({ playing: false }); konumKaydet(true); msDurum(); });
+  a.addEventListener('ended', () => { set({ playing: false }); konumKaydet(true); msDurum(); bitinceFn?.(); });
   a.addEventListener('timeupdate', () => { if (!raf) tick(); });
   a.addEventListener('seeked', () => { tick(); msKonum(); });
   a.addEventListener('waiting', () => set({ bekliyor: true }));
@@ -371,6 +383,11 @@ function konumKaydet(bitti = false) {
   }
 }
 export const cdKayitliKonum = (key: string) => konumlar()[key] || null;
+/** Tüm kaldığın yer kayıtları (en yeni önce) */
+export const cdKonumListesi = () =>
+  Object.entries(konumlar())
+    .map(([key, k]) => ({ key, ...k }))
+    .sort((a, b) => b.at - a.at);
 const tercihVaryant = (vs: CdVaryant[]) => {
   try {
     const want = localStorage.getItem(VARYANT_KEY);

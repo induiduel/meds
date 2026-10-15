@@ -6,6 +6,7 @@ import { Highlight } from '../../components/ui/StemText';
 import { SourceText } from '../../components/ui/SourceText';
 import { ActionMenu, ActionItem } from '../../components/ui/ActionMenu';
 import { CopyQuestionButton } from '../../components/ui/CopyQuestionButton';
+import { elementZoom } from '../../utils/uiZoom';
 
 /**
  * Çıkmış soru kartı.
@@ -125,8 +126,10 @@ const OptRow: React.FC<{
   const onPointerMove = (e: React.PointerEvent) => {
     const s = start.current;
     if (!s || !hasActions) return;
-    const mx = e.clientX - s.x;
-    const my = e.clientY - s.y;
+    // Kart ölçekli (v12 zoom) içerikte: parmak kayması kartın kendi px'ine çevrilir, kart parmağı birebir izler
+    const z = elementZoom(e.currentTarget as Element);
+    const mx = (e.clientX - s.x) / z;
+    const my = (e.clientY - s.y) / z;
     if (s.locked === null && (Math.abs(mx) > 6 || Math.abs(my) > 6)) s.locked = Math.abs(mx) > Math.abs(my);
     if (!s.locked) return;
     moved.current = true;

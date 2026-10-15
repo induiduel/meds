@@ -247,7 +247,7 @@ html.ui-v7 :is(.ms-modal-panel, .ds-modal, .ms-drawer, .ms-filter-panel) { backg
 html.ui-v7 :is(.ms-modal-panel > header, .ds-modal-head, .ms-drawer-head) { background: color-mix(in srgb, var(--color-canvas) 90%, transparent); border-bottom: 0; }
 html.ui-v7 .ms-modal-panel > header h2, html.ui-v7 .ms-drawer-title { font-size: 17px; font-weight: 600; }
 html.ui-v7 :is(.ms-modal-panel > footer, .ds-modal-foot, .ms-drawer-foot) { border-top: 0; background: var(--color-canvas); }
-html.ui-v7 .ms-drawer { width: min(400px, 100vw); }
+html.ui-v7 .ms-drawer { width: min(400px, 100vw / var(--in-zoom, 1)); }
 html.ui-v7 .ms-drawer-scrim { background: rgb(0 0 0 / .32); }
 html.ui-v7 .ms-fchip { height: 32px; padding: 0 12px; border: 0; border-radius: 99px; background: var(--color-white); color: var(--color-ink); font-size: 14px; font-weight: 500; }
 html.ui-v7 .ms-fchip:hover { background: color-mix(in srgb, var(--color-white) 90%, var(--color-ink)); }
@@ -316,7 +316,7 @@ html.ui-v7 .cx-q-meta b { display: inline-flex; align-items: center; gap: 6px; }
 .ms-cpal-btn span { flex: 1; text-align: left; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .ms-cpal-btn kbd, .ms-cpal-in kbd { font-family: var(--font-sans); font-size: 11px; padding: 1px 6px; border-radius: 5px; background: var(--color-white); color: var(--color-ink-3); box-shadow: 0 0 0 1px var(--color-line); }
 @media (max-width: 767px) { .ms-cpal-btn { flex: 0 0 auto; width: 34px; padding: 0; justify-content: center; } .ms-cpal-btn :is(span, kbd) { display: none; } }
-.ms-cpal { width: min(560px, 100%); max-height: min(70vh, 560px); display: flex; flex-direction: column; overflow: hidden; border-radius: 14px; background: color-mix(in srgb, var(--color-white) 94%, transparent); -webkit-backdrop-filter: saturate(1.8) blur(30px); backdrop-filter: saturate(1.8) blur(30px); box-shadow: var(--shadow-xl); animation: ds-pop .18s var(--ease-out-soft) both; }
+.ms-cpal { width: min(560px, 100%); max-height: min(70vh / var(--in-zoom, 1), 560px); display: flex; flex-direction: column; overflow: hidden; border-radius: 14px; background: color-mix(in srgb, var(--color-white) 94%, transparent); -webkit-backdrop-filter: saturate(1.8) blur(30px); backdrop-filter: saturate(1.8) blur(30px); box-shadow: var(--shadow-xl); animation: ds-pop .18s var(--ease-out-soft) both; }
 .ms-cpal-in { display: flex; align-items: center; gap: 10px; height: 52px; padding: 0 14px; border-bottom: 1px solid var(--color-line); }
 .ms-cpal-in svg { width: 18px; height: 18px; color: var(--color-ink-3); }
 .ms-cpal-in input { flex: 1; min-width: 0; height: 100%; border: 0; outline: 0; background: transparent; color: var(--color-ink); font: inherit; font-size: 17px; }
@@ -422,7 +422,7 @@ html.ui-v7:not(.theme-dark) :is(.cx-q, .ds-card, .ds-list, .ds-panel, .lh-card, 
 @media (min-width: 1024px) { .gx { grid-template-columns: minmax(300px, 380px) minmax(0, 1fr); align-items: start; } }
 .gx-list { display: flex; flex-direction: column; gap: 12px; min-width: 0; }
 @media (min-width: 1024px) {
-  .gx-list { position: sticky; top: 60px; max-height: calc(var(--vvh, 100dvh) - 76px); overflow-y: auto; overscroll-behavior: contain; padding-right: 2px; scrollbar-width: thin; }
+  .gx-list { position: sticky; top: 60px; max-height: calc(var(--vvh, 100dvh) / var(--in-zoom, 1) - 76px); overflow-y: auto; overscroll-behavior: contain; padding-right: 2px; scrollbar-width: thin; }
 }
 .gx-group { content-visibility: auto; contain-intrinsic-size: 1px 260px; }
 .gl-grid > li { content-visibility: auto; contain-intrinsic-size: 1px 180px; }
@@ -441,7 +441,7 @@ html.ui-v7:not(.theme-dark) .gx-group > ul { box-shadow: 0 0 0 1px rgb(30 40 60 
 .gx-ok { width: 13px; height: 13px; flex-shrink: 0; color: var(--color-ok); }
 .gx-saved { width: 13px; height: 13px; flex-shrink: 0; color: var(--color-warn); }
 .gx-kurul { flex-shrink: 0; font-family: var(--font-round); font-size: 11.5px; font-weight: 600; color: var(--color-ink-3); }
-.gx-detail { min-width: 0; position: sticky; top: 60px; max-height: calc(var(--vvh, 100dvh) - 76px); display: flex; }
+.gx-detail { min-width: 0; position: sticky; top: 60px; max-height: calc(var(--vvh, 100dvh) / var(--in-zoom, 1) - 76px); display: flex; }
 .gx-pane { width: 100%; border-radius: 14px; background: var(--color-white); animation: ds-pop .2s var(--ease-out-soft) both; }
 html.ui-v7:not(.theme-dark) .gx-pane { box-shadow: 0 0 0 1px rgb(30 40 60 / .06), 0 1px 2px rgb(30 40 60 / .04); }
 .gx-pane .ds-modal-head { background: transparent; padding: 16px 12px 10px 20px; }

@@ -10,7 +10,10 @@
 //   ses/<key>/<vid>.mp3, ses/<key>/.parca/<isId>/NNN.mp3 (yarım işin parçaları; kaldığı yerden sürer)
 //
 // Sağlayıcılar: Microsoft Edge Emel (ücretsiz), Gemini TTS ücretsiz anahtar havuzu (GEMINI_API_KEY + GEMINI_FREE_KEY_N),
-// Gemini TTS ücretli anahtar (TTS_PAID_GEMINI_KEY; yalnız panelden elle, bütçe kilidi 850 TL / tavan 900 TL).
+// Gemini TTS ücretli anahtar (TTS_PAID_GEMINI_KEY; yalnız panelden elle, bütçe kilidi 850 TL / tavan 900 TL),
+// Coqui XTTS v2 — yöneticinin bilgisayarında CPU ile (xtts-yerel): sunucu sentezlemez; işi o PC'deki
+// scripts/sesli_anlatim/xtts_isci.py `/api/sesli-anlatim/yerel/*` uçlarından alır, parçaları yükler, birleştirme burada.
+import express from 'express';
 import type { Express, Request, Response, NextFunction } from 'express';
 import fs from 'fs';
 import path from 'path';
@@ -19,7 +22,7 @@ import { Mp3Encoder } from '@breezystack/lamejs';
 import { freeGeminiKeyNames } from './aiProvider';
 import { isStrongAdmin } from './peopleInsights';
 
-type Saglayici = 'edge-emel' | 'gemini-ucretsiz' | 'gemini-ucretli';
+type Saglayici = 'edge-emel' | 'gemini-ucretsiz' | 'gemini-ucretli' | 'xtts-yerel';
 type IsDurum = 'bekliyor' | 'calisiyor' | 'kota-bekliyor' | 'bitti' | 'hata' | 'iptal' | 'butce-durdu';
 
 interface Varyant {
@@ -57,6 +60,9 @@ interface Is {
   notlar?: string[];
   maliyetTL?: number;
   isteyen?: string;
+  /** xtts-yerel: işi alan bilgisayar ve son sinyali (sinyal kesilirse iş başka işçiye açılır) */
+  isci?: string;
+  sinyal?: string;
 }
 interface Ders { key: string; no: number; baslik: string; sira: number; ses: 'emel' | 'aoede' }
 
@@ -81,6 +87,11 @@ const EDGE_HIZ = '+12%';
 const KELIME_DK = 112; // Emel %12 hızda ölçüldü
 const EDGE_PARCA = 2400;
 const GEMINI_PARCA = 3000;
+const XTTS_PARCA = 3000;
+// XTTS v2 hazır konuşmacıları (Türkçe okunuşu dinlenerek seçildi; ses klonlama yok)
+const XTTS_SESLER = ['Ana Florence', 'Daisy Studious', 'Gracie Wise', 'Sofia Hellen', 'Tammie Ema', 'Alison Dietlinde', 'Claribel Dervla'];
+/** Bu kadar süre sinyal gelmezse yerel işçi çevrimdışı sayılır; üzerindeki iş başka bir yerel işçiye açılır. */
+const YEREL_ZAMAN_ASIMI_MS = 10 * 60000;
 // Gemini TTS'e YALNIZ ders metni gider: Türkçe üslup yönergesi modele verildiğinde sesli okunuyordu (k1-28 ücretli
 // sürümünde her parçanın başında duyuldu). Yönerge eklemek gerekirse önce kısa bir parçada dökümle doğrulanmalı.
 const STIL = '';
@@ -89,7 +100,10 @@ const SAGLAYICILAR: Record<Saglayici, { etiket: string; ucretli: boolean; sesler
   'edge-emel': { etiket: 'Microsoft Edge · Emel', ucretli: false, sesler: ['Emel'], varsayilanSes: 'Emel' },
   'gemini-ucretsiz': { etiket: 'Google Gemini TTS · ücretsiz anahtarlar', ucretli: false, sesler: GEMINI_SESLER, varsayilanSes: 'Aoede' },
   'gemini-ucretli': { etiket: 'Google Gemini TTS · ücretli anahtar', ucretli: true, sesler: GEMINI_SESLER, varsayilanSes: 'Aoede' },
+  'xtts-yerel': { etiket: 'Coqui XTTS v2 · bu PC (yerel)', ucretli: false, sesler: XTTS_SESLER, varsayilanSes: XTTS_SESLER[0] },
 };
+const parcaSiniri = (s: Saglayici) => (s === 'edge-emel' ? EDGE_PARCA : s === 'xtts-yerel' ? XTTS_PARCA : GEMINI_PARCA);
+const sesSlug = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 
 const oku = <T,>(p: string, bos: T): T => {
   try {
@@ -128,7 +142,9 @@ const isGuncelle = (id: string, f: (i: Is) => void) => {
   return i;
 };
 const butce = () => oku(P.butce, { tavanTL: BUTCE.tavanTL, kilitTL: BUTCE.kilitTL, harcananTL: 0, kayitlar: [] as any[] });
-const ayar = () => ({ isciAktif: true, ucretliAktif: false, ...oku<Record<string, any>>(P.ayar, {}) });
+const ayar = () => ({ isciAktif: true, ucretliAktif: false, yerelAktif: true, ...oku<Record<string, any>>(P.ayar, {}) });
+/** Yerel (XTTS) işçinin son sinyali — yalnız bellekte; panel "bu PC çevrimiçi mi" diye bunu gösterir. */
+let yerelIsci: { ad: string; at: number; isId?: string; not?: string } | null = null;
 
 // ---------- metin → parçalar ----------
 interface Parca { metin: string; kelime: number; bolumBasi: boolean; ilkParagraf: number }
@@ -559,8 +575,7 @@ const durt = () => [...uyandirilar].forEach((f) => f());
 
 async function isIsle(is: Is) {
   const md = fs.readFileSync(P.metin(is.key), 'utf8');
-  const sinir = is.saglayici === 'edge-emel' ? EDGE_PARCA : GEMINI_PARCA;
-  const parcalar = metniParcala(md, sinir);
+  const parcalar = metniParcala(md, parcaSiniri(is.saglayici));
   const dir = P.parcaDir(is.key, is.id);
   fs.mkdirSync(dir, { recursive: true });
   isGuncelle(is.id, (x) => {
@@ -712,14 +727,19 @@ async function isIsle(is: Is) {
     degisti('ilerleme');
     if (is.saglayici === 'gemini-ucretsiz') await uyu(2500);
   }
-  // birleştir
-  const vid = `${is.saglayici}-${is.ses.toLowerCase()}-${Date.now().toString(36)}`;
+  await birlestirKaydet(is, md, parcalar, dir);
+}
+
+/** Parçaları tek MP3'e birleştirir, eşleşme kapısından geçirir, varyant olarak kaydeder (Edge/Gemini işçisi ve yerel XTTS ortak). */
+async function birlestirKaydet(is: Is, md: string, parcalar: Parca[], dir: string) {
+  const sureToplam = parcalar.reduce((t, _, i) => t + (oku<{ sure?: number }>(path.join(dir, `${String(i).padStart(3, '0')}.mp3.json`), {}).sure || 0), 0);
+  const vid = `${is.saglayici}-${sesSlug(is.ses)}-${Date.now().toString(36)}`;
   const hedef = P.ses(is.key, vid);
   const parts = parcalar.map((_, i) => fs.readFileSync(path.join(dir, `${String(i).padStart(3, '0')}.mp3`)));
   const metalar = parcalar.map((_, i) => oku<{ dogrulama?: number; ucretliYedek?: boolean }>(path.join(dir, `${String(i).padStart(3, '0')}.mp3.json`), {}));
   const yedekParca = metalar.filter((m) => m.ucretliYedek).length;
   const dogrulanan = metalar.filter((m) => typeof m.dogrulama === 'number' && m.dogrulama >= 0);
-  const dogrulamaOzet = is.saglayici === 'edge-emel' ? undefined : {
+  const dogrulamaOzet = is.saglayici === 'edge-emel' || is.saglayici === 'xtts-yerel' ? undefined : {
     parca: dogrulanan.length,
     toplam: parcalar.length,
     ortalama: dogrulanan.length ? Math.round(dogrulanan.reduce((t, m) => t + (m.dogrulama || 0), 0) / dogrulanan.length) : null,
@@ -747,7 +767,7 @@ async function isIsle(is: Is) {
     id: vid,
     saglayici: is.saglayici,
     ses: is.ses,
-    model: is.saglayici === 'edge-emel' ? 'tr-TR-EmelNeural' : GEMINI_MODEL,
+    model: is.saglayici === 'edge-emel' ? 'tr-TR-EmelNeural' : is.saglayici === 'xtts-yerel' ? 'xtts_v2' : GEMINI_MODEL,
     etiket: `${s.etiket}${is.saglayici === 'edge-emel' ? '' : ` · ${is.ses}`}${yedekParca ? ` · ${yedekParca}/${parcalar.length} parça ücretli yedekle` : ''}`,
     ucretli: s.ucretli,
     sureSn: Math.round(sureToplam),
@@ -774,8 +794,10 @@ async function isIsle(is: Is) {
   degisti('bitti');
 }
 
-type Serit = 'edge' | 'gemini' | 'ucretli';
-const seritSaglayici = (x: Is): Serit => (x.saglayici === 'edge-emel' ? 'edge' : x.saglayici === 'gemini-ucretli' ? 'ucretli' : 'gemini');
+type Serit = 'edge' | 'gemini' | 'ucretli' | 'yerel';
+/** 'yerel' şeridini sunucu çalıştırmaz: işi yöneticinin bilgisayarındaki XTTS işçisi alır. */
+const seritSaglayici = (x: Is): Serit =>
+  x.saglayici === 'edge-emel' ? 'edge' : x.saglayici === 'gemini-ucretli' ? 'ucretli' : x.saglayici === 'xtts-yerel' ? 'yerel' : 'gemini';
 const uyandirilar = new Set<() => void>();
 
 /** Bir şerit: Edge (Emel), ücretsiz Gemini ve ücretli Gemini ayrı servis/anahtar kullandığından üç şerit paralel çalışır;
@@ -853,7 +875,7 @@ async function isciDongusu() {
   calisiyor = true;
   // yeniden açılışta yarım kalan işler sıraya döner (parçalar diskte durur)
   const q0 = kuyruk();
-  q0.forEach((x) => x.durum === 'calisiyor' && (x.durum = 'bekliyor'));
+  q0.forEach((x) => x.durum === 'calisiyor' && x.saglayici !== 'xtts-yerel' && (x.durum = 'bekliyor'));
   kuyrukYaz(q0);
   void seritDongusu('edge');
   void seritDongusu('gemini');
@@ -917,6 +939,13 @@ function durum() {
     saglayicilar: Object.entries(SAGLAYICILAR).map(([id, s]) => ({ id, ...s })),
     ucretsizAnahtar: ucretsizAnahtarlar().map((x) => ({ ad: x.ad, bekliyorKadar: anahtarBekleme.get(x.ad) && anahtarBekleme.get(x.ad)! > Date.now() ? new Date(anahtarBekleme.get(x.ad)!).toISOString() : null })),
     isci: { aktif: ayar().isciAktif !== false, calisiyor },
+    yerel: {
+      aktif: ayar().yerelAktif !== false,
+      cevrimici: !!yerelIsci && Date.now() - yerelIsci.at < 3 * 60000,
+      ad: yerelIsci?.ad || null,
+      sonSinyal: yerelIsci ? new Date(yerelIsci.at).toISOString() : null,
+      not: yerelIsci?.not || null,
+    },
     ucretliAktif: !!ayar().ucretliAktif,
   };
 }
@@ -1072,6 +1101,144 @@ export function registerSesliAnlatimRoutes(
     yaz(P.ayar, { ...ayar(), isciAktif: !!req.body?.aktif });
     degisti('isci');
     durt();
+    res.json({ ok: true });
+  });
+
+  // ---------- yerel XTTS işçisi (yöneticinin bilgisayarı) ----------
+  // Yalnız MEDS_PANEL_SECRET (ya da loopback) ile: işçi bu sırrı kendi .env'inden okur.
+  const isciAdi = (req: Request) => String(req.body?.isci || req.headers['x-isci'] || 'yerel').slice(0, 60);
+  const sinyal = (req: Request, isId?: string, not?: string) => {
+    yerelIsci = { ad: isciAdi(req), at: Date.now(), isId, not: not ?? yerelIsci?.not };
+  };
+  const yerelIs = (id: string) => kuyruk().find((x) => x.id === id && x.saglayici === 'xtts-yerel');
+
+  app.post('/api/sesli-anlatim/yerel/kalp', guclu, (req, res) => {
+    const isId = req.body?.isId ? String(req.body.isId) : undefined;
+    const ilk = !yerelIsci || Date.now() - yerelIsci.at > 3 * 60000;
+    sinyal(req, isId, req.body?.not ? String(req.body.not).slice(0, 200) : undefined);
+    if (isId) isGuncelle(isId, (x) => x.saglayici === 'xtts-yerel' && x.durum === 'calisiyor' && (x.sinyal = simdi()));
+    const is = isId ? yerelIs(isId) : undefined;
+    if (ilk) degisti('yerel');
+    // dur: iş iptal edildi / silindi ya da yerel işçi panelden kapatıldı → işçi parçayı bırakır
+    res.json({ ok: true, aktif: ayar().yerelAktif !== false, dur: !!isId && (!is || is.durum !== 'calisiyor' || ayar().yerelAktif === false) });
+  });
+
+  app.post('/api/sesli-anlatim/yerel/al', guclu, (req, res) => {
+    sinyal(req);
+    if (ayar().yerelAktif === false) return res.json({ is: null, neden: 'Yerel işçi panelden kapalı' });
+    const ad = isciAdi(req);
+    const q = kuyruk();
+    const an = Date.now();
+    // önce bu işçinin yarım bıraktığı ya da sinyali kesilmiş çalışan iş, sonra sıradaki
+    const is =
+      q.find((x) => x.saglayici === 'xtts-yerel' && x.durum === 'calisiyor' && (x.isci === ad || !(an - Date.parse(x.sinyal || x.basladi || '') < YEREL_ZAMAN_ASIMI_MS))) ||
+      q.find((x) => x.saglayici === 'xtts-yerel' && x.durum === 'bekliyor' && fs.existsSync(P.metin(x.key)));
+    if (!is) return res.json({ is: null });
+    const md = fs.readFileSync(P.metin(is.key), 'utf8');
+    const parcalar = metniParcala(md, XTTS_PARCA);
+    const dir = P.parcaDir(is.key, is.id);
+    fs.mkdirSync(dir, { recursive: true });
+    const mevcut = parcalar.map((_, i) => i).filter((i) => {
+      const f = path.join(dir, `${String(i).padStart(3, '0')}.mp3`);
+      return fs.existsSync(f) && fs.existsSync(`${f}.json`);
+    });
+    isGuncelle(is.id, (x) => {
+      x.durum = 'calisiyor';
+      x.basladi = x.basladi || simdi();
+      x.ilerleme = { bitti: mevcut.length, toplam: parcalar.length };
+      x.hata = undefined;
+      x.notlar = [...(x.notlar || []).slice(-9), `${simdi()} ${ad} işi aldı (${mevcut.length}/${parcalar.length} parça hazır)`];
+      x.isci = ad;
+      x.sinyal = simdi();
+    });
+    sinyal(req, is.id, `${is.key} seslendiriliyor`);
+    degisti('basladi');
+    res.json({
+      is: { id: is.id, key: is.key, ses: is.ses },
+      metinHash: hash(md),
+      parcalar: parcalar.map((p) => ({ paragraflar: p.metin.split('\n'), bolumBasi: p.bolumBasi, ilkParagraf: p.ilkParagraf })),
+      mevcut,
+    });
+  });
+
+  // Parça yükleme: gövde ham MP3 (24 kHz mono 64 kbps CBR, Xing/Info başlığı yok); meta x-parca-meta başlığında JSON
+  // {sure, zaman:[[bas,son]…] (parça başına göre, her paragraf için), metinHash}
+  app.put('/api/sesli-anlatim/yerel/is/:id/parca/:i', guclu, express.raw({ type: '*/*', limit: '40mb' }), (req, res) => {
+    const is = yerelIs(String(req.params.id));
+    if (!is || is.durum !== 'calisiyor') return res.status(409).json({ error: 'iş çalışır durumda değil' });
+    let meta: { sure?: number; zaman?: [number, number][]; metinHash?: string; not?: string };
+    try {
+      meta = JSON.parse(Buffer.from(String(req.headers['x-parca-meta'] || ''), 'base64').toString('utf8'));
+    } catch {
+      return res.status(400).json({ error: 'meta okunamadı' });
+    }
+    const md = fs.readFileSync(P.metin(is.key), 'utf8');
+    if (meta.metinHash !== hash(md)) return res.status(409).json({ error: 'Konuşma metni iş alındıktan sonra değişti; iş yeniden alınmalı' });
+    const parcalar = metniParcala(md, XTTS_PARCA);
+    const i = parseInt(String(req.params.i), 10);
+    const p = parcalar[i];
+    const buf = req.body as Buffer;
+    if (!p || !Buffer.isBuffer(buf) || buf.length < 1000) return res.status(400).json({ error: 'parça geçersiz' });
+    const pars = p.metin.split('\n');
+    const z = meta.zaman;
+    const gercek = mp3Sure(buf, 64);
+    if (!Array.isArray(z) || z.length !== pars.length || z.some(([a, b], j) => !(b > a) || a < 0 || b > gercek + 0.5 || (j > 0 && a < z[j - 1][1] - 0.01)))
+      return res.status(400).json({ error: `parça ${i + 1}: zamanlama geçersiz (${z?.length} aralık, ${pars.length} paragraf)` });
+    const dir = P.parcaDir(is.key, is.id);
+    fs.mkdirSync(dir, { recursive: true });
+    const dosya = path.join(dir, `${String(i).padStart(3, '0')}.mp3`);
+    fs.writeFileSync(dosya, buf);
+    fs.writeFileSync(`${dosya}.json`, JSON.stringify({ sure: gercek, kelime: p.kelime, bayt: buf.length, paragraf: pars.length, zaman: z.map(([a, b]) => [yuvarla(a, 3), yuvarla(b, 3)]) }));
+    const hazir = parcalar.filter((_, j) => fs.existsSync(path.join(dir, `${String(j).padStart(3, '0')}.mp3.json`))).length;
+    isGuncelle(is.id, (x) => {
+      x.ilerleme = { bitti: hazir, toplam: parcalar.length };
+      x.sinyal = simdi();
+      if (meta.not) x.notlar = [...(x.notlar || []).slice(-9), `parça ${i + 1}: ${String(meta.not).slice(0, 200)}`];
+    });
+    sinyal(req, is.id, `${is.key} ${hazir}/${parcalar.length} parça`);
+    degisti('ilerleme');
+    res.json({ ok: true, hazir, toplam: parcalar.length });
+  });
+
+  app.post('/api/sesli-anlatim/yerel/is/:id/bitir', guclu, async (req, res) => {
+    const is = yerelIs(String(req.params.id));
+    if (!is || is.durum !== 'calisiyor') return res.status(409).json({ error: 'iş çalışır durumda değil' });
+    const md = fs.readFileSync(P.metin(is.key), 'utf8');
+    const parcalar = metniParcala(md, XTTS_PARCA);
+    const dir = P.parcaDir(is.key, is.id);
+    const eksik = parcalar.map((_, i) => i).filter((i) => !fs.existsSync(path.join(dir, `${String(i).padStart(3, '0')}.mp3.json`)));
+    if (eksik.length) return res.status(400).json({ error: `eksik parça: ${eksik.map((i) => i + 1).join(', ')}` });
+    try {
+      await birlestirKaydet(is, md, parcalar, dir);
+      sinyal(req, undefined, `${is.key} bitti`);
+      res.json({ ok: true });
+    } catch (e: any) {
+      isGuncelle(is.id, (x) => {
+        x.durum = 'hata';
+        x.hata = String(e?.message || e).slice(0, 400);
+      });
+      degisti('hata');
+      res.status(422).json({ error: String(e?.message || e) });
+    }
+  });
+
+  app.post('/api/sesli-anlatim/yerel/is/:id/hata', guclu, (req, res) => {
+    const is = yerelIs(String(req.params.id));
+    if (!is) return res.status(404).json({ error: 'iş yok' });
+    const birak = !!req.body?.birak; // işçi kapanıyor: iş sıraya döner, parçalar korunur
+    isGuncelle(is.id, (x) => {
+      if (x.durum !== 'calisiyor') return;
+      x.durum = birak ? 'bekliyor' : 'hata';
+      x.hata = birak ? undefined : String(req.body?.hata || 'yerel işçi hatası').slice(0, 400);
+    });
+    sinyal(req, undefined, birak ? 'iş bırakıldı' : 'hata');
+    degisti('hata');
+    res.json({ ok: true });
+  });
+
+  app.post('/api/sesli-anlatim/yerel/aktif', requireAdmin, guclu, (req, res) => {
+    yaz(P.ayar, { ...ayar(), yerelAktif: !!req.body?.aktif });
+    degisti('yerel');
     res.json({ ok: true });
   });
 

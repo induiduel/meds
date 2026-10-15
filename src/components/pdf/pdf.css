@@ -312,7 +312,7 @@ body.pd-design-v12:is(.ps-tpl-modern, .ps-tpl-kompakt) .pd-step { border-bottom-
 .ps-dialog svg { flex-shrink: 0; }
 @media (min-width: 640px) {
   .ps-overlay { align-items: center; padding: 18px; }
-  .ps-dialog { height: min(94vh, 980px); border-radius: 18px; box-shadow: 0 24px 64px rgb(14 23 38 / .22); }
+  .ps-dialog { height: min(94vh / var(--in-zoom, 1), 980px); border-radius: 18px; box-shadow: 0 24px 64px rgb(14 23 38 / .22); }
 }
 
 /* Üst */

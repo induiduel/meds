@@ -47,7 +47,7 @@ html.theme-dark .ss-bar button:not(.is-primary) { color: var(--color-ink); }
 html.theme-dark .ss-bar button.is-danger { color: var(--color-bad); }
 html.theme-dark .ss-bar button.is-accent { color: var(--color-accent); }
 @media (max-width: 520px) {
-  .ss-bar { max-width: calc(100vw - 16px); overflow-x: auto; scrollbar-width: none; }
+  .ss-bar { max-width: calc(100vw / var(--in-zoom, 1) - 16px); overflow-x: auto; scrollbar-width: none; }
   .ss-bar button { padding: 0 9px; gap: 5px; flex-shrink: 0; }
 }
 /* Kapsamsız ::highlight her öğeye vurgu stili hesaplatır: yalnız vurgu sürerken (html.ss-vurgu-on) etkin */

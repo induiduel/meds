@@ -23,6 +23,10 @@ export const ProgressResetRow: React.FC = () => {
     });
   };
 
+  const secili = RESET_SCOPES.filter((x) => picked.has(x.id));
+  const toplam = secili.reduce((a, x) => a + (counts[x.id] || 0), 0);
+  const sayi = (n: number) => n.toLocaleString('tr-TR');
+
   const run = async () => {
     setBusy(true);
     try {
@@ -48,10 +52,10 @@ export const ProgressResetRow: React.FC = () => {
       </div>
       <div className="prs-list">
         {RESET_SCOPES.map((s) => (
-          <label key={s.id} className="prs-opt">
-            <input type="checkbox" checked={picked.has(s.id)} onChange={() => toggle(s.id)} disabled={busy} />
+          <label key={s.id} className={`prs-opt${!counts[s.id] ? ' is-bos' : ''}`}>
+            <input type="checkbox" checked={picked.has(s.id)} onChange={() => toggle(s.id)} disabled={busy || !counts[s.id]} />
             <span>
-              <b>{s.title} <em>{counts[s.id]} kayıt</em></b>
+              <b>{s.title} <em>{counts[s.id] ? `${sayi(counts[s.id])} kayıt` : 'silinecek kayıt yok'}</em></b>
               <span>{s.desc}</span>
             </span>
           </label>
@@ -60,14 +64,19 @@ export const ProgressResetRow: React.FC = () => {
       <div className="prs-act">
         {confirm ? (
           <>
-            <span className="prs-warn">Bu işlem geri alınamaz.</span>
+            <span className="prs-warn" role="alert">
+              Silinecek: {secili.map((x) => x.title).join(', ')} ({sayi(toplam)} kayıt). Bu işlem geri alınamaz.
+            </span>
             <button type="button" className="prs-btn" onClick={() => setConfirm(false)} disabled={busy}>Vazgeç</button>
-            <button type="button" className="prs-btn is-bad" onClick={run} disabled={busy}>{busy ? 'Siliniyor…' : 'Evet, sil'}</button>
+            <button type="button" className="prs-btn is-bad" onClick={run} disabled={busy}>{busy ? 'Siliniyor…' : `Evet, ${sayi(toplam)} kaydı sil`}</button>
           </>
         ) : (
-          <button type="button" className="prs-btn is-bad" onClick={() => setConfirm(true)} disabled={!picked.size}>
-            Seçilenleri sıfırla
-          </button>
+          <>
+            {!picked.size && <span className="prs-ipucu">Sıfırlamak istediğin bölümü yukarıdan seç.</span>}
+            <button type="button" className="prs-btn is-bad" onClick={() => setConfirm(true)} disabled={!picked.size}>
+              {picked.size ? `Seçilenleri sıfırla (${sayi(toplam)} kayıt)` : 'Seçilenleri sıfırla'}
+            </button>
+          </>
         )}
       </div>
     </div>

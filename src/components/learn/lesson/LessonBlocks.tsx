@@ -10,6 +10,7 @@ import { useAppearance } from '../../../utils/appearance';
 import { inline, mdToHtml, spotTone, stripEmoji } from './lessonModel';
 import type { FeedbackTarget } from './lessonFeedback';
 import { FeedbackFlag } from './LessonFeedbackUI';
+import { elementZoom } from '../../../utils/uiZoom';
 
 /* ---------------------------------------------------------------------------
  * Anlatım: markdown + metindeki tıbbi terimler (ilk geçtiği yer altı noktalı; dokununca tanım)
@@ -703,7 +704,7 @@ export const SwipeMatching: React.FC<{ e: any; onDone?: IxDone }> = ({ e, onDone
     setDrag(true);
   };
   const onMove = (ev: React.PointerEvent<HTMLDivElement>) => {
-    if (drag) setDx(ev.clientX - startX.current);
+    if (drag) setDx((ev.clientX - startX.current) / elementZoom(ev.currentTarget));
   };
   const onUp = () => {
     if (!drag) return;

@@ -6,6 +6,7 @@ import { QuestionCard } from '../QuestionCard';
 import { committeeShortLabel } from '../QuickAddHero';
 import { ActionMenu, ActionItem } from '../ui/ActionMenu';
 import { useAppearance } from '../../utils/appearance';
+import { topBarOffset } from '../../utils/uiZoom';
 import { PoolSegment, PoolSummary, fullTime, isMissing, relTime, summarize } from '../pool/poolModel';
 import { PoolOptFill } from '../pool/PoolRow';
 import { PoolContribs } from '../pool/PoolContribs';
@@ -78,7 +79,7 @@ const byRecent = (a: PoolSummary, b: PoolSummary) => b.lastAt - a.lastAt || byNu
 /** Öğeyi yapışkan üst çubuğun altına getirir */
 function bringIntoView(el: Element | null, mode: 'top' | 'nearest') {
   if (!el) return;
-  const sh = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--sh-top-h')) || 52;
+  const sh = topBarOffset();
   const r = el.getBoundingClientRect();
   const off = sh + 8;
   const vh = window.innerHeight;

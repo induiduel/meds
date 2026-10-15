@@ -216,7 +216,7 @@
   html:not([data-layout="akis"]):not([data-layout="pano"]) .xs-layout { display: grid; grid-template-columns: 260px minmax(0, 1fr) 280px; gap: 20px; align-items: start; }
   html:not([data-layout="akis"]):not([data-layout="pano"]) :is(.xs-rail, .xs-panel) {
     display: flex; flex-direction: column; gap: 14px; position: sticky; top: calc(var(--sh-top-h, 52px) + 12px);
-    max-height: calc(100dvh - var(--sh-top-h, 52px) - 24px); overflow-y: auto; overscroll-behavior: contain; scrollbar-width: thin;
+    max-height: calc(100dvh / var(--in-zoom, 1) - var(--sh-top-h, 52px) - 24px); overflow-y: auto; overscroll-behavior: contain; scrollbar-width: thin;
     padding: 14px 10px; border-radius: 16px; border: 1px solid var(--color-line); background: var(--color-white); }
   html:not([data-layout="akis"]):not([data-layout="pano"]) .xs-panel { padding: 14px; gap: 18px; }
   html:not([data-layout="akis"]):not([data-layout="pano"]) .xs-rail > .xs-cap { padding: 0 8px; }

@@ -11,6 +11,8 @@
  * `aria-expanded` taşıyan düğmeler, `<summary>`, `aria-controls` hedefleri. Kullanıcı Ayarlar'dan kapatabilir
  * (`medsoru_auto_reveal = '0'`). "Hareketi azalt" açıkken kaydırma anlık yapılır.
  */
+
+import { topBarOffset } from './uiZoom';
 const ROOTS = '.ms-qcard, .ls-ix, [data-auto-reveal]';
 const TRIGGERS = 'button, [role="button"], [role="radio"], [role="checkbox"], label, summary';
 let installed = false;
@@ -24,9 +26,8 @@ export function setAutoRevealEnabled(on: boolean) {
 }
 
 function topOffset(): number {
-  const v = getComputedStyle(document.documentElement).getPropertyValue('--sh-top-h');
-  const n = parseFloat(v);
-  return (Number.isFinite(n) ? n : 56) + 12;
+  // Üst çubuğun görünür alt kenarı (v12 ölçeğinde --sh-top-h CSS px'tir, ekranda × ölçek kaplar)
+  return topBarOffset(56) + 12;
 }
 
 /** Bir öğeyi görünür alana getirir; zaten tamamen görünüyorsa dokunmaz. */

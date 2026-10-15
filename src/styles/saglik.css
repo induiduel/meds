@@ -65,7 +65,7 @@
 .sbk-yan { min-width: 0; }
 @container sbk (min-width: 1180px) {
   .sbk-izgara.has-yan { grid-template-columns: minmax(0, 1fr) 320px; }
-  .sbk-yan { position: sticky; top: calc(var(--sh-top-h, 52px) + 12px); max-height: calc(100vh - var(--sh-top-h, 52px) - 24px); overflow-y: auto; overscroll-behavior: contain; scrollbar-width: thin; }
+  .sbk-yan { position: sticky; top: calc(var(--sh-top-h, 52px) + 12px); max-height: calc(100vh / var(--in-zoom, 1) - var(--sh-top-h, 52px) - 24px); overflow-y: auto; overscroll-behavior: contain; scrollbar-width: thin; }
 }
 
 /* ── Blok (kart) ─────────────────────────────────────────────────────────── */
@@ -332,10 +332,10 @@
 /* ── Kaynakça ────────────────────────────────────────────────────────────── */
 .sbk-kaynakca { padding: 14px 4px 0; border-top: 1px solid var(--color-line); margin-top: 4px; }
 .sbk-kaynakca h2 { margin: 0 0 2px; font-size: 15px; font-weight: 620; }
-.sbk-kaynakca > p { margin: 0 0 10px; font-size: 12.5px; }
-.sbk-kaynakca > ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; font-size: 13px; }
-.sbk-kaynakca > ol > li { display: grid; grid-template-columns: 26px minmax(0, 1fr); gap: 6px; scroll-margin-top: calc(var(--sh-top-h, 52px) + 16px); overflow-wrap: anywhere; }
-.sbk-kaynakca > ol > li:target { background: var(--color-warn-soft); border-radius: 6px; }
+.sbk-kaynakca-d > p { margin: 0 0 10px; font-size: 12.5px; }
+.sbk-kaynakca-d > ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; font-size: 13px; }
+.sbk-kaynakca-d > ol > li { display: grid; grid-template-columns: 26px minmax(0, 1fr); gap: 6px; scroll-margin-top: calc(var(--sh-top-h, 52px) + 16px); overflow-wrap: anywhere; }
+.sbk-kaynakca-d > ol > li:target { background: var(--color-warn-soft); border-radius: 6px; }
 .sbk-kaynakca-n { font-weight: 600; color: var(--color-ink-3); text-align: right; }
 .sbk-kaynakca a { color: var(--color-accent); text-decoration: none; display: inline-flex; align-items: center; gap: 3px; }
 .sbk-kaynakca a svg { width: 12px; height: 12px; }
@@ -639,7 +639,6 @@ button.sbk-zaman-b > svg { margin-left: auto; width: 16px; height: 16px; color: 
 .sbk-kpi.is-acilir:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
 .sbk-kpi-gecmis { position: absolute; right: 8px; top: 8px; display: inline-flex; align-items: center; gap: 3px; font-size: 11px; color: var(--color-ink-3); background: var(--color-field); border-radius: 6px; padding: 1px 6px; }
 .sbk-kpi-gecmis svg { width: 11px; height: 11px; }
-.sbk-kpi.is-acilir .sbk-kpi-ad { padding-right: 52px; }
 .sbk-gecmis { padding: 0; max-width: none; }
 .sbk-gecmis-arac { display: inline-flex; gap: 6px; }
 .sbk-gecmis-h { margin: 14px 0 6px; font-size: 13px; font-weight: 600; color: var(--color-ink-3); }
@@ -889,7 +888,7 @@ li.is-sec > button .sbk-gezgin-ok, li.is-acik > button .sbk-gezgin-ok { transfor
 .sbk-ara-sil svg { position: static; transform: none; }
 .sbk-havuz { display: grid; grid-template-columns: 270px minmax(0, 1fr); gap: 14px; align-items: start; }
 .sbk-havuz.is-dar { grid-template-columns: minmax(0, 1fr); }
-.sbk-havuz-nav { position: sticky; top: calc(var(--sh-top-h, 52px) + 12px); max-height: calc(100vh - var(--sh-top-h, 52px) - 24px); overflow-y: auto; padding: 10px; border-radius: 14px; background: var(--color-white); border: 1px solid var(--color-line); scrollbar-width: thin; }
+.sbk-havuz-nav { position: sticky; top: calc(var(--sh-top-h, 52px) + 12px); max-height: calc(100vh / var(--in-zoom, 1) - var(--sh-top-h, 52px) - 24px); overflow-y: auto; padding: 10px; border-radius: 14px; background: var(--color-white); border: 1px solid var(--color-line); scrollbar-width: thin; }
 .sbk-havuz-nav h4 { margin: 8px 6px 4px; font-size: 11.5px; font-weight: 650; color: var(--color-ink-3); text-transform: uppercase; letter-spacing: .04em; }
 .sbk-havuz-nav ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 2px; }
 .sbk-havuz-nav button { width: 100%; display: flex; align-items: center; gap: 8px; min-height: 36px; padding: 6px 8px; border: 0; border-radius: 8px; background: none; color: var(--color-ink); font: inherit; font-size: 13px; text-align: left; cursor: pointer; }
@@ -1137,7 +1136,7 @@ mark.sbk-ders-m { background: var(--color-warn-soft); color: inherit; border-rad
 }
 .sbk-ders-i-b:hover, .sbk-ders-i.is-acik .sbk-ders-i-b { transform: scale(1.12); }
 .sbk-ders-pop {
-  position: absolute; top: calc(100% + 6px); right: 0; width: min(330px, calc(100vw - 32px)); display: grid; gap: 10px; padding: 12px;
+  position: absolute; top: calc(100% + 6px); right: 0; width: min(330px, calc(100vw / var(--in-zoom, 1) - 32px)); display: grid; gap: 10px; padding: 12px;
   border-radius: 12px; border: 1px solid var(--color-line); background: var(--color-white); color: var(--color-ink); text-align: left;
   font-size: 13px; line-height: 1.45; font-weight: 400; letter-spacing: 0; white-space: normal; box-shadow: var(--shadow-lg, 0 8px 28px rgb(0 0 0 / .18)); cursor: default;
 }
@@ -1202,3 +1201,67 @@ mark.sbk-ders-m { background: var(--color-warn-soft); color: inherit; border-rad
 .sbk.is-kompakt .sbk-nav-gad { display: none; }
 .sbk.is-kompakt .sbk-gosterge-l button { min-height: 32px; padding: 5px 8px; font-size: 12.5px; }
 @container sbk (max-width: 640px) { .sbk.is-kompakt .sbk-ust-sag .sbk-seg { flex: 1 1 140px; } }
+
+/* ── Ders slaytı katmanı (SaglikDersKatmani.tsx): tüm sekmede vurgu + sağ üstte "!" ───────────────────────────── */
+.sbk { position: relative; }
+.sbk-ders-katman { position: absolute; top: 0; left: 0; width: 0; height: 0; z-index: 25; }
+.sbk-ders-katman .sbk-ders-i-b {
+  position: absolute; width: 17px; height: 17px; border-width: 1.5px; font-size: 11px; transform: translate(-30%, -72%);
+}
+.sbk-ders-katman .sbk-ders-i-b:hover, .sbk-ders-katman .sbk-ders-i-b.is-acik { transform: translate(-30%, -72%) scale(1.15); }
+.sbk-ders-yedek {
+  position: absolute; pointer-events: none; border-radius: 3px; border-bottom: 2px solid var(--color-warn);
+  background: color-mix(in srgb, var(--color-warn) 18%, transparent);
+}
+.sbk-icerik::highlight(sbk-ders), .sbk-icerik ::highlight(sbk-ders) { background-color: var(--color-warn-soft); text-decoration: underline 2px; text-decoration-color: var(--color-warn); }
+.sbk-ders-pop.is-sabit { position: fixed; z-index: 100003; max-height: calc(100vh / var(--in-zoom, 1) - 16px); overflow-y: auto; overscroll-behavior: contain; }
+.sbk-ders-pop-u { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.sbk-ders-pop-x {
+  width: 28px; height: 28px; display: grid; place-items: center; border: 0; border-radius: 8px; background: transparent; color: var(--color-ink-3); cursor: pointer;
+}
+.sbk-ders-pop-x svg { width: 15px; height: 15px; }
+.sbk-ders-pop-x:hover { background: var(--color-field); color: var(--color-ink); }
+.sbk-ders-git {
+  justify-self: start; display: inline-flex; align-items: center; gap: 5px; min-height: 32px; padding: 0 12px; border-radius: 9px;
+  border: 1px solid var(--color-accent); background: var(--color-accent-soft); color: var(--color-accent); font: inherit; font-size: 13px; font-weight: 600; cursor: pointer;
+}
+.sbk-ders-git svg { width: 14px; height: 14px; }
+.sbk-ders-git:hover { background: var(--color-accent); color: var(--color-on-accent); }
+.sbk-ders-pop { font-family: var(--font-sans, inherit); }
+
+/* ── Kaynakça: açılır-kapanır ───────────────────────────────────────────────────────────────────────────────── */
+.sbk-kaynakca-d > summary { display: flex; align-items: center; justify-content: space-between; gap: 10px; min-height: 40px; cursor: pointer; list-style: none; }
+.sbk-kaynakca-d > summary::-webkit-details-marker { display: none; }
+.sbk-kaynakca-d > summary h2 { display: inline-flex; align-items: center; gap: 8px; margin: 0; }
+.sbk-kaynakca-say { min-width: 22px; height: 20px; padding: 0 6px; border-radius: 999px; background: var(--color-field); color: var(--color-ink-3); font-size: 12px; font-weight: 600; display: inline-grid; place-items: center; }
+.sbk-kaynakca-ok { width: 18px; height: 18px; color: var(--color-ink-3); transition: transform var(--mo-fast, 120ms); }
+.sbk-kaynakca-d[open] .sbk-kaynakca-ok { transform: rotate(180deg); }
+.sbk-kaynakca-d > summary:hover h2 { color: var(--color-accent); }
+.sbk-kaynakca-d[open] > summary { margin-bottom: 4px; }
+.sbk { overflow-x: clip; }
+
+/* ── Anlaşılırlık katmanı (2026-10-15): işaret açıklaması, KPI geçmiş rozeti akışta, şerit kaydırma ipucu ── */
+.sbk-kpi-alt { align-items: center; }
+.sbk-kpi-alt .sbk-kpi-gecmis { position: static; margin-left: auto; }
+.sbk-kpi-alt span.sbk-kpi-gecmis::before { content: none; }
+.sbk-kpi-ad { overflow-wrap: normal; word-break: normal; hyphens: manual; }
+.sbk-ders-i-b svg { width: 11px; height: 11px; }
+.sbk-ders-katman .sbk-ders-i-b svg { width: 9px; height: 9px; }
+.sbk-lejant { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 16px; margin: -4px 0 14px; font-size: 12px; color: var(--color-ink-3); }
+.sbk-lejant > span { display: inline-flex; align-items: center; gap: 6px; }
+.sbk-lejant .sbk-atif { margin-left: 0; vertical-align: baseline; pointer-events: none; }
+.sbk-lejant .sbk-kpi-gecmis { position: static; }
+.sbk-lejant .sbk-ders-i-b.is-ornek { width: 17px; height: 17px; border-width: 1.5px; cursor: default; pointer-events: none; }
+.sbk.is-kompakt .sbk-lejant { display: none; }
+.sbk-nav-ogeler[data-tasma='sag'] { -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 36px), transparent); mask-image: linear-gradient(to right, #000 calc(100% - 36px), transparent); }
+.sbk-nav-ogeler[data-tasma='sol'] { -webkit-mask-image: linear-gradient(to left, #000 calc(100% - 36px), transparent); mask-image: linear-gradient(to left, #000 calc(100% - 36px), transparent); }
+.sbk-nav-ogeler[data-tasma='iki'] { -webkit-mask-image: linear-gradient(to right, transparent, #000 36px, #000 calc(100% - 36px), transparent); mask-image: linear-gradient(to right, transparent, #000 36px, #000 calc(100% - 36px), transparent); }
+@container sbk (max-width: 640px) {
+  .sbk-ust-sag { flex-direction: row; flex-wrap: wrap; }
+  .sbk-ust-sag .sbk-seg { flex: 1 1 0; min-width: 0; }
+  .sbk-ust-sag .sbk-seg button { padding: 0 8px; }
+  .sbk-ust-g { flex-basis: 100%; text-align: center; }
+  .sbk-genis-yazi { display: none; }
+  .sbk-lejant { gap: 4px 12px; }
+}
+@container sbk (max-width: 420px) { .sbk-ust-sag .sbk-seg svg { display: none; } .sbk-ust-sag .sbk-seg button { padding: 0 4px; font-size: 12.5px; } }

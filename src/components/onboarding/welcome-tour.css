@@ -19,7 +19,7 @@
 
 /* --- Tam ekran: karşılama ve bitiş --- */
 .wt-full {
-  position: fixed; inset: 0; z-index: 160; height: var(--vvh, 100dvh);
+  position: fixed; inset: 0; z-index: 160; height: calc(var(--vvh, 100dvh) / var(--in-zoom, 1));
   display: grid; grid-template-rows: auto minmax(0, 1fr);
   background:
     radial-gradient(120% 60% at 50% -10%, color-mix(in srgb, var(--color-accent) 14%, transparent), transparent 70%),
@@ -98,7 +98,7 @@
 @keyframes wt-pulse { 0% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--color-accent) 55%, transparent); } 100% { box-shadow: 0 0 0 14px transparent; } }
 
 .wt-card {
-  position: fixed; width: min(360px, calc(100vw - 32px)); max-height: calc(var(--vvh, 100dvh) - 32px); overflow-y: auto;
+  position: fixed; width: min(360px, calc(100vw / var(--in-zoom, 1) - 32px)); max-height: calc(var(--vvh, 100dvh) / var(--in-zoom, 1) - 32px); overflow-y: auto;
   background: var(--color-white); color: var(--color-ink); border: 1px solid var(--color-line); border-radius: 22px;
   box-shadow: var(--shadow-lg); padding: 14px 16px 12px; outline: none;
   transition: top .35s var(--ease-out-soft), left .35s var(--ease-out-soft);

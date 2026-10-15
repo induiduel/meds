@@ -4,12 +4,13 @@
  * canliDersStore'dadır; bu bileşen yalnız denetimdir.
  */
 import React, { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
-import { ArrowUpRight, Download, ListOrdered, Pause, Play, RotateCcw, RotateCw, X } from 'lucide-react';
+import { ArrowUpRight, Download, ListOrdered, Pause, Play, RotateCcw, RotateCw, SkipBack, SkipForward, X } from 'lucide-react';
 import { navigateTo, pathFor } from '../../router';
 import {
-  CD_HIZLAR, cdAtla, cdBolumBaslari, cdDosyaAdi, cdHiz, cdHizDongu, cdKapat, cdSar, cdSesUrl, cdToggle, cdVaryant,
+  CD_HIZLAR, cdAtla, cdBolumAtla, cdBolumBaslari, cdDosyaAdi, cdHiz, cdHizDongu, cdKapat, cdSar, cdSesKisa, cdSesUrl, cdToggle, cdVaryant,
   fmtSure, useCd,
 } from './canliDersStore';
+import { ListeDockDenetim, TekrarSecici } from './CanliDersListem';
 import '../../styles/canli-ders.css';
 
 const hizYaz = (r: number) => `${String(r).replace('.', ',')}×`;
@@ -122,13 +123,13 @@ function SesSecici() {
   const varyantlar = useCd((s) => s.varyantlar);
   if (varyantlar.length < 2) {
     const v = varyantlar[0];
-    return v ? <span className="cd-ses-tek" title={v.saglayici || undefined}>{v.etiket || v.ses}</span> : null;
+    return v ? <span className="cd-ses-tek" title={v.etiket || undefined}>{cdSesKisa(v)}</span> : null;
   }
   return (
     <label className="cd-sec" title="Ses">
       <span className="cd-sr">Ses</span>
       <select value={vid || ''} onChange={(e) => cdVaryant(e.target.value)} aria-label="Ses seçimi">
-        {varyantlar.map((v) => <option key={v.id} value={v.id}>{v.etiket || v.ses || v.id}</option>)}
+        {varyantlar.map((v) => <option key={v.id} value={v.id} title={v.etiket || undefined}>{cdSesKisa(v)}</option>)}
       </select>
     </label>
   );
@@ -246,11 +247,20 @@ function BolumMenu() {
     };
   }, [acik]);
   if (!detay || detay.bolumler.length < 2) return null;
+  const simdiki = bolum >= 0 ? detay.bolumler[bolum]?.baslik || `Bölüm ${bolum + 1}` : '';
   return (
     <div className="cd-menu-kap" ref={ref}>
-      <button type="button" className={`cd-ib${acik ? ' is-on' : ''}`} aria-haspopup="menu" aria-expanded={acik} onClick={() => setAcik((x) => !x)} title="Bölümler" aria-label="Bölümler">
+      <button
+        type="button"
+        className={`cd-ib cd-bolum-btn${acik ? ' is-on' : ''}`}
+        aria-haspopup="menu"
+        aria-expanded={acik}
+        onClick={() => setAcik((x) => !x)}
+        title={simdiki ? `Şu anki bölüm: ${simdiki}` : 'Bölümler'}
+        aria-label={`Bölümler${bolum >= 0 ? ` (şu an ${bolum + 1}/${detay.bolumler.length}: ${simdiki})` : ''}`}
+      >
         <ListOrdered aria-hidden />
-        <span className="cd-ib-lbl">Bölümler</span>
+        <span className="cd-bolum-sira">{bolum >= 0 ? bolum + 1 : '–'}/{detay.bolumler.length}</span>
       </button>
       {acik && (
         <div className="cd-bolumler" role="menu" aria-label="Bölümler">
@@ -280,23 +290,52 @@ function Hata() {
   return hata ? <p className="cd-hata">{hata}</p> : null;
 }
 
+/** Önceki/sonraki bölüm (bölüm yoksa 30 sn sarar) */
+function BolumAtla({ yon }: { yon: 1 | -1 }) {
+  const bolumVar = useCd((s) => (s.detay?.bolumler.length || 0) > 1);
+  const ad = bolumVar ? (yon < 0 ? 'Önceki bölüm (bölüm başı)' : 'Sonraki bölüm') : yon < 0 ? '30 saniye geri' : '30 saniye ileri';
+  return (
+    <button type="button" className="cd-ib cd-sar" onClick={() => cdBolumAtla(yon)} aria-label={ad} title={ad}>
+      {yon < 0 ? <SkipBack aria-hidden /> : <SkipForward aria-hidden />}
+      <span>{bolumVar ? 'bölüm' : '30'}</span>
+    </button>
+  );
+}
+
+/** Şu an anlatılan bölüm: oynatıcının üst satırı */
+function SimdikiBolum() {
+  const bolum = useCd((s) => s.bolum);
+  const ad = useCd((s) => (s.bolum >= 0 ? s.detay?.bolumler[s.bolum]?.baslik || '' : ''));
+  const n = useCd((s) => s.detay?.bolumler.length || 0);
+  if (bolum < 0 || n < 2) return null;
+  return (
+    <p className="cd-simdi" aria-live="polite">
+      <span>Bölüm {bolum + 1}/{n}</span> {ad || `Bölüm ${bolum + 1}`}
+    </p>
+  );
+}
+
 function TamOynatici() {
   return (
     <div className="cd-tam">
+      <SimdikiBolum />
       <ZamanCubugu />
+      <ListeDockDenetim dar />
       <div className="cd-denetim">
         <div className="cd-denetim-sol">
           <BolumMenu />
+          <ListeDockDenetim />
           <SesSecici />
         </div>
         <div className="cd-denetim-orta">
-          <button type="button" className="cd-ib cd-sar" onClick={() => cdSar(-30)} aria-label="30 saniye geri" title="30 sn geri"><RotateCcw aria-hidden /><span>30</span></button>
+          <BolumAtla yon={-1} />
           <button type="button" className="cd-ib cd-sar" onClick={() => cdSar(-10)} aria-label="10 saniye geri" title="10 sn geri (←)"><RotateCcw aria-hidden /><span>10</span></button>
           <OynatDugme buyuk />
           <button type="button" className="cd-ib cd-sar" onClick={() => cdSar(10)} aria-label="10 saniye ileri" title="10 sn ileri (→)"><RotateCw aria-hidden /><span>10</span></button>
-          <button type="button" className="cd-ib cd-sar" onClick={() => cdSar(30)} aria-label="30 saniye ileri" title="30 sn ileri"><RotateCw aria-hidden /><span>30</span></button>
+          <BolumAtla yon={1} />
         </div>
         <div className="cd-denetim-sag">
+          <TekrarSecici />
           <HizSecici />
           <IndirBag />
         </div>
@@ -323,6 +362,7 @@ function MiniOynatici() {
         <small>{hata || `Canlı ders · ${fmtSure(t)} / ${fmtSure(dur)}`}</small>
       </button>
       <OynatDugme />
+      <ListeDockDenetim mini />
       <button type="button" className="cd-ib cd-mini-hiz" onClick={cdHizDongu} aria-label={`Oynatma hızı ${hizYaz(rate)} (değiştir)`} title="Hız">
         {hizYaz(rate)}
       </button>

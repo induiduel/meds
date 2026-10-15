@@ -89,7 +89,7 @@
 /* Geniş ekran ayrıntı bölmesi (Odak görünümü) */
 .gz-aside {
   position: sticky; top: calc(var(--pt-top, 0px) + 72px); min-width: 0;
-  max-height: calc(var(--vvh, 100dvh) - var(--pt-top, 0px) - 88px); overflow-y: auto; overscroll-behavior: contain;
+  max-height: calc(var(--vvh, 100dvh) / var(--in-zoom, 1) - var(--pt-top, 0px) - 88px); overflow-y: auto; overscroll-behavior: contain;
   border-radius: 14px; background: var(--color-white); border: 1px solid var(--color-line); scrollbar-width: thin;
 }
 .gz-pane { padding: 16px 20px 18px; display: flex; flex-direction: column; gap: 12px; font-size: 14px; line-height: 1.5; color: var(--color-ink-2); animation: gz-in .16s ease-out both; }
@@ -112,7 +112,7 @@
   .gz-rail {
     display: flex; flex-direction: column; align-items: stretch;
     position: fixed; right: 0; top: 50%; transform: translateY(-50%); z-index: 15;
-    width: 24px; height: min(62dvh, 540px); padding: 4px 0;
+    width: 24px; height: min(62dvh / var(--in-zoom, 1), 540px); padding: 4px 0;
     touch-action: none; user-select: none; -webkit-user-select: none;
   }
   .gz-rail button {

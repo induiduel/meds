@@ -153,7 +153,7 @@
 /* ---------- Masaüstü: sol panel ---------- */
 @media (min-width: 1024px) {
   html:not([data-layout="akis"]) .fv { display: grid; grid-template-columns: 264px minmax(0, 1fr); gap: 24px; align-items: start; }
-  html:not([data-layout="akis"]) .fv-panel { position: sticky; top: calc(var(--sh-top-h, 52px) + 12px); max-height: calc(100dvh - var(--sh-top-h, 52px) - 24px);
+  html:not([data-layout="akis"]) .fv-panel { position: sticky; top: calc(var(--sh-top-h, 52px) + 12px); max-height: calc(100dvh / var(--in-zoom, 1) - var(--sh-top-h, 52px) - 24px);
     overflow-y: auto; overscroll-behavior: contain; padding: 16px 12px; box-sizing: border-box; border-radius: 18px; background: var(--color-white); border: 1px solid var(--color-line); }
   html:not([data-layout="akis"]) .fv-panel-h { padding: 0 4px; }
   html:not([data-layout="akis"]) .fv-src button { height: 32px; font-size: 12.5px; }
@@ -162,7 +162,7 @@
   html:not([data-layout="akis"]) .fv-panel-k { display: block; }
   html:not([data-layout="akis"]) .fv-decks { display: flex; }
   html:not([data-layout="akis"]) .fv-pick { display: none; }
-  html:not([data-layout="akis"]) .fv-main { min-height: calc(100dvh - var(--sh-top-h, 52px) - 48px); }
+  html:not([data-layout="akis"]) .fv-main { min-height: calc(100dvh / var(--in-zoom, 1) - var(--sh-top-h, 52px) - 48px); }
   html:not([data-layout="akis"]) .fv.is-study .fv-main { justify-content: flex-start; }
   .fv-card { min-height: 380px; padding: 16px 32px 28px; }
   .fv-q strong { font-size: 28px; }

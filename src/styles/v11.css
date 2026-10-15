@@ -36,7 +36,7 @@ img, video { max-width: 100%; }
 :root:is([data-design='v11'],[data-design='v12']) .pv-row .pv-stem { font-family: var(--font-sans); font-size: 14.5px; line-height: 1.4; }
 /* Diyalog/çekmece gövdesi ekrandan uzun olursa yalnız gövde kayar */
 /* Tam ekran katmanları (ders oynatıcı, okuyucular, örtüler) hariç: onlar ekranı tam doldurmalı (ders oynatıcı alttan 24 px kırpılıyordu) */
-:is([role='dialog'], dialog):not(.ls-root, .r12-root, .sr-root, .ms-overlay, .wt-full, .cf-root, .lf-overlay, .p12-pause, .fixed.inset-0) { max-height: calc(var(--vvh, 100dvh) - 24px); }
+:is([role='dialog'], dialog):not(.ls-root, .r12-root, .sr-root, .ms-overlay, .wt-full, .cf-root, .lf-overlay, .p12-pause, .fixed.inset-0) { max-height: calc(var(--vvh, 100dvh) / var(--in-zoom, 1) - 24px); }
 
 /* ── Soru etiketleri (varsayılan gizli; Ayarlar › Görünüm › Soru etiketleri) ── */
 :root:is([data-design='v11'],[data-design='v12'])[data-qtags='off'] :is(.qk-flags, .qk-more-flags) { display: none !important; }

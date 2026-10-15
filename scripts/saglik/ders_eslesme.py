@@ -90,6 +90,8 @@ def main() -> None:
         for d in b.get("desteler", []):
             kisa[d["id"]] = d.get("kisa") or d.get("baslik") or d["id"]
     secili = [d for d in desteler if d.get("id") in kisa or "Halk Sağlığı" in (d.get("discipline") or "")]
+    # Aynı cümle birden çok destede varsa ilk deste yazılır: sitenin bağladığı (en yeni sürüm) desteler önce, eski "learn-*" sonra
+    secili.sort(key=lambda d: (d.get("id") not in kisa, str(d.get("id", "")).startswith("learn-"), not str(d.get("id", "")).endswith("-v2")))
 
     # Cümleler bir kez saklanır; dizin sayı → [[cümle no, başlangıç, bitiş], …]
     cumle_l: list[dict] = []

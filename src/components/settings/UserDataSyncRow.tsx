@@ -164,7 +164,7 @@ export const UserDataSyncRow: React.FC = () => {
       </div>
 
       <span className="ui-hint" style={{ fontSize: 11.5 }}>
-        Verileriniz sunucu diskinde atomik olarak saklanır ve Oracle/Supabase PostgreSQL veritabanı bulutuna senkronize edilir.
+        İlerlemen, notların ve testlerin sunucuda güvenle saklanır; aynı hesapla girdiğin her cihazda kaldığın yerden devam edersin.
       </span>
     </div>
   );

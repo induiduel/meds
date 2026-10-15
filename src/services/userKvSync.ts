@@ -20,6 +20,8 @@ const SYNC_PATTERNS: RegExp[] = [
   /^medsoru_learn_(progress|done|recent|layout|mode|toc|zoom|social|review|sessions)(_v1)?$/,
   /^medsoru_learn_feedback_local_v1$/,
   /^medsoru_learn_tour_(library|lesson)_v1$/,
+  // Canlı ders oynatma listesi ve tekrar tercihi
+  /^medsoru_canli_ders_(liste|tekrar)_v1$/,
   /^medsoru_slide_drawings_v2(:.*)?$/,
   /^medsoru_annotations:.+$/,
   /^medsoru_highlights_v1$/,
@@ -53,6 +55,7 @@ const SYNC_PATTERNS: RegExp[] = [
   /^medsoru_solve_drawer$/,
   /^medsoru_study_section$/,
   /^medsoru_rail_collapsed$/,
+  /^medsoru_tabbar_v1$/,
   /^medsoru_last_(committee_id|discipline|status)$/,
   /^medsoru_pdf_(page|q|l|s)_v2$/,
   /^tc_layout$/,

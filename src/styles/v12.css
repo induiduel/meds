@@ -424,15 +424,38 @@
  *    Tam ekran katmanlar (ders oynatıcı, okuyucu, örtüler) ölçeği geri alır: ekranı tam doldurmaya devam eder. ── */
 /* Yazı boyutu (profil kaydırıcısı) = tasarım ölçeği: --txt-zoom = seçilen px / 16 (appearance.ts yazar); okuma yazısı
  * v12'de 16 px tabanda kalır, büyüme zoom'dan gelir. Kabuk (yan menü, üst çubuk, alt sekmeler) da aynı ölçekle büyür. */
-:root[data-design='v12'] { --ui-zoom: var(--txt-zoom, 1); }
-:root[data-design='v12'][data-density='wide'] { --ui-zoom: calc(1.08 * var(--txt-zoom, 1)); }
-@media (pointer: fine) { :root[data-design='v12'][data-density='compact'] { --ui-zoom: calc(.92 * var(--txt-zoom, 1)); } }
-:root[data-design='v12'] .sh-main > * { zoom: var(--ui-zoom, 1); }
-:root[data-design='v12'] :is(.s12-rail > *, .s12-top, .s12-tabs) { zoom: var(--txt-zoom, 1); }
+/* Ölçek tavanı (utils/uiZoom.ts): dar ekranda ölçek sonrası içerik telefonda 300, ≥768 px'te 600 CSS px'in altına
+ * inmesin diye --ui-zoom-cap / --ch-zoom-cap yazılır. Tavan devreye girince düzen büyümeyi durdurur, okuma yazısı
+ * (--read-size) aradaki farkı telafi eder. --ui-zoom-raw = istenen ölçek; --ui-zoom = uygulanan.
+ * --in-zoom: öğenin içinde bulunduğu sayfa ölçeği (zoom'suz katmanlarda 1). Zoom içindeki 100dvh / 100vw / --vvh
+ * görünür px'te ölçek kadar büyür; bu birimleri kullanan kurallar `/ var(--in-zoom, 1)` ile böler. */
+:root[data-design='v12'] {
+  --ui-zoom-raw: var(--txt-zoom, 1);
+  --ui-zoom: min(var(--ui-zoom-raw), var(--ui-zoom-cap, 9));
+  --ch-zoom: min(var(--txt-zoom, 1), var(--ch-zoom-cap, 9));
+  /* Üst çubuğun görünür yüksekliği; zoom'lu içerikte yapışkan ofsetler bunu --in-zoom'a bölerek kullanır */
+  --sh-top-vis: calc(var(--sh-top-h, 52px) * var(--ch-zoom));
+  --sh-top-root: var(--sh-top-h, 52px);
+}
+:root[data-design='v12'][data-density='wide'] { --ui-zoom-raw: calc(1.08 * var(--txt-zoom, 1)); }
+@media (pointer: fine) { :root[data-design='v12'][data-density='compact'] { --ui-zoom-raw: calc(.92 * var(--txt-zoom, 1)); } }
+:root[data-design='v12'] .sh-main > * {
+  zoom: var(--ui-zoom, 1);
+  --in-zoom: var(--ui-zoom, 1);
+  --read-size: calc(16px * var(--ui-zoom-raw) / var(--ui-zoom));
+  /* Yapışkan ofsetler (top: calc(var(--sh-top-h) + 12px), --pt-top …) içerikte ölçeklenir; üst çubuk ise --ch-zoom ile.
+     Burada içeriğin kendi px'ine çevrilir: görünür ofset = çubuğun görünür yüksekliği (yoğunluk/tavan farkında da) */
+  --sh-top-h: calc(var(--sh-top-vis) / var(--ui-zoom, 1));
+  --pt-top: calc((var(--sh-top-vis) + env(safe-area-inset-top, 0px) * var(--ch-zoom, 1)) / var(--ui-zoom, 1));
+}
+:root[data-design='v12'] :is(.s12-rail > *, .s12-top, .s12-tabs) { zoom: var(--ch-zoom, 1); }
 /* Tam ekran katmanlar ölçeği geri alır (zoom vh/yüksekliği büyütüp ekranı taşırıyor); içlerinde okuma yazısı
  * --read-size ile seçilen boyutta kalır */
 :root[data-design='v12'] .sh-main :is(.ls-root, .r12-root, .sr-root, .ms-overlay, .wt-full, .cf-root, .lf-overlay, .p12-pause, .fixed.inset-0):not(:is(.ls-root, .r12-root, .sr-root, .ms-overlay, .wt-full, .cf-root, .lf-overlay, .p12-pause, .fixed.inset-0) *) {
   zoom: calc(1 / var(--ui-zoom, 1));
+  --in-zoom: 1;
+  --sh-top-h: var(--sh-top-root);
+  --pt-top: calc(var(--sh-top-root) + env(safe-area-inset-top, 0px));
   --read-size: calc(16px * var(--txt-zoom, 1));
 }
 

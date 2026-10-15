@@ -135,7 +135,7 @@
     font: 500 11.5px var(--font-mono); color: var(--color-ink-3); font-variant-numeric: tabular-nums; }
   & .r12-more { position: relative; }
   & .r12-scrim { position: fixed; inset: 0; z-index: 5; border: 0; padding: 0; background: transparent; cursor: default; }
-  & .r12-menu { position: absolute; right: 0; top: calc(100% + 6px); z-index: 6; width: min(300px, calc(100vw - 24px)); max-height: min(560px, calc(100dvh - 90px));
+  & .r12-menu { position: absolute; right: 0; top: calc(100% + 6px); z-index: 6; width: min(300px, calc(100vw / var(--in-zoom, 1) - 24px)); max-height: min(560px, calc(100dvh / var(--in-zoom, 1) - 90px));
     overflow-y: auto; overscroll-behavior: contain; padding: 6px; display: flex; flex-direction: column; gap: 2px;
     background: var(--color-white); border: 1px solid var(--color-line); border-radius: 12px; box-shadow: var(--v12-pop);
     animation: r12-pop 160ms var(--mo-ease) backwards; transform-origin: top right; }
@@ -172,10 +172,10 @@
 
   /* İçindekiler: geniş alanda yapışkan ray, dar alanda açılır katman */
   & .r12-toc { display: flex; flex-direction: column; gap: 2px; min-width: 0; font-family: var(--font-sans); }
-  & .r12-toc.is-rail { flex: 0 0 248px; position: sticky; top: 0; align-self: flex-start; max-height: calc(100dvh - 60px); min-height: calc(100dvh - 60px);
+  & .r12-toc.is-rail { flex: 0 0 248px; position: sticky; top: 0; align-self: flex-start; max-height: calc(100dvh / var(--in-zoom, 1) - 60px); min-height: calc(100dvh / var(--in-zoom, 1) - 60px);
     overflow-y: auto; overscroll-behavior: contain; padding: 16px 10px 24px 14px; border-right: 1px solid var(--color-line-soft); }
   & .r12-popwrap { position: relative; z-index: 6; height: 0; }
-  & .r12-toc.is-pop { position: absolute; z-index: 6; top: 8px; left: 8px; right: 8px; max-height: min(70dvh, 560px); overflow-y: auto; overscroll-behavior: contain;
+  & .r12-toc.is-pop { position: absolute; z-index: 6; top: 8px; left: 8px; right: 8px; max-height: min(70dvh / var(--in-zoom, 1), 560px); overflow-y: auto; overscroll-behavior: contain;
     padding: 10px 8px 12px; background: var(--color-white); border: 1px solid var(--color-line); border-radius: 12px; box-shadow: var(--v12-pop);
     animation: r12-pop 160ms var(--mo-ease) backwards; transform-origin: top center; }
   & .r12-toc-h { display: flex; align-items: center; gap: 6px; padding: 0 4px 8px 10px; }
@@ -266,7 +266,7 @@
   & .r12-skel > i:nth-child(4n) { width: 70%; }
 
   /* Kenar paneli: Notlarım (kalem işaretleri) · Spotlar */
-  & .r12-margin { flex: 0 0 288px; position: sticky; top: 0; align-self: flex-start; max-height: calc(100dvh - 60px); overflow-y: auto; overscroll-behavior: contain;
+  & .r12-margin { flex: 0 0 288px; position: sticky; top: 0; align-self: flex-start; max-height: calc(100dvh / var(--in-zoom, 1) - 60px); overflow-y: auto; overscroll-behavior: contain;
     padding: 16px 16px 24px 12px; font-family: var(--font-sans); }
 
   /* Belge içi arama (üst çubukta başlığın yerine) */

@@ -1,5 +1,6 @@
 import { useSyncExternalStore } from 'react';
 import { PALETTES, findAccent, findPalette, installPaletteStyles, type ThemeMode } from './palettes';
+import { refreshZoomGuard } from './uiZoom';
 
 /**
  * Görünüm tercihleri: tema (açık / sarı / koyu), her temada dört palet (a–d, utils/palettes.ts) ve yerleşim yoğunluğu.
@@ -215,6 +216,8 @@ export function applyAppearance(a: Appearance = current) {
   el.classList.toggle('theme-dark', a.mode === 'dark');
   el.style.colorScheme = a.mode === 'dark' ? 'dark' : 'light';
   syncPwaChrome(a);
+  // Ölçek tavanı: dar alanda zoom düzeni kırmasın (utils/uiZoom.ts)
+  refreshZoomGuard();
 }
 
 /*

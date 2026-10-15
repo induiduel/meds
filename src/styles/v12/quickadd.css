@@ -10,7 +10,7 @@
 
   @media (min-width: 768px) {
     & .ms-composer.is-full {
-      position: fixed; z-index: 70; inset: 0 0 auto 0; height: var(--vvh, 100dvh);
+      position: fixed; z-index: 70; inset: 0 0 auto 0; height: calc(var(--vvh, 100dvh) / var(--in-zoom, 1));
       display: flex; flex-direction: column; border: 0; border-radius: 0; box-shadow: none; background: var(--color-white);
       overflow: hidden; animation: v12-qa-in .22s var(--mo-ease) backwards;
       --qa-pad: max(20px, calc((100% - 720px) / 2));

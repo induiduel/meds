@@ -8,9 +8,10 @@ import { ChevronLeft, Crosshair, FileText, Minus, Play, Plus, ScrollText } from 
 import { navigateTo, pathFor } from '../../router';
 import { driveViewUrl, useDeckPdf } from '../../services/deckPdfService';
 import {
-  cdCumleAraligi, cdDetayBagla, cdDetayGetir, cdDurum, cdOynat, cdParagrafa, useCd, type CdDetay,
+  cdCumleAraligi, cdDetayBagla, cdDetayGetir, cdDurum, cdOynat, cdParagrafa, cdToggle, fmtSure, useCd, type CdDetay,
 } from './canliDersStore';
 import { useCdTur } from './useCdTur';
+import { ListeEkleDugme } from './CanliDersListem';
 import { CevrimdisiDugme } from './CanliDersCevrimdisi';
 import '../learn/pdf/pdfDoc.css';
 
@@ -129,7 +130,10 @@ export default function CanliDersDers({ dersKey }: { dersKey: string }) {
     return (
       <div className="cd-root">
         <GeriBag />
-        <div className="cd-bos"><p>{hata}</p></div>
+        <div className="cd-bos">
+          <p>{hata}</p>
+          <button type="button" className="cd-btn is-ana" onClick={() => navigateTo(pathFor('canli_ders'))}>Tüm canlı derslere dön</button>
+        </div>
       </div>
     );
   }
@@ -150,7 +154,7 @@ export default function CanliDersDers({ dersKey }: { dersKey: string }) {
     <div className="cd-root cd-ders" ref={rootRef} style={yuk ? { height: yuk } : undefined}>
       <header className="cd-ders-bas">
         <GeriBag />
-        <h1 className="cd-ders-ad"><span>{detay.no}.</span> {detay.baslik}</h1>
+        <h1 className="cd-ders-ad" title={`${detay.no}. ${detay.baslik}`}><span>{detay.no}.</span> {detay.baslik}</h1>
         {pdfVar && !genis && (
           <div className="cd-sekmeler" role="tablist" aria-label="Görünüm">
             <button type="button" role="tab" aria-selected={sekme === 'metin'} className={sekme === 'metin' ? 'is-on' : ''} onClick={() => setSekme('metin')}>
@@ -162,6 +166,7 @@ export default function CanliDersDers({ dersKey }: { dersKey: string }) {
           </div>
         )}
         <CevrimdisiDugme dersKey={detay.key} baslik={detay.baslik} varyantlar={detay.varyantlar} />
+        <ListeEkleDugme dersKey={detay.key} baslik={detay.baslik} />
         {tanitim.dugme}
       </header>
       {baglanti === 'baska' && !buDers && (
@@ -356,11 +361,39 @@ function CdMetinBolme({ detay, canli }: { detay: CdDetay; canli: boolean }) {
       <div className="cd-metin" ref={paneRef} tabIndex={0} aria-label="Konuşma metni">
         <MetinListe detay={detay} onTik={onTik} />
       </div>
-      {durdu && canli && (
+      {durdu && canli ? (
         <button type="button" className="cd-donus" onClick={() => { surdur(); requestAnimationFrame(() => kaydir()); }}>
           <Crosshair aria-hidden /> Canlı konuma dön
         </button>
+      ) : (
+        <BaslaCagri canli={canli} />
       )}
+    </div>
+  );
+}
+
+/** Ders ekranı ilk açıldığında (henüz çalmadıysa) ne yapılacağını söyleyen büyük düğme; ilk çalmadan sonra gizlenir. */
+function BaslaCagri({ canli }: { canli: boolean }) {
+  const playing = useCd((s) => canli && s.playing);
+  const t = useCd((s) => (canli ? Math.floor(s.t) : 0));
+  const [goster, setGoster] = useState(true);
+  useEffect(() => { if (playing) setGoster(false); }, [playing]);
+  if (!canli || !goster || playing) return null;
+  const devam = t >= 5;
+  const basla = () => {
+    setGoster(false);
+    cdToggle();
+  };
+  return (
+    <div className="cd-basla" role="group" aria-label="Dinlemeye başla">
+      <button type="button" className="cd-basla-btn" onClick={basla}>
+        <span className="cd-basla-ikon" aria-hidden><Play /></span>
+        <span>
+          <b>{devam ? 'Kaldığın yerden devam et' : 'Dinlemeye başla'}</b>
+          <small>{devam ? `${fmtSure(t)} konumundan sürer` : 'ya da bir paragrafa dokun, oradan başlasın'}</small>
+        </span>
+      </button>
+      <button type="button" className="cd-basla-kapat" onClick={() => setGoster(false)} aria-label="Bu ipucunu gizle">×</button>
     </div>
   );
 }

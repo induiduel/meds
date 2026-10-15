@@ -35,7 +35,7 @@ html[data-layout="akis"] .cx-list.ck-list { max-width: 760px; width: 100%; margi
 .ck-no { font: 800 12.5px var(--font-round, var(--font-sans)); font-variant-numeric: tabular-nums; color: var(--color-ink); }
 .ck-m { display: inline-flex; align-items: center; gap: 5px; white-space: nowrap; min-width: 0; }
 .ck-m + .ck-m::before, .ck-no + .ck-m::before { content: "·"; margin-right: 3px; color: var(--color-ink-3); }
-.ck-ders { max-width: 46vw; overflow: hidden; text-overflow: ellipsis; }
+.ck-ders { max-width: calc(46vw / var(--in-zoom, 1)); overflow: hidden; text-overflow: ellipsis; }
 .ck-dot { width: 7px; height: 7px; border-radius: 99px; flex-shrink: 0; background: var(--d, var(--color-accent)); }
 .ck-flags { display: inline-flex; flex-wrap: wrap; gap: 4px; }
 .ck-badge { display: inline-flex; align-items: center; height: 20px; padding: 0 8px; border-radius: 6px; font: 700 11.5px var(--font-sans); white-space: nowrap; background: var(--color-field); color: var(--color-ink-2); }

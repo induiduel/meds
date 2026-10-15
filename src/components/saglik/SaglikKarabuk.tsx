@@ -3,7 +3,7 @@ import {
   Ambulance, ArrowLeft, ArrowRight, Baby, Building2, CalendarClock, ChevronDown, ExternalLink, Factory, GitFork, GraduationCap, HardHat, HeartPulse,
   History, Hospital, Landmark, LineChart, MapPin, MapPinned, Search, Skull, Stethoscope, UserRound, Users, Wind,
 } from 'lucide-react';
-import { Atif, Blok, DersIsareti, EkAtif, MaddeAgaci, MiniMetin, OkunurTablo, Rozet, tarihTR, useDersEslesme } from './SaglikOrtak';
+import { Atif, Blok, EkAtif, MaddeAgaci, MiniMetin, OkunurTablo, Rozet, tarihTR } from './SaglikOrtak';
 import { ZamanCizgisi } from './SaglikAraclar';
 import { seriMaddeleri, useGecmis, type MaddeOge } from './saglikBaglam';
 import { kaynaklariTopla, kucukHarf, sayi, type BolumId, type KarabukVeri, type SeriNokta } from './saglikVeri';
@@ -105,7 +105,6 @@ const Satir: React.FC<{ s: SatirOge }> = ({ s }) => {
   const yon = typeof s.deger === 'number' && typeof s.tr?.deger === 'number'
     ? (s.deger > s.tr.deger ? 'Türkiye’den yüksek' : s.deger < s.tr.deger ? 'Türkiye’den düşük' : 'Türkiye ile aynı') : null;
   const acilir = !!(s.detay?.length || s.adlar?.length || s.tanim);
-  const dersE = useDersEslesme(d != null && s.deger !== undefined ? `${s.ad}: ${d}` : '', `${s.ad} ${s.alt || ''}`);
   const birimGoster = d != null && typeof s.deger === 'number' && !!s.birim && s.birim !== '%';
   const uzunBirim = birimGoster && s.birim!.length > 6;
   // Dar ekranda değer, Türkiye karşılığı ya da uzun birim varsa adın altına iner (ad sıkışıp satır uzamasın)
@@ -116,8 +115,7 @@ const Satir: React.FC<{ s: SatirOge }> = ({ s }) => {
     kaynak: s.kaynak, konum: s.konum, ek: s.ek, tanim: s.tanim,
   });
   return (
-    <li className={`sbk-satir ${acik ? 'is-acik' : ''} ${yigin ? 'is-yigin' : ''} ${dersE.length ? 'has-ders' : ''}`}>
-      <DersIsareti e={dersE} />
+    <li className={`sbk-satir ${acik ? 'is-acik' : ''} ${yigin ? 'is-yigin' : ''}`} data-ders-ad={s.ad}>
       <div className="sbk-satir-ust">
         <div className="sbk-satir-ad">
           {acilir ? (
@@ -131,7 +129,7 @@ const Satir: React.FC<{ s: SatirOge }> = ({ s }) => {
         {!uzun && s.deger !== undefined && (
           <div className="sbk-satir-d">
             <span>
-              {d != null ? <b data-num>{dersE.length ? <mark className="sbk-ders-m">{d}</mark> : d}</b> : <span className="sbk-satir-yok">teyit edilemedi</span>}
+              {d != null ? <b data-num>{d}</b> : <span className="sbk-satir-yok">teyit edilemedi</span>}
               {birimGoster && !uzunBirim && <small> {s.birim}</small>}
               <Atif id={s.kaynak} konum={s.konum} />{s.ek?.length ? <EkAtif ids={s.ek} /> : null}
             </span>

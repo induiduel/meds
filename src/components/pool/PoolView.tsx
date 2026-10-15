@@ -14,6 +14,7 @@ import { PoolLiveFeed, usePoolActivity } from './PoolLiveFeed';
 import { poolDisciplineOptions, useMedia, usePoolClusters } from './poolHooks';
 import { PoolV12 } from '../v12/PoolV12';
 import '../../styles/pool.css';
+import { elementZoom, topBarOffset } from '../../utils/uiZoom';
 
 /**
  * Soru havuzu (v12, sade): tek gruplu satır listesi; seçili soru tartışmasız belli.
@@ -85,12 +86,14 @@ const byRecent = (a: PoolSummary, b: PoolSummary) => b.lastAt - a.lastAt || byNu
 
 /** Üst çubuk + yapışkan araç çubuğunun alt kenarı (kaydırma hedefi bunun altında kalır) */
 function stickyBottom(): number {
-  const sh = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--sh-top-h')) || 52;
+  const sh = topBarOffset();
   const bar = document.querySelector<HTMLElement>('.pv-root .pt-root');
   if (!bar) return sh;
   const cs = getComputedStyle(bar);
   if (cs.position !== 'sticky' && cs.position !== 'fixed') return sh;
-  return Math.max(sh, (parseFloat(cs.top) || sh) + bar.offsetHeight);
+  // top ve offsetHeight öğenin kendi (zoom'lu) px'idir; ekrandaki karşılığı × ölçek
+  const z = elementZoom(bar);
+  return Math.max(sh, ((parseFloat(cs.top) || 0) + bar.offsetHeight) * z);
 }
 
 /** Öğeyi yapışkan başlıkların altına getirir. top: başını hizala; değilse yalnız görünmüyorsa en yakın kenara kaydır. */

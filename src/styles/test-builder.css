@@ -3,7 +3,7 @@
  * Temel kurallar Klasik (v10) / Sade (v11) diliyle: yuvarlak kartlar, dolu seçim. v12 "Net" katmanı en altta:
  * düz yüzey + 1 px çizgi, köşe 8–12, 600 başlık, mono sayaçlar. Renkler yalnız token.
  */
-.tb { min-height: 100dvh; background: var(--color-canvas); color: var(--color-ink); padding: 16px 16px calc(32px + env(safe-area-inset-bottom, 0px)); }
+.tb { min-height: calc(100dvh / var(--in-zoom, 1)); background: var(--color-canvas); color: var(--color-ink); padding: 16px 16px calc(32px + env(safe-area-inset-bottom, 0px)); }
 .tb > * { max-width: 880px; margin-inline: auto; }
 .tb svg { flex-shrink: 0; }
 

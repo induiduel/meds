@@ -5,6 +5,7 @@ import {
   Bell,
   ChevronDown,
   ChevronRight,
+  Clock3,
   CloudUpload,
   Database,
   FileDown,
@@ -12,6 +13,8 @@ import {
   Moon,
   PanelLeftClose,
   PanelLeftOpen,
+  Pencil,
+  RotateCcw,
   Plus,
   Search,
   ShieldCheck,
@@ -38,7 +41,8 @@ import type { SideNavProps } from '../shell/SideNav';
 import type { TopBarProps } from '../shell/TopBar';
 import type { TabBarProps } from '../shell/TabBar';
 import { BrandWord } from '../shell/BrandWord';
-import { NAV_ITEMS, V12_PHONE_TREE, V12_RAIL, V12_RAIL_MORE, V12_TABS, initialsOf, openSearch, type NavItem } from '../shell/navModel';
+import { NAV_ITEMS, V12_PHONE_PAGES, V12_RAIL, V12_RAIL_MORE, initialsOf, openSearch, v12PhoneTree, type NavItem } from '../shell/navModel';
+import { DEFAULT_TAB_SLOTS, matchPages, setTabSlots, useRecentPages, useTabSlots } from '../shell/phoneNav';
 import { usePhone, useSearchShortcut, useSideCollapse } from '../shell/shellHooks';
 import '../../styles/v12/shell.css';
 
@@ -360,20 +364,34 @@ export const TabBarV12: React.FC<TabBarProps> = ({ active, onGo, isAdmin, onPdf,
   const [queued, setQueued] = useState(() => offlineDatabaseService.getState().queuedActionsCount);
   useEffect(() => offlineDatabaseService.subscribe((st) => setQueued(st.queuedActionsCount)), []);
   const look = useAppearance();
-  const inMore = !V12_TABS.some((t) => t.id === active);
+  // Alt çubuk: 3 kişisel yuva + ortada sabit "Soru ekle" (shell/phoneNav); son açılanlar "Tüm sayfalar"ın başında
+  const slots = useTabSlots();
+  const recent = useRecentPages(active);
+  const inTabs = new Set<AppRoute>([...slots, 'quick_add']);
+  const inMore = !inTabs.has(active);
+  const current = inMore ? (active === 'settings' ? NAV_ITEMS.settings : V12_PHONE_PAGES.find((it) => it.id === active)) : undefined;
+  const [query, setQuery] = useState('');
+  const [editing, setEditing] = useState(false);
+  const [slotSel, setSlotSel] = useState(0);
   useEffect(() => setMore(false), [active]);
+  useEffect(() => {
+    if (more) return;
+    setQuery('');
+    setEditing(false);
+  }, [more]);
   // Tanıtım turu "Daha" sayfasını açıp kapatır (WelcomeTour → medsoru:more)
   useEffect(() => {
     const on = (e: Event) => setMore(Boolean((e as CustomEvent<{ open?: boolean }>).detail?.open));
     window.addEventListener('medsoru:more', on);
     return () => window.removeEventListener('medsoru:more', on);
   }, []);
+  // Alt çubukta yukarı kaydırma "Tüm sayfalar"ı açar
+  const swipe = useRef<{ y: number; x: number } | null>(null);
 
   const go = (r: AppRoute) => {
     setMore(false);
     onGo(r);
   };
-  const [todayTab, learnTab, addTab, pastTab] = V12_TABS;
   const tab = ({ id, short, label, icon: Icon }: NavItem) => {
     const on = active === id;
     return (
@@ -393,6 +411,49 @@ export const TabBarV12: React.FC<TabBarProps> = ({ active, onGo, isAdmin, onPdf,
       </a>
     );
   };
+  const slotItem = (id: AppRoute) => V12_PHONE_PAGES.find((it) => it.id === id) || NAV_ITEMS.today;
+  const MoreIcon = current?.icon || MoreHorizontal;
+
+  /** Düzenlemede ızgaradan seçilen sayfa seçili yuvaya geçer; başka yuvadaysa ikisi yer değiştirir */
+  const assign = (id: AppRoute) => {
+    const next = [...slots];
+    const at = next.indexOf(id);
+    if (at === slotSel) return;
+    if (at >= 0) next[at] = next[slotSel];
+    next[slotSel] = id;
+    setTabSlots(next);
+    buzz();
+    setSlotSel((i) => (i + 1) % 3);
+  };
+
+  const searchPool: NavItem[] = [
+    NAV_ITEMS.quick_add,
+    ...V12_PHONE_PAGES,
+    NAV_ITEMS.settings,
+    ...(isAdmin ? [{ id: 'manage' as AppRoute, label: 'Yönetim konsolu', hint: 'Yönetici araçları', icon: ShieldCheck, tint: '' }] : []),
+  ];
+  const hits = matchPages(query, searchPool);
+  const recentShown = recent.filter((id) => id !== active && !inTabs.has(id)).slice(0, 4);
+  const tree = v12PhoneTree(editing ? new Set() : inTabs);
+
+  const tile = ({ id, label, tile: tileLabel, hint, icon: Icon }: NavItem, onPick: () => void, pinned?: number) => (
+    <a
+      key={id}
+      href={pathFor(id)}
+      onClick={linkClick(onPick)}
+      onPointerDown={() => !editing && prefetchRoute(id)}
+      aria-current={!editing && active === id ? 'page' : undefined}
+      aria-pressed={editing ? pinned !== undefined : undefined}
+      className="s12-mtile"
+      title={`${label} — ${hint}`}
+    >
+      <span className="s12-mtile-ic">
+        <Icon strokeWidth={1.8} aria-hidden="true" />
+        {pinned !== undefined && <i className="s12-mtile-pin" aria-hidden="true">{pinned + 1}</i>}
+      </span>
+      <span className="s12-mtile-l">{tileLabel || label}</span>
+    </a>
+  );
 
   const row = (key: string, Icon: React.ElementType, label: string, hint: string | undefined, end: React.ReactNode, props: { href?: string; onClick: () => void; current?: boolean }) => {
     const body = (
@@ -418,22 +479,41 @@ export const TabBarV12: React.FC<TabBarProps> = ({ active, onGo, isAdmin, onPdf,
 
   return (
     <>
-      <nav aria-label="Alt gezinme" className="s12-tabs ms-hide-on-kb print:hidden">
-        {tab(todayTab)}
-        {tab(learnTab)}
+      <nav
+        aria-label="Alt gezinme"
+        className="s12-tabs ms-hide-on-kb print:hidden"
+        onPointerDown={(e) => {
+          swipe.current = { y: e.clientY, x: e.clientX };
+        }}
+        onPointerUp={(e) => {
+          const st = swipe.current;
+          swipe.current = null;
+          if (!st || more) return;
+          const dy = e.clientY - st.y;
+          if (dy < -28 && Math.abs(dy) > Math.abs(e.clientX - st.x)) {
+            buzz();
+            setMore(true);
+          }
+        }}
+        onPointerCancel={() => {
+          swipe.current = null;
+        }}
+      >
+        {tab(slotItem(slots[0]))}
+        {tab(slotItem(slots[1]))}
         <a
-          href={pathFor(addTab.id)}
+          href={pathFor('quick_add')}
           onClick={linkClick(() => {
             buzz();
-            go(addTab.id);
+            go('quick_add');
           })}
-          aria-current={active === addTab.id ? 'page' : undefined}
+          aria-current={active === 'quick_add' ? 'page' : undefined}
           className="s12-tab s12-tab-add"
-          aria-label={addTab.label}
+          aria-label={NAV_ITEMS.quick_add.label}
         >
           <span className="s12-tab-plus"><Plus strokeWidth={2.2} aria-hidden="true" /></span>
         </a>
-        {tab(pastTab)}
+        {tab(slotItem(slots[2]))}
         <button
           type="button"
           className="s12-tab"
@@ -444,32 +524,123 @@ export const TabBarV12: React.FC<TabBarProps> = ({ active, onGo, isAdmin, onPdf,
           aria-haspopup="dialog"
           aria-expanded={more}
           aria-current={inMore ? 'page' : undefined}
-          aria-label={unread || queued ? 'Daha fazla, yeni bildirim ya da bekleyen işlem var' : 'Daha fazla'}
+          aria-label={`Tüm sayfalar${current ? `, şu an: ${current.label}` : ''}${unread || queued ? ', yeni bildirim ya da bekleyen işlem var' : ''}`}
         >
           <span className="s12-tab-ic">
-            <MoreHorizontal strokeWidth={inMore ? 2.1 : 1.8} aria-hidden="true" />
+            <MoreIcon strokeWidth={inMore ? 2.1 : 1.8} aria-hidden="true" />
             {(unread > 0 || queued > 0) && <i className="s12-tab-dot" aria-hidden="true" />}
           </span>
-          <span className="s12-tab-l" aria-hidden="true">Daha</span>
+          <span className="s12-tab-l" aria-hidden="true">{current ? current.short || current.label : 'Daha'}</span>
         </button>
       </nav>
 
-      <Sheet open={more} onClose={() => setMore(false)} title="Tüm sayfalar" size="auto">
+      <Sheet
+        open={more}
+        onClose={() => setMore(false)}
+        title={editing ? 'Alt çubuğu düzenle' : 'Tüm sayfalar'}
+        size="auto"
+        actions={
+          <button
+            type="button"
+            className={`s12-medit ${editing ? 'is-on' : ''}`}
+            onClick={() => {
+              setQuery('');
+              setSlotSel(0);
+              setEditing((v) => !v);
+            }}
+            aria-pressed={editing}
+          >
+            {editing ? 'Bitti' : <><Pencil aria-hidden="true" />Düzenle</>}
+          </button>
+        }
+      >
         <div className="s12-more">
-          {V12_PHONE_TREE.map((g) => (
-            <section key={g.label} className="s12-msec" aria-label={g.label || undefined}>
-              {g.label && <h2 className="s12-msec-h">{g.label}</h2>}
-              <div className="s12-mgrid">
-                {g.items.map(({ id, label, short, icon: Icon }) => (
-                  <a key={id} href={pathFor(id)} onClick={linkClick(() => go(id))} onPointerDown={() => prefetchRoute(id)} aria-current={active === id ? 'page' : undefined} className="s12-mtile" title={label}>
-                    <span className="s12-mtile-ic"><Icon strokeWidth={1.8} aria-hidden="true" /></span>
-                    <span className="s12-mtile-l">{short || label}</span>
-                  </a>
-                ))}
+          {editing ? (
+            <section className="s12-msec" aria-label="Alt çubuk yuvaları">
+              <p className="s12-mnote">Değiştirmek istediğin yuvaya, sonra aşağıdan bir sayfaya dokun. Ortadaki “Soru ekle” sabittir.</p>
+              <div className="s12-mbar" role="radiogroup" aria-label="Alt çubuk yuvası">
+                {[0, 1, -1, 2, -2].map((si) => {
+                  if (si === -1) return <span key="add" className="s12-mbar-fix" aria-hidden="true"><Plus /></span>;
+                  if (si === -2) return <span key="more" className="s12-mbar-fix" aria-hidden="true"><MoreHorizontal /></span>;
+                  const it = slotItem(slots[si]);
+                  const Icon = it.icon;
+                  return (
+                    <button
+                      key={si}
+                      type="button"
+                      role="radio"
+                      aria-checked={slotSel === si}
+                      className="s12-mbar-slot"
+                      onClick={() => setSlotSel(si)}
+                      aria-label={`${si + 1}. yuva: ${it.label}`}
+                    >
+                      <Icon aria-hidden="true" />
+                      <span>{it.short || it.label}</span>
+                    </button>
+                  );
+                })}
+              </div>
+              {slots.join() !== DEFAULT_TAB_SLOTS.join() && (
+                <button type="button" className="s12-mreset" onClick={() => setTabSlots(null)}>
+                  <RotateCcw aria-hidden="true" />
+                  Varsayılana dön (Bugün · Öğren · Çıkmış)
+                </button>
+              )}
+            </section>
+          ) : (
+            <div className="s12-msearch">
+              <Search aria-hidden="true" />
+              <input
+                type="search"
+                value={query}
+                onChange={(e) => setQuery(e.target.value)}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter' && hits[0]) {
+                    e.preventDefault();
+                    go(hits[0].id);
+                  }
+                }}
+                placeholder="Sayfa bul… (ör. kart, sözlük, test)"
+                aria-label="Sayfa bul"
+                enterKeyHint="go"
+                autoComplete="off"
+              />
+            </div>
+          )}
+
+          {!editing && query.trim() ? (
+            <section className="s12-msec" aria-label="Bulunan sayfalar">
+              <div className="s12-mlist">
+                {hits.length > 0
+                  ? hits.map((it) => row(`q-${it.id}`, it.icon, it.label, it.hint, undefined, { href: pathFor(it.id), onClick: () => go(it.id), current: active === it.id }))
+                  : row('q-none', Search, `“${query.trim()}” adında sayfa yok`, 'Sorularda, notlarda ve sözlükte ara', undefined, {
+                      onClick: () => {
+                        setMore(false);
+                        openSearch();
+                      },
+                    })}
               </div>
             </section>
-          ))}
+          ) : (
+            <>
+              {!editing && recentShown.length > 0 && (
+                <section className="s12-msec" aria-label="Son açılanlar">
+                  <h2 className="s12-msec-h is-ic"><Clock3 aria-hidden="true" />Son açılanlar</h2>
+                  <div className="s12-mgrid">{recentShown.map((id) => tile(slotItem(id), () => go(id)))}</div>
+                </section>
+              )}
+              {tree.map((g) => (
+                <section key={g.label} className="s12-msec" aria-label={g.label || undefined}>
+                  {g.label && <h2 className="s12-msec-h">{g.label}</h2>}
+                  <div className="s12-mgrid">
+                    {g.items.map((it) => (editing ? tile(it, () => assign(it.id), slots.includes(it.id) ? slots.indexOf(it.id) : undefined) : tile(it, () => go(it.id))))}
+                  </div>
+                </section>
+              ))}
+            </>
+          )}
 
+          {!editing && !query.trim() && (
           <section className="s12-msec" aria-label="Görünüm ve hesap">
             <h2 className="s12-msec-h">Hesap ve araçlar</h2>
             <div className="s12-mtheme">
@@ -514,6 +685,7 @@ export const TabBarV12: React.FC<TabBarProps> = ({ active, onGo, isAdmin, onPdf,
               {isAdmin && row('manage', ShieldCheck, 'Yönetim konsolu', undefined, undefined, { href: pathFor('manage'), onClick: () => go('manage'), current: active === 'manage' })}
             </div>
           </section>
+          )}
         </div>
       </Sheet>
 

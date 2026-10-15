@@ -309,6 +309,6 @@
     & > :not(.f12-browse) { grid-column: 1; min-width: 0; }
     & > :not(.f12-browse) ~ :not(.f12-browse) { margin-top: 14px; }
     & > .f12-browse { grid-column: 2; grid-row: 1 / -1; position: sticky; top: 12px; align-self: start; min-width: 0;
-      max-height: calc(100dvh - 90px); overflow-y: auto; overscroll-behavior: contain; scrollbar-gutter: stable; }
+      max-height: calc(100dvh / var(--in-zoom, 1) - 90px); overflow-y: auto; overscroll-behavior: contain; scrollbar-gutter: stable; }
   }
 }

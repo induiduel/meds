@@ -8,11 +8,11 @@
 
 :root[data-design='v12'] {
   /* Ray genişliği: .sh-app padding-left ve tam ekran okuyucular bu değişkeni okur */
-  /* --txt-zoom: yazı boyutu ölçeği (appearance.ts); ray içeriği aynı oranda büyür */
-  @media (min-width: 768px) { --sh-side-w: calc(64px * var(--txt-zoom, 1)); }
+  /* --ch-zoom: kabuk ölçeği (yazı boyutu, v12.css); ray içeriği aynı oranda büyür */
+  @media (min-width: 768px) { --sh-side-w: calc(64px * var(--ch-zoom, 1)); }
   @media (min-width: 1024px) {
-    --sh-side-w: calc(224px * var(--txt-zoom, 1));
-    &[data-side='collapsed'] { --sh-side-w: calc(64px * var(--txt-zoom, 1)); }
+    --sh-side-w: calc(224px * var(--ch-zoom, 1));
+    &[data-side='collapsed'] { --sh-side-w: calc(64px * var(--ch-zoom, 1)); }
   }
 
   /* ── Ortak parçalar ── */
@@ -86,13 +86,24 @@
    * ========================================================================= */
   & .s12-top { position: sticky; top: 0; z-index: 30; padding-top: env(safe-area-inset-top, 0px); background: var(--color-white);
     border-bottom: 1px solid var(--color-line); font-family: var(--font-sans); color: var(--color-ink); }
-  & .s12-top-in { height: var(--sh-top-h); max-width: 1180px; margin-inline: auto; display: flex; align-items: center; gap: 10px; padding-inline: 14px 6px; }
-  @media (min-width: 768px) { & .s12-top-in { padding-inline: max(var(--dn-page-x, 0px), 20px); } }
-  @media (min-width: 1024px) { & .s12-top-in { padding-inline: max(var(--dn-page-x, 0px), 28px); } }
+  /* Üst çubuk içi sayfa sütunuyla hizalı: .s12-top --ch-zoom ile, sayfa içeriği --ui-zoom ile ölçeklenir. Genişlik ve
+     yan boşluk görünür px'te .sh-main ile aynı olsun diye çubuğun kendi px'ine çevrilir (× ui / ch, ÷ ch). */
+  & .s12-top-in { --s12-mw: 1180px; height: var(--sh-top-h); max-width: calc(var(--s12-mw) * var(--ui-zoom, 1) / var(--ch-zoom, 1)); margin-inline: auto;
+    display: flex; align-items: center; gap: 10px; padding-inline: 14px 6px; }
+  @media (min-width: 768px) { & .s12-top-in { padding-inline: calc(max(var(--dn-page-x, 0px), 20px) / var(--ch-zoom, 1)); } }
+  @media (min-width: 1024px) { & .s12-top-in { padding-inline: calc(max(var(--dn-page-x, 0px), 28px) / var(--ch-zoom, 1)); } }
   @media (min-width: 768px) {
-    &[data-layout='akis'] .s12-top-in { max-width: 820px; }
-    &[data-layout='pano'] .s12-top-in { max-width: 1320px; }
+    &[data-layout='akis'] .s12-top-in { --s12-mw: 820px; }
+    &[data-layout='pano'] .s12-top-in { --s12-mw: 1320px; }
     &[data-layout='odak'] .s12-top-in { max-width: none; }
+  }
+  /* Görüntüleme modlarının sayfa genişliği ölçekle büyür: Akış satırı ve Pano ızgarası her yazı boyutunda aynı
+     sayıda karakter / sütun taşır (ölçek sonrası etkin genişlik 820 / 1320 kalır, ekran yetmezse tam genişlik). */
+  & .sh-main { max-width: calc(1180px * var(--ui-zoom, 1)); }
+  @media (min-width: 768px) {
+    &[data-layout='akis'] .sh-main { max-width: calc(820px * var(--ui-zoom, 1)); }
+    &[data-layout='pano'] .sh-main { max-width: calc(1320px * var(--ui-zoom, 1)); }
+    &[data-layout='odak'] .sh-main { max-width: none; }
   }
   & .s12-top-t { flex: 0 1 auto; min-width: 0; font: 600 16px/1.2 var(--font-sans); letter-spacing: -.01em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   /* Sayfanın bağlamsal denetimleri (TopBarSlotV12) — boşken de araçları sağa iter */
@@ -168,7 +179,7 @@
     border: 1px solid var(--color-line-soft); transition: transform 120ms var(--mo-ease); }
   & .s12-mtile:active .s12-mtile-ic { transform: scale(.93); }
   & .s12-mtile-ic svg { width: 20px; height: 20px; }
-  & .s12-mtile-l { max-width: 100%; font: 500 11.5px/1.2 var(--font-sans); text-align: center; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  & .s12-mtile-l { max-width: 100%; min-height: 2.4em; font: 500 11.5px/1.2 var(--font-sans); text-align: center; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow-wrap: anywhere; }
   & .s12-mtile[aria-current='page'] .s12-mtile-ic { background: var(--color-accent-soft); color: var(--color-accent); border-color: transparent; }
   & .s12-mtile[aria-current='page'] .s12-mtile-l { color: var(--color-accent); font-weight: 600; }
   & .s12-more .s12-mrow { min-height: 44px; padding-block: 6px; }
@@ -185,6 +196,34 @@
   & .s12-mrow-chev { width: 16px; height: 16px; flex: none; color: var(--color-line-2); }
   & .s12-mrow[aria-current='page'] { background: var(--color-accent-soft); }
   & .s12-mrow[aria-current='page'] :is(b, .s12-ico) { color: var(--color-accent); }
+  /* Sayfa bul · son açılanlar · alt çubuğu düzenle (shell/phoneNav) */
+  & .s12-msearch { position: relative; display: flex; align-items: center; }
+  & .s12-msearch > svg { position: absolute; left: 12px; width: 16px; height: 16px; color: var(--color-ink-3); pointer-events: none; }
+  & .s12-msearch input { width: 100%; height: 42px; padding: 0 12px 0 36px; border: 1px solid var(--color-line); border-radius: 10px; background: var(--color-canvas);
+    color: var(--color-ink); font: 400 16px/1 var(--font-sans); outline: none; -webkit-appearance: none; appearance: none; }
+  & .s12-msearch input:focus-visible { border-color: var(--color-accent); box-shadow: 0 0 0 3px var(--color-accent-soft); }
+  & .s12-msec-h.is-ic { display: flex; align-items: center; gap: 5px; }
+  & .s12-msec-h > svg { flex: none; width: 13px; height: 13px; }
+  & .s12-medit { display: inline-flex; align-items: center; gap: 5px; min-height: 36px; padding: 0 12px; border: 1px solid var(--color-line); border-radius: 999px;
+    background: transparent; color: var(--color-ink-2); font: 600 13px/1 var(--font-sans); cursor: pointer; }
+  & .s12-medit svg { width: 14px; height: 14px; }
+  & .s12-medit.is-on { background: var(--color-accent); border-color: var(--color-accent); color: var(--color-on-accent); }
+  & .s12-mnote { margin: 0; padding: 0 4px; font-size: 12.5px; line-height: 1.4; color: var(--color-ink-3); }
+  & .s12-mbar { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 4px; padding: 6px; border: 1px solid var(--color-line); border-radius: 12px; background: var(--color-canvas); }
+  & .s12-mbar-slot { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; min-width: 0; min-height: 52px; padding: 4px 2px;
+    border: 1.5px dashed var(--color-line-2); border-radius: 10px; background: var(--color-white); color: var(--color-ink-2); font: 500 11px/1.15 var(--font-sans); cursor: pointer; }
+  & .s12-mbar-slot svg { width: 18px; height: 18px; }
+  & .s12-mbar-slot span { max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  & .s12-mbar-slot[aria-checked='true'] { border-style: solid; border-color: var(--color-accent); background: var(--color-accent-soft); color: var(--color-accent); font-weight: 600; }
+  & .s12-mbar-fix { display: grid; place-items: center; color: var(--color-ink-3); opacity: .6; }
+  & .s12-mbar-fix svg { width: 18px; height: 18px; }
+  & .s12-mreset { align-self: flex-start; display: inline-flex; align-items: center; gap: 6px; min-height: 36px; padding: 0 4px; border: 0; background: none;
+    color: var(--color-accent); font: 500 13px/1 var(--font-sans); cursor: pointer; }
+  & .s12-mreset svg { width: 14px; height: 14px; }
+  & .s12-mtile-ic { position: relative; }
+  & .s12-mtile-pin { position: absolute; top: -5px; right: -5px; min-width: 18px; height: 18px; padding: 0 4px; border-radius: 9px; background: var(--color-accent);
+    color: var(--color-on-accent); font: 700 10.5px/18px var(--font-sans); font-style: normal; text-align: center; box-shadow: 0 0 0 2px var(--color-white); }
+  & .s12-mtile[aria-pressed='true'] .s12-mtile-ic { border-color: var(--color-accent); color: var(--color-accent); }
 
   /* =========================================================================
    * Komut paleti (search/SearchPalette) — gruplu sonuçlar, sayfa/komut satırları, kbd altlığı

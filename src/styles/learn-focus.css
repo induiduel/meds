@@ -78,7 +78,7 @@
 @media (max-width: 480px) {
   .lf-stats { grid-template-columns: repeat(2, 1fr); }
   .lf-actions > .ls-btn { flex: 1 1 100%; }
-  .lf-goal-t { max-width: 34vw; }
+  .lf-goal-t { max-width: calc(34vw / var(--in-zoom, 1)); }
 }
 
 /* Tekrar ekranı */

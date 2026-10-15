@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import { LayoutGrid, Landmark, List, Rows3, Rows4, RefreshCw } from 'lucide-react';
+import { History, LayoutGrid, Landmark, List, Presentation, Rows3, Rows4, RefreshCw } from 'lucide-react';
 import { parseLocation, pathFor, writeLocation, linkClick } from '../../router';
 import { AtifSaglayici, DersPaneli, Kaynakca, KendiniSina, tarihTR } from './SaglikOrtak';
 import { BOLUM_BILESEN, bolumKaynaklari } from './SaglikBolumler';
@@ -7,6 +7,7 @@ import { BOLUMLER, BOLUM_GRUPLARI, bolumBySlug, havuzYukle, saglikVeriYukle, typ
 import { GecmisCtx, GorunumCtx, type GecmisIstek, type GorunumModu } from './saglikBaglam';
 import { GecmisPencere } from './SaglikGecmis';
 import { DersCtx, dersDiziniYukle, type DersDizin } from './saglikDers';
+import { DersKatmani } from './SaglikDersKatmani';
 import '../../styles/saglik.css';
 
 /**
@@ -84,6 +85,28 @@ export const SaglikView: React.FC = () => {
     return () => window.removeEventListener('popstate', f);
   }, []);
 
+  // Yana kayan bölüm şeritleri: hangi kenarda gizli öğe varsa o kenar solar (kaydırılabildiği belli olsun)
+  useEffect(() => {
+    const nav = navRef.current;
+    if (!nav) return;
+    const seritler = [...nav.querySelectorAll<HTMLElement>('.sbk-nav-ogeler')];
+    const olc = (el: HTMLElement) => {
+      const sol = el.scrollLeft > 4;
+      const sag = el.scrollLeft + el.clientWidth < el.scrollWidth - 4;
+      el.dataset.tasma = sol && sag ? 'iki' : sol ? 'sol' : sag ? 'sag' : '';
+    };
+    const hepsi = () => seritler.forEach(olc);
+    const dinle = (e: Event) => olc(e.currentTarget as HTMLElement);
+    seritler.forEach((el) => el.addEventListener('scroll', dinle, { passive: true }));
+    const ro = typeof ResizeObserver !== 'undefined' ? new ResizeObserver(hepsi) : null;
+    seritler.forEach((el) => ro?.observe(el));
+    hepsi();
+    return () => {
+      seritler.forEach((el) => el.removeEventListener('scroll', dinle));
+      ro?.disconnect();
+    };
+  }, []);
+
   // Etkin sekme şeritte görünür kalsın
   useEffect(() => {
     const el = navRef.current?.querySelector<HTMLElement>('[aria-current="page"]');
@@ -114,6 +137,7 @@ export const SaglikView: React.FC = () => {
 
   // Ders slaytı eşleşme dizini: sayfa açılınca arka planda yüklenir; gelince değerlerde "!" işaretleri belirir
   const [dersDizin, setDersDizin] = useState<DersDizin | null>(null);
+  const [icerikEl, setIcerikEl] = useState<HTMLDivElement | null>(null);
   useEffect(() => {
     let iptal = false;
     dersDiziniYukle().then((d) => { if (!iptal) setDersDizin(d); }).catch(() => { /* işaretler yalnız gösterilmez */ });
@@ -152,7 +176,7 @@ export const SaglikView: React.FC = () => {
         <div className="sbk-ust-sag">
           <div className="sbk-seg" role="radiogroup" aria-label="Görünüm">
             <button type="button" role="radio" aria-checked={mod === 'kart'} className={mod === 'kart' ? 'is-sec' : ''} onClick={() => setMod('kart')}><LayoutGrid aria-hidden /> Kart</button>
-            <button type="button" role="radio" aria-checked={mod === 'madde'} className={mod === 'madde' ? 'is-sec' : ''} onClick={() => setMod('madde')}><List aria-hidden /> Madde madde</button>
+            <button type="button" role="radio" aria-checked={mod === 'madde'} className={mod === 'madde' ? 'is-sec' : ''} onClick={() => setMod('madde')}><List aria-hidden /> Madde<span className="sbk-genis-yazi"> madde</span></button>
           </div>
           <div className="sbk-seg" role="radiogroup" aria-label="Yoğunluk">
             <button type="button" role="radio" aria-checked={!kompakt} className={!kompakt ? 'is-sec' : ''} onClick={() => setKompakt(false)}><Rows3 aria-hidden /> Rahat</button>
@@ -181,6 +205,14 @@ export const SaglikView: React.FC = () => {
         ))}
       </nav>
 
+      {veri && (
+        <p className="sbk-lejant" aria-label="Sayfadaki işaretler">
+          <span><span className="sbk-atif" aria-hidden>1</span> kaynak numarası: dokun, kaynakçada aç</span>
+          <span><span className="sbk-kpi-gecmis" aria-hidden><History /> 15 yıl</span> geçmiş yılların grafiği</span>
+          {dersDizin && <span><span className="sbk-ders-i-b is-ornek" aria-hidden><Presentation /></span> ders slaytında geçiyor: dokun, slaytı gör</span>}
+        </p>
+      )}
+
       {hata ? (
         <div className="sbk-durum" role="alert">
           <p>Veriler yüklenemedi. Bağlantını kontrol edip yeniden dene.</p>
@@ -208,7 +240,7 @@ export const SaglikView: React.FC = () => {
             </div>
           )}
           <div className={`sbk-izgara ${bag ? 'has-yan' : ''}`}>
-            <div className="sbk-icerik">
+            <div className="sbk-icerik" ref={setIcerikEl}>
               <BolumSiniri anahtar={bolum}><Bilesen v={veriH || veri} bag={bag} git={git} alt={alt} altGit={altGit} /></BolumSiniri>
               {bag && bag.havuz > 0 && bolum !== 'genel' && <KendiniSina bolum={bolum} baslik={tanim.ad} toplam={bag.soru_sayisi} />}
               <Kaynakca dogrulanamayan={dogrulanamayanlar(bolum, veri)} />
@@ -219,6 +251,7 @@ export const SaglikView: React.FC = () => {
               </aside>
             )}
           </div>
+          <DersKatmani dz={dersDizin} kok={icerikEl} tazele={`${bolum}|${alt || ''}|${mod}`} />
         </AtifSaglayici>
         </GecmisCtx.Provider>
         </DersCtx.Provider>

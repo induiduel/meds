@@ -79,8 +79,8 @@
 .pdv .textLayer.selecting .endOfContent { top: 0; }
 
 /* ---------- tam ekran ---------- */
-.dpv:fullscreen { width: 100vw; height: 100vh; }
-.dpv.is-max { position: fixed; inset: 0; z-index: 1000; height: 100dvh; padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px) env(safe-area-inset-bottom, 0px) env(safe-area-inset-left, 0px); }
+.dpv:fullscreen { width: calc(100vw / var(--in-zoom, 1)); height: calc(100vh / var(--in-zoom, 1)); }
+.dpv.is-max { position: fixed; inset: 0; z-index: 1000; height: calc(100dvh / var(--in-zoom, 1)); padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px) env(safe-area-inset-bottom, 0px) env(safe-area-inset-left, 0px); }
 
 /* ---------- diğer ayarlar menüsü ---------- */
 .dpv-more { position: relative; }

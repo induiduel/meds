@@ -85,7 +85,7 @@
   & .g12-split { display: grid; grid-template-columns: minmax(0, 1fr); gap: 16px; align-items: start; min-width: 0; }
   & .g12.is-wide .g12-split { grid-template-columns: minmax(260px, min(380px, 38%)) minmax(0, 1fr); }
   & .g12-list { display: flex; flex-direction: column; overflow: hidden; }
-  & .g12.is-wide .g12-list { position: sticky; top: var(--g12-top); max-height: calc(100dvh - var(--g12-top) - 16px); }
+  & .g12.is-wide .g12-list { position: sticky; top: var(--g12-top); max-height: calc(100dvh / var(--in-zoom, 1) - var(--g12-top) - 16px); }
   & .g12-scroll { min-height: 0; }
   & .g12.is-wide .g12-scroll { flex: 1 1 auto; overflow-y: auto; overscroll-behavior: contain; }
 

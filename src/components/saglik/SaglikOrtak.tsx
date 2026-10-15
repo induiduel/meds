@@ -7,7 +7,6 @@ import { toast } from '../ui/Toast';
 import { maddeMetni, useGecmis, useGorunum, yillikMi, type GecmisIstek, type MaddeOge } from './saglikBaglam';
 import { linkClick, navigateTo, pathFor } from '../../router';
 import { TabloKabi } from './SaglikTablo';
-import { cumleAraligi, dersEslesmeleri, useDersDizin, type DersEslesme } from './saglikDers';
 import {
   bolumSorulari, sayi, type BaglantiCapa, type BolumBaglanti, type BolumId, type Kaynak, type SeriNokta, type SinavSorusu,
 } from './saglikVeri';
@@ -28,6 +27,12 @@ export const AtifSaglayici: React.FC<{ ids: string[]; kaynaklar: Record<string, 
   return <AtifCtx.Provider value={deger}>{children}</AtifCtx.Provider>;
 };
 
+/** Kapalı kaynakçayı açar (bağlantının kendi kaydırması açıldıktan sonra çalışır) */
+const kaynakcayiAc = () => {
+  const d = document.getElementById('sbk-kaynakca-d') as HTMLDetailsElement | null;
+  if (d && !d.open) d.open = true;
+};
+
 /** Kaynak numarası (üst simge). Tıklayınca sayfa sonundaki kaynakçaya iner. */
 export const Atif: React.FC<{ id?: string; konum?: string }> = ({ id, konum }) => {
   const { sira, kaynaklar } = useContext(AtifCtx);
@@ -37,7 +42,7 @@ export const Atif: React.FC<{ id?: string; konum?: string }> = ({ id, konum }) =
   if (!n || !k) return null;
   const baslik = `${k.kurum} — ${k.belge}${k.yil ? ` (${k.yil})` : ''}${konum ? ` · ${konum}` : ''}`;
   return (
-    <a className="sbk-atif" href={`#sbk-kaynak-${n}`} title={baslik} aria-label={`Kaynak ${n}: ${baslik}`}>
+    <a className="sbk-atif" href={`#sbk-kaynak-${n}`} title={baslik} aria-label={`Kaynak ${n}: ${baslik}`} onClick={kaynakcayiAc}>
       {n}
     </a>
   );
@@ -50,7 +55,7 @@ export const EkAtif: React.FC<{ ids: string[] }> = ({ ids }) => {
   if (!gecerli.length) return null;
   if (gecerli.length === 1) return <Atif id={gecerli[0]} />;
   const baslik = gecerli.map((id) => `[${sira.get(id)}] ${kaynaklar[id].belge}${kaynaklar[id].yil ? ` (${kaynaklar[id].yil})` : ''}`).join('\n');
-  return <a className="sbk-atif" href={`#sbk-kaynak-${sira.get(gecerli[0])}`} title={baslik} aria-label={`${gecerli.length} ek kaynak`}>+{gecerli.length}</a>;
+  return <a className="sbk-atif" href={`#sbk-kaynak-${sira.get(gecerli[0])}`} title={baslik} aria-label={`${gecerli.length} ek kaynak daha`} onClick={kaynakcayiAc}>+{gecerli.length}</a>;
 };
 
 export const Kaynakca: React.FC<{ dogrulanamayan?: string[] }> = ({ dogrulanamayan }) => {
@@ -60,7 +65,12 @@ export const Kaynakca: React.FC<{ dogrulanamayan?: string[] }> = ({ dogrulanamay
   const temiz = (dogrulanamayan || []).map((x) => x.replace(/\s*\((?:[a-z]+[-_][\w-]+(?:[;,]\s*)?)+\)/gi, ''));
   return (
     <section className="sbk-kaynakca" aria-labelledby="sbk-kaynakca-h">
-      <h2 id="sbk-kaynakca-h">Kaynaklar</h2>
+      {/* Açılır-kapanır: sayfa sonunu uzun liste kaplamasın; atıf numarasına dokununca kendiliğinden açılır (Atif) */}
+      <details id="sbk-kaynakca-d" className="sbk-kaynakca-d">
+      <summary>
+        <h2 id="sbk-kaynakca-h">Kaynaklar <span className="sbk-kaynakca-say">{liste.length}</span></h2>
+        <ChevronDown aria-hidden className="sbk-kaynakca-ok" />
+      </summary>
       <p className="sbk-muted">Bu sayfadaki her sayı aşağıdaki resmî kaynaklardan alınmıştır. Değerler kaynağın yayımladığı yıla aittir.</p>
       <ol>
         {liste.map(([id, n]) => {
@@ -77,6 +87,7 @@ export const Kaynakca: React.FC<{ dogrulanamayan?: string[] }> = ({ dogrulanamay
           );
         })}
       </ol>
+      </details>
       {temiz.length > 0 && (
         <details className="sbk-dogrulanamayan">
           <summary><AlertTriangle aria-hidden /> Teyit edilemediği için sayı yazılmayan konular ({temiz.length})<ChevronDown aria-hidden className="sbk-dg-ok" /></summary>
@@ -137,55 +148,6 @@ export const satirIci = (s: string, vurgu?: string[]): React.ReactNode[] => {
   return etiket ? [etiket, ...parcalar] : parcalar;
 };
 
-/* ===============================================================================================================
- * Ders slaytı işareti: değer ders slaytında da geçiyorsa sağ üstte "!" — dokununca slayt cümlesi (sayı vurgulu)
- * =============================================================================================================== */
-
-export const DersIsareti: React.FC<{ e: DersEslesme[] }> = ({ e }) => {
-  const [acik, setAcik] = useState(false);
-  const ref = useRef<HTMLSpanElement>(null);
-  const dz = useDersDizin();
-  useEffect(() => {
-    if (!acik) return;
-    const dis = (ev: PointerEvent) => { if (!ref.current?.contains(ev.target as Node)) setAcik(false); };
-    const tus = (ev: KeyboardEvent) => { if (ev.key === 'Escape') setAcik(false); };
-    document.addEventListener('pointerdown', dis);
-    document.addEventListener('keydown', tus);
-    return () => { document.removeEventListener('pointerdown', dis); document.removeEventListener('keydown', tus); };
-  }, [acik]);
-  if (!e.length || !dz) return null;
-  return (
-    <span className={`sbk-ders-i ${acik ? 'is-acik' : ''}`} ref={ref} onClick={(ev) => ev.stopPropagation()} onKeyDown={(ev) => ev.stopPropagation()}>
-      <button
-        type="button" className="sbk-ders-i-b" aria-expanded={acik} onClick={() => setAcik((x) => !x)}
-        title="Bu bilgi ders slaytında da geçiyor" aria-label="Ders slaytında geçiyor: ayrıntı"
-      >!</button>
-      {acik && (
-        <span className="sbk-ders-pop" role="dialog" aria-label="Ders slaytında geçiyor">
-          <span className="sbk-ders-pop-t"><Presentation aria-hidden /> Ders slaytında geçiyor</span>
-          {e.slice(0, 3).map((x, i) => {
-            const r = cumleAraligi(dz, x);
-            const t = x.cumle.t;
-            return (
-              <span key={i} className="sbk-ders-pop-o">
-                <small>{x.deste} · Slayt {x.cumle.s}{x.cumle.b ? ` · ${x.cumle.b}` : ''}</small>
-                <q>{r ? <>{t.slice(0, r[0])}<mark className="sbk-ders-m">{t.slice(r[0], r[1])}</mark>{t.slice(r[1])}</> : t}</q>
-                <IcBag to={desteYolu(x.cumle.d, x.cumle.s)} className="sbk-bag">Slayta git <ArrowRight aria-hidden /></IcBag>
-              </span>
-            );
-          })}
-          {e.length > 3 && <small className="sbk-muted">+{e.length - 3} slayt daha</small>}
-        </span>
-      )}
-    </span>
-  );
-};
-
-/** Metnin ders slaytı eşleşmeleri (dizin yüklenmediyse boş) */
-export const useDersEslesme = (metin: string, baglam = ''): DersEslesme[] => {
-  const dz = useDersDizin();
-  return useMemo(() => dersEslesmeleri(dz, metin, baglam), [dz, metin, baglam]);
-};
 
 export const MiniMetin: React.FC<{ metin: string; className?: string }> = ({ metin, className }) => {
   const bloklar: React.ReactNode[] = [];
@@ -259,12 +221,9 @@ const etiketi = (m: string) => (/^(?:\*\*([^*]+)\*\*|([^:]{2,80})):/.exec(m)?.sl
 
 const MaddeSatiri: React.FC<{ o: MaddeOge; baglam: string }> = ({ o, baglam }) => {
   const metin = typeof o === 'string' ? o : o.metin;
-  const e = useDersEslesme(metin, baglam);
-  const vurgu = e.map((x) => x.ham);
   return (
-    <li className={e.length ? 'has-ders' : undefined}>
-      <span>{satirIci(metin, vurgu)}{typeof o !== 'string' && <><Atif id={o.kaynak} konum={o.konum} />{o.ek?.length ? <EkAtif ids={o.ek} /> : null}</>}</span>
-      <DersIsareti e={e} />
+    <li>
+      <span>{satirIci(metin)}{typeof o !== 'string' && <><Atif id={o.kaynak} konum={o.konum} />{o.ek?.length ? <EkAtif ids={o.ek} /> : null}</>}</span>
       {typeof o !== 'string' && o.alt?.length ? <MaddeAgaci ogeler={o.alt} sik baglam={[baglam, etiketi(metin)].filter(Boolean).join(' ')} /> : null}
     </li>
   );
@@ -344,15 +303,13 @@ export const Kpi: React.FC<{
   gecmis?: Partial<GecmisIstek>;
 }> = ({ ad, deger, birim, yil, kaynak, konum, not, seri, ton, ipucu, ek, gecmis }) => {
   const ac = useGecmis();
-  const degerMetni = typeof deger === 'string' || typeof deger === 'number' ? String(deger) : '';
-  const dersE = useDersEslesme(degerMetni ? `${ad}: ${degerMetni}` : '', `${ad} ${yil ?? ''}`);
   const yilSay = (seri || []).filter((p) => typeof p.deger === 'number').length;
   const acilir = yilSay >= 2;
   const ic = (
     <>
       <span className="sbk-kpi-ad">{ad}</span>
       <span className="sbk-kpi-d">
-        <b data-num>{dersE.length ? <mark className="sbk-ders-m">{deger}</mark> : deger}</b>
+        <b data-num>{deger}</b>
         {birim && <small>{birim}</small>}
         <Atif id={kaynak} konum={konum} />
         {ek && ek.length > 0 && <EkAtif ids={ek} />}
@@ -360,16 +317,15 @@ export const Kpi: React.FC<{
       <span className="sbk-kpi-alt">
         {yil != null && <span>{yil}</span>}
         {not && <span>{not}</span>}
+        {acilir && <span className="sbk-kpi-gecmis" title="Geçmiş yılları göster"><History aria-hidden /> {yilSay} yıl</span>}
       </span>
       {seri && seri.filter(yillikMi).length > 2 && <Kivilcim seri={seri} />}
-      {acilir && <span className="sbk-kpi-gecmis"><History aria-hidden /> {yilSay} yıl</span>}
-      <DersIsareti e={dersE} />
     </>
   );
-  if (!acilir) return <div className={`sbk-kpi ${ton ? `is-${ton}` : ''}`} title={ipucu}>{ic}</div>;
+  if (!acilir) return <div className={`sbk-kpi ${ton ? `is-${ton}` : ''}`} title={ipucu} data-ders-ad={ad}>{ic}</div>;
   return (
     <div
-      className={`sbk-kpi is-acilir ${ton ? `is-${ton}` : ''}`} title={ipucu || 'Geçmiş yılları göster'} role="button" tabIndex={0}
+      className={`sbk-kpi is-acilir ${ton ? `is-${ton}` : ''}`} title={ipucu || 'Geçmiş yılları göster'} role="button" tabIndex={0} data-ders-ad={ad}
       aria-label={`${ad}: geçmiş yılları göster`}
       onClick={(e) => { if ((e.target as HTMLElement).closest('a')) return; ac({ baslik: ad, birim, seriler: [{ ad, seri: seri! }], kaynak, ek, konum, ...gecmis }); }}
       onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); ac({ baslik: ad, birim, seriler: [{ ad, seri: seri! }], kaynak, ek, konum, ...gecmis }); } }}
@@ -501,7 +457,7 @@ export const CizgiGrafik: React.FC<{ seriler: CizgiSeri[]; birim?: string; yukse
             <svg
               width={W} height={H} role="img" tabIndex={0} onKeyDown={tusa}
               aria-label={`${baslik}: ${ss.map((s) => `${s.ad} ${s.seri[0].yil} yılında ${fmt(s.seri[0].deger)}, ${s.seri[s.seri.length - 1].yil} yılında ${fmt(s.seri[s.seri.length - 1].deger)}`).join('; ')}`}
-              onPointerMove={(e) => { const r = (e.currentTarget as SVGSVGElement).getBoundingClientRect(); setImlec(yakin(e.clientX - r.left)); }}
+              onPointerMove={(e) => { const r = (e.currentTarget as SVGSVGElement).getBoundingClientRect(); setImlec(yakin(((e.clientX - r.left) * W) / (r.width || W))); }}
               onPointerLeave={() => setImlec(null)}
               onBlur={() => setImlec(null)}
             >

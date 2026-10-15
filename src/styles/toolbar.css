@@ -115,7 +115,7 @@ html { --pt-top: calc(var(--sh-top-h, 52px) + env(safe-area-inset-top, 0px)); }
 .pt-q-x svg { width: 13px; height: 13px; }
 .pt-q.is-open { border-color: var(--color-accent); }
 /* Masaüstü penceresi */
-.pt-pop { position: fixed; z-index: 60; max-height: min(440px, calc(100dvh - 120px)); display: flex; flex-direction: column; padding: 6px; border-radius: 14px; background: var(--color-white); border: 1px solid var(--color-line); box-shadow: 0 12px 32px -8px rgb(0 0 0 / .22), 0 2px 6px rgb(0 0 0 / .06); animation: pt-pop-in .14s ease-out; overflow: hidden; }
+.pt-pop { position: fixed; z-index: 60; max-height: min(440px, calc(100dvh / var(--in-zoom, 1) - 120px)); display: flex; flex-direction: column; padding: 6px; border-radius: 14px; background: var(--color-white); border: 1px solid var(--color-line); box-shadow: 0 12px 32px -8px rgb(0 0 0 / .22), 0 2px 6px rgb(0 0 0 / .06); animation: pt-pop-in .14s ease-out; overflow: hidden; }
 @keyframes pt-pop-in { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: none; } }
 .pt-qo { display: flex; flex-direction: column; gap: 4px; min-height: 0; flex: 1; }
 .pt-qo-q { display: flex; align-items: center; gap: 8px; height: 36px; padding: 0 10px; margin-bottom: 2px; border-radius: 9px; background: var(--color-field); color: var(--color-ink-3); flex-shrink: 0; }
