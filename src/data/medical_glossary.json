@@ -94016,5 +94016,805 @@
         "alinti": "Kalıcı olabilen gebelik maskesi • Telenjiektazi – estrojen sorumlu"
       }
     ]
+  },
+  "granulomatosis infantiseptica": {
+    "term": "Granulomatosis infantiseptica",
+    "category": "patoloji",
+    "definition": "Listeria monocytogenes'in fetüste karaciğer ve dalakta yaygın mikroabse ve granülom oluşturduğu, ölümle sonuçlanan konjenital tablo.",
+    "description": "Listeria monocytogenes'in fetüste karaciğer ve dalakta yaygın mikroabse ve granülom oluşturduğu, ölümle sonuçlanan konjenital tablo.",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "",
+    "clinicalPearl": "Soru kökünde geçerse etken Listeria monocytogenes'tir.",
+    "aliases": [
+      "Granülomatozis infantiseptika"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-2d80ccc7f3"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Enfeksiyon Hastalıkları/9)İntrauterin enfeksiyonlar.pdf",
+        "ders": "Enfeksiyon Hastalıkları",
+        "kurul": 1,
+        "sayfa": 11,
+        "alinti": "Granulomatosis infantiseptica → karaciğer ve dalakta yaygın mikroabseler ve granulomlar → ölüm"
+      }
+    ]
+  },
+  "streptococcus agalactiae": {
+    "term": "Streptococcus agalactiae",
+    "category": "patojen",
+    "definition": "Grup B streptokokun tür adı; gebelerin %20-25'inde rektal ve vajinal kolonizasyon yapan gram pozitif kok.",
+    "description": "Grup B streptokokun tür adı; gebelerin %20-25'inde rektal ve vajinal kolonizasyon yapan gram pozitif kok.",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "",
+    "clinicalPearl": "Erken başlangıçlı yenidoğan sepsisinin önemli etkenidir.",
+    "aliases": [
+      "GBS"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-2d80ccc7f3"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Enfeksiyon Hastalıkları/9)İntrauterin enfeksiyonlar.pdf",
+        "ders": "Enfeksiyon Hastalıkları",
+        "kurul": 1,
+        "sayfa": 8,
+        "alinti": "Streptococcus agalactiae Gebelerin %20-25’inde rektal ve vajinal kolonizasyon"
+      }
+    ]
+  },
+  "erken başlangıçlı gbs enfeksiyonu": {
+    "term": "Erken başlangıçlı GBS enfeksiyonu",
+    "category": "hastalik",
+    "definition": "Doğum sonrası ilk haftada başlayan, olguların %80-85'ini oluşturan, ağır pnömoni ve sepsisle seyreden yenidoğan GBS enfeksiyonu.",
+    "description": "Doğum sonrası ilk haftada başlayan, olguların %80-85'ini oluşturan, ağır pnömoni ve sepsisle seyreden yenidoğan GBS enfeksiyonu.",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "",
+    "clinicalPearl": "Mortalite pretermde %25, termde %5.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-2d80ccc7f3"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Enfeksiyon Hastalıkları/9)İntrauterin enfeksiyonlar.pdf",
+        "ders": "Enfeksiyon Hastalıkları",
+        "kurul": 1,
+        "sayfa": 9,
+        "alinti": "Erken başlangıçlı GBS enfeksiyonu (doğum sonrası ilk hafta) %80-85"
+      }
+    ]
+  },
+  "geç başlangıçlı gbs enfeksiyonu": {
+    "term": "Geç başlangıçlı GBS enfeksiyonu",
+    "category": "hastalik",
+    "definition": "Doğum sonrası 2. hafta ile 3. ay arasında menenjit ve bakteriyemiyle seyreden yenidoğan GBS enfeksiyonu.",
+    "description": "Doğum sonrası 2. hafta ile 3. ay arasında menenjit ve bakteriyemiyle seyreden yenidoğan GBS enfeksiyonu.",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "",
+    "clinicalPearl": "Mortalite %5.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-2d80ccc7f3"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Enfeksiyon Hastalıkları/9)İntrauterin enfeksiyonlar.pdf",
+        "ders": "Enfeksiyon Hastalıkları",
+        "kurul": 1,
+        "sayfa": 9,
+        "alinti": "3. ay arası) Menenjit, bakteriyemi Mortalite %5"
+      }
+    ]
+  },
+  "koryoamniyonit": {
+    "term": "Koryoamniyonit",
+    "category": "patoloji",
+    "definition": "Fetal zarların (koryon ve amniyon) ve amniyon sıvısının, çoğunlukla asendan yolla gelişen enfeksiyonu.",
+    "description": "Fetal zarların (koryon ve amniyon) ve amniyon sıvısının, çoğunlukla asendan yolla gelişen enfeksiyonu.",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "",
+    "clinicalPearl": "GBS'nin obstetrik sonuçlarından ve HIV geçişini artıran faktörlerdendir.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-2d80ccc7f3"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Enfeksiyon Hastalıkları/9)İntrauterin enfeksiyonlar.pdf",
+        "ders": "Enfeksiyon Hastalıkları",
+        "kurul": 1,
+        "sayfa": 8,
+        "alinti": "Erken membran rüptürü Koryoamniyonit Postpartum sepsis"
+      }
+    ]
+  },
+  "erken membran rüptürü": {
+    "term": "Erken membran rüptürü",
+    "category": "terim",
+    "definition": "Doğum eylemi başlamadan fetal zarların yırtılması; asendan enfeksiyonun sonucu olabilir.",
+    "description": "Doğum eylemi başlamadan fetal zarların yırtılması; asendan enfeksiyonun sonucu olabilir.",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "",
+    "clinicalPearl": "HIV'de vertikal geçiş riskini artırır.",
+    "aliases": [
+      "EMR"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-2d80ccc7f3"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Enfeksiyon Hastalıkları/9)İntrauterin enfeksiyonlar.pdf",
+        "ders": "Enfeksiyon Hastalıkları",
+        "kurul": 1,
+        "sayfa": 6,
+        "alinti": "Asendan geçiş: • Abortus • Erken membran rüptürü • Prematürite"
+      }
+    ]
+  },
+  "transplasental geçiş": {
+    "term": "Transplasental geçiş",
+    "category": "terim",
+    "definition": "Etkenin maternal dolaşımdan plasentayı aşarak fetüse ulaşması; virüs, bakteri ve protozoalar bu yolla geçer.",
+    "description": "Etkenin maternal dolaşımdan plasentayı aşarak fetüse ulaşması; virüs, bakteri ve protozoalar bu yolla geçer.",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-2d80ccc7f3"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Enfeksiyon Hastalıkları/9)İntrauterin enfeksiyonlar.pdf",
+        "ders": "Enfeksiyon Hastalıkları",
+        "kurul": 1,
+        "sayfa": 3,
+        "alinti": "Transplasental: Virüsler Bakteriler Protozoalar Asendan: Bakteriler"
+      }
+    ]
+  },
+  "asendan enfeksiyon": {
+    "term": "Asendan enfeksiyon",
+    "category": "terim",
+    "definition": "Vajina ve serviksteki bakterilerin zarlara ve amniyon sıvısına yükselmesiyle oluşan enfeksiyon; GBS, gonokok, klamidya ve BV etkenleri sorumludur.",
+    "description": "Vajina ve serviksteki bakterilerin zarlara ve amniyon sıvısına yükselmesiyle oluşan enfeksiyon; GBS, gonokok, klamidya ve BV etkenleri sorumludur.",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "",
+    "aliases": [
+      "Asendan geçiş"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-2d80ccc7f3"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Enfeksiyon Hastalıkları/9)İntrauterin enfeksiyonlar.pdf",
+        "ders": "Enfeksiyon Hastalıkları",
+        "kurul": 1,
+        "sayfa": 3,
+        "alinti": "Asendan: Bakteriler • Grup B streptokok • Gonokok • Klamidya • BV etkenleri"
+      }
+    ]
+  },
+  "organotropi": {
+    "term": "Organotropi",
+    "category": "terim",
+    "definition": "Bir mikroorganizmanın belirli organ ya da dokulara yönelme eğilimi; konjenital enfeksiyonlarda SSS, göz, karaciğer, dalak, kalp ve cilt tutulumunu belirler.",
+    "description": "Bir mikroorganizmanın belirli organ ya da dokulara yönelme eğilimi; konjenital enfeksiyonlarda SSS, göz, karaciğer, dalak, kalp ve cilt tutulumunu belirler.",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "",
+    "aliases": [
+      "Organotrofi"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-2d80ccc7f3"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Enfeksiyon Hastalıkları/9)İntrauterin enfeksiyonlar.pdf",
+        "ders": "Enfeksiyon Hastalıkları",
+        "kurul": 1,
+        "sayfa": 5,
+        "alinti": "Mikroorganizmanın organotrofisi • Düşük doğum ağırlığı • Prematürite SSS, göz, karaciğer, dalak, kalp, cilt"
+      }
+    ]
+  },
+  "lenfositik koryomenenjit virüsü": {
+    "term": "Lenfositik koryomenenjit virüsü",
+    "category": "patojen",
+    "definition": "İntrauterin enfeksiyon yapabilen bir arenavirüs.",
+    "description": "İntrauterin enfeksiyon yapabilen bir arenavirüs.",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "",
+    "aliases": [
+      "LCMV"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-2d80ccc7f3"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Enfeksiyon Hastalıkları/9)İntrauterin enfeksiyonlar.pdf",
+        "ders": "Enfeksiyon Hastalıkları",
+        "kurul": 1,
+        "sayfa": 4,
+        "alinti": "Enterovirus –Coxsackie B virus, –Echovirus, –Poliovirus •HIV-1 ve HIV-2"
+      }
+    ]
+  },
+  "trypanosoma cruzi": {
+    "term": "Trypanosoma cruzi",
+    "category": "patojen",
+    "definition": "Chagas hastalığının etkeni olan, intrauterin enfeksiyon yapabilen protozoa.",
+    "description": "Chagas hastalığının etkeni olan, intrauterin enfeksiyon yapabilen protozoa.",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-2d80ccc7f3"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Enfeksiyon Hastalıkları/9)İntrauterin enfeksiyonlar.pdf",
+        "ders": "Enfeksiyon Hastalıkları",
+        "kurul": 1,
+        "sayfa": 4,
+        "alinti": "Toxoplasma gondii •Plasmodium sp. •Trypanosoma cruzi TORCH"
+      }
+    ]
+  },
+  "campylobacter fetus": {
+    "term": "Campylobacter fetus",
+    "category": "patojen",
+    "definition": "İntrauterin enfeksiyon yapabilen gram negatif kıvrık basil.",
+    "description": "İntrauterin enfeksiyon yapabilen gram negatif kıvrık basil.",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-2d80ccc7f3"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Enfeksiyon Hastalıkları/9)İntrauterin enfeksiyonlar.pdf",
+        "ders": "Enfeksiyon Hastalıkları",
+        "kurul": 1,
+        "sayfa": 4,
+        "alinti": "Treponema pallidum •Mycobacterium tuberculosis •Listeria monocytogenes •Campylobacter fetus"
+      }
+    ]
+  },
+  "zidovudin": {
+    "term": "Zidovudin",
+    "category": "ilac",
+    "definition": "Nükleozid analoğu ters transkriptaz inhibitörü; perinatal HIV bulaşını azaltmak için anneye IV, bebeğe şurup olarak verilir.",
+    "description": "Nükleozid analoğu ters transkriptaz inhibitörü; perinatal HIV bulaşını azaltmak için anneye IV, bebeğe şurup olarak verilir.",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "",
+    "clinicalPearl": "Anneye sezaryenden 3 saat önce IV başlanır; bebeğe bir ay şurup verilir.",
+    "aliases": [
+      "AZT"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-2d80ccc7f3"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Enfeksiyon Hastalıkları/9)İntrauterin enfeksiyonlar.pdf",
+        "ders": "Enfeksiyon Hastalıkları",
+        "kurul": 1,
+        "sayfa": 13,
+        "alinti": "Anneye doğum esnasında veya sezeryandan 3 saat önce zidovudin iv başlanması"
+      }
+    ]
+  },
+  "ıgg avidite testi": {
+    "term": "IgG avidite testi",
+    "category": "tani",
+    "definition": "IgG antikorunun antijene bağlanma gücünü ölçerek enfeksiyonun ne zaman geçirildiğini belirleyen test.",
+    "description": "IgG antikorunun antijene bağlanma gücünü ölçerek enfeksiyonun ne zaman geçirildiğini belirleyen test.",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "",
+    "clinicalPearl": "Toksoplazmada >%30 yüksek (eski), <%20 düşük (yeni) avidite.",
+    "aliases": [
+      "Avidite testi"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-2d80ccc7f3"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Enfeksiyon Hastalıkları/9)İntrauterin enfeksiyonlar.pdf",
+        "ders": "Enfeksiyon Hastalıkları",
+        "kurul": 1,
+        "sayfa": 22,
+        "alinti": ">%30 = yüksek avidite = eski antikorlar %20-30 = orta avidite = şüpheli değer"
+      }
+    ]
+  },
+  "spiramisin": {
+    "term": "Spiramisin",
+    "category": "ilac",
+    "definition": "Plasentada biriken makrolid antibiyotik; gebelikte toksoplazmanın fetüse geçişini azaltmak için kullanılır.",
+    "description": "Plasentada biriken makrolid antibiyotik; gebelikte toksoplazmanın fetüse geçişini azaltmak için kullanılır.",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "",
+    "clinicalPearl": "16-18. haftadan önce tanıda 18. haftaya kadar verilir.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-2d80ccc7f3"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Enfeksiyon Hastalıkları/9)İntrauterin enfeksiyonlar.pdf",
+        "ders": "Enfeksiyon Hastalıkları",
+        "kurul": 1,
+        "sayfa": 23,
+        "alinti": "Gebelik sırasında geçirilen hastalık tedavi edilir. 16-18 haftadan önce tanı konulmuşsa spiramisin 18. haftaya kadar"
+      }
+    ]
+  },
+  "pirimetamin": {
+    "term": "Pirimetamin",
+    "category": "ilac",
+    "definition": "Dihidrofolat redüktaz inhibitörü antiparaziter; toksoplazmozda sulfadiazinle birlikte kullanılır.",
+    "description": "Dihidrofolat redüktaz inhibitörü antiparaziter; toksoplazmozda sulfadiazinle birlikte kullanılır.",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "",
+    "clinicalPearl": "Gebelikte 2. trimesterden itibaren verilir.",
+    "aliases": [
+      "Primetamin"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-2d80ccc7f3"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Enfeksiyon Hastalıkları/9)İntrauterin enfeksiyonlar.pdf",
+        "ders": "Enfeksiyon Hastalıkları",
+        "kurul": 1,
+        "sayfa": 23,
+        "alinti": "18. haftaya kadar 2. trimestirde primetamin, sulfadiazin"
+      }
+    ]
+  },
+  "sulfadiazin": {
+    "term": "Sulfadiazin",
+    "category": "ilac",
+    "definition": "Sülfonamid grubu antimikrobiyal; toksoplazmozda pirimetaminle birlikte kullanılır.",
+    "description": "Sülfonamid grubu antimikrobiyal; toksoplazmozda pirimetaminle birlikte kullanılır.",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-2d80ccc7f3"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Enfeksiyon Hastalıkları/9)İntrauterin enfeksiyonlar.pdf",
+        "ders": "Enfeksiyon Hastalıkları",
+        "kurul": 1,
+        "sayfa": 23,
+        "alinti": "18. haftaya kadar 2. trimestirde primetamin, sulfadiazin"
+      }
+    ]
+  },
+  "lökovorin": {
+    "term": "Lökovorin",
+    "category": "ilac",
+    "definition": "Folinik asit; pirimetaminin kemik iliği baskılayıcı etkisini önlemek için verilir.",
+    "description": "Folinik asit; pirimetaminin kemik iliği baskılayıcı etkisini önlemek için verilir.",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "",
+    "clinicalPearl": "Konjenital toksoplazmozlu bebeğe bir yıl pirimetamin + sulfadiazin ile birlikte verilir.",
+    "aliases": [
+      "Folinik asit",
+      "Lokovirin"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-2d80ccc7f3"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Enfeksiyon Hastalıkları/9)İntrauterin enfeksiyonlar.pdf",
+        "ders": "Enfeksiyon Hastalıkları",
+        "kurul": 1,
+        "sayfa": 23,
+        "alinti": "Doğan bebeğe bir yıl süreyle primetamin, sulfadiazin + lokovirin"
+      }
+    ]
+  },
+  "ventrikülomegali": {
+    "term": "Ventrikülomegali",
+    "category": "patoloji",
+    "definition": "Beyin ventriküllerinin genişlemesi; konjenital toksoplazmozun SSS bulgusudur.",
+    "description": "Beyin ventriküllerinin genişlemesi; konjenital toksoplazmozun SSS bulgusudur.",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-2d80ccc7f3"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Enfeksiyon Hastalıkları/9)İntrauterin enfeksiyonlar.pdf",
+        "ders": "Enfeksiyon Hastalıkları",
+        "kurul": 1,
+        "sayfa": 20,
+        "alinti": "ventrikülomegali, nöbetler, mental retardasyon ve üveit"
+      }
+    ]
+  },
+  "serebral kalsifikasyon": {
+    "term": "Serebral kalsifikasyon",
+    "category": "patoloji",
+    "definition": "Beyin dokusunda hasar sonrası kalsiyum birikimi; konjenital CMV'nin tipik bulgusudur.",
+    "description": "Beyin dokusunda hasar sonrası kalsiyum birikimi; konjenital CMV'nin tipik bulgusudur.",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-2d80ccc7f3"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Enfeksiyon Hastalıkları/9)İntrauterin enfeksiyonlar.pdf",
+        "ders": "Enfeksiyon Hastalıkları",
+        "kurul": 1,
+        "sayfa": 29,
+        "alinti": "Koryoretinit Sağırlık Serebral kalsifikasyon Çoklu organ tutulumu"
+      }
+    ]
+  },
+  "hiperimmünglobulin": {
+    "term": "Hiperimmünglobulin",
+    "category": "tedavi",
+    "definition": "Belirli bir etkene karşı yüksek titrede antikor içeren immünglobulin preparatı.",
+    "description": "Belirli bir etkene karşı yüksek titrede antikor içeren immünglobulin preparatı.",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "",
+    "clinicalPearl": "Gebelikte primer CMV enfeksiyonunda pasif immünizasyon için kullanılır.",
+    "aliases": [
+      "CMV hiperimmünglobulini"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-2d80ccc7f3"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Enfeksiyon Hastalıkları/9)İntrauterin enfeksiyonlar.pdf",
+        "ders": "Enfeksiyon Hastalıkları",
+        "kurul": 1,
+        "sayfa": 31,
+        "alinti": "Gebelik sırasında primer CMV infeksiyonu geçirenlere hiperimmunglobulin ile pasif immunizasyon"
+      }
+    ]
+  },
+  "gansiklovir": {
+    "term": "Gansiklovir",
+    "category": "ilac",
+    "definition": "CMV'ye etkili nükleozid analoğu antiviral.",
+    "description": "CMV'ye etkili nükleozid analoğu antiviral.",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "",
+    "clinicalPearl": "Gebelikte intrauterin CMV enfeksiyonunu önlemez.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-2d80ccc7f3"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Enfeksiyon Hastalıkları/9)İntrauterin enfeksiyonlar.pdf",
+        "ders": "Enfeksiyon Hastalıkları",
+        "kurul": 1,
+        "sayfa": 31,
+        "alinti": "hiperimmunglobulin ile pasif immunizasyon Gansiklovir intrauterin infeksiyonu önlemez"
+      }
+    ]
+  },
+  "osteokondrit": {
+    "term": "Osteokondrit",
+    "category": "patoloji",
+    "definition": "Kemik ve kıkırdağın birlikte iltihabı; erken konjenital sifilizde görülür.",
+    "description": "Kemik ve kıkırdağın birlikte iltihabı; erken konjenital sifilizde görülür.",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-2d80ccc7f3"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Enfeksiyon Hastalıkları/9)İntrauterin enfeksiyonlar.pdf",
+        "ders": "Enfeksiyon Hastalıkları",
+        "kurul": 1,
+        "sayfa": 36,
+        "alinti": "Konjenital sifilisin erken dönem belirtileri Burun akıntısı Osteokondrit Deri döküntüsü Anemi Hepatosplenomegali"
+      }
+    ]
+  },
+  "eyer burun": {
+    "term": "Eyer burun",
+    "category": "patoloji",
+    "definition": "Burun kemiği ve kıkırdağının çökmesiyle burun sırtının içe göçmesi; geç konjenital sifilizin klasik bulgusudur.",
+    "description": "Burun kemiği ve kıkırdağının çökmesiyle burun sırtının içe göçmesi; geç konjenital sifilizin klasik bulgusudur.",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-2d80ccc7f3"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Enfeksiyon Hastalıkları/9)İntrauterin enfeksiyonlar.pdf",
+        "ders": "Enfeksiyon Hastalıkları",
+        "kurul": 1,
+        "sayfa": 37,
+        "alinti": "Geç dönem belirtileri Alında çöküklük Kısa maksila Eyer burun Keratit"
+      }
+    ]
+  },
+  "hidramniyoz": {
+    "term": "Hidramniyoz",
+    "category": "patoloji",
+    "definition": "Amniyon sıvısının normalden fazla olması; konjenital kızamıkta görülebilir.",
+    "description": "Amniyon sıvısının normalden fazla olması; konjenital kızamıkta görülebilir.",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "",
+    "aliases": [
+      "Polihidramniyoz"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-2d80ccc7f3"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Enfeksiyon Hastalıkları/9)İntrauterin enfeksiyonlar.pdf",
+        "ders": "Enfeksiyon Hastalıkları",
+        "kurul": 1,
+        "sayfa": 39,
+        "alinti": "Mikrosefali, gelişme geriliği ve hidramniyoz Takibinde ayrıntılı ve seri USG Korunmada gebelik öncesi aşı"
+      }
+    ]
+  },
+  "hidrops fetalis": {
+    "term": "Hidrops fetalis",
+    "category": "patoloji",
+    "definition": "Fetüste vücut boşluklarında ve ciltte anormal sıvı birikimi; parvovirus B19 enfeksiyonunda ağır anemiye bağlı gelişir.",
+    "description": "Fetüste vücut boşluklarında ve ciltte anormal sıvı birikimi; parvovirus B19 enfeksiyonunda ağır anemiye bağlı gelişir.",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "",
+    "aliases": [
+      "Fetal hidrops"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-2d80ccc7f3"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Enfeksiyon Hastalıkları/9)İntrauterin enfeksiyonlar.pdf",
+        "ders": "Enfeksiyon Hastalıkları",
+        "kurul": 1,
+        "sayfa": 42,
+        "alinti": "Gebeliğin ilk aylarında fetüsü etkileme olasılığı yüksek İntrauterin infeksiyonda fetüste hidrops ve trombositopeni görülür"
+      }
+    ]
+  },
+  "meflokin": {
+    "term": "Meflokin",
+    "category": "ilac",
+    "definition": "Sıtma profilaksisinde kullanılan kinolin metanol türevi antimalaryal.",
+    "description": "Sıtma profilaksisinde kullanılan kinolin metanol türevi antimalaryal.",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "",
+    "clinicalPearl": "Derste gebeliğin ilk 4 ayından sonra profilakside önerilir.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-2d80ccc7f3"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Enfeksiyon Hastalıkları/9)İntrauterin enfeksiyonlar.pdf",
+        "ders": "Enfeksiyon Hastalıkları",
+        "kurul": 1,
+        "sayfa": 43,
+        "alinti": "Endemik bölgeye seyahat eden gebeye ilk 4 ay klorokin sonraki aylarda meflokin profilaksisi"
+      }
+    ]
+  },
+  "klorokin": {
+    "term": "Klorokin",
+    "category": "ilac",
+    "definition": "Sıtma tedavi ve profilaksisinde kullanılan 4-aminokinolin.",
+    "description": "Sıtma tedavi ve profilaksisinde kullanılan 4-aminokinolin.",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "",
+    "clinicalPearl": "Derste gebeliğin ilk 4 ayında profilakside önerilir.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-2d80ccc7f3"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Enfeksiyon Hastalıkları/9)İntrauterin enfeksiyonlar.pdf",
+        "ders": "Enfeksiyon Hastalıkları",
+        "kurul": 1,
+        "sayfa": 43,
+        "alinti": "Endemik bölgeye seyahat eden gebeye ilk 4 ay klorokin sonraki aylarda meflokin profilaksisi"
+      }
+    ]
+  },
+  "plasenta yetmezliği": {
+    "term": "Plasenta yetmezliği",
+    "category": "patoloji",
+    "definition": "Plasentanın fetüse yeterli oksijen ve besin sağlayamaması; gebelikte sıtmada intrauterin gelişme geriliğine yol açar.",
+    "description": "Plasentanın fetüse yeterli oksijen ve besin sağlayamaması; gebelikte sıtmada intrauterin gelişme geriliğine yol açar.",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-2d80ccc7f3"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Enfeksiyon Hastalıkları/9)İntrauterin enfeksiyonlar.pdf",
+        "ders": "Enfeksiyon Hastalıkları",
+        "kurul": 1,
+        "sayfa": 43,
+        "alinti": "İntrauterin gelişme geriliği (plasenta yetmezliği) Erken doğum"
+      }
+    ]
+  },
+  "konjenital toksoplazmoz": {
+    "term": "Konjenital toksoplazmoz",
+    "category": "hastalik",
+    "definition": "Gebelikte primer enfeksiyon geçiren anneden fetüse Toxoplasma gondii geçmesiyle oluşan enfeksiyon; koryoretinit, ventrikülomegali ve nöbetlerle seyreder.",
+    "description": "Gebelikte primer enfeksiyon geçiren anneden fetüse Toxoplasma gondii geçmesiyle oluşan enfeksiyon; koryoretinit, ventrikülomegali ve nöbetlerle seyreder.",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "",
+    "clinicalPearl": "Risk ilk 3 ayda %10-15, son 3 ayda %60-65.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-2d80ccc7f3"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Enfeksiyon Hastalıkları/9)İntrauterin enfeksiyonlar.pdf",
+        "ders": "Enfeksiyon Hastalıkları",
+        "kurul": 1,
+        "sayfa": 20,
+        "alinti": "İlk 3 ayda %10-15 İkinci 3 ayda %30-54 Son 3 ayda %60-65"
+      }
+    ]
+  },
+  "ölü doğum": {
+    "term": "Ölü doğum",
+    "category": "terim",
+    "definition": "Fetüsün doğumdan önce intrauterin ölümü.",
+    "description": "Fetüsün doğumdan önce intrauterin ölümü.",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-2d80ccc7f3"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Enfeksiyon Hastalıkları/9)İntrauterin enfeksiyonlar.pdf",
+        "ders": "Enfeksiyon Hastalıkları",
+        "kurul": 1,
+        "sayfa": 11,
+        "alinti": "%20 abortus, ölü doğum, neonatal ölüm"
+      }
+    ]
   }
 }
