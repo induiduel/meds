@@ -99,6 +99,55 @@ function taslakKategorisi(t: Taslak): Exclude<Filtre, 'hepsi'> {
   return 'isleniyor';
 }
 
+/** İşçi /olaylar: günlükten iş yaşam döngüsü (Drive'dan gelen PDF kuyruğa alındı → işleniyor → taslak → karar). */
+interface OlayAkisi {
+  son_tarama: { zaman: number; yeni: number } | null;
+  olaylar: { zaman: number; tur: 'kuyruga' | 'isleniyor' | 'taslak' | 'karar' | 'yeniden' | 'hata'; metin: string }[];
+}
+const OLAY_ETIKET: Record<OlayAkisi['olaylar'][number]['tur'], { label: string; cls: string }> = {
+  kuyruga: { label: "Drive'dan yeni PDF · kuyruğa alındı", cls: 'is-accent' },
+  isleniyor: { label: 'İşlenmeye başladı', cls: '' },
+  taslak: { label: 'Taslak hazır', cls: 'is-ok' },
+  karar: { label: 'Karar', cls: '' },
+  yeniden: { label: 'Yeniden kuyrukta', cls: '' },
+  hata: { label: 'Hata', cls: 'is-bad' },
+};
+
+/** Drive etkinliği: son tarama + son 24 saatte kuyruğa alınan PDF'ler öne çıkar, altında açılır olay akışı. */
+const DriveEtkinligi: React.FC<{ akis: OlayAkisi }> = ({ akis }) => {
+  const gun = Date.now() / 1000 - 86400;
+  const yeniler = akis.olaylar.filter((o) => o.tur === 'kuyruga' && o.zaman >= gun);
+  const pdf = (m: string) => pdfAdi(m.split(' → ')[0]);
+  return (
+    <div className="mb-2" style={{ padding: '10px 12px', border: '1px solid var(--color-line)', borderRadius: 10 }}>
+      <p className="text-sm text-ink-2" style={{ margin: 0 }}>
+        <b>Drive etkinliği</b> · son tarama {akis.son_tarama ? `${saat(akis.son_tarama.zaman)} (${akis.son_tarama.yeni} yeni PDF kuyruğa alındı)` : 'kaydı yok'}
+      </p>
+      {yeniler.length > 0 && (
+        <ul className="flex flex-col gap-1 mt-2" style={{ margin: '8px 0 0', padding: 0, listStyle: 'none' }}>
+          {yeniler.map((o) => (
+            <li key={o.zaman + o.metin} className="text-sm">
+              <span className="ms-tag is-accent">Yeni PDF kuyruğa alındı</span> <b>{pdf(o.metin)}</b>
+              <span className="text-ink-3"> · {saat(o.zaman)}{o.metin.includes(' → ') ? ` · ${o.metin.split(' → ').slice(1).join(' → ')}` : ''}</span>
+            </li>
+          ))}
+        </ul>
+      )}
+      <details className="mt-2">
+        <summary className="text-sm text-ink-2" style={{ cursor: 'pointer' }}>Son {akis.olaylar.length} olay</summary>
+        <ul className="flex flex-col gap-1 mt-2" style={{ padding: 0, listStyle: 'none' }}>
+          {akis.olaylar.map((o) => (
+            <li key={o.zaman + o.tur + o.metin} className="text-sm">
+              <span className="text-ink-3">{saat(o.zaman)}</span> <span className={`ms-tag ${OLAY_ETIKET[o.tur].cls}`}>{OLAY_ETIKET[o.tur].label}</span>{' '}
+              {o.tur === 'kuyruga' || o.tur === 'isleniyor' ? pdf(o.metin) : o.metin}
+            </li>
+          ))}
+        </ul>
+      </details>
+    </div>
+  );
+};
+
 function satirlariKur(liste: Taslak[], kuyruk: KuyrukIs[], zam: Zamanlama | null, konular: KonuSatiri[]): Satir[] {
   const taslakMap = new Map(liste.map((t) => [t.is_id, t]));
   const plan = new Map((zam?.plan || []).map((p) => [p.is_id, p.tahmini]));
@@ -242,6 +291,7 @@ const OtomatikDersIsci: React.FC<{ adminEmail: string }> = ({ adminEmail }) => {
   const [kuyruk, setKuyruk] = useState<KuyrukIs[]>([]);
   const [zam, setZam] = useState<Zamanlama | null>(null);
   const [konular, setKonular] = useState<KonuSatiri[]>([]);
+  const [olay, setOlay] = useState<OlayAkisi | null>(null);
   const [dosya, setDosya] = useState<Record<string, any>>({});
   const [onizle, setOnizle] = useState<any | null>(null);
   const [not, setNot] = useState('');
@@ -252,7 +302,8 @@ const OtomatikDersIsci: React.FC<{ adminEmail: string }> = ({ adminEmail }) => {
   const yukle = async () => {
     setHata(null);
     // /kuyruk ve /zamanlama isteğe bağlı: eski işçi sürümünde yoksa yalnız taslak/checklist kategorileri dolar
-    const [t, c, k, z] = await Promise.all([api('/taslaklar'), api('/checklist'), api('/kuyruk'), api('/zamanlama')]);
+    const [t, c, k, z, o] = await Promise.all([api('/taslaklar'), api('/checklist'), api('/kuyruk'), api('/zamanlama'), api('/olaylar')]);
+    setOlay(o.ok && o.data && Array.isArray(o.data.olaylar) ? o.data : null);
     if (!t.ok) {
       setHata((t.data as any)?.hata || 'Ders işçisine ulaşılamıyor.');
       setListe([]);
@@ -355,6 +406,7 @@ const OtomatikDersIsci: React.FC<{ adminEmail: string }> = ({ adminEmail }) => {
             {ozet.sayim.islenmeli || 0} · geçen yıl kaynaklı {ozet.sayim.gecen_yil_kaynakli || 0} · PDF bekleniyor {ozet.sayim.pdf_bekleniyor || 0}
           </p>
         )}
+        {olay && <DriveEtkinligi akis={olay} />}
         <ChipBar<Filtre>
           label="Ders durumu süzgeci"
           wrap

@@ -40,6 +40,39 @@ def taslak_ozeti(d) -> dict:
             "karar": oku(d / "karar.json", None), "yayin": oku(d / "yayin.json", None), "zaman": du.get("zaman")}
 
 
+# Panel "Drive etkinliği": günlükten iş yaşam döngüsü satırları (Drive'dan gelen PDF kuyruğa alındı → işleniyor → taslak → karar)
+OLAY_TURLERI = [
+    ("kuyruga", re.compile(r"^kuyruğa alındı: (.+)$")),
+    ("isleniyor", re.compile(r"^işleniyor: \S+ (.+)$")),
+    ("taslak", re.compile(r"^taslak hazır: \S+ → (.+)$")),
+    ("karar", re.compile(r"^karar: (\S+ → \S+)$")),
+    ("yeniden", re.compile(r"^(?:düzeltme istendi|yeniden derleme istendi|yeniden gönderildi|yarım kalan iş).*$")),
+    ("hata", re.compile(r"^(?:Drive taraması hatası|tur hatası|PDF eşleşmesi hatası).*$")),
+]
+
+
+def olaylar(sinir: int = 40) -> dict:
+    try:
+        with open(STATE / "gunluk.log", "rb") as f:
+            f.seek(0, 2)
+            f.seek(max(0, f.tell() - 200_000))
+            satirlar = f.read().decode("utf-8", "replace").splitlines()
+    except OSError:
+        satirlar = []
+    out = []
+    for sat in satirlar:
+        m = re.match(r"^\[(\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2})\] (.*)$", sat)
+        if not m:
+            continue
+        for tur, rx in OLAY_TURLERI:
+            r = rx.match(m.group(2))
+            if r:
+                metin = r.group(1) if r.groups() else m.group(2)
+                out.append({"zaman": time.mktime(time.strptime(m.group(1), "%Y-%m-%d %H:%M:%S")), "tur": tur, "metin": metin[:300]})
+                break
+    return {"son_tarama": oku(STATE / "son_tarama.json", None), "olaylar": out[-sinir:][::-1]}
+
+
 def zamanlama() -> dict:
     """izle.sira_isle() kurallarının (saat penceresi, günlük sınır, iki ders arası) bekleyen işlere uygulanmış tahmini.
     İşçi döngüsü Drive taramasıyla birlikte ARALIK_SN'de bir döner; gerçek başlama, plan saatinden sonraki ilk turdur."""
@@ -124,6 +157,8 @@ class H(BaseHTTPRequestHandler):
             return self._json(200, [{k: j.get(k) for k in ("is_id", "yol", "durum", "eklendi", "deneme", "son_mesaj",
                                                                  "sonra", "basladi", "uyari")}
                                     | {"konular": [k.get("konu") for k in j.get("konular") or []]} for j in oku(KUYRUK, [])])
+        if yol == "/olaylar":
+            return self._json(200, olaylar())
         if yol == "/zamanlama":
             return self._json(200, zamanlama())
         m = re.match(r"^/taslak/([^/]+)(?:/dosya/([^/]+))?$", yol)

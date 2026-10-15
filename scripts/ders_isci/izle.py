@@ -261,6 +261,8 @@ def tur(tara: bool = True):
     kapsam_guncelle()
     pdf_eslesme_guncelle()
     n = kuyruga_al(ilk)
+    if tara:  # yönetim paneli "Drive etkinliği": son tarama zamanı ve kaç PDF kuyruğa alındı
+        yaz(STATE / "son_tarama.json", {"zaman": time.time(), "yeni": n})
     if n:
         log(f"{n} PDF kuyrukta (2026-27 checklist'inde eksik konuları var)")
     sira_isle()

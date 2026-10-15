@@ -6,7 +6,7 @@
 import express from 'express';
 
 const ISCI_URL = (process.env.MEDS_ISCI_URL || 'http://meds-ders-isci:8095').replace(/\/$/, '');
-const IZINLI = /^\/(saglik|taslaklar|checklist|kuyruk|zamanlama|taslak\/[0-9]{8}-[0-9a-f]{10}(?:-\d+)?(?:\/dosya\/[a-z_]+\.(?:json|jsonl|md)|\/karar|\/yeniden)?)$/;
+const IZINLI = /^\/(saglik|taslaklar|checklist|kuyruk|zamanlama|olaylar|taslak\/[0-9]{8}-[0-9a-f]{10}(?:-\d+)?(?:\/dosya\/[a-z_]+\.(?:json|jsonl|md)|\/karar|\/yeniden)?)$/;
 
 export function dersIsciRouter(): express.Router {
   const r = express.Router();

@@ -8,10 +8,11 @@
 
 :root[data-design='v12'] {
   /* Ray genişliği: .sh-app padding-left ve tam ekran okuyucular bu değişkeni okur */
-  @media (min-width: 768px) { --sh-side-w: 64px; }
+  /* --txt-zoom: yazı boyutu ölçeği (appearance.ts); ray içeriği aynı oranda büyür */
+  @media (min-width: 768px) { --sh-side-w: calc(64px * var(--txt-zoom, 1)); }
   @media (min-width: 1024px) {
-    --sh-side-w: 224px;
-    &[data-side='collapsed'] { --sh-side-w: 64px; }
+    --sh-side-w: calc(224px * var(--txt-zoom, 1));
+    &[data-side='collapsed'] { --sh-side-w: calc(64px * var(--txt-zoom, 1)); }
   }
 
   /* ── Ortak parçalar ── */

@@ -422,11 +422,18 @@
 /* ── Yoğunluk = arayüz ölçeği: sayfa içeriği (yazı, boşluk, satır yüksekliği) birlikte büyür/küçülür.
  *    Kompakt yalnız fare/dokunmatik yüzey olmayan cihazlarda (telefonda dokunma alanları küçülmez).
  *    Tam ekran katmanlar (ders oynatıcı, okuyucu, örtüler) ölçeği geri alır: ekranı tam doldurmaya devam eder. ── */
-:root[data-design='v12'][data-density='wide'] { --ui-zoom: 1.08; }
-@media (pointer: fine) { :root[data-design='v12'][data-density='compact'] { --ui-zoom: .92; } }
-:root[data-design='v12']:is([data-density='wide'], [data-density='compact']) .sh-main > * { zoom: var(--ui-zoom, 1); }
+/* Yazı boyutu (profil kaydırıcısı) = tasarım ölçeği: --txt-zoom = seçilen px / 16 (appearance.ts yazar); okuma yazısı
+ * v12'de 16 px tabanda kalır, büyüme zoom'dan gelir. Kabuk (yan menü, üst çubuk, alt sekmeler) da aynı ölçekle büyür. */
+:root[data-design='v12'] { --ui-zoom: var(--txt-zoom, 1); }
+:root[data-design='v12'][data-density='wide'] { --ui-zoom: calc(1.08 * var(--txt-zoom, 1)); }
+@media (pointer: fine) { :root[data-design='v12'][data-density='compact'] { --ui-zoom: calc(.92 * var(--txt-zoom, 1)); } }
+:root[data-design='v12'] .sh-main > * { zoom: var(--ui-zoom, 1); }
+:root[data-design='v12'] :is(.s12-rail > *, .s12-top, .s12-tabs) { zoom: var(--txt-zoom, 1); }
+/* Tam ekran katmanlar ölçeği geri alır (zoom vh/yüksekliği büyütüp ekranı taşırıyor); içlerinde okuma yazısı
+ * --read-size ile seçilen boyutta kalır */
 :root[data-design='v12'] .sh-main :is(.ls-root, .r12-root, .sr-root, .ms-overlay, .wt-full, .cf-root, .lf-overlay, .p12-pause, .fixed.inset-0):not(:is(.ls-root, .r12-root, .sr-root, .ms-overlay, .wt-full, .cf-root, .lf-overlay, .p12-pause, .fixed.inset-0) *) {
   zoom: calc(1 / var(--ui-zoom, 1));
+  --read-size: calc(16px * var(--txt-zoom, 1));
 }
 
 /* ── Görüntüleme modu ── */

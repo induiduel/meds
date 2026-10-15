@@ -1124,7 +1124,7 @@ const AppearancePanel: React.FC = () => {
           <Seg<Density> label="Yoğunluk" value={look.density} onChange={(d) => look.set({ density: d })}
             options={(['wide', 'normal', 'compact'] as Density[]).map((d) => ({ value: d, label: DENSITY_LABELS[d] }))} />
         </SetRow>
-        <SetRow id="u12-s-boyut" title={`Yazı boyutu · ${look.textPx} px`} sub="6–20 px arası. Soru kökü ve şıklar, ders anlatımı, kartlar, notlar ve özetler bu boyutla gösterilir.">
+        <SetRow id="u12-s-boyut" title={`Yazı boyutu · ${look.textPx} px`} sub="12–20 px arası. Tüm arayüz (yazılar, düğmeler, boşluklar, menü) bu boyuta göre ölçeklenir; 16 px varsayılan.">
           <TextSizeSlider />
         </SetRow>
         <p className="u12-meta u12-preview-read" aria-hidden="true">Gebeliğin 20. haftasından sonra yeni başlayan hipertansiyon ve proteinüri preeklampsi düşündürür.</p>

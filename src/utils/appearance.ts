@@ -23,7 +23,7 @@ export type TextSize = 'xs' | 's' | 'm' | 'l' | 'xl';
 export const TEXT_SIZE_ORDER: TextSize[] = ['xs', 's', 'm', 'l', 'xl'];
 export const TEXT_SIZE_PX: Record<TextSize, number> = { xs: 14, s: 15, m: 16, l: 18, xl: 20 };
 /** Serbest yazı boyutu (profildeki kaydırıcı): 6–20 px, 1 px adım. `textSize` en yakın adımı tutar (eski kurallar için). */
-export const TEXT_PX_MIN = 6;
+export const TEXT_PX_MIN = 12; // v12'de tüm tasarımı ölçekler (px/16); 12 altı arayüzü kullanılamaz kılar
 export const TEXT_PX_MAX = 20;
 export const clampTextPx = (n: number) => Math.min(TEXT_PX_MAX, Math.max(TEXT_PX_MIN, Math.round(n)));
 export const nearestTextSize = (px: number): TextSize =>
@@ -69,7 +69,7 @@ export interface Appearance {
   layout: LayoutMode;
   reading: ReadingFont;
   textSize: TextSize;
-  /** Okuma yazısı boyutu, px (6–20); kök öğeye --read-size olarak yazılır */
+  /** Yazı boyutu, px (12–20); v12 tüm tasarımı px/16 oranında ölçekler; kök öğeye --read-size olarak yazılır */
   textPx: number;
   filters: FilterMode;
   /** Çıkmış/örnek soru kartlarında işaret etiketleri (varsayılan gizli) */
@@ -204,7 +204,10 @@ export function applyAppearance(a: Appearance = current) {
   el.dataset.reading = a.reading;
   el.dataset.textSize = a.textSize;
   // Serbest boyut: satır içi değişken data-text-size kurallarını ezer (6–20 px)
-  el.style.setProperty('--read-size', `${clampTextPx(a.textPx ?? TEXT_SIZE_PX[a.textSize])}px`);
+  const px = clampTextPx(a.textPx ?? TEXT_SIZE_PX[a.textSize]);
+  // v12: yazı boyutu tüm tasarımı ölçekler (zoom = px/16, styles/v12.css); okuma yazısı tabanda kalır, çifte büyümesin
+  el.style.setProperty('--read-size', a.design === 'v12' ? '16px' : `${px}px`);
+  el.style.setProperty('--txt-zoom', a.design === 'v12' ? String(px / 16) : '1');
   el.dataset.filters = a.filters;
   el.dataset.qtags = a.qtags ? 'on' : 'off';
   el.dataset.motion = a.motion;
