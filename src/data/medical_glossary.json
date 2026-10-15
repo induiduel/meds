@@ -12570,7 +12570,8 @@
         "kurul": 1,
         "sayfa": 21
       }
-    ]
+    ],
+    "clinicalPearl": "Gebelerin %60–70'inde; hipoksisiz subjektif nefessizlik; en sık 3. trimesterde."
   },
   "dispne": {
     "term": "Dispne",
@@ -16489,7 +16490,7 @@
     "description": "Amniyon sıvısının alınarak incelendiği invaziv prenatal tanı tekniği; sıvının, hücrelerin doğrudan ve kültürde üretilen amniyon hücrelerinin incelenmesini içerir. Sıvıdaki hücreler fetüs derisi, sindirim yolları, idrar, amniyon zarı ve göbek kordonu kaynaklıdır.",
     "discipline": "Tıbbi Genetik",
     "committee": "",
-    "clinicalPearl": "Anne serum taramaları tanı koydurmaz; pozitif sonuçta amniyosentez yapılır. · Karın duvarından ~20 ml sıvı, 15–16. hafta; sıvı 180 ml'ye ulaşınca yeterli hücre; girişime bağlı kayıp %0,5–1; erken AS (10–14. hafta) düşük riski daha fazla; örnek dondurulmaz.",
+    "clinicalPearl": "Anne serum taramaları tanı koydurmaz; pozitif sonuçta amniyosentez yapılır. · Karın duvarından ~20 ml sıvı, 15–16. hafta; sıvı 180 ml'ye ulaşınca yeterli hücre; girişime bağlı kayıp %0,5–1; erken AS (10–14. hafta) düşük riski daha fazla; örnek dondurulmaz. · 15. haftadan sonra; 2.–3. trimesterin tek tanı testi; AFP+asetilkolinesteraz ile NTD; kayıp riski 1/900.",
     "dogrulama": {
       "durum": "kaynakli",
       "destek": 0.814,
@@ -20468,7 +20469,7 @@
     "description": "Gebeliğin 20. ile 37. haftaları arasında gerçekleşen doğumdur.",
     "discipline": "Obstetri",
     "committee": "",
-    "clinicalPearl": "Asendan plasental enfeksiyonun önemli sonucudur.",
+    "clinicalPearl": "Asendan plasental enfeksiyonun önemli sonucudur. · Preterm <37+0; erken term 37+0–38+6, tam term 39+0–40+6, geç term 41+0–41+6, postterm ≥42+0 hafta.",
     "aliases": [
       "erken doğum"
     ],
@@ -36398,7 +36399,7 @@
     "description": "Bebeğin doğumdaki gebelik süresi (zamanında ya da prematüre); anne sütü bileşimini etkiler.",
     "discipline": "Halk Sağlığı",
     "committee": "",
-    "clinicalPearl": "Prematüre sütü protein, Na ve Cl'den zengin, laktozdan fakirdir.",
+    "clinicalPearl": "Prematüre sütü protein, Na ve Cl'den zengin, laktozdan fakirdir. · Son adet tarihinin ilk gününden hesaplanır; konsepsiyonel yaştan yaklaşık 2 hafta uzundur.",
     "dogrulama": {
       "durum": "ders_isci",
       "destek": 1.0,
@@ -50214,7 +50215,7 @@
     "description": "Doğumun ertesi günü bir kez ve loğusalık boyunca iki kez daha olmak üzere toplam üç kez yapılan doğum sonrası izlem.",
     "discipline": "Halk Sağlığı",
     "committee": "",
-    "clinicalPearl": "DSÖ anne ve bebeğin doğum sonrası ilk 24 saatte bakım almasını önerir.",
+    "clinicalPearl": "DSÖ anne ve bebeğin doğum sonrası ilk 24 saatte bakım almasını önerir. · Sağlık Bakanlığı 2018: doğum sonrası hastanede 3 ve evde 3 olmak üzere 6 lohusa izlemi.",
     "aliases": [
       "Loğusa izlemi",
       "Doğum sonrası izlem"
@@ -50426,7 +50427,8 @@
         "sayfa": 41,
         "alinti": "indirect coombs testi (Rh uyuşmazlığı), gebeliğin 24-28. haftaları arasında glukoz tarama testi"
       }
-    ]
+    ],
+    "clinicalPearl": "İlk izlemde anne-baba kan grubuna göre gerekirse indirekt Coombs bakılıp anti-D (Rhogam) uygulanır."
   },
   "glukoz tarama testi": {
     "term": "Glukoz Tarama Testi",
@@ -50480,7 +50482,8 @@
         "sayfa": 45,
         "alinti": "fetusun gelen kısmı ve pozisyonunun değerlendirilmesi açısından Leopold manevraları"
       }
-    ]
+    ],
+    "clinicalPearl": "1: fundus (sefalik/podalik), 2: fetal sırt-ekstremiteler, 3: prezentasyon, 4: yön değiştirilip prezente kısmın inişi."
   },
   "çocuk kalp sesi (çks)": {
     "term": "Çocuk Kalp Sesi (ÇKS)",
@@ -50618,7 +50621,8 @@
         "sayfa": 27,
         "alinti": "hiperemesis, eklampsi-preeklampsi, kanamalar, hidramnios vb"
       }
-    ]
+    ],
+    "clinicalPearl": "Yatış gerektiren hiperemezis risk formunda sevk kriteridir; VTE risk formunda 3 puandır."
   },
   "puerperal sepsis": {
     "term": "Puerperal Sepsis",
@@ -60069,7 +60073,7 @@
     "description": "İlk trimesterde (genel olarak 10–12. hafta) chorion frondosumdaki üçüncül villuslardan transservikal ya da transabdominal doku alınarak yapılan invaziv prenatal tanı yöntemidir.",
     "discipline": "Tıbbi Genetik",
     "committee": "",
-    "clinicalPearl": "AS'ye göre avantajı erken sonuçtur; bu dönemde AFP çalışılamaz; 10. hafta öncesi ekstremite kısalması defekti riski.",
+    "clinicalPearl": "AS'ye göre avantajı erken sonuçtur; bu dönemde AFP çalışılamaz; 10. hafta öncesi ekstremite kısalması defekti riski. · 10–14. haftada; ilk trimesterin tek tanı testi; %1–2 sınırlı plasenta mozaisizmi; kayıp riski 1/455.",
     "aliases": [
       "CVS",
       "Koryon villus biyopsisi"
@@ -60152,7 +60156,7 @@
     "description": "Üçlü teste dimerik inhibin A eklenmesiyle oluşan ikinci trimester tarama testidir.",
     "discipline": "Tıbbi Genetik",
     "committee": "",
-    "clinicalPearl": "Down sendromunda inhibin A artar.",
+    "clinicalPearl": "Down sendromunda inhibin A artar. · 15–22. haftada hCG, AFP, uE3 ve inhibin-A; Trizomi 21 saptama %81 (üçlü test %69).",
     "aliases": [
       "Quad test"
     ],
@@ -60209,7 +60213,7 @@
     "description": "Gebelikle ilişkili plazma proteini A; sinsityotrofoblastta üretilen, yalnız gebeliğe ait bir proteindir.",
     "discipline": "Tıbbi Genetik",
     "committee": "",
-    "clinicalPearl": "Trizomik fetuslarda düşüktür.",
+    "clinicalPearl": "Trizomik fetuslarda düşüktür. · Birinci trimester (11–14. hafta) taramasında NT ve hCG ile birlikte; Trizomi 21 saptama %82–87.",
     "aliases": [
       "Pregnancy-associated plasma protein A"
     ],
@@ -73509,7 +73513,7 @@
     "description": "Karyotipi normal bir fetüse ait plasentada kromozomu anormal bir hücre dizisinin bulunmasıdır; mozaisizm fetüste yoktur, yalnızca plasentayla sınırlıdır.",
     "discipline": "Tıbbi Genetik",
     "committee": "",
-    "clinicalPearl": "Trizomik kaçışların 1/3'ünde aynı ebeveynden gelen iki kopya kalır → uniparental dizomi (UPD).",
+    "clinicalPearl": "Trizomik kaçışların 1/3'ünde aynı ebeveynden gelen iki kopya kalır → uniparental dizomi (UPD). · CVS sonuçlarının %1–2'si gerçek fetal anomali yerine sınırlı plasenta mozaisizmini yansıtabilir.",
     "aliases": [
       "Plasentaya sınırlı mozaisizm"
     ],
@@ -73738,7 +73742,7 @@
     "description": "Üriner sistem semptomu olmayan kişide idrar kültüründe anlamlı düzeyde (≥10⁵ CFU/mL) üropatojen mikroorganizma üremesidir; çoğu durumda tedavi gerektirmez.",
     "discipline": "Üroloji",
     "committee": "",
-    "clinicalPearl": "Asemptomatik bakteriüri yalnız gebelerde ve genitoüriner invaziv girişim yapılacak hastalarda tedavi edilir.",
+    "clinicalPearl": "Asemptomatik bakteriüri yalnız gebelerde ve genitoüriner invaziv girişim yapılacak hastalarda tedavi edilir. · Gebelikte ilk izlemde TİT+idrar kültürüyle taranır; tedavi edilmezse pyelonefrit ve erken doğum riski artar.",
     "aliases": [
       "ASB"
     ],
@@ -75929,7 +75933,7 @@
     "description": "Son adet tarihinin ilk gününden yola çıkarak beklenen doğum tarihini hesaplamakta kullanılan pratik formüldür.",
     "discipline": "Kadın Hastalıkları ve Doğum",
     "committee": "",
-    "clinicalPearl": "Naegele: SAT + 7 gün - 3 ay + 1 yıl.",
+    "clinicalPearl": "Naegele: SAT + 7 gün - 3 ay + 1 yıl. · SAT + 7 gün − 3 ay + 1 yıl (örn. SAT 15/10/2025 → 22/07/2026).",
     "dogrulama": {
       "durum": "sozluk_v2",
       "destek": 1.0,
@@ -76169,7 +76173,7 @@
     "description": "Eksikliği gebelikte en sık görülen beslenme yetersizliği olan, gebelere Sağlık Bakanlığı programıyla destek olarak verilen ve bebeklikte emilimi beslenme biçimine göre değişen mikrobesindir.",
     "discipline": "Halk Sağlığı",
     "committee": "",
-    "clinicalPearl": "Gebelikte en sık beslenme yetersizliği demir eksikliği anemisidir; gebede Hb < 11 g/dl anemidir.",
+    "clinicalPearl": "Gebelikte en sık beslenme yetersizliği demir eksikliği anemisidir; gebede Hb < 11 g/dl anemidir. · Anemide 100–120 mg/gün tedavi; anemi yoksa 16. haftadan itibaren 40–60 mg/gün profilaksi.",
     "dogrulama": {
       "durum": "sozluk_v2",
       "destek": 1.0,
@@ -77059,7 +77063,7 @@
     "description": "Gebelikte gereksinimi artan, eksikliğinde annede megaloblastik anemiye ve bebekte nöral tüp defektine yol açan, perikonsepsiyonel dönemde takviye edilen B grubu vitamindir.",
     "discipline": "Halk Sağlığı",
     "committee": "",
-    "clinicalPearl": "Perikonsepsiyonel folik asit NTD riskini ~%75 azaltır; gebelikten 3 ay önce 400 mcg/gün başlanır.",
+    "clinicalPearl": "Perikonsepsiyonel folik asit NTD riskini ~%75 azaltır; gebelikten 3 ay önce 400 mcg/gün başlanır. · Gebelikten ≥1 ay önce 400–800 mcg/gün, yüksek NTD riskinde 3 ay önce 4 mg/gün; 12. haftaya kadar.",
     "dogrulama": {
       "durum": "sozluk_v2",
       "destek": 1.0,
@@ -78232,7 +78236,7 @@
     "description": "Kemik mineralizasyonu ve kalsiyum dengesi için gerekli yağda çözünen vitamindir; gebelik ve bebeklik döneminde eksikliği sık olduğundan destek programıyla verilir.",
     "discipline": "Halk Sağlığı",
     "committee": "",
-    "clinicalPearl": "Gebelikte D vitamini desteği 12. haftada başlar ve doğum sonrası 6. aya kadar 1200 IU/gün sürer; demir desteği ise 16. haftada başlar.",
+    "clinicalPearl": "Gebelikte D vitamini desteği 12. haftada başlar ve doğum sonrası 6. aya kadar 1200 IU/gün sürer; demir desteği ise 16. haftada başlar. · Gebelikte 12. haftadan itibaren günlük tek doz 1200 IU (9 damla).",
     "dogrulama": {
       "durum": "sozluk_v2",
       "destek": 1.0,
@@ -83009,7 +83013,7 @@
     "description": "Rh0(D) antijenine karşı yüksek titrede antikor içeren konsantre insan IgG solüsyonudur; Rh-negatif annenin sensitizasyonunu önleyerek yenidoğanın Rh hemolitik hastalığını engeller.",
     "discipline": "Tıbbi Farmakoloji",
     "committee": "",
-    "clinicalPearl": "Anti-D, Rh-pozitif bebeğin doğumundan sonra 24-72 saat içinde Rh-negatif anneye verilir. · Doğumdan sonraki 24–72 saatte verilir; fetal eritrositleri anne B hücre yanıtı oluşmadan temizler; %15'lik IgG solüsyonudur.",
+    "clinicalPearl": "Anti-D, Rh-pozitif bebeğin doğumundan sonra 24-72 saat içinde Rh-negatif anneye verilir. · Doğumdan sonraki 24–72 saatte verilir; fetal eritrositleri anne B hücre yanıtı oluşmadan temizler; %15'lik IgG solüsyonudur. · İmmünizasyon riski profilaksisiz %13, doğumda anti-D ile %2, ek 28. hafta dozuyla %0,1.",
     "aliases": [
       "Anti-D immünoglobulin"
     ],
@@ -92541,6 +92545,1475 @@
         "kurul": 1,
         "sayfa": 25,
         "alinti": "PGD önce, detaylı pedigri çizilmeli, riskler iyi tespit edilmeli"
+      }
+    ]
+  },
+  "gravida": {
+    "term": "Gravida",
+    "category": "terim",
+    "definition": "Sonucuna bakılmaksızın kadının toplam gebelik sayısıdır.",
+    "description": "Sonucuna bakılmaksızın kadının toplam gebelik sayısıdır.",
+    "discipline": "Kadın Hastalıkları ve Doğum",
+    "committee": "",
+    "clinicalPearl": "Şu anki gebelik de gravidaya dahildir; çoğul gebelik tek gebelik sayılır.",
+    "aliases": [
+      "gravidite",
+      "G"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-f76d827260"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Kadın Hastalıkları ve Doğum/2)Gebelik terminolojisi' .pdf",
+        "ders": "Kadın Hastalıkları ve Doğum",
+        "kurul": 1,
+        "sayfa": 4,
+        "alinti": "Gravida: Gebelik sayısı (sonuca bakılmaz) • Nulligravid: Şuanda gebe olmayan"
+      }
+    ]
+  },
+  "nulligravid": {
+    "term": "Nulligravid",
+    "category": "terim",
+    "definition": "Şu anda gebe olmayan ve daha önce hiç gebe kalmamış kadındır.",
+    "description": "Şu anda gebe olmayan ve daha önce hiç gebe kalmamış kadındır.",
+    "discipline": "Kadın Hastalıkları ve Doğum",
+    "committee": "",
+    "aliases": [
+      "nulligravida"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-f76d827260"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Kadın Hastalıkları ve Doğum/2)Gebelik terminolojisi' .pdf",
+        "ders": "Kadın Hastalıkları ve Doğum",
+        "kurul": 1,
+        "sayfa": 4,
+        "alinti": "Nulligravid: Şuanda gebe olmayan ve daha önce hiç gebe kalmamış kadın"
+      }
+    ]
+  },
+  "primigravid": {
+    "term": "Primigravid",
+    "category": "terim",
+    "definition": "Halihazırda gebe olan ve bu gebeliği ilk gebeliği olan kadındır.",
+    "description": "Halihazırda gebe olan ve bu gebeliği ilk gebeliği olan kadındır.",
+    "discipline": "Kadın Hastalıkları ve Doğum",
+    "committee": "",
+    "aliases": [
+      "primigravida"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-f76d827260"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Kadın Hastalıkları ve Doğum/2)Gebelik terminolojisi' .pdf",
+        "ders": "Kadın Hastalıkları ve Doğum",
+        "kurul": 1,
+        "sayfa": 4,
+        "alinti": "Primigravid: Halihazırda gebe ve ilk gebeliği olan kadın"
+      }
+    ]
+  },
+  "multigravid": {
+    "term": "Multigravid",
+    "category": "terim",
+    "definition": "Halihazırda gebe olan ve birden fazla gebeliği olan kadındır.",
+    "description": "Halihazırda gebe olan ve birden fazla gebeliği olan kadındır.",
+    "discipline": "Kadın Hastalıkları ve Doğum",
+    "committee": "",
+    "aliases": [
+      "multigravida"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-f76d827260"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Kadın Hastalıkları ve Doğum/2)Gebelik terminolojisi' .pdf",
+        "ders": "Kadın Hastalıkları ve Doğum",
+        "kurul": 1,
+        "sayfa": 4,
+        "alinti": "Multigravid: Halihazırda gebe ve >1.gebeliği olan kadın"
+      }
+    ]
+  },
+  "parite": {
+    "term": "Parite",
+    "category": "terim",
+    "definition": "20. gebelik haftası sonrasındaki doğumları nitelendiren doğum sayısıdır.",
+    "description": "20. gebelik haftası sonrasındaki doğumları nitelendiren doğum sayısıdır.",
+    "discipline": "Kadın Hastalıkları ve Doğum",
+    "committee": "",
+    "clinicalPearl": "Çoğul gebelikler G ve P hesabında 1 sayılır (ikiz doğum G1P1Y2).",
+    "aliases": [
+      "P",
+      "parity"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-f76d827260"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Kadın Hastalıkları ve Doğum/2)Gebelik terminolojisi' .pdf",
+        "ders": "Kadın Hastalıkları ve Doğum",
+        "kurul": 1,
+        "sayfa": 4,
+        "alinti": "Parite: 20. gebelik haftası sonrasında doğumu nitelendirir"
+      }
+    ]
+  },
+  "primipar": {
+    "term": "Primipar",
+    "category": "terim",
+    "definition": "Daha önce yalnızca 1 doğum (20. hafta sonrası) yapmış kadındır.",
+    "description": "Daha önce yalnızca 1 doğum (20. hafta sonrası) yapmış kadındır.",
+    "discipline": "Kadın Hastalıkları ve Doğum",
+    "committee": "",
+    "aliases": [
+      "primipara"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-f76d827260"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Kadın Hastalıkları ve Doğum/2)Gebelik terminolojisi' .pdf",
+        "ders": "Kadın Hastalıkları ve Doğum",
+        "kurul": 1,
+        "sayfa": 4,
+        "alinti": "Primipar: daha önce sadece 1 doğum yapmış kadın"
+      }
+    ]
+  },
+  "multipar": {
+    "term": "Multipar",
+    "category": "terim",
+    "definition": "Daha önce 1'den fazla doğum yapmış kadındır.",
+    "description": "Daha önce 1'den fazla doğum yapmış kadındır.",
+    "discipline": "Kadın Hastalıkları ve Doğum",
+    "committee": "",
+    "aliases": [
+      "multipara"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-f76d827260"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Kadın Hastalıkları ve Doğum/2)Gebelik terminolojisi' .pdf",
+        "ders": "Kadın Hastalıkları ve Doğum",
+        "kurul": 1,
+        "sayfa": 4,
+        "alinti": "Multipar: daha önce 1 den fazla doğum yapmış kadın"
+      }
+    ]
+  },
+  "grandmultiparite": {
+    "term": "Grandmultiparite",
+    "category": "terim",
+    "definition": "5 ve üzeri doğum yapmış olmaktır; mevcut gebelikte risk kriteri sayılır.",
+    "description": "5 ve üzeri doğum yapmış olmaktır; mevcut gebelikte risk kriteri sayılır.",
+    "discipline": "Kadın Hastalıkları ve Doğum",
+    "committee": "",
+    "clinicalPearl": "Risk formunda 'evet' ise KHD uzmanına sevk edilir.",
+    "aliases": [
+      "grandmultipar"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-f76d827260"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Kadın Hastalıkları ve Doğum/2)Gebelik terminolojisi' .pdf",
+        "ders": "Kadın Hastalıkları ve Doğum",
+        "kurul": 1,
+        "sayfa": 48,
+        "alinti": "Sigara, Alkol Kullanımı ve Madde Kullanım Grandmultiparite: 5 ve üzeri doğum"
+      }
+    ]
+  },
+  "konsepsiyonel yaş": {
+    "term": "Konsepsiyonel yaş",
+    "category": "terim",
+    "definition": "Döllenme anından itibaren hesaplanan gebelik yaşıdır; gestasyonel yaştan yaklaşık 2 hafta kısadır.",
+    "description": "Döllenme anından itibaren hesaplanan gebelik yaşıdır; gestasyonel yaştan yaklaşık 2 hafta kısadır.",
+    "discipline": "Kadın Hastalıkları ve Doğum",
+    "committee": "",
+    "aliases": [
+      "fertilizasyon yaşı"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-f76d827260"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Kadın Hastalıkları ve Doğum/2)Gebelik terminolojisi' .pdf",
+        "ders": "Kadın Hastalıkları ve Doğum",
+        "kurul": 1,
+        "sayfa": 3,
+        "alinti": "Konsepsiyonel Yaş: Döllenme anından itibaren hesaplanan yaş (Gestasyonel yaştan yaklaşık 2 hafta kısadır)"
+      }
+    ]
+  },
+  "embriyo": {
+    "term": "Embriyo",
+    "category": "anatomi",
+    "definition": "Fertilizasyondan 8. haftanın sonuna kadar (yaklaşık 10. gestasyonel haftaya kadar) gelişen conceptustur.",
+    "description": "Fertilizasyondan 8. haftanın sonuna kadar (yaklaşık 10. gestasyonel haftaya kadar) gelişen conceptustur.",
+    "discipline": "Kadın Hastalıkları ve Doğum",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-f76d827260"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Kadın Hastalıkları ve Doğum/2)Gebelik terminolojisi' .pdf",
+        "ders": "Kadın Hastalıkları ve Doğum",
+        "kurul": 1,
+        "sayfa": 3,
+        "alinti": "Embriyo: Fertilizasyondan 8. haftanın sonuna kadar (yaklaşık 10. gestasyonel haftaya kadar)"
+      }
+    ]
+  },
+  "fetüs": {
+    "term": "Fetüs",
+    "category": "anatomi",
+    "definition": "8. haftadan doğuma kadar olan dönemdeki gelişen bireydir.",
+    "description": "8. haftadan doğuma kadar olan dönemdeki gelişen bireydir.",
+    "discipline": "Kadın Hastalıkları ve Doğum",
+    "committee": "",
+    "aliases": [
+      "fetus"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-f76d827260"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Kadın Hastalıkları ve Doğum/2)Gebelik terminolojisi' .pdf",
+        "ders": "Kadın Hastalıkları ve Doğum",
+        "kurul": 1,
+        "sayfa": 3,
+        "alinti": "Embriyo: Fertilizasyondan 8. haftanın sonuna kadar (yaklaşık 10. gestasyonel haftaya kadar). Fetüs: 8. haftadan doğuma kadar"
+      }
+    ]
+  },
+  "trimester": {
+    "term": "Trimester",
+    "category": "terim",
+    "definition": "Gebeliğin üç döneme bölünmesidir: 1. trimester 0–13+6, 2. trimester 14+0–27+6, 3. trimester 28+0 haftadan doğuma kadar.",
+    "description": "Gebeliğin üç döneme bölünmesidir: 1. trimester 0–13+6, 2. trimester 14+0–27+6, 3. trimester 28+0 haftadan doğuma kadar.",
+    "discipline": "Kadın Hastalıkları ve Doğum",
+    "committee": "",
+    "aliases": [
+      "üç aylık dönem"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-f76d827260"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Kadın Hastalıkları ve Doğum/2)Gebelik terminolojisi' .pdf",
+        "ders": "Kadın Hastalıkları ve Doğum",
+        "kurul": 1,
+        "sayfa": 5,
+        "alinti": "1. Trimester: 0-13 hafta 6 gün. 2. Trimester: 14 hafta 0 gün - 27 hafta 6 gün"
+      }
+    ]
+  },
+  "erken term": {
+    "term": "Erken term",
+    "category": "terim",
+    "definition": "37 hafta 0 gün ile 38 hafta 6 gün arasındaki doğumdur.",
+    "description": "37 hafta 0 gün ile 38 hafta 6 gün arasındaki doğumdur.",
+    "discipline": "Kadın Hastalıkları ve Doğum",
+    "committee": "",
+    "clinicalPearl": "Tam term 39+0–40+6 haftadır.",
+    "aliases": [
+      "early term"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-f76d827260"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Kadın Hastalıkları ve Doğum/2)Gebelik terminolojisi' .pdf",
+        "ders": "Kadın Hastalıkları ve Doğum",
+        "kurul": 1,
+        "sayfa": 5,
+        "alinti": "Erken Term (Early Term): 37 hafta 0 gün - 38 hafta 6 gün"
+      }
+    ]
+  },
+  "geç term": {
+    "term": "Geç term",
+    "category": "terim",
+    "definition": "41 hafta 0 gün ile 41 hafta 6 gün arasındaki doğumdur.",
+    "description": "41 hafta 0 gün ile 41 hafta 6 gün arasındaki doğumdur.",
+    "discipline": "Kadın Hastalıkları ve Doğum",
+    "committee": "",
+    "aliases": [
+      "late term"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-f76d827260"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Kadın Hastalıkları ve Doğum/2)Gebelik terminolojisi' .pdf",
+        "ders": "Kadın Hastalıkları ve Doğum",
+        "kurul": 1,
+        "sayfa": 5,
+        "alinti": "Geç Term (Late Term): 41 hafta 0 gün - 41 hafta 6 gün"
+      }
+    ]
+  },
+  "postterm gebelik": {
+    "term": "Postterm gebelik",
+    "category": "terim",
+    "definition": "42 hafta 0 gün ve üzerindeki gebeliktir.",
+    "description": "42 hafta 0 gün ve üzerindeki gebeliktir.",
+    "discipline": "Kadın Hastalıkları ve Doğum",
+    "committee": "",
+    "aliases": [
+      "sürekli gebelik",
+      "postterm"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-f76d827260"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Kadın Hastalıkları ve Doğum/2)Gebelik terminolojisi' .pdf",
+        "ders": "Kadın Hastalıkları ve Doğum",
+        "kurul": 1,
+        "sayfa": 5,
+        "alinti": "Geç Term (Late Term): 41 hafta 0 gün - 41 hafta 6 gün. Postterm (Sürekli Gebelik): ≥ 42 hafta 0 gün"
+      }
+    ]
+  },
+  "sekonder amenore": {
+    "term": "Sekonder amenore",
+    "category": "terim",
+    "definition": "Menstrüel siklusu başlamış bir kadının adet görmemesidir; gebeliği düşündüren ilk bulgudur.",
+    "description": "Menstrüel siklusu başlamış bir kadının adet görmemesidir; gebeliği düşündüren ilk bulgudur.",
+    "discipline": "Kadın Hastalıkları ve Doğum",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-f76d827260"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Kadın Hastalıkları ve Doğum/2)Gebelik terminolojisi' .pdf",
+        "ders": "Kadın Hastalıkları ve Doğum",
+        "kurul": 1,
+        "sayfa": 6,
+        "alinti": "Menstrual siklusu başlamış bir kadının adet görmemesi (sekonder amenore)"
+      }
+    ]
+  },
+  "β-hcg": {
+    "term": "β-hCG",
+    "category": "tani",
+    "definition": "İnsan koryonik gonadotropininin β alt birimidir; idrarda 20–25, serumda 5 mIU/mL düzeyinden itibaren saptanır.",
+    "description": "İnsan koryonik gonadotropininin β alt birimidir; idrarda 20–25, serumda 5 mIU/mL düzeyinden itibaren saptanır.",
+    "discipline": "Kadın Hastalıkları ve Doğum",
+    "committee": "",
+    "clinicalPearl": "Sağlıklı intrauterin gebelikte 1,4–2,1 günde bir ikiye katlanır, 8–10. haftada pik yapar.",
+    "aliases": [
+      "beta-hCG",
+      "Bhcg"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-f76d827260"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Kadın Hastalıkları ve Doğum/2)Gebelik terminolojisi' .pdf",
+        "ders": "Kadın Hastalıkları ve Doğum",
+        "kurul": 1,
+        "sayfa": 6,
+        "alinti": "Bhcg+ (insan koryonik gonadotropin- β üniti) İdrarda en düşük tespit düzeyi 20-25mIU/mL, serumda 5mIU/mL"
+      }
+    ]
+  },
+  "chadwick bulgusu": {
+    "term": "Chadwick bulgusu",
+    "category": "fizyoloji",
+    "definition": "Gebelikte progesteron ve östrojen etkisiyle artan kanlanmaya bağlı serviksin mavimsi görünüm almasıdır.",
+    "description": "Gebelikte progesteron ve östrojen etkisiyle artan kanlanmaya bağlı serviksin mavimsi görünüm almasıdır.",
+    "discipline": "Kadın Hastalıkları ve Doğum",
+    "committee": "",
+    "clinicalPearl": "Mavimsi renk = Chadwick; yumuşama = Goodell.",
+    "aliases": [
+      "Chadwick işareti"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-f76d827260"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Kadın Hastalıkları ve Doğum/2)Gebelik terminolojisi' .pdf",
+        "ders": "Kadın Hastalıkları ve Doğum",
+        "kurul": 1,
+        "sayfa": 16,
+        "alinti": "servikal kanlanma artar, mavimsi görünüm alır(chadwick bulgusu) ve serviks yumuşar.(Goodell bulgusu)"
+      }
+    ]
+  },
+  "goodell bulgusu": {
+    "term": "Goodell bulgusu",
+    "category": "fizyoloji",
+    "definition": "Gebelikte artan servikal kanlanmaya bağlı serviksin yumuşamasıdır.",
+    "description": "Gebelikte artan servikal kanlanmaya bağlı serviksin yumuşamasıdır.",
+    "discipline": "Kadın Hastalıkları ve Doğum",
+    "committee": "",
+    "aliases": [
+      "Goodell işareti"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-f76d827260"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Kadın Hastalıkları ve Doğum/2)Gebelik terminolojisi' .pdf",
+        "ders": "Kadın Hastalıkları ve Doğum",
+        "kurul": 1,
+        "sayfa": 16,
+        "alinti": "servikal kanlanma artar, mavimsi görünüm alır(chadwick bulgusu) ve serviks yumuşar.(Goodell bulgusu)"
+      }
+    ]
+  },
+  "nişane": {
+    "term": "Nişane",
+    "category": "fizyoloji",
+    "definition": "Progesteron etkisiyle servikal bezlerden artan muköz salgının servikal kanalda oluşturduğu tıkaçtır.",
+    "description": "Progesteron etkisiyle servikal bezlerden artan muköz salgının servikal kanalda oluşturduğu tıkaçtır.",
+    "discipline": "Kadın Hastalıkları ve Doğum",
+    "committee": "",
+    "aliases": [
+      "show",
+      "mukus tıkacı"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-f76d827260"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Kadın Hastalıkları ve Doğum/2)Gebelik terminolojisi' .pdf",
+        "ders": "Kadın Hastalıkları ve Doğum",
+        "kurul": 1,
+        "sayfa": 16,
+        "alinti": "bu salgı ile servikal kanalda tıkaç oluşur. (nişane, show)"
+      }
+    ]
+  },
+  "dilüsyonel anemi": {
+    "term": "Dilüsyonel anemi",
+    "category": "fizyoloji",
+    "definition": "Gebelikte plazma hacminin (%45–55) eritrosit hacminden (%20–30) daha fazla artmasıyla oluşan fizyolojik hemodilüsyondur.",
+    "description": "Gebelikte plazma hacminin (%45–55) eritrosit hacminden (%20–30) daha fazla artmasıyla oluşan fizyolojik hemodilüsyondur.",
+    "discipline": "Kadın Hastalıkları ve Doğum",
+    "committee": "",
+    "aliases": [
+      "fizyolojik anemi",
+      "gebelik hemodilüsyonu"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-f76d827260"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Kadın Hastalıkları ve Doğum/2)Gebelik terminolojisi' .pdf",
+        "ders": "Kadın Hastalıkları ve Doğum",
+        "kurul": 1,
+        "sayfa": 18,
+        "alinti": "RBC (eritrosit) hacmi %20 ila %30 artar. Plazma Hacmi: Plazma hacmi %45 ila %55 artar.--- →dilüsyonel anemi"
+      }
+    ]
+  },
+  "linea nigra": {
+    "term": "Linea nigra",
+    "category": "fizyoloji",
+    "definition": "Gebelikte MSH etkisiyle göbek hattında oluşan hiperpigmente çizgidir.",
+    "description": "Gebelikte MSH etkisiyle göbek hattında oluşan hiperpigmente çizgidir.",
+    "discipline": "Kadın Hastalıkları ve Doğum",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-f76d827260"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Kadın Hastalıkları ve Doğum/2)Gebelik terminolojisi' .pdf",
+        "ders": "Kadın Hastalıkları ve Doğum",
+        "kurul": 1,
+        "sayfa": 26,
+        "alinti": "Hiperpigmentasyon---MSH sorumlu –Göbek - Linea Nigra"
+      }
+    ]
+  },
+  "kloazma": {
+    "term": "Kloazma",
+    "category": "fizyoloji",
+    "definition": "Gebelikte yüzde görülen, kalıcı olabilen hiperpigmentasyondur (gebelik maskesi).",
+    "description": "Gebelikte yüzde görülen, kalıcı olabilen hiperpigmentasyondur (gebelik maskesi).",
+    "discipline": "Kadın Hastalıkları ve Doğum",
+    "committee": "",
+    "aliases": [
+      "melazma gravidarum",
+      "gebelik maskesi"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-f76d827260"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Kadın Hastalıkları ve Doğum/2)Gebelik terminolojisi' .pdf",
+        "ders": "Kadın Hastalıkları ve Doğum",
+        "kurul": 1,
+        "sayfa": 26,
+        "alinti": "Kloazma - melazma gravidarum Kalıcı olabilen gebelik maskesi"
+      }
+    ]
+  },
+  "stria gravidarum": {
+    "term": "Stria gravidarum",
+    "category": "fizyoloji",
+    "definition": "Gebelikte kollajen kırılmasıyla oluşan, geri dönüşsüz deri çatlaklarıdır.",
+    "description": "Gebelikte kollajen kırılmasıyla oluşan, geri dönüşsüz deri çatlaklarıdır.",
+    "discipline": "Kadın Hastalıkları ve Doğum",
+    "committee": "",
+    "aliases": [
+      "gebelik çatlakları"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-f76d827260"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Kadın Hastalıkları ve Doğum/2)Gebelik terminolojisi' .pdf",
+        "ders": "Kadın Hastalıkları ve Doğum",
+        "kurul": 1,
+        "sayfa": 26,
+        "alinti": "Telenjiektazi – estrojen sorumlu • Stria gravidarum - Kollajen kırılması (irrev.)"
+      }
+    ]
+  },
+  "transabdominal ultrasonografi": {
+    "term": "Transabdominal ultrasonografi",
+    "category": "tani",
+    "definition": "Düşük frekanslı (3–5 MHz), curved linear transdüserle dolu mesane ile yapılan karın üzerinden USG'dir.",
+    "description": "Düşük frekanslı (3–5 MHz), curved linear transdüserle dolu mesane ile yapılan karın üzerinden USG'dir.",
+    "discipline": "Kadın Hastalıkları ve Doğum",
+    "committee": "",
+    "clinicalPearl": "İyi görüntü için mesane dolu olmalıdır.",
+    "aliases": [
+      "TAUS"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-f76d827260"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Kadın Hastalıkları ve Doğum/2)Gebelik terminolojisi' .pdf",
+        "ders": "Kadın Hastalıkları ve Doğum",
+        "kurul": 1,
+        "sayfa": 10,
+        "alinti": "Düşük frekans , düşük rezolüsyon 3-5 MHz Curved linear transducer İyi görüntü için mesane dolu olmalı"
+      }
+    ]
+  },
+  "transvajinal ultrasonografi": {
+    "term": "Transvajinal ultrasonografi",
+    "category": "tani",
+    "definition": "Yüksek frekanslı (5–10 MHz), yüksek rezolüsyonlu vajinal probla boş mesane ile yapılan USG'dir.",
+    "description": "Yüksek frekanslı (5–10 MHz), yüksek rezolüsyonlu vajinal probla boş mesane ile yapılan USG'dir.",
+    "discipline": "Kadın Hastalıkları ve Doğum",
+    "committee": "",
+    "aliases": [
+      "TVUS",
+      "transvajinal USG"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-f76d827260"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Kadın Hastalıkları ve Doğum/2)Gebelik terminolojisi' .pdf",
+        "ders": "Kadın Hastalıkları ve Doğum",
+        "kurul": 1,
+        "sayfa": 11,
+        "alinti": "Yüksek frekans, yüksek rezolüsyon 5-10 MHz Vajinal prob Boş mesane ile görüntü"
+      }
+    ]
+  },
+  "biparietal çap (bpd)": {
+    "term": "Biparietal çap (BPD)",
+    "category": "tani",
+    "definition": "Fetal biyometride iki parietal kemik arası ölçülen baş çapıdır.",
+    "description": "Fetal biyometride iki parietal kemik arası ölçülen baş çapıdır.",
+    "discipline": "Kadın Hastalıkları ve Doğum",
+    "committee": "",
+    "aliases": [
+      "BPD"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-f76d827260"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Kadın Hastalıkları ve Doğum/2)Gebelik terminolojisi' .pdf",
+        "ders": "Kadın Hastalıkları ve Doğum",
+        "kurul": 1,
+        "sayfa": 13,
+        "alinti": "(FL) Femur length (AC) Abdominal circumference Biparietal Diameter (BPD)"
+      }
+    ]
+  },
+  "abdominal çevre (ac)": {
+    "term": "Abdominal çevre (AC)",
+    "category": "tani",
+    "definition": "Fetal biyometride ölçülen fetal karın çevresidir.",
+    "description": "Fetal biyometride ölçülen fetal karın çevresidir.",
+    "discipline": "Kadın Hastalıkları ve Doğum",
+    "committee": "",
+    "aliases": [
+      "AC"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-f76d827260"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Kadın Hastalıkları ve Doğum/2)Gebelik terminolojisi' .pdf",
+        "ders": "Kadın Hastalıkları ve Doğum",
+        "kurul": 1,
+        "sayfa": 13,
+        "alinti": "(FL) Femur length (AC) Abdominal circumference Biparietal Diameter (BPD)"
+      }
+    ]
+  },
+  "femur uzunluğu (fl)": {
+    "term": "Femur uzunluğu (FL)",
+    "category": "tani",
+    "definition": "Fetal biyometride ölçülen femur diyafiz uzunluğudur.",
+    "description": "Fetal biyometride ölçülen femur diyafiz uzunluğudur.",
+    "discipline": "Kadın Hastalıkları ve Doğum",
+    "committee": "",
+    "aliases": [
+      "FL"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-f76d827260"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Kadın Hastalıkları ve Doğum/2)Gebelik terminolojisi' .pdf",
+        "ders": "Kadın Hastalıkları ve Doğum",
+        "kurul": 1,
+        "sayfa": 13,
+        "alinti": "(FL) Femur length (AC) Abdominal circumference Biparietal Diameter (BPD)"
+      }
+    ]
+  },
+  "fundus yüksekliği": {
+    "term": "Fundus yüksekliği",
+    "category": "anatomi",
+    "definition": "Gebelik haftasına göre uterus fundusunun seviyesidir: 12. haftada pelvis, 20. haftada umbilikus, 36. haftada ksifoid.",
+    "description": "Gebelik haftasına göre uterus fundusunun seviyesidir: 12. haftada pelvis, 20. haftada umbilikus, 36. haftada ksifoid.",
+    "discipline": "Kadın Hastalıkları ve Doğum",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-f76d827260"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Kadın Hastalıkları ve Doğum/2)Gebelik terminolojisi' .pdf",
+        "ders": "Kadın Hastalıkları ve Doğum",
+        "kurul": 1,
+        "sayfa": 14,
+        "alinti": "Fundus Seviyesi 12. hafta - pelvis 20. hafta - umblikus 36. hafta - ksifoid"
+      }
+    ]
+  },
+  "dekstrorotasyon (uterus)": {
+    "term": "Dekstrorotasyon (uterus)",
+    "category": "anatomi",
+    "definition": "Gebe uterusun sigmoid kolon nedeniyle hafifçe sağa rotasyon yapmasıdır.",
+    "description": "Gebe uterusun sigmoid kolon nedeniyle hafifçe sağa rotasyon yapmasıdır.",
+    "discipline": "Kadın Hastalıkları ve Doğum",
+    "committee": "",
+    "aliases": [
+      "dekstrorote uterus"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-f76d827260"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Kadın Hastalıkları ve Doğum/2)Gebelik terminolojisi' .pdf",
+        "ders": "Kadın Hastalıkları ve Doğum",
+        "kurul": 1,
+        "sayfa": 14,
+        "alinti": "36. hafta - ksifoid • Uterus hafif sağa rotasyone (dekstrorote) Sigmoid kolon"
+      }
+    ]
+  },
+  "non-stres test (nst)": {
+    "term": "Non-stres test (NST)",
+    "category": "tani",
+    "definition": "Kontraksiyon uyarısı olmadan fetal kalp hızı ve akselerasyonların kesintisiz izlendiği fetal iyilik testidir.",
+    "description": "Kontraksiyon uyarısı olmadan fetal kalp hızı ve akselerasyonların kesintisiz izlendiği fetal iyilik testidir.",
+    "discipline": "Kadın Hastalıkları ve Doğum",
+    "committee": "",
+    "clinicalPearl": "Yanlış pozitiflik oranı %55–90'dır.",
+    "aliases": [
+      "NST"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-f76d827260"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Kadın Hastalıkları ve Doğum/2)Gebelik terminolojisi' .pdf",
+        "ders": "Kadın Hastalıkları ve Doğum",
+        "kurul": 1,
+        "sayfa": 51,
+        "alinti": "Nonstress Continuous FHR monitoring Reactive: =? accelerations 0.2 to 0.65 55 to 90 1.9/1000"
+      }
+    ]
+  },
+  "reaktif nst": {
+    "term": "Reaktif NST",
+    "category": "tani",
+    "definition": "32. haftadan sonra 120–160 atım normal FHR, normal variyabilite ve 20 dakikada ≥15 atım/≥15 saniye en az iki akselerasyon bulunmasıdır.",
+    "description": "32. haftadan sonra 120–160 atım normal FHR, normal variyabilite ve 20 dakikada ≥15 atım/≥15 saniye en az iki akselerasyon bulunmasıdır.",
+    "discipline": "Kadın Hastalıkları ve Doğum",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-f76d827260"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Kadın Hastalıkları ve Doğum/2)Gebelik terminolojisi' .pdf",
+        "ders": "Kadın Hastalıkları ve Doğum",
+        "kurul": 1,
+        "sayfa": 52,
+        "alinti": "normal kalp atim hizinin olduğu (120-160atim)normal variyabiliteli ve 20 dakika içinde en az 15 saniye süren"
+      }
+    ]
+  },
+  "non-reaktif nst": {
+    "term": "Non-reaktif NST",
+    "category": "tani",
+    "definition": "40 dakikadan uzun süren takipte yeterli FHR akselerasyonunun olmamasıdır.",
+    "description": "40 dakikadan uzun süren takipte yeterli FHR akselerasyonunun olmamasıdır.",
+    "discipline": "Kadın Hastalıkları ve Doğum",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-f76d827260"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Kadın Hastalıkları ve Doğum/2)Gebelik terminolojisi' .pdf",
+        "ders": "Kadın Hastalıkları ve Doğum",
+        "kurul": 1,
+        "sayfa": 52,
+        "alinti": "Non-reaktif NST, 40 dakikadan fazla süren takipte yeterli FHR akselerasyonlarının olmamasıdır"
+      }
+    ]
+  },
+  "kontraksiyon stres testi (cst)": {
+    "term": "Kontraksiyon stres testi (CST)",
+    "category": "tani",
+    "definition": "10 dakikada en az 3 adet ≥40 saniyelik kontraksiyon sırasında FHR'nin izlendiği testtir; kontraksiyonların ≥%50'sini izleyen geç deselerasyon pozitif sonuçtur.",
+    "description": "10 dakikada en az 3 adet ≥40 saniyelik kontraksiyon sırasında FHR'nin izlendiği testtir; kontraksiyonların ≥%50'sini izleyen geç deselerasyon pozitif sonuçtur.",
+    "discipline": "Kadın Hastalıkları ve Doğum",
+    "committee": "",
+    "clinicalPearl": "Yanlış negatiflik %0,04.",
+    "aliases": [
+      "oksitosin challenge testi",
+      "CST"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-f76d827260"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Kadın Hastalıkları ve Doğum/2)Gebelik terminolojisi' .pdf",
+        "ders": "Kadın Hastalıkları ve Doğum",
+        "kurul": 1,
+        "sayfa": 51,
+        "alinti": "Contraction Continuous FHR monitoring Negative: No late or significant 0.04 percent 35 to 65 0.3/1000"
+      }
+    ]
+  },
+  "akselerasyon (fhr)": {
+    "term": "Akselerasyon (FHR)",
+    "category": "fizyoloji",
+    "definition": "Bazal FHR'nin 32. hafta üzerinde en az 15 saniye 15 atım/dk, altında en az 10 saniye 10 atım/dk yükselmesidir.",
+    "description": "Bazal FHR'nin 32. hafta üzerinde en az 15 saniye 15 atım/dk, altında en az 10 saniye 10 atım/dk yükselmesidir.",
+    "discipline": "Kadın Hastalıkları ve Doğum",
+    "committee": "",
+    "aliases": [
+      "hızlanma"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-f76d827260"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Kadın Hastalıkları ve Doğum/2)Gebelik terminolojisi' .pdf",
+        "ders": "Kadın Hastalıkları ve Doğum",
+        "kurul": 1,
+        "sayfa": 53,
+        "alinti": "Akselerasyon: Bazal FHR’nin 32w üzeri fetüslerde en az 15 saniye, 15 atım/dk üzerine çıkması"
+      }
+    ]
+  },
+  "erken deselerasyon": {
+    "term": "Erken deselerasyon",
+    "category": "tani",
+    "definition": "Fetal kalp atımında başlangıç–pik değişimi >30 saniye olan, kontraksiyonla eş zamanlı yavaşlamadır.",
+    "description": "Fetal kalp atımında başlangıç–pik değişimi >30 saniye olan, kontraksiyonla eş zamanlı yavaşlamadır.",
+    "discipline": "Kadın Hastalıkları ve Doğum",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-f76d827260"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Kadın Hastalıkları ve Doğum/2)Gebelik terminolojisi' .pdf",
+        "ders": "Kadın Hastalıkları ve Doğum",
+        "kurul": 1,
+        "sayfa": 55,
+        "alinti": "Erken deselerasyon Deselerasyon: • Fetal kalp atımındaki başlangıç-pik değişimi >30 sn"
+      }
+    ]
+  },
+  "geç deselerasyon": {
+    "term": "Geç deselerasyon",
+    "category": "tani",
+    "definition": "Kontraksiyonu izleyerek ortaya çıkan FHR yavaşlamasıdır; kontraksiyonların ≥%50'sini izlemesi CST'yi pozitif yapar.",
+    "description": "Kontraksiyonu izleyerek ortaya çıkan FHR yavaşlamasıdır; kontraksiyonların ≥%50'sini izlemesi CST'yi pozitif yapar.",
+    "discipline": "Kadın Hastalıkları ve Doğum",
+    "committee": "",
+    "aliases": [
+      "late deceleration"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-f76d827260"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Kadın Hastalıkları ve Doğum/2)Gebelik terminolojisi' .pdf",
+        "ders": "Kadın Hastalıkları ve Doğum",
+        "kurul": 1,
+        "sayfa": 51,
+        "alinti": "duration within 10 minutes Positive: Late decelerations"
+      }
+    ]
+  },
+  "değişken deselerasyon": {
+    "term": "Değişken deselerasyon",
+    "category": "tani",
+    "definition": "Başlangıcı ve şekli kontraksiyona göre değişken olan FHR yavaşlamasıdır; belirgin olması CST'yi şüpheli yapar.",
+    "description": "Başlangıcı ve şekli kontraksiyona göre değişken olan FHR yavaşlamasıdır; belirgin olması CST'yi şüpheli yapar.",
+    "discipline": "Kadın Hastalıkları ve Doğum",
+    "committee": "",
+    "aliases": [
+      "variable deselerasyon"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-f76d827260"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Kadın Hastalıkları ve Doğum/2)Gebelik terminolojisi' .pdf",
+        "ders": "Kadın Hastalıkları ve Doğum",
+        "kurul": 1,
+        "sayfa": 51,
+        "alinti": "Equivocal - suspicious: Intermittent late decelerations or significant variable decelerations"
+      }
+    ]
+  },
+  "biyofizik profil (bpp)": {
+    "term": "Biyofizik profil (BPP)",
+    "category": "tani",
+    "definition": "30 dakika içinde reaktif NST, fetal solunum, vücut hareketi, tonus ve amniyon cebinin her biri 0/2 puanlandığı fetal iyilik testidir.",
+    "description": "30 dakika içinde reaktif NST, fetal solunum, vücut hareketi, tonus ve amniyon cebinin her biri 0/2 puanlandığı fetal iyilik testidir.",
+    "discipline": "Kadın Hastalıkları ve Doğum",
+    "committee": "",
+    "clinicalPearl": "≥8/10 normal, 6/10 şüpheli, ≤4/10 anormal.",
+    "aliases": [
+      "BPP"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-f76d827260"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Kadın Hastalıkları ve Doğum/2)Gebelik terminolojisi' .pdf",
+        "ders": "Kadın Hastalıkları ve Doğum",
+        "kurul": 1,
+        "sayfa": 58,
+        "alinti": "Biophysical Presence or absence of 5 Each component is assigned a"
+      }
+    ]
+  },
+  "modifiye biyofizik profil": {
+    "term": "Modifiye biyofizik profil",
+    "category": "tani",
+    "definition": "NST ile en derin vertikal amniyon cebinin birlikte değerlendirildiği testtir.",
+    "description": "NST ile en derin vertikal amniyon cebinin birlikte değerlendirildiği testtir.",
+    "discipline": "Kadın Hastalıkları ve Doğum",
+    "committee": "",
+    "clinicalPearl": "Reaktif NST ve >2 cm cep normaldir.",
+    "aliases": [
+      "modifiye BPP",
+      "AFİ+NST"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-f76d827260"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Kadın Hastalıkları ve Doğum/2)Gebelik terminolojisi' .pdf",
+        "ders": "Kadın Hastalıkları ve Doğum",
+        "kurul": 1,
+        "sayfa": 58,
+        "alinti": "Abnormal: Nonreactive NST and/or maximum vertical AF pocket"
+      }
+    ]
+  },
+  "oral glukoz tolerans testi (ogtt)": {
+    "term": "Oral glukoz tolerans testi (OGTT)",
+    "category": "tani",
+    "definition": "Gestasyonel diyabet tanısı için 75 g veya 100 g glukoz yüklemesi sonrası plazma glukozunun ölçüldüğü testtir.",
+    "description": "Gestasyonel diyabet tanısı için 75 g veya 100 g glukoz yüklemesi sonrası plazma glukozunun ölçüldüğü testtir.",
+    "discipline": "Kadın Hastalıkları ve Doğum",
+    "committee": "",
+    "clinicalPearl": "Risk grubunda erken yapılır, negatifse 24–28. haftada tekrarlanır.",
+    "aliases": [
+      "OGTT",
+      "GTT"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-f76d827260"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Kadın Hastalıkları ve Doğum/2)Gebelik terminolojisi' .pdf",
+        "ders": "Kadın Hastalıkları ve Doğum",
+        "kurul": 1,
+        "sayfa": 39,
+        "alinti": "Test sonuçları negatif ise 24.-28. hafta arasında 75 gr OGTT tekrarlayınız"
+      }
+    ]
+  },
+  "ıadpsg ölçütleri": {
+    "term": "IADPSG ölçütleri",
+    "category": "tani",
+    "definition": "75 g 2 saatlik OGTT'de açlık ≥92, 1. saat ≥180, 2. saat ≥153 mg/dL'den birinin aşılmasıyla GDM tanısı konan ölçütlerdir.",
+    "description": "75 g 2 saatlik OGTT'de açlık ≥92, 1. saat ≥180, 2. saat ≥153 mg/dL'den birinin aşılmasıyla GDM tanısı konan ölçütlerdir.",
+    "discipline": "Kadın Hastalıkları ve Doğum",
+    "committee": "",
+    "clinicalPearl": "Tek değer yeterlidir.",
+    "aliases": [
+      "IADPSG/ADA kriterleri"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-f76d827260"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Kadın Hastalıkları ve Doğum/2)Gebelik terminolojisi' .pdf",
+        "ders": "Kadın Hastalıkları ve Doğum",
+        "kurul": 1,
+        "sayfa": 40,
+        "alinti": "IADPSG and ADA criteria for a positive two-hour 75-gram oral glucose tolerance test for the diagnosis of gestational diabetes"
+      }
+    ]
+  },
+  "carpenter-coustan ölçütleri": {
+    "term": "Carpenter-Coustan ölçütleri",
+    "category": "tani",
+    "definition": "100 g 3 saatlik OGTT'de 95/180/155/140 mg/dL eşiklerinin kullanıldığı GDM tanı ölçütleridir.",
+    "description": "100 g 3 saatlik OGTT'de 95/180/155/140 mg/dL eşiklerinin kullanıldığı GDM tanı ölçütleridir.",
+    "discipline": "Kadın Hastalıkları ve Doğum",
+    "committee": "",
+    "clinicalPearl": "Genellikle iki ve üzeri değer yüksekliği pozitif kabul edilir.",
+    "aliases": [
+      "Carpenter/Coustan"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-f76d827260"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Kadın Hastalıkları ve Doğum/2)Gebelik terminolojisi' .pdf",
+        "ders": "Kadın Hastalıkları ve Doğum",
+        "kurul": 1,
+        "sayfa": 40,
+        "alinti": "based upon the Carpenter and Coustan modification of earlier values"
+      }
+    ]
+  },
+  "nddg ölçütleri": {
+    "term": "NDDG ölçütleri",
+    "category": "tani",
+    "definition": "100 g OGTT'de 105/190/165/145 mg/dL eşiklerini kullanan National Diabetes Data Group ölçütleridir.",
+    "description": "100 g OGTT'de 105/190/165/145 mg/dL eşiklerini kullanan National Diabetes Data Group ölçütleridir.",
+    "discipline": "Kadın Hastalıkları ve Doğum",
+    "committee": "",
+    "clinicalPearl": "Carpenter-Coustan eşiklerinden daha yüksektir.",
+    "aliases": [
+      "National Diabetes Data Group"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-f76d827260"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Kadın Hastalıkları ve Doğum/2)Gebelik terminolojisi' .pdf",
+        "ders": "Kadın Hastalıkları ve Doğum",
+        "kurul": 1,
+        "sayfa": 40,
+        "alinti": "National Diabetes Data Group, which used cutoff values of 105, 190, 165, and 145 mg/dL"
+      }
+    ]
+  },
+  "hücre dışı dna testi (cfdna/nıpt)": {
+    "term": "Hücre dışı DNA testi (cfDNA/NIPT)",
+    "category": "tani",
+    "definition": "Maternal serumdaki hücre dışı fetal DNA'nın moleküler değerlendirmesiyle anöploidi taramasıdır.",
+    "description": "Maternal serumdaki hücre dışı fetal DNA'nın moleküler değerlendirmesiyle anöploidi taramasıdır.",
+    "discipline": "Kadın Hastalıkları ve Doğum",
+    "committee": "",
+    "clinicalPearl": "9–10. haftadan sonra yapılır; Trizomi 21 saptama %99, tarama pozitifliği %0,5.",
+    "aliases": [
+      "NIPT",
+      "cell-free DNA"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-f76d827260"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Kadın Hastalıkları ve Doğum/2)Gebelik terminolojisi' .pdf",
+        "ders": "Kadın Hastalıkları ve Doğum",
+        "kurul": 1,
+        "sayfa": 42,
+        "alinti": "Cell-free DNA Any age after 9 10 wk 99 0.5 Molecular evaluation of cell-free fetal DNA within maternal serum"
+      }
+    ]
+  },
+  "entegre tarama testi": {
+    "term": "Entegre tarama testi",
+    "category": "tani",
+    "definition": "Birinci trimester taraması ve ardından dörtlü testin birleştirildiği anöploidi taramasıdır.",
+    "description": "Birinci trimester taraması ve ardından dörtlü testin birleştirildiği anöploidi taramasıdır.",
+    "discipline": "Kadın Hastalıkları ve Doğum",
+    "committee": "",
+    "clinicalPearl": "Trizomi 21 saptama oranı %96.",
+    "aliases": [
+      "integrated screen"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-f76d827260"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Kadın Hastalıkları ve Doğum/2)Gebelik terminolojisi' .pdf",
+        "ders": "Kadın Hastalıkları ve Doğum",
+        "kurul": 1,
+        "sayfa": 42,
+        "alinti": "Integrated 10-13 and 15-22 96 5 First-trimester screen, then guad screen"
+      }
+    ]
+  },
+  "rh izoimmünizasyonu": {
+    "term": "Rh izoimmünizasyonu",
+    "category": "hastalik",
+    "definition": "Fetomaternal hemorajiyle D antijeninin anneye geçmesi sonucu annede anti-D antikorlarının oluşmasıdır.",
+    "description": "Fetomaternal hemorajiyle D antijeninin anneye geçmesi sonucu annede anti-D antikorlarının oluşmasıdır.",
+    "discipline": "Kadın Hastalıkları ve Doğum",
+    "committee": "",
+    "clinicalPearl": "Profilaksisiz risk %13, doğumda anti-D ile %2, ek 28. hafta dozuyla %0,1.",
+    "aliases": [
+      "Rh izoimmünizasyon",
+      "izoimmünizasyon"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-f76d827260"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Kadın Hastalıkları ve Doğum/2)Gebelik terminolojisi' .pdf",
+        "ders": "Kadın Hastalıkları ve Doğum",
+        "kurul": 1,
+        "sayfa": 38,
+        "alinti": "Bebekten fetomaternal hemoraji ile D antijeninin anneye geçmesiyle annede Anti-D antikorları oluşmasıdır"
+      }
+    ]
+  },
+  "fetomaternal hemoraji": {
+    "term": "Fetomaternal hemoraji",
+    "category": "patoloji",
+    "definition": "Fetal kanın maternal dolaşıma geçmesidir; Rh izoimmünizasyonunu başlatır.",
+    "description": "Fetal kanın maternal dolaşıma geçmesidir; Rh izoimmünizasyonunu başlatır.",
+    "discipline": "Kadın Hastalıkları ve Doğum",
+    "committee": "",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-f76d827260"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Kadın Hastalıkları ve Doğum/2)Gebelik terminolojisi' .pdf",
+        "ders": "Kadın Hastalıkları ve Doğum",
+        "kurul": 1,
+        "sayfa": 38,
+        "alinti": "Bebekten fetomaternal hemoraji ile D antijeninin anneye geçmesiyle annede Anti-D antikorları oluşmasıdır"
+      }
+    ]
+  },
+  "tromboprofilaksi (gebelik)": {
+    "term": "Tromboprofilaksi (gebelik)",
+    "category": "tedavi",
+    "definition": "VTE risk puanına göre gebelikte/postpartum DMAH ile uygulanan profilaksidir: antenatal ≥4 puan 1. trimesterden, 3 puan 28. haftadan.",
+    "description": "VTE risk puanına göre gebelikte/postpartum DMAH ile uygulanan profilaksidir: antenatal ≥4 puan 1. trimesterden, 3 puan 28. haftadan.",
+    "discipline": "Kadın Hastalıkları ve Doğum",
+    "committee": "",
+    "clinicalPearl": "Postnatal ≥2 puanda en az 10 gün.",
+    "aliases": [
+      "VTE profilaksisi"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-f76d827260"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Kadın Hastalıkları ve Doğum/2)Gebelik terminolojisi' .pdf",
+        "ders": "Kadın Hastalıkları ve Doğum",
+        "kurul": 1,
+        "sayfa": 36,
+        "alinti": "Antenatal dönemde toplam puan 3 ise 28. gebelik haftasından"
+      }
+    ]
+  },
+  "sabah bulantısı": {
+    "term": "Sabah bulantısı",
+    "category": "fizyoloji",
+    "definition": "Gebelikte yüksek östrojen, progesteron ve hCG düzeylerine bağlı bulantı-kusmadır.",
+    "description": "Gebelikte yüksek östrojen, progesteron ve hCG düzeylerine bağlı bulantı-kusmadır.",
+    "discipline": "Kadın Hastalıkları ve Doğum",
+    "committee": "",
+    "clinicalPearl": "Gebelerin %70'inden fazlasında görülür, tipik olarak 14–16. haftada düzelir.",
+    "aliases": [
+      "gebelik bulantı-kusması",
+      "emesis gravidarum"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-f76d827260"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Kadın Hastalıkları ve Doğum/2)Gebelik terminolojisi' .pdf",
+        "ders": "Kadın Hastalıkları ve Doğum",
+        "kurul": 1,
+        "sayfa": 22,
+        "alinti": "Östrojen, Progesteron, ve hCG: Yüksek seviyeleri, genellikle sabah bulantısı olarak adlandırılan bulantı ve kusmaya neden olur"
+      }
+    ]
+  },
+  "tetanoz-difteri aşısı (td)": {
+    "term": "Tetanoz-difteri aşısı (Td)",
+    "category": "tedavi",
+    "definition": "Gebelikte uygulanan tetanoz bağışıklamasıdır; hiç aşılanmamış gebeye en az 2 doz yapılır.",
+    "description": "Gebelikte uygulanan tetanoz bağışıklamasıdır; hiç aşılanmamış gebeye en az 2 doz yapılır.",
+    "discipline": "Kadın Hastalıkları ve Doğum",
+    "committee": "",
+    "clinicalPearl": "İkinci doz doğumdan en az 2 hafta önce tamamlanmalıdır.",
+    "aliases": [
+      "Td"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-f76d827260"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Kadın Hastalıkları ve Doğum/2)Gebelik terminolojisi' .pdf",
+        "ders": "Kadın Hastalıkları ve Doğum",
+        "kurul": 1,
+        "sayfa": 46,
+        "alinti": "Hiç aşılanmamış gebelerin en az 2 doz aşılanmaları sağlanmalıdır. İkinci doz doğumdan en az 2 hafta önce tamamlanmalıdır"
+      }
+    ]
+  },
+  "kardiyak output (gebelik)": {
+    "term": "Kardiyak output (gebelik)",
+    "category": "fizyoloji",
+    "definition": "Gebelikte %30–60 artan kalp debisidir; artışın çoğu ilk trimesterde olur, 20–24. haftada maksimuma ulaşır.",
+    "description": "Gebelikte %30–60 artan kalp debisidir; artışın çoğu ilk trimesterde olur, 20–24. haftada maksimuma ulaşır.",
+    "discipline": "Kadın Hastalıkları ve Doğum",
+    "committee": "",
+    "aliases": [
+      "kalp debisi"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-f76d827260"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Kadın Hastalıkları ve Doğum/2)Gebelik terminolojisi' .pdf",
+        "ders": "Kadın Hastalıkları ve Doğum",
+        "kurul": 1,
+        "sayfa": 17,
+        "alinti": "Kardiak output: %30-60 artar. Bu artışın büyük kısmı ilk trimesterda meydana gelir"
+      }
+    ]
+  },
+  "telenjiektazi (gebelik)": {
+    "term": "Telenjiektazi (gebelik)",
+    "category": "fizyoloji",
+    "definition": "Gebelikte östrojen etkisiyle oluşan deri damar genişlemeleridir.",
+    "description": "Gebelikte östrojen etkisiyle oluşan deri damar genişlemeleridir.",
+    "discipline": "Kadın Hastalıkları ve Doğum",
+    "committee": "",
+    "aliases": [
+      "spider anjiyom"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261015-f76d827260"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Kadın Hastalıkları ve Doğum/2)Gebelik terminolojisi' .pdf",
+        "ders": "Kadın Hastalıkları ve Doğum",
+        "kurul": 1,
+        "sayfa": 26,
+        "alinti": "Kalıcı olabilen gebelik maskesi • Telenjiektazi – estrojen sorumlu"
       }
     ]
   }
