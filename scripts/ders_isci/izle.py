@@ -1,7 +1,11 @@
 #!/usr/bin/env python3
 """Ders işçisi — Drive izleme + kuyruk + işleme döngüsü (Oracle'da 7/24, konteyner: meds-ders-isci).
 
-Her ARALIK_SN'de:
+Döngü dakikada bir döner (ayarlar panelden STATE/ayar.json'a yazılır, her turda okunur):
+  - Drive taraması `tarama_dk`'da bir ya da panelden "Şimdi tara" ile (tara_iste.json);
+  - kuyruk işleme ayrı iş parçacığında: saat penceresi, günlük sınır (`gunluk_sinir`), iki ders arası (`ders_arasi_dk`),
+    `duraklat` kapalıysa. Panelden "Hemen işle" bu kuralları atlar.
+Drive turu:
   1. Drive envanteri + artımlı indirme (yapay zekâsız, ücretsiz): scripts/pipeline/01-inventory.mjs + 02-download.mjs,
      yalnız izlenen kök (MEDS_DRIVE_ROOTS=drive_root).
   2. _downloads.json'daki her PDF'in sha256'sı kayıtla karşılaştırılır; yeni/değişen dosya kuyruğa girer.
@@ -25,8 +29,9 @@ import time
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from ayarlar import (APP, ARALIK_SN, DERS_ARASI_SN, DOWNLOADS, GUNLUK_SINIR, IZLENEN_KOK, KAYIT, KUYRUK, STATE, oku, log,  # noqa: E402
+from ayarlar import (APP, DOWNLOADS, IZLENEN_KOK, KAYIT, KUYRUK, KUYRUK_KILIT, STATE, ayar, oku, log,  # noqa: E402
                      saat_uygun, yaz, yil_sinifi)
+import threading  # noqa: E402
 
 
 def drive_tara() -> bool:
@@ -93,6 +98,11 @@ def kapsam_guncelle() -> int:
 def duzeltmeleri_isle():
     """Yönetici "Düzeltme iste" dediyse: eski taslak arşive, aynı iş yönetici notuyla yeniden kuyruğa (sıranın başına)."""
     from ayarlar import TASLAK  # noqa: E402
+    with KUYRUK_KILIT:
+        _duzeltmeler(TASLAK)
+
+
+def _duzeltmeler(TASLAK):  # noqa: N803
     kuyruk = oku(KUYRUK, [])
     degisti = False
     for d in list(TASLAK.glob("*")):
@@ -114,25 +124,39 @@ def duzeltmeleri_isle():
         yaz(KUYRUK, kuyruk)
 
 
-def kuyruga_al(ilk_kurulum: bool) -> int:
+def kuyruga_al(ilk_kurulum: bool, zorla_yollar: list[str] | None = None) -> int:
     """Kural (kullanıcı, 2026-10-11): Drive'daki HER PDF'in kapsadığı konulardan biri 2026-27 checklist'inde tamam değilse
     ('islenmeli' ya da 'yenilenmeli') PDF kuyruğa alınır — yalnız eksik konularıyla. Hepsi tamamsa yalnız kaydedilir."""
     from checklist import olustur  # noqa: E402
     duzeltmeleri_isle()
+    otomatik = ayar()["otomatik_kuyruk"]
+    zorla = set(zorla_yollar or [])
+    liste = olustur()
+    with KUYRUK_KILIT:
+        return _kuyruga_al(liste, otomatik, zorla)
+
+
+def _kuyruga_al(liste: dict, otomatik: bool, zorla: set) -> int:
+    from checklist import olustur  # noqa: E402
     kayit = oku(KAYIT, {})
     kuyruk = oku(KUYRUK, [])
-    liste = olustur()
     bekleyen = {j["sha256"] for j in kuyruk if j["durum"] in ("bekliyor", "isleniyor", "taslak")}
     yeni = 0
     for p in pdfler():
         if "ders programı" in p["yol"].lower():
             kayit.setdefault(p["sha256"], {"durum": "program", "yol": p["yol"], "zaman": time.time()})
             continue
-        if p["sha256"] in bekleyen or kayit.get(p["sha256"], {}).get("durum") in ("taslak", "hata"):
+        if p["sha256"] in bekleyen:
+            continue
+        if p["yol"] not in zorla and kayit.get(p["sha256"], {}).get("durum") in ("taslak", "hata", "atlandi"):
+            continue
+        if not otomatik and p["yol"] not in zorla:  # panelde "Otomatik kuyruğa al" kapalı: yalnız elle seçilenler
             continue
         # Karar checklist'ten: bu PDF'in bağlı olduğu satırlardan 2026-27 için eksik olanlar (kaynak kimliği + kesin konu eşitliği)
         konular = liste.get("pdf_konulari", {}).get(p["yol"]) or []
         eksik = [{**k, "konu": k.get("satir_konu") or k["konu"]} for k in konular if k.get("durum") in ("islenmeli", "yenilenmeli")]
+        if p["yol"] in zorla and not eksik:  # elle: checklist tamam dese de tüm konularıyla işlenir
+            eksik = [{**k, "konu": k.get("satir_konu") or k["konu"]} for k in konular]
         if not konular or not eksik:
             kayit.setdefault(p["sha256"], {"durum": "kapsanmis", "yol": p["yol"], "zaman": time.time()})
             continue
@@ -150,37 +174,58 @@ def kuyruga_al(ilk_kurulum: bool) -> int:
 
 
 def bugun_islenen() -> int:
+    """Bugün işlenmeye BAŞLANAN ders sayısı (günlük sınır başlangıca uygulanır; panelden elle başlatılanlar dahil)."""
     bas = time.mktime(time.strptime(time.strftime("%Y-%m-%d"), "%Y-%m-%d"))
-    return sum(1 for v in oku(KAYIT, {}).values() if v.get("durum") == "taslak" and v.get("zaman", 0) >= bas)
+    return sum(1 for k in oku(KUYRUK, []) if (k.get("basladi") or 0) >= bas)
 
 
 def sira_isle(zorla_is_id: str | None = None):
+    with KUYRUK_KILIT:
+        j = _sec(zorla_is_id)
+    if not j:
+        return
+    from isle import isle  # noqa: E402  (ağır bağımlılıklar yalnız iş varken yüklensin)
+    try:
+        sonuc = isle(j)
+    except Exception as e:  # noqa: BLE001
+        sonuc = {"durum": "hata_gecici", "mesaj": f"işleme hatası: {e!r}"}
+    with KUYRUK_KILIT:
+        _bitir(j, sonuc)
+
+
+def _sec(zorla_is_id: str | None):
     kuyruk = oku(KUYRUK, [])
     simdi = time.time()
-    if zorla_is_id:  # elle başlatma (test): saat penceresi ve günlük sınır atlanır
+    a = ayar()
+    if any(k["durum"] == "isleniyor" for k in kuyruk):  # aynı anda tek ders
+        return None
+    if zorla_is_id:  # panelden "Hemen işle": saat penceresi, günlük sınır ve ders arası atlanır
         hazir = [j for j in kuyruk if j["is_id"] == zorla_is_id or zorla_is_id in j["yol"]]
         if not hazir:
             log(f"kuyrukta yok: {zorla_is_id}")
-            return
+            return None
     else:
+        if a["duraklat"]:
+            return None
         hazir = [j for j in kuyruk if j["durum"] == "bekliyor" and j.get("sonra", 0) <= simdi]
-        if not hazir:
-            return
-        if not saat_uygun():
-            return
-        if bugun_islenen() >= GUNLUK_SINIR:
-            return
-        son = max((k.get("basladi", 0) for k in kuyruk), default=0)
-        if simdi - son < DERS_ARASI_SN:  # 3 saatte en çok 1 ders
-            return
+        if not hazir or not saat_uygun():
+            return None
+        if bugun_islenen() >= a["gunluk_sinir"]:
+            return None
+        son = max((k.get("basladi", 0) or 0 for k in kuyruk), default=0)
+        if simdi - son < a["ders_arasi_dk"] * 60:
+            return None
     j = hazir[0]
     j_kayit = next(k for k in kuyruk if k["is_id"] == j["is_id"])
     j_kayit["durum"] = "isleniyor"          # aynı iş iki kez başlamasın (döngü + elle)
     j_kayit["basladi"] = time.time()
+    j_kayit["son_mesaj"] = ""
     yaz(KUYRUK, kuyruk)
     log(f"işleniyor: {j['is_id']} {j['yol']}")
-    from isle import isle  # noqa: E402  (ağır bağımlılıklar yalnız iş varken yüklensin)
-    sonuc = isle(j)
+    return dict(j_kayit)
+
+
+def _bitir(j: dict, sonuc: dict):
     kuyruk = oku(KUYRUK, [])
     for k in kuyruk:
         if k["is_id"] != j["is_id"]:
@@ -254,18 +299,19 @@ def pdf_eslesme_guncelle():
         log("PDF eşleşmesinde ÇELİŞKİ var (içerik kazandı) → pdf_eslesme_raporu.md")
 
 
-def tur(tara: bool = True):
+def tur(tara: bool = True, isle: bool = True, zorla_yollar: list[str] | None = None):
     ilk = not KAYIT.exists()
     if tara and not drive_tara():
         return
     kapsam_guncelle()
     pdf_eslesme_guncelle()
-    n = kuyruga_al(ilk)
+    n = kuyruga_al(ilk, zorla_yollar)
     if tara:  # yönetim paneli "Drive etkinliği": son tarama zamanı ve kaç PDF kuyruğa alındı
         yaz(STATE / "son_tarama.json", {"zaman": time.time(), "yeni": n})
     if n:
         log(f"{n} PDF kuyrukta (2026-27 checklist'inde eksik konuları var)")
-    sira_isle()
+    if isle:
+        sira_isle()
 
 
 def main():
@@ -287,28 +333,54 @@ def main():
         return print(f"checklist: {len(v['konular'])} konu → {v['sayim']}")
     if a.bir_kez:
         return tur(not a.taramasiz)
-    log(f"ders işçisi başladı: kök={IZLENEN_KOK} aralık={ARALIK_SN}s günlük={GUNLUK_SINIR} ders_arası={DERS_ARASI_SN}s")
+    a = ayar()
+    log(f"ders işçisi başladı: kök={IZLENEN_KOK} tarama={a['tarama_dk']} dk günlük={a['gunluk_sinir']} "
+        f"ders_arası={a['ders_arasi_dk']} dk saat={a['saat_bas']}-{a['saat_bit']} duraklat={a['duraklat']}")
+    sys.modules.setdefault("izle", sys.modules[__name__])  # iç API aynı modülü (aynı iş parçacığı kaydını) görsün
     yarim_kalanlari_geri_al()
     try:
         from api import baslat  # noqa: E402  (onay ekranı için iç API; yalnız compose iç ağı)
         baslat(int(os.environ.get("MEDS_ISCI_API_PORT", "8095")))
     except Exception as e:  # noqa: BLE001
         log(f"iç API başlatılamadı: {e}")
+    son_tarama = 0.0
+    son_eslesme = time.time()
     while True:
         try:
-            tur()
+            a = ayar()
+            iste = oku(TARA_ISTE, None)
+            if iste is not None or (a["otomatik_tarama"] and time.time() - son_tarama >= a["tarama_dk"] * 60):
+                TARA_ISTE.unlink(missing_ok=True)
+                son_tarama = time.time()
+                tur(tara=True, isle=False, zorla_yollar=(iste or {}).get("yollar") or [])
+            else:
+                duzeltmeleri_isle()
+                if time.time() - son_eslesme >= 600:  # yayınla deste değişirse PDF sayfa eşlemesi tazelensin
+                    son_eslesme = time.time()
+                    pdf_eslesme_guncelle()
+            isi_baslat()
         except Exception as e:  # noqa: BLE001
             log(f"tur hatası: {e!r}")
-        # Turlar arasında deste değişirse (yayın) PDF sayfa eşlemesi beklemeden tazelenir; imza aynıysa iş yapmaz
-        kalan = ARALIK_SN
-        while kalan > 0:
-            time.sleep(min(600, kalan))
-            kalan -= 600
-            try:
-                pdf_eslesme_guncelle()
-            except Exception as e:  # noqa: BLE001
-                log(f"PDF eşleşmesi hatası: {e!r}")
+        time.sleep(30)
 
+
+TARA_ISTE = STATE / "tara_iste.json"
+_is: threading.Thread | None = None
+
+
+def isi_baslat(zorla_is_id: str | None = None) -> bool:
+    """Kuyruktaki işi arka plan iş parçacığında başlat (döngü dakikada bir yanıt vermeye devam etsin)."""
+    global _is
+    if _is and _is.is_alive():
+        return False
+    if zorla_is_id is None:
+        with KUYRUK_KILIT:
+            kuyruk = oku(KUYRUK, [])
+        if not any(k["durum"] == "bekliyor" for k in kuyruk):
+            return False
+    _is = threading.Thread(target=sira_isle, args=(zorla_is_id,), daemon=True, name="ders-isle")
+    _is.start()
+    return True
 
 if __name__ == "__main__":
     main()

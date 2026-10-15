@@ -6,16 +6,18 @@
 import express from 'express';
 
 const ISCI_URL = (process.env.MEDS_ISCI_URL || 'http://meds-ders-isci:8095').replace(/\/$/, '');
-const IZINLI = /^\/(saglik|taslaklar|checklist|kuyruk|kuyruk\/[0-9]{8}-[0-9a-f]{10}(?:-\d+)?\/simdi|zamanlama|olaylar|taslak\/[0-9]{8}-[0-9a-f]{10}(?:-\d+)?(?:\/dosya\/[a-z_]+\.(?:json|jsonl|md)|\/karar|\/yeniden)?)$/;
+const ID = '[0-9]{8}-[0-9a-f]{10}(?:-\\d+)?';
+const IZINLI_GET = new RegExp(`^/(saglik|taslaklar|checklist|kuyruk|zamanlama|olaylar|ayarlar|taslak/${ID}(?:/dosya/[a-z_]+\\.(?:json|jsonl|md))?)$`);
+// Yazan uçlar: karar, yeniden gönder, eşiği yok say, kuyruk eylemleri, ayarlar, Drive taraması, elle kuyruğa alma
+const IZINLI_POST = new RegExp(`^/(taslak/${ID}/(?:karar|yeniden|esik-atla)|kuyruk/${ID}/(?:simdi|one-al|sona-at|kaldir|yeniden-dene)|ayarlar|tara|pdf/kuyruga)$`);
 
 export function dersIsciRouter(): express.Router {
   const r = express.Router();
   r.use(async (req, res) => {
     const yol = req.path.replace(/\/$/, '') || '/';
-    if (!IZINLI.test(yol)) return res.status(404).json({ hata: 'yol yok' });
-    if (req.method !== 'GET' && !(req.method === 'POST' && (yol.endsWith('/karar') || yol.endsWith('/yeniden') || yol.endsWith('/simdi')))) {
-      return res.status(405).json({ hata: 'yöntem yok' });
-    }
+    const izin = req.method === 'GET' ? IZINLI_GET : req.method === 'POST' ? IZINLI_POST : null;
+    if (!izin) return res.status(405).json({ hata: 'yöntem yok' });
+    if (!izin.test(yol)) return res.status(404).json({ hata: 'yol yok' });
     try {
       const ctrl = new AbortController();
       const t = setTimeout(() => ctrl.abort(), 20000);

@@ -194,8 +194,10 @@ class Yayin:
         # ders notu sadakati (işçinin PDF metnine karşı)
         md = (self.d / "ders_notu.md").read_text(encoding="utf-8")
         self.sadakat = s14.fidelity(md, _BosDerlem(), [], (self.d / "kaynak.md").read_text(encoding="utf-8"))
-        if self.sadakat < s14.SADAKAT_ESIK:
-            self.hata.append(f"ders notu sadakati {self.sadakat} < {s14.SADAKAT_ESIK}")
+        # eşik: panel ayarı (işçi ayar.json · sadakat_esigi), yoksa s14; panelden "eşiği yok say" denen taslakta uygulanmaz
+        esik = float((oku(L_TASLAK.parent / "ayar.json", {}) or {}).get("sadakat_esigi", s14.SADAKAT_ESIK))
+        if self.sadakat < esik and not k.get("esik_atla"):
+            self.hata.append(f"ders notu sadakati {self.sadakat} < {esik}")
         if not re.search(r"^##\s+", md, flags=re.M):
             self.hata.append("ders notunda bölüm yok")
         # örnek sorular (s16 kuralları)

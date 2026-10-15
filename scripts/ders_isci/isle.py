@@ -17,7 +17,7 @@ import urllib.request
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from ayarlar import API, APP, CLAUDE_BIN, CLAUDE_EFFORT, CLAUDE_MODEL, DATABASE, TASLAK, log, oku, yaz  # noqa: E402
+from ayarlar import API, APP, CLAUDE_BIN, DATABASE, TASLAK, ayar, log, oku, yaz  # noqa: E402
 from cikar import pdf_metni  # noqa: E402
 
 sys.path.insert(0, str(APP / "scripts" / "agents"))
@@ -252,10 +252,11 @@ def claude(d: Path, istem: str, oturum: str | None = None, sure: int = 3 * 3600)
            "--add-dir", str(APP)]
     if oturum:
         cmd += ["--resume", oturum]
-    if CLAUDE_MODEL:
-        cmd += ["--model", CLAUDE_MODEL]
-    if CLAUDE_EFFORT:
-        cmd += ["--effort", CLAUDE_EFFORT]
+    a = ayar()  # model/efor panelden (ayar.json), her derste yeniden okunur
+    if a["model"]:
+        cmd += ["--model", a["model"]]
+    if a["effort"]:
+        cmd += ["--effort", a["effort"]]
     try:
         r = subprocess.run(cmd, cwd=d, capture_output=True, text=True, timeout=sure)
     except subprocess.TimeoutExpired:

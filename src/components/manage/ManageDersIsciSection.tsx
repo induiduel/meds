@@ -1,10 +1,11 @@
 import React, { Suspense, useEffect, useMemo, useState } from 'react';
-import { BookOpenCheck, CheckCircle2, ClipboardList, Eye, FileWarning, RefreshCw, RotateCcw, XCircle, PenLine, Library, Play } from 'lucide-react';
+import { BookOpenCheck, CheckCircle2, ClipboardList, Eye, FileWarning, RefreshCw, RotateCcw, XCircle, PenLine, Library, Play, ArrowUp, ArrowDown, Trash2, ListPlus, ShieldOff } from 'lucide-react';
 import { CalendarClock, Cpu, FileSearch, RefreshCcw, ShieldCheck, Hourglass, AlertTriangle, Ban, Wrench, Inbox, Layers } from 'lucide-react';
 import { safeJsonFetch } from '../../services/api';
 import { toast } from '../ui/Toast';
 import { NoteMarkdown } from '../ui/NoteMarkdown';
 import { ChipBar, EmptyState, Panel } from './consoleUi';
+import { IsciKontrol, type IsciDurum } from './ManageDersIsciKontrol';
 
 const LessonPlayer = React.lazy(() => import('../learn/lesson/LessonPlayer').then((m) => ({ default: m.LessonPlayer })));
 
@@ -49,7 +50,7 @@ type KuyrukIs = {
   konular?: string[];
 };
 /** İşçi /zamanlama: izle.sira_isle() kurallarıyla bekleyen işlerin tahmini başlama saati. */
-type Zamanlama = { gunluk_sinir: number; ders_arasi_sn: number; saatler: string; aralik_sn: number; bugun_islenen: number; plan: { is_id: string; tahmini: number }[] };
+type Zamanlama = { gunluk_sinir: number; ders_arasi_sn: number; saatler: string; aralik_sn: number; duraklat?: boolean; bugun_islenen: number; plan: { is_id: string; tahmini: number }[] };
 /** Checklist satırı (işçi /checklist ← checklist.json konular[]). */
 type KonuSatiri = { kurul?: number; tarih?: string; ders?: string; konu?: string; hoca?: string; durum: string; deste_id?: string | null; pdf_2627?: { pdf: string; sayfa?: string }[] };
 
@@ -84,6 +85,8 @@ type Satir = {
   uyari?: string;
   zamanNot?: string;
   taslak?: Taslak;
+  /** 'goruldu' / 'yenilenmeli' satırlarında elle kuyruğa alınacak 2026-27 PDF yolları */
+  pdfler?: string[];
 };
 const saat = (t?: number) =>
   t ? new Date(t * 1000).toLocaleString('tr-TR', { day: '2-digit', month: 'short', hour: '2-digit', minute: '2-digit' }) : '';
@@ -102,7 +105,7 @@ function taslakKategorisi(t: Taslak): Exclude<Filtre, 'hepsi'> {
 /** İşçi /olaylar: günlükten iş yaşam döngüsü (Drive'dan gelen PDF kuyruğa alındı → işleniyor → taslak → karar). */
 interface OlayAkisi {
   son_tarama: { zaman: number; yeni: number } | null;
-  olaylar: { zaman: number; tur: 'kuyruga' | 'isleniyor' | 'taslak' | 'karar' | 'yeniden' | 'simdi' | 'hata'; metin: string }[];
+  olaylar: { zaman: number; tur: 'kuyruga' | 'isleniyor' | 'taslak' | 'karar' | 'yeniden' | 'simdi' | 'panel' | 'hata'; metin: string }[];
 }
 const OLAY_ETIKET: Record<OlayAkisi['olaylar'][number]['tur'], { label: string; cls: string }> = {
   kuyruga: { label: "Drive'dan yeni PDF · kuyruğa alındı", cls: 'is-accent' },
@@ -111,6 +114,7 @@ const OLAY_ETIKET: Record<OlayAkisi['olaylar'][number]['tur'], { label: string; 
   karar: { label: 'Karar', cls: '' },
   yeniden: { label: 'Yeniden kuyrukta', cls: '' },
   simdi: { label: 'Panelden hemen işle', cls: 'is-accent' },
+  panel: { label: 'Panel', cls: '' },
   hata: { label: 'Hata', cls: 'is-bad' },
 };
 
@@ -171,8 +175,10 @@ function satirlariKur(liste: Taslak[], kuyruk: KuyrukIs[], zam: Zamanlama | null
       zamanNot:
         kat === 'programlandi'
           ? tahmini
-            ? `Planlanan başlama: ~${saat(tahmini)}${zam ? ` (günde ≤${zam.gunluk_sinir}, iki ders arası ${Math.round(zam.ders_arasi_sn / 3600)} sa; Drive turu ${Math.round(zam.aralik_sn / 3600)} sa'te bir)` : ''}`
-            : 'Bir sonraki işçi turunda başlar'
+            ? `Planlanan başlama: ~${saat(tahmini)}${zam ? ` (günde ≤${zam.gunluk_sinir}, iki ders arası ${Math.round(zam.ders_arasi_sn / 60)} dk)` : ''}`
+            : zam?.duraklat
+              ? 'İşçi duraklatıldı; "Hemen işle" ile yine başlatabilirsin'
+              : 'Bir dakika içinde başlar'
           : kat === 'isleniyor'
             ? `Başladı: ${saat(j.basladi)}`
             : `Eklendi: ${saat(j.eklendi)}`,
@@ -209,9 +215,10 @@ function satirlariKur(liste: Taslak[], kuyruk: KuyrukIs[], zam: Zamanlama | null
       etiketler: [k.ders || '', k.kurul ? `K${k.kurul}` : '', k.tarih || '', k.deste_id ? `deste · ${k.deste_id}` : ''].filter(Boolean),
       mesaj:
         k.durum === 'islenmeli'
-          ? '26-27 PDF\'i algılandı, ders henüz yok; işçi bir sonraki turda kuyruğa alır.'
+          ? '26-27 PDF\'i algılandı, ders henüz yok. Otomatik kuyruk açıksa bir sonraki taramada kuyruğa girer; "Kuyruğa al" ile hemen alabilirsin.'
           : 'Ders geçen yılın kaynağıyla hazırlanmış; bu yılın PDF\'i geldi, yeniden üretilmeli.',
       zamanNot: (k.pdf_2627 || []).map((p) => `PDF: ${p.pdf}${p.sayfa && p.sayfa !== 'tümü' ? ` (s. ${p.sayfa})` : ''}`).join(' · ') || undefined,
+      pdfler: (k.pdf_2627 || []).map((p) => p.pdf).filter(Boolean),
     });
   }
   return out;
@@ -300,7 +307,9 @@ const OtomatikDersIsci: React.FC<{ adminEmail: string }> = ({ adminEmail }) => {
 
   const api = (yol: string, init?: RequestInit) => safeJsonFetch<any>(`/api/admin/ders-isci${yol}`, { headers, ...init });
 
+  const [tazele, setTazele] = useState(0);
   const yukle = async () => {
+    setTazele((n) => n + 1);
     setHata(null);
     // /kuyruk ve /zamanlama isteğe bağlı: eski işçi sürümünde yoksa yalnız taslak/checklist kategorileri dolar
     const [t, c, k, z, o] = await Promise.all([api('/taslaklar'), api('/checklist'), api('/kuyruk'), api('/zamanlama'), api('/olaylar')]);
@@ -320,6 +329,11 @@ const OtomatikDersIsci: React.FC<{ adminEmail: string }> = ({ adminEmail }) => {
   };
   useEffect(() => {
     yukle();
+    // Canlı: sekme görünürken 20 sn'de bir sessizce tazele (kuyruk, işlenen ders, olaylar)
+    const t = window.setInterval(() => {
+      if (document.visibilityState === 'visible') yukle();
+    }, 20000);
+    return () => window.clearInterval(t);
   }, []);
 
   useEffect(() => {
@@ -376,6 +390,35 @@ const OtomatikDersIsci: React.FC<{ adminEmail: string }> = ({ adminEmail }) => {
     api(`/taslak/${secili}`).then((x) => x.ok && setAyr(x.data));
   };
 
+  const kuyrukEylem = async (isId: string, eylem: 'one-al' | 'sona-at' | 'kaldir' | 'yeniden-dene', baslik: string) => {
+    if (eylem === 'kaldir' && !window.confirm(`"${baslik}" kuyruktan çıkarılsın mı? Bu PDF bir daha kendiliğinden kuyruğa alınmaz ("Kuyruğa al" ile yine alınabilir).`)) return;
+    setBusy(true);
+    const r = await api(`/kuyruk/${isId}/${eylem}`, { method: 'POST', body: '{}' });
+    setBusy(false);
+    if (!r.ok) return toast.error((r.data as any)?.hata || 'Yapılamadı.');
+    toast.success({ 'one-al': 'Sıranın başına alındı.', 'sona-at': 'Sıranın sonuna alındı.', kaldir: 'Kuyruktan çıkarıldı.', 'yeniden-dene': 'Yeniden kuyrukta.' }[eylem]);
+    await yukle();
+  };
+  const kuyrugaAl = async (yollar: string[], baslik: string) => {
+    if (!yollar.length) return toast.error('Bu konunun 2026-27 PDF\'i yok.');
+    setBusy(true);
+    const r = await api('/pdf/kuyruga', { method: 'POST', body: JSON.stringify({ yollar }) });
+    setBusy(false);
+    if (!r.ok) return toast.error((r.data as any)?.hata || 'Kuyruğa alınamadı.');
+    toast.success(`"${baslik}" kuyruğa alınıyor; işçi bir dakika içinde ekler.`);
+    await yukle();
+  };
+  const esikAtla = async () => {
+    if (!secili || !window.confirm('Ders notu sadakat eşiği bu taslak için yok sayılsın ve yeniden yayına gönderilsin mi?')) return;
+    setBusy(true);
+    const r = await api(`/taslak/${secili}/esik-atla`, { method: 'POST', body: '{}' });
+    setBusy(false);
+    if (!r.ok) return toast.error((r.data as any)?.hata || 'Gönderilemedi.');
+    toast.success('Yeniden gönderildi; sunucu en geç 10 dakika içinde yayınlar.');
+    await yukle();
+    api(`/taslak/${secili}`).then((x) => x.ok && setAyr(x.data));
+  };
+
   // Programlanmış dersi zamanlayıcıyı (saat penceresi, günlük sınır, ders arası) beklemeden başlat
   const hemenIsle = async (isId: string, baslik: string) => {
     if (!window.confirm(`"${baslik}" zamanlayıcı beklenmeden şimdi işlensin mi? (yaklaşık 30–60 dk sürer; sonraki ders bundan sonraki ders arası kadar bekler)`)) return;
@@ -393,6 +436,24 @@ const OtomatikDersIsci: React.FC<{ adminEmail: string }> = ({ adminEmail }) => {
     for (const x of satirlar) n[x.kat] = (n[x.kat] || 0) + 1;
     return n;
   }, [satirlar]);
+  // Seçili süzgeç boşsa (ör. kayıtlı 'Onay bekliyor' artık 0) ilk dolu kategoriye geç; boş liste görünmesin
+  useEffect(() => {
+    if (!liste || filtre === 'hepsi' || sayim[filtre]) return;
+    const ilk = SIRA.find((id) => sayim[id]);
+    if (ilk) setFiltreHam(ilk);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [liste, sayim]);
+  const isciDurum = useMemo<IsciDurum>(() => {
+    const c = kuyruk.find((j) => j.durum === 'isleniyor');
+    const t = c ? (liste || []).find((x) => x.is_id === c.is_id) : undefined;
+    return {
+      calisan: c ? { baslik: t?.program?.konu || (c.konular || []).filter(Boolean).join(' · ') || pdfAdi(c.yol), basladi: c.basladi } : null,
+      bugun: zam?.bugun_islenen ?? 0,
+      sonraki: zam?.plan?.[0]?.tahmini,
+      bekleyen: kuyruk.filter((j) => j.durum === 'bekliyor').length,
+      sonTarama: olay?.son_tarama?.zaman,
+    };
+  }, [kuyruk, liste, zam, olay]);
   const gorunen = satirlar
     .filter((x) => filtre === 'hepsi' || x.kat === filtre)
     .sort((a, b) => (filtre === 'hepsi' ? SIRA.indexOf(a.kat) - SIRA.indexOf(b.kat) : 0));
@@ -400,6 +461,7 @@ const OtomatikDersIsci: React.FC<{ adminEmail: string }> = ({ adminEmail }) => {
   const s = ayr?.sayilar || {};
   return (
     <div className="flex flex-col gap-3">
+      {!hata && <IsciKontrol api={api} durum={isciDurum} onDegisti={yukle} tazele={tazele} />}
       <Panel
         title="Otomatik Ders İşçisi"
         icon={BookOpenCheck}
@@ -470,10 +532,34 @@ const OtomatikDersIsci: React.FC<{ adminEmail: string }> = ({ adminEmail }) => {
                 ) : (
                   <div className="ms-panel w-full p-3">{icerik}</div>
                 )}
-                {x.kat === 'programlandi' && x.anahtar.startsWith('k:') && (
-                  <div className="flex justify-end mt-1">
-                    <button type="button" className="ms-btn is-sm" disabled={busy} onClick={() => hemenIsle(x.anahtar.slice(2), x.baslik)}>
+                {x.anahtar.startsWith('k:') && (x.kat === 'programlandi' || x.kat === 'hata') && (
+                  <div className="flex flex-wrap justify-end gap-1.5 mt-1">
+                    <button type="button" className="ms-btn is-sm is-primary" disabled={busy} onClick={() => hemenIsle(x.anahtar.slice(2), x.baslik)}>
                       <Play aria-hidden /> Hemen işle
+                    </button>
+                    {x.kat === 'programlandi' ? (
+                      <>
+                        <button type="button" className="ms-btn is-sm" disabled={busy} onClick={() => kuyrukEylem(x.anahtar.slice(2), 'one-al', x.baslik)}>
+                          <ArrowUp aria-hidden /> Öne al
+                        </button>
+                        <button type="button" className="ms-btn is-sm" disabled={busy} onClick={() => kuyrukEylem(x.anahtar.slice(2), 'sona-at', x.baslik)}>
+                          <ArrowDown aria-hidden /> Sona at
+                        </button>
+                      </>
+                    ) : (
+                      <button type="button" className="ms-btn is-sm" disabled={busy} onClick={() => kuyrukEylem(x.anahtar.slice(2), 'yeniden-dene', x.baslik)}>
+                        <RotateCcw aria-hidden /> Yeniden dene
+                      </button>
+                    )}
+                    <button type="button" className="ms-btn is-sm is-ghost" disabled={busy} onClick={() => kuyrukEylem(x.anahtar.slice(2), 'kaldir', x.baslik)}>
+                      <Trash2 aria-hidden /> Kuyruktan çıkar
+                    </button>
+                  </div>
+                )}
+                {(x.kat === 'goruldu' || x.kat === 'yenilenmeli') && !!x.pdfler?.length && (
+                  <div className="flex justify-end mt-1">
+                    <button type="button" className="ms-btn is-sm" disabled={busy} onClick={() => kuyrugaAl(x.pdfler || [], x.baslik)}>
+                      <ListPlus aria-hidden /> Kuyruğa al
                     </button>
                   </div>
                 )}
@@ -576,8 +662,38 @@ const OtomatikDersIsci: React.FC<{ adminEmail: string }> = ({ adminEmail }) => {
                         ))}
                       </ul>
                     )}
+                    {ayr.yayin?.durum === 'denetim_hatasi' && (
+                      <>
+                        <p className="text-sm text-ink-2">
+                          {(ayr.yayin.hatalar || []).every((h) => h.includes('sadakati'))
+                            ? 'Yalnız sadakat eşiğine takıldı: eşiği bu ders için yok sayabilir ya da düzeltme isteyebilirsin.'
+                            : 'Bu hata yeniden göndermekle geçmez: düzeltme iste (işçi notunla yeniden üretir) ya da reddet.'}
+                        </p>
+                        <textarea
+                          aria-label="Düzeltme ya da ret notu"
+                          className="ms-input min-h-[64px]"
+                          placeholder="Düzeltme ya da ret notu"
+                          value={not}
+                          onChange={(e) => setNot(e.target.value)}
+                        />
+                        <div className="flex flex-wrap gap-2">
+                          {(ayr.yayin.hatalar || []).every((h) => h.includes('sadakati')) && (
+                            <button type="button" disabled={busy} className="ms-btn is-ok" onClick={esikAtla}>
+                              <ShieldOff aria-hidden /> Eşiği yok say ve yayınla
+                            </button>
+                          )}
+                          <button type="button" disabled={busy} className="ms-btn" onClick={() => karar('duzelt')}>
+                            <PenLine aria-hidden /> Düzeltme iste
+                          </button>
+                          <button type="button" disabled={busy} className="ms-btn is-bad" onClick={() => karar('reddet')}>
+                            <XCircle aria-hidden /> Reddet
+                          </button>
+                        </div>
+                      </>
+                    )}
                     {ayr.karar.karar === 'onayla' &&
                       ayr.yayin &&
+                      ayr.yayin.durum !== 'denetim_hatasi' &&
                       (ayr.yayin.durum !== 'yayinlandi' || ayr.yayin.site_derlendi === false) && (
                         <button type="button" disabled={busy} className="ms-btn is-bad self-start" onClick={yenidenGonder}>
                           <RotateCcw aria-hidden /> {ayr.yayin.durum === 'yayinlandi' ? 'Siteyi yeniden derle' : 'Yeniden gönder'}

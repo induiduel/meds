@@ -5,6 +5,7 @@ import json
 import os
 import re
 import tempfile
+import threading
 import time
 from pathlib import Path
 
@@ -75,7 +76,61 @@ def yil_sinifi(yol: str, kok: str) -> str:
     return "bu_yil"
 
 
+# Kuyruk dosyasını okuyup-yazan iş parçacıkları (döngü, işleme, iç API) birbirini ezmesin
+KUYRUK_KILIT = threading.RLock()
+
+# ── Çalışma anı ayarları (yönetim paneli → API /ayarlar → STATE/ayar.json) ──
+# Ortam değişkenleri yalnız ilk varsayılandır; panelden kaydedilen değer her döngüde okunur (yeniden başlatma gerekmez).
+AYAR = STATE / "ayar.json"
+AYAR_TANIM: dict[str, tuple] = {  # anahtar → (tür, varsayılan, alt, üst)
+    "duraklat": (bool, False, None, None),               # işleme başlama durur (Drive taraması sürer)
+    "otomatik_tarama": (bool, True, None, None),         # Drive'ı düzenli tara
+    "otomatik_kuyruk": (bool, True, None, None),         # taramada yeni PDF'leri kendiliğinden kuyruğa al
+    "gunluk_sinir": (int, 8, 0, 48),                     # kullanıcı kararı (2026-10-15): günde en çok 8 ders
+    "ders_arasi_dk": (int, 60, 0, 1440),                 # kullanıcı kararı (2026-10-15): saatte en çok 1 ders
+    "saat_bas": (int, 0, 0, 23),                         # işleme penceresi başlangıç saati (TR)
+    "saat_bit": (int, 24, 1, 24),                        # bitiş saati (24 = gece yarısı); bas>bit gece aşırı pencere
+    "tarama_dk": (int, 60, 10, 1440),                    # Drive tarama aralığı
+    "model": (str, CLAUDE_MODEL, None, None),
+    "effort": (str, CLAUDE_EFFORT, None, None),          # low | medium | high | "" (CLI varsayılanı)
+    "sadakat_esigi": (float, 0.80, 0.0, 1.0),            # yayın denetimi: ders notu sadakat alt sınırı
+}
+MODELLER = ["claude-opus-5-5", "claude-sonnet-5-5", "claude-fable-5-1", "claude-haiku-4-5-20251001"]
+EFORLAR = ["", "low", "medium", "high"]
+
+
+def ayar() -> dict:
+    kayit = oku(AYAR, {}) or {}
+    out = {}
+    for k, (tur, vars_, alt, ust) in AYAR_TANIM.items():
+        v = kayit.get(k, vars_)
+        try:
+            v = (v if isinstance(v, bool) else str(v).lower() in ("1", "true", "evet")) if tur is bool else tur(v)
+        except (TypeError, ValueError):
+            v = vars_
+        if alt is not None:
+            v = min(ust, max(alt, v))
+        out[k] = v
+    if out["model"] not in MODELLER:
+        out["model"] = CLAUDE_MODEL
+    if out["effort"] not in EFORLAR:
+        out["effort"] = CLAUDE_EFFORT
+    return out
+
+
+def ayar_kaydet(degisen: dict, kim: str = "") -> dict:
+    mevcut = ayar()
+    yeni = {**mevcut, **{k: v for k, v in (degisen or {}).items() if k in AYAR_TANIM}}
+    yaz(AYAR, yeni)
+    son = ayar()
+    fark = {k: son[k] for k in son if son[k] != mevcut[k]}
+    if fark:
+        log(f"ayar değişti ({kim or 'panel'}): " + ", ".join(f"{k}={v}" for k, v in fark.items()))
+    return son
+
+
 def saat_uygun() -> bool:
-    a, b = (int(x) for x in SAATLER.split("-"))
+    a_ = ayar()
+    a, b = a_["saat_bas"], a_["saat_bit"]
     h = time.localtime().tm_hour
     return a <= h < b if a < b else (h >= a or h < b)
