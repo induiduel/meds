@@ -26,6 +26,7 @@ import { SideNav } from './components/shell/SideNav';
 import { TopBar } from './components/shell/TopBar';
 import { ScrollTopFab } from './components/shell/ScrollTopFab';
 import { TabBar } from './components/shell/TabBar';
+import { CanliDersDockGate } from './components/canliDers/CanliDersDockGate';
 import { ConfirmHost, confirmDialog } from './components/ui/ConfirmDialog';
 import { PageHeader } from './components/ui/PageHeader';
 import { LearnFab } from './components/learn/LearnFab';
@@ -122,6 +123,7 @@ const PracticeQuestionsView = React.lazy(() => wrapLazy(import('./components/Pra
 const KazanimlarView = React.lazy(() => wrapLazy(import('./components/KazanimlarView').then(m => ({ default: m.KazanimlarView }))));
 const DiseasesView = React.lazy(() => wrapLazy(import('./components/diseases/DiseasesView').then(m => ({ default: m.DiseasesView }))));
 const SaglikView = React.lazy(() => wrapLazy(import('./components/saglik/SaglikView').then(m => ({ default: m.SaglikView }))));
+const CanliDersView = React.lazy(() => wrapLazy(import('./components/canliDers/CanliDersView')));
 
 // Lazy-loaded Modals (Only downloaded when opened)
 const AdminPanelModal = React.lazy(() => wrapLazy(import('./components/AdminPanelModal').then(m => ({ default: m.AdminPanelModal }))));
@@ -219,6 +221,8 @@ export default function App() {
   // Havuz derin bağlantısı: /sorular/<soruId> — o soru listenin başında gösterilir ve odaklanır.
   const clearDeepLinkTargets = useRef<() => void>(() => {});
   const [poolFocusId, setPoolFocusId] = useState<string | undefined>(initialRoute.route === 'questions' ? initialRoute.param : undefined);
+  // Canlı ders: /canliders/<key> (yoksa liste)
+  const [canliDersKey, setCanliDersKey] = useState<string | undefined>(initialRoute.route === 'canli_ders' ? initialRoute.param : undefined);
   const setActiveTab = useCallback((tab: ValidAppTab) => {
     setActiveTabState(tab);
     // Menüden düz geçiş: önceki derin bağlantının hedefi (terim/hastalık/örnek soru) yeniden açılmasın.
@@ -393,6 +397,7 @@ export default function App() {
     setSelectedGlossaryTermId(undefined);
     setSelectedDiseaseId(undefined);
     setOrnekQuestionId(undefined);
+    setCanliDersKey(undefined);
   };
 
   // Celebration Toast
@@ -471,6 +476,7 @@ export default function App() {
       const { route, param } = parseLocation();
       setActiveTabState(route);
       setPoolFocusId(route === 'questions' ? param : undefined);
+      setCanliDersKey(route === 'canli_ders' ? param : undefined);
       if (route === 'search') setSearchPageQuery(param || '');
       // Derin bağlantı kimlikleri adres çubuğundan yeniden kurulur (yol parametresi ya da ?id=).
       const linkId = deepLinkIdFor(route, param);
@@ -1658,6 +1664,13 @@ export default function App() {
           </Suspense>
         )}
 
+        {/* TAB: Canlı ders — sesli dersler, metin + PDF eşzamanlı (/canliders/<key>); oynatıcı aşağıda (CanliDersDockGate) */}
+        {activeTab === 'canli_ders' && (
+          <Suspense fallback={<ViewFallback />}>
+            <CanliDersView dersKey={canliDersKey} />
+          </Suspense>
+        )}
+
         {/* TAB: Sağlık Bakanlığı — resmî halk sağlığı verileri + ders/sınav bağları (/saglik/<bölüm>) */}
         {activeTab === 'health_ministry' && (
           <Suspense fallback={<ViewFallback />}>
@@ -1963,6 +1976,9 @@ export default function App() {
 
 
       </main>
+
+      {/* Canlı ders oynatıcısı: rota değişse de çalma sürer (ders ekranında tam çubuk, başka sayfada mini) */}
+      <CanliDersDockGate activeTab={activeTab} dersKey={activeTab === 'canli_ders' ? canliDersKey : undefined} />
 
       {/* Alt gezinme (telefon) */}
       <TabBar

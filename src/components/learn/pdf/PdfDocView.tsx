@@ -26,6 +26,8 @@ export interface PdfDocViewProps {
   page: number;
   /** Bu adımın kaynak sayfaları (vurgulanır) */
   highlight?: [number, number];
+  /** Vurgulanan ilk sayfanın etiketi (varsayılan: "Bu adımın kaynağı") */
+  highlightLabel?: string;
   /** 1 = sayfa genişliğine sığdır */
   zoom: number;
   onZoom?: (z: number) => void;
@@ -63,7 +65,7 @@ interface Slot {
   textFor?: number; // metin katmanı kuruldu (döndürme)
 }
 
-export default function PdfDocView({ src, page, highlight, zoom, onZoom, onVisiblePage, onLoaded, onError, fit = 'width', rotation = 0, thumbs = false, query = '', onSearch }: PdfDocViewProps) {
+export default function PdfDocView({ src, page, highlight, highlightLabel = 'Bu adımın kaynağı', zoom, onZoom, onVisiblePage, onLoaded, onError, fit = 'width', rotation = 0, thumbs = false, query = '', onSearch }: PdfDocViewProps) {
   const scrollRef = useRef<HTMLDivElement>(null);
   const [doc, setDoc] = useState<PDFDocumentProxy | null>(null);
   const [sizes, setSizes] = useState<{ w: number; h: number }[]>([]);
@@ -444,7 +446,7 @@ export default function PdfDocView({ src, page, highlight, zoom, onZoom, onVisib
               data-page={n}
               style={{ top: tops[i], width: s.w * sc, height: s.h * sc, ['--scale-factor' as any]: sc }}
             >
-              {src && n === hs && <span className="pdv-src-tag">Bu adımın kaynağı</span>}
+              {src && n === hs && <span className="pdv-src-tag">{highlightLabel}</span>}
               <span className="pdv-no" aria-hidden>{n}</span>
             </div>
           );

@@ -18,6 +18,7 @@ const LOADERS: Partial<Record<AppRoute, () => Promise<unknown>>> = {
   kazanimlar: () => import('./components/KazanimlarView'),
   diseases: () => import('./components/diseases/DiseasesView'),
   health_ministry: () => import('./components/saglik/SaglikView'),
+  canli_ders: () => import('./components/canliDers/CanliDersView'),
   practice: () => import('./components/PracticeMode'),
   stats: () => import('./components/stats/StatsView'),
   settings: () => import('./components/settings/ProfileSettingsView'),

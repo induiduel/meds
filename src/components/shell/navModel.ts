@@ -6,6 +6,7 @@ import {
   Compass,
   Crosshair,
   GraduationCap,
+  Headphones,
   Landmark,
   LayoutGrid,
   Layers,
@@ -49,6 +50,7 @@ const I: Record<string, NavItem> = {
   questions: { id: 'questions', label: 'Soru havuzu', short: 'Havuz', hint: 'Kurul sorularını birlikte kur', icon: Library, tint: '#5856D6' },
   study: { id: 'study', label: 'Çalış', hint: 'Soru çöz, not al, kendini sına', icon: ListChecks, tint: '#34C759' },
   kazanimlar: { id: 'kazanimlar', label: 'Kazanımlar', hint: 'Müfredat ve kazanım haritası', icon: Compass, tint: '#00A79D' },
+  canli_ders: { id: 'canli_ders', label: 'Canlı ders', short: 'Canlı', hint: 'Dersleri dinle; metin ve slayt sesle akar, MP3 indir', icon: Headphones, tint: '#30B0C7' },
   learn: { id: 'learn', label: 'Öğren', hint: 'İnteraktif ders desteleri', icon: GraduationCap, tint: '#AF52DE' },
   summaries: { id: 'summaries', label: 'Ders özetleri', short: 'Özetler', hint: 'Spot bilgiler, uzun okuma', icon: BookOpen, tint: '#FF6B3D' },
   spots: { id: 'spots', label: 'Sınav spotları', short: 'Spotlar', hint: 'En sık, ayırıcı bulgular, tuzaklar', icon: Crosshair, tint: '#FF3B30' },
@@ -73,7 +75,7 @@ export const NAV_ITEMS = I;
  * başına duran birincil düğmedir (SideNav); telefonda alt gezinmenin ortasındadır.
  */
 export const NAV_TREE: NavGroup[] = [
-  { label: 'Öğren', items: [I.today, I.learn, I.spots, I.flashcards, I.summaries] },
+  { label: 'Öğren', items: [I.today, I.learn, I.canli_ders, I.spots, I.flashcards, I.summaries] },
   { label: 'Soru çöz', items: [I.past_exams, I.ornek_sorular, I.study, I.practice] },
   { label: 'Başvuru', items: [I.glossary, I.diseases, I.health_ministry, I.kazanimlar] },
   { label: 'Topluluk', items: [I.questions, I.matrix, I.leaderboard] },
@@ -92,7 +94,7 @@ export const MORE_TREE: NavGroup[] = NAV_TREE.map((g) => ({ ...g, items: g.items
  */
 export const V12_RAIL: NavGroup[] = [
   { label: null, items: [I.today, I.learn, I.past_exams, I.questions, I.flashcards, I.practice] },
-  { label: 'Kaynaklar', items: [I.notes, I.glossary, I.diseases, I.health_ministry] },
+  { label: 'Kaynaklar', items: [I.canli_ders, I.notes, I.glossary, I.diseases, I.health_ministry] },
 ];
 const V12_IN_RAIL = new Set<AppRoute>(V12_RAIL.flatMap((g) => g.items.map((it) => it.id)));
 export const V12_RAIL_MORE: NavGroup[] = NAV_TREE.map((g) => ({ ...g, items: g.items.filter((it) => !V12_IN_RAIL.has(it.id)) })).filter((g) => g.items.length > 0);
@@ -105,7 +107,7 @@ export const V12_MORE_TREE: NavGroup[] = [
   ...V12_RAIL_MORE.map((g) => ({ ...g, items: g.items.filter((it) => !V12_IN_TABS.has(it.id)) })),
 ].filter((g) => g.items.length > 0);
 /** Telefon "Tüm sayfalar" ızgarası: çalışma sayfaları bir arada, kaynak ve diğerleri ayrı (az grup, az kaydırma) */
-const PHONE_STUDY = new Set<AppRoute>(['questions', 'flashcards', 'practice', 'ornek_sorular', 'study', 'kazanimlar', 'spots', 'summaries']);
+const PHONE_STUDY = new Set<AppRoute>(['canli_ders', 'questions', 'flashcards', 'practice', 'ornek_sorular', 'study', 'kazanimlar', 'spots', 'summaries']);
 const flatMore = V12_MORE_TREE.flatMap((g) => g.items);
 export const V12_PHONE_TREE: NavGroup[] = [
   { label: 'Çalış', items: flatMore.filter((it) => PHONE_STUDY.has(it.id)) },

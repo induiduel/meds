@@ -19,6 +19,7 @@ import * as rawLedger from './src/services/rawQuestionLedger';
 import { registerDbQueryRoute, invalidateDbQueryCache } from './src/services/dbQueryRoute';
 import { registerTtsRoute } from './src/services/ttsRoute';
 import { registerSesliAnlatimRoutes } from './src/services/sesliAnlatim';
+import { registerCanliDersRoutes } from './src/services/canliDers';
 import crypto from 'crypto';
 
 const require = createRequire(import.meta.url);
@@ -2692,6 +2693,7 @@ app.post('/api/live/broadcast', (req, res) => {
 registerDbQueryRoute(app, isRequestAdmin);
 registerTtsRoute(app);
 registerSesliAnlatimRoutes(app, requireAdmin, (ev, data) => broadcastRealtimeEvent(ev, data, true), ADMIN_EMAIL);
+registerCanliDersRoutes(app);
 
 // Gidiş-dönüş testi: NOTIFY → LISTEN → SSE zincirinin tamamını ölçer (Sistem Tanılama ekranı).
 app.post('/api/live/ping', async (req, res) => {

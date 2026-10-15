@@ -36,6 +36,10 @@ interface Varyant {
   olusturuldu: string;
   maliyetTL?: number;
   dogrulama?: { parca: number; toplam: number; ortalama: number | null };
+  /** Paragraf zamanları [baş, son] sn; dizin = metindeki global paragraf sırası. Aralıklar bitişiktir (son = sonrakinin başı). */
+  zamanlama?: [number, number][];
+  /** olcum: üretimde ölçüldü · tahmini: parça içi karakter oranı · sessizlik / karakter: zamanlama_cikar.py */
+  zamanlamaKaynak?: string;
 }
 interface Is {
   id: string;
@@ -128,16 +132,19 @@ const butce = () => oku(P.butce, { tavanTL: BUTCE.tavanTL, kilitTL: BUTCE.kilitT
 const ayar = () => ({ isciAktif: true, ucretliAktif: false, ...oku<Record<string, any>>(P.ayar, {}) });
 
 // ---------- metin → parçalar ----------
-interface Parca { metin: string; kelime: number; bolumBasi: boolean }
-function metniParcala(md: string, sinir: number): Parca[] {
+interface Parca { metin: string; kelime: number; bolumBasi: boolean; ilkParagraf: number }
+export interface MetinParagraf { t: string; bolumBasi: boolean; bolumBaslik: string }
+/** Konuşma metnini paragraflara ayırır (global sıra = dizin). metniParcala ve canlı ders ucu bunu kullanır. */
+export function metinParagraflari(md: string): MetinParagraf[] {
   const satirlar = md.split(/\r?\n/);
-  const paragraflar: { t: string; bolumBasi: boolean }[] = [];
+  const paragraflar: MetinParagraf[] = [];
   let bolumBasi = true;
+  let bolumBaslik = '';
   let tampon: string[] = [];
   const bitir = () => {
     const t = tampon.join(' ').replace(/\s+/g, ' ').trim();
     if (t) {
-      paragraflar.push({ t, bolumBasi });
+      paragraflar.push({ t, bolumBasi, bolumBaslik });
       bolumBasi = false;
     }
     tampon = [];
@@ -147,22 +154,30 @@ function metniParcala(md: string, sinir: number): Parca[] {
     if (s.startsWith('@@')) {
       bitir();
       bolumBasi = true;
+      bolumBaslik = s.slice(2).trim();
       continue;
     }
     if (!s.trim()) bitir();
     else tampon.push(s.trim());
   }
   bitir();
+  return paragraflar;
+}
+function metniParcala(md: string, sinir: number): Parca[] {
+  const paragraflar = metinParagraflari(md);
   const out: Parca[] = [];
-  let cur: { t: string[]; bolumBasi: boolean } | null = null;
-  for (const p of paragraflar) {
+  let cur: { t: string[]; bolumBasi: boolean; ilk: number } | null = null;
+  const it = (c: { t: string[]; bolumBasi: boolean; ilk: number }) =>
+    out.push({ metin: c.t.join('\n'), kelime: c.t.join(' ').split(/\s+/).length, bolumBasi: c.bolumBasi, ilkParagraf: c.ilk });
+  for (let idx = 0; idx < paragraflar.length; idx++) {
+    const p = paragraflar[idx];
     const uzun = cur ? cur.t.join('\n').length + p.t.length : 0;
     if (!cur || p.bolumBasi || uzun > sinir) {
-      if (cur) out.push({ metin: cur.t.join('\n'), kelime: cur.t.join(' ').split(/\s+/).length, bolumBasi: cur.bolumBasi });
-      cur = { t: [p.t], bolumBasi: p.bolumBasi };
+      if (cur) it(cur);
+      cur = { t: [p.t], bolumBasi: p.bolumBasi, ilk: idx };
     } else cur.t.push(p.t);
   }
-  if (cur) out.push({ metin: cur.t.join('\n'), kelime: cur.t.join(' ').split(/\s+/).length, bolumBasi: cur.bolumBasi });
+  if (cur) it(cur);
   // çok küçük bölüm parçalarını bir sonrakiyle birleştirmeden bırak (bölüm araları korunur)
   return out;
 }
@@ -218,7 +233,9 @@ async function edgeParagrafDayanikli(par: string): Promise<Buffer> {
   }
 }
 const EDGE_ES_ZAMANLI = 3;
-async function edgeSentezle(p: Parca): Promise<Buffer> {
+/** Parça içi paragraf zamanı: [konuşma başı, konuşma sonu] (sn, parçanın başına göre). */
+type ParcaZaman = [number, number][];
+async function edgeSentezle(p: Parca): Promise<{ buf: Buffer; zaman: ParcaZaman }> {
   // Paragraflar EDGE_ES_ZAMANLI istekle paralel seslendirilir, sıra korunur.
   const paragraflar = p.metin.split('\n');
   const sonuc: Buffer[] = new Array(paragraflar.length);
@@ -233,9 +250,20 @@ async function edgeSentezle(p: Parca): Promise<Buffer> {
   };
   await Promise.all(Array.from({ length: Math.min(EDGE_ES_ZAMANLI, paragraflar.length) }, isci));
   const out: Buffer[] = [];
-  if (p.bolumBasi) out.push(sessizlik(0.5));
-  for (const b of sonuc) out.push(b, sessizlik(0.7));
-  return Buffer.concat(out);
+  const zaman: ParcaZaman = [];
+  let t = 0; // 48 kbps CBR: süre = bayt*8/48000 (sessizlikler dahil gerçek tampon süreleri)
+  if (p.bolumBasi) {
+    out.push(sessizlik(0.5));
+    t += edgeSure(sessizlik(0.5));
+  }
+  for (const b of sonuc) {
+    const bas = t;
+    t += edgeSure(b);
+    zaman.push([bas, t]);
+    out.push(b, sessizlik(0.7));
+    t += edgeSure(sessizlik(0.7));
+  }
+  return { buf: Buffer.concat(out), zaman };
 }
 const edgeSure = (b: Buffer) => (b.length * 8) / 48000;
 
@@ -384,6 +412,54 @@ function pcmMp3(pcm: Buffer, sessizlikSn: number, onceSessizlikSn: number): Buff
   return Buffer.concat(out.map((u) => Buffer.from(u)));
 }
 
+// ---------- paragraf zamanlaması ----------
+const yuvarla = (x: number, b = 2) => Math.round(x * 10 ** b) / 10 ** b;
+/** CBR MP3 süresi (lamejs/Edge çıktısında Xing başlığı yok): bayt*8/(kbps*1000). */
+const mp3Sure = (b: Buffer | number, kbps: number) => ((typeof b === 'number' ? b : b.length) * 8) / (kbps * 1000);
+interface ParcaMeta { sure?: number; kelime?: number; dogrulama?: number; bayt?: number; paragraf?: number; zaman?: [number, number][] }
+/** Konuşma süresini paragraflara karakter uzunluğu oranında dağıtır; [baş, son] parçanın başına göre. */
+function karakterOraniyla(paragraflar: string[], bas: number, konusma: number, araSessizlik = 0): ParcaZaman {
+  const top = paragraflar.reduce((t, x) => t + x.length, 0) || 1;
+  const net = Math.max(0, konusma - araSessizlik * paragraflar.length);
+  const out: ParcaZaman = [];
+  let t = bas;
+  for (const x of paragraflar) {
+    const d = (net * x.length) / top;
+    out.push([t, t + d]);
+    t += d + araSessizlik;
+  }
+  return out;
+}
+/** Gemini parçası: [önde sessizlik][pcm: paragraflar karakter oranıyla][sonda sessizlik]; gerçek MP3 süresine ölçeklenir. */
+function geminiParcaZamani(paragraflar: string[], once: number, pcmSn: number, sona: number, gercekSn: number): ParcaZaman {
+  const nominal = once + pcmSn + sona;
+  const k = nominal > 0 && gercekSn > 0 ? gercekSn / nominal : 1;
+  return karakterOraniyla(paragraflar, once, pcmSn).map(([a, b]) => [a * k, b * k]);
+}
+/** Parça metalarından global, bitişik paragraf zamanlaması. Eski (zamansız) metalarda parça süresi karakter oranıyla bölünür. */
+function zamanlamaBirlestir(sag: Saglayici, parcalar: Parca[], buflar: Buffer[], metalar: ParcaMeta[]): { zamanlama: [number, number][]; kaynak: string } {
+  const kbps = sag === 'edge-emel' ? 48 : 64;
+  const baslar: number[] = [];
+  let ofset = 0;
+  let tahmini = false;
+  parcalar.forEach((p, i) => {
+    const pars = p.metin.split('\n');
+    const dur = mp3Sure(buflar[i], kbps);
+    const m = metalar[i] || {};
+    let z: ParcaZaman | undefined = Array.isArray(m.zaman) && m.zaman.length === pars.length ? m.zaman : undefined;
+    if (!z) {
+      tahmini = true;
+      z = sag === 'edge-emel'
+        ? karakterOraniyla(pars, p.bolumBasi ? 0.5 : 0, dur - (p.bolumBasi ? 0.5 : 0), 0.7)
+        : geminiParcaZamani(pars, p.bolumBasi && i > 0 ? 0.6 : 0, Math.max(0, dur - 0.6 - (p.bolumBasi && i > 0 ? 0.6 : 0)), 0.6, dur);
+    }
+    for (const [a] of z) baslar.push(ofset + a);
+    ofset += dur;
+  });
+  const zamanlama = baslar.map((b, i) => [yuvarla(b), yuvarla(i + 1 < baslar.length ? baslar[i + 1] : ofset)] as [number, number]);
+  return { zamanlama, kaynak: tahmini ? 'tahmini' : 'olcum' };
+}
+
 // ---------- bütçe ----------
 const tlHesapla = (usage: any) => {
   const ses = Number(usage?.candidatesTokenCount || 0);
@@ -426,13 +502,15 @@ async function isIsle(is: Is) {
     let buf: Buffer | null = null;
     let sure = 0;
     let dogrulama: number | undefined; // Gemini: döküm benzerliği %, -1 = doğrulanamadı
+    let zaman: ParcaZaman | undefined; // parça içi paragraf zamanları (birleştirmede globale çevrilir)
     for (let deneme = 1; deneme <= 4 && !buf; deneme++) {
       try {
         if (is.saglayici === 'edge-emel') {
-          const b = await edgeSentezle(p);
+          const { buf: b, zaman: z } = await edgeSentezle(p);
           sure = edgeSure(b);
           if (sure < beklenen * 0.55 || sure > beklenen * 1.8) throw new Error(`süre tutarsız (${sure.toFixed(0)} sn, beklenen ~${beklenen.toFixed(0)})`);
           buf = b;
+          zaman = z;
         } else {
           const ucretli = is.saglayici === 'gemini-ucretli';
           let anahtar = '';
@@ -480,8 +558,10 @@ async function isIsle(is: Is) {
               if (oran < 0.85) throw new Error(`döküm uyuşmuyor (%${Math.round(oran * 100)})`);
               dogrulama = Math.round(oran * 100);
             } else dogrulama = -1;
-            buf = pcmMp3(pcm, 0.6, p.bolumBasi && i > 0 ? 0.6 : 0);
-            sure += 0.6 + (p.bolumBasi && i > 0 ? 0.6 : 0);
+            const once = p.bolumBasi && i > 0 ? 0.6 : 0;
+            buf = pcmMp3(pcm, 0.6, once);
+            zaman = geminiParcaZamani(p.metin.split('\n'), once, sure, 0.6, mp3Sure(buf, 64));
+            sure += 0.6 + once;
           } catch (e) {
             if (e instanceof KotaHatasi && !ucretli) {
               anahtarBekleme.set(anahtarAdi, Date.now() + e.bekleMs);
@@ -500,7 +580,7 @@ async function isIsle(is: Is) {
       }
     }
     fs.writeFileSync(dosya, buf!);
-    fs.writeFileSync(meta, JSON.stringify({ sure, kelime: p.kelime, dogrulama }));
+    fs.writeFileSync(meta, JSON.stringify({ sure, kelime: p.kelime, dogrulama, bayt: buf!.length, paragraf: p.metin.split('\n').length, zaman: zaman?.map(([a, b]) => [yuvarla(a, 3), yuvarla(b, 3)]) }));
     sureToplam += sure;
     isGuncelle(is.id, (x) => (x.ilerleme = { bitti: i + 1, toplam: parcalar.length }));
     degisti('ilerleme');
@@ -519,6 +599,7 @@ async function isIsle(is: Is) {
   };
   const tum = Buffer.concat(parts);
   fs.writeFileSync(hedef, tum);
+  const zz = zamanlamaBirlestir(is.saglayici, parcalar, parts, parcalar.map((_, i) => oku<ParcaMeta>(path.join(dir, `${String(i).padStart(3, '0')}.mp3.json`), {})));
   const s = SAGLAYICILAR[is.saglayici];
   const v: Varyant = {
     id: vid,
@@ -534,6 +615,8 @@ async function isIsle(is: Is) {
     olusturuldu: simdi(),
     maliyetTL: kuyruk().find((x) => x.id === is.id)?.maliyetTL,
     dogrulama: dogrulamaOzet,
+    zamanlama: zz.zamanlama,
+    zamanlamaKaynak: zz.kaynak,
   };
   const k = kayitlar();
   const liste = (k[is.key] = k[is.key] || []);

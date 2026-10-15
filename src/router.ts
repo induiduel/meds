@@ -11,6 +11,7 @@
  *   /yonetim     → admin panel (admins only)
  *   /ara/<sorgu> → tüm veri setlerinde arama sonuçları
  *   /manage      → yönetim konsolu (manage.nofrostlife.com.tr ile aynı ekran)
+ *   /canliders   → canlı ders: sesli dersler (liste), /canliders/<key> metin + PDF ile dinleme
  *   /saglik      → Sağlık Bakanlığı: resmî veriler + ders bağları, /saglik/<bölüm> (asi, karabuk, yenidogan …)
  *
  * Old `#tab` links keep working: they are rewritten to the matching path on load.
@@ -46,6 +47,7 @@ export type AppRoute =
   | 'datacore'
   | 'diseases'
   | 'health_ministry'
+  | 'canli_ders'
   | 'settings'
   | 'stats';
 
@@ -78,6 +80,7 @@ export const ROUTE_PATHS: Record<AppRoute, string> = {
   search: '/ara',
   diseases: '/hastaliklar',
   health_ministry: '/saglik',
+  canli_ders: '/canliders',
   settings: '/ayarlar',
   stats: '/istatistik',
 };
@@ -89,6 +92,7 @@ export const ROUTE_TITLES: Record<AppRoute, string> = {
   glossary: 'Sözlük',
   diseases: 'Hastalıklar',
   health_ministry: 'Sağlık Bakanlığı',
+  canli_ders: 'Canlı ders',
   flashcards: 'Ezber kartları',
   questions: 'Soru havuzu',
   past_exams: 'Çıkmış sorular',
@@ -183,6 +187,11 @@ const ALIASES: Record<string, AppRoute> = {
   'halk-sagligi': 'health_ministry',
   karabuk: 'health_ministry',
   'asi-takvimi': 'health_ministry',
+  canli_ders: 'canli_ders',
+  'canli-ders': 'canli_ders',
+  'canlı-ders': 'canli_ders',
+  'canlıders': 'canli_ders',
+  'sesli-ders': 'canli_ders',
 };
 
 export interface ParsedRoute {

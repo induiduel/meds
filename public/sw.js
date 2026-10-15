@@ -230,6 +230,7 @@ self.addEventListener('fetch', (event) => {
       url.pathname.startsWith('/api/realtime/') ||
       url.pathname.startsWith('/api/live/') ||
       url.pathname.startsWith('/api/presence') ||
+      url.pathname.startsWith('/api/canli-ders/ses/') || // ses akışı (Range/206): tarayıcı doğrudan alır, önbelleğe yazılmaz
       url.pathname.includes('/events') ||
       url.pathname.includes('/stream') ||
       url.pathname.includes('/sse') ||
