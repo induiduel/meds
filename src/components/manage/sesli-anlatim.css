@@ -46,27 +46,44 @@
 .sa-paid { grid-column: span 2; }
 @media (max-width: 640px) { .sa-paid { grid-column: auto; } }
 
-/* Bu PC (XTTS) işçi şeridi */
-.sa-yerel { display: flex; align-items: center; gap: 10px; padding: 10px 12px; border: 1px solid var(--ms-line, rgba(127,127,127,.25)); border-radius: 12px; flex-wrap: wrap; }
+/* Bu PC: yerel ses işçileri (XTTS / EMA) */
+.sa-yerel { display: flex; flex-direction: column; gap: 8px; padding: 10px 12px; border: 1px solid var(--line, rgba(127,127,127,.25)); border-radius: 12px; }
 .sa-yerel.is-on { border-color: var(--ms-ok, #2f9e6a); }
-.sa-yerel small { display: block; opacity: .75; line-height: 1.35; margin-top: 2px; }
+.sa-yerel-bas { display: flex; align-items: center; gap: 8px; }
+.sa-yerel-bas b { flex: 1; min-width: 0; }
+.sa-yerel-liste { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+.sa-yerel-liste li { display: grid; grid-template-columns: auto auto minmax(0, 1fr); align-items: baseline; gap: 4px 8px; }
+.sa-yerel-liste small { opacity: .75; min-width: 0; overflow-wrap: anywhere; }
+.sa-yerel-not { opacity: .7; line-height: 1.4; }
+@media (max-width: 640px) { .sa-yerel-liste li { grid-template-columns: auto minmax(0, 1fr); } .sa-yerel-liste small { grid-column: 1 / -1; } }
+.sa-wrap .ms-btn:disabled { opacity: .45; cursor: not-allowed; filter: saturate(.4); }
 
 /* Yerel ses planı */
 .sa-plan { display: flex; flex-direction: column; gap: 8px; padding: 10px 12px; }
 .sa-plan-bar { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
 .sa-plan-bar .ms-input { width: auto; min-width: 0; max-width: 100%; }
 .sa-plan-chk { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; }
-.sa-plan-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; max-height: 60vh; overflow: auto; }
-.sa-plan-list li { display: grid; grid-template-columns: auto minmax(140px, 1fr) minmax(92px, 130px) minmax(130px, 190px) 34px 76px; align-items: center; gap: 8px; padding: 6px 2px; border-top: 1px solid var(--line, rgba(127,127,127,.18)); }
-.sa-plan-list li.is-planned .sa-plan-t { font-weight: 600; }
-.sa-plan-list .ms-input { width: 100%; min-width: 0; }
-.sa-plan-t { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; display: flex; align-items: center; gap: 6px; }
-.sa-plan-t .sa-no { flex: none; }
-.sa-plan-t small { opacity: .6; font-weight: 400; }
-@media (max-width: 640px) {
-  .sa-plan-list li { grid-template-columns: auto minmax(0, 1fr) auto; }
-  .sa-plan-list li .ms-input { grid-column: 2 / 4; }
-  .sa-plan-list li .ms-tag { grid-column: 3; grid-row: 1; }
+.sa-plan-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; max-height: 62vh; overflow: auto; overscroll-behavior: contain; }
+.sa-plan-list li {
+  display: grid; align-items: center; gap: 6px 8px; padding: 7px 2px;
+  grid-template-columns: auto minmax(160px, 1fr) minmax(92px, 130px) minmax(140px, 200px) 34px 82px;
+  grid-template-areas: "chk t sag ses dinle drm";
+  border-top: 1px solid var(--line, rgba(127,127,127,.18));
 }
-.sa-plan-dinle { display: inline-flex; min-width: 34px; }
-@media (max-width: 640px) { .sa-plan-dinle { grid-column: 3; } }
+.sa-plan-chk-i { grid-area: chk; }
+.sa-plan-t { grid-area: t; min-width: 0; display: flex; align-items: center; gap: 8px; }
+.sa-plan-t .sa-no { flex: none; }
+.sa-plan-ad { min-width: 0; overflow: hidden; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; line-height: 1.3; }
+.sa-plan-ad small { opacity: .6; font-weight: 400; white-space: nowrap; }
+.sa-plan-list li.is-planned .sa-plan-ad { font-weight: 600; }
+.sa-plan-sag { grid-area: sag; }
+.sa-plan-ses { grid-area: ses; }
+.sa-plan-list .ms-input { width: 100%; min-width: 0; }
+.sa-plan-dinle { grid-area: dinle; display: inline-flex; min-width: 34px; }
+.sa-plan-drm { grid-area: drm; justify-self: end; }
+/* Dar kap / telefon: üstte ad + durum, altta tek satırda sağlayıcı · konuşmacı · dinle; iç kaydırma yok */
+@media (max-width: 900px) {
+  .sa-plan-list { max-height: none; overflow: visible; }
+  .sa-plan-list li { grid-template-columns: auto minmax(0, 1fr) minmax(0, 1.35fr) 34px; grid-template-areas: "chk t t drm" ". sag ses dinle"; }
+  .sa-plan-drm { align-self: start; }
+}

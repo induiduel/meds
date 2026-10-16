@@ -18,7 +18,9 @@ Kullanım:
   xtts_isci.py dene "metin" [--ses AD] [--cikti a.mp3]   # tek seferlik deneme (sunucuya dokunmaz)
 Ortam: MEDS_XTTS_SUNUCU (varsayılan MEDS_ORACLE_API_URL ya da https://api.nofrostlife.com.tr),
        MEDS_PANEL_SECRET (.env'den), XTTS_IS_PARCACIGI (torch iş parçacığı, varsayılan 6), XTTS_HIZ (1.2 — Türkçe için önerilen; muhammedsaban/coqui-xtts-v2-turkish-local),
-       XTTS_CIHAZ (auto | cuda | cpu), XTTS_GPU_PAY (0.7), XTTS_SICAK_UST (80), XTTS_SICAK_ALT (70).
+       XTTS_CIHAZ (auto | cuda | cpu), XTTS_GPU_PAY (0.6), XTTS_SICAK_UST (72), XTTS_SICAK_ALT (64), XTTS_SICAK_DUR (78).
+GPU: 2026-10-16 02:06'da RTX dizüstü kartı ısı sıçramalarıyla düştü (GSP RPC hatası, yeniden başlatma gerekti) → sınırlar
+sıkılaştırıldı ve dış koruyucu (scripts/agents/gpu_guard.py, meds-gpuguard) geri getirildi; aşağıdaki ilk açıklama eski.
 GPU: AGENTS.md kural 10'un TEK istisnası (kullanıcı izni 2026-10-16) — en fazla %70: VRAM payı 0.7 ile sınırlı ve
 her GPU sentezinden sonra GPU boşta bekletilir (çalışma/toplam ≈ pay). Isı denetimi: GPU 80 °C'yi aşınca pay %20'ye
 iner, 70 °C'ye düşünce yeniden %70; 85 °C'de 70 °C'ye inene kadar tamamen durur. GPU yoksa ya da bellek yetmezse CPU'ya düşer;
@@ -41,6 +43,8 @@ import urllib.request
 from pathlib import Path
 
 MEDS = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import okunus  # noqa: E402 — kısaltma okunuşu ("de ne a" → "denea"); yalnız modele giden metin
 VERI = Path(os.environ.get("MEDS_XTTS_VERI", Path.home() / ".local/share/meds-xtts"))
 SR = 24000
 KBPS = 64
@@ -92,18 +96,19 @@ def istek(yol: str, govde: dict | bytes | None = None, yontem: str = "POST", bas
 
 # ---------------------------------------------------------------- sentez (ağır süreç)
 
-GPU_PAY = min(0.7, float(os.environ.get("XTTS_GPU_PAY", "0.7")))  # kullanıcı izni en fazla %70
-YAVAS_PAY = 0.2
-SICAK_UST = float(os.environ.get("XTTS_SICAK_UST", "80"))  # bunun üstünde yavaşla
-SICAK_ALT = float(os.environ.get("XTTS_SICAK_ALT", "70"))  # buna inince tam hız
-SICAK_DUR = SICAK_UST + 5  # bunun üstünde tamamen bekle
+GPU_PAY = min(0.6, float(os.environ.get("XTTS_GPU_PAY", "0.6")))  # kullanıcı sınırı en fazla %60 (2026-10-16)
+YAVAS_PAY = 0.25
+SICAK_UST = float(os.environ.get("XTTS_SICAK_UST", "72"))  # bunun üstünde yavaşla
+SICAK_ALT = float(os.environ.get("XTTS_SICAK_ALT", "64"))  # buna inince tam hız
+SICAK_DUR = float(os.environ.get("XTTS_SICAK_DUR", "78"))  # bunun üstünde SICAK_ALT'a inene kadar tamamen bekle
+CUDA_HATA_KODU = 5  # sentez süreci GPU düştüğünde bu kodla çıkar: iş sıraya döner, bekle() GPU'yu bekler / CPU'ya geçer
 CIHAZ = {"ad": "cpu"}
 ISI = {"yavas": False, "olcum": 0.0, "c": None}
 
 
 def gpu_sicaklik() -> float | None:
     """nvidia-smi ile GPU sıcaklığı (°C); 2 sn önbellek. Okunamazsa None (denetim devre dışı, pay sabit)."""
-    if time.time() - ISI["olcum"] < 2:
+    if time.time() - ISI["olcum"] < 1:
         return ISI["c"]
     try:
         out = subprocess.run(["nvidia-smi", "--query-gpu=temperature.gpu", "--format=csv,noheader,nounits"],
@@ -182,7 +187,14 @@ def tts_cagir(tts, **kw):
             log("GPU belleği yetmedi (pay %d) → CPU'ya geçiliyor" % int(GPU_PAY * 100))
             gpu_birak(tts)
             return tts.tts(**kw)
+        except Exception as e:  # "unspecified launch failure", Xid: GPU düştü — bu süreçte CUDA artık kullanılamaz
+            if "CUDA" in str(e) or "cuda" in type(e).__name__.lower() or "Accelerator" in type(e).__name__:
+                log(f"GPU hatası: {str(e)[:160]} → iş sıraya bırakılıyor")
+                os._exit(CUDA_HATA_KODU)
+            raise
+        # boşta bekleme: ortalama kullanım ≈ pay; sonrasında sıcaklık yeniden ölçülür (sıçrama cümle sırasında olur)
         time.sleep((time.time() - t) * (1 - pay) / pay)
+        ISI["olcum"] = 0.0
         return wav
     return tts.tts(**kw)
 
@@ -266,6 +278,7 @@ def paragraf_seslendir(tts, metin: str, ses: str):
 
     durak = np.zeros(int(0.18 * SR), dtype=np.float32)
     parcalar, notlar = [], []
+    metin = okunus.duzelt(metin)  # paragraf/zamanlama değişmez: paragraf yine tek parça ölçülür
     for c in cumlelere_bol(metin):
         wav, not_ = cumle_seslendir(tts, c, ses)
         if not_:
@@ -399,8 +412,43 @@ def kapat(_sig=None, _frm=None):
     sys.exit(0)
 
 
+GPU_BASLA_SICAK = float(os.environ.get("XTTS_GPU_BASLA", "62"))  # sentez süreci GPU'yu ancak bu sıcaklığın altında açar
+
+
+def gpu_kapisi(cpu_zorla: bool) -> dict:
+    """Sentez sürecinin ortamı. GPU kartı görünmüyorsa ya da bu oturumda bir kez düştüyse CPU; görünüyorsa ≤ GPU_BASLA_SICAK
+    olana kadar bekler (dış koruyucu meds-gpuguard ayrıca sentez sürecini dondurur)."""
+    env = dict(os.environ)
+    if cpu_zorla or os.environ.get("XTTS_CIHAZ") == "cpu":
+        env.update(XTTS_CIHAZ="cpu", CUDA_VISIBLE_DEVICES="")
+        return env
+    # GPU koruyucu bu açılışta saat kilidinin olmadığını gördüyse (meds_temp/state/gpu_kilit_yok = açılış kimliği) yalnız CPU
+    try:
+        bayrak = (MEDS.parent / "meds_temp/state/gpu_kilit_yok").read_text().strip()
+        if bayrak and bayrak == Path("/proc/sys/kernel/random/boot_id").read_text().strip():
+            log("GPU saat kilidi yok (koruyucu) → bu açılışta CPU")
+            env.update(XTTS_CIHAZ="cpu", CUDA_VISIBLE_DEVICES="")
+            return env
+    except FileNotFoundError:
+        pass
+    for _ in range(120):  # en çok ~10 dk
+        ISI["olcum"] = 0.0
+        c = gpu_sicaklik()
+        if c is None:
+            log("GPU görünmüyor (nvidia-smi) → bu iş CPU'da")
+            env.update(XTTS_CIHAZ="cpu", CUDA_VISIBLE_DEVICES="")
+            return env
+        if c <= GPU_BASLA_SICAK:
+            return env
+        time.sleep(5)
+    log(f"GPU 10 dk'da {GPU_BASLA_SICAK:.0f} °C'ye inmedi → bu iş CPU'da")
+    env.update(XTTS_CIHAZ="cpu", CUDA_VISIBLE_DEVICES="")
+    return env
+
+
 def bekle() -> None:
     global cocuk, calisan_is
+    gpu_dustu = False  # bu oturumda GPU bir kez düştüyse (CUDA hatası) bir daha GPU açılmaz — işçi elle yeniden başlatılmalı
     if not SIR:
         raise SystemExit("MEDS_PANEL_SECRET yok (.env)")
     VERI.mkdir(parents=True, exist_ok=True)
@@ -430,7 +478,7 @@ def bekle() -> None:
         f = VERI / "is" / f"{is_['id']}.json"
         f.parent.mkdir(parents=True, exist_ok=True)
         f.write_text(json.dumps(cevap, ensure_ascii=False), encoding="utf-8")
-        cocuk = subprocess.Popen([sys.executable, __file__, "sentezle", str(f)])
+        cocuk = subprocess.Popen([sys.executable, __file__, "sentezle", str(f)], env=gpu_kapisi(gpu_dustu))
         durduruldu = False
         while cocuk.poll() is None:
             time.sleep(45)
@@ -445,7 +493,11 @@ def bekle() -> None:
                 log("kalp atışı gönderilemedi:", e)
         rc = cocuk.returncode
         cocuk = None
-        if not durduruldu and rc not in (0, 3):
+        if rc == CUDA_HATA_KODU:
+            gpu_dustu = True
+            log("GPU düştü: iş sıraya bırakıldı (parçalar korunur); bu oturumda bundan sonra yalnız CPU")
+            istek(f"/api/sesli-anlatim/yerel/is/{calisan_is}/hata", {"birak": True})
+        elif not durduruldu and rc not in (0, 3):
             istek(f"/api/sesli-anlatim/yerel/is/{calisan_is}/hata", {"hata": f"yerel sentez süreci {rc} koduyla bitti (journalctl --user -u meds-xtts)"})
         if durduruldu:
             istek(f"/api/sesli-anlatim/yerel/is/{calisan_is}/hata", {"birak": True})

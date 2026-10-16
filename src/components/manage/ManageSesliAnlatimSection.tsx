@@ -203,26 +203,42 @@ export const ManageSesliAnlatimSection: React.FC<{ adminEmail: string }> = ({ ad
       </div>
 
       {d.yerel && (() => {
-        const xi = d.yerel.isciler?.['xtts-yerel'] ?? d.yerel; // XTTS işçisinin kendi sinyali (eski sunucuda ortak)
+        const y = d.yerel;
+        // Yerel işçiler: XTTS (GPU ≤ %70 + CPU) ve EMA (yalnız CPU); eski sunucuda yalnız ortak sinyal vardır
+        const isciler: { id: Saglayici; ad: string; servis: string; o: YerelOzet }[] = [
+          { id: 'xtts-yerel', ad: 'Coqui XTTS v2', servis: 'meds-xtts', o: y.isciler?.['xtts-yerel'] ?? y },
+          ...(y.isciler?.['ema-yerel'] ? [{ id: 'ema-yerel' as Saglayici, ad: 'EMA Lightning', servis: 'meds-ema', o: y.isciler['ema-yerel']! }] : []),
+        ];
+        const herhangi = isciler.some((x) => x.o.cevrimici);
         return (
-        <div className={`sa-yerel ${xi.cevrimici ? 'is-on' : ''}`}>
-          <Cpu className="w-4 h-4" aria-hidden />
-          <div className="min-w-0 flex-1">
-            <b>Bu PC · Coqui XTTS v2</b>{' '}
-            <span className={`ms-tag ${xi.cevrimici ? 'is-ok' : ''}`}>{xi.cevrimici ? 'Çevrimiçi' : 'Çevrimdışı'}</span>
-            <small>
-              {xi.cevrimici
-                ? `${xi.ad || 'yerel işçi'} · ${xi.not || 'iş bekliyor'} · son sinyal ${timeLabel(xi.sonSinyal!, true)}`
-                : xi.sonSinyal
-                  ? `Son sinyal ${timeLabel(xi.sonSinyal, true)}. Bilgisayar açılınca (meds-xtts servisi) sıradaki işi kendisi alır.`
-                  : 'Henüz bağlanmadı. Bilgisayarda: systemctl --user start meds-xtts'}
-              {' '}Bir derste "Alternatif oluştur → Coqui XTTS v2 · bu PC" seçip onayladığında o ders bu bilgisayarda (GPU en fazla %70, 80 °C üstünde yavaşlar + CPU) seslendirilir.
+          <div className={`sa-yerel ${herhangi ? 'is-on' : ''}`}>
+            <div className="sa-yerel-bas">
+              <Cpu className="w-4 h-4" aria-hidden />
+              <b>Bu PC · yerel ses işçileri</b>
+              <button type="button" className="ms-btn is-sm sa-yerel-btn" onClick={() => void post('/api/sesli-anlatim/yerel/aktif', { aktif: !y.aktif })}>
+                {y.aktif ? <><Pause /> Durdur</> : <><Play /> Aç</>}
+              </button>
+            </div>
+            <ul className="sa-yerel-liste">
+              {isciler.map((x) => (
+                <li key={x.id}>
+                  <span className={`ms-tag ${x.o.cevrimici ? 'is-ok' : ''}`}>{x.o.cevrimici ? 'Çevrimiçi' : 'Çevrimdışı'}</span>
+                  <b>{x.ad}</b>
+                  <small>
+                    {x.o.cevrimici
+                      ? `${x.o.not || 'iş bekliyor'} · son sinyal ${timeLabel(x.o.sonSinyal!, true)}`
+                      : x.o.sonSinyal
+                        ? `son sinyal ${timeLabel(x.o.sonSinyal, true)} — bilgisayar açılınca sıradaki işi kendisi alır`
+                        : `bağlanmadı — bilgisayarda: systemctl --user start ${x.servis}`}
+                  </small>
+                </li>
+              ))}
+            </ul>
+            <small className="sa-yerel-not">
+              {y.aktif ? '' : 'Yerel işçiler panelden durduruldu; yeni iş almıyorlar. '}
+              "Yerel ses planı" ya da ders satırındaki "Alternatif oluştur" ile onayladığın dersler bu bilgisayarda seslendirilir: XTTS GPU'yu en fazla %70 kullanır (80 °C üstünde yavaşlar), EMA yalnız CPU.
             </small>
           </div>
-          <button type="button" className="ms-btn is-sm" onClick={() => void post('/api/sesli-anlatim/yerel/aktif', { aktif: !d.yerel!.aktif })}>
-            {d.yerel.aktif ? <><Pause /> Yerel işçiyi durdur</> : <><Play /> Yerel işçiyi aç</>}
-          </button>
-        </div>
         );
       })()}
 
@@ -234,8 +250,18 @@ export const ManageSesliAnlatimSection: React.FC<{ adminEmail: string }> = ({ ad
         count={bekleyenIsler.length}
         tools={
           <>
-            <span className={`ms-tag ${d.isci.aktif ? 'is-ok' : ''}`}>{d.isci.aktif ? 'İşçi çalışıyor' : 'İşçi durdu'}</span>
-            <button type="button" className="ms-btn is-sm" onClick={() => void post('/api/sesli-anlatim/isci', { aktif: !d.isci.aktif })}>
+            <span className={`ms-tag ${d.isci.aktif ? 'is-ok' : ''}`} title="Bu sunucudaki Emel / Gemini seslendirme işçisi (yerel XTTS/EMA işçilerinden ayrı)">
+              {d.isci.aktif ? 'Sunucu işçisi çalışıyor' : 'Sunucu işçisi durdu'}
+            </span>
+            <button
+              type="button"
+              className="ms-btn is-sm"
+              title="Emel / Gemini işçisi — yerel XTTS/EMA işçilerini etkilemez"
+              onClick={async () => {
+                if (!d.isci.aktif && !(await confirmDialog({ title: 'Sunucu işçisi başlatılsın mı?', message: `Bu, bağlı olduğun sunucudaki Emel / Gemini seslendirme işçisidir (yerel XTTS/EMA işçileri bundan bağımsız çalışır).${d.ucretliAktif ? ' Ücretli üretim AÇIK: sıradaki ücretli işler başlar.' : ''} Kuyruk Oracle'da çalışıyorsa yerel sunucuda açma — iki makine aynı işi yapar.`, confirmLabel: 'Başlat', tone: d.ucretliAktif ? 'danger' : undefined }))) return;
+                await post('/api/sesli-anlatim/isci', { aktif: !d.isci.aktif });
+              }}
+            >
               {d.isci.aktif ? <><Pause /> Durdur</> : <><Play /> Başlat</>}
             </button>
             <button type="button" className="ms-btn is-sm" onClick={() => setKuyrukAcik((v) => !v)}>{kuyrukAcik ? 'Gizle' : 'Göster'}</button>
@@ -628,13 +654,17 @@ const YerelPlan: React.FC<{ d: Durum; post: (yol: string, body?: any) => Promise
                 <li key={x.key} className={p ? 'is-planned' : ''}>
                   <input
                     type="checkbox"
+                    className="sa-plan-chk-i"
                     aria-label={`${x.no}. ${x.baslik} seç`}
                     checked={secili.has(x.key)}
                     onChange={() => setSecili((o) => { const n = new Set(o); if (n.has(x.key)) n.delete(x.key); else n.add(x.key); return n; })}
                   />
-                  <span className="sa-plan-t" title={`${x.no}. ${x.baslik}`}><span className="sa-no">{x.no}</span> {x.baslik} <small>~{x.tahminiDk} dk</small></span>
+                  <span className="sa-plan-t" title={`${x.no}. ${x.baslik}`}>
+                    <span className="sa-no">{x.no}</span>
+                    <span className="sa-plan-ad">{x.baslik} <small>~{x.tahminiDk} dk</small></span>
+                  </span>
                   <select
-                    className="ms-input"
+                    className="ms-input sa-plan-sag"
                     value={p?.saglayici || ''}
                     aria-label={`${x.baslik} yerel ses ajanı`}
                     onChange={(e) => {
@@ -647,7 +677,7 @@ const YerelPlan: React.FC<{ d: Durum; post: (yol: string, body?: any) => Promise
                     {yereller.map((s) => <option key={s.id} value={s.id}>{s.id === 'xtts-yerel' ? 'XTTS v2' : s.id === 'ema-yerel' ? 'EMA' : s.etiket}</option>)}
                   </select>
                   <select
-                    className="ms-input"
+                    className="ms-input sa-plan-ses"
                     value={p?.ses || ''}
                     disabled={!p}
                     aria-label={`${x.baslik} konuşmacı`}
@@ -657,7 +687,7 @@ const YerelPlan: React.FC<{ d: Durum; post: (yol: string, body?: any) => Promise
                     {(sb?.sesler || []).map((v) => <option key={v} value={v}>{v}</option>)}
                   </select>
                   <span className="sa-plan-dinle"><OrnekDinle d={d} saglayici={p?.saglayici} ses={p?.ses} url={ornekUrl} /></span>
-                  <span className={`ms-tag ${dr === 'hazir' ? 'is-ok' : dr === 'sirada' ? 'is-accent' : ''}`}>
+                  <span className={`ms-tag sa-plan-drm ${dr === 'hazir' ? 'is-ok' : dr === 'sirada' ? 'is-accent' : ''}`}>
                     {dr === 'hazir' ? 'Hazır' : dr === 'sirada' ? 'Sırada' : dr === 'bekliyor' ? 'Planlandı' : '—'}
                   </span>
                 </li>

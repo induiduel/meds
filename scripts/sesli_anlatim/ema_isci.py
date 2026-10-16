@@ -36,6 +36,8 @@ import urllib.request
 from pathlib import Path
 
 MEDS = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import okunus  # noqa: E402 — kısaltma okunuşu düzeltmesi
 VERI = Path(os.environ.get("MEDS_EMA_VERI", Path.home() / ".local/share/meds-ema"))
 SAGLAYICI = "ema-yerel"
 SR = 24000
@@ -118,6 +120,8 @@ def paragraf_seslendir(tts, metin: str):
     """Bir paragraf → float32 dizi (24 kHz). Süre metne göre tutarsızsa farklı tohumla 3 kez dener."""
     import numpy as np
 
+    # Kısaltma okunuşu (okunus.py): "de ne a" → "denea" — yalnız modele giden metin; paragraf/zamanlama değişmez
+    metin = okunus.duzelt(metin)
     beklenen = max(1.0, len(metin) / (KARAKTER_SN * HIZ))
     en_iyi = None
     for deneme in range(3):
