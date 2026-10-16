@@ -33,7 +33,7 @@ const SYNC_PATTERNS: RegExp[] = [
   // Sınav spotları, örnek/çıkmış sorular
   /^medsoru_spot_ogrendim$/,
   // Patoloji önem listesi: öğrendim işaretleri, ekran ve PDF tercihleri, son ders
-  /^medsoru_onem_(ogrendim|tercih|pdf)_v1$/,
+  /^medsoru_onem_(ogrendim|tercih|pdf|asistan|asistan_tercih)_v1$/,
   /^medsoru_onem_ders$/,
   /^medsoru_ornek_(k1_cevap|k1_ders|k1_social|havuz_social|sekme)$/,
   /^cikmis_quiz$/,

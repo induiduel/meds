@@ -1,7 +1,7 @@
 import React, { useCallback, useDeferredValue, useEffect, useMemo, useRef, useState } from 'react';
 import {
   Check, ChevronDown, ChevronLeft, ChevronRight, ChevronsDownUp, ChevronsUpDown, Download, Eye, EyeOff, HelpCircle,
-  Info, Keyboard, ListFilter, Search, Star, X,
+  Headphones, Info, Keyboard, ListFilter, Search, Star, X,
 } from 'lucide-react';
 import { Sheet } from '../ui/Sheet';
 import { kucuk, azHareket } from './spotsShared';
@@ -11,9 +11,11 @@ import {
   tercihOku, tercihYaz, useOgrenilen, type Aday, type Ders, type Dizin, type DizinDers, type Madde, type Tur,
 } from './onem/onemVeri';
 import type { EkranKapsami } from './onem/OnemPdfPenceresi';
+import { asistanDersVar, asistanDersleri } from './asistan/asistanVeri';
 import '../../styles/onem-listesi.css';
 
 const OnemPdfPenceresi = React.lazy(() => import('./onem/OnemPdfPenceresi'));
+const PatolojiAsistan = React.lazy(() => import('./asistan/PatolojiAsistan'));
 
 /**
  * Patoloji · Sınav için en önemliler (100 puan, 10'ar puanlık partlar). Kaynak: Kurul 1 Tıbbi Patoloji ders PDF'leri.
@@ -173,6 +175,7 @@ export const OnemListesi: React.FC = () => {
   const [suzgecAcik, setSuzgecAcik] = useState(false);
   const [gezAcik, setGezAcik] = useState(false);
   const [pdfAcik, setPdfAcik] = useState(false);
+  const [asistan, setAsistan] = useState<string | null>(() => (urlOku('asistan') ? urlOku('ders') || null : null));
   const [kisayolAcik, setKisayolAcik] = useState(false);
   const [aktifPart, setAktifPart] = useState<number | null>(null);
   const [ozetAcik, setOzetAcik] = useState(false);
@@ -273,6 +276,7 @@ export const OnemListesi: React.FC = () => {
     urlYaz({ m: null });
   }, [hazir, sirali]); // eslint-disable-line react-hooks/exhaustive-deps
 
+  const asistanAc = (k: string) => { setAsistan(k); urlYaz({ asistan: '1' }); };
   const onAc = useCallback((id: string, s: Sekme | null) => {
     setAcik((a) => { const n = new Map(a); if (s) n.set(id, s); else n.delete(id); return n; });
     setOdak(id);
@@ -301,7 +305,7 @@ export const OnemListesi: React.FC = () => {
     const f = (e: KeyboardEvent) => {
       if (e.ctrlKey || e.metaKey || e.altKey) return;
       const t = e.target as HTMLElement;
-      if (t.closest('input,textarea,select,[contenteditable="true"]') || document.querySelector('.sh-sheet-root, [role="dialog"][aria-modal="true"]')) return;
+      if (t?.closest?.('input,textarea,select,[contenteditable="true"]') || document.querySelector('.sh-sheet-root, [role="dialog"][aria-modal="true"]')) return;
       const s = durum.current;
       const git = (yon: 1 | -1) => {
         if (!s.sirali.length) return;
@@ -320,7 +324,7 @@ export const OnemListesi: React.FC = () => {
         case 'j': git(1); break;
         case 'k': git(-1); break;
         case 'o': case 'Enter':
-          if (!s.odak || (e.key === 'Enter' && t.closest('button,a'))) return;
+          if (!s.odak || (e.key === 'Enter' && t?.closest?.('button,a'))) return;
           onAc(s.odak, s.acik.has(s.odak) ? null : 'aciklama'); break;
         case 'x': if (s.odak) ogrenildiAyarla([s.odak], !s.ogr.has(s.odak)); else return; break;
         case 't': setTercih0((p) => { const n = { ...p, gizle: !p.gizle }; tercihYaz(TERCIH_KEY, n); return n; }); break;
@@ -397,7 +401,14 @@ export const OnemListesi: React.FC = () => {
           <span><b>{toplamOgr}</b>/{toplam} öğrenildi</span>
           <div className="on-bar"><i style={{ width: `${(toplamOgr / Math.max(1, toplam)) * 100}%` }} /></div>
         </div>
-        <button type="button" className="on-btn is-dolu" onClick={() => setPdfAcik(true)}><Download aria-hidden />PDF oluştur</button>
+        <div className="on-sayfa-btn">
+          {asistanDersleri().length > 0 && (
+            <button type="button" className="on-btn is-asistan" onClick={() => asistanAc(!cokDers && asistanDersVar(kod) ? kod : asistanDersleri().sort()[0])}>
+              <Headphones aria-hidden />Sesli asistan
+            </button>
+          )}
+          <button type="button" className="on-btn is-dolu" onClick={() => setPdfAcik(true)}><Download aria-hidden />PDF oluştur</button>
+        </div>
       </div>
 
       <div className="on-yerlesim">
@@ -448,6 +459,13 @@ export const OnemListesi: React.FC = () => {
                   </div>
                 )}
               </>
+            )}
+            {!cokDers && asistanDersVar(kod) && (
+              <button type="button" className="on-hero-asistan" onClick={() => asistanAc(kod)}>
+                <span className="on-hero-asistan-i"><Headphones aria-hidden /></span>
+                <span><b>Sesli sınav asistanıyla çalış</b><small>En önemli noktaları kısaca anlatır, soru sorar, yanlışını açıklar · tam ekran</small></span>
+                <ChevronRight aria-hidden />
+              </button>
             )}
             {kod === HEPSI && <p className="on-hero-not">Süzgeç seçilmediğinde yalnız 90–100 partı görünür. Diğer partlar için süzgeçten puan seç.</p>}
           </header>
@@ -639,6 +657,11 @@ export const OnemListesi: React.FC = () => {
       <Sheet open={gezAcik} onClose={() => setGezAcik(false)} title="Ders seç" subtitle={`${toplamOgr}/${toplam} madde öğrenildi`} size="full" width={520}>
         <DersGezgini dizin={dizin} kod={kod} ogrSay={ogrSay} onSec={(k) => dersSec(k)} sayfada />
       </Sheet>
+      {asistan && (
+        <React.Suspense fallback={null}>
+          <PatolojiAsistan kod={asistan} onClose={() => { setAsistan(null); urlYaz({ asistan: null }); }} onDersDegis={(k) => { if (!cokDers) setKod(k); }} />
+        </React.Suspense>
+      )}
       {pdfAcik && (
         <React.Suspense fallback={null}>
           <OnemPdfPenceresi dizin={dizin} secili={!cokDers ? kod : null} ekran={ekranKapsami} onClose={() => setPdfAcik(false)} />

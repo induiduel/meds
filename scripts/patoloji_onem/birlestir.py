@@ -4,10 +4,12 @@ W = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = '/home/indu/medsor/meds/src/data/patoloji_onem_k1.json'
 L = {x['kod']: x for x in json.load(open(f'{W}/pdf_liste.json'))}
 C = json.load(open(f'{W}/cikmis_pdf.json'))
-cik_by = {c['id']: c for v in C.values() for c in v}
+cik_by = {}
+for v in C.values():
+    for c in v: cik_by.setdefault(c['id'], c)  # aynı soru birden çok derste aday olabilir: ilk kayıt esas
 dersler, cik, eksik = [], {}, []
 NEDEN = json.load(open(f'{W}/neden/cikti.json')) if os.path.exists(f'{W}/neden/cikti.json') else {}
-for kod in sorted(L, key=lambda k: (int(re.match(r'\d+', k).group()), k)):
+for kod in sorted(L, key=lambda k: (int(re.match(r'\d+', L[k]['ad']).group()), k)):  # Drive'daki ders numarası sırası
     p = f'{W}/cikti/{kod}.json'
     if not os.path.exists(p): eksik.append(kod); continue
     r = subprocess.run([sys.executable, f'{W}/araclar/dogrula.py', p], capture_output=True, text=True)

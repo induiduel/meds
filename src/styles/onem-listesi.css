@@ -69,6 +69,21 @@
 .on-iskelet i:first-child { height: 150px; }
 @keyframes on-skel { to { background-position: -200% 0; } }
 
+/* sesli asistan girişleri */
+.on-sayfa-btn { display: flex; gap: 8px; flex-wrap: wrap; }
+.on-btn.is-asistan { background: color-mix(in srgb, var(--color-ai) 12%, transparent); color: var(--color-ai); }
+.on-hero-asistan { display: flex; align-items: center; gap: 12px; width: 100%; padding: 12px 14px; border-radius: 14px; border: 1px solid color-mix(in srgb, var(--color-ai) 30%, transparent);
+  background: linear-gradient(120deg, color-mix(in srgb, var(--color-ai) 10%, var(--color-white)), color-mix(in srgb, var(--color-accent) 8%, var(--color-white))); text-align: left; color: var(--color-ink);
+  transition: border-color var(--mo-fast, 120ms), transform var(--mo-fast, 120ms); }
+.on-hero-asistan:hover { border-color: var(--color-ai); }
+.on-hero-asistan:active { transform: scale(.995); }
+.on-hero-asistan-i { flex-shrink: 0; width: 42px; height: 42px; border-radius: 12px; display: grid; place-items: center; background: var(--color-ai); color: #fff; }
+.on-hero-asistan-i svg { width: 21px; height: 21px; }
+.on-hero-asistan > span:nth-child(2) { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+.on-hero-asistan b { font-size: 15px; }
+.on-hero-asistan small { font-size: 12.5px; color: var(--color-ink-2); line-height: 1.4; }
+.on-hero-asistan > svg { width: 18px; height: 18px; flex-shrink: 0; color: var(--color-ink-3); }
+
 /* ---------- ders gezgini (ray + alt sayfa) */
 .on-gez { display: flex; flex-direction: column; gap: 8px; min-height: 0; }
 .on-gez-ara { display: flex; align-items: center; gap: 7px; height: 36px; padding: 0 10px; border-radius: 10px; background: var(--color-field); color: var(--color-ink-3); flex-shrink: 0; }
@@ -370,7 +385,8 @@ button.on-dersad:hover { color: var(--color-accent); text-decoration: underline;
 /* ---------- dar kap (telefon) */
 @container on (max-width: 640px) {
   .on-sayfa-t h2 { font-size: 18.5px; }
-  .on-sayfa-bas .on-btn.is-dolu { flex: 1 1 auto; }
+  .on-sayfa-btn { flex: 1 1 100%; }
+  .on-sayfa-btn .on-btn { flex: 1 1 0; }
   .on-sayfa-ilerleme { flex: 1 1 140px; }
   .on-hero { padding: 14px; gap: 12px; border-radius: 16px; }
   .on-hero-no { width: 42px; height: 42px; font-size: 17px; border-radius: 12px; }
