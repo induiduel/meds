@@ -51,11 +51,13 @@ export const AsamaSeridi: React.FC<{
   if (!a) return null;
   const yayinda = yayin === 'yayinlandi' || durum === 'yayinlandi';
   const k = a.konusma || { metin: false, sayfalar: false };
+  const eskiTaslak = !isleniyor && !k.metin && !k.durum && !!durum && durum !== 'isleniyor';
   const adimlar: Adim[] = [
     { ad: 'Kaynak', durum: a.kaynak ? 'tamam' : isleniyor ? 'suruyor' : 'bekliyor' },
     {
       ad: 'İçerik',
-      durum: a.cikti >= a.cikti_toplam ? 'tamam' : isleniyor && a.kaynak ? 'suruyor' : 'bekliyor',
+      // eski talimatla üretilmiş (daha az çıktılı) ama bitmiş taslaklar da tamam sayılır; sayı not olarak kalır
+      durum: a.cikti >= a.cikti_toplam || eskiTaslak ? 'tamam' : isleniyor && a.kaynak ? 'suruyor' : 'bekliyor',
       not: `${a.cikti}/${a.cikti_toplam}`,
     },
     {
@@ -65,9 +67,10 @@ export const AsamaSeridi: React.FC<{
     },
     {
       ad: 'Konuşma metni',
+      // canli_ders alanı olmayan, işlenmesi bitmiş taslaklar bu özellikten (2026-10-16) önce üretildi: adım yok sayılır
       durum:
-        k.durum === 'tamam' ? 'tamam' : k.durum === 'hata' ? 'hata' : k.durum === 'kapali' ? 'atla' : a.ana_bitti && isleniyor ? 'suruyor' : k.metin ? 'suruyor' : 'bekliyor',
-      not: k.durum === 'kapali' ? 'kapalı' : k.durum === 'hata' ? 'denetimde hata' : undefined,
+        k.durum === 'tamam' ? 'tamam' : k.durum === 'hata' ? 'hata' : k.durum === 'kapali' || eskiTaslak ? 'atla' : a.ana_bitti && isleniyor ? 'suruyor' : k.metin ? 'suruyor' : 'bekliyor',
+      not: k.durum === 'kapali' ? 'kapalı' : k.durum === 'hata' ? 'denetimde hata' : eskiTaslak ? 'bu taslakta yok' : undefined,
     },
     {
       ad: 'Onay',
