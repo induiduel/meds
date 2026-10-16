@@ -18277,7 +18277,7 @@
         "sayfa": 103
       }
     ],
-    "clinicalPearl": "Tanı için uterus dışında bez + stroma gerekir; tek başına hemosiderin veya fibrozis yetmez. Üreme çağında ~%10, infertillerde ~%50. · Tip I over karsinomlarının (endometrioid, berrak hücreli) gelişim zeminidir."
+    "clinicalPearl": "Tanı için uterus dışında bez + stroma gerekir; tek başına hemosiderin veya fibrozis yetmez. Üreme çağında ~%10, infertillerde ~%50. · Tip I over karsinomlarının (endometrioid, berrak hücreli) gelişim zeminidir. · Üreme çağındaki kadınların ~%10'unda, infertil kadınların yaklaşık yarısında görülür; tanı için uterus dışında hem bez hem stroma gerekir, tek başına hemosiderin veya fibrozis yetmez."
   },
   "pralidoksim": {
     "term": "Pralidoksim",
@@ -18549,7 +18549,7 @@
     "description": "Mezenkimal hücrelerden salınan, endotel hücrelerinin proliferasyonunu uyaran, vasküler geçirgenliği artıran ve anjiyogenezde temel rol oynayan büyüme faktörü.",
     "discipline": "Tıbbi Patoloji",
     "committee": "",
-    "clinicalPearl": "Bevasizumab gibi anti-VEGF monoklonal antikorlar VEGF'nin reseptörüne bağlanmasını önleyerek anjiyogenezi engeller. · Mezenkimal hücrelerden salınır; hipoksi HIF aracılığıyla VEGF ekspresyonunu artırır; endotel göçü/proliferasyonu ve geçici permeabilite artışı yapar.",
+    "clinicalPearl": "Bevasizumab gibi anti-VEGF monoklonal antikorlar VEGF'nin reseptörüne bağlanmasını önleyerek anjiyogenezi engeller. · Mezenkimal hücrelerden salınır; hipoksi HIF aracılığıyla VEGF ekspresyonunu artırır; endotel göçü/proliferasyonu ve geçici permeabilite artışı yapar. · Endometriozis odaklarında artar ve anjiyogenezi destekler.",
     "aliases": [
       "VEGF"
     ],
@@ -24282,7 +24282,7 @@
     "description": "Östrojen sentezini azaltan, ER pozitif meme kanserinde kullanılan ilaç grubu.",
     "discipline": "Tıbbi Patoloji",
     "committee": "",
-    "clinicalPearl": "Tamoksifenle birlikte östrojen/ER hedefli tedavidir. · Endometriozis stromal hücrelerindeki yüksek aromatazın androjenden lokal östrojen üretimini keser.",
+    "clinicalPearl": "Tamoksifenle birlikte östrojen/ER hedefli tedavidir. · Endometriozis stromal hücrelerindeki yüksek aromatazın androjenden lokal östrojen üretimini keser. · Endometriozis stromasındaki yüksek aromataz lokal östrojen üretir; bu nedenle aromataz inhibitörleri tedavi seçeneğidir.",
     "dogrulama": {
       "durum": "ders_isci",
       "destek": 1.0,
@@ -51320,7 +51320,7 @@
     "description": "Yalnız enflamasyona bağlı prostaglandinleri hedefleyen siklooksijenaz-2 inhibitörleridir.",
     "discipline": "Tıbbi Patoloji",
     "committee": "",
-    "clinicalPearl": "Tromboksan/prostasiklin dengesini bozarak tromboz riskini artırabilir.",
+    "clinicalPearl": "Tromboksan/prostasiklin dengesini bozarak tromboz riskini artırabilir. · Endometriozis odaklarındaki COX-2/PGE2 artışına yönelik olarak endometriozis tedavisinde kullanılır.",
     "aliases": [
       "Koksibler"
     ],
@@ -59062,7 +59062,7 @@
     "description": "RNA polimeraz II aracılı transkripsiyonu düzenleyen gen; mutasyonu leiomyomların yaklaşık %70'inde, leiomyosarkomların yaklaşık %30'unda bulunur.",
     "discipline": "Tıbbi Patoloji",
     "committee": "",
-    "clinicalPearl": "Leiomyomda tümör oluşturma mekanizması tam bilinmez; muhtemelen düz kas proliferasyonu ve gen ekspresyonu değişikliğine yol açar.",
+    "clinicalPearl": "Leiomyomda tümör oluşturma mekanizması tam bilinmez; muhtemelen düz kas proliferasyonu ve gen ekspresyonu değişikliğine yol açar. · Leiomyomların ~%70'inde, leiomyosarkomların ~%30'unda mutasyon vardır.",
     "aliases": [
       "MED12 mutasyonu"
     ],
@@ -59165,7 +59165,7 @@
     "description": "Saplı subserozal leiomyomun komşu organlara yapışıp onlardan kan desteği alması.",
     "discipline": "Tıbbi Patoloji",
     "committee": "",
-    "clinicalPearl": "Uterustan bağımsız beslenir; başka organın primer tümörü sanılabilir.",
+    "clinicalPearl": "Uterustan bağımsız beslenir; başka organın primer tümörü sanılabilir. · Saplı subserozal leiomyomun komşu organlara yapışıp onlardan kan desteği almasıdır.",
     "dogrulama": {
       "durum": "ders_isci",
       "destek": 1.0,
@@ -59419,7 +59419,7 @@
     "description": "Lenfoplazmasitik infiltrasyonlu endometriyum inflamasyonu; tanı için plazma hücresi varlığı gerekir.",
     "discipline": "Tıbbi Patoloji",
     "committee": "",
-    "clinicalPearl": "Lenfositler normal endometriyumda da bulunduğundan tek başına tanı koydurmaz; infertilite ile ilişkili olabilir.",
+    "clinicalPearl": "Lenfositler normal endometriyumda da bulunduğundan tek başına tanı koydurmaz; infertilite ile ilişkili olabilir. · Tanı için plazma hücresi gerekir; lenfositler normal endometriyumda da bulunur.",
     "dogrulama": {
       "durum": "ders_isci",
       "destek": 1.0,
@@ -59444,7 +59444,7 @@
     "description": "Tüberkülozun yaptığı granülomatöz endometrit; genellikle tüberküloz salpingit ve peritonitle birliktedir.",
     "discipline": "Tıbbi Patoloji",
     "committee": "",
-    "clinicalPearl": "Endemik bölgelerden yeni göçmenlerde PİH ayırıcı tanısında düşünülmelidir.",
+    "clinicalPearl": "Endemik bölgelerden yeni göçmenlerde PİH ayırıcı tanısında düşünülmelidir. · ABD'de çoğunlukla immün baskılanmış kişilerde; endemik bölgelerden yeni göçmenlerde PİH ayırıcı tanısında düşünülmelidir.",
     "aliases": [
       "Granülomatöz endometrit"
     ],
@@ -59472,7 +59472,7 @@
     "description": "Ovaryumda eski kan içeren, 3–5 cm'lik koyu kahverengi endometriozis kisti.",
     "discipline": "Tıbbi Patoloji",
     "committee": "",
-    "clinicalPearl": "Çikolata kisti olarak da bilinir.",
+    "clinicalPearl": "Çikolata kisti olarak da bilinir. · Overde 3–5 cm'lik, eski kan içerikli koyu kahverengi kistik kitledir.",
     "aliases": [
       "Çikolata kisti"
     ],
@@ -59528,7 +59528,7 @@
     "description": "Doku içine derin uzanan endometriozis tipi.",
     "discipline": "Tıbbi Patoloji",
     "committee": "",
-    "clinicalPearl": "Malign dönüşüm riski esas olarak bu tiptedir.",
+    "clinicalPearl": "Malign dönüşüm riski esas olarak bu tiptedir. · Derste malign dönüşüm riskinin esas olarak derin infiltratif endometrioziste olduğu belirtilir; güncel kaynaklarda endometriozis ilişkili karsinomlar çoğunlukla over endometriozisi zemininde tanımlanır.",
     "dogrulama": {
       "durum": "ders_isci",
       "destek": 1.0,
@@ -59581,7 +59581,7 @@
     "description": "Endometrial dokunun kan damarları ve lenfatik kanallarla kemik, akciğer, beyin gibi uzak odaklara yayıldığını öne süren teori.",
     "discipline": "Tıbbi Patoloji",
     "committee": "",
-    "clinicalPearl": "Uzak endometriozis odaklarını açıklar.",
+    "clinicalPearl": "Uzak endometriozis odaklarını açıklar. · Kemik, akciğer ve beyindeki uzak endometriozis odaklarını açıklar.",
     "dogrulama": {
       "durum": "ders_isci",
       "destek": 1.0,
@@ -59606,7 +59606,7 @@
     "description": "Endometriyumun sölomik epitelden köken aldığı varsayımıyla periton mezoteli ve mezonefrik kalıntıların endometriyuma farklılaştığını öne süren teori.",
     "discipline": "Tıbbi Patoloji",
     "committee": "",
-    "clinicalPearl": "Uterus dışı hücre kaynaklı teoridir.",
+    "clinicalPearl": "Uterus dışı hücre kaynaklı teoridir. · Sölomik epitel kökenine ek olarak mezonefrik kalıntılar da endometriyal diferansiyasyonla ektopik doku oluşturabilir.",
     "dogrulama": {
       "durum": "ders_isci",
       "destek": 1.0,
@@ -59631,7 +59631,7 @@
     "description": "Kemik iliği kök/öncü hücrelerinin endometriyum dokusuna farklılaştığını öne süren endometriozis teorisi.",
     "discipline": "Tıbbi Patoloji",
     "committee": "",
-    "clinicalPearl": "Ektopik implantların ötopik endometriyumdan biyolojik farkını açıklar.",
+    "clinicalPearl": "Ektopik implantların ötopik endometriyumdan biyolojik farkını açıklar. · Kemik iliği kök/öncü hücreleri endometriyuma farklılaşır; ektopik implantlar ötopik endometriyumdan biyolojik olarak farklıdır.",
     "dogrulama": {
       "durum": "ders_isci",
       "destek": 1.0,
@@ -59706,7 +59706,7 @@
     "description": "Altta yatan yapısal anomali olmadan gelişen uterin kanama; en yaygın mekanizması anovülasyondur.",
     "discipline": "Tıbbi Patoloji",
     "committee": "",
-    "clinicalPearl": "AUK'nin en sık nedenidir; klinik bir terimdir.",
+    "clinicalPearl": "AUK'nin en sık nedenidir; klinik bir terimdir. · Klinik bir terimdir; en yaygın mekanizması anovülasyondur ve AUK'nin en sık nedenidir.",
     "aliases": [
       "Disfonksiyonel uterin kanama"
     ],
@@ -59787,7 +59787,7 @@
     "description": "Hücresel atipi göstermeyen, artmış bez/stroma oranlı hiperplazi.",
     "discipline": "Tıbbi Patoloji",
     "committee": "",
-    "clinicalPearl": "Karsinoma ilerleme riski %1–3; tedavi nedenin düzeltilmesi, progestin ve izlem.",
+    "clinicalPearl": "Karsinoma ilerleme riski %1–3; tedavi nedenin düzeltilmesi, progestin ve izlem. · Karsinoma ilerleme riski %1–3; tedavi östrojen fazlalığı nedeninin düzeltilmesi, progestin ve izlemdir.",
     "dogrulama": {
       "durum": "ders_isci",
       "destek": 1.0,
@@ -59812,7 +59812,7 @@
     "description": "Kompleks bez paterni ve nükleer atipi gösteren atipili endometrial hiperplazi.",
     "discipline": "Tıbbi Patoloji",
     "committee": "",
-    "clinicalPearl": "PTEN mutasyonlu klonal lezyondur; endometrioid karsinomun öncüsüdür.",
+    "clinicalPearl": "PTEN mutasyonlu klonal lezyondur; endometrioid karsinomun öncüsüdür. · Doğurganlık istemeyenlerde histerektomi, genç/fertilite isteyenlerde yüksek doz progestin uygulanır.",
     "aliases": [
       "Atipili endometrial hiperplazi",
       "EIN"
@@ -60003,7 +60003,7 @@
     "description": "Endometriozis odaklarında artan proinflamatuvar lipid mediatör.",
     "discipline": "Tıbbi Patoloji",
     "committee": "",
-    "clinicalPearl": "COX-2 inhibitörleri bu yolu hedefler.",
+    "clinicalPearl": "COX-2 inhibitörleri bu yolu hedefler. · Endometriozis odaklarında COX-2 aracılığıyla artar; ağrı ve inflamasyona katkıda bulunur.",
     "aliases": [
       "PGE2"
     ],
@@ -60031,7 +60031,7 @@
     "description": "p53 proteinini doku kesitinde gösteren boyama; seröz karsinomda yaygın, güçlü nükleer boyanma mutant p53 birikimini yansıtır.",
     "discipline": "Tıbbi Patoloji",
     "committee": "",
-    "clinicalPearl": "TP53 mutasyonuyla koreledir.",
+    "clinicalPearl": "TP53 mutasyonuyla koreledir. · Seröz endometrial karsinomda yaygın, güçlü nükleer boyanma mutant p53 birikimini ve TP53 mutasyonunu yansıtır.",
     "dogrulama": {
       "durum": "ders_isci",
       "destek": 1.0,
@@ -66016,7 +66016,7 @@
     "description": "DNA replikasyonunda yanlış eşleşen bazları düzelten onarım sistemi.",
     "discipline": "Tıbbi Patoloji",
     "committee": "",
-    "clinicalPearl": "Germ hattı kusuru Lynch sendromuna yol açar.",
+    "clinicalPearl": "Germ hattı kusuru Lynch sendromuna yol açar. · MMR gen mutasyonları endometrioid karsinomun erken olayıdır; germ hattı formu (Lynch) endometrial karsinom riskini belirgin artırır.",
     "aliases": [
       "Mismatch onarımı",
       "MMR"
@@ -74930,7 +74930,7 @@
     "description": "Endometriumun bazal tabakasının myometrium içine doğru büyümesiyle kas demetleri arasında endometrial bez ve/veya stroma odaklarının bulunduğu uterus hastalığıdır.",
     "discipline": "Tıbbi Patoloji",
     "committee": "",
-    "clinicalPearl": "Adenomyozis: bazal tabakanın myometriuma büyümesi; endometriozis: endometrial dokunun endometrium dışında bulunması.",
+    "clinicalPearl": "Adenomyozis: bazal tabakanın myometriuma büyümesi; endometriozis: endometrial dokunun endometrium dışında bulunması. · Miyometriyumda derin endometrial yuvalar, reaktif hipertrofi ve büyümüş küresel uterus; menoraji, dismenore ve adet öncesi pelvik ağrı yapar, tanı genellikle histopatolojiktir.",
     "aliases": [
       "Adenomiyozis"
     ],
@@ -74977,7 +74977,7 @@
     "description": "Endometrium bazalisinin lokalize hiperplazisiyle oluşan, uterus kavitesine doğru çıkıntı yapan, tek ya da çok sayıda, saplı ya da sapsız olabilen benign lezyondur.",
     "discipline": "Tıbbi Patoloji",
     "committee": "",
-    "clinicalPearl": "3 kenarı yüzey epiteli ile çevrili doku fragmanı polip için tipiktir.",
+    "clinicalPearl": "3 kenarı yüzey epiteli ile çevrili doku fragmanı polip için tipiktir. · Bazal endometriyuma benzer; neoplastik bileşen klonal stromal hücrelerdir; tedavisi histeroskopik polipektomidir.",
     "aliases": [
       "Endometriyal polip"
     ],
@@ -99328,6 +99328,805 @@
         "kurul": 1,
         "sayfa": 23,
         "alinti": "Bazal membran kalınlaşması Spermatogonyaların kaybı İnterstisyel stroma artışı Leydig hücreleri görece belirgin"
+      }
+    ]
+  },
+  "granülomatöz endometrit": {
+    "term": "Granülomatöz endometrit",
+    "category": "patoloji",
+    "definition": "Endometriyumda granülom oluşumuyla seyreden kronik endometrit biçimidir; en tipik nedeni tüberkülozdur.",
+    "description": "Endometriyumda granülom oluşumuyla seyreden kronik endometrit biçimidir; en tipik nedeni tüberkülozdur.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "",
+    "clinicalPearl": "Tüberküloz endometrit genellikle tüberküloz salpenjit ve peritonitle birlikte görülür.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-1459c3b89c"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Patoloji/30)Endometrial Hiperplazi ve Kanserleri.pdf",
+        "ders": "Tıbbi Patoloji",
+        "kurul": 1,
+        "sayfa": 8,
+        "alinti": "Tüberküloz endometrit: Granülomatöz endometrit Genellikle: Tüberküloz salpingit"
+      }
+    ]
+  },
+  "lenfoplazmasitik infiltrasyon": {
+    "term": "Lenfoplazmasitik infiltrasyon",
+    "category": "patoloji",
+    "definition": "Lenfosit ve plazma hücrelerinden oluşan iltihabi hücre infiltrasyonudur; kronik inflamasyonu gösterir.",
+    "description": "Lenfosit ve plazma hücrelerinden oluşan iltihabi hücre infiltrasyonudur; kronik inflamasyonu gösterir.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "",
+    "clinicalPearl": "Endometriyumda plazma hücresi varlığı kronik endometrit tanısı için gereklidir.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-1459c3b89c"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Patoloji/30)Endometrial Hiperplazi ve Kanserleri.pdf",
+        "ders": "Tıbbi Patoloji",
+        "kurul": 1,
+        "sayfa": 5,
+        "alinti": "Kronik endometrit: Lenfoplazmasitik infiltrasyon Özellikle plazma hücreleri"
+      }
+    ]
+  },
+  "reaktif miyometrial hipertrofi": {
+    "term": "Reaktif miyometrial hipertrofi",
+    "category": "patoloji",
+    "definition": "Miyometriyum içindeki endometrial yuvalara yanıt olarak düz kas demetlerinin kalınlaşmasıdır.",
+    "description": "Miyometriyum içindeki endometrial yuvalara yanıt olarak düz kas demetlerinin kalınlaşmasıdır.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "",
+    "clinicalPearl": "Adenomyozda uterusun büyümüş, küresel görünümünden sorumludur.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-1459c3b89c"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Patoloji/30)Endometrial Hiperplazi ve Kanserleri.pdf",
+        "ders": "Tıbbi Patoloji",
+        "kurul": 1,
+        "sayfa": 12,
+        "alinti": "Miyometriyum yanıtı: Reaktif hipertrofi Sonuç: Büyümüş, küresel uterus"
+      }
+    ]
+  },
+  "yüzeysel peritoneal endometriozis": {
+    "term": "Yüzeysel peritoneal endometriozis",
+    "category": "hastalik",
+    "definition": "Endometrial bez ve stromanın pelvik periton yüzeyine yerleştiği endometriozis tipidir.",
+    "description": "Endometrial bez ve stromanın pelvik periton yüzeyine yerleştiği endometriozis tipidir.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "",
+    "clinicalPearl": "Endometriozisin üç ana tipinden biridir (yüzeysel peritoneal, over, derin infiltratif).",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-1459c3b89c"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Patoloji/30)Endometrial Hiperplazi ve Kanserleri.pdf",
+        "ders": "Tıbbi Patoloji",
+        "kurul": 1,
+        "sayfa": 16,
+        "alinti": "Üç ana tip: Yüzeysel peritoneal endometriozis Over endometriozisi Derin infiltratif endometriozis"
+      }
+    ]
+  },
+  "over endometriozisi": {
+    "term": "Over endometriozisi",
+    "category": "hastalik",
+    "definition": "Endometriozisin overde yerleşen tipidir; tekrarlayan kanamalarla eski kan dolu kistler (endometrioma) oluşturabilir.",
+    "description": "Endometriozisin overde yerleşen tipidir; tekrarlayan kanamalarla eski kan dolu kistler (endometrioma) oluşturabilir.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "",
+    "clinicalPearl": "Overde 3–5 cm'lik koyu kahverengi içerikli çikolata kistleri tipiktir.",
+    "aliases": [
+      "ovaryan endometriozis"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-1459c3b89c"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Patoloji/30)Endometrial Hiperplazi ve Kanserleri.pdf",
+        "ders": "Tıbbi Patoloji",
+        "kurul": 1,
+        "sayfa": 16,
+        "alinti": "Üç ana tip: Yüzeysel peritoneal endometriozis Over endometriozisi Derin infiltratif endometriozis"
+      }
+    ]
+  },
+  "retrograd menstrüasyon": {
+    "term": "Retrograd menstrüasyon",
+    "category": "fizyoloji",
+    "definition": "Menstrüel endometriyumun fallop tüplerinden geriye doğru periton boşluğuna akmasıdır.",
+    "description": "Menstrüel endometriyumun fallop tüplerinden geriye doğru periton boşluğuna akmasıdır.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "",
+    "clinicalPearl": "Endometriozisi açıklayan regürjitasyon teorisinin temelidir.",
+    "aliases": [
+      "retrograd menstrüel akım"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-1459c3b89c"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Patoloji/30)Endometrial Hiperplazi ve Kanserleri.pdf",
+        "ders": "Tıbbi Patoloji",
+        "kurul": 1,
+        "sayfa": 19,
+        "alinti": "Regürjitasyon teorisi: Menstrüel endometriyumun retrograd akımı"
+      }
+    ]
+  },
+  "sölomik epitel": {
+    "term": "Sölomik epitel",
+    "category": "anatomi",
+    "definition": "Embriyonik vücut boşluğunu (sölom) döşeyen, periton mezotelini oluşturan epiteldir.",
+    "description": "Embriyonik vücut boşluğunu (sölom) döşeyen, periton mezotelini oluşturan epiteldir.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "",
+    "clinicalPearl": "Metaplastik teoriye göre endometriyum ve ektopik endometriozis odakları sölomik epitelden köken alabilir.",
+    "aliases": [
+      "çölomik epitel"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-1459c3b89c"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Patoloji/30)Endometrial Hiperplazi ve Kanserleri.pdf",
+        "ders": "Tıbbi Patoloji",
+        "kurul": 1,
+        "sayfa": 21,
+        "alinti": "Metaplastik teori: Endometriyumun sölomik epitelden köken aldığı varsayımı"
+      }
+    ]
+  },
+  "mezonefrik kalıntı": {
+    "term": "Mezonefrik kalıntı",
+    "category": "anatomi",
+    "definition": "Embriyonik mezonefrik (Wolff) kanal sisteminden geride kalan yapılardır.",
+    "description": "Embriyonik mezonefrik (Wolff) kanal sisteminden geride kalan yapılardır.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "",
+    "clinicalPearl": "Endometriyal diferansiyasyon gösterip ektopik endometriyal doku oluşturabilirler (metaplastik teori).",
+    "aliases": [
+      "Wolff kanalı kalıntısı"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-1459c3b89c"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Patoloji/30)Endometrial Hiperplazi ve Kanserleri.pdf",
+        "ders": "Tıbbi Patoloji",
+        "kurul": 1,
+        "sayfa": 21,
+        "alinti": "Mezonefrik kalıntılar: Endometriyal diferansiyasyon gösterebilir Ektopik endometriyal doku oluşturabilir"
+      }
+    ]
+  },
+  "douglas kesesi obliterasyonu": {
+    "term": "Douglas kesesi obliterasyonu",
+    "category": "patoloji",
+    "definition": "Rektouterin boşluğun (Douglas kesesi) fibröz yapışıklıklarla kapanmasıdır.",
+    "description": "Rektouterin boşluğun (Douglas kesesi) fibröz yapışıklıklarla kapanmasıdır.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "",
+    "clinicalPearl": "Yaygın endometriozisde tekrarlayan organize kanamanın sonucudur.",
+    "aliases": [
+      "rektouterin kese obliterasyonu"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-1459c3b89c"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Patoloji/30)Endometrial Hiperplazi ve Kanserleri.pdf",
+        "ders": "Tıbbi Patoloji",
+        "kurul": 1,
+        "sayfa": 26,
+        "alinti": "Yaygın fibröz yapışıklıklar Douglas kesesi obliterasyonu"
+      }
+    ]
+  },
+  "endometrial atrofi": {
+    "term": "Endometrial atrofi",
+    "category": "patoloji",
+    "definition": "Endometriyumun incelmesi ve bezlerin azalmasıyla karakterize, tipik olarak postmenopozal durumdur.",
+    "description": "Endometriyumun incelmesi ve bezlerin azalmasıyla karakterize, tipik olarak postmenopozal durumdur.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "",
+    "clinicalPearl": "Postmenopozal kanama nedenlerindendir ve seröz endometrial karsinomun gelişim zeminidir.",
+    "aliases": [
+      "atrofik endometriyum"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-1459c3b89c"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Patoloji/30)Endometrial Hiperplazi ve Kanserleri.pdf",
+        "ders": "Tıbbi Patoloji",
+        "kurul": 1,
+        "sayfa": 55,
+        "alinti": "Seröz karsinom: Daha az yaygın Çok daha agresif Endometrial atrofi zemininde"
+      }
+    ]
+  },
+  "anovülatuvar siklus": {
+    "term": "Anovülatuvar siklus",
+    "category": "fizyoloji",
+    "definition": "Ovulasyonun gerçekleşmediği menstrüel döngüdür; progesteron yokluğunda östrojen etkisi karşılanmaz.",
+    "description": "Ovulasyonun gerçekleşmediği menstrüel döngüdür; progesteron yokluğunda östrojen etkisi karşılanmaz.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "",
+    "clinicalPearl": "En sık menarş ve perimenopozal dönemde görülür; fonksiyonel olmayan uterin kanamanın en yaygın mekanizmasıdır.",
+    "aliases": [
+      "anovülatuar döngü"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-1459c3b89c"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Patoloji/30)Endometrial Hiperplazi ve Kanserleri.pdf",
+        "ders": "Tıbbi Patoloji",
+        "kurul": 1,
+        "sayfa": 37,
+        "alinti": "Anovülatuar döngüler: Hormonal dengesizlik sonucu Sıklık: Menarş dönemi (ilk adet dönemi) Perimenopozal dönem"
+      }
+    ]
+  },
+  "ovülatuvar disfonksiyonel kanama": {
+    "term": "Ovülatuvar disfonksiyonel kanama",
+    "category": "hastalik",
+    "definition": "Ovulasyon olmasına karşın hormonal yetersizlik (örn. yetersiz luteal faz) nedeniyle gelişen yapısal nedeni olmayan uterin kanamadır.",
+    "description": "Ovulasyon olmasına karşın hormonal yetersizlik (örn. yetersiz luteal faz) nedeniyle gelişen yapısal nedeni olmayan uterin kanamadır.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "",
+    "clinicalPearl": "Üreme çağındaki disfonksiyonel kanamanın anovülatuvar olmayan formudur.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-1459c3b89c"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Patoloji/30)Endometrial Hiperplazi ve Kanserleri.pdf",
+        "ders": "Tıbbi Patoloji",
+        "kurul": 1,
+        "sayfa": 35,
+        "alinti": "Ovülatuvar disfonksiyonel kanama (örn. yetersiz luteal faz)"
+      }
+    ]
+  },
+  "menopoz sonrası kanama": {
+    "term": "Menopoz sonrası kanama",
+    "category": "tani",
+    "definition": "Menopozdan sonra ortaya çıkan her türlü uterin kanamadır.",
+    "description": "Menopozdan sonra ortaya çıkan her türlü uterin kanamadır.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "",
+    "clinicalPearl": "Her zaman araştırılmalıdır; endometrial karsinomun başlıca semptomudur.",
+    "aliases": [
+      "postmenopozal kanama"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-1459c3b89c"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Patoloji/30)Endometrial Hiperplazi ve Kanserleri.pdf",
+        "ders": "Tıbbi Patoloji",
+        "kurul": 1,
+        "sayfa": 33,
+        "alinti": "Menopoz sonrası kanama: Her zaman araştırılmalıdır"
+      }
+    ]
+  },
+  "hipotalamo-hipofizer-ovaryan aks": {
+    "term": "Hipotalamo-hipofizer-ovaryan aks",
+    "category": "fizyoloji",
+    "definition": "Hipotalamus, hipofiz ve over arasındaki, ovulasyonu ve menstrüel döngüyü düzenleyen hormonal geri bildirim sistemidir.",
+    "description": "Hipotalamus, hipofiz ve over arasındaki, ovulasyonu ve menstrüel döngüyü düzenleyen hormonal geri bildirim sistemidir.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "",
+    "clinicalPearl": "Obezite, yetersiz beslenme ve kronik sistemik hastalıklar bu aksı etkileyerek anovülasyona yol açar.",
+    "aliases": [
+      "HHO aksı"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-1459c3b89c"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Patoloji/30)Endometrial Hiperplazi ve Kanserleri.pdf",
+        "ders": "Tıbbi Patoloji",
+        "kurul": 1,
+        "sayfa": 39,
+        "alinti": "Etki: Hipotalamo-hipofizer-ovaryan aks üzerine Anovülasyon ve düzensiz kanama"
+      }
+    ]
+  },
+  "granüloza-teka hücreli tümör": {
+    "term": "Granüloza-teka hücreli tümör",
+    "category": "hastalik",
+    "definition": "Overin östrojen üreten seks kord-stromal tümörüdür.",
+    "description": "Overin östrojen üreten seks kord-stromal tümörüdür.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "",
+    "clinicalPearl": "Östrojen fazlalığı yaparak endometrial hiperplazi ve endometrioid karsinom riskini artırır.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-1459c3b89c"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Patoloji/30)Endometrial Hiperplazi ve Kanserleri.pdf",
+        "ders": "Tıbbi Patoloji",
+        "kurul": 1,
+        "sayfa": 44,
+        "alinti": "Östrojen üreten ovaryum lezyonları: Polikistik over sendromu Granüloza-teka hücreli tümörler"
+      }
+    ]
+  },
+  "atipili endometrial hiperplazi": {
+    "term": "Atipili endometrial hiperplazi",
+    "category": "patoloji",
+    "definition": "Kompleks bez paternleri ve nükleer atipi gösteren, endometrial karsinomun öncüsü kabul edilen hiperplazidir.",
+    "description": "Kompleks bez paternleri ve nükleer atipi gösteren, endometrial karsinomun öncüsü kabul edilen hiperplazidir.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "",
+    "clinicalPearl": "PTEN mutasyonlarıyla ilişkilidir; endometrial intraepiteliyal neoplazi (EIN) olarak da adlandırılır.",
+    "aliases": [
+      "EIN"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-1459c3b89c"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Patoloji/30)Endometrial Hiperplazi ve Kanserleri.pdf",
+        "ders": "Tıbbi Patoloji",
+        "kurul": 1,
+        "sayfa": 48,
+        "alinti": "Atipili hiperplazi: Kompleks bez paternleri Nükleer atipi var Endometrial intraepiteliyal neoplazi (EIN) olarak da adlandırılır"
+      }
+    ]
+  },
+  "bez/stroma oranı": {
+    "term": "Bez/stroma oranı",
+    "category": "patoloji",
+    "definition": "Endometriyumda bezlerin stromaya göre kapladığı alanın oranıdır.",
+    "description": "Endometriyumda bezlerin stromaya göre kapladığı alanın oranıdır.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "",
+    "clinicalPearl": "Atipisiz hiperplazide artar: bezler sıklaşır, stroma göreli azalır.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-1459c3b89c"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Patoloji/30)Endometrial Hiperplazi ve Kanserleri.pdf",
+        "ders": "Tıbbi Patoloji",
+        "kurul": 1,
+        "sayfa": 46,
+        "alinti": "Temel özellik: Artmış bez / stroma oranı Histoloji: Bezler sıklaşmış Stroma göreli azalır"
+      }
+    ]
+  },
+  "karsinosarkom": {
+    "term": "Karsinosarkom",
+    "category": "hastalik",
+    "definition": "Hem malign epitelyal hem malign mezenkimal bileşen içeren nadir, agresif endometrial tümördür.",
+    "description": "Hem malign epitelyal hem malign mezenkimal bileşen içeren nadir, agresif endometrial tümördür.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "",
+    "clinicalPearl": "Malign mikst Müllerian tümör (MMMT) olarak da adlandırılır.",
+    "aliases": [
+      "malign mikst Müllerian tümör",
+      "MMMT"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-1459c3b89c"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Patoloji/30)Endometrial Hiperplazi ve Kanserleri.pdf",
+        "ders": "Tıbbi Patoloji",
+        "kurul": 1,
+        "sayfa": 54,
+        "alinti": "Berrak hücreli karsinom Malign Mikst Müllerian Tümör - MMMT) (karsinosarkom)"
+      }
+    ]
+  },
+  "berrak hücreli endometrial karsinom": {
+    "term": "Berrak hücreli endometrial karsinom",
+    "category": "hastalik",
+    "definition": "Endometrial karsinomun nadir görülen bir histolojik tipidir.",
+    "description": "Endometrial karsinomun nadir görülen bir histolojik tipidir.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "",
+    "clinicalPearl": "Endometrioid ve seröz karsinom dışındaki nadir tiplerdendir.",
+    "aliases": [
+      "berrak hücreli karsinom (endometriyum)"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-1459c3b89c"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Patoloji/30)Endometrial Hiperplazi ve Kanserleri.pdf",
+        "ders": "Tıbbi Patoloji",
+        "kurul": 1,
+        "sayfa": 54,
+        "alinti": "Daha nadir tipler: Berrak hücreli karsinom Malign Mikst Müllerian Tümör"
+      }
+    ]
+  },
+  "ekzofitik büyüme": {
+    "term": "Ekzofitik büyüme",
+    "category": "patoloji",
+    "definition": "Tümörün yüzeyden dışarıya, lümen veya boşluk içine doğru kitle şeklinde büyümesidir.",
+    "description": "Tümörün yüzeyden dışarıya, lümen veya boşluk içine doğru kitle şeklinde büyümesidir.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "",
+    "clinicalPearl": "Endometrioid karsinom ekzofitik kitle ya da miyometriyuma infiltratif büyüme gösterebilir.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-1459c3b89c"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Patoloji/30)Endometrial Hiperplazi ve Kanserleri.pdf",
+        "ders": "Tıbbi Patoloji",
+        "kurul": 1,
+        "sayfa": 63,
+        "alinti": "Büyüme paternleri: Ekzofitik kitle Veya miyometriyuma infiltratif"
+      }
+    ]
+  },
+  "miyometrial invazyon": {
+    "term": "Miyometrial invazyon",
+    "category": "patoloji",
+    "definition": "Endometrial tümörün miyometriyum içine yayılmasıdır.",
+    "description": "Endometrial tümörün miyometriyum içine yayılmasıdır.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "",
+    "clinicalPearl": "Endometrioid karsinomda yayılımın ilk basamağıdır; invazyon derinliği prognoz belirleyicisidir.",
+    "aliases": [
+      "miyometriyum invazyonu"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-1459c3b89c"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Patoloji/30)Endometrial Hiperplazi ve Kanserleri.pdf",
+        "ders": "Tıbbi Patoloji",
+        "kurul": 1,
+        "sayfa": 64,
+        "alinti": "Yayılım: Önce miyometrial invazyon Sonra komşu organlara direkt yayılım Bölgesel lenf düğümü metastazı"
+      }
+    ]
+  },
+  "endometrioid karsinom derecelendirmesi": {
+    "term": "Endometrioid karsinom derecelendirmesi",
+    "category": "tani",
+    "definition": "Endometrioid karsinomun bez yapısı ve nükleer atipiye göre derece 1–3 olarak sınıflanmasıdır.",
+    "description": "Endometrioid karsinomun bez yapısı ve nükleer atipiye göre derece 1–3 olarak sınıflanmasıdır.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "",
+    "clinicalPearl": "Katı büyüme alanı arttıkça derece yükselir; derece prognoz belirleyicisidir.",
+    "aliases": [
+      "endometrioid karsinom grade"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-1459c3b89c"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Patoloji/30)Endometrial Hiperplazi ve Kanserleri.pdf",
+        "ders": "Tıbbi Patoloji",
+        "kurul": 1,
+        "sayfa": 64,
+        "alinti": "Derecelendirme: Derece 1–3: Bez yapısı ve nükleer atipiye göre"
+      }
+    ]
+  },
+  "kalın duvarlı kaslı arter": {
+    "term": "Kalın duvarlı kaslı arter",
+    "category": "patoloji",
+    "definition": "Endometrial polip stromasında görülen, duvarı kalınlaşmış küçük kaslı damarlardır.",
+    "description": "Endometrial polip stromasında görülen, duvarı kalınlaşmış küçük kaslı damarlardır.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "",
+    "clinicalPearl": "Kistik dilate bezlerle birlikte endometrial polibin histolojik ipucudur.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-1459c3b89c"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Patoloji/30)Endometrial Hiperplazi ve Kanserleri.pdf",
+        "ders": "Tıbbi Patoloji",
+        "kurul": 1,
+        "sayfa": 74,
+        "alinti": "Kistik dilate bezler Kalın duvarlı küçük kaslı arterler Stroma: Klonal stromal hücreler"
+      }
+    ]
+  },
+  "kromozom 6 ve 12 yeniden düzenlenmeleri": {
+    "term": "Kromozom 6 ve 12 yeniden düzenlenmeleri",
+    "category": "genetik",
+    "definition": "Leiomyomlarda tekrarlayan yapısal kromozom anormallikleridir.",
+    "description": "Leiomyomlarda tekrarlayan yapısal kromozom anormallikleridir.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "",
+    "clinicalPearl": "Benzer yeniden düzenlemeler endometrial polipler ve lipomlarda da görülür.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-1459c3b89c"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Patoloji/30)Endometrial Hiperplazi ve Kanserleri.pdf",
+        "ders": "Tıbbi Patoloji",
+        "kurul": 1,
+        "sayfa": 78,
+        "alinti": "Tekrarlayan kromozomal anormallikler: Kromozom 6 ve 12 yeniden düzenlenmeleri Benzer yeniden düzenlemeler: Endometrial polipler Lipomlar"
+      }
+    ]
+  },
+  "dejeneratif yumuşama": {
+    "term": "Dejeneratif yumuşama",
+    "category": "patoloji",
+    "definition": "Leiomyomda dolaşım yetersizliğine bağlı dokunun yumuşadığı dejeneratif değişikliktir.",
+    "description": "Leiomyomda dolaşım yetersizliğine bağlı dokunun yumuşadığı dejeneratif değişikliktir.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "",
+    "clinicalPearl": "Leiomyomda fibrozis ve kalsifikasyonla birlikte görülebilir; leiomyosarkomun yumuşak, nekrotik görünümüyle karıştırılmamalıdır.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-1459c3b89c"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Patoloji/30)Endometrial Hiperplazi ve Kanserleri.pdf",
+        "ders": "Tıbbi Patoloji",
+        "kurul": 1,
+        "sayfa": 83,
+        "alinti": "Miyometriyuma benzeyen düz kas demetleri Fibrozis, kalsifikasyon, dejeneratif yumuşama odakları"
+      }
+    ]
+  },
+  "kompleks karyotip": {
+    "term": "Kompleks karyotip",
+    "category": "genetik",
+    "definition": "Çok sayıda ve değişken yapısal ve sayısal kromozom anormalliği içeren karyotiptir.",
+    "description": "Çok sayıda ve değişken yapısal ve sayısal kromozom anormalliği içeren karyotiptir.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "",
+    "clinicalPearl": "Leiomyosarkomun özelliğidir; sık kromozomal delesyonlar görülür.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-1459c3b89c"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Patoloji/30)Endometrial Hiperplazi ve Kanserleri.pdf",
+        "ders": "Tıbbi Patoloji",
+        "kurul": 1,
+        "sayfa": 87,
+        "alinti": "Karyotip: Kompleks, oldukça değişken Sık kromozomal delesyonlar"
+      }
+    ]
+  },
+  "tümör nekrozu": {
+    "term": "Tümör nekrozu",
+    "category": "patoloji",
+    "definition": "Tümör hücrelerinin geniş alanlarda ani ve keskin sınırlı ölümüdür.",
+    "description": "Tümör hücrelerinin geniş alanlarda ani ve keskin sınırlı ölümüdür.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "",
+    "clinicalPearl": "Leiomyosarkom tanısal üçlüsünün bir bileşenidir.",
+    "aliases": [
+      "koagülatif tümör nekrozu"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-1459c3b89c"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Patoloji/30)Endometrial Hiperplazi ve Kanserleri.pdf",
+        "ders": "Tıbbi Patoloji",
+        "kurul": 1,
+        "sayfa": 90,
+        "alinti": "Tanısal üçlü: Tümör nekrozu Belirgin sitolojik atipi Artmış mitotik aktivite"
+      }
+    ]
+  },
+  "kronik pelvik ağrı": {
+    "term": "Kronik pelvik ağrı",
+    "category": "tani",
+    "definition": "Pelvik bölgede uzun süre devam eden ağrıdır.",
+    "description": "Pelvik bölgede uzun süre devam eden ağrıdır.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "",
+    "clinicalPearl": "Endometriozisde intrapelvik kanama ve periuterin yapışıklıklara bağlıdır.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-1459c3b89c"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Patoloji/30)Endometrial Hiperplazi ve Kanserleri.pdf",
+        "ders": "Tıbbi Patoloji",
+        "kurul": 1,
+        "sayfa": 29,
+        "alinti": "Disparoni (ağrılı cinsel ilişki) Kronik pelvik ağrı Mekanizma: İntrapelvik kanama Periuterin yapışıklıklar"
+      }
+    ]
+  },
+  "aromataz": {
+    "term": "Aromataz",
+    "category": "fizyoloji",
+    "definition": "Androjenleri östrojenlere dönüştüren enzimdir.",
+    "description": "Androjenleri östrojenlere dönüştüren enzimdir.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "",
+    "clinicalPearl": "Endometriozis stromal hücrelerinde yüksek eksprese edilir; aromataz inhibitörleri tedavide kullanılır.",
+    "aliases": [
+      "CYP19"
+    ],
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-1459c3b89c"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Patoloji/30)Endometrial Hiperplazi ve Kanserleri.pdf",
+        "ders": "Tıbbi Patoloji",
+        "kurul": 1,
+        "sayfa": 24,
+        "alinti": "Yüksek aromataz ekspresyonu Sonuç: Androjenlerden lokal östrojen üretimi artar"
+      }
+    ]
+  },
+  "hemorajik nekrotik kitle": {
+    "term": "Hemorajik nekrotik kitle",
+    "category": "patoloji",
+    "definition": "Kanama ve nekroz alanları içeren, kesitte yumuşak görünümlü tümöral kitledir.",
+    "description": "Kanama ve nekroz alanları içeren, kesitte yumuşak görünümlü tümöral kitledir.",
+    "discipline": "Tıbbi Patoloji",
+    "committee": "",
+    "clinicalPearl": "Uterusta leiomyosarkomun makroskopik görünümüdür; leiomyom ise sert ve girdaplıdır.",
+    "dogrulama": {
+      "durum": "ders_isci",
+      "destek": 1.0,
+      "uretici": "s13_study",
+      "is_id": "20261011-1459c3b89c"
+    },
+    "kaynaklar": [
+      {
+        "chunk_id": null,
+        "kaynak": "Kurul 1/Tıbbi Patoloji/30)Endometrial Hiperplazi ve Kanserleri.pdf",
+        "ders": "Tıbbi Patoloji",
+        "kurul": 1,
+        "sayfa": 88,
+        "alinti": "Makroskopi: Yumuşak Hemorajik Nekrotik kitleler Histolojik spektrum: Leiomyoma benzeyen"
       }
     ]
   }

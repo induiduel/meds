@@ -88678,5 +88678,608 @@
       "accuracyScore": 100,
       "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
     }
+  },
+  {
+    "id": "s13-granulomatoz_endometrit",
+    "term": "Granülomatöz endometrit",
+    "aliases": [],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 30)Endometrial Hiperplazi ve Kanserleri s.8",
+    "definition": "Endometriyumda granülom oluşumuyla seyreden kronik endometrit biçimidir; en tipik nedeni tüberkülozdur.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Tüberküloz endometrit genellikle tüberküloz salpenjit ve peritonitle birlikte görülür.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-lenfoplazmasitik_infiltrasyon",
+    "term": "Lenfoplazmasitik infiltrasyon",
+    "aliases": [],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 30)Endometrial Hiperplazi ve Kanserleri s.5",
+    "definition": "Lenfosit ve plazma hücrelerinden oluşan iltihabi hücre infiltrasyonudur; kronik inflamasyonu gösterir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Endometriyumda plazma hücresi varlığı kronik endometrit tanısı için gereklidir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-reaktif_miyometrial_hipertrofi",
+    "term": "Reaktif miyometrial hipertrofi",
+    "aliases": [],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 30)Endometrial Hiperplazi ve Kanserleri s.12",
+    "definition": "Miyometriyum içindeki endometrial yuvalara yanıt olarak düz kas demetlerinin kalınlaşmasıdır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Adenomyozda uterusun büyümüş, küresel görünümünden sorumludur.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-yuzeysel_peritoneal_endometriozis",
+    "term": "Yüzeysel peritoneal endometriozis",
+    "aliases": [],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 30)Endometrial Hiperplazi ve Kanserleri s.16",
+    "definition": "Endometrial bez ve stromanın pelvik periton yüzeyine yerleştiği endometriozis tipidir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Endometriozisin üç ana tipinden biridir (yüzeysel peritoneal, over, derin infiltratif).",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-over_endometriozisi",
+    "term": "Over endometriozisi",
+    "aliases": [
+      "ovaryan endometriozis"
+    ],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 30)Endometrial Hiperplazi ve Kanserleri s.16",
+    "definition": "Endometriozisin overde yerleşen tipidir; tekrarlayan kanamalarla eski kan dolu kistler (endometrioma) oluşturabilir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Overde 3–5 cm'lik koyu kahverengi içerikli çikolata kistleri tipiktir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-retrograd_menstruasyon",
+    "term": "Retrograd menstrüasyon",
+    "aliases": [
+      "retrograd menstrüel akım"
+    ],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 30)Endometrial Hiperplazi ve Kanserleri s.19",
+    "definition": "Menstrüel endometriyumun fallop tüplerinden geriye doğru periton boşluğuna akmasıdır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Endometriozisi açıklayan regürjitasyon teorisinin temelidir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-solomik_epitel",
+    "term": "Sölomik epitel",
+    "aliases": [
+      "çölomik epitel"
+    ],
+    "category": "anatomi",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 30)Endometrial Hiperplazi ve Kanserleri s.21",
+    "definition": "Embriyonik vücut boşluğunu (sölom) döşeyen, periton mezotelini oluşturan epiteldir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Metaplastik teoriye göre endometriyum ve ektopik endometriozis odakları sölomik epitelden köken alabilir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-mezonefrik_kalinti",
+    "term": "Mezonefrik kalıntı",
+    "aliases": [
+      "Wolff kanalı kalıntısı"
+    ],
+    "category": "anatomi",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 30)Endometrial Hiperplazi ve Kanserleri s.21",
+    "definition": "Embriyonik mezonefrik (Wolff) kanal sisteminden geride kalan yapılardır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Endometriyal diferansiyasyon gösterip ektopik endometriyal doku oluşturabilirler (metaplastik teori).",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-douglas_kesesi_obliterasyonu",
+    "term": "Douglas kesesi obliterasyonu",
+    "aliases": [
+      "rektouterin kese obliterasyonu"
+    ],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 30)Endometrial Hiperplazi ve Kanserleri s.26",
+    "definition": "Rektouterin boşluğun (Douglas kesesi) fibröz yapışıklıklarla kapanmasıdır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Yaygın endometriozisde tekrarlayan organize kanamanın sonucudur.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-endometrial_atrofi",
+    "term": "Endometrial atrofi",
+    "aliases": [
+      "atrofik endometriyum"
+    ],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 30)Endometrial Hiperplazi ve Kanserleri s.55",
+    "definition": "Endometriyumun incelmesi ve bezlerin azalmasıyla karakterize, tipik olarak postmenopozal durumdur.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Postmenopozal kanama nedenlerindendir ve seröz endometrial karsinomun gelişim zeminidir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-anovulatuvar_siklus",
+    "term": "Anovülatuvar siklus",
+    "aliases": [
+      "anovülatuar döngü"
+    ],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 30)Endometrial Hiperplazi ve Kanserleri s.37",
+    "definition": "Ovulasyonun gerçekleşmediği menstrüel döngüdür; progesteron yokluğunda östrojen etkisi karşılanmaz.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "En sık menarş ve perimenopozal dönemde görülür; fonksiyonel olmayan uterin kanamanın en yaygın mekanizmasıdır.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-ovulatuvar_disfonksiyonel_kanama",
+    "term": "Ovülatuvar disfonksiyonel kanama",
+    "aliases": [],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 30)Endometrial Hiperplazi ve Kanserleri s.35",
+    "definition": "Ovulasyon olmasına karşın hormonal yetersizlik (örn. yetersiz luteal faz) nedeniyle gelişen yapısal nedeni olmayan uterin kanamadır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Üreme çağındaki disfonksiyonel kanamanın anovülatuvar olmayan formudur.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-menopoz_sonrasi_kanama",
+    "term": "Menopoz sonrası kanama",
+    "aliases": [
+      "postmenopozal kanama"
+    ],
+    "category": "tani",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 30)Endometrial Hiperplazi ve Kanserleri s.33",
+    "definition": "Menopozdan sonra ortaya çıkan her türlü uterin kanamadır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Her zaman araştırılmalıdır; endometrial karsinomun başlıca semptomudur.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-hipotalamo_hipofizer_ovaryan_aks",
+    "term": "Hipotalamo-hipofizer-ovaryan aks",
+    "aliases": [
+      "HHO aksı"
+    ],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 30)Endometrial Hiperplazi ve Kanserleri s.39",
+    "definition": "Hipotalamus, hipofiz ve over arasındaki, ovulasyonu ve menstrüel döngüyü düzenleyen hormonal geri bildirim sistemidir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Obezite, yetersiz beslenme ve kronik sistemik hastalıklar bu aksı etkileyerek anovülasyona yol açar.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-granuloza_teka_hucreli_tumor",
+    "term": "Granüloza-teka hücreli tümör",
+    "aliases": [],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 30)Endometrial Hiperplazi ve Kanserleri s.44",
+    "definition": "Overin östrojen üreten seks kord-stromal tümörüdür.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Östrojen fazlalığı yaparak endometrial hiperplazi ve endometrioid karsinom riskini artırır.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-atipili_endometrial_hiperplazi",
+    "term": "Atipili endometrial hiperplazi",
+    "aliases": [
+      "EIN"
+    ],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 30)Endometrial Hiperplazi ve Kanserleri s.48",
+    "definition": "Kompleks bez paternleri ve nükleer atipi gösteren, endometrial karsinomun öncüsü kabul edilen hiperplazidir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "PTEN mutasyonlarıyla ilişkilidir; endometrial intraepiteliyal neoplazi (EIN) olarak da adlandırılır.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-bez_stroma_orani",
+    "term": "Bez/stroma oranı",
+    "aliases": [],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 30)Endometrial Hiperplazi ve Kanserleri s.46",
+    "definition": "Endometriyumda bezlerin stromaya göre kapladığı alanın oranıdır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Atipisiz hiperplazide artar: bezler sıklaşır, stroma göreli azalır.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-karsinosarkom",
+    "term": "Karsinosarkom",
+    "aliases": [
+      "malign mikst Müllerian tümör",
+      "MMMT"
+    ],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 30)Endometrial Hiperplazi ve Kanserleri s.54",
+    "definition": "Hem malign epitelyal hem malign mezenkimal bileşen içeren nadir, agresif endometrial tümördür.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Malign mikst Müllerian tümör (MMMT) olarak da adlandırılır.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-berrak_hucreli_endometrial_karsinom",
+    "term": "Berrak hücreli endometrial karsinom",
+    "aliases": [
+      "berrak hücreli karsinom (endometriyum)"
+    ],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 30)Endometrial Hiperplazi ve Kanserleri s.54",
+    "definition": "Endometrial karsinomun nadir görülen bir histolojik tipidir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Endometrioid ve seröz karsinom dışındaki nadir tiplerdendir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-ekzofitik_buyume",
+    "term": "Ekzofitik büyüme",
+    "aliases": [],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 30)Endometrial Hiperplazi ve Kanserleri s.63",
+    "definition": "Tümörün yüzeyden dışarıya, lümen veya boşluk içine doğru kitle şeklinde büyümesidir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Endometrioid karsinom ekzofitik kitle ya da miyometriyuma infiltratif büyüme gösterebilir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-miyometrial_invazyon",
+    "term": "Miyometrial invazyon",
+    "aliases": [
+      "miyometriyum invazyonu"
+    ],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 30)Endometrial Hiperplazi ve Kanserleri s.64",
+    "definition": "Endometrial tümörün miyometriyum içine yayılmasıdır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Endometrioid karsinomda yayılımın ilk basamağıdır; invazyon derinliği prognoz belirleyicisidir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-endometrioid_karsinom_derecelendirmesi",
+    "term": "Endometrioid karsinom derecelendirmesi",
+    "aliases": [
+      "endometrioid karsinom grade"
+    ],
+    "category": "tani",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 30)Endometrial Hiperplazi ve Kanserleri s.64",
+    "definition": "Endometrioid karsinomun bez yapısı ve nükleer atipiye göre derece 1–3 olarak sınıflanmasıdır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Katı büyüme alanı arttıkça derece yükselir; derece prognoz belirleyicisidir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-kalin_duvarli_kasli_arter",
+    "term": "Kalın duvarlı kaslı arter",
+    "aliases": [],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 30)Endometrial Hiperplazi ve Kanserleri s.74",
+    "definition": "Endometrial polip stromasında görülen, duvarı kalınlaşmış küçük kaslı damarlardır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Kistik dilate bezlerle birlikte endometrial polibin histolojik ipucudur.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-kromozom_6_ve_12_yeniden_duzenlenmeleri",
+    "term": "Kromozom 6 ve 12 yeniden düzenlenmeleri",
+    "aliases": [],
+    "category": "genetik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 30)Endometrial Hiperplazi ve Kanserleri s.78",
+    "definition": "Leiomyomlarda tekrarlayan yapısal kromozom anormallikleridir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Benzer yeniden düzenlemeler endometrial polipler ve lipomlarda da görülür.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-dejeneratif_yumusama",
+    "term": "Dejeneratif yumuşama",
+    "aliases": [],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 30)Endometrial Hiperplazi ve Kanserleri s.83",
+    "definition": "Leiomyomda dolaşım yetersizliğine bağlı dokunun yumuşadığı dejeneratif değişikliktir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Leiomyomda fibrozis ve kalsifikasyonla birlikte görülebilir; leiomyosarkomun yumuşak, nekrotik görünümüyle karıştırılmamalıdır.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-kompleks_karyotip",
+    "term": "Kompleks karyotip",
+    "aliases": [],
+    "category": "genetik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 30)Endometrial Hiperplazi ve Kanserleri s.87",
+    "definition": "Çok sayıda ve değişken yapısal ve sayısal kromozom anormalliği içeren karyotiptir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Leiomyosarkomun özelliğidir; sık kromozomal delesyonlar görülür.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-tumor_nekrozu",
+    "term": "Tümör nekrozu",
+    "aliases": [
+      "koagülatif tümör nekrozu"
+    ],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 30)Endometrial Hiperplazi ve Kanserleri s.90",
+    "definition": "Tümör hücrelerinin geniş alanlarda ani ve keskin sınırlı ölümüdür.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Leiomyosarkom tanısal üçlüsünün bir bileşenidir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-kronik_pelvik_agri",
+    "term": "Kronik pelvik ağrı",
+    "aliases": [],
+    "category": "tani",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 30)Endometrial Hiperplazi ve Kanserleri s.29",
+    "definition": "Pelvik bölgede uzun süre devam eden ağrıdır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Endometriozisde intrapelvik kanama ve periuterin yapışıklıklara bağlıdır.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-aromataz",
+    "term": "Aromataz",
+    "aliases": [
+      "CYP19"
+    ],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 30)Endometrial Hiperplazi ve Kanserleri s.24",
+    "definition": "Androjenleri östrojenlere dönüştüren enzimdir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Endometriozis stromal hücrelerinde yüksek eksprese edilir; aromataz inhibitörleri tedavide kullanılır.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-hemorajik_nekrotik_kitle",
+    "term": "Hemorajik nekrotik kitle",
+    "aliases": [],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 30)Endometrial Hiperplazi ve Kanserleri s.88",
+    "definition": "Kanama ve nekroz alanları içeren, kesitte yumuşak görünümlü tümöral kitledir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Uterusta leiomyosarkomun makroskopik görünümüdür; leiomyom ise sert ve girdaplıdır.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
   }
 ]
