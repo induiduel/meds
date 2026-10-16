@@ -86566,5 +86566,2117 @@
       "accuracyScore": 100,
       "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
     }
+  },
+  {
+    "id": "s13-immunkompromize_konak",
+    "term": "İmmünkompromize konak",
+    "aliases": [
+      "Bağışıklığı baskılanmış hasta"
+    ],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "instructorAndSource": "Ders notu: 11)Bağışıklığı Baskılanmış Hastalarda Enfeksiyonlar s.2",
+    "definition": "Doğuştan veya sonradan gelişen immün sistem bozuklukları nedeniyle enfeksiyonlara karşı savunma kapasitesi azalmış kişi.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Beklenen etken, hangi immün bileşenin bozulduğuna göre belirlenir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-immunsupresyon",
+    "term": "İmmünsupresyon",
+    "aliases": [
+      "İmmünsüpresyon"
+    ],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "instructorAndSource": "Ders notu: 11)Bağışıklığı Baskılanmış Hastalarda Enfeksiyonlar s.2",
+    "definition": "Bağışıklık sisteminin bir veya birden fazla bileşeninin işlevinin ilaç, hastalık veya diğer nedenlerle baskılanması.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-sekonder_immun_yetmezlik",
+    "term": "Sekonder immün yetmezlik",
+    "aliases": [
+      "Kazanılmış immün yetmezlik"
+    ],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "instructorAndSource": "Ders notu: 11)Bağışıklığı Baskılanmış Hastalarda Enfeksiyonlar s.2",
+    "definition": "Sonradan gelişen, primer yetmezliklerden çok daha sık görülen immün yetmezlik; HIV, malignite, ilaçlar, nakil, kronik hastalık, malnütrisyon ve yaşlılık başlıca nedenlerdir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Kadın cinsiyet sekonder immün yetmezlik nedeni değildir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-firsatci_enfeksiyon",
+    "term": "Fırsatçı enfeksiyon",
+    "aliases": [],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "instructorAndSource": "Ders notu: 11)Bağışıklığı Baskılanmış Hastalarda Enfeksiyonlar s.4",
+    "definition": "Sağlıklı kişide nadiren hastalık yapan etkenlerin bağışıklık bozulunca oluşturduğu enfeksiyon.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Nocardia, Aspergillus, P. jirovecii, CMV, Listeria ve Toxoplasma örnektir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-pneumocystis_jirovecii_pnomonisi",
+    "term": "Pneumocystis jirovecii pnömonisi",
+    "aliases": [
+      "PJP",
+      "PCP",
+      "Pneumocystis pnömonisi"
+    ],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "instructorAndSource": "Ders notu: 11)Bağışıklığı Baskılanmış Hastalarda Enfeksiyonlar s.13",
+    "definition": "T hücre yetmezliğinde subakut dispne, hipoksemi ve bilateral buzlu camla seyreden fırsatçı mantar pnömonisi.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "HIV'de CD4 < 200 hücre/µL'de riski belirginleşir; erken dönemde grafi normal olabilir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-nocardia",
+    "term": "Nocardia",
+    "aliases": [
+      "Nocardia spp."
+    ],
+    "category": "patojen",
+    "kurul": "Kurul 1",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "instructorAndSource": "Ders notu: 11)Bağışıklığı Baskılanmış Hastalarda Enfeksiyonlar s.8",
+    "definition": "Hücresel immün yetmezlikte akciğerde nodül, kavite veya konsolidasyon yapabilen fırsatçı bakteri.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Solid organ naklinin 1–6. ayında gündeme gelir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-cryptococcus",
+    "term": "Cryptococcus",
+    "aliases": [
+      "Kriptokok"
+    ],
+    "category": "patojen",
+    "kurul": "Kurul 1",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "instructorAndSource": "Ders notu: 11)Bağışıklığı Baskılanmış Hastalarda Enfeksiyonlar s.13",
+    "definition": "Hücresel immün yetmezlikte subakut menenjit yapan kapsüllü maya.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "HIV'de CD4 < 100 hücre/µL'de kriptokokkoz riski artar.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-toksoplazma_ensefaliti",
+    "term": "Toksoplazma ensefaliti",
+    "aliases": [
+      "Toxoplasma ensefaliti"
+    ],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "instructorAndSource": "Ders notu: 11)Bağışıklığı Baskılanmış Hastalarda Enfeksiyonlar s.15",
+    "definition": "Toxoplasma gondii'nin hücresel immün yetmezlikte beyinde fokal bulgu ve halka tarzı lezyonlarla seyreden reaktivasyonu.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "HIV'de CD4 < 100 hücre/µL'de riski artar.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-cmv_retiniti",
+    "term": "CMV retiniti",
+    "aliases": [],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "instructorAndSource": "Ders notu: 11)Bağışıklığı Baskılanmış Hastalarda Enfeksiyonlar s.15",
+    "definition": "İleri HIV'de CD4 < 50 hücre/µL düzeyinde görülen sitomegalovirüs göz enfeksiyonu.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-dissemine_mac_enfeksiyonu",
+    "term": "Dissemine MAC enfeksiyonu",
+    "aliases": [
+      "Dissemine Mycobacterium avium kompleksi"
+    ],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "instructorAndSource": "Ders notu: 11)Bağışıklığı Baskılanmış Hastalarda Enfeksiyonlar s.15",
+    "definition": "Mycobacterium avium kompleksinin ileri immünsüpresyonda yaygın enfeksiyonu.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "HIV'de CD4 < 50 hücre/µL'de daha olasıdır.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-anti_tnf_ajan",
+    "term": "Anti-TNF ajan",
+    "aliases": [
+      "TNF inhibitörü"
+    ],
+    "category": "ilac",
+    "kurul": "Kurul 1",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "instructorAndSource": "Ders notu: 11)Bağışıklığı Baskılanmış Hastalarda Enfeksiyonlar s.11",
+    "definition": "Tümör nekroz faktörünü bloke eden biyolojik immünsupresif ilaç grubu.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Tedavi öncesi latent tüberküloz taraması gerekir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-humoral_immun_yetmezlik",
+    "term": "Hümoral immün yetmezlik",
+    "aliases": [
+      "Antikor eksikliği"
+    ],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "instructorAndSource": "Ders notu: 11)Bağışıklığı Baskılanmış Hastalarda Enfeksiyonlar s.19",
+    "definition": "Antikor üretiminin yetersiz veya işlevsiz olduğu, kapsüllü bakterilere karşı savunmanın zayıfladığı immün yetmezlik.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Tekrarlayan otit, sinüzit ve pnömoni tipiktir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-kapsullu_bakteri",
+    "term": "Kapsüllü bakteri",
+    "aliases": [],
+    "category": "patojen",
+    "kurul": "Kurul 1",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "instructorAndSource": "Ders notu: 11)Bağışıklığı Baskılanmış Hastalarda Enfeksiyonlar s.20",
+    "definition": "Polisakkarit kapsülüyle fagositozdan kaçan bakteri; temizlenmesi antikor, kompleman ve dalağa bağımlıdır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Pnömokok, Hib ve meningokok asplenide ve antikor eksikliğinde önemlidir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-immunoglobulin_replasmani",
+    "term": "İmmünoglobulin replasmanı",
+    "aliases": [
+      "IVIG replasmanı"
+    ],
+    "category": "tedavi",
+    "kurul": "Kurul 1",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "instructorAndSource": "Ders notu: 11)Bağışıklığı Baskılanmış Hastalarda Enfeksiyonlar s.21",
+    "definition": "Seçilmiş antikor eksikliklerinde eksik antikorun dışarıdan verilmesi.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-mutlak_notrofil_sayisi",
+    "term": "Mutlak nötrofil sayısı",
+    "aliases": [
+      "MNS"
+    ],
+    "category": "tani",
+    "kurul": "Kurul 1",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "instructorAndSource": "Ders notu: 11)Bağışıklığı Baskılanmış Hastalarda Enfeksiyonlar s.24",
+    "definition": "Lökosit sayısı ile nötrofil oranından hesaplanan nötrofil sayısı.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "< 500/µL ağır, < 100/µL çok ağır nötropenidir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-antipsodomonal_beta_laktam",
+    "term": "Antipsödomonal beta-laktam",
+    "aliases": [],
+    "category": "ilac",
+    "kurul": "Kurul 1",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "instructorAndSource": "Ders notu: 11)Bağışıklığı Baskılanmış Hastalarda Enfeksiyonlar s.28",
+    "definition": "Pseudomonas aeruginosa'ya etkili beta-laktam antibiyotik; febril nötropenide ampirik tedavinin temelidir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Piperasilin-tazobaktam, sefepim, meropenem/imipenem-silastatin.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-persistan_ates",
+    "term": "Persistan ateş",
+    "aliases": [],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "instructorAndSource": "Ders notu: 11)Bağışıklığı Baskılanmış Hastalarda Enfeksiyonlar s.29",
+    "definition": "Uygun antibiyotik tedavisine rağmen süren ateş.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Uzamış derin nötropenide invaziv küf araştırması gerektirir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-galaktomannan",
+    "term": "Galaktomannan",
+    "aliases": [
+      "Galaktomannan antijeni"
+    ],
+    "category": "tani",
+    "kurul": "Kurul 1",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "instructorAndSource": "Ders notu: 11)Bağışıklığı Baskılanmış Hastalarda Enfeksiyonlar s.33",
+    "definition": "Aspergillus hücre duvarı polisakkariti; serum ve BAL'da antijen testi olarak aspergilloz tanısında kullanılır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Mukormikozda negatiftir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-vorikonazol",
+    "term": "Vorikonazol",
+    "aliases": [],
+    "category": "ilac",
+    "kurul": "Kurul 1",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "instructorAndSource": "Ders notu: 11)Bağışıklığı Baskılanmış Hastalarda Enfeksiyonlar s.33",
+    "definition": "İnvaziv aspergillozda ilk seçenek triazol antifungal.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Mucorales'e karşı etkin değildir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-lipozomal_amfoterisin_b",
+    "term": "Lipozomal amfoterisin B",
+    "aliases": [],
+    "category": "ilac",
+    "kurul": "Kurul 1",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "instructorAndSource": "Ders notu: 11)Bağışıklığı Baskılanmış Hastalarda Enfeksiyonlar s.35",
+    "definition": "Lipid formülasyonlu polien antifungal; mukormikozda 5–10 mg/kg/gün IV ilk seçenektir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-aspergilloma",
+    "term": "Aspergilloma",
+    "aliases": [
+      "Mantar topu"
+    ],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "instructorAndSource": "Ders notu: 11)Bağışıklığı Baskılanmış Hastalarda Enfeksiyonlar s.33",
+    "definition": "Kronik akciğer hastalığında önceden var olan kavite içinde gelişen mantar topu.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-alerjik_bronkopulmoner_aspergilloz",
+    "term": "Alerjik bronkopulmoner aspergilloz",
+    "aliases": [
+      "ABPA"
+    ],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "instructorAndSource": "Ders notu: 11)Bağışıklığı Baskılanmış Hastalarda Enfeksiyonlar s.33",
+    "definition": "Astım veya kistik fibrozisli hastada Aspergillus'a karşı tip I ve tip III hipersensitivite reaksiyonu.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Yüksek total IgE ve mukus tıkaçları görülür.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-halo_belirtisi",
+    "term": "Halo belirtisi",
+    "aliases": [
+      "Halo bulgusu"
+    ],
+    "category": "tani",
+    "kurul": "Kurul 1",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "instructorAndSource": "Ders notu: 11)Bağışıklığı Baskılanmış Hastalarda Enfeksiyonlar s.34",
+    "definition": "BT'de nodül etrafında buzlu cam dansitesi; anjiyoinvazyon ve hemorajiye bağlıdır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "İnvaziv aspergillozun erken (0–5. gün) bulgusudur; tipik ama spesifik değildir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-hava_hilal_belirtisi",
+    "term": "Hava-hilal belirtisi",
+    "aliases": [
+      "Hava yarımayı",
+      "Air crescent"
+    ],
+    "category": "tani",
+    "kurul": "Kurul 1",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "instructorAndSource": "Ders notu: 11)Bağışıklığı Baskılanmış Hastalarda Enfeksiyonlar s.34",
+    "definition": "Nekrotik nodül içinde hilal biçimli hava; invaziv aspergillozda geç dönemde görülür.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Genellikle nötropeni düzelirken ortaya çıkar.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-konidyum",
+    "term": "Konidyum",
+    "aliases": [],
+    "category": "patojen",
+    "kurul": "Kurul 1",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "instructorAndSource": "Ders notu: 11)Bağışıklığı Baskılanmış Hastalarda Enfeksiyonlar s.33",
+    "definition": "Küf mantarlarının havayla taşınan eşeysiz sporu.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Aspergillus konidyum inhalasyonuyla bulaşır.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-engraftman",
+    "term": "Engraftman",
+    "aliases": [],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "instructorAndSource": "Ders notu: 11)Bağışıklığı Baskılanmış Hastalarda Enfeksiyonlar s.36",
+    "definition": "Verilen hematopoetik kök hücrelerin kemik iliğine yerleşerek kan hücresi üretimini yeniden başlatması.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Nötrofil engraftmanı genellikle 2–4 haftada gerçekleşir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-pre_engraftman_donemi",
+    "term": "Pre-engraftman dönemi",
+    "aliases": [],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "instructorAndSource": "Ders notu: 11)Bağışıklığı Baskılanmış Hastalarda Enfeksiyonlar s.41",
+    "definition": "Kök hücre naklinde engraftmana kadar süren, nötropeni, mukozit ve kateterin baskın olduğu yaklaşık ilk 2–4 haftalık dönem.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-bk_polyomavirus",
+    "term": "BK polyomavirüs",
+    "aliases": [
+      "BK virüs"
+    ],
+    "category": "patojen",
+    "kurul": "Kurul 1",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "instructorAndSource": "Ders notu: 11)Bağışıklığı Baskılanmış Hastalarda Enfeksiyonlar s.47",
+    "definition": "Solid organ naklinin ara döneminde özellikle böbrek naklinde nefropati yapan virüs.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-nakil_sonrasi_lenfoproliferatif_hastalik",
+    "term": "Nakil sonrası lenfoproliferatif hastalık",
+    "aliases": [
+      "PTLD"
+    ],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "instructorAndSource": "Ders notu: 11)Bağışıklığı Baskılanmış Hastalarda Enfeksiyonlar s.47",
+    "definition": "Nakil alıcısında çoğunlukla EBV ilişkili gelişen lenfoid çoğalma.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-donor_kaynakli_enfeksiyon",
+    "term": "Donör kaynaklı enfeksiyon",
+    "aliases": [],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "instructorAndSource": "Ders notu: 11)Bağışıklığı Baskılanmış Hastalarda Enfeksiyonlar s.47",
+    "definition": "Nakledilen organla birlikte alıcıya geçen enfeksiyon; CMV, HSV, kuduz, Batı Nil virüsü, HIV, T. cruzi, sıtma ve tüberküloz örnektir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Endemik bölgelerden gelen donörler ayrıca değerlendirilir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-net_immunsupresyon_duzeyi",
+    "term": "Net immünsüpresyon düzeyi",
+    "aliases": [],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "instructorAndSource": "Ders notu: 11)Bağışıklığı Baskılanmış Hastalarda Enfeksiyonlar s.43",
+    "definition": "Nakil alıcısında ilaçlar, rejeksiyon tedavisi ve eşlik eden faktörlerin toplam bağışıklık baskılama etkisi.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-odinofaji",
+    "term": "Odinofaji",
+    "aliases": [],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "instructorAndSource": "Ders notu: 11)Bağışıklığı Baskılanmış Hastalarda Enfeksiyonlar s.32",
+    "definition": "Yutma sırasında ağrı.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Kandida özofajitinin en sık bulgusudur.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-deferoksamin",
+    "term": "Deferoksamin",
+    "aliases": [],
+    "category": "ilac",
+    "kurul": "Kurul 1",
+    "discipline": "Enfeksiyon Hastalıkları",
+    "instructorAndSource": "Ders notu: 11)Bağışıklığı Baskılanmış Hastalarda Enfeksiyonlar s.35",
+    "definition": "Demir şelatörü ilaç; demir yüklenmesi tedavisinde kullanılır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Mukormikoz için risk faktörüdür.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-komedonekroz",
+    "term": "Komedonekroz",
+    "aliases": [
+      "Komedo nekrozu"
+    ],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 35) Meme Kanseri ve Moleküler Tipleri s.8",
+    "definition": "Süt kanalları içindeki tümör hücrelerinin ortasında görülen nekroz.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Özellikle yüksek dereceli DCIS ile ilişkilidir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-ipsilateral",
+    "term": "İpsilateral",
+    "aliases": [],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 35) Meme Kanseri ve Moleküler Tipleri s.17",
+    "definition": "Vücudun aynı tarafını ifade eden terim.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "LCIS'te ipsilateral memede risk kontralateralden bir miktar yüksektir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-kontralateral",
+    "term": "Kontralateral",
+    "aliases": [],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 35) Meme Kanseri ve Moleküler Tipleri s.17",
+    "definition": "Vücudun karşı tarafını ifade eden terim.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-tek_sira_single_file_dizilim",
+    "term": "Tek sıra (single file) dizilim",
+    "aliases": [
+      "Single file"
+    ],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 35) Meme Kanseri ve Moleküler Tipleri s.28",
+    "definition": "Tümör hücrelerinin stromada tek tek, art arda sıralanarak infiltrasyonu.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "İnvaziv lobüler karsinom için tipiktir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-atipik_lobuler_hiperplazi",
+    "term": "Atipik lobüler hiperplazi",
+    "aliases": [
+      "ALH"
+    ],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 35) Meme Kanseri ve Moleküler Tipleri s.30",
+    "definition": "LCIS ile aynı E-kadherin kaybını taşıyan atipik lobüler proliferasyon.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-dermal_lenfatik_invazyon",
+    "term": "Dermal lenfatik invazyon",
+    "aliases": [],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 35) Meme Kanseri ve Moleküler Tipleri s.38",
+    "definition": "Tümör hücrelerinin derinin lenfatik boşluklarını yaygın olarak doldurması.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Lenfatik tıkanma ile ödem ve cilt kalınlaşması yapar.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-meme_karsinomu_derecelendirmesi",
+    "term": "Meme karsinomu derecelendirmesi",
+    "aliases": [],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 35) Meme Kanseri ve Moleküler Tipleri s.42",
+    "definition": "İnvaziv meme tümörlerinin nükleer pleomorfizm, tübül oluşumu ve mitotik aktiviteye göre derece 1–3 olarak sınıflanması.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Tümör boyutu derece ölçütü değildir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-bekci_lenf_dugumu_biyopsisi",
+    "term": "Bekçi lenf düğümü biyopsisi",
+    "aliases": [
+      "Sentinel lenf nodu biyopsisi"
+    ],
+    "category": "tani",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 35) Meme Kanseri ve Moleküler Tipleri s.48",
+    "definition": "Aksiller lenf nodu diseksiyonunun yerini alan, bekçi düğümün çıkarılıp incelendiği standart evreleme yöntemi.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Daha az lenfödem ve sinir hasarı.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-remisyon",
+    "term": "Remisyon",
+    "aliases": [],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 35) Meme Kanseri ve Moleküler Tipleri s.49",
+    "definition": "Tümör dokusu ile kanser belirti ve bulgularının kısmen veya tamamen azalması ya da kaybolması.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-neoadjuvan_tedavi",
+    "term": "Neoadjuvan tedavi",
+    "aliases": [],
+    "category": "tedavi",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 35) Meme Kanseri ve Moleküler Tipleri s.56",
+    "definition": "Ameliyat öncesi verilen sistemik tedavi; tümörün kemoterapiye yanıtını doğrudan gösterir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Üçlü negatif ve HER2 pozitifte >%30 patolojik tam yanıt.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-patolojik_tam_yanit",
+    "term": "Patolojik tam yanıt",
+    "aliases": [],
+    "category": "tani",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 35) Meme Kanseri ve Moleküler Tipleri s.56",
+    "definition": "Neoadjuvan tedavi sonrası cerrahi örnekte tüm tümörün kaybolması.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-ajcc_prognostik_evreleme",
+    "term": "AJCC prognostik evreleme",
+    "aliases": [
+      "Kombine prognostik evre"
+    ],
+    "category": "tani",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 35) Meme Kanseri ve Moleküler Tipleri s.57",
+    "definition": "Anatomik evreyi (TNM) ER, PR, HER2, derece ve gerekirse gen ekspresyon profiliyle birleştiren evreleme.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Bazı üçlü negatif kanserler daha yüksek prognostik evreye alınır.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-lumpektomi",
+    "term": "Lumpektomi",
+    "aliases": [
+      "Meme koruyucu cerrahi"
+    ],
+    "category": "tedavi",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 35) Meme Kanseri ve Moleküler Tipleri s.60",
+    "definition": "Meme koruyucu cerrahi; ardından radyoterapi uygulanır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Çoğu hastada tercih edilen lokal tedavidir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-mastektomi",
+    "term": "Mastektomi",
+    "aliases": [],
+    "category": "tedavi",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 35) Meme Kanseri ve Moleküler Tipleri s.60",
+    "definition": "Memenin tamamen çıkarılması.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Lokal ileri hastalık, yüksek ikinci primer riski veya hasta tercihinde.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-pertuzumab",
+    "term": "Pertuzumab",
+    "aliases": [],
+    "category": "ilac",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 35) Meme Kanseri ve Moleküler Tipleri s.62",
+    "definition": "HER2'ye karşı monoklonal antikor; HER2 antagonisti.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-cdk4_6_inhibitorleri",
+    "term": "CDK4/6 inhibitörleri",
+    "aliases": [
+      "Palbosiklib",
+      "Abemasiklib",
+      "Ribosiklib"
+    ],
+    "category": "ilac",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 35) Meme Kanseri ve Moleküler Tipleri s.59",
+    "definition": "Siklin bağımlı kinaz 4 ve 6'yı baskılayan kinaz inhibitörleri: palbosiklib, abemasiklib, ribosiklib.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-homolog_rekombinasyonla_onarim_hrr",
+    "term": "Homolog rekombinasyonla onarım (HRR)",
+    "aliases": [
+      "HRR"
+    ],
+    "category": "genetik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 35) Meme Kanseri ve Moleküler Tipleri s.59",
+    "definition": "Çift zincir DNA kırıklarının onarım yolu; BRCA1/2 mutasyonlarında kusurludur.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "HRR kusuru DNA hasarına duyarlılık ve PARP/platin yanıtı demektir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-bimodal_nuks",
+    "term": "Bimodal nüks",
+    "aliases": [],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 35) Meme Kanseri ve Moleküler Tipleri s.51",
+    "definition": "Nükslerin erken ve geç olmak üzere iki zaman zirvesinde toplanması.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "HER2 pozitif meme kanserine özgüdür (≈10 yıl).",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-balanit",
+    "term": "Balanit",
+    "aliases": [],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 34)Erkek Genital Sistem ve Prostat Hastalıkları s.6",
+    "definition": "Penis başının (glans) inflamasyonudur.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Etkenler arasında Candida albicans, Gardnerella gibi anaerobik bakteriler ve pürülan bakteriler yer alır.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-balanopostit",
+    "term": "Balanopostit",
+    "aliases": [],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 34)Erkek Genital Sistem ve Prostat Hastalıkları s.7",
+    "definition": "Penis başı ve sünnet derisinin birlikte inflamasyonudur; çoğu vaka sünnetsiz erkeklerde yetersiz hijyene bağlıdır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Balanopostit sonrası skarlaşmaya bağlı fimozis gelişebilir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-smegma",
+    "term": "Smegma",
+    "aliases": [],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 34)Erkek Genital Sistem ve Prostat Hastalıkları s.7",
+    "definition": "Sünnet derisi altında dökülen epitel, ter ve debrisin birikimiyle oluşan maddedir; lokal irritan ve enfeksiyon odağıdır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-penis_intraepiteliyal_neoplazi_pein",
+    "term": "Penis intraepiteliyal neoplazi (PeIN)",
+    "aliases": [
+      "PeIN"
+    ],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 34)Erkek Genital Sistem ve Prostat Hastalıkları s.10",
+    "definition": "Penis skuamöz hücreli karsinomunun öncü lezyonudur; epidermis boyunca displazi vardır, alttaki stromaya invazyon yoktur.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Yaşlı erkeklerde penis gövdesi ve skrotumda tek plak olarak görülür; hastaların yaklaşık %10'unda sonraki yıllarda invaziv karsinom gelişir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-penis_skuamoz_hucreli_karsinomu",
+    "term": "Penis skuamöz hücreli karsinomu",
+    "aliases": [],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 34)Erkek Genital Sistem ve Prostat Hastalıkları s.8",
+    "definition": "Penis malign tümörlerinin %95'ini oluşturan, çoğunlukla keratinize skuamöz hücreli karsinomdur; sıklıkla penis başı ve sünnet derisinde gelişir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Risk faktörleri sünnetsizlik, yetersiz hijyen, sigara, kronik inflamasyon ve HPV tip 16/18'dir; ≥3 veya bilateral kasık lenf nodu metastazı kötü prognostiktir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-verrukoz_karsinom",
+    "term": "Verrüköz karsinom",
+    "aliases": [
+      "Verruköz karsinom"
+    ],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 34)Erkek Genital Sistem ve Prostat Hastalıkları s.16",
+    "definition": "Penis skuamöz karsinomunun HPV ile ilişkisiz, papiller yapılı ve neredeyse hiç sitolojik atipi göstermeyen varyantıdır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Yuvarlak, derine iten kenarları vardır; lokal invazivdir ancak metastaz yapmaz.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-hidrosel",
+    "term": "Hidrosel",
+    "aliases": [],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 34)Erkek Genital Sistem ve Prostat Hastalıkları s.19",
+    "definition": "Tunica vaginalis boşluğunda seröz sıvı birikimidir; idiyopatik olabilir ya da enfeksiyon veya tümöre sekonder gelişir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Berrak sıvı içerdiği için transilluminasyon pozitiftir; testis tümörleri ise transilluminasyon negatiftir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-hematosel",
+    "term": "Hematosel",
+    "aliases": [],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 34)Erkek Genital Sistem ve Prostat Hastalıkları s.19",
+    "definition": "Tunica vaginalis boşluğunda kan birikimidir; travma veya torsiyon sonucu gelişir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-silosel",
+    "term": "Şilosel",
+    "aliases": [],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 34)Erkek Genital Sistem ve Prostat Hastalıkları s.19",
+    "definition": "Tunica vaginalis boşluğunda lenfatik sıvı birikimidir; örneğin filaryazise bağlı gelişir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-transilluminasyon",
+    "term": "Transilluminasyon",
+    "aliases": [
+      "Transillüminasyon"
+    ],
+    "category": "tani",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 34)Erkek Genital Sistem ve Prostat Hastalıkları s.19",
+    "definition": "Doku veya organların içinden ışık geçirilerek yapılan muayene yöntemidir; yapının ışığı geçirme ya da tutma durumuna göre tanıya yardım eder.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Hidrosel transilluminasyon pozitif, katı testis tümörü transilluminasyon negatiftir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-tunica_vaginalis",
+    "term": "Tunica vaginalis",
+    "aliases": [],
+    "category": "anatomi",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 34)Erkek Genital Sistem ve Prostat Hastalıkları s.19",
+    "definition": "Testisi saran seröz zar; hidrosel, hematosel ve şilosel sıvılarının biriktiği boşluğu oluşturur.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-orsiopeksi",
+    "term": "Orşiopeksi",
+    "aliases": [],
+    "category": "tedavi",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 34)Erkek Genital Sistem ve Prostat Hastalıkları s.23",
+    "definition": "Doğumdan sonra skrotuma inmemiş bir veya her iki testisin cerrahi olarak skrotuma indirilip sabitlenmesidir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Kriptorşizmde 6–12 ay arasında önerilir; erişkin torsiyonunda karşı testise koruyucu olarak uygulanır.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-germ_hucreli_neoplazi_in_situ_gcnis",
+    "term": "Germ hücreli neoplazi in situ (GCNIS)",
+    "aliases": [
+      "GCNIS"
+    ],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 34)Erkek Genital Sistem ve Prostat Hastalıkları s.33",
+    "definition": "Ergenlik sonrası germ hücreli tümörlerin öncü lezyonudur; kriptorşid testiste sıktır ve tümör bitişiğindeki normal dokuda bulunur.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Spermatositik tümör ve prepubertal tip teratom GCNIS ile ilişkili değildir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-izokromozom_12p",
+    "term": "İzokromozom 12p",
+    "aliases": [
+      "i(12p)"
+    ],
+    "category": "genetik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 34)Erkek Genital Sistem ve Prostat Hastalıkları s.33",
+    "definition": "Kromozom 12 kısa kolunun ek kopyalarını taşıyan izokromozomdur; ergenlik sonrası testis germ hücreli tümörlerinin karakteristik genetik değişikliğidir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Spermatositik tümörde ve prepubertal tip teratomda i(12p) bulunmaz.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-testikuler_germ_hucreli_tumor",
+    "term": "Testiküler germ hücreli tümör",
+    "aliases": [],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 34)Erkek Genital Sistem ve Prostat Hastalıkları s.31",
+    "definition": "Tüm testis tümörlerinin yaklaşık %95'ini oluşturan, neredeyse tamamı malign tümör grubudur; seminom ve nonseminomatöz tümörler olarak sınıflanır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Risk faktörleri aile öyküsü (baba/oğul 4 kat; erkek kardeş 8–10 kat), kriptorşizm, interseks sendromları ve önceki germ hücreli tümördür.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-embriyonel_karsinom",
+    "term": "Embriyonel karsinom",
+    "aliases": [],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 34)Erkek Genital Sistem ve Prostat Hastalıkları s.40",
+    "definition": "Kötü sınırlı, sıklıkla kanama ve nekroz içeren invaziv germ hücreli tümördür; bazofilik sitoplazmalı büyük hücreler katı tabakalar, ilkel bez yapıları ve düzensiz papiller oluşturur.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Saf embriyonel karsinom karışık tümörlerden daha agresiftir; çoğu diğer germ hücre bileşenleriyle karışıktır.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-yolk_kesesi_tumoru",
+    "term": "Yolk kesesi tümörü",
+    "aliases": [
+      "Yolk sac tümörü"
+    ],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 34)Erkek Genital Sistem ve Prostat Hastalıkları s.43",
+    "definition": "3 yaş altı çocuklarda en sık primer testis tümörüdür; mikrokistik, retiküler (dantel benzeri) patern ve Schiller-Duval cisimcikleri gösterir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Serum AFP laboratuvar belirtecidir; hastaların %90'ında AFP yüksektir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-schiller_duval_cisimcigi",
+    "term": "Schiller-Duval cisimciği",
+    "aliases": [
+      "Schiller-Duval cismi"
+    ],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 34)Erkek Genital Sistem ve Prostat Hastalıkları s.43",
+    "definition": "Yolk kesesi tümöründe görülen ilkel glomerül benzeri yapılardır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-eozinofilik_hiyalin_globuller",
+    "term": "Eozinofilik hiyalin globüller",
+    "aliases": [],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 34)Erkek Genital Sistem ve Prostat Hastalıkları s.45",
+    "definition": "Yolk kesesi tümöründe görülen, α1-antitripsin ve AFP içeren sitoplazmik globüllerdir; immünohistokimya ile gösterilir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-koryokarsinom_testis",
+    "term": "Koryokarsinom (testis)",
+    "aliases": [],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 34)Erkek Genital Sistem ve Prostat Hastalıkları s.46",
+    "definition": "Plasental trofoblast benzeri hücrelere farklılaşan, çok malign germ hücreli tümördür; sitotrofoblast benzeri hücre tabakaları üzerinde sinsityotrofoblast benzeri hücreler içerir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Primer kitle küçük olsa da tanıda yaygın metastaz sıktır; serum hCG her zaman yüksektir ve prognoz en kötüdür.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-nonseminomatoz_germ_hucreli_tumor",
+    "term": "Nonseminomatöz germ hücreli tümör",
+    "aliases": [
+      "NSGCT"
+    ],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 34)Erkek Genital Sistem ve Prostat Hastalıkları s.34",
+    "definition": "Embriyonel karsinom, yolk kesesi tümörü, koryokarsinom, teratom ve karışık tipleri kapsayan germ hücreli tümör grubudur.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Lenfatik ve hematojen yayılımı seminomdan daha erkendir; agresif kemoterapiyle ~%90 tam remisyon sağlanır.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-radikal_orsiektomi",
+    "term": "Radikal orşiektomi",
+    "aliases": [
+      "İnguinal orşiektomi"
+    ],
+    "category": "tedavi",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 34)Erkek Genital Sistem ve Prostat Hastalıkları s.54",
+    "definition": "Katı testis kitlelerinde malignite varsayımıyla uygulanan, testisin inguinal yoldan çıkarılmasıdır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Biyopsi tümör yayılımı riski taşıdığı ve skrotal deri çıkarımını gerektirdiği için yapılmaz.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-laktat_dehidrogenaz_ldh",
+    "term": "Laktat dehidrogenaz (LDH)",
+    "aliases": [
+      "LDH",
+      "Laktat dehidrojenaz"
+    ],
+    "category": "tani",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 34)Erkek Genital Sistem ve Prostat Hastalıkları s.58",
+    "definition": "Testis tümörlerinde tümör kitlesi ile korele, nonspesifik bir tümör yükü göstergesi olan serum belirtecidir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-detorsiyon",
+    "term": "Detorsiyon",
+    "aliases": [],
+    "category": "tedavi",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 34)Erkek Genital Sistem ve Prostat Hastalıkları s.30",
+    "definition": "Torsiyone testisin bükülmüş spermatik kordunun geri çevrilmesidir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "İlk 6 saatte manuel detorsiyon ile testis yaşamı korunabilir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-kabakulak_orsiti",
+    "term": "Kabakulak orşiti",
+    "aliases": [],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 34)Erkek Genital Sistem ve Prostat Hastalıkları s.26",
+    "definition": "Kabakulakta parotit başlangıcından yaklaşık 1 hafta sonra gelişen akut interstisyel orşittir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Çocuklarda testis tutulumu nadirdir; ergenlik sonrası erkeklerin %20–30'unda görülür, kısırlık nadirdir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-otoimmun_orsit",
+    "term": "Otoimmün orşit",
+    "aliases": [
+      "Otoimmun orşit"
+    ],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 34)Erkek Genital Sistem ve Prostat Hastalıkları s.27",
+    "definition": "Bazen travma sonrası izole testis antijenlerinin salınımını takiben gelişen granülomatöz testis inflamasyonudur.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Testis hacminde azalma ve infertilite riskine yol açar.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-testis_tuberkulozu",
+    "term": "Testis tüberkülozu",
+    "aliases": [],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 34)Erkek Genital Sistem ve Prostat Hastalıkları s.26",
+    "definition": "Testiste granülomatöz inflamasyonun en sık nedenidir; genellikle epididimisten testise yayılır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Histolojide klasik tüberküloz granülomları görülür.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-korpora_amilasea",
+    "term": "Korpora amilasea",
+    "aliases": [
+      "Korpus amilaseum"
+    ],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 34)Erkek Genital Sistem ve Prostat Hastalıkları s.74",
+    "definition": "Prostat bez lümenlerinde görülen lamine proteinli sekresyon kitleleridir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "BPH'de hiperplastik bezlerin lümeninde sıkça bulunur.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-dihidrotestosteron_dht",
+    "term": "Dihidrotestosteron (DHT)",
+    "aliases": [
+      "DHT"
+    ],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 34)Erkek Genital Sistem ve Prostat Hastalıkları s.69",
+    "definition": "Prostatta 5α-redüktaz tip 2 ile testosterondan sentezlenen, testosterondan 10 kat daha potent androjendir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Nükleer androjen reseptörüne bağlanarak prostat epitel ve stromal hücre proliferasyonunu destekler.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-5_reduktaz_tip_2",
+    "term": "5α-redüktaz tip 2",
+    "aliases": [
+      "5-alfa-redüktaz"
+    ],
+    "category": "fizyoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 34)Erkek Genital Sistem ve Prostat Hastalıkları s.69",
+    "definition": "Prostatta testosteronu DHT'ye dönüştüren enzimdir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-5_reduktaz_inhibitorleri",
+    "term": "5α-redüktaz inhibitörleri",
+    "aliases": [],
+    "category": "ilac",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 34)Erkek Genital Sistem ve Prostat Hastalıkları s.79",
+    "definition": "Testosteronun DHT'ye dönüşümünü engelleyerek BPH'nin medikal tedavisinde kullanılan ilaçlardır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-1_adrenerjik_blokerler",
+    "term": "α1-adrenerjik blokerler",
+    "aliases": [
+      "Alfa-1 blokerler"
+    ],
+    "category": "ilac",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 34)Erkek Genital Sistem ve Prostat Hastalıkları s.79",
+    "definition": "Prostat düz kasını gevşeterek BPH semptomlarını azaltan ilaçlardır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-transuretral_prostat_rezeksiyonu_turp",
+    "term": "Transüretral prostat rezeksiyonu (TURP)",
+    "aliases": [
+      "TURP"
+    ],
+    "category": "tedavi",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 34)Erkek Genital Sistem ve Prostat Hastalıkları s.79",
+    "definition": "Tıbbi tedaviye dirençli BPH olgularında uygulanan cerrahi yöntemdir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-yuksek_yogunluklu_odaklanmis_ultrason_hifu",
+    "term": "Yüksek yoğunluklu odaklanmış ultrason (HIFU)",
+    "aliases": [
+      "HIFU"
+    ],
+    "category": "tedavi",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 34)Erkek Genital Sistem ve Prostat Hastalıkları s.79",
+    "definition": "Tıbbi tedaviye dirençli BPH olgularında kullanılan cerrahi dışı ablatif yöntemdir (High-Intensity Focused Ultrasound).",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-tasma_inkontinansi",
+    "term": "Taşma inkontinansı",
+    "aliases": [],
+    "category": "terim",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 34)Erkek Genital Sistem ve Prostat Hastalıkları s.77",
+    "definition": "BPH gibi mesane çıkış tıkanıklıklarında aşırı dolan mesaneden idrarın istemsiz kaçmasıdır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-detrusor_hipertrofisi",
+    "term": "Detrusor hipertrofisi",
+    "aliases": [],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 34)Erkek Genital Sistem ve Prostat Hastalıkları s.77",
+    "definition": "BPH'ye bağlı tıkanıklığa yanıt olarak mesane duvar kasının kalınlaşmasıdır; trabekülasyon ve dilatasyonla birliktedir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-prostat_periferik_zonu",
+    "term": "Prostat periferik zonu",
+    "aliases": [
+      "Periferik zon"
+    ],
+    "category": "anatomi",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 34)Erkek Genital Sistem ve Prostat Hastalıkları s.61",
+    "definition": "Prostatın karsinomların %70–80'inin geliştiği, rektal muayene ile palpe edilebilen zonudur.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-prostat_gecis_zonu",
+    "term": "Prostat geçiş zonu",
+    "aliases": [
+      "Transition zonu",
+      "Geçiş zonu"
+    ],
+    "category": "anatomi",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 34)Erkek Genital Sistem ve Prostat Hastalıkları s.61",
+    "definition": "BPH'nin çoğunlukla geliştiği, hiperplazisi üretral tıkanma semptomlarına yol açan prostat zonudur.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-granulomatoz_prostatit",
+    "term": "Granülomatöz prostatit",
+    "aliases": [],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 34)Erkek Genital Sistem ve Prostat Hastalıkları s.65",
+    "definition": "Prostatın sertleşmesine yol açabilen ve prostat kanserini taklit eden nadir prostatit tipidir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "ABD'de en sık nedeni yüzeyel mesane kanseri tedavisinde intravezikal BCG'dir; kanseri ekarte etmek için biyopsi gerekebilir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-yuksek_dereceli_prostat_intraepiteliyal_neoplazi_h",
+    "term": "Yüksek dereceli prostat intraepiteliyal neoplazi (HGPIN)",
+    "aliases": [
+      "HGPIN"
+    ],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 34)Erkek Genital Sistem ve Prostat Hastalıkları s.89",
+    "definition": "Prostat adenokarsinomunun neoplastik öncü lezyonudur; moleküler değişiklikleri invaziv kanserle benzerdir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Prostatektomi örneklerinin ~%80'inde bulunur.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-kribriform_patern",
+    "term": "Kribriform patern",
+    "aliases": [
+      "Kribriform"
+    ],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 34)Erkek Genital Sistem ve Prostat Hastalıkları s.89",
+    "definition": "Tümör hücrelerinin elek veya süzgeç benzeri boşluklar oluşturduğu yapıdır; prostatta yüksek dereceli tümörlerde görülür.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Gleason derece 4 tümörlerde merkezi lümenleri geçen hücresel köprülü büyük kribriform bezler görülür.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-derece_grubu_prostat",
+    "term": "Derece grubu (prostat)",
+    "aliases": [],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 34)Erkek Genital Sistem ve Prostat Hastalıkları s.92",
+    "definition": "Gleason skorlarının dönüştürüldüğü, her biri farklı prognozla ilişkili beş gruplu güncel sınıflamadır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-tmprss2_erg_fuzyonu",
+    "term": "TMPRSS2-ERG füzyonu",
+    "aliases": [
+      "TMPRSS2-ETS füzyonu"
+    ],
+    "category": "genetik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 34)Erkek Genital Sistem ve Prostat Hastalıkları s.84",
+    "definition": "ETS onkogenlerinin (örneğin ERG) androjen düzenli TMPRSS2 promotörü altına geçtiği, prostat kanserinde sık görülen gen füzyonudur.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-gstp1_promotor_metilasyonu",
+    "term": "GSTP1 promotor metilasyonu",
+    "aliases": [
+      "GSTP1"
+    ],
+    "category": "genetik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 34)Erkek Genital Sistem ve Prostat Hastalıkları s.84",
+    "definition": "Prostat kanserinde erken olay olarak görülen epigenetik değişikliktir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-osteoblastik_metastaz",
+    "term": "Osteoblastik metastaz",
+    "aliases": [],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 34)Erkek Genital Sistem ve Prostat Hastalıkları s.94",
+    "definition": "Prostat kanserinin geç evrede aksiyal iskelete yaptığı, kemik üreten metastatik lezyonlardır; radyonüklid kemik sintigrafisinde artmış alım gösterir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Diğer kanserlerin çoğu kemikte litik lezyon yapar.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-radikal_prostatektomi",
+    "term": "Radikal prostatektomi",
+    "aliases": [],
+    "category": "tedavi",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 34)Erkek Genital Sistem ve Prostat Hastalıkları s.98",
+    "definition": "Prostat kanserinde uygulanan cerrahi tedavidir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Sonrasında PSA yükselmesi rekürrens veya metastatik hastalığı gösterir; prognozu patolojik evre, cerrahi sınırlar ve Gleason derecesi belirler.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-aktif_izlem",
+    "term": "Aktif izlem",
+    "aliases": [
+      "Active surveillance"
+    ],
+    "category": "tedavi",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 34)Erkek Genital Sistem ve Prostat Hastalıkları s.99",
+    "definition": "Seçilmiş düşük riskli prostat kanseri olgularında uygulanan, tedavisiz yakın takip stratejisidir (active surveillance).",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-androjen_deprivasyon_tedavisi",
+    "term": "Androjen deprivasyon tedavisi",
+    "aliases": [
+      "Androjen yoksunluk tedavisi"
+    ],
+    "category": "tedavi",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 34)Erkek Genital Sistem ve Prostat Hastalıkları s.100",
+    "definition": "Prostat kanserinde cerrahi veya kimyasal kastrasyonla androjen etkisinin ortadan kaldırılmasıdır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Çoğu tümör zamanla androjen-bağımsız klonlar geliştirir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-lhrh_agonisti",
+    "term": "LHRH agonisti",
+    "aliases": [
+      "Luteinleştirici hormon salgılatıcı hormon agonisti"
+    ],
+    "category": "ilac",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 34)Erkek Genital Sistem ve Prostat Hastalıkları s.100",
+    "definition": "Başta LH'yi artırıp ardından hipofiz desensitizasyonuyla LH üretimini durduran ve testis androjen üretimini azaltan ilaçtır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-antiandrojen",
+    "term": "Antiandrojen",
+    "aliases": [],
+    "category": "ilac",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 34)Erkek Genital Sistem ve Prostat Hastalıkları s.100",
+    "definition": "Androjen deprivasyon tedavisine gerektiğinde eklenen, androjen etkisini engelleyen ilaçtır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-androjen_reseptor_gen_amplifikasyonu",
+    "term": "Androjen reseptör gen amplifikasyonu",
+    "aliases": [],
+    "category": "genetik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 34)Erkek Genital Sistem ve Prostat Hastalıkları s.82",
+    "definition": "Prostat kanserinde düşük androjen seviyelerine duyarlılığı artıran rezistans mekanizmasıdır.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-kemik_sintigrafisi",
+    "term": "Kemik sintigrafisi",
+    "aliases": [
+      "Radyonüklid kemik sintigrafisi"
+    ],
+    "category": "tani",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 34)Erkek Genital Sistem ve Prostat Hastalıkları s.94",
+    "definition": "Radyonüklid ile yapılan, prostat kanserinin osteoblastik metastazlarında artmış alım gösteren görüntüleme yöntemidir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-mikst_germ_hucreli_tumor",
+    "term": "Mikst germ hücreli tümör",
+    "aliases": [
+      "Karışık germ hücreli tümör"
+    ],
+    "category": "hastalik",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 34)Erkek Genital Sistem ve Prostat Hastalıkları s.57",
+    "definition": "Birden fazla germ hücreli tümör bileşeni içeren, sıklıkla teratom ve embriyonel karsinom bileşenli tümördür; zirve yaşı 15–30'dur.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Karışıma bağlı olarak AFP ve/veya hCG değişen derecelerde yüksektir.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
+  },
+  {
+    "id": "s13-testis_atrofisi",
+    "term": "Testis atrofisi",
+    "aliases": [],
+    "category": "patoloji",
+    "kurul": "Kurul 1",
+    "discipline": "Tıbbi Patoloji",
+    "instructorAndSource": "Ders notu: 34)Erkek Genital Sistem ve Prostat Hastalıkları s.23",
+    "definition": "İnmemiş testiste gelişen küçülme; 2 yaş sonrası bazal membran kalınlaşması, spermatogonya kaybı ve interstisyel stroma artışı ile karakterizedir.",
+    "lectureContextNotes": "",
+    "examSpotPearls": "Tek taraflı kriptorşizmde karşı testiste de atrofi riski artar.",
+    "uretici": "s13_study",
+    "aiAudit": {
+      "verified": true,
+      "verifiedAt": "2026-10-16",
+      "accuracyScore": 100,
+      "auditSummary": "Tanım ders işçisinde ders PDF'i alıntısıyla doğrulandı; yönetici onayladı."
+    }
   }
 ]
