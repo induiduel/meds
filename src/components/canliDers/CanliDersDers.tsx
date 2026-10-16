@@ -14,6 +14,7 @@ import {
 import { useCdTur } from './useCdTur';
 import { ListeEkleDugme } from './CanliDersListem';
 import { CevrimdisiDugme } from './CanliDersCevrimdisi';
+import { CdDaha } from './CanliDersDaha';
 import '../learn/pdf/pdfDoc.css';
 
 /** Öğenin görünür ölçeği (v12 yazı boyutu CSS zoom'u); utils/uiZoom.elementZoom ile aynı mantık. */
@@ -241,13 +242,17 @@ export default function CanliDersDers({ dersKey }: { dersKey: string }) {
           )}
           {!tamEkran && (
             <>
-              <CevrimdisiDugme dersKey={detay.key} baslik={detay.baslik} varyantlar={detay.varyantlar} />
-              <ListeEkleDugme dersKey={detay.key} baslik={detay.baslik} />
-              {tanitim.dugme}
             </>
           )}
         </div>
         <div className="cd-ders-uc">
+          {!tamEkran && (
+            <CdDaha etiket="Ders seçenekleri (çevrimdışı, listem, tanıtım)" className="cd-ders-daha">
+              <CevrimdisiDugme dersKey={detay.key} baslik={detay.baslik} varyantlar={detay.varyantlar} />
+              <ListeEkleDugme dersKey={detay.key} baslik={detay.baslik} etiketli />
+              {tanitim.dugme}
+            </CdDaha>
+          )}
           {tamEkran ? (
             <>
               {!oynaticiAcik && <TamEkranOynat dersKey={detay.key} />}

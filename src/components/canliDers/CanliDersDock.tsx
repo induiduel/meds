@@ -11,6 +11,7 @@ import {
   fmtSure, useCd,
 } from './canliDersStore';
 import { ListeDockDenetim, TekrarSecici } from './CanliDersListem';
+import { CdDaha } from './CanliDersDaha';
 import '../../styles/canli-ders.css';
 
 const hizYaz = (r: number) => `${String(r).replace('.', ',')}×`;
@@ -325,7 +326,6 @@ function TamOynatici() {
         <div className="cd-denetim-sol">
           <BolumMenu />
           <ListeDockDenetim />
-          <SesSecici />
         </div>
         <div className="cd-denetim-orta">
           <BolumAtla yon={-1} />
@@ -335,9 +335,12 @@ function TamOynatici() {
           <BolumAtla yon={1} />
         </div>
         <div className="cd-denetim-sag">
-          <TekrarSecici />
           <HizSecici />
-          <IndirBag />
+          <CdDaha etiket="Oynatıcı seçenekleri (ses, tekrar, MP3)" yukari className="cd-dock-daha">
+            <div className="cd-daha-satir"><span>Ses</span><SesSecici /></div>
+            <div className="cd-daha-satir"><span>Tekrar</span><TekrarSecici /></div>
+            <div className="cd-daha-satir"><span>MP3 indir</span><IndirBag /></div>
+          </CdDaha>
         </div>
       </div>
       <Hata />

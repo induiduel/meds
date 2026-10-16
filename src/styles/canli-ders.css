@@ -507,3 +507,14 @@
   .cd-secenek { padding: 0 12px 12px; }
   .cd-kat-ad small { display: none; }
 }
+
+/* Ders ekranı sadeleştirme (2026-10-16): ikincil eylemler "⋯" menüsünde (CanliDersDaha) */
+.cd-daha { position: relative; display: inline-flex; }
+.cd-daha-menu { position: absolute; right: 0; top: calc(100% + 6px); z-index: 40; min-width: 220px; display: flex; flex-direction: column; align-items: stretch; gap: 6px;
+  padding: 8px; border: 1px solid var(--color-line); border-radius: 12px; background: var(--color-white); box-shadow: 0 10px 30px rgb(0 0 0 / .16); }
+.cd-daha-menu.is-yukari { top: auto; bottom: calc(100% + 6px); }
+.cd-daha-menu > .cd-btn, .cd-daha-menu > .cd-cd-grup, .cd-daha-menu > .cd-cd-grup > .cd-btn { justify-content: flex-start; width: 100%; }
+.cd-daha-menu .cd-btn.is-ikon { width: 100%; padding: 0 12px; }
+.cd-daha-satir { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 36px; padding: 0 4px 0 8px; font-size: 13px; font-weight: 600; color: var(--color-ink-2); }
+.cd-dock-daha .cd-daha-menu { min-width: 260px; }
+@media (max-width: 640px) { .cd-dock-daha .cd-daha-menu { right: auto; left: 50%; transform: translateX(-50%); min-width: min(280px, calc(100vw - 32px)); } }
