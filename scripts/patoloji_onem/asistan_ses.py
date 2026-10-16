@@ -3,7 +3,8 @@
 
 Girdi : meds_temp/patoloji_onem/asistan/cikti/<kod>.json  (dogrula.py 0 HATA; her cümle {metin, ses})
 Çıktı : meds/data/patoloji_asistan/ses/<kod>/<klip>.mp3 + kayit.json {klip: {h, sure, zaman: [[bas, son] cümle başına]}}
-Klipler: giris · a-<id> (adım anlatımı) · q-<id> (soru kökü) · d-<id> (doğru geri bildirimi) · y-<id>-<harf> (yanlış şık) · kapanis
+Klipler (v2): giris · b-<n> (bölümün "neden önemli" girişi) · a-<id> (nokta anlatımı) · q-<s> (soru kökü) · d-<s> (doğru) ·
+y-<s>-<harf> (yanlış şık açıklaması) · h-<s> ("Yardım al": her şık harfiyle, tek cümle) · kapanis
 
 Duraklar: cümle sonu 0,45 sn; ses metnindeki " | " 0,3 sn, " || " 0,7 sn (nefes/vurgu öncesi). Her parça ayrı sentezlenir
 (ema_isci.paragraf_seslendir: okunus.duzelt kısaltma okunuşu + süre denetimli 3 deneme). Metni değişmeyen klip yeniden üretilmez
@@ -29,22 +30,29 @@ sys.path.insert(0, str(MEDS / "scripts/sesli_anlatim"))
 import ema_isci as E  # noqa: E402
 
 E.KBPS = 48
-GIRDI = MEDS.parent / "meds_temp/patoloji_onem/asistan/cikti"
+GIRDI = MEDS.parent / "meds_temp/patoloji_onem/asistan2/cikti"
 CIKTI = MEDS / "data/patoloji_asistan/ses"
 CUMLE_SN, KISA_SN, UZUN_SN, ON_SN = 0.45, 0.3, 0.7, 0.12
 SURUM = "ema-1"
 
 
+HARF_AD = {"A": "A", "B": "Be", "C": "Ce", "D": "De", "E": "E"}
+
+
 def klipler(o: dict) -> dict[str, list[str]]:
     k: dict[str, list[str]] = {"giris": [c["ses"] for c in o.get("giris") or []], "kapanis": [c["ses"] for c in o.get("kapanis") or []]}
-    for a in o["adimlar"]:
-        k[f"a-{a['id']}"] = [c["ses"] for c in a["cumleler"]]
-        s = a.get("soru")
-        if s:
-            k[f"q-{a['id']}"] = [s["kok_ses"]]
-            k[f"d-{a['id']}"] = [s["dogru"]["ses"]]
-            for h, v in s["yanlis"].items():
-                k[f"y-{a['id']}-{h}"] = [v["ses"]]
+    for bi, b in enumerate(o["bolumler"], 1):
+        k[f"b-{bi}"] = [b["neden"]["ses"]]
+        for n in b["noktalar"]:
+            k[f"a-{n['id']}"] = [c["ses"] for c in n["cumleler"]]
+            for s in n.get("sorular") or []:
+                a = s["anahtar"]
+                k[f"q-{a}"] = [s["kok_ses"]]
+                k[f"d-{a}"] = [s["dogru"]["ses"]]
+                for h, v in s["yanlis"].items():
+                    k[f"y-{a}-{h}"] = [v["ses"]]
+                # yardım: şık sırasıyla, her biri harf adıyla başlayan bir cümle (ekranda o şık vurgulanır)
+                k[f"h-{a}"] = [f"{HARF_AD.get(h, h)} şıkkı. | {v['ses']}" for h, v in sorted(s["yardim"].items())]
     return k
 
 

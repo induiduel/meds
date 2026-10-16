@@ -1,321 +1,391 @@
 {
- "surum": "patoloji-asistan-v1",
+ "surum": "patoloji-asistan-v2",
  "ses": "EMA Lightning",
  "dersler": [
   {
    "kod": "01",
    "no": 1,
    "baslik": "Patolojiye Giriş",
-   "adim": 13,
-   "soru": 5,
+   "bolum": 7,
+   "adim": 23,
+   "soru": 22,
+   "cikmis": 7,
    "ses": true,
-   "sure": 323
+   "sure": 892
   },
   {
    "kod": "02",
    "no": 2,
    "baslik": "Hücre Hasarı ve Nekroz – I",
-   "adim": 14,
-   "soru": 7,
+   "bolum": 6,
+   "adim": 18,
+   "soru": 20,
+   "cikmis": 9,
    "ses": true,
-   "sure": 330
+   "sure": 676
   },
   {
    "kod": "03",
    "no": 3,
    "baslik": "Hücre Hasarı ve Nekroz II",
-   "adim": 16,
-   "soru": 8,
+   "bolum": 6,
+   "adim": 24,
+   "soru": 23,
+   "cikmis": 7,
    "ses": true,
-   "sure": 491
+   "sure": 1019
   },
   {
    "kod": "04",
    "no": 4,
    "baslik": "Hücresel Adaptasyonlar",
-   "adim": 10,
-   "soru": 5,
+   "bolum": 5,
+   "adim": 17,
+   "soru": 13,
+   "cikmis": 3,
    "ses": true,
-   "sure": 291
+   "sure": 639
   },
   {
    "kod": "05",
    "no": 5,
    "baslik": "Hücre İçi Birikimler ve Kalsifikasyonlar",
-   "adim": 14,
-   "soru": 8,
+   "bolum": 6,
+   "adim": 21,
+   "soru": 18,
+   "cikmis": 6,
    "ses": true,
-   "sure": 388
+   "sure": 785
   },
   {
    "kod": "06",
    "no": 6,
    "baslik": "Hücresel Yaşlanma",
-   "adim": 10,
-   "soru": 6,
+   "bolum": 6,
+   "adim": 17,
+   "soru": 13,
+   "cikmis": 2,
    "ses": true,
-   "sure": 275
+   "sure": 726
   },
   {
    "kod": "07",
    "no": 7,
    "baslik": "Akut Enflamasyon: Vasküler Değişiklikler ve Hücresel Olaylar",
-   "adim": 15,
-   "soru": 7,
+   "bolum": 7,
+   "adim": 24,
+   "soru": 31,
+   "cikmis": 18,
    "ses": true,
-   "sure": 429
+   "sure": 931
   },
   {
    "kod": "08",
    "no": 8,
    "baslik": "Enflamasyonun Kimyasal Mediyatörleri",
-   "adim": 17,
-   "soru": 7,
+   "bolum": 8,
+   "adim": 26,
+   "soru": 23,
+   "cikmis": 8,
    "ses": true,
-   "sure": 499
+   "sure": 1115
   },
   {
    "kod": "09",
    "no": 9,
    "baslik": "Kronik ve Granülomatöz Enflamasyon",
-   "adim": 11,
-   "soru": 6,
+   "bolum": 5,
+   "adim": 21,
+   "soru": 23,
+   "cikmis": 7,
    "ses": true,
-   "sure": 332
+   "sure": 797
   },
   {
    "kod": "10",
    "no": 10,
    "baslik": "Doku Onarımı ve Yara İyileşmesi",
-   "adim": 16,
-   "soru": 7,
+   "bolum": 7,
+   "adim": 22,
+   "soru": 20,
+   "cikmis": 5,
    "ses": true,
-   "sure": 414
+   "sure": 875
   },
   {
    "kod": "11",
    "no": 11,
    "baslik": "Ödem, Hiperemi, Konjesyon ve Kanama",
-   "adim": 13,
-   "soru": 7,
+   "bolum": 7,
+   "adim": 20,
+   "soru": 23,
+   "cikmis": 9,
    "ses": true,
-   "sure": 357
+   "sure": 795
   },
   {
    "kod": "12",
    "no": 12,
    "baslik": "Tromboz Patofizyolojisi",
-   "adim": 15,
-   "soru": 8,
+   "bolum": 7,
+   "adim": 27,
+   "soru": 28,
+   "cikmis": 13,
    "ses": true,
-   "sure": 409
+   "sure": 1093
   },
   {
    "kod": "13",
    "no": 13,
    "baslik": "Emboli, Enfarktüs ve Şok",
-   "adim": 15,
-   "soru": 7,
+   "bolum": 7,
+   "adim": 23,
+   "soru": 24,
+   "cikmis": 9,
    "ses": true,
-   "sure": 398
+   "sure": 890
   },
   {
    "kod": "14",
    "no": 14,
    "baslik": "Aşırı Duyarlılık ve Otoimmünite",
-   "adim": 17,
-   "soru": 8,
+   "bolum": 8,
+   "adim": 33,
+   "soru": 51,
+   "cikmis": 36,
    "ses": true,
-   "sure": 469
+   "sure": 1559
   },
   {
    "kod": "15",
    "no": 15,
    "baslik": "Genetik, Pediatrik ve Çevresel Patoloji",
-   "adim": 16,
-   "soru": 8,
+   "bolum": 8,
+   "adim": 28,
+   "soru": 23,
+   "cikmis": 10,
    "ses": true,
-   "sure": 410
+   "sure": 1035
   },
   {
    "kod": "16",
    "no": 16,
    "baslik": "Tümör Biyolojisi ve Terminolojisi",
-   "adim": 15,
-   "soru": 8,
+   "bolum": 6,
+   "adim": 25,
+   "soru": 24,
+   "cikmis": 9,
    "ses": true,
-   "sure": 396
+   "sure": 905
   },
   {
    "kod": "17",
    "no": 17,
    "baslik": "Karsinojenezin Moleküler Temeli",
-   "adim": 18,
-   "soru": 9,
+   "bolum": 6,
+   "adim": 27,
+   "soru": 23,
+   "cikmis": 10,
    "ses": true,
-   "sure": 480
+   "sure": 1060
   },
   {
    "kod": "18",
    "no": 18,
    "baslik": "İleri Tümör Genetiği ve Metabolizması",
-   "adim": 19,
-   "soru": 9,
+   "bolum": 5,
+   "adim": 27,
+   "soru": 20,
+   "cikmis": 6,
    "ses": true,
-   "sure": 481
+   "sure": 950
   },
   {
    "kod": "19",
    "no": 19,
    "baslik": "Tümör İmmünolojisi ve Metastaz Mekanizmaları",
-   "adim": 11,
-   "soru": 6,
+   "bolum": 5,
+   "adim": 18,
+   "soru": 17,
+   "cikmis": 5,
    "ses": true,
-   "sure": 312
+   "sure": 800
   },
   {
    "kod": "20",
    "no": 20,
    "baslik": "Tümör Evrelemesi, Derecelendirme ve Laboratuvar Tanısı",
-   "adim": 14,
-   "soru": 8,
+   "bolum": 7,
+   "adim": 23,
+   "soru": 25,
+   "cikmis": 12,
    "ses": true,
-   "sure": 388
+   "sure": 864
   },
   {
    "kod": "21",
    "no": 21,
    "baslik": "Glomerüler Hastalıklar: Nefrotik Sendrom",
-   "adim": 11,
-   "soru": 6,
+   "bolum": 7,
+   "adim": 21,
+   "soru": 27,
+   "cikmis": 15,
    "ses": true,
-   "sure": 332
+   "sure": 930
   },
   {
    "kod": "22",
    "no": 22,
    "baslik": "Glomerüler Hastalıklar: Nefritik Sendrom",
-   "adim": 12,
-   "soru": 7,
+   "bolum": 6,
+   "adim": 19,
+   "soru": 25,
+   "cikmis": 10,
    "ses": true,
-   "sure": 344
+   "sure": 845
   },
   {
    "kod": "23",
    "no": 23,
    "baslik": "Sistemik Hastalıklarda Böbrek Hasarı",
-   "adim": 14,
-   "soru": 7,
+   "bolum": 6,
+   "adim": 20,
+   "soru": 28,
+   "cikmis": 13,
    "ses": true,
-   "sure": 409
+   "sure": 832
   },
   {
    "kod": "24",
    "no": 24,
    "baslik": "Tübülointerstisyel Hastalıklar",
-   "adim": 12,
-   "soru": 6,
+   "bolum": 5,
+   "adim": 18,
+   "soru": 22,
+   "cikmis": 10,
    "ses": true,
-   "sure": 371
+   "sure": 761
   },
   {
    "kod": "25",
    "no": 25,
    "baslik": "Vasküler ve Kistik Böbrek Hastalıkları",
-   "adim": 15,
-   "soru": 7,
+   "bolum": 7,
+   "adim": 26,
+   "soru": 32,
+   "cikmis": 19,
    "ses": true,
-   "sure": 401
+   "sure": 1088
   },
   {
    "kod": "26",
    "no": 26,
    "baslik": "Böbrek Tümörleri",
-   "adim": 13,
-   "soru": 7,
+   "bolum": 6,
+   "adim": 19,
+   "soru": 18,
+   "cikmis": 6,
    "ses": true,
-   "sure": 352
+   "sure": 779
   },
   {
    "kod": "26b",
    "no": 27,
    "baslik": "Mesane Hastalıkları ve Tümörleri; Cinsel Yolla Bulaşan Hastalıklar",
-   "adim": 17,
-   "soru": 9,
+   "bolum": 8,
+   "adim": 30,
+   "soru": 24,
+   "cikmis": 10,
    "ses": true,
-   "sure": 441
+   "sure": 1088
   },
   {
    "kod": "28",
    "no": 28,
    "baslik": "Vulva, Vajen ve Serviks Hastalıkları",
-   "adim": 19,
-   "soru": 8,
+   "bolum": 7,
+   "adim": 26,
+   "soru": 29,
+   "cikmis": 15,
    "ses": true,
-   "sure": 501
+   "sure": 889
   },
   {
    "kod": "39",
    "no": 29,
    "baslik": "İnvaziv Serviks Kanseri ve Endometriyozis",
-   "adim": 16,
-   "soru": 8,
+   "bolum": 6,
+   "adim": 27,
+   "soru": 26,
+   "cikmis": 14,
    "ses": true,
-   "sure": 425
+   "sure": 961
   },
   {
    "kod": "30",
    "no": 30,
    "baslik": "Endometrial Hiperplazi ve Kanserleri",
-   "adim": 18,
-   "soru": 9,
+   "bolum": 7,
+   "adim": 27,
+   "soru": 42,
+   "cikmis": 30,
    "ses": true,
-   "sure": 471
+   "sure": 1047
   },
   {
    "kod": "31",
    "no": 31,
    "baslik": "Ovidukt ve Ovaryum Patolojisi",
-   "adim": 13,
-   "soru": 5,
+   "bolum": 7,
+   "adim": 27,
+   "soru": 26,
+   "cikmis": 13,
    "ses": true,
-   "sure": 367
+   "sure": 1084
   },
   {
    "kod": "32",
    "no": 32,
    "baslik": "Gebelik Hastalıkları",
-   "adim": 15,
-   "soru": 7,
+   "bolum": 6,
+   "adim": 24,
+   "soru": 23,
+   "cikmis": 10,
    "ses": true,
-   "sure": 381
+   "sure": 939
   },
   {
    "kod": "33",
    "no": 33,
    "baslik": "Memenin Benign Hastalıkları",
-   "adim": 11,
-   "soru": 7,
+   "bolum": 5,
+   "adim": 22,
+   "soru": 35,
+   "cikmis": 22,
    "ses": true,
-   "sure": 309
+   "sure": 907
   },
   {
    "kod": "34",
    "no": 34,
    "baslik": "Erkek Genital Sistem ve Prostat Hastalıkları",
-   "adim": 18,
-   "soru": 8,
+   "bolum": 8,
+   "adim": 31,
+   "soru": 46,
+   "cikmis": 32,
    "ses": true,
-   "sure": 496
+   "sure": 1386
   },
   {
    "kod": "35",
    "no": 35,
    "baslik": "Meme Kanseri ve Moleküler Tipleri",
-   "adim": 17,
-   "soru": 9,
+   "bolum": 8,
+   "adim": 27,
+   "soru": 34,
+   "cikmis": 21,
    "ses": true,
-   "sure": 430
+   "sure": 1050
   }
  ]
 }

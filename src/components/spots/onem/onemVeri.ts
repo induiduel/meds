@@ -12,6 +12,8 @@ export interface Soru { kok: string; secenekler: Record<string, string>; dogru: 
 export interface Madde {
   id: string; puan: number; baslik: string; bilgi: string; alt?: string[]; tur: Tur;
   alinti: { sayfa: number; metin: string }[]; neden: string; detay: string; ornek_soru?: Soru | null; cikmis?: string[];
+  /** 2026-27 örnek soruları (hocanın biçiminde, ders PDF'ine dayalı) */
+  ornek26?: Soru[];
   /** sınav kuralı: tablo/şekilden ve klinik bulgudan soru yok */
   kaynak?: 'metin' | 'tablo' | 'sekil'; klinik?: boolean; sinavUygun?: boolean;
   /** patoloji (morfoloji/mekanizma/tanım…) · prognoz · tedavi (sorulabilir) · klinik bulgu (sorulmaz) */

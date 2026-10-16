@@ -125,10 +125,11 @@ export const OnemMadde: React.FC<MaddeProps> = React.memo(({ m, d, gosterDers, a
   const enOlasi = !!aday && aday.sira <= (d.soruSayisi || 1);
   const cs = (m.cikmis || []).map((id) => [id, d.cikmis?.[id]] as const).filter((x): x is readonly [string, Cikmis] => !!x[1]);
   const sayfalar = [...new Set(m.alinti.map((a) => a.sayfa))].sort((a, b) => a - b);
+  const ornekSay = (m.ornek_soru ? 1 : 0) + (m.ornek26?.length || 0);
   const sekmeler: { k: Sekme; ad: string; ikon: React.ReactNode; var: boolean }[] = [
     { k: 'aciklama', ad: 'Açıklama', ikon: <BookOpen aria-hidden />, var: true },
     { k: 'alinti', ad: sayfalar.length ? `PDF s. ${sayfalar.join(', ')}` : 'PDF alıntısı', ikon: <FileText aria-hidden />, var: m.alinti.length > 0 },
-    { k: 'soru', ad: 'Örnek soru', ikon: <HelpCircle aria-hidden />, var: !!m.ornek_soru },
+    { k: 'soru', ad: ornekSay > 1 ? `Örnek soru ${ornekSay}` : 'Örnek soru', ikon: <HelpCircle aria-hidden />, var: ornekSay > 0 },
     { k: 'cikmis', ad: `Çıkmış ${cs.length}`, ikon: <History aria-hidden />, var: cs.length > 0 },
   ];
   const tikla = (k: Sekme) => onAc(m.id, acik && sekme === k ? null : k);
@@ -191,6 +192,7 @@ export const OnemMadde: React.FC<MaddeProps> = React.memo(({ m, d, gosterDers, a
           {sekme === 'alinti' && m.alinti.map((a, i) => (
             <blockquote key={i} className="on-alinti">“{a.metin}”<cite>{d.pdf} · sayfa {a.sayfa}</cite></blockquote>
           ))}
+          {sekme === 'soru' && (m.ornek26 || []).map((q, i) => <SoruKart key={`y${i}`} s={q} baslik="Örnek soru · 2026-27" />)}
           {sekme === 'soru' && m.ornek_soru && <SoruKart s={m.ornek_soru} baslik="Örnek soru" />}
           {sekme === 'cikmis' && cs.map(([id, c]) => <SoruKart key={id} s={c} baslik="Çıkmış soru" ust={c.sinav} />)}
         </div>

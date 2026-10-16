@@ -8,6 +8,7 @@ cik_by = {}
 for v in C.values():
     for c in v: cik_by.setdefault(c['id'], c)  # aynı soru birden çok derste aday olabilir: ilk kayıt esas
 dersler, cik, eksik = [], {}, []
+ES = json.load(open(f'{W}/ornek26_esleme.json')) if os.path.exists(f'{W}/ornek26_esleme.json') else {}
 NEDEN = json.load(open(f'{W}/neden/cikti.json')) if os.path.exists(f'{W}/neden/cikti.json') else {}
 for kod in sorted(L, key=lambda k: (int(re.match(r'\d+', L[k]['ad']).group()), k)):  # Drive'daki ders numarası sırası
     p = f'{W}/cikti/{kod}.json'
@@ -29,6 +30,14 @@ for kod in sorted(L, key=lambda k: (int(re.match(r'\d+', L[k]['ad']).group()), k
             m['kategori'] = v.get('kategori') or ('klinik' if m['klinik'] else 'patoloji')
         d['sinavAdaylari'] = sv['adaylar']; d['soruSayisi'] = 2 if kod == '15' else 1
     elif '--taslak' not in sys.argv: sys.exit(f'{kod}: sınav ayrımı yok')
+    # 2026-27 örnek soruları (meds_temp/patoloji_ornek26, ders PDF'ine dayalı) → eşlenen maddeye (ornek26_esle.py)
+    yp = f'{W}/../patoloji_ornek26/cikti/{kod}.json'
+    if os.path.exists(yp) and kod in ES:
+        byid = {m['id']: m for m in d['maddeler']}
+        for q in json.load(open(yp))['sorular']:
+            mid = ES[kod].get(str(q['no']))
+            if mid in byid:
+                byid[mid].setdefault('ornek26', []).append({'kok': q['soru'], 'secenekler': q['secenekler'], 'dogru': q['dogru'], 'aciklama': q.get('aciklama', '')})
     d['maddeler'].sort(key=lambda m: -m['puan'])
     for m in d['maddeler']:
         for i in m.get('cikmis') or []:

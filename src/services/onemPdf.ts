@@ -21,6 +21,7 @@ export interface OnemPdfMadde {
   alinti: { sayfa: number; metin: string }[]; neden: string; detay: string;
   ornek_soru?: { kok: string; secenekler: Record<string, string>; dogru: string; aciklama?: string } | null;
   cikmis?: string[]; kaynak?: 'metin' | 'tablo' | 'sekil'; klinik?: boolean; sinavUygun?: boolean; kategori?: string;
+  ornek26?: { kok: string; secenekler: Record<string, string>; dogru: string; aciklama?: string }[];
 }
 export interface OnemPdfDers {
   kod: string; no: number; baslik: string; pdf: string; ozet: string; neden_onemli: string; maddeler: OnemPdfMadde[];
@@ -256,9 +257,10 @@ export async function onemPdfOlustur(dersler: OnemPdfDers[], o: OnemPdfSecenek, 
 
   // ---------- içerik hazırlığı
   const sorulari = (d: OnemPdfDers) => {
-    const out: { m: OnemPdfMadde; tur: 'ornek' | 'cikmis'; id?: string }[] = [];
+    const out: { m: OnemPdfMadde; tur: 'ornek' | 'ornek26' | 'cikmis'; id?: string }[] = [];
     const goruldu = new Set<string>();
     for (const m of d.maddeler) {
+      if (o.ornekSoru) for (let i = 0; i < (m.ornek26 || []).length; i++) out.push({ m, tur: 'ornek26', id: String(i) });
       if (o.ornekSoru && m.ornek_soru) out.push({ m, tur: 'ornek' });
       if (o.cikmis) for (const id of m.cikmis || []) {
         if (!d.cikmis?.[id] || goruldu.has(id)) continue;
@@ -542,6 +544,11 @@ export async function onemPdfOlustur(dersler: OnemPdfDers[], o: OnemPdfSecenek, 
         else zengin(s, dx, w, 8.3 * k, INK2, { vurgu: c });
       }
     }
+    if (o.ornekSoru) for (const q of m.ornek26 || []) {
+      y += 1.2;
+      soruYaz(q.kok, q.secenekler, dx, 'Soru');
+      anahtar.push(`**${soruNo}) ${q.dogru}**${q.aciklama ? ' — ' + q.aciklama : ''}`);
+    }
     if (o.ornekSoru && m.ornek_soru) {
       y += 1.2;
       soruYaz(m.ornek_soru.kok, m.ornek_soru.secenekler, dx, 'Soru');
@@ -645,7 +652,11 @@ export async function onemPdfOlustur(dersler: OnemPdfDers[], o: OnemPdfSecenek, 
 
     if (mod === 'soru') {
       for (const s of sorulari(d)) {
-        if (s.tur === 'ornek') {
+        if (s.tur === 'ornek26') {
+          const q = s.m.ornek26![Number(s.id)];
+          soruYaz(q.kok, q.secenekler, 0, 'Soru');
+          anahtar.push(`**${soruNo}) ${q.dogru}** — ${q.aciklama || s.m.baslik}`);
+        } else if (s.tur === 'ornek') {
           soruYaz(s.m.ornek_soru!.kok, s.m.ornek_soru!.secenekler, 0, 'Soru');
           anahtar.push(`**${soruNo}) ${s.m.ornek_soru!.dogru}** — ${s.m.ornek_soru!.aciklama || s.m.baslik}`);
         } else {

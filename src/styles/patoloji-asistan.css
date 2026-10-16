@@ -199,3 +199,39 @@
 }
 @media (max-width: 380px) { .pa-oto span { display: none; } }
 @media (prefers-reduced-motion: reduce) { .pa, .pa * { animation: none !important; transition: none !important; } }
+
+/* ---------- v2: bölümler, ders planı, Yardım al ---------- */
+.pa-seg.is-bolum { margin-left: 6px; }
+.pa-seg.is-d2 { background: var(--color-warn); }
+.pa-plan { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 6px; }
+.pa-plan li { display: flex; align-items: center; gap: 10px; font-size: 15px; font-weight: 600; color: var(--color-ink-2); }
+.pa-plan li span { flex-shrink: 0; width: 26px; height: 26px; border-radius: 8px; display: grid; place-items: center; background: var(--color-field); font-size: 12.5px; font-weight: 800; color: var(--color-ink-3); }
+.pa-bolum { border-color: color-mix(in srgb, var(--color-accent) 30%, var(--color-line)); background: linear-gradient(160deg, color-mix(in srgb, var(--color-accent) 7%, var(--color-white)), var(--color-white) 60%); }
+.pa-bolum-l { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 4px; }
+.pa-bolum-l li { display: flex; align-items: center; gap: 10px; padding: 8px 10px; border-radius: 10px; background: var(--color-field); font-size: 14.5px; line-height: 1.4; }
+.pa-bolum-l li > span:not(.pa-nokta) { flex: 1; min-width: 0; }
+.pa-bolum-l li small { flex-shrink: 0; font-size: 12px; font-weight: 700; color: var(--color-accent); }
+.pa-bolum-l svg.is-aday { width: 15px; height: 15px; flex-shrink: 0; color: var(--star); fill: var(--star); }
+.pa-nokta { width: 7px; height: 7px; margin: 0 4px; border-radius: 50%; flex-shrink: 0; background: var(--color-ink-3); }
+.pa-sonra { margin: 0; display: flex; align-items: center; gap: 7px; font-size: 13.5px; font-weight: 600; color: var(--color-accent); }
+.pa-sonra svg { width: 16px; height: 16px; }
+.pa-soru-tur.t-ornek26 { background: var(--color-ai); }
+.pa-soru-tur.t-ornek { background: var(--color-ink-2); }
+.pa-btn.is-yardim { border-color: color-mix(in srgb, var(--color-ai) 40%, transparent); background: color-mix(in srgb, var(--color-ai) 9%, var(--color-white)); color: var(--color-ai) !important; }
+.pa-sik.is-yardim { border-color: var(--color-ai); box-shadow: 0 0 0 2px color-mix(in srgb, var(--color-ai) 30%, transparent); background: color-mix(in srgb, var(--color-ai) 7%, var(--color-white)); }
+.pa-yardim { padding: 12px 14px; border-radius: 14px; background: color-mix(in srgb, var(--color-ai) 7%, var(--color-white)); border: 1px solid color-mix(in srgb, var(--color-ai) 25%, transparent);
+  display: flex; flex-direction: column; gap: 8px; animation: pa-sahne .25s backwards; }
+.pa-yardim > b { display: inline-flex; align-items: center; gap: 7px; font-size: 14px; color: var(--color-ai); }
+.pa-yardim > b svg { width: 16px; height: 16px; }
+.pa-yardim ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 4px; }
+.pa-yardim li { display: flex; gap: 10px; align-items: flex-start; padding: 7px 8px; border-radius: 10px; font-size: 15px; line-height: 1.5; color: var(--color-ink-2); transition: background .2s, color .2s; }
+.pa-yardim li.is-aktif { background: color-mix(in srgb, var(--color-ai) 14%, transparent); color: var(--color-ink); }
+.pa-yardim li.is-dogru .pa-yardim-h { background: var(--color-ok); color: #fff; }
+.pa-yardim li.is-elenen { opacity: .75; }
+.pa-yardim-h { flex-shrink: 0; width: 26px; height: 26px; border-radius: 8px; display: grid; place-items: center; background: color-mix(in srgb, var(--color-ai) 16%, transparent); color: var(--color-ai); font-weight: 800; font-size: 13px; }
+@media (max-width: 640px) {
+  .pa-yardim li { font-size: 14px; }
+  .pa-plan li, .pa-bolum-l li { font-size: 14px; }
+  .pa-ayar { flex-wrap: wrap; justify-content: flex-end; }
+  .pa-sec select { max-width: 112px; }
+}

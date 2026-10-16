@@ -149,6 +149,7 @@ export const OnemPdfPenceresi: React.FC<{ dizin: Dizin; secili: string | null; e
         if (!uyar(d, m)) continue;
         r.toplam++; dv++;
         if (m.ornek_soru) r.soru++;
+        r.soru += m.ornek26?.length || 0;
         for (const id of m.cikmis || []) if (d.cikmis?.[id]) cg.add(id);
       }
       r.cikmis += cg.size;
