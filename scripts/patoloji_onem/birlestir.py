@@ -17,11 +17,19 @@ for kod in sorted(L, key=lambda k: (int(re.match(r'\d+', k).group()), k)):
     d = json.load(open(p))
     d['no'] = int(re.match(r'\d+', L[kod]['ad']).group()); d['pdf'] = L[kod]['ad']; d['kod'] = kod
     if kod in NEDEN: d['neden_onemli'] = NEDEN[kod]
+    sp = f'{W}/sinav/cikti/{kod}.json'
+    if os.path.exists(sp):
+        sv = json.load(open(sp))
+        for m in d['maddeler']:
+            v = sv['maddeler'].get(m['id']) or {}
+            m['kaynak'] = v.get('kaynak', 'metin'); m['klinik'] = bool(v.get('klinik')); m['sinavUygun'] = m['kaynak'] == 'metin' and not m['klinik']
+        d['sinavAdaylari'] = sv['adaylar']; d['soruSayisi'] = 2 if kod == '15' else 1
+    elif '--taslak' not in sys.argv: sys.exit(f'{kod}: sınav ayrımı yok')
     d['maddeler'].sort(key=lambda m: -m['puan'])
     for m in d['maddeler']:
         for i in m.get('cikmis') or []:
             c = cik_by[i]; cik[i] = {'sinav': c['sinav'], 'kok': c['kok'], 'secenekler': c['secenekler'], 'dogru': c['dogru']}
-    dersler.append({k: d[k] for k in ('kod', 'no', 'baslik', 'pdf', 'ozet', 'neden_onemli', 'maddeler')})
+    dersler.append({k: d[k] for k in ('kod', 'no', 'baslik', 'pdf', 'ozet', 'neden_onemli', 'maddeler', 'sinavAdaylari', 'soruSayisi') if k in d})
 # ders başına dosya (görünüm yalnız seçilen dersi indirir) + küçük dizin
 import shutil
 OD = '/home/indu/medsor/meds/src/data/patoloji_onem'

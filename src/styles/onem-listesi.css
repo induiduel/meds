@@ -100,3 +100,55 @@
   .ol-bilgi { font-size: 14.5px; }
   .ol-part-not { display: none; }
 }
+
+/* ---------- sınav kuralı: adaylar, sorulmayanlar ---------- */
+.ol-page { --star: color-mix(in srgb, var(--color-warn) 55%, #c08a00); }
+.ol-head { display: flex; align-items: flex-start; gap: 12px; justify-content: space-between; flex-wrap: wrap; }
+.ol-head > div { flex: 1 1 260px; min-width: 0; }
+.ol-btn.is-dolu { background: var(--color-accent); color: var(--color-on-accent, #fff); height: 36px; padding: 0 14px; display: inline-flex; align-items: center; gap: 6px; }
+.ol-btn.is-dolu:disabled { opacity: .55; cursor: default; }
+.ol-btn svg { width: 16px; height: 16px; }
+.ol-kural { padding: 10px 12px; border-radius: 12px; border: 1px solid color-mix(in srgb, var(--star) 40%, transparent); background: color-mix(in srgb, var(--star) 9%, transparent);
+  font-size: 13.5px; line-height: 1.5; color: var(--color-ink); display: block; }
+.ol-kural > span { margin-top: 3px; display: flex; align-items: center; gap: 4px; font-size: 12.5px; color: var(--color-ink-2); }
+.ol-kural svg { width: 13px; height: 13px; color: var(--star); fill: var(--star); }
+.ol-sinavchip { --b: var(--star); }
+
+.ol-aday { display: inline-flex; align-items: center; gap: 3px; font-size: 10.5px; font-weight: 800; text-transform: uppercase; letter-spacing: .04em; padding: 1px 7px; border-radius: 6px;
+  color: color-mix(in srgb, var(--star) 85%, var(--color-ink)); background: color-mix(in srgb, var(--star) 14%, transparent); }
+.ol-aday svg { width: 11px; height: 11px; fill: currentColor; }
+.ol-aday.is-en { background: var(--star); color: #fff; }
+.ol-m.is-aday { box-shadow: 0 0 0 1.5px color-mix(in srgb, var(--star) 55%, transparent); }
+.ol-dis { font-size: 10.5px; font-weight: 700; padding: 1px 7px; border-radius: 6px; color: var(--color-ink-3); background: var(--color-field); text-decoration: line-through; text-decoration-thickness: 1px; }
+.ol-m.is-dis .ol-bilgi { color: var(--color-ink-2); }
+.ol-m.is-dis .ol-puan { opacity: .55; }
+.ol-aday-g, .ol-dis-g { margin-top: 6px !important; display: flex; gap: 6px; align-items: flex-start; font-size: 13.5px !important; }
+.ol-aday-g svg { width: 14px; height: 14px; flex-shrink: 0; margin-top: 3px; color: var(--star); fill: var(--star); }
+.ol-dis-g { color: var(--color-ink-3) !important; font-style: italic; }
+
+.ol-adaylar { padding: 12px 14px; border-radius: 14px; border: 1.5px solid color-mix(in srgb, var(--star) 55%, transparent); background: color-mix(in srgb, var(--star) 7%, var(--color-white)); }
+.ol-adaylar h3 { margin: 0 0 8px; display: flex; align-items: center; gap: 6px; flex-wrap: wrap; font-size: 15px; font-weight: 800; color: var(--color-ink); }
+.ol-adaylar h3 svg { width: 16px; height: 16px; color: var(--star); fill: var(--star); }
+.ol-adaylar h3 span { font-size: 12px; font-weight: 700; color: var(--star); background: color-mix(in srgb, var(--star) 14%, transparent); padding: 2px 8px; border-radius: 999px; }
+.ol-adaylar ol { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 6px; }
+.ol-adaylar li { display: flex; gap: 10px; align-items: flex-start; padding: 8px 10px; border-radius: 10px; background: var(--color-white); border: 1px solid var(--color-line); }
+.ol-adaylar li.is-en { border-color: var(--star); box-shadow: 0 0 0 1px var(--star); }
+.ol-aday-no { flex-shrink: 0; width: 26px; height: 26px; border-radius: 8px; display: grid; place-items: center; font-weight: 800; font-size: 13px;
+  background: color-mix(in srgb, var(--star) 16%, transparent); color: var(--star); }
+.ol-adaylar li.is-en .ol-aday-no { background: var(--star); color: #fff; }
+.ol-aday-t { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+.ol-aday-t small { font-size: 12.5px; line-height: 1.45; color: var(--color-ink-2); }
+.ol-aday-t small b { color: var(--star); }
+.ol-aday-p { flex-shrink: 0; font-size: 12px; font-weight: 800; color: var(--color-ink-3); font-variant-numeric: tabular-nums; }
+
+/* PDF penceresi */
+.ol-pdf { display: flex; flex-direction: column; gap: 14px; }
+.ol-pdf fieldset { border: 0; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 6px; }
+.ol-pdf legend { font-size: 11.5px; font-weight: 800; text-transform: uppercase; letter-spacing: .05em; color: var(--color-ink-3); margin-bottom: 4px; }
+.ol-pdf-r, .ol-pdf-ck { display: flex; align-items: flex-start; gap: 8px; font-size: 14px; color: var(--color-ink); cursor: pointer; }
+.ol-pdf-r input, .ol-pdf-ck input { margin-top: 3px; accent-color: var(--color-accent); }
+.ol-pdf-ck span { display: flex; flex-direction: column; }
+.ol-pdf-ck small { font-size: 12px; color: var(--color-ink-3); }
+.ol-pdf-dersler { max-height: 220px; overflow: auto; padding: 8px 10px; border-radius: 10px; background: var(--color-field); display: flex; flex-direction: column; gap: 4px; }
+.ol-pdf-puan { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 4px; }
+.ol-pdf-f { display: flex; align-items: center; justify-content: space-between; gap: 10px; width: 100%; font-size: 13px; color: var(--color-ink-3); }
