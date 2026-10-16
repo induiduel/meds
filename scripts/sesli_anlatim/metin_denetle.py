@@ -28,7 +28,9 @@ def denetle(p: Path):
             continue
         if re.search(r'[*#|>\[\]{}=_`~]', l): hatalar.append(f'{i}: markdown/simge: {l[:70]}')
         if re.match(r'\s*[-•–]\s', l): hatalar.append(f'{i}: madde imi: {l[:70]}')
-        if re.search(r'\d', l): hatalar.append(f'{i}: rakam (yazıyla yaz): {re.findall(r".{0,15}\d+.{0,10}", l)[0]}')
+        if re.search(r'\d', l):
+            ornek = re.findall(r".{0,15}\d+.{0,10}", l)[0]
+            hatalar.append(f'{i}: rakam (yazıyla yaz): {ornek}')
         if re.search(r'[%↑↓→←±≈≥≤×/+<⁰¹²³⁴⁵⁶⁷⁸⁹₀₁₂₃₄₅₆₇₈₉]', l): hatalar.append(f'{i}: simge (yazıyla yaz): {l[:70]}')
         if re.search(r'[αβγδκλμθπσΔ]', l): hatalar.append(f'{i}: Yunan harfi (alfa, beta…): {l[:70]}')
         if re.search(r'[()]', l): uyarilar.append(f'{i}: parantez')
