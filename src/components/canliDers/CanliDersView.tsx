@@ -270,6 +270,8 @@ const DersSatiri = React.memo(function DersSatiri({ d, k }: { d: CdListeDers; k?
           <IndirDugme d={d} v={v} />
           <CevrimdisiDugme dersKey={d.key} baslik={d.baslik} varyantlar={d.varyantlar} />
           <ListeEkleDugme dersKey={d.key} baslik={d.baslik} />
+        </div>
+        <div className="cd-satir-diger">
           {diger.length > 0 ? (
             <button
               type="button"

@@ -33,6 +33,8 @@ import { LearnFab } from './components/learn/LearnFab';
 import { Onboarding } from './components/onboarding/Onboarding';
 import { tourSeen } from './components/onboarding/tourState';
 const WelcomeTour = React.lazy(() => import('./components/onboarding/WelcomeTour'));
+import { girisUyarisiKabulEdildi } from './components/onboarding/girisUyarisiDurum';
+const GirisUyarisi = React.lazy(() => import('./components/onboarding/GirisUyarisi'));
 import { PageLoader } from './components/ui/Animations';
 import { ToastHost, toast } from './components/ui/Toast';
 import { TooltipHost } from './components/ui/TooltipHost';
@@ -794,6 +796,8 @@ export default function App() {
 
   // Hoş geldin turu: kayıt/girişten sonra bir kez (profilde `medsoru_tour_v1`); Ayarlar'dan `medsoru:tour` ile yeniden
   const [showTour, setShowTour] = useState(false);
+  // Giriş bilgilendirmesi (yapay zekâ uyarısı): kabul edilmeden uygulama kullanılmaz; turlar kabulü bekler
+  const [girisUyarisi, setGirisUyarisi] = useState(() => !girisUyarisiKabulEdildi());
   const justAuthedRef = useRef(false);
   const activeTabRef = useRef(activeTab);
   activeTabRef.current = activeTab;
@@ -803,7 +807,7 @@ export default function App() {
     return () => window.removeEventListener('medsoru:tour', on);
   }, []);
   useEffect(() => {
-    if (!currentUser || isAdmin || showOnboarding || tourSeen()) return;
+    if (!currentUser || isAdmin || showOnboarding || girisUyarisi || tourSeen()) return;
     // Başka cihazda turu görmüş öğrencinin profili gelsin diye kısa bekle (eşitleme `medsoru_tour_v1`'i getirir)
     let fired = false;
     const check = () => {
@@ -820,7 +824,7 @@ export default function App() {
       window.clearTimeout(t);
       window.removeEventListener('medsoru:user-data-restored', onRestored);
     };
-  }, [currentUser?.uid, isAdmin, showOnboarding]);
+  }, [currentUser?.uid, isAdmin, showOnboarding, girisUyarisi]);
 
   // Real-time health monitoring: only for admin (saves student network and battery)
   useEffect(() => {
@@ -1403,6 +1407,11 @@ export default function App() {
   return (
     <GlossaryProvider>
     <MusicPlayerProvider>
+      {girisUyarisi && (
+        <Suspense fallback={null}>
+          <GirisUyarisi onKabul={() => setGirisUyarisi(false)} />
+        </Suspense>
+      )}
       {showOnboarding && !currentUser && <Onboarding onAuthSuccess={handleAuthSuccess} />}
       {showTour && (
         <Suspense fallback={null}>

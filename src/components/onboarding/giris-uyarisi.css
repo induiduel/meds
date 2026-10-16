@@ -1,0 +1,82 @@
+/* Giriş bilgilendirmesi (GirisUyarisi.tsx). Önek gu-. Tüm tasarımlarda aynı; renkler palet token'larından.
+ * Masaüstünde ortada kart, telefonda (<640px) alttan tam genişlik sayfa; gövde kayar, alt bölüm sabit. */
+.gu-ortu { position: fixed; inset: 0; z-index: 1000; display: flex; align-items: center; justify-content: center;
+  padding: 24px 16px; background: var(--color-scrim, rgb(16 24 36 / .45)); backdrop-filter: blur(3px); -webkit-backdrop-filter: blur(3px);
+  animation: gu-ortu-gir .2s ease-out both; }
+.gu-ortu.is-cikis { animation: gu-ortu-cik .18s ease-in both; }
+.gu-kart { display: flex; flex-direction: column; width: min(540px, 100%); max-height: min(720px, calc(100dvh - 48px)); overflow: hidden;
+  border: 1px solid var(--color-line); border-radius: 18px; background: var(--color-white); color: var(--color-ink);
+  box-shadow: 0 24px 64px rgb(0 0 0 / .22); font-family: var(--font-sans, inherit); animation: gu-kart-gir .22s cubic-bezier(.2, .8, .2, 1) both; }
+.gu-ortu.is-cikis .gu-kart { animation: gu-kart-cik .18s ease-in both; }
+.gu-kart:focus { outline: none; }
+
+.gu-bas { display: flex; align-items: center; gap: 12px; padding: 20px 22px 12px; flex: none; }
+.gu-marka { display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; flex: none; border-radius: 12px;
+  background: var(--color-accent); color: var(--color-on-accent, #fff); }
+.gu-marka > svg { width: 22px; height: 22px; }
+.gu-bas small { display: block; font-size: 11.5px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; color: var(--color-ink-3); }
+.gu-bas h2 { margin: 2px 0 0; font-size: 20px; font-weight: 700; line-height: 1.25; letter-spacing: -.01em; color: var(--color-ink); }
+
+.gu-govde { flex: 1 1 auto; min-height: 0; overflow-y: auto; overscroll-behavior: contain; padding: 4px 22px 16px; display: flex; flex-direction: column; gap: 14px; }
+
+.gu-ai { display: flex; gap: 12px; padding: 14px; border-radius: 14px; border: 1px solid color-mix(in srgb, var(--color-warn) 45%, transparent);
+  background: var(--color-warn-soft); color: var(--color-ink); }
+.gu-ai-ikon { display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 34px; flex: none; border-radius: 10px;
+  background: var(--color-warn); color: var(--color-warn-soft); }
+.gu-ai-ikon > svg { width: 19px; height: 19px; }
+.gu-ai b { display: block; font-size: 15px; font-weight: 700; line-height: 1.35; color: var(--color-warn); }
+.gu-ai p { margin: 4px 0 0; font-size: 13.5px; line-height: 1.55; color: var(--color-ink); }
+
+.gu-giris { display: flex; align-items: flex-start; gap: 8px; margin: 0; font-size: 13.5px; line-height: 1.5; color: var(--color-ink-2); }
+.gu-giris > svg { width: 16px; height: 16px; flex: none; margin-top: 2px; color: var(--color-accent); }
+
+.gu-liste { display: flex; flex-direction: column; gap: 4px; margin: 0; padding: 0; list-style: none; }
+.gu-liste li { display: flex; gap: 12px; padding: 10px 4px; border-top: 1px solid var(--color-line-soft, var(--color-line)); }
+.gu-liste li:first-child { border-top: 0; }
+.gu-ikon { display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; flex: none; border-radius: 10px;
+  background: var(--color-accent-soft); color: var(--color-accent); }
+.gu-ikon > svg { width: 17px; height: 17px; }
+.gu-liste li > span:last-child { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.gu-liste b { font-size: 14px; font-weight: 650; line-height: 1.35; color: var(--color-ink); }
+.gu-liste li > span:last-child > span { font-size: 13px; line-height: 1.5; color: var(--color-ink-2); }
+
+.gu-alt { display: flex; flex-direction: column; gap: 12px; padding: 14px 22px calc(18px + env(safe-area-inset-bottom, 0px)); flex: none;
+  border-top: 1px solid var(--color-line); background: var(--color-canvas, var(--color-white)); }
+.gu-onay { position: relative; display: flex; align-items: flex-start; gap: 10px; padding: 10px 12px; border: 1.5px solid var(--color-line); border-radius: 12px;
+  background: var(--color-white); font-size: 13.5px; line-height: 1.45; color: var(--color-ink); cursor: pointer; transition: border-color .15s, background-color .15s; }
+.gu-onay:hover { border-color: var(--color-ink-3); }
+.gu-onay.is-on { border-color: var(--color-accent); background: var(--color-accent-soft); }
+.gu-onay > input { position: absolute; opacity: 0; width: 1px; height: 1px; pointer-events: none; }
+.gu-onay:has(> input:focus-visible) { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+.gu-kutu { display: inline-flex; align-items: center; justify-content: center; width: 22px; height: 22px; flex: none; margin-top: -1px; border-radius: 7px;
+  border: 1.5px solid var(--color-ink-3); background: var(--color-white); color: transparent; transition: background-color .15s, border-color .15s, color .15s; }
+.gu-kutu > svg { width: 15px; height: 15px; stroke-width: 3; }
+.gu-onay.is-on .gu-kutu { border-color: var(--color-accent); background: var(--color-accent); color: var(--color-on-accent, #fff); }
+.gu-btn { display: inline-flex; align-items: center; justify-content: center; height: 46px; padding: 0 18px; border: 0; border-radius: 12px;
+  background: var(--color-accent); color: var(--color-on-accent, #fff); font: inherit; font-size: 15px; font-weight: 700; cursor: pointer;
+  transition: filter .15s, opacity .15s, transform .12s; }
+.gu-btn:hover:not(:disabled) { filter: brightness(1.06); }
+.gu-btn:active:not(:disabled) { transform: scale(.985); }
+.gu-btn:disabled { opacity: .45; cursor: not-allowed; }
+.gu-btn:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+
+@media (max-width: 639px) {
+  .gu-ortu { align-items: flex-end; padding: 12px 0 0; }
+  .gu-kart { width: 100%; max-height: calc(100dvh - 12px); border-radius: 20px 20px 0 0; border-bottom: 0; animation-name: gu-sayfa-gir; }
+  .gu-ortu.is-cikis .gu-kart { animation-name: gu-sayfa-cik; }
+  .gu-bas { padding: 18px 16px 10px; }
+  .gu-bas h2 { font-size: 18px; }
+  .gu-govde { padding: 2px 16px 14px; }
+  .gu-alt { padding-left: 16px; padding-right: 16px; }
+}
+
+@keyframes gu-ortu-gir { from { opacity: 0; } }
+@keyframes gu-ortu-cik { to { opacity: 0; } }
+@keyframes gu-kart-gir { from { opacity: 0; transform: translateY(8px) scale(.98); } }
+@keyframes gu-kart-cik { to { opacity: 0; transform: translateY(6px) scale(.98); } }
+@keyframes gu-sayfa-gir { from { transform: translateY(100%); } }
+@keyframes gu-sayfa-cik { to { transform: translateY(100%); } }
+@media (prefers-reduced-motion: reduce) {
+  .gu-ortu, .gu-kart, .gu-ortu.is-cikis, .gu-ortu.is-cikis .gu-kart { animation: none; }
+  .gu-onay, .gu-kutu, .gu-btn { transition: none; }
+}

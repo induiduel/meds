@@ -436,8 +436,9 @@ function kaynakKur(o: CdOzet, vid: string, t0: number, oynat: boolean) {
 /** Dersi/varyantı çal. Aynı ders ve varyant ise yalnız oynat/duraklat. Kullanıcı hareketi içinde çağrılmalı. */
 export function cdOynat(o: CdOzet, vid?: string, opts: { t?: number; oynat?: boolean } = {}) {
   const oynat = opts.oynat ?? true;
-  // İnternet yokken cihaza indirilen ses çalınır (başka ses açılamaz)
-  const v = cdCevrimdisiVid(o.key) || vid || (st.key === o.key && st.vid ? st.vid : tercihVaryant(o.varyantlar));
+  // İnternet yokken cihaza indirilen seslerden biri çalınır (indirilmemiş ses açılamaz)
+  const kendi = vid || (st.key === o.key && st.vid ? st.vid : tercihVaryant(o.varyantlar));
+  const v = cdCevrimdisiVid(o.key, [vid, st.key === o.key ? st.vid : null, kendi]) || kendi;
   if (!v) return;
   if (st.key === o.key && st.vid === v && audio?.getAttribute('src')) {
     if (opts.t != null) cdAtla(opts.t);

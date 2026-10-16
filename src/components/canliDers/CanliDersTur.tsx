@@ -89,7 +89,7 @@ const LISTE: Durak[] = [
     optional: true,
   },
   {
-    sel: `${satir} .cd-btn.is-ikon`,
+    sel: `${satir} .cd-satir-diger .cd-btn`,
     icon: SlidersHorizontal,
     eyebrow: 'Alternatif sesler',
     title: 'Başka bir sesle dinle',
@@ -125,10 +125,19 @@ const DERS: Durak[] = [
   {
     sel: '.cd-sekmeler',
     icon: MonitorSmartphone,
-    eyebrow: 'Telefonda',
-    title: 'Metin ve PDF sekmeleri',
-    text: 'Dar ekranda metin ile ders PDF’i sekmelere ayrılır; ikisi arasında geç.',
-    points: ['Ses sekme değiştirince durmaz', 'PDF sekmesinde de anlatılan sayfa kendiliğinden açılır'],
+    eyebrow: 'Görünüm',
+    title: 'Metin, Metin + PDF ya da yalnız PDF',
+    text: 'İstediğin görünümü seç; Metin + PDF ekranı böler (telefonda üstte PDF, altta metin).',
+    points: ['Seçimin bu cihazda hatırlanır', 'Ses görünüm değişince durmaz; anlatılan sayfa kendiliğinden açılır'],
+    optional: true,
+  },
+  {
+    sel: '.cd-tam-btn',
+    icon: MonitorSmartphone,
+    eyebrow: 'Odak',
+    title: 'Tam ekran',
+    text: 'Menüler ve oynatıcı gizlenir, yalnız metin ve PDF kalır. Ses çalmayı sürdürür.',
+    points: ['Sağ alttaki düğmeyle oynat/duraklat ya da oynatıcıyı aç', 'Çıkmak için sağ üstteki düğme ya da Esc'],
     optional: true,
   },
   {

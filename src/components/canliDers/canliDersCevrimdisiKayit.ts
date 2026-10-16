@@ -3,13 +3,24 @@
  * oynatıcı internet yokken indirilmiş sesi seçer, kapı (CanliDersDockGate) silme sorusunun zamanını buradan okur.
  * Önbellek işleri canliDersCevrimdisi.ts'te.
  */
+/** Cihaza indirilen tek ses varyantı */
+export interface CdCevrimdisiSes {
+  vid: string;
+  surum: number;
+  etiket?: string;
+  bayt: number;
+}
 export interface CdCevrimdisiKayit {
+  /** İlk (birincil) ses — eski kayıtlar yalnız bunu taşır */
   vid: string;
   surum: number;
   etiket?: string;
   baslik: string;
   no: string;
+  /** Toplam (sesler + PDF) */
   bayt: number;
+  /** İndirilen tüm sesler (yoksa yalnız `vid`) */
+  sesler?: CdCevrimdisiSes[];
   pdfler: string[];
   deckId?: string;
   at: number;
@@ -41,10 +52,22 @@ export function cdCevrimdisiYaz(key: string, k: CdCevrimdisiKayit | null) {
   window.dispatchEvent(new Event(CD_CEVRIMDISI_DEGISTI));
 }
 
-/** İnternet yokken oynatıcının seçeceği ses: cihaza indirilen varyant */
-export function cdCevrimdisiVid(key: string): string | null {
+/** Kaydın sesleri (eski tek sesli kayıtlar dahil) */
+export function cdKayitSesleri(k: CdCevrimdisiKayit | null | undefined): CdCevrimdisiSes[] {
+  if (!k) return [];
+  if (Array.isArray(k.sesler) && k.sesler.length) return k.sesler;
+  return k.vid ? [{ vid: k.vid, surum: k.surum, etiket: k.etiket, bayt: k.bayt }] : [];
+}
+
+/**
+ * İnternet yokken oynatıcının seçeceği ses: istenen adaylardan (seçilen, çalan, tercih) cihazda olan ilki,
+ * yoksa cihazdaki ilk ses. İnternet varken null (oynatıcı kendi seçer).
+ */
+export function cdCevrimdisiVid(key: string, adaylar: (string | null | undefined)[] = []): string | null {
   if (typeof navigator === 'undefined' || navigator.onLine) return null;
-  return cdCevrimdisiKayitlari()[key]?.vid || null;
+  const sesler = cdKayitSesleri(cdCevrimdisiKayitlari()[key]);
+  if (!sesler.length) return null;
+  return adaylar.find((a) => a && sesler.some((x) => x.vid === a)) || sesler[0].vid;
 }
 
 type Soru = Record<string, { ertele?: number; bildirildi?: boolean }>;

@@ -1,10 +1,11 @@
 /**
- * Canlı ders ekranı (/canliders/<key>): masaüstünde solda ders PDF'i, sağda konuşma metni; telefonda sekmeli.
+ * Canlı ders ekranı (/canliders/<key>): üç görünüm — Metin, Metin + PDF (bölünmüş: masaüstünde yan yana, telefonda üst-alt),
+ * yalnız PDF (seçim cihazda saklanır). Tam ekran: kabuk gizlenir, oynatıcı saklanır ama tek dokunuşla açılır.
  * Metin sesle akar (etkin paragraf + tahmini cümle vurgusu), görünüm etkin paragrafı ortada tutar; kullanıcı elle
  * kaydırınca/PDF'i gezince takip 8 sn durur ve "Canlı konuma dön" çıkar. Oynatıcı alt çubuktadır (CanliDersDock).
  */
 import React, { Suspense, lazy, memo, useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react';
-import { ChevronLeft, Crosshair, FileText, Minus, Play, Plus, ScrollText } from 'lucide-react';
+import { ChevronLeft, ChevronUp, Columns2, Crosshair, FileText, Maximize2, Minimize2, Minus, Pause, Play, Plus, ScrollText } from 'lucide-react';
 import { navigateTo, pathFor } from '../../router';
 import { driveViewUrl, useDeckPdf } from '../../services/deckPdfService';
 import {
@@ -51,12 +52,34 @@ function useTakip() {
 
 const genisMi = () => typeof window !== 'undefined' && window.matchMedia('(min-width: 900px)').matches;
 
+type Gorunum = 'metin' | 'ikisi' | 'pdf';
+const GORUNUM_KEY = 'medsoru_canli_ders_gorunum';
+/** Kayıtlı görünüm; yoksa geniş ekranda bölünmüş, telefonda metin */
+const ilkGorunum = (): Gorunum => {
+  try {
+    const v = localStorage.getItem(GORUNUM_KEY);
+    if (v === 'metin' || v === 'ikisi' || v === 'pdf') return v;
+  } catch { /* yok */ }
+  return genisMi() ? 'ikisi' : 'metin';
+};
+const GORUNUMLER: { id: Gorunum; ad: string; ikon: React.ReactNode }[] = [
+  { id: 'metin', ad: 'Metin', ikon: <ScrollText aria-hidden /> },
+  { id: 'ikisi', ad: 'Metin + PDF', ikon: <Columns2 aria-hidden /> },
+  { id: 'pdf', ad: 'PDF', ikon: <FileText aria-hidden /> },
+];
+
 export default function CanliDersDers({ dersKey }: { dersKey: string }) {
   const [detay, setDetay] = useState<CdDetay | null>(null);
   const [hata, setHata] = useState<string | null>(null);
   const [baglanti, setBaglanti] = useState<'bagli' | 'yuklendi' | 'baska' | null>(null);
   const [genis, setGenis] = useState(genisMi);
-  const [sekme, setSekme] = useState<'metin' | 'pdf'>('metin');
+  const [gorunum, setGorunumDurum] = useState<Gorunum>(ilkGorunum);
+  const setGorunum = (g: Gorunum) => {
+    setGorunumDurum(g);
+    try { localStorage.setItem(GORUNUM_KEY, g); } catch { /* yok */ }
+  };
+  const [tamEkran, setTamEkran] = useState(false);
+  const [oynaticiAcik, setOynaticiAcik] = useState(false);
   const rootRef = useRef<HTMLDivElement>(null);
   const [yuk, setYuk] = useState<number | null>(null);
   const caliyorKey = useCd((s) => s.key);
@@ -89,6 +112,44 @@ export default function CanliDersDers({ dersKey }: { dersKey: string }) {
     mq.addEventListener('change', on);
     return () => mq.removeEventListener('change', on);
   }, []);
+
+  // Tam ekran: kabuk (menü, üst çubuk, alt sekmeler) gizlenir; oynatıcı saklı, "Oynatıcı" ile açılır.
+  // Tarayıcı tam ekranı da istenir (destekleyen yerde); Esc ya da tarayıcıdan çıkış modu kapatır.
+  useEffect(() => {
+    const kok = document.documentElement;
+    kok.classList.toggle('cd-tam-ekran', tamEkran);
+    kok.classList.toggle('cd-tam-oynatici', tamEkran && oynaticiAcik);
+    window.dispatchEvent(new Event('cd:dock'));
+    if (!tamEkran) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key !== 'Escape' || document.querySelector('.cd-tur, .gu-ortu, [role="dialog"][aria-modal="true"]')) return;
+      setTamEkran(false);
+    };
+    const onFs = () => { if (!document.fullscreenElement) setTamEkran(false); };
+    document.addEventListener('keydown', onKey);
+    document.addEventListener('fullscreenchange', onFs);
+    return () => {
+      document.removeEventListener('keydown', onKey);
+      document.removeEventListener('fullscreenchange', onFs);
+    };
+  }, [tamEkran, oynaticiAcik]);
+  useEffect(() => () => {
+    document.documentElement.classList.remove('cd-tam-ekran', 'cd-tam-oynatici');
+    if (document.fullscreenElement) void document.exitFullscreen?.().catch(() => {});
+  }, []);
+  const tamEkranAc = () => {
+    setOynaticiAcik(false);
+    setTamEkran(true);
+    const kok = document.documentElement as HTMLElement & { webkitRequestFullscreen?: () => void };
+    try {
+      if (kok.requestFullscreen) void kok.requestFullscreen({ navigationUI: 'hide' }).catch(() => {});
+      else kok.webkitRequestFullscreen?.();
+    } catch { /* desteklenmiyor: yalnız sayfa içi tam ekran */ }
+  };
+  const tamEkranKapat = () => {
+    setTamEkran(false);
+    if (document.fullscreenElement) void document.exitFullscreen?.().catch(() => {});
+  };
 
   // Sayfa içinde sabit yükseklik: üst çubuk ile alt oynatıcı/sekme çubuğu arasını doldurur (bölmeler kendi kayar)
   useLayoutEffect(() => {
@@ -147,27 +208,69 @@ export default function CanliDersDers({ dersKey }: { dersKey: string }) {
   }
 
   const pdfVar = !!detay.pdf && detay.pdf.dosyalar.length > 0;
-  const metinGoster = genis || !pdfVar || sekme === 'metin';
-  const pdfGoster = pdfVar && (genis || sekme === 'pdf');
+  const mod: Gorunum = pdfVar ? gorunum : 'metin';
+  const metinGoster = mod !== 'pdf';
+  const pdfGoster = mod !== 'metin';
 
   return (
-    <div className="cd-root cd-ders" ref={rootRef} style={yuk ? { height: yuk } : undefined}>
+    <div
+      className={`cd-root cd-ders is-${mod}${tamEkran ? ' is-tam' : ''}`}
+      ref={rootRef}
+      style={yuk && !tamEkran ? { height: yuk } : undefined}
+    >
       <header className="cd-ders-bas">
         <GeriBag />
         <h1 className="cd-ders-ad" title={`${detay.no}. ${detay.baslik}`}><span>{detay.no}.</span> {detay.baslik}</h1>
-        {pdfVar && !genis && (
-          <div className="cd-sekmeler" role="tablist" aria-label="Görünüm">
-            <button type="button" role="tab" aria-selected={sekme === 'metin'} className={sekme === 'metin' ? 'is-on' : ''} onClick={() => setSekme('metin')}>
-              <ScrollText aria-hidden /> Metin
+        <div className="cd-ders-arac">
+          {pdfVar && (
+            <div className="cd-sekmeler" role="radiogroup" aria-label="Görünüm">
+              {GORUNUMLER.map((g) => (
+                <button
+                  key={g.id}
+                  type="button"
+                  role="radio"
+                  aria-checked={mod === g.id}
+                  className={mod === g.id ? 'is-on' : ''}
+                  onClick={() => setGorunum(g.id)}
+                  title={g.ad}
+                >
+                  {g.ikon} <span>{g.ad}</span>
+                </button>
+              ))}
+            </div>
+          )}
+          {!tamEkran && (
+            <>
+              <CevrimdisiDugme dersKey={detay.key} baslik={detay.baslik} varyantlar={detay.varyantlar} />
+              <ListeEkleDugme dersKey={detay.key} baslik={detay.baslik} />
+              {tanitim.dugme}
+            </>
+          )}
+        </div>
+        <div className="cd-ders-uc">
+          {tamEkran ? (
+            <>
+              {!oynaticiAcik && <TamEkranOynat dersKey={detay.key} />}
+              <button
+                type="button"
+                className={`cd-btn is-ikon cd-tam-oyn${oynaticiAcik ? ' is-on' : ''}`}
+                onClick={() => setOynaticiAcik((x) => !x)}
+                aria-pressed={oynaticiAcik}
+                aria-label={oynaticiAcik ? 'Oynatıcıyı gizle' : 'Oynatıcıyı göster'}
+                title={oynaticiAcik ? 'Oynatıcıyı gizle' : 'Oynatıcıyı göster'}
+              >
+                <ChevronUp aria-hidden />
+              </button>
+              <button type="button" className="cd-btn is-ikon" onClick={tamEkranKapat} aria-label="Tam ekrandan çık" title="Tam ekrandan çık (Esc)">
+                <Minimize2 aria-hidden />
+              </button>
+            </>
+          ) : (
+            <button type="button" className="cd-btn is-ikon cd-tam-btn" onClick={tamEkranAc} aria-label="Tam ekran" title="Tam ekran">
+              <Maximize2 aria-hidden />
             </button>
-            <button type="button" role="tab" aria-selected={sekme === 'pdf'} className={sekme === 'pdf' ? 'is-on' : ''} onClick={() => setSekme('pdf')}>
-              <FileText aria-hidden /> PDF
-            </button>
-          </div>
-        )}
-        <CevrimdisiDugme dersKey={detay.key} baslik={detay.baslik} varyantlar={detay.varyantlar} />
-        <ListeEkleDugme dersKey={detay.key} baslik={detay.baslik} />
-        {tanitim.dugme}
+          )}
+        </div>
       </header>
       {baglanti === 'baska' && !buDers && (
         <div className="cd-uyari">
@@ -177,12 +280,28 @@ export default function CanliDersDers({ dersKey }: { dersKey: string }) {
           </button>
         </div>
       )}
-      <div className={`cd-govde${pdfVar && genis ? ' is-iki' : ''}`}>
+      <div className={`cd-govde${mod === 'ikisi' ? (genis ? ' is-iki' : ' is-ust-alt') : ''}`}>
         {pdfGoster && <CdPdfBolme detay={detay} canli={buDers} />}
         {metinGoster && <CdMetinBolme detay={detay} canli={buDers} />}
       </div>
       {tanitim.tur}
     </div>
+  );
+}
+
+/** Tam ekranda oynatıcı saklıyken başlıkta: oynat/duraklat + geçen süre */
+function TamEkranOynat({ dersKey }: { dersKey: string }) {
+  const buDers = useCd((s) => s.key === dersKey);
+  const playing = useCd((s) => s.key === dersKey && s.playing);
+  const t = useCd((s) => (s.key === dersKey ? Math.floor(s.t) : 0));
+  const dur = useCd((s) => (s.key === dersKey ? s.dur : 0));
+  return (
+    <span className="cd-tam-ses">
+      <span className="cd-tam-ses-t" aria-hidden>{fmtSure(t)}{dur ? ` / ${fmtSure(dur)}` : ''}</span>
+      <button type="button" className="cd-oynat" onClick={() => buDers && cdToggle()} disabled={!buDers} aria-label={playing ? 'Duraklat' : 'Oynat'} title={playing ? 'Duraklat' : 'Oynat'}>
+        {playing ? <Pause aria-hidden /> : <Play aria-hidden />}
+      </button>
+    </span>
   );
 }
 
