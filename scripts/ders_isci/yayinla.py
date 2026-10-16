@@ -156,7 +156,7 @@ class Yayin:
         self.n = int(b.get("numara") or 0)
         self.ders_id = b.get("ders_id") or ""
         self.deste_id = b.get("deste_id") or ""
-        if p.get("id") != self.ders_id or self.deck.get("id") != self.deste_id or self.deste_id != f"k1p-{self.ders_id}":
+        if p.get("id") != self.ders_id or self.deck.get("id") != self.deste_id or not re.fullmatch(rf"k1p-{re.escape(self.ders_id)}(-v\d+)?", self.deste_id):
             self.hata.append(f"kimlikler tutarsız: paket={p.get('id')} deste={self.deck.get('id')} bağlam={self.ders_id}")
         mevcut = dict(enumerate(s14.LESSONS, 1))
         if self.n in mevcut:  # güncelleme: ders kimliği ve konusu LESSONS'taki gibi kalmalı (kimlik konudan üretilir)
