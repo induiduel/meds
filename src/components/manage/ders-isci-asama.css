@@ -1,0 +1,20 @@
+/* Ders işçisi ilerleme şeridi (ManageDersIsciAsama.tsx) — Kaynak → … → Emel → EMA */
+.di-asama { margin-top: 8px; display: flex; flex-direction: column; gap: 4px; }
+.di-asama ol { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 4px; }
+.di-asama li {
+  display: inline-flex; align-items: center; gap: 5px; padding: 2px 8px 2px 6px; border-radius: 999px;
+  font-size: 12px; line-height: 18px; border: 1px solid var(--line, rgba(127,127,127,.25)); color: var(--ink-2, inherit);
+  white-space: nowrap;
+}
+.di-asama li small { opacity: .75; font-size: 11px; }
+.di-asama li i { width: 7px; height: 7px; border-radius: 50%; background: currentColor; opacity: .35; flex: none; }
+.di-asama li.is-tamam { color: var(--ms-ok, #2f9e6a); border-color: color-mix(in srgb, var(--ms-ok, #2f9e6a) 45%, transparent); }
+.di-asama li.is-tamam i { opacity: 1; }
+.di-asama li.is-suruyor { color: var(--accent, #c27a2c); border-color: color-mix(in srgb, var(--accent, #c27a2c) 55%, transparent); font-weight: 600; }
+.di-asama li.is-suruyor i { opacity: 1; animation: di-asama-nabiz 1.4s ease-in-out infinite; }
+.di-asama li.is-hata { color: var(--danger, #d14b4b); border-color: color-mix(in srgb, var(--danger, #d14b4b) 50%, transparent); }
+.di-asama li.is-hata i { opacity: 1; }
+.di-asama li.is-atla { opacity: .5; text-decoration: line-through; }
+.di-asama-son { font-size: 11.5px; opacity: .7; overflow-wrap: anywhere; }
+@keyframes di-asama-nabiz { 50% { opacity: .25; } }
+@media (prefers-reduced-motion: reduce) { .di-asama li.is-suruyor i { animation: none; } }

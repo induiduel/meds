@@ -6,6 +6,7 @@ import { toast } from '../ui/Toast';
 import { NoteMarkdown } from '../ui/NoteMarkdown';
 import { ChipBar, EmptyState, Panel } from './consoleUi';
 import { IsciKontrol, type IsciDurum } from './ManageDersIsciKontrol';
+import { AsamaSeridi, type SesDurumu, type TaslakAsama } from './ManageDersIsciAsama';
 
 const LessonPlayer = React.lazy(() => import('../learn/lesson/LessonPlayer').then((m) => ({ default: m.LessonPlayer })));
 
@@ -33,6 +34,8 @@ type Taslak = {
   karar: Karar;
   zaman?: number;
   yayin?: { durum?: string; hatalar?: string[]; yayin_zamani?: string; site_derlendi?: boolean } | null;
+  /** İlerleme (işçi api.py::asama; eski işçide yok) */
+  asama?: TaslakAsama;
 };
 type Ayrinti = Taslak & { rapor: string; denetim: { hatalar?: string[]; uyarilar?: string[]; referansla_tamamlanan?: string[] }; dosyalar: string[] };
 type Sekme = 'rapor' | 'deste' | 'sorular' | 'sozluk' | 'hastaliklar' | 'havuz' | 'cikmis' | 'kaynak';
@@ -300,6 +303,8 @@ const OtomatikDersIsci: React.FC<{ adminEmail: string }> = ({ adminEmail }) => {
   const [zam, setZam] = useState<Zamanlama | null>(null);
   const [konular, setKonular] = useState<KonuSatiri[]>([]);
   const [olay, setOlay] = useState<OlayAkisi | null>(null);
+  /** Canlı ders sesleri (ders anahtarı → Emel/EMA varyant + kuyruk işi), ilerleme şeridinin son iki adımı */
+  const [sesler, setSesler] = useState<Record<string, SesDurumu>>({});
   const [dosya, setDosya] = useState<Record<string, any>>({});
   const [onizle, setOnizle] = useState<any | null>(null);
   const [not, setNot] = useState('');
@@ -312,7 +317,15 @@ const OtomatikDersIsci: React.FC<{ adminEmail: string }> = ({ adminEmail }) => {
     setTazele((n) => n + 1);
     setHata(null);
     // /kuyruk ve /zamanlama isteğe bağlı: eski işçi sürümünde yoksa yalnız taslak/checklist kategorileri dolar
-    const [t, c, k, z, o] = await Promise.all([api('/taslaklar'), api('/checklist'), api('/kuyruk'), api('/zamanlama'), api('/olaylar')]);
+    const [t, c, k, z, o, sa] = await Promise.all([
+      api('/taslaklar'), api('/checklist'), api('/kuyruk'), api('/zamanlama'), api('/olaylar'),
+      safeJsonFetch<any>('/api/sesli-anlatim', { headers }),
+    ]);
+    if (sa.ok && Array.isArray(sa.data?.dersler)) {
+      const m: Record<string, SesDurumu> = {};
+      for (const d of sa.data.dersler) m[d.key] = { varyantlar: d.varyantlar || [], isler: d.isler || [] };
+      setSesler(m);
+    }
     setOlay(o.ok && o.data && Array.isArray(o.data.olaylar) ? o.data : null);
     if (!t.ok) {
       setHata((t.data as any)?.hata || 'Ders işçisine ulaşılamıyor.');
@@ -515,6 +528,16 @@ const OtomatikDersIsci: React.FC<{ adminEmail: string }> = ({ adminEmail }) => {
                 {x.mesaj && <p className="text-sm text-ink-2 mt-1">{x.mesaj}</p>}
                 {x.zamanNot && <p className="text-xs text-ink-3 mt-1">{x.zamanNot}</p>}
                 {x.uyari && <p className="text-sm text-warn mt-1">⚠ {x.uyari}</p>}
+                {x.taslak?.asama && (
+                  <AsamaSeridi
+                    a={x.taslak.asama}
+                    isleniyor={x.kat === 'isleniyor'}
+                    durum={x.taslak.durum}
+                    karar={x.taslak.karar?.karar}
+                    yayin={x.taslak.yayin?.durum}
+                    ses={x.taslak.ders_id ? sesler[x.taslak.ders_id] ?? null : null}
+                  />
+                )}
               </>
             );
             const id = x.taslak?.is_id;

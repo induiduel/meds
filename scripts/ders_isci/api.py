@@ -28,6 +28,28 @@ DOSYALAR = {"deck.json", "ornek_sorular.json", "sozluk.json", "hastaliklar.json"
 GECERLI_ID = re.compile(r"^[0-9]{8}-[0-9a-f]{10}(?:-\d+)?$")
 
 
+# TALIMAT.md'deki zorunlu çıktılar (iş sırası); panel ilerleme şeridi bunların kaçının yazıldığını gösterir
+CIKTILAR = ["ders_paketi.json", "sayfa_haritasi.json", "ders_ozeti.md", "ders_notu.md", "deck.json", "ornek_sorular.json",
+            "sozluk.json", "hastaliklar.json", "bilgi_havuzu.jsonl", "cikmis_baglantilari.json", "rapor.md"]
+
+
+def asama(d, du: dict, den: dict) -> dict:
+    """Taslağın hangi aşamada olduğu (yalnız dosyalardan): kaynak → içerik (k/11) → denetim → konuşma metni."""
+    try:
+        dosyalar = [f for f in d.iterdir() if f.is_file() and not f.name.startswith(".")]
+    except OSError:
+        dosyalar = []
+    son = max(dosyalar, key=lambda f: f.stat().st_mtime, default=None)
+    return {"kaynak": (d / "kaynak.md").exists() and (d / "baglam.json").exists(),
+            "cikti": sum((d / f).exists() for f in CIKTILAR), "cikti_toplam": len(CIKTILAR),
+            "eksik": [f for f in CIKTILAR if not (d / f).exists()][:4],
+            "denetim": den.get("hata") if (d / "denetim.json").exists() else None,
+            "ana_bitti": (d / "ana_bitti.json").exists(),
+            "konusma": {"metin": (d / "konusma_metni.md").exists(), "sayfalar": (d / "konusma_sayfalari.json").exists(),
+                        "durum": du.get("canli_ders")},
+            "son_dosya": {"ad": son.name, "zaman": son.stat().st_mtime} if son else None}
+
+
 def taslak_ozeti(d) -> dict:
     b = oku(d / "baglam.json", {})
     du = oku(d / "durum.json", {})
@@ -37,7 +59,8 @@ def taslak_ozeti(d) -> dict:
             "pdf": b.get("pdf_adi"), "program": {k: (b.get("program") or {}).get(k) for k in
                                                   ("kurul", "ders", "konu", "ogretim_uyesi", "tarih", "guven", "skor")},
             "sayilar": den.get("sayilar", {}), "denetim_hata": den.get("hata"), "referans": len(den.get("referansla_tamamlanan", [])),
-            "karar": oku(d / "karar.json", None), "yayin": oku(d / "yayin.json", None), "zaman": du.get("zaman")}
+            "karar": oku(d / "karar.json", None), "yayin": oku(d / "yayin.json", None), "zaman": du.get("zaman"),
+            "asama": asama(d, du, den)}
 
 
 # Panel "Drive etkinliği": günlükten iş yaşam döngüsü satırları (Drive'dan gelen PDF kuyruğa alındı → işleniyor → taslak → karar)
