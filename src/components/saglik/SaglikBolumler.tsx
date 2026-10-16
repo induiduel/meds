@@ -11,7 +11,7 @@ import {
   AsiTakvimi, BasamakPiramidi, BildirimListesi, GebeIzlemSeridi, GostergeHesap, KanserTaramaYas, MaddeListesi, TaramaTestiHesap, ZamanCizgisi,
 } from './SaglikAraclar';
 import {
-  BOLUMLER, gostergeBul, kaynaklariTopla, sayi, sonDeger, type BolumBaglanti, type BolumId, type Gosterge, type Madde, type SaglikVeri, type SeriNokta,
+  gostergeBul, kaynaklariTopla, sayi, sonDeger, type BolumBaglanti, type BolumId, type Gosterge, type Madde, type SaglikVeri, type SeriNokta,
 } from './saglikVeri';
 import { degerBirim, seriMaddeleri, useGecmis, type MaddeOge } from './saglikBaglam';
 import { GelistirmeBolum, KavramBolum, KorumaBolum } from './SaglikKavram';
@@ -208,22 +208,6 @@ export const GenelBolum: React.FC<BolumProps> = ({ v, git }) => {
           {asm && (() => { const s = sonDeger(asm); return s ? <Kpi ad="Aile sağlığı merkezi" deger={sayi(s.deger as number)} yil={s.yil} kaynak={asm.kaynak} konum={asm.konum} seri={asm.seri} /> : null; })()}
         </KpiIzgara>
       </Blok>
-
-      <div className="sbk-kart-g">
-        {BOLUMLER.filter((b) => b.id !== 'genel').map((b) => {
-          const bg = v.baglantilar.bolumler[b.id];
-          const Ic = b.icon;
-          return (
-            <button key={b.id} type="button" className="sbk-bolum-kart" onClick={() => git(b.id)}>
-              <span className="sbk-bolum-kart-ic"><Ic aria-hidden /></span>
-              <span className="sbk-bolum-kart-t">{b.ad}</span>
-              <span className="sbk-bolum-kart-a">{b.aciklama}</span>
-              {bg && <span className="sbk-bolum-kart-m">{bg.soru_sayisi} çıkmış soru · {bg.desteler.filter((d) => !d.ek).length || bg.desteler.length} deste</span>}
-              <ArrowRight aria-hidden className="sbk-bolum-kart-ok" />
-            </button>
-          );
-        })}
-      </div>
 
       {kb.nufus?.toplam && (
         <Blok

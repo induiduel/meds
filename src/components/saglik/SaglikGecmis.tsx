@@ -3,15 +3,20 @@ import { Copy, LineChart, List } from 'lucide-react';
 import { Sheet } from '../ui/Sheet';
 import { Atif, CizgiGrafik, EkAtif, MaddeAgaci, MiniMetin, useMaddeKopyala } from './SaglikOrtak';
 import { degerBirim, seriMaddeleri, yillikMi, type GecmisIstek, type MaddeOge } from './saglikBaglam';
+import { useDersDizin } from './saglikDers';
+import { DersKatmani } from './SaglikDersKatmani';
 
 /**
  * Geçmiş yıllar penceresi: gösterge kutusuna dokununca açılır. Üstte eğilim grafiği (yalnız tek yıllık noktalar),
  * altında yıl yıl madde listesi (değer, bir önceki yıla göre değişim, nokta başına kaynak). İki seri varsa
  * (ör. Karabük + Türkiye) liste yıl başına iki değer gösterir. "Kopyala" maddeleri kaynak numaralarıyla panoya yazar.
  * Pencere AtifSaglayici'nin içinde çizilir (portal React bağlamını korur) → atıf numaraları sayfadakiyle aynıdır.
+ * Yıl yıl değerlerde de "ders slaytında geçiyor / farklı değer" işaretleri çıkar (gösterge adı = pencere başlığı).
  */
 export const GecmisPencere: React.FC<{ istek: GecmisIstek | null; onClose: () => void }> = ({ istek, onClose }) => {
   const [gorunum, setGorunum] = useState<'ikisi' | 'liste'>('ikisi');
+  const dersDizin = useDersDizin();
+  const [icEl, setIcEl] = useState<HTMLDivElement | null>(null);
   const kopyala = useMaddeKopyala();
   const g = istek;
   const maddeler: MaddeOge[] = !g ? [] : g.seriler.length === 1
@@ -40,7 +45,7 @@ export const GecmisPencere: React.FC<{ istek: GecmisIstek | null; onClose: () =>
       ) : undefined}
     >
       {g && (
-        <div className="sbk sbk-gecmis">
+        <div className="sbk sbk-gecmis" ref={setIcEl} data-ders-ad={g.baslik.split(' · ')[0]}>
           {yillikVar && gorunum === 'ikisi' && (
             <CizgiGrafik
               baslik={g.baslik} birim={g.birim} ondalik={g.ondalik}
@@ -52,6 +57,7 @@ export const GecmisPencere: React.FC<{ istek: GecmisIstek | null; onClose: () =>
           <MaddeAgaci ogeler={maddeler} />
           {g.not && <p className="sbk-not">{g.not}</p>}
           <p className="sbk-grafik-k">Kaynak <Atif id={g.kaynak} konum={g.konum} />{g.ek?.length ? <EkAtif ids={g.ek} /> : null}</p>
+          <DersKatmani dz={dersDizin} kok={icEl} tazele={g.baslik} />
         </div>
       )}
     </Sheet>

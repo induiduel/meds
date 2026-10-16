@@ -1,0 +1,50 @@
+/*
+ * Sağlık Bakanlığı · "Ders slaytında geçiyor" katmanı: farklı değer ve terim işaretleri, balon ekleri.
+ * (Aynı değer vurgusu ve temel balon stili saglik.css'te.) Vurgular kapsamlı: yalnız .sbk-icerik ve geçmiş penceresi.
+ */
+.sbk-icerik::highlight(sbk-ders-f), .sbk-icerik ::highlight(sbk-ders-f),
+.sbk-gecmis::highlight(sbk-ders-f), .sbk-gecmis ::highlight(sbk-ders-f) {
+  background-color: var(--color-bad-soft); text-decoration: underline 2px; text-decoration-color: var(--color-bad);
+}
+.sbk-gecmis::highlight(sbk-ders), .sbk-gecmis ::highlight(sbk-ders) {
+  background-color: var(--color-warn-soft); text-decoration: underline 2px; text-decoration-color: var(--color-warn);
+}
+.sbk-icerik::highlight(sbk-ders-t), .sbk-icerik ::highlight(sbk-ders-t),
+.sbk-gecmis::highlight(sbk-ders-t), .sbk-gecmis ::highlight(sbk-ders-t) {
+  background-color: color-mix(in srgb, var(--color-accent) 9%, transparent);
+  text-decoration: underline dotted 2px; text-decoration-color: var(--color-accent);
+}
+.sbk-icerik[data-terim-ust], .sbk-gecmis[data-terim-ust] { cursor: pointer; }
+
+/* Geçmiş yıllar penceresinde katman bu kaba göre konumlanır */
+.sbk-gecmis { position: relative; }
+
+/* Highlight desteklemeyen tarayıcı: kutular */
+.sbk-ders-yedek.is-f { border-bottom-color: var(--color-bad); background: color-mix(in srgb, var(--color-bad) 14%, transparent); }
+.sbk-ders-yedek.is-t { border-bottom: 2px dotted var(--color-accent); background: color-mix(in srgb, var(--color-accent) 8%, transparent); }
+
+.sbk-ders-i-b.is-farkli { background: var(--color-bad); }
+
+.sbk-ders-pop.is-farkli .sbk-ders-pop-t { color: var(--color-bad-text, var(--color-bad)); }
+.sbk-ders-pop-f {
+  margin: 0; padding: 8px 10px; border-radius: 9px; font-size: 12.5px; line-height: 1.45;
+  background: var(--color-bad-soft); color: var(--color-ink);
+}
+.sbk-ders-pop-f b { font-weight: 700; }
+.sbk-ders-pop-f.is-terim { background: var(--color-accent-soft); }
+.sbk-ders-pop-ara {
+  display: inline-flex; align-items: center; gap: 6px; margin-top: 2px;
+  font-size: 12px; font-weight: 650; color: var(--color-ink-2);
+}
+.sbk-ders-pop-ara svg { width: 14px; height: 14px; color: var(--color-accent); }
+
+/* İşaret açıklaması (Görünüm penceresi): terim örneği */
+.sbk-isaret-terim {
+  display: inline-block; padding: 0 3px; font-size: 12px; font-weight: 600; color: var(--color-ink);
+  background: color-mix(in srgb, var(--color-accent) 9%, transparent);
+  text-decoration: underline dotted 2px; text-decoration-color: var(--color-accent); text-underline-offset: 2px;
+}
+
+/* Sık "Yıl yıl" listesinde rozet üst satıra taşmasın: sayıya daha yakın */
+.sbk-gecmis .sbk-ders-katman .sbk-ders-i-b { transform: translate(-25%, -40%); }
+.sbk-gecmis .sbk-ders-katman .sbk-ders-i-b:hover, .sbk-gecmis .sbk-ders-katman .sbk-ders-i-b.is-acik { transform: translate(-25%, -40%) scale(1.15); }

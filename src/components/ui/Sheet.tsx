@@ -31,6 +31,8 @@ export interface SheetProps {
   hideClose?: boolean;
   /** Gövde iç boşluğu olmasın (içerik kendi başlık/gövdesini getiriyorsa) */
   bare?: boolean;
+  /** Pencereye ek sınıf (özel boyut/yerleşim) */
+  className?: string;
   children: React.ReactNode;
 }
 
@@ -56,7 +58,7 @@ export const Sheet: React.FC<SheetProps> = (props) => {
   return createPortal(<SheetPanel {...props} closing={closing} />, document.body);
 };
 
-const SheetPanel: React.FC<SheetProps & { closing: boolean }> = ({ onClose, title, subtitle, actions, footer, size = 'auto', width = 520, label, hideClose, bare, children, closing }) => {
+const SheetPanel: React.FC<SheetProps & { closing: boolean }> = ({ onClose, title, subtitle, actions, footer, size = 'auto', width = 520, label, hideClose, bare, className, children, closing }) => {
   const id = useId();
   const panelRef = useRef<HTMLDivElement>(null);
   const backRef = useRef<HTMLDivElement>(null);
@@ -213,7 +215,7 @@ const SheetPanel: React.FC<SheetProps & { closing: boolean }> = ({ onClose, titl
         aria-label={label}
         aria-labelledby={title && !label ? `${id}-t` : undefined}
         tabIndex={-1}
-        className={`sh-sheet ${size === 'full' ? 'is-full' : ''}`}
+        className={`sh-sheet ${size === 'full' ? 'is-full' : ''}${className ? ` ${className}` : ''}`}
         style={style}
       >
         <div className="sh-sheet-head" onPointerDown={onDown} onPointerMove={(e) => move(e.clientY)} onPointerUp={end} onPointerCancel={end}>
