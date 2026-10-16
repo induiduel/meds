@@ -6,6 +6,9 @@ import { safeJsonFetch } from '../../services/api';
 import { getVoterId } from '../../utils/voterId';
 import { realtimeEventService } from '../../services/realtimeEvents';
 
+/** Medya oturumu (bildirim/kilit ekranı/kulaklık) şu an canlı dersin mi? */
+const msCanliDersin = () => (window as any).__medsorMsSahip === 'canli';
+
 /*
  * Uygulama genelinde tek müzik çalar. Sağlayıcı App kökünde durduğu için sayfa
  * değişince çalma kesilmez; Media Session API ile bildirim / kilit ekranı /
@@ -525,7 +528,7 @@ export const MusicPlayerProvider: React.FC<{ children: React.ReactNode }> = ({ c
 
   // ── Media Session: bildirim, kilit ekranı, kulaklık / klavye medya tuşları ──
   useEffect(() => {
-    if (!('mediaSession' in navigator)) return;
+    if (!('mediaSession' in navigator) || (msCanliDersin() && !playing)) return;
     const ms = navigator.mediaSession;
     if (!current || !started) {
       ms.metadata = null;
@@ -545,17 +548,21 @@ export const MusicPlayerProvider: React.FC<{ children: React.ReactNode }> = ({ c
         artwork,
       });
     } catch { /* yoksay */ }
-  }, [current, started, ytVideoId]);
+  }, [current, started, ytVideoId, playing]);
 
   useEffect(() => {
-    if (!('mediaSession' in navigator)) return;
+    if (!('mediaSession' in navigator) || (msCanliDersin() && !playing)) return;
     navigator.mediaSession.playbackState = !started ? 'none' : playing ? 'playing' : 'paused';
   }, [playing, started]);
 
   const curRef = useRef(cur);
   curRef.current = cur;
   useEffect(() => {
-    if (!('mediaSession' in navigator)) return;
+    // Eylemler yalnız müzik gerçekten çalarken alınır ve bırakılırken silinmez: canlı ders
+    // oturumu sahiplenmişken müzik tuşları ezip arka planda şarkıyı başlatmasın.
+    if (!('mediaSession' in navigator) || !playing) return;
+    (window as any).__medsorMsSahip = 'muzik';
+    window.dispatchEvent(new Event('medsor:muzik-oynuyor'));
     const ms = navigator.mediaSession;
     const set = (action: MediaSessionAction, handler: MediaSessionActionHandler | null) => {
       try { ms.setActionHandler(action, handler); } catch { /* desteklenmiyor */ }
@@ -568,16 +575,19 @@ export const MusicPlayerProvider: React.FC<{ children: React.ReactNode }> = ({ c
     set('seekto', (d) => { if (d.seekTime != null) seek(d.seekTime); });
     set('seekbackward', (d) => seek(Math.max(0, curRef.current - (d.seekOffset || 10))));
     set('seekforward', (d) => seek(curRef.current + (d.seekOffset || 10)));
-    return () => {
-      (['play', 'pause', 'stop', 'nexttrack', 'previoustrack', 'seekto', 'seekbackward', 'seekforward'] as MediaSessionAction[])
-        .forEach((a) => set(a, null));
-    };
-  }, [play, pause, stop, next, prev, seek, tracks.length]);
+  }, [playing, play, pause, stop, next, prev, seek, tracks.length]);
+
+  // Canlı ders başlayınca müzik susar
+  useEffect(() => {
+    const f = () => { if (playingRef.current) pause(); };
+    window.addEventListener('medsor:canli-ders-oynuyor', f);
+    return () => window.removeEventListener('medsor:canli-ders-oynuyor', f);
+  }, [pause]);
 
   // Bildirimdeki ilerleme çubuğu (saniyede bir yeter)
   const curSec = Math.floor(cur);
   useEffect(() => {
-    if (!('mediaSession' in navigator) || !started || !(dur > 0)) return;
+    if (!('mediaSession' in navigator) || !started || !(dur > 0) || (msCanliDersin() && !playing)) return;
     try {
       navigator.mediaSession.setPositionState?.({
         duration: dur,
@@ -585,7 +595,7 @@ export const MusicPlayerProvider: React.FC<{ children: React.ReactNode }> = ({ c
         position: Math.min(curSec, dur),
       });
     } catch { /* yoksay */ }
-  }, [curSec, dur, started]);
+  }, [curSec, dur, started, playing]);
 
   const value = useMemo<MusicPlayerValue>(() => ({
     tracks, custom, index: safeIndex, current, playing, started, cur, dur, volume, muted,

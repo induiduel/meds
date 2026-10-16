@@ -316,12 +316,28 @@ function pitch(a: HTMLAudioElement) {
   x.webkitPreservesPitch = true;
 }
 
+let sonYenidenBag = 0;
+/** Son duraklatma kullanıcıdan mı (düğme / bildirim)? Ağ kopmasında yalnız kullanıcı durdurmadıysa sürdürülür. */
+let kullaniciDurdurdu = true;
 function ses(): HTMLAudioElement {
   if (audio) return audio;
   const a = new Audio();
   a.preload = 'metadata';
+  // Arka planda (ekran kapalı / başka uygulama) çalmayı sürdürmesi için öğe belgeye bağlı olmalı:
+  // bağsız Audio nesnesini mobil tarayıcılar (özellikle iOS PWA) gizlenince askıya alabiliyor.
+  a.setAttribute('playsinline', '');
+  a.setAttribute('aria-hidden', 'true');
+  a.style.display = 'none';
+  document.body.appendChild(a);
   pitch(a);
-  a.addEventListener('play', () => { set({ playing: true, hata: null }); loopBaslat(); msDurum(); });
+  a.addEventListener('play', () => {
+    kullaniciDurdurdu = false;
+    set({ playing: true, hata: null }); loopBaslat();
+    // Medya oturumunu müzik çalardan geri al (yoksa arka planda bildirim/kulaklık "oynat" müziği başlatır)
+    (window as any).__medsorMsSahip = 'canli';
+    window.dispatchEvent(new Event('medsor:canli-ders-oynuyor'));
+    msKur(); msMeta(); msDurum();
+  });
   a.addEventListener('pause', () => { set({ playing: false }); tick(); konumKaydet(); msDurum(); });
   a.addEventListener('ended', () => { set({ playing: false }); konumKaydet(true); msDurum(); bitinceFn?.(); });
   a.addEventListener('timeupdate', () => { if (!raf) tick(); });
@@ -350,10 +366,22 @@ function ses(): HTMLAudioElement {
   a.addEventListener('durationchange', sureAl);
   a.addEventListener('error', () => {
     if (!a.getAttribute('src')) return;
+    // Arka planda uzun akışta ağ kopması: kaldığı yerden bir kez yeniden bağlan
+    if (a.error?.code === MediaError.MEDIA_ERR_NETWORK && !kullaniciDurdurdu && Date.now() - sonYenidenBag > 15000) {
+      sonYenidenBag = Date.now();
+      const t = st.t || 0;
+      const src = a.getAttribute('src')!;
+      a.src = src;
+      a.addEventListener('loadedmetadata', () => { try { a.currentTime = t; } catch { /* yok */ } a.play().catch(() => {}); }, { once: true });
+      a.load();
+      return;
+    }
     set({ hata: 'Ses dosyası açılamadı.', playing: false, bekliyor: false });
   });
   document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible') loopBaslat(); });
   window.addEventListener('pagehide', () => konumKaydet());
+  // Müzik başlarsa ders duraklar (iki ses üst üste binmesin, medya tuşları karışmasın)
+  window.addEventListener('medsor:muzik-oynuyor', () => { if (!a.paused) cdDuraklat(); });
   audio = a;
   msKur();
   return a;
@@ -477,9 +505,9 @@ export function cdToggle() {
   const a = audio;
   if (!a || !st.key) return;
   if (a.paused) a.play().catch((e) => { if (e?.name !== 'AbortError') set({ hata: 'Ses çalınamadı.' }); });
-  else a.pause();
+  else cdDuraklat();
 }
-export function cdDuraklat() { audio?.pause(); }
+export function cdDuraklat() { kullaniciDurdurdu = true; audio?.pause(); }
 export function cdAtla(t: number) {
   const a = audio;
   if (!a || !st.key) return;
@@ -566,8 +594,8 @@ function msKur() {
     try { ms.setActionHandler(a, f); } catch { /* desteklenmiyor */ }
   };
   h('play', () => { audio?.play().catch(() => {}); });
-  h('pause', () => audio?.pause());
-  h('stop', () => audio?.pause());
+  h('pause', () => cdDuraklat());
+  h('stop', () => cdDuraklat());
   h('seekbackward', (d) => cdSar(-(d.seekOffset || 10)));
   h('seekforward', (d) => cdSar(d.seekOffset || 10));
   h('seekto', (d) => { if (d.seekTime != null) cdAtla(d.seekTime); });
@@ -581,7 +609,7 @@ function msMeta() {
     navigator.mediaSession.metadata = new MediaMetadata({
       title: `${st.no ? `${st.no}. ` : ''}${st.baslik}`,
       artist: 'MeDSor',
-      album: `Canlı ders${v?.etiket ? ` · ${v.etiket}` : ''}`,
+      album: `Canlı ders${v?.ses ? ` · ${v.ses}` : ''}`,
       artwork: [
         { src: '/icons/icon-192x192.png?v=9', sizes: '192x192', type: 'image/png' },
         { src: '/icons/icon-512x512.png?v=9', sizes: '512x512', type: 'image/png' },
