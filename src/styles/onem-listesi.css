@@ -1,0 +1,102 @@
+/* =============================================================================
+ * MeDSor · Patoloji · Sınav için en önemliler (.ol-*) — components/spots/OnemListesi.tsx
+ *  Yalnız palet tokenı (--color-*); bant rengi --b (puan rozeti, part başlığı, sol çizgi), tür rengi --t.
+ *  Bantlar: 90–100 kırmızı · 80–89 turuncu · 70–79 vurgu · 60–69 mor · 50–59 klinik · <50 gri.
+ * ============================================================================= */
+.ol-page { container: ol / inline-size; display: flex; flex-direction: column; gap: 12px; min-width: 0; }
+.ol-page button { font: inherit; cursor: pointer; -webkit-tap-highlight-color: transparent; }
+.ol-page :focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+
+.b9 { --b: var(--color-bad); }
+.b8 { --b: var(--color-warn); }
+.b7 { --b: var(--color-accent); }
+.b6 { --b: var(--color-ai); }
+.b5 { --b: var(--color-clinic); }
+.b4 { --b: var(--color-ink-3); }
+
+.ol-head h2 { margin: 0; font-size: 20px; font-weight: 700; letter-spacing: -.015em; color: var(--color-ink); }
+.ol-head p { margin: 2px 0 0; font-size: 12.5px; color: var(--color-ink-3); }
+
+.ol-bar { display: flex; flex-wrap: wrap; gap: 8px; }
+.ol-select { flex: 1 1 280px; min-width: 0; display: flex; align-items: center; gap: 8px; height: 40px; padding: 0 10px; border-radius: 11px; background: var(--color-field); }
+.ol-select span { font-size: 12px; font-weight: 700; color: var(--color-ink-3); text-transform: uppercase; letter-spacing: .04em; }
+.ol-select select { flex: 1; min-width: 0; height: 100%; border: 0; background: none; color: var(--color-ink); font: inherit; font-size: 14px; outline: none; }
+.ol-search { flex: 1 1 220px; min-width: 0; display: flex; align-items: center; gap: 8px; height: 40px; padding: 0 10px 0 12px; border-radius: 11px; background: var(--color-field); color: var(--color-ink-3); }
+.ol-search:focus-within { box-shadow: 0 0 0 2px var(--color-accent); }
+.ol-search svg { width: 16px; height: 16px; flex-shrink: 0; }
+.ol-search input { flex: 1; min-width: 0; height: 100%; border: 0; background: none; outline: none; color: var(--color-ink); font: inherit; font-size: 14px; }
+.ol-search button { border: 0; background: none; color: var(--color-ink-3); display: grid; place-items: center; padding: 4px; }
+
+.ol-bantsec { display: flex; flex-wrap: wrap; gap: 6px; }
+.ol-bchip { display: inline-flex; align-items: baseline; gap: 6px; height: 32px; padding: 0 12px; border-radius: 999px; border: 1px solid color-mix(in srgb, var(--b) 35%, transparent);
+  background: color-mix(in srgb, var(--b) 8%, transparent); color: color-mix(in srgb, var(--b) 80%, var(--color-ink)); font-size: 13px; font-weight: 700; font-variant-numeric: tabular-nums; }
+.ol-bchip small { font-size: 11px; font-weight: 600; opacity: .8; }
+.ol-bchip.is-on { background: var(--b); border-color: var(--b); color: var(--color-white); }
+
+.ol-ders { padding: 14px 16px; border-radius: 14px; background: var(--color-field); display: flex; flex-direction: column; gap: 6px; }
+.ol-ders h3 { margin: 0; font-size: 16px; font-weight: 700; color: var(--color-ink); }
+.ol-ders p { margin: 0; font-size: 14px; line-height: 1.5; color: var(--color-ink-2); }
+.ol-ders-neden { display: flex; gap: 8px; align-items: flex-start; padding-top: 4px; }
+.ol-ders-neden svg { width: 16px; height: 16px; flex-shrink: 0; margin-top: 2px; color: var(--color-accent); }
+
+.ol-part { display: flex; flex-direction: column; gap: 6px; }
+.ol-part-h { margin: 6px 0 0; display: flex; align-items: center; gap: 10px; padding: 8px 12px; border-radius: 12px;
+  background: color-mix(in srgb, var(--b) 12%, transparent); border-left: 4px solid var(--b); font-size: 14px; }
+.ol-part-no { font-weight: 800; color: var(--b); text-transform: uppercase; letter-spacing: .04em; font-size: 12px; }
+.ol-part-ad { font-weight: 800; color: var(--color-ink); font-variant-numeric: tabular-nums; }
+.ol-part-not { color: var(--color-ink-2); font-weight: 600; flex: 1; min-width: 0; }
+.ol-part-n { font-size: 12px; font-weight: 700; color: var(--b); background: color-mix(in srgb, var(--b) 14%, transparent); padding: 2px 8px; border-radius: 999px; }
+
+.ol-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 6px; }
+.ol-m { border-radius: 12px; border: 1px solid var(--color-line); border-left: 3px solid var(--b); background: var(--color-white); content-visibility: auto; contain-intrinsic-size: auto 84px; }
+.ol-m.is-open { content-visibility: visible; }
+.ol-m-row { width: 100%; display: flex; align-items: flex-start; gap: 12px; padding: 10px 12px; border: 0; background: none; text-align: left; color: var(--color-ink); }
+.ol-puan { flex-shrink: 0; width: 38px; height: 38px; border-radius: 10px; display: grid; place-items: center; font-weight: 800; font-size: 15px; font-variant-numeric: tabular-nums;
+  background: color-mix(in srgb, var(--b) 14%, transparent); color: var(--b); }
+.ol-m-t { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 3px; }
+.ol-m-meta { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.ol-tur { --t: var(--color-ink-3); font-size: 10.5px; font-weight: 700; text-transform: uppercase; letter-spacing: .04em; padding: 1px 7px; border-radius: 6px;
+  color: color-mix(in srgb, var(--t) 85%, var(--color-ink)); background: color-mix(in srgb, var(--t) 12%, transparent); }
+.t-en_sik { --t: var(--color-bad); } .t-karakteristik { --t: var(--color-ai); } .t-tuzak { --t: var(--color-warn); } .t-eslesme { --t: var(--color-clinic); }
+.t-sayi { --t: var(--color-accent); } .t-tani_tedavi { --t: var(--color-ok); } .t-mekanizma { --t: color-mix(in srgb, var(--color-ai) 50%, var(--color-bad)); }
+.t-siniflama { --t: var(--color-ink-3); } .t-tanim { --t: var(--color-ink-2); }
+.ol-cik { display: inline-flex; align-items: center; gap: 3px; font-size: 11px; font-weight: 700; color: var(--color-ok); }
+.ol-cik svg { width: 12px; height: 12px; }
+.ol-dersad { font-size: 11px; color: var(--color-ink-3); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; }
+.ol-bilgi { font-size: 15px; line-height: 1.45; color: var(--color-ink); }
+.ol-bilgi strong, .ol-alt strong, .ol-detay strong { color: color-mix(in srgb, var(--b, var(--color-accent)) 75%, var(--color-ink)); }
+.ol-alt { margin: 2px 0 0; padding-left: 18px; font-size: 13.5px; line-height: 1.45; color: var(--color-ink-2); }
+.ol-chev { flex-shrink: 0; width: 18px; height: 18px; margin-top: 10px; color: var(--color-ink-3); transition: transform var(--mo-fast, 120ms); }
+.ol-m.is-open .ol-chev { transform: rotate(180deg); }
+
+.ol-m-body { padding: 4px 14px 14px 62px; display: flex; flex-direction: column; gap: 12px; }
+.ol-m-body h4 { margin: 0 0 4px; display: flex; align-items: center; gap: 6px; font-size: 11.5px; font-weight: 800; text-transform: uppercase; letter-spacing: .05em; color: var(--color-ink-3); }
+.ol-m-body h4 svg { width: 14px; height: 14px; }
+.ol-m-body p { margin: 0; font-size: 14px; line-height: 1.55; color: var(--color-ink-2); }
+.ol-m-body blockquote { margin: 0 0 6px; padding: 8px 12px; border-left: 3px solid var(--color-accent); border-radius: 0 8px 8px 0; background: var(--color-field); font-size: 13.5px; line-height: 1.5; color: var(--color-ink); }
+.ol-m-body cite { display: block; margin-top: 4px; font-style: normal; font-size: 11.5px; color: var(--color-ink-3); }
+.ol-detay ul { margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 4px; font-size: 14px; line-height: 1.55; color: var(--color-ink-2); }
+.ol-detay p + p, .ol-detay p + ul, .ol-detay ul + p { margin-top: 6px; }
+
+.ol-soru { padding: 10px 12px; border-radius: 10px; border: 1px solid var(--color-line); background: color-mix(in srgb, var(--color-field) 60%, transparent); display: flex; flex-direction: column; gap: 6px; }
+.ol-soru + .ol-soru { margin-top: 6px; }
+.ol-soru-h { display: flex; gap: 8px; align-items: baseline; font-size: 11.5px; font-weight: 800; text-transform: uppercase; letter-spacing: .05em; color: var(--color-accent); }
+.ol-soru-h em { font-style: normal; font-weight: 600; text-transform: none; letter-spacing: 0; color: var(--color-ink-3); }
+.ol-soru-k { font-weight: 600; color: var(--color-ink) !important; white-space: pre-line; }
+.ol-soru-s { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 3px; font-size: 13.5px; color: var(--color-ink-2); }
+.ol-soru-s li { padding: 3px 8px; border-radius: 6px; }
+.ol-soru-s li.is-dogru { background: var(--color-ok-soft); color: var(--color-ink); font-weight: 600; }
+.ol-soru-c { font-size: 13.5px !important; }
+.ol-btn { align-self: flex-start; height: 30px; padding: 0 12px; border-radius: 8px; border: 0; background: var(--color-accent-soft); color: var(--color-accent); font-size: 13px; font-weight: 700; }
+.ol-bos { color: var(--color-ink-3); font-size: 14px; padding: 24px 0; text-align: center; }
+
+/* görünüm seçici (Spotlar sayfası üstü) */
+.ol-gorunum { display: inline-grid; grid-auto-flow: column; gap: 2px; padding: 3px; border-radius: 11px; background: var(--color-field); margin-bottom: 10px; max-width: 100%; }
+.ol-gorunum button { height: 32px; padding: 0 12px; border: 0; border-radius: 8px; background: transparent; color: var(--color-ink-3); font: inherit; font-size: 13px; font-weight: 600; white-space: nowrap; cursor: pointer; }
+.ol-gorunum button.is-on { background: var(--color-white); color: var(--color-ink); box-shadow: 0 1px 2px color-mix(in srgb, var(--color-ink) 16%, transparent); }
+
+@container ol (max-width: 560px) {
+  .ol-m-body { padding-left: 14px; }
+  .ol-bilgi { font-size: 14.5px; }
+  .ol-part-not { display: none; }
+}

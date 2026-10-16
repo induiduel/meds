@@ -7,6 +7,7 @@ import kurulIndex from '../../data/kazanimlar/index.json';
 import { ANAHTAR, KATEGORILER, Kategori, Spot, Veri, azHareket, kucuk, okuOgrenilen, yazOgrenilen } from './spotsShared';
 import { useAppearance } from '../../utils/appearance';
 import { SpotsV12 } from '../v12/SpotsV12';
+import '../../styles/onem-listesi.css';
 
 export { KATEGORILER };
 
@@ -64,7 +65,41 @@ const IskeletKart: React.FC<{ i: number }> = ({ i }) => (
 );
 
 /** v12 "Net" ayrı bileşendir (canvas Cards.dc.html › Spotlar); tasarım değişince kancalar karışmasın diye ayrı tür. */
-export const ExamSpotsView: React.FC = () => (useAppearance().design === 'v12' ? <SpotsV12 /> : <ExamSpotsClassic />);
+const OnemListesi = React.lazy(() => import('./OnemListesi'));
+type Gorunum = 'spot' | 'onem';
+const okuGorunum = (): Gorunum => {
+  try { return new URLSearchParams(location.search).get('gorunum') === 'onem' ? 'onem' : 'spot'; } catch { return 'spot'; }
+};
+
+/** Üstte görünüm seçici: Sınav spotları (tüm dersler) | Patoloji · en önemliler (100 puan, PDF'e dayalı). */
+export const ExamSpotsView: React.FC = () => {
+  const v12 = useAppearance().design === 'v12';
+  const [g, setG] = useState<Gorunum>(okuGorunum);
+  useEffect(() => {
+    const f = () => setG(okuGorunum());
+    window.addEventListener('popstate', f);
+    return () => window.removeEventListener('popstate', f);
+  }, []);
+  const sec = (x: Gorunum) => {
+    setG(x);
+    try {
+      const u = new URL(location.href);
+      if (x === 'onem') u.searchParams.set('gorunum', 'onem'); else u.searchParams.delete('gorunum');
+      history.replaceState(history.state, '', u.pathname + u.search + u.hash);
+    } catch { /* yok */ }
+  };
+  return (
+    <>
+      <div className="ol-gorunum" role="tablist" aria-label="Görünüm">
+        <button type="button" role="tab" aria-selected={g === 'spot'} className={g === 'spot' ? 'is-on' : ''} onClick={() => sec('spot')}>Sınav spotları</button>
+        <button type="button" role="tab" aria-selected={g === 'onem'} className={g === 'onem' ? 'is-on' : ''} onClick={() => sec('onem')}>Patoloji · En önemliler (100 puan)</button>
+      </div>
+      {g === 'onem' ? (
+        <React.Suspense fallback={<p className="ol-bos">Yükleniyor…</p>}><OnemListesi /></React.Suspense>
+      ) : v12 ? <SpotsV12 /> : <ExamSpotsClassic />}
+    </>
+  );
+};
 
 const ExamSpotsClassic: React.FC = () => {
   const [veri, setVeri] = useState<Veri | null>(null);

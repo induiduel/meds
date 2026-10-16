@@ -1,0 +1,468 @@
+{
+ "surum": "patoloji-onem-v1",
+ "kaynak": "Kurul 1 Tıbbi Patoloji ders PDF'leri (2026-27 Drive)",
+ "dersler": [
+  {
+   "kod": "01",
+   "no": 1,
+   "baslik": "Patolojiye Giriş",
+   "madde": 38,
+   "bant": {
+    "4": 3,
+    "5": 6,
+    "6": 8,
+    "7": 8,
+    "8": 8,
+    "9": 5
+   }
+  },
+  {
+   "kod": "02",
+   "no": 2,
+   "baslik": "Hücre Hasarı ve Nekroz – I",
+   "madde": 28,
+   "bant": {
+    "4": 1,
+    "5": 4,
+    "6": 4,
+    "7": 5,
+    "8": 7,
+    "9": 7
+   }
+  },
+  {
+   "kod": "03",
+   "no": 3,
+   "baslik": "Hücre Hasarı ve Nekroz II",
+   "madde": 33,
+   "bant": {
+    "4": 1,
+    "5": 3,
+    "6": 4,
+    "7": 9,
+    "8": 10,
+    "9": 6
+   }
+  },
+  {
+   "kod": "04",
+   "no": 4,
+   "baslik": "Hücresel Adaptasyonlar",
+   "madde": 23,
+   "bant": {
+    "4": 0,
+    "5": 3,
+    "6": 5,
+    "7": 5,
+    "8": 5,
+    "9": 5
+   }
+  },
+  {
+   "kod": "05",
+   "no": 5,
+   "baslik": "Hücre İçi Birikimler ve Kalsifikasyonlar",
+   "madde": 31,
+   "bant": {
+    "4": 0,
+    "5": 4,
+    "6": 5,
+    "7": 8,
+    "8": 6,
+    "9": 8
+   }
+  },
+  {
+   "kod": "06",
+   "no": 6,
+   "baslik": "Hücresel Yaşlanma",
+   "madde": 25,
+   "bant": {
+    "4": 0,
+    "5": 4,
+    "6": 4,
+    "7": 7,
+    "8": 5,
+    "9": 5
+   }
+  },
+  {
+   "kod": "07",
+   "no": 7,
+   "baslik": "Akut Enflamasyon: Vasküler Değişiklikler ve Hücresel Olaylar",
+   "madde": 36,
+   "bant": {
+    "4": 0,
+    "5": 4,
+    "6": 7,
+    "7": 9,
+    "8": 8,
+    "9": 8
+   }
+  },
+  {
+   "kod": "08",
+   "no": 8,
+   "baslik": "Enflamasyonun Kimyasal Mediyatörleri",
+   "madde": 41,
+   "bant": {
+    "4": 1,
+    "5": 4,
+    "6": 9,
+    "7": 10,
+    "8": 10,
+    "9": 7
+   }
+  },
+  {
+   "kod": "09",
+   "no": 9,
+   "baslik": "Kronik ve Granülomatöz Enflamasyon",
+   "madde": 30,
+   "bant": {
+    "4": 0,
+    "5": 6,
+    "6": 6,
+    "7": 7,
+    "8": 5,
+    "9": 6
+   }
+  },
+  {
+   "kod": "10",
+   "no": 10,
+   "baslik": "Doku Onarımı ve Yara İyileşmesi",
+   "madde": 34,
+   "bant": {
+    "4": 2,
+    "5": 4,
+    "6": 5,
+    "7": 7,
+    "8": 9,
+    "9": 7
+   }
+  },
+  {
+   "kod": "11",
+   "no": 11,
+   "baslik": "Ödem, Hiperemi, Konjesyon ve Kanama",
+   "madde": 31,
+   "bant": {
+    "4": 0,
+    "5": 6,
+    "6": 5,
+    "7": 7,
+    "8": 6,
+    "9": 7
+   }
+  },
+  {
+   "kod": "12",
+   "no": 12,
+   "baslik": "Tromboz Patofizyolojisi",
+   "madde": 41,
+   "bant": {
+    "4": 0,
+    "5": 6,
+    "6": 8,
+    "7": 11,
+    "8": 8,
+    "9": 8
+   }
+  },
+  {
+   "kod": "13",
+   "no": 13,
+   "baslik": "Emboli, Enfarktüs ve Şok",
+   "madde": 34,
+   "bant": {
+    "4": 2,
+    "5": 4,
+    "6": 5,
+    "7": 7,
+    "8": 8,
+    "9": 8
+   }
+  },
+  {
+   "kod": "14",
+   "no": 14,
+   "baslik": "Aşırı Duyarlılık ve Otoimmünite",
+   "madde": 44,
+   "bant": {
+    "4": 0,
+    "5": 6,
+    "6": 8,
+    "7": 11,
+    "8": 11,
+    "9": 8
+   }
+  },
+  {
+   "kod": "15",
+   "no": 15,
+   "baslik": "Genetik, Pediatrik ve Çevresel Patoloji",
+   "madde": 41,
+   "bant": {
+    "4": 0,
+    "5": 3,
+    "6": 4,
+    "7": 13,
+    "8": 13,
+    "9": 8
+   }
+  },
+  {
+   "kod": "16",
+   "no": 16,
+   "baslik": "Tümör Biyolojisi ve Terminolojisi",
+   "madde": 41,
+   "bant": {
+    "4": 0,
+    "5": 6,
+    "6": 9,
+    "7": 10,
+    "8": 8,
+    "9": 8
+   }
+  },
+  {
+   "kod": "17",
+   "no": 17,
+   "baslik": "Karsinojenezin Moleküler Temeli",
+   "madde": 38,
+   "bant": {
+    "4": 0,
+    "5": 4,
+    "6": 7,
+    "7": 9,
+    "8": 11,
+    "9": 7
+   }
+  },
+  {
+   "kod": "18",
+   "no": 18,
+   "baslik": "İleri Tümör Genetiği ve Metabolizması",
+   "madde": 34,
+   "bant": {
+    "4": 0,
+    "5": 2,
+    "6": 4,
+    "7": 9,
+    "8": 11,
+    "9": 8
+   }
+  },
+  {
+   "kod": "19",
+   "no": 19,
+   "baslik": "Tümör İmmünolojisi ve Metastaz Mekanizmaları",
+   "madde": 26,
+   "bant": {
+    "4": 0,
+    "5": 4,
+    "6": 4,
+    "7": 7,
+    "8": 5,
+    "9": 6
+   }
+  },
+  {
+   "kod": "20",
+   "no": 20,
+   "baslik": "Tümör Evrelemesi, Derecelendirme ve Laboratuvar Tanısı",
+   "madde": 38,
+   "bant": {
+    "4": 1,
+    "5": 5,
+    "6": 5,
+    "7": 10,
+    "8": 10,
+    "9": 7
+   }
+  },
+  {
+   "kod": "21",
+   "no": 21,
+   "baslik": "Glomerüler Hastalıklar: Nefrotik Sendrom",
+   "madde": 32,
+   "bant": {
+    "4": 0,
+    "5": 3,
+    "6": 7,
+    "7": 8,
+    "8": 7,
+    "9": 7
+   }
+  },
+  {
+   "kod": "22",
+   "no": 22,
+   "baslik": "Glomerüler Hastalıklar: Nefritik Sendrom",
+   "madde": 35,
+   "bant": {
+    "4": 0,
+    "5": 4,
+    "6": 9,
+    "7": 8,
+    "8": 7,
+    "9": 7
+   }
+  },
+  {
+   "kod": "23",
+   "no": 23,
+   "baslik": "Sistemik Hastalıklarda Böbrek Hasarı",
+   "madde": 28,
+   "bant": {
+    "4": 0,
+    "5": 3,
+    "6": 4,
+    "7": 7,
+    "8": 7,
+    "9": 7
+   }
+  },
+  {
+   "kod": "24",
+   "no": 24,
+   "baslik": "Tübülointerstisyel Hastalıklar",
+   "madde": 28,
+   "bant": {
+    "4": 0,
+    "5": 4,
+    "6": 4,
+    "7": 7,
+    "8": 7,
+    "9": 6
+   }
+  },
+  {
+   "kod": "25",
+   "no": 25,
+   "baslik": "Vasküler ve Kistik Böbrek Hastalıkları",
+   "madde": 35,
+   "bant": {
+    "4": 0,
+    "5": 3,
+    "6": 7,
+    "7": 9,
+    "8": 9,
+    "9": 7
+   }
+  },
+  {
+   "kod": "26",
+   "no": 26,
+   "baslik": "Böbrek Tümörleri",
+   "madde": 32,
+   "bant": {
+    "4": 1,
+    "5": 5,
+    "6": 5,
+    "7": 6,
+    "8": 9,
+    "9": 6
+   }
+  },
+  {
+   "kod": "26b",
+   "no": 26,
+   "baslik": "Mesane Hastalıkları ve Tümörleri; Cinsel Yolla Bulaşan Hastalıklar",
+   "madde": 39,
+   "bant": {
+    "4": 0,
+    "5": 2,
+    "6": 3,
+    "7": 13,
+    "8": 13,
+    "9": 8
+   }
+  },
+  {
+   "kod": "28",
+   "no": 28,
+   "baslik": "Vulva, Vajen ve Serviks Hastalıkları",
+   "madde": 37,
+   "bant": {
+    "4": 0,
+    "5": 4,
+    "6": 7,
+    "7": 7,
+    "8": 11,
+    "9": 8
+   }
+  },
+  {
+   "kod": "30",
+   "no": 30,
+   "baslik": "Endometrial Hiperplazi ve Kanserleri",
+   "madde": 42,
+   "bant": {
+    "4": 2,
+    "5": 4,
+    "6": 8,
+    "7": 10,
+    "8": 10,
+    "9": 8
+   }
+  },
+  {
+   "kod": "31",
+   "no": 31,
+   "baslik": "Ovidukt ve Ovaryum Patolojisi",
+   "madde": 42,
+   "bant": {
+    "4": 1,
+    "5": 5,
+    "6": 10,
+    "7": 9,
+    "8": 10,
+    "9": 7
+   }
+  },
+  {
+   "kod": "32",
+   "no": 32,
+   "baslik": "Gebelik Hastalıkları",
+   "madde": 37,
+   "bant": {
+    "4": 0,
+    "5": 4,
+    "6": 6,
+    "7": 10,
+    "8": 9,
+    "9": 8
+   }
+  },
+  {
+   "kod": "33",
+   "no": 33,
+   "baslik": "Memenin Benign Hastalıkları",
+   "madde": 40,
+   "bant": {
+    "4": 0,
+    "5": 6,
+    "6": 9,
+    "7": 10,
+    "8": 7,
+    "9": 8
+   }
+  },
+  {
+   "kod": "39",
+   "no": 39,
+   "baslik": "İnvaziv Serviks Kanseri ve Endometriyozis",
+   "madde": 37,
+   "bant": {
+    "4": 0,
+    "5": 5,
+    "6": 6,
+    "7": 9,
+    "8": 9,
+    "9": 8
+   }
+  }
+ ]
+}
