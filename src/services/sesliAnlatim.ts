@@ -990,7 +990,7 @@ function planDurumu(key: string, p: PlanSatiri): 'hazir' | 'sirada' | 'bekliyor'
 }
 
 function guvenliAnahtar(k: string) {
-  return /^k1-\d+-[a-z0-9-]+$/.test(k) ? k : null;
+  return /^k\d+-\d+-[a-z0-9-]+$/.test(k) ? k : null;
 }
 
 export function registerSesliAnlatimRoutes(
@@ -1335,6 +1335,57 @@ export function registerSesliAnlatimRoutes(
       eklendi++;
     }
     res.json({ ok: true, eklendi, atlandi });
+  });
+
+  // Ders işçisi yayını (scripts/ders_isci/yayinla.py --sunucu) onaylanan dersi canlı derse ekler: ders listesi, konuşma
+  // metni, PDF hizalaması (paragraf → sayfa, metni yazan Claude'un sayfa listesinden) ve varsayılan iki ses: Emel (varsayılan)
+  // + EMA (Oracle'daki meds-ema konteyneri). Güncellenen derste metin değişirse yeni sesler varsayılan olur, eskiler kalır.
+  // Gövde: { key, no, baslik, metin, sayfalar?: number[], deckId?, dosya?: {path,name,pages,fileId} }
+  app.post('/api/sesli-anlatim/ders-ekle', guclu, (req, res) => {
+    const k = guvenliAnahtar(String(req.body?.key || ''));
+    const metin = String(req.body?.metin || '');
+    if (!k) return res.status(400).json({ error: 'ders anahtarı geçersiz' });
+    if (!metin.startsWith('# ') || !/^@@ /m.test(metin)) return res.status(400).json({ error: 'konuşma metni biçimi geçersiz (# başlık, @@ bölüm)' });
+    const pars = metinParagraflari(metin);
+    if (pars.length < 5) return res.status(400).json({ error: `konuşma metni çok kısa (${pars.length} paragraf)` });
+    const eskiMetin = fs.existsSync(P.metin(k)) ? fs.readFileSync(P.metin(k), 'utf8') : null;
+    const degisti = eskiMetin !== metin;
+    if (degisti) {
+      fs.mkdirSync(path.dirname(P.metin(k)), { recursive: true });
+      fs.writeFileSync(`${P.metin(k)}.tmp`, metin);
+      fs.renameSync(`${P.metin(k)}.tmp`, P.metin(k));
+    }
+    // ders listesi: yoksa sona ekle (sıra = en büyük + 1), varsa başlığı güncelle
+    const dersler = oku<Ders[]>(P.dersler, []);
+    const baslik = String(req.body?.baslik || '').trim() || (metin.split('\n')[0] || '').replace(/^#\s*/, '').trim();
+    const no = Number(req.body?.no) || Number((/^k\d+-(\d+)-/.exec(k) || [])[1]) || 0;
+    const var_ = dersler.find((d) => d.key === k);
+    if (var_) var_.baslik = baslik || var_.baslik;
+    else dersler.push({ key: k, no, baslik, sira: Math.max(0, ...dersler.map((d) => d.sira || 0)) + 1, ses: 'emel' });
+    yaz(P.dersler, dersler);
+    // PDF hizalaması: paragraf başına sayfa (sayı tutmazsa yazılmaz — canlı ders yalnız metni gösterir)
+    const sayfalar: unknown[] = Array.isArray(req.body?.sayfalar) ? req.body.sayfalar : [];
+    const dosya = req.body?.dosya && typeof req.body.dosya === 'object' ? req.body.dosya : null;
+    let hizalama = 'yok';
+    if (dosya && sayfalar.length === pars.length && sayfalar.every((x) => Number.isInteger(x) && (x as number) >= 1 && (!dosya.pages || (x as number) <= dosya.pages))) {
+      yaz(path.join(KOK, 'hizalama', `${k}.json`), {
+        deckId: String(req.body?.deckId || `k${k.split('-')[0].slice(1)}p-${k}`),
+        dosyalar: [{ path: String(dosya.path || ''), name: String(dosya.name || ''), fileId: dosya.fileId ? String(dosya.fileId) : undefined, pages: Number(dosya.pages) || undefined }],
+        paragraflar: sayfalar.map((x) => ({ dosya: 0, sayfa: x, guven: 1 })),
+        kaynak: 'ders-isci',
+      });
+      hizalama = 'yazıldı';
+    } else if (sayfalar.length) hizalama = `atlandı (${sayfalar.length} sayfa ≠ ${pars.length} paragraf)`;
+    // sesler: metin değiştiyse (ya da hiç ses yoksa) Emel varsayılan + EMA
+    const kayit = kayitlar()[k] || [];
+    const isteyen = 'ders-isci';
+    const isler: string[] = [];
+    if (degisti || !kayit.some((v) => v.saglayici === 'edge-emel' && v.metinHash === hash(metin)))
+      isler.push(isEkle(k, 'edge-emel', 'Emel', { varsayilanYap: true, isteyen }).id);
+    if (degisti || !kayit.some((v) => v.saglayici === 'ema-yerel' && v.metinHash === hash(metin)))
+      isler.push(isEkle(k, 'ema-yerel', 'Ema', { isteyen }).id);
+    degisti && yayinla('sesli_anlatim', { neden: 'ders-ekle', key: k, at: simdi() });
+    res.json({ ok: true, key: k, yeni: !var_, metinDegisti: degisti, paragraf: pars.length, hizalama, isler });
   });
 
   app.post('/api/sesli-anlatim/yerel/aktif', requireAdmin, guclu, (req, res) => {

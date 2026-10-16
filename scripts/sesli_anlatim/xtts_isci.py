@@ -76,6 +76,9 @@ def log(*a):
 
 def istek(yol: str, govde: dict | bytes | None = None, yontem: str = "POST", basliklar: dict | None = None, zaman_asimi: int = 60):
     h = {"x-panel-secret": SIR, "x-isci": ISCI, "x-saglayici": "xtts-yerel", "User-Agent": "meds-xtts-isci"}
+    # sunucunun genel yazma koruması (server.ts): loopback dışından POST/PUT için X-API-Password (ders işçisiyle aynı)
+    if os.environ.get("MEDSORU_API_PASSWORD") or ENV.get("MEDSORU_API_PASSWORD"):
+        h["X-API-Password"] = os.environ.get("MEDSORU_API_PASSWORD") or ENV["MEDSORU_API_PASSWORD"]
     if isinstance(govde, (bytes, bytearray)):
         veri = bytes(govde)
         h["Content-Type"] = "application/octet-stream"

@@ -22,6 +22,9 @@ from cikar import pdf_metni  # noqa: E402
 
 sys.path.insert(0, str(APP / "scripts" / "agents"))
 TALIMAT = Path(__file__).resolve().parent / "TALIMAT.md"
+# Canlı ders konuşma metni (2026-10-16): desteyle aynı taslakta, ayrı Claude oturumunda yazılır, onayla birlikte yayınlanır
+TALIMAT_SESLI = Path(__file__).resolve().parent / "TALIMAT_SESLI.md"
+METIN_DENETLE = APP / "scripts" / "sesli_anlatim" / "metin_denetle.py"
 # Kota ya da kimlik sorunu: iş "bekle" olur, deneme hakkı harcanmaz (anahtar yenilenince kaldığı yerden sürer)
 KOTA_RE = re.compile(r"usage limit|rate.?limit|limit (?:reached|exceeded)|quota|\b429\b|overloaded|credit balance|"
                      r"\b401\b|authenticat|invalid.*token|oauth", re.I)
@@ -247,7 +250,7 @@ def baglam_hazirla(j: dict, d: Path, metin: str, bilgi: dict) -> dict:
 
 
 # ------------------------------------------------------------------ Claude
-def claude(d: Path, istem: str, oturum: str | None = None, sure: int = 3 * 3600) -> dict:
+def claude(d: Path, istem: str, oturum: str | None = None, sure: int = 3 * 3600, oturum_dosya: str = "oturum.json") -> dict:
     cmd = [CLAUDE_BIN, "-p", istem, "--output-format", "json", "--permission-mode", "bypassPermissions",
            "--add-dir", str(APP)]
     if oturum:
@@ -268,7 +271,7 @@ def claude(d: Path, istem: str, oturum: str | None = None, sure: int = 3 * 3600)
         js = {}
     oturum_id = js.get("session_id") or oturum
     if oturum_id:
-        yaz(d / "oturum.json", {"session_id": oturum_id, "zaman": time.time()})
+        yaz(d / oturum_dosya, {"session_id": oturum_id, "zaman": time.time()})
     sonuc_metni = str(js.get("result") or "")
     hata = js.get("is_error") or r.returncode != 0
     return {"hata": ham[-600:] if hata else "", "kota": bool(hata and KOTA_RE.search(ham)), "sonuc": sonuc_metni,
@@ -289,6 +292,85 @@ def bildir(baslik: str, ayrinti: str, hedef: str):
 def denetle(d: Path) -> dict:
     subprocess.run([sys.executable, str(Path(__file__).resolve().parent / "denetle.py"), str(d)], capture_output=True)
     return oku(d / "denetim.json", {"hata": 999, "hatalar": ["denetim çalışmadı"]})
+
+
+def paragraf_sayisi(md: str) -> int:
+    """src/services/sesliAnlatim.ts::metinParagraflari ile aynı kural: '# ' atlanır, '@@' ve boş satır paragrafı bitirir."""
+    n, tampon = 0, False
+    for s in md.splitlines():
+        if s.startswith("# "):
+            continue
+        if s.startswith("@@") or not s.strip():
+            n, tampon = n + tampon, False
+        else:
+            tampon = True
+    return n + tampon
+
+
+def sayfalar_denetle(d: Path) -> list[str]:
+    """konusma_sayfalari.json: uzunluk = paragraf sayısı, her sayfa kaynak.md'de, sıra büyük ölçüde ileri."""
+    md = (d / "konusma_metni.md").read_text(encoding="utf-8") if (d / "konusma_metni.md").exists() else ""
+    s = oku(d / "konusma_sayfalari.json", None)
+    if not isinstance(s, list):
+        return ["konusma_sayfalari.json yok ya da liste değil"]
+    var = {int(x) for x in re.findall(r"=== SAYFA (\d+) ===", (d / "kaynak.md").read_text(encoding="utf-8"))}
+    h = []
+    n = paragraf_sayisi(md)
+    if len(s) != n:
+        h.append(f"konusma_sayfalari.json uzunluğu {len(s)} ≠ paragraf sayısı {n}")
+    yanlis = [x for x in s if not isinstance(x, int) or x not in var]
+    if yanlis:
+        h.append(f"kaynak.md'de olmayan sayfa: {yanlis[:10]}")
+    geri = sum(1 for a, b in zip(s, s[1:]) if isinstance(a, int) and isinstance(b, int) and b < a - 2)
+    if geri > max(2, len(s) // 10):
+        h.append(f"sayfa sırası {geri} kez belirgin geri gidiyor (PDF sırasını izle)")
+    return h
+
+
+def metin_denetle(d: Path) -> dict:
+    """konusma_metni.md (+ konusma_sayfalari.json) → {"hata": n, "cikti": "..."}; dosya yoksa hata 999."""
+    f = d / "konusma_metni.md"
+    if not f.exists():
+        return {"hata": 999, "cikti": "konusma_metni.md yok"}
+    r = subprocess.run([sys.executable, str(METIN_DENETLE), str(f)], capture_output=True, text=True)
+    m = re.search(r"(\d+) HATA", r.stdout or "")
+    hata = int(m.group(1)) if m else (0 if r.returncode == 0 else 999)
+    sh = sayfalar_denetle(d)
+    cikti = (r.stdout or r.stderr or "")[-3000:] + "".join(f"\n  HATA (sayfa) {x}" for x in sh)
+    return {"hata": hata + len(sh), "cikti": cikti}
+
+
+def konusma_metni(d: Path) -> dict:
+    """Canlı ders konuşma metni (TALIMAT_SESLI.md). Ayrı oturum (oturum_sesli.json): ana destenin oturumuna karışmaz,
+    kota kesintisinde kaldığı yerden sürer. Döner: {"durum": tamam|hata|kota|kapali, "ozet": "..."}"""
+    if not ayar().get("canli_ders", True):
+        return {"durum": "kapali", "ozet": "canlı ders metni kapalı (ayar)"}
+    onceki = oku(d / "oturum_sesli.json", {}).get("session_id")
+    den = metin_denetle(d)
+    oturum = onceki
+    if den["hata"]:
+        istem = (f"Talimat dosyası: {TALIMAT_SESLI}. Onu ve çalışma dizinindeki kaynak.md, deck.json, sayfa_haritasi.json, "
+                 "cikmis_baglantilari.json ve baglam.json'u oku; konusma_metni.md'yi yaz ve metin_denetle.py 0 HATA olana "
+                 "kadar düzelt. Başka dosyaya dokunma.")
+        if onceki:
+            istem = "Kesinti nedeniyle yarım kaldın; konusma_metni.md'ye bakıp kaldığın yerden sür. " + istem
+        r = claude(d, istem, onceki, oturum_dosya="oturum_sesli.json")
+        if r["kota"]:
+            return {"durum": "kota", "ozet": "kota doldu (konuşma metni)"}
+        oturum = r.get("oturum")
+        den = metin_denetle(d)
+        for _ in range(2):  # en çok 2 düzeltme turu
+            if not den["hata"]:
+                break
+            r = claude(d, f"metin_denetle.py {den['hata']} HATA buldu. Hepsini düzelt (başka dosyaya dokunma), sonra yeniden "
+                          f"çalıştır:\n{den['cikti']}", oturum, oturum_dosya="oturum_sesli.json")
+            if r["kota"]:
+                return {"durum": "kota", "ozet": "kota doldu (konuşma metni düzeltmesi)"}
+            den = metin_denetle(d)
+    ilk = (den["cikti"].splitlines() or [""])[0]
+    m = re.search(r"(\d+) kelime.*?(\d+) bölüm.*?\"Burası önemli\" (\d+)", ilk)
+    ozet = f"konuşma metni {m.group(1)} kelime · {m.group(2)} bölüm · {m.group(3)} önemli" if m else "konuşma metni yok"
+    return {"durum": "tamam" if den["hata"] == 0 else "hata", "ozet": ozet + ("" if den["hata"] == 0 else f" · {den['hata']} HATA")}
 
 
 # ------------------------------------------------------------------ ana akış
@@ -313,6 +395,9 @@ def _isle_tek(j: dict) -> dict:
         log(f"bağlam: {b['ders_id']} · eşleşme {b['program'].get('guven')} ({b['program'].get('skor')}) · "
             f"{len(b['cikmis_adaylari'])} çıkmış aday · {len(b['kazanimlar'])} kazanım")
     b = oku(d / "baglam.json", {})
+
+    if (d / "ana_bitti.json").exists():  # deste vb. bitti, yalnız konuşma metni kalmış (kota kesintisi)
+        return _sesli_ve_bitir(j, d, b, oku(d / "ana_bitti.json", {}))
 
     onceki = oku(d / "oturum.json", {}).get("session_id")
     istem = (f"Talimat dosyası: {TALIMAT}. Önce onu ve çalışma dizinindeki baglam.json + kaynak.md'yi oku, sonra "
@@ -339,12 +424,20 @@ def _isle_tek(j: dict) -> dict:
             return {"durum": "kota", "mesaj": "düzeltme turunda kota doldu"}
         den = denetle(d)
 
+    yaz(d / "ana_bitti.json", den)
+    return _sesli_ve_bitir(j, d, b, den)
+
+
+def _sesli_ve_bitir(j: dict, d: Path, b: dict, den: dict) -> dict:
+    sesli = konusma_metni(d)
+    if sesli["durum"] == "kota":
+        return {"durum": "kota", "mesaj": sesli["ozet"] + "; deste hazır, konuşma metni sonra sürecek"}
     s = den.get("sayilar", {})
     ozet = (f"{b.get('program', {}).get('ders')} · {b.get('program', {}).get('konu')} · {s.get('slayt', 0)} slayt · "
             f"{s.get('soru', 0)} soru · {s.get('terim', 0)} terim · {s.get('hastalik', 0)} hastalık · {s.get('havuz', 0)} bilgi · "
-            f"{s.get('bag', 0)} çıkmış bağı · denetim {den.get('hata', '?')} HATA")
+            f"{s.get('bag', 0)} çıkmış bağı · denetim {den.get('hata', '?')} HATA · {sesli['ozet']}")
     yaz(d / "durum.json", {"durum": "onay_bekliyor", "ozet": ozet, "denetim_hata": den.get("hata"), "zaman": time.time(),
-                           "deste_id": b.get("deste_id"), "ders_id": b.get("ders_id")})
+                           "deste_id": b.get("deste_id"), "ders_id": b.get("ders_id"), "canli_ders": sesli["durum"]})
     bildir("Yeni ders işlendi — onay bekliyor", ozet + (f"\nUyarı: {b['uyari']}" if b.get("uyari") else ""), b.get("ders_id", j["is_id"]))
     log(f"taslak hazır: {j['is_id']} → {ozet}")
     return {"durum": "taslak", "mesaj": ozet}

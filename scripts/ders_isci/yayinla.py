@@ -539,6 +539,42 @@ def _bildir(baslik: str, ayrinti: str):
         print("bildirim gönderilemedi:", e)
 
 
+def _env(ad: str) -> str:
+    for satir in (MEDS / ".env").read_text(encoding="utf-8").splitlines() if (MEDS / ".env").exists() else []:
+        if satir.startswith(ad + "="):
+            return satir.split("=", 1)[1].strip().strip('"').strip("'")
+    return ""
+
+
+def _canli_ders_ekle(y) -> str:
+    """Yayınlanan dersi canlı derse ekler (sunucu: POST /api/sesli-anlatim/ders-ekle): konuşma metni, ders listesi,
+    PDF hizalaması (konusma_sayfalari.json) ve iki ses işi — Emel (varsayılan) + EMA. Metin yoksa atlanır.
+    Döner: tek satırlık sonuç (bildirime eklenir)."""
+    import urllib.request
+    f = y.d / "konusma_metni.md"
+    if not f.exists():
+        return f"{y.ders_id}: konuşma metni yok (canlı derse eklenmedi)"
+    b = oku(y.d / "baglam.json", {}) or {}
+    yol = b.get("pdf_yolu") or ""
+    indirilen = oku(ROOT / "meds_downloads" / "_downloads.json", {}) or {}
+    file_id = next((fid for fid, v in indirilen.items() if isinstance(v, dict) and v.get("path") == f"drive_root/{yol}"), None)
+    govde = {"key": y.ders_id, "no": y.kayit.get("numara"), "baslik": y.kayit.get("konu") or b.get("program", {}).get("konu"),
+             "metin": f.read_text(encoding="utf-8"), "sayfalar": oku(y.d / "konusma_sayfalari.json", []) or [],
+             "deckId": y.deste_id,
+             "dosya": {"path": yol, "name": b.get("pdf_adi") or Path(yol).name, "pages": b.get("sayfa"), "fileId": file_id}}
+    h = {"Content-Type": "application/json", "x-panel-secret": _env("MEDS_PANEL_SECRET")}
+    if _env("MEDSORU_API_PASSWORD"):
+        h["X-API-Password"] = _env("MEDSORU_API_PASSWORD")
+    try:
+        with urllib.request.urlopen(urllib.request.Request("http://127.0.0.1:3000/api/sesli-anlatim/ders-ekle",
+                                                           json.dumps(govde).encode(), h), timeout=60) as r:
+            c = json.loads(r.read() or b"{}")
+        return (f"{y.ders_id}: canlı derse {'eklendi' if c.get('yeni') else 'güncellendi'} · {c.get('paragraf')} paragraf · "
+                f"PDF hizalaması {c.get('hizalama')} · {len(c.get('isler') or [])} ses işi (Emel + EMA)")
+    except Exception as e:  # noqa: BLE001
+        return f"{y.ders_id}: canlı derse eklenemedi ({e})"
+
+
 def _site_derle() -> bool:
     c = ["docker", "compose", "--env-file", str(MEDS / ".env"), "-f", str(MEDS / "deploy" / "oracle" / "docker-compose.oracle.yml")]
     for adim in (["build", "-q", "meds-app"], ["up", "-d", "--no-deps", "meds-app"]):
@@ -572,7 +608,7 @@ def sunucu() -> int:
             hedef = ONAYLANAN / d.name
             if hedef.exists():
                 shutil.rmtree(hedef)
-            shutil.copytree(d, hedef, ignore=shutil.ignore_patterns("oturum.json"))
+            shutil.copytree(d, hedef, ignore=shutil.ignore_patterns("oturum.json", "oturum_sesli.json"))
             yeni.append(hedef)
     derle_iste = L_TASLAK / "derle_iste.json"
     if not yeniden and not yeni:
@@ -614,9 +650,15 @@ def sunucu() -> int:
             yaz_json(t / "durum.json", (oku(t / "durum.json", {}) or {}) | {"durum": "yayinlandi", "zaman": time.time()})
     yaz_json(DURUM_KAYIT, sorted(asil, key=lambda y: (y["kurul"], y["numara"])))
     yeni_adlar = [f"{y.kayit['konu']} ({y.ders_id})" for y in sonuc if y.d.parent == ONAYLANAN]
+    # canlı ders (2026-10-16): yeni onaylanan derslerin konuşma metni + Emel/EMA sesi; site derlendikten sonra (meds-app
+    # yeniden kurulurken kuyruğa alınan ses işi yarıda kalmasın)
+    canli = [_canli_ders_ekle(y) for y in sonuc if y.d.parent == ONAYLANAN] if derlendi else []
+    for c in canli:
+        print("canlı ders:", c)
     if yeni_adlar:
         _bildir("Ders yayınlandı" if derlendi else "Ders yayınlandı, site derlenemedi",
-                "Sitede: " + ", ".join(yeni_adlar) + ("" if derlendi else " — meds-app derlemesi başarısız, kayıtlara bakın."))
+                "Sitede: " + ", ".join(yeni_adlar) + ("" if derlendi else " — meds-app derlemesi başarısız, kayıtlara bakın.")
+                + ("\nCanlı ders: " + "; ".join(canli) if canli else ""))
     return 0 if derlendi else 4
 
 

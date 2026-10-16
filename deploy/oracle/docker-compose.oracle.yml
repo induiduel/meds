@@ -224,6 +224,43 @@ services:
         max-size: "10m"
         max-file: "2"
 
+  # EMA Lightning ses işçisi (yalnız CPU): sesli anlatım kuyruğundaki ema-yerel işlerini Oracle'da seslendirir
+  # (/api/sesli-anlatim/yerel/* uçları, MEDS_PANEL_SECRET). Yeni ders yayınlanınca Emel + EMA sesi bilgisayar
+  # kapalıyken de üretilir. Kod salt-okunur; model ~34 MB (meds-ema-models). 2026-10-16.
+  meds-ema:
+    build:
+      context: ../..
+      dockerfile: deploy/oracle/Dockerfile.ema
+    image: medsoru-ema:latest
+    container_name: meds-ema
+    restart: unless-stopped
+    depends_on:
+      - meds-server
+      - meds-app
+    env_file:
+      - path: ../../.env
+        required: true
+    environment:
+      - MEDS_EMA_SUNUCU=http://meds-server:3000
+      - MEDS_EMA_AD=oracle-ema
+      - EMA_IS_PARCACIGI=1
+    volumes:
+      - ../..:/app:ro
+      - meds-ema-models:/models
+      - meds-ema-veri:/veri
+    deploy:
+      resources:
+        limits:
+          cpus: "0.8"
+          memory: 1500M
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "2"
+
 volumes:
   meds-embed-models:
   meds-pg-data:
+  meds-ema-models:
+  meds-ema-veri:

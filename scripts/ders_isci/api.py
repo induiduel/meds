@@ -24,7 +24,7 @@ from ayarlar import (AYAR_TANIM, EFORLAR, KAYIT, KUYRUK, KUYRUK_KILIT, MODELLER,
                      log, oku, yaz)
 
 DOSYALAR = {"deck.json", "ornek_sorular.json", "sozluk.json", "hastaliklar.json", "bilgi_havuzu.jsonl",
-            "cikmis_baglantilari.json", "ders_notu.md", "ders_paketi.json", "rapor.md", "denetim.json"}
+            "cikmis_baglantilari.json", "ders_notu.md", "ders_paketi.json", "rapor.md", "denetim.json", "konusma_metni.md"}
 GECERLI_ID = re.compile(r"^[0-9]{8}-[0-9a-f]{10}(?:-\d+)?$")
 
 

@@ -1,0 +1,23 @@
+# Dockerfile.ema — EMA Lightning yerel ses işçisi (yalnız CPU, Oracle ARM).
+# Cihazdaki meds-ema-yerel ile aynı işçi (scripts/sesli_anlatim/ema_isci.py), ama kuyruğu doğrudan Oracle'daki
+# sunucudan alır: yeni ders (ders işçisi) yayınlanınca bilgisayar açık olmasa da EMA sesi üretilir.
+# Kod /app altına salt-okunur bağlanır (docker-compose.oracle.yml); model (~34 MB) ilk açılışta HF_HOME'a iner.
+# normalizer-tr (Rust) ve lameenc için ARM'da hazır tekerlek yok: tam imajda derlenir, ince imaja yalnız tekerlek geçer.
+FROM python:3.11 AS derle
+RUN pip wheel --no-cache-dir --no-deps -w /whl "normalizer-tr==0.8.0" lameenc
+
+FROM python:3.11-slim
+COPY --from=derle /whl /whl
+RUN pip install --no-cache-dir /whl/*.whl \
+  && pip install --no-cache-dir "torch==2.8.*" --index-url https://download.pytorch.org/whl/cpu \
+  && pip install --no-cache-dir "ema-lightning==1.1.2" numpy \
+  && rm -rf /whl
+
+ENV HF_HOME=/models \
+  CUDA_VISIBLE_DEVICES= \
+  PYTHONUNBUFFERED=1 \
+  EMA_IS_PARCACIGI=1 \
+  MEDS_EMA_VERI=/veri \
+  MEDS_EMA_AD=oracle-ema
+
+CMD ["python3", "/app/scripts/sesli_anlatim/ema_isci.py", "bekle"]

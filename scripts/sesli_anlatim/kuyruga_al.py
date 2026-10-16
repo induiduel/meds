@@ -33,6 +33,10 @@ def tur(args):
     DATA.joinpath('metin').mkdir(parents=True, exist_ok=True)
     dersler = [{'key': x['key'], 'no': x['no'], 'baslik': x['baslik'], 'sira': x['sira'], 'ses': x['ses']} for x in liste]
     hedef = DATA / 'dersler.json'
+    # listede olmayan dersleri koru: ders işçisi yayını (/api/sesli-anlatim/ders-ekle) yeni dersleri buraya ekler (2026-10-16)
+    if hedef.exists():
+        anahtarlar = {x['key'] for x in dersler}
+        dersler += [x for x in json.load(open(hedef)) if x.get('key') not in anahtarlar]
     if not hedef.exists() or json.load(open(hedef)) != dersler:
         if not args.kuru:
             json.dump(dersler, open(hedef, 'w'), ensure_ascii=False, indent=1)

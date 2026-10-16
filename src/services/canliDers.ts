@@ -35,7 +35,7 @@ const oku = <T,>(p: string, bos: T): T => {
     return bos;
   }
 };
-const anahtarGecerli = (k: unknown): k is string => typeof k === 'string' && /^k1-\d+-[a-z0-9-]+$/.test(k);
+const anahtarGecerli = (k: unknown): k is string => typeof k === 'string' && /^k\d+-\d+-[a-z0-9-]+$/.test(k);
 const vidGecerli = (v: unknown): v is string => typeof v === 'string' && /^[a-z0-9-]+$/.test(v);
 
 const dersler = () => oku<Ders[]>(P.dersler, []);
