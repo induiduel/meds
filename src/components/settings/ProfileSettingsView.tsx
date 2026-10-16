@@ -54,6 +54,7 @@ import { Row, Section, Segmented, Switch } from '../ui/kit';
 import { toast } from '../ui/Toast';
 import { NotesSyncRow } from './NotesSyncRow';
 import { UserDataSyncRow } from './UserDataSyncRow';
+import { ArkaPlanRow } from './ArkaPlanRow';
 import { ProgressResetRow } from './ProgressResetRow';
 import { startWelcomeTour } from '../onboarding/tourState';
 import { onLearnTour } from '../onboarding/learnTourState';
@@ -336,6 +337,7 @@ const ProfileSettingsClassic: React.FC<Props> = ({ currentUser, isAdmin, questio
         <Section id="hesap" title="Hesap ve veri">
           <div className="ui-group">
             <UserDataSyncRow />
+            <ArkaPlanRow />
             <Row icon={Database} iconBg="var(--color-clinic)" title="Çevrimdışı veritabanı" sub="Soruları, sözlüğü ve kartları cihaza indir" onClick={onOpenOffline} />
             <NotesSyncRow />
             <ProgressResetRow />

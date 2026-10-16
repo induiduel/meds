@@ -1,10 +1,12 @@
 // MeDSor Service Worker - PWA v8: Yüksek Hızlı Açılış, Optimize Edilmiş Bellek & Modül Parçalama
-const CACHE_VERSION = 'medsoru-pwa-v13';
+const CACHE_VERSION = 'medsoru-pwa-v14';
 const STATIC_CACHE = `medsoru-static-${CACHE_VERSION}`;
 const RUNTIME_CACHE = `medsoru-runtime-${CACHE_VERSION}`;
 const DATA_CACHE = `medsoru-data-${CACHE_VERSION}`;
 // Canlı ders çevrimdışı paketleri (canliDersCevrimdisi.ts): sürüm temizliğinde silinmez, yalnız kullanıcı siler
 const CD_OFFLINE_CACHE = 'medsoru-canli-ders-offline';
+/** Arka planda (Background Fetch) inen ders dosyaları; uygulama açılınca kaydedilir (canliDersCevrimdisi.ts) */
+const CD_BEKLEYEN_CACHE = 'medsoru-cd-bekleyen';
 
 // Cihazdaki canlı ders sesleri: yol → sürüm (X-Cd-Surum). İstemci değiştirince CD_OFFLINE_CHANGED gönderir.
 let cdSesler = null;
@@ -112,7 +114,7 @@ self.addEventListener('activate', (event) => {
       .then((keys) => {
         return Promise.all(
           keys.map((key) => {
-            if (key !== STATIC_CACHE && key !== RUNTIME_CACHE && key !== DATA_CACHE && key !== 'medsoru-pdf-offline' && key !== CD_OFFLINE_CACHE) {
+            if (key !== STATIC_CACHE && key !== RUNTIME_CACHE && key !== DATA_CACHE && key !== 'medsoru-pdf-offline' && key !== CD_OFFLINE_CACHE && key !== CD_BEKLEYEN_CACHE) {
               console.log('[SW] Eski önbellek temizleniyor:', key);
               return caches.delete(key);
             }
@@ -383,18 +385,17 @@ self.addEventListener('fetch', (event) => {
 });
 
 // 4. Arka Plan Senkronizasyonu (Background Sync)
+// Açık pencere varsa boşaltmayı o yapar (aynı kuyruğu iki taraf birden göndermesin); yoksa SW kuyruğu kendisi gönderir.
 self.addEventListener('sync', (event) => {
-  console.log('[SW] Background sync tetiklendi:', event.tag);
   if (event.tag === 'sync-offline-actions' || event.tag === 'medsoru-sync') {
-    event.waitUntil(notifyClientsToSync());
+    event.waitUntil(arkaPlanEsitle());
   }
 });
 
-// 5. Periyodik Arka Plan Senkronizasyonu (Periodic Background Sync)
+// 5. Periyodik Arka Plan Senkronizasyonu (Periodic Background Sync): kuyruk + önbellekteki herkese açık verileri tazele
 self.addEventListener('periodicsync', (event) => {
-  console.log('[SW] Periodic background sync tetiklendi:', event.tag);
   if (event.tag === 'update-database' || event.tag === 'medsoru-daily-sync') {
-    event.waitUntil(notifyClientsToSync());
+    event.waitUntil(arkaPlanEsitle().then(veriOnbelleginiTazele));
   }
 });
 
@@ -403,7 +404,106 @@ async function notifyClientsToSync() {
   for (const client of clientList) {
     client.postMessage({ type: 'MEDSORU_BACKGROUND_SYNC' });
   }
+  return clientList.length;
 }
+
+async function arkaPlanEsitle() {
+  if (await notifyClientsToSync()) return;
+  await kuyruguBosalt();
+}
+
+/** offlineDatabaseService ile aynı IndexedDB kuyruğu (medsoru_offline_db › offline_queue). Sürüm verilmez: şema yükseltmesi uygulamanındır. */
+function kuyrukDb() {
+  return new Promise((resolve) => {
+    try {
+      const req = indexedDB.open('medsoru_offline_db');
+      req.onsuccess = () => {
+        const db = req.result;
+        if (!db.objectStoreNames.contains('offline_queue')) { db.close(); resolve(null); } else resolve(db);
+      };
+      req.onupgradeneeded = () => { try { req.transaction.abort(); } catch (_) {} };
+      req.onerror = () => resolve(null);
+    } catch (_) { resolve(null); }
+  });
+}
+const idbIstek = (r) => new Promise((ok, hata) => { r.onsuccess = () => ok(r.result); r.onerror = () => hata(r.error); });
+
+async function kuyruguBosalt() {
+  const db = await kuyrukDb();
+  if (!db) return;
+  try {
+    const hepsi = await idbIstek(db.transaction('offline_queue', 'readonly').objectStore('offline_queue').getAll());
+    let gonderilen = 0;
+    let kalan = 0;
+    for (const act of hepsi) {
+      if (!act.url) { kalan++; continue; } // eski kayıt: mutlak adresi yok, uygulama açılınca gider
+      let ok = false;
+      let kalici = false;
+      try {
+        const res = await fetch(act.url, {
+          method: act.method,
+          headers: { 'Content-Type': 'application/json' },
+          body: act.method === 'DELETE' && act.payload == null ? undefined : JSON.stringify(act.payload),
+        });
+        ok = res.ok;
+        kalici = !ok && res.status >= 400 && res.status < 500 && res.status !== 408 && res.status !== 429 && res.status !== 401 && res.status !== 403;
+      } catch (_) {
+        // Ağ yok: tarayıcı sync olayını yeniden dener
+        throw new Error('ag-yok');
+      }
+      const st = db.transaction('offline_queue', 'readwrite').objectStore('offline_queue');
+      if (ok || kalici) { await idbIstek(st.delete(act.id)); if (ok) gonderilen++; }
+      else { await idbIstek(st.put({ ...act, attempts: (act.attempts || 0) + 1 })); kalan++; }
+    }
+    if (gonderilen && self.registration.showNotification) {
+      await self.registration.showNotification('MeDSor', {
+        body: `Bekleyen ${gonderilen} işlem arka planda gönderildi.`,
+        icon: '/icons/icon-192x192.png', badge: '/icons/icon-96x96.png', tag: 'medsoru-kuyruk', silent: true,
+      }).catch(() => {});
+    }
+    if (kalan) throw new Error('kuyruk-bekliyor'); // sync yeniden zamanlansın
+  } finally {
+    db.close();
+  }
+}
+
+/** Veri önbelleğindeki herkese açık GET yanıtlarını (en çok 40) arka planda yeniler. */
+async function veriOnbelleginiTazele() {
+  const cache = await caches.open(DATA_CACHE);
+  const keys = (await cache.keys()).slice(0, 40);
+  await Promise.all(keys.map(async (req) => {
+    try {
+      const res = await fetch(req.url, { cache: 'no-store' });
+      if (res.ok) await cache.put(req.url, res);
+    } catch (_) { /* sonraki tur */ }
+  }));
+}
+
+// 4b. Arka plan indirme (Background Fetch): canlı ders ses + PDF'leri. Kimlik `cd|<ders>|<vid,vid>`.
+// Sayfa açıksa sonucu kendisi okur; burada dosyalar yine de bekleme önbelleğine yazılır ki sayfa kapandıysa kaybolmasın.
+self.addEventListener('backgroundfetchsuccess', (event) => {
+  const reg = event.registration;
+  event.waitUntil((async () => {
+    if (!reg.id.startsWith('cd|')) return;
+    const [, key, vidler] = reg.id.split('|');
+    const bekleyen = await caches.open(CD_BEKLEYEN_CACHE);
+    for (const r of await reg.matchAll()) {
+      const res = await r.responseReady.catch(() => null);
+      if (res && res.ok) await bekleyen.put(r.request.url, res);
+    }
+    const acik = (await self.clients.matchAll({ type: 'window' })).length > 0;
+    if (!acik) {
+      await bekleyen.put(`/__cd-bekleyen/${encodeURIComponent(key)}`, new Response(JSON.stringify({ key, vidler: vidler ? vidler.split(',') : null }), { headers: { 'Content-Type': 'application/json' } }));
+    }
+    try { await event.updateUI({ title: acik ? 'Canlı ders indirildi' : 'Canlı ders indirildi — açınca cihaza kaydedilecek' }); } catch (_) {}
+  })());
+});
+self.addEventListener('backgroundfetchfail', (event) => {
+  event.waitUntil((async () => { try { await event.updateUI({ title: 'Canlı ders indirilemedi' }); } catch (_) {} })());
+});
+self.addEventListener('backgroundfetchclick', (event) => {
+  event.waitUntil(self.clients.openWindow ? self.clients.openWindow('/canli-ders') : Promise.resolve());
+});
 
 // 6. İstemciden Gelen Mesajlar (postMessage)
 self.addEventListener('message', (event) => {
@@ -437,7 +537,7 @@ self.addEventListener('push', (event) => {
 
   try {
     const payload = event.data.json();
-    const title = payload.title || '🚨 MeDSor Bildirimi';
+    const title = payload.title || (payload.student ? 'MeDSor' : '🚨 MeDSor Bildirimi');
     const body = payload.body || 'Yeni bir işlem gerçekleşti.';
     const icon = payload.icon || '/icons/icon-192x192.png';
     const badge = payload.badge || '/icons/icon-96x96.png';
@@ -450,11 +550,12 @@ self.addEventListener('push', (event) => {
       badge,
       tag,
       renotify: true,
-      requireInteraction: true,
-      vibrate: [300, 100, 300, 100, 300],
+      // Öğrenci bildirimi sessizce düşer; yönetici bildirimi kalıcıdır
+      requireInteraction: !payload.student,
+      vibrate: payload.student ? [120, 60, 120] : [300, 100, 300, 100, 300],
       data,
       actions: [
-        { action: 'open', title: '🔍 Görüntüle' },
+        { action: 'open', title: payload.student ? 'Aç' : '🔍 Görüntüle' },
         { action: 'close', title: 'Kapat' },
       ],
     };

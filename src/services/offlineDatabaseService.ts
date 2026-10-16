@@ -64,6 +64,8 @@ export interface OfflineAction {
   /** Kuyruk denemesi: kaç kez gönderilmeye çalışıldı, bir sonraki deneme zamanı (ms) */
   attempts?: number;
   nextAt?: number;
+  /** Mutlak adres (sw.js arka plan boşaltması için) */
+  url?: string;
 }
 
 /** Göreli /api yolunu canlı API tabanına çevirir (Ayarlar'daki özel adres > hostun varsayılanı). */
@@ -874,7 +876,8 @@ class OfflineDatabaseService {
     if (twin && action.type === 'vote') {
       await this.writeQueue(db, (st) => st.delete(twin.id));
     } else if (!twin) {
-      const fullAction: OfflineAction = { ...action, timestamp: new Date().toISOString(), attempts: 0, nextAt: 0 };
+      // url: sw.js sayfa kapalıyken kuyruğu kendisi boşaltır (özel API adresini bilemez)
+      const fullAction: OfflineAction = { ...action, url: resolveApiUrl(action.endpoint), timestamp: new Date().toISOString(), attempts: 0, nextAt: 0 };
       await this.writeQueue(db, (st) => st.add(fullAction));
     }
 

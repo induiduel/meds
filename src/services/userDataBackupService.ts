@@ -29,6 +29,8 @@ import { mergeNotes, type NotesStore } from './userNotesService';
 
 export interface UserDataBackupDeps {
   dataDir: string;
+  /** Sunucu olayı profil bildirimine yazıldığında (Web Push için). */
+  onNotified?: (uid: string, n: { id: string; title: string; message: string; deepLinkUrl?: string }) => void;
   loadUsers: () => any[];
   saveUsers: (users: any[]) => void;
   mirrorUserToDb: (user: any) => Promise<void>;
@@ -553,6 +555,7 @@ export function registerUserDataBackupRoutes(app: express.Express, deps: UserDat
       const bundle = { ...existing, notifications: [item, ...list].slice(0, 300), serverSavedAt: item.createdAt };
       writeBackup(file, bundle);
       deps.onSaved?.({ uid, email: String(bundle.email || email || ''), verified: Boolean(bundle.verified), bundle, origin: 'server' });
+      deps.onNotified?.(uid, item);
       return true;
     } catch (e: any) {
       console.warn('[UserDataBackup] Kullanıcı bildirimi yazılamadı:', e?.message || e);

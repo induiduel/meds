@@ -147,6 +147,92 @@ export function cdCevrimdisiIndir(key: string, opts: { caliyorVid?: string | nul
   return cdCevrimdisiAyarla(key, null, opts);
 }
 
+/* ---------------- arka plan indirme (Background Fetch) ---------------- */
+/** sw.js ile ortak: arka planda inen dosyaların bekleme önbelleği + yarım kalan ders işaretleri */
+const CD_BEKLEYEN_CACHE = 'medsoru-cd-bekleyen';
+const BF_ONEK = 'cd|';
+const bfDestek = async () => {
+  if (typeof navigator === 'undefined' || !('serviceWorker' in navigator) || typeof (window as any).BackgroundFetchManager === 'undefined') return null;
+  const reg = await navigator.serviceWorker.getRegistration();
+  return reg && (reg as any).backgroundFetch ? reg : null;
+};
+
+/**
+ * Ses ve PDF'leri tarayıcının arka plan indiricisiyle indirir: sekme kapansa/telefon kilitlense de iner, ilerleme
+ * sistem bildiriminde görünür. Sayfa açıkken sonuç burada okunur; kapanırsa sw.js dosyaları bekleme önbelleğine
+ * yazar, uygulama yeniden açılınca `cdBekleyenleriTamamla` dersi kaydeder. Destek yoksa null (normal indirme).
+ */
+async function arkaPlanIndir(
+  key: string, vidler: string[], baslik: string, istekler: { url: string; bayt: number }[], ilerle: (n: number) => void, signal: AbortSignal,
+): Promise<Map<string, Blob> | null> {
+  const reg = await bfDestek().catch(() => null);
+  if (!reg || !istekler.length) return null;
+  const bekleyen = await caches.open(CD_BEKLEYEN_CACHE);
+  const out = new Map<string, Blob>();
+  const eksik: typeof istekler = [];
+  for (const i of istekler) {
+    const hit = await bekleyen.match(i.url);
+    if (hit) { const b = await hit.blob(); out.set(i.url, b); ilerle(b.size); } else eksik.push(i);
+  }
+  if (!eksik.length) return out;
+  const id = `${BF_ONEK}${key}|${vidler.join(',')}`;
+  const bf = (reg as any).backgroundFetch;
+  let kayit = await bf.get(id);
+  if (!kayit) {
+    const toplam = eksik.reduce((a, i) => a + (i.bayt || 0), 0);
+    try {
+      kayit = await bf.fetch(id, eksik.map((i) => i.url), {
+        title: `Canlı ders indiriliyor: ${baslik}`.slice(0, 80),
+        icons: [{ src: '/icons/icon-192x192.png?v=9', sizes: '192x192', type: 'image/png' }],
+        ...(toplam > 0 ? { downloadTotal: toplam } : {}),
+      });
+    } catch {
+      return null; // izin/kota reddi: normal indirmeye düş
+    }
+  }
+  const iptal = () => { void kayit.abort().catch(() => false); };
+  signal.addEventListener('abort', iptal, { once: true });
+  let son = 0;
+  try {
+    await new Promise<void>((ok, hata) => {
+      const bak = () => {
+        const d = kayit.downloaded || 0;
+        if (d > son) { ilerle(d - son); son = d; }
+        if (kayit.result === 'success') ok();
+        else if (kayit.result === 'failure') hata(new Error(kayit.failureReason === 'aborted' ? 'İndirme iptal edildi.' : 'Arka plan indirmesi başarısız.'));
+      };
+      kayit.addEventListener('progress', bak);
+      bak();
+    });
+    for (const r of await kayit.matchAll()) {
+      const res: Response | undefined = await r.responseReady;
+      if (!res?.ok) throw new Error(`İndirilemedi (${res?.status ?? 'ağ'}).`);
+      out.set(r.request.url, await res.blob());
+    }
+  } catch (e) {
+    if (signal.aborted) throw Object.assign(new Error('İptal'), { name: 'AbortError' });
+    throw e;
+  } finally {
+    signal.removeEventListener('abort', iptal);
+  }
+  return out;
+}
+
+/** Sayfa kapalıyken biten arka plan indirmelerini kaydeder (bekleme önbelleğindeki işaretler). Açılışta çağrılır. */
+export async function cdBekleyenleriTamamla(): Promise<void> {
+  if (!cdCevrimdisiDestek()) return;
+  const bekleyen = await caches.open(CD_BEKLEYEN_CACHE);
+  for (const req of await bekleyen.keys()) {
+    const m = new URL(req.url).pathname.match(/^\/__cd-bekleyen\/(.+)$/);
+    if (!m) continue;
+    const { key, vidler } = await (await bekleyen.match(req))!.json();
+    try {
+      await cdCevrimdisiAyarla(key, vidler);
+      await bekleyen.delete(req);
+    } catch { /* bir sonraki açılışta yeniden denenir */ }
+  }
+}
+
 /** Ses varyantının cihazdaki sürümü eski mi (sunucuda yeniden üretilmiş) */
 export function cdSesEski(kayit: CdCevrimdisiKayit | null | undefined, v: CdVaryant | undefined): boolean {
   const x = v && cdKayitSesleri(kayit).find((s) => s.vid === v.id);
@@ -201,21 +287,24 @@ export async function cdCevrimdisiAyarla(key: string, vidler: string[] | null, o
       if (t - sonYay > 150) { sonYay = t; isYaz(key, { oran: Math.min(0.99, alinan / toplam) }); }
     };
 
+    // Önce arka plan indiricisi (destek varsa); yoksa sayfa içi indirme
+    const arka = await arkaPlanIndir(key, secili.map((v) => v.id), detay.baslik, [
+      ...indirilecek.map((v) => ({ url: new URL(cdSesUrl(key, v.id), location.href).href, bayt: v.bayt || 0 })),
+      ...pdfAdres.filter((p) => !p.var).map((p) => ({ url: p.url, bayt: p.bayt })),
+    ], ilerle, ac.signal);
+    const al = async (url: string, hataAdi: string): Promise<Blob> => {
+      const hazir = arka?.get(new URL(url, location.href).href);
+      if (hazir) return hazir;
+      const r = await fetch(url, { cache: 'no-store', signal: ac.signal });
+      if (!r.ok) throw new Error(`${hataAdi} indirilemedi (${r.status}).`);
+      return govdeOku(r, ilerle);
+    };
     // Sesler (önce hepsi indirilir; iptal/hata olursa cihazdaki eski kopyalara dokunulmaz)
     const yeniSes: { v: CdVaryant; blob: Blob }[] = [];
-    for (const v of indirilecek) {
-      const sr = await fetch(cdSesUrl(key, v.id), { cache: 'no-store', signal: ac.signal });
-      if (!sr.ok) throw new Error(`${cdSesKisa(v)} sesi indirilemedi (${sr.status}).`);
-      yeniSes.push({ v, blob: await govdeOku(sr, ilerle) });
-    }
+    for (const v of indirilecek) yeniSes.push({ v, blob: await al(cdSesUrl(key, v.id), `${cdSesKisa(v)} sesi`) });
     // PDF'ler
     const pdfler: { url: string; blob: Blob }[] = [];
-    for (const p of pdfAdres) {
-      if (p.var) continue;
-      const r = await fetch(p.url, { cache: 'no-store', signal: ac.signal });
-      if (!r.ok) throw new Error(`PDF indirilemedi (${r.status}).`);
-      pdfler.push({ url: p.url, blob: await govdeOku(r, ilerle) });
-    }
+    for (const p of pdfAdres) if (!p.var) pdfler.push({ url: p.url, blob: await al(p.url, 'PDF') });
     await cdCevrimdisiOnIsit();
 
     // Yalnız cihazdaki seslerle ayrıntı: internet yokken oynatıcı indirilmemiş sese geçmesin
@@ -266,6 +355,11 @@ export async function cdCevrimdisiAyarla(key: string, vidler: string[] | null, o
     });
     swBildir();
     isYaz(key, null);
+    // Arka plan indirmesinin bekleme kopyaları artık gereksiz
+    if (arka) {
+      const bekleyen = await caches.open(CD_BEKLEYEN_CACHE);
+      await Promise.all([...arka.keys()].map((u) => bekleyen.delete(u)));
+    }
   } catch (e: any) {
     const iptal = e?.name === 'AbortError';
     isYaz(key, iptal ? null : { oran: 0, hata: e?.message || 'İndirilemedi.' });

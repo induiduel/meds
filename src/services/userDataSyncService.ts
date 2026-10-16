@@ -325,7 +325,7 @@ function applyBundleInner(bundle: FullUserDataBundle): void {
  * Yedek isteği kimliği: oturum açıksa Firebase ID jetonu (sunucu uid/e-postayı ondan alır), değilse
  * cihazın gizli jetonu (`dev-…`). Önbellekteki eski profil uid'si jetonsuz kullanılamaz; sunucu reddeder.
  */
-async function backupIdentity(): Promise<{ uid: string; headers: Record<string, string> }> {
+export async function backupIdentity(): Promise<{ uid: string; headers: Record<string, string> }> {
   const user = auth.currentUser;
   if (user) {
     try {

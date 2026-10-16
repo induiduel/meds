@@ -71,6 +71,7 @@ import { toast } from '../ui/Toast';
 import { TextSizeSlider } from '../settings/TextSizeSlider';
 import { NotesSyncRow } from '../settings/NotesSyncRow';
 import { UserDataSyncRow } from '../settings/UserDataSyncRow';
+import { ArkaPlanRow } from '../settings/ArkaPlanRow';
 import { ProgressResetRow } from '../settings/ProgressResetRow';
 import { getStatsAttempts } from '../../services/progressReset';
 import { startWelcomeTour } from '../onboarding/tourState';
@@ -1009,6 +1010,7 @@ const DataPanel: React.FC<{ onOpenOffline: () => void }> = ({ onOpenOffline }) =
         <div className="u12-panel-h"><h2 className="u12-h2 u12-grow">Eşitleme</h2></div>
         <div className="u12-legacy">
           <UserDataSyncRow />
+          <ArkaPlanRow />
           <NotesSyncRow />
         </div>
       </section>

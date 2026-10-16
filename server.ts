@@ -149,6 +149,7 @@ import { registerUserNotesRoutes, createNotesStore } from './src/services/userNo
 import { createQuestionIntake, formatUnitsForPrompt, applyIntakeToQuestion } from './src/services/questionIntake.ts';
 import { createPoolClusterService } from './src/services/poolClusterService.ts';
 import { createRecallFeedback } from './src/services/recall/feedback.ts';
+import { registerUserPushRoutes } from './src/services/userPushService.ts';
 import { registerUserDataBackupRoutes, userEventHash, type ServerUserNotification } from './src/services/userDataBackupService.ts';
 import { registerPeopleInsights } from './src/services/peopleInsights.ts';
 import { initContentOverlay, resolveContent, markContentChanged, contentManifest } from './src/services/contentOverlay.ts';
@@ -421,7 +422,7 @@ function requireWritePassword(req: express.Request, res: express.Response, next:
   // /api/db/query kendi yetkisini denetler (yazma yalnız yönetici); /api/live/* yalnız SSE'ye sınırlı, hız sınırlı yayın.
   // /api/user-data/backup sahipliği kendisi doğrular (Firebase ID jetonu ya da gizli cihaz jetonu);
   // /api/notes kimliği gizli eşitleme kodudur (yalnız SHA-256 özeti saklanır, kodu bilmeyen erişemez).
-  const readOnlyPosts = ['/api/past-questions/similar', '/api/sources/for-fragment', '/api/db/query', '/api/live/broadcast', '/api/live/ping', '/api/user-data/backup', '/api/notes', '/api/tts', '/api/presence'];
+  const readOnlyPosts = ['/api/past-questions/similar', '/api/sources/for-fragment', '/api/db/query', '/api/live/broadcast', '/api/live/ping', '/api/user-data/backup', '/api/notes', '/api/tts', '/api/presence', '/api/push/subscribe', '/api/push/unsubscribe'];
   const reqPath = String(req.originalUrl || req.path || '').split('?')[0];
   if (readOnlyPosts.some((p) => reqPath === p || reqPath.endsWith(p))) return next();
   // Öğren ortak notları / metin bildirimleri: kimliği ve hız sınırını kendisi denetler (learnSocialRoutes.ts)
@@ -6812,8 +6813,13 @@ const recallFeedback = createRecallFeedback(DATA_DIR);
 setTimeout(() => poolClusters.runNow(), 90_000).unref?.();
 
 // Kullanıcı veri, istatistik, bildirim ve yorum yedeği / Supabase senkronizasyonu
+// Öğrenci Web Push: profil bildirimi yazılan her olay, site kapalıyken de kullanıcının cihazlarına düşer
+const userPush = registerUserPushRoutes(app, { dataDir: DATA_DIR, getPublicKey: () => serverNotificationService.getVapidPublicKey() });
 const userDataRoutes = registerUserDataBackupRoutes(app, {
   dataDir: DATA_DIR,
+  onNotified: (uid, n) => {
+    void userPush.pushToUser(uid, { title: n.title, body: n.message, url: n.deepLinkUrl, tag: `medsor-${n.id}` }).catch(() => 0);
+  },
   loadUsers,
   saveUsers,
   mirrorUserToDb,

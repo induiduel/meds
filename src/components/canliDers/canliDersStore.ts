@@ -378,7 +378,8 @@ function ses(): HTMLAudioElement {
     }
     set({ hata: 'Ses dosyası açılamadı.', playing: false, bekliyor: false });
   });
-  document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible') loopBaslat(); });
+  // Arka plana geçerken konum yazılır: mobil tarayıcı arka plandaki sekmeyi pagehide olmadan da kapatabilir
+  document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible') loopBaslat(); else konumKaydet(); });
   window.addEventListener('pagehide', () => konumKaydet());
   // Müzik başlarsa ders duraklar (iki ses üst üste binmesin, medya tuşları karışmasın)
   window.addEventListener('medsor:muzik-oynuyor', () => { if (!a.paused) cdDuraklat(); });

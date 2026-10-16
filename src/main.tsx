@@ -31,6 +31,7 @@ import { applyTheme, readTheme } from './utils/theme';
 import { applyUiVersion } from './utils/uiVersion';
 import { pwaService } from './services/pwaService';
 import { offlineDatabaseService } from './services/offlineDatabaseService';
+import { arkaPlanPushKur } from './services/arkaPlanPush';
 
 applyTheme(readTheme());
 applyUiVersion();
@@ -39,6 +40,11 @@ applyUiVersion();
 if (typeof window !== 'undefined') {
   pwaService.initServiceWorker().catch(() => {});
   offlineDatabaseService.loadStats().catch(() => {});
+  arkaPlanPushKur();
+  // Sayfa kapalıyken biten canlı ders indirmeleri (sw.js bekleme önbelleği) açılışta kaydedilir
+  if ('caches' in window) {
+    void caches.has('medsoru-cd-bekleyen').then((v) => { if (v) return import('./components/canliDers/canliDersCevrimdisi').then((m) => m.cdBekleyenleriTamamla()); }).catch(() => {});
+  }
 }
 
 // Klavye açılıp kapanırken görsel alanı izle: katmanlar --vvh ile kısalır,
