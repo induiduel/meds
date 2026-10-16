@@ -1,0 +1,261 @@
+{
+ "surum": "patoloji-cozucu-v1",
+ "ses": "EMA Lightning",
+ "ortak": {
+  "yanlis": {
+   "v": "5a619d24be0d",
+   "sure": 1.2
+  },
+  "dene": {
+   "v": "272c9286056a",
+   "sure": 1.488
+  }
+ },
+ "dersler": [
+  {
+   "kod": "01",
+   "no": 1,
+   "baslik": "Patolojiye Giriş",
+   "soru": 13,
+   "ses": true
+  },
+  {
+   "kod": "02",
+   "no": 2,
+   "baslik": "Hücre Hasarı ve Nekroz – I",
+   "soru": 11,
+   "ses": true
+  },
+  {
+   "kod": "03",
+   "no": 3,
+   "baslik": "Hücre Hasarı ve Nekroz II",
+   "soru": 12,
+   "ses": true
+  },
+  {
+   "kod": "04",
+   "no": 4,
+   "baslik": "Hücresel Adaptasyonlar",
+   "soru": 10,
+   "ses": true
+  },
+  {
+   "kod": "05",
+   "no": 5,
+   "baslik": "Hücre İçi Birikimler ve Kalsifikasyonlar",
+   "soru": 11,
+   "ses": true
+  },
+  {
+   "kod": "06",
+   "no": 6,
+   "baslik": "Hücresel Yaşlanma",
+   "soru": 10,
+   "ses": true
+  },
+  {
+   "kod": "07",
+   "no": 7,
+   "baslik": "Akut Enflamasyon: Vasküler Değişiklikler ve Hücresel Olaylar",
+   "soru": 13,
+   "ses": true
+  },
+  {
+   "kod": "08",
+   "no": 8,
+   "baslik": "Enflamasyonun Kimyasal Mediyatörleri",
+   "soru": 15,
+   "ses": true
+  },
+  {
+   "kod": "09",
+   "no": 9,
+   "baslik": "Kronik ve Granülomatöz Enflamasyon",
+   "soru": 15,
+   "ses": true
+  },
+  {
+   "kod": "10",
+   "no": 10,
+   "baslik": "Doku Onarımı ve Yara İyileşmesi",
+   "soru": 14,
+   "ses": true
+  },
+  {
+   "kod": "11",
+   "no": 11,
+   "baslik": "Ödem, Hiperemi, Konjesyon ve Kanama",
+   "soru": 14,
+   "ses": true
+  },
+  {
+   "kod": "12",
+   "no": 12,
+   "baslik": "Tromboz Patofizyolojisi",
+   "soru": 15,
+   "ses": true
+  },
+  {
+   "kod": "13",
+   "no": 13,
+   "baslik": "Emboli, Enfarktüs ve Şok",
+   "soru": 15,
+   "ses": true
+  },
+  {
+   "kod": "14",
+   "no": 14,
+   "baslik": "Aşırı Duyarlılık ve Otoimmünite",
+   "soru": 15,
+   "ses": true
+  },
+  {
+   "kod": "15",
+   "no": 15,
+   "baslik": "Genetik, Pediatrik ve Çevresel Patoloji",
+   "soru": 13,
+   "ses": true
+  },
+  {
+   "kod": "16",
+   "no": 16,
+   "baslik": "Tümör Biyolojisi ve Terminolojisi",
+   "soru": 14,
+   "ses": true
+  },
+  {
+   "kod": "17",
+   "no": 17,
+   "baslik": "Karsinojenezin Moleküler Temeli",
+   "soru": 12,
+   "ses": true
+  },
+  {
+   "kod": "18",
+   "no": 18,
+   "baslik": "İleri Tümör Genetiği ve Metabolizması",
+   "soru": 12,
+   "ses": true
+  },
+  {
+   "kod": "19",
+   "no": 19,
+   "baslik": "Tümör İmmünolojisi ve Metastaz Mekanizmaları",
+   "soru": 11,
+   "ses": true
+  },
+  {
+   "kod": "20",
+   "no": 20,
+   "baslik": "Tümör Evrelemesi, Derecelendirme ve Laboratuvar Tanısı",
+   "soru": 12,
+   "ses": true
+  },
+  {
+   "kod": "21",
+   "no": 21,
+   "baslik": "Glomerüler Hastalıklar: Nefrotik Sendrom",
+   "soru": 12,
+   "ses": true
+  },
+  {
+   "kod": "22",
+   "no": 22,
+   "baslik": "Glomerüler Hastalıklar: Nefritik Sendrom",
+   "soru": 15,
+   "ses": true
+  },
+  {
+   "kod": "23",
+   "no": 23,
+   "baslik": "Sistemik Hastalıklarda Böbrek Hasarı",
+   "soru": 14,
+   "ses": true
+  },
+  {
+   "kod": "24",
+   "no": 24,
+   "baslik": "Tübülointerstisyel Hastalıklar",
+   "soru": 12,
+   "ses": true
+  },
+  {
+   "kod": "25",
+   "no": 25,
+   "baslik": "Vasküler ve Kistik Böbrek Hastalıkları",
+   "soru": 13,
+   "ses": true
+  },
+  {
+   "kod": "26",
+   "no": 26,
+   "baslik": "Böbrek Tümörleri",
+   "soru": 12,
+   "ses": true
+  },
+  {
+   "kod": "26b",
+   "no": 27,
+   "baslik": "Mesane Hastalıkları ve Tümörleri; Cinsel Yolla Bulaşan Hastalıklar",
+   "soru": 13,
+   "ses": true
+  },
+  {
+   "kod": "28",
+   "no": 28,
+   "baslik": "Vulva, Vajen ve Serviks Hastalıkları",
+   "soru": 12,
+   "ses": true
+  },
+  {
+   "kod": "39",
+   "no": 29,
+   "baslik": "İnvaziv Serviks Kanseri ve Endometriyozis",
+   "soru": 12,
+   "ses": true
+  },
+  {
+   "kod": "30",
+   "no": 30,
+   "baslik": "Endometrial Hiperplazi ve Kanserleri",
+   "soru": 12,
+   "ses": true
+  },
+  {
+   "kod": "31",
+   "no": 31,
+   "baslik": "Ovidukt ve Ovaryum Patolojisi",
+   "soru": 13,
+   "ses": true
+  },
+  {
+   "kod": "32",
+   "no": 32,
+   "baslik": "Gebelik Hastalıkları",
+   "soru": 13,
+   "ses": true
+  },
+  {
+   "kod": "33",
+   "no": 33,
+   "baslik": "Memenin Benign Hastalıkları",
+   "soru": 13,
+   "ses": true
+  },
+  {
+   "kod": "34",
+   "no": 34,
+   "baslik": "Erkek Genital Sistem ve Prostat Hastalıkları",
+   "soru": 14,
+   "ses": true
+  },
+  {
+   "kod": "35",
+   "no": 35,
+   "baslik": "Meme Kanseri ve Moleküler Tipleri",
+   "soru": 12,
+   "ses": true
+  }
+ ]
+}

@@ -21,6 +21,7 @@ import { registerTtsRoute } from './src/services/ttsRoute';
 import { registerSesliAnlatimRoutes } from './src/services/sesliAnlatim';
 import { registerCanliDersRoutes } from './src/services/canliDers';
 import { registerPatolojiAsistanRoutes } from './src/services/patolojiAsistan';
+import { registerPatolojiCozucuRoutes } from './src/services/patolojiCozucu';
 import crypto from 'crypto';
 
 const require = createRequire(import.meta.url);
@@ -2697,6 +2698,7 @@ registerTtsRoute(app);
 registerSesliAnlatimRoutes(app, requireAdmin, (ev, data) => broadcastRealtimeEvent(ev, data, true), ADMIN_EMAIL);
 registerCanliDersRoutes(app);
 registerPatolojiAsistanRoutes(app);
+registerPatolojiCozucuRoutes(app);
 
 // Gidiş-dönüş testi: NOTIFY → LISTEN → SSE zincirinin tamamını ölçer (Sistem Tanılama ekranı).
 app.post('/api/live/ping', async (req, res) => {

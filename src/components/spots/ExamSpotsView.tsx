@@ -66,12 +66,13 @@ const IskeletKart: React.FC<{ i: number }> = ({ i }) => (
 
 /** v12 "Net" ayrı bileşendir (canvas Cards.dc.html › Spotlar); tasarım değişince kancalar karışmasın diye ayrı tür. */
 const OnemListesi = React.lazy(() => import('./OnemListesi'));
-type Gorunum = 'spot' | 'onem';
+const SoruCozucuSayfa = React.lazy(() => import('./cozucu/SoruCozucuSayfa'));
+type Gorunum = 'spot' | 'onem' | 'cozucu';
 const okuGorunum = (): Gorunum => {
-  try { return new URLSearchParams(location.search).get('gorunum') === 'onem' ? 'onem' : 'spot'; } catch { return 'spot'; }
+  try { const g = new URLSearchParams(location.search).get('gorunum'); return g === 'onem' || g === 'cozucu' ? g : 'spot'; } catch { return 'spot'; }
 };
 
-/** Üstte görünüm seçici: Sınav spotları (tüm dersler) | Patoloji · en önemliler (100 puan, PDF'e dayalı). */
+/** Üstte görünüm seçici: Sınav spotları (tüm dersler) | Patoloji · en önemliler (100 puan, PDF'e dayalı) | Patoloji · sesli soru çözücü. */
 export const ExamSpotsView: React.FC = () => {
   const v12 = useAppearance().design === 'v12';
   const [g, setG] = useState<Gorunum>(okuGorunum);
@@ -84,7 +85,8 @@ export const ExamSpotsView: React.FC = () => {
     setG(x);
     try {
       const u = new URL(location.href);
-      if (x === 'onem') u.searchParams.set('gorunum', 'onem'); else u.searchParams.delete('gorunum');
+      if (x !== 'spot') u.searchParams.set('gorunum', x); else u.searchParams.delete('gorunum');
+      if (x !== 'cozucu') u.searchParams.delete('coz');
       history.replaceState(history.state, '', u.pathname + u.search + u.hash);
     } catch { /* yok */ }
   };
@@ -93,9 +95,12 @@ export const ExamSpotsView: React.FC = () => {
       <div className="ol-gorunum" role="tablist" aria-label="Görünüm">
         <button type="button" role="tab" aria-selected={g === 'spot'} className={g === 'spot' ? 'is-on' : ''} onClick={() => sec('spot')}>Sınav spotları</button>
         <button type="button" role="tab" aria-selected={g === 'onem'} className={g === 'onem' ? 'is-on' : ''} onClick={() => sec('onem')}>Patoloji · En önemliler (100 puan)</button>
+        <button type="button" role="tab" aria-selected={g === 'cozucu'} className={g === 'cozucu' ? 'is-on' : ''} onClick={() => sec('cozucu')}>Patoloji · Soru çözücü</button>
       </div>
       {g === 'onem' ? (
         <React.Suspense fallback={<p className="ol-bos">Yükleniyor…</p>}><OnemListesi /></React.Suspense>
+      ) : g === 'cozucu' ? (
+        <React.Suspense fallback={<p className="ol-bos">Yükleniyor…</p>}><SoruCozucuSayfa /></React.Suspense>
       ) : v12 ? <SpotsV12 /> : <ExamSpotsClassic />}
     </>
   );
