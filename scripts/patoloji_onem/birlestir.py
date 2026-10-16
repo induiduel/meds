@@ -17,12 +17,14 @@ for kod in sorted(L, key=lambda k: (int(re.match(r'\d+', k).group()), k)):
     d = json.load(open(p))
     d['no'] = int(re.match(r'\d+', L[kod]['ad']).group()); d['pdf'] = L[kod]['ad']; d['kod'] = kod
     if kod in NEDEN: d['neden_onemli'] = NEDEN[kod]
-    sp = f'{W}/sinav/cikti/{kod}.json'
+    sp = f'{W}/sinav/v2/cikti/{kod}.json'
+    if not os.path.exists(sp): sp = f'{W}/sinav/cikti/{kod}.json'
     if os.path.exists(sp):
         sv = json.load(open(sp))
         for m in d['maddeler']:
             v = sv['maddeler'].get(m['id']) or {}
             m['kaynak'] = v.get('kaynak', 'metin'); m['klinik'] = bool(v.get('klinik')); m['sinavUygun'] = m['kaynak'] == 'metin' and not m['klinik']
+            m['kategori'] = v.get('kategori') or ('klinik' if m['klinik'] else 'patoloji')
         d['sinavAdaylari'] = sv['adaylar']; d['soruSayisi'] = 2 if kod == '15' else 1
     elif '--taslak' not in sys.argv: sys.exit(f'{kod}: sınav ayrımı yok')
     d['maddeler'].sort(key=lambda m: -m['puan'])

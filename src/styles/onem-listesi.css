@@ -152,3 +152,22 @@
 .ol-pdf-dersler { max-height: 220px; overflow: auto; padding: 8px 10px; border-radius: 10px; background: var(--color-field); display: flex; flex-direction: column; gap: 4px; }
 .ol-pdf-puan { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 4px; }
 .ol-pdf-f { display: flex; align-items: center; justify-content: space-between; gap: 10px; width: 100%; font-size: 13px; color: var(--color-ink-3); }
+
+/* prognoz / tedavi (sorulabilir) */
+.k-prognoz { --kc: var(--color-clinic); }
+.k-tedavi { --kc: var(--color-ok); }
+.ol-kat { font-size: 10.5px; font-weight: 700; padding: 1px 7px; border-radius: 6px; color: color-mix(in srgb, var(--kc) 85%, var(--color-ink)); background: color-mix(in srgb, var(--kc) 13%, transparent); }
+.ol-katchip { --b: var(--kc); }
+.ol-kat-g { margin-top: 6px !important; font-size: 13px !important; color: color-mix(in srgb, var(--color-ok) 80%, var(--color-ink)) !important; }
+.ol-pdf legend em { font-style: normal; font-weight: 600; text-transform: none; letter-spacing: 0; color: var(--color-ink-3); margin-left: 6px; }
+.ol-pdf-mini { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; font-size: 12.5px; color: var(--color-ink-3); }
+.ol-pdf-mini button { border: 0; background: var(--color-field); color: var(--color-ink-2); font: inherit; font-size: 12.5px; font-weight: 600; padding: 4px 10px; border-radius: 8px; cursor: pointer; }
+.ol-pdf-mini button:hover { color: var(--color-ink); }
+.ol-pdf-seg { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; font-size: 13px; color: var(--color-ink-2); }
+.ol-pdf-seg > span { min-width: 92px; font-weight: 600; }
+.ol-pdf .ol-bchip { height: 30px; }
+.ol-pdf .ol-bchip small { font-variant-numeric: tabular-nums; }
+.ol-turchip { --b: var(--t); }
+.k-patoloji { --kc: var(--color-accent); }
+.k-klinik { --kc: var(--color-ink-3); }
+.ol-pdf .ol-bchip:not([class*=" b"]):not(.ol-turchip):not(.ol-katchip) { --b: var(--color-accent); }

@@ -20,6 +20,8 @@ interface Madde {
   alinti: { sayfa: number; metin: string }[]; neden: string; detay: string; ornek_soru?: Soru | null; cikmis?: string[];
   /** sınav kuralı: tablo/şekilden ve klinik bulgudan soru yok */
   kaynak?: 'metin' | 'tablo' | 'sekil'; klinik?: boolean; sinavUygun?: boolean;
+  /** patoloji (morfoloji/mekanizma/tanım…) · prognoz · tedavi (sorulabilir) · klinik bulgu (sorulmaz) */
+  kategori?: 'patoloji' | 'prognoz' | 'tedavi' | 'klinik';
 }
 interface Aday { id: string; sira: number; gerekce: string }
 interface Cikmis { sinav: string; kok: string; secenekler: Record<string, string>; dogru: string }
@@ -96,7 +98,9 @@ const MaddeSatir: React.FC<{ m: Madde; d: Ders; gosterDers: boolean }> = ({ m, d
             {aday && <span className={`ol-aday${enOlasi ? ' is-en' : ''}`}><Star aria-hidden />{enOlasi ? 'En olası soru' : `Sınav adayı ${aday.sira}`}</span>}
             {m.kaynak === 'tablo' && <span className="ol-dis">Tablo · sorulmaz</span>}
             {m.kaynak === 'sekil' && <span className="ol-dis">Şekil · sorulmaz</span>}
-            {m.klinik && <span className="ol-dis">Klinik · sorulmaz</span>}
+            {m.klinik && <span className="ol-dis">Klinik bulgu · sorulmaz</span>}
+            {m.kategori === 'prognoz' && <span className="ol-kat k-prognoz">Prognoz · sorulabilir</span>}
+            {m.kategori === 'tedavi' && <span className="ol-kat k-tedavi">Tedavi · sorulabilir</span>}
             {cs.length > 0 && <span className="ol-cik"><History aria-hidden />{cs.length} çıkmış</span>}
             {gosterDers && <span className="ol-dersad">{d.baslik}</span>}
           </span>
@@ -118,6 +122,7 @@ const MaddeSatir: React.FC<{ m: Madde; d: Ders; gosterDers: boolean }> = ({ m, d
             <p>{m.neden}</p>
             {aday && <p className="ol-aday-g"><Star aria-hidden /><span><b>{enOlasi ? 'En olası soru' : `Sınav adayı ${aday.sira}`}:</b> {aday.gerekce}</span></p>}
             {m.sinavUygun === false && <p className="ol-dis-g">Hocanın açıklamasına göre {m.kaynak === 'tablo' ? 'tablolardan' : m.kaynak === 'sekil' ? 'resim/şekillerden' : 'klinik bulgulardan'} soru sorulmayacak; bilgi olarak bilinmesi yeterli.</p>}
+            {(m.kategori === 'prognoz' || m.kategori === 'tedavi') && <p className="ol-kat-g">{m.kategori === 'prognoz' ? 'Prognoz' : 'Tedavi'} bilgisi sınavda sorulabilir.</p>}
           </section>
           <section>
             <h4><BookOpen aria-hidden />Ayrıntılı açıklama</h4>
@@ -136,26 +141,78 @@ const MaddeSatir: React.FC<{ m: Madde; d: Ders; gosterDers: boolean }> = ({ m, d
   );
 };
 
-/** Önem listesi PDF'i — dersler, en düşük puan ve içerik seçimi; dosya tarayıcıda üretilir (services/onemPdf.ts). */
+/** Önem listesi PDF'i — çoklu seçimli süzgeçler (bant, tür, kategori, kaynak, sınav adayı, çıkmışlı), içerik ve görünüm.
+ *  Madde sayısı seçime göre anlık ve kesin (pencere açılınca kapsamdaki dersler yüklenir); dosya tarayıcıda üretilir (services/onemPdf.ts). */
+type Kat = 'patoloji' | 'prognoz' | 'tedavi' | 'klinik';
+const KAT_AD: Record<Kat, string> = { patoloji: 'Patoloji', prognoz: 'Prognoz', tedavi: 'Tedavi', klinik: 'Klinik bulgu' };
+const KAYNAK_AD = { metin: 'Slayt metni', tablo: 'Tablo', sekil: 'Şekil/resim' } as const;
+const tglSet = <T,>(s: Set<T>, v: T) => { const n = new Set(s); n.has(v) ? n.delete(v) : n.add(v); return n; };
+
+const Cip: React.FC<{ on: boolean; onClick: () => void; cls?: string; children: React.ReactNode; sayi?: number }> = ({ on, onClick, cls = '', children, sayi }) => (
+  <button type="button" className={`ol-bchip ${cls}${on ? ' is-on' : ''}`} onClick={onClick} aria-pressed={on}>{children}{sayi !== undefined && <small>{sayi}</small>}</button>
+);
+
 const PdfPenceresi: React.FC<{ dizin: Dizin; secili: string; yukle: (kodlar: string[]) => Promise<Ders[]>; onClose: () => void }> = ({ dizin, secili, yukle, onClose }) => {
-  const [kapsam, setKapsam] = useState<'secili' | 'hepsi' | 'ozel'>(secili && secili !== HEPSI && secili !== ADAY ? 'secili' : 'hepsi');
-  const [ozel, setOzel] = useState<Set<string>>(() => new Set(secili && secili !== HEPSI && secili !== ADAY ? [secili] : []));
-  const [minPuan, setMinPuan] = useState(70);
-  const [sec, setSec] = useState({ yalnizSinav: false, adaylarKutusu: true, alt: true, alinti: false, detay: false, ornekSoru: false, cikmis: false });
+  const tekDers = !!secili && secili !== HEPSI && secili !== ADAY;
+  const [kapsam, setKapsam] = useState<'secili' | 'hepsi' | 'ozel'>(tekDers ? 'secili' : 'hepsi');
+  const [ozel, setOzel] = useState<Set<string>>(() => new Set(tekDers ? [secili] : []));
+  const [bant, setBant] = useState<Set<number>>(() => new Set([9, 8, 7]));
+  const [turS, setTurS] = useState<Set<Tur>>(() => new Set());
+  const [katS, setKatS] = useState<Set<Kat>>(() => new Set(['patoloji', 'prognoz', 'tedavi', 'klinik'] as Kat[]));
+  const [kaynakS, setKaynakS] = useState<Set<string>>(() => new Set(['metin', 'tablo', 'sekil']));
+  const [yalnizAday, setYalnizAday] = useState(false);
+  const [yalnizCikmis, setYalnizCikmis] = useState(false);
+  const [ic, setIc] = useState({ ozet: true, adaylarKutusu: true, alt: true, alinti: false, detay: false, ornekSoru: false, cikmis: false });
+  const [anahtar, setAnahtar] = useState<'ders' | 'son' | 'yok'>('ders');
+  const [gor, setGor] = useState({ format: 'a4' as 'a4' | 'tablet', renk: 'renkli' as 'renkli' | 'gri', buyuk: false, yeniSayfa: true, icindekiler: true, siralama: 'puan' as 'puan' | 'slayt' });
   const [calisiyor, setCalisiyor] = useState(false);
-  const kodlar = kapsam === 'secili' ? [secili] : kapsam === 'hepsi' ? dizin.dersler.map((d) => d.kod) : dizin.dersler.map((d) => d.kod).filter((k) => ozel.has(k));
-  const tahmini = dizin.dersler.filter((d) => kodlar.includes(d.kod)).reduce((n, d: any) => n + Object.entries(d.bant || {}).filter(([b]) => Number(b) * 10 >= Math.floor(minPuan / 10) * 10 || (Number(b) === 4 && minPuan === 0)).reduce((x, [, v]) => x + Number(v), 0), 0);
+  const [veri, setVeri] = useState<Ders[] | null>(null);
+
+  const kodlar = useMemo(() => (kapsam === 'secili' ? [secili] : kapsam === 'hepsi' ? dizin.dersler.map((d) => d.kod) : dizin.dersler.map((d) => d.kod).filter((k) => ozel.has(k))), [kapsam, secili, dizin, ozel]);
+  useEffect(() => { let alive = true; setVeri(null); if (kodlar.length) yukle(kodlar).then((r) => alive && setVeri(r)).catch(() => alive && setVeri([])); else setVeri([]); return () => { alive = false; }; }, [kodlar.join(',')]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  const uyar = (d: Ders, m: Madde) => {
+    if (!bant.has(bantOf(m.puan))) return false;
+    if (turS.size && !turS.has(m.tur)) return false;
+    if (!katS.has((m.kategori || (m.klinik ? 'klinik' : 'patoloji')) as Kat)) return false;
+    if (!kaynakS.has(m.kaynak || 'metin')) return false;
+    if (yalnizAday && !(d.sinavAdaylari || []).some((a) => a.id === m.id)) return false;
+    if (yalnizCikmis && !(m.cikmis || []).length) return false;
+    return true;
+  };
+  const say = useMemo(() => {
+    const r = { toplam: 0, bant: {} as Record<number, number>, tur: {} as Record<string, number>, kat: {} as Record<string, number>, kaynak: {} as Record<string, number>, soru: 0, cikmis: 0 };
+    for (const d of veri || []) for (const m of d.maddeler) {
+      const k = m.kategori || (m.klinik ? 'klinik' : 'patoloji');
+      r.bant[bantOf(m.puan)] = (r.bant[bantOf(m.puan)] || 0) + 1; r.tur[m.tur] = (r.tur[m.tur] || 0) + 1;
+      r.kat[k] = (r.kat[k] || 0) + 1; r.kaynak[m.kaynak || 'metin'] = (r.kaynak[m.kaynak || 'metin'] || 0) + 1;
+      if (uyar(d, m)) { r.toplam++; if (m.ornek_soru) r.soru++; r.cikmis += (m.cikmis || []).length; }
+    }
+    return r;
+  }, [veri, bant, turS, katS, kaynakS, yalnizAday, yalnizCikmis]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  const ozetSatirlari = () => {
+    const out: string[] = [];
+    out.push(`Puan: ${BANTLAR.filter((B) => bant.has(B.b)).map((B) => B.ad).join(', ')}`);
+    if (turS.size) out.push(`Bilgi türü: ${[...turS].map((t) => TUR_AD[t]).join(', ')}`);
+    if (katS.size < 4) out.push(`Kategori: ${[...katS].map((k) => KAT_AD[k]).join(', ')}`);
+    if (kaynakS.size < 3) out.push(`Kaynak: ${[...kaynakS].map((k) => KAYNAK_AD[k as keyof typeof KAYNAK_AD]).join(', ')}`);
+    if (yalnizAday) out.push('Yalnız sınav adayları');
+    if (yalnizCikmis) out.push('Yalnız çıkmış sorusu olan maddeler');
+    return out;
+  };
   const indir = async () => {
-    if (!kodlar.length) return;
+    if (!veri?.length || !say.toplam) return;
     setCalisiyor(true);
     try {
-      const [ds, { onemPdfOlustur }] = await Promise.all([yukle(kodlar), import('../../services/onemPdf')]);
-      const blob = await onemPdfOlustur(ds as any, { minPuan, ...sec }, kapsam === 'secili' ? ds[0]?.baslik : `${ds.length} ders`);
+      const { onemPdfOlustur } = await import('../../services/onemPdf');
+      const ds = veri.map((d) => ({ ...d, maddeler: d.maddeler.filter((m) => uyar(d, m)) })).filter((d) => d.maddeler.length);
+      const blob = await onemPdfOlustur(ds as any, { filtreOzeti: ozetSatirlari(), ...ic, anahtar, ...gor }, kapsam === 'secili' ? ds[0]?.baslik : `${ds.length} ders`);
       const ad = kapsam === 'secili' ? `${ds[0].no}_${ds[0].baslik}` : kapsam === 'hepsi' ? 'Tum_patoloji' : `${ds.length}_ders`;
       const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url; a.download = `Patoloji_en_onemliler_${ad.replace(/[^\p{L}\p{N}]+/gu, '_')}_${minPuan}+.pdf`;
-      document.body.appendChild(a); a.click(); a.remove();
+      const el = document.createElement('a');
+      el.href = url; el.download = `Patoloji_en_onemliler_${ad.replace(/[^\p{L}\p{N}]+/gu, '_')}.pdf`;
+      document.body.appendChild(el); el.click(); el.remove();
       window.setTimeout(() => URL.revokeObjectURL(url), 30_000);
       toast?.success?.('PDF hazırlandı');
       onClose();
@@ -164,43 +221,87 @@ const PdfPenceresi: React.FC<{ dizin: Dizin; secili: string; yukle: (kodlar: str
       toast?.error?.('PDF hazırlanamadı');
     } finally { setCalisiyor(false); }
   };
-  const Kutu: React.FC<{ k: keyof typeof sec; ad: string; not?: string }> = ({ k, ad, not }) => (
-    <label className="ol-pdf-ck"><input type="checkbox" checked={sec[k]} onChange={(e) => setSec((x) => ({ ...x, [k]: e.target.checked }))} /><span>{ad}{not && <small>{not}</small>}</span></label>
+  const Kutu: React.FC<{ k: keyof typeof ic; ad: string; not?: string }> = ({ k, ad, not }) => (
+    <label className="ol-pdf-ck"><input type="checkbox" checked={ic[k]} onChange={(e) => setIc((x) => ({ ...x, [k]: e.target.checked }))} /><span>{ad}{not && <small>{not}</small>}</span></label>
   );
+  const hizli = (bs: number[]) => setBant(new Set(bs));
   return (
-    <Dialog title="PDF indir" subtitle="Patoloji · Sınav için en önemliler" onClose={onClose}
-      footer={<div className="ol-pdf-f"><span>{kodlar.length} ders · ~{tahmini} madde</span><button type="button" className="ol-btn is-dolu" disabled={calisiyor || !kodlar.length} onClick={indir}>{calisiyor ? 'Hazırlanıyor…' : 'PDF oluştur ve indir'}</button></div>}>
+    <Dialog title="PDF indir" subtitle="Patoloji · Sınav için en önemliler" onClose={onClose} width="max-w-2xl"
+      footer={<div className="ol-pdf-f"><span>{veri === null ? 'Sayılıyor…' : `${kodlar.length} ders · ${say.toplam} madde${ic.ornekSoru ? ` · ${say.soru} örnek soru` : ''}${ic.cikmis ? ` · ${say.cikmis} çıkmış` : ''}`}</span><button type="button" className="ol-btn is-dolu" disabled={calisiyor || !say.toplam} onClick={indir}><Download aria-hidden />{calisiyor ? 'Hazırlanıyor…' : 'PDF oluştur ve indir'}</button></div>}>
       <div className="ol-pdf">
         <fieldset>
           <legend>Dersler</legend>
-          {secili && secili !== HEPSI && secili !== ADAY && <label className="ol-pdf-r"><input type="radio" checked={kapsam === 'secili'} onChange={() => setKapsam('secili')} /> Seçili ders</label>}
+          {tekDers && <label className="ol-pdf-r"><input type="radio" checked={kapsam === 'secili'} onChange={() => setKapsam('secili')} /> Seçili ders</label>}
           <label className="ol-pdf-r"><input type="radio" checked={kapsam === 'hepsi'} onChange={() => setKapsam('hepsi')} /> Tüm patoloji ({dizin.dersler.length} ders)</label>
-          <label className="ol-pdf-r"><input type="radio" checked={kapsam === 'ozel'} onChange={() => setKapsam('ozel')} /> Seçeceğim dersler</label>
+          <label className="ol-pdf-r"><input type="radio" checked={kapsam === 'ozel'} onChange={() => setKapsam('ozel')} /> Seçeceğim dersler{kapsam === 'ozel' ? ` (${ozel.size})` : ''}</label>
           {kapsam === 'ozel' && (
-            <div className="ol-pdf-dersler">
-              {dizin.dersler.map((d) => (
-                <label key={d.kod} className="ol-pdf-ck"><input type="checkbox" checked={ozel.has(d.kod)} onChange={() => setOzel((x) => { const n = new Set(x); n.has(d.kod) ? n.delete(d.kod) : n.add(d.kod); return n; })} /><span>{d.no}) {d.baslik}</span></label>
-              ))}
-            </div>
+            <>
+              <div className="ol-pdf-mini"><button type="button" onClick={() => setOzel(new Set(dizin.dersler.map((d) => d.kod)))}>Tümünü seç</button><button type="button" onClick={() => setOzel(new Set())}>Temizle</button></div>
+              <div className="ol-pdf-dersler">
+                {dizin.dersler.map((d) => (
+                  <label key={d.kod} className="ol-pdf-ck"><input type="checkbox" checked={ozel.has(d.kod)} onChange={() => setOzel((x) => tglSet(x, d.kod))} /><span>{d.no}) {d.baslik} <small>{d.madde} madde</small></span></label>
+                ))}
+              </div>
+            </>
           )}
         </fieldset>
+
         <fieldset>
-          <legend>Hangi değerdeki spotlar</legend>
+          <legend>Puan partları <em>çoklu seçim</em></legend>
           <div className="ol-pdf-puan">
-            {[90, 80, 70, 60, 50, 0].map((p) => (
-              <button key={p} type="button" className={`ol-bchip b${Math.max(4, Math.floor(p / 10) || 4)}${minPuan === p ? ' is-on' : ''}`} onClick={() => setMinPuan(p)}>{p === 0 ? 'Hepsi' : `${p}+`}</button>
-            ))}
+            {BANTLAR.map((B) => <Cip key={B.b} cls={`b${B.b}`} on={bant.has(B.b)} onClick={() => setBant((s) => tglSet(s, B.b))} sayi={say.bant[B.b] || 0}>{B.ad}</Cip>)}
           </div>
-          <Kutu k="yalnizSinav" ad="Yalnız sınava uygun maddeler" not="Tablo, şekil ve klinik bulgu maddeleri çıkarılır" />
-          <Kutu k="adaylarKutusu" ad="“Sınavda çıkabilecek” kutusu" not="Her dersin sıralı sınav adayları, en olası soru vurgulu" />
+          <div className="ol-pdf-mini"><span>Hızlı:</span><button type="button" onClick={() => hizli([9])}>90+</button><button type="button" onClick={() => hizli([9, 8])}>80+</button><button type="button" onClick={() => hizli([9, 8, 7])}>70+</button><button type="button" onClick={() => hizli([9, 8, 7, 6])}>60+</button><button type="button" onClick={() => hizli([9, 8, 7, 6, 5, 4])}>Hepsi</button></div>
         </fieldset>
+
+        <fieldset>
+          <legend>Bilgi türü <em>çoklu seçim · hiçbiri = hepsi</em></legend>
+          <div className="ol-pdf-puan">
+            {(Object.keys(TUR_AD) as Tur[]).map((t) => <Cip key={t} cls={`ol-turchip t-${t}`} on={turS.has(t)} onClick={() => setTurS((s) => tglSet(s, t))} sayi={say.tur[t] || 0}>{TUR_AD[t]}</Cip>)}
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Sınav kuralı · kategori ve kaynak <em>çoklu seçim</em></legend>
+          <div className="ol-pdf-puan">
+            {(Object.keys(KAT_AD) as Kat[]).map((k) => <Cip key={k} cls={`ol-katchip k-${k}`} on={katS.has(k)} onClick={() => setKatS((s) => tglSet(s, k))} sayi={say.kat[k] || 0}>{KAT_AD[k]}{k === 'klinik' ? ' (sorulmaz)' : ''}</Cip>)}
+          </div>
+          <div className="ol-pdf-puan">
+            {(Object.keys(KAYNAK_AD) as (keyof typeof KAYNAK_AD)[]).map((k) => <Cip key={k} on={kaynakS.has(k)} onClick={() => setKaynakS((s) => tglSet(s, k))} sayi={say.kaynak[k] || 0}>{KAYNAK_AD[k]}{k !== 'metin' ? ' (sorulmaz)' : ''}</Cip>)}
+          </div>
+          <div className="ol-pdf-mini"><span>Hızlı:</span>
+            <button type="button" onClick={() => { setKatS(new Set(['patoloji', 'prognoz', 'tedavi'] as Kat[])); setKaynakS(new Set(['metin'])); }}>Yalnız sınava uygun</button>
+            <button type="button" onClick={() => { setKatS(new Set(['patoloji', 'prognoz', 'tedavi', 'klinik'] as Kat[])); setKaynakS(new Set(['metin', 'tablo', 'sekil'])); }}>Hepsi</button>
+          </div>
+          <label className="ol-pdf-ck"><input type="checkbox" checked={yalnizAday} onChange={(e) => setYalnizAday(e.target.checked)} /><span>Yalnız sınav adayları<small>Her dersin sıralı adayları (her slayttan 1, Genetik'ten 2 soru)</small></span></label>
+          <label className="ol-pdf-ck"><input type="checkbox" checked={yalnizCikmis} onChange={(e) => setYalnizCikmis(e.target.checked)} /><span>Yalnız çıkmış sorusu olan maddeler</span></label>
+        </fieldset>
+
         <fieldset>
           <legend>İçerik</legend>
+          <Kutu k="ozet" ad="Ders özeti ve “Neden önemli”" />
+          <Kutu k="adaylarKutusu" ad="“Sınavda çıkabilecek” kutusu" not="Sıralı adaylar, en olası soru vurgulu" />
           <Kutu k="alt" ad="Alt maddeler" />
           <Kutu k="alinti" ad="PDF alıntısı (sayfa no ile)" />
           <Kutu k="detay" ad="Ayrıntılı açıklama" not="Dosya uzar" />
-          <Kutu k="ornekSoru" ad="Örnek sorular" not="Cevap anahtarı ders sonunda" />
-          <Kutu k="cikmis" ad="Çıkmış sorular" not="Cevap anahtarı ders sonunda" />
+          <Kutu k="ornekSoru" ad="Örnek sorular" />
+          <Kutu k="cikmis" ad="Çıkmış sorular" />
+          {(ic.ornekSoru || ic.cikmis) && (
+            <div className="ol-pdf-seg" role="radiogroup" aria-label="Cevap anahtarı">
+              <span>Cevap anahtarı:</span>
+              {([['ders', 'Ders sonunda'], ['son', 'Dosya sonunda'], ['yok', 'Yok']] as const).map(([v, ad]) => <Cip key={v} on={anahtar === v} onClick={() => setAnahtar(v)}>{ad}</Cip>)}
+            </div>
+          )}
+        </fieldset>
+
+        <fieldset>
+          <legend>Görünüm</legend>
+          <div className="ol-pdf-seg"><span>Sayfa:</span><Cip on={gor.format === 'a4'} onClick={() => setGor((g) => ({ ...g, format: 'a4' }))}>A4</Cip><Cip on={gor.format === 'tablet'} onClick={() => setGor((g) => ({ ...g, format: 'tablet' }))}>Tablet (3:4)</Cip></div>
+          <div className="ol-pdf-seg"><span>Renk:</span><Cip on={gor.renk === 'renkli'} onClick={() => setGor((g) => ({ ...g, renk: 'renkli' }))}>Renkli</Cip><Cip on={gor.renk === 'gri'} onClick={() => setGor((g) => ({ ...g, renk: 'gri' }))}>Yazıcı dostu (gri)</Cip></div>
+          <div className="ol-pdf-seg"><span>Dizim:</span><Cip on={gor.siralama === 'puan'} onClick={() => setGor((g) => ({ ...g, siralama: 'puan' }))}>Puan partları</Cip><Cip on={gor.siralama === 'slayt'} onClick={() => setGor((g) => ({ ...g, siralama: 'slayt' }))}>Slayt sırası</Cip></div>
+          <label className="ol-pdf-ck"><input type="checkbox" checked={gor.buyuk} onChange={(e) => setGor((g) => ({ ...g, buyuk: e.target.checked }))} /><span>Büyük yazı</span></label>
+          <label className="ol-pdf-ck"><input type="checkbox" checked={gor.yeniSayfa} onChange={(e) => setGor((g) => ({ ...g, yeniSayfa: e.target.checked }))} /><span>Her ders yeni sayfada</span></label>
+          <label className="ol-pdf-ck"><input type="checkbox" checked={gor.icindekiler} onChange={(e) => setGor((g) => ({ ...g, icindekiler: e.target.checked }))} /><span>Kapakta içindekiler</span></label>
         </fieldset>
       </div>
     </Dialog>
@@ -218,6 +319,7 @@ export const OnemListesi: React.FC = () => {
   const dq = useDeferredValue(q);
   const [bantlar, setBantlar] = useState<Set<number>>(() => new Set());
   const [yalnizSinav, setYalnizSinav] = useState(false);
+  const [katS, setKatS] = useState<'' | 'prognoz' | 'tedavi'>('');
   const [pdfAcik, setPdfAcik] = useState(false);
   const cokDers = kod === HEPSI || kod === ADAY;
 
@@ -262,6 +364,7 @@ export const OnemListesi: React.FC = () => {
     for (const d of kaynak) for (const m of d.maddeler) {
       if (bantlar.size && !bantlar.has(bantOf(m.puan))) continue;
       if (yalnizSinav && m.sinavUygun === false) continue;
+      if (katS && m.kategori !== katS) continue;
       if (kod === HEPSI && !bantlar.size && !t.length && m.puan < 90) continue; // tüm patoloji: yalnız 90–100 (süzgeçsiz)
       if (t.length) {
         const h = kucuk(`${m.baslik} ${m.bilgi} ${(m.alt || []).join(' ')} ${m.detay}`);
@@ -270,7 +373,7 @@ export const OnemListesi: React.FC = () => {
       out.push({ m, d });
     }
     return out.sort((a, b) => b.m.puan - a.m.puan);
-  }, [kaynak, kod, dq, bantlar, yalnizSinav]);
+  }, [kaynak, kod, dq, bantlar, yalnizSinav, katS]);
   const gruplu = useMemo(() => BANTLAR.map((B) => ({ ...B, items: liste.filter((x) => bantOf(x.m.puan) === B.b) })).filter((g) => g.items.length), [liste]);
   const toplam = useMemo(() => dizin?.dersler.reduce((s, d) => s + d.madde, 0) || 0, [dizin]);
   const adayMadde = (d: Ders) => (d.sinavAdaylari || []).map((a) => ({ a, m: d.maddeler.find((x) => x.id === a.id) })).filter((x) => x.m) as { a: Aday; m: Madde }[];
@@ -312,7 +415,7 @@ export const OnemListesi: React.FC = () => {
       </header>
 
       <div className="ol-kural" role="note">
-        <b>Sınav kuralı:</b> resim ve tablolardan soru yok · klinik bulgu sorulmuyor · her ders slaytından <b>1 soru</b> (Genetik, Pediatrik ve Çevresel Patoloji'den <b>2 soru</b>).
+        <b>Sınav kuralı:</b> resim ve tablolardan soru yok · klinik bulgu sorulmuyor (prognoz ve tedavi sorulabilir) · her ders slaytından <b>1 soru</b> (Genetik, Pediatrik ve Çevresel Patoloji'den <b>2 soru</b>).
         <span><Star aria-hidden /> işaretli maddeler sınavda çıkabilecek adaylar; “En olası soru” en güçlü aday.</span>
       </div>
 
@@ -334,8 +437,10 @@ export const OnemListesi: React.FC = () => {
       {kod !== ADAY && (
         <div className="ol-bantsec" role="group" aria-label="Puan bandı">
           <button type="button" className={`ol-bchip ol-sinavchip${yalnizSinav ? ' is-on' : ''}`} onClick={() => setYalnizSinav((v) => !v)} aria-pressed={yalnizSinav}>
-            Yalnız sınava uygun<small>tablo/şekil/klinik hariç</small>
+            Yalnız sınava uygun<small>tablo/şekil/klinik bulgu hariç</small>
           </button>
+          <button type="button" className={`ol-bchip ol-katchip k-prognoz${katS === 'prognoz' ? ' is-on' : ''}`} onClick={() => setKatS((v) => (v === 'prognoz' ? '' : 'prognoz'))} aria-pressed={katS === 'prognoz'}>Prognoz</button>
+          <button type="button" className={`ol-bchip ol-katchip k-tedavi${katS === 'tedavi' ? ' is-on' : ''}`} onClick={() => setKatS((v) => (v === 'tedavi' ? '' : 'tedavi'))} aria-pressed={katS === 'tedavi'}>Tedavi</button>
           {BANTLAR.map((B) => (
             <button key={B.b} type="button" className={`ol-bchip b${B.b}${bantlar.has(B.b) ? ' is-on' : ''}`} onClick={() => tglBant(B.b)} aria-pressed={bantlar.has(B.b)}>
               {B.ad}<small>{B.not}</small>
