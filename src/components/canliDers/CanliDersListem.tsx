@@ -44,6 +44,8 @@ const MODLAR: { mod: CdTekrarMod; ad: string; alt: string }[] = [
 export function TekrarSecici({ yukari = true }: { yukari?: boolean }) {
   const mod = useCdListe((s) => s.mod);
   const sayi = useCdListe((s) => s.sayi);
+  // Ders tekrarı sürerken kaçıncı tekrarda olunduğu ("1/3"); ilk çalışta yalnız sayı
+  const tur = useCdListe((s) => (s.mod === 'ders' ? s.dersTur : s.mod === 'liste' ? s.listeTur : 0));
   const [acik, setAcik] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
   useEffect(() => {
@@ -72,7 +74,9 @@ export function TekrarSecici({ yukari = true }: { yukari?: boolean }) {
         aria-label={`Tekrar: ${ozet}`}
       >
         <Ikon aria-hidden />
-        {mod !== 'kapali' && <span className="cd-tk-sayi">{tekrarSayiYaz(sayi)}</span>}
+        {mod === 'kapali'
+          ? <span className="cd-tk-ad">Tekrar</span>
+          : <span className="cd-tk-sayi">{tur > 0 ? `${tur}/${sayi === 0 ? '∞' : sayi}` : tekrarSayiYaz(sayi)}</span>}
       </button>
       {acik && (
         <div className={`cd-tk-menu${yukari ? '' : ' is-asagi'}`} role="dialog" aria-label="Tekrar">

@@ -1,6 +1,6 @@
 /**
  * Canlı ders tanıtım turu — iki parça:
- *   • liste: /canliders (canlı ders nedir, arama, Dinle, Oynat, MP3, diğer sesler, arka planda dinleme)
+ *   • liste: /canliders (canlı ders nedir, arama, kategoriler, Dinle, Oynat, seçenekler (sesler/MP3/çevrimdışı/listem), arka planda dinleme)
  *   • ders:  /canliders/<key> (PDF, metin, takip, oynatıcı, bölümler, ses/hız/indirme, kısayollar, mini oynatıcı)
  * Öğren turunun (LearnTour) görsel dilini ve sınıflarını (wt-/lt-) kullanır: SVG maskeli karartmada delik + kart.
  * Öğesi sayfada olmayan `optional` duraklar atlanır (PDF yok, oynatıcı başka derste, geniş ekranda sekme yok…);
@@ -53,12 +53,21 @@ const LISTE: Durak[] = [
     points: ['Büyük-küçük harf ve Türkçe karakter fark etmez', '× ile aramayı temizle'],
   },
   {
+    sel: '.cd-kat-cipler',
+    icon: ListOrdered,
+    eyebrow: 'Kategoriler',
+    title: 'Konuya göre süz',
+    text: 'Dersler konu başlıklarına ayrılmıştır; bir çipe dokununca yalnız o konunun dersleri kalır.',
+    points: ['“Yarım kalanlar” dinlemeye başladığın dersleri toplar', 'Kategori başlığına dokunarak bölümü katlayabilirsin'],
+    optional: true,
+  },
+  {
     sel: `${satir} .cd-satir-ad`,
     icon: AudioLines,
     eyebrow: 'Ders satırı',
-    title: 'Süre, ses ve PDF',
-    text: 'Her satırda dersin süresi, anlatan ses ve dosya boyutu yazar.',
-    points: ['PDF rozeti: anlatım dersin slaytlarıyla eşleşmiş', 'Çalan dersin satırı renkle işaretlenir'],
+    title: 'Süre ve ilerleme',
+    text: 'Her satırda dersin süresi, kaç seslendirmesi olduğu ve ne kadarını dinlediğin yazar.',
+    points: ['Çalan dersin satırı renkle işaretlenir'],
     optional: true,
   },
   {
@@ -80,21 +89,12 @@ const LISTE: Durak[] = [
     optional: true,
   },
   {
-    sel: `${satir} .cd-satir-eylem > a.cd-btn`,
-    icon: Download,
-    eyebrow: 'İndir',
-    title: 'MP3 olarak indir',
-    text: 'Dersi cihazına indir; internetsiz de dinleyebilirsin.',
-    points: ['Dosya adı ders numarası ve başlığını taşır'],
-    optional: true,
-  },
-  {
     sel: `${satir} .cd-satir-diger .cd-btn`,
     icon: SlidersHorizontal,
-    eyebrow: 'Alternatif sesler',
-    title: 'Başka bir sesle dinle',
-    text: 'Okla açılan menüde dersin diğer seslendirmeleri listelenir.',
-    points: ['Her sesi ayrı oynatabilir ya da indirebilirsin', 'Ses, ders ekranındaki oynatıcıdan da değişir'],
+    eyebrow: 'Seçenekler',
+    title: 'Ses, indirme ve listem',
+    text: '“⋯” düğmesi dersin diğer işlemlerini açar.',
+    points: ['Başka bir seslendirmeyi oynat ya da MP3 indir', 'Çevrimdışı: ses, metin ve slaytları cihaza indir', 'Listeme ekle: dersleri sırayla dinlemek için'],
     optional: true,
   },
   {

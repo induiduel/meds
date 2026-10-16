@@ -5,7 +5,7 @@
  *    çubuktadır (CanliDersDock, App düzeyinde) — ses öğesi canliDersStore'da tek ve kalıcıdır.
  */
 import React, { useEffect, useMemo, useState } from 'react';
-import { ChevronDown, CloudDownload, Download, Headphones, History, ListMusic, Pause, Play, Search, X } from 'lucide-react';
+import { ChevronDown, Download, Headphones, History, ListMusic, MoreHorizontal, Pause, Play, Search, X } from 'lucide-react';
 import { navigateTo, pathFor } from '../../router';
 import {
   cdDosyaAdi, cdKonumListesi, cdListeGetir, cdOynat, cdSesKisa, cdSesUrl, cdToggle, fmtMb, fmtSure, useCd,
@@ -16,6 +16,7 @@ import { cdListeOzetleri, useCdListe } from './canliDersListe';
 import { ListeEkleDugme, Listem } from './CanliDersListem';
 import { useCdTur } from './useCdTur';
 import { CevrimdisiDugme, useCevrimdisiSuzgec } from './CanliDersCevrimdisi';
+import { cdKategoriGrupla, type CdKategori } from './canliDersKategori';
 import '../../styles/canli-ders.css';
 
 const fold = (s: string) =>
@@ -43,7 +44,9 @@ function CanliDersListe() {
     window.addEventListener('popstate', f);
     return () => window.removeEventListener('popstate', f);
   }, []);
-  const [suzgec, setSuzgec] = useState<'tum' | 'yarim'>('tum');
+  /** 'tum' | 'yarim' | kategori kimliği */
+  const [suzgec, setSuzgec] = useState<string>('tum');
+  const [kapali, setKapali] = useState<Set<string>>(() => new Set());
   const [konum] = useState(konumHaritasi);
   const tanitim = useCdTur('liste', !!dersler?.length, () => !!document.querySelector('.cd-satir'));
 
@@ -64,6 +67,14 @@ function CanliDersListe() {
     return l;
   }, [dersler, q, suzgec, konum]);
   const cevrimdisi = useCevrimdisiSuzgec(liste);
+  // Tüm derslerin kategorileri (çip sayıları aramadan bağımsız); görünen gruplar süzülmüş listeden
+  const tumGruplar = useMemo(() => cdKategoriGrupla(dersler || []), [dersler]);
+  const gruplar = useMemo(() => {
+    const g = cdKategoriGrupla(cevrimdisi.liste);
+    return suzgec === 'tum' || suzgec === 'yarim' ? g : g.filter((x) => x.kat.id === suzgec);
+  }, [cevrimdisi.liste, suzgec]);
+  const gorunenN = gruplar.reduce((n, g) => n + g.dersler.length, 0);
+  const katDegistir = (id: string) => setKapali((s) => { const n = new Set(s); n.has(id) ? n.delete(id) : n.add(id); return n; });
   const yarimSayi = useMemo(() => (dersler ? dersler.filter((d) => konum.has(d.key)).length : 0), [dersler, konum]);
   // En son dinlenen (listede olan) ders: "Kaldığın yerden devam"
   const son = useMemo(() => {
@@ -127,29 +138,31 @@ function CanliDersListe() {
         <>
           {cevrimdisi.serit}
           {son && !q && suzgec === 'tum' && <DevamKarti d={son.d} k={son.k} />}
-          <div className="cd-arac">
-            {yarimSayi > 0 ? (
-              <div className="cd-suzgec" role="group" aria-label="Dersleri süz">
-                <button type="button" aria-pressed={suzgec === 'tum'} className={suzgec === 'tum' ? 'is-on' : ''} onClick={() => setSuzgec('tum')}>
-                  Tümü <span>{dersler.length}</span>
-                </button>
-                <button type="button" aria-pressed={suzgec === 'yarim'} className={suzgec === 'yarim' ? 'is-on' : ''} onClick={() => setSuzgec('yarim')}>
-                  Yarım kalanlar <span>{yarimSayi}</span>
-                </button>
-              </div>
-            ) : (
-              <p className="cd-sayi">{liste.length === dersler.length ? `${dersler.length} ders` : `${liste.length} / ${dersler.length} ders`}</p>
+          <div className="cd-kat-cipler" role="group" aria-label="Kategoriye göre süz">
+            <button type="button" aria-pressed={suzgec === 'tum'} className={suzgec === 'tum' ? 'is-on' : ''} onClick={() => setSuzgec('tum')}>
+              Tümü <span>{dersler.length}</span>
+            </button>
+            {yarimSayi > 0 && (
+              <button type="button" aria-pressed={suzgec === 'yarim'} className={`is-yarim${suzgec === 'yarim' ? ' is-on' : ''}`} onClick={() => setSuzgec('yarim')}>
+                <History aria-hidden /> Yarım kalanlar <span>{yarimSayi}</span>
+              </button>
             )}
-            <p className="cd-lejant">
-              <span><Headphones aria-hidden /> <b>Dinle</b> metin ve slaytlarla açar</span>
-              <span><Play aria-hidden /> <b>Oynat</b> bu sayfadan çıkmadan çalar</span>
-              <span><Download aria-hidden /> <b>MP3</b> indirir</span>
-              <span><CloudDownload aria-hidden /> <b>Çevrimdışı</b> ses, metin ve slaytları cihaza indirir</span>
-            </p>
+            {tumGruplar.map(({ kat, dersler: ds }) => (
+              <button key={kat.id} type="button" aria-pressed={suzgec === kat.id} className={suzgec === kat.id ? 'is-on' : ''}
+                onClick={() => setSuzgec(suzgec === kat.id ? 'tum' : kat.id)}>
+                {kat.kisa} <span>{ds.length}</span>
+              </button>
+            ))}
           </div>
-          <ul className="cd-satirlar">
-            {cevrimdisi.liste.map((d) => <DersSatiri key={d.key} d={d} k={konum.get(d.key)} />)}
-          </ul>
+          {!gorunenN ? (
+            <div className="cd-bos"><p>{q ? `"${q}" için bu kategoride ders bulunamadı.` : 'Bu kategoride ders yok.'}</p></div>
+          ) : gruplar.map(({ kat, dersler: ds }) => (
+            <KategoriBolumu key={kat.id} kat={kat} n={ds.length} acik={!!q || !kapali.has(kat.id)} onDegistir={() => katDegistir(kat.id)}>
+              <ul className="cd-satirlar">
+                {ds.map((d) => <DersSatiri key={d.key} d={d} k={konum.get(d.key)} />)}
+              </ul>
+            </KategoriBolumu>
+          ))}
         </>
       )}
       {tanitim.tur}
@@ -232,14 +245,27 @@ function IndirDugme({ d, v, kucuk }: { d: CdListeDers; v: CdVaryant; kucuk?: boo
   );
 }
 
+function KategoriBolumu({ kat, n, acik, onDegistir, children }: { kat: CdKategori; n: number; acik: boolean; onDegistir: () => void; children: React.ReactNode }) {
+  return (
+    <section className={`cd-kat${acik ? '' : ' is-kapali'}`} aria-label={kat.ad}>
+      <button type="button" className="cd-kat-bas" aria-expanded={acik} onClick={onDegistir}>
+        <span className="cd-kat-ad"><b>{kat.ad}</b><small>{kat.alt}</small></span>
+        <span className="cd-kat-n">{n} ders</span>
+        <ChevronDown aria-hidden className="cd-kat-ok" />
+      </button>
+      {acik && children}
+    </section>
+  );
+}
+
 const DersSatiri = React.memo(function DersSatiri({ d, k }: { d: CdListeDers; k?: Konum }) {
   const [acik, setAcik] = useState(false);
   const v = d.varsayilan || d.varyantlar[0];
-  const diger = d.varyantlar.filter((x) => x.id !== v?.id);
   const caliyor = useCd((s) => s.key === d.key && s.playing);
   if (!v) return null;
+  const sesN = d.varyantlar.length;
   return (
-    <li className={`cd-satir${caliyor ? ' is-caliyor' : ''}`}>
+    <li className={`cd-satir${caliyor ? ' is-caliyor' : ''}${acik ? ' is-acik' : ''}`}>
       <div className="cd-satir-ana">
         <span className="cd-no" aria-hidden>{d.no}</span>
         <a
@@ -254,53 +280,51 @@ const DersSatiri = React.memo(function DersSatiri({ d, k }: { d: CdListeDers; k?
           <b>{d.baslik}</b>
           <small>
             <span>{fmtSure(v.sureSn)}</span>
-            <span className="cd-chip" title={v.etiket || undefined}>{sesAdi(v)}</span>
-            {d.varyantlar.length > 1 && <span className="cd-chip is-ses">+{d.varyantlar.length - 1} ses</span>}
-            {d.pdf && <span className="cd-chip is-pdf" title="Slaytlar sesle birlikte açılır">PDF</span>}
-            {v.bayt > 0 && <span>{fmtMb(v.bayt)}</span>}
+            {sesN > 1 && <span>{sesN} ses</span>}
             <SatirIlerleme d={d} k={k} dur={v.sureSn} />
           </small>
         </a>
         <div className="cd-satir-eylem">
-          <button type="button" className="cd-btn is-ana" onClick={() => dersAc(d.key)} aria-label={`Dinle: ${d.baslik} (metin ve slaytlarla)`}>
+          <button type="button" className="cd-btn is-ana" onClick={() => dersAc(d.key)} aria-label={`Dinle: ${d.baslik} (metin ve slaytlarla)`} title="Metin ve slaytlarla aç">
             <Headphones aria-hidden />
             <span>Dinle</span>
           </button>
           <OynatDugme d={d} v={v} />
-          <IndirDugme d={d} v={v} />
-          <CevrimdisiDugme dersKey={d.key} baslik={d.baslik} varyantlar={d.varyantlar} />
-          <ListeEkleDugme dersKey={d.key} baslik={d.baslik} />
         </div>
         <div className="cd-satir-diger">
-          {diger.length > 0 ? (
-            <button
-              type="button"
-              className={`cd-btn is-ikon${acik ? ' is-acik' : ''}`}
-              aria-expanded={acik}
-              aria-label={`Diğer sesler (${diger.length})`}
-              title="Diğer sesler"
-              onClick={() => setAcik((x) => !x)}
-            >
-              <ChevronDown aria-hidden />
-            </button>
-          ) : (
-            <span className="cd-btn-yer" aria-hidden />
-          )}
+          <button
+            type="button"
+            className={`cd-btn is-ikon${acik ? ' is-acik' : ''}`}
+            aria-expanded={acik}
+            aria-label={`Seçenekler: ${d.baslik} (sesler, MP3, çevrimdışı, listem)`}
+            title="Sesler, indirme ve listem"
+            onClick={() => setAcik((x) => !x)}
+          >
+            <MoreHorizontal aria-hidden />
+          </button>
         </div>
       </div>
-      {acik && diger.length > 0 && (
-        <ul className="cd-varyantlar">
-          {[v, ...diger].map((x) => (
-            <li key={x.id}>
-              <span className="cd-var-ad">
-                <b title={x.etiket || undefined}>{sesAdi(x)}</b>
-                <small>{[fmtSure(x.sureSn), fmtMb(x.bayt)].filter(Boolean).join(' · ')}</small>
-              </span>
-              <OynatDugme d={d} v={x} kucuk />
-              <IndirDugme d={d} v={x} kucuk />
-            </li>
-          ))}
-        </ul>
+      {acik && (
+        <div className="cd-secenek">
+          <div className="cd-secenek-arac">
+            <CevrimdisiDugme dersKey={d.key} baslik={d.baslik} varyantlar={d.varyantlar} />
+            <ListeEkleDugme dersKey={d.key} baslik={d.baslik} etiketli />
+            {d.pdf && <span className="cd-secenek-not">Slaytlar sesle birlikte açılır</span>}
+          </div>
+          <p className="cd-secenek-bas">{sesN > 1 ? `Sesler (${sesN})` : 'Ses'}</p>
+          <ul className="cd-varyantlar">
+            {d.varyantlar.map((x) => (
+              <li key={x.id}>
+                <span className="cd-var-ad">
+                  <b title={x.etiket || undefined}>{sesAdi(x)}{x.id === v.id && <em> · varsayılan</em>}</b>
+                  <small>{[fmtSure(x.sureSn), fmtMb(x.bayt)].filter(Boolean).join(' · ')}</small>
+                </span>
+                <OynatDugme d={d} v={x} kucuk />
+                <IndirDugme d={d} v={x} kucuk />
+              </li>
+            ))}
+          </ul>
+        </div>
       )}
     </li>
   );

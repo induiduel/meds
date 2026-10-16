@@ -324,6 +324,8 @@
 /* tekrar seçici */
 .cd-tk-btn { position: relative; }
 .cd-tk-sayi { font: 700 11px/1 var(--font-mono, ui-monospace, monospace); }
+/* Tekrar kapalıyken de ne işe yaradığı görünsün (yalnız simge fark edilmiyordu) */
+.cd-tk-ad { font-size: 11.5px; font-weight: 600; color: var(--color-ink-2); }
 .cd-tk-menu { position: absolute; right: 0; bottom: calc(100% + 10px); z-index: 3; width: min(270px, calc(100vw - 32px)); padding: 6px; border: 1px solid var(--color-line); border-radius: 14px;
   background: var(--color-white); box-shadow: 0 12px 36px rgb(0 0 0 / .16); }
 .cd-tk-menu.is-asagi { bottom: auto; top: calc(100% + 6px); }
@@ -461,3 +463,47 @@
 }
 .cd-tam-oyn > svg { transition: transform .2s; }
 .cd-tam-oyn.is-on > svg { transform: rotate(180deg); }
+
+/* =====================================================================================================
+ * Liste: konu kategorileri + sade satır (2026-10-16). Satırda yalnız Dinle · Oynat · ⋯; sesler, MP3,
+ * çevrimdışı ve Listem "⋯" ile açılan seçenek panelinde. Lejant kaldırıldı.
+ * ===================================================================================================== */
+.cd-kat-cipler { display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none; padding: 2px 0 4px; margin: 0 -2px; padding-inline: 2px; }
+.cd-kat-cipler::-webkit-scrollbar { display: none; }
+.cd-kat-cipler button { flex: none; display: inline-flex; align-items: center; gap: 6px; height: 32px; padding: 0 12px; border: 1px solid var(--color-line);
+  border-radius: 999px; background: var(--color-surface, transparent); color: var(--color-ink-2); font: inherit; font-size: 13px; font-weight: 600; cursor: pointer; white-space: nowrap; }
+.cd-kat-cipler button svg { width: 14px; height: 14px; }
+.cd-kat-cipler button span { font-size: 11.5px; color: var(--color-ink-3); font-variant-numeric: tabular-nums; }
+.cd-kat-cipler button:hover { color: var(--color-ink); border-color: var(--color-ink-3); }
+.cd-kat-cipler button.is-on { background: var(--color-accent); border-color: var(--color-accent); color: var(--color-on-accent, #fff); }
+.cd-kat-cipler button.is-on span { color: inherit; opacity: .8; }
+.cd-kat-cipler button:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+
+.cd-kat { display: flex; flex-direction: column; gap: 6px; }
+.cd-kat + .cd-kat { margin-top: 10px; }
+.cd-kat-bas { display: flex; align-items: center; gap: 10px; width: 100%; padding: 6px 4px; border: 0; background: none; color: inherit; font: inherit; text-align: left; cursor: pointer; border-radius: 8px; }
+.cd-kat-bas:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 1px; }
+.cd-kat-ad { flex: 1; min-width: 0; display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+.cd-kat-ad b { font-size: 15px; font-weight: 700; }
+.cd-kat-ad small { font-size: 12px; color: var(--color-ink-3); }
+.cd-kat-n { font-size: 12px; color: var(--color-ink-3); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.cd-kat-ok { width: 16px; height: 16px; color: var(--color-ink-3); transition: transform .15s; flex: none; }
+.cd-kat.is-kapali .cd-kat-ok { transform: rotate(-90deg); }
+
+/* satır: Dinle + Oynat + ⋯ */
+.cd-liste .cd-satir-ana:not(.cd-lm-satir) .cd-satir-eylem { gap: 6px; }
+.cd-satir.is-acik { background: var(--color-canvas); }
+.cd-secenek { display: flex; flex-direction: column; gap: 8px; padding: 0 12px 12px 58px; }
+.cd-secenek-arac { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
+.cd-secenek-not { font-size: 12px; color: var(--color-ink-3); margin-left: 4px; }
+.cd-secenek-bas { margin: 2px 0 0; font-size: 11.5px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; color: var(--color-ink-3); }
+.cd-secenek .cd-varyantlar { padding: 0; }
+.cd-secenek .cd-varyantlar li { background: var(--color-field); }
+.cd-var-ad em { font-style: normal; font-weight: 500; color: var(--color-ink-3); }
+
+@media (max-width: 640px) {
+  .cd-liste .cd-satir-ana:not(.cd-lm-satir) > .cd-satir-eylem .cd-btn { flex-direction: row; gap: 6px; height: 38px; font-size: 13px; }
+  .cd-liste .cd-satir-ana:not(.cd-lm-satir) > .cd-satir-eylem .cd-btn > svg { width: 16px; height: 16px; }
+  .cd-secenek { padding: 0 12px 12px; }
+  .cd-kat-ad small { display: none; }
+}
