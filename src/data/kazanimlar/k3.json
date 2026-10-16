@@ -1744,7 +1744,40 @@
        "id": "k3-d3-c1-kz-3",
        "metin": "Bakteriyel İshaller UZM klinik yönetimini, farmakoterapi ilkelerini ve komplikasyonlardan korunma yaklaşımlarını sıralar.",
        "slaytlar": [],
-       "cikmisSorular": [],
+       "cikmisSorular": [
+        {
+         "id": "6f2e78a17f8d",
+         "questionNumber": 1674,
+         "stem": "Salmonella'ya bağlı enterik ateş ile ilgili aşağıdaki seçeneklerden hangisi yanlıştır?",
+         "correctAnswer": "E",
+         "options": [
+          {
+           "key": "A",
+           "text": "Yavaş yavaş yükselip 40 °C'ye kadar çıkan kontinü ateş görülür"
+          },
+          {
+           "key": "B",
+           "text": "Diyare günde 6-8 kez olup bezelye çorbası görünümünde olması karakteristiktir"
+          },
+          {
+           "key": "C",
+           "text": "Hepatosplenomegali, AST ve ALT artışı izlenir"
+          },
+          {
+           "key": "D",
+           "text": "Tanıda Gruber-Widal testi kullanılabilir"
+          },
+          {
+           "key": "E",
+           "text": "Hafif bir klinik tablodur, antibiyotik tedavisine gerek yoktur"
+          }
+         ],
+         "year": "2020-2021",
+         "discipline": "İç Hastalıkları",
+         "topic": "Bakteriyel İshaller",
+         "explanation": "Salmonella Typhi ve Paratyphi'nin yol açtığı enterik ateş, ağır komplikasyonlar oluşturabilen sistemik bir enfeksiyondur ve **antibiyotik tedavisi zorunludur**; bu nedenle 'hafif tablo, antibiyotik gerekmez' ifadesi yanlıştır.\n\n- **Patogenez:** Bakteri Peyer plaklarından girerek retiküloendotelyal sistemde çoğalır, bakteriyemiyle karaciğer, dalak ve kemik iliğine yayılır.\n- **Ateş ve klinik:** Basamak basamak yükselen, ikinci haftada 40 °C'ye ulaşan kontinü ateş; göreceli bradikardi, gül lekeleri, hepatosplenomegali, lökopeni ve transaminaz artışı.\n- **Bağırsak bulguları:** Çocuklarda bezelye çorbası görünümünde ishal, erişkinlerde sıklıkla kabızlık; en önemli komplikasyonlar bağırsak kanaması ve perforasyondur.\n- **Tanı:** İlk haftada kan kültürü, sonra kemik iliği kültürü en değerlidir; Gruber-Widal serolojisi yardımcıdır ancak yanlış pozitiflik ve negatiflik sıktır.\n- **Tedavi:** Seftriakson, florokinolon veya azitromisin kullanılır; kronik taşıyıcılıkta safra kesesi rezervuar olabilir.\n\nSınav: Enterik ateşte lökositoz değil lökopeni beklenir ve antibiyotik her zaman endikedir."
+        }
+       ],
        "ornekSorular": [],
        "sozlukTerimleri": [],
        "ozetler": []
@@ -4332,6 +4365,38 @@
        "slaytlar": [],
        "cikmisSorular": [
         {
+         "id": "3201b8b42b25",
+         "questionNumber": 310,
+         "stem": "Aşağıdakilerden hangi bulgu nefrotik sendroma bağlı asit için tipiktir?",
+         "correctAnswer": "D",
+         "options": [
+          {
+           "key": "A",
+           "text": "Asit protein içeriği 2,5 g/dl veya üzerinde"
+          },
+          {
+           "key": "B",
+           "text": "Asit protein içeriği 2,5 g/dl'nin altında ve serum-asit albümin gradiyenti 1,1 g/dl veya üzerinde"
+          },
+          {
+           "key": "C",
+           "text": "Serum-asit albümin gradiyenti (SAAG) 1,1 g/dl veya üzerinde"
+          },
+          {
+           "key": "D",
+           "text": "Serum-asit albümin gradiyenti (SAAG) 1,1 g/dl'nin altında"
+          },
+          {
+           "key": "E",
+           "text": "Üre/BUN oranı = 2"
+          }
+         ],
+         "year": "2020-2021",
+         "discipline": "İç Hastalıkları",
+         "topic": "Siroz ve Komplikasyonları",
+         "explanation": "Nefrotik sendroma bağlı asitte portal hipertansiyon yoktur; bu nedenle **serum-asit albümin gradiyenti (SAAG) < 1,1 g/dl** olması tipiktir.\n\n- **SAAG hesaplama:** Serum albümini − asit albümini; aynı gün alınan örneklerle hesaplanır ve portal basıncı yaklaşık %97 doğrulukla yansıtır.\n- **SAAG ≥ 1,1 g/dl:** Portal hipertansiyon; siroz, alkolik hepatit, kalp yetmezliği, Budd-Chiari sendromu, masif karaciğer metastazı.\n- **SAAG < 1,1 g/dl:** Portal hipertansiyon yok; nefrotik sendrom, peritoneal karsinomatozis, tüberküloz peritoniti, pankreatik ve biliyer asit, serozit.\n- **Asit total proteini:** Yüksek SAAG ile birlikte < 2,5 g/dl siroz, ≥ 2,5 g/dl kardiyak asit lehinedir; nefrotik sendromda hipoalbüminemi nedeniyle protein düşüktür.\n- **Patofizyoloji:** Masif proteinüri → hipoalbüminemi → plazma onkotik basıncında düşüş → transüda niteliğinde ödem ve asit.\n\nSınav: Düşük SAAG ile düşük protein birlikteliği nefrotik sendromu, yüksek SAAG ile düşük protein ise sirozu düşündürür."
+        },
+        {
          "id": "c14151e081dd",
          "questionNumber": 421,
          "stem": "Aşağıdakilerden hangisi şilöz asite neden olmaz?",
@@ -5660,6 +5725,38 @@
          "discipline": "İç Hastalıkları",
          "topic": "Akut Hepatitler",
          "explanation": "Kan yoluyla tek bir temasta bulaşma olasılığı en yüksek hepatit virüsü HBV'dir; serumdaki çok yüksek viral yük, özellikle HBeAg pozitif taşıyıcılarda, bu etkinliğin nedenidir.\n\n- **Parenteral bulaş etkinliği:** Kontamine iğne batmasında bulaş riski HBV için yaklaşık %30, HCV için %1,8-3, HIV için %0,3 civarındadır.\n- **Fekal-oral grup:** HAV ve HEV kontamine su ve gıdayla bulaşır, sağlıklı kişide kronikleşmez; toplumda en sık görülen akut viral hepatit HAV'dir.\n- **Gebelik:** İkinci ve üçüncü trimesterde fulminan hepatit gelişmesi HEV'in tanımlayıcı özelliğidir.\n- **Kronikleşme:** HCV'de oran %70-85 ile en yüksektir; erişkin HBV'de %5-10, perinatal HBV'de %90'ın üzerindedir.\n- **HDV:** Yalnız HBsAg varlığında çoğalabilen defektif virüstür ve parenteral yolla bulaşır.\n\nNot: Tarama öncesi dönemde transfüzyon sonrası hepatitlerin en sık etkeni HCV idi; şıktaki ifade sıklığı değil, temas başına bulaşıcılık oranını ölçer.\n\nSınav: Gebede fulminan seyir HEV, en yüksek kronikleşme HCV, en yüksek bulaşıcılık HBV ile eşleştirilmelidir."
+        },
+        {
+         "id": "3590cc3f8eca",
+         "questionNumber": 380,
+         "stem": "Aşağıdakilerden hangisi tek başına hepatit hastalığı etkeni değildir?",
+         "correctAnswer": "D",
+         "options": [
+          {
+           "key": "A",
+           "text": "Hepatit A virüsü"
+          },
+          {
+           "key": "B",
+           "text": "Hepatit B virüsü"
+          },
+          {
+           "key": "C",
+           "text": "Hepatit C virüsü"
+          },
+          {
+           "key": "D",
+           "text": "Hepatit D virüsü"
+          },
+          {
+           "key": "E",
+           "text": "Hepatit E virüsü"
+          }
+         ],
+         "year": "2020-2021",
+         "discipline": "İç Hastalıkları",
+         "topic": "Akut Hepatitler",
+         "explanation": "Hepatit D virüsü defektif bir RNA virüsüdür ve yaşam döngüsünü tamamlamak için HBsAg zarfına gereksinim duyar; bu nedenle HBV olmadan tek başına hastalık yapamaz.\n\n- **Koenfeksiyon:** HBV ve HDV aynı anda alınır; genellikle akut, kendini sınırlayan hepatit gelişir, ancak fulminan hepatit riski HBV'nin tek başına yaptığından yüksektir.\n- **Süperenfeksiyon:** Kronik HBsAg taşıyıcısına HDV eklenir; ağır akut alevlenme ve hızla siroza ilerleyen kronik delta hepatiti sık görülür.\n- **Bulaş:** HBV ile benzer şekilde parenteral ve cinsel yol.\n- **Korunma:** HBV'ye karşı aşılama HDV enfeksiyonunu da önler; ayrı bir HDV aşısı gerekmez.\n- **Diğer hepatotrop virüsler:** HAV ve HEV fekal-oral bulaşır ve kronikleşmez; HBV ve HCV parenteral bulaşır ve kronikleşebilir.\n\nSınav: 'Yardımcı virüse muhtaç' hepatit virüsü HDV'dir; HEV ise gebelikte fulminan seyriyle sorulur, ikisi sıkça karıştırılır."
         },
         {
          "id": "c611eb40b59d",
@@ -7478,6 +7575,38 @@
          "explanation": "Mide duplikasyonları en sık büyük kurvatür boyunca yerleşir; gastrointestinal duplikasyonlar arasında görece nadirdir.\n\n- **Tanım:** Normal bağırsak duvarıyla ortak düz kas tabakası paylaşan, gastrointestinal epitelle döşeli kistik veya tübüler konjenital yapılardır.\n- **Sıklık sırası:** En sık ileumda, ikinci sıklıkta özofagusta (yaklaşık %20) görülür; mide duplikasyonları nadirdir.\n- **Mide duplikasyonu:** Çoğunlukla kistik, lümenle bağlantısız ve büyük kurvatür boyuncadır; kadınlarda daha sık bildirilir.\n- **Klinik:** Kusma, palpabl kitle, kanama veya ülserasyon; ektopik pankreas dokusu içerebilir.\n- **Ayırıcı tanı:** Pankreatik psödokist ve mezenterik kist; görüntülemede çift duvar (kas) işareti yardımcıdır.\n\nSınav: Küçük kurvatür ülser ve kanserin, büyük kurvatür duplikasyonun tipik yeridir."
         },
         {
+         "id": "de64abb207b1",
+         "questionNumber": 391,
+         "stem": "Ciddi santral sinir sistemi hasarı sonrası oluşan gastrik ve duodenal ülseroeroziv lezyonlara ne ad verilir?",
+         "correctAnswer": "E",
+         "options": [
+          {
+           "key": "A",
+           "text": "Curling ülserleri"
+          },
+          {
+           "key": "B",
+           "text": "Cameron ülserleri"
+          },
+          {
+           "key": "C",
+           "text": "Boerhaave sendromu"
+          },
+          {
+           "key": "D",
+           "text": "Mallory-Weiss ülserleri"
+          },
+          {
+           "key": "E",
+           "text": "Cushing ülserleri"
+          }
+         ],
+         "year": "2020-2021",
+         "discipline": "Tıbbi Patoloji",
+         "topic": "Gastrit Tipleri",
+         "explanation": "Ciddi santral sinir sistemi hasarından sonra gelişen akut gastroduodenal ülserler **Cushing ülseri** olarak adlandırılır; asit hipersekresyonu belirleyicidir.\n\n- **Akut peptik ülserasyon (stres ülseri):** Şok, sepsis, ağır travma, yanık ve intrakraniyal hastalıklarda görülen, genellikle çok sayıda, yüzeyel ve keskin sınırlı lezyonlardır.\n- **Cushing ülseri mekanizması:** İntrakraniyal basınç artışı vagal çekirdekleri uyarır; asit salgısı artar. Mide, duodenum veya özofagusta yerleşir ve perforasyon riski yüksektir.\n- **Curling ülseri:** Ağır yanık ve travmada proksimal duodenumda gelişir; mekanizma hipovolemiye bağlı mukozal iskemidir.\n- **Ortak zemin:** Mukozal kan akımının azalması, prostaglandin aracılı korumanın bozulması ve bikarbonat-mukus bariyerinin zayıflaması asit-pepsin hasarına zemin hazırlar.\n- **Klinik önem:** Yoğun bakımdaki kafa travmalı hastalarda proton pompa inhibitörü ile stres ülseri profilaksisi bu nedenle uygulanır.\n\nSınav: Cushing = beyin (asit artışı); Curling = yanık (iskemi, proksimal duodenum)."
+        },
+        {
          "id": "d3-k3-pat-038",
          "questionNumber": 38,
          "stem": "Otoimmün metaplastik atrofik gastrit (tip A gastrit) patogenezi ve laboratuvar bulguları düşünüldüğünde aşağıdakilerden hangisi bu hastalığın bir özelliği DEĞİLDİR?",
@@ -9275,6 +9404,38 @@
          "discipline": "Tıbbi Patoloji",
          "topic": "İnflamatuar Bağırsak Hastalıkları: Crohn Hastalığı",
          "explanation": "Kronik aktif kolit bulgularına granülomun eşlik etmesi Crohn hastalığı tanısını en güçlü biçimde destekler.\n\n- **Ortak mukozal bulgular:** Kriptit, kript absesi, kript distorsiyonu ve Paneth hücre metaplazisi iki İBH'de de görülür; tek başına ayırt ettirmez.\n- **Kronisite göstergesi:** Kript distorsiyonu ve dallanması, tekrarlayan hasar ve rejenerasyonun ürünüdür; akut enfeksiyöz kolitte beklenmez.\n- **Ayırt ettirici bulgu:** Kazeifikasyonsuz granülom Crohn'un başlıca özelliğidir; yokluğu tanıyı dışlamaz.\n- **Dikkat:** Rüptüre kript çevresinde gelişen yabancı cisim tipi mikrogranülomlar gerçek granülom sayılmaz.\n- **Ayırıcı tanı:** Kazeifiye granülomda tüberküloz, lenfoid hiperplazide diversiyon koliti düşünülür.\n\nSınav: Biyopside granülom gördüğünde ülseratif koliti ele; kript absesini ise iki hastalığın ortak bulgusu olarak hatırla."
+        },
+        {
+         "id": "bf3cf00b8ddb",
+         "questionNumber": 415,
+         "stem": "B12 vitamini eksikliği tespit edilen hastanın kolonoskopisinde kaldırım taşı manzarası saptanıyor. En olası tanı nedir?",
+         "correctAnswer": "B",
+         "options": [
+          {
+           "key": "A",
+           "text": "Ülseratif kolit"
+          },
+          {
+           "key": "B",
+           "text": "Crohn hastalığı"
+          },
+          {
+           "key": "C",
+           "text": "Diversiyon koliti"
+          },
+          {
+           "key": "D",
+           "text": "Mikroskobik kolit"
+          },
+          {
+           "key": "E",
+           "text": "Divertikülit"
+          }
+         ],
+         "year": "2020-2021",
+         "discipline": "Tıbbi Patoloji",
+         "topic": "İnflamatuar Bağırsak Hastalıkları: Crohn Hastalığı",
+         "explanation": "Terminal ileum tutulumuna bağlı B12 eksikliği ile kolonoskopide kaldırım taşı manzarasının birlikteliği Crohn hastalığını düşündürür.\n\n- **B12 eksikliği:** B12, intrinsik faktöre bağlı olarak terminal ileumdan emilir; Crohn'un en sık yerleşim yeri olan terminal ileumun hastalanması ya da rezeksiyonu B12 eksikliğine ve safra asidi malabsorpsiyonuna yol açar.\n- **Kaldırım taşı görünümü:** Mukozada uzunlamasına ve enine derin lineer ülserler gelişir; aralarda kalan korunmuş, ödemli mukoza adacıkları hastalıklı bölgelerden daha yüksekte kaldığı için kaba kaldırım taşı görüntüsü oluşur.\n- **Diğer morfolojik özellikler:** Atlamalı (segmental) tutulum, transmural inflamasyon, fissürler, fistüller, darlıklar, kazeifikasyon göstermeyen granülomlar ve mezenterik yağ dokusunun seroza üzerine yayılması (creeping fat).\n- **Ülseratif kolitten farkı:** ÜK rektumdan başlar, kesintisizdir, inflamasyon yüzeyeldir; ileum yalnız backwash ileitte hafifçe etkilenir ve granülom görülmez.\n- **Sistemik bulgular:** Crohn'da demir, folat ve B12 eksikliği anemisi, osteoporoz ve safra taşı sıklığı artar.\n\nSınav: Kaldırım taşı görünümü + ileal tutulum (B12 eksikliği) + granülom üçlüsü Crohn hastalığını gösterir; ülseratif kolitte bu bulgular beklenmez."
         },
         {
          "id": "2ad20eaecd4c",
@@ -13566,6 +13727,38 @@
          "explanation": "Çilek safra kesesi görünümü kolesterolozisin tipik makroskopik bulgusudur.\n\n- **Mekanizma:** Safradaki fazla kolesterol mukozadan emilip lamina propriadaki makrofajlarda birikir; bu köpüksü makrofajlar mukozal kıvrımların ucunda toplanır.\n- **Makroskopi:** Kırmızı-hiperemik mukoza üzerinde küçük sarı noktalar ve çizgilenmeler görülür; bu görünüm çilek yüzeyine benzetilir.\n- **Mikroskopi:** Lamina propriada lipit yüklü köpüksü histiyositler izlenir; inflamasyon genellikle hafiftir ya da yoktur.\n- **Klinik:** Çoğunlukla kolesistektomi örneklerinde rastlantısal bulgudur; kolesterol taşlarıyla birlikte bulunabilir ve polipoid kolesterol polipleri oluşturabilir.\n- **Ayırıcı tanı:** Kronik kolesistitte duvar kalınlaşması ve Rokitansky-Aschoff sinüsleri, akut kolesistitte ödem ve hiperemi ön plandadır.\n\nSınav: 'Çilek safra kesesi' kolesterolozis, 'porselen kese' kronik kolesistitte distrofik kalsifikasyondur."
         },
         {
+         "id": "bbae0cbf7415",
+         "questionNumber": 1692,
+         "stem": "Safra kesesi karsinomları ile ilgili hangisi yanlıştır?",
+         "correctAnswer": "D",
+         "options": [
+          {
+           "key": "A",
+           "text": "İnfiltratif büyüme paterni daha sıktır"
+          },
+          {
+           "key": "B",
+           "text": "Adenokarsinomlar büyük bir bölümü oluşturur"
+          },
+          {
+           "key": "C",
+           "text": "Prognozu çok kötüdür"
+          },
+          {
+           "key": "D",
+           "text": "Porselen safra kesesinde kanser gelişme sıklığında değişiklik yoktur"
+          },
+          {
+           "key": "E",
+           "text": "Anatomik karsinogenez patogenezinde önemlidir"
+          }
+         ],
+         "year": "2020-2021",
+         "discipline": "Tıbbi Patoloji",
+         "topic": "Kolesistit, Kolelitiyazis ve Safra Kesesi Tümörleri",
+         "explanation": "Porselen safra kesesi kronik inflamasyonun son evresidir ve **safra kesesi karsinomu riskini artırır**; riskin değişmediği ifadesi yanlıştır.\n\n- **Risk etkenleri:** Safra taşları (olguların büyük çoğunluğunda eşlik eder), kronik kolesistit, porselen safra kesesi, pankreatikobiliyer kanal birleşim anomalisi, kronik Salmonella taşıyıcılığı; kadınlarda daha sıktır.\n- **Patogenez:** Kronik inflamasyon ve safra asitlerinin mukozaya etkisi displazi-karsinom dizisini başlatır; KRAS ve TP53 değişiklikleri görülür.\n- **Morfoloji:** İnfiltratif patern ekzofitik paternden sıktır; histolojik olarak yaklaşık %95'i adenokarsinomdur.\n- **Yayılım ve prognoz:** Karaciğer yatağına doğrudan invazyon, safra yolları ve bölgesel lenf nodlarına erken yayılım; tanı genellikle geç konur, 5 yıllık sağkalım çok düşüktür.\n- **Klinik:** Belirtiler sinsi ve taşa bağlı yakınmalara benzer; erken olgular kolesistektomide rastlantısal bulunur.\n\nSınav: Porselen safra kesesi profilaktik kolesistektomi gerekçesidir; infiltratif patern daha sık, adenokarsinom baskın histolojidir."
+        },
+        {
          "id": "a6cf712eb88f",
          "questionNumber": 1693,
          "stem": "Aşağıdakilerden hangisi safra kesesindeki pigment taşlarının özelliklerinden biri değildir?",
@@ -16593,6 +16786,38 @@
          "explanation": "H. pylori eradikasyonunda klasik üçlü tedavi bir PPİ ile iki antibiyotiğin (klaritromisin + amoksisilin ya da metronidazol/tinidazol) birlikte kullanılmasıdır; C seçeneği bu tanıma birebir uyar.\n\n- **Üçlü tedavi:** PPİ + klaritromisin + amoksisilin veya nitroimidazol, genellikle 10–14 gün verilir.\n- **Bizmutlu dörtlü tedavi:** PPİ + bizmut subsitrat + tetrasiklin + metronidazol; klaritromisin direnci yüksek bölgelerde ilk seçenektir.\n- **PPİ'nin rolü:** Mide pH'sı yükselince bakteri replikatif faza geçer ve antibiyotiklere duyarlılığı artar; klaritromisin asit ortamda daha az yıkılır.\n- **Gece dozu:** Nokturnal asit atılımı yüksek olduğundan yatarken verilen doz asit baskılamasını sürekli kılar.\n- **Etkisiz kombinasyonlar:** Antibiyotiksiz H2 blokör/bizmut/sitoprotektif rejimler ve antifungaller eradikasyon sağlamaz.\n\nSınav: Bizmutlu dörtlü tedavinin antibiyotikleri klaritromisin değil tetrasiklin ve metronidazoldür."
         },
         {
+         "id": "36efb75717cd",
+         "questionNumber": 1684,
+         "stem": "Helicobacter pylori ilişkili gastrit şüphesiyle kliniğinize başvuran hastayı aşağıdaki tedavi seçeneklerinden hangisi ile tedavi edersiniz?",
+         "correctAnswer": "C",
+         "options": [
+          {
+           "key": "A",
+           "text": "Alüminyum hidroksit"
+          },
+          {
+           "key": "B",
+           "text": "Simetidin 2 X 1 + Bizmut + diyet"
+          },
+          {
+           "key": "C",
+           "text": "Klaritromisin + Tinidazol + PPİ + akşam yatarken"
+          },
+          {
+           "key": "D",
+           "text": "Bizmut"
+          },
+          {
+           "key": "E",
+           "text": "Klaritromisin + Terbinafin + Sodyum bikarbonat + Bizmut (yatarken)"
+          }
+         ],
+         "year": "2020-2021",
+         "discipline": "Tıbbi Farmakoloji",
+         "topic": "GİS Hastalıklarının Tedavisinde Kullanılan İlaçlar -1",
+         "explanation": "H. pylori ilişkili gastritte amaç bakterinin eradikasyonudur; bu nedenle PPİ ile iki antibiyotikten oluşan üçlü rejim seçilir.\n\n- **Patogenez:** H. pylori üreaz ile amonyak oluşturup asitten korunur, CagA ve VacA ile epitel hasarı yapar; kronik aktif gastrit ve peptik ülsere yol açar.\n- **Üçlü tedavi:** PPİ + klaritromisin + tinidazol/metronidazol ya da PPİ + amoksisilin + metronidazol, 10-14 gün.\n- **Dörtlü tedavi:** Klaritromisin direnci yüksekse PPİ + bizmut + tetrasiklin + metronidazol önerilir.\n- **Semptomatik ilaçlar:** Antasitler, H2 blokerleri ve tek başına bizmut eradikasyon sağlamaz; sodyum bikarbonat sistemik alkaloz, alüminyum hidroksit kabızlık yapar.\n- **Kontrol:** Tedavi bitiminden en az 4 hafta sonra üre nefes testi ya da dışkı antijeniyle eradikasyon doğrulanır.\n\nSınav: Antibiyotik içermeyen her seçenek ve antifungal (terbinafin) içeren karışımlar H. pylori sorularında elenir."
+        },
+        {
          "id": "d3-b-092",
          "questionNumber": 92,
          "stem": "I. Gebelikte lansoprazol kullanımı kategori C, diğer PPİ'ler B olarak sınıflandırılır.\nII. PPİ'lerin kronik kullanımında bağırsak infeksiyonları, pnömoniler, osteoporoz ve kemik kırıkları, demir emiliminde bozulma, B12 vitamini eksikliği, mide fundusunda polipoid lezyonlar ve gastrik aşırı bakteriyel çoğalma mümkündür.\nIII. Hipergastrinemi: Serum gastrin düzeyinde artışa neden olur ve bu nedenle gastrik polipler, gastrik kanser ve kolon kanserinde artışa yol açacağı endişesini dışlamamak gerekir.\nIV. Nadir görülen bir patoloji olarak karsinoid oluşumu izlenebilir; ancak halen kronik PPİ kullanımının karsinoide yol açtığına dair bilgi yoktur. En sık gözlenen gastrik poliplerdir; görülme oranı %2'dir ve iyi huyludurlar. Kolorektal kanser riskinde bir artış olduğu fikri de desteklenmemiştir.\nPPİ (proton pompası inhibitörü) ilaçların advers etkileri için hangisi/hangileri doğrudur?",
@@ -18433,6 +18658,38 @@
          "discipline": "Tıbbi Farmakoloji",
          "topic": "Antimikrobik İlaçların Klinik Kullanımı, Önemi ve Önlemleri",
          "explanation": "Penisilin MİK değeri 2 mg/L olan pnömokok menenjitte penisiline dirençlidir; seftriakson duyarlılığı bilinene kadar önerilen tedavi vankomisin ile üçüncü kuşak sefalosporin (seftriakson veya sefotaksim) kombinasyonudur.\n\n- **Direnç eşiği:** Menenjit için pnömokokta penisilin MİK değeri 0,12 mg/L ve üzeri dirençli kabul edilir; bu hastada penisilin kullanılamaz.\n- **Direnç mekanizması:** Penisilin bağlayan proteinlerdeki değişiklikler beta-laktam afinitesini düşürür; beta-laktamaz söz konusu olmadığından inhibitörlü kombinasyonlar işe yaramaz.\n- **Vankomisin + seftriakson:** Seftriakson yüksek dozda BOS'ta yeterli düzeye ulaşır, vankomisin sefalosporin direncine karşı güvence sağlar; sefalosporin MİK değeri düşük çıkarsa vankomisin kesilebilir.\n- **Deksametazon:** Antibiyotikten hemen önce veya birlikte başlanması pnömokok menenjitinde mortaliteyi ve nörolojik sekeli azaltır.\n- **Karbapenem:** Meropenem alternatif ilaçtır ancak ilk tercih değildir; imipenem nöbet riski nedeniyle menenjitte kullanılmaz.\n\nSınav: Dirençli pnömokok menenjitinde cevap vankomisin + seftriakson/sefotaksimdir; birinci kuşak sefalosporin ve aminoglikozid BOS'ta etkisizdir."
+        },
+        {
+         "id": "past-1790877035713-914655-cs2",
+         "questionNumber": 43,
+         "stem": "Otuz beş yaşındaki erkek hasta baş ağrısı, bulantı ve kusma şikâyetleriyle başvuruyor. Lomber ponksiyon sonucunda akut pürülan menenjit tanısı alan hastanın BOS kültüründe Streptococcus pneumoniae üremesi tespit ediliyor ve penisilin MİK değeri 2 mg/L saptanıyor. Bu hasta için en uygun antibiyotik tedavisi aşağıdakilerden hangisidir?",
+         "correctAnswer": "D",
+         "options": [
+          {
+           "key": "A",
+           "text": "Sefepim ve teikoplanin"
+          },
+          {
+           "key": "B",
+           "text": "Karbapenem"
+          },
+          {
+           "key": "C",
+           "text": "Sefazolin ve amikasin"
+          },
+          {
+           "key": "D",
+           "text": "Vankomisin ve seftriakson"
+          },
+          {
+           "key": "E",
+           "text": "Yüksek doz kristalize penisilin G"
+          }
+         ],
+         "year": "2018-2019",
+         "discipline": "Tıbbi Farmakoloji",
+         "topic": "Antimikrobik İlaçların Klinik Kullanımı, Önemi ve Önlemleri",
+         "explanation": "Penisilin MİK değeri 2 mg/L olan pnömokok menenjitte penisilin dirençlidir; ampirik ve hedefe yönelik tedavide vankomisin ile üçüncü kuşak sefalosporin (seftriakson/sefotaksim) birlikte verilir.\n\n- **Menenjit kesme değerleri:** Penisilin için MİK ≤0,06 mg/L duyarlı, ≥0,12 mg/L dirençli; seftriakson için ≤0,5 duyarlı, ≥2 mg/L dirençli.\n- **Direnç mekanizması:** Pnömokoklarda penisilin bağlayan proteinlerin değişmesi; beta-laktamaz yoktur, bu nedenle beta-laktamaz inhibitörlü kombinasyonlar işe yaramaz.\n- **İlaç seçimi:** Bakterisit ve BOS'a yeterli geçen ilaçlar gerekir; inflamasyonlu meninkslerden vankomisin ve seftriakson yeterli düzeye ulaşır.\n- **Yardımcı tedavi:** İlk dozla birlikte deksametazon nörolojik sekelleri azaltır.\n- **Alternatif:** Meropenem veya rifampisin eklenmesi; teikoplanin ve aminoglikozidler BOS'a zayıf geçer.\n\nSınav: Dirençli pnömokok menenjitinde tek başına vankomisin de tek başına seftriakson da yeterli değildir; kombinasyon esastır."
         },
         {
          "id": "k1-2018-2019-q045",
@@ -20679,6 +20936,38 @@
          "discipline": "Çocuk Sağlığı ve Hastalıkları",
          "topic": "Konjenital GİS Malformasyonları",
          "explanation": "Hirschsprung hastalığında kontrakte olan distal agangliyonik segmenttir; proksimaldeki normal innerve kolon dilate olarak megakolon oluşturur.\n\n- **Embriyoloji:** Nöral krest kökenli öncüller bağırsak duvarına proksimalden distale göç eder; göçün durması ya da hücrelerin erken ölümü distalde submukozal (Meissner) ve miyenterik (Auerbach) pleksus yokluğu yaratır.\n- **Genetik:** Ailesel olguların çoğunda ve sporadik olguların yaklaşık %15'inde RET tirozin kinaz reseptöründe mutasyon; Down sendromunda sıklık artar.\n- **Morfoloji:** Rektum daima tutulur; çoğu olgu rektosigmoidle sınırlıdır. Biyopside ganglion hücresi yokluğu ve kalınlaşmış sinir lifleri tanı koydurur.\n- **Klinik:** Mekonyumun geç çıkması (ilk 48 saat), kabızlık, distansiyon; komplikasyonlar enterokolit, sıvı-elektrolit bozukluğu ve perforasyondur.\n- **Tedavi:** Agangliyonik segment çıkarılır, normal kolon rektuma anastomoz edilir.\n\nSınav: 'Dilate segment hastalıklıdır' çeldiricisine dikkat; hastalıklı segment dar olan distal kısımdır."
+        },
+        {
+         "id": "514cf37fc05f",
+         "questionNumber": 341,
+         "stem": "Hirschsprung hastalığı ile ilgili hangisi yanlıştır?",
+         "correctAnswer": "D",
+         "options": [
+          {
+           "key": "A",
+           "text": "Başka gelişimsel anormallikler ile birlikte olabilir"
+          },
+          {
+           "key": "B",
+           "text": "Kız çocuklarda daha ağır seyreder"
+          },
+          {
+           "key": "C",
+           "text": "Tedavi sonrası normal bağırsak fonksiyonlarının ve kontinansın sağlanması yıllar alabilir"
+          },
+          {
+           "key": "D",
+           "text": "Tıkanma nedeniyle etkilenen segmentin proksimali kontrakte olur"
+          },
+          {
+           "key": "E",
+           "text": "Hastaların kardeşlerinde hastalık riski artmıştır"
+          }
+         ],
+         "year": "2020-2021",
+         "discipline": "Çocuk Sağlığı ve Hastalıkları",
+         "topic": "Konjenital GİS Malformasyonları",
+         "explanation": "Hirschsprung hastalığında tıkanma, ganglion hücresi içermeyen distal segmentte oluşur; bu segment normal ya da kontrakte görünürken **proksimal kolon dilate olur**. Bu nedenle proksimalin kontrakte olduğu ifadesi yanlıştır.\n\n- **Patogenez:** Nöral krest hücrelerinin çekumdan rektuma göçü erken durur; Meissner ve Auerbach pleksusları distal segmentte yoktur.\n- **Morfoloji:** Rektum her zaman tutulur; çoğu olgu rektosigmoid ile sınırlıdır, ağır olgularda tüm kolon tutulabilir.\n- **Epidemiyoloji ve genetik:** Yaklaşık 5000 canlı doğumda 1; erkeklerde sık, kızlarda daha ağır; RET mutasyonları, Down sendromu birlikteliği ve kardeş riskinde artış.\n- **Klinik:** Mekonyum çıkışında gecikme, obstrüktif konstipasyon; hayatı tehdit eden komplikasyonlar enterokolit, sıvı-elektrolit bozukluğu, perforasyon ve peritonittir.\n- **Tanı ve tedavi:** Rektal emme biyopsisinde ganglion hücresi yokluğu tanı koydurur; agangliyonik segment rezeke edilip anastomoz yapılır, kontinansın oturması yıllar alabilir.\n\nSınav: Dilate segment hastalıklı segment değildir; hastalık daralmış görünen distal agangliyonik bölgededir."
         },
         {
          "id": "543c25d85a79",

@@ -5757,6 +5757,38 @@
          "explanation": "Yaralanma noktasının distalinde akson bütünlüğünün bozulması, miyelinin globüllere parçalanması ve makrofajlarca temizlenmesi Wallerian dejenerasyonun tanımıdır.\n\n- **Wallerian dejenerasyon:** Travmatik kesi/ezilme sonrası distal segmentte 24–48 saat içinde başlar; Schwann hücreleri Büngner bantları oluşturarak rejenerasyona yol gösterir.\n- **Segmental demiyelinizasyon:** Akson korunur, Schwann hücresi ve miyelin etkilenir; iletim hızı belirgin yavaşlar, prognoz iyidir.\n- **Distal aksonal dejenerasyon (dying-back):** Toksik-metabolik nedenlerle akson uçtan geriye doğru ölür; iyileşme yavaştır.\n- **Nöronopati:** Hücre gövdesi hasarı; yeniden innervasyon ancak komşu sağlam liflerden filizlenmeyle olur ve prognoz en kötüdür.\n- **Elektrofizyoloji:** Aksonal hasarda amplitüd düşer, demiyelinizan hasarda iletim hızı yavaşlar ve distal latans uzar.\n\nSınav: “Yaralanma distali + miyelin globülleri + makrofaj” üçlüsü Wallerian; “akson sağlam, miyelin kaybı” segmental demiyelinizasyondur."
         },
         {
+         "id": "854153255a41",
+         "questionNumber": 244,
+         "stem": "Sinir hücre gövdesinde (soma) olan hasar hangisidir?",
+         "correctAnswer": "A",
+         "options": [
+          {
+           "key": "A",
+           "text": "Nöronopati"
+          },
+          {
+           "key": "B",
+           "text": "Miyelinopati"
+          },
+          {
+           "key": "C",
+           "text": "Aksonopati"
+          },
+          {
+           "key": "D",
+           "text": "Nöropati"
+          },
+          {
+           "key": "E",
+           "text": "Radikülopati"
+          }
+         ],
+         "year": "2020-2021",
+         "discipline": "Nöroloji",
+         "topic": "Periferik Nöropati",
+         "explanation": "Periferik sinir hasarı tutulan bölüme göre sınıflanır; hasar sinir hücre gövdesindeyse nöronopati adını alır.\n\n- **Nöronopati:** Ön boynuz motor nöronu ya da dorsal kök gangliyon hücresi primer olarak ölür; duyusal nöronopatide asimetrik, proksimal ve distali birlikte tutan duyu kaybı ile duyusal ataksi görülür (Sjögren, paraneoplastik, sisplatin, piridoksin fazlalığı).\n- **Aksonopati:** Distal ağırlıklı, uzunluğa bağımlı simetrik tutulum; EMG'de amplitüd düşüklüğü.\n- **Miyelinopati:** Segmental demiyelinizasyon; sinir iletim hızında belirgin yavaşlama, uzamış distal latans ve iletim bloğu.\n- **Radikülopati ve pleksopati:** Kök ve pleksus düzeyindeki fokal hasarı tanımlar.\n- **Prognoz:** Hücre gövdesi kaybında rejenerasyon olmaz; aksonopati ve miyelinopatide iyileşme olasıdır.\n\nSınav: 'Nöropati' genel çatı terimidir; hücre gövdesine özgü hasarı anlatan terim nöronopatidir."
+        },
+        {
          "id": "22419d574893",
          "questionNumber": 737,
          "stem": "Aşağıdakilerden hangisi nöromüsküler kavşak hastalıklarından değildir?",
@@ -7326,6 +7358,38 @@
          "explanation": "Dilin dışarı çıkarıldığında sağa sapması, periferik tipte sağ hipoglossal (CN XII) lezyonunu düşündürür; doğru yanıt sağ nervus hypoglossus'tur.\n\n- **Mekanizma:** Genioglossus kası dili öne ve karşı tarafa iter. Bir taraf felçli kaldığında sağlam taraf baskın çıkar ve dil felçli tarafa yönelir.\n- **Alt motor nöron bulguları:** Çekirdek ya da sinir hasarında zamanla ipsilateral atrofi ve fasikülasyon gelişir; akut lezyonda atrofi henüz görülmeyebilir.\n- **Üst motor nöron ayrımı:** Kortikobulber lezyonda dil korteks lezyonunun karşı tarafına sapar, atrofi ve fasikülasyon olmaz.\n- **Komşu çekirdekler:** Nucleus ambiguus (IX, X, XI motor) ve nucleus tractus solitarius (tat, viseral duyu) dil motor fonksiyonunda rol almaz.\n\nSınav: Periferik CN XII lezyonunda dil lezyon tarafına sapar; sapma yönü, lezyonun tarafını gösterir."
         },
         {
+         "id": "1ab3d959d0ec",
+         "questionNumber": 66,
+         "stem": "Dilini dışarı çıkardığında sağ tarafa sapma olduğu görülen, dilde atrofisi olmayan bu hastada lezyon nerede olabilir?",
+         "correctAnswer": "D",
+         "options": [
+          {
+           "key": "A",
+           "text": "Sağ nervus hypoglossus"
+          },
+          {
+           "key": "B",
+           "text": "Sağ nucleus ambiguus"
+          },
+          {
+           "key": "C",
+           "text": "Sol nucleus tractus solitarius"
+          },
+          {
+           "key": "D",
+           "text": "Sol kortikobulber yol (supranükleer lezyon)"
+          },
+          {
+           "key": "E",
+           "text": "Sol nervus glossopharyngeus"
+          }
+         ],
+         "year": "2020-2021",
+         "discipline": "Nöroloji",
+         "topic": "Kraniyal Sinir Muayenesi",
+         "explanation": "Dilin sağa sapması ve atrofi olmaması sol tarafta supranükleer (kortikobulber) bir lezyonu gösterir.\n\n- **Normal işlev:** Her genioglossus dili karşı tarafa iter; bir taraf zayıfladığında dil zayıf tarafa sapar.\n- **Alt motor nöron (XII çekirdeği/siniri):** Dil lezyon tarafına sapar, aynı tarafta atrofi ve fasikülasyon gelişir.\n- **Üst motor nöron:** Genioglossus ağırlıklı olarak karşı korteksten innerve olduğundan dil lezyonun karşı tarafına sapar; atrofi yoktur ve genellikle aynı tarafta santral fasiyal paralizi ve hemiparezi eşlik eder.\n- **Bilateral lezyon:** Alt motor nöronda bilateral atrofi ve her yöne hareket kısıtlılığı; üst motor nöronda psödobulber tablo görülür.\n- **Komşu çekirdekler:** Nucleus ambiguus damak-farinks-larinks motor, nucleus tractus solitarius tat ve visseral duyu çekirdeğidir.\n\nSınav: Atrofi varsa periferik lezyon tarafa, atrofi yoksa karşı hemisfer; dil zayıf genioglossus tarafına sapar."
+        },
+        {
          "id": "past-q-22_final_230619_145249-66",
          "questionNumber": 66,
          "stem": "28 yaşında kadın hasta çift görme yakınmasıyla başvurdu. Kranyal sinir muayenesinde sol gözde içe bakış kısıtlılığı ile birlikte sağ gözde dışa bakışta, bakış yönüne vuran horizontal nistagmus saptadınız. Bu durumda aşağıdaki yapılardan hangisi etkilenmiştir?",
@@ -8138,6 +8202,38 @@
          "explanation": "Aile hekimliğini sağlık ocağı hekimliğinden ayıran en temel özellik, kayıtlı nüfus listesi üzerinden kişiye özgü, sürekli ve bütüncül (kişiselleşmiş) bakım verilmesidir.\n\n- **Sağlık ocağı modeli:** 224 sayılı Yasa ile kurulan, belirli bölge nüfusuna ekip hizmeti sunan bölge/toplum temelli yapı; hekim seçme hakkı yoktu.\n- **Aile hekimliği modeli:** 2005 sonrası Sağlıkta Dönüşüm Programı ile yaygınlaştı; bireyler bir aile hekimine kaydolur, hekim değiştirme hakkı vardır.\n- **WONCA tanımı ilkeleri:** İlk temas noktası, kişi merkezli yaklaşım, süreklilik, kapsayıcılık, koordinasyon ve toplum yönelimi.\n- **Ortak hizmetler:** Koruyucu hizmetler, ayaktan tedavi ve ev ziyaretleri her iki modelde de bulunur; bu nedenle ayırt edici değildir.\n\nSınav: Sağlık ocağı bölge temelli, aile hekimliği kişi (liste) temellidir; 'toplum temelli bakım' çeldiricisi bu ayrımı test eder."
         },
         {
+         "id": "f7f64d5049b2",
+         "questionNumber": 132,
+         "stem": "Palyatif bakım ile ilgili olarak\nI. Ölüm sürecini değerli bir yaşantı olarak görür.\nII. Ölümü geciktirir.\nIII. Psikolojik ve manevi bakımı birleştirir.\nIV. Sadece ölüm sırasında bakım verir.\nifadelerinden hangileri doğrudur?",
+         "correctAnswer": "B",
+         "options": [
+          {
+           "key": "A",
+           "text": "I, II ve III"
+          },
+          {
+           "key": "B",
+           "text": "I ve III"
+          },
+          {
+           "key": "C",
+           "text": "II ve IV"
+          },
+          {
+           "key": "D",
+           "text": "Yalnız IV"
+          },
+          {
+           "key": "E",
+           "text": "I, II, III ve IV"
+          }
+         ],
+         "year": "2020-2021",
+         "discipline": "Aile Hekimliği",
+         "topic": "Aile Hekimliğine Yaklaşım",
+         "explanation": "DSÖ tanımına göre palyatif bakım ölümü yaşamın doğal bir evresi olarak görür ve psikolojik-manevi bakımı fiziksel bakımla bütünleştirir; ölümü geciktirmeyi ya da hızlandırmayı amaçlamaz ve yalnız ölüm anıyla sınırlı değildir. Bu nedenle doğru öncüller I ve III'tür.\n\n- **Amaç:** Yaşamı tehdit eden hastalığı olan hasta ve ailesinin yaşam kalitesini; ağrı ile diğer fiziksel, psikososyal ve manevi sorunların erken tanınması ve tedavisiyle artırmak.\n- **Ölüme bakış:** Ölüm doğal ve anlamlı bir süreç olarak kabul edilir; bakım ölümü ne uzatır ne öne çeker (II yanlış).\n- **Zamanlama:** Hastalığın erken döneminden itibaren, küratif tedavilerle birlikte uygulanabilir; yas sürecinde aileye destek de kapsama girer (IV yanlış).\n- **Ekip yaklaşımı:** Hekim, hemşire, sosyal hizmet uzmanı, psikolog ve manevi danışmandan oluşan multidisipliner ekip; aile hekimi evde sağlık hizmetleriyle koordinasyonu sağlar.\n\nSınav: 'Ölümü geciktirmez, hızlandırmaz' ve 'tanıdan itibaren erken başlar' palyatif bakımın iki klasik tuzağıdır."
+        },
+        {
          "id": "33085ff0c4ad",
          "questionNumber": 1362,
          "stem": "Aşağıdakilerden hangisi üreme sağlığı hizmetlerinden değildir?",
@@ -8605,6 +8701,38 @@
        "metin": "Nikotin Bağımlılığı ve Tedavisi ile ilişkili klinik semptomları, tanı kriterlerini ve ayırıcı tanı basamaklarını değerlendirir.",
        "slaytlar": [],
        "cikmisSorular": [
+        {
+         "id": "abcd04e07c9e",
+         "questionNumber": 16,
+         "stem": "Sigara bırakma müdahalesinde kullanılan 5Ö (5A) yaklaşımının basamaklarının doğru sıralaması aşağıdakilerden hangisidir?",
+         "correctAnswer": "D",
+         "options": [
+          {
+           "key": "A",
+           "text": "Önderlik et - Öğren - Ölç - Öner - Örgütle"
+          },
+          {
+           "key": "B",
+           "text": "Öğren - Öner - Önderlik et - Örgütle - Ölç"
+          },
+          {
+           "key": "C",
+           "text": "Örgütle - Öğren - Öner - Ölç - Önderlik et"
+          },
+          {
+           "key": "D",
+           "text": "Öğren - Öner - Ölç - Önderlik et - Örgütle"
+          },
+          {
+           "key": "E",
+           "text": "Öner - Öğren - Ölç - Önderlik et - Örgütle"
+          }
+         ],
+         "year": "2020-2021",
+         "discipline": "Aile Hekimliği",
+         "topic": "Nikotin Bağımlılığı ve Tedavisi",
+         "explanation": "5Ö yaklaşımı Öğren, Öner, Ölç, Önderlik et ve Örgütle basamaklarından oluşur ve bu sırayla uygulanır.\n\n- **Kaynak model:** ABD Halk Sağlığı Servisi kılavuzundaki 5A (Ask, Advise, Assess, Assist, Arrange) yaklaşımıdır.\n- **Öğren:** Tütün kullanımı her başvuruda bir 'yaşamsal bulgu' gibi sorgulanır ve kaydedilir.\n- **Öner:** Açık, güçlü ve hastanın sağlık sorunuyla ilişkilendirilmiş bırakma önerisi verilir.\n- **Ölç:** Önümüzdeki 30 gün içinde bırakma isteği değerlendirilir; bağımlılık düzeyi Fagerström testiyle ölçülebilir.\n- **Önderlik et:** Bırakma günü belirlenir, danışmanlık ve farmakoterapi planlanır.\n- **Örgütle:** İlk hafta ve ilk ay içinde izlem yapılır, nüks önlenir.\n\nSınav: Sıra 'sor-öner-ölç-yardım et-izle'dir; seçeneklerde en sık yer değiştirilen basamaklar Öner ile Öğren'dir."
+        },
         {
          "id": "1287728ee610",
          "questionNumber": 176,
@@ -17516,6 +17644,38 @@
        "metin": "Travma ve Stres Bağlantılı Bozukluklar ile ilişkili klinik semptomları, tanı kriterlerini ve ayırıcı tanı basamaklarını değerlendirir.",
        "slaytlar": [],
        "cikmisSorular": [
+        {
+         "id": "630ec96d2e21",
+         "questionNumber": 93,
+         "stem": "Uyum bozukluğu hakkında verilen bilgilerden hangisi yanlıştır?",
+         "correctAnswer": "C",
+         "options": [
+          {
+           "key": "A",
+           "text": "Uyum bozukluğu her yaşta gelişebilmektedir."
+          },
+          {
+           "key": "B",
+           "text": "Davranım bozukluğuyla giden alt tipte saldırganlık, topluma aykırı davranışlar, kavga etme gibi belirtiler vardır."
+          },
+          {
+           "key": "C",
+           "text": "Uyum bozukluğu olan hastalarda intihar eğilimi artmamaktadır."
+          },
+          {
+           "key": "D",
+           "text": "Kadınlarda görülme sıklığı erkeklere göre iki kat fazladır."
+          },
+          {
+           "key": "E",
+           "text": "Tanı için belirtilerin stres etkeninin ortadan kalkmasından sonra 6 aydan uzun süre devam etmemesi gerekir."
+          }
+         ],
+         "year": "2020-2021",
+         "discipline": "Psikiyatri",
+         "topic": "Travma ve Stres Bağlantılı Bozukluklar",
+         "explanation": "Uyum bozukluğunda intihar eğilimi artmıştır; bu nedenle 'artmamaktadır' ifadesi yanlıştır.\n\n- **Zaman ölçütleri:** Belirtiler stres etkeninden sonraki 3 ay içinde başlar ve etken ortadan kalktıktan sonra 6 aydan uzun sürmez.\n- **Alt tipler:** Depresif duygudurumla, anksiyeteyle, karışık, davranım bozukluğuyla, karışık duygu-davranım bozukluğuyla giden ve belirlenmemiş.\n- **Epidemiyoloji:** Her yaşta görülebilir; erişkin kadınlarda iki kat sıktır; ergenler riskli gruptur.\n- **İntihar riski:** Stres etkenine yanıt olarak kısa sürede intihar düşüncesi ve girişimi gelişebilir; risk değerlendirmesi zorunludur.\n- **Ayırıcı tanı:** Ölçütler major depresyon, YAB ya da TSSB'yi karşılıyorsa uyum bozukluğu tanısı konmaz.\n\nSınav: 'Hafif tablo' olarak görülse de uyum bozukluğu intihar açısından önemsenmesi gereken bir tanıdır."
+        },
         {
          "id": "967684a10028",
          "questionNumber": 158,

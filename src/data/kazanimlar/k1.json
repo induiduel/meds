@@ -291,6 +291,38 @@
          "explanation": "Yarık dudak/damak cerrahi tedavi gerektiren ve işlevsel sonuçları olan bir malformasyondur; bu nedenle majör anomalidir, minör anomali değildir.\n\n- **Minör anomali:** Tıbbi ya da kozmetik önemi olmayan, popülasyonun %4'ünden azında görülen yapısal farklılıklardır.\n- **Majör anomali:** Tıbbi, cerrahi ya da kozmetik açıdan önemli sonuç doğuran anomalilerdir; yarık dudak/damak, konjenital kalp hastalıkları ve spina bifida örnektir.\n- **Nonspesifik minör anomaliler:** Blefarofimozis, hipertelorizm, hipotelorizm ve telekantus pek çok sendroma eşlik eder.\n- **Spesifik minör anomaliler:** Beyaz perçem, iris heterokromisi, göz kapağı kolobomu ve tek ön kesici diş az sayıda sendromu düşündürür.\n- **Klinik önem:** Birinci derece akrabalarda bulunmayan üç ya da daha fazla minör anomali dismorfik çocuğu tanımlar ve majör anomali araştırmasını gerektirir.\n\nSınav: Yarık dudak/damak hem malformasyon hem majör anomali örneği olarak sık sorulur; minör anomalilerle karıştırılmamalıdır."
         },
         {
+         "id": "d3-k1-tbg-015",
+         "questionNumber": 15,
+         "stem": "Aşağıdaki bulgulardan hangisi minör anomali değil, majör anomali olarak kabul edilir?",
+         "correctAnswer": "A",
+         "options": [
+          {
+           "key": "A",
+           "text": "Yarık damak"
+          },
+          {
+           "key": "B",
+           "text": "Tek palmar çizgi (simian çizgisi)"
+          },
+          {
+           "key": "C",
+           "text": "Epikantal kıvrım"
+          },
+          {
+           "key": "D",
+           "text": "Kulak kepçesinde hafif rotasyon anomalisi"
+          },
+          {
+           "key": "E",
+           "text": "Klinodaktili (5. parmakta hafif eğrilik)"
+          }
+         ],
+         "year": "2025-2026",
+         "discipline": "Tıbbi Genetik",
+         "topic": "Dismorfolojide Genetik Terminoloji",
+         "explanation": "Majör anomali, tıbbi, cerrahi veya ciddi kozmetik sonuç doğuran ve tedavi gerektiren yapısal bozukluktur; yarık damak bu nedenle majör anomalidir.\n\n- **Majör anomaliler:** Yarık dudak-damak, konjenital kalp hastalıkları, nöral tüp defektleri, omfalosel ve renal agenezi gibi işlev kaybı yaratan defektler; yenidoğanların yaklaşık %2-3'ünde görülür.\n- **Minör anomaliler:** Epikantus, tek palmar çizgi, klinodaktili, kulak rotasyon/yerleşim farklılıkları, preauriküler çukur gibi önemsiz yapısal sapmalar; toplumun yaklaşık %15'inde en az bir minör anomali bulunur.\n- **Klinik önemi:** Minör anomaliler tek başına zararsızdır, ancak sayıları arttıkça eşlik eden majör anomali olasılığı yükselir; üç veya daha fazla minör anomali varlığında majör anomali riski belirgin artar.\n- **Dismorfik değerlendirme:** Minör anomaliler sendrom tanısında ipucudur; örneğin epikantus, tek palmar çizgi ve klinodaktili birlikteliği Down sendromunu düşündürür.\n\nSınav: Sendromlarda sık görülmesi bir bulguyu majör yapmaz; ölçüt, bulgunun kendi başına tıbbi veya cerrahi sonuç doğurmasıdır."
+        },
+        {
          "id": "k1-2025-2026-q052",
          "questionNumber": 52,
          "stem": "Aşağıdakilerden hangisi dismorfik bir olguda görülebilen minör anomalilerden değildir?",
@@ -7740,6 +7772,38 @@
          "explanation": "Prenatal KAH tedavisinde anneye olabildiğince erken (6-8. hafta) deksametazon başlanır; plasentayı aktif hâlde geçen bu glukokortikoid fetal ACTH'yi baskılayarak etkilenmiş kız fetüste dış genital virilizasyonu önler.\n\n- **Patogenez:** En sık neden 21-hidroksilaz eksikliğidir; kortizol yapılamayınca ACTH artar, birikmiş öncüller androjen yoluna kayar ve 46,XX fetüste klitoromegali, labial füzyon gelişir.\n- **Neden deksametazon:** Hidrokortizon ve prednizolon plasental 11β-HSD2 ile inaktive edilir; deksametazon edilmez ve fetal dolaşıma yeterli düzeyde ulaşır.\n- **Zamanlama:** Dış genital farklılaşma yaklaşık 9. haftada başladığından tedavi bundan önce başlamalıdır.\n- **Tedavinin sonlandırılması:** Fetal cinsiyet erkek çıkarsa veya fetüs etkilenmemişse (koryon villus örneklemesi, hücresiz fetal DNA) ilaç kesilir.\n- **Riskler:** Annede kilo artışı, hipertansiyon, glukoz intoleransı; çocukta uzun dönem nörobilişsel etkiler tartışmalıdır.\n\nNot: Endocrine Society kılavuzu prenatal deksametazonun yalnız etik kurul onaylı araştırma protokolleri içinde uygulanmasını önermektedir.\n\nSınav: Prenatal KAH'ta verilen ajan hidrokortizon değil, plasentayı geçen deksametazondur."
         },
         {
+         "id": "d3-k1-tbg-004",
+         "questionNumber": 4,
+         "stem": "17-hidroksiprogesteron düzeyinde belirgin yükseklik saptanan bir yenidoğanda en olası tanı hangisidir?",
+         "correctAnswer": "A",
+         "options": [
+          {
+           "key": "A",
+           "text": "Konjenital adrenal hiperplazi (21-hidroksilaz eksikliği)"
+          },
+          {
+           "key": "B",
+           "text": "Androjen duyarsızlık sendromu"
+          },
+          {
+           "key": "C",
+           "text": "Swyer sendromu (46,XY gonadal disgenezi)"
+          },
+          {
+           "key": "D",
+           "text": "Klinefelter sendromu"
+          },
+          {
+           "key": "E",
+           "text": "Turner sendromu"
+          }
+         ],
+         "year": "2024-2025",
+         "discipline": "Tıbbi Genetik",
+         "topic": "Doğumsal Kadın/Erkek Genital Gelişim Anomalileri",
+         "explanation": "Yenidoğanda belirgin 17-hidroksiprogesteron yüksekliği, 21-hidroksilaz eksikliğine bağlı konjenital adrenal hiperplaziyi gösterir; KAH olgularının %90-95'i bu enzim eksikliğidir.\n\n- **Mekanizma:** CYP21A2 eksikliği kortizol ve aldosteron sentezini bozar; ACTH artışı adrenal hiperplaziye ve 17-OHP birikimine yol açar, fazla substrat androjenlere dönüşür.\n- **Klinik:** 46,XX bebekte ambigus genitalya (klitoromegali, labioskrotal füzyon); tuz kaybettiren formda (yaklaşık %75) 2-3. haftada hiponatremi, hiperkalemi, metabolik asidoz ve şok gelişebilir. Erkek bebekte doğumda genitalya normal olabilir ve tanı tuz kaybı kriziyle konur.\n- **Tanı:** Bazal 17-OHP yüksekliği; sınırda değerlerde ACTH uyarı testi ve CYP21A2 gen analizi.\n- **Ayırıcı tanı:** Androjen duyarsızlığı, gonadal disgenezi ve gonozomal anöploidilerde adrenal steroid yolu sağlamdır, 17-OHP yükselmez.\n- **Tedavi:** Hidrokortizon ile glukokortikoid, gerekirse fludrokortizon ile mineralokortikoid replasmanı ve tuz desteği.\n\nSınav: 17-OHP yüksekliği 21-hidroksilaz eksikliğini, 11-deoksikortizol ve DOC yüksekliğiyle hipertansiyon 11β-hidroksilaz eksikliğini düşündürür."
+        },
+        {
          "id": "k1-2024-2025-q045",
          "questionNumber": 45,
          "stem": "46,XX cinsiyet gelişim bozukluğu (CGB) bulunan bir hastada serum 17-hidroksiprogesteron düzeyi yüksek saptanıyor. En olası tanı aşağıdakilerden hangisidir?",
@@ -12367,7 +12431,40 @@
        "id": "k1-d1-c7-kz-1",
        "metin": "Preimplantasyon Genetik Tanı (Pgd) ile ilgili temel mekanizmaları ve kavramları tanımlar.",
        "slaytlar": [],
-       "cikmisSorular": [],
+       "cikmisSorular": [
+        {
+         "id": "d3-k1-tbg-012",
+         "questionNumber": 12,
+         "stem": "Yalnızca maternal (mayoz kaynaklı) kromozom anomalilerinin saptanmasına imkân tanıyan ve X'e bağlı hastalıklarda da kullanılabilen preimplantasyon biyopsi yöntemi hangisidir?",
+         "correctAnswer": "A",
+         "options": [
+          {
+           "key": "A",
+           "text": "Polar cisim (polar body) biyopsisi"
+          },
+          {
+           "key": "B",
+           "text": "Blastomer biyopsisi"
+          },
+          {
+           "key": "C",
+           "text": "Trofektoderm biyopsisi"
+          },
+          {
+           "key": "D",
+           "text": "Blastosist sıvısı biyopsisi"
+          },
+          {
+           "key": "E",
+           "text": "Koryon villus biyopsisi"
+          }
+         ],
+         "year": "2025-2026",
+         "discipline": "Tıbbi Genetik",
+         "topic": "Preimplantasyon Genetik Tanı (PGD)",
+         "explanation": "Polar cisimler oositin mayoz bölünmeleri sırasında atılan yan ürünlerdir ve yalnızca anneye ait genetik materyali taşır; bu nedenle polar cisim biyopsisi maternal mayoz hatalarını ve maternal mutasyonları gösteren tek preimplantasyon biyopsisidir.\n\n- **Zamanlama:** Birinci polar cisim metafaz II oositinden, ikinci polar cisim 2PN (pronükleus) aşamasındaki fertilize oositten alınır.\n- **Kullanım alanı:** İleri anne yaşına bağlı anöploidiler ve X'e bağlı hastalıklarda annenin mutant alelinin oosite kalıp kalmadığını anlamak için tercih edilir; birinci polar cisim sayısal anomalilerin çoğunun oluştuğu aşamayı yansıtır.\n- **Avantaj:** Transfer öncesi analiz için daha uzun süre sağlar; embriyo biyopsisinin yasal olmadığı ülkelerde seçenektir.\n- **Sınırlılık:** Paternal ve mitotik (postzigotik) anöploidileri göremez, cinsiyet tayininde kullanılamaz; zaman alıcı ve maliyetlidir, parçalanma yanlış tanıya yol açabilir.\n- **Karşılaştırma:** Blastomer (3. gün) ve trofektoderm (5. gün) biyopsileri embriyonun kendisini inceler, iki ebeveynden gelen sorunları gösterir.\n\nSınav: 'Yalnız anne kaynaklı risk' ifadesi polar cisim biyopsisini, 'embriyonun kendisi' ifadesi blastomer/trofektoderm biyopsisini işaret eder."
+        }
+       ],
        "ornekSorular": [],
        "sozlukTerimleri": [],
        "ozetler": []
@@ -19497,6 +19594,38 @@
          "discipline": "Enfeksiyon Hastalıkları",
          "topic": "Genital Enfeksiyonlar",
          "explanation": "Molluscum contagiosum cinsel yolla bulaşabilen bir genital cilt enfeksiyonu olsa da ülser değil, göbekli papüler lezyon oluşturur; bu yüzden genital ülser etkeni sayılmaz.\n\n- **Ağrılı ülserler:** HSV (vezikül → çoklu yüzeyel ülser) ve Haemophilus ducreyi (şankroid; düzensiz, kirli tabanlı yumuşak ülser + bubo).\n- **Ağrısız ülserler:** T. pallidum (tek, sert tabanlı şankr), C. trachomatis L1-L3 (LGV; geçici ülser + bubo) ve K. granulomatis (granülasyon dokulu, kanamaya eğilimli ülser, gerçek lenfadenopati yok).\n- **Ülsersiz papüler lezyonlar:** HPV kondiloma akuminata (verrüköz papüller) ve molluscum contagiosum (poksvirüs; 2-5 mm, inci parlaklığında, ortası çukur papüller; tedavi küretaj, kriyoterapi veya eksizyon).\n- **En sık neden:** Genital ülserin en sık enfeksiyöz nedeni HSV'dir; HSV'yi bu listeden çıkarmak klinik olarak ciddi bir hatadır.\n\nSınav: Genital lezyon sorularında önce ülser mi papül mü sorusunu sor; molluscum ve HPV papül yapar, HSV ise en sık ülser nedenidir."
+        },
+        {
+         "id": "d3-k1-enf-015",
+         "questionNumber": 15,
+         "stem": "Aşağıdakilerden hangisi genital ülsere neden olan mikroorganizmalardan biri değildir?",
+         "correctAnswer": "A",
+         "options": [
+          {
+           "key": "A",
+           "text": "Molluscum contagiosum"
+          },
+          {
+           "key": "B",
+           "text": "Treponema pallidum"
+          },
+          {
+           "key": "C",
+           "text": "Klebsiella granulomatis"
+          },
+          {
+           "key": "D",
+           "text": "Herpes simpleks virüsü (HSV)"
+          },
+          {
+           "key": "E",
+           "text": "Chlamydia trachomatis"
+          }
+         ],
+         "year": "2024-2025",
+         "discipline": "Enfeksiyon Hastalıkları",
+         "topic": "Genital Enfeksiyonlar",
+         "explanation": "Molluscum contagiosum cinsel yolla bulaşabilen bir genital cilt enfeksiyonu olsa da ülser değil, göbekli papüler lezyon oluşturur; bu yüzden genital ülser etkeni sayılmaz.\n\n- **Ağrılı ülserler:** HSV (vezikül → çoklu yüzeyel ülser) ve Haemophilus ducreyi (şankroid; düzensiz, kirli tabanlı yumuşak ülser + bubo).\n- **Ağrısız ülserler:** T. pallidum (tek, sert tabanlı şankr), C. trachomatis L1-L3 (LGV; geçici ülser + bubo) ve K. granulomatis (granülasyon dokulu, kanamaya eğilimli ülser, gerçek lenfadenopati yok).\n- **Ülsersiz papüler lezyonlar:** HPV kondiloma akuminata (verrüköz papüller) ve molluscum contagiosum (poksvirüs; 2-5 mm, inci parlaklığında, ortası çukur papüller; tedavi küretaj, kriyoterapi veya eksizyon).\n- **En sık neden:** Genital ülserin en sık enfeksiyöz nedeni HSV'dir; HSV'yi bu listeden çıkarmak klinik olarak ciddi bir hatadır.\n\nSınav: Genital lezyon sorularında önce ülser mi papül mü sorusunu sor; molluscum ve HPV papül yapar, HSV ise en sık ülser nedenidir."
         }
        ],
        "ornekSorular": [
@@ -23301,6 +23430,38 @@
          "discipline": "Enfeksiyon Hastalıkları",
          "topic": "İzolasyon Yöntemleri",
          "explanation": "Hastane izolasyon işaret sisteminde temas izolasyonu kırmızı yıldızla simgelenir; işaret, odaya girecek herkese standart önlemlere ek olarak eldiven ve önlük kullanması gerektiğini tek bakışta hatırlatır.\n\n- **Temas izolasyonu endikasyonları:** Çok ilaca dirençli mikroorganizmalar (MRSA, VRE, karbapenem dirençli Gram negatifler), Clostridioides difficile ve diğer enterik enfeksiyonlar, yaygın deri enfeksiyonları ve uyuz.\n- **Gereklilikler:** Tek kişilik oda ya da kohortlama, odaya girişte eldiven ve önlük, hastaya özel steteskop ve tansiyon aleti, sık el hijyeni.\n- **Diğer işaretler:** Aynı sistemde sarı yaprak ve mavi papatya solunum yoluyla yayılan etkenlere yönelik izolasyon türlerini gösterir.\n- **Kurumsal farklılık:** Renk ve şekil kodları ulusal zorunlu bir standart değildir; enfeksiyon kontrol komiteleri farklı simgeler belirleyebilir.\n\nSınav: Temas izolasyonu = kırmızı yıldız + eldiven ve önlük; damlacıkta cerrahi maske, solunum izolasyonunda N95 maske ve negatif basınçlı oda istenir."
+        },
+        {
+         "id": "d3-k1-enf-011",
+         "questionNumber": 11,
+         "stem": "Hastanelerde kullanılan izolasyon önlemleri kapsamında temas izolasyonunu simgeleyen işaret hangisidir?",
+         "correctAnswer": "C",
+         "options": [
+          {
+           "key": "A",
+           "text": "Sarı yaprak"
+          },
+          {
+           "key": "B",
+           "text": "Mavi papatya/çiçek"
+          },
+          {
+           "key": "C",
+           "text": "Kırmızı yıldız"
+          },
+          {
+           "key": "D",
+           "text": "Kırmızı ünlem"
+          },
+          {
+           "key": "E",
+           "text": "Turuncu daire"
+          }
+         ],
+         "year": "2024-2025",
+         "discipline": "Enfeksiyon Hastalıkları",
+         "topic": "İzolasyon Yöntemleri",
+         "explanation": "Hasta odası kapısına asılan izolasyon işaretleri, odaya girecek herkesin hangi ek önlemi alacağını tek bakışta göstermek için kullanılır; dersin anlattığı işaret sisteminde temas izolasyonu kırmızı yıldızla simgelenir.\n\n- **İşaretin işlevi:** Sağlık personeli, temizlik görevlisi ve ziyaretçiye odaya girmeden eldiven ve önlük giymesi gerektiğini hatırlatır.\n- **Kurumsal farklılık:** Renk ve şekil kodları ulusal bir standart değildir; hastaneler enfeksiyon kontrol komitesi kararıyla farklı simgeler kullanabilir. Aynı sistemde sarı yaprak ve mavi çiçek/papatya solunum yoluyla yayılan etkenlere yönelik izolasyon türlerini gösterir.\n- **Temas izolasyonu gerektiren durumlar:** Çok ilaca dirençli bakteriler (MRSA, VRE, karbapenem dirençli Klebsiella), C. difficile ve diğer enterik enfeksiyonlar, yaygın deri enfeksiyonları.\n- **Önlemler:** Eldiven ve önlük, tek kişilik oda veya kohortlama, ekipmanın paylaşılmaması, KKE'nin odada çıkarılması ve çıkışta el hijyeni.\n\nSınav: İşaret ezberinin yanında her işaretin gerektirdiği koruyucu ekipmanı (temas: eldiven-önlük; solunum: N95) eşleştirmeyi bil."
         }
        ],
        "ornekSorular": [
@@ -35124,6 +35285,38 @@
         }
        ],
        "cikmisSorular": [
+        {
+         "id": "b94282e7d010",
+         "questionNumber": 204,
+         "stem": "Aşağıdakilerden hangisi intrauterin enfeksiyonlar için doğrudur?",
+         "correctAnswer": "B",
+         "options": [
+          {
+           "key": "A",
+           "text": "Grup B streptokok taraması gebeliğin 24-28. haftasında yapılmalıdır."
+          },
+          {
+           "key": "B",
+           "text": "HIV pozitif annede yüksek viral yük bebeğe bulaş riskini artırır."
+          },
+          {
+           "key": "C",
+           "text": "HBsAg pozitif anneden doğan bebeğe yalnızca hepatit B aşısı yapılması yeterlidir."
+          },
+          {
+           "key": "D",
+           "text": "Tüm gebelerde TORCH taraması yapılmalıdır."
+          },
+          {
+           "key": "E",
+           "text": "Gebeliğin ilk 4 ayında tedavi edilen sifilisli annenin bebeğinde konjenital sifilis sıklıkla gelişir."
+          }
+         ],
+         "year": "2020-2021",
+         "discipline": "Enfeksiyon Hastalıkları",
+         "topic": "İntrauterin Enfeksiyonlar",
+         "explanation": "HIV pozitif annede plazma viral yükü, bebeğe vertikal bulaşı belirleyen en güçlü faktördür; viral yük yükseldikçe intrauterin, intrapartum ve emzirme yoluyla bulaş riski artar.\n\n- **HIV:** AIDS varlığı, düşük CD4, koryoamniyonit, uzamış membran rüptürü, ikiz gebelik ve emzirme de riski artırır. Viral yük >1000 kopya/mL veya bilinmiyorsa 38. haftada sezaryen, doğumda anneye iv zidovudin ve bebeğe bir ay profilaksi verilir.\n- **GBS:** Tarama gebeliğin 35-37. haftasında vajinal-rektal kültürle yapılır; 24-28. hafta gestasyonel diyabet taramasının zamanıdır.\n- **HBV:** HBsAg pozitif annenin bebeğine ilk 12 saatte hem aşı (aktif) hem HBIG (pasif) yapılır; yalnız aşı korumayı belirgin azaltır.\n- **Sifilis:** Gebeliğin ilk 4 ayında penisilinle tedavi edilen annenin bebeğinde konjenital sifilis gelişmez.\n- **TORCH:** Rutin panel olarak tüm gebelere önerilmez; hedefe yönelik serolojik testler yapılır.\n\nSınav: HIV vertikal bulaşında anahtar değişken viral yüktür; CD4 sayısının yüksek olması riski artırmaz, düşük olması artırır."
+        },
         {
          "id": "k1-2024-2025-q013",
          "questionNumber": 13,
@@ -63196,6 +63389,70 @@
        ],
        "cikmisSorular": [
         {
+         "id": "k1-2020-2021-b-q049",
+         "questionNumber": 49,
+         "stem": "Antijenle aktive olan T lenfositlerinin farklılaşması ve çoğalmasından sorumlu olan primer sitokin aşağıdakilerden hangisidir?",
+         "correctAnswer": "B",
+         "options": [
+          {
+           "key": "A",
+           "text": "IL-1"
+          },
+          {
+           "key": "B",
+           "text": "IL-2"
+          },
+          {
+           "key": "C",
+           "text": "IL-5"
+          },
+          {
+           "key": "D",
+           "text": "C3b"
+          },
+          {
+           "key": "E",
+           "text": "C5a"
+          }
+         ],
+         "year": "2020-2021",
+         "discipline": "Tıbbi Patoloji",
+         "topic": "Kronik ve Granülomatöz Enflamasyon",
+         "explanation": "IL-2, antijenle aktive olan T lenfositlerinin klonal çoğalmasını ve efektör hücrelere farklılaşmasını sağlayan temel büyüme faktörüdür. Aktive T hücresinin kendisi tarafından üretilip yine kendi reseptörü üzerinden etki eder.\n\n- **Aktivasyon sinyalleri:** Birinci sinyal TCR'nin MHC-peptit kompleksini tanıması, ikinci sinyal CD28'in antijen sunan hücredeki CD80/CD86'ya bağlanmasıdır; ikisi birlikte IL-2 transkripsiyonunu başlatır.\n- **Reseptör:** Aktivasyonla CD25 (IL-2Rα) ekspresyonu artar ve yüksek afiniteli IL-2 reseptörü oluşur; IL-2 bu reseptöre otokrin etkiyle bağlanarak hücre döngüsünü başlatır.\n- **Treg bağlantısı:** CD25 düzenleyici T hücrelerinde yüksek düzeyde bulunur; IL-2 Treg'lerin yaşaması ve işlevi için de gereklidir.\n- **Farmakolojik hedef:** Siklosporin ve takrolimus kalsinörini inhibe ederek IL-2 transkripsiyonunu, sirolimus (rapamisin) mTOR üzerinden IL-2'ye proliferatif yanıtı engeller; basiliksimab CD25'e karşı antikordur.\n\nSınav: IL-2 = T hücre büyüme faktörü; IL-5 = eozinofil; IL-1 = ateş ve akut faz; C5a = kemotaksi."
+        },
+        {
+         "id": "68e74ded9148",
+         "questionNumber": 175,
+         "stem": "İnflamasyonla aktive olan T lenfositlerinin farklılaşması ve çoğalmasından sorumlu olan primer sitokin aşağıdakilerden hangisidir?",
+         "correctAnswer": "B",
+         "options": [
+          {
+           "key": "A",
+           "text": "IL-1"
+          },
+          {
+           "key": "B",
+           "text": "IL-2"
+          },
+          {
+           "key": "C",
+           "text": "IL-5"
+          },
+          {
+           "key": "D",
+           "text": "C3b"
+          },
+          {
+           "key": "E",
+           "text": "C5a"
+          }
+         ],
+         "year": "2020-2021",
+         "discipline": "Tıbbi Patoloji",
+         "topic": "Kronik ve Granülomatöz Enflamasyon",
+         "explanation": "Aktive T lenfositlerinin çoğalması ve farklılaşmasından sorumlu primer sitokin IL-2'dir.\n\n- **Otokrin döngü:** Antijen sunumu ve kostimülasyonla aktive olan T hücresi IL-2 ve IL-2 reseptörünün alfa zincirini (CD25) eş zamanlı üretir; bu döngü klonal genişlemeyi başlatır.\n- **Th1 bağlantısı:** Th1 alt grubu IFN-γ, IL-2 ve IL-12 ile hücre aracılı bağışıklığı güçlendirir; kronik enflamasyonda lenfosit-makrofaj döngüsünü besler.\n- **Farmakolojik hedef:** Siklosporin ve takrolimus kalsinörin–NFAT yolunu baskılayarak IL-2 yapımını azaltır; basiliksimab CD25'i bloke eder.\n- **Komşu mediyatörler:** IL-1 ateş ve endotel aktivasyonu, IL-5 eozinofil yapımı, C3b opsonizasyon, C5a kemotaksi ile ilişkilidir.\n\nSınav: IL-2 = T hücre büyüme faktörü, IL-5 = eozinofil büyüme faktörü; aynı şık setinde hücre tipi değiştirilerek sorulur."
+        },
+        {
          "id": "past-1790877039204-551555",
          "questionNumber": 16,
          "stem": "Makrofajlardan salınan hangi sitokin T helper 1 gelişimi için önemlidir?",
@@ -82286,6 +82543,38 @@
          "explanation": "Kemik iliği veya lenfosit fonksiyonunun baskılanması (kemoterapi, radyoterapi, immünsüpresif tedavi, kemik iliğini tutan kanserler) immün yetmezliğin en sık nedenidir.\n\n- **Primer-sekonder ayrımı:** Sekonder (edinsel) immün yetmezlikler, genetik kökenli primer immün yetmezliklerden çok daha sıktır; primerlerin en sık görüleni izole IgA eksikliğidir.\n- **İyatrojenik baskılanma:** Sitotoksik ilaçlar ve radyasyon tüm lökosit öncüllerini azaltır; kalsinörin inhibitörleri, kortikosteroidler ve biyolojik ajanlar lenfosit aktivasyonunu engeller.\n- **Kemik iliği infiltrasyonu:** Lösemi, lenfoma ve metastatik tümörler normal hematopoezin yerini alır.\n- **Diğer edinsel nedenler:** HIV (CD4+ T hücre kaybı), şiddetli malnütrisyon (lenfosit maturasyon bozukluğu) ve splenektomi (kapsüllü bakterilere duyarlılık).\n- Not: Bazı kaynaklar dünya genelinde malnütrisyonu en sık neden olarak gösterir; ders ve sınav anahtarı iyatrojenik baskılanmayı esas alır.\n\nSınav: En sık primer immün yetmezlik IgA eksikliği, en sık sekonder neden ise kemik iliği ve lenfosit işlevinin baskılanmasıdır."
         },
         {
+         "id": "b8b202b6a775",
+         "questionNumber": 130,
+         "stem": "Allogreftlerin immün tanınmasında;\n\nI. Alıcının CD8+ T hücreleri ve alıcının antijen sunan hücreleri\nII. Alıcının CD4+ T hücreleri ve vericinin antijen sunan hücreleri\nIII. Alıcının CD4+ T hücreleri ve alıcının antijen sunan hücreleri\nIV. Alıcının CD8+ T hücreleri ve vericinin antijen sunan hücreleri\n\netkileşimlerinden hangisi veya hangileri ile direkt tanıma gerçekleşir?",
+         "correctAnswer": "B",
+         "options": [
+          {
+           "key": "A",
+           "text": "I ve III"
+          },
+          {
+           "key": "B",
+           "text": "II ve IV"
+          },
+          {
+           "key": "C",
+           "text": "I ve IV"
+          },
+          {
+           "key": "D",
+           "text": "Yalnız II"
+          },
+          {
+           "key": "E",
+           "text": "I, II, III ve IV"
+          }
+         ],
+         "year": "2020-2021",
+         "discipline": "Tıbbi Patoloji",
+         "topic": "Aşırı Duyarlılık ve Otoimmünite",
+         "explanation": "Direkt tanıma, alıcı T lenfositlerinin donörün antijen sunan hücreleri (özellikle greftle gelen dendritik hücreler) üzerindeki sağlam yabancı MHC moleküllerini işlenmeye gerek kalmadan tanımasıdır; hem CD4+ hem CD8+ alıcı T hücreleri bu yolda görev alır.\n\n- **Direkt yol:** Alıcı CD8+ hücreleri donör MHC sınıf I'i, alıcı CD4+ hücreleri donör MHC sınıf II'yi tanır. Alloreaktif T hücre sıklığı çok yüksek olduğundan güçlü ve hızlı bir yanıt doğar.\n- **İndirekt yol:** Donör MHC proteinleri alıcı APC'lerince fagosite edilir, peptitlere işlenir ve alıcının kendi MHC sınıf II'si ile CD4+ hücrelere sunulur; alloantikor yanıtını ve kronik reddi destekler.\n- **Akut hücresel ret:** Direkt yolla aktive olan CD8+ sitotoksik T hücreleri greft hücrelerini öldürür, CD4+ hücreler gecikmiş tip inflamasyonu yönetir.\n- **Zamanlama:** Donör dendritik hücreleri zamanla tükendiği için direkt yol erken, indirekt yol geç dönemde baskındır.\n\nSınav: 'Direkt' = donör APC; 'indirekt' = alıcı APC. Hangi T hücre alt grubu olduğu değil, APC'nin kime ait olduğu belirleyicidir."
+        },
+        {
          "id": "09c542e5a38a",
          "questionNumber": 136,
          "stem": "Hangisi immün yetmezliğe en sık neden olan durumdur?",
@@ -82412,6 +82701,38 @@
          "discipline": "Tıbbi Patoloji",
          "topic": "Aşırı Duyarlılık ve Otoimmünite",
          "explanation": "Senil kardiyak amiloidozda biriken fibril proteini, yanlış katlanan yabanıl tip (normal) transtiretindir (ATTR).\n\n- **Transtiretin:** Karaciğerde üretilen, tiroksin ve retinol taşıyan serum proteinidir; ileri yaşta tetramer yapısı bozulup monomerleri fibril oluşturur.\n- **Klinik:** Çoğunlukla 70 yaş üstü erkeklerde ventrikül duvarında kalınlaşma, kısıtlayıcı kardiyomiyopati, ileti bozuklukları ve aritmiler; karpal tünel sendromu eşlik edebilir.\n- **Kalıtsal form:** Mutant transtiretin ailesel amiloidotik polinöropati ve ailesel kardiyak amiloidoz yapar.\n- **Diğer tipler:** AL (miyelom, Ig hafif zinciri), AA (kronik inflamasyon, SAA), Aβ2m (hemodiyaliz), Aβ (Alzheimer), kalsitonin (medüller tiroid karsinomu).\n- **Tanı:** Kongo kırmızısı ile pembe-kırmızı boyanma ve polarize ışıkta elma yeşili çift kırılım; tip tayini immünohistokimya veya kütle spektrometrisi ile yapılır.\n\nSınav: Senil sistemik amiloidozda yabanıl tip, ailesel nöropatide mutant transtiretin birikir; ikisinin prekürsörü de TTR'dir."
+        },
+        {
+         "id": "0b5337ce6f98",
+         "questionNumber": 1500,
+         "stem": "Nakil reddinde greft alloantijenlerinin doğrudan (direkt) yolla tanınması aşağıdakilerden hangisi ile gerçekleşir?",
+         "correctAnswer": "E",
+         "options": [
+          {
+           "key": "A",
+           "text": "Alıcının CD8 hücreleri ve alıcının antijen sunan hücreleri"
+          },
+          {
+           "key": "B",
+           "text": "Alıcının CD4 hücreleri ve alıcının antijen sunan hücreleri"
+          },
+          {
+           "key": "C",
+           "text": "Vericinin CD4 hücreleri ve alıcının antijen sunan hücreleri"
+          },
+          {
+           "key": "D",
+           "text": "Vericinin CD8 hücreleri ve alıcının antijen sunan hücreleri"
+          },
+          {
+           "key": "E",
+           "text": "Alıcının CD4 ve CD8 hücreleri ile vericinin antijen sunan hücreleri"
+          }
+         ],
+         "year": "2020-2021",
+         "discipline": "Tıbbi Patoloji",
+         "topic": "Aşırı Duyarlılık ve Otoimmünite",
+         "explanation": "Doğrudan allotanıma, alıcının T hücrelerinin vericinin antijen sunan hücreleri üzerindeki yabancı MHC moleküllerini doğrudan tanımasıdır; alıcının CD4+ ve CD8+ hücrelerinin tümü bu yolda yer alır.\n\n- **Doğrudan yol:** Greftle gelen verici dendritik hücreleri; sınıf I'i CD8+, sınıf II'yi CD4+ alıcı T hücreleri tanır. Alloreaktif T hücre sıklığı yüksek olduğundan akut hücresel reddi başlatır.\n- **Dolaylı yol:** Alıcının antijen sunan hücreleri donör HLA moleküllerini yutar, işler ve kendi sınıf II MHC'siyle CD4+ hücrelere sunar; alloantikor yanıtı ve kronik reddi destekler.\n- **Red tipleri:** Hiperakut red önceden var olan antikorlarla dakikalar-saatler içinde; akut red günler-haftalar içinde; kronik red aylar-yıllar içinde greft arteriyosklerozuyla gelişir.\n- **Greft-versus-host hastalığı:** Vericinin bağışık hücrelerinin alıcı dokularına saldırısıdır; deri, karaciğer ve bağırsak hedeflenir.\n- **İmmünsüpresyon:** Siklosporin ve takrolimus IL-2 transkripsiyonunu inhibe ederek T hücre yanıtını baskılar.\n\nSınav: Doğrudan yol = alıcı T hücresi + verici APC; dolaylı yol = alıcı CD4+ hücresi + alıcı APC."
         },
         {
          "id": "d3-k1-pat-009",
@@ -86435,6 +86756,38 @@
         }
        ],
        "cikmisSorular": [
+        {
+         "id": "k1-2024-2025-q079",
+         "questionNumber": 79,
+         "stem": "Türkiye'de 15-24 yaş arası kadınlarda en sık görülen malignite hangisidir?",
+         "correctAnswer": "C",
+         "options": [
+          {
+           "key": "A",
+           "text": "Meme kanseri"
+          },
+          {
+           "key": "B",
+           "text": "Akciğer kanseri"
+          },
+          {
+           "key": "C",
+           "text": "Tiroid kanseri"
+          },
+          {
+           "key": "D",
+           "text": "Lösemi"
+          },
+          {
+           "key": "E",
+           "text": "Beyin tümörü"
+          }
+         ],
+         "year": "2024-2025",
+         "discipline": "Tıbbi Patoloji",
+         "topic": "Tümör Biyolojisi ve Terminolojisi",
+         "explanation": "Türkiye kanser istatistiklerinde 15-24 yaş grubundaki kadınlarda en sık görülen kanser tiroid kanseridir; bu yaş grubunda papiller tiroid karsinomu belirgin olarak öne çıkar.\n\n- **Yaşa göre değişim:** 0-14 yaş çocuklarda lösemi, ardından santral sinir sistemi tümörleri ve lenfomalar en sıktır; adolesan ve genç erişkin kadınlarda tiroid kanseri ilk sıraya yerleşir.\n- **Erişkin kadın:** Meme kanseri ileri yaşlarda giderek artar ve tüm yaşlar birlikte değerlendirildiğinde kadınlarda en sık kanserdir.\n- **Tiroid kanserinin özellikleri:** Kadınlarda erkeklerden belirgin daha sıktır; en sık histolojik tip papiller karsinomdur ve çocuklukta iyonizan radyasyon maruziyeti (ör. Çernobil sonrası artış) önemli risk faktörüdür.\n- **Epidemiyolojik ilke:** Kanser sıklığı yaş, cinsiyet ve coğrafyaya göre değişir; kanser kayıt sistemleri bu farkları yaş grubuna özgü verilerle ortaya koyar.\n- **Akciğer kanseri:** Sigaraya uzun süreli maruziyetle ilişkili olduğundan ileri yaşların kanseridir; genç kadınlarda nadirdir.\n\nSınav: 0-14 yaşta lösemi, 15-24 yaş kadında tiroid kanseri, tüm yaşlarda kadında meme kanseri en sıktır."
+        },
         {
          "id": "past-q-I_SKENDERUN_TI_Mu_du_rlu_g_u_ne0__1__230709_230251-123",
          "questionNumber": 123,
@@ -95797,6 +96150,38 @@
          "discipline": "Tıbbi Patoloji",
          "topic": "Sistemik Hastalıklarda Böbrek Hasarı",
          "explanation": "Diyabetik nefropatinin ilk klinik bulgusu mikroalbüminüridir; günde 30-300 mg albümin atılımıyla tanımlanır.\n\n- **Morfolojik başlangıç:** Glomerüler bazal membran kalınlaşması ve mezangiyal matriks artışı klinik bulgulardan önce başlar.\n- **Hiperfiltrasyon:** Erken dönemde GFR artışı ve böbrek büyümesi görülebilir; yakınma oluşturmaz.\n- **Mikroalbüminüri:** Standart idrar çubuk testiyle saptanamaz; spot idrarda albümin/kreatinin oranıyla aranır.\n- **Klinik nefropati:** Makroalbüminüri, hipertansiyon ve ilerleyici GFR kaybı izler; nefrotik sendrom gelişebilir.\n- **Son evre:** Nodüler ve diffüz glomerüloskleroz son dönem böbrek hastalığına ilerler.\n\nSınav: Glukozüri, ketonüri ve poliüri metabolik bozukluğun belirtileridir; böbrek hasarının ilk işareti mikroalbüminüridir."
+        },
+        {
+         "id": "9e3bac8bba3d",
+         "questionNumber": 1873,
+         "stem": "Diyabetik nefropatinin en erken klinik bulgusu aşağıdakilerden hangisidir?",
+         "correctAnswer": "C",
+         "options": [
+          {
+           "key": "A",
+           "text": "Nefrotik sendrom"
+          },
+          {
+           "key": "B",
+           "text": "Glukozüri"
+          },
+          {
+           "key": "C",
+           "text": "Mikroalbüminüri"
+          },
+          {
+           "key": "D",
+           "text": "Ketonüri"
+          },
+          {
+           "key": "E",
+           "text": "Poliüri"
+          }
+         ],
+         "year": "2020-2021",
+         "discipline": "Tıbbi Patoloji",
+         "topic": "Sistemik Hastalıklarda Böbrek Hasarı",
+         "explanation": "Diyabetik nefropatinin en erken klinik bulgusu mikroalbüminüridir (orta düzey albüminüri, 30-300 mg/gün); zamanla makroalbüminüri ve nefrotik sendroma ilerler.\n\n- **Erken yapısal değişiklik:** Glomerüler hiperfiltrasyon ve GBM kalınlaşması; ışık mikroskobunda ilk görülen bulgu kapiller bazal membran kalınlaşmasıdır.\n- **Morfoloji:** Diffüz mezangiyal skleroz, PAS pozitif Kimmelstiel-Wilson nodülleri (nodüler glomerüloskleroz), afferent ve efferent arteriyollerde hiyalin arteriyoloskleroz.\n- **Klinik seyir:** Mikroalbüminüri → makroalbüminüri (>300 mg/gün) → nefrotik sendrom → kronik böbrek hastalığı.\n- **Tarama:** Spot idrarda albümin/kreatinin oranı; tip 2 diyabette tanıda, tip 1'de tanıdan 5 yıl sonra başlanır ve yıllık tekrarlanır.\n- **Önem:** Kan şekeri ve kan basıncı kontrolü ile RAAS blokajı bu evrede ilerlemeyi yavaşlatır.\n\nSınav: Glukozüri, ketonüri ve poliüri diyabetin metabolik bulgularıdır; böbrek hasarının ilk göstergesi mikroalbüminüridir."
         },
         {
          "id": "past-q-2021-2022_C__km_s_-27",
@@ -105839,6 +106224,38 @@
        ],
        "cikmisSorular": [
         {
+         "id": "ce4de1dbb3ca",
+         "questionNumber": 137,
+         "stem": "Aşağıdakilerden hangisi mesanenin metaplastik lezyonlarından değildir?",
+         "correctAnswer": "D",
+         "options": [
+          {
+           "key": "A",
+           "text": "Sistitis sistika"
+          },
+          {
+           "key": "B",
+           "text": "Sistitis glandülaris"
+          },
+          {
+           "key": "C",
+           "text": "Von Brunn adaları"
+          },
+          {
+           "key": "D",
+           "text": "Michaelis-Gutmann cisimleri"
+          },
+          {
+           "key": "E",
+           "text": "Skuamöz metaplazi"
+          }
+         ],
+         "year": "2020-2021",
+         "discipline": "Tıbbi Patoloji",
+         "topic": "Mesane Hastalıkları ve Tümörleri",
+         "explanation": "Michaelis-Gutmann cisimleri malakoplakiye özgü makrofaj inklüzyonlarıdır; mesanenin metaplastik lezyonları arasında yer almaz.\n\n- **Von Brunn yuvaları:** Yüzey ürotelyumunun lamina propriaya tomurcuklanmasıyla oluşan solid yuvalar.\n- **Sistitis sistika:** Brunn yuvalarının merkezinin kistik olarak genişlemesi.\n- **Sistitis glandülaris:** Yuvalarda kübik-kolumnar ya da intestinal tip glandüler epitele dönüşüm; yaygın intestinal tipte adenokarsinom riski artar.\n- **Skuamöz metaplazi:** Kronik irritasyon ve şistozomiyazis zemininde gelişir; skuamöz hücreli karsinom için öncü lezyondur.\n- **Malakoplaki:** Özellikle E. coli enfeksiyonlarında makrofajların bakterileri sindirememesi sonucu gelişen kronik granülomatöz inflamasyon; yumuşak sarı plaklar, köpüksü makrofajlar (von Hansemann hücreleri) ve Michaelis-Gutmann cisimleri tipiktir.\n\nSınav: Brunn yuvası, sistika ve glandülaris reaktif-metaplastik zincirdir; Michaelis-Gutmann cisimleri ise malakoplakiyi gösterir."
+        },
+        {
          "id": "ac2de7e7edae",
          "questionNumber": 1523,
          "stem": "I. Sistitis sistika\nII. Sistitis glandülaris\nIII. Brunn adaları\nIV. Michaelis-Gutmann cisimleri\nYukarıdakilerden hangisi mesanenin metaplastik lezyonlarından değildir?",
@@ -109725,6 +110142,38 @@
          "explanation": "HPV'nin keratinositlerde oluşturduğu karakteristik değişikliğe koilositoz (koilositik atipi) denir.\n\n- **Histoloji:** Yüzeyel skuamöz hücrelerde perinükleer halo, çekirdek büyümesi, buruşuk kontur, hiperkromazi ve iki çekirdeklilik görülür.\n- **Patogenez:** HPV bazal hücreleri enfekte eder, ancak virüs replikasyonu farklılaşan yüzeyel hücrelerde gerçekleşir; sitopatik etki bu katmanlarda belirginleşir.\n- **İlgili lezyonlar:** Kondiloma akuminatum (HPV 6/11), düşük dereceli SIL ve yüksek riskli tiplerin erken enfeksiyonlarında görülür.\n- **Transformasyon zonu:** Metaplastik epitelin yer aldığı bu bölge HPV'ye en duyarlı alandır; servikal neoplazilerin çoğu burada başlar.\n- **Sitolojik tarama:** Pap smear'de koilositlerin görülmesi HPV enfeksiyonunu gösterir; yüksek riskli tip araştırması ve kolposkopi ile ileri değerlendirme yapılır.\n\nSınav: Transformasyon zonu yer, kondiloma lata sifilis, koilositoz ise HPV'ye özgü hücresel değişimdir."
         },
         {
+         "id": "d3-k1-pat-055",
+         "questionNumber": 55,
+         "stem": "Aşağıdakilerden hangisi HPV enfeksiyonunun özelliği olan, viral sitopatik etki ile hücrelerde oluşan değişikliklere verilen isimdir?",
+         "correctAnswer": "D",
+         "options": [
+          {
+           "key": "A",
+           "text": "Kondiloma lata"
+          },
+          {
+           "key": "B",
+           "text": "Kondiloma akuminata"
+          },
+          {
+           "key": "C",
+           "text": "Servikal intraepitelyal neoplazi"
+          },
+          {
+           "key": "D",
+           "text": "Koilositoz"
+          },
+          {
+           "key": "E",
+           "text": "Vulvar intraepitelyal neoplazi"
+          }
+         ],
+         "year": "2024-2025",
+         "discipline": "Tıbbi Patoloji",
+         "topic": "Vulva, Vajen ve Serviks Hastalıkları",
+         "explanation": "HPV'nin skuamöz epitelde oluşturduğu karakteristik viral sitopatik değişikliğe koilositoz (koilositik atipi) denir.\n\n- **Morfoloji:** Büyümüş, buruşuk (kuru üzüm benzeri), hiperkromatik çekirdek ve çevresinde geniş perinükleer sitoplazmik halo; zaman zaman iki çekirdeklilik.\n- **Mekanizma:** Virüsün olgunlaşan yüzeyel keratinositlerde çoğalması sitoplazmik çökme ve vakuolizasyona yol açar.\n- **Görüldüğü lezyonlar:** Kondiloma akuminatum ve LSIL'de (CIN I) yüzeyel katmanlarda belirgindir; CIN III'te genellikle yoktur.\n- **Kondiloma lata ile farkı:** Kondiloma lata sekonder sifilizin düz lezyonudur, etkeni Treponema pallidumdur ve koilosit göstermez.\n- **Tanısal önem:** Pap smearde koilosit görülmesi HPV enfeksiyonunun sitolojik kanıtıdır.\n\nSınav: Koilositoz bir hücre değişikliğinin, kondiloma akuminata ile CIN/VIN ise lezyonların adıdır; soru hücresel değişikliğin adını sorduğunda koilositoz seçilir."
+        },
+        {
          "id": "k1-2024-2025-q073",
          "questionNumber": 73,
          "stem": "HPV enfeksiyonu sonucu oluşan perinükleer halo görünümüne ne ad verilir?",
@@ -112833,6 +113282,38 @@
          "discipline": "Tıbbi Patoloji",
          "topic": "İnvaziv Serviks Kanseri ve Endometriyozis",
          "explanation": "Serviks kanseriyle en yakın ilişkili HPV tipi 16'dır; HPV 18 ile birlikte servikal karsinomların yaklaşık %70'inden sorumludur.\n\n- **Yüksek riskli tipler:** 16, 18, 31, 33, 45 ve diğerleri konak genomuna entegre olur; E6-E7 ekspresyonu artar ve hücre döngüsü kontrolü bozulur.\n- **HPV 16 ve 18 farkı:** HPV 16 skuamöz hücreli karsinomda, HPV 18 adenokarsinomda görece daha sık saptanır.\n- **Düşük riskli tipler (6, 11):** Kondiloma akuminatum ve larinks papillomlarına yol açar; DNA epizomal kalır.\n- **Kutanöz tipler (1, 4):** Plantar ve adi deri siğillerinin etkenleridir; genital karsinogenezde rolleri yoktur.\n- **Korunma:** HPV aşıları 16 ve 18'i kapsar; HPV DNA testi özellikle 30 yaş üzeri taramada değerlidir.\n\nSınav: Deri siğili tipleri (1, 2, 4), kondilom tipleri (6, 11) ve kanser tipleri (16, 18) ayrımı sık sorulur."
+        },
+        {
+         "id": "k1-2020-2021-a-q047",
+         "questionNumber": 47,
+         "stem": "I. HPV 6\nII. HPV 16\nIII. HPV 11\nIV. HPV 18\nYukarıdaki HPV tiplerinden hangileri malign transformasyon açısından yüksek risk grubundadır?",
+         "correctAnswer": "C",
+         "options": [
+          {
+           "key": "A",
+           "text": "I ve II"
+          },
+          {
+           "key": "B",
+           "text": "I ve III"
+          },
+          {
+           "key": "C",
+           "text": "II ve IV"
+          },
+          {
+           "key": "D",
+           "text": "II ve III"
+          },
+          {
+           "key": "E",
+           "text": "III ve IV"
+          }
+         ],
+         "year": "2020-2021",
+         "discipline": "Tıbbi Patoloji",
+         "topic": "İnvaziv Serviks Kanseri ve Endometriyozis",
+         "explanation": "HPV 16 ve HPV 18 (II ve IV) yüksek riskli (onkojenik) tiplerdir; serviks karsinomlarının büyük bölümünden bu iki tip sorumludur.\n\n- **Risk sınıflaması:** HPV tipleri karsinogenez eğilimine göre ayrılır. Düşük riskli tipler (6, 11) kondiloma akuminatum ve düşük dereceli lezyonlara, yüksek riskli tipler (16, 18, 31, 33, 45 vb.) yüksek dereceli SIL ve invaziv karsinoma yol açar.\n- **Viral entegrasyon:** Yüksek riskli tiplerde viral DNA konak genomuna entegre olur; bu sırada E2 düzenleyici geni bozulur ve E6/E7 ekspresyonu artar.\n- **Onkoprotein etkisi:** E6, p53'ün ubikitin aracılı yıkımını; E7, RB'nin inaktivasyonunu sağlar; G1/S kontrol noktası ortadan kalkar ve genomik instabilite birikir.\n- **Düşük riskli tipler:** HPV 6 ve 11 genellikle epizomal kalır; koilositoz ve papiller proliferasyon yaparlar ama kansere dönüşmezler.\n- **Korunma:** Dörtlü ve dokuzlu aşılar 6/11 ile 16/18'i birlikte kapsar; hem siğil hem servikal kanser önlenir.\n\nSınav: 6 ve 11 siğil tipleri, 16 ve 18 kanser tipleridir; öncüllerde sıra karıştırıldığında numaraya değil tipe bakılmalıdır."
         },
         {
          "id": "k1-2020-2021-b-q056",
@@ -134511,6 +134992,38 @@
          "explanation": "Hastalığı taşıdığı bilinen kişilerin (hasta ya da portör) bulaştırıcı oldukları süre boyunca sağlamlardan ayrı tutulması tecrittir (izolasyon); amaç kaynaktan duyarlı kişilere geçişi kesmektir.\n\n- **Hedef kişi:** Tecritte ayrılan kişi tanısı konmuş hasta veya taşıyıcıdır; karantinada ise etkene maruz kalmış ama henüz hasta olmayan, sağlıklı görünen temaslı kısıtlanır.\n- **Süre:** Tecrit bulaştırıcılık dönemi boyunca sürer; karantina süresi hastalığın en uzun kuluçka süresine göre belirlenir.\n- **Enfeksiyon zinciri:** Tecrit zincirin çıkış kapısı ve bulaşma yolu halkalarını hedefler; hastanede bulaş yoluna göre temas, damlacık veya solunum izolasyonu biçiminde uygulanır.\n- **Salgın yanıtındaki yeri:** İlk vaka saptandığı anda başlaması gereken sınırlama (containment) önlemlerinin temel bileşenidir; filyasyonla bulunan yeni vakalar da tecrit edilir.\n\nSınav: 'Hasta ya da taşıyıcı ayrılır' ise tecrit, 'sağlıklı temaslı kuluçka süresince kısıtlanır' ise karantinadır."
         },
         {
+         "id": "7d52b54c7061",
+         "questionNumber": 1365,
+         "stem": "Bir bulaşıcı hastalığı taşıdığı bilinen vakaların, bu hastalığın bulaştırıcılık süresince sağlam bireylerden ayrılması hangi tanım ile ifade edilir?",
+         "correctAnswer": "D",
+         "options": [
+          {
+           "key": "A",
+           "text": "Seküler trend"
+          },
+          {
+           "key": "B",
+           "text": "Filyasyon"
+          },
+          {
+           "key": "C",
+           "text": "Karantina"
+          },
+          {
+           "key": "D",
+           "text": "Tecrit"
+          },
+          {
+           "key": "E",
+           "text": "İtlaf"
+          }
+         ],
+         "year": "2020-2021",
+         "discipline": "Halk Sağlığı",
+         "topic": "Salgın Hastalıklarda Kontrol ve Korunma Yöntemleri",
+         "explanation": "Bulaşıcı hastalığı olduğu bilinen kişilerin bulaştırıcılık süresince sağlamlardan ayrılması **tecrit (izolasyon)**dir; temaslıların kuluçka süresince kısıtlanması ise karantinadır.\n\n- **Tecrit:** Hasta ya da taşıyıcıya uygulanır; süre bulaştırıcılık dönemi kadardır. Hastanede temas, damlacık ve solunum (hava yolu) izolasyonu biçiminde uygulanır.\n- **Karantina:** Sağlam görünen temaslılara uygulanır; süre hastalığın en uzun kuluçka dönemi kadardır.\n- **Filyasyon:** Kaynak, bulaş yolu ve temaslıların saptanmasına yönelik saha araştırmasıdır; tecrit ve karantina kararlarını yönlendirir.\n- **Kaynağa yönelik diğer önlemler:** Erken tanı ve tedavi, bildirim, dezenfeksiyon; hayvan kaynaklı hastalıklarda itlaf.\n- **Salgın yönetimindeki yeri:** Sınırlama ve kontrol altına alma aşamasında tecrit ve karantina birlikte kullanılarak bulaş zinciri kırılır.\n\nSınav: Tecrit hastaya, karantina temaslıya uygulanır; süreleri sırasıyla bulaştırıcılık ve kuluçka dönemine göre belirlenir."
+        },
+        {
          "id": "4a4dfc1e2c67",
          "questionNumber": 1488,
          "stem": "Bir toplumda endemik olarak görülen bir bulaşıcı hastalığın insidans, prevalans, morbidite ve mortalitesinin bilinçli müdahalelerle yerel olarak kabul edilebilir bir düzeye indirilmesi ve bu düzeyin korunması için müdahalelerin sürekli sürdürülmesi gereken durum aşağıdakilerden hangisidir?",
@@ -134899,6 +135412,70 @@
          "discipline": "Halk Sağlığı",
          "topic": "Salgın Hastalıklarda Kontrol ve Korunma Yöntemleri",
          "explanation": "Kalıcı bağışıklık bırakan ve etkili bir aşısı olan etkenlerin eradikasyonu daha olasıdır; çevresel dayanıklılık ve birden çok kaynağın varlığı ise eradikasyonu güçleştirir.\n\n- **Eradikasyon tanımı:** Etkenin dünya çapında görülme sıklığının kalıcı olarak sıfırlanması; başarıldıktan sonra kontrol önlemlerine gerek kalmaz. Eliminasyon ise tanımlı bir bölgeyle sınırlıdır ve sürveyans sürdürülmelidir.\n- **Kolaylaştıran biyolojik özellikler:** Tek rezervuarın insan olması, kronik taşıyıcılık olmaması, hastalığın ömür boyu bağışıklık bırakması, kolay tanınan klinik tablo ve etkili, ucuz, ısıya dayanıklı bir aşı.\n- **Güçleştiren özellikler:** Hayvan veya çevresel rezervuar, dış ortama dayanıklılık, asemptomatik bulaştırıcılar ve aşının sınırlı etkinliği.\n- **Örnek:** Çiçek hastalığı 1980'de eradike edilmiştir; çocuk felcinde (polio) yaban tip virüs dolaşımı yalnız birkaç ülkeyle sınırlı kalmıştır.\n- **Halk sağlığı boyutu:** Eradikasyon çok daha zordur, nadiren başarılır ve güçlü siyasi kararlılık ile uluslararası koordinasyon gerektirir.\n\nSınav: İnsan dışı rezervuar ve çevresel dayanıklılık eradikasyonun önündeki temel engellerdir."
+        },
+        {
+         "id": "k1-2020-2021-b-q033",
+         "questionNumber": 33,
+         "stem": "Hastalığın etkeni tam anlamıyla yok edilmemekle birlikte hiç vaka görülmemesi hangi tanım ile ifade edilir?",
+         "correctAnswer": "D",
+         "options": [
+          {
+           "key": "A",
+           "text": "Sürveyans"
+          },
+          {
+           "key": "B",
+           "text": "Filyasyon"
+          },
+          {
+           "key": "C",
+           "text": "Eradikasyon"
+          },
+          {
+           "key": "D",
+           "text": "Eliminasyon"
+          },
+          {
+           "key": "E",
+           "text": "Bildirim"
+          }
+         ],
+         "year": "2020-2021",
+         "discipline": "Halk Sağlığı",
+         "topic": "Salgın Hastalıklarda Kontrol ve Korunma Yöntemleri",
+         "explanation": "Etken tamamen ortadan kalkmadığı hâlde belirli bir bölgede hastalığa ait vaka görülmemesi eliminasyon olarak tanımlanır; etken de yok edilirse eradikasyondan söz edilir.\n\n- **Eliminasyonun iki düzeyi:** Hastalığın halk sağlığı sorunu olmaktan çıkarılması (DSÖ'nün bazı ihmal edilmiş hastalıklar için kullandığı hedef) ve bulaşın kesilerek tanımlı bölgede insidansın sıfıra indirilmesi.\n- **Sürdürülen önlemler:** Etken başka bölgelerde var olduğu için ithal vaka riski sürer; aşılama, sürveyans, bildirim ve filyasyon kesintisiz devam etmelidir.\n- **Eradikasyon farkı:** Etkenin küresel ve kalıcı yok edilmesidir; müdahaleye gerek kalmaz ve çok daha zor bir hedeftir.\n- **Örnekler:** Bazı DSÖ bölgelerinde kızamık ve sıtma eliminasyonu sertifikalandırılmıştır; çiçek ise eradike edilmiştir.\n- **Salgın fazlarıyla ilişki:** Azalma fazındaki müdahale hedefi eliminasyon veya eradikasyondur.\n\nSınav: Etken var, vaka yok = eliminasyon; etken de yok = eradikasyon."
+        },
+        {
+         "id": "dbdc94070cd3",
+         "questionNumber": 1388,
+         "stem": "Bir hastalığın etkeni tam anlamıyla yok edilmemekle birlikte, belirli bir bölgede hiç vaka görülmemesi hangi tanım ile ifade edilir?",
+         "correctAnswer": "D",
+         "options": [
+          {
+           "key": "A",
+           "text": "Sürveyans"
+          },
+          {
+           "key": "B",
+           "text": "Filyasyon"
+          },
+          {
+           "key": "C",
+           "text": "Eradikasyon"
+          },
+          {
+           "key": "D",
+           "text": "Eliminasyon"
+          },
+          {
+           "key": "E",
+           "text": "Bildirim"
+          }
+         ],
+         "year": "2020-2021",
+         "discipline": "Halk Sağlığı",
+         "topic": "Salgın Hastalıklarda Kontrol ve Korunma Yöntemleri",
+         "explanation": "Etken dünyada yok edilmemişken belirli bir bölgede hastalığa ait vaka görülmemesi eliminasyondur; bu durum kalıcı değildir ve önlemlerle korunmak zorundadır.\n\n- **Ders tanımı:** Eliminasyon, hastalığın tanımlı bir coğrafi bölgede artık büyük bir halk sağlığı sorunu olmamasıdır; yeniden ortaya çıkışı önlemek için sürveyans ve kontrol önlemleri sürdürülür.\n- **Hiyerarşi:** Kontrol (kabul edilebilir düzey, vakalar sürer), eliminasyon (bölgesel sıfır) ve eradikasyon (küresel ve kalıcı sıfır) giderek zorlaşan hedeflerdir.\n- **İthal vaka:** Eliminasyon sağlanmış ülkede dışarıdan gelen vakalar görülebilir; hızlı bildirim ve filyasyonla yerel bulaş zinciri oluşmadan durdurulur.\n- **Salgın fazları:** Salgının azalma fazında hedeflenen müdahaleler eliminasyon veya eradikasyondur.\n- **Eradikasyon farkı:** Eradikasyonda etken hiçbir yerde kalmadığı için aşılama gibi önlemler bırakılabilir; eliminasyonda bırakılamaz.\n\nSınav: Kökteki 'etken yok edilmemiş' ifadesi eradikasyonu, 'hiç vaka yok' ifadesi kontrolü dışlar; cevap eliminasyondur."
         },
         {
          "id": "d11f9ba2b8ef",
@@ -141963,6 +142540,38 @@
          "explanation": "Sağılmış anne sütü +4 °C buzdolabında yaklaşık 3 gün güvenle saklanabilir; ders kapsamında öğretilen ve özgün sınav anahtarında esas alınan süre budur.\n\n- **Oda ısısıyla karşılaştırma:** Oda ısısında (22-26 °C) süre 3 saatle sınırlıdır; buzdolabı bakteri çoğalmasını ve lipolizi yavaşlatarak süreyi günlere uzatır.\n- **Derin dondurucu:** -18 °C'de süt 3-6 ay saklanabilir; çözülen süt buzdolabında 24 saat içinde kullanılmalı ve yeniden dondurulmamalıdır.\n- **Saklama yeri:** Süt kapı rafında değil, ısının en sabit olduğu arka bölümde tutulur; kaplar sağım tarihiyle etiketlenir.\n- **Mekanizma:** Soğuk bakteri çoğalmasını durdurmaz, yalnız yavaşlatır; süre uzadıkça bakteri sayısı ve serbest yağ asidi artar, C vitamini azalır.\n\nNot: CDC ve ABM (2017) temiz sağımda buzdolabında 4 güne kadar, çok temiz koşullarda 5-8 güne kadar saklamayı kabul eder; 3 gün (72 saat) bu aralık içinde kalan daha temkinli değerdir.\n\nSınav: 'Oda ısısında 3 saat, buzdolabında 3 gün, derin dondurucuda 3-6 ay' kuralı bu tip soruların çoğunu çözer."
         },
         {
+         "id": "ad64451dd2a0",
+         "questionNumber": 269,
+         "stem": "Sağılmış anne sütü oda ısısında en fazla kaç saat saklanabilir?",
+         "correctAnswer": "C",
+         "options": [
+          {
+           "key": "A",
+           "text": "1 saat"
+          },
+          {
+           "key": "B",
+           "text": "2 saat"
+          },
+          {
+           "key": "C",
+           "text": "3 saat"
+          },
+          {
+           "key": "D",
+           "text": "4 saat"
+          },
+          {
+           "key": "E",
+           "text": "5 saat"
+          }
+         ],
+         "year": "2020-2021",
+         "discipline": "Halk Sağlığı",
+         "topic": "Bebek Beslenmesi",
+         "explanation": "Ders notuna ve özgün sınav anahtarına göre sağılmış anne sütü oda ısısında (22-26 °C) en fazla 3 saat saklanabilir.\n\n- **Süre sınırının nedeni:** Sağım sırasında meme derisi ve kaplardan bulaşan bakteriler oda ısısında çoğalır; lipaz aktivitesi yağları parçalayarak koku ve tadı değiştirir.\n- **Doğal koruyucular:** Laktoferrin, lizozim ve sIgA ilk saatlerde bakteri çoğalmasını sınırlar; bu yüzden taze süt kısa süre oda ısısında güvenlidir.\n- **Soğuk zincir:** Buzdolabında (+4 °C) yaklaşık 3 gün, derin dondurucuda (-18 °C) aylarca saklanabilir; çözülen süt yeniden dondurulmaz.\n- **Uygulama:** Süt temiz, kapaklı kaplara sağım tarihi yazılarak konur; bebeğin başladığı süt 1-2 saat içinde bitirilir, ısıtma ılık su banyosunda yapılır.\n\nNot: CDC ve ABM (2017) temiz koşullarda 25 °C'ye kadar 4 saate kadar saklamayı kabul eder; ders kaynağının 3 saati bu aralık içinde kalan daha temkinli değerdir.\n\nSınav: Akılda kalıcı kural 'oda ısısında 3 saat, buzdolabında 3 gün, derin dondurucuda 3-6 ay' şeklindedir."
+        },
+        {
          "id": "1ab66e3b1e9e",
          "questionNumber": 1389,
          "stem": "Sağılmış anne sütü oda ısısında en fazla kaç saat saklanabilir?",
@@ -143408,6 +144017,38 @@
          "discipline": "Halk Sağlığı",
          "topic": "Ana-Çocuk Sağlığı Düzeyinin İzlenmesi",
          "explanation": "Gebelik izlemindeki danışmanlık, gebenin günlük yaşamını ve sağlık davranışlarını düzenlemeye yönelik başlıkları kapsar; kronik hastalıklar bu listede değil, risk değerlendirmesi ve sevk kapsamında ele alınır.\n\n- **Danışmanlık başlıkları:** Olağan yakınmalar (bulantı-kusma, kabızlık, sık idrara çıkma, varis), beslenme, fiziksel aktivite ve çalışma koşulları, cinsel yaşam, hijyen, tehlike işaretleri, sigara-alkol-madde, ilaç kullanımı, tetanoz immünizasyonu, fetal anomali tarama testleri ve USG.\n- **Kronik hastalıkların yeri:** Anemi, hipertansiyon, diyabet, kalp-böbrek hastalığı ve tüberküloz ilk izlemde öykü ve risk değerlendirme formuyla saptanır; gebeliğe eşlik eden sistemik hastalık sevk nedenidir.\n- **Gebe izleminin amaçları:** Var olan hastalıkların tespiti, gebeliğe bağlı sorunların önlenmesi, tetanoz aşısı, fetal gelişimin izlenmesi, doğuma hazırlık ve eğitim.\n\nSınav: Danışmanlık gebenin kendi uygulayacağı davranışlara yöneliktir; kronik hastalık yönetimi tarama ve sevk basamağıdır."
+        },
+        {
+         "id": "c0e65fe54c12",
+         "questionNumber": 1490,
+         "stem": "Hangisi gebelik öncesi danışmada (prekonsepsiyonel danışmanlık) standart bir konu DEĞİLDİR?",
+         "correctAnswer": "C",
+         "options": [
+          {
+           "key": "A",
+           "text": "Beslenme ve folik asit takviyesi"
+          },
+          {
+           "key": "B",
+           "text": "Fiziksel aktivite ve çalışma koşulları"
+          },
+          {
+           "key": "C",
+           "text": "Gebelik hijyeni ve gebelikte tehlike işaretleri"
+          },
+          {
+           "key": "D",
+           "text": "Kronik hastalıkların (diyabet, hipertansiyon, tiroid vb.) optimize edilmesi"
+          },
+          {
+           "key": "E",
+           "text": "Partner şiddeti değerlendirmesi ve STI taraması"
+          }
+         ],
+         "year": "2020-2021",
+         "discipline": "Halk Sağlığı",
+         "topic": "Ana-Çocuk Sağlığı Düzeyinin İzlenmesi",
+         "explanation": "Gebelik öncesi danışmanlık, gebelik başlamadan risklerin saptanıp düzeltilmesini amaçlar; **gebelik hijyeni ve gebelikteki tehlike işaretleri** ise ancak gebelik oluştuktan sonra verilen doğum öncesi bakım danışmanlık konularıdır.\n\n- **Gebelik öncesi standart başlıklar:** Kronik hastalıkların optimize edilmesi, ilaçların teratojenite açısından gözden geçirilmesi, beslenme ve folik asit, kilo yönetimi, fiziksel aktivite ve mesleki maruziyetler.\n- **Enfeksiyon ve bağışıklama:** Kızamıkçık, su çiçeği ve hepatit B bağışıklık durumu; cinsel yolla bulaşan enfeksiyon taraması.\n- **Psikososyal değerlendirme:** Partner şiddeti, sigara-alkol-madde kullanımı, ruh sağlığı ve aile öyküsüne dayalı genetik danışmanlık.\n- **Doğum öncesi bakımda danışmanlık:** Ders notunda beslenme, fiziksel aktivite ve çalışma koşulları, cinsel yaşam, hijyen, tehlike işaretleri, sigara-alkol, ilaç kullanımı, tetanoz bağışıklaması ve tarama testleri sayılır.\n- **Tehlike işaretleri:** Vajinal kanama, su gelmesi, şiddetli baş ağrısı-bulanık görme, ateş, bebek hareketlerinde azalma; sevk gerektirir.\n\nSınav: Gebelikten önce verilmesi gereken danışmanlık folik asit ve hastalık optimizasyonudur; tehlike işaretleri eğitimi gebelik izleminin konusudur."
         },
         {
          "id": "09fda18f5ae5",
@@ -145268,7 +145909,7 @@
         {
          "id": "d3-k1-hs-002",
          "questionNumber": 2,
-         "stem": "Aşağıdakilerden hangisi Dr. Refik Saydam'ın çalışmaları arasında yer almaz?",
+         "stem": "[Dikkat — olası hatalı kayıt: Bu soru öğrenci notundan aktarılmıştır. B şıkkındaki \"Verem Savaş Dernekleri'nin kurulmasına öncülük etmesi\" Refik Saydam'ın çalışmaları arasında gösterilmemelidir; aynı sınavın D3K1 Tüm Çıkmışlar sürümünde (2025-2026 Kurul 1 · Soru 29) \"yer almaz\" cevabı bu şıktır.]\nAşağıdakilerden hangisi Dr. Refik Saydam'ın çalışmaları arasında yer almaz?",
          "correctAnswer": "E",
          "options": [
           {
@@ -151905,6 +152546,38 @@
         }
        ],
        "cikmisSorular": [
+        {
+         "id": "k1-2020-2021-c-q085",
+         "questionNumber": 85,
+         "stem": "\"Üriner enfeksiyonun başarılı tedavisinden sonra yeniden aynı patojen ile gelişen enfeksiyon\" tanımı aşağıdakilerden hangisine aittir?",
+         "correctAnswer": "C",
+         "options": [
+          {
+           "key": "A",
+           "text": "Re-enfeksiyon"
+          },
+          {
+           "key": "B",
+           "text": "Sistit"
+          },
+          {
+           "key": "C",
+           "text": "Rekürren enfeksiyon"
+          },
+          {
+           "key": "D",
+           "text": "Bakteriyel persistans"
+          },
+          {
+           "key": "E",
+           "text": "Kontaminasyon"
+          }
+         ],
+         "year": "2020-2021",
+         "discipline": "Üroloji",
+         "topic": "Üriner Sistem Enfeksiyonlarının Epidemiyoloji, Etiyoloji ve Semptomatolojisi",
+         "explanation": "Başarılı tedaviden sonra kısa sürede aynı patojenle yeniden gelişen enfeksiyon rekürren enfeksiyondur; klinikte relaps olarak da adlandırılır ve etkenin eradike edilemediğini gösterir.\n\n- **Rekürren enfeksiyon (relaps):** Genellikle iki hafta içinde aynı patojenle gelişir; yetersiz tedavi, enfekte taş, kateter ya da kronik bakteriyel prostatit gibi odaklar araştırılır.\n- **Re-enfeksiyon:** Dışarıdan gelen yeni patojenle oluşur; kadınlarda tekrarlayan ÜSE'nin en sık biçimidir ve profilaksiyle önlenmeye çalışılır.\n- **Bakteriyel persistans:** Rekürrenslere neden olan, üriner sisteme yerleşmiş patojen odağıdır; eradike edilemiyorsa antimikrobiyal süpresyon uygulanır.\n- **Antimikrobiyal profilaksi:** Re-enfeksiyonların önlenmesine yönelik ilaç kullanımıdır.\n- **Kontaminasyon:** Örneğe dış kaynaklı flora bulaşmasıdır; piyüri olmadan saptanan bakteriüri kontaminasyonu düşündürür.\n\nSınav: Aynı patojen ve kısa süre rekürrens/relaps, yeni patojen re-enfeksiyon, kalıcı odak bakteriyel persistanstır."
+        },
         {
          "id": "5d97c7f55509",
          "questionNumber": 252,

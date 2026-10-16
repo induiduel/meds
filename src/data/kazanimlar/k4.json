@@ -17632,6 +17632,38 @@
          "discipline": "Tıbbi Farmakoloji",
          "topic": "Astım ve diğer akciğer hastalıklarının tedavisinde kullanılan ilaçlar",
          "explanation": "Dört eşleştirmenin tamamı doğrudur; astım ilaçlarının mekanizmaya dayalı sınıflandırmasını ölçer.\n\n- **Lökotrien yolu:** Araşidonik asitten 5-lipoksijenaz ile LTB4 ve sisteinil lökotrienler (LTC4, LTD4) oluşur. Zileuton enzimi inhibe ederek sentezi, zafirlukast ve montelukast CysLT1 reseptörünü bloke ederek etkiyi engeller. Zileuton hepatotoksisite nedeniyle karaciğer enzimleriyle izlenir.\n- **Glukokortikoidler:** Budesonid, flutikazon, beklometazon inflamatuvar gen transkripsiyonunu baskılar; persistan astımın temel kontrol ilaçlarıdır.\n- **β2 agonistleri:** Pirbuterol ve salbutamol kısa etkili kurtarıcı, salmeterol ve formoterol uzun etkili ilaçlardır; adenilat siklaz-cAMP artışıyla bronş düz kasını gevşetir.\n- **Aspirin ile alevlenen astım:** Lökotrien modifiye edicilerin özellikle yararlı olduğu klinik tablodur.\n\nSınav: Zileuton sentez inhibitörü, -lukastlar reseptör antagonistidir; ikisi aynı yolu farklı basamakta keser."
+        },
+        {
+         "id": "q-22_final_230619_145249-89",
+         "questionNumber": 89,
+         "stem": "I. Bronşiyal astım, kronik bronşit ve bronkospazmın bir faktör olduğu diğer kronik bronkopulmoner bozukluklara bağlı bronkospazmın semptomatik rahatlatılması ve önlenmesi ile bronkospazmın akut profilaksisi için endikedir; egzersize bağlı bronkospazmda da profilaktik olarak kullanılır. Yan etki olarak ciltte incelme ve ekimoz, böbrek üstü bezlerinin baskılanması ve kemik mineral yoğunluğunun azalmasına neden olur.\nII. Çayda da bulunan; diüretik, düz kas gevşetici, bronşiyal dilatasyon, kalp ve merkezi sinir sistemi uyarıcı aktiviteleri olan bir metilksantin türevidir. Geri dönüşümlü (astımlı) obstrüksiyonu olan hastaların hava yollarında düz kas gevşemesi (bronkodilatasyon) ve hava yollarının uyaranlara yanıtının baskılanması (bronkodilatör olmayan profilaktik etki) olmak üzere iki farklı etkisi vardır.\nIII. Astım ve KOAH tedavisinde kullanılan kısa etkili, seçici bir beta-2 adrenerjik reseptör agonistidir. Beta-2 reseptörleri için beta-1 reseptörlerine göre 29 kat daha seçicidir; ilaç R- ve S-izomerlerinin rasemik bir karışımı olarak formüle edilmiştir.\nIV. Bronşiyal hava yollarının ve pulmoner kan damarlarının düz kasını gevşetir. Histamin, metakolin, adenozin ve alerjene karşı hava yolu yanıtını azaltır. Düz kas hücrelerinde cAMP'yi parçalamaktan sorumlu tip III ve tip IV fosfodiesterazı (PDE) kompetitif biçimde inhibe eder.\nTeofilin için verilen aşağıdaki ifadelerden hangisi / hangileri doğrudur?",
+         "correctAnswer": "C",
+         "options": [
+          {
+           "key": "A",
+           "text": "Yalnız II"
+          },
+          {
+           "key": "B",
+           "text": "I ve III"
+          },
+          {
+           "key": "C",
+           "text": "II ve IV"
+          },
+          {
+           "key": "D",
+           "text": "I, II ve IV"
+          },
+          {
+           "key": "E",
+           "text": "I, II, III ve IV"
+          }
+         ],
+         "year": "Kategorisiz",
+         "discipline": "Tıbbi Farmakoloji",
+         "topic": "Astım ve diğer akciğer hastalıklarının tedavisinde kullanılan ilaçlar",
+         "explanation": "Teofilin bir metilksantindir; fosfodiesteraz inhibisyonu ve adenozin reseptör antagonizması ile bronkodilatasyon yapar. Bu nedenle II ve IV doğru, glukokortikoid (I) ve beta-2 agonist (III) tanımları yanlıştır.\n\n- **Mekanizma:** PDE3/PDE4 inhibisyonu ile hücre içi cAMP artar ve düz kas gevşer; adenozin A1/A2 reseptör blokajı bronkokonstriksiyonu azaltır, histon deasetilaz aktivasyonu antiinflamatuvar katkı sağlar.\n- **Diğer etkiler:** Diürez, pozitif inotropi ve kronotropi, MSS uyarımı ve diyafram kasılmasında güçlenme.\n- **Dar terapötik aralık:** Hedef serum düzeyi yaklaşık 5-15 mg/L'dir; aşıldığında bulantı-kusma, taşiaritmi, tremor ve konvülziyon görülür.\n- **Etkileşimler:** CYP1A2 inhibitörleri (siprofloksasin, eritromisin, simetidin) düzeyi artırır; sigara ve rifampisin azaltır.\n- **Klinik yeri:** Güvenlik profili nedeniyle astım ve KOAH'ta ikinci-üçüncü basamak ajandır.\n\nSınav: Teofilinin dar terapötik aralığı ve CYP1A2 etkileşimleri sık sorulur."
         }
        ],
        "ornekSorular": [],
@@ -22621,7 +22653,40 @@
        "id": "k4-d10-c4-kz-3",
        "metin": "Solunum sıkıntısı olan yeni doğana yaklaşım klinik yönetimini, farmakoterapi ilkelerini ve komplikasyonlardan korunma yaklaşımlarını sıralar.",
        "slaytlar": [],
-       "cikmisSorular": [],
+       "cikmisSorular": [
+        {
+         "id": "cefbc6092306",
+         "questionNumber": 836,
+         "stem": "Hasta yan pozisyonda gözlem sedyesine alındı. Hastaya mevcut bulgularla ilk ne yapmalıyız?",
+         "correctAnswer": "A",
+         "options": [
+          {
+           "key": "A",
+           "text": "Oksijen vermek"
+          },
+          {
+           "key": "B",
+           "text": "Başı iyice geriye çekerek baş geri çene yukarı manevrası yapmak"
+          },
+          {
+           "key": "C",
+           "text": "Gag refleksi olan çocuğa oral airway yerleştirmek"
+          },
+          {
+           "key": "D",
+           "text": "Akciğer grafisi çektirmek"
+          },
+          {
+           "key": "E",
+           "text": "Damar yolu açarak serum fizyolojik infüzyonu başlamak"
+          }
+         ],
+         "year": "2020-2021",
+         "discipline": "Çocuk Sağlığı ve Hastalıkları",
+         "topic": "Solunum sıkıntısı olan yeni doğana yaklaşım",
+         "explanation": "Hava yolu yan pozisyonla korunan, spontan soluyan hastada ABC sırasına göre ilk yapılacak girişim oksijen desteğidir.\n\n- **Derlenme pozisyonu:** Dilin geriye düşmesini ve kusmada aspirasyonu önler; travma şüphesi yoksa bilinci bulanık spontan soluyan hastada kullanılır.\n- **Solunum desteği:** Maske ya da rezervuarlı maskeyle oksijen, pulse oksimetre ile izlem.\n- **Hava yolu araçları:** Oral airway yalnız gag refleksi yoksa; refleksi olan hastada nazofaringeal airway tercih edilir.\n- **Manevralar:** Travmada baş geri-çene yukarı yerine çene itme (jaw thrust) yapılır.\n- **Sonraki adımlar:** Dolaşım değerlendirmesi, damar yolu, parmak ucu kan şekeri ve tetkikler.\n\nSınav: Gag refleksi olan hastaya oral airway konmaz; görüntüleme resüsitasyondan sonra gelir."
+        }
+       ],
        "ornekSorular": [],
        "sozlukTerimleri": [],
        "ozetler": []
@@ -24049,6 +24114,38 @@
          "discipline": "Halk Sağlığı",
          "topic": "Kanser Hastalıkları Epidemiyolojisi",
          "explanation": "Kanser taramasının faydaları negatif sonuç alanların rahatlaması ve erken evre tanı sayesinde daha az radikal tedaviyle kür şansıdır; aşırı tedavi ve yanlış pozitif kaygısı ise zararlarıdır.\n\n- **Tarama tanımı:** Belirti vermeyen kişilerde hastalığı erken (preklinik) evrede saptamak için uygulanan testlerdir; amaç mortaliteyi ve morbiditeyi azaltmaktır.\n- **Faydalar:** Erken evrede yakalanan kanserde prognoz iyileşir, tedavi daha az agresif olur (ör. meme koruyucu cerrahi); negatif sonuç kişiye güvence verir.\n- **Zararlar:** Yanlış pozitif sonuç gereksiz biyopsi ve anksiyete yaratır; yanlış negatif sonuç yanlış güvence verir; tartışmalı/sınırda lezyonlarda aşırı tanı ve aşırı tedavi riski doğar.\n- **Türkiye'deki ulusal programlar:** KETEM ve aile hekimliği aracılığıyla meme, serviks ve kolorektal kanser taraması yürütülür.\n\nSınav: Yanlış pozitiflik ve aşırı tedavi taramanın 'zarar' hanesine yazılır; fayda-zarar ayrımı öncüllü sorularda sık çeldiricidir."
+        },
+        {
+         "id": "69d5354c4d34",
+         "questionNumber": 1533,
+         "stem": "Kanser taraması önerileri ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+         "correctAnswer": "E",
+         "options": [
+          {
+           "key": "A",
+           "text": "Kolorektal kanser için ortalama riskli bireylerde 10 yılda bir kolonoskopi önerilir"
+          },
+          {
+           "key": "B",
+           "text": "Akciğer kanseri için toplum geneline yönelik ulusal bir tarama programı yoktur"
+          },
+          {
+           "key": "C",
+           "text": "Prostat kanseri için PSA taraması, bireysel risk ve hekimle paylaşılmış karara göre uygulanır"
+          },
+          {
+           "key": "D",
+           "text": "Meme kanseri riski için mamografi önerilir"
+          },
+          {
+           "key": "E",
+           "text": "Beyin tümörü için yıllık beyin BT önerilir"
+          }
+         ],
+         "year": "2020-2021",
+         "discipline": "Halk Sağlığı",
+         "topic": "Kanser Hastalıkları Epidemiyolojisi",
+         "explanation": "Beyin tümörleri için yıllık BT ile tarama önerilmez; yanlış ifade budur.\n\n- **Tarama ilkeleri:** Hastalık önemli bir sağlık sorunu olmalı, uzun preklinik dönemi bulunmalı, ucuz-güvenilir test ve erken tedavinin sonucu değiştirdiği kanıtlanmalıdır.\n- **Kolorektal kanser:** Ortalama risklide 45/50 yaştan itibaren gaitada gizli kan veya 10 yılda bir kolonoskopi; adenom ve polipler erken çıkarılarak kanser önlenir.\n- **Meme ve serviks:** Mamografi ve HPV/smear testleri ulusal programın temelidir.\n- **Akciğer ve prostat:** Düşük doz BT yalnız yüksek riskli içicilerde; PSA ise paylaşılmış kararla yapılır, toplum taraması değildir.\n- **Beyin tümörü:** Düşük insidans ve etkili erken tanı kanıtı olmaması nedeniyle tarama yoktur; radyasyon zararı yarardan fazladır.\n\nSınav: Türkiye'de ulusal tarama yapılan üç kanser meme, serviks ve kolorektaldir.\n\nNot: Özgün kök kaybolduğu için kök yeniden kuruldu; kolonoskopi aralığı ve PSA ifadesi güncel önerilere göre düzeltildi."
         },
         {
          "id": "past-ocr-donem3-kurul4-3.sınıf 4-q5-jeftli-cs29",

@@ -525,6 +525,38 @@
        "slaytlar": [],
        "cikmisSorular": [
         {
+         "id": "06db6fc2518b",
+         "questionNumber": 705,
+         "stem": "Kırım-Kongo kanamalı ateşi etkeni ile ilgili aşağıdakilerden hangisi doğrudur?",
+         "correctAnswer": "A",
+         "options": [
+          {
+           "key": "A",
+           "text": "KKKA virüsü Bunyaviridae ailesine bağlı Nairovirus soyundan gelir."
+          },
+          {
+           "key": "B",
+           "text": "Konak dışında aylarca canlı kalabilir."
+          },
+          {
+           "key": "C",
+           "text": "Ultraviyole ve ısıya karşı dirençlidir."
+          },
+          {
+           "key": "D",
+           "text": "KKKA virüsü Hyalomma cinsi içinde yer alır."
+          },
+          {
+           "key": "E",
+           "text": "Zarfsız bir DNA virüsüdür."
+          }
+         ],
+         "year": "2020-2021",
+         "discipline": "Enfeksiyon Hastalıkları",
+         "topic": "Kırım-Kongo kanamalı ateşi",
+         "explanation": "KKKA etkeni Bunyaviridae ailesi Nairovirus cinsinde yer alan, zarflı ve çevreye dayanıksız bir RNA virüsüdür.\n\n- **Taksonomi:** Klasik kaynak ve ders notu: Bunyaviridae–Nairovirus. Güncel ICTV: Bunyavirales takımı, Nairoviridae ailesi.\n- **Yapı:** Üç segmentli (S, M, L) negatif polariteli tek zincirli RNA; glikoprotein içeren lipid zarf.\n- **Dayanıksızlık:** Isı, ultraviyole, hipoklorit ve alkolle inaktive olur; bu nedenle hasta eşyaları ve yüzeyler standart dezenfektanlarla temizlenebilir.\n- **Vektör:** Hyalomma keneleri; kene içinde transovaryal ve transstadial aktarım virüsün doğada sürmesini sağlar.\n\nNot: Özgün sınavda dört şık bulunuyordu ve B-C şıkları da doğru ifadelerdi; tek doğru cevaba indirmek için B ve C olumsuz yönde düzenlendi, E eklendi.\n\nSınav: Hyalomma virüs değil vektör kenenin adıdır."
+        },
+        {
          "id": "b8c15e06be29",
          "questionNumber": 1337,
          "stem": "Kırım-Kongo kanamalı ateşi (KKKA) virüsü insanlara hangi yollarla bulaşabilir?",
@@ -1954,6 +1986,38 @@
          "discipline": "Tıbbi Patoloji",
          "topic": "Kanama Bozuklukları ve Trombositopeniler",
          "explanation": "von Willebrand faktörü hemostazı başlatan ve sürdüren prokoagülan bir moleküldür; doğal antikoagülan sistemlere ait değildir.\n\n- **Antitrombin III:** Heparin benzeri moleküllerle aktive olarak trombin ve faktör Xa başta olmak üzere serin proteazları inhibe eder.\n- **Protein C/S sistemi:** Trombomoduline bağlı trombin protein C'yi aktive eder; protein S kofaktörlüğünde faktör Va ve VIIIa yıkılır.\n- **TFPI:** Doku faktörü-VIIa kompleksini faktör Xa varlığında bloke ederek başlatma fazını sınırlar.\n- **vWF'nin rolü:** Trombosit adezyonunda köprü görevi görür ve faktör VIII'i plazmada stabilize eder; eksikliği en sık kalıtsal kanama bozukluğu olan von Willebrand hastalığına yol açar.\n\nSınav: Faktör V Leiden, protein C/S ve antitrombin eksiklikleri trombofili nedenidir; vWF eksikliği ise kanama nedenidir."
+        },
+        {
+         "id": "f5978bda123a",
+         "questionNumber": 963,
+         "stem": "Febril nonhemolitik transfüzyon reaksiyonu aşağıdakilerden hangisine bağlıdır?",
+         "correctAnswer": "D",
+         "options": [
+          {
+           "key": "A",
+           "text": "Alıcı lökositlerinden kaynaklanan interlökinler"
+          },
+          {
+           "key": "B",
+           "text": "Alıcının daha önce kan transfüzyonu ile sensitize olması"
+          },
+          {
+           "key": "C",
+           "text": "Rh, Kell ve Kidd gibi antijenlere karşı gelişen antikorlar"
+          },
+          {
+           "key": "D",
+           "text": "Dönör lökositlerinden kaynaklanan inflamatuar mediyatörler"
+          },
+          {
+           "key": "E",
+           "text": "Enfeksiyöz ajanlar"
+          }
+         ],
+         "year": "2020-2021",
+         "discipline": "Tıbbi Patoloji",
+         "topic": "Kanama Bozuklukları ve Trombositopeniler",
+         "explanation": "Febril nonhemolitik transfüzyon reaksiyonu, ürünün saklanması sırasında **dönör lökositlerinden salınan inflamatuar mediyatörlere** bağlı gelişir ve en sık görülen transfüzyon reaksiyonudur.\n\n- **Klinik:** Transfüzyondan sonraki ilk 6 saat içinde ateş, titreme, bazen hafif nefes darlığı; hemoliz bulgusu yoktur.\n- **Mekanizma:** Saklama sırasında dönör lökositleri IL-1, IL-6 ve TNF gibi pirojenik sitokinleri ürüne bırakır; saklama süresi uzadıkça risk artar.\n- **Yatkınlık:** Çok sayıda transfüzyon almış ya da multipar alıcılarda anti-HLA antikorları reaksiyonu kolaylaştırabilir, ancak belirleyici kaynak dönör lökositleridir.\n- **Önleme ve tedavi:** Saklama öncesi lökosit azaltma (filtrasyon) sıklığı belirgin düşürür; tedavi antipiretiklerledir ve tablo genellikle hafif ve geçicidir.\n- **Ayırıcı tanı:** Akut hemolitik reaksiyon (ABO uyumsuzluğu), septik reaksiyon ve TRALI dışlanmadan febril nonhemolitik tanısı konmaz.\n\nSınav: Rh/Kell/Kidd antikorları gecikmiş hemolitik reaksiyonu, dönör lökositi mediyatörleri ateşli nonhemolitik reaksiyonu açıklar."
         },
         {
          "id": "d3-k5-dah-017",
@@ -3860,6 +3924,38 @@
          "explanation": "Halkalı sideroblastlar ve psödo-Pelger-Huët nötrofilleri, miyelodisplastik sendromdaki (MDS) etkisiz ve displastik hematopoezin karakteristik morfolojik bulgularıdır.\n\n- **Tanım:** Klonal kök hücre hastalığı; kemik iliği genellikle hiperselüler, periferde ise sitopeniler vardır.\n- **Eritroid displazi:** Megaloblastoid değişiklikler ve halkalı sideroblastlar; Prusya mavisiyle çekirdeği çevreleyen demir yüklü mitokondriler görülür. SF3B1 mutasyonu halkalı sideroblastlı alt tiple ilişkilidir.\n- **Granülositik displazi:** İki loblu, hipogranüler psödo-Pelger-Huët nötrofilleri.\n- **Megakaryositik displazi:** Küçük, tek loblu mikromegakaryositler.\n- **Blast oranı:** %20'nin altında; %20 ve üzeri AML'ye ilerleme olarak kabul edilir.\n- **Risk:** Yaşlılık, önceki kemoterapi ya da radyoterapi; seyirde AML'ye dönüşüm ve sitopeniye bağlı enfeksiyon-kanama.\n\nSınav: Displazi bulgusu ve %20'nin altında blast MDS'yi, %20 ve üzeri blast AML'yi gösterir."
         },
         {
+         "id": "9930ceb1f1d5",
+         "questionNumber": 1820,
+         "stem": "Aşağıdakilerden hangisi miyeloid diferansiyasyonu promiyelositik evrede bloke eder?",
+         "correctAnswer": "B",
+         "options": [
+          {
+           "key": "A",
+           "text": "JAK2 mutasyonu"
+          },
+          {
+           "key": "B",
+           "text": "PML-RARA füzyon geni"
+          },
+          {
+           "key": "C",
+           "text": "Philadelphia kromozomu"
+          },
+          {
+           "key": "D",
+           "text": "Trizomi 8"
+          },
+          {
+           "key": "E",
+           "text": "5q delesyonu"
+          }
+         ],
+         "year": "2020-2021",
+         "discipline": "Tıbbi Patoloji",
+         "topic": "Akut Lösemiler",
+         "explanation": "Miyeloid farklanmayı promiyelosit evresinde durduran değişiklik, t(15;17) ile oluşan **PML-RARA füzyon genidir**; sonuç akut promiyelositik lösemidir (AML-M3).\n\n- **Mekanizma:** PML-RARA, retinoik asit reseptörü alfa hedef genlerinin transkripsiyonunu baskılar; granülositik olgunlaşma promiyelositte kalır.\n- **Morfoloji:** Çok sayıda azurofilik granül ve Auer çubuğu demetleri içeren anormal promiyelositler (faggot hücreleri).\n- **Klinik önem:** Granüllerden salınan prokoagülanlar dissemine intravasküler koagülasyona yol açar; erken ölüm nedenidir.\n- **Tedavi ve prognoz:** All-trans retinoik asit ve arsenik trioksit farklanmayı başlatır; t(15;17) iyi prognostik grupta yer alır.\n- **Ayırıcı:** BCR-ABL kronik miyeloid lösemi, JAK2 ise Ph-negatif miyeloproliferatif neoplazilerle ilişkilidir; bu değişiklikler farklanmayı bloke etmez, proliferasyonu artırır.\n\nSınav: Farklanma bloğu akut lösemilerin, olgunlaşmanın korunduğu aşırı üretim ise miyeloproliferatif neoplazilerin özelliğidir."
+        },
+        {
          "id": "past-1790877048269-394849",
          "questionNumber": 10,
          "stem": "Aşağıdaki hastalık-bulgu ikililerinden hangisi yanlıştır?",
@@ -4448,6 +4544,38 @@
          "explanation": "Halka sideroblastlar polisitemia vera'nın değil, sideroblastik anemi ve halka sideroblastlı miyelodisplastik sendromun karakteristik bulgusudur.\n\n- **Halka sideroblast:** Çekirdeğin en az üçte birini çevreleyen, demirle yüklü mitokondrilerden oluşan granüller; Prusya mavisi boyasıyla gösterilir. Kalıtsal ALAS2 defekti, alkol, kurşun, B6 eksikliği ve SF3B1 mutasyonlu MDS'de görülür.\n- **Polisitemia vera:** JAK2 V617F mutasyonlu miyeloproliferatif neoplazidir; eritrositoz, düşük EPO, kaşıntı, tromboz ve splenomegali tipiktir.\n- **Atipik lenfosit:** Enfeksiyöz mononükleozda reaktif CD8+ T hücreleridir.\n- **Proliferasyon merkezi:** KLL/KLL'nin lenf düğümü bulgusudur.\n- **Yıldızlı gökyüzü:** Burkitt lenfomada yüksek apoptoz ve makrofaj fagositozunu yansıtır.\n\nSınav: Halka sideroblast ve psödo-Pelger-Huët hücresi MDS ile, JAK2 mutasyonu ve düşük eritropoietin polisitemia vera ile eşleşir."
         },
         {
+         "id": "d6675aebe05c",
+         "questionNumber": 722,
+         "stem": "Polisitemi vera ve miyeloproliferatif hastalıklar ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+         "correctAnswer": "D",
+         "options": [
+          {
+           "key": "A",
+           "text": "Polisitemi verada eritrosit kitlesinde artış vardır"
+          },
+          {
+           "key": "B",
+           "text": "Polisitemi verada tromboza yatkınlık vardır"
+          },
+          {
+           "key": "C",
+           "text": "Polisitemi verada flebotomi uygulanan tedavi yöntemlerinden biridir"
+          },
+          {
+           "key": "D",
+           "text": "Esansiyel trombositozda bir ay ara ile yapılan sayımda trombosit sayısı 600000'den yüksek olmalıdır"
+          },
+          {
+           "key": "E",
+           "text": "Polisitemi vera olgularının büyük çoğunluğunda JAK2 V617F mutasyonu saptanır"
+          }
+         ],
+         "year": "2020-2021",
+         "discipline": "Tıbbi Patoloji",
+         "topic": "Kronik Miyeloproliferatif Neoplaziler",
+         "explanation": "Esansiyel trombositemide tanı eşiği güncel WHO ölçütlerine göre 450.000/µL'dir; 600.000/µL ve bir ay arayla iki ölçüm koşulu eski PVSG ölçütüne aittir, bu yüzden D yanlıştır.\n\n- **PV patogenezi:** JAK2 V617F mutasyonu EPO'dan bağımsız eritroid çoğalmaya yol açar; eritrosit kitlesi mutlak olarak artar ve serum EPO düzeyi baskılanarak düşük bulunur.\n- **Klinik:** Viskozite artışı baş ağrısı, pletore, akuajenik kaşıntı, splenomegali ve tromboz eğilimi ile seyreder.\n- **Tedavi:** Flebotomi ile hematokrit %45'in altında tutulur; düşük doz aspirin eklenir, yaşlı veya tromboz öyküsü olanlarda hidroksiüre verilir.\n- **Esansiyel trombositemi:** Trombosit ≥450.000/µL, megakaryosit proliferasyonu, JAK2/CALR/MPL mutasyonu ve reaktif trombositoz ile diğer miyeloid neoplazilerin dışlanması gerekir.\n- **Seyir:** PV'de yıllar içinde post-PV miyelofibroz (tükenmiş faz) ya da akut lösemi gelişebilir.\n\nSınav: PV'de EPO düşük, sekonder polisitemide yüksektir; ET eşiği artık 450.000/µL'dir."
+        },
+        {
          "id": "bf29e891f300",
          "questionNumber": 825,
          "stem": "Aşağıdakilerden hangisi masif splenomegali yapan durumlardan biridir?",
@@ -4478,6 +4606,38 @@
          "discipline": "Tıbbi Patoloji",
          "topic": "Kronik Miyeloproliferatif Neoplaziler",
          "explanation": "Kronik miyeloid lösemi (KML) masif splenomegalinin (>1000 g) klasik nedenlerindendir.\n\n- **Masif splenomegali:** KML ve primer miyelofibroz gibi kronik miyeloproliferatif neoplaziler, kronik lenfositik lösemi, tüylü hücreli lösemi, lenfomalar, sıtma, Gaucher hastalığı.\n- **Orta derecede (500-1000 g):** Kronik konjestif splenomegali, talasemi major, herediter sferositoz, otoimmün hemolitik anemi, sarkoidoz, amiloidoz.\n- **Hafif (<500 g):** Akut splenit, akut splenik konjesyon, enfeksiyöz mononükleoz, septisemi, SLE.\n- **KML mekanizması:** Filadelfiya kromozomu t(9;22) ile oluşan BCR-ABL füzyonu myeloid proliferasyonu ve dalak infiltrasyonunu artırır.\n\nSınav: Masif splenomegali çoğunlukla miyeloproliferatif neoplazi, tüylü hücreli lösemi, sıtma veya Gaucher'i düşündürmelidir."
+        },
+        {
+         "id": "f796262a9c10",
+         "questionNumber": 864,
+         "stem": "Miyeloproliferatif neoplaziler ile ilgili aşağıdaki ifadelerden hangisi yanlıştır?",
+         "correctAnswer": "D",
+         "options": [
+          {
+           "key": "A",
+           "text": "Polisitemi verada eritrosit kitlesinde artış vardır"
+          },
+          {
+           "key": "B",
+           "text": "Polisitemi verada tromboza yatkınlık vardır"
+          },
+          {
+           "key": "C",
+           "text": "Polisitemi verada flebotomi uygulanan tedavi yöntemlerinden biridir"
+          },
+          {
+           "key": "D",
+           "text": "Esansiyel trombositozda bir ay arayla yapılan sayımlarda trombosit sayısı 600.000/mm³'ün üzerinde olmalıdır"
+          },
+          {
+           "key": "E",
+           "text": "Polisitemi veralı hastaların büyük çoğunluğunda JAK2 V617F mutasyonu saptanır"
+          }
+         ],
+         "year": "2020-2021",
+         "discipline": "Tıbbi Patoloji",
+         "topic": "Kronik Miyeloproliferatif Neoplaziler",
+         "explanation": "Esansiyel trombositoz tanısında güncel WHO eşiği 450.000/mm³'tür; 600.000/mm³ ve iki ayrı sayım şartı eski PVSG ölçütü olduğundan ifade yanlıştır.\n\n- **Ortak patogenez:** Kronik miyeloproliferatif neoplaziler (KML, polisitemi vera, esansiyel trombositoz, primer miyelofibroz) tirozin kinaz aktivasyonu ile büyüme faktöründen bağımsız proliferasyon gösterir.\n- **Polisitemi vera:** JAK2 mutasyonu, artmış eritrosit kitlesi, düşük eritropoietin, kaşıntı, pletora ve splenomegali görülür.\n- **Komplikasyon:** Tromboz ve kanama birlikte görülebilir; ilerleyen dönemde miyelofibroz (harcanmış faz) ve akut lösemiye dönüşüm olabilir.\n- **Tedavi:** Flebotomi, düşük doz aspirin, yüksek riskte hidroksiüre.\n- **Esansiyel trombositoz:** Kemik iliğinde büyük, hiperlobüle megakaryositler; JAK2, CALR veya MPL mutasyonu; reaktif trombositoz ve diğer MPN'lerin dışlanması gerekir.\n\nSınav: ET eşiği 450.000/mm³; 600.000 eski ölçüttür, reaktif trombositoz (demir eksikliği, enfeksiyon) mutlaka dışlanmalıdır."
         },
         {
          "id": "d3-k5-pat-001",
@@ -5911,6 +6071,38 @@
          "discipline": "Tıbbi Patoloji",
          "topic": "Yumuşak Doku Tümörleri",
          "explanation": "Meningiom bir santral sinir sistemi (meninks) tümörüdür; diğer seçenekler benign mezenkimal yumuşak doku tümörleridir.\n\n- **Yumuşak doku tanımı:** İskelet dışı, epitel dışı dokular; yağ, fibröz doku, düz ve iskelet kası, damarlar ve periferik sinirler. Glia, meninksler ve hematopoetik doku bu sınıflamaya girmez.\n- **İsimlendirme:** Benign mezenkimal tümörler köken dokunun adına -om eki alır (lipom, leiomyom, hemanjiom); malign karşılıkları sarkomdur (liposarkom, leiomyosarkom, anjiyosarkom).\n- **Fibrohistiyositik lezyonlar:** Dermatofibrom (benign fibröz histiyositom) dermiste yerleşen, fibroblastik ve histiyositik hücrelerden oluşan benign tümördür.\n- **Meningiom:** Araknoid kap hücrelerinden köken alır, dura matere tutunur, erişkin kadınlarda daha sık görülür; psammom cisimcikleri ve girdap yapıları tipiktir, NF2 kaybı sıktır.\n- **Sıklık:** Lipom erişkinlerde en sık benign yumuşak doku tümörüdür.\n\nSınav: -om ekli her tümör yumuşak doku tümörü değildir; meningiom ve glial tümörler SSS tümörleri arasında sınıflanır."
+        },
+        {
+         "id": "69dc0e4386ba",
+         "questionNumber": 1033,
+         "stem": "Periferik sinir kılıfı tümörleri, multipl deri altı nodülleri, aksiller çillenme ve café-au-lait lekeleri görülen bir kişide bu nodüllerden biri çıkarılıp incelendiğinde aşağıdakilerden hangisinin görülmesi beklenmez?",
+         "correctAnswer": "D",
+         "options": [
+          {
+           "key": "A",
+           "text": "Nörofibrom"
+          },
+          {
+           "key": "B",
+           "text": "Kromozom 17'nin uzun kolunda mutasyon"
+          },
+          {
+           "key": "C",
+           "text": "Bir alanda malign transformasyon bulunması"
+          },
+          {
+           "key": "D",
+           "text": "Pleksiform paternde büyüme"
+          },
+          {
+           "key": "E",
+           "text": "Schwann hücreleri, mast hücreleri ve fibroblast benzeri hücrelerin bir arada bulunması"
+          }
+         ],
+         "year": "2020-2021",
+         "discipline": "Tıbbi Patoloji",
+         "topic": "Yumuşak Doku Tümörleri",
+         "explanation": "Café-au-lait lekeleri, aksiller çillenme ve çok sayıda deri altı nodülü nörofibromatozis tip 1'i (NF1) gösterir; çıkarılan küçük deri altı nodülü lokalize kutanöz nörofibromdur ve pleksiform büyüme paterni bu lezyonda beklenmez.\n\n- **Genetik:** NF1 geni 17q11.2'de yer alır; nörofibromin RAS'ı inaktive eden bir GTPaz aktive edici proteindir, kaybında RAS sinyali artar.\n- **Lokalize nörofibrom:** Deri ve deri altında sınırlı, kapsülsüz nodüllerdir; Schwann hücreleri, fibroblastlar, perinöral benzeri hücreler ve mast hücrelerinden oluşur.\n- **Pleksiform nörofibrom:** Büyük bir sinir gövdesinin birden çok fasikülünü genişleterek tutar; NF1 için patognomoniktir ancak ayrı bir lezyon tipidir.\n- **Malign dönüşüm:** NF1 hastalarının %3-10'unda malign periferik sinir kılıfı tümörü gelişir; çoğunlukla pleksiform nörofibromdan kaynaklanır.\n- **Diğer bulgular:** Lisch nodülleri, optik gliom ve iskelet anomalileri eşlik edebilir.\n\nSınav: Lokalize kutanöz nörofibrom ile pleksiform nörofibrom farklı lezyonlardır; NF1 geni 17q, NF2 geni 22q üzerindedir."
         },
         {
          "id": "84dc80df66ac",
@@ -9447,6 +9639,38 @@
          "explanation": "Hiperpotasemi ezilme sendromunun en tehlikeli metabolik sonucudur, fakat akut böbrek hasarının nedeni değil, hem kas yıkımının hem de bozulan böbrek atılımının ürünüdür.\n\n- **Miyoglobinüri:** Tübüler silendir oluşumu ve hem kaynaklı doğrudan toksisite ile hasarın merkezindedir.\n- **Demir ve serbest radikaller:** Hem demiri Fenton tepkimesiyle hidroksil radikali üretir; lipid peroksidasyonu tübül epitel nekrozu yapar.\n- **Endotoksinler ve sitokinler:** Enfekte yaralar ve reperfüzyon sistemik inflamasyonu, renal vazokonstriksiyonu ve hasarı artırır.\n- **Hiperpotaseminin önemi:** Enkazdan çıkarılınca basının kalkmasıyla gelişen reperfüzyon, ani hiperpotasemi ve derin asidozla kurtuluş ölümüne yol açar; tedavi sırası kalsiyum glukonat, sodyum bikarbonat, insülin-dekstroz, beta-2 agonist, kayeksalat ve hemodiyalizdir.\n- **Diyaliz eşiği:** Potasyumun 6,5 mmol/L ve üzerinde olması ya da tedaviye dirençli hızlı yükselişi diyaliz endikasyonudur.\n\nSınav: Hiperpotasemi böbrek hasarının sonucudur, nedeni değildir; 'doğrudan rol oynamaz' sorusunda neden-sonuç ayrımı yapılmalıdır."
         },
         {
+         "id": "47819e5ed8b2",
+         "questionNumber": 883,
+         "stem": "Crush (ezilme) yaralanması sendromunda akut böbrek yetmezliği tablosunun gelişmesinde hem intratübüler silendir oluşturarak mekanik tıkanıklığa hem de tübül epiteline doğrudan toksik etkiye yol açan faktör aşağıdakilerden hangisidir?",
+         "correctAnswer": "D",
+         "options": [
+          {
+           "key": "A",
+           "text": "Serbest radikaller"
+          },
+          {
+           "key": "B",
+           "text": "Endotoksinler"
+          },
+          {
+           "key": "C",
+           "text": "Demir"
+          },
+          {
+           "key": "D",
+           "text": "Miyoglobinüri"
+          },
+          {
+           "key": "E",
+           "text": "Hiperpotasemi"
+          }
+         ],
+         "year": "2020-2021",
+         "discipline": "Acil Tıp",
+         "topic": "Crush ve Kompartman Sendromu",
+         "explanation": "Miyoglobinüri ezilme sendromunda akut böbrek hasarını iki yolla birden oluşturur: lümende çökerek tıkaç yapar ve hem grubu üzerinden epitele doğrudan toksik etki gösterir.\n\n- **Çökme koşulları:** Düşük idrar pH'ı, hipovolemiye bağlı konsantre idrar ve Tamm-Horsfall proteini miyoglobinin distal tübülde silendir oluşturmasını kolaylaştırır.\n- **Toksik etki:** Ferröz demir ferrik forma oksitlenirken hidroksil radikali oluşur; lipid peroksidasyonu proksimal tübül nekrozuna yol açar.\n- **Vazokonstriksiyon:** Serbest hem nitrik oksidi bağlayarak renal vazokonstriksiyonu artırır.\n- **Klinik yansıma:** Çay rengi idrar, idrar stripinde kan pozitifliğine karşın mikroskopide eritrosit görülmemesi tipiktir.\n- **Korunma:** Agresif izotonik sıvı ve yüksek idrar akımı (200–300 mL/saat) tıkacı önler; miyoglobin standart diyalizle temizlenemez.\n\nSınav: Silendir oluşturan ve doğrudan toksik olan faktör miyoglobindir; demir ve radikaller yalnız toksik bileşende yer alır."
+        },
+        {
          "id": "2d2495a13089",
          "questionNumber": 885,
          "stem": "Aşağıdakilerden hangisi crush sendromu (ezilme yaralanması) patofizyolojisinde akut böbrek hasarına yol açan ve renal tübüllerde tıkanma ile doğrudan toksik etki gösteren başlıca faktörlerden biridir?",
@@ -11055,6 +11279,38 @@
          "explanation": "Sellick manevrası (krikoid bası), larinksin tek tam halka şeklindeki kıkırdağı olan krikoide arkaya doğru bası uygulanarak özofagusun C6 vertebra gövdesine karşı sıkıştırılmasıdır; amaç indüksiyon ile entübasyon arasında pasif regürjitasyonu ve aspirasyonu azaltmaktır.\n\n- **Uygulama:** Hasta uyanıkken yaklaşık 10 N, bilinç kaybından sonra yaklaşık 30 N kuvvetle başlanır ve kaf şişirilip tüp yeri doğrulanana kadar sürdürülür.\n- **Güncel konum:** Aspirasyonu önlediğine dair kanıt zayıftır; laringoskopik görüntüyü ve balon-maske ventilasyonunu bozabileceği için resüsitasyonda rutin kullanımı önerilmez (Sınıf III).\n- **BURP ile farkı:** BURP tiroid kıkırdağa arkaya-yukarı-sağa bası yaparak glottis görüntüsünü iyileştirir; aspirasyondan koruma sağlamaz.\n- **Ventilasyon bozulursa:** Krikoid bası maske ventilasyonunu veya entübasyonu zorlaştırıyorsa hemen gevşetilir.\n- **Hava yolu açma manevraları:** Baş geri-çene yukarı ve çene itme manevraları dilin farinksi tıkamasını önler; aspirasyon korumasıyla ilgili değildir.\n\nSınav: Krikoid kıkırdağa bası aspirasyon önleme (Sellick), tiroid kıkırdağa bası görüntü iyileştirme (BURP) amaçlıdır."
         },
         {
+         "id": "9c56b530998a",
+         "questionNumber": 976,
+         "stem": "Solunum güçlüğü, burun akıntısı ve hırıltılı solunum nedeniyle acil servise getirilen 1,5 yaşındaki erkek hastanın takipnesi artıyor, siyanozu ve interkostal çekilmeleri gelişiyor. Hasta düz zeminde sırtüstü yatmaktadır. Hastaya mevcut bulgularla ilk ne yapılmalıdır?",
+         "correctAnswer": "B",
+         "options": [
+          {
+           "key": "A",
+           "text": "Burunda yabancı cisim kontrolü yapmak"
+          },
+          {
+           "key": "B",
+           "text": "Omuz altına havlu vb. koymak"
+          },
+          {
+           "key": "C",
+           "text": "Oksijen vermek"
+          },
+          {
+           "key": "D",
+           "text": "Başı iyice geriye çekerek baş geri-çene yukarı manevrası yapmak"
+          },
+          {
+           "key": "E",
+           "text": "Hemen göğüs tüpü takmak"
+          }
+         ],
+         "year": "2020-2021",
+         "discipline": "Acil Tıp",
+         "topic": "İleri Kardiyak Yaşam Desteği ve Özel Durumlar",
+         "explanation": "Düz zeminde sırtüstü yatan küçük çocukta büyük oksiput boynu fleksiyona getirerek hava yolunu daraltır; ilk adım omuz altına havlu koyarak başı nötral pozisyona getirmektir.\n\n- **ABCDE önceliği:** Hava yolu (A) açılmadan solunum desteğinin (B) etkisi sınırlı kalır; pozisyon düzeltmesi saniyeler sürer ve oksijenle hemen ardından birleştirilir.\n- **Oksiput etkisi:** Yaklaşık iki yaşına kadar oksiput gövdeye göre büyüktür; düz yüzeyde baş öne düşer.\n- **Aşırı ekstansiyon tehlikesi:** Kısa ve yumuşak trakea katlanabilir; çocukta nötral veya hafif koklama pozisyonu hedeflenir.\n- **Burun:** Küçük çocuk büyük ölçüde burundan solur; akıntı varsa aspirasyon yararlıdır, ancak yabancı cisim kuşkusu yoksa rutin arama yapılmaz.\n- **İzlem:** Siyanoz ve çekilmeler solunum yetmezliğine gidişi gösterir; düzelme yoksa balon-valf-maske ventilasyonuna geçilir.\n\nSınav: Vakadaki 'düz zeminde sırtüstü yatıyor' ipucu pozisyon hatasını işaret eder; ilk müdahale omuz altı havludur."
+        },
+        {
          "id": "fb29bb232363",
          "questionNumber": 1010,
          "stem": "Balon-maske ventilasyonu ile yeterli göğüs hareketi sağlanamayan ve entübasyon planlanan bir hastanın hava yolu yönetiminde aşağıdakilerden hangisi yapılmamalıdır?",
@@ -12119,6 +12375,38 @@
          "discipline": "Ortopedi ve Travmatoloji",
          "topic": "Eklem hastalıkları patolojisi ve artritler",
          "explanation": "Romatoid artrit seropozitif bir artrittir; diğer seçenekler seronegatif spondiloartropati grubundadır.\n\n- **Seronegatif spondiloartropatiler:** Ankilozan spondilit, reaktif artrit, psoriatik artrit ve enteropatik artrit; RF negatiftir ve HLA-B27 ile ilişkilidir.\n- **Ortak özellikler:** Sakroiliit ve aksiyel tutulum, entezit, asimetrik oligoartrit, daktilit ve ön üveit.\n- **Romatoid artrit:** El küçük eklemlerini (MKF, PİF) simetrik tutar; RF ve anti-CCP pozitifliği, sinovyal pannus ve erozyonlar tipiktir.\n- **Patoloji farkı:** RA'da hedef sinovyum, spondiloartropatilerde ise entezis (bağ ve tendonun kemiğe yapışma yeri) inflamasyonudur.\n\nSınav: Seronegatif ifadesi RF negatifliğini anlatır; HLA-B27 ve entezit bu grubun anahtarıdır."
+        },
+        {
+         "id": "9213aabb2d55",
+         "questionNumber": 910,
+         "stem": "Aşağıdaki osteoartritle ilgili bilgilerden hangisi yanlıştır?",
+         "correctAnswer": "B",
+         "options": [
+          {
+           "key": "A",
+           "text": "Tüm dünyada en sık görülen eklem hastalığıdır."
+          },
+          {
+           "key": "B",
+           "text": "20-50 yaş aralığında sık görülür."
+          },
+          {
+           "key": "C",
+           "text": "Diz, bel, kalça gibi sinovyal eklemleri tutar."
+          },
+          {
+           "key": "D",
+           "text": "Ağrı istirahatle azalır."
+          },
+          {
+           "key": "E",
+           "text": "Konservatif tedavide istirahat, kilo verme, fizik tedavi yöntemleri ve analjezik ilaç tedavisi uygulanır."
+          }
+         ],
+         "year": "2020-2021",
+         "discipline": "Ortopedi ve Travmatoloji",
+         "topic": "Eklem hastalıkları patolojisi ve artritler",
+         "explanation": "Osteoartrit yaşlanmayla belirgin artan dejeneratif bir eklem hastalığıdır; **20-50 yaş aralığında sık görüldüğü ifadesi yanlıştır**.\n\n- **Epidemiyoloji:** Dünyada en sık eklem hastalığıdır; sıklık 50 yaşından sonra keskin artar, yaşlı nüfusla birlikte yükü büyür.\n- **Patogenez:** Kıkırdakta yapım-yıkım dengesinin yıkım lehine bozulması; kondrosit kaybı, proteoglikan azalması, subkondral kemik değişiklikleri.\n- **Tutulum:** Mekanik yük altındaki sinovyal eklemler (diz, kalça, lomber omurga) ile el distal ve proksimal interfalangeal eklemleri (Heberden, Bouchard nodülleri).\n- **Klinik:** Kullanmakla artan, istirahatle azalan mekanik ağrı; kısa süreli sabah tutukluğu, krepitasyon.\n- **Radyoloji:** Eklem aralığında asimetrik daralma, subkondral skleroz, yük binen yerlerde kistler, osteofitler; radyolojik bulgusu olanların yalnız yarısı semptomatiktir.\n- **Tedavi:** İstirahat, kilo verme, fizik tedavi ve analjezikler; ileri olguda eklem protezi.\n\nSınav: Mekanik ağrı istirahatle azalır; istirahatte artan ağrı ve uzun sabah tutukluğu inflamatuar artriti düşündürür."
         }
        ],
        "ornekSorular": [],
