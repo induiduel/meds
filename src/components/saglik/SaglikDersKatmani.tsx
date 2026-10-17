@@ -2,6 +2,7 @@ import React, { useCallback, useEffect, useLayoutEffect, useRef, useState } from
 import { createPortal } from 'react-dom';
 import { ArrowRight, FileQuestion, Presentation, TriangleAlert, X } from 'lucide-react';
 import { navigateTo, pathFor } from '../../router';
+import { elementZoom } from '../../utils/uiZoom';
 import { dersEslesmeleri, terimAraligi, terimleriBul, type DersDizin, type DersEslesme } from './saglikDers';
 import '../../styles/saglik-ders.css';
 
@@ -205,6 +206,9 @@ export const DersKatmani: React.FC<{ dz: DersDizin | null; kok: HTMLElement | nu
   const [acik, setAcik] = useState<{ anahtar: string; top: number; right: number } | null>(null);
   const terimKutulari = useRef<TerimKutu[]>([]);
   const [yedek, setYedek] = useState<{ x: number; y: number; w: number; h: number; tur: string }[]>([]);
+  // Konumlar görünür px'tir (getBoundingClientRect); yazı boyutu/ölçek (CSS zoom) açıkken katmanın kendi px'ine bölünür,
+  // yoksa rozetler sayıdan uzaklaşır (telefonda büyük yazıda)
+  const [olcek, setOlcek] = useState(1);
 
   const tara = useCallback(() => {
     const hedef = katman.current?.offsetParent as HTMLElement | null;
@@ -283,6 +287,7 @@ export const DersKatmani: React.FC<{ dz: DersDizin | null; kok: HTMLElement | nu
       }
     }
     terimKutulari.current = tk;
+    setOlcek(elementZoom(katman.current) || 1);
     kayitlar.set(kimlik, tur);
     if (highlightVar()) { vurgulariYaz(); setYedek([]); } else setYedek(kutular);
     setIsaretler(yeni);
@@ -303,6 +308,9 @@ export const DersKatmani: React.FC<{ dz: DersDizin | null; kok: HTMLElement | nu
     // Katmanın kendi düğmeleri (geçmiş penceresinde katman taranan kabın içinde) yeniden taramayı tetiklemesin
     const mo = new MutationObserver((l) => { if (l.some((m) => !katman.current?.contains(m.target))) planla(); });
     mo.observe(kok, { childList: true, subtree: true, characterData: true, attributes: true, attributeFilter: ['open', 'class', 'hidden'] });
+    // Yazı boyutu / ölçek kökteki değişkenlerle (style) değişir; içerik CSS px'te aynı kaldığı için ResizeObserver görmez
+    const kokMo = new MutationObserver(() => planla(80));
+    kokMo.observe(document.documentElement, { attributes: true, attributeFilter: ['style', 'data-design'] });
     const ro = typeof ResizeObserver !== 'undefined' ? new ResizeObserver(() => planla()) : null;
     ro?.observe(kok);
     const kaydir = (e: Event) => { if (e.target instanceof Element && e.target !== document.documentElement && kok.contains(e.target)) planla(40); };
@@ -342,6 +350,7 @@ export const DersKatmani: React.FC<{ dz: DersDizin | null; kok: HTMLElement | nu
       document.removeEventListener('transitionend', animBitti, true);
       document.removeEventListener('animationend', animBitti, true);
       mo.disconnect();
+      kokMo.disconnect();
       ro?.disconnect();
       kok.removeEventListener('scroll', kaydir, true);
       kok.removeEventListener('click', tikla);
@@ -363,11 +372,11 @@ export const DersKatmani: React.FC<{ dz: DersDizin | null; kok: HTMLElement | nu
   const secili = acik ? isaretler.find((x) => x.anahtar === acik.anahtar) : undefined;
   return (
     <div ref={katman} className="sbk-ders-katman" aria-hidden={false}>
-      {yedek.map((k, i) => <span key={i} className={`sbk-ders-yedek is-${k.tur}`} style={{ left: k.x, top: k.y, width: k.w, height: k.h }} />)}
+      {yedek.map((k, i) => <span key={i} className={`sbk-ders-yedek is-${k.tur}`} style={{ left: k.x / olcek, top: k.y / olcek, width: k.w / olcek, height: k.h / olcek }} />)}
       {isaretler.filter((x) => !x.anahtar.startsWith('t')).map((x) => (
         <button
           key={x.anahtar} type="button" className={`sbk-ders-i-b ${x.farkli ? 'is-farkli' : ''} ${acik?.anahtar === x.anahtar ? 'is-acik' : ''}`}
-          style={{ left: x.x, top: x.y }} aria-expanded={acik?.anahtar === x.anahtar}
+          style={{ left: x.x / olcek, top: x.y / olcek }} aria-expanded={acik?.anahtar === x.anahtar}
           title={x.farkli ? 'Ders slaytında bu yıl için farklı değer yazıyor' : x.e.every((e) => e.cumle.q) ? 'Bu bilgi çıkmış soruda da geçiyor' : 'Bu bilgi ders slaytında da geçiyor'}
           aria-label={`${x.e[0].ham}: ${x.farkli ? 'ders slaytında farklı değer' : 'ders slaytında geçiyor'}, ayrıntı`}
           onClick={(ev) => {
