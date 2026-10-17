@@ -16,6 +16,7 @@ import { cdDersEtiketi } from './canliDersKategori';
 import { ListeEkleDugme } from './CanliDersListem';
 import { CevrimdisiDugme } from './CanliDersCevrimdisi';
 import { CdDaha } from './CanliDersDaha';
+import { CdTvKumanda } from './CanliDersTv';
 import '../learn/pdf/pdfDoc.css';
 
 /** Öğenin görünür ölçeği (v12 yazı boyutu CSS zoom'u); utils/uiZoom.elementZoom ile aynı mantık. */
@@ -263,6 +264,7 @@ export default function CanliDersDers({ dersKey }: { dersKey: string }) {
           )}
         </div>
         <div className="cd-ders-uc">
+          <CdTvKumanda />
           {!tamEkran && (
             <CdDaha etiket="Ders seçenekleri (çevrimdışı, listem, tanıtım)" className="cd-ders-daha">
               <CevrimdisiDugme dersKey={detay.key} baslik={detay.baslik} varyantlar={detay.varyantlar} />

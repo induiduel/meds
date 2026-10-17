@@ -636,3 +636,16 @@
 .cd-liste-arac > .cd-btn svg { width: 15px; height: 15px; }
 .cd-vses { display: inline-flex; align-items: center; gap: 8px; font-size: 12.5px; color: var(--color-ink-3); }
 .cd-vses select { height: 34px; max-width: 220px; padding: 0 8px; border: 1px solid var(--color-line); border-radius: 9px; background: var(--color-white); color: var(--color-ink); font: inherit; font-size: 13px; }
+
+/* TV kumandası */
+.cd-tv-btn svg { width: 16px; height: 16px; }
+.cd-tv-liste { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.cd-tv-liste li { display: grid; grid-template-columns: 150px 1fr; align-items: center; gap: 12px; font-size: 14px; color: var(--color-ink-2); }
+.cd-tv-liste kbd { justify-self: start; padding: 4px 10px; border: 1px solid var(--color-line); border-bottom-width: 2px; border-radius: 8px; background: var(--color-canvas);
+  font: 700 13px/1.2 inherit; color: var(--color-ink); white-space: nowrap; }
+.cd-tv-dlg .cd-dlg-kart.is-dar { max-width: 560px; }
+.cd-tv-iz { position: fixed; left: 50%; top: 18%; transform: translateX(-50%); z-index: 90; padding: 12px 22px; border-radius: 14px; background: rgb(0 0 0 / .78); color: #fff;
+  font-size: 22px; font-weight: 700; pointer-events: none; animation: cd-tv-iz 1.2s ease forwards; }
+@keyframes cd-tv-iz { 0%, 70% { opacity: 1; } 100% { opacity: 0; } }
+/* TV'de odak her zaman belirgin */
+:root.cd-tv .cd-root :focus-visible, :root.cd-tv .cd-dlg :focus-visible, :root.cd-tv .cd-root :focus { outline: 3px solid var(--color-accent) !important; outline-offset: 2px; box-shadow: 0 0 0 6px color-mix(in srgb, var(--color-accent) 25%, transparent); }

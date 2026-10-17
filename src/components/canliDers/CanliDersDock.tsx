@@ -7,11 +7,12 @@ import React, { useEffect, useLayoutEffect, useMemo, useRef, useState } from 're
 import { ArrowUpRight, Download, ListOrdered, Pause, Play, RotateCcw, RotateCw, SkipBack, SkipForward, X } from 'lucide-react';
 import { navigateTo, pathFor } from '../../router';
 import {
-  CD_HIZLAR, cdAtla, cdBolumAtla, cdBolumBaslari, cdDosyaAdi, cdHiz, cdHizDongu, cdKapat, cdSar, cdSesKisa, cdSesUrl, cdToggle, cdVaryant,
+  CD_HIZLAR, cdAtla, cdBolumAtla, cdBolumBaslari, cdDosyaAdi, cdHiz, cdHizDongu, cdKapat, cdSar, cdSesKisa, cdSesUrl, cdToggle, cdVaryant, cdDurum,
   fmtSure, useCd,
 } from './canliDersStore';
 import { ListeDockDenetim, TekrarSecici } from './CanliDersListem';
 import { CdDaha } from './CanliDersDaha';
+import { cdTvMi, cdTvTus, type TvEylem } from './CanliDersTv';
 import '../../styles/canli-ders.css';
 
 const hizYaz = (r: number) => `${String(r).replace('.', ',')}×`;
@@ -57,34 +58,55 @@ export default function CanliDersDock({ activeTab, dersKey }: { activeTab: strin
     };
   }, [tam, key]);
 
-  // Klavye (yalnız ders ekranında): boşluk oynat/duraklat, ←/→ 10 sn
+  // Klavye / TV kumandası (yalnız ders ekranında): boşluk-OK-⏯ oynat/duraklat, ←/→ 10 sn, ⏪/⏩ 30 sn,
+  // TV'de ▲/▼ ve kanal/parça tuşları bölüm atlar (CanliDersTv)
   useEffect(() => {
     if (!tam) return;
+    const tv = cdTvMi();
     const on = (e: KeyboardEvent) => {
       if (e.defaultPrevented || e.metaKey || e.ctrlKey || e.altKey) return;
       const t = e.target as HTMLElement | null;
       if (t && (t.isContentEditable || /^(INPUT|TEXTAREA|SELECT)$/.test(t.tagName))) return;
-      if (t?.closest('[role="slider"], [role="dialog"], [role="menu"]')) return;
+      if (t?.closest('[role="slider"], [role="dialog"], [role="menu"], [role="alertdialog"]')) return;
       if (e.key === ' ' || e.code === 'Space') {
         if (t && /^(BUTTON|A)$/.test(t.tagName)) return; // odaktaki düğme kendi işini yapar
         e.preventDefault();
         cdToggle();
-      } else if (e.key === 'ArrowLeft') {
-        e.preventDefault();
-        cdSar(-10);
-      } else if (e.key === 'ArrowRight') {
-        e.preventDefault();
-        cdSar(10);
+        return;
       }
+      const ey = cdTvTus(e, tv);
+      if (!ey) return;
+      // OK: odakta düğme/bağlantı varsa onu çalıştırsın
+      if ((e.key === 'Enter' || e.keyCode === 13) && t && /^(BUTTON|A)$/.test(t.tagName)) return;
+      e.preventDefault();
+      if (ey === 'degistir') cdToggle();
+      else if (ey === 'oynat') { if (!cdDurum().playing) cdToggle(); }
+      else if (ey === 'duraklat') { if (cdDurum().playing) cdToggle(); }
+      else if (ey === 'geri') cdSar(-10);
+      else if (ey === 'ileri') cdSar(10);
+      else if (ey === 'geriCok') cdSar(-30);
+      else if (ey === 'ileriCok') cdSar(30);
+      else if (ey === 'oncekiBolum') cdBolumAtla(-1);
+      else cdBolumAtla(1);
+      if (tv) tvGoster(ey);
     };
     window.addEventListener('keydown', on);
     return () => window.removeEventListener('keydown', on);
   }, [tam]);
+  // TV: basılan tuşun kısa geri bildirimi
+  const [tvIz, setTvIz] = useState<{ m: string; n: number } | null>(null);
+  const tvGoster = (ey: TvEylem) => {
+    const m: Record<TvEylem, string> = { degistir: cdDurum().playing ? '▶ Oynatılıyor' : '❚❚ Duraklatıldı', oynat: '▶ Oynatılıyor', duraklat: '❚❚ Duraklatıldı',
+      geri: '◀ 10 sn geri', ileri: '10 sn ileri ▶', geriCok: '⏪ 30 sn geri', ileriCok: '30 sn ileri ⏩', oncekiBolum: '▲ Önceki bölüm', sonrakiBolum: '▼ Sonraki bölüm' };
+    setTvIz((x) => ({ m: m[ey], n: (x?.n || 0) + 1 }));
+  };
+  useEffect(() => { if (!tvIz) return; const i = window.setTimeout(() => setTvIz(null), 1200); return () => window.clearTimeout(i); }, [tvIz]);
 
   if (!key) return null;
   return (
     <div ref={ref} className={`cd-root cd-dock ${tam ? 'is-tam' : 'is-mini'}`} style={{ bottom: alt }} role="region" aria-label="Canlı ders oynatıcısı">
       {tam ? <TamOynatici /> : <MiniOynatici />}
+      {tvIz && <div key={tvIz.n} className="cd-tv-iz" role="status">{tvIz.m}</div>}
     </div>
   );
 }

@@ -17,6 +17,7 @@ import { ListeEkleDugme, Listem } from './CanliDersListem';
 import { useCdTur } from './useCdTur';
 import { CevrimdisiDugme, useCevrimdisiSuzgec } from './CanliDersCevrimdisi';
 import { cdBransKisa, cdDersEtiketi, cdKategoriGrupla, cdKonuSayisi, cdParca, type CdKategori } from './canliDersKategori';
+import { useCdTvGezinme } from './CanliDersTv';
 import '../../styles/canli-ders.css';
 
 const fold = (s: string) =>
@@ -33,6 +34,7 @@ type Konum = { vid: string; t: number; at: number };
 const konumHaritasi = () => new Map(cdKonumListesi().map((k) => [k.key, k as Konum]));
 
 function CanliDersListe() {
+  useCdTvGezinme('liste');
   const [dersler, setDersler] = useState<CdListeDers[] | null>(null);
   const [hata, setHata] = useState<string | null>(null);
   const [q, setQ] = useState('');
