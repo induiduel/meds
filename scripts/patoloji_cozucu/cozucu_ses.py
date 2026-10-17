@@ -27,7 +27,8 @@ import sys
 import time
 from pathlib import Path
 
-os.environ["CUDA_VISIBLE_DEVICES"] = ""
+if os.environ.get("EMA_CIHAZ") != "cuda":  # GPU istisnası: ema_isci.py başındaki koşullar
+    os.environ["CUDA_VISIBLE_DEVICES"] = ""
 MEDS = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(MEDS / "scripts/sesli_anlatim"))
 import ema_isci as E  # noqa: E402

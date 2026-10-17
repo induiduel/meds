@@ -2,7 +2,8 @@
 """Sesli soru çözücü: örnek sorular (cikti/, cozucu_dogrula.py) + benzer/çıkmış sorular (cikti2/, cozucu_dogrula2.py) + EMA kayıtları
 → meds_temp/.../cozucu/cikti_tam/<kod>.json (seslendirme girdisi) ve meds/src/data/patoloji_cozucu/{index,<kod>}.json (ön yüz).
 
-Numaralar kalıcıdır (ilerleme ve klip adları buna bağlı): örnek 1..n (kaynak no), benzer n+1..2n, çıkmış 2n+1.. (cikti2 sırasıyla).
+Numaralar kalıcıdır (ilerleme ve klip adları buna bağlı): örnek 1..n (kaynak no), benzer n+1..2n, çıkmış 2n+1.. (cikti2 sırasıyla), canlı ders örnekleri
+sonra (cikti3/, cozucu_dogrula3.py; ekranda 'Örnek soru · zorluk').
 Ekranda sıra: ders akışı (ilk PDF sayfası), eşitlikte örnek → benzer → çıkmış. Hatalı ders atlanır ve raporlanır.
 Kullanım: python3 meds/scripts/patoloji_cozucu/cozucu_birlestir.py
 """
@@ -38,6 +39,11 @@ for od in ONEM:
         tam += [dict(q, no=n + i, tur='benzer') for i, q in enumerate(o2.get('yeni') or [], 1)]
         m = len(tam)
         tam += [dict(q, no=m + i, tur='cikmis') for i, q in enumerate(o2.get('cikmis') or [], 1)]
+    f3 = f'{A}/cikti3/{kod}.json'  # 3. tur: canlı ders konularından örnek sorular (numaralar çıkmışlardan sonra)
+    if os.path.exists(f3):
+        if not gecer('cozucu_dogrula3.py', f3): hatali.append(kod); continue
+        m = len(tam)
+        tam += [dict(q, no=m + i, tur='ornek') for i, q in enumerate(json.load(open(f3)).get('yeni') or [], 1)]
     json.dump({'kod': kod, 'sorular': tam}, open(f'{A}/cikti_tam/{kod}.json', 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
     kay = kayit(kod)
     sorular, gerek = [], []

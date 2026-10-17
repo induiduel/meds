@@ -21,7 +21,11 @@ from __future__ import annotations
 
 import os
 
-os.environ["CUDA_VISIBLE_DEVICES"] = ""  # GPU yasak — torch'tan önce
+# GPU yasak — torch'tan önce. Tek istisna (kullanıcı, 2026-10-18): EMA_CIHAZ=cuda + meds-gpuguard etkin + saat kilidi
+# (sudo nvidia-smi -lgc 300,1500); VRAM payı 0,6, koruyucu %60/ısı protokolüyle dondurur.
+GPU = os.environ.get("EMA_CIHAZ") == "cuda" and os.system("systemctl --user is-active --quiet meds-gpuguard") == 0
+if not GPU:
+    os.environ["CUDA_VISIBLE_DEVICES"] = ""
 
 import base64
 import fcntl
@@ -102,8 +106,12 @@ def model_yukle():
     from ema_lightning import EMA
 
     t = time.time()
-    tts = EMA(device="cpu")
-    log(f"EMA Lightning hazır: cpu ({time.time() - t:.0f} sn, {torch.get_num_threads()} iş parçacığı, hız {HIZ})")
+    cihaz = "cpu"
+    if GPU and torch.cuda.is_available():
+        torch.cuda.set_per_process_memory_fraction(0.6)
+        cihaz = "cuda"
+    tts = EMA(device=cihaz)
+    log(f"EMA Lightning hazır: {cihaz} ({time.time() - t:.0f} sn, {torch.get_num_threads()} iş parçacığı, hız {HIZ})")
     return tts
 
 

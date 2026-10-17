@@ -20,28 +20,62 @@
  },
  "dersler": [
   {
-   "kod": "u01",
+   "kod": "u01-1",
    "no": 1,
    "baslik": "Üriner Obstrüksiyon: Patofizyoloji, Klinik ve Tedavi",
-   "soru": 26,
-   "ornek": 20,
-   "cikmis": 6,
+   "soru": 23,
+   "ornek": 19,
+   "cikmis": 4,
    "ses": true,
+   "set": 1,
+   "setSay": 2,
    "sayfa": [
-    5,
+    2,
+    49
+   ]
+  },
+  {
+   "kod": "u01-2",
+   "no": 1,
+   "baslik": "Üriner Obstrüksiyon: Patofizyoloji, Klinik ve Tedavi",
+   "soru": 22,
+   "ornek": 20,
+   "cikmis": 2,
+   "ses": true,
+   "set": 2,
+   "setSay": 2,
+   "sayfa": [
+    26,
     62
    ]
   },
   {
-   "kod": "u02",
+   "kod": "u02-1",
    "no": 2,
    "baslik": "Ürolitiyazis Patofizyolojisi",
-   "soru": 26,
-   "ornek": 20,
-   "cikmis": 6,
+   "soru": 22,
+   "ornek": 17,
+   "cikmis": 5,
    "ses": true,
+   "set": 1,
+   "setSay": 2,
    "sayfa": [
     3,
+    49
+   ]
+  },
+  {
+   "kod": "u02-2",
+   "no": 2,
+   "baslik": "Ürolitiyazis Patofizyolojisi",
+   "soru": 22,
+   "ornek": 21,
+   "cikmis": 1,
+   "ses": true,
+   "set": 2,
+   "setSay": 2,
+   "sayfa": [
+    32,
     51
    ]
   },
@@ -49,14 +83,14 @@
    "kod": "u03-1",
    "no": 3,
    "baslik": "Üriner Sistem Enfeksiyonları",
-   "soru": 26,
-   "ornek": 15,
-   "cikmis": 11,
+   "soru": 38,
+   "ornek": 28,
+   "cikmis": 10,
    "ses": true,
    "set": 1,
    "setSay": 2,
    "sayfa": [
-    4,
+    2,
     85
    ]
   },
@@ -64,23 +98,23 @@
    "kod": "u03-2",
    "no": 3,
    "baslik": "Üriner Sistem Enfeksiyonları",
-   "soru": 25,
-   "ornek": 17,
-   "cikmis": 8,
+   "soru": 38,
+   "ornek": 29,
+   "cikmis": 9,
    "ses": true,
    "set": 2,
    "setSay": 2,
    "sayfa": [
-    43,
-    84
+    42,
+    86
    ]
   },
   {
    "kod": "u04-1",
    "no": 4,
    "baslik": "Üriner Sistem Enfeksiyonlarının Epidemiyoloji, Etyoloji ve Semptomatolojisi",
-   "soru": 29,
-   "ornek": 14,
+   "soru": 40,
+   "ornek": 25,
    "cikmis": 15,
    "ses": true,
    "set": 1,
@@ -94,40 +128,74 @@
    "kod": "u04-2",
    "no": 4,
    "baslik": "Üriner Sistem Enfeksiyonlarının Epidemiyoloji, Etyoloji ve Semptomatolojisi",
-   "soru": 28,
-   "ornek": 21,
+   "soru": 40,
+   "ornek": 33,
    "cikmis": 7,
    "ses": true,
    "set": 2,
    "setSay": 2,
    "sayfa": [
-    32,
+    28,
     93
    ]
   },
   {
-   "kod": "u05",
+   "kod": "u05-1",
    "no": 5,
    "baslik": "Üriner Sistemin Spesifik Enfeksiyonları",
-   "soru": 28,
+   "soru": 25,
    "ornek": 20,
-   "cikmis": 8,
+   "cikmis": 5,
    "ses": true,
+   "set": 1,
+   "setSay": 2,
    "sayfa": [
     3,
-    57
+    55
    ]
   },
   {
-   "kod": "u06",
+   "kod": "u05-2",
+   "no": 5,
+   "baslik": "Üriner Sistemin Spesifik Enfeksiyonları",
+   "soru": 25,
+   "ornek": 22,
+   "cikmis": 3,
+   "ses": true,
+   "set": 2,
+   "setSay": 2,
+   "sayfa": [
+    27,
+    59
+   ]
+  },
+  {
+   "kod": "u06-1",
    "no": 6,
    "baslik": "Enürezis Nokturna",
-   "soru": 36,
-   "ornek": 20,
-   "cikmis": 16,
+   "soru": 26,
+   "ornek": 17,
+   "cikmis": 9,
    "ses": true,
+   "set": 1,
+   "setSay": 2,
    "sayfa": [
     2,
+    37
+   ]
+  },
+  {
+   "kod": "u06-2",
+   "no": 6,
+   "baslik": "Enürezis Nokturna",
+   "soru": 25,
+   "ornek": 18,
+   "cikmis": 7,
+   "ses": true,
+   "set": 2,
+   "setSay": 2,
+   "sayfa": [
+    17,
     38
    ]
   }

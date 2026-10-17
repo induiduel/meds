@@ -23,8 +23,8 @@
    "kod": "e01",
    "no": 1,
    "baslik": "Cinsel yolla bulaşan hastalıklarda tedavi",
-   "soru": 27,
-   "ornek": 19,
+   "soru": 40,
+   "ornek": 32,
    "cikmis": 8,
    "ses": true,
    "sayfa": [
@@ -33,28 +33,62 @@
    ]
   },
   {
-   "kod": "e02",
+   "kod": "e02-1",
    "no": 2,
    "baslik": "Genital enfeksiyonlar",
-   "soru": 29,
-   "ornek": 19,
-   "cikmis": 10,
+   "soru": 25,
+   "ornek": 18,
+   "cikmis": 7,
    "ses": true,
+   "set": 1,
+   "setSay": 2,
    "sayfa": [
     2,
     26
    ]
   },
   {
-   "kod": "e03",
+   "kod": "e02-2",
+   "no": 2,
+   "baslik": "Genital enfeksiyonlar",
+   "soru": 24,
+   "ornek": 21,
+   "cikmis": 3,
+   "ses": true,
+   "set": 2,
+   "setSay": 2,
+   "sayfa": [
+    11,
+    25
+   ]
+  },
+  {
+   "kod": "e03-1",
    "no": 3,
    "baslik": "İzolasyon yöntemleri",
-   "soru": 27,
+   "soru": 22,
    "ornek": 17,
-   "cikmis": 10,
+   "cikmis": 5,
    "ses": true,
+   "set": 1,
+   "setSay": 2,
    "sayfa": [
     2,
+    20
+   ]
+  },
+  {
+   "kod": "e03-2",
+   "no": 3,
+   "baslik": "İzolasyon yöntemleri",
+   "soru": 22,
+   "ornek": 17,
+   "cikmis": 5,
+   "ses": true,
+   "set": 2,
+   "setSay": 2,
+   "sayfa": [
+    9,
     20
    ]
   },
@@ -62,8 +96,8 @@
    "kod": "e04-1",
    "no": 4,
    "baslik": "Enfeksiyon Hastalıklarında Temel Kavramlar ve Genel Özellikler",
-   "soru": 23,
-   "ornek": 20,
+   "soru": 35,
+   "ornek": 32,
    "cikmis": 3,
    "ses": true,
    "set": 1,
@@ -77,27 +111,44 @@
    "kod": "e04-2",
    "no": 4,
    "baslik": "Enfeksiyon Hastalıklarında Temel Kavramlar ve Genel Özellikler",
-   "soru": 22,
-   "ornek": 16,
+   "soru": 34,
+   "ornek": 28,
    "cikmis": 6,
    "ses": true,
    "set": 2,
    "setSay": 2,
    "sayfa": [
-    27,
+    23,
     52
    ]
   },
   {
-   "kod": "e05",
+   "kod": "e05-1",
    "no": 5,
    "baslik": "Üriner Sistem Enfeksiyonları",
-   "soru": 26,
-   "ornek": 20,
-   "cikmis": 6,
+   "soru": 25,
+   "ornek": 21,
+   "cikmis": 4,
    "ses": true,
+   "set": 1,
+   "setSay": 2,
    "sayfa": [
-    4,
+    2,
+    39
+   ]
+  },
+  {
+   "kod": "e05-2",
+   "no": 5,
+   "baslik": "Üriner Sistem Enfeksiyonları",
+   "soru": 24,
+   "ornek": 22,
+   "cikmis": 2,
+   "ses": true,
+   "set": 2,
+   "setSay": 2,
+   "sayfa": [
+    20,
     39
    ]
   },
@@ -105,12 +156,12 @@
    "kod": "e06",
    "no": 6,
    "baslik": "Cinsel Yolla Bulaşan Enfeksiyonlarda Korunma ve Profilaksi",
-   "soru": 27,
-   "ornek": 19,
+   "soru": 40,
+   "ornek": 32,
    "cikmis": 8,
    "ses": true,
    "sayfa": [
-    4,
+    2,
     28
    ]
   },
@@ -118,8 +169,8 @@
    "kod": "e07",
    "no": 7,
    "baslik": "Sifiliz",
-   "soru": 30,
-   "ornek": 18,
+   "soru": 39,
+   "ornek": 27,
    "cikmis": 12,
    "ses": true,
    "sayfa": [
@@ -131,8 +182,8 @@
    "kod": "e08",
    "no": 8,
    "baslik": "Üretral Akıntı",
-   "soru": 27,
-   "ornek": 20,
+   "soru": 38,
+   "ornek": 31,
    "cikmis": 7,
    "ses": true,
    "sayfa": [
@@ -144,13 +195,13 @@
    "kod": "e10",
    "no": 10,
    "baslik": "Mikroorganizmalarda Direnç Sorunu ve Antimikrobiyal Yönetim",
-   "soru": 22,
-   "ornek": 18,
+   "soru": 34,
+   "ornek": 30,
    "cikmis": 4,
    "ses": true,
    "sayfa": [
     4,
-    29
+    30
    ]
   }
  ]

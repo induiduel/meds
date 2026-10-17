@@ -16,7 +16,11 @@ from pathlib import Path
 
 B = Path(__file__).resolve().parent
 MEDS = B.parents[1]
-DERS_AD = {'enfeksiyon': 'Enfeksiyon Hastalıkları', 'uroloji': 'Üroloji'}
+DERS_AD = {
+    'enfeksiyon': 'Enfeksiyon Hastalıkları', 'uroloji': 'Üroloji',
+    'genetik': 'Tıbbi Genetik', 'halksagligi': 'Halk Sağlığı',
+    'kadindogum': 'Kadın Hastalıkları ve Doğum', 'farmakoloji': 'Tıbbi Farmakoloji',
+}
 SES_AD = {'ema': 'EMA'}  # ses.py SESLER ile aynı kimlikler; varsayılan ilk
 MAKS_SET = 40
 
@@ -70,6 +74,11 @@ def main():
             if taslak: hatali.append(f'{kod}(çözücü hata)'); continue
             sys.exit(f'{kod}: cozucu_dogrula HATA — birleştirilmez\n{cikti}')
         S = json.load(open(fc))['sorular']
+        f3 = W / 'cozucu3' / f'{kod}.json'  # 3. tur: canlı ders konularından örnek sorular (cozucu_dogrula3.py)
+        if f3.exists():
+            ok3, c3 = gecer('cozucu_dogrula3.py', f3)
+            if not ok3: sys.exit(f'{kod}: cozucu_dogrula3 HATA — birleştirilmez\n{c3}')
+            S = S + [dict(q, ref=f'k:{i}', tur='ornek') for i, q in enumerate(json.load(open(f3)).get('yeni') or [], 1)]
         nm = numara.setdefault(kod, {})
         for q in sorted(S, key=lambda q: (q['tur'] != 'ornek', q['ref'])):
             if q['ref'] not in nm: nm[q['ref']] = max(nm.values(), default=0) + 1
