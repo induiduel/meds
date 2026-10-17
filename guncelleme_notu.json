@@ -1,10 +1,10 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 2,
-  "baslik": "Canlı Ders & Sınav Asistanı Güncellendi",
+  "onem": 3,
+  "baslik": "Yeni Branşlar: Sesli Sınav Asistanı ve Soru Çözücü Genişletildi",
   "maddeler": [
-    "Canlı ders bitişinde doğrudan ilgili dersin Sesli Sınav Asistanı'na veya İnteraktif Soru Çözücü'ye geçiş imkanı eklendi.",
-    "Tüm branşlar (Patoloji, Enfeksiyon, Üroloji, Genetik, Halk Sağlığı, Kadın Doğum, Farmakoloji) pekiştirme akışına entegre edildi.",
-    "Arayüz ve tasarım iyileştirmeleri yapıldı."
+    "Genetik, Halk Sağlığı, Kadın Doğum ve Farmakoloji branşlarına canlı ders konularından 295 yeni örnek soru eklendi.",
+    "Genetik ve Halk Sağlığı sınav asistanı ile tüm branşların soru çözücü seslendirmeleri tamamlandı.",
+    "Tüm branşlarda sesli soru çözümü ve sınav asistanı eksiksiz kullanıma sunuldu."
   ]
 }

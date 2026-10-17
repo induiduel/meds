@@ -20,15 +20,32 @@
  },
  "dersler": [
   {
-   "kod": "k01",
+   "kod": "k01-1",
    "no": 1,
    "baslik": "Abortus",
-   "soru": 33,
-   "ornek": 27,
-   "cikmis": 6,
+   "soru": 25,
+   "ornek": 22,
+   "cikmis": 3,
    "ses": true,
+   "set": 1,
+   "setSay": 2,
    "sayfa": [
     3,
+    41
+   ]
+  },
+  {
+   "kod": "k01-2",
+   "no": 1,
+   "baslik": "Abortus",
+   "soru": 24,
+   "ornek": 21,
+   "cikmis": 3,
+   "ses": true,
+   "set": 2,
+   "setSay": 2,
+   "sayfa": [
+    25,
     42
    ]
   }

@@ -20,80 +20,182 @@
  },
  "dersler": [
   {
-   "kod": "g01",
+   "kod": "g01-1",
    "no": 1,
    "baslik": "Dismorfolojide Genetik Terminoloji",
-   "soru": 23,
-   "ornek": 21,
+   "soru": 24,
+   "ornek": 22,
    "cikmis": 2,
    "ses": true,
+   "set": 1,
+   "setSay": 2,
    "sayfa": [
     3,
     89
    ]
   },
   {
-   "kod": "g02",
+   "kod": "g01-2",
+   "no": 1,
+   "baslik": "Dismorfolojide Genetik Terminoloji",
+   "soru": 24,
+   "ornek": 24,
+   "cikmis": 0,
+   "ses": true,
+   "set": 2,
+   "setSay": 2,
+   "sayfa": [
+    39,
+    90
+   ]
+  },
+  {
+   "kod": "g02-1",
    "no": 2,
    "baslik": "Kromozomal Hastalıklar ve Genetik Danışma",
-   "soru": 27,
-   "ornek": 21,
-   "cikmis": 6,
+   "soru": 26,
+   "ornek": 23,
+   "cikmis": 3,
    "ses": true,
+   "set": 1,
+   "setSay": 2,
    "sayfa": [
-    5,
+    4,
+    83
+   ]
+  },
+  {
+   "kod": "g02-2",
+   "no": 2,
+   "baslik": "Kromozomal Hastalıklar ve Genetik Danışma",
+   "soru": 26,
+   "ornek": 23,
+   "cikmis": 3,
+   "ses": true,
+   "set": 2,
+   "setSay": 2,
+   "sayfa": [
+    36,
     87
    ]
   },
   {
-   "kod": "g03",
+   "kod": "g03-1",
    "no": 3,
    "baslik": "Doğumsal Kadın-Erkek Gelişim Anomalileri",
-   "soru": 32,
-   "ornek": 20,
-   "cikmis": 12,
+   "soru": 29,
+   "ornek": 22,
+   "cikmis": 7,
    "ses": true,
+   "set": 1,
+   "setSay": 2,
    "sayfa": [
     5,
+    67
+   ]
+  },
+  {
+   "kod": "g03-2",
+   "no": 3,
+   "baslik": "Doğumsal Kadın-Erkek Gelişim Anomalileri",
+   "soru": 28,
+   "ornek": 23,
+   "cikmis": 5,
+   "ses": true,
+   "set": 2,
+   "setSay": 2,
+   "sayfa": [
+    36,
     77
    ]
   },
   {
-   "kod": "g04",
+   "kod": "g04-1",
    "no": 4,
    "baslik": "Ürogenital Sistem Tümörlerinde Genetik Belirteçler",
-   "soru": 23,
-   "ornek": 20,
-   "cikmis": 3,
+   "soru": 24,
+   "ornek": 23,
+   "cikmis": 1,
    "ses": true,
+   "set": 1,
+   "setSay": 2,
    "sayfa": [
-    3,
+    2,
+    57
+   ]
+  },
+  {
+   "kod": "g04-2",
+   "no": 4,
+   "baslik": "Ürogenital Sistem Tümörlerinde Genetik Belirteçler",
+   "soru": 24,
+   "ornek": 22,
+   "cikmis": 2,
+   "ses": true,
+   "set": 2,
+   "setSay": 2,
+   "sayfa": [
+    36,
     71
    ]
   },
   {
-   "kod": "g05",
+   "kod": "g05-1",
    "no": 5,
    "baslik": "Prenatal Tanı ve Uygulama Alanları",
-   "soru": 32,
-   "ornek": 22,
-   "cikmis": 10,
+   "soru": 29,
+   "ornek": 23,
+   "cikmis": 6,
    "ses": true,
+   "set": 1,
+   "setSay": 2,
    "sayfa": [
-    12,
+    4,
+    45
+   ]
+  },
+  {
+   "kod": "g05-2",
+   "no": 5,
+   "baslik": "Prenatal Tanı ve Uygulama Alanları",
+   "soru": 28,
+   "ornek": 24,
+   "cikmis": 4,
+   "ses": true,
+   "set": 2,
+   "setSay": 2,
+   "sayfa": [
+    45,
     94
    ]
   },
   {
-   "kod": "g06",
+   "kod": "g06-1",
    "no": 6,
    "baslik": "Preimplantasyon Genetik Tanı",
    "soru": 23,
-   "ornek": 20,
-   "cikmis": 3,
+   "ornek": 21,
+   "cikmis": 2,
    "ses": true,
+   "set": 1,
+   "setSay": 2,
    "sayfa": [
     3,
+    89
+   ]
+  },
+  {
+   "kod": "g06-2",
+   "no": 6,
+   "baslik": "Preimplantasyon Genetik Tanı",
+   "soru": 22,
+   "ornek": 21,
+   "cikmis": 1,
+   "ses": true,
+   "set": 2,
+   "setSay": 2,
+   "sayfa": [
+    44,
     92
    ]
   }

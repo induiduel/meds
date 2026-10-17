@@ -8,74 +8,134 @@
    "varsayilan": true
   }
  ],
- "ortak": {},
+ "ortak": {
+  "yanlis": {
+   "v": "1e0f04980772",
+   "sure": 1.2
+  },
+  "dene": {
+   "v": "542e22f41067",
+   "sure": 1.464
+  }
+ },
  "dersler": [
   {
-   "kod": "h01",
+   "kod": "h01-1",
    "no": 1,
    "baslik": "Halk Sağlığı Tarihçesi ve İlkeleri",
-   "soru": 36,
-   "ornek": 24,
-   "cikmis": 12,
-   "ses": false,
+   "soru": 29,
+   "ornek": 27,
+   "cikmis": 2,
+   "ses": true,
+   "set": 1,
+   "setSay": 2,
    "sayfa": [
     2,
+    58
+   ]
+  },
+  {
+   "kod": "h01-2",
+   "no": 1,
+   "baslik": "Halk Sağlığı Tarihçesi ve İlkeleri",
+   "soru": 29,
+   "ornek": 19,
+   "cikmis": 10,
+   "ses": true,
+   "set": 2,
+   "setSay": 2,
+   "sayfa": [
+    47,
     91
    ]
   },
   {
-   "kod": "h02",
+   "kod": "h02-1",
    "no": 2,
    "baslik": "Ana Çocuk Sağlığı Düzeyinin İzlenmesi",
-   "soru": 33,
-   "ornek": 25,
-   "cikmis": 8,
-   "ses": false,
+   "soru": 29,
+   "ornek": 23,
+   "cikmis": 6,
+   "ses": true,
+   "set": 1,
+   "setSay": 2,
    "sayfa": [
-    4,
-    74
+    2,
+    60
+   ]
+  },
+  {
+   "kod": "h02-2",
+   "no": 2,
+   "baslik": "Ana Çocuk Sağlığı Düzeyinin İzlenmesi",
+   "soru": 29,
+   "ornek": 27,
+   "cikmis": 2,
+   "ses": true,
+   "set": 2,
+   "setSay": 2,
+   "sayfa": [
+    34,
+    75
    ]
   },
   {
    "kod": "h03-1",
    "no": 3,
    "baslik": "Bebek Beslenmesi",
-   "soru": 22,
-   "ornek": 13,
+   "soru": 34,
+   "ornek": 25,
    "cikmis": 9,
-   "ses": false,
+   "ses": true,
    "set": 1,
    "setSay": 2,
    "sayfa": [
-    5,
-    73
+    3,
+    76
    ]
   },
   {
    "kod": "h03-2",
    "no": 3,
    "baslik": "Bebek Beslenmesi",
-   "soru": 22,
-   "ornek": 16,
+   "soru": 33,
+   "ornek": 27,
    "cikmis": 6,
-   "ses": false,
+   "ses": true,
    "set": 2,
    "setSay": 2,
    "sayfa": [
-    42,
+    41,
     77
    ]
   },
   {
-   "kod": "h04",
+   "kod": "h04-1",
    "no": 4,
    "baslik": "Salgın Hastalıklarda Kontrol ve Korunma Yöntemleri",
-   "soru": 23,
-   "ornek": 19,
-   "cikmis": 4,
-   "ses": false,
+   "soru": 22,
+   "ornek": 21,
+   "cikmis": 1,
+   "ses": true,
+   "set": 1,
+   "setSay": 2,
    "sayfa": [
     2,
+    15
+   ]
+  },
+  {
+   "kod": "h04-2",
+   "no": 4,
+   "baslik": "Salgın Hastalıklarda Kontrol ve Korunma Yöntemleri",
+   "soru": 21,
+   "ornek": 18,
+   "cikmis": 3,
+   "ses": true,
+   "set": 2,
+   "setSay": 2,
+   "sayfa": [
+    14,
     30
    ]
   },
@@ -83,10 +143,10 @@
    "kod": "h05",
    "no": 5,
    "baslik": "Enfeksiyon Hastalıklarının Genel Epidemiyolojik Özellikleri",
-   "soru": 22,
-   "ornek": 20,
+   "soru": 39,
+   "ornek": 37,
    "cikmis": 2,
-   "ses": false,
+   "ses": true,
    "sayfa": [
     3,
     86
