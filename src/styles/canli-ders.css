@@ -596,3 +596,43 @@
 .cd-yazi-a { font-weight: 700; font-size: 17px; line-height: 1; }
 .cd-yazi-a.is-kucuk { font-size: 12px; }
 .cd-yazi-n { min-width: 28px; border: 0; background: none; color: var(--color-ink-2); font: 600 12px/1 inherit; font-variant-numeric: tabular-nums; cursor: pointer; padding: 0 2px; }
+
+/* diyaloglar (süreler, soru çözücü önerisi) */
+.cd-dlg { position: fixed; inset: 0; z-index: 80; display: grid; place-items: center; padding: 16px; background: rgb(0 0 0 / .42); }
+.cd-dlg-kart { position: relative; display: flex; flex-direction: column; width: 100%; max-height: min(86vh, 860px); border-radius: 16px; background: var(--color-white); color: var(--color-ink);
+  border: 1px solid var(--color-line); box-shadow: 0 18px 50px rgb(0 0 0 / .25); }
+.cd-dlg-kart.is-dar { max-width: 420px; padding: 20px; gap: 10px; }
+.cd-dlg-kart.is-genis { max-width: 760px; overflow: hidden; }
+.cd-dlg-bas { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 10px 12px 10px 16px; border-bottom: 1px solid var(--color-line); }
+.cd-dlg-baslik { display: inline-flex; align-items: center; gap: 8px; font-size: 16px; font-weight: 700; }
+.cd-dlg-baslik svg { width: 17px; height: 17px; color: var(--color-accent); }
+.cd-dlg-govde { overflow-y: auto; overscroll-behavior: contain; padding: 12px 14px 16px; }
+.cd-dlg-x { position: absolute; top: 10px; right: 10px; }
+.cd-dlg-metin { margin: 0; font-size: 14px; line-height: 1.5; color: var(--color-ink-2); }
+.cd-dlg-eylem { display: flex; justify-content: flex-end; flex-wrap: wrap; gap: 8px; margin-top: 6px; }
+@media (max-width: 640px) {
+  .cd-dlg { padding: 0; place-items: end stretch; }
+  .cd-dlg-kart { max-height: 92vh; border-radius: 16px 16px 0 0; }
+  .cd-dlg-eylem .cd-btn { flex: 1; }
+}
+/* süreler diyalog içinde: daha küçük yazı */
+.cd-dlg .cd-sl { gap: 10px; }
+.cd-dlg .cd-sl-toplam { padding: 10px 12px; gap: 8px 14px; }
+.cd-dlg .cd-sl-toplam b { font-size: 20px; }
+.cd-dlg .cd-sl-toplam > div > span { font-size: 12px; }
+.cd-dlg .cd-sl-toplam a, .cd-dlg .cd-sl-toplam a b { font-size: 11.5px; }
+.cd-dlg .cd-sl-toplam a { padding: 3px 8px; }
+.cd-dlg .cd-sl-grup { scroll-margin-top: 4px; border-radius: 12px; }
+.cd-dlg .cd-sl-grup h2 { font-size: 13px; padding: 8px 12px; }
+.cd-dlg .cd-sl-ara { font-size: 11.5px; }
+.cd-dlg .cd-sl-tablo { font-size: 12.5px; }
+.cd-dlg .cd-sl-tablo th, .cd-dlg .cd-sl-tablo td { padding: 5px 12px; }
+.cd-dlg .cd-sl-tablo thead th { font-size: 10px; padding-block: 4px; }
+.cd-dlg .cd-sl-sure small, .cd-dlg .cd-sl-parca { font-size: 10.5px; }
+.cd-dlg .cd-sl-not { font-size: 11px; }
+
+/* liste başlığı araçları: süreler + varsayılan ses */
+.cd-liste-arac { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; }
+.cd-liste-arac > .cd-btn svg { width: 15px; height: 15px; }
+.cd-vses { display: inline-flex; align-items: center; gap: 8px; font-size: 12.5px; color: var(--color-ink-3); }
+.cd-vses select { height: 34px; max-width: 220px; padding: 0 8px; border: 1px solid var(--color-line); border-radius: 9px; background: var(--color-white); color: var(--color-ink); font: inherit; font-size: 13px; }

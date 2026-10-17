@@ -186,6 +186,9 @@ export function cdListeDurdur() {
   set({ aktif: false });
 }
 
+/** Ders sona erdi ve sırada başka ders yok: CanliDersDock soru çözücü önerisini açar */
+const dersBittiBildir = (key: string) => window.dispatchEvent(new CustomEvent('cd:ders-bitti', { detail: { key } }));
+
 function bitti() {
   const s = cdDurum();
   if (!s.key) return;
@@ -202,6 +205,7 @@ function bitti() {
   }
   if (!listeden) {
     set({ dersTur: 0, ...(st.aktif ? { aktif: false } : {}) });
+    dersBittiBildir(s.key);
     return;
   }
   let j = st.keys.indexOf(st.aktifKey!);
@@ -212,6 +216,7 @@ function bitti() {
       j = 0;
     } else {
       set({ aktif: false, dersTur: 0 });
+      dersBittiBildir(s.key);
       return;
     }
   }

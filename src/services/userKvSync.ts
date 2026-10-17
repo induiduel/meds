@@ -21,7 +21,7 @@ const SYNC_PATTERNS: RegExp[] = [
   /^medsoru_learn_feedback_local_v1$/,
   /^medsoru_learn_tour_(library|lesson)_v1$/,
   // Canlı ders oynatma listesi ve tekrar tercihi
-  /^medsoru_canli_ders_(liste|tekrar)_v1$/,
+  /^medsoru_canli_ders_(liste|tekrar|varsayilan_ses)_v1$/,
   /^medsoru_slide_drawings_v2(:.*)?$/,
   /^medsoru_annotations:.+$/,
   /^medsoru_highlights_v1$/,

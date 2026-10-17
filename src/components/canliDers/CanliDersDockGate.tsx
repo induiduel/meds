@@ -9,6 +9,7 @@ import { cdCevrimdisiKayitlari, cdSilinebilirKurullar } from './canliDersCevrimd
 
 const CanliDersDock = lazy(() => import('./CanliDersDock'));
 const CevrimdisiSoru = lazy(() => import('./CanliDersCevrimdisi'));
+const CozucuSoru = lazy(() => import('./CanliDersCozucuSoru'));
 
 export function CanliDersDockGate({ activeTab, dersKey }: { activeTab: string; dersKey?: string }) {
   const var_ = useCd((s) => !!s.key);
@@ -29,6 +30,7 @@ export function CanliDersDockGate({ activeTab, dersKey }: { activeTab: string; d
       {var_ && (
         <Suspense fallback={null}>
           <CanliDersDock activeTab={activeTab} dersKey={dersKey} />
+          <CozucuSoru />
         </Suspense>
       )}
       {soru && (

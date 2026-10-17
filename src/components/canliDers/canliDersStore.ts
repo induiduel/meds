@@ -61,7 +61,6 @@ export interface CdOzet { key: string; no: string | number; brans?: string; parc
 export const CD_HIZLAR = [1, 1.25, 1.5, 2, 3, 4] as const;
 const HIZ_KEY = 'medsoru_canli_ders_hiz';
 const KONUM_KEY = 'medsoru_canli_ders_konum_v1';
-const VARYANT_KEY = 'medsoru_canli_ders_ses';
 
 /* ---------------- adresler ---------------- */
 const yol = (key: string, vid: string) => `/api/canli-ders/ses/${encodeURIComponent(key)}/${encodeURIComponent(vid)}.mp3`;
@@ -430,18 +429,32 @@ export const cdKonumListesi = () =>
   Object.entries(konumlar())
     .map(([key, k]) => ({ key, ...k }))
     .sort((a, b) => b.at - a.at);
-const tercihVaryant = (vs: CdVaryant[]) => {
-  try {
-    const want = localStorage.getItem(VARYANT_KEY);
-    if (want) {
-      const v = vs.find((x) => x.etiket === want || x.id === want);
-      if (v) return v.id;
-    }
-  } catch {
-    /* yok */
+const tercihVaryant = (vs: CdVaryant[]) => cdTercihVaryant(vs)?.id ?? null;
+
+/* ---------------- varsayılan ses (kullanıcı tercihi; yoksa EMA) ---------------- */
+const VARSAYILAN_SES_KEY = 'medsoru_canli_ders_varsayilan_ses_v1';
+/** Sesin dersler arası kimliği: sağlayıcı + ses adı ("ema-yerel|Ema") */
+export const cdSesKimlik = (v: Pick<CdVaryant, 'saglayici' | 'ses' | 'id'>) => `${v.saglayici || ''}|${v.ses || v.id}`;
+const varsayilanAbone = new Set<() => void>();
+export const cdVarsayilanSes = (): string | null => { try { return localStorage.getItem(VARSAYILAN_SES_KEY); } catch { return null; } };
+export function cdVarsayilanSesAyarla(kimlik: string | null) {
+  try { kimlik ? localStorage.setItem(VARSAYILAN_SES_KEY, kimlik) : localStorage.removeItem(VARSAYILAN_SES_KEY); } catch { /* yok */ }
+  varsayilanAbone.forEach((f) => f());
+}
+/** Bileşenlerde: tercih değişince yeniden çizilir */
+export const useCdVarsayilanSes = () => useSyncExternalStore(
+  (f) => { varsayilanAbone.add(f); window.addEventListener('storage', f); return () => { varsayilanAbone.delete(f); window.removeEventListener('storage', f); }; },
+  cdVarsayilanSes, () => null,
+);
+/** Dersin çalınacak sesi: kullanıcının varsayılanı → aynı sağlayıcı → EMA → ilk ses */
+export function cdTercihVaryant(vs: CdVaryant[]): CdVaryant | undefined {
+  const k = cdVarsayilanSes();
+  if (k) {
+    const v = vs.find((x) => cdSesKimlik(x) === k) || vs.find((x) => x.saglayici && x.saglayici === k.split('|')[0]);
+    if (v) return v;
   }
-  return vs[0]?.id ?? null;
-};
+  return vs.find((x) => /ema/i.test(x.saglayici || '')) || vs[0];
+}
 
 /* ---------------- eylemler ---------------- */
 function kaynakKur(o: CdOzet, vid: string, t0: number, oynat: boolean) {
@@ -552,7 +565,6 @@ export function cdVaryant(vid: string) {
   if (!st.key || vid === st.vid) return;
   const v = st.varyantlar.find((x) => x.id === vid);
   if (!v) return;
-  try { localStorage.setItem(VARYANT_KEY, v.etiket || v.id); } catch { /* yok */ }
   const t = audio?.currentTime || st.t;
   let t0 = st.dur ? (t / st.dur) * (v.sureSn || st.dur) : 0;
   const k = posByI.get(st.aktif);

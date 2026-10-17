@@ -11,14 +11,13 @@ import { useSyncExternalStore } from 'react';
 import { getCustomApiUrl } from '../../services/api';
 import { resolveDeckPdf } from '../../services/deckPdfService';
 import { OFFICIAL_CURRICULUM_COMMITTEES } from '../../data/curriculumData';
-import { cdDetayGetir, cdSesKisa, cdSesUrl, type CdDetay, type CdListeDers, type CdVaryant } from './canliDersStore';
+import { cdTercihVaryant, cdDetayGetir, cdSesKisa, cdSesUrl, type CdDetay, type CdListeDers, type CdVaryant } from './canliDersStore';
 import { cdDersEtiketi } from './canliDersKategori';
 import {
   CD_CEVRIMDISI_DEGISTI, cdCevrimdisiKayitlari, cdCevrimdisiYaz, cdKayitSesleri, type CdCevrimdisiKayit, type CdCevrimdisiSes,
 } from './canliDersCevrimdisiKayit';
 
 export const CD_OFFLINE_CACHE = 'medsoru-canli-ders-offline';
-const VARYANT_KEY = 'medsoru_canli_ders_ses';
 const SILME_GECIKME_GUN = 3;
 
 const mutlak = (p: string) => new URL(`${(getCustomApiUrl(p) || '').replace(/\/$/, '')}${p}`, location.href).href;
@@ -100,12 +99,7 @@ async function govdeOku(res: Response, ilerle: (n: number) => void): Promise<Blo
 
 export const tercihVid = (vs: CdVaryant[], caliyor?: string | null) => {
   if (caliyor && vs.some((v) => v.id === caliyor)) return caliyor;
-  try {
-    const want = localStorage.getItem(VARYANT_KEY);
-    const v = want && vs.find((x) => x.etiket === want || x.id === want);
-    if (v) return v.id;
-  } catch { /* yok */ }
-  return vs[0]?.id;
+  return cdTercihVaryant(vs)?.id;
 };
 
 let yardimciP: Promise<void> | null = null;

@@ -7,7 +7,7 @@ import {
   ArrowDown, ArrowUp, ListCheck, ListMusic, ListPlus, Pause, Play, Repeat, Repeat1, SkipBack, SkipForward, Trash2, X,
 } from 'lucide-react';
 import { navigateTo, pathFor } from '../../router';
-import { cdToggle, fmtSure, useCd, type CdListeDers } from './canliDersStore';
+import { cdTercihVaryant, cdToggle, fmtSure, useCd, type CdListeDers } from './canliDersStore';
 import { cdDersEtiketi } from './canliDersKategori';
 import {
   CD_TEKRAR_SAYILAR, cdListeAtla, cdListeCikar, cdListeDegistir, cdListeOynat, cdListeTasi, cdListeTemizle, cdTekrarAyarla,
@@ -159,7 +159,7 @@ export function Listem({ dersler, onTumu }: { dersler: CdListeDers[]; onTumu: ()
   const [onay, setOnay] = useState(false);
   const harita = useMemo(() => new Map(dersler.map((d) => [d.key, d])), [dersler]);
   const ogeler = useMemo(() => keys.map((k) => harita.get(k)).filter((d): d is CdListeDers => !!d), [keys, harita]);
-  const toplam = ogeler.reduce((a, d) => a + ((d.varsayilan || d.varyantlar[0])?.sureSn || 0), 0);
+  const toplam = ogeler.reduce((a, d) => a + ((cdTercihVaryant(d.varyantlar) || d.varsayilan)?.sureSn || 0), 0);
   const caliyorKey = sira >= 0 ? keys[sira] : null;
 
   useEffect(() => {
@@ -211,7 +211,7 @@ export function Listem({ dersler, onTumu }: { dersler: CdListeDers[]; onTumu: ()
       </div>
       <ol className="cd-satirlar cd-lm-ogeler">
         {ogeler.map((d, k) => {
-          const v = d.varsayilan || d.varyantlar[0];
+          const v = cdTercihVaryant(d.varyantlar) || d.varsayilan;
           const bu = d.key === caliyorKey;
           return (
             <li key={d.key} className={`cd-satir${bu ? ' is-caliyor' : ''}`}>
