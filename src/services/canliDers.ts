@@ -50,10 +50,10 @@ const BRANS_DUZELT: Record<string, [string, number, number?]> = {
   // Drive: Böbrek ve Mesane ikisi de "26)", İnvaziv Serviks "39)" — patoloji önem listesiyle aynı numara
   'k1-46-mesane-hastaliklari-ve-tumorleri': ['Tıbbi Patoloji', 27],
   'k1-49-invaziv-serviks-kanseri-ve-endometriyozis': ['Tıbbi Patoloji', 29],
-  // 30)Endometrial Hiperplazi ve Kanserleri.pdf iki derste anlatıldı: ilk yarısı Part 1, Uterus Düz Kas/Trofoblastik Part 2
-  'k1-53-endometriyal-hiperplazi-ve-kanserleri': ['Tıbbi Patoloji', 30, 1],
-  'k1-54-uterus-duz-kas-ve-trofoblastik-tumorleri': ['Tıbbi Patoloji', 30, 2],
 };
+/** Listede gösterilmeyen dersler (adresle açılmaya devam eder). Uterus Düz Kas ve Trofoblastik: ayrı slaytı yok,
+ *  30. PDF s.76–91 (Endometrial dersinin sonu) + 32. PDF s.35–64 (Gebelik Hastalıkları) tekrarı — kullanıcı kararı. */
+const LISTEDE_GIZLI = new Set(['k1-54-uterus-duz-kas-ve-trofoblastik-tumorleri']);
 const BRANS_YEDEK: Record<string, [string, number]> = {
   'k1-06-gebelik-ve-emzirme-doneminde-beslenme': ['Halk Sağlığı', 7],
   'k1-63-turkiye-de-saglik-hizmetleri': ['Halk Sağlığı', 6],
@@ -100,7 +100,7 @@ const ozet = (key: string) => (v: KayitVaryant) => ({ id: v.id, etiket: v.etiket
 export function registerCanliDersRoutes(app: Express) {
   app.get('/api/canli-ders', (_req: Request, res: Response) => {
     const out = dersler()
-      .slice()
+      .filter((d) => !LISTEDE_GIZLI.has(d.key))
       .sort((a, b) => a.sira - b.sira)
       .map((d) => {
         const vs = varyantlar(d.key);
