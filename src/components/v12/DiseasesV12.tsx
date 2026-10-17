@@ -33,6 +33,8 @@ export interface DiseaseEntityGroup { type: string; items: Array<{ key: string; 
 
 export interface DiseasesV12Props {
   dataReady: boolean;
+  loadError?: boolean;
+  onReload?: () => void;
   total: number;
   filtered: DiseaseProfile[];
   limit: number;
@@ -266,7 +268,17 @@ export const DiseasesV12: React.FC<DiseasesV12Props> = (p) => {
         </nav>
       )}
       <div className="g12-scroll" aria-busy={!p.dataReady}>
-        {!p.dataReady ? (
+        {p.loadError ? (
+          <div className="g12-empty">
+            <b>Hastalık profilleri yüklenemedi</b>
+            <span>Bağlantını kontrol edip yeniden dene.</span>
+            {p.onReload && (
+              <button type="button" className="g12-btn is-sm" onClick={p.onReload}>
+                Yeniden dene
+              </button>
+            )}
+          </div>
+        ) : !p.dataReady ? (
           <ul className="g12-ul-rows" aria-label="Profiller yükleniyor">
             {Array.from({ length: 10 }, (_, i) => (
               <li key={i} className="g12-row is-skel" aria-hidden>
@@ -485,8 +497,8 @@ const DiseaseDetailV12: React.FC<DiseasesV12Props & { d: DiseaseProfile; detailR
               </li>
             ))}
             {lec.map((l) => (
-              <li key={l} className="g12-lesson">
-                <span className="g12-grow"><span className="t">{l}</span><span className="g12-m">Ders</span></span>
+              <li key={l} className="g12-lesson" style={{ cursor: 'pointer' }} onClick={() => onSearch(l)} title={`${l} konusunu tüm kaynaklarda ara`}>
+                <span className="g12-grow"><span className="t">{l}</span><span className="g12-m">Ders · Ara</span></span>
               </li>
             ))}
           </ul>

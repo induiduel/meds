@@ -584,11 +584,34 @@ export const PatolojiAsistan: React.FC<{ kod: string; onClose: () => void; onDer
               <section className="pa-kart pa-giris">
                 <small className="pa-etiket">{ders.no}. ders · {ders.bolumler.length} bölüm · {ders.noktalar.length} nokta · {tumSorular.length} soru</small>
                 <h1>{ders.baslik}</h1>
-                <div className="pa-cumleler">{ders.giris.map((c, j) => <p key={j} className={j === aktifCumle ? 'is-aktif' : ''}><Metin metin={c} /></p>)}</div>
+                <div className="pa-cumleler" role="region" aria-label="Giriş cümleleri">
+                  {ders.giris.map((c, j) => (
+                    <p
+                      key={j}
+                      className={`${j === aktifCumle ? 'is-aktif' : j < aktifCumle ? 'is-gecti' : ''} is-tiklanabilir`}
+                      onClick={() => cumleyeGit(j)}
+                      title="Bu cümleyi dinle"
+                      role="button"
+                      tabIndex={0}
+                      onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); cumleyeGit(j); } }}
+                    >
+                      <Metin metin={c} />
+                    </p>
+                  ))}
+                </div>
                 <ol className="pa-plan">
                   {ders.bolumler.map((b, j) => <li key={j}><span>{j + 1}</span>{b.baslik}</li>)}
                 </ol>
                 {bransTanim(kodBrans(kod)).sinavKurali && <p className="pa-kural">Sınav kuralı: tablo, şekil ve klinik bulgu sorulmaz · her slayttan {ders.soruSayisi} soru.</p>}
+                <div className="pa-btnler pa-kart-aksiyonlar">
+                  <div className="pa-parca-bar" role="group" aria-label="Cümle kontrolleri">
+                    <button type="button" className="pa-btn-parca" onClick={oncekiCumle} disabled={ders.giris.length <= 1} title="Önceki cümle ( [ )" aria-label="Önceki cümle"><SkipBack aria-hidden /><span>Önceki cümle</span></button>
+                    <button type="button" className="pa-btn-parca is-vurgu" onClick={cumleyiTekrarla} title="Bu cümleyi tekrarla ( R )" aria-label="Bu cümleyi tekrarla"><RotateCcw aria-hidden /><span>Bu cümleyi tekrarla</span></button>
+                    <button type="button" className="pa-btn-parca" onClick={sonrakiCumle} disabled={ders.giris.length <= 1} title="Sonraki cümle ( ] )" aria-label="Sonraki cümle"><span>Sonraki cümle</span><SkipForward aria-hidden /></button>
+                  </div>
+                  <button type="button" className="pa-btn" onClick={tekrarDinle} title="Girişi baştan dinle ( T )"><RotateCcw aria-hidden />Baştan dinle</button>
+                  <button type="button" className="pa-btn is-dolu" onClick={ileri}>Derse başla<ChevronRight aria-hidden /></button>
+                </div>
               </section>
             )}
 
@@ -596,13 +619,17 @@ export const PatolojiAsistan: React.FC<{ kod: string; onClose: () => void; onDer
               <section className="pa-kart pa-bolum">
                 <small className="pa-etiket">Bölüm {s.b + 1} / {ders.bolumler.length}</small>
                 <h1>{ders.bolumler[s.b].baslik}</h1>
-                <div className="pa-cumleler"><p className={aktifCumle === 0 ? 'is-aktif' : ''}><Metin metin={ders.bolumler[s.b].neden} /></p></div>
+                <div className="pa-cumleler"><p className={`${aktifCumle === 0 ? 'is-aktif' : ''} is-tiklanabilir`} onClick={() => cumleyeGit(0)} role="button" tabIndex={0} title="Bu açıklamayı dinle"><Metin metin={ders.bolumler[s.b].neden} /></p></div>
                 <ul className="pa-bolum-l">
                   {ders.noktalar.filter((n) => n.bolum === s.b && gorunenNoktalar.includes(ders.noktalar.indexOf(n))).map((n) => (
                     <li key={n.id}>{n.aday ? <Star aria-hidden className="is-aday" /> : <span className="pa-nokta" aria-hidden />}<span>{n.baslik}</span>
                       {sorulariSec(n, tercih.yogunluk).length > 0 && <small>{sorulariSec(n, tercih.yogunluk).length} soru</small>}</li>
                   ))}
                 </ul>
+                <div className="pa-btnler pa-kart-aksiyonlar">
+                  <button type="button" className="pa-btn" onClick={tekrarDinle} title="Bölüm girişini tekrar dinle ( T )"><RotateCcw aria-hidden />Tekrar dinle</button>
+                  <button type="button" className="pa-btn is-dolu" onClick={ileri}>Bölüme başla<ChevronRight aria-hidden /></button>
+                </div>
               </section>
             )}
 
@@ -615,11 +642,93 @@ export const PatolojiAsistan: React.FC<{ kod: string; onClose: () => void; onDer
                   <span className="pa-sayac">{noktaSirasi} / {gorunenNoktalar.length}</span>
                 </div>
                 <h2>{nokta.baslik}</h2>
-                <div className="pa-cumleler">
-                  {nokta.cumleler.map((c, j) => <p key={j} className={j === aktifCumle ? 'is-aktif' : j < aktifCumle ? 'is-gecti' : ''}><Metin metin={c} /></p>)}
+                <div className="pa-cumleler" role="region" aria-label="Anlatım cümleleri">
+                  {nokta.cumleler.map((c, j) => (
+                    <p
+                      key={j}
+                      className={`${j === aktifCumle ? 'is-aktif' : j < aktifCumle ? 'is-gecti' : ''} is-tiklanabilir`}
+                      onClick={() => cumleyeGit(j)}
+                      title="Bu cümleyi dinlemek için dokun"
+                      role="button"
+                      tabIndex={0}
+                      onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); cumleyeGit(j); } }}
+                    >
+                      <Metin metin={c} />
+                    </p>
+                  ))}
                 </div>
                 <div className="pa-hap"><span>Akılda kalsın</span><p><Metin metin={nokta.bilgi} /></p></div>
                 {sorulariSec(nokta, tercih.yogunluk).length > 0 && <p className="pa-sonra"><ListChecks aria-hidden />Sırada bu noktadan {sorulariSec(nokta, tercih.yogunluk).length} soru var.</p>}
+
+                <div className="pa-btnler pa-kart-aksiyonlar">
+                  <div className="pa-parca-bar" role="group" aria-label="Cümle kontrolleri">
+                    <button
+                      type="button"
+                      className="pa-btn-parca"
+                      onClick={oncekiCumle}
+                      disabled={nokta.cumleler.length <= 1 || (aktifCumle <= 0 && sonCumleRef.current <= 0)}
+                      title="Önceki cümleye / diyalog parçasına geç ( [ )"
+                      aria-label="Önceki cümle"
+                    >
+                      <SkipBack aria-hidden />
+                      <span>Önceki cümle</span>
+                    </button>
+                    <button
+                      type="button"
+                      className="pa-btn-parca is-vurgu"
+                      onClick={cumleyiTekrarla}
+                      title="Bu cümleyi / parçayı tekrardan başlat ( R )"
+                      aria-label="Bu cümleyi tekrarla"
+                    >
+                      <RotateCcw aria-hidden />
+                      <span>Bu cümleyi tekrarla</span>
+                    </button>
+                    <button
+                      type="button"
+                      className="pa-btn-parca"
+                      onClick={sonrakiCumle}
+                      disabled={nokta.cumleler.length <= 1 || (aktifCumle >= nokta.cumleler.length - 1 && sonCumleRef.current >= nokta.cumleler.length - 1)}
+                      title="Sonraki cümleye / parçaya geç ( ] )"
+                      aria-label="Sonraki cümle"
+                    >
+                      <span>Sonraki cümle</span>
+                      <SkipForward aria-hidden />
+                    </button>
+                  </div>
+
+                  <button
+                    type="button"
+                    className="pa-btn"
+                    onClick={tekrarDinle}
+                    title="Bu konunun anlatımını en baştan dinle ( T )"
+                  >
+                    <RotateCcw aria-hidden />
+                    Baştan dinle
+                  </button>
+
+                  {sorulariSec(nokta, tercih.yogunluk).length > 0 ? (
+                    <button
+                      type="button"
+                      className="pa-btn is-dolu"
+                      onClick={ileri}
+                      title="Bu noktanın sorularına geç"
+                    >
+                      <ListChecks aria-hidden />
+                      Soruları çöz ({sorulariSec(nokta, tercih.yogunluk).length})
+                      <ChevronRight aria-hidden />
+                    </button>
+                  ) : (
+                    <button
+                      type="button"
+                      className="pa-btn is-dolu"
+                      onClick={ileri}
+                      title="Sonraki konuya geç"
+                    >
+                      Sonraki konu
+                      <ChevronRight aria-hidden />
+                    </button>
+                  )}
+                </div>
               </section>
             )}
 
@@ -670,8 +779,33 @@ export const PatolojiAsistan: React.FC<{ kod: string; onClose: () => void; onDer
                   )}
                   <div className="pa-btnler">
                     {!cozuldu && secim && !yardim && <span className="pa-ipucu">Yanlış şık elendi — başka bir şık seç.</span>}
+                    {!cozuldu && (
+                      <button type="button" className="pa-btn" onClick={() => cal(`q-${q.k}`, [q.kok])} title="Soruyu tekrar dinle">
+                        <RotateCcw aria-hidden />
+                        Soruyu tekrar dinle
+                      </button>
+                    )}
+                    {cozuldu && (
+                      <button type="button" className="pa-btn" onClick={() => cal(`d-${q.k}`, [q.dogruMetin])} title="Açıklamayı tekrar dinle">
+                        <RotateCcw aria-hidden />
+                        Açıklamayı tekrar dinle
+                      </button>
+                    )}
+                    {cozuldu && (
+                      <button type="button" className="pa-btn" onClick={() => cal(`q-${q.k}`, [q.kok])} title="Soruyu tekrar dinle">
+                        <RotateCcw aria-hidden />
+                        Soruyu dinle
+                      </button>
+                    )}
                     {!yardim && <button type="button" className="pa-btn is-yardim" onClick={yardimAl}><LifeBuoy aria-hidden />{cozuldu ? 'Tüm şıkları açıkla' : 'Yardım al'}</button>}
-                    {yardim && <button type="button" className="pa-btn" onClick={yardimAl}><RotateCcw aria-hidden />Yardımı tekrar dinle</button>}
+                    {yardim && (
+                      <div className="pa-parca-bar" role="group" aria-label="Şık yardım kontrolleri">
+                        <button type="button" className="pa-btn-parca" onClick={oncekiCumle} title="Önceki şıkkı dinle ( [ )"><SkipBack aria-hidden /><span>Önceki şık</span></button>
+                        <button type="button" className="pa-btn-parca is-vurgu" onClick={cumleyiTekrarla} title="Bu şıkkı tekrar dinle ( R )"><RotateCcw aria-hidden /><span>Bu şıkkı tekrarla</span></button>
+                        <button type="button" className="pa-btn-parca" onClick={sonrakiCumle} title="Sonraki şıkkı dinle ( ] )"><span>Sonraki şık</span><SkipForward aria-hidden /></button>
+                      </div>
+                    )}
+                    {yardim && <button type="button" className="pa-btn" onClick={yardimAl}><RotateCcw aria-hidden />Tüm şıkları tekrar dinle</button>}
                     {!cozuldu && <button type="button" className="pa-btn" onClick={dogruyuGoster}>Doğruyu göster</button>}
                     {cozuldu && <button type="button" className="pa-btn is-dolu" onClick={ileri}>Devam<ChevronRight aria-hidden /></button>}
                   </div>
@@ -683,7 +817,30 @@ export const PatolojiAsistan: React.FC<{ kod: string; onClose: () => void; onDer
               <section className="pa-kart pa-giris">
                 <small className="pa-etiket">Toparlayalım</small>
                 <h1>Sınav için akılda kalsın</h1>
-                <div className="pa-cumleler">{ders.kapanis.map((c, j) => <p key={j} className={j === aktifCumle ? 'is-aktif' : ''}><Metin metin={c} /></p>)}</div>
+                <div className="pa-cumleler" role="region" aria-label="Özet cümleleri">
+                  {ders.kapanis.map((c, j) => (
+                    <p
+                      key={j}
+                      className={`${j === aktifCumle ? 'is-aktif' : j < aktifCumle ? 'is-gecti' : ''} is-tiklanabilir`}
+                      onClick={() => cumleyeGit(j)}
+                      title="Bu cümleyi dinle"
+                      role="button"
+                      tabIndex={0}
+                      onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); cumleyeGit(j); } }}
+                    >
+                      <Metin metin={c} />
+                    </p>
+                  ))}
+                </div>
+                <div className="pa-btnler pa-kart-aksiyonlar">
+                  <div className="pa-parca-bar" role="group" aria-label="Cümle kontrolleri">
+                    <button type="button" className="pa-btn-parca" onClick={oncekiCumle} disabled={ders.kapanis.length <= 1} title="Önceki cümle ( [ )"><SkipBack aria-hidden /><span>Önceki cümle</span></button>
+                    <button type="button" className="pa-btn-parca is-vurgu" onClick={cumleyiTekrarla} title="Bu cümleyi tekrarla ( R )"><RotateCcw aria-hidden /><span>Bu cümleyi tekrarla</span></button>
+                    <button type="button" className="pa-btn-parca" onClick={sonrakiCumle} disabled={ders.kapanis.length <= 1} title="Sonraki cümle ( ] )"><span>Sonraki cümle</span><SkipForward aria-hidden /></button>
+                  </div>
+                  <button type="button" className="pa-btn" onClick={tekrarDinle} title="Özeti baştan dinle ( T )"><RotateCcw aria-hidden />Baştan dinle</button>
+                  <button type="button" className="pa-btn is-dolu" onClick={ileri}>Sonuçları gör<ChevronRight aria-hidden /></button>
+                </div>
               </section>
             )}
 
@@ -702,6 +859,16 @@ export const PatolojiAsistan: React.FC<{ kod: string; onClose: () => void; onDer
                     <ul>{tekrarNoktalar.map((n) => <li key={n.id}><b>{n.baslik}</b><span><Metin metin={n.bilgi} /></span></li>)}</ul>
                   </div>
                 )}
+                <div className="pa-son-oneri">
+                  <button type="button" className="pa-hero-cozucu" onClick={() => cozucuyuAc(ders.kod)}>
+                    <span className="pa-hero-cozucu-i"><Headphones aria-hidden /></span>
+                    <span className="pa-hero-cozucu-t">
+                      <b>Bu konunun soru çözücü asistanı</b>
+                      <small>Çıkmış ve örnek sorularla sesli soru çözümü · şık analizleri ve ipuçları · tam ekran</small>
+                    </span>
+                    <ChevronRight aria-hidden />
+                  </button>
+                </div>
                 <div className="pa-btnler">
                   {tekrarlar.length > 0 && <button type="button" className="pa-btn is-dolu" onClick={() => { setTekrar(new Set(tekrarlar.map((q) => q.k))); setI(0); }}><RotateCcw aria-hidden />Yanlışlarımı tekrar et</button>}
                   {ilkDogru > 0 && <button type="button" className="pa-btn" onClick={() => ogrenildiAyarla(ders.noktalar.filter((n) => n.sorular.length && n.sorular.every((q) => sonuc[q.k] === 'd')).map((n) => n.id), true)}><Check aria-hidden />Doğru bildiklerimi öğrendim say</button>}
@@ -722,9 +889,12 @@ export const PatolojiAsistan: React.FC<{ kod: string; onClose: () => void; onDer
       {ders && !devamSor && (
         <footer className="pa-alt">
           <div className="pa-oynat">
-            <button type="button" className="pa-ikon" onClick={geri} disabled={i === 0} aria-label="Önceki"><ChevronLeft /></button>
-            <button type="button" className="pa-buyuk" onClick={oynatDuraklat} aria-label={caliyor ? 'Duraklat' : 'Oynat'}>{caliyor ? <Pause /> : <Play />}</button>
-            <button type="button" className="pa-ikon" onClick={ileri} disabled={i >= sahneler.length - 1} aria-label={s?.tip === 'soru' && !cozuldu ? 'Soruyu atla' : 'Sonraki'}>{s?.tip === 'soru' && !cozuldu ? <SkipForward /> : <ChevronRight />}</button>
+            <button type="button" className="pa-ikon" onClick={geri} disabled={i === 0} aria-label="Önceki sayfa" title="Önceki sayfa (Sol ok)"><ChevronLeft /></button>
+            <button type="button" className="pa-ikon pa-parca-btn" onClick={oncekiCumle} disabled={aktifCumleler.length <= 1} aria-label="Önceki cümle" title="Önceki cümle / parça ( [ )"><SkipBack /></button>
+            <button type="button" className="pa-ikon pa-parca-btn" onClick={cumleyiTekrarla} aria-label="Bu cümleyi tekrarla" title="Bu cümleyi / parçayı tekrardan başlat ( R )"><RotateCcw /></button>
+            <button type="button" className="pa-buyuk" onClick={oynatDuraklat} aria-label={caliyor ? 'Duraklat' : 'Oynat'} title={caliyor ? 'Duraklat (Boşluk)' : 'Oynat (Boşluk)'}>{caliyor ? <Pause /> : <Play />}</button>
+            <button type="button" className="pa-ikon pa-parca-btn" onClick={sonrakiCumle} disabled={aktifCumleler.length <= 1} aria-label="Sonraki cümle" title="Sonraki cümle / parça ( ] )"><SkipForward /></button>
+            <button type="button" className="pa-ikon" onClick={ileri} disabled={i >= sahneler.length - 1} aria-label={s?.tip === 'soru' && !cozuldu ? 'Soruyu atla' : 'Sonraki sayfa'} title={s?.tip === 'soru' && !cozuldu ? 'Soruyu atla' : 'Sonraki sayfa (Sağ ok)'}>{s?.tip === 'soru' && !cozuldu ? <SkipForward /> : <ChevronRight />}</button>
           </div>
           <div className="pa-ayar">
             <label className="pa-sec" title="Soru yoğunluğu">

@@ -535,9 +535,16 @@ export const SoruCozucu: React.FC<Props> = ({ kod: kod0, brans = 'patoloji', onC
             )}
 
             <div className="sc-btnler sc-alt-btn">
-              {cozuldu
-                ? <button type="button" className="sc-btn is-dolu" onClick={ileri}>{i >= sorular.length - 1 ? 'Sonuçları gör' : 'Sonraki soru'}<ChevronRight aria-hidden /></button>
-                : <button type="button" className="sc-btn" onClick={tekrarOku}><RotateCcw aria-hidden />Soruyu yeniden oku</button>}
+              {cozuldu && (
+                <>
+                  <button type="button" className="sc-btn" onClick={cozumuDinle}><RotateCcw aria-hidden />Çözümü tekrar dinle</button>
+                  <button type="button" className="sc-btn" onClick={tekrarOku}><RotateCcw aria-hidden />Soruyu tekrar dinle</button>
+                  <button type="button" className="sc-btn is-dolu" onClick={ileri}>{i >= sorular.length - 1 ? 'Sonuçları gör' : 'Sonraki soru'}<ChevronRight aria-hidden /></button>
+                </>
+              )}
+              {!cozuldu && (
+                <button type="button" className="sc-btn" onClick={tekrarOku}><RotateCcw aria-hidden />Soruyu yeniden oku</button>
+              )}
             </div>
           </div>
         )}
@@ -581,6 +588,7 @@ export const SoruCozucu: React.FC<Props> = ({ kod: kod0, brans = 'patoloji', onC
         <footer className="sc-alt">
           <div className="sc-oynat">
             <button type="button" className="sc-ikon" onClick={geri} disabled={i === 0 && !bitti} aria-label="Önceki soru"><ChevronLeft /></button>
+            <button type="button" className="sc-ikon" onClick={cozuldu ? cozumuDinle : tekrarOku} disabled={bitti} aria-label="Tekrar dinle" title="Tekrar dinle"><RotateCcw /></button>
             <button type="button" className="sc-buyuk" onClick={oynatDuraklat} disabled={bitti} aria-label={caliyor ? 'Duraklat' : 'Oynat'}>{caliyor ? <Pause /> : <Play />}</button>
             <button type="button" className="sc-ikon" onClick={ileri} disabled={bitti} aria-label={cozuldu ? 'Sonraki soru' : 'Soruyu atla'}>{cozuldu ? <ChevronRight /> : <SkipForward />}</button>
           </div>

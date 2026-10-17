@@ -145,7 +145,15 @@ function useMedia(q: string) {
 }
 
 const urlId = () => {
-  try { return new URLSearchParams(window.location.search).get('id'); } catch { return null; }
+  try {
+    const q = new URLSearchParams(window.location.search).get('id');
+    if (q) return q;
+    const clean = window.location.pathname.replace(/^\/meds(?=\/|$)/, '');
+    const m = clean.match(/^\/hastaliklar\/([^\/?#]+)/);
+    return m ? decodeURIComponent(m[1]) : null;
+  } catch {
+    return null;
+  }
 };
 /** Adreste profil var mı (?id= ya da /hastaliklar/<kimlik>) */
 const urlHasDisease = () => {
@@ -196,30 +204,59 @@ export const DiseasesView: React.FC<DiseasesViewProps> = ({
   };
 
   const [dataReady, setDataReady] = useState(DiseaseService.isLoaded());
+  const [loadError, setLoadError] = useState(false);
+  const [reloadKey, setReloadKey] = useState(0);
+
   useEffect(() => {
     let alive = true;
-    DiseaseService.load().then(() => { if (alive) { reloadDiseases(); setDataReady(true); } });
+    setLoadError(false);
+    DiseaseService.load()
+      .then(() => {
+        if (alive) {
+          reloadDiseases();
+          setDataReady(true);
+        }
+      })
+      .catch((err) => {
+        console.error('Hastalıklar yüklenemedi:', err);
+        if (alive) {
+          setLoadError(true);
+          setDataReady(true);
+        }
+      });
     window.addEventListener('medsoru:diseases-changed', reloadDiseases);
-    return () => { alive = false; window.removeEventListener('medsoru:diseases-changed', reloadDiseases); };
-  }, []);
+    return () => {
+      alive = false;
+      window.removeEventListener('medsoru:diseases-changed', reloadDiseases);
+    };
+  }, [reloadKey]);
 
-  /** Kimlik ya da birleştirilmiş eski kimlik */
+  /** Kimlik ya da birleştirilmiş eski kimlik ya da ad / slug ile arama */
   const findById = useCallback(
-    (id: string) => diseases.find((d) => d.id === id) || diseases.find((d) => (d.aliases || []).includes(id)),
+    (id: string) => {
+      if (!id) return undefined;
+      const lower = id.toLowerCase().trim();
+      return (
+        diseases.find((d) => d.id === id) ||
+        diseases.find((d) => (d.aliases || []).includes(id)) ||
+        diseases.find((d) => d.id.toLowerCase() === lower) ||
+        diseases.find((d) => d.name.toLowerCase().trim() === lower) ||
+        diseases.find((d) => (d.aliases || []).some((al) => al.toLowerCase().trim() === lower))
+      );
+    },
     [diseases],
   );
 
-  // URL derin bağlantısı (/hastaliklar?id=… ya da #disease-<kimlik>[-bölüm])
+  // URL derin bağlantısı (/hastaliklar?id=… ya da /hastaliklar/<kimlik> ya da #disease-<kimlik>[-bölüm])
   const handledPropRef = useRef<string | null>(null);
   useEffect(() => {
     if (typeof window === 'undefined' || !diseases.length) return;
-    const params = new URLSearchParams(window.location.search);
     const hash = window.location.hash;
     let target: DiseaseProfile | undefined;
     // Uygulamadan gelen kimlik yalnız ilk kez (ya da değişince) uygulanır; sonra adres çubuğu esastır
     const fromProp = initialDiseaseId && initialDiseaseId !== handledPropRef.current ? initialDiseaseId : null;
     if (initialDiseaseId) handledPropRef.current = initialDiseaseId;
-    const direct = params.get('id') || fromProp;
+    const direct = urlId() || fromProp;
     if (direct) target = findById(direct);
     if (!target && hash.startsWith('#disease-')) {
       // Kimlikler tire içerir: önce tam kimlik, sonra bölüm son eki atılarak denenir
@@ -232,20 +269,24 @@ export const DiseasesView: React.FC<DiseasesViewProps> = ({
       const t = target;
       setTimeout(() => triggerDomHighlightAndScroll(hash || `disease-${t.id}`), 300);
     }
-  }, [diseases, initialDiseaseId]);
+  }, [diseases, initialDiseaseId, findById]);
 
-  // Geri / ileri: adresteki ?id= ayrıntıyı açar ya da kapatır
+  // Geri / ileri: adresteki id ayrıntıyı açar ya da kapatır
   useEffect(() => {
     const onPop = () => {
-      if (!/\/hastaliklar\/?$/.test(window.location.pathname.replace(/^\/meds(?=\/|$)/, ''))) return;
+      const clean = window.location.pathname.replace(/^\/meds(?=\/|$)/, '');
+      if (!/^\/hastaliklar(?:\/|$)/.test(clean)) return;
       const id = urlId();
-      if (!id) { setSelectedDisease(null); return; }
+      if (!id) {
+        if (!split) setSelectedDisease(null);
+        return;
+      }
       const d = findById(id);
       if (d) { setSelectedDisease(d); setTab('ozet'); }
     };
     window.addEventListener('popstate', onPop);
     return () => window.removeEventListener('popstate', onPop);
-  }, [findById]);
+  }, [findById, split]);
 
   // Sorgu zekâsı: yazım hatası / eşanlamlı / kısaltma ("kansizlik", "ttp") → hastalık kimlikleri
   const [conceptIds, setConceptIds] = useState<string[]>([]);
@@ -370,6 +411,19 @@ export const DiseasesView: React.FC<DiseasesViewProps> = ({
     else scored.sort((a, b) => a.d.name.localeCompare(b.d.name, 'tr'));
     return scored.map((x) => x.d);
   }, [diseases, foldedQuery, selectedCategory, selectedKind, onlyFavorites, favoriteIds, conceptIds, activeEntity, entityIds, lessonOn, lessonMatch]);
+
+  // Geniş ekranda hedef yoksa ilk profil kendiliğinden seçili gelir (boş panel kalmasın)
+  const firstDisease = filteredDiseases[0];
+  useEffect(() => {
+    const hasTarget = Boolean(
+      initialDiseaseId ||
+      urlId() ||
+      (typeof window !== 'undefined' && window.location.hash.startsWith('#disease-'))
+    );
+    if (split && !selectedDisease && !hasTarget && firstDisease) {
+      setSelectedDisease(firstDisease);
+    }
+  }, [split, selectedDisease, initialDiseaseId, firstDisease]);
 
   // Kaydırdıkça yükleme: ilk 40 satır, alt uca yaklaşınca 40'ar eklenir (470 kaydın tek seferde çizilmesi donma yapıyordu)
   const PAGE = 40;
@@ -788,6 +842,8 @@ export const DiseasesView: React.FC<DiseasesViewProps> = ({
       <>
         <DiseasesV12
           dataReady={dataReady}
+          loadError={loadError}
+          onReload={() => setReloadKey((k) => k + 1)}
           total={diseases.length}
           filtered={filteredDiseases}
           limit={limit}

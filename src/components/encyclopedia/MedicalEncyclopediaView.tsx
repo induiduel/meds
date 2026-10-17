@@ -125,6 +125,20 @@ const collator = new Intl.Collator('tr', { sensitivity: 'base' });
 const prefersReducedMotion = () =>
   typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+const getGlossaryUrlTarget = (): string | null => {
+  if (typeof window === 'undefined') return null;
+  try {
+    const sp = new URLSearchParams(window.location.search);
+    const q = sp.get('id') || sp.get('term') || sp.get('terim');
+    if (q) return q;
+    const clean = window.location.pathname.replace(/^\/meds(?=\/|$)/, '');
+    const m = clean.match(/^\/sozluk\/([^\/?#]+)/);
+    return m ? decodeURIComponent(m[1]) : null;
+  } catch {
+    return null;
+  }
+};
+
 /* ------------------------------------------------------------------ */
 /* Veri: dinamik yükleme + yerel düzeltmeler + hafif dizin              */
 /* ------------------------------------------------------------------ */
@@ -894,12 +908,12 @@ export const MedicalEncyclopediaView: React.FC<MedicalEncyclopediaViewProps> = (
     setPending({ kind: 'id', value: id, at: Date.now() });
   }, [resetFilters]);
 
-  // Derin bağlantı (initialTermId ya da ?id= / ?term=) ve evrensel vurgulama
+  // Derin bağlantı (initialTermId ya da /sozluk/<id> ya da ?id= / ?term=) ve evrensel vurgulama
   const loaded = !!entries;
   useEffect(() => {
     if (!loaded || typeof window === 'undefined') return;
     const urlParams = new URLSearchParams(window.location.search);
-    const targetId = initialTermId || urlParams.get('id') || urlParams.get('term') || urlParams.get('terim');
+    const targetId = initialTermId || getGlossaryUrlTarget();
     const highlight = urlParams.get('highlight');
     if (targetId) {
       // Arama sonucunda kimlik yerine terim ADI gelir ("apoptoz", "Apoptoz (Programlı Hücre Ölümü)"):
@@ -910,6 +924,7 @@ export const MedicalEncyclopediaView: React.FC<MedicalEncyclopediaViewProps> = (
       const list = entries || [];
       const found =
         byId.get(targetId) ||
+        list.find((e) => (e.id || '').toLocaleLowerCase('tr').trim() === want) ||
         list.find((e) => (e.term || '').toLocaleLowerCase('tr').trim() === want) ||
         list.find((e) => norm(e.term) === wantBare) ||
         list.find((e) => (e.aliases || []).some((al) => norm(al) === wantBare));
@@ -927,11 +942,32 @@ export const MedicalEncyclopediaView: React.FC<MedicalEncyclopediaViewProps> = (
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [initialTermId, loaded]);
 
-  // Geniş ekranda ilk madde kendiliğinden seçili gelir (boş panel kalmasın)
+  // Geniş ekranda hedef yoksa ilk madde kendiliğinden seçili gelir (boş panel kalmasın)
   const firstFilteredId = filteredEntries[0]?.id;
   useEffect(() => {
-    if (wide && !openId && firstFilteredId) setOpenId(firstFilteredId);
-  }, [wide, openId, firstFilteredId]);
+    const hasTarget = Boolean(initialTermId || getGlossaryUrlTarget());
+    if (wide && !openId && !hasTarget && firstFilteredId) setOpenId(firstFilteredId);
+  }, [wide, openId, initialTermId, firstFilteredId]);
+
+  // Geri / ileri: adresteki terim ayrıntıyı açar ya da kapatır
+  useEffect(() => {
+    const onPop = () => {
+      const clean = window.location.pathname.replace(/^\/meds(?=\/|$)/, '');
+      if (!/^\/sozluk(?:\/|$)/.test(clean)) return;
+      const target = getGlossaryUrlTarget();
+      if (!target) {
+        if (!wideRef.current) setOpenId(null);
+        else if (filteredRef.current[0]?.id) setOpenId(filteredRef.current[0].id);
+        return;
+      }
+      const list = entries || [];
+      const want = target.toLocaleLowerCase('tr').trim();
+      const found = byId.get(target) || list.find((e) => (e.id || '').toLocaleLowerCase('tr').trim() === want || (e.term || '').toLocaleLowerCase('tr').trim() === want);
+      if (found) focusEntry(found.id);
+    };
+    window.addEventListener('popstate', onPop);
+    return () => window.removeEventListener('popstate', onPop);
+  }, [byId, entries, focusEntry]);
 
   /* ---------------- Yapay zekâ denetimi, paylaşım ---------------- */
 

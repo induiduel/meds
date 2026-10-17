@@ -271,3 +271,21 @@
   .pa-ayar { flex-wrap: wrap; justify-content: flex-end; }
   .pa-sec select { max-width: 112px; }
 }
+
+/* Soru çözücü asistanı yönlendirme butonu (bitiş ekranı) */
+.pa-son-oneri { width: 100%; margin: 8px 0 4px; }
+.pa-hero-cozucu {
+  display: flex; align-items: center; gap: 12px; width: 100%; padding: 13px 15px; border-radius: 14px;
+  border: 1px solid color-mix(in srgb, var(--color-accent) 35%, transparent);
+  background: linear-gradient(135deg, color-mix(in srgb, var(--color-accent) 9%, var(--color-white)), var(--color-white));
+  text-align: left; cursor: pointer; transition: border-color .2s, transform .1s, box-shadow .2s;
+}
+.pa-hero-cozucu:hover { border-color: var(--color-accent); box-shadow: 0 4px 14px rgba(0,0,0,0.06); }
+.pa-hero-cozucu:active { transform: scale(.995); }
+.pa-hero-cozucu-i { flex-shrink: 0; width: 42px; height: 42px; border-radius: 12px; display: grid; place-items: center; background: var(--color-accent); color: #fff; }
+.pa-hero-cozucu-i svg { width: 21px; height: 21px; }
+.pa-hero-cozucu-t { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+.pa-hero-cozucu-t b { font-size: 15px; color: var(--color-ink); }
+.pa-hero-cozucu-t small { font-size: 12.5px; color: var(--color-ink-2); line-height: 1.4; }
+.pa-hero-cozucu > svg { width: 18px; height: 18px; flex-shrink: 0; color: var(--color-ink-3); }
+

@@ -1,11 +1,11 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 5,
-  "baslik": "Eksik Branş Spot Bilgileri ve Soru Çözücü Setleri Tamamlandı",
+  "onem": 6,
+  "baslik": "Sesli Sınav Asistanı Parça ve Cümle Kontrolleri Eklendi",
   "maddeler": [
-    "Kadın Hastalıkları ve Doğum: Gebelik Terminolojisi ve Kavramları (k02) spot önem listesi ve soru çözücü setleri eklendi.",
-    "Halk Sağlığı: Türkiye'de Sağlık Hizmetleri (h06) ile Gebelik ve Emzirme Döneminde Beslenme (h07) dersleri sisteme dahil edildi.",
-    "Enfeksiyon Hastalıkları: İntrauterin Enfeksiyonlar (e09) ile Bağışıklığı Baskılı Hastalarda Enfeksiyon (e11) dersleri ve çözücü setleri tamamlandı.",
-    "Tüm yeni derslerin spot maddeleri, örnek ve çıkmış soruları sesli soru çözücüye entegre edildi."
+    "Sınav asistanı anlatım sayfalarına 'Bu cümleyi tekrarla', 'Önceki cümle' ve 'Sonraki cümle' kontrolleri eklendi.",
+    "Sayfa içindeki cümlelere doğrudan tıklayarak istenen cümleden başlatma veya aynı cümleyi yeniden dinleme özelliği getirildi.",
+    "Alt oynatıcı çubuğuna cümle geçiş ve tekrar dinleme butonları ile klavye kısayolları (R: tekrarla, T: baştan dinle, [: önceki, ]: sonraki) eklendi.",
+    "Soru ve özet sayfalarına soruyu ve çözümü tekrar dinleme butonları entegre edildi."
   ]
 }

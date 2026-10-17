@@ -259,14 +259,18 @@ export const GlossaryV12: React.FC<GlossaryV12Props> = (p) => {
   const lastOpenRef = useRef<string | null>(null);
   const pick = (id: string) => {
     p.onSelect(id);
-    if (wide) return;
     try {
       if (new URLSearchParams(window.location.search).get('id') !== id) {
-        window.history.pushState({ route: 'glossary' }, '', `${pathFor('glossary')}?id=${encodeURIComponent(id)}`);
-        pushedRef.current = true;
+        const next = `${pathFor('glossary')}?id=${encodeURIComponent(id)}`;
+        if (wide) {
+          window.history.replaceState(window.history.state, '', next);
+        } else {
+          window.history.pushState({ route: 'glossary' }, '', next);
+          pushedRef.current = true;
+        }
       }
     } catch { /* adres yazılamadıysa yalnız durum */ }
-    requestAnimationFrame(() => window.scrollTo({ top: 0 }));
+    if (!wide) requestAnimationFrame(() => window.scrollTo({ top: 0 }));
   };
   const back = () => {
     if (pushedRef.current) { pushedRef.current = false; window.history.back(); return; }
@@ -564,7 +568,13 @@ const EntryDetailV12: React.FC<GlossaryV12Props & {
       {lessons.length > 0 && sec('lessons', isNoteSource ? 'Geçtiği dersler' : 'Kaynak', (
         <ul className="g12-lessons">
           {lessons.map((l) => (
-            <li key={l.title} className="g12-lesson">
+            <li
+              key={l.title}
+              className="g12-lesson"
+              style={{ cursor: 'pointer' }}
+              onClick={() => navigateTo(pathFor('search', l.title))}
+              title={`${l.title} konusunu tüm kaynaklarda ara`}
+            >
               <span className="g12-lead" aria-hidden><FileText /></span>
               <span className="g12-grow">
                 <span className="t">{l.title}</span>

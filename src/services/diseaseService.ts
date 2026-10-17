@@ -16,19 +16,25 @@ export const DiseaseService = {
     if (seed) return Promise.resolve(seed);
     if (!loading) {
       loading = (async () => {
-        // Panelden değiştirildiyse paketteki kopya eskidir: sunucudan (canlı içerik katmanı)
-        await contentReady();
-        let raw: unknown[] | null = null;
-        if (isContentChanged('diseases')) {
-          const r = await safeJsonFetch<unknown[]>('/api/content/diseases', { cache: 'no-store' });
-          if (r.ok && Array.isArray(r.data)) raw = r.data;
+        try {
+          // Panelden değiştirildiyse paketteki kopya eskidir: sunucudan (canlı içerik katmanı)
+          await contentReady(1500).catch(() => {});
+          let raw: unknown[] | null = null;
+          if (isContentChanged('diseases')) {
+            const r = await safeJsonFetch<unknown[]>('/api/content/diseases', { cache: 'no-store' }).catch(() => null);
+            if (r && r.ok && Array.isArray(r.data)) raw = r.data;
+          }
+          if (!raw) {
+            const m = await import('../data/diseases.json');
+            raw = ((m as { default?: unknown }).default ?? m) as unknown[];
+          }
+          seed = raw.map(normalizeDisease);
+          return seed;
+        } catch (err) {
+          console.error('[DiseaseService] Yükleme hatası:', err);
+          loading = null;
+          throw err;
         }
-        if (!raw) {
-          const m = await import('../data/diseases.json');
-          raw = ((m as { default?: unknown }).default ?? m) as unknown[];
-        }
-        seed = raw.map(normalizeDisease);
-        return seed;
       })();
     }
     return loading;

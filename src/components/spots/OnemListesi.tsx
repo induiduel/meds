@@ -488,8 +488,8 @@ export const OnemListesi: React.FC<{ brans?: Brans }> = ({ brans = 'patoloji' })
                 <ChevronRight aria-hidden />
               </button>
             )}
-            {!cokDers && brans !== 'patoloji' && (
-              <button type="button" className="on-hero-asistan" onClick={() => cozucuyuAc(kod)}>
+            {!cokDers && (
+              <button type="button" className="on-hero-asistan is-cozucu" onClick={() => cozucuyuAc(kod)}>
                 <span className="on-hero-asistan-i"><Headphones aria-hidden /></span>
                 <span><b>Bu dersin sorularını sesli çöz</b><small>Çıkmış ve örnek sorular karışık · ipucu, yanlışı ele, çözümü dinle · tam ekran</small></span>
                 <ChevronRight aria-hidden />
@@ -669,6 +669,19 @@ export const OnemListesi: React.FC<{ brans?: Brans }> = ({ brans = 'patoloji' })
               </ul>
             </section>
           ))}
+
+          {hazir && !cokDers && (
+            <div className="on-son-cozucu">
+              <button type="button" className="on-hero-asistan is-cozucu" onClick={() => cozucuyuAc(kod)}>
+                <span className="on-hero-asistan-i"><Headphones aria-hidden /></span>
+                <span>
+                  <b>Bu konunun soru çözücü asistanı</b>
+                  <small>Çıkmış ve örnek sorularla sesli soru çözümü · şık analizleri ve ipuçları · tam ekran</small>
+                </span>
+                <ChevronRight aria-hidden />
+              </button>
+            </div>
+          )}
 
           {hazir && !cokDers && (onceki || sonraki) && (
             <nav className="on-dersnav" aria-label="Ders gezintisi">
