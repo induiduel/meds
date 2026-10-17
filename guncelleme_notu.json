@@ -1,11 +1,10 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 7,
-  "baslik": "Tıbbi Sözlük ve Hastalıklar Atlası Doğrudan Erişim Düzeltmeleri",
+  "onem": 8,
+  "baslik": "Ders Asistanı Ses Kontrolleri ve Tek Hat Düzeni",
   "maddeler": [
-    "Sözlük ve Hastalıklar sayfalarında doğrudan bağlantı (/sozluk/<terim>, /hastaliklar/<profil>) ile veri görüntüleme düzeltildi.",
-    "Geniş ekranda hastalıklar açıldığında ayrıntı panelinin boş kalması önlendi; ilk profil otomatik olarak yüklenip seçili duruma getirildi.",
-    "Sözlük maddelerinde doğrudan bağlantıların varsayılan ilk madde tarafından ezilmesine yol açan eşzamansız durum çakışması giderildi.",
-    "Hastalık ve sözlük detay panellerindeki ilgili derslere tıklanarak doğrudan arama ve ders notlarına erişim sağlandı."
+    "Ders asistanında sesli anlatım için önceki cümle, bu cümleyi tekrarla, sonraki cümle ve baştan dinle kontrolleri tek bir kompakt kapsülde toplandı.",
+    "Kart altındaki aksiyon butonları ve ses kontrolleri aynı yatay hatta hizalanarak kartın gereksiz dikey alan kaplaması önlendi.",
+    "Mobil ve dar ekranlarda ses kontrolleri simge odaklı kompakt hale getirilerek akışın tek satırda kalması sağlandı."
   ]
 }

@@ -143,14 +143,84 @@
 .pa-cumleler p.is-tiklanabilir:hover { background: color-mix(in srgb, var(--color-accent) 10%, var(--color-field)); color: var(--color-ink); }
 .pa-cumleler p.is-tiklanabilir:active { transform: scale(0.995); }
 
-.pa-parca-bar { display: inline-flex; align-items: center; background: var(--color-field); border: 1px solid var(--color-line); border-radius: 12px; padding: 3px; gap: 3px; flex-wrap: wrap; }
-.pa-btn-parca { height: 38px; padding: 0 12px; border-radius: 9px; border: 0; background: transparent; color: var(--color-ink-2); font-size: 13.5px; font-weight: 700; display: inline-flex; align-items: center; gap: 6px; cursor: pointer; transition: background var(--mo-fast, 120ms), color var(--mo-fast, 120ms), transform var(--mo-fast, 120ms); }
-.pa-btn-parca:hover:not(:disabled) { background: var(--color-white); color: var(--color-ink); box-shadow: 0 2px 6px color-mix(in srgb, var(--color-ink) 8%, transparent); }
+.pa-kart-aksiyonlar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: 4px;
+  flex-wrap: nowrap;
+}
+.pa-parca-bar {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  background: var(--color-field);
+  border: 1px solid var(--color-line);
+  border-radius: 12px;
+  padding: 3px;
+  gap: 2px;
+  flex-wrap: nowrap;
+}
+.pa-btn-parca {
+  height: 36px;
+  padding: 0 10px;
+  border-radius: 9px;
+  border: 0;
+  background: transparent;
+  color: var(--color-ink-2);
+  font-size: 13px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background var(--mo-fast, 120ms), color var(--mo-fast, 120ms), transform var(--mo-fast, 120ms);
+}
+.pa-btn-parca:hover:not(:disabled) {
+  background: var(--color-white);
+  color: var(--color-ink);
+  box-shadow: 0 2px 6px color-mix(in srgb, var(--color-ink) 8%, transparent);
+}
 .pa-btn-parca:active:not(:disabled) { transform: scale(0.97); }
 .pa-btn-parca.is-vurgu { color: var(--color-accent); }
-.pa-btn-parca.is-vurgu:hover:not(:disabled) { color: var(--color-accent); }
-.pa-btn-parca:disabled { opacity: .38; cursor: not-allowed; }
-.pa-btn-parca svg { width: 15px; height: 15px; }
+.pa-btn-parca.is-tek {
+  background: var(--color-field);
+  border: 1px solid var(--color-line);
+  border-radius: 12px;
+  padding: 0 14px;
+}
+.pa-btn-parca.is-tek:hover:not(:disabled) {
+  background: var(--color-white);
+}
+.pa-btn-parca:disabled { opacity: .35; cursor: not-allowed; }
+.pa-btn-parca svg { width: 14px; height: 14px; }
+
+.pa-btn-akıs {
+  height: 38px;
+  min-height: 38px;
+  padding: 0 16px;
+  border-radius: 12px;
+  border: 1px solid var(--color-accent);
+  background: var(--color-accent);
+  color: var(--color-on-accent, #fff) !important;
+  font-size: 14px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  cursor: pointer;
+  transition: transform var(--mo-fast, 120ms), opacity var(--mo-fast, 120ms);
+}
+.pa-btn-akıs:hover {
+  opacity: .92;
+  transform: translateY(-1px);
+}
+.pa-btn-akıs:active { transform: translateY(0); }
+.pa-btn-akıs svg { width: 16px; height: 16px; }
 
 .pa-parca-btn { width: 38px; height: 38px; border-radius: 11px; }
 .pa-parca-btn svg { width: 17px; height: 17px; }
@@ -228,8 +298,11 @@
   .pa-parca-btn { width: 34px; height: 34px; }
   .pa-buyuk { width: 48px; height: 48px; }
   .pa-oto span { font-size: 12.5px; }
-  .pa-parca-bar { width: 100%; justify-content: space-between; }
-  .pa-btn-parca { flex: 1 1 auto; justify-content: center; padding: 0 6px; font-size: 12px; }
+  .pa-kart-aksiyonlar { gap: 6px; }
+  .pa-kart-aksiyonlar .pa-btn-parca span { display: none; }
+  .pa-kart-aksiyonlar .pa-btn-parca { padding: 0 8px; width: 34px; justify-content: center; }
+  .pa-kart-aksiyonlar .pa-btn-parca.is-tek span { display: inline; }
+  .pa-btn-akıs { padding: 0 12px; font-size: 13px; height: 36px; min-height: 36px; }
   .pa-btnler .pa-btn { flex: 1 1 auto; }
   .pa-skor b { font-size: 22px; }
 }
