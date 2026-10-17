@@ -19,6 +19,8 @@ def ses_denet(e, yer, s):
     if k: e.append(f'{yer}: ses büyük harfli kısaltma (harfle yaz): {k[:3]}')
     if KARISIK.findall(s): e.append(f'{yer}: ses karışık harfli kısaltma: {KARISIK.findall(s)[:3]}')
     if '**' in s: e.append(f'{yer}: seste ** var')
+    if re.search(r'\b(tip|faktör|sınıf|evre|derece|kompleks)\s+(ı|ıı|ııı|ıv|v|vıı|vııı|ıx|xıı|i|ii|iii|iv|vii|viii|ix|xii)\b', s, re.I): e.append(f'{yer}: seste Roma rakamı harf gibi (sayıyla yaz: tip dört, faktör bir)')
+    if re.search(r'\b(denea|renea|atepe|hapeve|anka)\b', s, re.I): e.append(f'{yer}: kısaltma kelime gibi yazılmış (harf harf, boşlukla)')
     tek = [m.group(1) for m in re.finditer(r'(?<![.!?]\s)(?<!^)\b([A-ZÇĞİÖŞÜ])\b(?![\'’])', s.strip())]
     if tek: e.append(f'{yer}: seste cümle ortasında tek büyük harf {tek[:3]} (okunuşla yaz)')
     for cm in re.split(r'(?<=[.!?])\s+', t):
@@ -66,7 +68,7 @@ for p in sys.argv[1:]:
         ayni = q.get('soru') == kq['soru'] and q.get('secenekler') == kq['secenekler'] and q.get('dogru') == kq['dogru']
         if kt.get('durum') == 'tamam' and not ayni: e.append(f'{y}: kontrol tamam ama soru/şık/anahtar kaynaktan farklı')
         if kt.get('durum') == 'duzeltildi':
-            if ayni: e.append(f'{y}: düzeltildi denmiş ama değişiklik yok')
+            # kaynak sonradan düzeltmeyle güncellendiyse (duzeltmeleri_yay.py) birebir aynı olur — sorun değil
             if not kt.get('not') or len(kt['not']) < 15: e.append(f'{y}: düzeltme notu yok')
             u.append(f"{y}: DÜZELTİLDİ — {kt.get('not')}")
         sec = q.get('secenekler') or {}

@@ -2,17 +2,18 @@ import { useSyncExternalStore } from 'react';
 
 /**
  * Patoloji · Sesli soru çözücü — veri ve ilerleme deposu.
- * İçerik: src/data/patoloji_cozucu/{index,<kod>}.json (scripts/patoloji_cozucu/cozucu_birlestir.py). Her soru 2026-27 örnek
- * sorularından; ipucu, her şıkkın neden doğru/yanlış olduğu ve çözüm ders sunumuna dayanır. Ses: EMA klipleri
+ * İçerik: src/data/patoloji_cozucu/{index,<kod>}.json (scripts/patoloji_cozucu/cozucu_birlestir.py). Sorular: 2026-27 örnek
+ * soruları (ornek), aynı üslupta orta-zor benzer sorular (benzer) ve konunun en çok 5 çıkmış sorusu (cikmis); ipucu, her şıkkın neden doğru/yanlış olduğu ve çözüm ders sunumuna dayanır. Ses: EMA klipleri
  * /api/patoloji-cozucu/ses/<kod>/<klip>.mp3?v=<özet> (q-n kök+şıklar · i-n ipucu · s-n-H şık · c-n çözüm · d-n "Doğru!").
  */
 
 export type Harf = 'A' | 'B' | 'C' | 'D' | 'E';
 export const HARFLER: Harf[] = ['A', 'B', 'C', 'D', 'E'];
 export interface Klip { v: string; sure: number; zaman: [number, number][] }
-export interface CSoru { no: number; soru: string; secenekler: Record<Harf, string>; dogru: Harf; ipucu: string; siklar: Record<Harf, string>; cozum: string; sayfa: number[] }
+export type SoruTur = 'ornek' | 'benzer' | 'cikmis';
+export interface CSoru { no: number; tur?: SoruTur; sinav?: string; zorluk?: 'orta' | 'zor'; soru: string; secenekler: Record<Harf, string>; dogru: Harf; ipucu: string; siklar: Record<Harf, string>; cozum: string; sayfa: number[] }
 export interface CDers { kod: string; no: number; baslik: string; sorular: CSoru[]; klip: Record<string, Klip> }
-export interface CDizinDers { kod: string; no: number; baslik: string; soru: number; ses: boolean }
+export interface CDizinDers { kod: string; no: number; baslik: string; soru: number; ornek?: number; benzer?: number; cikmis?: number; ses: boolean }
 export interface CDizin { surum: string; ortak: Record<string, { v: string; sure: number }>; dersler: CDizinDers[] }
 
 const DOSYA = import.meta.glob('../../../data/patoloji_cozucu/[0-9]*.json') as Record<string, () => Promise<{ default: CDers }>>;
@@ -43,7 +44,8 @@ export const cozucuDizinYukle = (): Promise<CDizin> => {
 
 /** d: ilk denemede yardımsız doğru · d2: yardımla ya da ikinci denemede doğru · y: çözümü dinledi / bilemedi */
 export type Sonuc = 'd' | 'd2' | 'y';
-export interface DersIlerleme { s: Record<string, Sonuc>; i: number; at: string }
+/** s: soru no → sonuç · i: listedeki konum (eski kayıt) · q: kalınan sorunun no'su (sıra değişse de doğru yere döner) */
+export interface DersIlerleme { s: Record<string, Sonuc>; i: number; q?: number; at: string }
 export const ILERLEME_KEY = 'medsoru_cozucu_ilerleme_v1';
 export const TERCIH_KEY = 'medsoru_cozucu_tercih_v1';
 const OLAY = 'medsor:cozucu-ilerleme';

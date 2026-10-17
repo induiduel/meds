@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useState } from 'react';
-import { Eraser, Headphones, Lightbulb, Play, RotateCcw } from 'lucide-react';
+import { Eraser, Headphones, History, Lightbulb, Play, RotateCcw } from 'lucide-react';
 import { cozucuDizinYukle, ozet, useIlerleme, type CDizin } from './cozucuVeri';
 import '../../../styles/soru-cozucu.css';
 
@@ -23,14 +23,14 @@ export const SoruCozucuSayfa: React.FC = () => {
   const [dizin, setDizin] = useState<CDizin | null>(null);
   const [hata, setHata] = useState(false);
   const [ara, setAra] = useState('');
-  const [acik, setAcik] = useState<{ kod: string; yanlis: boolean } | null>(() => {
+  const [acik, setAcik] = useState<{ kod: string; mod?: 'yanlis' | 'cikmis' } | null>(() => {
     const k = urlOku('ders'); const c = urlOku('coz');
-    return k && c ? { kod: k, yanlis: c === 'yanlis' } : null;
+    return k && c ? { kod: k, mod: c === 'yanlis' || c === 'cikmis' ? c : undefined } : null;
   });
   const ilerleme = useIlerleme();
   useEffect(() => { cozucuDizinYukle().then(setDizin).catch(() => setHata(true)); }, []);
 
-  const ac = (kod: string, yanlis = false) => { setAcik({ kod, yanlis }); urlYaz({ ders: kod, coz: yanlis ? 'yanlis' : '1' }); };
+  const ac = (kod: string, mod?: 'yanlis' | 'cikmis') => { setAcik({ kod, mod }); urlYaz({ ders: kod, coz: mod || '1' }); };
   const kapat = () => { setAcik(null); urlYaz({ coz: null }); };
 
   const genel = useMemo(() => {
@@ -53,7 +53,7 @@ export const SoruCozucuSayfa: React.FC = () => {
       <section className="scs-hero">
         <div>
           <h2><Headphones aria-hidden />Patoloji · Sesli soru çözücü</h2>
-          <p>{dizin.dersler.length} derste {genel.toplam} örnek soru (2026-27). Asistan soruyu ve seçenekleri okur, sen seçersin; her seçeneğin neden doğru ya da yanlış olduğunu ders sunumuna dayanarak kısaca anlatır.</p>
+          <p>{dizin.dersler.length} derste {genel.toplam} soru: 2026-27 örnek soruları, aynı üslupta orta-zor benzer sorular ve konunun çıkmış soruları. Asistan soruyu ve seçenekleri okur, sen seçersin; her seçeneğin neden doğru ya da yanlış olduğunu ders sunumuna dayanarak kısaca anlatır.</p>
         </div>
         <div className="scs-genel" aria-label={`${cozulen} / ${genel.toplam} soru çözüldü`}>
           <b>{cozulen}<small> / {genel.toplam}</small></b>
@@ -85,13 +85,14 @@ export const SoruCozucuSayfa: React.FC = () => {
                   <span className="scs-no">{d.no}</span>
                   <span className="scs-ad">
                     <b>{d.baslik}</b>
-                    <small>{d.soru} soru{o.cozulen ? ` · ${o.cozulen} çözüldü · ${o.d} ilk denemede doğru` : ''}{d.ses ? '' : ' · ses hazırlanıyor'}</small>
+                    <small>{d.soru} soru{d.cikmis ? ` (${d.cikmis} çıkmış)` : ''}{o.cozulen ? ` · ${o.cozulen} çözüldü · ${o.d} ilk denemede doğru` : ''}{d.ses ? '' : ' · ses hazırlanıyor'}</small>
                   </span>
                 </div>
                 <div className="scs-cubuk" aria-hidden><i className="is-d" style={{ width: w(o.d) }} /><i className="is-d2" style={{ width: w(o.d2) }} /><i className="is-y" style={{ width: w(o.y) }} /></div>
                 <div className="scs-ders-alt">
                   <button type="button" className="is-ana" onClick={() => ac(d.kod)}><Play aria-hidden />{o.tamam ? 'Yeniden çöz' : devam ? 'Devam et' : 'Çözmeye başla'}</button>
-                  {y > 0 && <button type="button" onClick={() => ac(d.kod, true)}><RotateCcw aria-hidden />Yanlışlar · {y}</button>}
+                  {!!d.cikmis && <button type="button" onClick={() => ac(d.kod, 'cikmis')}><History aria-hidden />Çıkmışlar · {d.cikmis}</button>}
+                  {y > 0 && <button type="button" onClick={() => ac(d.kod, 'yanlis')}><RotateCcw aria-hidden />Yanlışlar · {y}</button>}
                 </div>
               </div>
             </li>
@@ -102,7 +103,7 @@ export const SoruCozucuSayfa: React.FC = () => {
 
       {acik && (
         <React.Suspense fallback={null}>
-          <SoruCozucu key={`${acik.kod}-${acik.yanlis}`} kod={acik.kod} yalnizYanlis={acik.yanlis} onClose={kapat} onDersDegis={(k) => urlYaz({ ders: k, coz: '1' })} />
+          <SoruCozucu key={`${acik.kod}-${acik.mod || ''}`} kod={acik.kod} mod={acik.mod} onClose={kapat} onDersDegis={(k) => urlYaz({ ders: k, coz: '1' })} />
         </React.Suspense>
       )}
     </div>

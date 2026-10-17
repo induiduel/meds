@@ -21,7 +21,8 @@ import '../../../styles/soru-cozucu.css';
  * Çözülen soruda şıka dokunmak o şıkkın açıklamasını okur. Ses yoksa okuma süresiyle ilerler (metin yine görünür).
  */
 
-interface Props { kod: string; onClose: () => void; onDersDegis?: (kod: string) => void; yalnizYanlis?: boolean }
+/** mod: yanlis = yalnız yanlış/yardımlı çözülenler · cikmis = yalnız çıkmış sorular (ikisinde de konum kaydedilmez) */
+interface Props { kod: string; onClose: () => void; onDersDegis?: (kod: string) => void; mod?: 'yanlis' | 'cikmis' }
 type Durum = 'acik' | 'cozuluyor' | 'dogru' | 'gosterildi';
 interface Adim { klasor: string; klip: string; metinler: string[]; onBasla?: () => void; onCumle?: (j: number) => void; kes?: number }
 const HIZLAR = [0.85, 1, 1.15, 1.3, 1.5, 1.75, 2];
@@ -33,7 +34,7 @@ const tercihOku = () => {
   try { return { ...v, ...JSON.parse(localStorage.getItem(TERCIH_KEY) || '{}') }; } catch { return v; }
 };
 
-export const SoruCozucu: React.FC<Props> = ({ kod: kod0, onClose, onDersDegis, yalnizYanlis }) => {
+export const SoruCozucu: React.FC<Props> = ({ kod: kod0, onClose, onDersDegis, mod }) => {
   const [kod, setKod] = useState(kod0);
   const [dizin, setDizin] = useState<CDizin | null>(null);
   const [ders, setDers] = useState<CDers | null>(null);
@@ -87,20 +88,24 @@ export const SoruCozucu: React.FC<Props> = ({ kod: kod0, onClose, onDersDegis, y
       if (!canli) return;
       const k = ilerlemeOku()[kod];
       setSonuc(k?.s || {});
-      if (yalnizYanlis && k) {
+      const kalinan = k ? (k.q !== undefined ? d.sorular.findIndex((x) => x.no === k.q) : k.i) : -1;
+      if (mod === 'yanlis' && k) {
         const y = d.sorular.filter((x) => k.s[x.no] && k.s[x.no] !== 'd').map((x) => x.no);
         if (y.length) { setListe(y); setTekrar(true); }
-      } else if (k && k.i > 0 && k.i < d.sorular.length && Object.keys(k.s).length < d.sorular.length) setDevamSor(k.i);
+      } else if (mod === 'cikmis') {
+        const c = d.sorular.filter((x) => x.tur === 'cikmis').map((x) => x.no);
+        if (c.length) { setListe(c); setTekrar(true); }
+      } else if (k && kalinan > 0 && kalinan < d.sorular.length && Object.keys(k.s).length < d.sorular.length) setDevamSor(kalinan);
       setDers(d);
     }).catch(() => canli && setHata(true));
     return () => { canli = false; };
-  }, [kod, yalnizYanlis]);
+  }, [kod, mod]);
   // ilerleme: tam akışta konum + sonuçlar; tekrar modunda yalnız sonuçlar
   useEffect(() => {
     if (!ders || devamSor !== null) return;
     // ders.kod: ders değişirken bu etki eski dersin durumuyla bir kez daha çalışır; kayıt yine eski derse gider
-    ilerlemeYaz(ders.kod, tekrar ? { s: sonuc } : { s: sonuc, i: bitti ? 0 : i });
-  }, [sonuc, i, bitti, ders, tekrar, devamSor]);
+    ilerlemeYaz(ders.kod, tekrar ? { s: sonuc } : { s: sonuc, i: bitti ? 0 : i, q: bitti ? undefined : sorular[i]?.no });
+  }, [sonuc, i, bitti, ders, tekrar, devamSor, sorular]);
 
   // ---------- ses motoru: adımlar sırayla; her adım bir klip (yoksa okuma süresi)
   const durdur = useCallback(() => {
@@ -257,7 +262,10 @@ export const SoruCozucu: React.FC<Props> = ({ kod: kod0, onClose, onDersDegis, y
       onBasla: () => { setDurum('gosterildi'); setSonSecim(q.dogru); setElenen(HARFLER.filter((x) => x !== q.dogru)); kaydir('.sc-cozum'); },
       onCumle: (j) => setOkunan(j > 0 ? { yer: 'cozum' } : null),
     });
-    calSira(adimlar);
+    // çözüm bitince (otomatik geçiş açıksa) sonraki soruya
+    calSira(adimlar, () => {
+      if (tercih.otomatik) otoRef.current = window.setTimeout(() => { otoRef.current = null; ileri(); }, 1400);
+    });
   };
   const tekrarOku = () => { if (q) calSira([kokAdimi(q, true)]); };
   const oynatDuraklat = () => {
@@ -339,7 +347,7 @@ export const SoruCozucu: React.FC<Props> = ({ kod: kod0, onClose, onDersDegis, y
         <div className="sc-ders">
           <button type="button" className="sc-ders-b" onClick={() => setDersMenu((v) => !v)} aria-expanded={dersMenu} aria-haspopup="listbox">
             <span className="sc-ders-no">{ders?.no ?? '…'}</span>
-            <span className="sc-ders-t"><small>Soru çözücü{tekrar ? ' · yanlışların tekrarı' : ''}</small><b>{ders?.baslik ?? 'Yükleniyor…'}</b></span>
+            <span className="sc-ders-t"><small>Soru çözücü{mod === 'cikmis' && tekrar ? ' · çıkmış sorular' : tekrar ? ' · yanlışların tekrarı' : ''}</small><b>{ders?.baslik ?? 'Yükleniyor…'}</b></span>
             <ChevronDown aria-hidden />
           </button>
           {dersMenu && dizin && (
@@ -396,6 +404,11 @@ export const SoruCozucu: React.FC<Props> = ({ kod: kod0, onClose, onDersDegis, y
             </div>
 
             <section className="sc-kart sc-soru">
+              <div className={`sc-tur t-${q.tur || 'ornek'}`}>
+                {q.tur === 'cikmis' ? <><b>Çıkmış soru</b>{q.sinav && <span>{q.sinav}</span>}</>
+                  : q.tur === 'benzer' ? <><b>Benzer soru</b>{q.zorluk && <span>{q.zorluk === 'zor' ? 'Zor' : 'Orta'}</span>}</>
+                  : <><b>Örnek soru</b><span>2026-27</span></>}
+              </div>
               <h2 className={okunan?.yer === 'kok' && caliyor ? 'is-aktif' : ''}>{q.soru}</h2>
               <div className="sc-siklar" role="group" aria-label="Seçenekler">
                 {HARFLER.map((h, n) => {
@@ -468,7 +481,7 @@ export const SoruCozucu: React.FC<Props> = ({ kod: kod0, onClose, onDersDegis, y
         {ders && devamSor === null && bitti && (
           <div className="sc-icerik">
             <section className="sc-kart sc-son">
-              <small className="sc-etiket">{tekrar ? 'Yanlışların tekrarı bitti' : 'Ders bitti'}</small>
+              <small className="sc-etiket">{mod === 'cikmis' && tekrar ? 'Çıkmış sorular bitti' : tekrar ? 'Yanlışların tekrarı bitti' : 'Ders bitti'}</small>
               <h1>{ders.baslik}</h1>
               <div className="sc-skor">
                 <div className="is-d"><b>{say('d')}</b><span>ilk denemede doğru</span></div>

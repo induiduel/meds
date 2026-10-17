@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Patoloji sesli soru çözücü — EMA Lightning ile klip seslendirme (yalnız CPU, bu bilgisayarda).
 
-Girdi : meds_temp/patoloji_ornek26/cozucu/cikti/<kod>.json  (cozucu_dogrula.py 0 HATA; her açıklama {metin, ses})
+Girdi : meds_temp/patoloji_ornek26/cozucu/cikti_tam/<kod>.json (cozucu_birlestir.py: örnek + benzer + çıkmış; her açıklama {metin, ses})
 Çıktı : meds/data/patoloji_cozucu/ses/<kod>/<klip>.mp3 + kayit.json {klip: {h, sure, zaman: [[bas, son] cümle başına]}}
 Klipler (soru no = n):
   q-n      soru kökü + şıklar ("A, …", "Be, …"; ekranda okunan şık vurgulanır)
@@ -31,12 +31,17 @@ os.environ["CUDA_VISIBLE_DEVICES"] = ""
 MEDS = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(MEDS / "scripts/sesli_anlatim"))
 import ema_isci as E  # noqa: E402
+sys.path.insert(0, str(MEDS / "scripts/patoloji_cozucu"))
+import kisaltma_ses as KS  # noqa: E402
+
+# Kısaltma okunuşu burada (KS.uzat: "dee nee aa"); okunus.py'nin bitişik yazımı ("denea") kelime gibi okunduğu için kapatılır
+E.okunus.duzelt = lambda metin, kayit=None: metin
 
 E.KBPS = 48
-GIRDI = MEDS.parent / "meds_temp/patoloji_ornek26/cozucu/cikti"
+GIRDI = MEDS.parent / "meds_temp/patoloji_ornek26/cozucu/cikti_tam"  # cozucu_birlestir.py üretir
 CIKTI = MEDS / "data/patoloji_cozucu/ses"
 CUMLE_SN, KISA_SN, UZUN_SN, ON_SN = 0.45, 0.3, 0.7, 0.12
-SURUM = "ema-1"
+SURUM = "ema-2"  # ema-2: kısaltmalar uzun ünlülü harf adlarıyla (kisaltma_ses.py)
 HARF_AD = {"A": "A", "B": "Be", "C": "Ce", "D": "De", "E": "E"}
 ORTAK = {"yanlis": ["Yanlış."], "dene": ["Bir daha dene."]}
 
@@ -55,6 +60,9 @@ def klipler(o: dict) -> dict[str, list[str]]:
     k: dict[str, list[str]] = {}
     for q in o["sorular"]:
         n = q["no"]
+        ekk = KS.metin_kisaltmalari(q["soru"], *q["secenekler"].values(), q["ipucu"]["metin"], q["cozum"]["metin"],
+                                    *(v["metin"] for v in q["siklar"].values()))
+        k0 = len(k)
         k[f"q-{n}"] = [nokta(q["kok_ses"])] + [f"{HARF_AD[h]}, {nokta(q['secenek_ses'][h])}" for h in "ABCDE"]
         k[f"i-{n}"] = cumlele(q["ipucu"]["ses"])
         for h in "ABCDE":
@@ -63,6 +71,8 @@ def klipler(o: dict) -> dict[str, list[str]]:
         d = q["dogru"]
         k[f"c-{n}"] = [f"Doğru cevap {HARF_AD[d]}, {nokta(q['secenek_ses'][d])}"] + cz
         k[f"d-{n}"] = ["Doğru!"] + cz
+        for ad in list(k)[k0:]:
+            k[ad] = [KS.uzat(c, ekk) for c in k[ad]]
     return k
 
 
