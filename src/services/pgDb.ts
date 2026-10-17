@@ -335,7 +335,7 @@ export function pgListen(
 
   const schedule = () => {
     if (stopped || timer) return;
-    const delay = Math.min(30_000, 1000 * 2 ** Math.min(attempt++, 5));
+    const delay = Math.min(60_000, 1000 * 2 ** Math.min(attempt++, 6));
     timer = setTimeout(() => {
       timer = null;
       void connect();
@@ -351,7 +351,9 @@ export function pgListen(
       client = null;
       if (keepAlive) clearInterval(keepAlive);
       keepAlive = null;
-      if (err) console.warn(`[pgListen:${channel}] bağlantı koptu:`, err?.message || err);
+      if (err && (attempt <= 2 || attempt % 10 === 0)) {
+        console.warn(`[pgListen:${channel}] bağlantı koptu (deneme ${attempt}):`, err?.message || err);
+      }
       hooks.onStatus?.('error');
       c.end().catch(() => {});
       schedule();

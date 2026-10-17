@@ -31,7 +31,9 @@ import {
 import { ActionMenu } from './ui/ActionMenu';
 import { QuestionItem } from '../types';
 import { AppUser } from '../services/auth';
-import { ErrorReportHistoryModal } from './ErrorReportHistoryModal';
+const ErrorReportHistoryModal = React.lazy(() =>
+  import('./ErrorReportHistoryModal').then((m) => ({ default: m.ErrorReportHistoryModal }))
+);
 import { shareDeepLink } from '../services/universalRedirectService';
 import * as api from '../services/api';
 
@@ -970,11 +972,13 @@ const QuestionCardComponent: React.FC<QuestionCardProps> = ({
       </div>
 
       {showReportHistoryModal && (
-        <ErrorReportHistoryModal
-          isOpen={showReportHistoryModal}
-          onClose={() => setShowReportHistoryModal(false)}
-          question={question}
-        />
+        <React.Suspense fallback={null}>
+          <ErrorReportHistoryModal
+            isOpen={showReportHistoryModal}
+            onClose={() => setShowReportHistoryModal(false)}
+            question={question}
+          />
+        </React.Suspense>
       )}
 
       {showReportModal && (

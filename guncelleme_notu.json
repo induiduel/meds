@@ -1,10 +1,10 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 3,
-  "baslik": "Yeni Branşlar: Sesli Sınav Asistanı ve Soru Çözücü Genişletildi",
+  "onem": 4,
+  "baslik": "Performans ve Hızlandırma Optimizasyonları",
   "maddeler": [
-    "Genetik, Halk Sağlığı, Kadın Doğum ve Farmakoloji branşlarına canlı ders konularından 295 yeni örnek soru eklendi.",
-    "Genetik ve Halk Sağlığı sınav asistanı ile tüm branşların soru çözücü seslendirmeleri tamamlandı.",
-    "Tüm branşlarda sesli soru çözümü ve sınav asistanı eksiksiz kullanıma sunuldu."
+    "Deste ve ders notları uç noktalarındaki serileştirme optimize edilerek yanıt hızları 5 ila 7 kat artırıldı.",
+    "Veritabanı bağlantı protokolü ve geri çekilme mekanizması iyileştirildi.",
+    "Ön yüz bileşenleri ayrıştırılarak sayfa ilk yükleme performansı artırıldı."
   ]
 }

@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "tsx watch server.ts",
     "build": "vite build",
-    "postbuild": "node scripts/prune-dist.mjs --apply",
+    "postbuild": "node scripts/prune-dist.mjs --keep-hours 6 --apply",
     "start": "tsx server.ts",
     "preview": "vite preview",
     "check:online": "tsx scripts/check-online-status.ts",

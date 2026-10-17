@@ -1154,15 +1154,36 @@ function handleConditionalResponse(
   data: any,
   cacheControl: string = 'no-cache'
 ): boolean {
-  const etag = computeEtag(data);
+  const str = typeof data === 'string' ? data : JSON.stringify(data);
+  const etag = `"${crypto.createHash('md5').update(str).digest('hex')}"`;
   res.setHeader('ETag', etag);
   res.setHeader('Cache-Control', cacheControl);
+  (res as any)._cachedJsonStr = str;
   const ifNoneMatch = req.headers['if-none-match'];
   if (ifNoneMatch && (ifNoneMatch === etag || ifNoneMatch === `W/${etag}`)) {
     res.status(304).end();
     return true;
   }
   return false;
+}
+
+function sendConditionalJson(
+  req: express.Request,
+  res: express.Response,
+  data: any,
+  cacheControl: string = 'no-cache'
+): void {
+  const jsonStr = (res as any)._cachedJsonStr || (typeof data === 'string' ? data : JSON.stringify(data));
+  const etag = `"${crypto.createHash('md5').update(jsonStr).digest('hex')}"`;
+  res.setHeader('ETag', etag);
+  res.setHeader('Cache-Control', cacheControl);
+  const ifNoneMatch = req.headers['if-none-match'];
+  if (ifNoneMatch && (ifNoneMatch === etag || ifNoneMatch === `W/${etag}`)) {
+    res.status(304).end();
+    return;
+  }
+  res.setHeader('Content-Type', 'application/json; charset=utf-8');
+  res.send(jsonStr);
 }
 
 // SSE (Server-Sent Events) Kalıcı Olay Akışı
@@ -6747,7 +6768,16 @@ const INTERACTIVE_DECK_ITEMS_DIR = path.resolve(__dirname, 'src', 'data', 'decks
 // Panel değişiklikleri data/content/ altında (canlı içerik katmanı); okuyan herkes önce oraya bakar.
 initContentOverlay(__dirname, DATA_DIR);
 
-let decksCache: { file: string; mtime: number; data: any[] } | null = null;
+let decksCache: {
+  file: string;
+  mtime: number;
+  data: any[];
+  compactJsonStr: string;
+  compactEtag: string;
+  fullJsonStr: string;
+  fullEtag: string;
+} | null = null;
+
 function getDecksDb(): any[] {
   try {
     const file = resolveContent(INTERACTIVE_DECKS_FILE);
@@ -6755,8 +6785,23 @@ function getDecksDb(): any[] {
       const mtime = fs.statSync(file).mtimeMs;
       if (decksCache && decksCache.file === file && decksCache.mtime === mtime) return decksCache.data;
       const data = JSON.parse(fs.readFileSync(file, 'utf-8'));
-      decksCache = { file, mtime, data };
-      return data;
+      const list = Array.isArray(data) ? data : [];
+      const compactList = list.map((d: any) => ({
+        id: d.id,
+        title: d.title,
+        description: d.description,
+        committee: d.committee || d.committeeId,
+        discipline: d.discipline,
+        slideCount: d.slides?.length || 0,
+        flashcardCount: d.flashcards?.length || 0,
+        updatedAt: d.updatedAt,
+      }));
+      const compactJsonStr = JSON.stringify({ total: compactList.length, decks: compactList });
+      const compactEtag = `"${crypto.createHash('md5').update(compactJsonStr).digest('hex')}"`;
+      const fullJsonStr = JSON.stringify({ total: list.length, decks: list });
+      const fullEtag = `"${crypto.createHash('md5').update(fullJsonStr).digest('hex')}"`;
+      decksCache = { file, mtime, data: list, compactJsonStr, compactEtag, fullJsonStr, fullEtag };
+      return list;
     }
   } catch (e) {
     console.error('Error reading interactive_learning_decks.json:', e);
@@ -6930,20 +6975,30 @@ app.get(['/api/decks', '/api/ogren', '/api/interactive-decks'], (req, res) => {
   try {
     const list = getDecksDb();
     const { committeeId, discipline, search, compact } = req.query;
-    let filtered = list;
-
-    if (committeeId) {
-      filtered = filtered.filter((d) => String(d.committee || d.committeeId || '').toLowerCase().includes(String(committeeId).toLowerCase()));
-    }
-    if (discipline) {
-      filtered = filtered.filter((d) => String(d.discipline || '').toLowerCase().includes(String(discipline).toLowerCase()));
-    }
-    if (search) {
-      const q = String(search).toLowerCase();
-      filtered = filtered.filter((d) => String(d.title || '').toLowerCase().includes(q) || String(d.id || '').toLowerCase().includes(q));
-    }
+    const isUnfiltered = !committeeId && !discipline && !search;
 
     if (compact === '1' || compact === 'true') {
+      if (isUnfiltered && decksCache?.compactJsonStr) {
+        res.setHeader('ETag', decksCache.compactEtag);
+        res.setHeader('Cache-Control', 'no-cache');
+        const ifNoneMatch = req.headers['if-none-match'];
+        if (ifNoneMatch && (ifNoneMatch === decksCache.compactEtag || ifNoneMatch === `W/${decksCache.compactEtag}`)) {
+          return res.status(304).end();
+        }
+        res.setHeader('Content-Type', 'application/json; charset=utf-8');
+        return res.send(decksCache.compactJsonStr);
+      }
+      let filtered = list;
+      if (committeeId) {
+        filtered = filtered.filter((d) => String(d.committee || d.committeeId || '').toLowerCase().includes(String(committeeId).toLowerCase()));
+      }
+      if (discipline) {
+        filtered = filtered.filter((d) => String(d.discipline || '').toLowerCase().includes(String(discipline).toLowerCase()));
+      }
+      if (search) {
+        const q = String(search).toLowerCase();
+        filtered = filtered.filter((d) => String(d.title || '').toLowerCase().includes(q) || String(d.id || '').toLowerCase().includes(q));
+      }
       const compactList = filtered.map((d) => ({
         id: d.id,
         title: d.title,
@@ -6954,12 +7009,33 @@ app.get(['/api/decks', '/api/ogren', '/api/interactive-decks'], (req, res) => {
         flashcardCount: d.flashcards?.length || 0,
         updatedAt: d.updatedAt,
       }));
-      return res.json({ total: compactList.length, decks: compactList });
+      return sendConditionalJson(req, res, { total: compactList.length, decks: compactList });
     }
 
+    if (isUnfiltered && decksCache?.fullJsonStr) {
+      res.setHeader('ETag', decksCache.fullEtag);
+      res.setHeader('Cache-Control', 'no-cache');
+      const ifNoneMatch = req.headers['if-none-match'];
+      if (ifNoneMatch && (ifNoneMatch === decksCache.fullEtag || ifNoneMatch === `W/${decksCache.fullEtag}`)) {
+        return res.status(304).end();
+      }
+      res.setHeader('Content-Type', 'application/json; charset=utf-8');
+      return res.send(decksCache.fullJsonStr);
+    }
+
+    let filtered = list;
+    if (committeeId) {
+      filtered = filtered.filter((d) => String(d.committee || d.committeeId || '').toLowerCase().includes(String(committeeId).toLowerCase()));
+    }
+    if (discipline) {
+      filtered = filtered.filter((d) => String(d.discipline || '').toLowerCase().includes(String(discipline).toLowerCase()));
+    }
+    if (search) {
+      const q = String(search).toLowerCase();
+      filtered = filtered.filter((d) => String(d.title || '').toLowerCase().includes(q) || String(d.id || '').toLowerCase().includes(q));
+    }
     const payload = { total: filtered.length, decks: filtered };
-    if (handleConditionalResponse(req, res, payload, 'no-cache')) return;
-    res.json(payload);
+    sendConditionalJson(req, res, payload);
   } catch (err: any) {
     res.status(500).json({ error: err.message });
   }
@@ -9877,18 +9953,32 @@ app.get('/api/automation/drive-files-status', (req, res) => {
   }
 });
 
+let cachedCompactNotes: { count: number; jsonStr: string; etag: string } | null = null;
+
 // Lecture Notes: Get all lecture notes (supports compact mode and committee filtering for instant loading)
 app.get('/api/lecture-notes', (req, res) => {
   try {
     const { committeeId, discipline, compact } = req.query;
     let notes = getAllLectureNotes();
-    if (committeeId && typeof committeeId === 'string') {
-      notes = notes.filter(n => n.committeeId === committeeId);
-    }
-    if (discipline && typeof discipline === 'string') {
-      notes = notes.filter(n => n.discipline?.toLowerCase().includes(discipline.toLowerCase()));
-    }
+    const isUnfiltered = !committeeId && !discipline;
+
     if (compact === 'true' || compact === '1') {
+      if (isUnfiltered && cachedCompactNotes && cachedCompactNotes.count === notes.length) {
+        res.setHeader('ETag', cachedCompactNotes.etag);
+        res.setHeader('Cache-Control', 'no-cache');
+        const ifNoneMatch = req.headers['if-none-match'];
+        if (ifNoneMatch && (ifNoneMatch === cachedCompactNotes.etag || ifNoneMatch === `W/${cachedCompactNotes.etag}`)) {
+          return res.status(304).end();
+        }
+        res.setHeader('Content-Type', 'application/json; charset=utf-8');
+        return res.send(cachedCompactNotes.jsonStr);
+      }
+      if (committeeId && typeof committeeId === 'string') {
+        notes = notes.filter(n => n.committeeId === committeeId);
+      }
+      if (discipline && typeof discipline === 'string') {
+        notes = notes.filter(n => n.discipline?.toLowerCase().includes(discipline.toLowerCase()));
+      }
       // Omit full page content to reduce payload from 35MB to <150KB for ultra-fast list loads
       const compactNotes = notes.map(n => ({
         id: n.id,
@@ -9902,11 +9992,28 @@ app.get('/api/lecture-notes', (req, res) => {
         createdAt: n.createdAt,
         updatedAt: n.updatedAt,
       }));
-      if (handleConditionalResponse(req, res, compactNotes, 'no-cache')) return;
-      return res.json(compactNotes);
+      if (isUnfiltered) {
+        const jsonStr = JSON.stringify(compactNotes);
+        const etag = `"${crypto.createHash('md5').update(jsonStr).digest('hex')}"`;
+        cachedCompactNotes = { count: notes.length, jsonStr, etag };
+        res.setHeader('ETag', etag);
+        res.setHeader('Cache-Control', 'no-cache');
+        const ifNoneMatch = req.headers['if-none-match'];
+        if (ifNoneMatch && (ifNoneMatch === etag || ifNoneMatch === `W/${etag}`)) {
+          return res.status(304).end();
+        }
+        res.setHeader('Content-Type', 'application/json; charset=utf-8');
+        return res.send(jsonStr);
+      }
+      return sendConditionalJson(req, res, compactNotes, 'no-cache');
     }
-    if (handleConditionalResponse(req, res, notes, 'no-cache')) return;
-    res.json(notes);
+    if (committeeId && typeof committeeId === 'string') {
+      notes = notes.filter(n => n.committeeId === committeeId);
+    }
+    if (discipline && typeof discipline === 'string') {
+      notes = notes.filter(n => n.discipline?.toLowerCase().includes(discipline.toLowerCase()));
+    }
+    sendConditionalJson(req, res, notes, 'no-cache');
   } catch (err: any) {
     res.status(500).json({ error: 'Ders notları yüklenemedi: ' + err.message });
   }
@@ -9923,8 +10030,7 @@ app.get('/api/lecture-notes/:id', (req, res) => {
     }
     // Faz 12 temizlik katmanı (özgün dosya değişmez); ?raw=1 ile özgün metin
     const payload = req.query.raw === '1' ? note : applyCleanOverlay(note);
-    if (handleConditionalResponse(req, res, payload, 'no-cache')) return;
-    res.json(payload);
+    sendConditionalJson(req, res, payload, 'no-cache');
   } catch (err: any) {
     res.status(500).json({ error: 'Ders notu alınamadı: ' + err.message });
   }
