@@ -16,7 +16,7 @@ import { cdListeOzetleri, useCdListe } from './canliDersListe';
 import { ListeEkleDugme, Listem } from './CanliDersListem';
 import { useCdTur } from './useCdTur';
 import { CevrimdisiDugme, useCevrimdisiSuzgec } from './CanliDersCevrimdisi';
-import { cdKategoriGrupla, type CdKategori } from './canliDersKategori';
+import { cdBransKisa, cdDersEtiketi, cdKategoriGrupla, type CdKategori } from './canliDersKategori';
 import '../../styles/canli-ders.css';
 
 const fold = (s: string) =>
@@ -63,7 +63,7 @@ function CanliDersListe() {
     if (!dersler) return [];
     const f = fold(q);
     let l = suzgec === 'yarim' ? dersler.filter((d) => konum.has(d.key)) : dersler;
-    if (f) l = l.filter((d) => fold(`${d.no} ${d.baslik}`).includes(f));
+    if (f) l = l.filter((d) => fold(`${d.brans ? `${d.brans} ${cdBransKisa(d.brans)} ` : ''}${d.no} ${d.baslik}`).includes(f));
     return l;
   }, [dersler, q, suzgec, konum]);
   const cevrimdisi = useCevrimdisiSuzgec(liste);
@@ -112,7 +112,7 @@ function CanliDersListe() {
             type="search"
             value={q}
             onChange={(e) => setQ(e.target.value)}
-            placeholder="Ders ara (ad ya da numara)"
+            placeholder="Ders ara (ad, branş ya da numara)"
             aria-label="Ders ara"
           />
           {q && (
@@ -189,7 +189,7 @@ function DevamKarti({ d, k }: { d: CdListeDers; k: Konum }) {
       <span className="cd-ikon" aria-hidden><History /></span>
       <div className="cd-devam-ad">
         <small>{yuklu ? 'Şu an dinlediğin ders' : 'Kaldığın yerden devam et'}</small>
-        <b>{d.no}. {d.baslik}</b>
+        <b>{cdDersEtiketi(d)} · {d.baslik}</b>
         <span className="cd-ilerleme" aria-hidden><i style={{ transform: `scaleX(${oran})` }} /></span>
         <small className="cd-devam-t">{fmtSure(t)} / {fmtSure(dur)} · %{Math.round(oran * 100)} dinlendi</small>
       </div>
@@ -236,7 +236,7 @@ function IndirDugme({ d, v, kucuk }: { d: CdListeDers; v: CdVaryant; kucuk?: boo
     <a
       className={`cd-btn${kucuk ? ' is-ince' : ''}`}
       href={cdSesUrl(d.key, v.id, true)}
-      download={cdDosyaAdi(d.no, d.baslik, v.ses || v.etiket)}
+      download={cdDosyaAdi(cdDersEtiketi(d), d.baslik, v.ses || v.etiket)}
       aria-label={`MP3 indir: ${d.baslik} (${sesAdi(v)}${v.bayt ? `, ${fmtMb(v.bayt)}` : ''})`}
     >
       <Download aria-hidden />
@@ -249,7 +249,7 @@ function KategoriBolumu({ kat, n, acik, onDegistir, children }: { kat: CdKategor
   return (
     <section className={`cd-kat${acik ? '' : ' is-kapali'}`} aria-label={kat.ad}>
       <button type="button" className="cd-kat-bas" aria-expanded={acik} onClick={onDegistir}>
-        <span className="cd-kat-ad"><b>{kat.ad}</b><small>{kat.alt}</small></span>
+        <span className="cd-kat-ad"><b>{kat.ad}</b>{kat.alt && <small>{kat.alt}</small>}</span>
         <span className="cd-kat-n">{n} ders</span>
         <ChevronDown aria-hidden className="cd-kat-ok" />
       </button>

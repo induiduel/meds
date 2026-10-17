@@ -10,6 +10,7 @@
 import { useSyncExternalStore } from 'react';
 import { getCustomApiUrl, safeJsonFetch } from '../../services/api';
 import { cdCevrimdisiKayitlari, cdCevrimdisiVid } from './canliDersCevrimdisiKayit';
+import { cdDersEtiketi } from './canliDersKategori';
 
 export interface CdVaryant {
   id: string;
@@ -22,7 +23,12 @@ export interface CdVaryant {
 }
 export interface CdListeDers {
   key: string;
+  /** Branş içi numara (Tıbbi Patoloji 16); eski sunucu/çevrimdışı kayıtta kurul sırası olabilir */
   no: string | number;
+  /** Ders (branş) adı: "Tıbbi Patoloji"; kurulNo: kurul genelindeki sıra */
+  brans?: string;
+  kurul?: number;
+  kurulNo?: number;
   baslik: string;
   sira: number;
   varsayilan: CdVaryant;
@@ -37,13 +43,17 @@ export interface CdPdf { deckId: string; dosyalar: CdPdfDosya[]; paragraflar: (C
 export interface CdDetay {
   key: string;
   no: string | number;
+  brans?: string;
+  kurul?: number;
+  kurulNo?: number;
+  sira?: number;
   baslik: string;
   bolumler: CdBolum[];
   varyantlar: CdVaryant[];
   pdf: CdPdf | null;
 }
 /** Çalmaya başlamak için en az bu kadarı yeter (liste satırından hızlı oynatma) */
-export interface CdOzet { key: string; no: string | number; baslik: string; varyantlar: CdVaryant[] }
+export interface CdOzet { key: string; no: string | number; brans?: string; baslik: string; varyantlar: CdVaryant[] }
 
 export const CD_HIZLAR = [1, 1.25, 1.5, 2, 3, 4] as const;
 const HIZ_KEY = 'medsoru_canli_ders_hiz';
@@ -441,7 +451,8 @@ function kaynakKur(o: CdOzet, vid: string, t0: number, oynat: boolean) {
     ends = [];
   }
   set({
-    key: o.key, no: String(o.no), baslik: o.baslik, varyantlar: o.varyantlar, vid,
+    // no: görünen etiket ("Patoloji 16"); yeniden kurulumda (tekrar) brans gelmez, etiket aynen kalır
+    key: o.key, no: cdDersEtiketi(o), baslik: o.baslik, varyantlar: o.varyantlar, vid,
     detay: yeniDers ? null : st.detay, dur: v?.sureSn || 0, t: t0, hata: null, bekliyor: oynat,
     ...(yeniDers ? { aktif: -1, cumle: -1, bolum: -1 } : {}),
   });
@@ -608,7 +619,7 @@ function msMeta() {
   const v = st.varyantlar.find((x) => x.id === st.vid);
   try {
     navigator.mediaSession.metadata = new MediaMetadata({
-      title: `${st.no ? `${st.no}. ` : ''}${st.baslik}`,
+      title: `${st.no ? `${st.no} · ` : ''}${st.baslik}`,
       artist: 'MeDSor',
       album: `Canlı ders${v?.ses ? ` · ${v.ses}` : ''}`,
       artwork: [

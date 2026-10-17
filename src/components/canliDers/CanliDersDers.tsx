@@ -12,6 +12,7 @@ import {
   cdCumleAraligi, cdDetayBagla, cdDetayGetir, cdDurum, cdOynat, cdParagrafa, cdToggle, fmtSure, useCd, type CdDetay,
 } from './canliDersStore';
 import { useCdTur } from './useCdTur';
+import { cdDersEtiketi } from './canliDersKategori';
 import { ListeEkleDugme } from './CanliDersListem';
 import { CevrimdisiDugme } from './CanliDersCevrimdisi';
 import { CdDaha } from './CanliDersDaha';
@@ -95,7 +96,7 @@ export default function CanliDersDers({ dersKey }: { dersKey: string }) {
         if (!canli) return;
         setDetay(d);
         setBaglanti(cdDetayBagla(d));
-        document.title = `${d.no}. ${d.baslik} · Canlı ders · MeDSor`;
+        document.title = `${cdDersEtiketi(d)} · ${d.baslik} · Canlı ders · MeDSor`;
       },
       (e) => canli && setHata(e?.message || 'Ders açılamadı.'),
     );
@@ -221,7 +222,7 @@ export default function CanliDersDers({ dersKey }: { dersKey: string }) {
     >
       <header className="cd-ders-bas">
         <GeriBag />
-        <h1 className="cd-ders-ad" title={`${detay.no}. ${detay.baslik}`}><span>{detay.no}.</span> {detay.baslik}</h1>
+        <h1 className="cd-ders-ad" title={`${cdDersEtiketi(detay)} · ${detay.baslik}`}><span>{cdDersEtiketi(detay)} ·</span> {detay.baslik}</h1>
         <div className="cd-ders-arac">
           {pdfVar && (
             <div className="cd-sekmeler" role="radiogroup" aria-label="Görünüm">

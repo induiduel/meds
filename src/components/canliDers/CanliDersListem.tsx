@@ -8,6 +8,7 @@ import {
 } from 'lucide-react';
 import { navigateTo, pathFor } from '../../router';
 import { cdToggle, fmtSure, useCd, type CdListeDers } from './canliDersStore';
+import { cdDersEtiketi } from './canliDersKategori';
 import {
   CD_TEKRAR_SAYILAR, cdListeAtla, cdListeCikar, cdListeDegistir, cdListeOynat, cdListeTasi, cdListeTemizle, cdTekrarAyarla,
   tekrarSayiYaz, useCdListe, useCdListeSira, type CdTekrarMod,
@@ -222,7 +223,7 @@ export function Listem({ dersler, onTumu }: { dersler: CdListeDers[]; onTumu: ()
                   onClick={() => (bu ? cdToggle() : cdListeOynat(d.key))}
                   aria-label={bu ? `${playing ? 'Duraklat' : 'Sürdür'}: ${d.baslik}` : `Listeyi bu dersten oynat: ${d.baslik}`}
                 >
-                  <b>{d.no}. {d.baslik}</b>
+                  <b>{cdDersEtiketi(d)} · {d.baslik}</b>
                   <small>
                     <span>{v ? fmtSure(v.sureSn) : ''}</span>
                     {bu && <span className="cd-chip is-on">{playing ? 'Çalıyor' : 'Duraklatıldı'}</span>}

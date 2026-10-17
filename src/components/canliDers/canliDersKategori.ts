@@ -1,50 +1,41 @@
 /**
- * Canlı ders listesi · konu kategorileri. Ders başlığından anahtar sözcükle belirlenir (yeni ders eklenince de
- * kendiliğinden yerine düşer). Kurallar SIRAYLA denenir: organ kategorileri tümörden önce gelir ("Böbrek Tümörleri"
- * böbrekte kalsın), tümör genetikten önce ("Tümör Genetiği"), beslenme gebelikten önce.
+ * Canlı ders listesi · ders (branş) kategorileri. Branş ve branş içi numara sunucudan gelir
+ * (canliDers.ts › bransBilgisi: slayt PDF'inin Drive klasörü + dosya numarası). Her grup kendi numarasına göre sıralı.
  */
 import type { CdListeDers } from './canliDersStore';
 
-export interface CdKategori { id: string; ad: string; kisa: string; alt: string; re: RegExp | null }
+export interface CdKategori { id: string; ad: string; kisa: string; alt: string }
 
-const fold = (s: string) =>
-  s.toLocaleLowerCase('tr').normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/ı/g, 'i');
-
-/** Dizilim = sayfadaki sıra (genel → sistemler → halk sağlığı) */
-const KATEGORILER: CdKategori[] = [
-  { id: 'hucre', ad: 'Hücre hasarı ve adaptasyon', kisa: 'Hücre', alt: 'Patolojiye giriş, nekroz, birikimler', re: /hucre|patolojiye giris|birikim|yaslanma/ },
-  { id: 'enflamasyon', ad: 'Enflamasyon ve hemodinamik', kisa: 'Enflamasyon', alt: 'Enflamasyon, onarım, ödem, tromboz, şok', re: /enflamasyon|onarim|odem|tromboz|emboli/ },
-  { id: 'immun', ad: 'İmmünoloji', kisa: 'İmmünoloji', alt: 'Aşırı duyarlılık, otoimmünite, immünofarmakoloji', re: /duyarlilik|immun/ },
-  { id: 'tumor', ad: 'Tümör biyolojisi', kisa: 'Tümör', alt: 'Neoplazi, karsinojenez, evreleme', re: /tumor|karsinojen|neoplazi|kanser/ },
-  { id: 'genetik', ad: 'Genetik, gebelik ve prenatal', kisa: 'Genetik · Gebelik', alt: 'Kromozom, prenatal tanı, gebelik', re: /gebelik|prenatal|preimplant|abortus|kromozom|dismorfoloji|genetik/ },
-  { id: 'bobrek', ad: 'Böbrek ve üriner sistem', kisa: 'Böbrek', alt: 'Glomerüler, tübüler, taş, mesane', re: /bobrek|glomerul|tubul|obstruksiyon|urolit|mesane|enurez/ },
-  { id: 'genital', ad: 'Genital sistem ve meme', kisa: 'Genital · Meme', alt: 'Kadın ve erkek genital, meme', re: /vulva|serviks|endometri|uterus|ovidukt|ovaryum|meme|erkek genital|prostat/ },
-  { id: 'enfeksiyon', ad: 'Enfeksiyon ve mikrobiyoloji', kisa: 'Enfeksiyon', alt: 'ÜSE, CYBE, epidemiyoloji, direnç', re: /enfeksiyon|sifiliz|izolasyon|akinti|direnc|cinsel yolla/ },
-  { id: 'halk', ad: 'Halk sağlığı ve beslenme', kisa: 'Halk sağlığı', alt: 'Beslenme, salgın, sağlık hizmetleri', re: /beslen|halk sagligi|saglik hizmet|salgin|ana cocuk/ },
-  { id: 'diger', ad: 'Diğer dersler', kisa: 'Diğer', alt: '', re: null },
-];
-
-/** Eşleme sırası (dizilimden ayrı): önce dar/organ kuralları */
-const SIRA = ['halk', 'bobrek', 'genital', 'tumor', 'enfeksiyon', 'genetik', 'immun', 'enflamasyon', 'hucre'];
-const byId = new Map(KATEGORILER.map((k) => [k.id, k]));
-
-export function cdKategori(baslik: string): CdKategori {
-  const f = fold(baslik);
-  for (const id of SIRA) {
-    const k = byId.get(id)!;
-    if (k.re!.test(f)) return k;
-  }
-  return byId.get('diger')!;
-}
-
+const KISA: Record<string, string> = {
+  'Tıbbi Patoloji': 'Patoloji',
+  'Tıbbi Genetik': 'Genetik',
+  'Tıbbi Farmakoloji': 'Farmakoloji',
+  'Enfeksiyon Hastalıkları': 'Enfeksiyon',
+  'Kadın Hastalıkları ve Doğum': 'Kadın Doğum',
+};
+export const cdBransKisa = (brans: string) => KISA[brans] || brans.replace(/^Tıbbi\s+/, '');
+const bransAdi = (d: CdListeDers) => d.brans || 'Diğer';
 const noSayi = (d: CdListeDers) => Number(d.no) || 9999;
 
-/** Boş kategoriler düşer; her grupta ders numarasına göre sıralı */
+/** Liste satırı dışında (oynatıcı, devam kartı, listem) gösterilecek ad: "Patoloji 16 · Başlık" */
+export const cdDersEtiketi = (d: { no?: string | number; brans?: string }) =>
+  d.brans && d.brans !== 'Diğer' ? `${cdBransKisa(d.brans)} ${d.no}` : d.no ? String(d.no) : '';
+
+/** Boş gruplar düşer; branşlar ders sayısına göre (çoktan aza), her grupta branş içi numaraya göre sıralı.
+ *  Birden çok kurul varsa her kurulun branşı ayrı grup olur. */
 export function cdKategoriGrupla(ds: CdListeDers[]): { kat: CdKategori; dersler: CdListeDers[] }[] {
-  const m = new Map<string, CdListeDers[]>();
+  const cokKurul = new Set(ds.map((d) => d.kurul || 0)).size > 1;
+  const m = new Map<string, { kat: CdKategori; dersler: CdListeDers[] }>();
   for (const d of ds) {
-    const id = cdKategori(d.baslik).id;
-    (m.get(id) || m.set(id, []).get(id)!).push(d);
+    const ad = bransAdi(d);
+    const id = `${cokKurul ? `k${d.kurul || 0}-` : ''}${ad}`;
+    let g = m.get(id);
+    if (!g) m.set(id, (g = { kat: { id, ad, kisa: cdBransKisa(ad), alt: cokKurul && d.kurul ? `Kurul ${d.kurul}` : '' }, dersler: [] }));
+    g.dersler.push(d);
   }
-  return KATEGORILER.filter((k) => m.has(k.id)).map((k) => ({ kat: k, dersler: m.get(k.id)!.sort((a, b) => noSayi(a) - noSayi(b)) }));
+  const diger = (g: { kat: CdKategori }) => (g.kat.ad === 'Diğer' ? 1 : 0);
+  return [...m.values()]
+    .map((g) => ({ ...g, dersler: g.dersler.sort((a, b) => noSayi(a) - noSayi(b) || (a.sira ?? 0) - (b.sira ?? 0)) }))
+    .sort((a, b) => diger(a) - diger(b) || (a.kat.alt || '').localeCompare(b.kat.alt || '', 'tr')
+      || b.dersler.length - a.dersler.length || a.kat.ad.localeCompare(b.kat.ad, 'tr'));
 }

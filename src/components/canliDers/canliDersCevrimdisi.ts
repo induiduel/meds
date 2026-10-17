@@ -12,6 +12,7 @@ import { getCustomApiUrl } from '../../services/api';
 import { resolveDeckPdf } from '../../services/deckPdfService';
 import { OFFICIAL_CURRICULUM_COMMITTEES } from '../../data/curriculumData';
 import { cdDetayGetir, cdSesKisa, cdSesUrl, type CdDetay, type CdListeDers, type CdVaryant } from './canliDersStore';
+import { cdDersEtiketi } from './canliDersKategori';
 import {
   CD_CEVRIMDISI_DEGISTI, cdCevrimdisiKayitlari, cdCevrimdisiYaz, cdKayitSesleri, type CdCevrimdisiKayit, type CdCevrimdisiSes,
 } from './canliDersCevrimdisiKayit';
@@ -323,7 +324,8 @@ export async function cdCevrimdisiAyarla(key: string, vidler: string[] | null, o
     await cache.put(yedekDetay(key), json(yerelDetay));
     if (deckJson && detay.pdf?.deckId) await cache.put(deckAdresi(detay.pdf.deckId), json(deckJson));
     const listeSatiri: CdListeDers = {
-      key, no: detay.no, baslik: detay.baslik, sira: Number(detay.no) || 0, varsayilan: secili[0], varyantlar: secili, pdf: !!detay.pdf,
+      key, no: detay.no, brans: detay.brans, kurul: detay.kurul, kurulNo: detay.kurulNo, baslik: detay.baslik,
+      sira: detay.sira ?? (Number(detay.no) || 0), varsayilan: secili[0], varyantlar: secili, pdf: !!detay.pdf,
     };
     await cache.put(yedekListe(key), json(listeSatiri));
     // SW'nin ağ yedeği olarak tam liste (ağdan alınabilirse)
@@ -345,7 +347,7 @@ export async function cdCevrimdisiAyarla(key: string, vidler: string[] | null, o
       etiket: sesler[0].etiket,
       sesler,
       baslik: detay.baslik,
-      no: String(detay.no),
+      no: cdDersEtiketi(detay),
       bayt: sesler.reduce((a, x) => a + x.bayt, 0) + pdfBayt,
       pdfler: pdfAdres.map((p) => p.url),
       deckId: detay.pdf?.deckId,

@@ -55,9 +55,9 @@ const LISTE: Durak[] = [
   {
     sel: '.cd-kat-cipler',
     icon: ListOrdered,
-    eyebrow: 'Kategoriler',
-    title: 'Konuya göre süz',
-    text: 'Dersler konu başlıklarına ayrılmıştır; bir çipe dokununca yalnız o konunun dersleri kalır.',
+    eyebrow: 'Dersler',
+    title: 'Derse göre süz',
+    text: 'Dersler branşlarına (Patoloji, Enfeksiyon, Üroloji…) ayrılmıştır ve her biri o dersin kendi numarasıyla sıralanır; bir çipe dokununca yalnız o dersin konuları kalır.',
     points: ['“Yarım kalanlar” dinlemeye başladığın dersleri toplar', 'Kategori başlığına dokunarak bölümü katlayabilirsin'],
     optional: true,
   },

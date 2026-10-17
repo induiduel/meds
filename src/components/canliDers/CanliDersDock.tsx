@@ -361,7 +361,7 @@ function MiniOynatici() {
     <div className="cd-mini">
       <div className="cd-mini-ilerleme" aria-hidden><i style={{ transform: `scaleX(${dur ? Math.min(1, t / dur) : 0})` }} /></div>
       <button type="button" className="cd-mini-ad" onClick={don} aria-label={`Derse dön: ${baslik}`}>
-        <b>{no ? `${no}. ` : ''}{baslik}</b>
+        <b>{no ? `${no} · ` : ''}{baslik}</b>
         <small>{hata || `Canlı ders · ${fmtSure(t)} / ${fmtSure(dur)}`}</small>
       </button>
       <OynatDugme />

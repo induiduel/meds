@@ -384,7 +384,7 @@ export default function CanliDersCevrimdisiSoru() {
           Cihazında bu kurula ait <b>{keys.length}</b> canlı ders indirili{bayt ? ` (${fmtMb(bayt)})` : ''}. Silinsin mi? Sen onaylamadan silinmez.
         </p>
         <ul className="cd-cd-soru-liste">
-          {keys.slice(0, 4).map((k) => <li key={k}>{kayit[k]?.no}. {kayit[k]?.baslik}</li>)}
+          {keys.slice(0, 4).map((k) => <li key={k}>{kayit[k]?.no} · {kayit[k]?.baslik}</li>)}
           {keys.length > 4 && <li>+{keys.length - 4} ders</li>}
         </ul>
         <div className="cd-cd-soru-eylem">
