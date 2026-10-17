@@ -1,11 +1,12 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { Eraser, Headphones, History, Lightbulb, Play, RotateCcw } from 'lucide-react';
-import { cozucuDizinYukle, ozet, useIlerleme, type CDizin } from './cozucuVeri';
+import { cozucuDizinYukle, ozet, setAdi, useIlerleme, type CDizin } from './cozucuVeri';
+import { bransTanim, type Brans } from '../brans';
 import '../../../styles/soru-cozucu.css';
 
 /**
- * Sınav spotları › "Patoloji · Soru çözücü" sekmesi: ders listesi + ilerleme. Ders seçilince tam ekran çözücü açılır
- * (?gorunum=cozucu&ders=<kod>&coz=1; yanlışların tekrarı &coz=yanlis). Sorular 2026-27 örnek soruları.
+ * Sınav spotları › "Soru çözücü" sekmesi (branş seçili: ?brans=patoloji|enfeksiyon|uroloji): ders/set listesi + ilerleme. Ders
+ * seçilince tam ekran çözücü açılır (?gorunum=cozucu&ders=<kod>&coz=1; yanlışların tekrarı &coz=yanlis, çıkmışlar &coz=cikmis).
  */
 const SoruCozucu = React.lazy(() => import('./SoruCozucu'));
 
@@ -19,7 +20,8 @@ const urlYaz = (p: Record<string, string | null>) => {
 };
 const katla = (s: string) => s.toLocaleLowerCase('tr-TR').normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/ı/g, 'i');
 
-export const SoruCozucuSayfa: React.FC = () => {
+export const SoruCozucuSayfa: React.FC<{ brans?: Brans }> = ({ brans = 'patoloji' }) => {
+  const bt = bransTanim(brans);
   const [dizin, setDizin] = useState<CDizin | null>(null);
   const [hata, setHata] = useState(false);
   const [ara, setAra] = useState('');
@@ -28,7 +30,7 @@ export const SoruCozucuSayfa: React.FC = () => {
     return k && c ? { kod: k, mod: c === 'yanlis' || c === 'cikmis' ? c : undefined } : null;
   });
   const ilerleme = useIlerleme();
-  useEffect(() => { cozucuDizinYukle().then(setDizin).catch(() => setHata(true)); }, []);
+  useEffect(() => { setDizin(null); setHata(false); cozucuDizinYukle(brans).then(setDizin).catch(() => setHata(true)); }, [brans]);
 
   const ac = (kod: string, mod?: 'yanlis' | 'cikmis') => { setAcik({ kod, mod }); urlYaz({ ders: kod, coz: mod || '1' }); };
   const kapat = () => { setAcik(null); urlYaz({ coz: null }); };
@@ -45,6 +47,7 @@ export const SoruCozucuSayfa: React.FC = () => {
 
   if (hata) return <p className="scs-bos">Soru çözücü yüklenemedi.</p>;
   if (!dizin) return <p className="scs-bos">Yükleniyor…</p>;
+  if (!dizin.dersler.length) return <p className="scs-bos">{bt.ad} soru çözücüsü hazırlanıyor.</p>;
   const yuzde = (n: number) => `${genel.toplam ? (n / genel.toplam) * 100 : 0}%`;
   const cozulen = genel.d + genel.d2 + genel.y;
 
@@ -52,8 +55,8 @@ export const SoruCozucuSayfa: React.FC = () => {
     <div className="scs">
       <section className="scs-hero">
         <div>
-          <h2><Headphones aria-hidden />Patoloji · Sesli soru çözücü</h2>
-          <p>{dizin.dersler.length} derste {genel.toplam} soru: 2026-27 örnek soruları, aynı üslupta orta-zor benzer sorular ve konunun çıkmış soruları. Asistan soruyu ve seçenekleri okur, sen seçersin; her seçeneğin neden doğru ya da yanlış olduğunu ders sunumuna dayanarak kısaca anlatır.</p>
+          <h2><Headphones aria-hidden />{bt.ad} · Sesli soru çözücü</h2>
+          <p>{new Set(dizin.dersler.map((d) => d.no)).size} derste {genel.toplam} soru: {bt.cozucuNot}. Asistan soruyu ve seçenekleri okur, sen seçersin; her seçeneğin neden doğru ya da yanlış olduğunu ders sunumuna dayanarak kısaca anlatır.</p>
         </div>
         <div className="scs-genel" aria-label={`${cozulen} / ${genel.toplam} soru çözüldü`}>
           <b>{cozulen}<small> / {genel.toplam}</small></b>
@@ -68,7 +71,7 @@ export const SoruCozucuSayfa: React.FC = () => {
       </section>
 
       <div className="scs-ara">
-        <input type="search" value={ara} onChange={(e) => setAra(e.target.value)} placeholder="Ders ara (ör. nefrotik, meme, tromboz)" aria-label="Ders ara" />
+        <input type="search" value={ara} onChange={(e) => setAra(e.target.value)} placeholder={`Ders ara (ör. ${bt.araOrnek})`} aria-label="Ders ara" />
       </div>
 
       <ul className="scs-liste">
@@ -85,7 +88,7 @@ export const SoruCozucuSayfa: React.FC = () => {
                   <span className="scs-no">{d.no}</span>
                   <span className="scs-ad">
                     <b>{d.baslik}</b>
-                    <small>{d.soru} soru{d.cikmis ? ` (${d.cikmis} çıkmış)` : ''}{o.cozulen ? ` · ${o.cozulen} çözüldü · ${o.d} ilk denemede doğru` : ''}{d.ses ? '' : ' · ses hazırlanıyor'}</small>
+                    <small>{setAdi(d) ? `${setAdi(d)} · ` : ''}{d.soru} soru{d.cikmis ? ` (${d.cikmis} çıkmış)` : ''}{o.cozulen ? ` · ${o.cozulen} çözüldü · ${o.d} ilk denemede doğru` : ''}{d.ses ? '' : ' · ses hazırlanıyor'}</small>
                   </span>
                 </div>
                 <div className="scs-cubuk" aria-hidden><i className="is-d" style={{ width: w(o.d) }} /><i className="is-d2" style={{ width: w(o.d2) }} /><i className="is-y" style={{ width: w(o.y) }} /></div>
@@ -103,7 +106,7 @@ export const SoruCozucuSayfa: React.FC = () => {
 
       {acik && (
         <React.Suspense fallback={null}>
-          <SoruCozucu key={`${acik.kod}-${acik.mod || ''}`} kod={acik.kod} mod={acik.mod} onClose={kapat} onDersDegis={(k) => urlYaz({ ders: k, coz: '1' })} />
+          <SoruCozucu key={`${brans}-${acik.kod}-${acik.mod || ''}`} brans={brans} kod={acik.kod} mod={acik.mod} onClose={kapat} onDersDegis={(k) => urlYaz({ ders: k, coz: '1' })} />
         </React.Suspense>
       )}
     </div>

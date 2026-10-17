@@ -137,6 +137,7 @@
 .on-hero-t h2 { margin: 2px 0 0; font: 700 19px/1.25 var(--font-display, inherit); letter-spacing: -.015em; overflow-wrap: anywhere; }
 .on-hero-nav { display: flex; gap: 6px; flex-shrink: 0; }
 .on-hero-stat { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; }
+.on-hero-stat.is-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .on-hero-stat > div { padding: 9px 11px; border-radius: 12px; background: var(--color-field); display: flex; flex-direction: column; gap: 1px; min-width: 0; }
 .on-hero-stat b { font-size: 19px; font-weight: 800; font-variant-numeric: tabular-nums; line-height: 1.15; }
 .on-hero-stat b small { font-size: 13px; color: var(--color-ink-3); font-weight: 700; }
@@ -392,6 +393,8 @@ button.on-dersad:hover { color: var(--color-accent); text-decoration: underline;
   .on-hero-no { width: 42px; height: 42px; font-size: 17px; border-radius: 12px; }
   .on-hero-t h2 { font-size: 17px; }
   .on-hero-stat { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .on-hero-stat.is-3 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .on-hero-stat.is-3 .on-hero-ogr { grid-column: 1 / -1; }
   .on-hero-ozet p { font-size: 14px; }
   .on-hero-devam { display: inline-flex !important; }
   .on-hero-ozet:not(.is-acik) .on-hero-ozet-p { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
@@ -609,3 +612,6 @@ button.on-dersad:hover { color: var(--color-accent); text-decoration: underline;
   .op-f-b .op-btn.is-ikincil span { display: none; }
   .op-seg-ad { min-width: 0; flex-basis: 100%; }
 }
+/* branş seçici (En önemliler · Soru çözücü): görünüm seçicinin altında, küçük */
+.ol-brans { display: grid; width: max-content; margin-top: -4px; }
+.ol-brans button { height: 28px; font-size: 12.5px; }

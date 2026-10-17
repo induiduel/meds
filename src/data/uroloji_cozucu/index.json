@@ -1,0 +1,135 @@
+{
+ "surum": "uroloji-cozucu-v1",
+ "ses": "EMA",
+ "sesler": [
+  {
+   "id": "ema",
+   "ad": "EMA",
+   "varsayilan": true
+  }
+ ],
+ "ortak": {
+  "yanlis": {
+   "v": "1e0f04980772",
+   "sure": 1.2
+  },
+  "dene": {
+   "v": "542e22f41067",
+   "sure": 1.488
+  }
+ },
+ "dersler": [
+  {
+   "kod": "u01",
+   "no": 1,
+   "baslik": "Üriner Obstrüksiyon: Patofizyoloji, Klinik ve Tedavi",
+   "soru": 26,
+   "ornek": 20,
+   "cikmis": 6,
+   "ses": true,
+   "sayfa": [
+    5,
+    62
+   ]
+  },
+  {
+   "kod": "u02",
+   "no": 2,
+   "baslik": "Ürolitiyazis Patofizyolojisi",
+   "soru": 26,
+   "ornek": 20,
+   "cikmis": 6,
+   "ses": true,
+   "sayfa": [
+    3,
+    51
+   ]
+  },
+  {
+   "kod": "u03-1",
+   "no": 3,
+   "baslik": "Üriner Sistem Enfeksiyonları",
+   "soru": 26,
+   "ornek": 15,
+   "cikmis": 11,
+   "ses": true,
+   "set": 1,
+   "setSay": 2,
+   "sayfa": [
+    4,
+    85
+   ]
+  },
+  {
+   "kod": "u03-2",
+   "no": 3,
+   "baslik": "Üriner Sistem Enfeksiyonları",
+   "soru": 25,
+   "ornek": 17,
+   "cikmis": 8,
+   "ses": true,
+   "set": 2,
+   "setSay": 2,
+   "sayfa": [
+    43,
+    84
+   ]
+  },
+  {
+   "kod": "u04-1",
+   "no": 4,
+   "baslik": "Üriner Sistem Enfeksiyonlarının Epidemiyoloji, Etyoloji ve Semptomatolojisi",
+   "soru": 29,
+   "ornek": 14,
+   "cikmis": 15,
+   "ses": true,
+   "set": 1,
+   "setSay": 2,
+   "sayfa": [
+    2,
+    91
+   ]
+  },
+  {
+   "kod": "u04-2",
+   "no": 4,
+   "baslik": "Üriner Sistem Enfeksiyonlarının Epidemiyoloji, Etyoloji ve Semptomatolojisi",
+   "soru": 28,
+   "ornek": 21,
+   "cikmis": 7,
+   "ses": true,
+   "set": 2,
+   "setSay": 2,
+   "sayfa": [
+    32,
+    93
+   ]
+  },
+  {
+   "kod": "u05",
+   "no": 5,
+   "baslik": "Üriner Sistemin Spesifik Enfeksiyonları",
+   "soru": 28,
+   "ornek": 20,
+   "cikmis": 8,
+   "ses": true,
+   "sayfa": [
+    3,
+    57
+   ]
+  },
+  {
+   "kod": "u06",
+   "no": 6,
+   "baslik": "Enürezis Nokturna",
+   "soru": 36,
+   "ornek": 20,
+   "cikmis": 16,
+   "ses": true,
+   "sayfa": [
+    2,
+    38
+   ]
+  }
+ ]
+}

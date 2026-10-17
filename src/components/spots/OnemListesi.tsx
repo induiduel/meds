@@ -12,13 +12,16 @@ import {
 } from './onem/onemVeri';
 import type { EkranKapsami } from './onem/OnemPdfPenceresi';
 import { asistanDersVar, asistanDersleri } from './asistan/asistanVeri';
+import { cozucuDizinYukle } from './cozucu/cozucuVeri';
+import { bransTanim, type Brans, type BransTanim } from './brans';
 import '../../styles/onem-listesi.css';
 
 const OnemPdfPenceresi = React.lazy(() => import('./onem/OnemPdfPenceresi'));
 const PatolojiAsistan = React.lazy(() => import('./asistan/PatolojiAsistan'));
 
 /**
- * Patoloji · Sınav için en önemliler (100 puan, 10'ar puanlık partlar). Kaynak: Kurul 1 Tıbbi Patoloji ders PDF'leri.
+ * Sınav için en önemliler (100 puan, 10'ar puanlık partlar) — branş geneli (patoloji, enfeksiyon, üroloji). Kaynak: branşın Kurul 1
+ * ders PDF'leri. Sınav adayları, sınav kuralı ve sesli asistan yalnız verisi olan branşta (patoloji) görünür.
  *
  * Yerleşim (kap genişliğine göre, @container):
  *  - Geniş: solda yapışkan ders gezgini (ilerleme + puan dağılımı), sağda içerik.
@@ -67,7 +70,7 @@ const BantCubugu: React.FC<{ bant?: Record<string, number>; secili?: Set<number>
 };
 
 /** Ders gezgini: özel görünümler + 33 ders (ilerleme, puan dağılımı); geniş ekranda raylı, dar ekranda sayfada */
-const DersGezgini: React.FC<{ dizin: Dizin; kod: string; ogrSay: Record<string, number>; onSec: (k: string) => void; sayfada?: boolean }> = ({ dizin, kod, ogrSay, onSec, sayfada }) => {
+const DersGezgini: React.FC<{ dizin: Dizin; kod: string; ogrSay: Record<string, number>; onSec: (k: string) => void; sayfada?: boolean; bt: BransTanim; aday: boolean }> = ({ dizin, kod, ogrSay, onSec, sayfada, bt, aday }) => {
   const [q, setQ] = useState('');
   const t = kucuk(q.trim());
   const dersler = t ? dizin.dersler.filter((d) => kucuk(`${d.no} ${d.baslik}`).includes(t)) : dizin.dersler;
@@ -81,7 +84,7 @@ const DersGezgini: React.FC<{ dizin: Dizin; kod: string; ogrSay: Record<string, 
     const r = el.getBoundingClientRect(), k = kap.getBoundingClientRect();
     if (r.top < k.top || r.bottom > k.bottom) kap.scrollTop += r.top - k.top - k.height / 2 + r.height / 2;
   }, []);
-  const toplamOgr = Object.values(ogrSay).reduce((s, n) => s + n, 0);
+  const toplamOgr = dizin.dersler.reduce((s, d) => s + (ogrSay[d.kod] || 0), 0);
   const toplam = dizin.dersler.reduce((s, d) => s + d.madde, 0);
   return (
     <nav className={`on-gez${sayfada ? ' is-sayfa' : ''}`} aria-label="Dersler">
@@ -92,11 +95,13 @@ const DersGezgini: React.FC<{ dizin: Dizin; kod: string; ogrSay: Record<string, 
       <div className="on-gez-l">
         {!t && (
           <>
-            <button type="button" className={`on-gez-ozel is-aday${kod === ADAY ? ' is-on' : ''}`} onClick={() => onSec(ADAY)} aria-current={kod === ADAY ? 'page' : undefined}>
-              <Star aria-hidden /><span><b>Sınav adayları</b><small>Her dersten çıkabilecek sorular</small></span>
-            </button>
+            {aday && (
+              <button type="button" className={`on-gez-ozel is-aday${kod === ADAY ? ' is-on' : ''}`} onClick={() => onSec(ADAY)} aria-current={kod === ADAY ? 'page' : undefined}>
+                <Star aria-hidden /><span><b>Sınav adayları</b><small>Her dersten çıkabilecek sorular</small></span>
+              </button>
+            )}
             <button type="button" className={`on-gez-ozel${kod === HEPSI ? ' is-on' : ''}`} onClick={() => onSec(HEPSI)} aria-current={kod === HEPSI ? 'page' : undefined}>
-              <span className="on-gez-hepsi" aria-hidden>90+</span><span><b>Tüm patoloji</b><small>{toplamOgr}/{toplam} öğrenildi</small></span>
+              <span className="on-gez-hepsi" aria-hidden>90+</span><span><b>{bt.hepsi}</b><small>{toplamOgr}/{toplam} öğrenildi</small></span>
             </button>
             <div className="on-gez-ayrac">{dizin.dersler.length} ders</div>
           </>
@@ -156,11 +161,13 @@ const AdayKutusu: React.FC<{ d: Ders; baslikli?: boolean; ogr: Set<string>; onGi
 
 const KISAYOLLAR: [string, string][] = [['j / k', 'Sonraki / önceki madde'], ['o', 'Ayrıntıyı aç/kapat'], ['x', 'Öğrendim'], ['t', 'Tekrar modu'], ['/', 'Ara'], ['[ / ]', 'Önceki / sonraki ders'], ['Esc', 'Seçimi bırak']];
 
-export const OnemListesi: React.FC = () => {
+export const OnemListesi: React.FC<{ brans?: Brans }> = ({ brans = 'patoloji' }) => {
+  const bt = bransTanim(brans);
+  const DERS_KEY = brans === 'patoloji' ? 'medsoru_onem_ders' : `medsoru_onem_ders_${brans}`;
   const [dizin, setDizin] = useState<Dizin | null>(null);
   const [yuklu, setYuklu] = useState<Record<string, Ders>>({});
   const [hata, setHata] = useState(false);
-  const [kod, setKod] = useState<string>(() => urlOku('ders') || (() => { try { return localStorage.getItem('medsoru_onem_ders') || ''; } catch { return ''; } })());
+  const [kod, setKod] = useState<string>(() => urlOku('ders') || (() => { try { return localStorage.getItem(DERS_KEY) || ''; } catch { return ''; } })());
   const [q, setQ] = useState('');
   const dq = useDeferredValue(q);
   const [bantlar, setBantlar] = useState<Set<number>>(() => new Set());
@@ -186,29 +193,29 @@ export const OnemListesi: React.FC = () => {
 
   useEffect(() => {
     let canli = true;
-    dizinYukle().then((d) => canli && setDizin(d)).catch(() => canli && setHata(true));
+    dizinYukle(brans).then((d) => canli && setDizin(d)).catch(() => canli && setHata(true));
     return () => { canli = false; };
-  }, []);
+  }, [brans]);
   useEffect(() => {
     if (!dizin) return;
-    if (!kod || (!cokDers && !dizin.dersler.some((d) => d.kod === kod))) setKod(dizin.dersler[0]?.kod || HEPSI);
-  }, [dizin, kod, cokDers]);
+    if (!kod || (!cokDers && !dizin.dersler.some((d) => d.kod === kod)) || (kod === ADAY && !bt.sinavKurali)) setKod(dizin.dersler[0]?.kod || HEPSI);
+  }, [dizin, kod, cokDers, bt.sinavKurali]);
   useEffect(() => {
     if (!kod) return;
-    try { localStorage.setItem('medsoru_onem_ders', kod); } catch { /* özel pencere */ }
+    try { localStorage.setItem(DERS_KEY, kod); } catch { /* özel pencere */ }
     urlYaz({ ders: kod });
-  }, [kod]);
+  }, [kod]); // eslint-disable-line react-hooks/exhaustive-deps
   // seçilen ders(ler)in dosyası; çok dersli görünümler bütün dersleri paralel indirir
   useEffect(() => {
     if (!dizin || !kod) return;
-    const gerek = (cokDers ? dizin.dersler.map((d) => d.kod) : [kod]).filter((k) => !yuklu[k] && dersVar(k));
+    const gerek = (cokDers ? dizin.dersler.map((d) => d.kod) : [kod]).filter((k) => !yuklu[k] && dersVar(k, brans));
     if (!gerek.length) return;
     let canli = true;
-    Promise.all(gerek.map((k) => dersYukle(k).then((d) => [k, d] as const)))
+    Promise.all(gerek.map((k) => dersYukle(k, brans).then((d) => [k, d] as const)))
       .then((r) => { if (canli) setYuklu((y) => ({ ...y, ...Object.fromEntries(r) })); })
       .catch(() => canli && setHata(true));
     return () => { canli = false; };
-  }, [dizin, kod, cokDers, yuklu]);
+  }, [dizin, kod, cokDers, yuklu, brans]);
 
   const ders = !cokDers ? yuklu[kod] || null : null;
   const dizinDers: DizinDers | undefined = dizin?.dersler.find((d) => d.kod === kod);
@@ -359,17 +366,19 @@ export const OnemListesi: React.FC = () => {
     if (tercih.ogr === 'yalniz') parca.push('yalnız öğrenilenler');
     if (terimler.length) parca.push(`“${dq.trim()}”`);
     return {
-      ad: `${cokDers ? (kod === ADAY ? 'Sınav adayları' : 'Tüm patoloji') : dersAdi(dizinDers || { no: 0, baslik: '' })} · ${parca.join(' · ')}`,
+      ad: `${cokDers ? (kod === ADAY ? 'Sınav adayları' : bt.hepsi) : dersAdi(dizinDers || { no: 0, baslik: '' })} · ${parca.join(' · ')}`,
       kodlar: [...new Set(kod === ADAY ? kaynak.map((d) => d.kod) : liste.map((x) => x.d.kod))],
       uyar: (_d, m) => (kod === ADAY ? adayIds.has(m.id) : ids.has(m.id)),
     };
-  }, [dizin, suzgecSayisi, terimler, varsayilan90, kod, liste, kaynak, bantlar, turlar, yalnizSinav, katS, yalnizCikmis, tercih.ogr, dq, cokDers, dizinDers]);
+  }, [dizin, suzgecSayisi, terimler, varsayilan90, kod, liste, kaynak, bantlar, turlar, yalnizSinav, katS, yalnizCikmis, tercih.ogr, dq, cokDers, dizinDers, bt.hepsi]);
 
   if (hata) return <div className="on-page"><p className="on-bos">Önem listesi yüklenemedi. Bağlantını kontrol edip sayfayı yenile.</p></div>;
   if (!dizin) return <div className="on-page"><div className="on-iskelet" aria-busy="true"><i /><i /><i /><i /></div></div>;
+  if (!dizin.dersler.length) return <div className="on-page"><p className="on-bos">{bt.ad} önem listesi hazırlanıyor.</p></div>;
 
   const toplam = dizin.dersler.reduce((s, d) => s + d.madde, 0);
-  const toplamOgr = Object.values(ogrSay).reduce((s, n) => s + n, 0);
+  const toplamOgr = dizin.dersler.reduce((s, d) => s + (ogrSay[d.kod] || 0), 0);
+  const asistanVar = bt.asistan && asistanDersleri().length > 0;
   const onceki = dersSira > 0 ? dizin.dersler[dersSira - 1] : null;
   const sonraki = dersSira >= 0 && dersSira < dizin.dersler.length - 1 ? dizin.dersler[dersSira + 1] : null;
   const dersOgr = dizinDers ? ogrSay[dizinDers.kod] || 0 : 0;
@@ -388,13 +397,25 @@ export const OnemListesi: React.FC = () => {
     ...(tercih.ogr !== 'hepsi' ? [{ ad: tercih.ogr === 'gizle' ? 'Öğrenilenler gizli' : 'Yalnız öğrenilenler', kaldir: () => setTercih({ ogr: 'hepsi' }) }] : []),
   ];
 
-  const baslikAdi = kod === ADAY ? 'Sınav adayları' : kod === HEPSI ? 'Tüm patoloji' : dizinDers ? dizinDers.baslik : '';
+  const baslikAdi = kod === ADAY ? 'Sınav adayları' : kod === HEPSI ? bt.hepsi : dizinDers ? dizinDers.baslik : '';
+  // bu dersin sesli soru çözücüsü (setlere bölünmüşse ilk set); görünüm değişimi ExamSpotsView'ın popstate dinleyicisiyle
+  const cozucuyuAc = (k: string) => {
+    cozucuDizinYukle(brans).then((c) => {
+      const hedef = c.dersler.find((x) => x.kod === k) || c.dersler.find((x) => x.kod.startsWith(`${k}-`));
+      const u = new URL(location.href);
+      ['m', 'asistan'].forEach((x) => u.searchParams.delete(x));
+      u.searchParams.set('gorunum', 'cozucu');
+      if (hedef) { u.searchParams.set('ders', hedef.kod); u.searchParams.set('coz', '1'); } else u.searchParams.delete('ders');
+      history.pushState(history.state, '', u.pathname + u.search + u.hash);
+      window.dispatchEvent(new PopStateEvent('popstate'));
+    }).catch(() => {});
+  };
 
   return (
     <div className="on-page">
       <div className="on-sayfa-bas">
         <div className="on-sayfa-t">
-          <h2>Patoloji · Sınav için en önemliler</h2>
+          <h2>{bt.ad} · Sınav için en önemliler</h2>
           <p>{dizin.dersler.length} ders · {toplam} madde · 100 puan, 10'ar puanlık partlar · her madde ders PDF'inden alıntılı</p>
         </div>
         <div className="on-sayfa-ilerleme" title={`${toplamOgr} / ${toplam} madde öğrenildi`}>
@@ -402,7 +423,7 @@ export const OnemListesi: React.FC = () => {
           <div className="on-bar"><i style={{ width: `${(toplamOgr / Math.max(1, toplam)) * 100}%` }} /></div>
         </div>
         <div className="on-sayfa-btn">
-          {asistanDersleri().length > 0 && (
+          {asistanVar && (
             <button type="button" className="on-btn is-asistan" onClick={() => asistanAc(!cokDers && asistanDersVar(kod) ? kod : asistanDersleri().sort()[0])}>
               <Headphones aria-hidden />Sesli asistan
             </button>
@@ -413,7 +434,7 @@ export const OnemListesi: React.FC = () => {
 
       <div className="on-yerlesim">
         <aside className="on-rail">
-          <DersGezgini dizin={dizin} kod={kod} ogrSay={ogrSay} onSec={(k) => dersSec(k)} />
+          <DersGezgini dizin={dizin} kod={kod} ogrSay={ogrSay} onSec={(k) => dersSec(k)} bt={bt} aday={bt.sinavKurali} />
         </aside>
 
         <div className="on-ana">
@@ -436,9 +457,9 @@ export const OnemListesi: React.FC = () => {
             </div>
             {!cokDers && dizinDers && (
               <>
-                <div className="on-hero-stat">
+                <div className={`on-hero-stat${bt.sinavKurali ? '' : ' is-3'}`}>
                   <div><b>{dizinDers.madde}</b><span>madde</span></div>
-                  <div><b>{dersAday || '–'}</b><span>sınav adayı</span></div>
+                  {bt.sinavKurali && <div><b>{dersAday || '–'}</b><span>sınav adayı</span></div>}
                   <div><b>{ders ? dersCikmis : '–'}</b><span>çıkmış soru</span></div>
                   <div className="on-hero-ogr">
                     <b>{dersOgr}<small>/{dizinDers.madde}</small></b><span>öğrenildi</span>
@@ -460,18 +481,25 @@ export const OnemListesi: React.FC = () => {
                 )}
               </>
             )}
-            {!cokDers && asistanDersVar(kod) && (
+            {!cokDers && bt.asistan && asistanDersVar(kod) && (
               <button type="button" className="on-hero-asistan" onClick={() => asistanAc(kod)}>
                 <span className="on-hero-asistan-i"><Headphones aria-hidden /></span>
                 <span><b>Sesli sınav asistanıyla çalış</b><small>En önemli noktaları kısaca anlatır, soru sorar, yanlışını açıklar · tam ekran</small></span>
                 <ChevronRight aria-hidden />
               </button>
             )}
+            {!cokDers && !bt.asistan && (
+              <button type="button" className="on-hero-asistan" onClick={() => cozucuyuAc(kod)}>
+                <span className="on-hero-asistan-i"><Headphones aria-hidden /></span>
+                <span><b>Bu dersin sorularını sesli çöz</b><small>Çıkmış ve örnek sorular karışık · ipucu, yanlışı ele, çözümü dinle · tam ekran</small></span>
+                <ChevronRight aria-hidden />
+              </button>
+            )}
             {kod === HEPSI && <p className="on-hero-not">Süzgeç seçilmediğinde yalnız 90–100 partı görünür. Diğer partlar için süzgeçten puan seç.</p>}
           </header>
 
-          {/* sınav kuralı */}
-          <div className={`on-kural${tercih.kuralAcik ? ' is-acik' : ''}`}>
+          {/* sınav kuralı (hocanın açıklaması; yalnız patoloji) */}
+          {bt.sinavKurali && <div className={`on-kural${tercih.kuralAcik ? ' is-acik' : ''}`}>
             <button type="button" className="on-kural-b" onClick={() => setTercih({ kuralAcik: !tercih.kuralAcik })} aria-expanded={tercih.kuralAcik}>
               <Info aria-hidden /><b>Sınav kuralı</b>
               <span>Tablo, şekil ve klinik bulgu sorulmaz · her slayttan 1 soru</span>
@@ -484,7 +512,7 @@ export const OnemListesi: React.FC = () => {
                 <li>Her ders slaytından <b>1 soru</b> (Genetik, Pediatrik ve Çevresel Patoloji'den <b>2 soru</b>). <span className="on-aday is-en"><Star aria-hidden />En olası soru</span> en güçlü aday.</li>
               </ul>
             )}
-          </div>
+          </div>}
 
           {/* araç çubuğu */}
           <div className="on-arac">
@@ -496,7 +524,7 @@ export const OnemListesi: React.FC = () => {
               </button>
               <label className="on-ara">
                 <Search aria-hidden />
-                <input ref={aramaRef} type="search" value={q} onChange={(e) => setQ(e.target.value)} placeholder={cokDers ? 'Tüm patolojide ara' : 'Bu derste ara'} aria-label="Önem listesinde ara" />
+                <input ref={aramaRef} type="search" value={q} onChange={(e) => setQ(e.target.value)} placeholder={cokDers ? 'Tüm derslerde ara' : 'Bu derste ara'} aria-label="Önem listesinde ara" />
                 {q ? <button type="button" onClick={() => setQ('')} aria-label="Aramayı temizle"><X /></button> : <kbd>/</kbd>}
               </label>
               {kod !== ADAY && (
@@ -561,9 +589,11 @@ export const OnemListesi: React.FC = () => {
               <div className="on-suz-g">
                 <span className="on-suz-ad">Sınav</span>
                 <div className="on-cipler">
+                  {bt.sinavKurali && <>
                   <button type="button" className={`on-cip is-sinav${yalnizSinav ? ' is-on' : ''}`} onClick={() => setYalnizSinav((v) => !v)} aria-pressed={yalnizSinav}>{yalnizSinav && <Check className="on-cip-i" aria-hidden />}Yalnız sınava uygun</button>
                   <button type="button" className={`on-cip is-kat k-prognoz${katS === 'prognoz' ? ' is-on' : ''}`} onClick={() => setKatS((v) => (v === 'prognoz' ? '' : 'prognoz'))} aria-pressed={katS === 'prognoz'}>{katS === 'prognoz' && <Check className="on-cip-i" aria-hidden />}Prognoz</button>
                   <button type="button" className={`on-cip is-kat k-tedavi${katS === 'tedavi' ? ' is-on' : ''}`} onClick={() => setKatS((v) => (v === 'tedavi' ? '' : 'tedavi'))} aria-pressed={katS === 'tedavi'}>{katS === 'tedavi' && <Check className="on-cip-i" aria-hidden />}Tedavi</button>
+                  </>}
                   <button type="button" className={`on-cip is-cik${yalnizCikmis ? ' is-on' : ''}`} onClick={() => setYalnizCikmis((v) => !v)} aria-pressed={yalnizCikmis}>{yalnizCikmis && <Check className="on-cip-i" aria-hidden />}Çıkmış sorusu olan</button>
                 </div>
               </div>
@@ -655,16 +685,16 @@ export const OnemListesi: React.FC = () => {
 
 
       <Sheet open={gezAcik} onClose={() => setGezAcik(false)} title="Ders seç" subtitle={`${toplamOgr}/${toplam} madde öğrenildi`} size="full" width={520}>
-        <DersGezgini dizin={dizin} kod={kod} ogrSay={ogrSay} onSec={(k) => dersSec(k)} sayfada />
+        <DersGezgini dizin={dizin} kod={kod} ogrSay={ogrSay} onSec={(k) => dersSec(k)} sayfada bt={bt} aday={bt.sinavKurali} />
       </Sheet>
-      {asistan && (
+      {asistan && bt.asistan && (
         <React.Suspense fallback={null}>
           <PatolojiAsistan kod={asistan} onClose={() => { setAsistan(null); urlYaz({ asistan: null }); }} onDersDegis={(k) => { if (!cokDers) setKod(k); }} />
         </React.Suspense>
       )}
       {pdfAcik && (
         <React.Suspense fallback={null}>
-          <OnemPdfPenceresi dizin={dizin} secili={!cokDers ? kod : null} ekran={ekranKapsami} onClose={() => setPdfAcik(false)} />
+          <OnemPdfPenceresi brans={brans} dizin={dizin} secili={!cokDers ? kod : null} ekran={ekranKapsami} onClose={() => setPdfAcik(false)} />
         </React.Suspense>
       )}
     </div>

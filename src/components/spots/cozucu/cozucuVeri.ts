@@ -1,46 +1,71 @@
 import { useSyncExternalStore } from 'react';
+import type { Brans } from '../brans';
 
 /**
- * Patoloji · Sesli soru çözücü — veri ve ilerleme deposu.
- * İçerik: src/data/patoloji_cozucu/{index,<kod>}.json (scripts/patoloji_cozucu/cozucu_birlestir.py). Sorular: 2026-27 örnek
- * soruları (ornek), aynı üslupta orta-zor benzer sorular (benzer) ve konunun en çok 5 çıkmış sorusu (cikmis); ipucu, her şıkkın neden doğru/yanlış olduğu ve çözüm ders sunumuna dayanır. Ses: EMA klipleri
- * /api/patoloji-cozucu/ses/<kod>/<klip>.mp3?v=<özet> (q-n kök+şıklar · i-n ipucu · s-n-H şık · c-n çözüm · d-n "Doğru!").
+ * Sesli soru çözücü — veri ve ilerleme deposu (branş geneli: patoloji, enfeksiyon, üroloji).
+ * İçerik: src/data/<brans>_cozucu/{index,<kod>}.json (patoloji: scripts/patoloji_cozucu/cozucu_birlestir.py; diğerleri:
+ * scripts/spot_cozucu/birlestir.py). Patoloji soruları: 2026-27 örnek (ornek), benzer, çıkmış; diğer branşlar: çıkmış + çıkmışların
+ * üslubunda örnek sorular (zorluk kolay/orta/zor), 40'tan çok sorulu ders setlere bölünür (kod "e04-1", klip klasörü `klasor` "e04").
+ * Ses: /api/cozucu-ses/<brans>/<ses>/<klasor>/<klip>.mp3?v=<özet> (q-n kök+şıklar · i-n ipucu · s-n-H şık · c-n çözüm · d-n "Doğru!").
+ * Varsayılan ses `klip` alanında (EMA); başka sesler `klipSes[<ses>]` + dizinde `sesler` / `ortakSes` (altyapı; şimdilik yalnız EMA).
  */
 
 export type Harf = 'A' | 'B' | 'C' | 'D' | 'E';
 export const HARFLER: Harf[] = ['A', 'B', 'C', 'D', 'E'];
 export interface Klip { v: string; sure: number; zaman: [number, number][] }
 export type SoruTur = 'ornek' | 'benzer' | 'cikmis';
-export interface CSoru { no: number; tur?: SoruTur; sinav?: string; zorluk?: 'orta' | 'zor'; soru: string; secenekler: Record<Harf, string>; dogru: Harf; ipucu: string; siklar: Record<Harf, string>; cozum: string; sayfa: number[] }
-export interface CDers { kod: string; no: number; baslik: string; sorular: CSoru[]; klip: Record<string, Klip> }
-export interface CDizinDers { kod: string; no: number; baslik: string; soru: number; ornek?: number; benzer?: number; cikmis?: number; ses: boolean }
-export interface CDizin { surum: string; ortak: Record<string, { v: string; sure: number }>; dersler: CDizinDers[] }
+export type Zorluk = 'kolay' | 'orta' | 'zor';
+export interface CSoru { no: number; tur?: SoruTur; sinav?: string; zorluk?: Zorluk; soru: string; secenekler: Record<Harf, string>; dogru: Harf; ipucu: string; siklar: Record<Harf, string>; cozum: string; sayfa: number[] }
+export interface CDers {
+  kod: string; no: number; baslik: string; sorular: CSoru[]; klip: Record<string, Klip>;
+  /** ses klasörü (setlere bölünen derste ders kodu; yoksa kod) */
+  klasor?: string; set?: number; setSay?: number;
+  /** varsayılan dışındaki seslerin klipleri */
+  klipSes?: Record<string, Record<string, Klip>>;
+}
+export interface CDizinDers { kod: string; no: number; baslik: string; soru: number; ornek?: number; benzer?: number; cikmis?: number; ses: boolean; set?: number; setSay?: number; sayfa?: [number, number] }
+export interface SesTanim { id: string; ad: string; varsayilan?: boolean }
+export interface CDizin {
+  surum: string; ortak: Record<string, { v: string; sure: number }>; dersler: CDizinDers[];
+  /** üretilmiş sesler (ilk/varsayilan = klip alanı); yoksa yalnız EMA */
+  sesler?: SesTanim[]; ortakSes?: Record<string, Record<string, { v: string; sure: number }>>;
+}
+export const VARSAYILAN_SES = 'ema';
+export const sesListesi = (d: CDizin | null): SesTanim[] => (d?.sesler?.length ? d.sesler : [{ id: VARSAYILAN_SES, ad: 'EMA', varsayilan: true }]);
 
-const DOSYA = import.meta.glob('../../../data/patoloji_cozucu/[0-9]*.json') as Record<string, () => Promise<{ default: CDers }>>;
-const DIZIN = import.meta.glob('../../../data/patoloji_cozucu/index.json') as Record<string, () => Promise<{ default: CDizin }>>;
-const yol = (kod: string) => `../../../data/patoloji_cozucu/${kod}.json`;
+const DOSYA = import.meta.glob('../../../data/*_cozucu/*.json') as Record<string, () => Promise<{ default: CDers | CDizin }>>;
+const yol = (brans: Brans, kod: string) => `../../../data/${brans}_cozucu/${kod}.json`;
 const bellek = new Map<string, Promise<CDers>>();
-export const cozucuVar = () => Object.keys(DIZIN).length > 0;
-export const cozucuDersYukle = (kod: string): Promise<CDers> => {
-  let p = bellek.get(kod);
+export const cozucuVar = (brans: Brans = 'patoloji') => !!DOSYA[yol(brans, 'index')];
+export const cozucuDersYukle = (kod: string, brans: Brans = 'patoloji'): Promise<CDers> => {
+  const a = `${brans}/${kod}`;
+  let p = bellek.get(a);
   if (!p) {
-    const f = DOSYA[yol(kod)];
-    if (!f) return Promise.reject(new Error(`ders yok: ${kod}`));
-    p = f().then((m) => m.default);
-    p.catch(() => bellek.delete(kod));
-    bellek.set(kod, p);
+    const f = DOSYA[yol(brans, kod)];
+    if (!f || kod === 'index') return Promise.reject(new Error(`ders yok: ${kod}`));
+    p = f().then((m) => m.default as CDers);
+    p.catch(() => bellek.delete(a));
+    bellek.set(a, p);
   }
   return p;
 };
-let dizinP: Promise<CDizin> | null = null;
-export const cozucuDizinYukle = (): Promise<CDizin> => {
-  if (!dizinP) {
-    const f = Object.values(DIZIN)[0];
-    dizinP = f ? f().then((m) => m.default) : Promise.resolve({ surum: '', ortak: {}, dersler: [] });
-    dizinP.catch(() => { dizinP = null; });
+const dizinP = new Map<Brans, Promise<CDizin>>();
+export const cozucuDizinYukle = (brans: Brans = 'patoloji'): Promise<CDizin> => {
+  let p = dizinP.get(brans);
+  if (!p) {
+    const f = DOSYA[yol(brans, 'index')];
+    p = f ? f().then((m) => m.default as CDizin) : Promise.resolve({ surum: '', ortak: {}, dersler: [] });
+    p.catch(() => dizinP.delete(brans));
+    dizinP.set(brans, p);
   }
-  return dizinP;
+  return p;
 };
+/** Ses klibinin adresi (sunucu: src/services/cozucuSes.ts) */
+export const klipYolu = (brans: Brans, ses: string, klasor: string, klip: string) =>
+  `/api/cozucu-ses/${brans}/${encodeURIComponent(ses)}/${encodeURIComponent(klasor)}/${encodeURIComponent(klip)}.mp3`;
+/** Ders listesinde set adı: "Set 1/2 · s. 1–30" */
+export const setAdi = (d: { set?: number; setSay?: number; sayfa?: [number, number] }) =>
+  d.set && d.setSay && d.setSay > 1 ? `Set ${d.set}/${d.setSay}${d.sayfa ? ` · s. ${d.sayfa[0]}–${d.sayfa[1]}` : ''}` : '';
 
 /** d: ilk denemede yardımsız doğru · d2: yardımla ya da ikinci denemede doğru · y: çözümü dinledi / bilemedi */
 export type Sonuc = 'd' | 'd2' | 'y';

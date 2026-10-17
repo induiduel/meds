@@ -1,5 +1,5 @@
 /**
- * Patoloji · Sınav için en önemliler — PDF motoru (tarayıcıda jsPDF, Türkçe karakterli Liberation fontu).
+ * Sınav için en önemliler (patoloji, enfeksiyon, üroloji) — PDF motoru (tarayıcıda jsPDF, Türkçe karakterli Liberation fontu).
  *
  * Beş düzen:
  *  - liste   : ayrıntılı liste (puan rozeti, etiketler, seçilen ayrıntılar, sorular)
@@ -41,6 +41,10 @@ export interface OnemPdfSecenek {
   siralama: 'puan' | 'slayt';
   renk: 'renkli' | 'gri' | 'murekkep';
   kapak: boolean; icindekiler: boolean; yeniSayfa: boolean; numara: boolean; isaretKutusu: boolean; notAlani: boolean; optik: boolean;
+  /** branş adı (kapak, üst bilgi; varsayılan "Patoloji") ve kaynak dersi ("Tıbbi Patoloji") */
+  brans?: string; bransDers?: string;
+  /** hocanın sınav kuralı + sınav adayı açıklaması (yalnız patoloji) */
+  sinavKurali?: boolean;
 }
 export interface OnemPdfEk {
   /** "öğrendim" işaretli madde kimlikleri (işaret kutusu dolu çizilir) */
@@ -285,11 +289,11 @@ export async function onemPdfOlustur(dersler: OnemPdfDers[], o: OnemPdfSecenek, 
     kapakVeIcindekiler.add(1);
     if (!mur) { doc.setFillColor(...BN[9]); doc.rect(0, 0, W, 4.5, 'F'); } else cizgi(0, 4.5, W, 4.5, INK, 0.6);
     y = M + 16;
-    font('bold', 28, INK); doc.text(T('Patoloji'), M, y); y += 10 * FS;
+    font('bold', 28, INK); doc.text(T(o.brans || 'Patoloji'), M, y); y += 10 * FS;
     font('bold', 15, INK2); doc.text(T('Sınav için en önemliler'), M, y); y += 8 * FS;
     if (o.baslik) { zengin(o.baslik, 0, CW, 11, INK3); y += 1; }
     font('normal', 8.5, INK3);
-    doc.text(T(new Date().toLocaleDateString('tr-TR', { day: 'numeric', month: 'long', year: 'numeric' }) + ' · Kurul 1 Tıbbi Patoloji ders PDF\'leri'), M, y + 3); y += 9;
+    doc.text(T(new Date().toLocaleDateString('tr-TR', { day: 'numeric', month: 'long', year: 'numeric' }) + ` · Kurul 1 ${o.bransDers || 'Tıbbi Patoloji'} ders PDF'leri`), M, y + 3); y += 9;
 
     // düzen kutusu
     const notH = yukseklik(MOD_NOT[mod], CW - 10, 9) + 11;
@@ -345,12 +349,14 @@ export async function onemPdfOlustur(dersler: OnemPdfDers[], o: OnemPdfSecenek, 
       y += 3;
     };
     blok('Seçimler', o.filtreOzeti);
-    blok('Sınav kuralı (hocanın açıklaması)', [
+    if (o.sinavKurali !== false) blok('Sınav kuralı (hocanın açıklaması)', [
       'Resimlerden ve tablolardan soru sorulmayacak.',
       'Klinik bulgu sorulmayacak; **prognoz ve tedavi sorulabilir**.',
       'Her ders slaytından **1 soru**; yalnız "Genetik, Pediatrik ve Çevresel Patoloji"den **2 soru**.',
     ]);
-    if (mod !== 'soru' && mod !== 'kart') {
+    if (mod !== 'soru' && mod !== 'kart' && o.sinavKurali === false) {
+      blok('Nasıl okunur', ['Sol rozet maddenin **puanıdır** (100 üzerinden); renk puan partını gösterir.']);
+    } else if (mod !== 'soru' && mod !== 'kart') {
       blok('Nasıl okunur', [
         'Sol rozet maddenin **puanıdır** (100 üzerinden); renk puan partını gösterir.',
         '**SINAV ADAYI n** etiketi o dersten çıkabilecek sorunun sıralı adayıdır; 1 = en olası soru.',
@@ -759,14 +765,14 @@ export async function onemPdfOlustur(dersler: OnemPdfDers[], o: OnemPdfSecenek, 
     const kapak = o.kapak && p === 1;
     if (!kapak) {
       font('normal', 7.2, INK3);
-      const sol = `Patoloji · Sınav için en önemliler · ${MOD_AD[mod]}`;
+      const sol = `${o.brans || 'Patoloji'} · Sınav için en önemliler · ${MOD_AD[mod]}`;
       doc.text(kisalt(sol, CW * 0.48), M, YH);
       const sag = kapakVeIcindekiler.has(p) ? '' : sayfaDers[p - 1] || '';
       if (sag) { font('bold', 7.2, INK2); doc.text(kisalt(sag, CW * 0.48), M + CW, YH, { align: 'right' }); }
       cizgi(M, YH + 1.8, M + CW, YH + 1.8, LINE, 0.2);
     }
     font('normal', 7.2, INK3);
-    doc.text(T('MeDSor · kaynak: Kurul 1 Tıbbi Patoloji ders PDF\'leri'), M, YF);
+    doc.text(T(`MeDSor · kaynak: Kurul 1 ${o.bransDers || 'Tıbbi Patoloji'} ders PDF'leri`), M, YF);
     doc.text(T(`${p} / ${N}`), M + CW, YF, { align: 'right' });
     if (ikinciSutun.has(p) && !kapakVeIcindekiler.has(p)) {
       const sx = M + colW + GAP / 2;

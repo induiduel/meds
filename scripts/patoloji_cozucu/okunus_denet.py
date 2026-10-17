@@ -42,7 +42,7 @@ if __name__ == '__main__':
     n = 0
     for p in sys.argv[1:]:
         o = json.load(open(p))
-        Q = [(f's{q["no"]}', q) for q in o.get('sorular') or []] + [(f'yeni{i}', q) for i, q in enumerate(o.get('yeni') or [], 1)] \
+        Q = [(f's{q.get("no", q.get("ref"))}', q) for q in o.get('sorular') or []] + [(f'yeni{i}', q) for i, q in enumerate(o.get('yeni') or [], 1)] \
             + [(f'cikmis:{q.get("id")}', q) for q in o.get('cikmis') or []]
         for et, q in Q:
             for x in denetle(q, f'{o["kod"]} {et}'): print('OKUNUŞ', x); n += 1

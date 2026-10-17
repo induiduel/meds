@@ -1,14 +1,17 @@
 import { useSyncExternalStore } from 'react';
+import type { Brans } from '../brans';
 
 /**
- * Patoloji · Sınav için en önemliler — ortak tipler, sabitler, ders yükleyici ve "öğrendim" deposu.
- * Veri: src/data/patoloji_onem/{index,<kod>}.json (scripts/patoloji_onem/birlestir.py üretir; her madde Kurul 1
- * Tıbbi Patoloji ders PDF'inden birebir alıntılı). Ders başına ayrı dosya, ilk gerektiğinde indirilir.
+ * Sınav için en önemliler — ortak tipler, sabitler, ders yükleyici ve "öğrendim" deposu (branş geneli).
+ * Veri: src/data/<brans>_onem/{index,<kod>}.json (patoloji: scripts/patoloji_onem/birlestir.py; enfeksiyon/üroloji:
+ * scripts/spot_cozucu/birlestir.py; her madde branşın Kurul 1 ders PDF'inden birebir alıntılı). Ders başına ayrı dosya, ilk
+ * gerektiğinde indirilir. `ornek26`: patolojide hocanın 2026-27 örnek soruları; diğer branşlarda ders PDF'ine dayalı, çıkmışların
+ * üslubunda örnek sorular (`zorluk` alanlı; aynı sorular soru çözücüde de var).
  */
 
 export type Tur = 'tanim' | 'en_sik' | 'karakteristik' | 'sayi' | 'eslesme' | 'mekanizma' | 'siniflama' | 'tuzak' | 'tani_tedavi';
 export type Kat = 'patoloji' | 'prognoz' | 'tedavi' | 'klinik';
-export interface Soru { kok: string; secenekler: Record<string, string>; dogru: string; aciklama?: string }
+export interface Soru { kok: string; secenekler: Record<string, string>; dogru: string; aciklama?: string; zorluk?: 'kolay' | 'orta' | 'zor' }
 export interface Madde {
   id: string; puan: number; baslik: string; bilgi: string; alt?: string[]; tur: Tur;
   alinti: { sayfa: number; metin: string }[]; neden: string; detay: string; ornek_soru?: Soru | null; cikmis?: string[];
@@ -20,28 +23,32 @@ export interface Madde {
   kategori?: Kat;
 }
 export interface Aday { id: string; sira: number; gerekce: string }
-export interface Cikmis { sinav: string; kok: string; secenekler: Record<string, string>; dogru: string }
+export interface Cikmis { sinav: string; kok: string; secenekler: Record<string, string>; dogru: string; /** aynı sorunun sorulduğu diğer sınavlar */ tekrar?: string[] }
 export interface Ders { kod: string; no: number; baslik: string; pdf: string; ozet: string; neden_onemli: string; maddeler: Madde[]; cikmis: Record<string, Cikmis>; sinavAdaylari?: Aday[]; soruSayisi?: number }
 export interface DizinDers { kod: string; no: number; baslik: string; madde: number; bant?: Record<string, number> }
 export interface Dizin { surum: string; dersler: DizinDers[] }
 
-const DOSYALAR = import.meta.glob('../../../data/patoloji_onem/[0-9]*.json') as Record<string, () => Promise<{ default: Ders }>>;
-const yol = (kod: string) => `../../../data/patoloji_onem/${kod}.json`;
+const DOSYALAR = import.meta.glob('../../../data/*_onem/*.json') as Record<string, () => Promise<{ default: Ders | Dizin }>>;
+const yol = (brans: Brans, kod: string) => `../../../data/${brans}_onem/${kod}.json`;
 const bellek = new Map<string, Promise<Ders>>();
-export const dersVar = (kod: string) => !!DOSYALAR[yol(kod)];
+export const dersVar = (kod: string, brans: Brans = 'patoloji') => kod !== 'index' && !!DOSYALAR[yol(brans, kod)];
 /** Ders dosyası (modül önbellekli; aynı ders ikinci kez indirilmez) */
-export const dersYukle = (kod: string): Promise<Ders> => {
-  let p = bellek.get(kod);
+export const dersYukle = (kod: string, brans: Brans = 'patoloji'): Promise<Ders> => {
+  const a = `${brans}/${kod}`;
+  let p = bellek.get(a);
   if (!p) {
-    const f = DOSYALAR[yol(kod)];
-    if (!f) return Promise.reject(new Error(`ders yok: ${kod}`));
-    p = f().then((m) => m.default);
-    p.catch(() => bellek.delete(kod));
-    bellek.set(kod, p);
+    const f = DOSYALAR[yol(brans, kod)];
+    if (!f || kod === 'index') return Promise.reject(new Error(`ders yok: ${kod}`));
+    p = f().then((m) => m.default as Ders);
+    p.catch(() => bellek.delete(a));
+    bellek.set(a, p);
   }
   return p;
 };
-export const dizinYukle = () => import('../../../data/patoloji_onem/index.json').then((m) => (m as unknown as { default: Dizin }).default);
+export const dizinYukle = (brans: Brans = 'patoloji'): Promise<Dizin> => {
+  const f = DOSYALAR[yol(brans, 'index')];
+  return f ? f().then((m) => m.default as Dizin) : Promise.resolve({ surum: '', dersler: [] });
+};
 
 export const TUR_AD: Record<Tur, string> = {
   tanim: 'Tanım', en_sik: 'En sık', karakteristik: 'Karakteristik', sayi: 'Sayı', eslesme: 'Eşleşme',

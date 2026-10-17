@@ -1,0 +1,157 @@
+{
+ "surum": "enfeksiyon-cozucu-v1",
+ "ses": "EMA",
+ "sesler": [
+  {
+   "id": "ema",
+   "ad": "EMA",
+   "varsayilan": true
+  }
+ ],
+ "ortak": {
+  "yanlis": {
+   "v": "1e0f04980772",
+   "sure": 1.2
+  },
+  "dene": {
+   "v": "542e22f41067",
+   "sure": 1.488
+  }
+ },
+ "dersler": [
+  {
+   "kod": "e01",
+   "no": 1,
+   "baslik": "Cinsel yolla bulaşan hastalıklarda tedavi",
+   "soru": 27,
+   "ornek": 19,
+   "cikmis": 8,
+   "ses": true,
+   "sayfa": [
+    2,
+    18
+   ]
+  },
+  {
+   "kod": "e02",
+   "no": 2,
+   "baslik": "Genital enfeksiyonlar",
+   "soru": 29,
+   "ornek": 19,
+   "cikmis": 10,
+   "ses": true,
+   "sayfa": [
+    2,
+    26
+   ]
+  },
+  {
+   "kod": "e03",
+   "no": 3,
+   "baslik": "İzolasyon yöntemleri",
+   "soru": 27,
+   "ornek": 17,
+   "cikmis": 10,
+   "ses": true,
+   "sayfa": [
+    2,
+    20
+   ]
+  },
+  {
+   "kod": "e04-1",
+   "no": 4,
+   "baslik": "Enfeksiyon Hastalıklarında Temel Kavramlar ve Genel Özellikler",
+   "soru": 23,
+   "ornek": 20,
+   "cikmis": 3,
+   "ses": true,
+   "set": 1,
+   "setSay": 2,
+   "sayfa": [
+    2,
+    50
+   ]
+  },
+  {
+   "kod": "e04-2",
+   "no": 4,
+   "baslik": "Enfeksiyon Hastalıklarında Temel Kavramlar ve Genel Özellikler",
+   "soru": 22,
+   "ornek": 16,
+   "cikmis": 6,
+   "ses": true,
+   "set": 2,
+   "setSay": 2,
+   "sayfa": [
+    27,
+    52
+   ]
+  },
+  {
+   "kod": "e05",
+   "no": 5,
+   "baslik": "Üriner Sistem Enfeksiyonları",
+   "soru": 26,
+   "ornek": 20,
+   "cikmis": 6,
+   "ses": true,
+   "sayfa": [
+    4,
+    39
+   ]
+  },
+  {
+   "kod": "e06",
+   "no": 6,
+   "baslik": "Cinsel Yolla Bulaşan Enfeksiyonlarda Korunma ve Profilaksi",
+   "soru": 27,
+   "ornek": 19,
+   "cikmis": 8,
+   "ses": true,
+   "sayfa": [
+    4,
+    28
+   ]
+  },
+  {
+   "kod": "e07",
+   "no": 7,
+   "baslik": "Sifiliz",
+   "soru": 30,
+   "ornek": 18,
+   "cikmis": 12,
+   "ses": true,
+   "sayfa": [
+    2,
+    20
+   ]
+  },
+  {
+   "kod": "e08",
+   "no": 8,
+   "baslik": "Üretral Akıntı",
+   "soru": 27,
+   "ornek": 20,
+   "cikmis": 7,
+   "ses": true,
+   "sayfa": [
+    3,
+    43
+   ]
+  },
+  {
+   "kod": "e10",
+   "no": 10,
+   "baslik": "Mikroorganizmalarda Direnç Sorunu ve Antimikrobiyal Yönetim",
+   "soru": 22,
+   "ornek": 18,
+   "cikmis": 4,
+   "ses": true,
+   "sayfa": [
+    4,
+    29
+   ]
+  }
+ ]
+}

@@ -8,6 +8,7 @@ import { ANAHTAR, KATEGORILER, Kategori, Spot, Veri, azHareket, kucuk, okuOgreni
 import { useAppearance } from '../../utils/appearance';
 import { SpotsV12 } from '../v12/SpotsV12';
 import '../../styles/onem-listesi.css';
+import { BRANSLAR, bransOku, type Brans } from './brans';
 
 export { KATEGORILER };
 
@@ -72,12 +73,16 @@ const okuGorunum = (): Gorunum => {
   try { const g = new URLSearchParams(location.search).get('gorunum'); return g === 'onem' || g === 'cozucu' ? g : 'spot'; } catch { return 'spot'; }
 };
 
-/** Üstte görünüm seçici: Sınav spotları (tüm dersler) | Patoloji · en önemliler (100 puan, PDF'e dayalı) | Patoloji · sesli soru çözücü. */
+const okuBrans = (): Brans => { try { return bransOku(new URLSearchParams(location.search).get('brans')); } catch { return 'patoloji'; } };
+
+/** Üstte görünüm seçici: Sınav spotları (tüm dersler) | En önemliler (100 puan, ders PDF'ine dayalı) | Sesli soru çözücü;
+ *  son ikisinde branş seçici (Patoloji · Enfeksiyon · Üroloji, ?brans=). */
 export const ExamSpotsView: React.FC = () => {
   const v12 = useAppearance().design === 'v12';
   const [g, setG] = useState<Gorunum>(okuGorunum);
+  const [brans, setBrans] = useState<Brans>(okuBrans);
   useEffect(() => {
-    const f = () => setG(okuGorunum());
+    const f = () => { setG(okuGorunum()); setBrans(okuBrans()); };
     window.addEventListener('popstate', f);
     return () => window.removeEventListener('popstate', f);
   }, []);
@@ -90,17 +95,34 @@ export const ExamSpotsView: React.FC = () => {
       history.replaceState(history.state, '', u.pathname + u.search + u.hash);
     } catch { /* yok */ }
   };
+  const bransSec = (b: Brans) => {
+    if (b === brans) return;
+    setBrans(b);
+    try {
+      const u = new URL(location.href);
+      if (b !== 'patoloji') u.searchParams.set('brans', b); else u.searchParams.delete('brans');
+      ['ders', 'coz', 'asistan', 'madde'].forEach((k) => u.searchParams.delete(k)); // ders kodları branşa özgü
+      history.replaceState(history.state, '', u.pathname + u.search + u.hash);
+    } catch { /* yok */ }
+  };
   return (
     <>
       <div className="ol-gorunum" role="tablist" aria-label="Görünüm">
         <button type="button" role="tab" aria-selected={g === 'spot'} className={g === 'spot' ? 'is-on' : ''} onClick={() => sec('spot')}>Sınav spotları</button>
-        <button type="button" role="tab" aria-selected={g === 'onem'} className={g === 'onem' ? 'is-on' : ''} onClick={() => sec('onem')}>Patoloji · En önemliler (100 puan)</button>
-        <button type="button" role="tab" aria-selected={g === 'cozucu'} className={g === 'cozucu' ? 'is-on' : ''} onClick={() => sec('cozucu')}>Patoloji · Soru çözücü</button>
+        <button type="button" role="tab" aria-selected={g === 'onem'} className={g === 'onem' ? 'is-on' : ''} onClick={() => sec('onem')}>En önemliler (100 puan)</button>
+        <button type="button" role="tab" aria-selected={g === 'cozucu'} className={g === 'cozucu' ? 'is-on' : ''} onClick={() => sec('cozucu')}>Soru çözücü</button>
       </div>
+      {g !== 'spot' && (
+        <div className="ol-gorunum ol-brans" role="tablist" aria-label="Ders">
+          {BRANSLAR.map((b) => (
+            <button key={b.id} type="button" role="tab" aria-selected={brans === b.id} className={brans === b.id ? 'is-on' : ''} onClick={() => bransSec(b.id)}>{b.ad}</button>
+          ))}
+        </div>
+      )}
       {g === 'onem' ? (
-        <React.Suspense fallback={<p className="ol-bos">Yükleniyor…</p>}><OnemListesi /></React.Suspense>
+        <React.Suspense fallback={<p className="ol-bos">Yükleniyor…</p>}><OnemListesi key={brans} brans={brans} /></React.Suspense>
       ) : g === 'cozucu' ? (
-        <React.Suspense fallback={<p className="ol-bos">Yükleniyor…</p>}><SoruCozucuSayfa /></React.Suspense>
+        <React.Suspense fallback={<p className="ol-bos">Yükleniyor…</p>}><SoruCozucuSayfa key={brans} brans={brans} /></React.Suspense>
       ) : v12 ? <SpotsV12 /> : <ExamSpotsClassic />}
     </>
   );

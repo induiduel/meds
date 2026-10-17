@@ -120,6 +120,8 @@ export interface MaddeProps {
   onDers?: (kod: string, id: string) => void;
 }
 
+const ZORLUK_AD = { kolay: 'Kolay', orta: 'Orta', zor: 'Zor' } as const;
+
 export const OnemMadde: React.FC<MaddeProps> = React.memo(({ m, d, gosterDers, acik, sekme, onAc, ogrenildi, onOgren, gizle, terimler, odak, onDers }) => {
   const aday = (d.sinavAdaylari || []).find((a) => a.id === m.id);
   const enOlasi = !!aday && aday.sira <= (d.soruSayisi || 1);
@@ -192,9 +194,9 @@ export const OnemMadde: React.FC<MaddeProps> = React.memo(({ m, d, gosterDers, a
           {sekme === 'alinti' && m.alinti.map((a, i) => (
             <blockquote key={i} className="on-alinti">“{a.metin}”<cite>{d.pdf} · sayfa {a.sayfa}</cite></blockquote>
           ))}
-          {sekme === 'soru' && (m.ornek26 || []).map((q, i) => <SoruKart key={`y${i}`} s={q} baslik="Örnek soru · 2026-27" />)}
+          {sekme === 'soru' && (m.ornek26 || []).map((q, i) => <SoruKart key={`y${i}`} s={q} baslik={q.zorluk ? `Örnek soru · ${ZORLUK_AD[q.zorluk]}` : 'Örnek soru · 2026-27'} />)}
           {sekme === 'soru' && m.ornek_soru && <SoruKart s={m.ornek_soru} baslik="Örnek soru" />}
-          {sekme === 'cikmis' && cs.map(([id, c]) => <SoruKart key={id} s={c} baslik="Çıkmış soru" ust={c.sinav} />)}
+          {sekme === 'cikmis' && cs.map(([id, c]) => <SoruKart key={id} s={c} baslik="Çıkmış soru" ust={c.tekrar?.length ? `${c.sinav} · ayrıca ${c.tekrar.join(', ')}` : c.sinav} />)}
         </div>
       )}
     </li>

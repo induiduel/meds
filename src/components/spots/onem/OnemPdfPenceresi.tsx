@@ -5,6 +5,7 @@ import {
 } from 'lucide-react';
 import { Sheet } from '../../ui/Sheet';
 import { toast } from '../../ui/Toast';
+import { bransTanim, type Brans } from '../brans';
 import type { OnemPdfMod, OnemPdfSecenek } from '../../../services/onemPdf';
 import {
   BANTLAR, KAT_AD, KAYNAK_AD, PDF_KEY, TUR_AD, bantOf, dersAdi, dersYukle, katOf, ogrenilenler, tercihOku, tercihYaz,
@@ -97,7 +98,8 @@ const Bolum: React.FC<{ no: number; ad: string; ek?: React.ReactNode; children: 
 
 export interface EkranKapsami { ad: string; kodlar: string[]; uyar: (d: Ders, m: Madde) => boolean }
 
-export const OnemPdfPenceresi: React.FC<{ dizin: Dizin; secili: string | null; ekran: EkranKapsami | null; onClose: () => void }> = ({ dizin, secili, ekran, onClose }) => {
+export const OnemPdfPenceresi: React.FC<{ brans?: Brans; dizin: Dizin; secili: string | null; ekran: EkranKapsami | null; onClose: () => void }> = ({ brans = 'patoloji', dizin, secili, ekran, onClose }) => {
+  const bt = bransTanim(brans);
   const [a, setA0] = useState<Ayar>(() => tercihOku(PDF_KEY, VARSAYILAN));
   const [sablon, setSablon] = useState<string | null>(null);
   const setA = (p: Partial<Ayar>) => { setA0((x) => ({ ...x, ...p })); setSablon(null); };
@@ -120,7 +122,7 @@ export const OnemPdfPenceresi: React.FC<{ dizin: Dizin; secili: string | null; e
   const kodSig = kodlar.join(',');
   useEffect(() => {
     let canli = true; setVeri(null);
-    Promise.all(kodlar.map(dersYukle)).then((r) => canli && setVeri(r)).catch(() => canli && setVeri([]));
+    Promise.all(kodlar.map((k) => dersYukle(k, brans))).then((r) => canli && setVeri(r)).catch(() => canli && setVeri([]));
     return () => { canli = false; };
   }, [kodSig]); // eslint-disable-line react-hooks/exhaustive-deps
 
@@ -132,9 +134,9 @@ export const OnemPdfPenceresi: React.FC<{ dizin: Dizin; secili: string | null; e
     if (ekranModu) return ekran!.uyar(d, m);
     if (!a.bant.includes(bantOf(m.puan))) return false;
     if (a.tur.length && !a.tur.includes(m.tur)) return false;
-    if (!a.kat.includes(katOf(m))) return false;
-    if (!a.kaynak.includes(m.kaynak || 'metin')) return false;
-    if (a.yalnizAday && !(d.sinavAdaylari || []).some((x) => x.id === m.id)) return false;
+    if (bt.sinavKurali && !a.kat.includes(katOf(m))) return false;
+    if (bt.sinavKurali && !a.kaynak.includes(m.kaynak || 'metin')) return false;
+    if (bt.sinavKurali && a.yalnizAday && !(d.sinavAdaylari || []).some((x) => x.id === m.id)) return false;
     if (a.yalnizCikmis && !(m.cikmis || []).length) return false;
     return true;
   };
@@ -166,9 +168,9 @@ export const OnemPdfPenceresi: React.FC<{ dizin: Dizin; secili: string | null; e
     else {
       out.push(`Puan: ${BANTLAR.filter((B) => a.bant.includes(B.b)).map((B) => B.ad).join(', ')}`);
       if (a.tur.length) out.push(`Bilgi türü: ${a.tur.map((t) => TUR_AD[t]).join(', ')}`);
-      if (a.kat.length < 4) out.push(`Kategori: ${a.kat.map((k) => KAT_AD[k]).join(', ')}`);
-      if (a.kaynak.length < 3) out.push(`Kaynak: ${a.kaynak.map((k) => KAYNAK_AD[k as keyof typeof KAYNAK_AD]).join(', ')}`);
-      if (a.yalnizAday) out.push('Yalnız sınav adayları');
+      if (bt.sinavKurali && a.kat.length < 4) out.push(`Kategori: ${a.kat.map((k) => KAT_AD[k]).join(', ')}`);
+      if (bt.sinavKurali && a.kaynak.length < 3) out.push(`Kaynak: ${a.kaynak.map((k) => KAYNAK_AD[k as keyof typeof KAYNAK_AD]).join(', ')}`);
+      if (bt.sinavKurali && a.yalnizAday) out.push('Yalnız sınav adayları');
       if (a.yalnizCikmis) out.push('Yalnız çıkmış sorusu olan maddeler');
     }
     if (a.ogrenilen === 'haric') out.push('Öğrendiklerim çıkarıldı');
@@ -176,13 +178,14 @@ export const OnemPdfPenceresi: React.FC<{ dizin: Dizin; secili: string | null; e
     return out;
   };
   const dersler = useMemo(() => (veri || []).map((d) => ({ ...d, maddeler: d.maddeler.filter((m) => uyar(d, m)) })).filter((d) => d.maddeler.length), [veri, a, ekranModu]); // eslint-disable-line react-hooks/exhaustive-deps
-  const kapsamAdi = kapsam === 'secili' && dersler[0] ? dersAdi(dersler[0]) : kapsam === 'hepsi' ? `Tüm patoloji · ${dersler.length} ders` : `${dersler.length} ders`;
-  const varsayilanAd = `Patoloji_${a.mod}_${kapsam === 'secili' && dersler[0] ? `${dersler[0].no}_${dersler[0].baslik}` : kapsam === 'hepsi' ? 'tum_dersler' : `${dersler.length}_ders`}`;
+  const kapsamAdi = kapsam === 'secili' && dersler[0] ? dersAdi(dersler[0]) : kapsam === 'hepsi' ? `${bt.hepsi} · ${dersler.length} ders` : `${dersler.length} ders`;
+  const varsayilanAd = `${bt.ad}_${a.mod}_${kapsam === 'secili' && dersler[0] ? `${dersler[0].no}_${dersler[0].baslik}` : kapsam === 'hepsi' ? 'tum_dersler' : `${dersler.length}_ders`}`;
   const secenek = (): OnemPdfSecenek => ({
     mod: a.mod, baslik: kapsamAdi, filtreOzeti: ozetSatirlari(),
     ozet: a.ozet, adaylarKutusu: a.adaylarKutusu, alt: a.alt, alinti: a.alinti, neden: a.neden, detay: a.detay, ornekSoru: a.ornekSoru, cikmis: a.cikmis,
     anahtar: a.anahtar, sayfa: a.sayfa, yon: a.yon, sutun: a.sutun, yazi: a.yazi, aralik: a.aralik, kenar: a.kenar, siralama: a.siralama, renk: a.renk,
     kapak: a.kapak, icindekiler: a.icindekiler, yeniSayfa: a.yeniSayfa, numara: a.numara, isaretKutusu: a.isaretKutusu, notAlani: a.notAlani, optik: a.optik,
+    brans: bt.ad, bransDers: bt.tam, sinavKurali: bt.sinavKurali,
   });
   const imza = JSON.stringify([kodSig, a, kapsam, veri ? veri.length : -1]);
   const guncel = !!onizleme && onizleme.imza === imza;
@@ -226,7 +229,7 @@ export const OnemPdfPenceresi: React.FC<{ dizin: Dizin; secili: string | null; e
     const r = await uret(); if (!r) return;
     const f = new File([r.blob], ad(), { type: 'application/pdf' });
     try {
-      if (navigator.canShare?.({ files: [f] })) await navigator.share({ files: [f], title: 'Patoloji · Sınav için en önemliler' });
+      if (navigator.canShare?.({ files: [f] })) await navigator.share({ files: [f], title: `${bt.ad} · Sınav için en önemliler` });
       else await indir();
     } catch { /* kullanıcı vazgeçti */ }
   };
@@ -261,7 +264,7 @@ export const OnemPdfPenceresi: React.FC<{ dizin: Dizin; secili: string | null; e
         <header className="op-h">
           <div className="op-h-t">
             <h2>PDF oluştur</h2>
-            <p>Patoloji · Sınav için en önemliler</p>
+            <p>{bt.ad} · Sınav için en önemliler</p>
           </div>
           <button type="button" className="op-ikon" onClick={onClose} aria-label="Kapat"><X /></button>
         </header>
@@ -292,7 +295,7 @@ export const OnemPdfPenceresi: React.FC<{ dizin: Dizin; secili: string | null; e
               <div className="op-kapsam" role="radiogroup" aria-label="Kapsam">
                 {secili && <Cip on={kapsam === 'secili'} onClick={() => setKapsam('secili')}>Bu ders</Cip>}
                 {ekran && <Cip on={kapsam === 'ekran'} onClick={() => setKapsam('ekran')}>Ekrandaki liste</Cip>}
-                <Cip on={kapsam === 'hepsi'} onClick={() => setKapsam('hepsi')} sayi={dizin.dersler.length}>Tüm patoloji</Cip>
+                <Cip on={kapsam === 'hepsi'} onClick={() => setKapsam('hepsi')} sayi={dizin.dersler.length}>{bt.hepsi}</Cip>
                 <Cip on={kapsam === 'ozel'} onClick={() => setKapsam('ozel')} sayi={kapsam === 'ozel' ? ozel.length : undefined}>Seçeceğim dersler</Cip>
               </div>
               {ekranModu && <p className="op-not">Süzgeçler ekrandan alınır: <b>{ekran!.ad}</b>. Puan/tür süzgeçleri bu kapsamda kullanılmaz.</p>}
@@ -347,7 +350,7 @@ export const OnemPdfPenceresi: React.FC<{ dizin: Dizin; secili: string | null; e
                       {(Object.keys(TUR_AD) as Tur[]).map((t) => <Cip key={t} cls={`t-${t} is-tur`} on={a.tur.includes(t)} onClick={() => setA({ tur: tgl(a.tur, t) })} sayi={say.tur[t] || 0}>{TUR_AD[t]}</Cip>)}
                     </div>
                   </div>
-                  <div className="op-grup">
+                  {bt.sinavKurali && <div className="op-grup">
                     <span className="op-grup-ad">Sınav kuralı</span>
                     <div className="op-cipler">
                       {TUM_KAT.map((k) => <Cip key={k} cls={`k-${k} is-kat`} on={a.kat.includes(k)} onClick={() => setA({ kat: tgl(a.kat, k) })} sayi={say.kat[k] || 0}>{KAT_AD[k]}{k === 'klinik' ? ' · sorulmaz' : ''}</Cip>)}
@@ -357,8 +360,8 @@ export const OnemPdfPenceresi: React.FC<{ dizin: Dizin; secili: string | null; e
                       <button type="button" onClick={() => setA(SINAVA_UYGUN)}>Yalnız sınava uygun</button>
                       <button type="button" onClick={() => setA({ kat: TUM_KAT, kaynak: TUM_KAYNAK })}>Hepsi</button>
                     </div>
-                  </div>
-                  <Anahtar on={a.yalnizAday} onChange={(v) => setA({ yalnizAday: v })} ad="Yalnız sınav adayları" not="Her dersin sıralı adayları (her slayttan 1, Genetik'ten 2 soru)" />
+                  </div>}
+                  {bt.sinavKurali && <Anahtar on={a.yalnizAday} onChange={(v) => setA({ yalnizAday: v })} ad="Yalnız sınav adayları" not="Her dersin sıralı adayları (her slayttan 1, Genetik'ten 2 soru)" />}
                   <Anahtar on={a.yalnizCikmis} onChange={(v) => setA({ yalnizCikmis: v })} ad="Yalnız çıkmış sorusu olanlar" />
                 </>
               )}
