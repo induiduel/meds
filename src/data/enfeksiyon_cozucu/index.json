@@ -192,6 +192,19 @@
    ]
   },
   {
+   "kod": "e09",
+   "no": 9,
+   "baslik": "İntrauterin Enfeksiyonlar",
+   "soru": 37,
+   "ornek": 18,
+   "cikmis": 19,
+   "ses": false,
+   "sayfa": [
+    2,
+    35
+   ]
+  },
+  {
    "kod": "e10",
    "no": 10,
    "baslik": "Mikroorganizmalarda Direnç Sorunu ve Antimikrobiyal Yönetim",
@@ -202,6 +215,36 @@
    "sayfa": [
     4,
     30
+   ]
+  },
+  {
+   "kod": "e11-1",
+   "no": 11,
+   "baslik": "Bağışıklığı Baskılı Hastalarda Enfeksiyon",
+   "soru": 21,
+   "ornek": 6,
+   "cikmis": 15,
+   "ses": false,
+   "set": 1,
+   "setSay": 2,
+   "sayfa": [
+    2,
+    4
+   ]
+  },
+  {
+   "kod": "e11-2",
+   "no": 11,
+   "baslik": "Bağışıklığı Baskılı Hastalarda Enfeksiyon",
+   "soru": 20,
+   "ornek": 13,
+   "cikmis": 7,
+   "ses": false,
+   "set": 2,
+   "setSay": 2,
+   "sayfa": [
+    4,
+    11
    ]
   }
  ]

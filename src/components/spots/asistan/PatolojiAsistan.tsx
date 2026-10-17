@@ -1,13 +1,14 @@
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import {
-  Check, ChevronDown, ChevronLeft, ChevronRight, LifeBuoy, ListChecks, Maximize2, Minimize2, Minus, Pause, Play, Plus, RotateCcw, SkipForward, Star, Volume2, X,
+  Check, ChevronDown, ChevronLeft, ChevronRight, Headphones, LifeBuoy, ListChecks, Maximize2, Minimize2, Minus, Pause, Play, Plus, RotateCcw, SkipBack, SkipForward, Star, Volume2, X,
 } from 'lucide-react';
 import { getCustomApiUrl } from '../../../services/api';
 import { lockScroll, unlockScroll } from '../../../utils/scrollLock';
 import { ogrenildiAyarla, tercihOku, tercihYaz } from '../onem/onemVeri';
 import { Metin } from '../onem/OnemMadde';
 import { asistanDosyasi, asistanDizinDosyasi, kodBrans } from './asistanVeri';
+import { cozucuDizinYukle } from '../cozucu/cozucuVeri';
 import { bransTanim } from '../brans';
 import '../../../styles/patoloji-asistan.css';
 
@@ -110,6 +111,7 @@ export const PatolojiAsistan: React.FC<{ kod: string; onClose: () => void; onDer
   const otoRef = useRef<number | null>(null);
   const bittiRef = useRef<(() => void) | null>(null);
   const kokRef = useRef<HTMLDivElement>(null);
+  const sonCumleRef = useRef<number>(0);
 
   const sahneler = useMemo(() => (ders ? sahneleriKur(ders, tercih.yogunluk, tekrar || undefined) : []), [ders, tercih.yogunluk, tekrar]);
   const s = sahneler[i];
@@ -156,6 +158,7 @@ export const PatolojiAsistan: React.FC<{ kod: string; onClose: () => void; onDer
     durdur();
     setKlipAdi(klip);
     setAktifCumle(cumleler.length ? 0 : -1);
+    sonCumleRef.current = 0;
     bittiRef.current = bitti || null;
     const k = ders?.klip[klip];
     const hiz = tercih.hiz;
@@ -170,6 +173,7 @@ export const PatolojiAsistan: React.FC<{ kod: string; onClose: () => void; onDer
           t = 0; j++;
           if (j >= sureler.length) { durdur(); setAktifCumle(-1); bitti?.(); return; }
           setAktifCumle(j);
+          sonCumleRef.current = j;
         }
       }, 100);
     };
@@ -184,7 +188,9 @@ export const PatolojiAsistan: React.FC<{ kod: string; onClose: () => void; onDer
       const t = a.currentTime;
       let j = k.zaman.findIndex(([b, e]) => t >= b - 0.05 && t < e + 0.4);
       if (j < 0) j = k.zaman.filter(([b]) => b <= t).length - 1;
-      setAktifCumle(Math.max(0, Math.min(cumleler.length - 1, j)));
+      const idx = Math.max(0, Math.min(cumleler.length - 1, j));
+      setAktifCumle(idx);
+      sonCumleRef.current = idx;
     };
     a.onended = () => { setCaliyor(false); setAktifCumle(-1); const f = bittiRef.current; bittiRef.current = null; f?.(); };
     a.onerror = () => { a.onerror = null; yedek(); };
@@ -198,7 +204,7 @@ export const PatolojiAsistan: React.FC<{ kod: string; onClose: () => void; onDer
   const otoIleri = useCallback(() => {
     if (!tercih.otomatik) return;
     if (otoRef.current) window.clearTimeout(otoRef.current);
-    otoRef.current = window.setTimeout(() => { otoRef.current = null; ileri(); }, 650);
+    otoRef.current = window.setTimeout(() => { otoRef.current = null; ileri(); }, 1200);
   }, [tercih.otomatik, ileri]);
 
   const sahneSesi = useCallback((x: Sahne | undefined) => {
@@ -210,6 +216,108 @@ export const PatolojiAsistan: React.FC<{ kod: string; onClose: () => void; onDer
     else if (x.tip === 'soru') cal(`q-${x.q.k}`, [x.q.kok]);
     else durdur();
   }, [ders, cal, otoIleri, durdur]);
+
+  // o anki sahnede geçerli cümle listesi (parça parça kontrol için)
+  const aktifCumleler = useMemo(() => {
+    if (!s || !ders) return [];
+    if (s.tip === 'anlatim') return ders.noktalar[s.n]?.cumleler || [];
+    if (s.tip === 'giris') return ders.giris;
+    if (s.tip === 'kapanis') return ders.kapanis;
+    if (s.tip === 'bolum') return [ders.bolumler[s.b]?.neden || ''];
+    if (s.tip === 'soru') {
+      if (yardim) return Object.values(s.q.yardim);
+      if (cozuldu) return [s.q.dogruMetin];
+      return [s.q.kok];
+    }
+    return [];
+  }, [s, ders, yardim, cozuldu]);
+
+  /** Belirtilen index'teki cümleye/parçaya sar ve çal */
+  const cumleyeGit = useCallback((targetIdx: number) => {
+    if (!s || !ders) return;
+    if (otoRef.current) { window.clearTimeout(otoRef.current); otoRef.current = null; }
+
+    const cumleler = aktifCumleler;
+    if (!cumleler.length) return;
+    const j = Math.max(0, Math.min(cumleler.length - 1, targetIdx));
+    sonCumleRef.current = j;
+
+    const beklenenKlip = s.tip === 'giris' ? 'giris'
+      : s.tip === 'kapanis' ? 'kapanis'
+      : s.tip === 'bolum' ? `b-${s.b + 1}`
+      : s.tip === 'anlatim' ? `a-${ders.noktalar[s.n].id}`
+      : s.tip === 'soru' ? (yardim ? `h-${s.q.k}` : cozuldu ? `d-${s.q.k}` : `q-${s.q.k}`)
+      : null;
+
+    if (!beklenenKlip) return;
+    const k = ders.klip[beklenenKlip];
+    const a = audio.current;
+
+    if (a && klipAdi === beklenenKlip && k?.zaman?.[j]) {
+      const baslangic = Math.max(0, k.zaman[j][0] - 0.04);
+      a.currentTime = baslangic;
+      setAktifCumle(j);
+      if (!caliyor) {
+        a.play().then(() => { setCaliyor(true); setEngel(false); }).catch(() => {});
+      }
+    } else {
+      cal(beklenenKlip, cumleler, s.tip === 'soru' && !cozuldu ? undefined : otoIleri);
+      if (k?.zaman?.[j] && audio.current) {
+        const baslangic = Math.max(0, k.zaman[j][0] - 0.04);
+        const aEl = audio.current;
+        const sar = () => {
+          try {
+            aEl.currentTime = baslangic;
+            setAktifCumle(j);
+          } catch { /* yok */ }
+        };
+        aEl.addEventListener('loadedmetadata', sar, { once: true });
+        aEl.addEventListener('canplay', sar, { once: true });
+      }
+    }
+  }, [s, ders, aktifCumleler, klipAdi, caliyor, cal, otoIleri, yardim, cozuldu]);
+
+  /** Aktif veya son biten cümleyi/parçayı tekrardan başlat */
+  const cumleyiTekrarla = useCallback(() => {
+    const hedef = aktifCumle >= 0 ? aktifCumle : sonCumleRef.current;
+    cumleyeGit(hedef);
+  }, [aktifCumle, cumleyeGit]);
+
+  /** Önceki parçaya/cümleye geç */
+  const oncekiCumle = useCallback(() => {
+    const cumleler = aktifCumleler;
+    if (!cumleler.length) return;
+    const a = audio.current;
+    const beklenenKlip = s?.tip === 'anlatim' ? `a-${ders?.noktalar[s.n].id}` : klipAdi;
+    const k = beklenenKlip ? ders?.klip[beklenenKlip] : null;
+
+    const suanki = aktifCumle >= 0 ? aktifCumle : sonCumleRef.current;
+    if (a && k?.zaman?.[suanki]) {
+      const baslangic = k.zaman[suanki][0];
+      if (a.currentTime - baslangic > 1.8) {
+        cumleyeGit(suanki);
+        return;
+      }
+    }
+    cumleyeGit(Math.max(0, suanki - 1));
+  }, [aktifCumleler, s, ders, klipAdi, aktifCumle, cumleyeGit]);
+
+  /** Sonraki parçaya/cümleye geç */
+  const sonrakiCumle = useCallback(() => {
+    const cumleler = aktifCumleler;
+    if (!cumleler.length) return;
+    const suanki = aktifCumle >= 0 ? aktifCumle : sonCumleRef.current;
+    if (suanki < cumleler.length - 1) {
+      cumleyeGit(suanki + 1);
+    } else {
+      ileri();
+    }
+  }, [aktifCumleler, aktifCumle, cumleyeGit, ileri]);
+
+  /** Tüm anlatımı/sahneyi en baştan dinle */
+  const tekrarDinle = useCallback(() => {
+    cumleyeGit(0);
+  }, [cumleyeGit]);
 
   // sahne değişince: bekleyen otomatik geçişi iptal et, soru durumunu sıfırla, sesi başlat
   useEffect(() => {
@@ -253,12 +361,18 @@ export const PatolojiAsistan: React.FC<{ kod: string; onClose: () => void; onDer
     altaKaydir('.pa-yardim');
   };
   const oynatDuraklat = () => {
+    if (otoRef.current) { window.clearTimeout(otoRef.current); otoRef.current = null; }
     const a = audio.current;
     if (caliyor) {
       if (zamanlayici.current) { window.clearInterval(zamanlayici.current); zamanlayici.current = null; setCaliyor(false); return; }
       a?.pause(); setCaliyor(false);
-    } else if (a && a.src && !a.ended && a.currentTime > 0) { a.play().then(() => setCaliyor(true)).catch(() => {}); }
-    else sahneSesi(s);
+    } else if (a && a.src && !a.ended && a.currentTime > 0) {
+      a.play().then(() => setCaliyor(true)).catch(() => {});
+    } else if (a && a.ended) {
+      tekrarDinle();
+    } else {
+      sahneSesi(s);
+    }
   };
   const yogunlukDegis = (y: Yogunluk) => {
     // aynı noktada kal: yeni sahne dizisinde o noktanın anlatımına git
@@ -283,6 +397,10 @@ export const PatolojiAsistan: React.FC<{ kod: string; onClose: () => void; onDer
       if (e.altKey || (e.target as HTMLElement | null)?.closest?.('input,textarea,select')) return;
       if (e.key === 'Escape') { if (dersMenu) setDersMenu(false); else onClose(); return; }
       if (e.key === ' ') { e.preventDefault(); oynatDuraklat(); return; }
+      if (e.key === 'r' || e.key === 'R') { e.preventDefault(); cumleyiTekrarla(); return; }
+      if (e.key === 't' || e.key === 'T') { e.preventDefault(); tekrarDinle(); return; }
+      if (e.key === '[' || (e.shiftKey && e.key === 'ArrowLeft')) { e.preventDefault(); oncekiCumle(); return; }
+      if (e.key === ']' || (e.shiftKey && e.key === 'ArrowRight')) { e.preventDefault(); sonrakiCumle(); return; }
       if (e.key === 'ArrowRight') { e.preventDefault(); ileri(); return; }
       if (e.key === 'ArrowLeft') { e.preventDefault(); geri(); return; }
       if (s?.tip === 'soru') {
@@ -332,6 +450,26 @@ export const PatolojiAsistan: React.FC<{ kod: string; onClose: () => void; onDer
   }, [ders, nokta, ileri, geri]);
 
   const dersDegis = (k: string) => { durdur(); setDersMenu(false); setKod(k); onDersDegis?.(k); };
+  const cozucuyuAc = (hedefKod: string) => {
+    durdur();
+    const b = kodBrans(hedefKod);
+    cozucuDizinYukle(b).then((c) => {
+      const hedef = c.dersler.find((x) => x.kod === hedefKod) || c.dersler.find((x) => x.kod.startsWith(`${hedefKod}-`));
+      const u = new URL(location.href);
+      ['m', 'asistan'].forEach((x) => u.searchParams.delete(x));
+      u.searchParams.set('gorunum', 'cozucu');
+      u.searchParams.set('brans', b);
+      if (hedef) {
+        u.searchParams.set('ders', hedef.kod);
+        u.searchParams.set('coz', '1');
+      } else {
+        u.searchParams.delete('ders');
+      }
+      history.pushState(history.state, '', u.pathname + u.search + u.hash);
+      window.dispatchEvent(new PopStateEvent('popstate'));
+      onClose();
+    }).catch(() => {});
+  };
   const dizinIdx = dizin.findIndex((d) => d.kod === kod);
   const sonrakiDers = dizinIdx >= 0 ? dizin[dizinIdx + 1] : undefined;
 

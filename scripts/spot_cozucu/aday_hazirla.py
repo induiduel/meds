@@ -19,7 +19,9 @@ BRANS = {
         'e01': ['Cinsel Yolla Bulaşan Enfeksiyonlarda Tedavi'], 'e02': ['Genital Enfeksiyonlar'], 'e03': ['İzolasyon Yöntemleri'],
         'e04': ['Enfeksiyon Hastalıklarında Genel Kavramlar ve Temel Özellikler'], 'e05': ['Üriner Sistem Enfeksiyonları'],
         'e06': ['Cinsel yolla bulaşan hastalıklarda profilaksi ve korunma'], 'e07': ['Sifilis'], 'e08': ['Üretral Akıntı'],
-        'e10': ['Mikroorganizmalarda Direnç Sorunu ve Antimikrobiyal Yönetim']}),
+        'e09': ['İntrauterin Enfeksiyonlar'],
+        'e10': ['Mikroorganizmalarda Direnç Sorunu ve Antimikrobiyal Yönetim'],
+        'e11': ['Bağışıklığı Baskılı Hastalarda Enfeksiyon', 'Bağışıklığı Baskılı Hastalarda Enfeksiyonlar', 'Bağışıklığı Baskılı Hastada Enfeksiyon']}),
     'uroloji': ('Üroloji', {
         'u01': ['Üriner Obstrüksiyonun Fizyopatolojisi'], 'u02': ['Üriner Sistem Taş Hastalıkları Fizyopatolojisi'],
         'u03': ['Üriner Sistem Enfeksiyonları Lab. Bulguları ve Tedavi'],
@@ -33,13 +35,16 @@ BRANS = {
         'g05': ['Prenatal Tanı Yöntemleri'],
         'g06': ['Preimplantasyon Genetik Tanı (PGD)']}),
     'halksagligi': ('Halk Sağlığı', {
-        'h01': ['Halk Sağlığı Tarihçesi', 'Koruyucu Sağlık Hizmetleri', 'Türkiye’de Sağlık Hizmetleri'],
+        'h01': ['Halk Sağlığı Tarihçesi', 'Koruyucu Sağlık Hizmetleri'],
         'h02': ['Ana-Çocuk Sağlığı Düzeyinin İzlenmesi'],
-        'h03': ['Bebek Beslenmesi', 'Gebelik ve Emzirme Döneminde Beslenme'],
+        'h03': ['Bebek Beslenmesi'],
         'h04': ['Salgın Hastalıklarda Kontrol ve Korunma Yöntemleri'],
-        'h05': ['Enfeksiyon Hastalıklarının Epidemiyolojisi']}),
+        'h05': ['Enfeksiyon Hastalıklarının Epidemiyolojisi'],
+        'h06': ['Türkiye’de Sağlık Hizmetleri', "Türkiye'de Sağlık Hizmetleri"],
+        'h07': ['Gebelik ve Emzirme Döneminde Beslenme']}),
     'kadindogum': ('Kadın Hastalıkları ve Doğum', {
-        'k01': ['Abortus', 'Gebelik Terminolojisi/Kavramları']}),
+        'k01': ['Abortus'],
+        'k02': ['Gebelik Terminolojisi ve Kavramları', 'Gebelik Terminolojisi/Kavramları']}),
     'farmakoloji': ('Tıbbi Farmakoloji', {
         'f01': ['İmmünofarmakoloji']}),
 }

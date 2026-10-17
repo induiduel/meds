@@ -139,11 +139,28 @@
 .pa-geri.is-goster { background: var(--color-accent-soft); }
 .pa-geri.is-goster b { color: var(--color-accent); }
 
+.pa-cumleler p.is-tiklanabilir { cursor: pointer; }
+.pa-cumleler p.is-tiklanabilir:hover { background: color-mix(in srgb, var(--color-accent) 10%, var(--color-field)); color: var(--color-ink); }
+.pa-cumleler p.is-tiklanabilir:active { transform: scale(0.995); }
+
+.pa-parca-bar { display: inline-flex; align-items: center; background: var(--color-field); border: 1px solid var(--color-line); border-radius: 12px; padding: 3px; gap: 3px; flex-wrap: wrap; }
+.pa-btn-parca { height: 38px; padding: 0 12px; border-radius: 9px; border: 0; background: transparent; color: var(--color-ink-2); font-size: 13.5px; font-weight: 700; display: inline-flex; align-items: center; gap: 6px; cursor: pointer; transition: background var(--mo-fast, 120ms), color var(--mo-fast, 120ms), transform var(--mo-fast, 120ms); }
+.pa-btn-parca:hover:not(:disabled) { background: var(--color-white); color: var(--color-ink); box-shadow: 0 2px 6px color-mix(in srgb, var(--color-ink) 8%, transparent); }
+.pa-btn-parca:active:not(:disabled) { transform: scale(0.97); }
+.pa-btn-parca.is-vurgu { color: var(--color-accent); }
+.pa-btn-parca.is-vurgu:hover:not(:disabled) { color: var(--color-accent); }
+.pa-btn-parca:disabled { opacity: .38; cursor: not-allowed; }
+.pa-btn-parca svg { width: 15px; height: 15px; }
+
+.pa-parca-btn { width: 38px; height: 38px; border-radius: 11px; }
+.pa-parca-btn svg { width: 17px; height: 17px; }
+
 .pa-btnler { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
 .pa-ipucu { flex: 1 1 200px; font-size: 13px; color: var(--color-ink-3); }
 .pa-btn { display: inline-flex; align-items: center; justify-content: center; gap: 7px; min-height: 44px; padding: 0 16px; border-radius: 12px; border: 1px solid var(--color-line);
-  background: var(--color-white); font-size: 14.5px; font-weight: 700; text-align: left; }
+  background: var(--color-white); font-size: 14.5px; font-weight: 700; text-align: left; cursor: pointer; transition: border-color var(--mo-fast, 120ms), background var(--mo-fast, 120ms), transform var(--mo-fast, 120ms); }
 .pa-btn:hover { border-color: var(--color-line-2); }
+.pa-btn:active { transform: scale(0.985); }
 .pa-btn svg { width: 17px; height: 17px; flex-shrink: 0; }
 .pa-btn.is-dolu { background: var(--color-accent); border-color: var(--color-accent); color: var(--color-on-accent, #fff) !important; }
 
@@ -206,9 +223,13 @@
   .pa-sik > b { width: 30px; height: 30px; }
   .pa-geri p { font-size: 15.5px; }
   .pa-alt { justify-content: space-between; gap: 8px; }
-  .pa-oynat { gap: 8px; }
-  .pa-buyuk { width: 52px; height: 52px; }
+  .pa-oynat { gap: 4px; }
+  .pa-ikon { width: 36px; height: 36px; }
+  .pa-parca-btn { width: 34px; height: 34px; }
+  .pa-buyuk { width: 48px; height: 48px; }
   .pa-oto span { font-size: 12.5px; }
+  .pa-parca-bar { width: 100%; justify-content: space-between; }
+  .pa-btn-parca { flex: 1 1 auto; justify-content: center; padding: 0 6px; font-size: 12px; }
   .pa-btnler .pa-btn { flex: 1 1 auto; }
   .pa-skor b { font-size: 22px; }
 }

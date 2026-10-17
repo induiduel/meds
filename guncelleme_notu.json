@@ -1,10 +1,11 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 4,
-  "baslik": "Performans ve Hızlandırma Optimizasyonları",
+  "onem": 5,
+  "baslik": "Eksik Branş Spot Bilgileri ve Soru Çözücü Setleri Tamamlandı",
   "maddeler": [
-    "Deste ve ders notları uç noktalarındaki serileştirme optimize edilerek yanıt hızları 5 ila 7 kat artırıldı.",
-    "Veritabanı bağlantı protokolü ve geri çekilme mekanizması iyileştirildi.",
-    "Ön yüz bileşenleri ayrıştırılarak sayfa ilk yükleme performansı artırıldı."
+    "Kadın Hastalıkları ve Doğum: Gebelik Terminolojisi ve Kavramları (k02) spot önem listesi ve soru çözücü setleri eklendi.",
+    "Halk Sağlığı: Türkiye'de Sağlık Hizmetleri (h06) ile Gebelik ve Emzirme Döneminde Beslenme (h07) dersleri sisteme dahil edildi.",
+    "Enfeksiyon Hastalıkları: İntrauterin Enfeksiyonlar (e09) ile Bağışıklığı Baskılı Hastalarda Enfeksiyon (e11) dersleri ve çözücü setleri tamamlandı.",
+    "Tüm yeni derslerin spot maddeleri, örnek ve çıkmış soruları sesli soru çözücüye entegre edildi."
   ]
 }
