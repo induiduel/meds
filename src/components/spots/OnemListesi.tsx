@@ -378,7 +378,7 @@ export const OnemListesi: React.FC<{ brans?: Brans }> = ({ brans = 'patoloji' })
 
   const toplam = dizin.dersler.reduce((s, d) => s + d.madde, 0);
   const toplamOgr = dizin.dersler.reduce((s, d) => s + (ogrSay[d.kod] || 0), 0);
-  const asistanVar = bt.asistan && asistanDersleri().length > 0;
+  const asistanVar = bt.asistan && asistanDersleri(brans).length > 0;
   const onceki = dersSira > 0 ? dizin.dersler[dersSira - 1] : null;
   const sonraki = dersSira >= 0 && dersSira < dizin.dersler.length - 1 ? dizin.dersler[dersSira + 1] : null;
   const dersOgr = dizinDers ? ogrSay[dizinDers.kod] || 0 : 0;
@@ -424,7 +424,7 @@ export const OnemListesi: React.FC<{ brans?: Brans }> = ({ brans = 'patoloji' })
         </div>
         <div className="on-sayfa-btn">
           {asistanVar && (
-            <button type="button" className="on-btn is-asistan" onClick={() => asistanAc(!cokDers && asistanDersVar(kod) ? kod : asistanDersleri().sort()[0])}>
+            <button type="button" className="on-btn is-asistan" onClick={() => asistanAc(!cokDers && asistanDersVar(kod) ? kod : asistanDersleri(brans).sort()[0])}>
               <Headphones aria-hidden />Sesli asistan
             </button>
           )}
@@ -488,7 +488,7 @@ export const OnemListesi: React.FC<{ brans?: Brans }> = ({ brans = 'patoloji' })
                 <ChevronRight aria-hidden />
               </button>
             )}
-            {!cokDers && !bt.asistan && (
+            {!cokDers && brans !== 'patoloji' && (
               <button type="button" className="on-hero-asistan" onClick={() => cozucuyuAc(kod)}>
                 <span className="on-hero-asistan-i"><Headphones aria-hidden /></span>
                 <span><b>Bu dersin sorularını sesli çöz</b><small>Çıkmış ve örnek sorular karışık · ipucu, yanlışı ele, çözümü dinle · tam ekran</small></span>

@@ -7,11 +7,12 @@ import { getCustomApiUrl } from '../../../services/api';
 import { lockScroll, unlockScroll } from '../../../utils/scrollLock';
 import { ogrenildiAyarla, tercihOku, tercihYaz } from '../onem/onemVeri';
 import { Metin } from '../onem/OnemMadde';
-import { asistanDosyasi } from './asistanVeri';
+import { asistanDosyasi, asistanDizinDosyasi, kodBrans } from './asistanVeri';
+import { bransTanim } from '../brans';
 import '../../../styles/patoloji-asistan.css';
 
 /**
- * Patoloji · Sesli sınav asistanı v2 (tam ekran). Yalnız "Sınav için en önemliler" spotları için.
+ * Sesli sınav asistanı v2 (tam ekran; Patoloji, Enfeksiyon, Üroloji — branş ders kodunun önekinden). Yalnız "Sınav için en önemliler" spotları için.
  * İçerik: src/data/patoloji_asistan/<kod>.json (scripts/patoloji_onem/asistan_birlestir.py) — ders PDF'ine dayalı; dersin slayt
  * akışıyla bölümler ("neden önemli" girişiyle), her bölümde noktalar (ne · neden/mekanizma · sınavda nasıl çıkar), her noktadan
  * sonra o noktanın soruları (tüm çıkmışlar + 2026-27 örnek soruları). Her soruda: yanlış şıkka özgü açıklama (neden yanlış ·
@@ -25,9 +26,9 @@ interface Nokta { id: string; bolum: number; puan: number; aday: number | null; 
 interface Ders { kod: string; no: number; baslik: string; soruSayisi: number; giris: string[]; kapanis: string[]; bolumler: { baslik: string; neden: string }[]; noktalar: Nokta[]; klip: Record<string, Klip> }
 interface DizinDers { kod: string; no: number; baslik: string; bolum?: number; adim: number; soru: number; cikmis?: number; ses: boolean; sure: number }
 
-const DIZIN = import.meta.glob('../../../data/patoloji_asistan/index.json') as Record<string, () => Promise<{ default: { dersler: DizinDers[] } }>>;
 const dersYukle = (kod: string) => asistanDosyasi(kod)?.().then((m) => m.default as Ders);
-const dizinYukle = () => (Object.values(DIZIN)[0]?.() ?? Promise.resolve({ default: { dersler: [] } })).then((m) => m.default.dersler);
+const dizinYukle = (kod: string) =>
+  (asistanDizinDosyasi(kodBrans(kod))?.() ?? Promise.resolve({ default: { dersler: [] } })).then((m) => m.default.dersler as DizinDers[]);
 
 type Yogunluk = 'hepsi' | 'cikmis' | 'az' | 'yok';
 const YOGUNLUK: [Yogunluk, string][] = [['hepsi', 'Tüm sorular'], ['cikmis', 'Yalnız çıkmışlar'], ['az', 'Nokta başına 1'], ['yok', 'Soru yok']];
@@ -100,7 +101,7 @@ export const PatolojiAsistan: React.FC<{ kod: string; onClose: () => void; onDer
   const nokta = s && (s.tip === 'anlatim' || s.tip === 'soru') ? ders!.noktalar[s.n] : null;
 
   useEffect(() => { lockScroll(); return () => unlockScroll(); }, []);
-  useEffect(() => { dizinYukle().then(setDizin).catch(() => {}); }, []);
+  useEffect(() => { dizinYukle(kod0).then(setDizin).catch(() => {}); }, [kod0]);
   useEffect(() => {
     let canli = true;
     setDers(null); setHata(false); setTekrar(null); setI(0); setSonuc({}); setDevamSor(null);
@@ -287,7 +288,7 @@ export const PatolojiAsistan: React.FC<{ kod: string; onClose: () => void; onDer
     const ms = (navigator as Navigator & { mediaSession?: MediaSession }).mediaSession;
     if (!ms || !ders) return;
     try {
-      ms.metadata = new MediaMetadata({ title: nokta ? nokta.baslik : ders.baslik, artist: 'Patoloji · Sınav asistanı', album: `${ders.no}) ${ders.baslik}` });
+      ms.metadata = new MediaMetadata({ title: nokta ? nokta.baslik : ders.baslik, artist: `${bransTanim(kodBrans(kod)).ad} · Sınav asistanı`, album: `${ders.no}) ${ders.baslik}` });
       ms.setActionHandler('nexttrack', () => ileri());
       ms.setActionHandler('previoustrack', () => geri());
     } catch { /* desteklenmiyor */ }
@@ -317,7 +318,7 @@ export const PatolojiAsistan: React.FC<{ kod: string; onClose: () => void; onDer
   };
 
   const icerik = (
-    <div className={`pa${caliyor ? ' is-konusuyor' : ''}`} role="dialog" aria-modal="true" aria-label="Patoloji sesli sınav asistanı">
+    <div className={`pa${caliyor ? ' is-konusuyor' : ''}`} role="dialog" aria-modal="true" aria-label={`${bransTanim(kodBrans(kod)).ad} sesli sınav asistanı`}>
       <header className="pa-ust">
         <button type="button" className="pa-ikon" onClick={onClose} aria-label="Asistanı kapat"><X /></button>
         <div className="pa-ders">
@@ -396,7 +397,7 @@ export const PatolojiAsistan: React.FC<{ kod: string; onClose: () => void; onDer
                 <ol className="pa-plan">
                   {ders.bolumler.map((b, j) => <li key={j}><span>{j + 1}</span>{b.baslik}</li>)}
                 </ol>
-                <p className="pa-kural">Sınav kuralı: tablo, şekil ve klinik bulgu sorulmaz · her slayttan {ders.soruSayisi} soru.</p>
+                {bransTanim(kodBrans(kod)).sinavKurali && <p className="pa-kural">Sınav kuralı: tablo, şekil ve klinik bulgu sorulmaz · her slayttan {ders.soruSayisi} soru.</p>}
               </section>
             )}
 

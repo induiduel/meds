@@ -1,0 +1,106 @@
+{
+ "surum": "enfeksiyon-asistan-v1",
+ "brans": "enfeksiyon",
+ "ses": "EMA Lightning",
+ "dersler": [
+  {
+   "kod": "e01",
+   "no": 1,
+   "baslik": "Cinsel yolla bulaşan hastalıklarda tedavi",
+   "bolum": 7,
+   "adim": 25,
+   "soru": 27,
+   "cikmis": 8,
+   "ses": true,
+   "sure": 821
+  },
+  {
+   "kod": "e02",
+   "no": 2,
+   "baslik": "Genital enfeksiyonlar",
+   "bolum": 7,
+   "adim": 30,
+   "soru": 29,
+   "cikmis": 10,
+   "ses": true,
+   "sure": 915
+  },
+  {
+   "kod": "e03",
+   "no": 3,
+   "baslik": "İzolasyon yöntemleri",
+   "bolum": 7,
+   "adim": 24,
+   "soru": 27,
+   "cikmis": 10,
+   "ses": true,
+   "sure": 756
+  },
+  {
+   "kod": "e04",
+   "no": 4,
+   "baslik": "Enfeksiyon Hastalıklarında Temel Kavramlar ve Genel Özellikler",
+   "bolum": 8,
+   "adim": 34,
+   "soru": 45,
+   "cikmis": 9,
+   "ses": true,
+   "sure": 1145
+  },
+  {
+   "kod": "e05",
+   "no": 5,
+   "baslik": "Üriner Sistem Enfeksiyonları",
+   "bolum": 7,
+   "adim": 27,
+   "soru": 26,
+   "cikmis": 6,
+   "ses": true,
+   "sure": 991
+  },
+  {
+   "kod": "e06",
+   "no": 6,
+   "baslik": "Cinsel Yolla Bulaşan Enfeksiyonlarda Korunma ve Profilaksi",
+   "bolum": 6,
+   "adim": 23,
+   "soru": 27,
+   "cikmis": 8,
+   "ses": true,
+   "sure": 772
+  },
+  {
+   "kod": "e07",
+   "no": 7,
+   "baslik": "Sifiliz",
+   "bolum": 6,
+   "adim": 23,
+   "soru": 30,
+   "cikmis": 12,
+   "ses": true,
+   "sure": 724
+  },
+  {
+   "kod": "e08",
+   "no": 8,
+   "baslik": "Üretral Akıntı",
+   "bolum": 8,
+   "adim": 27,
+   "soru": 27,
+   "cikmis": 7,
+   "ses": true,
+   "sure": 843
+  },
+  {
+   "kod": "e10",
+   "no": 10,
+   "baslik": "Mikroorganizmalarda Direnç Sorunu ve Antimikrobiyal Yönetim",
+   "bolum": 6,
+   "adim": 20,
+   "soru": 22,
+   "cikmis": 4,
+   "ses": true,
+   "sure": 698
+  }
+ ]
+}

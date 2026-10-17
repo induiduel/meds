@@ -1,0 +1,73 @@
+{
+ "surum": "uroloji-asistan-v1",
+ "brans": "uroloji",
+ "ses": "EMA Lightning",
+ "dersler": [
+  {
+   "kod": "u01",
+   "no": 1,
+   "baslik": "Üriner Obstrüksiyon: Patofizyoloji, Klinik ve Tedavi",
+   "bolum": 6,
+   "adim": 26,
+   "soru": 26,
+   "cikmis": 6,
+   "ses": true,
+   "sure": 896
+  },
+  {
+   "kod": "u02",
+   "no": 2,
+   "baslik": "Ürolitiyazis Patofizyolojisi",
+   "bolum": 8,
+   "adim": 26,
+   "soru": 26,
+   "cikmis": 6,
+   "ses": true,
+   "sure": 971
+  },
+  {
+   "kod": "u03",
+   "no": 3,
+   "baslik": "Üriner Sistem Enfeksiyonları",
+   "bolum": 8,
+   "adim": 35,
+   "soru": 51,
+   "cikmis": 19,
+   "ses": true,
+   "sure": 1199
+  },
+  {
+   "kod": "u04",
+   "no": 4,
+   "baslik": "Üriner Sistem Enfeksiyonlarının Epidemiyoloji, Etyoloji ve Semptomatolojisi",
+   "bolum": 7,
+   "adim": 40,
+   "soru": 57,
+   "cikmis": 22,
+   "ses": true,
+   "sure": 1359
+  },
+  {
+   "kod": "u05",
+   "no": 5,
+   "baslik": "Üriner Sistemin Spesifik Enfeksiyonları",
+   "bolum": 6,
+   "adim": 29,
+   "soru": 28,
+   "cikmis": 8,
+   "ses": true,
+   "sure": 953
+  },
+  {
+   "kod": "u06",
+   "no": 6,
+   "baslik": "Enürezis Nokturna",
+   "bolum": 6,
+   "adim": 28,
+   "soru": 36,
+   "cikmis": 16,
+   "ses": true,
+   "sure": 914
+  }
+ ]
+}

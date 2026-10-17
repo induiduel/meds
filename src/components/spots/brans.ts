@@ -18,7 +18,7 @@ export interface BransTanim {
   araOrnek: string;
   /** soru çözücü sayfasının açıklaması (soru türleri) */
   cozucuNot: string;
-  /** sesli sınav asistanı var mı (şimdilik yalnız patoloji) */
+  /** sesli sınav asistanı var mı (düğme yalnız src/data/<id>_asistan verisi varsa görünür) */
   asistan: boolean;
   /** hocanın sınav kuralı kutusu (tablo/şekil/klinik bulgudan soru yok; slayt başına soru) — yalnız patoloji */
   sinavKurali: boolean;
@@ -33,12 +33,12 @@ export const BRANSLAR: BransTanim[] = [
   {
     id: 'enfeksiyon', ad: 'Enfeksiyon', tam: 'Enfeksiyon Hastalıkları', hepsi: 'Tüm enfeksiyon', araOrnek: 'sifiliz, izolasyon, direnç',
     cozucuNot: 'çıkmış sorular ve çıkmışların üslubunda örnek sorular (çoğu orta, kolay ve zor da var), karışık',
-    asistan: false, sinavKurali: false,
+    asistan: true, sinavKurali: false,
   },
   {
     id: 'uroloji', ad: 'Üroloji', tam: 'Üroloji', hepsi: 'Tüm üroloji', araOrnek: 'taş, obstrüksiyon, enürezis',
     cozucuNot: 'çıkmış sorular ve çıkmışların üslubunda örnek sorular (çoğu orta, kolay ve zor da var), karışık',
-    asistan: false, sinavKurali: false,
+    asistan: true, sinavKurali: false,
   },
 ];
 
