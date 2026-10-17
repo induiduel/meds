@@ -1,10 +1,10 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 9,
-  "baslik": "Tıbbi Sözlük ve Hastalıklar Listesi Görünüm Düzeltmesi",
+  "onem": 10,
+  "baslik": "Ders Asistanı Alt Kontrol Çubuğu Tek Hat Düzenlemesi",
   "maddeler": [
-    "Sözlük ve Hastalıklar sayfalarında terim ve profil listesinin geniş ekranda daralarak kaybolması sorunu giderildi.",
-    "Sol liste paneli ve sağ detay bölmesi tüm ekran boyutlarında eksiksiz görünür ve kaydırılabilir hale getirildi.",
-    "Doğrudan bağlantı ile girildiğinde terim ve hastalık profillerinin doğru açılması sağlandı."
+    "Ders asistanında alt oynatıcı çubuğundaki oynatma kontrolleri ve ayar butonları (soru yoğunluğu, hız, otomatik geç) tek bir yatay hatta hizalandı.",
+    "Kontrollerin 2 ayrı satıra kırılarak dikey alan kaplaması önlendi, tüm ekran boyutlarında tek satır kompakt dock görünümü sağlandı.",
+    "Oynatma butonları ile ayarlar arasına görsel ayraç eklenerek kontroller daha düzenli hale getirildi."
   ]
 }

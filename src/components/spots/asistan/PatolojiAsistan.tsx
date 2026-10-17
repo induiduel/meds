@@ -936,6 +936,7 @@ export const PatolojiAsistan: React.FC<{ kod: string; onClose: () => void; onDer
             <button type="button" className="pa-ikon pa-parca-btn" onClick={sonrakiCumle} disabled={aktifCumleler.length <= 1} aria-label="Sonraki cümle" title="Sonraki cümle / parça ( ] )"><SkipForward /></button>
             <button type="button" className="pa-ikon" onClick={ileri} disabled={i >= sahneler.length - 1} aria-label={s?.tip === 'soru' && !cozuldu ? 'Soruyu atla' : 'Sonraki sayfa'} title={s?.tip === 'soru' && !cozuldu ? 'Soruyu atla' : 'Sonraki sayfa (Sağ ok)'}>{s?.tip === 'soru' && !cozuldu ? <SkipForward /> : <ChevronRight />}</button>
           </div>
+          <div className="pa-alt-ayrac" aria-hidden />
           <div className="pa-ayar">
             <label className="pa-sec" title="Soru yoğunluğu">
               <ListChecks aria-hidden />
