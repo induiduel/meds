@@ -323,6 +323,7 @@ self.addEventListener('fetch', (event) => {
       url.pathname.startsWith('/api/realtime/') ||
       url.pathname.startsWith('/api/live/') ||
       url.pathname.startsWith('/api/presence') ||
+      url.pathname === '/api/surum' || // sürüm denetimi her zaman ağdan (güncelleme diyaloğu)
       url.pathname.startsWith('/api/canli-ders/ses/') || // ses akışı (Range/206): tarayıcı doğrudan alır, önbelleğe yazılmaz
       url.pathname.startsWith('/api/patoloji-asistan/ses/') || // sınav asistanı EMA klipleri (Range/206)
       url.pathname.startsWith('/api/patoloji-cozucu/ses/') || // soru çözücü EMA klipleri (Range/206)

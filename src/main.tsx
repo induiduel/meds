@@ -19,6 +19,7 @@ import './styles/v11.css';
 import './styles/v12.css';
 import { installToastBridge } from './components/ui/Toast';
 import { installNetworkBanner } from './components/system/NetworkBanner';
+import { installUpdatePrompt } from './components/system/UpdatePrompt';
 import { installPullToRefresh } from './components/system/PullToRefresh';
 import { installNotesSync } from './services/notesSync';
 import { installUserDataAutoBackup } from './services/userDataSyncService';
@@ -77,6 +78,7 @@ if (typeof window !== 'undefined') {
 // alert() and unhandled failures become friendly floating toasts
 installToastBridge();
 installNetworkBanner();
+installUpdatePrompt();
 installPullToRefresh();
 installNotesSync();
 installUserDataAutoBackup();

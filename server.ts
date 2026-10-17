@@ -576,6 +576,16 @@ app.use((req, res, next) => {
   next();
 });
 
+// Derleme sürümü (dist/surum.json, scripts/vite/surumDosyasi.ts): açık sekmeler önemli güncellemeyi buradan öğrenir
+app.get('/api/surum', (_req, res) => {
+  res.setHeader('Cache-Control', 'no-store');
+  try {
+    res.type('application/json').send(fs.readFileSync(path.resolve(__dirname, 'dist', 'surum.json'), 'utf8'));
+  } catch {
+    res.json({ surum: '', onem: 0 });
+  }
+});
+
 // Hybrid Database & Server Health Check
 app.get('/api/health', (req, res) => {
   res.json({
