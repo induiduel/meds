@@ -1,11 +1,11 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 6,
-  "baslik": "Sesli Sınav Asistanı Parça ve Cümle Kontrolleri Eklendi",
+  "onem": 7,
+  "baslik": "Tıbbi Sözlük ve Hastalıklar Atlası Doğrudan Erişim Düzeltmeleri",
   "maddeler": [
-    "Sınav asistanı anlatım sayfalarına 'Bu cümleyi tekrarla', 'Önceki cümle' ve 'Sonraki cümle' kontrolleri eklendi.",
-    "Sayfa içindeki cümlelere doğrudan tıklayarak istenen cümleden başlatma veya aynı cümleyi yeniden dinleme özelliği getirildi.",
-    "Alt oynatıcı çubuğuna cümle geçiş ve tekrar dinleme butonları ile klavye kısayolları (R: tekrarla, T: baştan dinle, [: önceki, ]: sonraki) eklendi.",
-    "Soru ve özet sayfalarına soruyu ve çözümü tekrar dinleme butonları entegre edildi."
+    "Sözlük ve Hastalıklar sayfalarında doğrudan bağlantı (/sozluk/<terim>, /hastaliklar/<profil>) ile veri görüntüleme düzeltildi.",
+    "Geniş ekranda hastalıklar açıldığında ayrıntı panelinin boş kalması önlendi; ilk profil otomatik olarak yüklenip seçili duruma getirildi.",
+    "Sözlük maddelerinde doğrudan bağlantıların varsayılan ilk madde tarafından ezilmesine yol açan eşzamansız durum çakışması giderildi.",
+    "Hastalık ve sözlük detay panellerindeki ilgili derslere tıklanarak doğrudan arama ve ders notlarına erişim sağlandı."
   ]
 }
