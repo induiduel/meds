@@ -46,12 +46,13 @@ const dersler = () => oku<Ders[]>(P.dersler, []);
  * BRANS_DUZELT: Drive numarası çakışan/hatalı ya da başka dersin PDF'ine hizalı dersler (her zaman).
  * BRANS_YEDEK: hizalaması (PDF'i) henüz olmayan dersler; Drive numaraları Oracle hizalamasıyla aynı.
  */
-const BRANS_DUZELT: Record<string, [string, number]> = {
+const BRANS_DUZELT: Record<string, [string, number, number?]> = {
   // Drive: Böbrek ve Mesane ikisi de "26)", İnvaziv Serviks "39)" — patoloji önem listesiyle aynı numara
   'k1-46-mesane-hastaliklari-ve-tumorleri': ['Tıbbi Patoloji', 27],
   'k1-49-invaziv-serviks-kanseri-ve-endometriyozis': ['Tıbbi Patoloji', 29],
-  // Ayrı slayt dosyası yok (Endometrium + Gebelik Hastalıkları PDF'lerine hizalı): patoloji dosyalarından sonra
-  'k1-54-uterus-duz-kas-ve-trofoblastik-tumorleri': ['Tıbbi Patoloji', 36],
+  // 30)Endometrial Hiperplazi ve Kanserleri.pdf iki derste anlatıldı: ilk yarısı Part 1, Uterus Düz Kas/Trofoblastik Part 2
+  'k1-53-endometriyal-hiperplazi-ve-kanserleri': ['Tıbbi Patoloji', 30, 1],
+  'k1-54-uterus-duz-kas-ve-trofoblastik-tumorleri': ['Tıbbi Patoloji', 30, 2],
 };
 const BRANS_YEDEK: Record<string, [string, number]> = {
   'k1-06-gebelik-ve-emzirme-doneminde-beslenme': ['Halk Sağlığı', 7],
@@ -63,10 +64,10 @@ const BRANS_YEDEK: Record<string, [string, number]> = {
   'k1-66-erkek-genital-sistem-ve-prostat-hastaliklari': ['Tıbbi Patoloji', 34],
 };
 const bransOnbellek = new Map<string, { mtime: number; v: { brans: string; bransNo: number } | null }>();
-function bransBilgisi(d: Ders): { brans: string; bransNo: number; kurul: number } {
+function bransBilgisi(d: Ders): { brans: string; bransNo: number; kurul: number; parca?: number } {
   const kurul = Number(/^k(\d+)-/.exec(d.key)?.[1]) || 0;
   const elle = BRANS_DUZELT[d.key];
-  if (elle) return { brans: elle[0], bransNo: elle[1], kurul };
+  if (elle) return { brans: elle[0], bransNo: elle[1], kurul, ...(elle[2] ? { parca: elle[2] } : {}) };
   const p = P.hizalama(d.key);
   let mtime = -1;
   try { mtime = fs.statSync(p).mtimeMs; } catch { /* PDF yok */ }
@@ -111,6 +112,7 @@ export function registerCanliDersRoutes(app: Express) {
           no: b.bransNo,
           kurulNo: d.no,
           brans: b.brans,
+          parca: b.parca,
           kurul: b.kurul,
           baslik: d.baslik,
           sira: d.sira,
@@ -134,7 +136,7 @@ export function registerCanliDersRoutes(app: Express) {
     const d = dersler().find((x) => x.key === key);
     if (req.query.indir) {
       const b = d ? bransBilgisi(d) : null;
-      const ad = `${b ? `${b.brans} ${String(b.bransNo).padStart(2, '0')}` : ''} - ${d?.baslik || key} - ${v.etiket || vid}.mp3`.replace(/[\\/:*?"<>|\u0000-\u001f]/g, '-');
+      const ad = `${b ? `${b.brans} ${String(b.bransNo).padStart(2, '0')}${b.parca ? ` Part ${b.parca}` : ''}` : ''} - ${d?.baslik || key} - ${v.etiket || vid}.mp3`.replace(/[\\/:*?"<>|\u0000-\u001f]/g, '-');
       const ascii = ad
         .replace(/[ğĞüÜşŞıİöÖçÇ·]/g, (c) => ({ ğ: 'g', Ğ: 'G', ü: 'u', Ü: 'U', ş: 's', Ş: 'S', ı: 'i', İ: 'I', ö: 'o', Ö: 'O', ç: 'c', Ç: 'C', '·': '-' })[c]!)
         .normalize('NFKD')
@@ -177,6 +179,7 @@ export function registerCanliDersRoutes(app: Express) {
       no: b.bransNo,
       kurulNo: d.no,
       brans: b.brans,
+      parca: b.parca,
       kurul: b.kurul,
       sira: d.sira,
       baslik: d.baslik,

@@ -17,9 +17,13 @@ export const cdBransKisa = (brans: string) => KISA[brans] || brans.replace(/^Tı
 const bransAdi = (d: CdListeDers) => d.brans || 'Diğer';
 const noSayi = (d: CdListeDers) => Number(d.no) || 9999;
 
-/** Liste satırı dışında (oynatıcı, devam kartı, listem) gösterilecek ad: "Patoloji 16 · Başlık" */
-export const cdDersEtiketi = (d: { no?: string | number; brans?: string }) =>
-  d.brans && d.brans !== 'Diğer' ? `${cdBransKisa(d.brans)} ${d.no}` : d.no ? String(d.no) : '';
+/** Grup başlığındaki sayı: Part 1/2 tek konu (PDF) sayılır */
+export const cdKonuSayisi = (ds: CdListeDers[]) => new Set(ds.map((d) => `${d.brans}|${d.no}`)).size;
+
+export const cdParca = (d: { parca?: number }) => (d.parca ? `Part ${d.parca}` : '');
+/** Liste satırı dışında (oynatıcı, devam kartı, listem) gösterilecek ad: "Patoloji 30 · Part 2" */
+export const cdDersEtiketi = (d: { no?: string | number; brans?: string; parca?: number }) =>
+  (d.brans && d.brans !== 'Diğer' ? `${cdBransKisa(d.brans)} ${d.no}` : d.no ? String(d.no) : '') + (d.parca ? ` · ${cdParca(d)}` : '');
 
 /** Boş gruplar düşer; branşlar ders sayısına göre (çoktan aza), her grupta branş içi numaraya göre sıralı.
  *  Birden çok kurul varsa her kurulun branşı ayrı grup olur. */
@@ -35,7 +39,7 @@ export function cdKategoriGrupla(ds: CdListeDers[]): { kat: CdKategori; dersler:
   }
   const diger = (g: { kat: CdKategori }) => (g.kat.ad === 'Diğer' ? 1 : 0);
   return [...m.values()]
-    .map((g) => ({ ...g, dersler: g.dersler.sort((a, b) => noSayi(a) - noSayi(b) || (a.sira ?? 0) - (b.sira ?? 0)) }))
+    .map((g) => ({ ...g, dersler: g.dersler.sort((a, b) => noSayi(a) - noSayi(b) || (a.parca ?? 0) - (b.parca ?? 0) || (a.sira ?? 0) - (b.sira ?? 0)) }))
     .sort((a, b) => diger(a) - diger(b) || (a.kat.alt || '').localeCompare(b.kat.alt || '', 'tr')
       || b.dersler.length - a.dersler.length || a.kat.ad.localeCompare(b.kat.ad, 'tr'));
 }

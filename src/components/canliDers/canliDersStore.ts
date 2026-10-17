@@ -27,6 +27,8 @@ export interface CdListeDers {
   no: string | number;
   /** Ders (branş) adı: "Tıbbi Patoloji"; kurulNo: kurul genelindeki sıra */
   brans?: string;
+  /** Aynı PDF iki derste anlatıldıysa 1/2 ("Part 1") */
+  parca?: number;
   kurul?: number;
   kurulNo?: number;
   baslik: string;
@@ -44,6 +46,7 @@ export interface CdDetay {
   key: string;
   no: string | number;
   brans?: string;
+  parca?: number;
   kurul?: number;
   kurulNo?: number;
   sira?: number;
@@ -53,7 +56,7 @@ export interface CdDetay {
   pdf: CdPdf | null;
 }
 /** Çalmaya başlamak için en az bu kadarı yeter (liste satırından hızlı oynatma) */
-export interface CdOzet { key: string; no: string | number; brans?: string; baslik: string; varyantlar: CdVaryant[] }
+export interface CdOzet { key: string; no: string | number; brans?: string; parca?: number; baslik: string; varyantlar: CdVaryant[] }
 
 export const CD_HIZLAR = [1, 1.25, 1.5, 2, 3, 4] as const;
 const HIZ_KEY = 'medsoru_canli_ders_hiz';

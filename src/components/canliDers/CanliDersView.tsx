@@ -16,7 +16,7 @@ import { cdListeOzetleri, useCdListe } from './canliDersListe';
 import { ListeEkleDugme, Listem } from './CanliDersListem';
 import { useCdTur } from './useCdTur';
 import { CevrimdisiDugme, useCevrimdisiSuzgec } from './CanliDersCevrimdisi';
-import { cdBransKisa, cdDersEtiketi, cdKategoriGrupla, type CdKategori } from './canliDersKategori';
+import { cdBransKisa, cdDersEtiketi, cdKategoriGrupla, cdKonuSayisi, cdParca, type CdKategori } from './canliDersKategori';
 import '../../styles/canli-ders.css';
 
 const fold = (s: string) =>
@@ -140,7 +140,7 @@ function CanliDersListe() {
           {son && !q && suzgec === 'tum' && <DevamKarti d={son.d} k={son.k} />}
           <div className="cd-kat-cipler" role="group" aria-label="Kategoriye göre süz">
             <button type="button" aria-pressed={suzgec === 'tum'} className={suzgec === 'tum' ? 'is-on' : ''} onClick={() => setSuzgec('tum')}>
-              Tümü <span>{dersler.length}</span>
+              Tümü <span>{cdKonuSayisi(dersler)}</span>
             </button>
             {yarimSayi > 0 && (
               <button type="button" aria-pressed={suzgec === 'yarim'} className={`is-yarim${suzgec === 'yarim' ? ' is-on' : ''}`} onClick={() => setSuzgec('yarim')}>
@@ -150,14 +150,14 @@ function CanliDersListe() {
             {tumGruplar.map(({ kat, dersler: ds }) => (
               <button key={kat.id} type="button" aria-pressed={suzgec === kat.id} className={suzgec === kat.id ? 'is-on' : ''}
                 onClick={() => setSuzgec(suzgec === kat.id ? 'tum' : kat.id)}>
-                {kat.kisa} <span>{ds.length}</span>
+                {kat.kisa} <span>{cdKonuSayisi(ds)}</span>
               </button>
             ))}
           </div>
           {!gorunenN ? (
             <div className="cd-bos"><p>{q ? `"${q}" için bu kategoride ders bulunamadı.` : 'Bu kategoride ders yok.'}</p></div>
           ) : gruplar.map(({ kat, dersler: ds }) => (
-            <KategoriBolumu key={kat.id} kat={kat} n={ds.length} acik={!!q || !kapali.has(kat.id)} onDegistir={() => katDegistir(kat.id)}>
+            <KategoriBolumu key={kat.id} kat={kat} n={cdKonuSayisi(ds)} acik={!!q || !kapali.has(kat.id)} onDegistir={() => katDegistir(kat.id)}>
               <ul className="cd-satirlar">
                 {ds.map((d) => <DersSatiri key={d.key} d={d} k={konum.get(d.key)} />)}
               </ul>
@@ -277,7 +277,7 @@ const DersSatiri = React.memo(function DersSatiri({ d, k }: { d: CdListeDers; k?
             dersAc(d.key);
           }}
         >
-          <b>{d.baslik}</b>
+          <b>{d.parca ? <><em className="cd-parca">{cdParca(d)}</em> </> : null}{d.baslik}</b>
           <small>
             <span>{fmtSure(v.sureSn)}</span>
             {sesN > 1 && <span>{sesN} ses</span>}

@@ -324,7 +324,7 @@ export async function cdCevrimdisiAyarla(key: string, vidler: string[] | null, o
     await cache.put(yedekDetay(key), json(yerelDetay));
     if (deckJson && detay.pdf?.deckId) await cache.put(deckAdresi(detay.pdf.deckId), json(deckJson));
     const listeSatiri: CdListeDers = {
-      key, no: detay.no, brans: detay.brans, kurul: detay.kurul, kurulNo: detay.kurulNo, baslik: detay.baslik,
+      key, no: detay.no, brans: detay.brans, parca: detay.parca, kurul: detay.kurul, kurulNo: detay.kurulNo, baslik: detay.baslik,
       sira: detay.sira ?? (Number(detay.no) || 0), varsayilan: secili[0], varyantlar: secili, pdf: !!detay.pdf,
     };
     await cache.put(yedekListe(key), json(listeSatiri));
