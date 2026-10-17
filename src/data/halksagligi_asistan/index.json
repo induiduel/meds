@@ -1,0 +1,62 @@
+{
+ "surum": "halksagligi-asistan-v1",
+ "brans": "halksagligi",
+ "ses": "EMA Lightning",
+ "dersler": [
+  {
+   "kod": "h01",
+   "no": 1,
+   "baslik": "Halk Sağlığı Tarihçesi ve İlkeleri",
+   "bolum": 5,
+   "adim": 22,
+   "soru": 36,
+   "cikmis": 12,
+   "ses": false,
+   "sure": 0
+  },
+  {
+   "kod": "h02",
+   "no": 2,
+   "baslik": "Ana Çocuk Sağlığı Düzeyinin İzlenmesi",
+   "bolum": 4,
+   "adim": 21,
+   "soru": 33,
+   "cikmis": 8,
+   "ses": false,
+   "sure": 0
+  },
+  {
+   "kod": "h03",
+   "no": 3,
+   "baslik": "Bebek Beslenmesi",
+   "bolum": 5,
+   "adim": 24,
+   "soru": 44,
+   "cikmis": 15,
+   "ses": false,
+   "sure": 0
+  },
+  {
+   "kod": "h04",
+   "no": 4,
+   "baslik": "Salgın Hastalıklarda Kontrol ve Korunma Yöntemleri",
+   "bolum": 4,
+   "adim": 20,
+   "soru": 23,
+   "cikmis": 4,
+   "ses": false,
+   "sure": 0
+  },
+  {
+   "kod": "h05",
+   "no": 5,
+   "baslik": "Enfeksiyon Hastalıklarının Genel Epidemiyolojik Özellikleri",
+   "bolum": 5,
+   "adim": 20,
+   "soru": 22,
+   "cikmis": 2,
+   "ses": false,
+   "sure": 0
+  }
+ ]
+}

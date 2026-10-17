@@ -4,7 +4,7 @@
  *   src/data/<id>_cozucu/{index,<kod>}.json (sesli soru çözücü; sesler data/<id>_cozucu/ses, ses_<ses> →/api/cozucu-ses/<id>/…)
  * Ders kodları branşlar arasında tekildir (patoloji "07", enfeksiyon "e07", üroloji "u03"); "öğrendim" ve çözücü ilerlemesi koda bağlı.
  */
-export type Brans = 'patoloji' | 'enfeksiyon' | 'uroloji';
+export type Brans = 'patoloji' | 'enfeksiyon' | 'uroloji' | 'genetik' | 'halksagligi' | 'kadindogum' | 'farmakoloji';
 
 export interface BransTanim {
   id: Brans;
@@ -37,6 +37,26 @@ export const BRANSLAR: BransTanim[] = [
   },
   {
     id: 'uroloji', ad: 'Üroloji', tam: 'Üroloji', hepsi: 'Tüm üroloji', araOrnek: 'taş, obstrüksiyon, enürezis',
+    cozucuNot: 'çıkmış sorular ve çıkmışların üslubunda örnek sorular (çoğu orta, kolay ve zor da var), karışık',
+    asistan: true, sinavKurali: false,
+  },
+  {
+    id: 'genetik', ad: 'Genetik', tam: 'Tıbbi Genetik', hepsi: 'Tüm genetik', araOrnek: 'kromozom, prenatal, doku tipleme',
+    cozucuNot: 'çıkmış sorular ve çıkmışların üslubunda örnek sorular (çoğu orta, kolay ve zor da var), karışık',
+    asistan: true, sinavKurali: false,
+  },
+  {
+    id: 'halksagligi', ad: 'Halk Sağlığı', tam: 'Halk Sağlığı', hepsi: 'Tüm halk sağlığı', araOrnek: 'anne sütü, salgın, bebek ölüm',
+    cozucuNot: 'çıkmış sorular ve çıkmışların üslubunda örnek sorular (çoğu orta, kolay ve zor da var), karışık',
+    asistan: true, sinavKurali: false,
+  },
+  {
+    id: 'kadindogum', ad: 'Kadın Doğum', tam: 'Kadın Hastalıkları ve Doğum', hepsi: 'Tüm kadın doğum', araOrnek: 'abortus, servikal yetmezlik, düşük',
+    cozucuNot: 'çıkmış sorular ve çıkmışların üslubunda örnek sorular (çoğu orta, kolay ve zor da var), karışık',
+    asistan: true, sinavKurali: false,
+  },
+  {
+    id: 'farmakoloji', ad: 'Farmakoloji', tam: 'Tıbbi Farmakoloji', hepsi: 'Tüm farmakoloji', araOrnek: 'siklosporin, takrolimus, immünsüpresif',
     cozucuNot: 'çıkmış sorular ve çıkmışların üslubunda örnek sorular (çoğu orta, kolay ve zor da var), karışık',
     asistan: true, sinavKurali: false,
   },

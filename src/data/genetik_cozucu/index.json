@@ -1,0 +1,101 @@
+{
+ "surum": "genetik-cozucu-v1",
+ "ses": "EMA",
+ "sesler": [
+  {
+   "id": "ema",
+   "ad": "EMA",
+   "varsayilan": true
+  }
+ ],
+ "ortak": {
+  "yanlis": {
+   "v": "1e0f04980772",
+   "sure": 1.2
+  },
+  "dene": {
+   "v": "542e22f41067",
+   "sure": 1.488
+  }
+ },
+ "dersler": [
+  {
+   "kod": "g01",
+   "no": 1,
+   "baslik": "Dismorfolojide Genetik Terminoloji",
+   "soru": 23,
+   "ornek": 21,
+   "cikmis": 2,
+   "ses": true,
+   "sayfa": [
+    3,
+    89
+   ]
+  },
+  {
+   "kod": "g02",
+   "no": 2,
+   "baslik": "Kromozomal Hastalıklar ve Genetik Danışma",
+   "soru": 27,
+   "ornek": 21,
+   "cikmis": 6,
+   "ses": true,
+   "sayfa": [
+    5,
+    87
+   ]
+  },
+  {
+   "kod": "g03",
+   "no": 3,
+   "baslik": "Doğumsal Kadın-Erkek Gelişim Anomalileri",
+   "soru": 32,
+   "ornek": 20,
+   "cikmis": 12,
+   "ses": true,
+   "sayfa": [
+    5,
+    77
+   ]
+  },
+  {
+   "kod": "g04",
+   "no": 4,
+   "baslik": "Ürogenital Sistem Tümörlerinde Genetik Belirteçler",
+   "soru": 23,
+   "ornek": 20,
+   "cikmis": 3,
+   "ses": true,
+   "sayfa": [
+    3,
+    71
+   ]
+  },
+  {
+   "kod": "g05",
+   "no": 5,
+   "baslik": "Prenatal Tanı ve Uygulama Alanları",
+   "soru": 32,
+   "ornek": 22,
+   "cikmis": 10,
+   "ses": true,
+   "sayfa": [
+    12,
+    94
+   ]
+  },
+  {
+   "kod": "g06",
+   "no": 6,
+   "baslik": "Preimplantasyon Genetik Tanı",
+   "soru": 23,
+   "ornek": 20,
+   "cikmis": 3,
+   "ses": true,
+   "sayfa": [
+    3,
+    92
+   ]
+  }
+ ]
+}

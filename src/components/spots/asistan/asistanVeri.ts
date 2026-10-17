@@ -2,9 +2,12 @@
  *  Branş klasörleri src/data/<brans>_asistan/; ders kodları branşlar arasında tekil (patoloji "07", enfeksiyon "e07", üroloji "u03"). */
 import type { Brans } from '../brans';
 
-const DOSYA = import.meta.glob('../../../data/*_asistan/[0-9eu]*.json');
+const DOSYA = import.meta.glob('../../../data/*_asistan/[0-9eughkf]*.json');
 const DIZIN = import.meta.glob('../../../data/*_asistan/index.json');
-export const kodBrans = (kod: string): Brans => (kod.startsWith('e') ? 'enfeksiyon' : kod.startsWith('u') ? 'uroloji' : 'patoloji');
+const ONEK_BRANS: Record<string, Brans> = {
+  e: 'enfeksiyon', u: 'uroloji', g: 'genetik', h: 'halksagligi', k: 'kadindogum', f: 'farmakoloji',
+};
+export const kodBrans = (kod: string): Brans => ONEK_BRANS[kod[0]] || 'patoloji';
 export const asistanYolu = (kod: string) => `../../../data/${kodBrans(kod)}_asistan/${kod}.json`;
 export const asistanDersVar = (kod: string) => !!DOSYA[asistanYolu(kod)];
 export const asistanDosyasi = (kod: string) => DOSYA[asistanYolu(kod)] as (() => Promise<{ default: unknown }>) | undefined;

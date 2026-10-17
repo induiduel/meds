@@ -1,0 +1,53 @@
+{
+ "surum": "farmakoloji-cozucu-v1",
+ "ses": "EMA",
+ "sesler": [
+  {
+   "id": "ema",
+   "ad": "EMA",
+   "varsayilan": true
+  }
+ ],
+ "ortak": {
+  "yanlis": {
+   "v": "1e0f04980772",
+   "sure": 1.2
+  },
+  "dene": {
+   "v": "542e22f41067",
+   "sure": 1.488
+  }
+ },
+ "dersler": [
+  {
+   "kod": "f01-1",
+   "no": 1,
+   "baslik": "İmmunofarmakoloji",
+   "soru": 21,
+   "ornek": 11,
+   "cikmis": 10,
+   "ses": true,
+   "set": 1,
+   "setSay": 2,
+   "sayfa": [
+    4,
+    87
+   ]
+  },
+  {
+   "kod": "f01-2",
+   "no": 1,
+   "baslik": "İmmunofarmakoloji",
+   "soru": 20,
+   "ornek": 15,
+   "cikmis": 5,
+   "ses": true,
+   "set": 2,
+   "setSay": 2,
+   "sayfa": [
+    45,
+    87
+   ]
+  }
+ ]
+}

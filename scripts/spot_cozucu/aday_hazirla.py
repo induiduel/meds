@@ -25,6 +25,23 @@ BRANS = {
         'u03': ['Üriner Sistem Enfeksiyonları Lab. Bulguları ve Tedavi'],
         'u04': ['Üriner Sistem Enfeksiyonlarının Epidemiyoloji, Etiyoloji ve Semptomatolojisi'],
         'u05': ['Üriner Sistemin Spesifik Enfeksiyonları'], 'u06': ['Enürezis Nokturna']}),
+    'genetik': ('Tıbbi Genetik', {
+        'g01': ['Dismorfolojide Genetik Terminoloji'],
+        'g02': ['Kromozomal Hastalıklar ve Genetik Danışma'],
+        'g03': ['Doğumsal Kadın/Erkek Genital Gelişim Anomalileri'],
+        'g04': ['Ürogenital Sistem Tümörlerinde Genetik Belirteçler ve Kliniğe Yansımaları'],
+        'g05': ['Prenatal Tanı Yöntemleri'],
+        'g06': ['Preimplantasyon Genetik Tanı (PGD)']}),
+    'halksagligi': ('Halk Sağlığı', {
+        'h01': ['Halk Sağlığı Tarihçesi', 'Koruyucu Sağlık Hizmetleri', 'Türkiye’de Sağlık Hizmetleri'],
+        'h02': ['Ana-Çocuk Sağlığı Düzeyinin İzlenmesi'],
+        'h03': ['Bebek Beslenmesi', 'Gebelik ve Emzirme Döneminde Beslenme'],
+        'h04': ['Salgın Hastalıklarda Kontrol ve Korunma Yöntemleri'],
+        'h05': ['Enfeksiyon Hastalıklarının Epidemiyolojisi']}),
+    'kadindogum': ('Kadın Hastalıkları ve Doğum', {
+        'k01': ['Abortus', 'Gebelik Terminolojisi/Kavramları']}),
+    'farmakoloji': ('Tıbbi Farmakoloji', {
+        'f01': ['İmmünofarmakoloji']}),
 }
 
 
@@ -51,7 +68,10 @@ def main():
         silinen = {str(x.get('id') if isinstance(x, dict) else x) for x in json.load(open(MEDS / 'data/deleted_past_questions.json'))}
     except Exception:
         silinen = set()
+    import sys
+    secilen = set(sys.argv[1:]) or set(BRANS)
     for brans, (ders, KONU) in BRANS.items():
+        if brans not in secilen: continue
         konu_kod = {k: kod for kod, ks in KONU.items() for k in ks}
         by = defaultdict(list)
         for q in Q:

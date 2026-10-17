@@ -8,7 +8,7 @@
 import path from 'path';
 import type { Express, Request, Response } from 'express';
 
-const BRANSLAR = new Set(['patoloji', 'enfeksiyon', 'uroloji']);
+const BRANSLAR = new Set(['patoloji', 'enfeksiyon', 'uroloji', 'genetik', 'halksagligi', 'kadindogum', 'farmakoloji']);
 const VARSAYILAN_SES = 'ema';
 const KOK = path.resolve(process.cwd(), 'data');
 

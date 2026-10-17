@@ -1,0 +1,36 @@
+{
+ "surum": "kadindogum-cozucu-v1",
+ "ses": "EMA",
+ "sesler": [
+  {
+   "id": "ema",
+   "ad": "EMA",
+   "varsayilan": true
+  }
+ ],
+ "ortak": {
+  "yanlis": {
+   "v": "1e0f04980772",
+   "sure": 1.2
+  },
+  "dene": {
+   "v": "542e22f41067",
+   "sure": 1.488
+  }
+ },
+ "dersler": [
+  {
+   "kod": "k01",
+   "no": 1,
+   "baslik": "Abortus",
+   "soru": 33,
+   "ornek": 27,
+   "cikmis": 6,
+   "ses": true,
+   "sayfa": [
+    3,
+    42
+   ]
+  }
+ ]
+}

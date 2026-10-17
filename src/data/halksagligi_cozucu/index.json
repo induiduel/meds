@@ -1,0 +1,96 @@
+{
+ "surum": "halksagligi-cozucu-v1",
+ "ses": "EMA",
+ "sesler": [
+  {
+   "id": "ema",
+   "ad": "EMA",
+   "varsayilan": true
+  }
+ ],
+ "ortak": {},
+ "dersler": [
+  {
+   "kod": "h01",
+   "no": 1,
+   "baslik": "Halk Sağlığı Tarihçesi ve İlkeleri",
+   "soru": 36,
+   "ornek": 24,
+   "cikmis": 12,
+   "ses": false,
+   "sayfa": [
+    2,
+    91
+   ]
+  },
+  {
+   "kod": "h02",
+   "no": 2,
+   "baslik": "Ana Çocuk Sağlığı Düzeyinin İzlenmesi",
+   "soru": 33,
+   "ornek": 25,
+   "cikmis": 8,
+   "ses": false,
+   "sayfa": [
+    4,
+    74
+   ]
+  },
+  {
+   "kod": "h03-1",
+   "no": 3,
+   "baslik": "Bebek Beslenmesi",
+   "soru": 22,
+   "ornek": 13,
+   "cikmis": 9,
+   "ses": false,
+   "set": 1,
+   "setSay": 2,
+   "sayfa": [
+    5,
+    73
+   ]
+  },
+  {
+   "kod": "h03-2",
+   "no": 3,
+   "baslik": "Bebek Beslenmesi",
+   "soru": 22,
+   "ornek": 16,
+   "cikmis": 6,
+   "ses": false,
+   "set": 2,
+   "setSay": 2,
+   "sayfa": [
+    42,
+    77
+   ]
+  },
+  {
+   "kod": "h04",
+   "no": 4,
+   "baslik": "Salgın Hastalıklarda Kontrol ve Korunma Yöntemleri",
+   "soru": 23,
+   "ornek": 19,
+   "cikmis": 4,
+   "ses": false,
+   "sayfa": [
+    2,
+    30
+   ]
+  },
+  {
+   "kod": "h05",
+   "no": 5,
+   "baslik": "Enfeksiyon Hastalıklarının Genel Epidemiyolojik Özellikleri",
+   "soru": 22,
+   "ornek": 20,
+   "cikmis": 2,
+   "ses": false,
+   "sayfa": [
+    3,
+    86
+   ]
+  }
+ ]
+}
