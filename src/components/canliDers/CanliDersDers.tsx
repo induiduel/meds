@@ -70,6 +70,11 @@ const GORUNUMLER: { id: Gorunum; ad: string; ikon: React.ReactNode }[] = [
   { id: 'pdf', ad: 'PDF', ikon: <FileText aria-hidden /> },
 ];
 
+/** Tam ekran metin yazı boyutu (px), cihazda saklanır */
+const YAZI_KEY = 'medsoru_canli_ders_tam_yazi';
+const YAZI_ENAZ = 14;
+const YAZI_ENCOK = 40;
+
 export default function CanliDersDers({ dersKey }: { dersKey: string }) {
   const [detay, setDetay] = useState<CdDetay | null>(null);
   const [hata, setHata] = useState<string | null>(null);
@@ -81,6 +86,12 @@ export default function CanliDersDers({ dersKey }: { dersKey: string }) {
     try { localStorage.setItem(GORUNUM_KEY, g); } catch { /* yok */ }
   };
   const [tamEkran, setTamEkran] = useState(false);
+  const [yazi, setYaziDurum] = useState<number>(() => { try { return Number(localStorage.getItem(YAZI_KEY)) || 20; } catch { return 20; } });
+  const setYazi = (n: number | ((y: number) => number)) => setYaziDurum((y) => {
+    const v = Math.min(YAZI_ENCOK, Math.max(YAZI_ENAZ, typeof n === 'function' ? n(y) : n));
+    try { localStorage.setItem(YAZI_KEY, String(v)); } catch { /* yok */ }
+    return v;
+  });
   const [oynaticiAcik, setOynaticiAcik] = useState(false);
   const rootRef = useRef<HTMLDivElement>(null);
   const [yuk, setYuk] = useState<number | null>(null);
@@ -124,6 +135,11 @@ export default function CanliDersDers({ dersKey }: { dersKey: string }) {
     window.dispatchEvent(new Event('cd:dock'));
     if (!tamEkran) return;
     const onKey = (e: KeyboardEvent) => {
+      const hedef = e.target as HTMLElement | null;
+      if (!e.ctrlKey && !e.metaKey && !e.altKey && !hedef?.closest('input, textarea, [contenteditable="true"]')) {
+        if (e.key === '+' || e.key === '=') { e.preventDefault(); setYazi((y) => y + 2); return; }
+        if (e.key === '-') { e.preventDefault(); setYazi((y) => y - 2); return; }
+      }
       if (e.key !== 'Escape' || document.querySelector('.cd-tur, .gu-ortu, [role="dialog"][aria-modal="true"]')) return;
       setTamEkran(false);
     };
@@ -218,7 +234,7 @@ export default function CanliDersDers({ dersKey }: { dersKey: string }) {
     <div
       className={`cd-root cd-ders is-${mod}${tamEkran ? ' is-tam' : ''}`}
       ref={rootRef}
-      style={yuk && !tamEkran ? { height: yuk } : undefined}
+      style={tamEkran ? ({ '--cd-tam-yazi': `${yazi}px` } as React.CSSProperties) : yuk ? { height: yuk } : undefined}
     >
       <header className="cd-ders-bas">
         <GeriBag />
@@ -256,6 +272,17 @@ export default function CanliDersDers({ dersKey }: { dersKey: string }) {
           )}
           {tamEkran ? (
             <>
+              {metinGoster && (
+                <span className="cd-yazi" role="group" aria-label="Yazı boyutu">
+                  <button type="button" className="cd-btn is-ikon" onClick={() => setYazi(yazi - 2)} disabled={yazi <= YAZI_ENAZ} aria-label="Yazıyı küçült" title="Yazıyı küçült (−)">
+                    <span aria-hidden className="cd-yazi-a is-kucuk">A</span>
+                  </button>
+                  <button type="button" className="cd-yazi-n" onClick={() => setYazi(20)} title="Varsayılan boyut" aria-label={`Yazı boyutu ${yazi} piksel, varsayılana dön`}>{yazi}</button>
+                  <button type="button" className="cd-btn is-ikon" onClick={() => setYazi(yazi + 2)} disabled={yazi >= YAZI_ENCOK} aria-label="Yazıyı büyüt" title="Yazıyı büyüt (+)">
+                    <span aria-hidden className="cd-yazi-a">A</span>
+                  </button>
+                </span>
+              )}
               {!oynaticiAcik && <TamEkranOynat dersKey={detay.key} />}
               <button
                 type="button"

@@ -5,7 +5,7 @@
  *    çubuktadır (CanliDersDock, App düzeyinde) — ses öğesi canliDersStore'da tek ve kalıcıdır.
  */
 import React, { useEffect, useMemo, useState } from 'react';
-import { ChevronDown, Download, Headphones, History, ListMusic, MoreHorizontal, Pause, Play, Search, X } from 'lucide-react';
+import { BarChart3, ChevronDown, Clock, Download, Headphones, History, ListMusic, MoreHorizontal, Pause, Play, Search, X } from 'lucide-react';
 import { navigateTo, pathFor } from '../../router';
 import {
   cdDosyaAdi, cdKonumListesi, cdListeGetir, cdOynat, cdSesKisa, cdSesUrl, cdToggle, fmtMb, fmtSure, useCd,
@@ -36,7 +36,7 @@ function CanliDersListe() {
   const [dersler, setDersler] = useState<CdListeDers[] | null>(null);
   const [hata, setHata] = useState<string | null>(null);
   const [q, setQ] = useState('');
-  const [gorunum, setGorunum] = useState<'tum' | 'liste'>(() => (location.hash === '#listem' ? 'liste' : 'tum'));
+  const [gorunum, setGorunum] = useState<'tum' | 'liste' | 'sure'>(() => (location.hash === '#listem' ? 'liste' : location.hash === '#sureler' ? 'sure' : 'tum'));
   const listeN = useCdListe((s) => s.keys.length);
   // Oynatıcıdaki "Listem" göstergesi /canliders#listem açar (sayfa zaten açıksa da sekmeye geçilsin)
   useEffect(() => {
@@ -105,6 +105,9 @@ function CanliDersListe() {
           <button type="button" role="tab" aria-selected={gorunum === 'liste'} className={gorunum === 'liste' ? 'is-on' : ''} onClick={() => setGorunum('liste')}>
             <ListMusic aria-hidden /> Listem{listeN > 0 && <span className="cd-sekme-sayi">{listeN}</span>}
           </button>
+          <button type="button" role="tab" aria-selected={gorunum === 'sure'} className={gorunum === 'sure' ? 'is-on' : ''} onClick={() => setGorunum('sure')}>
+            <Clock aria-hidden /> Süreler
+          </button>
         </div>
         {gorunum === 'tum' && <label className="cd-ara">
           <Search aria-hidden />
@@ -130,6 +133,8 @@ function CanliDersListe() {
         </div>
       ) : !dersler ? (
         <div className="cd-bos" role="status"><span className="cd-spin" aria-hidden /> Dersler yükleniyor…</div>
+      ) : gorunum === 'sure' ? (
+        <SureListesi dersler={dersler} />
       ) : gorunum === 'liste' ? (
         <Listem dersler={dersler} onTumu={() => setGorunum('tum')} />
       ) : !liste.length ? (
@@ -138,6 +143,7 @@ function CanliDersListe() {
         <>
           {cevrimdisi.serit}
           {son && !q && suzgec === 'tum' && <DevamKarti d={son.d} k={son.k} />}
+          {!q && <SureOzeti dersler={dersler} konum={konum} secili={suzgec} onSec={(id) => setSuzgec(suzgec === id ? 'tum' : id)} onListe={() => setGorunum('sure')} />}
           <div className="cd-kat-cipler" role="group" aria-label="Kategoriye göre süz">
             <button type="button" aria-pressed={suzgec === 'tum'} className={suzgec === 'tum' ? 'is-on' : ''} onClick={() => setSuzgec('tum')}>
               Tümü <span>{cdKonuSayisi(dersler)}</span>
@@ -157,7 +163,7 @@ function CanliDersListe() {
           {!gorunenN ? (
             <div className="cd-bos"><p>{q ? `"${q}" için bu kategoride ders bulunamadı.` : 'Bu kategoride ders yok.'}</p></div>
           ) : gruplar.map(({ kat, dersler: ds }) => (
-            <KategoriBolumu key={kat.id} kat={kat} n={cdKonuSayisi(ds)} acik={!!q || !kapali.has(kat.id)} onDegistir={() => katDegistir(kat.id)}>
+            <KategoriBolumu key={kat.id} kat={kat} n={cdKonuSayisi(ds)} sure={toplamSure(ds)} acik={!!q || !kapali.has(kat.id)} onDegistir={() => katDegistir(kat.id)}>
               <ul className="cd-satirlar">
                 {ds.map((d) => <DersSatiri key={d.key} d={d} k={konum.get(d.key)} />)}
               </ul>
@@ -171,6 +177,116 @@ function CanliDersListe() {
 }
 
 const sesAdi = (v: CdVaryant) => cdSesKisa(v);
+
+const dersSure = (d: CdListeDers) => (d.varsayilan || d.varyantlar[0])?.sureSn || 0;
+const toplamSure = (ds: CdListeDers[]) => ds.reduce((n, d) => n + dersSure(d), 0);
+/** "12 sa 40 dk" / "45 dk" */
+const fmtSaat = (s: number) => {
+  const dk = Math.round(s / 60);
+  const h = Math.floor(dk / 60);
+  return h ? `${h} sa${dk % 60 ? ` ${dk % 60} dk` : ''}` : `${dk} dk`;
+};
+
+/** Konu anlatım süreleri: toplam + branş başına (dokununca o branşa süzer). Açık/kapalı tercihi cihazda saklanır. */
+function SureOzeti({ dersler, konum, secili, onSec, onListe }: { dersler: CdListeDers[]; konum: Map<string, Konum>; secili: string; onSec: (id: string) => void; onListe: () => void }) {
+  const [acik, setAcik] = useState(() => { try { return localStorage.getItem('medsoru_cd_sure_acik') !== '0'; } catch { return true; } });
+  const degistir = () => setAcik((x) => { try { localStorage.setItem('medsoru_cd_sure_acik', x ? '0' : '1'); } catch { /* yok */ } return !x; });
+  const gruplar = useMemo(() => cdKategoriGrupla(dersler).map((g) => {
+    const sure = toplamSure(g.dersler);
+    const dinlenen = g.dersler.reduce((n, d) => n + Math.min(dersSure(d), konum.get(d.key)?.t || 0), 0);
+    return { ...g, sure, dinlenen, konu: cdKonuSayisi(g.dersler) };
+  }), [dersler, konum]);
+  const toplam = gruplar.reduce((n, g) => n + g.sure, 0);
+  const dinlenen = gruplar.reduce((n, g) => n + g.dinlenen, 0);
+  const konu = cdKonuSayisi(dersler);
+  const enCok = Math.max(1, ...gruplar.map((g) => g.sure));
+  return (
+    <section className={`cd-sure${acik ? '' : ' is-kapali'}`} aria-label="Konu anlatım süreleri">
+      <button type="button" className="cd-sure-bas" aria-expanded={acik} onClick={degistir}>
+        <span className="cd-ikon" aria-hidden><Clock /></span>
+        <span className="cd-sure-ana">
+          <small>Toplam konu anlatımı</small>
+          <b>{fmtSaat(toplam)}</b>
+        </span>
+        <span className="cd-sure-kutu"><b>{konu}</b><small>konu</small></span>
+        <span className="cd-sure-kutu"><b>{fmtSaat(konu ? toplam / konu : 0)}</b><small>ortalama</small></span>
+        <span className="cd-sure-kutu"><b>%{toplam ? Math.round((dinlenen / toplam) * 100) : 0}</b><small>dinledin</small></span>
+        <span className="cd-sure-ac"><BarChart3 aria-hidden /><span>{acik ? 'Gizle' : 'Branşlar'}</span><ChevronDown aria-hidden className="cd-kat-ok" /></span>
+      </button>
+      {acik && (
+        <ul className="cd-sure-liste">
+          {gruplar.map((g) => (
+            <li key={g.kat.id}>
+              <button type="button" aria-pressed={secili === g.kat.id} className={secili === g.kat.id ? 'is-on' : ''} onClick={() => onSec(g.kat.id)}
+                aria-label={`${g.kat.ad}: ${g.konu} konu, ${fmtSaat(g.sure)} anlatım${g.dinlenen > 30 ? `, ${fmtSaat(g.dinlenen)} dinledin` : ''}. Bu branşı göster`}>
+                <span className="cd-sure-ad"><b>{g.kat.kisa}</b>{g.kat.alt && <small>{g.kat.alt}</small>}</span>
+                <span className="cd-sure-cubuk" aria-hidden>
+                  <i style={{ width: `${(g.sure / enCok) * 100}%` }}><em style={{ width: `${g.sure ? (g.dinlenen / g.sure) * 100 : 0}%` }} /></i>
+                </span>
+                <span className="cd-sure-deger"><b>{fmtSaat(g.sure)}</b><small>{g.konu} konu · ort. {fmtSaat(g.konu ? g.sure / g.konu : 0)}</small></span>
+              </button>
+            </li>
+          ))}
+          <li><button type="button" className="cd-sure-tumu" onClick={onListe}><Clock aria-hidden /> Her dersin süresi — tam liste</button></li>
+        </ul>
+      )}
+    </section>
+  );
+}
+
+const dk = (s: number) => Math.round(s / 60);
+
+/** Süreler sekmesi: her branşta her ders (konu) ayrı satır, dakika + saat; branş ara toplamı ve genel toplam. Part 1/2 tek konu altında. */
+function SureListesi({ dersler }: { dersler: CdListeDers[] }) {
+  const gruplar = useMemo(() => cdKategoriGrupla(dersler).map((g) => {
+    const konular: { no: string; baslik: string; parcalar: CdListeDers[]; sure: number }[] = [];
+    for (const d of g.dersler) {
+      const son = konular[konular.length - 1];
+      if (son && d.parca && son.no === String(d.no)) { son.parcalar.push(d); son.sure += dersSure(d); }
+      else konular.push({ no: String(d.no), baslik: d.baslik, parcalar: [d], sure: dersSure(d) });
+    }
+    return { kat: g.kat, konular, sure: toplamSure(g.dersler) };
+  }), [dersler]);
+  const toplam = gruplar.reduce((n, g) => n + g.sure, 0);
+  const konuN = gruplar.reduce((n, g) => n + g.konular.length, 0);
+  return (
+    <div className="cd-sl">
+      <section className="cd-sl-toplam" aria-label="Tüm dersler toplamı">
+        <div><small>Tüm dersler</small><b>{dk(toplam).toLocaleString('tr')} dk</b><span>{fmtSaat(toplam)} · {konuN} konu · {gruplar.length} branş</span></div>
+        <ul>
+          {gruplar.map((g) => (
+            <li key={g.kat.id}><a href={`#sure-${g.kat.id}`} onClick={(e) => { e.preventDefault(); document.getElementById(`sure-${g.kat.id}`)?.scrollIntoView({ behavior: 'smooth', block: 'start' }); }}>
+              <b>{g.kat.kisa}</b><span>{dk(g.sure)} dk</span></a></li>
+          ))}
+        </ul>
+      </section>
+      {gruplar.map((g) => (
+        <section key={g.kat.id} id={`sure-${g.kat.id}`} className="cd-sl-grup" aria-label={`${g.kat.ad} süreleri`}>
+          <h2><span>{g.kat.ad}{g.kat.alt && <small> · {g.kat.alt}</small>}</span><span className="cd-sl-ara">{g.konular.length} konu · {dk(g.sure)} dk · {fmtSaat(g.sure)}</span></h2>
+          <table className="cd-sl-tablo">
+            <thead><tr><th scope="col">No</th><th scope="col">Konu</th><th scope="col">Süre</th></tr></thead>
+            <tbody>
+              {g.konular.map((k) => (
+                <tr key={k.no + k.baslik}>
+                  <td className="cd-sl-no">{k.no}</td>
+                  <td>
+                    <a href={pathFor('canli_ders', k.parcalar[0].key)} onClick={(e) => { if (e.button || e.metaKey || e.ctrlKey) return; e.preventDefault(); dersAc(k.parcalar[0].key); }}>{k.baslik}</a>
+                    {k.parcalar.length > 1 && (
+                      <small className="cd-sl-parca">{k.parcalar.map((p) => `${cdParca(p)}: ${dk(dersSure(p))} dk`).join(' · ')}</small>
+                    )}
+                  </td>
+                  <td className="cd-sl-sure"><b>{dk(k.sure)} dk</b><small>{fmtSure(k.sure)}</small></td>
+                </tr>
+              ))}
+            </tbody>
+            <tfoot><tr><td /><th scope="row">{g.kat.kisa} toplamı</th><td className="cd-sl-sure"><b>{dk(g.sure)} dk</b><small>{fmtSaat(g.sure)}</small></td></tr></tfoot>
+          </table>
+        </section>
+      ))}
+      <p className="cd-sl-not">Süreler her dersin varsayılan sesine göredir; Part 1/2 olan konular tek satırda toplanır.</p>
+    </div>
+  );
+}
 
 /** Son dinlenen ders: tek dokunuşla kaldığı yerden çalar ve ders ekranını açar */
 function DevamKarti({ d, k }: { d: CdListeDers; k: Konum }) {
@@ -245,12 +361,12 @@ function IndirDugme({ d, v, kucuk }: { d: CdListeDers; v: CdVaryant; kucuk?: boo
   );
 }
 
-function KategoriBolumu({ kat, n, acik, onDegistir, children }: { kat: CdKategori; n: number; acik: boolean; onDegistir: () => void; children: React.ReactNode }) {
+function KategoriBolumu({ kat, n, sure, acik, onDegistir, children }: { kat: CdKategori; n: number; sure: number; acik: boolean; onDegistir: () => void; children: React.ReactNode }) {
   return (
     <section className={`cd-kat${acik ? '' : ' is-kapali'}`} aria-label={kat.ad}>
       <button type="button" className="cd-kat-bas" aria-expanded={acik} onClick={onDegistir}>
         <span className="cd-kat-ad"><b>{kat.ad}</b>{kat.alt && <small>{kat.alt}</small>}</span>
-        <span className="cd-kat-n">{n} ders</span>
+        <span className="cd-kat-n">{n} ders · {fmtSaat(sure)}</span>
         <ChevronDown aria-hidden className="cd-kat-ok" />
       </button>
       {acik && children}
