@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import {
-  Check, ChevronDown, ChevronLeft, ChevronRight, Eraser, Headphones, Lightbulb, Maximize2, Minimize2, Pause, Play, RotateCcw, Settings2, SkipForward, Volume2, X,
+  Check, ChevronDown, ChevronLeft, ChevronRight, Eraser, Headphones, Lightbulb, Maximize2, Minimize2, Minus, Pause, Play, Plus, RotateCcw, Settings2, SkipForward, Volume2, X,
 } from 'lucide-react';
 import { getCustomApiUrl } from '../../../services/api';
 import { lockScroll, unlockScroll } from '../../../utils/scrollLock';
@@ -27,11 +27,14 @@ interface Props { kod: string; brans?: Brans; onClose: () => void; onDersDegis?:
 type Durum = 'acik' | 'cozuluyor' | 'dogru' | 'gosterildi';
 interface Adim { klasor: string; klip: string; metinler: string[]; onBasla?: () => void; onCumle?: (j: number) => void; kes?: number }
 const HIZLAR = [0.85, 1, 1.15, 1.3, 1.5, 1.75, 2];
+const OLCEK_MIN = 0.7;
+const OLCEK_MAX = 1.6;
+const olcekSinirla = (v: number) => Math.round(Math.min(OLCEK_MAX, Math.max(OLCEK_MIN, Number(v) || 1)) * 100) / 100;
 const HARF_SES: Record<Harf, string> = { A: 'A', B: 'Be', C: 'Ce', D: 'De', E: 'E' };
 const kelimeSay = (s: string) => (s.match(/\S+/g) || []).length;
 const azHareket = () => typeof window !== 'undefined' && !!window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
 const tercihOku = () => {
-  const v = { hiz: 1, siklariOku: true, otomatik: true, ses: VARSAYILAN_SES };
+  const v = { hiz: 1, siklariOku: true, otomatik: true, ses: VARSAYILAN_SES, olcek: 1 };
   try { return { ...v, ...JSON.parse(localStorage.getItem(TERCIH_KEY) || '{}') }; } catch { return v; }
 };
 
@@ -48,9 +51,19 @@ export const SoruCozucu: React.FC<Props> = ({ kod: kod0, brans = 'patoloji', onC
   const [sonuc, setSonuc] = useState<Record<string, Sonuc>>({});
   const [devamSor, setDevamSor] = useState<number | null>(null);
   const [tercih, setTercih0] = useState(tercihOku);
+  const olcek = olcekSinirla(tercih.olcek);
   const setTercih = (p: Partial<ReturnType<typeof tercihOku>>) => setTercih0((t: ReturnType<typeof tercihOku>) => {
-    const n = { ...t, ...p }; try { localStorage.setItem(TERCIH_KEY, JSON.stringify(n)); } catch { /* özel pencere */ } return n;
+    const n = { ...t, ...p, olcek: olcekSinirla(p.olcek ?? t.olcek) };
+    try { localStorage.setItem(TERCIH_KEY, JSON.stringify(n)); } catch { /* özel pencere */ }
+    return n;
   });
+  const olcekAdim = useCallback((yon: 1 | -1) => {
+    setTercih0((t: ReturnType<typeof tercihOku>) => {
+      const n = { ...t, olcek: olcekSinirla(Math.round((olcekSinirla(t.olcek) + yon * 0.1) * 10) / 10) };
+      try { localStorage.setItem(TERCIH_KEY, JSON.stringify(n)); } catch { /* özel pencere */ }
+      return n;
+    });
+  }, []);
   // ses
   const [caliyor, setCaliyor] = useState(false);
   const [sesYok, setSesYok] = useState(false);
@@ -294,10 +307,16 @@ export const SoruCozucu: React.FC<Props> = ({ kod: kod0, brans = 'patoloji', onC
     tekrarOku();
   };
 
-  // klavye
+  // klavye + yakınlaştırma hareketleri
   useEffect(() => {
     const f = (e: KeyboardEvent) => {
-      if (e.ctrlKey || e.metaKey || e.altKey || (e.target as HTMLElement | null)?.closest?.('input,textarea,select')) return;
+      if ((e.ctrlKey || e.metaKey) && !e.altKey) {
+        if (e.key === '=' || e.key === '+') { e.preventDefault(); olcekAdim(1); return; }
+        if (e.key === '-' || e.key === '_') { e.preventDefault(); olcekAdim(-1); return; }
+        if (e.key === '0') { e.preventDefault(); setTercih({ olcek: 1 }); return; }
+        return;
+      }
+      if (e.altKey || (e.target as HTMLElement | null)?.closest?.('input,textarea,select')) return;
       if (e.key === 'Escape') { if (dersMenu) setDersMenu(false); else if (ayarAcik) setAyarAcik(false); else onClose(); return; }
       if (!ders || devamSor !== null) return;
       if (e.key === ' ') { e.preventDefault(); oynatDuraklat(); return; }
@@ -316,6 +335,22 @@ export const SoruCozucu: React.FC<Props> = ({ kod: kod0, brans = 'patoloji', onC
     window.addEventListener('keydown', f);
     return () => window.removeEventListener('keydown', f);
   });
+  useEffect(() => {
+    const el = kokRef.current;
+    if (!el) return;
+    let birikim = 0;
+    const tekerlek = (e: WheelEvent) => {
+      if (!e.ctrlKey && !e.metaKey) return;
+      e.preventDefault();
+      birikim += -e.deltaY;
+      if (Math.abs(birikim) >= 40) {
+        olcekAdim(birikim > 0 ? 1 : -1);
+        birikim = 0;
+      }
+    };
+    el.addEventListener('wheel', tekerlek, { passive: false });
+    return () => el.removeEventListener('wheel', tekerlek);
+  }, [olcekAdim]);
   useEffect(() => {
     const f = () => setTamEkran(!!document.fullscreenElement);
     document.addEventListener('fullscreenchange', f);
@@ -351,12 +386,18 @@ export const SoruCozucu: React.FC<Props> = ({ kod: kod0, brans = 'patoloji', onC
     : durum === 'dogru' ? 'Doğru cevap' : durum === 'gosterildi' ? 'Çözüldü' : sesYok ? 'Metinle ilerliyor (ses hazırlanıyor)' : 'Cevabını bekliyor';
 
   const icerik = (
-    <div className={`sc${caliyor ? ' is-konusuyor' : ''}`} role="dialog" aria-modal="true" aria-label={`${bt.ad} sesli soru çözücü`}
+    <div
+      className={`sc${caliyor ? ' is-konusuyor' : ''}${olcek !== 1 ? ' is-olcekli' : ''}`}
+      style={{ ['--sc-zoom' as string]: olcek }}
+      role="dialog"
+      aria-modal="true"
+      aria-label={`${bt.ad} sesli soru çözücü`}
       onPointerDown={(e) => {
         const t = e.target as HTMLElement;
         if (ayarAcik && !t.closest('.sc-ayar')) setAyarAcik(false);
         if (dersMenu && !t.closest('.sc-ders')) setDersMenu(false);
-      }}>
+      }}
+    >
       <header className="sc-ust">
         <button type="button" className="sc-ikon" onClick={onClose} aria-label="Soru çözücüyü kapat"><X /></button>
         <div className="sc-ders">
@@ -380,7 +421,14 @@ export const SoruCozucu: React.FC<Props> = ({ kod: kod0, brans = 'patoloji', onC
             </div>
           )}
         </div>
-        <button type="button" className="sc-ikon sc-tam" onClick={tamEkranDegis} aria-label={tamEkran ? 'Tam ekrandan çık' : 'Tam ekran'}>{tamEkran ? <Minimize2 /> : <Maximize2 />}</button>
+        <div className="sc-ust-sag">
+          <div className="sc-olcek" role="group" aria-label="Metin ve öge ölçeği">
+            <button type="button" className="sc-olcek-b" onClick={() => olcekAdim(-1)} disabled={olcek <= OLCEK_MIN} aria-label="Ölçeği küçült" title="Küçült (Ctrl −)"><Minus aria-hidden /></button>
+            <button type="button" className="sc-olcek-v" onClick={() => setTercih({ olcek: 1 })} disabled={olcek === 1} aria-label={`Ölçek %${Math.round(olcek * 100)}, sıfırlamak için dokun`} title="Varsayılan ölçeğe sıfırla (%100 · Ctrl 0)">%{Math.round(olcek * 100)}</button>
+            <button type="button" className="sc-olcek-b" onClick={() => olcekAdim(1)} disabled={olcek >= OLCEK_MAX} aria-label="Ölçeği büyüt" title="Büyüt (Ctrl +)"><Plus aria-hidden /></button>
+          </div>
+          <button type="button" className="sc-ikon sc-tam" onClick={tamEkranDegis} aria-label={tamEkran ? 'Tam ekrandan çık' : 'Tam ekran'}>{tamEkran ? <Minimize2 /> : <Maximize2 />}</button>
+        </div>
       </header>
 
       {ders && devamSor === null && (

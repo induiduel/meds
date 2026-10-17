@@ -3,7 +3,7 @@
  *  Tam ekran katman (body'ye portal; kabuğun zoom'u dışında). Yalnız palet tokenı: açık/koyu tema kendiliğinden.
  *  Satırlar: üst çubuk · ilerleme şeridi · sahne (kendi kayar) · alt oynatıcı. İçerik sütunu en çok 760 px.
  * ============================================================================= */
-.pa { --star: color-mix(in srgb, var(--color-warn) 55%, #b88400); --pa-w: 760px;
+.pa { --star: color-mix(in srgb, var(--color-warn) 55%, #b88400); --pa-w: 760px; --pa-zoom: 1; --pa-bar-zoom: clamp(.85, var(--pa-zoom, 1), 1.25);
   position: fixed; inset: 0; z-index: 90; display: grid; grid-template-columns: minmax(0, 1fr); width: auto; height: auto; max-height: none !important; max-width: none !important; margin: 0; grid-template-rows: auto auto minmax(0, 1fr) auto;
   background: var(--color-canvas); color: var(--color-ink); font-family: var(--font-sans, inherit);
   padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px) 0 env(safe-area-inset-left, 0px);
@@ -15,12 +15,22 @@
 .pa kbd { font: 600 10.5px/1 var(--font-mono, ui-monospace, monospace); padding: 2px 5px; border-radius: 4px; border: 1px solid var(--color-line); color: var(--color-ink-3); }
 
 /* üst çubuk */
-.pa-ust { display: flex; align-items: center; gap: 10px; padding: 10px 14px; border-bottom: 1px solid var(--color-line); background: var(--color-white); }
+.pa-ust { display: grid; grid-template-columns: 1fr minmax(0, auto) 1fr; align-items: center; gap: 10px; padding: 10px 14px; border-bottom: 1px solid var(--color-line); background: var(--color-white); zoom: var(--pa-bar-zoom, 1); }
+.pa-ust > .pa-ikon { justify-self: start; }
+.pa-ust-sag { justify-self: end; display: flex; align-items: center; gap: 8px; }
 .pa-ikon { width: 40px; height: 40px; flex-shrink: 0; border-radius: 12px; border: 0; background: color-mix(in srgb, var(--color-ink) 7%, transparent); display: grid; place-items: center; color: var(--color-ink-2) !important; }
 .pa-ikon:hover:not(:disabled) { background: color-mix(in srgb, var(--color-ink) 12%, transparent); color: var(--color-ink) !important; }
 .pa-ikon:disabled { opacity: .35; }
 .pa-ikon svg { width: 19px; height: 19px; }
-.pa-ders { position: relative; flex: 1; min-width: 0; display: flex; justify-content: center; }
+.pa-olcek { display: inline-flex; align-items: center; gap: 2px; height: 40px; padding: 3px; border-radius: 12px; background: color-mix(in srgb, var(--color-ink) 7%, transparent); }
+.pa-olcek-b { width: 32px; height: 34px; border: 0; border-radius: 9px; background: none; display: grid; place-items: center; color: var(--color-ink-2) !important; transition: background var(--mo-fast, 120ms), color var(--mo-fast, 120ms); }
+.pa-olcek-b:hover:not(:disabled) { background: var(--color-white); color: var(--color-ink) !important; }
+.pa-olcek-b:disabled { opacity: .35; }
+.pa-olcek-b svg { width: 16px; height: 16px; }
+.pa-olcek-v { min-width: 46px; height: 34px; padding: 0 6px; border: 0; border-radius: 9px; background: none; font-size: 12.5px; font-weight: 800; font-variant-numeric: tabular-nums; color: var(--color-ink-2); transition: background var(--mo-fast, 120ms), color var(--mo-fast, 120ms); }
+.pa-olcek-v:hover:not(:disabled) { background: var(--color-white); color: var(--color-accent); }
+.is-olcekli .pa-olcek-v { color: var(--color-accent); }
+.pa-ders { position: relative; min-width: 0; display: flex; justify-content: center; }
 .pa-ders-b { display: flex; align-items: center; gap: 10px; max-width: 100%; min-width: 0; padding: 4px 10px 4px 4px; border-radius: 12px; border: 0; background: none; text-align: left; }
 .pa-ders-b:hover { background: var(--color-field); }
 .pa-ders-b > svg { width: 16px; height: 16px; flex-shrink: 0; color: var(--color-ink-3); }
@@ -28,7 +38,7 @@
 .pa-ders-t { min-width: 0; display: flex; flex-direction: column; }
 .pa-ders-t small { font-size: 11.5px; color: var(--color-accent); font-weight: 700; }
 .pa-ders-t b { font-size: 14.5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.pa-menu { position: absolute; top: calc(100% + 8px); left: 50%; transform: translateX(-50%); z-index: 5; width: min(440px, calc(100vw - 24px)); max-height: min(70vh, 560px);
+.pa-menu { position: absolute; top: calc(100% + 8px); left: 50%; transform: translateX(-50%); z-index: 5; width: min(440px, calc(100vw / var(--pa-bar-zoom, 1) - 24px)); max-height: min(calc(70vh / var(--pa-bar-zoom, 1)), 560px);
   overflow-y: auto; overscroll-behavior: contain; padding: 6px; border-radius: 14px; background: var(--color-white); border: 1px solid var(--color-line); box-shadow: var(--shadow-xl, 0 20px 50px rgb(0 0 0 / .2)); }
 .pa-menu button { width: 100%; display: flex; align-items: center; gap: 10px; padding: 8px; border: 0; border-radius: 10px; background: none; text-align: left; }
 .pa-menu button:hover { background: var(--color-field); }
@@ -39,7 +49,7 @@
 .pa-menu-t small { font-size: 11.5px; color: var(--color-ink-3); }
 
 /* ilerleme şeridi: her nokta bir parça */
-.pa-ilerleme { display: flex; gap: 3px; padding: 8px 14px; background: var(--color-white); border-bottom: 1px solid var(--color-line); }
+.pa-ilerleme { display: flex; gap: 3px; padding: 8px 14px; background: var(--color-white); border-bottom: 1px solid var(--color-line); zoom: var(--pa-bar-zoom, 1); }
 .pa-seg { flex: 1; min-width: 4px; height: 8px; padding: 0; border: 0; border-radius: 4px; background: var(--color-field); transition: background var(--mo-fast, 120ms), transform var(--mo-fast, 120ms); }
 .pa-seg.is-gecti { background: color-mix(in srgb, var(--color-accent) 45%, var(--color-field)); }
 .pa-seg.is-simdi { background: var(--color-accent); transform: scaleY(1.35); }
@@ -50,9 +60,9 @@
 
 /* sahne */
 .pa-sahne { overflow-y: auto; overscroll-behavior: contain; -webkit-overflow-scrolling: touch; padding: 22px 16px 28px; }
-.pa-icerik { width: 100%; max-width: var(--pa-w); margin: 0 auto; display: flex; flex-direction: column; gap: 14px; animation: pa-sahne .3s var(--mo-ease, ease) backwards; }
+.pa-icerik { width: 100%; max-width: var(--pa-w); margin: 0 auto; display: flex; flex-direction: column; gap: 14px; zoom: var(--pa-zoom, 1); animation: pa-sahne .3s var(--mo-ease, ease) backwards; }
 @keyframes pa-sahne { from { opacity: 0; transform: translateY(8px); } }
-.pa-bos { height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; color: var(--color-ink-3); text-align: center; }
+.pa-bos { height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; color: var(--color-ink-3); text-align: center; zoom: var(--pa-zoom, 1); }
 
 /* asistan göstergesi: konuşurken ses dalgası */
 .pa-asistan { display: flex; align-items: center; gap: 10px; font-size: 13px; font-weight: 600; color: var(--color-ink-3); }
@@ -138,7 +148,7 @@
 .pa-btn.is-dolu { background: var(--color-accent); border-color: var(--color-accent); color: var(--color-on-accent, #fff) !important; }
 
 /* devam / son */
-.pa-devam { max-width: 520px; margin: 8vh auto 0; text-align: center; align-items: center; }
+.pa-devam { max-width: 520px; margin: calc(8vh / var(--pa-zoom, 1)) auto 0; text-align: center; align-items: center; zoom: var(--pa-zoom, 1); }
 .pa-devam p { margin: 0; color: var(--color-ink-2); }
 .pa-skor { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
 .pa-skor > div { padding: 12px; border-radius: 14px; background: var(--color-field); display: flex; flex-direction: column; }
@@ -161,7 +171,7 @@
 
 /* alt oynatıcı */
 .pa-alt { display: flex; align-items: center; justify-content: center; gap: 12px 24px; flex-wrap: wrap; padding: 10px 16px calc(10px + env(safe-area-inset-bottom, 0px));
-  border-top: 1px solid var(--color-line); background: var(--color-white); }
+  border-top: 1px solid var(--color-line); background: var(--color-white); zoom: var(--pa-bar-zoom, 1); }
 .pa-oynat { display: flex; align-items: center; gap: 14px; }
 .pa-buyuk { width: 58px; height: 58px; border-radius: 50%; border: 0; background: var(--color-accent); color: var(--color-on-accent, #fff) !important; display: grid; place-items: center;
   box-shadow: 0 6px 18px color-mix(in srgb, var(--color-accent) 35%, transparent); transition: transform var(--mo-fast, 120ms); }
@@ -175,12 +185,17 @@
 .pa-oto input { accent-color: var(--color-accent); width: 16px; height: 16px; margin: 0; }
 
 @media (min-width: 900px) {
-  .pa-ilerleme, .pa-ust { padding-inline: max(14px, calc((100vw - var(--pa-w)) / 2 - 80px)); }
-  .pa-alt { justify-content: space-between; padding-inline: max(16px, calc((100vw - var(--pa-w)) / 2)); }
+  .pa-ilerleme, .pa-ust { padding-inline: max(14px, calc((100% - var(--pa-w) * var(--pa-zoom, 1) / var(--pa-bar-zoom, 1)) / 2 - 80px)); }
+  .pa-alt { justify-content: space-between; padding-inline: max(16px, calc((100% - var(--pa-w) * var(--pa-zoom, 1) / var(--pa-bar-zoom, 1)) / 2)); }
 }
 @media (max-width: 640px) {
-  .pa-ust { padding: 8px 10px; gap: 6px; }
+  .pa { --pa-bar-zoom: 1; }
+  .pa-ust { grid-template-columns: auto minmax(0, 1fr) auto; padding: 8px 10px; gap: 6px; }
   .pa-tam { display: none; }
+  .pa-olcek { height: 36px; padding: 2px; border-radius: 10px; gap: 1px; }
+  .pa-olcek-b { width: 28px; height: 32px; border-radius: 8px; }
+  .pa-olcek-b svg { width: 14px; height: 14px; }
+  .pa-olcek-v { min-width: 38px; height: 32px; padding: 0 4px; font-size: 11.5px; }
   .pa-sahne { padding: 14px 12px 22px; }
   .pa-kart { padding: 16px; border-radius: 18px; gap: 12px; }
   .pa-kart h1 { font-size: 22px; }

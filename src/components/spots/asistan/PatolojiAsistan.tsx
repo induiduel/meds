@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import {
-  Check, ChevronDown, ChevronLeft, ChevronRight, LifeBuoy, ListChecks, Maximize2, Minimize2, Pause, Play, RotateCcw, SkipForward, Star, Volume2, X,
+  Check, ChevronDown, ChevronLeft, ChevronRight, LifeBuoy, ListChecks, Maximize2, Minimize2, Minus, Pause, Play, Plus, RotateCcw, SkipForward, Star, Volume2, X,
 } from 'lucide-react';
 import { getCustomApiUrl } from '../../../services/api';
 import { lockScroll, unlockScroll } from '../../../utils/scrollLock';
@@ -44,6 +44,9 @@ interface Kayit { nid: string; sonuc: Record<string, Sonuc>; at: string }
 const ILERLEME_KEY = 'medsoru_onem_asistan_v1';
 const TERCIH_KEY = 'medsoru_onem_asistan_tercih_v1';
 const HIZLAR = [0.85, 1, 1.15, 1.3, 1.5, 1.75, 2];
+const OLCEK_MIN = 0.7;
+const OLCEK_MAX = 1.6;
+const olcekSinirla = (v: number) => Math.round(Math.min(OLCEK_MAX, Math.max(OLCEK_MIN, Number(v) || 1)) * 100) / 100;
 const TUR_AD: Record<Soru['tur'], string> = { cikmis: 'Çıkmış soru', ornek26: 'Örnek soru · 2026-27', ornek: 'Örnek soru' };
 const kelimeSay = (s: string) => (s.match(/\S+/g) || []).length;
 const azHareket = () => typeof window !== 'undefined' && !!window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
@@ -75,8 +78,20 @@ export const PatolojiAsistan: React.FC<{ kod: string; onClose: () => void; onDer
   const [tekrar, setTekrar] = useState<Set<string> | null>(null);
   const [i, setI] = useState(0);
   const [sonuc, setSonuc] = useState<Record<string, Sonuc>>({});
-  const [tercih, setTercih0] = useState(() => tercihOku(TERCIH_KEY, { hiz: 1, otomatik: true, yogunluk: 'hepsi' as Yogunluk }));
-  const setTercih = (p: Partial<typeof tercih>) => setTercih0((t) => { const n = { ...t, ...p }; tercihYaz(TERCIH_KEY, n); return n; });
+  const [tercih, setTercih0] = useState(() => tercihOku(TERCIH_KEY, { hiz: 1, otomatik: true, yogunluk: 'hepsi' as Yogunluk, olcek: 1 }));
+  const olcek = olcekSinirla(tercih.olcek);
+  const setTercih = (p: Partial<typeof tercih>) => setTercih0((t) => {
+    const n = { ...t, ...p, olcek: olcekSinirla(p.olcek ?? t.olcek) };
+    tercihYaz(TERCIH_KEY, n);
+    return n;
+  });
+  const olcekAdim = useCallback((yon: 1 | -1) => {
+    setTercih0((t) => {
+      const n = { ...t, olcek: olcekSinirla(Math.round((olcekSinirla(t.olcek) + yon * 0.1) * 10) / 10) };
+      tercihYaz(TERCIH_KEY, n);
+      return n;
+    });
+  }, []);
   const [caliyor, setCaliyor] = useState(false);
   const [aktifCumle, setAktifCumle] = useState(-1);
   const [sesYok, setSesYok] = useState(false);
@@ -256,10 +271,16 @@ export const PatolojiAsistan: React.FC<{ kod: string; onClose: () => void; onDer
     }
   };
 
-  // klavye
+  // klavye + yakınlaştırma hareketleri
   useEffect(() => {
     const f = (e: KeyboardEvent) => {
-      if (e.ctrlKey || e.metaKey || e.altKey || (e.target as HTMLElement | null)?.closest?.('input,textarea,select')) return;
+      if ((e.ctrlKey || e.metaKey) && !e.altKey) {
+        if (e.key === '=' || e.key === '+') { e.preventDefault(); olcekAdim(1); return; }
+        if (e.key === '-' || e.key === '_') { e.preventDefault(); olcekAdim(-1); return; }
+        if (e.key === '0') { e.preventDefault(); setTercih({ olcek: 1 }); return; }
+        return;
+      }
+      if (e.altKey || (e.target as HTMLElement | null)?.closest?.('input,textarea,select')) return;
       if (e.key === 'Escape') { if (dersMenu) setDersMenu(false); else onClose(); return; }
       if (e.key === ' ') { e.preventDefault(); oynatDuraklat(); return; }
       if (e.key === 'ArrowRight') { e.preventDefault(); ileri(); return; }
@@ -275,6 +296,22 @@ export const PatolojiAsistan: React.FC<{ kod: string; onClose: () => void; onDer
     window.addEventListener('keydown', f);
     return () => window.removeEventListener('keydown', f);
   });
+  useEffect(() => {
+    const el = kokRef.current;
+    if (!el) return;
+    let birikim = 0;
+    const tekerlek = (e: WheelEvent) => {
+      if (!e.ctrlKey && !e.metaKey) return;
+      e.preventDefault();
+      birikim += -e.deltaY;
+      if (Math.abs(birikim) >= 40) {
+        olcekAdim(birikim > 0 ? 1 : -1);
+        birikim = 0;
+      }
+    };
+    el.addEventListener('wheel', tekerlek, { passive: false });
+    return () => el.removeEventListener('wheel', tekerlek);
+  }, [olcekAdim]);
   useEffect(() => {
     const f = () => setTamEkran(!!document.fullscreenElement);
     document.addEventListener('fullscreenchange', f);
@@ -318,7 +355,16 @@ export const PatolojiAsistan: React.FC<{ kod: string; onClose: () => void; onDer
   };
 
   const icerik = (
-    <div className={`pa${caliyor ? ' is-konusuyor' : ''}`} role="dialog" aria-modal="true" aria-label={`${bransTanim(kodBrans(kod)).ad} sesli sınav asistanı`}>
+    <div
+      className={`pa${caliyor ? ' is-konusuyor' : ''}${olcek !== 1 ? ' is-olcekli' : ''}`}
+      style={{ ['--pa-zoom' as string]: olcek }}
+      role="dialog"
+      aria-modal="true"
+      aria-label={`${bransTanim(kodBrans(kod)).ad} sesli sınav asistanı`}
+      onPointerDown={(e) => {
+        if (dersMenu && !(e.target as HTMLElement).closest('.pa-ders')) setDersMenu(false);
+      }}
+    >
       <header className="pa-ust">
         <button type="button" className="pa-ikon" onClick={onClose} aria-label="Asistanı kapat"><X /></button>
         <div className="pa-ders">
@@ -338,7 +384,14 @@ export const PatolojiAsistan: React.FC<{ kod: string; onClose: () => void; onDer
             </div>
           )}
         </div>
-        <button type="button" className="pa-ikon pa-tam" onClick={tamEkranDegis} aria-label={tamEkran ? 'Tam ekrandan çık' : 'Tam ekran'}>{tamEkran ? <Minimize2 /> : <Maximize2 />}</button>
+        <div className="pa-ust-sag">
+          <div className="pa-olcek" role="group" aria-label="Metin ve öge ölçeği">
+            <button type="button" className="pa-olcek-b" onClick={() => olcekAdim(-1)} disabled={olcek <= OLCEK_MIN} aria-label="Ölçeği küçült" title="Küçült (Ctrl −)"><Minus aria-hidden /></button>
+            <button type="button" className="pa-olcek-v" onClick={() => setTercih({ olcek: 1 })} disabled={olcek === 1} aria-label={`Ölçek %${Math.round(olcek * 100)}, sıfırlamak için dokun`} title="Varsayılan ölçeğe sıfırla (%100 · Ctrl 0)">%{Math.round(olcek * 100)}</button>
+            <button type="button" className="pa-olcek-b" onClick={() => olcekAdim(1)} disabled={olcek >= OLCEK_MAX} aria-label="Ölçeği büyüt" title="Büyüt (Ctrl +)"><Plus aria-hidden /></button>
+          </div>
+          <button type="button" className="pa-ikon pa-tam" onClick={tamEkranDegis} aria-label={tamEkran ? 'Tam ekrandan çık' : 'Tam ekran'}>{tamEkran ? <Minimize2 /> : <Maximize2 />}</button>
+        </div>
       </header>
 
       {ders && (
