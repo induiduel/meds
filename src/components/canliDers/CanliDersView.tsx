@@ -256,7 +256,7 @@ function SureOzeti({ dersler, konum, secili, onSec, onListe }: { dersler: CdList
   const konu = cdKonuSayisi(dersler);
   const enCok = Math.max(1, ...gruplar.map((g) => g.sure));
   return (
-    <section className={`cd-sure${acik ? '' : ' is-kapali'}`} aria-label="Konu anlatım süreleri">
+    <section className={`cd-szk${acik ? '' : ' is-kapali'}`} aria-label="Konu anlatım süreleri">
       <button type="button" className="cd-sure-bas" aria-expanded={acik} onClick={degistir}>
         <span className="cd-ikon" aria-hidden><Clock /></span>
         <span className="cd-sure-ana">

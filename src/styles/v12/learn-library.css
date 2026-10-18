@@ -110,6 +110,7 @@
   & .l12-link .l12-badge { height: 20px; font-size: 11.5px; padding: 0 7px; }
   & .l12-pdf { position: relative; z-index: 1; cursor: pointer; transition: background-color var(--l12-t), color var(--l12-t); }
   & .l12-pdf:hover { background: var(--color-accent-soft); color: var(--color-accent); }
+  & .l12-pdf::after { content: ''; position: absolute; inset: -9px -6px; } /* dokunma alanı ≥ 36 px */
 
   /* Ortak satır parçaları */
   & .l12-main { flex: 1 1 auto; min-width: 0; display: flex; flex-direction: column; gap: 3px; }

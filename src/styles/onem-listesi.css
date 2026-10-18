@@ -9,8 +9,17 @@
 /* ---------- görünüm seçici (ExamSpotsView üstü) — eski adlar korunur */
 .ol-gorunum { display: inline-grid; grid-auto-flow: column; gap: 2px; padding: 3px; border-radius: 11px; background: var(--color-field); margin-bottom: 12px; max-width: 100%; overflow-x: auto; scrollbar-width: none; }
 .ol-gorunum::-webkit-scrollbar { display: none; }
-.ol-gorunum button { height: 32px; padding: 0 12px; border: 0; border-radius: 8px; background: transparent; color: var(--color-ink-3); font: inherit; font-size: 13px; font-weight: 600; white-space: nowrap; cursor: pointer; }
+.ol-gorunum button { display: inline-flex; align-items: center; justify-content: center; gap: 4px; min-height: 34px; padding: 0 12px; border: 0; border-radius: 8px; background: transparent; color: var(--color-ink-3); font: inherit; font-size: 13px; font-weight: 600; white-space: nowrap; cursor: pointer; }
+.ol-gorunum button:hover { color: var(--color-ink); }
 .ol-gorunum button.is-on { background: var(--color-white); color: var(--color-ink); box-shadow: 0 1px 2px color-mix(in srgb, var(--color-ink) 16%, transparent); }
+.ol-gorunum button:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 1px; }
+.ol-gorunum .ol-g-ek { font-weight: 500; color: var(--color-ink-3); }
+/* Telefon: üç görünüm eşit genişlikte tam satır; ek açıklama gizli */
+@media (max-width: 639px) {
+  .ol-gorunum:not(.ol-brans) { display: grid; grid-auto-flow: row; grid-template-columns: repeat(3, minmax(0, 1fr)); width: 100%; }
+  .ol-gorunum:not(.ol-brans) button { padding: 0 6px; overflow: hidden; text-overflow: ellipsis; }
+  .ol-gorunum .ol-g-ek { display: none; }
+}
 .ol-bos { color: var(--color-ink-3); font-size: 14px; padding: 24px 0; text-align: center; }
 
 /* ---------- renk değişkenleri */
@@ -620,5 +629,6 @@ button.on-dersad:hover { color: var(--color-accent); text-decoration: underline;
   .op-seg-ad { min-width: 0; flex-basis: 100%; }
 }
 /* branş seçici (En önemliler · Soru çözücü): görünüm seçicinin altında, küçük */
-.ol-brans { display: grid; width: max-content; margin-top: -4px; }
-.ol-brans button { height: 28px; font-size: 12.5px; }
+.ol-brans { display: flex; gap: 6px; width: auto; margin-top: -4px; padding: 2px; background: none; border-radius: 0; scroll-snap-type: x proximity; }
+.ol-brans button { flex: none; scroll-snap-align: start; min-height: 32px; padding: 0 12px; border: 1px solid var(--color-line); border-radius: 99px; background: var(--color-white); color: var(--color-ink-2); font-size: 13px; font-weight: 500; }
+.ol-brans button.is-on { background: var(--color-ink); border-color: var(--color-ink); color: var(--color-white); box-shadow: none; }

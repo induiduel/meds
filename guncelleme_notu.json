@@ -1,11 +1,11 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 11,
-  "baslik": "Kazanım Sınav Çalışması, Sesli Çözücü & Asistan Süreleri",
+  "onem": 12,
+  "baslik": "Kurul 1 Tüm Branşlarda Sınav Spotları ve Sesli Çözücü Setleri Tamamlandı",
   "maddeler": [
-    "Kurul 1'deki 7 branş ve 65 konunun 715 kazanımının tamamı (%100) en az 2 orta zorlukta soru, konu anlatımı ve EMA seslendirme altyapısıyla sisteme entegre edildi.",
-    "Yeni /sinav-calisma sayfası yayına alındı: Konu bazlı hafif yükleme (code-splitting), anlık arama, zorluk filtreleri, soru kartları ve cihazlar arası ilerleme eşitlemesi.",
-    "Kazanım soruları EMA sesli çözücü asistanı ile çözülebilir kılındı; sesli konu özetleri, şık ve ipucu açıklamaları entegre edildi.",
-    "Sınav spotları için sesli sınav asistanı ders süreleri özeti ve ders gezgini süre gösterimi eklendi."
+    "Kurul 1'in 7 branşının tamamı (Patoloji, Enfeksiyon, Üroloji, Genetik, Kadın Doğum, Halk Sağlığı, Farmakoloji) için 100 puanlık 'Sınav için en önemliler' spotları ve EMA sesli soru çözücü setleri (%100) tamamlandı.",
+    "Kazanım temelli /sinav-calisma sayfası kullanıma sunuldu: 715 kazanım, 8.235 soru, anlık filtreleme ve parça parça hızlı yükleme mimarisi.",
+    "Sesli sınav asistanı ve soru çözücü ders anlatım süreleri diyalogu ve ders gezgini süre gösterimi eklendi.",
+    "Mobil ve dokunmatik ekranlar için görünüm çubuğu, branş seçiciler ve dokunma alanları optimize edildi."
   ]
 }

@@ -247,7 +247,7 @@
 @media (prefers-reduced-motion: reduce) { .sc, .sc * { animation: none !important; transition: none !important; } }
 
 /* ---------- Sekme: ders listesi ---------- */
-.scs { display: flex; flex-direction: column; gap: 14px; max-width: 980px; margin: 0 auto; padding-bottom: 32px; }
+.scs { display: flex; flex-direction: column; gap: 14px; width: 100%; min-width: 0; max-width: 980px; margin: 0 auto; padding-bottom: 32px; }
 .scs-hero { padding: 20px; border-radius: 20px; background: var(--color-white); border: 1px solid var(--color-line); display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 14px 20px; align-items: center; }
 .scs-hero h2 { margin: 0; font: 800 22px/1.25 var(--font-display, inherit); letter-spacing: -.015em; display: flex; align-items: center; gap: 10px; }
 .scs-hero h2 svg { width: 22px; height: 22px; color: var(--color-ai, var(--color-accent)); flex-shrink: 0; }
@@ -262,8 +262,8 @@
 .scs-cubuk { display: flex; width: 100%; height: 8px; border-radius: 4px; overflow: hidden; background: var(--color-field); }
 .scs-cubuk i { display: block; height: 100%; }
 .scs-cubuk .is-d { background: var(--color-ok); } .scs-cubuk .is-d2 { background: var(--color-warn); } .scs-cubuk .is-y { background: var(--color-bad); }
-.scs-arac { display: flex; align-items: center; gap: 10px; }
-.scs-arac .scs-ara { flex: 1; }
+.scs-arac { display: flex; align-items: center; gap: 8px 10px; flex-wrap: wrap; }
+.scs-arac .scs-ara { flex: 1 1 220px; min-width: 0; }
 .scs-btn-sure { display: inline-flex; align-items: center; gap: 6px; height: 42px; padding: 0 14px; border-radius: 12px; border: 1px solid var(--color-line); background: var(--color-white); color: var(--color-ink); font: 600 13.5px/1 inherit; cursor: pointer; white-space: nowrap; transition: all .15s ease; }
 .scs-btn-sure:hover { background: var(--color-canvas); border-color: var(--color-accent); color: var(--color-accent); }
 .scs-btn-sure svg { width: 16px; height: 16px; color: var(--color-accent); }

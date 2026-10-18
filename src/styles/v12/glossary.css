@@ -127,7 +127,7 @@
   /* A–Z şeridi */
   & .g12-az { display: flex; gap: 2px; overflow-x: auto; scrollbar-width: none; padding: 8px 10px; border-bottom: 1px solid var(--color-line-soft); }
   & .g12-az::-webkit-scrollbar { display: none; }
-  & .g12-az button { flex: none; min-width: 22px; height: 24px; padding: 0 3px; display: grid; place-items: center; border: 0; border-radius: 6px; background: transparent;
+  & .g12-az button { flex: none; min-width: 24px; height: 26px; padding: 0 3px; display: grid; place-items: center; border: 0; border-radius: 6px; background: transparent;
     font: 500 12px var(--font-sans); color: var(--color-ink-3); cursor: pointer; transition: background-color var(--g12-t), color var(--g12-t); }
   & .g12-az button:hover:not(:disabled) { background: var(--color-field); color: var(--color-ink); }
   & .g12-az button.is-on { background: var(--color-accent-soft); color: var(--color-accent); }

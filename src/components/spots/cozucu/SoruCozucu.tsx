@@ -458,7 +458,7 @@ export const SoruCozucu: React.FC<Props> = ({
       style={{ ['--sc-zoom' as string]: olcek }}
       role="dialog"
       aria-modal="true"
-      aria-label={`${bt.ad} sesli soru çözücü`}
+      aria-label={`${ozelSorular?.length ? 'Sınav Çalışması' : bt.ad} sesli soru çözücü`}
       onPointerDown={(e) => {
         const t = e.target as HTMLElement;
         if (ayarAcik && !t.closest('.sc-ayar')) setAyarAcik(false);
@@ -468,12 +468,12 @@ export const SoruCozucu: React.FC<Props> = ({
       <header className="sc-ust">
         <button type="button" className="sc-ikon" onClick={onClose} aria-label="Soru çözücüyü kapat"><X /></button>
         <div className="sc-ders">
-          <button type="button" className="sc-ders-b" onClick={() => setDersMenu((v) => !v)} aria-expanded={dersMenu} aria-haspopup="listbox">
+          <button type="button" className="sc-ders-b" onClick={() => !ozelSorular?.length && setDersMenu((v) => !v)} aria-expanded={ozelSorular?.length ? undefined : dersMenu} aria-haspopup={ozelSorular?.length ? undefined : 'listbox'}>
             <span className="sc-ders-no">{ders?.no ?? '…'}</span>
-            <span className="sc-ders-t"><small>{bt.ad} · soru çözücü{ders && setAdi(ders) ? ` · ${setAdi(ders)}` : ''}{mod === 'cikmis' && tekrar ? ' · çıkmış sorular' : tekrar ? ' · yanlışların tekrarı' : ''}</small><b>{ders?.baslik ?? 'Yükleniyor…'}</b></span>
-            <ChevronDown aria-hidden />
+            <span className="sc-ders-t"><small>{ozelSorular?.length ? 'Sınav Çalışması' : bt.ad} · soru çözücü{ders && setAdi(ders) ? ` · ${setAdi(ders)}` : ''}{mod === 'cikmis' && tekrar ? ' · çıkmış sorular' : tekrar ? ' · yanlışların tekrarı' : ''}</small><b>{ders?.baslik ?? 'Yükleniyor…'}</b></span>
+            {!ozelSorular?.length && <ChevronDown aria-hidden />}
           </button>
-          {dersMenu && dizin && (
+          {dersMenu && dizin && !ozelSorular?.length && (
             <div className="sc-menu" role="listbox" aria-label="Ders seç">
               {dizin.dersler.map((d) => {
                 const p = ilerlemeOku()[d.kod];

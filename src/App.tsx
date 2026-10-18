@@ -304,13 +304,21 @@ export default function App() {
       try { seen = sessionStorage.getItem('medsoru_splash_seen') === '1'; sessionStorage.setItem('medsoru_splash_seen', '1'); } catch { /* yok say */ }
       const quick = seen && getAppearance().design !== 'v10';
       const wait = quick ? 0 : Math.max(0, 5000 - performance.now());
-      const t = setTimeout(() => {
+      let gitti = false;
+      const kaldir = () => {
+        if (gitti) return;
+        gitti = true;
         el.classList.add('is-leaving');
         setTimeout(() => {
           try { el.remove(); } catch {}
         }, reduce ? 0 : 360);
-      }, wait);
-      return () => clearTimeout(t);
+      };
+      const t = setTimeout(kaldir, wait);
+      // Beklemek istemeyen dokunarak ya da bir tuşla geçer
+      const gec = () => { clearTimeout(t); kaldir(); };
+      el.addEventListener('pointerdown', gec, { once: true });
+      window.addEventListener('keydown', gec, { once: true });
+      return () => { clearTimeout(t); el.removeEventListener('pointerdown', gec); window.removeEventListener('keydown', gec); };
     }
   }, []);
 

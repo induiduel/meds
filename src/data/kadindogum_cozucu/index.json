@@ -32,8 +32,7 @@
    "sayfa": [
     3,
     41
-   ],
-   "sure": 2189
+   ]
   },
   {
    "kod": "k01-2",
@@ -48,8 +47,7 @@
    "sayfa": [
     25,
     42
-   ],
-   "sure": 2322
+   ]
   },
   {
    "kod": "k02-1",
@@ -58,14 +56,13 @@
    "soru": 22,
    "ornek": 5,
    "cikmis": 17,
-   "ses": false,
+   "ses": true,
    "set": 1,
    "setSay": 2,
    "sayfa": [
     2,
     2
-   ],
-   "sure": 1650
+   ]
   },
   {
    "kod": "k02-2",
@@ -74,14 +71,13 @@
    "soru": 21,
    "ornek": 17,
    "cikmis": 4,
-   "ses": false,
+   "ses": true,
    "set": 2,
    "setSay": 2,
    "sayfa": [
     2,
     4
-   ],
-   "sure": 1575
+   ]
   }
  ]
 }
