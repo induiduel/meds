@@ -10,12 +10,24 @@ declare const __MEDS_ONEM__: number;
  * Önemli güncelleme diyaloğu: /api/surum (dist/surum.json) açık sekmeninkinden büyük bir önem sayısı bildirince
  * "Siteyi güncelle" diyaloğu açılır; Güncelle → bekleyen SW etkinleşir, sayfa yeni sürümle yenilenir.
  * Önem sayısı guncelleme_notu.json'dan gelir (yalnız önemli güncellemede artırılır); küçük derlemeler diyalog açmaz.
- * Denetim: açılıştan 20 sn sonra, 5 dk'da bir, sekmeye dönünce ve bağlantı gelince. "Sonra" 30 dk erteler.
+ * Her önem sayısı bu cihazda YALNIZ BİR KEZ sorulur (GORULDU_KEY, cihaza özel, profil eşitlemesine girmez):
+ * "Sonra" ya da "Güncelle" sonrası aynı sürüm için diyalog bir daha açılmaz — yenileme önbellekten eski paketi
+ * getirse bile döngü olmaz; yeni sürüm arka planda iner ve sonraki açılışta sessizce gelir. Bir sekmede kapatılan
+ * diyalog diğer sekmelerde de kapanır. Denetim: açılıştan 20 sn sonra, 5 dk'da bir, sekmeye dönünce ve bağlantı gelince.
  */
 const ONEM = typeof __MEDS_ONEM__ === 'number' ? __MEDS_ONEM__ : 0;
 const SURUM = typeof __MEDS_SURUM__ === 'string' ? __MEDS_SURUM__ : '';
-const ERTELE_MS = 30 * 60 * 1000;
 const ARALIK_MS = 5 * 60 * 1000;
+const GORULDU_KEY = 'medsoru_guncelleme_goruldu_v1';
+
+const goruldu = (): number => {
+  try { return Number(localStorage.getItem(GORULDU_KEY)) || 0; } catch { return 0; }
+};
+const gorulduYaz = (onem: number) => {
+  try { if (onem > goruldu()) localStorage.setItem(GORULDU_KEY, String(onem)); } catch { /* depolama kapalı */ }
+};
+/** Yeni sürümü sormadan arka planda indir; sonraki açılışta kendiliğinden etkinleşir */
+const sessizIndir = () => { navigator.serviceWorker?.getRegistration().then((r) => r?.update()).catch(() => {}); };
 
 type Bilgi = { surum: string; onem: number; baslik?: string; maddeler?: string[] };
 
@@ -47,35 +59,50 @@ async function guncelle() {
 const UpdatePrompt: React.FC = () => {
   const [bilgi, setBilgi] = useState<Bilgi | null>(null);
   const [mesgul, setMesgul] = useState(false);
-  const erteleme = useRef(0);
   const dugme = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
     if (import.meta.env.DEV) return;
+    // Bu sekme zaten yeni sürümdeyse kaydı ilerlet (başka sekmede/yenilemede aynı sürüm yeniden sorulmasın)
+    gorulduYaz(ONEM);
     let iptal = false;
+    let indirildi = false;
     const denetle = async () => {
-      if (document.visibilityState !== 'visible' || Date.now() < erteleme.current) return;
+      if (document.visibilityState !== 'visible') return;
       const b = await sunucuSurumu();
-      if (!iptal && b && b.onem > ONEM && b.surum !== SURUM) setBilgi(b);
+      if (iptal || !b || b.onem <= ONEM || b.surum === SURUM) return;
+      if (b.onem <= goruldu()) {
+        // Bu sürüm daha önce soruldu: tekrar sorma, yalnız arka planda hazırla
+        if (!indirildi) { indirildi = true; sessizIndir(); }
+        return;
+      }
+      setBilgi(b);
     };
     const ilk = window.setTimeout(denetle, 20_000);
     const aralik = window.setInterval(denetle, ARALIK_MS);
     const gorunur = () => void denetle();
+    // Başka sekmede kapatıldı/güncellendi: bu sekmedeki diyalog da kapansın
+    const depo = (e: StorageEvent) => {
+      if (e.key !== GORULDU_KEY) return;
+      setBilgi((b) => (b && b.onem <= goruldu() ? null : b));
+    };
     document.addEventListener('visibilitychange', gorunur);
     window.addEventListener('online', gorunur);
+    window.addEventListener('storage', depo);
     return () => {
       iptal = true;
       window.clearTimeout(ilk);
       window.clearInterval(aralik);
       document.removeEventListener('visibilitychange', gorunur);
       window.removeEventListener('online', gorunur);
+      window.removeEventListener('storage', depo);
     };
   }, []);
 
   useEffect(() => { if (bilgi) dugme.current?.focus(); }, [bilgi]);
 
   if (!bilgi) return null;
-  const sonra = () => { erteleme.current = Date.now() + ERTELE_MS; setBilgi(null); };
+  const sonra = () => { gorulduYaz(bilgi.onem); sessizIndir(); setBilgi(null); };
   const maddeler = (bilgi.maddeler || []).filter(Boolean);
 
   return (
@@ -85,11 +112,11 @@ const UpdatePrompt: React.FC = () => {
         <h2 id="up-baslik" className="up-h">{bilgi.baslik || 'Site güncellendi'}</h2>
         <div id="up-govde" className="up-b">
           {maddeler.length ? <ul>{maddeler.map((m, i) => <li key={i}>{m}</li>)}</ul> : <p>Yeni değişikliklerin hepsini görmek için siteyi yenile.</p>}
-          <p className="up-not">Notların ve ilerlemen korunur.</p>
+          <p className="up-not">Notların ve ilerlemen korunur. “Sonra” dersen bu güncelleme bir daha sorulmaz; site sonraki açılışında kendiliğinden yenilenir.</p>
         </div>
         <div className="up-act">
           <button type="button" className="up-btn is-2" onClick={sonra}>Sonra</button>
-          <button ref={dugme} type="button" className="up-btn is-1" disabled={mesgul} onClick={() => { setMesgul(true); void guncelle(); }}>
+          <button ref={dugme} type="button" className="up-btn is-1" disabled={mesgul} onClick={() => { gorulduYaz(bilgi.onem); setMesgul(true); void guncelle(); }}>
             <RefreshCw className={mesgul ? 'is-spin' : ''} /> Siteyi güncelle
           </button>
         </div>
