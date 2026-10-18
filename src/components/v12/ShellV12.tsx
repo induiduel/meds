@@ -32,6 +32,7 @@ import { useReviewCounts } from '../../hooks/useReviewCounts';
 import { MODE_LABELS, type ThemeMode, useAppearance } from '../../utils/appearance';
 import { useTheme } from '../../utils/theme';
 import { OfflineStatusBadge } from '../pwa/OfflineStatusBadge';
+import { GuncellemeSimgesi } from '../system/UpdatePrompt';
 import { NotificationHistoryModal } from '../notifications/NotificationHistoryModal';
 import { SearchPalette } from '../search/SearchPalette';
 import { Segmented } from '../ui/kit';
@@ -278,6 +279,7 @@ export const TopBarV12: React.FC<TopBarProps> = ({ active, onGo, user, isAdmin, 
 
         <div className="s12-top-tools">
           <OfflineStatusBadge onClick={() => onOpenOffline?.()} isAdmin={isAdmin} className="s12-ofb" />
+          <GuncellemeSimgesi className="s12-ib" />
           <button type="button" className="s12-ib s12-only-phone" onClick={() => setSearch(true)} aria-label="Ara">
             <Search aria-hidden="true" />
           </button>

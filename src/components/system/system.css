@@ -128,3 +128,10 @@ html[data-mode="dark"] .po-undo button { background: color-mix(in srgb, var(--co
 @keyframes up-fade { from { opacity: 0; } }
 @keyframes up-pop { from { opacity: 0; transform: translateY(12px) scale(.97); } }
 @media (prefers-reduced-motion: reduce) { .up-scrim, .up-card { animation: none; } }
+
+/* Üst çubuk "güncelleme var" simgesi (tek güncelleme birikince diyalog yerine) */
+.up-ikon { position: relative; color: var(--color-accent) !important; }
+.up-ikon svg { width: 18px; height: 18px; }
+.up-ikon-n { position: absolute; top: 6px; right: 6px; width: 8px; height: 8px; border-radius: 50%; background: var(--color-accent); box-shadow: 0 0 0 2px var(--color-canvas, #fff); }
+@media (prefers-reduced-motion: no-preference) { .up-ikon-n { animation: up-nabiz 2.4s ease-in-out 3; } }
+@keyframes up-nabiz { 50% { transform: scale(1.5); opacity: .55; } }

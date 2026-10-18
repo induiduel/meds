@@ -5,6 +5,7 @@ import type { AppUser } from '../../services/auth';
 import { pwaService } from '../../services/pwaService';
 import { useTheme } from '../../utils/theme';
 import { OfflineStatusBadge } from '../pwa/OfflineStatusBadge';
+import { GuncellemeSimgesi } from '../system/UpdatePrompt';
 import { SearchPalette } from '../search/SearchPalette';
 import type { SearchHit } from '../search/searchShared';
 import { AccountMenu, type AccountActions } from './AccountMenu';
@@ -92,6 +93,7 @@ const TopBarClassic: React.FC<TopBarProps> = ({ active, onGo, user, isAdmin, sea
 
         <div className="sh-top-tools">
           <OfflineStatusBadge onClick={() => onOpenOffline?.()} isAdmin={isAdmin} />
+          <GuncellemeSimgesi className="sh-ibtn" />
           <button type="button" className="sh-ibtn sh-top-search-i" onClick={() => setSearch(true)} aria-label="Ara">
             <Search />
           </button>
