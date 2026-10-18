@@ -325,7 +325,7 @@ export const PastQuestionRichCard: React.FC<PastQuestionRichCardProps> = (p) => 
       )}
 
       {v12 ? (
-        <footer className="ck-bar" role="toolbar" aria-label="Soru işlemleri">
+        <div className="ck-bar" role="toolbar" aria-label="Soru işlemleri">
           <button type="button" className={`ck-act ${p.social.liked ? 'is-on' : ''}`} onClick={p.social.onLike} aria-pressed={p.social.liked} aria-label={`Beğen, ${p.social.up} beğeni`} title={p.social.liked ? 'Beğeniyi geri al' : 'Soruyu beğen'}>
             <Heart aria-hidden className={p.social.liked ? 'is-fill' : ''} /><span className="c12-n" aria-hidden>{p.social.up}</span>
           </button>
@@ -346,7 +346,7 @@ export const PastQuestionRichCard: React.FC<PastQuestionRichCardProps> = (p) => 
           <button type="button" className="ck-act c12-act-rep" onClick={p.onReport} aria-label="Soruyu bildir" title="Hata bildir">
             <Flag aria-hidden />
           </button>
-        </footer>
+        </div>
       ) : (
       <footer className="ck-bar" aria-label="Soru işlemleri">
         <button type="button" className={`ck-act ${p.social.liked ? 'is-on' : ''}`} onClick={p.social.onLike} aria-pressed={p.social.liked} aria-label={`Beğen, ${p.social.up} beğeni`} title={p.social.liked ? 'Beğeniyi geri al' : 'Soruyu beğen'}>
@@ -371,7 +371,7 @@ export const PastQuestionRichCard: React.FC<PastQuestionRichCardProps> = (p) => 
       </footer>
       )}
 
-      {v12 && explRev && <section className={`ck-expl c12-expl ${explOpen ? 'is-open' : ''}`} aria-label="Açıklama">{explRev}</section>}
+      {v12 && explRev && <div className={`ck-expl c12-expl ${explOpen ? 'is-open' : ''}`}>{explRev}</div>}
       </div>)}
 
       {collapsed ? null : p.social.commentsOpen ? (

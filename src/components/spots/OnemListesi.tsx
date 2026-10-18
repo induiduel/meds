@@ -15,7 +15,6 @@ import { asistanDersVar, asistanDersleri } from './asistan/asistanVeri';
 import { cozucuDizinYukle } from './cozucu/cozucuVeri';
 import { bransTanim, type Brans, type BransTanim } from './brans';
 import { getAsistanSureGruplari, dk } from './sure/spotsSureVeri';
-import { SpotsSureOzeti } from './sure/SpotsSureOzeti';
 import { SpotsSureDiyalog } from './sure/SpotsSureDiyalog';
 import '../../styles/onem-listesi.css';
 
@@ -440,38 +439,19 @@ export const OnemListesi: React.FC<{ brans?: Brans }> = ({ brans = 'patoloji' })
           <div className="on-bar"><i style={{ width: `${(toplamOgr / Math.max(1, toplam)) * 100}%` }} /></div>
         </div>
         <div className="on-sayfa-btn">
-          {asistanVar && (
-            <button type="button" className="on-btn" onClick={() => setSureAcik(true)} title="Sesli asistan ders süreleri">
-              <Clock aria-hidden />Asistan süreleri
-            </button>
-          )}
-          {asistanVar && (
-            <button type="button" className="on-btn is-asistan" onClick={() => asistanAc(!cokDers && asistanDersVar(kod) ? kod : asistanDersleri(brans).sort()[0])}>
+          {asistanVar && cokDers && (
+            <button type="button" className="on-btn is-asistan" onClick={() => asistanAc(asistanDersleri(brans).sort()[0])}>
               <Headphones aria-hidden />Sesli asistan
             </button>
           )}
-          <button type="button" className="on-btn is-dolu" onClick={() => setPdfAcik(true)}><Download aria-hidden />PDF oluştur</button>
+          {asistanVar && (
+            <button type="button" className="on-btn" onClick={() => setSureAcik(true)} title="Sesli asistanın ders ders anlatım süreleri">
+              <Clock aria-hidden />Süreler
+            </button>
+          )}
+          <button type="button" className="on-btn" onClick={() => setPdfAcik(true)} title="Önem listesini PDF olarak indir"><Download aria-hidden />PDF</button>
         </div>
       </div>
-
-      {asistanVar && (
-        <SpotsSureOzeti
-          baslik="Sesli Sınav Asistanı Anlatım Süresi"
-          gruplar={asistanSureGruplari}
-          seciliBrans={brans}
-          onSecBrans={(b) => {
-            if (b !== 'tum' && b !== brans) {
-              const u = new URL(location.href);
-              u.searchParams.set('brans', b);
-              history.pushState(history.state, '', u.pathname + u.search + u.hash);
-              window.dispatchEvent(new PopStateEvent('popstate'));
-            }
-          }}
-          onTamListe={() => setSureAcik(true)}
-          birimAd="ders"
-          tercihKey="medsoru_asistan_sure_acik"
-        />
-      )}
 
       <div className="on-yerlesim">
         <aside className="on-rail">

@@ -44,6 +44,8 @@ type DeckProgress = Record<string, { last?: number; seen?: number[] } | undefine
 interface CardState { box: number; due: number; seen: number }
 
 const QUICK: AppRoute[] = ['glossary', 'diseases', 'kazanimlar', 'notes', 'practice', 'ornek_sorular'];
+/** Yeni öğrenciye (henüz çalışma/tekrar/hedef yokken) yan sütunda önerilen başlangıç sayfaları */
+const START: AppRoute[] = ['sinav_calisma', 'canli_ders', 'spots', 'past_exams'];
 const WEEK_DAYS = ['Pt', 'Sa', 'Ça', 'Pe', 'Cu', 'Ct', 'Pz'];
 
 /** Tarihten sabit bir sayı (gün içinde aynı spot) */
@@ -361,6 +363,23 @@ const TodayViewV11: React.FC<TodayViewProps & { v12?: boolean }> = ({ committeeL
           </div>
 
           <aside className="td12-side" aria-label="Bugünün özeti">
+            {totalDue === 0 && goals.length === 0 && !hasAnyStudy && (
+              <section className="td12-panel" aria-labelledby="td12-start-h">
+                <h2 id="td12-start-h" className="td12-sec">Nereden başlamalı?</h2>
+                {START.map((id) => {
+                  const it = NAV_ITEMS[id];
+                  if (!it) return null;
+                  const Icon = it.icon;
+                  return (
+                    <a key={id} href={pathFor(id)} onClick={linkClick(() => onGo(id))} className="td12-row">
+                      <Icon className="td12-row-ic" aria-hidden />
+                      <span className="td12-row-b"><span className="td12-row-t">{it.label}</span><span className="td12-meta">{it.hint}</span></span>
+                      <ArrowRight className="td12-chev" aria-hidden />
+                    </a>
+                  );
+                })}
+              </section>
+            )}
             {totalDue > 0 && (
               <section className="td12-panel" aria-labelledby="td12-due-h">
                 <div className="td12-sec-row"><h2 id="td12-due-h" className="td12-sec">Bugünün tekrarı</h2><span className="td12-count">{totalDue.toLocaleString('tr-TR')}</span></div>

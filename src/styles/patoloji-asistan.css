@@ -449,3 +449,25 @@
 .pa-hero-cozucu-t small { font-size: 12.5px; color: var(--color-ink-2); line-height: 1.4; }
 .pa-hero-cozucu > svg { width: 18px; height: 18px; flex-shrink: 0; color: var(--color-ink-3); }
 
+
+/* ── Sadeleştirme (2026-10-18): cümle kontrolleri yalnız alt oynatıcıda; kartta tek "Baştan dinle" ── */
+.pa-btn-parca.is-sade { background: transparent; border-color: transparent; color: var(--color-ink-2); }
+.pa-btn-parca.is-sade:hover { background: var(--color-field); color: var(--color-ink); }
+.pa-kart-aksiyonlar .pa-btn-parca.is-sade { width: auto; padding: 0 10px; }
+.pa-kart-aksiyonlar .pa-btn-parca.is-sade span { display: inline; }
+/* Oynatma ayarları: geniş ekranda satırda; dar ekranda ⚙ düğmesiyle açılan panel (alt çubuk taşmaz) */
+.pa-ayar-ac { display: none; }
+@media (max-width: 640px) {
+  .pa-alt { position: relative; overflow: visible; justify-content: center; }
+  .pa-ayar-ac { display: grid; }
+  .pa-ayar-ac.is-on { background: var(--color-accent-soft); color: var(--color-accent); }
+  .pa-ayar { display: none; }
+  .pa-ayar.is-acik {
+    display: flex; flex-direction: column; align-items: stretch; gap: 8px; position: absolute; right: 10px; bottom: calc(100% + 8px); z-index: 2;
+    min-width: 220px; padding: 10px; border-radius: 14px; background: var(--color-white); box-shadow: var(--v12-pop, 0 12px 32px -8px rgb(16 24 40 / .22)), 0 0 0 1px var(--color-line);
+  }
+  .pa-ayar.is-acik .pa-sec { height: 40px; }
+  .pa-ayar.is-acik .pa-sec select { max-width: none; flex: 1; font-size: 14px; }
+  .pa-ayar.is-acik .pa-oto { height: 40px; }
+  .pa-ayar.is-acik .pa-oto span { display: inline; font-size: 14px; }
+}

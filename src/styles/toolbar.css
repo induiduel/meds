@@ -16,7 +16,7 @@ html { --pt-top: calc(var(--sh-top-h, 52px) + env(safe-area-inset-top, 0px)); }
 .pt-seg::-webkit-scrollbar { display: none; }
 .pt-seg button { flex-shrink: 0; display: inline-flex; align-items: center; gap: 5px; height: 30px; padding: 0 11px; border-radius: 8px; font: 600 13px var(--font-sans); color: var(--color-ink-3); white-space: nowrap; cursor: pointer; transition: background var(--mo-fast, .15s), color var(--mo-fast, .15s); }
 .pt-seg button.is-on { background: var(--color-white); color: var(--color-ink); box-shadow: var(--shadow-sm, 0 1px 2px rgb(0 0 0 / .1)); }
-.pt-seg-n { font: 500 11.5px var(--font-round); font-variant-numeric: tabular-nums; opacity: .7; }
+.pt-seg-n { font: 500 11.5px var(--font-round); font-variant-numeric: tabular-nums; }
 .pt-filter { grid-area: filter; position: relative; display: inline-flex; align-items: center; gap: 6px; height: 36px; padding: 0 11px; border-radius: 10px; border: 1px solid var(--color-line); background: var(--color-white); color: var(--color-ink); font: 600 13px var(--font-sans); cursor: pointer; white-space: nowrap; }
 .pt-filter svg { width: 16px; height: 16px; }
 .pt-badge { min-width: 18px; height: 18px; padding: 0 5px; box-sizing: border-box; border-radius: 99px; display: grid; place-items: center; background: var(--color-accent); color: var(--color-on-accent); font: 700 11px var(--font-round); }
@@ -107,7 +107,7 @@ html { --pt-top: calc(var(--sh-top-h, 52px) + env(safe-area-inset-top, 0px)); }
 .pt-q-btn:focus-visible, .pt-q-x:focus-visible { outline: 2px solid var(--ui-focus, var(--color-accent)); outline-offset: 2px; }
 .pt-q-v { max-width: 160px; overflow: hidden; text-overflow: ellipsis; font-weight: 700; }
 .pt-q.is-on { border-color: color-mix(in srgb, var(--color-accent) 45%, transparent); background: var(--color-accent-soft); color: var(--color-accent); }
-.pt-q.is-on .pt-q-l { font-weight: 500; opacity: .8; }
+.pt-q.is-on .pt-q-l { font-weight: 500; }
 .pt-q.is-on .pt-q-l::after { content: ':'; }
 .pt-q.is-on .pt-q-btn { padding-right: 4px; }
 .pt-q-x { width: 26px; height: 26px; margin-right: 3px; border-radius: 99px; display: grid; place-items: center; color: inherit; cursor: pointer; }

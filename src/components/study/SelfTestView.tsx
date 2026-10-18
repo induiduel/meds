@@ -497,7 +497,7 @@ export const SelfTestView: React.FC<SelfTestViewProps> = ({ bank, committees, lo
               {q.options.map((o) => {
                 const sel = answers[q.id] === o.key;
                 return (
-                  <li key={o.key} className="qk-opt-li">
+                  <li key={o.key} className="qk-opt-li" role="none">
                     <button type="button" role="radio" aria-checked={sel} onClick={() => setAnswers((p) => ({ ...p, [q.id]: p[q.id] === o.key ? undefined : o.key }))} className={`qk-opt ${sel ? 'is-sel' : ''}`}>
                       <span className="qk-bub" aria-hidden>{o.key}</span>
                       <span className="qk-opt-t">{o.text}</span>

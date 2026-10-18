@@ -609,7 +609,10 @@ button.sbk-zaman-b > svg { margin-left: auto; width: 16px; height: 16px; color: 
 .sbk-kpi.is-acilir { cursor: pointer; transition: border-color var(--mo-fast, 120ms), background var(--mo-fast, 120ms); }
 .sbk-kpi.is-acilir:hover { border-color: var(--color-accent); }
 .sbk-kpi.is-acilir:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
-.sbk-kpi-gecmis { position: absolute; right: 8px; top: 8px; display: inline-flex; align-items: center; gap: 3px; font-size: 11px; color: var(--color-ink-3); background: var(--color-field); border-radius: 6px; padding: 1px 6px; }
+.sbk-kpi-gecmis { position: absolute; right: 8px; top: 8px; display: inline-flex; align-items: center; gap: 3px; font: inherit; font-size: 11px; color: var(--color-ink-3); background: var(--color-field); border: 0; border-radius: 6px; padding: 1px 6px; cursor: pointer; }
+.sbk-kpi-gecmis:hover { color: var(--color-accent); }
+.sbk-kpi-gecmis:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 1px; }
+.sbk-kpi-gecmis::after { content: ''; position: absolute; inset: -8px -4px; }
 .sbk-kpi-gecmis svg { width: 11px; height: 11px; }
 .sbk-gecmis { padding: 0; max-width: none; }
 .sbk-gecmis-arac { display: inline-flex; gap: 6px; }
@@ -1193,7 +1196,7 @@ mark.sbk-ders-m { background: var(--color-warn-soft); color: inherit; border-rad
 /* ── Anlaşılırlık katmanı (2026-10-15): işaret açıklaması, KPI geçmiş rozeti akışta, şerit kaydırma ipucu ── */
 .sbk-kpi-alt { align-items: center; }
 .sbk-kpi-alt .sbk-kpi-gecmis { position: static; margin-left: auto; }
-.sbk-kpi-alt span.sbk-kpi-gecmis::before { content: none; }
+.sbk-kpi-alt .sbk-kpi-gecmis::before { content: none; }
 .sbk-kpi-ad { overflow-wrap: normal; word-break: normal; hyphens: manual; }
 .sbk-ders-i-b svg { width: 11px; height: 11px; }
 .sbk-ders-katman .sbk-ders-i-b svg { width: 9px; height: 9px; }

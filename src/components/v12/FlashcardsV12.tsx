@@ -98,6 +98,7 @@ export const FlashcardsV12: React.FC<FlashcardsV12Props> = (p) => {
 
   return (
     <div className="f12-page">
+      <h1 className="sr-only">Ezber kartları</h1>
       <div className="f12-col">
         <div className="f12-head">
           <CardsSpotsNav active="cards" />

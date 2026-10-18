@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useMemo } from 'react';
+import { okunurBaslik } from '../utils/okunurBaslik';
 import { confirmDialog } from './ui/ConfirmDialog';
 import { SourceText } from './ui/SourceText';
 import { FilterPills, PageToolbar, type ToolbarChip } from './ui/PageToolbar';
@@ -62,7 +63,7 @@ const LOCAL_NOTES_KEY = 'medsoru_lecture_notes_v5_verbatim';
 /** "1)Cinsel yolla…" → { no: '1', title: 'Cinsel yolla…' }: numara ayrı mono çipte gösterilir. */
 const splitSlideTitle = (raw: string) => {
   const m = String(raw || '').match(/^\s*(\d{1,3})\s*[).\-–]\s*(.*)$/);
-  return m ? { no: m[1], title: m[2].trim() } : { no: '', title: String(raw || '').trim() };
+  return m ? { no: m[1], title: okunurBaslik(m[2].trim()) } : { no: '', title: okunurBaslik(String(raw || '').trim()) };
 };
 /** Geçersiz/boş tarihte "Invalid Date" yerine hiçbir şey. */
 const fmtDate = (v?: string) => {

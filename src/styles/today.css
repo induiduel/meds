@@ -187,6 +187,7 @@ a.td-card:focus-visible { outline: 2px solid var(--color-accent); outline-offset
   & .td12-row-b { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 1px; }
   & .td12-row-t { font-size: 14px; font-weight: 500; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
   & .td12-chev { width: 15px; height: 15px; color: var(--color-ink-3); flex-shrink: 0; }
+  & .td12-row-ic { width: 17px; height: 17px; flex-shrink: 0; color: var(--color-accent); }
 
   /* Günün spotu */
   & .td12-spot { padding: 14px 16px; gap: 6px; }

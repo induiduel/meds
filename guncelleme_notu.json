@@ -1,11 +1,13 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 12,
-  "baslik": "Kurul 1 Tüm Branşlarda Sınav Spotları ve Sesli Çözücü Setleri Tamamlandı",
+  "onem": 13,
+  "baslik": "MeDSor Güncellendi · Daha Sade Canlı Ders, Soru Çözücü ve Sesli Asistan",
   "maddeler": [
-    "Kurul 1'in 7 branşının tamamı (Patoloji, Enfeksiyon, Üroloji, Genetik, Kadın Doğum, Halk Sağlığı, Farmakoloji) için 100 puanlık 'Sınav için en önemliler' spotları ve EMA sesli soru çözücü setleri (%100) tamamlandı.",
-    "Kazanım temelli /sinav-calisma sayfası kullanıma sunuldu: 715 kazanım, 8.235 soru, anlık filtreleme ve parça parça hızlı yükleme mimarisi.",
-    "Sesli sınav asistanı ve soru çözücü ders anlatım süreleri diyalogu ve ders gezgini süre gösterimi eklendi.",
-    "Mobil ve dokunmatik ekranlar için görünüm çubuğu, branş seçiciler ve dokunma alanları optimize edildi."
+    "Canlı ders listesi sadeleşti: ders adına dokununca metin + slaytla açılır, yanındaki ▶ yalnız sesi çalar; süre özeti tek satıra indi, ses seçici araç satırında.",
+    "Tam ekranda oynatıcı gizliyken ▶ düğmesi artık dersi başlatabiliyor (önceden devre dışıydı).",
+    "Soru çözücü: kısa başlık, 'Kaldığın yerden devam' kartı, her ders tek dokunuşla açılan sade satır; 'Nasıl çalışır?' katlanır.",
+    "En önemliler ve sesli asistan: tekrarlanan düğmeler kaldırıldı, cümle kontrolleri yalnız alt oynatıcıda; telefonda ayarlar ⚙ düğmesinde.",
+    "Sınav Çalışması anında açılıyor (konu konu yükleme), Bugün'e 'Nereden başlamalı?' önerileri eklendi, BÜYÜK HARF ders başlıkları okunur biçimde.",
+    "Erişilebilirlik: ekran okuyucu düzeltmeleri, daha okunur sayaçlar, büyütülmüş dokunma alanları; açılış ekranı dokunarak geçilebilir."
   ]
 }

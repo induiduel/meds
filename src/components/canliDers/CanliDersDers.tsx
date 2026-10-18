@@ -5,7 +5,7 @@
  * kaydırınca/PDF'i gezince takip 8 sn durur ve "Canlı konuma dön" çıkar. Oynatıcı alt çubuktadır (CanliDersDock).
  */
 import React, { Suspense, lazy, memo, useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react';
-import { ChevronLeft, ChevronUp, Columns2, Crosshair, FileText, Maximize2, Minimize2, Minus, Pause, Play, Plus, ScrollText } from 'lucide-react';
+import { ChevronDown, ChevronLeft, ChevronUp, Columns2, Crosshair, FileText, Maximize2, Minimize2, Minus, Pause, Play, Plus, ScrollText } from 'lucide-react';
 import { navigateTo, pathFor } from '../../router';
 import { driveViewUrl, useDeckPdf } from '../../services/deckPdfService';
 import {
@@ -258,10 +258,6 @@ export default function CanliDersDers({ dersKey }: { dersKey: string }) {
               ))}
             </div>
           )}
-          {!tamEkran && (
-            <>
-            </>
-          )}
         </div>
         <div className="cd-ders-uc">
           <CdTvKumanda />
@@ -285,7 +281,7 @@ export default function CanliDersDers({ dersKey }: { dersKey: string }) {
                   </button>
                 </span>
               )}
-              {!oynaticiAcik && <TamEkranOynat dersKey={detay.key} />}
+              {!oynaticiAcik && <TamEkranOynat dersKey={detay.key} onBasla={() => { cdOynat(detay); setBaglanti('bagli'); }} />}
               <button
                 type="button"
                 className={`cd-btn is-ikon cd-tam-oyn${oynaticiAcik ? ' is-on' : ''}`}
@@ -294,7 +290,7 @@ export default function CanliDersDers({ dersKey }: { dersKey: string }) {
                 aria-label={oynaticiAcik ? 'Oynatıcıyı gizle' : 'Oynatıcıyı göster'}
                 title={oynaticiAcik ? 'Oynatıcıyı gizle' : 'Oynatıcıyı göster'}
               >
-                <ChevronUp aria-hidden />
+                {oynaticiAcik ? <ChevronDown aria-hidden /> : <ChevronUp aria-hidden />}
               </button>
               <button type="button" className="cd-btn is-ikon" onClick={tamEkranKapat} aria-label="Tam ekrandan çık" title="Tam ekrandan çık (Esc)">
                 <Minimize2 aria-hidden />
@@ -325,7 +321,7 @@ export default function CanliDersDers({ dersKey }: { dersKey: string }) {
 }
 
 /** Tam ekranda oynatıcı saklıyken başlıkta: oynat/duraklat + geçen süre */
-function TamEkranOynat({ dersKey }: { dersKey: string }) {
+function TamEkranOynat({ dersKey, onBasla }: { dersKey: string; onBasla: () => void }) {
   const buDers = useCd((s) => s.key === dersKey);
   const playing = useCd((s) => s.key === dersKey && s.playing);
   const t = useCd((s) => (s.key === dersKey ? Math.floor(s.t) : 0));
@@ -333,7 +329,7 @@ function TamEkranOynat({ dersKey }: { dersKey: string }) {
   return (
     <span className="cd-tam-ses">
       <span className="cd-tam-ses-t" aria-hidden>{fmtSure(t)}{dur ? ` / ${fmtSure(dur)}` : ''}</span>
-      <button type="button" className="cd-oynat" onClick={() => buDers && cdToggle()} disabled={!buDers} aria-label={playing ? 'Duraklat' : 'Oynat'} title={playing ? 'Duraklat' : 'Oynat'}>
+      <button type="button" className="cd-oynat" onClick={() => (buDers ? cdToggle() : onBasla())} aria-label={playing ? 'Duraklat' : 'Oynat'} title={playing ? 'Duraklat' : 'Oynat'}>
         {playing ? <Pause aria-hidden /> : <Play aria-hidden />}
       </button>
     </span>

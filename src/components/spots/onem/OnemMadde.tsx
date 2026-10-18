@@ -171,13 +171,15 @@ export const OnemMadde: React.FC<MaddeProps> = React.memo(({ m, d, gosterDers, a
           <Check aria-hidden />
         </button>
       </div>
-      <div className="on-m-sekmeler" role="tablist" aria-label="Ayrıntı">
+      <div className="on-m-sekmeler">
+        <div className="on-m-tablist" role="tablist" aria-label="Ayrıntı">
         {sekmeler.filter((s) => s.var).map((s) => (
           <button key={s.k} type="button" role="tab" aria-selected={acik && sekme === s.k} aria-controls={panelId}
             className={`on-sekme${acik && sekme === s.k ? ' is-on' : ''}${s.k === 'cikmis' ? ' is-cik' : ''}`} onClick={() => tikla(s.k)}>
             {s.ikon}<span>{s.ad}</span>
           </button>
         ))}
+        </div>
         <button type="button" className="on-ac" onClick={() => onAc(m.id, acik ? null : sekme)} aria-expanded={acik} aria-controls={panelId}
           aria-label={acik ? 'Ayrıntıyı kapat' : 'Ayrıntıyı aç'}>
           <ChevronDown aria-hidden />

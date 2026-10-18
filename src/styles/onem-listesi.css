@@ -250,7 +250,7 @@
 .on-adaylar { padding: 12px; border-radius: 16px; border: 1.5px solid color-mix(in srgb, var(--star) 50%, transparent); background: color-mix(in srgb, var(--star) 6%, var(--color-white)); min-width: 0; }
 .on-adaylar h3 { margin: 0 0 9px; padding: 0 2px; display: flex; align-items: center; gap: 7px; flex-wrap: wrap; font-size: 15px; font-weight: 800; }
 .on-adaylar h3 > svg { width: 17px; height: 17px; color: var(--star); fill: var(--star); flex-shrink: 0; }
-.on-adaylar h3 em { font-style: normal; font-size: 11.5px; font-weight: 700; color: var(--star); background: color-mix(in srgb, var(--star) 14%, transparent); padding: 2px 8px; border-radius: 999px; }
+.on-adaylar h3 em { font-style: normal; font-size: 11.5px; font-weight: 700; color: color-mix(in srgb, var(--star) 68%, var(--color-ink)); background: color-mix(in srgb, var(--star) 14%, transparent); padding: 2px 8px; border-radius: 999px; }
 .on-adaylar-ders { border: 0; background: none; padding: 0; font-size: 15px; font-weight: 800; color: var(--color-ink); text-align: left; text-decoration: underline; text-decoration-color: color-mix(in srgb, var(--color-ink) 25%, transparent); text-underline-offset: 3px; }
 .on-adaylar-ders:hover { color: var(--color-accent); }
 .on-adaylar ol { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 6px; }
@@ -274,10 +274,10 @@
 /* ---------- partlar */
 .on-part { display: flex; flex-direction: column; gap: 8px; scroll-margin-top: calc(var(--sh-top-h, 0px) + 112px); }
 .on-part-h { margin: 6px 0 0; display: flex; align-items: center; gap: 10px; padding: 9px 12px; border-radius: 12px; background: color-mix(in srgb, var(--b) 11%, transparent); border-left: 4px solid var(--b); font-size: 14px; }
-.on-part-no { font-weight: 800; color: var(--b); text-transform: uppercase; letter-spacing: .05em; font-size: 11.5px; flex-shrink: 0; }
+.on-part-no { font-weight: 800; color: color-mix(in srgb, var(--b) 75%, var(--color-ink)); text-transform: uppercase; letter-spacing: .05em; font-size: 11.5px; flex-shrink: 0; }
 .on-part-ad { font-weight: 800; color: var(--color-ink); font-variant-numeric: tabular-nums; flex-shrink: 0; }
 .on-part-not { color: var(--color-ink-2); font-weight: 600; flex: 1; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.on-part-n { margin-left: auto; font-size: 12px; font-weight: 700; color: var(--b); background: color-mix(in srgb, var(--b) 14%, transparent); padding: 2px 9px; border-radius: 999px; font-variant-numeric: tabular-nums; flex-shrink: 0; }
+.on-part-n { margin-left: auto; font-size: 12px; font-weight: 700; color: color-mix(in srgb, var(--b) 75%, var(--color-ink)); background: color-mix(in srgb, var(--b) 14%, transparent); padding: 2px 9px; border-radius: 999px; font-variant-numeric: tabular-nums; flex-shrink: 0; }
 .on-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
 
 /* ---------- madde kartı */
@@ -632,3 +632,6 @@ button.on-dersad:hover { color: var(--color-accent); text-decoration: underline;
 .ol-brans { display: flex; gap: 6px; width: auto; margin-top: -4px; padding: 2px; background: none; border-radius: 0; scroll-snap-type: x proximity; }
 .ol-brans button { flex: none; scroll-snap-align: start; min-height: 32px; padding: 0 12px; border: 1px solid var(--color-line); border-radius: 99px; background: var(--color-white); color: var(--color-ink-2); font-size: 13px; font-weight: 500; }
 .ol-brans button.is-on { background: var(--color-ink); border-color: var(--color-ink); color: var(--color-white); box-shadow: none; }
+
+/* Sekmeler ayrı tablist'te (erişilebilirlik); yerleşim kabın esnek satırında kalır */
+.on-m-tablist { display: contents; }

@@ -394,7 +394,7 @@ export const SolveView: React.FC<SolveViewProps> = ({ bank, committees, loading,
                 const cls = answered ? (isAns ? 'is-correct' : isPick ? 'is-wrong' : 'is-dim') : '';
                 const tag = answered && (isAns || isPick) ? (isPick ? 'Senin cevabın' : 'Doğru cevap') : null;
                 return (
-                  <li key={o.key} className="qk-opt-li">
+                  <li key={o.key} className="qk-opt-li" role="none">
                     <button type="button" role="radio" aria-checked={isPick} disabled={answered} onClick={() => pick(o.key)} className={`qk-opt ${cls}`}>
                       <span className="qk-bub" aria-hidden>{answered && isAns ? <Check strokeWidth={3} /> : answered && isPick ? <XIcon strokeWidth={3} /> : o.key}</span>
                       <span className="qk-opt-t">{o.text}</span>

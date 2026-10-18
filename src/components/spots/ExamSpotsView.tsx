@@ -107,6 +107,7 @@ export const ExamSpotsView: React.FC = () => {
   };
   return (
     <>
+      <h1 className="sr-only">Sınav spotları</h1>
       <div className="ol-gorunum" role="tablist" aria-label="Görünüm">
         <button type="button" role="tab" aria-selected={g === 'spot'} className={g === 'spot' ? 'is-on' : ''} onClick={() => sec('spot')}>Spotlar</button>
         <button type="button" role="tab" aria-selected={g === 'onem'} className={g === 'onem' ? 'is-on' : ''} onClick={() => sec('onem')}>En önemliler<span className="ol-g-ek">(100 puan)</span></button>

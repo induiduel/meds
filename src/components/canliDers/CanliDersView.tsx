@@ -101,19 +101,21 @@ function CanliDersListe() {
           </div>
           {tanitim.dugme}
         </div>
-        <div className="cd-sekmeler cd-gorunum" role="tablist" aria-label="Görünüm">
-          <button type="button" role="tab" aria-selected={gorunum === 'tum'} className={gorunum === 'tum' ? 'is-on' : ''} onClick={() => setGorunum('tum')}>
-            <Headphones aria-hidden /> Tüm dersler
-          </button>
-          <button type="button" role="tab" aria-selected={gorunum === 'liste'} className={gorunum === 'liste' ? 'is-on' : ''} onClick={() => setGorunum('liste')}>
-            <ListMusic aria-hidden /> Listem{listeN > 0 && <span className="cd-sekme-sayi">{listeN}</span>}
-          </button>
-        </div>
-        <div className="cd-liste-arac">
-          <button type="button" className="cd-btn" onClick={() => setSureAcik(true)} aria-haspopup="dialog">
-            <Clock aria-hidden /> <span>Ders süreleri</span>
-          </button>
-          {dersler && <VarsayilanSesSecici dersler={dersler} />}
+        <div className="cd-liste-sira">
+          <div className="cd-sekmeler cd-gorunum" role="tablist" aria-label="Görünüm">
+            <button type="button" role="tab" aria-selected={gorunum === 'tum'} className={gorunum === 'tum' ? 'is-on' : ''} onClick={() => setGorunum('tum')}>
+              <Headphones aria-hidden /> Tüm dersler
+            </button>
+            <button type="button" role="tab" aria-selected={gorunum === 'liste'} className={gorunum === 'liste' ? 'is-on' : ''} onClick={() => setGorunum('liste')}>
+              <ListMusic aria-hidden /> Listem{listeN > 0 && <span className="cd-sekme-sayi">{listeN}</span>}
+            </button>
+          </div>
+          <div className="cd-liste-arac">
+            <button type="button" className="cd-btn" onClick={() => setSureAcik(true)} aria-haspopup="dialog">
+              <Clock aria-hidden /> <span>Süreler</span>
+            </button>
+            {dersler && <VarsayilanSesSecici dersler={dersler} />}
+          </div>
         </div>
         {gorunum === 'tum' && <label className="cd-ara">
           <Search aria-hidden />
@@ -198,7 +200,7 @@ function VarsayilanSesSecici({ dersler }: { dersler: CdListeDers[] }) {
   const deger = secili && sesler.some(([k]) => k === secili) ? secili : ema || sesler[0][0];
   return (
     <label className="cd-vses">
-      <span>Varsayılan ses</span>
+      <span>Ses</span>
       <select value={deger} onChange={(e) => cdVarsayilanSesAyarla(e.target.value === ema ? null : e.target.value)} aria-label="Varsayılan ses (tüm dersler)">
         {sesler.map(([k, x]) => (
           <option key={k} value={k}>{cdSesKisa(x.v)}{k === ema ? ' (standart)' : ''}{x.n < dersler.length ? ` · ${x.n} ders` : ''}</option>
@@ -244,7 +246,7 @@ const fmtSaat = (s: number) => {
 
 /** Konu anlatım süreleri: toplam + branş başına (dokununca o branşa süzer). Açık/kapalı tercihi cihazda saklanır. */
 function SureOzeti({ dersler, konum, secili, onSec, onListe }: { dersler: CdListeDers[]; konum: Map<string, Konum>; secili: string; onSec: (id: string) => void; onListe: () => void }) {
-  const [acik, setAcik] = useState(() => { try { return localStorage.getItem('medsoru_cd_sure_acik') !== '0'; } catch { return true; } });
+  const [acik, setAcik] = useState(() => { try { return localStorage.getItem('medsoru_cd_sure_acik') === '1'; } catch { return false; } });
   const degistir = () => setAcik((x) => { try { localStorage.setItem('medsoru_cd_sure_acik', x ? '0' : '1'); } catch { /* yok */ } return !x; });
   const gruplar = useMemo(() => cdKategoriGrupla(dersler).map((g) => {
     const sure = toplamSure(g.dersler);
@@ -385,19 +387,20 @@ function SatirIlerleme({ d, k, dur }: { d: CdListeDers; k?: Konum; dur: number }
   );
 }
 
-function OynatDugme({ d, v, kucuk }: { d: CdListeDers; v: CdVaryant; kucuk?: boolean }) {
+function OynatDugme({ d, v, kucuk, yuvarlak }: { d: CdListeDers; v: CdVaryant; kucuk?: boolean; yuvarlak?: boolean }) {
   const buMu = useCd((s) => s.key === d.key && s.vid === v.id);
   const caliyor = useCd((s) => s.key === d.key && s.vid === v.id && s.playing);
   const etiket = caliyor ? 'Duraklat' : 'Oynat';
   return (
     <button
       type="button"
-      className={`cd-btn${kucuk ? ' is-ince' : ''}${buMu ? ' is-on' : ''}`}
+      className={`cd-btn${kucuk ? ' is-ince' : ''}${yuvarlak ? ' is-yuvarlak' : ''}${buMu ? ' is-on' : ''}`}
       onClick={() => (buMu ? cdToggle() : cdOynat(d, v.id))}
-      aria-label={`${etiket}: ${d.baslik}${kucuk ? ` (${sesAdi(v)})` : ''}`}
+      aria-label={`${etiket}: ${d.baslik}${kucuk ? ` (${sesAdi(v)})` : yuvarlak ? ' (yalnız ses, metin açılmadan)' : ''}`}
+      title={yuvarlak ? (caliyor ? 'Duraklat' : 'Yalnız sesi çal — sayfada gezinirken alt çubukta sürer') : undefined}
     >
       {caliyor ? <Pause aria-hidden /> : <Play aria-hidden />}
-      <span>{etiket}</span>
+      {!yuvarlak && <span>{etiket}</span>}
     </button>
   );
 }
@@ -457,11 +460,7 @@ const DersSatiri = React.memo(function DersSatiri({ d, k }: { d: CdListeDers; k?
           </small>
         </a>
         <div className="cd-satir-eylem">
-          <button type="button" className="cd-btn is-ana" onClick={() => dersAc(d.key)} aria-label={`Dinle: ${d.baslik} (metin ve slaytlarla)`} title="Metin ve slaytlarla aç">
-            <Headphones aria-hidden />
-            <span>Dinle</span>
-          </button>
-          <OynatDugme d={d} v={v} />
+          <OynatDugme d={d} v={v} yuvarlak />
         </div>
         <div className="cd-satir-diger">
           <button

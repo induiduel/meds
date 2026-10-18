@@ -1435,9 +1435,11 @@ export default function App() {
         <MiniMusicPlayer onOpen={() => setActiveTab('music')} />
       )}
       {activeTab === 'practice' ? (
-        <Suspense fallback={<ViewFallback />}>
-          <TestHub onExit={() => setActiveTab('study')} />
-        </Suspense>
+        <main className="contents">
+          <Suspense fallback={<ViewFallback />}>
+            <TestHub onExit={() => setActiveTab('study')} />
+          </Suspense>
+        </main>
       ) : activeTab === 'manage' || activeTab === 'admin' ? (
         isAdmin ? (
           <Suspense fallback={<ViewFallback />}>

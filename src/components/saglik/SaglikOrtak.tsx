@@ -305,6 +305,7 @@ export const Kpi: React.FC<{
   const ac = useGecmis();
   const yilSay = (seri || []).filter((p) => typeof p.deger === 'number').length;
   const acilir = yilSay >= 2;
+  const acGecmis = () => ac({ baslik: ad, birim, seriler: [{ ad, seri: seri! }], kaynak, ek, konum, ...gecmis });
   const ic = (
     <>
       <span className="sbk-kpi-ad">{ad}</span>
@@ -317,7 +318,12 @@ export const Kpi: React.FC<{
       <span className="sbk-kpi-alt">
         {yil != null && <span>{yil}</span>}
         {not && <span>{not}</span>}
-        {acilir && <span className="sbk-kpi-gecmis" title="Geçmiş yılları göster"><History aria-hidden /> {yilSay} yıl</span>}
+        {acilir && (
+          <button type="button" className="sbk-kpi-gecmis" title="Geçmiş yılları göster" aria-label={`${ad}: ${yilSay} yılın geçmişini göster`}
+            onClick={(e) => { e.stopPropagation(); acGecmis(); }}>
+            <History aria-hidden /> {yilSay} yıl
+          </button>
+        )}
       </span>
       {seri && seri.filter(yillikMi).length > 2 && <Kivilcim seri={seri} />}
     </>
@@ -325,10 +331,8 @@ export const Kpi: React.FC<{
   if (!acilir) return <div className={`sbk-kpi ${ton ? `is-${ton}` : ''}`} title={ipucu} data-ders-ad={ad}>{ic}</div>;
   return (
     <div
-      className={`sbk-kpi is-acilir ${ton ? `is-${ton}` : ''}`} title={ipucu || 'Geçmiş yılları göster'} role="button" tabIndex={0} data-ders-ad={ad}
-      aria-label={`${ad}: geçmiş yılları göster`}
-      onClick={(e) => { if ((e.target as HTMLElement).closest('a')) return; ac({ baslik: ad, birim, seriler: [{ ad, seri: seri! }], kaynak, ek, konum, ...gecmis }); }}
-      onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); ac({ baslik: ad, birim, seriler: [{ ad, seri: seri! }], kaynak, ek, konum, ...gecmis }); } }}
+      className={`sbk-kpi is-acilir ${ton ? `is-${ton}` : ''}`} title={ipucu || 'Geçmiş yılları göster'} data-ders-ad={ad}
+      onClick={(e) => { if ((e.target as HTMLElement).closest('a, button')) return; acGecmis(); }}
     >
       {ic}
     </div>

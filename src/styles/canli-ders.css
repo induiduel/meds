@@ -659,3 +659,31 @@
 @keyframes cd-tv-iz { 0%, 70% { opacity: 1; } 100% { opacity: 0; } }
 /* TV'de odak her zaman belirgin */
 :root.cd-tv .cd-root :focus-visible, :root.cd-tv .cd-dlg :focus-visible, :root.cd-tv .cd-root :focus { outline: 3px solid var(--color-accent) !important; outline-offset: 2px; box-shadow: 0 0 0 6px color-mix(in srgb, var(--color-accent) 25%, transparent); }
+
+/* Liste başı: görünüm sekmesi + araçlar tek satırda (dar ekranda sekme tam satır, araçlar altında) */
+.cd-liste-sira { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 12px; }
+.cd-liste-sira > .cd-gorunum { align-self: auto; }
+.cd-liste-sira .cd-vses select { max-width: 200px; }
+@media (max-width: 560px) {
+  .cd-liste-sira > .cd-gorunum { flex: 1 1 100%; }
+  .cd-liste-sira > .cd-liste-arac { flex: 1 1 100%; flex-wrap: nowrap; }
+  .cd-liste-sira .cd-vses { flex: 1; min-width: 0; }
+  .cd-liste-sira .cd-vses select { flex: 1; min-width: 0; max-width: none; }
+}
+
+/* Ders satırı (sade): numara · ad (dokun → metin + slaytla aç) · ▶ yalnız ses · ⋯ — telefonda da tek satır */
+.cd-satir-ana { grid-template-columns: 36px minmax(0, 1fr) auto auto; }
+.cd-satir-diger { display: flex; }
+.cd-btn.is-yuvarlak { width: 40px; height: 40px; padding: 0; border-radius: 50%; justify-content: center; background: var(--color-accent-soft); border-color: transparent; color: var(--color-accent); }
+.cd-btn.is-yuvarlak:hover { background: var(--color-accent); color: var(--color-on-accent, #fff); }
+.cd-btn.is-yuvarlak.is-on { background: var(--color-accent); color: var(--color-on-accent, #fff); }
+.cd-btn.is-yuvarlak svg { width: 17px; height: 17px; }
+@media (max-width: 640px) {
+  .cd-satir-ana { grid-template-columns: 30px minmax(0, 1fr) auto auto; row-gap: 0; gap: 8px; }
+  .cd-satir-eylem { grid-column: auto; padding-left: 0; flex-wrap: nowrap; }
+  .cd-satir-eylem .cd-btn.is-yuvarlak { width: 38px; height: 38px; padding: 0; }
+  .cd-satir-diger .cd-btn.is-ikon { width: 34px; height: 34px; }
+}
+/* Ses seçici dar ekranda kendi satırında daralır (uzun ses adı taşmaz) */
+.cd-vses select { min-width: 0; text-overflow: ellipsis; }
+@media (max-width: 560px) { .cd-liste-sira .cd-vses select { width: 100%; } }

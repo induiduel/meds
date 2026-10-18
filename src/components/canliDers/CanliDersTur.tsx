@@ -1,6 +1,6 @@
 /**
  * Canlı ders tanıtım turu — iki parça:
- *   • liste: /canliders (canlı ders nedir, arama, kategoriler, Dinle, Oynat, seçenekler (sesler/MP3/çevrimdışı/listem), arka planda dinleme)
+ *   • liste: /canliders (canlı ders nedir, arama, kategoriler, ders adı (aç), ▶ (yalnız ses), seçenekler (sesler/MP3/çevrimdışı/listem), arka planda dinleme)
  *   • ders:  /canliders/<key> (PDF, metin, takip, oynatıcı, bölümler, ses/hız/indirme, kısayollar, mini oynatıcı)
  * Öğren turunun (LearnTour) görsel dilini ve sınıflarını (wt-/lt-) kullanır: SVG maskeli karartmada delik + kart.
  * Öğesi sayfada olmayan `optional` duraklar atlanır (PDF yok, oynatıcı başka derste, geniş ekranda sekme yok…);
@@ -71,21 +71,21 @@ const LISTE: Durak[] = [
     optional: true,
   },
   {
-    sel: `${satir} .cd-btn.is-ana`,
+    sel: `${satir} .cd-satir-ad`,
     icon: Headphones,
     eyebrow: 'Dinle',
     title: 'Ders ekranını aç',
-    text: '“Dinle” dersi metin ve slaytlarla birlikte açar. Ders adına dokunmak da aynı işi yapar.',
+    text: 'Ders adına dokun: ders metin ve slaytlarla birlikte açılır, okunan cümle vurgulanır.',
     points: ['Masaüstünde PDF ve metin yan yana, telefonda sekmeli', 'Kaldığın yer hatırlanır'],
     optional: true,
   },
   {
-    sel: `${satir} .cd-satir-eylem > button.cd-btn:not(.is-ana):not(.is-ikon)`,
+    sel: `${satir} .cd-satir-eylem > .cd-btn.is-yuvarlak`,
     icon: Play,
     eyebrow: 'Oynat',
     title: 'Yalnız sesi başlat',
-    text: '“Oynat” sayfadan ayrılmadan yalnız sesi çalar; alttaki küçük oynatıcıdan yönetirsin.',
-    points: ['Aynı düğme çalarken “Duraklat” olur', 'Yürürken ya da yolda dinlemek için ideal'],
+    text: 'Yuvarlak ▶ düğmesi sayfadan ayrılmadan yalnız sesi çalar; alttaki küçük oynatıcıdan yönetirsin.',
+    points: ['Aynı düğme çalarken ⏸ olur', 'Yürürken ya da yolda dinlemek için ideal'],
     optional: true,
   },
   {
