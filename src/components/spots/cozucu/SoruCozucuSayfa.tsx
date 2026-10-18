@@ -1,7 +1,10 @@
 import React, { useEffect, useMemo, useState } from 'react';
-import { Eraser, Headphones, History, Lightbulb, Play, RotateCcw } from 'lucide-react';
+import { Clock, Eraser, Headphones, History, Lightbulb, Play, RotateCcw } from 'lucide-react';
 import { cozucuDizinYukle, ozet, setAdi, useIlerleme, type CDizin } from './cozucuVeri';
 import { bransTanim, type Brans } from '../brans';
+import { getCozucuSureGruplari, dk } from '../sure/spotsSureVeri';
+import { SpotsSureOzeti } from '../sure/SpotsSureOzeti';
+import { SpotsSureDiyalog } from '../sure/SpotsSureDiyalog';
 import '../../../styles/soru-cozucu.css';
 
 /**
@@ -25,11 +28,20 @@ export const SoruCozucuSayfa: React.FC<{ brans?: Brans }> = ({ brans = 'patoloji
   const [dizin, setDizin] = useState<CDizin | null>(null);
   const [hata, setHata] = useState(false);
   const [ara, setAra] = useState('');
+  const [sureAcik, setSureAcik] = useState(() => location.hash === '#sureler');
   const [acik, setAcik] = useState<{ kod: string; mod?: 'yanlis' | 'cikmis' } | null>(() => {
     const k = urlOku('ders'); const c = urlOku('coz');
     return k && c ? { kod: k, mod: c === 'yanlis' || c === 'cikmis' ? c : undefined } : null;
   });
   const ilerleme = useIlerleme();
+  const cozucuSureGruplari = useMemo(() => getCozucuSureGruplari(), [ilerleme]);
+
+  useEffect(() => {
+    const f = () => { if (location.hash === '#sureler') setSureAcik(true); };
+    window.addEventListener('popstate', f);
+    return () => window.removeEventListener('popstate', f);
+  }, []);
+
   useEffect(() => { setDizin(null); setHata(false); cozucuDizinYukle(brans).then(setDizin).catch(() => setHata(true)); }, [brans]);
 
   const ac = (kod: string, mod?: 'yanlis' | 'cikmis') => { setAcik({ kod, mod }); urlYaz({ ders: kod, coz: mod || '1' }); };
@@ -70,8 +82,31 @@ export const SoruCozucuSayfa: React.FC<{ brans?: Brans }> = ({ brans = 'patoloji
         </ul>
       </section>
 
-      <div className="scs-ara">
-        <input type="search" value={ara} onChange={(e) => setAra(e.target.value)} placeholder={`Ders ara (ör. ${bt.araOrnek})`} aria-label="Ders ara" />
+      <SpotsSureOzeti
+        baslik="Sesli Soru Çözümü Toplam Süresi"
+        gruplar={cozucuSureGruplari}
+        seciliBrans={brans}
+        onSecBrans={(b) => {
+          if (b !== 'tum' && b !== brans) {
+            const u = new URL(location.href);
+            u.searchParams.set('brans', b);
+            history.pushState(history.state, '', u.pathname + u.search + u.hash);
+            window.dispatchEvent(new PopStateEvent('popstate'));
+          }
+        }}
+        onTamListe={() => setSureAcik(true)}
+        birimAd="set"
+        tercihKey="medsoru_cozucu_sure_acik"
+      />
+
+      <div className="scs-arac">
+        <div className="scs-ara">
+          <input type="search" value={ara} onChange={(e) => setAra(e.target.value)} placeholder={`Ders ara (ör. ${bt.araOrnek})`} aria-label="Ders ara" />
+        </div>
+        <button type="button" className="scs-btn-sure" onClick={() => setSureAcik(true)} title="Tüm branşların ve derslerin soru çözümü süreleri">
+          <Clock aria-hidden />
+          <span>Çözüm süreleri</span>
+        </button>
       </div>
 
       <ul className="scs-liste">
@@ -88,7 +123,13 @@ export const SoruCozucuSayfa: React.FC<{ brans?: Brans }> = ({ brans = 'patoloji
                   <span className="scs-no">{d.no}</span>
                   <span className="scs-ad">
                     <b>{d.baslik}</b>
-                    <small>{setAdi(d) ? `${setAdi(d)} · ` : ''}{d.soru} soru{d.cikmis ? ` (${d.cikmis} çıkmış)` : ''}{o.cozulen ? ` · ${o.cozulen} çözüldü · ${o.d} ilk denemede doğru` : ''}{d.ses ? '' : ' · ses hazırlanıyor'}</small>
+                    <small>
+                      {setAdi(d) ? `${setAdi(d)} · ` : ''}{d.soru} soru
+                      {d.sure ? ` · ~${dk(d.sure)} dk çözüm` : ''}
+                      {d.cikmis ? ` (${d.cikmis} çıkmış)` : ''}
+                      {o.cozulen ? ` · ${o.cozulen} çözüldü · ${o.d} ilk denemede doğru` : ''}
+                      {d.ses ? '' : ' · ses hazırlanıyor'}
+                    </small>
                   </span>
                 </div>
                 <div className="scs-cubuk" aria-hidden><i className="is-d" style={{ width: w(o.d) }} /><i className="is-d2" style={{ width: w(o.d2) }} /><i className="is-y" style={{ width: w(o.y) }} /></div>
@@ -103,6 +144,33 @@ export const SoruCozucuSayfa: React.FC<{ brans?: Brans }> = ({ brans = 'patoloji
         })}
       </ul>
       {!dersler.length && <p className="scs-bos">“{ara}” ile eşleşen ders yok.</p>}
+
+      {sureAcik && (
+        <SpotsSureDiyalog
+          baslik="Sesli soru çözücü süreleri"
+          gruplar={cozucuSureGruplari}
+          onKapat={() => {
+            setSureAcik(false);
+            if (location.hash === '#sureler') {
+              history.replaceState(history.state, '', location.pathname + location.search);
+            }
+          }}
+          onDersAc={(b, k) => {
+            if (b !== brans) {
+              const u = new URL(location.href);
+              u.searchParams.set('brans', b);
+              u.searchParams.set('ders', k);
+              u.searchParams.set('coz', '1');
+              history.pushState(history.state, '', u.pathname + u.search + u.hash);
+              window.dispatchEvent(new PopStateEvent('popstate'));
+            } else {
+              ac(k);
+            }
+          }}
+          birimAd="set"
+          not="Süreler EMA seslendirmesine göredir. Soru kökü, seçenekler, ipucu, eleme ve detaylı çözüm açıklamalarını içerir."
+        />
+      )}
 
       {acik && (
         <React.Suspense fallback={null}>

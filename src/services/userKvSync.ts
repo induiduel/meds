@@ -36,6 +36,8 @@ const SYNC_PATTERNS: RegExp[] = [
   /^medsoru_onem_(ogrendim|tercih|pdf|asistan|asistan_tercih)_v1$/,
   /^medsoru_onem_ders$/,
   /^medsoru_cozucu_(ilerleme|tercih)_v1$/,
+  // Sınav Çalışması: kazanım başına çözülen sorular
+  /^medsoru_sinav_calisma_v2$/,
   /^medsoru_ornek_(k1_cevap|k1_ders|k1_social|havuz_social|sekme)$/,
   /^cikmis_quiz$/,
   /^my_(comment|report)_ids$/,

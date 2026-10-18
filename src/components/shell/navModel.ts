@@ -67,6 +67,7 @@ const I: Record<string, NavItem> = {
   notes: { id: 'notes', label: 'Ders notları', short: 'Notlar', hint: 'Amfi slaytları ve ders notları', icon: NotebookPen, tint: '#FF9F0A' },
   stats: { id: 'stats', label: 'İstatistiklerim', short: 'İstatistik', tile: 'İstatistik', hint: 'İlerleme, puan ve etkinlik', icon: BarChart3, tint: '#5E5CE6' },
   settings: { id: 'settings', label: 'Profil ve ayarlar', short: 'Ayarlar', hint: 'Tema, palet, yoğunluk, fotoğraf', icon: Settings2, tint: '#8E8E93' },
+  sinav_calisma: { id: 'sinav_calisma', label: 'Sınav Çalışması', short: 'Sınav', hint: 'Tüm kazanımlar, örnek sorular & sesli çözücü', icon: GraduationCap, tint: '#8B5CF6' },
 };
 
 export const NAV_ITEMS = I;
@@ -78,7 +79,7 @@ export const NAV_ITEMS = I;
  */
 export const NAV_TREE: NavGroup[] = [
   { label: 'Öğren', items: [I.today, I.learn, I.canli_ders, I.spots, I.flashcards, I.summaries] },
-  { label: 'Soru çöz', items: [I.past_exams, I.ornek_sorular, I.study, I.practice] },
+  { label: 'Soru çöz', items: [I.past_exams, I.sinav_calisma, I.ornek_sorular, I.study, I.practice] },
   { label: 'Başvuru', items: [I.glossary, I.diseases, I.health_ministry, I.kazanimlar] },
   { label: 'Topluluk', items: [I.questions, I.matrix, I.leaderboard] },
   { label: 'Kişisel', items: [I.stats, I.music] },
@@ -95,7 +96,7 @@ export const MORE_TREE: NavGroup[] = NAV_TREE.map((g) => ({ ...g, items: g.items
  * gerisi "Daha fazla" açılırında aynı v9 gruplarıyla. Telefonda alt çubuk: Bugün · Öğren · [+ Soru ekle] · Çıkmış · Daha.
  */
 export const V12_RAIL: NavGroup[] = [
-  { label: null, items: [I.today, I.learn, I.past_exams, I.questions, I.flashcards, I.practice] },
+  { label: null, items: [I.today, I.learn, I.sinav_calisma, I.past_exams, I.questions, I.flashcards, I.practice] },
   { label: 'Kaynaklar', items: [I.canli_ders, I.notes, I.glossary, I.diseases, I.health_ministry] },
 ];
 const V12_IN_RAIL = new Set<AppRoute>(V12_RAIL.flatMap((g) => g.items.map((it) => it.id)));

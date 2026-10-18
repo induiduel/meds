@@ -23,7 +23,18 @@ import '../../../styles/soru-cozucu.css';
  */
 
 /** mod: yanlis = yalnız yanlış/yardımlı çözülenler · cikmis = yalnız çıkmış sorular (ikisinde de konum kaydedilmez) */
-interface Props { kod: string; brans?: Brans; onClose: () => void; onDersDegis?: (kod: string) => void; mod?: 'yanlis' | 'cikmis' }
+interface Props {
+  kod: string;
+  brans?: Brans;
+  onClose: () => void;
+  onDersDegis?: (kod: string) => void;
+  mod?: 'yanlis' | 'cikmis';
+  ozelSorular?: CSoru[];
+  ozelBaslik?: string;
+  kisaAnlatim?: string[];
+  /** Özel sorularda ilerleme çözücünün deposuna yazılmaz; sonuçlar (soru no → sonuç) çağırana bildirilir */
+  onOzelSonuc?: (sonuc: Record<string, Sonuc>) => void;
+}
 type Durum = 'acik' | 'cozuluyor' | 'dogru' | 'gosterildi';
 interface Adim { klasor: string; klip: string; metinler: string[]; onBasla?: () => void; onCumle?: (j: number) => void; kes?: number }
 const HIZLAR = [0.85, 1, 1.15, 1.3, 1.5, 1.75, 2];
@@ -38,7 +49,28 @@ const tercihOku = () => {
   try { return { ...v, ...JSON.parse(localStorage.getItem(TERCIH_KEY) || '{}') }; } catch { return v; }
 };
 
-export const SoruCozucu: React.FC<Props> = ({ kod: kod0, brans = 'patoloji', onClose, onDersDegis, mod }) => {
+/** Tarayıcıdaki Türkçe ses (yoksa null) */
+const turkceSes = (): SpeechSynthesisVoice | null => {
+  try {
+    if (typeof window === 'undefined' || !('speechSynthesis' in window)) return null;
+    const v = window.speechSynthesis.getVoices().filter((x) => x.lang.toLowerCase().startsWith('tr'));
+    return v.find((x) => /emel|yelda|filiz|google/i.test(x.name)) || v[0] || null;
+  } catch {
+    return null;
+  }
+};
+
+export const SoruCozucu: React.FC<Props> = ({
+  kod: kod0,
+  brans = 'patoloji',
+  onClose,
+  onDersDegis,
+  mod,
+  ozelSorular,
+  ozelBaslik,
+  kisaAnlatim,
+  onOzelSonuc,
+}) => {
   const bt = bransTanim(brans);
   const [kod, setKod] = useState(kod0);
   const [dizin, setDizin] = useState<CDizin | null>(null);
@@ -89,14 +121,28 @@ export const SoruCozucu: React.FC<Props> = ({ kod: kod0, brans = 'patoloji', onC
   const devamRef = useRef<(() => void) | null>(null); // duraklatılan sıranın kalanı
 
   const sorular = useMemo(() => {
+    if (ozelSorular && ozelSorular.length > 0) return ozelSorular;
     if (!ders) return [];
     return liste ? ders.sorular.filter((q) => liste.includes(q.no)) : ders.sorular;
-  }, [ders, liste]);
+  }, [ders, liste, ozelSorular]);
   const q: CSoru | undefined = sorular[i];
 
   useEffect(() => { lockScroll(); return () => unlockScroll(); }, []);
   useEffect(() => { cozucuDizinYukle(brans).then(setDizin).catch(() => {}); }, [brans]);
   useEffect(() => {
+    if (ozelSorular && ozelSorular.length > 0) {
+      setDers({
+        kod: kod || 'ozel',
+        no: 1,
+        baslik: ozelBaslik || 'Kazanım Sınav Soruları',
+        sorular: ozelSorular,
+        klip: {},
+      });
+      setSonuc({});
+      setI(0);
+      setBitti(false);
+      return;
+    }
     let canli = true;
     setDers(null); setHata(false); setListe(null); setTekrar(false); setI(0); setBitti(false); setDevamSor(null);
     cozucuDersYukle(kod, brans).then((d) => {
@@ -114,13 +160,14 @@ export const SoruCozucu: React.FC<Props> = ({ kod: kod0, brans = 'patoloji', onC
       setDers(d);
     }).catch(() => canli && setHata(true));
     return () => { canli = false; };
-  }, [kod, mod, brans]);
+  }, [kod, mod, brans, ozelSorular, ozelBaslik]);
   // ilerleme: tam akışta konum + sonuçlar; tekrar modunda yalnız sonuçlar
   useEffect(() => {
     if (!ders || devamSor !== null) return;
+    if (ozelSorular?.length) { onOzelSonuc?.(sonuc); return; }
     // ders.kod: ders değişirken bu etki eski dersin durumuyla bir kez daha çalışır; kayıt yine eski derse gider
     ilerlemeYaz(ders.kod, tekrar ? { s: sonuc } : { s: sonuc, i: bitti ? 0 : i, q: bitti ? undefined : sorular[i]?.no });
-  }, [sonuc, i, bitti, ders, tekrar, devamSor, sorular]);
+  }, [sonuc, i, bitti, ders, tekrar, devamSor, sorular]); // eslint-disable-line react-hooks/exhaustive-deps
 
   // ---------- ses motoru: adımlar sırayla; her adım bir klip (yoksa okuma süresi)
   const durdur = useCallback(() => {
@@ -129,6 +176,7 @@ export const SoruCozucu: React.FC<Props> = ({ kod: kod0, brans = 'patoloji', onC
     const a = audio.current;
     if (a) { a.onended = null; a.ontimeupdate = null; a.onerror = null; a.pause(); }
     if (zamanlayici.current) { window.clearInterval(zamanlayici.current); zamanlayici.current = null; }
+    try { if (typeof window !== 'undefined' && 'speechSynthesis' in window) window.speechSynthesis.cancel(); } catch { /* yok */ }
     setCaliyor(false);
   }, []);
   // ses: seçilen ses bu derste üretilmişse onun klibi, değilse varsayılan ses (EMA)
@@ -161,6 +209,25 @@ export const SoruCozucu: React.FC<Props> = ({ kod: kod0, brans = 'patoloji', onC
       const kb = klipBilgi(a.klasor, a.klip);
       const k = kb?.k;
       const yedek = () => {
+        // Kayıtlı klibi hiç olmayan özel sorular (Sınav Çalışması): tarayıcının Türkçe sesiyle cümle cümle oku
+        const tts = ozelSorular?.length ? turkceSes() : null;
+        if (tts) {
+          const cumleler = a.metinler.slice(0, a.kes !== undefined ? a.kes + 1 : undefined);
+          setSesYok(false);
+          setCaliyor(true);
+          const oku = (j: number) => {
+            if (sira !== siraRef.current) return;
+            if (j >= cumleler.length) { sonraki(); return; }
+            a.onCumle?.(j);
+            const u = new SpeechSynthesisUtterance(cumleler[j]);
+            u.lang = 'tr-TR'; u.voice = tts; u.rate = hiz;
+            u.onend = () => oku(j + 1);
+            u.onerror = () => oku(j + 1);
+            window.speechSynthesis.speak(u);
+          };
+          oku(0);
+          return;
+        }
         setSesYok(true);
         const sureler = a.metinler.slice(0, a.kes !== undefined ? a.kes + 1 : undefined).map((c) => Math.max(1.2, kelimeSay(c) / 2.6) / hiz);
         let j = 0; let t = 0;
@@ -202,7 +269,7 @@ export const SoruCozucu: React.FC<Props> = ({ kod: kod0, brans = 'patoloji', onC
       });
     };
     adim(0);
-  }, [durdur, klipBilgi, tercih.hiz, brans]);
+  }, [durdur, klipBilgi, tercih.hiz, brans, ozelSorular]);
   useEffect(() => () => { durdur(); if (otoRef.current) window.clearTimeout(otoRef.current); }, [durdur]);
   useEffect(() => { if (audio.current) audio.current.playbackRate = tercih.hiz; }, [tercih.hiz]);
 
@@ -466,6 +533,15 @@ export const SoruCozucu: React.FC<Props> = ({ kod: kod0, brans = 'patoloji', onC
               <span className="sc-sayac">Soru {i + 1} / {sorular.length}</span>
             </div>
 
+            {kisaAnlatim && kisaAnlatim.length > 0 && (
+              <details className="sc-kisa" open={i === 0}>
+                <summary>Konu özeti · bilinmesi gerekenler</summary>
+                <ul>
+                  {kisaAnlatim.map((m, idx) => <li key={idx}>{m}</li>)}
+                </ul>
+              </details>
+            )}
+
             <section className="sc-kart sc-soru">
               <div className={`sc-tur t-${q.tur || 'ornek'}`}>
                 {q.tur === 'cikmis' ? <><b>Çıkmış soru</b>{q.sinav && <span>{q.sinav}</span>}</>
@@ -530,7 +606,7 @@ export const SoruCozucu: React.FC<Props> = ({ kod: kod0, brans = 'patoloji', onC
               <div className={`sc-not sc-cozum${durum === 'dogru' ? ' is-dogru' : ''}${okunan?.yer === 'cozum' && caliyor ? ' is-aktif' : ''}`}>
                 <b>{durum === 'dogru' ? (yanlisSecti ? 'Doğru, bu sefer oldu!' : yardim ? 'Doğru! · yardımla' : 'Doğru!') : `Doğru cevap ${q.dogru}`} <span>· {q.secenekler[q.dogru]}</span></b>
                 <p><Metin metin={q.cozum} /></p>
-                <small>Ders sunumu · s. {q.sayfa.join(', ')}{aciklanan.length < 5 ? ' · Diğer seçeneklerin açıklamasını dinlemek için üzerine dokun.' : ''}</small>
+                <small>{q.sayfa.length > 0 ? `Ders sunumu · s. ${q.sayfa.join(', ')}` : ''}{q.sayfa.length > 0 && aciklanan.length < 5 ? ' · ' : ''}{aciklanan.length < 5 ? 'Diğer seçeneklerin açıklamasını dinlemek için üzerine dokun.' : ''}</small>
               </div>
             )}
 

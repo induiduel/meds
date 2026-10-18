@@ -126,6 +126,7 @@ const KazanimlarView = React.lazy(() => wrapLazy(import('./components/Kazanimlar
 const DiseasesView = React.lazy(() => wrapLazy(import('./components/diseases/DiseasesView').then(m => ({ default: m.DiseasesView }))));
 const SaglikView = React.lazy(() => wrapLazy(import('./components/saglik/SaglikView').then(m => ({ default: m.SaglikView }))));
 const CanliDersView = React.lazy(() => wrapLazy(import('./components/canliDers/CanliDersView')));
+const SinavCalismaView = React.lazy(() => wrapLazy(import('./components/SinavCalismaView').then(m => ({ default: m.SinavCalismaView }))));
 
 // Lazy-loaded Modals (Only downloaded when opened)
 const AdminPanelModal = React.lazy(() => wrapLazy(import('./components/AdminPanelModal').then(m => ({ default: m.AdminPanelModal }))));
@@ -1802,6 +1803,13 @@ export default function App() {
               initialKazanimNo={selectedOrnekKazanimNo}
               initialQuestionId={ornekQuestionId}
             />
+          </Suspense>
+        )}
+
+        {/* TAB: /sinav-calisma — Tüm kazanımlar ve sesli sınav asistanı */}
+        {activeTab === 'sinav_calisma' && (
+          <Suspense fallback={<ViewFallback />}>
+            <SinavCalismaView />
           </Suspense>
         )}
 

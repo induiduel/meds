@@ -1,0 +1,550 @@
+/**
+ * Sınav spotları — Sesli Asistan ve Soru Çözücü süre özeti ve tam liste diyalog stilleri (.cd-sure, .cd-sl, .cd-dlg uyumlu)
+ */
+
+/* Süre Özeti Kartı */
+.sp-sure {
+  border: 1px solid var(--color-line);
+  border-radius: 14px;
+  background: var(--color-surface, var(--color-white));
+  overflow: hidden;
+  margin-bottom: 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+}
+
+.sp-sure-bas {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+  padding: 12px 16px;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  flex-wrap: wrap;
+  transition: background-color 0.15s ease;
+}
+
+.sp-sure-bas:hover {
+  background: var(--color-canvas);
+}
+
+.sp-sure-bas:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: -2px;
+}
+
+.sp-sure-ikon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: var(--color-accent-soft);
+  color: var(--color-accent);
+  flex-shrink: 0;
+}
+
+.sp-sure-ikon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.sp-sure-ana {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  margin-right: auto;
+}
+
+.sp-sure-ana small,
+.sp-sure-kutu small {
+  font-size: 11.5px;
+  color: var(--color-ink-3);
+}
+
+.sp-sure-ana small {
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.sp-sure-ana b {
+  font-size: 22px;
+  font-weight: 750;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.15;
+  color: var(--color-ink);
+}
+
+.sp-sure-kutu {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1px;
+  padding-left: 14px;
+  border-left: 1px solid var(--color-line);
+}
+
+.sp-sure-kutu b {
+  font-size: 15px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  color: var(--color-ink);
+}
+
+.sp-sure-ac {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--color-ink-2);
+  margin-left: 4px;
+}
+
+.sp-sure-ac svg {
+  width: 15px;
+  height: 15px;
+  transition: transform 0.2s ease;
+}
+
+.sp-sure.is-kapali .sp-sure-ok {
+  transform: rotate(-90deg);
+}
+
+.sp-sure-liste {
+  list-style: none;
+  margin: 0;
+  padding: 6px 12px 12px;
+  border-top: 1px solid var(--color-line);
+  display: grid;
+  gap: 4px;
+}
+
+.sp-sure-liste button {
+  display: grid;
+  grid-template-columns: minmax(110px, 160px) minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+  padding: 8px 10px;
+  border: 0;
+  border-radius: 9px;
+  background: none;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 0.12s ease;
+}
+
+.sp-sure-liste button:hover {
+  background: var(--color-canvas);
+}
+
+.sp-sure-liste button.is-on {
+  background: var(--color-accent-soft);
+}
+
+.sp-sure-ad {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.sp-sure-ad b {
+  font-size: 13.5px;
+  font-weight: 650;
+  color: var(--color-ink);
+}
+
+.sp-sure-ad small {
+  font-size: 11px;
+  color: var(--color-ink-3);
+}
+
+.sp-sure-cubuk {
+  height: 8px;
+  border-radius: 99px;
+  background: var(--color-field, rgba(0, 0, 0, 0.06));
+  overflow: hidden;
+}
+
+.sp-sure-cubuk i {
+  display: block;
+  height: 100%;
+  border-radius: 99px;
+  background: color-mix(in srgb, var(--color-accent) 35%, transparent);
+}
+
+.sp-sure-cubuk em {
+  display: block;
+  height: 100%;
+  border-radius: 99px;
+  background: var(--color-accent);
+}
+
+.sp-sure-deger {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 1px;
+  white-space: nowrap;
+}
+
+.sp-sure-deger b {
+  font-size: 13.5px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  color: var(--color-ink);
+}
+
+.sp-sure-deger small {
+  font-size: 11px;
+  color: var(--color-ink-3);
+  font-variant-numeric: tabular-nums;
+}
+
+.sp-sure-tumu {
+  display: flex !important;
+  grid-template-columns: none !important;
+  justify-content: center;
+  align-items: center;
+  gap: 6px !important;
+  margin-top: 6px;
+  padding: 8px 12px !important;
+  color: var(--color-accent) !important;
+  font-weight: 650;
+  font-size: 13px;
+  border-radius: 8px;
+}
+
+.sp-sure-tumu svg {
+  width: 15px;
+  height: 15px;
+}
+
+@media (max-width: 640px) {
+  .sp-sure-bas {
+    gap: 10px 12px;
+  }
+  .sp-sure-ana {
+    flex-basis: calc(100% - 60px);
+  }
+  .sp-sure-kutu:first-of-type {
+    border-left: 0;
+    padding-left: 0;
+  }
+  .sp-sure-ac {
+    margin-left: auto;
+  }
+  .sp-sure-liste button {
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 4px 10px;
+  }
+  .sp-sure-cubuk {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+}
+
+/* Modal ve Tam Liste Görünümü */
+.sp-dlg {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(4px);
+  padding: 16px;
+  animation: sp-fade-in 0.15s ease-out;
+}
+
+.sp-dlg-kart {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 820px;
+  max-height: 90vh;
+  border-radius: 18px;
+  background: var(--color-surface, var(--color-white));
+  border: 1px solid var(--color-line);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.18);
+  overflow: hidden;
+  animation: sp-scale-in 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.sp-dlg-bas {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--color-line);
+  background: var(--color-surface, var(--color-white));
+}
+
+.sp-dlg-baslik {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 17px;
+  font-weight: 750;
+  color: var(--color-ink);
+}
+
+.sp-dlg-baslik svg {
+  width: 20px;
+  height: 20px;
+  color: var(--color-accent);
+}
+
+.sp-dlg-kapat {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  border: 0;
+  background: none;
+  color: var(--color-ink-2);
+  cursor: pointer;
+  transition: all 0.12s ease;
+}
+
+.sp-dlg-kapat:hover {
+  background: var(--color-canvas);
+  color: var(--color-ink);
+}
+
+.sp-dlg-govde {
+  overflow-y: auto;
+  padding: 16px 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Tam Liste Bileşenleri (.cd-sl ile tam uyumlu) */
+.sp-sl {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.sp-sl-toplam {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 20px;
+  padding: 16px 18px;
+  border: 1px solid var(--color-accent);
+  border-radius: 14px;
+  background: var(--color-accent-soft);
+}
+
+.sp-sl-toplam > div {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-right: auto;
+}
+
+.sp-sl-toplam small {
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+.sp-sl-toplam b {
+  font-size: 26px;
+  font-weight: 750;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.1;
+  color: var(--color-ink);
+}
+
+.sp-sl-toplam > div > span {
+  font-size: 13px;
+  color: var(--color-ink-2);
+}
+
+.sp-sl-toplam ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.sp-sl-toplam a {
+  display: inline-flex;
+  gap: 6px;
+  align-items: baseline;
+  padding: 5px 11px;
+  border-radius: 999px;
+  background: var(--color-white);
+  border: 1px solid var(--color-line);
+  color: var(--color-ink);
+  text-decoration: none;
+  font-size: 12.5px;
+  transition: all 0.12s ease;
+}
+
+.sp-sl-toplam a:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+  transform: translateY(-1px);
+}
+
+.sp-sl-toplam a b {
+  font-size: 12.5px;
+  font-weight: 650;
+}
+
+.sp-sl-toplam a span {
+  color: var(--color-ink-3);
+  font-variant-numeric: tabular-nums;
+}
+
+.sp-sl-grup {
+  border: 1px solid var(--color-line);
+  border-radius: 14px;
+  overflow: hidden;
+  background: var(--color-surface, var(--color-white));
+  scroll-margin-top: 20px;
+}
+
+.sp-sl-grup h2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 6px 12px;
+  margin: 0;
+  padding: 12px 16px;
+  font-size: 15px;
+  font-weight: 700;
+  border-bottom: 1px solid var(--color-line);
+  background: var(--color-canvas, rgba(0, 0, 0, 0.02));
+}
+
+.sp-sl-grup h2 small {
+  font-weight: 500;
+  color: var(--color-ink-3);
+}
+
+.sp-sl-ara {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--color-ink-2);
+  font-variant-numeric: tabular-nums;
+}
+
+.sp-sl-tablo {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13.5px;
+}
+
+.sp-sl-tablo th,
+.sp-sl-tablo td {
+  padding: 8px 14px;
+  text-align: left;
+  vertical-align: middle;
+  border-bottom: 1px solid var(--color-line-soft, var(--color-line));
+}
+
+.sp-sl-tablo thead th {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-ink-3);
+  padding-block: 7px;
+  background: var(--color-surface, var(--color-white));
+}
+
+.sp-sl-tablo thead th:last-child,
+.sp-sl-sure {
+  text-align: right !important;
+  white-space: nowrap;
+}
+
+.sp-sl-tablo tbody tr:hover {
+  background: var(--color-canvas);
+}
+
+.sp-sl-tablo button.sp-sl-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: 0;
+  padding: 0;
+  font: inherit;
+  font-weight: 550;
+  color: var(--color-ink);
+  cursor: pointer;
+  text-align: left;
+}
+
+.sp-sl-tablo button.sp-sl-link:hover {
+  color: var(--color-accent);
+  text-decoration: underline;
+}
+
+.sp-sl-no {
+  width: 1%;
+  color: var(--color-ink-3);
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+}
+
+.sp-sl-sure b {
+  display: block;
+  font-variant-numeric: tabular-nums;
+  font-weight: 650;
+  color: var(--color-ink);
+}
+
+.sp-sl-sure small {
+  font-size: 11px;
+  color: var(--color-ink-3);
+  font-variant-numeric: tabular-nums;
+}
+
+.sp-sl-tablo tfoot th,
+.sp-sl-tablo tfoot td {
+  border-bottom: 0;
+  background: var(--color-canvas);
+  font-weight: 700;
+}
+
+.sp-sl-not {
+  margin: 0;
+  font-size: 12px;
+  color: var(--color-ink-3);
+  line-height: 1.5;
+}
+
+@keyframes sp-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes sp-scale-in {
+  from { opacity: 0; transform: scale(0.96) translateY(4px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}

@@ -23,7 +23,7 @@ export interface CDers {
   /** varsayılan dışındaki seslerin klipleri */
   klipSes?: Record<string, Record<string, Klip>>;
 }
-export interface CDizinDers { kod: string; no: number; baslik: string; soru: number; ornek?: number; benzer?: number; cikmis?: number; ses: boolean; set?: number; setSay?: number; sayfa?: [number, number] }
+export interface CDizinDers { kod: string; no: number; baslik: string; soru: number; ornek?: number; benzer?: number; cikmis?: number; ses: boolean; set?: number; setSay?: number; sayfa?: [number, number]; sure?: number }
 export interface SesTanim { id: string; ad: string; varsayilan?: boolean }
 export interface CDizin {
   surum: string; ortak: Record<string, { v: string; sure: number }>; dersler: CDizinDers[];

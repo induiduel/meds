@@ -1,10 +1,11 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 10,
-  "baslik": "Ders Asistanı Alt Kontrol Çubuğu Tek Hat Düzenlemesi",
+  "onem": 11,
+  "baslik": "Kazanım Sınav Çalışması, Sesli Çözücü & Asistan Süreleri",
   "maddeler": [
-    "Ders asistanında alt oynatıcı çubuğundaki oynatma kontrolleri ve ayar butonları (soru yoğunluğu, hız, otomatik geç) tek bir yatay hatta hizalandı.",
-    "Kontrollerin 2 ayrı satıra kırılarak dikey alan kaplaması önlendi, tüm ekran boyutlarında tek satır kompakt dock görünümü sağlandı.",
-    "Oynatma butonları ile ayarlar arasına görsel ayraç eklenerek kontroller daha düzenli hale getirildi."
+    "Kurul 1'deki 7 branş ve 65 konunun 715 kazanımının tamamı (%100) en az 2 orta zorlukta soru, konu anlatımı ve EMA seslendirme altyapısıyla sisteme entegre edildi.",
+    "Yeni /sinav-calisma sayfası yayına alındı: Konu bazlı hafif yükleme (code-splitting), anlık arama, zorluk filtreleri, soru kartları ve cihazlar arası ilerleme eşitlemesi.",
+    "Kazanım soruları EMA sesli çözücü asistanı ile çözülebilir kılındı; sesli konu özetleri, şık ve ipucu açıklamaları entegre edildi.",
+    "Sınav spotları için sesli sınav asistanı ders süreleri özeti ve ders gezgini süre gösterimi eklendi."
   ]
 }

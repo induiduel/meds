@@ -1,6 +1,6 @@
 import React, { useCallback, useDeferredValue, useEffect, useMemo, useRef, useState } from 'react';
 import {
-  Check, ChevronDown, ChevronLeft, ChevronRight, ChevronsDownUp, ChevronsUpDown, Download, Eye, EyeOff, HelpCircle,
+  Check, ChevronDown, ChevronLeft, ChevronRight, ChevronsDownUp, ChevronsUpDown, Clock, Download, Eye, EyeOff, HelpCircle,
   Headphones, Info, Keyboard, ListFilter, Search, Star, X,
 } from 'lucide-react';
 import { Sheet } from '../ui/Sheet';
@@ -14,6 +14,9 @@ import type { EkranKapsami } from './onem/OnemPdfPenceresi';
 import { asistanDersVar, asistanDersleri } from './asistan/asistanVeri';
 import { cozucuDizinYukle } from './cozucu/cozucuVeri';
 import { bransTanim, type Brans, type BransTanim } from './brans';
+import { getAsistanSureGruplari, dk } from './sure/spotsSureVeri';
+import { SpotsSureOzeti } from './sure/SpotsSureOzeti';
+import { SpotsSureDiyalog } from './sure/SpotsSureDiyalog';
 import '../../styles/onem-listesi.css';
 
 const OnemPdfPenceresi = React.lazy(() => import('./onem/OnemPdfPenceresi'));
@@ -70,7 +73,7 @@ const BantCubugu: React.FC<{ bant?: Record<string, number>; secili?: Set<number>
 };
 
 /** Ders gezgini: özel görünümler + 33 ders (ilerleme, puan dağılımı); geniş ekranda raylı, dar ekranda sayfada */
-const DersGezgini: React.FC<{ dizin: Dizin; kod: string; ogrSay: Record<string, number>; onSec: (k: string) => void; sayfada?: boolean; bt: BransTanim; aday: boolean }> = ({ dizin, kod, ogrSay, onSec, sayfada, bt, aday }) => {
+const DersGezgini: React.FC<{ dizin: Dizin; kod: string; ogrSay: Record<string, number>; onSec: (k: string) => void; sayfada?: boolean; bt: BransTanim; aday: boolean; sureHaritasi?: Map<string, number> }> = ({ dizin, kod, ogrSay, onSec, sayfada, bt, aday, sureHaritasi }) => {
   const [q, setQ] = useState('');
   const t = kucuk(q.trim());
   const dersler = t ? dizin.dersler.filter((d) => kucuk(`${d.no} ${d.baslik}`).includes(t)) : dizin.dersler;
@@ -109,6 +112,7 @@ const DersGezgini: React.FC<{ dizin: Dizin; kod: string; ogrSay: Record<string, 
         {dersler.map((d) => {
           const o = ogrSay[d.kod] || 0;
           const on = kod === d.kod;
+          const asistanSure = sureHaritasi?.get(d.kod);
           return (
             <button key={d.kod} ref={on ? aktifRef : undefined} type="button" className={`on-gez-d${on ? ' is-on' : ''}${o >= d.madde ? ' is-tam' : ''}`}
               onClick={() => onSec(d.kod)} aria-current={on ? 'page' : undefined}>
@@ -117,7 +121,7 @@ const DersGezgini: React.FC<{ dizin: Dizin; kod: string; ogrSay: Record<string, 
                 <b>{d.baslik}</b>
                 <span className="on-gez-m">
                   <BantCubugu bant={d.bant} ince />
-                  <small>{o ? `${o}/${d.madde}` : `${d.madde} madde`}</small>
+                  <small>{o ? `${o}/${d.madde}` : `${d.madde} madde`}{asistanSure ? ` · ~${dk(asistanSure)} dk` : ''}</small>
                 </span>
               </span>
             </button>
@@ -183,6 +187,7 @@ export const OnemListesi: React.FC<{ brans?: Brans }> = ({ brans = 'patoloji' })
   const [gezAcik, setGezAcik] = useState(false);
   const [pdfAcik, setPdfAcik] = useState(false);
   const [asistan, setAsistan] = useState<string | null>(() => (urlOku('asistan') ? urlOku('ders') || null : null));
+  const [sureAcik, setSureAcik] = useState(() => location.hash === '#sureler');
   const [kisayolAcik, setKisayolAcik] = useState(false);
   const [aktifPart, setAktifPart] = useState<number | null>(null);
   const [ozetAcik, setOzetAcik] = useState(false);
@@ -190,6 +195,18 @@ export const OnemListesi: React.FC<{ brans?: Brans }> = ({ brans = 'patoloji' })
   const hedefRef = useRef<string | null>(urlOku('m'));
   const ogr = useOgrenilen();
   const cokDers = kod === HEPSI || kod === ADAY;
+  const asistanSureGruplari = useMemo(() => getAsistanSureGruplari(), []);
+  const asistanSureHaritasi = useMemo(() => {
+    const m = new Map<string, number>();
+    asistanSureGruplari.forEach((g) => g.dersler.forEach((d) => m.set(d.kod, d.sure)));
+    return m;
+  }, [asistanSureGruplari]);
+
+  useEffect(() => {
+    const f = () => { if (location.hash === '#sureler') setSureAcik(true); };
+    window.addEventListener('popstate', f);
+    return () => window.removeEventListener('popstate', f);
+  }, []);
 
   useEffect(() => {
     let canli = true;
@@ -424,6 +441,11 @@ export const OnemListesi: React.FC<{ brans?: Brans }> = ({ brans = 'patoloji' })
         </div>
         <div className="on-sayfa-btn">
           {asistanVar && (
+            <button type="button" className="on-btn" onClick={() => setSureAcik(true)} title="Sesli asistan ders süreleri">
+              <Clock aria-hidden />Asistan süreleri
+            </button>
+          )}
+          {asistanVar && (
             <button type="button" className="on-btn is-asistan" onClick={() => asistanAc(!cokDers && asistanDersVar(kod) ? kod : asistanDersleri(brans).sort()[0])}>
               <Headphones aria-hidden />Sesli asistan
             </button>
@@ -432,9 +454,28 @@ export const OnemListesi: React.FC<{ brans?: Brans }> = ({ brans = 'patoloji' })
         </div>
       </div>
 
+      {asistanVar && (
+        <SpotsSureOzeti
+          baslik="Sesli Sınav Asistanı Anlatım Süresi"
+          gruplar={asistanSureGruplari}
+          seciliBrans={brans}
+          onSecBrans={(b) => {
+            if (b !== 'tum' && b !== brans) {
+              const u = new URL(location.href);
+              u.searchParams.set('brans', b);
+              history.pushState(history.state, '', u.pathname + u.search + u.hash);
+              window.dispatchEvent(new PopStateEvent('popstate'));
+            }
+          }}
+          onTamListe={() => setSureAcik(true)}
+          birimAd="ders"
+          tercihKey="medsoru_asistan_sure_acik"
+        />
+      )}
+
       <div className="on-yerlesim">
         <aside className="on-rail">
-          <DersGezgini dizin={dizin} kod={kod} ogrSay={ogrSay} onSec={(k) => dersSec(k)} bt={bt} aday={bt.sinavKurali} />
+          <DersGezgini dizin={dizin} kod={kod} ogrSay={ogrSay} onSec={(k) => dersSec(k)} bt={bt} aday={bt.sinavKurali} sureHaritasi={asistanSureHaritasi} />
         </aside>
 
         <div className="on-ana">
@@ -484,7 +525,10 @@ export const OnemListesi: React.FC<{ brans?: Brans }> = ({ brans = 'patoloji' })
             {!cokDers && bt.asistan && asistanDersVar(kod) && (
               <button type="button" className="on-hero-asistan" onClick={() => asistanAc(kod)}>
                 <span className="on-hero-asistan-i"><Headphones aria-hidden /></span>
-                <span><b>Sesli sınav asistanıyla çalış</b><small>En önemli noktaları kısaca anlatır, soru sorar, yanlışını açıklar · tam ekran</small></span>
+                <span>
+                  <b>Sesli sınav asistanıyla çalış{asistanSureHaritasi.get(kod) ? ` (~${dk(asistanSureHaritasi.get(kod)!)} dk)` : ''}</b>
+                  <small>En önemli noktaları kısaca anlatır, soru sorar, yanlışını açıklar · tam ekran</small>
+                </span>
                 <ChevronRight aria-hidden />
               </button>
             )}
@@ -698,8 +742,34 @@ export const OnemListesi: React.FC<{ brans?: Brans }> = ({ brans = 'patoloji' })
 
 
       <Sheet open={gezAcik} onClose={() => setGezAcik(false)} title="Ders seç" subtitle={`${toplamOgr}/${toplam} madde öğrenildi`} size="full" width={520}>
-        <DersGezgini dizin={dizin} kod={kod} ogrSay={ogrSay} onSec={(k) => dersSec(k)} sayfada bt={bt} aday={bt.sinavKurali} />
+        <DersGezgini dizin={dizin} kod={kod} ogrSay={ogrSay} onSec={(k) => dersSec(k)} sayfada bt={bt} aday={bt.sinavKurali} sureHaritasi={asistanSureHaritasi} />
       </Sheet>
+      {sureAcik && asistanVar && (
+        <SpotsSureDiyalog
+          baslik="Sesli sınav asistanı ders süreleri"
+          gruplar={asistanSureGruplari}
+          onKapat={() => {
+            setSureAcik(false);
+            if (location.hash === '#sureler') {
+              history.replaceState(history.state, '', location.pathname + location.search);
+            }
+          }}
+          onDersAc={(b, k) => {
+            if (b !== brans) {
+              const u = new URL(location.href);
+              u.searchParams.set('brans', b);
+              u.searchParams.set('asistan', '1');
+              u.searchParams.set('ders', k);
+              history.pushState(history.state, '', u.pathname + u.search + u.hash);
+              window.dispatchEvent(new PopStateEvent('popstate'));
+            } else {
+              asistanAc(k);
+            }
+          }}
+          birimAd="ders"
+          not="Süreler EMA seslendirmesine göredir. Asistan anlatımı ve soru pekiştirmelerini içerir."
+        />
+      )}
       {asistan && bt.asistan && (
         <React.Suspense fallback={null}>
           <PatolojiAsistan kod={asistan} onClose={() => { setAsistan(null); urlYaz({ asistan: null }); }} onDersDegis={(k) => { if (!cokDers) setKod(k); }} />

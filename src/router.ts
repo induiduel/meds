@@ -49,7 +49,8 @@ export type AppRoute =
   | 'health_ministry'
   | 'canli_ders'
   | 'settings'
-  | 'stats';
+  | 'stats'
+  | 'sinav_calisma';
 
 export const ROUTE_PATHS: Record<AppRoute, string> = {
   quick_add: '/',
@@ -83,6 +84,7 @@ export const ROUTE_PATHS: Record<AppRoute, string> = {
   canli_ders: '/canliders',
   settings: '/ayarlar',
   stats: '/istatistik',
+  sinav_calisma: '/sinav-calisma',
 };
 
 export const ROUTE_TITLES: Record<AppRoute, string> = {
@@ -117,6 +119,7 @@ export const ROUTE_TITLES: Record<AppRoute, string> = {
   search: 'Arama',
   settings: 'Profil ve ayarlar',
   stats: 'İstatistiklerim',
+  sinav_calisma: 'Sınav Çalışması',
 };
 
 const BY_SEGMENT: Record<string, AppRoute> = Object.fromEntries(
@@ -192,6 +195,11 @@ const ALIASES: Record<string, AppRoute> = {
   'canlı-ders': 'canli_ders',
   'canlıders': 'canli_ders',
   'sesli-ders': 'canli_ders',
+  'sinav-calisma': 'sinav_calisma',
+  sinav_calisma: 'sinav_calisma',
+  sinav: 'sinav_calisma',
+  'sinav-hazirlik': 'sinav_calisma',
+  'soru-kampi': 'sinav_calisma',
 };
 
 export interface ParsedRoute {
