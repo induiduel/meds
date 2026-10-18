@@ -15,6 +15,7 @@ const P = {
   metin: (k: string) => path.join(KOK, 'metin', `${k}.md`),
   ses: (k: string, v: string) => path.join(KOK, 'ses', k, `${v}.mp3`),
   hizalama: (k: string) => path.join(KOK, 'hizalama', `${k}.json`),
+  vurgu: (k: string) => path.join(KOK, 'vurgu', `${k}.json`),
 };
 
 interface Ders { key: string; no: number; baslik: string; sira: number }
@@ -189,6 +190,8 @@ export function registerCanliDersRoutes(app: Express) {
         zamanlama: Array.isArray(v.zamanlama) && v.zamanlama.length === pars.length ? v.zamanlama : null,
       })),
       pdf,
+      // önemli cümle/terim aralıkları (scripts/sesli_anlatim/vurgu_uret.py): { "<i>": [[bas, son, "c"|"t", onem]] }
+      vurgu: oku<any>(P.vurgu(key), null)?.p || null,
     });
   });
 }

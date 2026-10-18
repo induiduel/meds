@@ -2,6 +2,7 @@ import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { createPortal } from 'react-dom';
 import {
   BookOpenText, Check, ChevronDown, ChevronLeft, ChevronRight, Headphones, LifeBuoy, ListChecks, Maximize2, Minimize2, Minus, Pause, Play, Plus, RotateCcw, Settings2, SkipBack, SkipForward, Star, Volume2, X,
+  Strikethrough,
 } from 'lucide-react';
 import { getCustomApiUrl } from '../../../services/api';
 import { lockScroll, unlockScroll } from '../../../utils/scrollLock';
@@ -108,6 +109,8 @@ export const PatolojiAsistan: React.FC<{ kod: string; onClose: () => void; onDer
   const [engel, setEngel] = useState(false);
   // soru durumu
   const [elenen, setElenen] = useState<string[]>([]);
+  const [cizili, setCizili] = useState<string[]>([]); // kullanıcının yalnız görsel olarak üstünü çizdiği şıklar
+  const ciz = (h: string) => setCizili((c) => c.includes(h) ? c.filter((x) => x !== h) : [...c, h]);
   const [secim, setSecim] = useState<string | null>(null);
   const [cozuldu, setCozuldu] = useState<'dogru' | 'goster' | null>(null);
   const [yardim, setYardim] = useState(false);
@@ -334,7 +337,7 @@ export const PatolojiAsistan: React.FC<{ kod: string; onClose: () => void; onDer
   useEffect(() => {
     if (otoRef.current) { window.clearTimeout(otoRef.current); otoRef.current = null; }
     if (!ders || !s || devamSor) return;
-    setElenen([]); setSecim(null); setCozuldu(null); setYardim(false);
+    setElenen([]); setCizili([]); setSecim(null); setCozuldu(null); setYardim(false);
     kokRef.current?.scrollTo({ top: 0, behavior: azHareket() ? 'auto' : 'smooth' });
     sahneSesi(s);
   }, [i, ders, sahneler, devamSor]); // eslint-disable-line react-hooks/exhaustive-deps
@@ -709,13 +712,20 @@ export const PatolojiAsistan: React.FC<{ kod: string; onClose: () => void; onDer
                   <div className="pa-siklar" role="group" aria-label="Şıklar">
                     {Object.entries(q.secenekler).map(([h, v], n) => {
                       const durum = cozuldu && h === q.dogru ? ' is-dogru' : elenen.includes(h) ? ' is-yanlis' : cozuldu ? ' is-sonuk' : '';
+                      const cizik = !cozuldu && !elenen.includes(h) && cizili.includes(h);
                       return (
-                        <button key={h} type="button" className={`pa-sik${durum}${secim === h ? ' is-secili' : ''}${yardimAktif === h ? ' is-yardim' : ''}`} disabled={!!cozuldu || elenen.includes(h)} onClick={() => cevapla(h)}
+                        <div key={h} className="sik-sar">
+                        <button type="button" className={`pa-sik${durum}${cizik ? ' is-cizili' : ''}${secim === h ? ' is-secili' : ''}${yardimAktif === h ? ' is-yardim' : ''}`} disabled={!!cozuldu || elenen.includes(h)} onClick={() => cevapla(h)}
                           aria-label={`${h} şıkkı: ${v}`}>
                           <b>{h}</b><span>{v}</span><kbd aria-hidden>{n + 1}</kbd>
                           {cozuldu && h === q.dogru && <Check className="pa-sik-i" aria-hidden />}
                           {elenen.includes(h) && <X className="pa-sik-i" aria-hidden />}
                         </button>
+                        {!cozuldu && !elenen.includes(h) && (
+                          <button type="button" className={`sik-ciz${cizik ? ' is-on' : ''}`} onClick={() => ciz(h)} aria-pressed={cizik}
+                            aria-label={cizik ? `${h} şıkkının üstündeki çizgiyi kaldır` : `${h} şıkkını kendin ele (üstünü çiz)`} title={cizik ? 'Çizgiyi kaldır' : 'Şıkkı ele'}><Strikethrough aria-hidden /></button>
+                        )}
+                        </div>
                       );
                     })}
                   </div>

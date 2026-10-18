@@ -3,7 +3,7 @@ import { startLearnTour } from '../../onboarding/learnTourState';
 import { useLiveEvent } from '../../../hooks/useLiveEvent';
 import { observeScrollReveal } from '../../../utils/scrollReveal';
 import { DeckNotePanel } from './DeckNotePanel';
-import { onSpeakingChange, speak, stopSpeaking } from '../../../utils/tts';
+import { onSpeakingChange, speak, speakOgrenStep, stopSpeaking } from '../../../utils/tts';
 import {
   BookOpen,
   Check,
@@ -101,6 +101,8 @@ import { recordResult } from '../../../services/learnReview';
 import { tekrarTamamlandi, useKonuSayaci, useSoruSayaci } from '../../../services/calismaTakip';
 import { ogrenTakipId } from '../../takip/ogrenTakipId';
 import type { IxResult } from './lessonModel';
+import { MetinAktarMenu } from '../../MetinAktarMenu';
+import type { AktarBelge } from '../../../services/metinDisaAktar';
 
 type Layout = 'A' | 'B';
 
@@ -204,8 +206,8 @@ const isTyping = (t: EventTarget | null) => {
 /* ---------------------------------------------------------------------------
  * Adım içeriği (başlık + anlatım + tablo); kalem ve çizim katmanları bu kutuya bağlı
  * ------------------------------------------------------------------------- */
-// Adımı Edge "Emel" sesiyle okur: başlık, anlatım, (anlatım yoksa) anahtar maddeler.
-const ListenButton: React.FC<{ step: LessonStep }> = ({ step }) => {
+// Adımı EMA sesiyle okur (öncelikle statik EMA mp3 dosyası, yoksa fallback): başlık, anlatım, (anlatım yoksa) anahtar maddeler.
+const ListenButton: React.FC<{ step: LessonStep; deckId?: string }> = ({ step, deckId }) => {
   const [on, setOn] = useState(false);
   useEffect(() => onSpeakingChange(setOn), []);
   useEffect(() => () => stopSpeaking(), [step.number]);
@@ -218,13 +220,19 @@ const ListenButton: React.FC<{ step: LessonStep }> = ({ step }) => {
       .replace(/^\s*[-*•]\s+/gm, '');
   };
   return (
-    <button type="button" className={`ls-tag ${on ? 'is-accent' : 'is-plain'}`} onClick={() => (on ? stopSpeaking() : speak(text()))} aria-pressed={on} title={on ? 'Okumayı durdur' : 'Bu adımı sesli dinle'}>
+    <button
+      type="button"
+      className={`ls-tag ${on ? 'is-accent' : 'is-plain'}`}
+      onClick={() => (on ? stopSpeaking() : deckId ? speakOgrenStep(deckId, step.number, text()) : speak(text()))}
+      aria-pressed={on}
+      title={on ? 'Okumayı durdur' : 'Bu adımı sesli dinle (EMA)'}
+    >
       {on ? '■ Durdur' : '▶ Dinle'}
     </button>
   );
 };
 
-const StepHead: React.FC<{ step: LessonStep; total: number; sectionName?: string }> = ({ step, total, sectionName }) => {
+const StepHead: React.FC<{ step: LessonStep; total: number; sectionName?: string; deckId?: string }> = ({ step, total, sectionName, deckId }) => {
   // v12 (canvas LearnPlayer): üstte sade künye satırı (bölüm · adım), bayrak başlığın yanında
   const v12 = useAppearance().design === 'v12';
   if (v12) {
@@ -236,7 +244,7 @@ const StepHead: React.FC<{ step: LessonStep; total: number; sectionName?: string
           {step.game && <span className="ls-tag is-ai">Ders sonu oyunları</span>}
           {step.badge && !step.checkpoint && !step.game && <span className="ls-tag is-plain">{step.badge}</span>}
           {step.questions.length > 0 && <span className="ls-tag is-warn">{step.questions.length} soru</span>}
-          <ListenButton step={step} />
+          <ListenButton step={step} deckId={deckId} />
         </div>
         <div className="x12-title-row">
           <h1 className="ls-title"><span>{step.title}</span></h1>
@@ -256,7 +264,7 @@ const StepHead: React.FC<{ step: LessonStep; total: number; sectionName?: string
         {step.game && <span className="ls-tag is-ok">Ders sonu oyunları</span>}
         {step.badge && !step.checkpoint && !step.game && <span className="ls-tag is-plain">{step.badge}</span>}
         {step.questions.length > 0 && <span className="ls-tag is-warn">{step.questions.length} soru</span>}
-        <ListenButton step={step} />
+        <ListenButton step={step} deckId={deckId} />
         <FeedbackFlag target={fbTarget(step, 'text', 0, 'Anlatım', step.title, 'Ana içerik › Başlık ve anlatım')} className="ls-head-flag" />
       </div>
       <h1 className="ls-title"><span>{step.title}</span></h1>
@@ -384,6 +392,19 @@ export interface LessonPlayerProps {
   onSwitchVersion?: (id: string) => void;
   /** Hata defterini (bu deste) tekrar ekranında aç */
   onOpenReview?: (deckId: string) => void;
+}
+
+/** Ders metni (her adımın başlığı, alt başlığı ve anlatımı birebir) → dışa aktarma belgesi */
+function ogrenAktarBelgesi(deck: InteractiveDeck): AktarBelge {
+  const ust = [deck.discipline, deck.instructor].filter(Boolean).join(' · ');
+  return {
+    baslik: deckName(deck),
+    alt: `${ust ? `${ust} · ` : ''}Etkileşimli ders metni`,
+    bolumler: (deck.slides || [])
+      .map((sl: any) => ({ sl, md: String(sl.synthesisNarrative || sl.content || '').trim() }))
+      .filter((x) => x.md)
+      .map(({ sl, md }) => ({ baslik: `${sl.slideNumber}. ${String(sl.title || '').replace(/^\[[^\]]+\]\s*/, '')}`, alt: sl.subtitle || undefined, md })),
+  };
 }
 
 export const LessonPlayer: React.FC<LessonPlayerProps> = ({ deck, startAt, initialViewMode = 'interactive', onProgress, onClose, onExportPdf, focus, onClearFocus, versions, onSwitchVersion, onOpenReview }) => {
@@ -1009,6 +1030,7 @@ export const LessonPlayer: React.FC<LessonPlayerProps> = ({ deck, startAt, initi
               <FileDown aria-hidden /><span>PDF yap</span>
             </button>
           )}
+          <MetinAktarMenu dugmeSinif="ls-tt" etiket="Ders metnini dışa aktar" dosyaAdi={deckName(deck)} belge={() => ogrenAktarBelgesi(deck)} />
           <button type="button" role="menuitem" className="ls-tt" onClick={() => pickTool(() => startLearnTour('lesson'))} title="Ders ekranı ve etkileşim türleri turu">
             <Compass aria-hidden /><span>Nasıl kullanılır?</span>
           </button>
@@ -1439,7 +1461,7 @@ export const LessonPlayer: React.FC<LessonPlayerProps> = ({ deck, startAt, initi
   const StudioArticle = (s: LessonStep) => (
     <div className="x12-studio">
       <div className="x12-studio-l">
-        <StepHead step={s} total={n} sectionName={sections[s.section]?.name} />
+        <StepHead step={s} total={n} sectionName={sections[s.section]?.name} deckId={deck.id} />
         <StepBody step={s} deckId={deck.id} />
         <StepSocial step={s} />
       </div>
@@ -1454,7 +1476,7 @@ export const LessonPlayer: React.FC<LessonPlayerProps> = ({ deck, startAt, initi
 
   const FlowArticle = (s: LessonStep, withPractice: boolean) => (
     <>
-      <StepHead step={s} total={n} sectionName={v12 ? sections[s.section]?.name : undefined} />
+      <StepHead step={s} total={n} sectionName={v12 ? sections[s.section]?.name : undefined} deckId={deck.id} />
       <StepBody step={s} deckId={deck.id} />
       <StepSocial step={s} />
       {withPractice && <PracticeSet step={s} items={s.index === index ? practice : practiceOf(s)} jump={s.index === index ? practiceJump : null} onAllDone={() => markDone(s.number)} onResult={(i, item, r) => recordIx(s, i, item, r)} />}
@@ -1522,7 +1544,7 @@ export const LessonPlayer: React.FC<LessonPlayerProps> = ({ deck, startAt, initi
       <div className="ls-B">
         <div className="ls-B-stage">
           <article className={`ls-B-card ${dir > 0 ? 'ls-enter-r' : 'ls-enter-l'}`} key={index}>
-            <div className="ls-B-head"><StepHead step={step} total={n} /></div>
+            <div className="ls-B-head"><StepHead step={step} total={n} deckId={deck.id} /></div>
             <div className="ls-B-body" ref={mainRef} onTouchStart={onTouchStart} onTouchEnd={onTouchEnd}>
               <StepBody step={step} deckId={deck.id} />
               <StepSocial step={step} />

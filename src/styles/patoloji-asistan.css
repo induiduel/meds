@@ -471,3 +471,13 @@
   .pa-ayar.is-acik .pa-oto { height: 40px; }
   .pa-ayar.is-acik .pa-oto span { display: inline; font-size: 14px; }
 }
+
+/* Kullanıcının kendi şık elemesi (yalnız görsel üstünü çizme) */
+.sik-sar { display: flex; align-items: stretch; gap: 6px; }
+.sik-sar > :first-child { flex: 1; min-width: 0; }
+.sik-ciz { flex: 0 0 40px; display: grid; place-items: center; border-radius: 12px; border: 1px solid transparent; background: transparent; color: var(--color-ink-3, var(--color-ink-2)); cursor: pointer; opacity: .55; transition: opacity .15s, background .15s; }
+.sik-ciz svg { width: 18px; height: 18px; }
+.sik-ciz:hover, .sik-ciz:focus-visible { opacity: 1; background: var(--color-field); }
+.sik-ciz.is-on { opacity: 1; color: var(--color-bad); background: color-mix(in srgb, var(--color-bad) 8%, transparent); }
+.sc-sik.is-cizili, .pa-sik.is-cizili { opacity: .5; }
+.sc-sik.is-cizili span, .pa-sik.is-cizili span { text-decoration: line-through; text-decoration-thickness: 2px; text-decoration-color: color-mix(in srgb, var(--color-bad) 70%, transparent); }

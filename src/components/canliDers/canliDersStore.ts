@@ -55,6 +55,8 @@ export interface CdDetay {
   bolumler: CdBolum[];
   varyantlar: CdVaryant[];
   pdf: CdPdf | null;
+  /** önemli cümle (c) ve anahtar terim (t) aralıkları, paragraf dizinine göre: [baş, son, tür, önem 1–3] */
+  vurgu?: Record<string, [number, number, "c" | "t", number][]> | null;
 }
 /** Çalmaya başlamak için en az bu kadarı yeter (liste satırından hızlı oynatma) */
 export interface CdOzet { key: string; no: string | number; brans?: string; parca?: number; baslik: string; varyantlar: CdVaryant[] }

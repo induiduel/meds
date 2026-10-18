@@ -23,6 +23,7 @@ import { registerCanliDersRoutes } from './src/services/canliDers';
 import { registerPatolojiAsistanRoutes } from './src/services/patolojiAsistan';
 import { registerPatolojiCozucuRoutes } from './src/services/patolojiCozucu';
 import { registerCozucuSesRoutes } from './src/services/cozucuSes';
+import { registerOgrenSesRoutes } from './src/services/ogrenSes';
 import crypto from 'crypto';
 
 const require = createRequire(import.meta.url);
@@ -2732,6 +2733,7 @@ registerCanliDersRoutes(app);
 registerPatolojiAsistanRoutes(app);
 registerPatolojiCozucuRoutes(app);
 registerCozucuSesRoutes(app);
+registerOgrenSesRoutes(app);
 
 // Gidiş-dönüş testi: NOTIFY → LISTEN → SSE zincirinin tamamını ölçer (Sistem Tanılama ekranı).
 app.post('/api/live/ping', async (req, res) => {

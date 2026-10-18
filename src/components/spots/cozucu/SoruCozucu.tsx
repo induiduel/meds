@@ -1,7 +1,8 @@
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import {
-  BookOpenText, Check, ChevronDown, ChevronLeft, ChevronRight, Clock, Eraser, Headphones, Lightbulb, Maximize2, Minimize2, Minus, Pause, Play, Plus, RotateCcw, Settings2, SkipForward, Volume2, X,
+  BookOpenText, Check, ChevronDown, ChevronLeft, ChevronRight, Clock, Eraser, Headphones, Lightbulb, Maximize2, Minimize2, Minus, Pause, Play, Plus, RotateCcw, Settings2, SkipForward, Volume2, WandSparkles, X,
+  Strikethrough,
 } from 'lucide-react';
 import { getCustomApiUrl } from '../../../services/api';
 import { lockScroll, unlockScroll } from '../../../utils/scrollLock';
@@ -24,6 +25,8 @@ import '../../../styles/soru-cozucu.css';
  *  - Yardım: İpucu (cevabı söylemez) · Bir yanlışı ele (rastgele yanlış şık açıklanıp elenir) · Çözümü dinle (her şık sırayla
  *    vurgulanıp açıklanır, sonra "Doğru cevap …" + çözüm).
  * Çözülen soruda şıka dokunmak o şıkkın açıklamasını okur. Ses yoksa okuma süresiyle ilerler (metin yine görünür).
+ * Otomatik çöz (alt çubuk, A… değil "Z" tuşu): asistan soruyu baştan sona okur, çözüm yolunu (ipucu) söyler, yanlış seçenekleri
+ *   gerekçesiyle tek tek eler, kalan seçeneğin neden doğru olduğunu ve çözümü anlatır; sonuç kaydı yazılmaz, mod açıkken sonraki soruya geçer.
  * "Öğren" düğmesi (Ö tuşu) sorunun Öğren destesindeki karşılığını yan panelde/alt sayfada açar (OgrenYeri).
  */
 
@@ -42,7 +45,17 @@ interface Props {
   onOzelSonuc?: (sonuc: Record<string, Sonuc>) => void;
 }
 type Durum = 'acik' | 'cozuluyor' | 'dogru' | 'gosterildi';
-interface Adim { klasor: string; klip: string; metinler: string[]; onBasla?: () => void; onCumle?: (j: number) => void; kes?: number }
+/** bas/kes: klibin yalnız bu cümle aralığını çal (kök klibinden tek seçenek okumak için) */
+interface Adim { klasor: string; klip: string; metinler: string[]; onBasla?: () => void; onCumle?: (j: number) => void; bas?: number; kes?: number }
+/** Otomatik çöz ara cümleleri (ortak klipler; yoksa tarayıcı sesiyle okunur) */
+const OC: Record<string, string> = {
+  'oc-bas': 'Bu soruyu birlikte çözelim. Önce soruyu dikkatlice okuyalım.',
+  'oc-yol': 'Soruyu çözmek için şu yoldan gideceğiz.',
+  'oc-ele': 'Şimdi seçenekleri tek tek değerlendirip yanlış olanları eleyelim.',
+  'oc-elendi': 'Bu yüzden bu seçeneği eliyoruz.',
+  'oc-kalan': 'Geriye tek bir seçenek kaldı. Şimdi bunun neden doğru olduğuna bakalım.',
+  'oc-son': 'Benzer bir soruyla karşılaşınca da aynı yolu izleyebilirsin.',
+};
 const HIZLAR = [0.85, 1, 1.15, 1.3, 1.5, 1.75, 2];
 const OLCEK_MIN = 0.7;
 const OLCEK_MAX = 1.6;
@@ -117,6 +130,8 @@ export const SoruCozucu: React.FC<Props> = ({
   const [durum, setDurum] = useState<Durum>('acik');
   const [elenen, setElenen] = useState<Harf[]>([]);
   const [aciklanan, setAciklanan] = useState<Harf[]>([]);
+  const [cizili, setCizili] = useState<Harf[]>([]); // kullanıcının yalnız görsel olarak üstünü çizdiği şıklar
+  const ciz = (h: Harf) => setCizili((c) => c.includes(h) ? c.filter((x) => x !== h) : [...c, h]);
   const [ipucuAcik, setIpucuAcik] = useState(false);
   const [yardim, setYardim] = useState(false); // bu soruda yardım ya da yanlış deneme oldu
   const [sonSecim, setSonSecim] = useState<Harf | null>(null);
@@ -260,14 +275,14 @@ export const SoruCozucu: React.FC<Props> = ({
         // Klip bulunamayan durumlarda veya sesli soru çözücüde: tarayıcının Türkçe sesiyle cümle cümle oku
         const hasTTS = typeof window !== 'undefined' && 'speechSynthesis' in window;
         if (hasTTS) {
-          const cumleler = a.metinler.slice(0, a.kes !== undefined ? a.kes + 1 : undefined);
+          const cumleler = a.metinler.slice(a.bas ?? 0, a.kes !== undefined ? a.kes + 1 : undefined);
           setSesYok(false);
           setCaliyor(true);
           const voice = turkceSes();
           const oku = (j: number) => {
             if (sira !== siraRef.current) return;
             if (j >= cumleler.length) { sonraki(); return; }
-            a.onCumle?.(j);
+            a.onCumle?.(j + (a.bas ?? 0));
             try {
               window.speechSynthesis.cancel();
               const u = new SpeechSynthesisUtterance(cumleler[j]);
@@ -285,7 +300,7 @@ export const SoruCozucu: React.FC<Props> = ({
           return;
         }
         setSesYok(true);
-        const sureler = a.metinler.slice(0, a.kes !== undefined ? a.kes + 1 : undefined).map((c) => Math.max(1.2, kelimeSay(c) / 2.6) / hiz);
+        const sureler = a.metinler.slice(a.bas ?? 0, a.kes !== undefined ? a.kes + 1 : undefined).map((c) => Math.max(1.2, kelimeSay(c) / 2.6) / hiz);
         let j = 0; let t = 0;
         setCaliyor(true);
         if (zamanlayici.current) window.clearInterval(zamanlayici.current);
@@ -295,7 +310,7 @@ export const SoruCozucu: React.FC<Props> = ({
           if (t >= sureler[j]) {
             t = 0; j++;
             if (j >= sureler.length) { window.clearInterval(zamanlayici.current!); zamanlayici.current = null; sonraki(); return; }
-            a.onCumle?.(j);
+            a.onCumle?.(j + (a.bas ?? 0));
           }
         }, 100);
       };
@@ -303,11 +318,12 @@ export const SoruCozucu: React.FC<Props> = ({
       setSesYok(false);
       if (!audio.current) audio.current = new Audio();
       const el = audio.current;
-      el.src = `${getCustomApiUrl() || ''}${klipYolu(brans, kb.ses, a.klasor, a.klip)}?v=${k.v}`;
+      const basSn = a.bas !== undefined && k.zaman[a.bas] ? Math.max(0, k.zaman[a.bas][0] - 0.05) : 0;
+      el.src = `${getCustomApiUrl() || ''}${klipYolu(brans, kb.ses, a.klasor, a.klip)}?v=${k.v}${basSn ? `#t=${basSn.toFixed(2)}` : ''}`;
       el.playbackRate = hiz;
       try { (el as HTMLAudioElement & { preservesPitch?: boolean }).preservesPitch = true; } catch { /* eski tarayıcı */ }
       const kesSn = a.kes !== undefined && k.zaman[a.kes] ? k.zaman[a.kes][1] + 0.15 : Infinity;
-      let son = 0;
+      let son = a.bas ?? 0;
       el.ontimeupdate = () => {
         const t = el.currentTime;
         if (t >= kesSn) { el.ontimeupdate = null; el.onended = null; el.pause(); sonraki(); return; }
@@ -353,9 +369,9 @@ export const SoruCozucu: React.FC<Props> = ({
   useEffect(() => {
     if (otoRef.current) { window.clearTimeout(otoRef.current); otoRef.current = null; }
     if (!ders || !q || devamSor !== null || bitti) { if (bitti) durdur(); return; }
-    setDurum('acik'); setElenen([]); setAciklanan([]); setIpucuAcik(false); setYardim(false); setSonSecim(null); setYanlisSecti(false); setOkunan(null);
+    setDurum('acik'); setElenen([]); setCizili([]); setAciklanan([]); setIpucuAcik(false); setYardim(false); setSonSecim(null); setYanlisSecti(false); setOkunan(null);
     kokRef.current?.scrollTo({ top: 0, behavior: azHareket() ? 'auto' : 'smooth' });
-    calSira([kokAdimi(q, tercih.siklariOku)]);
+    if (otoCoz) otomatikCoz(q); else calSira([kokAdimi(q, tercih.siklariOku)]);
   }, [i, ders, sorular, devamSor, bitti]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const kaydir = (sec: string) => requestAnimationFrame(() => requestAnimationFrame(() =>
@@ -366,6 +382,7 @@ export const SoruCozucu: React.FC<Props> = ({
 
   const cevapla = (h: Harf) => {
     if (!q) return;
+    if (otoCoz) { setOtoCoz(false); if (otoRef.current) { window.clearTimeout(otoRef.current); otoRef.current = null; } }
     if (durum === 'dogru' || durum === 'gosterildi') { // çözülmüş soruda: şıkkın açıklamasını dinle
       acikla(h); calSira([sikAdimi(q, h)]); kaydir('.sc-aciklamalar'); return;
     }
@@ -418,6 +435,31 @@ export const SoruCozucu: React.FC<Props> = ({
       if (tercih.otomatik) otoRef.current = window.setTimeout(() => { otoRef.current = null; ileri(); }, 1400);
     });
   };
+  // ---------- otomatik çöz: oku → çözüm yolu → yanlışları gerekçesiyle ele → doğruyu açıkla → çözüm
+  const [otoCoz, setOtoCoz] = useState(false);
+  const ocAdim = (klip: string): Adim => ({ klasor: 'ortak', klip, metinler: [OC[klip]], onCumle: () => setOkunan(null) });
+  const otomatikCoz = useCallback((s: CSoru) => {
+    setDurum('cozuluyor'); setElenen([]); setAciklanan([]); setIpucuAcik(false); setSonSecim(null); setYanlisSecti(false);
+    const secenekAdimi = (h: Harf): Adim => ({ ...kokAdimi(s, true), bas: HARFLER.indexOf(h) + 1, kes: HARFLER.indexOf(h) + 1 });
+    const adimlar: Adim[] = [ocAdim('oc-bas'), kokAdimi(s, true), ocAdim('oc-yol'),
+      { klasor: klasorAdi, klip: `i-${s.no}`, metinler: [s.ipucu], onBasla: () => { setIpucuAcik(true); kaydir('.sc-ipucu'); }, onCumle: () => setOkunan({ yer: 'ipucu' }) },
+      ocAdim('oc-ele')];
+    for (const h of HARFLER.filter((x) => x !== s.dogru)) {
+      adimlar.push(secenekAdimi(h), sikAdimi(s, h, () => { acikla(h); kaydir('.sc-aciklamalar'); }),
+        { ...ocAdim('oc-elendi'), onBasla: () => ele(h) });
+    }
+    adimlar.push(ocAdim('oc-kalan'), secenekAdimi(s.dogru), sikAdimi(s, s.dogru, () => { acikla(s.dogru); kaydir('.sc-aciklamalar'); }), {
+      klasor: klasorAdi, klip: `c-${s.no}`, metinler: [`Doğru cevap ${s.dogru}, ${s.secenekler[s.dogru]}.`, s.cozum],
+      onBasla: () => { setDurum('gosterildi'); setSonSecim(s.dogru); kaydir('.sc-cozum'); },
+      onCumle: (j) => setOkunan(j > 0 ? { yer: 'cozum' } : null),
+    }, ocAdim('oc-son'));
+    calSira(adimlar, () => { otoRef.current = window.setTimeout(() => { otoRef.current = null; ileri(); }, 1600); });
+  }, [calSira, kokAdimi, sikAdimi, klasorAdi, ileri]); // eslint-disable-line react-hooks/exhaustive-deps
+  const otoCozDegis = () => {
+    if (otoCoz) { setOtoCoz(false); if (otoRef.current) { window.clearTimeout(otoRef.current); otoRef.current = null; } durdur(); return; }
+    setOtoCoz(true); setAyarAcik(false);
+    if (q && !bitti) otomatikCoz(q);
+  };
   const tekrarOku = () => { if (q) calSira([kokAdimi(q, true)]); };
   const oynatDuraklat = () => {
     const a = audio.current;
@@ -454,6 +496,7 @@ export const SoruCozucu: React.FC<Props> = ({
       if (k === 'L') { e.preventDefault(); birYanlisEle(); return; }
       if (k === 'Ç') { e.preventDefault(); cozumuDinle(); return; }
       if (k === 'R') { e.preventDefault(); tekrarOku(); return; }
+      if (k === 'Z') { e.preventDefault(); otoCozDegis(); return; }
       if (e.key === 'Enter' && (durum === 'dogru' || durum === 'gosterildi')) { e.preventDefault(); ileri(); }
     };
     window.addEventListener('keydown', f);
@@ -633,9 +676,11 @@ export const SoruCozucu: React.FC<Props> = ({
                   const dogruMu = cozuldu && h === q.dogru;
                   const el = elenen.includes(h) && !dogruMu;
                   const okunuyor = caliyor && okunan?.h === h && (okunan.yer === 'sik' || okunan.yer === 'aciklama');
+                  const cizik = !cozuldu && !el && cizili.includes(h);
                   return (
-                    <button key={h} type="button"
-                      className={`sc-sik${dogruMu ? ' is-dogru' : ''}${el ? ' is-yanlis' : ''}${cozuldu && !dogruMu ? ' is-sonuk' : ''}${okunuyor ? ' is-okunuyor' : ''}${sonSecim === h && el ? ' is-secili' : ''}`}
+                    <div key={h} className="sik-sar">
+                    <button type="button"
+                      className={`sc-sik${cizik ? ' is-cizili' : ''}${dogruMu ? ' is-dogru' : ''}${el ? ' is-yanlis' : ''}${cozuldu && !dogruMu ? ' is-sonuk' : ''}${okunuyor ? ' is-okunuyor' : ''}${sonSecim === h && el ? ' is-secili' : ''}`}
                       disabled={durum === 'cozuluyor' || (durum === 'acik' && elenen.includes(h))}
                       onClick={() => cevapla(h)}
                       aria-label={`${h}: ${q.secenekler[h]}${cozuldu ? ' — açıklamayı dinle' : ''}`}>
@@ -645,6 +690,11 @@ export const SoruCozucu: React.FC<Props> = ({
                       {el && <X className="sc-sik-i" aria-hidden />}
                       {cozuldu && <Volume2 className="sc-sik-dinle" aria-hidden />}
                     </button>
+                    {!cozuldu && !el && (
+                      <button type="button" className={`sik-ciz${cizik ? ' is-on' : ''}`} onClick={() => ciz(h)} aria-pressed={cizik}
+                        aria-label={cizik ? `${h} şıkkının üstündeki çizgiyi kaldır` : `${h} şıkkını kendin ele (üstünü çiz)`} title={cizik ? 'Çizgiyi kaldır' : 'Şıkkı ele'}><Strikethrough aria-hidden /></button>
+                    )}
+                    </div>
                   );
                 })}
               </div>
@@ -753,6 +803,10 @@ export const SoruCozucu: React.FC<Props> = ({
             <button type="button" className="sc-ikon" onClick={ileri} disabled={bitti} aria-label={cozuldu ? 'Sonraki soru' : 'Soruyu atla'}>{cozuldu ? <ChevronRight /> : <SkipForward />}</button>
           </div>
           <div className="sc-ayar">
+            <button type="button" className={`sc-otocoz${otoCoz ? ' is-acik' : ''}`} onClick={otoCozDegis} disabled={bitti} aria-pressed={otoCoz}
+              title="Asistan soruyu okuyup çözüm yolunu, seçenek elemeyi ve doğru cevabın gerekçesini anlatarak çözer (Z)">
+              <WandSparkles aria-hidden /><span>{otoCoz ? 'Otomatik çözüyor' : 'Otomatik çöz'}</span>
+            </button>
             <label className="sc-sec" title="Konuşma hızı">
               <Volume2 aria-hidden />
               <select value={tercih.hiz} onChange={(e) => setTercih({ hiz: Number(e.target.value) })} aria-label="Konuşma hızı">

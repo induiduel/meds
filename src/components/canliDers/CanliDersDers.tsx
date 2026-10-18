@@ -5,7 +5,7 @@
  * kaydırınca/PDF'i gezince takip 8 sn durur ve "Canlı konuma dön" çıkar. Oynatıcı alt çubuktadır (CanliDersDock).
  */
 import React, { Suspense, lazy, memo, useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react';
-import { ChevronDown, ChevronLeft, ChevronUp, Columns2, Crosshair, FileText, Maximize2, Minimize2, Minus, Pause, Play, Plus, ScrollText } from 'lucide-react';
+import { ChevronDown, ChevronLeft, ChevronUp, Check, Columns2, Copy, Crosshair, FileText, Maximize2, Minimize2, Minus, Pause, Play, Plus, ScrollText } from 'lucide-react';
 import { navigateTo, pathFor } from '../../router';
 import { driveViewUrl, useDeckPdf } from '../../services/deckPdfService';
 import {
@@ -17,8 +17,11 @@ import { ListeEkleDugme } from './CanliDersListem';
 import { CevrimdisiDugme } from './CanliDersCevrimdisi';
 import { CdDaha } from './CanliDersDaha';
 import { CdTvKumanda } from './CanliDersTv';
+import { MetniAktarDugme } from './CanliDersAktarDugme';
+import { Highlighter } from 'lucide-react';
 import { useKonuSayaci } from '../../services/calismaTakip';
 import { KonuDugmeleri } from '../takip/KonuTakip';
+import { toast } from '../ui/Toast';
 import '../learn/pdf/pdfDoc.css';
 
 /** Öğenin görünür ölçeği (v12 yazı boyutu CSS zoom'u); utils/uiZoom.elementZoom ile aynı mantık. */
@@ -78,7 +81,15 @@ const YAZI_KEY = 'medsoru_canli_ders_tam_yazi';
 const YAZI_ENAZ = 14;
 const YAZI_ENCOK = 40;
 
+const VURGU_ANAHTAR = 'medsoru_canli_ders_vurgu_v1';
+
+function useVurguAcik(): [boolean, (v: boolean) => void] {
+  const [v, setV] = useState(() => { try { return localStorage.getItem(VURGU_ANAHTAR) !== '0'; } catch { return true; } });
+  return [v, (x: boolean) => { setV(x); try { localStorage.setItem(VURGU_ANAHTAR, x ? '1' : '0'); } catch { /* yok */ } }];
+}
+
 export default function CanliDersDers({ dersKey }: { dersKey: string }) {
+  const [vurguAcik, setVurguAcik] = useVurguAcik();
   // Bitirdiklerim: ses çalarken süreyi depo sayar; duraklatılmışken metni/slaytı okumak da bu derse sayılır
   const buDersCaliyor = useCd((s) => s.key === dersKey && s.playing);
   useKonuSayaci('sesli', buDersCaliyor ? null : dersKey);
@@ -238,7 +249,7 @@ export default function CanliDersDers({ dersKey }: { dersKey: string }) {
 
   return (
     <div
-      className={`cd-root cd-ders is-${mod}${tamEkran ? ' is-tam' : ''}`}
+      className={`cd-root cd-ders is-${mod}${tamEkran ? ' is-tam' : ''}${vurguAcik ? '' : ' cd-vurgu-kapali'}`}
       ref={rootRef}
       style={tamEkran ? ({ '--cd-tam-yazi': `${yazi}px` } as React.CSSProperties) : yuk ? { height: yuk } : undefined}
     >
@@ -271,9 +282,16 @@ export default function CanliDersDers({ dersKey }: { dersKey: string }) {
           )}
           <CdTvKumanda />
           {!tamEkran && (
-            <CdDaha etiket="Ders seçenekleri (çevrimdışı, listem, tanıtım)" className="cd-ders-daha">
+            <CdDaha etiket="Ders seçenekleri (çevrimdışı, listem, metni dışa aktar, tanıtım)" className="cd-ders-daha">
               <CevrimdisiDugme dersKey={detay.key} baslik={detay.baslik} varyantlar={detay.varyantlar} />
               <ListeEkleDugme dersKey={detay.key} baslik={detay.baslik} etiketli />
+              <MetniAktarDugme detay={detay} vurguAcik={vurguAcik} />
+              {detay.vurgu && (
+                <button type="button" className={`cd-btn${vurguAcik ? ' is-on' : ''}`} aria-pressed={vurguAcik} onClick={() => setVurguAcik(!vurguAcik)}
+                  title="Çıkmışta, örnek sorularda ve spotlarda geçen cümleleri kırmızı ve işaretli göster">
+                  <Highlighter aria-hidden /> <span>Önemli yerleri vurgula</span>
+                </button>
+              )}
               {tanitim.dugme}
             </CdDaha>
           )}
@@ -366,6 +384,68 @@ function GeriBag() {
 const hlDestek = () => typeof CSS !== 'undefined' && 'highlights' in CSS && typeof (window as any).Highlight === 'function';
 const HL_AD = 'cd-cumle';
 
+/** Paragrafı panoya kopyalar; vurgu DOM'u değiştirdiği için metin p'den değil veriden alınır. */
+function KopyalaDugme({ metin }: { metin: string }) {
+  const [tamam, setTamam] = useState(false);
+  const kopyala = async (e: React.MouseEvent) => {
+    e.stopPropagation();
+    try {
+      await navigator.clipboard.writeText(metin);
+      setTamam(true);
+      window.setTimeout(() => setTamam(false), 1500);
+    } catch {
+      toast.error('Kopyalanamadı', 'Tarayıcı panoya erişime izin vermedi.');
+    }
+  };
+  return (
+    <button type="button" className={`cd-p-kopya${tamam ? ' is-tamam' : ''}`} onClick={kopyala}
+      aria-label={tamam ? 'Kopyalandı' : 'Bu parçayı kopyala'} title={tamam ? 'Kopyalandı' : 'Kopyala'}>
+      {tamam ? <Check aria-hidden /> : <Copy aria-hidden />}
+    </button>
+  );
+}
+
+type Vurgu = [number, number, 'c' | 't', number][];
+const ONEM_AD: Record<number, string> = { 3: 'Çıkmışta sorulmuş', 2: 'Sınav spotu', 1: 'Örnek soruda geçiyor' };
+
+/** Önemli cümleler (çıkmış/spot/örnek soruyla eşleşen) marker + kırmızı kalın; anahtar terimler ayrıca kalın. */
+function VurguluMetin({ metin, v }: { metin: string; v?: Vurgu }) {
+  if (!v?.length) return <>{metin}</>;
+  const out: React.ReactNode[] = [];
+  let k = 0;
+  for (const [s, e, tur, onem] of v) {
+    if (tur !== 'c' || s < k) continue;
+    if (s > k) out.push(metin.slice(k, s));
+    const ic: React.ReactNode[] = [];
+    let j = s;
+    for (const [ts, te, tt] of v) {
+      if (tt !== 't' || ts < j || te > e) continue;
+      if (ts > j) ic.push(metin.slice(j, ts));
+      ic.push(<b key={ts} className="cd-terim">{metin.slice(ts, te)}</b>);
+      j = te;
+    }
+    if (j < e) ic.push(metin.slice(j, e));
+    out.push(<span key={s} className={`cd-onem o${onem}`} data-s={s} data-e={e} title={ONEM_AD[onem]}>{ic}</span>);
+    k = e;
+  }
+  if (k < metin.length) out.push(metin.slice(k));
+  return <>{out}</>;
+}
+
+/** Paragraf içi [s, e) karakter aralığını (iç içe öğeler dahil) kapsayan Range */
+function metinAraligi(el: HTMLElement, s: number, e: number): Range | null {
+  const w = document.createTreeWalker(el, NodeFilter.SHOW_TEXT);
+  const r = document.createRange();
+  let pos = 0, bas = false;
+  for (let n = w.nextNode(); n; n = w.nextNode()) {
+    const len = (n.textContent || '').length;
+    if (!bas && s <= pos + len) { r.setStart(n, Math.max(0, s - pos)); bas = true; }
+    if (bas && e <= pos + len) { r.setEnd(n, Math.max(0, e - pos)); return r; }
+    pos += len;
+  }
+  return null;
+}
+
 /** Paragraf listesi bir kez çizilir; vurgu DOM üzerinden değişir (uzun metinde yeniden çizim yok). */
 const MetinListe = memo(function MetinListe({ detay, onTik }: { detay: CdDetay; onTik: (i: number) => void }) {
   return (
@@ -374,7 +454,10 @@ const MetinListe = memo(function MetinListe({ detay, onTik }: { detay: CdDetay; 
         <section key={bi} className="cd-bolum" aria-label={b.baslik || `Bölüm ${bi + 1}`}>
           {b.baslik && <h2 className="cd-bolum-ad">{b.baslik}</h2>}
           {b.paragraflar.map((p) => (
-            <p key={p.i} data-i={p.i} className="cd-p" onClick={() => onTik(p.i)}>{p.metin}</p>
+            <div key={p.i} className="cd-p-sar">
+              <p data-i={p.i} className="cd-p" onClick={() => onTik(p.i)}><VurguluMetin metin={p.metin} v={detay.vurgu?.[p.i]} /></p>
+              <KopyalaDugme metin={p.metin} />
+            </div>
           ))}
         </section>
       ))}
@@ -418,32 +501,32 @@ function CdMetinBolme({ detay, canli }: { detay: CdDetay; canli: boolean }) {
       if (destek) (CSS as any).highlights.delete(HL_AD);
       const m = isaret.current;
       if (m) {
-        m.el.textContent = m.metin;
+        m.el.innerHTML = m.metin;
         isaret.current = null;
       }
+      paneRef.current?.querySelector('.cd-onem.is-canli')?.classList.remove('is-canli');
     };
     const el = aktif >= 0 ? pEl(aktif) : null;
     const r = el ? cdCumleAraligi(aktif, cumle) : null;
     if (!el || !r) return void temizle();
+    // Okunan cümle önemliyse o an belirginleşir
+    const onceki = paneRef.current?.querySelector<HTMLElement>('.cd-onem.is-canli');
+    const simdi = [...el.querySelectorAll<HTMLElement>('.cd-onem')].find((o) => +o.dataset.s! < r[1] && +o.dataset.e! > r[0]) || null;
+    if (onceki !== simdi) { onceki?.classList.remove('is-canli'); simdi?.classList.add('is-canli'); }
     if (destek) {
-      const node = el.firstChild;
-      if (!node || node.nodeType !== Node.TEXT_NODE) return void temizle();
-      const len = (node.textContent || '').length;
-      const range = document.createRange();
-      range.setStart(node, Math.min(r[0], len));
-      range.setEnd(node, Math.min(r[1], len));
+      const range = metinAraligi(el, r[0], r[1]);
+      if (!range) return void temizle();
       (CSS as any).highlights.set(HL_AD, new (window as any).Highlight(range));
     } else {
+      // Highlight API yoksa: <mark> sarılır, özgün işaretleme (önemli cümle spanları) saklanıp geri yüklenir
       const m = isaret.current;
-      const metin = m && m.el === el ? m.metin : el.textContent || '';
-      if (m && m.el !== el) m.el.textContent = m.metin;
-      el.textContent = '';
-      el.append(document.createTextNode(metin.slice(0, r[0])));
+      if (m) m.el.innerHTML = m.metin;
+      const html = el.innerHTML;
+      const range = metinAraligi(el, r[0], r[1]);
       const mk = document.createElement('mark');
       mk.className = 'cd-cumle';
-      mk.textContent = metin.slice(r[0], r[1]);
-      el.append(mk, document.createTextNode(metin.slice(r[1])));
-      isaret.current = { el, metin };
+      try { if (range) { mk.append(range.extractContents()); range.insertNode(mk); } } catch { /* bölünemeyen aralık: vurgusuz geç */ }
+      isaret.current = { el, metin: html };
     }
   }, [aktif, cumle]);
   useEffect(() => () => {

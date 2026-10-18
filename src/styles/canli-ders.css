@@ -113,6 +113,15 @@
 .cd-p { margin: 0 -10px; padding: 8px 10px; border-radius: 10px; font-size: var(--read-size, 16px); line-height: 1.68; color: var(--color-ink-2); cursor: pointer;
   content-visibility: auto; contain-intrinsic-size: auto 120px; transition: background-color .25s, color .25s; }
 .cd-p:hover { background: var(--color-canvas); }
+.cd-p-sar { position: relative; }
+.cd-p-sar .cd-p { padding-right: 38px; }
+.cd-p-kopya { position: absolute; top: 6px; right: -6px; display: grid; place-items: center; width: 30px; height: 30px; border: 0; border-radius: 8px;
+  background: transparent; color: var(--color-ink-3); cursor: pointer; opacity: .35; transition: opacity .15s, background-color .15s, color .15s; }
+.cd-p-kopya svg { width: 16px; height: 16px; }
+.cd-p-sar:hover .cd-p-kopya, .cd-p-kopya:focus-visible { opacity: 1; }
+.cd-p-kopya:hover { background: var(--color-line-soft, var(--color-line)); color: var(--color-ink); }
+.cd-p-kopya.is-tamam { opacity: 1; color: var(--color-success, var(--color-accent)); }
+@media (hover: none) { .cd-p-kopya { opacity: .6; } }
 .cd-p.is-on { background: var(--color-accent-soft); color: var(--color-ink); content-visibility: visible; }
 .cd-metin ::highlight(cd-cumle) { background-color: color-mix(in srgb, var(--color-accent) 26%, transparent); color: var(--color-ink); }
 .cd-metin mark.cd-cumle { background: color-mix(in srgb, var(--color-accent) 26%, transparent); color: var(--color-ink); border-radius: 3px; }
@@ -687,3 +696,17 @@
 /* Ses seçici dar ekranda kendi satırında daralır (uzun ses adı taşmaz) */
 .cd-vses select { min-width: 0; text-overflow: ellipsis; }
 @media (max-width: 560px) { .cd-liste-sira .cd-vses select { width: 100%; } }
+
+/* önemli cümleler (çıkmış/spot/örnek soru eşleşmesi; vurgu_uret.py) — marker + kırmızı kalın */
+.cd-onem { color: #c8262d; font-weight: 650; background: linear-gradient(transparent 52%, rgba(255, 214, 10, .42) 52%, rgba(255, 214, 10, .42) 92%, transparent 92%); -webkit-box-decoration-break: clone; box-decoration-break: clone; border-radius: 2px; transition: background-color .25s, box-shadow .25s; }
+.cd-onem.o1 { font-weight: 600; background: linear-gradient(transparent 60%, rgba(255, 214, 10, .28) 60%, rgba(255, 214, 10, .28) 92%, transparent 92%); }
+.cd-onem .cd-terim { font-weight: 800; text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 2px; }
+.cd-onem.is-canli { background: rgba(255, 214, 10, .55); box-shadow: 0 0 0 2px rgba(255, 214, 10, .55); }
+:root[data-mode="dark"] .cd-onem { color: #ff7a7a; background: linear-gradient(transparent 52%, rgba(255, 214, 10, .2) 52%, rgba(255, 214, 10, .2) 92%, transparent 92%); }
+:root[data-mode="dark"] .cd-onem.is-canli { background: rgba(255, 214, 10, .28); box-shadow: 0 0 0 2px rgba(255, 214, 10, .3); }
+.cd-vurgu-kapali .cd-onem { color: inherit; font-weight: inherit; background: none; box-shadow: none; }
+.cd-vurgu-kapali .cd-onem .cd-terim { font-weight: inherit; text-decoration: none; }
+/* okunan cümle önemliyse kırmızı yazı korunur */
+.cd-metin .cd-onem::highlight(cd-cumle), .cd-metin .cd-onem *::highlight(cd-cumle) { color: #c8262d; }
+:root[data-mode="dark"] .cd-metin .cd-onem::highlight(cd-cumle), :root[data-mode="dark"] .cd-metin .cd-onem *::highlight(cd-cumle) { color: #ff7a7a; }
+.cd-metin mark.cd-cumle .cd-onem, .cd-metin .cd-onem mark.cd-cumle { color: inherit; }

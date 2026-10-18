@@ -44,7 +44,14 @@ CIKTI = MEDS / "data/patoloji_cozucu/ses"
 CUMLE_SN, KISA_SN, UZUN_SN, ON_SN = 0.45, 0.3, 0.7, 0.12
 SURUM = "ema-2"  # ema-2: kısaltmalar uzun ünlülü harf adlarıyla (kisaltma_ses.py)
 HARF_AD = {"A": "A", "B": "Be", "C": "Ce", "D": "De", "E": "E"}
-ORTAK = {"yanlis": ["Yanlış."], "dene": ["Bir daha dene."]}
+ORTAK = {"yanlis": ["Yanlış."], "dene": ["Bir daha dene."],
+         # Otomatik çöz ara cümleleri (SoruCozucu.tsx OC ile aynı)
+         "oc-bas": ["Bu soruyu birlikte çözelim.", "Önce soruyu dikkatlice okuyalım."],
+         "oc-yol": ["Soruyu çözmek için şu yoldan gideceğiz."],
+         "oc-ele": ["Şimdi seçenekleri tek tek değerlendirip yanlış olanları eleyelim."],
+         "oc-elendi": ["Bu yüzden bu seçeneği eliyoruz."],
+         "oc-kalan": ["Geriye tek bir seçenek kaldı.", "Şimdi bunun neden doğru olduğuna bakalım."],
+         "oc-son": ["Benzer bir soruyla karşılaşınca da aynı yolu izleyebilirsin."]}
 
 
 def cumlele(s: str) -> list[str]:

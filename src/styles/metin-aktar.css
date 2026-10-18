@@ -1,0 +1,18 @@
+/* metni dışa aktar seçicisi (MetinAktarMenu: Sesli ders ⋯ menüsü, Öğren Araçlar menüsü) */
+.cd-aktar { display: flex; flex-direction: column; gap: 6px; }
+.cd-aktar > .cd-btn { justify-content: flex-start; width: 100%; }
+.cd-aktar-liste { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+.cd-aktar-bicim { display: grid; grid-template-columns: auto 1fr; column-gap: 6px; align-items: center; text-align: left; padding: 8px 10px; min-height: 44px; border-radius: 10px; border: 1px solid var(--line, rgba(127,127,127,.25)); background: transparent; color: inherit; font: inherit; cursor: pointer; }
+.cd-aktar-bicim:hover:not(:disabled) { background: color-mix(in srgb, currentColor 7%, transparent); }
+.cd-aktar-bicim:disabled { opacity: .55; cursor: progress; }
+.cd-aktar-bicim svg { width: 16px; height: 16px; grid-row: span 2; }
+.cd-aktar-bicim b { font-size: 13px; font-weight: 600; }
+.cd-aktar-bicim small { font-size: 11px; opacity: .65; grid-column: 2; }
+.cd-aktar-don { animation: cd-aktar-don 0.9s linear infinite; }
+@keyframes cd-aktar-don { to { transform: rotate(360deg); } }
+.cd-aktar-hata { grid-column: 1 / -1; margin: 0; font-size: 12px; color: var(--danger, #c8262d); }
+
+/* Öğren Araçlar ızgarası: karo yerinde kalır, biçimler ızgaranın tam genişlik satırına iner */
+.ls-tools-pop .cd-aktar { display: contents; }
+.ls-tools-pop .cd-aktar-liste { grid-column: 1 / -1; grid-template-columns: repeat(4, minmax(0, 1fr)); margin: 2px 0 4px; }
+@media (max-width: 520px) { .ls-tools-pop .cd-aktar-liste { grid-template-columns: 1fr 1fr; } }
