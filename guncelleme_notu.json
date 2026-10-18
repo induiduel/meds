@@ -1,9 +1,10 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 20,
-  "baslik": "Etkileşimli Derslerde EMA Sesiyle Dinleme",
+  "onem": 22,
+  "baslik": "Soru çözücü otomatik çöz sesi ve patoloji sesli asistan okunuşu düzeltildi",
   "maddeler": [
-    "Etkileşimli derslerdeki (Öğren) üst 'Dinle' butonu yerel EMA Lightning ses motoruna bağlandı.",
-    "Tüm adımların yüksek kaliteli EMA ses dosyaları oluşturuldu ve doğrudan dinlenebilir hale getirildi."
+    "Soru çözücüde \"Otomatik çöz\" artık tüm ara cümleleri EMA sesiyle okuyor (tarayıcı sesine düşmüyor).",
+    "Patoloji sesli sınav asistanı yeniden seslendirildi: kısaltmalar harf harf ve net okunuyor (örneğin DNA \"dee nee aa\").",
+    "Etkileşimli derslerde eski sürüm destelerin EMA sesleri de aşamalı olarak ekleniyor."
   ]
 }

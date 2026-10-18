@@ -43,11 +43,13 @@ def klipler(o: dict, S) -> dict[str, list[str]]:
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--brans", required=True)
+    ap.add_argument("--girdi", help="cikti klasörü (varsayılan meds_temp/spot_cozucu/<brans>/asistan/cikti; patoloji: meds_temp/patoloji_onem/asistan2/cikti)")
+    ap.add_argument("--cikti", help="ses kök klasörü (varsayılan meds/data/<brans>_asistan/ses)")
     ap.add_argument("kodlar", nargs="*")
     a = ap.parse_args()
-    girdi = SC.W / a.brans / "asistan" / "cikti"
+    girdi = Path(a.girdi) if a.girdi else SC.W / a.brans / "asistan" / "cikti"
     S = SC.Ema()
-    kok = SC.MEDS / "data" / f"{a.brans}_asistan" / "ses"
+    kok = Path(a.cikti) if a.cikti else SC.MEDS / "data" / f"{a.brans}_asistan" / "ses"
     for kod in a.kodlar or sorted(x.stem for x in girdi.glob("*.json")):
         p = girdi / f"{kod}.json"
         if not p.exists():
