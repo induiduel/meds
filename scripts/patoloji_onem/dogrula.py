@@ -1,6 +1,8 @@
 """Patoloji önem listesi çıktı doğrulayıcısı. Kullanım: python3 araclar/dogrula.py cikti/07.json [...]
 Denetim: şema, puan/bant dağılımı, alıntının PDF sayfasında birebir geçmesi, sayıların PDF'te geçmesi, örnek soru biçimi, çıkmış id'leri."""
 import json, os, re, sys, unicodedata
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
+from turkce_uslup import denetle_yapi as uslup_yapi  # noqa: E402  (meds/docs/TURKCE_USLUP_STANDARDI.md)
 W = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CIK = json.load(open(f'{W}/cikmis_pdf.json'))
 TUR = {'tanim', 'en_sik', 'karakteristik', 'sayi', 'eslesme', 'mekanizma', 'siniflama', 'tuzak', 'tani_tedavi'}
@@ -23,12 +25,14 @@ def check(path):
     cand = {c['id'] for c in CIK.get(kod, [])}
     for k in ('baslik', 'pdf', 'ozet', 'neden_onemli'):
         if words(d.get(k)) < (2 if k in ('baslik', 'pdf') else 8): e.append(f'{kod}: {k} eksik/kısa')
+    e.extend(uslup_yapi({k: v for k, v in d.items() if k != 'maddeler'}, kod))
     M = d.get('maddeler') or []
     if not 20 <= len(M) <= 45: e.append(f'{kod}: madde sayısı {len(M)} (20–45)')
     bant = {}
     ids = set()
     for m in M:
         t = f"{kod}/{m.get('id')}"
+        e.extend(uslup_yapi(m, t))
         if m.get('id') in ids: e.append(f'{t}: id tekrar')
         ids.add(m.get('id'))
         p = m.get('puan')

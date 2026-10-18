@@ -5,6 +5,8 @@ Denetim: şema, puan/bant dağılımı, alıntının PDF sayfasında birebir ge�
 örnek soru sayısı/biçimi/zorluk dağılımı/harf dengesi, örnek–örnek ve örnek–çıkmış benzerliği (tekrar soru)."""
 import collections, json, os, re, sys, unicodedata
 from pathlib import Path
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
+from turkce_uslup import denetle_yapi as uslup_yapi  # noqa: E402  (meds/docs/TURKCE_USLUP_STANDARDI.md)
 
 TUR = {'tanim', 'en_sik', 'karakteristik', 'sayi', 'eslesme', 'mekanizma', 'siniflama', 'tuzak', 'tani_tedavi'}
 ELEN = re.compile(r'^(pdf_disi|anahtar_celiskili|gorsel|belirsiz|tekrar:\S+)$')
@@ -53,11 +55,13 @@ def check(path):
         if words(d.get(k)) < (1 if k in ('baslik', 'pdf') else 8): e.append(f'{kod}: {k} eksik/kısa')
     for k in ('ozet', 'neden_onemli'):
         if IC_DIL.search(str(d.get(k) or '')): e.append(f'{kod}: {k} iç süreç dili: {IC_DIL.search(d[k]).group()!r}')
+    e.extend(uslup_yapi({k: v for k, v in d.items() if k != 'maddeler'}, kod))
     M = d.get('maddeler') or []
     if not 20 <= len(M) <= 45: e.append(f'{kod}: madde sayısı {len(M)} (20–45)')
     bant, ids, kullanilan, ornekler = {}, set(), collections.Counter(), []
     for m in M:
         tt = f"{kod}/{m.get('id')}"
+        e.extend(uslup_yapi(m, tt))
         if not re.match(rf'^{re.escape(kod)}-\d{{2}}$', str(m.get('id'))): e.append(f'{tt}: id "<kod>-NN" biçiminde olmalı')
         if m.get('id') in ids: e.append(f'{tt}: id tekrar')
         ids.add(m.get('id'))

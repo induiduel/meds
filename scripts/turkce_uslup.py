@@ -32,3 +32,23 @@ def denetle(metin, yer):
         g = r.search(m)
         if g: e.append(f'{yer}: Türkçe üslup — {g.group()!r} doğal değil ({oneri})')
     return e
+
+
+# Birebir alıntı / kaynak / kimlik alanları denetlenmez (PDF metni ve çıkmış soru değiştirilemez).
+ATLA = {'id', 'kod', 'type', 'tur', 'kategori', 'alinti', 'kaynak', 'pdf', 'sayfa', 'url', 'image', 'images', 'src',
+        'source', 'sources', 'sourcePdf', 'quote', 'quotes', 'cikmis', 'elenen_cikmis', 'slideNumber', 'deckId'}
+
+
+def metinler(x, yol=''):
+    """İç içe yapıdaki öğrenciye dönük metinleri (yol, metin) olarak verir; ATLA alanlarına inmez."""
+    if isinstance(x, str):
+        yield yol, x
+    elif isinstance(x, dict):
+        for k, v in x.items():
+            if k not in ATLA: yield from metinler(v, f'{yol}.{k}' if yol else str(k))
+    elif isinstance(x, list):
+        for i, v in enumerate(x): yield from metinler(v, f'{yol}[{i}]')
+
+
+def denetle_yapi(x, yer):
+    return [h for y, m in metinler(x) for h in denetle(m, f'{yer}.{y}' if y else yer)]

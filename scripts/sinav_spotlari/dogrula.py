@@ -16,6 +16,9 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[3]
 NOTLAR = ROOT / "meds_database_v2/ders_notlari_k1/notlar"
 SPOT_DIR = ROOT / "meds_temp/sinav_spotlari/spotlar"
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from turkce_uslup import denetle_yapi as uslup_yapi  # noqa: E402  (meds/docs/TURKCE_USLUP_STANDARDI.md)
+
 KATEGORI = {"en_sik", "karakteristik", "sayi", "eslesme", "tani_tedavi", "mekanizma", "tuzak", "siniflama"}
 
 
@@ -41,6 +44,7 @@ def notlar() -> dict[int, tuple[str, str]]:
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--dosya", action="append")
+    ap.add_argument("--kurul2", action="store_true", help="Kurul 2+: Türkçe üslup ihlali HATA (yoksa UYARI)")
     a = ap.parse_args()
     files = [Path(f) for f in a.dosya] if a.dosya else sorted(SPOT_DIR.glob("*.jsonl"))
     nt = notlar()
@@ -61,6 +65,7 @@ def main() -> int:
             if not sid or sid in seen:
                 hatalar.append(f"{yer} id boş/yinelenen: {sid}")
             seen.add(sid)
+            (hatalar if a.kurul2 else uyarilar).extend(uslup_yapi(s, yer))
             if s.get("kategori") not in KATEGORI:
                 hatalar.append(f"{yer} kategori: {s.get('kategori')}")
             if s.get("onem") not in (1, 2, 3):

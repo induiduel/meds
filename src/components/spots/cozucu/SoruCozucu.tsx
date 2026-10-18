@@ -750,7 +750,7 @@ export const SoruCozucu: React.FC<Props> = ({
                 {HIZLAR.map((h) => <option key={h} value={h}>{h.toLocaleString('tr-TR')}×</option>)}
               </select>
             </label>
-            <button type="button" className="sc-ikon sc-ayar-b" onClick={() => setAyarAcik((v) => !v)} aria-expanded={ayarAcik} aria-label="Okuma ayarları"><Settings2 /></button>
+            <button type="button" className={`sc-ikon sc-ayar-b${ayarAcik ? ' is-acik' : ''}`} onClick={() => setAyarAcik((v) => !v)} aria-expanded={ayarAcik} aria-label="Okuma ayarları" title="Okuma ayarları"><Settings2 /></button>
             <div className={`sc-ayar-p${ayarAcik ? ' is-acik' : ''}`}>
             {sesler.length > 1 && (
               <label className="sc-oto" title="Okuyan ses">

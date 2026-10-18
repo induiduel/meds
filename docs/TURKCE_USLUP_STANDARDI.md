@@ -38,7 +38,10 @@ Doğal karşılıkları:
 
 - `meds/scripts/turkce_uslup.py` — yasak mecaz ve etiket listesi; asistan (`spot_cozucu/asistan_dogrula.py`,
   `patoloji_onem/asistan_dogrula.py`, `asistan2/dogrula.py`) ve çözücü (`patoloji_cozucu/cozucu_dogrula*.py`,
-  `spot_cozucu/cozucu_dogrula.py`) doğrulayıcılarında her metin alanına uygulanır, ihlal HATA'dır. Listeyi yeni bir kalıp
+  `spot_cozucu/cozucu_dogrula.py`) doğrulayıcılarında her metin alanına uygulanır, ihlal HATA'dır. Spot: `spot_cozucu/onem_dogrula.py`,
+  `patoloji_onem/dogrula.py` (her madde, alıntı hariç) HATA; `sinav_spotlari/dogrula.py` `--kurul2` ile HATA, bayraksız UYARI.
+  Öğren: `validate_learning_decks.py deck.json --oyun-zorunlu --kurul2` HATA (`turkce-uslup`), `--uslup` ile eski destelerde UYARI.
+  Birebir alıntı/kaynak/çıkmış alanları (`alinti`, `kaynak`, `cikmis` …) denetlenmez. Listeyi yeni bir kalıp
   görüldüğünde genişlet (önerilen karşılığıyla birlikte).
 - Liste her kalıbı yakalayamaz: bağımsız denetçi geçişi her metni **sesli okunuyormuş gibi** okur ve doğal olmayan, eksik
   ya da anlaşılmayan cümleyi yeniden yazar.

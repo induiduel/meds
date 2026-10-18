@@ -60,6 +60,9 @@ yolu; doğrulayıcı da yalnız uzunluk üst sınırını ölçüyordu.
 - Asistan doğrulayıcıları (`meds/scripts/spot_cozucu/asistan_dogrula.py`, `meds/scripts/patoloji_onem/asistan_dogrula.py`)
   `yardim` için alt sınır, boş kalıp yasağı ve olumlu cümle şartını **HATA** olarak denetler.
 - Çözücü doğrulayıcıları (`cozucu_dogrula*.py`) `siklar` / `yanlis` için aynı kalıp yasağını denetler.
+- Öğren: `validate_learning_decks.py deck.json --oyun-zorunlu --kurul2` mini soru şık açıklamalarını (`explanation`, 15–55 kelime,
+  1–3 cümle) ve klinik karar geri bildirimlerini HATA olarak denetler (`sik-aciklama`); `--uslup` eski destelerde UYARI gösterir.
+  Kurul 1 destelerinde mini soru açıklamalarının ortancası 7 kelime — Kurul 2'de bu düzey kabul edilmez.
 - Yazar + bağımsız denetçi iki geçişi korunur; denetçi her şıkta "Ne? / Ne işe yarar? / Bu soruyla bağı" üçlüsünü tek tek arar.
 - Otomatik hatta (Kurul 2 Drive → içerik) doğrulayıcı 0 HATA vermeden seslendirmeye (EMA) ve yayına geçilmez.
 

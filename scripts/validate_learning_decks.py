@@ -6,6 +6,8 @@ Kullanım:
     python3 scripts/validate_learning_decks.py --ozet           # yalnız kural başına sayılar
     python3 scripts/validate_learning_decks.py --duzelt         # kesik zincir basamaklarını tamamla, sızdıran ipuçlarını sil (dosyaya yazar)
     python3 scripts/validate_learning_decks.py deck.json --oyun-zorunlu  # yeni ders: son slayt "ders sonu oyunları" olmalı (§5.14)
+    python3 scripts/validate_learning_decks.py deck.json --oyun-zorunlu --kurul2  # Kurul 2+: Türkçe üslup ve şık açıklama kapıları HATA
+    python3 scripts/validate_learning_decks.py --uslup          # eski destelerde üslup/şık açıklama ihlallerini UYARI olarak göster
 
 Çıkış kodu: HATA varsa 1, yalnız UYARI varsa 0. Yeni deste eklemeden önce HATA sayısı 0 olmalı.
 """
@@ -25,6 +27,12 @@ GAME_TYPES = {'sequence_order', 'estimate_slider', 'perturbation', 'fix_the_text
 GAME_RE = re.compile(r'^\[OYUN SAYFASI\]', re.I)
 DIRS = {'up', 'down', 'same', 'artar', 'azalır', 'azalir', 'değişmez', 'degismez'}
 OYUN_ZORUNLU = '--oyun-zorunlu' in sys.argv
+# Kurul 2 hata defteri (docs/KURUL2_YAPILMAYACAK_HATALAR.md): --kurul2 ile HATA; Kurul 1 desteleri toplu düzeltilmez, --uslup ile UYARI.
+# --oyun-zorunlu'ya bağlanmadı: Kurul 1 ders işçisi (ders_isci/denetle.py) o bayrakla çalışıyor.
+KAPI_SEVIYE = 'HATA' if '--kurul2' in sys.argv else ('UYARI' if '--uslup' in sys.argv else None)
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from turkce_uslup import denetle_yapi as uslup_yapi  # noqa: E402  (docs/TURKCE_USLUP_STANDARDI.md)
+from sik_aciklama import denetle as sik_denetle  # noqa: E402  (docs/SIK_ACIKLAMA_STANDARDI.md)
 
 def is_game_slide(s):
     return bool(s.get('isGameFinale')) or bool(GAME_RE.match(str(s.get('title', ''))))
@@ -137,6 +145,9 @@ def check_deck(d, out):
         add('UYARI', 'slayt-sira', 0, 'slideNumber 1\'den başlayıp kesintisiz artmalı')
     for s in slides:
         n = s.get('slideNumber')
+        if KAPI_SEVIYE:
+            for h in uslup_yapi(s, f'slayt{n}'):
+                add(KAPI_SEVIYE, 'turkce-uslup', n, h)
         if not s.get('title'):
             add('HATA', 'slayt-baslik', n, 'title eksik')
         if TRUNC.search(str(s.get('title', ''))) or TRUNC.search(str(s.get('subtitle', ''))):
@@ -198,6 +209,10 @@ def check_deck(d, out):
                     add('HATA', 'mini-soru-dogru', n, 'tam olarak bir şıkta isCorrect: true olmalı')
                 if any(not o.get('explanation') for o in opts):
                     add('UYARI', 'mini-soru-aciklama', n, 'her şıkta explanation olmalı (öğrenci tüm şıkları açıp okuyabiliyor)')
+                if KAPI_SEVIYE:
+                    for i, o in enumerate(opts):
+                        for h in sik_denetle(o.get('explanation', ''), f'mini-soru şık {i + 1}', enaz=15, encok=55, cumle=(1, 3)):
+                            add(KAPI_SEVIYE, 'sik-aciklama', n, h)
             elif t == 'branching_logic':
                 # Ekran options | choices | branchingOptions okur (LessonBlocks IxBody)
                 opts = next((x for x in (e.get('options'), e.get('choices'), e.get('branchingOptions')) if isinstance(x, list) and x), [])
@@ -205,6 +220,10 @@ def check_deck(d, out):
                     add('HATA', 'klinik-karar', n, 'scenario, ≥2 seçenek (options/choices) ve tek isCorrect gerekli')
                 if any(not (o.get('feedback') or o.get('explanation')) for o in opts):
                     add('UYARI', 'klinik-karar-geri', n, 'her seçenekte feedback olmalı')
+                if KAPI_SEVIYE:
+                    for i, o in enumerate(opts):
+                        for h in sik_denetle(o.get('feedback') or o.get('explanation') or '', f'klinik karar seçenek {i + 1}', enaz=15, encok=60, cumle=(1, 3)):
+                            add(KAPI_SEVIYE, 'sik-aciklama', n, h)
             elif t == 'cloze_masking':
                 sen, term = e.get('sentence', ''), e.get('maskedTerm', '')
                 if not term or fold(term) not in fold(sen):

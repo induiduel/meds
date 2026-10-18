@@ -284,7 +284,7 @@ Yeni üretilen her destenin **son slaytı** bir oyun sayfasıdır. Dersin tamam�
 - **Slayt:** `"title": "[OYUN SAYFASI] Ders Sonu Oyunları: <konu>"`, `"isGameFinale": true`, `"badge": "Ders Sonu Oyunları"`. `synthesisNarrative` 60–150 kelime, yeni bilgi vermez; oyunları tanıtır.
 - **Öğeler:** 4–6 öge, **yalnız** aşağıdaki dört tür; dördü de en az bir kez kullanılır. Bu türler başka hiçbir slaytta kullanılamaz (`oyun-yeri` HATA).
 - **Ekran:** rayda mor "Oyun ·" satırı, başlıkta "Ders sonu oyunları" etiketi. Bileşenler `lesson/LessonGames.tsx`, stil `styles/learn-games.css`.
-- **Doğrulama:** yeni deste `validate_learning_decks.py deck.json --oyun-zorunlu` ile 0 HATA vermeli. Ders işçisinin denetleyicisi bu bayrakla çalışır. Bayraksız çalıştırmada eski desteler oyun sayfası olmadan geçerlidir.
+- **Doğrulama:** yeni deste `validate_learning_decks.py deck.json --oyun-zorunlu` ile 0 HATA vermeli. Ders işçisinin denetleyicisi bu bayrakla çalışır. Bayraksız çalıştırmada eski desteler oyun sayfası olmadan geçerlidir. **Kurul 2+:** `--kurul2` eklenir → Türkçe üslup (`docs/TURKCE_USLUP_STANDARDI.md`) ve mini soru/klinik karar şık açıklamaları (`docs/SIK_ACIKLAMA_STANDARDI.md`) HATA olarak denetlenir; hata defteri `docs/KURUL2_YAPILMAYACAK_HATALAR.md`.
 - **Örnek:** `scripts/fixtures/oyun_sayfasi_ornek.json` (k1-68 Enfeksiyon Epidemiyolojisi için tam bir oyun sayfası).
 
 #### `sequence_order` — Sırala
