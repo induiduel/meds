@@ -1,11 +1,11 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 14,
-  "baslik": "Sınav Çalışması · Kazanım Konu Anlatımları ve Kesintisiz Sesli Soru Çözücü",
+  "onem": 15,
+  "baslik": "Sınav Spotları ve Soru Çözücü: Kaldığın Yer, İlerleme ve Doğruluk İstatistikleri",
   "maddeler": [
-    "Sınav Çalışması: Kurul 1 bünyesindeki 715 kazanımın tamamı için kapsamlı 'Özet Konu Anlatımı' ve bilinmesi gereken temel noktalar eklendi.",
-    "Kazanım paneline tek tıkla 'Özeti Sesli Dinle' desteği getirildi.",
-    "Sesli soru çözücü motoru güçlendirildi: Eksik veya özel sorularda kesintisiz Türkçe konuşma sentezi (TTS) ile sesli asistan canlı olarak devreye giriyor.",
-    "Her kazanımda en az 2 orta zorlukta soru, şık analizleri ve gerekçeli çözümlerle sınav deneyimi zenginleştirildi."
+    "Spot bilgilerde ve sesli soru çözücülerde kalınan son ders, soru ve spot otomatik kayıt altına alınıyor; tek tıkla kaldığın yerden devam etme desteği getirildi.",
+    "Doğruluk ilerleyişi (ilk denemede doğru, yardımlı, yanlış) ve başarı oranı hem kartlarda hem soru çözücü içinde anlık hesaplanıyor.",
+    "Çalışma süresi sayacı: Spotlarda ve soru çözücüde kaç dakika çalışıldığı ve soru başı ortalama çözüm süresi canlı olarak takip ediliyor.",
+    "Detaylı İstatistikler & Çalışma Karnesi: 7 branşın tümünde çözülen soru sayıları, doğruluk oranları ve süre dökümü tek ekranda sunuldu."
   ]
 }

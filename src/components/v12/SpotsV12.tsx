@@ -6,6 +6,7 @@ import { toast } from '../ui/Toast';
 import {
   ANAHTAR, KAT, KATEGORILER, type Ders, type Kategori, type Spot, type Veri, Zengin, azHareket, kucuk, okuOgrenilen, yazOgrenilen,
 } from '../spots/spotsShared';
+import { kaydetSpotZiyaret } from '../../services/spotCozucuIstatistik';
 import { CardsSpotsNav } from './FlashcardsV12';
 import '../../styles/v12/cards.css';
 
@@ -465,7 +466,12 @@ const SpotRowBase: React.FC<RowProps> = ({ s, d, sinav, ogrenildi, kartta, vurgu
   const satir = s.kaynak?.find((k) => k.satir)?.satir;
 
   return (
-    <article id={`f12-sp-${s.id}`} className={`f12-sp-row${ogrenildi ? ' is-done' : ''}${vurgulu ? ' is-flash' : ''}`} aria-labelledby={`f12-sp-t-${s.id}`}>
+    <article
+      id={`f12-sp-${s.id}`}
+      className={`f12-sp-row${ogrenildi ? ' is-done' : ''}${vurgulu ? ' is-flash' : ''}`}
+      aria-labelledby={`f12-sp-t-${s.id}`}
+      onClick={() => kaydetSpotZiyaret({ id: s.id, ders: s.ders, baslik: s.baslik, kategori: s.kategori })}
+    >
       <span className={`f12-badge ${uyari ? 'bad' : 'warn'}`}>{uyari ? 'Kritik uyarı' : 'Sınav spotu'}</span>
       <div className="f12-sp-txt">
         <h3 className="f12-sp-t" id={`f12-sp-t-${s.id}`}>{s.baslik}</h3>
@@ -532,8 +538,18 @@ const SpotRowBase: React.FC<RowProps> = ({ s, d, sinav, ogrenildi, kartta, vurgu
           aria-label={kartta ? 'Kartlardan çıkar' : 'Karta ekle'} title={kartta ? 'Kartlardan çıkar' : 'Karta ekle'}>
           {kartta ? <CopyCheck aria-hidden /> : <CopyPlus aria-hidden />}
         </button>
-        <button type="button" className={`f12-btn icon sm ghost f12-learn${ogrenildi ? ' is-on' : ''}`} aria-pressed={ogrenildi} onClick={() => onOgren(s.id)}
-          aria-label="Öğrendim" title={ogrenildi ? 'Öğrenildi — geri al' : 'Öğrendim'}>
+        <button
+          type="button"
+          className={`f12-btn icon sm ghost f12-learn${ogrenildi ? ' is-on' : ''}`}
+          aria-pressed={ogrenildi}
+          onClick={(e) => {
+            e.stopPropagation();
+            kaydetSpotZiyaret({ id: s.id, ders: s.ders, baslik: s.baslik, kategori: s.kategori });
+            onOgren(s.id);
+          }}
+          aria-label="Öğrendim"
+          title={ogrenildi ? 'Öğrenildi — geri al' : 'Öğrendim'}
+        >
           <Check aria-hidden strokeWidth={ogrenildi ? 3 : 1.8} />
         </button>
         {!gizli && (

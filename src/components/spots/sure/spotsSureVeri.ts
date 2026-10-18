@@ -142,8 +142,9 @@ export function getCozucuSureGruplari(): SpotBransSureGrup[] {
     if (!veri || !veri.dersler?.length) continue;
 
     const dersler: SpotDersSure[] = veri.dersler.map((d) => {
-      const p = ilerleme[d.kod] || {};
-      const cozulen = Object.keys(p).length;
+      const p = (ilerleme[d.kod] || {}) as { s?: Record<string, unknown> };
+      const sMap = p.s || p;
+      const cozulen = Object.keys(sMap).length;
       const soruSayisi = d.soru || 1;
       const oran = Math.min(1, cozulen / soruSayisi);
       const sure = d.sure || (d.soru * 75);
@@ -163,8 +164,9 @@ export function getCozucuSureGruplari(): SpotBransSureGrup[] {
     const toplamSure = dersler.reduce((acc, d) => acc + d.sure, 0);
     const toplamSoru = dersler.reduce((acc, d) => acc + (d.soru || 0), 0);
     const dinlenenSure = dersler.reduce((acc, d) => {
-      const p = ilerleme[d.kod] || {};
-      const cozulen = Object.keys(p).length;
+      const p = (ilerleme[d.kod] || {}) as { s?: Record<string, unknown> };
+      const sMap = p.s || p;
+      const cozulen = Object.keys(sMap).length;
       const soruSayisi = d.soru || 1;
       const oran = Math.min(1, cozulen / soruSayisi);
       return acc + Math.round(d.sure * oran);
