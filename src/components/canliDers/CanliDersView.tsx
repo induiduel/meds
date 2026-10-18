@@ -18,6 +18,8 @@ import { useCdTur } from './useCdTur';
 import { CevrimdisiDugme, useCevrimdisiSuzgec } from './CanliDersCevrimdisi';
 import { cdBransKisa, cdDersEtiketi, cdKategoriGrupla, cdKonuSayisi, cdParca, type CdKategori } from './canliDersKategori';
 import { useCdTvGezinme } from './CanliDersTv';
+import { bittiMi, sureYaz, useKonuKaydi, useTakip } from '../../services/calismaTakip';
+import { KonuDugmeleri, KonuIsaret, KonuSureEtiketi } from '../takip/KonuTakip';
 import '../../styles/canli-ders.css';
 
 const fold = (s: string) =>
@@ -295,6 +297,8 @@ const dk = (s: number) => Math.round(s / 60);
 
 /** Süreler sekmesi: her branşta her ders (konu) ayrı satır, dakika + saat; branş ara toplamı ve genel toplam. Part 1/2 tek konu altında. */
 function SureListesi({ dersler, onDersAc }: { dersler: CdListeDers[]; onDersAc?: () => void }) {
+  const takip = useTakip();
+  const harcanan = (ps: CdListeDers[]) => ps.reduce((n, p) => n + (takip.k[`sesli:${p.key}`]?.sn || 0), 0);
   const gruplar = useMemo(() => cdKategoriGrupla(dersler).map((g) => {
     const konular: { no: string; baslik: string; parcalar: CdListeDers[]; sure: number }[] = [];
     for (const d of g.dersler) {
@@ -321,7 +325,7 @@ function SureListesi({ dersler, onDersAc }: { dersler: CdListeDers[]; onDersAc?:
         <section key={g.kat.id} id={`sure-${g.kat.id}`} className="cd-sl-grup" aria-label={`${g.kat.ad} süreleri`}>
           <h2><span>{g.kat.ad}{g.kat.alt && <small> · {g.kat.alt}</small>}</span><span className="cd-sl-ara">{g.konular.length} konu · {dk(g.sure)} dk · {fmtSaat(g.sure)}</span></h2>
           <table className="cd-sl-tablo">
-            <thead><tr><th scope="col">No</th><th scope="col">Konu</th><th scope="col">Süre</th></tr></thead>
+            <thead><tr><th scope="col">No</th><th scope="col">Konu</th><th scope="col">Süre</th><th scope="col">Dinlediğin</th></tr></thead>
             <tbody>
               {g.konular.map((k) => (
                 <tr key={k.no + k.baslik}>
@@ -333,14 +337,15 @@ function SureListesi({ dersler, onDersAc }: { dersler: CdListeDers[]; onDersAc?:
                     )}
                   </td>
                   <td className="cd-sl-sure"><b>{dk(k.sure)} dk</b><small>{fmtSure(k.sure)}</small></td>
+                  <td className="cd-sl-sure">{harcanan(k.parcalar) ? <b>{sureYaz(harcanan(k.parcalar))}</b> : <small>—</small>}{k.parcalar.every((p) => bittiMi(takip.k[`sesli:${p.key}`])) && <small className="cd-sl-bitti">bitti</small>}</td>
                 </tr>
               ))}
             </tbody>
-            <tfoot><tr><td /><th scope="row">{g.kat.kisa} toplamı</th><td className="cd-sl-sure"><b>{dk(g.sure)} dk</b><small>{fmtSaat(g.sure)}</small></td></tr></tfoot>
+            <tfoot><tr><td /><th scope="row">{g.kat.kisa} toplamı</th><td className="cd-sl-sure"><b>{dk(g.sure)} dk</b><small>{fmtSaat(g.sure)}</small></td><td className="cd-sl-sure"><b>{sureYaz(harcanan(g.konular.flatMap((x) => x.parcalar)))}</b></td></tr></tfoot>
           </table>
         </section>
       ))}
-      <p className="cd-sl-not">Süreler her dersin varsayılan sesine göredir; Part 1/2 olan konular tek satırda toplanır.</p>
+      <p className="cd-sl-not">Süreler her dersin varsayılan sesine göredir; Part 1/2 olan konular tek satırda toplanır. "Dinlediğin": ses çalarken geçen gerçek süren (tekrar dinlemeler dahil). Konu konu liste: <a href={pathFor('bitirdiklerim')} onClick={(e) => { if (e.button || e.metaKey || e.ctrlKey) return; e.preventDefault(); onDersAc?.(); navigateTo(`${pathFor('bitirdiklerim')}?m=sesli`); }}>Bitirdiklerim</a>.</p>
     </div>
   );
 }
@@ -437,10 +442,11 @@ const DersSatiri = React.memo(function DersSatiri({ d, k }: { d: CdListeDers; k?
   useCdVarsayilanSes();
   const v = cdTercihVaryant(d.varyantlar) || d.varsayilan;
   const caliyor = useCd((s) => s.key === d.key && s.playing);
+  const bitti = bittiMi(useKonuKaydi('sesli', d.key));
   if (!v) return null;
   const sesN = d.varyantlar.length;
   return (
-    <li className={`cd-satir${caliyor ? ' is-caliyor' : ''}${acik ? ' is-acik' : ''}`}>
+    <li className={`cd-satir${caliyor ? ' is-caliyor' : ''}${acik ? ' is-acik' : ''}${bitti ? ' is-bitti' : ''}`}>
       <div className="cd-satir-ana">
         <span className="cd-no" aria-hidden>{d.no}</span>
         <a
@@ -457,9 +463,11 @@ const DersSatiri = React.memo(function DersSatiri({ d, k }: { d: CdListeDers; k?
             <span>{fmtSure(v.sureSn)}</span>
             {sesN > 1 && <span>{sesN} ses</span>}
             <SatirIlerleme d={d} k={k} dur={v.sureSn} />
+            <KonuSureEtiketi modul="sesli" konu={d.key} />
           </small>
         </a>
         <div className="cd-satir-eylem">
+          <KonuIsaret modul="sesli" konu={d.key} ad={d.baslik} />
           <OynatDugme d={d} v={v} yuvarlak />
         </div>
         <div className="cd-satir-diger">
@@ -480,6 +488,7 @@ const DersSatiri = React.memo(function DersSatiri({ d, k }: { d: CdListeDers; k?
           <div className="cd-secenek-arac">
             <CevrimdisiDugme dersKey={d.key} baslik={d.baslik} varyantlar={d.varyantlar} />
             <ListeEkleDugme dersKey={d.key} baslik={d.baslik} etiketli />
+            <KonuDugmeleri kucuk modul="sesli" konu={d.key} ad={d.baslik} onTekrar={() => { cdOynat(d, v.id, { t: 0 }); dersAc(d.key); }} />
             {d.pdf && <span className="cd-secenek-not">Slaytlar sesle birlikte açılır</span>}
           </div>
           <p className="cd-secenek-bas">{sesN > 1 ? `Sesler (${sesN})` : 'Ses'}</p>

@@ -1,0 +1,209 @@
+{
+  "id": "hemodinamik",
+  "ad": "Hemodinamik bozukluklar",
+  "kisa": "Ödem, hemostaz, trombosit, Virchow, hiperkoagülabilite, emboli, şok",
+  "tablolar": [
+    {
+      "id": "hiperemi-konjesyon",
+      "baslik": "Hiperemi ve konjesyon",
+      "k": ["11:6", "11:7", "11:8", "11:12", "11:13"],
+      "sutun": ["Özellik", "Hiperemi", "Konjesyon"],
+      "satir": [
+        ["Süreç", "Aktif: arteriyol dilatasyonu, akım ↑", "Pasif: venöz akım bozulur"],
+        ["Renk", "Kırmızı ve sıcak (oksijenli kan)", "Mavimsi kırmızı (siyanoz, deoksihemoglobin)"],
+        ["Örnek", "Enflamasyon, egzersizdeki kas", "Sistemik: kalp yetmezliği; lokal: ven trombozu"],
+        ["Kronik sonuç", "—", "Hipoksi, hücre ölümü, fibrozis; akciğerde hemosiderin yüklü “kalp yetmezliği hücreleri”; karaciğerde “muskat karaciğer”"]
+      ]
+    },
+    {
+      "id": "odem",
+      "baslik": "Ödem mekanizmaları",
+      "k": ["11:19", "11:20", "11:21", "11:22", "11:23", "11:25", "11:27", "11:28", "11:29"],
+      "sutun": ["Mekanizma", "Örnek"],
+      "satir": [
+        ["Hidrostatik basınç ↑", "Konjestif kalp yetmezliği, konstriktif perikardit, siroz, derin ven trombozu (bacakta ödem)"],
+        ["Plazma onkotik basıncı ↓ (hipoalbüminemi)", "Nefrotik sendrom, ileri karaciğer hastalığı, malnütrisyon (kwashiorkor), protein kaybettiren gastroenteropati"],
+        ["Lenfatik tıkanma (lenfödem)", "Tümör, aksiller diseksiyon, radyasyon, filaryazis (“fil hastalığı”); meme kanserinde portakal kabuğu"],
+        ["Sodyum ve su tutulumu", "Böbrek yetmezliği, poststreptokokal GN, RAAS aktivasyonu (sekonder hiperaldosteronizm)"],
+        ["Vasküler geçirgenlik ↑", "Akut ve kronik enflamasyon, anjiyogenez"]
+      ]
+    },
+    {
+      "id": "kanama-tipleri",
+      "baslik": "Kanama tipleri",
+      "k": ["11:39", "11:40", "11:42", "11:43"],
+      "sutun": ["Tip", "Boyut / yer", "Not"],
+      "satir": [
+        ["Peteşi", "1–2 mm; deri, mukoza, seröz yüzey", "Trombositopeni, trombosit fonksiyon bozukluğu, iskorbüt"],
+        ["Purpura", "3–5 mm", "Aynı nedenler + vaskülit, kırılganlık, travma"],
+        ["Ekimoz", "1–2 cm deri altı hematom", "Renk: hemoglobin (kırmızı-mavi) → bilirubin (mavi-yeşil) → hemosiderin (altın-kahve)"],
+        ["Hematom", "Doku içinde lokalize kan birikimi", "İç hematomda demir geri kazanılır, demir eksikliği yapmaz"],
+        ["Boşluk kanaması", "Hemotoraks, hemoperikardiyum, hemoperiton, hemartroz", "Kan hacminin %20'sine kadar hızlı kayıp tolere edilir"]
+      ]
+    },
+    {
+      "id": "hemostaz",
+      "baslik": "Hemostaz basamakları",
+      "k": ["12:6", "12:7", "12:8", "12:9", "12:10"],
+      "sutun": ["Basamak", "Olay"],
+      "satir": [
+        ["Arteriyel vazokonstriksiyon", "Nörojenik refleks + endotelin"],
+        ["Primer hemostaz", "Kollajen ve vWF açığa çıkar; trombosit yapışır, degranüle olur (ADP, TxA₂) → gevşek tıkaç"],
+        ["Sekonder hemostaz", "Doku faktörü + faktör VII → kaskad → trombin; fibrinojen → fibrin"],
+        ["Stabilizasyon ve çözülme", "Faktör XIII fibrini çapraz bağlar; antikoagülan ve fibrinolitik mekanizmalar sınırlar"]
+      ]
+    },
+    {
+      "id": "trombosit",
+      "baslik": "Trombosit granülleri ve reseptörleri",
+      "k": ["12:12", "12:13", "12:14", "12:15", "12:16"],
+      "sutun": ["Yapı", "İçerik / görev", "Klinik"],
+      "satir": [
+        ["α granül", "Fibrinojen, faktör V, vWF, fibronektin, PDGF, TGF-β; zarında P-selektin", "—"],
+        ["Yoğun (δ) granül", "ADP, ATP, kalsiyum, serotonin, epinefrin", "ADP diğer trombositleri toplar"],
+        ["GpIb", "vWF aracılığıyla kollajene yapışma", "GpIb eksikliği: Bernard–Soulier; vWF eksikliği: von Willebrand hastalığı"],
+        ["GpIIb/IIIa", "Fibrinojen bağlayarak agregasyon", "Otoimmün trombositopenik purpuranın hedef antijeni"],
+        ["PAR reseptörü", "Trombinle aktivasyon", "—"],
+        ["Fosfatidilserin", "Aktivasyonda dışa döner; faktör kompleksleri için platform", "—"]
+      ]
+    },
+    {
+      "id": "pt-aptt",
+      "baslik": "PT ve aPTT",
+      "k": ["12:22", "12:24"],
+      "sutun": ["Test", "Değerlendirdiği yol", "Faktörler"],
+      "satir": [
+        ["Protrombin zamanı (PT)", "Ekstrinsik + ortak yol", "VII, X, V, II, fibrinojen"],
+        ["aPTT", "İntrinsik + ortak yol", "XII, XI, IX, VIII, X, V, II, fibrinojen"],
+        ["İn vivo başlangıç", "Doku faktörü + faktör VIIa", "IX ve X'u aktive eder; trombin XI'i aktive ederek kaskadı güçlendirir"]
+      ]
+    },
+    {
+      "id": "endotel-denge",
+      "baslik": "Endotelin antitrombotik ve protrombotik yüzü",
+      "k": ["12:29", "12:35"],
+      "sutun": ["Yön", "Moleküller"],
+      "satir": [
+        ["Trombosit inhibisyonu", "PGI₂, NO, ADPaz"],
+        ["Antikoagülan", "Trombomodulin + endotel protein C reseptörü → protein C/S, Va ve VIIIa'yı inhibe eder; heparin benzeri moleküller → antitrombin III; TFPI"],
+        ["Fibrinolitik", "t-PA (plazminojen → plazmin → fibrin yıkımı, D-dimer)"],
+        ["Aktive endotel (protrombotik)", "Trombomodulin, protein C reseptörü, TFPI ↓; doku faktörü ↑; PAI ↑ (fibrinoliz ↓)"]
+      ]
+    },
+    {
+      "id": "virchow",
+      "baslik": "Virchow üçlüsü",
+      "k": ["12:32", "12:34", "12:36", "12:37"],
+      "sutun": ["Bileşen", "Örnek"],
+      "satir": [
+        ["Endotel hasarı / disfonksiyonu", "Ateroskleroz, hipertansiyon, hiperkolesterolemi, sigara, sitokinler; kalp ve arterde baskın"],
+        ["Anormal akım: türbülans", "Ülserleşmiş plak, anevrizma, mitral stenoz"],
+        ["Anormal akım: staz", "İmmobilizasyon, kalp yetmezliği, varis, atriyal fibrilasyon"],
+        ["Hiperkoagülabilite", "Özellikle venöz trombozun güçlü risk faktörü"]
+      ]
+    },
+    {
+      "id": "hiperkoagulabilite",
+      "baslik": "Kalıtsal ve edinsel hiperkoagülabilite",
+      "k": ["12:39", "12:40", "12:41", "12:42", "12:45", "12:46", "12:47"],
+      "sutun": ["Durum", "Tür", "Mekanizma / not"],
+      "satir": [
+        ["Faktör V Leiden (Arg506Glu)", "Kalıtsal, sık", "Faktör V protein C'ye dirençli; heterozigotta venöz tromboz riski 3–4, homozigotta 25–50 kat"],
+        ["Protrombin G20210A", "Kalıtsal, sık", "3' UTR değişimi → protrombin ↑; risk ≈3 kat"],
+        ["Antitrombin, protein C, protein S eksikliği", "Kalıtsal, nadir", "Ergenlik/erken erişkinlikte tekrarlayan venöz tromboz"],
+        ["Homosistinüri", "Kalıtsal, çok nadir", "Sistatiyon β-sentaz eksikliği"],
+        ["Heparine bağlı trombositopeni (HIT)", "Edinsel", "Heparin + PF4 kompleksine otoantikor → trombositopeni + tromboz (fraksiyone olmayan heparin kullananların ≈%5'i)"],
+        ["Antifosfolipid sendromu", "Edinsel", "Tekrarlayan tromboz, tekrarlayan düşük, trombositopeni; hedef β₂-glikoprotein I; lupus antikoagülanı testleri uzatır, sifiliz testinde yalancı pozitif"],
+        ["Diğer edinsel", "Edinsel", "İmmobilizasyon, MI, AF, cerrahi/kırık/yanık, kanser, protez kapak, DİK, gebelik, oral kontraseptif, nefrotik sendrom, sigara"]
+      ]
+    },
+    {
+      "id": "trombus",
+      "baslik": "Arteriyel ve venöz trombüs, postmortem pıhtı",
+      "k": ["12:48", "12:52", "12:53", "12:54", "12:55"],
+      "sutun": ["Özellik", "Arteriyel / kardiyak", "Venöz", "Postmortem pıhtı"],
+      "satir": [
+        ["Zemin", "Endotel hasarı, türbülans", "Neredeyse her zaman staz", "Ölüm sonrası"],
+        ["İçerik", "Trombositten zengin", "Eritrositten zengin (kırmızı), genellikle tıkayıcı", "Alt kısım koyu kırmızı, üst kısım sarı (“tavuk yağı”)"],
+        ["Duvara bağlılık", "Sıkı yapışık; Zahn çizgileri", "Sıkı yapışık", "Bağlı değil, jelatinimsi"],
+        ["Sık yer", "Koroner, serebral, femoral arter; mural trombüs", "Alt ekstremite derin venleri (DVT)", "—"],
+        ["Akıbet", "Yayılma, embolizasyon, çözünme, organizasyon ve rekanalizasyon", "Aynı", "—"]
+      ]
+    },
+    {
+      "id": "emboli",
+      "baslik": "Emboli tipleri",
+      "k": ["13:6", "13:7", "13:9", "13:10", "13:12", "13:13", "13:14", "13:16", "13:17", "13:18"],
+      "sutun": ["Tip", "Kaynak", "Klinik / morfoloji"],
+      "satir": [
+        ["Pulmoner tromboemboli", ">%95 diz üstü derin bacak venleri (DVT)", "Büyük: eyer emboli, ani ölüm; küçük tekrarlayan: pulmoner hipertansiyon, kor pulmonale; çift dolaşım nedeniyle orta boyutta enfarkt yapmayabilir"],
+        ["Sistemik tromboemboli", "≈%80 intrakardiyak mural trombüs (sol ventrikül enfarktı ~2/3, dilate sol atriyum ~1/4)", "Hedef: alt ekstremite (~%75), beyin (~%10); uç arter → enfarkt"],
+        ["Yağ embolisi", "Uzun kemik kırığı, yumuşak doku ezilmesi", "1–3 gün sonra triad: solunum yetmezliği, nörolojik bulgu, peteşiyal döküntü; anemi, trombositopeni"],
+        ["Amniyotik sıvı embolisi", "Plasenta zarları / uterin damar yırtığı", "Ani dispne, siyanoz, şok, DİK; mortalite ≈%80; akciğerde fetal skuamöz hücre, lanugo, verniks, mukus"],
+        ["Hava embolisi", "Cerrahi, göğüs travması, santral kateter", "Pulmoner tıkanma; büyük miktarda kalpte hava kilidi"],
+        ["Dekompresyon hastalığı", "Hızlı basınç düşüşüyle azot kabarcığı", "Akut: “bends”, “chokes”; kronik (Caisson): epifizlerde iskemik nekroz; tedavi yüksek basınç odası"]
+      ]
+    },
+    {
+      "id": "enfarktus",
+      "baslik": "Kırmızı ve beyaz enfarktüs",
+      "k": ["13:22", "13:23", "13:24", "13:25", "13:29", "13:30"],
+      "sutun": ["Özellik", "Kırmızı (hemorajik)", "Beyaz (anemik)"],
+      "satir": [
+        ["Nerede", "Venöz tıkanma (testis torsiyonu), çift dolaşımlı doku (akciğer, ince bağırsak), önceden konjesyon, reperfüzyon", "Uç arter dolaşımlı katı organlar: kalp, dalak, böbrek"],
+        ["Görünüm", "Yaygın hemoraji, gevşek doku", "Soluk, sınırları belirgin, kama şekilli (tabanı yüzeyde)"],
+        ["Mikroskopi", "Çoğu organda koagülatif nekroz", "Beyinde her zaman sıvılaşma nekrozu"],
+        ["Etkileyen faktör", "Çift dolaşım riski ↓, uç arter riski ↑; yavaş tıkanma kollaterale izin verir; doku hipoksi duyarlılığı", "Septik enfarktta (endokardit vejetasyonu) apseye dönüşüm"]
+      ]
+    },
+    {
+      "id": "sok",
+      "baslik": "Şok tipleri",
+      "k": ["13:32", "13:33", "13:34", "13:44", "13:45"],
+      "sutun": ["Tip", "Örnek", "Mekanizma", "Klinik / prognoz"],
+      "satir": [
+        ["Kardiyojenik", "MI, ventrikül rüptürü, aritmi, tamponad, masif pulmoner emboli", "Miyokard pompa yetmezliği", "Hipotansiyon, soğuk-nemli cilt; yüksek mortalite"],
+        ["Hipovolemik", "Kanama, kusma, ishal, yanık", "Efektif kan/plazma hacmi azalır", "Genç sağlıklıda tedaviyle >%90 sağkalım"],
+        ["Septik", "Bakteriyel/fungal sepsis, süperantijen (toksik şok)", "Periferik vazodilatasyon, endotel aktivasyonu, DİK, sitokin kaskadı (TNF, IL-1)", "Erken dönemde sıcak, kızarık cilt; mortalite %20–30"],
+        ["Nörojenik", "Anestezi, omurilik yaralanması", "Generalize damar tonusu kaybı", "—"],
+        ["Anafilaktik", "IgE aracılı aşırı duyarlılık", "Yaygın vazodilatasyon, geçirgenlik ↑", "—"]
+      ]
+    },
+    {
+      "id": "septik-sok",
+      "baslik": "Septik şokun mekanizmaları",
+      "k": ["13:37", "13:38", "13:39", "13:40", "13:41", "13:42", "13:43"],
+      "sutun": ["Başlık", "Olay"],
+      "satir": [
+        ["Enflamatuvar yanıt", "TLR vb. ile tanıma → TNF, IL-1, IL-6, IL-12, IL-18, tip I IFN, prostaglandin, lökotrien, ROS; kompleman C3a, C5a, C5b–C9"],
+        ["Endotel hasarı", "Adezyon molekülleri ↑, sıkı bağlantılar zayıflar → proteinden zengin ödem"],
+        ["Pıhtılaşma bozukluğu", "Doku faktörü ↑; TFPI, trombomodulin, protein C reseptörü ↓; PAI-1 ↑ → DİK; tüketime bağlı kanama"],
+        ["Metabolik", "İnsülin direnci, hiperglisemi (GLUT-4 ↓); laktik asidoz; adrenal yetmezlik (Waterhouse–Friderichsen)"],
+        ["Organ yetmezliği", "Akut tübüler nekroz, ARDS (şok akciğeri), miyokard depresyonu, karaciğer disfonksiyonu"],
+        ["Evreler", "Kompanse (baroreseptör, katekolamin, ADH, RAAS) → ilerleyici (laktik asidoz) → geri dönüşümsüz"],
+        ["Morfoloji", "Glomerüllerde fibrin trombüsü, adrenal kortekste lipid tükenmesi, beyin ve kalpte hipoksik değişiklik"]
+      ]
+    },
+    {
+      "id": "antitrombotik-ilac",
+      "baslik": "Tromboz tedavisi ve korunma",
+      "k": ["12:27", "12:56", "12:47"],
+      "sutun": ["İlaç / yaklaşım", "Etki"],
+      "satir": [
+        ["t-PA ve benzerleri", "Plazminojeni aktive eder; MI ve inmede ilk saatlerde etkili fibrinolitik"],
+        ["Aspirin vb. antiplatelet", "Trombosit agregasyonunu baskılar"],
+        ["Heparin, varfarin, DOAC", "Antikoagülasyon"],
+        ["Antifosfolipid sendromu", "Antikoagülasyon + immünsüpresyon"]
+      ]
+    }
+  ],
+  "notlar": [
+    {"m": "Kalp yetmezliğinde kısır döngü: debi ↓ → böbrek hipoperfüzyonu → RAAS → Na/su tutulumu → venöz basınç ve ödem ↑.", "k": "11:23"},
+    {"m": "Albümin plazma proteinlerinin ≈%50'si ve onkotik basıncın en büyük katkısıdır.", "k": "11:25"},
+    {"m": "Periorbital ödem nefrotik sendromun erken belirtisidir; bağımlı ödem ayakta bacakta, yatarken sakrumda olur.", "k": "11:31"},
+    {"m": "Akciğer ödeminin en sık nedeni sol ventrikül yetmezliğidir; beyin ödemi herniye ve beyin sapı kompresyonuna yol açabilir.", "k": "11:33"},
+    {"m": "Trombin en kritik pıhtılaşma faktörüdür: fibrin oluşturur, XIII, V, VIII, XI'i aktive eder, trombositleri PAR ile aktive eder; trombomodulinle antikoagülan yola da katılır.", "k": "12:25"},
+    {"m": "Kalsiyum faktör II, VII, IX, X'un γ-karboksiglutamat bölgelerine bağlanan kofaktördür.", "k": "12:21"},
+    {"m": "Genetik trombofili testi <50 yaş DVT, güçlü aile öyküsü ve belirgin edinsel risk yokluğunda düşünülür.", "k": "12:43"}
+  ]
+}

@@ -12,6 +12,7 @@ import {
 } from './cozucuVeri';
 import { bransTanim, type Brans } from '../brans';
 import { ekleCozucuSure, kaydetCozucuZiyaret } from '../../../services/spotCozucuIstatistik';
+import { tekrarTamamlandi, useKonuSayaci, useSoruSayaci } from '../../../services/calismaTakip';
 import { OgrenYeri } from '../ogren/OgrenYeri';
 import { ogrenEslemeVar } from '../ogren/ogrenEsle';
 import '../../../styles/soru-cozucu.css';
@@ -208,6 +209,14 @@ export const SoruCozucu: React.FC<Props> = ({
     };
   }, [caliyor]);
 
+  // Konu takibi (Bitirdiklerim): bu setin etkin süresi + çözülen soru; tekrar turunda tüm sorular bitince "bitti"
+  const takipKonu = ders && !ozelSorular?.length ? `${brans}/${ders.kod}` : null;
+  useKonuSayaci('cozucu', takipKonu, caliyor);
+  const soruSay = useSoruSayaci('cozucu', takipKonu);
+  useEffect(() => {
+    if (bitti && takipKonu && !tekrar && ders && Object.keys(sonuc).length >= ders.sorular.length) tekrarTamamlandi('cozucu', takipKonu);
+  }, [bitti]); // eslint-disable-line react-hooks/exhaustive-deps
+
   // ---------- ses motoru: adımlar sırayla; her adım bir klip (yoksa okuma süresi)
   const durdur = useCallback(() => {
     siraRef.current++;
@@ -351,7 +360,7 @@ export const SoruCozucu: React.FC<Props> = ({
 
   const kaydir = (sec: string) => requestAnimationFrame(() => requestAnimationFrame(() =>
     kokRef.current?.querySelector(sec)?.scrollIntoView({ block: 'nearest', behavior: azHareket() ? 'auto' : 'smooth' })));
-  const sonucYaz = (no: number, r: Sonuc) => setSonuc((x) => ({ ...x, [no]: r }));
+  const sonucYaz = (no: number, r: Sonuc) => { soruSay(no); setSonuc((x) => ({ ...x, [no]: r })); };
   const acikla = (h: Harf) => setAciklanan((a) => (a.includes(h) ? a : [...a, h]));
   const ele = (h: Harf) => setElenen((e) => (e.includes(h) ? e : [...e, h]));
 

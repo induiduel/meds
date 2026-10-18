@@ -14,6 +14,7 @@
  *   /canliders   → Sesli ders (eski adı Canlı ders): sesli dersler (liste), /canliders/<key> metin + PDF ile dinleme
  *   /soru-cozucu → sesli soru çözücü (branş başlangıç ekranı; eski /spotlar?gorunum=cozucu buraya yönlenir)
  *   /en-onemliler → sınav için en önemliler (100 puan; eski /spotlar?gorunum=onem buraya yönlenir)
+ *   /patoloji-check-up → Patoloji Hızlı Check Up: ders slaytlarından karşılaştırma tabloları + kısa notlar (?bolum=)
  *   /saglik      → Sağlık Bakanlığı: resmî veriler + ders bağları, /saglik/<bölüm> (asi, karabuk, yenidogan …)
  *
  * Old `#tab` links keep working: they are rewritten to the matching path on load.
@@ -54,7 +55,9 @@ export type AppRoute =
   | 'stats'
   | 'sinav_calisma'
   | 'soru_cozucu'
-  | 'en_onemliler';
+  | 'en_onemliler'
+  | 'patoloji_checkup'
+  | 'bitirdiklerim';
 
 export const ROUTE_PATHS: Record<AppRoute, string> = {
   quick_add: '/',
@@ -91,6 +94,8 @@ export const ROUTE_PATHS: Record<AppRoute, string> = {
   sinav_calisma: '/sinav-calisma',
   soru_cozucu: '/soru-cozucu',
   en_onemliler: '/en-onemliler',
+  patoloji_checkup: '/patoloji-check-up',
+  bitirdiklerim: '/bitirdiklerim',
 };
 
 export const ROUTE_TITLES: Record<AppRoute, string> = {
@@ -128,6 +133,8 @@ export const ROUTE_TITLES: Record<AppRoute, string> = {
   sinav_calisma: 'Sınav çalışması',
   soru_cozucu: 'Soru çözücü',
   en_onemliler: 'En önemliler',
+  patoloji_checkup: 'Patoloji Hızlı Check Up',
+  bitirdiklerim: 'Bitirdiklerim',
 };
 
 const BY_SEGMENT: Record<string, AppRoute> = Object.fromEntries(
@@ -214,6 +221,14 @@ const ALIASES: Record<string, AppRoute> = {
   en_onemliler: 'en_onemliler',
   onemliler: 'en_onemliler',
   'onem-listesi': 'en_onemliler',
+  patoloji_checkup: 'patoloji_checkup',
+  'check-up': 'patoloji_checkup',
+  checkup: 'patoloji_checkup',
+  'patoloji-checkup': 'patoloji_checkup',
+  bitirdiklerim: 'bitirdiklerim',
+  bitirdiklerimiz: 'bitirdiklerim',
+  ilerlemem: 'bitirdiklerim',
+  'kontrol-listesi': 'bitirdiklerim',
 };
 
 export interface ParsedRoute {

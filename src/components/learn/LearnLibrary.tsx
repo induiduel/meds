@@ -20,6 +20,8 @@ import { FilterPills, PageToolbar, QuickOptions, type ToolbarChip } from '../ui/
 import SCHEDULE from '../../data/deckSchedule.json';
 import { disciplineGroup, type ArchiveFilter } from './LearnHub';
 import '../../styles/learn-v10.css';
+import { KonuIsaret } from '../takip/KonuTakip';
+import { ogrenTakipId } from '../takip/ogrenTakipId';
 
 export type Progress = Record<string, { last?: number; seen?: number[] } | undefined>;
 export type Status = 'all' | 'active' | 'done';
@@ -119,6 +121,8 @@ export const LearnLibrary: React.FC<{
   versions?: Record<string, string[]>;
   /** Hata defteri (tekrar ekranı); deckId verilirse yalnız o ders */
   onOpenReview?: (deckId?: string) => void;
+  /** "Tekrar et": kalınan adımı başa alıp açar (klasik görünümde yalnız Bitirdim işareti var) */
+  onRestart?: (id: string) => void;
 }> = ({ decks: all, progress, isAdmin, archive, onArchive, onOpen, versions, onOpenReview }) => {
   const review = useReviewCounts();
   const [query, setQuery] = useState('');
@@ -398,6 +402,7 @@ export const LearnLibrary: React.FC<{
                         {s.status === 'done' ? <><Check aria-hidden />Bitti</> : s.status === 'active' ? `%${s.pct}` : 'Başla'}
                       </span>
                     </button>
+                    <KonuIsaret modul="ogren" konu={ogrenTakipId(d.id)} ad={deckName(d, false)} turetilen={s.status === 'done'} />
                     {pdf ? (
                       <button type="button" className="lv-card-pdf" onClick={() => onOpen(d.id, true)} title="Ders slaytını (PDF) aç" aria-label={`${deckName(d)} slayt PDF'ini aç`}>
                         <FileText aria-hidden />

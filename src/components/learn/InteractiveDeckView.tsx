@@ -806,6 +806,19 @@ export const InteractiveDeckView: React.FC<InteractiveDeckViewProps> = ({ initia
     }
   }, [activeDeck, initialSlideNumber]);
 
+  const openDeck = (id: string, pdf?: boolean) => {
+    const versions = versionsOf(id);
+    if (versions.length > 1) {
+      // Tıklanan kart en yeni sürümdür; pencerede o sürüm seçili ve vurgulu gelir
+      setVersionPick({ list: versions, pdf, selected: versions.some((v) => v.id === id) ? id : versions[versions.length - 1].id });
+      return;
+    }
+    touchRecent(id);
+    setPlayerViewMode(pdf ? 'pdf' : 'interactive');
+    setDeckId(id);
+    onDeckChange?.(id);
+  };
+
   return (
     <div className="flex flex-col gap-3 sm:gap-4 min-w-0">
       <Library
@@ -816,17 +829,17 @@ export const InteractiveDeckView: React.FC<InteractiveDeckViewProps> = ({ initia
         isAdmin={isAdmin}
         archive={adminArchiveFilter}
         onArchive={setAdminArchiveFilter}
-        onOpen={(id, pdf) => {
-          const versions = versionsOf(id);
-          if (versions.length > 1) {
-            // Tıklanan kart en yeni sürümdür; pencerede o sürüm seçili ve vurgulu gelir
-            setVersionPick({ list: versions, pdf, selected: versions.some((v) => v.id === id) ? id : versions[versions.length - 1].id });
-            return;
-          }
-          touchRecent(id);
-          setPlayerViewMode(pdf ? 'pdf' : 'interactive');
-          setDeckId(id);
-          onDeckChange?.(id);
+        onOpen={openDeck}
+        onRestart={(id) => {
+          // Tekrar et (Bitirdiklerim): grubun tüm sürümlerinde kalınan adım başa alınır, ders baştan açılır
+          const ids = versionsOf(id).map((v) => v.id);
+          setProgress((prev) => {
+            const next = { ...prev };
+            for (const x of ids.length ? ids : [id]) if (next[x]) next[x] = { ...next[x], last: 0 };
+            writeProgress(next);
+            return next;
+          });
+          openDeck(id);
         }}
       />
 

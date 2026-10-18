@@ -1,0 +1,320 @@
+{
+  "id": "genital-meme",
+  "ad": "Genital sistem, gebelik ve meme",
+  "kisa": "CYBE, HPV–serviks, endometrium, over, mol, preeklampsi, meme alt tipleri, testis, prostat",
+  "tablolar": [
+    {
+      "id": "cybe",
+      "baslik": "Cinsel yolla bulaşan enfeksiyonlar",
+      "k": ["26b:29", "26b:32", "26b:33", "26b:37", "26b:38", "26b:40", "26b:46", "26b:48", "26b:49", "26b:51", "26b:52", "26b:53", "26b:54", "26b:56", "26b:60", "26b:61"],
+      "sutun": ["Hastalık", "Etken", "Lezyon / klinik", "Histoloji / tanı"],
+      "satir": [
+        ["Sifiliz", "Treponema pallidum", "Primer: ağrısız sert şankr (~21 gün); sekonder: döküntü, kondiloma lata; tersiyer: aortit, nörosifiliz, gumma", "Proliferatif endarterit + plazma hücresi; RPR/VDRL (izlem), treponemal test (ömür boyu +); penisilin"],
+        ["Gonore", "Neisseria gonorrhoeae (Gram − diplokok)", "Erkekte pürülan üretrit; kadında çoğu asemptomatik, PID, infertilite, ektopik gebelik; yenidoğan konjonktiviti", "Nötrofil içinde diplokok; NAAT tercih"],
+        ["Klamidya (NGU)", "Chlamydia trachomatis (zorunlu hücre içi)", "En sık CYBE ve servisit etkeni; çoğu asemptomatik; PID, infertilite; yenidoğanda konjonktivit, pnömoni", "Elementer ve retiküler cisim; NAAT"],
+        ["Lenfogranüloma venereum", "C. trachomatis L1–L3", "Ülseratif; kasık lenfadenopatisi, proktit; fibrozis ve darlık", "Nekrotizan granülom (yıldızsı apse); NAAT"],
+        ["Şankroid (yumuşak şankr)", "Haemophilus ducreyi", "Ağrılı, çoklu, indürasyonsuz ülser", "Nötrofil ve fibrinli ülser, granülasyon dokusu"],
+        ["Trikomoniyaz", "Trichomonas vaginalis", "Köpüklü sarı-yeşil akıntı, kaşıntı; gebelikte erken membran rüptürü", "Islak preparatta hareketli organizma"],
+        ["Genital herpes", "HSV-2 (HSV-1 artıyor)", "Ağrılı vezikül/ülser, nüks; yenidoğanda yaygın hastalık", "Cowdry tip A inklüzyon, çok çekirdekli dev hücre"],
+        ["Kondiloma akuminatum", "HPV 6, 11", "Anogenital papiller siğil", "Koilositoz (perinükleer halo)"]
+      ]
+    },
+    {
+      "id": "vajinit",
+      "baslik": "Vajinit etkenleri",
+      "k": ["28:13", "28:14", "28:65", "28:68", "28:71", "28:72"],
+      "sutun": ["Etken", "Özellik", "İpucu"],
+      "satir": [
+        ["Candida albicans", "Cinsel yolla bulaşmaz; diyabet, antibiyotik, gebelik, immün yetmezlik", "Kaşıntı, beyaz plak benzeri lezyon"],
+        ["Trichomonas vaginalis", "En yaygın viral olmayan CYBE", "Köpüklü akıntı"],
+        ["Gardnerella vaginalis", "Bakteriyel vajinozun ana nedeni", "İnce gri, balık kokulu akıntı; ipucu hücreleri (clue cells)"]
+      ]
+    },
+    {
+      "id": "vulva-karsinom",
+      "baslik": "Vulvar skuamöz hücreli karsinom: iki yol",
+      "k": ["28:40", "28:41", "28:44", "28:45", "28:48"],
+      "sutun": ["Özellik", "HPV pozitif", "HPV negatif"],
+      "satir": [
+        ["Tip", "Bazaloid / siğil benzeri", "Keratinize SCC"],
+        ["Yaş", "≈60; sigara içenler", "≈75"],
+        ["Öncül", "VIN (yüksek dereceli)", "Diferansiye VIN (dVIN); liken skleroz, skuamöz hiperplazi zemini"],
+        ["Morfoloji", "Multifokal, kötü diferansiye", "Unifokal, iyi diferansiye"]
+      ]
+    },
+    {
+      "id": "sil",
+      "baslik": "HPV ve servikal skuamöz intraepitelyal lezyon",
+      "k": ["39:34", "39:36", "39:37", "39:38", "39:39", "39:43", "39:46", "39:50", "39:55"],
+      "sutun": ["Özellik", "LSIL (CIN I)", "HSIL (CIN II–III)"],
+      "satir": [
+        ["Biyoloji", "Viral replikasyon yüksek, hafif değişiklik", "Proliferasyon belirgin, olgunlaşma durmuş, replikasyon düşük"],
+        ["Tutulum", "Alt üçte bir", "CIN II alt üçte iki, CIN III tam kalınlık"],
+        ["Doğal seyir", "%60 geriler, %30 kalır, %10 HSIL'e", "%30 geriler, %60 kalır, %10 karsinoma (2–10 yıl)"],
+        ["Yönetim", "Yakın takip", "Konik biyopsi, düzenli izlem"],
+        ["Ek risk", "—", "Sigara, immün yetmezlik; ≈%20 de novo gelişir"]
+      ]
+    },
+    {
+      "id": "serviks-tarama",
+      "baslik": "Serviks kanseri: tarama ve tipler",
+      "k": ["39:40", "39:41", "39:42", "39:43", "39:44", "39:46", "39:47", "39:58", "39:62", "01:93"],
+      "sutun": ["Başlık", "İçerik"],
+      "satir": [
+        ["Pap testi", "Transformasyon bölgesinden sitoloji; ölüm oranında ≈%75 azalma"],
+        ["HPV DNA testi", "≥30 yaşta değerli; negatifse 5 yıl risk çok düşük; <30 yaşta prediktif değeri düşük"],
+        ["HPV aşısı", "4 değerlikli (6, 11, 16, 18) veya 9 değerlikli; 11–12 yaş kız ve erkek; taramanın yerini tutmaz"],
+        ["Bethesda", "Negatif, ASC-US / ASC-H, LSIL, HSIL, karsinom"],
+        ["Tipler", "SCC ≈%80, adenokarsinom ve adenoskuamöz ≈%15, küçük hücreli nöroendokrin <%5 (prognozu çok kötü)"],
+        ["Yaş", "SIL zirvesi ≈30, invaziv karsinom ≈45"],
+        ["Lenf nodu riski", "<3 mm invazyonda <%1, ≥3 mm'de >%10; “fıçı serviks”"]
+      ]
+    },
+    {
+      "id": "endometriozis-adenomyoz",
+      "baslik": "Adenomyoz ve endometriozis",
+      "k": ["30:11", "30:12", "30:13", "30:14", "30:15", "30:19", "30:20", "30:21", "30:22", "30:23", "30:24", "30:28", "30:29", "30:30", "30:31"],
+      "sutun": ["Özellik", "Adenomyoz", "Endometriozis"],
+      "satir": [
+        ["Tanım", "Miyometriyumda endometrial doku", "Uterus dışında endometrial bez + stroma (ikisi birlikte şart)"],
+        ["Yer", "Miyometriyum; büyük küresel uterus", "Over, Douglas, ligamentler, tüp; laparotomi izi, göbek"],
+        ["Klinik", "Menoraji, dismenore, pelvik ağrı", "Şiddetli dismenore, disparoni, pelvik ağrı; infertilite %30–40"],
+        ["Patogenez", "—", "Regürjitasyon, benign metastaz, metaplastik, kök hücre teorileri; PGE₂, VEGF, MMP ↑; stromada aromataz ↑ → lokal östrojen"],
+        ["Tedavi", "—", "COX-2 inhibitörü, aromataz inhibitörü, hormonal baskılama, cerrahi"]
+      ]
+    },
+    {
+      "id": "endometrium-ca",
+      "baslik": "Endometrioid ve seröz endometrial karsinom",
+      "k": ["30:43", "30:44", "30:50", "30:51", "30:52", "30:55", "30:56", "30:57", "30:59", "30:60", "30:70", "30:71"],
+      "sutun": ["Özellik", "Endometrioid", "Seröz"],
+      "satir": [
+        ["Sıklık", "≈%80", "≈%15"],
+        ["Hasta", "Perimenopozal, obez", "Daha yaşlı postmenopozal (65–70)"],
+        ["Zemin", "Östrojen fazlalığı, endometrial hiperplazi (atipili hiperplazi öncül)", "Endometrial atrofi; öncül seröz endometrial intraepitelyal karsinom"],
+        ["Genetik", "Erken: MMR genleri, PTEN; germ hattı Lynch ve Cowden", "Neredeyse tümünde TP53"],
+        ["Prognoz", "Erken evrede 5 yıl ≈%90", "Agresif, sıklıkla yüksek evrede, kötü"]
+      ]
+    },
+    {
+      "id": "hiperplazi",
+      "baslik": "Endometrial hiperplazi",
+      "k": ["30:43", "30:44", "30:50", "30:51", "30:52"],
+      "sutun": ["Özellik", "Atipisiz", "Atipili"],
+      "satir": [
+        ["Neden", "Progestine göre östrojen fazlalığı (obezite, karşılanmamış östrojen, PCOS, granüloza-teka tümörü)", "Aynı + edinilmiş klonal mutasyon (PTEN)"],
+        ["Karsinom riski", "%1–3", "Karsinom öncüsü"],
+        ["Tedavi", "Nedenin düzeltilmesi, progestin, izlem", "Histerektomi; fertilite isteyende yüksek doz progestin"]
+      ]
+    },
+    {
+      "id": "leiomyom",
+      "baslik": "Leiomyom ve leiomyosarkom",
+      "k": ["30:76", "30:77", "30:78", "30:82", "30:84", "30:85", "30:86", "30:87", "30:90", "30:91"],
+      "sutun": ["Özellik", "Leiomyom", "Leiomyosarkom"],
+      "satir": [
+        ["Sayı / yaş", "Sıklıkla çoklu, premenopozal", "Neredeyse her zaman tek, postmenopozal"],
+        ["Genetik", "6 ve 12 kromozom düzenlenmesi; MED12 ≈%70", "Kompleks karyotip; MED12 ≈%30"],
+        ["Hormon", "Östrojen ve progesteron büyütür, menopozda küçülür", "—"],
+        ["Tanı", "İntramural, submukozal (kanama), subserozal", "Üçlü: tümör nekrozu, belirgin atipi, mitoz artışı"],
+        ["Seyir", "Menoraji, bası; malign dönüşüm son derece nadir", "Nüks; akciğer, kemik, beyin metastazı; kötü prognoz"]
+      ]
+    },
+    {
+      "id": "over-epitel",
+      "baslik": "Over yüzey epitel tümörleri",
+      "k": ["31:20", "31:21", "31:24", "31:25", "31:26", "31:30", "31:31", "31:32", "31:36", "31:37", "31:38", "31:40", "31:41", "31:44", "31:49", "31:55", "31:56", "31:59", "31:60", "31:7"],
+      "sutun": ["Tümör", "Özellik", "Moleküler", "İpucu"],
+      "satir": [
+        ["Düşük dereceli seröz", "Benign/borderline lezyondan basamaklı; Tip I", "KRAS, BRAF, ERBB2; TP53 yabanıl", "Periton ve omentuma yayılır"],
+        ["Yüksek dereceli seröz", "Fallop tüpü fimbriyasında STIC kökenli; Tip II", "TP53 ≈%95; BRCA1/2 taşıyıcılarında neredeyse tüm over karsinomları", "Tanıda sıklıkla ileri evre, asit"],
+        ["Müsinöz", "%80 benign; nadiren bilateral", "KRAS", "Bilateral müsinöz tümörde Krukenberg (GİS metastazı) düşün; psödomiksoma peritoneinin çoğu apendiks kökenli"],
+        ["Endometrioid", "Çoğu malign; %20 bilateral; endometriozisle ilişkili", "PTEN, PI3K–AKT", "%15–20'sinde eş zamanlı endometrial karsinom"],
+        ["Berrak hücreli", "Nadir; gebelik endometriyumuna benzer", "PIK3CA, ARID1A, KRAS, PTEN, TP53", "Endometriozisle birlikte olabilir"],
+        ["Risk faktörleri", "İleri yaş, erken menarş, geç menopoz, nulliparite, BRCA", "BRCA taşıyıcısında 70 yaşa kadar risk %20–60", "Uzun süreli oral kontraseptif riski azaltır"]
+      ]
+    },
+    {
+      "id": "over-germ-stroma",
+      "baslik": "Over germ hücreli ve seks kord–stromal tümörler",
+      "k": ["31:63", "31:64", "31:65", "31:66", "31:70", "31:72", "31:75", "31:78"],
+      "sutun": ["Tümör", "Yaş", "Özellik", "Klinik"],
+      "satir": [
+        ["Disgerminom", "20'li yaşlar; gonadal disgenezi", "Seminomun karşılığı; berrak büyük hücreler, lenfosit", "Radyosensitif, kür ≈%80"],
+        ["Koriokarsinom (over)", "<30 yaş", "Sitotrofoblast + sinsityotrofoblast, villus yok", "hCG salgılar, erken metastaz, kemoterapiye dirençli"],
+        ["Granüloza hücreli tümör", "En sık postmenopozal", "Folikülleri taklit eden granüloza hücreleri", "Östrojen → endometrial hiperplazi; %5–25 malign"],
+        ["Tekoma–fibroma", "Her yaş", "Lipid yüklü teka hücresi + fibroblast", "Çoğu inaktif; ≈%40 Meigs sendromu (asit + hidrotoraks)"],
+        ["Sertoli–Leydig hücreli tümör", "Pik 2.–3. dekat", "Testis gelişimini taklit eder", "Maskülinizan / defeminizan"],
+        ["Olgun teratom (dermoid kist)", "Genç kadın", "Üç germ yaprağı; diş, kıl, yağ", "Torsiyon %10–15; ≈%1 malign (SCC); limbik ensefalit"],
+        ["İmmatür teratom", "Ortalama 18 yaş", "Embriyonel/fetal doku", "Malign"],
+        ["Struma ovarii", "—", "Tamamen olgun tiroid dokusu", "Hipertiroidizm"],
+        ["Krukenberg tümörü", "İleri yaş", "Mühür yüzük hücreli metastatik müsinöz adenokarsinom", "Çoğunlukla bilateral; primer GİS"]
+      ]
+    },
+    {
+      "id": "mol",
+      "baslik": "Tam ve kısmi hidatidiform mol",
+      "k": ["32:38", "32:39", "32:40", "32:42", "32:44", "32:45", "32:50"],
+      "sutun": ["Özellik", "Tam mol", "Kısmi mol"],
+      "satir": [
+        ["Karyotip", "Diploid (46,XX; nadiren XY) — tüm genom babadan (boş ovum + 2 sperm)", "Triploid (69,XXY) — normal ovum + 2 sperm"],
+        ["Fetal doku", "Nadir", "Sık (fetal eritrosit, bazen fetüs)"],
+        ["Villus ödemi", "Tüm villuslar", "Bazı villuslar"],
+        ["Trofoblast proliferasyonu", "Difüz, çepeçevre", "Fokal, hafif"],
+        ["hCG", "Çok yüksek (>100.000 IU/L olabilir)", "Daha az yüksek / normal"],
+        ["Koriokarsinom riski", "%2,5", "Nadir"],
+        ["İzlem", "Küretaj + 6–12 ay seri hCG", "Aynı"]
+      ]
+    },
+    {
+      "id": "trofoblastik",
+      "baslik": "Diğer gestasyonel trofoblastik hastalıklar",
+      "k": ["32:51", "32:52", "32:53", "32:55", "32:56", "32:57", "32:60", "32:62", "32:63", "32:64"],
+      "sutun": ["Hastalık", "Özellik", "Tedavi / prognoz"],
+      "satir": [
+        ["İnvaziv mol", "Lokal agresif tam mol; hidropik villuslar miyometriyuma girer, akciğer/beyne emboli yapabilir", "Çoğu kemoterapiyle tam iyileşme"],
+        ["Gestasyonel koryokarsinom", "%50 tam mol, %25 düşük, %22 normal gebelik sonrası; kanlı akıntı, hızla yükselen hCG; akciğer ve vajina metastazı", "Kemoterapiye çok duyarlı, metastazda bile ≈%100 kür (gonadal form dirençli)"],
+        ["Plasental bölge trofoblastik tümörü (PSTT)", "Ara (ekstravillöz) trofoblast; hCG düşük, hPL yüksek", "Uterusa sınırlıysa iyi; kemoterapiye az duyarlı"]
+      ]
+    },
+    {
+      "id": "preeklampsi",
+      "baslik": "Preeklampsinin mekanizmaları",
+      "k": ["32:20", "32:21", "32:22", "32:24", "32:25", "32:27", "32:28", "32:30", "32:33"],
+      "sutun": ["Basamak", "Olay"],
+      "satir": [
+        ["Temel", "Spiral arterlerde yetersiz yeniden şekillenme: kas-elastik duvar korunur, lümen dar kalır"],
+        ["Plasenta", "Hipoperfüzyon, hipoksi, enfarkt, retroplasental kanama; desidual damarda “akut aterozis”"],
+        ["Anjiyojenik dengesizlik", "sFlt-1 ve endoglin ↑ → VEGF ve TGF-β etkisi antagonize edilir → endotel disfonksiyonu"],
+        ["Hipertansiyon", "PGI₂ ve PGE₂ ↓, TxA₂ ↑"],
+        ["Klinik", "%3–5; ilk gebelikte sık; 34. haftadan sonra; hipertansiyon + ödem + proteinüri; konvülsiyon eklenirse eklampsi"],
+        ["HELLP", "Şiddetli olguların ≈%10'u: hemoliz, karaciğer enzim yüksekliği, düşük trombosit; DİK"],
+        ["Tedavi", "En etkili tedavi doğum"]
+      ]
+    },
+    {
+      "id": "torch-ektopik",
+      "baslik": "Plasenta enfeksiyonları ve ektopik gebelik",
+      "k": ["32:5", "32:7", "32:8", "32:9", "32:10", "32:11", "32:12", "32:13"],
+      "sutun": ["Başlık", "İçerik"],
+      "satir": [
+        ["Asendan enfeksiyon", "En sık; polimikrobiyal bakteri → akut koryoamniyonit, funisit; erken membran rüptürü, preterm doğum"],
+        ["Hematogen (TORCH)", "Toksoplazma, diğer (sifiliz, TB, Listeria), rubella, CMV, HSV → kronik villit; fetüste ensefalit, koryoretinit"],
+        ["Ektopik gebelik", "≈%2; %90 tüp; en önemli risk PID (kronik salpingit); RİA riski ≈2 kat"],
+        ["Ektopik klinik", "Rüptürde ani şiddetli karın ağrısı, hipovolemik şok; tanı transvajinal USG + seri hCG; histolojide koryonik villus"]
+      ]
+    },
+    {
+      "id": "meme-benign-risk",
+      "baslik": "Meme epitel lezyonları ve kanser riski",
+      "k": ["33:26", "33:27", "33:31", "33:34"],
+      "sutun": ["Grup", "Örnek", "Rölatif risk"],
+      "satir": [
+        ["Proliferatif olmayan", "Kist, duktal ektazi, apokrin metaplazi, adenozis, basit fibroadenom", "1,0 (≈%3)"],
+        ["Atipisiz proliferatif", "Belirgin hiperplazi, sklerozan adenozis, kompleks sklerozan lezyon", "1,5–2"],
+        ["Atipili proliferatif", "Atipik duktal hiperplazi, atipik lobüler hiperplazi", "4–5"],
+        ["Karsinoma in situ", "LCIS, DCIS", "8–10"]
+      ]
+    },
+    {
+      "id": "meme-alt-tip",
+      "baslik": "Meme kanserinin biyolojik alt tipleri",
+      "k": ["33:43", "33:46", "33:47", "33:63", "33:67", "35:49", "35:56"],
+      "sutun": ["Özellik", "Lüminal (ER+/HER2−)", "HER2 pozitif", "Üçlü negatif (TNBC)"],
+      "satir": [
+        ["Sıklık", "%50–65", "%10–20", "%10–20"],
+        ["Tipik hasta", "Yaşlı kadın, erkek, taramayla saptanan; germ hattı BRCA2", "Genç kadın; germ hattı TP53", "Genç kadın; germ hattı BRCA1; Afrika kökenli Amerikalı"],
+        ["Derece", "Çoğunlukla 1–2", "Çoğunlukla 2–3", "Çoğunlukla 3"],
+        ["Kemoterapiye tam yanıt", "≈%10", "ER−'de %30–60", "≈%30"],
+        ["Nüks", "Düşük oranlı, >10 yıl sonra geç nüks", "Bimodal (erken ve ≈10 yıl)", "<8 yılda erken zirve"],
+        ["Metastaz", "Kemik (%70–80)", "Kemik %70, viseral %45, beyin %30", "Kemik %40, viseral %35, beyin %25"],
+        ["Somatik mutasyon", "PIK3CA, TP53 daha az", "TP53 %70–80, PIK3CA ≈%40", "TP53 %70–80; BRCA1 promotor metilasyonu ≈%50"],
+        ["Tedavi", "Tamoksifen, aromataz inhibitörü, CDK4/6 inhibitörü", "Trastuzumab, pertuzumab", "Kemoterapi; BRCA'da platin ve PARP inhibitörü; PD-1/PD-L1"]
+      ]
+    },
+    {
+      "id": "meme-gen",
+      "baslik": "Kalıtsal meme kanseri genleri",
+      "k": ["33:56", "33:60", "33:61", "33:62"],
+      "sutun": ["Gen / sendrom", "70 yaşa kadar meme riski", "Diğer kanser", "Not"],
+      "satir": [
+        ["BRCA1", "%40–90", "Over (%20–40), tüp, pankreas, prostat", "Çoğu TNBC; medüller paternli karsinom"],
+        ["BRCA2", "%30–60 (erkek %6)", "Over, pankreas, prostat", "Çoğu ER pozitif; bialelik → Fanconi"],
+        ["TP53 (Li–Fraumeni)", "%50–60", "Sarkom, lösemi, beyin", "Çoğu ER ve HER2 pozitif"],
+        ["PTEN (Cowden)", "%20–80", "Tiroid, endometrium", "Çok sayıda benign tümör"],
+        ["STK11 (Peutz–Jeghers)", "%40–60", "Over, kolon, pankreas", "Hamartomatöz polip"],
+        ["CDH1", "≈%50", "Diffüz mide (mühür yüzük)", "Lobüler meme karsinomu"],
+        ["PALB2 / ATM / CHEK2", "%30–60 / %15–30 / %10–30", "Pankreas, prostat / — / prostat, tiroid, kolon", "ATM bialelik: ataksi-telanjiektazi; CHEK2 çoğu ER+"]
+      ]
+    },
+    {
+      "id": "meme-insitu-tip",
+      "baslik": "İn situ ve özel tip meme karsinomları",
+      "k": ["35:8", "35:13", "35:14", "35:16", "35:17", "35:18", "35:22", "35:25", "35:30", "35:34", "35:35", "35:38", "35:39", "35:40", "35:41"],
+      "sutun": ["Tip", "Özellik", "Prognoz / not"],
+      "satir": [
+        ["DCIS", "Kalsifikasyonla saptanır; yüksek derecede komedonekroz", "Eksizyon + radyoterapi; 20 yıllık sağkalım >%95"],
+        ["LCIS", "Tesadüfi bulgu, kalsifikasyon yapmaz; her iki memede risk", "Yılda ≈%1 invaziv; tamoksifenle risk azaltma"],
+        ["Meme başı Paget", "Altta DCIS ve/veya invaziv karsinom", "Vulva Paget'te çoğunlukla altta tümör yok"],
+        ["Özel tipi olmayan (duktal)", "İnvaziv kanserlerin %70–80'i", "Çoğu DCIS ile ilişkili"],
+        ["Lobüler karsinom", "E-kadherin kaybı (İHK negatif); ER+, HER2 nadir", "BOS, seröz yüzey, GİS, over, kemik iliği metastazı"],
+        ["Medüller paternli", "Neredeyse her zaman üçlü negatif; BRCA1", "—"],
+        ["Müsinöz (kolloid), tübüler", "Lüminal; jelatinimsi / iyi oluşmuş tübüller", "İyi / mükemmel prognoz"],
+        ["İnflamatuvar karsinom", "Dermal lenfatik invazyon → ödem, portakal kabuğu; gerçek enflamasyon az", "3 yıllık sağkalım %3–10"]
+      ]
+    },
+    {
+      "id": "testis-tumor",
+      "baslik": "Testis tümörleri",
+      "k": ["34:24", "34:25", "34:26", "34:29", "34:30", "34:31", "34:32", "34:35", "34:37", "34:38", "34:39"],
+      "sutun": ["Tümör", "Zirve yaş", "Morfoloji", "Belirteç", "Not"],
+      "satir": [
+        ["Seminom", "40–50", "Berrak uniform poligonal hücre, stromada lenfosit", "%10'unda hCG ↑", "Radyo ve kemoterapiye duyarlı, evre I–II %95 kür; ilk yayılım iliak/paraaortik"],
+        ["Embriyonel karsinom", "20–30", "Kötü diferansiye polimorf hücre", "AFP yüksek olabilir", "Saf form ≈%90 tam remisyon"],
+        ["Yolk kesesi tümörü", "—", "Eozinofilik hiyalin globül (AFP, α1-antitripsin)", "AFP %90 ↑", "—"],
+        ["Koryokarsinom", "20–30", "Sitotrofoblast + sinsityotrofoblast", "hCG %100 ↑", "Küçük primer, yaygın erken metastaz; en kötü prognoz"],
+        ["Teratom", "Her yaş", "Üç germ yaprağı", "AFP %20–25", "Prepubertalde benign; erişkinde malign kabul"],
+        ["Spermatositik tümör", "50–60 (>65)", "Küçük-orta-büyük hücre, enflamasyon yok", "Negatif", "Metastaz yapmaz; GCNIS ve i(12p) yok, 9q kazanımı"],
+        ["Risk", "—", "Kriptorşizm (≈%10'unda öykü), aile öyküsü, androjen duyarsızlığı, gonadal disgenezi", "—", "Öncül: germ hücreli neoplazi in situ; tedavi inguinal radikal orşiektomi"]
+      ]
+    },
+    {
+      "id": "bph-prostat",
+      "baslik": "BPH ve prostat adenokarsinomu",
+      "k": ["34:61", "34:68", "34:69", "34:70", "34:79", "34:82", "34:84", "34:89", "34:92", "34:93", "34:96", "34:98", "34:100"],
+      "sutun": ["Özellik", "Benign prostat hiperplazisi", "Prostat adenokarsinomu"],
+      "satir": [
+        ["Zon", "Geçiş zonu → üretral tıkanma semptomu", "%70–80 periferik zon → rektal muayenede sert nodül, erken tıkanma az"],
+        ["Patogenez", "Androjen bağımlı: 5α-redüktaz tip 2 ile DHT (testosterondan 10 kat güçlü); östrojen sinerjisi", "Androjenler merkezi; TMPRSS2-ETS, PTEN delesyonu, MYC; erken olay GSTP1 metilasyonu; öncül HGPIN"],
+        ["Sıklık", "80'li yaşlarda ≈%90", "Erkeklerde en sık kanser; 70–80 yaşta otopside ≈%70"],
+        ["Tanı", "—", "PSA (BPH ve prostatitte de ↑; organ sınırlıların %20–40'ında normal); Gleason → 5 derece grubu"],
+        ["Tedavi", "α1 bloker, 5α-redüktaz inhibitörü; TURP, HIFU, lazer", "Prostatektomi, radyoterapi, aktif izlem; androjen yoksunluğu (LHRH agonisti ± antiandrojen); tedavi sonrası PSA ile izlem"]
+      ]
+    },
+    {
+      "id": "erkek-diger",
+      "baslik": "Penis, skrotum, testis ve prostatit",
+      "k": ["34:4", "34:7", "34:8", "34:9", "34:16", "34:19", "34:20", "34:22", "34:23", "34:30", "34:63", "34:66", "34:67"],
+      "sutun": ["Durum", "Özellik"],
+      "satir": [
+        ["Hipospadias / epispadias", "Üretral açıklık ventral / dorsal; kriptorşizm, kasık fıtığıyla birlikte olabilir"],
+        ["Fimozis, balanopostit", "Sünnetsizlik, hijyen, smegma; Candida, Gardnerella"],
+        ["Penis SCC", "Sünnetsiz, >40 yaş; HPV 16, 18; HPV negatif verruköz karsinom metastaz yapmaz"],
+        ["Hidrosel", "Seröz sıvı; transilluminasyon pozitif (testis tümöründe negatif)"],
+        ["Kriptorşizm", "1 yaşında ≈%1; kanser ve infertilite riski; karşı testiste de risk; 6–12 ayda orşiopeksi"],
+        ["Kabakulak orşiti", "Ergenlik sonrası %20–30; parotitten ≈1 hafta sonra"],
+        ["Testis torsiyonu", "Ürolojik acil; ilk 6 saatte detorsiyonla testis kurtarılabilir"],
+        ["Prostatit", "Akut bakteriyel (sepsis riski, masaj kontrendike), kronik bakteriyel, kronik abakteriyel (pelvik ağrı sendromu)"]
+      ]
+    }
+  ],
+  "notlar": [
+    {"m": "Meme başı akıntısında en sık benign neden intraduktal papillomdur; kendiliğinden, tek taraflı, kanlı akıntıda malignite dışlanmalıdır.", "k": "33:10"},
+    {"m": "Jinekomasti erkekte en sık meme semptomudur: östrojen etkisi ↑, androjen etkisi ↓.", "k": "33:13"},
+    {"m": "Meme kanserinde riski azaltan başlıca faktörler erken gebelik (<20 yaş) ve uzun süreli emzirmedir.", "k": "33:51"},
+    {"m": "Meme kanserinde prognozu belirleyen iki grup: anatomik evre (TNM) ve tümör biyolojisi (ER/PR/HER2, tip, derece, proliferasyon); lenf düğümü tutulumu çok güçlü prognostik faktördür.", "k": "35:45"},
+    {"m": "Ovaryum kanseri tanıda çoğunlukla ileri evrededir; CA-125 tarama için değil, tedavi yanıtı ve nüks izlemi için değerlidir.", "k": "31:82"},
+    {"m": "PCOS: androjen fazlalığı + ovulasyon disfonksiyonu; metabolik sendrom, tip 2 diyabet ve endometrial karsinom riski artar.", "k": "31:18"},
+    {"m": "Serviks kanserinde HPV gereklidir ama tek başına yeterli değildir; sigara ve immün yetmezlik ek faktörlerdir.", "k": "39:60"}
+  ]
+}

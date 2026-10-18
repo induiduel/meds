@@ -1,0 +1,171 @@
+{
+  "id": "mediyatorler",
+  "ad": "Kimyasal mediyatörler",
+  "kisa": "Araşidonik asit türevleri, COX-1/COX-2, interlökinler, TNF, kompleman",
+  "tablolar": [
+    {
+      "id": "arasidonik-yol",
+      "baslik": "Araşidonik asit metabolizması",
+      "k": ["08:18", "08:19", "08:20"],
+      "sutun": ["Basamak", "Enzim", "Ürün", "Bu basamağı engelleyen"],
+      "satir": [
+        ["Membran fosfolipidi → araşidonik asit", "Fosfolipaz A₂", "Araşidonik asit (20 karbonlu çoklu doymamış yağ asidi)", "Kortikosteroidler"],
+        ["Araşidonik asit → PGG₂ → PGH₂", "Siklooksijenaz (COX-1, COX-2)", "Prostaglandinler (PGI₂, PGD₂, PGE₂, PGF₂α), tromboksan A₂", "Aspirin, indometazin, ibuprofen (NSAİİ); seçici COX-2 inhibitörleri"],
+        ["Araşidonik asit → 5-HPETE → LTA₄", "5-lipoksijenaz", "LTB₄; LTC₄ → LTD₄ → LTE₄ (sisteinil lökotrienler)", "Zileuton (5-lipoksijenaz inhibitörü)"],
+        ["Lökotrien reseptörü (CysLT₁)", "—", "Lökotrien etkileri", "Zafirlukast vb. reseptör antagonistleri (astım)"],
+        ["Lökosit–trombosit etkileşimi", "12-lipoksijenaz", "Lipoksin A₄, lipoksin B₄", "—"]
+      ]
+    },
+    {
+      "id": "eikozanoidler",
+      "baslik": "Eikozanoidler: kaynak ve etki",
+      "k": ["08:9", "08:20", "08:21", "08:22", "08:23", "08:24", "08:25", "08:26", "14:12", "32:27"],
+      "sutun": ["Molekül", "Başlıca kaynak", "Ana etki", "Klinik bağlantı"],
+      "satir": [
+        ["PGI₂ (prostasiklin)", "Endotel", "Vazodilatasyon, trombosit agregasyonunu inhibe eder", "TxA₂/PGI₂ dengesi trombozda kritik; preeklampside azalır"],
+        ["TxA₂ (tromboksan A₂)", "Trombosit", "Güçlü trombosit agregasyonu, vazokonstriksiyon", "Trombosit aktivasyonunda “toplanma” döngüsü; preeklampside artar"],
+        ["PGD₂", "Mast hücresi (başlıca)", "Vazodilatasyon, geçirgenlik ↑ (ödem), nötrofil kemoatraktanı; bronkospazm, mukus ↑", "Tip I aşırı duyarlılığın lipid mediyatörü"],
+        ["PGE₂", "Mast hücresi, makrofaj, endotel", "Vazodilatasyon; ateş (hipotalamus) ve ağrı; duyusal sinirleri duyarlılaştırır", "TNF/IL-1 ateşi hipotalamusta PGE₂ ile yapar; endometriozis odağında artar"],
+        ["LTB₄", "Nötrofil, mast hücresi", "Güçlü nötrofil kemoatraktanı; adezyon ve ROS üretimi ↑", "Eozinofil ve monosit için de kemotaktik"],
+        ["LTC₄, LTD₄, LTE₄", "Mast hücresi, lökosit", "Güçlü bronkokonstriksiyon, vazokonstriksiyon, venül geçirgenliğinde belirgin artış", "Astım patogenezi; histaminden binlerce kat etkili"],
+        ["Lipoksinler (LXA₄, LXB₄)", "Lökosit–trombosit etkileşimi", "Anti-enflamatuvar: nötrofil kemotaksisi ve adezyonunu inhibe eder", "Enflamasyonun çözünme (rezolüsyon) fazında önemli"]
+      ]
+    },
+    {
+      "id": "cox",
+      "baslik": "COX-1 ve COX-2",
+      "k": ["08:21", "08:27", "30:31"],
+      "sutun": ["Özellik", "COX-1", "COX-2"],
+      "satir": [
+        ["İfade biçimi", "Konstitütif (sürekli)", "Enflamatuvar uyarı ile indüklenir"],
+        ["Görev", "Homeostatik fonksiyonlar (böbrek, mide vb.)", "Enflamasyona bağlı prostaglandinler"],
+        ["İnhibitör", "Aspirin, ibuprofen gibi NSAİİ'ler (COX-1 + COX-2)", "Seçici COX-2 inhibitörleri; NSAİİ'ler; kortikosteroidler COX-2 ekspresyonunu azaltır"],
+        ["Dikkat", "—", "Seçici COX-2 inhibisyonu tromboksan/prostasiklin dengesini bozar → tromboz riski ↑; endometriozis tedavisinde kullanılır"]
+      ]
+    },
+    {
+      "id": "mediyator-genel",
+      "baslik": "Başlıca enflamasyon mediyatörleri",
+      "k": ["08:7", "08:14", "08:15", "08:16", "08:17", "08:42", "08:43", "08:44", "08:45"],
+      "sutun": ["Mediyatör", "Kaynak", "Etki"],
+      "satir": [
+        ["Histamin", "Mast hücresi (en zengin), bazofil, trombosit — önceden depolanmış", "Arteriyolde vazodilatasyon, venülde endotel kasılması ve geçici geçirgenlik ↑ (H1 reseptörü)"],
+        ["Serotonin", "Trombosit, nöroendokrin hücreler", "Vazokonstriksiyon baskın; rolü histamine göre az belirgin"],
+        ["Prostaglandinler", "Mast hücresi, lökosit", "Vazodilatasyon, ateş, ağrı"],
+        ["Lökotrienler", "Mast hücresi, lökosit", "Geçirgenlik ↑, kemotaksi, lökosit adezyonu ve aktivasyonu"],
+        ["Sitokinler (TNF, IL-1, IL-6)", "Makrofaj, endotel, mast hücresi", "Lokal endotel aktivasyonu; sistemik ateş, metabolik bozukluk, şok"],
+        ["Kemokinler", "Lökosit, aktive makrofaj", "Kemotaksi, lökosit aktivasyonu"],
+        ["PAF (trombosit aktive edici faktör)", "Trombosit, bazofil, mast hücresi, nötrofil, makrofaj, endotel", "Trombosit agregasyonu, vazo- ve bronkokonstriksiyon; düşük dozda vazodilatasyon ve geçirgenlik ↑"],
+        ["Kompleman", "Plazma (karaciğer)", "Kemotaksi, aktivasyon, MAC ile öldürme, mast hücresi uyarısıyla vazodilatasyon"],
+        ["Bradikinin (kininler)", "Plazma: kallikrein ile kininojenden", "Geçirgenlik ↑, düz kas kontraksiyonu, vazodilatasyon, ağrı; kinazlarla hızla yıkılır"],
+        ["Nitrik oksit (NO)", "Endotel (eNOS), nöron (nNOS), makrofaj (iNOS)", "Vazodilatasyon; makrofajda mikrobisidal (peroksinitrit)"],
+        ["Substance P (nöropeptid)", "Duyusal sinirler, bazı lökositler", "Ağrı iletimi, geçirgenlik ↑, düz kas kontraksiyonu"]
+      ]
+    },
+    {
+      "id": "reaksiyon-mediyator",
+      "baslik": "Hangi reaksiyonda hangi mediyatör?",
+      "k": ["08:8", "08:9"],
+      "sutun": ["Reaksiyon", "Başlıca mediyatörler"],
+      "satir": [
+        ["Vazodilatasyon", "Histamin; PGI₂, PGE₁, PGE₂, PGD₂"],
+        ["Vazokonstriksiyon", "TxA₂; LTC₄, LTD₄, LTE₄"],
+        ["Vasküler geçirgenlik artışı", "Histamin; C3a ve C5a (mast hücresinden amin salınımıyla); LTC₄, LTD₄, LTE₄"],
+        ["Kemotaksi, lökosit toplanması ve aktivasyonu", "TNF, IL-1, kemokinler, C3a, C5a, LTB₄"],
+        ["Ateş", "IL-1, TNF, prostaglandinler"],
+        ["Ağrı", "Prostaglandinler, bradikinin, nöropeptitler"],
+        ["Doku hasarı", "Lökosit lizozomal enzimleri, ROS"]
+      ]
+    },
+    {
+      "id": "sitokinler",
+      "baslik": "Sitokinler ve interlökinler",
+      "k": ["08:10", "08:11", "08:31", "08:32", "08:33", "08:34", "09:16", "09:20", "09:24", "09:25", "14:8", "14:47", "14:67", "13:37", "07:33", "20:10"],
+      "sutun": ["Sitokin", "Başlıca kaynak", "Görev / hedef", "Nerede karşımıza çıkar?"],
+      "satir": [
+        ["TNF", "Makrofaj, mast hücresi, T lenfosit", "Endotelde adezyon molekülü (E/P-selektin, ICAM, VCAM) ↑, prokoagülan aktivite; sistemik ateş, iştahsızlık, kaşeksi, akut faz yanıtı", "Septik şok (vazodilatasyon, miyokard depresyonu); dışsal apoptoz yolu (TNF reseptörü); kanser kaşeksisi (“kaşektin”); nekroptoz; granülom oluşumu"],
+        ["IL-1", "Makrofaj, dendritik hücre, endotel, bazı epitel", "TNF'ye benzer; özellikle ateşte belirgin; fibroblastta kolajen sentezi ve proliferasyon", "Piroptozda salınır; septik şok; kaşeksi"],
+        ["IL-6", "Makrofaj, diğer hücreler", "Karaciğerde akut faz yanıtı (CRP, SAA, fibrinojen)", "Karaciğer rejenerasyonunda hepatositleri büyüme faktörüne duyarlı hale getirir (priming); inflammaging; kaşeksi"],
+        ["IL-12", "Dendritik hücre, makrofaj", "IFN-γ üretimini artırır, Th1 yanıtını güçlendirir", "Lenfosit–makrofaj döngüsü; septik şok mediyatörü"],
+        ["IFN-γ", "T lenfosit (Th1), NK hücresi", "Makrofajları aktive eder (M1), mikrop ve tümör öldürmeyi artırır; kronik hücresel immün yanıtın temel sitokini", "Granülomda makrofajı epiteloid hücreye çevirir; DTH (tüberkülin testi)"],
+        ["IL-17", "Th17 hücresi", "Nötrofil ve monosit toplanması", "Psöriazis, romatoid artrit; Tip IV aşırı duyarlılık"],
+        ["IL-4, IL-13", "Th2 hücresi", "B hücresinde IgE sınıf değişimi; M2 (alternatif) makrofaj aktivasyonu", "Tip I aşırı duyarlılık; IL-13 fibrogeniktir"],
+        ["IL-5", "Th2 hücresi", "Eozinofil aktivasyonu", "Alerji, helmint enfeksiyonları"],
+        ["IL-10", "Treg, M2 makrofaj", "Baskılayıcı (anti-enflamatuvar)", "Periferik tolerans; tümörün immün kaçışı"],
+        ["IL-2", "T hücresi", "T hücre proliferasyonu", "Treg yüksek afiniteli IL-2 reseptörüyle IL-2'yi tüketir; siklosporin/takrolimus IL-2 transkripsiyonunu, rapamisin IL-2 yanıtını engeller"],
+        ["IL-8 (kemokin)", "Makrofaj, endotel vb.", "Nötrofil kemoatraktanı", "Mast hücresi degranülasyonunu da tetikler"],
+        ["IL-18", "Makrofaj vb.", "Proenflamatuvar", "Septik şok mediyatörleri arasında"],
+        ["Tip I interferonlar (IFN-α)", "Çeşitli hücreler", "Antiviral savunma; bazı sistemik belirtiler", "SLE'de IFN-α fazlalığı"],
+        ["Kemokinler (≈40 tür)", "Makrofaj, endotel, T hücresi, mast hücresi", "Lökosit kemotaksisi; homeostatik olanlar lenf düğümü yerleşimini sağlar", "Metastazda organ tropizmi (kemokin reseptörleri); eotaksin eozinofil çeker"]
+      ]
+    },
+    {
+      "id": "tnf-il1-sistemik",
+      "baslik": "TNF ve IL-1'in lokal ve sistemik etkileri",
+      "k": ["08:32", "08:33", "08:12"],
+      "sutun": ["Düzey", "Etki"],
+      "satir": [
+        ["Endotel", "E- ve P-selektin, ICAM, VCAM ↑; prokoagülan aktivite ↑"],
+        ["Lökosit", "Adezyon, göç ve aktivasyon artışı"],
+        ["Fibroblast", "Kolajen sentezi ve proliferasyon (özellikle IL-1)"],
+        ["Hipotalamus", "Ateş (PGE₂ aracılığıyla)"],
+        ["Karaciğer", "Akut faz proteinleri: CRP, SAA, fibrinojen (IL-6 ile)"],
+        ["Kemik iliği", "Lökositoz"],
+        ["Yüksek TNF (sepsis/SIRS)", "Vazodilatasyon, miyokard depresyonu, hipotansiyon (şok), kaşeksi"]
+      ]
+    },
+    {
+      "id": "kompleman",
+      "baslik": "Kompleman sistemi",
+      "k": ["08:37", "08:38", "08:39", "08:40"],
+      "sutun": ["Bileşen / yol", "Görev"],
+      "satir": [
+        ["Klasik yol", "Antijen–antikor (IgG, IgM) kompleksi ile C1 aktivasyonu"],
+        ["Alternatif yol", "Mikrobiyal yüzey molekülleri (LPS, polisakkarit)"],
+        ["Lektin yolu", "Mannoz bağlayıcı lektinin mikrobiyal karbonhidrata bağlanması"],
+        ["Ortak nokta", "C3 konvertaz oluşur, C3 → C3a + C3b"],
+        ["C3a, C4a, C5a (anafilatoksinler)", "Mast hücresinden histamin salınımı"],
+        ["C5a", "Güçlü kemotaktik (nötrofil, monosit)"],
+        ["C3b, iC3b", "Opsonizasyon → fagositoz artar"],
+        ["C5b–C9 (MAC)", "Hücre lizisi; özellikle Neisseria türlerinin öldürülmesi"]
+      ]
+    },
+    {
+      "id": "kompleman-duzenleyici",
+      "baslik": "Kompleman düzenleyicileri ve eksiklikleri",
+      "k": ["08:41", "21:37", "23:13"],
+      "sutun": ["Protein", "Görev", "Eksiklik / mutasyon sonucu"],
+      "satir": [
+        ["C1 inhibitörü (C1-INH)", "Klasik yolu sınırlar", "Kalıtsal anjiyoödem"],
+        ["DAF ve CD59 (GPI bağlı)", "C3 konvertaz ve MAC oluşumunu sınırlar", "Paroksismal noktürnal hemoglobinüri (PNH)"],
+        ["Faktör H", "C3 konvertaz inaktivasyonunu destekler", "Hemolitik üremik sendrom (kompleman aracılı TMA), ıslak maküler dejenerasyon, C3 glomerülopatisi"],
+        ["Faktör I, MCP", "Alternatif yolu negatif düzenler", "Kompleman aracılı TMA, C3 glomerülopatisi"],
+        ["C3 nefritik faktör (C3NeF)", "C3 konvertazı stabilize eden otoantikor", "C3 glomerülopatisi (yoğun birikim hastalığı)"]
+      ]
+    },
+    {
+      "id": "anti-enflamatuvar-ilac",
+      "baslik": "Enflamasyon mediyatörlerini hedefleyen ilaçlar",
+      "k": ["08:16", "08:20", "08:27", "08:28", "08:29", "14:20"],
+      "sutun": ["İlaç", "Hedef", "Sonuç / kullanım"],
+      "satir": [
+        ["Kortikosteroidler", "Fosfolipaz A₂ inhibisyonu; COX-2, IL-1, TNF ve iNOS ekspresyonunu azaltır", "Hem eikozanoid hem sitokin yanıtı baskılanır; Tip I aşırı duyarlılıkta enflamasyonu baskılar"],
+        ["Aspirin, ibuprofen, indometazin (NSAİİ)", "COX-1 ve COX-2", "Prostaglandin sentezi ↓ → ağrı ve ateş azalır"],
+        ["Seçici COX-2 inhibitörleri", "COX-2", "Yalnız enflamatuvar prostaglandinleri hedefler; tromboz riski artabilir"],
+        ["Zileuton", "5-lipoksijenaz", "Lökotrien üretimi azalır"],
+        ["Zafirlukast vb.", "CysLT₁ reseptörü", "Alerjik astım, alerjik rinit"],
+        ["H1 antihistaminikler", "Endoteldeki H1 reseptörü", "Alerji ve ürtiker"],
+        ["Epinefrin", "—", "Anafilaksinin acil tedavisi"],
+        ["Anti-IgE antikorları, Th2 sitokin/reseptör antikorları", "IgE, Th2 sitokinleri", "Tip I aşırı duyarlılıkta biyolojik tedavi"]
+      ]
+    }
+  ],
+  "notlar": [
+    {"m": "Mediyatörler çoğunlukla lokal üretilir, kısa ömürlüdür ve hızla yıkılır; kontrolsüz üretim doku hasarının önemli nedenidir.", "k": "08:5"},
+    {"m": "Histamin önceden depolanmış (hızlı salınım), prostaglandin–lökotrien–sitokinler ise uyarı sonrası yeni sentezlenir.", "k": "08:6"},
+    {"m": "Mast hücresi degranülasyonunu IgE, C3a/C5a, fiziksel hasar ve bazı nöropeptit/sitokinler (IL-1, IL-8) tetikler.", "k": "08:15"},
+    {"m": "Lökotrien reseptör antagonistleri lökotrienlerin tüm etkilerini engeller; klinikte astımda kullanılır.", "k": "08:20"},
+    {"m": "Mediyatörler birbirini güçlendirir ve yedekler; bu yüzden tek bir yolu bloklamak çoğu zaman yanıtı tamamen durdurmaz. Stratejik hedefler: COX, lökotrien yolu, TNF, IL-1, IL-6, IL-17, kompleman.", "k": "08:46"},
+    {"m": "Plazma kaynaklı mediyatörler (kompleman, kinin, koagülasyon) karaciğerde sentezlenir, inaktif prekürsör olarak dolaşır, proteolizle aktive olur.", "k": "08:13"}
+  ]
+}

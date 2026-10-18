@@ -1,0 +1,177 @@
+{
+  "id": "immunopatoloji",
+  "ad": "Aşırı duyarlılık, otoimmünite, nakil ve amiloidoz",
+  "kisa": "Tip I–IV, otoantikorlar, tolerans, red tipleri, immün yetmezlik, amiloid",
+  "tablolar": [
+    {
+      "id": "hs-tipleri",
+      "baslik": "Aşırı duyarlılık tipleri",
+      "k": ["14:5", "14:6", "14:7", "14:22", "14:32", "14:38"],
+      "sutun": ["Tip", "İmmün mekanizma", "Lezyon", "Prototip hastalık"],
+      "satir": [
+        ["Tip I (ani)", "Th2 → IgE; mast hücresinden vazoaktif amin ve mediyatör; geç fazda hücre toplanması", "Vazodilatasyon, ödem, düz kas kontraksiyonu, mukus", "Anafilaksi, alerjiler, atopik astım"],
+        ["Tip II (antikor aracılı)", "Hücre/matriks antijenine IgG, IgM; kompleman veya Fc reseptörüyle fagositoz/lizis; reseptör fonksiyonunu bozma", "Hücre fagositozu ve lizisi, enflamasyon, hasarsız fonksiyon bozukluğu", "Otoimmün hemolitik anemi, Goodpasture sendromu"],
+        ["Tip III (immün kompleks)", "Dolaşan antijen–antikor (IgG/IgM) kompleksinin birikimi, kompleman aktivasyonu", "Enflamasyon, nekrotizan vaskülit (fibrinoid nekroz)", "SLE, bazı GN tipleri, serum hastalığı, Arthus reaksiyonu"],
+        ["Tip IV (T hücre aracılı)", "CD4⁺ Th1/Th17 sitokinleri ve makrofaj aktivasyonu; CD8⁺ CTL sitotoksisitesi", "Perivasküler hücresel infiltrat, ödem, granülom, hücre yıkımı", "Kontakt dermatit, MS, tip 1 diyabet, tüberküloz"]
+      ]
+    },
+    {
+      "id": "tip1-mediyator",
+      "baslik": "Tip I aşırı duyarlılıkta mast hücresi ürünleri",
+      "k": ["14:8", "14:9", "14:11", "14:12", "14:13", "14:14"],
+      "sutun": ["Grup", "Mediyatör", "Etki"],
+      "satir": [
+        ["Granül (önceden yapılmış)", "Histamin", "Vazodilatasyon, geçirgenlik ↑, düz kas kontraksiyonu, mukus"],
+        ["Granül", "Nötral proteazlar (triptaz)", "Doku hasarı; kinin ve kompleman ürünü oluşumu"],
+        ["Granül", "Proteoglikanlar (heparin)", "Aminler için depo"],
+        ["Lipid (yeni sentez)", "PGD₂", "Bronkospazm, mukus ↑"],
+        ["Lipid (yeni sentez)", "LTC₄, LTD₄", "Çok güçlü vazoaktif ve spazmojenik"],
+        ["Lipid (yeni sentez)", "LTB₄", "Nötrofil, eozinofil, monosit için kemotaktik"],
+        ["Sitokin", "TNF, kemokinler", "Lökosit toplanması, geç faz reaksiyonu"],
+        ["Zamanlama", "Erken faz 5–30 dk (≈1 saatte azalır); geç faz 2–8(24) saat", "Geç fazda nötrofil, eozinofil, Th2 infiltrasyonu ve epitel hasarı"]
+      ]
+    },
+    {
+      "id": "tip2-ornek",
+      "baslik": "Tip II (antikor aracılı) hastalıklar",
+      "k": ["14:22", "14:27", "14:29", "14:30"],
+      "sutun": ["Hastalık", "Hedef antijen", "Mekanizma", "Bulgu"],
+      "satir": [
+        ["Otoimmün hemolitik anemi", "Eritrosit membran proteinleri", "Opsonizasyon ve fagositoz", "Hemoliz, anemi"],
+        ["Otoimmün trombositopenik purpura", "Trombosit GPIIb/IIIa", "Opsonizasyon ve fagositoz", "Kanama"],
+        ["Pemfigus vulgaris", "Desmogleinler", "Proteaz aktivasyonu, adezyon bozulur", "Deride büller"],
+        ["ANCA ilişkili vaskülit", "Nötrofil granül proteinleri", "Nötrofil degranülasyonu", "Vaskülit"],
+        ["Goodpasture sendromu", "Glomerül ve alveol bazal membranı", "Kompleman ve Fc reseptörü aracılı enflamasyon", "Nefrit, akciğer hemorajisi"],
+        ["Akut romatizmal ateş", "Streptokok duvarı antijeni (miyokardla çapraz reaksiyon)", "Enflamasyon, makrofaj aktivasyonu", "Miyokardit, artrit"],
+        ["Miyastenia gravis", "Asetilkolin reseptörü", "Bağlanmayı inhibe eder", "Kas güçsüzlüğü"],
+        ["Graves hastalığı", "TSH reseptörü", "Reseptörü uyarır", "Hipertiroidizm"],
+        ["Pernisiyöz anemi", "Paryetal hücre intrinsik faktörü", "İntrinsik faktörü nötralize eder → B12 emilimi ↓", "Anemi"],
+        ["Transfüzyon reaksiyonu, yenidoğanın hemolitik hastalığı", "Eritrosit antijenleri", "Opsonizasyon", "Hemoliz"]
+      ]
+    },
+    {
+      "id": "tip3-ornek",
+      "baslik": "Tip III (immün kompleks) hastalıklar",
+      "k": ["14:33", "14:35", "14:36"],
+      "sutun": ["Hastalık", "Antijen", "Bulgu"],
+      "satir": [
+        ["SLE", "Nükleer antijenler", "Nefrit, deri lezyonu, artrit"],
+        ["Poststreptokokal GN", "Streptokok duvar antijeni", "Nefrit"],
+        ["Poliarteritis nodosa", "Bazı olgularda HBV antijeni", "Sistemik vaskülit"],
+        ["Reaktif artrit", "Bakteriyel antijen (Yersinia)", "Akut artrit"],
+        ["Serum hastalığı", "Yabancı serum proteinleri (at antitimosit globulini)", "Artrit, vaskülit, nefrit; antikor yanıtı ≈1 hafta sonra"],
+        ["Arthus reaksiyonu", "Deri içi yabancı protein (önceden immünize bireyde)", "Lokal nekrotizan vaskülit"]
+      ]
+    },
+    {
+      "id": "tip4-ornek",
+      "baslik": "Tip IV (T hücre aracılı) hastalıklar",
+      "k": ["14:39", "14:40", "14:41", "14:42", "14:44"],
+      "sutun": ["Hastalık", "Hedef", "Mekanizma"],
+      "satir": [
+        ["Tüberkülin reaksiyonu (PPD, DTH)", "M. tuberculosis proteini", "Th1 → IFN-γ → makrofaj; 8–12 saatte eritem, 24–72 saatte maksimum endürasyon"],
+        ["Romatoid artrit", "Sitrülinlenmiş proteinler, kollajen?", "Th17 (ve Th1) sitokinleri; antikor ve immün kompleks katkısı"],
+        ["Multipl skleroz", "Miyelin proteinleri (myelin basic protein)", "Th1 ve Th17; aktive makrofaj miyelini yıkar"],
+        ["Tip 1 diyabet", "Adacık β hücre antijenleri (insülin, GAD)", "T hücre enflamasyonu + CTL ile β hücre yıkımı (insülit)"],
+        ["İnflamatuvar bağırsak hastalığı", "Enterik bakteri, self antijen?", "Th1 ve Th17"],
+        ["Psöriazis", "Bilinmiyor", "Başlıca Th17"],
+        ["Kontakt dermatit", "Zehirli sarmaşık (uruşiol), nikel, ilaçlar", "Th1 (ve Th17); kimyasal + öz protein → yeni antijen"]
+      ]
+    },
+    {
+      "id": "otoantikorlar",
+      "baslik": "Sistemik otoimmün hastalıklarda otoantikorlar",
+      "k": ["14:51", "14:52", "14:54", "14:59", "14:63"],
+      "sutun": ["Hastalık", "Otoantikor", "Önemi"],
+      "satir": [
+        ["SLE", "ANA (jenerik)", "%95–100; özgül değil"],
+        ["SLE", "Anti-dsDNA", "%40–60; nefrit; SLE'ye özgü"],
+        ["SLE", "Anti-Smith (Sm)", "%20–30; SLE'ye özgü"],
+        ["SLE / neonatal lupus", "Anti-Ro (SS-A)", "Konjenital kalp bloğu"],
+        ["SLE", "Antifosfolipid", "Antifosfolipid sendromu"],
+        ["Sistemik skleroz (yaygın)", "Anti-DNA topoizomeraz I (anti-Scl-70)", "Diffüz deri ve akciğer hastalığı; özgül"],
+        ["Sistemik skleroz (sınırlı / CREST)", "Antisentromer", "Sınırlı deri, dijital iskemi, pulmoner hipertansiyon"],
+        ["Sistemik skleroz", "RNA polimeraz III", "Akut başlangıç, renal kriz, kanser"],
+        ["Sjögren", "Anti-Ro/SS-A (%75), Anti-La/SS-B (%50)", "Ro daha duyarlı, La daha özgül"],
+        ["Otoimmün miyozit", "Jo-1, Mi-2, MDA5, TIF1γ", "Jo-1: interstisyel akciğer; Mi-2: dermatomiyozit; TIF1γ: kanser"],
+        ["Romatoid artrit", "ACPA (anti-sitrülin)", "%60–80; RA'ya özgü (romatoid faktör özgül değil)"]
+      ]
+    },
+    {
+      "id": "sistemik-otoimmun",
+      "baslik": "Seçilmiş sistemik otoimmün hastalıklar",
+      "k": ["14:53", "14:55", "14:56", "14:57", "14:59", "14:60", "14:62", "14:63", "14:64"],
+      "sutun": ["Hastalık", "Temel özellik", "Patogenez / ipucu"],
+      "satir": [
+        ["SLE", "Genç kadın, malar döküntü, fotosensitivite, non-eroziv artrit, serözit, böbrek tutulumu; düşük C3/C4", "Tip III + Tip II; HLA-DR2/DR3, C1q/C2/C4 eksikliği, IFN-α, TLR7/9, BAFF; hidralazin, prokainamid, izoniazid, D-penisilamin"],
+        ["Sjögren sendromu", "Kuru göz (keratokonjonktivitis sicca), kuru ağız, parotis büyümesi; sekonder form en sık RA ile", "Bezde yoğun lenfositik infiltrasyon; B hücreli lenfoma riski ↑"],
+        ["Sistemik skleroz", "Raynaud, deri sertleşmesi, özofagus dismotilitesi, pulmoner fibroz, renal kriz; CREST", "Otoimmün yanıt (Th2, TGF-β) + mikrovasküler hasar + yaygın fibrozis"],
+        ["IgG4 ilişkili hastalık", "Otoimmün pankreatit, Mikulicz sendromu, retroperitoneal fibrozis", "IgG4 plazma hücresi, storiform fibrozis, obliteratif flebit; rituksimab etkili"]
+      ]
+    },
+    {
+      "id": "tolerans",
+      "baslik": "İmmünolojik tolerans",
+      "k": ["14:46", "14:47", "14:48"],
+      "sutun": ["Mekanizma", "Nasıl?"],
+      "satir": [
+        ["Merkezi tolerans (T)", "Timusta güçlü öz-reaktif T hücresi negatif seçilimle apoptoza gider; AIRE periferik antijenlerin timusta ifadesini sağlar"],
+        ["Merkezi tolerans (B)", "Kemik iliğinde öz antijene bağlanan B hücresinde reseptör düzenlemesi veya apoptoz"],
+        ["Periferik tolerans (Treg)", "FoxP3; CTLA-4 ile ko-stimülasyon engeli; IL-2 tüketimi; IL-10, TGF-β"],
+        ["Otoimmüniteye yatkınlık", "HLA alelleri, CTLA4, PTPN22; çevresel: enfeksiyon (moleküler taklit), UV, sigara, ilaçlar"]
+      ]
+    },
+    {
+      "id": "nakil-reddi",
+      "baslik": "Nakil reddi ve GVHD",
+      "k": ["14:66", "14:67", "14:68", "10:43", "10:44", "10:45", "10:46"],
+      "sutun": ["Tip", "Zaman", "Mekanizma", "Morfoloji"],
+      "satir": [
+        ["Hiperakut", "Dakikalar–saatler", "Önceden oluşmuş antikor (kan grubu, HLA) + kompleman", "Damar trombozu, fibrinoid nekroz"],
+        ["Akut hücresel", "Günler–haftalar", "CD8⁺ CTL doğrudan öldürme + CD4⁺ sitokinleri", "İnterstisyel enflamasyon, tubulit, endotelit"],
+        ["Akut humoral (antikor aracılı)", "Günler–haftalar", "Alloreaktif antikor + kompleman", "Peritübüler kapillarit, kompleman birikimi"],
+        ["Kronik", "Aylar–yıllar", "T hücre sitokinleri + antikor", "Greft arteriyosklerozu, transplant glomerülopatisi, interstisyel fibrozis"],
+        ["GVHD", "Kök hücre naklinden sonra", "Donör T hücreleri alıcı dokusunu tanır", "Akut: deri, karaciğer, GİS epitel hasarı; kronik: sistemik skleroz benzeri"],
+        ["Tedavi", "—", "HLA uyumu; siklosporin/takrolimus (IL-2 transkripsiyonu), rapamisin (IL-2 yanıtı)", "Sorun: CMV/poliomavirüs, EBV lenfoması, HPV karsinomu"]
+      ]
+    },
+    {
+      "id": "immun-yetmezlik",
+      "baslik": "Primer ve sekonder immün yetmezlikler",
+      "k": ["14:70", "14:73", "14:74"],
+      "sutun": ["Durum", "Tür", "Defekt / mekanizma"],
+      "satir": [
+        ["SCID", "Primer", "Hem humoral hem hücresel bağışıklık ağır bozuk"],
+        ["X'e bağlı agammaglobulinemi (Bruton)", "Primer", "B hücre yokluğu, immünoglobulin eksikliği"],
+        ["DiGeorge sendromu", "Primer", "Timus hipoplazisi, T hücre yetmezliği"],
+        ["Hiper-IgM sendromu", "Primer", "Sınıf değişim defekti"],
+        ["İzole IgA eksikliği", "Primer", "En sık primer immün yetmezlik"],
+        ["HIV / AIDS", "Sekonder", "CD4⁺ T hücre kaybı; fırsatçı enfeksiyon, Kaposi sarkomu, B hücreli lenfoma"],
+        ["Diğer sekonder", "Sekonder", "Kemik iliğini tutan kanser, immünsüpresyon, kemo/radyoterapi, ağır malnütrisyon, splenektomi"]
+      ]
+    },
+    {
+      "id": "amiloid",
+      "baslik": "Amiloidoz sınıflaması",
+      "k": ["14:75", "14:76", "14:77", "14:78", "14:79", "14:80"],
+      "sutun": ["Kategori", "İlişkili hastalık", "Fibril proteini", "Prekürsör"],
+      "satir": [
+        ["Primer (plazma hücre proliferasyonu)", "Multipl miyelom", "AL", "İmmünoglobulin hafif zinciri (çoğunlukla λ)"],
+        ["Reaktif sistemik (sekonder)", "RA, ankilozan spondilit, Crohn, kronik enfeksiyon", "AA", "SAA"],
+        ["Hemodiyaliz ilişkili", "Kronik böbrek yetmezliği", "Aβ2m", "β2-mikroglobulin"],
+        ["Kalıtsal", "Ailesel Akdeniz ateşi", "AA", "SAA"],
+        ["Kalıtsal / senil", "Ailesel nöropati, kardiyak; senil sistemik", "ATTR", "Transtiretin (mutant / yabanıl)"],
+        ["Lokalize serebral", "Alzheimer", "Aβ", "APP"],
+        ["Lokalize endokrin", "Tip 2 diyabet; medüller tiroid karsinomu", "AIAPP; ACal", "Adacık amiloid peptidi; kalsitonin"],
+        ["İzole atriyal", "İzole atriyal amiloidoz", "AANF", "Atriyal natriüretik faktör"]
+      ]
+    }
+  ],
+  "notlar": [
+    {"m": "Tip I ilk maruziyet: alerjen → Th2 → IL-4/IL-13 ile IgE sınıf değişimi; IgE mast hücresindeki FcεRI'ye bağlanır (duyarlanma). Tekrar maruziyette alerjen IgE'yi çapraz bağlar.", "k": "14:8"},
+    {"m": "Atopi: yüksek IgE, artmış Th2 yanıtı; HLA sınıf II, Th2 sitokin genleri, FcεRI, ADAM33 ilişkilidir. Hijyen hipotezi: erken yaşta düşük mikrobiyal maruziyet alerji riskini artırır.", "k": "14:18"},
+    {"m": "CTL öldürmesi: MHC sınıf I ile sunulan peptit tanınır; perforin–granzim ve Fas–FasL ile kaspaz aktive olur, apoptoz gelişir.", "k": "14:44"},
+    {"m": "Amiloid Kongo kırmızısıyla pembe-kırmızı boyanır, polarize ışıkta elma yeşili çift kırılım verir; biyopsi böbrek, rektum, diş eti veya karın yağından alınır.", "k": "14:77"},
+    {"m": "AL amiloidozda prognoz kötüdür; böbrekte nefrotik sendrom, kalpte kısıtlayıcı kardiyomiyopati, GİS'te makroglossi görülür.", "k": "14:78"}
+  ]
+}

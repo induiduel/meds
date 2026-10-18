@@ -11,6 +11,7 @@ import { useSyncExternalStore } from 'react';
 import { getCustomApiUrl, safeJsonFetch } from '../../services/api';
 import { cdCevrimdisiKayitlari, cdCevrimdisiVid } from './canliDersCevrimdisiKayit';
 import { cdDersEtiketi } from './canliDersKategori';
+import { bitir as konuBitir, sureEkle } from '../../services/calismaTakip';
 
 export interface CdVaryant {
   id: string;
@@ -351,7 +352,10 @@ function ses(): HTMLAudioElement {
     msKur(); msMeta(); msDurum();
   });
   a.addEventListener('pause', () => { set({ playing: false }); tick(); konumKaydet(); msDurum(); });
-  a.addEventListener('ended', () => { set({ playing: false }); konumKaydet(true); msDurum(); bitinceFn?.(); });
+  // Bitirdiklerim: dersin sonuna kadar dinlenince konu "bitti" olur
+  a.addEventListener('ended', () => { if (st.key) konuBitir('sesli', st.key); set({ playing: false }); konumKaydet(true); msDurum(); bitinceFn?.(); });
+  // Bitirdiklerim: ses çalarken (sekme arka planda da) konunun dinleme süresi
+  window.setInterval(() => { if (st.playing && st.key && !st.bekliyor) sureEkle('sesli', st.key, 5); }, 5000);
   a.addEventListener('timeupdate', () => { if (!raf) tick(); });
   a.addEventListener('seeked', () => { tick(); msKonum(); });
   a.addEventListener('waiting', () => set({ bekliyor: true }));

@@ -1,10 +1,11 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 17,
-  "baslik": "Soru Çözücü Tablet Optimizasyonu ve Kurul 2 Doğrulama Standartları",
+  "onem": 18,
+  "baslik": "Bitirdiklerim: konu konu ilerleme, süre ve kalan tahmini",
   "maddeler": [
-    "Soru çözücü alt kontrol çubuğu tablet ve mobil cihazlarda tek satırda sabitlendi; iki satıra bölünme ve taşma sorunu giderildi.",
-    "Tablet ekranlarında okuma ve oynatma ayarları açılır pencereye (⚙) alınarak ferah ve kompakt bir kullanım sağlandı.",
-    "Kurul 2 içerik hattı için Türkçe üslup ve şık açıklama kalitesi standartları doğrulama kapılarına bağlandı."
+    "Sesli ders, Etkileşimli dersler, Soru çözücü ve En önemliler'de her konuya \"Bitirdim\" ve \"Tekrar et\" düğmeleri eklendi; önceden çalıştığın konuları işaretleyebilir, istediğin konuyu baştan çalışabilirsin.",
+    "Her konuda geçirdiğin gerçek çalışma süresi ve çözdüğün soru sayısı ayrı ayrı tutulur; Süreler pencerelerinde \"Çalıştığın\" sütunu olarak da görünür.",
+    "Yeni Bitirdiklerim sayfası: biten ve kalan konular, toplam süre, çözülen soru ve hızına göre kalan konular için tahmini süre.",
+    "Yeni Patoloji Hızlı Check Up sayfası: mediyatör, sitokin, hücre ve hastalık tabloları; kendini sına modu."
   ]
 }

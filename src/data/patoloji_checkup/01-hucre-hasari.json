@@ -1,0 +1,184 @@
+{
+  "id": "hucre-hasari",
+  "ad": "Hücre hasarı ve hücre ölümü",
+  "kisa": "Nekroz tipleri, apoptoz, kaspazlar, BCL-2, serbest radikaller",
+  "tablolar": [
+    {
+      "id": "nekroz-tipleri",
+      "baslik": "Nekroz tipleri",
+      "k": ["02:35", "02:36", "02:38", "02:39", "02:41", "03:5", "03:7", "03:8", "03:10", "03:11", "03:12", "03:13"],
+      "sutun": ["Tip", "Nerede / neden görülür", "Mekanizma", "Görünüm", "Sınav ipucu"],
+      "satir": [
+        ["Koagülatif nekroz", "İskemiye bağlı enfarktlar: kalp, böbrek, dalak", "Yapısal proteinler ve enzimler denatüre olur, proteoliz gecikir", "Doku sert, soluk, kuru; doku mimarisi birkaç gün korunur", "En sık nekroz tipi; beyin enfarktı istisnadır (orada sıvılaşma)"],
+        ["Sıvılaşma (likefaksiyon) nekrozu", "Püy oluşturan bakteri ve mantar enfeksiyonları, beyin enfarktları", "Lökosit ve mikrobiyal enzimler dokuyu eritir", "Viskoz sıvı; püy (sarı-krem materyal), lokalize birikimi apse", "Beyindeki hipoksik ölüm her zaman sıvılaşma nekrozudur"],
+        ["Gangrenöz nekroz", "Alt ekstremite, kan akımının kesildiği alanlar", "Geniş koagülatif nekroz alanı", "Enfeksiyon eklenirse ikincil sıvılaşma: ıslak gangren", "Histolojik tip değil, klinik terimdir"],
+        ["Kazeöz nekroz", "Mycobacterium tuberculosis odakları", "Granülomatöz enflamasyonla birlikte", "Makroskopik: beyazımsı, yumuşak, peynir benzeri; mikroskopik: amorf, granüler, pembe alan, mimari kaybolur", "Çevresinde epiteloid histiyosit, dev hücre, lenfosit (granülom)"],
+        ["Yağ nekrozu", "Akut pankreatit; travmaya uğramış yağ dokusu (meme, subkutan yağ)", "Lipazlar trigliseridi yıkar; serbest yağ asidi + kalsiyum → sabunlaşma (saponifikasyon)", "Tebeşir-beyazı odaklar; gölgeli yağ hücreleri, bazofilik kalsiyum tuzları", "Ayırt edici olay: yağ asidi ile kalsiyumun birleşmesi"],
+        ["Fibrinoid nekroz", "Küçük damar duvarı: immün kompleks birikimi, şiddetli hipertansiyon, vaskülit", "İmmün kompleksler + plazma proteinleri (özellikle fibrin) damar duvarında birikir", "Parlak pembe, amorf, camsı materyal (ışık mikroskobunda görülür)", "Örnek: poliarteritis nodosa; malign hipertansiyon; Tip III aşırı duyarlılık"]
+      ]
+    },
+    {
+      "id": "geri-donusum",
+      "baslik": "Geri dönüşümlü ve geri dönüşümsüz hasar",
+      "k": ["02:20", "02:25", "02:26", "02:29", "02:32"],
+      "sutun": ["Özellik", "Geri dönüşümlü hasar", "Geri dönüşümsüz hasar (nekroz)"],
+      "satir": [
+        ["Membran", "Bütünlüğü korunur; kabarcıklanma, mikrovillus kaybı", "Plazma ve organel zarları kalıcı hasarlı, içerik sızar"],
+        ["Mitokondri", "Hafif şişme, küçük amorf birikintiler", "Fonksiyon geri kazanılamaz; büyük amorf (kalsiyum + protein) birikintiler"],
+        ["Hücre", "Hücresel şişme (hidropik değişim), yağlanma, ER dilatasyonu, ribozom ayrılması, kromatin kümelenmesi", "Artmış eozinofili, camsı görünüm, miyelin figürleri, lizozom rüptürü"],
+        ["En erken bulgu", "Hücresel şişme: ATP ↓ → Na⁺/K⁺ ATPaz bozulur → Na⁺ ve su hücreye girer", "Çekirdek değişiklikleri: piknoz → karyoreksis → karyolizis"],
+        ["Sonuç", "Uyarı kalkınca hücre normale döner", "Hücre ölümü (nekroz veya apoptoz), çevrede enflamasyon"]
+      ]
+    },
+    {
+      "id": "nukleer-degisiklik",
+      "baslik": "Nekrozda çekirdek değişiklikleri",
+      "k": ["02:33"],
+      "sutun": ["Değişiklik", "Ne olur?"],
+      "satir": [
+        ["Piknoz", "Çekirdek büzülür, bazofili artar"],
+        ["Karyoreksis", "Piknotik çekirdek parçalanır"],
+        ["Karyolizis", "Bazofili kaybolur, çekirdek “solar”; 1–2 gün içinde çekirdek tamamen kaybolabilir"]
+      ]
+    },
+    {
+      "id": "nekroz-apoptoz",
+      "baslik": "Nekroz ile apoptoz karşılaştırması",
+      "k": ["03:16", "03:34", "03:35", "03:36"],
+      "sutun": ["Özellik", "Nekroz", "Apoptoz"],
+      "satir": [
+        ["Hücre boyutu", "Büyümüş (şişme)", "Azalmış (büzülme)"],
+        ["Çekirdek", "Piknoz / karyoreksis / karyolizis", "Nükleozom boyutunda parçalanma"],
+        ["Plazma zarı", "Bozulmuş, bütünlük kaybolmuş", "Bütünlük korunur; lipid dağılımı değişir (fosfatidilserin dışa döner)"],
+        ["Hücre içeriği", "Enzimatik sindirim; hücre dışına sızar", "Apoptotik cisimcikler içinde paketlenir"],
+        ["Komşu dokuda enflamasyon", "Sık / belirgin", "Yok veya minimal"],
+        ["Enerji", "Enerji bağımlı değil", "ATP gerektirir"],
+        ["Etkilenen hücre", "Geniş hücre grupları", "Tek hücre veya küçük gruplar"],
+        ["Rol", "Her zaman patolojik", "Çoğunlukla fizyolojik; DNA/protein hasarında patolojik"]
+      ]
+    },
+    {
+      "id": "apoptoz-yollari",
+      "baslik": "Apoptozun iki yolu",
+      "k": ["03:25", "03:28", "03:29", "03:31", "06:17", "06:18"],
+      "sutun": ["Özellik", "Mitokondriyal (içsel) yol", "Ölüm reseptörü (dışsal) yol"],
+      "satir": [
+        ["Tetikleyici", "DNA hasarı (radyasyon, ROS, kemoterapi), büyüme faktörü eksikliği, ER stresi (yanlış katlanmış protein)", "Fas (CD95) – Fas ligandı (aktive T hücreleri) veya TNF – Tip I TNF reseptörü"],
+        ["Sensör / düzenleyici", "BH3-only proteinler stresi algılar; BAX/BAK aktive olur, BCL-2 baskılanır", "Ölüm alanı (death domain) adaptör proteinleri bağlar"],
+        ["Ara olay", "Mitokondri dış zarı geçirgenleşir, sitokrom c sitozole sızar", "“Ölüm indükleyici sinyal kompleksi” oluşur"],
+        ["Başlatıcı kaspaz", "Kaspaz-9", "Kaspaz-8"],
+        ["Ortak son", "İnfazcı kaspazlar (3, 6, 7)", "İnfazcı kaspazlar (3, 6, 7)"],
+        ["Örnek", "p53 aracılı DNA hasarı apoptozu; büyüme faktörü çekilmesi", "Otoreaktif lenfositlerin elenmesi; CTL'nin Fas–FasL ile hedef öldürmesi"]
+      ]
+    },
+    {
+      "id": "kaspazlar",
+      "baslik": "Kaspazlar",
+      "k": ["03:28", "03:32", "03:27", "14:44"],
+      "sutun": ["Kaspaz", "Grup", "Hangi yolda / görevi"],
+      "satir": [
+        ["Kaspaz-8", "Başlatıcı", "Dışsal (ölüm reseptörü) yol; adaptör proteinler üzerinden aktive olur"],
+        ["Kaspaz-9", "Başlatıcı", "İçsel (mitokondriyal) yol; sitokrom c + kofaktörlerle aktive olur"],
+        ["Kaspaz-3", "İnfazcı (efektör)", "Proteinleri parçalar, endonükleazları aktive eder; aktif formu immünofloresanla gösterilebilir"],
+        ["Kaspaz-6", "İnfazcı (efektör)", "Hücre içi proteinlerin ve hücre iskeletinin yıkımı"],
+        ["Kaspaz-7", "İnfazcı (efektör)", "Hücre içi proteinlerin yıkımı"],
+        ["Genel özellik", "—", "Aspartik asit sonrası proteinleri keser; CTL'nin perforin–granzim yolu da hedef hücrede kaspaz aktive eder"]
+      ]
+    },
+    {
+      "id": "bcl2-ailesi",
+      "baslik": "BCL-2 ailesi",
+      "k": ["03:30", "06:17", "17:9", "17:15"],
+      "sutun": ["Grup", "Üyeler", "Görevi", "Klinik bağlantı"],
+      "satir": [
+        ["Anti-apoptotik", "BCL-2, BCL-XL", "Mitokondri zar bütünlüğünü korur", "Foliküler lenfoma t(14;18): BCL2 aşırı ekspresyonu → apoptoz baskılanır"],
+        ["Pro-apoptotik efektör", "BAX, BAK", "Dimer oluşturup mitokondri zarında kanal açar, sitokrom c salınır", "p53 PUMA ve BAX ekspresyonunu artırarak apoptozu başlatır"],
+        ["BH3-only (sensör)", "PUMA vb.", "Hücre içi stresi algılar; BAX/BAK'ı aktive eder, BCL-2'yi baskılar", "DNA hasarı ve yanlış katlanmış protein birikiminde aktive olur"]
+      ]
+    },
+    {
+      "id": "diger-olum",
+      "baslik": "Diğer hücre ölümü biçimleri ve otofaji",
+      "k": ["03:37", "03:38", "03:39", "04:34", "18:28"],
+      "sutun": ["Biçim", "Tetikleyici / mekanizma", "Not"],
+      "satir": [
+        ["Nekroptoz", "TNF gibi sinyallerle tetiklenebilir", "Nekroz ile apoptoz arasında hibrit özellikler"],
+        ["Piroptoz", "İnflamozom aktivasyonu", "IL-1 salınımı, ateş ve enflamasyon"],
+        ["Ferroptoz", "Demir bağımlı lipid peroksidasyonu", "Nörodejeneratif hastalık ve kanser araştırmalarında gündemde"],
+        ["Otofaji", "Besin yoksunluğu → Atg genleri aktive olur → otofagozom + lizozom = otofagolizozom", "Temelde hayatta kalma mekanizması; aşırısı hücre ölümüne yol açar. Kanserde erken evrede baskılayıcı, geç evrede tümör hücresini yaşatabilir"]
+      ]
+    },
+    {
+      "id": "serbest-radikaller",
+      "baslik": "Serbest radikaller (ROS)",
+      "k": ["03:45", "03:46", "03:48", "03:49"],
+      "sutun": ["Radikal", "Üretimi", "Giderilmesi", "Etkisi"],
+      "satir": [
+        ["Süperoksit (O₂•⁻)", "Oksidatif fosforilasyonda O₂'nin tam indirgenememesi; lökositlerde NADPH oksidaz", "Süperoksit dismutaz (SOD) → H₂O₂ + O₂", "Lipid, protein ve DNA'ya doğrudan hasar"],
+        ["Hidrojen peroksit (H₂O₂)", "Çoğunlukla süperoksitten SOD etkisiyle", "Katalaz ve glutatyon peroksidaz → H₂O + O₂", "•OH ve hipoklorite (ClO⁻) dönüşebilir"],
+        ["Hidroksil radikali (•OH)", "H₂O, H₂O₂ ve O₂'den, özellikle Fenton reaksiyonu", "Dolaylı: H₂O₂'nin uzaklaştırılmasıyla oluşumu sınırlanır", "En güçlü ve doğrudan hasar veren radikal"],
+        ["Peroksinitrit (ONOO⁻)", "Süperoksit + nitrik oksit (NO)", "Mitokondri ve sitozol enzimleri nitrite dönüştürür", "Oksidatif ve nitrozatif hasar"]
+      ]
+    },
+    {
+      "id": "hasar-hedefleri",
+      "baslik": "Hücre hasarında biyokimyasal mekanizmalar",
+      "k": ["03:43", "03:44", "03:48", "03:52", "02:26"],
+      "sutun": ["Mekanizma", "Ne olur?", "Sonuç"],
+      "satir": [
+        ["ATP azalması (hipoksi/iskemi)", "Na⁺/K⁺ ATPaz bozulur; anaerobik glikoliz ↑ → laktik asit; ribozomlar ayrılır", "Hücre şişmesi, protein sentezi ↓, sonunda nekroz"],
+        ["Hücre içi Ca²⁺ artışı", "Hücreye Ca²⁺ girişi ve depolardan salınım artar", "Proteaz, fosfolipaz, endonükleaz aktivasyonu → zar, iskelet ve DNA hasarı"],
+        ["ROS birikimi", "Üretim > temizleme (oksidatif stres)", "Lipid peroksidasyonu, protein çapraz bağlanması, DNA kırıkları"],
+        ["ER stresi", "Yanlış katlanmış protein → katlanmamış protein yanıtı (IRE1 sensörü): şaperon ↑, sentez ↓", "Yük fazlaysa mitokondriyal apoptoz"],
+        ["DNA hasarı", "p53 aktive olur", "Hafif hasarda döngü durur ve onarım; şiddetli hasarda apoptoz"]
+      ]
+    },
+    {
+      "id": "biyobelirtecler",
+      "baslik": "Nekrozda serum biyobelirteçleri",
+      "k": ["03:15"],
+      "sutun": ["Hasarlanan doku", "Yükselen belirteç"],
+      "satir": [
+        ["Miyokard", "Troponin I, troponin T, CK-MB"],
+        ["Hepatosit", "ALT, AST"],
+        ["Safra yolu", "Alkalen fosfataz (ALP)"]
+      ]
+    },
+    {
+      "id": "apoptoz-durumlar",
+      "baslik": "Apoptozla ilişkili durumlar",
+      "k": ["03:18", "03:19", "03:20", "03:21"],
+      "sutun": ["Durum", "Tür", "Mekanizma"],
+      "satir": [
+        ["Embriyogenez, proliferatif dokuların yenilenmesi", "Fizyolojik", "Büyüme faktörü / hayatta kalma sinyalinin kaybı"],
+        ["Endometriumun dökülmesi, laktasyon sonrası meme involüsyonu", "Fizyolojik", "Hormon düzeyi düşer, hayatta kalma sinyali azalır"],
+        ["Yanıt sonunda lökosit sayısının azalması", "Fizyolojik", "Aktivasyon uyarısı kalkar"],
+        ["Otoreaktif lenfositlerin elenmesi", "Fizyolojik", "Hem içsel hem dışsal yol"],
+        ["DNA hasarı (radyasyon, kemoterapi, ROS)", "Patolojik", "BH3-only proteinler → mitokondriyal yol"],
+        ["Yanlış katlanmış protein birikimi", "Patolojik", "BH3-only aktivasyonu, kaspazların doğrudan aktivasyonu"],
+        ["Viral enfeksiyonlar", "Patolojik", "Viral proteinler veya CTL'nin kaspaz aktivasyonu"]
+      ]
+    },
+    {
+      "id": "doku-duyarlilik",
+      "baslik": "Dokuların iskemiye dayanıklılığı",
+      "k": ["02:18", "13:30"],
+      "sutun": ["Doku", "Geri dönüşümsüz hasar süresi"],
+      "satir": [
+        ["Nöron", "3–4 dakika"],
+        ["Kalp kası", "20–30 dakika"],
+        ["İskelet kası", "2–3 saat tam iskemiyi tolere eder"],
+        ["Fibroblast", "Saatlerce tolere eder"]
+      ]
+    }
+  ],
+  "notlar": [
+    {"m": "Hücre hasarının sonucu üç faktöre bağlıdır: etkenin türü, süresi ve şiddeti. Aynı etken düşük dozda geri dönüşümlü hasar, yüksek dozda nekroz veya apoptoz yapar.", "k": "02:17"},
+    {"m": "Hidropik değişim en erken geri dönüşümlü hasar bulgusudur; nedeni ATP eksikliğine bağlı Na⁺/K⁺ ATPaz bozulmasıdır.", "k": "02:26"},
+    {"m": "Nekrozda artmış eozinofili, denatüre proteinlere eozin bağlanması ve RNA kaybına bağlıdır.", "k": "02:32"},
+    {"m": "Apoptotik hücrede fosfatidilserin zarın dış yüzüne geçer ve “beni ye” sinyali olur; makrofajlar içerik sızmadan temizler.", "k": "03:33"},
+    {"m": "p53 kaybında hasarlı DNA'lı hücreler apoptoza gitmez, genomik instabilite artar; birçok insan kanserinde TP53 inaktivedir.", "k": "03:42"},
+    {"m": "Nekrozda yağ asitleri kalsiyumla birleşerek zamanla distrofik kalsifikasyona yol açabilir.", "k": "02:34"},
+    {"m": "Antioksidanlar: enzimatik (SOD, katalaz, glutatyon peroksidaz) ve enzim dışı (vitamin E, C, A, β-karoten, glutatyon).", "k": "03:49"}
+  ]
+}

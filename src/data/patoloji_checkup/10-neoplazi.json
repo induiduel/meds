@@ -1,0 +1,1116 @@
+{
+  "id": "neoplazi",
+  "ad": "Neoplazi ve karsinogenez",
+  "kisa": "Onkogen–tümör baskılayıcı, p53, RB, translokasyon, virüs, paraneoplastik, belirteç",
+  "tablolar": [
+    {
+      "id": "benign-malign",
+      "baslik": "Benign ve malign tümör",
+      "k": [
+        "16:14",
+        "16:15",
+        "16:34",
+        "16:42",
+        "16:43",
+        "16:44"
+      ],
+      "sutun": [
+        "Özellik",
+        "Benign",
+        "Malign"
+      ],
+      "satir": [
+        [
+          "Diferansiyasyon",
+          "İyi diferansiye, normal karşılığına benzer",
+          "İyi, orta, az diferansiye veya anaplastik"
+        ],
+        [
+          "Büyüme",
+          "Lokalize, genişleyen, iter; kapsül (enükleasyon kolay)",
+          "İnvaziv; kapsül yok ya da tümör dilcikleri deler"
+        ],
+        [
+          "Metastaz",
+          "Yapmaz",
+          "Ayırt edici özellik (bazal hücreli karsinom ve çoğu primer SSS tümörü nadiren yapar)"
+        ],
+        [
+          "Tedavi",
+          "Çoğu cerrahiyle küratif",
+          "Tedavi edilmezse genellikle ölümcül; temiz cerrahi sınır gerekir"
+        ]
+      ]
+    },
+    {
+      "id": "anaplazi",
+      "baslik": "Anaplazi, displazi ve karsinoma in situ",
+      "k": [
+        "16:33",
+        "16:35",
+        "16:38",
+        "16:39",
+        "16:41"
+      ],
+      "sutun": [
+        "Kavram",
+        "Tanım / özellik"
+      ],
+      "satir": [
+        [
+          "Anaplazi",
+          "Diferansiyasyon kaybı; pleomorfizm, hiperkromazi, N/S oranı ≈1:1, tümör dev hücreleri, sık ve atipik mitoz — malignite için güvenilir belirteç"
+        ],
+        [
+          "Displazi",
+          "Düzensiz proliferasyon, atipi, yüzeyel katlarda mitoz, olgunlaşma ve polarite kaybı; kanserle eş anlamlı değil, hafif-orta formlar gerileyebilir"
+        ],
+        [
+          "Karsinoma in situ",
+          "Displazi tüm epitel kalınlığını tutar, bazal membranı geçmez; invazyon riski yüksek"
+        ],
+        [
+          "İyi diferansiye malign tümörde fonksiyon",
+          "Endokrin karsinom hormon, skuamöz karsinom keratin, HCC safra yapabilir; ektopik hormon paraneoplastik sendroma yol açar"
+        ]
+      ]
+    },
+    {
+      "id": "adlandirma",
+      "baslik": "Tümör adlandırması",
+      "k": [
+        "16:17",
+        "16:18",
+        "16:22",
+        "16:23",
+        "16:25",
+        "16:26",
+        "16:29",
+        "16:30",
+        "16:31",
+        "16:32"
+      ],
+      "sutun": [
+        "Köken",
+        "Benign",
+        "Malign"
+      ],
+      "satir": [
+        [
+          "Bağ dokusu / yağ / kıkırdak / kemik",
+          "Fibrom, lipom, kondrom, osteom",
+          "Fibrosarkom, liposarkom, kondrosarkom, osteosarkom"
+        ],
+        [
+          "Damar / lenf damarı",
+          "Hemanjiom, lenfanjiom",
+          "Anjiosarkom, lenfanjiosarkom"
+        ],
+        [
+          "Düz kas / çizgili kas",
+          "Leiomyom, rabdomyom",
+          "Leiomyosarkom, rabdomyosarkom"
+        ],
+        [
+          "Bez epiteli",
+          "Adenom, kistadenom, papillom",
+          "Adenokarsinom, kistadenokarsinom, papiller karsinom"
+        ],
+        [
+          "Yassı epitel",
+          "Skuamöz hücreli papillom",
+          "Skuamöz hücreli karsinom"
+        ],
+        [
+          "Melanosit",
+          "Nevüs",
+          "Melanom"
+        ],
+        [
+          "Plasenta",
+          "Hidatidiform mol",
+          "Koriokarsinom"
+        ],
+        [
+          "Tükürük bezi (karma)",
+          "Pleomorfik adenom",
+          "Malign mikst tümör"
+        ],
+        [
+          "Totipotent hücre",
+          "Matür teratom (dermoid kist)",
+          "İmmatür teratom"
+        ],
+        [
+          "İstisnalar",
+          "—",
+          "Lenfoma, melanom, mezotelyoma, seminom: “-oma” ekine rağmen malign"
+        ],
+        [
+          "Hamartom / koristom",
+          "Hamartom: organa ait olgun dokuların düzensiz kitlesi; koristom: ektopik olgun doku (mide duvarında pankreas)",
+          "—"
+        ]
+      ]
+    },
+    {
+      "id": "hallmark",
+      "baslik": "Kanserin ayırt edici özellikleri ve sorumlu moleküller",
+      "k": [
+        "16:7",
+        "17:6",
+        "17:9",
+        "17:10",
+        "18:24",
+        "18:33",
+        "19:16",
+        "06:24"
+      ],
+      "sutun": [
+        "Özellik",
+        "Örnek molekül / mekanizma"
+      ],
+      "satir": [
+        [
+          "Büyüme sinyalinde kendine yeterlilik",
+          "Onkogenler: RAS, MYC, HER2, BCR-ABL"
+        ],
+        [
+          "Büyüme engelleyici sinyallere duyarsızlık",
+          "RB, TP53, TGF-β/SMAD, APC kaybı"
+        ],
+        [
+          "Değişmiş metabolizma",
+          "Warburg etkisi (aerobik glikoliz); IDH mutasyonu → 2-HG"
+        ],
+        [
+          "Apoptozdan kaçınma",
+          "BCL2 aşırı ekspresyonu, p53 kaybı"
+        ],
+        [
+          "Sınırsız çoğalma",
+          "Telomeraz yeniden aktivasyonu"
+        ],
+        [
+          "Sürekli anjiyogenez",
+          "HIF-1α → VEGF; trombospondin-1 kaybı"
+        ],
+        [
+          "İstila ve metastaz",
+          "E-kadherin kaybı, MMP, EMT (SNAIL, TWIST)"
+        ],
+        [
+          "Bağışıklıktan kaçış",
+          "PD-L1, CTLA-4, MHC sınıf I kaybı, TGF-β, IL-10, Treg, MDSC"
+        ]
+      ]
+    },
+    {
+      "id": "onkogen-baskilayici",
+      "baslik": "Onkogen ve tümör baskılayıcı gen",
+      "k": [
+        "17:6",
+        "17:7",
+        "17:8",
+        "18:5"
+      ],
+      "sutun": [
+        "Özellik",
+        "Onkogen",
+        "Tümör baskılayıcı gen"
+      ],
+      "satir": [
+        [
+          "Mutasyon tipi",
+          "Proto-onkogende işlev kazanımı",
+          "İşlev kaybı"
+        ],
+        [
+          "Alel",
+          "Tek alel yeterli (dominant)",
+          "Çoğunlukla iki alel inaktive olmalı (iki vuruş)"
+        ],
+        [
+          "Normal görev",
+          "Büyüme sinyali (aşırı, uygunsuz, otonom aktif hale gelir)",
+          "Büyümeyi sınırlar, genom hasarını algılar"
+        ],
+        [
+          "Örnek",
+          "RAS, MYC, ERBB2 (HER2), BCR-ABL, MET",
+          "RB, TP53, APC, BRCA1/2, PTEN, VHL, NF1/NF2, CDKN2A"
+        ]
+      ]
+    },
+    {
+      "id": "tumor-baskilayicilar",
+      "baslik": "Önemli tümör baskılayıcılar",
+      "k": [
+        "18:4",
+        "18:5",
+        "18:7",
+        "18:9",
+        "18:10",
+        "18:12",
+        "18:13",
+        "18:15",
+        "18:16",
+        "18:17",
+        "18:18",
+        "18:19",
+        "18:20",
+        "18:21",
+        "18:23",
+        "26:17",
+        "30:50"
+      ],
+      "sutun": [
+        "Gen / protein",
+        "Normal görev",
+        "Kayıp sonucu / sendrom"
+      ],
+      "satir": [
+        [
+          "RB",
+          "G1/S kontrolü: hipofosforile RB E2F'yi bağlar; siklin D–CDK4/6 fosforile edince E2F serbest kalır",
+          "Retinoblastom (ilk tanımlanan, iki vuruş prototipi), osteosarkom; HPV E7 RB'yi bağlar"
+        ],
+        [
+          "TP53 (p53)",
+          "DNA hasarı, hipoksi, onkogen stresini algılar → p21 ile döngü durması, onarım, senesens veya apoptoz (PUMA, BAX); MDM2 p53'ü yıkıma gönderir",
+          "En sık mutant gen; Li–Fraumeni (sarkom, meme, lösemi, beyin, adrenal korteks); HPV E6 p53'ü yıktırır"
+        ],
+        [
+          "CDKN2A (p16)",
+          "CDK inhibitörü",
+          "Delesyon/susturma: pankreas, melanom, baş-boyun karsinomu"
+        ],
+        [
+          "APC",
+          "β-katenin yıkım kompleksi (WNT yolu)",
+          "β-katenin birikir; ailesel adenomatöz polipozis; sporadik kolon karsinomunun %70–80'i"
+        ],
+        [
+          "TGF-β / SMAD",
+          "p15, p21 ↑; MYC ve CDK4 ↓ → G1/S durur",
+          "Erken evrede kayıp; ileri evrede TGF-β EMT, invazyon ve immün baskı yapar"
+        ],
+        [
+          "E-kadherin",
+          "Hücre–hücre adezyonu, temas inhibisyonu",
+          "Kaybı EMT'nin kilit olayı; lobüler meme karsinomu; CDH1 kalıtsal diffüz mide kanseri"
+        ],
+        [
+          "NF2 (merlin)",
+          "Temas inhibisyonu yolu",
+          "Nörofibromatozis tip 2: sinir kılıfı tümörü, menenjiom"
+        ],
+        [
+          "PTEN",
+          "PI3K–AKT yolunun negatif düzenleyicisi",
+          "Cowden sendromu; atipili endometrial hiperplazi ve endometrioid karsinom"
+        ],
+        [
+          "VHL",
+          "HIF'in oksijene bağımlı yıkımı",
+          "Berrak hücreli böbrek karsinomu (3p25), serebellar/retinal hemanjiyoblastom"
+        ],
+        [
+          "BRCA1, BRCA2",
+          "Homolog rekombinasyonla çift sarmal kırığı onarımı",
+          "Meme, over, pankreas, prostat kanseri"
+        ]
+      ]
+    },
+    {
+      "id": "genetik-lezyon",
+      "baslik": "Translokasyon, amplifikasyon ve mutasyon örnekleri",
+      "k": [
+        "17:15",
+        "17:16",
+        "17:18",
+        "17:19",
+        "20:34",
+        "20:35",
+        "34:33",
+        "34:84",
+        "18:30",
+        "18:32",
+        "30:78"
+      ],
+      "sutun": [
+        "Değişiklik",
+        "Gen",
+        "Tümör",
+        "Not"
+      ],
+      "satir": [
+        [
+          "t(8;14)",
+          "MYC → Ig ağır zincir lokusu",
+          "Burkitt lenfoma",
+          "MYC aşırı ekspresyonu"
+        ],
+        [
+          "t(14;18)",
+          "BCL2 → Ig ağır zincir lokusu",
+          "Foliküler lenfoma",
+          "Apoptoz baskılanır"
+        ],
+        [
+          "t(9;22) Philadelphia",
+          "BCR-ABL füzyonu",
+          "Kronik miyeloid lösemi",
+          "Konstitütif tirozin kinaz; imatinib; PCR ile minimal kalıntı takibi"
+        ],
+        [
+          "t(11;22)",
+          "EWS–FLI1",
+          "Ewing sarkomu",
+          "Tanısal translokasyon"
+        ],
+        [
+          "Amplifikasyon",
+          "MYCN",
+          "Nöroblastom",
+          "Kötü prognoz"
+        ],
+        [
+          "Amplifikasyon",
+          "HER2 (ERBB2)",
+          "Meme karsinomunun ≈%20'si",
+          "Trastuzumab yanıtını belirler"
+        ],
+        [
+          "Nokta mutasyonu",
+          "JAK2",
+          "Polisitemia vera",
+          "—"
+        ],
+        [
+          "Nokta mutasyonu",
+          "BRAF V600E",
+          "Melanom, tiroid, kolon alt grubu",
+          "BRAF inhibitörü"
+        ],
+        [
+          "Nokta mutasyonu",
+          "RAS ailesi",
+          "Birçok solid tümör",
+          "İşlev kazanımı"
+        ],
+        [
+          "Delesyon",
+          "13q14 (RB), 17p (TP53)",
+          "Retinoblastom, osteosarkom; çeşitli",
+          "Bialelik inaktivasyon"
+        ],
+        [
+          "İzokromozom 12p, KIT",
+          "—",
+          "Testis germ hücreli tümörleri",
+          "Spermatositik tümörde yok (9q kazanımı)"
+        ],
+        [
+          "TMPRSS2-ETS füzyonu",
+          "ERG",
+          "Prostat karsinomu",
+          "Androjen düzenli promotör altına girer"
+        ],
+        [
+          "IDH mutasyonu",
+          "2-hidroksiglutarat üretimi",
+          "Gliomlar, AML, kolanjiyokarsinom",
+          "TET2'yi inhibe eder; IDH inhibitörü (AML)"
+        ],
+        [
+          "MED12 mutasyonu",
+          "—",
+          "Leiomyom (~%70), leiomyosarkom (~%30)",
+          "—"
+        ]
+      ]
+    },
+    {
+      "id": "dna-onarim",
+      "baslik": "DNA onarım bozuklukları",
+      "k": [
+        "17:25",
+        "17:26",
+        "17:27",
+        "17:28",
+        "16:71",
+        "16:72"
+      ],
+      "sutun": [
+        "Onarım yolu",
+        "Hastalık / gen",
+        "Sonuç"
+      ],
+      "satir": [
+        [
+          "Uyumsuzluk onarımı (MMR)",
+          "Lynch sendromu (HNPCC): MSH2, MLH1, MSH6",
+          "Mikrosatellit instabilitesi; kolon ve endometrium kanseri"
+        ],
+        [
+          "Nükleotid eksizyon onarımı (NER)",
+          "Kseroderma pigmentozum (OR)",
+          "UV pirimidin dimerleri onarılamaz → melanom, SCC, BCC"
+        ],
+        [
+          "Homolog rekombinasyon",
+          "Bloom (BLM), ataksi-telanjiektazi (ATM), Fanconi anemisi, BRCA1/2",
+          "DNA hasarlayan ajanlara aşırı duyarlılık; lösemi, lenfoma, meme/over"
+        ],
+        [
+          "DNA polimeraz proofreading",
+          "Bazı endometrium ve kolorektal karsinomlar",
+          "Yüksek neoantijen yükü → kontrol noktası inhibitörüne iyi yanıt"
+        ]
+      ]
+    },
+    {
+      "id": "kalitsal-sendrom",
+      "baslik": "Kansere kalıtsal yatkınlık sendromları",
+      "k": [
+        "16:72"
+      ],
+      "sutun": [
+        "Sendrom",
+        "Gen"
+      ],
+      "satir": [
+        [
+          "Retinoblastom",
+          "RB"
+        ],
+        [
+          "Li–Fraumeni",
+          "TP53"
+        ],
+        [
+          "Ailesel melanom",
+          "CDKN2A"
+        ],
+        [
+          "Ailesel adenomatöz polipozis",
+          "APC"
+        ],
+        [
+          "Nörofibromatozis tip 1 ve 2",
+          "NF1, NF2"
+        ],
+        [
+          "Ailesel meme–over kanseri",
+          "BRCA1, BRCA2"
+        ],
+        [
+          "MEN tip 1 ve 2",
+          "MEN1, RET"
+        ],
+        [
+          "Lynch (HNPCC)",
+          "MSH2, MLH1, MSH6"
+        ],
+        [
+          "Nevoid bazal hücreli karsinom sendromu",
+          "PTCH1"
+        ],
+        [
+          "Ataksi-telanjiektazi / Bloom",
+          "ATM / BLM"
+        ]
+      ]
+    },
+    {
+      "id": "onkojenik-virus",
+      "baslik": "Onkojenik virüsler ve bakteri",
+      "k": [
+        "17:35",
+        "17:37",
+        "17:38",
+        "17:39",
+        "17:40",
+        "39:27",
+        "39:28",
+        "39:31",
+        "39:32"
+      ],
+      "sutun": [
+        "Etken",
+        "Tümör",
+        "Mekanizma"
+      ],
+      "satir": [
+        [
+          "HPV yüksek risk (16, 18)",
+          "Serviks SCC, anogenital ve orofarinks karsinomu",
+          "E6 p53'ü yıktırır ve TERT'i uyarır; E7 RB'ye bağlanıp E2F'yi serbest bırakır, p21'i inhibe eder; invaziv kanserde DNA konak genomuna entegre"
+        ],
+        [
+          "HPV düşük risk (6, 11)",
+          "Kondiloma akuminatum",
+          "E7 RB'ye düşük afinite; E6 p53'e bağlanamaz (Notch'a etki); DNA episomal"
+        ],
+        [
+          "EBV",
+          "Burkitt (endemik), Hodgkin alt tipleri, nazofarinks karsinomu, immünsüpresif lenfoma",
+          "CD21 ile B hücresine girer; LMP1 CD40'ı taklit eder, NF-κB'yi aktive eder; EBNA2 siklin D'yi destekler"
+        ],
+        [
+          "HTLV-1",
+          "Erişkin T hücreli lösemi/lenfoma",
+          "CD4⁺ tropizm; Tax proteini NF-κB'yi aktive eder; latent dönem 40–60 yıl"
+        ],
+        [
+          "HBV, HCV",
+          "Hepatoselüler karsinom",
+          "Kronik enflamasyon ve rejenerasyon"
+        ],
+        [
+          "KSHV (HHV-8), Merkel polioma",
+          "Kaposi sarkomu, Merkel hücreli karsinom",
+          "Onkoproteinler"
+        ],
+        [
+          "Helicobacter pylori",
+          "Mide adenokarsinomu, MALT lenfoma",
+          "Kronik gastrit → atrofi → intestinal metaplazi → displazi; MALT erken evrede eradikasyonla geriler"
+        ]
+      ]
+    },
+    {
+      "id": "kimyasal-karsinojen",
+      "baslik": "Kimyasal, fiziksel ve mesleki karsinojenler",
+      "k": [
+        "17:32",
+        "17:33",
+        "17:34",
+        "17:35",
+        "17:37",
+        "17:38",
+        "16:59",
+        "16:60",
+        "15:58",
+        "26:8"
+      ],
+      "sutun": [
+        "Karsinojen",
+        "Kanser",
+        "Not"
+      ],
+      "satir": [
+        [
+          "Alkilleyici kemoterapötikler (doğrudan etkili)",
+          "Yıllar sonra AML",
+          "Metabolik aktivasyon gerekmez"
+        ],
+        [
+          "Polisiklik aromatik hidrokarbon (benzo[a]piren)",
+          "Akciğer vb.",
+          "Tütün, fosil yakıt, ızgara et; CYP-450 ile aktive"
+        ],
+        [
+          "Aromatik amin, azo boya",
+          "Mesane",
+          "Kimya ve kauçuk endüstrisi"
+        ],
+        [
+          "Aflatoksin B1",
+          "Hepatoselüler karsinom",
+          "Aspergillus; kötü saklanan tahıl"
+        ],
+        [
+          "Nitrozamin",
+          "Mide",
+          "Diyet"
+        ],
+        [
+          "İyonlaştırıcı radyasyon",
+          "Lösemi (latent ≈7 yıl), tiroid, meme, akciğer",
+          "Çift sarmal kırığı; Çernobil sonrası tiroid kanseri"
+        ],
+        [
+          "UV (UVB)",
+          "Melanom, SCC, BCC",
+          "Pirimidin dimeri"
+        ],
+        [
+          "Asbest",
+          "Akciğer karsinomu, mezotelyoma",
+          "—"
+        ],
+        [
+          "Benzen",
+          "AML",
+          "—"
+        ],
+        [
+          "Vinil klorür",
+          "Hepatik anjiosarkom",
+          "—"
+        ],
+        [
+          "Arsenik / krom / nikel / radon",
+          "Akciğer (arsenik deri; nikel orofarinks)",
+          "—"
+        ],
+        [
+          "Kadmiyum",
+          "Prostat (ve böbrek hücreli karsinom riski)",
+          "—"
+        ]
+      ]
+    },
+    {
+      "id": "kronik-enf-kanser",
+      "baslik": "Kronik enflamatuvar durum ve kanser",
+      "k": [
+        "16:63",
+        "16:64",
+        "16:65"
+      ],
+      "sutun": [
+        "Durum",
+        "Neoplazm"
+      ],
+      "satir": [
+        [
+          "Asbestoz, silikoz",
+          "Mezotelyoma, akciğer karsinomu"
+        ],
+        [
+          "İnflamatuvar bağırsak hastalığı",
+          "Kolorektal karsinom"
+        ],
+        [
+          "Liken sklerozus",
+          "Vulvar SCC"
+        ],
+        [
+          "Reflü özofajit / Barrett",
+          "Özofagus adenokarsinomu"
+        ],
+        [
+          "Sjögren, Hashimoto",
+          "Ekstranodal marjinal zon lenfoma"
+        ],
+        [
+          "Opisthorchis, kolanjit",
+          "Kolanjiyokarsinom"
+        ],
+        [
+          "H. pylori gastrit",
+          "Mide adenokarsinomu, MALT lenfoma"
+        ],
+        [
+          "Hepatit B/C",
+          "Hepatoselüler karsinom"
+        ],
+        [
+          "Kronik sistit (şistozomiyaz)",
+          "Mesane karsinomu (SCC)"
+        ],
+        [
+          "Osteomiyelit",
+          "Drenaj sinüsünde karsinom"
+        ],
+        [
+          "Kronik kolesistit, pankreatit",
+          "Safra kesesi, pankreas kanseri"
+        ]
+      ]
+    },
+    {
+      "id": "immun-kacis",
+      "baslik": "Tümör immünolojisi",
+      "k": [
+        "19:6",
+        "19:7",
+        "19:11",
+        "19:15",
+        "19:16",
+        "19:17",
+        "19:18",
+        "19:19",
+        "19:20"
+      ],
+      "sutun": [
+        "Başlık",
+        "İçerik"
+      ],
+      "satir": [
+        [
+          "Tümör antijenleri",
+          "Neoantijen (mutasyon), kanser-testis antijeni, aşırı ifade (HER2), diferansiyasyon antijeni (tirozinaz), viral protein (HPV E6/E7, EBV LMP1)"
+        ],
+        [
+          "Efektörler",
+          "CD8⁺ CTL (perforin–granzim, Fas–FasL), Th1 (IFN-γ → makrofaj), NK, ADCC"
+        ],
+        [
+          "Kaçış: MHC kaybı",
+          "β2-mikroglobulin mutasyonu → CTL tanıyamaz"
+        ],
+        [
+          "Kaçış: kontrol noktası",
+          "PD-L1 → PD-1 bağlanması T hücreyi tüketir; CTLA-4 aktivasyonu negatif düzenler"
+        ],
+        [
+          "Kaçış: baskılayıcılar",
+          "TGF-β, IL-10, Treg, MDSC; antijen kaybı; TAP/proteazom kusuru"
+        ],
+        [
+          "Kontrol noktası inhibitörleri",
+          "Anti-PD-1, anti-PD-L1, anti-CTLA-4: melanom, akciğer, mesane, Hodgkin; yüksek mutasyon yükünde yanıt iyi; yan etki kolit, pnömonit, endokrinopati"
+        ],
+        [
+          "Diğer",
+          "CAR-T (B-ALL, lenfoma; sitokin salınım sendromu), kişisel neoantijen aşıları, adaptif T hücre transferi"
+        ]
+      ]
+    },
+    {
+      "id": "metastaz",
+      "baslik": "Metastaz basamakları ve yolları",
+      "k": [
+        "19:22",
+        "19:24",
+        "19:25",
+        "19:28",
+        "19:29",
+        "19:30",
+        "19:31",
+        "16:46",
+        "16:49",
+        "16:50",
+        "16:52",
+        "16:53"
+      ],
+      "sutun": [
+        "Başlık",
+        "İçerik"
+      ],
+      "satir": [
+        [
+          "Basamaklar",
+          "Ayrılma (E-kadherin kaybı) → ECM/bazal membran invazyonu (MMP) → intravazasyon → dolaşımda sağkalım (trombosit koruması) → ekstravazasyon → mikrometastaz → makroskopik metastaz"
+        ],
+        [
+          "EMT",
+          "E-kadherin ↓, vimentin ve düz kas aktini ↑; SNAIL, TWIST"
+        ],
+        [
+          "Boşluklara tohumlanma",
+          "Over karsinomu → periton; medulloblastom, ependimom → BOS yolu"
+        ],
+        [
+          "Lenfatik",
+          "Karsinomlar için tipik; bekçi lenf düğümü"
+        ],
+        [
+          "Hematogen",
+          "İnce duvarlı venler; portal → karaciğer, sistemik → akciğer; HCC ve RCC VCI'ya uzanır"
+        ],
+        [
+          "Organ tropizmi",
+          "Prostat → kemik; bronkojenik → adrenal, beyin; nöroblastom → karaciğer, kemik; üveal melanom → karaciğer; iskelet kası nadir hedef"
+        ],
+        [
+          "Dormansi",
+          "Yetersiz anjiyogenez, niş eksikliği, immün baskı → yıllar sonra geç nüks"
+        ]
+      ]
+    },
+    {
+      "id": "paraneoplastik",
+      "baslik": "Paraneoplastik sendromlar",
+      "k": [
+        "20:12",
+        "20:13",
+        "20:14",
+        "20:15",
+        "20:16",
+        "20:17"
+      ],
+      "sutun": [
+        "Sendrom",
+        "Başlıca tümör",
+        "Neden"
+      ],
+      "satir": [
+        [
+          "Hiperkalsemi (en sık)",
+          "Akciğer SCC, meme, RCC, erişkin T hücreli lösemi",
+          "PTHrP, TGF-α, aktif D vitamini"
+        ],
+        [
+          "Cushing sendromu",
+          "Akciğer küçük hücreli karsinomu, pankreas, nöral tümör",
+          "ACTH veya ACTH benzeri madde"
+        ],
+        [
+          "SIADH",
+          "Akciğer küçük hücreli karsinomu, intrakraniyal tümör",
+          "ADH"
+        ],
+        [
+          "Hipoglisemi",
+          "Fibrosarkom ve diğer sarkomlar, over karsinomu",
+          "İnsülin benzeri madde"
+        ],
+        [
+          "Polisitemi",
+          "RCC, serebellar hemanjiyom, HCC",
+          "Eritropoetin"
+        ],
+        [
+          "Miyasteni",
+          "Bronkojenik karsinom, timoma",
+          "İmmünolojik"
+        ],
+        [
+          "Acanthosis nigricans",
+          "Mide, akciğer, uterus karsinomu",
+          "EGF veya diğer büyüme faktörleri"
+        ],
+        [
+          "Dermatomiyozit",
+          "Bronkojenik, meme karsinomu",
+          "İmmünolojik"
+        ],
+        [
+          "Hipertrofik osteoartropati, çomak parmak",
+          "Bronkojenik karsinom",
+          "Bilinmiyor"
+        ],
+        [
+          "Trousseau (venöz tromboz)",
+          "Pankreas, akciğer",
+          "Pıhtılaşmayı aktive eden müsinler"
+        ],
+        [
+          "Nonbakteriyel trombotik endokardit",
+          "İleri evre kanserler",
+          "Hiperkoagülabilite"
+        ],
+        [
+          "Kırmızı hücre aplazisi",
+          "Timoma",
+          "İmmünolojik"
+        ],
+        [
+          "Limbik ensefalit",
+          "Olgun teratom (sinir dokulu), akciğer küçük hücreli karsinomu",
+          "Otoimmün; rezeksiyonla geriler"
+        ]
+      ]
+    },
+    {
+      "id": "tumor-belirtec",
+      "baslik": "Tümör belirteçleri ve immünohistokimya",
+      "k": [
+        "20:28",
+        "20:31",
+        "20:32",
+        "34:57",
+        "34:58",
+        "31:81",
+        "01:40"
+      ],
+      "sutun": [
+        "Belirteç",
+        "Tümör / kullanım"
+      ],
+      "satir": [
+        [
+          "PSA",
+          "Prostat karsinomu (BPH ve prostatitte de artar); İHK'da metastatik prostat odağı"
+        ],
+        [
+          "CEA",
+          "Kolorektal, pankreas, mide, meme karsinomu"
+        ],
+        [
+          "AFP",
+          "Hepatoselüler karsinom, yolk kesesi tümörü (bazı embriyonel karsinom ve teratomlar)"
+        ],
+        [
+          "hCG",
+          "Koriokarsinom (daima yüksek), hidatidiform mol; sinsityotrofoblastlı seminomda hafif ↑"
+        ],
+        [
+          "CA-125",
+          "Epitelyal over karsinomu (%75–90); erken evrede yarısında normal; izlemde değerli"
+        ],
+        [
+          "CA 19-9",
+          "Pankreas, safra yolu, bazı GİS tümörleri"
+        ],
+        [
+          "LDH",
+          "Tümör yüküyle korele, nonspesifik (testis tümörleri)"
+        ],
+        [
+          "Sitokeratin / CD45",
+          "Karsinom / lenfoid tümör (İHK)"
+        ],
+        [
+          "ER, PR, HER2, Ki-67",
+          "Meme kanserinde prognostik ve prediktif; Ki-67 proliferasyon indeksi"
+        ]
+      ]
+    },
+    {
+      "id": "grade-stage",
+      "baslik": "Derecelendirme ve evreleme",
+      "k": [
+        "20:18",
+        "20:19",
+        "20:20",
+        "20:21",
+        "20:22",
+        "20:23"
+      ],
+      "sutun": [
+        "Özellik",
+        "Derecelendirme (grade)",
+        "Evreleme (stage)"
+      ],
+      "satir": [
+        [
+          "Neyi ölçer?",
+          "Diferansiyasyon, mitoz sayısı, nekroz, mimari bozulma",
+          "Vücuttaki yayılım: T (primer tümör), N (lenf düğümü), M (uzak metastaz)"
+        ],
+        [
+          "Sınıflar",
+          "Düşük (iyi diferansiye) – orta – yüksek (anaplastik)",
+          "T0 karsinoma in situ, T1–T4; N0–N3; M0/M1 → Evre I–IV"
+        ],
+        [
+          "Klinik değer",
+          "Yardımcı; öznel, gözlemciye bağımlı",
+          "Prognoz ve tedavi kararı için en önemli parametre"
+        ]
+      ]
+    },
+    {
+      "id": "metabolizma",
+      "baslik": "Tümör metabolizması",
+      "k": [
+        "18:24",
+        "18:25",
+        "18:27",
+        "18:30"
+      ],
+      "sutun": [
+        "Kavram",
+        "Açıklama"
+      ],
+      "satir": [
+        [
+          "Warburg etkisi",
+          "Oksijen olsa bile aerobik glikoliz; glikoliz ara ürünleri nükleotid, amino asit ve lipit sentezine karbon sağlar"
+        ],
+        [
+          "Onkogen etkisi",
+          "RAS–PI3K/AKT glikoz taşıyıcı ve glikolitik enzimleri artırır; MYC glutamin bağımlılığını artırır; TP53 bu genleri baskılar"
+        ],
+        [
+          "FDG-PET",
+          "Glikoz alımı artmış dokuları gösterir: tarama ve tedavi yanıtı"
+        ],
+        [
+          "IDH / 2-HG",
+          "Onkometabolit TET2'yi inhibe ederek DNA ve histon metilasyonunu değiştirir"
+        ]
+      ]
+    },
+    {
+      "id": "hedefli-tedavi",
+      "baslik": "Moleküler hedefe yönelik tedaviler",
+      "k": [
+        "17:16",
+        "17:50",
+        "18:35",
+        "20:39",
+        "15:61",
+        "19:18"
+      ],
+      "sutun": [
+        "Hedef",
+        "İlaç / yaklaşım",
+        "Tümör"
+      ],
+      "satir": [
+        [
+          "BCR-ABL",
+          "İmatinib (tirozin kinaz inhibitörü)",
+          "Kronik miyeloid lösemi"
+        ],
+        [
+          "HER2 (ERBB2)",
+          "Trastuzumab, pertuzumab",
+          "HER2 pozitif meme kanseri"
+        ],
+        [
+          "BRAF V600E",
+          "BRAF inhibitörleri",
+          "Melanom ve diğerleri"
+        ],
+        [
+          "EGFR mutasyonu",
+          "Tirozin kinaz inhibitörleri",
+          "Akciğer"
+        ],
+        [
+          "VEGF",
+          "Bevacizumab (monoklonal antikor)",
+          "Kolorektal, akciğer, böbrek; yaşamı aylar düzeyinde uzatır"
+        ],
+        [
+          "Mutant IDH",
+          "IDH inhibitörleri",
+          "Akut miyeloid lösemi"
+        ],
+        [
+          "PD-1 / PD-L1 / CTLA-4",
+          "Kontrol noktası blokajı",
+          "Melanom, akciğer, mesane, Hodgkin; MSI yüksek tümörler"
+        ]
+      ]
+    }
+  ],
+  "notlar": [
+    {
+      "m": "Tümörler genellikle tek hücreden köken alır (klonal); Darwinci seçilimle avantajlı alt klonlar baskın hale gelir.",
+      "k": "16:6"
+    },
+    {
+      "m": "Sürücü mutasyon kanser genini değiştirip ilerlemeye katkı verir; yolcu mutasyon nötrdür ama tedavi baskısında direnç kazandırabilir.",
+      "k": "16:69"
+    },
+    {
+      "m": "Kimyasal karsinogenez: başlatıcı kalıcı DNA hasarı yapar (tek doz yeterli); promotör tek başına tümör yapmaz, başlatıcıdan sonra tekrarlayan maruziyetle klonal çoğalmayı uyarır.",
+      "k": "17:35"
+    },
+    {
+      "m": "Epigenetikte kanserde global hipometilasyon (instabilite) ve tümör baskılayıcı promotörlerinde hipermetilasyon (susturma) görülür; onkomir onkojenik miRNA'dır.",
+      "k": "17:23"
+    },
+    {
+      "m": "Kanser kaşeksisinin nedeni yalnız besin alımının azalması değildir; TNF (“kaşektin”), IL-1 ve IL-6 katabolizmayı artırır, bazal metabolizma yüksek kalır.",
+      "k": "20:10"
+    },
+    {
+      "m": "Tümör belirteçleri tarama için uygun değildir; tedavi yanıtı ve nüks izleminde değerlidir.",
+      "k": "20:30"
+    },
+    {
+      "m": "Kolon adenomu vakaların ≈%50'sinde karsinoma dönüşüm riski taşır; uterus leiomyomunda malign dönüşüm son derece nadirdir.",
+      "k": "16:66"
+    }
+  ]
+}

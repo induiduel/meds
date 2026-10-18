@@ -126,6 +126,8 @@ const KazanimlarView = React.lazy(() => wrapLazy(import('./components/Kazanimlar
 const DiseasesView = React.lazy(() => wrapLazy(import('./components/diseases/DiseasesView').then(m => ({ default: m.DiseasesView }))));
 const SaglikView = React.lazy(() => wrapLazy(import('./components/saglik/SaglikView').then(m => ({ default: m.SaglikView }))));
 const CanliDersView = React.lazy(() => wrapLazy(import('./components/canliDers/CanliDersView')));
+const PatolojiCheckUp = React.lazy(() => wrapLazy(import('./components/checkup/PatolojiCheckUp')));
+const BitirdiklerimView = React.lazy(() => wrapLazy(import('./components/takip/BitirdiklerimView')));
 const SinavCalismaView = React.lazy(() => wrapLazy(import('./components/SinavCalismaView').then(m => ({ default: m.SinavCalismaView }))));
 
 // Lazy-loaded Modals (Only downloaded when opened)
@@ -1820,6 +1822,20 @@ export default function App() {
         {activeTab === 'sinav_calisma' && (
           <Suspense fallback={<ViewFallback />}>
             <SinavCalismaView />
+          </Suspense>
+        )}
+
+        {/* TAB: /patoloji-check-up — patoloji karşılaştırma tabloları ve kısa notlar */}
+        {activeTab === 'patoloji_checkup' && (
+          <Suspense fallback={<ViewFallback />}>
+            <PatolojiCheckUp />
+          </Suspense>
+        )}
+
+        {/* TAB: /bitirdiklerim — konu konu kontrol listesi, süre, soru ve kalan tahmini */}
+        {activeTab === 'bitirdiklerim' && (
+          <Suspense fallback={<ViewFallback />}>
+            <BitirdiklerimView />
           </Suspense>
         )}
 

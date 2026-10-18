@@ -9,7 +9,7 @@ import { ChevronDown, ChevronLeft, ChevronUp, Columns2, Crosshair, FileText, Max
 import { navigateTo, pathFor } from '../../router';
 import { driveViewUrl, useDeckPdf } from '../../services/deckPdfService';
 import {
-  cdCumleAraligi, cdDetayBagla, cdDetayGetir, cdDurum, cdOynat, cdParagrafa, cdToggle, fmtSure, useCd, type CdDetay,
+  cdCumleAraligi, cdDetayBagla, cdDetayGetir, cdDurum, cdOynat, cdParagrafa, cdTercihVaryant, cdToggle, fmtSure, useCd, type CdDetay,
 } from './canliDersStore';
 import { useCdTur } from './useCdTur';
 import { cdDersEtiketi } from './canliDersKategori';
@@ -17,6 +17,8 @@ import { ListeEkleDugme } from './CanliDersListem';
 import { CevrimdisiDugme } from './CanliDersCevrimdisi';
 import { CdDaha } from './CanliDersDaha';
 import { CdTvKumanda } from './CanliDersTv';
+import { useKonuSayaci } from '../../services/calismaTakip';
+import { KonuDugmeleri } from '../takip/KonuTakip';
 import '../learn/pdf/pdfDoc.css';
 
 /** Öğenin görünür ölçeği (v12 yazı boyutu CSS zoom'u); utils/uiZoom.elementZoom ile aynı mantık. */
@@ -77,6 +79,9 @@ const YAZI_ENAZ = 14;
 const YAZI_ENCOK = 40;
 
 export default function CanliDersDers({ dersKey }: { dersKey: string }) {
+  // Bitirdiklerim: ses çalarken süreyi depo sayar; duraklatılmışken metni/slaytı okumak da bu derse sayılır
+  const buDersCaliyor = useCd((s) => s.key === dersKey && s.playing);
+  useKonuSayaci('sesli', buDersCaliyor ? null : dersKey);
   const [detay, setDetay] = useState<CdDetay | null>(null);
   const [hata, setHata] = useState<string | null>(null);
   const [baglanti, setBaglanti] = useState<'bagli' | 'yuklendi' | 'baska' | null>(null);
@@ -260,6 +265,10 @@ export default function CanliDersDers({ dersKey }: { dersKey: string }) {
           )}
         </div>
         <div className="cd-ders-uc">
+          {!tamEkran && (
+            <KonuDugmeleri kucuk className="cd-ders-takip" modul="sesli" konu={detay.key} ad={detay.baslik}
+              onTekrar={() => { const v = cdTercihVaryant(detay.varyantlar); if (v) cdOynat(detay, v.id, { t: 0 }); }} />
+          )}
           <CdTvKumanda />
           {!tamEkran && (
             <CdDaha etiket="Ders seçenekleri (çevrimdışı, listem, tanıtım)" className="cd-ders-daha">

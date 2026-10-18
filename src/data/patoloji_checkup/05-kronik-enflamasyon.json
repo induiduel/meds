@@ -1,0 +1,123 @@
+{
+  "id": "kronik-enflamasyon",
+  "ad": "Kronik enflamasyon, makrofaj ve T hücreleri",
+  "kisa": "M1/M2, Th1–Th2–Th17–Treg, granülom, granülomatöz hastalıklar",
+  "tablolar": [
+    {
+      "id": "m1-m2",
+      "baslik": "M1 ve M2 makrofaj aktivasyonu",
+      "k": ["09:16", "09:17", "09:19", "09:20", "09:21", "19:34"],
+      "sutun": ["Özellik", "Klasik (M1)", "Alternatif (M2)"],
+      "satir": [
+        ["Tetikleyici", "Mikrobiyal ürünler (LPS, TLR ligandları), IFN-γ (Th1)", "IL-4, IL-13 (özellikle Th2)"],
+        ["Ürettikleri", "ROS, NO, lizozomal enzimler; IL-1, TNF, IL-12, IL-6, kemokinler", "IL-10, TGF-β; büyüme faktörleri"],
+        ["Mikrobisidal aktivite", "Yüksek: bakteri ve mantarları fagosite edip öldürür", "Sınırlı"],
+        ["Görev", "Mikrop öldürme, enflamasyonu sürdürme", "Doku onarımı, fibrozis, anjiyogenez, fibroblast aktivasyonu, enflamasyonu baskılama"],
+        ["Zamanlama", "Erken yanıt (etken eliminasyonu)", "Sonra (iyileşme ve skar)"],
+        ["Kanserde", "—", "Tümörle ilişkili makrofajlar (özellikle M2) metastatik nişin hazırlanmasına katkı verir"]
+      ]
+    },
+    {
+      "id": "t-hucreleri",
+      "baslik": "CD4⁺ T yardımcı alt grupları ve CD8⁺ T hücresi",
+      "k": ["09:24", "14:93", "14:8", "14:39", "14:47", "14:44", "19:10", "19:12", "19:17"],
+      "sutun": ["Hücre", "Tanımlayıcı sitokin", "Hedef hücre", "Konak savunması", "Hastalıktaki rolü"],
+      "satir": [
+        ["Th1", "IFN-γ", "Makrofaj (M1 aktivasyonu)", "Hücre içi patojenler; antitümör yanıt", "Otoimmünite, kronik enflamasyon; Tip IV aşırı duyarlılık (DTH), granülom"],
+        ["Th2", "IL-4, IL-5, IL-13", "Eozinofil; B hücresi (IgE sınıf değişimi); M2 makrofaj", "Helmintler", "Alerji, Tip I aşırı duyarlılık, atopi; sistemik sklerozda otoimmün yanıt"],
+        ["Th17", "IL-17, IL-22", "Nötrofil (ve monosit) toplanması", "Hücre dışı patojenler", "Otoimmünite: psöriazis, romatoid artrit, MS, inflamatuvar bağırsak hastalığı"],
+        ["Treg (düzenleyici T)", "IL-10, TGF-β", "Diğer T hücreleri", "—", "Periferik tolerans: FoxP3 gerekir; CTLA-4 ile ko-stimülasyonu engeller, IL-2'yi tüketir; tümör mikroçevresinde immün baskı"],
+        ["CD8⁺ CTL", "Perforin, granzim, FasL", "MHC sınıf I ile sunulan peptidi taşıyan hücre", "Virüsle enfekte hücreler, tümör hücreleri", "Tip 1 diyabet (β hücre yıkımı), viral hepatitte hepatosit hasarı, nakil reddi"]
+      ]
+    },
+    {
+      "id": "makrofaj-gorev",
+      "baslik": "Makrofajın görevleri",
+      "k": ["09:12", "09:22", "09:25"],
+      "sutun": ["Görev", "Araç"],
+      "satir": [
+        ["Fagositoz", "Mikroplar ve doku kalıntıları"],
+        ["Mediyatör salgısı", "TNF, IL-1, kemokinler, eikozanoidler"],
+        ["Onarım ve fibrozis", "TGF-β, PDGF, FGF gibi büyüme faktörleri"],
+        ["Antijen sunumu", "T lenfositlere antijen ve ko-uyarıcı sinyal; IL-12 salgısı"],
+        ["Döngü", "Makrofaj IL-12 ile T hücresini, T hücresi IFN-γ ile makrofajı aktive eder (pozitif geri besleme)"]
+      ]
+    },
+    {
+      "id": "mononukleer-fagosit",
+      "baslik": "Doku makrofajları (mononükleer fagosit sistemi)",
+      "k": ["09:14", "09:15", "07:35"],
+      "sutun": ["Doku", "Makrofajın adı"],
+      "satir": [
+        ["Karaciğer", "Kupffer hücresi"],
+        ["Dalak / lenf düğümü", "Sinüs histiyositi"],
+        ["Beyin", "Mikroglia"],
+        ["Akciğer", "Alveoler makrofaj"],
+        ["Köken", "Enflamasyonda kemik iliği kök hücresinden (monosit); bazı yerleşik makrofajlar vitellus kesesi / fetal karaciğerden"]
+      ]
+    },
+    {
+      "id": "diger-hucre",
+      "baslik": "Kronik enflamasyonda diğer hücreler",
+      "k": ["09:26", "09:28", "09:23", "05:23"],
+      "sutun": ["Hücre", "Ne zaman?", "Özellik"],
+      "satir": [
+        ["Eozinofil", "IgE aracılı alerji, helmint enfeksiyonu", "Kemoatraktanı eotaksin; granülündeki major basic protein (MBP) parazite ve konak epiteline toksik"],
+        ["Mast hücresi", "Alerjik reaksiyonların ana hücresi; akut ve kronik süreç", "Histamin, lökotrien, sitokin salgılar"],
+        ["Nötrofil", "Akut tipik hücre; osteomiyelit, sigara ilişkili akciğer hastalığında süregen", "—"],
+        ["B hücresi / plazma hücresi", "Bazı kronik lezyonlarda belirgin", "Antikor üretimi; Russell cisimcikleri"]
+      ]
+    },
+    {
+      "id": "kronik-nedenler",
+      "baslik": "Kronik enflamasyonun nedenleri",
+      "k": ["09:7", "09:8", "09:9", "09:10", "09:39"],
+      "sutun": ["Neden grubu", "Örnek"],
+      "satir": [
+        ["Kalıcı enfeksiyon", "Tüberküloz (granülomatöz), kronik viral hepatit (siroz), mantar/parazit"],
+        ["Aşırı duyarlılık hastalıkları", "Otoimmün: romatoid artrit, MS; alerjik: astım, atopik dermatit"],
+        ["Eksojen toksik maruziyet", "Silika (silikozis), asbest (fibrozis, mezotelyoma)"],
+        ["Endojen madde", "Ateroskleroz (kolesterol/lipid birikimi)"],
+        ["“Klasik olmayan” durumlar", "Ateroskleroz, tip 2 diyabet ve metabolik sendrom, Alzheimer (düşük dereceli enflamasyon)"]
+      ]
+    },
+    {
+      "id": "granulom-tipleri",
+      "baslik": "Kazeöz ve kazeöz olmayan granülom",
+      "k": ["09:29", "09:30", "09:31", "09:36"],
+      "sutun": ["Özellik", "Kazeöz granülom", "Kazeöz olmayan granülom"],
+      "satir": [
+        ["Merkez", "Nekroz: makroskopik peynir benzeri, mikroskopik amorf eozinofilik granüler", "Nekroz yok"],
+        ["Örnek", "Tüberküloz", "Sarkoidoz, Crohn, lepra, bazı yabancı cisimler"],
+        ["Ortak yapı", "Epiteloid hücreler (bol pembe sitoplazma), Langhans dev hücresi (çekirdekler periferde taç gibi), lenfosit halkası, zamanla fibrozis", "Aynı"],
+        ["Oluşum", "Th1 → IFN-γ → makrofaj epiteloid hücreye döner; etkeni “izole etme” stratejisi", "Aynı (şistozomiyazda Th2 de katkı verir)"]
+      ]
+    },
+    {
+      "id": "granulomatoz-hastaliklar",
+      "baslik": "Granülomatöz enflamasyonla seyreden hastalıklar",
+      "k": ["09:32", "09:33", "09:34", "09:35", "24:23", "34:20", "34:21", "34:48", "26b:49"],
+      "sutun": ["Hastalık", "Neden", "Doku reaksiyonu"],
+      "satir": [
+        ["Tüberküloz", "Mycobacterium tuberculosis", "Kazeifiye granülom (tüberkül), Langhans dev hücresi, aside dirençli basil"],
+        ["Lepra", "Mycobacterium leprae", "Makrofaj içinde aside dirençli basil; genellikle kazeifiye olmayan granülom"],
+        ["Sifiliz (gumma)", "Treponema pallidum", "Makrofaj duvarı, belirgin plazma hücresi; merkezde hücre konturları tam kaybolmadan nekroz"],
+        ["Kedi tırmığı hastalığı", "Bartonella henselae", "Yuvarlak/yıldız şekilli granülom, merkezde granüler debris ve nötrofil; dev hücre nadir"],
+        ["Sarkoidoz", "Bilinmiyor", "Bol epiteloid hücreli, kazeifiye olmayan granülom"],
+        ["Crohn hastalığı", "Bağırsak bakterilerine (ve otoantijenlere) immün yanıt", "Bağırsak duvarında kazeifiye olmayan granülom"],
+        ["Yabancı cisim granülomu", "Talk (IV ilaç kullanımı), dikiş, cam, metal", "Dev hücre çevresinde polarize ışıkta ışığı kıran materyal"],
+        ["İlaç kaynaklı TIN", "Tiyazidler, rifampin", "Dev hücreli, nekrotik olmayan granülom"],
+        ["Testis tüberkülozu / otoimmün orşit", "M. tuberculosis / testis antijenleri", "Testiste granülomatöz enflamasyon"],
+        ["Granülomatöz prostatit", "En sık intravezikal BCG; mantar; yırtılmış asinus sıvısı", "Sert nodül; prostat kanserini taklit eder"],
+        ["Lenfogranüloma venereum", "Chlamydia trachomatis L1–L3", "Nekrotizan granülom (“yıldızsı apse”)"]
+      ]
+    }
+  ],
+  "notlar": [
+    {"m": "Kronik enflamasyonun üç histolojik özelliği: mononükleer hücre infiltrasyonu, doku yıkımı, iyileşme girişimi (anjiyogenez + fibrozis).", "k": "09:11"},
+    {"m": "Kronik enflamasyonda baskın hücre sıklıkla makrofajdır; lenfositlerle birbirini aktive eder.", "k": "09:12"},
+    {"m": "M1 ve M2 arasında pratikte ara formlar sıktır; dengenin bozulması kronik enflamasyon ve fibrozise katkı verir.", "k": "09:21"},
+    {"m": "Granülomatöz enflamasyon sınırlı hastalık grubunu düşündürür; kesin tanı için özel boya, kültür, moleküler yöntem ve seroloji gerekir.", "k": "09:37"},
+    {"m": "Uzamış kronik enflamasyonda TGF-β ve diğer fibrogenik sitokinler artar → siroz, akciğer fibrozisi, böbrek yetmezliği, konstriktif perikardit.", "k": "09:38"}
+  ]
+}

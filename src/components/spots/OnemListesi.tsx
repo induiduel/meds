@@ -17,6 +17,9 @@ import { cozucuyaGit } from './spotsYol';
 import { bransTanim, type Brans, type BransTanim } from './brans';
 import { getAsistanSureGruplari, dk } from './sure/spotsSureVeri';
 import { SpotsSureDiyalog } from './sure/SpotsSureDiyalog';
+import { bittiMi, useKonuSayaci, useTakip } from '../../services/calismaTakip';
+import { KonuDugmeleri, KonuSureEtiketi } from '../takip/KonuTakip';
+import { onemAsistanBasaAl } from '../takip/basaAl';
 import '../../styles/onem-listesi.css';
 
 const OnemPdfPenceresi = React.lazy(() => import('./onem/OnemPdfPenceresi'));
@@ -89,6 +92,7 @@ const DersGezgini: React.FC<{ dizin: Dizin; kod: string; ogrSay: Record<string, 
   }, []);
   const toplamOgr = dizin.dersler.reduce((s, d) => s + (ogrSay[d.kod] || 0), 0);
   const toplam = dizin.dersler.reduce((s, d) => s + d.madde, 0);
+  const takip = useTakip();
   return (
     <nav className={`on-gez${sayfada ? ' is-sayfa' : ''}`} aria-label="Dersler">
       <div className="on-gez-ara">
@@ -113,10 +117,12 @@ const DersGezgini: React.FC<{ dizin: Dizin; kod: string; ogrSay: Record<string, 
           const o = ogrSay[d.kod] || 0;
           const on = kod === d.kod;
           const asistanSure = sureHaritasi?.get(d.kod);
+          const tk = takip.k[`onem:${bt.id}/${d.kod}`];
+          const bitti = bittiMi(tk, o >= d.madde);
           return (
-            <button key={d.kod} ref={on ? aktifRef : undefined} type="button" className={`on-gez-d${on ? ' is-on' : ''}${o >= d.madde ? ' is-tam' : ''}`}
+            <button key={d.kod} ref={on ? aktifRef : undefined} type="button" className={`on-gez-d${on ? ' is-on' : ''}${bitti ? ' is-tam' : ''}`}
               onClick={() => onSec(d.kod)} aria-current={on ? 'page' : undefined}>
-              <span className="on-gez-no">{o >= d.madde ? <Check aria-label="tamamlandı" /> : d.no}</span>
+              <span className="on-gez-no">{bitti ? <Check aria-label="bitti" /> : d.no}</span>
               <span className="on-gez-t">
                 <b>{d.baslik}</b>
                 <span className="on-gez-m">
@@ -240,6 +246,7 @@ export const OnemListesi: React.FC<{ brans?: Brans }> = ({ brans = 'patoloji' })
 
   const ders = !cokDers ? yuklu[kod] || null : null;
   const dizinDers: DizinDers | undefined = dizin?.dersler.find((d) => d.kod === kod);
+  useKonuSayaci('onem', !asistan && dizinDers ? `${brans}/${dizinDers.kod}` : null);
   const dersSira = dizin ? dizin.dersler.findIndex((d) => d.kod === kod) : -1;
   const kaynak = useMemo(
     () => (!dizin ? [] : cokDers ? dizin.dersler.map((d) => yuklu[d.kod]).filter(Boolean) : ders ? [ders] : []) as Ders[],
@@ -487,6 +494,15 @@ export const OnemListesi: React.FC<{ brans?: Brans }> = ({ brans = 'patoloji' })
                     <div className="on-bar"><i style={{ width: `${(dersOgr / Math.max(1, dizinDers.madde)) * 100}%` }} /></div>
                   </div>
                 </div>
+                <div className="on-hero-takip">
+                  <KonuSureEtiketi modul="onem" konu={`${brans}/${dizinDers.kod}`} />
+                  <KonuDugmeleri modul="onem" konu={`${brans}/${dizinDers.kod}`} ad={dersAdi(dizinDers)} turetilen={dersOgr >= dizinDers.madde}
+                    onTekrar={() => {
+                      onemAsistanBasaAl(dizinDers.kod);
+                      if (bt.asistan && asistanDersVar(dizinDers.kod)) asistanAc(dizinDers.kod);
+                      else window.scrollTo({ top: 0, behavior: azHareket() ? 'auto' : 'smooth' });
+                    }} />
+                </div>
                 <div className="on-hero-bant">
                   <span>Puan dağılımı <em>dokunarak süz</em></span>
                   <BantCubugu bant={dizinDers.bant} secili={bantlar} onSec={tglBant} />
@@ -726,6 +742,7 @@ export const OnemListesi: React.FC<{ brans?: Brans }> = ({ brans = 'patoloji' })
       </Sheet>
       {sureAcik && asistanVar && (
         <SpotsSureDiyalog
+          takipModul="onem"
           baslik="Sesli sınav asistanı ders süreleri"
           gruplar={asistanSureGruplari}
           onKapat={() => {

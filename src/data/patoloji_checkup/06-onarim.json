@@ -1,0 +1,133 @@
+{
+  "id": "onarim",
+  "ad": "Doku onarımı ve yara iyileşmesi",
+  "kisa": "TGF-β, VEGF, PDGF ve büyüme faktörleri, MMP, keloid",
+  "tablolar": [
+    {
+      "id": "buyume-faktorleri",
+      "baslik": "Büyüme faktörleri",
+      "k": ["10:18", "10:19", "10:11", "10:23", "10:24", "10:28", "18:33", "20:14", "20:16", "26:24"],
+      "sutun": ["Faktör", "Kaynak", "Başlıca görev", "Başka nerede?"],
+      "satir": [
+        ["EGF", "Aktive makrofaj, tükürük bezi, keratinosit", "Keratinosit ve fibroblast için mitojenik; keratinosit göçü, granülasyon dokusu", "Acanthosis nigricans (paraneoplastik); tümörü destekleyen enflamatuvar hücrelerden salınır"],
+        ["TGF-α", "Aktive makrofaj, keratinosit", "Hepatosit ve epitel proliferasyonu", "Karaciğer rejenerasyonu; paraneoplastik hiperkalsemi"],
+        ["HGF (“scatter factor”)", "Fibroblast, karaciğer stromal hücresi, endotel", "Hepatosit ve epitel proliferasyonu; hücre motilitesi ↑", "Karaciğer rejenerasyonu; MET reseptörü (papiller böbrek hücreli karsinom); tümör hücre göçü"],
+        ["VEGF", "Mezenkimal hücreler", "Endotel proliferasyonu, damar geçirgenliği ↑, anjiyogenezin temel faktörü", "Hipoksi → HIF → VEGF; tümör anjiyogenezi (bevacizumab hedefi); VHL kaybında artar; endometriozis"],
+        ["PDGF", "Trombosit, makrofaj, endotel, düz kas, keratinosit", "Nötrofil, makrofaj, fibroblast, düz kas için kemotaktik; fibroblast aktivasyonu, ECM sentezi", "Trombosit α granülünde depolanır"],
+        ["FGF (FGF-1, FGF-2)", "Makrofaj, mast hücresi, endotel", "Fibroblast için kemotaktik ve mitojenik; anjiyogenez, ECM sentezi", "Tümörle ilişkili makrofajlar salgılar"],
+        ["TGF-β", "Trombosit, T lenfosit, makrofaj, endotel, keratinosit, düz kas, fibroblast", "En önemli fibrogenik sitokin; kolajen ve fibronektin ↑, MMP ↓, TIMP ↑; akut enflamasyonu baskılar", "Treg baskılayıcı sitokini; tümörde iki yüzlü (erken baskılayıcı, geç EMT); Marfan'da artar; glukokortikoidler üretimini inhibe eder"],
+        ["KGF (FGF-7)", "Fibroblast", "Keratinosit göçü, proliferasyonu ve farklılaşması; yeniden epitelleşme", "—"],
+        ["IGF-1", "—", "Büyüme ve anabolizma", "Yaşlanma (IGF-1/mTOR ekseni); obezitede kanser riski"]
+      ]
+    },
+    {
+      "id": "doku-tipleri",
+      "baslik": "Çoğalma kapasitesine göre dokular",
+      "k": ["10:7"],
+      "sutun": ["Tip", "Örnek", "Rejenerasyon"],
+      "satir": [
+        ["Sürekli bölünen (labil)", "Kemik iliği, deri, GİS epiteli", "Sürekli yenilenir, yüksek"],
+        ["Stabil (durgun)", "Karaciğer, böbrek, pankreas, endotel, düz kas", "Normalde G₀'da, uyarı ile bölünür"],
+        ["Kalıcı (bölünmeyen)", "Nöron, kalp kası", "Yenilenemez, hasarda skar"]
+      ]
+    },
+    {
+      "id": "yara-evreleri",
+      "baslik": "Skarla onarımın aşamaları",
+      "k": ["10:14", "10:16", "10:17", "10:20", "10:24", "10:29", "10:30"],
+      "sutun": ["Aşama", "Zaman", "Olaylar"],
+      "satir": [
+        ["Hemostaz ve enflamasyon", "Hemen; ilk 6–48 saat", "Trombosit tıkacı + fibrin; önce nötrofil, sonra monosit/makrofaj (temizlik + onarımın düzenleyicisi)"],
+        ["Proliferasyon (granülasyon dokusu)", "3–10 gün", "Re-epitelizasyon, anjiyogenez, fibroblast göçü; pembe, nemli, kolay kanayan granüler doku"],
+        ["ECM birikimi", "—", "PDGF, FGF-2, TGF-β uyarısıyla kollajen sentezi"],
+        ["Yeniden şekillenme", "Haftalar–aylar", "MMP'ler ECM'yi yıkar, TIMP dengeler; skar küçülür, güçlenir"],
+        ["Yara gücü", "3 ayda", "Normalin ≈%70–80'i; tam güce hiçbir zaman ulaşılmaz"]
+      ]
+    },
+    {
+      "id": "anjiyogenez",
+      "baslik": "Anjiyogenez basamakları",
+      "k": ["10:22", "10:23", "18:33"],
+      "sutun": ["Basamak", "Olay"],
+      "satir": [
+        ["1", "Hipoksi → HIF stabil hale gelir → VEGF üretimi ↑"],
+        ["2", "Mevcut damarda vazodilatasyon ve geçirgenlik ↑"],
+        ["3", "Bazal membran MMP'lerle yıkılır"],
+        ["4", "“Uç” endotel hücreleri göç eder, “sap” hücreleri çoğalır"],
+        ["5", "Yeni kapiller perisit ve düz kasla olgunlaşır"],
+        ["Tümörde", "RAS, MYC VEGF'yi artırır; p53 trombospondin-1'i artırıp VEGF'yi baskılar"]
+      ]
+    },
+    {
+      "id": "mmp",
+      "baslik": "Matriks metalloproteinazlar",
+      "k": ["10:29", "19:25"],
+      "sutun": ["Grup", "Üyeler"],
+      "satir": [
+        ["İnterstisyel kollajenazlar", "MMP-1, -2, -3"],
+        ["Jelatinazlar", "MMP-2, -9"],
+        ["Stromelizinler", "MMP-3, -10, -11"],
+        ["Dengeleyici", "TIMP (metalloproteinazların doku inhibitörleri)"],
+        ["Metastazda", "MMP, katepsin D, ürokinaz tipi plazminojen aktivatörü bazal membranı yıkar"]
+      ]
+    },
+    {
+      "id": "ecm",
+      "baslik": "Ekstraselüler matriks bileşenleri",
+      "k": ["10:25", "10:26", "10:27"],
+      "sutun": ["Bileşen", "Görev"],
+      "satir": [
+        ["Fibriler kollajenler (tip I, II, III, V)", "Skarın ana yapısal proteini; çapraz bağlanma için C vitamini gerekir (eksiklikte iskorbüt)"],
+        ["Elastin", "Esneklik (büyük arter, akciğer, deri, uterus)"],
+        ["Proteoglikanlar", "Hidratlı jel; sıkışmaya direnç; büyüme faktörü rezervuarı"],
+        ["Hyaluronan", "Yüksek su bağlama; granülasyon dokusunda bol"],
+        ["Fibronektin, laminin", "Hücre adezyonu, göçü, çoğalması için iskele (laminin bazal membranda)"]
+      ]
+    },
+    {
+      "id": "iyilesme-tipleri",
+      "baslik": "Primer, sekonder ve tersiyer iyileşme",
+      "k": ["10:31"],
+      "sutun": ["Tip", "Yara", "Özellik"],
+      "satir": [
+        ["Primer (per primam)", "Temiz, kenarları yakınlaştırılmış kesi (cerrahi insizyon)", "Minimal doku kaybı, az skar"],
+        ["Sekonder (per secundam)", "Geniş doku kaybı, enfekte yara", "Daha fazla granülasyon dokusu, belirgin skar ve yara kontraksiyonu"],
+        ["Tersiyer (per tertiam)", "Önce açık bırakılıp sonra kapatılan yara", "Primer iyileşmenin geciktiği durum"]
+      ]
+    },
+    {
+      "id": "iyilesme-faktor",
+      "baslik": "Yara iyileşmesini etkileyen faktörler",
+      "k": ["10:34", "10:35"],
+      "sutun": ["Faktör", "Etki"],
+      "satir": [
+        ["Beslenme", "Protein ve C vitamini eksikliği → kollajen sentezi ↓"],
+        ["Diyabet", "Nötrofil fonksiyon bozukluğu, küçük damar hastalığı, enfeksiyon eğilimi"],
+        ["Dolaşım", "Ateroskleroz, venöz yetmezlik → iskemi"],
+        ["Glukokortikoidler", "TGF-β üretimini ve kollajen sentezini inhibe eder"],
+        ["Enfeksiyon (lokal)", "En önemli geciktirici faktörlerden; enflamasyonu uzatır"],
+        ["Yabancı cisim, mekanik faktör", "Dehisens riski"]
+      ]
+    },
+    {
+      "id": "anormal-skar",
+      "baslik": "Yetersiz ve aşırı onarım",
+      "k": ["10:36", "10:38"],
+      "sutun": ["Durum", "Özellik"],
+      "satir": [
+        ["Hipertrofik skar", "Yara sınırları içinde fazla skar; zamanla gerileyebilir"],
+        ["Keloid", "Yara sınırlarının dışına taşar, gerilemez; bireysel yatkınlık (koyu tenliler)"],
+        ["Kontraktür", "Aşırı yara kontraksiyonu (el, ayak tabanı, göğüs; yanık sonrası); eklem hareketini kısıtlar"],
+        ["Venöz bacak ülseri", "Kronik venöz hipertansiyon, varis"],
+        ["Arteriyel ülser", "Periferik arter hastalığı, diyabet"],
+        ["Diyabetik ayak ülseri", "Mikroanjiyopati + nöropati + enfeksiyon"],
+        ["Basınç ülseri", "Yatağa bağımlılık, kemik çıkıntısında bası"]
+      ]
+    }
+  ],
+  "notlar": [
+    {"m": "Rejenerasyon için hasar sınırlı, doku iskeleti (bazal membran, stroma) korunmuş ve hücreler çoğalabilir olmalıdır.", "k": "10:6"},
+    {"m": "Karaciğer rejenerasyonu iki basamaklıdır: IL-6 ile hazırlama (priming), ardından HGF ve TGF-α ile proliferasyon. Kronik hasarda Hering kanalı çevresindeki oval hücreler katkı verir.", "k": "10:11"},
+    {"m": "Fibrozis iç organ fonksiyon kaybının temel nedenlerindendir: siroz, idiyopatik pulmoner fibroz, son dönem böbrek, sistemik skleroz.", "k": "10:40"}
+  ]
+}

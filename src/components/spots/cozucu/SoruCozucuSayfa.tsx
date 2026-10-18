@@ -1,6 +1,7 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { Check, Clock, Headphones, History, Play, RotateCcw } from 'lucide-react';
-import { cozucuDizinYukle, ozet, setAdi, useIlerleme, type CDizin } from './cozucuVeri';
+import { cozucuDizinYukle, ilerlemeYaz, ozet, setAdi, useIlerleme, type CDizin } from './cozucuVeri';
+import { KonuDugmeleri, KonuSureEtiketi } from '../../takip/KonuTakip';
 import { bransTanim, type Brans } from '../brans';
 import { getCozucuSureGruplari, dk } from '../sure/spotsSureVeri';
 import { SpotsSureDiyalog } from '../sure/SpotsSureDiyalog';
@@ -135,12 +136,15 @@ export const SoruCozucuSayfa: React.FC<{ brans?: Brans }> = ({ brans = 'patoloji
                 </span>
                 <span className={`scs-durum${devam ? ' is-devam' : ''}`}>{o.tamam ? <><Check aria-hidden />Bitti</> : devam ? <>Devam</> : <><Play aria-hidden />Başla</>}</span>
               </button>
-              {(!!d.cikmis || y > 0) && (
-                <div className="scs-row-ek">
-                  {!!d.cikmis && <button type="button" onClick={() => ac(d.kod, 'cikmis')}><History aria-hidden />Yalnız çıkmışlar · {d.cikmis}</button>}
-                  {y > 0 && <button type="button" onClick={() => ac(d.kod, 'yanlis')}><RotateCcw aria-hidden />Yanlışlarım · {y}</button>}
-                </div>
-              )}
+              <div className="scs-row-ek">
+                {!!d.cikmis && <button type="button" onClick={() => ac(d.kod, 'cikmis')}><History aria-hidden />Yalnız çıkmışlar · {d.cikmis}</button>}
+                {y > 0 && <button type="button" onClick={() => ac(d.kod, 'yanlis')}><RotateCcw aria-hidden />Yanlışlarım · {y}</button>}
+                <span className="scs-row-takip">
+                  <KonuSureEtiketi modul="cozucu" konu={`${brans}/${d.kod}`} />
+                  <KonuDugmeleri kucuk modul="cozucu" konu={`${brans}/${d.kod}`} ad={`${d.no}. ${d.baslik}${setAdi(d) ? `, ${setAdi(d)}` : ''}`} turetilen={o.tamam}
+                    onTekrar={() => { ilerlemeYaz(d.kod, null); ac(d.kod); }} />
+                </span>
+              </div>
             </li>
           );
         })}
@@ -149,6 +153,7 @@ export const SoruCozucuSayfa: React.FC<{ brans?: Brans }> = ({ brans = 'patoloji
 
       {sureAcik && (
         <SpotsSureDiyalog
+          takipModul="cozucu"
           baslik="Sesli soru çözücü süreleri"
           gruplar={cozucuSureGruplari}
           onKapat={() => {

@@ -1,0 +1,160 @@
+{
+  "id": "bobrek",
+  "ad": "Böbrek ve alt idrar yolu",
+  "kisa": "Nefrotik–nefritik, glomerül hastalıkları, TMA, ATI, kistler, taşlar, tümörler",
+  "tablolar": [
+    {
+      "id": "nefrotik-nefritik",
+      "baslik": "Nefrotik ve nefritik sendrom",
+      "k": ["21:6", "21:7", "21:8", "22:4", "22:5"],
+      "sutun": ["Özellik", "Nefrotik", "Nefritik"],
+      "satir": [
+        ["Temel bulgu", "Proteinüri ≥3,5 g/gün, albümin <3 g/dL, yaygın ödem, hiperlipidemi ve lipidüri", "Hematüri (eritrosit silendiri), subnefrotik proteinüri, azotemi, oligüri, hipertansiyon"],
+        ["Patofizyoloji", "Filtrasyon bariyeri bozulur; onkotik basınç ↓ → ödem; karaciğerde lipoprotein sentezi ↑", "Glomerüler kapiller enflamasyon; GFR ↓; renin ↑ → hipertansiyon"],
+        ["Primer örnek", "Minimal değişiklik, FSGS, membranöz nefropati", "Postenfeksiyöz GN, RPGN, IgA nefropatisi, MPGN tip 1"],
+        ["Sistemik örnek", "Diyabet, amiloidoz, lupus sınıf V", "SLE"],
+        ["Ek risk", "Enfeksiyon ve tromboemboli eğilimi", "Genellikle acil durum"]
+      ]
+    },
+    {
+      "id": "glomeruler",
+      "baslik": "Başlıca primer glomerüler hastalıklar",
+      "k": ["22:7", "22:8", "22:9", "22:10", "21:10", "21:11", "21:13", "21:17", "21:22", "21:24", "21:25", "21:27", "21:29", "21:32", "21:37", "22:15", "22:33"],
+      "sutun": ["Hastalık", "Klinik", "Patogenez", "Işık mikroskobu", "İmmünfloresan", "Elektron mikroskobu", "İpucu"],
+      "satir": [
+        ["Minimal değişiklik", "Nefrotik; çocukta en sık (1–7 yaş)", "Podosit hasarı (T hücre kaynaklı geçirgenlik faktörü?)", "Normal", "Negatif", "Ayak çıkıntılarında yaygın silinme", "Seçici proteinüri; çocukta >%90 steroid yanıtı"],
+        ["FSGS", "Nefrotik; erişkinde sık", "Podosit hasarı/kaybı; sekonder: obezite, HIV, heroin, podosit gen mutasyonu", "Bazı glomerüllerin bir kısmında skleroz, hiyalinoz, köpüklü makrofaj", "Sklerotik alanda IgM ve C3", "Ayak çıkıntısı silinmesi", "Steroid direnci; %50 10 yılda SDBY; nakil sonrası sık nüks"],
+        ["Membranöz nefropati", "Nefrotik; 30–60 yaş", "Podosit antijeni PLA2R'ye IgG4 otoantikor, in situ subepitelyal kompleks", "Kapiller duvarda difüz kalınlaşma", "GBM boyunca granüler IgG ve C3", "Subepitelyal depozit, “spike and dome”", "Sekonder: HBV, sifiliz, sıtma, karsinom, SLE, altın, NSAİİ; anti-PLA2R izlemi"],
+        ["MPGN (immün kompleks)", "Nefrotik/nefritik karışık", "İmmün kompleks; HBV, HCV, SLE", "Lobüllü hiperhücreli glomerül, “tramvay rayı” çift kontur", "Granüler IgG, C3, C1q, C4", "Subendotelyal depozit", "Mezangial hücrenin GBM içine girmesi"],
+        ["C3 glomerülopatisi", "Nefrotik/nefritik; düşük C3", "Alternatif yolun kontrolsüz aktivasyonu (C3NeF, faktör H/I, MCP)", "MPGN benzeri", "Güçlü C3; Ig, C1q, C4 yok", "Yoğun birikim hastalığında GBM içinde şerit", "Nakil sonrası %85'e varan nüks"],
+        ["Akut postenfeksiyöz GN", "Nefritik; çocuk, streptokok sonrası 1–4 hafta", "Nefritojenik A grubu β-hemolitik streptokok antijeni (ekzotoksin B) ile immün kompleks", "Difüz endokapiller proliferasyon, nötrofil", "Granüler “lumpy-bumpy” IgG ve C3", "Subepitelyal “hump” (kambur)", "Kola rengi idrar, periorbital ödem; C3 düşük, ASO yüksek; çocukta >%95 iyileşir"],
+        ["IgA nefropatisi (Berger)", "Tekrarlayan hematüri", "Galaktoz eksik IgA'ya IgG/IgA otoantikor; alternatif/lektin yol", "Mezangial genişleme ve hiperhücrelilik", "Mezangiumda IgA (+C3, properdin); C1q, C4 yok", "Mezangial depozit", "Dünyada en sık primer GN; enfeksiyondan 1–2 gün sonra hematüri"],
+        ["RPGN (hilal)", "Haftalar–aylarda böbrek yetmezliği", "Tip I anti-GBM (kollajen IV α3), Tip II immün kompleks, Tip III pauci-immün (ANCA)", "Bowman boşluğunda hilal, segmental nekroz", "Anti-GBM: lineer IgG; immün kompleks: granüler; pauci: negatif", "GBM yırtıkları, fibrin", "Hilallı glomerül <%80 daha iyi prognoz; plazmaferez, siklofosfamid"]
+      ]
+    },
+    {
+      "id": "lupus-nefrit",
+      "baslik": "Lupus nefriti sınıfları",
+      "k": ["22:24", "22:25", "22:26", "22:28", "22:29"],
+      "sutun": ["Sınıf", "Ad", "Özellik"],
+      "satir": [
+        ["I", "Minimal mezangial", "Mezangiumda kompleks; ışık mikroskobu normal; asemptomatik"],
+        ["II", "Mezangial proliferatif", "Hafif proteinüri / mikroskopik hematüri"],
+        ["III", "Fokal", "<%50 glomerül tutulumu; nekroz, hilal olabilir"],
+        ["IV", "Difüz", "≥%50; en yaygın ve en şiddetli; subendotelyal kompleks → “tel halka” (wire-loop)"],
+        ["V", "Membranöz", "Subepitelyal kompleks; nefrotik sendrom sık"],
+        ["VI", "İleri sklerozan", "≥%90 glomerül sklerotik; son dönem"]
+      ]
+    },
+    {
+      "id": "kalitsal-nefrit",
+      "baslik": "Alport sendromu ve ince bazal membran hastalığı",
+      "k": ["22:37", "22:38", "22:39", "22:41"],
+      "sutun": ["Özellik", "Alport sendromu", "İnce bazal membran hastalığı"],
+      "satir": [
+        ["Genetik", "Çoğunlukla X'e bağlı COL4A5 (kollajen IV α5); OR/OD formda α3/α4", "≈%40 heterozigot COL4A3 veya COL4A4"],
+        ["Klinik", "5–20 yaşta hematüri, 20–50 yaşta ilerleyici yetmezlik; sensörinöral işitme kaybı, lens dislokasyonu, katarakt", "Kalıcı asemptomatik mikroskopik hematüri, iyi huylu"],
+        ["EM", "Lamina densada ayrılma, “sepet örgüsü” görünümü", "GBM'de düzgün incelme"]
+      ]
+    },
+    {
+      "id": "tma",
+      "baslik": "Trombotik mikroanjiyopatiler",
+      "k": ["23:9", "23:10", "23:12", "23:13", "23:14", "23:15", "25:10"],
+      "sutun": ["Form", "Neden", "Klinik", "Tedavi / prognoz"],
+      "satir": [
+        ["Shiga toksini aracılı HUS", "E. coli O157:H7, Shigella dysenteriae", "Çocukta kanlı ishal sonrası akut böbrek yetmezliği, hemolitik anemi, trombositopeni", "Diyalizle kısa dönemde iyi; uzun vadede ≈%25 yetmezlik"],
+        ["Kompleman aracılı TMA (eski atipik HUS)", "Faktör H, I, MCP kusuru; C3NeF/otoantikor", "Prodromal ishal yok; ani böbrek yetmezliği", "Plazma değişimi; C5 inhibitörü antikor birinci basamak; prognoz daha kötü"],
+        ["TTP", "ADAMTS13 eksikliği (çoğunlukla otoantikor, nadiren kalıtsal) → ultra büyük vWF multimeri", "Pentad: ateş, trombositopeni, MAHA, nörolojik bulgu, böbrek anormalliği", "Tedavisiz ≈%90 mortalite; plazma değişimi ile belirgin iyileşme"],
+        ["Ortak patogenez", "Endotel hasarı + trombosit aktivasyonu", "Trombositten zengin trombüs, şistositler (MAHA)", "—"]
+      ]
+    },
+    {
+      "id": "nefroskleroz",
+      "baslik": "Benign ve malign nefroskleroz",
+      "k": ["23:18", "23:19", "23:21", "23:23", "23:24", "23:26"],
+      "sutun": ["Özellik", "Benign", "Malign"],
+      "satir": [
+        ["Zemin", "Uzun süreli primer hipertansiyon, yaşlanma", "Sistolik >200, diyastolik >120 mmHg; tıbbi acil"],
+        ["Damar lezyonu", "Hiyalin arteriyoloskleroz (pembe homojen)", "Fibrinoid nekroz; hiperplastik arteriyoloskleroz (“soğan zarı”)"],
+        ["Makroskopi", "Simetrik küçük, ince granüler yüzey", "Peteşiyal kanama: “pire ısırığı” görünümü"],
+        ["Klinik", "Hafif proteinüri, hafif azotemi", "Papilödem, ensefalopati, akut böbrek yetmezliği; ölüm %90 üremi"]
+      ]
+    },
+    {
+      "id": "tubulointerstisyel",
+      "baslik": "Tübülointerstisyel hastalıklar",
+      "k": ["24:6", "24:9", "24:10", "24:12", "24:13", "24:16", "24:17", "24:21", "24:22", "24:23", "24:28", "24:30", "24:31", "24:33"],
+      "sutun": ["Hastalık", "Neden", "Morfoloji", "Klinik"],
+      "satir": [
+        ["Akut piyelonefrit", "E. coli (en sık), Proteus, Klebsiella; çoğunlukla yükselen yol; VUR, tıkanma, gebelik, diyabet", "Kortekste sarımsı apseler; tübül ve interstisyumda nötrofil; glomerüller korunur", "Ateş, KVA ağrısı, dizüri; lökosit silendiri; komplikasyon papiller nekroz (diyabet, tıkanma, orak hücre), piyonefroz"],
+        ["Kronik piyelonefrit", "Tıkanma veya reflü (reflü nefropatisi)", "Kaba asimetrik kortikomedüller skar, kaliks deformitesi; tübülde tiroid benzeri kolloid", "Sinsi yetmezlik, hipertansiyon, poliüri, noktüri"],
+        ["İlaç kaynaklı akut TIN", "Penisilin (ampisilin), rifampin, furosemid, tiyazid, PPI, NSAİİ, simetidin, kontrol noktası inhibitörü", "İnterstisyel ödem, mononükleer + eozinofil; tiyazid/rifampinde granülom; NSAİİ'de nefrotik sendrom eklenebilir", "1–2 hafta sonra ateş, eozinofili, döküntü; Tip I ve Tip IV aşırı duyarlılık; ilacı kes"],
+        ["Akut tübüler hasar (ATI)", "İskemik: şok, TMA; nefrotoksik: cıva, etilen glikol, gentamisin, kontrast, miyoglobin/hemoglobin", "Proksimal düz segment ve Henle kalın kolda fırça kenar kaybı, dökülme; Tamm–Horsfall silendirleri", "Akut böbrek yetmezliğinin en sık nedeni; başlangıç → oligürik → diüretik (poliüri) → iyileşme"]
+      ]
+    },
+    {
+      "id": "kistik",
+      "baslik": "Kistik böbrek hastalıkları",
+      "k": ["25:14", "25:15", "25:16", "25:17", "25:19", "25:21", "25:23", "25:24", "25:26", "25:27", "25:28", "25:30", "25:31"],
+      "sutun": ["Hastalık", "Genetik / zemin", "Morfoloji", "Klinik"],
+      "satir": [
+        ["Basit kist", "—", "Korteks, 1–5 cm, berrak sıvı", "Asemptomatik; tümörden ayırt edilmeli"],
+        ["Edinilmiş kistik hastalık", "Uzun süreli diyaliz", "Korteks ve medullada çok kist", "RCC riski ≈100 kat (RCC dersinde ≈30 kat)"],
+        ["ADPKD (erişkin)", "Otozomal dominant; PKD1 (polikistin-1, 16p, %85–90), PKD2 (4q); ikinci darbe gerekir", "Her iki böbrek dev (4 kg'a kadar), büyük kistler", "30–50 yaş; hipertansiyon %75; polikistik karaciğer, Willis çemberinde anevrizma, mitral prolapsus"],
+        ["ARPKD (çocukluk)", "Otozomal resesif; PKHD1 (fibrosistin)", "Süngerimsi böbrek, toplayıcı kanal kistleri; konjenital hepatik fibroz", "Neonatal yetmezlik, pulmoner hipoplazi; sağ kalırsa karaciğer fibrozisi"],
+        ["Nefronoftizis–medüller kistik kompleks", "OR, NPHP1–13 (siliopati)", "Küçük büzüşmüş böbrek, kortikomedüller bileşkede küçük kistler", "Poliüri, polidipsi, tuz kaybı; retinitis pigmentosa; çocuk-genç erişkinde SDBY'nin sık genetik nedeni"],
+        ["Multikistik displazi", "Alt idrar yolu tıkanıklığı (gelişimsel)", "Mezenkimal kılıflı kanallar", "Çocukta en sık kistik hastalık; çoğu tek taraflı, işlevsiz böbrek"]
+      ]
+    },
+    {
+      "id": "taslar",
+      "baslik": "Böbrek taşları",
+      "k": ["25:36", "25:37", "25:38"],
+      "sutun": ["Taş", "Sıklık", "İlişkili durum", "İdrar"],
+      "satir": [
+        ["Kalsiyum oksalat / fosfat", "%80", "İdiyopatik hiperkalsiüri (hiperkalsemi yok), hiperoksalüri, hiperürikozüri", "Alkali idrar kalsiyum fosfat riskini artırır"],
+        ["Strüvit (Mg-amonyum fosfat)", "%10", "Üreaz pozitif bakteri (Proteus) enfeksiyonu; geyik boynuzu taş", "Alkali"],
+        ["Ürik asit", "%6–7", "Gut, lösemi tedavisi; yarısında hiperürisemi yok", "Sürekli asidik (pH <5,5)"],
+        ["Sistin", "%1–2", "Kalıtsal sistinüri", "Asidik"]
+      ]
+    },
+    {
+      "id": "bobrek-tumor",
+      "baslik": "Böbrek tümörleri",
+      "k": ["26:11", "26:12", "26:14", "26:17", "26:18", "26:22", "26:23", "26:24", "26:28", "26:30", "26:37", "26:45", "26:47", "26:51", "26:55", "26:56", "26:58", "26:59", "26:62", "26:63", "26:64"],
+      "sutun": ["Tümör", "Sıklık / köken", "Moleküler", "Morfoloji", "Not"],
+      "satir": [
+        ["Berrak hücreli RCC", "RCC'nin ≈%65'i", "VHL (3p25) iki kopya kaybı → HIF ↑ → VEGF ↑", "Sarı-turuncu kesit; lipid ve glikojenle berrak sitoplazma", "Renal ven ve VCI invazyonu; VHL hastalığında bilateral"],
+        ["Papiller RCC", "%10–15", "MET (7q, HGF reseptörü) aktivasyonu", "Fibrovasküler çekirdekli papiller", "Multifokal, bilateral eğilim"],
+        ["Kromofob RCC", "≈%5; toplayıcı kanal ara hücresi", "Çok sayıda kromozom kaybı (hipoploidi)", "Keskin hücre zarı, perinükleer halo", "En iyi prognoz"],
+        ["Onkositoma", "Benign; %3–7; toplayıcı kanal ara hücresi", "Kompleks I mutasyonu → mitokondri ↑", "Kahverengi kesit, merkezi yıldız skar", "Tüberöz sklerozda çoklu"],
+        ["Anjiyomiyolipom", "Benign; %1–2; perivasküler hücre", "—", "—", "Tüberöz skleroz; büyükse kanama riski"],
+        ["Wilms tümörü", "10 yaş altında 3. sık solid kanser", "Ailesel formda OD yatkınlık", "—", "Erişkinde nadir"],
+        ["RCC klinik", "6.–7. dekat, E/K ≈2", "Risk: sigara, hipertansiyon, obezite, kadmiyum", "Triad: hematüri, kitle, yan ağrısı (≈%10)", "Paraneoplastik: polisitemi (EPO), hiperkalsemi, Cushing; metastaz akciğer ve kemik"]
+      ]
+    },
+    {
+      "id": "mesane",
+      "baslik": "Mesane ve üreter",
+      "k": ["26b:6", "26b:8", "26b:13", "26b:14", "26b:15", "26b:16", "26b:17"],
+      "sutun": ["Durum", "Özellik"],
+      "satir": [
+        ["UPJ tıkanıklığı", "Bebek/çocukta hidronefrozun en sık nedeni"],
+        ["Retroperitoneal fibrozis", "IgG4 ilişkili hastalık, lenfoma, ergot, TNF inhibitörü; çoğu idiyopatik (Ormond)"],
+        ["Hemorajik sistit", "Siklofosfamid (akrolein), adenovirüs"],
+        ["İnterstisyel sistit", "Kronik pelvik ağrı, Hunner ülseri, kültür negatif"],
+        ["Skuamöz metaplazi / SCC", "Kronik irritasyon, şistozomiyaz"],
+        ["Ürotelyal karsinom", "Mesane kanserinin ≈%90'ı; sigara, aromatik amin, siklofosfamid; ağrısız hematüri"],
+        ["Ürotelyal karsinom yolları", "Düşük dereceli papiller: FGFR3, HRAS; yüksek dereceli CIS–invaziv: TP53, RB"]
+      ]
+    }
+  ],
+  "notlar": [
+    {"m": "Nefrotik sendrom nedenleri çocukta en sık minimal değişiklik (%65), erişkinde FSGS (%35) ve membranöz nefropatidir (%30).", "k": "21:10"},
+    {"m": "Membranöz nefropatide IgG4 klasik yolu zayıf aktive eder; enflamasyon olmadan ağır proteinüri görülür.", "k": "21:26"},
+    {"m": "Kronik böbrek hastalığında nefron kaybı kalan nefronlarda hiperfiltrasyona yol açar ve kendi kendini besleyen bir döngü oluşturur; vasküler/glomerüler kökende granüler, piyelonefritte asimetrik skar görülür.", "k": "23:29"},
+    {"m": "APOL1 polimorfizmleri tripanozoma direnç sağlar ama böbrek hastalığı riskini artırır.", "k": "23:33"},
+    {"m": "İki taraflı kısmi tıkanmada konsantrasyon kusuru nedeniyle oligüri yerine poliüri görülür.", "k": "25:44"}
+  ]
+}

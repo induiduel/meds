@@ -101,6 +101,7 @@ export const CozucuBaslangic: React.FC = () => {
       />
       {sure && (
         <SpotsSureDiyalog
+          takipModul="cozucu"
           baslik="Soru çözücü süreleri"
           gruplar={getCozucuSureGruplari()}
           onKapat={() => setSure(false)}
@@ -175,6 +176,7 @@ export const OnemBaslangic: React.FC = () => {
       />
       {sure && (
         <SpotsSureDiyalog
+          takipModul="onem"
           baslik="Sesli sınav asistanı ders süreleri"
           gruplar={getAsistanSureGruplari()}
           onKapat={() => setSure(false)}

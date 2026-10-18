@@ -8,20 +8,11 @@ import { CircleHelp, Headphones, HelpCircle, Sparkles, X } from 'lucide-react';
 import { navigateTo } from '../../router';
 import { cozucuYolu, onemYolu } from '../spots/spotsYol';
 import { cdListeGetir, type CdListeDers } from './canliDersStore';
-import { cdDersEtiketi } from './canliDersKategori';
+import { CD_SPOT_BRANS as BRANS, cdDersEtiketi } from './canliDersKategori';
 import { cozucuDizinYukle } from '../spots/cozucu/cozucuVeri';
 import { asistanDizinDosyasi } from '../spots/asistan/asistanVeri';
 import type { Brans } from '../spots/brans';
 
-const BRANS: Record<string, Brans> = {
-  'Tıbbi Patoloji': 'patoloji',
-  'Enfeksiyon Hastalıkları': 'enfeksiyon',
-  'Üroloji': 'uroloji',
-  'Tıbbi Genetik': 'genetik',
-  'Halk Sağlığı': 'halksagligi',
-  'Kadın Hastalıkları ve Doğum': 'kadindogum',
-  'Tıbbi Farmakoloji': 'farmakoloji',
-};
 
 interface Oneri {
   d: CdListeDers;

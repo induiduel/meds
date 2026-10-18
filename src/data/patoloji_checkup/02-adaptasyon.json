@@ -1,0 +1,136 @@
+{
+  "id": "adaptasyon",
+  "ad": "Adaptasyon, birikimler ve yaşlanma",
+  "kisa": "Hipertrofi–metaplazi, pigmentler, kalsifikasyon, telomer, boyalar",
+  "tablolar": [
+    {
+      "id": "adaptasyon-tipleri",
+      "baslik": "Hücresel adaptasyon tipleri",
+      "k": ["04:8", "04:11", "04:12", "04:14", "04:15", "04:19", "04:20", "04:21", "04:22", "04:25", "04:26", "04:30", "04:31", "04:32"],
+      "sutun": ["Tip", "Tanım", "Fizyolojik örnek", "Patolojik örnek", "Not"],
+      "satir": [
+        ["Hipertrofi", "Hücre boyutunda artış (yapısal protein ve organel artışı)", "Gebelikte uterus (östrojen); egzersizde iskelet kası", "Hipertansiyon / aort stenozunda kalp", "Bölünme kapasitesi sınırlı hücrelerde (kalp, iskelet kası) baskın yanıt; sınır aşılınca kalp yetmezliği"],
+        ["Hiperplazi", "Hücre sayısında artış; hücre bölünebilir olmalı", "Ergenlik/gebelikte meme, siklik endometrium; parsiyel hepatektomi sonrası karaciğer (HGF)", "Endometrial hiperplazi, benign prostat hiperplazisi", "Uzun süreli hiperplazi neoplaziye zemin olabilir (endometrial hiperplazi → endometrium kanseri)"],
+        ["Atrofi", "Hücre boyutu ve/veya sayısında azalma", "Menopoz sonrası uterus ve over", "Kullanılmama (alçı), innervasyon kaybı, iskemi, yetersiz beslenme", "Mekanizma: protein sentezi ↓, ubikitin–proteazom yıkımı ↑, otofaji ↑"],
+        ["Metaplazi", "Bir olgun hücre tipinin başka bir olgun hücre tipiyle yer değiştirmesi (kök hücrenin yeniden programlanması)", "—", "Sigarada bronşta siliyalı kolumnar → yassı epitel; reflüde özofagusta yassı → kolumnar (Barrett)", "Mukus ve siliyer temizlik kaybolur; uzarsa displazi ve kanser zemini (Barrett → adenokarsinom)"]
+      ]
+    },
+    {
+      "id": "birikim-mekanizma",
+      "baslik": "Hücre içi birikim mekanizmaları",
+      "k": ["05:5", "05:7", "05:8", "05:9", "05:10"],
+      "sutun": ["Mekanizma", "Örnek"],
+      "satir": [
+        ["Normal endojen maddenin yetersiz uzaklaştırılması", "Hepatositte trigliserid (yağlı karaciğer); nefrotik sendromda proksimal tübülde protein damlacıkları"],
+        ["Anormal endojen maddenin birikmesi", "Mutant α1-antitripsin (karaciğerde birikir, akciğerde eksiklik); nörodejeneratif hastalıklarda protein agregatları"],
+        ["Eksojen anormal madde", "Karbon (antrakozis), silika, asbest — makrofaj ve lizozomlarda"],
+        ["Lizozomal yıkım bozukluğu", "Tay–Sachs, Niemann–Pick (sfingolipid), mukopolisakkaridozlar"]
+      ]
+    },
+    {
+      "id": "protein-birikim",
+      "baslik": "Protein ve glikojen birikimleri",
+      "k": ["05:22", "05:23", "05:24", "05:26"],
+      "sutun": ["Birikim", "Nerede", "Bağlam"],
+      "satir": [
+        ["Eozinofilik protein damlacıkları", "Proksimal tübül hücresi", "Nefrotik sendrom; proteinüri düzelince kaybolur"],
+        ["Russell cisimcikleri", "Plazma hücresi (granüllü ER'de immünoglobulin)", "Kronik enflamasyon, multipl miyelom"],
+        ["Alkolik hiyalin", "Hepatosit", "Yanlış katlanmış protein agregatı"],
+        ["Nörofibriler yumaklar", "Nöron", "Alzheimer hastalığı"],
+        ["Glikojen (PAS pozitif)", "Böbrek tübülü, kalp kası, β hücresi; glikojenozlarda karaciğer, kas", "Kötü kontrollü diyabet, glikojen depo hastalıkları"]
+      ]
+    },
+    {
+      "id": "yanlis-katlanma",
+      "baslik": "Yanlış katlanmış protein hastalıkları",
+      "k": ["05:19", "05:20", "05:21"],
+      "sutun": ["Hastalık", "Etkilenen protein", "Patogenez"],
+      "satir": [
+        ["Kistik fibrozis", "CFTR", "Mutant protein yıkılır → epitelde iyon taşınması bozulur"],
+        ["Ailesel hiperkolesterolemi", "LDL reseptörü", "LDL klirensi bozulur → erken ateroskleroz"],
+        ["Tay–Sachs", "Heksozaminidaz α alt birimi", "Nöronlarda GM2 gangliozid depolanır"],
+        ["Retinitis pigmentosa", "Rodopsin", "ER stresi → fotoreseptör kaybı"],
+        ["Creutzfeldt–Jakob", "Prion proteini (PrPSc)", "Yanlış katlanmış prion birikimi, hızlı nörodejenerasyon"],
+        ["α1-antitripsin eksikliği", "α1-antitripsin", "Hepatositte birikim → ER stresi, siroz; akciğerde nötrofil elastazı kontrolsüz → amfizem"]
+      ]
+    },
+    {
+      "id": "pigmentler",
+      "baslik": "Pigmentler",
+      "k": ["05:28", "05:29", "05:31", "05:32", "05:33", "11:12"],
+      "sutun": ["Pigment", "Kaynak", "Görünüm / boya", "Klinik"],
+      "satir": [
+        ["Karbon (antrakotik)", "Eksojen: hava kirliliği, kömür tozu", "Akciğer ve lenf düğümünde siyah noktalar; alveoler makrofajda", "Genellikle zararsız; ağır maruziyette fibrozis"],
+        ["Lipofusin (“aşınma pigmenti”)", "Serbest radikal aracılı lipid peroksidasyonu", "Altın sarısı–kahverengi ince granüller (kalp, karaciğer, beyin)", "Hücre yaşlanmasının göstergesi"],
+        ["Melanin", "Melanositler", "Kahverengi–siyah", "UV'ye karşı koruma; nevüs, malign melanom"],
+        ["Hemosiderin", "Hemoglobinden türeyen demir pigmenti", "Altın sarısı–kahverengi; Prusya mavisi ile mavi boyanır", "Lokal: eski kanama; sistemik: transfüzyon, hemoliz, hemokromatoz; kronik akciğer konjesyonunda “kalp yetmezliği hücreleri”"]
+      ]
+    },
+    {
+      "id": "kalsifikasyon",
+      "baslik": "Distrofik ve metastatik kalsifikasyon",
+      "k": ["05:37", "05:38", "05:39", "05:40", "05:41", "05:42", "05:43"],
+      "sutun": ["Özellik", "Distrofik", "Metastatik"],
+      "satir": [
+        ["Serum kalsiyumu", "Normal", "Yüksek (hiperkalsemi)"],
+        ["Birikim yeri", "Hasarlı / nekrotik doku", "Normal dokular, yaygın"],
+        ["Örnek", "Enfarkt, kazeöz nekroz, aterosklerotik plak, yaşlı kalp kapakları (aort, mitral), tüberkülozlu lenf düğümü", "Arter duvarı, böbrek interstisyumu (nefrokalsinoz), alveol septası, mide mukozası"],
+        ["Neden / mekanizma", "Nekrotik hücre mitokondrisi ve zar veziküllerinde kalsiyum-fosfat kristali çöker", "Primer/sekonder hiperparatiroidi, Paget, kemik metastazı, tümör lizis, D vitamini fazlalığı, sarkoidoz"]
+      ]
+    },
+    {
+      "id": "yaslanma",
+      "baslik": "Hücresel yaşlanma mekanizmaları",
+      "k": ["06:7", "06:9", "06:10", "06:14", "06:15", "06:21", "06:22", "06:23", "06:24", "06:26", "06:27", "06:29", "06:30", "06:31", "06:32", "06:33"],
+      "sutun": ["Mekanizma", "Ne olur?", "Klinik / örnek"],
+      "satir": [
+        ["DNA hasarı ve onarım yetersizliği", "Mutasyon birikir, hücre senesense veya apoptoza girer", "Werner sendromu (DNA onarım geni mutasyonu, erken yaşlanma)"],
+        ["Replikatif yaşlanma (telomer kısalması)", "Her bölünmede telomer kısalır; kısa telomer kırık DNA gibi algılanır → döngü durur", "Telomeraz germ hücrelerinde yüksek, somatik hücrede düşük; kanserde yeniden aktive olur"],
+        ["Telomeropatiler", "Kalıtsal telomeraz eksikliği", "Aplastik anemi, akciğer ve karaciğer fibrozisi, saçta erken beyazlama"],
+        ["Protein homeostazı bozulması", "Şaperon ve proteazom etkinliği azalır", "Alzheimer (β-amiloid, tau), Parkinson (α-sinüklein)"],
+        ["Mitokondriyal disfonksiyon ve ROS", "mtDNA mutasyonu, kaçak elektronlardan ROS ↑", "Lipofusin birikimi"],
+        ["IGF-1 / mTOR ekseni", "Yüksek aktivite büyümeyi, düşük aktivite onarımı destekler", "Kalori kısıtlaması ve rapamisin (deneysel) ömrü uzatabilir"],
+        ["Kalıcı düşük dereceli enflamasyon (inflammaging)", "IL-6, TNF-α, IL-1β artar", "Ateroskleroz, tip 2 diyabet, Alzheimer, insülin direnci"]
+      ]
+    },
+    {
+      "id": "boyalar",
+      "baslik": "Özel boyalar ve neyi gösterdikleri",
+      "k": ["01:39", "05:33", "05:26", "14:77", "09:37", "01:38"],
+      "sutun": ["Boya", "Gösterdiği"],
+      "satir": [
+        ["Hematoksilen–Eozin (H&E)", "Rutin boya; hematoksilen bazik (çekirdek), eozin sitoplazma"],
+        ["Prusya mavisi", "Demir (hemosiderin) — mavi"],
+        ["PAS", "Glikojen, nötral mukopolisakkaritler"],
+        ["Oil Red O", "Lipidler (dondurulmuş kesitte)"],
+        ["Masson trikrom, Van Gieson", "Bağ dokusu / kollajen (trikromda mavi)"],
+        ["Retikülin", "Retiküler lifler"],
+        ["Kongo kırmızısı", "Amiloid: pembe-kırmızı, polarize ışıkta elma yeşili çift kırılım"],
+        ["Asit-fast boyalar", "Mikobakteriler (granülomlarda etken tanımı için)"],
+        ["Papanicolaou (PAP)", "Alkol fiksasyonlu sitoloji preparatları"],
+        ["May-Grünwald–Giemsa, Wright, Diff-Quick", "Havada kurutulan sitoloji preparatları"]
+      ]
+    },
+    {
+      "id": "fiksatifler",
+      "baslik": "Fiksatifler",
+      "k": ["01:48", "01:49"],
+      "sutun": ["Fiksatif", "Kullanım"],
+      "satir": [
+        ["%10 nötral tamponlu formalin", "Rutin histopatolojide standart (1 hacim formalin + 9 hacim su); saatte ~1 mm penetrasyon; doku hacminin 10–20 katı"],
+        ["Zenker, B5", "Böbrek, kemik iliği, lenf nodu, testis"],
+        ["Carnoy", "RNA ve glikojeni iyi korur"],
+        ["Bouin", "Özellikle testis biyopsileri"]
+      ]
+    }
+  ],
+  "notlar": [
+    {"m": "Kalp hipertrofisinde tetikleyiciler mekanik gerilme, büyüme faktörleri ve adrenerjik uyarımdır; sonunda miyofibril kaybı ve ventrikül dilatasyonu ile yetmezlik gelişir.", "k": "04:15"},
+    {"m": "Patolojik hiperplazide büyüme kontrolü kısmen korunur; uyarı kesilince büyüme durur. Neoplaziden farkı budur.", "k": "04:22"},
+    {"m": "Mezenkimal metaplazi (travma odağında kemik oluşumu) uyumdan çok reaktif bir değişimdir.", "k": "04:32"},
+    {"m": "Steatoz patogenezi: serbest yağ asidi alımı ↑, trigliserid sentezi ↑, lipoprotein paketlenmesi/sekresyonu ↓.", "k": "05:13"},
+    {"m": "Köpük hücreleri kolesteril ester dolu makrofajlardır; ksantomlar (Aşil tendonu) ailesel hiperkolesterolemide görülür.", "k": "05:16"},
+    {"m": "Sarkoidozda metastatik kalsifikasyonun nedeni makrofajların D vitaminini aktive etmesidir.", "k": "05:41"},
+    {"m": "Mitokondri hasarı iki sonuç doğurur: ATP azalması nekroza, zar geçirgenliği artışı apoptoza eğilim yaratır.", "k": "06:16"}
+  ]
+}

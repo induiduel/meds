@@ -38,6 +38,8 @@ const SYNC_PATTERNS: RegExp[] = [
   /^medsoru_cozucu_(ilerleme|tercih|istatistik)_v1$/,
   // Sınav Çalışması: kazanım başına çözülen sorular
   /^medsoru_sinav_calisma_(v2|son_v1)$/,
+  /^medsoru_checkup_v1$/,
+  /^medsoru_calisma_takip_v1$/,
   /^medsoru_ornek_(k1_cevap|k1_ders|k1_social|havuz_social|sekme)$/,
   /^cikmis_quiz$/,
   /^my_(comment|report)_ids$/,
@@ -89,7 +91,7 @@ const BUNDLE_KEYS = new Set([
 /** Sık yazılan sayaçlar: profile girer ama anlık gönderim tetiklemez (dönemsel/arka plana geçişte gider). */
 const QUIET_KEYS = new Set(['medsoru_study_seconds_v1', 'medsoru_activity_v1']);
 /** Ders okurken her adımda/harekette yazılan profil anahtarları: damgalanır ama dönemsel gönderime kalır. */
-const QUIET_PROFILE = /^medsoru_learn_(progress|done|zoom|review)(_v1)?$/;
+const QUIET_PROFILE = /^medsoru_(learn_(progress|done|zoom|review)(_v1)?|calisma_takip_v1)$/;
 
 const META_KEY = 'medsoru_kv_meta_v1'; // anahtar → son yerel değişiklik zamanı
 const DIRTY_KEY = 'medsoru_kv_dirty_v1'; // henüz sunucuya gitmemiş anahtarlar

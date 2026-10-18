@@ -3,6 +3,7 @@
  * (canliDers.ts › bransBilgisi: slayt PDF'inin Drive klasörü + dosya numarası). Her grup kendi numarasına göre sıralı.
  */
 import type { CdListeDers } from './canliDersStore';
+import type { Brans } from '../spots/brans';
 
 export interface CdKategori { id: string; ad: string; kisa: string; alt: string }
 
@@ -12,6 +13,16 @@ const KISA: Record<string, string> = {
   'Tıbbi Farmakoloji': 'Farmakoloji',
   'Enfeksiyon Hastalıkları': 'Enfeksiyon',
   'Kadın Hastalıkları ve Doğum': 'Kadın Doğum',
+};
+/** Sesli ders branş adı → soru çözücü / en önemliler branşı (ilgili konu eşlemesi: branş + branş içi numara) */
+export const CD_SPOT_BRANS: Record<string, Brans> = {
+  'Tıbbi Patoloji': 'patoloji',
+  'Enfeksiyon Hastalıkları': 'enfeksiyon',
+  'Üroloji': 'uroloji',
+  'Tıbbi Genetik': 'genetik',
+  'Halk Sağlığı': 'halksagligi',
+  'Kadın Hastalıkları ve Doğum': 'kadindogum',
+  'Tıbbi Farmakoloji': 'farmakoloji',
 };
 export const cdBransKisa = (brans: string) => KISA[brans] || brans.replace(/^Tıbbi\s+/, '');
 const bransAdi = (d: CdListeDers) => d.brans || 'Diğer';

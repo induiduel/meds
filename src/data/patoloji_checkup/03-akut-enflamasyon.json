@@ -1,0 +1,157 @@
+{
+  "id": "akut-enflamasyon",
+  "ad": "Akut enflamasyon",
+  "kisa": "Lökosit göçü, selektin–integrin, fagositoz, NET, morfolojik kalıplar",
+  "tablolar": [
+    {
+      "id": "akut-kronik",
+      "baslik": "Akut ve kronik enflamasyon",
+      "k": ["07:8", "07:9", "09:5"],
+      "sutun": ["Özellik", "Akut", "Kronik"],
+      "satir": [
+        ["Başlangıç", "Hızlı: dakikalar–saatler", "Yavaş: günler; haftalar–aylar sürer"],
+        ["Hücresel infiltrat", "Başlıca nötrofil; ödem (sıvı + plazma proteini)", "Monosit/makrofaj, lenfosit, plazma hücresi"],
+        ["Doku hasarı", "Genellikle hafif, kendini sınırlar", "Belirgin, kalıcı doku yıkımı"],
+        ["Fibrozis", "Yok", "Şiddetli olabilir, ilerleyici"],
+        ["Lokal ve sistemik bulgu", "Belirgin", "Değişken, genellikle ılımlı"],
+        ["Sonuç", "Tam iyileşme veya basit skar", "Fibrozis ve organ fonksiyon kaybı"]
+      ]
+    },
+    {
+      "id": "eksuda-transuda",
+      "baslik": "Eksüda ve transüda",
+      "k": ["07:19", "07:20"],
+      "sutun": ["Özellik", "Eksüda", "Transüda"],
+      "satir": [
+        ["Protein", "Yüksek", "Düşük (çoğunlukla albümin)"],
+        ["Hücre", "Hücresel kalıntı, lökosit, eritrosit içerebilir", "Az veya hiç"],
+        ["Mekanizma", "Enflamasyon: endotel aralıkları açılır, geçirgenlik ↑", "Hidrostatik basınç ↑ veya kolloid ozmotik basınç ↓"],
+        ["Örnek", "Enflamatuvar odak", "Kalp yetmezliği, karaciğer/böbrek hastalığı, kwashiorkor"]
+      ]
+    },
+    {
+      "id": "lokosit-gocu",
+      "baslik": "Lökosit göç basamakları",
+      "k": ["07:24", "07:26", "07:27", "07:28", "07:30", "07:31", "07:33"],
+      "sutun": ["Basamak", "Ne olur?", "Sorumlu moleküller"],
+      "satir": [
+        ["Marjinasyon", "Staz gelişince lökositler damar duvarına yaklaşır", "Akım değişikliği (staz)"],
+        ["Yuvarlanma", "Düşük afiniteli tutunup bırakılma", "Selektinler: endotelde P-selektin (Weibel–Palade) ve E-selektin, lökositte L-selektin; ligand Sialyl-Lewis X"],
+        ["Sıkı adezyon", "Kemokinler integrinleri yüksek afiniteli forma geçirir, lökosit durur", "İntegrinler (LFA-1, MAC-1, VLA-4) – endotelde ICAM-1, VCAM-1 (TNF ve IL-1 ile artar)"],
+        ["Transmigrasyon (diapedez)", "Endotel hücreleri arasından geçiş, bazal membran kollajenazla aşılır", "PECAM-1 (CD31)"],
+        ["Kemotaksi", "Kimyasal gradyana doğru hareket", "Bakteriyel N-formil metiyonin peptidleri, kemokinler (IL-8), C5a, LTB4 — G proteinine bağlı reseptörler"]
+      ]
+    },
+    {
+      "id": "adezyon-molekulleri",
+      "baslik": "Adezyon molekülleri ve ligandları",
+      "k": ["07:25"],
+      "sutun": ["Molekül", "Aile", "Bulunduğu hücre", "Ligand"],
+      "satir": [
+        ["L-selektin", "Selektin", "Lökositler", "Endotel glikoproteinlerinde Sialyl-Lewis X"],
+        ["E-selektin", "Selektin", "Aktive endotel", "Nötrofil, monosit, T hücresinde Sialyl-Lewis X"],
+        ["P-selektin", "Selektin", "Aktive endotel ve trombositler", "Nötrofil, monosit, T hücresinde Sialyl-Lewis X"],
+        ["LFA-1 (CD11a/CD18)", "İntegrin", "T lenfosit ve diğer lökositler", "ICAM-1"],
+        ["MAC-1 (CD11b/CD18)", "İntegrin", "Monosit ve diğer lökositler", "ICAM-1"],
+        ["VLA-4", "İntegrin", "T lenfosit ve diğer lökositler", "VCAM-1"],
+        ["α4β7", "İntegrin", "Lenfosit, monosit", "Bağırsak endotelinde MAdCAM-1"]
+      ]
+    },
+    {
+      "id": "notrofil-makrofaj",
+      "baslik": "Nötrofil ve makrofaj",
+      "k": ["07:34", "07:35", "07:36"],
+      "sutun": ["Özellik", "Nötrofil", "Makrofaj"],
+      "satir": [
+        ["Baskın olduğu dönem", "İlk 6–24 saat", "24–48 saatten sonra"],
+        ["Dokuda yaşam süresi", "1–2 gün", "İnflamatuvar: günler–haftalar; doku yerleşik: yıllar"],
+        ["Uyarıya yanıt", "Hızlı, kısa süreli; degranülasyon", "Yavaş, uzun süreli; yeni gen transkripsiyonu"],
+        ["ROS üretimi", "Hızlı (respiratuvar patlama)", "Daha az belirgin"],
+        ["NO üretimi", "Düşük / yok", "iNOS transkripsiyonu ile"],
+        ["Sitokin üretimi", "Düşük / yok", "Başlıca fonksiyonlarından"],
+        ["NET oluşumu", "Hızla indüklenir", "Çok az / yok"],
+        ["Lizozomal enzim sekresyonu", "Belirgin", "Daha az"]
+      ]
+    },
+    {
+      "id": "oldurme",
+      "baslik": "Fagositoz ve hücre içi öldürme",
+      "k": ["07:40", "07:41", "07:42", "07:43", "07:45"],
+      "sutun": ["Mekanizma", "Nasıl çalışır?", "Not"],
+      "satir": [
+        ["Tanıma", "Mannoz ve “scavenger” reseptörleri; opsonin reseptörleri (IgG, C3b, lektinler)", "Opsonin kaplı mikrop çok daha etkin fagosite edilir"],
+        ["NADPH oksidaz (fagosit oksidaz)", "O₂ → O₂•⁻ → H₂O₂", "Nötrofilde respiratuvar patlama; defekti kronik granülomatöz hastalık"],
+        ["H₂O₂–MPO–halojen sistemi", "Miyeloperoksidaz H₂O₂'yi hipoklorite (ClO⁻) çevirir", "En güçlü bakterisidal yol; MPO eksikliğinde öldürme azalır"],
+        ["iNOS", "Argininden NO; NO + O₂•⁻ → peroksinitrit", "Makrofajlarda"],
+        ["Lizozomal enzimler", "Azurofil ve spesifik granüllerden fagolizozomda yıkım", "Hücre dışına salınırsa doku hasarı"],
+        ["NET (nötrofil ekstraselüler tuzak)", "Kromatin (DNA + histon) ve granül proteinlerinden ağ", "Nötrofil çekirdeğini kaybedip ölür; sepsiste kanda görülebilir"]
+      ]
+    },
+    {
+      "id": "baskin-hucre",
+      "baslik": "Hangi durumda hangi hücre baskın?",
+      "k": ["07:34", "07:38", "09:28"],
+      "sutun": ["Durum", "Baskın hücre"],
+      "satir": [
+        ["Akut enflamasyonun ilk 6–24 saati", "Nötrofil"],
+        ["24–48 saatten sonra", "Monosit → makrofaj"],
+        ["Pseudomonas enfeksiyonu", "Günlerce nötrofil"],
+        ["Viral enfeksiyonun erken dönemi", "Lenfosit"],
+        ["Alerji ve bazı parazit enfeksiyonları", "Eozinofil"],
+        ["Bazı aşırı duyarlılık reaksiyonları", "Aktif lenfosit, makrofaj, plazma hücresi"],
+        ["Osteomiyelit, sigara ilişkili akciğer hastalığı (kronik)", "Süregen nötrofil"]
+      ]
+    },
+    {
+      "id": "morfolojik-kaliplar",
+      "baslik": "Akut enflamasyonun morfolojik kalıpları",
+      "k": ["07:48", "07:49", "07:51", "07:53", "07:55"],
+      "sutun": ["Kalıp", "Özellik", "Örnek / sonuç"],
+      "satir": [
+        ["Seröz", "Serum benzeri, hafif proteinli, genelde steril, az hücreli sıvı", "Yanık/viral büller; plevra, perikard, periton efüzyonu"],
+        ["Fibrinöz", "Fibrinojenden zengin eksüda, fibrin birikimi", "Fibröz perikardit; çözülmezse organizasyon → fibrozis ve yapışıklık"],
+        ["Pürülan (süpüratif) ve apse", "Püy: nötrofil + nekrotik kalıntı + ödem + bakteri", "Piyojenik bakteri (S. aureus); apse: ortada nekroz, çevrede nötrofil ve fibrozis"],
+        ["Ülseratif", "Nekrotik dokunun dökülmesiyle yüzeyde lokal doku kaybı", "Ağız, mide, bağırsak; kronik fazda tabanda granülasyon dokusu ve skar"]
+      ]
+    },
+    {
+      "id": "fagosit-defekt",
+      "baslik": "Kalıtsal lökosit ve kompleman defektleri",
+      "k": ["14:71", "14:72", "07:29"],
+      "sutun": ["Hastalık", "Defekt", "Sonuç"],
+      "satir": [
+        ["Lökosit adezyon yetmezliği tip 1", "CD11/CD18 integrinlerinin β zincir mutasyonu", "Adezyon bozulur: tekrarlayan bakteriyel enfeksiyon, gecikmiş yara iyileşmesi"],
+        ["Lökosit adezyon yetmezliği tip 2", "Selektin ligandı sialile oligosakkarit için fukozil transferaz mutasyonu", "Yuvarlanma bozulur"],
+        ["Chédiak–Higashi sendromu", "Lizozomal membran trafiği proteini", "Lökosit fonksiyonları azalır"],
+        ["Kronik granülomatöz hastalık (X'e bağlı / OR)", "Fagosit oksidaz membran / sitoplazmik bileşeni", "Oksidatif patlama azalır"],
+        ["MPO eksikliği", "MPO–H₂O₂ sistemi", "Mikrobiyal öldürme azalır"],
+        ["C2, C4 eksikliği", "Klasik yol", "Enfeksiyona direnç ↓, immün kompleks temizliği ↓"],
+        ["C3 eksikliği", "Tüm kompleman fonksiyonları", "Ağır enfeksiyon yatkınlığı"]
+      ]
+    },
+    {
+      "id": "enflamasyon-hastaliklar",
+      "baslik": "Enflamatuvar reaksiyonun neden olduğu bozukluklar",
+      "k": ["07:13"],
+      "sutun": ["Bozukluk", "Hasarda rol alan hücre / molekül"],
+      "satir": [
+        ["ARDS", "Nötrofiller"],
+        ["Glomerülonefrit, vaskülit", "Antikor ve kompleman; nötrofiller"],
+        ["Septik şok", "Sitokinler (özellikle TNF, IL-1)"],
+        ["Romatoid artrit", "Lenfosit, makrofaj; antikorlar"],
+        ["Astım", "Eozinofil; IgE"],
+        ["Pulmoner fibrozis", "Makrofaj; fibroblast"]
+      ]
+    }
+  ],
+  "notlar": [
+    {"m": "Enflamasyonun 5 R'si: Recognition (tanıma), Recruitment (toplama), Removal (uzaklaştırma), Regulation (düzenleme), Repair (onarım).", "k": "07:11"},
+    {"m": "Beş klasik bulgu: calor, rubor, tumor, dolor, functio laesa; vasküler değişikliklerin ve lökosit aktivasyonunun klinik yansımasıdır.", "k": "07:10"},
+    {"m": "Bekçi hücreler (makrofaj, dendritik hücre, mast hücresi) TLR ve NLR ile mikrop ve hasarı tanır, TNF ve IL-1 salgılar.", "k": "07:14"},
+    {"m": "Akut enflamasyonun 3 bileşeni: vazodilatasyon, mikrovasküler geçirgenlik artışı, lökosit göçü — özellikle postkapiller venüllerde.", "k": "07:16"},
+    {"m": "Geçirgenlik artışının en sık mekanizması histamin, bradikinin, lökotrienlerle tetiklenen endotel hücre kasılmasıdır (geçici).", "k": "07:21"},
+    {"m": "Lenfanjit deride kızarık çizgiler, reaktif lenfadenit ise bölgesel düğüm büyümesi ve ağrısıdır.", "k": "07:23"},
+    {"m": "İntegrin antagonistleri multipl skleroz ve inflamatuvar bağırsak hastalığında kullanılır.", "k": "07:29"},
+    {"m": "Akut enflamasyonun üç olası sonucu: tam iyileşme (rezolüsyon), skarlı iyileşme (fibrozis), kronik enflamasyona ilerleme.", "k": "07:57"}
+  ]
+}

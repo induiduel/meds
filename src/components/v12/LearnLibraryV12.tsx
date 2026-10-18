@@ -12,7 +12,7 @@
  * Stil: styles/v12/learn-library.css (.l12-*).
  */
 import React, { useDeferredValue, useEffect, useMemo, useRef, useState } from 'react';
-import { Check, ChevronRight, FileQuestionMark, LayoutGrid, List, RotateCcw, Search } from 'lucide-react';
+import { ChevronRight, FileQuestionMark, LayoutGrid, List, RotateCcw, Search } from 'lucide-react';
 import { deckName, type DeckCatalogEntry } from '../../data/deckStore';
 import { useDeckPdfIds, useDeckPdfMissing } from '../../services/deckPdfService';
 import { useReviewCounts } from '../../hooks/useReviewCounts';
@@ -22,6 +22,8 @@ import {
   PAGE, SORT_KEY, SORT_LABEL, VIEW_KEY, branchOf, isPublished, kurulOf, orderOf, readPref, readRecent, schedOf, stateOf, trDate,
   unknownSource, writePref, type Progress, type Sort, type Status, type View,
 } from '../learn/LearnLibrary';
+import { KonuDugmeleri, KonuSureEtiketi } from '../takip/KonuTakip';
+import { ogrenTakipId } from '../takip/ogrenTakipId';
 import '../../styles/v12/learn-library.css';
 
 export interface LearnLibraryV12Props {
@@ -33,6 +35,8 @@ export interface LearnLibraryV12Props {
   onOpen: (id: string, pdf?: boolean) => void;
   versions?: Record<string, string[]>;
   onOpenReview?: (deckId?: string) => void;
+  /** "Tekrar et": kalınan adımı başa alıp dersi açar */
+  onRestart?: (id: string) => void;
 }
 
 const STATUS_LABEL: Record<Status, string> = { all: 'Tümü', active: 'Devam eden', done: 'Biten' };
@@ -62,7 +66,7 @@ const Prog: React.FC<{ pct: number; done?: boolean }> = ({ pct, done }) => (
   </span>
 );
 
-export const LearnLibraryV12: React.FC<LearnLibraryV12Props> = ({ decks: all, progress, isAdmin, archive, onArchive, onOpen, versions, onOpenReview }) => {
+export const LearnLibraryV12: React.FC<LearnLibraryV12Props> = ({ decks: all, progress, isAdmin, archive, onArchive, onOpen, versions, onOpenReview, onRestart }) => {
   const review = useReviewCounts();
   const [input, setInput] = useState('');
   const query = useDeferredValue(input);
@@ -246,6 +250,12 @@ export const LearnLibraryV12: React.FC<LearnLibraryV12Props> = ({ decks: all, pr
     );
   };
 
+  /** Bitirdim / Bitti + Tekrar et (konu takibi; tüm adımlar görüldüyse kendiliğinden bitti) */
+  const takipDugme = (d: DeckCatalogEntry, s: ReturnType<typeof stateOf>) => (
+    <KonuDugmeleri kucuk className="l12-takip" modul="ogren" konu={ogrenTakipId(d.id)} ad={deckName(d, false)} turetilen={s.status === 'done'}
+      onTekrar={() => (onRestart ? onRestart(d.id) : onOpen(d.id))} />
+  );
+
   const openLabel = (d: DeckCatalogEntry, s: ReturnType<typeof stateOf>) =>
     `${deckName(d, false)} — ${s.status === 'done' ? 'tamamlandı' : s.status === 'active' ? `%${s.pct}, devam et` : 'başla'}`;
 
@@ -427,9 +437,10 @@ export const LearnLibraryV12: React.FC<LearnLibraryV12Props> = ({ decks: all, pr
                               {deckName(d, false)}
                             </button>
                             {metaOf(d)}
+                            <KonuSureEtiketi modul="ogren" konu={ogrenTakipId(d.id)} />
                           </span>
                           <Prog pct={s.pct} done={s.status === 'done'} />
-                          <span className="l12-end">{s.status === 'done' && <Check role="img" aria-label="Bitti" />}</span>
+                          {takipDugme(d, s)}
                         </li>
                       );
                     })}
@@ -444,9 +455,10 @@ export const LearnLibraryV12: React.FC<LearnLibraryV12Props> = ({ decks: all, pr
                             {deckName(d, false)}
                           </button>
                           {metaOf(d)}
+                          <KonuSureEtiketi modul="ogren" konu={ogrenTakipId(d.id)} />
                           <span className="l12-tile-f">
                             <Prog pct={s.pct} done={s.status === 'done'} />
-                            <span className="l12-end">{s.status === 'done' && <Check role="img" aria-label="Bitti" />}</span>
+                            {takipDugme(d, s)}
                           </span>
                         </li>
                       );

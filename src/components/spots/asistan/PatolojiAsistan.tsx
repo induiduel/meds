@@ -8,6 +8,7 @@ import { lockScroll, unlockScroll } from '../../../utils/scrollLock';
 import { ogrenildiAyarla, tercihOku, tercihYaz } from '../onem/onemVeri';
 import { Metin } from '../onem/OnemMadde';
 import { asistanDosyasi, asistanDizinDosyasi, kodBrans } from './asistanVeri';
+import { tekrarTamamlandi, useKonuSayaci, useSoruSayaci } from '../../../services/calismaTakip';
 import { cozucuyaGit } from '../spotsYol';
 import { cozucuDizinYukle } from '../cozucu/cozucuVeri';
 import { bransTanim } from '../brans';
@@ -120,6 +121,11 @@ export const PatolojiAsistan: React.FC<{ kod: string; onClose: () => void; onDer
 
   const sahneler = useMemo(() => (ders ? sahneleriKur(ders, tercih.yogunluk, tekrar || undefined) : []), [ders, tercih.yogunluk, tekrar]);
   const s = sahneler[i];
+  // Konu takibi (Bitirdiklerim › En önemliler): etkin süre + yanıtlanan soru; tam akışta sona gelince tekrar turu biter
+  const takipKonu = ders ? `${kodBrans(kod)}/${kod}` : null;
+  useKonuSayaci('onem', takipKonu, caliyor);
+  const soruSay = useSoruSayaci('onem', takipKonu);
+  useEffect(() => { if (s?.tip === 'son' && !tekrar && takipKonu) tekrarTamamlandi('onem', takipKonu); }, [s?.tip]); // eslint-disable-line react-hooks/exhaustive-deps
   const nokta = s && (s.tip === 'anlatim' || s.tip === 'soru') ? ders!.noktalar[s.n] : null;
 
   useEffect(() => { lockScroll(); return () => unlockScroll(); }, []);
@@ -341,10 +347,12 @@ export const PatolojiAsistan: React.FC<{ kod: string; onClose: () => void; onDer
     setSecim(h); setYardim(false);
     if (h === q.dogru) {
       setCozuldu('dogru');
+      soruSay(q.k);
       setSonuc((r) => ({ ...r, [q.k]: r[q.k] === 'y' || elenen.length ? 'd2' : (r[q.k] || 'd') }));
       cal(`d-${q.k}`, [q.dogruMetin], otoIleri);
     } else {
       setElenen((e) => [...e, h]);
+      soruSay(q.k);
       setSonuc((r) => ({ ...r, [q.k]: 'y' }));
       cal(`y-${q.k}-${h}`, [q.yanlis[h]]);
     }
@@ -353,6 +361,7 @@ export const PatolojiAsistan: React.FC<{ kod: string; onClose: () => void; onDer
   const dogruyuGoster = () => {
     if (!s || s.tip !== 'soru') return;
     setCozuldu('goster'); setSecim(s.q.dogru); setYardim(false);
+    soruSay(s.q.k);
     setSonuc((r) => ({ ...r, [s.q.k]: 'y' }));
     cal(`d-${s.q.k}`, [s.q.dogruMetin]);
     altaKaydir('.pa-geri');

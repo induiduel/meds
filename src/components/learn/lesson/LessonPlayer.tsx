@@ -98,6 +98,8 @@ const NightToggle: React.FC = () => {
 };
 import { FocusSession, IX_EVENT, IxEventDetail } from './FocusSession';
 import { recordResult } from '../../../services/learnReview';
+import { tekrarTamamlandi, useKonuSayaci, useSoruSayaci } from '../../../services/calismaTakip';
+import { ogrenTakipId } from '../../takip/ogrenTakipId';
 import type { IxResult } from './lessonModel';
 
 type Layout = 'A' | 'B';
@@ -437,13 +439,20 @@ export const LessonPlayer: React.FC<LessonPlayerProps> = ({ deck, startAt, initi
   const [focusSetup, setFocusSetup] = useState(false);
   const [focusOn, setFocusOn] = useState(false);
   /** Ölçülebilir etkileşim sonucu → hata defteri + odak seansı nabzı */
+  // Bitirdiklerim: dersteki etkin süre + yanıtlanan etkileşimler (adım:öge başına bir kez)
+  const takipId = useMemo(() => ogrenTakipId(deck.id), [deck.id]);
+  useKonuSayaci('ogren', takipId);
+  const soruSay = useSoruSayaci('ogren', takipId);
+  // tekrar turunda son adıma gelinince konu yeniden "bitti" olur
+  useEffect(() => { if (n > 0 && index >= n - 1) tekrarTamamlandi('ogren', takipId); }, [index, n, takipId]);
   const recordIx = useCallback(
     (s: LessonStep, i: number, item: PracticeItem, r: IxResult) => {
+      soruSay(`${s.number}:${i}`);
       recordResult({ deckId: deck.id, deckTitle: deckName(deck), slide: s.number, stepTitle: s.title, ix: i, item }, r);
       const detail: IxEventDetail = { deckId: deck.id, slide: s.number, title: s.title, ok: r.ok, ms: r.ms };
       window.dispatchEvent(new CustomEvent(IX_EVENT, { detail }));
     },
-    [deck]
+    [deck, soruSay]
   );
   const [feedback, setFeedback] = useState<FeedbackItem[]>([]);
   const [fbOpen, setFbOpen] = useState<FeedbackTarget | null>(null);

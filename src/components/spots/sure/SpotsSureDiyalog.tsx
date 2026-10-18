@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import { Clock, X } from 'lucide-react';
 import { dk, fmtSaat, fmtSure, type SpotBransSureGrup } from './spotsSureVeri';
 import { type Brans } from '../brans';
+import { bittiMi, sureYaz, useTakip, type TakipModul } from '../../../services/calismaTakip';
 import '../../../styles/spots-sure.css';
 
 interface Props {
@@ -11,6 +12,8 @@ interface Props {
   onDersAc: (brans: Brans, kod: string) => void;
   birimAd?: 'ders' | 'set';
   not?: string;
+  /** verilirse "Çalıştığın" sütunu: konuda geçen etkin süre (Bitirdiklerim takibi; kimlik `<branş>/<kod>`) */
+  takipModul?: TakipModul;
 }
 
 export const SpotsSureDiyalog: React.FC<Props> = ({
@@ -20,7 +23,11 @@ export const SpotsSureDiyalog: React.FC<Props> = ({
   onDersAc,
   birimAd = 'ders',
   not,
+  takipModul,
 }) => {
+  const takip = useTakip();
+  const kayit = (b: Brans, kod: string) => (takipModul ? takip.k[`${takipModul}:${b}/${kod}`] : undefined);
+  const grupSn = (g: SpotBransSureGrup) => g.dersler.reduce((n, d) => n + (kayit(g.brans, d.kod)?.sn || 0), 0);
   const kapatRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
@@ -116,6 +123,7 @@ export const SpotsSureDiyalog: React.FC<Props> = ({
                       <th scope="col">{birimAd === 'set' ? 'Ders / Set Başlığı' : 'Ders Başlığı'}</th>
                       <th scope="col">{birimAd === 'set' ? 'Soru Sayısı' : 'Kapsam'}</th>
                       <th scope="col">Tahmini Süre</th>
+                      {takipModul && <th scope="col">Çalıştığın</th>}
                     </tr>
                   </thead>
                   <tbody>
@@ -153,6 +161,16 @@ export const SpotsSureDiyalog: React.FC<Props> = ({
                           <b>{dk(d.sure)} dk</b>
                           <small>{fmtSure(d.sure)}</small>
                         </td>
+                        {takipModul && (() => {
+                          const k = kayit(g.brans, d.kod);
+                          return (
+                            <td className="sp-sl-sure">
+                              {k?.sn ? <b>{sureYaz(k.sn)}</b> : <small>—</small>}
+                              {k?.soru ? <small>{k.soru} soru</small> : null}
+                              {bittiMi(k) && <small className="cd-sl-bitti">bitti</small>}
+                            </td>
+                          );
+                        })()}
                       </tr>
                     ))}
                   </tbody>
@@ -169,6 +187,7 @@ export const SpotsSureDiyalog: React.FC<Props> = ({
                         <b>{dk(g.toplamSure)} dk</b>
                         <small>{fmtSaat(g.toplamSure)}</small>
                       </td>
+                      {takipModul && <td className="sp-sl-sure"><b>{sureYaz(grupSn(g))}</b></td>}
                     </tr>
                   </tfoot>
                 </table>
