@@ -4,6 +4,7 @@ import { cozucuDizinYukle, ozet, setAdi, useIlerleme, type CDizin } from './cozu
 import { bransTanim, type Brans } from '../brans';
 import { getCozucuSureGruplari, dk } from '../sure/spotsSureVeri';
 import { SpotsSureDiyalog } from '../sure/SpotsSureDiyalog';
+import { useSpotCozucuStats, fmtSureDk } from '../../../services/spotCozucuIstatistik';
 import '../../../styles/soru-cozucu.css';
 
 /**
@@ -33,6 +34,7 @@ export const SoruCozucuSayfa: React.FC<{ brans?: Brans }> = ({ brans = 'patoloji
     return k && c ? { kod: k, mod: c === 'yanlis' || c === 'cikmis' ? c : undefined } : null;
   });
   const ilerleme = useIlerleme();
+  const stats = useSpotCozucuStats();
   const cozucuSureGruplari = useMemo(() => getCozucuSureGruplari(), [ilerleme]);
 
   useEffect(() => {
@@ -79,7 +81,17 @@ export const SoruCozucuSayfa: React.FC<{ brans?: Brans }> = ({ brans = 'patoloji
         <p className="scs-desc">Asistan soruyu ve seçenekleri okur, sen seçersin; ardından her seçeneğin nedenini ders sunumuna dayanarak açıklar. <span className="scs-kaynak">Sorular: {bt.cozucuNot}.</span></p>
         <div className="scs-prog" aria-label={`${cozulen} / ${genel.toplam} soru çözüldü`}>
           <div className="scs-cubuk" aria-hidden><i className="is-d" style={{ width: yuzde(genel.d) }} /><i className="is-d2" style={{ width: yuzde(genel.d2) }} /><i className="is-y" style={{ width: yuzde(genel.y) }} /></div>
-          <small><b>{cozulen}</b> / {genel.toplam} çözüldü{cozulen > 0 && <> · <span className="is-d">{genel.d} ilk denemede doğru</span> · <span className="is-d2">{genel.d2} yardımla</span> · <span className="is-y">{genel.y} çözümü dinlendi</span></>}</small>
+          <small>
+            <b>{cozulen}</b> / {genel.toplam} çözüldü
+            {cozulen > 0 && (
+              <>
+                {' '}· <span className="is-d">{genel.d} ilk denemede doğru (%{Math.round((genel.d / cozulen) * 100)})</span>
+                {' '}· <span className="is-d2">{genel.d2} yardımla</span>
+                {' '}· <span className="is-y">{genel.y} çözümü dinlendi</span>
+                {stats.cozucuSureSn > 0 && <> · <b>⏱️ {fmtSureDk(stats.cozucuSureSn)} çözüldü</b></>}
+              </>
+            )}
+          </small>
         </div>
         <details className="scs-nasil">
           <summary>Nasıl çalışır?</summary>

@@ -24,7 +24,14 @@ export interface SSoru {
   siklar?: Partial<Record<Harf, string>>;
   ipucu?: string;
 }
-export interface KzAyrinti { id: string; sorular: SSoru[]; anlatim?: string[]; slaytlar?: { sayfa: number; baslik: string; deck: string }[] }
+export interface KzAyrinti {
+  id: string;
+  sorular: SSoru[];
+  ozet?: string;
+  bilinmesi_gerekenler?: string[];
+  anlatim?: string[];
+  slaytlar?: { sayfa: number; baslik: string; deck: string }[];
+}
 
 const DOSYA = import.meta.glob('../../data/sinav_calisma/k1/*.json') as Record<string, () => Promise<{ default: unknown }>>;
 const yol = (ad: string) => `../../data/sinav_calisma/k1/${ad}.json`;

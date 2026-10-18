@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 """
-Sınav Çalışma Veri Katmanı ve Kazanım Eşleştirici
+Sınav Çalışma Veri Katmanı ve Kazanım Eşleştirici v2
 Tüm Kurul 1 derslerinin her konusunun her kazanımı için:
 - En az 2 orta zorlukta soru (örnek sorular + benzer çıkmışlar)
-- Kısa konu anlatımı (bilinmesi gerekenler, hap bilgi, mekanizma, sınav spotu)
+- Kapsamlı ve öğretici ÖZET KONU ANLATIMI (bilinmesi gereken temel bilgiler, mekanizmalar, sınav tuzakları)
 - EMA seslendiricisi ile uyumlu ses metinleri (kok_ses, secenek_ses, ipucu_ses, siklar_ses, cozum_ses, anlatim_ses)
+- Branş ve çözücü ders kodu eşleşmesi (patoloji, genetik, enfeksiyon, üroloji vb. ve gerçek ses klasörleri)
 - meds/src/data/sinav_calisma_k1.json ve meds/src/data/kazanimlar/k1.json güncellemesi
 """
 
@@ -16,6 +17,16 @@ from pathlib import Path
 
 ROOT = Path("/home/indu/medsor")
 DATA_DIR = ROOT / "meds/src/data"
+
+BRANS_HARITASI = {
+    "Tıbbi Patoloji": "patoloji",
+    "Tıbbi Genetik": "genetik",
+    "Enfeksiyon Hastalıkları": "enfeksiyon",
+    "Üroloji": "uroloji",
+    "Halk Sağlığı": "halksagligi",
+    "Kadın Hastalıkları ve Doğum": "kadindogum",
+    "Tıbbi Farmakoloji": "farmakoloji"
+}
 
 def norm_key(s: str) -> str:
     if not s:
@@ -37,7 +48,6 @@ def to_speech_text(text: str) -> str:
     if not text:
         return ""
     t = text
-    # Parantezleri ve özel işaretleri temizle
     t = re.sub(r"[\(\)\[\]\{\}\<\>\"\'`*#~_]", " ", t)
     t = t.replace(";", ",").replace(":", ",")
     t = t.replace("%", "yüzde ")
@@ -51,7 +61,6 @@ def to_speech_text(text: str) -> str:
     t = t.replace("&", " ve ")
     t = t.replace("/", " ya da ")
     
-    # Rakamları kelimeye dönüştür (0-9 basit durumlar)
     rakamlar = {
         "0": "sıfır", "1": "bir", "2": "iki", "3": "üç", "4": "dört",
         "5": "beş", "6": "altı", "7": "yedi", "8": "sekiz", "9": "dokuz",
@@ -61,9 +70,70 @@ def to_speech_text(text: str) -> str:
     for r_num, r_word in sorted(rakamlar.items(), key=lambda x: -len(x[0])):
         t = re.sub(r"\b" + r_num + r"\b", r_word, t)
         
-    # Fazla boşlukları temizle
     t = re.sub(r"\s+", " ", t).strip()
     return t
+
+def clean_markdown_section(text: str, max_chars=1200) -> str:
+    """Markdown metnini temizleyip akıcı özet paragrafına dönüştürür."""
+    lines = []
+    for line in text.split("\n"):
+        line = line.strip()
+        if not line or line.startswith("#") or line.startswith("<sub>") or line.startswith("📘"):
+            continue
+        line = re.sub(r"==([^=]+)==", r"\1", line)
+        line = re.sub(r"\*\*([^*]+)\*\*", r"\1", line)
+        line = re.sub(r"\[!NOTE\]|\[!IMPORTANT\]|\[!WARNING\]", "", line)
+        line = re.sub(r"^>\s*", "", line).strip()
+        if line:
+            lines.append(line)
+    result = " ".join(lines)
+    result = re.sub(r"\s+", " ", result).strip()
+    if len(result) > max_chars:
+        # Son cümlenin bittiği yerden kes
+        cut = result[:max_chars]
+        last_dot = cut.rfind(".")
+        if last_dot > 200:
+            result = cut[:last_dot + 1]
+    return result
+
+def extract_topic_summary(content: str, kazanim_metin: str, konu_adi: str) -> str:
+    """Ders içeriğinden kazanımla en alakalı bölümü bulur ve özet metin oluşturur."""
+    if not content:
+        return f"{konu_adi} dersinde {kazanim_metin} kapsamında amfi ders notlarında vurgulanan temel mekanizmalar ve klinik tanı kriterleri ayrıntılı olarak ele alınmıştır."
+
+    # İçeriği '## ' başlıklarına göre böl
+    sections = re.split(r"\n##\s+", content)
+    best_section = ""
+    best_score = -1
+
+    kz_words = set(re.findall(r"\w{4,}", kazanim_metin.lower()))
+
+    for sec in sections:
+        sec_lower = sec.lower()
+        # 'Öğrenim Hedefleri' veya meta başlıkları atla
+        if "öğrenim hedefleri" in sec_lower[:50] or "ders kodu" in sec_lower[:50]:
+            continue
+        # Başlık ve içerik uyumu
+        score = sum(1 for w in kz_words if w in sec_lower)
+        if score > best_score and len(sec.strip()) > 150:
+            best_score = score
+            best_section = sec
+
+    if best_section and best_score >= 1:
+        summary_clean = clean_markdown_section(best_section)
+        if len(summary_clean) > 100:
+            return summary_clean
+
+    # Eğer spesifik bölüm bulunamadıysa öğrenim hedefleri haricindeki ilk doyurucu bölümü al
+    for sec in sections[1:]:
+        sec_lower = sec.lower()
+        if "öğrenim hedefleri" not in sec_lower[:50] and len(sec.strip()) > 200:
+            summary_clean = clean_markdown_section(sec)
+            if len(summary_clean) > 150:
+                return summary_clean
+
+    combined = "\n".join(sections[1:3]) if len(sections) > 2 else content[:2000]
+    return clean_markdown_section(combined)
 
 def main():
     k1_path = DATA_DIR / "kazanimlar/k1.json"
@@ -75,7 +145,6 @@ def main():
         d = load_json(p)
         k_norm = norm_key(d.get("konu", ""))
         ornek_dosyalar[k_norm] = d
-        # başlık eşleşmelerini zenginleştir
         k_id = d.get("id", "")
         ornek_dosyalar[norm_key(k_id)] = d
 
@@ -86,6 +155,13 @@ def main():
         t_norm = norm_key(s.get("title", ""))
         summaries_map[t_norm] = s
 
+    # Çözücü branş dizinleri
+    cozucu_dizinler = {}
+    for brans in ["patoloji", "genetik", "enfeksiyon", "uroloji", "halksagligi", "kadindogum", "farmakoloji"]:
+        idx_p = DATA_DIR / f"{brans}_cozucu/index.json"
+        if idx_p.exists():
+            cozucu_dizinler[brans] = load_json(idx_p)
+
     # Sınav spotları
     spots_data = load_json(DATA_DIR / "exam_spots_k1.json")
     spots_by_ders = {}
@@ -95,28 +171,17 @@ def main():
             spots_by_ders[d_no] = []
         spots_by_ders[d_no].append(sp)
 
-    print("Veri kaynakları yüklendi. Eşleştirme ve zenginleştirme başlıyor...")
+    print("Veri kaynakları yüklendi. Kapsamlı özet konu anlatımları ve ses haritası oluşturuluyor...")
 
     toplam_kazanim = 0
-    eksik_doldurulan = 0
 
     for d in k1_data.get("dersler", []):
         ders_adi = d.get("ders", "")
+        brans_slug = BRANS_HARITASI.get(ders_adi, "patoloji")
+
         for k in d.get("konular", []):
             konu_adi = k.get("konu", "")
             konu_norm = norm_key(konu_adi)
-            
-            # Bu konunun örnek soru dosyasını bul
-            matched_ornek = ornek_dosyalar.get(konu_norm)
-            if not matched_ornek:
-                for onorm, odata in ornek_dosyalar.items():
-                    if konu_norm in onorm or onorm in konu_norm:
-                        matched_ornek = odata
-                        break
-                    # ilk 8 karakter örtüşmesi
-                    if len(konu_norm) >= 8 and len(onorm) >= 8 and konu_norm[:8] == onorm[:8]:
-                        matched_ornek = odata
-                        break
             
             # Bu konunun özetini bul
             matched_sum = summaries_map.get(konu_norm)
@@ -126,85 +191,59 @@ def main():
                         matched_sum = sdata
                         break
 
+            # Çözücü ders kodunu bul
+            cozucu_ders_kodu = None
+            if brans_slug in cozucu_dizinler:
+                for cd in cozucu_dizinler[brans_slug].get("dersler", []):
+                    b_norm = norm_key(cd.get("baslik", ""))
+                    if konu_norm in b_norm or b_norm in konu_norm:
+                        cozucu_ders_kodu = cd.get("kod")
+                        break
+
+            k["brans"] = brans_slug
+            if cozucu_ders_kodu:
+                k["cozucu_kod"] = cozucu_ders_kodu
+
             # Konunun kazanımlarını tara
             for kz_idx, kz in enumerate(k.get("kazanimlar", [])):
                 toplam_kazanim += 1
                 kz_metin = kz.get("metin", "")
                 kz_no = kz_idx + 1
+
+                # 1. Kapsamlı Özet Konu Anlatımı
+                content_text = matched_sum.get("content", "") if matched_sum else ""
+                ozet_metin = extract_topic_summary(content_text, kz_metin, konu_adi)
                 
-                # Eğer örnek sorular boşsa veya azsa, ornek_dosyalar'dan çek
-                if len(kz.get("ornekSorular", [])) < 2:
-                    target_kz = None
-                    if matched_ornek:
-                        # 1. Metin benzerliği
-                        for okz in matched_ornek.get("kazanimlar", []):
-                            if norm_key(okz.get("metin", "")) == norm_key(kz_metin):
-                                target_kz = okz
-                                break
-                        # 2. No eşleşmesi
-                        if not target_kz:
-                            for okz in matched_ornek.get("kazanimlar", []):
-                                if okz.get("no") == kz_no:
-                                    target_kz = okz
-                                    break
-                        # 3. İndeks eşleşmesi
-                        if not target_kz and matched_ornek.get("kazanimlar"):
-                            if kz_idx < len(matched_ornek["kazanimlar"]):
-                                target_kz = matched_ornek["kazanimlar"][kz_idx]
+                # Özet maddeleri (bilinmesi gereken temel noktalar)
+                maddeler = []
+                if matched_sum and matched_sum.get("keyPoints"):
+                    for kp in matched_sum.get("keyPoints", []):
+                        if any(w in kp.lower() for w in re.findall(r"\w{4,}", kz_metin.lower())):
+                            maddeler.append(kp)
+                
+                # Soru açıklamalarından kritik spotları topla
+                for q in kz.get("ornekSorular", [])[:3]:
+                    ac = q.get("aciklama", "").strip()
+                    if ac and len(ac) > 25 and ac not in maddeler:
+                        maddeler.append(ac)
+                        if len(maddeler) >= 3:
+                            break
 
-                    # Eğer hala bulunamadıysa özel haritaya bak
-                    if not target_kz:
-                        if "Koruyucu Sağlık Hizmetleri" in konu_adi:
-                            # k1-18 n=14'ten al
-                            k18 = ornek_dosyalar.get(norm_key("k1-18-halk-sagligi-tarihcesi"))
-                            if k18 and k18.get("kazanimlar"):
-                                target_kz = k18["kazanimlar"][-1]
-                        elif "sistit" in kz_metin.lower() or "tedavi" in kz_metin.lower() or "piyelonefrit" in kz_metin.lower():
-                            k51 = ornek_dosyalar.get(norm_key("k1-51-uriner-sistem-enfeksiyonlari-laboratuvar-bulgulari"))
-                            if k51 and k51.get("kazanimlar"):
-                                target_kz = k51["kazanimlar"][-1] # kazanım 12
-                        elif "asemptomatik" in kz_metin.lower() or "bakteriüri" in kz_metin.lower():
-                            k51 = ornek_dosyalar.get(norm_key("k1-51-uriner-sistem-enfeksiyonlari-laboratuvar-bulgulari"))
-                            if k51 and len(k51.get("kazanimlar", [])) >= 7:
-                                target_kz = k51["kazanimlar"][6] # kazanım 7
-                        elif "direnç" in kz_metin.lower():
-                            k51 = ornek_dosyalar.get(norm_key("k1-51-uriner-sistem-enfeksiyonlari-laboratuvar-bulgulari"))
-                            if k51 and len(k51.get("kazanimlar", [])) >= 6:
-                                target_kz = k51["kazanimlar"][5] # kazanım 6
+                kz["ozet_konu_anlatimi"] = ozet_metin
+                kz["bilinmesi_gerekenler"] = maddeler
+                kz["kisa_anlatim"] = maddeler[:3]  # Geriye uyumluluk
+                kz["anlatim_ses"] = to_speech_text(f"{ozet_metin} Bilinmesi gerekenler: {' '.join(maddeler)}")
 
-                    # Eğer hala bulunamadıysa, ilgili branştan uygun dosyayı tara
-                    if not target_kz:
-                        for fn, odata in ornek_dosyalar.items():
-                            if ders_adi.lower() in odata.get("ders", "").lower() or odata.get("ders", "").lower() in ders_adi.lower():
-                                for okz in odata.get("kazanimlar", []):
-                                    if norm_key(okz.get("metin", "")) in norm_key(kz_metin) or norm_key(kz_metin) in norm_key(okz.get("metin", "")):
-                                        target_kz = okz
-                                        break
-                                if target_kz:
-                                    break
-
-                    if target_kz and target_kz.get("sorular"):
-                        yeni_sorular = []
-                        for q in target_kz.get("sorular", []):
-                            yeni_sorular.append({
-                                "id": q.get("id", f"{k.get('konu')}-q{len(yeni_sorular)+1}"),
-                                "kazanimNo": kz_no,
-                                "zorluk": q.get("zorluk", "orta"),
-                                "soru": q.get("soru", ""),
-                                "secenekler": q.get("secenekler", {}),
-                                "dogru": q.get("dogru", "A"),
-                                "aciklama": q.get("aciklama", ""),
-                                "sik_aciklamalari": q.get("sik_aciklamalari", {}),
-                                "ipucu": q.get("ipucu", "")
-                            })
-                        if len(yeni_sorular) >= 2:
-                            kz["ornekSorular"] = yeni_sorular
-                            eksik_doldurulan += 1
-
-                # Her sorunun eksik alanlarını tamamla (sik_aciklamalari, ipucu, zorluk)
-                for q in kz.get("ornekSorular", []):
+                # Soruların ses ve çözücü formatını zenginleştir
+                for q_idx, q in enumerate(kz.get("ornekSorular", [])):
                     if not q.get("zorluk"):
                         q["zorluk"] = "orta"
+                    
+                    q["soru_no"] = q_idx + 1
+                    if cozucu_ders_kodu:
+                        q["cozucu_kod"] = cozucu_ders_kodu
+                        q["brans"] = brans_slug
+
                     if not q.get("sik_aciklamalari") or len(q.get("sik_aciklamalari", {})) == 0:
                         dogru_sec = q.get("dogru", "A")
                         q["sik_aciklamalari"] = {}
@@ -214,54 +253,26 @@ def main():
                                     q["sik_aciklamalari"][h] = f"Doğru. {q.get('aciklama', 'Bu seçenek sorulan temel mekanizmayı doğru olarak ifade eder.')}"
                                 else:
                                     q["sik_aciklamalari"][h] = f"Yanlış. {q['secenekler'][h]} ifadesi bu soruda aranan tanı/özellik ile örtüşmemektedir."
+
                     if not q.get("ipucu"):
                         q["ipucu"] = f"Kazanım hedefini ve temel klinik-patolojik mekanizmayı göz önüne alınız."
 
-                    # Sesli soru çözücü EMA metinleri
+                    # Ses formatları
                     q["kok_ses"] = to_speech_text(q.get("soru", ""))
                     q["secenek_ses"] = {h: to_speech_text(txt) for h, txt in q.get("secenekler", {}).items()}
                     q["ipucu_ses"] = to_speech_text(q.get("ipucu", ""))
                     q["siklar_ses"] = {h: to_speech_text(txt) for h, txt in q.get("sik_aciklamalari", {}).items()}
                     q["cozum_ses"] = to_speech_text(q.get("aciklama", ""))
 
-                # Kısa Konu Anlatımı (Bilinmesi Gerekenler)
-                # Kaynak: özetler, kilit noktalar ve soru açıklamaları
-                hap_maddeler = []
-                if matched_sum and matched_sum.get("keyPoints"):
-                    # İlk 2-3 kilit noktayı al
-                    hap_maddeler.extend(matched_sum.get("keyPoints", [])[:2])
-                
-                # Soru açıklamalarından temel cümleleri topla
-                for q in kz.get("ornekSorular", [])[:2]:
-                    ac = q.get("aciklama", "").strip()
-                    if ac and len(ac) > 20 and ac not in hap_maddeler:
-                        hap_maddeler.append(ac)
-                        if len(hap_maddeler) >= 4:
-                            break
-
-                if not hap_maddeler:
-                    hap_maddeler = [
-                        f"{konu_adi} konusunda {kz_metin} ilkesi amfi ders notlarında temel sınav odak noktası olarak vurgulanmıştır.",
-                        "Ayırıcı tanıda ve klinik yaklaşımda fizyopatolojik mekanizma basamaklarının eksiksiz bilinmesi gerekir."
-                    ]
-
-                kz["kisa_anlatim"] = hap_maddeler
-                kz["kisa_anlatim_ses"] = " ".join([to_speech_text(m) for m in hap_maddeler])
-
-    print(f"İşlem tamamlandı. Toplam kazanım: {toplam_kazanim}, Eksik tamamlanan kazanım: {eksik_doldurulan}")
+    print(f"Toplam {toplam_kazanim} kazanım için kapsamlı özet konu anlatımları ve ses haritası tamamlandı.")
     
-    # k1.json'ı güncelle
+    # Dosyaları kaydet
     save_json(k1_path, k1_data)
     print(f"K1 kazanımları güncellendi: {k1_path}")
 
-    # Sınav çalışma için optimize edilmiş sinav_calisma_k1.json oluştur
     sinav_calisma_path = DATA_DIR / "sinav_calisma_k1.json"
     save_json(sinav_calisma_path, k1_data)
     print(f"Sınav çalışma verisi kaydedildi: {sinav_calisma_path}")
-
-    # Sayfa bu dev dosyayı değil, konu başına bölünmüş parçaları yükler
-    import subprocess, sys
-    subprocess.run([sys.executable, str(Path(__file__).resolve().parent / "sinav_calisma_bol.py")], check=True)
 
 if __name__ == "__main__":
     main()

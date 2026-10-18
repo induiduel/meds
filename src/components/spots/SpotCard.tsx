@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { AlertTriangle, BookMarked, Check, Eye, Share2 } from 'lucide-react';
 import { toast } from '../ui/Toast';
 import { KAT, Spot, Zengin } from './spotsShared';
+import { kaydetSpotZiyaret } from '../../services/spotCozucuIstatistik';
 
 /**
  * Tek spot kartı: kategori etiketi · önem çubukları · başlık · spot metni · maddeler · karşılaştırma tablosu ·
@@ -57,7 +58,12 @@ const SpotCardBase: React.FC<Props> = ({ s, sinav, ogrenildi, vurgulu, onOgren }
   const govdeId = `xs-body-${s.id}`;
 
   return (
-    <article id={`xs-${s.id}`} className={`xs-card k-${s.kategori}${ogrenildi ? ' is-done' : ''}${vurgulu ? ' is-flash' : ''}`} aria-labelledby={`xs-t-${s.id}`}>
+    <article
+      id={`xs-${s.id}`}
+      className={`xs-card k-${s.kategori}${ogrenildi ? ' is-done' : ''}${vurgulu ? ' is-flash' : ''}`}
+      aria-labelledby={`xs-t-${s.id}`}
+      onClick={() => kaydetSpotZiyaret({ id: s.id, ders: s.ders, baslik: s.baslik, kategori: s.kategori })}
+    >
       <div className="xs-card-top">
         <span className="xs-tag" title={kat?.aciklama}>{kat?.kisa}</span>
         <OnemCubuk n={s.onem} />
@@ -118,7 +124,16 @@ const SpotCardBase: React.FC<Props> = ({ s, sinav, ogrenildi, vurgulu, onOgren }
       )}
 
       <div className="xs-card-f">
-        <button type="button" className={`xs-learn${ogrenildi ? ' is-on' : ''}`} aria-pressed={ogrenildi} onClick={() => onOgren(s.id)}>
+        <button
+          type="button"
+          className={`xs-learn${ogrenildi ? ' is-on' : ''}`}
+          aria-pressed={ogrenildi}
+          onClick={(e) => {
+            e.stopPropagation();
+            kaydetSpotZiyaret({ id: s.id, ders: s.ders, baslik: s.baslik, kategori: s.kategori });
+            onOgren(s.id);
+          }}
+        >
           <Check size={15} strokeWidth={ogrenildi ? 3 : 2} aria-hidden /> Öğrendim
         </button>
         {!!s.kaynak?.length && (

@@ -94,6 +94,10 @@ def main() -> None:
                     "zorluk": zd,
                 })
                 ayr = {"id": kz["id"], "sorular": sorular}
+                if kz.get("ozet_konu_anlatimi"):
+                    ayr["ozet"] = kz["ozet_konu_anlatimi"]
+                if kz.get("bilinmesi_gerekenler"):
+                    ayr["bilinmesi_gerekenler"] = kz["bilinmesi_gerekenler"]
                 if kz.get("kisa_anlatim"):
                     ayr["anlatim"] = kz["kisa_anlatim"]
                 slaytlar = [

@@ -7,8 +7,9 @@ import kurulIndex from '../../data/kazanimlar/index.json';
 import { ANAHTAR, KATEGORILER, Kategori, Spot, Veri, azHareket, kucuk, okuOgrenilen, yazOgrenilen } from './spotsShared';
 import { useAppearance } from '../../utils/appearance';
 import { SpotsV12 } from '../v12/SpotsV12';
-import '../../styles/onem-listesi.css';
 import { BRANSLAR, bransOku, type Brans } from './brans';
+import { SpotCozucuDevamKart } from './stats/SpotCozucuDevamKart';
+import { ekleSpotSure, type LastSpotInfo, type LastCozucuInfo } from '../../services/spotCozucuIstatistik';
 
 export { KATEGORILER };
 
@@ -105,6 +106,52 @@ export const ExamSpotsView: React.FC = () => {
       history.replaceState(history.state, '', u.pathname + u.search + u.hash);
     } catch { /* yok */ }
   };
+  // Spotlarda aktif çalışma süresi sayacı
+  useEffect(() => {
+    if (g !== 'spot' && g !== 'onem') return;
+    let sonHareket = Date.now();
+    const hareket = () => { sonHareket = Date.now(); };
+    window.addEventListener('pointerdown', hareket, { passive: true, capture: true });
+    window.addEventListener('keydown', hareket, { passive: true, capture: true });
+    window.addEventListener('scroll', hareket, { passive: true, capture: true });
+    const TICK = 10;
+    const tid = window.setInterval(() => {
+      if (document.visibilityState !== 'visible' || Date.now() - sonHareket > 60_000) return;
+      ekleSpotSure(TICK);
+    }, TICK * 1000);
+    return () => {
+      window.clearInterval(tid);
+      window.removeEventListener('pointerdown', hareket, { capture: true });
+      window.removeEventListener('keydown', hareket, { capture: true });
+      window.removeEventListener('scroll', hareket, { capture: true });
+    };
+  }, [g]);
+
+  const onDevamSpot = (s: LastSpotInfo) => {
+    sec('spot');
+    try {
+      const u = new URL(location.href);
+      u.searchParams.delete('gorunum');
+      if (s.id) u.searchParams.set('id', s.id);
+      history.replaceState(history.state, '', u.pathname + u.search + u.hash);
+      window.dispatchEvent(new PopStateEvent('popstate'));
+    } catch { /* yok */ }
+  };
+
+  const onDevamCozucu = (c: LastCozucuInfo) => {
+    bransSec(c.brans);
+    sec('cozucu');
+    try {
+      const u = new URL(location.href);
+      u.searchParams.set('gorunum', 'cozucu');
+      if (c.brans !== 'patoloji') u.searchParams.set('brans', c.brans);
+      u.searchParams.set('ders', c.kod);
+      u.searchParams.set('coz', '1');
+      history.replaceState(history.state, '', u.pathname + u.search + u.hash);
+      window.dispatchEvent(new PopStateEvent('popstate'));
+    } catch { /* yok */ }
+  };
+
   return (
     <>
       <h1 className="sr-only">Sınav spotları</h1>
@@ -120,6 +167,14 @@ export const ExamSpotsView: React.FC = () => {
           ))}
         </div>
       )}
+      <SpotCozucuDevamKart
+        onDevamSpot={onDevamSpot}
+        onDevamCozucu={onDevamCozucu}
+        onBransSec={(b) => {
+          bransSec(b);
+          sec('cozucu');
+        }}
+      />
       {g === 'onem' ? (
         <React.Suspense fallback={<p className="ol-bos">Yükleniyor…</p>}><OnemListesi key={brans} brans={brans} /></React.Suspense>
       ) : g === 'cozucu' ? (

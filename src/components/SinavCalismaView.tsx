@@ -8,7 +8,7 @@
  */
 import React, { useCallback, useDeferredValue, useEffect, useId, useMemo, useRef, useState } from 'react';
 import {
-  BookOpen, Check, ChevronDown, ChevronLeft, ChevronRight, Copy, Headphones, Lightbulb, Presentation, RotateCcw, Search, X,
+  BookOpen, Check, ChevronDown, ChevronLeft, ChevronRight, Copy, Headphones, Lightbulb, Presentation, RotateCcw, Search, Volume2, X,
 } from 'lucide-react';
 import { SoruCozucu } from './spots/cozucu/SoruCozucu';
 import type { Harf, Sonuc as CozucuSonuc } from './spots/cozucu/cozucuVeri';
@@ -79,7 +79,7 @@ export const SinavCalismaView: React.FC = () => {
   const q = useDeferredValue(arama);
   const [durum, setDurum] = useState<Durum>('hepsi');
   const [ilerleme, setIlerleme] = useState<Ilerleme>(ilerlemeOku);
-  const [cozucu, setCozucu] = useState<{ baslik: string; sorular: SSoru[]; kzId: string; anlatim?: string[] } | null>(null);
+  const [cozucu, setCozucu] = useState<{ baslik: string; sorular: SSoru[]; kzId: string; anlatim?: string[]; ozet?: string } | null>(null);
 
   const yukle = useCallback(() => {
     setHata(false);
@@ -269,7 +269,7 @@ export const SinavCalismaView: React.FC = () => {
                       onToggle={() => setAcik((a) => (a === kz.id ? null : kz.id))}
                       onSonuc={sonucYaz}
                       onSifirla={kzSifirla}
-                      onSesli={(sorular, anlatim) => setCozucu({ baslik: `${k.ad} · Kazanım ${kz.no}`, sorular, kzId: kz.id, anlatim })}
+                      onSesli={(sorular, anlatim, ozet) => setCozucu({ baslik: `${k.ad} · Kazanım ${kz.no}`, sorular, kzId: kz.id, anlatim, ozet })}
                     />
                   ))}
                 </ul>
@@ -292,9 +292,9 @@ export const SinavCalismaView: React.FC = () => {
 
 /** Sesli çözücü köprüsü: sorular bir kez dönüştürülür (kimlik sabit kalsın), sonuçlar kazanım ilerlemesine yazılır */
 const SesliCozucu: React.FC<{
-  baslik: string; sorular: SSoru[]; kzId: string; anlatim?: string[];
+  baslik: string; sorular: SSoru[]; kzId: string; anlatim?: string[]; ozet?: string;
   onClose: () => void; onSonuc: (kzId: string, soruId: string, s: 'd' | 'y') => void;
-}> = ({ baslik, sorular, kzId, anlatim, onClose, onSonuc }) => {
+}> = ({ baslik, sorular, kzId, anlatim, ozet, onClose, onSonuc }) => {
   const cs = useMemo(() => cozucuSorulari(sorular), [sorular]);
   const yazilan = useRef<Record<string, CozucuSonuc>>({});
   const onOzelSonuc = useCallback((s: Record<string, CozucuSonuc>) => {
@@ -305,7 +305,7 @@ const SesliCozucu: React.FC<{
       if (soru) onSonuc(kzId, soru.id, v === 'd' ? 'd' : 'y');
     }
   }, [sorular, kzId, onSonuc]);
-  return <SoruCozucu kod="sinav_calisma" onClose={onClose} ozelSorular={cs} ozelBaslik={baslik} kisaAnlatim={anlatim} onOzelSonuc={onOzelSonuc} />;
+  return <SoruCozucu kod="sinav_calisma" onClose={onClose} ozelSorular={cs} ozelBaslik={baslik} ozetAnlatim={ozet} kisaAnlatim={anlatim} onOzelSonuc={onOzelSonuc} />;
 };
 
 /* ── Kazanım satırı + açılır çalışma paneli ─────────────────────────────── */
@@ -317,7 +317,7 @@ const KazanimSatir: React.FC<{
   onToggle: () => void;
   onSonuc: (kzId: string, soruId: string, s: 'd' | 'y') => void;
   onSifirla: (kzId: string) => void;
-  onSesli: (sorular: SSoru[], anlatim?: string[]) => void;
+  onSesli: (sorular: SSoru[], anlatim?: string[], ozet?: string) => void;
 }> = ({ kz, konu, ilerleme, acik, onToggle, onSonuc, onSifirla, onSesli }) => {
   const panelId = useId();
   const cozulen = Math.min(kz.soru, Object.keys(ilerleme || {}).length);
@@ -354,7 +354,7 @@ const KazanimPanel: React.FC<{
   ilerleme?: Record<string, 'd' | 'y'>;
   onSonuc: (kzId: string, soruId: string, s: 'd' | 'y') => void;
   onSifirla: (kzId: string) => void;
-  onSesli: (sorular: SSoru[], anlatim?: string[]) => void;
+  onSesli: (sorular: SSoru[], anlatim?: string[], ozet?: string) => void;
 }> = ({ kz, konu, ilerleme, onSonuc, onSifirla, onSesli }) => {
   const [veri, setVeri] = useState<KzAyrinti | null>(null);
   const [hata, setHata] = useState(false);
@@ -362,7 +362,38 @@ const KazanimPanel: React.FC<{
   const [i, setI] = useState(0);
   const [secim, setSecim] = useState<Record<string, Harf>>({});
   const [ipucu, setIpucu] = useState<Record<string, boolean>>({});
+  const [ozetOkunuyor, setOzetOkunuyor] = useState(false);
   const soruRef = useRef<HTMLDivElement>(null);
+
+  const ozetSeslendir = () => {
+    if (typeof window === 'undefined' || !('speechSynthesis' in window)) {
+      toast.error('Tarayıcınız konuşma sentezini desteklemiyor');
+      return;
+    }
+    if (ozetOkunuyor) {
+      window.speechSynthesis.cancel();
+      setOzetOkunuyor(false);
+      return;
+    }
+    const metinler: string[] = [];
+    if (veri?.ozet) metinler.push(veri.ozet);
+    const maddeler = veri?.bilinmesi_gerekenler || veri?.anlatim || [];
+    if (maddeler.length) metinler.push(`Bu kazanımda bilinmesi gereken temel noktalar: ${maddeler.join('. ')}`);
+    const tamMetin = metinler.join('\n\n');
+    if (!tamMetin) return;
+
+    window.speechSynthesis.cancel();
+    const u = new SpeechSynthesisUtterance(tamMetin);
+    u.lang = 'tr-TR';
+    u.rate = 1;
+    const voices = window.speechSynthesis.getVoices();
+    const trVoice = voices.find((v) => v.lang && v.lang.toLowerCase().startsWith('tr'));
+    if (trVoice) u.voice = trVoice;
+    u.onend = () => setOzetOkunuyor(false);
+    u.onerror = () => setOzetOkunuyor(false);
+    setOzetOkunuyor(true);
+    window.speechSynthesis.speak(u);
+  };
 
   const yukle = useCallback(() => {
     setHata(false);
@@ -419,12 +450,19 @@ const KazanimPanel: React.FC<{
     { id: 'cikmis' as SoruSuzgec, ad: 'Çıkmış', n: say('cikmis') },
   ].filter((x) => x.id === 'hepsi' || x.n > 0);
 
+  const maddeler = veri.bilinmesi_gerekenler && veri.bilinmesi_gerekenler.length > 0 ? veri.bilinmesi_gerekenler : veri.anlatim;
+
   return (
     <>
       <div className="scw-p-acts">
-        <button type="button" className="scw-btn is-pri" onClick={() => onSesli(sorular, veri.anlatim)} disabled={!sorular.length}>
-          <Headphones aria-hidden />Sesli çöz
+        <button type="button" className="scw-btn is-pri" onClick={() => onSesli(sorular, maddeler, veri.ozet)} disabled={!sorular.length}>
+          <Headphones aria-hidden />Sesli çözücüyle çöz
         </button>
+        {veri.ozet && (
+          <button type="button" className={`scw-btn ${ozetOkunuyor ? 'is-pri' : ''}`} onClick={ozetSeslendir}>
+            <Volume2 aria-hidden />{ozetOkunuyor ? 'Özeti durdur' : 'Özeti sesli dinle'}
+          </button>
+        )}
         {veri.slaytlar?.[0] && (
           <button type="button" className="scw-btn" onClick={() => navigateTo(`/ogren/${veri.slaytlar![0].deck}?slide=${veri.slaytlar![0].sayfa}`)}>
             <Presentation aria-hidden />Derste aç
@@ -437,10 +475,23 @@ const KazanimPanel: React.FC<{
         )}
       </div>
 
-      {veri.anlatim && veri.anlatim.length > 0 && (
+      {(veri.ozet || (maddeler && maddeler.length > 0)) && (
         <details className="scw-ozet" open>
-          <summary><BookOpen aria-hidden />Bilinmesi gerekenler</summary>
-          <ul>{veri.anlatim.map((m, j) => <li key={j}>{m}</li>)}</ul>
+          <summary><BookOpen aria-hidden />Özet Konu Anlatımı ve Bilinmesi Gerekenler</summary>
+          <div className="scw-ozet-icerik">
+            {veri.ozet && (
+              <div className="scw-ozet-metin">
+                <h4 className="scw-ozet-baslik">📘 Özet Konu Anlatımı</h4>
+                <Metin metin={veri.ozet} />
+              </div>
+            )}
+            {maddeler && maddeler.length > 0 && (
+              <div className="scw-ozet-maddeler">
+                <h4 className="scw-ozet-baslik">💡 Bu Kazanımda Bilinmesi Gereken Temel Noktalar</h4>
+                <ul>{maddeler.map((m, j) => <li key={j}><Metin metin={m} /></li>)}</ul>
+              </div>
+            )}
+          </div>
           {veri.slaytlar && veri.slaytlar.length > 1 && (
             <div className="scw-slaytlar">
               {veri.slaytlar.map((sl) => (

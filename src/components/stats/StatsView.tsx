@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useState } from 'react';
-import { BookmarkCheck, Check, ChevronRight, Clock3, Flag, MessageSquare, NotebookPen, PenLine, Plus, RotateCcw, Star, Trophy, X } from 'lucide-react';
+import { BookmarkCheck, Check, ChevronRight, Clock3, Flag, Headphones, MessageSquare, NotebookPen, PenLine, Plus, RotateCcw, Star, Trophy, X } from 'lucide-react';
 import type { QuestionItem } from '../../types';
 import type { AppUser } from '../../services/auth';
 import type { AppRoute } from '../../router';
@@ -9,6 +9,7 @@ import {
 import { getStatsAttempts, getStatsTests } from '../../services/progressReset';
 import { dayKey, getActivity, getStudySeconds, type ActivityKind } from '../../services/activityLog';
 import { computeContributorStats } from '../../utils/contributionScore';
+import { useSpotCozucuStats, fmtSureDk } from '../../services/spotCozucuIstatistik';
 import './stats.css';
 import '../../styles/v12/secondary.css';
 
@@ -68,6 +69,7 @@ const signed = (n: number) => (n > 0 ? `+${nf.format(n)}` : n < 0 ? `−${nf.for
 export const StatsView: React.FC<Props> = ({ questions, currentUser, onGo }) => {
   const [period, setPeriod] = useState<Period>('hafta');
   const [tab, setTab] = useState<'fav' | 'kart' | 'not' | 'tekrar'>('fav');
+  const spotStats = useSpotCozucuStats();
   const [bank, setBank] = useState<StudyQuestion[]>([]);
   const [bankReady, setBankReady] = useState(false);
   useEffect(() => {
@@ -367,6 +369,35 @@ export const StatsView: React.FC<Props> = ({ questions, currentUser, onGo }) => 
           <button type="button" className="st-li" onClick={() => onGo('study')}><span className="ic is-warn"><RotateCcw /></span>Tekrar listesi<span className="n">{review.length}</span></button>
           <button type="button" className="st-li" onClick={() => onGo('practice')}><span className="ic"><Flag /></span>Bitirdiğin testler<span className="n">{tests.length}</span></button>
           {wrongAll > 0 && <div className="st-cta"><button type="button" className="st-primary" onClick={() => onGo('study')}>{wrongAll} yanlışı yeniden çöz</button></div>}
+        </section>
+
+        <section className="st-card" aria-label="Sınav Spotları ve Sesli Soru Çözücü">
+          <div className="st-h">
+            <b>Spotlar & Soru Çözücü</b>
+            <span className="st-sp" />
+            <span className="st-mono">{fmtSureDk(spotStats.toplamSureSn)}</span>
+          </div>
+          <button type="button" className="st-li" onClick={() => onGo('spots')}>
+            <span className="ic is-accent"><Headphones /></span>
+            Sesli soru çözücü
+            <span className="n">{spotStats.cozulenSoru} / {spotStats.toplamSoru} (%{spotStats.dogrulukOrani} doğruluk)</span>
+          </button>
+          <button type="button" className="st-li" onClick={() => onGo('spots')}>
+            <span className="ic is-ok"><BookmarkCheck /></span>
+            Öğrenilen spotlar
+            <span className="n">{spotStats.ogrenilenSpot} / {spotStats.toplamSpot} (%{spotStats.spotOgrenmeOrani})</span>
+          </button>
+          {spotStats.cozulenSoru > 0 && (
+            <div style={{ padding: '6px 12px', fontSize: 11.5, color: 'var(--color-text-sub)' }}>
+              {spotStats.dogruIlk} ilk denemede doğru · {spotStats.dogruYardimli} yardımla · {spotStats.yanlis} çözüm dinlendi
+              {spotStats.ortalamaSoruSuresiSn > 0 && ` · ~${spotStats.ortalamaSoruSuresiSn} sn/soru`}
+            </div>
+          )}
+          <div className="st-cta">
+            <button type="button" className="st-primary" onClick={() => onGo('spots')}>
+              Spotlar ve soru çözücüye git
+            </button>
+          </div>
         </section>
 
         <section className="st-card" aria-label="Katkıların">

@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import {
-  Check, ChevronDown, ChevronLeft, ChevronRight, Eraser, Headphones, Lightbulb, Maximize2, Minimize2, Minus, Pause, Play, Plus, RotateCcw, Settings2, SkipForward, Volume2, X,
+  Check, ChevronDown, ChevronLeft, ChevronRight, Clock, Eraser, Headphones, Lightbulb, Maximize2, Minimize2, Minus, Pause, Play, Plus, RotateCcw, Settings2, SkipForward, Volume2, X,
 } from 'lucide-react';
 import { getCustomApiUrl } from '../../../services/api';
 import { lockScroll, unlockScroll } from '../../../utils/scrollLock';
@@ -11,6 +11,7 @@ import {
   type CDers, type CDizin, type CSoru, type Harf, type Klip, type Sonuc,
 } from './cozucuVeri';
 import { bransTanim, type Brans } from '../brans';
+import { ekleCozucuSure, kaydetCozucuZiyaret } from '../../../services/spotCozucuIstatistik';
 import '../../../styles/soru-cozucu.css';
 
 /**
@@ -31,6 +32,7 @@ interface Props {
   mod?: 'yanlis' | 'cikmis';
   ozelSorular?: CSoru[];
   ozelBaslik?: string;
+  ozetAnlatim?: string;
   kisaAnlatim?: string[];
   /** Özel sorularda ilerleme çözücünün deposuna yazılmaz; sonuçlar (soru no → sonuç) çağırana bildirilir */
   onOzelSonuc?: (sonuc: Record<string, Sonuc>) => void;
@@ -53,8 +55,10 @@ const tercihOku = () => {
 const turkceSes = (): SpeechSynthesisVoice | null => {
   try {
     if (typeof window === 'undefined' || !('speechSynthesis' in window)) return null;
-    const v = window.speechSynthesis.getVoices().filter((x) => x.lang.toLowerCase().startsWith('tr'));
-    return v.find((x) => /emel|yelda|filiz|google/i.test(x.name)) || v[0] || null;
+    const voices = window.speechSynthesis.getVoices();
+    if (!voices || !voices.length) return null;
+    const v = voices.filter((x) => x.lang && x.lang.toLowerCase().startsWith('tr'));
+    return v.find((x) => /emel|yelda|filiz|google|tolga/i.test(x.name)) || v[0] || null;
   } catch {
     return null;
   }
@@ -68,6 +72,7 @@ export const SoruCozucu: React.FC<Props> = ({
   mod,
   ozelSorular,
   ozelBaslik,
+  ozetAnlatim,
   kisaAnlatim,
   onOzelSonuc,
 }) => {
@@ -167,7 +172,37 @@ export const SoruCozucu: React.FC<Props> = ({
     if (ozelSorular?.length) { onOzelSonuc?.(sonuc); return; }
     // ders.kod: ders değişirken bu etki eski dersin durumuyla bir kez daha çalışır; kayıt yine eski derse gider
     ilerlemeYaz(ders.kod, tekrar ? { s: sonuc } : { s: sonuc, i: bitti ? 0 : i, q: bitti ? undefined : sorular[i]?.no });
-  }, [sonuc, i, bitti, ders, tekrar, devamSor, sorular]); // eslint-disable-line react-hooks/exhaustive-deps
+    if (!ozelSorular?.length && ders) {
+      kaydetCozucuZiyaret({
+        brans,
+        kod: ders.kod,
+        dersNo: ders.no,
+        baslik: ders.baslik,
+        soruNo: Math.min(i + 1, sorular.length),
+        toplamSoru: sorular.length,
+      });
+    }
+  }, [sonuc, i, bitti, ders, tekrar, devamSor, sorular, brans, ozelSorular]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  // Çözücüde aktif çalışma süresi sayacı
+  useEffect(() => {
+    let sonHareket = Date.now();
+    const hareket = () => { sonHareket = Date.now(); };
+    window.addEventListener('pointerdown', hareket, { passive: true, capture: true });
+    window.addEventListener('keydown', hareket, { passive: true, capture: true });
+    const TICK = 5;
+    const tid = window.setInterval(() => {
+      if (document.visibilityState !== 'visible') return;
+      if (caliyor || Date.now() - sonHareket <= 45_000) {
+        ekleCozucuSure(TICK);
+      }
+    }, TICK * 1000);
+    return () => {
+      window.clearInterval(tid);
+      window.removeEventListener('pointerdown', hareket, { capture: true });
+      window.removeEventListener('keydown', hareket, { capture: true });
+    };
+  }, [caliyor]);
 
   // ---------- ses motoru: adımlar sırayla; her adım bir klip (yoksa okuma süresi)
   const durdur = useCallback(() => {
@@ -209,21 +244,29 @@ export const SoruCozucu: React.FC<Props> = ({
       const kb = klipBilgi(a.klasor, a.klip);
       const k = kb?.k;
       const yedek = () => {
-        // Kayıtlı klibi hiç olmayan özel sorular (Sınav Çalışması): tarayıcının Türkçe sesiyle cümle cümle oku
-        const tts = ozelSorular?.length ? turkceSes() : null;
-        if (tts) {
+        // Klip bulunamayan durumlarda veya sesli soru çözücüde: tarayıcının Türkçe sesiyle cümle cümle oku
+        const hasTTS = typeof window !== 'undefined' && 'speechSynthesis' in window;
+        if (hasTTS) {
           const cumleler = a.metinler.slice(0, a.kes !== undefined ? a.kes + 1 : undefined);
           setSesYok(false);
           setCaliyor(true);
+          const voice = turkceSes();
           const oku = (j: number) => {
             if (sira !== siraRef.current) return;
             if (j >= cumleler.length) { sonraki(); return; }
             a.onCumle?.(j);
-            const u = new SpeechSynthesisUtterance(cumleler[j]);
-            u.lang = 'tr-TR'; u.voice = tts; u.rate = hiz;
-            u.onend = () => oku(j + 1);
-            u.onerror = () => oku(j + 1);
-            window.speechSynthesis.speak(u);
+            try {
+              window.speechSynthesis.cancel();
+              const u = new SpeechSynthesisUtterance(cumleler[j]);
+              u.lang = 'tr-TR';
+              if (voice) u.voice = voice;
+              u.rate = hiz;
+              u.onend = () => oku(j + 1);
+              u.onerror = () => oku(j + 1);
+              window.speechSynthesis.speak(u);
+            } catch {
+              oku(j + 1);
+            }
           };
           oku(0);
           return;
@@ -530,15 +573,25 @@ export const SoruCozucu: React.FC<Props> = ({
             <div className="sc-asistan" aria-live="polite">
               <span className="sc-dalga" aria-hidden><i /><i /><i /><i /><i /></span>
               <span className="sc-durum">{durumMetni}</span>
-              <span className="sc-sayac">Soru {i + 1} / {sorular.length}</span>
+              <span className="sc-sayac">
+                Soru {i + 1} / {sorular.length}
+                {Object.keys(sonuc).length > 0 && (
+                  <span style={{ marginLeft: 6, fontWeight: 700, color: '#16a34a' }}>
+                    · %{Math.round((Object.values(sonuc).filter((x) => x === 'd').length / Object.keys(sonuc).length) * 100)} doğru
+                  </span>
+                )}
+              </span>
             </div>
 
-            {kisaAnlatim && kisaAnlatim.length > 0 && (
+            {(ozetAnlatim || (kisaAnlatim && kisaAnlatim.length > 0)) && (
               <details className="sc-kisa" open={i === 0}>
-                <summary>Konu özeti · bilinmesi gerekenler</summary>
-                <ul>
-                  {kisaAnlatim.map((m, idx) => <li key={idx}>{m}</li>)}
-                </ul>
+                <summary>📘 Konu Özeti ve Bilinmesi Gerekenler</summary>
+                {ozetAnlatim && <p className="sc-kisa-ozet" style={{ whiteSpace: 'pre-line', marginBottom: '0.75rem', lineHeight: 1.55 }}>{ozetAnlatim}</p>}
+                {kisaAnlatim && kisaAnlatim.length > 0 && (
+                  <ul>
+                    {kisaAnlatim.map((m, idx) => <li key={idx}>{m}</li>)}
+                  </ul>
+                )}
               </details>
             )}
 
