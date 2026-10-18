@@ -1664,10 +1664,10 @@ export default function App() {
           </Suspense>
         )}
 
-        {/* TAB: Sınav spotları */}
-        {activeTab === 'spots' && (
+        {/* TAB: Sınav spotları · Soru çözücü (/soru-cozucu) · En önemliler (/en-onemliler) — aynı bileşen, ayrı sayfa */}
+        {(activeTab === 'spots' || activeTab === 'soru_cozucu' || activeTab === 'en_onemliler') && (
           <Suspense fallback={<ViewFallback />}>
-            <ExamSpotsView />
+            <ExamSpotsView key={activeTab} gorunum={activeTab === 'soru_cozucu' ? 'cozucu' : activeTab === 'en_onemliler' ? 'onem' : 'spot'} />
           </Suspense>
         )}
 
@@ -1684,7 +1684,7 @@ export default function App() {
           </Suspense>
         )}
 
-        {/* TAB: Canlı ders — sesli dersler, metin + PDF eşzamanlı (/canliders/<key>); oynatıcı aşağıda (CanliDersDockGate) */}
+        {/* TAB: Sesli ders (eski Canlı ders) — sesli dersler, metin + PDF eşzamanlı (/canliders/<key>); oynatıcı aşağıda (CanliDersDockGate) */}
         {activeTab === 'canli_ders' && (
           <Suspense fallback={<ViewFallback />}>
             <CanliDersView dersKey={canliDersKey} />

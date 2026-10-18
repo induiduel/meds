@@ -58,7 +58,7 @@ function CanliDersListe() {
     cdListeGetir(yenile).then((ds) => { cdListeOzetleri(ds); setDersler(ds); }, (e) => setHata(e?.message || 'Liste alınamadı.'));
   };
   useEffect(() => {
-    document.title = 'Canlı ders · MeDSor';
+    document.title = 'Sesli ders · MeDSor';
     yukle();
   }, []);
 
@@ -96,7 +96,7 @@ function CanliDersListe() {
         <div className="cd-liste-baslik">
           <span className="cd-ikon" aria-hidden><Headphones /></span>
           <div>
-            <h1>Canlı ders</h1>
+            <h1>Sesli ders</h1>
             <p>Dersleri sesli dinle; okunan cümle metinde, anlatılan sayfa slaytta kendiliğinden ilerler.</p>
           </div>
           {tanitim.dugme}

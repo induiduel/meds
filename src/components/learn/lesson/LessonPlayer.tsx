@@ -245,21 +245,21 @@ const StepHead: React.FC<{ step: LessonStep; total: number; sectionName?: string
     );
   }
   return (
-  <header className="ls-head" data-fb-key={`${step.number}:text:0`}>
-    <div className="ls-eyebrow-row">
-      <span>Bölüm {step.section + 1}</span>
-      <span className="dot" aria-hidden />
-      <span>Adım {step.number} / {total}</span>
-      {step.checkpoint > 0 && <span className="ls-tag is-accent">Tekrar {step.checkpoint}</span>}
-      {step.game && <span className="ls-tag is-ok">Ders sonu oyunları</span>}
-      {step.badge && !step.checkpoint && !step.game && <span className="ls-tag is-plain">{step.badge}</span>}
-      {step.questions.length > 0 && <span className="ls-tag is-warn">{step.questions.length} soru</span>}
-      <ListenButton step={step} />
-      <FeedbackFlag target={fbTarget(step, 'text', 0, 'Anlatım', step.title, 'Ana içerik › Başlık ve anlatım')} className="ls-head-flag" />
-    </div>
-    <h1 className="ls-title"><span>{step.title}</span></h1>
-    {step.slide.subtitle && <p className="ls-sub">{step.slide.subtitle}</p>}
-  </header>
+    <header className="ls-head" data-fb-key={`${step.number}:text:0`}>
+      <div className="ls-eyebrow-row">
+        <span>Bölüm {step.section + 1}</span>
+        <span className="dot" aria-hidden />
+        <span>Adım {step.number} / {total}</span>
+        {step.checkpoint > 0 && <span className="ls-tag is-accent">Tekrar {step.checkpoint}</span>}
+        {step.game && <span className="ls-tag is-ok">Ders sonu oyunları</span>}
+        {step.badge && !step.checkpoint && !step.game && <span className="ls-tag is-plain">{step.badge}</span>}
+        {step.questions.length > 0 && <span className="ls-tag is-warn">{step.questions.length} soru</span>}
+        <ListenButton step={step} />
+        <FeedbackFlag target={fbTarget(step, 'text', 0, 'Anlatım', step.title, 'Ana içerik › Başlık ve anlatım')} className="ls-head-flag" />
+      </div>
+      <h1 className="ls-title"><span>{step.title}</span></h1>
+      {step.slide.subtitle && <p className="ls-sub">{step.slide.subtitle}</p>}
+    </header>
   );
 };
 

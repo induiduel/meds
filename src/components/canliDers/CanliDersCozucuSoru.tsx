@@ -6,6 +6,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { CircleHelp, Headphones, HelpCircle, Sparkles, X } from 'lucide-react';
 import { navigateTo } from '../../router';
+import { cozucuYolu, onemYolu } from '../spots/spotsYol';
 import { cdListeGetir, type CdListeDers } from './canliDersStore';
 import { cdDersEtiketi } from './canliDersKategori';
 import { cozucuDizinYukle } from '../spots/cozucu/cozucuVeri';
@@ -92,7 +93,7 @@ export default function CanliDersCozucuSoru() {
     if (!a) return;
     setOneri(null);
     if (document.fullscreenElement) void document.exitFullscreen?.().catch(() => {});
-    navigateTo(`/spotlar?gorunum=onem&brans=${oneri.brans}&ders=${encodeURIComponent(a.kod)}&asistan=1`);
+    navigateTo(onemYolu({ brans: oneri.brans, ders: a.kod, asistan: '1' }));
   };
 
   const cozucuAc = () => {
@@ -100,7 +101,7 @@ export default function CanliDersCozucuSoru() {
     if (!c) return;
     setOneri(null);
     if (document.fullscreenElement) void document.exitFullscreen?.().catch(() => {});
-    navigateTo(`/spotlar?gorunum=cozucu&brans=${oneri.brans}&ders=${encodeURIComponent(c.kod)}&coz=1`);
+    navigateTo(cozucuYolu({ brans: oneri.brans, ders: c.kod, coz: '1' }));
   };
 
   return (

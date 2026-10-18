@@ -1,11 +1,11 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 15,
-  "baslik": "Sınav Spotları ve Soru Çözücü: Kaldığın Yer, İlerleme ve Doğruluk İstatistikleri",
+  "onem": 16,
+  "baslik": "Sade Başlangıç Ekranları, Soru Çözücüde 'Öğren' Entegrasyonu ve Türkçe Üslup Standardı",
   "maddeler": [
-    "Spot bilgilerde ve sesli soru çözücülerde kalınan son ders, soru ve spot otomatik kayıt altına alınıyor; tek tıkla kaldığın yerden devam etme desteği getirildi.",
-    "Doğruluk ilerleyişi (ilk denemede doğru, yardımlı, yanlış) ve başarı oranı hem kartlarda hem soru çözücü içinde anlık hesaplanıyor.",
-    "Çalışma süresi sayacı: Spotlarda ve soru çözücüde kaç dakika çalışıldığı ve soru başı ortalama çözüm süresi canlı olarak takip ediliyor.",
-    "Detaylı İstatistikler & Çalışma Karnesi: 7 branşın tümünde çözülen soru sayıları, doğruluk oranları ve süre dökümü tek ekranda sunuldu."
+    "Sınav çalışması, soru çözücü ve en önemliler için sade branş başlangıç ekranları eklendi; kaldığın yerden tek tıkla devam etme sağlandı.",
+    "Soru çözücüde sorulan bilginin Öğren destesindeki tam slayt ve mekanizma karşılığına anında geçiş ('Öğren' butonu ve 'Ö' tuşu kısayolu) getirildi.",
+    "Gezinme ağacı ve URL yapısı yenilendi: Soru çözücü (/soru-cozucu) ve En önemliler (/en-onemliler) bağımsız rota ve temiz sayfa yapısına kavuştu.",
+    "Türkçe üslup ve şık açıklama kalitesi standartlaştırılarak otomatik içerik doğrulama kapılarına bağlandı."
   ]
 }

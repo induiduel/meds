@@ -3,6 +3,9 @@ Kullanım: python3 asistan_dogrula.py meds_temp/spot_cozucu/<brans>/asistan/cikt
 Plan: aynı klasörün ../plan/<kod>.json; PDF metni: ../../pdf_metin/<kod>.md.
 """
 import json, os, re, sys
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
+from turkce_uslup import denetle as uslup_denetle  # noqa: E402  (meds/docs/TURKCE_USLUP_STANDARDI.md)
+from sik_aciklama import denetle as sik_denetle  # noqa: E402  (meds/docs/SIK_ACIKLAMA_STANDARDI.md)
 YASAK_SES = re.compile(r'[0-9%/→←↑↓±≈<>=+()\[\]*#_~{}@&$€£^\\]')
 KISALTMA = re.compile(r'\b[A-ZÇĞİÖŞÜ]{2,}[0-9]*\b')
 KARISIK = re.compile(r"\b\w*[a-zçğıöşü][A-ZÇĞİÖŞÜ]\w*\b")
@@ -23,6 +26,7 @@ def cift(e, yer, x, enaz, encok):
     if tek: e.append(f'{yer}: ses tek harf içeriyor (harf adıyla yaz: be, ce, te…): {tek[:3]}')
     if IC_DIL.search(m) or IC_DIL.search(s): e.append(f'{yer}: iç süreç dili: {(IC_DIL.search(m) or IC_DIL.search(s)).group()!r}')
     if '(' in m or ')' in m: e.append(f'{yer}: metin parantez içeriyor')
+    e.extend(uslup_denetle(m, yer))
     if s.count('|') > 4: e.append(f'{yer}: durak işareti çok')
     if not enaz <= kelime(s) <= encok: e.append(f'{yer}: ses {kelime(s)} kelime ({enaz}–{encok})')
     for cm in re.split(r'(?<=[.!?])\s+', sd):
@@ -87,12 +91,13 @@ for p in sys.argv[1:]:
                 for h, v in Y.items():
                     cift(e, f'{k}.yanlis.{h}', v, 12, 62)
                     if isinstance(v, dict) and 'oğrusu' not in v.get('metin', ''): e.append(f'{k}.yanlis.{h}: "Doğrusu:" yok')
+                    if isinstance(v, dict): e.extend(sik_denetle(v.get('metin', ''), f'{k}.yanlis.{h}', enaz=15, encok=65, cumle=(2, 4)))
                 if len({v.get('metin', '')[:40] for v in Y.values() if isinstance(v, dict)}) < len(Y): e.append(f'{k}: yanlış açıklamaları tekrar')
                 H = s.get('yardim') or {}
                 if sorted(H) != sorted(ps['secenekler']): e.append(f'{k}: yardim tüm şıklar için olmalı {sorted(H)} ≠ {sorted(ps["secenekler"])}')
                 for h, v in H.items():
-                    cift(e, f'{k}.yardim.{h}', v, 4, 22)
-                    if isinstance(v, dict) and len(re.findall(r'[.!?](\s|$)', v.get('metin', '').strip())) > 1: e.append(f'{k}.yardim.{h}: tek cümle olmalı')
+                    cift(e, f'{k}.yardim.{h}', v, 18, 75)
+                    if isinstance(v, dict): e.extend(sik_denetle(v.get('metin', ''), f'{k}.yardim.{h}'))
                     if isinstance(v, dict) and re.match(r'^[A-E]\s*(şıkkı|\)|:)', v.get('ses', '')): e.append(f'{k}.yardim.{h}: harfi okuma')
     zor = [n['id'] for n in plan['noktalar'] if n['zorunlu']]
     eksik = [i for i in zor if i not in gorulen_n]

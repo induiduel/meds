@@ -276,7 +276,7 @@ export const LearnLibraryV12: React.FC<LearnLibraryV12Props> = ({ decks: all, pr
   return (
     <div className="l12">
       <header className="l12-head">
-        <h1 className="l12-h1">Öğren</h1>
+        <h1 className="l12-h1">Etkileşimli dersler</h1>
         <span className="l12-head-m">
           {kurul !== 'all' && <>{kurul} · </>}
           <span className="l12-num">{scoped.length.toLocaleString('tr-TR')}</span> ders

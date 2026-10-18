@@ -41,7 +41,7 @@ export const StudyHubV12: React.FC<{
   return (
     <div className="p12-hub">
       <header className="p12-hub-h">
-        <h1>Çalış</h1>
+        <h1>Çalışma masam</h1>
         <span className="p12-meta p12-grow">
           {loading && bankSize === 0 ? (
             'Soru bankası yükleniyor…'

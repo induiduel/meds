@@ -280,7 +280,7 @@ export const LearnLibrary: React.FC<{
   return (
     <div className="lv" ref={rootRef}>
       <PageToolbar<Status>
-        title="Öğren"
+        title="Etkileşimli dersler"
         count={`${scoped.length.toLocaleString('tr-TR')} deste`}
         search={{ value: query, onChange: setQuery, placeholder: 'Deste, ders, konu ara' }}
         segments={{

@@ -1,5 +1,10 @@
 # Patoloji Sesli Soru Çözücü — soru denetimi + açıklama + ses metni (alt ajan talimatı)
 
+> ⚠️ **Şık açıklama standardı (ZORUNLU, 2026-10-18):** her şık açıklaması kavramın ne olduğunu, ne işe yaradığını ve bu soruyla
+> bağını anlatır; "bu sorunun cevabı değil / … olarak geçmez" gibi geçiştirme HATA'dır. Ayrıntı ve kaynak sırası: `meds/docs/SIK_ACIKLAMA_STANDARDI.md`.
+> ⚠️ **Türkçe üslup standardı (ZORUNLU, 2026-10-18):** metin doğal, eksiksiz ve anlaşılır Türkçe olur; çeviri mecaz ("imzası",
+> "motoru", "freni") ve iç etiket ("Ayrım cümlesi:", "Akılda tut:", "Mantığı şudur:") YASAK. Ayrıntı: `meds/docs/TURKCE_USLUP_STANDARDI.md`.
+
 Çalışma klasörü: `/home/indu/medsor/meds_temp/patoloji_ornek26/cozucu/`
 
 Öğrenci tam ekran bir "soru çözücü" ile 2026-27 patoloji örnek sorularını çözer. Anlatım YOK, yalnız soru. Asistan (EMA, Türkçe kadın
@@ -16,7 +21,7 @@ göstericidir ama yanlış olabilir — her şeyi PDF metninden doğrula.
 
 ## Kesin kurallar
 1. **Tek kaynak ders PDF'i.** Açıklamalardaki her tıbbi bilgi PDF metninde geçmeli (aynı ya da açıkça eşdeğer ifade). Kitap/genel bilgi
-   ekleme, sayı uydurma. Bir çeldirici kavram PDF'te hiç yoksa, onun hakkında bilgi UYDURMA: "X bu sorunun cevabı değil; …" diyerek
+   ekleme, sayı uydurma. Bir çeldirici kavram PDF'te hiç yoksa bilgi UYDURMA; aynı kurulun diğer dersleri/ders notlarından kavramın ne olduğunu ver (`meds/docs/SIK_ACIKLAMA_STANDARDI.md`), ayrıca
    PDF'teki doğru bilgiyi öğret (sorunun sorduğu özelliğin gerçekte neye ait olduğunu söyle).
 2. **Önce soruyu denetle (hatasızlık).** Her soru için PDF'te:
    - Doğru cevap gerçekten doğru mu, PDF'te açıkça destekleniyor mu?
@@ -27,7 +32,7 @@ göstericidir ama yanlış olabilir — her şeyi PDF metninden doğrula.
 3. **Öğrenciye dönük dil:** "PDF", "kaynak", "slayt", "ders notu", "talimat", "ipucu", "çeldirici", "şık" ("şık" yalnız ses dışı metinde
    değil — hiç kullanma; asistan harfleri kendisi söyler), "A şıkkı" gibi harf anma YASAK. Soru numarası okunmaz. "Hoca", "sınavda
    şu yıl" yok. Kısa, net, öğretici; sohbet dolgu sözcüğü yok ("Harika", "Hadi bakalım" yok).
-4. **Kısa:** açıklamalar 1–2 cümle; her cümle tek bir bilgi. Akılda kalıcı hap cümle.
+4. **Öğretici:** `siklar` 2–3 cümle (20–55 kelime): şıktaki kavram ne, ne işe yarar, bu soruda neden doğru/yanlış — `meds/docs/SIK_ACIKLAMA_STANDARDI.md`; `ipucu`/`cozum` kısa kalır.
 
 ## Alanlar (soru başına)
 - `no`: kaynak no (aynı sıra, hepsi).

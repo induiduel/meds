@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useState } from 'react';
-import { Check, Clock, Eraser, Headphones, History, Lightbulb, Play, RotateCcw } from 'lucide-react';
+import { Check, Clock, Headphones, History, Play, RotateCcw } from 'lucide-react';
 import { cozucuDizinYukle, ozet, setAdi, useIlerleme, type CDizin } from './cozucuVeri';
 import { bransTanim, type Brans } from '../brans';
 import { getCozucuSureGruplari, dk } from '../sure/spotsSureVeri';
@@ -8,8 +8,8 @@ import { useSpotCozucuStats, fmtSureDk } from '../../../services/spotCozucuIstat
 import '../../../styles/soru-cozucu.css';
 
 /**
- * Sınav spotları › "Soru çözücü" sekmesi (branş seçili: ?brans=patoloji|enfeksiyon|uroloji): ders/set listesi + ilerleme. Ders
- * seçilince tam ekran çözücü açılır (?gorunum=cozucu&ders=<kod>&coz=1; yanlışların tekrarı &coz=yanlis, çıkmışlar &coz=cikmis).
+ * Soru çözücü (/soru-cozucu?brans=…, başlangıç ekranında branş seçildikten sonra): ders/set listesi + ilerleme. Ders
+ * seçilince tam ekran çözücü açılır (&ders=<kod>&coz=1; yanlışların tekrarı &coz=yanlis, çıkmışlar &coz=cikmis).
  */
 const SoruCozucu = React.lazy(() => import('./SoruCozucu'));
 
@@ -78,7 +78,7 @@ export const SoruCozucuSayfa: React.FC<{ brans?: Brans }> = ({ brans = 'patoloji
           <h2><Headphones aria-hidden />{bt.ad} · Sesli soru çözücü</h2>
           <span className="scs-count">{dersSay} ders · {genel.toplam.toLocaleString('tr-TR')} soru</span>
         </div>
-        <p className="scs-desc">Asistan soruyu ve seçenekleri okur, sen seçersin; ardından her seçeneğin nedenini ders sunumuna dayanarak açıklar. <span className="scs-kaynak">Sorular: {bt.cozucuNot}.</span></p>
+        <p className="scs-desc"><span className="scs-kaynak">Sorular: {bt.cozucuNot}.</span></p>
         <div className="scs-prog" aria-label={`${cozulen} / ${genel.toplam} soru çözüldü`}>
           <div className="scs-cubuk" aria-hidden><i className="is-d" style={{ width: yuzde(genel.d) }} /><i className="is-d2" style={{ width: yuzde(genel.d2) }} /><i className="is-y" style={{ width: yuzde(genel.y) }} /></div>
           <small>
@@ -93,14 +93,6 @@ export const SoruCozucuSayfa: React.FC<{ brans?: Brans }> = ({ brans = 'patoloji
             )}
           </small>
         </div>
-        <details className="scs-nasil">
-          <summary>Nasıl çalışır?</summary>
-          <ul className="scs-adimlar">
-            <li><Lightbulb aria-hidden /><span><b>İpucu</b>Cevabı söylemeden neyi düşünmen gerektiğini hatırlatır.</span></li>
-            <li><Eraser aria-hidden /><span><b>Bir yanlışı ele</b>Bir yanlış seçeneği nedeniyle açıklayıp eler.</span></li>
-            <li><Headphones aria-hidden /><span><b>Çözümü dinle</b>Tüm seçenekleri tek tek açıklar, doğru cevabı ve nedenini söyler.</span></li>
-          </ul>
-        </details>
       </header>
 
       {son && (

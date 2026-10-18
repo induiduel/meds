@@ -1,12 +1,15 @@
 import {
   Activity,
   Archive,
+  AudioLines,
+  ClipboardCheck,
+  MessageCircleQuestion,
+  Star,
   BookOpen,
   BookOpenText,
   Compass,
   Crosshair,
   GraduationCap,
-  Headphones,
   Landmark,
   LayoutGrid,
   Layers,
@@ -47,81 +50,93 @@ export interface NavGroup {
 const I: Record<string, NavItem> = {
   today: { id: 'today', label: 'Bugün', hint: 'Kaldığın yer, günün spotu, haftan', icon: Sun, tint: '#FF9F0A' },
   quick_add: { id: 'quick_add', label: 'Soru ekle', short: 'Ekle', hint: 'Hatırladığın parçayı gir', icon: SquarePen, tint: '#FF2D55' },
-  past_exams: { id: 'past_exams', label: 'Çıkmış sorular', short: 'Çıkmış', hint: 'Kurullara göre çıkmışlar', icon: Archive, tint: '#007AFF' },
-  ornek_sorular: { id: 'ornek_sorular', label: 'Örnek sorular', short: 'Örnek', hint: 'Kazanım temelli sorular', icon: Target, tint: '#FF9500' },
-  questions: { id: 'questions', label: 'Soru havuzu', short: 'Havuz', hint: 'Kurul sorularını birlikte kur', icon: Library, tint: '#5856D6' },
-  study: { id: 'study', label: 'Çalış', hint: 'Soru çöz, not al, kendini sına', icon: ListChecks, tint: '#34C759' },
-  kazanimlar: { id: 'kazanimlar', label: 'Kazanımlar', hint: 'Müfredat ve kazanım haritası', icon: Compass, tint: '#00A79D' },
-  canli_ders: { id: 'canli_ders', label: 'Canlı ders', short: 'Canlı', hint: 'Dersleri dinle; metin ve slayt sesle akar, MP3 indir', icon: Headphones, tint: '#30B0C7' },
-  learn: { id: 'learn', label: 'Öğren', hint: 'İnteraktif ders desteleri', icon: GraduationCap, tint: '#AF52DE' },
-  summaries: { id: 'summaries', label: 'Ders özetleri', short: 'Özetler', hint: 'Spot bilgiler, uzun okuma', icon: BookOpen, tint: '#FF6B3D' },
-  spots: { id: 'spots', label: 'Sınav spotları', short: 'Spotlar', hint: 'En sık, ayırıcı bulgular, tuzaklar', icon: Crosshair, tint: '#FF3B30' },
-  flashcards: { id: 'flashcards', label: 'Ezber kartları', short: 'Kartlar', hint: 'Aralıklı tekrar', icon: Layers, tint: '#32ADE6' },
-  glossary: { id: 'glossary', label: 'Sözlük', hint: 'Hastalık ve ilaç ansiklopedisi', icon: BookOpenText, tint: '#A2845E' },
-  diseases: { id: 'diseases', label: 'Hastalıklar', short: 'Atlas', hint: 'Tıbbi hastalık & klinik atlası', icon: Activity, tint: '#06B6D4' },
-  health_ministry: { id: 'health_ministry', label: 'Sağlık Bakanlığı', short: 'Bakanlık', hint: 'Resmî veriler: aşı, yenidoğan, anne, tarama, salgın, Karabük', icon: Landmark, tint: '#C8102E' },
-  matrix: { id: 'matrix', label: 'Soru haritası', short: 'Harita', hint: '1–100 doluluk', icon: LayoutGrid, tint: '#64748B' },
-  leaderboard: { id: 'leaderboard', label: 'Sıralama', hint: 'En çok katkı verenler', icon: Trophy, tint: '#FFB340' },
-  music: { id: 'music', label: 'Müzik', hint: 'Çalışırken dinle', icon: Music, tint: '#FF375F' },
-  practice: { id: 'practice', label: 'Test çöz', short: 'Test', hint: 'Süreli deneme sınavı', icon: Timer, tint: '#0A84FF' },
+  // Ders çalış
+  learn: { id: 'learn', label: 'Etkileşimli dersler', short: 'Öğren', tile: 'Etkileşimli ders', hint: 'Adım adım ders desteleri, mini sorular', icon: GraduationCap, tint: '#AF52DE' },
+  canli_ders: { id: 'canli_ders', label: 'Sesli ders', short: 'Sesli', hint: 'Dersi dinle; metin ve slayt sesle akar, MP3 indir', icon: AudioLines, tint: '#30B0C7' },
   notes: { id: 'notes', label: 'Ders notları', short: 'Notlar', hint: 'Amfi slaytları ve ders notları', icon: NotebookPen, tint: '#FF9F0A' },
+  summaries: { id: 'summaries', label: 'Ders özetleri', short: 'Özetler', hint: 'Konu konu kısa özet, uzun okuma', icon: BookOpen, tint: '#FF6B3D' },
+  flashcards: { id: 'flashcards', label: 'Ezber kartları', short: 'Kartlar', hint: 'Aralıklı tekrar', icon: Layers, tint: '#32ADE6' },
+  // Sınava hazırlan
+  sinav_calisma: { id: 'sinav_calisma', label: 'Sınav çalışması', short: 'Sınav', tile: 'Sınav çalışması', hint: 'Kazanım kazanım özet, örnek ve çıkmış sorular', icon: ClipboardCheck, tint: '#8B5CF6' },
+  soru_cozucu: { id: 'soru_cozucu', label: 'Soru çözücü', short: 'Çözücü', hint: 'Sesli asistanla soru çöz, nedenini dinle', icon: MessageCircleQuestion, tint: '#0EA5E9' },
+  en_onemliler: { id: 'en_onemliler', label: 'En önemliler', short: 'Önemli', hint: 'Konu başına en önemli bilgiler, 100 puan', icon: Star, tint: '#F59E0B' },
+  spots: { id: 'spots', label: 'Sınav spotları', short: 'Spotlar', hint: 'En sık, ayırıcı bulgular, tuzaklar', icon: Crosshair, tint: '#FF3B30' },
+  // Soru çöz
+  past_exams: { id: 'past_exams', label: 'Çıkmış sorular', short: 'Çıkmış', hint: 'Kurullara göre çıkmışlar', icon: Archive, tint: '#007AFF' },
+  questions: { id: 'questions', label: 'Soru havuzu', short: 'Havuz', hint: 'Öğrencilerin birlikte kurduğu kurul soruları', icon: Library, tint: '#5856D6' },
+  ornek_sorular: { id: 'ornek_sorular', label: 'Örnek sorular', short: 'Örnek', hint: 'Kazanım temelli sorular', icon: Target, tint: '#FF9500' },
+  practice: { id: 'practice', label: 'Deneme sınavı', short: 'Deneme', hint: 'Süreli deneme sınavı', icon: Timer, tint: '#0A84FF' },
+  // Başvuru
+  glossary: { id: 'glossary', label: 'Sözlük', hint: 'Hastalık ve ilaç ansiklopedisi', icon: BookOpenText, tint: '#A2845E' },
+  diseases: { id: 'diseases', label: 'Hastalıklar', short: 'Atlas', hint: 'Tıbbi hastalık ve klinik atlası', icon: Activity, tint: '#06B6D4' },
+  health_ministry: { id: 'health_ministry', label: 'Sağlık Bakanlığı', short: 'Bakanlık', hint: 'Resmî veriler: aşı, yenidoğan, anne, tarama, salgın, Karabük', icon: Landmark, tint: '#C8102E' },
+  kazanimlar: { id: 'kazanimlar', label: 'Kazanımlar', hint: 'Müfredat ve kazanım haritası', icon: Compass, tint: '#00A79D' },
+  // Topluluk
+  matrix: { id: 'matrix', label: 'Soru haritası', short: 'Harita', hint: 'Havuzda 1–100 soru doluluğu', icon: LayoutGrid, tint: '#64748B' },
+  leaderboard: { id: 'leaderboard', label: 'Sıralama', hint: 'En çok katkı verenler', icon: Trophy, tint: '#FFB340' },
+  // Kişisel
+  study: { id: 'study', label: 'Çalışma masam', short: 'Masam', tile: 'Çalışma masam', hint: 'Kendi listelerin, notların, hızlı test', icon: ListChecks, tint: '#34C759' },
   stats: { id: 'stats', label: 'İstatistiklerim', short: 'İstatistik', tile: 'İstatistik', hint: 'İlerleme, puan ve etkinlik', icon: BarChart3, tint: '#5E5CE6' },
+  music: { id: 'music', label: 'Müzik', hint: 'Çalışırken dinle', icon: Music, tint: '#FF375F' },
   settings: { id: 'settings', label: 'Profil ve ayarlar', short: 'Ayarlar', hint: 'Tema, palet, yoğunluk, fotoğraf', icon: Settings2, tint: '#8E8E93' },
-  sinav_calisma: { id: 'sinav_calisma', label: 'Sınav Çalışması', short: 'Sınav', hint: 'Tüm kazanımlar, örnek sorular & sesli çözücü', icon: GraduationCap, tint: '#8B5CF6' },
 };
 
 export const NAV_ITEMS = I;
 
 /**
- * Menü grupları (v9, 2026-10-11): öğrencinin akışına göre — önce ÖĞREN, sonra SORU ÇÖZ, gerektiğinde BAŞVUR,
- * en sonda TOPLULUK ve KİŞİSEL. Grup içi sıra kullanım sıklığına göredir. "Soru ekle" menünün tepesinde tek
- * başına duran birincil düğmedir (SideNav); telefonda alt gezinmenin ortasındadır.
+ * Menü grupları (2026-10-18): öğrencinin akışına göre —
+ *   DERS ÇALIŞ (konuyu öğren) → SINAVA HAZIRLAN (sınav odaklı özet + sesli çözüm) → SORU ÇÖZ (soru kaynakları)
+ *   → BAŞVURU (bakılan kaynaklar) → TOPLULUK → KİŞİSEL.
+ * Grup içi sıra kullanım sıklığına göredir. "Soru ekle" menünün tepesinde tek başına duran birincil düğmedir;
+ * telefonda alt gezinmenin ortasındadır. Bugün grupsuz en üsttedir.
  */
 export const NAV_TREE: NavGroup[] = [
-  { label: 'Öğren', items: [I.today, I.learn, I.canli_ders, I.spots, I.flashcards, I.summaries] },
-  { label: 'Soru çöz', items: [I.past_exams, I.sinav_calisma, I.ornek_sorular, I.study, I.practice] },
+  { label: null, items: [I.today] },
+  { label: 'Ders çalış', items: [I.learn, I.canli_ders, I.notes, I.flashcards, I.summaries] },
+  { label: 'Sınava hazırlan', items: [I.sinav_calisma, I.soru_cozucu, I.en_onemliler, I.spots] },
+  { label: 'Soru çöz', items: [I.past_exams, I.questions, I.practice, I.ornek_sorular] },
   { label: 'Başvuru', items: [I.glossary, I.diseases, I.health_ministry, I.kazanimlar] },
-  { label: 'Topluluk', items: [I.questions, I.matrix, I.leaderboard] },
-  { label: 'Kişisel', items: [I.stats, I.music] },
+  { label: 'Topluluk', items: [I.matrix, I.leaderboard] },
+  { label: 'Kişisel', items: [I.study, I.stats, I.music] },
 ];
 
-/** Telefonda alt gezinmede doğrudan duran sayfalar (v10 sıra: Ekle · Öğren · Havuz · Çıkmış; Kartlar "Daha"ya taşındı); gerisi "Daha" sayfasında */
+/** Telefonda alt gezinmede doğrudan duran sayfalar (v10 sıra: Ekle · Öğren · Havuz · Çıkmış); gerisi "Daha" sayfasında */
 export const TAB_ITEMS: NavItem[] = [I.quick_add, I.learn, I.questions, I.past_exams];
 
 /** "Daha" sayfası: alt gezinmede olmayanlar, aynı gruplar ve sırayla */
 export const MORE_TREE: NavGroup[] = NAV_TREE.map((g) => ({ ...g, items: g.items.filter((it) => !TAB_ITEMS.includes(it)) })).filter((g) => g.items.length > 0);
 
 /**
- * v12 "Net" gezinmesi (components/v12/ShellV12). Kenar menüsünde düz iki grup (en sık sayfalar + kaynaklar),
- * gerisi "Daha fazla" açılırında aynı v9 gruplarıyla. Telefonda alt çubuk: Bugün · Öğren · [+ Soru ekle] · Çıkmış · Daha.
+ * v12 "Net" gezinmesi (components/v12/ShellV12). Kenar menüsü NAV_TREE gruplarını aynı adlarla gösterir; her grupta
+ * en sık sayfalar (V12_RAIL_IDS) doğrudan görünür, gerisi "Daha fazla" açılırında yine kendi grup adıyla.
+ * Telefonda alt çubuk: Bugün · Öğren · [+ Soru ekle] · Çıkmış · Daha.
  */
-export const V12_RAIL: NavGroup[] = [
-  { label: null, items: [I.today, I.learn, I.sinav_calisma, I.past_exams, I.questions, I.flashcards, I.practice] },
-  { label: 'Kaynaklar', items: [I.canli_ders, I.notes, I.glossary, I.diseases, I.health_ministry] },
-];
-const V12_IN_RAIL = new Set<AppRoute>(V12_RAIL.flatMap((g) => g.items.map((it) => it.id)));
-export const V12_RAIL_MORE: NavGroup[] = NAV_TREE.map((g) => ({ ...g, items: g.items.filter((it) => !V12_IN_RAIL.has(it.id)) })).filter((g) => g.items.length > 0);
+const V12_RAIL_IDS = new Set<AppRoute>([
+  'today',
+  'learn', 'canli_ders', 'notes', 'flashcards',
+  'sinav_calisma', 'soru_cozucu', 'en_onemliler', 'spots',
+  'past_exams', 'questions', 'practice',
+  'glossary', 'diseases',
+]);
+const grupSuz = (keep: (it: NavItem) => boolean): NavGroup[] =>
+  NAV_TREE.map((g) => ({ ...g, items: g.items.filter(keep) })).filter((g) => g.items.length > 0);
+export const V12_RAIL: NavGroup[] = grupSuz((it) => V12_RAIL_IDS.has(it.id));
+export const V12_RAIL_MORE: NavGroup[] = grupSuz((it) => !V12_RAIL_IDS.has(it.id));
 export const V12_TABS: NavItem[] = [I.today, I.learn, I.quick_add, I.past_exams];
-const V12_IN_TABS = new Set<AppRoute>(V12_TABS.map((it) => it.id));
-/** Telefondaki "Daha" sayfası: alt çubukta olmayan her sayfa */
-export const V12_MORE_TREE: NavGroup[] = [
-  { label: 'Çalışma', items: V12_RAIL[0].items.filter((it) => !V12_IN_TABS.has(it.id)) },
-  { label: 'Kaynaklar', items: V12_RAIL[1].items },
-  ...V12_RAIL_MORE.map((g) => ({ ...g, items: g.items.filter((it) => !V12_IN_TABS.has(it.id)) })),
-].filter((g) => g.items.length > 0);
-/**
- * Telefon "Tüm sayfalar" ızgarası: çalışma sayfaları bir arada, kaynak ve diğerleri ayrı (az grup, az kaydırma).
- * Alt çubuk kişiselleştirilebildiği için (shell/phoneNav) o an alt çubukta duranlar `exclude` ile çıkarılır.
- */
-const PHONE_STUDY = new Set<AppRoute>(['today', 'learn', 'past_exams', 'canli_ders', 'questions', 'flashcards', 'practice', 'ornek_sorular', 'study', 'kazanimlar', 'spots', 'summaries']);
 /** Telefonda alt çubuğa konabilen / ızgarada duran her sayfa (Soru ekle ve Ayarlar hariç) */
-export const V12_PHONE_PAGES: NavItem[] = [I.today, I.learn, I.past_exams, ...V12_MORE_TREE.flatMap((g) => g.items)];
+export const V12_PHONE_PAGES: NavItem[] = NAV_TREE.flatMap((g) => g.items);
+/**
+ * Telefon "Tüm sayfalar" ızgarası: kenar menüsüyle aynı gruplar. Alt çubuk kişiselleştirilebildiği için (shell/phoneNav)
+ * o an alt çubukta duranlar `exclude` ile çıkarılır; grupsuz "Bugün" ilk gruba katılır.
+ */
 export const v12PhoneTree = (exclude: ReadonlySet<AppRoute>): NavGroup[] => {
-  const items = V12_PHONE_PAGES.filter((it) => !exclude.has(it.id));
-  return [
-    { label: 'Çalış', items: items.filter((it) => PHONE_STUDY.has(it.id)) },
-    { label: 'Kaynaklar ve diğer', items: items.filter((it) => !PHONE_STUDY.has(it.id)) },
-  ].filter((g) => g.items.length > 0);
+  const g = grupSuz((it) => !exclude.has(it.id));
+  if (g[0] && g[0].label === null) {
+    const [bas, ...kalan] = g;
+    if (kalan[0]) return [{ ...kalan[0], items: [...bas.items, ...kalan[0].items] }, ...kalan.slice(1)];
+    return [{ label: 'Sayfalar', items: bas.items }];
+  }
+  return g;
 };
 
 /** Global arama paletini aç (üst çubuk dinler; kenar menüsü ve kısayollar tetikler) */

@@ -1,15 +1,18 @@
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import {
-  Check, ChevronDown, ChevronLeft, ChevronRight, Headphones, LifeBuoy, ListChecks, Maximize2, Minimize2, Minus, Pause, Play, Plus, RotateCcw, Settings2, SkipBack, SkipForward, Star, Volume2, X,
+  BookOpenText, Check, ChevronDown, ChevronLeft, ChevronRight, Headphones, LifeBuoy, ListChecks, Maximize2, Minimize2, Minus, Pause, Play, Plus, RotateCcw, Settings2, SkipBack, SkipForward, Star, Volume2, X,
 } from 'lucide-react';
 import { getCustomApiUrl } from '../../../services/api';
 import { lockScroll, unlockScroll } from '../../../utils/scrollLock';
 import { ogrenildiAyarla, tercihOku, tercihYaz } from '../onem/onemVeri';
 import { Metin } from '../onem/OnemMadde';
 import { asistanDosyasi, asistanDizinDosyasi, kodBrans } from './asistanVeri';
+import { cozucuyaGit } from '../spotsYol';
 import { cozucuDizinYukle } from '../cozucu/cozucuVeri';
 import { bransTanim } from '../brans';
+import { OgrenYeri } from '../ogren/OgrenYeri';
+import { ogrenEslemeVar } from '../ogren/ogrenEsle';
 import '../../../styles/patoloji-asistan.css';
 
 /**
@@ -73,6 +76,7 @@ const sahneleriKur = (d: Ders, y: Yogunluk, tekrar?: Set<string>): Sahne[] => {
 
 export const PatolojiAsistan: React.FC<{ kod: string; onClose: () => void; onDersDegis?: (kod: string) => void }> = ({ kod: kod0, onClose, onDersDegis }) => {
   const [kod, setKod] = useState(kod0);
+  const [ogrenAcik, setOgrenAcik] = useState(false);
   const [dizin, setDizin] = useState<DizinDers[]>([]);
   const [ders, setDers] = useState<Ders | null>(null);
   const [hata, setHata] = useState(false);
@@ -395,8 +399,9 @@ export const PatolojiAsistan: React.FC<{ kod: string; onClose: () => void; onDer
         if (e.key === '0') { e.preventDefault(); setTercih({ olcek: 1 }); return; }
         return;
       }
-      if (e.altKey || (e.target as HTMLElement | null)?.closest?.('input,textarea,select')) return;
-      if (e.key === 'Escape') { if (dersMenu) setDersMenu(false); else onClose(); return; }
+      if (e.altKey || (e.target as HTMLElement | null)?.closest?.('input,textarea,select,.oy')) return;
+      if (e.key === 'Escape') { if (ogrenAcik) setOgrenAcik(false); else if (dersMenu) setDersMenu(false); else onClose(); return; }
+      if ((e.key === 'ö' || e.key === 'Ö' || e.key === 'o' || e.key === 'O') && ogrenEslemeVar(kodBrans(kod))) { e.preventDefault(); setOgrenAcik((v) => !v); return; }
       if (e.key === ' ') { e.preventDefault(); oynatDuraklat(); return; }
       if (e.key === 'r' || e.key === 'R') { e.preventDefault(); cumleyiTekrarla(); return; }
       if (e.key === 't' || e.key === 'T') { e.preventDefault(); tekrarDinle(); return; }
@@ -456,18 +461,7 @@ export const PatolojiAsistan: React.FC<{ kod: string; onClose: () => void; onDer
     const b = kodBrans(hedefKod);
     cozucuDizinYukle(b).then((c) => {
       const hedef = c.dersler.find((x) => x.kod === hedefKod) || c.dersler.find((x) => x.kod.startsWith(`${hedefKod}-`));
-      const u = new URL(location.href);
-      ['m', 'asistan'].forEach((x) => u.searchParams.delete(x));
-      u.searchParams.set('gorunum', 'cozucu');
-      u.searchParams.set('brans', b);
-      if (hedef) {
-        u.searchParams.set('ders', hedef.kod);
-        u.searchParams.set('coz', '1');
-      } else {
-        u.searchParams.delete('ders');
-      }
-      history.pushState(history.state, '', u.pathname + u.search + u.hash);
-      window.dispatchEvent(new PopStateEvent('popstate'));
+      cozucuyaGit({ brans: b, ders: hedef?.kod, coz: hedef ? '1' : null });
       onClose();
     }).catch(() => {});
   };
@@ -495,7 +489,7 @@ export const PatolojiAsistan: React.FC<{ kod: string; onClose: () => void; onDer
 
   const icerik = (
     <div
-      className={`pa${caliyor ? ' is-konusuyor' : ''}${olcek !== 1 ? ' is-olcekli' : ''}`}
+      className={`pa${caliyor ? ' is-konusuyor' : ''}${olcek !== 1 ? ' is-olcekli' : ''}${ogrenAcik ? ' is-ogren' : ''}`}
       style={{ ['--pa-zoom' as string]: olcek }}
       role="dialog"
       aria-modal="true"
@@ -524,6 +518,11 @@ export const PatolojiAsistan: React.FC<{ kod: string; onClose: () => void; onDer
           )}
         </div>
         <div className="pa-ust-sag">
+          {ogrenEslemeVar(kodBrans(kod)) && (
+            <button type="button" className="oy-ac" onClick={() => setOgrenAcik((v) => !v)} aria-pressed={ogrenAcik} title="Bu bilginin Öğren'deki yeri (Ö)">
+              <BookOpenText aria-hidden /><span>Öğren</span>
+            </button>
+          )}
           <div className="pa-olcek" role="group" aria-label="Metin ve öge ölçeği">
             <button type="button" className="pa-olcek-b" onClick={() => olcekAdim(-1)} disabled={olcek <= OLCEK_MIN} aria-label="Ölçeği küçült" title="Küçült (Ctrl −)"><Minus aria-hidden /></button>
             <button type="button" className="pa-olcek-v" onClick={() => setTercih({ olcek: 1 })} disabled={olcek === 1} aria-label={`Ölçek %${Math.round(olcek * 100)}, sıfırlamak için dokun`} title="Varsayılan ölçeğe sıfırla (%100 · Ctrl 0)">%{Math.round(olcek * 100)}</button>
@@ -822,6 +821,9 @@ export const PatolojiAsistan: React.FC<{ kod: string; onClose: () => void; onDer
         <button type="button" className="pa-baslat" onClick={() => { setEngel(false); oynatDuraklat(); }}>
           <span><Play aria-hidden /></span><b>Asistanı başlat</b><small>Tarayıcı sesi başlatmak için bir dokunuş istiyor</small>
         </button>
+      )}
+      {ogrenAcik && ders && (
+        <OgrenYeri brans={kodBrans(kod)} kod={kod} tur="n" id={nokta?.id} baglam={nokta?.baslik} onKapat={() => setOgrenAcik(false)} />
       )}
       {ders && !devamSor && (
         <footer className="pa-alt">

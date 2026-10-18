@@ -1,5 +1,10 @@
 # Branş soru çözücü — 3. tur: canlı ders konularından yeni örnek sorular (yazar ajan talimatı)
 
+> ⚠️ **Şık açıklama standardı (ZORUNLU, 2026-10-18):** her şık açıklaması kavramın ne olduğunu, ne işe yaradığını ve bu soruyla
+> bağını anlatır; "bu sorunun cevabı değil / … olarak geçmez" gibi geçiştirme HATA'dır. Ayrıntı ve kaynak sırası: `meds/docs/SIK_ACIKLAMA_STANDARDI.md`.
+> ⚠️ **Türkçe üslup standardı (ZORUNLU, 2026-10-18):** metin doğal, eksiksiz ve anlaşılır Türkçe olur; çeviri mecaz ("imzası",
+> "motoru", "freni") ve iç etiket ("Ayrım cümlesi:", "Akılda tut:", "Mantığı şudur:") YASAK. Ayrıntı: `meds/docs/TURKCE_USLUP_STANDARDI.md`.
+
 Çalışma klasörü: `/home/indu/medsor/meds_temp/spot_cozucu/<brans>/`. Önce şunları baştan sona oku ve aynen uygula:
 - `/home/indu/medsor/meds/scripts/spot_cozucu/TALIMAT_COZUCU.md` — alanlar (`kok_ses`, `secenek_ses`, `ipucu`, `siklar`, `cozum`, `sayfa`),
   çift biçim (`metin`/`ses`), öğrenciye dönük dil, uzunluklar, okunuş.

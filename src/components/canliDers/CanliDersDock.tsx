@@ -104,7 +104,7 @@ export default function CanliDersDock({ activeTab, dersKey }: { activeTab: strin
 
   if (!key) return null;
   return (
-    <div ref={ref} className={`cd-root cd-dock ${tam ? 'is-tam' : 'is-mini'}`} style={{ bottom: alt }} role="region" aria-label="Canlı ders oynatıcısı">
+    <div ref={ref} className={`cd-root cd-dock ${tam ? 'is-tam' : 'is-mini'}`} style={{ bottom: alt }} role="region" aria-label="Sesli ders oynatıcısı">
       {tam ? <TamOynatici /> : <MiniOynatici />}
       {tvIz && <div key={tvIz.n} className="cd-tv-iz" role="status">{tvIz.m}</div>}
     </div>
@@ -384,7 +384,7 @@ function MiniOynatici() {
       <div className="cd-mini-ilerleme" aria-hidden><i style={{ transform: `scaleX(${dur ? Math.min(1, t / dur) : 0})` }} /></div>
       <button type="button" className="cd-mini-ad" onClick={don} aria-label={`Derse dön: ${baslik}`}>
         <b>{no ? `${no} · ` : ''}{baslik}</b>
-        <small>{hata || `Canlı ders · ${fmtSure(t)} / ${fmtSure(dur)}`}</small>
+        <small>{hata || `Sesli ders · ${fmtSure(t)} / ${fmtSure(dur)}`}</small>
       </button>
       <OynatDugme />
       <ListeDockDenetim mini />

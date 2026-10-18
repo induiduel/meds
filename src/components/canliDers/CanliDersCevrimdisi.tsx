@@ -358,7 +358,7 @@ export default function CanliDersCevrimdisiSoru() {
       userNotificationService.addNotification({
         type: 'app_info',
         title: `Kurul ${kurul} bitti: çevrimdışı dersler silinebilir`,
-        message: `Cihazında Kurul ${kurul}'e ait ${keys.length} canlı ders indirili. Yer açmak istersen silebilirsin; sen onaylamadan silinmez.`,
+        message: `Cihazında Kurul ${kurul}'e ait ${keys.length} sesli ders indirili. Yer açmak istersen silebilirsin; sen onaylamadan silinmez.`,
         deepLinkUrl: '/canliders',
         targetType: 'app',
         targetId: `cd-cevrimdisi-kurul-${kurul}`,
@@ -381,7 +381,7 @@ export default function CanliDersCevrimdisiSoru() {
         </button>
         <b id="cd-cd-soru-b">Kurul {kurul} bitti</b>
         <p id="cd-cd-soru-m">
-          Cihazında bu kurula ait <b>{keys.length}</b> canlı ders indirili{bayt ? ` (${fmtMb(bayt)})` : ''}. Silinsin mi? Sen onaylamadan silinmez.
+          Cihazında bu kurula ait <b>{keys.length}</b> sesli ders indirili{bayt ? ` (${fmtMb(bayt)})` : ''}. Silinsin mi? Sen onaylamadan silinmez.
         </p>
         <ul className="cd-cd-soru-liste">
           {keys.slice(0, 4).map((k) => <li key={k}>{kayit[k]?.no} · {kayit[k]?.baslik}</li>)}

@@ -1,5 +1,8 @@
 """Soru çözücü 2. tur doğrulayıcı: python3 dogrula2.py cikti2/<kod>.json [...] → HATA/UYARI (HATA varsa çıkış 1)."""
 import json, os, re, sys, collections
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
+from turkce_uslup import denetle as uslup_denetle  # noqa: E402  (meds/docs/TURKCE_USLUP_STANDARDI.md)
+from sik_aciklama import denetle as sik_denetle  # noqa: E402  (meds/docs/SIK_ACIKLAMA_STANDARDI.md)
 W = "/home/indu/medsor/meds_temp/patoloji_ornek26/cozucu"
 YASAK_SES = re.compile(r'[0-9%/→←↑↓±≈~<>=+⁺⁻²³()\[\]*#_{}@&$€£^\\:;"“”‘’«»…–—]')
 KISALTMA = re.compile(r'\b[A-ZÇĞİÖŞÜ]{2,}[0-9]*\b')
@@ -43,6 +46,7 @@ def cift(e, yer, x, enaz, encok, cumle=2):
         if g: e.append(f'{yer}: öğrenciye dönük olmayan sözcük {g.group()!r}')
         if HARF_AN.search(a): e.append(f'{yer}: harf anılmış')
     if '(' in m or ')' in m: e.append(f'{yer}: metin parantez içeriyor')
+    e.extend(uslup_denetle(m, yer))
     if not enaz <= kelime(s) <= encok: e.append(f'{yer}: ses {kelime(s)} kelime ({enaz}–{encok})')
     nc = len([c for c in re.split(r'(?<=[.!?])\s+', m) if c.strip()])
     if nc > cumle: e.append(f'{yer}: {nc} cümle (en çok {cumle})')
@@ -83,7 +87,8 @@ def soru_denet(e, u, y, q, pdf_sayilar, maxs, cikmis=False):
     if sorted(Sk) != list('ABCDE'): e.append(f'{y}: siklar A–E değil')
     bas = []
     for h, v in Sk.items():
-        if not cift(e, f'{y}.siklar.{h}', v, 6, 38): continue
+        if not cift(e, f'{y}.siklar.{h}', v, 18, 80, 3): continue
+        e.extend(sik_denetle(v['metin'], f'{y}.siklar.{h}', enaz=18, encok=60, cumle=(2, 3)))
         mm = v['metin'].lower()
         if h == d and 'doğru' not in mm: e.append(f'{y}.siklar.{h}: doğru şık açıklamasında "doğru" yok')
         if h != d and re.match(r'\W*doğru\b', mm): e.append(f'{y}.siklar.{h}: yanlış şık "doğru" ile başlıyor')

@@ -8,12 +8,13 @@
  */
 import React, { useCallback, useDeferredValue, useEffect, useId, useMemo, useRef, useState } from 'react';
 import {
-  BookOpen, Check, ChevronDown, ChevronLeft, ChevronRight, Copy, Headphones, Lightbulb, Presentation, RotateCcw, Search, Volume2, X,
+  BookOpen, Check, ChevronDown, GraduationCap, ChevronLeft, ChevronRight, Copy, Headphones, Lightbulb, Presentation, RotateCcw, Search, Volume2, X,
 } from 'lucide-react';
 import { SoruCozucu } from './spots/cozucu/SoruCozucu';
 import type { Harf, Sonuc as CozucuSonuc } from './spots/cozucu/cozucuVeri';
 import { toast } from './ui/Toast';
 import { navigateTo } from '../router';
+import { Baslangic, BaslangicGeri } from './ui/Baslangic';
 import {
   cozucuSorulari, dizinYukle, ilerlemeOku, ilerlemeYaz, katla, konuYukle, ILERLEME_KEY,
   type Ilerleme, type KonuOzet, type KzAyrinti, type KzOzet, type SinavDizin, type SSoru, type Zorluk,
@@ -40,10 +41,14 @@ const adresOku = () => {
     return { ders: 0, konu: 'hepsi', kz: null as string | null };
   }
 };
+/** Başlangıç ekranı adreste parametre yoksa açılır; bir ders seçilince ?ders= hep yazılır (0 dahil) */
+const adresteSecim = () => {
+  try { const p = new URLSearchParams(window.location.search); return p.has('ders') || p.has('konu') || p.has('kz'); } catch { return false; }
+};
 const adresYaz = (v: { ders: number; konu: string; kz: string | null }) => {
   try {
     const u = new URL(window.location.href);
-    if (v.ders) u.searchParams.set('ders', String(v.ders)); else u.searchParams.delete('ders');
+    u.searchParams.set('ders', String(v.ders));
     if (v.konu !== 'hepsi') u.searchParams.set('konu', v.konu); else u.searchParams.delete('konu');
     if (v.kz) u.searchParams.set('kz', v.kz); else u.searchParams.delete('kz');
     window.history.replaceState(window.history.state, '', u.pathname + u.search + u.hash);
@@ -63,6 +68,13 @@ const Metin: React.FC<{ metin: string }> = ({ metin }) => (
   </>
 );
 
+/** Son açılan kazanım: başlangıçtaki "Kaldığın yerden devam" (profilde eşitlenir) */
+const SON_KEY = 'medsoru_sinav_calisma_son_v1';
+interface SonKz { ders: number; konu: string; kz: string; ad: string }
+const sonOku = (): SonKz | null => {
+  try { const v = JSON.parse(localStorage.getItem(SON_KEY) || 'null'); return v && v.kz ? v : null; } catch { return null; }
+};
+
 const kzDurum = (kz: KzOzet, il: Ilerleme): Exclude<Durum, 'hepsi'> => {
   const n = Object.keys(il[kz.id] || {}).length;
   return n === 0 ? 'baslanmadi' : n >= kz.soru ? 'tamam' : 'devam';
@@ -79,6 +91,8 @@ export const SinavCalismaView: React.FC = () => {
   const q = useDeferredValue(arama);
   const [durum, setDurum] = useState<Durum>('hepsi');
   const [ilerleme, setIlerleme] = useState<Ilerleme>(ilerlemeOku);
+  const [secildi, setSecildi] = useState(adresteSecim);
+  const [kaydir, setKaydir] = useState<string | null>(ilk.kz);
   const [cozucu, setCozucu] = useState<{ baslik: string; sorular: SSoru[]; kzId: string; anlatim?: string[]; ozet?: string } | null>(null);
 
   const yukle = useCallback(() => {
@@ -97,13 +111,32 @@ export const SinavCalismaView: React.FC = () => {
   const dersler = dizin?.dersler ?? [];
   const ders = dersler[Math.min(dersI, Math.max(0, dersler.length - 1))];
 
-  useEffect(() => { if (dizin) adresYaz({ ders: dersI, konu, kz: acik }); }, [dizin, dersI, konu, acik]);
-  // Adresle gelen kazanım: ekrana kaydır
+  useEffect(() => { if (dizin && secildi) adresYaz({ ders: dersI, konu, kz: acik }); }, [dizin, secildi, dersI, konu, acik]);
+  // Geri tuşu: adreste seçim kalmadıysa başlangıç ekranına dön
   useEffect(() => {
-    if (!dizin || !ilk.kz) return;
-    const t = window.setTimeout(() => document.getElementById(`scw-kz-${ilk.kz}`)?.scrollIntoView({ block: 'start', behavior: 'smooth' }), 120);
+    const f = () => {
+      if (adresteSecim()) return;
+      setSecildi(false);
+      setAcik(null);
+    };
+    window.addEventListener('popstate', f);
+    return () => window.removeEventListener('popstate', f);
+  }, []);
+  // Adresle ya da "devam" ile gelen kazanım: ekrana kaydır
+  useEffect(() => {
+    if (!dizin || !secildi || !kaydir) return;
+    const t = window.setTimeout(() => { document.getElementById(`scw-kz-${kaydir}`)?.scrollIntoView({ block: 'start', behavior: 'smooth' }); setKaydir(null); }, 120);
     return () => window.clearTimeout(t);
-  }, [dizin, ilk.kz]);
+  }, [dizin, secildi, kaydir]);
+  // Açılan kazanımı "kaldığın yer" olarak sakla
+  useEffect(() => {
+    if (!dizin || !acik) return;
+    const d = dizin.dersler[dersI];
+    const k = d?.konular.find((x) => x.kazanimlar.some((z) => z.id === acik));
+    const z = k?.kazanimlar.find((x) => x.id === acik);
+    if (!k || !z) return;
+    try { localStorage.setItem(SON_KEY, JSON.stringify({ ders: dersI, konu: k.dosya, kz: acik, ad: `${k.ad} · Kazanım ${z.no}` } satisfies SonKz)); } catch { /* özel pencere */ }
+  }, [dizin, dersI, acik]);
 
   const sonucYaz = useCallback((kzId: string, soruId: string, s: 'd' | 'y') => {
     setIlerleme((prev) => {
@@ -169,22 +202,81 @@ export const SinavCalismaView: React.FC = () => {
     );
   }
 
-  const toplamPay = dizin.toplam.soru ? Math.min(100, Math.round((genel.cozulen / dizin.toplam.soru) * 100)) : 0;
+  // Seçimle çalışma alanına geçiş: geçmişe bir adım eklenir, geri tuşu başlangıca döner
+  const basla = (v: { ders: number; konu?: string; kz?: string | null }) => {
+    setDersI(v.ders); setKonu(v.konu || 'hepsi'); setAcik(v.kz || null); setKaydir(v.kz || null);
+    setArama(''); setDurum('hepsi'); setSecildi(true);
+    try {
+      const u = new URL(window.location.href);
+      u.searchParams.set('ders', String(v.ders));
+      window.history.pushState(window.history.state, '', u.pathname + u.search + u.hash);
+    } catch { /* yok */ }
+    window.scrollTo({ top: 0 });
+  };
+  const basaDon = () => {
+    try {
+      const u = new URL(window.location.href);
+      ['ders', 'konu', 'kz'].forEach((k) => u.searchParams.delete(k));
+      window.history.pushState(window.history.state, '', u.pathname + u.search + u.hash);
+    } catch { /* yok */ }
+    setSecildi(false); setAcik(null);
+    window.scrollTo({ top: 0 });
+  };
+
+  if (!secildi) {
+    const son = sonOku();
+    const sonDers = son ? dizin.dersler[son.ders] : undefined;
+    const kzIlerleme = (kzs: KzOzet[]) => kzs.reduce((t, kz) => t + Math.min(kz.soru, Object.keys(ilerleme[kz.id] || {}).length), 0);
+    return (
+      <Baslangic
+        ikon={GraduationCap}
+        baslik="Sınav çalışması"
+        aciklama={`Kurul ${dizin.kurul}'in her kazanımı için kısa özet, örnek ve çıkmış sorular. Burada çöz ya da sesli çözücüyle dinle.`}
+        ozet={<><b>{sayi(dizin.toplam.kazanim)}</b> kazanım · <b>{sayi(dizin.toplam.soru)}</b> soru{genel.cozulen > 0 && <> · <b>{sayi(genel.cozulen)}</b> çözüldü · <b>%{Math.round((genel.dogru / genel.cozulen) * 100)}</b> doğru</>}</>}
+        devam={son && sonDers ? { etiket: `Kaldığın yerden devam · ${sonDers.ad.replace(/^Tıbbi /, '')}`, ad: son.ad, onClick: () => basla(son) } : null}
+        listeAd="Bir ders seç"
+        satirlar={dizin.dersler.map((d, i) => {
+          const kzs = d.konular.flatMap((k) => k.kazanimlar);
+          const soru = kzs.reduce((t, kz) => t + kz.soru, 0);
+          const c = kzIlerleme(kzs);
+          return {
+            id: d.ad,
+            ad: d.ad,
+            alt: `${d.konular.length} konu · ${sayi(kzs.length)} kazanım · ${sayi(soru)} soru`,
+            pay: soru ? c / soru : 0,
+            durum: c ? `%${Math.round((c / soru) * 100)}` : undefined,
+            onSec: () => basla({ ders: i }),
+          };
+        })}
+      />
+    );
+  }
+
+  // Seçili dersin sayaçları (başlık); genel toplamlar başlangıç ekranında
+  const dk = (() => {
+    let kazanim = 0, soru = 0, cozulen = 0, dogru = 0;
+    for (const k of ders.konular) for (const kz of k.kazanimlar) {
+      kazanim++; soru += kz.soru;
+      for (const v of Object.values(ilerleme[kz.id] || {})) { cozulen++; if (v === 'd') dogru++; }
+    }
+    return { kazanim, soru, cozulen, dogru };
+  })();
+  const toplamPay = dk.soru ? Math.min(100, Math.round((dk.cozulen / dk.soru) * 100)) : 0;
   const dersSec = (i: number) => { setDersI(i); setKonu('hepsi'); setAcik(null); };
 
   return (
     <div className="scw">
+      <BaslangicGeri etiket="Tüm dersler" onClick={basaDon} />
       <header className="scw-head">
         <div className="scw-title">
-          <h1 className="scw-h1">Sınav Çalışması</h1>
-          <span className="scw-count"><b>{sayi(dizin.toplam.kazanim)}</b> kazanım · <b>{sayi(dizin.toplam.soru)}</b> soru</span>
+          <h1 className="scw-h1">{ders.ad}</h1>
+          <span className="scw-count"><b>{sayi(dk.kazanim)}</b> kazanım · <b>{sayi(dk.soru)}</b> soru</span>
         </div>
-        <p className="scw-desc">Kurul {dizin.kurul} · her kazanım için kısa özet, örnek ve çıkmış sorular. Burada çöz ya da sesli çözücüyle dinle.</p>
-        <div className="scw-prog" aria-label={`${sayi(genel.cozulen)} soru çözüldü`}>
+        <div className="scw-prog" aria-label={`${sayi(dk.cozulen)} soru çözüldü`}>
           <span className="scw-bar" aria-hidden><i style={{ width: `${toplamPay}%` }} /></span>
           <span className="scw-prog-t">
-            <b>{sayi(genel.cozulen)}</b> çözüldü
-            {genel.cozulen > 0 && <> · <b>%{Math.round((genel.dogru / genel.cozulen) * 100)}</b> doğru</>}
+            <b>{sayi(dk.cozulen)}</b> çözüldü
+            {dk.cozulen > 0 && <> · <b>%{Math.round((dk.dogru / dk.cozulen) * 100)}</b> doğru</>}
           </span>
         </div>
       </header>

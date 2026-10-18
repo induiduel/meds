@@ -1,19 +1,24 @@
 # Patoloji Sesli Sınav Asistanı v2 — derin, hiyerarşik anlatım + tüm sorular + "Yardım al" (alt ajan talimatı)
 
+> ⚠️ **Şık açıklama standardı (ZORUNLU, 2026-10-18):** her şık açıklaması kavramın ne olduğunu, ne işe yaradığını ve bu soruyla
+> bağını anlatır; "bu sorunun cevabı değil / … olarak geçmez" gibi geçiştirme HATA'dır. Ayrıntı ve kaynak sırası: `meds/docs/SIK_ACIKLAMA_STANDARDI.md`.
+> ⚠️ **Türkçe üslup standardı (ZORUNLU, 2026-10-18):** metin doğal, eksiksiz ve anlaşılır Türkçe olur; çeviri mecaz ("imzası",
+> "motoru", "freni") ve iç etiket ("Ayrım cümlesi:", "Akılda tut:", "Mantığı şudur:") YASAK. Ayrıntı: `meds/docs/TURKCE_USLUP_STANDARDI.md`.
+
 Çalışma klasörü: `/home/indu/medsor/meds_temp/patoloji_onem/asistan2/`
 
 Öğrenci tam ekran bir asistanla çalışır. Asistan her dersi **bölüm bölüm**, slayttaki mantıksal akışla anlatır (EMA Lightning
 Türkçe kadın sesi, metin harfi harfine okunur); her noktadan sonra o noktayla ilgili soruları sorar; yanlışta o şıkkın neden yanlış
 olduğunu, neyi karıştırdığını ve doğrusunu öğretir; doğruda "Doğru" deyip ilerler. Öğrenci "Yardım al"a basarsa asistan **her şıkkı**
-tek tek, kısa ve akılda kalıcı biçimde açıklar.
+tek tek açıklar: ne olduğu, ne işe yaradığı, bu soruda neden doğru/yanlış olduğu.
 
 Kullanıcı geri bildirimi (v1 yetersiz bulundu): "Sığ metin olarak anlatınca neyi neden anlattığı anlaşılmıyor; belli bir hiyerarşiye
 göre gitsin; neden anlatıldığı, ne işimize yaradığı, neden böyle bir şey olduğu anlaşılır olsun." Bu v2'nin ana hedefi budur.
 
 ## Kesin kurallar
 1. **Tek kaynak ders PDF'i.** `../pdf_metin/<kod>.md` + plandaki madde alanları (`bilgi`, `alt`, `detay`, `neden` — PDF'ten üretildi) +
-   2026-27 örnek sorularının `aciklama`sı (PDF'e dayalı). PDF'te olmayan tıbbi bilgi YAZMA. Şıktaki kavram PDF'te yoksa uydurma:
-   "Bu, bu sorunun cevabı değil" de ve PDF'teki doğru bilgiyi öğret.
+   2026-27 örnek sorularının `aciklama`sı (PDF'e dayalı). PDF'te olmayan tıbbi bilgi YAZMA. Şıktaki kavram PDF'te yoksa uydurma;
+   kaynak sırası (aynı kurulun diğer dersleri/ders notları) ve çıkmış şık istisnası için `meds/docs/SIK_ACIKLAMA_STANDARDI.md`.
 2. **Öğrenciye dönük dil:** "aday", "plan", "talimat", "PDF'te", "kaynakta", "ipucu" sözcükleri geçmez. Soru yılı/sınav adı/numarası okunmaz.
 3. **Kronoloji:** bir soru, sorduğu bilgi anlatılmadan önce sorulmaz. Soru planda bağlı olduğu noktada kalır; bilgi daha sonraki bir
    noktada anlatılıyorsa soruyu o noktaya taşı (her soru tam bir kez yer alır).
@@ -50,9 +55,9 @@ Her soru için:
 - `dogru`: `{"metin": "Doğru! …", "ses": "Doğru! …"}` — 1 pekiştirme cümlesi, en çok 30 kelime; neden doğru olduğunu söyler.
 - `yanlis`: doğru şık DIŞINDAKİ her şık için `{metin, ses}`, 2–4 cümle, 15–60 kelime: şıktaki kavramla başla, neden yanlış, öğrenci neyi
   karıştırmış olabilir, "Doğrusu: …". Her açıklama o şıkka özgü.
-- `yardim`: **TÜM şıklar** için (doğru dahil) `{metin, ses}`, her biri TEK kısa cümle, 5–20 kelime, akılda kalıcı hap bilgi.
-  Yanlış şıkta neden yanlış ("Seminom radyoterapiye çok duyarlı, kötü prognoz değil."); doğru şıkta neden doğru ("Minimal değişiklik:
-  çocukta bir numara, yüzde altmış beş."). Harfi okuma ("A şıkkı" deme); asistan harfleri kendisi söyler.
+- `yardim`: **TÜM şıklar** için (doğru dahil) `{metin, ses}`, **2–3 cümle, 20–55 kelime** — `meds/docs/SIK_ACIKLAMA_STANDARDI.md` (ZORUNLU, 2026-10-18):
+  (1) şıktaki kavram NEDİR (nereden çıkar, hangi gruba girer), (2) NE İŞE YARAR / ne yapar, (3) bu soruyla bağı — neden doğru ya da
+  neden yanlış, neyle karıştırılır. "Bu sorunun cevabı değil", "… olarak geçmez", "… yapmaz." gibi yalnız olumsuzlayan geçiştirme YASAK.
 
 ## Çıktı — `cikti/<kod>.json`
 ```json
@@ -83,4 +88,4 @@ atladığın seçmeli noktalar (kısa gerekçe), emin olmadığın telaffuzlar.
 - Harfle okunan kısaltmadan sonra ek gerekiyorsa ünlü uyumuna dikkat et ya da açılımı yaz ("glomerülosklerozda", "fe se ge se'de" değil).
 - Bir sorunun şıkları daha sonraki bir noktada anlatılan kavramlara dayanıyorsa soruyu o noktaya taşı (kronoloji).
 - Seçmeli noktaları bağlam/ayırıcı tanı için kullan; noktayı bölümün mantığına göre yerleştir (slayt sırasından hafif sapma serbest).
-- `yardim` her şık için TEK cümle: yanlışsa "neden değil", doğruysa "neden doğru" — sayı/anahtar kelimeyle akılda kalıcı.
+- `yardim` her şık için 2–3 cümle: ne olduğu + ne işe yaradığı + bu soruda neden doğru/yanlış (`meds/docs/SIK_ACIKLAMA_STANDARDI.md`).

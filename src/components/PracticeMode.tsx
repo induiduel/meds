@@ -44,7 +44,7 @@ export const PracticeMode: React.FC<PracticeModeProps> = ({
   onOpenContributeModal,
   onExit,
   onOpenQuestion,
-  title = 'Test çöz',
+  title = 'Deneme sınavı',
   subtitle,
 }) => {
   // v12 "Net": aynı durum ve işlevlerle ayrı yapı (components/v12/PracticeV12.tsx)

@@ -7,7 +7,10 @@ import kurulIndex from '../../data/kazanimlar/index.json';
 import { ANAHTAR, KATEGORILER, Kategori, Spot, Veri, azHareket, kucuk, okuOgrenilen, yazOgrenilen } from './spotsShared';
 import { useAppearance } from '../../utils/appearance';
 import { SpotsV12 } from '../v12/SpotsV12';
-import { BRANSLAR, bransOku, type Brans } from './brans';
+import { bransOku, bransTanim, type Brans } from './brans';
+import { BaslangicGeri } from '../ui/Baslangic';
+import { CozucuBaslangic, OnemBaslangic } from './BransBaslangic';
+import { cozucuYolu, cozucuyaGit, onemYolu, onemeGit } from './spotsYol';
 import { SpotCozucuDevamKart } from './stats/SpotCozucuDevamKart';
 import { ekleSpotSure, type LastSpotInfo, type LastCozucuInfo } from '../../services/spotCozucuIstatistik';
 
@@ -74,41 +77,45 @@ const okuGorunum = (): Gorunum => {
   try { const g = new URLSearchParams(location.search).get('gorunum'); return g === 'onem' || g === 'cozucu' ? g : 'spot'; } catch { return 'spot'; }
 };
 
-const okuBrans = (): Brans => { try { return bransOku(new URLSearchParams(location.search).get('brans')); } catch { return 'patoloji'; } };
+/** ?brans= yoksa null (başlangıç ekranı); eski derin bağlantı (?ders=/coz=/asistan= var, branş yok) patolojidir */
+const okuBrans = (): Brans | null => {
+  try {
+    const p = new URLSearchParams(location.search);
+    const b = p.get('brans');
+    if (b) return bransOku(b);
+    return p.get('ders') || p.get('coz') || p.get('asistan') ? 'patoloji' : null;
+  } catch { return null; }
+};
 
-/** Üstte görünüm seçici: Sınav spotları (tüm dersler) | En önemliler (100 puan, ders PDF'ine dayalı) | Sesli soru çözücü;
- *  son ikisinde branş seçici (Patoloji · Enfeksiyon · Üroloji, ?brans=). */
-export const ExamSpotsView: React.FC = () => {
+/**
+ * Üç sayfa tek bileşende: Sınav spotları (/spotlar) · Soru çözücü (/soru-cozucu) · En önemliler (/en-onemliler).
+ * Soru çözücü ve En önemliler önce sade başlangıç ekranıyla açılır (BransBaslangic: branş seçimi + kaldığın yer);
+ * branş seçilince (?brans=) o branşın sayfası, üstte "Tüm dersler" geri bağlantısıyla.
+ * Eski /spotlar?gorunum=cozucu|onem bağlantıları yeni adrese yönlenir.
+ */
+export const ExamSpotsView: React.FC<{ gorunum?: Gorunum }> = ({ gorunum: g = 'spot' }) => {
   const v12 = useAppearance().design === 'v12';
-  const [g, setG] = useState<Gorunum>(okuGorunum);
-  const [brans, setBrans] = useState<Brans>(okuBrans);
+  const [brans, setBrans] = useState<Brans | null>(okuBrans);
+  // eski adres: /spotlar?gorunum=… → /soru-cozucu | /en-onemliler (diğer parametreler korunur)
+  const eski = g === 'spot' ? okuGorunum() : 'spot';
   useEffect(() => {
-    const f = () => { setG(okuGorunum()); setBrans(okuBrans()); };
+    if (eski === 'spot') return;
+    try {
+      const u = new URL(location.href);
+      u.searchParams.delete('gorunum');
+      const yol = eski === 'cozucu' ? cozucuYolu() : onemYolu();
+      history.replaceState(history.state, '', yol + u.search + u.hash);
+      window.dispatchEvent(new PopStateEvent('popstate'));
+    } catch { /* yok */ }
+  }, [eski]);
+  useEffect(() => {
+    const f = () => setBrans(okuBrans());
     window.addEventListener('popstate', f);
     return () => window.removeEventListener('popstate', f);
   }, []);
-  const sec = (x: Gorunum) => {
-    setG(x);
-    try {
-      const u = new URL(location.href);
-      if (x !== 'spot') u.searchParams.set('gorunum', x); else u.searchParams.delete('gorunum');
-      if (x !== 'cozucu') u.searchParams.delete('coz');
-      history.replaceState(history.state, '', u.pathname + u.search + u.hash);
-    } catch { /* yok */ }
-  };
-  const bransSec = (b: Brans) => {
-    if (b === brans) return;
-    setBrans(b);
-    try {
-      const u = new URL(location.href);
-      if (b !== 'patoloji') u.searchParams.set('brans', b); else u.searchParams.delete('brans');
-      ['ders', 'coz', 'asistan', 'madde'].forEach((k) => u.searchParams.delete(k)); // ders kodları branşa özgü
-      history.replaceState(history.state, '', u.pathname + u.search + u.hash);
-    } catch { /* yok */ }
-  };
-  // Spotlarda aktif çalışma süresi sayacı
+  // Spotlarda ve önem listesinde aktif çalışma süresi sayacı
   useEffect(() => {
-    if (g !== 'spot' && g !== 'onem') return;
+    if (g === 'cozucu') return;
     let sonHareket = Date.now();
     const hareket = () => { sonHareket = Date.now(); };
     window.addEventListener('pointerdown', hareket, { passive: true, capture: true });
@@ -127,26 +134,28 @@ export const ExamSpotsView: React.FC = () => {
     };
   }, [g]);
 
-  const onDevamSpot = (s: LastSpotInfo) => {
-    sec('spot');
-    try {
-      const u = new URL(location.href);
-      u.searchParams.delete('gorunum');
-      if (s.id) u.searchParams.set('id', s.id);
-      history.replaceState(history.state, '', u.pathname + u.search + u.hash);
-      window.dispatchEvent(new PopStateEvent('popstate'));
-    } catch { /* yok */ }
-  };
+  if (eski !== 'spot') return null;
 
-  const onDevamCozucu = (c: LastCozucuInfo) => {
-    bransSec(c.brans);
-    sec('cozucu');
+  if (g !== 'spot') {
+    const geri = () => (g === 'cozucu' ? cozucuyaGit() : onemeGit());
+    if (!brans) return g === 'cozucu' ? <CozucuBaslangic /> : <OnemBaslangic />;
+    return (
+      <>
+        <h1 className="sr-only">{g === 'cozucu' ? 'Soru çözücü' : 'En önemliler'} · {bransTanim(brans).tam}</h1>
+        <BaslangicGeri etiket="Tüm dersler" onClick={geri} />
+        {g === 'onem' ? (
+          <React.Suspense fallback={<p className="ol-bos">Yükleniyor…</p>}><OnemListesi key={brans} brans={brans} /></React.Suspense>
+        ) : (
+          <React.Suspense fallback={<p className="ol-bos">Yükleniyor…</p>}><SoruCozucuSayfa key={brans} brans={brans} /></React.Suspense>
+        )}
+      </>
+    );
+  }
+
+  const onDevamSpot = (s: LastSpotInfo) => {
     try {
       const u = new URL(location.href);
-      u.searchParams.set('gorunum', 'cozucu');
-      if (c.brans !== 'patoloji') u.searchParams.set('brans', c.brans);
-      u.searchParams.set('ders', c.kod);
-      u.searchParams.set('coz', '1');
+      if (s.id) u.searchParams.set('id', s.id);
       history.replaceState(history.state, '', u.pathname + u.search + u.hash);
       window.dispatchEvent(new PopStateEvent('popstate'));
     } catch { /* yok */ }
@@ -155,31 +164,12 @@ export const ExamSpotsView: React.FC = () => {
   return (
     <>
       <h1 className="sr-only">Sınav spotları</h1>
-      <div className="ol-gorunum" role="tablist" aria-label="Görünüm">
-        <button type="button" role="tab" aria-selected={g === 'spot'} className={g === 'spot' ? 'is-on' : ''} onClick={() => sec('spot')}>Spotlar</button>
-        <button type="button" role="tab" aria-selected={g === 'onem'} className={g === 'onem' ? 'is-on' : ''} onClick={() => sec('onem')}>En önemliler<span className="ol-g-ek">(100 puan)</span></button>
-        <button type="button" role="tab" aria-selected={g === 'cozucu'} className={g === 'cozucu' ? 'is-on' : ''} onClick={() => sec('cozucu')}>Soru çözücü</button>
-      </div>
-      {g !== 'spot' && (
-        <div className="ol-gorunum ol-brans" role="tablist" aria-label="Ders">
-          {BRANSLAR.map((b) => (
-            <button key={b.id} type="button" role="tab" aria-selected={brans === b.id} className={brans === b.id ? 'is-on' : ''} onClick={() => bransSec(b.id)}>{b.ad}</button>
-          ))}
-        </div>
-      )}
       <SpotCozucuDevamKart
         onDevamSpot={onDevamSpot}
-        onDevamCozucu={onDevamCozucu}
-        onBransSec={(b) => {
-          bransSec(b);
-          sec('cozucu');
-        }}
+        onDevamCozucu={(c: LastCozucuInfo) => cozucuyaGit({ brans: c.brans, ders: c.kod, coz: '1' })}
+        onBransSec={(b) => cozucuyaGit({ brans: b })}
       />
-      {g === 'onem' ? (
-        <React.Suspense fallback={<p className="ol-bos">Yükleniyor…</p>}><OnemListesi key={brans} brans={brans} /></React.Suspense>
-      ) : g === 'cozucu' ? (
-        <React.Suspense fallback={<p className="ol-bos">Yükleniyor…</p>}><SoruCozucuSayfa key={brans} brans={brans} /></React.Suspense>
-      ) : v12 ? <SpotsV12 /> : <ExamSpotsClassic />}
+      {v12 ? <SpotsV12 /> : <ExamSpotsClassic />}
     </>
   );
 };

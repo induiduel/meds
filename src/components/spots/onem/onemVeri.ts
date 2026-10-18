@@ -104,4 +104,6 @@ export const tercihOku = <T extends object>(key: string, varsayilan: T): T => {
 };
 export const tercihYaz = (key: string, v: object) => { try { localStorage.setItem(key, JSON.stringify(v)); } catch { /* özel pencere */ } };
 export const TERCIH_KEY = 'medsoru_onem_tercih_v1';
+/** Son açılan önem dersi (branşlar arası): En önemliler başlangıcındaki "Kaldığın yerden devam" */
+export const ONEM_SON_KEY = 'medsoru_onem_son_v1';
 export const PDF_KEY = 'medsoru_onem_pdf_v1';

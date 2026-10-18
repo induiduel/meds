@@ -25,3 +25,8 @@ sorularla güçlenir ve maddeler o soruları çözdürecek kadar detaylı; çöz
 
 Ön yüz: `components/spots/brans.ts` (branş tanımları: asistan/sınav kuralı yalnız patoloji), `OnemListesi.tsx`, `onem/*`,
 `cozucu/*` (hepsi `brans` alır). Örnek sorular önem verisinde `ornek26` alanında (`zorluk`'lu).
+
+Öğren'de bu bilgi (2026-10-18): `ogren_esle.py` (tüm branşlar, ~3 sn) çözücü sorularını ve asistan noktalarını yayımlanmış Öğren
+destelerinin adımlarına bağlar → `src/data/cozucu_ogren/<brans>.json`. Aday adımlar `src/data/deckPdfSources.json`'daki PDF eşlemesinden
+(yeniden numaralanan PDF: başlık + sayfa sayısı aynıysa), sıra = TF-IDF benzerliği + sayfa örtüşmesi; kanıt zayıfsa eşleme yazılmaz.
+Çözücü/asistan, deste ya da PDF eşlemesi değişince yeniden çalıştır, sonra `npx vite build`. Ön yüz `components/spots/ogren/OgrenYeri.tsx`.

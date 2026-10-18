@@ -177,7 +177,7 @@ export const TestHub: React.FC<TestHubProps> = ({ onExit }) => {
           </button>
         )}
         <div className="tb-head-t">
-          <h1>Test çöz</h1>
+          <h1>Deneme sınavı</h1>
           <p>Çıkmış, örnek ve Öğren sorularından test kur. Bir şey seçmezsen sorular rastgele gelir.</p>
         </div>
         <button type="button" className="tb-btn" onClick={() => start(randomCriteria(), 'Rastgele test')} disabled={!!busy}>

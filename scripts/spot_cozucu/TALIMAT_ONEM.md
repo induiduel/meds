@@ -1,5 +1,8 @@
 # Spot bilgiler (Sınav için en önemliler, 100 puan) + ders soru havuzu — 1. adım (yazar ajan talimatı)
 
+> ⚠️ **Türkçe üslup standardı (ZORUNLU, 2026-10-18):** metin doğal, eksiksiz ve anlaşılır Türkçe olur; çeviri mecaz ("imzası",
+> "motoru", "freni") ve iç etiket ("Ayrım cümlesi:", "Akılda tut:", "Mantığı şudur:") YASAK. Ayrıntı: `meds/docs/TURKCE_USLUP_STANDARDI.md`.
+
 Çalışma klasörü: `/home/indu/medsor/meds_temp/spot_cozucu/<brans>/` (`enfeksiyon` = Kurul 1 Enfeksiyon Hastalıkları, `uroloji` = Kurul 1 Üroloji).
 Bu iş patolojide yapılan "Sınav için en önemliler" listesinin ve sesli soru çözücünün aynısını bu derslere kurar. Bu adımda:
 (1) dersin önem listesi (spot bilgiler), (2) dersin **örnek soruları**, (3) çıkmış soruların ders PDF'ine göre seçimi yazılır.

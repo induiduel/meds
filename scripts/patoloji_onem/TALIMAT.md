@@ -1,5 +1,8 @@
 # Patoloji — Sınav İçin En Önemliler (100 puan) — alt ajan talimatı
 
+> ⚠️ **Türkçe üslup standardı (ZORUNLU, 2026-10-18):** metin doğal, eksiksiz ve anlaşılır Türkçe olur; çeviri mecaz ("imzası",
+> "motoru", "freni") ve iç etiket ("Ayrım cümlesi:", "Akılda tut:", "Mantığı şudur:") YASAK. Ayrıntı: `meds/docs/TURKCE_USLUP_STANDARDI.md`.
+
 Çalışma klasörü: `/home/indu/medsor/meds_temp/patoloji_onem/`
 
 Kullanıcının kuralları (KESİN):

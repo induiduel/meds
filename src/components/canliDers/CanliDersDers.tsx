@@ -108,7 +108,7 @@ export default function CanliDersDers({ dersKey }: { dersKey: string }) {
         if (!canli) return;
         setDetay(d);
         setBaglanti(cdDetayBagla(d));
-        document.title = `${cdDersEtiketi(d)} · ${d.baslik} · Canlı ders · MeDSor`;
+        document.title = `${cdDersEtiketi(d)} · ${d.baslik} · Sesli ders · MeDSor`;
       },
       (e) => canli && setHata(e?.message || 'Ders açılamadı.'),
     );
@@ -212,7 +212,7 @@ export default function CanliDersDers({ dersKey }: { dersKey: string }) {
         <GeriBag />
         <div className="cd-bos">
           <p>{hata}</p>
-          <button type="button" className="cd-btn is-ana" onClick={() => navigateTo(pathFor('canli_ders'))}>Tüm canlı derslere dön</button>
+          <button type="button" className="cd-btn is-ana" onClick={() => navigateTo(pathFor('canli_ders'))}>Tüm sesli derslere dön</button>
         </div>
       </div>
     );
@@ -347,7 +347,7 @@ function GeriBag() {
         navigateTo(pathFor('canli_ders'));
       }}
     >
-      <ChevronLeft aria-hidden /> <span>Canlı dersler</span>
+      <ChevronLeft aria-hidden /> <span>Sesli dersler</span>
     </a>
   );
 }

@@ -180,7 +180,7 @@ export const LearnHub: React.FC<{
     <div className="lh">
       <header className="cx-page">
         <div className="cx-head">
-          <h1 className="ms-page-title cx-title">Öğren</h1>
+          <h1 className="ms-page-title cx-title">Etkileşimli dersler</h1>
           <span className="cx-count" aria-live="polite">
             <span className="cx-stat">{scoped.length} <small>ders</small></span>
             <span className="cx-stat"><i aria-hidden>·</i>{totals.steps.toLocaleString('tr-TR')} <small>adım</small></span>

@@ -1,5 +1,10 @@
 # Spot bilgiler + soru çözücü — bağımsız denetim (ikinci göz) talimatı
 
+> ⚠️ **Şık açıklama standardı (ZORUNLU, 2026-10-18):** her şık açıklaması kavramın ne olduğunu, ne işe yaradığını ve bu soruyla
+> bağını anlatır; "bu sorunun cevabı değil / … olarak geçmez" gibi geçiştirme HATA'dır. Ayrıntı ve kaynak sırası: `meds/docs/SIK_ACIKLAMA_STANDARDI.md`.
+> ⚠️ **Türkçe üslup standardı (ZORUNLU, 2026-10-18):** metin doğal, eksiksiz ve anlaşılır Türkçe olur; çeviri mecaz ("imzası",
+> "motoru", "freni") ve iç etiket ("Ayrım cümlesi:", "Akılda tut:", "Mantığı şudur:") YASAK. Ayrıntı: `meds/docs/TURKCE_USLUP_STANDARDI.md`.
+
 Çalışma klasörü: `/home/indu/medsor/meds_temp/spot_cozucu/<brans>/`. Önce `TALIMAT_ONEM.md` ve `TALIMAT_COZUCU.md`'yi
 (`/home/indu/medsor/meds/scripts/spot_cozucu/`) baştan sona oku. Başka bir yazar `onem/<kod>.json` ve `cozucu/<kod>.json`'u üretti, biçim
 doğrulayıcılarından geçti. Öğrenci bunları okuyup sesli dinleyerek sınava girecek; **tek yanlış bilgi kabul edilmez.** Sen bağımsız

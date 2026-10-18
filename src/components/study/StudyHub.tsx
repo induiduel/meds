@@ -147,7 +147,7 @@ export const StudyHub: React.FC<StudyHubProps> = ({
   return (
     <div className="flex flex-col gap-3 sm:gap-4">
       <PageHeader
-        title="Çalış"
+        title="Çalışma masam"
         description={loading && bank.length === 0 ? 'Soru bankası yükleniyor…' : undefined}
         stats={loading && bank.length === 0 ? undefined : [
           { label: 'soru', value: bank.length.toLocaleString('tr-TR') },

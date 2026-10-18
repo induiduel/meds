@@ -39,7 +39,7 @@ const LISTE: Durak[] = [
   {
     sel: '.cd-liste-baslik',
     icon: Headphones,
-    eyebrow: 'Canlı ders',
+    eyebrow: 'Sesli ders',
     title: 'Dersi dinleyerek çalış',
     text: 'Her ders sesli anlatılır; konuşma metni ve dersin slaytları sesle eşzamanlı akar.',
     points: ['Okunan cümle metinde vurgulanır', 'Anlatılan slayt sayfası kendiliğinden açılır', 'Dinlerken başka sayfaya geçebilirsin, ses sürer'],

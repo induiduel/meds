@@ -177,7 +177,7 @@ async function arkaPlanIndir(
     const toplam = eksik.reduce((a, i) => a + (i.bayt || 0), 0);
     try {
       kayit = await bf.fetch(id, eksik.map((i) => i.url), {
-        title: `Canlı ders indiriliyor: ${baslik}`.slice(0, 80),
+        title: `Sesli ders indiriliyor: ${baslik}`.slice(0, 80),
         icons: [{ src: '/icons/icon-192x192.png?v=9', sizes: '192x192', type: 'image/png' }],
         ...(toplam > 0 ? { downloadTotal: toplam } : {}),
       });

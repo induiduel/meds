@@ -11,7 +11,9 @@
  *   /yonetim     → admin panel (admins only)
  *   /ara/<sorgu> → tüm veri setlerinde arama sonuçları
  *   /manage      → yönetim konsolu (manage.nofrostlife.com.tr ile aynı ekran)
- *   /canliders   → canlı ders: sesli dersler (liste), /canliders/<key> metin + PDF ile dinleme
+ *   /canliders   → Sesli ders (eski adı Canlı ders): sesli dersler (liste), /canliders/<key> metin + PDF ile dinleme
+ *   /soru-cozucu → sesli soru çözücü (branş başlangıç ekranı; eski /spotlar?gorunum=cozucu buraya yönlenir)
+ *   /en-onemliler → sınav için en önemliler (100 puan; eski /spotlar?gorunum=onem buraya yönlenir)
  *   /saglik      → Sağlık Bakanlığı: resmî veriler + ders bağları, /saglik/<bölüm> (asi, karabuk, yenidogan …)
  *
  * Old `#tab` links keep working: they are rewritten to the matching path on load.
@@ -50,7 +52,9 @@ export type AppRoute =
   | 'canli_ders'
   | 'settings'
   | 'stats'
-  | 'sinav_calisma';
+  | 'sinav_calisma'
+  | 'soru_cozucu'
+  | 'en_onemliler';
 
 export const ROUTE_PATHS: Record<AppRoute, string> = {
   quick_add: '/',
@@ -85,21 +89,23 @@ export const ROUTE_PATHS: Record<AppRoute, string> = {
   settings: '/ayarlar',
   stats: '/istatistik',
   sinav_calisma: '/sinav-calisma',
+  soru_cozucu: '/soru-cozucu',
+  en_onemliler: '/en-onemliler',
 };
 
 export const ROUTE_TITLES: Record<AppRoute, string> = {
   quick_add: 'Soru ekle',
   today: 'Bugün',
-  learn: 'Öğren',
+  learn: 'Etkileşimli dersler',
   glossary: 'Sözlük',
   diseases: 'Hastalıklar',
   health_ministry: 'Sağlık Bakanlığı',
-  canli_ders: 'Canlı ders',
+  canli_ders: 'Sesli ders',
   flashcards: 'Ezber kartları',
   questions: 'Soru havuzu',
   past_exams: 'Çıkmış sorular',
-  study: 'Çalış',
-  practice: 'Test çöz',
+  study: 'Çalışma masam',
+  practice: 'Deneme sınavı',
   test_cikmis: 'Test Edilen Çıkmış Sorular (Faz 14 İnceleme)',
   tester_ozet: '2026-2027 Ders Notları Test Laboratuvarı',
   ornek_sorular: 'Örnek sorular',
@@ -119,7 +125,9 @@ export const ROUTE_TITLES: Record<AppRoute, string> = {
   search: 'Arama',
   settings: 'Profil ve ayarlar',
   stats: 'İstatistiklerim',
-  sinav_calisma: 'Sınav Çalışması',
+  sinav_calisma: 'Sınav çalışması',
+  soru_cozucu: 'Soru çözücü',
+  en_onemliler: 'En önemliler',
 };
 
 const BY_SEGMENT: Record<string, AppRoute> = Object.fromEntries(
@@ -200,6 +208,12 @@ const ALIASES: Record<string, AppRoute> = {
   sinav: 'sinav_calisma',
   'sinav-hazirlik': 'sinav_calisma',
   'soru-kampi': 'sinav_calisma',
+  soru_cozucu: 'soru_cozucu',
+  cozucu: 'soru_cozucu',
+  'sesli-cozucu': 'soru_cozucu',
+  en_onemliler: 'en_onemliler',
+  onemliler: 'en_onemliler',
+  'onem-listesi': 'en_onemliler',
 };
 
 export interface ParsedRoute {

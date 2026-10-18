@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import {
-  Check, ChevronDown, ChevronLeft, ChevronRight, Clock, Eraser, Headphones, Lightbulb, Maximize2, Minimize2, Minus, Pause, Play, Plus, RotateCcw, Settings2, SkipForward, Volume2, X,
+  BookOpenText, Check, ChevronDown, ChevronLeft, ChevronRight, Clock, Eraser, Headphones, Lightbulb, Maximize2, Minimize2, Minus, Pause, Play, Plus, RotateCcw, Settings2, SkipForward, Volume2, X,
 } from 'lucide-react';
 import { getCustomApiUrl } from '../../../services/api';
 import { lockScroll, unlockScroll } from '../../../utils/scrollLock';
@@ -12,6 +12,8 @@ import {
 } from './cozucuVeri';
 import { bransTanim, type Brans } from '../brans';
 import { ekleCozucuSure, kaydetCozucuZiyaret } from '../../../services/spotCozucuIstatistik';
+import { OgrenYeri } from '../ogren/OgrenYeri';
+import { ogrenEslemeVar } from '../ogren/ogrenEsle';
 import '../../../styles/soru-cozucu.css';
 
 /**
@@ -21,6 +23,7 @@ import '../../../styles/soru-cozucu.css';
  *  - Yardım: İpucu (cevabı söylemez) · Bir yanlışı ele (rastgele yanlış şık açıklanıp elenir) · Çözümü dinle (her şık sırayla
  *    vurgulanıp açıklanır, sonra "Doğru cevap …" + çözüm).
  * Çözülen soruda şıka dokunmak o şıkkın açıklamasını okur. Ses yoksa okuma süresiyle ilerler (metin yine görünür).
+ * "Öğren" düğmesi (Ö tuşu) sorunun Öğren destesindeki karşılığını yan panelde/alt sayfada açar (OgrenYeri).
  */
 
 /** mod: yanlis = yalnız yanlış/yardımlı çözülenler · cikmis = yalnız çıkmış sorular (ikisinde de konum kaydedilmez) */
@@ -108,6 +111,7 @@ export const SoruCozucu: React.FC<Props> = ({
   const [dersMenu, setDersMenu] = useState(false);
   const [ayarAcik, setAyarAcik] = useState(false);
   const [tamEkran, setTamEkran] = useState(false);
+  const [ogrenAcik, setOgrenAcik] = useState(false);
   // soru durumu
   const [durum, setDurum] = useState<Durum>('acik');
   const [elenen, setElenen] = useState<Harf[]>([]);
@@ -426,14 +430,15 @@ export const SoruCozucu: React.FC<Props> = ({
         if (e.key === '0') { e.preventDefault(); setTercih({ olcek: 1 }); return; }
         return;
       }
-      if (e.altKey || (e.target as HTMLElement | null)?.closest?.('input,textarea,select')) return;
-      if (e.key === 'Escape') { if (dersMenu) setDersMenu(false); else if (ayarAcik) setAyarAcik(false); else onClose(); return; }
+      if (e.altKey || (e.target as HTMLElement | null)?.closest?.('input,textarea,select,.oy')) return;
+      if (e.key === 'Escape') { if (ogrenAcik) setOgrenAcik(false); else if (dersMenu) setDersMenu(false); else if (ayarAcik) setAyarAcik(false); else onClose(); return; }
       if (!ders || devamSor !== null) return;
       if (e.key === ' ') { e.preventDefault(); oynatDuraklat(); return; }
       if (e.key === 'ArrowRight') { e.preventDefault(); ileri(); return; }
       if (e.key === 'ArrowLeft') { e.preventDefault(); geri(); return; }
       if (!q || bitti) return;
       const k = e.key.toLocaleUpperCase('tr-TR');
+      if ((k === 'Ö' || k === 'O') && ogrenVar) { e.preventDefault(); setOgrenAcik((v) => !v); return; }
       const h = (/^[1-5]$/.test(e.key) ? HARFLER[Number(e.key) - 1] : HARFLER.find((x) => x === k)) as Harf | undefined;
       if (h) { e.preventDefault(); cevapla(h); return; }
       if (k === 'İ' || k === 'I') { e.preventDefault(); ipucu(); return; }
@@ -484,6 +489,7 @@ export const SoruCozucu: React.FC<Props> = ({
   const dizinIdx = dizin ? dizin.dersler.findIndex((d) => d.kod === kod) : -1;
   const sonrakiDers = dizin && dizinIdx >= 0 ? dizin.dersler[dizinIdx + 1] : undefined;
   const cozuldu = durum === 'dogru' || durum === 'gosterildi';
+  const ogrenVar = !ozelSorular?.length && ogrenEslemeVar(brans);
 
   // sonuç ekranı sayıları (gösterilen liste üzerinden)
   const say = (r: Sonuc) => sorular.filter((x) => sonuc[x.no] === r).length;
@@ -497,7 +503,7 @@ export const SoruCozucu: React.FC<Props> = ({
 
   const icerik = (
     <div
-      className={`sc${caliyor ? ' is-konusuyor' : ''}${olcek !== 1 ? ' is-olcekli' : ''}`}
+      className={`sc${caliyor ? ' is-konusuyor' : ''}${olcek !== 1 ? ' is-olcekli' : ''}${ogrenAcik && ogrenVar ? ' is-ogren' : ''}`}
       style={{ ['--sc-zoom' as string]: olcek }}
       role="dialog"
       aria-modal="true"
@@ -532,6 +538,11 @@ export const SoruCozucu: React.FC<Props> = ({
           )}
         </div>
         <div className="sc-ust-sag">
+          {ogrenVar && (
+            <button type="button" className="oy-ac is-ust" onClick={() => setOgrenAcik((v) => !v)} aria-pressed={ogrenAcik} title="Bu sorunun Öğren'deki yeri (Ö)">
+              <BookOpenText aria-hidden /><span>Öğren</span>
+            </button>
+          )}
           <div className="sc-olcek" role="group" aria-label="Metin ve öge ölçeği">
             <button type="button" className="sc-olcek-b" onClick={() => olcekAdim(-1)} disabled={olcek <= OLCEK_MIN} aria-label="Ölçeği küçült" title="Küçült (Ctrl −)"><Minus aria-hidden /></button>
             <button type="button" className="sc-olcek-v" onClick={() => setTercih({ olcek: 1 })} disabled={olcek === 1} aria-label={`Ölçek %${Math.round(olcek * 100)}, sıfırlamak için dokun`} title="Varsayılan ölçeğe sıfırla (%100 · Ctrl 0)">%{Math.round(olcek * 100)}</button>
@@ -581,6 +592,11 @@ export const SoruCozucu: React.FC<Props> = ({
                   </span>
                 )}
               </span>
+              {ogrenVar && (
+                <button type="button" className="oy-ac is-satir" onClick={() => setOgrenAcik((v) => !v)} aria-pressed={ogrenAcik} aria-label="Bu sorunun Öğren'deki yeri">
+                  <BookOpenText aria-hidden /><span>Öğren</span>
+                </button>
+              )}
             </div>
 
             {(ozetAnlatim || (kisaAnlatim && kisaAnlatim.length > 0)) && (
@@ -660,6 +676,9 @@ export const SoruCozucu: React.FC<Props> = ({
                 <b>{durum === 'dogru' ? (yanlisSecti ? 'Doğru, bu sefer oldu!' : yardim ? 'Doğru! · yardımla' : 'Doğru!') : `Doğru cevap ${q.dogru}`} <span>· {q.secenekler[q.dogru]}</span></b>
                 <p><Metin metin={q.cozum} /></p>
                 <small>{q.sayfa.length > 0 ? `Ders sunumu · s. ${q.sayfa.join(', ')}` : ''}{q.sayfa.length > 0 && aciklanan.length < 5 ? ' · ' : ''}{aciklanan.length < 5 ? 'Diğer seçeneklerin açıklamasını dinlemek için üzerine dokun.' : ''}</small>
+                {ogrenVar && !ogrenAcik && (
+                  <button type="button" className="sc-ogren-b" onClick={() => setOgrenAcik(true)}><BookOpenText aria-hidden />Bu bilgiyi Öğren'de gör</button>
+                )}
               </div>
             )}
 
@@ -708,6 +727,9 @@ export const SoruCozucu: React.FC<Props> = ({
         )}
       </main>
 
+      {ogrenAcik && ogrenVar && ders && devamSor === null && !bitti && (
+        <OgrenYeri brans={brans} kod={kod} tur="s" id={q?.no} baglam={`Soru ${i + 1}`} onKapat={() => setOgrenAcik(false)} />
+      )}
       {engel && ders && devamSor === null && !bitti && (
         <button type="button" className="sc-baslat" onClick={() => { setEngel(false); oynatDuraklat(); }}>
           <span><Play aria-hidden /></span><b>Sesi başlat</b><small>Tarayıcı sesi başlatmak için bir dokunuş istiyor</small>

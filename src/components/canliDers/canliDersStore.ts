@@ -636,7 +636,7 @@ function msMeta() {
     navigator.mediaSession.metadata = new MediaMetadata({
       title: `${st.no ? `${st.no} · ` : ''}${st.baslik}`,
       artist: 'MeDSor',
-      album: `Canlı ders${v?.ses ? ` · ${v.ses}` : ''}`,
+      album: `Sesli ders${v?.ses ? ` · ${v.ses}` : ''}`,
       artwork: [
         { src: '/icons/icon-192x192.png?v=9', sizes: '192x192', type: 'image/png' },
         { src: '/icons/icon-512x512.png?v=9', sizes: '512x512', type: 'image/png' },

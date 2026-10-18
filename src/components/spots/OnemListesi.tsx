@@ -7,12 +7,13 @@ import { Sheet } from '../ui/Sheet';
 import { kucuk, azHareket } from './spotsShared';
 import { OnemMadde, Metin, type Sekme } from './onem/OnemMadde';
 import {
-  ADAY, BANTLAR, HEPSI, TERCIH_KEY, TUR_AD, bantOf, dersAdi, dersVar, dersYukle, dizinYukle, ilkSayfa, ogrenildiAyarla,
+  ADAY, BANTLAR, HEPSI, ONEM_SON_KEY, TERCIH_KEY, TUR_AD, bantOf, dersAdi, dersVar, dersYukle, dizinYukle, ilkSayfa, ogrenildiAyarla,
   tercihOku, tercihYaz, useOgrenilen, type Aday, type Ders, type Dizin, type DizinDers, type Madde, type Tur,
 } from './onem/onemVeri';
 import type { EkranKapsami } from './onem/OnemPdfPenceresi';
 import { asistanDersVar, asistanDersleri } from './asistan/asistanVeri';
 import { cozucuDizinYukle } from './cozucu/cozucuVeri';
+import { cozucuyaGit } from './spotsYol';
 import { bransTanim, type Brans, type BransTanim } from './brans';
 import { getAsistanSureGruplari, dk } from './sure/spotsSureVeri';
 import { SpotsSureDiyalog } from './sure/SpotsSureDiyalog';
@@ -218,9 +219,13 @@ export const OnemListesi: React.FC<{ brans?: Brans }> = ({ brans = 'patoloji' })
   }, [dizin, kod, cokDers, bt.sinavKurali]);
   useEffect(() => {
     if (!kod) return;
-    try { localStorage.setItem(DERS_KEY, kod); } catch { /* özel pencere */ }
+    try {
+      localStorage.setItem(DERS_KEY, kod);
+      const d = dizin?.dersler.find((x) => x.kod === kod);
+      if (d) localStorage.setItem(ONEM_SON_KEY, JSON.stringify({ brans, kod, baslik: d.baslik, no: d.no }));
+    } catch { /* özel pencere */ }
     urlYaz({ ders: kod });
-  }, [kod]); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [kod, dizin]); // eslint-disable-line react-hooks/exhaustive-deps
   // seçilen ders(ler)in dosyası; çok dersli görünümler bütün dersleri paralel indirir
   useEffect(() => {
     if (!dizin || !kod) return;
@@ -414,16 +419,11 @@ export const OnemListesi: React.FC<{ brans?: Brans }> = ({ brans = 'patoloji' })
   ];
 
   const baslikAdi = kod === ADAY ? 'Sınav adayları' : kod === HEPSI ? bt.hepsi : dizinDers ? dizinDers.baslik : '';
-  // bu dersin sesli soru çözücüsü (setlere bölünmüşse ilk set); görünüm değişimi ExamSpotsView'ın popstate dinleyicisiyle
+  // bu dersin sesli soru çözücüsü (setlere bölünmüşse ilk set) → /soru-cozucu
   const cozucuyuAc = (k: string) => {
     cozucuDizinYukle(brans).then((c) => {
       const hedef = c.dersler.find((x) => x.kod === k) || c.dersler.find((x) => x.kod.startsWith(`${k}-`));
-      const u = new URL(location.href);
-      ['m', 'asistan'].forEach((x) => u.searchParams.delete(x));
-      u.searchParams.set('gorunum', 'cozucu');
-      if (hedef) { u.searchParams.set('ders', hedef.kod); u.searchParams.set('coz', '1'); } else u.searchParams.delete('ders');
-      history.pushState(history.state, '', u.pathname + u.search + u.hash);
-      window.dispatchEvent(new PopStateEvent('popstate'));
+      cozucuyaGit({ brans, ders: hedef?.kod, coz: hedef ? '1' : null });
     }).catch(() => {});
   };
 
