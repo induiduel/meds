@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Sheet } from './ui/Sheet';
 import { X, AlertCircle, CheckCircle2, Eye, EyeOff, ShieldCheck, ArrowLeft, Loader2, Mail, Lock, User, Hash, Activity } from 'lucide-react';
 import { Segmented } from './ui/kit';
-import { registerWithEmailPassword, loginWithEmailPassword, googleSignIn, ADMIN_EMAIL, AppUser } from '../services/auth';
+import { registerWithEmailPassword, loginWithEmailPassword, googleSignIn, sendPasswordReset, ADMIN_EMAIL, AppUser } from '../services/auth';
 import { validateNamePolicy } from '../utils/namePolicy';
 import { useAppearance } from '../utils/appearance';
 import { AuthCardV12 } from './v12/AuthV12';
@@ -111,11 +111,30 @@ export const UserAuthModal: React.FC<UserAuthModalProps> = ({
   const onLogin = async (e: React.FormEvent) => {
     e.preventDefault();
     setError(null);
+    setSuccess(null);
     setBusy('form');
     try {
       finish(await loginWithEmailPassword(email, password));
     } catch (err: any) {
       setError(err?.message || 'Giriş yapılamadı.');
+    } finally {
+      setBusy('');
+    }
+  };
+
+  const onResetPassword = async () => {
+    setError(null);
+    setSuccess(null);
+    if (!email.trim() || !email.includes('@')) {
+      setError('Şifre bağlantısı göndermek için önce üstteki E-posta alanını doldurun.');
+      return;
+    }
+    setBusy('form');
+    try {
+      await sendPasswordReset(email);
+      setSuccess(`${email.trim()} adresine şifre belirleme / sıfırlama bağlantısı gönderildi. Gelen kutunuzu ve spam klasörünü kontrol edin.`);
+    } catch (err: any) {
+      setError(err?.message || 'Şifre sıfırlama e-postası gönderilemedi.');
     } finally {
       setBusy('');
     }
@@ -157,7 +176,7 @@ export const UserAuthModal: React.FC<UserAuthModalProps> = ({
     }
   };
 
-  const disabled = busy !== '' || Boolean(success);
+  const disabled = busy !== '';
   const inSheet = !embedded;
 
   /** Yüzen etiketli, ikonlu alan: boşken etiket yer tutucu gibi durur, odak/doluyken yukarı küçülür. */
@@ -212,7 +231,7 @@ export const UserAuthModal: React.FC<UserAuthModalProps> = ({
             className="au-seg"
             label="Giriş ya da kayıt"
             value={mode === 'register' ? 'register' : 'login'}
-            onChange={(m) => { setMode(m); setError(null); }}
+            onChange={(m) => { setMode(m); setError(null); setSuccess(null); }}
             options={[{ value: 'login', label: 'Giriş yap' }, { value: 'register', label: 'Kayıt ol' }]}
           />
 
@@ -236,6 +255,18 @@ export const UserAuthModal: React.FC<UserAuthModalProps> = ({
               auto: mode === 'login' ? 'current-password' : 'new-password', end: passToggle,
               hint: mode === 'register' ? (password.length >= 6 ? '✓ Yeterli uzunlukta' : 'En az 6 karakter') : undefined,
             })}
+            {mode === 'login' && (
+              <div className="flex justify-end -mt-1 mb-1">
+                <button
+                  type="button"
+                  onClick={onResetPassword}
+                  disabled={disabled}
+                  className="text-xs font-medium underline opacity-80 hover:opacity-100"
+                >
+                  Şifremi unuttum / Şifre tanımla
+                </button>
+              </div>
+            )}
             <button type="submit" disabled={disabled} className="au-submit">
               {busy === 'form' ? <Loader2 className="au-spin" aria-hidden /> : null}
               {mode === 'login' ? 'Giriş yap' : 'Kayıt ol'}
@@ -268,7 +299,7 @@ export const UserAuthModal: React.FC<UserAuthModalProps> = ({
         <i aria-hidden>·</i>
         <a href="/policy" target="_blank" rel="noopener noreferrer">Gizlilik</a>
         <i aria-hidden>·</i>
-        <button type="button" onClick={() => { setMode(mode === 'admin' ? 'login' : 'admin'); setError(null); }}>
+        <button type="button" onClick={() => { setMode(mode === 'admin' ? 'login' : 'admin'); setError(null); setSuccess(null); }}>
           {mode === 'admin' ? (<><ArrowLeft aria-hidden /> Öğrenci girişi</>) : 'Yönetici'}
         </button>
       </footer>
@@ -278,7 +309,7 @@ export const UserAuthModal: React.FC<UserAuthModalProps> = ({
   const body = v12 ? (
     <AuthCardV12
       mode={mode}
-      onMode={(m) => { setMode(m); setError(null); }}
+      onMode={(m) => { setMode(m); setError(null); setSuccess(null); }}
       embedded={embedded}
       closable={!embedded && !mandatory}
       onClose={onClose}
@@ -303,6 +334,7 @@ export const UserAuthModal: React.FC<UserAuthModalProps> = ({
       onLogin={onLogin}
       onRegister={onRegister}
       onAdminPassword={onAdminPassword}
+      onResetPassword={onResetPassword}
     />
   ) : card;
 

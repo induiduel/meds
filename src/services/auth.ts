@@ -6,6 +6,10 @@ import {
   signInWithRedirect,
   getRedirectResult,
   GoogleAuthProvider, 
+  EmailAuthProvider,
+  linkWithCredential,
+  sendPasswordResetEmail,
+  updatePassword,
   onAuthStateChanged, 
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
@@ -377,13 +381,17 @@ export function authErrorMessage(err: any): string {
   const code = String(err?.code || '');
   const map: Record<string, string> = {
     'auth/operation-not-allowed': 'E-posta ile giriş şu an kapalı. Lütfen "Google ile giriş" kullanın.',
-    'auth/invalid-credential': 'E-posta ya da şifre hatalı.',
-    'auth/invalid-login-credentials': 'E-posta ya da şifre hatalı.',
-    'auth/wrong-password': 'E-posta ya da şifre hatalı.',
+    'auth/invalid-credential':
+      'E-posta ya da şifre hatalı. Bu e-postayla daha önce "Google ile devam et" kullandıysanız Google güvenlik gereği eski şifreyi devre dışı bırakır; "Google ile devam et" ile girebilir veya "Şifremi unuttum / Şifre tanımla" ile yeni şifre belirleyebilirsiniz.',
+    'auth/invalid-login-credentials':
+      'E-posta ya da şifre hatalı. Bu e-postayla daha önce "Google ile devam et" kullandıysanız "Google ile devam et" ile girebilir veya "Şifremi unuttum / Şifre tanımla" ile şifre belirleyebilirsiniz.',
+    'auth/wrong-password':
+      'E-posta ya da şifre hatalı. Daha önce Google ile giriş yaptıysanız "Google ile devam et" kullanabilir veya "Şifremi unuttum / Şifre tanımla" ile şifre belirleyebilirsiniz.',
     'auth/user-not-found': 'Bu e-postayla kayıtlı hesap yok. Önce kayıt olun.',
     'auth/email-already-in-use': 'Bu e-posta zaten kayıtlı. Giriş yapın ya da şifrenizi sıfırlayın.',
     'auth/invalid-email': 'E-posta adresi geçersiz.',
     'auth/weak-password': 'Şifre en az 6 karakter olmalı.',
+    'auth/requires-recent-login': 'Güvenlik için lütfen çıkış yapıp tekrar giriş yaptıktan sonra şifrenizi güncelleyin veya şifre sıfırlama e-postası gönderin.',
     'auth/too-many-requests': 'Çok fazla deneme yapıldı. Birkaç dakika sonra tekrar deneyin.',
     'auth/network-request-failed': 'Bağlantı kurulamadı. İnternetinizi kontrol edip tekrar deneyin.',
     'auth/unauthorized-domain': 'Bu adresten giriş yetkili değil. Lütfen nofrostlife.com.tr üzerinden girin.',
@@ -391,6 +399,56 @@ export function authErrorMessage(err: any): string {
   };
   return map[code] || 'Giriş yapılamadı. Lütfen tekrar deneyin.';
 }
+
+/**
+ * E-posta adresine şifre sıfırlama / tanımlama bağlantısı gönderir.
+ * Google ile giriş yapıldıktan sonra devre dışı kalan e-posta+şifre girişini yeniden aktif etmek için de kullanılır.
+ */
+export const sendPasswordReset = async (email: string): Promise<void> => {
+  const cleanEmail = email.trim().toLowerCase();
+  if (!cleanEmail || !cleanEmail.includes('@')) {
+    throw new Error('Şifre sıfırlama bağlantısı için lütfen üstteki alana e-posta adresinizi yazın.');
+  }
+  try {
+    await sendPasswordResetEmail(auth, cleanEmail);
+  } catch (err: any) {
+    throw new Error(authErrorMessage(err));
+  }
+};
+
+/**
+ * Açık oturumdaki hesaba (Google ile girilmiş olsa bile) doğrudan e-posta şifresi bağlar veya mevcut şifreyi günceller.
+ * Böylece kullanıcı aynı hesaba hem Google ile hem de e-posta + şifre ile giriş yapabilir.
+ */
+export const setOrUpdateAccountPassword = async (newPassword: string): Promise<void> => {
+  const cleanPass = newPassword.trim();
+  if (cleanPass.length < 6) {
+    throw new Error('Şifreniz en az 6 karakter olmalıdır.');
+  }
+  const fbUser = auth.currentUser;
+  if (!fbUser || !fbUser.email) {
+    throw new Error('Şifre belirlemek için önce giriş yapmalısınız.');
+  }
+  const hasPasswordProvider = fbUser.providerData.some((p) => p?.providerId === 'password');
+  try {
+    if (!hasPasswordProvider) {
+      const cred = EmailAuthProvider.credential(fbUser.email, cleanPass);
+      await linkWithCredential(fbUser, cred);
+    } else {
+      await updatePassword(fbUser, cleanPass);
+    }
+  } catch (err: any) {
+    if (err?.code === 'auth/provider-already-linked' || err?.code === 'auth/credential-already-in-use') {
+      try {
+        await updatePassword(fbUser, cleanPass);
+        return;
+      } catch (innerErr: any) {
+        throw new Error(authErrorMessage(innerErr));
+      }
+    }
+    throw new Error(authErrorMessage(err));
+  }
+};
 
 /**
  * Sign in with Email and Password

@@ -39,6 +39,7 @@ export interface AuthCardV12Props {
   onLogin: (e: React.FormEvent) => void;
   onRegister: (e: React.FormEvent) => void;
   onAdminPassword: (e: React.FormEvent) => void;
+  onResetPassword?: () => void;
 }
 
 /**
@@ -142,7 +143,11 @@ export const AuthCardV12: React.FC<AuthCardV12Props> = (p) => {
                   ? p.password.length >= 6
                     ? (<><Check aria-hidden="true" /> Yeterli uzunlukta</>)
                     : 'En az 6 karakter'
-                  : undefined,
+                  : mode === 'login' && p.onResetPassword ? (
+                      <button type="button" className="e12-link" onClick={p.onResetPassword} disabled={disabled}>
+                        Şifremi unuttum / Şifre tanımla
+                      </button>
+                    ) : undefined,
               hintOk: mode === 'register' && p.password.length >= 6,
             })}
             <button type="submit" className="e12-btn is-pri is-lg is-block" disabled={disabled}>

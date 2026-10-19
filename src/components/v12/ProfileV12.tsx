@@ -24,7 +24,7 @@ import {
   UserRound,
   X,
 } from 'lucide-react';
-import { AppUser, updateUserProfileData } from '../../services/auth';
+import { AppUser, updateUserProfileData, setOrUpdateAccountPassword, sendPasswordReset } from '../../services/auth';
 import { pwaService } from '../../services/pwaService';
 import { QuestionItem } from '../../types';
 import { validateNamePolicy } from '../../utils/namePolicy';
@@ -884,9 +884,48 @@ const AccountPanel: React.FC<{
   onAppearance: () => void;
 }> = ({ currentUser, isAdmin, ed, nameRef, photo, onPickPhoto, onRemovePhoto, onOpenAuth, onLogout, onOpenAdmin, onAppearance }) => {
   const nameErr = !!ed.error && /isim|ad/i.test(ed.error);
+  const [newPass, setNewPass] = useState('');
+  const [passBusy, setPassBusy] = useState(false);
+  const [passErr, setPassErr] = useState<string | null>(null);
+  const [passOk, setPassOk] = useState<string | null>(null);
+
+  const onSavePassword = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setPassErr(null);
+    setPassOk(null);
+    setPassBusy(true);
+    try {
+      await setOrUpdateAccountPassword(newPass);
+      setNewPass('');
+      setPassOk('Şifreniz kaydedildi. Artık hesabınıza hem Google ile hem de e-posta + şifrenizle giriş yapabilirsiniz.');
+      toast.success('Şifre kaydedildi', 'Hem Google hem e-posta + şifre ile giriş aktif.');
+    } catch (err: any) {
+      setPassErr(err?.message || 'Şifre kaydedilemedi.');
+    } finally {
+      setPassBusy(false);
+    }
+  };
+
+  const onSendResetMail = async () => {
+    if (!currentUser?.email) return;
+    setPassErr(null);
+    setPassOk(null);
+    setPassBusy(true);
+    try {
+      await sendPasswordReset(currentUser.email);
+      setPassOk(`${currentUser.email} adresine şifre belirleme / sıfırlama bağlantısı gönderildi.`);
+      toast.success('E-posta gönderildi', `${currentUser.email} gelen kutusunu kontrol edin.`);
+    } catch (err: any) {
+      setPassErr(err?.message || 'Şifre bağlantısı gönderilemedi.');
+    } finally {
+      setPassBusy(false);
+    }
+  };
+
   return (
     <div role="tabpanel" id="u12-panel-hesap" aria-labelledby="u12-tab-hesap" className="u12-stack">
       {currentUser ? (
+        <>
         <form
           className="u12-panel"
           onSubmit={(e) => {
@@ -962,6 +1001,46 @@ const AccountPanel: React.FC<{
             <button type="submit" className="u12-btn is-pri" disabled={!ed.dirty || ed.saving} aria-busy={ed.saving || undefined}>{ed.saving ? 'Kaydediliyor…' : 'Kaydet'}</button>
           </div>
         </form>
+
+        <form className="u12-panel" onSubmit={onSavePassword}>
+          <div className="u12-panel-h">
+            <h2 className="u12-h2 u12-grow">Şifre belirle / değiştir</h2>
+          </div>
+          <div className="u12-form">
+            <div>
+              <label className="u12-label" htmlFor="u12-new-pass">Yeni e-posta şifresi (en az 6 karakter)</label>
+              <div className="u12-field">
+                <input
+                  id="u12-new-pass"
+                  type="password"
+                  value={newPass}
+                  autoComplete="new-password"
+                  placeholder="Yeni şifreniz"
+                  disabled={passBusy}
+                  onChange={(e) => setNewPass(e.target.value)}
+                />
+              </div>
+              <span className="u12-hint">
+                Google ile giriş yaptığınızda Firebase güvenlik gereği eski şifreyi kaldırır. Buradan yeni şifre tanımlayarak hesabınıza hem Google ile hem de e-posta + şifre ile giriş yapabilirsiniz.
+              </span>
+            </div>
+          </div>
+          {passErr && (
+            <div className="u12-alert" role="alert"><AlertCircle aria-hidden /><span>{passErr}</span></div>
+          )}
+          {passOk && (
+            <div className="u12-panel-f"><span className="u12-hint is-ok u12-saved" role="status"><CheckCircle2 aria-hidden />{passOk}</span></div>
+          )}
+          <div className="u12-panel-f">
+            <button type="button" className="u12-btn is-ghost" onClick={onSendResetMail} disabled={passBusy}>
+              E-postama şifre bağlantısı gönder
+            </button>
+            <button type="submit" className="u12-btn is-pri" disabled={passBusy || newPass.trim().length < 6}>
+              {passBusy ? 'İşleniyor…' : 'Şifreyi kaydet'}
+            </button>
+          </div>
+        </form>
+        </>
       ) : (
         <section className="u12-panel">
           <Empty icon={UserRound} title="Giriş yapmadın" body="Katkıların adınla ve fotoğrafınla görünsün. Görünüm ayarları girişsiz de çalışır.">
