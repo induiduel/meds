@@ -200,16 +200,9 @@
 .cd-secenek-arac .kt-btn.is-bitti, .cd-ders-takip .kt-btn.is-bitti { color: var(--color-ok); }
 .cd-secenek-arac .kt-btn.is-tekrar, .cd-ders-takip .kt-btn.is-tekrar { color: var(--color-accent); }
 
-/* Sesli ders, telefon: eylem şeridinde oynat düğmesiyle eş genişlikte etiketli düğme ("Liste" etiketi kuralı uygulanmaz) */
+/* Sesli ders, telefon: satırda yalnız simge (2026-10-20 yeniden düzen) */
 @media (max-width: 640px) {
   .cd-satir-ana:not(.cd-lm-satir) > .cd-satir-eylem > button.kt-isaret[aria-pressed]::after { content: none; }
-  .cd-satir-ana:not(.cd-lm-satir) > .cd-satir-eylem > .kt-isaret {
-    display: inline-flex; align-items: center; justify-content: center; gap: 6px; width: auto; height: 38px; min-width: 0;
-    border-radius: 12px; font: 600 13px var(--font-sans);
-  }
-  .cd-satir-ana:not(.cd-lm-satir) > .cd-satir-eylem > .kt-isaret svg { width: 16px; height: 16px; }
-  .cd-satir-ana:not(.cd-lm-satir) > .cd-satir-eylem > .kt-isaret .kt-isaret-l { display: inline; }
-  .cd-satir-ana:not(.cd-lm-satir) > .cd-satir-eylem > .kt-isaret.is-bitti { background: var(--color-ok-soft); border-color: transparent; color: var(--color-ok); }
 }
 
 /* Modül sekmeleri: dar kapta kısa ad (ör. "Etkileşimli") — kesik ad görünmesin */

@@ -813,18 +813,25 @@
 .cd-serit .cd-kat-cipler > button.is-on { background: var(--color-ink); border-color: var(--color-ink); color: var(--color-white); }
 
 .cd-liste .cd-satirlar { border-radius: 16px; }
-.cd-liste .cd-satir-ana { grid-template-columns: 44px 30px minmax(0, 1fr) auto auto; gap: 12px; padding: 10px 14px; }
+.cd-liste .cd-satir-ana:not(.cd-lm-satir) { grid-template-columns: 44px 30px minmax(0, 1fr) auto auto; gap: 12px; padding: 10px 14px; }
 .cd-liste .cd-satir-ana > .cd-btn.is-yuvarlak { width: 44px; height: 44px; border-radius: 50%; background: var(--color-field); border-color: transparent; }
 .cd-liste .cd-satir-ana > .cd-btn.is-yuvarlak.is-on { background: var(--color-accent); color: var(--color-on-accent, #fff); }
 .cd-liste .cd-satir.is-bitti .cd-satir-ana > .cd-btn.is-yuvarlak:not(.is-on) { background: color-mix(in srgb, var(--color-ok) 16%, transparent); color: var(--color-ok); }
 .cd-liste .cd-no { width: 30px; height: auto; background: none; justify-content: end; color: var(--color-ink-3); font-size: 13px; }
 .cd-liste .cd-satir.is-caliyor .cd-no { background: none; color: var(--color-accent); }
 .cd-liste .cd-satir-ad b { font-size: 15px; }
+.cd-satir-sure-m { display: none; }
 .cd-satir-sure { min-width: 52px; text-align: right; font-size: 13.5px; font-weight: 500; color: var(--color-ink-2); font-variant-numeric: tabular-nums; }
 @media (max-width: 560px) {
   .cd-liste-baslik h1 { font-size: 25px; }
-  .cd-liste .cd-satir-ana { grid-template-columns: 44px minmax(0, 1fr) auto auto; gap: 10px; padding: 8px 10px; }
+  .cd-liste .cd-satir-ana:not(.cd-lm-satir) { grid-template-columns: 44px minmax(0, 1fr) auto auto; gap: 10px; padding: 8px 10px; }
   .cd-liste .cd-no, .cd-satir-sure { display: none; }
+  .cd-satir-sure-m { display: inline; }
+  .cd-liste .cd-satir-ana:not(.cd-lm-satir) { grid-template-areas: none; }
+  .cd-liste .cd-satir-ana:not(.cd-lm-satir) > * { grid-area: auto; align-self: center; }
+  .cd-liste .cd-satir-ana:not(.cd-lm-satir) > .cd-satir-eylem { display: flex; gap: 4px; padding: 0; }
+  .cd-liste .cd-satir-ana:not(.cd-lm-satir) > .cd-satir-diger .cd-btn { width: 40px; height: 40px; }
+  .cd-liste .cd-satir-eylem .kt-isaret { width: 40px; height: 40px; }
   .cd-serit .cd-gorunum { width: 100%; }
   .cd-serit .cd-gorunum > button { flex: 1; padding: 0 8px; }
 }
