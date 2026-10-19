@@ -23,6 +23,7 @@ import { YildizliParagraflarPanel } from '../study/YildizliParagraflarModal';
 import { bittiMi, sureYaz, useKonuKaydi, useTakip } from '../../services/calismaTakip';
 import { KonuDugmeleri, KonuIsaret, KonuSureEtiketi } from '../takip/KonuTakip';
 import '../../styles/canli-ders.css';
+import CihazdaIsaret from '../cevrimdisi/CihazdaIsaret';
 
 const fold = (s: string) =>
   s.toLocaleLowerCase('tr').normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/ı/g, 'i').replace(/\s+/g, ' ').trim();
@@ -430,6 +431,7 @@ const DersSatiri = React.memo(function DersSatiri({ d, k }: { d: CdListeDers; k?
             <span className="cd-satir-sure-m">{fmtSure(v.sureSn)}</span>
             {sesN > 1 && <span>{sesN} ses</span>}
             <SatirIlerleme d={d} k={k} dur={v.sureSn} />
+            <CihazdaIsaret paket={`sesli:${d.key}`} />
             <KonuSureEtiketi modul="sesli" konu={d.key} />
           </small>
         </a>

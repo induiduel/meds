@@ -252,6 +252,10 @@ export const OfflineDatabaseModal: React.FC<OfflineDatabaseModalProps> = ({ isOp
       onClose={onClose}
       width={isAdmin ? 'max-w-lg' : 'max-w-md'}
     >
+      <button type="button" className="ui-btn ui-btn-primary" style={{ width: '100%', marginBottom: 12 }}
+        onClick={() => { onClose(); void import('../../router').then((m) => m.navigateTo('/cevrimdisi')); }}>
+        Çevrimdışı merkezini aç — dersleri seç, indir, yönet
+      </button>
       <div className="of">{isAdmin ? <AdminView o={o} p={p} /> : <StudentView o={o} p={p} />}</div>
     </Dialog>
   );

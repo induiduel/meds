@@ -21,6 +21,7 @@ import { bittiMi, useKonuSayaci, useTakip } from '../../services/calismaTakip';
 import { KonuDugmeleri, KonuSureEtiketi } from '../takip/KonuTakip';
 import { onemAsistanBasaAl } from '../takip/basaAl';
 import '../../styles/onem-listesi.css';
+import CihazdaIsaret from '../cevrimdisi/CihazdaIsaret';
 
 const OnemPdfPenceresi = React.lazy(() => import('./onem/OnemPdfPenceresi'));
 const PatolojiAsistan = React.lazy(() => import('./asistan/PatolojiAsistan'));
@@ -505,6 +506,7 @@ export const OnemListesi: React.FC<{ brans?: Brans }> = ({ brans = 'patoloji' })
                   </div>
                 </div>
                 <div className="on-hero-takip">
+                  <CihazdaIsaret paket={`onem:${brans}:${dizinDers.kod}`} />
                   <KonuSureEtiketi modul="onem" konu={`${brans}/${dizinDers.kod}`} />
                   <KonuDugmeleri modul="onem" konu={`${brans}/${dizinDers.kod}`} ad={dersAdi(dizinDers)} turetilen={dersOgr >= dizinDers.madde}
                     onTekrar={() => {

@@ -25,6 +25,7 @@ import {
 import { KonuDugmeleri, KonuSureEtiketi } from '../takip/KonuTakip';
 import { ogrenTakipId } from '../takip/ogrenTakipId';
 import '../../styles/v12/learn-library.css';
+import CihazdaIsaret from '../cevrimdisi/CihazdaIsaret';
 
 export interface LearnLibraryV12Props {
   decks: DeckCatalogEntry[];
@@ -437,7 +438,7 @@ export const LearnLibraryV12: React.FC<LearnLibraryV12Props> = ({ decks: all, pr
                               {deckName(d, false)}
                             </button>
                             {metaOf(d)}
-                            <KonuSureEtiketi modul="ogren" konu={ogrenTakipId(d.id)} />
+                            <CihazdaIsaret paket={`ogren:${d.id}`} /><KonuSureEtiketi modul="ogren" konu={ogrenTakipId(d.id)} />
                           </span>
                           <Prog pct={s.pct} done={s.status === 'done'} />
                           {takipDugme(d, s)}
@@ -455,7 +456,7 @@ export const LearnLibraryV12: React.FC<LearnLibraryV12Props> = ({ decks: all, pr
                             {deckName(d, false)}
                           </button>
                           {metaOf(d)}
-                          <KonuSureEtiketi modul="ogren" konu={ogrenTakipId(d.id)} />
+                          <CihazdaIsaret paket={`ogren:${d.id}`} /><KonuSureEtiketi modul="ogren" konu={ogrenTakipId(d.id)} />
                           <span className="l12-tile-f">
                             <Prog pct={s.pct} done={s.status === 'done'} />
                             {takipDugme(d, s)}

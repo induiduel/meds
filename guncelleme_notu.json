@@ -1,10 +1,11 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 42,
-  "baslik": "Çıkmış Sorular daha hızlı açılıyor",
+  "onem": 43,
+  "baslik": "Çevrimdışı mod: dersleri cihaza indir",
   "maddeler": [
-    "Çıkmış Sorular ilk açılışta artık donmuyor; sorular arka planda indirilip cihaza kaydediliyor.",
-    "Sunucu çıkmış listesini daha az yükle hazırlıyor; sayfalar daha hızlı yanıt veriyor.",
-    "Giriş ekranında gereksiz müzik listesi isteği kaldırıldı."
+    "Yeni Çevrimdışı sayfası: sesli dersler, soru çözücü, en önemliler, alternatif çözücü, etkileşimli dersler ve soruları ders ders indir, güncelle, sil.",
+    "İndirilen dersler internet yokken ya da bağlantı yavaşken aynı hızla açılır; sesler cihazdan çalar.",
+    "Ders listelerinde indirilen derslerin yanında \"Cihazda\" işareti görünür.",
+    "Çözdüğün sorular ve çalışma süren bağlantı gelince kendiliğinden eşitlenir."
   ]
 }

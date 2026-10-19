@@ -22,6 +22,7 @@ import { disciplineGroup, type ArchiveFilter } from './LearnHub';
 import '../../styles/learn-v10.css';
 import { KonuIsaret } from '../takip/KonuTakip';
 import { ogrenTakipId } from '../takip/ogrenTakipId';
+import CihazdaIsaret from '../cevrimdisi/CihazdaIsaret';
 
 export type Progress = Record<string, { last?: number; seen?: number[] } | undefined>;
 export type Status = 'all' | 'active' | 'done';
@@ -402,6 +403,7 @@ export const LearnLibrary: React.FC<{
                         {s.status === 'done' ? <><Check aria-hidden />Bitti</> : s.status === 'active' ? `%${s.pct}` : 'Başla'}
                       </span>
                     </button>
+                    <CihazdaIsaret paket={`ogren:${d.id}`} />
                     <KonuIsaret modul="ogren" konu={ogrenTakipId(d.id)} ad={deckName(d, false)} turetilen={s.status === 'done'} />
                     {pdf ? (
                       <button type="button" className="lv-card-pdf" onClick={() => onOpen(d.id, true)} title="Ders slaytını (PDF) aç" aria-label={`${deckName(d)} slayt PDF'ini aç`}>

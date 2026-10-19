@@ -27,6 +27,7 @@ import { toast } from '../ui/Toast';
 import { navigateTo, pathFor } from '../../router';
 import '../../styles/soru-cozucu.css';
 import '../../styles/alternatif-cozucu.css';
+import CihazdaIsaret from '../cevrimdisi/CihazdaIsaret';
 
 /**
  * Patoloji alternatif sesli soru çözücü (/alternatif-cozucu).
@@ -1796,6 +1797,7 @@ const AlternatifCozucuView: React.FC = () => {
                   </button>
                 )}
                 <span className="scs-row-takip">
+                  <CihazdaIsaret paket={`alt:${d.kod}`} />
                   <KonuSureEtiketi modul="cozucu" konu={`patoloji/${d.kod}`} />
                   <KonuDugmeleri
                     kucuk

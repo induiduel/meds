@@ -8,6 +8,7 @@ import { SpotsSureDiyalog } from '../sure/SpotsSureDiyalog';
 import { useSpotCozucuStats, fmtSureDk } from '../../../services/spotCozucuIstatistik';
 import { navigateTo, pathFor } from '../../../router';
 import '../../../styles/soru-cozucu.css';
+import CihazdaIsaret from '../../cevrimdisi/CihazdaIsaret';
 
 /**
  * Soru çözücü (/soru-cozucu?brans=…, başlangıç ekranında branş seçildikten sonra): ders/set listesi + ilerleme. Ders
@@ -147,6 +148,7 @@ export const SoruCozucuSayfa: React.FC<{ brans?: Brans }> = ({ brans = 'patoloji
                 {!!d.cikmis && <button type="button" onClick={() => ac(d.kod, 'cikmis')}><History aria-hidden />Yalnız çıkmışlar · {d.cikmis}</button>}
                 {y > 0 && <button type="button" onClick={() => ac(d.kod, 'yanlis')}><RotateCcw aria-hidden />Yanlışlarım · {y}</button>}
                 <span className="scs-row-takip">
+                  <CihazdaIsaret paket={`cozucu:${brans}:${d.kod}`} />
                   <KonuSureEtiketi modul="cozucu" konu={`${brans}/${d.kod}`} />
                   <KonuDugmeleri kucuk modul="cozucu" konu={`${brans}/${d.kod}`} ad={`${d.no}. ${d.baslik}${setAdi(d) ? `, ${setAdi(d)}` : ''}`} turetilen={o.tamam}
                     onTekrar={() => { ilerlemeYaz(d.kod, null); ac(d.kod); }} />

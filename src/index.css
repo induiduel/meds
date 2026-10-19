@@ -3709,3 +3709,8 @@ html.ui-v3 .ms-tooltip { border-radius: 8px; font-size: 12px; }
   color: var(--color-ink-2); font: inherit; font-size: 12px; font-variant-numeric: tabular-nums; cursor: pointer;
 }
 .tss-step.is-on { background: var(--color-accent); border-color: var(--color-accent); color: var(--color-on-accent); font-weight: 650; }
+
+/* Çevrimdışı merkezi: ders listelerindeki "Cihazda" işareti (components/cevrimdisi/CihazdaIsaret.tsx) */
+.cv-cihazda { display: inline-flex; align-items: center; gap: 3px; flex: none; padding: 1px 7px 1px 5px; border-radius: 999px; font: 600 11px/1.6 var(--font-sans); background: color-mix(in srgb, var(--color-ok) 14%, transparent); color: var(--color-ok); white-space: nowrap; vertical-align: middle; }
+.cv-cihazda svg { width: 12px; height: 12px; }
+.cv-cihazda.is-iniyor { background: var(--color-accent-soft); color: var(--color-accent); }
