@@ -1,10 +1,10 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 28,
-  "baslik": "Sesli Derste Dinamik Metin + PDF Boyut/Düzen Kontrolü & iOS Tam Ekran Kaydırma Düzeltmesi",
+  "onem": 29,
+  "baslik": "Gerçek Tam Ekran Açılışı ve Bölünmüş Ekran Kaydırma Kilidi Düzeltmesi",
   "maddeler": [
-    "Sesli derste Metin ve PDF bölmeleri arasına sürüklenebilir boyut ayırıcı (%20–%80), tek tıkla Yan Yana / Üst-Alt yön değiştirme, PDF ⇄ Metin yer değiştirme ve hızlı oran seçiciler eklendi.",
-    "iOS ve iPadOS cihazlarda bölünmüş ekranda metin veya PDF kaydırırken tam ekrandan otomatik çıkma sorunu tamamen giderildi.",
-    "Öğren bölünmüş ekranında PDF kaydırılırken komşu adımın sayfasına geçildiğinde PDF'in ilk sayfaya sıçrama sorunu düzeltildi."
+    "Tüm cihazlarda (iOS, iPadOS, Android ve Masaüstü) Tam Ekran düğmesinin gerçek tarayıcı tam ekranını (Fullscreen API) doğrudan açması sağlandı.",
+    "Tam ekran modunda bölünmüş ekranda (Metin + PDF) kaydırma yaparken arka plan belge köküne (html/body) kayma sızması ve üst/alt sınır aşımı kilitlenerek tam ekrandan kendiliğinden çıkma sorunu giderildi.",
+    "Sesli derste Metin + PDF bölünmüş ekran boyut (%20–%80) ve düzen (Yan Yana / Üst-Alt / PDF ⇄ Metin) kontrolleri eklendi."
   ]
 }

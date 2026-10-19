@@ -767,8 +767,10 @@ export const LessonPlayer: React.FC<LessonPlayerProps> = ({ deck, startAt, initi
       } else if (hadNativeFsRef.current) {
         hadNativeFsRef.current = false;
         // Dokunmatik cihazda kaydırma hareketi yüzünden tarayıcı native fullscreen'den çıktıysa tam ekran modunu koru
-        if (detectIosDevice() || wasRecentlyScrollingOrTouching()) {
+        if (wasRecentlyScrollingOrTouching()) {
           setImmersive(true);
+        } else {
+          document.documentElement.classList.remove('is-app-fullscreen');
         }
       }
     };
@@ -779,13 +781,12 @@ export const LessonPlayer: React.FC<LessonPlayerProps> = ({ deck, startAt, initi
       document.removeEventListener('webkitfullscreenchange', on);
     };
   }, []);
-  // Tam ekran tüm ekranı kaplar: iOS / iPadOS WebKit'te native fullscreen dikey kaydırma sırasında otomatik
-  // kapandığı için iOS/iPadOS'ta doğrudan kilitli CSS tam ekran (`immersive`) kullanılır.
   const toggleFullscreen = () => {
     setToolsOpen(false);
     const d = document as any;
     if (immersive) {
       setImmersive(false);
+      document.documentElement.classList.remove('is-app-fullscreen');
       if (d.fullscreenElement || d.webkitFullscreenElement || d.webkitCurrentFullScreenElement) {
         hadNativeFsRef.current = false;
         (d.exitFullscreen || d.webkitExitFullscreen || d.webkitCancelFullScreen)?.call(d)?.catch?.(() => {});
@@ -794,11 +795,13 @@ export const LessonPlayer: React.FC<LessonPlayerProps> = ({ deck, startAt, initi
     }
     if (d.fullscreenElement || d.webkitFullscreenElement || d.webkitCurrentFullScreenElement) {
       hadNativeFsRef.current = false;
+      document.documentElement.classList.remove('is-app-fullscreen');
       (d.exitFullscreen || d.webkitExitFullscreen || d.webkitCancelFullScreen)?.call(d)?.catch?.(() => {});
       return;
     }
     const el: any = document.documentElement;
-    const req = !detectIosDevice() && (el.requestFullscreen || el.webkitRequestFullscreen || el.webkitRequestFullScreen);
+    el.classList.add('is-app-fullscreen');
+    const req = el.requestFullscreen || el.webkitRequestFullscreen || el.webkitRequestFullScreen;
     if (!req) {
       setImmersive(true);
       try {

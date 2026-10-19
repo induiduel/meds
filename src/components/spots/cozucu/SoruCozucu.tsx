@@ -562,15 +562,24 @@ export const SoruCozucu: React.FC<Props> = ({
     return () => el.removeEventListener('wheel', tekerlek);
   }, [olcekAdim]);
   useEffect(() => {
+    let hadNative = false;
     const f = () => {
       const nativeFs = !!(document.fullscreenElement || (document as any).webkitFullscreenElement);
-      setTamEkran(nativeFs);
+      if (nativeFs) {
+        hadNative = true;
+        setTamEkran(true);
+      } else if (hadNative) {
+        hadNative = false;
+        setTamEkran(false);
+        document.documentElement.classList.remove('is-app-fullscreen');
+      }
     };
     document.addEventListener('fullscreenchange', f);
     document.addEventListener('webkitfullscreenchange', f);
     return () => {
       document.removeEventListener('fullscreenchange', f);
       document.removeEventListener('webkitfullscreenchange', f);
+      document.documentElement.classList.remove('is-app-fullscreen');
       const d = document as any;
       if (d.fullscreenElement || d.webkitFullscreenElement) {
         (d.exitFullscreen || d.webkitExitFullscreen)?.call(d)?.catch?.(() => {});
@@ -581,21 +590,25 @@ export const SoruCozucu: React.FC<Props> = ({
     const d = document as any;
     if (tamEkran) {
       setTamEkran(false);
+      document.documentElement.classList.remove('is-app-fullscreen');
       if (d.fullscreenElement || d.webkitFullscreenElement) {
         (d.exitFullscreen || d.webkitExitFullscreen)?.call(d)?.catch?.(() => {});
       }
       return;
     }
     setTamEkran(true);
-    const isIos = typeof CSS !== 'undefined' && typeof CSS.supports === 'function' && CSS.supports('-webkit-touch-callout', 'none');
-    if (isIos) return;
-    const el: any = kokRef.current?.closest('.sc') || document.documentElement;
-    const req = el?.requestFullscreen || el?.webkitRequestFullscreen;
+    document.documentElement.classList.add('is-app-fullscreen');
+    const el: any = document.documentElement;
+    const req = el?.requestFullscreen || el?.webkitRequestFullscreen || el?.webkitRequestFullScreen;
     if (req) {
       try {
         req.call(el, { navigationUI: 'hide' })?.catch?.(() => {});
       } catch {
-        /* iOS/iPadOS'ta CSS tam ekran (is-tam) kullanılır */
+        try {
+          req.call(el)?.catch?.(() => {});
+        } catch {
+          /* iOS/iPadOS'ta CSS tam ekran (is-tam) kullanılır */
+        }
       }
     }
   };

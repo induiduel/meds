@@ -12,7 +12,7 @@ import type { InteractiveDeck, SlideItem } from './InteractiveDeckView';
 import { getSlidePdfLocation } from '../../services/slidePdfMappingService';
 import { drivePreviewUrl, driveViewUrl, useDeckPdf, type DeckPdfFile } from '../../services/deckPdfService';
 import { PDF_SAVED_EVENT, removeSavedPdf, savePdfOffline, savedPdfObjectUrl } from '../../services/deviceStorage';
-import { isIosWebKit, wasRecentlyScrollingOrTouching } from '../../utils/fullscreen';
+import { wasRecentlyScrollingOrTouching } from '../../utils/fullscreen';
 import { toast } from '../ui/Toast';
 import './pdf/pdfDoc.css';
 
@@ -105,7 +105,7 @@ export const DeckPdfViewer: React.FC<DeckPdfViewerProps> = ({
   }, [query, searchOpen]);
   useEffect(() => setHitIdx(0), [debounced]);
 
-  /* --- tam ekran: görüntüleyicinin kendisi; API yoksa ya da iOS/iPadOS ise ekranı kaplayan katman --- */
+  /* --- tam ekran: görüntüleyicinin kendisi; API yoksa ekranı kaplayan katman --- */
   const [isFs, setIsFs] = useState(false);
   const [maxed, setMaxed] = useState(false);
   const hadNativeFsRef = useRef(false);
@@ -117,7 +117,7 @@ export const DeckPdfViewer: React.FC<DeckPdfViewerProps> = ({
         hadNativeFsRef.current = true;
       } else if (hadNativeFsRef.current) {
         hadNativeFsRef.current = false;
-        if (isIosWebKit() || wasRecentlyScrollingOrTouching()) {
+        if (wasRecentlyScrollingOrTouching()) {
           setMaxed(true);
         }
       }
@@ -146,7 +146,7 @@ export const DeckPdfViewer: React.FC<DeckPdfViewerProps> = ({
       return;
     }
     const el: any = rootRef.current;
-    const req = !isIosWebKit() && (el?.requestFullscreen || el?.webkitRequestFullscreen);
+    const req = el?.requestFullscreen || el?.webkitRequestFullscreen || el?.webkitRequestFullScreen;
     if (!req) return setMaxed(true);
     // İstek reddedilir ya da yanıtsız kalırsa (gömülü görünümler) ekranı kaplayan katmana geçilir
     let settled = false;
@@ -157,8 +157,16 @@ export const DeckPdfViewer: React.FC<DeckPdfViewerProps> = ({
         setMaxed(true);
       });
     } catch {
-      setMaxed(true);
-      return;
+      try {
+        const pr2 = req.call(el);
+        pr2?.then?.(() => (settled = true), () => {
+          settled = true;
+          setMaxed(true);
+        });
+      } catch {
+        setMaxed(true);
+        return;
+      }
     }
     window.setTimeout(() => {
       if (!settled && !d.fullscreenElement && !d.webkitFullscreenElement) setMaxed(true);

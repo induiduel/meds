@@ -8,7 +8,7 @@ import React, { Suspense, lazy, memo, useCallback, useEffect, useLayoutEffect, u
 import { ArrowLeftRight, ArrowUpDown, ChevronDown, ChevronLeft, ChevronUp, Check, Columns2, Copy, Crosshair, FileText, Maximize2, Minimize2, Minus, Pause, Play, Plus, RotateCcw, Rows2, ScrollText } from 'lucide-react';
 import { navigateTo, pathFor } from '../../router';
 import { driveViewUrl, useDeckPdf } from '../../services/deckPdfService';
-import { isIosWebKit, wasRecentlyScrollingOrTouching } from '../../utils/fullscreen';
+import { wasRecentlyScrollingOrTouching } from '../../utils/fullscreen';
 import {
   cdCumleAraligi, cdDetayBagla, cdDetayGetir, cdDurum, cdOynat, cdParagrafa, cdTercihVaryant, cdToggle, fmtSure, useCd, type CdDetay,
 } from './canliDersStore';
@@ -154,7 +154,7 @@ export default function CanliDersDers({ dersKey }: { dersKey: string }) {
     });
   }, []);
 
-  const [tamEkran, setTamEkran] = useState(false);
+  const [tamEkran, setTamEkran] = useState(() => document.documentElement.classList.contains('is-app-fullscreen'));
   const hadNativeFsRef = useRef(false);
   const [yazi, setYaziDurum] = useState<number>(() => { try { return Number(localStorage.getItem(YAZI_KEY)) || 20; } catch { return 20; } });
   const setYazi = (n: number | ((y: number) => number)) => setYaziDurum((y) => {
@@ -162,7 +162,7 @@ export default function CanliDersDers({ dersKey }: { dersKey: string }) {
     try { localStorage.setItem(YAZI_KEY, String(v)); } catch { /* yok */ }
     return v;
   });
-  const [oynaticiAcik, setOynaticiAcik] = useState(false);
+  const [oynaticiAcik, setOynaticiAcik] = useState(true);
   const [yildizModalAcik, setYildizModalAcik] = useState(false);
   const yildizSayisi = useYildizliSayisi();
   const rootRef = useRef<HTMLDivElement>(null);
@@ -233,14 +233,46 @@ export default function CanliDersDers({ dersKey }: { dersKey: string }) {
     return () => mq.removeEventListener('change', on);
   }, []);
 
-  // Tam ekran: kabuk (menü, üst çubuk, alt sekmeler) gizlenir; oynatıcı saklı, "Oynatıcı" ile açılır.
+  // Tam ekran: kabuk (menü, üst çubuk, alt sekmeler) gizlenir; oynatıcı ve ilerleme çubuğu varsayılan olarak açıktır.
   // iOS/iPadOS WebKit'te tarayıcı native fullscreen dikey kaydırmada otomatik çıktığı için yalnız masaüstü/Android'de istenir.
   useEffect(() => {
     const kok = document.documentElement;
     kok.classList.toggle('cd-tam-ekran', tamEkran);
     kok.classList.toggle('cd-tam-oynatici', tamEkran && oynaticiAcik);
+    window.dispatchEvent(new Event('cd:tam-ekran'));
     window.dispatchEvent(new Event('cd:dock'));
-    if (!tamEkran) return;
+    const onFs = () => {
+      const d = document as any;
+      const fs = Boolean(d.fullscreenElement || d.webkitFullscreenElement);
+      const appFs = kok.classList.contains('is-app-fullscreen');
+      if (fs) {
+        hadNativeFsRef.current = true;
+        if (!tamEkran) {
+          setOynaticiAcik(true);
+          setTamEkran(true);
+        }
+      } else if (hadNativeFsRef.current) {
+        hadNativeFsRef.current = false;
+        // Kaydırma sırasında tetiklenen tarayıcı tam ekran çıkışlarında sayfa içi tam ekranda kal!
+        if (!wasRecentlyScrollingOrTouching()) {
+          kok.classList.remove('is-app-fullscreen');
+          setTamEkran(false);
+        }
+      } else if (appFs && !tamEkran) {
+        setOynaticiAcik(true);
+        setTamEkran(true);
+      }
+    };
+    document.addEventListener('fullscreenchange', onFs);
+    document.addEventListener('webkitfullscreenchange', onFs);
+    window.addEventListener('medsor:fullscreenchange', onFs);
+    if (!tamEkran) {
+      return () => {
+        document.removeEventListener('fullscreenchange', onFs);
+        document.removeEventListener('webkitfullscreenchange', onFs);
+        window.removeEventListener('medsor:fullscreenchange', onFs);
+      };
+    }
     const onKey = (e: KeyboardEvent) => {
       const hedef = e.target as HTMLElement | null;
       if (!e.ctrlKey && !e.metaKey && !e.altKey && !hedef?.closest('input, textarea, [contenteditable="true"]')) {
@@ -248,28 +280,15 @@ export default function CanliDersDers({ dersKey }: { dersKey: string }) {
         if (e.key === '-') { e.preventDefault(); setYazi((y) => y - 2); return; }
       }
       if (e.key !== 'Escape' || document.querySelector('.cd-tur, .gu-ortu, [role="dialog"][aria-modal="true"]')) return;
+      kok.classList.remove('is-app-fullscreen');
       setTamEkran(false);
     };
-    const onFs = () => {
-      const d = document as any;
-      const fs = Boolean(d.fullscreenElement || d.webkitFullscreenElement);
-      if (fs) {
-        hadNativeFsRef.current = true;
-      } else if (hadNativeFsRef.current) {
-        hadNativeFsRef.current = false;
-        // iOS/iPadOS veya kaydırma sırasında tetiklenen tarayıcı tam ekran çıkışlarında sayfa içi tam ekranda kal!
-        if (!isIosWebKit() && !wasRecentlyScrollingOrTouching()) {
-          setTamEkran(false);
-        }
-      }
-    };
     document.addEventListener('keydown', onKey);
-    document.addEventListener('fullscreenchange', onFs);
-    document.addEventListener('webkitfullscreenchange', onFs);
     return () => {
       document.removeEventListener('keydown', onKey);
       document.removeEventListener('fullscreenchange', onFs);
       document.removeEventListener('webkitfullscreenchange', onFs);
+      window.removeEventListener('medsor:fullscreenchange', onFs);
     };
   }, [tamEkran, oynaticiAcik]);
   useEffect(() => () => {
@@ -280,28 +299,43 @@ export default function CanliDersDers({ dersKey }: { dersKey: string }) {
     }
   }, []);
   const tamEkranAc = () => {
-    setOynaticiAcik(false);
+    setOynaticiAcik(true);
     setTamEkran(true);
+    const kok = document.documentElement as HTMLElement & {
+      webkitRequestFullscreen?: () => Promise<void> | void;
+      webkitRequestFullScreen?: () => Promise<void> | void;
+    };
+    kok.classList.add('is-app-fullscreen', 'cd-tam-ekran', 'cd-tam-oynatici');
     try {
       window.scrollTo({ top: 0, left: 0, behavior: 'instant' as ScrollBehavior });
     } catch {
       window.scrollTo(0, 0);
     }
-    // iOS/iPadOS cihazlarda WebKit'in dikey kaydırmada tam ekrandan çıkma hatasını önlemek için sayfa içi kilitli tam ekran kullanılır
-    if (isIosWebKit()) return;
-    const kok = document.documentElement as HTMLElement & { webkitRequestFullscreen?: () => void };
-    try {
-      if (kok.requestFullscreen) void kok.requestFullscreen({ navigationUI: 'hide' }).catch(() => {});
-      else kok.webkitRequestFullscreen?.();
-    } catch { /* desteklenmiyor: yalnız sayfa içi tam ekran */ }
+    const req = kok.requestFullscreen || kok.webkitRequestFullscreen || kok.webkitRequestFullScreen;
+    if (req) {
+      try {
+        const res = req.call(kok, { navigationUI: 'hide' } as FullscreenOptions);
+        if (res && typeof (res as Promise<void>).catch === 'function') {
+          (res as Promise<void>).catch(() => {});
+        }
+      } catch {
+        try {
+          req.call(kok);
+        } catch {
+          /* desteklenmiyor: sayfa içi tam ekran (cd-tam-ekran) devrede kalır */
+        }
+      }
+    }
   };
   const tamEkranKapat = () => {
     hadNativeFsRef.current = false;
+    document.documentElement.classList.remove('is-app-fullscreen', 'cd-tam-ekran', 'cd-tam-oynatici');
     setTamEkran(false);
     const d = document as any;
     if (d.fullscreenElement || d.webkitFullscreenElement) {
       void (d.exitFullscreen || d.webkitExitFullscreen)?.call(d)?.catch?.(() => {});
     }
+    window.dispatchEvent(new CustomEvent('medsor:fullscreenchange', { detail: { active: false } }));
   };
 
   // Sayfa içinde sabit yükseklik: üst çubuk ile alt oynatıcı/sekme çubuğu arasını doldurur (bölmeler kendi kayar)
@@ -314,12 +348,15 @@ export default function CanliDersDers({ dersKey }: { dersKey: string }) {
       const r = el.getBoundingClientRect();
       const top = r.top + window.scrollY; // belge konumu: sayfa en üstteyken görünür üst kenar
       let alt = window.visualViewport?.height || window.innerHeight;
-      const dock = document.querySelector('.cd-dock');
-      if (dock) alt = Math.min(alt, dock.getBoundingClientRect().top);
+      const dock = document.querySelector<HTMLElement>('.cd-dock');
+      if (dock && getComputedStyle(dock).display !== 'none') {
+        const dr = dock.getBoundingClientRect();
+        if (dr.height > 0 && dr.top < alt) alt = Math.min(alt, dr.top);
+      }
       const tabs = document.querySelector<HTMLElement>('.s12-tabs, .sh-tabs');
-      if (tabs) {
+      if (tabs && getComputedStyle(tabs).display !== 'none') {
         const tr = tabs.getBoundingClientRect();
-        if (tr.height > 0 && tr.top < alt && getComputedStyle(tabs).display !== 'none') alt = Math.min(alt, tr.top);
+        if (tr.height > 0 && tr.top < alt) alt = Math.min(alt, tr.top);
       }
       const z = elementZoom(el) || 1;
       setYuk(Math.max(320, (alt - Math.max(0, top) - 10) / z));
@@ -328,6 +365,10 @@ export default function CanliDersDers({ dersKey }: { dersKey: string }) {
     olc();
     window.addEventListener('resize', plan);
     window.addEventListener('cd:dock', plan);
+    window.addEventListener('cd:tam-ekran', plan);
+    window.addEventListener('medsor:fullscreenchange', plan);
+    document.addEventListener('fullscreenchange', plan);
+    document.addEventListener('webkitfullscreenchange', plan);
     const ro = new ResizeObserver(plan);
     ro.observe(document.documentElement);
     document.documentElement.classList.add('cd-ders-acik');
@@ -335,6 +376,10 @@ export default function CanliDersDers({ dersKey }: { dersKey: string }) {
       window.clearTimeout(t);
       window.removeEventListener('resize', plan);
       window.removeEventListener('cd:dock', plan);
+      window.removeEventListener('cd:tam-ekran', plan);
+      window.removeEventListener('medsor:fullscreenchange', plan);
+      document.removeEventListener('fullscreenchange', plan);
+      document.removeEventListener('webkitfullscreenchange', plan);
       ro.disconnect();
       document.documentElement.classList.remove('cd-ders-acik');
     };
@@ -509,7 +554,7 @@ export default function CanliDersDers({ dersKey }: { dersKey: string }) {
                   </button>
                 </span>
               )}
-              {!oynaticiAcik && <TamEkranOynat dersKey={detay.key} onBasla={() => { cdOynat(detay); setBaglanti('bagli'); }} />}
+              {!oynaticiAcik && <TamEkranOynat dersKey={detay.key} onBasla={() => { cdOynat(detay); setBaglanti('bagli'); }} onAc={() => setOynaticiAcik(true)} />}
               <button
                 type="button"
                 className={`cd-btn is-ikon cd-tam-oyn${oynaticiAcik ? ' is-on' : ''}`}
@@ -698,15 +743,25 @@ function CdBolmeAyrac({
   );
 }
 
-/** Tam ekranda oynatıcı saklıyken başlıkta: oynat/duraklat + geçen süre */
-function TamEkranOynat({ dersKey, onBasla }: { dersKey: string; onBasla: () => void }) {
+/** Tam ekranda oynatıcı saklıyken başlıkta: oynat/duraklat + ilerleme çubuğu + geçen süre */
+function TamEkranOynat({ dersKey, onBasla, onAc }: { dersKey: string; onBasla: () => void; onAc?: () => void }) {
   const buDers = useCd((s) => s.key === dersKey);
   const playing = useCd((s) => s.key === dersKey && s.playing);
   const t = useCd((s) => (s.key === dersKey ? Math.floor(s.t) : 0));
   const dur = useCd((s) => (s.key === dersKey ? s.dur : 0));
+  const oran = dur > 0 ? Math.min(1, t / dur) : 0;
   return (
     <span className="cd-tam-ses">
-      <span className="cd-tam-ses-t" aria-hidden>{fmtSure(t)}{dur ? ` / ${fmtSure(dur)}` : ''}</span>
+      <button
+        type="button"
+        className="cd-tam-ses-bilgi"
+        onClick={onAc}
+        title="Oynatıcıyı aç"
+        aria-label={`İlerleme: ${fmtSure(t)}${dur ? ` / ${fmtSure(dur)}` : ''}. Oynatıcıyı açmak için dokun`}
+      >
+        <span className="cd-tam-ses-t" aria-hidden>{fmtSure(t)}{dur ? ` / ${fmtSure(dur)}` : ''}</span>
+        <span className="cd-ilerleme cd-tam-bar" aria-hidden><i style={{ transform: `scaleX(${oran})` }} /></span>
+      </button>
       <button type="button" className="cd-oynat" onClick={() => (buDers ? cdToggle() : onBasla())} aria-label={playing ? 'Duraklat' : 'Oynat'} title={playing ? 'Duraklat' : 'Oynat'}>
         {playing ? <Pause aria-hidden /> : <Play aria-hidden />}
       </button>

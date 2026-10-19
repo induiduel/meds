@@ -253,7 +253,7 @@ export const ReaderV12: React.FC<ReaderV12Props> = ({
         setImmersive(false);
       } else if (hadNativeFsRef.current) {
         hadNativeFsRef.current = false;
-        if (detectIosDevice() || wasRecentlyScrollingOrTouching()) {
+        if (wasRecentlyScrollingOrTouching()) {
           setImmersive(true);
         }
       }
@@ -283,7 +283,7 @@ export const ReaderV12: React.FC<ReaderV12Props> = ({
       return;
     }
     const el: any = document.documentElement;
-    const req = !detectIosDevice() && (el.requestFullscreen || el.webkitRequestFullscreen || el.webkitRequestFullScreen);
+    const req = el.requestFullscreen || el.webkitRequestFullscreen || el.webkitRequestFullScreen;
     if (!req) {
       setImmersive(true);
       const isStandalone = window.matchMedia?.('(display-mode: standalone)').matches || (navigator as any).standalone === true;

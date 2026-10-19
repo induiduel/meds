@@ -323,6 +323,25 @@ html, body {
   -webkit-tap-highlight-color: transparent;
 }
 
+/* Tam ekran veya tam sayfa oynatıcı (.ls-root, .pa, .sc, .r12-root.is-focus) açıkken arka plandaki
+   5000px'lik ana sayfa akışının (html/body) kaymasını kilitle: iOS/iPadOS WebKit'te bölünmüş ekranda
+   metin/PDF kaydırırken belge köküne (documentElement) sızan en ufak kaydırma native fullscreen'den çıkarır. */
+html:fullscreen,
+html:-webkit-full-screen,
+html.is-app-fullscreen,
+html.cd-tam-ekran,
+html:has(.ls-root, .pa, .sc, .r12-root.is-focus),
+html:fullscreen body,
+html:-webkit-full-screen body,
+html.is-app-fullscreen body,
+html.cd-tam-ekran body,
+body:has(.ls-root, .pa, .sc, .r12-root.is-focus) {
+  overflow: hidden !important;
+  overscroll-behavior: none !important;
+  height: 100% !important;
+  max-height: 100% !important;
+}
+
 body {
   background: var(--color-canvas);
   color: var(--color-ink);

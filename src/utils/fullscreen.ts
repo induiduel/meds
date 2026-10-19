@@ -16,14 +16,110 @@ const APP_FS_CLASS = 'is-app-fullscreen';
 const FS_EVENT = 'medsor:fullscreenchange';
 
 let lastTouchOrScrollAt = 0;
-if (typeof window !== 'undefined') {
+let scrollGuardInstalled = false;
+
+function isAnyFullscreenActive(): boolean {
+  if (typeof document === 'undefined') return false;
+  const d = document as WebkitDocument;
+  const root = document.documentElement;
+  return Boolean(
+    d.fullscreenElement ||
+    d.webkitFullscreenElement ||
+    root.classList.contains(APP_FS_CLASS) ||
+    root.classList.contains('cd-tam-ekran')
+  );
+}
+
+function isScrollableY(el: HTMLElement): boolean {
+  if (el === document.documentElement || el === document.body) return false;
+  if (el.scrollHeight <= el.clientHeight + 1) return false;
+  const oy = window.getComputedStyle(el).overflowY;
+  return oy === 'auto' || oy === 'scroll' || oy === 'overlay';
+}
+
+/**
+ * iOS / iPadOS WebKit'te native tam ekranda (`webkitRequestFullscreen`) bölünmüş ekran bölmelerini
+ * (`.ls-split-l`, `.pdv`, `.cd-metin` vb.) kaydırırken `scrollTop === 0` veya alt sınırda oluşan
+ * overscroll hareketinin WebKit tarafından "tam ekrandan çıkma hareketi" olarak algılanmasını engeller.
+ */
+export function installFullscreenScrollGuard(): void {
+  if (typeof window === 'undefined' || scrollGuardInstalled) return;
+  scrollGuardInstalled = true;
+
+  let startX = 0;
+  let startY = 0;
+
   const markTouch = () => {
     lastTouchOrScrollAt = Date.now();
   };
-  window.addEventListener('touchstart', markTouch, { passive: true, capture: true });
-  window.addEventListener('touchmove', markTouch, { passive: true, capture: true });
+
+  const onTouchStart = (e: TouchEvent) => {
+    markTouch();
+    if (e.touches.length !== 1) return;
+    startX = e.touches[0].clientX;
+    startY = e.touches[0].clientY;
+
+    if (!isAnyFullscreenActive()) return;
+
+    // 1px sınır yastığı: scrollTop tam 0 iken başlayan dokunuşlarda WebKit UIScrollView hareketi
+    // kendi üstüne almak yerine tam ekrandan çıkış hareketine devreder. 1px içeride başlatmak bunu önler.
+    let node = e.target as HTMLElement | null;
+    while (node && node !== document.body && node !== document.documentElement) {
+      if (isScrollableY(node)) {
+        if (node.scrollTop <= 0) {
+          node.scrollTop = 1;
+        } else if (node.scrollTop + node.clientHeight >= node.scrollHeight) {
+          node.scrollTop = Math.max(1, node.scrollHeight - node.clientHeight - 1);
+        }
+      }
+      node = node.parentElement;
+    }
+  };
+
+  const onTouchMove = (e: TouchEvent) => {
+    markTouch();
+    if (e.touches.length !== 1 || !isAnyFullscreenActive()) return;
+
+    const target = e.target as HTMLElement | null;
+    if (!target) return;
+    if (target.closest('input[type="range"], .cd-ayrac, .ls-split-handle, .cd-cubuk, [data-allow-touchmove]')) {
+      return;
+    }
+
+    const dx = e.touches[0].clientX - startX;
+    const dy = e.touches[0].clientY - startY;
+    // Yatay kaydırmalara veya çok küçük hareketlere dokunma
+    if (Math.abs(dy) <= Math.abs(dx) || Math.abs(dy) < 4) return;
+
+    let node: HTMLElement | null = target;
+    let canScrollInDirection = false;
+    while (node && node !== document.body && node !== document.documentElement) {
+      if (isScrollableY(node)) {
+        if (dy > 0 && node.scrollTop > 0) {
+          canScrollInDirection = true;
+          break;
+        }
+        if (dy < 0 && node.scrollTop + node.clientHeight < node.scrollHeight - 1) {
+          canScrollInDirection = true;
+          break;
+        }
+      }
+      node = node.parentElement;
+    }
+
+    // Hiçbir alt bölme bu yönde kayamıyorsa (üst/alt sınıra dayandıysa veya kaymayan bir alandaysa)
+    // hareketin belge köküne sıçrayıp native tam ekranı kapatmasını engelle
+    if (!canScrollInDirection && e.cancelable) {
+      e.preventDefault();
+    }
+  };
+
+  window.addEventListener('touchstart', onTouchStart, { passive: true, capture: true });
+  window.addEventListener('touchmove', onTouchMove, { passive: false, capture: false });
   window.addEventListener('scroll', markTouch, { passive: true, capture: true });
 }
+
+installFullscreenScrollGuard();
 
 export function isIosWebKit(): boolean {
   if (typeof navigator === 'undefined') return false;
@@ -36,7 +132,7 @@ export function isIosWebKit(): boolean {
   return false;
 }
 
-export function wasRecentlyScrollingOrTouching( thresholdMs = 1200 ): boolean {
+export function wasRecentlyScrollingOrTouching(thresholdMs = 1200): boolean {
   return Date.now() - lastTouchOrScrollAt < thresholdMs;
 }
 
@@ -52,9 +148,12 @@ export function isNativeFullscreen(): boolean {
 
 export function isNativeFullscreenSupported(el?: HTMLElement | null): boolean {
   if (typeof document === 'undefined') return false;
-  if (isIosWebKit()) return false;
   const target = (el || document.documentElement) as WebkitElement;
-  return typeof target.requestFullscreen === 'function' || typeof target.webkitRequestFullscreen === 'function' || typeof target.webkitRequestFullScreen === 'function';
+  return (
+    typeof target.requestFullscreen === 'function' ||
+    typeof target.webkitRequestFullscreen === 'function' ||
+    typeof target.webkitRequestFullScreen === 'function'
+  );
 }
 
 export function isAppFullscreen(): boolean {
@@ -68,11 +167,9 @@ function notifyFullscreenChange() {
 }
 
 /**
- * Her platformda (iPhone Safari, iPhone Chrome, iPad, Android, Masaüstü) çalışan tam ekran açıcı.
- * - iOS / iPadOS WebKit'te native `webkitRequestFullscreen` dikey kaydırma hareketini (özellikle bölünmüş
- *   ekranda metin/PDF kaydırırken) "tam ekrandan çıkma hareketi" sanıp tam ekranı otomatik kapattığı için
- *   iOS/iPadOS cihazlarda doğrudan kilitli CSS Tam Ekran katmanı (`html.is-app-fullscreen`) kullanılır.
- * - Masaüstü ve Android'de hem `html.is-app-fullscreen` hem native Fullscreen API etkinleştirilir.
+ * Her platformda (iPhone, iPad, Android, Masaüstü) çalışan tam ekran açıcı.
+ * Hem native Fullscreen API (`requestFullscreen` / `webkitRequestFullscreen`) çağrılır,
+ * hem de `html.is-app-fullscreen` sınıfı etkinleştirilir.
  */
 export async function enterFullscreen(el?: HTMLElement | null): Promise<boolean> {
   if (typeof document === 'undefined') return false;
@@ -84,11 +181,6 @@ export async function enterFullscreen(el?: HTMLElement | null): Promise<boolean>
     window.scrollTo(0, 0);
   }
   notifyFullscreenChange();
-
-  // iOS ve iPadOS'ta WebKit native fullscreen kaydırma sırasında kendiliğinden kapandığı için çağrılmaz
-  if (isIosWebKit()) {
-    return true;
-  }
 
   const target = (el || root) as WebkitElement;
   const req = target.requestFullscreen || target.webkitRequestFullscreen || target.webkitRequestFullScreen;
@@ -104,6 +196,14 @@ export async function enterFullscreen(el?: HTMLElement | null): Promise<boolean>
     notifyFullscreenChange();
     return true;
   } catch {
+    try {
+      const res2 = req.call(target);
+      if (res2 && typeof (res2 as Promise<void>).then === 'function') {
+        await (res2 as Promise<void>);
+      }
+    } catch {
+      /* tarayıcı desteklemiyorsa CSS tam ekran (is-app-fullscreen) devrede kalır */
+    }
     notifyFullscreenChange();
     return true;
   }
@@ -144,9 +244,8 @@ export function useAppFullscreen(): [boolean, (el?: HTMLElement | null) => void,
       setActive(isAppFullscreen());
     };
     const onNativeChange = () => {
-      // Dokunmatik cihazda kaydırma sırasında tarayıcı native tam ekrandan çıksa bile uygulama tam ekranını koru
       if (!isNativeFullscreen() && document.documentElement.classList.contains(APP_FS_CLASS)) {
-        if (!isIosWebKit() && !wasRecentlyScrollingOrTouching()) {
+        if (!wasRecentlyScrollingOrTouching()) {
           document.documentElement.classList.remove(APP_FS_CLASS);
         }
       }
