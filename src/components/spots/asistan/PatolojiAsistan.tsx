@@ -1051,28 +1051,51 @@ export const PatolojiAsistan: React.FC<{ kod: string; onClose: () => void; onDer
         <YildizliParagraflarModal
           onClose={() => setYildizModalAcik(false)}
           onGecis={(item) => {
-            if (item.kaynak === 'asistan' && item.meta?.dersKod === kod && item.meta?.noktaId) {
-              const targetI = sahneler.findIndex(
-                (x) => (x.tip === 'anlatim' || x.tip === 'soru') && ders?.noktalar[x.n]?.id === item.meta!.noktaId
-              );
-              if (targetI >= 0) {
-                setI(targetI);
-                setDevamSor(null);
-                if (item.meta.paragrafIndex !== undefined) {
+            if (item.kaynak === 'asistan' && item.meta?.dersKod === kod) {
+              if (item.meta.noktaId) {
+                const targetI = sahneler.findIndex(
+                  (x) => (x.tip === 'anlatim' || x.tip === 'soru') && ders?.noktalar[x.n]?.id === item.meta!.noktaId
+                );
+                if (targetI >= 0) {
+                  setI(targetI);
+                  setDevamSor(null);
+                  const hapMi = item.altBaslik === 'Akılda kalsın' || item.id.endsWith('_hap');
+                  if (hapMi) {
+                    setTimeout(() => {
+                      const el = document.querySelector('.pa-hap');
+                      if (el) {
+                        el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                        el.classList.remove('is-hedef');
+                        void (el as HTMLElement).offsetWidth;
+                        el.classList.add('is-hedef');
+                        setTimeout(() => el.classList.remove('is-hedef'), 3000);
+                      }
+                    }, 300);
+                  } else if (item.meta.paragrafIndex !== undefined) {
+                    const pIdx = item.meta.paragrafIndex;
+                    setAktifCumle(pIdx);
+                    setTimeout(() => {
+                      const el = document.querySelector(`.pa-cumleler [data-c="${pIdx}"]`);
+                      if (el) {
+                        el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                        el.classList.remove('is-hedef');
+                        void (el as HTMLElement).offsetWidth;
+                        el.classList.add('is-hedef');
+                        setTimeout(() => el.classList.remove('is-hedef'), 3000);
+                      }
+                    }, 300);
+                  }
+                  return true;
+                }
+              } else if (item.meta.paragrafIndex !== undefined) {
+                const targetI = sahneler.findIndex((x) => x.tip === 'giris');
+                if (targetI >= 0) {
+                  setI(targetI);
+                  setDevamSor(null);
                   const pIdx = item.meta.paragrafIndex;
                   setAktifCumle(pIdx);
-                  setTimeout(() => {
-                    const el = document.querySelector(`.pa-cumleler [data-c="${pIdx}"]`);
-                    if (el) {
-                      el.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                      el.classList.remove('is-hedef');
-                      void (el as HTMLElement).offsetWidth;
-                      el.classList.add('is-hedef');
-                      setTimeout(() => el.classList.remove('is-hedef'), 3000);
-                    }
-                  }, 300);
+                  return true;
                 }
-                return true;
               }
             }
             return false;

@@ -20,6 +20,36 @@ interface PanelProps {
   inline?: boolean;
 }
 
+interface ParagrafGrubu {
+  anahtar: string;
+  kaynak: ParagrafKaynak;
+  kaynakAd: string;
+  baslik: string;
+  bolumBaslik?: string;
+  sonTarih: number;
+  ogeler: YildizliParagraf[];
+}
+
+function grupAnahtari(p: YildizliParagraf): string {
+  if (p.kaynak === 'asistan' && p.meta?.dersKod && p.meta?.noktaId) {
+    return `asistan|${p.meta.dersKod}|${p.meta.noktaId}`;
+  }
+  if (p.kaynak === 'canli_ders' && p.meta?.dersKey) {
+    return `canli_ders|${p.meta.dersKey}|${p.altBaslik || ''}`;
+  }
+  if (p.kaynak === 'soru_cozucu' && p.meta?.dersKod) {
+    const alt = p.meta.soruNo !== undefined ? `q${p.meta.soruNo}` : 'kisa';
+    return `soru_cozucu|${p.meta.dersKod}|${alt}`;
+  }
+  return `${p.kaynak}|${p.baslik}`;
+}
+
+function ogeSiraDegeri(p: YildizliParagraf): number {
+  if (p.id.endsWith('_hap')) return 999999;
+  if (p.meta?.paragrafIndex !== undefined) return p.meta.paragrafIndex;
+  return p.tarih;
+}
+
 export const YildizliParagraflarPanel: React.FC<PanelProps> = ({ onClose, onGecis, inline = false }) => {
   const tumParagraflar = useYildizliParagraflar();
   const [arama, setArama] = useState('');
@@ -42,6 +72,39 @@ export const YildizliParagraflarPanel: React.FC<PanelProps> = ({ onClose, onGeci
     return list;
   }, [tumParagraflar, kaynakFiltre, arama]);
 
+  const gruplar = useMemo(() => {
+    const map = new Map<string, ParagrafGrubu>();
+    for (const p of filtrelenmis) {
+      const k = grupAnahtari(p);
+      const mevcut = map.get(k);
+      const ozelAlt = p.altBaslik === 'Akılda kalsın';
+      if (!mevcut) {
+        map.set(k, {
+          anahtar: k,
+          kaynak: p.kaynak,
+          kaynakAd: p.kaynakAd,
+          baslik: p.baslik,
+          bolumBaslik: ozelAlt ? undefined : p.altBaslik,
+          sonTarih: p.tarih,
+          ogeler: [p],
+        });
+      } else {
+        mevcut.ogeler.push(p);
+        if (!mevcut.bolumBaslik && p.altBaslik && !ozelAlt) {
+          mevcut.bolumBaslik = p.altBaslik;
+        }
+        if (p.tarih > mevcut.sonTarih) {
+          mevcut.sonTarih = p.tarih;
+        }
+      }
+    }
+    const sonuc = [...map.values()];
+    for (const g of sonuc) {
+      g.ogeler.sort((a, b) => ogeSiraDegeri(a) - ogeSiraDegeri(b));
+    }
+    return sonuc;
+  }, [filtrelenmis]);
+
   const sayilar = useMemo(() => {
     return {
       hepsi: tumParagraflar.length,
@@ -58,6 +121,12 @@ export const YildizliParagraflarPanel: React.FC<PanelProps> = ({ onClose, onGeci
     }
     onClose?.();
     navigateTo(item.deeplink);
+  };
+
+  const grubuCikar = (g: ParagrafGrubu) => {
+    for (const item of g.ogeler) {
+      yildizCikar(item.id);
+    }
   };
 
   const kaynakIkon = (kaynak: ParagrafKaynak) => {
@@ -186,70 +255,115 @@ export const YildizliParagraflarPanel: React.FC<PanelProps> = ({ onClose, onGeci
               bağlanır.
             </small>
           </div>
-        ) : filtrelenmis.length === 0 ? (
+        ) : gruplar.length === 0 ? (
           <div className="yp-bos">
             <p>Arama kriterine uygun yıldızlı paragraf bulunamadı.</p>
           </div>
         ) : (
-          filtrelenmis.map((item) => (
-            <article key={item.id} className="yp-kart">
-              <div className="yp-kart-ust">
-                <div className="yp-kart-kaynak-blok">
-                  <span className={`yp-tur t-${item.kaynak}`}>
-                    {kaynakIkon(item.kaynak)}
-                    {item.kaynakAd}
-                  </span>
-                  <span className="yp-kart-baslik">{item.baslik}</span>
-                  {item.altBaslik && (
-                    <span className="yp-kart-alt-baslik">· {item.altBaslik}</span>
+          gruplar.map((grup) => {
+            const ilkOge = grup.ogeler[0];
+            const coklu = grup.ogeler.length > 1;
+            return (
+              <article key={grup.anahtar} className="yp-kart">
+                <div className="yp-kart-ust">
+                  <div className="yp-kart-kaynak-blok">
+                    <span className={`yp-tur t-${grup.kaynak}`}>
+                      {kaynakIkon(grup.kaynak)}
+                      {grup.kaynakAd}
+                    </span>
+                    <span className="yp-kart-baslik">{grup.baslik}</span>
+                    {grup.bolumBaslik && (
+                      <span className="yp-kart-alt-baslik">· {grup.bolumBaslik}</span>
+                    )}
+                    {coklu && (
+                      <span className="yp-grup-sayi">{grup.ogeler.length} paragraf</span>
+                    )}
+                  </div>
+                  {!coklu && (
+                    <button
+                      type="button"
+                      className="yp-kart-yildiz is-on"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        yildizCikar(ilkOge.id);
+                      }}
+                      title="Listeden çıkar"
+                      aria-label="Listeden çıkar"
+                    >
+                      <Star fill="#f59e0b" color="#f59e0b" />
+                    </button>
                   )}
                 </div>
-                <button
-                  type="button"
-                  className="yp-kart-yildiz is-on"
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    yildizCikar(item.id);
-                  }}
-                  title="Listeden çıkar"
-                  aria-label="Listeden çıkar"
-                >
-                  <Star fill="#f59e0b" color="#f59e0b" />
-                </button>
-              </div>
 
-              <div
-                className="yp-kart-metin"
-                onClick={() => git(item)}
-                role="button"
-                tabIndex={0}
-                onKeyDown={(e) => {
-                  if (e.key === 'Enter') git(item);
-                }}
-              >
-                <p>{item.metin.replace(/\*\*/g, '')}</p>
-              </div>
-
-              <div className="yp-kart-alt">
-                <span className="yp-tarih">
-                  {new Date(item.tarih).toLocaleDateString('tr-TR', {
-                    day: 'numeric',
-                    month: 'short',
-                    hour: '2-digit',
-                    minute: '2-digit',
+                <div className="yp-grup-metinler">
+                  {grup.ogeler.map((item) => {
+                    const hapMi = item.altBaslik === 'Akılda kalsın' || item.id.endsWith('_hap');
+                    return (
+                      <div key={item.id} className={`yp-parca-satir${hapMi ? ' is-hap' : ''}`}>
+                        <div
+                          className="yp-kart-metin"
+                          onClick={() => git(item)}
+                          role="button"
+                          tabIndex={0}
+                          onKeyDown={(e) => {
+                            if (e.key === 'Enter') git(item);
+                          }}
+                        >
+                          {hapMi && <span className="yp-hap-etiket">Akılda kalsın</span>}
+                          <p>{item.metin.replace(/\*\*/g, '')}</p>
+                        </div>
+                        {coklu && (
+                          <button
+                            type="button"
+                            className="yp-kart-yildiz is-on"
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              yildizCikar(item.id);
+                            }}
+                            title="Bu paragrafı listeden çıkar"
+                            aria-label="Bu paragrafı listeden çıkar"
+                          >
+                            <Star fill="#f59e0b" color="#f59e0b" />
+                          </button>
+                        )}
+                      </div>
+                    );
                   })}
-                </span>
-                <button
-                  type="button"
-                  className="yp-git-btn"
-                  onClick={() => git(item)}
-                >
-                  <span>Doğrudan git</span>
-                  <ExternalLink aria-hidden />
-                </button>
-              </div>
-            </article>
-          ))
+                </div>
+
+                <div className="yp-kart-alt">
+                  <span className="yp-tarih">
+                    {new Date(grup.sonTarih).toLocaleDateString('tr-TR', {
+                      day: 'numeric',
+                      month: 'short',
+                      hour: '2-digit',
+                      minute: '2-digit',
+                    })}
+                  </span>
+                  <div className="yp-kart-alt-sag">
+                    {coklu && (
+                      <button
+                        type="button"
+                        className="yp-grup-cikar-btn"
+                        onClick={() => grubuCikar(grup)}
+                        title="Bu başlıktaki tüm paragrafları çıkar"
+                      >
+                        Tümünü çıkar
+                      </button>
+                    )}
+                    <button
+                      type="button"
+                      className="yp-git-btn"
+                      onClick={() => git(ilkOge)}
+                    >
+                      <span>Doğrudan git</span>
+                      <ExternalLink aria-hidden />
+                    </button>
+                  </div>
+                </div>
+              </article>
+            );
+          })
         )}
       </div>
     </div>
@@ -260,6 +374,10 @@ export const YildizliParagraflarModal: React.FC<Omit<PanelProps, 'inline'>> = ({
   onClose,
   onGecis,
 }) => {
+  const portalHedef =
+    (typeof document !== 'undefined' && (document.fullscreenElement as HTMLElement | null)) ||
+    document.body;
+
   return createPortal(
     <div
       className="yp-overlay"
@@ -272,6 +390,7 @@ export const YildizliParagraflarModal: React.FC<Omit<PanelProps, 'inline'>> = ({
     >
       <YildizliParagraflarPanel onClose={onClose} onGecis={onGecis} inline={false} />
     </div>,
-    document.body
+    portalHedef
   );
 };
+

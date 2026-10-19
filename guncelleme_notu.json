@@ -1,10 +1,10 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 25,
-  "baslik": "Bitirdiklerim Sayfasında Hızdan Bağımsız Kalan Ders Süresi Hesabı",
+  "onem": 26,
+  "baslik": "Yıldızlı Paragraflarda Birleşik Görünüm & Tam Ekran Desteği",
   "maddeler": [
-    "Bitirdiklerim sayfasına çalışma hızından bağımsız olarak doğrudan kalan derslerin ve konuların saatine göre hesaplanan 'Kalan ders süresi' kartı eklendi.",
-    "Üstteki 4 modül sekmesinde (Sesli ders, Etkileşimli dersler, Soru çözücü, En önemliler) ve altındaki her branş/kategori başlığında kalan ders sayısı ile hızdan bağımsız kalan ders süresi ayrı ayrı gösteriliyor.",
-    "Kullanıcının çalışma hızına göre tahmini kalan süre ile ham ders süresi yan yana karşılaştırılabilir hale getirildi."
+    "Yıldızlı Paragraflar penceresi artık tam ekran (fullscreen) modundayken de sorunsuz açılır.",
+    "Aynı konu/adım başlığı içinden yıldızlanan paragraflar ve 'Akılda kalsın' notları ayrı kartlar yerine tek başlık altında, ders akışı sırasıyla birleşik olarak gösterilir.",
+    "Bitirdiklerim sayfasına çalışma hızından bağımsız kalan ders süresi hesabı eklendi."
   ]
 }
