@@ -12,7 +12,7 @@
  *    (aksi halde sonraki oturumsuz kişi eski öğrencinin cihaz yedeğini çekerdi).
  * Genel/cihaz ayarları (tema, önbellekler, API adresi) dokunulmadan kalır.
  */
-import { isUserDataKey } from './userKvSync';
+import { isUserDataKey, withoutTracking } from './userKvSync';
 
 const OWNER_KEY = 'medsoru_owner_v1';
 const STASH_PREFIX = 'medsoru_stash_v1:';
@@ -74,7 +74,15 @@ function clearPersonal(stashFor?: string) {
       console.warn('[userScope] önceki öğrencinin verisi kaldırılamadı (kota); yalnız temizlendi');
     }
   }
-  for (const k of keys) s.removeItem(k);
+  // Çıkış/hesap değişimi bir silme değildir: localStorage'dan kaldırılan profil anahtarları
+  // `userKvSync` tarafından mezar taşı (v:null) olarak damgalanırsa, bir sonraki girişte bu
+  // damgalar sunucuya gidip hesabın gerçek verisini siler. Temizliği izleme dışında yap.
+  withoutTracking(() => {
+    for (const k of keys) s.removeItem(k);
+    s.removeItem('medsoru_kv_meta_v1');
+    s.removeItem('medsoru_kv_dirty_v1');
+    s.removeItem('medsoru_kv_since_v1');
+  });
   try {
     sessionStorage.removeItem('medsoru_scroll_pos');
   } catch {
@@ -82,17 +90,23 @@ function clearPersonal(stashFor?: string) {
   }
 }
 
-function restoreStash(uid: string): boolean {
+function restoreStash(uid: string, onlyMissing = false): boolean {
   const s = ls();
   const raw = s?.getItem(STASH_PREFIX + uid);
   if (!s || !raw) return false;
-  try {
-    const { data } = JSON.parse(raw) as { data: Record<string, string> };
-    for (const [k, v] of Object.entries(data || {})) if (isPersonalKey(k)) s.setItem(k, v);
-  } catch {
-    /* bozuk kayıt */
-  }
-  s.removeItem(STASH_PREFIX + uid);
+  withoutTracking(() => {
+    try {
+      const { data } = JSON.parse(raw) as { data: Record<string, string> };
+      for (const [k, v] of Object.entries(data || {})) {
+        if (!isPersonalKey(k)) continue;
+        if (onlyMissing && s.getItem(k) !== null) continue;
+        s.setItem(k, v);
+      }
+    } catch {
+      /* bozuk kayıt */
+    }
+    s.removeItem(STASH_PREFIX + uid);
+  });
   return true;
 }
 
@@ -126,7 +140,8 @@ export function claimForUser(uid: string): boolean {
   }
 
   if (owner === '') {
-    // Oturumsuz kullanım bu kişinindi: veri hesaba geçer; varsa eski kaldırılmış verisi de birleşmez, üstüne yazmaz.
+    // Oturumsuz kullanım bu kişinindi: veri hesaba geçer; varsa eski kaldırılmış verisi yalnız eksik anahtarları tamamlar.
+    restoreStash(uid, true);
     setOwner(uid);
     return false;
   }

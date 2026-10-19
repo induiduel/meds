@@ -26,6 +26,7 @@ import crypto from 'crypto';
 import type express from 'express';
 import { requestUser, accountNotesCode } from './firebaseIdentity';
 import { mergeNotes, type NotesStore } from './userNotesService';
+import { isProtectedProgressKey, mergeKvJsonValue } from './userKvSync';
 
 export interface UserDataBackupDeps {
   dataDir: string;
@@ -166,15 +167,47 @@ const KV_KEY_RE = /^[A-Za-z0-9_.:\-]{1,160}$/;
 
 export function mergeKv(existing: unknown, incoming: unknown): Record<string, { v: string | null; at: string }> {
   const out: Record<string, { v: string | null; at: string }> = {};
-  for (const src of [obj(existing), obj(incoming)]) {
-    for (const [k, rec] of Object.entries(src)) {
-      if (!KV_KEY_RE.test(k) || !rec || typeof rec !== 'object') continue;
-      const v = (rec as any).v;
-      const at = String((rec as any).at || '');
-      if (v !== null && typeof v !== 'string') continue;
-      if (typeof v === 'string' && v.length > KV_MAX_VALUE) continue;
-      const cur = out[k];
-      if (!cur || at > cur.at) out[k] = { v, at };
+  const nowIso = new Date().toISOString();
+  for (const [k, rec] of Object.entries(obj(existing))) {
+    if (!KV_KEY_RE.test(k) || !rec || typeof rec !== 'object') continue;
+    const v = (rec as any).v;
+    const at = String((rec as any).at || '');
+    if (v !== null && typeof v !== 'string') continue;
+    if (typeof v === 'string' && v.length > KV_MAX_VALUE) continue;
+    if (v === null && isProtectedProgressKey(k)) continue;
+    out[k] = { v, at };
+  }
+  for (const [k, rec] of Object.entries(obj(incoming))) {
+    if (!KV_KEY_RE.test(k) || !rec || typeof rec !== 'object') continue;
+    const v = (rec as any).v;
+    const at = String((rec as any).at || '');
+    if (v !== null && typeof v !== 'string') continue;
+    if (typeof v === 'string' && v.length > KV_MAX_VALUE) continue;
+    const cur = out[k];
+    if (v === null && isProtectedProgressKey(k)) {
+      // Birikimli ilerleme/içerik anahtarları mezar taşıyla (v:null) asla silinmez; istemciye geri dönmesi için zamanı tazelenir.
+      if (cur && cur.v !== null && at >= cur.at) {
+        out[k] = { v: cur.v, at: [cur.at, at, nowIso].sort().pop() || nowIso };
+      }
+      continue;
+    }
+    if (!cur) {
+      out[k] = { v, at };
+      continue;
+    }
+    if (cur.v !== null && v !== null) {
+      const [olderV, newerV] = at >= cur.at ? [cur.v, v] : [v, cur.v];
+      const mergedV = mergeKvJsonValue(k, olderV, newerV);
+      // Birleştirme sonucu istemcinin gönderdiğinden farklıysa, yanıtın withKvSince filtresinden geçmesi için zaman damgası ilerletilir.
+      const mergedAt =
+        mergedV !== v
+          ? [cur.at, at, nowIso].sort().pop() || nowIso
+          : at >= cur.at
+            ? at
+            : cur.at;
+      out[k] = { v: mergedV, at: mergedAt };
+    } else if (at > cur.at) {
+      out[k] = { v, at };
     }
   }
   const keys = Object.keys(out);
@@ -265,6 +298,26 @@ export function registerUserDataBackupRoutes(app: express.Express, deps: UserDat
     fs.renameSync(tmpFile, file);
   };
 
+  /** Doğrulanmış hesap için uid + e-posta + eski uid yedeklerini kayıpsız birleştirir. */
+  const loadMergedExisting = (uid: string, email: string, verified: boolean): any | null => {
+    let merged = readBackup(getBackupFilePath(uid));
+    if (verified && email) {
+      const emailBackup = readBackup(getBackupFilePath(email));
+      if (emailBackup) merged = merged ? mergeUserBundle(emailBackup, merged) : emailBackup;
+      try {
+        for (const u of deps.loadUsers()) {
+          if (u?.uid && u.uid !== uid && u?.email && String(u.email).toLowerCase() === email.toLowerCase()) {
+            const legacy = readBackup(getBackupFilePath(String(u.uid)));
+            if (legacy) merged = merged ? mergeUserBundle(legacy, merged) : legacy;
+          }
+        }
+      } catch {
+        /* yoksay */
+      }
+    }
+    return merged;
+  };
+
   /**
    * POST /api/user-data/backup
    * Kullanıcının tüm tarayıcı verilerini sunucu ve Supabase veritabanına kaydeder.
@@ -286,9 +339,8 @@ export function registerUserDataBackupRoutes(app: express.Express, deps: UserDat
         return res.status(401).json({ error: 'Bu hesabın yedeği için giriş yapılmalıdır.' });
       }
 
-      // Hesabın ilk uid'li yedeği yoksa eski e-posta kopyası taban alınır (eski kayıtlar kaybolmasın)
-      let existing = readBackup(backupFile);
-      if (!existing && verified && email) existing = readBackup(getBackupFilePath(email));
+      // Hesabın uid yedeği + varsa aynı e-postalı eski kopyaları kayıpsız birleştirilir
+      const existing = loadMergedExisting(primaryId, email, verified);
 
       const savedAt = new Date().toISOString();
       const { kvSince: _kvSince, origin: _origin, ...incoming } = body;
@@ -418,20 +470,15 @@ export function registerUserDataBackupRoutes(app: express.Express, deps: UserDat
       if (!who.id) return res.status(who.status || 401).json({ error: who.error });
       const { uid, email, verified } = who.id;
 
-      // Öncelik: uid ile dosya ara, yoksa (doğrulanmış) e-posta ile ara
-      let backupFile = getBackupFilePath(uid);
-      if (!fs.existsSync(backupFile) && verified && email) {
-        backupFile = getBackupFilePath(email);
-      }
+      const backupFile = getBackupFilePath(uid);
       // Doğrulanmış hesabın yedeği jetonsuz okunamaz
       if (!verified && readBackup(backupFile)?.verified) {
         return res.status(401).json({ error: 'Bu hesabın yedeği için giriş yapılmalıdır.' });
       }
 
-      if (backupFile && fs.existsSync(backupFile)) {
+      const data = loadMergedExisting(uid, email, verified);
+      if (data) {
         try {
-          const raw = fs.readFileSync(backupFile, 'utf8');
-          const data = JSON.parse(raw);
           // Hesapta notların güncel hâli hesap defterindedir (başka cihazdan /api/notes ile eklenmiş olabilir)
           if (verified) {
             const st = deps.notesStore.read(accountNotesCode(uid));

@@ -206,6 +206,164 @@ export function hasDirtyKv(): boolean {
   return Object.keys(readObj(DIRTY_KEY)).length > 0;
 }
 
+/** Asla `v: null` mezar taşıyla silinmemesi gereken birikimli öğrenci ilerleme/içerik anahtarları. */
+const PROTECTED_PROGRESS_RE =
+  /^(medsoru_(calisma_takip_v1|cozucu_(ilerleme|istatistik|tercih)_v1|onem_(asistan|asistan_tercih|ogrendim|tercih|pdf|son)_v1|onem_ders(_[a-z0-9_]+)?|spot_(ilerleme_v1|ogrendim)|learn_(progress|done|recent|review|sessions)(_v1)?|sinav_calisma_v2|checkup_v1|yildizli_paragraflar(_v1)?|canli_ders_liste_v1|ornek_(k1_cevap|k1_ders)|summary_progress|stats_archive_v1|highlights_v1|card_notes_v1|custom_encyclopedia_v1|saved_(contributor_name|student_number)|pdf_(page|q|l|s)_v2)|cikmis_quiz|medsor_(custom|favorite)_diseases_v1)$/;
+
+export const isProtectedProgressKey = (key: string): boolean => PROTECTED_PROGRESS_RE.test(key);
+
+/**
+ * İki cihazda da JSON nesnesi/dizisi tutan birikimli ilerleme anahtarlarını veri kaybetmeden birleştirir.
+ * `olderRaw` ve `newerRaw` ikisi de dolu dizge olduğunda çağrılır; ayrıştırılamazsa `newerRaw` döner.
+ */
+export function mergeKvJsonValue(key: string, olderRaw: string, newerRaw: string): string {
+  if (!olderRaw || !newerRaw || olderRaw === newerRaw) return newerRaw || olderRaw;
+  try {
+    if (key === 'medsoru_calisma_takip_v1') {
+      const a = JSON.parse(olderRaw);
+      const b = JSON.parse(newerRaw);
+      if (!a || typeof a !== 'object' || !b || typeof b !== 'object') return newerRaw;
+      const ak = a.k && typeof a.k === 'object' ? a.k : {};
+      const bk = b.k && typeof b.k === 'object' ? b.k : {};
+      const k: Record<string, any> = { ...ak };
+      for (const [id, rec] of Object.entries(bk) as [string, any][]) {
+        const cur = k[id];
+        if (!cur || typeof cur !== 'object' || !rec || typeof rec !== 'object') {
+          k[id] = rec;
+          continue;
+        }
+        const aTime = String(cur.sonAt || cur.bittiAt || cur.ilkAt || '');
+        const bTime = String(rec.sonAt || rec.bittiAt || rec.ilkAt || '');
+        const [lo, hi] = bTime >= aTime ? [cur, rec] : [rec, cur];
+        const merged: Record<string, any> = {
+          ...lo,
+          ...hi,
+          sn: Math.max(Number(cur.sn) || 0, Number(rec.sn) || 0),
+          soru: Math.max(Number(cur.soru) || 0, Number(rec.soru) || 0),
+        };
+        const tur = Math.max(Number(cur.tur) || 0, Number(rec.tur) || 0);
+        if (tur > 0) merged.tur = tur;
+        const ilkAt = cur.ilkAt && rec.ilkAt ? (cur.ilkAt < rec.ilkAt ? cur.ilkAt : rec.ilkAt) : cur.ilkAt || rec.ilkAt;
+        if (ilkAt) merged.ilkAt = ilkAt;
+        const sonAt = cur.sonAt && rec.sonAt ? (cur.sonAt > rec.sonAt ? cur.sonAt : rec.sonAt) : cur.sonAt || rec.sonAt;
+        if (sonAt) merged.sonAt = sonAt;
+        if (hi.durum === undefined && lo.durum === 'bitti') {
+          merged.durum = 'bitti';
+          if (lo.bittiAt) merged.bittiAt = lo.bittiAt;
+        }
+        k[id] = merged;
+      }
+      const ag = a.g && typeof a.g === 'object' ? a.g : {};
+      const bg = b.g && typeof b.g === 'object' ? b.g : {};
+      const g: Record<string, Record<string, number>> = {};
+      for (const m of new Set([...Object.keys(ag), ...Object.keys(bg)])) {
+        const ma = ag[m] && typeof ag[m] === 'object' ? ag[m] : {};
+        const mb = bg[m] && typeof bg[m] === 'object' ? bg[m] : {};
+        const mg: Record<string, number> = { ...ma };
+        for (const [d, s] of Object.entries(mb)) mg[d] = Math.max(Number(mg[d]) || 0, Number(s) || 0);
+        g[m] = mg;
+      }
+      return JSON.stringify({ k, g });
+    }
+
+    if (key === 'medsoru_cozucu_ilerleme_v1') {
+      const a = JSON.parse(olderRaw);
+      const b = JSON.parse(newerRaw);
+      if (!a || typeof a !== 'object' || !b || typeof b !== 'object') return newerRaw;
+      const out: Record<string, any> = { ...a };
+      for (const [kod, rec] of Object.entries(b) as [string, any][]) {
+        const cur = out[kod];
+        if (!cur || typeof cur !== 'object' || !rec || typeof rec !== 'object') {
+          out[kod] = rec;
+          continue;
+        }
+        const [lo, hi] = String(rec.at || '') >= String(cur.at || '') ? [cur, rec] : [rec, cur];
+        out[kod] = {
+          ...lo,
+          ...hi,
+          s: { ...(lo.s && typeof lo.s === 'object' ? lo.s : {}), ...(hi.s && typeof hi.s === 'object' ? hi.s : {}) },
+        };
+      }
+      return JSON.stringify(out);
+    }
+
+    if (key === 'medsoru_onem_asistan_v1') {
+      const a = JSON.parse(olderRaw);
+      const b = JSON.parse(newerRaw);
+      if (!a || typeof a !== 'object' || !b || typeof b !== 'object') return newerRaw;
+      const out: Record<string, any> = { ...a };
+      for (const [kod, rec] of Object.entries(b) as [string, any][]) {
+        const cur = out[kod];
+        if (!cur || typeof cur !== 'object' || !rec || typeof rec !== 'object') {
+          out[kod] = rec;
+          continue;
+        }
+        const [lo, hi] = String(rec.at || '') >= String(cur.at || '') ? [cur, rec] : [rec, cur];
+        out[kod] = {
+          ...lo,
+          ...hi,
+          sonuc: { ...(lo.sonuc && typeof lo.sonuc === 'object' ? lo.sonuc : {}), ...(hi.sonuc && typeof hi.sonuc === 'object' ? hi.sonuc : {}) },
+        };
+      }
+      return JSON.stringify(out);
+    }
+
+    if (key === 'medsoru_cozucu_istatistik_v1' || key === 'medsoru_spot_ilerleme_v1') {
+      const a = JSON.parse(olderRaw);
+      const b = JSON.parse(newerRaw);
+      if (!a || typeof a !== 'object' || !b || typeof b !== 'object') return newerRaw;
+      return JSON.stringify({
+        ...a,
+        ...b,
+        sureSn: Math.max(Number(a.sureSn) || 0, Number(b.sureSn) || 0),
+      });
+    }
+
+    if (key === 'medsoru_learn_progress_v1') {
+      const a = JSON.parse(olderRaw);
+      const b = JSON.parse(newerRaw);
+      if (!a || typeof a !== 'object' || !b || typeof b !== 'object') return newerRaw;
+      const out: Record<string, any> = { ...a };
+      for (const [id, rec] of Object.entries(b) as [string, any][]) {
+        const cur = out[id];
+        if (!cur || typeof cur !== 'object' || !rec || typeof rec !== 'object') {
+          out[id] = rec;
+          continue;
+        }
+        const seen = Array.from(
+          new Set([...(Array.isArray(cur.seen) ? cur.seen : []), ...(Array.isArray(rec.seen) ? rec.seen : [])])
+        ).sort((x: number, y: number) => x - y);
+        const last = typeof rec.last === 'number' && rec.last > 0 ? rec.last : typeof cur.last === 'number' ? cur.last : 0;
+        out[id] = { ...cur, ...rec, last, seen };
+      }
+      return JSON.stringify(out);
+    }
+
+    if (key === 'medsoru_yildizli_paragraflar_v1' || key === 'medsoru_yildizli_paragraflar') {
+      const a = JSON.parse(olderRaw);
+      const b = JSON.parse(newerRaw);
+      if (!Array.isArray(a) || !Array.isArray(b)) return newerRaw;
+      if (b.length === 0 && a.length > 0) return olderRaw;
+      const byId = new Map<string, any>();
+      for (const item of [...a, ...b]) {
+        if (item && typeof item === 'object' && item.id) byId.set(String(item.id), item);
+      }
+      return JSON.stringify(Array.from(byId.values()).sort((x, y) => (Number(y?.tarih) || 0) - (Number(x?.tarih) || 0)));
+    }
+
+    if (key === 'medsoru_ornek_k1_cevap' || key === 'medsoru_sinav_calisma_v2' || key === 'medsoru_summary_progress' || key === 'medsoru_learn_recent_v1') {
+      const a = JSON.parse(olderRaw);
+      const b = JSON.parse(newerRaw);
+      if (a && typeof a === 'object' && !Array.isArray(a) && b && typeof b === 'object' && !Array.isArray(b)) {
+        return JSON.stringify({ ...a, ...b });
+      }
+    }
+  } catch {
+    /* JSON değilse doğrudan yeni değer kullanılır */
+  }
+  return newerRaw;
+}
+
 /**
  * Gönderilecek kv: `full` ise izin listesindeki tüm anahtarlar (ilk eşitleme / hesap değişimi), değilse yalnız kirli
  * olanlar. Hiç damgası olmayan eski veri '0' zamanlıdır: sunucuda başka cihazdan gelmiş bir kayıt varsa o kazanır.
@@ -221,11 +379,12 @@ export function collectKv(full: boolean): { kv: KvMap; sentKeys: string[] } {
       const k = s.key(i);
       if (k && isProfileKey(k)) keys.add(k);
     }
-    for (const k of Object.keys(meta)) if (isProfileKey(k)) keys.add(k); // silinmiş anahtarlar
+    for (const k of Object.keys(meta)) if (isProfileKey(k) && !isProtectedProgressKey(k)) keys.add(k);
   }
   for (const k of keys) {
     if (!isProfileKey(k)) continue;
     const v = s.getItem(k);
+    if (v === null && isProtectedProgressKey(k)) continue;
     if (v != null && v.length > MAX_VALUE) continue;
     kv[k] = { v, at: meta[k] || '0' };
   }
@@ -241,8 +400,8 @@ export function markKvSent(sent: KvMap): void {
 }
 
 /**
- * Sunucudan gelen kv'yi uygula: yalnız sunucudaki kayıt yereldekinden yeniyse yazılır. Değişen anahtarlar için
- * `storage` olayı yayınlanır (aynı sekmedeki dinleyiciler de güncellensin). Dönüş: değişen anahtarlar.
+ * Sunucudan gelen kv'yi uygula: yalnız sunucudaki kayıt yereldekinden yeniyse (veya yerelde anahtar boşken sunucuda
+ * doluysa) yazılır. Değişen anahtarlar için `storage` olayı yayınlanır (aynı sekmedeki dinleyiciler de güncellensin).
  */
 export function applyKv(remote: KvMap | undefined | null): string[] {
   const s = ls();
@@ -255,16 +414,29 @@ export function applyKv(remote: KvMap | undefined | null): string[] {
     for (const [k, r] of Object.entries(remote)) {
       if (!isProfileKey(k) || !r || typeof r !== 'object') continue;
       const at = String(r.at || '');
-      if (at <= (meta[k] || '')) continue;
       const cur = s.getItem(k);
       if (r.v == null) {
-        if (cur != null) (rawRemove || s.removeItem).call(s, k);
-      } else if (cur !== r.v) {
-        (rawSet || s.setItem).call(s, k, r.v);
+        if (isProtectedProgressKey(k)) continue;
+        if (at <= (meta[k] || '')) continue;
+        if (cur != null) {
+          (rawRemove || s.removeItem).call(s, k);
+          changed.push(k);
+        }
+        meta[k] = at;
+        delete dirty[k];
+        continue;
       }
-      meta[k] = at;
+      // Sunucuda dolu veri var: yerelde boşsa (ör. çıkış sonrası mezar taşı kalmışsa) zaman damgasına bakmadan geri yükle;
+      // yerelde de doluysa zamanı yeni olan kazanır ve birikimli JSON anahtarları birleştirilir.
+      const localAt = meta[k] || '';
+      if (cur != null && at < localAt) continue;
+      const nextVal = cur != null ? mergeKvJsonValue(k, cur, r.v) : r.v;
+      if (cur !== nextVal) {
+        (rawSet || s.setItem).call(s, k, nextVal);
+        changed.push(k);
+      }
+      if (at >= localAt) meta[k] = at;
       delete dirty[k];
-      if (cur !== r.v) changed.push(k);
     }
     writeObj(META_KEY, meta);
     writeObj(DIRTY_KEY, dirty);
