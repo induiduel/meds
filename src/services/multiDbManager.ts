@@ -395,6 +395,13 @@ class MultiDbManager {
     const mode = this.activeMode;
     let fetched: QuestionItem[] = [];
 
+    // 0b. İlk yükleme işçide (ayrıştırma + IndexedDB yazımı ana iş parçacığını dondurmaz)
+    try {
+      const customUrl = getCustomApiUrl();
+      const viaWorker = await pastQuestionsCache.initialLoadInWorker(customUrl ? `${customUrl}/api/past-exams` : '/api/past-exams');
+      if (viaWorker.length > 0) return viaWorker;
+    } catch (_) {}
+
     // 1. Önce Hızlı ve Eksiksiz Yerel / Cloudflare Express REST API'yi dene (Tüm 6.263 Doğrulanmış Soru)
     try {
       const local = await this.getLocalPastQuestions();

@@ -1,12 +1,10 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 40,
-  "baslik": "Sesli Dersler ve En Önemliler yeni görünümde",
+  "onem": 42,
+  "baslik": "Çıkmış Sorular daha hızlı açılıyor",
   "maddeler": [
-    "Sesli Dersler: kaldığın yerden devam kartı, üstte sabit kalan arama ve branş şeridi, sade ders satırları.",
-    "Telefonda her ders tek satırda: oynat, süre, Bitirdim ve diğer işlemler.",
-    "En Önemliler: sesli asistan ve soru çözücü iki net düğmede; ders başlığı ve istatistikler daha okunaklı.",
-    "Sesli derste okunan cümle artık sesle birebir eşleşiyor; vurgu kaymıyor.",
-    "Paragrafa dokununca takip oradan sürüyor; uzak atlamalarda metin doğru yere gidiyor."
+    "Çıkmış Sorular ilk açılışta artık donmuyor; sorular arka planda indirilip cihaza kaydediliyor.",
+    "Sunucu çıkmış listesini daha az yükle hazırlıyor; sayfalar daha hızlı yanıt veriyor.",
+    "Giriş ekranında gereksiz müzik listesi isteği kaldırıldı."
   ]
 }

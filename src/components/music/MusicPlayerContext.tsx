@@ -3,6 +3,7 @@ import BUNDLED from '../../data/musicTracks.json';
 import { onAuthStateChanged } from 'firebase/auth';
 import { auth } from '../../services/auth';
 import { safeJsonFetch } from '../../services/api';
+import { isProductionHost } from '../../config/deployment';
 import { getVoterId } from '../../utils/voterId';
 import { realtimeEventService } from '../../services/realtimeEvents';
 
@@ -207,6 +208,8 @@ export const MusicPlayerProvider: React.FC<{ children: React.ReactNode }> = ({ c
   useEffect(() => {
     let alive = true;
     syncReady.current = false;
+    // Canlıda liste ucu girişli kullanıcı ister; giriş ekranındaki ziyaretçide istek 401 döner, liste yerelde kalır
+    if (isProductionHost() && !auth.currentUser) return () => { alive = false; };
     (async () => {
       const r = await safeJsonFetch<{ tracks: MusicTrack[] }>('/api/music/playlist', { headers: { 'x-user-id': owner } });
       if (!alive) return;

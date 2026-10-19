@@ -306,6 +306,40 @@ class PastQuestionsCacheService {
   }
 
   /**
+   * İlk yükleme (cihazda soru yok): indirme + ayrıştırma + IndexedDB yazımı Web Worker'da.
+   * Başarısızsa boş döner; çağıran eski yola (ana iş parçacığı) düşer.
+   */
+  public async initialLoadInWorker(endpoint: string): Promise<QuestionItem[]> {
+    if (typeof window === 'undefined' || typeof Worker === 'undefined') return [];
+    await this.initDb(); // depo şeması ana iş parçacığında kurulsun (sürüm yükseltmesi çakışmasın)
+    let worker: Worker | null = null;
+    try {
+      worker = new Worker(new URL('../workers/pastQuestionsWorker.ts', import.meta.url), { type: 'module' });
+      const url = new URL(endpoint, window.location.href).toString();
+      const out: any = await new Promise((resolve) => {
+        const timer = setTimeout(() => resolve({ ok: false }), 180_000);
+        worker!.onmessage = (e) => { clearTimeout(timer); resolve(e.data); };
+        worker!.onerror = () => { clearTimeout(timer); resolve({ ok: false }); };
+        worker!.postMessage({ url, dbName: DB_NAME, dbVersion: DB_VERSION, store: STORE_QUESTIONS, metaStore: STORE_META });
+      });
+      if (!out?.ok || !Array.isArray(out.questions) || out.questions.length === 0) return [];
+      const list: QuestionItem[] = out.questions;
+      this.memoryMap.clear();
+      for (const q of list) this.memoryMap.set(q.id, q);
+      this.isMemoryInitialized = true;
+      this.cachedIds = null;
+      if (out.stored) await this.setLastSyncTime(out.maxTime || new Date().toISOString(), list.length);
+      this.currentStatus.lastSyncTime = out.maxTime || null;
+      this.notifyListeners();
+      return list;
+    } catch {
+      return [];
+    } finally {
+      worker?.terminate();
+    }
+  }
+
+  /**
    * Tek bir soruyu ID ile önbellekten çek
    */
   public async getCachedQuestionById(id: string): Promise<QuestionItem | null> {
@@ -857,6 +891,9 @@ class PastQuestionsCacheService {
   private async performInitialLoad(): Promise<QuestionItem[]> {
     this.currentStatus.statusMessage = 'Sorular ilk kez cihazınıza indiriliyor...';
     this.notifyListeners();
+
+    const viaWorker = await this.initialLoadInWorker(`${getCustomApiUrl() || ''}/api/past-exams`);
+    if (viaWorker.length > 0) return viaWorker;
 
     let fetched: QuestionItem[] = [];
 
