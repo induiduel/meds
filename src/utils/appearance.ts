@@ -241,11 +241,18 @@ function syncPwaChrome(a: Appearance) {
   const bg = hex6(cs.getPropertyValue('--color-canvas'));
   if (!tc || !bg) return;
   document.querySelector('meta[name="theme-color"]')?.setAttribute('content', `#${tc}`);
+  const isIos =
+    /iPhone|iPad|iPod/i.test(navigator.userAgent) ||
+    (/Macintosh/i.test(navigator.userAgent) && navigator.maxTouchPoints > 1);
+  // iOS Ana Ekran PWA'da black-translucent + viewport-fit=cover tam ekran (edge-to-edge) görünüm sağlar;
+  // manifest href'in dinamik değiştirilmesi ise WebKit'in "Ana Ekrana Ekle" sırasında manifest okumasını kesebilir.
   document.querySelector('meta[name="apple-mobile-web-app-status-bar-style"]')
-    ?.setAttribute('content', a.mode === 'dark' ? 'black-translucent' : 'default');
-  const link = document.querySelector<HTMLLinkElement>('link[rel="manifest"]');
-  const href = pwaManifestHref(tc, bg);
-  if (link && link.getAttribute('href') !== href) link.setAttribute('href', href);
+    ?.setAttribute('content', 'black-translucent');
+  if (!isIos) {
+    const link = document.querySelector<HTMLLinkElement>('link[rel="manifest"]');
+    const href = pwaManifestHref(tc, bg);
+    if (link && link.getAttribute('href') !== href) link.setAttribute('href', href);
+  }
   try { localStorage.setItem(PWA_KEY, JSON.stringify({ tc, bg, dark: a.mode === 'dark' })); } catch { /* ignore */ }
 }
 

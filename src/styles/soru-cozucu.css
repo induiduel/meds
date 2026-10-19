@@ -5,11 +5,14 @@
  *  Yalnız palet tokenı: açık/koyu tema kendiliğinden. Satırlar: üst çubuk · ilerleme · sahne (kendi kayar) · alt oynatıcı.
  * ============================================================================= */
 .sc { --sc-w: 760px; --sc-yardim: var(--color-ai, var(--color-accent)); --sc-zoom: 1; --sc-bar-zoom: clamp(.85, var(--sc-zoom, 1), 1.25);
-  position: fixed; inset: 0; z-index: 90; display: grid; grid-template-columns: minmax(0, 1fr); grid-template-rows: auto auto minmax(0, 1fr) auto;
-  width: auto; height: auto; max-height: none !important; max-width: none !important; margin: 0;
+  position: fixed; left: 0; right: 0; top: var(--vvt, 0px); bottom: auto; z-index: 90; display: grid; grid-template-columns: minmax(0, 1fr); grid-template-rows: auto auto minmax(0, 1fr) auto;
+  width: 100%; height: var(--vvh, 100dvh); max-height: none !important; max-width: none !important; margin: 0;
   background: var(--color-canvas); color: var(--color-ink); font-family: var(--font-sans, inherit);
   padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px) 0 env(safe-area-inset-left, 0px);
   animation: sc-in .22s var(--mo-ease, ease) backwards; }
+.sc.is-tam { grid-template-rows: auto minmax(0, 1fr) auto; }
+.sc.is-tam .sc-ilerleme { display: none; }
+.sc.is-tam .sc-tam { background: var(--color-accent-soft); color: var(--color-accent) !important; }
 @keyframes sc-in { from { opacity: 0; transform: scale(.985); } }
 .sc button { font: inherit; cursor: pointer; -webkit-tap-highlight-color: transparent; color: inherit; }
 .sc button:disabled { cursor: default; }
@@ -226,7 +229,6 @@
 @media (max-width: 640px) {
   .sc { --sc-bar-zoom: 1; }
   .sc-ust { grid-template-columns: auto minmax(0, 1fr) auto; padding: 8px 10px; gap: 6px; }
-  .sc-tam { display: none; }
   .sc-olcek { height: 36px; padding: 2px; border-radius: 10px; gap: 1px; }
   .sc-olcek-b { width: 28px; height: 32px; border-radius: 8px; }
   .sc-olcek-b svg { width: 14px; height: 14px; }
@@ -242,7 +244,7 @@
   .sc-ybtn.is-coz { flex-basis: 100%; }
   .sc-not p { font-size: 15px; }
   .sc-aciklamalar li p { font-size: 14.5px; }
-  .sc-alt { gap: 8px; padding-inline: 10px; }
+  .sc-alt { gap: 8px; padding: 8px 10px calc(8px + env(safe-area-inset-bottom, 0px)); }
   .sc-oynat { gap: 8px; }
   .sc-buyuk { width: 50px; height: 50px; }
   .sc-btnler .sc-btn { flex: 1 1 auto; }

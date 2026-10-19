@@ -59,8 +59,8 @@ export const dismiss = (id: number) => {
 
 export const toast = {
   error: (title: string, message?: string, action?: ToastItem['action']) => push('error', title, message, action),
-  success: (title: string, message?: string) => push('success', title, message),
-  info: (title: string, message?: string) => push('info', title, message),
+  success: (title: string, message?: string, action?: ToastItem['action']) => push('success', title, message, action),
+  info: (title: string, message?: string, action?: ToastItem['action']) => push('info', title, message, action),
   /** Geçmişe yazmadan göster (zaten bildirim geçmişinde olan bir kaydı duyurmak için). */
   show: (kind: ToastKind, title: string, message?: string) => push(kind, title, message, undefined, false),
 };
@@ -73,12 +73,14 @@ export const ToastHost: React.FC = () => {
   useEffect(() => {
     const l: Listener = (next) => setList(next);
     listeners.add(l);
-    const fs = () => setHost(document.fullscreenElement);
+    const fs = () => setHost(document.fullscreenElement || (document as any).webkitFullscreenElement || null);
     document.addEventListener('fullscreenchange', fs);
+    document.addEventListener('webkitfullscreenchange', fs);
     fs();
     return () => {
       listeners.delete(l);
       document.removeEventListener('fullscreenchange', fs);
+      document.removeEventListener('webkitfullscreenchange', fs);
     };
   }, []);
 

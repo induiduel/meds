@@ -44,6 +44,15 @@ function measure() {
     setVar('--ch-zoom-cap', 'ch', '');
     return;
   }
+  const isIos =
+    root.classList.contains('is-ios') ||
+    /iPhone|iPad|iPod/i.test(navigator.userAgent) ||
+    (/Macintosh/i.test(navigator.userAgent) && navigator.maxTouchPoints > 1);
+  if (isIos) {
+    setVar('--ui-zoom-cap', 'ui', '1');
+    setVar('--ch-zoom-cap', 'ch', '1');
+    return;
+  }
   const vw = root.clientWidth || window.innerWidth;
   if (!vw) return; // gizli çerçeve / henüz yerleşmemiş
   const phone = vw < 768;

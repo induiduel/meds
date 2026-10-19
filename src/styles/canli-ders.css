@@ -384,12 +384,14 @@
 .cd-oynat:disabled { opacity: .45; cursor: default; }
 
 /* tam ekran: kabuk gizli, katman ölçeği 1 (v12 zoom'u geri alınır), oynatıcı yalnız istenince */
-:root.cd-tam-ekran .cd-ders.is-tam { position: fixed; inset: 0; z-index: 60; height: auto; min-height: 0; margin: 0; max-width: none;
+:root.cd-tam-ekran, :root.cd-tam-ekran body { overflow: hidden; }
+:root.cd-tam-ekran .cd-ders.is-tam { position: fixed; left: 0; right: 0; top: var(--vvt, 0px); bottom: auto; z-index: 80; width: 100%; height: var(--vvh, 100dvh); min-height: 0; margin: 0; max-width: none;
   padding: calc(10px + env(safe-area-inset-top, 0px)) 12px calc(10px + env(safe-area-inset-bottom, 0px)); background: var(--color-canvas); }
-:root[data-design='v12'] .sh-main .cd-ders.is-tam { zoom: calc(1 / var(--ui-zoom, 1)); --in-zoom: 1; --read-size: calc(16px * var(--txt-zoom, 1)); }
+:root[data-design='v12'] .sh-main:has(.cd-ders.is-tam) > * { zoom: 1 !important; --in-zoom: 1 !important; animation: none !important; transform: none !important; }
+:root[data-design='v12'] .sh-main .cd-ders.is-tam { zoom: 1; --in-zoom: 1; --read-size: calc(16px * var(--txt-zoom, 1)); }
 :root.cd-tam-oynatici .cd-ders.is-tam { padding-bottom: calc(var(--cd-dock-h, 0px) + 8px); }
-:root.cd-tam-ekran :is(.s12-tabs, .sh-tabs) { display: none; }
-:root.cd-tam-ekran .cd-dock { z-index: 61; left: 0; }
+:root.cd-tam-ekran :is(.s12-top, .sh-top, .s12-rail, .sh-side, .s12-tabs, .sh-tabs) { display: none !important; }
+:root.cd-tam-ekran .cd-dock { z-index: 81; left: 0; }
 :root.cd-tam-ekran:not(.cd-tam-oynatici) .cd-dock { display: none; }
 .cd-ders.is-tam .cd-geri, .cd-ders.is-tam .cd-basla { display: none; }
 @media (min-width: 900px) { :root.cd-tam-ekran .cd-ders.is-tam { padding-inline: 16px; } }

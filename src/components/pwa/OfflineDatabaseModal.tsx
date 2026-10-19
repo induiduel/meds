@@ -75,28 +75,31 @@ const Progress: React.FC<{ o: OfflineState; detail?: boolean }> = ({ o, detail }
 );
 
 const InstallRow: React.FC<{ p: PwaState }> = ({ p }) => {
-  const [guide, setGuide] = useState(false);
   if (p.isInstalled) {
-    return <p className="of-note is-ok"><Smartphone aria-hidden /> Uygulama olarak kurulu.</p>;
+    return <p className="of-note is-ok"><Smartphone aria-hidden /> Uygulama olarak kurulu (Tam ekran PWA aktif).</p>;
   }
   return (
     <div className="of-install">
       <div className="of-install-t">
         <Smartphone aria-hidden />
-        <span><b>Ana ekrana ekle</b><small>Tam ekran açılır, tek dokunuşla başlar.</small></span>
-        {p.canInstall ? (
-          <button type="button" className="ms-btn is-tonal is-sm" onClick={() => pwaService.promptInstall()}>Ekle</button>
-        ) : isIos() ? (
-          <button type="button" className="ms-btn is-ghost is-sm" onClick={() => setGuide((g) => !g)} aria-expanded={guide}>Nasıl?</button>
-        ) : null}
+        <span>
+          <b>Uygulamayı cihaza yükle (PWA)</b>
+          <small>
+            {p.isIos
+              ? p.iosBrowser === 'crios'
+                ? 'Chrome adres çubuğundaki Paylaş › Ana Ekrana Ekle ile tam ekran açılır.'
+                : 'Safari Paylaş › Ana Ekrana Ekle ile gerçek tam ekran açılır.'
+              : 'Ana ekrandan adres çubuğu olmadan, gerçek tam ekran açılır.'}
+          </small>
+        </span>
+        <button
+          type="button"
+          className="ms-btn is-tonal is-sm"
+          onClick={() => pwaService.promptInstall()}
+        >
+          {p.hasNativePrompt ? 'Yükle' : 'Ana Ekrana Ekle'}
+        </button>
       </div>
-      {guide && (
-        <ol className="of-steps">
-          <li><Share2 aria-hidden /> Safari'de <b>Paylaş</b>'a dokun.</li>
-          <li><b>Ana Ekrana Ekle</b>'yi seç, <b>Ekle</b>'ye dokun.</li>
-        </ol>
-      )}
-      {!p.canInstall && !isIos() && <small className="of-hint">Tarayıcının adres çubuğundaki kurulum simgesini kullan.</small>}
     </div>
   );
 };
@@ -212,6 +215,7 @@ const AdminView: React.FC<{ o: OfflineState; p: PwaState }> = ({ o, p }) => {
           <li className={o.queuedActionsCount ? 'is-warn' : 'is-ok'}><i aria-hidden />Bekleyen işlem<b>{nf(o.queuedActionsCount)}</b></li>
         </ul>
       </section>
+      <InstallRow p={p} />
       <DeviceStorageSection o={o} />
       {syncMsg && <p className="of-note">{syncMsg}</p>}
       <div className="of-actions">

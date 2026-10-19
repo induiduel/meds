@@ -40,13 +40,21 @@ export const PwaInstallWelcomeModal: React.FC<PwaInstallWelcomeModalProps> = ({ 
     setBusy(true);
     remember(true);
     const st = pwaService.getState();
-    if (st.canInstall && !st.isInstalled) await pwaService.promptInstall();
+    if (st.hasNativePrompt && !st.isInstalled) {
+      await pwaService.promptInstall({ silentIfUnsupported: true });
+    }
     onClose();
     onOpenOfflineDatabase();
     window.setTimeout(() => offlineDatabaseService.downloadEntireDatabase(), 300);
   };
 
-  if (v12) return <PwaWelcomeV12 busy={busy} onLater={() => close(false)} onNever={() => close(true)} onAccept={accept} />;
+  const openInstall = () => {
+    remember(false);
+    onClose();
+    pwaService.openInstallGuide();
+  };
+
+  if (v12) return <PwaWelcomeV12 busy={busy} onLater={() => close(false)} onNever={() => close(true)} onAccept={accept} onInstallGuide={!pwaService.getState().isInstalled ? openInstall : undefined} />;
 
   return (
     <Dialog
@@ -56,6 +64,11 @@ export const PwaInstallWelcomeModal: React.FC<PwaInstallWelcomeModalProps> = ({ 
       footer={
         <>
           <button type="button" className="ms-btn is-ghost is-sm mr-auto" onClick={() => close(true)}>Bir daha sorma</button>
+          {!pwaService.getState().isInstalled && (
+            <button type="button" className="ms-btn is-tonal" onClick={openInstall}>
+              <Smartphone /> Ana Ekrana Ekle
+            </button>
+          )}
           <button type="button" className="ms-btn is-ghost" onClick={() => close(false)}>Sonra</button>
           <button type="button" className="ms-btn is-primary" onClick={accept} disabled={busy}>
             <CloudDownload /> İndir

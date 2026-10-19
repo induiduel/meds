@@ -156,6 +156,7 @@ const MedicalEncyclopediaView = React.lazy(() => wrapLazy(import('./components/e
 const ManageConsole = React.lazy(() => wrapLazy(import('./components/manage/ManageConsole').then(m => ({ default: m.ManageConsole }))));
 const OfflineDatabaseModal = React.lazy(() => wrapLazy(import('./components/pwa/OfflineDatabaseModal').then(m => ({ default: m.OfflineDatabaseModal }))));
 const PwaInstallWelcomeModal = React.lazy(() => wrapLazy(import('./components/pwa/PwaInstallWelcomeModal').then(m => ({ default: m.PwaInstallWelcomeModal }))));
+import { PwaInstallGuideModal } from './components/pwa/PwaInstallGuideModal';
 const QuestionClusterAutomationModal = React.lazy(() => wrapLazy(import('./components/admin/QuestionClusterAutomationModal').then(m => ({ default: m.QuestionClusterAutomationModal }))));
 
 const ViewFallback = () => <PageLoader />;
@@ -2154,6 +2155,7 @@ export default function App() {
           />
         </Suspense>
       )}
+      <PwaInstallGuideModal />
 
       {/* User Login/Register Modal */}
       {isAuthModalOpen && !showOnboarding && (

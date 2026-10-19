@@ -3,16 +3,24 @@
  *
  * PWA (Progressive Web App) Yaşam Döngüsü ve Arka Plan Servis Yöneticisi:
  * - Service Worker kaydı ve güncellemelerin otomatik yönetimi
- * - Masaüstü ve mobil yükleme istemi (beforeinstallprompt, promptInstall)
+ * - Masaüstü, Android ve iOS (Safari & Chrome) yükleme istemi / rehberi
  * - Standalone (kurulu uygulama) algılama
  * - Arka Plan Eşitlemesi (Background Sync & Periodic Background Sync)
  * - Push Bildirim yetkilendirmesi ve entegrasyonu
  */
 
+export type IosBrowserType = 'safari' | 'crios' | 'fxios' | 'edgios' | 'other';
+
 export interface PwaState {
   isSupported: boolean;
   isInstalled: boolean;
+  /** Uygulama henüz kurulu değilse true (hem native prompt hem iOS Safari/Chrome rehberi için) */
   canInstall: boolean;
+  /** Tarayıcı doğrudan beforeinstallprompt sunduysa true */
+  hasNativePrompt: boolean;
+  isIos: boolean;
+  isIpad: boolean;
+  iosBrowser: IosBrowserType;
   isRegistered: boolean;
   hasUpdate: boolean;
   backgroundSyncSupported: boolean;
@@ -29,6 +37,29 @@ export type PwaListener = (state: PwaState) => void;
 export const SW_URL = '/sw.js?v=12';
 
 export const PWA_WELCOME_STORAGE_KEY = 'medsoru_pwa_welcome_dismissed_v1';
+export const PWA_GUIDE_OPEN_EVENT = 'medsor:open-pwa-install-guide';
+
+export function detectIosDevice(): boolean {
+  if (typeof navigator === 'undefined') return false;
+  const ua = navigator.userAgent || '';
+  return /iPad|iPhone|iPod/.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+}
+
+export function detectIpadDevice(): boolean {
+  if (typeof navigator === 'undefined') return false;
+  const ua = navigator.userAgent || '';
+  return /iPad/.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+}
+
+export function detectIosBrowser(): IosBrowserType {
+  if (typeof navigator === 'undefined') return 'other';
+  const ua = navigator.userAgent || '';
+  if (/CriOS/i.test(ua)) return 'crios';
+  if (/FxiOS/i.test(ua)) return 'fxios';
+  if (/EdgiOS/i.test(ua)) return 'edgios';
+  if (/Safari/i.test(ua) && !/CriOS|FxiOS|EdgiOS|OPiOS/i.test(ua)) return 'safari';
+  return 'other';
+}
 
 class PwaService {
   private deferredPrompt: any = null;
@@ -38,7 +69,11 @@ class PwaService {
   private state: PwaState = {
     isSupported: typeof window !== 'undefined' && 'serviceWorker' in navigator,
     isInstalled: false,
-    canInstall: false,
+    canInstall: true,
+    hasNativePrompt: false,
+    isIos: detectIosDevice(),
+    isIpad: detectIpadDevice(),
+    iosBrowser: detectIosBrowser(),
     isRegistered: false,
     hasUpdate: false,
     backgroundSyncSupported: false,
@@ -50,6 +85,12 @@ class PwaService {
       this.checkInstalled();
       this.initServiceWorker();
       this.listenInstallPrompt();
+      try {
+        const mq = window.matchMedia('(display-mode: standalone)');
+        mq.addEventListener?.('change', () => this.checkInstalled());
+      } catch {
+        /* ignore */
+      }
     }
   }
 
@@ -78,13 +119,21 @@ class PwaService {
     if (typeof window === 'undefined') return false;
     return (
       window.matchMedia('(display-mode: standalone)').matches ||
+      window.matchMedia('(display-mode: fullscreen)').matches ||
       (window.navigator as any).standalone === true ||
       document.referrer.includes('android-app://')
     );
   }
 
   private checkInstalled() {
-    this.state.isInstalled = this.isStandalone();
+    const installed = this.isStandalone();
+    this.state.isInstalled = installed;
+    this.state.canInstall = !installed;
+    if (installed) {
+      document.documentElement.classList.add('is-pwa-standalone');
+    } else {
+      document.documentElement.classList.remove('is-pwa-standalone');
+    }
     this.notify();
   }
 
@@ -93,15 +142,18 @@ class PwaService {
       // Varsayılan mini-infobar'ı engelle ve kendi özel butonumuz için sakla
       e.preventDefault();
       this.deferredPrompt = e;
-      this.state.canInstall = true;
+      this.state.hasNativePrompt = true;
+      this.state.canInstall = !this.state.isInstalled;
       this.notify();
       console.log('[PWA] beforeinstallprompt yakalandı. Uygulama kurulabilir.');
     });
 
     window.addEventListener('appinstalled', () => {
       this.deferredPrompt = null;
+      this.state.hasNativePrompt = false;
       this.state.canInstall = false;
       this.state.isInstalled = true;
+      document.documentElement.classList.add('is-pwa-standalone');
       this.notify();
       console.log('[PWA] MeDSor başarıyla kuruldu.');
     });
@@ -234,11 +286,23 @@ class PwaService {
   }
 
   /**
-   * Kullanıcıya PWA Kurulum Penceresini Göster
+   * Görsel kurulum rehberi modalını aç (iOS Safari, iOS Chrome ve manuel kurulum için)
    */
-  public async promptInstall(): Promise<'accepted' | 'dismissed' | 'unsupported'> {
+  public openInstallGuide() {
+    if (typeof window !== 'undefined') {
+      window.dispatchEvent(new CustomEvent(PWA_GUIDE_OPEN_EVENT));
+    }
+  }
+
+  /**
+   * Kullanıcıya PWA Kurulum Penceresini Göster.
+   * Native prompt varsa doğrudan açar; yoksa (iOS Safari, iOS Chrome vb.) görsel kurulum rehberini açar.
+   */
+  public async promptInstall(opts?: { silentIfUnsupported?: boolean }): Promise<'accepted' | 'dismissed' | 'unsupported'> {
     if (!this.deferredPrompt) {
-      // iOS Safari için manuel rehber gerekebilir
+      if (!opts?.silentIfUnsupported) {
+        this.openInstallGuide();
+      }
       return 'unsupported';
     }
 
@@ -246,11 +310,15 @@ class PwaService {
       this.deferredPrompt.prompt();
       const choiceResult = await this.deferredPrompt.userChoice;
       this.deferredPrompt = null;
-      this.state.canInstall = false;
+      this.state.hasNativePrompt = false;
+      this.state.canInstall = !this.state.isInstalled;
       this.notify();
       return choiceResult.outcome;
     } catch (e) {
       console.warn('[PWA] Prompt hatası:', e);
+      if (!opts?.silentIfUnsupported) {
+        this.openInstallGuide();
+      }
       return 'dismissed';
     }
   }
@@ -279,3 +347,8 @@ class PwaService {
 }
 
 export const pwaService = new PwaService();
+
+export function openPwaInstallGuide(): void {
+  pwaService.openInstallGuide();
+}
+

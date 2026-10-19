@@ -198,21 +198,34 @@ export default function CanliDersDers({ dersKey }: { dersKey: string }) {
       if (e.key !== 'Escape' || document.querySelector('.cd-tur, .gu-ortu, [role="dialog"][aria-modal="true"]')) return;
       setTamEkran(false);
     };
-    const onFs = () => { if (!document.fullscreenElement) setTamEkran(false); };
+    const onFs = () => {
+      const d = document as any;
+      if (!d.fullscreenElement && !d.webkitFullscreenElement) setTamEkran(false);
+    };
     document.addEventListener('keydown', onKey);
     document.addEventListener('fullscreenchange', onFs);
+    document.addEventListener('webkitfullscreenchange', onFs);
     return () => {
       document.removeEventListener('keydown', onKey);
       document.removeEventListener('fullscreenchange', onFs);
+      document.removeEventListener('webkitfullscreenchange', onFs);
     };
   }, [tamEkran, oynaticiAcik]);
   useEffect(() => () => {
     document.documentElement.classList.remove('cd-tam-ekran', 'cd-tam-oynatici');
-    if (document.fullscreenElement) void document.exitFullscreen?.().catch(() => {});
+    const d = document as any;
+    if (d.fullscreenElement || d.webkitFullscreenElement) {
+      void (d.exitFullscreen || d.webkitExitFullscreen)?.call(d)?.catch?.(() => {});
+    }
   }, []);
   const tamEkranAc = () => {
     setOynaticiAcik(false);
     setTamEkran(true);
+    try {
+      window.scrollTo({ top: 0, left: 0, behavior: 'instant' as ScrollBehavior });
+    } catch {
+      window.scrollTo(0, 0);
+    }
     const kok = document.documentElement as HTMLElement & { webkitRequestFullscreen?: () => void };
     try {
       if (kok.requestFullscreen) void kok.requestFullscreen({ navigationUI: 'hide' }).catch(() => {});
@@ -221,7 +234,10 @@ export default function CanliDersDers({ dersKey }: { dersKey: string }) {
   };
   const tamEkranKapat = () => {
     setTamEkran(false);
-    if (document.fullscreenElement) void document.exitFullscreen?.().catch(() => {});
+    const d = document as any;
+    if (d.fullscreenElement || d.webkitFullscreenElement) {
+      void (d.exitFullscreen || d.webkitExitFullscreen)?.call(d)?.catch?.(() => {});
+    }
   };
 
   // Sayfa içinde sabit yükseklik: üst çubuk ile alt oynatıcı/sekme çubuğu arasını doldurur (bölmeler kendi kayar)

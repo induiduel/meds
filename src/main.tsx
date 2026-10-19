@@ -59,11 +59,11 @@ if (typeof window !== 'undefined') {
   const measure = () => {
     raf = 0;
     const h = Math.round(vv ? vv.height : window.innerHeight);
-    const t = Math.round(vv ? vv.offsetTop : 0);
-    if (h !== lastH) { lastH = h; root.style.setProperty('--vvh', `${h}px`); }
-    if (t !== lastT) { lastT = t; root.style.setProperty('--vvt', `${t}px`); }
     const typing = !!(document.activeElement as HTMLElement | null)?.closest?.('input,textarea,select,[contenteditable="true"]');
     const kb = (typing && h < window.innerHeight * 0.8) || (typing && !!vv && vv.height < screen.height * 0.6);
+    const t = kb && vv ? Math.max(0, Math.round(vv.offsetTop)) : 0;
+    if (h !== lastH) { lastH = h; root.style.setProperty('--vvh', `${h}px`); }
+    if (t !== lastT) { lastT = t; root.style.setProperty('--vvt', `${t}px`); }
     if (kb !== lastKb) { lastKb = kb; root.classList.toggle('kb-open', kb); }
   };
   const update = () => { if (!raf) raf = requestAnimationFrame(measure); };

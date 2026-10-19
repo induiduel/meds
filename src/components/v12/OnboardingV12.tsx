@@ -383,7 +383,7 @@ export const TourCardV12: React.FC<TourCardV12Props> = ({ cardRef, place, top, l
  * Uygulamayı ekle / internetsiz çalış (PwaInstallWelcomeModal v12 görünümü)
  * --------------------------------------------------------------------------- */
 
-export const PwaWelcomeV12: React.FC<{ busy: boolean; onLater: () => void; onNever: () => void; onAccept: () => void }> = ({ busy, onLater, onNever, onAccept }) => {
+export const PwaWelcomeV12: React.FC<{ busy: boolean; onLater: () => void; onNever: () => void; onAccept: () => void; onInstallGuide?: () => void }> = ({ busy, onLater, onNever, onAccept, onInstallGuide }) => {
   const id = useId();
   return (
     <EntryDialogV12 labelledBy={`${id}-t`} describedBy={`${id}-d`} onClose={onLater} width={440}>
@@ -403,6 +403,11 @@ export const PwaWelcomeV12: React.FC<{ busy: boolean; onLater: () => void; onNev
       <div className="e12-dlg-f">
         <button type="button" className="e12-btn is-ghost is-sm" onClick={onNever}>Bir daha sorma</button>
         <span className="e12-grow" />
+        {onInstallGuide && (
+          <button type="button" className="e12-btn is-sm" onClick={onInstallGuide}>
+            <Smartphone aria-hidden="true" /> Ana Ekrana Ekle
+          </button>
+        )}
         <button type="button" className="e12-btn is-ghost" onClick={onLater}>Sonra</button>
         <button type="button" className="e12-btn is-pri" onClick={onAccept} disabled={busy}>
           <CloudDownload aria-hidden="true" /> İndir

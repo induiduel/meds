@@ -1595,7 +1595,7 @@ html.theme-dark .ms-about-answer-key { color: #06210f; }
  * Öğren · yeni ders ekranı (ls-*). A = Akış (tek sütun + alt bilgi çekmecesi),
  * B = Stüdyo (ekrana sığan üç bölme). Telefonda yalnız A.
  * ========================================================================= */
-.ls-root { position: fixed; inset: 0; z-index: 60; height: calc(var(--vvh, 100dvh) / var(--in-zoom, 1)); width: 100%; display: flex; flex-direction: column; background: var(--color-canvas); color: var(--color-ink); outline: 0; --ls-mark: #FFF1B8; --ls-mark-ink: #4A3800; }
+.ls-root { position: fixed; inset: 0; top: var(--vvt, 0px); z-index: 70; height: calc(var(--vvh, 100dvh) / var(--in-zoom, 1)); width: 100%; display: flex; flex-direction: column; background: var(--color-canvas); color: var(--color-ink); outline: 0; --ls-mark: #FFF1B8; --ls-mark-ink: #4A3800; }
 html.theme-dark .ls-root { --ls-mark: #4A3B0B; --ls-mark-ink: #FFE7A0; }
 .ls-root svg { flex-shrink: 0; }
 .ls-btn { display: inline-flex; align-items: center; justify-content: center; gap: 6px; height: 36px; padding: 0 12px; border: 0; border-radius: 10px; background: var(--color-field); color: var(--color-ink-2); font: inherit; font-size: 13.5px; font-weight: 600; white-space: nowrap; cursor: pointer; transition: background-color .15s, color .15s, transform .15s; }
@@ -1634,9 +1634,10 @@ html.theme-dark .ls-root { --ls-mark: #4A3B0B; --ls-mark-ink: #FFE7A0; }
 .ls-segbar button { flex-basis: 0; height: 6px; border: 0; padding: 0; border-radius: 99px; background: var(--color-line); cursor: pointer; overflow: hidden; position: relative; }
 .ls-segbar button i { position: absolute; inset: 0 auto 0 0; background: var(--color-accent); border-radius: inherit; transition: width .45s var(--ease-out-soft); }
 .ls-segbar button.is-cur { box-shadow: 0 0 0 2px var(--color-accent-soft); }
-.ls-exit-immersive { position: fixed; z-index: 70; left: 50%; transform: translateX(-50%); top: max(6px, env(safe-area-inset-top, 0px)); width: 34px; height: 34px; opacity: .55; transition: opacity .2s; border: 0; border-radius: 99px; background: rgb(14 23 38 / .7); color: #fff; display: inline-flex; align-items: center; justify-content: center; cursor: pointer; }
-.ls-exit-immersive svg { width: 16px; height: 16px; }
+.ls-exit-immersive { position: fixed; z-index: 80; right: calc(12px + env(safe-area-inset-right, 0px)); top: calc(10px + env(safe-area-inset-top, 0px)); height: 34px; padding: 0 11px; gap: 5px; opacity: .82; transition: opacity .2s; border: 1px solid var(--color-line); border-radius: 99px; background: var(--color-white); color: var(--color-ink); font: 600 12.5px/1 var(--font-sans); box-shadow: var(--shadow-md); display: inline-flex; align-items: center; justify-content: center; cursor: pointer; }
+.ls-exit-immersive svg { width: 15px; height: 15px; }
 .ls-exit-immersive:hover, .ls-exit-immersive:focus-visible { opacity: 1; }
+.ls-root.is-immersive .ls-A-main > .ls-col { padding-top: calc(20px + env(safe-area-inset-top, 0px)); }
 
 /* Araçlar menüsü */
 .ls-tools { position: relative; }

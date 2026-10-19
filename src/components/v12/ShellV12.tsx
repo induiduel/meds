@@ -18,6 +18,9 @@ import {
   Plus,
   Search,
   ShieldCheck,
+  Smartphone,
+  Maximize2,
+  Minimize2,
   Sun,
   SunMedium,
   UserRound,
@@ -31,6 +34,7 @@ import { prefetchRoute } from '../../routePrefetch';
 import { useReviewCounts } from '../../hooks/useReviewCounts';
 import { MODE_LABELS, type ThemeMode, useAppearance } from '../../utils/appearance';
 import { useTheme } from '../../utils/theme';
+import { useAppFullscreen } from '../../utils/fullscreen';
 import { OfflineStatusBadge } from '../pwa/OfflineStatusBadge';
 import { GuncellemeSimgesi } from '../system/UpdatePrompt';
 import { NotificationHistoryModal } from '../notifications/NotificationHistoryModal';
@@ -258,6 +262,7 @@ export const TopBarSlotV12: React.FC<{ children: React.ReactNode }> = ({ childre
 export const TopBarV12: React.FC<TopBarProps> = ({ active, onGo, user, isAdmin, searchQuery = '', onSearch, onOpenOffline, actions }) => {
   const phone = usePhone();
   const { theme, toggle } = useTheme();
+  const [appFs, toggleAppFs, exitAppFs] = useAppFullscreen();
   const [menu, setMenu] = useState(false);
   const [search, setSearch] = useState(false);
   const [canInstall, setCanInstall] = useState(pwaService.getState().canInstall);
@@ -280,6 +285,26 @@ export const TopBarV12: React.FC<TopBarProps> = ({ active, onGo, user, isAdmin, 
         <div className="s12-top-tools">
           <OfflineStatusBadge onClick={() => onOpenOffline?.()} isAdmin={isAdmin} className="s12-ofb" />
           <GuncellemeSimgesi className="s12-ib" />
+          {canInstall && (
+            <button
+              type="button"
+              className="s12-ib"
+              onClick={() => pwaService.promptInstall()}
+              aria-label="Uygulamayı cihaza yükle (Ana Ekrana Ekle)"
+              title="Uygulamayı cihaza yükle (Tam Ekran PWA)"
+            >
+              <Smartphone aria-hidden="true" />
+            </button>
+          )}
+          <button
+            type="button"
+            className="s12-ib"
+            onClick={() => toggleAppFs()}
+            aria-label={appFs ? 'Tam ekrandan çık' : 'Tam ekran görünümü'}
+            title={appFs ? 'Tam ekrandan çık' : 'Tam ekran görünümü'}
+          >
+            {appFs ? <Minimize2 aria-hidden="true" /> : <Maximize2 aria-hidden="true" />}
+          </button>
           <button type="button" className="s12-ib s12-only-phone" onClick={() => setSearch(true)} aria-label="Ara">
             <Search aria-hidden="true" />
           </button>
@@ -350,6 +375,21 @@ export const TopBarV12: React.FC<TopBarProps> = ({ active, onGo, user, isAdmin, 
       )}
 
       <NotificationHistoryModal isOpen={showNotifModal} onClose={() => setShowNotifModal(false)} />
+      {appFs &&
+        typeof document !== 'undefined' &&
+        createPortal(
+          <button
+            type="button"
+            className="s12-fs-exit print:hidden"
+            onClick={exitAppFs}
+            aria-label="Tam ekrandan çık"
+            title="Tam ekrandan çık"
+          >
+            <Minimize2 aria-hidden="true" />
+            <span>Tam ekrandan çık</span>
+          </button>,
+          document.body,
+        )}
     </header>
   );
 };
@@ -363,6 +403,9 @@ export const TabBarV12: React.FC<TabBarProps> = ({ active, onGo, isAdmin, onPdf,
   const [more, setMore] = useState(false);
   const [showNotifModal, setShowNotifModal] = useState(false);
   const unread = useUnread();
+  const [appFs, toggleAppFs] = useAppFullscreen();
+  const [canInstall, setCanInstall] = useState(pwaService.getState().canInstall);
+  useEffect(() => pwaService.subscribe((s) => setCanInstall(s.canInstall)), []);
   const [queued, setQueued] = useState(() => offlineDatabaseService.getState().queuedActionsCount);
   useEffect(() => offlineDatabaseService.subscribe((st) => setQueued(st.queuedActionsCount)), []);
   const look = useAppearance();
@@ -658,6 +701,19 @@ export const TabBarV12: React.FC<TabBarProps> = ({ active, onGo, isAdmin, onPdf,
               />
             </div>
             <div className="s12-mlist">
+              {canInstall &&
+                row('install', Smartphone, 'Uygulamayı cihaza yükle (PWA)', 'Ana ekrana ekle · gerçek tam ekran çalışır', <span className="s12-badge is-acc">Tam ekran</span>, {
+                  onClick: () => {
+                    setMore(false);
+                    void pwaService.promptInstall();
+                  },
+                })}
+              {row('fullscreen', appFs ? Minimize2 : Maximize2, appFs ? 'Tam ekrandan çık' : 'Tam ekran görünümü', 'Üst ve alt çubukları gizleyerek çalışma alanını büyüt', undefined, {
+                onClick: () => {
+                  setMore(false);
+                  toggleAppFs();
+                },
+              })}
               {row('notif', Bell, 'Bildirim geçmişi', 'Yapay zekâ düzeltmeleri ve bildirimler', unread > 0 ? <span className="s12-badge is-acc">{unread}</span> : undefined, {
                 onClick: () => {
                   setMore(false);

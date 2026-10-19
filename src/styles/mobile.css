@@ -30,12 +30,12 @@
   .ms-chipbar:not(.is-wrap)::-webkit-scrollbar { display: none; }
   .ms-chipbar:not(.is-wrap) > * { scroll-snap-align: start; }
 
-  /* Hız: ekran dışındaki uzun liste öğeleri çizilmez (yer tutucu boyutu hatırlanır) */
-  :is(.qk, .cx-q, .gl-card, .lh-res, .ds-row, .ct-row) { content-visibility: auto; contain-intrinsic-size: auto 140px; }
+  /* Hız: içinde sabit konumlu balon/menü olmayan düz liste satırlarında ekran dışı çizim atlanır */
+  :is(.gl-card, .lh-res, .ds-row, .ct-row) { content-visibility: auto; contain-intrinsic-size: auto 140px; }
 
-  /* Sayfa geçişi: alttan hafif yükselip netleşir (sekme değişiminde) */
-  .sh-main.ms-view-enter { animation: m-page-in .34s var(--mo-spring, cubic-bezier(.32, .72, 0, 1)) both; }
-  @keyframes m-page-in { from { opacity: 0; transform: translateY(10px) scale(.994); } to { opacity: 1; transform: none; } }
+  /* Sayfa geçişi: yalnız saydamlık (transform, iOS Safari/Chrome'da position:fixed tam ekran katmanları .sh-main içine hapseder) */
+  .sh-main.ms-view-enter { animation: m-page-in .22s var(--mo-ease, ease-out) backwards; }
+  @keyframes m-page-in { from { opacity: 0; } }
 
   /* Dokunma hedefleri: küçük ikon düğmeleri en az 40px */
   .sh-ibtn { width: 40px; height: 40px; border-radius: 12px; }

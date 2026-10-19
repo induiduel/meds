@@ -56,6 +56,7 @@ import { penPalette, SlideDrawingCanvas, setDrawingGlobalState, useDrawingGlobal
 import { getSlidePdfLocation } from '../../../services/slidePdfMappingService';
 import { useDeckPdf } from '../../../services/deckPdfService';
 import { QuestionFocus, focusMarks } from '../../../services/questionFocus';
+import { openPwaInstallGuide } from '../../../services/pwaService';
 import { toast } from '../../ui/Toast';
 import { deckName } from '../../../data/deckStore';
 import {
@@ -745,7 +746,8 @@ export const LessonPlayer: React.FC<LessonPlayerProps> = ({ deck, startAt, initi
   const [immersive, setImmersive] = useState(false);
   useEffect(() => {
     const on = () => {
-      const fs = !!(document.fullscreenElement || (document as any).webkitFullscreenElement);
+      const d = document as any;
+      const fs = !!(d.fullscreenElement || d.webkitFullscreenElement || d.webkitCurrentFullScreenElement);
       setIsFs(fs);
       if (fs) setImmersive(false);
     };
@@ -757,20 +759,27 @@ export const LessonPlayer: React.FC<LessonPlayerProps> = ({ deck, startAt, initi
     };
   }, []);
   // Tam ekran tüm ekranı kaplar: belge kökü tam ekrana alınır (ders katmanı sabit konumlu, ekranı doldurur).
-  // API yoksa (iPhone Safari) ya da istek reddedilir/yanıtsız kalırsa yalnız arayüzü gizleyen odak moduna geçilir.
+  // API yoksa (iPhone Safari / Chrome) ya da istek reddedilir/yanıtsız kalırsa yalnız arayüzü gizleyen tam ekran moduna geçilir.
   const toggleFullscreen = () => {
     setToolsOpen(false);
     const d = document as any;
     if (immersive) return setImmersive(false);
-    if (d.fullscreenElement || d.webkitFullscreenElement) {
-      (d.exitFullscreen || d.webkitExitFullscreen)?.call(d)?.catch?.(() => {});
+    if (d.fullscreenElement || d.webkitFullscreenElement || d.webkitCurrentFullScreenElement) {
+      (d.exitFullscreen || d.webkitExitFullscreen || d.webkitCancelFullScreen)?.call(d)?.catch?.(() => {});
       return;
     }
     const el: any = document.documentElement;
-    const req = el.requestFullscreen || el.webkitRequestFullscreen;
+    const req = el.requestFullscreen || el.webkitRequestFullscreen || el.webkitRequestFullScreen;
     if (!req) {
       setImmersive(true);
-      if (/iPhone|iPod/.test(navigator.userAgent)) toast.info('iPhone tam ekranı desteklemiyor', 'Arayüz gizlendi. Gerçek tam ekran için Safari > Paylaş > Ana Ekrana Ekle ile uygulamayı aç.');
+      const isStandalone = window.matchMedia?.('(display-mode: standalone)').matches || (navigator as any).standalone === true;
+      if (/iPhone|iPod/.test(navigator.userAgent) && !isStandalone) {
+        toast.info(
+          'Tam ekran ders modu açıldı',
+          'Adres çubuğunu da tamamen gizlemek için uygulamayı Ana Ekrana ekleyebilirsin.',
+          { label: 'Nasıl eklenir?', onClick: () => openPwaInstallGuide() }
+        );
+      }
       return;
     }
     let settled = false;
@@ -781,12 +790,20 @@ export const LessonPlayer: React.FC<LessonPlayerProps> = ({ deck, startAt, initi
         setImmersive(true);
       });
     } catch {
-      setImmersive(true);
-      return;
+      try {
+        const p2 = req.call(el);
+        p2?.then?.(() => (settled = true), () => {
+          settled = true;
+          setImmersive(true);
+        });
+      } catch {
+        setImmersive(true);
+        return;
+      }
     }
     window.setTimeout(() => {
-      if (!settled && !d.fullscreenElement && !d.webkitFullscreenElement) setImmersive(true);
-    }, 1500);
+      if (!settled && !d.fullscreenElement && !d.webkitFullscreenElement && !d.webkitCurrentFullScreenElement) setImmersive(true);
+    }, 800);
   };
   const fsOn = isFs || immersive;
 
@@ -1124,6 +1141,16 @@ export const LessonPlayer: React.FC<LessonPlayerProps> = ({ deck, startAt, initi
       )}
       <button type="button" className="ls-btn is-icon is-ghost" onClick={() => setSearchOpen(true)} aria-label="Derste ara" title="Derste ara (Ctrl+K)"><Search aria-hidden /></button>
       <NightToggle />
+      <button
+        type="button"
+        className={`ls-btn is-icon is-ghost ${fsOn ? 'is-on' : ''}`}
+        aria-pressed={fsOn}
+        onClick={toggleFullscreen}
+        aria-label={fsOn ? 'Tam ekrandan çık' : 'Tam ekran'}
+        title={fsOn ? 'Tam ekrandan çık (F / Esc)' : 'Tam ekran (F)'}
+      >
+        {fsOn ? <Minimize2 aria-hidden /> : <Maximize2 aria-hidden />}
+      </button>
       <div className="ls-tools" ref={zoomRef}>
         {zoomBtn}
         {zoomPop}
@@ -1205,6 +1232,16 @@ export const LessonPlayer: React.FC<LessonPlayerProps> = ({ deck, startAt, initi
         <FileText aria-hidden /><span className="lv-hide-sm">Ders PDF’i</span>
       </button>
       <button type="button" className="ls-btn is-icon is-ghost" onClick={() => setSearchOpen(true)} aria-label="Derste ara" title="Derste ara (Ctrl+K)"><Search aria-hidden /></button>
+      <button
+        type="button"
+        className={`ls-btn is-icon is-ghost ${fsOn ? 'is-on' : ''}`}
+        aria-pressed={fsOn}
+        onClick={toggleFullscreen}
+        aria-label={fsOn ? 'Tam ekrandan çık' : 'Tam ekran'}
+        title={fsOn ? 'Tam ekrandan çık (F / Esc)' : 'Tam ekran (F)'}
+      >
+        {fsOn ? <Minimize2 aria-hidden /> : <Maximize2 aria-hidden />}
+      </button>
       <div className="ls-tools" ref={zoomRef}>
         <button
           type="button"
@@ -1621,7 +1658,9 @@ export const LessonPlayer: React.FC<LessonPlayerProps> = ({ deck, startAt, initi
       <FeedbackProvider value={fbCtx}>
       <SocialProvider value={socialCtx}>
       {immersive && (
-        <button type="button" className="ls-exit-immersive" onClick={() => setImmersive(false)} aria-label="Tam ekrandan çık"><Minimize2 aria-hidden /></button>
+        <button type="button" className="ls-exit-immersive" onClick={() => setImmersive(false)} aria-label="Tam ekrandan çık" title="Tam ekrandan çık (Esc)">
+          <Minimize2 aria-hidden /><span>Küçült</span>
+        </button>
       )}
       {topBar}
       <FocusSession
@@ -1646,7 +1685,7 @@ export const LessonPlayer: React.FC<LessonPlayerProps> = ({ deck, startAt, initi
         {focusBand}
         {stage}
       </div>
-      {isPhone && !immersive && (
+      {isPhone && (
         <nav className="lv-bottombar" aria-label="Slayt gezinme">
           <button type="button" className="lv-bb-btn" onClick={prev} disabled={index === 0} aria-label="Önceki slayt"><ChevronLeft aria-hidden />Önceki</button>
           <button type="button" className="lv-bb-count" onClick={() => setOutlineMobile(true)} aria-label={`Slayt ${index + 1} / ${n} — slayt listesini aç`} aria-haspopup="dialog">

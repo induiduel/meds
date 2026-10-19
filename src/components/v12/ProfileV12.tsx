@@ -18,12 +18,14 @@ import {
   Palette as PaletteIcon,
   Pencil,
   ShieldCheck,
+  Smartphone,
   ThumbsUp,
   Trash2,
   UserRound,
   X,
 } from 'lucide-react';
 import { AppUser, updateUserProfileData } from '../../services/auth';
+import { pwaService } from '../../services/pwaService';
 import { QuestionItem } from '../../types';
 import { validateNamePolicy } from '../../utils/namePolicy';
 import {
@@ -970,6 +972,9 @@ const AccountPanel: React.FC<{
 
       <section className="u12-panel">
         <NavRow icon={PaletteIcon} title="Görünüm ve tasarım (Net v12)" sub="Tasarım, tema, palet, yoğunluk, yazı, süzgeç modu" onClick={onAppearance} />
+        {!pwaService.getState().isInstalled && (
+          <NavRow icon={Smartphone} title="Uygulamayı cihaza yükle (Tam Ekran PWA)" sub="iOS Safari, iOS Chrome, Android ve bilgisayarda ana ekrana ekle" onClick={() => pwaService.promptInstall()} />
+        )}
         <NavRow icon={Compass} title="Tanıtım turu" sub="Sayfaları ve özellikleri yeniden gez" onClick={startWelcomeTour} />
         <NavRow icon={Compass} title="Öğren turu" sub="Ders kitaplığı ve etkileşim türleri" onClick={onLearnTour} />
         {isAdmin && <NavRow icon={ShieldCheck} title="Yönetim konsolu" sub="Taslaklar, moderasyon, sistem" onClick={onOpenAdmin} />}
@@ -1016,6 +1021,11 @@ const DataPanel: React.FC<{ onOpenOffline: () => void }> = ({ onOpenOffline }) =
       </section>
 
       <section className="u12-panel">
+        {!pwaService.getState().isInstalled && (
+          <SetRow id="u12-pwa-kur" title="Uygulamayı cihaza yükle (PWA)" sub="Tarayıcı adres çubuklarını kaldırarak gerçek tam ekran ve çevrimdışı uygulama olarak çalıştır.">
+            <button type="button" className="u12-btn is-sm is-pri" onClick={() => pwaService.promptInstall()}><Smartphone aria-hidden />Ana Ekrana Ekle</button>
+          </SetRow>
+        )}
         <SetRow id="u12-indir" title="Verilerimi indir" sub="Bu cihazdaki ilerleme, test geçmişi, kaydedilenler, notlar ve bildirimler tek JSON dosyasında.">
           <button type="button" className="u12-btn is-sm" onClick={download}><Download aria-hidden />İndir (JSON)</button>
         </SetRow>

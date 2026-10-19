@@ -14,9 +14,11 @@
  * `[data-r12-sec]` başlıklarından hesaplar. Stil: styles/v12/reader.css (.r12-*).
  */
 import React, { useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react';
-import { AlignLeft, ChevronLeft, ChevronRight, Focus, MoreVertical } from 'lucide-react';
+import { AlignLeft, ChevronLeft, ChevronRight, Focus, Maximize2, Minimize2, MoreVertical } from 'lucide-react';
 import { useAppearance, TEXT_PX_MAX, TEXT_PX_MIN } from '../../utils/appearance';
 import { lockScroll, unlockScroll } from '../../utils/scrollLock';
+import { openPwaInstallGuide } from '../../services/pwaService';
+import { toast } from '../ui/Toast';
 import '../../styles/v12/reader.css';
 
 export interface ReaderTocItem {
@@ -226,8 +228,11 @@ export const ReaderV12: React.FC<ReaderV12Props> = ({
   const [tocPref, setTocPref] = useState<boolean>(() => readPref().toc !== false);
   const [tocPop, setTocPop] = useState(false);
   const [focusPref, setFocus] = useState<boolean>(() => readPref().focus === true);
+  const [isFs, setIsFs] = useState(false);
+  const [immersive, setImmersive] = useState(false);
+  const fsOn = isFs || immersive;
   // Telefonda kenar paneli/ray zaten yok: Odak düğmesi gizlenir ve kayıtlı Odak tercihi içindekileri kilitlemez
-  const focus = focusPref && !narrow;
+  const focus = (focusPref && !narrow) || fsOn;
   const [menuOpen, setMenuOpen] = useState(false);
   const [ownProgress, setOwnProgress] = useState(0);
   const [ownActive, setOwnActive] = useState('');
@@ -235,6 +240,70 @@ export const ReaderV12: React.FC<ReaderV12Props> = ({
   const activeId = activeIdProp ?? ownActive;
   const tocOpen = !focus && (wide ? tocPref : tocPop);
   const showMargin = !!margin && roomy && !focus;
+
+  useEffect(() => {
+    const on = () => {
+      const d = document as any;
+      const f = !!(d.fullscreenElement || d.webkitFullscreenElement || d.webkitCurrentFullScreenElement);
+      setIsFs(f);
+      if (f) setImmersive(false);
+    };
+    document.addEventListener('fullscreenchange', on);
+    document.addEventListener('webkitfullscreenchange', on);
+    return () => {
+      document.removeEventListener('fullscreenchange', on);
+      document.removeEventListener('webkitfullscreenchange', on);
+    };
+  }, []);
+
+  const toggleFs = () => {
+    setMenuOpen(false);
+    const d = document as any;
+    if (immersive) {
+      setImmersive(false);
+      return;
+    }
+    if (d.fullscreenElement || d.webkitFullscreenElement || d.webkitCurrentFullScreenElement) {
+      (d.exitFullscreen || d.webkitExitFullscreen || d.webkitCancelFullScreen)?.call(d)?.catch?.(() => {});
+      return;
+    }
+    const el: any = document.documentElement;
+    const req = el.requestFullscreen || el.webkitRequestFullscreen || el.webkitRequestFullScreen;
+    if (!req) {
+      setImmersive(true);
+      const isStandalone = window.matchMedia?.('(display-mode: standalone)').matches || (navigator as any).standalone === true;
+      if (/iPhone|iPod/.test(navigator.userAgent) && !isStandalone) {
+        toast.info(
+          'Tam ekran okuma modu açıldı',
+          'Adres çubuğunu da tamamen gizlemek için uygulamayı Ana Ekrana ekleyebilirsin.',
+          { label: 'Nasıl eklenir?', onClick: () => openPwaInstallGuide() }
+        );
+      }
+      return;
+    }
+    let settled = false;
+    try {
+      const p = req.call(el, { navigationUI: 'hide' });
+      p?.then?.(() => (settled = true), () => {
+        settled = true;
+        setImmersive(true);
+      });
+    } catch {
+      try {
+        const p2 = req.call(el);
+        p2?.then?.(() => (settled = true), () => {
+          settled = true;
+          setImmersive(true);
+        });
+      } catch {
+        setImmersive(true);
+        return;
+      }
+    }
+    window.setTimeout(() => {
+      if (!settled && !d.fullscreenElement && !d.webkitFullscreenElement && !d.webkitCurrentFullScreenElement) setImmersive(true);
+    }, 800);
+  };
 
   useLayoutEffect(() => {
     lockScroll();
@@ -321,6 +390,11 @@ export const ReaderV12: React.FC<ReaderV12Props> = ({
         e.stopImmediatePropagation();
         return;
       }
+      if (immersive) {
+        setImmersive(false);
+        e.stopImmediatePropagation();
+        return;
+      }
       // Üstte onay penceresi / alt sayfa varsa Esc onundur
       if (document.querySelector('.cf-root, .sh-sheet-root')) return;
       if (escToClose && !document.fullscreenElement) onBack();
@@ -328,7 +402,7 @@ export const ReaderV12: React.FC<ReaderV12Props> = ({
     // Yakalama evresi: çağıranın (özet okuyucusu) Esc işleyicisinden önce katmanları kapatır
     window.addEventListener('keydown', onKey, true);
     return () => window.removeEventListener('keydown', onKey, true);
-  }, [menuOpen, tocPop, escToClose, onBack]);
+  }, [menuOpen, tocPop, immersive, escToClose, onBack]);
 
   /** Menüdeki görünür, etkin öğeler (dar ekran bölümü geniş ekranda gizlidir) */
   const menuItems = () =>
@@ -393,11 +467,17 @@ export const ReaderV12: React.FC<ReaderV12Props> = ({
   return (
     <div
       ref={setRefs}
-      className={`r12-root ${focus ? 'is-focus' : ''} ${closing ? 'is-closing' : ''} ${className}`}
+      className={`r12-root ${focus ? 'is-focus' : ''} ${immersive ? 'is-immersive' : ''} ${closing ? 'is-closing' : ''} ${className}`}
       role="dialog"
       aria-modal="true"
       aria-label={ariaLabel || title}
     >
+      {immersive && (
+        <button type="button" className="r12-exit-fs" onClick={() => setImmersive(false)} aria-label="Tam ekrandan çık" title="Tam ekrandan çık (Esc)">
+          <Minimize2 aria-hidden />
+          <span>Küçült</span>
+        </button>
+      )}
       <header className="r12-top">
         <button type="button" className="r12-ib" onClick={onBack} aria-label={backLabel} title={`${backLabel} (Esc)`}>
           <ChevronLeft aria-hidden />
@@ -411,11 +491,21 @@ export const ReaderV12: React.FC<ReaderV12Props> = ({
         <div className="r12-tools">
           <TypeControls />
           {!narrow && (
-            <button type="button" className={`r12-tbtn ${focus ? 'is-on' : ''}`} aria-pressed={focus} onClick={toggleFocus} title="Odak: içindekiler ve paneller kapanır">
+            <button type="button" className={`r12-tbtn ${focusPref ? 'is-on' : ''}`} aria-pressed={focusPref} onClick={toggleFocus} title="Odak: içindekiler ve paneller kapanır">
               <Focus aria-hidden />
-              <span>{focus ? 'Odak açık' : 'Odak'}</span>
+              <span>{focusPref ? 'Odak açık' : 'Odak'}</span>
             </button>
           )}
+          <button
+            type="button"
+            className={`r12-ib ${fsOn ? 'is-on' : ''}`}
+            aria-pressed={fsOn}
+            onClick={toggleFs}
+            aria-label={fsOn ? 'Tam ekrandan çık' : 'Tam ekran okuma'}
+            title={fsOn ? 'Tam ekrandan çık (Esc)' : 'Tam ekran okuma'}
+          >
+            {fsOn ? <Minimize2 aria-hidden /> : <Maximize2 aria-hidden />}
+          </button>
           {!focus && (
             <button type="button" className={`r12-tbtn ${tocOpen ? 'is-on' : ''}`} aria-pressed={tocOpen} aria-controls="r12-toc" aria-expanded={tocOpen} onClick={toggleToc}>
               <AlignLeft aria-hidden />
@@ -442,6 +532,11 @@ export const ReaderV12: React.FC<ReaderV12Props> = ({
                   <div className="r12-menu-narrow">
                     <R12MenuGroup label="Görünüm">
                       <TypeControls inMenu />
+                      <R12MenuItem
+                        icon={fsOn ? Minimize2 : Maximize2}
+                        label={fsOn ? 'Tam ekrandan çık' : 'Tam ekran okuma'}
+                        onClick={toggleFs}
+                      />
                     </R12MenuGroup>
                   </div>
                   {menu}

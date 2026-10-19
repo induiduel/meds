@@ -1,10 +1,10 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 26,
-  "baslik": "Yıldızlı Paragraflarda Birleşik Görünüm & Tam Ekran Desteği",
+  "onem": 27,
+  "baslik": "iOS (Safari & Chrome) Uyumluluğu, Gerçek Tam Ekran ve PWA Kurulum Rehberi",
   "maddeler": [
-    "Yıldızlı Paragraflar penceresi artık tam ekran (fullscreen) modundayken de sorunsuz açılır.",
-    "Aynı konu/adım başlığı içinden yıldızlanan paragraflar ve 'Akılda kalsın' notları ayrı kartlar yerine tek başlık altında, ders akışı sırasıyla birleşik olarak gösterilir.",
-    "Bitirdiklerim sayfasına çalışma hızından bağımsız kalan ders süresi hesabı eklendi."
+    "iOS Safari ve iOS Chrome için adım adım görsel 'Ana Ekrana Ekle (PWA)' kurulum rehberi ve her menüden doğrudan erişim eklendi.",
+    "iPhone, iPad, Android ve masaüstünde Öğren, Okuyucu, Canlı Ders, Sınav Asistanı ve Soru Çözücü dahil tüm ekranlarda gerçek tam ekran modu aktif edildi.",
+    "iOS Safari ve Chrome'da tam ekran katmanların üst/alt çubukların altında kalmasına yol açan görünüm ve ölçekleme sorunları giderildi."
   ]
 }

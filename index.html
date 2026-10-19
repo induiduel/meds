@@ -2,7 +2,7 @@
 <html lang="tr" class="ui-v3 ui-v4 ui-v7" data-mode="light" data-palette="a">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, interactive-widget=resizes-content" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <title>MeDSor · Tıp Kurul Soru Havuzu</title>
     <meta name="description" content="Tıp fakültesi kurul sınavları için kolektif soru hatırlama, şık tamamlama ve yapay zeka ile %100 doğrulukta soru rekonstrüksiyon platformu." />
     <link rel="canonical" href="https://nofrostlife.com.tr" />
@@ -42,12 +42,16 @@
           d.dataset.layout = (a && a.layout) || 'pano';
           if (mode === 'dark') d.classList.add('theme-dark');
           if (matchMedia('(display-mode: standalone)').matches || navigator.standalone) d.classList.add('is-standalone');
+          var isIos = /iPhone|iPad|iPod/i.test(navigator.userAgent) || (/Macintosh/i.test(navigator.userAgent) && navigator.maxTouchPoints > 1);
+          if (isIos) d.classList.add('is-ios');
           // PWA kromu: son tema renkleri (utils/appearance.ts syncPwaChrome) — çubuk, manifesto, iOS durum çubuğu
           var pc = JSON.parse(localStorage.getItem('medsoru_pwa_chrome') || 'null'), hx = /^[0-9A-F]{6}$/;
           if (pc && hx.test(pc.tc) && hx.test(pc.bg)) {
             document.querySelector('meta[name="theme-color"]').setAttribute('content', '#' + pc.tc);
-            document.querySelector('meta[name="apple-mobile-web-app-status-bar-style"]').setAttribute('content', pc.dark ? 'black-translucent' : 'default');
-            document.querySelector('link[rel="manifest"]').setAttribute('href', '/manifest.json?v=9&tc=' + pc.tc + '&bg=' + pc.bg);
+            // iOS'ta manifest href'i dinamik değiştirmek "Ana Ekrana Ekle" sırasında WebKit'in manifest okumasını bozabilir
+            if (!isIos) {
+              document.querySelector('link[rel="manifest"]').setAttribute('href', '/manifest.json?v=9&tc=' + pc.tc + '&bg=' + pc.bg);
+            }
           }
         } catch (e) {}
       })();

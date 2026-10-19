@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { Activity, Moon, Search, Sun, UserRound, Bell } from 'lucide-react';
+import { Activity, Moon, Search, Sun, UserRound, Bell, Smartphone, Maximize2, Minimize2 } from 'lucide-react';
 import { linkClick, pathFor, ROUTE_TITLES, type AppRoute } from '../../router';
 import type { AppUser } from '../../services/auth';
 import { pwaService } from '../../services/pwaService';
 import { useTheme } from '../../utils/theme';
+import { useAppFullscreen } from '../../utils/fullscreen';
 import { OfflineStatusBadge } from '../pwa/OfflineStatusBadge';
 import { GuncellemeSimgesi } from '../system/UpdatePrompt';
 import { SearchPalette } from '../search/SearchPalette';
@@ -41,6 +42,7 @@ export const TopBar: React.FC<TopBarProps> = (props) =>
 const TopBarClassic: React.FC<TopBarProps> = ({ active, onGo, user, isAdmin, searchQuery = '', onSearch, onOpenOffline, actions }) => {
   const phone = usePhone();
   const { theme, toggle } = useTheme();
+  const [appFs, toggleAppFs] = useAppFullscreen();
   const [menu, setMenu] = useState(false);
   const [search, setSearch] = useState(false);
   const [scrolled, setScrolled] = useState(0);
@@ -94,6 +96,26 @@ const TopBarClassic: React.FC<TopBarProps> = ({ active, onGo, user, isAdmin, sea
         <div className="sh-top-tools">
           <OfflineStatusBadge onClick={() => onOpenOffline?.()} isAdmin={isAdmin} />
           <GuncellemeSimgesi className="sh-ibtn" />
+          {canInstall && (
+            <button
+              type="button"
+              className="sh-ibtn"
+              onClick={() => pwaService.promptInstall()}
+              aria-label="Uygulamayı cihaza yükle (Ana Ekrana Ekle)"
+              title="Uygulamayı cihaza yükle (Tam Ekran PWA)"
+            >
+              <Smartphone className="w-5 h-5" />
+            </button>
+          )}
+          <button
+            type="button"
+            className="sh-ibtn"
+            onClick={() => toggleAppFs()}
+            aria-label={appFs ? 'Tam ekrandan çık' : 'Tam ekran görünümü'}
+            title={appFs ? 'Tam ekrandan çık' : 'Tam ekran görünümü'}
+          >
+            {appFs ? <Minimize2 className="w-5 h-5" /> : <Maximize2 className="w-5 h-5" />}
+          </button>
           <button type="button" className="sh-ibtn sh-top-search-i" onClick={() => setSearch(true)} aria-label="Ara">
             <Search />
           </button>

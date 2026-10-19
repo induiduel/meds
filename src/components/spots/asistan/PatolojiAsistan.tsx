@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import {
-  BookOpenText, Check, ChevronDown, ChevronLeft, ChevronRight, Headphones, LifeBuoy, ListChecks, Maximize2, Minimize2, Minus, Pause, Play, Plus, RotateCcw, Settings2, SkipBack, SkipForward, Star, Volume2, X,
+  BookOpenText, Check, ChevronDown, ChevronLeft, ChevronRight, ChevronUp, Headphones, HelpCircle, LifeBuoy, ListChecks, MapPin, Maximize2, Minimize2, Minus, Pause, Play, Plus, RotateCcw, Settings2, SkipBack, SkipForward, Star, Target, Trash2, Volume2, X,
   Strikethrough,
 } from 'lucide-react';
 import { getCustomApiUrl } from '../../../services/api';
@@ -48,7 +48,14 @@ type Sahne =
   | { tip: 'kapanis' }
   | { tip: 'son' };
 type Sonuc = 'd' | 'd2' | 'y'; // ilk denemede doğru · yardım/ikinci denemede doğru · bilemedi
-interface Kayit { nid: string; sonuc: Record<string, Sonuc>; at: string }
+type AdimFiltre = 'hepsi' | 'kalan' | 'tekrar' | 'tamam' | 'aday';
+interface Kayit {
+  nid: string;
+  enIleriNid?: string;
+  okunanlar?: string[];
+  sonuc: Record<string, Sonuc>;
+  at: string;
+}
 const ILERLEME_KEY = 'medsoru_onem_asistan_v1';
 const TERCIH_KEY = 'medsoru_onem_asistan_tercih_v1';
 const HIZLAR = [
@@ -58,6 +65,7 @@ const OLCEK_MIN = 0.7;
 const OLCEK_MAX = 1.6;
 const olcekSinirla = (v: number) => Math.round(Math.min(OLCEK_MAX, Math.max(OLCEK_MIN, Number(v) || 1)) * 100) / 100;
 const TUR_AD: Record<Soru['tur'], string> = { cikmis: 'Çıkmış soru', ornek26: 'Örnek soru · 2026-27', ornek: 'Örnek soru' };
+const TUR_KISA: Record<Soru['tur'], string> = { cikmis: 'Çıkmış', ornek26: 'Örnek', ornek: 'Örnek' };
 const kelimeSay = (s: string) => (s.match(/\S+/g) || []).length;
 const azHareket = () => typeof window !== 'undefined' && !!window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
 
@@ -89,6 +97,12 @@ export const PatolojiAsistan: React.FC<{ kod: string; onClose: () => void; onDer
   const [tekrar, setTekrar] = useState<Set<string> | null>(null);
   const [i, setI] = useState(0);
   const [sonuc, setSonuc] = useState<Record<string, Sonuc>>({});
+  const [sonKalinanNid, setSonKalinanNid] = useState<string | null>(null);
+  const [okunanNoktalar, setOkunanNoktalar] = useState<Set<string>>(() => new Set());
+  const [adimPanelAcik, setAdimPanelAcik] = useState(false);
+  const [adimFiltre, setAdimFiltre] = useState<AdimFiltre>('hepsi');
+  const [hoverNoktaIdx, setHoverNoktaIdx] = useState<number | null>(null);
+  const [sifirlaOnay, setSifirlaOnay] = useState(false);
   const [tercih, setTercih0] = useState(() => tercihOku(TERCIH_KEY, { hiz: 1, otomatik: true, yogunluk: 'hepsi' as Yogunluk, olcek: 1 }));
   const olcek = olcekSinirla(tercih.olcek);
   const setTercih = (p: Partial<typeof tercih>) => setTercih0((t) => {
@@ -204,7 +218,9 @@ export const PatolojiAsistan: React.FC<{ kod: string; onClose: () => void; onDer
   useEffect(() => { dizinYukle(kod0).then(setDizin).catch(() => {}); }, [kod0]);
   useEffect(() => {
     let canli = true;
-    setDers(null); setHata(false); setTekrar(null); setI(0); setSonuc({}); setDevamSor(null);
+    setDers(null); setHata(false); setTekrar(null); setI(0); setSonuc({});
+    setSonKalinanNid(null); setOkunanNoktalar(new Set()); setDevamSor(null);
+    setAdimPanelAcik(false); setHoverNoktaIdx(null); setSifirlaOnay(false);
     const p = dersYukle(kod);
     if (!p) { setHata(true); return; }
     p.then((d) => {
@@ -212,21 +228,53 @@ export const PatolojiAsistan: React.FC<{ kod: string; onClose: () => void; onDer
       setDers(d);
       try {
         const k = (JSON.parse(localStorage.getItem(ILERLEME_KEY) || '{}') as Record<string, Kayit>)[kod];
-        const ni = k?.nid ? d.noktalar.findIndex((n) => n.id === k.nid) : -1;
-        if (k && ni > 0 && ni < d.noktalar.length - 1) setDevamSor(k);
+        if (k) {
+          if (k.sonuc && typeof k.sonuc === 'object') setSonuc(k.sonuc);
+          const hedefId = k.enIleriNid || k.nid;
+          const ni = hedefId ? d.noktalar.findIndex((n) => n.id === hedefId) : -1;
+          if (ni >= 0) {
+            setSonKalinanNid(d.noktalar[ni].id);
+            const okunan = k.okunanlar?.length
+              ? new Set(k.okunanlar)
+              : new Set(d.noktalar.slice(0, ni + 1).map((n) => n.id));
+            setOkunanNoktalar(okunan);
+            const cozulenVar = Object.keys(k.sonuc || {}).length > 0;
+            if (ni > 0 || cozulenVar) {
+              setDevamSor({ ...k, nid: d.noktalar[ni].id, enIleriNid: d.noktalar[ni].id });
+            }
+          }
+        }
       } catch { /* yok */ }
     }).catch(() => canli && setHata(true));
     return () => { canli = false; };
   }, [kod]);
-  // ilerleme kaydı (yalnız tam akışta): bulunulan nokta + soru sonuçları
+  // ilerleme kaydı (yalnız tam akışta): bulunulan nokta + en ileri kalınan nokta + okunanlar + soru sonuçları
   useEffect(() => {
     if (!ders || tekrar || devamSor || !nokta) return;
+    const mevcutIdx = ders.noktalar.indexOf(nokta);
+    const oncekiSonIdx = sonKalinanNid ? ders.noktalar.findIndex((n) => n.id === sonKalinanNid) : -1;
+    const yeniSonNid = mevcutIdx >= oncekiSonIdx ? nokta.id : (sonKalinanNid || nokta.id);
+    if (yeniSonNid !== sonKalinanNid) setSonKalinanNid(yeniSonNid);
+
+    let guncelOkunan = okunanNoktalar;
+    if (!okunanNoktalar.has(nokta.id)) {
+      guncelOkunan = new Set(okunanNoktalar);
+      guncelOkunan.add(nokta.id);
+      setOkunanNoktalar(guncelOkunan);
+    }
+
     try {
       const t = JSON.parse(localStorage.getItem(ILERLEME_KEY) || '{}');
-      t[kod] = { nid: nokta.id, sonuc, at: new Date().toISOString() } as Kayit;
+      t[kod] = {
+        nid: yeniSonNid,
+        enIleriNid: yeniSonNid,
+        okunanlar: Array.from(guncelOkunan),
+        sonuc,
+        at: new Date().toISOString(),
+      } as Kayit;
       localStorage.setItem(ILERLEME_KEY, JSON.stringify(t));
     } catch { /* özel pencere */ }
-  }, [nokta, sonuc, ders, tekrar, kod, devamSor]);
+  }, [nokta, sonuc, ders, tekrar, kod, devamSor, sonKalinanNid, okunanNoktalar]);
 
   // ---------- ses
   const durdur = useCallback(() => {
@@ -481,7 +529,13 @@ export const PatolojiAsistan: React.FC<{ kod: string; onClose: () => void; onDer
         return;
       }
       if (e.altKey || (e.target as HTMLElement | null)?.closest?.('input,textarea,select,.oy')) return;
-      if (e.key === 'Escape') { if (ogrenAcik) setOgrenAcik(false); else if (dersMenu) setDersMenu(false); else onClose(); return; }
+      if (e.key === 'Escape') {
+        if (ogrenAcik) setOgrenAcik(false);
+        else if (adimPanelAcik) setAdimPanelAcik(false);
+        else if (dersMenu) setDersMenu(false);
+        else onClose();
+        return;
+      }
       if ((e.key === 'ö' || e.key === 'Ö' || e.key === 'o' || e.key === 'O') && ogrenEslemeVar(kodBrans(kod))) { e.preventDefault(); setOgrenAcik((v) => !v); return; }
       if (e.key === ' ') { e.preventDefault(); oynatDuraklat(); return; }
       if (e.key === 'r' || e.key === 'R') { e.preventDefault(); cumleyiTekrarla(); return; }
@@ -518,13 +572,40 @@ export const PatolojiAsistan: React.FC<{ kod: string; onClose: () => void; onDer
     return () => el.removeEventListener('wheel', tekerlek);
   }, [olcekAdim]);
   useEffect(() => {
-    const f = () => setTamEkran(!!document.fullscreenElement);
+    const f = () => {
+      const nativeFs = !!(document.fullscreenElement || (document as any).webkitFullscreenElement);
+      if (nativeFs) setTamEkran(true);
+    };
     document.addEventListener('fullscreenchange', f);
-    return () => { document.removeEventListener('fullscreenchange', f); if (document.fullscreenElement) document.exitFullscreen?.().catch(() => {}); };
+    document.addEventListener('webkitfullscreenchange', f);
+    return () => {
+      document.removeEventListener('fullscreenchange', f);
+      document.removeEventListener('webkitfullscreenchange', f);
+      const d = document as any;
+      if (d.fullscreenElement || d.webkitFullscreenElement) {
+        (d.exitFullscreen || d.webkitExitFullscreen)?.call(d)?.catch?.(() => {});
+      }
+    };
   }, []);
   const tamEkranDegis = () => {
-    if (document.fullscreenElement) document.exitFullscreen?.().catch(() => {});
-    else (kokRef.current?.closest('.pa') as HTMLElement | null)?.requestFullscreen?.().catch(() => {});
+    const d = document as any;
+    if (tamEkran) {
+      setTamEkran(false);
+      if (d.fullscreenElement || d.webkitFullscreenElement) {
+        (d.exitFullscreen || d.webkitExitFullscreen)?.call(d)?.catch?.(() => {});
+      }
+      return;
+    }
+    setTamEkran(true);
+    const el: any = kokRef.current?.closest('.pa') || document.documentElement;
+    const req = el?.requestFullscreen || el?.webkitRequestFullscreen;
+    if (req) {
+      try {
+        req.call(el, { navigationUI: 'hide' })?.catch?.(() => {});
+      } catch {
+        /* iOS iPhone'da CSS tam ekran (is-tam) kullanılır */
+      }
+    }
   };
   useEffect(() => {
     const ms = (navigator as Navigator & { mediaSession?: MediaSession }).mediaSession;
@@ -536,7 +617,7 @@ export const PatolojiAsistan: React.FC<{ kod: string; onClose: () => void; onDer
     } catch { /* desteklenmiyor */ }
   }, [ders, nokta, ileri, geri]);
 
-  const dersDegis = (k: string) => { durdur(); setDersMenu(false); setKod(k); onDersDegis?.(k); };
+  const dersDegis = (k: string) => { durdur(); setDersMenu(false); setAdimPanelAcik(false); setKod(k); onDersDegis?.(k); };
   const cozucuyuAc = (hedefKod: string) => {
     durdur();
     const b = kodBrans(hedefKod);
@@ -558,9 +639,47 @@ export const PatolojiAsistan: React.FC<{ kod: string; onClose: () => void; onDer
   const tumSorular = useMemo(() => (ders ? ders.noktalar.flatMap((n) => n.sorular) : []), [ders]);
   const sorulanlar = useMemo(() => sahneler.filter((x): x is Extract<Sahne, { tip: 'soru' }> => x.tip === 'soru').map((x) => x.q), [sahneler]);
   const ilkDogru = sorulanlar.filter((q) => sonuc[q.k] === 'd').length;
+  const yardimliDogru = sorulanlar.filter((q) => sonuc[q.k] === 'd2').length;
+  const yanlisSayisi = sorulanlar.filter((q) => sonuc[q.k] === 'y').length;
+  const cozulenSoruSayisi = ilkDogru + yardimliDogru + yanlisSayisi;
   const tekrarlar = sorulanlar.filter((q) => sonuc[q.k] !== 'd');
   const atlanan = tekrarlar.filter((q) => !sonuc[q.k]).length;
   const tekrarNoktalar = ders ? ders.noktalar.filter((n) => n.sorular.some((q) => tekrarlar.includes(q))) : [];
+
+  // En son kalınan nokta bilgisi
+  const sonKalinanGlobalIdx = useMemo(() => {
+    if (!ders || !sonKalinanNid) return -1;
+    return ders.noktalar.findIndex((n) => n.id === sonKalinanNid);
+  }, [ders, sonKalinanNid]);
+  const sonKalinanGorunenIdx = useMemo(() => {
+    if (sonKalinanGlobalIdx < 0) return -1;
+    return gorunenNoktalar.indexOf(sonKalinanGlobalIdx);
+  }, [gorunenNoktalar, sonKalinanGlobalIdx]);
+  const sonKalinanSira = sonKalinanGorunenIdx >= 0 ? sonKalinanGorunenIdx + 1 : 0;
+  const sonKalinanNokta = sonKalinanGlobalIdx >= 0 && ders ? ders.noktalar[sonKalinanGlobalIdx] : null;
+
+  // Aktif adımın soruları ve alt adım (aşama) bilgisi
+  const aktifNoktaSorular = useMemo(() => (nokta ? (tekrar ? nokta.sorular.filter((q) => tekrar.has(q.k)) : sorulariSec(nokta, tercih.yogunluk)) : []), [nokta, tekrar, tercih.yogunluk]);
+  const aktifToplamAsama = nokta ? 1 + aktifNoktaSorular.length : 0;
+  const aktifAsamaNo = nokta && s ? (s.tip === 'anlatim' ? 1 : s.tip === 'soru' ? 2 + s.qi : 1) : 0;
+
+  // Bir adımın durumunu hesapla
+  const adimDurum = useCallback((nk: Nokta) => {
+    const qs = tekrar ? nk.sorular.filter((q) => tekrar.has(q.k)) : sorulariSec(nk, tercih.yogunluk);
+    const yanitlanan = qs.filter((q) => sonuc[q.k]);
+    const okundu = okunanNoktalar.has(nk.id);
+    if (qs.length > 0 && yanitlanan.length === qs.length) {
+      if (qs.every((q) => sonuc[q.k] === 'd')) return 'tamam' as const;
+      if (qs.some((q) => sonuc[q.k] === 'y')) return 'yanlis' as const;
+      return 'yardimli' as const;
+    }
+    if (yanitlanan.length > 0) {
+      if (yanitlanan.some((q) => sonuc[q.k] === 'y')) return 'yanlis' as const;
+      return 'kismi' as const;
+    }
+    if (okundu) return qs.length === 0 ? ('tamam' as const) : ('okundu' as const);
+    return 'bekliyor' as const;
+  }, [tekrar, tercih.yogunluk, sonuc, okunanNoktalar]);
 
   const segSinif = (nk: Nokta) => {
     const qs = sorulariSec(nk, tercih.yogunluk).filter((q) => sonuc[q.k]);
@@ -568,15 +687,131 @@ export const PatolojiAsistan: React.FC<{ kod: string; onClose: () => void; onDer
     return qs.every((q) => sonuc[q.k] === 'd') ? ' is-d' : qs.some((q) => sonuc[q.k] === 'y') ? ' is-y' : ' is-d2';
   };
 
+  /** Belirli bir noktanın anlatımına veya belirli bir sorusuna git */
+  const noktayaGit = useCallback((ni: number, soruIdx?: number) => {
+    setDevamSor(null);
+    setAdimPanelAcik(false);
+    setHoverNoktaIdx(null);
+    if (soruIdx !== undefined) {
+      const x = sahneler.findIndex((y) => y.tip === 'soru' && y.n === ni && y.qi === soruIdx);
+      if (x >= 0) { setI(x); return; }
+    }
+    const x = sahneler.findIndex((y) => y.tip === 'anlatim' && y.n === ni);
+    if (x >= 0) setI(x);
+  }, [sahneler]);
+
+  /** En son kalınan ilerleme noktasına git (varsa çözülmemiş sorusuna, yoksa anlatımına) */
+  const sonKalinanaGit = useCallback(() => {
+    if (!ders) return;
+    const hedefNi = sonKalinanGlobalIdx >= 0 ? sonKalinanGlobalIdx : gorunenNoktalar[0] ?? 0;
+    const nk = ders.noktalar[hedefNi];
+    if (!nk) return;
+    const qs = tekrar ? nk.sorular.filter((q) => tekrar.has(q.k)) : sorulariSec(nk, tercih.yogunluk);
+    const ilkCozulmemisQi = qs.findIndex((q) => !sonuc[q.k]);
+    // Eğer anlatım zaten okunmuşsa ve çözülmemiş soru varsa ama bazı sorular çözülmüşse doğrudan o soruya git, aksi halde anlatımına git
+    const baziCozulmus = qs.some((q) => !!sonuc[q.k]);
+    if (baziCozulmus && ilkCozulmemisQi >= 0) {
+      noktayaGit(hedefNi, ilkCozulmemisQi);
+    } else {
+      noktayaGit(hedefNi);
+    }
+  }, [ders, sonKalinanGlobalIdx, gorunenNoktalar, tekrar, tercih.yogunluk, sonuc, noktayaGit]);
+
+  /** Sıradaki henüz tamamlanmamış / çözülmemiş ilk adıma git */
+  const siradakiCozulmemiseGit = useCallback(() => {
+    if (!ders) return;
+    for (const ni of gorunenNoktalar) {
+      const nk = ders.noktalar[ni];
+      const d = adimDurum(nk);
+      if (d === 'bekliyor' || d === 'okundu' || d === 'kismi') {
+        const qs = tekrar ? nk.sorular.filter((q) => tekrar.has(q.k)) : sorulariSec(nk, tercih.yogunluk);
+        const ilkBos = qs.findIndex((q) => !sonuc[q.k]);
+        if ((d === 'okundu' || d === 'kismi') && ilkBos >= 0) {
+          noktayaGit(ni, ilkBos);
+        } else {
+          noktayaGit(ni);
+        }
+        return;
+      }
+    }
+    if (gorunenNoktalar.length > 0) noktayaGit(gorunenNoktalar[0]);
+  }, [ders, gorunenNoktalar, adimDurum, tekrar, tercih.yogunluk, sonuc, noktayaGit]);
+
+  /** Yanlış veya yardımlı çözülmüş ilk adıma git */
+  const ilkTekraraGit = useCallback(() => {
+    if (!ders) return;
+    for (const ni of gorunenNoktalar) {
+      const nk = ders.noktalar[ni];
+      const qs = tekrar ? nk.sorular.filter((q) => tekrar.has(q.k)) : sorulariSec(nk, tercih.yogunluk);
+      const hataliQi = qs.findIndex((q) => sonuc[q.k] === 'y' || sonuc[q.k] === 'd2');
+      if (hataliQi >= 0) {
+        noktayaGit(ni, hataliQi);
+        return;
+      }
+    }
+  }, [ders, gorunenNoktalar, tekrar, tercih.yogunluk, sonuc, noktayaGit]);
+
+  /** Kullanıcının seçtiği adımı "en son kalınan yer" olarak sabitle */
+  const kalinanYeriBurayaTasi = useCallback((hedefNid: string) => {
+    if (!ders) return;
+    setSonKalinanNid(hedefNid);
+    try {
+      const t = JSON.parse(localStorage.getItem(ILERLEME_KEY) || '{}');
+      t[kod] = {
+        nid: hedefNid,
+        enIleriNid: hedefNid,
+        okunanlar: Array.from(okunanNoktalar),
+        sonuc,
+        at: new Date().toISOString(),
+      } as Kayit;
+      localStorage.setItem(ILERLEME_KEY, JSON.stringify(t));
+    } catch { /* özel pencere */ }
+  }, [ders, kod, okunanNoktalar, sonuc]);
+
+  /** Bu dersteki tüm ilerlemeyi sıfırla */
+  const ilerlemeyiSifirla = useCallback(() => {
+    setSonuc({});
+    setSonKalinanNid(null);
+    setOkunanNoktalar(new Set());
+    setTekrar(null);
+    setDevamSor(null);
+    setAdimPanelAcik(false);
+    setSifirlaOnay(false);
+    setI(0);
+    try {
+      const t = JSON.parse(localStorage.getItem(ILERLEME_KEY) || '{}');
+      delete t[kod];
+      localStorage.setItem(ILERLEME_KEY, JSON.stringify(t));
+    } catch { /* özel pencere */ }
+  }, [kod]);
+
+  // Adım istatistikleri (panel filtreleri ve özet için)
+  const adimSayilari = useMemo(() => {
+    if (!ders) return { tamam: 0, tekrar: 0, kalan: 0, aday: 0, toplamCumle: 0 };
+    let tamam = 0; let tekrarSay = 0; let kalan = 0; let aday = 0; let toplamCumle = 0;
+    gorunenNoktalar.forEach((ni) => {
+      const nk = ders.noktalar[ni];
+      toplamCumle += nk.cumleler.length;
+      if (nk.aday) aday++;
+      const d = adimDurum(nk);
+      if (d === 'tamam') tamam++;
+      else if (d === 'yanlis' || d === 'yardimli') tekrarSay++;
+      else kalan++;
+    });
+    return { tamam, tekrar: tekrarSay, kalan, aday, toplamCumle };
+  }, [ders, gorunenNoktalar, adimDurum]);
+
   const icerik = (
     <div
-      className={`pa${caliyor ? ' is-konusuyor' : ''}${olcek !== 1 ? ' is-olcekli' : ''}${ogrenAcik ? ' is-ogren' : ''}`}
+      className={`pa${caliyor ? ' is-konusuyor' : ''}${olcek !== 1 ? ' is-olcekli' : ''}${ogrenAcik ? ' is-ogren' : ''}${tamEkran ? ' is-tam' : ''}`}
       style={{ ['--pa-zoom' as string]: olcek }}
       role="dialog"
       aria-modal="true"
       aria-label={`${bransTanim(kodBrans(kod)).ad} sesli sınav asistanı`}
       onPointerDown={(e) => {
-        if (dersMenu && !(e.target as HTMLElement).closest('.pa-ders')) setDersMenu(false);
+        const t = e.target as HTMLElement;
+        if (dersMenu && !t.closest('.pa-ders')) setDersMenu(false);
+        if (adimPanelAcik && !t.closest('.pa-ilerleme-kapsam')) setAdimPanelAcik(false);
       }}
     >
       <header className="pa-ust">
@@ -624,17 +859,383 @@ export const PatolojiAsistan: React.FC<{ kod: string; onClose: () => void; onDer
       </header>
 
       {ders && (
-        <div className="pa-ilerleme" aria-label={`Nokta ${noktaSirasi} / ${gorunenNoktalar.length}`}>
-          {gorunenNoktalar.map((ni, j) => {
-            const nk = ders.noktalar[ni];
-            const simdi = nokta === nk;
-            const yeniBolum = j > 0 && ders.noktalar[gorunenNoktalar[j - 1]].bolum !== nk.bolum;
-            return (
-              <button key={nk.id} type="button" className={`pa-seg${simdi ? ' is-simdi' : ''}${j < noktaSirasi - (simdi ? 1 : 0) ? ' is-gecti' : ''}${segSinif(nk)}${nk.aday ? ' is-aday' : ''}${yeniBolum ? ' is-bolum' : ''}`}
-                onClick={() => { const x = sahneler.findIndex((y) => y.tip === 'anlatim' && y.n === ni); if (x >= 0) setI(x); }}
-                aria-label={`${j + 1}. nokta: ${nk.baslik}`} title={`${ders.bolumler[nk.bolum]?.baslik} · ${nk.baslik}`} />
-            );
-          })}
+        <div className="pa-ilerleme-kapsam">
+          {/* 1. Satır: Konum, Aşama, Son Kalınan Yere Git ve Adım Yöneticisi Butonu */}
+          <div className="pa-ilerleme-ust">
+            <button
+              type="button"
+              className={`pa-konum-tetik${adimPanelAcik ? ' is-acik' : ''}`}
+              onClick={() => setAdimPanelAcik((v) => !v)}
+              aria-expanded={adimPanelAcik}
+              title="Tüm adımları, soru sayılarını ve ilerleme durumunu görüntüle / yönet"
+            >
+              <span className="pa-konum-rozet">
+                {nokta
+                  ? `Adım ${noktaSirasi} / ${gorunenNoktalar.length}`
+                  : s?.tip === 'giris'
+                    ? `Giriş · 0 / ${gorunenNoktalar.length}`
+                    : s?.tip === 'bolum'
+                      ? `Bölüm ${s.b + 1} / ${ders.bolumler.length}`
+                      : `Özet · ${gorunenNoktalar.length} / ${gorunenNoktalar.length}`}
+              </span>
+              <span className="pa-konum-detay">
+                {nokta ? (
+                  <>
+                    <b>Aşama {aktifAsamaNo}/{aktifToplamAsama}:</b>{' '}
+                    {s?.tip === 'anlatim'
+                      ? `Konu anlatımı (${aktifCumle >= 0 ? `${aktifCumle + 1}/` : ''}${nokta.cumleler.length} cümle)`
+                      : s?.tip === 'soru'
+                        ? `Soru ${s.qi + 1}/${aktifNoktaSorular.length} (${TUR_KISA[s.q.tur]})`
+                        : ''}
+                    {aktifNoktaSorular.length > 0 && s?.tip === 'anlatim' ? ` · ${aktifNoktaSorular.length} soru var` : ''}
+                  </>
+                ) : (
+                  <>
+                    {ders.bolumler.length} bölüm · <b>{gorunenNoktalar.length} adım</b> · <b>{sorulanlar.length} soru</b>
+                  </>
+                )}
+              </span>
+              <span className="pa-konum-ac-etiket">
+                <ListChecks aria-hidden />
+                <span>Adımlar</span>
+                {adimPanelAcik ? <ChevronUp aria-hidden /> : <ChevronDown aria-hidden />}
+              </span>
+            </button>
+
+            <div className="pa-ilerleme-sag">
+              {sonKalinanNokta && nokta?.id !== sonKalinanNokta.id && (
+                <button
+                  type="button"
+                  className="pa-son-kalinan-btn"
+                  onClick={sonKalinanaGit}
+                  title={`En son kalınan ilerleme noktasına git: ${sonKalinanSira}. Adım — ${sonKalinanNokta.baslik}`}
+                >
+                  <Target aria-hidden />
+                  <span>Son kalınan: <b>{sonKalinanSira}. adım</b></span>
+                </button>
+              )}
+              {sonKalinanNokta && nokta && nokta.id !== sonKalinanNokta.id && (
+                <button
+                  type="button"
+                  className="pa-burayi-kaydet-btn"
+                  onClick={() => kalinanYeriBurayaTasi(nokta.id)}
+                  title={`Kalınan ilerleme noktasını şu anki adıma (${noktaSirasi}. adım) taşı`}
+                >
+                  <MapPin aria-hidden />
+                  <span>Burayı kaldığım yer yap</span>
+                </button>
+              )}
+              {sonKalinanNokta && nokta?.id === sonKalinanNokta.id && (
+                <span className="pa-son-kalinan-etiket" title="Şu an en son kaldığın ilerleme adımındasın">
+                  <MapPin aria-hidden />
+                  <span>Son kalınan adım</span>
+                </span>
+              )}
+
+              <div className="pa-ilerleme-istatistik" role="status" aria-label="Soru ve adım ilerleme özeti">
+                <span className="pa-ist-soru" title={`Toplam ${sorulanlar.length} sorudan ${cozulenSoruSayisi} tanesi yanıtlandı`}>
+                  {cozulenSoruSayisi}/{sorulanlar.length} soru
+                </span>
+                {ilkDogru > 0 && <span className="pa-ist-d" title="İlk denemede doğru">{ilkDogru} doğru</span>}
+                {yardimliDogru > 0 && <span className="pa-ist-d2" title="Yardımla veya 2. denemede doğru">{yardimliDogru} yardımlı</span>}
+                {yanlisSayisi > 0 && <span className="pa-ist-y" title="Yanlış veya cevabı gösterildi">{yanlisSayisi} tekrar</span>}
+              </div>
+            </div>
+          </div>
+
+          {/* 2. Satır: Görsel Segment Şeridi ve Anlık Önizleme */}
+          <div className="pa-ilerleme-serit-sar" onMouseLeave={() => setHoverNoktaIdx(null)}>
+            <div className="pa-ilerleme" role="navigation" aria-label={`Adım ilerleme çubuğu: ${noktaSirasi} / ${gorunenNoktalar.length}`}>
+              {gorunenNoktalar.map((ni, j) => {
+                const nk = ders.noktalar[ni];
+                const simdi = nokta === nk;
+                const sonKalinanMi = sonKalinanNid === nk.id;
+                const okunduMu = okunanNoktalar.has(nk.id) || j < noktaSirasi - (simdi ? 1 : 0);
+                const yeniBolum = j > 0 && ders.noktalar[gorunenNoktalar[j - 1]].bolum !== nk.bolum;
+                const qs = tekrar ? nk.sorular.filter((q) => tekrar.has(q.k)) : sorulariSec(nk, tercih.yogunluk);
+                return (
+                  <button
+                    key={nk.id}
+                    type="button"
+                    className={`pa-seg${simdi ? ' is-simdi' : ''}${sonKalinanMi && !simdi ? ' is-son-kalinan' : ''}${okunduMu ? ' is-gecti' : ''}${segSinif(nk)}${nk.aday ? ' is-aday' : ''}${yeniBolum ? ' is-bolum' : ''}`}
+                    onClick={() => noktayaGit(ni)}
+                    onMouseEnter={() => setHoverNoktaIdx(j)}
+                    onFocus={() => setHoverNoktaIdx(j)}
+                    onBlur={() => setHoverNoktaIdx(null)}
+                    aria-label={`${j + 1}. adım (${1 + qs.length} aşama, ${qs.length} soru): ${nk.baslik}${simdi ? ' — Şu an buradasın' : ''}${sonKalinanMi ? ' — En son kalınan adım' : ''}`}
+                    aria-current={simdi ? 'step' : undefined}
+                  />
+                );
+              })}
+            </div>
+
+            {hoverNoktaIdx !== null && gorunenNoktalar[hoverNoktaIdx] !== undefined && (() => {
+              const hNi = gorunenNoktalar[hoverNoktaIdx];
+              const hNk = ders.noktalar[hNi];
+              if (!hNk) return null;
+              const hQs = tekrar ? hNk.sorular.filter((q) => tekrar.has(q.k)) : sorulariSec(hNk, tercih.yogunluk);
+              const hDogru = hQs.filter((q) => sonuc[q.k] === 'd').length;
+              const hYardim = hQs.filter((q) => sonuc[q.k] === 'd2').length;
+              const hYanlis = hQs.filter((q) => sonuc[q.k] === 'y').length;
+              const hSimdi = nokta === hNk;
+              const hSonKalinan = sonKalinanNid === hNk.id;
+              return (
+                <div className="pa-seg-onizleme" role="status">
+                  <span className="pa-onizleme-no">{hoverNoktaIdx + 1}. Adım / {gorunenNoktalar.length}</span>
+                  <span className="pa-onizleme-bolum">Bölüm {hNk.bolum + 1}: {ders.bolumler[hNk.bolum]?.baslik}</span>
+                  <b className="pa-onizleme-baslik">{hNk.baslik}</b>
+                  <span className="pa-onizleme-icerik">
+                    {1 + hQs.length} aşama: 1 anlatım ({hNk.cumleler.length} cümle) + {hQs.length} soru
+                  </span>
+                  {hSimdi && <span className="pa-onizleme-etiket is-simdi">Şu an buradasın</span>}
+                  {hSonKalinan && !hSimdi && <span className="pa-onizleme-etiket is-kalinan">Son kalınan yer</span>}
+                  {(hDogru > 0 || hYardim > 0 || hYanlis > 0) && (
+                    <span className="pa-onizleme-sonuc">
+                      {hDogru > 0 ? `${hDogru} doğru ` : ''}
+                      {hYardim > 0 ? `${hYardim} yardımlı ` : ''}
+                      {hYanlis > 0 ? `${hYanlis} yanlış` : ''}
+                    </span>
+                  )}
+                </div>
+              );
+            })()}
+          </div>
+
+          {/* 3. Satır: Şu Anki Adımın Alt Aşamaları (Anlatım + Sorular) */}
+          {nokta && !devamSor && (
+            <div className="pa-alt-adim-serit" role="navigation" aria-label="Mevcut adımın aşamaları">
+              <span className="pa-alt-adim-etiket">
+                <b>{noktaSirasi}. Adım</b> ({aktifToplamAsama} aşama · {aktifNoktaSorular.length} soru):
+              </span>
+              <div className="pa-alt-adim-haplar">
+                <button
+                  type="button"
+                  className={`pa-asama-hap${s?.tip === 'anlatim' ? ' is-aktif' : ' is-gecti'}`}
+                  onClick={() => noktayaGit(ders.noktalar.indexOf(nokta))}
+                  title="Bu adımın konu anlatımına git"
+                >
+                  <BookOpenText aria-hidden />
+                  <span>
+                    1. Konu Anlatımı ({s?.tip === 'anlatim' && aktifCumle >= 0 ? `${aktifCumle + 1}/` : ''}{nokta.cumleler.length} cümle)
+                  </span>
+                </button>
+                {aktifNoktaSorular.map((q, qi) => {
+                  const r = sonuc[q.k];
+                  const aktifSoruMu = s?.tip === 'soru' && s.qi === qi;
+                  return (
+                    <button
+                      key={q.k}
+                      type="button"
+                      className={`pa-asama-hap${aktifSoruMu ? ' is-aktif' : ''}${r === 'd' ? ' is-d' : r === 'd2' ? ' is-d2' : r === 'y' ? ' is-y' : ''}`}
+                      onClick={() => noktayaGit(ders.noktalar.indexOf(nokta), qi)}
+                      title={`${qi + 1}. soruya git (${TUR_AD[q.tur]})`}
+                    >
+                      <HelpCircle aria-hidden />
+                      <span>
+                        {qi + 2}. Soru {aktifNoktaSorular.length > 1 ? `${qi + 1}/${aktifNoktaSorular.length}` : ''} ({TUR_KISA[q.tur]})
+                      </span>
+                      {r === 'd' && <Check className="pa-asama-i" aria-hidden />}
+                      {r === 'd2' && <span className="pa-asama-rozet">~</span>}
+                      {r === 'y' && <X className="pa-asama-i" aria-hidden />}
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+          )}
+
+          {/* Açılır Adım ve İlerleme Yöneticisi Paneli */}
+          {adimPanelAcik && (
+            <div className="pa-adim-panel" role="region" aria-label="Adım ve İlerleme Yöneticisi">
+              <div className="pa-adim-panel-ust">
+                <div className="pa-adim-panel-baslik">
+                  <div>
+                    <h3>Adım ve İlerleme Yöneticisi</h3>
+                    <p>
+                      Toplam <b>{ders.bolumler.length} bölüm</b>, <b>{gorunenNoktalar.length} adım</b> ({adimSayilari.toplamCumle} anlatım cümlesi) ve <b>{sorulanlar.length} soru</b>
+                    </p>
+                  </div>
+                  <button type="button" className="pa-ikon" onClick={() => setAdimPanelAcik(false)} aria-label="Paneli kapat"><X /></button>
+                </div>
+
+                {/* Hızlı Durum Kartları */}
+                <div className="pa-adim-ozet-izgara">
+                  <div className="pa-adim-ozet-kart is-konum">
+                    <small>Şu anki konumun</small>
+                    <b>{nokta ? `${noktaSirasi} / ${gorunenNoktalar.length}. Adım` : s?.tip === 'giris' ? 'Ders Girişi' : s?.tip === 'bolum' ? `Bölüm ${s.b + 1} Girişi` : 'Ders Sonu'}</b>
+                    <span>
+                      {nokta
+                        ? `${nokta.baslik} (Aşama ${aktifAsamaNo}/${aktifToplamAsama})`
+                        : 'Adım seçerek doğrudan geçebilirsin'}
+                    </span>
+                  </div>
+                  <div className="pa-adim-ozet-kart is-kalinan">
+                    <small>En son kalınan ilerleme noktası</small>
+                    <b>{sonKalinanNokta ? `${sonKalinanSira} / ${gorunenNoktalar.length}. Adım` : 'Henüz başlanmadı'}</b>
+                    <span>{sonKalinanNokta ? sonKalinanNokta.baslik : 'İlerledikçe otomatik kaydedilir'}</span>
+                  </div>
+                  <div className="pa-adim-ozet-kart">
+                    <small>Tamamlanan adım & soru</small>
+                    <b>{adimSayilari.tamam}/{gorunenNoktalar.length} adım · {cozulenSoruSayisi}/{sorulanlar.length} soru</b>
+                    <span>{ilkDogru} ilk denemede doğru · {yardimliDogru} yardımlı · {yanlisSayisi} yanlış</span>
+                  </div>
+                </div>
+
+                {/* Hızlı Yönetim Aksiyonları */}
+                <div className="pa-yonet-aksiyonlar">
+                  {sonKalinanNokta && (
+                    <button
+                      type="button"
+                      className="pa-yonet-btn is-vurgu"
+                      onClick={sonKalinanaGit}
+                      disabled={nokta?.id === sonKalinanNokta.id && !devamSor}
+                    >
+                      <Target aria-hidden />
+                      <span>Son kalınan yere git ({sonKalinanSira}. adım)</span>
+                    </button>
+                  )}
+                  {adimSayilari.kalan > 0 && (
+                    <button type="button" className="pa-yonet-btn" onClick={siradakiCozulmemiseGit}>
+                      <Play aria-hidden />
+                      <span>Sıradaki çözülmemiş adıma git ({adimSayilari.kalan} kalan)</span>
+                    </button>
+                  )}
+                  {adimSayilari.tekrar > 0 && (
+                    <button type="button" className="pa-yonet-btn is-uyari" onClick={ilkTekraraGit}>
+                      <RotateCcw aria-hidden />
+                      <span>Yanlış / yardımlı ilk adıma git ({adimSayilari.tekrar} adım)</span>
+                    </button>
+                  )}
+                  {nokta && nokta.id !== sonKalinanNid && (
+                    <button type="button" className="pa-yonet-btn" onClick={() => kalinanYeriBurayaTasi(nokta.id)}>
+                      <MapPin aria-hidden />
+                      <span>Şu anki adımı ({noktaSirasi}. adım) kalınan yer yap</span>
+                    </button>
+                  )}
+                  {!sifirlaOnay ? (
+                    <button type="button" className="pa-yonet-btn is-tehlike" onClick={() => setSifirlaOnay(true)}>
+                      <Trash2 aria-hidden />
+                      <span>İlerlemeyi sıfırla</span>
+                    </button>
+                  ) : (
+                    <div className="pa-sifirla-onay">
+                      <span>Tüm ilerleme sıfırlansın mı?</span>
+                      <button type="button" className="pa-yonet-btn is-tehlike-dolu" onClick={ilerlemeyiSifirla}>Evet, sıfırla</button>
+                      <button type="button" className="pa-yonet-btn" onClick={() => setSifirlaOnay(false)}>Vazgeç</button>
+                    </div>
+                  )}
+                </div>
+
+                {/* Renk Rehberi (Lejant) ve Filtre Sekmeleri */}
+                <div className="pa-adim-alt-cubuk">
+                  <div className="pa-adim-filtreler" role="tablist" aria-label="Adım filtreleri">
+                    <button type="button" role="tab" aria-selected={adimFiltre === 'hepsi'} className={adimFiltre === 'hepsi' ? 'is-on' : ''} onClick={() => setAdimFiltre('hepsi')}>
+                      Tümü ({gorunenNoktalar.length})
+                    </button>
+                    <button type="button" role="tab" aria-selected={adimFiltre === 'kalan'} className={adimFiltre === 'kalan' ? 'is-on' : ''} onClick={() => setAdimFiltre('kalan')}>
+                      Kalanlar ({adimSayilari.kalan})
+                    </button>
+                    <button type="button" role="tab" aria-selected={adimFiltre === 'tekrar'} className={adimFiltre === 'tekrar' ? 'is-on' : ''} onClick={() => setAdimFiltre('tekrar')}>
+                      Tekrar Gereken ({adimSayilari.tekrar})
+                    </button>
+                    <button type="button" role="tab" aria-selected={adimFiltre === 'tamam'} className={adimFiltre === 'tamam' ? 'is-on' : ''} onClick={() => setAdimFiltre('tamam')}>
+                      Tamamlanan ({adimSayilari.tamam})
+                    </button>
+                    {adimSayilari.aday > 0 && (
+                      <button type="button" role="tab" aria-selected={adimFiltre === 'aday'} className={adimFiltre === 'aday' ? 'is-on' : ''} onClick={() => setAdimFiltre('aday')}>
+                        Sınav Adayı ({adimSayilari.aday})
+                      </button>
+                    )}
+                  </div>
+                  <div className="pa-lejant" aria-label="Renk açıklamaları">
+                    <span><i className="l-simdi" />Şu anki adım</span>
+                    <span><i className="l-kalinan" />Son kalınan</span>
+                    <span><i className="l-d" />İlk denemede doğru</span>
+                    <span><i className="l-d2" />Yardımlı</span>
+                    <span><i className="l-y" />Yanlış</span>
+                    <span><i className="l-okundu" />Okundu</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Bölüm Bölüm Adım Listesi */}
+              <div className="pa-adim-panel-liste">
+                {ders.bolumler.map((b, bi) => {
+                  const bolumAdimlari = gorunenNoktalar
+                    .map((ni, j) => ({ ni, sira: j + 1, nk: ders.noktalar[ni] }))
+                    .filter((x) => x.nk.bolum === bi)
+                    .filter((x) => {
+                      if (adimFiltre === 'hepsi') return true;
+                      if (adimFiltre === 'aday') return !!x.nk.aday;
+                      const d = adimDurum(x.nk);
+                      if (adimFiltre === 'tamam') return d === 'tamam';
+                      if (adimFiltre === 'tekrar') return d === 'yanlis' || d === 'yardimli';
+                      return d === 'bekliyor' || d === 'okundu' || d === 'kismi';
+                    });
+                  if (!bolumAdimlari.length) return null;
+                  const bolumToplamSoru = bolumAdimlari.reduce((acc, x) => acc + (tekrar ? x.nk.sorular.filter((q) => tekrar.has(q.k)) : sorulariSec(x.nk, tercih.yogunluk)).length, 0);
+                  return (
+                    <div key={bi} className="pa-adim-bolum-grup">
+                      <div className="pa-adim-bolum-baslik">
+                        <span>Bölüm {bi + 1}/{ders.bolumler.length}: <b>{b.baslik}</b></span>
+                        <small>{bolumAdimlari.length} adım · {bolumToplamSoru} soru</small>
+                      </div>
+                      <div className="pa-adim-satirlar">
+                        {bolumAdimlari.map(({ ni, sira, nk }) => {
+                          const qs = tekrar ? nk.sorular.filter((q) => tekrar.has(q.k)) : sorulariSec(nk, tercih.yogunluk);
+                          const durum = adimDurum(nk);
+                          const simdiMi = nokta === nk;
+                          const sonKalinanMi = sonKalinanNid === nk.id;
+                          return (
+                            <div key={nk.id} className={`pa-adim-satir d-${durum}${simdiMi ? ' is-simdi' : ''}${sonKalinanMi ? ' is-kalinan' : ''}`}>
+                              <div className="pa-adim-satir-sol" onClick={() => noktayaGit(ni)} role="button" tabIndex={0} onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); noktayaGit(ni); } }}>
+                                <span className={`pa-adim-no d-${durum}${simdiMi ? ' is-simdi' : ''}`}>{sira}</span>
+                                <div className="pa-adim-metin">
+                                  <div className="pa-adim-ust-satir">
+                                    <b>{nk.baslik}</b>
+                                    {simdiMi && <span className="pa-etiket-hap is-simdi">Şu an buradasın</span>}
+                                    {sonKalinanMi && <span className="pa-etiket-hap is-kalinan">Son kalınan yer</span>}
+                                    {nk.aday && <span className="pa-etiket-hap is-aday"><Star aria-hidden />Aday {nk.aday}</span>}
+                                  </div>
+                                  <div className="pa-adim-alt-bilgi">
+                                    <span><b>{1 + qs.length} aşama:</b> 1 konu anlatımı ({nk.cumleler.length} cümle) + {qs.length} soru</span>
+                                  </div>
+                                </div>
+                              </div>
+                              <div className="pa-adim-satir-sag">
+                                <button type="button" className={`pa-mini-gecis${simdiMi && s?.tip === 'anlatim' ? ' is-on' : ''}`} onClick={() => noktayaGit(ni)} title="Konu anlatımına git">
+                                  <BookOpenText aria-hidden />
+                                  <span>Anlatım ({nk.cumleler.length})</span>
+                                </button>
+                                {qs.map((q, qi) => {
+                                  const r = sonuc[q.k];
+                                  const aktifSoru = simdiMi && s?.tip === 'soru' && s.qi === qi;
+                                  return (
+                                    <button
+                                      key={q.k}
+                                      type="button"
+                                      className={`pa-mini-gecis is-soru${aktifSoru ? ' is-on' : ''}${r === 'd' ? ' is-d' : r === 'd2' ? ' is-d2' : r === 'y' ? ' is-y' : ''}`}
+                                      onClick={() => noktayaGit(ni, qi)}
+                                      title={`${qi + 1}. soruya git (${TUR_AD[q.tur]})`}
+                                    >
+                                      <span>S{qi + 1}</span>
+                                      {r === 'd' && <Check aria-hidden />}
+                                      {r === 'd2' && <b>~</b>}
+                                      {r === 'y' && <X aria-hidden />}
+                                    </button>
+                                  );
+                                })}
+                              </div>
+                            </div>
+                          );
+                        })}
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          )}
         </div>
       )}
 
@@ -644,15 +1245,26 @@ export const PatolojiAsistan: React.FC<{ kod: string; onClose: () => void; onDer
 
         {ders && devamSor && (
           <div className="pa-kart pa-devam">
+            <small className="pa-etiket">Kaldığın Yer Kayıtlı</small>
             <h2>Kaldığın yerden devam edelim mi?</h2>
-            <p>{ders.baslik}: “{ders.noktalar.find((n) => n.id === devamSor.nid)?.baslik}” noktasındaydın.</p>
+            <p>
+              <b>{ders.baslik}</b> dersinde toplam <b>{gorunenNoktalar.length} adım</b> içinden{' '}
+              <b>{sonKalinanSira}. adımda</b> (“{sonKalinanNokta?.baslik || ders.noktalar.find((n) => n.id === devamSor.nid)?.baslik}”) kalmıştın.
+              {cozulenSoruSayisi > 0 ? ` Şimdiye kadar ${sorulanlar.length} sorudan ${cozulenSoruSayisi} tanesini yanıtladın (${ilkDogru} doğru).` : ''}
+            </p>
             <div className="pa-btnler">
               <button type="button" className="pa-btn is-dolu" onClick={() => {
-                setSonuc(devamSor.sonuc || {});
-                const j = sahneler.findIndex((x) => x.tip === 'anlatim' && ders.noktalar[x.n].id === devamSor.nid);
-                setI(Math.max(0, j)); setDevamSor(null);
-              }}><Play aria-hidden />Devam et</button>
-              <button type="button" className="pa-btn" onClick={() => { setSonuc({}); setI(0); setDevamSor(null); }}><RotateCcw aria-hidden />Baştan başla</button>
+                setDevamSor(null);
+                sonKalinanaGit();
+              }}><Play aria-hidden />Kaldığım yerden devam et ({sonKalinanSira}. adım)</button>
+              <button type="button" className="pa-btn" onClick={() => {
+                setDevamSor(null);
+                setAdimPanelAcik(true);
+              }}><ListChecks aria-hidden />Adımları gör ve seç</button>
+              <button type="button" className="pa-btn" onClick={() => {
+                setI(0); setDevamSor(null);
+              }}><RotateCcw aria-hidden />Girişe git (İlerlemeyi koru)</button>
+              <button type="button" className="pa-btn" onClick={ilerlemeyiSifirla}><Trash2 aria-hidden />Sıfırla ve baştan başla</button>
             </div>
           </div>
         )}
@@ -717,7 +1329,36 @@ export const PatolojiAsistan: React.FC<{ kod: string; onClose: () => void; onDer
                   })}
                 </div>
                 <ol className="pa-plan">
-                  {ders.bolumler.map((b, j) => <li key={j}><span>{j + 1}</span>{b.baslik}</li>)}
+                  {ders.bolumler.map((b, j) => {
+                    const bAdimlar = gorunenNoktalar.filter((ni) => ders.noktalar[ni]?.bolum === j);
+                    const bSorular = bAdimlar.reduce((acc, ni) => acc + sorulariSec(ders.noktalar[ni], tercih.yogunluk).length, 0);
+                    return (
+                      <li
+                        key={j}
+                        className="is-tiklanabilir"
+                        onClick={() => {
+                          const x = sahneler.findIndex((y) => y.tip === 'bolum' && y.b === j);
+                          if (x >= 0) setI(x);
+                          else if (bAdimlar.length > 0) noktayaGit(bAdimlar[0]);
+                        }}
+                        role="button"
+                        tabIndex={0}
+                        onKeyDown={(e) => {
+                          if (e.key === 'Enter' || e.key === ' ') {
+                            e.preventDefault();
+                            const x = sahneler.findIndex((y) => y.tip === 'bolum' && y.b === j);
+                            if (x >= 0) setI(x);
+                            else if (bAdimlar.length > 0) noktayaGit(bAdimlar[0]);
+                          }
+                        }}
+                        title={`${j + 1}. bölüme git`}
+                      >
+                        <span>{j + 1}</span>
+                        <span className="pa-plan-baslik">{b.baslik}</span>
+                        <small className="pa-plan-meta">{bAdimlar.length} adım · {bSorular} soru</small>
+                      </li>
+                    );
+                  })}
                 </ol>
                 {bransTanim(kodBrans(kod)).sinavKurali && <p className="pa-kural">Sınav kuralı: tablo, şekil ve klinik bulgu sorulmaz · her slayttan {ders.soruSayisi} soru.</p>}
                 <div className="pa-kart-aksiyonlar">
@@ -733,10 +1374,26 @@ export const PatolojiAsistan: React.FC<{ kod: string; onClose: () => void; onDer
                 <h1>{ders.bolumler[s.b].baslik}</h1>
                 <div className="pa-cumleler"><p className={`${aktifCumle === 0 ? 'is-aktif' : ''} is-tiklanabilir`} onClick={() => cumleyeGit(0)} role="button" tabIndex={0} title="Bu açıklamayı dinle"><Metin metin={ders.bolumler[s.b].neden} /></p></div>
                 <ul className="pa-bolum-l">
-                  {ders.noktalar.filter((n) => n.bolum === s.b && gorunenNoktalar.includes(ders.noktalar.indexOf(n))).map((n) => (
-                    <li key={n.id}>{n.aday ? <Star aria-hidden className="is-aday" /> : <span className="pa-nokta" aria-hidden />}<span>{n.baslik}</span>
-                      {sorulariSec(n, tercih.yogunluk).length > 0 && <small>{sorulariSec(n, tercih.yogunluk).length} soru</small>}</li>
-                  ))}
+                  {ders.noktalar.filter((n) => n.bolum === s.b && gorunenNoktalar.includes(ders.noktalar.indexOf(n))).map((n) => {
+                    const ni = ders.noktalar.indexOf(n);
+                    const gSira = gorunenNoktalar.indexOf(ni) + 1;
+                    const qs = sorulariSec(n, tercih.yogunluk);
+                    return (
+                      <li
+                        key={n.id}
+                        className="is-tiklanabilir"
+                        onClick={() => noktayaGit(ni)}
+                        role="button"
+                        tabIndex={0}
+                        onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); noktayaGit(ni); } }}
+                        title={`${gSira}. adıma git: ${n.baslik}`}
+                      >
+                        {n.aday ? <Star aria-hidden className="is-aday" /> : <span className="pa-nokta" aria-hidden />}
+                        <span><b>{gSira}.</b> {n.baslik}</span>
+                        <small>{1 + qs.length} aşama · {n.cumleler.length} cümle{qs.length > 0 ? ` · ${qs.length} soru` : ''}</small>
+                      </li>
+                    );
+                  })}
                 </ul>
                 <div className="pa-kart-aksiyonlar">
                   <button type="button" className="pa-btn-parca is-tek" onClick={tekrarDinle} title="Bölüm girişini tekrar dinle ( T )"><RotateCcw aria-hidden /><span>Tekrar dinle</span></button>

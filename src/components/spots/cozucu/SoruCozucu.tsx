@@ -562,13 +562,40 @@ export const SoruCozucu: React.FC<Props> = ({
     return () => el.removeEventListener('wheel', tekerlek);
   }, [olcekAdim]);
   useEffect(() => {
-    const f = () => setTamEkran(!!document.fullscreenElement);
+    const f = () => {
+      const nativeFs = !!(document.fullscreenElement || (document as any).webkitFullscreenElement);
+      if (nativeFs) setTamEkran(true);
+    };
     document.addEventListener('fullscreenchange', f);
-    return () => { document.removeEventListener('fullscreenchange', f); if (document.fullscreenElement) document.exitFullscreen?.().catch(() => {}); };
+    document.addEventListener('webkitfullscreenchange', f);
+    return () => {
+      document.removeEventListener('fullscreenchange', f);
+      document.removeEventListener('webkitfullscreenchange', f);
+      const d = document as any;
+      if (d.fullscreenElement || d.webkitFullscreenElement) {
+        (d.exitFullscreen || d.webkitExitFullscreen)?.call(d)?.catch?.(() => {});
+      }
+    };
   }, []);
   const tamEkranDegis = () => {
-    if (document.fullscreenElement) document.exitFullscreen?.().catch(() => {});
-    else (kokRef.current?.closest('.sc') as HTMLElement | null)?.requestFullscreen?.().catch(() => {});
+    const d = document as any;
+    if (tamEkran) {
+      setTamEkran(false);
+      if (d.fullscreenElement || d.webkitFullscreenElement) {
+        (d.exitFullscreen || d.webkitExitFullscreen)?.call(d)?.catch?.(() => {});
+      }
+      return;
+    }
+    setTamEkran(true);
+    const el: any = kokRef.current?.closest('.sc') || document.documentElement;
+    const req = el?.requestFullscreen || el?.webkitRequestFullscreen;
+    if (req) {
+      try {
+        req.call(el, { navigationUI: 'hide' })?.catch?.(() => {});
+      } catch {
+        /* iOS iPhone'da CSS tam ekran (is-tam) kullanılır */
+      }
+    }
   };
   useEffect(() => {
     const ms = (navigator as Navigator & { mediaSession?: MediaSession }).mediaSession;
@@ -598,7 +625,7 @@ export const SoruCozucu: React.FC<Props> = ({
 
   const icerik = (
     <div
-      className={`sc${caliyor ? ' is-konusuyor' : ''}${olcek !== 1 ? ' is-olcekli' : ''}${ogrenAcik && ogrenVar ? ' is-ogren' : ''}`}
+      className={`sc${caliyor ? ' is-konusuyor' : ''}${olcek !== 1 ? ' is-olcekli' : ''}${ogrenAcik && ogrenVar ? ' is-ogren' : ''}${tamEkran ? ' is-tam' : ''}`}
       style={{ ['--sc-zoom' as string]: olcek }}
       role="dialog"
       aria-modal="true"

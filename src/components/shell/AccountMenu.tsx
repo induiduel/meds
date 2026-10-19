@@ -17,9 +17,12 @@ import {
   Sun,
   SunMedium,
   Bell,
+  Maximize2,
+  Minimize2,
 } from 'lucide-react';
 import type { AppUser } from '../../services/auth';
 import { MODE_LABELS, type ThemeMode, useAppearance } from '../../utils/appearance';
+import { useAppFullscreen } from '../../utils/fullscreen';
 import { Segmented } from '../ui/kit';
 import { Sheet } from '../ui/Sheet';
 import { initialsOf } from './navModel';
@@ -54,6 +57,7 @@ const MODE_ICONS: Record<ThemeMode, React.ElementType> = { light: Sun, sepia: Su
 /** Hesap menüsünün içeriği: kullanıcı kartı, hızlı tema, eylemler. Telefonda alt sayfada, masaüstünde açılır kutuda. */
 const MenuBody: React.FC<{ user: AppUser | null; a: AccountActions; close: () => void }> = ({ user, a, close }) => {
   const look = useAppearance();
+  const [appFs, toggleAppFs] = useAppFullscreen();
   const run = (fn?: () => void) => () => {
     close();
     fn?.();
@@ -94,11 +98,12 @@ const MenuBody: React.FC<{ user: AppUser | null; a: AccountActions; close: () =>
       </div>
 
       <div className="ui-group" role="menu">
+        {item(appFs ? Minimize2 : Maximize2, '#007AFF', appFs ? 'Tam ekrandan çık' : 'Tam ekran görünümü', () => toggleAppFs())}
+        {a.onInstall && item(Smartphone, '#34C759', 'Uygulamayı cihaza yükle (PWA)', a.onInstall, <span className="ui-tag is-ok">Ana Ekran</span>)}
         {a.onNotifications && item(Bell, '#FF9500', 'Bildirim geçmişi', a.onNotifications)}
         {item(SquarePen, '#FF2D55', 'Soru katkısı yap', a.onContribute)}
         {item(FileDown, '#5856D6', 'PDF indir', a.onPdf)}
         {a.onOffline && item(Database, '#30B0C7', 'Çevrimdışı veritabanı', a.onOffline)}
-        {a.onInstall && item(Smartphone, '#34C759', 'Uygulamayı cihaza yükle', a.onInstall)}
       </div>
 
       {a.admin && (
