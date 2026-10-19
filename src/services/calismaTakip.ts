@@ -238,25 +238,33 @@ export interface GrupOzeti {
   tekrarda: number;
   sn: number;
   soru: number;
-  /** kalan konuları bitirmek için tahmini süre (sn) */
+  /** kalan konuları bitirmek için çalışma hızına göre tahmini süre (sn) */
   kalanSn: number;
+  /** kalan konuların çalışma hızından bağımsız ham ders/içerik süresi (sn) */
+  kalanIcerikSn: number;
+  /** tüm konuların toplam ders/içerik süresi (sn) */
+  toplamIcerikSn: number;
 }
 
 /** Bir dersin (konu listesi) özeti; `hiz` aynı modülün tüm konularından hesaplanır. */
 export function grupOzeti(m: TakipModul, konular: KonuGirdi[], hiz: Hiz, v: TakipVeri = oku()): GrupOzeti {
-  const o: GrupOzeti = { toplam: konular.length, biten: 0, tekrarda: 0, sn: 0, soru: 0, kalanSn: 0 };
+  const o: GrupOzeti = { toplam: konular.length, biten: 0, tekrarda: 0, sn: 0, soru: 0, kalanSn: 0, kalanIcerikSn: 0, toplamIcerikSn: 0 };
   for (const g of konular) {
     const k = v.k[anahtar(m, g.id)];
     o.sn += k?.sn || 0;
     o.soru += (k?.soru || 0) + (g.ekSoru || 0);
+    o.toplamIcerikSn += g.beklenen || 0;
     if (bittiMi(k, g.turetilen)) { o.biten++; continue; }
     if (k?.durum === 'tekrar') o.tekrarda++;
+    o.kalanIcerikSn += g.beklenen || 0;
     const hedef = g.beklenen * hiz.oran;
     // tekrar turunda önceki turun süresi düşülmez; ilk turda harcanan süre düşülür (en az %15 kalır)
     const harcanan = k?.durum === 'tekrar' ? 0 : k?.sn || 0;
     o.kalanSn += Math.max(hedef * 0.15, hedef - harcanan);
   }
   o.kalanSn = Math.round(o.kalanSn);
+  o.kalanIcerikSn = Math.round(o.kalanIcerikSn);
+  o.toplamIcerikSn = Math.round(o.toplamIcerikSn);
   return o;
 }
 

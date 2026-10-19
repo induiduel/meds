@@ -80,10 +80,11 @@
 .bd-modul-ad { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .bd-modul-kisa { display: none; }
 .bd-modul-n { white-space: nowrap; flex: none; font: 500 12px var(--font-mono); color: var(--color-ink-3); font-variant-numeric: tabular-nums; }
+.bd-modul-s { font-style: normal; opacity: .88; }
 .bd-modul button.is-on .bd-modul-n { color: var(--color-accent); }
 
 /* özet kartları */
-.bd-ozet { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; }
+.bd-ozet { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 10px; }
 .bd-kart {
   display: flex; flex-direction: column; gap: 6px; min-width: 0; padding: 14px;
   border: 1px solid var(--color-line); border-radius: 14px; background: var(--color-white);
@@ -130,6 +131,7 @@
 .bd-ok { width: 18px; height: 18px; flex: none; color: var(--color-ink-3); transition: transform 160ms; }
 .bd-ders.is-acik .bd-ok { transform: rotate(180deg); }
 .bd-ders-meta { display: flex; flex-wrap: wrap; gap: 4px 14px; font: 500 13px var(--font-sans); color: var(--color-ink-2); font-variant-numeric: tabular-nums; }
+.bd-ders-meta .is-icerik { color: var(--color-ink); font-weight: 600; }
 .bd-ders-meta .is-kalan { color: var(--color-ink-3); }
 .bd-ders-meta .is-tamam { color: var(--color-ok); font-weight: 600; }
 
@@ -155,8 +157,10 @@
 @keyframes bd-don { to { transform: rotate(360deg); } }
 @media (prefers-reduced-motion: reduce) { .bd-spin { animation: none; } .bd-cubuk i, .bd-ok { transition: none; } }
 
-@media (max-width: 760px) {
+@media (max-width: 860px) {
   .bd-ozet { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 760px) {
   .bd-modul { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 @media (max-width: 520px) {
@@ -165,6 +169,7 @@
   .bd-ic { width: 42px; height: 42px; }
   .bd-kart { padding: 12px; }
   .bd-kart b { font-size: 19px; }
+  .bd-modul-s { display: none; }
   .bd-konu { padding: 10px 12px; gap: 10px; }
   .bd-konu > .kt-btn { width: 38px; min-height: 38px; padding: 0; }
   .bd-konu > .kt-btn span { display: none; }

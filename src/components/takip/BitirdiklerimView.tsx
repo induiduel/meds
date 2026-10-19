@@ -109,12 +109,16 @@ export default function BitirdiklerimView() {
       <div className="bd-modul" role="tablist" aria-label="Modül">
         {MODULLER.map(({ id, ikon: Ikon }) => {
           const g = ozetler[id]?.genel;
+          const kalanSayi = g ? g.toplam - g.biten : 0;
           return (
             <button key={id} type="button" role="tab" aria-selected={modul === id} className={modul === id ? 'is-on' : ''} onClick={() => setModul(id)}>
               <Ikon aria-hidden />
               <span className="bd-modul-ad">{MODUL_AD[id]}</span>
               <span className="bd-modul-kisa" aria-hidden>{MODUL_KISA[id]}</span>
-              <span className="bd-modul-n">{g ? `${g.biten}/${g.toplam}` : '…'}</span>
+              <span className="bd-modul-n">
+                {g ? `${g.biten}/${g.toplam}` : '…'}
+                {g && kalanSayi > 0 && <em className="bd-modul-s"> · {sureYaz(g.kalanIcerikSn)}</em>}
+              </span>
             </button>
           );
         })}
@@ -169,8 +173,13 @@ export default function BitirdiklerimView() {
                       <span>{sureYaz(o.sn)} çalıştın</span>
                       {o.soru > 0 && <span>{sayi(o.soru)} soru</span>}
                       {o.biten < o.toplam
-                        ? <span className="is-kalan">{o.toplam - o.biten} kalan · ~{sureYaz(o.kalanSn)}{kalanGun ? ` (${kalanGun})` : ''}</span>
-                        : <span className="is-tamam">Tamamlandı</span>}
+                        ? (
+                          <>
+                            <span className="is-icerik">{o.toplam - o.biten} kalan ders · {sureYaz(o.kalanIcerikSn)} ders süresi (toplam {sureYaz(o.toplamIcerikSn)})</span>
+                            <span className="is-kalan">Hızına göre tahmini: ~{sureYaz(o.kalanSn)}{kalanGun ? ` (${kalanGun})` : ''}</span>
+                          </>
+                        )
+                        : <span className="is-tamam">Tamamlandı · toplam {sureYaz(o.toplamIcerikSn)} ders süresi</span>}
                     </span>
                   </button>
                   {ac && (
@@ -215,12 +224,21 @@ function OzetKartlari({ genel, hiz, modul }: { genel: ReturnType<typeof grupOzet
         <em>{soruNot}</em>
       </div>
       <div className="bd-kart">
-        <small>Tahmini kalan</small>
+        <small>Kalan ders süresi</small>
+        <b>{kalan ? sureYaz(genel.kalanIcerikSn) : '—'}</b>
+        <em>
+          {!kalan
+            ? `Hepsi bitti · toplam ${sureYaz(genel.toplamIcerikSn)}`
+            : `Hızdan bağımsız (${sayi(kalan)} kalan ders · toplam ${sureYaz(genel.toplamIcerikSn)})`}
+        </em>
+      </div>
+      <div className="bd-kart">
+        <small>Tahmini kalan (hızına göre)</small>
         <b>{kalan ? `~${sureYaz(genel.kalanSn)}` : '—'}</b>
         <em>
           {!kalan ? 'Hepsi bitti' : hiz.kaynak === 'senin'
             ? `Hızına göre (${hiz.ornek} konu, içerik süresinin %${Math.round(hiz.oran * 100)}'i)${gun ? ` · ${gun}` : ''}`
-            : `İçerik süresine göre; konu bitirdikçe hızına uyar${gun ? ` · ${gun}` : ''}`}
+            : `Çalışılan süre düşülerek; konu bitirdikçe hızına uyar${gun ? ` · ${gun}` : ''}`}
         </em>
       </div>
     </section>
