@@ -106,7 +106,10 @@ export const fmtMb = (b: number) => (b > 0 ? `${(b / 1048576).toFixed(b < 104857
 let listeP: Promise<CdListeDers[]> | null = null;
 export function cdListeGetir(yenile = false): Promise<CdListeDers[]> {
   if (!listeP || yenile) {
-    listeP = safeJsonFetch<{ dersler: CdListeDers[] }>('/api/canli-ders').then((r) => {
+    // Boş liste (sunucu yeniden başlarken/kayıt yazılırken) önbellekten gelip oturum boyu takılmasın: önbelleksiz bir kez daha sor
+    const getir = (taze: boolean) => safeJsonFetch<{ dersler: CdListeDers[] }>('/api/canli-ders', taze ? ({ cache: 'no-store' } as RequestInit) : undefined);
+    listeP = getir(yenile).then((r) => (r.ok && Array.isArray(r.data?.dersler) && !r.data!.dersler.length ? getir(true) : r)).then((r) => {
+      if (r.ok && Array.isArray(r.data?.dersler) && !r.data!.dersler.length) listeP = null;
       if (!r.ok || !Array.isArray(r.data?.dersler)) {
         listeP = null;
         // İnternet yok: cihaza indirilmiş dersler (canliDersCevrimdisi)

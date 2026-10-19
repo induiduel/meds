@@ -1,11 +1,8 @@
 {
   "_aciklama": "Önemli güncelleme duyurusu. 'onem' sayısını 1 artırıp derleyince (vite build) açık sekmelerdeki öğrencilere 'Siteyi güncelle' diyaloğu çıkar. Küçük düzeltmelerde dokunma (diyalog çıkmaz, yeni sürüm sonraki açılışta sessizce yüklenir).",
-  "onem": 36,
-  "baslik": "Canlı Ders Metin Okunabilirliği, Yıl/Yüzde Standartlaştırması ve Satır Düzeni",
+  "onem": 37,
+  "baslik": "Sesli ders listesi onarıldı",
   "maddeler": [
-    "Sesli ders metinlerindeki tüm bileşik yüzde yazım hataları (%40 dört -> %44 vb.) düzeltildi.",
-    "Metinlerde okunuşuyla yazılmış tüm tarih ve yıllar (bin sekiz yüz seksen üç -> 1883 vb.) standart rakam formatına getirildi.",
-    "Hatalı sıra sayısı kalıntıları (On 1. ilke -> 11. ilke vb.) giderildi, sesli okuma telaffuzu korundu.",
-    "Daha ferah ve okunaklı bir takip için paragraf içi cümleler ayrı satırlarda görüntülenecek şekilde yapılandırıldı."
+    "Sesli ders ekranında bazen \"Henüz sesi hazır ders yok\" görünüp derslerin gelmemesi düzeltildi."
   ]
 }

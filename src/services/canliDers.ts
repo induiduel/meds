@@ -124,7 +124,7 @@ export function registerCanliDersRoutes(app: Express) {
       })
       .filter(Boolean);
     // Express res.json zayıf ETag üretir ve If-None-Match'te 304 döner.
-    res.setHeader('Cache-Control', 'public, max-age=60');
+    res.setHeader('Cache-Control', out.length ? 'public, max-age=60' : 'no-store');
     res.json({ dersler: out });
   });
 
